@@ -39,7 +39,7 @@ source located in this audit closes either question.
 
 ## How the audit was conducted
 
-The search started from the seven PDFs already in `papers/primary/` and the
+The search started from the seven primary papers listed in the public bibliography and the
 references named in the canonical report. It then followed the terms *minimal
 diameter*, *finite packing*, *Oler inequality*, *parametric density*, *Groemer
 packing*, *saturation*, *gap defect*, *plane-width*, and *equilateral-triangle
@@ -58,7 +58,7 @@ Broad packing surveys with no finite-diameter or boundary connection were not
 bundled. Papers for which a stable, legally appropriate open copy was not found are
 listed as citation-only leads below.
 
-## Bundled sources
+## Referenced sources
 
 The labels indicate how a source should be used in the repository:
 
@@ -68,7 +68,7 @@ The labels indicate how a source should be used in the repository:
 - **C — context:** saturation, computation, or analogy; useful for hypotheses and
   counterexample checks, but not itself a theorem about Problem #99.
 
-| Label | Source | What it adds | Local copy |
+| Label | Source | What it adds | Public source |
 | --- | --- | --- | --- |
 | A | Paul Erdős, “Some of my Favourite Problems in Number Theory, Combinatorics, and Geometry,” *Resenhas IME-USP* 2(2) (1995), 165–186. [Record](https://revistas.usp.br/resenhasimeusp/en/article/view/74798), [DOI](https://doi.org/10.11606/resimeusp.v2i2.74798) | The original published wording of Problem #99: unit separation, minimum diameter, triangular-lattice asymptotics, and the conjectured unit equilateral triangle. The article is marked CC BY-NC-SA 4.0 by the journal. | [PDF](https://revistas.usp.br/resenhasimeusp/en/article/view/74798) |
 | A | E. Daróczy-Kiss, “A New Bound for the Minimal Diameter of Nine Coplanar Congruent Disks,” *Annales Univ. Sci. Budapest., Sect. Comp.* 25 (2005), 25–35. [PDF](https://ac.inf.elte.hu/Vol_025_2005/doi/025_25.pdf) | Improves the known upper bound to `d(9) ≤ 2.5693` using computer-assisted construction. It confirms that the `n=9` finite problem was still not exact; it does not bear directly on the eventual large-`n` conjecture. | [PDF](https://ac.inf.elte.hu/Vol_025_2005/doi/025_25.pdf) |
@@ -94,7 +94,7 @@ The labels indicate how a source should be used in the repository:
 
 ### Path 1: the direct Erdős Problem #99 thread
 
-Read the supplied Erdős 1994 paper in `papers/primary/`, then [Erdős's 1995
+Read the supplied Erdős 1994 paper linked in the public bibliography, then [Erdős's 1995
 survey](https://revistas.usp.br/resenhasimeusp/en/article/view/74798), followed by the supplied
 Bateman--Erdős and Bezdek--Fodor papers. Add Daróczy-Kiss for the `n=9` update and
 the plane-width paper for an exact graph-theoretic restatement. This path is the

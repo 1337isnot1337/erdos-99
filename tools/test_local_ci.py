@@ -437,7 +437,7 @@ class ProtocolSyntax(unittest.TestCase):
 
     def test_workflow_permissions_and_gates(self):
         import yaml
-        workflow=yaml.safe_load((ROOT/'.github/workflows/public-research-integrity.yml').read_text())
+        workflow=yaml.safe_load((ROOT/'.github/workflows/theorem-state.yml').read_text())
         self.assertEqual(set(workflow.get('on',workflow.get(True))),{'pull_request'})
         self.assertEqual(workflow['permissions'],{'contents':'read'})
         self.assertIn('draft == false',workflow['jobs']['plan']['if'])
