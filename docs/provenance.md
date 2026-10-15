@@ -1,0 +1,7 @@
+# Content provenance
+
+The Phase 1 files were written specifically for this repository with substantial AI assistance from OpenAI Codex (GPT-6.1 Sol) on 2026-10-15, under the repository owner's direction. The agent drafted the problem exposition, tasks, contributor workflow and standard-library scripts; it ran the local checks described in the README. No independent human mathematical review is claimed for these materials. The problem statement, task descriptions, onboarding, review rules and scripts were newly authored; they do not reproduce prose or code from a private research archive or from the Integer Multiplication Bounds repository. The public source pages listed in [references](references.md) are cited as bibliographic sources. No third-party paper, scan, extracted text, image, dataset or software dependency is bundled.
+
+The mathematical problem and standard geometric facts are attributed in the references. Project-created code, text, and task material are covered by the repository's Apache-2.0 license unless a file says otherwise. Contributor-created material retains its authorship and is submitted under those terms according to [CONTRIBUTING.md](../CONTRIBUTING.md).
+
+This note describes the initial candidate. New submissions must state their authorship, AI assistance and third-party sources in the pull request so maintainers can update attribution and notices accurately.

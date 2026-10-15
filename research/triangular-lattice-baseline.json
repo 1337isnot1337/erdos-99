@@ -1,0 +1,90 @@
+[
+  {
+    "n": 2,
+    "lattice_optimum_squared": 1,
+    "witness": [
+      [
+        0,
+        0
+      ],
+      [
+        -1,
+        0
+      ]
+    ],
+    "anchored_subsets_examined": 6,
+    "radius_bound": 1
+  },
+  {
+    "n": 3,
+    "lattice_optimum_squared": 1,
+    "witness": [
+      [
+        0,
+        0
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ]
+    ],
+    "anchored_subsets_examined": 153,
+    "radius_bound": 2
+  },
+  {
+    "n": 4,
+    "lattice_optimum_squared": 3,
+    "witness": [
+      [
+        0,
+        0
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        -1
+      ]
+    ],
+    "anchored_subsets_examined": 7140,
+    "radius_bound": 3
+  },
+  {
+    "n": 5,
+    "lattice_optimum_squared": 4,
+    "witness": [
+      [
+        0,
+        0
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "anchored_subsets_examined": 487635,
+    "radius_bound": 4
+  }
+]

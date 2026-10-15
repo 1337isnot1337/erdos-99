@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Open research discussion
+    url: https://github.com/1337isnot1337/erdos-99/discussions
+    about: Ask a broad mathematical or coordination question.

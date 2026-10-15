@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this repository, cite the repository and the relevant task or contribution."
+title: "Erdős Problem 99 Collaborative Research"
+type: software
+version: 0.1.0
+date-released: "2026-10-15"
+license: Apache-2.0
+repository-code: "https://github.com/1337isnot1337/erdos-99"
+authors:
+  - name: "Erdős Problem 99 contributors"

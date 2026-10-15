@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "tasks": [
+    {
+      "id": "P99-MATH-001",
+      "title": "Attainment and elementary bounds for D(n)",
+      "path": "tasks/P99-MATH-001-attainment.md",
+      "kind": "proof-audit",
+      "availability": "open",
+      "evidence_status": "unreviewed-proposal"
+    },
+    {
+      "id": "P99-COMP-001",
+      "title": "Exact triangular-lattice enumeration",
+      "path": "tasks/P99-COMP-001-triangular-lattice.md",
+      "kind": "finite-computation",
+      "availability": "open",
+      "evidence_status": "reproduced-finite-evidence"
+    },
+    {
+      "id": "P99-GEOM-001",
+      "title": "The four-point square benchmark",
+      "path": "tasks/P99-GEOM-001-square-benchmark.md",
+      "kind": "proof-audit",
+      "availability": "open",
+      "evidence_status": "unreviewed-proposal"
+    }
+  ]
+}

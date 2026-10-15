@@ -1,0 +1,13 @@
+title: "Research question: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Discussions are open for broad mathematical questions, method comparisons, and coordination. Use Issues for bounded claims or actionable corrections.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question and context
+      description: Include definitions, task IDs, and public references needed to follow the question.
+    validations:
+      required: true
