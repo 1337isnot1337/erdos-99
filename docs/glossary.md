@@ -2,8 +2,8 @@
 
 - **Feasible set:** a finite point set whose distinct points are at least one unit apart.
 - **Diameter:** the largest pairwise distance in a finite point set.
-- **(D(n)):** the infimum, attained once the compactness task is proved, of the diameters of feasible sets of (n) points.
-- **Global minimizer:** a feasible set attaining (D(n)), not merely a configuration stable under a chosen class of local changes.
+- **$D(n)$:** the infimum, attained once the compactness task is proved, of the diameters of feasible sets of $n$ points.
+- **Global minimizer:** a feasible set attaining $D(n)$, not merely a configuration stable under a chosen class of local changes.
 - **Unit contact:** a pair at distance exactly one.
 - **Unit equilateral triangle:** three points with all three pairwise distances equal to one.
 - **Contact graph:** the graph whose vertices are the points and whose edges are unit contacts. A unit equilateral triangle is a 3-cycle in this graph.

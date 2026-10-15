@@ -6,11 +6,11 @@
 
 ## Mathematical question
 
-Prove that (D(4)=\sqrt2), or provide a feasible four-point set with diameter strictly less than (\sqrt2). If the lower bound is proved, verify that the unit square is a triangle-free global minimizer at (n=4).
+Prove that $D(4)=\sqrt2$, or provide a feasible four-point set with diameter strictly less than $\sqrt2$. If the lower bound is proved, verify that the unit square is a triangle-free global minimizer at $n=4$.
 
 ## Definitions and hypotheses
 
-Here (D(4)) is the minimum diameter among four points in (\mathbb R^2) with every pair at distance at least one. The unit square has four vertices, adjacent side lengths one, and diagonal lengths (\sqrt2). Its unit-contact graph is a 4-cycle, which has no triangle.
+Here $D(4)$ is the minimum diameter among four points in $\mathbb R^2$ with every pair at distance at least one. The unit square has four vertices, adjacent side lengths one, and diagonal lengths $\sqrt2$. Its unit-contact graph is a 4-cycle, which has no triangle.
 
 ## Why it matters
 
@@ -22,11 +22,11 @@ Only Euclidean geometry and the problem definition are needed to formulate the t
 
 ## Starting point
 
-The square gives (D(4)\le\sqrt2). The public problem record identifies the four-point square as a finite exception, and the cited early-case literature provides context. This task asks for an independently inspectable proof of the matching global lower bound, not merely a numerical search.
+The square gives $D(4)\le\sqrt2$. The public problem record identifies the four-point square as a finite exception, and the cited early-case literature provides context. This task asks for an independently inspectable proof of the matching global lower bound, not merely a numerical search.
 
 ## First step
 
-Assume a four-point feasible set has diameter (d<\sqrt2). Choose a diameter pair and place it at ((0,0)) and ((d,0)). Derive the region in which either remaining point may lie from its lower-distance constraints to the endpoints and upper-distance constraints from the diameter. Then use the mutual constraint between the remaining points. Treat boundary cases explicitly.
+Assume a four-point feasible set has diameter $d<\sqrt2$. Choose a diameter pair and place it at $(0,0)$ and $(d,0)$. Derive the region in which either remaining point may lie from its lower-distance constraints to the endpoints and upper-distance constraints from the diameter. Then use the mutual constraint between the remaining points. Treat boundary cases explicitly.
 
 ## Evidence expected
 
@@ -42,11 +42,11 @@ No code is needed. Any computational search should report its bounded domain, ex
 
 ## Stopping condition
 
-Stop with either a complete proof of (D(4)\ge\sqrt2), an exact feasible counterexample below (\sqrt2), or a specific flaw in a proposed proof. State whether the submission establishes global minimality of the square.
+Stop with either a complete proof of $D(4)\ge\sqrt2$, an exact feasible counterexample below $\sqrt2$, or a specific flaw in a proposed proof. State whether the submission establishes global minimality of the square.
 
 ## Scope limit
 
-Even a complete proof at (n=4) does not prove or disprove the eventual statement for sufficiently large (n).
+Even a complete proof at $n=4$ does not prove or disprove the eventual statement for sufficiently large $n$.
 
 ## Next questions
 

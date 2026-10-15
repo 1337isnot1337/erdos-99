@@ -4,13 +4,13 @@ This repository is an open starting point for independent work on Erdős Problem
 
 ## The problem
 
-For a finite set (A\subset\mathbb R^2), its diameter is
-\[
+For a finite set $A\subset\mathbb R^2$, its diameter is
+$$
 \operatorname{diam}(A)=\max_{x,y\in A}|x-y|.
-\]
-For each integer (n\ge2), let (D(n)) be the minimum diameter among all (n)-point sets whose distinct points are at least one unit apart. Erdős Problem 99 asks whether there is an (n_0) such that, for every (n\ge n_0), **every global minimizer** attaining (D(n)) contains three points at pairwise distance exactly one. Those three points form a unit equilateral triangle.
+$$
+For each integer $n\ge2$, let $D(n)$ be the minimum diameter among all $n$-point sets whose distinct points are at least one unit apart. Erdős Problem 99 asks whether there is an $n_0$ such that, for every $n\ge n_0$, **every global minimizer** attaining $D(n)$ contains three points at pairwise distance exactly one. Those three points form a unit equilateral triangle.
 
-The problem remains open. Its quantifiers rule out several tempting shortcuts: a finite example, a local minimum, an asymptotically dense packing, a triangle-free packing that is not globally optimal, or one selected minimizer for each (n) does not answer the question. A disproof needs triangle-free global minimizers for unboundedly many cardinalities. See [the full statement](docs/problem.md) and [current status](docs/current-status.md).
+The problem remains open. Its quantifiers rule out several tempting shortcuts: a finite example, a local minimum, an asymptotically dense packing, a triangle-free packing that is not globally optimal, or one selected minimizer for each $n$ does not answer the question. A disproof needs triangle-free global minimizers for unboundedly many cardinalities. See [the full statement](docs/problem.md) and [current status](docs/current-status.md).
 
 ## Why it is interesting
 
