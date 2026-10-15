@@ -1,0 +1,199 @@
+<!-- theorem-state: {"artifact_id":"ART-962698C8BDA8","canonical":true,"claim_ids":["C-HARMONIC-COMPONENT-SQRT-COUNT"],"claim_statuses":{"C-HARMONIC-COMPONENT-SQRT-COUNT":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
+# Target C Audit.200 — square-root harmonic-component count
+
+Date: 2026-10-09. Audit base: `origin/main=5fd846b2a317f8c1731c1c77cb1efcb08cd23c3c`,
+state `2026-10-09.audit.193`; C-II and Level I remain open.
+
+Frozen candidate: `origin/research/level-i-fused-review-20261009` at
+`6132201c1d3056ca68a222217094acb819f5b4d7`. Audited source artifact: the
+[candidate report](../reports/target_c_disjoint_attachment_cell_square_root_count_2026-10-09.md),
+SHA-256 `89b840f869d135f3ce509f8e248ce5a74c829d1aa15cbcefe5e12d54d115dced`.
+
+## Verdict
+
+**PASS — promote `C-HARMONIC-COMPONENT-SQRT-COUNT`.** In every sufficiently
+large canonical C-II source, the number `c_I` of components of the unloaded
+positive-contact core satisfies `c_I=O(\sqrt D)`. Contact-isolated source
+points are not included in `c_I`; they remain in the full source and receive
+no population bound.
+
+The key new estimate is a linear count of short-diameter harmonic cells inside
+local force-hull arcs, obtained by charging disjoint cells to the turning of
+one concave graph. The result sharpens the component-count error in the exact
+pinned ledger, but supplies no source move, isolate budget, finite competitor,
+C-II closure, or Level I conclusion.
+
+## Exact scope and canonical inputs
+
+Use the canonical post-ZF full-source normal form. Let `F` be the actual
+positive force hull, `B=Vert(F)` its actual loaded diameter-endpoint vertices,
+`I_r` the connected components of the unloaded positive-contact graph on the
+nonisolated core, `A_r` the distinct actual loaded attachments of `I_r`, and
+`P_r=conv(A_r)` the harmonic attachment cells. Put `delta_r=diam(C[I_r])`
+and `c_I=#\{r\}`. The audited inputs are canonical
+`C-COMP-DEATOMIZATION` (all-phase trapping, degree and graph-diameter facts,
+finite local-arc estimate, and eventual force-hull fatness) and
+`C-HARMONIC-CELL-TILING` (the actual cells `P_r` have pairwise disjoint
+interiors). They are used only in their post-ZF C-II scope; no scaffold or
+selected-grid proxy is introduced.
+
+For every integer `M>=0`, the new bound is
+
+\[
+ N_M:=\#\{r:\delta_r\le M\}\le 12{,}000{,}000\pi(M+2).
+\]
+
+Together with the canonical `\sum_r\delta_r\le2+2\pi D` budget, this gives
+
+\[
+ c_I\le12{,}000{,}000\pi(\lfloor\sqrt D\rfloor+2)
+       +\frac{2+2\pi D}{\lfloor\sqrt D\rfloor+1}
+ =O(\sqrt D).
+\]
+
+## Independent reconstruction
+
+### Curvature budget for disjoint cells on one arc
+
+Let `f` be concave piecewise affine on a horizontal interval of length `X`,
+with total slope drop `V`. In the cap between its graph and endpoint chord,
+consider pairwise interior-disjoint convex polygons whose vertices lie on the
+graph and whose minimum width is at least `w>0`.
+
+For each polygon `Q`, choose a maximum-area triangle `T` with vertices among
+those of `Q`. If `lambda_i` are barycentric coordinates relative to `T`,
+replacing vertex `i` by any `x in Q` gives a triangle contained in `Q`; its
+area is `|lambda_i| area(T)`. Since that signed area is affine in `x`, its
+absolute value on the convex polygon is at most the largest value at a vertex.
+Thus `|lambda_i|<=1` throughout `Q`, so `Q` lies in the triangle
+`lambda_i>=-1`, a homothetic copy of `T` of factor four about its centroid.
+Hence `minwidth(T)>=w/4`. For a triangle, inradius is at least one third of
+minimum width, so `r_T>=w/12`. The selected triangles have disjoint interiors.
+No other graph vertex can lie strictly inside a selected triangle: on each
+interval between consecutive selected vertices, concavity places the graph on
+or above the triangle side; any collinear graph vertices lie on its boundary.
+
+Extend them to a triangulation of the cap, rooted at the endpoint chord. Each
+triangle has ordered horizontal coordinates `a<b<c`; write
+`l1=b-a`, `l2=c-b`, and let `s1,s2` be the left and right secant slopes.
+Concavity gives `s1>=s2`. The other two sides have lengths at least their
+horizontal runs `l1` and `l2`, so the semiperimeter is at least `l1+l2`.
+Using the area formula and `l1*l2/(l1+l2)<=min(l1,l2)` gives
+
+\[
+ A_T=\tfrac12 l_1l_2(s_1-s_2),\qquad
+ r_T\le\tfrac12\min(l_1,l_2)(s_1-s_2).
+\]
+
+Let `mu=-f''` be the nonnegative slope-drop measure. Direct integration of
+secants gives
+
+\[
+ s_1-s_2=\int g_{a,b,c}(t)\,d\mu(t),\qquad
+ g_{a,b,c}(t)=\begin{cases}
+ (t-a)/(b-a),&a\le t\le b,\\
+ (c-t)/(c-b),&b\le t\le c,\\
+ 0,&\text{otherwise}.
+ \end{cases}
+\]
+
+At a fixed `t`, nonzero kernels occur only along the single triangulation
+root-to-leaf chain whose intervals contain `t`; a curvature atom at a split
+vertex is counted once, with `g=1`, and terminates that chain. At each node,
+`min(l1,l2)` is no greater than the horizontal shortening on entering the
+child interval containing `t`. These shortenings telescope to at most `X`;
+if `t` is the split vertex, the terminal charge `min(l1,l2)` is at most the
+remaining interval length and is absorbed in that same total. Since `0<=g<=1`,
+it follows that
+
+\[
+ \sum_T r_T\le\tfrac12\int\sum_T\min(l_1,l_2)g_{a,b,c}(t)\,d\mu(t)
+ \le XV/2.
+\]
+
+Since every selected triangle has inradius at least `w/12`, the number of
+polygons is at most `6XV/w`, and hence also at most the deliberately looser
+`12XV/w` used below. This argument allows nested attachment spans and shared
+cell boundaries; it uses only disjoint interiors of the actual convex cells.
+
+### Apply the curvature budget to canonical harmonic cells
+
+Every unloaded core vertex has at least three distinct unit-contact neighbors.
+Harmonic trapping places the vertex and all its contact neighbors in its cell
+`P_r`. The canonical unit-separation strip lemma says these four points cannot
+fit in width below `1/2`, so every cell has minimum width at least `1/2`,
+including singleton components. All contact isolates remain outside this
+component statement.
+
+Fix `M` and put `L=M+2`, `w0=22L`. For a component with `delta_r<=M`, every
+attachment is within Euclidean distance `L` of a chosen representative. The
+canonical fat-hull/local-arc lemma puts its attachments within boundary
+arclength `w0` of that representative whenever `L<=D/10^6`; this is inside
+the canonical `L<=D/10000` range.
+
+If `L>D/10^6`, each component uses at least three distinct loaded-attachment
+incidences, while each loaded vertex has contact degree at most three. Thus
+`N_M<=q`, where `q=|B|`. Since the actual force hull has diameter at most `D`,
+Cauchy's perimeter formula gives `per(F)<=pi D`, and unit separation of
+successive loaded vertices gives `q<=per(F)`. Hence
+`N_M<=pi D<10^6 pi L`.
+
+For `L<=D/10^6`, partition `partial F` into equal arclength blocks of length
+in `[w0,2w0]` and extend each block by `w0` at either end. Assign each cell
+to the block containing its representative. Its full attachment set, and
+therefore all vertices of `P_r`, lie on the extended arc, whose length and
+horizontal span are at most `4w0=88L`.
+
+By canonical fatness, relative to its center `o`,
+`B(o,D/20) subset F subset B(o,11D/20)`. Every supporting outward normal `n`
+at a point `p` of `partial F` satisfies
+`n dot ((p-o)/|p-o|)>=1/11`. Over an extended arc, the polar angle of `p-o`
+changes by at most `88L/(D/20)<=1760/10^6`. Choosing the radial direction `e`
+at one point of the arc then gives `n dot e>1/22` throughout. Projection onto
+`Je` is strictly monotone, so the arc is a concave graph with slope bounded by
+`22`. Its total slope drop is at most `485 Theta`, where `Theta` is the actual
+exterior turning on the arc, because the derivative of the tangent slope is
+bounded by `1+22^2=485`.
+
+The curvature lemma with `X=88L`, `V=485 Theta`, and `w=1/2` bounds the
+assigned cells by
+
+\[
+ 24(88L)(485\Theta)=1{,}024{,}320L\Theta.
+\]
+
+The extended arcs cover each boundary point at most five times: the original
+equal blocks have length at least `w0`, and each extension adds only `w0` at
+either end. This includes curvature atoms at block endpoints. The convex hull
+has total exterior turning `2pi`, so the sum of all extended-arc turns is at
+most `10pi`. Summing gives `N_M<=10{,}243{,}200pi L`, below the stated
+`12{,}000{,}000pi L` bound.
+
+Finally, the canonical graph-diameter budget gives
+`sum_r delta_r<=2+2pi D`; components with `delta_r>=M+1` therefore number at
+most `(2+2pi D)/(M+1)`. Choosing `M=floor(sqrt(D))` proves the displayed
+square-root count in both canonical C-II alternatives.
+
+## Hostile checks and limits
+
+- The cells are convex hulls of actual loaded attachments with disjoint
+  interiors. The proof does not replace them with abstract attachment lists,
+  normal windows, a scaffold, or selected stressed edges.
+- Shared vertices or boundary chords do not violate the curvature charge;
+  only cell interiors and the selected triangle interiors need to be disjoint.
+- The component diameter and attachment-distance statements concern the
+  positive-contact core. Contact-isolated source labels remain in the full
+  source and are not included in `c_I` or bounded by this result.
+- Sublinear component count does not bound the population of any component or
+  the full-source isolate population. It does not imply spare packing capacity,
+  a compatible finite motion, or a strict-sub-`D` competitor.
+- No finite verifier certifies this analytic curvature and arc argument; no
+  numerical or sampled computation is used as proof evidence.
+
+## Canonical disposition
+
+Promote `C-HARMONIC-COMPONENT-SQRT-COUNT`, depending on canonical
+`C-COMP-DEATOMIZATION` and `C-HARMONIC-CELL-TILING`. This sharpens the
+component-count term in the pinned ledger from `O(D^(2/3))` to `O(sqrt(D))`.
+The remaining full-source shell/interface payment and the C-II/Level I
+endpoints are unchanged.

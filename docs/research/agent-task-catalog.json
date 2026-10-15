@@ -1,0 +1,1555 @@
+{
+  "schema_version": 1,
+  "catalogue_revision": "public-frontier.1",
+  "reviewed_on": "2026-10-13",
+  "reviewed_base_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+  "reviewed_state_version": "2026-10-10.audit.234",
+  "problem_status": "open",
+  "purpose": "Bounded candidate tasks derived from the canonical E99 frontier; not a theorem ledger, novelty index, or work reservation service.",
+  "authority": [
+    "docs/STATE.md",
+    "docs/state/theorem-state.yaml",
+    "docs/problem/statement.md",
+    "docs/targets/target-a/README.md",
+    "docs/targets/target-b/README.md",
+    "docs/targets/target-c/README.md",
+    "docs/targets/target-c/CURRENT.md"
+  ],
+  "selection_policy": {
+    "default_count": 3,
+    "default_track_diversification": "sample distinct tracks without replacement, then one weighted card from each selected track",
+    "forced_track": "sample cards without replacement within the requested track",
+    "seed": "32 hexadecimal digits; deterministic SHA-256 counter stream",
+    "scope_key": "stable digest of task ID and selected method; it excludes seed and base commit",
+    "reservation": false,
+    "novelty_claim": false
+  },
+  "tracks": [
+    {
+      "id": "target-a",
+      "weight": 17,
+      "description": "Direct work on the locked-response right-deficiency and zero-slack/source branches."
+    },
+    {
+      "id": "target-b",
+      "weight": 17,
+      "description": "Direct work on the exact outer-shell inequality, including phase, multi-grain, and topology terms."
+    },
+    {
+      "id": "target-c",
+      "weight": 24,
+      "description": "Direct C-II source-realized motion, stress access, and separate macroscopic-container obligations."
+    },
+    {
+      "id": "independent-audit",
+      "weight": 12,
+      "description": "Independent checks of exact canonical implications and their stated scopes."
+    },
+    {
+      "id": "exact-computation",
+      "weight": 10,
+      "description": "Exact bounded searches and counterexample tests; finite evidence only."
+    },
+    {
+      "id": "independent-verification",
+      "weight": 8,
+      "description": "A separately implemented checker for a finite combinatorial or algebraic bridge."
+    },
+    {
+      "id": "literature",
+      "weight": 5,
+      "description": "Hypothesis-level literature audits for a precise current missing inequality."
+    },
+    {
+      "id": "alternative-approach",
+      "weight": 7,
+      "description": "Exploratory routes that avoid the main A/B/C proof machinery while naming a global endpoint."
+    }
+  ],
+  "open_pr_snapshot_date": "2026-10-15",
+  "open_pr_snapshot": [],
+  "tasks": [
+    {
+      "id": "target-a-locked-sector-surplus",
+      "track": "target-a",
+      "selection_weight": 5,
+      "frontier_relation": "current-frontier",
+      "question": "For the actual response optimum and a canonical stress-generated shield, can the Section-175 right-deficiency endpoint be closed by proving the required exterior-sink and sector population surplus, or by producing a strict sub-D competitor?",
+      "assumptions": [
+        "Use the actual plateau-terminalized response X* and the canonical three-channel locked fan when the locked branch is invoked.",
+        "Keep the Section-175 tube, sector sets, isolated exterior sinks, and j_* bookkeeping as defined in the active Target A modules.",
+        "The goal is the canonical global rank/nullity inequality or a genuine same-cardinality competitor, not a bound on a response scaffold alone."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim": "targets.target-a; Sections 175-177 and the global Schur endpoint"
+        },
+        {
+          "path": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+          "claim": "Section 175 tube-only right-deficiency identity and exact locked-branch inequality"
+        },
+        {
+          "path": "docs/targets/target-a/29-lens-source-gate-refinements.md",
+          "claim": "Section 177 lens and source-gate alternatives"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-a/README.md",
+          "claim": "fixed-source Hall capacity is exact and does not exceed the same-hull bound"
+        },
+        {
+          "path": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+          "claim": "the pointwise tube charge is O(|V(Sigma)|); the missing term is source-specific sink/sector surplus"
+        },
+        {
+          "path": "docs/targets/target-a/29-lens-source-gate-refinements.md",
+          "claim": "lens shielding retains a basis-sensitive penalty and can have overlapping exterior sink sets"
+        }
+      ],
+      "starting_experiment": "Specialize the exact inequality to the three-channel fan. Write every term in the right-deficiency identity with disjoint source sets, then test whether the known translation-average or straight-crosscut tube bound can reach the required integer surplus without discarding a boundary-order term.",
+      "expected_evidence": [
+        "A complete proof of the exact Section-175 surplus inequality under canonical hypotheses, including all overlap and integer terms.",
+        "Or a certified counterexample to a proposed stronger intermediate inequality, with its missing hypothesis identified.",
+        "A final implication to the global Schur endpoint or a strict same-cardinality sub-D competitor."
+      ],
+      "stopping_condition": "Stop if the argument only improves a tube constant, counts local gates, or gives an O(D) estimate without controlling the required exact Schur deficiency; record the specific unclosed term.",
+      "methods": [
+        "sector-by-sector exact accounting",
+        "max-flow/Hall reduction with a source-specific surplus lemma"
+      ],
+      "overlap_terms": [
+        "right-deficiency",
+        "tube shield",
+        "three-channel fan",
+        "sector surplus",
+        "Section 175",
+        "Section 177"
+      ],
+      "source_proposal_numbers": [
+        953,
+        966
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "direct frontier",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "For the actual source and response, establish rank(S)<=d_int+|C^partial|-Delta_Lambda (d_sc>=Delta_Lambda); in the locked branch the exact Section-175 surplus is |O_iso|+sum_i max(0,|O_i|-|C_i|)>=j_*+|T_Z|. Any untouched zero-slack/global-realization branch remains.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py target-a-locked-sector-surplus"
+      ]
+    },
+    {
+      "id": "target-a-zero-slack-source-transfer",
+      "track": "target-a",
+      "selection_weight": 4,
+      "frontier_relation": "current-frontier",
+      "question": "Can the boundary-order source localization and genuine-source gates in the zero-slack branch be converted into Schur deficiency or a strict source-cardinality competitor without identifying independently chosen matchings?",
+      "assumptions": [
+        "Use the actual zero-slack source A^0 and plateau-endpoint response X* with the exact Section-168 matching hypotheses.",
+        "The Section-176/177 exceptional sets are boundary-order and must remain explicit when the target is an exact rank or integer inequality.",
+        "Keep the X* to A^0 and Y_in to A^0 matchings distinct unless a new simultaneous/global coupling theorem proves they agree."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim": "target-a zero-slack branch and global Schur endpoint"
+        },
+        {
+          "path": "docs/targets/target-a/28-zero-slack-boundary-order-source-frontier.md",
+          "claim": "Section 176 source localization and boundary-order defect"
+        },
+        {
+          "path": "docs/targets/target-a/29-lens-source-gate-refinements.md",
+          "claim": "Section 177 disjoint genuine-source V-path and source-gate refinements"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-a/18-common-neighbor-sdr-regression.md",
+          "claim": "two source-matched pairs can share the same unique common lattice neighbor"
+        },
+        {
+          "path": "docs/targets/target-a/README.md",
+          "claim": "local common-neighbor certificates and gate counts alone do not imply Schur nullity"
+        },
+        {
+          "path": "docs/targets/target-a/28-zero-slack-boundary-order-source-frontier.md",
+          "claim": "source matching localization does not by itself relate r to Schur demand s"
+        }
+      ],
+      "starting_experiment": "Write a two-matching incidence diagram with separate source-image sets. Mark each sector-good, shield-crossing, and exterior label, then derive the exact maximum loss before any Hall or rank step. Test the proposed implication on small bipartite instances with shared-neighbor collisions.",
+      "expected_evidence": [
+        "A simultaneous source/response coupling theorem with exact exceptional-set terms.",
+        "Or an exact finite regression disproving a proposed coupling lemma and specifying the needed additional hypothesis.",
+        "An explicit derivation to Schur deficiency, the global rank inequality, or a strict sub-D competitor."
+      ],
+      "stopping_condition": "Stop if the proof silently equates the independent matchings, drops an O(D) term at an exact integer endpoint, or treats pairwise feasible gates as simultaneously compatible.",
+      "methods": [
+        "bipartite incidence and Hall analysis",
+        "exact finite counterexample search for proposed coupling lemmas"
+      ],
+      "overlap_terms": [
+        "zero-slack",
+        "source gates",
+        "A0 matching",
+        "Schur terminals",
+        "common-neighbor SDR",
+        "boundary-order"
+      ],
+      "source_proposal_numbers": [
+        953,
+        954,
+        955,
+        956,
+        957,
+        958,
+        959,
+        960
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "direct frontier",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "For the actual source and response, establish rank(S)<=d_int+|C^partial|-Delta_Lambda (d_sc>=Delta_Lambda); in the locked branch the exact Section-175 surplus is |O_iso|+sum_i max(0,|O_i|-|C_i|)>=j_*+|T_Z|. Any untouched zero-slack/global-realization branch remains.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py target-a-zero-slack-source-transfer"
+      ]
+    },
+    {
+      "id": "target-a-source-aware-strain-architecture",
+      "track": "target-a",
+      "selection_weight": 1,
+      "frontier_relation": "peripheral-to-frontier",
+      "question": "Can a concrete nonlocal or exterior-compatible motion architecture improve on the sharp local five-block support bound while preserving every source constraint needed by the global Schur or diameter endpoint?",
+      "assumptions": [
+        "Sections 157 and 160-162 establish sharp scale behavior only for their specified five-block rigid-translation architecture.",
+        "Any proposed motion must be realized in the actual full source or be paired with an explicit embedding theorem.",
+        "A gain in a lattice gap packing alone is peripheral until it changes the canonical global endpoint."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/targets/target-a/10-quantitative-kuperberg-rate.md",
+          "claim": "Section 157 support bound"
+        },
+        {
+          "path": "docs/targets/target-a/12-toeout-kuperberg-improvement.md",
+          "claim": "Section 160 best current support constant in the stated motion class"
+        },
+        {
+          "path": "docs/targets/target-a/13-five-block-local-optimality.md",
+          "claim": "Section 161 local architecture optimality"
+        },
+        {
+          "path": "docs/targets/target-a/14-sharp-symmetric-five-block.md",
+          "claim": "Section 162 symmetric leading coefficient"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-a/README.md",
+          "claim": "the five-block class already has optimal quartic order and symmetric leading coefficient"
+        },
+        {
+          "path": "docs/targets/target-a/13-five-block-local-optimality.md",
+          "claim": "the local result does not exclude nonlocal rearrangements"
+        }
+      ],
+      "starting_experiment": "Name a different rigid-body grouping or exterior source interface before optimizing. Derive its feasible first-order cone and leading support cost, then test the smallest contact configuration that could realize the motion without moving an unrelated source label across a unit constraint.",
+      "expected_evidence": [
+        "A fully specified motion class with exact feasibility constraints and a strict improvement over the known local support constant.",
+        "A rigorous embedding into a canonical source and an implication to the global Target A endpoint, or a precise explanation of which bridge is missing."
+      ],
+      "stopping_condition": "Stop if the result only improves an isolated lattice gap-packing constant or repeats the same five-block rigid translations; classify it as peripheral and state the missing source-embedding theorem.",
+      "methods": [
+        "finite-dimensional constrained optimization with exact expansions",
+        "geometric construction plus full-source pair audit"
+      ],
+      "overlap_terms": [
+        "five-block",
+        "toe-out",
+        "Kuperberg support",
+        "exterior-compatible strain",
+        "nonlocal motion"
+      ],
+      "source_proposal_numbers": [
+        967
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "scoped exploration",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "For the actual source and response, establish rank(S)<=d_int+|C^partial|-Delta_Lambda (d_sc>=Delta_Lambda); in the locked branch the exact Section-175 surplus is |O_iso|+sum_i max(0,|O_i|-|C_i|)>=j_*+|T_Z|. Any untouched zero-slack/global-realization branch remains.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py target-a-source-aware-strain-architecture"
+      ]
+    },
+    {
+      "id": "target-b-multigrain-transfer",
+      "track": "target-b",
+      "selection_weight": 5,
+      "frontier_relation": "current-frontier",
+      "question": "Can the promoted single-dominant-component phase deficit be globalized across several macroscopic coherent grains while retaining physical crossings, deleted/interface crossings, and virtual noncrossing determinant mass?",
+      "assumptions": [
+        "Work in the pure simply connected rhombic disk scope of the canonical Target B chain before generalizing topology.",
+        "Use fixed Section-50 lambda before taking D to infinity wherever MCP2 requires it.",
+        "Do not assume one grain captures 1-o(1) of the quadratic crossing mass; that is the missing globalization."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim_id": "TB-DENSE-GRID",
+          "claim": "target-b endpoint and canonical TB-DENSE-GRID entry"
+        },
+        {
+          "path": "docs/targets/target-b/README.md",
+          "claim": "exact joint shell inequality and current multi-grain obstruction"
+        },
+        {
+          "path": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+          "claim": "promoted DT/TG/PDG/PC/MCP/GPI tools and their scopes"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-b/README.md",
+          "claim": "GPI is a one-dominant-component theorem; density-only grids can remain below the PC3 cancellation threshold"
+        },
+        {
+          "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+          "claim": "the earlier phase-core and boundary-order reductions do not supply a multi-grain sum"
+        }
+      ],
+      "starting_experiment": "Write a grain-indexed ledger for physical crossings, deleted interfaces, and virtual determinant mass. First test two grains with a shared interface and derive the exact cross-term that prevents summing the one-grain GPI bound; only then propose a global inequality.",
+      "expected_evidence": [
+        "A proof of a sum inequality with every interface and topology error displayed and a uniform remainder adequate for the exact shell endpoint.",
+        "Or an exact finite counterexample to the proposed naive additivity rule, followed by a corrected coupling quantity."
+      ],
+      "stopping_condition": "Stop if the argument assumes a dominant grain, discards deleted/interface edges as o(D^2) without a proof, or only proves a local class-size inequality.",
+      "methods": [
+        "grain-by-grain charge transport",
+        "two-grain exact model followed by a uniform summation lemma"
+      ],
+      "overlap_terms": [
+        "multi-grain",
+        "GPI",
+        "MCP2",
+        "PDG",
+        "interface crossings",
+        "phase deficit"
+      ],
+      "source_proposal_numbers": [
+        949,
+        954,
+        956,
+        957,
+        958,
+        959,
+        960
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "direct frontier",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Establish G+E>=(sqrt(3)/4)B+(sqrt(3)/2)(t+chi-1) for the full canonical source with all multi-grain, interface, topology and uniformity hypotheses, or construct the full same-cardinality strict sub-D competitor.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py target-b-multigrain-transfer"
+      ]
+    },
+    {
+      "id": "target-b-topology-correction-ledger",
+      "track": "target-b",
+      "selection_weight": 3,
+      "frontier_relation": "current-frontier",
+      "question": "Can the outer-shell inequality be proved on finite rhombic cell complexes with holes and multiple components while retaining exactly the correction (t+chi-1), rather than importing a disk-only estimate?",
+      "assumptions": [
+        "The required global expression is G+E >= (sqrt(3)/4)B + (sqrt(3)/2)(t+chi-1).",
+        "Count boundary components, holes, and component terms with the canonical sign convention from Target B.",
+        "A proof for a simply connected disk is not a proof for general topology."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/targets/target-b/README.md",
+          "claim": "joint shell stability inequality and current topology requirement"
+        },
+        {
+          "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+          "claim": "Sections 24-56 and exact boundary/shell quantities"
+        },
+        {
+          "path": "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md",
+          "claim": "promoted phase-cut results and hole correction HA"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-b/README.md",
+          "claim": "the phase-star exclusion is limited to its pure-disk and coherent-core hypotheses"
+        },
+        {
+          "path": "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md",
+          "claim": "HA pays the stated hole correction but does not establish the full shell inequality"
+        }
+      ],
+      "starting_experiment": "Enumerate the Euler and perimeter identities for a disk, annulus, and two-component rhombic cellulation. Derive the coefficient of each boundary component before using any phase-energy estimate; then attempt the smallest extension of HA that preserves the displayed topology term.",
+      "expected_evidence": [
+        "An exact combinatorial-geometric identity for the boundary and face terms on the stated cell complexes.",
+        "A proof that its error terms imply the canonical coefficient, or a small exact cellulation that falsifies the proposed identity."
+      ],
+      "stopping_condition": "Stop if the proof sets t+chi-1 to zero, treats a multiply connected domain as a disk, or obtains only an O(D) correction when the endpoint is boundary-order exact.",
+      "methods": [
+        "Euler characteristic and face-incidence accounting",
+        "exact finite cellulation enumeration"
+      ],
+      "overlap_terms": [
+        "Target B holes",
+        "Euler correction",
+        "t+chi-1",
+        "boundary shell",
+        "HA",
+        "multiple components"
+      ],
+      "source_proposal_numbers": [
+        949
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "direct frontier",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Establish G+E>=(sqrt(3)/4)B+(sqrt(3)/2)(t+chi-1) for the full canonical source with all multi-grain, interface, topology and uniformity hypotheses, or construct the full same-cardinality strict sub-D competitor.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py target-b-topology-correction-ledger"
+      ]
+    },
+    {
+      "id": "target-b-phase-deficit-competitor",
+      "track": "target-b",
+      "selection_weight": 2,
+      "frontier_relation": "current-frontier",
+      "question": "In a phase-imbalanced survivor, can the phase potential be integrated into an actual equal-cardinality competitor of diameter strictly below D while preserving every unit-separation constraint and active diameter bound?",
+      "assumptions": [
+        "Use the exact Target B phase potential and geometry in the current route; do not replace it by arbitrary graph phases.",
+        "All source points and all active diameter constraints of the proposed competitor must be checked.",
+        "A nonnegative first-order derivative or a local shell energy decrease alone does not produce a finite competitor."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/targets/target-b/README.md",
+          "claim": "global endpoint alternative: shell inequality or strict diameter improvement"
+        },
+        {
+          "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+          "claim": "phase potential and sections 49-56"
+        },
+        {
+          "path": "docs/RESEARCH_WORKFLOW.md",
+          "claim": "geometry and finite-motion proof-audit requirements"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-b/README.md",
+          "claim": "local phase and coherent-core exclusions do not control every survivor"
+        },
+        {
+          "path": "docs/targets/target-b/01-jammed-rhombic-branch.md",
+          "claim": "phase-potential deductions stop short of a source-preserving strict-D motion"
+        }
+      ],
+      "starting_experiment": "Choose a finite survivor model with a nonzero phase defect and compute the full Jacobian of contact lower constraints and diameter upper constraints. Seek a feasible velocity with a strictly negative derivative for every active diameter pair, then separately prove that the direction integrates to a finite move.",
+      "expected_evidence": [
+        "A full-source feasible finite deformation with exact strict diameter margin and all lower-pair constraints checked.",
+        "Or an exact obstruction showing why the proposed phase direction cannot satisfy the active constraints."
+      ],
+      "stopping_condition": "Stop if only the aggregate phase energy decreases, if some active diameter pair is unchecked, or if the argument replaces strict <D by <=D.",
+      "methods": [
+        "linearized constraint cone plus nonlinear continuation",
+        "exact rational finite survivor search"
+      ],
+      "overlap_terms": [
+        "phase deficit",
+        "strict diameter competitor",
+        "active diameter pairs",
+        "Target B deformation"
+      ],
+      "source_proposal_numbers": [
+        949,
+        954,
+        955,
+        956,
+        957,
+        958,
+        959,
+        960
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "direct frontier",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Establish G+E>=(sqrt(3)/4)B+(sqrt(3)/2)(t+chi-1) for the full canonical source with all multi-grain, interface, topology and uniformity hypotheses, or construct the full same-cardinality strict sub-D competitor.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py target-b-phase-deficit-competitor"
+      ]
+    },
+    {
+      "id": "target-c-face-coupled-move",
+      "track": "target-c",
+      "selection_weight": 5,
+      "frontier_relation": "current-frontier",
+      "question": "Can the surviving full-core outer-to-bounded or bounded-to-bounded train/face system be converted into a source-realized finite move or discrete replacement that loses a contact at D or gives a same-cardinality strict sub-D competitor?",
+      "assumptions": [
+        "Use the contact-minimal, then diameter-pair-minimal canonical source with C=C_* and H=H_*.",
+        "Retain every source point, including all contact-isolated points, in the move and every feasibility check.",
+        "Check every old unit contact, every full-source noncontact lower pair, every actual diameter upper pair, all at-most-d_H inactive upper exceptions, and each unary rhombus test."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim": "Target C canonical scope and current C-II status"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "claim": "full-core exact remaining endpoint and finite-move limitations"
+        },
+        {
+          "path": "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md",
+          "claim": "exact next split and full-core finite-move tests"
+        },
+        {
+          "path": "docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md",
+          "claim": "Audit 171 supplied-W deletion; no W extraction or restoration"
+        },
+        {
+          "path": "docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md",
+          "claim": "Audit 174 removes the positive one-cell collar range only"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md",
+          "claim": "generic near-unit planarity and O-O supply are bounded; the remaining linear obstruction must be face-coupled or an explicit unary blocker"
+        },
+        {
+          "path": "docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md",
+          "claim": "stress-killing deletion has no extracted W or cardinality restoration"
+        },
+        {
+          "path": "docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md",
+          "claim": "the higher-(q-k)/D Type-II range and separate macroscopic branch remain open"
+        },
+        {
+          "path": "docs/reports/seed090_finite_rhombus_contraction_2026-10-13.md",
+          "claim": "Unreviewed corrected Seed 90: nonexpansive endpoints can lock a dense nonglobal frame; its contact-preserving bow requires only two actual diameter pairs and explicit full-source gaps, so it does not supply a canonical endpoint."
+        },
+        {
+          "path": "docs/reports/seed090_shared_edge_overlap_audit_2026-10-14.md",
+          "claim": "Exact shared-label regression: same-half-plane rhombi may share a third label. Use the overlap case split before reusing edge propagation."
+        },
+        {
+          "path": "docs/reports/target_c_pentagon_activation_and_contact_debt_preservation_2026-10-15.md",
+          "claim": "Unreviewed finite wall obstructions: one opened side must exceed sqrt(3); exactly two opened sides require a^2+b^2>4; internal-only contact repayment needs deleted wall adjacencies. Actual train-collar embedding remains conditional."
+        }
+      ],
+      "starting_experiment": "Write one candidate move with explicit train endpoints, owner labels, deleted labels, and restored labels. Encode the lower and upper squared-distance constraints for every source pair, including isolates, and solve the smallest nontrivial face-coupled case exactly before seeking a uniform theorem.",
+      "expected_evidence": [
+        "A finite-move theorem with all source constraints and a strict contact-loss or strict-D conclusion under canonical hypotheses.",
+        "Or a certified exact regression to the proposed endpoint, identifying the obstruction that a stronger lemma must avoid."
+      ],
+      "stopping_condition": "Stop if the argument only builds a path forest, deletes stress-support labels without restoring cardinality, assumes simultaneous compatibility of individual exchanges, or treats C-I shear results as a C-II finite motion.",
+      "methods": [
+        "owner/face implication graph plus exact displacement constraints",
+        "small rational realization and exact squared-distance audit"
+      ],
+      "overlap_terms": [
+        "face-coupled trains",
+        "owner implication",
+        "unary rhombus blocker",
+        "full-source move",
+        "actual diameter upper",
+        "C-II"
+      ],
+      "source_proposal_numbers": [
+        947,
+        948,
+        950,
+        951,
+        952,
+        954,
+        955,
+        956,
+        957,
+        958,
+        959,
+        960,
+        967
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "direct frontier",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with strict contact loss at D or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py target-c-face-coupled-move"
+      ]
+    },
+    {
+      "id": "target-c-typeii-stress-mass-access",
+      "track": "target-c",
+      "selection_weight": 4,
+      "frontier_relation": "current-frontier",
+      "question": "Can the unweighted Type-II route from actual diameter edges to coherent grids be strengthened to control the positive KKT diameter mass on the exceptional edges, or can that mass itself be used to force the finite-move endpoint?",
+      "assumptions": [
+        "Work only in the canonical C-II Type-II near-disk branch and retain the exact hypotheses of the grid and face-tail theorems.",
+        "The exceptional set has size eta D, but no canonical theorem makes its positive KKT mass small.",
+        "Do not infer universal selected-stress PSD or reopen the closed C-I shear separator."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim_id": "C-TYPEII-ACTUAL-DIAMETER-GRID-ACCESS",
+          "claim": "C-TYPEII-ACTUAL-DIAMETER-GRID-ACCESS"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim_id": "C-TYPEII-FACE-TAIL-PORT-MULTIPLICITY",
+          "claim": "C-TYPEII-FACE-TAIL-PORT-MULTIPLICITY"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim_id": "C-TYPEII-ATOMIC-SEPARATE-FACE-FLOOR",
+          "claim": "C-TYPEII-ATOMIC-SEPARATE-FACE-FLOOR"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "claim": "actual diameter grid access is unweighted and supplies no stress-mass or motion conclusion"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md",
+          "claim": "the exceptional eta D edges may carry all positive KKT diameter mass"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "claim": "Audit 173 supplies grids/routes but no exceptional stress-mass control, compatible motion, or refill"
+        },
+        {
+          "path": "AGENTS.md",
+          "claim": "do not infer Schur or source-specific nullity from planarity or generic rank alone"
+        }
+      ],
+      "starting_experiment": "For a fixed normalized stress, write the mass of actual diameter edges by route class (grid-accessible, face-tail, exceptional). Test the strongest bound derivable from the canonical inequalities without assuming a uniform stress gap, then identify which class must be charged by the finite move.",
+      "expected_evidence": [
+        "A stress-weighted endpoint-access or face-charge inequality with exact scope and no unproved lower bound on individual stress coefficients.",
+        "Or an exact stress family showing why unweighted edge counts cannot control the required mass."
+      ],
+      "stopping_condition": "Stop if the proof assigns equal weight to diameter edges, drops the exceptional set, assumes a uniform negative stress gap, or removes contact isolates from the full source.",
+      "methods": [
+        "weighted incidence and stress-mass accounting",
+        "exact finite stress-polytope examples"
+      ],
+      "overlap_terms": [
+        "Type II",
+        "KKT diameter mass",
+        "eta D exception",
+        "grid access",
+        "face-tail",
+        "selected stress"
+      ],
+      "source_proposal_numbers": [
+        947,
+        950,
+        952
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "direct frontier",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with strict contact loss at D or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py target-c-typeii-stress-mass-access"
+      ]
+    },
+    {
+      "id": "target-c-extract-stress-relevant-diameter-set",
+      "track": "target-c",
+      "selection_weight": 3,
+      "frontier_relation": "current-frontier",
+      "question": "Can one extract from a canonical source a stress-relevant loaded set W to which the supplied-W stress deletion theorem applies, while controlling the exceptional diameter-edge mass and preserving all source labels?",
+      "assumptions": [
+        "The target source is contact-minimal, then diameter-pair-minimal, with all contact isolates retained.",
+        "Audit 171 is used only after a nonempty actual loaded set W is supplied; it does not itself extract W.",
+        "If the one-star refinement is used, prove its actual diameter support has the stated star scope."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim_id": "C-ALMOST-ACCESSIBLE-STRESS-TRANSVERSAL",
+          "claim": "C-ALMOST-ACCESSIBLE-STRESS-TRANSVERSAL"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim_id": "C-STAR-EXCEPTIONAL-FACE-ONE-UNLOADED-TRANSVERSAL",
+          "claim": "C-STAR-EXCEPTIONAL-FACE-ONE-UNLOADED-TRANSVERSAL"
+        },
+        {
+          "path": "docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md",
+          "claim": "C-ALMOST-ACCESSIBLE-STRESS-TRANSVERSAL"
+        },
+        {
+          "path": "docs/audits/target_c_exceptional_diameter_star_face_independent_audit_2026-10-08.md",
+          "claim": "C-STAR-EXCEPTIONAL-FACE-ONE-UNLOADED-TRANSVERSAL"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "claim": "supplied-W deletion and star refinement limits"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "claim": "the full actual diameter graph is required and the stress-relevant W is not extracted"
+        },
+        {
+          "path": "docs/audits/target_c_exceptional_diameter_star_face_independent_audit_2026-10-08.md",
+          "claim": "the one-star theorem has exact scope restrictions and gives no star extraction"
+        },
+        {
+          "path": "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md",
+          "claim": "source deletions produce a cardinality-losing descent; restoration remains a separate endpoint"
+        }
+      ],
+      "starting_experiment": "Start from an extreme normalized stress on the actual contact/diameter constraint system. Identify its support on loaded diameter endpoints, compare that support to the canonical owner and face sets, and formulate the smallest W-selection rule that would give a useful deletion budget.",
+      "expected_evidence": [
+        "A canonical-source theorem that extracts W with a quantitative bound on exceptional edge mass and preserves all source labels in the subsequent motion check.",
+        "Or a finite exact stress/polytope regression showing that a proposed support rule cannot be forced from the current hypotheses."
+      ],
+      "stopping_condition": "Stop if the task merely restates the deletion theorem for a supplied W, assumes a globally single-star support, or treats stress deletion as cardinality-preserving.",
+      "methods": [
+        "stress-face and owner-set analysis",
+        "finite exact KKT support enumeration"
+      ],
+      "overlap_terms": [
+        "supplied W",
+        "stress transversal",
+        "diameter edge mass",
+        "one-star support",
+        "owner extraction"
+      ],
+      "source_proposal_numbers": [
+        947,
+        951,
+        952
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "direct frontier",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with strict contact loss at D or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py target-c-extract-stress-relevant-diameter-set"
+      ]
+    },
+    {
+      "id": "target-c-macroscopic-container-capacity",
+      "track": "target-c",
+      "selection_weight": 3,
+      "frontier_relation": "current-frontier",
+      "question": "Can the macroscopic inactive-container branch yield a source-preserving equal-cardinality packet or finite move after the fixed-wall capacity barriers, without losing the actual loaded core or any contact isolate?",
+      "assumptions": [
+        "Keep the macroscopic-container branch separate from the full-core Type-II branch.",
+        "Any replacement checks all full-source lower constraints and actual-diameter upper constraints, including retained isolates.",
+        "The fixed-wall strict-capacity barriers do not apply automatically to moved walls or multi-cell packets."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "claim": "macroscopic-container branch and the exact remaining packet-capacity limits"
+        },
+        {
+          "path": "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md",
+          "claim": "Audit 108, Audit 110, and arbitrary-container capacity endpoint"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim_id": "C-EXTERIOR-STATIC-PACKET-BARRIER",
+          "claim": "C-EXTERIOR-STATIC-PACKET-BARRIER and canonical source scope"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "claim": "D(8) shows a shield need not create even one replacement slot; fixed strict-safe area is a no-go"
+        },
+        {
+          "path": "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md",
+          "claim": "paired-cap fixed-wall capacity is at most |S1|+|S2|+3; no source-preserving refill follows"
+        },
+        {
+          "path": "docs/audits/target_c_exterior_cap_moved_core_refill_independent_audit_2026-10-09.md",
+          "claim": "moved-core refill exists in a nonglobal family and does not establish canonical extraction"
+        },
+        {
+          "path": "docs/reports/target_c_pentagon_activation_and_contact_debt_preservation_2026-10-15.md",
+          "claim": "A boundary-only cellulation by one pentagon and a one-cell rhombus chain has zero strict wall-safe capacity. Length alone does not certify surplus; source embedding and all source labels still require proof."
+        }
+      ],
+      "starting_experiment": "Choose one exact container class and one proposed deletion/refill rule. Compute the full-source strict capacity with fixed walls, then allow the smallest specified wall motion and test whether the capacity changes while every isolate and old diameter pair remains feasible.",
+      "expected_evidence": [
+        "A uniform capacity or finite-move theorem under explicit geometric extraction hypotheses, plus a proof those hypotheses hold in the canonical branch.",
+        "Or an exact counterexample to a proposed fixed-wall or moved-core capacity inference."
+      ],
+      "stopping_condition": "Stop if the result is only an area/Oler deficit, a fixed-wall surplus count, or a packet that is not embedded into the actual canonical source.",
+      "methods": [
+        "convex-container and Oler accounting with all labels",
+        "exact moved-core packet feasibility"
+      ],
+      "overlap_terms": [
+        "macroscopic container",
+        "inactive chamber",
+        "exterior cap",
+        "strict-safe capacity",
+        "packet refill",
+        "moved core"
+      ],
+      "source_proposal_numbers": [
+        947,
+        951,
+        954,
+        955,
+        956,
+        957,
+        958,
+        959,
+        960,
+        967
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "direct frontier",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with strict contact loss at D or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py target-c-macroscopic-container-capacity"
+      ]
+    },
+    {
+      "id": "audit-target-a-section175-177",
+      "track": "independent-audit",
+      "selection_weight": 3,
+      "frontier_relation": "audit-of-canonical-result",
+      "question": "Independently audit the exact implication from the Section-175 tube-only Schur cut and Section-177 alternatives to the stated locked-branch closure conditions, checking the rank, nullity, and sink-overlap bookkeeping line by line.",
+      "assumptions": [
+        "Treat the exact active theorem modules as the source; do not import pre-175 tube constants or claim the global Target A theorem is closed.",
+        "Check the full canonical response graph and basis matching hypotheses where used.",
+        "The audit result is a classification of the audited implication, not theorem promotion."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+          "claim": "Section-175 cut, nullity, and right-deficiency identities"
+        },
+        {
+          "path": "docs/targets/target-a/29-lens-source-gate-refinements.md",
+          "claim": "Section-177 lens and straight-crosscut routes"
+        },
+        {
+          "path": "docs/RESEARCH_WORKFLOW.md",
+          "claim": "independent proof-audit checklist and claim lifecycle"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-a/README.md",
+          "claim": "Section 174's basis-closed shield cost is superseded by the Section-175 endpoint"
+        },
+        {
+          "path": "docs/targets/target-a/29-lens-source-gate-refinements.md",
+          "claim": "Section 177 has a different basis-sensitive penalty and does not give disjoint exterior sinks"
+        }
+      ],
+      "starting_experiment": "Re-derive the max vertex-disjoint path bound and subtract it from the right shore using an independent notation table. Enumerate a small sector graph with overlapping exterior sinks to verify exactly which terms cancel in the full-tube and lens versions.",
+      "expected_evidence": [
+        "A line-by-line proof audit listing each hypothesis, dependency, and exact algebraic identity, with no new claim promoted.",
+        "Or a minimal counterexample to a specific displayed implication, with a corrected statement and scope."
+      ],
+      "stopping_condition": "Stop after confirming the audited implication; do not expand it into a new theorem or claim Target A closure without the route's missing surplus/source theorem.",
+      "methods": [
+        "independent graph formulation and max-flow proof",
+        "symbolic bookkeeping audit plus exact small cases"
+      ],
+      "overlap_terms": [
+        "Section 175 audit",
+        "tube-only Schur cut",
+        "right deficiency",
+        "lens overlap",
+        "Section 177"
+      ],
+      "source_proposal_numbers": [
+        947,
+        953,
+        966
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "independent evidence",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "For the actual source and response, establish rank(S)<=d_int+|C^partial|-Delta_Lambda (d_sc>=Delta_Lambda); in the locked branch the exact Section-175 surplus is |O_iso|+sum_i max(0,|O_i|-|C_i|)>=j_*+|T_Z|. Any untouched zero-slack/global-realization branch remains.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py audit-target-a-section175-177"
+      ]
+    },
+    {
+      "id": "audit-target-b-gpi-scope",
+      "track": "independent-audit",
+      "selection_weight": 2,
+      "frontier_relation": "audit-of-canonical-result",
+      "question": "Independently verify the exact scope and limiting order in the promoted GPI/MCP2 chain, including fixed lambda, retained components, and the distinction between one dominant grain and the full shell endpoint.",
+      "assumptions": [
+        "Use the exact canonical dependency audit and current Target B route map.",
+        "Do not strengthen the one-component GPI theorem or treat audited-working reports as premises.",
+        "The deliverable is an independent scope audit or a precise counterexample to an overbroad paraphrase."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim_id": "TB-DENSE-GRID",
+          "claim": "TB-DENSE-GRID canonical entry and exact scope"
+        },
+        {
+          "path": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+          "claim": "promoted MCP2 and GPI statements"
+        },
+        {
+          "path": "docs/targets/target-b/README.md",
+          "claim": "global multi-grain obstruction"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-b/README.md",
+          "claim": "GPI does not supply multi-grain globalization or the full topology correction"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim": "MCP2 uses fixed Section-50 lambda before D tends to infinity"
+        }
+      ],
+      "starting_experiment": "Build a dependency table from each GPI hypothesis through the fixed-lambda summation and limit. Test every parameter quantifier against the displayed conclusion and identify any implicit uniformity or dominant-grain assumption.",
+      "expected_evidence": [
+        "A concise independent derivation with exact quantifier order and a list of conclusions that do not follow.",
+        "Or a specific hypothesis gap or algebraic error supported by a reproducible check."
+      ],
+      "stopping_condition": "Stop if the work drifts into proving the full Target B inequality; this card audits only the canonical input chain and its scope.",
+      "methods": [
+        "independent symbolic derivation",
+        "quantifier and dependency audit"
+      ],
+      "overlap_terms": [
+        "GPI",
+        "MCP2",
+        "fixed lambda",
+        "dominant component",
+        "multi-grain scope"
+      ],
+      "source_proposal_numbers": [
+        949
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "independent evidence",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Establish G+E>=(sqrt(3)/4)B+(sqrt(3)/2)(t+chi-1) for the full canonical source with all multi-grain, interface, topology and uniformity hypotheses, or construct the full same-cardinality strict sub-D competitor.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py audit-target-b-gpi-scope"
+      ]
+    },
+    {
+      "id": "audit-target-c-typeii-face-floor",
+      "track": "independent-audit",
+      "selection_weight": 2,
+      "frontier_relation": "audit-of-canonical-result",
+      "question": "Independently reconstruct the Type-II separate-face floor and verify the coefficient conversion that excludes only the positive one-cell collar range, while retaining every source point and the stated asymptotic scope.",
+      "assumptions": [
+        "Use the exact canonical contact-minimal then diameter-pair-minimal C-II source and full-core Type-II near-disk hypotheses.",
+        "Audit the dependency chain and constants; do not upgrade the conclusion to face width, area, motion, or C-II closure.",
+        "All contact-isolated source points remain in source-population counts."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim_id": "C-TYPEII-ATOMIC-SEPARATE-FACE-FLOOR",
+          "claim": "C-TYPEII-ATOMIC-SEPARATE-FACE-FLOOR and dependencies"
+        },
+        {
+          "path": "docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md",
+          "claim": "Audit 174 proof and finite-check limits"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "claim": "current C-II split and consequences of Audit 174"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "claim": "the face count gives no width, area, vacancy, source move, or C-II closure"
+        },
+        {
+          "path": "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md",
+          "claim": "the higher-(q-k)/D Type-II range and Type-I ledger terms remain"
+        }
+      ],
+      "starting_experiment": "Recompute the dimensionless constants from the promoted inequalities using exact symbolic expressions, then check each normalization and limit against the face and outer-walk definitions in the audit.",
+      "expected_evidence": [
+        "An independent derivation of the coefficient inequalities and strict numerical comparison with exact constants.",
+        "Or an exact hypothesis/normalization discrepancy with a correction limited to its actual scope."
+      ],
+      "stopping_condition": "Stop after the coefficient and scope audit; do not infer a source motion or eliminate the higher-ratio or macroscopic-container branches.",
+      "methods": [
+        "exact symbolic algebra",
+        "independent combinatorial face count"
+      ],
+      "overlap_terms": [
+        "Audit 174",
+        "separate-face floor",
+        "Type II",
+        "q-k over D",
+        "outer-walk excess"
+      ],
+      "source_proposal_numbers": [
+        947
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "independent evidence",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with strict contact loss at D or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py audit-target-c-typeii-face-floor"
+      ]
+    },
+    {
+      "id": "compute-b-two-grain-interface-regressions",
+      "track": "exact-computation",
+      "selection_weight": 2,
+      "frontier_relation": "finite-model-only",
+      "question": "In the smallest exact two-grain crossing models with a shared or deleted interface, is naive addition of the one-grain phase deficits false, and what explicit interface term repairs the model inequality?",
+      "assumptions": [
+        "The model is finite and combinatorial; it is not automatically realizable by a global planar packing.",
+        "Use exact integer/rational arithmetic and publish the enumerated domain.",
+        "A finite regression can reject a universal model claim but cannot disprove Target B without a theorem embedding it."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/targets/target-b/README.md",
+          "claim": "multi-grain transfer and interface obstruction"
+        },
+        {
+          "path": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+          "claim": "PDG, PC1/PC3, MCP1/MCP2, and GPI scopes"
+        },
+        {
+          "path": "research/README.md",
+          "claim": "computation documentation contract"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-b/README.md",
+          "claim": "several macroscopic grains may share quadratic crossing mass while density-only grids miss the cancellation threshold"
+        }
+      ],
+      "starting_experiment": "Define a two-grain finite incidence model with explicit physical, deleted-interface, and virtual crossing counters. Exhaust the smallest shore sizes and emit a minimal exact instance where the proposed additive rule fails, if one exists.",
+      "expected_evidence": [
+        "A runnable enumerator, exact input/output fixture, and minimal counterexample or bounded proof for the declared model.",
+        "A clear statement of whether and what geometric realization theorem would be needed to transfer the model to Target B."
+      ],
+      "stopping_condition": "Stop when the declared finite domain is exhausted or the model cannot represent the intended cross-grain interaction; do not relabel a graph-only witness as a planar packing counterexample.",
+      "methods": [
+        "exhaustive exact integer enumeration",
+        "SAT/SMT model with independently checked certificate"
+      ],
+      "overlap_terms": [
+        "two grain",
+        "interface counterexample",
+        "PDG",
+        "MCP2",
+        "deleted crossing",
+        "phase deficit"
+      ],
+      "source_proposal_numbers": [
+        949,
+        956,
+        959
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "scoped exploration",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Establish G+E>=(sqrt(3)/4)B+(sqrt(3)/2)(t+chi-1) for the full canonical source with all multi-grain, interface, topology and uniformity hypotheses, or construct the full same-cardinality strict sub-D competitor.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py compute-b-two-grain-interface-regressions"
+      ]
+    },
+    {
+      "id": "compute-c-stress-deletion-restoration-regression",
+      "track": "exact-computation",
+      "selection_weight": 2,
+      "frontier_relation": "finite-model-only",
+      "question": "For small exact unit-contact and diameter systems satisfying the supplied-W stress-deletion hypotheses, can a proposed same-cardinality restoration rule fail after every lower and upper pair constraint is checked?",
+      "assumptions": [
+        "A finite rational realization must be provided; abstract graphs alone do not establish planar source feasibility.",
+        "Retain contact-isolated points in the source and test all pairwise lower constraints and actual diameter upper constraints.",
+        "A bounded counterexample only rejects the proposed restoration rule at its stated scope."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md",
+          "claim": "supplied-W stress deletion theorem and exact limits"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "claim": "no W extraction or cardinality restoration is proved"
+        },
+        {
+          "path": "docs/RESEARCH_WORKFLOW.md",
+          "claim": "exact regression and computation requirements"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "claim": "D(8) already blocks an overstrong wall-capacity inference; distinguish that regression from new restoration rules"
+        },
+        {
+          "path": "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md",
+          "claim": "stress deletion is cardinality-losing and weighted-work regressions block automatic first-order restoration"
+        }
+      ],
+      "starting_experiment": "Choose one explicit restoration rule and encode its exact rational source fixture. Enumerate all deleted-label and replacement choices in increasing support size, then verify every source pair independently with squared distances.",
+      "expected_evidence": [
+        "An exact reproducible counterexample to the proposed rule or a complete finite proof over the declared fixture class.",
+        "Separate checks for contact isolates, all lower pairs, every actual diameter upper pair, and the stress deletion certificate."
+      ],
+      "stopping_condition": "Stop if only abstract graph incidence is encoded, if the contact-isolated source labels are omitted, or if no exact geometric realization exists for the model.",
+      "methods": [
+        "rational-coordinate enumeration",
+        "exact squared-distance and stress checks"
+      ],
+      "overlap_terms": [
+        "stress deletion",
+        "same-cardinality restoration",
+        "supplied W",
+        "diameter upper checks",
+        "contact isolates"
+      ],
+      "source_proposal_numbers": [
+        947,
+        951,
+        952,
+        967
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "scoped exploration",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with strict contact loss at D or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py compute-c-stress-deletion-restoration-regression"
+      ]
+    },
+    {
+      "id": "verify-a-schur-linkage-bound",
+      "track": "independent-verification",
+      "selection_weight": 1,
+      "frontier_relation": "finite-verification-only",
+      "question": "Can a small independent checker verify the finite directed-linkage and rank inequalities used by the Section-175 Schur cut, including sector-local paths after shield deletion?",
+      "assumptions": [
+        "The checker verifies finite graph instances and stated algebraic matrices; it does not prove the geometric shield hypotheses or the global theorem.",
+        "Use exact integer/rational arithmetic and make all vertex capacities and source/sink sets explicit.",
+        "Preserve the difference between path-count rank upper bounds and a source-specific Schur nullity theorem."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+          "claim": "Section-175 Schur cut and sector-local path argument"
+        },
+        {
+          "path": "docs/targets/target-a/26-tube-shield-sector-balance.md",
+          "claim": "Section-174 basis matching and sector separation hypotheses"
+        },
+        {
+          "path": "docs/RESEARCH_WORKFLOW.md",
+          "claim": "certificate registration and computational scope"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-a/README.md",
+          "claim": "generic matrix rank or planarity does not give the source-specific Schur nullity"
+        },
+        {
+          "path": "docs/targets/target-a/29-lens-source-gate-refinements.md",
+          "claim": "lens sink sets may overlap and require a different coarse Hall graph"
+        }
+      ],
+      "starting_experiment": "Implement vertex-capacitated max-flow for small oriented response graphs, and compare it with exact symbolic rank of a generic sparse matrix on the same edge set. Add negative fixtures for paths entering a shield outside the claimed tube and for overlapping sink sectors.",
+      "expected_evidence": [
+        "An independently implemented exact verifier with positive cases and meaningful negative controls.",
+        "A precise mapping from each finite graph condition to the theorem hypothesis it checks and a list of unverified geometric steps."
+      ],
+      "stopping_condition": "Stop if the checker is presented as validating arbitrary canonical response geometry, or if graph rank is substituted for the stated Schur matrix without a proof.",
+      "methods": [
+        "independent max-flow implementation",
+        "exact symbolic matrix rank and cross-check fixtures"
+      ],
+      "overlap_terms": [
+        "Schur linkage",
+        "vertex-disjoint path",
+        "tube interception",
+        "exact sparse rank",
+        "Section 175 verifier"
+      ],
+      "source_proposal_numbers": [
+        947,
+        953
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "independent evidence",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "For the actual source and response, establish rank(S)<=d_int+|C^partial|-Delta_Lambda (d_sc>=Delta_Lambda); in the locked branch the exact Section-175 surplus is |O_iso|+sum_i max(0,|O_i|-|C_i|)>=j_*+|T_Z|. Any untouched zero-slack/global-realization branch remains.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py verify-a-schur-linkage-bound"
+      ]
+    },
+    {
+      "id": "literature-shell-stability-near-miss-audit",
+      "track": "literature",
+      "selection_weight": 1,
+      "frontier_relation": "literature-supporting",
+      "question": "Does a published planar packing or convex-body stability theorem, under its exact hypotheses, imply any missing piece of Target B's joint outer-shell inequality beyond the canonical Oler and hole-correction inputs?",
+      "assumptions": [
+        "Search for primary sources or reliable exact transcriptions and record normalization, domain regularity, topology, and equality hypotheses.",
+        "The relevant object is a finite rhombic shell with phase and topology corrections, not an infinite packing density alone.",
+        "A close theorem is a near miss unless every hypothesis is derived for the canonical Target B source."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/targets/target-b/README.md",
+          "claim": "exact shell inequality and global multi-grain/topology gap"
+        },
+        {
+          "path": "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md",
+          "claim": "hole correction and promoted coherent-family results"
+        },
+        {
+          "path": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md",
+          "claim": "current phase and grid tools"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-b/README.md",
+          "claim": "the current chain lacks multi-grain transfer and cannot discard topology or boundary terms"
+        },
+        {
+          "path": "docs/reports/wegner_global_boundary_defect_2026-09-09.md",
+          "claim": "an unreviewed Wegner-boundary report addresses global diameter defect/plateau terms but does not state the full Target B shell inequality; check its lifecycle before use"
+        },
+        {
+          "path": "docs/RESEARCH_WORKFLOW.md",
+          "claim": "literature theorem hypotheses and normalization must be checked exactly"
+        }
+      ],
+      "starting_experiment": "Search specifically for stability refinements of Oler-type finite packing inequalities and planar convex-body shell estimates. Build a comparison table of theorem hypotheses against the Target B domain, including holes, multiple grains, phase crossings, and error order.",
+      "expected_evidence": [
+        "A bibliography with verified primary-source statements and exact constants/hypotheses.",
+        "A proof that a theorem applies to a named canonical subcase, or a concise near-miss record identifying the first unsupported hypothesis."
+      ],
+      "stopping_condition": "Stop if the sources give only asymptotic packing density, disk-only stability, or an error larger than the boundary-order target; do not retrofit their conclusion to the shell setting.",
+      "methods": [
+        "primary-source literature search",
+        "hypothesis-by-hypothesis transfer audit"
+      ],
+      "overlap_terms": [
+        "Oler stability",
+        "finite packing inequality",
+        "rhombic shell",
+        "topology correction",
+        "multi-grain stability"
+      ],
+      "source_proposal_numbers": [
+        949
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "scoped exploration",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Establish G+E>=(sqrt(3)/4)B+(sqrt(3)/2)(t+chi-1) for the full canonical source with all multi-grain, interface, topology and uniformity hypotheses, or construct the full same-cardinality strict sub-D competitor.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py literature-shell-stability-near-miss-audit"
+      ]
+    },
+    {
+      "id": "alternative-support-measure-certificate",
+      "track": "alternative-approach",
+      "selection_weight": 2,
+      "frontier_relation": "exploratory-global-route",
+      "question": "Can a support-function or measure-dual inequality that uses global minimum-diameter optimality, rather than a contact-stress or phase decomposition, force a strict sub-D competitor for every sufficiently large triangle-free global minimizer?",
+      "assumptions": [
+        "The conclusion must retain the global-minimizer quantifier and construct or certify a same-cardinality diameter improvement.",
+        "A triangle-free packing density cap with o(D^(2/3)) excess is false; any successful bound must respect the canonical triangle-free lattice reserve.",
+        "Do not identify a source with an independent lattice scaffold without a proved co-embedding or transport theorem."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/problem/statement.md",
+          "claim": "exact Level I quantifiers"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim_id": "C-GLOBAL-POPULATION-EXCESS-TWO-THIRDS-RESERVE",
+          "claim": "C-GLOBAL-POPULATION-EXCESS-TWO-THIRDS-RESERVE"
+        },
+        {
+          "path": "docs/theory/03-oler-shell.md",
+          "claim": "canonical finite packing inequality baseline"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "claim": "full-source and strict-sub-D standard"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "claim": "triangle-free lattice competitors carry a positive D^(2/3) reserve; density-only arguments cannot close the gap"
+        },
+        {
+          "path": "docs/reports/target_c_general_matching_contraction_audit_2026-08-31.md",
+          "claim": "the naive cross-cut sign certificate fails on an exact five-pair witness; the prior matrix-Kalmanson route needs a changed hypothesis or object"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim_id": "C-TRIANGLE-FREE-PACKING-DENSITY-CAP-REGRESSION",
+          "claim": "C-TRIANGLE-FREE-PACKING-DENSITY-CAP-REGRESSION"
+        },
+        {
+          "path": "docs/reports/global_convexity_exit_barrier_2026-10-12.md",
+          "claim": "Unreviewed odd-rim regression: dense nonglobal sources can have a positive barrier against every continuous diameter-sublevel motion, while an independent strict competitor exists. Continuous accessibility is an additional hypothesis."
+        },
+        {
+          "path": "docs/reports/global_two_copy_similarity_obstruction_2026-10-12.md",
+          "claim": "Unreviewed odd contact/diameter cycles obstruct all choices between two arbitrary similarity copies, including expanding copies. Genuine global optimality or a broader replacement class is still needed."
+        }
+      ],
+      "starting_experiment": "Write a candidate integral inequality in terms of the full source hull's support function and identify its exact dependence on global minimality. Test the proposed coefficients against a disk, a regular odd shell, and the canonical triangle-free lattice-reserve family before attempting a proof.",
+      "expected_evidence": [
+        "A precise inequality with constants and quantifiers that survives the canonical triangle-free reserve regression.",
+        "A derivation to a strict same-cardinality sub-D competitor or to a contradiction with global minimality, with no contact-stress/phase premise hidden in the proof."
+      ],
+      "stopping_condition": "Stop if the result is only an arbitrary-packing density bound, violates the D^(2/3) reserve, or relies on an unproved source-to-scaffold identification.",
+      "methods": [
+        "support-function and parallel-body inequalities",
+        "measure duality with exact finite model checks"
+      ],
+      "overlap_terms": [
+        "support function",
+        "measure dual",
+        "global minimizer",
+        "population reserve",
+        "strict sub-D",
+        "source scaffold"
+      ],
+      "source_proposal_numbers": [
+        954,
+        955,
+        956,
+        957,
+        958,
+        959,
+        960,
+        966,
+        967
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "scoped exploration",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Show the candidate mechanism applies to every sufficiently large triangle-free global minimizer and yields a same-cardinality strict sub-D competitor or an actual unit equilateral triangle, with every source label and hypothesis retained.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py alternative-support-measure-certificate"
+      ]
+    },
+    {
+      "id": "alternative-contact-graph-boundary-entropy",
+      "track": "alternative-approach",
+      "selection_weight": 1,
+      "frontier_relation": "exploratory-global-route",
+      "question": "Can a contact-graph-only Euler deficit, augmented by a precise geometric boundary-turning statistic, force a source-preserving replacement in every large triangle-free global minimizer without invoking KKT stress or rhombic phase energy?",
+      "assumptions": [
+        "The graph must be the actual unit-contact graph of a unit-separated source, not an arbitrary planar graph.",
+        "A graph edge bound alone cannot imply a geometric finite motion or global optimality comparison.",
+        "The target is a strict-diameter or exact contact-minimality contradiction with all source labels retained."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/problem/statement.md",
+          "claim": "global Level I quantifiers"
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim": "current canonical Target C status and contact-graph reductions"
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "claim": "current full-source and diameter-pair normal form"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "claim": "a star is a counterexample to inferring an Euler path from consecutive incident diameter states"
+        },
+        {
+          "path": "docs/targets/target-c/14-zero-transfer-star-forest-frontier.md",
+          "claim": "a scoped earlier zero-transfer route narrows diameter support to bounded star forests; check its theorem lifecycle before reusing it"
+        },
+        {
+          "path": "docs/reports/target_c_general_matching_contraction_audit_2026-08-31.md",
+          "claim": "an unreviewed historical five-pair witness blocks the same naive cross-cut sign proof; it is not a canonical theorem premise"
+        },
+        {
+          "path": "AGENTS.md",
+          "claim": "contact graphs, scaffolds, and response networks are distinct objects absent a co-embedding theorem"
+        },
+        {
+          "path": "docs/reports/global_convexity_exit_barrier_2026-10-12.md",
+          "claim": "Unreviewed odd-rim regression: dense nonglobal sources can have a positive barrier against every continuous diameter-sublevel motion, while an independent strict competitor exists. Continuous accessibility is an additional hypothesis."
+        },
+        {
+          "path": "docs/reports/global_two_copy_similarity_obstruction_2026-10-12.md",
+          "claim": "Unreviewed odd contact/diameter cycles obstruct all choices between two arbitrary similarity copies, including expanding copies. Genuine global optimality or a broader replacement class is still needed."
+        }
+      ],
+      "starting_experiment": "Derive the sharp Euler deficit for actual triangle-free unit-contact graphs with convex-hull boundary order. Test whether any proposed boundary-turning charge is strong enough on stars, paths, odd cycles, and the recorded cross-cut regression before attempting a source replacement theorem.",
+      "expected_evidence": [
+        "A new graph-plus-geometry invariant with a stated finite-move or global-comparison implication.",
+        "Or an exact realization/regression showing the graph statistic cannot force the claimed replacement."
+      ],
+      "stopping_condition": "Stop if the output is only E<=2V-4, a graph-only coloring fact, or an abstract path theorem with no realizable source move and full-source constraints.",
+      "methods": [
+        "planar contact-graph enumeration with rational realizations",
+        "Euler and turning-angle charge with adversarial graph families"
+      ],
+      "overlap_terms": [
+        "triangle-free contact graph",
+        "Euler deficit",
+        "boundary turning",
+        "cross-cut sign",
+        "global source replacement"
+      ],
+      "source_proposal_numbers": [
+        948,
+        950,
+        951,
+        954,
+        955,
+        956,
+        957,
+        958,
+        959,
+        960,
+        967
+      ],
+      "potential_open_overlap_prs": [],
+      "priority": "scoped exploration",
+      "audited_working_premises": [],
+      "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
+      "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Show the candidate mechanism applies to every sufficiently large triangle-free global minimizer and yields a same-cardinality strict sub-D competitor or an actual unit equilateral triangle, with every source label and hypothesis retained.",
+      "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
+      "reproduction": [
+        "python tools/check_public.py",
+        "python tools/task_context.py alternative-contact-graph-boundary-entropy"
+      ]
+    }
+  ],
+  "priority_revision": "public-frontier.1"
+}

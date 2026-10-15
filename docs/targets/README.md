@@ -1,0 +1,21 @@
+# Endgame route map
+
+The investigation now has three active target branches:
+
+- [`target-a/`](target-a/) — flexible bridge forests, scaffold/Hall reductions, and
+  source-response formulations;
+- [`target-b/`](target-b/) — the jammed almost-rhombic branch, support depth, and
+  boundary/Oler identities;
+- [`target-c/`](target-c/) — the KKT force-hull / reciprocal-geometry route, including
+  critical-cone duality, diameter shear, connected positive stress support, reciprocal
+  force polygons, and global diameter-graph restrictions.
+
+Targets A, B, and C are independent endgame architectures sharing the baseline problem
+and common theory modules. A theorem may be moved into `docs/theory/` only when its
+hypotheses and conclusion genuinely apply across routes.
+
+The Target A and Target B files retain the original numbered v1.7 sections because
+historical continuation prompts cite those numbers. Target C was added later as an
+audited post-v1.7 route and uses its own compact canonical frontier plus promoted audit
+reports. The exact pre-reorganization report is retained as
+[`archive/erdos_problem_99_1.7.0-full.md`](../publication/provenance.md#historical-navigation).

@@ -1,0 +1,125 @@
+<!-- theorem-state: {"artifact_id":"ART-6BA58386DC93","canonical":true,"claim_ids":["C-PRESELECTED-LOADED-UNLOADED-TRANSVERSAL","C-UNLOADED-KKT-STRESS-TRANSVERSAL","C-UNLOADED-TRANSVERSAL-RESTORATION-REGRESSION"],"claim_statuses":{"C-PRESELECTED-LOADED-UNLOADED-TRANSVERSAL":"canonical","C-UNLOADED-KKT-STRESS-TRANSVERSAL":"canonical","C-UNLOADED-TRANSVERSAL-RESTORATION-REGRESSION":"regression"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
+# Independent audit: unloaded stress transversals
+
+Date: 2026-10-07. Audit base: `7bf23cc0e4f0148983a975ea3fe4a0935b126690`, state `2026-10-07.audit.89`; Target C C-II open. Frozen source: PR #722, branch `research/target-c-residual-closure-20261005` at `ed535f5a3a45e3921d91a29c38a0cb37f1d27921`. Source artifact: [`target_c_unloaded_stress_transversal_2026-10-05.md`](../reports/target_c_unloaded_stress_transversal_2026-10-05.md), SHA-256 `44cfcce1e5b298a32fffe9a24ed4bbeba67c3caa4af69337f176c8eb4a5f6221`.
+
+## Verdict
+
+**PASS — promote** the exact loaded-only stress obstruction, the unloaded-vertex transversal criterion, and the preselected-loaded-endpoint refinement, at the scopes below. Also promote the exact first-order restoration obstruction as a scoped regression.
+
+The loaded-only stress obstruction is **narrowed** to the full-core loaded-chord regime. Canonical `C-FULLCORE-LOADED-CHORD` supplies that graph property only along sufficiently large full-core near-disk sequences; the container branch is expressly excluded.
+
+**Scope update (Audit.111):** the original loaded-only stress proof remains valid at the scope stated below, and a separate finite loaded-near-unit theorem now supplies its cycle hypothesis for every unit-separated source with diameter D >= 6 and a full-dimensional actual loaded hull. The canonical `C-LOADED-ONLY-STRESS-CYCLE-OBSTRUCTION` scope is widened accordingly in [Audit.111](target_c_loaded_only_stress_scope_extension_independent_audit_2026-10-07.md). The preselected-loaded-endpoint refinement below remains in its original full-core loaded-chord scope.
+
+The source report's packet/refill composition remains **conditional only**. It creates no packet, spare capacity, or activating finite motion. The local-isolation corollary is already implied by canonical core mixed rank and a strictly positive stress, and receives no duplicate ID.
+
+## 1. Objects and exact claims
+
+Let `A` be a canonical contact-minimal then diameter-pair-minimal C-II source, `V` its nonisolated positive-contact core, `B` its actual loaded diameter endpoints, and `I=V\\B`. Let `C` be the actual unit-contact edge set, `H` the full set of actual diameter pairs, and `P` the normalized nonnegative KKT stress polytope
+
+```text
+P = { (alpha,beta) >= 0 : R^T(alpha,-beta)=0, sum_{h in H} beta_h=1 }.
+```
+
+Every diameter endpoint is in `B`; hence no diameter row meets `I`. Define
+
+```text
+P_B = { (alpha,beta) in P : alpha_e=0 for every actual contact e incident to I }.
+```
+
+This is exactly the face of normalized stresses supported wholly on loaded vertices.
+
+### Loaded-only stress cycle (`C-LOADED-ONLY-STRESS-CYCLE-OBSTRUCTION`)
+
+Assume `F=conv(B)` is a full-dimensional convex polygon and every actual contact with both endpoints in `B` is a consecutive side of `F`. This is the finite structural hypothesis supplied for all sufficiently large terms of canonical full-core near-disk sequences by `C-FULLCORE-LOADED-CHORD`; it is not asserted in the macroscopic-container branch.
+
+- If any side of `F` is nonunit, then `P_B` is empty.
+- If `P_B` is nonempty, every stress in `P_B` has strictly positive contact coefficient on every side of `F`, all sides of `F` are unit, and each vertex of `B` is incident to a positive diameter coefficient in that stress.
+
+### Unloaded stress transversal (`C-UNLOADED-KKT-STRESS-TRANSVERSAL`)
+
+Without the loaded-chord hypothesis, `P_B` is empty if and only if some set `U subset I` deletes every normalized stress. If `P_B` is empty, one can choose such a set with
+
+```text
+|U| <= s_Z+1,    s_Z = dim_aff(P).
+```
+
+Since `U` contains no actual diameter endpoint, every original diameter edge remains. The reduced source has a sufficiently small straight velocity that strictly opens all retained contacts and shortens every original diameter pair. Contact-isolated source points remain present and are held fixed through the finite-slack argument.
+
+### One preselected loaded endpoint (`C-PRESELECTED-LOADED-UNLOADED-TRANSVERSAL`)
+
+Under the loaded-chord hypothesis above, if `P_B` is nonempty, then for **any prescribed** `b in B` there is `U subset I`, `|U|<=s_Z`, such that deleting `{b} union U` destroys every normalized stress. The reduced source therefore has a strict first motion. The theorem does not say the wall packet or a finite activation exists.
+
+### Restoration regression (`C-UNLOADED-TRANSVERSAL-RESTORATION-REGRESSION`)
+
+Fix a canonical full positive normalized stress. Suppose `U subset I` is deleted and a velocity on `A\\U` strictly opens every retained contact and shortens every retained old-diameter pair. For every assignment of velocities to the deleted labels, the stress-weighted sum of length derivatives over old contacts incident to `U` is strictly negative. Consequently at least one such old contact has negative first derivative. This rules out automatic first-order expansion of the deleted unloaded labels along that reduced-source descent; it does not rule out a different reduced velocity, a nonlocal move, or a finite refill.
+
+## 2. Independent reconstruction: loaded-only obstruction
+
+In a stress in `P_B`, the positive contact support is a subgraph of the loaded hull cycle: by hypothesis there are no nonconsecutive loaded-loaded contacts, and contacts incident to unloaded core vertices have coefficient zero. Normalization gives the virial identity
+
+```text
+sum_C alpha = D^2 * sum_H beta = D^2,
+```
+
+so this support has at least one edge. If it is a proper nonempty subgraph of a simple cycle, one of its path components has a degree-one vertex `p`, with sole positive contact neighbor `b` on a hull side. Let `n` be an outward normal to that side. The contact force at `p` has zero `n` component. Every diameter partner `q` is a different loaded vertex from `p,b` because `D>1`; strict convex-hull support gives `n dot (p-q)>0`. The equilibrium equation at `p` then forces every incident diameter coefficient to be zero. Its one nonzero contact force cannot balance, a contradiction. Thus the positive contact graph is the whole loaded hull cycle. This is impossible if any hull side is nonunit, and otherwise gives positive contact weight on every side.
+
+At a vertex of a full-dimensional convex polygon, the two incident inward contact vectors are not opposite. With both coefficients positive, their sum is nonzero; equilibrium therefore requires at least one positive diameter coefficient at that vertex. This proves the edge-cover conclusion.
+
+The proof uses actual loaded endpoints and actual physical contacts. If a nonconsecutive loaded contact is allowed, the positive support need not be a subgraph of the hull cycle, so this argument does not establish the obstruction. This is the precise reason for restricting the canonical application to `C-FULLCORE-LOADED-CHORD` scope.
+
+## 3. Independent reconstruction: unloaded deletion
+
+For `u in I`, define the nonnegative linear functional
+
+```text
+f_u(s) = sum of contact coefficients incident to u,
+F_u = {s in P : f_u(s)=0}.
+```
+
+The intersection of all `F_u` is exactly `P_B`. If `P_B` is nonempty, its stress has no contact row incident to any unloaded vertex and survives every deletion inside `I`; this proves necessity.
+
+If `P_B` is empty, choose a minimal subfamily of the faces `F_u` whose intersection is empty, indexed by `U`. For each `u in U`, minimality supplies `s_u` lying in all the other selected faces but not `F_u`. Thus `f_u(s_u)>0` and `f_w(s_u)=0` for distinct selected `u,w`. If an affine dependence among the `s_u` has coefficients summing to zero, applying each `f_w` forces its coefficient at `s_w` to vanish. The `s_u` are affinely independent, so
+
+```text
+|U| <= dim_aff(P)+1 = s_Z+1.
+```
+
+A normalized stress on `A\\U` extends by zero to a stress of `A` lying in every selected `F_u`, which is impossible. Canonical `C-FINITE-KKT-STRICT-MOTION-ALTERNATIVE` then gives a strict velocity on the reduced source. Since `U subset I`, all actual diameter endpoints and all original diameter pairs remain; its theorem also preserves every inactive lower and upper pair in the full source, including those incident to retained contact isolates.
+
+## 4. Independent reconstruction: one prescribed loaded deletion
+
+For `b in B`, let `P_b` be the face of `P` on which every coordinate incident to `b`, contact or diameter, is zero. The canonical relative-interior stress has positive coordinates on all actual rows, so `P_b` is a proper face and, when nonempty, has affine dimension at most `s_Z-1`.
+
+In the loaded-chord regime, the edge-cover conclusion of Section 2 says every stress in `P_B` has a positive diameter coordinate incident to `b`. Therefore `P_B intersect P_b` is empty. Restrict the unloaded faces `F_u` from Section 3 to `P_b`; their total intersection is empty. A minimal empty subfamily again has at most `dim_aff(P_b)+1<=s_Z` members by the same affine-independence proof. Call those vertices `U`. Any normalized stress surviving deletion of `{b} union U` would extend to a point in that empty intersection. This proves the deletion result, and the same canonical finite KKT alternative supplies the reduced-source motion.
+
+The bound fixes the chosen loaded deletion at `b` and places every other deletion in `I`. It is a placement theorem for a first-order stress transversal, not a source-capacity theorem.
+
+## 5. Exact restoration obstruction and withheld applications
+
+For a reduced strict velocity, let
+
+```text
+W = sum_{contacts not incident to U} alpha_e * r_e
+    - sum_{h in H} beta_h * r_h.
+```
+
+Every term is positive under the full positive stress and the strict reduced velocity, so `W>0`. All old diameter rows are disjoint from `U`. Pairing the original equilibrium with any completed velocity field gives
+
+```text
+sum_{contacts incident to U} alpha_e * r_e = -W < 0.
+```
+
+The coefficient of each deleted velocity is the original contact equilibrium force at an unloaded vertex, hence zero; the displayed sum is independent of how the deleted labels are assigned velocities. Since each relevant contact coefficient is positive, at least one deleted contact shortens. This proves the stated first-order regression and no finite-motion claim.
+
+The source report's post-motion packet/refill needs an actual packet, strict pair margins against the complete source, and an activating endpoint. None is supplied. In the full force-hull wall application, the stated `M>=|S|+1` packet size is already excluded at the original source by the canonical one-spare/contact-budget endpoint when the packet has the report's strict wall-safe hypotheses. A packet that might arise only after nonlocal motion requires separate endpoint geometry and full-source lower/upper checks. These applications are not promoted. The source's core local-isolation observation is already a direct consequence of the canonical mixed-rank theorem plus a strictly positive equilibrium stress; contact-isolated coordinates receive no such rigidity statement.
+
+No numerical verifier or new certificate is claimed. The finite face-dimension and row-separation arguments are analytic; repository checks certify state consistency only. No C-II or Level I closure follows.
+
+| Claim | Verdict | Disposition |
+| --- | --- | --- |
+| Loaded-only stress support lies on the full loaded hull cycle; nonunit side forces `P_B=empty` | PASS WITH NARROWED SCOPE | Promote `C-LOADED-ONLY-STRESS-CYCLE-OBSTRUCTION` only where `C-FULLCORE-LOADED-CHORD` applies |
+| Empty loaded-only face iff an unloaded transversal exists, with size at most `s_Z+1` and strict reduced-source motion | PASS | Promote `C-UNLOADED-KKT-STRESS-TRANSVERSAL` for canonical C-II sources |
+| If `P_B` is nonempty, any prescribed loaded `b` plus at most `s_Z` unloaded labels kills every stress | PASS WITH NARROWED SCOPE | Promote `C-PRESELECTED-LOADED-UNLOADED-TRANSVERSAL` in loaded-chord scope |
+| A reduced strict descent automatically opens every deleted contact at first order | REGRESSION VALID | Promote `C-UNLOADED-TRANSVERSAL-RESTORATION-REGRESSION` at the exact weighted-derivative scope |
+| Packet/refill, spare capacity, finite activation, C-II or Level I closure | NOT ESTABLISHED | Do not promote |

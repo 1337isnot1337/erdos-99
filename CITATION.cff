@@ -1,10 +1,10 @@
 cff-version: 1.2.0
-message: "If you use this repository, cite the repository and the relevant task or contribution."
-title: "Erdős Problem 99 Collaborative Research"
+message: "Cite the exact commit and the authors credited in the particular proof or evidence package used."
+title: "Erdős Problem 99: open collaborative research"
 type: software
-version: 0.1.0
-date-released: "2026-10-15"
-license: Apache-2.0
-repository-code: "https://github.com/1337isnot1337/erdos-99"
 authors:
-  - name: "Erdős Problem 99 contributors"
+  - family-names: Davis
+    given-names: Cinna
+repository-code: "https://github.com/1337isnot1337/erdos-99"
+url: "https://github.com/1337isnot1337/erdos-99"
+license: Apache-2.0

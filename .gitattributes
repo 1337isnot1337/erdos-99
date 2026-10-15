@@ -1,0 +1,2 @@
+# Mathematical Markdown sources use the standard two-space hard line break.
+*.md whitespace=-blank-at-eol

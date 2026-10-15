@@ -1,0 +1,177 @@
+{
+  "best_packets": {
+    "8": {
+      "D": 8,
+      "conflict_edges": 8,
+      "cut_size": 0,
+      "exhaustive_cut_branches": 1,
+      "gain_over_edge_count_deletion_bound": 4,
+      "halo_population": 15,
+      "input_population": 67,
+      "k": 1,
+      "optimal_packet_deletions": 4,
+      "packet_diameter_squared": 63,
+      "packet_hull_vertices": 11,
+      "phase": [
+        "1/4",
+        "1/4"
+      ],
+      "strict_sub_D_population": 63,
+      "triangle_free_basis_cosine": "163/328",
+      "triangle_free_packet_diameter_squared": "5193/82",
+      "triangle_free_variant_certified_nonglobal": true
+    },
+    "64": {
+      "D": 64,
+      "conflict_edges": 25,
+      "cut_size": 0,
+      "exhaustive_cut_branches": 1,
+      "gain_over_edge_count_deletion_bound": 20,
+      "halo_population": 56,
+      "input_population": 3738,
+      "k": 2,
+      "optimal_packet_deletions": 5,
+      "packet_diameter_squared": 4093,
+      "packet_hull_vertices": 36,
+      "phase": [
+        "0",
+        "1/4"
+      ],
+      "strict_sub_D_population": 3733,
+      "triangle_free_basis_cosine": "10657/21320",
+      "triangle_free_packet_diameter_squared": "10910854/2665",
+      "triangle_free_variant_certified_nonglobal": true
+    },
+    "216": {
+      "D": 216,
+      "conflict_edges": 111,
+      "cut_size": 0,
+      "exhaustive_cut_branches": 1,
+      "gain_over_edge_count_deletion_bound": 64,
+      "halo_population": 146,
+      "input_population": 42391,
+      "k": 3,
+      "optimal_packet_deletions": 47,
+      "packet_diameter_squared": 46641,
+      "packet_hull_vertices": 86,
+      "phase": [
+        "1/4",
+        "1/4"
+      ],
+      "strict_sub_D_population": 42344,
+      "triangle_free_basis_cosine": "123989/248008",
+      "triangle_free_packet_diameter_squared": "1446076701/31001",
+      "triangle_free_variant_certified_nonglobal": true
+    }
+  },
+  "circular_sharpness_regressions": [
+    {
+      "angular_steps": 3,
+      "attained_vertex_cover": 16,
+      "cover_lower_bound_by_report_circle_measure": 16,
+      "cover_minus_matching": 3,
+      "maximum_matching": 13,
+      "q": 27
+    },
+    {
+      "angular_steps": 5,
+      "attained_vertex_cover": 67,
+      "cover_lower_bound_by_report_circle_measure": 67,
+      "cover_minus_matching": 5,
+      "maximum_matching": 62,
+      "q": 125
+    },
+    {
+      "angular_steps": 7,
+      "attained_vertex_cover": 178,
+      "cover_lower_bound_by_report_circle_measure": 178,
+      "cover_minus_matching": 7,
+      "maximum_matching": 171,
+      "q": 343
+    }
+  ],
+  "classification": "exact finite global comparison packets",
+  "complete_bipartite_regressions": [
+    {
+      "conflicts": 25,
+      "edge_overcount": 20,
+      "k": 2,
+      "minimum_deletions": 5
+    },
+    {
+      "conflicts": 81,
+      "edge_overcount": 72,
+      "k": 4,
+      "minimum_deletions": 9
+    },
+    {
+      "conflicts": 289,
+      "edge_overcount": 272,
+      "k": 8,
+      "minimum_deletions": 17
+    },
+    {
+      "conflicts": 1089,
+      "edge_overcount": 1056,
+      "k": 16,
+      "minimum_deletions": 33
+    }
+  ],
+  "full_lattice_column_packets": [
+    {
+      "D_squared": 768,
+      "actual_edge_count_saving": 60,
+      "conflicts": 78,
+      "cut_branches": 1,
+      "cut_size": 0,
+      "guaranteed_shared_conflict_saving": 20,
+      "input_population": 721,
+      "k": 2,
+      "optimal_deletions": 18,
+      "packet_diameter_squared": 763,
+      "strict_sub_D_population": 703
+    },
+    {
+      "D_squared": 8748,
+      "actual_edge_count_saving": 126,
+      "conflicts": 153,
+      "cut_branches": 1,
+      "cut_size": 0,
+      "guaranteed_shared_conflict_saving": 42,
+      "input_population": 7963,
+      "k": 3,
+      "optimal_deletions": 27,
+      "packet_diameter_squared": 8725,
+      "strict_sub_D_population": 7936
+    },
+    {
+      "D_squared": 49152,
+      "actual_edge_count_saving": 228,
+      "conflicts": 267,
+      "cut_branches": 1,
+      "cut_size": 0,
+      "guaranteed_shared_conflict_saving": 72,
+      "input_population": 44617,
+      "k": 4,
+      "optimal_deletions": 39,
+      "packet_diameter_squared": 49141,
+      "strict_sub_D_population": 44578
+    }
+  ],
+  "largest_cut": 0,
+  "largest_deletion_improvement": 102,
+  "not_proved": [
+    "unrestricted global optimality",
+    "a larger asymptotic reserve coefficient",
+    "exclusion of all triangle-free global minimizers",
+    "Level I"
+  ],
+  "odd_cycle_regression": {
+    "branches": 2,
+    "cut_size": 1,
+    "edges": 5,
+    "minimum_deletions": 3,
+    "vertices": 5
+  },
+  "packet_cases": 48
+}

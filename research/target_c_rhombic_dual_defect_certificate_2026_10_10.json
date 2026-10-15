@@ -1,0 +1,344 @@
+{
+  "bent_grid_guardrails": [
+    {
+      "bounded_rhombi": 4,
+      "complete_pair_checks_per_placement": 36,
+      "contact_loss_displacement": [
+        "0",
+        "1/100"
+      ],
+      "contact_loss_label": [
+        1,
+        2
+      ],
+      "contacts": 12,
+      "contacts_after_finite_release": 9,
+      "diameter_squared": "1252/169",
+      "labelled_noncongruence_witness": [
+        0,
+        4
+      ],
+      "labels": 9,
+      "new_diameter_edges": [
+        [
+          0,
+          8
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "old_diameter_edges": [
+        [
+          0,
+          8
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "pair_involution_checks": 36,
+      "rows_minus_one": 2,
+      "scope": "fails canonical contact minimality; global optimality not claimed",
+      "witness_squares": [
+        "36/13",
+        "16/13"
+      ]
+    },
+    {
+      "bounded_rhombi": 20,
+      "complete_pair_checks_per_placement": 528,
+      "contact_loss_displacement": [
+        "-1/100",
+        "1/100"
+      ],
+      "contact_loss_label": [
+        0,
+        10
+      ],
+      "contacts": 52,
+      "contacts_after_finite_release": 50,
+      "diameter_squared": "1413/13",
+      "labelled_noncongruence_witness": [
+        0,
+        12
+      ],
+      "labels": 33,
+      "new_diameter_edges": [
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          32
+        ]
+      ],
+      "old_diameter_edges": [
+        [
+          0,
+          21
+        ],
+        [
+          21,
+          22
+        ]
+      ],
+      "pair_involution_checks": 528,
+      "rows_minus_one": 10,
+      "scope": "fails canonical contact minimality; global optimality not claimed",
+      "witness_squares": [
+        "36/13",
+        "16/13"
+      ]
+    }
+  ],
+  "coherent_Gram_checks": {
+    "circular_interpolation_counterexample_squared_lengths": [
+      2,
+      4,
+      2
+    ],
+    "coefficient_pairs": 80,
+    "parameter_checks": 320,
+    "scope": "finite Gram arithmetic and one failed interpolation mechanism"
+  },
+  "complete_array_isolate_bound_constants": {
+    "D_at_least_9_implies_strict_Z_lower": "D/21",
+    "linear_coarse_upper": "5/3",
+    "quadratic_coarse_lower": "4/21"
+  },
+  "dual_defect_classes": {
+    "class_count": 22,
+    "classes": [
+      {
+        "d_H_P": 0,
+        "d_H_Q": 0,
+        "h_Q_minus_h_P": 4,
+        "k_P": 0,
+        "k_Q": 4,
+        "q_Q_minus_q_P": 4,
+        "s_Z_P": 0
+      },
+      {
+        "d_H_P": 0,
+        "d_H_Q": 1,
+        "h_Q_minus_h_P": 3,
+        "k_P": 0,
+        "k_Q": 4,
+        "q_Q_minus_q_P": 4,
+        "s_Z_P": 0
+      },
+      {
+        "d_H_P": 0,
+        "d_H_Q": 2,
+        "h_Q_minus_h_P": 2,
+        "k_P": 0,
+        "k_Q": 4,
+        "q_Q_minus_q_P": 4,
+        "s_Z_P": 0
+      },
+      {
+        "d_H_P": 0,
+        "d_H_Q": 3,
+        "h_Q_minus_h_P": 1,
+        "k_P": 0,
+        "k_Q": 4,
+        "q_Q_minus_q_P": 4,
+        "s_Z_P": 0
+      },
+      {
+        "d_H_P": 0,
+        "d_H_Q": 4,
+        "h_Q_minus_h_P": 0,
+        "k_P": 0,
+        "k_Q": 4,
+        "q_Q_minus_q_P": 4,
+        "s_Z_P": 0
+      },
+      {
+        "d_H_P": 1,
+        "d_H_Q": 0,
+        "h_Q_minus_h_P": 3,
+        "k_P": 1,
+        "k_Q": 3,
+        "q_Q_minus_q_P": 2,
+        "s_Z_P": 0
+      },
+      {
+        "d_H_P": 1,
+        "d_H_Q": 1,
+        "h_Q_minus_h_P": 2,
+        "k_P": 1,
+        "k_Q": 3,
+        "q_Q_minus_q_P": 2,
+        "s_Z_P": 0
+      },
+      {
+        "d_H_P": 1,
+        "d_H_Q": 2,
+        "h_Q_minus_h_P": 1,
+        "k_P": 1,
+        "k_Q": 3,
+        "q_Q_minus_q_P": 2,
+        "s_Z_P": 0
+      },
+      {
+        "d_H_P": 1,
+        "d_H_Q": 3,
+        "h_Q_minus_h_P": 0,
+        "k_P": 1,
+        "k_Q": 3,
+        "q_Q_minus_q_P": 2,
+        "s_Z_P": 0
+      },
+      {
+        "d_H_P": 2,
+        "d_H_Q": 0,
+        "h_Q_minus_h_P": 2,
+        "k_P": 2,
+        "k_Q": 2,
+        "q_Q_minus_q_P": 0,
+        "s_Z_P": 0
+      },
+      {
+        "d_H_P": 2,
+        "d_H_Q": 1,
+        "h_Q_minus_h_P": 1,
+        "k_P": 2,
+        "k_Q": 2,
+        "q_Q_minus_q_P": 0,
+        "s_Z_P": 0
+      },
+      {
+        "d_H_P": 2,
+        "d_H_Q": 2,
+        "h_Q_minus_h_P": 0,
+        "k_P": 2,
+        "k_Q": 2,
+        "q_Q_minus_q_P": 0,
+        "s_Z_P": 0
+      },
+      {
+        "d_H_P": 3,
+        "d_H_Q": 0,
+        "h_Q_minus_h_P": 1,
+        "k_P": 3,
+        "k_Q": 1,
+        "q_Q_minus_q_P": -2,
+        "s_Z_P": 0
+      },
+      {
+        "d_H_P": 3,
+        "d_H_Q": 1,
+        "h_Q_minus_h_P": 0,
+        "k_P": 3,
+        "k_Q": 1,
+        "q_Q_minus_q_P": -2,
+        "s_Z_P": 0
+      },
+      {
+        "d_H_P": 4,
+        "d_H_Q": 0,
+        "h_Q_minus_h_P": 0,
+        "k_P": 4,
+        "k_Q": 0,
+        "q_Q_minus_q_P": -4,
+        "s_Z_P": 0
+      },
+      {
+        "d_H_P": 0,
+        "d_H_Q": 0,
+        "h_Q_minus_h_P": 2,
+        "k_P": 1,
+        "k_Q": 3,
+        "q_Q_minus_q_P": 2,
+        "s_Z_P": 1
+      },
+      {
+        "d_H_P": 0,
+        "d_H_Q": 1,
+        "h_Q_minus_h_P": 1,
+        "k_P": 1,
+        "k_Q": 3,
+        "q_Q_minus_q_P": 2,
+        "s_Z_P": 1
+      },
+      {
+        "d_H_P": 0,
+        "d_H_Q": 2,
+        "h_Q_minus_h_P": 0,
+        "k_P": 1,
+        "k_Q": 3,
+        "q_Q_minus_q_P": 2,
+        "s_Z_P": 1
+      },
+      {
+        "d_H_P": 1,
+        "d_H_Q": 0,
+        "h_Q_minus_h_P": 1,
+        "k_P": 2,
+        "k_Q": 2,
+        "q_Q_minus_q_P": 0,
+        "s_Z_P": 1
+      },
+      {
+        "d_H_P": 1,
+        "d_H_Q": 1,
+        "h_Q_minus_h_P": 0,
+        "k_P": 2,
+        "k_Q": 2,
+        "q_Q_minus_q_P": 0,
+        "s_Z_P": 1
+      },
+      {
+        "d_H_P": 2,
+        "d_H_Q": 0,
+        "h_Q_minus_h_P": 0,
+        "k_P": 3,
+        "k_Q": 1,
+        "q_Q_minus_q_P": -2,
+        "s_Z_P": 1
+      },
+      {
+        "d_H_P": 0,
+        "d_H_Q": 0,
+        "h_Q_minus_h_P": 0,
+        "k_P": 2,
+        "k_Q": 2,
+        "q_Q_minus_q_P": 0,
+        "s_Z_P": 2
+      }
+    ],
+    "scope": "all arithmetic classes; no realization is asserted"
+  },
+  "scope": "exact finite arithmetic; universal source claims are analytic",
+  "square_lattice_circle_counts": {
+    "direct_signed_ordered_enumeration_matches_split_formula": true,
+    "exceptions_to_r2_squared_less_than_4N": [
+      1,
+      2,
+      4,
+      5,
+      10,
+      13,
+      25
+    ],
+    "infinite_proof_branch_bounds_for_r2_squared_over_N": [
+      "64/17",
+      "256/65",
+      "144/169",
+      "32/13",
+      "256/125",
+      "72/25",
+      "32/15"
+    ],
+    "integers_checked": [
+      1,
+      4096
+    ],
+    "scope": "finite check plus rational constants; infinite proof is analytic"
+  }
+}

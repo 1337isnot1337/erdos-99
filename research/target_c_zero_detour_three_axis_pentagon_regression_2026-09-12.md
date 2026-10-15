@@ -1,0 +1,221 @@
+# Target C — three-axis pentagon regression at the zero-detour atomic endpoint
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** rigorous regression/counterexample to a proposed finite-pattern closure route; theorem authority unchanged.  
+**Base:** `231fcc455f19c54974a3ffd1aaa27f00ca436a86`.
+
+The audited-working §154 zero-outer-detour theorem gives the lower endpoint
+
+\[
+t_0:={\pi\over2}+{2\over5}\sqrt{\Delta_2},
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\]
+
+If one additionally assumes `t=(q-k)/D -> t_0`, the exact ledger forces
+
+\[
+{Q\over D}\to {4\over5}\sqrt{\Delta_2},
+\qquad
+{Q+4f\over D}\to4\sqrt{\Delta_2},
+\qquad
+Q-f=o(D).
+\]
+
+Thus almost every bounded defect face is a pentagon and the atomic endpoint-capacity
+inequality is saturated. It is tempting to combine weighted-Mantel equality with the
+`pi/3` phase relation and argue that a pentagon cannot terminate trains from the
+resulting triangular-lattice directions without creating an exact unit triangle.
+
+That implication is false. There is an explicit strict convex triangle-free unit
+pentagon family converging to exactly that three-axis geometry, and its finite Oler
+slack tends to zero as well.
+
+---
+
+## 1. Exact family
+
+Take a parameter
+
+\[
+0<a<\pi/6
+\]
+
+and define `b=b(a)` by
+
+\[
+\boxed{\cos b=\cos a-{1\over2}.}
+\tag{1.1}
+\]
+
+For sufficiently small positive `a`,
+
+\[
+{\pi\over3}<b<{2\pi\over3}.
+\]
+
+Let the five oriented unit edge vectors have arguments
+
+\[
+\boxed{
+-a,\quad a,\quad \pi-b,\quad \pi,\quad \pi+b.
+}
+\tag{1.2}
+\]
+
+Their vector sum is zero:
+
+\[
+\begin{aligned}
+&e^{-ia}+e^{ia}+e^{i(\pi-b)}+e^{i\pi}+e^{i(\pi+b)}\\
+&=2\cos a-2\cos b-1=0
+\end{aligned}
+\]
+
+by (1.1). Hence they form a closed equilateral pentagon.
+
+The successive exterior turning angles, starting at direction `-a`, are
+
+\[
+2a,
+\qquad
+\pi-b-a,
+\qquad
+b,
+\qquad
+b,
+\qquad
+\pi-b-a.
+\tag{1.3}
+\]
+
+For all sufficiently small `a>0`, every number in (1.3) lies strictly between `0`
+and `2pi/3`. Therefore the closed polygon is strictly convex.
+
+---
+
+## 2. It is triangle-free
+
+In an equilateral pentagon every diagonal joins vertices separated by exactly two
+consecutive unit edges. If the exterior turn between those two oriented edges is
+`delta`, the diagonal length is
+
+\[
+|u+v|=2\cos(\delta/2).
+\tag{2.1}
+\]
+
+Every turn in (1.3) is strictly below `2pi/3`, so every diagonal satisfies
+
+\[
+\boxed{|u+v|>1.}
+\tag{2.2}
+\]
+
+Thus the only unit distances among the five vertices are the five polygon sides. In
+particular the pentagon contains no unit equilateral triangle.
+
+This is exact for every sufficiently small positive `a`, not merely asymptotic.
+
+---
+
+## 3. Its directions converge to the three atomic phase axes
+
+As `a downarrow0`, equation (1.1) gives
+
+\[
+b(a)\to\pi/3.
+\]
+
+The five projective edge directions in (1.2) therefore converge to
+
+\[
+0,\quad0,\quad {2\pi\over3},\quad0,\quad {\pi\over3}
+\quad(\bmod\ \pi).
+\tag{3.1}
+\]
+
+Hence every edge direction approaches one of the three triangular-lattice projective
+axes
+
+\[
+0,\qquad {\pi\over3},\qquad {2\pi\over3}.
+\]
+
+At the singular limit `a=0`, one diagonal reaches unit length, but for every positive
+`a` all diagonals remain strictly longer than one. Therefore asymptotic three-axis
+phase concentration does **not** force an exact triangle at finite `D`.
+
+---
+
+## 4. The per-face Oler slack also vanishes
+
+Let `A(a)` be the pentagon area and put
+
+\[
+a_0={\sqrt3\over2},
+\qquad c_0={\sqrt3\over4}={a_0\over2}.
+\]
+
+For a unit pentagon with no interior source points, the finite Oler slack is
+
+\[
+\omega_5(a)
+:=A(a)+5c_0-4a_0
+=A(a)-{3\over2}a_0.
+\tag{4.1}
+\]
+
+As `a downarrow0`, the polygon converges to the degenerate five-edge boundary with
+edge arguments
+
+\[
+0,0,{2\pi\over3},\pi,{4\pi\over3}.
+\]
+
+Its vertices may be taken as
+
+\[
+(0,0),\ (1,0),\ (2,0),
+\left({3\over2},{\sqrt3\over2}\right),
+\left({1\over2},{\sqrt3\over2}\right),
+\]
+
+whose area is
+
+\[
+{3\sqrt3\over4}={3\over2}a_0.
+\]
+
+Area is continuous under vertex convergence, so
+
+\[
+\boxed{\omega_5(a)\to0.}
+\tag{4.2}
+\]
+
+Thus a linear family of near-three-axis pentagons need not pay any fixed positive Oler
+slack per face.
+
+---
+
+## 5. Consequence for the live endpoint attack
+
+The following proposed implications are invalid without additional global structure:
+
+1. `three atomic train directions + pentagonal stopping faces -> exact unit triangle`;
+2. `three atomic train directions + pentagonal stopping faces -> fixed positive phase gap`;
+3. `triangle-free pentagon -> fixed positive Oler slack`.
+
+The family above simultaneously regresses all three.
+
+A viable continuation at the §154 endpoint must therefore use information not present
+in one face in isolation, for example
+
+- compatibility of many pentagons with the global stopped-train order;
+- the exceptional-face closure-rank/Hall theorem;
+- KKT diameter bracing of the outer-to-outer train population; or
+- a collective deformation of the near-lattice pentagon network.
+
+**Disposition:** rigorous route-killing regression. C-II remains open.

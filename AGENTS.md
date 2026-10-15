@@ -1,29 +1,17 @@
-# Instructions for human and AI contributors
+# Research instructions
 
-This repository studies Erdős Problem 99, the eventual unit-equilateral-triangle question for **every global minimum-diameter configuration**. Preserve that quantifier. A finite result, local optimum, dense packing or one minimizer per size is not an answer to the eventual problem.
+Read `docs/STATE.md`, `docs/problem/statement.md`, `docs/research/bottleneck-brief.md`, `docs/research/priority-state.json`, and the chosen route. Then read its full proof prerequisites and `autoresearch.md`. The manifest controls claim lifecycle. A merge, recent date, large section number or certificate pass does not promote a theorem.
 
-## One bounded contribution
+**LEVEL I STATUS: STILL OPEN. C-I CLOSED; C-II OPEN.** A and B remain open. Keep the universal quantifiers over every sufficiently large cardinality and every global minimizer. Keep all source labels, including contact-isolated points. Do not identify a source with a scaffold, smaller optimum, response network or moved endpoint without a theorem.
 
-1. Start from a clean clone and current `main`: `git fetch origin` and inspect `git status`.
-2. Read [the problem](docs/problem.md), [current status](docs/current-status.md), and one self-contained task from [`tasks/index.json`](tasks/index.json).
-3. Search open Issues, Discussions and pull requests for the task ID. Claims are advisory, expire as stated in the issue, and do not confer ownership. If there is overlap, coordinate in public; if there is none, begin without requesting approval.
-4. Pick one bounded proof, counterexample search, reproduction, audit or alternative approach. State what observation would falsify it before doing lengthy work.
-5. Run the relevant reproduction and lightweight checks. Keep a complete, small evidence package and distinguish exact results from numerical or heuristic evidence.
-6. Open a focused pull request or leave a useful issue handoff. If no publishable change is ready, report the result and exact next question in the issue or Discussion.
+Work for one bounded 30–60 minute session by default. Fetch current upstream main at each new session; compare priority revision and theorem state with the prior checkpoint. Check open Issues, Discussions and PRs before selecting work and before submitting. Anyone may begin an unclaimed question; claims are advisory. An independent audit may overlap an existing proof effort.
 
-Use a session of roughly 30–60 minutes by default. Continue longer only when a concrete proof or computation is actively progressing; do not run indefinite searches or expensive jobs without a bound and a reason.
+Write the exact candidate lemma, hypotheses, implication to a canonical quantity, falsification test and stopping condition before a long search. Use exact arithmetic where an exact certificate exists. Preserve scope and useful regressions. Local optimality, finite rank, one-grain interpolation, infinitesimal feasibility or an abstract swap does not supply a global geometric bridge.
 
-## Evidence and scientific status
+Use an isolated branch/worktree and preserve other work. Submit one inspectable proof, computation, verifier, counterexample, audit or precise handoff. Record source commit, state/priority revision, inputs, commands, arithmetic and limitations. Stop without a PR if no meaningful artifact is ready. Refresh upstream before another session. Do not manufacture PRs or repeat a failed approach without naming the changed hypothesis.
 
-State assumptions, quantifiers, data sources, code versions, commands, outputs, failures and negative controls. Preserve useful negative results. A merged contribution may remain author-checked, agent-audited, conditional or finite evidence. Only maintainers can mark a statement canonical, and consequential theorem promotion requires independent human mathematical review. Agent review must never be described as human review.
+Run `python tools/check_public.py`, relevant checks and the task's reproduction. `python tools/run_theorem_certificates.py` is the explicit full certificate replay. Unknown CI impact requests comprehensive verification or review and is never a full-verification pass. Read `docs/ci/README.md` before adding execution infrastructure.
 
-Do not use files, certificates or access from a private repository as an unstated dependency. Do not add third-party papers, extracted text, scans, or images unless the redistribution basis is clear and notices are included. Cite public bibliographic records instead.
+New claims default to unreviewed. Distinguish canonical, audited-working, conditional, exact finite evidence, agent audit, human review, regression, rejected and superseded claims. Consequential promotion requires independent human mathematical review and a same-change update to the manifest, state, route/frontier, dependencies, certificate registrations and generated views. See `docs/REVIEW_POLICY.md`.
 
-## Local checks
-
-```sh
-python3 -m unittest discover -s tests -v
-python3 scripts/check_repo.py
-```
-
-Reproduce the included finite computation with `python3 scripts/triangular_lattice.py --max-n 5`. No external package is required. The checks are intentionally small and do not certify a mathematical proof.
+Preserve mathematical credit and disclose AI assistance. Contribute only material you can license under Apache-2.0; cite external papers rather than copying PDFs or substantial text. Never use an unstated private repository dependency. The published corpus and task prerequisites must stand alone.

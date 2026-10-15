@@ -1,52 +1,52 @@
-# Erdős Problem 99: a collaborative research beta
+# Erdős Problem 99
 
-This repository is an open starting point for independent work on Erdős Problem 99. It contains an exact problem statement, three bounded research tasks, and a standard-library computation that can be reproduced from a fresh clone. It is a Phase 1 research beta, not a complete research archive or a claim of progress on the conjecture. Anyone may participate; no invitation or prior relationship is needed.
+An open mathematical research effort using decentralized autonomous agents and human contributors to advance Erdős Problem 99 through rigorous, reproducible, independently reviewable work.
 
-## The problem
+For $n$ points in the plane with every distinct pair at distance at least one, let $D(n)$ be the least possible diameter. Is there an $n_0$ such that, for **every** $n\ge n_0$, **every global minimizer** contains a unit equilateral triangle?
 
-For a finite set $A\subset\mathbb R^2$, its diameter is
-$$
-\operatorname{diam}(A)=\max_{x,y\in A}|x-y|.
-$$
-For each integer $n\ge2$, let $D(n)$ be the minimum diameter among all $n$-point sets whose distinct points are at least one unit apart. Erdős Problem 99 asks whether there is an $n_0$ such that, for every $n\ge n_0$, **every global minimizer** attaining $D(n)$ contains three points at pairwise distance exactly one. Those three points form a unit equilateral triangle.
+**LEVEL I STATUS: STILL OPEN.** A finite triangle-free packing, a local optimum, an asymptotically dense family, or one chosen minimizer per size does not settle this question. See the [exact statement](docs/problem/statement.md).
 
-The problem remains open. Its quantifiers rule out several tempting shortcuts: a finite example, a local minimum, an asymptotically dense packing, a triangle-free packing that is not globally optimal, or one selected minimizer for each $n$ does not answer the question. A disproof needs triangle-free global minimizers for unboundedly many cardinalities. See [the full statement](docs/problem.md) and [current status](docs/current-status.md).
+## Current mathematics
 
-## Why it is interesting
+This repository publishes a curated snapshot of the current theorem ledger, its detailed proofs, supporting audits, exact obstructions and computational evidence. Start with the [authoritative state](docs/STATE.md), [research map](docs/KNOWLEDGE_MAP.md), [current bottleneck](docs/research/bottleneck-brief.md) and [theorem dependency graph](docs/state/THEOREM_GRAPH.generated.md). The [publication manifest](docs/publication/inclusion.json) binds retained sources to exact blobs; it is separate from mathematical review.
 
-The objective is global while the triangle condition is local. At large sizes, near-hexagonal packing geometry is efficient, but a local density heuristic does not show that every diameter-minimizing arrangement must contain a prescribed contact pattern. The problem asks how much global optimality can force in the geometry of an individual finite packing.
+| Program | Established position and missing endpoint | Full development |
+| --- | --- | --- |
+| A: source capacity and Schur response | Canonical through Section 177. The locked branch has an exact tube/right-deficiency reduction. The global source-specific surplus remains open. | [A](docs/targets/target-a/README.md) |
+| B: rhombic shell stability | Phase cuts, coherent crossing bounds and scoped dense-grid/interpolation tools are established. Global multi-grain payment and topology/boundary coupling remain open. | [B](docs/targets/target-b/README.md) |
+| C: KKT force geometry and rigidity | **C-I CLOSED; C-II OPEN.** Core rigidity and force/contact reductions do not yet supply a same-cardinality finite full-source move or restoration. | [C](docs/targets/target-c/README.md), [C-II](docs/targets/target-c/CURRENT.md) |
 
-## How this project works
+The missing A inequality is
+$$\operatorname{rank}S\le d_{\rm int}+|C^\partial|-\Delta_\Lambda,$$
+equivalently $d_{\rm sc}\ge\Delta_\Lambda$. The sufficient B inequality is
+$$G+E\ge {\sqrt3\over4}B+{\sqrt3\over2}(t+\chi-1).$$
+Their definitions, hypotheses and proofs of the reductions are in the linked modules. In C-II, retain **every source label**, including contact isolates. Infinitesimal motions, abstract graph exchanges and fixed-wall packets require the missing geometric realization and full pair-constraint checks.
 
-Tasks are small enough to be independently checked. A useful submission may be a proof, a counterexample to a stated intermediate claim, exact finite evidence, a reproduction, an alternative approach, an audit of existing work, or a rigorous negative result. Everyone may submit Issues, Discussions and pull requests. Every claim keeps its hypotheses and evidence attached. Author checks, agent audits, human reviews and reproduced computations are labeled separately; none by itself makes a claim canonical.
+## Contribute one useful result
 
-Humans and autonomous AI agents are explicitly welcome to investigate tasks independently. AI-assisted work must say which tools or models were used, what they contributed, and what was checked independently. An AI agent cannot be described as a human reviewer or serve as the independent human reviewer of its own work.
+Anyone and their agents may participate. Claims coordinate work and confer no exclusive rights. No invitation, prescribed model, interview or permission to begin an unclaimed question is required.
 
-## Five-minute start
+Give an agent this instruction:
 
-1. Read [the definitions and quantifiers](docs/problem.md) and [the status note](docs/current-status.md).
-2. Choose an available entry in the [task list](tasks/README.md); each task contains its own hypotheses and starting evidence.
-3. Search open issues, Discussions and pull requests for the task ID before beginning. Claims are advisory and do not reserve a problem.
-4. From the repository root, run the local checks:
+> Contribute one useful, independently reviewable result to this repository. Read autoresearch.md, identify a current bounded problem, check existing work for overlap, investigate it rigorously, and submit reproducible evidence or an exact handoff.
 
-   ```sh
-   python3 -m unittest discover -s tests -v
-   python3 scripts/check_repo.py
-   python3 scripts/triangular_lattice.py --max-n 5
-   ```
+The [19 substantive task cards](tasks/README.md) cover A, B, C-II, independent proof audits, exact computation and verification, shared geometry, literature scope, and alternative global approaches. The [research director](docs/research/README.md) records priorities and scoped family status. A useful proof, corrected scope, exact counterexample, independent verifier, negative result or precise handoff is valuable; a PR is optional when no durable contribution is ready.
 
-5. Open a focused claim issue if coordination would help, then make one bounded investigation. Submit a pull request or a concise handoff with the proof, code, data, or exact obstacle.
+```sh
+python3 scripts/choose_research_task.py --count 1 --live-overlap --json
+```
 
-The [contributor guide](CONTRIBUTING.md), [agent entrypoints](AGENTS.md) and [autoresearch guide](autoresearch.md) describe the workflow in more detail. Use Issues for durable task claims and review requests; Discussions are available for broader methods and questions.
+Follow [autoresearch.md](autoresearch.md), [coordination](docs/COORDINATION.md), [contribution terms](CONTRIBUTING.md) and [review policy](docs/REVIEW_POLICY.md). Merging a contribution does not make its claims canonical. Agent audits and human mathematical reviews are recorded separately. Consequential canonical promotion requires independent human review.
 
-## Initial tasks
+## Reproduce and inspect
 
-- [P99-MATH-001 — attainment of the minimum](tasks/P99-MATH-001-attainment.md)
-- [P99-COMP-001 — exact triangular-lattice enumeration](tasks/P99-COMP-001-triangular-lattice.md)
-- [P99-GEOM-001 — the four-point square benchmark](tasks/P99-GEOM-001-square-benchmark.md)
+```sh
+python3 -m venv .venv
+.venv/bin/pip install --require-hashes --only-binary=:all: -r tools/requirements-verification-linux-x86_64.lock
+.venv/bin/python tools/check_public.py
+.venv/bin/python tools/run_theorem_certificates.py
+```
 
-The lattice computation is a restricted finite model. Its results apply only to points in the specified triangular lattice and are not a substitute for planar optimization.
+The wheel lock targets Linux x86_64 / CPython 3.14; [portable pinned versions](tools/requirements-verification.lock) are available separately. See the [certificate registry](research/certificates.json), [reproduction guide](research/README.md), [CI policy](docs/ci/README.md), and [actual verification record](docs/launch/READINESS.md). Passing code is finite evidence within its encoded hypotheses, not a proof of the global conjecture.
 
-## Beta and license
-
-This is an open community beta. It makes no claim that the problem has been solved, that its tasks have received external peer review, or that its initial materials represent any private research archive. Original project materials are licensed under [Apache-2.0](LICENSE); see [NOTICE](NOTICE) and [provenance notes](docs/provenance.md) for scope and attribution. Contributions are submitted under Apache-2.0 as described in [CONTRIBUTING.md](CONTRIBUTING.md). No separate CLA or DCO is required.
+Original project code and exposition use [Apache-2.0](LICENSE), subject to [NOTICE](NOTICE) and source-specific notices. Third-party papers and page/text extractions are excluded; bibliographic links identify external sources. [Publication audit](docs/launch/PUBLICATION_AUDIT.md) records the exact release gate and any outstanding limits. [CITATION.cff](CITATION.cff) supplies citation metadata.

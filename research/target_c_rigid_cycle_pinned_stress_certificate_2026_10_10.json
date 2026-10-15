@@ -1,0 +1,176 @@
+{
+  "internal_arc_stars": {
+    "degree_four": {
+      "full_pair_checks": 170,
+      "lower_failure_patterns": 14,
+      "lower_feasible_sign_patterns": [
+        [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "old_positive_equilibrium_weights": [
+        52,
+        52,
+        25,
+        25
+      ],
+      "scope": "local ray geometry; no actual global minimizer modeled",
+      "strictly_surrounded_patterns": [
+        [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    "degree_three": {
+      "full_pair_checks": 54,
+      "lower_failure_patterns": 4,
+      "lower_feasible_sign_patterns": [
+        [
+          -1,
+          -1,
+          -1
+        ],
+        [
+          -1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "old_positive_equilibrium_weights": [
+        13,
+        13,
+        10
+      ],
+      "scope": "local ray geometry; no actual global minimizer modeled",
+      "strictly_surrounded_patterns": [
+        [
+          -1,
+          -1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    }
+  },
+  "missing_endpoint_equilibrium_guardrail": {
+    "full_pair_checks": 234,
+    "intruding_component_size": 1,
+    "new_diameter_pairs": [
+      [
+        0,
+        6
+      ],
+      [
+        3,
+        9
+      ]
+    ],
+    "old_diameter_pairs": [
+      [
+        0,
+        6
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        6,
+        12
+      ]
+    ],
+    "old_loaded_distance_to_wall": "1",
+    "old_loaded_intruding_label": 12,
+    "release_amplitude": "1/100",
+    "scope": "nonglobal; old unloaded vertex 1 fails positive equilibrium"
+  },
+  "pinned_unit_grid": {
+    "contacts": 24,
+    "displacement_energy": [
+      "1770/847",
+      "0"
+    ],
+    "full_pair_checks": 120,
+    "grounded_contact_laplacian": [
+      [
+        4,
+        -1,
+        -1,
+        0
+      ],
+      [
+        -1,
+        4,
+        0,
+        -1
+      ],
+      [
+        -1,
+        0,
+        4,
+        -1
+      ],
+      [
+        0,
+        -1,
+        -1,
+        4
+      ]
+    ],
+    "grounded_determinant": "192",
+    "interior_labels": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "positive_interior_equilibria": 4,
+    "scope": "pinned contact net; globality and full diameter stress omitted",
+    "source_labels": 16
+  },
+  "scope": "exact finite checks; universal theorem remains analytic"
+}

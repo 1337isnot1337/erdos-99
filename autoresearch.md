@@ -1,59 +1,41 @@
-# Bounded autonomous research guide
+# One independently reviewable contribution
 
-Use this file as an entrypoint for a human or autonomous agent asked to contribute one independently reviewable result to Erdős Problem 99. The default is a single bounded investigation, not an open-ended attempt to solve the entire problem.
+Start here when given only “Contribute one useful, independently reviewable result to this repository.” Default to a 30–60 minute session. A proof audit, exact obstruction, independent checker, negative result or useful handoff can complete it.
 
-## Start from public evidence
+## Refresh at every checkpoint
 
-1. Fetch current public `main` and record its commit:
-
-   ```sh
-   git fetch origin
-   git rev-parse origin/main
-   git status --short --branch
-   ```
-
-2. Read [`docs/problem.md`](docs/problem.md), [`docs/current-status.md`](docs/current-status.md), [`tasks/README.md`](tasks/README.md), and the complete task file you select.
-3. Confirm the problem is still open and check the task's references. Do not rely on a private archive or assume that an old status is current.
-
-## Check overlap
-
-Search the task ID in the repository's open Issues, Discussions and pull requests. With GitHub CLI:
+1. Fetch `origin/main`; inspect your working tree and preserve local work. Start an isolated branch from current main. Record its SHA.
+2. Read `docs/STATE.md`, the exact problem, `docs/research/bottleneck-brief.md` and `docs/research/priority-state.json`. Compare `priority_revision`, `catalogue_revision` and `state_version` with the prior session checkpoint. Read changed evidence and decisions before reusing an old assignment.
+3. Read the relevant route and full load-bearing prerequisites. The public claim graph is navigation; follow statements and proofs, including implicit section references.
+4. Query live overlap and inspect matching files, hypotheses, methods and drafts. A title match is only a lead. Failure to query is explicit; do not infer that the topic is free.
 
 ```sh
-gh issue list --repo 1337isnot1337/erdos-99 --state open --search P99-COMP-001
-gh pr list --repo 1337isnot1337/erdos-99 --state open --search P99-COMP-001
+python3 scripts/choose_research_task.py --count 1 --live-overlap --json
+gh pr list --repo 1337isnot1337/erdos-99 --state open --limit 100
+gh issue list --repo 1337isnot1337/erdos-99 --state open --limit 100
 ```
 
-Use the task's actual ID in place of `P99-COMP-001`. In a browser, use GitHub's repository search with the same ID and inspect open results. If another contributor has an active claim, make a distinct subquestion or coordinate publicly. Claims are not exclusive and expire on the date or event their author states.
+Discussions, when enabled, are an additional coordination surface; the overlap helper queries them and reports availability. Issues and PRs remain usable if Discussions are disabled. See `docs/COORDINATION.md`.
 
-## Run one bounded investigation
+## Select and investigate
 
-Choose one task, one lemma, one finite exact computation, one counterexample attempt, or one independent audit. Before work, write down:
+Choose one card from `tasks/README.md`. The selector's weights allocate attention, not theorem-success probabilities. Direct frontier work is distinguished from finite-model, independent-audit and exploratory tasks. Read the family status before expanding an unchanged search.
 
-- the exact claim and all hypotheses;
-- the known starting evidence;
-- one concrete experiment or proof step;
-- what would falsify the claim or invalidate the approach;
-- a stopping condition and a time or computation bound.
+Write the exact objective, definitions, hypotheses, candidate-to-endpoint chain, first finite experiment, falsification strategy, and stopping condition. Reproduce the relevant starting evidence. For a proof-only task, independently reconstruct one delicate step instead of adding a decorative numerical test.
 
-Default to 30–60 minutes. A rigorous negative result, a correction to a conjecture, an exact counterexample, or a precise obstacle can be a useful outcome. Do not continue a search just because it has not found an answer.
+Record a scoped claim issue when useful. Anyone may begin; claims expire within seven days and confer no ownership. Avoid redundant work, but independent review is welcome. Run a finite investigation and check every encoded source lower bound and actual-diameter upper bound where a motion or replacement is proposed.
 
-## Verify and package
+## Finish, review and continue
 
-- Reproduce the relevant baseline from this repository.
-- Keep exact finite evidence separate from numerical evidence and mathematical conclusions.
-- Include a minimal executable command, input data, expected output, actual output and relevant environment details.
-- For proofs, include definitions, quantifiers, hypotheses, each main implication and a falsification attempt.
-- Record source attribution, contributor names/handles and AI assistance.
-- Run the lightweight local checks before submitting:
+Submit a focused PR with a self-contained proof or evidence package. Include commands, exact inputs, scope, source/priority revision, predecessor comparison, attribution, AI role, falsification checks, unresolved gap, and what the result does not establish. `docs/reports/REPORT_TEMPLATE.md` is a starting format. Request review of the exact head.
 
-  ```sh
-  python3 -m unittest discover -s tests -v
-  python3 scripts/check_repo.py
-  ```
+```sh
+python3 tools/check_public.py
+python3 tools/local_ci.py --base-ref origin/main --require-localized
+# Replay the exact relevant verifier. Use the full suite for canonical/foundation impact:
+python3 tools/run_theorem_certificates.py
+```
 
-## Submit or hand off
+The localized planner never labels unknown impact fully verified. A handoff without a PR should identify the exact remaining lemma and one next action. Close or release a claim when finished. A merge leaves lifecycle unchanged unless an explicit reviewed promotion transaction changes it.
 
-Create a pull request for a self-contained, reviewable change. Use the PR template and state the evidence status accurately. It is acceptable to leave a concise issue or Discussion handoff instead of a PR when the result is negative or the work is incomplete. Ask for the next exact question; do not describe agent review as human review or a local result as a solution to the eventual problem.
-
-Maintainership may update `tasks/index.json` and `docs/research-directions.md` as community priorities change. These files are the Phase 1 task-priority interface; there is no automated director.
+At the checkpoint, record upstream SHA, state version, priority revision, task/method, bounded result, evidence and remaining obligation in the contribution or issue. Fetch and compare again before the next session. Maintainers fold reviewed findings into the priority log, family status and task catalogue; automatic PR activity alone is not a scientific priority decision.

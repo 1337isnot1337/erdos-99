@@ -1,6 +1,12 @@
-Erdős Problem 99 Collaborative Research
-Copyright and contributor attribution are recorded in individual contributions where supplied.
+Erdős Problem 99 collaborative research corpus
+Copyright 2026 Cinna Davis and the respective project contributors.
 
-The mathematical problem originates with Paul Erdős. See docs/references.md for bibliographic sources and attribution. This repository does not include third-party papers, scans, extracted paper text, or historical research archive files.
+Original project code, mathematical exposition, documentation and research packages are offered under Apache License 2.0 where the project holds the necessary rights. Existing source-specific notices and credited mathematical contributions remain applicable. Mathematical facts and cited external publications are not asserted to be owned by this project.
 
-Original project code and documentation in this repository are offered under the Apache License, Version 2.0, subject to any file-specific notice. This notice does not claim ownership of third-party works.
+This curated snapshot preserves source attribution and exact source blob identities in docs/publication/inclusion.json. Source lifecycle labels describe internal research authority; they do not certify independent human peer review. Agent and automated audits are not human reviews.
+
+The project has used substantial AI assistance for research, proof drafting, auditing and software. Public contributor credit records the actual contribution and requested identity; commit authorship alone is not mathematical authorship. Contributions from externally named mathematicians are attributed in the relevant statements and bibliography.
+
+Bundled third-party papers and extracted pages/text from the source archive are excluded. Public bibliography links do not license those external works. This snapshot imports no private Git history.
+
+The contribution workflow is informed by CrocSwap/integer-mult-bounds (Apache-2.0). Its integer-multiplication mathematics is not imported. Localized CI tooling is adapted from the E99 project's proposed d54097cb implementation, with public-specific integrity checks; its proposal origin is not a canonical mathematical promotion.

@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+"""Tier 0 trusted metadata checks. No research verifiers or candidate tools executed."""
+from __future__ import annotations
+import argparse
+import subprocess
+import sys
+from pathlib import Path
+
+TOOLS = Path(__file__).resolve().parent
+sys.path.insert(0, str(TOOLS))
+from check_theorem_state_pr import Checker as StateChecker
+from check_active_route_summaries import run_checks as route_check
+
+
+class TrustedChecker(StateChecker):
+    def run_subcheck(self, script):
+        # The original checker executes a script relative to candidate root.
+        # Resolve the generator in the trusted control checkout instead.
+        result = subprocess.run([sys.executable, '-I', str(TOOLS / Path(script).name),
+                                 '--root', str(self.root)], cwd=self.root,
+                                capture_output=True, text=True, timeout=30)
+        if result.returncode:
+            self.err(f'{script}: {result.stdout}{result.stderr}')
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--root', type=Path, required=True)
+    parser.add_argument('--base-ref', required=True)
+    args = parser.parse_args()
+    errors = TrustedChecker(args.root, base_ref=args.base_ref).run()
+    # Public navigation and task prerequisites are checked by trusted tools.
+    from check_public import validate
+    public_errors, _ = validate(args.root)
+    errors.extend(public_errors)
+    for error in errors:
+        print(error)
+    print(f'integrity: {len(errors)} errors; metadata only, not mathematical verification')
+    return bool(errors)
+
+if __name__ == '__main__':
+    raise SystemExit(main())

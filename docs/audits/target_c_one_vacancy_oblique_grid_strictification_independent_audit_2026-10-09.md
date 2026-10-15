@@ -1,0 +1,182 @@
+<!-- theorem-state: {"artifact_id":"ART-C45A28A5A92D","canonical":true,"claim_ids":["C-OBLIQUE-ONE-VACANCY-STRICT-CAPACITY-GAP","C-OBLIQUE-ONE-VACANCY-STRICTIFICATION"],"claim_statuses":{"C-OBLIQUE-ONE-VACANCY-STRICT-CAPACITY-GAP":"regression","C-OBLIQUE-ONE-VACANCY-STRICTIFICATION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
+# Independent audit: one vacancy in a fixed oblique rectangular grid
+
+Date: 2026-10-09. Audit base: `origin/main=6b35295e84030110bb43728b655d7a124248ba56`, state `2026-10-09.audit.189`.
+
+Frozen source: `origin/research/sol/target-c-level1-gpt61-2026-10-04` at `9875cd6a77939bb6347353fc798ab8f9ab03ec3e` (354 commits behind and 27 ahead of the audit base). The source report is [`target_c_one_vacancy_collective_strictification_2026-10-05.md`](../reports/target_c_one_vacancy_collective_strictification_2026-10-05.md), SHA-256 `f0257acc588d5e3d2b437bf4df73d8ebda768c5d733d7489934feba475e54a69`. Its exact finite verifier is `research/verify_target_c_one_vacancy_collective_strictification_2026_10_05.py`, SHA-256 `a7dde4b19c70f31266d3e17c781d2523238e25d4e1abc04b251d8d5c7ec1249a`.
+
+**Verdict: PASS — promote the two-stage strictification theorem, and promote the exact fixed-wall capacity gap as a separate scoped regression.** The report's broader claim is not used: the result starts with one interior vacancy already present. It does not remove a source point, extract a wall from a source, impose diameter upper constraints, or establish global optimality.
+
+## 1. Exact statements
+
+Let \(m,n\ge2\), let \(u=(1,0)\), \(v=(\cos\phi,\sin\phi)\), and let
+\[
+  \pi/3<\phi<2\pi/3,\qquad
+  K=\{iu+jv:0\le i\le m,\ 0\le j\le n\}.
+\]
+Let \(W\) be the complete labeled boundary grid, and choose integers
+`0<a<m`, `0<b<n`. The source labels are every grid label except the one
+interior label `(a,b)`.
+
+**Theorem V.1 — `C-OBLIQUE-ONE-VACANCY-STRICTIFICATION`.** There is a two-stage piecewise-linear motion which fixes every label in \(W\), retains every other label, keeps all interior labels strictly inside \(K\), and remains unit-separated throughout. At the endpoint, every pair involving at least one interior label has distance strictly greater than one.
+
+The audited angle range is enlarged from the source report's acute range: the proof only needs \(\pi/3<\phi<2\pi/3\). At either excluded endpoint a nonbasis lattice direction becomes an additional unit contact, so the contact classification used below changes.
+
+**Corollary V.2 — `C-OBLIQUE-ONE-VACANCY-STRICT-CAPACITY-GAP`.** Write \(K_0=(m-1)(n-1)\). For every fixed \(m,n\ge3\), there is a positive, non-effective angle window above \(\pi/3\) in which the fixed-wall capacities satisfy
+\[
+  \operatorname{cap}_{\ge1}(K;W)=K_0,
+  \qquad
+  \operatorname{cap}_{>1}(K;W)=K_0-1.
+\]
+Here weak capacity counts added points in \(\operatorname{int}K\), mutually separated and separated from \(W\) by at least one; strict capacity uses strict inequalities for every pair involving an added point. This is a fixed-container theorem, not a canonical-source counterexample.
+
+## 2. Independent proof of V.1
+
+For a nonzero integer displacement \(ru+sv\), the squared length is
+\(r^2+s^2+2rs\cos\phi\). If \(rs>0\), then for \(\phi\le\pi/2\)
+the length squared is at least \(r^2+s^2\ge2\); for \(\phi>\pi/2\),
+use \(\cos\phi>-1/2\) to get
+\(r^2+s^2+2rs\cos\phi>r^2+s^2-|rs|\ge1\). If \(rs<0\), the
+same two cases give respectively
+\(r^2+s^2-2|rs|\cos\phi>r^2+s^2-|rs|\ge1\), or
+\(r^2+s^2-2|rs|\cos\phi\ge r^2+s^2\ge2\). Thus the only unit
+grid steps are \(\pm u,\pm v\). This also proves the starting grid is
+unit-separated and has no unit triangles.
+
+Let \(J\) be counterclockwise rotation by a quarter-turn. In stage one,
+move only the surviving interior labels in row \(j=b\) or column \(i=a\).
+For the row assign
+\[
+ w_{i,b}=-(i/a)Jv\ (i<a),\qquad
+ w_{i,b}=((m-i)/(m-a))Jv\ (i>a),
+\]
+and for the column assign
+\[
+ w_{a,j}=(j/b)Ju\ (j<b),\qquad
+ w_{a,j}=-((n-j)/(n-b))Ju\ (j>b).
+\]
+All other velocities, including the wall, are zero. The row coefficients
+strictly decrease with \(i\), and \(u\cdot Jv=-\sin\phi<0\), so the
+squared length of every horizontal unit contact on this punctured row has
+positive derivative. The column coefficients strictly increase with
+\(j\), and \(v\cdot Ju=\sin\phi>0\), so every vertical contact on the
+punctured column also has positive derivative. Each other unit contact
+touching a mover is perpendicular to its velocity: a row mover's
+remaining contact direction is \(v\), and a column mover's is \(u\).
+The relative velocity is nonzero, so that squared length becomes
+\(1+s^2|\Delta w|^2>1\). No unit contact joins two moved labels across
+the row and column, since their intersection is the missing label.
+
+Every original noncontact has positive slack, and every interior label
+starts strictly inside \(K\). Finiteness therefore permits a sufficiently
+small positive first amplitude whose whole segment preserves all lower
+constraints and interior containment while making every contact touching
+the row or column strict.
+
+The remaining stationary interior labels lie in up to four rectangular
+blocks. Define the dual basis
+\[
+ u^*=(1,-\cot\phi),\qquad v^*=(0,\csc\phi),
+ \quad u\cdot u^*=v\cdot v^*=1,
+ \quad u\cdot v^*=v\cdot u^*=0.
+\]
+For a label in a block, let \(I\) be its positive integer distance from
+the adjacent vertical outer side and \(J_0\) its positive integer
+distance from the adjacent horizontal outer side. Set
+\[
+ z_{ij}=s_x Iu^*+s_yJ_0v^*,
+\]
+where \(s_x,s_y\in\{+1,-1}\) point away from the two adjacent sides.
+Every remaining horizontal unit contact, including a contact to its
+outer wall, has outward radial component \(u\cdot\Delta z=1\); every
+remaining vertical contact has \(v\cdot\Delta z=1\). Their squared
+lengths therefore increase to first order. Distinct blocks have no
+unit contact avoiding the already released row or column. All pairs
+involving the first-stage movers and all original noncontacts are
+already strict; by finiteness, a sufficiently small second amplitude
+preserves those inequalities and strict interior containment. At its
+endpoint every interior-involving pair is strict. This includes empty
+blocks and the smallest case \(m=n=2\).
+
+This proof uses neither a first-order direction as a finite endpoint nor
+one-at-a-time moves: the two displayed stages are simultaneous finite
+motions with amplitudes chosen after checking the complete finite set of
+slacks.
+
+## 3. Exact capacity-gap deduction
+
+For fixed \(m,n\ge3\), the already canonical
+`C-LARGE-WALL-LOCK-REGRESSION` gives a positive angle window in which
+every unit-separated \(N\)-point packing in \(K\) containing the full
+prescribed wall \(W\), where
+\(N=(m+1)(n+1)\), is the original grid. Choose a smaller positive
+window so that also
+\[
+  mn\left(\frac{\sin\phi}{\sqrt3/2}-1\right)<1.
+\]
+This is possible by continuity at \,`phi=pi/3`\,. Oler's canonical
+finite inequality (Lemma 21.1 in `docs/theory/03-oler-shell.md`) gives
+for any unit-separated subset of \(K\)
+\[
+ |X|\le \frac{2mn\sin\phi}{\sqrt3}+(m+n)+1<N+1.
+\]
+Integer rounding yields \(|X|\le N\), so the full grid shows ordinary
+interior capacity is exactly \(K_0\). A strict packing of \(K_0\)
+interior points together with \(W\) would have \(N\) points; lock
+uniqueness forces it to be the original grid, whose interior contains
+unit contacts. Hence strict capacity is at most \(K_0-1\). V.1, applied
+to the grid with any one interior vacancy, supplies \(K_0-1\) strict
+interior points and proves equality.
+
+Taking square frames \(m=n\to\infty\) inside their respective
+non-effective angle windows gives \(Theta(D^2)\) strict, hence
+contact-isolated, interior points behind \(O(D)\) fixed wall vertices.
+The ordinary capacity exceeds strict capacity by exactly one. The fixed
+wall is not certified as an actual diameter boundary, and none of these
+packings is claimed to be globally diameter-optimal.
+
+## 4. Verifier boundary and hostile checks
+
+Re-ran the frozen verifier on its source commit. It uses exact
+\(\mathbb Q(\sqrt3)\) arithmetic and rational halving and passes four
+finite fixtures: 1,915 exact source-pair checks, 46 interior labels,
+fixed wall coordinates, retained labels, and strict container
+inequalities. Its endpoint checks do not certify the analytic segment
+argument, the all-parameter theorem, Oler's inequality, or the lock
+window. Those are supplied by the proof above and the cited canonical
+regression/shared-theory input. The source verifier is not registered as
+a theorem certificate because it is not load-bearing for either
+universal claim and its finite fixtures do not test the enlarged
+obtuse-angle range.
+
+Adversarial scope checks:
+
+- At \,`phi=pi/3`\, the (u-v) direction is an additional unit step; at
+  \,`phi=2*pi/3`\, the (u+v) direction is an additional unit step.
+  Neither endpoint is included.
+- The vacancy is an input hypothesis. No source label is deleted to
+  create it, and no strict-capacity statement is claimed outside the
+  fixed parallelogram and fixed wall.
+- The triangular flat-pinning result `C-ONE-VACANCY-FLAT-PINNING-RATE`
+  concerns a different pinned chart and does not contradict the strictly
+  oblique motion. The large-wall lock regression supplies only V.2's
+  no-alternative full-population upper bound; it does not block V.1's
+  (K_0-1)-point strict packing.
+- The theorem supplies no source-wall extraction, actual-diameter
+  loading, diameter upper-pair feasibility, canonical source
+  normalization, strict-sub-\(D\) competitor, C-II closure, or Level I
+  conclusion.
+
+## 5. Claim and frontier disposition
+
+| Claim | Verdict | Dependencies | Exact limit |
+| --- | --- | --- | --- |
+| `C-OBLIQUE-ONE-VACANCY-STRICTIFICATION` | PASS — promote | None | Strict oblique rectangular grid with one interior vacancy and the full boundary fixed. |
+| `C-OBLIQUE-ONE-VACANCY-STRICT-CAPACITY-GAP` | PASS — promote as regression | `C-OBLIQUE-ONE-VACANCY-STRICTIFICATION`; `C-LARGE-WALL-LOCK-REGRESSION`; Oler Lemma 21.1 | Fixed-frame-dependent angle window; fixed-container capacities only. |
+
+This sharpens the fixed-wall guardrail: in a nonempty near-triangular
+window, strict capacity can be exactly one below ordinary capacity, even
+for growing square frames. It does not change the active C-II endpoint
+or the next obligation. The source-level problem is still to extract an
+actual wall/interface and construct a full-source replacement meeting
+all old lower constraints and every actual-diameter upper constraint.

@@ -1,0 +1,254 @@
+{
+  "additive_only_odd_cycle_guardrail": {
+    "actual_odd_diameter_cycle": [
+      0,
+      4,
+      8
+    ],
+    "diameter_squared": [
+      "1521/4",
+      "0"
+    ],
+    "full_pair_checks": 36,
+    "scope": "additive structure alone is insufficient; actual unit cells absent",
+    "unit_contacts": 0
+  },
+  "complete_array_fixtures": {
+    "complete_bent_unit_array_fixtures": 81,
+    "diameter_graph_count_by_loaded_vertices_and_edges": {
+      "2,1": 72,
+      "4,2": 9
+    },
+    "full_lower_upper_pair_checks": 2916,
+    "scope": "all fixture hypotheses of Theorem 1.1; globality/KKT not assumed"
+  },
+  "corner_parity_allocations": [
+    {
+      "X_endpoints": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "X_path_parity": 1,
+      "Y_endpoints": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "Y_path_parity": 0,
+      "equal_chord_in_odd_case": true,
+      "odd_total_parity": true
+    },
+    {
+      "X_endpoints": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "X_path_parity": 0,
+      "Y_endpoints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "Y_path_parity": 1,
+      "equal_chord_in_odd_case": true,
+      "odd_total_parity": true
+    },
+    {
+      "X_endpoints": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "X_path_parity": 1,
+      "Y_endpoints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "Y_path_parity": 1,
+      "equal_chord_in_odd_case": false,
+      "odd_total_parity": false
+    },
+    {
+      "X_endpoints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "X_path_parity": 1,
+      "Y_endpoints": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "Y_path_parity": 1,
+      "equal_chord_in_odd_case": false,
+      "odd_total_parity": false
+    },
+    {
+      "X_endpoints": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "X_path_parity": 0,
+      "Y_endpoints": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "Y_path_parity": 1,
+      "equal_chord_in_odd_case": true,
+      "odd_total_parity": true
+    },
+    {
+      "X_endpoints": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "X_path_parity": 1,
+      "Y_endpoints": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "Y_path_parity": 0,
+      "equal_chord_in_odd_case": true,
+      "odd_total_parity": true
+    }
+  ],
+  "rational_path_bank_U": {
+    "complete_upper_pair_checks": 315,
+    "even_squared_endpoint_upper": "1024/4225",
+    "maximum_even_endpoint_square": "1024/4225",
+    "minimum_odd_endpoint_square": "3721/4225",
+    "nonmonotone_sequences_killed_by_an_actual_upper_pair": 60,
+    "odd_squared_endpoint_lower": "3721/4225",
+    "scope": "normalized diameter paths; canonical contact/stress data omitted",
+    "three_edge_identities": 80,
+    "valid_monotone_paths": 57
+  },
+  "rational_path_bank_V": {
+    "complete_upper_pair_checks": 315,
+    "even_squared_endpoint_upper": "1600/10201",
+    "maximum_even_endpoint_square": "1600/10201",
+    "minimum_odd_endpoint_square": "9409/10201",
+    "nonmonotone_sequences_killed_by_an_actual_upper_pair": 60,
+    "odd_squared_endpoint_lower": "9409/10201",
+    "scope": "normalized diameter paths; canonical contact/stress data omitted",
+    "three_edge_identities": 80,
+    "valid_monotone_paths": 57
+  },
+  "scope": "exact finite checks; universal proof and canonical application analytic",
+  "sixty_degree_sharpness": {
+    "equal_endpoint_square": "1",
+    "even_path_edge_count": 2,
+    "normalized_points": [
+      [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "1/2"
+        ],
+        [
+          "-1/2",
+          "0"
+        ]
+      ],
+      [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "-1",
+          "0"
+        ]
+      ]
+    ],
+    "odd_path_edge_count": 1,
+    "scaled_all_pair_squares": "169",
+    "scope": "sharp diameter-path boundary; no canonical global source",
+    "window_sum_degrees": 60
+  },
+  "strict_combined_windows": {
+    "both_even_odd_orders_have_strictly_disjoint_endpoint_bounds": true,
+    "half_sum_rotation": [
+      "5917/6565",
+      "2844/6565"
+    ],
+    "strict_full_window_sum_below_60_degrees": true
+  }
+}

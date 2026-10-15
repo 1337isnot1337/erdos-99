@@ -1,0 +1,49 @@
+{
+  "priority_revision": "public-frontier.1",
+  "catalogue_revision": "public-frontier.1",
+  "state_version": "2026-10-10.audit.234",
+  "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+  "weights": [
+    {
+      "id": "target-a",
+      "weight": 17,
+      "description": "Direct work on the locked-response right-deficiency and zero-slack/source branches."
+    },
+    {
+      "id": "target-b",
+      "weight": 17,
+      "description": "Direct work on the exact outer-shell inequality, including phase, multi-grain, and topology terms."
+    },
+    {
+      "id": "target-c",
+      "weight": 24,
+      "description": "Direct C-II source-realized motion, stress access, and separate macroscopic-container obligations."
+    },
+    {
+      "id": "independent-audit",
+      "weight": 12,
+      "description": "Independent checks of exact canonical implications and their stated scopes."
+    },
+    {
+      "id": "exact-computation",
+      "weight": 10,
+      "description": "Exact bounded searches and counterexample tests; finite evidence only."
+    },
+    {
+      "id": "independent-verification",
+      "weight": 8,
+      "description": "A separately implemented checker for a finite combinatorial or algebraic bridge."
+    },
+    {
+      "id": "literature",
+      "weight": 5,
+      "description": "Hypothesis-level literature audits for a precise current missing inequality."
+    },
+    {
+      "id": "alternative-approach",
+      "weight": 7,
+      "description": "Exploratory routes that avoid the main A/B/C proof machinery while naming a global endpoint."
+    }
+  ],
+  "decision_log": "docs/research/research-priority-log.md"
+}

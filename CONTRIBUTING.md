@@ -1,35 +1,13 @@
 # Contributing
 
-Everyone is welcome to participate through Issues, Discussions and pull requests. No invitation, application, prior relationship or approved-agent status is required. Human and AI contributors may propose tasks, investigate independently, reproduce evidence, audit existing work, explore alternatives, submit counterexamples and report rigorous negative results.
+Anyone and their agents may contribute. Read `AGENTS.md`, `autoresearch.md`, the state and relevant route. Use public Issues, Discussions and PRs for advisory coordination. No invitation, prescribed model, fixed reviewing panel, interview or approval to begin an unclaimed question is required.
 
-## License and attribution
+Place complete proofs and scoped research in `docs/reports/`, independent audits in `docs/audits/`, executable evidence in `research/` or a declared `research-packages/<id>/`, and current questions in `tasks/`. Keep one coherent result per submission. Preserve reused proof ideas, code, data and predecessor credit, including useful negative findings.
 
-By submitting a contribution that you intend to be included in this repository, you agree to license that contribution under the repository's Apache License 2.0. You keep your authorship and should include your name or public handle in the contribution record. There is no separate CLA or DCO process.
+New claims default to unreviewed. State assumptions, quantifiers, objects, exact evidence, arithmetic, parameter bounds, reproduction commands, falsification checks and remaining obligations. A merged PR is not a theorem promotion. See `docs/REVIEW_POLICY.md` and `docs/RESEARCH_WORKFLOW.md`.
 
-Disclose third-party material and its license before including it. Prefer bibliographic references and links to publisher, author or institutional pages; do not upload a paper, scan or extracted text merely because it is accessible online. Do not submit private, confidential or personal information.
+By intentionally submitting a contribution for inclusion, you offer it under Apache License 2.0 unless the submission explicitly states otherwise. You must have the right to make that grant. Retain applicable notices and identify third-party material and its license before inclusion. A root license cannot clear someone else's work. No separate CLA or DCO is required. Cite authorized external publications rather than importing papers or extracted prose/images.
 
-For AI-assisted contributions, identify the model or tool and version/date when known, describe what it generated or checked, and say which parts were independently verified. Authors remain responsible for correctness, attribution and license compliance.
+Credit contributors using their chosen public names/handles. Do not publish private contact details. Disclose substantial AI assistance and its role; tools are not human authors or reviewers. Internal agent auditing and independent human mathematical review are distinct. Maintainers enforce scope, provenance and lifecycle policy; review participation is open.
 
-## Choose and coordinate work
-
-Start with the README, [problem definition](docs/problem.md), [current status](docs/current-status.md) and [task list](tasks/README.md). Search the task ID in open Issues, Discussions and pull requests. A claim issue should give a narrow scope, a concrete first step and an expiry date or release condition. Claims coordinate work; they do not reserve a result. You may start without opening a claim issue if the work is already clearly distinct.
-
-Use Issues for bounded task claims, corrections, counterexamples and actionable review requests. Use Discussions for broad questions, method comparisons and coordination. Anyone may review or comment; no designated reviewer panel is required.
-
-## Submit a result
-
-Open a pull request for a focused change. The template asks for the exact claim, scope, evidence, reproduction, AI disclosure, attribution and review requested. State whether the contribution is author-checked, an unreviewed proposal, conditional, reproduced finite evidence, agent-audited, or human-reviewed. Explain rejected or superseded approaches when that record will help others.
-
-Ordinary contributions may be accepted with an accurate evidence label even when no independent human reviewer is available. This does not make a result canonical. Consequential theorem statements require independent human mathematical review before maintainers promote them. An AI agent cannot serve as a human reviewer.
-
-## Local verification
-
-This repository uses only the Python standard library for its initial checks:
-
-```sh
-python3 -m unittest discover -s tests -v
-python3 scripts/check_repo.py
-python3 scripts/triangular_lattice.py --max-n 5
-```
-
-Tests check task metadata, local links and exact finite model output. They do not validate a mathematical proof or establish the full E99 theorem.
+Before submission, refresh overlap, run `python tools/check_public.py` and the relevant verifiers, inspect `git diff --check`, and report the actual result. Unknown dependency impact requires full replay or explicit review. Security fixes should avoid exposing credential values in logs or issues.

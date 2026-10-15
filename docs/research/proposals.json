@@ -1,0 +1,116 @@
+[
+  {
+    "source_proposal_number": 947,
+    "source_head": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+    "title": "Record Target C second-referee audits and repair inverse-phase proof",
+    "status": "unreviewed proposal; not canonical",
+    "public_files": [
+      "docs/audits/target_c_diameter_midpoint_mean_tail_independent_audit_2026-10-10.md",
+      "docs/audits/target_c_fused_sign_classes_and_residual_tail_screening_2026-10-10.md",
+      "docs/audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md",
+      "docs/audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md",
+      "docs/audits/target_c_one_pin_restoration_gap_capacity_plateau_independent_audit_2026-10-10.md",
+      "docs/audits/target_c_positive_leaf_anchor_second_referee_2026-10-10.md",
+      "docs/audits/target_c_positive_leaf_anchor_sharpening_independent_audit_2026-10-10.md",
+      "docs/audits/target_c_slow_chart_contact_port_cover_independent_audit_2026-10-10.md"
+    ]
+  },
+  {
+    "source_proposal_number": 948,
+    "source_head": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+    "title": "Target C: restrict finite folds and exclude complete bent cores",
+    "status": "unreviewed proposal; not canonical",
+    "public_files": [
+      "docs/reports/target_c_complete_array_diameter_forest_slot02_2026-10-11.md",
+      "docs/reports/target_c_deep_face_persistence_and_isolate_transport_slot02_2026-10-10.md",
+      "docs/reports/target_c_large_array_boundary_attachment_slot02_2026-10-11.md",
+      "docs/reports/target_c_nonconstant_face_quarter_fold_exclusion_slot02_2026-10-10.md",
+      "docs/reports/target_c_quarter_fold_face_obstructions_slot02_2026-10-10.md",
+      "docs/reports/target_c_rhombic_quarter_fold_dual_defect_slot02_2026-10-10.md",
+      "docs/reports/target_c_rigid_cycle_pinned_stress_and_arc_stars_slot02_2026-10-10.md",
+      "research/target_c_complete_array_diameter_forest_certificate_2026_10_11.json",
+      "research/target_c_deep_face_transport_certificate_2026_10_10.json",
+      "research/target_c_large_array_boundary_attachment_certificate_2026_10_11.json",
+      "research/target_c_nonconstant_face_quarter_fold_exclusion_certificate_2026_10_10.json",
+      "research/target_c_quarter_fold_face_obstructions_certificate_2026_10_10.json",
+      "research/target_c_rhombic_dual_defect_certificate_2026_10_10.json",
+      "research/target_c_rigid_cycle_pinned_stress_certificate_2026_10_10.json",
+      "research/verify_target_c_complete_array_diameter_forest_2026_10_11.py",
+      "research/verify_target_c_deep_face_transport_2026_10_10.py",
+      "research/verify_target_c_large_array_boundary_attachment_2026_10_11.py",
+      "research/verify_target_c_nonconstant_face_quarter_fold_exclusion_2026_10_10.py",
+      "research/verify_target_c_quarter_fold_face_obstructions_2026_10_10.py",
+      "research/verify_target_c_rhombic_dual_defect_2026_10_10.py",
+      "research/verify_target_c_rigid_cycle_pinned_stress_2026_10_10.py"
+    ]
+  },
+  {
+    "source_proposal_number": 952,
+    "source_head": "3536c0b6f6c2a929d9c96fffbdcfc480735fea3b",
+    "title": "Slot 01: local loaded-anchor upper boxes and inclusive source releases",
+    "status": "unreviewed proposal; not canonical",
+    "public_files": [
+      "docs/reports/target_c_inclusive_floor_closure_and_locked_contact_release_2026-10-10.md",
+      "docs/reports/target_c_loaded_anchor_parallel_upper_box_2026-10-10.md",
+      "docs/reports/target_c_outer_owner_amplification_and_common_release_2026-10-10.md",
+      "docs/reports/target_c_owner_component_anchoring_and_source_realized_sink_2026-10-10.md",
+      "docs/reports/target_c_parallel_release_floor_closure_and_isolate_transport_2026-10-10.md",
+      "research/certificates/target_c_common_release_implication_2026_10_10.jsonl",
+      "research/certificates/target_c_inclusive_floor_release_2026_10_10.jsonl",
+      "research/certificates/target_c_loaded_anchor_upper_box_2026_10_10.jsonl",
+      "research/certificates/target_c_owner_amplitude_release_2026_10_10.jsonl",
+      "research/certificates/target_c_source_realized_owner_sink_2026_10_10.jsonl",
+      "research/certificates/target_c_unequal_height_release_2026_10_10.jsonl",
+      "research/verify_target_c_inclusive_floor_release_2026_10_10.py",
+      "research/verify_target_c_loaded_anchor_upper_box_2026_10_10.py",
+      "research/verify_target_c_source_realized_owner_sink_2026_10_10.py",
+      "research/verify_target_c_unequal_height_release_2026_10_10.py"
+    ]
+  },
+  {
+    "source_proposal_number": 955,
+    "source_head": "d5afc236a7b1de9567dcb6dda65d957ed91c726b",
+    "title": "Global Level I research: attainment and matching competitors",
+    "status": "unreviewed proposal; not canonical",
+    "public_files": [
+      "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md",
+      "docs/reports/global_annular_matching_competitor_2026-10-11.md",
+      "docs/reports/global_level_i_attainment_and_one_contact_2026-10-11.md",
+      "research/global_annular_matching_2026_10_11.json",
+      "research/verify_global_annular_matching_2026_10_11.py",
+      "research/verify_global_one_contact_2026_10_11.py"
+    ]
+  },
+  {
+    "source_proposal_number": 966,
+    "source_head": "88b473899edc5f63c50aa6f90bf9a4d63112a66d",
+    "title": "Target A: coembedded locked hulls with full Schur rank (seed 66)",
+    "status": "unreviewed proposal; not canonical",
+    "public_files": [
+      "docs/reports/target_a_seed066_coembedded_locked_fullrank_2026-10-13.md",
+      "research/target_a_seed066_locked_fullrank_certificate.json",
+      "research/verify_target_a_seed066_locked_fullrank.py"
+    ]
+  },
+  {
+    "source_proposal_number": 969,
+    "source_head": "b3983cdc7f4ca32ad8083eade92952d451c60848",
+    "title": "Target A seed 63: tight-isolate reduction and fully locked neutral fan",
+    "status": "unreviewed proposal; not canonical",
+    "public_files": [
+      "docs/reports/target_a_seed063_tight_isolates_and_locked_fan_regression_2026-10-13.md",
+      "research/verify_target_a_seed063_tight_isolates.py"
+    ]
+  },
+  {
+    "source_proposal_number": 970,
+    "source_head": "3d94a44ed245ad636685d7a3919acdf9ebd53753",
+    "title": "Target B: near-disk seamed grains refute scalar-only virtual payment",
+    "status": "unreviewed proposal; not canonical",
+    "public_files": [
+      "docs/reports/target_b_seed084_near_disk_seamed_grain_regression_2026-10-13.md",
+      "research/seed084/certificate.json",
+      "research/seed084/verify_seamed_grains.py"
+    ]
+  }
+]

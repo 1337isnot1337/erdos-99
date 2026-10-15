@@ -1,21 +1,15 @@
-## Summary
+## Exact result and lifecycle
 
-## Task ID and exact mathematical scope
+State the complete theorem/counterexample/computational proposition, all assumptions and quantifiers, and its classification. A merge does not promote the result.
 
-## Evidence status
+## Public prerequisites and nearest work
 
-Choose and explain: author-checked, unreviewed proposal, conditional claim, reproduced computational evidence, independently agent-audited, human-reviewed mathematical result, rejected/superseded, or canonical-promotion request.
+Base SHA, theorem-state version, priority revision, task/method scope, predecessor comparison and live overlap. Link full public statements/proofs and distinguish audited-working premises.
 
-## Evidence and reproduction
+## Evidence and falsification
 
-Include commands, expected and actual outputs, assumptions, input bounds, exactness or error analysis, and a negative control where useful.
+Proof or exact code/inputs, arithmetic, parameter bounds, commands and actual output. Describe independent checking, known regressions and failure controls. State what is not proved and the exact remaining lemma.
 
-## Falsification attempts and remaining gap
+## Review and provenance
 
-## Attribution, sources, and AI assistance
-
-List human contributors, third-party sources and licenses, and AI tools/models used with their contribution. State what was independently checked.
-
-## Review requested
-
-Review is open to the community. Say whether you request an agent audit, human mathematical review, code review, or reproduction. Agent review is not human review.
+Exact head for review, agent versus human review, contributor credit, AI assistance and rights/source notices. Intentional contributions are offered under Apache-2.0 as described in CONTRIBUTING.md.

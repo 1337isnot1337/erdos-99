@@ -1,0 +1,102 @@
+{
+  "array_transverse_monotonicity": {
+    "complete_actual_unit_array_fixtures": 81,
+    "full_lower_pair_checks": 2916,
+    "scope": "finite bent arrays; globality and circumradius roundness not modeled",
+    "transverse_determinant_checks": 486
+  },
+  "circle_tangency": {
+    "exact_tangent_identities": 21,
+    "oriented_chord_identities": 420,
+    "scope": "the endpoint tangent limit is proved analytically in the report"
+  },
+  "classification": "finite exact ingredient certificate for an unreviewed candidate",
+  "diameter_aspect_constant": {
+    "canonical_aspect_ratio_scope": "all actual diameter endpoints lie in the array",
+    "exact_identity": "(1-sqrt(3)/2)*kappa=1+sqrt(3)/2",
+    "integer_ceiling": 14,
+    "kappa": "7+4sqrt(3)"
+  },
+  "lens": {
+    "exact_lens_point_identity_checks": 174,
+    "fixtures": [
+      {
+        "center_separation": "5/13",
+        "checked_lens_points": 61,
+        "circle_radius": "1/2",
+        "perpendicular_extremes": [
+          [
+            "6/13",
+            "-5/26"
+          ],
+          [
+            "-6/13",
+            "-5/26"
+          ]
+        ]
+      },
+      {
+        "center_separation": "3/5",
+        "checked_lens_points": 57,
+        "circle_radius": "1/2",
+        "perpendicular_extremes": [
+          [
+            "2/5",
+            "-3/10"
+          ],
+          [
+            "-2/5",
+            "-3/10"
+          ]
+        ]
+      },
+      {
+        "center_separation": "4/5",
+        "checked_lens_points": 35,
+        "circle_radius": "1/2",
+        "perpendicular_extremes": [
+          [
+            "3/10",
+            "-2/5"
+          ],
+          [
+            "-3/10",
+            "-2/5"
+          ]
+        ]
+      },
+      {
+        "center_separation": "12/13",
+        "checked_lens_points": 21,
+        "circle_radius": "1/2",
+        "perpendicular_extremes": [
+          [
+            "5/26",
+            "-6/13"
+          ],
+          [
+            "-5/26",
+            "-6/13"
+          ]
+        ]
+      }
+    ],
+    "scope": "finite identities and extremal witnesses, not all continuous paths"
+  },
+  "not_certified": [
+    "global minimum diameter",
+    "source circumradius theorem",
+    "uniform compactness contradiction",
+    "numerical D_0 or epsilon_delta",
+    "complete-array extraction",
+    "full-source finite endpoint",
+    "Level I"
+  ],
+  "regular_opposite_stars": {
+    "nonzero_turn_pairs_with_exactly_one_surrounding_star": 500,
+    "opposite_regular_star_fixtures": 625,
+    "scope": "contact minimality supplies the loaded conclusion; not modeled",
+    "zero_turn_pairs_with_a_midpoint_exposure_obstruction": 125
+  },
+  "report": "docs/reports/target_c_large_array_boundary_attachment_slot02_2026-10-11.md"
+}

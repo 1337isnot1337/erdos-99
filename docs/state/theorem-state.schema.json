@@ -1,0 +1,628 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/1337isnot1337/e-99/blob/main/docs/state/theorem-state.schema.json",
+  "title": "Erdos 99 theorem-state manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "state_version",
+    "state_date",
+    "cleanup_baseline",
+    "level_i_status",
+    "status_vocabulary",
+    "authority_order",
+    "defaults",
+    "terminology",
+    "artifact_policy",
+    "graph_policy",
+    "generated_views",
+    "certificate_policy",
+    "targets",
+    "active_prompts",
+    "historical_prompt_compatibility_paths",
+    "promotion_contract"
+  ],
+  "properties": {
+    "state_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state_date": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "cleanup_baseline": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "level_i_status": {
+      "enum": [
+        "open",
+        "closed"
+      ]
+    },
+    "status_vocabulary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "canonical",
+        "unreviewed",
+        "audited-working",
+        "conditional",
+        "regression",
+        "superseded",
+        "rejected",
+        "provenance"
+      ],
+      "properties": {
+        "canonical": {
+          "type": "string",
+          "minLength": 1
+        },
+        "unreviewed": {
+          "type": "string",
+          "minLength": 1
+        },
+        "audited-working": {
+          "type": "string",
+          "minLength": 1
+        },
+        "conditional": {
+          "type": "string",
+          "minLength": 1
+        },
+        "regression": {
+          "type": "string",
+          "minLength": 1
+        },
+        "superseded": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rejected": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provenance": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "authority_order": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "defaults": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "report_not_explicitly_promoted",
+        "archived_document",
+        "historical_prompt",
+        "merged_pull_request_without_promotion",
+        "file_on_main_without_promotion",
+        "target_c_colocated_module_not_named_by_route_map",
+        "module_local_handoff_prose"
+      ],
+      "properties": {
+        "report_not_explicitly_promoted": {
+          "const": "unreviewed"
+        },
+        "archived_document": {
+          "const": "provenance"
+        },
+        "historical_prompt": {
+          "const": "provenance"
+        },
+        "merged_pull_request_without_promotion": {
+          "const": "unreviewed"
+        },
+        "file_on_main_without_promotion": {
+          "const": "unreviewed"
+        },
+        "target_c_colocated_module_not_named_by_route_map": {
+          "enum": [
+            "unreviewed",
+            "provenance"
+          ]
+        },
+        "module_local_handoff_prose": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "terminology": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "woodall_cyclic_branch",
+        "cyclic_shell"
+      ],
+      "properties": {
+        "woodall_cyclic_branch": {
+          "type": "string",
+          "minLength": 1
+        },
+        "cyclic_shell": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "artifact_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "index",
+        "roots",
+        "exclude",
+        "metadata_header",
+        "default_status",
+        "archive_status"
+      ],
+      "properties": {
+        "index": {
+          "type": "string",
+          "minLength": 1
+        },
+        "roots": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "exclude": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "metadata_header": {
+          "const": "theorem-state"
+        },
+        "default_status": {
+          "const": "unreviewed"
+        },
+        "archive_status": {
+          "const": "provenance"
+        }
+      }
+    },
+    "graph_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "canonical_dependency_statuses",
+        "require_resolved_edges",
+        "require_acyclic_depends_on"
+      ],
+      "properties": {
+        "canonical_dependency_statuses": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "canonical"
+            ]
+          }
+        },
+        "require_resolved_edges": {
+          "const": true
+        },
+        "require_acyclic_depends_on": {
+          "const": true
+        }
+      }
+    },
+    "generated_views": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status_summary",
+        "theorem_graph"
+      ],
+      "properties": {
+        "status_summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "theorem_graph": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "certificate_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "run_in_ci",
+        "require_paths_exist"
+      ],
+      "properties": {
+        "run_in_ci": {
+          "const": true
+        },
+        "require_paths_exist": {
+          "const": true
+        }
+      }
+    },
+    "targets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target-a",
+        "target-b",
+        "target-c"
+      ],
+      "properties": {
+        "target-a": {
+          "$ref": "#/$defs/targetA"
+        },
+        "target-b": {
+          "$ref": "#/$defs/targetB"
+        },
+        "target-c": {
+          "$ref": "#/$defs/targetC"
+        }
+      }
+    },
+    "active_prompts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target-a",
+        "target-c",
+        "whole-problem"
+      ],
+      "properties": {
+        "target-a": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target-c": {
+          "type": "string",
+          "minLength": 1
+        },
+        "whole-problem": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "historical_prompt_compatibility_paths": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "promotion_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required_same_change"
+      ],
+      "properties": {
+        "required_same_change": {
+          "type": "array",
+          "minItems": 4,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "status": {
+      "enum": [
+        "canonical",
+        "unreviewed",
+        "audited-working",
+        "conditional",
+        "regression",
+        "superseded",
+        "rejected",
+        "provenance"
+      ]
+    },
+    "edgeList": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Z0-9][A-Z0-9-]*$"
+        },
+        "status": {
+          "$ref": "#/$defs/status"
+        },
+        "report": {
+          "type": "string",
+          "minLength": 1
+        },
+        "audit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "report_family": {
+          "type": "string",
+          "minLength": 1
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        },
+        "promotion_origin": {
+          "type": "string",
+          "minLength": 1
+        },
+        "conclusion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "quantity": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "claim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "certificates": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "depends_on": {
+          "$ref": "#/$defs/edgeList"
+        },
+        "invalidates": {
+          "$ref": "#/$defs/edgeList"
+        },
+        "supersedes": {
+          "$ref": "#/$defs/edgeList"
+        }
+      }
+    },
+    "supersededFrontier": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim",
+        "status",
+        "superseded_by"
+      ],
+      "properties": {
+        "claim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "const": "superseded"
+        },
+        "superseded_by": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "targetA": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "route_map",
+        "canonical_sections_through",
+        "global_endpoint",
+        "locked_branch_endpoint",
+        "superseded_frontiers",
+        "active_prompt"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "open",
+            "closed"
+          ]
+        },
+        "route_map": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical_sections_through": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "global_endpoint": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locked_branch_endpoint": {
+          "type": "string",
+          "minLength": 1
+        },
+        "superseded_frontiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/supersededFrontier"
+          }
+        },
+        "active_prompt": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "targetB": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "route_map",
+        "global_endpoint",
+        "active_prompt",
+        "current_canonical_entries",
+        "audited_working"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "open",
+            "closed"
+          ]
+        },
+        "route_map": {
+          "type": "string",
+          "minLength": 1
+        },
+        "global_endpoint": {
+          "type": "string",
+          "minLength": 1
+        },
+        "active_prompt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "current_canonical_entries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entry"
+          }
+        },
+        "audited_working": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entry"
+          }
+        }
+      }
+    },
+    "targetC": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "route_map",
+        "current_frontier",
+        "c_i",
+        "c_ii",
+        "active_prompt",
+        "canonical_modules",
+        "current_canonical_entries",
+        "audited_working",
+        "regressions",
+        "rejected_or_overridden"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "open",
+            "closed"
+          ]
+        },
+        "route_map": {
+          "type": "string",
+          "minLength": 1
+        },
+        "current_frontier": {
+          "type": "string",
+          "minLength": 1
+        },
+        "c_i": {
+          "enum": [
+            "open",
+            "closed"
+          ]
+        },
+        "c_ii": {
+          "enum": [
+            "open",
+            "closed"
+          ]
+        },
+        "active_prompt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical_modules": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "promoted_catalog_snapshot": {
+          "type": "string",
+          "minLength": 1
+        },
+        "current_canonical_entries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entry"
+          }
+        },
+        "audited_working": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entry"
+          }
+        },
+        "regressions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entry"
+          }
+        },
+        "rejected_or_overridden": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entry"
+          }
+        }
+      }
+    }
+  }
+}

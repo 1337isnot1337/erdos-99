@@ -1,0 +1,224 @@
+{
+  "arithmetic": "Q(sqrt(15)), exact sign comparisons",
+  "bowed_eight": {
+    "diameter_squared": [
+      "12800/1681",
+      "0"
+    ],
+    "fixed_center_lower_collisions": [
+      1,
+      3,
+      5,
+      7
+    ],
+    "folded_signed_area": [
+      "-4960/1681",
+      "0"
+    ],
+    "full_pair_checks": 120,
+    "old_area": [
+      "7840/1681",
+      "0"
+    ],
+    "release_amplitude": "1/100",
+    "released_contacts": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "flat_eight_guardrail": {
+    "diameter_squared": [
+      "144/13",
+      "0"
+    ],
+    "full_pair_checks": 56,
+    "new_diameter_pairs": [
+      [
+        2,
+        6
+      ]
+    ],
+    "old_diameter_pairs": [
+      [
+        0,
+        4
+      ]
+    ]
+  },
+  "odd_twenty_one_guardrail": {
+    "arc_lengths": [
+      8,
+      3,
+      7,
+      3
+    ],
+    "diameter_squared": [
+      "58",
+      "0"
+    ],
+    "folded_min_noncontact_squared": [
+      "2",
+      "-1/4"
+    ],
+    "folded_signed_area": [
+      "-21",
+      "7/4"
+    ],
+    "full_pair_checks": 420,
+    "nonglobal_competitor_diameter_squared": [
+      "32",
+      "0"
+    ],
+    "old_area": [
+      "21",
+      "7/4"
+    ],
+    "old_min_noncontact_squared": [
+      "2",
+      "0"
+    ]
+  },
+  "scope": "finite regressions; no global optimality or universal endpoint existence",
+  "small_arc_count_reduction": {
+    "admissible_count_vectors": [
+      [
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        3,
+        2,
+        3
+      ],
+      [
+        3,
+        2,
+        3,
+        2
+      ],
+      [
+        2,
+        4,
+        2,
+        4
+      ],
+      [
+        3,
+        3,
+        3,
+        3
+      ],
+      [
+        4,
+        2,
+        4,
+        2
+      ],
+      [
+        2,
+        5,
+        2,
+        5
+      ],
+      [
+        3,
+        4,
+        3,
+        4
+      ],
+      [
+        4,
+        3,
+        4,
+        3
+      ],
+      [
+        5,
+        2,
+        5,
+        2
+      ],
+      [
+        2,
+        6,
+        2,
+        6
+      ],
+      [
+        3,
+        5,
+        3,
+        5
+      ],
+      [
+        4,
+        4,
+        4,
+        4
+      ],
+      [
+        5,
+        3,
+        5,
+        3
+      ],
+      [
+        6,
+        2,
+        6,
+        2
+      ],
+      [
+        2,
+        7,
+        2,
+        7
+      ],
+      [
+        3,
+        6,
+        3,
+        6
+      ],
+      [
+        4,
+        5,
+        4,
+        5
+      ],
+      [
+        5,
+        4,
+        5,
+        4
+      ],
+      [
+        6,
+        3,
+        6,
+        3
+      ],
+      [
+        7,
+        2,
+        7,
+        2
+      ]
+    ],
+    "cutoff": 18,
+    "first_unequal_pair_allowed_by_ratio": [
+      7,
+      8
+    ],
+    "scope": "count inequality only; not geometric realization"
+  }
+}

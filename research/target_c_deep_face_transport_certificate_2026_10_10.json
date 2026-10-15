@@ -1,0 +1,312 @@
+{
+  "actual_loaded_leaf_intrusion_guardrail": {
+    "full_pair_checks": 234,
+    "intruding_component_size": 1,
+    "new_diameter_pairs": [
+      [
+        0,
+        6
+      ],
+      [
+        3,
+        9
+      ]
+    ],
+    "old_diameter_pairs": [
+      [
+        0,
+        6
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        6,
+        12
+      ]
+    ],
+    "old_loaded_distance_to_wall": "1",
+    "old_loaded_intruding_label": 12,
+    "release_amplitude": "1/100",
+    "scope": "nonglobal; old unloaded vertex 1 fails positive equilibrium"
+  },
+  "deep_face_component_capacity": {
+    "arithmetic": "exact alternating-series pi enclosure; integer sqrt(3) enclosure",
+    "scope": "floor arithmetic only; Oler and face persistence are analytic",
+    "table": [
+      {
+        "component_capacity": 0,
+        "face_degree": 5,
+        "maximum_face_charge_per_lost_loaded_label": 5
+      },
+      {
+        "component_capacity": 1,
+        "face_degree": 6,
+        "maximum_face_charge_per_lost_loaded_label": 45
+      },
+      {
+        "component_capacity": 2,
+        "face_degree": 7,
+        "maximum_face_charge_per_lost_loaded_label": 125
+      },
+      {
+        "component_capacity": 2,
+        "face_degree": 8,
+        "maximum_face_charge_per_lost_loaded_label": 125
+      },
+      {
+        "component_capacity": 3,
+        "face_degree": 9,
+        "maximum_face_charge_per_lost_loaded_label": 245
+      },
+      {
+        "component_capacity": 5,
+        "face_degree": 10,
+        "maximum_face_charge_per_lost_loaded_label": 605
+      },
+      {
+        "component_capacity": 6,
+        "face_degree": 11,
+        "maximum_face_charge_per_lost_loaded_label": 845
+      },
+      {
+        "component_capacity": 8,
+        "face_degree": 12,
+        "maximum_face_charge_per_lost_loaded_label": 1445
+      },
+      {
+        "component_capacity": 10,
+        "face_degree": 13,
+        "maximum_face_charge_per_lost_loaded_label": 2205
+      },
+      {
+        "component_capacity": 12,
+        "face_degree": 14,
+        "maximum_face_charge_per_lost_loaded_label": 3125
+      },
+      {
+        "component_capacity": 14,
+        "face_degree": 15,
+        "maximum_face_charge_per_lost_loaded_label": 4205
+      },
+      {
+        "component_capacity": 16,
+        "face_degree": 16,
+        "maximum_face_charge_per_lost_loaded_label": 5445
+      },
+      {
+        "component_capacity": 19,
+        "face_degree": 17,
+        "maximum_face_charge_per_lost_loaded_label": 7605
+      },
+      {
+        "component_capacity": 21,
+        "face_degree": 18,
+        "maximum_face_charge_per_lost_loaded_label": 9245
+      },
+      {
+        "component_capacity": 24,
+        "face_degree": 19,
+        "maximum_face_charge_per_lost_loaded_label": 12005
+      },
+      {
+        "component_capacity": 27,
+        "face_degree": 20,
+        "maximum_face_charge_per_lost_loaded_label": 15125
+      },
+      {
+        "component_capacity": 31,
+        "face_degree": 21,
+        "maximum_face_charge_per_lost_loaded_label": 19845
+      },
+      {
+        "component_capacity": 34,
+        "face_degree": 22,
+        "maximum_face_charge_per_lost_loaded_label": 23805
+      },
+      {
+        "component_capacity": 38,
+        "face_degree": 23,
+        "maximum_face_charge_per_lost_loaded_label": 29645
+      },
+      {
+        "component_capacity": 41,
+        "face_degree": 24,
+        "maximum_face_charge_per_lost_loaded_label": 34445
+      },
+      {
+        "component_capacity": 45,
+        "face_degree": 25,
+        "maximum_face_charge_per_lost_loaded_label": 41405
+      },
+      {
+        "component_capacity": 50,
+        "face_degree": 26,
+        "maximum_face_charge_per_lost_loaded_label": 51005
+      },
+      {
+        "component_capacity": 54,
+        "face_degree": 27,
+        "maximum_face_charge_per_lost_loaded_label": 59405
+      },
+      {
+        "component_capacity": 59,
+        "face_degree": 28,
+        "maximum_face_charge_per_lost_loaded_label": 70805
+      },
+      {
+        "component_capacity": 63,
+        "face_degree": 29,
+        "maximum_face_charge_per_lost_loaded_label": 80645
+      },
+      {
+        "component_capacity": 68,
+        "face_degree": 30,
+        "maximum_face_charge_per_lost_loaded_label": 93845
+      },
+      {
+        "component_capacity": 73,
+        "face_degree": 31,
+        "maximum_face_charge_per_lost_loaded_label": 108045
+      },
+      {
+        "component_capacity": 79,
+        "face_degree": 32,
+        "maximum_face_charge_per_lost_loaded_label": 126405
+      }
+    ]
+  },
+  "local_loaded_port_patterns": {
+    "colliding_patterns": 4,
+    "feasible_patterns": [
+      {
+        "signs": [
+          -1,
+          -1,
+          -1
+        ],
+        "strict_surrounding": false
+      },
+      {
+        "signs": [
+          -1,
+          1,
+          -1
+        ],
+        "strict_surrounding": true
+      },
+      {
+        "signs": [
+          1,
+          -1,
+          1
+        ],
+        "strict_surrounding": true
+      },
+      {
+        "signs": [
+          1,
+          1,
+          1
+        ],
+        "strict_surrounding": false
+      }
+    ],
+    "scope": "local hull contact-ray universe; actual diameter load, globality, and full-source motion are not modeled"
+  },
+  "permuted_wall_isolate_transport": {
+    "boundary_permutation": [
+      3,
+      2,
+      1,
+      0,
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4
+    ],
+    "correct_min_isolate_clearance_squared": [
+      "149517/130000",
+      "0"
+    ],
+    "diameter_squared": [
+      "324/13",
+      "0"
+    ],
+    "full_pair_checks": 156,
+    "labels": 13,
+    "naive_transport_collision_squared": [
+      "128917/130000",
+      "0"
+    ],
+    "old_min_isolate_clearance_squared": [
+      "149517/130000",
+      "0"
+    ]
+  },
+  "scope": "finite scope checks; no canonical global minimizer modeled",
+  "strict_nonglobal_comparator": {
+    "diameter_squared": 16,
+    "labels": [
+      [
+        -2,
+        0
+      ],
+      [
+        -2,
+        1
+      ],
+      [
+        -2,
+        2
+      ],
+      [
+        -1,
+        -1
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        -1,
+        2
+      ],
+      [
+        0,
+        -2
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        -2
+      ]
+    ],
+    "pair_checks": 78,
+    "scope": "explicit strict competitor to both nonglobal 13-label fixtures"
+  }
+}

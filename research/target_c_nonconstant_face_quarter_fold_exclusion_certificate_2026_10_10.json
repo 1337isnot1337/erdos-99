@@ -1,0 +1,297 @@
+{
+  "scope": "exact finite arithmetic; universal geometry remains analytic",
+  "seven_case_reduction": {
+    "ordered_admissible_vectors": [
+      [
+        2,
+        2,
+        2,
+        2
+      ],
+      [
+        2,
+        3,
+        2,
+        3
+      ],
+      [
+        2,
+        4,
+        2,
+        4
+      ],
+      [
+        2,
+        5,
+        2,
+        5
+      ],
+      [
+        3,
+        2,
+        3,
+        2
+      ],
+      [
+        3,
+        3,
+        3,
+        3
+      ],
+      [
+        3,
+        4,
+        3,
+        4
+      ],
+      [
+        4,
+        2,
+        4,
+        2
+      ],
+      [
+        4,
+        3,
+        4,
+        3
+      ],
+      [
+        4,
+        4,
+        4,
+        4
+      ],
+      [
+        5,
+        2,
+        5,
+        2
+      ]
+    ],
+    "ordered_arc_vectors_examined": 256,
+    "scope": "arithmetic reduction assuming analytic four-pin and neighbor claims",
+    "unordered_seven_cases": [
+      {
+        "minimum_distinct_intruding_labels": 4,
+        "minimum_total_labels_in_hull": 12,
+        "opposite_arc_counts": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "squared_gap_certificate": {
+          "left": 147,
+          "right": 64
+        },
+        "strict_Oler_upper_bound": "8/sqrt(3)+5",
+        "strict_Oler_upper_rational_enclosure": [
+          "8330127018922195/866025403784439",
+          "16660254037844385/1732050807568877"
+        ],
+        "wall_labels": 8
+      },
+      {
+        "minimum_distinct_intruding_labels": 4,
+        "minimum_total_labels_in_hull": 14,
+        "opposite_arc_counts": [
+          2,
+          3,
+          2,
+          3
+        ],
+        "squared_gap_certificate": {
+          "left": 192,
+          "right": 144
+        },
+        "strict_Oler_upper_bound": "12/sqrt(3)+6",
+        "strict_Oler_upper_rational_enclosure": [
+          "3732050807568878/288675134594813",
+          "22392304845413262/1732050807568877"
+        ],
+        "wall_labels": 10
+      },
+      {
+        "minimum_distinct_intruding_labels": 5,
+        "minimum_total_labels_in_hull": 17,
+        "opposite_arc_counts": [
+          2,
+          4,
+          2,
+          4
+        ],
+        "squared_gap_certificate": {
+          "left": 300,
+          "right": 256
+        },
+        "strict_Oler_upper_bound": "16/sqrt(3)+7",
+        "strict_Oler_upper_rational_enclosure": [
+          "14062177826491073/866025403784439",
+          "28124355652982139/1732050807568877"
+        ],
+        "wall_labels": 12
+      },
+      {
+        "minimum_distinct_intruding_labels": 6,
+        "minimum_total_labels_in_hull": 20,
+        "opposite_arc_counts": [
+          2,
+          5,
+          2,
+          5
+        ],
+        "squared_gap_certificate": {
+          "left": 432,
+          "right": 400
+        },
+        "strict_Oler_upper_bound": "20/sqrt(3)+8",
+        "strict_Oler_upper_rational_enclosure": [
+          "16928203230275512/866025403784439",
+          "33856406460551016/1732050807568877"
+        ],
+        "wall_labels": 14
+      },
+      {
+        "minimum_distinct_intruding_labels": 8,
+        "minimum_total_labels_in_hull": 20,
+        "opposite_arc_counts": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "squared_gap_certificate": {
+          "left": 507,
+          "right": 324
+        },
+        "strict_Oler_upper_bound": "18/sqrt(3)+7",
+        "strict_Oler_upper_rational_enclosure": [
+          "5020725942163691/288675134594813",
+          "30124355652982139/1732050807568877"
+        ],
+        "wall_labels": 12
+      },
+      {
+        "minimum_distinct_intruding_labels": 10,
+        "minimum_total_labels_in_hull": 24,
+        "opposite_arc_counts": [
+          3,
+          4,
+          3,
+          4
+        ],
+        "squared_gap_certificate": {
+          "left": 768,
+          "right": 576
+        },
+        "strict_Oler_upper_bound": "24/sqrt(3)+8",
+        "strict_Oler_upper_rational_enclosure": [
+          "6309401076758504/288675134594813",
+          "37856406460551016/1732050807568877"
+        ],
+        "wall_labels": 14
+      },
+      {
+        "minimum_distinct_intruding_labels": 12,
+        "minimum_total_labels_in_hull": 28,
+        "opposite_arc_counts": [
+          4,
+          4,
+          4,
+          4
+        ],
+        "squared_gap_certificate": {
+          "left": 1083,
+          "right": 1024
+        },
+        "strict_Oler_upper_bound": "32/sqrt(3)+9",
+        "strict_Oler_upper_rational_enclosure": [
+          "23794228634059951/866025403784439",
+          "47588457268119893/1732050807568877"
+        ],
+        "wall_labels": 16
+      }
+    ]
+  },
+  "short_cycle_with_chord": {
+    "contact_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "diameter_squared": [
+      "745/169",
+      "0"
+    ],
+    "full_pair_checks": 15,
+    "interior_chord": [
+      2,
+      5
+    ],
+    "labels": [
+      [
+        "-12/13",
+        "5/13"
+      ],
+      [
+        "-12/13",
+        "18/13"
+      ],
+      [
+        "0",
+        "1"
+      ],
+      [
+        "12/13",
+        "18/13"
+      ],
+      [
+        "12/13",
+        "5/13"
+      ],
+      [
+        "0",
+        "0"
+      ]
+    ],
+    "scope": "unit-separated triangle-free finite guardrail; not a canonical minimizer",
+    "signed_area": [
+      "-24/13",
+      "0"
+    ],
+    "turn_signs": [
+      -1,
+      -1,
+      1,
+      -1,
+      -1,
+      -1
+    ]
+  }
+}

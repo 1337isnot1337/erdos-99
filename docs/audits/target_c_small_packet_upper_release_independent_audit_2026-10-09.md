@@ -1,0 +1,163 @@
+<!-- theorem-state: {"artifact_id":"ART-759414393D80","canonical":true,"claim_ids":["C-SMALL-PACKET-DIAMETER-COVER-OBSTRUCTION","C-SMALL-PACKET-SIMULTANEOUS-UPPER-RELEASE"],"claim_statuses":{"C-SMALL-PACKET-DIAMETER-COVER-OBSTRUCTION":"canonical","C-SMALL-PACKET-SIMULTANEOUS-UPPER-RELEASE":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
+# Independent audit: simultaneous upper release for small separated packets
+
+Date: 2026-10-09. Audit uses the canonical state through Audit.189 and the
+separately audited Audit.190 additions; C-II and Level I remain open.
+
+## Frozen source and verdict
+
+- Source branch: `origin/research/level-i-closure-20261007`.
+- Frozen tip: `12f6833725f281ce39a6d04ebcb45630b3a6768f`.
+- Source report: [`docs/reports/target_c_small_separated_packet_upper_release_2026-10-07.md`](../reports/target_c_small_separated_packet_upper_release_2026-10-07.md), SHA-256 `212c3065d2b81c3014d33d5462d0952b5e8560e9a4db26c49027e0de0ab2bfb3` (introduced at `b778a18ce2e6e7a4ef5113f71bf5cf5ca55352db`).
+- Verifier: [`research/verify_target_c_small_packet_upper_release_2026_10_07.py`](../../research/verify_target_c_small_packet_upper_release_2026_10_07.py), SHA-256 `5eabfd9e21694390846d1b2892afe5d2138358bb5531b3bbf5f94b7860eb7252`.
+
+**PASS — promote two exact claims.** A simultaneous finite motion opens all
+packet-involving lower and upper constraints when packets are small and
+strictly separated from retained labels and from each other. This yields a
+global obstruction when a small-packet replacement covers every old diameter
+pair. The source's contact-loss consequence is already covered by
+`C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT` once the new contacts are opened;
+it receives no duplicate theorem ID.
+
+## 1. `C-SMALL-PACKET-SIMULTANEOUS-UPPER-RELEASE`
+
+Let `Q=T union Y` be a finite planar unit-separated set of actual diameter
+`D>0` contained in a closed disk `B(o,R)`. Partition `Y` into nonempty packets
+`Y_1,...,Y_r`; packet `Y_i` lies in `B(c_i,rho_i)`, and put
+`rho=max_i rho_i`. Assume every packet-to-retained pair and every pair from
+distinct packets has distance strictly greater than one, and
+`R+2rho<D`. For `p in Y_i`, move
+
+```text
+p(t)=p+t(o+p-2c_i).
+```
+
+There is a common `t_0>0` such that for every `0<t<=t_0`, every pair
+involving `Y(t)` has distance strictly between one and `D`, while all of `T`
+stays fixed. Thus all packet-involving unit contacts and actual diameter
+equalities open simultaneously. No claim is made that the moved points stay
+inside `B(o,R)`.
+
+### Independent proof
+
+Since the containing disk contains a diameter pair, `R>=D/2`. Therefore
+`2rho<D-R<=D/2`, so internal packet distances, initially at most `2rho`,
+are strictly below `D`. For internal pairs, the difference vector is
+multiplied exactly by `1+t`; every internal unit contact opens.
+
+Translate `o` to zero. For `p in Y_i`, the velocity is
+`v_p=p-2c_i`, and
+`|v_p|<=|c_i|+|p-c_i|<=R+2rho<D`. Hence every relative pair velocity has norm
+less than `2D`.
+
+For an active packet-retained pair `p in Y_i`, `q in T`, `r=p-q`,
+`|r|=D`, one has `|p|>=D-R` and
+
+```text
+r dot p = (D^2+|p|^2-|q|^2)/2 >= D(D-R).
+```
+
+Rewriting `v_p=-p+2(p-c_i)` gives
+`r dot v_p <= -D(D-R-2rho)<0`. For an active pair from distinct packets,
+
+```text
+r dot (v_p-v_q)
+ <= -D^2 + 2D(rho_i+rho_j)
+ <= -D(D-4rho)<0.
+```
+
+The last strict inequality follows from `2rho<D-R<=D/2`. Thus all active
+upper pairs have squared-distance derivative at most `-2 alpha`, where
+`alpha=min(D(D-R-2rho), D(D-4rho))>0`. No active upper pair is internal to a
+packet.
+
+Let `sigma` be the minimum squared lower slack `|p-q|^2-1` over
+packet-retained and cross-packet pairs, and let `lambda` be the minimum
+squared upper slack `D^2-|p-q|^2` over inactive upper pairs involving `Y`.
+Omit either quantity's time bound when its pair family is empty. For
+
+```text
+t_0=min(1/2, alpha/(4D^2), sigma/(8D^2), lambda/(16D^2)),
+```
+
+each active upper squared distance changes by at most
+`-2 alpha t+4D^2 t^2<=-alpha t`; each strict lower squared distance remains
+at least `1+sigma/2`; and each inactive upper squared distance increases by
+at most `4D^2t+4D^2t^2<=8D^2t<=lambda/2`. Internal contacts open by exact
+dilation and internal upper slack is included among the inactive pairs.
+Finiteness supplies positive `sigma` and `lambda` whenever their families
+are nonempty. This proves one common finite time for every pair.
+
+## 2. `C-SMALL-PACKET-DIAMETER-COVER-OBSTRUCTION`
+
+Let `A` be any global minimum-diameter unit-separated `n`-point source with
+`D=D(n)>=64`. Delete `S subset A` and retain `T=A` with `S` removed.
+Suppose an equal-cardinality replacement `Y` makes `Q=T union Y` unit-separated with diameter at most `D`.
+If `Y` has the packet structure above, with each `rho_i<=D/8`, and `S` meets
+every actual diameter pair of `A`, then such a replacement is impossible.
+This statement requires neither triangle-freeness nor contact-minimality.
+
+If `Q` has diameter less than `D`, global optimality is already contradicted.
+Otherwise `Q` is itself a global minimizer. A collinear unit-separated
+`n`-point set has `D>=n-1`; the canonical strict triangular-lattice
+comparison `D^2<(2sqrt(3)/pi)(n-1)` excludes that possibility for `D>=64`.
+The universal `C-FS-GEOM` circumradius bound applies, even if `Q` contains
+triangles, and yields
+
+```text
+R < D/2 + 3^(1/4) sqrt(D) < 2D/3.
+```
+
+With `rho<=D/8`, this gives `R+2rho<11D/12<D`, so the finite release applies.
+After it, all pairs involving `Y` are below `D`. Since `S` met every old
+diameter pair, no pair in the fixed retained set `T` has distance `D`. The
+new diameter is strictly below `D`, contradicting global optimality.
+
+### Contact-loss corollary: already subsumed
+
+If instead `A` is chosen contact-minimal among triangle-free global
+minimizers and `S` deletes an old contact, the released endpoint is
+triangle-free because its unit-contact graph is the old induced graph on
+`T`. Every new unit contact has opened, so the new-contact count is `j=0<t`
+in `C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT`. That canonical endpoint
+already excludes it without diameter-pair minimality. No duplicate claim is
+promoted for this corollary.
+
+## 3. Verifier and hostile scope checks
+
+I inspected and reran the source verifier. Exact rational arithmetic passed
+168 all-pair checks on two eight-point nonglobal fixtures, each starting with
+four unit contacts and two diameter pairs. Both have the certified common
+time `63/32768`; one fixture has active packet-retained diameter pairs and
+the other has a cross-packet diameter pair while a retained diameter pair
+stays fixed. The verifier also confirms two failures when hypotheses are
+removed: a retained unit anchor can be shortened, and a large packet can
+expand beyond the old diameter. These finite fixtures verify their encoded
+inequalities only; they are not global minimizers and do not establish packet
+existence.
+
+- All retained labels stay in `T`, including contact isolates; all lower and
+  upper pair constraints involving `Y` are checked simultaneously.
+- Initial packets may contain unit contacts or equilateral triangles; internal
+  dilation opens these contacts. Cross-packet and packet-retained strict lower
+  slack is essential.
+- Weak upper bounds at `D` are allowed only because `R+2rho<D` gives strict
+  inward derivatives and a common finite release. The radius condition cannot
+  be dropped: large packet dilation can increase the diameter.
+- The diameter-cover corollary uses the actual diameter pairs of the old
+  source. It constructs no packet, clear site, wall, vacancy, or source-level
+  capacity.
+- This is complementary to `C-SEPARATED-PACKET-RELEASE-OBSTRUCTION`: the
+  current result allows weak initial upper pairs and does not require a linear
+  separator from `T`, but it requires small packet radii and strict metric
+  separation from the retained source and across packets.
+- No C-II or Level I closure follows.
+
+| Claim | Verdict | Canonical disposition |
+| --- | --- | --- |
+| Small separated packet finite upper release | PASS | Promote `C-SMALL-PACKET-SIMULTANEOUS-UPPER-RELEASE` |
+| Diameter-cover obstruction for small packets | PASS — SCOPE STRENGTHENED | Promote `C-SMALL-PACKET-DIAMETER-COVER-OBSTRUCTION`; no triangle-free/contact-minimal hypothesis needed |
+| Contact-loss corollary | PASS — ALREADY SUBSUMED | Use `C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT`; no duplicate ID |
+| Packet existence or canonical source capacity | NOT ESTABLISHED | Leave unpromoted |
+
+The frozen research branch and its worktree were not modified.
