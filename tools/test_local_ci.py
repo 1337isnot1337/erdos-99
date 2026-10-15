@@ -206,6 +206,29 @@ class Repository(unittest.TestCase):
         self.package('alpha', ('helpers/deep.py',), code='from helpers.deep import value\nassert value()==42\n')
         self.commit(); self.full()
 
+    def test_undeclared_package_shadowing_standard_library_requires_review(self):
+        self.write('math/__init__.py', 'def sqrt(value):\n    return 99\n')
+        self.package('alpha', code='import math\nassert math.sqrt(4) == 2\n')
+        self.base = self.commit()
+        self.write('research-packages/alpha/README.md', 'Unchanged finite claim\n')
+        self.commit()
+        p = self.full()
+        self.assertTrue(any('unresolved import math' in r for r in p['reasons']))
+        with self.assertRaises(Invalid):
+            replay(self.root, p, self.output)
+
+    def test_declared_package_shadowing_standard_library_is_replayed(self):
+        self.write('math/__init__.py', 'def sqrt(value):\n    return 99\n')
+        self.package('alpha', ('math/__init__.py',),
+                     code='import math\nassert math.sqrt(4) == 99\n')
+        self.base = self.commit()
+        self.write('research-packages/alpha/README.md', 'Local package claim\n')
+        self.commit()
+        p = self.plan()
+        self.assertEqual(p['level'], 'targeted-replay', p)
+        result = replay(self.root, p, self.output)
+        self.assertEqual(result['status'], 'passed', result)
+
     def test_legacy_shared_helper_cannot_be_claimed_exclusive(self):
         self.write('research/shared_helper.py', 'value = 42\n')
         self.package('alpha', ('research/shared_helper.py',)); self.base=self.commit()
@@ -414,11 +437,11 @@ class ProtocolSyntax(unittest.TestCase):
 
     def test_workflow_permissions_and_gates(self):
         import yaml
-        workflow=yaml.safe_load((ROOT/'.github/workflows/theorem-state.yml').read_text())
+        workflow=yaml.safe_load((ROOT/'.github/workflows/public-research-integrity.yml').read_text())
         self.assertEqual(set(workflow.get('on',workflow.get(True))),{'pull_request'})
         self.assertEqual(workflow['permissions'],{'contents':'read'})
         self.assertIn('draft == false',workflow['jobs']['plan']['if'])
-        self.assertIn('E99_PACKAGE_REPLAY',workflow['jobs']['replay']['if'])
+        self.assertIn('E99_PUBLIC_PACKAGE_REPLAY',workflow['jobs']['replay']['if'])
         self.assertNotIn('strategy',workflow['jobs']['replay'])
         for job in workflow['jobs'].values():
             self.assertLessEqual(job['timeout-minutes'],6)
@@ -434,3 +457,4 @@ class ProtocolSyntax(unittest.TestCase):
 
 if __name__=='__main__':
     unittest.main()
+

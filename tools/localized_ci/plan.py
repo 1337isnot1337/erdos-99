@@ -279,3 +279,4 @@ def make_plan(root: Path, base=None, head='HEAD', event=None):
     except (Invalid, OSError, ValueError, KeyError, TypeError, RecursionError, subprocess.SubprocessError) as exc:
         result['errors'].append(f'cannot safely classify impact: {exc}')
     return result
+

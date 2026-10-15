@@ -162,3 +162,4 @@ def integrity(root, control, plan, output):
         'sys.argv=["ci_integrity.py","--root","/work","--base-ref",'
         + repr(plan['merge_base']) + '];runpy.run_path("/control/tools/ci_integrity.py",run_name="__main__")']
     return execute(argv, 55, output / 'integrity.log')
+
