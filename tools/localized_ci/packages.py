@@ -197,11 +197,20 @@ def audit_python(snapshot, inputs):
                     modules = [node.module]
             for module in modules:
                 rel = module.replace('.', '/') + '.py'
-                local_candidates = {rel, str(PurePosixPath(p).parent / rel)}
+                initializer = module.replace('.', '/') + '/__init__.py'
+                # A regular package shadows a standard-library module just as a
+                # local .py file does. Omitting its initializer from replay must
+                # not silently substitute the standard-library implementation.
+                local_candidates = {
+                    rel, initializer,
+                    str(PurePosixPath(p).parent / rel),
+                    str(PurePosixPath(p).parent / initializer),
+                }
                 if module in SAFE_MODULES and not (local_candidates & snapshot.tree.keys()):
                     continue
-                choices = {rel, str(PurePosixPath(p).parent / rel)} & inputs.keys()
-                if len(choices) != 1:
+                choices = local_candidates & inputs.keys()
+                undeclared = (local_candidates & snapshot.tree.keys()) - inputs.keys()
+                if len(choices) != 1 or undeclared:
                     issues.append(f'{p}: unresolved import {module}')
                 for choice in choices:
                     for parent in PurePosixPath(choice).parents:

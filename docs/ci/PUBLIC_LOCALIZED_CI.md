@@ -90,3 +90,23 @@ claims. Finite computational evidence is not an all-size theorem.
 No hosted benchmark, bubblewrap canary, public fork replay, or public
 complete-corpus certificate sweep is claimed here.
 
+
+## Local package shadowing regression
+
+The upstream localized protocol was independently audited for import-shadowing
+errors. An undeclared local regular package (for example, `math/__init__.py`)
+could otherwise be absent from the isolated replay and silently replaced by the
+standard library module with the same import name. The public port includes
+the corrective dependency audit: both `module.py` and
+`module/__init__.py` candidates in the repository root and entry-script root
+must be declared, or the affected package requires Tier 2/review. A declared
+local initializer is included in the isolated replay rather than substituted
+with a standard library import.
+
+Regression coverage:
+`test_undeclared_package_shadowing_standard_library_requires_review` and
+`test_declared_package_shadowing_standard_library_is_replayed`. The second
+test needs the actual Python 3.14/Bubblewrap sandbox and has not been
+independently executed in the available Python 3.12 environment. The private
+source worker reports complete verification of the corresponding fix.
+
