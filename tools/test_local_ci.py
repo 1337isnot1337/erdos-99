@@ -206,6 +206,29 @@ class Repository(unittest.TestCase):
         self.package('alpha', ('helpers/deep.py',), code='from helpers.deep import value\nassert value()==42\n')
         self.commit(); self.full()
 
+    def test_undeclared_package_shadowing_standard_library_requires_review(self):
+        self.write('math/__init__.py', 'def sqrt(value):\n    return 99\n')
+        self.package('alpha', code='import math\nassert math.sqrt(4) == 2\n')
+        self.base = self.commit()
+        self.write('research-packages/alpha/README.md', 'Unchanged finite claim\n')
+        self.commit()
+        p = self.full()
+        self.assertTrue(any('unresolved import math' in r for r in p['reasons']))
+        with self.assertRaises(Invalid):
+            replay(self.root, p, self.output)
+
+    def test_declared_package_shadowing_standard_library_is_replayed(self):
+        self.write('math/__init__.py', 'def sqrt(value):\n    return 99\n')
+        self.package('alpha', ('math/__init__.py',),
+                     code='import math\nassert math.sqrt(4) == 99\n')
+        self.base = self.commit()
+        self.write('research-packages/alpha/README.md', 'Local package claim\n')
+        self.commit()
+        p = self.plan()
+        self.assertEqual(p['level'], 'targeted-replay', p)
+        result = replay(self.root, p, self.output)
+        self.assertEqual(result['status'], 'passed', result)
+
     def test_legacy_shared_helper_cannot_be_claimed_exclusive(self):
         self.write('research/shared_helper.py', 'value = 42\n')
         self.package('alpha', ('research/shared_helper.py',)); self.base=self.commit()
@@ -427,7 +450,7 @@ class ProtocolSyntax(unittest.TestCase):
                     self.assertRegex(step['uses'],r'@[0-9a-f]{40}$')
                 if step.get('uses','').startswith('actions/checkout@'):
                     self.assertFalse(step['with']['persist-credentials'])
-        text=(ROOT/'.github/workflows/public-research-integrity.yml').read_text()
+        text=(ROOT/'.github/workflows/theorem-state.yml').read_text()
         self.assertNotIn('pull_request_target',text)
         self.assertNotIn('secrets.',text)
         self.assertNotIn('run_theorem_certificates.py',text)
