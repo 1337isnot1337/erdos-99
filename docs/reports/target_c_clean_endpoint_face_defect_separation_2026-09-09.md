@@ -123,7 +123,7 @@ Substitute the resulting upper bound into (1.2):
 \begin{aligned}
 \liminf\frac QD
 &\ge
-\pi-rac45(\pi-\sqrt\Delta)\\
+\pi-\frac45(\pi-\sqrt\Delta)\\
 &=
 \frac\pi5+\frac45\sqrt\Delta.
 \end{aligned}

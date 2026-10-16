@@ -26,7 +26,7 @@ motivated this attack. Its results are not needed below. The exact-phase gap,
 paired-staircase, and four-host packets enter only the closing attempt.
 **Active prompt:** [current C continuation](../prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md).
 **Literature:** no import.
-**Certificate:** [exact finite checks](../../research/verify_target_c_collinear_punctures_2026_10_02.py).
+**Certificate:** [exact finite checks](../../docs/research/migration/2026-10-16/shards/01/support/research/verify_target_c_collinear_punctures_2026_10_02.py).
 
 ## 1. Source hypotheses
 

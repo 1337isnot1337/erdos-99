@@ -52,7 +52,7 @@ A second exact observation records the loaded-boundary contact consequence:
 Hence in the same endpoint
 
 \[
-e_{BB}/D\to\pi.
+\liminf_{D\to\infty} e_{BB}/D\ge\pi.
 \]
 
 Together with DG.7, a surviving small-outer-walk source must therefore combine an almost complete unit-contact cycle on the loaded hull, a near-circular force hull, and a linear `Q+2s_Z` defect.
@@ -350,7 +350,7 @@ In the DG endpoint, DC.3 gives `Z_ext=o(D^2)` and `per(F)=O(D)`. Divide (5.1) by
 Since
 
 \[
-\frac{\sqrt3}{2}\Delta=rac\pi4,
+\frac{\sqrt3}{2}\Delta=\frac\pi4,
 \]
 
 we obtain
@@ -423,7 +423,7 @@ In particular, in the DG endpoint,
 
 \[
 \boxed{
-\frac{e_{BB}}D\to\pi.
+\liminf_{D\to\infty}\frac{e_{BB}}D\ge\pi.
 }
 \tag{DC.8}
 \]
@@ -458,7 +458,7 @@ F/D\to\text{the diameter-one disk in Hausdorff shape},
 \boxed{
 Z_{ext}=o(D^2),
 \qquad
-e_{BB}/D\to\pi,
+\liminf_{D\to\infty} e_{BB}/D\ge\pi,
 }
 \]
 
@@ -520,7 +520,7 @@ Hence normalized F tends to the disk.
 
 Also at most x_B hull intervals have length >1, so
     e_BB >= q-x_B.
-In the same endpoint e_BB/D->pi.
+In the same endpoint liminf e_BB/D >= pi.
 
 Final x_B=o(D) profile:
     q/D->pi,
@@ -528,7 +528,7 @@ Final x_B=o(D) profile:
     area(F)/D^2->pi/4,
     F/D->disk,
     Z_ext=o(D^2),
-    e_BB/D->pi,
+    liminf e_BB/D >= pi,
     h/D>=3pi/5-o(1),
     (Q+2s_Z)/D>=pi/5-o(1).
 ```

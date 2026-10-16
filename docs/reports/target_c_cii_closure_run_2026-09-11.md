@@ -9,7 +9,7 @@
 **Claim classification:** proved candidates awaiting promotion; run in progress
 **Active prompt:** `docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md`  
 **External literature search:** used for leads; no external theorem imported in the protected-motion proof
-**Computation:** `research/verify_target_c_protected_contact_creation.py`
+**Computation:** `docs/research/migration/2026-10-16/shards/01/support/research/verify_target_c_protected_contact_creation.py`
 
 ## Level I status
 
@@ -226,7 +226,7 @@ It does not close PIHR, C-II, or either global population branch.
 
 ## Exact finite motion checks
 
-Run `python3 research/verify_target_c_protected_contact_creation.py`.
+Run `python3 docs/research/migration/2026-10-16/shards/01/support/research/verify_target_c_protected_contact_creation.py`.
 
 The script takes finite triangular-lattice parallelograms expanded by
 `1+1/L^2`, selects deep disjoint horizontal pairs, thins their moving centers by
