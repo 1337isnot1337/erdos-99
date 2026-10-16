@@ -11,10 +11,11 @@ contributor identity IDs, path history, and one shared provenance group. It cove
 exact `public_candidate`, not later edits. The original review of `afa7f7e`
 checked all 808 source inclusion hashes across 12 source pins; no mismatch was
 found. Publication-created replacements and CI adaptations are inventoried too.
-Two public-only tools, `tools/check_active_route_summaries.py` and
-`tools/check_theorem_state_pr.py`, are byte-identical to the pinned source; their
-source identities are recorded as unmanifested source evidence pending inclusion
-repair. Same-path evidence for other public replacements is a derivation lead,
+Two tools, `tools/check_active_route_summaries.py` and
+`tools/check_theorem_state_pr.py`, were found byte-identical to the pinned source;
+their missing inclusion records have now been supplied, increasing retained source
+records to 810. The earlier inventory preserves the discovery at its exact review
+commit. Same-path evidence for other public replacements is a derivation lead,
 not an assumption that they are original. Recreate the inventory against the final candidate before accepting sign-off:
 
 ```sh

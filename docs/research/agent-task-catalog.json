@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "catalogue_revision": "public-frontier.2",
-  "reviewed_on": "2026-10-13",
-  "reviewed_base_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
-  "reviewed_state_version": "2026-10-10.audit.234",
+  "catalogue_revision": "public-frontier.3",
+  "reviewed_on": "2026-10-15",
+  "reviewed_base_commit": "96f6ad8ac24426526e655574fdcda338fc8ba5e1",
+  "reviewed_state_version": "2026-10-15.publication.1",
   "problem_status": "open",
   "purpose": "Bounded candidate tasks derived from the canonical E99 frontier; not a theorem ledger, novelty index, or work reservation service.",
   "authority": [
@@ -136,7 +136,7 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
       "remaining_if_successful": "For the actual source and response, establish rank(S)<=d_int+|C^partial|-Delta_Lambda (d_sc>=Delta_Lambda); in the locked branch the exact Section-175 surplus is |O_iso|+sum_i max(0,|O_i|-|C_i|)>=j_*+|T_Z|. Any untouched zero-slack/global-realization branch remains.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
@@ -217,7 +217,7 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
       "remaining_if_successful": "For the actual source and response, establish rank(S)<=d_int+|C^partial|-Delta_Lambda (d_sc>=Delta_Lambda); in the locked branch the exact Section-175 surplus is |O_iso|+sum_i max(0,|O_i|-|C_i|)>=j_*+|T_Z|. Any untouched zero-slack/global-realization branch remains.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
@@ -289,7 +289,7 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
       "remaining_if_successful": "For the actual source and response, establish rank(S)<=d_int+|C^partial|-Delta_Lambda (d_sc>=Delta_Lambda); in the locked branch the exact Section-175 surplus is |O_iso|+sum_i max(0,|O_i|-|C_i|)>=j_*+|T_Z|. Any untouched zero-slack/global-realization branch remains.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
@@ -365,7 +365,7 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
       "remaining_if_successful": "Establish G+E>=(sqrt(3)/4)B+(sqrt(3)/2)(t+chi-1) for the full canonical source with all multi-grain, interface, topology and uniformity hypotheses, or construct the full same-cardinality strict sub-D competitor.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
@@ -434,7 +434,7 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
       "remaining_if_successful": "Establish G+E>=(sqrt(3)/4)B+(sqrt(3)/2)(t+chi-1) for the full canonical source with all multi-grain, interface, topology and uniformity hypotheses, or construct the full same-cardinality strict sub-D competitor.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
@@ -508,7 +508,7 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
       "remaining_if_successful": "Establish G+E>=(sqrt(3)/4)B+(sqrt(3)/2)(t+chi-1) for the full canonical source with all multi-grain, interface, topology and uniformity hypotheses, or construct the full same-cardinality strict sub-D competitor.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
@@ -521,11 +521,12 @@
       "track": "target-c",
       "selection_weight": 5,
       "frontier_relation": "current-frontier",
-      "question": "Can the surviving full-core outer-to-bounded or bounded-to-bounded train/face system be converted into a source-realized finite move or discrete replacement that loses a contact at D or gives a same-cardinality strict sub-D competitor?",
+      "question": "Can the surviving full-core outer-to-bounded or bounded-to-bounded train/face system be converted into a source-realized finite move or discrete replacement that improves the contact/diameter-pair lexicographic count at D while remaining triangle-free or gives a same-cardinality strict sub-D competitor?",
       "assumptions": [
         "Use the contact-minimal, then diameter-pair-minimal canonical source with C=C_* and H=H_*.",
         "Retain every source point, including all contact-isolated points, in the move and every feasibility check.",
-        "Check every old unit contact, every full-source noncontact lower pair, every actual diameter upper pair, all at-most-d_H inactive upper exceptions, and each unary rhombus test."
+        "Check every old unit contact, every full-source noncontact lower pair, every actual diameter upper pair, all at-most-d_H inactive upper exceptions, and each unary rhombus test.",
+        "At diameter D retain triangle-freeness and strictly decrease the lexicographic pair (unit contacts, actual diameter pairs); unchanged contacts with fewer diameter pairs suffice. Check every previously inactive upper pair. A strict sub-D competitor need not remain triangle-free."
       ],
       "canonical_dependencies": [
         {
@@ -547,6 +548,11 @@
         {
           "path": "docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md",
           "claim": "Audit 174 removes the positive one-cell collar range only"
+        },
+        {
+          "path": "docs/audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md",
+          "claim_id": "C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT",
+          "claim": "Exact same-cardinality triangle-free lexicographic endpoint and all inserted-pair hypotheses"
         }
       ],
       "previous_obstructions": [
@@ -613,8 +619,8 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
-      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with strict contact loss at D or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with a triangle-free endpoint at D with lexicographically fewer contacts/actual-diameter pairs or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
         "python tools/check_public.py",
@@ -695,8 +701,8 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
-      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with strict contact loss at D or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with a triangle-free endpoint at D with lexicographically fewer contacts/actual-diameter pairs or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
         "python tools/check_public.py",
@@ -779,8 +785,8 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
-      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with strict contact loss at D or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with a triangle-free endpoint at D with lexicographically fewer contacts/actual-diameter pairs or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
         "python tools/check_public.py",
@@ -866,8 +872,8 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
-      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with strict contact loss at D or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with a triangle-free endpoint at D with lexicographically fewer contacts/actual-diameter pairs or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
         "python tools/check_public.py",
@@ -936,7 +942,7 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
       "remaining_if_successful": "For the actual source and response, establish rank(S)<=d_int+|C^partial|-Delta_Lambda (d_sc>=Delta_Lambda); in the locked branch the exact Section-175 surplus is |O_iso|+sum_i max(0,|O_i|-|C_i|)>=j_*+|T_Z|. Any untouched zero-slack/global-realization branch remains.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
@@ -1005,7 +1011,7 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
       "remaining_if_successful": "Establish G+E>=(sqrt(3)/4)B+(sqrt(3)/2)(t+chi-1) for the full canonical source with all multi-grain, interface, topology and uniformity hypotheses, or construct the full same-cardinality strict sub-D competitor.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
@@ -1074,8 +1080,8 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
-      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with strict contact loss at D or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with a triangle-free endpoint at D with lexicographically fewer contacts/actual-diameter pairs or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
         "python tools/check_public.py",
@@ -1141,7 +1147,7 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
       "remaining_if_successful": "Establish G+E>=(sqrt(3)/4)B+(sqrt(3)/2)(t+chi-1) for the full canonical source with all multi-grain, interface, topology and uniformity hypotheses, or construct the full same-cardinality strict sub-D competitor.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
@@ -1212,8 +1218,8 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
-      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with strict contact loss at D or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "remaining_if_successful": "Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with a triangle-free endpoint at D with lexicographically fewer contacts/actual-diameter pairs or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
         "python tools/check_public.py",
@@ -1281,7 +1287,7 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
       "remaining_if_successful": "For the actual source and response, establish rank(S)<=d_int+|C^partial|-Delta_Lambda (d_sc>=Delta_Lambda); in the locked branch the exact Section-175 surplus is |O_iso|+sum_i max(0,|O_i|-|C_i|)>=j_*+|T_Z|. Any untouched zero-slack/global-realization branch remains.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
@@ -1353,7 +1359,7 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
       "remaining_if_successful": "Establish G+E>=(sqrt(3)/4)B+(sqrt(3)/2)(t+chi-1) for the full canonical source with all multi-grain, interface, topology and uniformity hypotheses, or construct the full same-cardinality strict sub-D competitor.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
@@ -1448,7 +1454,7 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
       "remaining_if_successful": "Show the candidate mechanism applies to every sufficiently large triangle-free global minimizer and yields a same-cardinality strict sub-D competitor or an actual unit equilateral triangle, with every source label and hypothesis retained.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
@@ -1542,7 +1548,7 @@
       "audited_working_premises": [],
       "level_i_relation": "Advances only the stated route obligation; global closure still requires all canonical hypotheses and the universal minimizer quantifiers.",
       "falsification_strategy": "Test the proposed implication against every listed obstruction with the same hypotheses. Exhibit a concrete failing constraint, parameter order or rank/population ledger; do not interpret an optimistic relaxation as a feasible source.",
-      "session_scope": "One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
+      "session_scope": "One 30\u201360 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.",
       "remaining_if_successful": "Show the candidate mechanism applies to every sufficiently large triangle-free global minimizer and yields a same-cardinality strict sub-D competitor or an actual unit equilateral triangle, with every source label and hypothesis retained.",
       "does_not_prove": "No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.",
       "reproduction": [
@@ -1582,7 +1588,7 @@
         },
         {
           "path": "docs/reports/global_separable_distortion_obstruction_2026-10-12.md",
-          "claim": "unreviewed formal-source transform limit, Möbius characterization and nonglobal full-source obstruction"
+          "claim": "unreviewed formal-source transform limit, M\u00f6bius characterization and nonglobal full-source obstruction"
         }
       ],
       "starting_experiment": "Specify an actual two-grain finite source, a single material reference frame and discrete-to-continuum interpolation; compute the seam/traction and boundary work, uniform stress/strain bounds, and effects on every source pair. Compare with the rotated compatible laminate regression before postulating field purity.",
@@ -1603,7 +1609,7 @@
         "common material frame",
         "seam boundary work",
         "whole-source field extraction",
-        "Möbius separable obstruction"
+        "M\u00f6bius separable obstruction"
       ],
       "source_proposal_numbers": [
         1005
@@ -1613,9 +1619,9 @@
       "audited_working_premises": [],
       "level_i_relation": "The result matters only if it applies to every sufficiently large triangle-free global minimizer, retaining complete source cardinality and all pair constraints, and yields a strict actual planar competitor or unit equilateral triangle.",
       "falsification_strategy": "Test any proposed fixed-frame source bridge against the exact independently rotated compatible laminate, stress-only laminate and nonglobal odd-rim sources, preserving its precise hypotheses. Reject formal-field or density evidence that lacks a globally optimal planar source bridge.",
-      "session_scope": "One 30–60 minute exact source-extraction sublemma, adversarial finite test or independent proof audit; recheck source state before continuing.",
+      "session_scope": "One 30\u201360 minute exact source-extraction sublemma, adversarial finite test or independent proof audit; recheck source state before continuing.",
       "remaining_if_successful": "Derive the source-realized bounded F/S fields including rotations, seams, isolates, transition and boundary costs, then convert formal incompatibility into a unit triangle or strict n-point sub-D planar competitor for arbitrary global minimizers.",
-      "does_not_prove": "The exact formal field theorem, finite SymPy identities, one-grain chart, nonglobal odd rim and source-free Möbius obstruction do not establish Level I or a universal source-realized finite competitor.",
+      "does_not_prove": "The exact formal field theorem, finite SymPy identities, one-grain chart, nonglobal odd rim and source-free M\u00f6bius obstruction do not establish Level I or a universal source-realized finite competitor.",
       "reproduction": [
         "python3 research/verify_global_joint_phase_compatibility.py",
         "python3 research/verify_global_separable_distortion_obstruction.py",
@@ -1624,5 +1630,5 @@
       ]
     }
   ],
-  "priority_revision": "public-frontier.2"
+  "priority_revision": "public-frontier.3"
 }

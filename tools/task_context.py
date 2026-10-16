@@ -60,7 +60,8 @@ def context(task_id: str, root: Path = ROOT) -> dict:
     for path, dependencies in supplement.get("file_dependencies", {}).items():
         graph.setdefault(path, set()).update(dependencies)
     extra = supplement.get("tasks", {}).get(task_id, {})
-    seeds = [r["path"] for k in ("canonical_dependencies", "previous_obstructions")
+    premise_fields = ("canonical_dependencies", "previous_obstructions", "audited_working_premises")
+    seeds = [r["path"] for k in premise_fields
              for r in task.get(k, [])]
     reading_order = extra.get("reading_order", [])
     seeds += [r["path"] for r in reading_order]
@@ -68,7 +69,7 @@ def context(task_id: str, root: Path = ROOT) -> dict:
 
     state = yaml.safe_load((root / "docs/state/theorem-state.yaml").read_text(encoding="utf-8"))
     claims = {e["id"]: (target, bucket, e) for target, bucket, e in entry_records(state)}
-    selected_claims = {r["claim_id"] for k in ("canonical_dependencies", "previous_obstructions")
+    selected_claims = {r["claim_id"] for k in premise_fields
                        for r in task.get(k, []) if r.get("claim_id")}
     seen, pending = set(), set(seeds)
     expanded_claims = set()

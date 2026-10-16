@@ -14,7 +14,7 @@ Rejected/overridden IDs: `C-RESIDUAL-CAGE-RELEASE-REFILL`, `C-EXTERIOR-ONE-SITE-
 
 Use the contact-minimal, then diameter-pair-minimal global source, $C=C_*$ and $H=H_*$. Every source label, including contact isolates, participates in the lower and actual-diameter upper constraint ledger.
 
-A surviving outer-to-bounded or bounded-to-bounded train/face system needs a finite source-realized motion or discrete same-cardinality replacement. Prove every old/new lower distance is at least one and every upper distance at most $D$, together with the applicable unary rhombus constraints. The endpoint must either strictly lose contacts at diameter $D$ in the canonical minimality regime, or have diameter strictly below $D$. A formal bit assignment or nonzero infinitesimal flex alone supplies neither conclusion.
+A surviving outer-to-bounded or bounded-to-bounded train/face system needs a finite source-realized motion or discrete same-cardinality replacement. Prove every old/new lower distance is at least one and every upper distance at most $D$, together with the applicable unary rhombus constraints. The endpoint must either remain triangle-free at diameter $D$ with a strict lexicographic decrease in unit contacts/actual diameter pairs, or have diameter strictly below $D$. A formal bit assignment or nonzero infinitesimal flex alone supplies neither conclusion.
 
 Quarter-fold results restrict nonconstant endpoint-feasible eight-faces to the $2,2,2,2$ pattern and control the transformed hull and conditional isolate population. The area infimum is exactly $2\sqrt3$, so no uniform excess may be inserted. Population transfer under preserved contact graph/face embedding does not construct an endpoint, track all labels, bound outside capacity or establish diameter feasibility. Consult the exact entries and independent audits before combining these hypotheses.
 
@@ -29,6 +29,16 @@ Supplied-$W$ stress deletion requires a source-extracted stress-relevant loaded 
 The canonical finite hull-side train inequality is $5(q-k)+x_B+m_B\ge3P_F-2$. It uses harmonic trapping for core containment and has no near-disk assumption. The fixed-$M$ local sorting theorem at the central vacancy assumes convergence to the punctured arithmetic six-wall chart, has no uniform onset in $M$ and gives no arbitrary one-deficit extraction. The inherited population-reserve and circumradius/lattice competitors retain their exact scopes; triangle-free-only density does not exclude triangle-free global minimizers.
 
 ## Begin a bounded contribution
+
+For any finite endpoint, keep the source cardinality and every pairwise lower
+bound. A strict sub-`D` competitor contradicts global minimality directly. At
+diameter exactly `D`, the endpoint must remain **triangle-free** and strictly
+improve the lexicographic pair `(|C|,|H|)`: fewer unit contacts, or the same
+number of contacts and fewer actual diameter pairs. A contact-loss replacement
+that creates a unit triangle is not admissible for this argument. The second
+case also requires checking every previously inactive upper pair so that no new
+diameter pair replaces a shortened one. See the complete
+[finite exchange endpoint proof](../../audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md).
 
 Read [task cards](../../../tasks/README.md) for finite motion, Type-II stress mass, source extraction, macroscopic capacity and independent audits. Reproduce the relevant exact certificate through the [registry](../../../research/certificates.json). [Obstructions](../../research/obstructions.md) are current constraints with precise scopes. [Canonical reading order](README.md) supplies the full theory.
 

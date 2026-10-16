@@ -13,6 +13,14 @@ stability statement.
 
 ## Promoted audited addenda
 
+The exact named substatements below have the acceptance recorded by this inherited
+route; this does not promote every paragraph of their source reports. Some reports
+carry an `unreviewed` whole-file generated header because those named substatements
+have no separate machine claim IDs. Read the explicit scope here and the linked
+audit, and treat surrounding transfer proposals as unreviewed. `TB-DENSE-GRID`
+records the separately audited downstream chain in the manifest. This publication
+clarification adds no theorem or human-review claim.
+
 - [Phase cuts and coherent crossing families](../../reports/target_b_phase_cut_and_biclique_2026-09-05.md)
   proves **PC**, **PW**, **CR**, **PS**, **IS**, **TS**, and **NE**, records the
   **SI** interval-biclique regression, and corrects the

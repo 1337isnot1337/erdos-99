@@ -72,6 +72,13 @@ class TaskContextFixtures(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "unknown task"):
             context("missing", self.root)
 
+    def test_audited_working_premise_is_reachable_without_promotion(self):
+        catalogue = json.loads((self.root / 'docs/research/agent-task-catalog.json').read_text())
+        catalogue['tasks'][0]['audited_working_premises'] = [{'path': 'docs/working.md'}]
+        self.dump('docs/research/agent-task-catalog.json', catalogue)
+        self.write('docs/working.md', 'Scoped working premise, not canonical.\n')
+        self.assertIn('docs/working.md', context('example', self.root)['transitive_file_prerequisites'])
+
     def test_missing_and_outside_prerequisites_fail(self):
         for path in ("docs/missing.md", "../private.md", "/tmp/private.md"):
             with self.subTest(path=path):
@@ -97,6 +104,8 @@ class PublicRouteRegressions(unittest.TestCase):
         a = context("target-a-locked-sector-surplus", ROOT)
         self.assertIn("docs/targets/target-a/03-source-response.md", a["transitive_file_prerequisites"])
         self.assertIn("docs/targets/target-a/26-tube-shield-sector-balance.md", a["transitive_file_prerequisites"])
+        b = context('target-b-multigrain-transfer', ROOT)
+        self.assertIn('docs/theory/03-oler-shell.md', b['transitive_file_prerequisites'])
 
 
 if __name__ == "__main__":

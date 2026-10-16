@@ -4,13 +4,20 @@
 
 ## Exact objective
 
-Can the surviving full-core outer-to-bounded or bounded-to-bounded train/face system be converted into a source-realized finite move or discrete replacement that loses a contact at D or gives a same-cardinality strict sub-D competitor?
+Can the surviving full-core outer-to-bounded or bounded-to-bounded train/face system be converted into a source-realized finite move or discrete replacement that improves the contact/diameter-pair lexicographic count at D while remaining triangle-free or gives a same-cardinality strict sub-D competitor?
 
 ## Definitions, hypotheses and complete prerequisites
 
 - Use the contact-minimal, then diameter-pair-minimal canonical source with C=C_* and H=H_*.
 - Retain every source point, including all contact-isolated points, in the move and every feasibility check.
-- Check every old unit contact, every full-source noncontact lower pair, every actual diameter upper pair, all at-most-d_H inactive upper exceptions, and each unary rhombus test.
+- At diameter D the endpoint must remain triangle-free and have lexicographically
+  fewer unit contacts/actual diameter pairs. A same-contact endpoint with fewer
+  actual diameter pairs is sufficient; contact loss accompanied by a new unit
+  triangle is insufficient. A strict sub-D competitor need not be triangle-free.
+- [Finite lexicographic exchange proof](../docs/audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md): exact equality-diameter endpoint and all inserted-pair hypotheses.
+- Check every old unit contact, every full-source noncontact lower pair, every
+  full-source upper pair including previously inactive upper pairs, all
+  at-most-d_H exceptional upper constraints, and each unary rhombus test.
 
 - [docs/state/theorem-state.yaml](../docs/state/theorem-state.yaml): Target C canonical scope and current C-II status
 - [docs/targets/target-c/CURRENT.md](../docs/targets/target-c/CURRENT.md): full-core exact remaining endpoint and finite-move limitations
@@ -41,7 +48,9 @@ Methods: owner/face implication graph plus exact displacement constraints, small
 
 ## Expected evidence
 
-- A finite-move theorem with all source constraints and a strict contact-loss or strict-D conclusion under canonical hypotheses.
+- A finite-move theorem with all source constraints, giving either strict sub-D
+  diameter or a triangle-free endpoint at D with strict lexicographic improvement
+  in unit contacts/actual diameter pairs.
 - Or a certified exact regression to the proposed endpoint, identifying the obstruction that a stronger lemma must avoid.
 
 ## Falsification and stopping
@@ -61,7 +70,7 @@ The task-context command lists certificate commands for the direct and transitiv
 
 ## Remaining lemma and limitations
 
-Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with strict contact loss at D or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.
+Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with a triangle-free endpoint at D with lexicographically fewer contacts/actual-diameter pairs or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.
 
 No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.
 

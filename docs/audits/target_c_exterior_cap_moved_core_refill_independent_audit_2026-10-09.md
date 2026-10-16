@@ -6,6 +6,15 @@
 **Source report:** `docs/reports/target_c_exterior_cap_separator_motion_and_interior_refill_2026-10-06.md`, SHA-256 `0192a54ab219b0a6bdfd4ea012138d82c59a219e59b13ad4b6a395a3081abfce`.
 **Finite verifier:** `research/verify_target_c_exterior_cap_separator_refill_2026_10_06.py`, SHA-256 `a413e20ad53f1ba5685ff7d193ae157074b64793b94d618293289c84a8083c59`.
 
+**Publication reading note:** the frozen source-report path above is historical
+provenance and is excluded from this corpus. The independent reconstruction below
+is the retained standalone proof of this scoped regression. Its source geometry
+is supplied in the [paired-cap report](../reports/target_c_paired_cap_spoke_global_comparison_2026-10-06.md)
+and [paired-cap audit](target_c_paired_cap_spoke_global_comparison_independent_audit_2026-10-07.md);
+the [retained verifier](../../research/verify_target_c_exterior_cap_separator_refill_2026_10_06.py)
+replays the finite example. No unavailable historical report or private checkout
+is needed to read this proof or execute that check.
+
 ## Verdict
 
 **REGRESSION VALID — promote `C-EXTERIOR-CAP-MOVED-CORE-REFILL-NONGLOBAL-REGRESSION`.** For every integer `M>=20`, the explicit six-spoke source from the paired-cap report admits a same-cardinality, triangle-free endpoint of diameter strictly below its original `D=2M`: delete the two negative ends of the actual core-contact cut, translate the two retained core shores toward the cut by `1/10`, retain every scaled lattice isolate, and add two explicit sites inside the force hull. A first endpoint has exact squared diameter `4M^2-(2/5)M+1/25`; a small common finite downward move of the two new sites opens their four contacts and keeps every pair below `2M`.

@@ -23,6 +23,7 @@ def main():
     parser.add_argument('--output', type=Path, required=True, help='New directory OUTSIDE the checkout')
     parser.add_argument('--gitleaks', type=Path, help='Optional installed Gitleaks executable')
     parser.add_argument('--actionlint', type=Path, help='Optional installed actionlint executable')
+    parser.add_argument('--source-repo', type=Path, help='Optional source clone for additional provenance audit; never needed for public reproduction')
     args = parser.parse_args()
     root, output = args.root.resolve(), args.output.resolve()
     if output.is_relative_to(root) or output.exists():
@@ -54,7 +55,12 @@ def main():
         print(f'{name}: exit={proc.returncode}, seconds={record["seconds"]}', flush=True)
 
     python = sys.executable
+    run('environment', [python, '-m', 'pip', 'check'])
     run('public-integrity', [python, 'tools/check_public.py'])
+    source_command = [python, 'tools/verify_publication_sources.py', '--output', str(output / 'source-provenance.json')]
+    if args.source_repo:
+        source_command += ['--source-repo', str(args.source_repo.resolve())]
+    run('source-provenance', source_command)
     run('theorem-state', [python, 'tools/check_theorem_state.py'])
     run('tool-tests', [python, '-m', 'unittest', 'discover', '-s', 'tools', '-p', 'test_*.py', '-v'])
     run('corpus-tests', [python, '-m', 'unittest', 'discover', '-s', 'tests', '-v'])

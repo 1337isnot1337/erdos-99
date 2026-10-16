@@ -39,7 +39,7 @@ unextracted global hypotheses has agent audit only and awaits independent human
 review before canonical reuse. No declared theorem depends on this ID at the
 frozen base. Other canonical lifecycles and Level I/A/B/C-I/C-II status are unchanged.
 
-The full-core branch still needs a source-realized face-coupled finite move or discrete replacement passing every lower/upper source-pair constraint and unary rhombus test, yielding strict contact loss at $D$ or a same-cardinality strict sub-$D$ competitor. The macroscopic-container branch still needs arbitrary-container capacity/restoration or a moved-core strict-diameter closure. Local folds, supplied-set deletion and population counts do not supply these endpoints. [Full C-II frontier](targets/target-c/CURRENT.md).
+The full-core branch still needs a source-realized face-coupled finite move or discrete replacement passing every lower/upper source-pair constraint and unary rhombus test, yielding a triangle-free endpoint at $D$ with lexicographically fewer contacts/actual-diameter pairs or a same-cardinality strict sub-$D$ competitor. The macroscopic-container branch still needs arbitrary-container capacity/restoration or a moved-core strict-diameter closure. Local folds, supplied-set deletion and population counts do not supply these endpoints. [Full C-II frontier](targets/target-c/CURRENT.md).
 
 ## Authority and review
 
