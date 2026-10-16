@@ -420,6 +420,102 @@
         596
       ],
       "unresolved_bridge": "obtain explicit stability away from scalar endpoints and compare the remaining all-phase geometry"
+    },
+    {
+      "id": "square-grid-residual-regression",
+      "description": "Exact local square-grid counterexample ruling out a local harmonic attachment-span shortcut.",
+      "indices": [
+        599
+      ],
+      "unresolved_bridge": "add genuinely global near-disk, rhombic-density, diameter/KKT, or source-minimality controls"
+    },
+    {
+      "id": "response-defect-and-component-currency",
+      "description": "Response trace, component diameter defect, pinned-contact currency, and loaded-component incidence.",
+      "indices": [
+        600,
+        601,
+        603,
+        605
+      ],
+      "unresolved_bridge": "quantify the trace defect or turn the strict trace/currency bounds into a source-wide contradiction"
+    },
+    {
+      "id": "extreme-circuit-and-kernel-structure",
+      "description": "Response-defect minimization on KKT circuits and Robinson equality-kernel localization.",
+      "indices": [
+        602,
+        604,
+        609,
+        610
+      ],
+      "unresolved_bridge": "exclude the affine-balanced three-edge mode or the isolated two-edge electrical hinge"
+    },
+    {
+      "id": "global-diameter-geometry",
+      "description": "Exact global-minimizer exclusion of a diametral equilateral triple.",
+      "indices": [
+        606
+      ],
+      "unresolved_bridge": "upgrade strict force-perimeter inequality to a uniform asymptotic gap"
+    },
+    {
+      "id": "rhombic-train-and-diagonal-capacity",
+      "description": "Train-track pseudoline geometry and weight-free short-diagonal slack capacity.",
+      "indices": [
+        607,
+        608
+      ],
+      "unresolved_bridge": "control linear face defects and inactive rattlers; extract dense rhombic bulk globally"
+    },
+    {
+      "id": "rooted-wrapping-phase-gap",
+      "description": "Rooted diameter-direction re-entry costs, repaired endpoint dispersion, and nested exact phase-gap windows.",
+      "indices": [
+        611,
+        612,
+        613,
+        614,
+        615,
+        616
+      ],
+      "unresolved_bridge": "resolve wrapping diameters above the largest proved window plus the two-half-disk and inactive-container branches"
+    },
+    {
+      "id": "symmetric-area-floors-and-equality-audits",
+      "description": "RSR symmetric-area floor, endpoint repairs, positive mixed-defect surcharge, and literature dependency audits.",
+      "indices": [
+        617,
+        618,
+        619,
+        620,
+        623
+      ],
+      "unresolved_bridge": "obtain an upper tradeoff below the surviving all-post-ZF surplus floor; do not infer RSR disk uniqueness"
+    },
+    {
+      "id": "post-zf-variational-floors",
+      "description": "Paired-pocket, side-cost, symmetric-area and Dirichlet-detour floors with exact endpoint exclusions.",
+      "indices": [
+        597,
+        598,
+        617,
+        619,
+        620,
+        621,
+        622,
+        623
+      ],
+      "unresolved_bridge": "exclude all remaining high-surplus survivors by a compatible upper bound or strict-D competitor"
+    },
+    {
+      "id": "renormalized-pocket-endpoints",
+      "description": "All-phase renormalized paired-pocket and projective side-cost scalar endpoint sequence.",
+      "indices": [
+        597,
+        598
+      ],
+      "unresolved_bridge": "quantify stability away from exact endpoints and join the floors to source geometry"
     }
   ]
 }
