@@ -160,6 +160,7 @@ class ReleaseAuditFixtures(unittest.TestCase):
         result = self.audit_authorized()
         self.assertEqual(result["status"], "STRUCTURAL_PRECHECK_PASSED", result["blockers"])
         self.assertNotIn("personal-git-email", {v["kind"] for v in result["blockers"]})
+
     def test_legacy_email_consent_does_not_change_source_rights_scope(self):
         self.set_owner_attestation(email="independent-person@example.org")
         self.git("config", "user.email", "independent-person@example.org")
@@ -176,6 +177,7 @@ class ReleaseAuditFixtures(unittest.TestCase):
         kinds = {v["kind"] for v in self.audit_authorized()["blockers"]}
         self.assertIn("unverified-owner-rights-record", kinds)
         self.assertIn("rights-clearance-pending", kinds)
+
     def test_owner_rights_attestation_never_waives_secrets(self):
         self.set_owner_attestation()
         self.write("reports/token.txt", "ghp_" + "A" * 36)
@@ -242,6 +244,7 @@ class ReleaseAuditFixtures(unittest.TestCase):
         self.assertEqual(result["status"], "STRUCTURAL_PRECHECK_PASSED", result["blockers"])
         self.assertGreater(result["counts"].get("git_author_email_metadata_records", 0), 0)
         self.assertGreater(result["counts"].get("git_committer_email_metadata_records", 0), 0)
+
     def test_github_web_merge_and_other_emails_do_not_block(self):
         self.set_inventory("approved")
         self.git("add", "-A")
@@ -251,6 +254,7 @@ class ReleaseAuditFixtures(unittest.TestCase):
         self.git("-c", "user.email=person@github.com", "commit", "--allow-empty", "-qm", "ordinary GitHub-domain attribution")
         result = audit(self.root)
         self.assertEqual(result["status"], "STRUCTURAL_PRECHECK_PASSED", result["blockers"])
+
     def test_secret_indicator_is_redacted(self):
         self.set_inventory("approved")
         content = "ghp_" + "A" * 36
@@ -287,6 +291,7 @@ class ReleaseAuditFixtures(unittest.TestCase):
         result = audit(self.root)
         self.assertEqual(result["status"], "STRUCTURAL_PRECHECK_PASSED", result["blockers"])
         self.assertGreaterEqual(result["counts"].get("git_tag_and_contributor_email_metadata_records", 0), 2)
+
     def test_credential_in_git_author_metadata_is_still_blocked(self):
         self.set_inventory("approved")
         self.git("add", "-A")
@@ -310,6 +315,7 @@ class ReleaseAuditFixtures(unittest.TestCase):
         self.assertIn("credential-indicator", kinds)
         self.assertIn("dirty-candidate", kinds)
         self.assertNotIn(secret, json.dumps(result))
+
     def test_deleted_historical_token_is_still_a_blocker(self):
         self.set_inventory("approved")
         self.git("add", "-A")
