@@ -14,7 +14,7 @@ or strict-competitor bridge is in the candidate registry. PR #956 is a relevant
 comparison cited by the report and remains queued as a distinct source head.
 
 The five path-level PR #1008 dispositions, source Git blobs and SHA-256 hashes
-are in [`ledger/source-pr-files.jsonl`](ledger/source-pr-files.jsonl). The report
+are in [`ledger/source-pr-files.jsonl`](ledger/source-pr-files.jsonl). The local command outcomes and hosted-CI limitation are preserved in [`receipts/target-c-pr1008-local-verification.json`](receipts/target-c-pr1008-local-verification.json). The report
 was transformed only to remove references to third-party PDFs absent from this
 destination and to clarify the destination's review policy; its source and
 public hashes are recorded. The verifier and JSON fixture are byte-identical to
