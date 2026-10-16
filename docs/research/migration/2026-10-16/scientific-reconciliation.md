@@ -269,3 +269,61 @@ run on the batch tree; they check existing canonical assets and links, not the
 analytic claims in the unreviewed source reports. No theorem-state, registered
 certificate, publication-inclusion entry, or repository visibility change is
 made.
+
+## Fifth batch — pinned source PR #950
+
+The frozen source main remains `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`
+(tree `e061f039eac44c286a00eacdcaa9a4cbbb877891`). Source PR #950 is open at
+head `cbf066bb7489115559bcda34f9f810a1d78826ce` (tree
+`80dd0d6db99d9aa6698ee6500c91a3f670c63aae`); its branch merge base is
+`9327a3a13f0641f2a8c1897aec0c088be016743a` (tree
+`2f01e4c1abe49de6fc24bef28e750adebc5b56bc`). The destination batch starts at
+`73bbc4ae4bf65ce6a02fcc2c4bde33b31124e742` (tree
+`54713dc034018b862dc0aa69c85a921540dd5a2e`). Three current source paths are
+recorded: a 597-line proof report, a 62-line source audit, and a generated
+artifact-index update. The two mathematical files were absent from the
+previous destination tree. Both were imported with a short destination
+lifecycle banner; their proof text and source artifact IDs are retained. The
+source artifact index was not copied over destination authority; the
+reproducible destination index was rebuilt.
+
+The source report contains four distinct unreviewed claims: an
+`O(D)`-length quantile for a positive-density family of nontrivial
+vertex-disjoint train returns; a common source-realized coherent grid for a
+positive Type-II return subfamily; the unloaded-core rigidity brace
+`|delta_C(X)| >= diam(X)+2`; and a separate linear attachment-to-grid
+Menger linkage. The proof audit corrects the earlier endpoint-cut omission:
+Menger separators may meet either terminal set and may split the grid, so the
+brace budget must be charged component by component. The corrected argument
+establishes an endpoint-inclusive factor-five cut bound. The source-side audit
+is preserved as evidence but is not a destination independent audit or
+promotion; all new claims remain unreviewed.
+
+The exact prior source report revision at `6433d1db49a1363bfa65008eb78f6b15d6ef4ed7`
+had blob `bdfc1517b63358cf7710cdbcbe79e4081686cda8` and SHA-256
+`e9eba70c7577aad8eddfdf6ec7ddc792250717861c84f0d5537260aaa8543a8f`. It
+restricted separator checks to cuts disjoint from both terminal sets and
+assumed one remaining component contained the whole grid. That revision is not
+copied as an active proof; its exact hash and defect are recorded as superseded
+PR-history provenance in `ledger/source-pr-files.jsonl`, while the corrected
+proof and audit are retained in full.
+
+The principal unresolved step is a positive-density overlap between the
+train-return attachment labels and the independently constructed
+grid-linkage attachment labels, or an equivalent direct full-source flow
+inequality. Separate linear path counts do not imply such overlap. The report
+also gives no uniform KKT stress price for selected paths and no summable
+face-defect route charge; neither path family produces a finite competitor.
+The exact Pell regression is nonglobal and shows only that separation,
+triangle-freeness, and diameter alone permit linear-length disjoint paths. A
+marked-rail cut calculation is explicitly weaker than canonical Audit 133.
+
+The candidate registry contains five unreviewed proof-claim records, one exact
+regression record, and one nonadvancing-screen record. No source or destination
+theorem-state transition, active-route status, or certificate registration is
+changed. The authorized 810-entry publication-inclusion membership is
+unchanged; its SHA-256 for the edited current Target C prompt is refreshed to
+cover this navigation addition. The source report says computation was
+not used and provides no finite verifier for its asymptotic claims; the
+canonical certificate replay validates only already registered destination
+premises. The destination remains private and Gate 2 is not claimed.

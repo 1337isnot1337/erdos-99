@@ -40,6 +40,8 @@ Advances only the stated route obligation; global closure still requires all can
 - [docs/reports/seed090_shared_edge_overlap_audit_2026-10-14.md](../docs/reports/seed090_shared_edge_overlap_audit_2026-10-14.md): Exact shared-label regression: same-half-plane rhombi may share a third label. Use the overlap case split before reusing edge propagation.
 - [docs/reports/target_c_pentagon_activation_and_contact_debt_preservation_2026-10-15.md](../docs/reports/target_c_pentagon_activation_and_contact_debt_preservation_2026-10-15.md): Unreviewed finite wall obstructions: one opened side must exceed sqrt(3); exactly two opened sides require a^2+b^2>4; internal-only contact repayment needs deleted wall adjacencies. Actual train-collar embedding remains conditional.
 
+Source PR #950 supplies new unreviewed path structure but no endpoint. Its linear train-return family and separate linear attachment-to-grid Menger family can end at disjoint loaded labels; the corrected endpoint-inclusive cuts fix the linkage proof but do not give label overlap or a finite move. The [train-return/rigidity-grid track](../docs/research/tracks/target-c-train-returns-rigidity-grid.md) records the precise next lemma and the full report.
+
 ## Approach and first bounded experiment
 
 Write one candidate move with explicit train endpoints, owner labels, deleted labels, and restored labels. Encode the lower and upper squared-distance constraints for every source pair, including isolates, and solve the smallest nontrivial face-coupled case exactly before seeking a uniform theorem.

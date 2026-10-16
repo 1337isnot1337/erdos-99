@@ -81,6 +81,30 @@ that retains every label and every lower/upper pair constraint. See the
 [source-audit evidence ledger](../../audits/target_c_referee_run_ledger_2026-10-10.md)
 and the [full track record](../../research/tracks/target-c-midpoint-anchor-atlas.md).
 
+## Train returns, common grids, and rigidity-forced linkage
+
+Source PR #950 adds an **unreviewed** proof candidate for the quadratic-core
+C-II sequence. It derives a positive-length return bank with an `O(D)` length
+quantile after removing only `O(D^(2/3))` hull-ended trains, concentrates a
+linear family in one unloaded component, and in Type II couples a positive
+subfamily to one common source-realized coherent grid. Separately, a block-count
+rigidity brace and endpoint-inclusive Menger argument yield a linear family of
+vertex-disjoint paths from distinct loaded attachments to distinct grid
+vertices. The source audit repairs the earlier restricted-cut proof; its source
+`PASS` language is not a destination audit or promotion.
+
+The two path families need not share attachment labels. Their counts do not
+supply endpoint overlap, stress-weighted path payment, or a finite move. The
+exact next lemma is a linear common-label overlap (or direct full-source flow),
+followed by a same-cardinality competitor checking every lower pair, every old
+and new actual-diameter upper pair, and every isolate. At diameter `D` it must
+remain triangle-free and strictly improve the contact/diameter-pair
+lexicographic objective. The Pell-grid regression only shows that geometry
+alone cannot force sublinear route length. See the [full track](../../research/tracks/target-c-train-returns-rigidity-grid.md),
+[source report](../../reports/target_c_train_return_length_budget_worker03_2026-10-10.md),
+[source proof audit](../../audits/pr950_autonomous_proof_audit_2026-10-15.md),
+and [candidate registry](candidate-registry.json).
+
 ## One-vacancy release and restoration barriers
 
 Source PR #951 preserves a connected family of **unreviewed** C-II candidates and

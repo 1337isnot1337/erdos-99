@@ -96,3 +96,15 @@ conclusion under both original global premises; its source PR canonicalization
 request is not adopted. The older global (K'/D) chart and (q=O(D^{4/5}))
 inferences remain withdrawn. Source referee “PASS” entries are retained as
 provenance and do not change destination theorem status.
+
+
+## Source PR #950 — train returns and rigidity-forced grid linkages
+
+The [research track](../docs/research/tracks/target-c-train-returns-rigidity-grid.md)
+links the full 597-line report, the source endpoint-cut audit, and seven
+machine-readable candidate/screen records. The candidate derives positive
+length-return quantiles, a common Type-II grid, a rigidity brace, and an
+independent attachment-to-grid linkage. The two linkage endpoint sets may be
+disjoint; no stress-weighted payment or finite competitor follows. The prior
+source proof revision's endpoint-cut defect and its repair are recorded
+explicitly. Nothing is promoted in destination theorem-state.

@@ -71,6 +71,27 @@ Head `b7376d13b81e542055c5c904bf81bdaf1beb7b9e`; **unreviewed**.
 - [verify_target_c_rhombic_dual_defect_2026_10_10.py](../../research/verify_target_c_rhombic_dual_defect_2026_10_10.py)
 - [verify_target_c_rigid_cycle_pinned_stress_2026_10_10.py](../../research/verify_target_c_rigid_cycle_pinned_stress_2026_10_10.py)
 
+## Source proposal 950 — train returns, shared grids, and rigidity-forced linkage
+
+Source head `cbf066bb7489115559bcda34f9f810a1d78826ce`; **unreviewed**.
+
+- [Full proof report](../../docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md)
+- [Source proof audit and endpoint-cut repair](../../docs/audits/pr950_autonomous_proof_audit_2026-10-15.md)
+- [Train-return/rigidity-grid research track](tracks/target-c-train-returns-rigidity-grid.md)
+- [Machine-readable candidate registry](../targets/target-c/candidate-registry.json)
+
+The report claims a positive-length `O(D)` route-length quantile, concentration
+in one unloaded component, a common Type-II grid for a positive-density
+subfamily, a `|delta_C(X)| >= diam(X)+2` rigidity brace, and a separate linear
+attachment-to-grid Menger family. The source audit repairs an endpoint-cut
+omission in the earlier source revision. No source theorem-state promotion is
+adopted. The two linkage endpoint sets may be disjoint; the exact next step is
+linear endpoint overlap or direct full-source flow, followed by a feasible
+same-cardinality competitor preserving all lower and upper pair constraints
+and all contact isolates. The Pell regression is nonglobal and sharpens only
+the route-length obstruction; the marked-rail screen is weaker than Audit 133.
+The report has no finite verifier and does not close C-II or Level I.
+
 ## Source proposal 951 — one-vacancy release, capacity, and restoration barriers
 
 Head 0023585a98d8f5f23df64174a091c143710ba78a; source PR was open and
