@@ -1,0 +1,25 @@
+# Hostile self-audit — bounded-face train endpoint simplicity
+
+**Date:** 2026-09-12  
+**Audited source:** `target_c_bounded_face_endpoint_simplicity_2026-09-12.md`  
+**Disposition:** PASS at the stated proof-only scope; theorem-state authority unchanged.  
+**LEVEL I STATUS:** STILL OPEN. C-II REMAINS OPEN.
+
+The canonical train midpoint geometry supplies simple arcs with at most one crossing.
+Disjoint paths are closed through the two empty bounded-face interiors; crossing paths
+are reduced to an innermost lens or a prefix cycle. The resulting Jordan interior lies
+in the source hull, so extreme active diameter endpoints cannot be inside it.
+
+Summed KKT equilibrium over the inside core shore has no diameter term and only the
+two selected train resultants. Positive contact weights make each resultant nonzero;
+two nonparallel projective directions cannot cancel. The parallel case is exactly the
+audited same-direction pair-cut theorem and contradicts the canonical mixed-rank
+identity. A singleton train is handled by a sufficiently short transverse midpoint
+representative; if a normalization omits that representative, the conclusion is read
+only for represented non-singleton trains.
+
+The audit does not extend to outer-face endpoints, unglobalized local segments, or the
+aggregate detour/payment problem. Contact-isolated source points remain outside the
+core matrix.
+
+**Final audit verdict:** PASS as a proof-only bounded-face endpoint lemma.

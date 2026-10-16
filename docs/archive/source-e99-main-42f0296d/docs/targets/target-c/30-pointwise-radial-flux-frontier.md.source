@@ -1,0 +1,81 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c58f7269d26c5b8994f595038c642a4b406bc9aa", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "docs/targets/target-c/30-pointwise-radial-flux-frontier.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "3268302a296bd5c285920db38914833a49e788ceb8b92e6c2ec812ee9e7c99e9"} -->
+
+> **Historical source snapshot; destination authority remains current.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical. Source path: `docs/targets/target-c/30-pointwise-radial-flux-frontier.md`. Source commit: `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`.
+
+# Target C — C74 pointwise Euclidean radial-flux frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_radial_flux_divergence_2026-08-31.md](../../reports/target_c_radial_flux_divergence_2026-08-31.md).
+
+C72 gives averaged Euclidean radial transport and pointwise graph-layer stress. C74
+adds a pointwise Euclidean radial-cut theorem.
+
+For a diameter vertex `z`, put `r_v=|p_v-z|`. At every `v!=z`, define
+
+`q_v=sum_(vj in C) alpha_vj[1-(r_j-r_v)^2]`.
+
+The exact local equilibrium identity is
+
+`sum_j alpha_vj(r_j-r_v)=q_v/(2r_v)-g_v dot n_v`,
+
+where `n_v=(p_v-z)/r_v`. Thus every unloaded vertex has nonnegative signed radial
+stress divergence.
+
+For a regular radius `0<t<D`, orient every contact crossing `{r<t}` outward and set
+
+`F_z(t)=sum_cross alpha_ij(r_j-r_i)`.
+
+Summing the local identity gives the exact cut balance
+
+`F_z(t)=J_z+sum_inside q_v/(2r_v)-sum_inside g_v dot n_v`,
+
+where `J_z=sum_(zj in C)alpha_zj`.
+
+All `z`-star diameter leaves lie at radius exactly `D`. If
+
+`S_z=sum_(zk in H)beta_zk`, `delta_z=1-S_z`,
+
+then loaded vertices strictly inside radius `D` can drain at most `2D delta_z` radial
+reaction. Hence, for all D,
+
+`F_z(t)>=J_z-2D delta_z`.
+
+For `D>=20`, C18 puts all `z`-star reaction directions in one interval of width
+`Theta_D<pi/3`. With `c_D=cos(Theta_D/2)`, this gives
+
+`J_z>=|g_z|>=D c_D S_z`,
+
+and therefore
+
+`F_z(t)>=D[c_D S_z-2delta_z]`
+
+for every `t<D`.
+
+At the C66 center, `delta_z=O(D epsilon)`. Thus `D epsilon->0` implies
+
+`inf_(0<t<D) F_z(t)/D >=0.90348...-o(1)`.
+
+There is also an exact squared-radial coarea identity
+
+`integral_0^D F_z(t)dt=D^2-Q_z`.
+
+## Current near-zero normal form
+
+Together C71-C74 force:
+
+- one dominant port or a return component at `z`;
+- `Omega(D)` stress on every pre-leaf graph layer;
+- all but `O(D)` core vertices in clean degree-four strict-rhombus neighborhoods;
+- at least `(0.90348-o(1))D` signed outward radial stress through every Euclidean
+  radius below `D`.
+
+The heavy carrier can no longer disappear into internal circulation. The remaining
+escape is two-dimensional geometry supported by contacts with asymptotically
+negligible weight in the chosen KKT certificate.
+
+## Next target
+
+Introduce a second resource that charges those light transverse contacts: reciprocal
+width/area, KKT-certificate variation, or quantitative stability of the C71
+return/separator branch.

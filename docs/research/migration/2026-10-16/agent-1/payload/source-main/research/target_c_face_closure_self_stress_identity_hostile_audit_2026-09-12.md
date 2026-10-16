@@ -1,0 +1,55 @@
+# Hostile audit — exceptional-face closure corank identity
+
+**Date:** 2026-09-12  
+**Status:** audited-working proof-only material; theorem state unchanged  
+**Audited source:** [exact exceptional-face closure corank identity](target_c_face_closure_self_stress_identity_2026-09-12.md)
+
+## Verdict
+
+The identity
+'2f-rank(C_face)=sigma_C', where 'sigma_C' is the pure-contact self-stress
+dimension on the nonisolated core, follows from rank-nullity, planar Euler, and the
+audited train decomposition. The bound 'sigma_C<=s_Z' follows from the canonical mixed
+rank and a KKT stress with nonzero diameter part. No asymptotic or response theorem is
+used. This is an exact structural reduction, not a C-II closure.
+
+## Checks
+
+1. The graph is connected on the nonisolated positive-contact core. Euler with the
+   outer face gives 'v-e+(R+f+1)=2'. The stopped-train ledger gives
+   'T=e-2R'. These two identities are sufficient for the algebra below and remain
+   valid with bridges and articulation vertices.
+
+2. For the contact rigidity matrix, rank-nullity gives
+   'rank(R_C)=e-sigma_C'. The contact flex dimension modulo the three Euclidean
+   motions is therefore
+   '2v-3-rank(R_C)=2v-3-e+sigma_C'. Euler rewrites the first three terms as
+   'e-2R-2f-1', hence the contact-flex dimension is
+   'T-2f-1+sigma_C'.
+
+3. The train closure matrix parametrizes the same contact flexes modulo translation.
+   The constant train-rate vector is global rotation, so its non-Euclidean dimension is
+   'T-rank(C_face)-1'. Equating the two expressions yields exactly
+   '2f-rank(C_face)=sigma_C'. No positivity assumption is hidden in this equality.
+
+4. The mixed contact-plus-diameter rigidity matrix has rank '2v-3' by canonical core-only
+   ZR/ZF. With 'e+h=2v-2+s_Z', its signed stress space has dimension
+   'e+h-(2v-3)=s_Z+1'. Every pure contact stress extends by zero on the diameter rows.
+   A relative-interior KKT stress has a nonzero (indeed positive) diameter part, so it is
+   independent of the pure-contact stress subspace. Therefore 'sigma_C+1<=s_Z+1'.
+
+5. The source and row scopes stay separate: all matrices use only the positive-contact
+   core. Contact-isolated source points are retained in the full source and are not
+   assigned velocities or removed by this identity.
+
+## Limits
+
+- The identity gives exact corank, but not a lower bound on singular values of the
+  face-closure matrix. Near-rank-one corridors can have exact rank two.
+- The bound uses canonical mixed rigidity and the existence of one relative-interior KKT
+  stress. It does not prove that every external row family has a dependency.
+- No external-row incompatibility, strict diameter descent, Type-I augmentation, or
+  Level-I result follows.
+
+**Claim classification:** audited-working exact structural identity; proof-only research
+candidate; C-II remains open.

@@ -1,0 +1,3 @@
+PASS: eight-label torus; 16 contacts; fixed rank 14; free-strain rank 16
+PASS: 5 exact path states; 3120 integer lattice vectors; strict cell compression and finite-crop diameter growth; square guard
+Scope: periodic/crop regressions; no large-source global optimum or Level I closure

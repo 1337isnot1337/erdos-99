@@ -1,0 +1,258 @@
+# Target C-II — occurrence-injective transverse selection on long sides
+
+**Date:** 2026-09-15  
+**Repository base:** `234bd432e4d3ebf2cf113d214be9e6188644449b`  
+**Status:** proved proof-only strengthening of the low-`t` long-side branch; theorem-state authority unchanged  
+**Scope:** no-container Type-II full positive-contact core  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The angular-sector multiplicity theorem shows that one physical vertex supports at
+most two `beta`-straight outer-face occurrences when `beta<=pi/6`. The preceding
+count then chose only one transverse extra contact per physical branching vertex.
+That is still unnecessarily lossy.
+
+At a branching vertex with two distinct straight outer-face occurrences, the two
+occurrences have different pairs of boundary edges. Since every non-route contact is
+strongly transverse for the corresponding occurrence, one can choose **different**
+extra contact edges for the two occurrences. Thus branching occurrences inject into
+transverse contact-edge incidences at each physical vertex. Globally only the ordinary
+two-endpoint multiplicity of an undirected edge remains.
+
+This raises the rounded-long-side contact floor from `0.097613D` to `0.195226D`.
+
+## 1. Local selection lemma
+
+Fix a physical contact vertex `x` of full contact degree `d>=3`. Suppose `x` supports
+`r` distinct `beta`-straight internal occurrences on the distinguished outer-face
+routes, with
+
+\[
+0<\beta\le\pi/6.
+\]
+
+The angular-sector lemma gives
+
+\[
+r\le2.
+\tag{OI.1}
+\]
+
+For one occurrence `o`, let `P_o` be the unordered pair of its predecessor and
+successor physical contact edges at `x`. These two edges bound the corresponding
+outer-face sector. Define
+
+\[
+A_o:=E_C(x)\setminus P_o,
+\]
+
+the contact edges at `x` not used by that route occurrence.
+
+Every edge in `A_o` is strongly transverse relative to the occurrence. Indeed, its
+contact ray is separated by strictly more than `pi/3` from both route-contact rays,
+while those route rays lie within `beta` of the two opposite tangent directions.
+Therefore every `e in A_o` has
+
+\[
+|\operatorname{trans}_{u_o}(e)|
+>\sin(\pi/3-\beta).
+\tag{OI.2}
+\]
+
+### Lemma OI.1 — distinct representatives for straight occurrences
+
+There is an injective choice
+
+\[
+o\longmapsto e_o\in A_o
+\]
+
+for the `r` straight occurrences at `x`.
+
+### Proof
+
+If `r=1`, this is immediate because `d>=3` makes `A_o` nonempty.
+
+Assume `r=2`. Distinct outer-face occurrences at a vertex correspond to distinct
+angular face sectors. Their boundary-edge pairs `P_1,P_2` are therefore different.
+For `d=3`, each allowed set `A_j` is a singleton. If those singletons were equal, their
+complementary two-edge sets `P_1,P_2` would be equal, contradiction. Hence the two
+singletons are distinct.
+
+For `d>=4`, both `A_1` and `A_2` have size at least two. Two nonempty sets of size at
+least two automatically satisfy Hall's condition for a two-element index set, so
+distinct representatives exist. QED.
+
+No KKT coefficient is used. The lemma uses only the cyclic rotation at a plane-graph
+vertex and the triangle-free angular separation of unit contacts.
+
+## 2. Global occurrence-to-edge count
+
+Let
+
+- `S_beta` be the total number of `beta`-straight internal long-side route
+  occurrences;
+- `S_2(beta)` be the subcount occurring at physical contact-degree-two vertices;
+- `E_perp(beta)` be the number of distinct physical contact edges selected by applying
+  Lemma OI.1 independently at every branching physical vertex.
+
+Lemma OI.1 chooses one distinct edge incidence at a branching vertex for every one of
+its straight occurrences. Hence the total number of selected edge incidences is
+exactly
+
+\[
+S_\beta-S_2(\beta).
+\]
+
+One undirected physical contact edge has only two endpoints, so it can appear in at
+most two selected incidences. Therefore
+
+\[
+\boxed{
+2E_\perp(\beta)
+\ge S_\beta-S_2(\beta).
+}
+\tag{OI.3}
+\]
+
+For the degree-two subcount, every such physical vertex is loaded by C26, is a
+non-distinguished repeated outer-face occurrence, and is therefore an outer-bridge
+vertex. The sector multiplicity theorem gives at most two straight occurrences per
+such vertex, while bridge incidence gives `V_2(beta)<=B_o`. Thus
+
+\[
+S_2(\beta)\le2B_o.
+\tag{OI.4}
+\]
+
+Combining (OI.3)--(OI.4),
+
+\[
+\boxed{
+2B_o+2E_\perp(\beta)\ge S_\beta.
+}
+\tag{OI.5}
+\]
+
+This is the sharpest occurrence-safe conversion presently obtained from the local
+outer-face geometry. The only remaining multiplicity factor is the unavoidable fact
+that a physical contact edge has two endpoints.
+
+## 3. Insert directional concentration and bridge suppression
+
+The exact outer-route directional-energy theorem gives
+
+\[
+S_\beta
+\ge
+L_{>2}-{2d_{out}\over1-\cos\beta}.
+\tag{OI.6}
+\]
+
+For the full-core Type-II branch, bridge-subtracted isoperimetry and
+`P_F/D->pi` give along every convergent subsequence
+
+\[
+\limsup {2B_o\over D}\le\delta,
+\qquad
+\delta:=\lim {d_{out}\over D}.
+\tag{OI.7}
+\]
+
+Hence for `beta<=pi/6`,
+
+\[
+\boxed{
+\liminf {2E_\perp(\beta)\over D}
+\ge
+\liminf {L_{>2}\over D}
+-\delta\left(1+{2\over1-\cos\beta}\right).
+}
+\tag{OI.8}
+\]
+
+Every selected contact satisfies the directional bound (OI.2).
+
+## 4. Current low-`t` long-side consequence
+
+At the current proof-only floor `t=t_42`, the long-side alternative and low-detour
+squeeze give
+
+\[
+{L_{>2}\over D}
+\ge0.4363893718701161781\ldots-o(1),
+\]
+
+\[
+\delta\le0.002883975.
+\]
+
+Set
+
+\[
+\beta={\pi\over6}.
+\]
+
+Then
+
+\[
+{S_{\pi/6}\over D}
+\ge0.3933368069590823665\ldots-o(1),
+\]
+
+and (OI.5)--(OI.7) yield
+
+\[
+\boxed{
+{E_\perp(\pi/6)\over D}
+\ge0.1952264159795411832\ldots-o(1).
+}
+\tag{OI.9}
+\]
+
+Every selected edge has absolute transverse component strictly greater than `1/2`
+relative to the corresponding long loaded-hull side direction.
+
+This is a factor-five improvement over the first bridge-suppressed estimate
+`0.039045D` and a factor-two improvement over the sector-only estimate
+`0.097613D`.
+
+## 5. Updated low-`t` normal form
+
+At the present floor, every full-core Type-II survivor now has one of two linear
+physical contact populations of almost the same scale:
+
+```text
+tooth branch:
+    >= 0.2127872328 D-o(D) distinct inward unit contacts,
+    inward component > 0.5011115;
+
+rounded long-side branch:
+    >= 0.19522641598 D-o(D) distinct transverse unit contacts,
+    transverse component > 1/2.
+```
+
+Thus every low-`t` survivor has at least
+
+\[
+\boxed{0.19522641597954118\ldots D-o(D)}
+\]
+
+distinct physical contacts belonging to one of two explicit strongly non-tangential
+families.
+
+The remaining obstruction is no longer a counting or boundary-repetition issue. A
+closure theorem must explain how nearly `0.2D` such non-tangential contacts can be
+routed through the pentagon/rhombus train network while preserving the actual diameter
+thrackle and KKT equilibrium. The square-strip regression shows that one long train
+can absorb many boundary transverse contacts, so the next target must split train
+occupancy: many stopped trains versus long coherent rhombic strips.
+
+## 6. Reproducibility
+
+Run
+
+```bash
+python3 research/verify_target_c_long_side_occurrence_injective_selection.py
+```
+
+for the Decimal constant checks.

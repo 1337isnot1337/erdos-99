@@ -1,0 +1,121 @@
+# Target C — force-bulk cavity frontier C48-C50
+
+> **Correction (2026-09-09):** The alleged proof of `n-m=O(D)` uses false
+> isolated-point localization; see the
+> [exact audit](../../reports/target_c_force_bulk_and_correction_audit_2026-09-08.md).
+> Population transport remains open. Restoring C53/C-I does not remove it.
+
+**LEVEL I STATUS: STILL OPEN.**
+
+C48 turns the fully force-visible contact core into an almost optimal-density object with only linear finite error. The remaining source-capacity gap is the population outside that nonisolated core. C49-C50 localize that gap geometrically.
+
+## 1. Core capacity through C48
+
+Let `m` be the force-visible contact-core population and
+
+`G = area(F) - sum_r area(conv A_r) >= 0`
+
+be the C43 attachment-cell area gap.
+
+Combining the mainline C42 quadrangulation defect with C43 gives
+
+`m <= Delta_2 D^2 -(2/sqrt3)G + O(D)`.
+
+Thus, at the level of the force-visible core, the only losses from asymptotically optimal disk-packing capacity are an explicit favorable cell-area gap and a linear boundary/defect term.
+
+The missing source population is
+
+`Z = n-m`.
+
+Every point counted by `Z` is contact-isolated and KKT-invisible.
+
+## 2. C49 — isolated points live only in contact-face defects
+
+For the connected core contact graph let
+
+- `B` be the outer contact-face walk length;
+- `k_f` be bounded face walk lengths;
+- `Q=sum_f(k_f-4)` over bounded faces.
+
+Pinned rank plus Euler gives the exact face-defect budget
+
+`B+Q <= 4|B_+|-4 <= 4pi D-4`.
+
+Every bounded quadrilateral contact face is a strict unit rhombus. Its nearest-vertex covering radius is strictly below one, so it contains no additional unit-separated source point.
+
+Therefore every contact-isolated source point lies either
+
+1. in the outer contact face, or
+2. in a bounded nonquadrilateral defect face.
+
+The number of bounded defect faces is at most `Q=O(D)`, and their total contact-boundary length is at most `5Q=O(D)`.
+
+Hence the invisible population cannot be diffuse through the `m-O(D)` rhombic bulk.
+
+## 3. C50 — macroscopic invisible population forces a giant cavity
+
+If a bounded defect face has contact-boundary length `k` and contains `z` isolated points, convexification, isoperimetry, and Oler give
+
+`z <= 1+k/2+k^2/(2pi sqrt3)`.
+
+Let `K` be the largest bounded defect-face perimeter and `Z_def` the total isolated population in bounded defect faces. C49 yields
+
+`Z_def < 14pi D +(10/sqrt3) K D`.
+
+Consequently, if
+
+`Z_def >= eta D^2`,
+
+then
+
+`K > (sqrt3/10)(eta D-14pi) = Omega_eta(D)`.
+
+Thus a macroscopic failure of force bulk has only two possible geometries:
+
+```text
+outer-shell phase:
+    Omega(D^2) isolated/KKT-invisible points lie in the outer contact face;
+
+giant-hole phase:
+    one bounded nonquadrilateral contact face has Omega(D) boundary length
+    and contains a macroscopic isolated packing population.
+```
+
+Many small holes cannot collectively hide a quadratic population because their total boundary length is only `O(D)`.
+
+## 4. Current exact force-bulk target
+
+A source-wide strengthening of C48 now reduces to eliminating the two cavity phases.
+
+A sufficient theorem is:
+
+> **Macroscopic cavity exclusion.** No sufficiently large contact-minimal fully force-visible global minimizer can contain either (i) `Omega(D^2)` contact-isolated points in the outer contact face of its force-visible core, or (ii) a bounded nonquadrilateral contact face of perimeter `Omega(D)` containing `Omega(D^2)` isolated points.
+
+A separate theorem showing
+
+`n-m=O(D)`
+
+would combine with C48 to give the following bound; the September 5 proof does
+not establish the required premise:
+
+`n <= Delta_2 D^2 -(2/sqrt3)G + O(D)`.
+
+A further finite gap or a positive linear lower bound on `G` would then close the capacity comparison.
+
+## 5. Why this is a real reduction
+
+The previous KKT-invisible population obstruction allowed arbitrary rattlers anywhere outside the force hull. C49-C50 rule out that diffuse picture in C-II:
+
+- the strict-rhombus bulk contains no rattlers at all;
+- all bounded rattlers are supported by only `O(D)` defect-boundary complexity;
+- a quadratic bounded rattler population forces one linearly large cavity;
+- otherwise a quadratic invisible population must live in the outer shell.
+
+The remaining geometries are macroscopic and globally visible, making them suitable for same-hull saturation, Oler, or container arguments.
+
+## Binding cautions
+
+- One giant bounded defect face of perimeter `Theta(D)` can still contain `Theta(D^2)` unit-separated points; C50 does not exclude it.
+- A regular-shell-type force-visible boundary with a large invisible interior/outer-face packing remains a live regression.
+- C48 controls the force-visible core population `m`, not the full source `n`.
+- Leading density alone cannot close either cavity phase.

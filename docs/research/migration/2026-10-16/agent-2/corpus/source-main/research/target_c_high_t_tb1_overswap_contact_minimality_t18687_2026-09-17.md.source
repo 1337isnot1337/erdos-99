@@ -1,0 +1,303 @@
+# Target C-II — a vanishing overswap removes the diameter-pair-minimality dependence from the TB1 slack fork
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` strengthening; no canonical promotion claimed  
+**Scope:** the one-sign side of the strong-TB1 exact contact-swap fork through `t=(q-k)/D<=1.8687`  
+**Dependencies:** TB1 exact contact-swap obstruction fork; canonical contact-minimal normalization  
+**Certificate:** `research/verify_target_c_high_t_tb1_overswap_contact_minimality_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The exact contact-swap theorem used the second intersection of the two boundary unit-contact circles,
+
+\[
+v_{sw}=-(a+b)=-qw,
+\qquad q=|a+b|=O(D^{-1}),
+\]
+
+and then invoked the secondary diameter-pair-minimal normalization if nonswitching old diameters remained.
+
+That secondary normalization is unnecessary. Move an asymptotically negligible amount **past** the second intersection.
+
+Put
+
+\[
+\lambda_D:=1+{1\over D},
+\qquad
+v_{out}:=-\lambda_D(a+b)=-\lambda_D q w.
+\]
+
+Then both boundary contact families become strictly longer than one, while every one-sign switching diameter remains strictly shorter than `D`. The displacement still has the same leading scale
+
+\[
+|v_{out}|
+\le {31.4\times10^6\over D}+o(D^{-1}).
+\]
+
+Therefore, if every previously strict source pair stayed strictly inside `(1,D)`, `v_out` would produce either a strict sub-`D` source or another diameter-`D` global minimizer with **strictly fewer unit contacts**. Both contradict the canonical normalization.
+
+So every one-sign strong-TB1 interface already forces the same inverse-`D` inactive witness using contact minimality alone:
+
+\[
+1<|xy|\le1+{31.4\times10^6\over D}+o(D^{-1})
+\]
+
+or
+
+\[
+D-{31.4\times10^6\over D}-o(D^{-1})\le|xy|<D.
+\]
+
+The earlier contact-swap fork and inactive-slack matching consequences remain unchanged. This note strengthens their logical dependency: the near-active branch is forced before the secondary diameter-pair count is used.
+
+---
+
+## 1. Exact boundary-contact formula beyond the swap
+
+Let `a,b` be the rooted unit boundary-contact vectors and define
+
+\[
+q:=|a+b|>0,
+\qquad
+w:={a+b\over q}.
+\]
+
+For any scalar `lambda`, translate the physical layer by
+
+\[
+v(\lambda):=-\lambda(a+b)=-\lambda q w.
+\tag{OS.1}
+\]
+
+Since
+
+\[
+q^2=|a+b|^2=2(1+a\cdot b),
+\]
+
+a direct expansion gives
+
+\[
+\begin{aligned}
+|a+v(\lambda)|^2
+&=|a-\lambda(a+b)|^2\\
+&=1-2\lambda(1+a\cdot b)+\lambda^2q^2\\
+&=1+q^2\lambda(\lambda-1).
+\end{aligned}
+\tag{OS.2}
+\]
+
+The same identity holds for `b`:
+
+\[
+\boxed{
+|a+v(\lambda)|^2
+=|b+v(\lambda)|^2
+=1+q^2\lambda(\lambda-1).
+}
+\tag{OS.3}
+\]
+
+Thus:
+
+- `lambda=0` is the original contact configuration;
+- `lambda=1` is the exact contact swap, with both lengths again exactly `1`;
+- every `lambda>1` strictly opens both boundary contact families.
+
+Take
+
+\[
+\boxed{\lambda_D=1+D^{-1}.}
+\tag{OS.4}
+\]
+
+Then
+
+\[
+|a+v(\lambda_D)|^2-1
+=q^2\left(1+{1\over D}\right){1\over D}>0,
+\tag{OS.5}
+\]
+
+and likewise for `b`.
+
+The opening can be arbitrarily small; only strict positivity is needed for contact minimality.
+
+---
+
+## 2. The overswap still shortens every one-sign moving diameter
+
+At a one-sign strong-TB1 interface, every moving actual diameter has inward vector `n_h` satisfying
+
+\[
+n_h\cdot w\ge(c_H-o(1))D,
+\qquad
+c_H=0.453819885927\ldots .
+\tag{OS.6}
+\]
+
+For a moving diameter, the exact adjacent-layer formula at `v(lambda)` is
+
+\[
+\begin{aligned}
+|r_h(v(\lambda))|^2-D^2
+&=2n_h\cdot v(\lambda)+|v(\lambda)|^2\\
+&=-2\lambda q(n_h\cdot w)+\lambda^2q^2\\
+&=\lambda q\bigl(-2n_h\cdot w+\lambda q\bigr).
+\end{aligned}
+\tag{OS.7}
+\]
+
+The TB1 cone collapse gives
+
+\[
+q<{31.4\times10^6\over D}+o(D^{-1}).
+\tag{OS.8}
+\]
+
+With `lambda=lambda_D=1+1/D`,
+
+\[
+\lambda_Dq=O(D^{-1}),
+\]
+
+whereas
+
+\[
+2n_h\cdot w\ge(2c_H-o(1))D.
+\]
+
+Therefore the bracket in (OS.7) is negative for all sufficiently large `D`, uniformly over every moving actual diameter at the interface. Hence
+
+\[
+\boxed{
+|r_h(v(\lambda_D))|<D
+\quad\text{for every moving old actual diameter.}
+}
+\tag{OS.9}
+\]
+
+Nonswitching source-pair vectors are unchanged exactly by the layer translation, as in the parent adjacent-strip theorem.
+
+---
+
+## 3. Contact minimality alone now forces a strict inactive witness
+
+Assume, for contradiction, that after the overswap `v(lambda_D)` every previously strict source pair remains strictly feasible:
+
+\[
+|xy|>1\Longrightarrow |x(v)-y(v)|>1,
+\tag{OS.10}
+\]
+
+and
+
+\[
+|xy|<D\Longrightarrow |x(v)-y(v)|<D.
+\tag{OS.11}
+\]
+
+All old contacts away from the two boundary train families are unchanged exactly. Equations (OS.3)--(OS.5) show that **every** contact in the two boundary families is now strict. Assumption (OS.10) says no previously strict pair becomes a new unit contact. Therefore the translated source has strictly fewer unit contacts than the canonical source.
+
+By (OS.9), every moving old actual diameter becomes strict. Every nonswitching old diameter is unchanged exactly. Assumption (OS.11) says no previously strict pair reaches or exceeds `D`.
+
+Thus either:
+
+1. some nonswitching old diameter remains, in which case the new source is another global minimizer of diameter `D` with strictly fewer unit contacts, contradicting contact minimality; or
+2. no nonswitching old diameter remains, in which case the new source has diameter strictly below `D`, contradicting global minimality.
+
+Therefore at least one previously strict pair must satisfy at the overswap endpoint
+
+\[
+|x(v)-y(v)|\le1
+\quad\text{or}\quad
+|x(v)-y(v)|\ge D.
+\tag{OS.12}
+\]
+
+No diameter-pair count is used.
+
+---
+
+## 4. The witness scale is unchanged to leading order
+
+The overswap displacement has norm
+
+\[
+|v(\lambda_D)|
+=\lambda_Dq
+=\left(1+{1\over D}\right)q.
+\tag{OS.13}
+\]
+
+Using (OS.8),
+
+\[
+\boxed{
+|v(\lambda_D)|
+<{31.4\times10^6\over D}+o(D^{-1}).
+}
+\tag{OS.14}
+
+The extra factor `1+1/D` contributes only `O(D^-2)` to the displayed leading scale.
+
+If a previously strict noncontact pair ends at distance at most `1`, the triangle inequality gives
+
+\[
+1<|xy|\le1+|v(\lambda_D)|.
+\]
+
+If a previously strict nondiameter pair ends at distance at least `D`, then
+
+\[
+D-|v(\lambda_D)|\le|xy|<D.
+\]
+
+Therefore the same two asymptotic witness windows follow:
+
+\[
+\boxed{
+1<|xy|
+\le1+{31.4\times10^6\over D}+o(D^{-1})
+}
+\tag{OS.15}
+\]
+
+or
+
+\[
+\boxed{
+D-{31.4\times10^6\over D}-o(D^{-1})
+\le|xy|<D.
+}
+\tag{OS.16}
+\]
+
+All multiplicity and matching consequences from the parent contact-swap theorem therefore carry over verbatim.
+
+---
+
+## 5. Geometric interpretation
+
+The two near-antipodal boundary contact constraints have two nearby exact intersection configurations in translation space. The original strong-TB1 blocker obstructs the local contact-opening branch at the first intersection. If all switching diameter vectors have the same transverse sign, they **do not** obstruct the contact-opening branch immediately beyond the second intersection: they all shorten there.
+
+Thus a one-sign strong-TB1 layer can survive only because a constraint that was inactive in the original source lies within `O(D^-1)` of activation and blocks this second contact-opening sheet.
+
+The resulting fork is source-level and finite:
+
+```text
+one-sign strong TB1
++
+near-antipodal boundary contacts
+->
+second contact intersection at distance O(1/D)
+->
+vanishing overshoot strictly opens both old boundary train families
++
+all old moving diameters strictly shorten
+->
+contact minimality forces an inactive pair within O(1/D) of 1 or D.
+```
+
+This is stronger than an infinitesimal tangent obstruction and stronger than the exact-swap argument's dependency bookkeeping. The remaining issue is the geometry of the inactive witnesses, not a secondary normalization artifact.
+
+**Disposition:** replaced the exact-swap use of diameter-pair minimality by a `1+1/D` overswap that opens both boundary train families while still shortening all one-sign switching diameters. The same inverse-`D` inactive-slack fork now follows from contact minimality alone. C-II and Level I remain open.

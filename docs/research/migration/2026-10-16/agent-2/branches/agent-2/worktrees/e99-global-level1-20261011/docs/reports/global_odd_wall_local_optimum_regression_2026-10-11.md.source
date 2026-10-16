@@ -1,0 +1,246 @@
+# Dense triangle-free local optima requiring a global replacement
+
+**Date:** 2026-10-11  
+**Base:** `ab6dd3336f9f8d440f2bada76edb32153391cddc`, state `2026-10-10.audit.234`  
+**Target:** independent Level I global population/replacement route  
+**Classification:** proved candidate awaiting promotion; regression  
+**Level I:** STILL OPEN. The family below is explicitly nonglobal.
+
+## 1. Candidate bridge being tested
+
+```text
+triangle-free + full positive core stress + PSD affine kernel
+  + full mixed-bar rank + local diameter optimality
+  + asymptotically optimal full-source density
+  -> exclusion -> Level I
+```
+
+This implication is false. The following unbounded full-source family satisfies
+every condition before the arrow and has a certified same-cardinality global
+replacement. It demonstrates why the remaining argument must use more than
+local stiffness and the leading density coefficient. The positive population
+reserve for genuine global minimizers is not discarded.
+
+## 2. Full-source construction
+
+For every sufficiently large odd integer q put
+
+\[
+a=\frac{\pi}{2q},\qquad
+R=\frac1{2\sin(2a)},\qquad
+D=\frac1{2\sin a}=2R\cos a.
+\]
+
+Take the q vertices of the regular unit-side q-gon centered at zero. Set
+
+\[
+\lambda=1+q^{-3},\qquad r=R-1-q^{-2},\qquad
+m=\left\lfloor\frac{\pi r^2}{a_0\lambda^2}\right\rfloor,
+\qquad a_0=\frac{\sqrt3}{2}.
+\]
+
+Translation averaging for the unit triangular lattice of covolume a0 supplies
+at least m sites in the radius-r/lambda disk. Select exactly m, then scale them
+by lambda. The resulting interior cloud lies in B(0,r), has minimum separation
+at least lambda>1, and contains no unit contacts. Add it to the q-gon to form
+A_q of cardinality n_q=q+m. No asymptotic lattice discrepancy theorem is needed:
+we prescribe m by the average rather than assert an exact count at one phase.
+
+Every interior-to-wall distance is at least R-r=1+q^(-2)>1. Also
+
+\[
+2R-D=2R(1-\cos a)<1/q<1
+\]
+
+for q>=5: use sin(pi/q)>=2/q and 1-cos a<=a^2/2, together with pi<4.
+Therefore interior-to-wall distances are at most R+r<2R-1<D, and all
+interior-to-interior distances are at most 2r<D. Among the wall vertices, only
+adjacent vertices are unit contacts, and the actual diameter pairs join cyclic
+indices differing by (q-1)/2. Hence the **entire source** has
+
+```text
+C = the unit q-cycle,
+H = the q-edge odd diameter cycle,
+Q = all q wall vertices,
+all m interior points contact-isolated and absent from H.
+```
+
+It is triangle-free for q>=5. Every source label is retained in all statements.
+
+## 3. Positive normalized KKT stress
+
+Give every contact multiplier alpha=D^2/q and every diameter multiplier beta=1/q.
+Their sums are D^2 and one. The regular wall's contact and diameter Laplacians
+act radially, and
+
+\[
+D^2\sin^2(2a)=\cos^2 a.
+\]
+
+Thus alpha times the contact force equals beta times the diameter force at every
+wall vertex. All interior forces are zero. This supplies the full normalized
+nonnegative KKT equilibrium, scalar, and tensor identities. Both weights are
+strictly positive on their respective full actual graphs.
+
+## 4. PSD stress with the exact affine core kernel
+
+On the wall let Omega=alpha L_C-beta L_H. Its Fourier eigenvalues, for
+0<=k<q, are
+
+\[
+\ell_k=\frac4q\left[D^2\sin^2(2ka)
+-\sin^2\bigl(k\pi/2-ka\bigr)\right].
+\]
+
+For odd k this becomes
+
+\[
+\ell_k=\frac4q\cos^2(ka)
+\left(\frac{\sin^2(ka)}{\sin^2 a}-1\right),
+\]
+
+and for even k it becomes
+
+\[
+\ell_k=\frac4q\sin^2(ka)
+\left(\frac{\cos^2(ka)}{\sin^2 a}-1\right).
+\]
+
+Since a<=ka<=pi/2-a for 1<=k<q, all eigenvalues are nonnegative. Equality
+occurs only at k=0,1,q-1. These modes are the constant and the two actual wall
+coordinate vectors. Consequently
+
+\[
+\Omega\succeq0,\qquad
+\ker\Omega=\operatorname{span}\{1,P_x,P_y\},\qquad
+\operatorname{rank}\Omega=q-3.
+\]
+
+Extending Omega to the full source adds one independent zero direction for
+every interior isolate. No full-source affine-kernel claim is made. The result
+is a statement about this explicit nonglobal family, not a selected canonical
+stress theorem for arbitrary global minimizers.
+
+## 5. Full mixed rank and genuine local diameter optimality
+
+Relabel the wall in diameter-cycle order, multiplying original cyclic indices
+by (q-1)/2. Diameter bars then join consecutive new indices; contact bars join
+indices two steps apart. Every triple of consecutive new indices has bar lengths
+D,D,1 and is nondegenerate. Starting with its first bar triangle and adding
+successive triangles sharing a full edge produces a rigid spanning chain.
+Therefore
+
+\[
+\operatorname{rank}R_{C\cup H}=2q-3
+\]
+
+on the wall. These are triangles of mixed contact/diameter bars; they are not
+unit equilateral triangles.
+
+The wall is locally isolated among configurations satisfying all old contact
+lower bounds and all old diameter upper bounds, modulo Euclidean isometries.
+Here is a direct proof, without a quoted rigidity implication. Let L_e be the
+linearized violation row, with sign negative on contact squared length and
+positive on diameter squared length. The strictly positive stress satisfies
+`sum_e mu_e L_e=0`. If all L_e(w)<=0, positivity forces every L_e(w)=0;
+full mixed rank makes w a Euclidean infinitesimal motion. On the orthogonal
+complement S of the three Euclidean motions, compactness of its unit sphere
+therefore gives c>0 with `max_e L_e(w)>=c|w|`.
+
+Align any nearby candidate wall by its nearest Euclidean isometry, so its
+displacement delta belongs to S. Each exact squared-length violation differs
+from L_e(delta) by at most 2|delta|^2. If 0<|delta|<c/2, at least one active
+constraint is violated. Thus a sufficiently near feasible wall is isometric
+to the original and retains diameter D.
+
+Every nearby full-source configuration of diameter at most D must satisfy
+those wall constraints. Consequently **A_q is a local minimum of the complete
+diameter problem**, even though its isolates may move freely at the same
+diameter. Its core is strictly locally isolated modulo isometry; the full
+source is not claimed to be isolated in configuration space.
+
+## 6. Exact surface deficit and asymptotic global comparison
+
+Write Delta=pi/(4a0)=pi/(2sqrt(3)). The exact identities and small-angle estimates
+
+\[
+R^2-D^2/4=1/(16\cos^2 a),\qquad
+R=D/2+O(D^{-1}),\qquad q=\pi D+O(D^{-1})
+\]
+
+give, including the bounded floor error,
+
+\[
+n_q=\Delta D^2-c_*D+O(1),\qquad
+c_* =\pi(1/a_0-1)=2\Delta(2-\sqrt3)>0.
+\]
+
+Thus this triangle-free locally optimal family has the globally optimal leading
+density coefficient and has q=Theta(D), n_q=Theta(D^2). Nevertheless its global
+population excess is
+
+\[
+g_q=n_q-1-\Delta D^2=-c_*D+O(1).
+\]
+
+In particular it fails the positive D^(2/3) reserve that the canonical
+`C-GLOBAL-POPULATION-EXCESS-ASYMPTOTIC-COEFFICIENT` forces on actual global
+minimizers. This failure is not a small numerical rounding effect.
+
+Translation averaging supplies an independent n_q-point triangular-lattice
+packing of diameter at most sqrt(n_q/Delta), and
+
+\[
+\sqrt{n_q/\Delta}=D-(2-\sqrt3)+O(D^{-1})<D
+\]
+
+for all sufficiently large q. This is a strict same-cardinality **whole-source
+replacement**, proving A_q is nonglobal. No path keeping the old wall or pins
+fixed is required. Since the wall is locally isolated, a sufficiently small
+feasible source deformation cannot produce that improvement.
+
+The canonical planar bounds in `docs/problem/literature_baseline.md`, Section
+2.2, give sqrt(n/Delta)-1<=D(n)<=sqrt(n/Delta). Accordingly
+
+\[
+2-\sqrt3-O(D^{-1})
+\le D-D(n_q)\le3-\sqrt3+O(D^{-1}),
+\qquad D/D(n_q)\longrightarrow1.
+\]
+
+The global optimum remains strictly separated from this local family by a
+positive constant in diameter, despite the ratio tending to one. Any reference
+replacement improving diameter by at least (2-sqrt(3))/2 must move some label
+by at least (2-sqrt(3))/4 under every bijection, since diameter changes by at
+most twice the maximum label displacement.
+
+## 7. What this disproves and what remains
+
+This family refutes closure from PSD affine-kernel stress, full core mixed rank,
+all-order local diameter minimality, actual odd loaded diameter topology, and
+asymptotically optimal full-source density. It also shows why a proof need not
+arise from a local path out of the old configuration.
+
+It does **not** refute a theorem combining genuine global optimality with the
+positive population reserve. It does not supply triangle-free global minimizers.
+The full problem's exact quantifiers are unchanged. The live global obligation
+remains to construct a strict sub-D n-point replacement or force a unit triangle
+in every sufficiently large globally optimal source, including nonlattice
+terminal islands whose population excess is positive.
+
+## 8. Exact finite verification
+
+`research/verify_global_odd_wall_local_optima_2026_10_11.py` uses rational Machin
+bounds for pi and alternating Taylor bounds for sine/cosine. It certifies the
+positive nonzero Fourier modes and checks the rigid bar-chain witness for
+several odd q. The zero modes are exact analytic identities in Section 4,
+not conclusions drawn from a numerical interval containing zero.
+
+For selected q it constructs explicit interior lattice clouds and independent
+same-cardinality reference packets. Exact integer quadratic forms check the
+lattice norms and pair distances; interval radius/diameter bounds certify every
+wall-to-interior pair uniformly. The script states the full pair counts covered
+by these bounds. It does not infer global optimality from local rank or spectra.
+
+All new claims remain unreviewed candidates/regressions pending an independent
+audit. No canonical state or current route prompt is changed.

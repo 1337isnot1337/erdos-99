@@ -1,0 +1,425 @@
+# Target C-II — fixed FREE pair forces a square-root boundary/forest obstruction without an external-population hypothesis
+
+**Date:** 2026-09-18
+**Status:** proved candidate awaiting promotion; proof-only strengthening of the fixed-pair/all-run FREE route
+**Scope:** the `PAIR-REUSE` branch for the two extreme all-inactive FREE modules
+**Dependencies:** fixed-pair lossless common runs; all-run forest-union identity; two-boundary slack tradeoff; two-sided outer-face localization; common-trunk two-normal cone theorem
+**Certificate:** `research/verify_target_c_tooth_reflection_fixed_pair_boundary_forest_trifork_2026_09_18.py`
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The all-run forest-union theorem removes the old `(Z_D+1)^2` run-pair loss when the
+number of lower-run components is small. Its remaining correction is the actual number
+of lower-run components. Those components are created only by upper gates. But the
+upper gates themselves have one bounded total diameter-defect budget. Keeping one
+parity of upper ancestry edges gives a large vertex-disjoint near-diameter matching
+without spending any extra defect.
+
+This closes the bookkeeping loop and removes the external-population hypothesis from
+the fixed-pair `PAIR-REUSE` obstruction.
+
+Fix
+
+\[
+h_*:=\frac{\sqrt{303}}{52},\qquad
+c_*:=0.129220199818177\ldots,\qquad
+b_*:=\sin(c_*/2),
+\]
+
+and a fixed `K>h_*`. Put
+
+\[
+\alpha_K:=1-\frac{h_*}{K}>0.
+\tag{BF.1}
+\]
+
+On the `PAIR-REUSE` side of the fixed extreme-pair theorem, the two extreme FREE
+ancestries share a set `E_*` of distinct original lower-gate edges with
+
+\[
+E:=|E_*|\ge\left(\frac{\alpha_K}{2}-o(1)\right)D,
+\tag{BF.2}
+\]
+
+and every selected edge satisfies
+
+\[
+1<|e|\le1+\frac KD.
+\tag{BF.3}
+\]
+
+The two canonical support normals `N_1,N_2` obey
+
+\[
+c_*-o(1)\le\theta_D:=\angle(N_1,N_2)\le\frac\pi2+o(1).
+\tag{BF.4}
+\]
+
+The complementary fixed-pair branch already gives a linear vertex-disjoint matching
+of inverse-`D` inactive pairs. The theorem below concerns only `PAIR-REUSE`.
+
+## 1. Replace the external-population correction by the actual upper-gate count
+
+Let `U_i` be the number of upper gates on ancestry `i`, and put
+
+\[
+T:=U_1+U_2.
+\tag{BF.5}
+\]
+
+Keep every maximal lower run from either ancestry containing a common edge. Let
+`\mathcal P,\mathcal Q` be the resulting path forests, and write `p,q` for their
+numbers of components. Deleting the upper gates partitions each ancestry into at most
+`U_i+1` lower runs, so
+
+\[
+p\le U_1+1,\qquad q\le U_2+1,
+\qquad p+q\le T+2.
+\tag{BF.6}
+\]
+
+Let
+
+\[
+H:=\mathcal P\cup\mathcal Q,
+\qquad I:=\mathcal P\cap\mathcal Q.
+\]
+
+All lower-run edges have length below `sqrt(2)` for large `D`, so `H` is a plane
+short-edge source graph. The exact two-forest Euler identity from the all-run theorem is
+
+\[
+\beta(H)=c_H-p-q+c_I,
+\]
+
+where `c_H,c_I` are the component counts of `H,I`. Since `E_*>0`, `c_H>=1`, and hence
+
+\[
+\boxed{
+\beta(H)\ge c_I-T-1.
+}
+\tag{BF.7}
+
+Thus the correction is the actual total number of upper events, not the ambient
+external population.
+
+## 2. The same `T` buys an upper matching with bounded total diameter defect
+
+The two-boundary slack theorem gives, separately on each ancestry,
+
+\[
+\sum_{e\in E_{\rm up}^{(i)}}(D-|e|)\le t_D,
+\qquad
+t_D<h_*+D^{-1/3}.
+\tag{BF.8}
+\]
+
+Let
+
+\[
+U:=\max\{U_1,U_2\}\ge T/2.
+\]
+
+The upper edges of one ancestry split by ancestry-index parity into two matchings. One
+parity class contains at least `U/2-O(1)` upper edges. Keep that class and call it
+`M_{\rm up}`. Since its defect sum is at most the sum over all upper edges on that
+ancestry,
+
+\[
+\boxed{
+|M_{\rm up}|\ge\frac U2-O(1)\ge\frac T4-O(1),
+}
+\tag{BF.9}
+\]
+
+and
+
+\[
+\boxed{
+\sum_{xy\in M_{\rm up}}(D-|x-y|)\le t_D<h_*+D^{-1/3}.
+}
+\tag{BF.10}
+\]
+
+Every member is an original source pair with strict length below `D`, because all
+ancestry vertices in this branch are fully inactive in the original source. Every
+endpoint is also in the original outer contact face.
+
+This aggregate statement is stronger than first discarding a fixed fraction of upper
+edges by Markov: the whole matching has only `O(1)` total diameter deficit.
+
+## 3. A three-way finite minimax
+
+Fix a real threshold `s>1`. Every selected edge of `E_*` belongs to `I`.
+
+If one component `C` of `I` contains at least `s` selected edges (replace `s` by the
+appropriate integer ceiling), then the common-trunk cone theorem gives, for one of the
+two normalized axes
+
+\[
+B=\frac{N_1+N_2}{|N_1+N_2|},
+\qquad
+T_N=\frac{N_1-N_2}{|N_1-N_2|},
+\]
+
+an endpoint displacement `X_C` satisfying
+
+\[
+\boxed{
+X_C\cdot U_C\ge(b_*-o(1))s,
+\qquad U_C\in\{B,T_N\}.
+}
+\tag{BF.11}
+
+Indeed the SAME-traversal coefficient is `sin(theta_D/2)>=b_*-o(1)`, while the
+OPPOSITE-traversal coefficient is
+`cos(theta_D/2)>=cos(pi/4)-o(1)>b_*`.
+
+Otherwise every component of `I` contains fewer than `s` selected edges. Then
+
+\[
+c_I>\frac Es,
+\]
+
+and (BF.7) gives
+
+\[
+\beta(H)>\frac Es-T-1.
+\tag{BF.12}
+\]
+
+At the same time (BF.9) gives an upper matching of size at least `T/4-O(1)`.
+For every `T>=0`,
+
+\[
+\boxed{
+\max\left\{\frac Es-T,\frac T4\right\}
+\ge\frac{E}{5s}.
+}
+\tag{BF.13}
+\]
+
+The proof is exact: if `T>=4E/(5s)`, the second term is at least `E/(5s)`; otherwise
+the first term is larger than `E/(5s)`.
+
+Combining (BF.11)--(BF.13), for every threshold `s` the `PAIR-REUSE` branch forces at
+least one of
+
+\[
+\beta(H)\ge\frac{E}{5s}-O(1),
+\tag{BF.14}
+\]
+
+\[
+X_C\cdot U_C\ge(b_*-o(1))s,
+\tag{BF.15}
+\]
+
+or
+
+\[
+|M_{\rm up}|\ge\frac{E}{5s}-O(1),
+\qquad
+\sum_{e\in M_{\rm up}}(D-|e|)\le t_D.
+\tag{BF.16}
+\]
+
+Choose
+
+\[
+s=\sqrt{\frac{E}{5b_*}}.
+\tag{BF.17}
+\]
+
+Then the two principal terms equal
+
+\[
+\sqrt{\frac{b_*E}{5}}.
+\]
+
+Hence
+
+\[
+\boxed{
+\text{PAIR-REUSE}\Longrightarrow
+\max\{\beta(H),\ \text{compatible trunk drift},\ |M_{\rm up}|\}
+\ge
+\sqrt{\frac{b_*E}{5}}-o(\sqrt D),
+}
+\tag{BF.18}
+\]
+
+where in the upper-matching alternative the complete selected matching still satisfies
+the bounded aggregate defect (BF.10). No hypothesis on `Z_D=|A\setminus F|` is used.
+
+## 4. Explicit square-root constants
+
+Using (BF.2), define
+
+\[
+\boxed{
+C_K:=\sqrt{\frac{\alpha_Kb_*}{10}}.
+}
+\tag{BF.19}
+\]
+
+Then the complete fixed-pair fork is:
+
+1. `LINEAR-LOWER`: a vertex-disjoint matching of
+   \[
+   \left(\frac{\alpha_K}{11}-o(1)\right)D
+   \]
+   old fully inactive outer-face pairs with `1<|x-y|<=1+K/D`; or
+2. `SQRT-LOWER-FACE`: the lower-run union `H` has
+   \[
+   \beta(H)\ge(C_K-o(1))\sqrt D;
+   \]
+3. `SQRT-LOWER-TRUNK`: one compatible common lower trunk has actual two-normal axis
+   displacement at least
+   \[
+   (C_K-o(1))\sqrt D;
+   \]
+4. `SQRT-UPPER`: a vertex-disjoint matching of
+   \[
+   (C_K-o(1))\sqrt D
+   \]
+   old fully inactive outer-face pairs satisfying the aggregate diameter-defect bound
+   \[
+   \boxed{
+   \sum_{xy\in M_{\rm up}}(D-|x-y|)<h_*+o(1).
+   }
+   \tag{BF.20}
+   \]
+
+For `K=1`,
+
+\[
+\alpha_1=0.6652520156628998\ldots,
+\]
+
+and
+
+\[
+\boxed{
+C_1=0.0655378523927624\ldots.
+}
+\tag{BF.21}
+
+Thus the fixed extreme FREE pair, without any external-population restriction, forces
+one of a linear inverse-`D` lower matching, `0.0655378... sqrt(D)` bounded faces,
+`0.0655378... sqrt(D)` actual common-trunk drift, or `0.0655378... sqrt(D)` disjoint
+near-diameter pairs whose *total* additive deficit from `D` is below
+`0.334748+o(1)`.
+
+## 5. Uniform-slack upper submatchings
+
+The aggregate form (BF.20) can be converted to a uniform threshold without changing
+its scale. Let `Lambda>1` be fixed. If `M_{\rm up}` has `M` edges and total deficit at
+most `t_D`, fewer than `M/Lambda` edges can have deficit greater than
+
+\[
+\frac{\Lambda t_D}{M}.
+\]
+
+Therefore the `SQRT-UPPER` branch contains a submatching of size
+
+\[
+\boxed{
+\left((1-\Lambda^{-1})C_K-o(1)\right)\sqrt D
+}
+\tag{BF.22}
+\]
+
+whose every edge satisfies
+
+\[
+\boxed{
+D-|x-y|
+\le
+\left(\frac{\Lambda h_*}{C_K}+o(1)\right)D^{-1/2}.
+}
+\tag{BF.23}
+\]
+
+For `K=1,Lambda=2`, this gives at least
+
+\[
+(0.0327689261963812\ldots-o(1))\sqrt D
+\]
+
+vertex-disjoint pairs with
+
+\[
+D-|x-y|
+\le
+(10.21540902289523\ldots+o(1))D^{-1/2}.
+\]
+
+The aggregate statement BF.20 is preferable whenever a later argument can use a total
+slack ledger rather than an edgewise threshold.
+
+## 6. Supercritical upper counts automatically produce a crossing subbraid
+
+There is a further strengthening away from the critical `sqrt(D)` scale. Suppose one
+of the two extreme ancestries has `U` upper gates with
+
+\[
+U/\sqrt D\to\infty.
+\]
+
+Using the preceding Markov argument on one parity gives a matching of `Omega(U)`
+original edges of length
+
+\[
+D-O(1/U).
+\]
+
+Apply the existing bounded-conflict crossing-extraction theorem for a matching of
+edges of length at least `L`. Its conflict degree is
+
+\[
+O\!\left(1+D(D-L)\right)=O(1+D/U).
+\]
+
+Hence the upper matching contains a pairwise properly crossing submatching of size
+
+\[
+\boxed{
+\Omega\!\left(\frac{U}{1+D/U}\right)
+=
+\Omega\!\left(\frac{U^2}{D+U}\right).
+}
+\tag{BF.24}
+\]
+
+In particular, if `U=omega(sqrt(D))`, this crossing submatching diverges. This does not
+improve the critical square-root branch, where the guaranteed crossing submatching can
+remain bounded.
+
+## 7. What remains
+
+This theorem removes the last `Z_D` assumption from the fixed-pair heavy-reuse
+bookkeeping. A large external population is no longer needed to absorb the forest
+component correction: the actual upper gates that create those components are charged
+directly at the opposite metric boundary.
+
+It still does not close C-II. The surviving source-level obstructions are now all
+explicit and at least square-root scale:
+
+- a linear inverse-`D` outer-face lower matching;
+- square-root many bounded faces in a plane union of two inactive lower-run forests;
+- a square-root common lower trunk with actual Euclidean drift in a two-normal axis;
+- or a square-root near-diameter matching with bounded total diameter deficit, with a
+  diverging crossing subbraid whenever the upper count is supercritical.
+
+The missing step is to convert one of these source-level objects into the canonical
+loaded-hull/outer-walk currency, an exact diameter anchor, or a source-preserving strict
+competitor. Further external-population pigeonholing is not needed for this fixed-pair
+route.
+
+C-II and Level I remain open. No theorem-state authority is changed.
+
+**Disposition:** coupled the exact two-forest Euler correction to the same ancestries'
+upper-gate defect budget; kept an entire upper-edge parity matching rather than paying a
+Markov loss; solved the resulting three-way minimax; removed every external-population
+assumption from the fixed extreme-pair heavy-reuse obstruction; and quantified the
+critical near-diameter aggregate-defect branch.

@@ -1,0 +1,254 @@
+# Erdos Problem #99 - empty-pentagon trapezoid endpoint
+
+**Date:** 2026-09-14
+**Target:** C-II, canonical full-core Type-II branch
+**Dependencies:** AG42/Section-171 face floor; exact force-hull residual conservation; Wegner residual quantization; Groemer equality classification
+**Claim class:** proof-only structural endpoint awaiting independent audit
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+Put
+
+\[
+X:=Q-f,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+f_*:=\sqrt{\Delta_2}-{\pi\over4}+0.00021
+=0.167124643466509\ldots .
+\tag{PT.1}
+\]
+
+This note identifies the simultaneous small-residual/small-degree-excess endpoint:
+
+\[
+\boxed{
+R_F=o(D),\quad Q-f=o(D)
+\Longrightarrow
+\text{at least }(f_*-o(1))D\text{ exceptional pentagons are }o(1)
+\text{-close to one flat unit trapezoid.}
+}
+\tag{PT.2}
+\]
+
+These pentagons have no assigned interior isolate and zero fixed-boundary spare
+capacity. A pairwise vertex-disjoint subfamily has size at least
+
+\[
+\boxed{
+\left({f_*\over21}-o(1)\right)D
+=(0.007958316\ldots-o(1))D.
+}
+\tag{PT.3}
+\]
+
+Every member has one almost-flat boundary vertex and two hidden diagonals from that
+vertex of length `1+o(1)`.
+
+## 1. Classify the zero-residual empty pentagon
+
+Let `P=(p_1,...,p_5)` be a convex equilateral unit-separated pentagon, allowing
+collinearity in the closure, with no assigned interior source point. Its canonical
+fixed-boundary residual is
+
+\[
+r(P)={A(P)\over a_0}-{3\over2},
+\qquad a_0={\sqrt3\over2}.
+\tag{PT.4}
+\]
+
+Assume `r(P)=0`. Then `A(P)=3sqrt(3)/4` and `per(P)=5`, so this is equality in the
+scaled Oler/Wegner inequality. Hence the five points form a Groemer packing and admit
+a triangulation by unit equilateral triangles. After one rigid motion they lie in one
+unit triangular lattice.
+
+Let the five oriented cyclic boundary edge vectors be `e_i=p_{i+1}-p_i`. Every `e_i`
+is one of the six unit triangular-lattice directions and `sum e_i=0`. Let `n_j` count
+the edges in direction `j*pi/3`, `j=0,...,5`, and put
+
+\[
+a=n_0-n_3,
+\qquad b=n_1-n_4,
+\qquad c=n_2-n_5.
+\]
+
+With `u_0=(1,0)`, `u_1=(1/2,sqrt(3)/2)`, and `u_2=u_1-u_0`, vector closure gives
+
+\[
+a u_0+b u_1+c u_2=0,
+\]
+
+hence
+
+\[
+a=c=-b=:t.
+\tag{PT.5}
+\]
+
+Each opposite-direction pair sum has the same parity as its difference. The three pair
+sums total five, so `t` is odd. They are each at least `|t|`, so `3|t|<=5` and
+therefore `t=+/-1`.
+
+For `t=1`, the counts are one copy of the 120-degree triple of directions `{0,2,4}`
+plus opposite pairs. Since there are only five edges, there is exactly one opposite
+pair. The `t=-1` case is the rotated complementary triple. Thus, up to rotation and
+reflection, the direction multiset is
+
+\[
+\boxed{\{0,0,2\pi/3,\pi,4\pi/3\}.}
+\tag{PT.6}
+\]
+
+Convex cyclic order forces this angular order. Integrating the five unit vectors gives
+
+\[
+(0,0),\ (1,0),\ (2,0),\
+\left({3\over2},{\sqrt3\over2}\right),\
+\left({1\over2},{\sqrt3\over2}\right).
+\tag{PT.7}
+\]
+
+### Theorem PT.1 - unique empty-pentagon equality shape
+
+Every zero-residual isolate-free unit equilateral pentagon is congruent, as a cyclic
+five-point configuration, to (PT.7). It is the flat unit equilateral trapezoid with
+long base two, short base one, and unit legs.
+
+The middle point `(1,0)` on the long base has straight boundary angle `pi` and unit
+hidden diagonals to both top vertices. The five boundary edge projective directions
+have multiplicities `3,1,1` on three axes separated by `pi/3`.
+
+## 2. Uniform stability toward the trapezoid
+
+For every `epsilon>0` there is `tau_trap(epsilon)>0` such that every isolate-free
+canonical pentagonal exceptional face with
+
+\[
+r(P)<\tau_{trap}(\epsilon)
+\]
+
+is `epsilon`-close, after a rigid motion, cyclic relabeling, and reflection, to (PT.7).
+
+Indeed, otherwise a normalized counterexample sequence with residual tending to zero
+would have a compact limit. The limit has residual zero and is congruent to (PT.7) by
+Theorem PT.1, contradicting the fixed separation from its orbit.
+
+## 3. The hard global endpoint is linearly pentagonal
+
+Let `n_d` be the number of bounded exceptional faces of degree `d>=5`. Then
+
+\[
+X=Q-f=\sum_{d\ge6}(d-5)n_d,
+\tag{PT.8}
+\]
+
+so the number of nonpentagonal exceptional faces obeys `N_{>=6}<=X`. On a subsequence
+with `X=o(D)`, the AG42/Section-171 face floor gives
+
+\[
+p_5:=n_5=f-N_{\ge6}\ge(f_*-o(1))D.
+\tag{PT.9}
+\]
+
+Assume also `R_F=o(D)`. Let
+
+\[
+\kappa={1\over\sqrt3}-{1\over2}>0
+\]
+
+be the first Wegner residual jump. For a pentagon, Wegner quantization gives
+
+\[
+r(P)<\kappa\quad\Longrightarrow\quad z(P)=0.
+\tag{PT.10}
+\]
+
+The contact-wall capacity theorem then gives `M_partial(P)=z(P)=0`.
+
+Fix `epsilon>0` and set
+
+\[
+\theta(\epsilon)=\min\{\kappa,\tau_{trap}(\epsilon)\}>0.
+\]
+
+All face residuals are nonnegative and sum to `R_F`, so at most
+`R_F/theta(epsilon)=o(D)` pentagons have residual at least `theta(epsilon)`. Combining
+with (PT.9), at least `(f_*-o(1))D` pentagons simultaneously have
+
+1. no assigned interior isolate;
+2. zero fixed-boundary spare capacity;
+3. `epsilon`-closeness to the flat trapezoid (PT.7).
+
+Because this holds for every fixed `epsilon`, a standard diagonal choice yields
+`epsilon_D->0` while retaining the same first-order count. This proves (PT.2).
+
+## 4. Extract linearly many vertex-disjoint pentagonal teeth
+
+Build the conflict graph on the good pentagons, joining two when their boundary vertex
+sets meet. A triangle-free unit-contact graph has contact degree at most five. Thus a
+fixed boundary vertex belongs to at most five distinct bounded faces. A pentagon has
+five boundary vertices, and through each vertex at most four other selected pentagons
+can conflict with it. Hence
+
+\[
+\Delta(G_{face})\le20.
+\tag{PT.11}
+\]
+
+A greedy independent set keeps at least one twenty-first of the good pentagons. This
+proves (PT.3).
+
+## 5. Exact geometric normal form
+
+For every extracted pentagon label the almost-flat vertex `m`, the two adjacent
+long-base endpoints `l,r`, and the two opposite top vertices `a,b` according to the
+nearest copy of (PT.7). The five boundary sides remain exact unit contacts, while
+
+\[
+|m-a|=1+o(1),
+\qquad
+|m-b|=1+o(1),
+\tag{PT.12}
+\]
+
+with both distances strictly greater than one in every actual triangle-free source,
+and
+
+\[
+\angle lmr=\pi-o(1).
+\tag{PT.13}
+\]
+
+The five boundary terminal directions collapse to three triangular-lattice projective
+axes with multiplicities `3,1,1`.
+
+Thus the simultaneous small-`R_F`, small-`Q-f` corner has a concrete local model:
+
+```text
+Omega(D) empty pentagonal holes,
+  -> fixed-boundary capacity exactly saturated,
+  -> each hole is an o(1) perturbation of one three-triangle lattice trapezoid,
+  -> one almost-flat contact-chain vertex,
+  -> two missing triangle edges at length 1+o(1),
+  -> three local train-direction axes with multiplicities 3,1,1.
+```
+
+This is stronger than the generic anchored-Groemer conclusion because the third
+near-triangle vertices are positive-core boundary vertices, not assigned contact
+isolates, and the entire five-point face shape is classified.
+
+## 6. What remains
+
+This theorem does not turn either hidden `1+o(1)` diagonal into an exact contact.
+Contact minimality does not forbid adding contacts at fixed diameter, near-active
+constraints do not automatically receive positive KKT multipliers, and fixed-wall
+cardinality saturation is not local rigidity.
+
+The next source-level gate is specific: prove that a linear vertex-disjoint family of
+these near-flat, externally braced pentagonal teeth cannot coexist with the full-core
+KKT/diameter framework unless one hidden diagonal activates exactly or there is a
+same-cardinality strict diameter decrease.
+
+C-II and Level I remain open.

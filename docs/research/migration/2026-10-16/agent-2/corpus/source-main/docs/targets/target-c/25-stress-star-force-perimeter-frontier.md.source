@@ -1,0 +1,43 @@
+# Target C — stress-star reciprocal-perimeter frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_stress_star_force_perimeter_2026-08-31.md](../../reports/target_c_stress_star_force_perimeter_2026-08-31.md).
+
+## C69 — star mass separates the reciprocal perimeter from its lower endpoint
+
+For a diameter vertex `z`, let
+
+`S_z=sum_(e incident z) beta_e`.
+
+The C14 sixty-degree diameter cone gives the generic local reaction bound
+
+`|g_b| >= (sqrt(3)/2) D s_b`.
+
+A neighbor `k` of `z` has the stronger bound
+
+`|g_k| >= D(beta_zk + (s_k-beta_zk)/2)`,
+
+because every other diameter vector at `k` makes angle at most 60 degrees with the star vector `k-z`.
+
+Summing the center, star neighbors, and all remaining diameter endpoints gives the exact estimate
+
+`P_*/D >= 1 + (sqrt(3)/2) S_z`.
+
+C66 supplies a star center with
+
+`S_z >= 1-(2pi/kappa_0)D epsilon`.
+
+Therefore
+
+`P_* >= (1+sqrt(3)/2)D - (sqrt(3)pi/kappa_0)D^2 epsilon`.
+
+In particular, if `D epsilon ->0`, then
+
+`liminf P_*/D >= 1+sqrt(3)/2 = 1.8660254037...`.
+
+Thus the surviving stress-star phase is separated by a fixed amount from C14's lower reciprocal-perimeter endpoint `sqrt(3)D`. It still lies below the universal upper endpoint `2D`, so this is not itself a contradiction.
+
+## Next target
+
+C68 remains the sharper mechanical route. Combine its radial angular-energy defect with near-quadrangulation or another source-level condition to prevent the remaining high-perimeter, highly anisotropic unit-contact carrier.

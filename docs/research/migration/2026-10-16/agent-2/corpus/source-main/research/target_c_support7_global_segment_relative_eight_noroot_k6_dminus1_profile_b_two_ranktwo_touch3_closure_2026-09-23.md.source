@@ -1,0 +1,245 @@
+# Target C: eliminate the two-rank-two singleton branch of Profile B
+
+Date: 2026-09-23
+
+Status: rigorous closure of the remaining Profile B subcase with two rank-two local-empty singleton blocks. Combined with the previously proved global upper bound of two, every genuine remaining eight-no-root `k=6,D=-1,p=9` Profile B source has at most one rank-two singleton block and therefore at least eight aligned singleton blocks. This does not close Profile B or Target C-II.
+
+Companion exact certificate:
+
+`research/verify_target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_two_ranktwo_touch3_closure_2026_09_23.py`
+
+The inputs are already proved in the repository:
+
+```text
+rank(P)=2,
+d_1(P)>=4,
+exactly nine singleton changed blocks,
+at most two rank-two local-empty singleton blocks,
+```
+
+and every genuine remaining Profile B source has a dependency-active aligned singleton block `b` touched by exactly three source cycles. If `T` is that three-coordinate touch set, then deleting `T` gives the distinguished rank-preserving `d_5=2` puncture from the touch-three kernel witness.
+
+Assume for contradiction that there are two rank-two singleton blocks `c,d`. Let their nonzero coefficient lines be `L_c,L_d <= P`. They are distinct and span `P`.
+
+## 1. The forced touch-three set contains a coefficient-zero column
+
+The three selected cycles in `T` lie in one aligned local direction star of `b`.
+
+The previously proved line-star intersection bound says that the support of a rank-two singleton coefficient line meets any distinct aligned star in at most one source coordinate. Hence
+
+```text
+|supp(L_c) intersect T| <= 1,
+|supp(L_d) intersect T| <= 1.
+```
+
+Each line is therefore zero on at least two of the three coordinates of `T`. Two subsets of a three-set, each of size at least two, intersect. Thus some coordinate of `T` is zero for both independent lines `L_c,L_d`. Since those lines span the rank-two plane `P`, that coordinate is a zero column of `P`.
+
+Consequently
+
+```text
+d_2(P) <= 7.                                      (1.1)
+```
+
+The singleton-line sharpening already proves that `d_2(P)=5` permits at most one rank-two singleton block. Since two are assumed, only
+
+```text
+d_2(P) in {6,7}                                  (1.2)
+```
+
+remains. This removes `d_2(P)=8` without computation.
+
+## 2. The `d_2(P)=7` branch reduces to one common-two-set census
+
+Suppose `d_2(P)=7`. There is exactly one coefficient-zero column, and by Section 1 it lies in `T`.
+
+The two rank-two coefficient lines cannot use the same nonzero coordinate of `T`: otherwise the other two coordinates of `T` would both be zero for both lines, giving two zero columns. Thus, after ordering the lines, the three positions of `T` have support signatures
+
+```text
+c-only, d-only, zero.                              (2.1)
+```
+
+Let `m_c,m_d` be the multiplicities of the two projective column classes killed by `L_c,L_d`. The sharpened projective-column inequality gives
+
+```text
+m_c,m_d <= 3,
+m_c+m_d >= 5.
+```
+
+Thus, up to ordering,
+
+```text
+(m_c,m_d) in {(3,3),(2,3),(3,2)}.
+```
+
+Their support intersection has size
+
+```text
+7-m_c-m_d in {1,2},
+```
+
+so it is nonempty. Therefore the root triples of `c,d` share two vertices. The `c`-only and `d`-only coordinates in `T` show that each of `c,d` also shares two root vertices with `b`. Hence `b,c,d` are three distinct pairwise two-intersecting triples.
+
+As in the preceding touch-four closure, the tetrahedral-face type is impossible. In that type all three root pairs use one four-set, while one aligned star of `b` contains only one orientation on that four-set; (2.1) requires two distinct star coordinates, one meeting `c` and one meeting `d`.
+
+The only incidence type is therefore the common-two-set type. Up to `S_7`, normalize
+
+```text
+b=123,
+c=124,
+d=125.
+```
+
+The outside-vertex permutation normalizes the three selected star members and omitted fourth member as
+
+```text
+fourth 4: c-only,
+fourth 5: d-only,
+fourth 6: zero,
+fourth 7: omitted.
+```
+
+The certificate enumerates all three local directions at each of `b,c,d`, all three projective multiplicity possibilities above, and every five-cycle completion outside the `b`-star consistent with the resulting support counts. It then checks exactly over `Q`:
+
+1. `rank(P)=2`;
+2. `d_2(P)=7` and `d_1(P)>=4`;
+3. local empty ranks `1,2,2` at `b,c,d`;
+4. the chosen aligned/rank-two singleton constraints are contained in `P` while the empty spaces are not;
+5. the exact virtual-canonical source deficiency `d_8`.
+
+Exactly
+
+```text
+1188
+```
+
+normalized coefficient/source states survive these necessary local conditions, with deficiency histogram
+
+```text
+d_8=6: 384
+d_8=7: 608
+d_8=8: 196.
+```
+
+There is no `d_8=3` state. Hence `d_2(P)=7` is impossible in the two-rank-two branch.
+
+## 3. Structure when `d_2(P)=6`
+
+Now suppose `d_2(P)=6`. There are exactly two coefficient-zero columns.
+
+The minimum-distance bound gives projective multiplicity at most two, while the pairwise singleton-line inequality gives
+
+```text
+m_c+m_d >= 4.
+```
+
+Hence
+
+```text
+m_c=m_d=2,
+wt(L_c)=wt(L_d)=4,
+|supp(L_c) intersect supp(L_d)|=2.                (3.1)
+```
+
+There are two cases according to how many of the two global zero columns lie in `T`.
+
+### 3.1 Exactly one zero column lies in `T`
+
+Then the same argument as in Section 2 forces the signatures on `T` to be
+
+```text
+c-only, d-only, zero.
+```
+
+The support intersection in (3.1) is nonempty, so again `b,c,d` are pairwise two-intersecting and the tetrahedral type is impossible. Normalize the same common-two-set geometry `123,124,125`.
+
+Outside `T`, (3.1) forces exactly
+
+```text
+2 both,
+1 c-only,
+1 d-only,
+1 zero
+```
+
+among the five selected cycles avoiding `b`.
+
+The exact normalized census contains
+
+```text
+5312
+```
+
+states satisfying the local rank, coefficient-distance, and virtual-completeness conditions. Their deficiency histogram is
+
+```text
+d_8=6:  192
+d_8=7: 4448
+d_8=8:  480
+d_8=9:  144
+d_8=10:  48.
+```
+
+Again there is no `d_8=3` state.
+
+### 3.2 Both zero columns lie in `T`
+
+The third coordinate of `T` is nonzero. It is either in both coefficient-line supports or in exactly one of them.
+
+If it lies in both supports, then `b,c,d` are three faces of its four-set. Every no-root cycle touching both `c,d` then lies on that same four-set and therefore also touches `b`. But (3.1) requires two common-support coordinates, while only one lies in `T` and every other selected source cycle avoids `b`. Contradiction. The certificate independently checks this as zero available outside-`b` `both` cycles for every normalized local-direction pattern.
+
+It remains, up to swapping `c,d`, that the unique nonzero coordinate of `T` is `c`-only. Normalize the omitted star member to fourth vertex 7 and the nonzero member to fourth vertex 4. The certificate deliberately does not normalize the remaining root geometry further: it enumerates every possible `c` face of that four-set and every root block `d` sharing two vertices with `c`, together with all local singleton directions.
+
+Outside `T`, equation (3.1) forces
+
+```text
+2 both,
+1 c-only,
+2 d-only,
+0 zero.
+```
+
+The exact census contains
+
+```text
+7200
+```
+
+states satisfying all necessary local conditions. Their deficiency histogram is
+
+```text
+d_8=6: 1536
+d_8=7: 5664.
+```
+
+There is no `d_8=3` state. The `d`-only version is the same census after interchanging the two rank-two lines.
+
+Thus `d_2(P)=6` is also impossible in the two-rank-two branch.
+
+## 4. Consequence
+
+Sections 1--3 exclude every possible coefficient support size for a genuine source with two rank-two singleton blocks. Therefore
+
+```text
+number of rank-two local-empty singleton blocks <= 1.     (4.1)
+```
+
+Since Profile B has exactly nine singleton changed blocks,
+
+```text
+number of aligned singleton blocks >= 8.                  (4.2)
+```
+
+The nine source replacement classes form a basis of the nine-dimensional source quotient and `L=W^perp` has dimension six. Hence at least three source classes are dependency-active. At most one of those active classes can belong to a rank-two singleton block, so at least two dependency-active singleton blocks are aligned.
+
+Every dependency-active aligned block has source touch count three or four. The preceding touch-four-alternative closure already proves that at least one has touch count three. Therefore every remaining Profile B source now has one of the sharper forms:
+
+1. at least two dependency-active aligned touch-three blocks, giving at least two distinct distinguished `d_5=2` deletion triples and two coordinate-split kernels `K_T=E_T direct-sum <q_j>`; or
+2. one dependency-active aligned touch-three block and at least one additional dependency-active aligned touch-four block.
+
+This is the next source-level split to attack. Profile B and Target C-II remain open.
+
+## 5. Computational status
+
+The counts above were independently reproduced with exact rational arithmetic from the committed K8 four-cycle normal form: the 105 no-root cycles, the 35 root blocks, local quotient components `QCOMP`, singleton determinant rows, virtual-canonical complete-set rule, and complete-block deficiency rank. No finite-field rank decision, random sampling, GitHub Actions, or external runner result is used.
+
+The companion verifier encodes the same normalized finite cases so that the calculation is auditable from the repository.

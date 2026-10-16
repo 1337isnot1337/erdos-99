@@ -1,0 +1,367 @@
+<!-- theorem-state: {"artifact_id":"ART-62A2D6B46BE6","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C — a fully ported single-chart collar forces nonunit loaded sides
+
+```text
+one actual chart for the entire unloaded component + a port at every loaded vertex
+ -> k <= 2 and q <= 2 m_B + O(D^(2/3) + D epsilon + 1)
+ -> exclude the zero/one-nonunit-side collar as epsilon -> 0
+ -> a general C-II closure still needs a chart theorem or a finite competitor
+    for the surviving linear family of nonunit sides.
+```
+
+Date: 2026-10-02. Starting HEAD: `3bad7c12bf5133665be466d0396362108fadef2c`.
+State version: `2026-09-14.audit.51`.
+Owned branch: `swarm/sol/lattice-collar-charge-20261002`.
+Mission: push the latest one-chart, one-port loaded collar beyond leaf and
+two-port capacity. No assignment, open PR, or coordination issue was present
+in the fetched GitHub state. The initial gap-cycle mission was narrowed after
+checking the current nested-bundle and collar reports.
+Classification: **proved candidate awaiting independent audit/promotion**;
+artifact lifecycle **unreviewed**. Application is **conditional** on the
+explicit actual-source chart and port hypotheses. The six-point construction
+below is an exact **regression**. Level I and C-II remain **OPEN**.
+
+## 1. Exact theorem and dependencies
+
+Use a canonical contact-minimal, then diameter-pair-minimal triangle-free
+global minimizer, retaining every source point. Work in the full-core near-disk
+branch, for sufficiently large diameter D. Let B be the q actual loaded vertices,
+F their convex hull, m_B its number of nonunit sides, Q the bounded contact-face
+excess, and k=d_H+s_Z. Make these additional source hypotheses:
+
+1. There is exactly one unloaded positive-contact component I.
+2. Every b in B has at least one unit neighbor in I.
+3. All points of I belong to one **actual** chart
+   Lambda=t+Z u+Z v, with |u|=|v|=1 and u.v=1/2-epsilon,
+   where 0<epsilon<=1/50.
+
+No hypothesis identifies the loaded points themselves with this chart.
+Contacts between loaded points are allowed, with their original positive
+weights. Contact-isolated source points remain in the full configuration.
+
+**Theorem SC.** With u_B=x_B-m_B as in Section 63,
+
+\[
+ 2k+u_B\le4,\qquad
+ q\le2m_B+36D^{2/3}+240D\epsilon+129.                 \tag{SC.1}
+\]
+
+In particular, along any such sequence with epsilon -> 0,
+
+\[
+ m_B\ge q/2-o(D).                                  \tag{SC.2}
+\]
+
+The subcase m_B=0 is impossible already by the finite face ledger.
+The subcase m_B<=1 is impossible for all sufficiently large members of a
+sequence with epsilon -> 0, because canonical q>=h>=ceil(D).
+
+Canonical inputs, used at their exact scopes, are:
+
+- [C-ZRF](../targets/target-c/57-zr-zf-rigidity-audit.md): mixed rigidity and
+  positive-core ledgers; the affine kernel is not extended to isolates.
+- [Section 63](../targets/target-c/63-loaded-hull-slack-audit.md):
+  e_BB=Q+2k+u_B+c_B and x_B>=m_B.
+- [C-COMP-DEATOMIZATION](../targets/target-c/75-all-phase-component-deatomization-audit.md):
+  c_I+s_C=m_B+k-2 when c_B=0.
+- [C-HARMONIC-CARRIER-QUAD](../targets/target-c/82-harmonic-cell-near-quadrangulation-audit.md),
+  Lemma 82.1/Corollary 82.2: convex local faces and strict unit rhombi.
+- [C-FULLCORE-LOADED-CHORD](target_c_fullcore_loaded_chord_elimination_2026-09-14.md):
+  c_B=0 and e_BB=q-m_B in this branch.
+- [Theory 01](../theory/01-local-structure.md): actual diameter endpoint support,
+  positive unloaded equilibrium, and unloaded degree at least three.
+
+The current [single-chart endpoint packet](target_c_diameter_ball_hull_lattice_discrepancy_2026-10-02.md)
+motivated the attack. None of its Fourier/lattice capacity claims is a premise:
+the exact-chart count needed here has the elementary proof in Section 5.
+The nested-bundle, threshold, and midpoint reports were inspected but are not
+premises. No new literature theorem is imported.
+
+## 2. Endpoint turning and a quantitative four-point lemma
+
+### Lemma SC.2 — every loaded hull vertex pays at least 1/D turning
+
+For an actual diameter endpoint p with partner y put n=(p-y)/D. For every
+other source point z,
+
+\[
+ n\cdot(z-p)\le-|z-p|^2/(2D).                       \tag{2}
+\]
+
+Let t_- and t_+ be incoming and outgoing unit tangents of the loaded hull
+at p, with adjacent side lengths a,b>=1 and exterior turn phi. Then
+
+\[
+ n\cdot(t_--t_+)\ge(a+b)/(2D)\ge1/D.
+\]
+
+Since |t_--t_+|=2 sin(phi/2), phi>=2 asin(1/(2D))>=1/D.
+Consequently an oriented angular window of width eta contains at most
+1+D eta loaded hull side directions. The same statement holds for a selected
+subset of sides: all intervening turns are still counted. Inequality (2)
+also gives strict exposure, so collinear loaded hull vertices do not occur.
+
+### Lemma SC.3 — three unit edges with a nearly unit anchor step
+
+Let l,p,q,a be four distinct unit-separated source points with
+|l-p|=|p-q|=|q-a|=1 and |a-l|=1+delta, 0<=delta<=1/25. Then
+
+\[
+ |(q-p)-(a-l)|\le4\delta.                          \tag{3}
+\]
+
+Proof: translate l=0 and write z=(1+delta)^2-1, d=|p-a|.
+Here 1<=d<=2. The intersections of the unit circles centered at p,a have
+midpoint c=(p+a)/2 and height h=sqrt(1-d^2/4). With the first coordinate
+parallel to p-a and the second chosen so c has nonnegative second coordinate,
+write c=(A,B). Direct calculation gives
+
+\[
+ A=-z/(2d),\qquad B^2=h^2+z/2-A^2.
+\]
+
+Since 0<=z<1/10 and d>=1, B>=h. If h<=1/4, both intersections have norm
+at most z/2+2h+sqrt(z/2)<1, contradicting separation from l. Thus h>1/4.
+Also 0<=B-h=(z/2-A^2)/(B+h)<=z. The low intersection (A,B-h) has norm
+at most 3z/2<1 and cannot be q. The high intersection is q; the two
+intersections sum to p+a. Hence the error in (3) equals the norm of the low
+intersection and is at most 3z/2<4delta. The z=0 case has zero error. QED.
+
+The unit direction of q-p therefore differs in angle from that of a-l by
+at most 10delta: their unit-vector distance is at most 5delta, and
+2 asin(5delta/2)<=10delta in the stated range.
+
+In the chart of Section 1 the vectors of length at most 1+epsilon are
+exactly +/-u, +/-v, +/- (u-v). To check this, the Gram eigenvalue bound
+|i u+j v|^2>=(i^2+j^2)/2 reduces this range to i^2+j^2<=2. The vector
+u+v has length sqrt(3-2epsilon)>1+epsilon. Also
+|u-v|=sqrt(1+2epsilon)<=1+epsilon.
+
+Thus the loaded unit edges whose two chosen chart ports have one of these
+six anchor steps lie in six angular windows of width 20epsilon. Lemma SC.2
+bounds their number S by
+
+\[
+ S\le6+120D\epsilon.                               \tag{4}
+\]
+
+This estimate applies also when additional, unselected contacts exist.
+
+## 3. One component makes the face charge injective
+
+Temporarily remove the loaded-loaded edges, leaving G_0 on I union B.
+Because I is connected and every loaded vertex has a port into I, deleting
+any loaded vertex leaves G_0 connected. Each loaded vertex therefore has
+one occurrence on the outer walk, in hull cyclic order. The banks between
+successive loaded occurrences contain no other loaded vertex.
+
+Adding the hull sides to G_0 cuts off the corresponding bank pockets.
+These pockets have disjoint interiors and each has exactly one hull side.
+Here is the separation argument for the other bounded faces. Lemma 82.1
+applied with all loaded-loaded edges removed makes every old bounded face
+of G_0 a simple convex polygon. If one such polygon touched two or more
+loaded hull vertices, each of its cyclic arcs between consecutive loaded
+vertices would contain an I vertex, because G_0 has no loaded-loaded edge.
+The polygon touches the boundary of F at those loaded vertices. Its
+different arcs belong to different complementary caps: a path in F joining
+two of those arcs outside the face would have to pass through a touched
+hull vertex or enter the face. This is the Jordan separation of a disk by
+an interior crosscut, applied successively to the touched hull vertices.
+An I path may do neither: it avoids B and the interior of every graph face.
+Thus I would be disconnected. Every bounded G_0 face has at most one B
+vertex. Adding one hull side cuts off the corresponding bank, whose path
+contains only its two terminal B vertices. Adding other hull sides cannot
+alter an already bounded pocket. Unloaded articulation occurrences need
+not be identified. Lemma 82.1 makes each resulting face cycle simple and
+convex.
+
+In particular each actual loaded unit hull side borders its own bounded
+contact face, containing precisely its two loaded endpoints. Two different
+such sides cannot charge the same face. A quadrilateral of this kind has
+two remaining vertices a,b in I, and is a unit rhombus. Its loaded side is
+parallel, with the same unit length, to the chart contact ab. For the strict
+chart angle in Section 1, its only unit vectors are +/-u and +/-v.
+A strictly convex polygon has at most one side in each oriented direction.
+Let t be the number of these boundary quadrilaterals. Then t<=4.
+
+Every other loaded unit side charges a different face of degree at least
+five. Define the exact nonnegative remainder
+
+\[
+ R=\sum_{\text{nonquadrilateral faces not charged to a loaded unit side}}
+       (\deg f-4)
+   +\sum_{\text{charged nonquadrilateral faces}}(\deg f-5).
+\]
+
+Consequently Q=e_BB-t+R. Section 63, with c_B=0, gives
+
+\[
+ R=t-2k-u_B,\qquad 2k+u_B\le t\le4.                 \tag{5}
+\]
+
+Thus R<=4. At most four charged faces have degree >=6; at most four
+nonquadrilateral faces are not charged to loaded unit sides.
+If m_B=0, Section 75 gives k=s_C+3>=3, contradicting (5).
+
+## 4. Multiple ports and regular pentagons
+
+Let T count loaded vertices with at least two neighbors in I. The sector
+between two consecutive inward ports at such a vertex borders a bounded
+face of G_0, so it has no loaded hull side and no other loaded vertex.
+If this face is a quadrilateral, its three I vertices are chart points,
+and the parallelogram identity puts its loaded vertex in Lambda exactly.
+If all its available sectors are nonquadrilateral, assign one such face
+to the vertex. This assignment is injective, and (5) allows at most four.
+Therefore T is at most the number of loaded chart points plus four.
+
+Discard from the loaded unit edges those incident to one of these T
+vertices, those with quadrilateral or degree >=6 charged face, and those
+with the short anchor steps in (4). At most
+
+\[
+ B_{bad}\le2T+8+S                                  \tag{6}
+\]
+
+edges are discarded. Each remaining edge is a regular pentagon side,
+with boundary p,q,b,c,a,p, where a,b,c belong to I and a,b are the
+unique chart ports of p,q. The two chart edges from a to b through c
+have axis directions +/-u or +/-v. Equal-axis steps would make c a
+straight unloaded face vertex. Positive equilibrium would then force all
+its neighbors onto that line, violating unloaded degree >=3. Backtracking
+would repeat a face vertex. The opposite-axis sum u-v is already removed.
+Thus, with the boundary orientation retained, every regular edge has
+
+\[
+ l(q)-l(p)\in\{d,-d\},\qquad d=u+v,
+ \quad |d|=\sqrt{3-2\epsilon}>5/3.                 \tag{7}
+\]
+
+### A further push: every consecutive regular pair spends a fixed hull turn
+
+Write p_{i+1}-p_i=t_i, |t_i|=1, and w_i=p_i-l(p_i), |w_i|=1.
+If two successive anchor steps are both d (or both -d), then
+w_{i+1}-w_i=t_i-d and w_{i+2}-w_{i+1}=t_{i+1}-d. The unit-norm
+identities imply
+
+\[
+ w_{i+1}\cdot(t_i-t_{i+1})
+  =\tfrac12(|t_i-d|^2+|t_{i+1}-d|^2)
+  \ge(|d|-1)^2>1/2.                                \tag{8}
+\]
+
+Hence the hull turn there is greater than 1/2 radian. If the anchor
+steps have opposite signs, l(p_i)=l(p_{i+2}). The four contacts form
+a strict unit rhombus on p_i,p_{i+1},p_{i+2},l(p_i), so the exterior
+hull turn at p_{i+1} is greater than pi/3, again greater than 1/2.
+There are at most twelve consecutive regular pairs on the whole hull.
+
+Removing m_B nonunit sides and B_bad discarded unit sides leaves at
+most m_B+B_bad+1 regular runs (the extra one covers a cyclic run).
+The number of regular edges is their number of runs plus their number
+of consecutive pairs. Thus
+
+\[
+ e_{BB}\le m_B+2B_{bad}+13
+          \le m_B+4T+2S+29.                         \tag{9}
+\]
+
+The earlier, weaker attempt used only the impossibility of three
+constant-sign anchor steps, and gave m_B>=q/3-o(D). Identity (8)
+repairs that loss: even a pair of such steps consumes a fixed turn.
+
+## 5. Exact-chart capacity without a Fourier premise
+
+Let N loaded vertices belong exactly to Lambda. Their convex hull has
+perimeter <=pi D and distinct oriented lattice side vectors. The lattice
+has minimum spacing one. Disjoint radius-1/2 disks show that the number
+of lattice vectors of norm <=r is at most 4(r+1/2)^2<=9r^2 for r>=1.
+For N>=18 set r=sqrt(N/18). At most N/2 of the distinct side vectors
+have norm <=r. Therefore
+
+\[
+ \pi D\ge N^{3/2}/(2\sqrt{18}).
+\]
+
+Using 2 sqrt(18) pi<27 gives N<=9D^(2/3). The smaller values of N,
+including a segment or singleton hull, are covered by
+N<=18+9D^(2/3). Hence
+
+\[
+ T\le22+9D^{2/3}.                                  \tag{10}
+\]
+
+Combine e_BB=q-m_B, (4), (9), and (10) to get (SC.1).
+This count is about actual endpoints in an actual chart; it does not
+round off-chart ports, assume a uniform multiplier, or require global
+optimality of a numerical example.
+
+## 6. Push to the remaining source branch, and an exact regression
+
+The resulting collar is asymptotically separated into isolated loaded unit
+edges and nonunit hull sides, with k<=2. The canonical component identity
+gives s_C=m_B+k-3. Therefore the remaining escape is a **linear nonunit-side
+and pinned-surplus collar**, not a private diameter-tree leaf.
+For comparison with the exact canonical quantity, the loaded-chord ledger
+gives mu_D D=q+m_B-k-6 here. Section 75 gives liminf q/D>=2rho,
+rho=cos(rho), so this conditional branch has liminf mu_D>=3rho.
+There is no conflicting upper bound; the substantive result is the forced
+nonunit-side population and the exclusion of the small-gap collars.
+
+The obvious stronger assertion that a long-anchor unit edge is impossible
+even with actual diameter endpoints is false. Put
+
+\[
+ h=\sqrt{\sqrt3/2},\quad
+ l=(-\sqrt3/2,0),\ a=(\sqrt3/2,0),\quad
+ p=(-1/2,h),\ q=(1/2,h),
+\]
+
+and include p'=(-1/2,h-10), q'=(1/2,h-10).
+The diameter is sqrt(101), attained exactly by p q' and q p'.
+The unit contacts are l p, p q, q a, and p' q'; all other distances
+are strictly larger than one. The source is triangle-free. Both p,q
+are actual diameter endpoints and their anchors are in the exact
+triangular chart with u=(sqrt3/2,1/2), v=(sqrt3/2,-1/2): a-l=u+v.
+Thus a long-anchor loaded dimer is genuine finite source geometry.
+
+This regression omits positive unloaded equilibrium (l,a are leaves),
+one connected unloaded component, near-optimal quadratic population,
+the strict chart angle, and global optimality. It refutes only the
+geometry-only deletion of long-anchor dimers, not Theorem SC.
+
+The integer ledgers also admit arbitrarily large formal high-surplus
+states after (SC.2): for integer j>=10 take D=j, q=3j, m_B=2j,
+k=2, d_H=1, s_Z=1, c_I=1, s_C=2j-1, u_B=0, c_B=0,
+x_B=2j, Q=j-4, e_BB=j, h=3j-1. All the exact ledgers above hold,
+and mu_D=5-8/j. These are **formal ledger regressions**, not embedded
+sources or global minimizers. They demonstrate why the new charge alone
+does not contradict the high-surplus branch.
+
+## 7. Verification, classification, and remaining obligation
+
+Run `python3 research/verify_single_chart_collar_2026_10_02.py`.
+It checks the finite chart difference alphabet with rational arithmetic,
+the algebra of the four-point and consecutive-step identities, every
+word of the two long-anchor signs through length twelve, the exact
+algebraic six-point source, and the formal ledger family. It omits
+global optimality, KKT realization of the regression, and arbitrary
+plane-graph enumeration. The face and asymptotic proofs are the
+mathematical arguments above; a passing script does not audit them.
+
+| Claim | Classification | Exact scope |
+| --- | --- | --- |
+| Endpoint turning and four-point estimate | Proved candidate | Finite actual source geometry |
+| Injective collar face charge and SC.1 | Proved candidate awaiting audit | Canonical source plus Section 1 hypotheses |
+| Zero/one-nonunit-side exclusion | Conditional branch exclusion | Entire unloaded component in one actual chart; full port coverage |
+| Long-anchor six-point source | Exact regression | No KKT or minimizer claim |
+| Formal high-surplus ledger family | Regression | Integer algebra only |
+| C-II or Level I closure | Not proved | Other source branches remain |
+
+No canonical theorem-state file is changed; promotion is not claimed.
+The exact next obligation is to exclude or finitely release the linear
+nonunit-side collar compatible with (SC.1), **or** prove the required
+global chart/port hypothesis for an actual canonical source and then
+derive a stronger payment from its nonunit banks. The extracted small
+complete grid supplies neither hypothesis by itself. Nonconstant phase,
+split-star O--O, inactive interfaces, macroscopic containers/exterior
+caps, multi-grain full cores, and unported loaded vertices remain open.

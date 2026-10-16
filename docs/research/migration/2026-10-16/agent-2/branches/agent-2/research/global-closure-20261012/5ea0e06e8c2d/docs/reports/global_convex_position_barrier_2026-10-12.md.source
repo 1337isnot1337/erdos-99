@@ -1,0 +1,206 @@
+<!-- theorem-state: {"artifact_id":"ART-796EE69235C8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Convex-position capacity and the necessary global hull change
+
+**Date:** 2026-10-12  
+**Base commit:** `13093c032a8d6a7a929c42225b9972e6429bd72c`  
+**Canonical base:** `ab6dd3336f9f8d440f2bada76edb32153391cddc`  
+**State version:** `2026-10-10.audit.234`  
+**Target:** independent full-source Level I competitor route  
+**Classification:** proved candidate awaiting promotion; regression control  
+**Level I:** OPEN. The arbitrary global-minimizer replacement is not constructed.
+
+## 1. Global endpoint and scope
+
+```text
+arbitrary sufficiently large triangle-free global minimizer
+  -> unrestricted full-source strict-sub-D replacement
+  -> contradiction -> Level I
+```
+
+This report studies what an unrestricted competitor must change, rather than
+fixing a contact phase or adding parameters to an affine motion. It proves a
+global barrier to preserving convex position, even when the old radii, angles,
+contacts, and entire interior population may all change.
+
+For a finite unit-separated set X, let c(X) be the largest cardinality of a subset
+in convex position: every point of the subset must be a vertex of its own convex
+hull. The subset need not lie on the boundary of the full source hull. Source
+labels and contact isolates are always included in the full replacement.
+
+## 2. The classical finite polygon perimeter inequality, with a proof
+
+For a convex k-gon P of diameter d and perimeter p,
+
+\[
+\boxed{p\le2kd\sin(\pi/(2k)).}
+\tag{1}
+\]
+
+This is the Reinhardt--Datta perimeter inequality. No novelty is claimed for (1).
+The normalization and all-k upper bound were checked in Christian Bingane,
+*Tight bounds on the maximal perimeter and the maximal width of convex small
+polygons*, Theorem 2 and the introduction, pp. 1 and 4 of the
+[author's manuscript](https://optimization-online.org/wp-content/uploads/2020/10/8053-1.pdf).
+The original Datta paper is *A Discrete Isoperimetric Problem*, Geometriae Dedicata
+64, 55--68 (1997), [DOI](https://doi.org/10.1023/A:1004997002327).
+The following direct proof avoids importing any equality or uniqueness assertion.
+
+**Proof.** The difference body K=P+(-P) is centrally symmetric about zero,
+has at most 2k sides, and lies in the closed radius-d disk. Its boundary edge
+directions are obtained by merging the cyclic direction lists of P and -P.
+Parallel edges merge by adding their lengths. Hence
+
+\[
+\operatorname{per}(K)=2p.
+\]
+
+Let v_1,...,v_l be K's vertices, l<=2k. Radially extend each to the radius-d circle,
+writing w_i=d v_i/|v_i|. Their convex hull contains zero, since the directions are
+centrally symmetric, and hence contains every old v_i on [0,w_i]. Perimeter is
+monotone under convex inclusion. If gamma_i are the cyclic angular gaps of the
+w_i, their sum is 2pi and the circumscribed vertex polygon has perimeter
+
+\[
+2d\sum_{i=1}^l\sin(\gamma_i/2)
+\le2ld\sin(\pi/l)
+\le4kd\sin(\pi/(2k)).
+\]
+
+The first inequality is Jensen's inequality for sine on [0,pi]. The second uses
+the increase of x sin(pi/x) for x>=2; its derivative is sin t-t cos t>0 for
+0<t<=pi/2. Dividing by two proves (1).
+
+For completeness, perimeter monotonicity here is elementary. For a convex polygon
+with edge vectors e and projection width w(theta), traversing its boundary gives
+sum_e |e dot u(theta)|=2w(theta). Integrating from zero to pi gives
+per(P)=integral_0^pi w(theta) dtheta. Convex inclusion increases every width. ∎
+
+## 3. A label-independent convex-position capacity
+
+**Theorem (proved candidate awaiting promotion).** Every finite unit-separated
+planar source X of diameter d>=1 satisfies
+
+\[
+\boxed{c(X)\le\left\lfloor{\pi\over2\arcsin(1/(2d))}\right\rfloor.}
+\tag{2}
+\]
+
+**Proof.** If a subset of size k>=3 is in convex position, each of its k hull sides
+has length at least one. Its perimeter is at least k and its diameter is at most d.
+Equation (1) gives 1<=2d sin(pi/(2k)), which rearranges to (2). Subsets of size two
+are covered because the right side is at least three for d>=1. ∎
+
+The hypothesis is arbitrary unit-separated source geometry; neither triangle-freeness,
+globality, KKT, full support, contact minimality, nor lattice coherence is assumed.
+The bound concerns every convex subset, not just the actual hull vertices.
+
+## 4. A barrier to all convex boundary rearrangements
+
+For odd q>=5 set
+
+\[
+R_q={1\over2\sin(\pi/q)},\qquad
+d_q={1\over2\sin(\pi/(2q))}=2R_q\cos(\pi/(2q)).
+\]
+
+A regular unit q-gon has circumradius R_q and diameter d_q.
+
+**Theorem (proved candidate awaiting promotion).** Suppose a finite unit-separated
+source A contains those q rim vertices and has full diameter exactly d_q. Then
+c(A)=q. Every unit-separated full-source replacement B of strictly smaller diameter
+has c(B)<=q-1. In particular, under every bijective label assignment, the images of
+the q old rim labels fail to be in convex position.
+
+**Proof.** The rim gives c(A)>=q, while (2) at d=d_q gives c(A)<=q. For d<d_q,
+pi/(2 arcsin(1/(2d)))<q, so (2) gives c(B)<=q-1. Alternatively, if the old rim images
+remained q vertices of their own convex hull, (1) and their unit separation would
+force diam(B)>=d_q. ∎
+
+All other source points may move arbitrarily or be replaced outright at the same
+cardinality. The old rim need not remain on a circle, preserve its cyclic order,
+keep its old edges unit, or be the full hull of B. Preserving convex position alone
+already blocks strict improvement. Conversely, losing convex position is necessary
+only; it does not check any lower constraint or construct a feasible competitor.
+
+The radial-multiset obstruction in the unreviewed
+[October 11 report at frozen commit d22fce8b](https://github.com/1337isnot1337/e-99/blob/d22fce8b03b34b735170e92018340ee23d4c3320/docs/reports/global_radial_reassignment_and_dense_local_trap_2026-10-11.md) has a narrower
+invariant. That report's independent positive-stress, mixed-rank, dense local-trap,
+and exact 175-label results are not imported here. This report makes no priority
+claim for local minimality of regular odd rims.
+
+## 5. Quantitative displacement barrier, even with unrestricted interior moves
+
+**Corollary (proved candidate awaiting promotion).** With A as above, assign its
+labels bijectively to a unit-separated B of smaller diameter. For every common
+Euclidean isometry used to align B with A,
+
+\[
+\boxed{\max_{i\text{ an old rim label}}|b_i-p_i|
+\ge{\sin(\pi/q)\over2}={1\over4R_q}.}
+\tag{3}
+\]
+
+No displacement bound is imposed on any interior label.
+
+**Proof.** In radial unit direction u_i=p_i/R_q, the old vertex p_i exceeds every
+other rim vertex's projection by at least
+
+\[
+R_q(1-\cos(2\pi/q))=\sin(\pi/q)=g.
+\]
+
+If every rim displacement were less than g/2, its new projection would exceed every
+other new rim projection in that same direction: each of the two projections changes
+by less than g/2. Each b_i would remain uniquely exposed in conv({b_j: old rim labels}),
+contradicting Section 4. The same reasoning applies after every alignment and every
+label assignment. ∎
+
+This supplies a local basin under arbitrary collective interior changes and a
+source-wide lower bound on the necessary boundary transport. The scale is O(1/d_q),
+so it does not give a uniform large displacement or a macroscopic energy barrier.
+
+## 6. Binding exact control: the canonical heptagon escape
+
+The canonical regression `C-HEPTAGON-PSD-STRESS-FINITE-COMPETITOR-REGRESSION` has a
+regular unit heptagon as its losing source. Its strict contact-preserving replacement
+is a unit hexagon and its center, with labeled coordinates
+
+\[
+(0,0),(1,0),(1/2,\sqrt3/2),(-1/2,\sqrt3/2),
+(-1,0),(-1/2,-\sqrt3/2),(1/2,-\sqrt3/2).
+\]
+
+All 21 pair distances are at least one; squared diameter is four. The old seven-cycle
+contacts remain unit. The center is the average of labels 1,3,5, so all seven labels
+are no longer in convex position, while the six outer points are. Thus c(B)=6, exactly
+consistent with Section 4. This is a nonglobal source, and its replacement adds contacts
+and triangles. The new theorem does not conflict with the canonical regression.
+
+## 7. Verification, dependencies, and the global gap
+
+`python3 research/verify_global_convex_position_barrier_2026_10_12.py` checks the
+difference-body edge/perimeter identities on exact rational polygons, the symbolic
+radial support-gap identity, and all pair distances, old contacts, convex position,
+and center barycenter of the heptagon replacement. The universal polygon bound and
+all-source statements are proved analytically above; samples are not exhaustion.
+
+The load-bearing dependencies are the elementary difference-body/Jensen proof and
+the exact definition of global optimality. The canonical heptagon regression is a
+control, not a proof premise. The literature transcription checks normalization and
+priority, not an additional unproved hypothesis. No canonical state is changed.
+
+| Claim | Classification | Exact scope |
+| --- | --- | --- |
+| Reinhardt--Datta perimeter inequality | classical theorem, proof supplied | convex finite polygons |
+| Convex-position capacity (2) | proved candidate awaiting promotion | every unit-separated finite source |
+| Strict competitor reduces c from q (Section 4) | proved candidate awaiting promotion | source containing a regular odd unit rim at full diameter d_q |
+| Boundary transport lower bound (3) | proved candidate awaiting promotion | every strict competitor and every label assignment |
+| Heptagon loses convex position | regression control | canonical nonglobal finite example |
+| Level I proof | open | arbitrary global-minimizer rearrangement still missing |
+
+The remaining global obligation is to use **global minimality and the full source
+population** to construct a same-cardinality strict diameter competitor that may
+reduce convex position and change hull membership. A local, KKT, fixed-radius,
+Möbius, or convex-position-preserving argument is not a substitute for that bridge.
+Promotion recommendation: retain as an unreviewed proof candidate pending independent
+scope and proof audit. No existing theorem is promoted or rejected by this report.

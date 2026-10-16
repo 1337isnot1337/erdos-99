@@ -1,0 +1,303 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "cc39302c3cb55815b9d55d7a25a66293faa6714b", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_global_straight_event_unloaded_refinement_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "6bdaa5b1dfba3cc9a9dbf85e13dd0895a361662713f021518b23786dca2b97b7"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — global straight events have no loaded/bridge escape
+
+**Date:** 2026-09-15  
+**Repository base:** `687b6ddf5b2ecb2514928a7d505674e3d2fceacc`  
+**Status:** proof-only composition; theorem-state authority unchanged  
+**Scope:** no-container/full-core Type-II low-`t` branch  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The current global outer-walk straight-event theorem already forces more than `0.6388D` strongly transverse contacts. Its only remaining local escape term is the count `S_2(beta)` of straight internal occurrences at contact-degree-two vertices, which is then paid by outer bridges.
+
+That term is actually zero in the same proof-only stack. The previously proved loaded-internal-route exclusion theorem says every physical internal vertex of every distinguished Section-63 route is unloaded. C26 then gives full contact degree at least three. Thus every straight internal occurrence is branching, and the bridge subtraction disappears before asymptotics are taken.
+
+At the present low-`t` endpoint the transverse-contact floor becomes
+
+\[
+\boxed{0.6402677128496573613\ldots D-o(D)}.
+\]
+
+The numerical gain over current main is modest. The structural gain is exact: there is no loaded degree-two or bridge-mediated straight-event branch.
+
+---
+
+## 1. Start from the finite global straight-event count
+
+Let
+
+\[
+W_i:b_i\leadsto b_{i+1}
+\]
+
+be the distinguished Section-63 outer routes and let
+
+\[
+x_B=b-q
+\]
+
+be their total number of internal outer-walk occurrences. Fix
+
+\[
+0<\beta\le\pi/6,
+\qquad
+c_\beta:=1-\cos\beta.
+\]
+
+The exact directional-energy identity on all distinguished routes gives
+
+\[
+A_\beta\le {d_{out}\over c_\beta}
+\]
+
+bad edge occurrences. Since one bad edge occurrence spoils at most two internal occurrences, the current global theorem proves
+
+\[
+\boxed{
+S_\beta
+\ge x_B-{2d_{out}\over c_\beta},
+}
+\tag{GU.1}
+\]
+
+where `S_beta` is the number of `beta`-straight internal occurrences.
+
+It also proves:
+
+1. one physical vertex supports at most two such occurrences;
+2. at every branching physical vertex, the straight occurrences admit pairwise distinct strongly transverse extra-contact representatives;
+3. globally one undirected selected edge is represented at at most its two endpoints.
+
+---
+
+## 2. Every internal occurrence is unloaded
+
+The proved loaded-internal-route exclusion theorem uses the actual Section-63 occurrence partition plus loaded non-articulation:
+
+- Section 63 marks one distinguished outer-face occurrence of every positively loaded force-hull vertex and cuts the full outer-face walk between consecutive marks;
+- an internally encountered loaded physical vertex would therefore have a second occurrence on the same facial walk;
+- repeated occurrence on a plane facial walk makes that physical vertex an articulation vertex;
+- the selected-stress PSD theorem proves every positively loaded vertex is a non-articulation vertex of the full contact core.
+
+Hence
+
+\[
+\boxed{
+\text{every physical internal vertex of every }W_i\text{ is unloaded.}
+}
+\tag{GU.2}
+\]
+
+Canonical C26 then gives
+
+\[
+\boxed{3\le\deg_C(x)\le5}
+\tag{GU.3}
+\]
+
+for every internal route vertex `x`.
+
+In particular the degree-two straight-event subcount in the current global theorem vanishes identically:
+
+\[
+\boxed{S_2(\beta)=0.}
+\tag{GU.4}
+\]
+
+This is stronger than bounding `S_2` by outer bridges.
+
+---
+
+## 3. Finite bridge-free selection inequality
+
+At each physical vertex supporting one or two straight occurrences, use the current local Hall argument to choose a different strongly transverse extra-contact incidence for every occurrence. Because (GU.4) removes all nonbranching events, the number of selected incidences is exactly `S_beta`.
+
+One physical undirected contact edge has only two endpoints. Therefore
+
+\[
+\boxed{
+2E_\perp(\beta)\ge S_\beta,
+}
+\tag{GU.5}
+\]
+
+and (GU.1) gives the finite inequality
+
+\[
+\boxed{
+2E_\perp(\beta)
+\ge
+x_B-{2d_{out}\over1-\cos\beta}.
+}
+\tag{GU.6}
+\]
+
+No bridge count appears. For `beta=pi/6`, every selected contact has absolute transverse component strictly greater than `1/2` relative to the chord direction of its associated loaded-hull interval.
+
+The residual factor two in (GU.5) is genuine local multiplicity: one transverse physical contact can be selected from both of its endpoints. Removing that factor requires new strip/train geometry rather than bridge bookkeeping.
+
+---
+
+## 4. Type-II normalization
+
+On a convergent full-core Type-II subsequence write
+
+\[
+t={q-k\over D},
+\qquad
+\kappa={k\over D},
+\qquad
+\delta={d_{out}\over D}.
+\]
+
+Near-disk perimeter convergence gives
+
+\[
+{x_B\over D}
+={b-q\over D}
+=\pi+\delta-t-\kappa+o(1).
+\tag{GU.7}
+\]
+
+Divide (GU.6) by `D`. For every fixed `beta<=pi/6`,
+
+\[
+\boxed{
+\liminf {E_\perp(\beta)\over D}
+\ge {1\over2}
+\left[
+\pi-t-\kappa
+-\left({2\over1-\cos\beta}-1\right)\delta
+\right].
+}
+\tag{GU.8}
+\]
+
+The `+delta` from the total outer-walk internal-occurrence count is now retained instead of being canceled by a bridge allowance.
+
+---
+
+## 5. Joint low-`t` optimization
+
+Take
+
+\[
+\beta={\pi\over6},
+\qquad
+c_*:=1-{\sqrt3\over2}.
+\]
+
+Then
+
+\[
+{2\over c_*}-1
+=7+4\sqrt3
+=13.928203230275509\ldots .
+\tag{GU.9}
+\]
+
+The low-`t` network squeeze is
+
+\[
+2\delta+{\kappa\over2}\le R(t),
+\qquad
+R(t):={9t\over2}-2\pi-C_0.
+\tag{GU.10}
+\]
+
+To minimize the right side of (GU.8), maximize
+
+\[
+\kappa+(7+4\sqrt3)\delta
+\]
+
+under (GU.10). Since the coefficient of `delta` is greater than four, the worst point is
+
+\[
+\boxed{
+\delta={R(t)\over2},
+\qquad
+\kappa=0.
+}
+\tag{GU.11}
+\]
+
+Therefore
+
+\[
+\boxed{
+\liminf {E_\perp\over D}
+\ge
+{1\over2}
+\left[
+\pi-t-
+\left({7\over2}+2\sqrt3\right)R(t)
+\right].
+}
+\tag{GU.12}
+\]
+
+The current-main global theorem has the coefficient `1/(1-sqrt3/2)=4+2sqrt3` on `R(t)` inside the brackets. Equation (GU.12) is smaller by exactly `R(t)/2` inside the brackets, hence improves the final contact density by `R(t)/4`.
+
+---
+
+## 6. Current endpoint
+
+At
+
+\[
+t_{42}=C_{146}+0.0013751
+=1.8208886379794447\ldots,
+\qquad
+R(t_{42})=0.00576795,
+\]
+
+(GU.12) gives
+
+\[
+\boxed{
+{E_\perp\over D}
+\ge
+0.64026771284965736138024\ldots-o(1).
+}
+\tag{GU.13}
+
+The improvement over the current-main value
+
+\[
+0.6388257253496573613\ldots
+\]
+
+is exactly
+
+\[
+{R(t_{42})\over4}=0.0014419875.
+\]
+
+Every counted contact has absolute transverse component strictly greater than `1/2`.
+
+---
+
+## 7. Updated live obstruction
+
+The low-`t` endpoint now has the cleaner normal form
+
+```text
+x_B about 1.32 D internal distinguished-route occurrences
++ d_out <= 0.002884 D
+ -> about 1.28 D near-straight internal occurrences
+ -> EVERY occurrence is at an unloaded degree-3/4/5 vertex
+ -> local occurrence-injective transverse selection
+ -> >=0.6402677 D distinct strongly transverse contacts.
+```
+
+There is no separate loaded, degree-two, or bridge-mediated event family left.
+
+Further scalar optimization is unlikely to close C-II. The selected contacts must now be routed through the bounded-face/stopped-train structure. The actual next split is:
+
+1. a linear portion of selected contacts is exposed to outer/exceptional train interfaces, consuming terminal/closure capacity; or
+2. a linear portion lies inside strict-rhombus strips, forcing long coherent train occupancy that must be compared with the near-extremal Woodall diameter thrackle.
+
+This note does not prove that train-occupancy dichotomy quantitatively and does not close C-II.

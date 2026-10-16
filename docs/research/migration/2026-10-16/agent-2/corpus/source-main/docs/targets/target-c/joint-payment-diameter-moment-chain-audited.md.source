@@ -1,0 +1,868 @@
+# Target C — audited joint-payment / diameter-moment chain, normalized §§134–140
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working route module; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module is the clean replacement for the collision-heavy research stack formerly
+carried by PR #368. Historical drafts reused section numbers already occupied by the
+post-123 chain. The unique surviving mathematics is normalized here as §§134–140.
+
+The duplicated Type-II theorem `c_B=0` is not reproved. It is centralized in
+[`typeii-loaded-contacts-hull-sides.md`](typeii-loaded-contacts-hull-sides.md): for all
+sufficiently large Type-II survivors every loaded-loaded unit contact is a force-hull
+side.
+
+Two audit repairs are binding below:
+
+1. in the cap-family payment, the intermediate `+6e_BB` term is retained until §137
+   cancels it using `e_BB-C_A<=2d_tile`;
+2. in the complement-gap theorem, near-full gap capacity is converted to a support span
+   approaching the full gap by quantitative stability of strict superadditivity. No
+   exact-equality claim at a fixed positive-area cutoff is used.
+
+Canonical theorem-state authority remains unchanged; all results below are proof-only.
+
+---
+
+# §134 — exact joint payment of attachment routes and bounded defects
+
+For harmonic component `I_r`, write
+
+- `A_r` for the loaded attachment set and `a_r=|A_r|`;
+- `L_r` for the occurrence-counted outer walk of the induced harmonic graph `H_r`;
+- `d_r=diam(P_r)` for `P_r=conv(A_r)`;
+- `f_r,Q_r` for its bounded nonquadrilateral face count and degree excess;
+- `P_exc,r=4f_r+Q_r`;
+- `c_r` for loaded-loaded unit contacts whose endpoints both lie in `A_r`;
+- `T_r,Q_r^+` for the canonical Section-123 augmented-cell quantities; and
+- `X_r:=a_r-T_r+Q_r^+`.
+
+Canonical Sections 82 and 123 give the exact local identities
+
+\[
+X_r=2a_r-6-2s_r,
+\tag{134.1}
+\]
+
+and
+
+\[
+L_r+Q_r=4a_r-6-2s_r-2c_r.
+\tag{134.2}
+\]
+
+Therefore
+
+\[
+L_r+Q_r-2a_r=X_r-2c_r.
+\tag{134.3}
+\]
+
+Canonical Section 82 also gives
+
+\[
+Q_r\le X_r-c_r.
+\tag{134.4}
+\]
+
+Every bounded nonquadrilateral face contributes at least one to `Q_r`, so
+`f_r<=Q_r<=X_r-c_r`. Hence
+
+\[
+\begin{aligned}
+L_r+P_{exc,r}-2a_r
+&=X_r-2c_r+4f_r\\
+&\le 5X_r-6c_r.
+\end{aligned}
+\tag{134.5}
+\]
+
+This is finite and occurrence-safe; bridges and articulation repetitions are already
+included in `L_r`.
+
+Put
+
+\[
+C_A:=\sum_r c_r,
+\qquad
+k:=d_H+s_Z.
+\]
+
+Canonical Section 123 gives
+
+\[
+\sum_rX_r=2(e_{BB}-k-d_{tile}).
+\tag{134.6}
+\]
+
+Summing (134.5), and then restoring the diameter term, yields
+
+\[
+\boxed{
+\sum_r E_r
+\le
+10(e_{BB}-k-d_{tile})-6C_A
++2\sum_r(a_r-d_r),
+}
+\tag{134.7}
+\]
+
+where
+
+\[
+E_r:=L_r+P_{exc,r}-2d_r.
+\]
+
+No global injectivity of the contacts counted in `C_A` is needed for (134.7): each
+local inequality is valid before summation and `C_A` has a favorable sign.
+
+In Type II, canonical Section 83 gives harmonic-cell area saturation
+
+\[
+\sum_r area(P_r)={\pi\over4}D^2-o(D^2).
+\]
+
+Planar isodiametry gives `area(P_r)<=pi d_r^2/4`, hence
+
+\[
+\sum_r d_r^2\ge D^2-o(D^2),
+\qquad
+\sum_r d_r\ge D-o(D).
+\tag{134.8}
+\]
+
+Using canonical Section 122,
+
+\[
+\liminf {1\over D}\sum_rE_r
+\ge c_{det},
+\qquad
+c_{det}:={\pi\over2}(2-\sqrt3),
+\tag{134.9}
+\]
+
+we obtain the necessary Type-II condition
+
+\[
+10(e_{BB}-k-d_{tile})-6C_A+2a
+\ge (2+c_{det})D-o(D),
+\qquad a:=\sum_ra_r.
+\tag{134.10}
+\]
+
+The exact attachment-incidence rewrite used below is
+
+\[
+a=q+2c_I-2-d_{tile}
+=3q-6-2(e_{BB}-k)-2s_C-d_{tile}.
+\tag{134.11}
+\]
+
+---
+
+# §135 — deatomized aggregate detour payment
+
+Canonical Section 75 gives
+
+\[
+c_I=O(D^{2/3})=o(D).
+\tag{135.1}
+\]
+
+Thus (134.11) gives
+
+\[
+a=q-d_{tile}+o(D).
+\tag{135.2}
+\]
+
+Combining (134.7), (134.8), and (135.2),
+
+\[
+\boxed{
+\sum_rE_r
+\le
+10(e_{BB}-k)+2q-2D-12d_{tile}-6C_A+o(D).
+}
+\tag{135.3}
+\]
+
+Therefore every Type-II survivor sequence satisfies
+
+\[
+\boxed{
+10(e_{BB}-k)+2q-12d_{tile}-6C_A
+\ge (2+c_{det})D-o(D).
+}
+\tag{135.4}
+\]
+
+This removes harmonic-component multiplicity from the linear-scale payment but is not
+itself contradictory: the raw loaded-terminal population has enough capacity to satisfy
+(135.4).
+
+---
+
+# §136 — capped harmonic-diameter distribution credit
+
+Fix `0<mu<1` and define
+
+\[
+k_\mu:=\left\lfloor{1\over\mu^2}\right\rfloor,
+\qquad
+r_\mu:=1-k_\mu\mu^2,
+\]
+
+\[
+\boxed{
+\Psi(\mu):=k_\mu\mu+\sqrt{r_\mu}.
+}
+\tag{136.1}
+\]
+
+If a Type-II sequence satisfies
+
+\[
+\max_r d_r\le(\mu+o(1))D,
+\tag{136.2}
+\]
+
+then
+
+\[
+\boxed{
+\sum_r d_r\ge(\Psi(\mu)-o(1))D.
+}
+\tag{136.3}
+\]
+
+Indeed, put `x_r=d_r/D`. Area saturation and isodiametry give
+
+\[
+\sum_r x_r^2\ge1-o(1),
+\qquad 0\le x_r\le\mu+o(1).
+\]
+
+For fixed `sum x_r`, the square mass is maximized by concentrating entries to the cap
+`mu` as much as possible. Equivalently, the minimum first moment supporting unit square
+mass consists of `k_mu` entries equal to `mu` and one remainder `sqrt(r_mu)`. This is
+exact at zero error and stable under `o(1)` perturbations, proving (136.3).
+
+For `1/sqrt(2)<mu<1`,
+
+\[
+\Psi(\mu)=\mu+\sqrt{1-\mu^2}.
+\tag{136.4}
+\]
+
+Insert (136.3) into (134.7), then use (134.11) and (134.9). The result is
+
+\[
+\boxed{
+6(q+e_{BB}-k)-4s_C-12d_{tile}-6C_A
+\ge [2\Psi(\mu)+c_{det}]D-o(D).
+}
+\tag{136.5}
+\]
+
+At the current canonical Section-118 carrier endpoint
+
+\[
+\mu_*:=0.9762439137425688\ldots,
+\]
+
+\[
+\Psi(\mu_*)=1.19291837204486\ldots,
+\]
+
+so the right-side coefficient in (136.5) is
+
+\[
+2\Psi(\mu_*)+c_{det}=2.80673035132819\ldots .
+\tag{136.6}
+\]
+
+---
+
+# §137 — completion triangles pay uncovered loaded unit sides
+
+For sufficiently large Type-II survivors,
+
+\[
+\boxed{e_{BB}-C_A\le2d_{tile}.}
+\tag{137.1}
+\]
+
+This is the exact bridge that cancels the loaded-contact term in (136.5).
+
+## 137.1 Outerplanar completion
+
+Triangulate every attachment polygon `P_r` using only its attachment vertices. Pairwise
+interior disjointness of the convex cells implies that triangulation edges from
+different cells cannot cross properly. Since all loaded vertices are in strict convex
+position, no loaded vertex lies inside a triangle of one cell triangulation. Thus the
+combined cell triangulations are a noncrossing graph on the `q` loaded vertices with
+exactly
+
+\[
+N_{cell}=\sum_r(a_r-2)
+\]
+
+cell triangles.
+
+Canonical Section 123 defines
+
+\[
+d_{tile}=q-2-N_{cell}\ge0.
+\tag{137.2}
+\]
+
+Complete the combined graph to a triangulation of the full loaded polygon. Exactly
+`d_tile` resulting triangular faces are not cell triangles; call them completion
+triangles.
+
+Every outer side not used by any attachment cell is incident to a completion triangle.
+For large Type II, `q>=4`, and a triangle in a convex-polygon triangulation has at most
+two outer sides. Therefore
+
+\[
+\#\{\text{outer sides not cell-covered}\}\le2d_{tile}.
+\tag{137.3}
+\]
+
+The centralized Type-II hull-side theorem identifies loaded-loaded unit contacts with
+unit outer sides. A unit outer side is counted by `C_A` exactly when it is cell-covered.
+Moreover a positive-area convex cell is unique if it uses a fixed outer side: two such
+cells would both contain an inward wedge near the relative interior of that side and
+would have overlapping interiors. Hence `C_A` has no multiplicity in Type II and
+`e_BB-C_A` is exactly the number of uncovered unit outer sides. This proves (137.1).
+
+## 137.2 Cancellation
+
+From (137.1),
+
+\[
+-6C_A\le-6e_{BB}+12d_{tile}.
+\]
+
+Thus the left side of (136.5) is at most
+
+\[
+6(q-k)-4s_C.
+\]
+
+Since the original expression is bounded below, so is this upper bound:
+
+\[
+\boxed{
+6(q-k)-4s_C
+\ge[2\Psi(\mu)+c_{det}]D-o(D).
+}
+\tag{137.4}
+\]
+
+Using `q-k=h-s_Z` and dividing by two,
+
+\[
+\boxed{
+3(h-s_Z)-2s_C
+\ge
+\left[\Psi(\mu)+{\pi\over4}(2-\sqrt3)\right]D-o(D).
+}
+\tag{137.5}
+\]
+
+At `mu=mu_*`, this coefficient is
+
+\[
+1.40336517566409\ldots .
+\tag{137.6}
+\]
+
+The cancellation keeps the intermediate `+6e_BB` term until (137.1) is invoked. Any
+proof that simply drops that positive term is invalid.
+
+---
+
+# §138 — sharp-window wrapping area forces a larger residual diameter moment
+
+This section is conditional on the canonical Section-118 endpoint branch
+
+\[
+\max_r d_r\le(\mu_*+o(1))D,
+\tag{138.1}
+\]
+
+where
+
+\[
+\mu_*=0.9762439137425688\ldots,
+\qquad
+s_*=0.0088,
+\]
+
+and the selected wrapping carrier has limiting angular parameter
+
+\[
+\theta_*=2.704779235215494\ldots .
+\]
+
+Let
+
+\[
+G(t):={t-\sin t\over8},
+\qquad
+\phi:=2\pi-2\theta.
+\]
+
+In the sharp Section-118 window, the principal complement gaps obey
+
+\[
+g_1\ge\theta-{10\over3}\sigma,
+\qquad
+g_2,g_3\ge\phi.
+\tag{138.2}
+\]
+
+Canonical Section 107 gives the exact wrapping-support area formula
+
+\[
+area(conv S)={\pi\over4}-\sum_jG(g_j).
+\]
+
+Since `G` is increasing on `[0,pi]`,
+
+\[
+area(conv S)
+\le
+A^{up}(\theta,\sigma)
+:={\pi\over4}
+-G\left(\theta-{10\sigma\over3}\right)
+-2G(2\pi-2\theta).
+\tag{138.3}
+\]
+
+At `(theta_*,s_*)`,
+
+\[
+A_w^{max}:=A^{up}(\theta_*,s_*)
+=0.480407300085523\ldots .
+\tag{138.4}
+\]
+
+Under (138.1), the selected wrapping carrier has normalized diameter tending `mu_*`.
+Removing its area from the Type-II total leaves residual normalized area at least
+
+\[
+{\pi\over4}-A_w^{max}-o(1).
+\]
+
+Isodiametry therefore gives residual squared-diameter mass
+
+\[
+\sum_{r\ne w}{d_r^2\over D^2}
+\ge
+R_{diam}-o(1),
+\qquad
+R_{diam}:=1-{4A_w^{max}\over\pi}
+=0.388326427951660\ldots .
+\tag{138.5}
+\]
+
+Hence
+
+\[
+\boxed{
+\sum_r d_r
+\ge
+\left(\mu_*+\sqrt{R_{diam}}-o(1)\right)D
+=(1.59940234299765\ldots-o(1))D.
+}
+\tag{138.6}
+\]
+
+Replacing `Psi(mu)` by this stronger diameter moment in §137 yields
+
+\[
+\boxed{
+3(h-s_Z)-2s_C
+\ge1.80984914661688\ldots D-o(D).
+}
+\tag{138.7}
+\]
+
+This is an endpoint theorem, not a uniform theorem for arbitrary larger diameter caps.
+
+---
+
+# §139 — residual cap-family capacity
+
+Under the same endpoint/common-cap hypothesis, canonical Section 103 leaves at most one
+macroscopic wrapping cell. All other macroscopic residual cells are cap type. For a
+cap-type circle-supported cell of normalized diameter `lambda<1`, the full cap area is
+
+\[
+\boxed{
+H(\lambda)
+={\arcsin\lambda-\lambda\sqrt{1-\lambda^2}\over4}.
+}
+\tag{139.1}
+\]
+
+Direct differentiation gives
+
+\[
+H'(\lambda)={\lambda^2\over2\sqrt{1-\lambda^2}}>0,
+\]
+
+\[
+H''(\lambda)
+={\lambda(2-\lambda^2)\over2(1-\lambda^2)^{3/2}}>0.
+\tag{139.2}
+\]
+
+Thus `H` is increasing and strictly convex.
+
+The residual normalized area is at least
+
+\[
+A_{res}:={\pi\over4}-A_w^{max}
+=0.304990863311926\ldots .
+\tag{139.3}
+\]
+
+Canonical Section 88 makes residual minimal support arcs laminar. Keep inclusion-maximal
+arcs. Their interiors are disjoint, every nested cell below one maximal arc fits inside
+that circular cap, and small-area cells contribute only `o(D^2)` after the canonical
+square-root area cutoff is sent to zero.
+
+To minimize total residual diameter subject to carrying area `A_res`, it is therefore
+safe to solve the relaxed finite problem
+
+\[
+\min\sum_i\lambda_i
+\quad\text{subject to}\quad
+0\le\lambda_i\le\mu_*,
+\qquad
+\sum_iH(\lambda_i)\ge A_{res}.
+\]
+
+Strict convexity makes cap area for fixed total diameter largest when diameter is
+concentrated greedily: fill one entry to `mu_*`, then one remainder, then zeros. Here
+
+\[
+H(\mu_*)<A_{res}<2H(\mu_*).
+\]
+
+Let `lambda_2` be defined by
+
+\[
+H(\lambda_2)=A_{res}-H(\mu_*).
+\tag{139.4}
+\]
+
+Then
+
+\[
+\lambda_2=0.479113079232518\ldots,
+\]
+
+and the two support angles use total angular measure below `2pi`, so the relaxed
+optimizer is compatible with the disjoint-maximal-arc constraint.
+
+Therefore
+
+\[
+\sum_{r\ne w}d_r
+\ge(\mu_*+\lambda_2-o(1))D,
+\]
+
+and including the wrapping carrier,
+
+\[
+\boxed{
+\sum_rd_r
+\ge(2\mu_*+\lambda_2-o(1))D
+=(2.43160090671766\ldots-o(1))D.
+}
+\tag{139.5}
+\]
+
+The §137 payment then gives
+
+\[
+\boxed{
+3(h-s_Z)-2s_C
+\ge2.64204771033689\ldots D-o(D).
+}
+\tag{139.6}
+\]
+
+A second independent consequence comes from the canonical attachment-contact path bound
+`t_r>=d_r+1`. Summing and using `c_I=o(D)` gives
+
+\[
+e_{BI}\ge(2.43160090671766\ldots-o(1))D.
+\]
+
+The loaded contact-degree cap `e_{BI}+2e_{BB}<=3q` and `e_{BB}=q-m` give
+
+\[
+q+2m\ge2.43160090671766\ldots D-o(D).
+\tag{139.7}
+\]
+
+With canonical Section 75's `s_C=m+k+o(D)`, (139.6) becomes
+
+\[
+3q-2m-5k\ge2.64204771033689\ldots D-o(D).
+\]
+
+Adding (139.7),
+
+\[
+\boxed{
+4q-5k\ge5.07364861705455\ldots D-o(D),
+}
+\tag{139.8}
+\]
+
+or equivalently
+
+\[
+4h-d_H-5s_Z\ge5.07364861705455\ldots D-o(D).
+\]
+
+---
+
+# §140 — complement-gap rigidity with quantitative limit stability
+
+This is the strongest endpoint consequence in the chain. Let the scaled wrapping cell
+converge to
+
+\[
+K=conv(S)\subset B_{1/2},
+\]
+
+where the compact wrapping circle support has complement gaps
+
+\[
+\mathbb T\setminus S=\bigsqcup_jG_j,
+\qquad |G_j|=g_j<\pi.
+\]
+
+Canonical Section 107 decomposes the disk complement, up to boundaries, into disjoint
+circular segments `C_j` with
+
+\[
+area(C_j)=G(g_j),
+\qquad
+G(t)={t-\sin t\over8}.
+\tag{140.1}
+\]
+
+## 140.1 Residual cells live in individual gaps
+
+Fix a positive normalized area cutoff `eta`. Canonical Section 83's square-root area
+bound leaves only finitely many residual cells above the cutoff and makes the discarded
+total area `O(sqrt(eta))D^2`. After a subsequence the retained cells converge to
+positive-area convex limits interior-disjoint from `K` and from each other.
+
+A positive-area residual convex limit cannot meet two different components of
+`B_{1/2}\setminus K`: the segment joining two interior points in different components
+would cross `int K`. Hence each retained residual cell belongs to one gap segment and
+its circle support is contained in that gap arc. Since `g_j<pi`, it is cap type.
+
+Whole-disk Type-II area saturation implies that for every fixed gap `g`, the retained
+residual area in its segment obeys
+
+\[
+G(g)-\epsilon_\eta
+\le A_{ret}(g)
+\le G(g),
+\qquad
+\epsilon_\eta\to0
+\quad(\eta\downarrow0).
+\tag{140.2}
+\]
+
+## 140.2 Stability of strict superadditivity
+
+Within one fixed gap, retain inclusion-maximal support arcs of lengths
+`theta_1,...,theta_N`. Canonical Section 88 gives laminarity, hence
+
+\[
+\sum_i\theta_i\le g.
+\]
+
+Nested cells below one maximal arc occupy total area at most its full circular cap, so
+
+\[
+A_{ret}(g)
+\le\sum_iG(\theta_i)
+\le G\left(\sum_i\theta_i\right)
+\le G(g).
+\tag{140.3}
+\]
+
+The historical draft jumped from near equality to an arc of length exactly `g`. That
+is not justified at fixed `eta`. The correct stability argument is as follows.
+
+Fix `delta in (0,g)`. Among finite nonnegative families with total at most `g` and
+`max theta_i<=g-delta`, concentration of mass maximizes `sum G(theta_i)`. Because `G`
+is strictly superadditive for positive arguments with sum below `pi`, this constrained
+supremum is strictly below `G(g)`. Thus there exists
+
+\[
+c(g,\delta)>0
+\]
+
+such that
+
+\[
+\max_i\theta_i\le g-\delta
+\quad\Longrightarrow\quad
+\sum_iG(\theta_i)\le G(g)-c(g,\delta).
+\tag{140.4}
+\]
+
+For small enough `eta`, (140.2) has `epsilon_eta<c(g,delta)`, contradicting (140.4).
+Therefore
+
+\[
+\max_i\theta_i\to g
+\qquad(\eta\downarrow0).
+\tag{140.5}
+\]
+
+A retained cell with the maximal support span has normalized diameter at least
+`sin(theta_max/2)`. Hence for each fixed gap
+
+\[
+\liminf_{D\to\infty}{1\over D}
+\sum_{\substack{r\ne w\\r\text{ assigned to the gap}}}d_r
+\ge\sin(g/2).
+\tag{140.6}
+\]
+
+For finitely many distinct gaps, take one sufficiently small cutoff simultaneously;
+the selected cells are distinct. Increase the finite set through the countable gap set
+and use monotone convergence:
+
+\[
+\boxed{
+\liminf {1\over D}\sum_{r\ne w}d_r
+\ge
+C:=\sum_j\sin(g_j/2).
+}
+\tag{140.7}
+\]
+
+No single fixed positive-area limit cell is asserted to span a gap exactly.
+
+## 140.3 Endpoint consequences
+
+Canonical Section 101 gives
+
+\[
+C\ge M(\theta):=\sin(\theta/2)+2\sin\theta.
+\tag{140.8}
+\]
+
+At the Section-118 endpoint,
+
+\[
+M(\theta_*)=1.822352398466893\ldots .
+\]
+
+The wrapping carrier contributes `mu_*D+o(D)`, so
+
+\[
+\boxed{
+\sum_rd_r
+\ge
+(\mu_*+M(\theta_*)-o(1))D
+=(2.798596312209462\ldots-o(1))D.
+}
+\tag{140.9}
+\]
+
+Feed this into the §137 aggregate payment:
+
+\[
+\boxed{
+3(h-s_Z)-2s_C
+\ge3.009043115828695\ldots D-o(D).
+}
+\tag{140.10}
+\]
+
+The attachment-contact path and loaded-degree argument gives
+
+\[
+q+2m\ge2.798596312209462\ldots D-o(D).
+\tag{140.11}
+\]
+
+Using `s_C=m+k+o(D)`, (140.10) becomes
+
+\[
+3q-2m-5k\ge3.009043115828695\ldots D-o(D).
+\tag{140.12}
+\]
+
+Adding (140.11) and (140.12),
+
+\[
+\boxed{
+4q-5k
+\ge5.807639428038157\ldots D-o(D),
+}
+\tag{140.13}
+\]
+
+or, since `q=h+d_H` and `k=d_H+s_Z`,
+
+\[
+\boxed{
+4h-d_H-5s_Z
+\ge5.807639428038157\ldots D-o(D).
+}
+\tag{140.14}
+\]
+
+This is a necessary endpoint condition, not a contradiction.
+
+---
+
+# Final hostile-audit disposition
+
+The normalized chain preserves the unique positive content of the old joint-payment
+branch while removing its duplicated loaded-side theorem and colliding draft section
+numbers.
+
+Checks that are binding in future use:
+
+- §134 uses occurrence-counted local face identities; no simple outer-boundary
+  assumption is introduced.
+- `C_A` need not be globally injective in §134. Injectivity is proved only in Type II
+  in §137 after loaded contacts are known to be outer hull sides.
+- §136 is conditional on a common cell-diameter cap.
+- §§138–140 are endpoint/common-cap theorems at the current Section-118 coefficient;
+  their decimals are regression values for exact formulas, not independent premises.
+- §139 retains the intermediate `+6e_BB` payment term until §137 cancels it. Dropping
+  that term directly is invalid.
+- §140 uses quantitative stability (140.4)–(140.5), not the rejected exact-equality
+  shortcut at fixed cutoff.
+- Small residual cells are discarded only after applying the canonical square-root area
+  bound, then the cutoff tends to zero.
+- No source point is removed, no contact-isolated coordinate is inserted into a core
+  affine-kernel statement, and no KKT coefficient floor is assumed.
+
+None of §§134–140 addresses the macroscopic inactive-container branch or constructs a
+same-cardinality strict sub-`D` competitor.
+
+**Overall verdict:** PASS at audited-working proof-only scope with the stated
+conditional hypotheses. Canonical theorem-state authority is unchanged; C-II and
+Level I remain open.

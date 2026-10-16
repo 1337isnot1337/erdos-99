@@ -1,0 +1,98 @@
+
+# PR 966 research/README.md
+diff --git a/research/README.md b/research/README.md
+index c20b4546..723af63d 100644
+--- a/research/README.md
++++ b/research/README.md
+@@ -3637,3 +3637,24 @@ Both remain unreviewed and noncanonical; no certificate proves the infinite
+ statements, global minimality or a source move for the canonical full diameter
+ graph. Original PR heads #972/#979, exact import changes, dependencies and
+ bounded independent review assignments are recorded in those reports.
++## Target A seed 66: coembedded locked stress with full Schur rank (2026-10-13)
++
++Run `python3 -I -O -B research/verify_target_a_seed066_locked_fullrank.py`.
++The [unreviewed proof report](../docs/reports/target_a_seed066_coembedded_locked_fullrank_2026-10-13.md)
++constructs a family that is maximum in its own hexagonal hull and locally isolated
++there, with positive contact/facet stress, full Schur column rank for every nonzero
++edge weighting, and a three-spoke locked fan with exactly one crossing response row.
++The script uses integer axial coordinates and exact `Fraction` arithmetic. At
++`m=2,3,4,8` it checks every source pair, all label equilibrium equations, the entire
++response shore, exact Schur elimination, and every fan/response crossing. Integer
++pinned rigidity is certified full rank modulo a prime at `m=2,3,4`. At `m=32` it
++constructs a 3,169-point strict-diameter replacement and checks all 5,019,696 pairs.
++Six negative controls must fail. The deterministic output is preserved in
++`target_a_seed066_locked_fullrank_certificate.json`.
++
++These finite checks support the report's analytic all-`m` regression, not its
++promotion or an infinite computational proof. The family is nonglobal for `m>=32`,
++contains triangles, and supplies no canonical triangle-free source/collar coupling.
++The construction falsifies a stress/container/affine-optimality shortcut to positive
++Schur nullity; it does not refute Sections 175–177 or settle Level I. No new claim is
++registered as canonical, and no theorem-state version or active route is changed.
+
+# PR 967 research/README.md
+diff --git a/research/README.md b/research/README.md
+index c20b4546..68199ce2 100644
+--- a/research/README.md
++++ b/research/README.md
+@@ -3637,3 +3637,28 @@ Both remain unreviewed and noncanonical; no certificate proves the infinite
+ statements, global minimality or a source move for the canonical full diameter
+ graph. Original PR heads #972/#979, exact import changes, dependencies and
+ bounded independent review assignments are recorded in those reports.
++## Seed 54: finite endpoints and rhombus-mesh growth (2026-10-13)
++
++Run `python3 research/verify_seed054_rhombus_mesh.py` and compare its JSON
++with `research/seed054_rhombus_mesh_certificate.json`; then run
++`python3 research/check_seed054_cartesian_certificate.py`. The primary engine
++generates complete connected unit-rhombus meshes with one off-lattice contact
++isolate, checks every possible source lattice displacement, every isolate
++pair, exact hull diameters, triangle-freeness, equal-cardinality triangular
++replacements, and the local length-growth counts in their actual endpoint
++labelings. The separate Cartesian engine independently generates vertices,
++uses a different hull algorithm, and directly enumerates every source and
++replacement pair in the 1893- and 5259-label fixtures. The 13141- and
++66657-label fixtures use the proved integral norm classification and hull
++extremality; quadratic enumeration of their larger ledgers is not claimed.
++Both engines use only integer and rational arithmetic and include the isolate
++in the full source/replacement counts. Positive output certifies these four
++finite nonglobal fixtures and their strict replacements. It does not prove
++the infinite endpoint rigidity, the at-least-ceil(R/8) cell-growth theorem,
++global optimality, canonical source extraction, or Level I. The first two
++are proved analytically, as unreviewed candidates, in
++`docs/reports/global_nonexpanding_rhombus_mesh_obstruction_2026-10-13.md`.
++The exact endpoint theorem needs no continuous feasible interpolation. The
++linear growth bound requires endpoint diameter at most 2(R-1); it is not
++asserted for every arbitrarily small strict improvement. No new certificate
++is registered as canonical.
+
+# PR 969 research/README.md
+diff --git a/research/README.md b/research/README.md
+index 08bb2d50..7fcf22d3 100644
+--- a/research/README.md
++++ b/research/README.md
+@@ -13,6 +13,25 @@ python3 research/verify_target_c_flat_center_kkt_stress_leakage.py
+ 
+ # Reproducible research tools
+ 
++## 2026-10-13 — Target A seed 63: tight isolates and locked neutral response
++
++`python3 research/verify_target_a_seed063_tight_isolates.py` supports the
++[seed-63 report](../docs/reports/target_a_seed063_tight_isolates_and_locked_fan_regression_2026-10-13.md).
++It uses exact integer/rational triangular-lattice coordinates and checks the
++listed saturated chambers, every source pair, contact/facet equilibrium, complete
++interior basis matchings, deep-first membership, fan lenses, zero basis penalty,
++and direct linkages saturating the surviving coarse Hall terminals. It exhausts
++all 1023 nonempty right subsets in the `M=4` fixture, checks 42 pair constraints
++in a simultaneous strict-isolate replacement, and certifies same-cardinality
++strict competitors at `M=33,40`. A global three-point fixture and two omitted-
++hypothesis controls check the limits of terminal selection and finite exchange.
++Positive output proves these exact finite facts. The general Hall-tight-isolate
++theorem, arbitrary-size chamber family, all-translation matching, and `M>=33`
++competitor threshold are proved analytically in the report. The script does not
++prove global optimality of a large chamber, a uniform packet-refill theorem,
++quantitative sector surplus, or Level I closure. Source isolates are retained
++physically; contracting the mandatory matching block is only an algebraic operation.
++
+ ## 2026-10-08 — full-source isolate normalization
+ 
+ `python3 research/verify_target_c_isolate_diameter_normalization_2026_10_07.py`

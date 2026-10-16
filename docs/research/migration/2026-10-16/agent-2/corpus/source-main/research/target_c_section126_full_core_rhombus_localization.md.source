@@ -1,0 +1,227 @@
+# Target C — Section 126: full-core strict rhombi localize to harmonic cells up to o(D)
+
+**Date:** 2026-09-12
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+**Status:** proof-only research candidate on theorem-state `2026-09-12.audit.46`.
+**Dependencies:** canonical Sections 75, 82, 83 and proof-only Section 124.
+
+Section 124 proves that, in the Type-II branch and for all sufficiently large survivors,
+there are no nonconsecutive loaded-loaded unit contacts:
+
+\[
+\boxed{c_B=0.}
+\]
+
+This removes the only linear-scale ambiguity in an older proof-only localization
+argument. Let `R_4` be the number of bounded strict-rhombus faces of the full
+nonisolated positive-contact core. For each unloaded harmonic component `I_r`, let
+`H_r` be the canonical induced harmonic graph on `I_r union A_r`, and let `R_r` be
+its number of bounded quadrilateral faces. Then
+
+\[
+\boxed{
+0\le R_4-\sum_rR_r\le 3c_I+5
+=O(D^{2/3})=o(D).
+}
+\tag{126.1}
+\]
+
+Thus all but `o(D)` full-core strict rhombi occur in exactly one harmonic cell. If
+`A_4` is the total area of all full-core strict rhombi and `A_{4,r}` is the local
+strict-rhombus area in `H_r`, then also
+
+\[
+\boxed{
+0\le A_4-\sum_rA_{4,r}\le R_4-\sum_rR_r=o(D).
+}
+\tag{126.2}
+\]
+
+The area bound in (126.2) uses the correct universal estimate
+`area(unit rhombus)<=1`. An earlier proof-only draft incorrectly wrote
+`sqrt(3)/2`; a unit square is the counterexample to that sentence. The asymptotic
+conclusion was unaffected, and is repaired here.
+
+## 126.1 Every local quadrilateral is a physical full-core rhombus
+
+Canonical Section 82 makes every bounded quadrilateral face of `H_r` a strict unit
+rhombus. We first check that it is also a bounded face of the full positive-contact
+core.
+
+Let `Q` be such a local rhombus. Both diagonals of `Q` are at least one by source
+separation. Equality of either diagonal would create a unit equilateral triangle with
+two adjacent unit sides, so triangle-freeness gives both diagonals strictly greater
+than one. For a unit rhombus the squared diagonals sum to four, hence each
+half-diagonal is strictly less than one.
+
+Split `Q` at its center into four triangles. In each center triangle, the unit rhombus
+side is a longest side and the two center-to-vertex sides are strictly shorter than
+one. Therefore every point in the relative interior of the triangle is strictly less
+than one from at least one endpoint of its unit side. Unit separation excludes every
+omitted source point from the interior of `Q`. A source point cannot lie in the
+relative interior of a unit side either, since it would be less than one from an
+endpoint.
+
+A contact edge of the full core cannot properly cross a rhombus side in the straight
+unit-contact embedding. Nor can an omitted edge cut the rhombus interior between two
+boundary vertices: `H_r` is induced on `I_r union A_r`, and the only possible
+diagonals are nonunit. Hence the local four-cycle bounds an actual full-core face.
+
+No physical rhombus is counted in two distinct harmonic cells. If it has an unloaded
+vertex, that vertex determines its unloaded component. If all four vertices are
+loaded, duplicate counting would put the same four loaded vertices in two distinct
+attachment sets, contradicting canonical Section 83's common-attachment restriction.
+Thus
+
+\[
+\sum_rR_r\le R_4.
+\tag{126.3}
+\]
+
+Put
+
+\[
+\Delta_R:=R_4-\sum_rR_r\ge0.
+\]
+
+## 126.2 Classification of a missing full-core strict rhombus
+
+Let `u-v-w-x-u` be a strict-rhombus face of the full positive-contact core which is
+not a quadrilateral face of any harmonic graph. Classify it by the number of loaded
+vertices among its four cycle vertices.
+
+### Zero or one loaded vertex
+
+The unloaded vertices are joined around the face by a unit-contact path, so they lie
+in one unloaded component. Every loaded cycle vertex is adjacent by a unit contact to
+that component and hence is one of its attachments. All four face vertices therefore
+belong to one induced harmonic graph. Since the full-core face interior is empty, the
+rhombus is a local quadrilateral face, contradiction.
+
+Thus no missing rhombus has zero or one loaded vertex.
+
+### Two adjacent loaded vertices
+
+The two unloaded vertices are adjacent by a unit contact, so they lie in one unloaded
+component, and both loaded vertices attach to that component. Again the full-core face
+is a local quadrilateral face. Hence this case contributes nothing.
+
+### Two opposite loaded vertices
+
+If the two unloaded vertices belong to the same component, the same argument makes the
+rhombus local. A missing rhombus therefore has its two unloaded vertices in distinct
+components `I_r,I_s` and its two opposite loaded vertices `a,b` as attachments of both
+components.
+
+Both convex attachment cells `P_r,P_s` contain the segment `ab`. Canonical Section 83
+gives pairwise disjoint cell interiors. Consequently the relative interior of `ab`
+cannot lie in the interior of either cell; it is a side of both cells, with the cells
+on opposite sides.
+
+A fixed pair of components cannot produce two different shared loaded pairs: two
+distinct pairs would give at least three common attachments, forbidden by Section 83.
+For a fixed loaded pair `a,b`, the other two vertices of a unit rhombus are the two
+intersection points of the unit circles centered at `a,b`, so at most one such rhombus
+exists.
+
+Therefore these missing rhombi inject into positive-length side adjacencies of the
+interior-disjoint convex cells. Their adjacency graph is planar: choose one dual point
+inside each cell and route one dual edge across each shared side. Thus this class has
+at most
+
+\[
+3c_I
+\tag{126.4}
+\]
+
+members, using the coarse planar bound valid also for the finite small-`c_I` cases.
+
+### Three loaded vertices
+
+Write the cycle as `u-v-w-x-u`, where `x` is unloaded. The component of `x` has `u`
+and `w` as attachments. If `v` were also an attachment, all four face vertices would
+belong to one harmonic graph and the rhombus would be local. Hence a missing rhombus
+has `v` absent from that attachment set.
+
+The two sides `uv` and `vw` are loaded-loaded unit contacts. Proof-only Section 124
+therefore makes both of them consecutive sides of the global loaded force hull. The
+rhombus lies on the inward side of those supporting edges, so its angle at `v` is the
+global hull interior angle there.
+
+If this angle is `theta`, the two rhombus diagonals have lengths
+`2 sin(theta/2)` and `2 cos(theta/2)`. Both are strictly greater than one, so
+
+\[
+\frac\pi3<\theta<\frac{2\pi}3.
+\]
+
+Thus the exterior hull turn at `v` is strictly greater than `pi/3`. Total convex
+turning is `2pi`, so fewer than six loaded hull vertices can support such a rhombus.
+For a fixed central hull vertex `v`, its two hull neighbors are fixed and determine at
+most one fourth rhombus vertex. Hence this class has at most
+
+\[
+5
+\tag{126.5}
+\]
+
+members.
+
+### Four loaded vertices
+
+Every side of the rhombus is now a loaded-loaded unit contact, hence by Section 124 a
+global hull side. If all four cycle sides are global hull sides, those four vertices
+already form the entire cyclic hull boundary. This forces `q=4`, impossible for all
+sufficiently large Type-II survivors, where `q=Omega(D)`.
+
+Thus the all-loaded missing class is empty for large `D`.
+
+## 126.3 The localization bound
+
+Combining the four cases gives the finite large-Type-II estimate
+
+\[
+\boxed{
+0\le\Delta_R\le3c_I+5.
+}
+\tag{126.6}
+\]
+
+Canonical Section 75 gives
+
+\[
+c_I=O(D^{2/3}),
+\]
+
+so (126.1) follows.
+
+For the area statement, every unit rhombus of side length one has area
+
+\[
+\sin\theta\le1.
+\]
+
+The area difference `A_4-sum_r A_{4,r}` is exactly the sum of areas of the missing
+full-core rhombi. Therefore
+
+\[
+0\le A_4-\sum_rA_{4,r}
+\le\Delta_R=o(D),
+\]
+
+proving (126.2).
+
+## 126.4 Scope and use
+
+- The theorem is Type II only because it uses Section 124.
+- Contact-isolated source points are retained. The local-face check explicitly rules
+  out an omitted source point inside a local rhombus by unit separation; it does not
+  add isolated coordinates to the Section-57 affine kernel.
+- The theorem concerns physical full-core rhombi, not an abstract quadrangulation.
+- The `o(D)` localization loss is stronger than the `O(D)` loaded-touching loss used
+  in canonical Section 122.
+- No diameter-decreasing competitor is constructed, and C-II remains open.
+
+**Conclusion:** proof-only structural theorem. In the Type-II branch, harmonic-cell
+rhombus accounting loses only `o(D)` full-core rhombi, with the corrected area bound
+`area<=1`.

@@ -1,0 +1,251 @@
+<!-- theorem-state: {"artifact_id":"ART-75F3FE11A175","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: uniform polynomial-onset maximum-population wall classification
+
+Date: 2026-10-07. Authority: audit.77.
+**Proved candidate awaiting independent audit.** No canonical promotion.
+Dependencies include the independently rederived proof-only effective chart,
+fixed-wall first polytope and explicit one-deficit window from this run.
+
+## 1. Statement and quantified advance
+
+There is a universal constant c_*>0 such that for every integer M>=4 and
+`0<theta<=c_* M^-40`, a unit-separated N=3M^2-3M+1-point cloud inside
+the arithmetic six-sided sorting unit wall, clear of all wall vertices,
+is exactly one of the finite sorting packets. In particular its center
+and adjacent first-ring sites are an actual unit triangle. No smoothness
+of the arbitrary cloud is required.
+
+Combining the uniform one-deficit packet and finite Oler cap, the entire
+wall class in this **joint growing-M interval** is excluded from a canonical
+triangle-free source, with all exterior points and isolates retained.
+The universal c_* is obtained by taking the minimum of finitely many
+universal constants in the estimates below. No explicit numerical value
+or sharp exponent is asserted. The exponent 40 is deliberately generous.
+This is stronger than a separate unspecified onset for every fixed M.
+
+`uniform chart -> polynomial active-row inverse and positive pinned stress
+-> uniform isolation -> approximate rate/fiber classification -> exact
+finite triangle for every M in the joint interval`.
+
+This does not cover theta comparable to M^-3 or M^-1, arbitrary walls,
+matching first profiles with different higher coefficients, or extraction
+from an arbitrary canonical macroscopic container. It does not close C-II
+or Level I. All constants C below are universal, independent of M and
+of the M! rate permutations; enlarging C between estimates is allowed.
+
+## 2. Flat active-row reconstruction from threshold paths
+
+Fix a permutation pi of the arithmetic rates
+`a_h=M-1-2h`, h=0,...,M-1. Let J be every moving-involving unit row in
+its finite sorting packet, evaluated at theta=0. Strong rows S are all
+ring edges and all six radial axes, including corner guards. A weak
+row entering layer r at (r,j) is the unique unit incoming choice: A if
+the new rate is not among the j smallest prefix rates, B otherwise.
+Axis choices are strong; all off-axis choices are weak.
+
+For any displacement x with full wall pinned, put
+`eta=||R_0[J] x||_infinity`, and let ||x||_max be its largest vertex
+Euclidean norm. We claim
+
+`||x||_max <= 500 M^3 eta`.                                 (7)
+
+Here is an explicit reconstruction, not a generic rank argument.
+Radial telescoping from the pinned corners gives
+`|e_k dot x(r e_k)|<=M eta`; the center norm is at most 2M eta.
+Write each axial x as n_(r,k)e_k+alpha_(r,k)J(e_k).
+Summing the r ring rows on a side and using |n|<=M eta gives
+`|alpha_(r,k+1)-alpha_(r,k)|<=4M eta`.
+Choose alpha_r=alpha_(r,0); all axial vectors differ from
+alpha_r J(e_k) by at most 21M eta.
+
+At an off-axis sector point define s from its u projection divided by
+c=sqrt(3)/2, and replace its v projection by c(s+alpha_r). Ring
+sums bound the change by 26M eta. Use the exact axial s=0,-alpha_r,
+center zero and pinned wall zero. This defines a linear projection P_L
+onto the strong-row kernel L, with
+
+`||x-P_L x||_max<=26M eta`.                                 (8)
+
+For d=P_L x, each active weak recurrence row has absolute residual at
+most 62M eta after division by c. Let I_j be the positions of the j
+smallest full permuted rates. The threshold path whose prefix selections
+are I_j intersect {0,...,r-1} uses only J rows. Telescoping from center
+to pinned boundary yields
+
+`|sum_(h in I_j) t_h|<=62M^2 eta`,
+`t_h=alpha_(h+1)-alpha_h`.
+
+Adjacent j differences recover each t_h with error at most 124M^2 eta.
+Thus |alpha_r|<=124M^3 eta. Every interior (r,j) lies on some full
+threshold path; telescoping to it gives |s_(r,j)|<=186M^3 eta.
+In Cartesian sector coordinates d=(c*s,s/2+alpha_r), so
+||d||_max<=400M^3 eta. Together with (8), this proves (7).
+It also gives
+
+`smallest singular value of R_0[J] >= 1/(1000 M^4)`.
+
+Applying (8) using only strong residuals gives a separate nonzero singular
+bound `sigma_min^+(R_0[S])>=1/(52M^2)`: distance to L is at most the
+Euclidean norm of x-P_Lx. These statements hold for every permutation.
+The exact verifier independently checks active-path coverage and telescoped
+linear identities; it does not infer a rank bound from floating singular
+values.
+
+## 3. Explicit positive normal weights, with polynomial bounds
+
+Let d* be the first sorting field and lambda^p the central six-chain
+stress. Its energy gradient is
+`g_0=2 R_1^T lambda^p`.
+On L, `g_0 dot x=12 sum_h a_(pi(h))*delta t_h`.
+For increasing rates b_j, Abel summation gives
+
+`sum b_j delta t_(position j)`
+`=-sum_(j=1)^(M-1) (b_j-b_(j-1))*sum_(h in I_j) delta t_h`.
+
+The threshold path row sum in any one sector is c times that subset
+sum. Average the six sector paths. This represents g_0 on L as
+`-R_0^T mu`, with
+
+`mu_e=(2/c)*sum_(threshold paths containing e) (b_j-b_(j-1))`.
+
+Every active weak row lies on at least one threshold path; hence mu_e>=4/c
+there, and mu_e<=C M. The remaining force g_0+R_0^Tmu belongs to the
+strong-row span. By the strong singular bound it has strong coefficients
+nu with ||nu||_2<=C M^4. Therefore
+`lambda_1=(mu-nu)/2` solves
+
+`R_0^T lambda_1=-R_1^T lambda^p`,
+
+with every weak coefficient at least 2/c and ||lambda_1||_2<=C M^4.
+The unit-contact directions are single rate factors, so
+`||R_1||<=C M`, `||R_2(theta)||<=C M^2`.
+
+Add epsilon times the sum of the other nested stresses to lambda^p,
+where `epsilon=c_0 M^-7` and c_0 is a sufficiently small universal
+constant. The resulting lambda_0 is positive on every strong row,
+with strong minimum epsilon and total sum at most C M. The extra first
+force has norm at most C epsilon M^3; the J-row inverse bound permits
+its correction with norm at most C epsilon M^7. Choose c_0 so the weak
+lambda_1 coefficients stay at least one. The total first correction
+still has norm at most C M^4. This uses nested stresses to construct
+positive coefficients, not to add overlapping energy lower bounds.
+
+For theta<=c M^-11, R_theta[J] has a right inverse of its transpose
+of norm at most 2000M^4, by the preceding singular bound and
+||R_theta-R_0||<=C M theta. The residual of
+lambda_0+theta*lambda_1 is at most C theta^2 M^5. Correct it exactly
+with that right inverse, by at most C theta^2 M^9. Shrink the universal
+c so the final exact pinned stress lambda_theta obeys
+
+`R_theta^T lambda_theta=0`,
+`min_e lambda_theta,e >= theta/2`,
+`sum_e lambda_theta,e <= C M`.
+
+Strong positivity follows from epsilon dominating theta C M^4; weak
+positivity follows from theta dominating C theta^2 M^9. All dependences
+are polynomial and uniform over the permutation.
+
+## 4. Uniform finite isolation
+
+The infinity version of (7) remains valid for R_theta with constant
+1000M^3, by absorbing C M^4 theta*||x||_max. For a feasible displacement
+x from the sorting packet with the same pinned wall, every J row obeys
+
+`(R_theta x)_e >= -2||x||_max^2`.
+
+Its positive stress sum is zero. The preceding stress bounds therefore
+give an upper bound C M||x||_max^2/theta for each row. Apply the inverse:
+
+`||x||_max <= C M^4 ||x||_max^2/theta`.
+
+Thus a distinct feasible cloud is at distance at least
+`c theta/M^4`. This is an actual nonlinear isolation radius, not just
+full rank or nonzero infinitesimal motion.
+
+## 5. Uniform approximate classification of an arbitrary cloud
+
+For theta<=c M^-40 the effective low-total-slack unit-wall theorem
+labels the full cloud by P_(M-1) and bounds its displacement
+`||delta||_max<=1000M^4 theta`. This is the previously rederived
+Delaunay reconstruction at theta<=1/(10000M^3), not an unspecified
+compactness onset. Put d=delta/theta.
+
+Expand every flat nearest-neighbour lower inequality, including all
+wall neighbours. Boundary displacement/first-field remainder is at
+most C M^3 theta after division by theta; quadratic lower error is
+at most C M^8 theta. Write
+`epsilon_1=C M^8 theta`.
+The individual nested stress has total coefficient 6M and zero work
+on the prescribed first corner velocities. Nonnegative approximate
+rows imply every strong residual has absolute size at most
+`eta=C M^9 theta`.
+
+Project onto L with (8), obtaining d_L with
+`||d-d_L||_max<=C M^10 theta`.
+Every weak recurrence has lower error at most
+`zeta=C M^10 theta`. All subset paths therefore give
+
+`sum_(h in I) t_h >= B_j-rho`, `rho=C M^11 theta`,
+`sum t=0`, `B_j=-j(M-j)`.
+
+An explicit correction places t in the exact permutahedron: let
+`t_bar=(M-1)*t/(M-1+rho)`.
+Since |B_j|>=M-1, multiplying B_j-rho by this factor is at least B_j.
+Thus t_bar lies in P, and the initial field bound gives
+`||t-t_bar||_2<=C M^15 theta`.
+
+The exact central-chain finite inequality gives chain energy at least
+`6 sum a_h^2-C M^5 theta^2`. Replacing d by d_L changes this energy
+by at most C M^15 theta. Replacing t by t_bar changes its norm squared
+by at most C M^20 theta. Therefore
+
+`0<=sum a_h^2-||t_bar||^2<=C M^20 theta`.
+
+For a convex combination of permutations of a, this deficit is exactly
+the average squared distance of those permutations from t_bar. At least
+one permutation t* satisfies
+`||t_bar-t*||_2<=C M^10 sqrt(theta)`, hence
+`||t-t*||_infinity<=C M^15 sqrt(theta)`.
+
+The same prefix/suffix threshold paths, now with lower errors zeta,
+bound every s_(r,j) on both sides by its sorting value within
+`M*||t-t*||_infinity+M*zeta`. They likewise control alpha_r.
+Consequently
+
+`||d-d*||_max<=C M^16 sqrt(theta)`.
+
+The finite sorting packet Q_pi(theta) has remainder at most C M^3 theta^2
+from its first field, so
+
+`||old cloud-Q_pi(theta)||_max<=C M^16 theta^(3/2)`.
+
+For theta<=c_*M^-40 choose the universal c_* small enough that this
+is strictly below the isolation radius c theta/M^4. The clouds are
+therefore exactly equal. Every sorting cloud has an actual center/first-
+ring unit triangle. This proves the statement for every M and every
+allowed theta, without extracting a subsequence separately for each M.
+
+## 6. Scope audit and next exact obligations
+
+The profile gap used in the positive weights is the arithmetic gap two.
+No bound uniform in arbitrarily small gaps of general real profiles is
+claimed. Constants in the effective chart, path projection and row norms
+are universal; the finite list of smallness inequalities defining c_*
+is independent of M. The exponent budget is: first-poly error M^11 theta,
+energy deficit M^20 theta, field error M^16 sqrt(theta), isolation
+c theta/M^4; hence the final M^-40 window. It also implies every earlier
+M^-11, M^-5 and M^-3 smallness requirement after shrinking c_*.
+
+The proof uses all full-chart nearest-neighbour inequalities and exact
+wall coordinates. It does not delete old interior isolates or treat their
+coordinates as ZR/ZF affine modes. In the z=N branch the triangle is in
+the actual old cloud. In z<=N-1 the independently derived strict packet
+pays the wall deletion and all source labels with the complete shield/
+contact/diameter ledger. These are separate endpoints.
+
+Two next attacks are to improve the polynomial window enough for an
+extractable actual wall, and to extend the defect packet to arbitrary
+matched/mismatched boundary data supplied by the common Delaunay skeleton.
+Exterior cap/core motion and nonbinary face-coupled finite states remain
+independent terminal routes. No general container or Target C closure is
+claimed at this checkpoint; the continuous goal proceeds.

@@ -1,0 +1,359 @@
+# Target C-II — the near-full exact-force shore contains one linear paired destination regime
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** the no-positive-density-TB1 branch of the selected one-sided high-`t` shore through `t=(q-k)/D<=1.8687`  
+**Dependencies:** near-full-shore growing force diagonal; gap-free bilateral force weave; same-host diameter exclusion; full fixed-birth-side nesting; exact diameter-normal order; canonical C67 direction separation; full-source midpoint localization  
+**Certificate:** `research/verify_target_c_high_t_near_full_paired_destination_trichotomy_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The near-full-shore diagonal gives exact-force centers at asymptotic density
+
+\[
+{c\over2},
+\qquad
+c={113\over5{,}000{,}000},
+\qquad
+{c\over2}={113\over10{,}000{,}000}=1.13\times10^{-5}.
+\tag{NP.1}
+\]
+
+Its force-pair projective gap is permitted to tend to zero. The gap-free bilateral theorem removes the only reason that the previous paired-destination normal form had to start from a smaller fixed-angle population. After at most six deletions, **every** center in the near-full diagonal has one force bar born on each physical host arc, with a macroscopic birth rung and partner rung. The two birth-side lanes can therefore be nested simultaneously on essentially the whole one-sided shore.
+
+The result is a near-full-density paired normal form: after ordering the centers toward the common hub, the destination pattern changes at most twice,
+
+```text
+TT  ->  mixed  ->  OO,
+```
+
+and one consecutive regime has asymptotic density at least
+
+\[
+\boxed{{c\over6}={113\over30{,}000{,}000}=3.766666666\ldots\times10^{-6}.}
+\tag{NP.2}
+\]
+
+All growing-depth force/KKT/train-grid metadata survives on that regime.
+
+---
+
+## 1. Start from the near-full growing exact-force diagonal
+
+Use the no-positive-density-TB1 diagonal sequence from the near-full-shore theorem. There are source diameters `D_k -> infinity`, radii `r_k -> infinity`, and center sets `Q_k` such that
+
+\[
+\boxed{
+|Q_k|>\left({c\over2}-o(1)\right)D_k.
+}
+\tag{NP.3}
+\]
+
+Every center lies on one strict side of the common hub. Its full radius-`r_k` neighborhood is exact-antipodal, every internal interface carries an exact positive two-bar force pair, all rows in the block have one exact oriented phase, and the normalized local switching/KKT complexity tends to zero. Every force bar retains the host transverse margin
+
+\[
+|d\cdot Jv|\ge c_H-o(1),
+\qquad
+c_H=0.453819885927\ldots .
+\tag{NP.4}
+\]
+
+The pair-gap parameter `rho_k` may tend to zero.
+
+Apply the gap-free bilateral force theorem to the exact force pair at every center. Delete the at most six unilateral centers. This finite loss is absorbed into `o(D_k)`. Hence at every remaining center `i` there are bars
+
+\[
+h_i^A=x_i^Ay_i^A,
+\qquad
+h_i^B=x_i^By_i^B,
+\tag{NP.5}
+\]
+
+with
+
+\[
+x_i^A\text{ on physical host }A,
+\qquad
+x_i^B\text{ on physical host }B,
+\tag{NP.6}
+\]
+
+and
+
+\[
+\boxed{
+|x_i^A-x_i^B|,
+|y_i^A-y_i^B|
+\ge(c_H-o(1))D_k.
+}
+\tag{NP.7}
+\]
+
+The exact force identity is retained:
+
+\[
+G_i=D_k(\lambda_i^A d_i^A+\lambda_i^B d_i^B),
+\qquad \lambda_i^A,\lambda_i^B>0.
+\tag{NP.8}
+\]
+
+On every growing exact-phase neighborhood, the two transverse-sign lanes form the complete bipartite crossing weave from the gap-free theorem. Across the whole center population, one of the two ordinary reaction-axis lifts contains at least half the centers and has the same cross-sign crossing property. No endpoint-degree thinning is used for either statement.
+
+---
+
+## 2. Both birth-side lanes are strictly nested on the near-full population
+
+Write the retained center indices in increasing order toward the hub:
+
+\[
+i_1<i_2<\cdots<i_N<k,
+\qquad
+N>\left({c\over2}-o(1)\right)D.
+\tag{NP.9}
+\]
+
+For the bar born on `A`, write the hubward endpoint region as `R_{b_s^A}`; similarly write `R_{b_s^B}` for the `B`-born bar. Exact selected-cut supports are
+
+\[
+I_s^A=\{i_s+1,\ldots,b_s^A\},
+\qquad
+I_s^B=\{i_s+1,\ldots,b_s^B\}.
+\tag{NP.10}
+\]
+
+Same-host diameter exclusion gives
+
+\[
+y_s^A\in Q^B\cup T_m,
+\qquad
+y_s^B\in Q^A\cup T_m,
+\tag{NP.11}
+\]
+
+where `Q^A,Q^B` are the hubward portions of the two physical hosts and `T_m` is the far terminal boundary piece.
+
+Apply the fixed-birth-host nesting theorem to the complete `A` lane. The endpoint order on the contiguous destination segment `Q^B\cup T_m` gives
+
+\[
+\boxed{b_1^A\ge b_2^A\ge\cdots\ge b_N^A.}
+\tag{NP.12}
+\]
+
+Apply it independently to the complete `B` lane:
+
+\[
+\boxed{b_1^B\ge b_2^B\ge\cdots\ge b_N^B.}
+\tag{NP.13}
+\]
+
+Because the birth indices increase strictly, both support lanes are strictly nested:
+
+\[
+\boxed{
+I_1^A\supsetneq I_2^A\supsetneq\cdots\supsetneq I_N^A,
+}
+\tag{NP.14}
+\]
+
+\[
+\boxed{
+I_1^B\supsetneq I_2^B\supsetneq\cdots\supsetneq I_N^B.
+}
+\tag{NP.15}
+\]
+
+No density factor is paid. This is the old paired nesting theorem applied at the stronger near-full diagonal scale made available by gap-free bilateral birth.
+
+---
+
+## 3. The paired destination word has only three consecutive regimes
+
+Use the established boundary-piece convention in which the terminal piece has maximal path-region tag `m`, while the opposite-host segment continues with decreasing labels `m-1,m-2,...,k`. Thus
+
+\[
+y_s^\sigma\in T_m
+\quad\Longleftrightarrow\quad
+b_s^\sigma=m,
+\qquad \sigma\in\{A,B\}.
+\tag{NP.16}
+\]
+
+Since each `b_s^sigma` sequence is nonincreasing, terminal membership is a prefix in each lane. There are cutoffs
+
+\[
+r_A,r_B\in\{0,1,\ldots,N\}
+\tag{NP.17}
+\]
+
+such that
+
+\[
+y_s^A\in T_m\iff s\le r_A,
+\qquad
+y_s^B\in T_m\iff s\le r_B.
+\tag{NP.18}
+\]
+
+Put
+
+\[
+r_-:=\min(r_A,r_B),
+\qquad
+r_+:=\max(r_A,r_B).
+\]
+
+The full center population then consists of exactly three consecutive regimes, any of which may be empty:
+
+1. `1<=s<=r_-`: **TT**, both force bars terminate in `T_m`;
+2. `r_-<s<=r_+`: **mixed**, exactly one force bar terminates in `T_m` and the other goes to its opposite physical host;
+3. `r_+<s<=N`: **OO**, both force bars go to their opposite physical hosts.
+
+Their cardinalities sum to `N`. Hence
+
+\[
+\boxed{
+\max\{M_{TT},M_{mix},M_{OO}\}\ge {N\over3}.
+}
+\tag{NP.19}
+\]
+
+Together with (NP.9), one consecutive paired regime satisfies
+
+\[
+\boxed{
+M_*>
+\left({c\over6}-o(1)\right)D
+=
+\left({113\over30{,}000{,}000}-o(1)\right)D.
+}
+\tag{NP.20}
+\]
+
+Numerically the leading coefficient is
+
+\[
+\boxed{3.76666666667\times10^{-6}.}
+\tag{NP.21}
+\]
+
+The previous paired-destination theorem started from the older deep-force density ceiling `c_0=c/4` and approached `c_0/3=c/12`. The new floor `c/6` is exactly twice that asymptotic coefficient.
+
+---
+
+## 4. The TT regime forces twice the terminal direction density
+
+Suppose TT is the large regime and let
+
+\[
+M:=M_{TT}>
+\left({c\over6}-o(1)\right)D.
+\tag{NP.22}
+\]
+
+There are two force bars per center, and switching sets at different interfaces are edge-disjoint. Section 1 also gives four distinct endpoints within each pair. Thus TT contains `2M` distinct actual diameter edges whose hubward endpoints all lie in `T_m`.
+
+Canonical C67 separates distinct projective diameter directions by
+
+\[
+\delta_D=2\arcsin{1\over2D}\ge {1\over D}.
+\tag{NP.23}
+\]
+
+Let
+
+\[
+L_D=O(D^{3/4}),
+\qquad
+\epsilon_D=
+\arcsin\!\left({L_D\over D/2-L_D}\right)=o(1)
+\tag{NP.24}
+\]
+
+be the common midpoint/radial-direction error. The same projective-circle packing argument used in the existing terminal-span theorem gives
+
+\[
+\operatorname{angdiam}_o(T_m\cap S)
+\ge
+\min\left\{{\pi\over3},(2M-1)\delta_D\right\}
+-2\epsilon_D.
+\tag{NP.25}
+\]
+
+Therefore
+
+\[
+\boxed{
+\liminf\operatorname{angdiam}_o(T_m\cap S)
+\ge {c\over3}
+={113\over15{,}000{,}000}
+=7.533333333\ldots\times10^{-6}.
+}
+\tag{NP.26}
+\]
+
+The `pi/3` cap is inactive at this density. Radial projection to radius `D/2` also yields
+
+\[
+\boxed{
+\liminf {\operatorname{diam}(T_m\cap S)\over D}
+\ge
+\sin\!\left({c\over6}\right)
+=3.76666666665\ldots\times10^{-6}.
+}
+\tag{NP.27}
+\]
+
+The terminal branch therefore carries a macroscopic two-lane terminal object at the full near-shore density scale, without requiring a fixed projective gap inside each force pair.
+
+---
+
+## 5. What the other two regimes retain
+
+If **OO** is the large regime, every center supplies two simultaneous opposite-host diameter bars:
+
+\[
+A\to B,
+\qquad
+B\to A.
+\]
+
+Each birth-side lane is strictly nested by (NP.14)--(NP.15), and every growing exact-phase neighborhood has completely crossing transverse-sign force lanes. Every paired birth rung and partner rung has Euclidean length at least `(c_H-o(1))D`.
+
+If **mixed** is the large regime, its orientation is fixed throughout the whole consecutive block. For example, after possibly interchanging `A,B`, every center has
+
+\[
+A\to T_m,
+\qquad
+B\to A.
+\]
+
+Again both support lanes are nested, every growing exact-phase neighborhood carries the complete cross-sign weave, and the macroscopic rung bounds persist.
+
+In all three regimes the centers come from the near-full growing force diagonal. Therefore the following metadata is retained simultaneously:
+
+- exact-antipodal radius `r_D -> infinity` around every center;
+- an exact positive force pair at every internal interface of those neighborhoods;
+- fixed individual host transverse derivative margin `c_H`;
+- normalized switching/KKT complexity tending to zero;
+- common exact row phase inside each growing block;
+- common dense near-equilateral train grid;
+- same-axis strictly ordered strip reactions.
+
+The regime extraction costs only the factor three in (NP.19), plus a finite bilateral deletion.
+
+---
+
+## 6. Frontier effect
+
+On the no-positive-density-TB1 side, the near-full exact-force obstruction is no longer an unordered population of local dipoles. Along a subsequence it contains a consecutive linear block of one of three paired global geometries at density at least `c/6`:
+
+```text
+TT:    two nested force lanes into the far terminal piece;
+mixed: one nested terminal lane + one nested opposite-host lane;
+OO:    two simultaneous opposite-host nested force lanes.
+```
+
+All three have macroscopic birth/partner rungs and complete cross-sign crossing weaves on their growing exact-phase neighborhoods, while keeping the growing exact-phase/common-grid/KKT structure.
+
+C-II remains open. The live no-TB1 target is now to rule out these three paired regimes against the common near-equilateral train grid and near-central diameter geometry, or to convert one into a same-cardinality strict sub-`D` competitor. The separate positive-density strong-TB1 branch also remains open.
+
+**Disposition:** lifted the paired nested-destination trichotomy to the asymptotically full one-sided exact-force density, forcing a `c/6` linear TT/mixed/OO regime and doubling the previous asymptotic paired-regime coefficient. C-II and Level I remain open.

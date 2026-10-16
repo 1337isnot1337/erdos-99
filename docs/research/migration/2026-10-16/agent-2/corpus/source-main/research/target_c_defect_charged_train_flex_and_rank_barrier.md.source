@@ -1,0 +1,439 @@
+# Target C — defect-charged train freedom and the exact locking-rank barrier
+
+**Date:** 2026-09-12  
+**Status:** proof-only structural theorem plus negative closure theorem; theorem state unchanged  
+**Level I / C-II:** open
+
+This note rederives the useful part of the old unreviewed ZTF/ZPL train-flex reports at
+the current post-ZF scope and adds two facts not isolated there:
+
+1. every bounded hole of the **full strict-rhombus complex** is paid injectively by
+   bounded nonquadrilateral contact-face perimeter;
+2. a pure Maxwell/rank attack on the resulting train freedom cannot close C-II.  The
+   exact row-count surplus is determined by the positive-core vertices outside the
+   rhombus complex and by `s_Z`.
+
+The first fact gives a defect-sensitive neutral-space theorem.  The second identifies
+precisely what a closing theorem must add: geometric rank loss of the external
+contact/diameter rows on the rhombic shear space, not another row count.
+
+No contact-isolated source point is removed or assigned a core velocity.
+
+---
+
+## 1. Full strict-rhombus complex
+
+Work in the canonical post-ZF positive-contact core `G` on `m` vertices and `e`
+contact edges.  Let
+
+- `R` be the number of bounded strict-rhombus faces;
+- `f` be the number of bounded nonquadrilateral contact faces;
+- `Q=sum(deg F-4)` over those nonquadrilateral faces;
+- `b` be the occurrence-counted outer contact-face length;
+- `h` be the number of actual loaded diameter edges;
+- `s_Z=e+h-(2m-2)>=0`.
+
+Canonical face incidence gives
+
+\[
+2e=4R+(4f+Q)+b,
+\tag{DF.1}
+\]
+
+and canonical Section 57 gives
+
+\[
+\boxed{b+Q=2(h-s_Z).}
+\tag{DF.2}
+\]
+
+Let `mathcal R` be the union of all closed strict-rhombus faces, regarded as a finite
+planar cell complex.  Write
+
+- `V_R` for the number of core vertices incident to at least one strict rhombus;
+- `E_R` for the number of contact edges incident to at least one strict rhombus;
+- `c_R` for the number of connected components of `mathcal R` (vertex touching counts
+  as connected for this topological count);
+- `g_R` for the total number of bounded complementary components of `mathcal R`;
+- `P_R` for the total physical boundary-edge occurrence count of `mathcal R`;
+- `T:=P_R/2` for the total stopped-train count, summed over the edge-connected
+  rhombus-face components.
+
+The physical-boundary train theorem gives `P_R=2T`.  Face-edge incidence gives
+
+\[
+4R=2(E_R-P_R)+P_R,
+\]
+
+hence
+
+\[
+\boxed{E_R=2R+T.}
+\tag{DF.3}
+
+Planar Euler characteristic of the finite cell complex is
+
+\[
+V_R-E_R+R=c_R-g_R,
+\]
+
+so
+
+\[
+\boxed{V_R=R+T+c_R-g_R.}
+\tag{DF.4}
+
+These identities remain valid when different edge-connected rhombus-face components
+touch at vertices; that is why `c_R` is the topological component count in (DF.4),
+not the number of train components.
+
+---
+
+## 2. Hole boundary is paid by nonquadrilateral-face perimeter
+
+Let `P_hole` be the total number of physical rhombus-boundary edge occurrences
+bordering bounded complementary components of `mathcal R`.
+
+### Theorem DF.1 — injective hole-boundary charge
+
+\[
+\boxed{P_{hole}\le4f+Q.}
+\tag{DF.5}
+
+### Proof
+
+Take one physical rhombus-boundary edge `e` adjacent to a bounded complementary
+component of `mathcal R`.  On one side of `e` lies a strict rhombus.  Because `e` lies
+on a bounded hole, the other side is not the unbounded contact face.  It is therefore
+incident to a bounded face of the full plane contact graph.
+
+That other bounded face cannot be a strict rhombus: if it were, it would share the
+full edge `e` with the first rhombus and hence belong to the same strict-rhombus union,
+so `e` would not be physical boundary.  Since every bounded quadrilateral contact face
+is a strict rhombus, the other face must be nonquadrilateral.
+
+Thus each hole-boundary occurrence maps to the unique incidence of its edge with a
+bounded nonquadrilateral face.  One face-edge incidence has only one opposite side, so
+this map is injective over all rhombus components and all holes.  The total number of
+such nonquadrilateral incidences is exactly `4f+Q`. `square`
+
+This is stronger than merely using `P_hole<=P_R`: internal rhombic topology is paid by
+one of the already existing defect currencies.
+
+---
+
+## 3. Every bounded rhombic hole has length at least five
+
+### Lemma DF.2
+
+Every bounded complementary component of `mathcal R` has physical boundary length at
+least five.  Consequently
+
+\[
+\boxed{5g_R\le P_{hole}\le4f+Q.}
+\tag{DF.6}
+
+### Proof
+
+A hole-boundary walk uses distinct boundary edges around that complementary component;
+pinched vertices may repeat but do not create a repeated boundary edge.  Length one or
+two is impossible in the simple straight-line contact graph.  Length three would be a
+three-cycle of unit contacts, i.e. an exact unit equilateral triangle, excluded in the
+C-II branch.
+
+Suppose a bounded hole had length four.  A closed trail of four distinct edges in a
+simple graph with no triangle is a four-cycle.  Its four straight sides are unit
+contacts.  Four unit edge vectors summing to zero occur in opposite pairs, so the
+simple quadrilateral is a unit rhombus.
+
+The standard strict-rhombus coverage argument now applies: in a triangle-free unit
+rhombus both diagonals exceed one in the required short-diagonal sense, and splitting
+along the shorter diagonal shows that the two triangular halves have circumradius
+strictly below one.  Hence every interior point of the rhombus is at distance less
+than one from a boundary vertex.  No additional source point can lie inside it.
+Therefore the four-cycle bounds an actual bounded quadrilateral contact face.  Every
+such face is a strict rhombus, which would belong to `mathcal R` and share its boundary
+edges with the surrounding rhombus complex.  It cannot be a complementary hole.
+
+Thus every hole has at least five boundary occurrences.  Summing and applying
+Theorem DF.1 gives (DF.6). `square`
+
+In particular
+
+\[
+\boxed{g_R\le{4f+Q\over5}.}
+\tag{DF.7}
+
+---
+
+## 4. Defect-sensitive train-angle flex dimension
+
+For completeness we rederive the train-angle period argument rather than cite the old
+unreviewed report.
+
+Fix one edge-connected strict-rhombus face component `C`.  Give every stopped train
+`tau` an oriented unit edge vector `u_tau` and an angular velocity `t_tau`.  On an
+oriented rhombus edge `e` belonging to train `tau`, put
+
+\[
+\omega_t(e)=\sigma_e t_\tau J u_\tau,
+\tag{DF.8}
+
+where `sigma_e=+/-1` records the edge orientation.  Opposite sides of every rhombus
+belong to the same train and cancel pairwise around the face, so `omega_t` has zero
+period around every rhombus face.
+
+If the component has `g` bounded holes, all remaining periods are represented by `g`
+hole cycles.  Their vector periods give a linear map
+
+\[
+\mathcal P:\mathbb R^{T_C}\to(\mathbb R^2)^g
+\]
+
+of rank at most `2g`.  For `t in ker P`, the edge cochain has zero period on every
+cycle and integrates to vertex velocities preserving every rhombus contact bar to
+first order.  Hence the train-angle flex space has dimension at least
+
+\[
+T_C-2g.
+\tag{DF.9}
+
+Summing over edge-connected face components gives
+
+\[
+\boxed{
+\dim\mathcal F_{train}
+\ge T-2g_R
+\ge T-{2\over5}(4f+Q).
+}
+\tag{DF.10}
+
+This count is before adding arbitrary translations of disconnected bar components.
+The constant train-angle vector on each edge-connected component is its Euclidean
+rotation mode.
+
+---
+
+## 5. Exact outer-to-outer one-train shears
+
+A stopped train endpoint on a bounded hole contributes a boundary edge occurrence to
+`P_hole`.  Every train that is not outer-to-outer has at least one such endpoint.
+Therefore, if `N_oo` is the number of trains whose two ends lie on unbounded-component
+boundary,
+
+\[
+\boxed{
+N_{oo}\ge T-P_{hole}\ge T-(4f+Q).
+}
+\tag{DF.11}
+
+Each such train has an exact finite one-coordinate shear in the isolated rhombus
+subframework.  To see this, rotate only its train vector `u_tau` by a small angle and
+leave all other train vectors fixed.  Every rhombus still closes because opposite
+sides use the same rotated vector.  A hole period contains only trains with an endpoint
+on that hole boundary; an outer-to-outer train has none.  Thus all hole periods remain
+exactly zero, and the modified edge vectors integrate globally on the component.
+
+For sufficiently small angle all rhombi remain strict.  This statement concerns the
+rhombus-edge subframework only.  Non-rhombus contact bars and diameter bars are exactly
+the external locks that may obstruct the shear in the complete positive core.
+
+---
+
+## 6. The full rhombus bar framework has a Maxwell neutral-space floor
+
+Let `R_R` be the planar bar-rigidity matrix using only the `E_R` rhombus edges and the
+`V_R` rhombus-incident vertices.  Irrespective of special geometry,
+
+\[
+\operatorname{rank}R_R\le E_R.
+\]
+
+Hence
+
+\[
+\dim\ker R_R
+\ge2V_R-E_R.
+\]
+
+Using (DF.3)--(DF.4),
+
+\[
+\boxed{
+\dim\ker R_R
+\ge T+2c_R-2g_R.
+}
+\tag{DF.12}
+
+The train-period construction in Section 4 is a geometric subfamily of this general
+Maxwell floor.
+
+---
+
+## 7. Exact barrier to a pure external-row-count closure
+
+Let
+
+\[
+x:=m-V_R
+\tag{DF.13}
+
+be the number of positive-core vertices incident to no strict rhombus.  These are
+**core** vertices, not contact-isolated source points.
+
+The complete mixed active framework on the `m` core vertices has
+
+\[
+e+h=2m-2+s_Z
+\tag{DF.14}
+
+rows.  The number of rows not belonging to the rhombus-edge subframework is therefore
+
+\[
+N_{ext}:=e+h-E_R.
+\tag{DF.15}
+
+Extend a rhombus-subframework velocity by zero on the `x` outside core vertices.  If
+all `N_ext` external rows also vanish, it is a flex of the full mixed active framework.
+Canonical ZF says every such full flex is Euclidean.
+
+Let `r_x` be the dimension of Euclidean infinitesimal motions that vanish on all `x`
+outside vertices:
+
+\[
+r_x=
+\begin{cases}
+3,&x=0,\\
+1,&x=1,\\
+0,&x\ge2.
+\end{cases}
+\tag{DF.16}
+
+(The `x=1` motions are rotations about the one fixed point.)  Therefore external rows
+must have rank at least
+
+\[
+\dim\ker R_R-r_x.
+\tag{DF.17}
+
+If one uses only the guaranteed Maxwell floor (DF.12), the strongest possible
+row-count demand is
+
+\[
+N_{ext}\ge(2V_R-E_R)-r_x.
+\tag{DF.18}
+
+But the difference between the **available** number of external rows and this demand is
+an exact identity:
+
+\[
+\begin{aligned}
+N_{ext}-[(2V_R-E_R)-r_x]
+&=(e+h-E_R)-2V_R+E_R+r_x\\
+&=2m-2+s_Z-2V_R+r_x\\
+&=\boxed{2x-2+s_Z+r_x}.
+\end{aligned}
+\tag{DF.19}
+
+Thus
+
+\[
+\boxed{
+N_{ext}-[(2V_R-E_R)-r_x]
+=
+\begin{cases}
+1+s_Z,&x=0,\\
+1+s_Z,&x=1,\\
+2x-2+s_Z,&x\ge2.
+\end{cases}}
+\tag{DF.20}
+
+It is always nonnegative, and in fact at least `1+s_Z`.
+
+### Consequence
+
+A proof that uses only
+
+```text
+many rhombus/train flex dimensions
++ number of non-rhombus contact rows
++ number of diameter rows
+```
+
+cannot contradict ZF.  The exact post-ZF row ledger has enough external rows to kill
+the universal Maxwell neutral space, with at least the one KKT/self-stress unit of
+slack and additional slack from non-rhombic core vertices.
+
+This is not merely a bad constant.  It is an algebraic barrier.
+
+A closing theorem must prove one of the following stronger facts:
+
+1. `rank` of the external rows **on the rhombic shear space** is strictly smaller than
+   their row count by more than the margin in (DF.20);
+2. the rhombus subframework has additional special-geometry flexes beyond the Maxwell
+   floor, with a quantitatively sufficient excess;
+3. a finite exact shear survives all external rows and yields a strict diameter
+   decrease; or
+4. the external locking rows needed by ordered trains are incompatible with the
+   Woodall/attachment/corridor geometry.
+
+The natural target is (1): a Hall/sparsity theorem for which external rows can see
+which ordered train shears.
+
+---
+
+## 8. Type-II scale
+
+Canonical Type II has
+
+\[
+A_4/D^2\to\pi/4.
+\]
+
+For every train, its total transverse rhombus-area span is at most `D`, and every
+rhombus belongs to two trains.  Hence
+
+\[
+2A_4\le TD,
+\]
+
+so
+
+\[
+\boxed{T\ge(\pi/2-o(1))D.}
+\tag{DF.21}
+
+Thus the neutral/locking problem is genuinely linear scale.  Equations (DF.7),
+(DF.10), and (DF.11) show exactly how bounded-face defect can erode that train freedom;
+(DF.20) shows why scalar row count alone still cannot finish the proof.
+
+If a later endpoint theorem forces `4f+Q=o(D)`, then (DF.10) gives
+
+\[
+\dim\mathcal F_{train}\ge(\pi/2-o(1))D,
+\]
+
+and (DF.11) gives the same leading lower bound on exact outer-to-outer one-train
+shears.  At that point essentially the entire linear train family must be locked by
+the boundary/diameter system, making external-row **geometry** rather than internal
+rhombus topology the sole obstruction.
+
+---
+
+## 9. Scope and hostile audit
+
+- `x=m-V_R` counts positive-core vertices only.  Contact-isolated source points never
+  enter the mixed framework or the Maxwell calculation.
+- The hole charge is by physical edge occurrence and is injective.  It does not count
+  one nonquadrilateral face incidence twice.
+- A four-edge hole is excluded only after proving it would be an actual empty
+  quadrilateral contact face and hence a strict rhombus in the same complex.
+- The train-angle theorem is first-order.  Only the outer-to-outer coordinate shears in
+  Section 5 are asserted as exact finite rhombus-subframework deformations.
+- No claim is made that those shears preserve non-rhombus contact bars or diameter
+  bars; those are the locking rows under study.
+- Equation (DF.20) deliberately records a failed closure route.  It must not be read as
+  evidence that the external rows actually attain full possible rank on train shears.
+  Their geometric rank is the live question.
+- The theorem-state manifest is unchanged.
+

@@ -1,0 +1,137 @@
+# Target C: close the four-weight-two-line perfect-matching subcase of the final k=4 p=3 profile
+
+Date: 2026-09-26
+
+Status: proof-level reduction plus exact finite support certificate. This closes only the
+r=4 weight-two-line subcase of the remaining eight-no-root
+k=4,D=-1,d_root=0,p=3 three-singleton profile. It does not close the
+whole three-singleton profile, Target C-II, or Erdos Problem #99.
+
+Companion verifier:
+
+research/verify_target_c_support7_global_segment_relative_eight_noroot_k4_dminus1_d0p3_three_singleton_r4_perfect_matching_closure_2026_09_26.py
+
+## 1. Inputs from current main
+
+Current main gives a rank-four coefficient space P<=Q^8 with
+(d1,d2,d3,d4)>=(2,4,5,7), and the mixed singleton-plus-pair profile is
+closed, so p=3 consists of three singleton blocks.
+
+In the present subcase there are exactly four projective weight-two lines.
+Current main proves their supports are pairwise disjoint. Hence their supports
+are four disjoint pairs M1,...,M4 partitioning the eight coordinates, and the
+four lines form a basis of P. Thus P is the direct sum of four one-dimensional
+pair-supported lines and its generalized Hamming weights are exactly
+(2,4,6,8).
+
+For every one of the three actual singleton blocks b, current main gives
+dim((E_b+P)/P)=1 and proves that the quotient line is active on at least three
+matched-pair quotient summands. Hence every singleton touch set meets at least
+three matched pairs.
+
+For every actual-empty touched block a, compatibility gives E_a<=P, and current
+main proves that its generalized support, equal to its touch set, is a union of
+whole matched pairs.
+
+## 2. Touched-block bound
+
+Let h be the number of touched root blocks, e the number of touched actual-empty
+blocks, and c the number of touched complete blocks. All three singleton blocks
+are touched, so h=e+3+c.
+
+Because d_root=0, touched complete triangle rows are independent. The committed
+face-local containment theorem gives rank H(T)-rank H(C)>=4. The triangle
+boundary space on seven labels has rank at most 15, hence
+c=rank H(C)<=rank H(T)-4<=11 and therefore e>=h-14.
+
+Every actual-empty block has at least two incidences because its touch set is a
+nonempty union of matched pairs. Every singleton has at least three incidences.
+Every touched complete block has at least one. The eight no-root four-cycles
+supply exactly 32 cycle-block incidences, so
+
+32 >= 2e+9+c = h+e+6 >= 2h-8.
+
+Therefore h<=20.
+
+## 3. Necessary support conditions
+
+Fix one support multiset and one perfect matching of its eight occurrence
+coordinates.
+
+A touched block is E-eligible only if its touch set is a union of whole matched
+pairs. A rank-one empty block must have at least two touches; a rank-two empty
+block must have at least four.
+
+A selected singleton must meet at least three matched pairs. If its local empty
+space has rank two, its singleton constraint is a nonzero line in P, so its
+support contains at least one whole matched pair. Therefore the touch set of a
+rank-two singleton must contain a whole matched pair as well.
+
+These are only necessary conditions.
+
+## 4. Virtual-state domination
+
+The certificate searches a strict superset of actual states. For a fixed
+matching, declare every E-eligible non-singleton touched block virtually empty,
+even when it was complete in the actual state.
+
+This relaxation preserves every actual state in the search: the virtual complete
+set is a subset of the actual complete set, so independence is preserved and
+rank H(T)-rank H(C) can only increase. Nominal coefficient-generation dimension
+and generator support can only increase.
+
+Let Eset be all E-eligible touched blocks and N=T\Eset. For a singleton triple
+S, every block in N\S is forced complete in the virtual state. The verifier
+requires:
+
+1. all three selected blocks are singleton-eligible;
+2. N\S is independent in the triangle-row space;
+3. rank H(T)-|N\S|>=4;
+4. the nominal coefficient dimension from virtual empty blocks plus the
+   nonzero rank-two singleton constraints is at least four;
+5. the available generator support covers all eight external coordinates, as
+   required by d4(P)=8.
+
+Phase data and exact gluing of the nominal local spaces into one P are omitted,
+so the search is strictly larger than the actual-state search.
+
+## 5. Exact finite certificate
+
+The verifier enumerates all S7-orbits of multisets of eight tetrahedral
+four-supports on seven labels, with support multiplicity at most three. It
+reproduces the orbit counts
+
+1,1,4,14,61,268,1283,6032,27763
+
+for multiset sizes zero through eight.
+
+Exactly 13,574 size-eight orbits satisfy h<=20. For every one of them the
+verifier checks all 105 perfect matchings of the eight occurrence coordinates,
+for 1,425,270 support-orbit/matching pairs.
+
+Executed result:
+
+support_multiset_orbits_size_8 27763
+touch_at_most_20 13574
+perfect_matchings 105
+support_matching_pairs_tested 1425270
+virtual_survivors 0
+
+Therefore the r=4 perfect-matching subcase is empty.
+
+## 6. Exactness of rank decisions
+
+Support, matching, incidence, and canonicalization calculations are exact.
+
+Triangle-row ranks are computed modulo 2^31-1. The verifier checks this Mersenne
+prime by Lucas-Lehmer. Triangle rows have squared Euclidean norm three and the
+rank is at most 15. The verifier checks (2^31-1)^2 > 3^15. Hadamard's
+inequality therefore makes every modular triangle-row rank used here equal to
+the rational rank.
+
+## 7. Consequence
+
+The remaining three-singleton profile has no r=4 branch. The weight-two-line
+count is reduced to r=0,1,2,3. The next natural finite target is r=3, where
+there is one unmatched coordinate pair and the sharp puncture conditions
+strongly restrict the singleton quotient representatives.

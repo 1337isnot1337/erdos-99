@@ -1,0 +1,351 @@
+# Target C-II — adaptive saturation forces local Hall density in every protected Type-I container
+
+**Date:** 2026-09-15  
+**Status:** proof-only structural strengthening on top of the adaptive safe-region saturation theorem  
+**Scope:** either canonical Type-I macroscopic inactive container (internal chamber or exterior cap)  
+**Dependencies:** `target_c_adaptive_safe_region_saturation_2026-09-15.md`; canonical C-INACTIVE-NEAR-MATCHING; audited Type-I container protection/unification  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The adaptive safe-region theorem is stronger than a single global area ceiling.  Because it applies after **every** finite deletion set, it gives a Hall-type area inequality for every measurable subregion of the protected inactive container.
+
+Let `C` be either canonical Type-I macroscopic inactive container and let `Z` be its assigned contact-isolated source population.  Put
+
+\[
+a_0={\sqrt3\over2}.
+\]
+
+For a measurable set `E subset C_{-1}`, define its isolate neighborhood
+
+\[
+N_Z(E):=\{z\in Z:\operatorname{dist}(z,E)\le1\}.
+\tag{LH.1}
+\]
+
+Then
+
+\[
+\boxed{
+\operatorname{area}(E)\le a_0|N_Z(E)|.
+}
+\tag{LH.2}
+\]
+
+Thus the chamber cannot contain even a local measurable patch whose available isolate population has density below triangular-lattice density.  This is an exact finite statement, not an asymptotic average over the whole chamber.
+
+A direct ball consequence is especially useful.  If
+
+\[
+x\in C_{-(r+1)},
+\]
+
+then
+
+\[
+\boxed{
+|Z\cap \overline B(x,r+1)|
+\ge {\pi r^2\over a_0}.
+}
+\tag{LH.3}
+\]
+
+Combining this local density floor with canonical Section 81 gives a multiscale near-contact theorem.  For every `r>=4`, every such deep ball contains a vertex-disjoint matching of chamber isolates of size at least
+
+\[
+\boxed{
+\nu_{4/r}
+\ge c_H r,
+\qquad
+c_H:={\pi(1-a_0)\over2a_0}
+=0.2430030374\ldots,
+}
+\tag{LH.4}
+\]
+
+whose matched distances lie in
+
+\[
+\boxed{
+1<|z-z'|\le1+{4\over r}.
+}
+\tag{LH.5}
+\]
+
+Hence every mesoscopic protected ball, not merely one global macroscopic container, is forced into the inverse-scale almost-contact regime.
+
+---
+
+## 1. Local Hall inequality
+
+Fix measurable
+
+\[
+E\subset C_{-1}
+\]
+
+and put
+
+\[
+R:=N_Z(E).
+\]
+
+Every point of `R` is contact-isolated in the canonical source.  Therefore deleting `R` removes no old unit-contact edge.
+
+Take `y in E`.  If `z in Z\setminus R`, the definition of `R` gives
+
+\[
+|y-z|>1.
+\tag{LH.6}
+\]
+
+Every old source point not assigned to `Z` lies outside `int C` in the audited Type-I container decomposition.  Since
+
+\[
+y\in C_{-1},
+\]
+
+the segment from `y` to such a source point meets `partial C` only after traveling more than one unit.  Hence
+
+\[
+|y-a|>1
+\qquad
+(a\in A\setminus Z).
+\tag{LH.7}
+\]
+
+Equations (LH.6)--(LH.7) show that `E` is a strict-safe region relative to the deletion set `R` in the sense of the adaptive saturation theorem:
+
+\[
+|y-a|>1
+\qquad
+(y\in E,\ a\in A\setminus R).
+\]
+
+Since deleting `R` removes no contact, the zero-contact branch of adaptive saturation applies and gives
+
+\[
+\operatorname{area}(E)
+\le a_0|R|
+=a_0|N_Z(E)|.
+\]
+
+This proves (LH.2). `square`
+
+The proof uses the strict depth `>1`; there is no hidden non-strict boundary passage.
+
+---
+
+## 2. Exact local population floor
+
+Assume
+
+\[
+x\in C_{-(r+1)}.
+\]
+
+Then
+
+\[
+E:=B(x,r)\subset C_{-1}.
+\]
+
+If `z in N_Z(E)`, there exists `y in E` with `|z-y|<=1`, so
+
+\[
+|z-x|
+\le |z-y|+|y-x|
+\le r+1.
+\]
+
+Therefore
+
+\[
+N_Z(E)
+\subseteq
+Z\cap\overline B(x,r+1).
+\tag{LH.8}
+\]
+
+Apply (LH.2) to `E`.  Since `area(E)=pi r^2`,
+
+\[
+\pi r^2
+\le a_0|N_Z(E)|
+\le a_0|Z\cap\overline B(x,r+1)|,
+\]
+
+which is (LH.3). `square`
+
+This is much stronger than the ordinary unit-disk covering consequence, which by itself would only give the density coefficient `1/pi` rather than the sharp triangular coefficient `1/a_0`.
+
+---
+
+## 3. Every deep mesoscopic ball has boundary-order Oler slack
+
+Let
+
+\[
+Z_r:=Z\cap\overline B(x,r+1),
+\qquad
+n_r:=|Z_r|.
+\]
+
+The points of `Z_r` are contact-isolated in the full source and hence satisfy strict pairwise separation `>1`.
+
+Use the radius-`r+1` disk as a convex Oler container for `Z_r`.  Its isolate-only Oler slack is
+
+\[
+\sigma_r
+:={\pi(r+1)^2\over a_0}
++\pi(r+1)+1-n_r.
+\tag{LH.9}
+\]
+
+Equation (LH.3) gives
+
+\[
+\boxed{
+\sigma_r
+\le
+S(r):=
+{\pi(2r+1)\over a_0}
++\pi(r+1)+1.
+}
+\tag{LH.10}
+\]
+
+Thus every protected deep ball has Oler slack only `O(r)`, with an explicit universal coefficient, even though the original canonical theorem supplied only one `O(D)` slack statement for the whole macroscopic container.
+
+Equivalently, at every scale the local point count lies between
+
+\[
+{\pi r^2\over a_0}
+\le n_r
+\le
+{\pi(r+1)^2\over a_0}+\pi(r+1)+1.
+\tag{LH.11}
+\]
+
+The gap between the two bounds is linear in `r`.
+
+---
+
+## 4. Feed the local slack into canonical Section 81
+
+Canonical C-INACTIVE-NEAR-MATCHING applies to any convex body containing a specified contact-isolated set.  For `0<epsilon<=1`, its small-scale form gives
+
+\[
+\nu_\epsilon
+\ge
+{3A\over8a_0}\epsilon- {\sigma\over2}.
+\tag{LH.12}
+\]
+
+Apply this to the disk `B(x,r+1)` and the set `Z_r`.  Then
+
+\[
+A=\pi(r+1)^2,
+\qquad
+\sigma=\sigma_r\le S(r).
+\]
+
+For `r>=4`, choose
+
+\[
+\epsilon={4\over r}\le1.
+\]
+
+Equations (LH.10)--(LH.12) give
+
+\[
+\begin{aligned}
+\nu_{4/r}
+&\ge
+{3\pi(r+1)^2\over2a_0r}
+-
+{1\over2}
+\left(
+{\pi(2r+1)\over a_0}
++\pi(r+1)+1
+\right).
+\end{aligned}
+\tag{LH.13}
+\]
+
+Put
+
+\[
+c_H:={\pi(1-a_0)\over2a_0}>0.
+\]
+
+A direct rearrangement gives the exact positive remainder
+
+\[
+\begin{aligned}
+&{3\pi(r+1)^2\over2a_0r}
+-
+{1\over2}
+\left(
+{\pi(2r+1)\over a_0}
++\pi(r+1)+1
+\right)
+-c_Hr
+\\
+&\qquad=
+{5\pi\over2a_0}
+-{\pi\over2}
+-{1\over2}
++{3\pi\over2a_0r}
+>0.
+\end{aligned}
+\tag{LH.14}
+\]
+
+Hence
+
+\[
+\boxed{
+\nu_{4/r}\ge c_Hr
+}
+\]
+
+for every `r>=4`, proving (LH.4).
+
+Every matched pair lies in `Z_r`, so its old distance is strictly greater than one.  By the definition of the near-contact graph it is at most `1+4/r`.  This proves (LH.5). `square`
+
+---
+
+## 5. Structural consequence
+
+The Type-I inactive packing is now locally constrained at **every** protected scale:
+
+```text
+adaptive finite-deletion saturation
+    -> local Hall area inequality
+    -> triangular-density lower count in every deep ball
+    -> O(r) local Oler slack
+    -> Omega(r) disjoint pairs at distance 1+O(1/r)
+       in every radius-r protected ball.
+```
+
+In particular, a surviving container cannot hide its near-capacity behavior in one global average while containing mesoscopic low-density holes.  Any closing construction may choose its working scale `r` adaptively and still inherit the same inverse-scale near-contact structure.
+
+This is potentially useful for two routes:
+
+1. **finite exchange:** build a local augmenting/repacking chain inside a chosen mesoscopic ball rather than across the entire `Theta(D)` container;
+2. **equality/stability:** iterate the local Hall bound to force a coherent near-triangular Delone structure before coupling it to the old positive boundary/core.
+
+The theorem does **not** supply either final step.  In particular, a slightly sheared near-triangular packing at strain `O(1/r)` remains compatible with (LH.3)--(LH.5).  No exact unit contact, exact unit triangle, or spare packing site is claimed.
+
+---
+
+## 6. Scope audit
+
+- `R=N_Z(E)` consists only of actual contact isolates, so the correct zero-contact branch of adaptive saturation is used.
+- The depth-one condition is strict.  It guarantees separation from every old source outside the selected container interior.
+- No affine-kernel or KKT statement is applied to isolate coordinates.
+- The ball Oler calculation uses only the actual subset `Z_r`; no source point outside the ball is deleted.
+- Section 81 is applied exactly at its stated general convex-body/contact-isolate scope.
+- The constant `4` is a convenient explicit safe choice, not claimed optimal.
+- The theorem applies to both audited Type-I container forms because the container-unification theorem supplies the same assigned-source and fixed-depth protection statement for internal chambers and exterior caps.
+
+**Disposition:** proved proof-only local Hall-density and multiscale near-contact strengthening for Type I.  C-II and Level I remain open.

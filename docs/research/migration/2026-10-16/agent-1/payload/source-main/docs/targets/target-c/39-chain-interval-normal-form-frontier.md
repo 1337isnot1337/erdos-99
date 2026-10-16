@@ -1,0 +1,92 @@
+# Target C — C83 chain-track interval normal form frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_chain_track_interval_normal_form_2026-09-01.md](../../reports/target_c_chain_track_interval_normal_form_2026-09-01.md).
+
+In the pure simply connected rhombic branch with the exact C80 straight-chain KKT
+face, let
+
+`P={tau_1,...,tau_D}`
+
+be the ordered `D` parallel train tracks cut by the chain from `z` to `a`.
+
+C83 proves that every ordered source pair `h=xy` has one signed consecutive interval
+on these tracks:
+
+`d_(h,tau_j)=sigma_h 1_(a_h<j<=b_h)`.
+
+For an active diameter bar define
+
+`I_h=(a_h,b_h]`,
+
+`c_h=sigma_h r_h dot u`,
+
+`eta_h=sigma_h r_h dot J u`,
+
+where `u=(a-z)/D` is the chain direction. Then the exact train-angle restriction is
+
+`g_h|_P = eta_h 1_(I_h)`
+
+and
+
+`H_h[P,P] = 1_(I_h)1_(I_h)^T - c_h I_(I_h)`.
+
+Equivalently every radial coefficient on the chain interval is the same scalar:
+
+`lambda_(h,tau)=c_h` for every `tau in I_h`.
+
+Thus one diameter bar is uniformly forward, backward, or tangent across its entire
+chain-track interval. Sign changes along the chain atom are impossible.
+
+## Prefix-variable reduction
+
+For a chain-track velocity define
+
+`X_k=sum_(j<=k) v_(tau_j)`.
+
+Every nonparallel active diameter equality becomes
+
+`X_(b_h)=X_(a_h)`.
+
+Hence the full first-order diameter restriction on the `D` chain coordinates is an
+interval-endpoint graph on prefix vertices `0,...,D`.
+
+On a chain-supported velocity neutral for every active diameter bar,
+
+`H_h[v,v] = -c_h sum_(tau in I_h) v_tau^2`
+
+for every active `h != za`. Therefore:
+
+- forward intervals have nonpositive quadratic curvature;
+- backward intervals are the only positive quadratic blockers;
+- tangent intervals are quadratically flat.
+
+The C80 chain bar itself satisfies
+
+`H_za[v,v]=-D||v||^2`
+
+on the chain-bending space `sum_P v=0`.
+
+## Tangent and terminal rigidity
+
+There is at most one tangent interval, because all tangent diameter bars would have
+the single projective direction perpendicular to the chain and a diameter-`D` source
+contains at most one diameter segment in any prescribed unoriented direction.
+
+Target B Section 42.3 now applies intervalwise: if `c_h<=0`, then every chain train in
+`I_h` has both terminal boundary edges off the convex hull. Thus every positive
+quadratic blocker is a consecutive interval made entirely of doubly non-hull chain
+tracks; the unique possible tangent interval has the same localization.
+
+## Exact next target
+
+The remaining pure-chain obstruction is the **backward-interval rank theorem**:
+prove that the backward-labelled interval edges cannot supply full rank on the
+chain-supported neutral space after all prefix equalities are imposed. A nonzero
+neutral chain velocity flat on every backward interval makes the C80 diameter bar
+strictly decrease and every forward bar nonincrease; avoiding the single tangent
+interval would then give the desired local diameter improvement.
+
+This reduction replaces an arbitrary diameter-gradient/Hessian family on `D` chain
+coordinates by an ordered interval graph with one scalar sign per edge.

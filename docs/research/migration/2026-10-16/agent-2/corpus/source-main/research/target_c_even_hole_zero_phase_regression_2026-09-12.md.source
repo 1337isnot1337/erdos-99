@@ -1,0 +1,234 @@
+# Target C — linear exceptional-face population with vanishing phase defect
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** proof-only regression; theorem authority unchanged.
+
+The all-defect train theorem forces a Type-II survivor to have linearly many bounded
+nonquadrilateral contact faces.  A tempting next step is to charge a positive amount
+of rhombus angular/phase defect to every such face.  That implication is false even
+in an asymptotically round, quadratically rhombic, triangle-free source.
+
+There are finite oblique-lattice disks with
+
+\[
+f=\Theta(D),
+\qquad
+R_4=\Theta(D^2),
+\qquad
+E_4=o(1),
+\]
+
+where every exceptional face is an 8-sided hole and the unit-contact graph remains
+triangle-free.  Hence no inequality of the form
+
+\[
+E_4\ge c f-O(1),\qquad c>0,
+\]
+
+or an analogous positive phase-defect charge per exceptional face can hold from the
+local rhombic/contact structure alone.
+
+---
+
+## 1. Oblique lattice
+
+Let
+
+\[
+u=(1,0),\qquad
+v=(\cos\phi,\sin\phi),\qquad
+{\pi\over3}<\phi<{\pi\over2},
+\]
+
+and
+
+\[
+\Lambda_\phi=\{iu+jv:i,j\in\mathbb Z\}.
+\]
+
+As in `target_c_oblique_lattice_structural_regression_2026-09-12.md`, the only unit
+lattice vectors are
+
+\[
+\pm u,\quad \pm v.
+\]
+
+Thus every finite subset of `Lambda_phi` is unit-separated and its unit-contact graph
+is a subgraph of the square grid on integer coordinates.  In particular it is
+bipartite and contains no unit equilateral triangle.
+
+Every elementary lattice cell is a strict unit rhombus with acute angle `phi` and
+area
+
+\[
+\sin\phi.
+\]
+
+---
+
+## 2. Deleting one lattice point creates one octagonal contact face
+
+Delete the lattice point corresponding to `(0,0)`, while retaining the eight points
+
+\[
+(1,0),(1,1),(0,1),(-1,1),(-1,0),(-1,-1),(0,-1),(1,-1).
+\tag{2.1}
+\]
+
+Consecutive points in this cyclic list differ by one of
+`(+-1,0),(0,+-1)`, so consecutive physical points are at unit distance.  No other
+unit-contact edge crosses the resulting cycle, because the full unit-contact graph is
+the square-grid graph and the deleted center was the only vertex in its interior.
+Therefore the four elementary rhombi formerly incident to the center merge into one
+bounded face of degree eight.
+
+The polygon is convex in the weak sense appropriate to the plane contact embedding;
+four of its boundary vertices may be collinear with their two neighbors.  This is
+compatible with the canonical exceptional-face bookkeeping, which counts the eight
+unit edge occurrences and gives
+
+\[
+Q_F=8-4=4.
+\]
+
+If deleted lattice vertices have pairwise graph distance at least three, their four-cell
+stars are disjoint.  Each deleted point then creates a distinct degree-eight bounded
+nonquadrilateral face, and all other bounded faces in those neighborhoods remain
+strict rhombi.
+
+---
+
+## 3. Linear many holes inside a near-disk patch
+
+Let `R` tend to infinity and take
+
+\[
+A_R^0=\Lambda_{\phi_R}\cap B(0,R).
+\]
+
+Inside `B(0,R/2)`, choose a set `H_R` of lattice points with pairwise square-grid
+distance at least three and
+
+\[
+|H_R|=\lfloor cR\rfloor
+\]
+
+for any fixed sufficiently small `c>0`.  Such a set exists because the available
+central lattice population is `Theta(R^2)` while only `Theta(R)` points are requested.
+Put
+
+\[
+A_R=A_R^0\setminus H_R.
+\]
+
+All deleted neighborhoods lie a macroscopic distance from the outer boundary and are
+pairwise disjoint.  Hence
+
+\[
+f_R=|H_R|=\Theta(R)=\Theta(D_R),
+\tag{3.1}
+\]
+
+and every one of these exceptional faces has degree eight.
+
+Deleting only `O(R)` interior points from a disk patch does not change the source hull.
+The covering-radius argument from the oblique-lattice regression still gives
+
+\[
+B(0,R-2)\subseteq\operatorname{conv}(A_R)
+\subseteq B(0,R)
+\]
+
+for all sufficiently large `R` after avoiding the finitely many deleted points in the
+support selection by an `O(1)` adjustment.  In particular
+
+\[
+D_R=2R+O(1)
+\]
+
+and the normalized hull remains asymptotically circular.
+
+The number of surviving strict rhombi is
+
+\[
+R_{4,R}=\Theta(R^2).
+\tag{3.2}
+\]
+
+---
+
+## 4. The total rhombus defect can vanish
+
+Choose the lattice angle depending on `R`:
+
+\[
+\phi_R={\pi\over3}+\varepsilon_R,
+\qquad
+\varepsilon_R=R^{-4}.
+\tag{4.1}
+\]
+
+For one surviving strict rhombus,
+
+\[
+\sin\left({\pi\over3}+\varepsilon_R\right)-{\sqrt3\over2}
+={1\over2}\varepsilon_R+O(\varepsilon_R^2).
+\tag{4.2}
+\]
+
+Since there are `Theta(R^2)` surviving rhombi,
+
+\[
+\boxed{
+E_{4,R}
+=\sum_R\left(\operatorname{area}(R)-{\sqrt3\over2}\right)
+=O(R^2\varepsilon_R)
+=O(R^{-2})
+=o(1).
+}
+\tag{4.3}
+\]
+
+Likewise the total train angular defect is
+
+\[
+\sum_R\left(\phi_R-{\pi\over3}\right)
+=O(R^2\varepsilon_R)=o(1).
+\tag{4.4}
+\]
+
+At the same time (3.1) gives
+
+\[
+\boxed{f_R=\Theta(D_R).}
+\tag{4.5}
+\]
+
+The contact graph is still a subgraph of the square grid, hence triangle-free.
+
+---
+
+## 5. Consequence
+
+This construction simultaneously has
+
+- an asymptotically round hull of diameter `D_R`;
+- `Theta(D_R^2)` strict unit rhombi;
+- only `O(D_R)` deliberately introduced exceptional-face boundary;
+- `Theta(D_R)` actual bounded nonquadrilateral faces;
+- total strict-rhombus area defect `o(1)`;
+- total rhombus angular defect `o(1)`; and
+- no unit equilateral triangle.
+
+Therefore the new all-defect lower bound on `f` cannot be combined with canonical
+Section 68 by assigning a universal positive local phase/area charge to each defect
+face.  Even-degree holes can be inserted into an almost-perfect oblique rhombic sea at
+zero leading phase cost.
+
+The regression is not a global diameter minimizer and does not satisfy the full KKT
+stack.  It narrows the live closing target: the linearly many defect faces must be
+coupled to **global minimality, loaded-boundary response, route multiplicity, or
+source-preserving deformation**, not merely to local angular holonomy.
+
+**Disposition:** rigorous regression.  C-II remains open.

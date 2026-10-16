@@ -1,0 +1,237 @@
+# Target C-II — bridge-subtracted singleton/rhombic tradeoff
+
+**Date:** 2026-09-14  
+**Repository base:** `9d7998d86d3e672ba4d1a7f627aadb2ed50aa219`  
+**State version:** `2026-09-14.audit.51`  
+**Status:** proof-only structural consequence awaiting independent audit  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The sharpened correlated all-train theorem forces
+
+\[
+\rho_{rec}+\sigma_R
+\ge (2\rho+0.00084)D-o(D),
+\tag{BS.1}
+\]
+
+where
+
+\[
+\rho_{rec}=2S,
+\qquad
+\sigma_R=B_4-4\sqrt{R_4},
+\]
+
+and `S` is the number of singleton stopped trains.  Raw singleton count is not yet a
+source-level obstruction because a singleton contact edge can simply be an outer
+bridge.  This note separates those bridge singletons from the singleton trains that
+actually terminate on bounded exceptional faces and pays the former by the audited
+bridge-subtracted isoperimetric detour.
+
+Put
+
+\[
+C_*:=2\rho+0.00084
+=1.479010266430321\ldots .
+\tag{BS.2}
+\]
+
+## 1. Split singleton trains by endpoint type
+
+A singleton stopped train consists of one positive contact edge.  By the finite stopped-
+train theorem, its two train-terminal incidences are precisely the two side incidences
+of that edge with either the unbounded face or bounded nonquadrilateral faces.
+
+Write
+
+- `S_o` for singleton trains with **no** bounded exceptional-face terminal incidence;
+- `S_E` for singleton trains with at least one bounded exceptional-face terminal
+  incidence.
+
+Then
+
+\[
+S=S_o+S_E.
+\tag{BS.3}
+\]
+
+Every edge counted by `S_o` has the unbounded face on both sides.  In a connected plane
+graph an edge is incident to the same face on both sides exactly when it is a graph
+bridge.  Hence every `S_o` edge is an outer-face bridge and
+
+\[
+\boxed{S_o\le B_o,}
+\tag{BS.4}
+\]
+
+where `B_o` is the audited outer-bridge count from bridge-subtracted isoperimetry.
+
+This implication is one-way and is all that is needed: `B_o` may also contain bridge
+edges belonging to non-singleton bookkeeping elsewhere.
+
+## 2. Full-core isoperimetry pays the bridge-singleton population
+
+For the canonical full positive-contact core in the no-container Type-II branch, the
+audited bridge/isoperimetric module applies to the **full bounded-face union**.  The
+existing near-disk sandwich gives
+
+\[
+{\operatorname{area}(U)\over D^2}\to{\pi\over4},
+\qquad
+{P_F\over D}\to\pi,
+\]
+
+while the occurrence-counted outer walk has length `b`.  The audited nonzero-surplus
+bridge estimate therefore gives
+
+\[
+2B_o\le b-P_F+o(D).
+\tag{BS.5}
+\]
+
+Combining (BS.4)--(BS.5),
+
+\[
+\boxed{2S_o\le b-P_F+o(D).}
+\tag{BS.6}
+\]
+
+Thus singleton trains that do not touch any bounded exceptional face are not a new
+independent currency: their entire first-order population is already paid by metric
+outer-walk detour.
+
+## 3. Correlated surplus after bridge subtraction
+
+Using `rho_rec=2S=2S_o+2S_E` in (BS.1) and then (BS.6),
+
+\[
+\boxed{
+\sigma_R+2S_E+(b-P_F)
+\ge C_*D-o(D).
+}
+\tag{BS.7}
+\]
+
+This is the useful structural form of the correlated theorem.  It replaces the raw
+singleton/rhombic dichotomy by three currencies with direct geometric meaning:
+
+1. rhombic non-Mantel slack `sigma_R`;
+2. singleton trains that actually terminate on exceptional bounded faces, counted by
+   `2S_E`;
+3. metric outer detour `b-P_F`.
+
+In particular, a near-geodesic survivor cannot hide the correlated currency in a long
+forest of outer bridge singletons.
+
+## 4. Continuous rhombic-deficit consequence
+
+Let
+
+\[
+\delta_D={b-P_F\over D},
+\qquad
+s_{E,D}={S_E\over D}.
+\]
+
+For any fixed `c>0`, if along a subsequence
+
+\[
+\limsup(\delta_D+2s_{E,D})\le C_*-c,
+\tag{BS.8}
+\]
+
+then (BS.7) gives
+
+\[
+\liminf {\sigma_R\over D}\ge c.
+\tag{BS.9}
+\]
+
+The exact rhombic Mantel rationalization
+
+\[
+M_R={T_R^2\over4}-R_4
+={\sigma_R\over8}
+\left(4\sqrt{R_4}+{\sigma_R\over2}\right)
+\tag{BS.10}
+\]
+
+and `sqrt(R_4)/D -> sqrt(Delta_2)` then imply
+
+\[
+\boxed{
+\liminf {M_R\over D^2}
+\ge {c\over8}
+\left(4\sqrt{\Delta_2}+{c\over2}\right).
+}
+\tag{BS.11}
+\]
+
+Thus the bridge-subtracted theorem is a continuous tradeoff, not merely a two-case
+pigeonhole.
+
+A symmetric three-currency threshold is especially concrete.  At least one of
+
+\[
+{b-P_F\over D},
+\qquad
+{2S_E\over D},
+\qquad
+{\sigma_R\over D}
+\]
+
+has limsup/liminf scale at least
+
+\[
+{C_*\over3}=0.493003422143440\ldots .
+\tag{BS.12}
+\]
+
+Equivalently, either
+
+\[
+S_E\ge0.246501711071720\ldots D-o(D),
+\]
+
+or outer detour is at least `0.4930034221...D`, or the rhombic branch has
+
+\[
+\liminf {M_R\over D^2}
+\ge0.249937509757799\ldots .
+\tag{BS.13}
+\]
+
+The constants are checked by
+`research/verify_target_c_bridge_singleton_tradeoff.py`.
+
+## 5. Why this is stronger structurally than the raw singleton split
+
+The earlier correlated theorem says only that many singleton trains or large rhombic
+slack must occur.  The singleton alternative includes outer bridge edges, and those
+are a weak source-level obstruction because bridge corridors can be braced repeatedly
+by the same diameter chords.
+
+Equation (BS.7) removes exactly that class.  After bridge subtraction, any remaining
+large singleton term consists of contact edges incident to bounded nonquadrilateral
+faces.  Those endpoints enter the audited exceptional-face closure matrix and the
+bounded-face endpoint fan.  Therefore a future closure can attack `S_E` with face
+closure/rank or phase-mixing methods without spending effort on pure outer bridge
+singletons.
+
+This still does not prove C-II.  The three live escape mechanisms in (BS.7) are each
+compatible with current source-level ledgers.  The next useful step is to constrain
+exceptional-face singleton incidence itself, or combine (BS.11) with a directional
+stability theorem for the now-macroscopic missing-crossing budget.
+
+## 6. Scope audit
+
+- The bridge payment uses the canonical **full core** bounded-face area sandwich; it is
+  not transferred to an arbitrary selected harmonic carrier.
+- `S_E` counts singleton **trains**, not endpoint occurrences.  A train belongs to
+  `S_E` as soon as at least one of its two ends lies on a bounded exceptional face.
+- No exceptional-face endpoint is identified with a distinct source vertex.
+- No diameter edge is counted once per bridge; the known repeated-bracing obstruction
+  remains untouched.
+- The `0.00084` correlated margin inherits proof-only AG42 status pending independent
+  audit.
+- No source-preserving strict diameter decrease and no exact unit triangle is claimed.

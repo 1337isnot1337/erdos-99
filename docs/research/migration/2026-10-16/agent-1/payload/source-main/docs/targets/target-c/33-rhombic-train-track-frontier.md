@@ -1,0 +1,40 @@
+# Target C — C77 train-track cross-route import
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Audit: [target_c_train_track_crossroute_audit_2026-08-31.md](../../reports/target_c_train_track_crossroute_audit_2026-08-31.md).
+
+The rhombic train-track statements recorded here are valid, but the post-C76 audit
+found that their core content already belongs to the mature Target B / shared-theory
+stack. In particular the simple triangle-free train-crossing graph, Mantel bound, and
+`T>=2 sqrt(F_4)` mechanism are already used in Target B Section 24, while later Target
+B sections prove substantially stronger angular and exposed-hull results.
+
+For Target C, retain these facts as imported infrastructure:
+
+- opposite sides of strict unit-rhombus faces generate global train tracks;
+- tracks do not self-cross and two tracks cross at most once;
+- crossing tracks make acute angle strictly above `pi/3`;
+- the crossing graph is simple and triangle-free;
+- `F_4<=T^2/4`;
+- each rhombus is one train crossing.
+
+C75 supplies a convenient Target C short-diagonal slack variable. At a crossing,
+
+`s_TS=2 sin(phi_TS/2)`,
+
+so
+
+`Sigma_diag=sum_edges[2 sin(phi/2)-1]`.
+
+Under a near-capacity core hypothesis, `Sigma_diag=O(D)`, hence almost every one of
+the `Theta(D^2)` crossings is at angle `pi/3+o(1)`. This is consistent with and should
+now be handed directly to Target B Sections 26 and 39, which already develop sixfold
+phase coherence and the phase-atomic/exposed-hull theorem.
+
+## Current Target C use
+
+Do not spend further work re-proving train-track combinatorics. The new cross-route
+problem is to combine that established train-angle structure with the C66-C76
+stress-star degeneration: a small response-defect stress approaches a straight-chain
+KKT face while the rhombic geometry retains a macroscopic train-angle neutral space.

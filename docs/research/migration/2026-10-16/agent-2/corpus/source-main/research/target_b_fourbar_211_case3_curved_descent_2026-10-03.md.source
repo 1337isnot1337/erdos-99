@@ -1,0 +1,129 @@
+# Target B: exclude the (2,1,1) case-3 branch by curved descent
+
+Date: 2026-10-03
+Base main: 0524c5b4dccc9747d3ebb978f6e82cc9021b912f
+Status: proved candidate awaiting promotion; noncanonical. Target B and Level I remain open.
+
+This closes case 3 of `target_b_fourbar_211_phase_group_reduction_2026-10-03.md`
+under the same pure-disk candidate hypotheses as the tangent-cubic stack. No
+computation or CI output is a proof premise.
+
+## 1. Input
+
+Use the notation of
+`target_b_fourbar_211_singleton_stress_endpoint_2026-10-03.md`. Bars h1,h2
+share rotation class A; h3,h4 are singleton classes. In case 3,
+
+    n1,n3 != 0,   n2=n4=0.
+
+The persistent-gradient stress polytope is exactly
+
+    P = conv{mu0,mu*},
+    mu0=(0,1,0,0),
+    mu*=(1,0,k3,k4)/(1+k3+k4),
+
+with k3,k4>0. Hence
+
+    g2=0,
+    g1+k3 g3+k4 g4=0.                                   (1)
+
+The weighted cubic at mu* is a nonzero multiple of delta^3. Also h2 has
+integer diameter: every separating contribution is +e2 or -e2, and if their
+counts are P2,N2,
+
+    D=P2-N2 in Z.                                        (2)
+
+For the sufficiently large Target-B regime D>=4, so P2>=4.
+
+## 2. Negative quadratic correction for h2
+
+Let S+ be the P2 positive separating trains of h2. Restrict g1,g3,g4 to
+R^(S+). By (1) their span has dimension at most two. Add the condition
+
+    sum_(tau in S+) a_tau = 0.
+
+Since |S+|>=4, there is a nonzero a supported on S+ with
+
+    g1.a=g3.a=g4.a=0,
+    sum a_tau=0.                                         (3)
+
+For h2 every coordinate in S+ has signed projection lambda_(2,tau)=D.
+The signed-variance Hessian formula has weighted mean
+
+    abar=D^(-2) sum D a_tau=0,
+
+so
+
+    H2[a,a] < 0.                                         (4)
+
+Thus a is a negative quadratic direction for h2 and is first-order invisible
+to h1,h3,h4.
+
+## 3. Cubic correction for the other persistent bars
+
+Let
+
+    C(v)=sum_h mu*_h F_h(v)=c* delta(v)^3,   c* != 0.
+
+Choose v in K with C(v)<0. Perturb inside this open half-space, if needed, to
+avoid the proper quadratic kernels of active bars outside the persistent
+equality set.
+
+On the face mu2=0, the only normalized nonnegative gradient balance is mu*;
+otherwise the exact segment P would contain another point on that face. The
+strict linear alternative used in Theorem CG therefore applies to h1,h3,h4.
+There is b such that along
+
+    theta(t)=theta(0)+t v+t^3 b
+
+all three bars have strictly negative cubic coefficient. Fix a common negative
+margin -eta.
+
+## 4. Common curved path
+
+Use
+
+    theta_eps(t)=theta(0)+t v+eps t^2 a+t^3 b.           (5)
+
+For h1,h3,h4, (3) removes the order-t^2 term from a. Its only change to the
+cubic coefficient is eps H_h[v,a]. Choose fixed eps>0 small enough that all
+three remain below -eta/2.
+
+Every active bar outside the persistent equality set already has a strictly
+negative quadratic coefficient along v. Shrink eps again so those finitely
+many inequalities remain strict.
+
+For h2, the zero-gradient persistent-equality calculation in the tangent-cubic
+report shows that along every v in K all separating contributions rotate at
+one common speed. Factor out that rigid rotation. In the rotating frame the
+residual perturbation is eps t^2 a+t^3 b. Since g2=0, (4) gives
+
+    |r2(theta_eps(t))|^2-D^2
+      = (eps^2/2) H2[a,a] t^4 + O(t^5) < 0              (6)
+
+for sufficiently small positive t. The a-b cross term starts at t^5 and the
+b-quadratic term at t^6.
+
+Thus every active diameter bar decreases on one finite path. Train-angle
+deformation preserves the unit rhombus edges. Initially inactive upper
+constraints and noncontact lower constraints have positive finite slack, so
+they remain feasible for sufficiently small t>0. This contradicts local
+diameter minimality.
+
+## 5. Consequence
+
+Case 3 of the fully supported four-persistent-bar (2,1,1) reduction is
+impossible for sufficiently large pure strict-rhombic-disk sources in this
+candidate stack.
+
+The reduction now has only:
+
+1. all four phase-group rows vanish, so all four persistent bars are exactly
+   flat on the neutral train-angle slice; or
+2. exactly the two repeated-class bars are nonflat, the singleton bars are
+   flat, the persistent stress is unique, and the nonflat response factors
+   through one rational relative-rotation coordinate.
+
+The remaining nonflat bottleneck on this subroute is case 2, the one-coordinate
+rational-stress core. This note does not prove the Target-B shell inequality
+or Level I.

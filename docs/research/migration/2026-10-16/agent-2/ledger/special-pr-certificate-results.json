@@ -1,0 +1,97 @@
+{
+  "note": "PR954 coordinate fixtures were materialized only in a temporary directory from the source PR Git objects for read-only verification, then removed; no raw fixtures were added to destination.",
+  "results": [
+    {
+      "elapsed_seconds": 0.022,
+      "exit_code": 0,
+      "name": "PR949:verify_target_b_zero_deficit_aggregate_arithmetic_2026_10_10.py",
+      "scope": "finite exact arithmetic/geometry; no global theorem",
+      "script_sha256": "5c84e2118bf96c15539f0de431384a304d1d2901af1d8ef22ad389b57789359a",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "x=0: C(x)=72248/549081 = 0.131579857981\nx=14/39: C(x)=72689/549081 = 0.132383018170\nx=2375/3829: C(x)=2780434457/21170832004 = 0.131333263448\nx=1: C(x)=7754741/58644964 = 0.132232002052\nmaximum=72689/549081 < 0.1324\nPASS: exact absolute bound >2.6167 and relative bound >1.0304*x0\nPASS: rational enclosures reject the former 2.6167 >1.0304*x0 chain\n"
+    },
+    {
+      "elapsed_seconds": 0.163,
+      "exit_code": 0,
+      "name": "PR949:verify_target_b_connected_notch_regression_2026_10_15.py",
+      "scope": "finite exact arithmetic/geometry; no global theorem",
+      "script_sha256": "2242d35cd2b239de7058ea02338c946b6cc9caa03f236e5ea6d465b5beda9ca5",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS: rational connected-notch fixtures (pairs, labels, trains): [(1891, 62, 19), (3655, 86, 23), (16471, 182, 35)]\nPASS: one-column mutation rejected for extra actual unit contacts\nSCOPE: finite geometry and counts; no theta_m asymptotic or global-optimality certificate\n"
+    },
+    {
+      "elapsed_seconds": 0.036,
+      "exit_code": 0,
+      "fixture_sha256": {
+        "research/fixtures/global_odd_shell_reassignment_2026_10_11/cci132.txt": "64c8a85573a5ced26e666fa25b713c4fc6264c409d811eab101cd13ff65ef00a",
+        "research/fixtures/global_odd_shell_reassignment_2026_10_11/cci175.txt": "6f889e1143dbb5aee039224198617355070104f161a2bdd0705166eaf814f140"
+      },
+      "name": "PR954:verify_global_parallel_contact_competitor_2026_10_11.py",
+      "scope": "finite exact checker; no global optimality certificate",
+      "script_sha256": "82bf6dd79dbb87270480c8ef486e4f2d7aec6be4c3e88c806fbf1aec21cb37a5",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS chain: labels=5 pairs=10 contacts=4 diameters=1 K=1 t=1/256\nPASS rows_and_isolate: labels=9 pairs=36 contacts=6 diameters=1 K=1 t=1/2048\nPASS stretched_square: labels=4 pairs=6 contacts=2 diameters=2 K=2 t=1/16384\nPASS stretched_wheel: labels=7 pairs=21 contacts=4 diameters=2 K=2 t=1/65536\nPASS rejected diameter_one: diameter must be greater than one\nPASS rejected multiple_directions: this certificate requires horizontal unit contacts\nPASS every full-source lower/upper pair; no Level I certificate\n"
+    },
+    {
+      "elapsed_seconds": 0.853,
+      "exit_code": 0,
+      "fixture_sha256": {
+        "research/fixtures/global_odd_shell_reassignment_2026_10_11/cci132.txt": "64c8a85573a5ced26e666fa25b713c4fc6264c409d811eab101cd13ff65ef00a",
+        "research/fixtures/global_odd_shell_reassignment_2026_10_11/cci175.txt": "6f889e1143dbb5aee039224198617355070104f161a2bdd0705166eaf814f140"
+      },
+      "name": "PR954:verify_global_parallel_contact_density_2026_10_11.py",
+      "scope": "finite exact checker; no global optimality certificate",
+      "script_sha256": "9f1b98796d65126115ac48d7129121b3f97d609f2b9d9ab1e7205da454ca91ea",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS square: labels=4 pairs=6 classes=4 samples=1 contacts=2 components=2\nPASS wheel: labels=7 pairs=21 classes=9 samples=1 contacts=4 components=3\nPASS triangular_patch_49: labels=49 pairs=1176 classes=84 samples=1 contacts=36 components=13\nPASS exact finite fixtures; no global-optimality or Level I certificate\n"
+    },
+    {
+      "elapsed_seconds": 0.252,
+      "exit_code": 0,
+      "fixture_sha256": {
+        "research/fixtures/global_odd_shell_reassignment_2026_10_11/cci132.txt": "64c8a85573a5ced26e666fa25b713c4fc6264c409d811eab101cd13ff65ef00a",
+        "research/fixtures/global_odd_shell_reassignment_2026_10_11/cci175.txt": "6f889e1143dbb5aee039224198617355070104f161a2bdd0705166eaf814f140"
+      },
+      "name": "PR954:verify_global_radial_reassignment_barrier_2026_10_11.py",
+      "scope": "finite exact checker; no global optimality certificate",
+      "script_sha256": "955c20a7dcbc67686b6dd3d32507e6b4fbe79193c55f9153b2e02a6a1caaa5db",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS old source: labels=175, all 15225 full-source pairs, C=43, H=43, isolates=132\nPASS core PSD: null modes analytically 0,+1,-1; all other Fourier eigenvalues positive\nPASS population: n-1-Delta*D^2 > (7/10)*D^(2/3), with 7/10>kappa0\nPASS winner: all 15225 rational pairs strictly above one; diameter squared strictly smaller\nold D^2: [187.426224133589, 187.426224133589] (display rounded)\nwinner D^2: [183.235163408050, 183.235163408050] (display rounded)\nstrict squared-diameter gain: [4.191060725539, 4.191060725539] (display rounded)\npopulation excess: [4.023216912838, 4.023216912838] (display rounded)\nexact coordinate scales: 6343724739011395293/1000000000000000000 7268220522234254021/1000000000000000000\nScope: finite nonglobal regression and analytic radial barrier; no Level I disproof\n"
+    },
+    {
+      "elapsed_seconds": 0.02,
+      "exit_code": 0,
+      "fixture_sha256": {
+        "research/fixtures/global_odd_shell_reassignment_2026_10_11/cci132.txt": "64c8a85573a5ced26e666fa25b713c4fc6264c409d811eab101cd13ff65ef00a",
+        "research/fixtures/global_odd_shell_reassignment_2026_10_11/cci175.txt": "6f889e1143dbb5aee039224198617355070104f161a2bdd0705166eaf814f140"
+      },
+      "name": "PR954:verify_global_source_near_triangle_budget_2026_10_11.py",
+      "scope": "finite exact checker; no global optimality certificate",
+      "script_sha256": "8fca4a42785bce57d3f45ccd387d62631ebf80fce730235e6c0f004f736b1fae",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS full half-line population polynomial coefficients: (Fraction(1827480000, 7), Fraction(240916, 7), Fraction(6, 7))\nPASS completion/strip/obtuse debit: 17012*D\nPASS single triangle: squared clearance <3000/D for D>=30000\nPASS disjoint family: >=ceil(n/144), clearance <6000/D for D>=60000\nScope: exact arithmetic under canonical geometry; no unit-triangle conclusion\n"
+    },
+    {
+      "certificate_sha256": "30ba91f6b0bc61f8ba7f6c3cdffbeb248e0a1d232a635440a0ebc6baaa0bde3a",
+      "elapsed_seconds": 1.012,
+      "exit_code": 0,
+      "name": "PR970:verify_seamed_grains.py",
+      "scope": "finite Q(sqrt(3)) regression only; not a global minimizer",
+      "script_sha256": "767d8ac1d8f92720c847eb493c563383dfbc25c6338fc8d04b802306365bedc3",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"arithmetic\": \"exact Q(sqrt(3))\",\n  \"total_pairs\": 416295,\n  \"fixtures\": [\n    {\n      \"Q\": 7,\n      \"labels\": 31,\n      \"all_source_pairs\": 465,\n      \"contacts\": 44,\n      \"cross_contacts\": 1,\n      \"rhombi\": [\n        5,\n        9\n      ],\n      \"train_counts\": [\n        [\n          4,\n          2\n        ],\n        [\n          5,\n          3\n        ]\n      ],\n      \"B\": 28,\n      \"chi\": 2,\n      \"t\": 1,\n      \"loaded_vertices\": 2,\n      \"pinned_nullity_floor\": 14,\n      \"D2_numerator\": [\n        112000000000416000192000480000192000544000192000432000192000128000000000064,\n        192000096000192000000000192000000000191999999999999999904000000000000\n      ],\n      \"coordinate_denominator\": 2000000000002000000000002000000000002,\n      \"M_inter_numerator\": [\n        88000200000088000416000000000416000000000415999912000215999912000000,\n        44000000000000000015999956000016000000000015999956000016000000000000000044\n      ],\n      \"hull_vertices\": 12,\n      \"independent_fraction_replay\": true\n    },\n    {\n      \"Q\": 19,\n      \"labels\": 73,\n      \"all_source_pairs\": 2628,\n      \"contacts\": 117,\n      \"cross_contacts\": 1,\n      \"rhombi\": [\n        19,\n        26\n      ],\n      \"train_counts\": [\n        [\n          8,\n          4\n        ],\n        [\n          8,\n          5\n        ]\n      ],\n      \"B\": 50,\n      \"chi\": 2,\n      \"t\": 1,\n      \"loaded_vertices\": 2,\n      \"pinned_nullity_floor\": 25,\n      \"D2_numerator\": [\n        304000000001088000640001344000640001600000640001296000640000512000000000256,\n        480000320000480000000000480000000000479999999999999999680000000000000\n      ],\n      \"coordinate_denominator\": 2000000000002000000000002000000000002,\n      \"M_inter_numerator\": [\n        288000640000288001344000000001344000000001343999712000703999712000000,\n        144000000000000000063999856000064000000000063999856000064000000000000000144\n      ],\n      \"hull_vertices\": 13,\n      \"independent_fraction_replay\": false\n    },\n    {\n      \"Q\": 31,\n      \"labels\": 121,\n      \"all_source_pairs\": 7260,\n      \"contacts\": 206,\n      \"cross_contacts\": 1,\n      \"rhombi\": [\n        38,\n        48\n      ],\n      \"train_counts\": [\n        [\n          10,\n          5\n        ],\n        [\n          11,\n          6\n        ]\n      ],\n      \"B\": 64,\n      \"chi\": 2,\n      \"t\": 1,\n      \"loaded_vertices\": 2,\n      \"pinned_nullity_floor\": 32,\n      \"D2_numerator\": [\n        496000000001952000960002352000960002752000960002256000960000800000000000400,\n        960000480000960000000000960000000000959999999999999999520000000000000\n      ],\n      \"coordinate_denominator\": 2000000000002000000000002000000000002,\n      \"M_inter_numerator\": [\n        460001100000460002240000000002240000000002239999540001139999540000000,\n        230000000000000000039999770000040000000000039999770000040000000000000000230\n      ],\n      \"hull_vertices\": 12,\n      \"independent_fraction_replay\": false\n    },\n    {\n      \"Q\": 61,\n      \"labels\": 223,\n      \"all_source_pairs\": 24753,\n      \"contacts\": 394,\n      \"cross_contacts\": 1,\n      \"rhombi\": [\n        79,\n        93\n      ],\n      \"train_counts\": [\n        [\n          15,\n          8\n        ],\n        [\n          16,\n          9\n        ]\n      ],\n      \"B\": 96,\n      \"chi\": 2,\n      \"t\": 1,\n      \"loaded_vertices\": 2,\n      \"pinned_nullity_floor\": 48,\n      \"D2_numerator\": [\n        976000000003392002016004176002016004960002016003984002016001568000000000784,\n        1440001008001440000000001440000000001439999999999999998992000000000000\n      ],\n      \"coordinate_denominator\": 2000000000002000000000002000000000002,\n      \"M_inter_numerator\": [\n        1052002468001052004992000000004992000000004991998948002523998948000000,\n        526000000000000000055999474000056000000000055999474000056000000000000000526\n      ],\n      \"hull_vertices\": 24,\n      \"independent_fraction_replay\": false\n    },\n    {\n      \"Q\": 100,\n      \"labels\": 367,\n      \"all_source_pairs\": 67161,\n      \"contacts\": 669,\n      \"cross_contacts\": 1,\n      \"rhombi\": [\n        142,\n        161\n      ],\n      \"train_counts\": [\n        [\n          19,\n          10\n        ],\n        [\n          20,\n          11\n        ]\n      ],\n      \"B\": 120,\n      \"chi\": 2,\n      \"t\": 2,\n      \"loaded_vertices\": 2,\n      \"pinned_nullity_floor\": 61,\n      \"D2_numerator\": [\n        1600000000006400003200008000003200009600003200008000003200003200000000001600,\n        3200001600003200000000003200000000003199999999999999998400000000000000\n      ],\n      \"coordinate_denominator\": 2000000000002000000000002000000000002,\n      \"M_inter_numerator\": [\n        1636003884001636007840000000007840000000007839998364003955998364000000,\n        818000000000000000071999182000072000000000071999182000072000000000000000818\n      ],\n      \"hull_vertices\": 18,\n      \"independent_fraction_replay\": false\n    },\n    {\n      \"Q\": 217,\n      \"labels\": 793,\n      \"all_source_pairs\": 314028,\n      \"contacts\": 1488,\n      \"cross_contacts\": 1,\n      \"rhombi\": [\n        334,\n        362\n      ],\n      \"train_counts\": [\n        [\n          30,\n          16\n        ],\n        [\n          31,\n          17\n        ]\n      ],\n      \"B\": 188,\n      \"chi\": 2,\n      \"t\": 1,\n      \"loaded_vertices\": 2,\n      \"pinned_nullity_floor\": 94,\n      \"D2_numerator\": [\n        3472000000013600007168016736007168019872007168016400007168006272000000003136,\n        6656003584006656000000006656000000006655999999999999996416000000000000\n      ],\n      \"coordinate_denominator\": 2000000000002000000000002000000000002,\n      \"M_inter_numerator\": [\n        4024009560004024019232000000019232000000019231995976009671995976000000,\n        2012000000000000000111997988000112000000000111997988000112000000000000002012\n      ],\n      \"hull_vertices\": 26,\n      \"independent_fraction_replay\": false\n    }\n  ]\n}\n"
+    }
+  ],
+  "source_heads": {
+    "949": "603ae507f40b4615c1b98a2183927d9f3be6d466",
+    "954": "2cd3bdc12ae5ccbec918c75fbdaf904115c623f4",
+    "970": "3d94a44ed245ad636685d7a3919acdf9ebd53753"
+  }
+}

@@ -1,0 +1,35 @@
+# Target C — C93 strict secondary-separator frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_strict_secondary_separator_budget_2026-09-01.md](../../reports/target_c_strict_secondary_separator_budget_2026-09-01.md).
+
+For a non-chain active diameter h with C83 chain interval length `ell_h`, let `k_h`
+be the total number of trains separating its endpoints. Exact train coordinates give
+`k_h>=D`. Equality would force every oriented separator vector to be parallel to the
+diameter vector. Since the interval is nonempty, one separator is a C80 chain vector
+`+-u`, so h would be parallel to the unique chain diameter `za`, impossible.
+Therefore
+
+`k_h>=D+1`,
+
+and at least `D+1-ell_h` separators lie outside the D-track chain atom.
+
+C87 supplies two selected diameter orientations over each of its D staircase edges,
+and C88 gives
+
+`sum_e ell_e=D(D+1)/2`.
+
+Hence the exact selected diameter/non-chain-train incidence budget is
+
+`>=D(D+1)`.
+
+Some non-chain train therefore separates at least
+
+`D(D+1)/(T-D)`
+
+selected active diameter pairs; C90 classifies the resulting train-cut graph as a
+caterpillar forest.
+
+C93 improves C88 by exactly `2D` and removes the equality-at-D separator loophole. The
+leading asymptotic macroscopic-cut coefficient is unchanged.

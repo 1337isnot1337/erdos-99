@@ -1,0 +1,67 @@
+# Hostile audit — generic H7b triangle/simplex reduction
+
+**Date:** 2026-09-19  
+**Audited note:** `research/target_c_support7_h7b_triangle_simplex_reduction_2026-09-19.md`  
+**Certificates:** `research/verify_target_c_support7_h7b_generic_order_sign_reduction_2026_09_19.py`, `research/verify_target_c_support7_h7b_triangle_simplex_reduction_2026_09_19.py`  
+**Verdict:** PASS at the stated generic scope  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+This audit attacks the assumptions most likely to produce a false support-seven exclusion: the order/sign census, treatment of the interior ground point, force-cycle versus raw-ray orientation, strictness of the pentagon inequalities, and numerical dual reconstruction.
+
+## 1. The finite input census is reproduced independently of the new certificates
+
+The restored generic verifier enumerates all `5^7` nominal ground-ray slots and imposes the 21 orientation-antisymmetry relations. It obtains exactly 57 slot vectors. It then enumerates all 465 labelled 2-regular missing graphs on seven non-ground vertices (`360 C7`, `105 C3+C4`), solves the local `2+3` sign-consistency equations, and obtains 4332 labelled states when the two global sign choices are counted.
+
+The verifier quotients by the full dihedral action on the heptagon and global sign reversal. Under reflection the slot index changes by `k -> 6-k`; omitting this would corrupt the quotient. The exact result is 184 orbits with split `120 C7 + 64(C3+C4)`.
+
+The eight previously claimed signed-trace exclusions are rechecked by exact coefficient identities. The repaired certificate leaves `112 C7 + 64(C3+C4)=176`, matching the committed note.
+
+## 2. No unproved cyclic order at the interior ground is used
+
+The ground reciprocal point is interior, so its seven signed force rays do not inherit the hull cyclic-order argument used at non-ground vertices. The new proof never needs such an order.
+
+Every triangle equation used by the certificate has all three vertices in `{1,...,7}`. At each of those vertices the raw rays occur in the fixed convex-heptagon interior-cone order with the ground ray inserted in its enumerated slot. The two missing non-ground rays are deleted. Thus every raw orientation sign entering the affine angle conversion is determined by the generic `H7b` order data alone.
+
+The verifier asserts that all three edges of every used triangle are present. The generic hypothesis excludes reciprocal collinear triples, so its angle sum is exactly `pi` rather than a degenerate equality requiring a separate convention.
+
+## 3. Signed force cycles and raw reciprocal angles are kept distinct
+
+At a non-ground vertex the five present raw rays are partitioned by edge signs. The physical force cycle is built as the positive raw rays followed by the negative raw rays, in raw order inside each sign class. The affine conversion handles the half-turn between raw and signed force directions explicitly.
+
+For a force arc `R`, the four cases are `R`, `2-R`, `R-1`, and `1-R`, selected from same/different edge signs and raw orientation sign. This is the same exact conversion used by the already-audited support-six/H8 angle certificates.
+
+## 4. The strict inequality is a proved physical-pentagon theorem
+
+Each non-ground relation component is degree-pure, so its five incident present forces have equal magnitude and close as a strict equilateral pentagon. The audited local theorem gives
+
+`q_k = x_k + x_{k+1} - x_{k+3} > 1/3`
+
+for every cyclic `k`. These are strict inequalities. Replacing `>` by `>=` would invalidate the 54 boundary certificates; the proof does not do that. For those cases the exact dual identity has `kappa=0`, so strict positivity of the active terms is essential. Every active coefficient is checked to be positive.
+
+The prior convex-hull theorem proves that these five facets are the full affine-linear local content of one physical equilateral pentagon. The note does not claim that the 78 angular survivors are actual pentagons; only that the local affine layer cannot remove them.
+
+## 5. Numerical optimization is not part of the proof
+
+An LP was used during discovery to identify sparse dual supports. The committed angle verifier contains only support indices. For each of the 106 excluded orbits it rebuilds the exact rational equality/facet coefficient matrix and solves the selected dual system from scratch using standard-library `Fraction` Gaussian elimination.
+
+For every certificate it verifies exact cancellation of all 35 turn-variable coefficients, uniqueness of the selected dual solution, `alpha_j>0` for every active strict facet, `sum alpha_j=1`, and exact `kappa<=0`.
+
+The exact census is 54 certificates with `kappa=0` and 52 with `kappa<0`. The negative `kappa` distribution is hard-checked. No tolerance, rounded optimizer coefficient, or floating-point feasibility decision appears in the proof run.
+
+## 6. The count union is exact
+
+The angle/simplex certificates exclude 106 orbits: `72 C7 + 34(C3+C4)`, leaving `48 C7 + 30(C3+C4)=78`.
+
+The restored signed-trace verifier identifies eight distinct `C7` orbits. Their intersection with the 106 angle exclusions has size seven. Hence the union has size 107 and the survivor split is exactly
+
+`47 C7 + 30(C3+C4) = 77`.
+
+The angle verifier also locks the sole trace-only orbit in the deterministic canonical ordering as orbit 160. This index is only a regression guard, not a mathematical label.
+
+## 7. Scope limits
+
+Nothing in this proof removes the 77 generic survivors. It does not treat reciprocal-collinearity walls, where a triangle may degenerate and a ground ray can share a raw direction. It does not treat `H7a`, `H6`, or the remaining `H8` cases. It does not enforce nonlinear vector closure of each equilateral pentagon or global radius/distance integrability beyond the affine triangle-angle equations.
+
+Those exclusions require additional nonlinear or degeneracy-specific work. No theorem-state file should be changed from this result alone.
+
+**Audit verdict:** PASS. The `176 -> 77` generic `H7b` reduction is an exact finite consequence of already-proved strict pentagon facets, non-ground reciprocal triangle angle sums, and prior signed-distance trace certificates.

@@ -1,0 +1,337 @@
+# Target C: matching versus canonical defect-currency fork
+
+**Date:** 2026-10-02  
+**Remote main rechecked before writing:** \`3c2c56be83ea637a560cc56bc5e9c0e49c72042e\`  
+**Status:** proof-only exact reduction. Level I and C-II remain open.
+
+## 1. Statement
+
+Use the canonical notation for the full actual diameter graph
+
+\[
+H=(B,E_H),\qquad
+q=|B|,\qquad
+h=|E_H|,\qquad
+d_H=q-h,
+\]
+
+and let
+
+\[
+\nu=\nu(H)
+\]
+
+be its maximum matching number.
+
+Canonical Section 61 defines
+
+\[
+r_H:=2h-q=h-d_H
+\]
+
+and proves the exact currency identity
+
+\[
+\boxed{
+r_H=x_B+Q+2s_Z,
+}
+\tag{1}
+\]
+
+where
+
+- \(x_B=b-q\) is outer-face boundary-walk excess;
+- \(Q\) is bounded-face degree excess above quadrilateral;
+- \(s_Z\) is mixed-rank surplus.
+
+The new observation is that canonical C-WOODALL bounds \(d_H\) directly by the
+matching number.
+
+### Theorem 1.1 -- matching/currency inequality
+
+Every canonical post-ZF C-II source satisfies
+
+\[
+\boxed{
+d_H\le\nu.
+}
+\tag{2}
+\]
+
+Consequently
+
+\[
+\boxed{
+x_B+Q+2s_Z
+=r_H
+\ge h-\nu
+\ge \lceil D\rceil-\nu.
+}
+\tag{3}
+\]
+
+This is finite and exact apart from the final canonical ZF inequality
+\(h\ge\lceil D\rceil\).
+
+## 2. Proof
+
+Apply C-WOODALL.
+
+### Cyclic branch
+
+Here
+
+\[
+d_H=0,
+\]
+
+so (2) is immediate.
+
+### Forest branch
+
+Here \(H\) is a disjoint union of caterpillar trees and
+
+\[
+d_H
+=
+\#\{\text{diameter components}\}.
+\]
+
+Every component contains at least one edge. Choosing one edge from each component
+gives a matching because different components are vertex-disjoint. Hence
+
+\[
+\nu\ge d_H.
+\]
+
+This proves (2).
+
+Now
+
+\[
+r_H
+=2h-q
+=h-(q-h)
+=h-d_H
+\ge h-\nu.
+\]
+
+Canonical ZF gives \(h\ge\lceil D\rceil\), and the Section-61 identity (1) gives
+(3). QED.
+
+## 3. Global parameterized fork
+
+For every fixed \(0<\epsilon<1\), every sufficiently large source satisfies
+
+\[
+\boxed{
+\nu\ge\epsilon D
+}
+\tag{4}
+\]
+
+or
+
+\[
+\boxed{
+x_B+Q+2s_Z
+\ge
+(1-\epsilon)D-O(1).
+}
+\tag{5}
+\]
+
+The first branch contains a linear family of vertex-disjoint actual diameter edges.
+By the diameter-thrackle property they are pairwise properly crossing, and their
+endpoints have the exact offset matching order proved in the square-root braid note.
+
+The second branch is entirely expressed in the canonical C-II currencies. Thus a
+failure to produce a linear crossing braid is not a diffuse topology escape: it
+forces almost a full diameter unit of outer-walk/face/rank defect.
+
+## 4. Square-root hard regime
+
+The current-main Woodall vertex-cover improvement proves
+
+\[
+\nu(H)
+\ge
+\left({1\over\sqrt{12\pi\sqrt3}}-o(1)\right)\sqrt D.
+\tag{6}
+\]
+
+Suppose a subsequence remains on that hard scale,
+
+\[
+\nu(H)=O(\sqrt D).
+\tag{7}
+\]
+
+Then (3) gives
+
+\[
+\boxed{
+x_B+Q+2s_Z
+\ge D-O(\sqrt D).
+}
+\tag{8}
+\]
+
+Hence at least one of the three weighted currencies is macroscopic:
+
+\[
+\boxed{
+\max\{x_B,Q,2s_Z\}
+\ge {D\over3}-O(\sqrt D).
+}
+\tag{9}
+\]
+
+Equivalently at least one of
+
+\[
+\boxed{
+x_B\ge {D\over3}-O(\sqrt D),
+}
+\tag{10}
+\]
+
+\[
+\boxed{
+Q\ge {D\over3}-O(\sqrt D),
+}
+\tag{11}
+\]
+
+or
+
+\[
+\boxed{
+s_Z\ge {D\over6}-O(\sqrt D)
+}
+\tag{12}
+\]
+
+holds.
+
+This upgrades the older universal nonmatching floor
+
+\[
+x_B+Q+2s_Z
+=r_H
+\ge (0.6099\ldots-o(1))D
+\]
+
+to an asymptotic coefficient \(1\) throughout the square-root matching regime.
+
+## 5. Compatibility with the new leaf/core theorem
+
+The current-main leaf/core reduction gives, under (7),
+
+\[
+D-O(\sqrt D)
+\]
+
+diameter leaves and only \(O(\sqrt D)\) nonleaf diameter carriers.
+
+The new currency bound says this same two-level Woodall geometry must coexist with
+(8). Therefore the hard branch has two simultaneous descriptions:
+
+\[
+\boxed{
+\begin{array}{l}
+D-O(\sqrt D)\text{ pendant diameter terminals on }O(\sqrt D)\text{ carriers},\\[2mm]
+x_B+Q+2s_Z\ge D-O(\sqrt D).
+\end{array}
+}
+\tag{13}
+\]
+
+The leaf/core KKT theorem further says that normalized stress must either put
+linear aggregate contact load at pendant terminals or concentrate a
+\(D^{-1/2}\)-scale diameter multiplier on the small core.
+
+This is substantially more rigid than either the topology or the currency identity
+alone.
+
+## 6. Branch-specific consequences
+
+### 6.1 Small outer-walk excess
+
+If
+
+\[
+x_B=o(D),
+\]
+
+then in the square-root hard regime
+
+\[
+\boxed{
+Q+2s_Z\ge D-o(D).
+}
+\tag{14}
+\]
+
+Thus either bounded nonquadrilateral-face excess is linear with coefficient bounded
+away from zero, or the mixed-row surplus is linear.
+
+### 6.2 Small face excess
+
+If
+
+\[
+Q=o(D),
+\]
+
+then
+
+\[
+\boxed{
+x_B+2s_Z\ge D-o(D).
+}
+\tag{15}
+\]
+
+### 6.3 Low mixed surplus
+
+If
+
+\[
+s_Z=o(D),
+\]
+
+then
+
+\[
+\boxed{
+x_B+Q\ge D-o(D).
+}
+\tag{16}
+\]
+
+So no two of the three defect mechanisms can simultaneously be negligible in the
+hard matching regime.
+
+## 7. Remaining obstruction
+
+The theorem does not provide an upper bound on the right side of (1); current global
+geometry permits linear outer-walk, face, and rank defect. The gain is that the
+square-root matching endpoint has now been transported exactly into the canonical
+currency system.
+
+The next high-value attack is therefore branch-specific rather than another matching
+estimate:
+
+1. **large \(x_B\):** use the \(D-O(\sqrt D)\) pendant diameter terminals against the
+   outer-walk detour and contact-leaf charge already proved on current main;
+2. **large \(Q\):** combine linear nonquadrilateral-face degree excess with the
+   near-disk ball-hull / inactive-interface geometry;
+3. **large \(s_Z\):** use the linear mixed-rank surplus to force a large omitted-row
+   face or a simultaneous finite release, rather than merely selecting an extreme
+   KKT stress.
+
+The macroscopic inactive-container branch remains separate.
+
+**Disposition:** exact proof-only reduction. No computation, numerical search,
+verifier execution, or CI output is used.

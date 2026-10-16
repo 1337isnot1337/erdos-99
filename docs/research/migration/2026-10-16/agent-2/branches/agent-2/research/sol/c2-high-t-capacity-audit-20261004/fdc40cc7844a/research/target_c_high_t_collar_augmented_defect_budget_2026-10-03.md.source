@@ -1,0 +1,117 @@
+# Target C: collar-to-augmented-defect budget
+
+**Scope audit, 2026-10-04:** the endpoint specialization with
+`x_B=O(sqrt(D))`, `t_D<=1.860+o(1)` has no unbounded canonical Type-II
+survivor. The conditional finite collar/augmented-cell inequalities are
+retained. See the [exact hull-side capacity audit](../docs/reports/target_c_hull_side_exact_train_capacity_audit_2026-10-04.md).
+
+Date: 2026-10-03
+Base main: f6f2c5d80ee30ca2c949f08b089b5ef606b1916c
+Status: proof-only candidate, noncanonical. C-II and Level I remain open.
+
+This note is independent of the current open-cell cut-divergence route. It couples the
+high-t boundary-rhombus collar to canonical Section 123.
+
+Let S=N_4^partial be the selected strict boundary-rhombus count from
+target_c_high_t_boundary_rhombus_floor_2026-10-02.md. For an unloaded harmonic
+component I_r use Section-123 notation A_r, a_r=|A_r|, T_r for triangular bounded
+faces of J_r^+, Q_r^+=sum_(deg f>=5)(deg f-4), and d_tile for the global attachment
+tiling deficit. Put k=d_H+s_Z.
+
+Section 123 gives the exact identity
+
+    2(e_BB-k) = sum_r(a_r-T_r+Q_r^+) + 2 d_tile.             (1)
+
+## Lemma: every collar side is a nontriangular added polygon side
+
+Fix a selected collar rhombus with cyclic boundary
+
+    p - p' - z' - z - p.                                   (2)
+
+The collar theorem gives that p,p' are consecutive loaded force-hull vertices,
+z,z' are unloaded, pz and p'z' are attachment contacts, and zz' is an
+unloaded-unloaded contact. Thus z,z' lie in one unloaded component I_r and
+p,p' belong to A_r. Since p,p' are consecutive on the full loaded hull, they are
+consecutive in the cyclic order of the subset A_r, so pp' is a side of P_r=conv(A_r).
+
+In the Section-123 graph J_r^+, loaded-loaded contacts are omitted at first and every
+side of P_r is then added. Therefore pp' is one of the added polygon sides. The other
+three edges in (2) are already present. Because (2) is an actual bounded strict
+rhombus face of the positive-contact core, its interior has no core vertex or contact
+edge. Other added polygon sides lie on the boundary of P_r and cannot enter its
+interior. Hence the bounded J_r^+ face incident with pp' is exactly the quadrilateral
+(2), not a triangle.
+
+Distinct selected collar rhombi have distinct loaded hull sides. If S_r are assigned
+to I_r through their inner edge zz', then
+
+    S_r <= a_r-T_r.                                         (3)
+
+Summing,
+
+    S <= sum_r(a_r-T_r).                                    (4)
+
+## Exact budget
+
+Combining (1) and (4) gives
+
+    S + sum_r Q_r^+ + 2 d_tile <= 2(e_BB-k).                (5)
+
+This is the new finite inequality.
+
+Section 123 also gives P_exc,r<=5Q_r^+ for the actual induced harmonic graph. Hence
+
+    sum_r P_exc,r
+      <= 10(e_BB-k) - 5S - 10 d_tile.                       (6)
+
+Thus the collar and harmonic exceptional-face perimeter do not have independent
+linear allowances.
+
+## Current high-t specialization
+
+The high-t collar branch is full-core Type II. The promoted loaded-chord theorem gives
+c_B=0 and e_BB=q-m, where m is the number of nonunit loaded-hull sides. With
+t_D=(q-k)/D,
+
+    e_BB-k = t_D D-m.                                       (7)
+
+Therefore
+
+    S + sum_r Q_r^+ + 2 d_tile <= 2t_D D-2m.               (8)
+
+The current collar theorem gives
+
+    S >= 4 per(F)-6t_D D-6nu-9x_B-8.                       (9)
+
+Consequently
+
+    sum_r Q_r^+ + 2 d_tile
+      <= 8t_D D-4 per(F)+6nu+9x_B+8-2m.                    (10)
+
+In the square-root branch nu=O(sqrt(D)), x_B=O(sqrt(D)), and per(F)/D->pi.
+Along t_D->t,
+
+    limsup (sum_r Q_r^+ + 2d_tile)/D <= 8t-4pi.             (11)
+
+At t<=1.860 the right side is 2.3136293856....
+
+Likewise (6)-(9) give
+
+    sum_r P_exc,r
+      <= 40t_D D-20 per(F)+30nu+45x_B+40-10m-10d_tile.     (12)
+
+At t_D<=1.860+o(1), this is at most
+
+    (11.5681469282...+o(1))D.                               (13)
+
+The decimals only evaluate proved coefficients; no numerical search is used.
+
+## Remaining bottleneck
+
+This does not close C-II. The allowance in (10) is still positive at the live
+endpoint. A closure now needs either a lower bound on sum_r Q_r^+ + 2d_tile exceeding
+(10), or a composition of the reduced exceptional-face allowance (12) with the
+aggregate outer-walk/train obligations that yields a strict diameter decrease or
+another canonical contradiction.
+
+No verifier, CI result, or computational evidence is used.

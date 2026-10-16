@@ -1,0 +1,126 @@
+# Target C-II — exact rank-conditioned secants for pentagon force closure
+
+**Date:** 2026-09-19  
+**Status:** exact local nonlinear-to-polyhedral reduction; theorem-state authority unchanged  
+**Scope:** every strict closed equilateral force pentagon  
+**Depends on:** the sharp two-gap closure bound and the exact gap-order classification  
+**Certificate:** `research/verify_target_c_pentagon_rank_secants_2026_09_19.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The sharp two-gap inequality is
+
+\[
+x_{k+2}+x_{k+3}\le M(x_k),
+\qquad
+M(x)=2\left[1-\frac1\pi\arccos\!\left(\frac12-\cos\frac{\pi x}{2}\right)\right],
+\tag{1}
+\]
+
+for every normalized physical gap `0<x<2/3`. The function `M` is strictly convex.
+
+The full-domain secant of `M` is already redundant with the turn-simplex facets. A useful exact split occurs at the average physical gap
+
+\[
+\frac25.
+\]
+
+At this point `M` has the exact rational value
+
+\[
+\boxed{M\!\left(\frac25\right)=\frac45.}
+\tag{2}
+\]
+
+Indeed,
+
+\[
+\cos\frac{3\pi}{5}
+=
+\frac12-\cos\frac\pi5,
+\]
+
+so the arccosine in (1) equals `3pi/5`. Together with
+
+\[
+M(0)=\frac23,
+\qquad
+M\!\left(\frac23\right)=1,
+\tag{3}
+\]
+
+strict convexity gives two completely rational upper secants:
+
+\[
+\boxed{
+M(x)\le \frac23+\frac{x}{3}
+\qquad\left(0\le x\le\frac25\right),
+}
+\tag{4}
+\]
+
+and
+
+\[
+\boxed{
+M(x)\le \frac12+\frac{3x}{4}
+\qquad\left(\frac25\le x\le\frac23\right).
+}
+\tag{5}
+\]
+
+Therefore every physical force pentagon obeys
+
+\[
+x_{k+2}+x_{k+3}
+\le
+\frac23+\frac{x_k}{3}
+\quad\text{whenever }x_k\le\frac25,
+\tag{6}
+\]
+
+and
+
+\[
+x_{k+2}+x_{k+3}
+\le
+\frac12+\frac{3x_k}{4}
+\quad\text{whenever }x_k\ge\frac25.
+\tag{7}
+\]
+
+These cuts are strictly stronger than the redundant full-domain chord away from the endpoints. On `(0,2/5)`, the full chord exceeds (4) by `x/6`. On `(2/5,2/3)`, it exceeds (5) by `1/6-x/4`.
+
+## Rank information makes the split automatic
+
+Every five-gap vector has a minimum and maximum. Since the average gap is `2/5`,
+
+\[
+\min_i x_i\le\frac25\le\max_i x_i.
+\tag{8}
+\]
+
+The exact gap-order theorem says that every physical pentagon lies in the closure of one of only ten strict order cones, and in each cone the indices of the minimum and maximum are known. Equality cases are already contained in those closures.
+
+Hence each of the ten physical order branches comes with two stronger rational closure cuts for free:
+
+- apply (6) at the branch minimum;
+- apply (7) at the branch maximum.
+
+No LP-derived interval bound, transcendental numerical approximation, or rational enclosure of `pi` is required for these two cuts. The only nonlinearity has been moved into the exact ten-way order disjunction already proved independently.
+
+The minimum and maximum are cyclically adjacent in every physical strict order. Thus, up to cyclic relabeling, a branch can be represented with adjacent distinguished indices `m,M`, and the two rank-conditioned inequalities constrain two neighboring instances of the sharp two-gap relation.
+
+## Consequence for the remaining support-seven systems
+
+This gives a stronger finite polyhedral attack than either ingredient alone. For every surviving affine cell:
+
+1. branch each physical pentagon only over the ten allowed gap-order cones;
+2. add the four ordinary order inequalities defining that cone;
+3. add (6) at its minimum index and (7) at its maximum index;
+4. test the resulting rational polyhedra with exact Farkas certificates.
+
+A physical realization must survive at least one branch at every pentagon. Therefore if all ten branches for even one pentagon are exactly empty, the whole reciprocal cell is impossible. Joint branching across several pentagons is stronger still.
+
+This is directly applicable to the 6,308-cell generic `H6` endpoint, the remaining generic `H7b` cells, and the twelve convex `H8` orbits. Unlike the global chord, these rank-conditioned cuts are not automatically contained in the turn simplex. They are the cheapest exact use of the nonlinear force-closure theorem after the gap-order classification.
+
+No theorem-state file is changed. C-II remains open.

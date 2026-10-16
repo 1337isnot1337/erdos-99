@@ -1,0 +1,364 @@
+# Target C-II — `t<=1.844` forces a complete `0.003D x 0.35D` center/leaf train rectangle
+
+**Date:** 2026-09-15  
+**Status:** proof-only phase-resolved structural strengthening, corrected to the audited dual-tree topology  
+**Scope:** full-core Type-II branch with `t=(q-k)/D<=1.844`  
+**Dependencies:** smallest-leaf O--O pair-weight theorem; `>0.73D` weighted center-fan theorem; audited dual-tree train-grid extraction  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current frontier already places a macroscopic center fan on one smallest-leaf
+outer-to-outer train.  The same quantitative input forces a **complete
+linear-by-linear crossing rectangle** after one dual-tree backbone extraction.
+
+An earlier draft of this note incorrectly said that an arbitrary pairwise noncrossing
+family of leaf crosscuts has a globally linear complement.  The repository's audited
+phase-grid correction explicitly rejects that statement: the complement dual is a
+tree, not necessarily a path.  The proof below uses only the audited tree statement.
+
+Let `Q_V` be the retained weighted O--O family in the smallest leaf phase of the
+dominant exact `pi/3` orbit.  Write `w_tau in (0,1]` for the retained pair weight of
+`tau`, and let `d_tau D` be the number of center-phase complete trains crossing it.
+The parent theorems give, uniformly for every survivor with `t<=1.844`,
+
+\[
+P_V:={1\over D}\sum_{\tau\in Q_V}w_\tau>0.0848-o(1),
+\tag{R.1}
+\]
+
+\[
+{\sum_\tau w_\tau d_\tau D\over P_VD}
+>0.73D-o(D),
+\tag{R.2}
+\]
+
+and the center phase has size
+
+\[
+C D<1.063D+o(D).
+\tag{R.3}
+\]
+
+This note proves that there are subfamilies `L_*` of smallest-leaf O--O trains and
+`C_*` of center-phase complete trains such that
+
+\[
+\boxed{|L_*|>0.003D-o(D),}
+\tag{R.4}
+\]
+
+\[
+\boxed{|C_*|>0.35D-o(D),}
+\tag{R.5}
+\]
+
+and **every train in `L_*` crosses every train in `C_*`**.
+
+Thus the live `1.84355...<=t<=1.844` band contains an actual complete topological
+rectangle with both shores linear in `D`.  This supplies the large center-by-O--O
+rectangle explicitly requested by the preceding smallest-leaf frontier note.
+
+---
+
+## 1. More than `0.0275D` weighted leaf cuts have center degree above `0.57D`
+
+Call a retained leaf train **good** when
+
+\[
+d_\tau>0.57.
+\]
+
+Let
+
+\[
+G_D={1\over D}\sum_{\tau\ {m good}}w_\tau.
+\]
+
+Every leaf train is crossed by at most all center trains, so by (R.3)
+
+\[
+d_\tau<1.063+o(1).
+\]
+
+If `G_D` were small, the weighted average in (R.2) would satisfy
+
+\[
+0.73P_V
+<0.57(P_V-G_D)+1.063G_D+o(1).
+\]
+
+Therefore
+
+\[
+G_D>
+{(0.73-0.57)P_V\over1.063-0.57}-o(1).
+\]
+
+Using (R.1),
+
+\[
+G_D>
+{0.16(0.0848)\over0.493}-o(1)
+={1696\over61625}-o(1)
+=0.0275212981\ldots-o(1).
+\]
+
+Hence
+
+\[
+\boxed{G_D>0.0275-o(1).}
+\tag{R.6}
+\]
+
+Because every retained pair weight satisfies `w_tau<=1`, the number `m_D` of distinct
+good leaf trains obeys
+
+\[
+\boxed{m_D>0.0275D-o(D).}
+\tag{R.7}
+\]
+
+Every good leaf train is outer-to-outer, and the good family is pairwise noncrossing
+because it lies in one exact leaf phase.
+
+---
+
+## 2. Correct topology: the good-leaf complement dual is a tree
+
+The audited phase-grid correction proves the following safe fact.  For any finite
+family of pairwise noncrossing proper crosscuts in a disk, the complement region/arc
+dual is a tree.  Apply it to the `m=m_D` good leaf O--O trains and call the resulting
+tree `T_L`.  Its `m` edges are the good leaf tracks.
+
+Now take any center complete train `gamma`.  As `gamma` runs through complement
+regions, crossing a good leaf train traverses the corresponding edge of `T_L`.
+Two train tracks cross at most once, so no dual edge is traversed twice.  An
+edge-simple walk in a tree is a simple path.  Therefore
+
+\[
+\boxed{
+N(\gamma):=\{\lambda\in Q_V^{good}:\gamma\pitchfork\lambda\}
+\text{ is an edge set of one simple path in }T_L.
+}
+\tag{R.8}
+
+This remains valid even when `gamma` has a bounded-face terminal: its first and last
+regions need not be boundary regions.  Properness is required only for the leaf O--O
+crosscuts that define the dual tree.
+
+Double counting good-leaf/center crossings gives
+
+\[
+I:=\sum_\gamma |N(\gamma)|
+=\sum_{\lambda\ good}\deg(\lambda)
+>0.57mD-o(D^2).
+\tag{R.9}
+\]
+
+There are at most
+
+\[
+N_C<1.063D+o(D)
+\tag{R.10}
+\]
+
+center trains.
+
+---
+
+## 3. One center train creates a long dual-tree backbone
+
+Average (R.9) over the center trains.  Some center train `gamma_0` has crossing path
+`P_0=N(gamma_0)` of length
+
+\[
+|P_0|
+>{0.57mD\over1.063D}-o(D)
+>{0.57(0.0275)\over1.063}D-o(D).
+\]
+
+The exact coefficient is
+
+\[
+{627\over42520}=0.01474600188\ldots .
+\]
+
+Hence
+
+\[
+\boxed{|P_0|>0.014746D-o(D).}
+\tag{R.11}
+
+Order the leaf edges of this simple path as
+
+\[
+\lambda_1,\ldots,\lambda_s.
+\]
+
+For any other center train `gamma`, both `N(gamma)` and `P_0` are simple paths in the
+same tree.  The intersection of two tree paths is connected.  Consequently
+
+\[
+N(\gamma)\cap P_0
+\]
+
+is a consecutive interval in the ordered backbone `lambda_1,...,lambda_s`.
+
+This is exactly the interval structure needed below, and it is now obtained from the
+audited dual-tree theorem rather than from the false global-stack shortcut.
+
+---
+
+## 4. Consecutive-block averaging on the backbone
+
+Every backbone leaf edge is good, so each `lambda_i` is crossed by more than
+`0.57D-o(D)` center trains.  Therefore the total center/backbone incidence is
+
+\[
+I_0>0.57sD-o(D^2).
+\tag{R.12}
+
+Fix an integer block length `r`.  If a center train meets `ell_gamma` consecutive
+backbone edges, it contains exactly
+
+\[
+\max\{\ell_\gamma-r+1,0\}
+\]
+
+consecutive `r`-edge backbone blocks.  Since
+
+\[
+\max\{\ell-r+1,0\}\ge \ell-(r-1),
+\]
+
+summing over all center trains gives
+
+\[
+\sum_B \#\{\gamma:B\subset N(\gamma)\cap P_0\}
+\ge I_0-(r-1)N_C.
+\tag{R.13}
+
+Choose
+
+\[
+r=\lfloor0.003D\rfloor.
+\]
+
+By (R.11), `r<s` for all sufficiently large `D`.  There are `s-r+1<=s` such
+blocks, so some block `B_*` has a common center neighborhood of size at least
+
+\[
+{I_0-(r-1)N_C\over s}
+>
+\left[
+0.57-
+{0.003(1.063)\over627/42520}
+\right]D-o(D).
+\]
+
+The exact rational coefficient is
+
+\[
+{1848281\over5225000}
+=0.3537379904\ldots .
+\]
+
+Therefore
+
+\[
+\boxed{|N(B_*)|>0.35D-o(D).}
+\tag{R.14}
+
+Take
+
+\[
+L_*=B_*,
+\qquad
+C_*=N(B_*).
+\]
+
+Every center train in `C_*` crosses every leaf train in `L_*`, proving
+(R.4)--(R.5).
+
+---
+
+## 5. Exact arithmetic certificate
+
+Run
+
+`python3 research/verify_target_c_small_leaf_complete_rectangle_t1844.py`.
+
+It uses only `Fraction` arithmetic and verifies
+
+```text
+weighted good-cut density  > 1696/61625 = 0.02752129817...
+safe good-cut density      = 11/400     = 0.0275
+safe backbone density      = 627/42520  = 0.01474600188...
+block leaf density          = 3/1000     = 0.003
+common center density       > 1848281/5225000 = 0.3537379904...
+safe common center density = 7/20       = 0.35
+```
+
+The exact margins include
+
+\[
+{1696\over61625}-{11\over400}
+={21\over986000}>0,
+\]
+
+and
+
+\[
+{1848281\over5225000}-{7\over20}
+={19531\over5225000}>0.
+\]
+
+No floating-point sign is load-bearing.
+
+---
+
+## 6. Interaction with Section 157
+
+Every member of `L_*` is outer-to-outer.  Section 157 therefore gives, for each one,
+actual diameter edges crossing its cut with both transverse signs.  The cuts now lie
+on one audited dual-tree backbone path, and the same `>0.35D-o(D)` center trains cross
+**all** of them.
+
+Consequently the live object is
+
+```text
+>0.003D ordered smallest-leaf O--O cuts on one dual-tree backbone
+x
+>0.35D common exact-center crossing trains
++
+two-sided actual-diameter KKT bracing on every leaf cut.
+```
+
+For two leaf cuts in this backbone block, subtracting their Section-157 shore-resultant
+identities cancels every diameter edge whose endpoints lie on the same side of both
+cuts.  The difference is supported on diameter edges interacting with the dual-tree
+strip between the cuts.  The complete center rectangle supplies a common ordered
+coordinate system across all these strips.
+
+The next source-level target is to bound how many consecutive backbone strips one
+straight diameter edge can support with the required transverse sign pattern.  Such a
+reuse bound would convert repeated Section-157 bracing into a lower bound on distinct
+diameter edges.
+
+---
+
+## 7. Scope and non-implications
+
+- The original global-linear-stack argument is explicitly withdrawn; only the audited
+  dual-tree/path-intersection theorem is used.
+- The theorem uses the already-proved `t<=1.844` fan and pair-weight inputs; it does not
+  improve the low-`t` scalar floor by itself.
+- Pair weights are used only to extract many distinct good leaf trains.  The final
+  rectangle is unweighted.
+- Center trains need not be outer-to-outer for their crossing sets to be paths in the
+  leaf complement dual.
+- No Target-B trimmed-grid global-minimizer theorem is imported: arbitrary third-phase
+  and external-train cancellation remains uncontrolled at this stage.
+- No claim is made that the Section-157 diameter bracing edges are distinct across leaf
+  cuts.
+
+**Disposition:** corrected proof-only complete-rectangle extraction; C-II and Level I remain open.

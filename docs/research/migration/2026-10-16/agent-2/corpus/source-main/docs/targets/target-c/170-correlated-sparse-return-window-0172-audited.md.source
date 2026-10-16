@@ -1,0 +1,408 @@
+# Target C — audited §170 fully correlated sparse-return exclusion through `sigma=0.0172`
+
+**Date:** 2026-09-12
+**Lifecycle:** audited-working proof-only full-core route theorem; theorem-state authority unchanged.
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module normalizes the theorem and hostile audit in
+`docs/reports/target_c_sparse_split_fully_correlated_window_0172_2026-09-12.md` and
+`docs/audits/target_c_sparse_split_fully_correlated_window_0172_hostile_audit_2026-09-12.md`.
+
+The earlier sparse-return proof bounded its directional product and sparse penalty
+separately, even though both spend the same slack. Keeping the full shared simplex
+correlated gives the stronger exclusion
+
+\[
+\boxed{0\le\sigma\le s_0:=0.0172.}
+\tag{170.1}
+\]
+
+The exact scalar envelope of the same argument first vanishes only near
+
+\[
+\sigma_{env}=0.0173116294\ldots,
+\]
+
+but no theorem endpoint at that root is claimed. The safe value `0.0172` retains a
+normalized contradiction margin above `0.00232`.
+
+Here `sigma` is the Section-118 sparse-split slack, not the train atomic mass denoted
+`sigma` in §§164/168.
+
+---
+
+## 170.1 Correlated starting inequality
+
+Retain the sparse/directional decomposition
+
+\[
+x+y+z+w=\sigma,
+\qquad x,y,z,w\ge0,
+\tag{170.2}
+\]
+
+and the necessary signed-return condition
+
+\[
+\lambda z\ge\kappa[J]_+,
+\qquad
+\kappa:=2-\sqrt3,
+\tag{170.3}
+\]
+
+where
+
+\[
+\begin{aligned}
+J={}&A_*(x,w)
+-\lambda\left(10z+{x\over2}+{25w\over3}\right)\\
+&-2\left(U-x-y+2z\right)
+\left(Q(y)+y+x+{10w\over3}\right),
+\end{aligned}
+\tag{170.4}
+\]
+
+\[
+A_*(x,w)
+={\pi\over4}-G(\theta)-2G(\phi_8+r)-G(r),
+\qquad
+r=x+{10w\over3},
+\tag{170.5}
+\]
+
+\[
+G(t)={t-\sin t\over8},
+\]
+
+and `Q(y)` is the regular-tooth inverse determined by
+
+\[
+\sin Q+\sqrt3(1-\cos Q)-Q={y\over2}.
+\tag{170.6}
+\]
+
+Define
+
+\[
+\widetilde J:=J-{\lambda z\over\kappa}.
+\tag{170.7}
+\]
+
+If `widetilde J>0`, then (170.3) gives
+
+\[
+\lambda z\ge\kappa J>\lambda z,
+\]
+
+impossible. It therefore suffices to prove a uniform positive lower bound for
+`widetilde J`.
+
+Let `theta_0` solve
+
+\[
+3\theta_0-2\pi-\sin(\theta_0/2)-2\sin\theta_0=s_0.
+\]
+
+At `s_0=0.0172`,
+
+\[
+\boxed{
+\begin{aligned}
+\theta_0&=2.706564629265182\ldots,\\
+U_0&=1.836508580615961\ldots,\\
+\lambda_0&=0.976436949372909\ldots,\\
+\phi_0&=0.870056048649222\ldots .
+\end{aligned}}
+\tag{170.8}
+\]
+
+For every `sigma<=s_0`, monotonicity gives
+
+\[
+\theta\le\theta_0,
+\qquad
+U\le U_0,
+\qquad
+\lambda\le\lambda_0.
+\tag{170.9}
+\]
+
+Since `G` is increasing, replacing `theta,U,lambda` by the endpoint values lowers
+`widetilde J` and is conservative.
+
+Enlarge the physical equality simplex to
+
+\[
+x+y+z+w\le s_0.
+\tag{170.10}
+\]
+
+For fixed `x,y,z`, the relaxed lower bound is strictly decreasing in `w`; the area,
+sparse penalty, and directional-product derivatives are all negative in that variable.
+Hence every relaxed minimizer lies on
+
+\[
+\boxed{x+y+z+w=s_0.}
+\tag{170.11}
+\]
+
+Filling unused slack with `w` is only an optimization device; no fictitious physical
+source is asserted.
+
+---
+
+## 170.2 Geometry remains in the audited branch
+
+The hostile-audited largest-gap transfer gives derivative above `0.30` for
+`theta>=theta_8`, `0<=delta<=0.1`, while the coarse `delta>=0.1` branch costs more than
+`0.0326`. Since `w<=0.0172`, the coarse branch remains impossible and
+
+\[
+\boxed{\delta\le {10\over3}w.}
+\tag{170.12}
+\]
+
+The exact correlated identity then gives
+
+\[
+x_2+x_3+\tau
+=\delta+x
+\le x+{10\over3}w
+\le {10\over3}s_0
+=0.0573333\ldots .
+\tag{170.13}
+\]
+
+This is far below the residual principal gap `phi_0>0.8700`, so the fourth-gap and
+adjacent-span branch stays strict.
+
+The oriented support extent satisfies
+
+\[
+U_0+{10s_0\over3}
+=1.8938419\ldots<\pi,
+\tag{170.14}
+\]
+
+so the tangent lift remains single-valued. The coarser corridor-mismatch margin remains
+positive (`>0.0949`).
+
+The tooth inverse reaches only
+
+\[
+\boxed{Q(s_0)=0.1006739\ldots<0.101<\pi/3,}
+\tag{170.15}
+\]
+
+so the same monotone inverse branch is valid.
+
+---
+
+## 170.3 Keep the shared simplex correlated
+
+Use (170.11) to write
+
+\[
+w=s_0-x-y-z.
+\]
+
+Set
+
+\[
+r={10s_0\over3}-{7x\over3}-{10y\over3}-{10z\over3},
+\]
+
+\[
+C=U_0-x-y+2z,
+\]
+
+\[
+B=Q(y)+{10s_0\over3}-{7x\over3}-{7y\over3}-{10z\over3}.
+\tag{170.16}
+\]
+
+Let `mathcal F(x,y,z)` denote the endpoint-relaxed lower bound for `widetilde J`.
+The area derivative with respect to `r` is
+
+\[
+A_r=-2G'(\phi_8+r)-G'(r)<0.
+\]
+
+Direct differentiation gives
+
+\[
+\mathcal F_x
+=-{7\over3}A_r
++{47\over6}\lambda_0
++2B+{14\over3}C.
+\tag{170.17}
+\]
+
+Every term is positive, so every minimizer has
+
+\[
+\boxed{x=0.}
+\tag{170.18}
+\]
+
+Similarly,
+
+\[
+\mathcal F_z
+=-{10\over3}A_r
+-\lambda_0\left(10+{1\over\kappa}-{25\over3}\right)
+-4B+{20\over3}C.
+\tag{170.19}
+\]
+
+Throughout the simplex,
+
+\[
+C\ge U_0-s_0=1.81930858\ldots,
+\]
+
+\[
+B\le Q(s_0)+{10s_0\over3}<0.158008.
+\]
+
+Even after dropping the favorable area derivative,
+
+\[
+\boxed{\mathcal F_z>6.225.}
+\tag{170.20}
+\]
+
+Therefore every minimizer also has
+
+\[
+\boxed{z=0.}
+\tag{170.21}
+\]
+
+This is the structural gain over §167: the sparse `z` penalty cannot simultaneously
+sit at its independent maximum while the directional product is extremal.
+
+---
+
+## 170.4 One-dimensional convex minimization
+
+After `x=z=0`, the relaxed problem is one-dimensional; call the exact function `H(y)`
+for `0<=y<=s_0`.
+
+For the tooth inverse,
+
+\[
+Q'={1\over2F'(Q)},
+\qquad
+Q''=-{F''(Q)\over4F'(Q)^3}<0,
+\]
+
+where
+
+\[
+F(q)=\sin q+\sqrt3(1-\cos q)-q.
+\]
+
+Because `Q<0.101`,
+
+\[
+F'(Q)\le\sqrt3Q<0.175,
+\qquad
+F''(Q)>1.62,
+\]
+
+so
+
+\[
+-Q''>75.7,
+\qquad
+Q'>1/(2\cdot0.175)>2.857.
+\tag{170.22}
+\]
+
+The area term has second derivative bounded below by `-25/6`, while
+`U_0-y>1.8193`. Direct differentiation therefore gives the uniform bound
+
+\[
+\boxed{H''>273.}
+\tag{170.23}
+\]
+
+Thus `H` is strictly convex and has at most one interior minimizer. Moreover
+
+\[
+H'(0.00669)=-0.0068266\ldots<0,
+\]
+
+\[
+H'(0.00670)=0.0059257\ldots>0,
+\]
+
+so the unique minimizer lies in that interval.
+
+At its midpoint,
+
+\[
+H(0.006695)=0.0023269894\ldots .
+\]
+
+Within the bracket, moving at most `5e-6` from the midpoint can lower `H` by less than
+`3.5e-8`. Hence
+
+\[
+\boxed{\min H>0.0023269>0.00232.}
+\tag{170.24}
+\]
+
+Therefore `widetilde J>0` uniformly on the entire relaxed simplex, contradicting the
+necessary signed-return condition.
+
+---
+
+## 170.5 Consequence and frontier
+
+There is no audited-working proof-only full-core Type-II survivor with
+
+\[
+\boxed{0\le\sigma\le0.0172.}
+\tag{170.25}
+\]
+
+Thus every surviving full-core branch has
+
+\[
+\boxed{\sigma>0.0172.}
+\tag{170.26}
+\]
+
+In the associated Section-101 parametrization this also forces
+
+\[
+\theta>2.706564629265182\ldots,
+\qquad
+\lambda=\sin(\theta/2)>0.976436949372909\ldots .
+\tag{170.27}
+\]
+
+The same correlated scalar envelope first reaches zero near
+`0.0173116294...`; further progress should change the inequality or add a new correlated
+currency rather than merely push the endpoint decimals.
+
+## Scope audit
+
+- Endpoint relaxation has the safe inequality direction for the area term, directional
+  product, and sparse penalty.
+- The relaxed inequality simplex is larger than the physical equality simplex; filling
+  unused slack with `w` is only a minimization device.
+- The coarse `delta>=0.1` branch remains excluded and all tangent/gap prerequisites stay
+  strictly inside their audited domains.
+- The `x` and `z` eliminations are analytic, not sampled optimization.
+- Strict convexity of `H` is uniform with large margin; the numerical minimum is not a
+  sign-at-zero computation.
+- No contact-isolated coordinate is inserted into a positive-core affine kernel.
+- §§168–169 use independent train-atomic and outer-direction currencies and are
+  compatible but not required premises.
+- Type-I inactive containers are not addressed.
+
+**Independent audit disposition:** PASS at audited-working proof-only scope. C-II and
+Level I remain open.

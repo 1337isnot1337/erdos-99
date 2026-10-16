@@ -1,0 +1,342 @@
+# Target C-II — the vanishing-mass fully loaded force corridor shares a near-full dense train grid
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** the no-positive-density-TB1 branch through `t=(q-k)/D<=1.8687`  
+**Dependencies:** vanishing-mass growing exact-force corridor; near-full-shore deep force blocks; exact train crossing-neighbor floor; adjacent-strip terminal-topology bound; exact train-step metric; source circumdisk capacity  
+**Certificate:** `research/verify_target_c_high_t_vanishing_mass_dense_force_grid_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The selected vanishing-mass force corridor already inherits the global `B_0` inverse-`D` scaffold from its parent deep-force block. The concrete diagonal permits substantially more. Because every interface of the corridor has controlled terminal-topology cost and all rows have exactly one phase, the whole growing corridor can be crossed by **almost the full `0.6536D` train neighborhood** of one row. After deleting `o(D)` columns, every surviving rhombus in the complete growing rectangle has angular defect `o(1)`.
+
+The exact train-step metric then gives two common transverse column flanks, simultaneously on every force-loaded row, lying at least `0.01D` on opposite sides of the source circumcenter coordinate. Each flank has density
+
+\[
+0.6536-{1.02\over\sqrt3}-o(1)
+=0.0647027254\ldots-o(1).
+\]
+
+Thus the same corridor now simultaneously has:
+
+- force loading at every separator;
+- vanishing total original switching KKT mass;
+- a uniformly coercive full cancellation kernel;
+- a common near-equilateral grid with `0.6536D-o(D)` columns; and
+- common circumcenter flanks of density `0.06470D-o(D)` on both sides.
+
+This removes the possibility that the vanishing-mass corridor lives in a thin or poorly synchronized train neighborhood.
+
+---
+
+## 1. Use the concrete growing-force schedule
+
+Retain the notation of the vanishing-mass corridor theorem. For the concrete diagonal,
+
+\[
+r_n=n,
+\qquad
+m_n=2n+1,
+\tag{DG.1}
+\]
+
+\[
+T_{0,n}=41n,
+\qquad
+T_{r,n}=41m_nn,
+\tag{DG.2}
+\]
+
+and every interface of the selected block
+
+\[
+J_n=[a_n,b_n],
+\qquad |J_n|=m_n,
+\tag{DG.3}
+\]
+
+is `T_{r,n}`-good and exact-antipodal. All `m_n+1` rows have one exact oriented phase.
+
+Let
+
+\[
+C=1{,}109{,}000,
+\qquad
+r_0=0.6536.
+\tag{DG.4}
+\]
+
+For every row `tau_j` in the selected high-`t` shore, let `Gamma_j` be its complete-train crossing family. The audited crossing-neighbor floor gives
+
+\[
+\boxed{|\Gamma_j|>r_0D_n-o(D_n).}
+\tag{DG.5}
+\]
+
+At every internal interface, `T_{r,n}`-goodness gives
+
+\[
+L_j<T_{r,n}C,
+\tag{DG.6}
+\]
+
+where adjacent crossing families obey
+
+\[
+|\Gamma_j\triangle\Gamma_{j+1}|\le L_j.
+\tag{DG.7}
+\]
+
+In the diagonal extraction we may enlarge `D_n` after all fixed-`n` thresholds have been met. Impose in addition
+
+\[
+\boxed{
+{m_nT_{r,n}C\over D_n}\longrightarrow0.
+}
+\tag{DG.8}
+\]
+
+This is compatible with every earlier requirement, including the resolved-force condition `rho_nD_n^(1/4)->infinity` and the vanishing-mass estimates.
+
+---
+
+## 2. Almost the full train neighborhood crosses every row
+
+Define the common crossing family
+
+\[
+P_n^{raw}
+:=\bigcap_{j=a_n}^{b_n+1}\Gamma_j.
+\tag{DG.9}
+\]
+
+Starting from the first row and passing through the block, at most `L_j` trains can be lost from the running intersection at interface `j`. Hence
+
+\[
+\begin{aligned}
+|P_n^{raw}|
+&\ge |\Gamma_{a_n}|-
+\sum_{j=a_n}^{b_n}L_j\\
+&>r_0D_n-m_nT_{r,n}C-o(D_n).
+\end{aligned}
+\tag{DG.10}
+\]
+
+By (DG.8),
+
+\[
+\boxed{
+|P_n^{raw}|>(0.6536-o(1))D_n.
+}
+\tag{DG.11}
+
+Every two columns in `P_n^{raw}` both cross the first selected row. The complete-train crossing graph is triangle-free, so the columns are internally noncrossing. The selected rows are internally noncrossing by construction. Therefore the block and `P_n^{raw}` form one complete two-family pseudoline grid with a common crossing order.
+
+This common family is more than eight times denser than the fixed global `B_0` family used by the parent force-grid theorem.
+
+---
+
+## 3. Exact co-phase lets one-row defect purification work on every row
+
+Let `S_j` be the full strict-rhombus angular-defect sum on row `tau_j`. The center row of every parent force block is `T_{0,n}`-good, so for the center `i_n` of the selected block,
+
+\[
+S_{i_n}<T_{0,n}C.
+\tag{DG.12}
+\]
+
+Every row in the corridor has exactly the same oriented phase as `tau_{i_n}`. For a fixed complete train column `b`, the oriented crossing defect has the phase form
+
+\[
+\delta_{jb}
+=\beta_b-\alpha_j-{\pi\over3}.
+\tag{DG.13}
+\]
+
+Since all `alpha_j` are equal on the exact-antipodal corridor,
+
+\[
+\boxed{
+\delta_{jb}=\delta_{i_nb}
+}
+\tag{DG.14}
+\]
+
+whenever `b` crosses both rows. Thus a column defect estimate made on the center row automatically holds on **every** row of the corridor.
+
+Set
+
+\[
+\sigma_n
+:=\sqrt{{T_{0,n}C\over D_n}}.
+\tag{DG.15}
+\]
+
+Enlarge `D_n` further if needed so
+
+\[
+\sigma_n\to0.
+\tag{DG.16}
+\]
+
+Delete from `P_n^{raw}` every column with center-row defect greater than `sigma_n`. By (DG.12), fewer than
+
+\[
+{T_{0,n}C\over\sigma_n}
+=\sigma_nD_n
+=o(D_n)
+\tag{DG.17}
+\]
+
+columns are deleted. Call the survivors `P_n`. Then
+
+\[
+\boxed{
+|P_n|>(0.6536-o(1))D_n
+}
+\tag{DG.18}
+\]
+
+and, uniformly over the entire growing rectangle,
+
+\[
+\boxed{
+0<\theta(\tau_j,b)-{\pi\over3}
+\le\sigma_n=o(1)
+}
+\tag{DG.19}
+\]
+
+for every selected row `j` and every `b in P_n`.
+
+So the vanishing-mass force corridor lies in a complete
+
+\[
+(m_n+1)\times(0.6536-o(1))D_n
+\]
+
+near-equilateral train rectangle whose row depth tends to infinity.
+
+---
+
+## 4. The same two column flanks bracket the circumcenter on every row
+
+Fix
+
+\[
+\mu=0.01.
+\tag{DG.20}
+\]
+
+For an oriented row `a`, write
+
+\[
+h_a(x)=\det(u_a,x-o)
+\]
+
+for the row-normal coordinate about the common source circumcenter `o`. Consecutive selected crossing-rhombus centers on a row are separated in this coordinate by more than
+
+\[
+{\sqrt3\over2},
+\tag{DG.21}
+\]
+
+while all crossing centers lie in the source circumdisk of radius
+
+\[
+R_D={D_n\over2}+o(D_n).
+\tag{DG.22}
+\]
+
+Therefore at most
+
+\[
+\left({1.02\over\sqrt3}+o(1)\right)D_n
+\tag{DG.23}
+\]
+
+columns can have crossing center on either prescribed one-sided interval reaching from the circumcenter strip to the corresponding circumdisk boundary.
+
+Since `P_n` has density `0.6536-o(1)`, each row has more than
+
+\[
+q_0D_n-o(D_n)
+\tag{DG.24}
+\]
+
+crossings below `-0.01D_n` and the same number above `+0.01D_n`, where
+
+\[
+\boxed{
+q_0
+:=0.6536-{1.02\over\sqrt3}
+=0.0647027254265\ldots .
+}
+\tag{DG.25}
+\]
+
+The crossing order of `P_n` is common on all rows, and `h_a` is monotone in that order. Hence the same initial and final column blocks work simultaneously on every row. There are common subfamilies
+
+\[
+P_n^-,P_n^+\subset P_n
+\tag{DG.26}
+\]
+
+with
+
+\[
+\boxed{
+|P_n^-|,|P_n^+|>(q_0-o(1))D_n
+}
+\tag{DG.27}
+\]
+
+such that every crossing center from `P_n^-` lies below the `-0.01D_n` row-normal level and every crossing center from `P_n^+` lies above the `+0.01D_n` level, simultaneously for every row in the force corridor.
+
+---
+
+## 5. Combined corridor normal form
+
+Combine this theorem with the preceding vanishing-mass and coercive-kernel results. Along one retained subsequence there is a growing exact-phase corridor with
+
+\[
+m_n=2n+1\to\infty
+\]
+
+such that:
+
+1. every internal interface carries a bilateral exact positive diameter-force pair;
+2. every force ray has transverse component at least `c_H-o(1)=0.453819...-o(1)`;
+3. the force pair is centrally resolved above the `D_n^(3/4)` midpoint scale;
+4. the total original switching KKT mass over **all** internal interfaces tends to zero;
+5. after refining the diagonal, the total compressed two-ray coefficient mass also tends to zero;
+6. the normalized cut-resultant path has diameter tending to zero;
+7. the complete full-support cancellation kernel has dimension `m_n` and normalized Euclidean derivative singular-value floor
+   \[
+   \sqrt2c_H-o(1)=0.641798\ldots-o(1);
+   \]
+8. every row crosses the same `(0.6536-o(1))D_n` internally noncrossing columns;
+9. every one of those row-column rhombi has angle `pi/3+o(1)` uniformly; and
+10. the same two column flanks of density `0.0647027D_n-o(D_n)` bracket the source circumcenter by `+-0.01D_n` on every row.
+
+All ten properties hold in one corridor; no independent diagonalization between the force, stress, coercivity, and grid statements is needed.
+
+---
+
+## 6. Frontier effect
+
+The no-TB1 survivor can no longer place its growing, KKT-light, uniformly coercive force stack in a sparse or drifting train environment. It must realize that stack inside one growing near-equilateral pseudoline rectangle with a positive-linear transverse shore and common metric circumcenter brackets.
+
+The remaining closure problem is correspondingly geometric: show that a source of diameter `D_n` cannot simultaneously support
+
+```text
+an unbounded stack of exact-co-phased O--O rows,
+0.6536D_n common near-60-degree transverse trains,
+common +/-0.01D_n circumcenter flanks,
+a resolved bilateral diameter dipole at every row separator,
+vanishing total switching KKT mass,
+and a dimension-free coercivity gap on the whole cancellation kernel.
+```
+
+No current theorem converts this combined normal form into an exact unit triangle or a strict sub-`D` competitor. In particular, the train-grid metric controls crossing-center locations but does not yet determine where each diameter chord crosses each row strongly enough to force an endpoint contradiction.
+
+**Disposition:** synchronized the vanishing-mass fully loaded force corridor with an almost-full common train neighborhood, uniform `o(1)` rhombus defect, and common positive-density circumcenter flanks. C-II and Level I remain open.

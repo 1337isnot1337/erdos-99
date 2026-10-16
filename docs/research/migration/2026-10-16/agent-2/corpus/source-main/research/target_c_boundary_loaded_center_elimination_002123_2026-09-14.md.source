@@ -1,0 +1,282 @@
+# Erdos Problem #99 - eliminate loaded flat centers from the boundary burden
+
+**Date:** 2026-09-14
+**Target:** C-II, canonical contact-minimal full-core Type-II branch
+**Dependencies:** double-unit-corner / flat-center overlap; loaded-flat-center singleton unloading; certified minimax phase-star atomic gap `g=0.002123`
+**Claim class:** proof-only structural composition awaiting independent audit
+**External literature:** no new import
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The double-unit-corner theorem replaces abstract loaded degree slack by three actual
+source objects: outer two-edge teeth, loaded flat-pentagon centers, and strongly inward
+loaded-to-unloaded unit contacts. The loaded-flat-center term is not a free escape.
+Every loaded flat center consumes two singleton stopped trains, while the minimax
+`g=0.002123` theorem gives a matching lower bound on the non-singleton rhombic train
+population. Subtracting this finite capacity eliminates loaded flat centers from the
+boundary burden.
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},\qquad s:=\sqrt{\Delta_2},\qquad g:=0.002123.
+\]
+
+On a convergent Type-II subsequence write
+
+\[
+t:=\lim{q-k\over D},\qquad
+\delta:=\lim{b-P_F\over D},\qquad
+\kappa:=\lim{k\over D},
+\]
+
+and assume the true force-hull residual satisfies
+
+\[
+R_F=o(D).
+\tag{BE.1}
+\]
+
+Let
+
+- `N_2` be the genuine two-edge outer-tooth count;
+- `L_flat^bd` be the loaded flat-pentagon centers produced by the double-unit-corner
+  boundary theorem; and
+- `E_in` be its distinct strongly inward loaded-to-unloaded unit contacts.
+
+Then
+
+\[
+\boxed{
+\liminf {N_2+|E_{in}|\over D}
+\ge
+B_g(t,\delta,\kappa)
+:=6\pi+7s+{7g\over2}-14t+3\delta+{7\kappa\over2}.
+}
+\tag{BE.2}
+\]
+
+In particular, after dropping the nonnegative detour/topology bonuses,
+
+\[
+\boxed{
+\liminf {N_2+|E_{in}|\over D}
+\ge6\pi+7s+{7g\over2}-14t.
+}
+\tag{BE.3}
+\]
+
+The right side is positive throughout
+
+\[
+\boxed{
+t<t_{BE}:={6\pi+7s+7g/2\over14}
+=1.82308400497046\ldots .}
+\tag{BE.4}
+\]
+
+Thus throughout that interval the loaded-flat-center branch cannot absorb the physical
+boundary burden.
+
+## 1. Update the boundary theorem to the current atomic constant
+
+The double-unit-corner / flat-center overlap theorem is algebraic in the all-train
+constant
+
+\[
+C_g:=2s+g.
+\]
+
+Replacing its former `g=0.0021` input by the certified `g=0.002123` theorem changes no
+geometric step. Its low-`t` conclusion becomes
+
+\[
+\liminf {N_2+|L_{flat}^{bd}|+|E_{in}|\over D}
+\ge
+5\pi+3C_g-{23\over2}t+2\delta+{7\over2}\kappa.
+\tag{BE.5}
+\]
+
+Equivalently,
+
+\[
+\liminf {N_2+|L_{flat}^{bd}|+|E_{in}|\over D}
+\ge
+5\pi+6s+3g-{23\over2}t+2\delta+{7\over2}\kappa.
+\tag{BE.6}
+\]
+
+This inherits exactly the original theorem's bridge, degree-excess, and residual
+payments; only the scalar train constant is updated.
+
+## 2. Singleton capacity of all loaded flat centers
+
+Let `L` denote all loaded flat centers, so
+
+\[
+L_{flat}^{bd}\subseteq L.
+\tag{BE.7}
+\]
+
+The loaded-flat-center singleton theorem gives the finite incidence inequality
+
+\[
+2|L|\le S,
+\tag{BE.8}
+\]
+
+where `S` is the singleton stopped-train population. The exact train split is
+
+\[
+T=T_R+S.
+\tag{BE.9}
+\]
+
+The terminal ledger together with `f<=Q` gives
+
+\[
+\limsup {T\over D}\le5t-2\pi-2\delta,
+\tag{BE.10}
+\]
+
+while the rhombic transfer of the `g=0.002123` minimax theorem gives
+
+\[
+\liminf {T_R\over D}\ge2s+g.
+\tag{BE.11}
+\]
+
+Therefore
+
+\[
+\limsup {S\over D}
+\le5t-2\pi-2\delta-2s-g,
+\tag{BE.12}
+\]
+
+and hence
+
+\[
+\boxed{
+\limsup {|L_{flat}^{bd}|\over D}
+\le
+{5t\over2}-\pi-\delta-s-{g\over2}.
+}
+\tag{BE.13}
+\]
+
+No individual KKT multiplier lower bound is used.
+
+## 3. Subtract the loaded-center escape
+
+Subtract (BE.13) from (BE.6). Since all counts are nonnegative and
+`L_flat^bd` is literally one summand on the left of (BE.6), the liminf/limsup
+combination gives
+
+\[
+\begin{aligned}
+\liminf {N_2+|E_{in}|\over D}
+&\ge
+5\pi+6s+3g-{23\over2}t+2\delta+{7\over2}\kappa\\
+&\quad-
+\left({5t\over2}-\pi-\delta-s-{g\over2}\right)\\
+&=
+6\pi+7s+{7g\over2}-14t+3\delta+{7\over2}\kappa.
+\end{aligned}
+\]
+
+This proves (BE.2).
+
+The key point is structural: the boundary theorem's loaded-flat-center term is paid
+from the same singleton population already constrained by the rhombic train floor. It
+cannot be counted as an independent escape currency.
+
+## 4. Current endpoint constants
+
+The certified minimax/Section-171 endpoint is
+
+\[
+t_{23}={4\over9}(\pi+s)+0.0017327
+=1.82124623797944\ldots .
+\tag{BE.14}
+\]
+
+At `delta=kappa=0`, (BE.2) gives
+
+\[
+\boxed{
+{N_2+|E_{in}|\over D}
+\ge0.0257287378742350\ldots-o(1).
+}
+\tag{BE.15}
+\]
+
+Consequently
+
+\[
+\boxed{
+{1\over D}\max\{N_2,|E_{in}|\}
+\ge0.0128643689371175\ldots-o(1).
+}
+\tag{BE.16}
+\]
+
+Every edge counted by `E_in` is an exact loaded-to-unloaded unit contact with inward
+angle-bisector component greater than `sqrt(3)/2`, inherited from the double-unit
+corner theorem.
+
+The weak-contact-collapse theorem is simultaneous on the same low-`t`, small-residual
+branch. At `t=t_23` it independently gives a distinct set `E_weak` with
+
+\[
+{|E_{weak}|\over D}\ge0.0185385189371175\ldots-o(1),
+\qquad
+\sum_{e\in E_weak}\alpha_e=o(D^2).
+\tag{BE.17}
+\]
+
+Thus every current-endpoint survivor must simultaneously realize
+
+```text
+at least 0.0185385 D distinct weak exact contacts carrying o(D^2) total KKT weight,
+and
+at least 0.0257287 D total outer-teeth / strongly-inward-contact burden.
+```
+
+These populations need not be disjoint, and no disjointness is claimed.
+
+## 5. Frontier effect
+
+The boundary branch has lost its loaded-flat-center escape. The current small-residual
+endpoint is forced into two simultaneous mechanical pathologies:
+
+1. a linear family of exact contacts whose total normalized KKT weight is negligible;
+2. a positive linear population of either genuine outer two-edge teeth or strongly
+   inward loaded-to-unloaded contacts.
+
+This is materially narrower than the previous three-way boundary theorem. It still
+is not a contradiction: no theorem currently says a strongly inward contact must have
+a uniform stress floor, and outer teeth remain compatible with local geometry.
+
+The next closing target is therefore specific. One must couple the weak-contact family
+to the boundary burden, for example by proving that the strongly inward contacts must
+carry non-negligible aggregate stress, or by showing that a linear tooth population
+forces enough weak/transverse train structure to violate mixed rigidity or the
+near-extremal diameter topology.
+
+## 6. Scope audit
+
+- The update from `g=0.0021` to `g=0.002123` is purely algebraic and uses the certified
+  minimax theorem's all-train and rhombic-only conclusions.
+- `L_flat^bd` is a subset of the loaded flat centers counted by the singleton theorem;
+  no identification in the opposite direction is used.
+- The subtraction uses liminf of the total boundary burden and limsup of the loaded
+  center capacity, which is the safe direction.
+- The detour and topology bonuses in (BE.2) are nonnegative and are discarded only for
+  the weaker universal form (BE.3).
+- No KKT weight floor, exact new contact, exact triangle, or strict same-cardinality
+  sub-`D` source is asserted.
+
+C-II and Level I remain open.

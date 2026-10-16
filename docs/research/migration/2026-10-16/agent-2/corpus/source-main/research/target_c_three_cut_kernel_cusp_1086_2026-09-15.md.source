@@ -1,0 +1,510 @@
+# Target C-II — optimized three-cut kernel has at most `1085` exceptional diameter rows
+
+**Date:** 2026-09-15  
+**Status:** proof-only quantitative strengthening of the exact three-cut kernel  
+**Scope:** full-core Type-II branch with `t=(q-k)/D<=1.844`  
+**Dependencies:** exact three-cut kernel/cusp theorem; C65 full actual-diameter visibility correction; audited `0.7404D` weighted smallest-leaf fan; `t<=1.844` retained dominant mass `z>2.2069`; Section-171 residual envelope; exact laminar interval support  
+**Certificate:** `research/verify_target_c_three_cut_kernel_cusp_1086.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The exact three-cut kernel theorem localizes every nonzero first derivative to the union
+of the switching rows at two adjacent backbone boundaries.  Its original extraction
+used the older all-purpose triple-small parameters and left
+
+\[
+\#H_{exc}<42400+o(1).
+\]
+
+Two later inputs make that count obsolete:
+
+1. the `t<=1.844` retained-mass/defect ledger bounds the full actual-diameter edge
+   density by
+   \[
+   {h_H\over D}<1.851259926+o(1),
+   \]
+   so the global interval-switch count satisfies
+   \[
+   \sum_i N_i<3.702519852D+o(D);
+   \]
+2. for a count-focused three-cut extraction, the high-center split can be pushed close
+   to the lower-degree phase boundary.  The resulting good-leaf backbone has density
+   \[
+   p=0.0068224645\ldots,
+   \]
+   almost twice the path density used in the original three-cut theorem.
+
+Combining those two facts with a Pareto union bound gives a three-cut kernel whose
+**entire exceptional actual-diameter set has at most `1085` rows**, while the total
+exceptional KKT mass and the total adjacent phase variation remain `O(D^{-1})`.
+
+More precisely, every sufficiently large survivor in the stated scope contains three
+consecutive smallest-leaf O--O cuts
+
+\[
+\tau_1,\tau_2,\tau_3
+\]
+
+and a nonzero normalized kernel vector
+
+\[
+c=(c_1,c_2,c_3),
+\qquad
+c_1u_1+c_2u_2+c_3u_3=0,
+\qquad
+\max_j|c_j|=1,
+\tag{K1086.1}
+\]
+
+such that, for the exact laminar multishear `theta_j=t c_j`:
+
+\[
+\boxed{|H_{exc}|\le1085,}
+\tag{K1086.2}
+\]
+
+\[
+\boxed{
+\sum_{h\in H_{exc}}\beta_h
+<{10^{14}\over D}+o(D^{-1}),
+}
+\tag{K1086.3}
+\]
+
+and
+
+\[
+\boxed{
+ d_{\mathbb{RP}^1}(u_1,u_2)
+ +d_{\mathbb{RP}^1}(u_2,u_3)
+<{10^{14}\over D}+o(D^{-1}).
+}
+\tag{K1086.4}
+
+Every actual diameter row outside `H_exc` has zero first squared-length derivative
+**exactly**, as in the parent kernel theorem.  C65 makes every actual diameter row
+force-visible, so the exceptional set contains positive-stress rows with both derivative
+signs.  If the three train directions span the plane, the parent implicit-function
+argument integrates the kernel to a genuine finite contact-preserving motion under
+which every nonexceptional diameter row is unchanged exactly.
+
+The constants `10^14` in (K1086.3)--(K1086.4) are intentionally nonoptimized.  They
+only preserve the inverse-`D` scale while the count threshold is optimized.  The
+load-bearing gain is `42400 -> 1085`.
+
+---
+
+## 1. Sharper actual-diameter density on the full `t<=1.844` branch
+
+Use the current matched atomic constant
+
+\[
+C_{707}=2\sqrt{\Delta_2}+0.007707,
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\]
+
+Write
+
+\[
+t={q-k\over D},
+\qquad
+\kappa={k\over D},
+\qquad
+\delta={d_{out}\over D}.
+\]
+
+The Section-171 residual envelope is
+
+\[
+2\delta+{\kappa\over2}+h_{res}
+={9t\over2}-2\pi-C_{707},
+\qquad
+h_{res}\ge0.
+\tag{K1086.5}
+
+The uniform `t<=1.844` retained dominant-occurrence theorem gives
+
+\[
+z>2.2069-o(1),
+\]
+
+and the one-orbit energy floor gives
+
+\[
+\delta>F(2.2069)-o(1),
+\qquad
+F(z)=z-6\sin(z/6).
+\tag{K1086.6}
+
+At the adverse endpoint `t=1.844`, substituting (K1086.6) into (K1086.5) gives the
+already-certified bound
+
+\[
+\boxed{\kappa<0.007259926+o(1).}
+\tag{K1086.7}
+
+The exact topology identity
+
+\[
+q-k=h_H-s_Z,
+\qquad
+s_Z\le k,
+\]
+
+therefore yields
+
+\[
+\boxed{
+{h_H\over D}
+=t+{s_Z\over D}
+\le t+\kappa
+<1.851259926+o(1).
+}
+\tag{K1086.8}
+
+For any laminar backbone path, each actual diameter interval starts and stops at most
+once.  Hence
+
+\[
+\boxed{
+\sum_i N_i
+\le2h_H
+<3.702519852D+o(D).
+}
+\tag{K1086.9}
+
+This is the count budget used below.
+
+---
+
+## 2. Count-optimized good-leaf backbone
+
+Use the audited weighted fan inputs
+
+\[
+{\sum_\tau w_\tau d_\tau\over\sum_\tau w_\tau}
+>0.7404-o(1),
+\tag{K1086.10}
+\]
+
+\[
+{1\over D}\sum_\tau w_\tau>0.0848-o(1),
+\qquad
+N_C<1.063D+o(D).
+\tag{K1086.11}
+
+Choose
+
+\[
+\lambda={1601\over2500}=0.6404
+\tag{K1086.12}
+\]
+
+and call a retained smallest-leaf O--O train good when its center degree exceeds
+`lambda D`.
+
+Weighted thresholding gives retained good weight, hence also distinct good-leaf count
+density,
+
+\[
+\boxed{
+g
+={ (0.7404-\lambda)(0.0848)\over1.063-\lambda}
+=0.0200662565\ldots .
+}
+\tag{K1086.13}
+
+For the high-center split, keep a small positive lower-degree reserve
+
+\[
+d_{low}:={1\over10000}.
+\tag{K1086.14}
+
+Set
+
+\[
+r:={\lambda-d_{low}\over1.063}
+=0.6023518344\ldots .
+\tag{K1086.15}
+
+Thus a good leaf has at least `d_low D-o(D)` center neighbors below any center train in
+the top `r` phase fraction, while its number of neighbors inside that top fraction is
+at least
+
+\[
+\boxed{
+d_{top}
+:=\lambda-(1-r)(1.063)
+=0.2177.
+}
+\tag{K1086.16}
+
+Double-count good-leaf incidences with the top `r` center block.  Some center train
+`gamma` crosses a simple dual-tree path of distinct good leaves of length
+
+\[
+\boxed{
+m>pD-o(D),}
+\tag{K1086.17}
+\]
+
+where
+
+\[
+\boxed{
+p
+:={d_{top}g\over r(1.063)}
+=0.0068224645348\ldots .
+}
+\tag{K1086.18}
+
+This is the same safe high-center/path extraction used in the adjacent count
+optimization; no unweighted fan normalization is introduced.
+
+---
+
+## 3. Preserve the phase budget despite the count optimization
+
+Let `alpha_gamma` be the chosen center phase and `beta_j` the real phase of the `j`th
+leaf on its path.  Put
+
+\[
+q_j:=\beta_j-\alpha_\gamma-\pi/3>0.
+\]
+
+Each path leaf has at least `d_low D-o(D)` center neighbors of phase at most
+`alpha_gamma`.  Every such strict-rhombus crossing pays angular defect at least `q_j`.
+The global strict-rhombus angular-defect bound therefore gives
+
+\[
+\boxed{
+\sum_{j=1}^m q_j
+\le {C_{phase}\over d_{low}}+o(1),
+}
+\tag{K1086.19}
+
+with
+
+\[
+C_{phase}={\pi^2\sqrt3(2+\sqrt3)\over12}.
+\]
+
+Consequently the total two-boundary phase cost over all consecutive triples satisfies
+
+\[
+\sum_{i=1}^{m-2}
+D[(q_i+q_{i+1})+(q_{i+1}+q_{i+2})]
+\le {4C_{phase}\over d_{low}}D+o(D).
+\tag{K1086.20}
+
+The constant is large because `d_low=10^-4`; it is still finite and therefore retains
+the required inverse-`D` phase scale after the Pareto extraction.
+
+---
+
+## 4. Two-boundary count, KKT, and phase Pareto extraction
+
+For one internal boundary let
+
+\[
+N_i:=\#\{h:\varepsilon_{h,i+1}\ne\varepsilon_{hi}\},
+\]
+
+and
+
+\[
+B_i:=\sum_h\beta_h
+|\varepsilon_{h,i+1}-\varepsilon_{hi}|.
+\]
+
+The exact interval variation gives
+
+\[
+\sum_iB_i\le2.
+\tag{K1086.21}
+
+For a triple start `i`, define
+
+\[
+\mathcal N_i:=N_i+N_{i+1},
+\]
+
+\[
+\mathcal B_i:=D(B_i+B_{i+1}),
+\]
+
+and
+
+\[
+\mathcal P_i:=D[(q_i+q_{i+1})+(q_{i+1}+q_{i+2})].
+\tag{K1086.22}
+
+Each internal boundary occurs in at most two consecutive triples.  Therefore
+
+\[
+\sum_i\mathcal N_i
+\le2\sum_jN_j
+<7.405039704D+o(D),
+\tag{K1086.23}
+\]
+
+\[
+\sum_i\mathcal B_i
+\le4D,
+\tag{K1086.24}
+\]
+
+and (K1086.20) controls the phase sum.
+
+Take the fixed thresholds
+
+\[
+N_*:=1086,
+\qquad
+L:=10^{14}.
+\tag{K1086.25}
+
+The density of triple starts violating `mathcal N_i<N_*` is at most
+
+\[
+{2(3.702519852)\over1086}+o(1)
+=0.006818637\ldots+o(1).
+\tag{K1086.26}
+
+The density violating `mathcal B_i<L` is at most
+
+\[
+{4\over L},
+\tag{K1086.27}
+
+and the density violating `mathcal P_i<L` is at most
+
+\[
+{4C_{phase}\over d_{low}L}+o(1).
+\tag{K1086.28}
+
+The exact companion certificate, using the standard outward enclosures for `pi`,
+`sqrt(3)`, and `F(2.2069)`, proves
+
+\[
+\boxed{
+p-
+{2(3.702519852)\over1086}
+-{4\over10^{14}}
+-{4C_{phase}\over10^{-4}10^{14}}
+>3.82\times10^{-6}.
+}
+\tag{K1086.29}
+
+Hence at least one consecutive triple is good for all three thresholds.
+
+For that triple,
+
+\[
+\mathcal N_i<1086+o(1).
+\]
+
+Since `mathcal N_i` is integer, sufficiently far along the survivor sequence
+
+\[
+\boxed{\mathcal N_i\le1085.}
+\tag{K1086.30}
+
+Also
+
+\[
+\boxed{B_i+B_{i+1}<{10^{14}\over D}+o(D^{-1}),}
+\tag{K1086.31}
+\]
+
+and
+
+\[
+\boxed{
+(q_i+q_{i+1})+(q_{i+1}+q_{i+2})
+<{10^{14}\over D}+o(D^{-1}).
+}
+\tag{K1086.32}
+
+---
+
+## 5. Insert the optimized triple into the exact kernel theorem
+
+Relabel the selected triple as `tau_1,tau_2,tau_3`.  The exact three-cut theorem chooses
+`c!=0` with
+
+\[
+c_1u_1+c_2u_2+c_3u_3=0.
+\]
+
+By interval support, every diameter row with nonzero first derivative belongs to
+
+\[
+H_{exc}:=H_{sw,1}\cup H_{sw,2}.
+\]
+
+Therefore
+
+\[
+|H_{exc}|
+\le N_i+N_{i+1}
+\le1085,
+\]
+
+proving (K1086.2).
+
+A row in the union contributes its positive KKT multiplier at least once to
+`B_i+B_{i+1}`, so
+
+\[
+\sum_{h\in H_{exc}}\beta_h
+\le B_i+B_{i+1},
+\]
+
+which gives (K1086.3).
+
+The two adjacent projective leaf gaps are bounded by `q_i+q_{i+1}` and
+`q_{i+1}+q_{i+2}`, proving (K1086.4).
+
+All exact conclusions of the parent kernel theorem now apply unchanged:
+
+- nonexceptional diameter rows have exactly zero first derivative;
+- KKT stationarity is supported entirely on `H_exc`;
+- mixed rigidity makes the exceptional cusp nontrivial;
+- canonical C65 forces actual positive-stress exceptional rows of both derivative
+  signs;
+- in the nonparallel case, the implicit-function kernel integrates to an exact finite
+  motion leaving every nonexceptional diameter row unchanged exactly.
+
+The later adjacent-strip theorems add further structure boundary-by-boundary: each of
+the two switching graphs is an ordered caterpillar forest, and each nonzero adjacent
+KKT layer reaction has a one/two-diameter conic certificate.  Those facts do not by
+themselves remove the three-cut sign cusp, but they now act on a union of at most
+`1085` actual rows rather than `42400+o(1)`.
+
+---
+
+## 6. Frontier
+
+The live three-cut obstruction is now
+
+```text
+three consecutive smallest-leaf O-O cuts
++ exact planar shear kernel c1 u1 + c2 u2 + c3 u3 = 0
++ <=1085 actual exceptional diameter rows
++ total exceptional beta mass O(1/D)
++ total adjacent phase variation O(1/D)
++ every nonexceptional diameter row first-order silent exactly
++ C65-positive exceptional rows of both derivative signs
++ each adjacent switching graph has prefix/hub/suffix caterpillar order
++ each nonzero adjacent KKT reaction is generated by <=2 switching diameter bars.
+```
+
+This is still not a diameter-decreasing motion.  Small total KKT mass does not weaken an
+individual max constraint, and the positive-stress sign cusp remains load-bearing.
+The remaining problem is finite/order-geometric: combine the two adjacent ordered
+interfaces and their sparse KKT reactions, or construct a finite exchange that defeats
+the residual `<=1085`-row cusp.
+
+**Disposition:** proved proof-only quantitative strengthening of the exact three-cut
+kernel.  C-II and Level I remain open.

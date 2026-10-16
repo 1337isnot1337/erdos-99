@@ -1,0 +1,382 @@
+# Target C-II — failure of a linear TB1 population forces a growing exact-phase block with growing many wide force diamonds
+
+**Date:** 2026-09-17
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed
+**Scope:** unbounded canonical high-`t` survivor sequences through `t=(q-k)/D<=1.8687`
+**Dependencies:** linear one-sided rectangle shore and joint-cost budget; non-antipodal TB2 localization; C67 direction separation; exact-antipodal exact force pairs; force-carrying robust fork; phase-block force monotonicity
+**Certificate:** `research/verify_target_c_high_t_growing_exact_phase_force_block_t18687.py`
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The fixed-threshold density theorems leave a choice between strong TB1 interfaces and exact-antipodal interfaces.  By allowing the local cost threshold to grow slowly, one can sharpen the second branch qualitatively: unless non-antipodal TB1 interfaces themselves occur at positive linear density, **almost every interface on a linear one-sided shore is exactly antipodal**.  The exact interfaces then form only `o(D)` runs, so one run must grow without bound.
+
+The force-carrying robust theorem adds a second conclusion.  On that same branch, a fixed positive density of exact-antipodal interfaces carries fixed-angle exact force diamonds.  Since there are only `o(D)` exact-phase runs, one growing exact-phase run contains a growing number of those wide force diamonds.
+
+### Theorem GF — growing exact-phase force block dichotomy
+
+Let an unbounded canonical survivor sequence remain in the high-`t` branch through `t<=1.8687`.  After passage to a subsequence, at least one of the following holds.
+
+#### GF-A: linear non-antipodal TB1 obstruction
+
+There are constants `epsilon>0` and `rho>0`, independent of `D`, such that at least
+
+\[
+\epsilon D
+\tag{GF.1}
+\]
+
+one-sided interfaces have a TB1 switching diameter bar lying at least `rho` from both local dual-cone rays.  Hence every such bar has a fixed local opening margin
+
+\[
+\boxed{
+ n_i\cdot w\ge D\sin\rho
+}
+\tag{GF.2}
+
+for every unit local opening direction `w`.
+
+#### GF-B: growing exact-phase force block
+
+There is a consecutive block of row interfaces
+
+\[
+I_D^{\rm block}=[p_D,q_D]
+\tag{GF.3}
+\]
+
+whose length tends to infinity,
+
+\[
+\boxed{q_D-p_D+1\longrightarrow\infty,}
+\tag{GF.4}
+\]
+
+such that every internal interface is exactly antipodal.  Equivalently all row vectors in the block are exactly equal:
+
+\[
+\boxed{
+u_{p_D}=u_{p_D+1}=\cdots=u_{q_D+1}=:v_D.}
+\tag{GF.5}
+
+Moreover, with the fixed angle
+
+\[
+\boxed{
+\rho_0={c_0\over12},
+\qquad
+c_0={113\over20{,}000{,}000},
+}
+\tag{GF.6}
+
+this single exact-phase block contains a number `W_D` of `rho_0`-wide **exact force-carrying** antipodal interfaces satisfying
+
+\[
+\boxed{W_D\longrightarrow\infty.}
+\tag{GF.7}
+
+At every one of those `W_D` interfaces two switching actual diameter bars:
+
+1. cross at projective angle at least `rho_0`;
+2. positively generate the exact strip reaction;
+3. form a four-endpoint diamond containing one common radius-`Theta(D)` disk about the source circumcenter;
+4. have diagonal intersection in one `O(D^(3/4))` central ball.
+
+Across the entire exact-phase block the cut-resultant magnitudes are strictly monotone and the axial reactions all point in the same ordinary direction:
+
+\[
+\boxed{
+\sum_{i=p_D}^{q_D}|G_i|
+=|A_{p_D}-A_{q_D+1}|<D.
+}
+\tag{GF.8}
+
+Thus the non-TB1 branch contains a growing ordered plateau with growing many fixed-angle, central, force-carrying diameter dipoles rather than a collection of isolated exact-antipodal defects.
+
+---
+
+## 1. Use a slowly growing local-complexity threshold
+
+Retain the same consecutive one-sided interface shore `I_D` from the linear high-`t` rectangle.  It satisfies
+
+\[
+|I_D|>{c\over2}D-o(D),
+\qquad
+c={113\over5{,}000{,}000}.
+\tag{GF.9}
+\]
+
+The joint costs obey
+
+\[
+\sum_iJ_i<CcD+o(D),
+\qquad C=1{,}109{,}000.
+\tag{GF.10}
+\]
+
+Set
+
+\[
+M_D=\sqrt D
+\tag{GF.11}
+\]
+
+and call an interface **slow-good** when
+
+\[
+J_i<CM_D=C\sqrt D.
+\tag{GF.12}
+\]
+
+If `B_D` is the slow-bad set, then
+
+\[
+C\sqrt D\,|B_D|
+\le CcD+o(D),
+\]
+
+so
+
+\[
+\boxed{|B_D|=o(D).}
+\tag{GF.13}
+
+Indeed the displayed bound is `O(sqrt D)+o(D)` and therefore sublinear.
+
+Every slow-good interface satisfies
+
+\[
+N_i,L_i<C\sqrt D,
+\qquad
+B_i<{C\over\sqrt D},
+\qquad
+S_i+S_{i+1}<C\sqrt D.
+\tag{GF.14}
+
+The threshold grows, but remains `o(D)`.
+
+---
+
+## 2. Slow-good genuine TB2 interfaces are still sublinear
+
+For a slow-good non-antipodal interface, the same common-column phase estimate gives
+
+\[
+\varepsilon_i
+\le {C\sqrt D\over0.1567D-o(D)}
+=O(D^{-1/2}).
+\tag{GF.15}
+
+A genuine minimal TB2 certificate therefore has both selected actual diameter directions within `O(D^-1/2)` of the projective normal to the row direction.  All row directions already lie in one shrinking projective window `omega_D=o(1)`.  Hence all actual diameter directions selected from slow-good TB2 certificates lie in one common projective interval of width
+
+\[
+\omega_D+O(D^{-1/2})=o(1).
+\tag{GF.16}
+\]
+
+Switching supports at distinct interfaces are disjoint, so all selected certificate bars are distinct.  C67 separates distinct actual diameter directions by at least `1/D`.  Therefore an `o(1)` projective interval contains only `o(D)` such bars, and
+
+\[
+\boxed{|T_D^{\rm slow}|=o(D).}
+\tag{GF.17}
+
+---
+
+## 3. A linear slow-good TB1 population automatically gives GF-A
+
+Let `U_D^{slow}` be the slow-good non-antipodal TB1 interfaces, with one chosen TB1 bar per interface.
+
+Suppose along a subsequence
+
+\[
+|U_D^{slow}|\ge\eta D
+\tag{GF.18}
+\]
+
+for some fixed `eta>0`.  Choose
+
+\[
+\rho={\eta\over16}.
+\tag{GF.19}
+\]
+
+For sufficiently large `D`, the shrinking row phase window has width below `rho`.  The projective `2rho`-ball around the common row phase has length `4rho`; C67 and switching-support disjointness show that at most
+
+\[
+4\rho D+O(1)
+={\eta\over4}D+O(1)
+\tag{GF.20}
+
+chosen TB1 bars lie there.
+
+Every remaining chosen TB1 bar is at least `rho` from both local dual-cone rays, exactly as in the strong-TB1 theorem.  Hence at least
+
+\[
+{3\eta\over4}D-o(D)
+\tag{GF.21}
+
+interfaces satisfy (GF.2).  This is GF-A.
+
+Consequently, after passing to a subsequence, if GF-A does **not** occur then necessarily
+
+\[
+\boxed{|U_D^{slow}|=o(D).}
+\tag{GF.22}
+
+---
+
+## 4. Without GF-A, all but `o(D)` shore interfaces are exactly antipodal
+
+The slow-good interfaces partition into
+
+\[
+E_D^{slow}\sqcup U_D^{slow}\sqcup T_D^{slow},
+\tag{GF.23}
+\]
+
+where `E_D^{slow}` is exact-antipodal.  Combine (GF.13), (GF.17), and (GF.22):
+
+\[
+|I_D\setminus E_D^{slow}|
+\le |B_D|+|U_D^{slow}|+|T_D^{slow}|
+=o(D).
+\tag{GF.24}
+
+Since `I_D` itself has positive linear length, this gives
+
+\[
+\boxed{
+|E_D^{slow}|>{c\over2}D-o(D).
+}
+\tag{GF.25}
+
+Thus exact antipodality occupies asymptotically all of the selected one-sided shore, except a sublinear separator set.
+
+Let `R_D` be the number of maximal consecutive exact-antipodal runs.  Each pair of distinct runs requires at least one non-exact separator, so
+
+\[
+R_D\le |I_D\setminus E_D^{slow}|+1=o(D).
+\tag{GF.26}
+
+The longest run therefore has length at least
+
+\[
+{|E_D^{slow}|\over R_D},
+\]
+
+which tends to infinity because the numerator is `Omega(D)` while `R_D=o(D)`.  This proves (GF.4)--(GF.5).
+
+---
+
+## 5. A fixed linear population of wide exact force diamonds remains
+
+Now fix the absolute angle
+
+\[
+\rho_0={c_0\over12}.
+\]
+
+The force-carrying robust fork gives
+
+\[
+|E_D^{force}(\rho_0)|+|S_D(\rho_0)|
+>{c_0\over2}D-o(D),
+\tag{GF.27}
+\]
+
+because `c_0-6rho_0=c_0/2`.
+
+The strong family `S_D(rho_0)` is a subset of the non-antipodal TB1 interfaces.  In the no-GF-A branch those are sublinear by (GF.22), so
+
+\[
+\boxed{
+|E_D^{force}(\rho_0)|>{c_0\over2}D-o(D).
+}
+\tag{GF.28}
+
+For sufficiently large `D`, every original fixed-threshold good interface is also slow-good because `4C<C sqrt D`.  Hence all interfaces counted in (GF.28) belong to `E_D^{slow}` and are distributed among its `R_D=o(D)` exact-phase runs.
+
+By pigeonhole, one exact-phase run contains at least
+
+\[
+W_D
+\ge {|E_D^{force}(\rho_0)|\over R_D}
+\tag{GF.29}
+\]
+
+wide exact force interfaces.  Equations (GF.26) and (GF.28) imply
+
+\[
+\boxed{W_D\to\infty.}
+\]
+
+Choose a run realizing this maximum.  This is the block in GF-B.
+
+---
+
+## 6. Force geometry inside the growing block
+
+On the chosen run all coherent real row directions equal one vector `v_D`.  Write
+
+\[
+F_j=A_jv_D.
+\tag{GF.30}
+\]
+
+The global one-sided switch functional gives
+
+\[
+\phi(F_j-F_{j+1})>0
+\tag{GF.31}
+\]
+
+at every internal interface.  Therefore all scalar differences `A_j-A_{j+1}` have the same strict sign.  The sequence `A_j` is strictly monotone and all reactions point in one ordinary direction.
+
+Telescoping gives
+
+\[
+\sum|G_j|
+=\left|\sum G_j\right|
+=|F_{p_D}-F_{q_D+1}|
+=|A_{p_D}-A_{q_D+1}|<D,
+\]
+
+which is (GF.8).
+
+At each of the `W_D` wide interfaces, the force-carrying robust theorem chooses two actual switching diameter bars satisfying
+
+\[
+G_j=D(\lambda_j^-d_j^-+\lambda_j^+d_j^+),
+\qquad
+\lambda_j^\pm>0,
+\tag{GF.32}
+\]
+
+with projective gap at least `rho_0`.  The pair is vertex-disjoint and crossing for large `D`.  The central-diamond theorem then gives one common macroscopic central disk and one common `O(D^(3/4))` crossing zone for all these tagged pairs.
+
+Thus the growing exact phase block contains a growing number of geometrically robust exact KKT dipoles, all tagged in order along one phase-constant shore and all carrying reactions in the same ordinary direction.
+
+---
+
+## 7. Frontier effect
+
+This dichotomy removes a remaining form of fragmentation from the high-`t` branch.
+
+```text
+Either:
+  non-antipodal TB1 obstructions survive at positive linear density
+  with one fixed absolute interior-angle margin;
+
+or:
+  one consecutive exact-phase block has length -> infinity,
+  its KKT resultant magnitudes are strictly monotone,
+  total axial reaction variation is < D,
+  and the same block contains W_D -> infinity
+  fixed-angle exact-force central diameter diamonds.
+```
+
+The second branch is stronger than merely having linearly many exact-antipodal interfaces: the interfaces coalesce into a single growing exact phase plateau carrying a growing ordered force braid.
+
+The block remains compatible with the known second-order exact-phase multishear cusp, so no deformation closure is claimed.  The next concrete target is to combine its exact interface order and common force axis with the common ordered near-triangular transverse train family.  Any countermodel must now realize a growing sequence of force-carrying central dipoles inside one exactly phase-constant train plateau.
+
+No C-II or Level-I closure is claimed.
+
+**Disposition:** proved a subsequential dichotomy between a positive-density fixed-margin TB1 population and a growing exact-phase block containing a growing number of fixed-angle exact-force central diamonds with monotone collinear KKT reactions. C-II and Level I remain open.

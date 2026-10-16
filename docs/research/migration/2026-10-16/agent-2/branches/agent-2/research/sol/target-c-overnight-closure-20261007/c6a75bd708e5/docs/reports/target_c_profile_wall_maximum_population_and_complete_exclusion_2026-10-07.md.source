@@ -1,0 +1,300 @@
+<!-- theorem-state: {"artifact_id":"ART-14B6CE2501FD","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: profile-flexible maximum population and complete fixed-wall exclusion
+
+Date: 2026-10-07. Authority: main
+`4b0b982451effe3e8183edfce349ce4c25f9a3bb`, audit.74.
+**Proved candidate awaiting independent audit.** No self-promotion.
+
+Provenance: Worker 1's immutable tip
+`bf288c82e8a62466d5580025c94e750a177e63e2` contains
+`target_c_sorted_rate_packet_classification_2026-10-06.md`. Its finite
+classification is unreviewed. This report independently rederives the
+full-chart implication needed here, fixes its scopes explicitly, and
+extends the proof from arithmetic rates to any fixed distinct symmetric
+profile. The new one-deficit sector-peeling theorem is a separate input.
+No central-vacancy classification is needed or asserted.
+
+## 1. Statement and terminal relevance
+
+Fix M>=3 and strictly decreasing symmetric real rates
+a_0>...>a_(M-1), a_(M-1-h)=-a_h. Construct the six-direction wall by
+the sorted ascending unit factors exp(i*a_h*theta) on each side. Put
+N=3M^2-3M+1. For every sufficiently small theta>0, **every** N-point
+unit-separated interior cloud in this wall is exactly a sorting packet
+for a permutation of these rates, after relabeling. In particular it
+contains an actual unit equilateral triangle.
+
+Combining this with the new one-deficit packet excludes the entire
+specified wall class in a canonical triangle-free source for each fixed
+M>=4 and each fixed profile, at sufficiently small positive curvature.
+For these fixed profiles the finite Oler upper count is z<=N because its
+continuous right side tends to N from within the interval (N-1,N+1).
+The perimeter includes all 6M old wall labels.
+
+`finite maximum-population classification + all-M one-deficit exchange
+-> every allowed interior population excluded -> complete fixed-wall-class
+exclusion`.
+
+This is not an arbitrary macroscopic-container extraction theorem. No
+onset uniform in growing M or profiles is supplied. No globally optimal
+triangle-free family is constructed. C-II and Level I remain open.
+
+## 2. Localization and O(theta) displacement, with no source deletion
+
+The wall tends to the regular hexagon H_M. Adding its 6M wall vertices
+to the N interior points attains the limiting Oler count
+3M^2+3M+1. The Oler equality argument audited in audit.74 depends only
+on this flat limiting wall and this count, not on arithmetic spacing.
+Its reliable equilateral-triangulation equality statement fixes the
+complete lattice chart P_M; hence the interior limit is P_(M-1).
+This imports only the independently promoted equality implication, and
+explicitly repeats its applicability for the present profiles.
+
+Label the old interior by that limit. Its displacement delta from the
+flat chart is O(theta). To prove this rate, suppose |delta|/theta tends
+to infinity along a subsequence. Normalize delta by its Euclidean norm.
+All wall shifts are O(theta); after division they disappear. The limiting
+unit-pair inequalities then give a nonzero feasible infinitesimal motion
+of the full flat triangular interior with its complete wall fixed.
+
+That static cone is zero: weight one on every flat unit edge involving
+a moving site equilibrates at every moving site (all its six neighbours
+are retained in the complete chart). Its positive weighted sum forces
+all first rows to be equalities. Pinned triangular rigidity, proved by
+propagating rigidity across the connected elementary-triangle complex
+from fixed wall triangles, forces the displacement to be zero. This is
+a theorem about the auxiliary complete chart, not full-source ZR/ZF.
+It proves the required contradiction and the O(theta) rate.
+
+Thus every sequence of feasible clouds has a subsequence
+delta=theta*d+o(theta). The following analysis classifies every such d.
+
+## 3. The complete first-order polytope
+
+Write u=(1,0), v=(1/2,sqrt(3)/2), c=sqrt(3)/2. On ring r every ring
+edge is a strong zero first row. So is every radial unit edge along the
+six corner chains, including the corner guards at radius M. These
+equalities follow from the nested flat positive stresses: the ring-r
+stress has weight one on that ring and the six outward radial chains.
+All its pinned endpoints are corners whose first wall shifts vanish.
+Each of its lower first rows is nonnegative, so each is zero. Use these
+stresses separately, not as additive energy currency.
+
+The center velocity is zero. Corner chain constraints make each axis
+velocity tangential; the straight ring sides make its tangential
+coefficient the same on the six corners of each ring. Write
+
+`d(r*e_k)=alpha_r*J(e_k)`, alpha_0=alpha_M=0,
+`t_h=alpha_(h+1)-alpha_h`, sum t_h=0.
+
+At sector site p=(r-j)u+jv, the ring equality gives
+
+`d(p) dot u=c*s_(r,j)`,
+`d(p) dot v=c*(s_(r,j)+alpha_r)`.
+
+The axis values are s_(r,0)=0 and s_(r,r)=-alpha_r. The two other
+flat nearest-neighbour lower rows are exactly
+
+`s_(r,j)>=s_(r-1,j)`,
+`s_(r,j)>=s_(r-1,j-1)-t_(r-1)`.
+
+Let B_j be the sum of the j smallest prescribed rates. The sorted
+outer wall has first boundary value s_(M,j)=-B_j. Every j-element
+subset I of the M radial increments can be chosen by a path from the
+center to this boundary. The two recurrences imply
+
+`sum_(h in I) t_h >= B_j`, for every |I|=j.
+
+These subset inequalities, together with sum t=0, say exactly that t
+belongs to the convex hull of the permutations of a. One direct proof
+sorts the coefficients of any linear functional and uses Abel summation:
+the subset bounds, including complementary subsets, bound it by its
+rearrangement maximum on a permutation of a. Separation gives inclusion
+in that convex hull. Conversely the prefix choice
+
+`s_(r,j)=-sum of the j smallest (t_0,...,t_(r-1))`
+
+satisfies both recurrences at interior layers. At the outer layer use
+the prescribed value -B_j; the subset bounds ensure both entering
+inequalities. Rotation makes the axis definitions agree. Thus the
+projected first-order polytope is exactly this permutahedron.
+
+The full first-order polytope P in moving Cartesian coordinates is
+bounded: its recession cone is precisely the zero static cone from
+Section 2. Its affine hull L is the strong-row zero space. Every other
+row is strictly positive at some sorting permutation (place the new
+rate above or below the competing prefix rate). Averaging all permutation
+fields is strictly positive on every weak row. Therefore there is no
+unmentioned universal equality restricting L.
+
+## 4. One energy sum forces a vertex and its complete field
+
+Use just the central six-chain positive stress. Its exact finite
+weighted unit inequalities cancel every moving linear term. The six
+outer corners are L(theta)*e_k, where
+
+`L(theta)=sum cos(a_h*theta)=M-(theta^2/2)*sum a_h^2+O(theta^4)`.
+
+Their linear contribution is 12*(L(theta)-M). Consequently
+
+`sum_chain |delta_p-delta_q|^2 >= 12*(M-L(theta))`.
+
+Divide by theta^2. The chain energy is 6*sum t_h^2, so
+sum t_h^2>=sum a_h^2. On the permutahedron the reverse inequality
+holds by convexity of squared norm. Strict convexity shows equality
+occurs only at a permutation of a. No C2 expansion of the old cloud
+is assumed; theta*d+o(theta) suffices.
+
+The complete field is unique over a permutation t*. The recurrences
+give the prefix-smallest formula as a lower bound on s_(r,j). For its
+upper bound choose a threshold between the jth and (j+1)th entries of
+the prefix. Extend to the outer wall by selecting exactly the suffix
+rates below that threshold. The selected prefix and suffix together
+are the smallest j+k full rates. The outer inequality is an equality
+at a permutation, giving exactly the matching upper bound. Axis cases
+j=0,r have the already fixed values. Hence every sector and coordinate
+is forced. Only the finitely many permutation fields survive.
+
+## 5. The finite sorting packet and its active rows
+
+For such a permutation t*, put z_h=exp(i*t_h*theta), S_r=sum_(h<r)z_h,
+and U_(r,j)=the sum of the j smallest-rate factors in that prefix. Define
+
+`Q_(r,j)(theta)=S_r*u+U_(r,j)*(v-u)`.
+
+Rotate through six sectors, and retain the center. At radius M this
+is the prescribed wall. Ring differences are unit factors times v-u.
+For each successive layer one of the other two neighbour differences
+is a unit factor times u or v; the other has squared length
+2-2*cos(pi/3+|t_new-t_old|*theta)>1. All nonnearest pairs have strict
+flat gaps. This proves exact feasibility and identifies *all* active
+rows J for sufficiently small theta. J is exactly the set of rows
+whose first-order slack at d* is zero.
+
+The limiting moving-coordinate matrix R_0 on J has full column rank.
+If x were in its kernel, d*+epsilon*x and d*-epsilon*x would both lie
+in P for sufficiently small epsilon, since all inactive weak rows have
+strict slack. But the central energy gradient g_0=grad E_0(d*) has d*
+as its unique maximizer on P: in rate coordinates its value is
+12*sum t*_h*t_h, maximized uniquely at t=t*, and Section 4 forces the
+fiber over t*. This contradiction proves full rank. It is an exact
+argument for every fixed M and permutation, not a generic rank claim.
+
+## 6. Positive stress continuation and local isolation
+
+Because d* uniquely maximizes g_0 on the polytope, g_0 restricted to L
+lies in the relative interior of its normal cone at d*. This relative
+interior is open in L*: P is full dimensional in L by Section 3.
+
+Start with the central chain stress and add sufficiently small positive
+multiples of every other nested stress. Denote their sum by lambda_0.
+It is positive on every strong row and zero on every weak row, with
+R_0^T*lambda_0=0. Its energy gradient g remains in that same normal-cone
+interior because the added energies perturb g_0 continuously. This use
+of stresses constructs positive coefficients; it does not sum energy
+lower bounds.
+
+Let R_theta=R_0+theta*R_1+O(theta^2) be the actual sorting contact matrix.
+The gradient identity is g=2*R_1^T*lambda_0 in moving coordinates.
+The normal-cone formula for lower inequalities is
+`g=-R_0^T*mu`, modulo strong-row normals, with nonnegative weak mu.
+Interior membership allows coefficients positive on *every* active weak
+row: subtract a sufficiently small positive sum of those outward normals
+from g and represent the remainder in the cone. Strong coefficients
+may have either sign because they represent the affine-hull normal.
+Consequently there is lambda_1, strictly positive on every active weak
+row, satisfying
+
+`R_0^T*lambda_1=-R_1^T*lambda_0`.
+
+Since R_0 has full column rank, R_theta^T has a bounded analytic right
+inverse at theta=0. Correct the O(theta^2) residual of
+lambda_0+theta*lambda_1 using that inverse. The resulting exact pinned
+stress lambda_theta satisfies R_theta^T*lambda_theta=0, is positive
+on every contact, is bounded above, and has every coefficient at least
+c_1*theta for small theta. Strong coefficients remain positive by their
+zeroth-order margins; weak coefficients do so by their first-order
+margins. All constants are local to this fixed M, profile and permutation.
+
+For any other feasible placement at displacement x from this sorting
+packet, each active unit row obeys
+`(R_theta*x)_e>=-|x_p-x_q|^2/2>=-C*|x|^2`.
+The weighted sum of the linear rows is exactly zero. Positivity and
+the c_1*theta lower bound bound each row above by C'*|x|^2/theta.
+Uniform full column rank then gives
+
+`|x| <= C''*|x|^2/theta`.
+
+Therefore a distinct feasible placement must be at least c_2*theta
+away. This proves local isolation at the needed scale; ordinary
+qualitative isolation alone would not complete the sequence argument.
+
+## 7. Exhausting the maximum population and the fixed wall class
+
+If finite classification failed for arbitrarily small theta, Sections
+2--4 would give a countersequence with a subsequence whose normalized
+displacement tends to one permutation field d*. Its corresponding
+sorting packet has the same first field, so their difference is o(theta).
+Section 6 forces exact equality for all sufficiently late members, a
+contradiction. This proves the classification for every sufficiently
+small theta, with no selection of a favorable old cloud.
+
+Every sorting packet contains the center and the first ring
+z_0*e_k, k=0,...,5. The center and any two adjacent first-ring sites
+form an exact unit triangle. They are all interior for M>=2. Thus
+the complete N-point old cloud is incompatible with triangle-freeness.
+
+For M>=4, combine this z=N exclusion with
+`target_c_all_M_one_deficit_sector_peeling_2026-10-07.md`, which pays
+all z<=N-1 without classifying the source. The old wall plus every
+old interior label enters the Oler count; the canonical one-deletion
+shield retains every exterior isolate in the replacement branch.
+All interior populations are excluded for the stated fixed wall family.
+
+Remaining terminal obligations are still substantial: this wall must
+be extracted from or replaced by a packet in an arbitrary canonical
+macroscopic chamber, with control as M grows; paired exterior caps
+need actual exact capacity or retained-core motion; full-core trains
+need a source-realized finite move passing all lower and upper blockers.
+An exact, identical six-side profile is not inferred from a chamber's
+area, near-disk shape, boundary complexity or local curvature.
+
+## 8. An explicit descending-profile first correction
+
+There is an additional direct check on the load-bearing stress bridge.
+For the descending profile, start with the principal radial-chain stress
+lambda_0 alone. Use Cartesian first velocities, but write
+lambda_1=sqrt(3)*kappa. Set kappa=0 on every ring edge. On a radial
+axis edge from r to r+1 set kappa=(a_r-a_0)/3. On a unit diagonal
+chain (a,b) to (a,b+1), a>=1, set
+
+`kappa=(2/3)*(a_(a-1)-a_a)>0`,
+
+and rotate this assignment through all sectors. At offaxis sites the
+two chain coefficients are equal and their limiting vectors opposite;
+the force is zero. At axis r the diagonal coefficient contributes
+(a_(r-1)-a_r)*Ju, while the radial coefficient difference cancels its
+u-component. This is exactly the required negative first force of
+the principal chain stress. At the center all coefficients are zero.
+Thus R_0^T*lambda_1=-R_1^T*lambda_0 holds for every M and descending
+strict profile, with explicitly positive coefficients on every weak row.
+
+Adding sufficiently small positive nested-ring stresses makes lambda_0
+positive on all strong rows. Full rank permits a first-correction change
+of size O(eta), which preserves the explicit weak signs. This gives a
+direct descending-packet stress continuation independently of the
+normal-cone representation. Its weak coefficient lower bound is
+(2/sqrt(3))*min_h(a_h-a_(h+1)). No uniform bound on the rank inverse,
+perturbation size or finite isolation onset is inferred from this alone.
+
+An independent exact certificate also checks first stress corrections
+for 14 arithmetic/nonarithmetic profile permutations at M=3,...,6.
+Run `python3 research/verify_target_c_profile_first_stress_correction_2026_10_07.py`.
+It reconstructs the complete limiting active row set and both force
+identities using rational arithmetic, checks positive weak coefficients,
+and checks a full modular minor. The input coefficients were discovered
+with floating optimization, rounded to denominator 3000000, and projected
+onto the exact force equations; all final signs and identities are exact.
+The verifier has no solver tolerance or numerical optimization dependency.
+Its finite certificate does not replace the all-permutation analytic
+argument or prove finite stress continuation by itself.

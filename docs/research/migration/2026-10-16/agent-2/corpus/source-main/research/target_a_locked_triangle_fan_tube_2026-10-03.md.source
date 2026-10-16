@@ -1,0 +1,87 @@
+# Target A: locked-triangle fan tube bound
+
+Date: 2026-10-03
+Base main: 6c45398dcfe69e3b3bb322920a2911468dfe0573
+Status: proved candidate; noncanonical. Target A and Level I remain open.
+
+This note is disjoint from the active Target B four-bar route and the Worker-B
+nine-no-root k=6 finite-support route.
+
+It uses the exact one-ended unit-tube theorem proved and certified in commit
+5a53f2b929d38a8b97f927be990d9be313f4cf57: for a unit segment e=[p,q] in a unit
+triangular lattice, the lattice sites y with dist(y,e)<1 and |y-p|>=1 number at most
+five.
+
+The integer verifier for that theorem was rerun in this run and reproduced its exact
+finite census: 19 sites in the radius-two lattice ball, 54 anchored six-point
+candidates, and three symmetry orbits. The three orbit exclusions in that commit are
+analytic.
+
+## 1. The locked triangle costs nine sites total
+
+Let Sigma be the Section-172 locked three-channel fan and let T_* be its central unit
+equilateral triangle.
+
+The entire open unit tube of T_* contains at most nine triangular-lattice sites. If
+y,y' are two sites in that tube, choose x,x' on the triangle with |y-x|<1 and
+|y'-x'|<1. Since diam(T_*)=1,
+
+    |y-y'| < 1 + |x-x'| + 1 <= 3.
+
+Partition the triangular lattice into the nine cosets of 3 Lambda. Distinct sites in
+one coset are at distance at least three, so at most one site from each coset occurs.
+Thus the three triangle edges cost at most nine sites together.
+
+## 2. Accumulate the reaction channels from the triangle
+
+Order every nontriangle edge by walking the reaction channels outward from the locked
+triangle. Each new unit edge e=[p,q] shares p with the already exposed shield. The old
+tube already contains every lattice site with |y-p|<1. Hence every new site contributed
+by e is one of the at most five one-ended sites from the theorem above.
+
+Write E=|E(Sigma)|. There are E-3 nontriangle edges, so
+
+    |T_Sigma| <= 9 + 5(E-3) = 5E-6.
+
+The locked fan is connected and unicyclic, hence E=|V(Sigma)|=:v. Therefore
+
+    |T_Sigma| <= 5v-6,
+    |T_Z| <= 5v-6.
+
+This improves the current-main Section-175 deterministic bound |T_Sigma|<=9v by
+4v+6 sites. It also improves the earlier general connected-shield accumulation
+5E+4 by ten sites because the whole locked triangle is paid as one diameter-one core.
+
+## 3. Right-deficiency consequence
+
+Canonical Section 175 gives
+
+    zeta-s >= |O_iso| + Q_Sigma - j_* - |T_Z|.
+
+Therefore the locked full-tube branch closes whenever
+
+    |O_iso| + Q_Sigma >= j_* + 5v - 6.
+
+Conversely, every surviving locked-branch counterexample satisfies
+
+    |O_iso| + Q_Sigma <= j_* + 5v - 7.
+
+This strengthens the full-tube route, where the surviving exterior-sink sector sets
+are disjoint. It does not replace the Section-177 edge-lens route, which has a smaller
+lens count but a different contracted-Hall penalty and overlapping sink sectors.
+
+## 4. Proof status and remaining bottleneck
+
+The only finite computation used is the exact integer orbit census behind the
+five-new-sites theorem. It was executed successfully in this run and returned
+19 radius-two sites, 54 anchored six-sets, and three symmetry orbits. The orbit
+exclusions, triangle-core bound, edge accumulation, and Section-175 propagation are
+analytic. No floating-point search, CI result, heuristic, or unexecuted verifier is a
+proof premise.
+
+Target A remains open. The locked full-tube branch now needs a source/response theorem
+forcing
+
+    |O_iso| + Q_Sigma >= j_* + 5v - 6,
+
+or a direct strict-diameter replacement.

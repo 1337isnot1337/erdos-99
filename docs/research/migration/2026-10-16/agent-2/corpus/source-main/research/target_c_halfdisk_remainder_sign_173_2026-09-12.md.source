@@ -1,0 +1,193 @@
+# Target C — two-half-disk remainder/sign localization
+
+**Date:** 2026-09-12  
+**Status:** proof-only Type-II composition; theorem-state authority unchanged.  
+**LEVEL I STATUS:** STILL OPEN. C-II REMAINS OPEN.
+
+This note combines the proof-only all-regime two-half-disk alternative with the
+audited component remainder of Sections 160--161 and the exact sign identity of
+Section 172. It gives a source-level lower bound for the harmonic diameter
+moment plus retained remainder, and therefore a uniform lower bound on how
+negative the long-hull-side correction can be in that branch.
+
+It is deliberately a sign localization, not a closure: the resulting lower
+bound still permits a linear outer-walk surplus or a positive hull-side
+correction.
+
+## 1. Inputs and notation
+
+Work on a finite diagonal in the proof-only two-half-disk alternative. Let
+\(\mathcal G_1,\mathcal G_2\) be the two disjoint dominant harmonic-cell
+groups. The groupwise train theorem gives
+
+\[
+\sum_{r\in\mathcal G_i} A_{4,r}
+=\left(\frac{\pi}{8}-o(1)\right)D^2,
+\qquad i=1,2,
+\tag{173.1}
+\]
+
+where \(A_{4,r}\) is the strict-rhombus area assigned to harmonic cell \(r\).
+
+Use the Section-160 quantities
+
+\[
+S_D:=\sum_r d_r,
+\qquad
+G_D:=R_I+s_B+\sum_r\eta_r
+=2+q+m-k-S_D,
+\tag{173.2}
+\]
+
+and the Section-172 hull-side correction
+
+\[
+\chi_D:=q+m-\operatorname{per}(F).
+\tag{173.3}
+\]
+
+All sums below are over the unloaded positive-contact components underlying the
+harmonic cells. Contact-isolated source points are not included in these core
+quantities.
+
+## 2. Global loaded-rhombus error is only linear
+
+Let \(A_{4,r}^{\mathrm{int}}\) denote the strict-rhombus area in cell \(r\)
+whose four vertices are unloaded and hence lie in one unloaded component.
+Then
+
+\[
+\sum_{r\in\mathcal G_i} A_{4,r}^{\mathrm{int}}
+=\left(\frac{\pi}{8}-o(1)\right)D^2,
+\qquad i=1,2.
+\tag{173.4}
+\]
+
+Here is the finite error check. A triangle-free unit-contact vertex has at
+most five unit neighbors: the angles between consecutive unit-neighbor rays
+are strictly greater than \(\pi/3\). Therefore the total number of local
+strict rhombi incident to a loaded source vertex is \(O(1)\). The loaded
+population on the force hull is \(q=O(D)\), and the audited local-rhombus
+incidence check makes one physical local rhombus chargeable only a bounded
+number of times. Each unit rhombus has area at most one. Consequently
+
+\[
+\sum_r\left(A_{4,r}-A_{4,r}^{\mathrm{int}}\right)=O(D).
+\tag{173.5}
+\]
+
+This is the only loaded-interface estimate used here. It does not assert that
+all local faces are global faces, and it does not delete contact-isolated
+source points.
+
+## 3. Summing the retained component inequalities
+
+The audited finite Section-160 inequality is, for each unloaded component,
+
+\[
+r_r+\eta_r
+\ge \sqrt{\pi A_{4,r}^{\mathrm{int}}}+2-d_r.
+\tag{173.6}
+\]
+
+Rearrange and sum (173.6) over all components belonging to one dominant group.
+The nonnegative terms \(r_r+\eta_r\) are subterms of \(G_D\), while the
+corresponding \(d_r\) are subterms of \(S_D\). Since
+
+\[
+\sum_j\sqrt{a_j}\ge\sqrt{\sum_j a_j}
+\qquad(a_j\ge0),
+\tag{173.7}
+\]
+
+and each dominant group contains at least one positive-area component, (173.4)
+and (173.6) imply
+
+\[
+\sum_{r\in\mathcal G_i}d_r
+\;+\sum_{r\in\mathcal G_i}(r_r+\eta_r)
+\ge
+\sqrt{\pi\sum_{r\in\mathcal G_i}A_{4,r}^{\mathrm{int}}}
+=\frac{\pi}{2\sqrt2}D-o(D).
+\tag{173.8}
+\]
+
+The omitted \(+2\) terms are nonnegative and are not treated as a linear gain.
+
+The two groups are disjoint. Adding (173.8), and then adding the remaining
+nonnegative \(d_r\), \(r_r\), \(\eta_r\), and \(s_B\) terms, gives
+
+\[
+\boxed{
+\liminf_{D\to\infty}\frac{S_D+G_D}{D}
+\ge \frac{\pi}{\sqrt2}.
+}
+\tag{173.9}
+\]
+
+This is a same-subsequence estimate. It does not optimize a carrier area and a
+component remainder taken from different configurations.
+
+## 4. Consequence for the long-hull-side correction
+
+From the exact definition of \(G_D\),
+
+\[
+\chi_D=S_D+G_D+k-2-\operatorname{per}(F).
+\tag{173.10}
+\]
+
+In Type II, \(\operatorname{per}(F)/D\to\pi\). Therefore every two-half-disk
+subsequence satisfies
+
+\[
+\boxed{
+\liminf\frac{\chi_D}{D}
+\ge \frac{\pi}{\sqrt2}-\pi+\liminf\frac{k}{D}
+=-\pi\left(1-\frac1{\sqrt2}\right)
+\ +\liminf\frac{k}{D}.
+}
+\tag{173.11}
+\]
+
+Numerically the base bound is
+
+\[
+\frac{\pi}{\sqrt2}-\pi=-0.920151184510610\ldots.
+\tag{173.12}
+\]
+
+Thus the two-half-disk branch cannot realize an arbitrarily negative
+long-hull-side correction. Combining with the exact outer-walk identity
+
+\[
+\frac{b-\operatorname{per}(F)}{D}
+=\frac{u_B+\chi_D}{D}\ge0
+\tag{173.13}
+\]
+
+gives the valid dichotomy:
+
+- if \(\chi_D\ge0\), the five-currency correction is favorable; or
+- if \(\chi_D<0\), the outer-walk surplus satisfies
+  \(u_B/D\ge-\chi_D/D\), while (173.11) bounds the possible deficit by
+  \(0.920152-\liminf(k/D)\).
+
+No conclusion that \(u_B=o(D)\) or \(\chi_D\ge0\) is made.
+
+## 5. Frontier implication
+
+The two-half-disk alternative now has the source-level lower bound
+
+\[
+\frac{S_D+G_D}{D}\ge\frac{\pi}{\sqrt2}-o(1),
+\]
+
+in addition to its groupwise atomic train floor. A complete closure would still
+need an upper bound on the same aggregate outer-walk detour, a theorem turning
+the forced boundary surplus into a strict source-preserving diameter decrease,
+or an exact unit equilateral triangle. The center-wrapping branch and the
+macroscopic Type-I branch are untouched.
+
+**Classification:** proved candidate awaiting promotion; audited-working
+proof-only Type-II branch theorem. C-II remains open.

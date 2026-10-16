@@ -1,0 +1,345 @@
+# Target C-II — Pareto refinement reduces the adjacent finite cusp set below `1800` rows
+
+**Date:** 2026-09-15  
+**Status:** proof-only source-level structural strengthening  
+**Scope:** the audited `t=(q-k)/D<=1.844` full-core Type-II adjacent-cut backbone  
+**Dependencies:** `target_c_adjacent_cut_triple_small_2026-09-15.md` and its hostile audit; exact laminar O--O interval support; audited global strict-rhombus angular-defect budget  
+**Certificate:** `research/verify_target_c_adjacent_cut_pareto_refinement.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The audited triple-small theorem chooses one internal boundary of a linear good-leaf
+backbone by averaging the three costs
+
+\[
+N_i,
+\qquad
+D B_i,
+\qquad
+D(q_i+q_{i+1})
+\]
+
+with equal weight.  This gives the balanced bound `21200` for all three quantities.
+For the downstream finite-cusp problem, however, the number `N_i` of actual diameter
+rows that start or stop at the boundary is more important than the two numerical
+constants multiplying quantities already known to be `O(D^{-1})`.
+
+A direct union bound gives a stronger Pareto statement and, in particular, cuts the
+bounded exceptional diameter set by more than a factor of eleven.
+
+## Theorem PR — adjacent-cut Pareto refinement
+
+Use the notation and selected path
+
+\[
+P=(\tau_1,\ldots,\tau_m)
+\]
+
+from the audited triple-small theorem.  Put
+
+\[
+p={278778993\over78216868750}
+=0.0035641799\ldots,
+\]
+
+so
+
+\[
+m>pD-o(D).
+\]
+
+For every internal boundary define
+
+\[
+N_i
+=
+\#\{h:\varepsilon_{h,i+1}\ne\varepsilon_{hi}\},
+\]
+
+\[
+B_i
+=
+\sum_h\beta_h
+|\varepsilon_{h,i+1}-\varepsilon_{hi}|,
+\]
+
+and
+
+\[
+Q_i=q_i+q_{i+1}.
+\]
+
+The parent proof gives the three independent global budgets
+
+\[
+\sum_iN_i\le2\pi D,
+\tag{PR.1}
+\]
+
+\[
+\sum_i D B_i\le2D,
+\tag{PR.2}
+\]
+
+and
+
+\[
+\sum_i DQ_i
+\le {2C_{phase}\over d_{low}}D+o(D),
+\tag{PR.3}
+\]
+
+where
+
+\[
+d_{low}={9891\over62500}=0.158256
+\]
+
+and
+
+\[
+C_{phase}
+={\pi^2\sqrt3(2+\sqrt3)\over12}.
+\]
+
+More generally, if fixed positive thresholds `n,b,a` satisfy
+
+\[
+\boxed{
+{2\pi\over n}
++{2\over b}
++{2C_{phase}\over d_{low}a}
+<p,
+}
+\tag{PR.4}
+\]
+
+then one internal boundary satisfies simultaneously
+
+\[
+N_i<n+o(1),
+\qquad
+DB_i<b+o(1),
+\qquad
+DQ_i<a+o(1).
+\tag{PR.5}
+\]
+
+Taking
+
+\[
+\boxed{
+n=1800,
+\qquad b=a=10^6
+}
+\tag{PR.6}
+\]
+
+is valid.  Hence there are consecutive smallest-leaf O--O cuts
+`tau_i,tau_{i+1}` on the same selected path such that
+
+\[
+\boxed{N_i<1800+o(1),}
+\tag{PR.7}
+\]
+
+\[
+\boxed{B_i<{10^6\over D}+o(D^{-1}),}
+\tag{PR.8}
+\]
+
+and
+
+\[
+\boxed{
+d_{\mathbb{RP}^1}(u_i,u_{i+1})
+< {10^6\over D}+o(D^{-1}).}
+\tag{PR.9}
+\]
+
+The last implication uses the parent inequality
+
+\[
+d_{\mathbb{RP}^1}(u_i,u_{i+1})
+\le q_i+q_{i+1}=Q_i.
+\]
+
+Thus the adjacent opposite-shear reduction can be run with fewer than `1800+o(1)`
+large first-order diameter rows, rather than `21200+o(1)`.
+
+---
+
+## 1. Union-bound proof
+
+Call an internal boundary count-bad if `N_i>=n`, multiplier-bad if `DB_i>=b`, and
+phase-bad if `DQ_i>=a`.
+
+By (PR.1), the number of count-bad boundaries is at most
+
+\[
+{2\pi D\over n}.
+\tag{PR.10}
+\]
+
+By (PR.2), the number of multiplier-bad boundaries is at most
+
+\[
+{2D\over b}.
+\tag{PR.11}
+\]
+
+By (PR.3), the number of phase-bad boundaries is at most
+
+\[
+{2C_{phase}\over d_{low}a}D+o(D).
+\tag{PR.12}
+\]
+
+If every internal boundary were bad in at least one sense, then the path would have at
+most the sum of (PR.10)--(PR.12) internal boundaries.  Condition (PR.4) makes that
+strictly smaller than `pD-o(D)`, contradicting the path-length theorem.  Therefore one
+boundary is good in all three senses.  This proves (PR.5).
+
+The argument does not change the path, the center train producing it, or any KKT
+normalization.  It only replaces the equal-weight averaging step by a three-set union
+bound.
+
+---
+
+## 2. Exact instantiation at `1800,10^6,10^6`
+
+Use the same outward rational enclosures as the parent certificate,
+
+\[
+\pi<{355\over113},
+\]
+
+\[
+C_{phase}
+<{3258689123681\over612912000000}.
+\]
+
+The companion exact verifier evaluates the three bad-boundary densities as
+
+\[
+{2(355/113)\over1800}
+=0.00349065880039\ldots,
+\]
+
+\[
+{2\over10^6}=0.000002,
+\]
+
+and
+
+\[
+{2C_{phase}^{up}\over d_{low}10^6}
+=0.00006719154354\ldots .
+\]
+
+Their sum is
+
+\[
+0.00355985034393\ldots,
+\]
+
+whereas
+
+\[
+p=0.00356417991995\ldots .
+\]
+
+The exact rational gap is greater than
+
+\[
+\boxed{4\times10^{-6}.}
+\tag{PR.13}
+\]
+
+So the advertised thresholds have real margin and do not rely on floating-point
+rounding.
+
+---
+
+## 3. Consequence for the finite-cusp normal form
+
+Choose the projective sign `s in {+1,-1}` as in the audited finite-cusp theorem and
+apply the exact opposite shear
+
+\[
+(\theta_i,\theta_{i+1})=(t,-st).
+\]
+
+For every actual diameter row spanning both cuts, the first relative-displacement
+coefficient is
+
+\[
+J(u_i-su_{i+1}).
+\]
+
+Equation (PR.9) gives
+
+\[
+|u_i-su_{i+1}|
+<{10^6\over D}+o(D^{-1}),
+\]
+
+so every non-switching spanning diameter row has squared-length first derivative
+bounded by
+
+\[
+2\times10^6+o(1).
+\tag{PR.14}
+\]
+
+Only the rows counted by `N_i` can have the natural `O(D)` first-derivative scale.
+Therefore the same exact finite multishear now has
+
+\[
+\boxed{<1800+o(1)}
+\]
+
+large first-order active diameter rows.
+
+Their total normalized KKT multiplier is bounded by (PR.8), and hence their total
+KKT-weighted absolute squared-length first derivative is at most
+
+\[
+2D B_i
+<2\times10^6+o(1).
+\tag{PR.15}
+\]
+
+At finite amplitude `t=xi/D` with fixed `xi`, the parent Taylor argument is unchanged:
+all non-switching rows change by `O(D^{-1})`, while only this `<1800+o(1)` switching set
+can change by `O(1)`.
+
+This does not evade the hostile-audited local-jamming obstruction.  The switching rows
+remain exact active max constraints even when their total KKT multiplier is small.
+The gain is combinatorial: any downstream diameter-thrackle/interface classification
+now has fewer than `1800` exceptional rows to understand, instead of fewer than
+`21200`.
+
+---
+
+## 4. Frontier effect
+
+The balanced `21200` theorem remains useful when comparable constants are desired.
+The present result is a separate Pareto strengthening optimized for finite blocker
+classification:
+
+```text
+same linear good-leaf backbone
++ same exact adjacent O-O cut pair framework
++ fewer than 1800 switching diameter rows
++ switching beta mass = O(1/D)
++ phase mismatch = O(1/D)
++ exact opposite multishear still available
+```
+
+The remaining obstruction is unchanged in kind but substantially smaller in finite
+size.  A closing theorem still needs an impossible diameter-thrackle/interface pattern,
+a nonlocal same-cardinality replacement, or an enlarged coordinate family that leaves
+the pure old-contact O-O shear cusp.
+
+**Disposition:** proved proof-only Pareto strengthening of the adjacent finite-cusp
+normal form. C-II and Level I remain open.

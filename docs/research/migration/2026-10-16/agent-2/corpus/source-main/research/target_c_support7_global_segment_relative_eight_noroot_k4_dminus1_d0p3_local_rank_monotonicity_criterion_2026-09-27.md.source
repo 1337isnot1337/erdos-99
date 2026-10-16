@@ -1,0 +1,9 @@
+# Target C: monotone virtual-empty audit criterion
+
+Date: 2026-09-27
+
+For the eight-no-root `k=4, D=-1, d_root=0, p=3`, three-singleton `r=0` certificate, the support tag `tau_b` may underestimate the true local rank. The certificate remains valid because every actual-empty block still passes the eligibility predicate and the subsequent search only enlarges the virtual-empty family.
+
+General criterion: if an inexact local tag is used only to form a superset of all possible actual-empty blocks, and every later test becomes weaker when virtual-empty blocks are added, then underestimating the local rank cannot cause a false exclusion. Here adding virtual empties shrinks the forced-complete set, preserves complete-row independence automatically, and increases the available face-local quotient capacity.
+
+This criterion does not cover verifiers that use the underestimated rank to strengthen pairwise compatibility, increase a required local generator dimension, or reject selected-singleton placements. Those cases require separate audits.

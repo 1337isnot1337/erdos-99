@@ -1,0 +1,443 @@
+# Target C-II - reflection blocker interfaces are inward and terminate at loaded sinks
+
+**Date:** 2026-09-17  
+**Status:** proof-only strengthening of the shallow-tooth reflection branch; no canonical promotion claimed  
+**Scope:** Type-II full-core `eta=3/26` reflection modules after block diagonalization and thin-shell path reduction  
+**Dependencies:** simultaneous reflection block diagonalization; thin-shell blocker path theorem; geometric contact tubes; canonical C26 fully force-visible barycenter/degree theorem; relative-interior full actual diameter support  
+**Certificate:** `research/verify_target_c_tooth_reflection_radial_interface_loaded_sinks_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The thin-shell theorem left one explicit local target: classify unit-contact edges from
+
+\[
+U=\{z\in A:|z-q|>D\}
+\]
+
+to the inner annulus. The interface is one-sided. Every contact leaving `U` points strictly toward `q`, every such edge lands in
+
+\[
+D-1<|v-q|\le D,
+\]
+
+and one blocker vertex has at most three contacts leaving `U`.
+
+There is a stronger force consequence. Canonical C26 says that a nonloaded contact vertex is a strict positive contact barycenter and has full contact degree `3`, `4`, or `5`. Applied to the radial function `R(v)=|v-q|`, this forces every nonloaded, nonisolated blocker to have a contact neighbor still in `U` whose squared radius is larger by more than one. Following such contacts terminates at a positively diameter-loaded blocker.
+
+Together with the proved path structure of `G_C[U]`, this gives
+
+\[
+\boxed{
+\text{every component of }G_C[U]
+\text{ either contains a loaded vertex, or is one contact-isolated vertex.}
+}
+\tag{RI.1}
+\]
+
+Under the relative-interior normalization, the second alternative has no actual diameter edge either. The canonical farthest blocker therefore satisfies
+
+\[
+\boxed{y\in B_+\quad\text{or}\quad \deg_C(y)=\deg_H(y)=0.}
+\tag{RI.2}
+\]
+
+Deep contact buffers also retain the blocker phase. At the current near-quarter depth they can move radially by `D^(1/4-o(1))`, but their additional angular drift is only `O(D^-3/4)` and is negligible beside the original `D^-1/4` module cone.
+
+---
+
+## 1. Exact geometry of one contact leaving `U`
+
+Fix one module, suppress its index, and set
+
+\[
+R(v):=|v-q|.
+\]
+
+The shell theorem gives
+
+\[
+D<R(z)<D+h_*,
+\qquad
+h_*={\sqrt{303}\over52}=0.3347479843\ldots<1,
+\qquad z\in U.
+\tag{RI.3}
+\]
+
+Take `z in U`, `v notin U`, and `|v-z|=1`. Write
+
+\[
+r=R(z)=D+\delta,
+\qquad
+s=R(v)\le D,
+\qquad
+0<\delta<h_*,
+\]
+
+and
+
+\[
+e={z-q\over r},
+\qquad
+d=v-z,
+\qquad |d|=1.
+\]
+
+The triangle inequality gives
+
+\[
+\boxed{D-1<s\le D.}
+\tag{RI.4}
+\]
+
+Also
+
+\[
+s^2=r^2+1+2r(e\cdot d).
+\]
+
+Since `s<=D`,
+
+\[
+(-e)\cdot d
+\ge {r^2+1-D^2\over2r}.
+\]
+
+For `r=D+delta`, the right side is exactly
+
+\[
+\boxed{
+{r^2+1-D^2\over2r}
+=\delta+{1-\delta^2\over2(D+\delta)}
+>\delta>0.
+}
+\tag{RI.5}
+
+Thus every boundary contact points strictly inward toward `q`, and its inward radial component exceeds the blocker's radial excess `R(z)-D`.
+
+The allowed unit directions form an arc centered at `-e` of width
+
+\[
+2\arccos\!\left({r^2+1-D^2\over2r}\right)<\pi.
+\tag{RI.6}
+\]
+
+---
+
+## 2. At most three contacts leave one blocker
+
+Let `v_1,...,v_m` be distinct contact neighbors of one `z in U` outside `U`. All corresponding unit directions lie in the strict sub-`pi` arc (RI.6).
+
+For distinct `i,j`, source separation gives `|v_i-v_j|>=1`. Because both points lie on the unit circle about `z`, their angular separation at `z` is at least `pi/3`.
+
+Four directions ordered inside one arc would therefore have three consecutive gaps with total at least `pi`, impossible in an arc of width strictly below `pi`. Hence
+
+\[
+\boxed{|N_C(z)\setminus U|\le3.}
+\tag{RI.7}
+
+The previous shell theorem already gives
+
+\[
+\Delta(G_C[U])\le2
+\]
+
+and makes every component of `G_C[U]` an angularly monotone path or an isolated vertex. Equation (RI.7) classifies the first outward interface left open there.
+
+---
+
+## 3. Deep contact buffers stay in one polar column
+
+Let `v` have contact-graph distance at most an integer `R<D/2` from `U`. Choose `z in U` joined to `v` by a contact path of length at most `R`. Then
+
+\[
+|v-z|\le R,
+\]
+
+so (RI.3) gives
+
+\[
+\boxed{D-R<R(v)<D+h_*+R.}
+\tag{RI.8}
+\]
+
+For nonzero vectors `a,b`,
+
+\[
+\left|{a\over|a|}-{b\over|b|}\right|
+\le {2|a-b|\over\min\{|a|,|b|\}}.
+\]
+
+Apply this to `a=z-q`, `b=v-q`. If `phi` is their angular difference, then
+
+\[
+2\sin{\phi\over2}\le {2R\over D-R},
+\]
+
+hence
+
+\[
+\boxed{\phi\le2\arcsin{R\over D-R}.}
+\tag{RI.9}
+
+The geometric contact-tube theorem already gives, for all sufficiently large `D`,
+
+\[
+\angle(z-q,n)\le C_AD^{-1/4},
+\qquad
+C_A=9.56283745460\ldots .
+\tag{RI.10}
+
+Therefore
+
+\[
+\boxed{
+\angle(v-q,n)
+\le C_AD^{-1/4}+2\arcsin{R\over D-R}.
+}
+\tag{RI.11}
+
+At the current near-quarter choice
+
+\[
+R_D=(1+o(1)){D^{1/4}\over\omega_D^2},
+\qquad
+\omega_D\to\infty,
+\]
+
+we have
+
+\[
+2\arcsin{R_D\over D-R_D}
+=O\!\left({D^{-3/4}\over\omega_D^2}\right)
+=o(D^{-1/4}).
+\]
+
+Thus
+
+\[
+\boxed{
+N_{R_D}(U)
+\text{ remains inside the same }
+(C_A+o(1))D^{-1/4}
+\text{ polar cone.}
+}
+\tag{RI.12}
+
+A long contact obstruction cannot escape by rotating into another phase.
+
+---
+
+## 4. C26 forces radial ascent inside the blocker set
+
+Let `B_+` be the loaded vertex set for the relative-interior normalized C-II stress. Canonical C26 says that if `z notin B_+` has at least one unit contact, then:
+
+1. `deg_C(z)` is `3`, `4`, or `5`; and
+2. there are coefficients `lambda_zu>0` with
+
+\[
+\sum_{u\sim_C z}\lambda_{zu}(u-z)=0.
+\tag{RI.13}
+\]
+
+Fix such a `z in U`, put `r=R(z)` and `e=(z-q)/r`. For any contact neighbor `u`, writing `s=R(u)` gives
+
+\[
+\boxed{
+e\cdot(u-z)={s^2-r^2-1\over2r}.}
+\tag{RI.14}
+
+Dot (RI.13) with `e`. Suppose no contact neighbor had positive radial component. Then every term in the resulting scalar sum would be nonpositive, so positivity of every `lambda_zu` would force
+
+\[
+e\cdot(u-z)=0
+\]
+
+for **every** contact neighbor.
+
+A unit vector orthogonal to `e` has only the two possible directions `+Je` and `-Je`. Hence at most two distinct contact neighbors can have zero radial component. This contradicts the C26 degree lower bound `deg_C(z)>=3`.
+
+Therefore some contact neighbor has positive radial component. By (RI.14), for that neighbor
+
+\[
+\boxed{R(u)^2>R(z)^2+1.}
+\tag{RI.15}
+
+In particular `R(u)>R(z)>D`, so
+
+\[
+\boxed{u\in U.}
+\tag{RI.16}
+
+This is the useful force statement: the inner buffer cannot by itself balance a nonloaded blocker. Every nonloaded nonisolated blocker has an outward contact **inside the blocker shell**.
+
+---
+
+## 5. Loaded-sink decomposition of `G_C[U]`
+
+Orient an internal blocker contact `zu` from `z` to `u` whenever
+
+\[
+R(u)^2>R(z)^2+1.
+\]
+
+By Section 4, every nonloaded, nonisolated blocker has at least one outgoing internal edge. Radius strictly increases along every directed edge, so directed cycles are impossible.
+
+Start at any nonloaded, nonisolated blocker and repeatedly follow an outgoing edge. Finiteness forces termination. The terminal vertex still lies in the same component of `G_C[U]` and has at least one contact. If it were nonloaded, Section 4 would supply another outgoing internal edge. Therefore it is loaded.
+
+Hence every nontrivial component of `G_C[U]` contains a vertex of `B_+`.
+
+Now let `{z}` be a singleton component. If `z` has any contact outside `U` and is nonloaded, Section 4 again forces an internal blocker neighbor, contradiction. Thus a singleton with any contact is loaded. Consequently
+
+\[
+\boxed{
+\text{each component of }G_C[U]
+\text{ contains }B_+,
+\text{ or is one full-contact isolate.}
+}
+\tag{RI.17}
+
+The relative-interior C-II stress has every actual diameter edge in its positive diameter support. Therefore a vertex outside `B_+` cannot be an actual diameter endpoint. The unanchored singleton in (RI.17) satisfies
+
+\[
+\boxed{\deg_C(z)=\deg_H(z)=0.}
+\tag{RI.18}
+
+It has no old active constraint at either distance endpoint.
+
+There is also an exact but nonclosing ascent-length estimate. Let `y` be farthest from `q`, so the shell theorem gives
+
+\[
+R(y)<D+h_*.
+\]
+
+Every ascent edge increases squared radius by more than one. Thus a radial-ascent chain beginning anywhere in `U` has length below
+
+\[
+\boxed{
+(D+h_*)^2-D^2
+=2h_*D+h_*^2
+<0.670D+1.
+}
+\tag{RI.19}
+
+This linear bound is weaker than the isolated near-quarter contact depth. Its value is structural: ascent reaches the actual diameter support without leaving `U`.
+
+---
+
+## 6. Canonical farthest head: loaded or completely free
+
+Let `y` be the canonical farthest blocker from the support-normal theorem:
+
+\[
+R(y)=\max_{z\in A}R(z)>D.
+\]
+
+If `y` has a unit contact and is nonloaded, Section 4 produces a contact neighbor `u in U` with
+
+\[
+R(u)^2>R(y)^2+1,
+\]
+
+contradicting maximality. Therefore
+
+\[
+\boxed{y\in B_+\quad\text{or}\quad\deg_C(y)=0.}
+\tag{RI.20}
+
+In the second case `y notin B_+`, and full relative-interior diameter support gives
+
+\[
+\boxed{\deg_C(y)=\deg_H(y)=0.}
+\tag{RI.21}
+
+Thus a nonloaded canonical head is an exposed full-source hull vertex with no old unit contact and no old diameter pair. There is no third case in which the canonical head is unloaded but trapped inside a contact network.
+
+---
+
+## 7. Near-quarter simultaneous consequence
+
+Take the current diagonal
+
+\[
+\omega_D\to\infty,
+\qquad
+\omega_D=o(D^{1/8}),
+\qquad
+m_D=\lfloor\omega_D\rfloor,
+\]
+
+with mutually disjoint module buffers of depth
+
+\[
+r_D=(1-o(1)){D^{1/4}\over\omega_D^2}.
+\]
+
+Choose the canonical farthest head `y_i` in every module. The sets `U_i` are pairwise disjoint, so the heads are distinct. Apply (RI.20) and retain the larger class.
+
+Either at least `m_D/2-O(1)` heads are loaded, or at least `m_D/2-O(1)` are unloaded full-contact isolates.
+
+In the loaded case, each selected head is an endpoint of a positive actual diameter edge. One diameter edge has only two endpoints, so the selected heads support at least
+
+\[
+\boxed{m_D/4-O(1)=\Omega(\omega_D)}
+\tag{RI.22}
+
+**distinct actual diameter edges**, while their reflection modules remain mutually isolated through depth `r_D`.
+
+In the unloaded case, at least
+
+\[
+\boxed{m_D/2-O(1)}
+\tag{RI.23}
+
+canonical exposed heads satisfy
+
+\[
+\deg_C(y_i)=\deg_H(y_i)=0,
+\]
+
+again one per mutually isolated reflection module.
+
+For `omega_D=log log D`, this gives an unbounded family of either actual-diameter-anchored canonical heads or completely old-active-constraint-free canonical heads, with module isolation depth
+
+\[
+{D^{1/4}\over(\log\log D)^2}(1-o(1)).
+\]
+
+---
+
+## 8. Frontier effect
+
+The surviving local reflection obstruction now has this form:
+
+```text
+blocker shell U:
+    D < |z-q| < D+0.334748
+    induced contact graph = angularly monotone paths / isolates
+
+contact leaving U:
+    lands in D-1 < |v-q| <= D
+    points strictly toward q
+    inward radial component > |z-q|-D
+    at most three leaving contacts per blocker
+
+deep buffer:
+    remains in the same inverse-quarter polar column
+
+nonloaded nonisolated blocker:
+    has an internal U-contact raising squared radius by >1
+    radial ascent terminates at a loaded blocker
+
+component of G_C[U]:
+    contains a positive-diameter-loaded vertex
+    OR is one contact- and diameter-isolated source point
+
+canonical farthest head:
+    loaded
+    OR completely contact- and diameter-isolated
+```
+
+This does not close C-II. The loaded-sink branch can terminate directly on the actual diameter system. The free-head branch gives only local old-constraint freedom; it does not yet prove that an inward compensation can travel the finite distance needed to remove all `q-U` violations before a new contact or diameter event appears.
+
+The next useful theorem is correspondingly narrower: either rule out a thin-shell monotone blocker path terminating at a loaded radial peak while preserving its attached actual-diameter geometry, or prove that a FREE-HEAD can be continued through its first newly active event until the whole blocker component is repaired.
+
+**Disposition:** proved the exact inward first interface, three-valent boundary cap, polar persistence of near-quarter contact buffers, and a C26 radial-ascent theorem forcing every nontrivial blocker component onto the positive actual diameter support. The canonical blocker head is now either diameter-loaded or completely contact- and diameter-isolated. C-II and Level I remain open.

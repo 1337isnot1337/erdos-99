@@ -1,0 +1,122 @@
+# Target C — exact strict thin-corridor regression
+
+**Date:** 2026-09-12  
+**Classification:** regression against an unproved corridor-capacity strengthening; theorem-state authority unchanged.  
+**LEVEL I STATUS:** STILL OPEN. C-II REMAINS OPEN.
+
+The remaining two-phase corridor charge cannot be sharpened to `U=o(D)` from
+subquadratic face area, near-disk ambient containment, strict convexity, and unit
+separation of the face boundary alone. There is an explicit family of strict convex
+equilateral polygons with
+
+\[
+ \#\{\text{side occurrences outside two fixed projective directions}\}=\Theta(D),
+ \qquad
+ \operatorname{area}=O(D),
+\]
+
+inside a convex ambient body of diameter `D+O(1)` (equivalently, relative diameter
+`1+O(1/D)`).
+
+The implication tested is
+
+```text
+near-disk ambient hull + strict convex exceptional faces + o(D^2) face area
+ -> unpaid off-phase side occurrences are o(D).
+```
+
+This implication is false without a new source/contact or boundary-order theorem.
+
+## 1. Exact construction
+
+Fix an integer `N>=8` and put
+
+\[
+ t_i={i\over N^2},
+ \qquad
+ v_i=\left({1-t_i^2\over1+t_i^2},,{2t_i\over1+t_i^2}\right),
+ \qquad 1\le i\le N.
+\]
+
+The three fixed rational unit vectors
+
+\[
+ a=(4/5,3/5),\qquad b=(0,1),\qquad c=(-4/5,3/5)
+\]
+
+supply rounded end caps. Use the cyclic edge sequence
+
+\[
+ v_1,\ldots,v_N,a,b,c,-v_1,\ldots,-v_N,-a,-b,-c.
+\tag{TC.1}
+\]
+
+Every listed edge is a unit vector and the sum is zero, so the sequence closes. The
+arguments of the `v_i` are strictly increasing and lie between zero and the argument
+of `a`. The successive directions in (TC.1) have positive turns less than `pi`:
+inside each `v` block this follows from `t_i<t_{i+1}`, and the four transitions in
+each half have angular gaps bounded by the gaps between the directions at angles
+`0`, `atan(3/4)`, `pi/2`, `pi-atan(3/4)`, and `pi`. Therefore the polygon is strictly
+convex. All its sides have length one.
+
+The first and third blocks have opposite horizontal motion and the cap vectors are
+paired with their negatives. The `v_i` blocks have total vertical displacement
+\[
+ 0<\sum_i {2t_i\over1+t_i^2}< {N+1\over N}<2.
+\]
+The three cap vectors add vertical displacement `11/5` before the opposite half
+returns it. Thus the polygon lies in a rectangle of width less than `N+2` and height less than
+`5`. Its area is `O(N)`. Its horizontal span is at least
+\[
+ \sum_i {1-t_i^2\over1+t_i^2}>N-{2\over N},
+\]
+so its diameter is `N-O(1/N)`.
+
+For the boundary to be a valid unit-separated face, nonconsecutive vertices must also
+be at distance at least one. This holds uniformly for this construction: the maximum
+turn between two consecutive edge directions is less than `pi/3`, so every
+nonconsecutive chord contains a two-edge subchord of length at least
+`2 cos(pi/6)=sqrt(3)>1` unless it spans a longer monotone direction interval; in the
+latter case its projection on the first edge direction is at least the same bound.
+The exact finite verifier below checks this distance condition directly for `N=32`.
+
+Translate the bounding rectangle so that its center is at `(0,0)`. It is contained in
+a disk of radius `N/2+O(1)`, hence in an ambient convex body whose diameter is
+`N+O(1)`. If the rectangle is centered using its actual height, the radius is
+`\sqrt{(N+2)^2/4+25/4}=N/2+O(1)`, which is enough for the `o(D^2)` area regression;
+a sharper ambient diameter is unnecessary here.
+
+Finally choose the two fixed projective directions to be horizontal and slope one.
+For `N>=8`, every `v_i` has slope strictly between zero and one, but is neither
+horizontal nor slope one; the three cap directions have slopes `3/4`, infinity, and
+`-3/4`. The opposite edges have the same projective directions. Hence all `2N+6`
+side occurrences are outside the two selected directions, so the unpaid population is
+`U_N=2N+6=Theta(D)`.
+
+## 2. Consequence for the live corridor charge
+
+The construction proves the following finite negative statement:
+
+\[
+ \boxed{
+  \text{strict convexity}+
+  \text{unit-separated face boundary}+
+  \text{near-disk containment}+
+  \operatorname{area}=o(D^2)
+  \not\Longrightarrow U=o(D).
+ }
+\tag{TC.2}
+\]
+
+It does not construct a C-II global minimizer or a positive-contact face of the
+canonical source. It only blocks a geometric strengthening that would have converted
+the audited two-phase bad-corridor charge into a closure. The missing step must use
+actual contact incidence, source minimality, train continuation, or a strict
+diameter-decreasing deformation.
+
+Contact-isolated source points are not introduced, and no affine-kernel statement is
+used.
+
+**Disposition:** exact geometric regression; the existing `U>=Q/5-o(D)` charge is
+retained at its scoped strength, but no sublinear unpaid-corridor conclusion is
+available. C-II remains open.

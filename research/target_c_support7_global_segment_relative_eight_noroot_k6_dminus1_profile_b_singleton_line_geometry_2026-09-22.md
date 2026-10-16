@@ -1,0 +1,292 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "52c26b18acf0cb4517b15e6048223800929f85fb", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_singleton_line_geometry_2026-09-22.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b150ae336133acea56b459aa3cbe139e53505f3dcbc964d5d81c6f6c205eddf3"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: Profile B singleton-line geometry after `d_1(P)>=4`
+
+Date: 2026-09-22
+
+Status: rigorous structural reduction for the sole remaining eight-no-root `k=6,D=-1,p=9` Profile B. It proves `d_2(P)>=5`, bounds the number of rank-two local-empty singleton blocks by five, and improves that bound to three unless `d_2(P)=5`. Therefore every genuine nine-singleton Profile B source has at least four aligned rank-one singleton blocks, and at least six aligned blocks when `d_2(P)>=6`. This does not close Profile B or Target C-II.
+
+Companion arithmetic certificate:
+
+`research/verify_target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_singleton_line_geometry_2026_09_22.py`
+
+The preceding coefficient-weight closure is
+
+`research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_weight3_unstripped_closure_2026-09-22.md`,
+
+which proves
+
+```text
+rank(P)=2,
+d_1(P)>=4.
+```
+
+We also reuse the committed exact local geometry: at a fixed root triple the twelve no-root four-cycles occur in three projective local quotient directions, four cycles in each direction; two distinct root triples are touched by at most three common no-root cycles.
+
+## 1. Compatible singleton blocks have two local types
+
+Fix one of the nine actual singleton changed blocks `b`. Let
+
+```text
+E_b <= Q^8
+```
+
+be its empty local coefficient space and
+
+```text
+L_b <= E_b
+```
+
+be the local coefficient space imposed by its chosen singleton state.
+
+Because `b` is virtual-canonical complete but the singleton is compatible with the source coefficient plane,
+
+```text
+L_b <= P,
+E_b not<= P.
+```
+
+The local quotient at one root block is two-dimensional, so `rank(E_b)` is one or two.
+
+### Rank-one empty space: aligned singleton
+
+If `rank(E_b)=1`, then any nonzero singleton constraint equals `E_b`. Such a nonzero constraint cannot lie in `P`, because `E_b not<=P`. Therefore compatibility forces
+
+```text
+L_b=0.
+```
+
+Equivalently, every selected no-root cycle touching `b` has its local quotient component parallel to the chosen singleton direction. Call this an **aligned** singleton block.
+
+Since only four global no-root cycles occupy a fixed local direction at `b`, an aligned block is touched by at most four of the eight source cycles.
+
+### Rank-two empty space: a nonzero codeword line of `P`
+
+Now suppose `rank(E_b)=2`. For singleton direction `s`, the one-dimensional constraint `L_b` is nonzero. If the selected source cycles touch `b` in local-direction multiplicities
+
+```text
+m_0,m_1,m_2,
+```
+
+and `s` is the chosen direction, a generator of `L_b` vanishes exactly on the touching coordinates parallel to `s`. Hence
+
+```text
+wt(L_b)=t_b-m_s,
+```
+
+where `t_b=m_0+m_1+m_2` is the number of source no-root cycles touching `b`.
+
+Because `L_b` is a nonzero line inside `P` and `d_1(P)>=4`, every such rank-two singleton satisfies
+
+```text
+wt(L_b)>=4.
+```
+
+Thus each rank-two local-empty singleton block supplies a nonzero coefficient-codeword line of `P` with support at least four, contained in that root block's no-root touch set.
+
+## 2. Distinct rank-two singleton blocks give distinct codeword lines
+
+Let `b` and `c` be distinct rank-two local-empty compatible singleton blocks.
+
+If
+
+```text
+L_b=L_c,
+```
+
+then the common nonzero codeword has the same support in both blocks. That support has size at least four and is contained in both no-root touch sets. Hence at least four no-root cycles would touch both distinct root triples.
+
+The exact local geometry says two distinct root triples have at most three common touching no-root cycles. Contradiction.
+
+Therefore
+
+```text
+b != c  =>  L_b != L_c.
+```
+
+More generally, since
+
+```text
+supp(L_b) subset touch(b),
+supp(L_c) subset touch(c),
+```
+
+we have the pairwise support-intersection bound
+
+```text
+|supp(L_b) intersect supp(L_c)| <= 3.      (2.1)
+```
+
+This converts the number of rank-two singleton blocks into a projective-column problem for the rank-two coefficient code `P`.
+
+## 3. Projective-column form of the coefficient plane
+
+Choose a `2 x 8` generator matrix for `P`. Let
+
+```text
+z = number of zero coordinate columns,
+n = 8-z = d_2(P),
+```
+
+and let
+
+```text
+m_1,...,m_h
+```
+
+be the multiplicities of the distinct nonzero projective column classes. Since `P` has rank two,
+
+```text
+h>=2,
+sum m_i=n.
+```
+
+A nonzero codeword line whose kernel projective direction is class `i` has support size
+
+```text
+n-m_i.
+```
+
+A codeword whose kernel direction is absent from the column configuration has support `n`; call such a line generic.
+
+The minimum-distance condition says
+
+```text
+d_1(P)=n-max_i m_i >=4.                (3.1)
+```
+
+Since `max_i m_i>=1`, (3.1) immediately gives
+
+```text
+d_2(P)=n>=5.                            (3.2)
+```
+
+This is a new generalized-weight sharpening beyond the previously used `d_2(P)>=4`.
+
+## 4. A generic codeword line cannot coexist with another rank-two singleton block
+
+Suppose one rank-two singleton block uses a generic codeword line. Its support is all `n` nonzero coordinate columns.
+
+Every other nonzero codeword in `P` has weight at least four by `d_1(P)>=4`. Therefore its support intersects the generic support in at least four coordinates.
+
+That violates (2.1). Hence, if the source has at least two rank-two singleton blocks, all of their coefficient lines correspond to actual distinct projective column classes of `P`.
+
+For two such classes `i != j`, the two codeword supports intersect in exactly
+
+```text
+n-m_i-m_j.
+```
+
+Combining with (2.1) gives
+
+```text
+m_i+m_j >= n-3                         (4.1)
+```
+
+for every pair of projective classes used by rank-two singleton blocks.
+
+## 5. At most five rank-two singleton blocks; at most three when `n>=6`
+
+We now use only positive-integer arithmetic, with
+
+```text
+sum m_i=n,
+max m_i<=n-4
+```
+
+from (3.1), and pairwise condition (4.1).
+
+### `n=5`
+
+Equation (3.1) forces
+
+```text
+m_i=1
+```
+
+for every class. Hence the projective profile is uniquely
+
+```text
+(1,1,1,1,1),
+z=3,
+d_1(P)=4.
+```
+
+There are five projective classes, so at most five rank-two singleton blocks.
+
+### `n=6`
+
+Here every multiplicity is at most two and any two used classes must sum to at least three. Four used classes would have total multiplicity at least
+
+```text
+1+2+2+2=7>6.
+```
+
+So at most three classes can be used.
+
+### `n=7`
+
+Every multiplicity is at most three and any two used classes must sum to at least four. Four positive multiplicities satisfying that pairwise condition have total at least eight: the cheapest possibilities begin with either
+
+```text
+1,3,3,3
+```
+
+or
+
+```text
+2,2,2,2.
+```
+
+Both exceed `n=7`. Hence at most three classes can be used.
+
+### `n=8`
+
+Every multiplicity is at most four and any two used classes must sum to at least five. Four positive multiplicities satisfying that condition have total at least eleven, for example the minimum patterns begin with `2,3,3,3` or are larger. Hence again at most three classes can be used.
+
+The companion arithmetic certificate exhausts every integer projective multiplicity profile satisfying `d_1>=4` and independently checks these bounds.
+
+Therefore:
+
+```text
+number of rank-two local-empty singleton blocks <=5;
+if d_2(P)>=6, that number is <=3.       (5.1)
+```
+
+Moreover, four or five rank-two singleton blocks can occur only in the unique coefficient-column profile
+
+```text
+z=3,
+n=5,
+(m_i)=(1,1,1,1,1),
+d_1(P)=4.
+```
+
+## 6. Consequence for the nine-singleton Profile B source
+
+Profile B has exactly nine actual singleton changed blocks.
+
+Every one is either aligned rank one or rank-two local-empty. By (5.1):
+
+```text
+all Profile B sources:          aligned singleton blocks >=4;
+if d_2(P)>=6:                   aligned singleton blocks >=6.
+```
+
+If fewer than six blocks are aligned, then necessarily
+
+```text
+d_2(P)=5,
+z=3,
+projective multiplicities=(1,1,1,1,1),
+d_1(P)=4.
+```
+
+Thus the remaining source search has a sharp dichotomy:
+
+1. **five-support coefficient plane:** `d_2=5`, with the unique five-distinct-projective-column profile and at least four aligned singleton blocks; or
+2. **larger coefficient support:** `d_2>=6`, with at least six aligned singleton blocks.
+
+This reduction is independent of the heavy fixed-nine/kernel-lattice census and can be checked before descendant construction. The next useful step is to combine this aligned-block dichotomy with the exact source pure-dependency space `W` and the all-eight clean puncture kernels. In particular, if the source projective profile allows fewer than three rank-two singleton blocks, at least one of the three dependency-active changed blocks forced by `dim W=3` must be aligned; such a block persists through every one- and two-coordinate puncture and therefore has aligned touch support three or four.

@@ -1,0 +1,163 @@
+# Target C — two-half-disk interface is sublinear under full local labeling
+
+**Date:** 2026-09-12  
+**Status:** proof-only candidate; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This note closes one bookkeeping gap in the two-half-disk branch.  The previously
+defined group-interface currency counted every strict-rhombus edge on the boundary of
+one dominant group whose other side was outside that group.  A thin residual strip was
+left as a possible linear source of such edges.  Section 129 locality removes that
+possibility for local quadrilateral faces.
+
+The implication chain is
+
+```text
+§129: only o(D) strict rhombi are nonlocal
+  + adjacent local rhombi have the same harmonic-cell label
+  -> every dominant-group interface edge touches a nonlocal rhombus
+  -> I_D <= 4(R_4 - sum_r R_r) = o(D)
+  -> t + 2 f/D >= 2 + gamma in the two-half-disk branch.
+```
+
+The last inequality is weaker than the existing two-half-disk train floor, so this
+does not close C-II.  It does remove the residual-interface quantity as an independent
+linear obstruction under the stated harmonic-cell labeling.
+
+## 1. Definitions
+
+Use the audited all-regime two-half-disk alternative.  Let `G_1,G_2` be the two
+dominant groups of harmonic cells, and let `R_i` be **all** physical strict-rhombus
+faces that are local to a cell in `G_i`.  Thus a group includes every local
+quadrilateral of each of its cells, not only the quadratic-area subfamily used in the
+train extraction.
+
+Let `R_4` be the full strict-rhombus complex and `R_loc` the union of all local
+quadrilaterals over all harmonic cells.  Section 129 gives the finite missing-rhombus
+bound
+
+\[
+N_{\rm miss}:=|R_4\setminus R_{\rm loc}|
+ =R_4-\sum_rR_r\le 3c_I+5=o(D).
+\tag{1.1}
+\]
+
+Let `I_D` count occurrences in the physical boundary of `R_1` or `R_2` whose other
+side is occupied by a strict rhombus outside the same dominant group.  Occurrences,
+not distinct geometric edges, are counted.
+
+## 2. Local adjacency cannot change the harmonic-cell label
+
+Take two local quadrilateral rhombi sharing a full contact edge.
+
+* If the shared edge has an unloaded endpoint, that endpoint belongs to both local
+  harmonic-cell graphs.  The two graphs therefore have the same connected unloaded
+  component and the same cell label.
+* If both endpoints are loaded, the edge is loaded-loaded.  In the Type-II
+  localization this is a force-hull side.  The force hull lies on only one side of a
+  hull side, whereas two bounded rhombus faces sharing the edge would occupy opposite
+  sides.  Hence this case cannot occur for two bounded local rhombi.
+
+Therefore two adjacent local rhombi always have the same harmonic-cell label.  This is
+the same label-persistence step used in the audited groupwise atomic-train reduction;
+no contact-isolated source point is removed.
+
+## 3. Interface bound
+
+Consider an occurrence counted by `I_D`.  Its dominant-side rhombus is local by the
+definition of `R_i`.  If the opposite rhombus were also local, the label-persistence
+claim would put it in the same harmonic cell and hence in the same dominant group,
+contrary to the definition of `I_D`.  Thus the opposite strict rhombus is in
+`R_4\setminus R_loc`.
+
+Each missing rhombus has four sides and can account for at most one group-boundary
+occurrence per side.  Consequently
+
+\[
+\boxed{I_D\le 4N_{\rm miss}\le 12c_I+20=o(D).}
+\tag{3.1}
+\]
+
+This remains valid if one missing rhombus borders two dominant groups on different
+sides; the four-side occurrence count already includes that possibility.
+
+## 4. Source-level consequence
+
+The two-half-disk physical-interface transport calculation gives
+
+\[
+{I_D\over D}\ge
+\left[4+2\gamma-2{q-k\over D}-4{f\over D}-o(1)\right]_+,
+\qquad
+\gamma={\pi\over8}(4-2\sqrt3).
+\tag{4.1}
+\]
+
+Insert `I_D=o(D)`.  The positive part can then be removed in the equivalent form,
+
+\[
+\boxed{
+{q-k\over D}+2{f\over D}
+\ge 2+\gamma-o(1).
+}
+\tag{4.2}
+\]
+
+This is a genuine source-level inequality, but it is not a closure by itself.
+
+## 5. Scalar audit against the current train floor
+
+Write
+
+\[
+t={q-k\over D},\qquad \kappa={k\over D},\qquad
+C=\liminf {T-q/2\over D},
+\]
+
+and use the exact ledger `2f-k=T-q`.  Along a subsequence on which the limits exist,
+
+\[
+{f\over D}= {C\over2}-{t\over4}+{\kappa\over4}+o(1),
+\qquad
+t+2{f\over D}=C+{t\over2}+{\kappa\over2}+o(1).
+\tag{5.1}
+\]
+
+The two-half-disk atomic-train floor is
+
+\[
+C\ge2\sqrt{2\Delta_2}=2.6935473741\ldots,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+\tag{5.2}
+\]
+
+and the corresponding Section-146 elimination gives `t>=1.9948294847...`.
+At the simultaneous endpoint `kappa=0`, `C=2.6935473741...`, and
+`t=1.9948294847...`, equation (5.1) gives
+
+\[
+{f\over D}=0.8480663159\ldots,
+\qquad
+t+2f/D=3.6909621166\ldots>2+\gamma
+ =2.2104468036\ldots .
+\]
+
+Thus (4.2) is already satisfied with substantial slack by the surviving scalar
+endpoint.  The interface estimate cannot supply the missing outer-detour or
+source-preserving descent theorem.
+
+## 6. Scope and disposition
+
+- The argument uses the audited all-regime two-half-disk alternative, Section 129
+  full local-rhombus fidelity, and Type-II loaded-hull localization.
+- `I_D=o(D)` is conditional on taking each dominant group to contain all local
+  quadrilaterals of its constituent harmonic cells.  If a future grouping uses a
+  truncated subcomplex, (3.1) does not apply without restoring the omitted local
+  faces.
+- Contact-isolated source points remain in the full source.
+- No equality uniqueness, global optimality, or finite diameter descent is inferred.
+
+**Classification:** proved candidate awaiting promotion; proof-only.  C-II remains
+open.  The remaining full-core target is still the aggregate outer-walk detour coupled
+to `e_BB-k`, while the macroscopic inactive-container branch is separate.

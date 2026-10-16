@@ -1,0 +1,131 @@
+<!-- theorem-state: {"artifact_id":"ART-34A88C7B1CAB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: certified strict one-deficit root replacements
+
+Date: 2026-10-07. Base `d4cf8ad0`; current canonical main `dcc21aa879b61662318bceb9aeb174792e074eb0`, state `2026-10-06.audit.71`.
+Classification: **proved candidate awaiting independent audit** for the
+listed finite chamber exclusions, **exploratory** for arbitrary-M or
+all-small-curvature continuation. C-II and Level I remain open.
+
+## 1. Exact result and implication
+
+For M=4,5,6,8 and t=tan(theta/2)=1/50, the specified six-direction curved
+unit wall admits a strict N-site packet after deleting its wall vertex
+with axial index (1,M-1), where N=3M^2-3M+1. There is also a certified
+M=4 packet at t=1/10000. Thus an arbitrary old interior population z=N-1
+in any of these exact walls yields a full-source contact-loss contradiction.
+The old cloud need not be a lattice, a sorting packet or a vacancy chart.
+
+`certified strict N-site packet -> replace all z=N-1 old interior labels
+and one wall vertex -> all-source feasibility, zero new contacts and at
+least two removed contacts -> audit.64 canonical contradiction`.
+
+The finite positive-curvature results do not imply an arbitrary-M theorem,
+a source-independent onset as theta tends to zero, or extraction of one of
+these walls from an arbitrary macroscopic chamber. The single small-angle
+M=4 example does not prove the all-small-angle conclusion either.
+
+## 2. Construction
+
+Use the descending-order finite sorting packet from Worker 1 checkpoint
+15, whose formula is rechecked by the exact verifier. Write the angular
+rates as M-1,M-3,...,-M+1. Remove the *target* interior site (1,M-2).
+This leaves N-1 actual auxiliary packet sites. It is not a deletion of an
+unidentified old source point.
+
+For each listed geometry a separately supplied velocity field d(p) has
+
+`(p-q) dot (d(p)-d(q))>0`
+
+on every exact auxiliary unit pair with an interior endpoint, with all
+old wall velocities zero. These inequalities are checked in Q(sqrt(3));
+the discovery LP's feasibility tolerance is not used as evidence. For the
+four t=1/50 cases the velocity components are rational Cartesian values.
+The t=1/10000 example uses exact Q(sqrt(3)) values obtained from a
+specified invertible active-row basis.
+
+Perturb each interior auxiliary site by epsilon*d(p), with epsilon=10^-8
+in the larger-curvature cases and epsilon=10^-40 in the small case. The
+finite verifier checks every formerly inactive lower pair as well, so
+positive contact derivatives alone are not the finite proof.
+
+Let v be the deleted wall vertex (1,M-1), let w=v_lattice-u_lattice be
+the unit side direction in the sector (in Cartesian coordinates
+w=(-1/2,sqrt(3)/2)), and set
+
+`z=exp(i(M-2)theta) w`, `root=v+3 sin(theta) Jz`.
+
+The normal Jz is inward. Insert this root in addition to the N-1 opened
+interior sites. The exact finite checker verifies the root's strict
+clearance, containment and upper pairs simultaneously with the other
+sites. This root by itself was not enough in the stopped worker's final
+experiment: the decisive new ingredient is a certified opening of *all*
+remaining auxiliary contacts before inserting the root.
+
+## 3. Complete full-source exchange ledger
+
+Suppose a triangle-free canonical old source contains the entire listed
+wall and z=N-1 actual interior points. Delete all those old interior
+labels and the specified wall vertex. Insert the N distinct strict sites.
+Every retained source point strictly inside the wall has been counted and
+deleted, whatever its old contacts. No contact isolate is silently dropped.
+
+- All retained-to-retained pairs are unchanged.
+- Every inserted-to-inserted pair is strictly above one, as checked exactly.
+- Every inserted-to-retained wall pair is strictly above one, as checked.
+- Every inserted point is strictly inside the convex old wall. The canonical
+  one-vertex wall shield therefore checks *every* retained exterior source
+  point, including isolates, and gives strict lower clearance.
+- For the listed wall-only packet the verifier checks every inserted upper
+  pair strictly below its actual wall diameter. For an arbitrary old
+  completion, strict containment in the two-dimensional convex wall hull
+  implies strict distance below the actual old D to every old retained
+  point by strict convexity of squared distance. Packet-packet upper pairs
+  are likewise strict. Every old actual diameter constraint is either
+  unchanged or removed, and no inactive upper exception is discarded.
+- Exactly z+1=N labels are replaced; full cardinality is unchanged.
+- There are zero new contacts, so no inserted-involving unit triangle.
+  The retained source is already triangle-free.
+- At least the two old wall contacts incident to v disappear. Further old
+  interior contacts are counted as additional losses, never assumed absent.
+- No actual old diameter-pair loss is required. All new-involving diameter
+  pairs are absent; the remaining old diameter pairs are unchanged.
+
+If diameter drops, global minimality fails. If it remains D, contact
+minimality fails. This is exactly C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT,
+with j=0<t and full-source C-ONE-VERTEX-CONVEX-WALL-SHIELD. The replacement
+is not an asserted globally optimal configuration.
+
+## 4. Exact certificates and source provenance
+
+Input: `research/target_c_one_deficit_strict_root_velocity_certificate_2026_10_07.json`.
+Verifier: `research/verify_target_c_one_deficit_strict_root_packet_2026_10_07.py`.
+Output: `research/target_c_one_deficit_strict_root_packet_certificate_2026_10_07.json`.
+Arithmetic: rationals and exact sign decisions in Q(sqrt(3)); finite rational
+amplitudes. All limiting and inactive lower pairs, inserted upper pairs,
+wall contacts, strict convex containment and cardinality are checked.
+
+For the four t=1/50 packets: 830 exact opening rows; 34535 strict new lower
+pairs and the same number of strict new upper pairs; 14106 strict
+containment tests. The separate small M=4 packet repeats 92 opening rows,
+1517 lower/upper pairs and 888 containment tests.
+
+The sorting geometry and root proposal originate in Worker 1 at immutable
+`bf288c82e8a62466d5580025c94e750a177e63e2`, in its checkpoint-15 verifier
+and final exploratory release script. That stopped run correctly declined
+to infer a release from its tolerance-sized margins. The new conditioned
+discovery gives exact positive rows, and the new endpoint verifier supplies
+the complete finite packet rather than accepting an LP output.
+
+## 5. Next exact obligation
+
+The opening can be very small near zero curvature. A negative or zero
+floating margin and the absence of a strict second-order Taylor margin
+cannot prove impossibility of a higher-order finite release. The new finite
+examples resolve the original one-deficit *population* at their stated
+geometries, independently of the old cloud's structure.
+
+Next prove a symbolic positive opening for every sufficiently small t>0
+at fixed M, then establish an arbitrary-M construction or a robust transfer
+from actual chamber geometry to these packet classes. Full macroscopic
+container, paired-cap/core-release and full-core finite-move obligations
+remain independent and open. No canonical state is self-promoted.

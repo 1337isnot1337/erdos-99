@@ -1,0 +1,426 @@
+# Target C-II — repeated TB1 witnesses are either sparse or an ultra-near-unit matching
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** the one-sign / `NEAR-ACTIVE` side of the strong-TB1 contact-swap branch through `t=(q-k)/D<=1.8687`  
+**Dependencies:** repeated-witness collapse; exact path-layer support; common inverse-`D` TB1 row phase; source unit separation and diameter bound  
+**Certificate:** `research/verify_target_c_high_t_tb1_repeated_witness_packing_collapse_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The preceding double-witness theorem showed that a strict pair selected as the contact-minimal overswap witness at two different strong-TB1 interfaces must satisfy
+
+\[
+\operatorname{dist}(|xy|,\{1,D\})=O(D^{-2})
+\]
+
+and must lie in one common `O(D^-1)` projective row cone.
+
+Two further facts make the repeated branch much narrower than that theorem recorded.
+
+1. **Repeated selected witnesses are automatically vertex-disjoint.** We selected exactly one inactive witness at each one-sign interface. A pair selected twice uses exactly the two path layers containing its endpoints. Hence two repeated selected pairs cannot share a source vertex, because the unique layer containing that vertex would then have selected two different witnesses.
+
+2. **There are only `O(1)` row-parallel `D-O(D^-2)` pairs in the entire source.** The diameter bound forces the midpoints of any two such almost-diameter chords into a fixed-radius disk; their oriented chord vectors also differ by only `O(1)`. Therefore both endpoint populations lie in fixed-radius disks. Unit separation leaves only `O(1)` possible endpoints, hence only `O(1)` such pairs.
+
+Consequently a positive-density repeated selected-witness family cannot use the upper boundary at all. It is, up to `o(D)` exceptions, a vertex-disjoint family of pairs with
+
+\[
+\boxed{
+1<|xy|\le1+O(D^{-2})
+}
+\]
+
+and
+
+\[
+\boxed{
+d_{\mathbb{RP}^1}([xy],[u_*])=O(D^{-1}).
+}
+\]
+
+Thus the multiplicity-two side of the TB1 contact-swap fork has collapsed to a linear matching of ultra-near contacts parallel to the common train row direction.
+
+At the current strong-TB1 density floor
+
+\[
+s_0={791\over320{,}000{,}000},
+\]
+
+write `M` for the one-sign population, so
+
+\[
+M>{s_0\over2}D-o(D).
+\]
+
+If `d` denotes the number of selected witness pairs used twice, then either
+
+\[
+\boxed{
+d<{M\over4}
+\Longrightarrow
+N_{\rm distinct}>{3s_0\over8}D-o(D)
+}
+\]
+
+or
+
+\[
+\boxed{
+d\ge{M\over4}
+\Longrightarrow
+>{s_0\over8}D-o(D)
+}
+\]
+
+of the selected witnesses themselves form a vertex-disjoint ultra-near-unit, row-parallel matching. Numerically,
+
+\[
+{3s_0\over8}=9.26953125\times10^{-7},
+\qquad
+{s_0\over8}=3.08984375\times10^{-7}.
+\]
+
+No matching extraction is needed on the repeated side.
+
+---
+
+## 1. Repeated selected witnesses form a matching
+
+Let the nested selected shores be
+
+\[
+S_0\supset S_1\supset\cdots,
+\]
+
+and let
+
+\[
+R_i=S_i\setminus S_{i+1}
+\]
+
+be the full source layer translated by the contact-swap move at interface `i`. The layers `R_i` are pairwise disjoint.
+
+Choose **one** inactive overswap witness `h_i` at each one-sign interface `i`.
+
+Suppose an unordered source pair `h=xy` is selected at two distinct interfaces `i,j`. The exact layer-support identity says a pair moves under the translation of `R_k` exactly when one of its endpoints belongs to `R_k`. Since a pair has only two endpoints and the layers are disjoint, selection at both `i,j` forces, after relabeling,
+
+\[
+\boxed{x\in R_i,\qquad y\in R_j.}
+\tag{RP.1}
+\]
+
+Now suppose two repeated selected pairs `xy` and `xz` shared the source vertex `x`. The vertex `x` belongs to one unique selected layer, say `R_i`. By (RP.1), each repeated pair must be selected at interface `i`. But the choice rule assigned only one witness `h_i` to that interface. Contradiction.
+
+Therefore
+
+\[
+\boxed{
+\text{the graph of repeated selected witnesses has maximum degree }1.
+}
+\tag{RP.2}
+\]
+
+In particular it is already a vertex-disjoint matching. This is stronger than applying a graph matching theorem after classifying the witness lengths.
+
+---
+
+## 2. A global cap for almost-diameter chords in one inverse-`D` projective cone
+
+The following elementary packing lemma removes the repeated near-diameter alternative.
+
+### Lemma RP.1 — parallel almost-diameters are globally bounded
+
+Fix constants `A,L>0`. Let `X` be any finite planar set with
+
+\[
+|p-q|\ge1
+\quad(p\ne q),
+\qquad
+\operatorname{diam}(X)\le D.
+\]
+
+Let `E_D(A,L)` be the unordered pairs `xy` satisfying
+
+\[
+D-{A\over D^2}\le |x-y|<D
+\tag{RP.3}
+\]
+
+and
+
+\[
+d_{\mathbb{RP}^1}([xy],[u_*])\le {L\over D}
+\tag{RP.4}
+\]
+
+for one fixed projective direction `[u_*]`.
+
+Then, for all sufficiently large `D`,
+
+\[
+\boxed{|E_D(A,L)|=O_{A,L}(1).}
+\tag{RP.5}
+\]
+
+The bound is independent of `D` and of `X`.
+
+### Proof
+
+Orient every edge in the common projective cone so that
+
+\[
+r_e=y_e-x_e=\ell_e d_e,
+\qquad
+\angle(d_e,u_*)\le {L\over D}.
+\tag{RP.6}
+\]
+
+Write
+
+\[
+m_e={x_e+y_e\over2}.
+\]
+
+Take two edges `e,f`. The two cross-endpoint distances are at most `D`. The exact parallelogram identity gives
+
+\[
+\begin{aligned}
+&\left|m_f-m_e+{r_e+r_f\over2}\right|^2
++
+\left|m_f-m_e-{r_e+r_f\over2}\right|^2\\
+&\qquad=2|m_f-m_e|^2+{1\over2}|r_e+r_f|^2
+\le2D^2.
+\end{aligned}
+\tag{RP.7}
+\]
+
+Hence
+
+\[
+|m_f-m_e|^2
+\le
+D^2-{1\over4}|r_e+r_f|^2.
+\tag{RP.8}
+\]
+
+The angle between `r_e,r_f` is at most `2L/D`, while both lengths are at least `D-A/D^2`. Therefore
+
+\[
+{1\over2}|r_e+r_f|
+\ge
+\left(D-{A\over D^2}\right)\cos{L\over D},
+\]
+
+so
+
+\[
+\boxed{
+|m_f-m_e|^2
+\le
+D^2-\left(D-{A\over D^2}\right)^2\cos^2{L\over D}
+=L^2+o(1).
+}
+\tag{RP.9}
+
+Thus all edge midpoints lie in one fixed-radius disk.
+
+Also
+
+\[
+\begin{aligned}
+|r_e-r_f|
+&\le |\ell_e-\ell_f|+\ell_f|d_e-d_f|\\
+&\le {A\over D^2}+2D\sin{L\over D}\\
+&\le2L+1
+\end{aligned}
+\tag{RP.10}
+\]
+
+for all sufficiently large `D`. Fix one reference edge `e_0`. From
+
+\[
+x_e=m_e-{r_e\over2},
+\qquad
+y_e=m_e+{r_e\over2},
+\]
+
+(RP.9)--(RP.10) place every oriented left endpoint `x_e` in one fixed-radius disk about `x_{e_0}`, and every right endpoint `y_e` in one fixed-radius disk about `y_{e_0}`.
+
+The source is unit-separated. Disjoint radius-`1/2` disks around source points show that each fixed-radius endpoint disk contains only `O_{A,L}(1)` source points. There are therefore only `O_{A,L}(1)` possible ordered pairs `(x_e,y_e)`, proving (RP.5). `square`
+
+### Remark
+
+This is stronger than the bounded-degree lemma in the previous double-witness note. That lemma already upgraded a linear repeated near-diameter family to a linear matching. Lemma RP.1 says the whole row-parallel `D-O(D^-2)` family is bounded, so a positive-density repeated upper-witness family cannot occur at all.
+
+---
+
+## 3. Application to repeated TB1 witnesses
+
+The double-witness theorem supplied uniform constants `A,L` such that every repeated selected upper witness satisfies
+
+\[
+D-{A\over D^2}\le |xy|<D
+\]
+
+and
+
+\[
+d_{\mathbb{RP}^1}([xy],[u_*])\le {L\over D}.
+\]
+
+Lemma RP.1 therefore gives
+
+\[
+\boxed{
+N_{\rm repeated,upper}=O(1)=o(D).
+}
+\tag{RP.11}
+
+Every other repeated selected witness is a lower witness. By the same double-witness theorem it satisfies, uniformly,
+
+\[
+\boxed{
+1<|xy|\le1+{A'\over D^2},
+\qquad
+d_{\mathbb{RP}^1}([xy],[u_*])\le {L'\over D}.
+}
+\tag{RP.12}
+
+Together with (RP.2), any positive-density repeated selected-witness family is therefore itself, after deleting only `O(1)` edges, a vertex-disjoint matching of ultra-near-unit pairs in the common row cone.
+
+For completeness, the geometry also gives maximum degree at most two even before using the selection rule. At a fixed vertex, two incident edges whose rays use the same orientation of the projective row cone have endpoint distance
+
+\[
+O(D^{-2})+2(1+o(1))\sin(L'/D)=O(D^{-1})<1,
+\]
+
+contrary to source unit separation. Hence at most one neighbor may lie in each of the two oriented row cones. The selected-witness matching statement is stronger.
+
+---
+
+## 4. Density dichotomy with no repeated-diameter branch
+
+Let
+
+\[
+M>{s_0\over2}D-o(D)
+\tag{RP.13}
+\]
+
+be the number of one-sign interfaces in the `NEAR-ACTIVE` branch. Choose one witness at each interface. Let
+
+- `d` be the number of distinct selected pairs used twice;
+- `s` be the number used once.
+
+Then
+
+\[
+M=s+2d,
+\qquad
+N_{\rm distinct}=s+d=M-d.
+\tag{RP.14}
+
+If
+
+\[
+d<{M\over4},
+\]
+
+then
+
+\[
+N_{\rm distinct}>{3M\over4}
+>{3s_0\over8}D-o(D).
+\tag{RP.15}
+
+If instead
+
+\[
+d\ge {M\over4},
+\]
+
+then
+
+\[
+d>{s_0\over8}D-o(D).
+\tag{RP.16}
+
+By (RP.11), at most `O(1)` of these repeated selected pairs are upper witnesses. Therefore more than
+
+\[
+\boxed{
+{s_0\over8}D-o(D)
+}
+\tag{RP.17}
+
+are lower witnesses satisfying (RP.12), and by (RP.2) they are already vertex-disjoint.
+
+Using
+
+\[
+s_0={791\over320{,}000{,}000},
+\]
+
+the final fixed-threshold fork is
+
+\[
+\boxed{
+\begin{array}{ll}
+\textbf{near-injective side:}&
+N_{\rm distinct}>
+(9.26953125\times10^{-7})D-o(D),\\[1ex]
+\textbf{repeated side:}&
+N_{\rm ultra-unit\ matching}>
+(3.08984375\times10^{-7})D-o(D).
+\end{array}
+}
+\tag{RP.18}
+\]
+
+Every edge in the second line has lower slack `O(D^-2)`, one common inverse-`D` row direction, and exactly two strong-TB1 layer tags.
+
+More generally the cutoff `M/4` is arbitrary. For any fixed `0<alpha<1/2`, either
+
+\[
+N_{\rm distinct}>(1-\alpha){s_0\over2}D-o(D),
+\]
+
+or at least
+
+\[
+\alpha {s_0\over2}D-o(D)
+\]
+
+repeated selected pairs survive; all but `O(1)` of the latter are ultra-near-unit matching edges.
+
+---
+
+## 5. Frontier effect
+
+The one-sign strong-TB1 branch no longer has a positive-density repeated near-diameter escape.
+
+The contact-swap obstruction now has only two large-scale support patterns:
+
+```text
+one-sign strong-TB1 interfaces of linear density
++
+one selected inverse-D inactive witness per interface
+
+-> either
+
+   witness selection is mostly injective:
+   > (3 s0 / 8) D distinct inverse-D witnesses;
+
+or
+
+   witness reuse has positive density:
+   > (s0 / 8) D vertex-disjoint pairs with
+        length = 1 + O(D^-2),
+        projective direction O(D^-1) from the common row line,
+        exactly two strong-TB1 layer tags.
+```
+
+The second branch is now a near-contact matching, not a generic inactive-slack family. Its natural next target is a simultaneous paired-layer exchange: each matching edge is the unique selected blocker at both of its endpoint layers, while the two corresponding overswap axes are in the same inverse-`D` transverse cone. A successful two-layer cancellation would remove both appearances of that primary witness at once.
+
+On the mostly-injective side, the next target remains a separated simultaneous family of contact-minimal overswaps or a train-order bound on how many distinct inverse-`D` witnesses can be supported without creating the repeated pattern.
+
+**Disposition:** eliminated the positive-density repeated near-diameter branch and upgraded positive-density witness reuse to a linear, already vertex-disjoint, `1+O(D^-2)` row-parallel matching. C-II and Level I remain open.

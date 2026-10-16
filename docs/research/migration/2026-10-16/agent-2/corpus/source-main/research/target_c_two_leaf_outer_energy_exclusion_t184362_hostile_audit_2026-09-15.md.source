@@ -1,0 +1,436 @@
+# Hostile audit — two-leaf outer-energy exclusion through `t=1.84362`
+
+**Date:** 2026-09-15  
+**Reviewed:**
+- `research/target_c_two_leaf_outer_energy_exclusion_t184362_2026-09-15.md`
+- `research/verify_target_c_two_leaf_outer_energy_exclusion_t184362.py`
+- hostile-audited parent exclusion through `t=1.8436`
+- hostile-audited strong phase-star / physical center-leaf pair theorem
+- hostile-audited cross-phase O--O terminal-energy theorem
+
+**Disposition:** **PASS at the stated proof-only full-core/no-macroscopic-container Type-II scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The candidate raises the parent exclusion from `1.8436` to `1.84362`.  The final
+outer-energy contradiction is not the dangerous part: it has more than `0.004D` slack.
+The audit therefore concentrates on the only new structural step, the enlarged
+phase-localization box
+
+\[
+h<0.00028,
+\qquad
+W<1.912606,
+\qquad
+U,V<0.525.
+\]
+
+The remaining modules are the same ones independently audited for the `1.8436`
+theorem, with strictly weaker numerical conclusions.
+
+---
+
+## 1. Residual localization really extends to `h<0.00028`
+
+At the adverse endpoint
+
+\[
+t=1.84362,
+\qquad h=0.00028,
+\qquad x=0,
+\]
+
+the exact certificate evaluates the parent survivor-capacity boundary and obtains
+
+\[
+F(A)-\delta>2.3269\times10^{-5}.
+\]
+
+The parent derivative estimates remain strict on the enlarged box:
+
+\[
+Q_h<-2.5,
+\qquad
+Q_x<-2.7.
+\]
+
+The detour ceiling remains below `0.052`, so none of the denominator bounds used in
+the derivative proof changes sign.  Thus increasing either residual variable can only
+make survival harder, and every survivor with `t<=1.84362` satisfies
+
+\[
+0\le h<0.00028-o(1).
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 2. The dominant mass and crossing bounds are outward-safe
+
+The candidate uses
+
+\[
+W<1.912606,
+\qquad
+E_{dom}>0.9068995.
+\]
+
+The certificate proves
+
+\[
+1.912606-(C_{77}+0.00028)>3.86\times10^{-7}
+\]
+
+and
+
+\[
+\Delta_2-{(1.05\cdot0.00028)^2\over4}-0.9068995
+>1.60\times10^{-7}.
+\]
+
+Both are small but exact positive outward margins.  No decimal equality is being used.
+
+**Verdict:** PASS.
+
+---
+
+## 3. Low-center phase capacity is monotone on the whole enlarged interval
+
+Assume the larger leaf has mass at least
+
+\[
+U_0=0.525.
+\]
+
+The low-center branch ends at
+
+\[
+C_0=W_0-2U_0=0.862606.
+\]
+
+The candidate uses
+
+\[
+\Phi(C)
+=C(W_0-C)
+-{1\over10}\left(3-{W_0\over C}\right)
+\left({W_0+C\over2}-K\right)^2,
+\qquad K={2\over\sqrt3}.
+\]
+
+A potential audit failure would be checking only `Phi'(C_0)>0` while allowing an
+interior maximum.  This does not occur.  Put
+
+\[
+r={W_0+C\over2}-K,
+\qquad
+q=3-{W_0\over C}.
+\]
+
+Then
+
+\[
+\Phi''(C)
+=-2-{1\over10}
+\left(
+-{2W_0r^2\over C^3}
++{2W_0r\over C^2}
++{q\over2}
+\right).
+\]
+
+On the whole relevant interval `0.525<C<=0.862606`, one has `0<r<0.234` and
+`q>-0.644`.  Dropping the positive middle term gives a crude lower bound on the
+parenthesis greater than `-2`, hence
+
+\[
+\Phi''(C)<-1.8<0.
+\]
+
+Therefore `Phi'` is decreasing and its minimum is at `C_0`.  The exact certificate
+checks
+
+\[
+\Phi'(C_0)>0.155
+\]
+
+and
+
+\[
+E_0-\Phi(C_0)>0.005409.
+\]
+
+Thus the entire low-center interval is excluded, not merely its endpoint.
+
+**Verdict:** PASS.
+
+---
+
+## 4. The strong physical-pair branch remains valid throughout the main interval
+
+The main interval is
+
+\[
+0.862606<C<1.044.
+\]
+
+Here `C<K=2/sqrt(3)` and `U>=V`.  Consequently the strong-branch ratio for the smaller
+leaf cannot exceed the corresponding larger-leaf ratio.  The adverse ratio is attained
+at the upper center endpoint with `U=U_0`:
+
+\[
+{1.044+0.525-K\over0.525}<0.792.
+\]
+
+The exact certificate compares this with the exact radical threshold and obtains
+
+\[
+0.792<\sqrt{20/29}-0.0413.
+\]
+
+Hence both center-leaf pairs stay inside the hostile-audited `1/10` physical branch.
+No fallback `2/29` branch is silently imported.
+
+**Verdict:** PASS.
+
+---
+
+## 5. The adverse `W,U` replacement is in the correct direction
+
+On the main interval, the correlated strong capacity is
+
+\[
+C(U+V)
+-{1\over10}\left(1-{V\over C}\right)(C+U-K)^2
+-{1\over10}\left(1-{U\over C}\right)(C+V-K)^2,
+\]
+
+with `V=W-C-U`.
+
+The hostile-audited parent two-leaf theorem proves on exactly this strong branch that:
+
+1. the capacity increases with total orbit mass `W`;
+2. at fixed `C,W`, it decreases as the larger leaf `U` increases while `U>=V`.
+
+The enlarged candidate box remains inside the same sign regime `C<K`, `C>=U>=V`.
+A direct numerical hostile scan over the full box gives minimum `d/dW>0.850` and
+maximum `d/dU=0`, attained only at the balanced endpoint `U=V`; these numerics are
+non-load-bearing and agree with the analytic sign argument from the parent theorem.
+
+Therefore replacing
+
+\[
+W\mapsto1.912606,
+\qquad
+U\mapsto0.525
+\]
+
+is adverse exactly as claimed.
+
+**Verdict:** PASS.
+
+---
+
+## 6. The one-variable main capacity has no missed interior maximum
+
+After the adverse replacement, write the one-variable capacity as `G(C)`.  The exact
+algebra used by the parent theorem gives
+
+\[
+G''(C)<-2
+\]
+
+throughout the main interval.  The certificate checks the load-bearing polynomial at
+the lower endpoint; its left side is increasing with `C`, so this controls the whole
+interval.
+
+At
+
+\[
+c_*=0.931922
+\]
+
+the tangent parabola bound gives
+
+\[
+\max G
+\le G(c_*)+{G'(c_*)^2\over4}
+<0.9068995-1.47\times10^{-5}.
+\]
+
+The generic center capacity separately excludes `C>=1.044`, and the certificate also
+checks `C<=0.525` is impossible.  Thus all center regimes are covered.
+
+Therefore
+
+\[
+\boxed{U,V<0.525-o(1)}
+\]
+
+is valid.
+
+**Verdict:** PASS.
+
+---
+
+## 7. The retained-mass and phasewise bathtub extension is safe
+
+Under a cap
+
+\[
+z\le2.2195,
+\]
+
+the same boundary maximization hostile-audited for the parent theorem gives
+
+\[
+h_*=R_{1.84362}-2F(2.2195)<0.000232<0.00028.
+\]
+
+The exact capped-retention excess is below
+
+\[
+-3.91\times10^{-5}.
+\]
+
+The complementary `delta<F(Z)` branch uses the same strictly negative `Q_h,Q_x`
+derivatives already checked in Section 1.  Hence
+
+\[
+z>2.2195-o(1).
+\]
+
+For the phasewise split, `f(s)=s-2sin(s/2)` remains increasing and strictly convex.
+Since
+
+\[
+0.7100<{2.2195\over3},
+\]
+
+if one phase had mass at most `0.7100`, the cheapest split is
+
+\[
+\left(0.7100,{2.2195-0.7100\over2},{2.2195-0.7100\over2}\right).
+\]
+
+The exact certificate puts its energy more than `3.93e-6` above the complete detour
+ceiling.  The margin is small but exact.
+
+Thus every retained phase has mass above `0.7100D-o(D)`.
+
+**Verdict:** PASS.
+
+---
+
+## 8. Pair weight and common-center loss are normalized correctly
+
+From
+
+\[
+z_i\le M_i+P_i+o(1),
+\]
+
+the two leaf bounds give
+
+\[
+P_U,P_V>0.7100-0.525-o(1)=0.185-o(1).
+\]
+
+For the common-center step, the candidate substitutes
+
+\[
+W<1.912606,
+\quad E_{dom}>0.9068995,
+\quad U<0.525
+\]
+
+into
+
+\[
+B_{bad}
+\le{2[C(W-C)-E_{dom}]\over C-U}+o(1).
+\]
+
+The denominator is positive: generic center capacity gives `C>0.525`, and the exact
+certificate checks
+
+\[
+0.525(1.912606-0.525)<0.9068995.
+\]
+
+Replacing `W,E,U` by the displayed adverse bounds can only increase the quotient.  The
+claim `B_bad<0.036` reduces to a quadratic with positive leading coefficient and exact
+discriminant
+
+\[
+<-0.00106<0.
+\]
+
+Thus even charging the entire bad weight to one leaf leaves
+
+\[
+G_U,G_V>0.149-o(1).
+\]
+
+No weighted-to-unweighted conversion is used.
+
+**Verdict:** PASS.
+
+---
+
+## 9. The final cross-leaf energy ledger inherits the parent hostile audit unchanged
+
+Every good leaf train crosses more than half of the same finite center family.  Hence
+every good U/V pair shares a center neighbor.  Triangle-freeness of the stopped-train
+crossing graph forces that pair to be noncrossing.  The hostile-audited endpoint theorem
+then gives
+
+\[
+e_\tau+e_\sigma\ge2-\sqrt3-o(1).
+\]
+
+Weighted complete-product averaging gives
+
+\[
+E_U+E_V
+\ge(2-\sqrt3)\min(G_U,G_V)-o(1)
+>(2-\sqrt3)(0.149)-o(1).
+\]
+
+This leaf terminal energy is a submeasure of the two leaf selected outer-edge
+populations.  The center one-well term `f(z_C)` is supported on the disjoint center
+phase window, so the two payments add without double counting.
+
+The exact certificate proves
+
+\[
+(2-\sqrt3)(0.149)+f(0.7100)
+>{R_{1.84362}\over2}+0.00434.
+\]
+
+This is a macroscopic contradiction and absorbs all source-limit/window-limit errors.
+
+**Verdict:** PASS.
+
+---
+
+## Final disposition
+
+All new obligations introduced by moving the endpoint from `1.8436` to `1.84362` pass:
+
+- residual localization to `h<0.00028`;
+- larger-leaf localization to `U,V<0.525`;
+- retained total mass `z>2.2195`;
+- phasewise retained mass `z_i>0.7100`;
+- total bad common-center pair weight `<0.036`;
+- final disjoint outer-energy contradiction with margin `>0.00434`.
+
+Therefore the candidate proof-only full-core Type-II strengthening
+
+\[
+\boxed{\liminf (q-k)/D\ge1.84362}
+\]
+
+is certified at its stated scope.
+
+C-II and Level I remain open.

@@ -1,0 +1,171 @@
+# Target C-II — modern all-train gap forces a low-degree exceptional-face staircase
+
+**Date:** 2026-09-15
+**Status:** proof-only high-t structural strengthening
+**Scope:** canonical full-core/no-macroscopic-container Type-II train-measure branch
+**Dependencies:** scope-safe all-train gap `g=0.007707`; stopped-train/face ledger; Type-II force-hull perimeter convergence; hostile-audited isolate-host degree-7 theorem
+**Certificate:** `research/verify_target_c_low_degree_face_staircase.py`
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+Let
+
+\[
+C_{707}=2\sqrt{\Delta_2}+0.007707,
+\qquad \Delta_2={\pi\over2\sqrt3},
+\qquad t={q-k\over D}.
+\]
+
+For an integer `r>=5`, let
+
+\[
+F_{\le r}:=\sum_{d=5}^r f_d
+\]
+
+be the number of bounded exceptional contact faces of degree at most `r`.
+
+For every fixed endpoint `t<=X`,
+
+\[
+\boxed{
+\liminf {F_{\le r}\over D}
+\ge
+L_r(X):={ (r-3)C_{707}/2+\pi-(r+5)X/4\over r-4}.
+}
+\tag{LD.1}
+\]
+
+Thus `F_{<=r}=Omega(D)` whenever
+
+\[
+\boxed{
+X<X_r:={2(r-3)C_{707}+4\pi\over r+5}.
+}
+\tag{LD.2}
+
+The exact certificate gives
+
+\[
+\begin{array}{c|c}
+r & X_r\\ \hline
+5 & >2.0215\\
+6 & >2.1854\\
+7 & >2.3220\\
+10 & >2.6225\\
+15 & >2.9230\\
+22 & >3.1568.
+\end{array}
+\tag{LD.3}
+
+## Proof
+
+The scope-safe all-train theorem and exact stopped-train identity give
+
+\[
+{T-q/2\over D}
+={t\over2}+2{f\over D}-{k\over2D}
+\ge C_{707}-o(1).
+\]
+
+Since `k>=0`,
+
+\[
+\boxed{{f\over D}\ge {C_{707}\over2}-{t\over4}-o(1).}
+\tag{LD.4}
+\]
+
+The exact outer ledger is `b+Q=2(q-k)`. The outer contact walk contains the force-hull boundary and `per(F)/D -> pi`, hence
+
+\[
+\boxed{{Q\over D}\le2t-\pi+o(1).}
+\tag{LD.5}
+\]
+
+Now
+
+\[
+f=\sum_{d\ge5}f_d,
+\qquad Q=\sum_{d\ge5}(d-4)f_d.
+\]
+
+Every face counted by `F_{<=r}` contributes at least one unit to `Q`; every remaining face has degree at least `r+1` and contributes at least `r-3`. Therefore
+
+\[
+Q\ge F_{\le r}+(r-3)(f-F_{\le r})
+=(r-3)f-(r-4)F_{\le r},
+\]
+
+so
+
+\[
+\boxed{F_{\le r}\ge{(r-3)f-Q\over r-4}.}
+\tag{LD.6}
+\]
+
+Substituting (LD.4)-(LD.5) proves (LD.1), and solving `L_r(X)>0` gives (LD.2). For `r=5`, this is exactly the modern pentagon inequality `P_5>=2f-Q`.
+
+## Certified endpoint rows
+
+The verifier proves
+
+\[
+\begin{array}{c|c|c}
+X & r & F_{\le r}/D\text{ lower}\\ \hline
+2.10 & 6 & >0.1175\\
+2.18 & 6 & >0.0075\\
+2.20 & 7 & >0.1220\\
+2.30 & 7 & >0.0220\\
+2.50 & 10 & >0.0766\\
+3.00 & 22 & >0.0588.
+\end{array}
+\tag{LD.7}
+
+Thus after the pentagon-only floor has vanished, the branch `t<=2.10` still contains more than `0.1175D-o(D)` bounded pentagon-or-hexagon faces.
+
+## Source-empty 5/6 row
+
+The hostile-audited isolate-host theorem is exact: a bounded canonical contact face containing an assigned contact-isolated source point has degree at least seven. Hence every face counted by `F_{<=6}` is source-empty.
+
+Therefore throughout `t<=2.1854`, the forced low-degree population consists of source-empty convex equilateral unit-separated pentagons and hexagons. At `t<=2.10`, more than `0.1175D-o(D)` such empty chambers are present.
+
+The existing Wegner/Groemer 5/6-face stability theorem can be applied facewise on this population without an interior-isolate correction. It still requires small face residual to conclude a hidden near-unit diagonal; no such residual smallness is asserted here.
+
+## Terminal-train consequence
+
+Every side occurrence of a bounded exceptional face is a terminal occurrence of its complete stopped train. A complete train has at most two terminal occurrences. Since every exceptional face has degree at least five,
+
+\[
+\boxed{N_{\le r}\ge {5\over2}F_{\le r},}
+\tag{LD.8}
+
+where `N_{<=r}` counts distinct stopped trains terminating on at least one degree-`<=r` exceptional face. At `t<=2.10`,
+
+\[
+\boxed{N_{\le6}>0.2937D-o(D).}
+\tag{LD.9}
+
+## Universal Type-II row
+
+Consecutive loaded force-hull vertices are unit-separated, so `q<=per(F)`. Since `k>=0` and `per(F)/D->pi`, every Type-II sequence has
+
+\[
+\boxed{t\le\pi+o(1).}
+\tag{LD.10}
+
+The `r=22` threshold in (LD.3) is strictly above `pi`. Substituting the adverse endpoint directly gives the certified universal bounds
+
+\[
+\boxed{\liminf {F_{\le22}\over D}>0.0057,}
+\tag{LD.11}
+\]
+
+and
+
+\[
+\boxed{N_{\le22}>0.0142D-o(D).}
+\tag{LD.12}
+
+Thus no Type-II branch can escape by sending essentially all bounded defect faces to unbounded degree.
+
+This does not close C-II. The next useful steps are to control fixed-boundary residual on the linear 5/6 population, use the terminal-train population against phase/crossing capacity, or build a source-level local exchange on the source-empty low-degree chambers.
+
+**Disposition:** proved a uniform low-degree exceptional-face staircase from the modern all-train gap. C-II and Level I remain open.

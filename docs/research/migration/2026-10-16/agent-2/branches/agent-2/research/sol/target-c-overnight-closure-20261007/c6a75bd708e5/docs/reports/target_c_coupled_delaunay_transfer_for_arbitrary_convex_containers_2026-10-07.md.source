@@ -1,0 +1,232 @@
+<!-- theorem-state: {"artifact_id":"ART-2B746385FFA4","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: a coupled Delaunay transfer for arbitrary convex containers
+
+Date: 2026-10-07. Authority: audit.77, main
+`d71085cd0130941642796d8717d7e9fb2949b718`.
+**Proved candidate awaiting independent audit.** No promotion.
+
+## 1. The transfer and its exact remaining endpoint
+
+Let A be any finite planar unit-separated source. Extend **the complete A**
+to one saturated auxiliary packing P of the plane. Use one Delaunay
+triangulation of P for every container. Let C be any compact convex polygon
+with nonempty interior, area Q, perimeter p, and z=|A intersect C|, with
+boundary source labels included. Write a=sqrt(3)/4 and a_0=2a, and put
+
+`S=Q/a_0+p/2+1-z>=0`,
+`B=|{x in P intersect C:dist(x,partial C)<=2}|`.
+
+There are at most floor(S) auxiliary additions in C, and
+
+`B <= 20*p/pi+25`.
+
+Let T be every Delaunay triangle fully contained in C and put
+`Sigma=sum_(t in T)(area(t)-a)`. Then
+
+`0<=Sigma<=a_0*S+28*a*B`.
+
+Apart from a set of at most
+
+`73*B+(12/delta+450)*Sigma` vertices,
+`delta=(2-sqrt(3))/4`,
+
+every interior vertex farther than two from the boundary has six incident
+triangles, all acute with individual excess below 1/100. These triangles
+have side/angle bounds
+
+`L-1<=5*(area(t)-a)`,
+`|angle-pi/3|<=50*(area(t)-a)`.
+
+All counts include original source points and auxiliary additions; the
+construction never deletes a contact isolate. Boundary strips, nonunit
+closing chords and different containers use the **same** auxiliary packing,
+so their rows and counts are geometrically compatible. Overlapping
+containers may not spend their shared triangle excess twice.
+
+This removes the unit-wall/regular-profile hypothesis from the geometric
+transfer. In the canonical macroscopic chamber or exterior-cap branch,
+S=O(D), p=O(D), z=Omega(D^2): the completion and exceptional skeleton cost
+O(D), while the original quadratic population remains. It supplies an
+actual coupled near-triangular skeleton for arbitrary convex containers,
+not merely an area estimate or an independently prescribed lattice.
+
+`arbitrary canonical container -> one coupled completion with O(D) cost
+and actual Delaunay defect skeleton -> source-realized movement/payment
+of this skeleton -> audit.64 contact/diameter exchange`.
+
+Only the first implication is proved. Neither auxiliary additions nor
+triangulation edges are automatically an admissible packet or positive
+contacts. The O(D) boundary/metric cost must be paid in the exact finite
+ledger; no one-integer contradiction drops it.
+
+## 2. Saturation, boundary and degree counts
+
+Enumerate a dense countable subset of the plane and add a proposed point
+whenever it is unit-separated from the current packing. Its locally finite
+limit P contains all of A and covers the plane by closed unit disks. If
+some x had distance greater than one from P, a sufficiently close proposed
+point would have been admitted, a contradiction. Bounded Voronoi cells
+and their convex cyclic dual faces give a Delaunay tiling; triangulate each
+co-circular face. Every circumradius is at most one and every edge length
+is between one and two. No new literature statement beyond this elementary
+empty-circle construction is imported.
+
+Oler applies to P intersect C, since it is finite. Its size is at most
+Q/a_0+p/2+1, hence the number of points added in C is at most floor(S).
+This counts all old boundary labels, including chord/side exceptions.
+
+The disjoint open radius-1/2 disks about the B boundary-strip points lie
+in the radius-5/2 neighbourhood of partial C. For any convex C and s>=0,
+the area of that neighbourhood is at most 2sp+pi*s^2: outer parallel
+area is Q+sp+pi*s^2; the lost inner strip has area at most sp, by
+integrating the perimeters of the convex inner parallel sets, each at
+most p. This remains valid when the inner parallel set is empty.
+Set s=5/2 and divide by pi/4 to obtain B<=20p/pi+25.
+
+At a vertex, every Delaunay neighbour is at distance at most two. The
+radius-1/2 disjoint disks about that vertex and all its neighbours lie
+in a radius-5/2 disk. Thus degree+1<=25 and degree<=24. The number of
+incident triangles is also at most 24. These rough constants are uniform
+and require no generic position, degree-six assumption or contact graph.
+
+## 3. Bulk Euler accounting without assuming a disk
+
+The union of the contained triangles is a finite pure planar simplicial
+complex. It can have holes or meet at isolated common vertices. Let V,E,T
+be its vertex, edge and triangle counts, b its number of edges incident
+to only one triangle, and chi its Euler characteristic. Then
+
+`3*T=2*E-b`, `chi=V-E+T`, hence `T=2*V-b-2*chi`.
+
+If c is its number of connected components, chi<=c. All saturated-packing
+points in C with boundary distance greater than two have their full
+Delaunay stars contained in C: neighbours are at distance at most two,
+and convexity puts each triangle there. Thus at least I>=z-B deep
+original points are vertices of the complex.
+
+Every boundary edge of this complex has both endpoints in the strip. If
+one endpoint were deep, its complete star would supply both incident
+triangles. Therefore b<=24B. Every nonempty component has a strip vertex;
+otherwise the component would be a finite collection of complete plane
+stars, with no boundary edge, which is impossible for a nonempty finite
+planar triangle complex. Consequently c<=B. It follows that
+
+`T>=2*I-26*B>=2*z-28*B`.
+
+The contained triangle interiors are disjoint. Each has area at least a
+by the unit-side/circumradius argument in the effective-chart report.
+Therefore
+
+`Sigma<=Q-a*T<=Q-a_0*z+28*a*B`
+`=a_0*S-a_0*(p/2+1)+28*a*B<=a_0*S+28*a*B`.
+
+This is one disjoint area currency. No overlap of nested stresses or
+independent charts is used. If there are no contained triangles, the
+same estimate remains valid.
+
+## 4. Boundary defects and metric defects
+
+Declare exceptional every strip vertex and every vertex of a triangle
+incident to a strip vertex. At most 24B triangles are incident to the
+strip, so this declaration costs at most 73B vertices. At all remaining
+vertices every incident triangle is wholly contained in C and its
+vertices are deep.
+
+For each obtuse-or-right triangle with deep vertices, the neighbour across
+its longest edge is contained in C. The local Delaunay pair inequality
+in the effective-chart report gives total pair excess at least delta.
+Each contained triangle is charged at most four times. Thus the number
+of such obtuse triangles is at most 4Sigma/delta. Independently, the
+number of contained triangles of excess at least 1/100 is at most
+100Sigma. Their incident vertices cost at most
+`(12/delta+300)*Sigma`.
+
+At an interior vertex outside these sets all incident triangles are
+acute with excess less than 1/100. The side/angle bounds in the effective
+chart report hold at this per-triangle scope. If its valence is not six,
+angle sum 2pi requires at least pi/150>1/50 total incident excess.
+The sum of all vertex-incident excess is at most 3Sigma, giving fewer
+than 150Sigma additional exceptional vertices. This proves the stated
+bound. Integer counts can be rounded downward after summing, not before
+an overlapping charge.
+
+Local equilateral development is available in defect-free simply connected
+patches. A global chart through the holes/exceptional vertices is not
+claimed: defect holonomy, cuts and orientation matching remain to be
+controlled. The diffuse-strain regression shows that even zero exceptional
+vertices do not remove the metric budget.
+
+## 5. Exterior exact saturation: a rederived Worker 2 input
+
+Here distinguish the core hull F=conv(V) from C. In the canonical source,
+V is the nonisolated positive-contact core. All actual diameter endpoints
+belong to V by the promoted ZR/ZF normalization. The unloaded core vertices
+are harmonic in each coordinate until reaching loaded vertices, so the
+maximum principle gives conv(V)=conv(B), the loaded force hull. No such
+claim is made about contact isolates.
+
+The following special case of Worker 2's E.6 is independently rederived,
+not promoted by its branch ancestry. Provenance: immutable W2 tip
+`f4a362727779f6afc0f01738015112c04fdb73d5`,
+`docs/reports/target_c_exterior_packet_release_and_unloaded_core_cut_2026-10-06.md`,
+Section 6. Its general multi-site stress-support argument is not needed here.
+
+**Exterior one-site saturation.** There is no point r outside int(F),
+distinct from the source, unit-clear (>=1) from every old source point,
+with every r-to-old upper distance strictly below D.
+
+Indeed delete any actual contact-active core vertex v and insert r.
+Choose a unit supporting/separating direction u at r with
+`(r-x) dot u>=0` for every core pin x in V; this exists because
+r is outside int(conv V). If outside F use nearest-point separation;
+if on its boundary use a supporting normal. Give r velocity u. For
+an old isolate z having |r-z|=1 give z velocity u+(z-r); give all other
+isolates zero velocity. Retain every isolate and pin all remaining core
+vertices. At an r-to-pin unit pair the first half-squared variation is
+nonnegative and its relative velocity u is nonzero, so the straight
+motion opens it by its first or second positive term. At an r-to-isolate
+unit pair the first half-squared variation is exactly one. All old pairs
+involving isolates have strict lower and upper slack; every r-involving
+upper constraint is strict by hypothesis. A sufficiently small positive
+finite amplitude preserves the entire list of inactive constraints and
+opens every new contact. All retained-to-retained changed pairs have
+been included through the isolate velocities. There is only one inserted
+point, hence no inserted-to-inserted pair. Cardinality is unchanged.
+
+The final graph is the induced old graph after deleting v, hence remains
+triangle-free and loses at least one actual contact. Every retained
+actual diameter pair stays unchanged; those incident to v disappear;
+no new diameter pair appears. Diameter below D contradicts globality;
+diameter D contradicts contact minimality. This proves the special case.
+
+Every new point in the old hull K=conv(A) has strictly sub-D distances
+to every old source point: a nonvertex convex combination gives strict
+convexity of squared norm, and the vertices of K are already old points.
+Thus in the common saturated completion P, every auxiliary point in K
+lies strictly inside F. In particular, no auxiliary point is added in
+any closed exterior cap contained in K outside int(F). The generic
+Delaunay transfer therefore uses **zero added cap sites** there, even
+though it still has O(D) boundary and metric defects.
+
+This conclusion strengthens compatibility of the cap/source skeleton;
+it does not manufacture capacity. It agrees with the low-angle zero-slot
+barrier and the full exterior-only packet release from W2. It does not
+permit a static exterior packet to pay even one deleted core label.
+A successful cap endpoint must move core/wall labels, enter int(F), or
+control new active upper constraints.
+
+## 6. Remaining quantified bridge
+
+For every sufficiently large canonical source in the macroscopic branch,
+use this actual common O(D) skeleton to produce one same-cardinality
+finite competitor that either loses contacts, loses an actual diameter
+pair at equal contact count, has all upper distances strictly below D,
+or forces an exact unit triangle. Required checks include all changed
+retained-old pairs, every inserted pair, old actual diameters and inactive
+upper exceptions, contacts, diameter count, triangles and cardinality.
+
+Two distinct attacks now use the same data: propagate defect/metric strain
+to a removable boundary set, or move a cap-backed/core stress transversal
+and refill through the force hull. The full-core face-coupled route remains
+independent. This report does not close C-II or Level I; the continuous
+closure run proceeds to these finite-move obligations.

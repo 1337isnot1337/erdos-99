@@ -1,0 +1,57 @@
+# Hostile audit — collapsed support-six corridor nonplanarity reduction
+
+**Audited source:** `research/target_c_support6_collapsed_corridor_nonplanarity_2026-09-18.md`  
+**Verdict:** PASS at the explicitly scoped conditional level  
+**Theorem-state authority:** unchanged
+
+## 1. Edge count
+
+The collapsed degree-pure host has twelve present internal pairs because `K_6` has
+fifteen pairs and the perfect matching removes three. There are six outside/activated
+incidences, one at each host. Treating the outside/activated terminal as one grounded
+host gives eighteen distinct skeleton edges on seven vertices.
+
+The count is not a count of raw contact edges. It is a count of complete train
+corridors under the note's contraction hypothesis. This distinction is binding.
+
+## 2. Planarity implication
+
+If the corridors are internally disjoint, their contraction is a minor of the planar
+cellulation and produces a simple planar graph on seven vertices. The simple planar
+bound `E <= 3V-6` gives `18 <= 15`, a contradiction. The argument does not use the
+auxiliary genus-two quotient from the local certificate.
+
+## 3. Crossing lower bound
+
+For a general-position drawing of the contracted skeleton, remove one edge incident to
+each crossing point. The remaining graph is planar, so at most `3V-6` edges survive.
+Hence the number of crossing events is at least `18-15=3`. This is only a lower bound
+on events, not on distinct train pairs; one train can participate in several crossings.
+
+The verifier also exhausts all `6!` cyclic endpoint orders in the all-outer common-host
+subcase. The internal graph has minimum convex chord-crossing count six. The cyclic
+order reduction uses only pairwise noncrossing of the six parallel anchor corridors and
+the common outer endpoint; it is not asserted for multiple activated hosts.
+
+In every one of the 48 minimum orders, the six crossing pairs form a single `C_6` on
+six internal train vertices, with the other six internal trains isolated. For the fixed
+collapsed `+++---` label word, 36 of the orders have two cyclic sign transitions and 12
+have six. This is an exact classification of the minimum pattern, not an assertion
+that the pattern is impossible.
+
+The verifier also records the colour refinement: in the 36 two-transition orders the
+six crossings split as `(2,0,4)` among (cross/cross, same/same, mixed) internal-train
+colour pairs; in the 12 alternating orders the split is `(0,6,0)`. This is only an
+exact finite classification of the minimum interaction pattern.
+
+## 4. Scope regression
+
+The conclusion is not that the collapsed branch is globally impossible. The current
+stopped-train model allows train corridors to share rhombi or interact at crossing
+cells, and those interactions invalidate the internally-disjoint contraction premise.
+The exact local collapsed realization therefore remains a binding regression against
+purely local exclusions.
+
+**Audit disposition:** PASS as a scoped global reduction. The missing theorem is now
+explicit: classify or exclude the at-least-three corridor interactions under the
+triangle-free train-crossing graph and the six parallel outside directions.

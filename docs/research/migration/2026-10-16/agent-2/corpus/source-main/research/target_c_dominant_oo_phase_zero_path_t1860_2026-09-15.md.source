@@ -1,0 +1,218 @@
+# Target C-II — two-shore phase pinning linearizes the high-`t` dominant O--O family
+
+**Date:** 2026-09-15
+**Status:** proof-only high-`t` structural strengthening
+**Scope:** full-core/no-macroscopic-container Type-II survivor sequences with `t=(q-k)/D<=1.860`
+**Dependencies:** retained dominant O--O pair-weight staircase; hostile-audited dominant endpoint-measure retention; hostile-audited Section 157 two-sided O--O bracing; Type-II near-disk loaded-hull normal convergence; convex-pocket cyclic-order transfer
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current high-`t` theorem produces a linear retained family of dominant outer-to-outer trains in one shrinking exact-phase window. Its complement dual was allowed to be an arbitrary tree, leaving a star-like Helly-hub escape.
+
+Two-sided diameter bracing removes that escape after a negligible weighted deletion. For one O--O train, Section 157 applies to either shore. In the Type-II near-disk limit, each complementary loaded-hull normal arc must therefore contain a zero of `n dot J u`, where `u` is the train contact direction. The two oriented zeros are antipodal. For a same-phase family they converge to one fixed antipodal pair. Delete trains whose retained endpoints lie in shrinking neighborhoods of those two points. The retained endpoint measures are dominated by loaded-hull perimeter, so this costs only `o(D)` pair weight. Every remaining crosscut separates the same two boundary markers and hence the crosscuts are totally nested.
+
+The result is a linear dual-tree path throughout the current high-`t` window.
+
+---
+
+## 1. Weighted same-phase input
+
+Fix an unbounded full-core Type-II survivor sequence and pass to a subsequence as needed. For a dominant O--O train `tau`, let `a_tau,b_tau in[0,1]` be its retained terminal-occurrence weights and put
+
+\[
+w_\tau:=\min(a_\tau,b_\tau).
+\tag{PP.1}
+\]
+
+Partition the dominant exact orbit into its at most three shrinking projective phase windows. Choose one carrying maximal pair weight and pass to a subsequence on which its limiting projective phase is `phi in R/pi Z`. Write `L_D` for the positive-weight O--O trains in that selected window. The dominant O--O staircase gives
+
+\[
+\sum_{\tau\in\mathcal L_D}w_\tau\ge c(T)D-o(D),
+\tag{PP.2}
+\]
+
+with
+
+\[
+\boxed{
+\begin{array}{c|c}
+T & c(T)\\ \hline
+1.850 & 0.0700\\
+1.855 & 0.0466\\
+1.860 & 0.0246.
+\end{array}}
+\tag{PP.3}
+\]
+
+The `t<=1.844` full-core branch is already excluded independently.
+
+All train phases in `L_D` lie in a projective window of radius `epsilon_D->0` about `phi`. For large `D`, distinct selected trains do not cross in a strict rhombus because a train crossing requires projective phase separation strictly greater than `pi/3`. Thus their proper O--O midpoint crosscuts are pairwise noncrossing.
+
+---
+
+## 2. Pair endpoint mass in shrinking arcs is `o(D)`
+
+Each retained pair gives two weighted endpoint occurrences. Define the two pair-endpoint measures on the oriented loaded-hull boundary by assigning mass `w_tau/D` at the two retracted terminal locations.
+
+Since `w_tau<=a_tau,b_tau`, each pair-endpoint measure is dominated by the retained dominant outer-occurrence measure, which the hostile-audited retention theorem bounds pointwise by physical loaded-hull side length. Type-II near-disk convergence gives the uniform interval estimate
+
+\[
+\mu_D(I)\le {|I|\over2}+o(1)
+\tag{PP.4}
+\]
+
+on the oriented normal circle; continuity of the limiting perimeter distribution and `max s_i=o(D)` make the `o(1)` uniform over moving intervals. Hence, for any bounded union `I_D` of angular intervals with total width tending to zero,
+
+\[
+\boxed{\text{retained pair-endpoint mass in }I_D=o(D).}
+\tag{PP.5}
+\]
+
+This is why the retained pair-weight theorem, rather than a mere train-count theorem, is load-bearing here.
+
+---
+
+## 3. Section 157 pins one phase zero into each shore
+
+Take `tau in L_D` with projective unit contact direction `u_tau`. Its midpoint crosscut gives two Jordan shores. Choose either shore `S` and orient every cut contact from the complementary shore into `S` with unit vector `u`.
+
+Section 157 gives crossing actual diameter vectors with both transverse signs:
+
+\[
+\exists h_+,h_-:\qquad
+r_{h_+}\cdot Ju>0,
+\qquad
+r_{h_-}\cdot Ju<0.
+\tag{PP.6}
+\]
+
+The statement is symmetric under swapping shores: both `u` and each shore-oriented crossing diameter vector change sign, leaving the transverse scalar products unchanged. Thus (PP.6) is available for each shore.
+
+In Type-II near-disk geometry, a diameter vector oriented into a shore is, uniformly, `D` times the outward radial normal at its loaded endpoint up to `o(D)`. Loaded endpoints on one shore occupy the single loaded-hull arc between the two retracted train terminals. Therefore (PP.6) and continuity force that shore's oriented normal interval to contain, up to an error `eta_D->0`, a zero of `n -> n dot J u_tau`.
+
+There are exactly two oriented zeros, separated by `pi`; their projective class is the train phase. Since the shore intervals are complementary, applying the argument to both shores puts one zero in each shore interval. With consistent orientation, those zeros lie within `epsilon_D+eta_D` of the fixed antipodal angles
+
+\[
+\theta_+:=\phi,
+\qquad
+\theta_-:=\phi+\pi
+\quad(\bmod 2\pi).
+\tag{PP.7}
+\]
+
+---
+
+## 4. Delete only negligible pair weight near the two fixed zeros
+
+Choose `rho_D downarrow0` with
+
+\[
+\epsilon_D+\eta_D=o(\rho_D).
+\tag{PP.8}
+\]
+
+Let `I_D^+`,`I_D^-` be the oriented normal-angle intervals of radius `rho_D` about `theta_+`,`theta_-`. Call a train bad if either retained terminal lies in `I_D^+ union I_D^-`.
+
+For a bad train, `w_tau` is at most the retained weight of one bad endpoint occurrence. By (PP.5),
+
+\[
+\boxed{\sum_{\tau\text{ bad}}w_\tau=o(D).}
+\tag{PP.9}
+\]
+
+Set `L_D'=L_D\setminus{bad trains}`. Then
+
+\[
+\boxed{
+\sum_{\tau\in\mathcal L_D'}w_\tau\ge c(T)D-o(D),
+\qquad
+|\mathcal L_D'|\ge c(T)D-o(D),
+}
+\tag{PP.10}
+\]
+
+because every pair weight is at most one.
+
+---
+
+## 5. Every surviving crosscut separates the same two markers
+
+Fix `tau in L_D'`. Neither retracted terminal lies in `I_D^+ union I_D^-`. One shore normal interval contains a zero within `o(rho_D)` of `theta_+`; the complementary interval contains the antipodal zero within `o(rho_D)` of `theta_-`.
+
+Moving either zero to its fixed marker cannot cross a terminal in cyclic order, because the terminals avoid the larger marker neighborhoods. Hence
+
+\[
+\boxed{
+\text{every }\tau\in\mathcal L_D'
+\text{ separates }\theta_+\text{ from }\theta_-
+\text{ on the retracted outer boundary.}
+}
+\tag{PP.11}
+\]
+
+The hostile-audited convex-pocket retraction preserves cyclic order of O--O endpoints. Thus the same statement holds on the original outer-face occurrence circle after choosing marker points in the two endpoint-free gaps corresponding to the marker neighborhoods.
+
+---
+
+## 6. Two-marker noncrossing crosscuts form a path
+
+### Lemma PP.1
+
+Let `gamma_1,...,gamma_m` be pairwise disjoint proper crosscuts of a disk, and let `p,q` be boundary points which are not crosscut endpoints. If every `gamma_j` separates `p` from `q`, then the complement dual of the crosscuts is a path.
+
+### Proof
+
+For each crosscut `gamma`, let `S_gamma` be the closure of the component on the `p` side. For two disjoint crosscuts `gamma,gamma'`, the interior of `gamma'` lies entirely in one component of the disk minus `gamma`. Since `gamma'` itself separates `p` from `q`, its `p`-side is therefore either contained in `S_gamma` or contains `S_gamma`. Thus the `p`-shores are totally ordered by inclusion.
+
+A finite totally ordered family of proper crosscuts creates two extreme regions and one region between each consecutive pair. Hence each crosscut is adjacent only to its predecessor/successor regions in the complement dual, which is a path. `square`
+
+Applying the lemma to `L_D'` gives the main theorem.
+
+### Theorem PP — high-`t` dominant phase path
+
+After passing to a subsequence, every survivor sequence in the stated scope has a dominant same-phase O--O subfamily `L_D'` such that
+
+\[
+\boxed{T_{\mathcal L_D'}\text{ is a path},}
+\tag{PP.12}
+\]
+
+and
+
+\[
+\boxed{
+\begin{array}{c|c}
+ t\le1.850 & |\mathcal L_D'|>0.0700D-o(D),\\
+ t\le1.855 & |\mathcal L_D'|>0.0466D-o(D),\\
+ t\le1.860 & |\mathcal L_D'|>0.0246D-o(D).
+\end{array}}
+\tag{PP.13}
+\]
+
+Thus the star-like branching escape left by the high-`t` Helly-hub theorem disappears after deletion of only `o(D)` retained pair mass.
+
+---
+
+## 7. Interaction with the hub theorem and exact-phase limits
+
+The Helly theorem is purely topological and applies directly to the restricted path family. Hence every actual diameter support interval on this path contains one common hub region. This already gives the finite path normal form
+
+```text
+linear shrinking-phase O-O path
++ every actual diameter support interval contains one common path vertex.
+```
+
+The companion region-saturation theorem has an additional exact-phase factorization step. The present theorem does **not** silently promote a finite shrinking phase window to exact equality. Whenever the companion theorem is invoked, its own phase-limit/exact-phase scope must be checked separately. In the limiting atomic model, the two conclusions are compatible and every path region is diameter-loaded, but that is not needed for (PP.12)--(PP.13).
+
+Thus the new unconditional gain is the linear path itself, replacing the previous arbitrary rooted-tree topology throughout the current `t<=1.860` window.
+
+---
+
+## 8. Scope and next target
+
+The deletion is weighted/asymptotic; the theorem does not claim that the original full dominant family had a path dual. Path-region KKT endpoint masses may still be arbitrarily small.
+
+What is removed is the main topological obstruction named by the Helly-hub theorem: a linear same-phase O--O population cannot survive solely by branching into a large dual-tree star.
+
+The next exact step is now available: interval entry/exit counting on (PP.12) forces an adjacent pair with bounded actual-diameter switching support and bounded switching KKT mass. That gives a high-`t` finite-cusp interface without the low-`t` rectangle theorem.
+
+**Disposition:** proved proof-only high-`t` path extraction. C-II and Level I remain open.

@@ -1,0 +1,370 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "7ce8c08b9fef8fd1db0644abab33cb9abe1eb277", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_vanishing_mass_coercive_kernel_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "fff835e625d63f449416a0c0e7700f043eb048a01de7fad12828c76526998cb4"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — the vanishing-mass force corridor has a uniformly coercive full cancellation kernel
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** the no-positive-density-TB1 branch through `t=(q-k)/D<=1.8687`  
+**Dependencies:** vanishing-mass growing exact-force corridor; antipodal dipole direct-sum theorem; coupled host transverse-margin theorem  
+**Certificate:** `research/verify_target_c_high_t_vanishing_mass_coercive_kernel_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The vanishing-mass corridor has `m_n=2r_n+1->infinity` consecutive exact-antipodal interfaces, every one force-loaded, while the total original switching KKT mass on the entire corridor tends to zero. Exact phase makes its full-support cancellation space particularly simple: it is the zero-sum hyperplane in the row-shear coefficients.
+
+The adjacent antipodal dipoles form a basis of that whole hyperplane. Their actual-diameter derivative supports are the pairwise disjoint switching sets. The fixed host margin therefore gives a dimension-free coercivity estimate on the **entire cancellation kernel**, not merely on a selected dipole subspace.
+
+Consequently the corridor exhibits an asymptotic stress/coercivity separation:
+
+```text
+dimension of cancellation kernel -> infinity;
+total original KKT mass on every derivative-active switching row -> 0;
+total compressed two-ray coefficient mass can also -> 0;
+but the normalized actual-diameter derivative operator has a fixed singular-value floor
+on the entire full-support cancellation kernel.
+```
+
+This quantitatively rules out approximate first-order softening inside the exact full-support cancellation space. The remaining obstruction must come from global compatibility of this increasingly large, uniformly hard, almost KKT-massless row system.
+
+---
+
+## 1. Exact-phase cancellation space
+
+Use the selected corridor from the vanishing-mass theorem. Relabel its rows as
+
+\[
+\tau_0,\tau_1,\ldots,\tau_m,
+\qquad m=m_n\to\infty,
+\tag{VK.1}
+\]
+
+so there are `m` internal interfaces. Exact antipodality throughout gives one common oriented row phase
+
+\[
+u_0=u_1=\cdots=u_m=:v_n.
+\tag{VK.2}
+\]
+
+For a row-shear coefficient vector
+
+\[
+c=(c_0,\ldots,c_m),
+\]
+
+the derivative of the full-span displacement is
+
+\[
+DG(0)[c]
+=J\sum_{j=0}^m c_ju_j
+=Jv_n\sum_{j=0}^m c_j.
+\tag{VK.3}
+\]
+
+Therefore the exact first-order full-support cancellation kernel is
+
+\[
+\boxed{
+\mathcal K_n
+=\left\{c\in\mathbb R^{m+1}:\sum_{j=0}^m c_j=0\right\},
+\qquad
+\dim\mathcal K_n=m\to\infty.
+}
+\tag{VK.4}
+\]
+
+For each internal interface `i=0,...,m-1`, let
+
+\[
+d^{(i)}:=e_i-e_{i+1}.
+\tag{VK.5}
+\]
+
+These adjacent dipoles are a basis of `K_n`. Every `c in K_n` therefore has a unique representation
+
+\[
+\boxed{
+c=\sum_{i=0}^{m-1}s_i d^{(i)}.}
+\tag{VK.6}
+\]
+
+Explicitly,
+
+\[
+s_i=\sum_{j=0}^i c_j.
+\tag{VK.7}
+\]
+
+---
+
+## 2. Each dipole owns a disjoint two-sided diameter block
+
+Let `X_i` be the actual-diameter switching set at interface `i`. The antipodal direct-sum theorem gives
+
+\[
+\boxed{
+X_i\cap X_j=\varnothing
+\qquad(i\ne j),
+}
+\tag{VK.8}
+\]
+
+and, for the actual-diameter squared-length derivative operator `L_D`,
+
+\[
+\boxed{
+L_D\!\left(\sum_js_jd^{(j)}\right)\big|_{X_i}
+=s_iL_D(d^{(i)})\big|_{X_i}.
+}
+\tag{VK.9}
+\]
+
+Every corridor interface has an exact positive force pair
+
+\[
+h_i^-,h_i^+\in X_i
+\]
+
+on opposite transverse sides of the common reaction/row axis. The coupled host theorem applies to every switching diameter and gives, uniformly over the corridor,
+
+\[
+|d_{h_i^\pm}\cdot Jv_n|
+\ge c_H-o(1),
+\qquad
+c_H=0.453819885927\ldots .
+\tag{VK.10}
+\]
+
+For the elementary dipole coordinate,
+
+\[
+L_D(d^{(i)})_{h_i^\pm}
+=\pm(2c_H-o(1))D_n
+\]
+
+in magnitude, with opposite signs. More precisely,
+
+\[
+\boxed{
+|L_D(d^{(i)})_{h_i^\pm}|
+\ge(2c_H-o(1))D_n,
+}
+\tag{VK.11}
+\]
+
+and the two selected entries have opposite signs.
+
+By (VK.8), all `2m` distinguished entries in (VK.11) are different actual diameter rows.
+
+---
+
+## 3. Dimension-free coercivity in the canonical dipole norm
+
+Let
+
+\[
+s=(s_0,\ldots,s_{m-1}).
+\]
+
+Choose `i_*` with
+
+\[
+|s_{i_*}|=\|s\|_\infty.
+\]
+
+The two selected bars at `i_*`, together with (VK.9)--(VK.11), give simultaneously
+
+\[
+\boxed{
+\max_h(L_D(c)_h)_+
+\ge(2c_H-o(1))D_n\|s\|_\infty,
+}
+\tag{VK.12}
+\]
+
+and
+
+\[
+\boxed{
+\max_h(-L_D(c)_h)_+
+\ge(2c_H-o(1))D_n\|s\|_\infty.
+}
+\tag{VK.13}
+\]
+
+Summing the squares of all distinguished two-entry blocks gives
+
+\[
+\begin{aligned}
+\|L_D(c)\|_2^2
+&\ge
+\sum_i
+\left(
+|L_D(c)_{h_i^-}|^2
++|L_D(c)_{h_i^+}|^2
+\right)\\
+&\ge
+(8c_H^2-o(1))D_n^2\|s\|_2^2.
+\end{aligned}
+\]
+
+Hence
+
+\[
+\boxed{
+\|L_D(c)\|_2
+\ge(2\sqrt2\,c_H-o(1))D_n\|s\|_2.
+}
+\tag{VK.14}
+\]
+
+Numerically,
+
+\[
+2\sqrt2\,c_H
+=1.2835964751\ldots .
+\tag{VK.15}
+\]
+
+This is the direct-sum coercivity estimate applied to every interface of the selected consecutive force corridor.
+
+---
+
+## 4. Convert to ordinary Euclidean norms on the full cancellation kernel
+
+The basis map in (VK.6) is the incidence matrix of a path. Componentwise,
+
+\[
+c_0=s_0,
+\qquad
+c_j=s_j-s_{j-1}\ (1\le j\le m-1),
+\qquad
+c_m=-s_{m-1}.
+\tag{VK.16}
+\]
+
+Therefore
+
+\[
+\boxed{
+\|c\|_\infty\le2\|s\|_\infty,
+\qquad
+\|c\|_2\le2\|s\|_2.
+}
+\tag{VK.17}
+\]
+
+Combining (VK.12)--(VK.14) with (VK.17) yields a basis-independent statement on the whole zero-sum cancellation space:
+
+\[
+\boxed{
+\max_h(L_D(c)_h)_+
+\ge(c_H-o(1))D_n\|c\|_\infty,
+}
+\tag{VK.18}
+\]
+
+\[
+\boxed{
+\max_h(-L_D(c)_h)_+
+\ge(c_H-o(1))D_n\|c\|_\infty,
+}
+\tag{VK.19}
+\]
+
+and
+
+\[
+\boxed{
+\left\|{1\over D_n}L_D(c)\right\|_2
+\ge(\sqrt2\,c_H-o(1))\|c\|_2
+\qquad(c\in\mathcal K_n).
+}
+\tag{VK.20}
+\]
+
+The Euclidean singular-value floor is therefore
+
+\[
+\boxed{
+\sqrt2\,c_H
+=0.64179823755\ldots .
+}
+\tag{VK.21}
+\]
+
+It is independent of the corridor depth `m_n`.
+
+Thus the complete first-order cancellation kernel has no sequence of normalized directions whose actual-diameter derivative vector tends to zero. This is an asymptotically uniform strengthening of the qualitative sign-cusp statement on the selected fully loaded corridor.
+
+---
+
+## 5. All derivative-active switching rows have vanishing total original KKT mass
+
+The preceding coercivity is carried entirely by switching sets
+
+\[
+X_0\sqcup X_1\sqcup\cdots\sqcup X_{m-1}.
+\]
+
+For the selected corridor, the vanishing-mass theorem gives
+
+\[
+\boxed{
+\sum_{i=0}^{m-1}\sum_{h\in X_i}\beta_h
+=\sum_{i=0}^{m-1}B_i
+=\mathcal B_n
+\longrightarrow0.
+}
+\tag{VK.22}
+\]
+
+Hence the entire actual-diameter row set used in the direct-sum coercivity proof carries asymptotically zero mass in the canonical positive KKT stress.
+
+After the refined diagonal choice from the same theorem, even the local compressed exact-force coefficients obey
+
+\[
+\boxed{
+\sum_{i=0}^{m-1}(\lambda_i^-+\lambda_i^+)
+\longrightarrow0.
+}
+\tag{VK.23}
+\]
+
+Equations (VK.20), (VK.22), and (VK.23) are the main synthesis:
+
+\[
+\boxed{
+\begin{array}{c}
+\dim\mathcal K_n\to\infty,\\[2mm]
+\text{KKT mass on all derivative-active rows}\to0,\\[2mm]
+\text{compressed force-certificate mass}\to0,\\[2mm]
+\sigma_{\min}\!\left(D_n^{-1}L_D|_{\mathcal K_n}\right)
+\ge0.641798\ldots-o(1).
+\end{array}
+}
+\tag{VK.24}
+\]
+
+Small multiplier mass therefore gives no approximate geometric softness, even when imposed simultaneously across the whole growing exact cancellation kernel.
+
+---
+
+## 6. Frontier effect
+
+This closes another possible interpretation of the vanishing-force regime. The force-loaded exact-phase corridor cannot be approximated by a large soft cancellation space merely because its switching multipliers tend to zero. Its complete full-support cancellation kernel is uniformly hard at first order.
+
+The remaining high-`t` problem is now explicitly global. One must show that a planar diameter minimizer cannot realize an unbounded exact-phase strip stack in which
+
+```text
+all local switching/KKT mass together is asymptotically negligible,
+all local exact force-compression mass can be asymptotically negligible,
+yet the entire growing cancellation kernel has a fixed actual-diameter coercivity gap,
+and the cut resultants stay in one normalized vanishing-diameter plateau.
+```
+
+A local shear or approximate-kernel argument cannot finish this. The next useful target must exploit the persistent full-span diameter support, convex-thrackle endpoint order, or the common near-equilateral train grid to contradict the existence of this uniformly coercive row system.
+
+No C-II or Level-I closure is claimed.
+
+**Disposition:** upgraded the vanishing-mass fully loaded corridor to a dimension-free coercivity theorem on its entire exact full-support cancellation kernel. The derivative-active diameter rows carry total KKT mass `o(1)`, but the normalized actual-diameter derivative operator has Euclidean singular-value floor `sqrt(2)c_H=0.641798...-o(1)`. C-II remains open.

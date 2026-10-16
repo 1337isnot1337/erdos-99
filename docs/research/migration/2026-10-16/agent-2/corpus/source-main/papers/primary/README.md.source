@@ -1,0 +1,16 @@
+# Supplied primary literature
+
+These seven PDFs are the literature baseline for the canonical theorem state.
+
+| File | Reference |
+| --- | --- |
+| [mp05-2-261-269.pdf](mp05-2-261-269.pdf) | Erdős, “Some problems in number theory, combinatorics and combinatorial geometry” |
+| [1951-03.pdf](1951-03.pdf) | Bateman and Erdős, “Geometrical Extrema Suggested by a Lemma of Besicovitch” |
+| [1-s2.0-S0097316598928898-main.pdf](1-s2.0-S0097316598928898-main.pdf) | Bezdek and Fodor, “Minimal Diameter of Certain Sets in the Plane” |
+| [s00454-002-0747-6.pdf](s00454-002-0747-6.pdf) | Schürmann, “On Extremal Finite Packings” |
+| [1204.4403v1.pdf](1204.4403v1.pdf) | Bondarenko, Hardin, and Saff, “Minimal N-Point Diameters and f-Best-Packing Constants in R^d” |
+| [463.pdf](463.pdf) | Eppstein, “Edge Bounds and Degeneracy of Triangle-Free Penny Graphs and Squaregraphs” |
+| [10.1007_PL00009374.pdf](10.1007_PL00009374.pdf) | Bezdek, Bezdek, and Connelly, “Finite and Uniform Stability of Sphere Packings” |
+
+The corresponding extracted text, where available, is in
+[../../extracted/text/](../../extracted/text/).

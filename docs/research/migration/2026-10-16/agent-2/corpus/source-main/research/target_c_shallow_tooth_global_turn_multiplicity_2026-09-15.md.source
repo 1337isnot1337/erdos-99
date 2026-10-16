@@ -1,0 +1,279 @@
+# Target C-II — global-turn control of shallow-tooth apex multiplicity
+
+**Date:** 2026-09-15  
+**Repository base:** `befa2362ed20bfdbd8bbda7fa1ef65aefdb5aa11`  
+**Status:** proved proof-only strengthening of the shallow-tooth branch; theorem-state authority unchanged  
+**Scope:** Type-II two-edge outer teeth in the fully force-visible C-II core  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The earlier shallow-tooth apex theorem imposed `alpha_eta<pi/12` in order to make the
+apex map pointwise injective. That restriction is stronger than necessary for a linear
+count. Convex-hull turning gives a global substitute.
+
+For every threshold satisfying
+
+\[
+\alpha_\eta:=\arccos(1-\eta/2)<\pi/6,
+\]
+
+an apex can support at most two shallow teeth; if it supports two, their loaded bases
+are adjacent force-hull edges and the shared hull corner has exterior turn greater
+than `2pi/3`. Hence at most two apices are duplicated in the entire loaded hull.
+
+This permits a substantially larger shallow threshold and improves the tooth-branch
+penetration density.
+
+## 1. Unit-circle geometry at one apex
+
+Let `x` be the unloaded apex of an `eta`-shallow two-edge outer tooth with loaded base
+`ab`. Thus
+
+\[
+|x-a|=|x-b|=1,
+\qquad
+|a-b|\ge2-\eta.
+\]
+
+The smaller central angle at `x` satisfies
+
+\[
+\angle axb\ge\pi-2\alpha_\eta.
+\tag{GT.1}
+\]
+
+Every two distinct contact neighbors of `x` have circular angular separation at least
+`pi/3`, by unit separation.
+
+Assume from now on
+
+\[
+\boxed{\alpha_\eta<\pi/6.}
+\tag{GT.2}
+\]
+
+## 2. Two disjoint shallow bases cannot share one apex
+
+Suppose two shallow tooth bases `ab` and `cd` have the same apex `x` and four distinct
+loaded endpoints. Both bases are edges of the same convex loaded force hull, so they
+do not cross. Their endpoint pairs therefore do not alternate around the unit circle
+centered at `x`.
+
+After cyclic relabeling, write the four endpoints as `a,b,c,d`, with bases `ab` and
+`cd`. Let the consecutive central gaps be
+
+\[
+g_{ab},g_{bc},g_{cd},g_{da}.
+\]
+
+Unit separation gives every gap at least `pi/3`. Hence each gap is at most `pi`, since
+the other three already sum to at least `pi`. Therefore the smaller central angles of
+the two bases are exactly `g_ab` and `g_cd`, and (GT.1) gives
+
+\[
+g_{ab},g_{cd}\ge\pi-2\alpha_\eta.
+\]
+
+Consequently
+
+\[
+2\pi
+\ge2(\pi-2\alpha_\eta)+{2\pi\over3},
+\]
+
+which contradicts (GT.2). Thus:
+
+\[
+\boxed{\text{two shallow bases at one apex must share a loaded endpoint.}}
+\tag{GT.3}
+\]
+
+For a loaded convex polygon with at least four vertices, three distinct hull edges
+cannot be pairwise endpoint-intersecting. It follows immediately from (GT.3) that one
+apex supports at most two shallow teeth.
+
+## 3. A duplicated apex consumes more than 120 degrees of hull turn
+
+Suppose the two bases at `x` are the adjacent hull edges `ab` and `ac`, sharing the
+loaded hull vertex `a`.
+
+On the unit circle centered at `x`, both `b` and `c` lie within angular distance
+`2 alpha_eta` of the antipode of `a`. Hence their smaller central separation `gamma`
+satisfies
+
+\[
+\gamma\le4\alpha_\eta< {2\pi\over3}<\pi.
+\tag{GT.4}
+\]
+
+The short arc from `b` to `c` does not contain `a`. By the inscribed-angle theorem,
+the interior angle of the loaded force hull at `a` is
+
+\[
+\angle bac={\gamma\over2}\le2\alpha_\eta.
+\tag{GT.5}
+\]
+
+Therefore the exterior hull turn `phi_a` obeys
+
+\[
+\boxed{
+\phi_a=\pi-\angle bac
+\ge\pi-2\alpha_\eta
+>{2\pi\over3}.
+}
+\tag{GT.6}
+\]
+
+The exterior turns of a convex polygon sum to `2pi`. Hence there are at most two hull
+vertices at which such a duplication can occur.
+
+A fixed pair of adjacent strict hull edges determines at most one common unit-radius
+apex: the three noncollinear loaded endpoints have a unique circumcenter. Thus distinct
+duplicated apices give distinct high-turn hull vertices. We have proved the finite
+multiplicity statement:
+
+### Theorem GT.1 — all but two shallow teeth have distinct apices
+
+For `q>=4` and `alpha_eta<pi/6`, if `N_sh(eta)` is the number of `eta`-shallow
+two-edge outer teeth and `A_sh(eta)` the number of distinct tooth apices, then
+
+\[
+\boxed{
+A_{sh}(\eta)\ge N_{sh}(\eta)-2.
+}
+\tag{GT.7}
+\]
+
+No asymptotic or stress-weight hypothesis is used in the multiplicity proof.
+
+## 4. Penetration contacts
+
+The previous shallow-tooth penetration geometry applies at every such unloaded apex.
+Canonical C26 gives full contact degree at least three, and triangle-freeness plus the
+supporting loaded base force an additional unit contact strictly inward from the base.
+Its inward normal component is greater than
+
+\[
+Y_\eta:=\sin(\pi/3-\alpha_\eta)>0.
+\tag{GT.8}
+\]
+
+Choose one such extra contact at every distinct shallow apex. An undirected contact
+edge can be selected from at most its two endpoints. Therefore
+
+\[
+\boxed{
+E_{pen}(\eta)
+\ge {A_{sh}(\eta)\over2}
+\ge {1\over2}\left(N_2-{d_{out}\over\eta}-2\right).
+}
+\tag{GT.9}
+\]
+
+The finite additive `-1` in the edge count is negligible after division by `D`.
+
+## 5. Current low-`t` numerical strengthening
+
+At the current proof-only floor
+
+\[
+t_{42}=C_{146}+0.0013751,
+\]
+
+the low-`t` squeeze and tooth alternative give
+
+\[
+{d_{out}\over D}\le0.002883975+o(1),
+\]
+
+\[
+{N_2\over D}\ge
+0.4363893718701161781\ldots-o(1).
+\]
+
+Choose the exact threshold
+
+\[
+\boxed{\eta={4\over15}.}
+\]
+
+Then
+
+\[
+\cos\alpha_\eta={13\over15}>{\sqrt3\over2},
+\]
+
+so `alpha_eta<pi/6` with strict margin. The detour deletion costs only
+
+\[
+{1\over\eta}{d_{out}\over D}
+\le0.01081490625+o(1).
+\]
+
+Thus
+
+\[
+\boxed{
+{N_{sh}(4/15)\over D}
+\ge0.4255744656201161781\ldots-o(1).
+}
+\tag{GT.10}
+\]
+
+By (GT.7), the same normalized lower bound holds for distinct apices. Equation (GT.9)
+then gives
+
+\[
+\boxed{
+{E_{pen}(4/15)\over D}
+\ge0.2127872328100580890\ldots-o(1).
+}
+\tag{GT.11}
+\]
+
+The inward component has the exact form
+
+\[
+\boxed{
+Y_{4/15}
+={13\sqrt3-2\sqrt{14}\over30}
+=0.5011115241615840681\ldots .
+}
+\tag{GT.12}
+\]
+
+This strengthens the previous `0.1965648734D` tooth-branch penetration population to
+`0.2127872328D`, while retaining a uniform inward component greater than `0.5011`.
+
+## 6. Effect on the low-`t` frontier
+
+The current physical tooth/long-side alternative becomes
+
+```text
+tooth branch:
+    >= 0.2127872328 D-o(D) distinct inward contacts,
+    each with inward component > 0.5011115;
+
+long-side branch:
+    >= 0.2074315447 D-o(D) distinct near-tangent outer contacts,
+    or the sharper straight-event subdichotomy.
+```
+
+Thus the common branch-independent physical-contact floor is now controlled by the
+long-side branch, not by shallow-tooth multiplicity.
+
+This still does not close C-II. The gain is structural: repeated shallow-tooth apices
+can no longer absorb any linear fraction of the mandatory tooth population, even at a
+threshold arbitrarily close to `eta=2-sqrt(3)` from below. The remaining obstruction
+is the rounded long-side/loaded-degree-two geometry and its coupling to the Woodall
+diameter thrackle.
+
+## 7. Reproducibility
+
+Run
+
+```bash
+python3 research/verify_target_c_shallow_tooth_global_turn_multiplicity.py
+```
+
+for the Decimal constant checks.

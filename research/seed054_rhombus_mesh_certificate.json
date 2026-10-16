@@ -1,0 +1,130 @@
+{
+  "fixtures": [
+    {
+      "k": 2,
+      "R": 24,
+      "cells": 1788,
+      "n": 1893,
+      "contacts": 3680,
+      "contact_isolates": 1,
+      "source_sha256": "1137fc316df020cc4ddb33f209b884f209253d8cfd8be66329c6f0f1fad6cea1",
+      "source_diameter_squared": "2420",
+      "source_hull_vertices": 24,
+      "diameter_witness": [
+        [
+          -22,
+          -11
+        ],
+        [
+          22,
+          11
+        ]
+      ],
+      "isolate_min_squared": "361/100",
+      "available_replacement_sites": 1921,
+      "replacement_diameter_squared": "2116",
+      "replacement_hull_vertices": 28,
+      "replacement_sha256": "4e707bf4ddce09ba58ad16fce3665d6e9f310f009026e50c9e0eb792c638b9ce",
+      "local_growth_cells_required_at_comparison_diameter": 3,
+      "bad_cells_of_lexicographic_replacement": 1788,
+      "grown_local_pairs_of_lexicographic_replacement": 4640,
+      "pairs_per_full_source": 1790778,
+      "classification": "regression; candidate proof awaits independent audit"
+    },
+    {
+      "k": 2,
+      "R": 64,
+      "cells": 12876,
+      "n": 13141,
+      "contacts": 26016,
+      "contact_isolates": 1,
+      "source_sha256": "8e7afc7199ab24cac19cd6e9f47bff39f9334df5c27e1f3895b2c60730ebacbd",
+      "source_diameter_squared": "16724",
+      "source_hull_vertices": 56,
+      "diameter_witness": [
+        [
+          -55,
+          -34
+        ],
+        [
+          55,
+          34
+        ]
+      ],
+      "isolate_min_squared": "361/100",
+      "available_replacement_sites": 14407,
+      "replacement_diameter_squared": "15876",
+      "replacement_hull_vertices": 43,
+      "replacement_sha256": "4c2fa7083f8a897983049f938c75c2d31f1ebb5a95feff2ab919412c3de4ea03",
+      "local_growth_cells_required_at_comparison_diameter": 8,
+      "bad_cells_of_lexicographic_replacement": 12876,
+      "grown_local_pairs_of_lexicographic_replacement": 34942,
+      "pairs_per_full_source": 86336370,
+      "classification": "regression; candidate proof awaits independent audit"
+    },
+    {
+      "k": 3,
+      "R": 40,
+      "cells": 5086,
+      "n": 5259,
+      "contacts": 10344,
+      "contact_isolates": 1,
+      "source_sha256": "d01f86b8c890b9f8b410650fa0ebffbc1a55d6530c8fb75d3521b0ea20421f7f",
+      "source_diameter_squared": "6636",
+      "source_hull_vertices": 40,
+      "diameter_witness": [
+        [
+          -33,
+          -19
+        ],
+        [
+          33,
+          19
+        ]
+      ],
+      "isolate_min_squared": "361/100",
+      "available_replacement_sites": 5527,
+      "replacement_diameter_squared": "6084",
+      "replacement_hull_vertices": 46,
+      "replacement_sha256": "dd7b4b6b8f503db5b263827cbe44c601c4011cf5144084817120b942731c391e",
+      "local_growth_cells_required_at_comparison_diameter": 5,
+      "bad_cells_of_lexicographic_replacement": 5086,
+      "grown_local_pairs_of_lexicographic_replacement": 13321,
+      "pairs_per_full_source": 13825911,
+      "classification": "regression; candidate proof awaits independent audit"
+    },
+    {
+      "k": 3,
+      "R": 144,
+      "cells": 66064,
+      "n": 66657,
+      "contacts": 132720,
+      "contact_isolates": 1,
+      "source_sha256": "5fc657428b17f82b8b91d383718ce52648580402a58c5b6e6a7f7442cb02bb91",
+      "source_diameter_squared": "83776",
+      "source_hull_vertices": 96,
+      "diameter_witness": [
+        [
+          -108,
+          -80
+        ],
+        [
+          108,
+          80
+        ]
+      ],
+      "isolate_min_squared": "361/100",
+      "available_replacement_sites": 74179,
+      "replacement_diameter_squared": "81796",
+      "replacement_hull_vertices": 70,
+      "replacement_sha256": "0254337c0c8a9e3982e572c8184042f61fc476a2b28f5c527293d9446d73c997",
+      "local_growth_cells_required_at_comparison_diameter": 18,
+      "bad_cells_of_lexicographic_replacement": 66064,
+      "grown_local_pairs_of_lexicographic_replacement": 189078,
+      "pairs_per_full_source": 2221544496,
+      "classification": "regression; candidate proof awaits independent audit"
+    }
+  ],
+  "negative_controls": 5,
+  "global_optimality_proved": false
+}

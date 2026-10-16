@@ -1,0 +1,304 @@
+# Target C — inactive-chamber finite exchange saturation
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working route module; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module records the independently checked content of former proof-only PR #356
+without reusing the already-canonical Section-122 numbering.
+
+The result concerns the macroscopic internal inactive-chamber branch. It does not use
+KKT force transfer. Instead it exploits the lexicographic choice of a triangle-free
+global minimizer: first minimize the number of unit contacts, then, among those,
+minimize the number of actual diameter pairs.
+
+Let
+
+\[
+A\subset\mathbb R^2,
+\qquad |A|=n,
+\qquad \min_{x\ne y}|x-y|\ge1,
+\qquad \operatorname{diam}A=D(n)=D,
+\]
+
+be such a triangle-free global minimizer and put
+
+\[
+K:=\operatorname{conv}A.
+\]
+
+## 1. Exact strict finite-exchange obstruction
+
+Let `v in A` be any nonisolated unit-contact vertex. Let
+
+\[
+Z\subset A\setminus\{v\}
+\]
+
+be any finite set of contact-isolated source points.
+
+There is no finite set `Y subset K` satisfying
+
+\[
+|Y|=|Z|+1,
+\tag{IE.1}
+\]
+
+\[
+|y-y'|>1
+\qquad(y\ne y',\ y,y'\in Y),
+\tag{IE.2}
+\]
+
+and
+
+\[
+|y-a|>1
+\qquad
+(y\in Y,\ a\in A\setminus(Z\cup\{v\})).
+\tag{IE.3}
+\]
+
+Indeed, define
+
+\[
+A':=(A\setminus(Z\cup\{v\}))\cup Y.
+\]
+
+Equation (IE.1) preserves cardinality. Conditions (IE.2)–(IE.3) make `A'`
+unit-separated. Every point of `A'` lies in `K`, so
+
+\[
+\operatorname{diam}A'\le\operatorname{diam}K=D.
+\]
+
+The definition of `D(n)` gives the reverse inequality, hence `A'` is another global
+minimizer. The points of `Z` had no unit contacts, `v` had at least one, and the new
+points create none. Therefore `A'` has strictly fewer unit contacts while remaining
+triangle-free, contradicting contact minimality.
+
+This is finite and exact. No affine-kernel statement and no force-positive activation
+of an isolated point is used.
+
+## 2. Protected inactive chambers are unit-covered
+
+Let `C` be an actual convex inactive chamber from canonical Section 77 and let `Z_C`
+be its assigned contact-isolated source points. Every source point not in `Z_C` lies
+outside `int(C)`.
+
+For `r>0` define the inner parallel body
+
+\[
+C_{-r}:=\{x\in C:\operatorname{dist}(x,\partial C)>r\}.
+\]
+
+Then
+
+\[
+\boxed{
+C_{-1}\subseteq\bigcup_{z\in Z_C}\overline B(z,1).
+}
+\tag{IE.4}
+\]
+
+If not, choose `x in C_{-1}` farther than one from every member of `Z_C`. For any
+source point `a` outside `int(C)`, the segment from `x` to `a` meets `partial C`; hence
+
+\[
+|x-a|\ge\operatorname{dist}(x,\partial C)>1.
+\]
+
+Thus `x` is strictly farther than one from every retained source point after deleting
+one nonisolated contact vertex, contradicting the strict exchange obstruction with
+`Z=emptyset` and `Y={x}`.
+
+More generally, for every finite `W subseteq Z_C`, there is no
+
+\[
+Y\subset C_{-1},
+\qquad |Y|=|W|+1,
+\tag{IE.5}
+\]
+
+such that the points of `Y` are pairwise farther than one and are farther than one
+from every member of `Z_C\setminus W`. Deep support automatically supplies strict
+separation from every retained source point outside the chamber.
+
+This is the precise finite `k -> k+1` exchange-saturation property used below; no
+stronger infinite-packing saturation theorem is imported.
+
+## 3. Loaded lexicographic exchange may create contacts
+
+The second lexicographic minimization gives a stronger obstruction.
+
+Choose a source point `v` with
+
+\[
+d_C(v):=\deg_{C(A)}v\ge1,
+\qquad
+d_H(v):=\deg_{H(A)}v\ge1.
+\tag{IE.6}
+\]
+
+Let `Z` again be contact-isolated and let
+
+\[
+Y\subset\operatorname{int}K,
+\qquad |Y|=|Z|+1.
+\]
+
+Form
+
+\[
+A':=(A\setminus(Z\cup\{v\}))\cup Y.
+\]
+
+Assume `A'` is unit-separated and triangle-free. Let `c_new` be the number of unit
+contacts of `A'` incident to at least one point of `Y`. Then no such replacement can
+satisfy
+
+\[
+\boxed{c_{new}\le d_C(v).}
+\tag{IE.7}
+\]
+
+The contact count is exactly
+
+\[
+|C(A')|=|C(A)|-d_C(v)+c_{new}.
+\tag{IE.8}
+\]
+
+If the inequality in (IE.7) is strict, contact minimality is contradicted.
+
+If equality holds, the contact count stays minimal. The key interior lemma is
+
+\[
+\boxed{
+|x-y|<D
+\qquad(x\in K,\ y\in\operatorname{int}K).
+}
+\tag{IE.9}
+\]
+
+To prove it, fix `x in K`. Since `diam(K)=D`,
+
+\[
+K\subseteq\overline B(x,D).
+\]
+
+If an interior point `y` satisfied `|x-y|=D`, it would lie on the boundary circle of
+that disk. Every planar neighborhood of `y` contains points outside the disk, whereas
+`y in int(K)` gives a neighborhood contained in `K`, a contradiction.
+
+Thus the new points create no diameter pair. Deleting the loaded vertex `v` removes
+at least one old diameter pair, so equality in (IE.7) produces a contact-minimal
+triangle-free global minimizer with strictly fewer diameter pairs, contradicting the
+second lexicographic minimization.
+
+For a canonical internal inactive chamber, every point of `C_{-1}` lies in
+`int(C) subset int(K)`, so the same result applies to chamber-supported replacements.
+A protected `k -> k+1` repacking may therefore create up to `d_C(v)` unit contacts,
+provided the resulting contact graph remains triangle-free.
+
+## 4. Multi-vertex form
+
+Let `U subset A` be a finite set of deleted nonisolated core vertices and let `Z` be
+contact-isolated. Define
+
+\[
+c_{lost}:=\#\{e\in C(A):e\cap U\ne\varnothing\},
+\]
+
+\[
+h_{lost}:=\#\{e\in H(A):e\cap(U\cup Z)\ne\varnothing\}.
+\]
+
+Contacts internal to `U` are counted once. If `h_lost>0` and
+
+\[
+Y\subset\operatorname{int}K,
+\qquad |Y|=|Z|+|U|,
+\]
+
+produces a unit-separated triangle-free replacement with new-contact count
+
+\[
+c_{new}\le c_{lost},
+\tag{IE.10}
+\]
+
+then the same dichotomy gives a contradiction: strict inequality violates contact
+minimality; equality preserves the minimum contact count but removes at least one
+diameter pair and creates none.
+
+## 5. Macroscopic inactive-chamber normal form
+
+Canonical Sections 79 and 87 give, in the internal macroscopic-container branch, an
+actual convex inactive chamber `C_*` with
+
+\[
+\operatorname{area}(C_*)=\Omega(D^2),
+\qquad
+|Z_{C_*}|=\Omega(D^2),
+\qquad
+\operatorname{per}(C_*)=O(D),
+\]
+
+and linearly many pairwise-disjoint deep isolate pairs at distance
+
+\[
+1+O(1/D).
+\]
+
+For fixed `r`, convex coarea/perimeter monotonicity gives
+
+\[
+\operatorname{area}(C_*\setminus(C_*)_{-r})
+\le r\operatorname{per}(C_*)=O(D).
+\]
+
+Hence `(C_*)_{-1}` still has area `Omega(D^2)`. It is unit-covered by the actual
+isolates and satisfies the exact finite exchange obstructions above.
+
+This removes the immediate Section-95 force-transfer obstruction from the internal
+inactive route. To eliminate the branch, it is enough to prove one protected
+source-local density-increasing exchange, for example:
+
+1. a strict finite `k -> k+1` repacking;
+2. a triangle-free `k -> k+1` repacking whose new-contact count fits one deleted
+   loaded vertex's contact budget; or
+3. the corresponding finite multi-vertex replacement satisfying (IE.10).
+
+The currently canonical `O(D)` Oler slack and inverse-diameter near-pair matching do
+**not** yet imply such an exchange. A sequence can have strict gaps much smaller than
+`1/D`; no bounded-support Kuperberg-style move follows from strictness alone.
+
+The exterior-cap branch remains separate.
+
+## 6. Independent hostile audit
+
+The following failure modes were checked explicitly.
+
+- **Cardinality:** every comparison removes and inserts exactly the same number of
+  source points.
+- **Diameter:** replacement points remain in the old convex hull, so global optimality
+  upgrades `diam(A')<=D(n)` to equality.
+- **Contact counting:** deleted isolates contribute no old contacts; contacts incident
+  to several deleted core vertices are counted once in `c_lost`; all new contacts are
+  counted once through incidence with `Y`.
+- **Triangle-free comparison class:** the loaded-exchange theorem explicitly assumes
+  the replacement contact graph is triangle-free.
+- **Diameter-pair equality case:** interior replacement points create no diameter pair
+  by (IE.9), so the second lexicographic minimization is applicable.
+- **Deep chamber compatibility:** depth `>1` is essential and supplies strict
+  separation from every retained source point outside the chamber's assigned isolate
+  set.
+- **Contact-isolated diameter endpoints:** deleting such points can only increase
+  `h_lost`; it does not invalidate the argument.
+- **Full-source retention:** no isolate is discarded without replacement and no
+  isolated coordinate is inserted into the Section-57 affine kernel.
+
+**Verdict:** PASS at audited-working scope. The internal inactive-chamber branch is
+reduced to the explicit finite repacking obligation above. C-II and Level I remain
+open.

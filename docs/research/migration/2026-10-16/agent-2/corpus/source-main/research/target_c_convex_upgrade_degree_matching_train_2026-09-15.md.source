@@ -1,0 +1,381 @@
+# Target C-II — convex-route upgrade of the degree, matching, and train-support stack
+
+**Date:** 2026-09-15  
+**Status:** proved proof-only composition; theorem-state authority unchanged  
+**Scope:** current low-`t` full-core Type-II endpoint  
+**New input:** merged convex Section-63 route theorem (`11b96ae4`)  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The merged convex-route theorem halves the angular-deletion loss in the global
+straight-event count:
+
+\[
+S_\beta\ge x_B-{d_{out}\over1-\cos\beta}.
+\]
+
+At the `15`-degree window used by the degree/phase-gate and matching theorems, this
+raises the straight-vertex floor from `1.1543116921...D` to
+
+\[
+\boxed{1.2389498413637606\ldots D-o(D)}.
+\]
+
+Because every later argument in the branch depends only on the straight population,
+physical repetition surplus, signed injectivity, or the stopped-train singleton
+budget, the improvement propagates without changing their geometry. In particular:
+
+- at least `1.1930133014...D` straight vertices are simple-outer;
+- at least `0.6194749206...D` signed penetration contacts can be chosen pairwise
+  vertex-disjoint;
+- at least `0.3227175723...D` signed penetrations lie on non-singleton strict-rhombus
+  trains;
+- at least `0.1613587861...D` of those admit a physical matching;
+- after restricting to simple-outer tails, the train-supported matching still has
+  size at least `0.1383905162...D`.
+
+This note records the exact propagation so the frontier is not left at the older
+pre-convex-route constants.
+
+---
+
+## 1. Convex-route straight-event floor at 15 degrees
+
+Set
+
+\[
+\beta={\pi\over12},
+\qquad
+c_{15}:=1-\cos(\pi/12)
+=1-{\sqrt6+\sqrt2\over4}.
+\tag{CU.1}
+\]
+
+The merged convex-route theorem proves
+
+\[
+\boxed{
+S_{15}\ge x_B-{d_{out}\over c_{15}}.
+}
+\tag{CU.2}
+\]
+
+On the low-`t` subsequence, with
+
+\[
+t={q-k\over D},\qquad
+\kappa={k\over D},\qquad
+\delta={d_{out}\over D},
+\]
+
+near-disk perimeter convergence gives
+
+\[
+{x_B\over D}=\pi+\delta-t-\kappa+o(1).
+\]
+
+Hence
+
+\[
+\liminf {S_{15}\over D}
+\ge
+\pi-t-\kappa-
+\left({1\over c_{15}}-1\right)\delta.
+\tag{CU.3}
+\]
+
+The current low-`t` network squeeze is
+
+\[
+2\delta+{\kappa\over2}\le R(t),
+\qquad
+R(t_{42})=0.00576795.
+\tag{CU.4}
+\]
+
+Since
+
+\[
+{1\over c_{15}}-1
+=28.3477402704905\ldots>4,
+\]
+
+the penalty in (CU.3) is maximized at
+
+\[
+\delta={R(t)\over2},\qquad \kappa=0.
+\]
+
+At
+
+\[
+t=t_{42}=1.8208886379794447041\ldots,
+\]
+
+we obtain
+
+\[
+\boxed{
+{S_{15}\over D}
+\ge1.2389498413637606406\ldots-o(1).
+}
+\tag{CU.5}
+
+The degree-collapse theorem is unchanged: every `15`-degree straight internal
+occurrence is unloaded and has contact degree exactly three or four. Its geometric
+straight-occurrence injection also remains unchanged, so (CU.5) counts distinct
+physical vertices.
+
+---
+
+## 2. Simple-outer population
+
+The independently merged near-simple outer-walk theorem gives
+
+\[
+{b-V_{out}\over D}
+\le0.0459365399110338116\ldots+o(1).
+\tag{CU.6}
+\]
+
+Every straight physical vertex with another outer-face occurrence contributes at
+least one unit to `b-V_out`. Therefore
+
+\[
+\boxed{
+{V_{simp,15}\over D}
+\ge
+1.2389498413637606406
+-0.0459365399110338116
+-o(1)
+}
+\]
+
+and hence
+
+\[
+\boxed{
+{V_{simp,15}\over D}
+\ge1.1930133014527268290\ldots-o(1).
+}
+\tag{CU.7}
+
+All local simple-outer phase-gate classifications from the earlier theorem apply to
+this larger population without modification.
+
+---
+
+## 3. All-extra signed penetration count and matching
+
+Let `V_3,V_4` be the degree-three and degree-four straight populations. Then
+
+\[
+V_3+V_4=S_{15}.
+\]
+
+A cubic straight vertex has one extra contact and a quartic straight vertex has two.
+The merged signed-normal theorem, strengthened by the branch audit, makes **all** of
+these extra incidences globally edge-injective. Therefore
+
+\[
+\boxed{
+E_{all,15}=V_3+2V_4=S_{15}+V_4.
+}
+\tag{CU.8}
+
+Every edge has signed inward component greater than `1/sqrt(2)` relative to its
+associated hull-side normal.
+
+The endpoint-multiplicity theorem proved on this branch is independent of the old
+straight-count constant: the opposite endpoint of a penetration receives at most two
+such contacts, and a penetration cannot terminate at another `15`-degree straight
+vertex. Thus the penetration graph is bipartite of maximum degree two. It follows that
+its edge set splits into two matchings and
+
+\[
+\boxed{
+{M_{15}\over D}
+\ge {1\over2}{E_{all,15}\over D}
+\ge0.6194749206818803203\ldots-o(1).
+}
+\tag{CU.9}
+
+This is a pairwise vertex-disjoint physical matching of strongly signed inward unit
+contacts.
+
+The exact degree/edge identity
+
+\[
+E_{all,15}+V_3=2S_{15}
+\tag{CU.10}
+\]
+
+also yields the convenient split
+
+\[
+\boxed{
+\begin{array}{ll}
+\text{either}&V_3/D\ge0.6194749206818803203\ldots-o(1),\\[1mm]
+\text{or}&E_{all,15}/D\ge1.8584247620456409609\ldots-o(1).
+\end{array}
+}
+\tag{CU.11}
+
+No use is made of the numerically nearby but unrelated common-cap `t` thresholds.
+
+---
+
+## 4. Propagation through the singleton stopped-train budget
+
+Use the independently audited conservative rhombic-train floor
+
+\[
+{T_R\over D}
+\ge1.9050256137279146917\ldots-o(1)
+\tag{CU.12}
+\]
+
+rather than the newer `0.00042` proof-only refinement. The low-`t` topology theorem
+gives
+
+\[
+{T\over D}
+\le2.8212578827176370437\ldots+o(1).
+\tag{CU.13}
+\]
+
+With the exact split `T=T_R+S`, where `S` is the singleton stopped-train population,
+
+\[
+\boxed{
+{S\over D}
+\le0.9162322689897223521\ldots+o(1).
+}
+\tag{CU.14}
+
+At most `S` distinct signed penetration edges can be singleton trains. Combining
+(CU.5), (CU.8), and (CU.14),
+
+\[
+\boxed{
+{E_{R,15}\over D}
+\ge0.3227175723740382885\ldots-o(1),
+}
+\tag{CU.15}
+
+where every counted edge lies on a non-singleton strict-rhombus train.
+
+Restricting first to one signed extra contact from each simple-outer straight vertex,
+all selected contacts are still globally distinct. Equations (CU.7) and (CU.14) give
+
+\[
+\boxed{
+{E_{R,simp,15}\over D}
+\ge0.2767810324630044769\ldots-o(1).
+}
+\tag{CU.16}
+
+---
+
+## 5. Train-supported physical matchings
+
+Deleting penetration edges cannot increase either side's degree in the penetration
+graph. Therefore the maximum-degree-two bipartite matching argument applies to the
+train-supported subfamilies as well.
+
+From (CU.15),
+
+\[
+\boxed{
+{M_{R,15}\over D}
+\ge0.1613587861870191442\ldots-o(1).
+}
+\tag{CU.17}
+
+From (CU.16),
+
+\[
+\boxed{
+{M_{R,simp,15}\over D}
+\ge0.1383905162315022384\ldots-o(1).
+}
+\tag{CU.18}
+
+Thus more than `0.13839D` pairwise vertex-disjoint signed penetrations simultaneously
+have
+
+1. a simple-outer degree-three/four tail;
+2. inward component greater than `1/sqrt(2)`; and
+3. membership in a non-singleton strict-rhombus train.
+
+This is the cleanest current deformation-ready subfamily.
+
+---
+
+## 6. Terminal-versus-internal train edge split
+
+Every edge in the simple-outer train-supported family is either a terminal edge of its
+rhombic train or an internal train edge shared by two strict rhombi. Thus one of the
+two classes contains at least half of (CU.16):
+
+\[
+\boxed{
+{\max\{E_{term},E_{int}\}\over D}
+\ge0.1383905162315022384\ldots-o(1).
+}
+\tag{CU.19}
+
+If the terminal branch holds, each non-singleton train has only two terminal edges, so
+at least
+
+\[
+\boxed{
+0.0691952581157511192\ldots D-o(D)
+}
+\tag{CU.20}
+
+distinct rhombic trains are hit by these signed penetration terminals.
+
+If the internal branch holds, at least `0.1383905162D-o(D)` signed simple-outer
+penetrations lie strictly inside rhombic train tracks. This is now the stronger live
+strip-occupancy branch.
+
+---
+
+## 7. Updated frontier
+
+The convex-route theorem materially strengthens the branch rather than merely changing
+a decimal:
+
+```text
+>= 1.2389498413 D distinct 15-degree straight unloaded degree-3/4 vertices
+>= 1.1930133014 D of them simple-outer
+>= 0.6194749206 D pairwise vertex-disjoint signed penetrations
+>= 0.3227175723 D signed penetrations on non-singleton rhombic trains
+>= 0.1613587861 D train-supported penetration matching
+>= 0.1383905162 D simple-outer train-supported penetration matching
+```
+
+The remaining obstruction is still macroscopic strip occupancy. A one-rhombus-thick
+convex boundary strip can carry linearly many parallel penetration edges on one train,
+so an `O(1)` occupancy lemma is false. Closure must instead show that a train carrying
+macroscopic matching mass either
+
+- spends enough boundary turning / phase defect to violate the low-`t` budgets,
+- creates a coherent strip to which the finite oblique-lattice or shear competitor can
+  be applied, or
+- requires more independent diameter bracing than the near-extremal Woodall graph can
+  provide.
+
+**C-II remains open.**
+
+---
+
+## 8. Reproducibility
+
+Run
+
+```bash
+python3 research/verify_target_c_convex_upgrade_degree_matching_train.py
+```
+
+for all displayed endpoint constants.

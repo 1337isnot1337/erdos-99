@@ -1,0 +1,239 @@
+<!-- theorem-state: {"artifact_id":"ART-2934CDE51EAB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Near-unit triangles in every large global minimizer
+
+**Date:** 2026-10-11
+
+**State base:** `ab6dd3336f9f8d440f2bada76edb32153391cddc`
+
+**State version:** `2026-10-10.audit.234`
+
+**Working predecessor:** `22488579`
+
+**Target:** whole problem, with one scoped canonical geometric dependency
+
+**Classification:** proved candidate awaiting promotion
+
+**LEVEL I STATUS: STILL OPEN.**
+
+This theorem applies to **every** global unit-separated diameter minimizer.
+No contact-minimal, stress-selected, rhombic-core, full-core, inactive-container,
+or lattice-source normal form is imposed. Contact-isolated points count as
+source points throughout. The new result does not claim any exact unit triangle.
+
+## 1. Exact statement and global implication
+
+Let `A` be any global minimizer of cardinality `n` and diameter `D`.
+
+* If `D>=30000`, three actual source labels form a triangle all of whose
+  sides belong to `[1,1+1450/D]`. Its largest squared side minus one is
+  strictly less than `3000/D`.
+* If `D>=60000`, `A` contains at least `ceil(n/144)` pairwise vertex-disjoint
+  triangles of actual source labels whose sides belong to `[1,1+2900/D]`.
+  For each of them, its largest squared side minus one is less than `6000/D`.
+
+The constants are deliberately conservative. The companion global clearance
+formulation therefore gives
+
+\[
+\boxed{\eta_n<3000/D(n)\quad\text{when }D(n)\ge30000.}     \tag{1}
+\]
+
+The exact implication chain is
+
+```text
+global lattice comparison + one coupled Delaunay crop
+ -> quadratically many acute triangles of original source labels
+ -> O(1/D) triangle clearance in every global minimizer
+ -> no optimal clearance plateau extending beyond 3000/D
+```
+
+A plateau of any positive length below that bound remains possible under this
+argument. Thus (1) is a global quantitative reduction, not Level I closure.
+
+## 2. Dependencies and exact scope
+
+The sole nontrivial geometric input is the canonical
+`C-COUPLED-DELAUNAY-CONVEX-CONTAINER-TRANSFER`, promoted by Audit.108:
+[`independent audit`](../audits/target_c_coupled_delaunay_container_transfer_independent_audit_2026-10-07.md).
+Its manifest scope is arbitrary finite unit-separated sources and arbitrary
+convex polygon crops, so it applies to the full hull of any noncollinear global
+minimizer. It is not restricted to canonical C-II survivors.
+
+We use its proved completion, degree bound, triangle accounting, obtuse-pair
+charge, and acute small-excess side estimate, not a source-contact or capacity
+interpretation. Oler's finite inequality and the isodiametric and perimeter
+bounds have the normalization recorded in
+[`shared theory, Section 21.1`](../theory/03-oler-shell.md).
+The triangular-lattice averaging comparison is reproved below.
+
+## 3. The global population lower bound
+
+Put `a0=sqrt(3)/2` and `Delta=pi/(2sqrt(3))`. A unit triangular lattice has
+covolume `a0`. Average its number of sites in the **open** disk of radius
+`D/2` over one fundamental cell of translations. The average is
+
+\[
+\frac{\pi D^2/4}{a_0}=\Delta D^2.
+\]
+
+If `n<=Delta D^2`, some translated lattice has at least `n` sites in that open
+disk. Choose `n` of them. This finite unit-separated set has diameter strictly
+less than `D`, contradicting global optimality. Therefore
+
+\[
+\boxed{n>\Delta D^2>\frac67D^2.}                          \tag{2}
+\]
+
+The last inequality uses only `pi>3` and `sqrt(3)<7/4`. This argument uses the
+global hypothesis, independently of any contact graph or stress.
+
+For `D>=30000` the source is noncollinear: a collinear unit-separated source
+has `n<=D+1`, inconsistent with (2). Its full convex hull `K` is therefore a
+compact convex polygon with nonempty interior.
+
+## 4. Coupled completion and global linear defect budget
+
+Use the single unit-separated closed-unit-covering completion `P` and its
+Delaunay triangulation from Audit.108, with crop `C=K`. Write
+
+\[
+Q=\operatorname{area}(K),\quad p=\operatorname{per}(K),\quad
+S=Q/a_0+p/2+1-n,
+\]
+
+and let `B` be the completion population inside `K` at distance at most two
+from its boundary. Let `Sigma` be the sum of the nonnegative triangle area
+excesses `e_T=area(T)-sqrt(3)/4` over all contained Delaunay triangles.
+
+The isodiametric bound `Q<=pi D^2/4`, perimeter bound `p<=pi D`, and (2) give
+
+\[
+0\le S<\frac\pi2D+1<2D\qquad(D\ge3).
+\]
+
+Audit.108 gives
+
+\[
+\begin{split}
+|(P\setminus A)\cap K|&\le\lfloor S\rfloor,\\
+B&\le20p/\pi+25\le20D+25\le21D\quad(D\ge25),\\
+0\le\Sigma&\le a_0S+7\sqrt3 B\\
+&<\left(140\sqrt3+\frac{\pi\sqrt3}{4}\right)D
+  +\left(175\sqrt3+\frac{\sqrt3}{2}\right)\\
+&<247D+308\le248D\quad(D\ge308).
+\end{split}                                               \tag{3}
+\]
+
+The numerical inequalities use `sqrt(3)<7/4` and `pi<22/7`. They do not
+assume a sharper minimizer shape or a bound on the isolate population.
+
+## 5. Remove auxiliary and bad triangles, retaining quadratic source mass
+
+Let `T` denote the number of contained Delaunay triangles. The canonical
+Euler accounting in Audit.108 gives
+
+\[
+T\ge2n-28B.                                               \tag{4}
+\]
+
+Here the `n` labels are all original source points; the completion was not
+substituted for the source. Its Delaunay degree bound is 24. Therefore at
+most `24B` contained triangles touch the boundary strip, and at most `24S`
+contained triangles touch an auxiliary completion vertex in `K`.
+
+The canonical obtuse-triangle pair charge applies to triangles all of whose
+vertices are deeper than two. It bounds their right/obtuse population by
+`4Sigma/delta`, where `delta=(2-sqrt(3))/4>1/16`.
+
+After deleting those three populations, at least
+
+\[
+\begin{split}
+N&\ge T-24B-24S-4\Sigma/\delta\\
+&\ge2n-52B-24S-64\Sigma\\
+&>2n-17012D                                                \tag{5}
+\end{split}
+\]
+
+acute contained triangles remain whose three vertices are **original source
+labels**. If a boundary triangle is also auxiliary or obtuse, this deletion
+only overcounts losses, which is harmless for the lower bound.
+
+For `D>=30000`, (2) implies `n>17012D`, so `N>n`. This is the decisive
+source-population check: `O(D)` completion and exceptional labels cannot
+consume the quadratic original source triangle population.
+
+## 6. One almost-unit source triangle and the plateau bound
+
+The sum of the retained triangles' excesses is at most `Sigma`. One of them
+therefore has
+
+\[
+e_T\le\Sigma/N<248D/n<\frac{868}{3D}<\frac{290}{D}.
+\]
+
+For `D>=30000` this is less than `1/100`. The canonical acute small-excess
+side estimate gives, for every one of its three sides,
+
+\[
+1\le L\le1+5e_T<1+1450/D.
+\]
+
+Hence
+
+\[
+\max L^2-1
+<\frac{2900}{D}+\frac{2102500}{D^2}<\frac{3000}{D},        \tag{6}
+\]
+
+where the last inequality holds for `D>=30000`. This proves the first
+conclusion. Since it holds for every global minimizer, maximizing its
+triangle clearance over the entire compact optimizer set proves (1).
+It follows that `F_n(s)>F_n(0)` for `s>=3000/D(n)` in that range.
+The positive interval below this threshold is not excluded.
+
+## 7. A macroscopic disjoint family of almost-unit source triangles
+
+If `Sigma>0`, at least half of the `N` retained triangles have
+`e_T<=2Sigma/N<580/D`. If `Sigma=0`, all `N` do. For `D>=60000` these
+excesses are below `1/100`, so their sides are less than `1+2900/D` and
+their largest squared side excess is less than
+
+\[
+5800/D+8410000/D^2<6000/D.
+\]
+
+There are at least `n/2` such triangles. A triangle has three vertices, and
+each of those belongs to at most 24 triangles in the single coupled
+Delaunay triangulation. Greedily select a triangle and remove every triangle
+sharing one of its vertices. Each selection removes at most 72 candidates.
+Thus one obtains at least `ceil(n/144)` mutually vertex-disjoint source
+triangles with the stated side and clearance bounds.
+
+No disjointness is inferred from independent charts or different completions.
+All vertices and triangles come from the one actual full-source completion.
+
+## 8. Checks, limitations, and next global obligation
+
+`research/verify_global_source_near_triangle_budget_2026_10_11.py` checks the
+rational envelopes and positivity certificates for every real `D>=30000`,
+using polynomial coefficients in `D-30000`; it checks the second family's
+threshold at `60000`. It does not certify the geometric input, completion,
+global optimality, exact unit contacts, or Level I. Those scope restrictions
+are explicit. The analytic argument above carries the source-population and
+global quantifiers.
+
+In particular, none of the near-unit Delaunay edges is asserted to be an old
+source contact. A positive `O(1/D)` clearance can persist in a triangle-free
+source; taking a limit after rescaling the configuration does not create an
+exact unit triangle at a finite cardinality. The companion parallel-contact
+approximation supplies an exact warning against such an inference.
+
+The remaining global obligation is to eliminate the optimal clearance
+plateau **inside** `0<s<3000/D(n)` for all sufficiently large cardinalities.
+Equivalently one must upgrade the bound on the maximum optimizer clearance
+from (1) to `eta_n=0`. No canonical status is changed by this candidate.
+
+**Promotion recommendation:** preserve unreviewed; the sole canonical crop
+dependency has been checked at its full-source scope. Do not promote a Level I
+conclusion.

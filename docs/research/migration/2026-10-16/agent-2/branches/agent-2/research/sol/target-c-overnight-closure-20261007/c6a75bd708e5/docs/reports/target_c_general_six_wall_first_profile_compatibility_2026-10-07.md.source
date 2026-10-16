@@ -1,0 +1,192 @@
+<!-- theorem-state: {"artifact_id":"ART-6DE5C2329FC6","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: maximum population forces six first curvature profiles to match
+
+Date: 2026-10-07. Authority: audit.77.
+**Proved candidate awaiting independent audit.** No promotion.
+
+## 1. A general boundary-family theorem
+
+Fix M>=3. Let W(theta), theta>=0, be a C2 family of convex unit polygons
+with 6M labelled vertices, tending to the regular radius-M triangular
+hexagon H_M. Divide its cyclic boundary into six sides with M edges each.
+At theta=0, the directed edges on side k are e_(k+2), where
+`e_k=exp(i*k*pi/3)`. Write their first angular rates as
+
+`edge_(k,j)(theta)=e_(k+2)*exp(i*beta_(k,j)*theta+O(theta^2))`,
+`j=0,...,M-1`.
+
+Assume beta_(k,0)<...<beta_(k,M-1) on each side; no symmetry, common
+profile, corner motion, or exact sorting wall is assumed. Suppose an
+arbitrary unit-separated cloud of N=3M^2-3M+1 points can be placed in
+the strict interior for arbitrarily small positive theta, jointly
+unit-separated from all wall vertices.
+
+Then the six ordered lists beta_k are identical. After removing one
+first-order translation and rotation, their common mean is zero. Every
+subsequential first cloud velocity is a sorting-permutation field for
+this common rate multiset, even though the boundary family itself need
+not be an exact finite sorting wall.
+
+Thus if any two lists differ, there is theta_0>0 such that the wall
+cannot accommodate N interior points for 0<theta<theta_0. Oler and
+continuity bound the population by N, so the maximum is at most N-1.
+This is an actual finite-population exclusion, not just nonexistence of
+a C2 cloud trajectory. The cloud need not depend continuously on theta.
+
+`arbitrary six first boundary profiles -> incompatible maximum population
+unless they match -> one-deficit finite population -> packet using actual
+boundary data (still required)`.
+
+The last packet is not proved for arbitrary beta_k. Matching first
+profiles do not identify the finite wall or justify importing the fixed
+sorting-wall packet. No arbitrary macroscopic-container extraction,
+uniform growing-M onset, C-II or Level I closure follows.
+
+## 2. Full chart and first velocities
+
+Oler equality at the limiting H_M forces the complete triangular chart
+P_M; its wall consists of the given 6M boundary labels and its interior
+is P_(M-1). This is the equilateral finite equality implication at the
+normalization independently checked in audit.74, not a disk-equality
+uniqueness assertion. The reasoning applies to this different boundary
+family because only its limiting H_M and full equality count are used.
+
+Label a feasible subsequence by that limit. Cloud displacement is O(theta):
+otherwise divide by its norm, let the O(theta) wall displacement disappear,
+and obtain a nonzero flat pinned lower-cone vector. Weight one on every
+unit edge with a moving endpoint equilibrates at every full-chart
+interior point. Positivity forces all unit derivatives to be zero; the
+connected elementary triangles propagate pinning and force the vector
+zero. This is an auxiliary-chart argument, not full-source ZR/ZF.
+Consequently a subsequence has displacement theta*d+o(theta).
+Let g be the prescribed first wall velocities.
+
+Each flat unit wall edge has zero first length variation. Sum those M
+rows along a side, then sum over the six sides. The telescoping identity
+`e_(k+1)-e_(k+2)=e_k` gives
+
+`sum_k e_k dot g(M*e_k)=0`.
+
+For each r=1,...,M-1 use the flat positive stress of weight one on ring r
+and the six radial chains from that ring to the wall corners. For r=0
+use the six full radial chains alone. Its interior forces balance and
+its wall work is exactly the preceding sum. Every lower first row is
+nonnegative, so each ring and radial row in these stresses is zero.
+These stresses are used individually, not summed as energy currency.
+
+Radial equalities give
+`d(r*e_k)=d(0)+alpha_(r,k)*J(e_k)`.
+Ring side equalities imply alpha_(r,k) is independent of k. At r=M,
+use the actual unit-wall edge equalities summed along each straight
+limiting side to obtain the same conclusion. Hence
+
+`g(M*e_k)=d(0)+alpha_M*J(e_k)`.
+
+Subtract translation theta*d(0) and rotation of first rate alpha_M/M
+from the entire family. Now the corner first velocities vanish and
+all six beta_k have zero sum. Indeed their side sums were alpha_M
+before normalization. Thus unequal side means already obstruct a
+feasible maximum population, before the second-order argument.
+
+## 3. The projected first cone is an intersection of permutahedra
+
+Put alpha_0=alpha_M=0, t_h=alpha_(h+1)-alpha_h, sum t_h=0.
+In sector k use rotated coordinates u=e_k, v=e_(k+1), c=sqrt(3)/2.
+At p=(r-j)u+jv, ring equality gives
+
+`d(p) dot u=c*s_(r,j)`,
+`d(p) dot v=c*(s_(r,j)+alpha_r)`.
+
+The remaining two nearest-neighbour lower rows give
+
+`s_(r,j)>=s_(r-1,j)`,
+`s_(r,j)>=s_(r-1,j-1)-t_(r-1)`.
+
+Axis values are s_(r,0)=0 and s_(r,r)=-alpha_r. On wall side k the
+first velocity at index j is J(e_(k+2))*B_(k,j), where
+`B_(k,j)=sum_(ell<j) beta_(k,ell)`; hence s_(M,j)=-B_(k,j).
+
+Following any choice of j diagonal steps to this endpoint gives
+
+`sum_(h in I) t_h >= B_(k,j)` for every j-element subset I.
+
+Since beta_k is ordered increasingly with sum zero, these inequalities
+say exactly
+
+`t in P_k=conv{permutations of beta_k}`.
+
+The projected feasible first polytope is the intersection of all six
+P_k. For sufficiency in this first-order statement, at interior layers
+choose s_(r,j) as minus the sum of the j smallest t's in the prefix;
+at layer M use the specified -B_(k,j) independently for each sector.
+The subset bounds give each entering inequality, and axes agree.
+No finite motion is inferred from this weak first-order sufficiency.
+
+## 4. A single finite stress inequality forbids profile mismatch
+
+Let x_k(theta) be the actual corner positions, after the normalization
+above. Sum the projections of all unit wall edges onto their flat side
+directions. Telescoping, and expanding the cosines, gives the exact
+second-order corner work
+
+`sum_k e_k dot (x_k(theta)-M*e_k)`
+`=-(theta^2/2)*sum_k ||beta_k||^2+o(theta^2)`.
+
+Use only the central six-radial-chain stress in the finite lower squared
+inequalities. All interior linear terms cancel. Their quadratic terms
+therefore satisfy
+
+`sum_(radial chains) |delta_p-delta_q|^2`
+`>=-2*sum_k e_k dot (x_k(theta)-M*e_k)`.
+
+Divide by theta^2 along the arbitrary feasible subsequence. The left
+limit is 6*||t||^2, so
+
+`6*||t||^2 >= sum_k ||beta_k||^2`.
+
+Conversely t in P_k implies ||t||^2<=||beta_k||^2 for each k.
+Define L_k=||beta_k||^2-||t||^2>=0. The stress inequality gives
+sum L_k<=0, so every L_k=0. Strict convexity of squared norm on a
+convex combination of distinct permutations forces t to be a permutation
+of each beta_k. Because each list is increasing, all six lists match.
+At a permutation the prefix/suffix path equalities force every s_(r,j)
+to its sorting value, as in the earlier fixed-profile argument. Thus the
+entire first cloud field is classified.
+
+For a quantitative mismatch certificate, for t in P_k write a convex
+combination t=sum lambda_v*v of its permutations. Then
+
+`L_k=sum lambda_v*|v-t|^2 >= dist(t,perm(beta_k))^2`.
+
+For any two sides k,l, the closest pair of their permutation vectors
+has squared distance
+`d_kl^2=sum_j (beta_(k,j)-beta_(l,j))^2`, by rearrangement.
+The triangle inequality and (sqrt(L_k)+sqrt(L_l))^2<=2(L_k+L_l)
+give
+
+`sum_s L_s >= L_k+L_l >= d_kl^2/2`.
+
+Thus any mismatch gives a definite positive deficit against the required
+zero, regardless of whether the two profiles have equal energies. This
+is not a floating LP margin. The argument also covers real profiles.
+
+## 5. Nonvacuous scope, certificates and the finite gap
+
+Closed unequal-profile wall families exist. Choose three different strictly
+increasing zero-sum lists for sides 0,1,2, and repeat them on opposite
+sides 3,4,5. Opposite edge sums cancel exactly. At sufficiently small theta
+all side turns are positive and the six corner turns stay near pi/3,
+so this is a closed convex unit wall tending to H_M. The theorem excludes
+its maximum interior population; it does not exclude the wall itself.
+
+The exact checker records two opposed-profile constructions, including a
+same-energy distinct-profile pair. It verifies means, energies and positive
+rearrangement-distance certificates with rational arithmetic. Its counts
+are finite examples. The arbitrary-cloud and sufficiently-small-theta
+conclusion is the subsequence, force and convexity proof above.
+
+This theorem transfers a *necessary first boundary profile* from maximal
+packing to six genuinely different side families. It does not identify
+higher wall coefficients, local finite sorting isolation under unmatched
+higher coefficients, or a packet after the resulting deficit. Those are
+separate exact obligations; no canonical status is changed.

@@ -1,0 +1,448 @@
+# Target C — audited §171 orbit-level atom/detour inequality and stronger explicit Type-II gap
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working proof-only Type-II route theorem; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Dependencies:** audited §§142, 166, 168.
+
+Section 166 charges one persistent train-direction atom against bounded-face endpoint capacity or outer-walk detour. Section 171 charges a complete three-direction `pi/3` atomic orbit before selecting an outer atom. This removes the factor-three loss on bounded-face capacity and, when combined with the explicit §168 train gap, improves the all-Type-II `q-k` floor.
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+s:=\sqrt{\Delta_2},
+\qquad
+C_{146}:={4\over9}(\pi+s),
+\qquad
+g:=0.0004.
+\tag{171.1}
+\]
+
+Along a Type-II subsequential limit write
+
+\[
+M=\lim {b\over D},
+\qquad
+B=\lim {Q+4f\over D},
+\qquad
+C=\lim {T-q/2\over D},
+\tag{171.2}
+\]
+
+and
+
+\[
+\delta=\lim {b-\operatorname{per}(F)\over D}=M-\pi\ge0.
+\tag{171.3}
+\]
+
+Then
+
+\[
+\boxed{
+B+\bigl(81M^2\delta\bigr)^{1/3}
+\ge {8\Delta_2\over C}.
+}
+\tag{171.4}
+\]
+
+This strictly strengthens the §166 one-atom inequality whenever `B>0`.
+
+The explicit §168 lower bound
+
+\[
+\boxed{C\ge2s+g}
+\tag{171.5}
+\]
+
+then yields
+
+\[
+\boxed{
+\liminf {q-k\over D}
+\ge C_{146}+0.00137
+=1.8208835379794446\ldots .
+}
+\tag{171.6}
+\]
+
+The safe scalar endpoint `0.00137` lies below the first zero `0.00137099214...` of the same coarse feasibility envelope.
+
+---
+
+## 171.1 One heavy atomic orbit
+
+Let the empirical complete-train direction measures satisfy
+
+\[
+{T\over D}\to x,
+\qquad
+\mu_D\Rightarrow\mu.
+\]
+
+For every atom `phi` of `mu`, write its absolute `D`-normalized train mass as
+
+\[
+a_\phi=x\mu(\{\phi\}).
+\]
+
+Partition projective directions into the order-three orbits of
+
+\[
+\phi\mapsto\phi+{\pi\over3}\pmod\pi.
+\]
+
+For one orbit `r`, let
+
+\[
+A_r=\sum_{\phi\in r}a_\phi
+\]
+
+and let `E_r` be its limiting normalized strict-rhombus crossing mass. Audited §142 gives
+
+\[
+E_r\le{A_r^2\over4},
+\qquad
+\sum_r E_r=\Delta_2.
+\tag{171.7}
+\]
+
+Put
+
+\[
+A=\sum_rA_r=x\sigma,
+\qquad
+R=\sup_rA_r.
+\]
+
+Then
+
+\[
+\Delta_2
+\le {1\over4}\sum_rA_r^2
+\le {R\over4}\sum_rA_r
+={RA\over4}.
+\tag{171.8}
+\]
+
+The §142 exposed-hull inequality `q/T<=2(1-sigma)` gives
+
+\[
+A=x\sigma
+\le x-{1\over2}\lim {q\over D}
+=C.
+\tag{171.9}
+\]
+
+Therefore
+
+\[
+\boxed{R\ge {4\Delta_2\over C}.}
+\tag{171.10}
+\]
+
+No maximizing orbit need exist; a sequence of orbits whose masses tend to `R` is sufficient.
+
+---
+
+## 171.2 A heavy orbit forces an outer atom or bounded-face payment
+
+Fix one atomic orbit `r`. It contains at most three directions. Choose disjoint shrinking projective neighborhoods of those directions whose boundaries are continuity sets for both the train-direction limit and the occurrence-counted outer-direction limit `nu` from §166.
+
+Every stopped train has exactly two terminal face-side occurrences. The total bounded-face endpoint capacity over all directions is `Q+4f`. Hence after taking the source limit and then shrinking the neighborhoods,
+
+\[
+\boxed{
+\sum_{\phi\in r}\nu(\{\phi\})
+\ge (2A_r-B)_+.
+}
+\tag{171.11}
+\]
+
+Since the orbit has at most three directions, one of them is an outer atom of mass
+
+\[
+\boxed{
+w_r\ge {(2A_r-B)_+\over3}.}
+\tag{171.12}
+\]
+
+The hostile-audited §166 cosine-cusp lemma says every outer atom of mass `w` satisfies
+
+\[
+\delta\ge {w^3\over3M^2}.
+\tag{171.13}
+\]
+
+Thus
+
+\[
+\boxed{
+(2A_r-B)_+^3\le81M^2\delta.
+}
+\tag{171.14}
+\]
+
+Equivalently,
+
+\[
+2A_r\le B+(81M^2\delta)^{1/3}.
+\tag{171.15}
+\]
+
+Let `A_r->R` and use (171.10). This proves (171.4).
+
+Singleton trains and bridges cause no multiplicity problem: both the §143 endpoint multigraph and the outer direction measure count physical face-side occurrences.
+
+---
+
+## 171.3 Exact scalar variables near the Type-II endpoint
+
+Pass to a common Type-II subsequence on which
+
+\[
+t:=\lim {q-k\over D},
+\qquad
+\kappa:=\lim {k\over D},
+\qquad
+\varphi:=\lim {f\over D},
+\qquad
+\chi:=\lim {Q\over D}
+\]
+
+exist. The exact outer ledger gives
+
+\[
+\boxed{\chi=2t-\pi-\delta.}
+\tag{171.16}
+\]
+
+Since `q/D=t+kappa` and `T=q+2f-k`,
+
+\[
+{T\over D}=t+2\varphi
+\]
+
+and therefore
+
+\[
+\boxed{
+C={t\over2}+2\varphi-{\kappa\over2}.
+}
+\tag{171.17}
+\]
+
+Every bounded nonquadrilateral face contributes at least one unit to `Q`, so
+
+\[
+0\le\varphi\le\chi.
+\]
+
+Consequently
+
+\[
+\boxed{
+C\le {9t\over2}-2\pi-2\delta-{\kappa\over2}.
+}
+\tag{171.18}
+\]
+
+Also
+
+\[
+B=\chi+4\varphi.
+\]
+
+Solving (171.17) for `4varphi` and using (171.16),
+
+\[
+\boxed{
+B=t+2C+\kappa-\pi-\delta.
+}
+\tag{171.19}
+\]
+
+These are exact normalized identities/inequalities on the chosen subsequence.
+
+---
+
+## 171.4 Reduce all endpoint feasibility to one scalar variable
+
+Fix `t,delta,kappa`. In the feasibility margin associated to (171.4),
+
+\[
+B+(81(\pi+\delta)^2\delta)^{1/3}-{8\Delta_2\over C},
+\]
+
+both the `2C` contribution to `B` and the term `-8Delta_2/C` increase with `C`. Therefore the largest possible margin uses the upper bound in (171.18). Substituting that bound into (171.19) gives
+
+\[
+B\le10t-5\pi-5\delta,
+\tag{171.20}
+\]
+
+independently of `kappa`. The denominator in the negative term is largest when `kappa=0`, so the most favorable possible configuration has `kappa=0` as well.
+
+Hence any feasible Type-II limit must satisfy, for some `delta>=0`,
+
+\[
+\boxed{
+F_t(\delta):=
+10t-5\pi-5\delta
++\bigl(81(\pi+\delta)^2\delta\bigr)^{1/3}
+-{8\Delta_2\over {9t\over2}-2\pi-2\delta}
+\ge0.
+}
+\tag{171.21}
+\]
+
+The explicit §168 gap (171.5) and (171.18) imply
+
+\[
+2s+g
+\le {9t\over2}-2\pi-2\delta,
+\]
+
+so
+
+\[
+\boxed{
+0\le\delta\le d_{max}(t):=
+{ {9t\over2}-2\pi-(2s+g)\over2}.
+}
+\tag{171.22}
+\]
+
+Because `(9/2)C146-2pi=2s`, this is
+
+\[
+d_{max}(t)
+={ {9\over2}(t-C_{146})-g\over2}.
+\tag{171.23}
+\]
+
+---
+
+## 171.5 Explicit contradiction at `C146+0.00137`
+
+Let
+
+\[
+\varepsilon_0=0.00137,
+\qquad
+t_0=C_{146}+\varepsilon_0.
+\]
+
+For fixed `delta`, `F_t(delta)` is strictly increasing in `t`, since
+
+\[
+\partial_tF_t
+=10+{36\Delta_2\over({9t\over2}-2\pi-2\delta)^2}>0.
+\tag{171.24}
+\]
+
+Thus it suffices to bound `F_{t_0}`.
+
+At the endpoint,
+
+\[
+\boxed{
+d_0=d_{max}(t_0)=0.0028825.}
+\tag{171.25}
+\]
+
+For `0<delta<=d_0`, write
+
+\[
+K(\delta)=\bigl(81(\pi+\delta)^2\delta\bigr)^{1/3}.
+\]
+
+Then
+
+\[
+K'(\delta)
+={81^{1/3}\over3}
+(\pi+3\delta)(\pi+\delta)^{-1/3}\delta^{-2/3}.
+\tag{171.26}
+\]
+
+Using `delta<=d_0`,
+
+\[
+K'(\delta)
+\ge {81^{1/3}\over3}\pi(\pi+d_0)^{-1/3}d_0^{-2/3}
+>152.69.
+\tag{171.27}
+\]
+
+The denominator in (171.21) is at least `2s+g`. Hence
+
+\[
+\partial_\delta F_{t_0}
+=-5+K'(\delta)
+-{16\Delta_2\over({9t_0\over2}-2\pi-2\delta)^2}
+>152.69-5-{16\Delta_2\over(2s+g)^2}
+>143.6>0.
+\tag{171.28}
+\]
+
+So `F_{t_0}` is strictly increasing on its entire feasible interval. Its maximum is at `delta=d_0`, where the denominator is exactly `2s+g`.
+
+Direct outward-safe evaluation gives
+
+\[
+10t_0-5\pi-5d_0
+=2.48645961184548\ldots,
+\]
+
+\[
+K(d_0)=1.32165130742282\ldots,
+\]
+
+and
+
+\[
+{8\Delta_2\over2s+g}
+=3.80845139543257\ldots .
+\]
+
+Therefore
+
+\[
+\boxed{
+F_{t_0}(d_0)
+=-0.000340476164268\ldots<0.
+}
+\tag{171.29}
+\]
+
+This contradicts the necessary feasibility condition (171.21). Thus no Type-II survivor subsequence can have `t<=t_0`, proving (171.6).
+
+The first zero of the exact one-variable endpoint envelope is approximately
+
+\[
+0.00137099214028
+\]
+
+above `C146`; only the round value `0.00137` is claimed.
+
+---
+
+## 171.6 Hostile-audit boundaries
+
+The derivation was checked for the following failure modes.
+
+1. **Orbit versus atom mass:** weighted Mantel is applied to entire `pi/3` orbits before selecting one of at most three outer atoms.
+2. **Bounded endpoint charge:** (171.11) uses the entire global bounded-face capacity `B`, so no unproved directionwise face-capacity statement is inserted.
+3. **Cusp coefficient:** the inherited §166 lemma is the hostile-audited `delta>=w^3/(3M^2)` form.
+4. **Normalization:** `C=(T-q/2)/D`, not `T/D`; exact equations (171.16)–(171.19) were rederived from the current Type-II ledgers.
+5. **Optimization directions:** the feasibility margin increases with `C`, decreases when `kappa` lowers the maximum available `C`, and increases with `t`; all relaxations maximize the chance of survival.
+6. **Detour range:** the explicit §168 lower bound on `C` supplies the upper bound on `delta`; no zero-detour hypothesis is used.
+7. **One-variable monotonicity:** (171.27) is a uniform lower bound on the cubic derivative, while the negative denominator derivative is bounded using `C>=2s+g`; the final margin is not a sampled optimizer.
+8. **Source scope:** contact-isolated source points remain in the full source and do not enter the core train/rigidity kernel.
+
+This theorem does not close Type II. It strengthens the quantitative endpoint floor and provides a reusable orbit-level capacity/detour inequality. The next structural target is to combine (171.4) with the exact five-currency hull-side conservation law, where negative hull-side correction is forced to reappear as outer-walk surplus.
+
+**Disposition:** PASS at audited-working proof-only scope. C-II and Level I remain open.

@@ -1,0 +1,475 @@
+# Target C — all-phase harmonic concentration audit
+
+**Date:** 2026-09-12
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module combines canonical Section 75 with the harmonic attachment cells from
+Section 62. Its point is to remove one remaining diffuse-core possibility.
+
+A quadratic positive KKT contact core cannot distribute its quadratic population over
+many small harmonic components. In every post-ZF phase, positive quadratic core
+density forces a bounded family of graph-diameter-`Theta(D)` unloaded components to
+carry a positive fraction of the core, and one of those components itself contains
+`Theta(D^2)` unloaded vertices. The same component has a loaded attachment polygon of
+macroscopic Euclidean diameter.
+
+The theorem is an all-phase rebuild of the useful finite-packing mechanism in the old
+unreviewed report
+`docs/reports/target_c_quadratic_population_harmonic_component_2026-09-09.md`.
+That report used a near-circle diameter budget. Here canonical Section 75 supplies the
+global replacement
+
+\[
+\sum_r\delta_r\le 2+2\pi D,
+\qquad
+c_I=O(D^{2/3}),
+\]
+
+so no near-circle, near-minimal-boundary, `s_Z=0`, or Woodall-branch hypothesis
+remains.
+
+---
+
+# 77. Positive quadratic core density forces a quadratic harmonic component
+
+Use the canonical post-ZF notation from Sections 62 and 75:
+
+- `B` is the loaded set and `q=|B|`;
+- `I_1,...,I_{c_I}` are the connected components of the unloaded nonisolated
+  positive-contact graph after deleting `B`;
+- `n_r=|I_r|`;
+- `A_r subset B` is the distinct loaded attachment set of `I_r`;
+- `P_r=conv(A_r)`;
+- `delta_r` is the graph diameter of `C[I_r]`, with `delta_r=0` for a singleton;
+- `m` is the population of the nonisolated positive-contact core.
+
+The sets `B,I_1,...,I_{c_I}` partition that core, so
+
+\[
+\boxed{m=q+\sum_r n_r.}
+\tag{77.1}
+\]
+
+Canonical harmonic trapping and the contact-path estimate give
+
+\[
+I_r\subseteq P_r,
+\qquad
+\operatorname{diam}(P_r)\le\delta_r+2.
+\tag{77.2}
+\]
+
+Canonical Section 75 gives
+
+\[
+\boxed{c_I=O(D^{2/3})}
+\tag{77.3}
+\]
+
+and, from its finite diameter ledger,
+
+\[
+\boxed{
+S_D:=\sum_r\delta_r\le 2+2\pi D.
+}
+\tag{77.4}
+\]
+
+Finally `q<=pi D`, so the loaded population is boundary-order.
+
+Put
+
+\[
+\Delta:={\pi\over2\sqrt3}.
+\tag{77.5}
+\]
+
+## 77.1 Finite capacity of one harmonic component
+
+### Lemma 77.1 — component Oler capacity
+
+Every unloaded harmonic component satisfies
+
+\[
+\boxed{
+ n_r
+\le
+1+\Delta(\delta_r+2)^2
++{\pi\over2}(\delta_r+2).
+}
+\tag{77.6}
+\]
+
+### Proof
+
+The `n_r` points of `I_r` are unit-separated and lie in the convex set `P_r`.
+Canonical Oler Lemma 21.1 gives
+
+\[
+n_r
+\le {2\over\sqrt3}\operatorname{area}(P_r)
++{1\over2}\operatorname{per}(P_r)+1.
+\tag{77.7}
+\]
+
+Let `d_r=diam(P_r)`. The planar isodiametric inequality and Cauchy's
+perimeter-diameter inequality give
+
+\[
+\operatorname{area}(P_r)\le {\pi d_r^2\over4},
+\qquad
+\operatorname{per}(P_r)\le\pi d_r.
+\tag{77.8}
+\]
+
+Since `d_r<=delta_r+2`, substitution into (77.7) gives (77.6). `square`
+
+In particular there are absolute constants `C_1,C_0` such that
+
+\[
+n_r\le\Delta\delta_r^2+C_1\delta_r+C_0.
+\tag{77.9}
+\]
+
+Only the leading coefficient `Delta` matters below.
+
+## 77.2 Small graph-diameter components carry little quadratic population
+
+Fix one constant `eta>0` and split
+
+\[
+\mathcal S_\eta:=\{r:\delta_r<\eta D\},
+\qquad
+\mathcal L_\eta:=\{r:\delta_r\ge\eta D\}.
+\tag{77.10}
+\]
+
+For the small components,
+
+\[
+\sum_{r\in\mathcal S_\eta}\delta_r^2
+\le
+\eta D\sum_r\delta_r.
+\]
+
+Using (77.3), (77.4), and (77.9),
+
+\[
+\begin{aligned}
+\sum_{r\in\mathcal S_\eta}n_r
+&\le
+\Delta\eta D S_D+C_1S_D+C_0c_I\\
+&\le
+2\pi\Delta\eta D^2+o(D^2).
+\end{aligned}
+\]
+
+Thus
+
+\[
+\boxed{
+\limsup_{D\to\infty}
+{1\over D^2}
+\sum_{r\in\mathcal S_\eta}n_r
+\le2\pi\Delta\eta.
+}
+\tag{77.11}
+\]
+
+The large components are few. Equation (77.4) gives
+
+\[
+|\mathcal L_\eta|\,\eta D
+\le S_D,
+\]
+
+hence
+
+\[
+\boxed{
+\limsup_{D\to\infty}|\mathcal L_\eta|
+\le {2\pi\over\eta}.
+}
+\tag{77.12}
+\]
+
+More precisely, for every sufficiently large `D`,
+
+\[
+|\mathcal L_\eta|
+\le {2\pi\over\eta}+{2\over\eta D}.
+\tag{77.13}
+\]
+
+So for every fixed macroscopic diameter threshold, only boundedly many harmonic
+components can cross it.
+
+## 77.3 Quantitative concentration theorem
+
+### Theorem 77.2 — quadratic core concentration
+
+Consider any survivor subsequence for which
+
+\[
+\boxed{
+\liminf {m\over D^2}\ge r>0.
+}
+\tag{77.14}
+\]
+
+Set
+
+\[
+\boxed{
+\eta_*:={r\over4\pi\Delta}.
+}
+\tag{77.15}
+\]
+
+Then:
+
+1. components with `delta_r<eta_*D` carry at most half of the guaranteed quadratic
+   core density:
+   \[
+   \boxed{
+   \limsup {1\over D^2}
+   \sum_{\delta_r<\eta_*D}n_r
+   \le {r\over2};
+   }
+   \tag{77.16}
+   \]
+2. the number of components with `delta_r>=eta_*D` is bounded by
+   \[
+   \boxed{
+   \limsup
+   \#\{r:\delta_r\ge\eta_*D\}
+   \le {8\pi^2\Delta\over r};
+   }
+   \tag{77.17}
+   \]
+3. one harmonic component satisfies
+   \[
+   \boxed{
+   \liminf
+   \max_r {n_r\over D^2}
+   \ge {r^2\over16\pi^2\Delta};
+   }
+   \tag{77.18}
+   \]
+4. choosing a component realizing the maximum in (77.18), its loaded attachment
+   polygon is macroscopically wide:
+   \[
+   \boxed{
+   \liminf
+   {\operatorname{diam}(P_r)\over D}
+   \ge {r\over4\pi\Delta}=\eta_*.
+   }
+   \tag{77.19}
+   \]
+
+Hence a positive-density positive-contact core contains an actual connected unloaded
+positive-contact component with `Theta(D^2)` vertices inside a loaded attachment cell
+of diameter `Theta(D)`.
+
+### Proof
+
+Because `q<=pi D`, equations (77.1) and (77.14) give
+
+\[
+\liminf {1\over D^2}\sum_rn_r\ge r.
+\tag{77.20}
+\]
+
+Insert `eta=eta_*` into (77.11). Since
+
+\[
+2\pi\Delta\eta_*={r\over2},
+\]
+
+we obtain (77.16). Therefore the components in `mathcal L_{eta_*}` carry at least
+
+\[
+\left({r\over2}-o(1)\right)D^2
+\tag{77.21}
+\]
+
+unloaded vertices.
+
+Equation (77.12) gives
+
+\[
+\limsup|\mathcal L_{\eta_*}|
+\le {2\pi\over\eta_*}
+={8\pi^2\Delta\over r},
+\]
+
+which is (77.17). Pigeonholing (77.21) over this bounded family gives
+
+\[
+\liminf\max_r{n_r\over D^2}
+\ge
+{{r/2}\over{8\pi^2\Delta/r}}
+={r^2\over16\pi^2\Delta}.
+\]
+
+This proves (77.18).
+
+It remains to prove the attachment-span statement for a maximizing component. Write
+
+\[
+d_r=\operatorname{diam}(P_r).
+\]
+
+Applying Oler directly as in (77.7)-(77.8), without replacing `d_r` by
+`delta_r+2`, gives
+
+\[
+ n_r
+\le
+1+\Delta d_r^2+{\pi\over2}d_r.
+\tag{77.22}
+\]
+
+If along a further subsequence `d_r/D -> s`, then (77.18) and (77.22) imply
+
+\[
+{r^2\over16\pi^2\Delta}
+\le \Delta s^2.
+\]
+
+Thus
+
+\[
+s\ge {r\over4\pi\Delta}=\eta_*.
+\]
+
+Since every further convergent subsequence has this lower bound, (77.19) follows.
+`square`
+
+## 77.4 Optimized form and comparison with the old near-circle report
+
+The constants above are the exact optimizer of the all-phase Section-75 diameter
+budget. For arbitrary fixed `eta`, (77.11)-(77.12) give
+
+\[
+\liminf\max_r{n_r\over D^2}
+\ge
+{\eta\over2\pi}
+\left(r-2\pi\Delta\eta\right)
+\tag{77.23}
+\]
+
+whenever the bracket is positive. The right side is maximized at
+
+\[
+\eta={r\over4\pi\Delta},
+\]
+
+and its maximum is exactly the coefficient in (77.18).
+
+The old unreviewed near-circle report had the stronger local premise
+
+\[
+\sum_r\delta_r\le(\pi+o(1))D,
+\]
+
+which yielded `r^2/(4pi^2Delta)`. That coefficient must not be imported at the present
+all-phase scope. Canonical Section 75 gives `2pi` rather than `pi` as the universal
+leading diameter-budget coefficient, so the correct all-phase constant is
+
+\[
+{r^2\over16\pi^2\Delta}.
+\]
+
+This module therefore supersedes the old report only for the all-phase statement; it
+does not claim the old near-circle constant was algebraically wrong under its own
+stronger premise.
+
+## 77.5 Interaction with the quadratic rhombus branch
+
+Canonical Section 69 gives
+
+\[
+m=R_4+O(D).
+\tag{77.24}
+\]
+
+Hence the quadratic positive-core branch is exactly the branch in which (77.14) holds
+for some fixed `r>0`. Theorem 77.2 shows that this branch has two simultaneous forms
+of concentration:
+
+1. Sections 69 and 73 concentrate `Theta(D^2)` rhombi into a coherent physical train
+   grain and then extract a linear complete phase-pure train grid;
+2. Section 77 concentrates `Theta(D^2)` positive-contact vertices into one harmonic
+   attachment component whose loaded attachment polygon has macroscopic span.
+
+These two concentrated objects are not yet proved to be the same subcomplex. That is
+the next coupling problem. A valid closure must either show that a positive fraction
+of the dominant coherent grain lies in one of the boundedly many macroscopic harmonic
+components, or derive a contradiction if the coherent grain crosses many attachment
+cells/interfaces.
+
+The point is that the quadratic branch is no longer allowed to hide behind a diffuse
+family of `D^{2/3}` tiny harmonic components.
+
+## 77.6 What this theorem does not control
+
+The theorem does **not** show that
+
+- the largest-population harmonic component is the same component as the dominant
+  Section-69 coherent rhombic grain;
+- one attachment set has linearly many loaded vertices;
+- contact-isolated source points are few;
+- the subquadratic positive-core branch is impossible;
+- a KKT weight has a positive lower bound;
+- the attachment polygon is disk-like or a Reuleaux cap.
+
+Contact-isolated source points remain in the full source and are outside every count
+`n_r` in this theorem.
+
+## 77.7 Dependency and regression audit
+
+- **Section 62 harmonic trapping:** `I_r subset conv(A_r)` and
+  `diam(P_r)<=delta_r+2`.
+- **Canonical Oler Lemma 21.1:** finite unit-separated capacity in a convex container.
+- **Section 75:** `c_I=O(D^(2/3))` and
+  `sum delta_r<=2+2pi D` at full post-ZF scope.
+- **Loaded hull:** `q<=pi D`, so loaded vertices do not carry quadratic population.
+- **Section 69:** used only for the interpretation (77.24), not for Theorem 77.2.
+- **Near-circle reports:** not used as premises.
+- **Contact isolates:** retained globally and not counted by the nonisolated core.
+
+## 77.8 Compact handoff
+
+```text
+LEVEL I STATUS: STILL OPEN.
+
+Canonical Section 75:
+    c_I = O(D^(2/3)),
+    S_D=sum delta_r <= 2+2pi D.
+
+One harmonic component:
+    I_r subset P_r=conv(A_r),
+    diam(P_r)<=delta_r+2,
+    Oler => n_r <= Delta delta_r^2 + O(delta_r+1),
+    Delta=pi/(2sqrt3).
+
+For fixed eta:
+    components delta_r<eta D carry at most
+        (2pi Delta eta + o(1))D^2,
+    number of components delta_r>=eta D is at most
+        2pi/eta + o(1).
+
+If liminf m/D^2 >= r>0, choose eta*=r/(4pi Delta):
+    small components carry <=(r/2+o(1))D^2,
+    at most 8pi^2 Delta/r macroscopic components remain,
+    one has
+        n_r >= (r^2/(16pi^2 Delta)-o(1))D^2,
+    and its attachment polygon satisfies
+        diam(P_r) >= (r/(4pi Delta)-o(1))D.
+
+New live coupling target:
+    force overlap between this quadratic harmonic component
+    and the canonical quadratic coherent rhombic grain,
+    or charge separation between them to the O(D) interface budget.
+```

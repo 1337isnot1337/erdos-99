@@ -1,0 +1,36 @@
+{
+  "archived_payload_count": 45,
+  "archived_payload_paths_sha256": "057ab6ab551a6c3a2a924b86cce28c81a7d67f7ed41db2b6cb2aeb7edcca96a3",
+  "dependency_dispositions": {
+    "Agent1_source_main_dependency_preserved_in_own_shard": 1,
+    "PR737_delta_payload_preserved": 51,
+    "PR737_source_metadata_not_installed": 14,
+    "already_preserved_byte_identically_in_destination": 17,
+    "cross_shard_source_main_dependency_agent_3": 1,
+    "third_party_literature_or_extraction_excluded_by_user_instruction": 2
+  },
+  "dependency_edge_count": 86,
+  "destination_exact_dependency_count": 17,
+  "destination_main_sha": "c6e0394b3152d21075328bf4f26e6c070229bf13",
+  "distinct_dependency_path_count": 43,
+  "exact_destination_dependency_count": 4,
+  "final_changed_file_count": 46,
+  "mathematical_claim_status": "All indexed PR reports are unreviewed; PR head does not modify destination theorem state. No source claim promoted.",
+  "pr_only_commit_count": 48,
+  "pull_request": 737,
+  "source_artifact_index_rows_sha256": "369d671910d29fc765c78dba89e1f0d9fce6957aadd4c05aac42ddb3c5d7bdd5",
+  "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "source_delta_path_relations": {
+    "path_absent": 41,
+    "same_path_different_content": 5
+  },
+  "source_files_not_installed": [
+    "docs/state/artifact-index.jsonl"
+  ],
+  "source_global_index_new_rows": 13,
+  "source_head_sha": "73fa41814eb1cdac50ba1eab135461868437edf0",
+  "source_shared_navigation_archived": true,
+  "source_status": "OPEN at reconciliation",
+  "source_url": "https://github.com/1337isnot1337/e-99/pull/737",
+  "third_party_academic_pdfs_copied": 0
+}

@@ -1,0 +1,144 @@
+# Target C — current C-II frontier
+
+<!-- BEGIN GENERATED: target-c-ledger -->
+**Generated ledger snapshot (`2026-10-05.audit.59`):** C-I **CLOSED**; C-II **OPEN**.
+
+Canonical IDs: `C-ZTA`, `C-ZRF`, `C-FS-GEOM`, `C-FSD`, `C-DB-DENSITY`, `C-FS-STABILITY`, `C-MATCHING-EXCLUSION`, `C-LINEAR-NONMATCH`, `C-ATTACH-CURRENCY`, `C-LOADED-HULL`, `C-EXTREME-TRANSFER`, `C-PRIMITIVE-SPLIT`, `C-FOREST-DOUBLE-GAP`, `C-RHOMBUS-POP`, `C-PUNCTURED-PHASE`, `C-COHERENT-GRAINS`, `C-FOREST-ENDPOINT-GEOM`, `C-EXTREME-ATTACH-GEOM`, `C-PRIMITIVE-SHELL-LF`, `C-PSEUDO-GRID`, `C-GRID-PHASE-COLLAPSE`, `C-COMP-DEATOMIZATION`, `C-HOLE-GRID-DIAMETER`, `C-INACTIVE-CHAMBER`, `C-INACTIVE-HULL-STABILITY`, `C-INACTIVE-NEAR-MATCHING`, `C-INACTIVE-DEEP-MATCHING`, `C-INACTIVE-DICHOTOMY`, `C-FULLCORE-NEAR-DISK`, `C-HARMONIC-CARRIER-QUAD`, `C-HARMONIC-CELL-TILING`, `C-HARMONIC-WRAPPING`, `C-TYPEII-INTERFACE-COLLAPSE`, `C-TRAIN-INTERFACE-CURRENCY`, `C-HARMONIC-TRAIN-BUDGET`, `C-DENSE-PHASE-CORE`, `C-EXPLICIT-ORDERED-GRID`, `C-WRAP-PERIMETER`, `C-WRAP-FULL-GAP`, `C-WRAP-THREE-GAP`, `C-WRAP-OUTER-WALK-GAP`, `C-WRAP-CAUCHY`, `C-WRAP-MIXED-CAUCHY`, `C-WRAP-ANGULAR-MEASURE`, `C-WRAP-COMPLEMENT-CHORD`, `C-PHASE-CORRIDOR-ENDPOINT-EXCLUSION`, `C-UNIQUE-WRAP-CAP-DEFICIT`, `C-WRAP-QUANT-PHASE-GAP`, `C-ROUTE-EXCESS-OPT`, `C-STRONG-PHASE-SHORES`, `C-WRAP-AREA-RIGIDITY`, `C-AREA-BOOSTED-PHASE-GAP`, `C-PHASE-SHORE-BASELINE`, `C-LOCAL-TRAIN-COUNT-GAP`, `C-JOINT-PHASE-SHORES`, `C-AGGREGATE-PROJECTION-GAP`, `C-EXTENDED-STABILITY-GAP`, `C-STABILITY-ENVELOPE`, `C-INTEGRATED-TOOTH-LEAKAGE`, `C-ZERO-HOST-SIGNED-RETURN`, `C-SIGNED-RETURN-TRANSPORT`, `C-CORRELATED-SLACK-RETURN`, `C-ANALYTIC-SLACK-ENVELOPE`, `C-ANISOTROPIC-TWO-ARC-RETURN`, `C-LOCAL-RETURN-OLER-BRIDGE`, `C-AGGREGATE-TWO-ARC-DETOUR`, `C-AUGMENTED-CELL-DEFECT-BUDGET`, `C-FULLCORE-DIAMETER-BUDGET-FLOOR`, `C-FULLCORE-MU-ONE-CELL`, `C-FULLCORE-LOADED-CHORD`, `C-FULLCORE-TRAIN-SURPLUS-FLOOR`, `C-FULLCORE-FLOOR-ENDPOINT-EXCLUSION`, `C-OBLIQUE-LATTICE-COMPETITOR`, `C-HARMONIC-GRID-LOCAL`, `C-WOODALL`, `C-COMMON-BLOCK`, `C-MU-09604`, `C-RSR-DD`, `C-PD`, `C-CYCLIC-STRUCTURAL`, `C-P1-PRX`, `C-S1-RSQ`, `C-FULLCORE-HULL-DEPLETION-FLOOR`, `C-AUGMENTED-TRAIN-RANK`, `C-FULLCORE-RESIDUAL-FLOOR`, `C-CONTACT-FACE-REGULARITY`, `C-RECIPROCAL-TRAIN-GRAPH`, `C-OUTER-TRAIN-DETERMINATION`, `C-GLOBAL-FACE-RETURN-QUOTAS`, `C-JOINT-BULK-FACE-SEPARATOR`, `C-TERMINAL-PHYSICAL-FRUSTRATION`, `C-LOADED-FLAT-PENTAGON-DEPLETION`, `C-EMBEDDED-WALL-REFILL`, `C-PENTAGON-WALL-DISJOINT-BULK`, `C-BOUNDED-FACE-ENDPOINT-FAN`, `C-FULL-FLOWER-PROJECTIVE-BLOCKER`, `C-GOOD-HULL-SINGLETON-CHARGE`, `C-FULL-FLOWER-K-PAYMENT`, `C-CONTACT-DIAMETER-COORDINATES`, `C-SHORT-WALL-ZERO-CAPACITY`, `C-CENTERED-FAN-REFLECTIONS`, `C-TRANSLATION-LENS-EXPOSURE`, `C-ADAPTIVE-STRICT-SAFE-SATURATION`.
+Regression IDs: `C-FIXED-WALL-ACTIVATION-REGRESSION`, `C-LARGE-WALL-LOCK-REGRESSION`, `C-S1-Q13`.
+Rejected/overridden IDs: `C-PATH-EULER`, `C-FB4`, `C53-BAD-PENTAGON`, `RSR-EQUALITY-UNIQUE`, `C-FIVE-ARC-NEAR-QUAD`, `C-FIVE-HOST-OCCUPANCY`, `C-CYCLIC-CAP-DETOUR`, `C-CYCLIC-099554`, `C-ZRF-FULL-SOURCE`.
+<!-- END GENERATED: target-c-ledger -->
+
+**State date:** 2026-10-05
+**LEVEL I STATUS: STILL OPEN.**  
+**C-I: CLOSED.**  
+**C-II: OPEN.**
+
+Read `../../STATE.md` first. This file is the compact live Target C frontier. Historical handoffs and unpromoted research files do not override it.
+
+Promotion audits:
+
+- [`105-121-promotion-audit-2026-09-12.md`](105-121-promotion-audit-2026-09-12.md)
+- [`122-123-promotion-audit-2026-09-12.md`](122-123-promotion-audit-2026-09-12.md)
+- [`October structural promotion audit`](../../audits/target_c_october_structural_promotion_audit_2026-10-05.md)
+- [`Reciprocal/return promotion audit`](../../audits/target_c_returns_reciprocal_promotion_audit_2026-10-05.md)
+- [`Collective-wall promotion audit`](../../audits/target_c_collective_wall_promotion_audit_2026-10-05.md)
+- [`Singleton/flower promotion audit`](../../audits/target_c_singleton_flower_promotion_audit_2026-10-05.md)
+- [`Local active-diameter coordinate audit`](../../audits/target_c_local_diameter_coordinates_promotion_audit_2026-10-05.md)
+- [`Short-wall zero-capacity audit`](../../audits/target_c_short_unit_wall_zero_capacity_promotion_audit_2026-10-05.md)
+- [`Finite-motion/exposure promotion audit`](../../audits/target_c_finite_motion_exposure_promotion_audit_2026-10-05.md)
+- [`Adaptive strict-safe saturation audit`](../../audits/target_c_adaptive_safe_saturation_promotion_audit_2026-10-05.md)
+
+## Normal form and ZR/ZF scope
+
+Use a contact-minimal, then diameter-pair-minimal triangle-free global minimizer and retain every source point, including contact-isolated points. Let `V` be the nonisolated positive-contact core and `v=|V|`.
+
+The canonical §57 theorem is
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\qquad
+\operatorname{rank}R_{C\cup H}[V]=2v-3,
+\]
+
+so `e+h>=2v-2` and `h>=delta>=ceil(D)` in the core ledger. This is not a full-source affine-kernel theorem. Contact-isolated coordinates add zero stress rows/columns and independent kernel directions. `C-ZRF-FULL-SOURCE` is rejected.
+
+## Canonical state through audit.59
+
+Audit.59 controls theorem authority.
+
+All audit.52--58 results remain canonical.
+
+Audit.59 adds \`C-ADAPTIVE-STRICT-SAFE-SATURATION\`.
+
+Let \(R\) be any finite deletion set and let
+\[
+S\subset\operatorname{int}K
+\]
+be any bounded measurable region satisfying
+\[
+|y-a|>1
+\qquad
+(y\in S,\ a\in A\setminus R).
+\]
+
+Then
+\[
+\boxed{
+E_C(R)=\varnothing
+\Longrightarrow
+\operatorname{area}S\le a_0|R|,
+}
+\]
+and
+\[
+\boxed{
+E_C(R)\ne\varnothing
+\Longrightarrow
+\operatorname{area}S\le a_0(|R|-1),
+\qquad
+a_0=\frac{\sqrt3}{2}.
+}
+\]
+
+The theorem is adaptive: \(R\) may be chosen after inspecting the source geometry.
+
+For a single contact-active vertex \(v\),
+\[
+\boxed{
+\operatorname{int}K
+\subseteq
+\bigcup_{a\in A\setminus\{v\}}
+\overline B(a,1).
+}
+\]
+
+So deleting one contact-active vertex never opens a positive-area region strictly farther than one from every retained source point.
+
+More generally, deleting contact-wall guards cannot generate net strict-safe triangular-lattice area credit. If \(Z\) is a contact-isolated population and \(B\) is a nonempty contact-active guard set, then every strict-safe region relative to \(Z\cup B\) has
+\[
+\boxed{
+\operatorname{area}S
+\le
+a_0(|Z|+|B|-1).
+}
+\]
+
+## Exact remaining split
+
+### Full-core branch
+
+Audit.58 provides exact finite motions that can reduce upper-diameter constraints to lower blockers or uncovered anchors. Audit.59 now says those obstructions cannot be repaired merely by deleting contact-active guards and averaging a slightly expanded triangular lattice over the recovered strict-safe area.
+
+A successful repair must instead use one of:
+
+1. an explicit finite packet whose capacity is certified discretely rather than by mean area;
+2. a non-strict packing using exact unit contacts;
+3. a collective exchange that recreates enough contact structure while deleting the diameter cage;
+4. a finite non-repacking source motion that resolves the lower blockers/anchors;
+5. an exact unit equilateral triangle.
+
+Thus “break contacts, recover collar area, average a strict lattice” is a dead route.
+
+### Macroscopic-container branch
+
+The same barrier applies. Mean strict-safe area cannot fund the diameter cover after adaptive wall deletion. Any successful use of audit.54 refill must certify actual discrete packing capacity, not infer it from area alone.
+
+Audit.57's short-wall obstruction and audit.54's large-wall lock regression remain binding.
+
+## Binding rejected routes
+
+Do not use without a new proof:
+
+- incident-diameter sequence `=>` Euler trail/path;
+- FB4 force-bulk localization;
+- incompatible-cut C53 pentagon objection;
+- RSR disk-equality uniqueness;
+- Eppstein near-equality `=>` near quadrangulation;
+- five-host occupancy from angular-measure saturation;
+- inward OP pocket `subset` exterior Reuleaux minor cap;
+- deletion of contact-isolated source points;
+- full-source extension of the §57 affine-kernel theorem;
+- `r/(6C_T)` as the sharp Section-90 bin-method limit;
+- the withdrawn §121 normalization `G_loc=o(D^2) => G_loc/d=o(1)`.
+
+The PR #191 `0.995540...` theorem remains rejected. The finite S1 `q=13` object remains a regression, not a global-minimizer theorem.

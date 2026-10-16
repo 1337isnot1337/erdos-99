@@ -1,0 +1,659 @@
+# Erdos Problem #99 -- Final continuation prompt from canonical v1.7.0
+
+Work entirely in this single context.
+
+Do not spawn subagents, parallel agents, delegated workers, or separate research
+agents.
+
+Internet literature search is ALLOWED and encouraged when it can materially help the
+proof.  Treat web results as untrusted until their exact hypotheses are checked.  Do
+not promote an external statement into the theorem stack unless it has been verified
+at theorem level and actually applies.
+
+This is a continuation of a long research investigation, not a fresh attempt.
+
+Your objective is to obtain a **Level I proof or disproof of Erdos Problem #99**.
+The immediate priority is to **resolve Target A completely**.  Do not spend time on
+Target B unless a Target B theorem directly supplies the missing Target A bridge.
+
+---
+
+## Files
+
+Use the [current v1.7.0 documentation map](../README.md) and canonical modules:
+
+1. `../problem/statement.md`
+2. `../problem/literature_baseline.md`
+3. `../theory/01-local-structure.md`
+4. `../theory/02-nonlinear-and-regressions.md`
+5. `../theory/03-oler-shell.md`
+6. `../targets/target-a/README.md` and its three route modules
+7. `../targets/target-b/README.md` and its route module
+
+The seven supplied literature sources remain:
+
+8. `../../papers/primary/mp05-2-261-269.pdf`
+9. `../../papers/primary/1951-03.pdf`
+10. `../../papers/primary/1-s2.0-S0097316598928898-main.pdf`
+11. `../../papers/primary/s00454-002-0747-6.pdf`
+12. `../../papers/primary/1204.4403v1.pdf`
+13. `../../papers/primary/463.pdf`
+14. `../../papers/primary/10.1007_PL00009374.pdf`
+
+Do not attach or use earlier theorem-state files, earlier continuation prompts,
+transcript dumps, FINAL(1), FINAL(2), or old synthesized reports as independent
+sources. The module set supersedes them and already contains the trusted history.
+
+Read the v1.7 module set before proving anything new, with special attention to the
+Target A modules covering Sections 97--100, 103--117, and 118--134.
+
+---
+
+# Problem and quantifiers
+
+For a unit-separated finite set in the plane define
+
+\[
+D(n)=\min\{\operatorname{diam}(A):A\subset\mathbb R^2,\ |A|=n,\ |x-y|\ge1\}.
+\]
+
+Erdos Problem #99 asks whether there is an n_0 such that for every n >= n_0,
+**every** global minimizer contains a unit equilateral triangle.
+
+A proof that some minimizer contains a triangle is insufficient.
+A local triangle-free packing is insufficient for a disproof.
+A disproof requires infinitely many triangle-free **global minimizers**.
+
+Never call an asymptotic, local, KKT, or numerically observed configuration a global
+counterexample without an exact global certificate.
+
+---
+
+# Authoritative Target A endpoint
+
+For the plateau-terminalized scaffold let
+
+\[
+\zeta=\dim\ker S=|C^\partial|-\operatorname{rank}S,
+\qquad
+s=\Delta_\Lambda-d_{\rm int}.
+\]
+
+A surviving hypothetical counterexample has
+
+\[
+\boxed{
+g=\Delta_\Lambda-d_{\rm sc}=s-\zeta=\rho^\dagger-\Phi(v)\ge1.
+}
+\]
+
+Target A closes exactly if you prove
+
+\[
+\boxed{\zeta\ge s,}
+\]
+
+or equivalently
+
+\[
+\boxed{
+\operatorname{rank}S
+\le d_{\rm int}+|C^\partial|-\Delta_\Lambda.
+}
+\]
+
+The Schur response is an exact planar strict gammoid.  Its rank is the maximum number
+of vertex-disjoint directed alternating paths from the boundary source set to exterior
+lattice sinks, and also the minimum directed vertex separator.  Planarity alone is
+not enough.
+
+---
+
+# v1.7 source-side normalization -- use this, not the old p-only formulation
+
+Let A be the genuine triangle-free source minimizer, H=conv(A), |A|=N, diam(H)=D.
+Define
+
+\[
+\widehat N_H=\alpha_1(H),
+\qquad
+\widehat p_H=\widehat N_H-N.
+\]
+
+Then
+
+\[
+0\le\widehat p_H\le p<\frac{\pi D}{2}.
+\]
+
+For every finite unit-separated Q subset H,
+
+\[
+\boxed{|Q|-|N_A(Q)|\le\widehat p_H.}
+\]
+
+This is now the authoritative fixed-source Hall bound.  Therefore a sufficient
+source contradiction for the **existing fixed scaffold** is
+
+\[
+\boxed{
+g>0
+\Longrightarrow
+\exists Q\subset H:
+|Q|-|N_A(Q)|\ge\widehat p_H+1.
+}
+\]
+
+Do NOT revert to p+1 as though it were still the sharp fixed-source threshold.
+
+The exact self-container theorem also gives
+
+\[
+\alpha_1(\operatorname{int}H)\le N-1,
+\]
+
+so every (N+k)-point packing in H has at least k+1 points on the actual boundary.
+Use this boundary reserve when relevant, but do not falsely infer that the newly
+inserted Q itself must meet the boundary.
+
+---
+
+# Maximal triangle-free same-hull source extension
+
+Define B as a maximum triangle-free extension of A inside H:
+
+\[
+A\subseteq B\subseteq H,
+\qquad
+|B|=q=N+k.
+\]
+
+Then
+
+\[
+D(q)=D,
+\qquad
+0\le k\le\widehat p_H.
+\]
+
+If R is the original strict-rattler set,
+
+\[
+|R_B|\ge |R|-5k,
+\]
+
+so a super-boundary rattler population remains super-boundary.
+
+B is append-maximal in the triangle-free class and is closed-unit-covering in H:
+
+\[
+H\subseteq\bigcup_{b\in B}\overline B(b,1).
+\]
+
+Every unit-separated appendable position must be an equilateral apex of a unit edge
+of B, and adding it necessarily creates a unit triangle.
+
+Define
+
+\[
+\tau=\alpha_1(H)-|B|=\widehat p_H-k.
+\]
+
+Then
+
+\[
+\boxed{|Q|-|N_B(Q)|\le\tau.}
+\]
+
+If you replace A by B, you MUST rebuild the Target A scaffold.  Do not use the old S
+as if it were the response matrix of B.  After the rebuild, a sufficient source
+contradiction is
+
+\[
+\boxed{
+g_B>0
+\Longrightarrow
+\exists Q\subset H:
+|Q|-|N_B(Q)|\ge\tau+1.
+}
+\]
+
+Do not assume tau=0.
+
+---
+
+# Exact fixed-container capacity endpoint
+
+For any unit-separated P subset H with |P|=q and M=alpha_1(H), and any
+capacity-maximizing X_max subset H with |X_max|=M, the strict conflict graph
+
+\[
+p\sim x\iff |p-x|<1
+\]
+
+has a matching saturating P:
+
+\[
+\boxed{\nu(P,X_{\max})=|P|.}
+\]
+
+Moreover
+
+\[
+\boxed{
+\max_Q\bigl(|Q|-|N_P(Q)|\bigr)=M-|P|.
+}
+\]
+
+Thus capacity bookkeeping alone can NEVER produce deficiency greater than its own
+available capacity slack.  A proof of Target A must use the global relation to the
+smaller optimum, a triangle-free/global-optimality obstruction, or an exact
+transition mechanism.
+
+For the normalized B, every q-subset of X_max has diameter D.  The diameter graph of
+X_max has vertex-cover number at least tau+1, and X_max has at least tau+1 points on
+\(\partial H\).
+
+A capacity endpoint is completely saturated relative to H in the finite cardinality
+sense: no r-1 of its points can be replaced by r points in H for any r>=1.
+
+---
+
+# Major v1.7 theorem: source-capacity plateau exchange flag
+
+Fix B and one capacity endpoint X_max.  Present the strict conflict graph as a
+transversal matroid on X_max with right shore B.  Choose a maximum basis \mathcal B of
+size q.  The nonbasis set has size tau.
+
+For each nonbasis element e let C_e be its fundamental circuit.  For any subset A_0
+of the nonbasis elements put
+
+\[
+U_{A_0}=\bigcup_{e\in A_0}C_e,
+\qquad
+W_{A_0}=N_B(U_{A_0}).
+\]
+
+The fixed-basis theorem gives
+
+\[
+\boxed{|U_{A_0}|-|W_{A_0}|=|A_0|.}
+\]
+
+Then
+
+\[
+P_{A_0}=(B\setminus W_{A_0})\cup U_{A_0}
+\]
+
+is a global optimum with
+
+\[
+|P_{A_0}|=q+|A_0|,
+\qquad
+\operatorname{diam}P_{A_0}=D.
+\]
+
+Ordering the tau nonbasis elements yields an exact adjacent-cardinality flag
+
+\[
+B=P_0\rightsquigarrow P_1\rightsquigarrow\cdots\rightsquigarrow P_\tau,
+\]
+
+where every step satisfies
+
+\[
+P_i=(P_{i-1}\setminus\Delta B_i)\cup\Delta X_i,
+\qquad
+|\Delta X_i|=|\Delta B_i|+1.
+\]
+
+This is an explicit chain of global optima at every cardinality between q and
+alpha_1(H).
+
+If every P_i is triangle-free, the chain reaches a triangle-free same-hull capacity
+endpoint with zero capacity slack.
+
+Otherwise let j be the first triangle-producing step.  Every new triangle contains a
+point of Delta X_j.  The proof problem can therefore be localized to ONE exact
+Hall-tight adjacent plateau transition.
+
+Use this theorem aggressively.  Do not return to statements like "optima at different
+cardinalities are completely unrelated" without acknowledging this source-capacity
+exception.
+
+---
+
+# Fundamental-circuit geometry
+
+For any fundamental circuit C with right neighborhood W,
+
+\[
+|C|=|W|+1,
+\]
+
+its induced strict conflict graph is connected, and every right vertex has degree at
+least two.
+
+Strict conflict graphs between two internally unit-separated shores are planar.
+Cross-shore coincident pairs, if any, are isolated K_2 components; a nontrivial
+fundamental circuit has no such pair.  Define
+
+\[
+\kappa=e-2|W|.
+\]
+
+Then
+
+\[
+\boxed{
+\kappa
+=\sum_{w\in W}(\deg w-2)
+=\#\{\text{bounded faces of the circuit graph}\}.
+}
+\]
+
+If kappa=0, the circuit graph is a tree, every right vertex has degree two, and the
+entire net-+1 exchange sequentializes into one-for-one feasible swaps followed by one
+final append.
+
+Every intermediate same-cardinality set remains a global optimum.  It need not remain
+triangle-free.
+
+This gives two sharply different first-transition branches:
+
+1. tree circuit: analyze a sequential swap chain and the first exact triangle event;
+2. cyclic circuit: charge the obstruction to the exact planar face budget kappa.
+
+A strong theorem eliminating both branches would be major progress.
+
+---
+
+# Same-cardinality rattler-preserving saturation
+
+You may normalize the genuine source to closed-unit-cover its original hull WITHOUT
+adding O(D) points.
+
+If y in H is at distance >1 from every current point, remove an endpoint x of a unit
+contact and insert y.  The new set remains an N-point triangle-free global minimizer.
+The inserted y has no unit contacts, so the contact count drops.  Iterating terminates.
+
+Any specified original strict-rattler set R is kept pointwise and remains strict.
+Therefore there exists a same-cardinality triangle-free global minimizer A_sat with
+
+\[
+H\subseteq\bigcup_{a\in A_{\rm sat}}\overline B(a,1)
+\]
+
+and the original super-boundary R intact.
+
+Do not use this representative simultaneously with the old hybrid core/forest unless
+you separately rebuild and audit that normal form; the replacement sequence can alter
+the contact graph.
+
+This theorem may remove boundary-order normalization losses from arguments that need
+only source saturation and rattlers.
+
+---
+
+# Capacity shadow: bounded-displacement same-cardinality optimum partner
+
+For the genuine source A and any capacity endpoint X_max, the saturating matching
+produces an injection
+
+\[
+\mu:A\hookrightarrow X_{\max},
+\qquad
+|a-\mu(a)|<1.
+\]
+
+Let Y=mu(A).  Then Y is another N-point global optimum of diameter D.
+
+If L=conv(Y) and
+
+\[
+\delta=\max_a|a-\mu(a)|<1,
+\]
+
+then
+
+\[
+\boxed{L\subseteq H\subseteq L+\delta B,}
+\]
+
+so
+
+\[
+d_H(H,L)<1,
+\qquad
+0\le P_H-P_L<2\pi.
+\]
+
+This is the first exact pointwise coupling of the source to another globally optimal
+configuration inside a source capacity endpoint.
+
+Try to transport this finite chord through deletion of the strict-rattler population
+toward the smaller plateau endpoint.  A successful transport that creates s
+independent boundary null directions of the Schur response would close Target A.
+
+---
+
+# Finite-chord stress identity
+
+Let p_i be the source coordinates, y_i=mu(p_i), and v_i=y_i-p_i.  For any normalized
+proper source KKT stress (alpha,beta),
+
+\[
+\boxed{
+\sum_{ij\in C}\alpha_{ij}|v_i-v_j|^2
+\ge
+\sum_{ij\in H_D}\beta_{ij}|v_i-v_j|^2.
+}
+\]
+
+More exactly,
+
+\[
+\begin{aligned}
+&\sum_C\alpha_{ij}(|y_i-y_j|^2-1)
++\sum_{H_D}\beta_{ij}(D^2-|y_i-y_j|^2)\\
+&=\sum_C\alpha_{ij}|v_i-v_j|^2
+-\sum_{H_D}\beta_{ij}|v_i-v_j|^2\ge0.
+\end{aligned}
+\]
+
+Equality means every positively stressed source contact and diameter edge remains
+active in the capacity shadow.
+
+This is finite-amplitude, not merely local KKT.  However, strict rattlers themselves
+have no active stress, so do not assert a positive lower bound from rattler count
+without a new theorem.
+
+---
+
+# Affine forest triangle barriers
+
+The Section 62 factor theorem remains authoritative: every codimension-one triangle
+wall in the affine forest flat has an identically unit side in the fixed part.
+
+v1.7 sharpens this.  If the third vertex a is moving, its displacement map has rank
+
+\[
+\dim\operatorname{span}\{u_e:e\text{ lies on the root path to }a\}.
+\]
+
+Therefore:
+
+\[
+\boxed{
+\text{a codimension-one triangle wall involving a moving vertex is possible only if
+its entire retained root path is collinear.}
+}
+\]
+
+If the path contains two nonparallel unit-edge directions, every triangle locus
+involving that vertex has codimension at least two.
+
+Thus only straight-chain prefixes can separate the affine forest parameter space by
+codimension-one triangle walls.  A promising source-side theorem is to show that a
+global minimizer cannot hide a super-boundary number of forest degrees of freedom
+behind such straight-chain barriers.
+
+Do not assume long straight rooted chains are impossible; they remain valid local
+regressions.
+
+---
+
+# External literature leads -- allowed but not black boxes
+
+The v1.7 literature search identified several relevant mechanisms.
+
+1. **G. Kuperberg, K. Kuperberg, W. Kuperberg -- lattice packings with gap defects
+   are not completely saturated** (arXiv:math/0303366).  A honeycomb circle packing with an arbitrarily
+   narrow linear gap defect is not completely saturated.  Their mechanism is highly
+   relevant to the strained-monomer obstruction: distributed clearance can sometimes
+   be concentrated by a finite rearrangement until an extra disk fits.
+
+   This theorem is in the infinite plane.  You MUST prove a finite-container transfer
+   before applying it to the Target A monomer scaffold.
+
+2. **Fejes Toth, G. Kuperberg, W. Kuperberg -- highly saturated packings and reduced
+   coverings** (arXiv:math/9511225).  Use their definitions and ideas if useful, but the source capacity
+   endpoint's complete saturation is only a bounded-container cardinality fact until a
+   stronger transfer is proved.
+
+3. **Bondarenko--Hardin--Saff -- mesh ratios for best packings**
+   (arXiv:1212.6211).  The mesh-ratio <=1
+   theorem applies to best-packing configurations obtained as limits of Riesz-energy
+   minimizers; do not claim it for every arbitrary best-packing representative.  The
+   internal same-cardinality saturation theorem is self-contained and stronger for the
+   exact source use case.
+
+4. **Gensane -- generation of optimal packings** (EJC 16 (2009), R24;
+   DOI 10.37236/113).  General strong generation for
+   compact convex containers is conjectural.  The v1.7 exchange flag is an exact
+   discrete source-capacity generation theorem and does not require this conjecture.
+
+Search further if useful, especially for finite versions of gap-concentration,
+complete saturation, honeycomb defect rearrangement, solid circle packings, stable
+hexagonal packings, or reconfiguration under convex-container boundary constraints.
+
+---
+
+# Highest-priority new attacks
+
+## A. Finite monomer gap-concentration theorem
+
+The scaffold's only Hall-neutral bulk phases are monomer and dimer phases.  A coherent
+monomer phase is literally a bounded-displacement deformation of the triangular
+lattice.
+
+Prove a finite analogue of the Kuperberg gap mechanism:
+
+> A sufficiently large coherent monomer domain in the globally derived scaffold, with
+> positive distributed nearest-neighbor clearance and only boundary-order total
+> clearance, admits a finite rearrangement inside the relevant hull/collar that frees
+> one additional unit-separated site without increasing diameter.
+
+This would directly kill the principal strained-monomer regression.  Boundary
+conditions and simultaneous feasibility are the hard part.  Do not replace them by
+an infinite-plane statement.
+
+## B. First triangle-producing exchange transition
+
+Take the first j in the exact source-capacity flag for which P_j contains a unit
+triangle.
+
+Prove either:
+
+1. a different circuit ordering, basis exchange, or small perturbation gives a
+   triangle-free global optimum at the same new cardinality; or
+2. the first-triangle support forces at least s independent failures of the target
+   alternating linkage, i.e. dim ker S >= s.
+
+Start with the tree-circuit case, where the transition sequentializes into simple
+swaps.  Then treat cyclic circuits using kappa, the exact bounded-face budget.
+
+## C. Capacity-shadow to Schur transport
+
+Use the pointwise <1 matching A -> Y and the finite-chord stress identity.  Delete the
+strict-rattler population and compare the resulting matched backbone to a
+right-plateau smaller optimum.  Seek an exact map into ker S, not an O(D) estimate.
+
+## D. Straight-chain barrier elimination
+
+Combine branchwise core-face confinement, source cage estimates, and the new
+collinear-path triangle-wall theorem.  Prove that only O(D) independent forest
+coordinates can lie behind codimension-one straight-chain barriers, contradicting a
+super-boundary flexible branch.
+
+## E. Direct Schur separator theorem
+
+You may still attack the canonical endpoint directly.  In the hard case
+
+\[
+s=\Delta_\Lambda-d_{\rm int}\ge1,
+\]
+
+prove a directed alternating separator of size at most
+
+\[
+|C^\partial|-s.
+\]
+
+But do not use pure planarity, width-one-annulus assumptions, or accidental determinant
+cancellation.  The generic Schur minors are rational functions whose numerators are
+structural matching/linkage determinants.
+
+---
+
+# Binding regressions and prohibited shortcuts
+
+Do NOT claim any of the following without a new proof:
+
+- p=0, widehat p_H=0, or tau=0;
+- source capacity bookkeeping alone gives tau+1 deficiency;
+- maximal triangle-free extension preserves the old hybrid contact graph;
+- every intermediate exchange-flag optimum is triangle-free;
+- tree circuit means triangle-free sequentialization;
+- source and smaller optimum are coordinate-identified;
+- planarity alone implies the Target A separator saving;
+- all alternating paths live in a width-one annulus;
+- the response matrix is a DAG after arbitrary dimer contraction unless the exact
+  phase-anchor construction is being used;
+- individual Voronoi cells have area at least a_0;
+- Oler defect is monotone between arbitrary cardinalities;
+- distributed strain has a uniform density gap;
+- long obtuse or straight runs are automatically Schuermann loose edges;
+- a local/KKT theorem can see strict-rattler coordinates to finite order;
+- Kuperberg's infinite gap-defect theorem directly applies to the finite scaffold;
+- Bondarenko--Hardin--Saff mesh-ratio <=1 applies to every best-packing representative;
+- Gensane's general strong-generator statement is proved.
+
+Keep the strained-monomer, regular-shell, long rooted-chain, overlapping-circuit,
+zero-charge-bulk, and annular-routing regressions active throughout the proof audit.
+
+---
+
+# Output standard for the run
+
+Do not give a survey.  Work aggressively toward a proof.
+
+If you obtain a new theorem, state it exactly, prove it fully, and immediately test it
+against all relevant regressions.
+
+If you believe Target A is closed, explicitly derive
+
+\[
+\dim\ker S\ge\Delta_\Lambda-d_{\rm int}
+\]
+
+or an exact source contradiction exceeding the appropriate fixed-hull Hall slack.
+Do not hide the final one-integer implication behind an O(D), asymptotic, generic, or
+"can be arranged" statement.
+
+If full closure still fails, report only genuinely new rigorous progress, the exact
+remaining implication, and any new failed route worth preserving.  Do not pad the
+answer with old results already in v1.7.0.
+
+Target B remains frozen unless it directly closes Target A.

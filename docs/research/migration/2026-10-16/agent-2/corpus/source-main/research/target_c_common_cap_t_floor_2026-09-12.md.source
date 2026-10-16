@@ -1,0 +1,108 @@
+# Target C-II — retained-remainder floor on the Section-118 common-cap branch
+
+**Date:** 2026-09-12  
+**Status:** proof-only scoped Type-II tradeoff; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This note keeps the exact nonnegative component remainder in audited §161 and inserts
+the independently audited Section-118 common-cap profile. It yields a stronger lower
+bound for the Type-II density `t=(q-k)/D` on that scoped branch:
+
+\[
+\boxed{
+\liminf_{D\to\infty}{q-k\over D}
+\ge 1.8376645\ldots .
+}
+\tag{1}
+\]
+
+This is not a universal Type-II bound: the carrier area/moment inputs below are only
+available on the repaired Section-118 endpoint/common-cap profile. The result does
+not control separated wrapping parameters, the large-detour branch, or Type I.
+
+## 1. Exact implication chain
+
+Use
+
+\[
+t_D={q-k\over D},\qquad \kappa_D={k\over D},\qquad
+S_D={1\over D}\sum_r d_r,\qquad G_D={G_D^{\rm fin}\over D}.
+\]
+
+Audited §161 gives the retained-remainder inequality
+
+\[
+5q-7k\ge 3\sum_r d_r+2G_D^{\rm fin}+c_*D-o(D),
+\qquad
+c_*={\pi\over4}(2-\sqrt3).
+\tag{2}
+\]
+
+Since `q/D=t_D+\kappa_D` and `k/D=\kappa_D`, (2) is
+
+\[
+5t_D-2\kappa_D
+\ge 3S_D+2G_D+c_*-o(1).
+\tag{3}
+\]
+
+On the audited Section-118 common-cap profile, the same-component local area/slack
+theorem and the diameter-moment theorem give
+
+\[
+S_D\ge S_*-o(1),\qquad S_*=2.798596312209462\ldots,
+\tag{4}
+\]
+
+and
+
+\[
+G_D\ge G_*-o(1),\qquad G_*=0.2910434605114113\ldots.
+\tag{5}
+\]
+
+Because `\kappa_D\ge0`, (3)--(5) imply
+
+\[
+\liminf t_D\ge
+{3S_*+2G_*+c_*\over5}
+=1.8376645322540885\ldots.
+\tag{6}
+\]
+
+The key bookkeeping point is the coefficient: `5q-7k` becomes `5t-2\kappa`, while
+the retained `G_D` term stays on the right. No h-only projection or sign reversal is
+used.
+
+## 2. Certified interval and regression
+
+The accompanying verifier uses rational lower bounds for `S_*`, `G_*`, `\pi`, and
+an upper bound for `\sqrt3` to certify
+
+\[
+{3S_*+2G_*+c_*\over5}>1.8376.
+\]
+
+It also checks the exact rational point
+
+\[
+t={37\over20},\quad \kappa=0,\quad S={14\over5},\quad G={3\over10},
+\]
+
+which lies above the scoped floor and satisfies the retained §161 inequality with a
+strict margin. Thus this scalar strengthening does not itself close the branch; it
+only moves the remaining feasible scalar region upward.
+
+## 3. Scope and remaining obstruction
+
+The conclusion is conditional on the same carrier/profile hypothesis used by the
+audited local area/slack and diameter-moment modules. It retains all source points and
+uses no affine-kernel statement for contact-isolated coordinates.
+
+The large-detour/source-descent obligation remains: the five-currency bridge shows
+that endpoint capacity can be paid by outer detour, while the present floor does not
+turn that detour into a strict diameter decrease or an exact unit triangle. The
+macroscopic inactive-container branch is untouched.
+
+**Classification:** proved candidate awaiting independent audit; scoped to the
+Section-118 common-cap Type-II profile; C-II remains open.

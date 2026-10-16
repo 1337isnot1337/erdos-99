@@ -1,0 +1,337 @@
+# Erdős Problem #99 — current Target C continuation
+
+**State:** `2026-10-09.audit.187`
+**LEVEL I STATUS: STILL OPEN.**  
+**C-I: CLOSED.**  
+**C-II: OPEN.**
+
+## Bootstrap
+
+Read, in order:
+
+1. `docs/STATE.md`;
+2. `docs/problem/statement.md`;
+3. `docs/targets/target-c/CURRENT.md`;
+4. `docs/targets/target-c/README.md`;
+5. `docs/targets/target-c/105-121-promotion-audit-2026-09-12.md`;
+6. `docs/targets/target-c/122-123-promotion-audit-2026-09-12.md`;
+7. the canonical modules/reports explicitly named by `docs/state/theorem-state.yaml`;
+8. this prompt last.
+
+Do not infer theorem authority from a merge, date, filename, or section number.
+
+## Mission
+
+Close C-II for every sufficiently large triangle-free global minimizer in the canonical normal form, or produce a valid Level I disproof. Do not spend the run re-proving audited extraction/density machinery or optimizing another carrier decimal unless it creates a new implication to global closure.
+
+## Binding normalization
+
+Use the contact-minimal, then diameter-pair-minimal representative and retain every source point, including contact-isolated points.
+
+The §57 ZR/ZF theorem is only on the nonisolated positive-contact core `V`:
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\qquad
+\operatorname{rank}R_{C\cup H}[V]=2v-3.
+\]
+
+Do not extend this affine-kernel theorem to contact-isolated coordinates. Full-source geometry comes from the separate canonical full-source modules.
+
+Audit.171 promotes `C-ALMOST-ACCESSIBLE-STRESS-TRANSVERSAL`: for any supplied nonempty loaded set `W`, a two-stage face/Helly argument gives a stress-killing deletion of at most `s_Z+1` labels, with at most `min(b_0,s_Z)` unloaded core labels, and a strict first motion of the reduced full source. Use the full actual diameter graph and retain all contact isolates. This does not extract `W` or restore cardinality. Audit.173 later adds approximate Type-II endpoint access for all but `eta D` actual diameter edges, but the exceptional edges may carry all positive KKT diameter mass. Do not require the exceptional zero-reaction face to be empty when applying this result. See `docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md`.
+
+Audit.172 promotes the one-star refinement: when `E_0=H[B\W]` is empty or contained in one actual diameter star, the exceptional face is empty or a single chain stress, reducing unloaded exceptions to at most one. The finite classification requires triangle-freeness; exact regressions rule out dropping it or replacing the star by an arbitrary connected diameter support. No star extraction or cardinality restoration follows. See `docs/audits/target_c_exceptional_diameter_star_face_independent_audit_2026-10-08.md`.
+
+Audit.173 promotes uniform macroscopic harmonic cells in both C-II branches; Type-II local coherent-grid access near every attachment; unweighted short-route access for all but `eta D` actual diameter edges; short local routes for all but `eta D` attachment incidences; and a proper loaded-chord cap with quadratic coherent mass for every Type-II cell attachment. The source's many-accessible-grids statement is subsumed; its selected-grain-hull crop is repaired by the cell-crop proof. The edge exception can carry all positive KKT diameter mass, and the incidence count is not independent path currency. These results do not extract the `W` required by Audit.171 or provide a finite move. The exact C-II endpoint is unchanged. See `docs/audits/target_c_uniform_harmonic_cells_global_diameter_access_independent_audit_2026-10-08.md` and `docs/audits/target_c_typeii_face_tail_port_multiplicity_independent_audit_2026-10-08.md`.
+
+Audit.174 promotes `C-TYPEII-ATOMIC-SEPARATE-FACE-FLOOR`: `liminf (f-k)/D>=6s_2/5` and `liminf (2(q-k)-k-z)/D>=pi+6s_2/5`, so `liminf (q-k)/D>=pi/2+3s_2/5>2pi/3`. This eliminates the positive one-cell collar range in the full-core Type-II near-disk branch. Higher-`(q-k)/D` Type-II and the macroscopic-container alternative remain open; the theorem gives no finite move or face-capacity result. The next full-core obligation is therefore confined to the surviving higher-`(q-k)/D` train/face system. See `docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md`.
+
+Audit.176 promotes a conditional fixed-cell weak-packet release for actual unit paths of total turn `T<=2*pi/3`: common translation opens every wall contact, then small dilation opens packet-internal contacts, so weak capacity equals the canonical strict capacity `|S_Q|`. It does not extract a shallow cell or a packet. Its exact larger-turn regression shows that separate sitewise non-surrounding can coexist with a packet-level surrounding contact set and no common first-order translation; a finite nonlinear release can still exist. Keep the no-extraction and nonglobal limits explicit.
+
+Audit.177 adds a full-source isolate normalization for an already feasible same-cardinality exact-contact endpoint: move all contact isolates toward the retained core centroid to open every isolate-involving diameter equality. If the core placement is noncongruent, canonical stress and full-source lexicographic minimality force `N_V>=L>=1` replacement diameter pairs inside the core, where `L` is the number of old diameter pairs shortened. This does not construct the endpoint or change the C-II obligation.
+
+Audit.178 derives the actual-diameter cubic degree moment from the canonical near-diameter budget by taking a finite-source zero-width limit. Applied at an already feasible endpoint normalized by Audit.177, it bounds any changed-label cover of new core diameter pairs by `2s+C_0^(1/3)s^(2/3)D^(2/3)` and any maximum matching by the corresponding `4nu+2^(2/3)C_0^(1/3)nu^(2/3)D^(2/3)` expression. A linear lost-pair bank needs at least order `sqrt(D)` changed labels and matching pairs. This creates no endpoint or motion; the active C-II obligation is unchanged.
+
+Audit.179 promotes a cut-to-hull bank for any selected family of complete physical rhombus trains and singleton contacts. At least one third of the selected trains reach an actual outer chain, and their terminals have actual unit-contact routes inside a common carrier of at most `sum_N d_tau+2T` edges. Positive quadratic rhombus bulk yields a linear bank of long trains in a subquadratic carrier, but the routes can share bottlenecks and have no individual length bound. No motion or new C-II obligation follows.
+
+Audit.180 adds `C-CORE-UNLOADED-SEPARATOR-AREA-BOUND`, `C-LONG-TRAIN-SEPARATOR-INEQUALITY`, and `C-QUADRATIC-CORE-DISJOINT-TRAIN-RETURNS`. Under canonical mixed rigidity and positive unloaded equilibrium, a positive quadratic strict-rhombus bulk gives linearly many vertex-disjoint actual-contact paths from long bank terminals to distinct loaded vertices, without cap extraction. They lie in the full positive-contact graph, need not stay in the smaller Audit.179 carrier, and have no individual length or face/interface payment bound. This adds no finite motion or strict-diameter competitor.
+
+Audit.189 adds `C-QUADRATIC-CORE-LOADED-CHORD-CAP-EXTRACTION`, `C-QUADRATIC-CORE-DEEP-CAP-GRID-RETURNS`, and `C-QUADRATIC-CORE-CELL-BOUNDARY-STRIP-POPULATION`. On a quadratic-core subsequence it selects a proper loaded-chord cap from the same harmonic cell as the coherent grain, then gets a deep physical grid, linearly many disjoint actual-contact returns, and quadratic source population outside the full crop. This supplies the cap/grain/port extraction needed by Audit.133 on that branch; prescribed caps and the other C-II branch remain outside its scope. The whole-cell variant also gives quadratic population in a cell boundary strip. These counts do not give capacity, path-length currency, a source move, or a strict-D competitor, so the exact finite-move/payment obligation is unchanged. The report's Type-II uniform near-port grid subsection is already subsumed by Audit.173.
+
+Audit.190 adds the relative-chord alternative to Audit.91's positional-error direction bound. Exact additive physical charts with uniformly conditioned basis and small increment error constrain every short chord's direction even when accumulated position error is large. The canonical C-II count then excludes a chart cover if the unused loaded endpoints and chart count are `o(D)`, total chart-hull perimeter is `O(D)`, and total angular width is `o(1)`. No such full-source chart cover is known; do not infer it from a coherent grain or bulk area. The source report's arbitrary-source count is narrowed to canonical C-II scope. The finite-move/payment obligation and C-II status are unchanged.
+
+Audit.191 adds a finite small-packet release that opens all inserted-involving upper equalities as well as unit contacts, under strict metric separation and `R+2rho<D`. For `D>=64`, the circumradius bound makes this applicable to packets with radii at most `D/8`. A packet replacement meeting every old diameter pair is therefore impossible for any global minimizer, without triangle-free or contact-minimal assumptions. Its contact-loss application is already covered by `C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT`. The theorem creates no packet or capacity; a source-level equal-cardinality replacement remains open.
+
+## Canonical input to treat as solved
+
+The generated theorem-state manifest and `docs/targets/target-c/CURRENT.md` control exact claim status and scope. Retain the canonical theorem stack recorded there; later audits refine earlier reductions only under their written hypotheses.
+
+Audit.99 adds the exact zero-valid pinned closure certificate `C-ZERO-VALID-PINNED-CLOSURE`. For a zero-valid implication/negative-unit/negative-pair system, an unsatisfiable true/false pin set is witnessed by a directed path to a unary or false pin, or by two paths to a forbidden pair. This is only a certificate format; it does not show that canonical source geometry excludes those paths. Any source-move application must first satisfy all full-source hypotheses of `C-DISJOINT-SWAP-2SAT`, retaining contact isolates and checking every old lower and upper pair constraint.
+
+Audit.100 further constrains the static singleton-anchor route: generic isolate perturbations rule out isolates among exact unit anchors; for `D>=10000`, loaded unit anchors form an obtuse triple and cannot alone surround a pinned replacement; a locally pinned one-site exchange therefore needs an unloaded core unit neighbor. The weak-clearance exception inside an intact wall of at most six short edges is only the triangle-forming regular unit hexagon center. These facts supply no site or capacity theorem.
+
+Audit.101 is a binding guardrail for fan-reflection capacity arguments. An actual diameter-fan reflection can preserve all old wall contacts and every diameter upper bound while an interior contact isolate collides and the reflected eight-edge wall has empty strict unit-safe interior. Old wall clearance and upper nonexpansiveness alone do not transport wall capacity. The counterexample is nonglobal and does not satisfy the canonical full-core/global-minimizer hypotheses or assert KKT stress; it does not refute `C-CENTERED-FAN-REFLECTIONS` or rule out relocating the isolate outside the wall. Every proposed fan endpoint still needs full-source lower and upper checks and an independently certified endpoint packet.
+
+Audit.102 is a second fan guardrail: for a finite unit-separated diameter-D source with `D>=2`, any third unit neighbor of a common-carrier fan leaf is strictly inside the triangle formed by the carrier and the two designated fan contacts. Reflecting across those two contacts preserves their unit lengths and all diameter upper bounds but makes the third contact strictly shorter than one. Do not extend the canonical degree-two fan move by retaining an extra contact; no conclusion about how many such fans occur in a canonical source follows.
+
+Audit.103 proves `C-LOADED-ANCHOR-SPARSE-PACKET-OBSTRUCTION`: an equal-cardinality contact-deleting replacement with strict inserted upper slack and no unloaded retained core anchor must satisfy `J(J+2L_D)>=D/4`. In the all-loaded shell this excludes bounded `J` and requires `J >= (1/(8*3^(1/8))+o(1))D^(1/4)`. The proof retains and moves contact isolates and establishes finite release by confining positive-stress contacts to straight chains in a strip narrower than `1/2`. It does not produce a packet, move fixed core pins, or handle inserted-involving actual diameter pairs. The C-II capacity/finite-competitor obligation remains open.
+
+Audit.104 promotes `C-DIAMETER-ENDPOINT-LOCAL-DEGREE-TWO` and `C-NEARBY-DIAMETER-ENDPOINTS-FULL-HULL-SIDE`. For fixed `1<t<sqrt(2)`, any sufficiently large source point has at most two actual diameter endpoints within `t`, and any two diameter endpoints within `t` are consecutive on the full source hull. The threshold depends only on `t` and the result includes isolates as arbitrary source points. It does not establish an owner-capacity count.
+
+Audit.105 promotes `C-OO-OUTER-ISOLATE-COLLAR-BOUND` in the Type-II near-disk branch. With `x_B=b-q` and `a` nonunit loaded-hull sides, at most `48(x_B+a)` distinct isolates lie within distance `5/4` of Section-67 outer pockets or Section-77 exterior caps. Under the canonical small O--O isolate assignment, every isolate lower-clause endpoint lies in those collars, so `x_B+a=o(D)` leaves only `o(D)` distinct isolate blockers. This collar count alone does not charge owners.
+
+Audit.106 promotes `C-OO-LOWER-WITNESS-OWNER-CAPACITY`. For a specified disjoint-owner O--O family, singleton upper/rhombus safety and strict old-diameter shortening force an outer lower witness for every counted owner. The general count is `k<=2m_B+3(x_B+Z_out)`. In Type II, Audit.105 replaces `Z_out` witness charging by the collar count and gives `k<=147(x_B+m_B)`; if `x_B+m_B=o(D)`, only `o(D)` owners survive. No source theorem supplies that family or low-defect condition; the `2d_H` original-family deletion claim remains unaudited.
+
+Audit.61 already reduces a sufficiently small O--O finite motion to
+\[
+\boxed{
+\text{old diameter constraints}
++\ |J|\le d_H\text{ inactive upper exceptions}
++\ \text{unary rhombus tests}
++\ \text{outer-face near-unit pairs}.
+}
+\]
+
+Audit.62 adds two exact finite restrictions.
+
+### Loaded near-unit adjacency
+
+For the actual loaded set \(B\),
+\[
+\tau_D=\frac{3D}{\sqrt{3D^2+4}+1}.
+\]
+If loaded endpoints \(a,b\) are nonconsecutive on the loaded hull and \(|ab|<D\), then
+\[
+\boxed{|ab|\ge\tau_D.}
+\]
+For \(D\ge6\), every loaded pair of length at most \(13/12\) is a loaded-hull side. Thus the loaded near-unit graph is a subgraph of the loaded hull cycle and has maximum degree two.
+
+Do not model loaded-loaded lower clauses as an arbitrary planar graph.
+
+### Loaded-hull cap budget
+
+Put
+\[
+K=\operatorname{conv}A,\qquad
+F=\operatorname{conv}B,\qquad
+W=\operatorname{per}K-q.
+\]
+
+Canonically:
+
+- occupied loaded-hull caps: at most \(W\);
+- total occupied cap arc/base length: at most \(2W\);
+- core points within \(<\sqrt2\) of a source point outside \(F\): at most \(68W\);
+- nonloaded source points in \(F\) within boundary distance \(1/2\): at most \(12W\);
+- every deeper point has exact upper margin \(D-1/2\);
+- extreme source vertices outside \(B\): at most \(W\).
+
+Since \(\operatorname{per}K<\pi D\), every subsequence with
+\[
+q/D\to\pi
+\]
+has
+\[
+W=o(D),
+\]
+so all three cap/exterior blocker populations above are \(o(D)\).
+
+### Audit.63 owner, terminal-train, and wall results
+
+In every canonical full-core Type-II sequence with q/D -> pi and u_B=o(D), complete stopped O--O terminal trains, including singleton bridges, are o(D). Do not infer a linear O--O supply from owner topology or terminal-count budgets. In the narrow-window independent-binary scope, distinct loaded witness pairs are at most u_B and selected train capacity is at most x_B+m_B+1. These binary claims do not cover general crossing multishears.
+
+For a convex unit-contact wall with one deleted vertex, a strictly clear replacement point is separated from all exterior source points, including retained isolates. At most five wall sides leave no one-deletion strict-safe site; canonical physical unit hexagon interiors have twofold closed-unit-disk coverage. This gives no general packet-capacity result, and two deletions can fail because of a retained isolate.
+
+Audit.128 records an exact finite three-edge long-pocket regression: under local convexity and unit separation, the squared determinant of a terminal contact against the closing-side unit normal can be 1/65, below 1/4. Do not extend the short-pocket anchor bound to long pockets without additional hypotheses; in the terminal train argument long pockets are paid through u_B.
+
+Audit.129 canonically promotes `C-ATOMIC-TRACK-BOUNDARY-COST`. Every full-source Type-II sequence satisfies `liminf (Q+4f+x_B+m)/D >= 4s_2`; in the low-`t_D` branch `t_D=(q-k)/D<=1.860+o(1)`, this forces the loaded-hull perimeter gap `g=p-q >= (0.4586072477-o(1))D`. Thus the joint low-`t_D`, `x_B=O(sqrt(D))` subcase is empty. Theorem A alone gives `q/D<=2.6829854059+o(1)`; the source verifier's stronger constant check corresponds to Theorem B below and is not itself an analytic certificate.
+
+Audit.130 canonically promotes `C-ATOMIC-OUTER-ROUTE-EXPOSURE`: `liminf (Q+4f+x_B)/D >= 4s_2`, hence `liminf (10(q-k)+g-4z)/D >= 5pi+4s_2`. In the low-`t_D` range this forces `g-4z >= (0.9172144954-o(1))D` and `q/D<=2.2243781581850+o(1)`. The finite verifier's endpoint arithmetic matches Theorem B, but it does not verify the outer-route exposure argument. The theorem still supplies no upper bound on `g-4z` or strict-D competitor; C-II remains open.
+
+Audit.131 promotes `C-ATOMIC-ONE-END-TRAIN-BOUNDARY`: including every singleton contact edge in the complete train count gives `liminf (2f-k+m)/D >= 2s_2` and `liminf (5(q-k)+2g-z-u_B)/D >= 3pi+2s_2`. Consequently `x_B=o(D)` forces `(q-k)/D>=2.2658807149-o(1)`. Combined with Audit.130, low `t_D<=1.860+o(1)` gives `g/D>=1.0147017872-o(1)` and `q/D<=2.1268908664+o(1)`, still compatible with the canonical lower bound on `q`. C-II remains open; the unclosed obligation is an upper bound or strict-D improvement for the linear loaded-hull spacing deficit.
+
+Audit.132 promotes the sharp orbit-detour function `lambda>=Phi(A)` and the Type-II source-limit obstruction `4s_2<=sqrt((pi+lambda)Phi^{-1}(lambda))+5(2t-pi-lambda)`. Do not treat this as an endpoint-orbit lower bound: no positive mass is forced into a named three-direction orbit. A closing argument must force that orbit mass from actual source routes or prove the exceptional terminal budget cannot satisfy the inequality; C-II remains open.
+
+Audit.133 promotes exact separator capacity for an unloaded quadratic rhombus population and the resulting linear family of vertex-disjoint actual contact paths to distinct loaded attachments. A convex exceptional face also forces the stated linear number of returns. Do not treat these structural paths as source motions, face currency, or strict-diameter competitors. Audit.189 supplies its cap/grain/port extraction package on the quadratic-core branch, for a cap chosen from the same harmonic cell, and strengthens the return count to vertices outside the whole cropped region; prescribed caps and the nonquadratic branch remain outside that result. Audit.180 separately supplies linearly many disjoint full-core contact returns from positive quadratic rhombus bulk, without a cap package. Audit.190 supplies an alternative sufficient chart criterion for excluding a canonical sequence, but the full-source chart extraction is still unknown. Audit.191 shows that a source-realized, small, strictly separated packet cannot cover all old diameter pairs, even when its starting upper distances are weak. None of these results constructs the required source packet or pays routes against train/interface/face currency. The next bridge is a source-compatible payment/endpoint theorem, a full-source contact-changing strict sub-`D` replacement, proof that Audit.190's chart hypotheses hold, or proof that source deletions admit the packet hypotheses of Audit.191. The pinned-grid regression applies only to pin-only hypotheses. C-II remains open.
+
+Audit.134 promotes fixed-port contact routes: from a specified actual loaded attachment to any vertex of its unloaded component, a route costs at most `C R+C_0+10(e_BB-k)`, with `C=4/sqrt(3)+30pi` and `C_0=90pi+30`. At any fixed face-degree cutoff, a route much longer than its Euclidean displacement forces a linear tail of higher-degree augmented faces, paid once by the global Section-123 currency. There is no path-multiplicity bound, so the next bridge remains a simultaneous train/interface/face payment or a full-source strict-`D` replacement. The exact factor-two rhombus regression only rejects the sharper boundary-detour constant; the proved `4/sqrt(3)` estimate stands. PR #668's Type-II grid extraction remains unaudited. C-II remains open.
+
+### Audit.64 finite packet endpoints
+
+Any finite replacement of a canonical contact-minimal then diameter-pair-minimal source must count every new unit pair, including inserted-to-retained contacts. If j is the new contact count, t the old contacts removed, and d the actual diameter pairs removed, no triangle-free same-cardinality packet with all new distances in [1,D) can have j<=t and either j<t or d>0. This is a normalization endpoint only; it does not construct a packet.
+
+With strict upper slack, a packet having at most two new unit contacts can open them by a small finite perturbation. A one-site packet that cannot open its unit contacts must have at least three retained unit neighbors strictly surrounding it. Do not infer existence from this necessary condition or from residual area.
+
+Audit.112 adds `C-SEPARATED-PACKET-RELEASE-OBSTRUCTION`: a finite replacement packet split into pieces strictly separated from all retained source labels can have every new contact opened by piecewise translations and dilations when the pieces start strictly cross-separated and every inserted-involving upper distance is strict. Contact loss then contradicts contact-minimality without the secondary diameter-pair normalization; meeting every old diameter pair gives a strict sub-D competitor. This does not construct a packet or alter the current full-source endpoint.
+
+Audit.113 promotes `C-ONE-GUARD-EXTERIOR-CAP-SATURATION`. When the positive-contact core lies in the actual loaded endpoint hull, the weakly clear site capacity in one exterior cap after omitting one active contact guard equals the old cap-isolate population. The upper bound uses Audit.112 to open exact packet contacts; the lower bound moves the cap isolates a small distance into the full hull. This creates no surplus or paired-cap conclusion and does not change the current full-source endpoint.
+
+Audit.114 promotes `C-OO-ORIGINAL-FAMILY-OWNER-CAPACITY` under fixed, subfamily-stable O–O proposals. At most `2d_H` owners can fail only on the canonical exceptional long-pair set; the other singleton proposals satisfy the audited outer-witness count. This bounds the proposal count, not simultaneous compatibility, and supplies no proposal family from a canonical source.
+
+### Audit.65 regular-shell wall barrier
+
+For a regular odd unit `q`-gon with `q>=65`, a strict interior contact isolate blocks at most two adjacent inward one-vertex proposals. Blocking every proposal requires at least `(q+1)/2` distinct isolates in the specified radial collar. An explicit matching/singleton blocker cover plus deep triangular-lattice filling is not globally optimal: a whole-source same-cardinality packet has diameter strictly below the wall diameter. This is a guardrail about that regular-shell family; it supplies no capacity bound for arbitrary macroscopic containers and does not change the face-coupled finite-move target.
+
+### Audit.66 collective wall deletion
+
+For a convex actual unit-contact wall, deleting a set `B` of wall vertices with pairwise distances at least two gives a collective exterior shield: every point strictly clear of all remaining wall vertices is also strictly unit-clear from every retained exterior source point, including isolates. A greedy choice supplies at least `ceil(M/25)` eligible deletions from any `1`-separated set of `M` candidate vertices. If a unit-separated packet of size `|A intersect int(F)|+|B|` fits in the shield region, Audit.64's finite contact-budget endpoint rules it out by contact loss. The D(8) heptagon-plus-center regression shows that shield capacity need not gain even one slot at an optimal source. This is not an asymptotic capacity result; the large canonical interior remains the unresolved macroscopic-container obligation.
+
+### Audit.67 curved-wall inward release
+
+One specified curved unit-wall chamber with a quadratic isolate grid admits a finite inward wall release that preserves every isolate and loses wall contacts, under a full-source interior-clearance hypothesis. In a canonical source, every blocked root requires a distinct interior source point at distance below one. The blocker need not be an isolate; the exact contact-blocker regression is in the [Audit.67 report](../audits/target_c_curved_wall_independent_audit_2026-10-06.md). This chamber result does not change the next obligation.
+
+### Audit.68 near-triangular curved-wall capacity
+
+For a strict-area near-triangular curved wall, Oler bounds the number of actual interior source points by the `(M-1)^2` capacity of the audit.67 explicit packet. Replacing the full old interior and the separated wall bank excludes that wall from a canonical source, even with arbitrary old interior positions and contact graph. The result is conditional on this exact wall class and area threshold; no extraction of such a chamber from arbitrary sources is known. The C-II next obligation is unchanged.
+
+### Audit.69 uneven curved-wall packets
+
+For `M>=8`, two independently chosen strictly increasing antisymmetric profiles on the opposite side pairs still give a strict packet, using the Green-function bound `B_i>3d_i/2` on selected middle vertices. With the strict Oler-area threshold, the full arbitrary interior population is paid and the entire wall class is excluded. A concentrated-curvature corner-root regression explains why the proof keeps the middle bank. No arbitrary canonical chamber extraction is known; the C-II next obligation is unchanged.
+
+### Audit.70 three-direction corner barrier
+
+With all six radial corner guards retained, the complete triangular-lattice interior packet cannot be made feasible by a near-identity homothety/rotation or any C2 affine family through the identity. Adjacent guards bound first-order rotation; the sum of the six corner constraints has strictly negative second-order coefficient. This is a strategy regression only: it excludes neither nonaffine packets nor deletion/payment of corner guards, and it does not change the C-II next obligation.
+
+### Audit.71 nested-ring stress demand
+
+For the complete limiting triangular-lattice chart with six retained radial guards, every one-sided C2 feasible packet under the stated curved-wall guard expansion must satisfy
+
+\[
+E_r(d)\ge 2M(M^2-1),\qquad r=0,\ldots,M-1.
+\]
+
+The positive selected stresses force the corresponding `3M(M+1)` ring/spoke/guard first variations to vanish. This is a necessary condition, not an energy upper bound or a packet-existence theorem. Do not add the overlapping ring lower bounds as independent currency. The source verifier's 225 selected polynomial-field checks do not prove a universal velocity classification; that classification remains open.
+
+### Audit.72 one-corner, one-vacancy packet
+
+For the specified six-sided curved unit wall with M edges per side, removing the center of the limiting triangular chart and deleting one actual wall corner yields a strict nonaffine packet of `N-1` sites, with `N=3M^2-3M+1`, for every fixed M >= 3 and sufficiently small positive curvature depending on M. If a contact-minimal canonical source contains this wall and has z<=N-2 interior points, the packet replaces those z labels and the deleted corner, retains every exterior point including isolates, and loses contacts. Under the stated strict area condition, Oler bounds z<=N; this packet leaves z=N-1 and z=N. Audit.77 later excludes z<=N-1 for fixed symmetric-profile walls with M>=4, and Audit.78 classifies z=N as a sorting packet containing a triangle.
+
+This is scoped to the stated wall family. No arbitrary canonical-source extraction is known. Audit.76's M4 and finite-curvature packets are superseded in their overlapping scopes by Audit.77 and Audit.80. Audit.78 proves the fixed-profile highest-population classification; Audit.107 strengthens the arithmetic-profile case to one common interval `0<theta<=c_*M^-40` for every `M>=4`, and combines it with Audit.80 to exclude that entire specified wall class. This does not cover other profiles or arbitrary wall extraction.
+
+### Audit.73 sorted-rate energy equality regression
+
+For every fixed `M>=3` and every permutation of the radial rates, an explicit sorted-rate packet realizes `E_r=12C` for every nested ring. The chart with its center omitted still contains actual unit triangles. Therefore no strict energy gap follows from the physical unit-lower and six-guard hypotheses alone. The packets are not triangle-free; the independent Audit.78 classification additionally uses the full maximum-population wall placement and all-pairs constraints.
+
+### Audit.74 highest-population Oler limit
+
+For the specified wall with `N=3M^2-3M+1` interior points and all `6M` wall vertices, every sequence as `theta` tends to zero has a subsequence converging, after relabeling, to the complete radius-`M` triangular lattice. The interior points therefore converge to `P_(M-1)`. This is the Oler equality limit. Audit.78 strengthens the fixed-profile case: for each fixed `M>=3` and profile, every sufficiently small positive curvature `z=N` placement is an exact sorting packet with a unit triangle.
+
+### Audit.75 flat vacancy pinning and rate reduction
+
+For every `M>=2` and every interior lattice vacancy `h`, the chart `P_M` with `h` omitted and all of `B_M` pinned has a positive equilibrium on every surviving unit-neighbor edge and full moving-column rank. Its static first-order cone is zero and the flat chart is locally isolated. If the boundary moves by `O(theta)` and feasible placements converge to this vacancy chart, the moving displacement is `O(theta)` and the sequence has bounded subsequential first velocities. This is an auxiliary-chart theorem only: it neither extracts an arbitrary source as a vacancy chart nor rules out first-order motion or finite packets under the curved wall.
+
+### Audit.76 one-deficit root packets
+
+For the specified `M=4` six-sector wall with rates `(3,1,-1,-3)`, Audit.76 certified a 37-site strict packet and five exact-curvature packets. Its all-small-curvature M4 result is subsumed by Audit.77, which proves the `z<=N-1` exclusion for every fixed `M>=4` and fixed symmetric strictly decreasing profile. Finite Oler gives `z<=N`; Audit.78 classifies the remaining `z=N` placement for every fixed profile. No arbitrary wall extraction follows.
+
+### Binding regressions
+
+Do not infer:
+
+- small amplitude + contact preservation \(\Rightarrow\) unary rhombus immunity;
+- source-level path forest \(\Rightarrow\) acyclic owner implication graph.
+
+Both are exactly false.
+
+## Exact next split
+
+### Full-core branch
+
+The remaining small-motion obstruction is now
+\[
+\boxed{
+\text{outer-face owner/implication structure inside the loaded hull}
++\text{cyclic loaded-hull near-unit clauses}
++\text{unary rhombus blockers}
++\text{at most }d_H\text{ upper exceptions}.
+}
+\]
+
+Along q/D -> pi with u_B=o(D), loaded-hull caps, exterior extreme isolates, short cap attachments, the shallow nonloaded boundary layer, and the complete stopped O--O train population are sublinear. Distinct narrow-window binary loaded witnesses are also at most u_B. Any remaining linear obstruction must be supplied by face-coupled outer-to-bounded or bounded-to-bounded trains, explicit unary rhombus blockers, or the at most d_H upper exceptions, and must pass every full-source lower and actual-diameter upper test.
+
+In the Type-II near-disk branch, Audits.105--106 together give `k<=147(x_B+a)` for the exact disjoint-owner singleton family. Therefore `x_B+a=o(D)` excludes a linear surviving family, but neither that low-defect hypothesis nor the O--O proposal family is currently guaranteed. The original-family deletion by `2d_H` remains unaudited.
+
+Exact next obligation: produce a source-realized finite move or discrete replacement from the remaining outer-to-bounded or bounded-to-bounded train and face system that yields strict contact loss at diameter D or a strict sub-D competitor.
+
+Audit.111 widens `C-LOADED-ONLY-STRESS-CYCLE-OBSTRUCTION` to every finite unit-separated source with `D>=6`, a two-dimensional actual loaded hull, and a normalized nonnegative equilibrium stress. Its proof uses the universal loaded-near-unit threshold, not only the full-core near-disk branch. The occupied-cap chord threshold now shows that any occupied loaded-hull cap on the canonical C-II source has a nonunit base, so the loaded-only stress face is empty there. Existing `C-UNLOADED-KKT-STRESS-TRANSVERSAL` then deletes at most `s_Z+1` unloaded core labels and gives a strict motion of the reduced source, with contact isolates retained. This is a cardinality-losing descent, not a packet or refill. The preselected-loaded-endpoint refinement remains in its narrower full-core loaded-chord scope. The exact weighted-work regression still shows that the deleted unloaded contacts cannot all open along that same reduced descent. Use these results as finite-move diagnostics; any proposed restoration must check every full-source lower and upper constraint.
+
+Highest-value attacks:
+
+1. identify the remaining face-coupled trains after using N_OO=o(D), and specify a finite move whose train endpoints and owners are actual source objects;
+2. prove simultaneous feasibility for every old unit contact, every full-source noncontact lower pair, every actual diameter upper pair, the at most d_H inactive upper exceptions, and each unary rhombus diagonal;
+3. use loaded-hull cyclic order, loaded-return paths, active-diameter coordinates, and implication structure only where they establish this finite endpoint;
+4. if no move is possible, derive a strict same-cardinality sub-D competitor with every source point, including contact isolates, retained in the feasibility audit.
+Do not spend the run proving another generic near-unit planarity statement or an O--O supply theorem; audit.61--63 already bound those routes sharply.
+
+### Macroscopic inactive-container branch
+
+Audit.63 adds the one-deleted-vertex shield and a necessary twofold disk-coverage condition for canonical unit hexagons. Audit.89 adds a finite depth-population bound for one actual bounded contact face: on a subquadratic-core sequence, an area-`Omega(D^2)` physical face has at most half plus `o(D)` of its boundary at any fixed macroscopic distance from actual loaded endpoints, and its perimeter is `O(D)` by `C-INACTIVE-CHAMBER`. Audit.108 promotes `C-COUPLED-DELAUNAY-CONVEX-CONTAINER-TRANSFER`: one shared closed-unit-covering Delaunay completion supplies Oler slack, an `O(p)` boundary strip, and a contained-triangle excess budget for arbitrary convex polygon crops. For `S,p=O(D)`, the geometric exception count is `O(D)`. Audit.110 promotes `C-EXTERIOR-STATIC-PACKET-BARRIER`: under `D>=9`, `C=C_*`, `H=H_*`, an equal-cardinality unit-separated packet outside `int(F=conv(V))` with strict upper slack on all packet-involving pairs cannot replace labels if the deletion removes an old contact or covers every old diameter pair. Every new contact opens under a small finite straight motion, even when packet sites lie on the hull boundary and the temporary packet contains triangles; retained contact isolates remain moving variables. Audit.109’s one-site result is a direct special case and is superseded. This rules out static exterior refill under those hypotheses, but supplies no packet or interior capacity. Keep the endpoint as a full-source equal-cardinality replacement checking every lower pair and actual-diameter upper pair, with contact isolates retained. The arbitrary-container capacity/finite-move endpoint and quadratic-core branch remain open.
+
+### Curved-wall population branch
+
+Audits.77--78 exhaust the specified fixed symmetric-profile wall class for each fixed `M>=4`; Audit.80 additionally gives a joint `1/(100*M^3)` one-deficit/Oler window for the arithmetic profile `a_h=M-1-2h`. Audit.107 now classifies every maximal `z=N` cloud uniformly for `M>=4` on `0<theta<=c_*M^-40` with one universal `c_*>0`, and excludes the entire specified arithmetic-wall class there while retaining all exterior points and contact isolates. This remains a fixed-wall result: no audit extracts the wall from an arbitrary canonical source. Audit.81's general fixed-family profile compatibility and Audit.82's effective chart remain separate inputs; arbitrary-wall extraction and the global C-II endpoint remain open.
+
+### Face-coupled quarter-fold subroute
+
+Audit.83 proves that zero signed face sums integrate to an exact contact-preserving quarter-fold. For a canonical C-II source with `D>=9`, every nonaffine fold has strict positive-stress weighted diameter decrease; if every old contact stays unit, every old noncontact stays strictly above one, and all old diameter/nondiameter upper bounds hold in the full source, it contradicts lexicographic minimality. Actual two-hop distances impose source-realized sign equalities, and a nonconstant convex-face sign pattern requires four transition corners forming an inscribed parallelogram. The regular-hexagon and rhombic-grid regressions show that full lower feasibility and newly active inactive diameters remain decisive. No nonaffine fully feasible fold is known or guaranteed. Any proposed fold must check every retained isolate and every source pair; a weighted mean decrease alone is not a finite competitor.
+
+Audit.84 adds a hull-augmented face theorem and exact strict capacity for one actual exterior cell: its guarded region holds exactly `|S_Q|` sites, including all contact-isolated source points assigned to its full source-hull arc. A one-unit-side loaded-tip shield checks the entire retained exterior, and each actual loaded tip is acute. At tip angle `<=pi/3` and internal wall angle `<=2pi/3`, separated deleted guards are redundant; their deletion gives no extra strict capacity. A shared-tip rational regression blocks simultaneous gluing when two individually feasible packets share loaded endpoints.
+
+Audit.85 promotes a two-unit-side shield and four-tip full-source/cross-cell shields under the explicit hypothesis of four distinct extreme loaded tips pairwise at least four apart. It proves that any qualifying full-size paired packet exchange is excluded by the exact contact/diameter endpoint, and that the total strict capacity of the two cells is at most `|S_1|+|S_2|+3`. The proof-only asymptotic argument that macroscopic antipodal caps supply four separated tips remains unreviewed; no paired packet population or exterior-cap elimination follows. C-II remains open.
+
+Audit.86 promotes the finite positive-circuit transversal characterization for strict-negative contact directions and records two exact covector regressions. The source report's residual-cage release/refill is valid but superseded for its stated strict wall-safe packets: `kappa>=1` makes its size assumption require one extra site, already ruled out by the canonical contact-budget endpoint without source motion. The exact C-II obligation is unchanged.
+
+Audit.87 promotes the finite KKT strict-motion alternative and the canonical loaded-diameter-support transversal, with `kappa_open<=kappa(H,G)<=tau_*<=s_Z+1`. Hitting every normalized stress's positive diameter support guarantees an initial strict motion after deleting those loaded points. Contact-isolated points remain retained and inactive. This supplies no finite pivot, refill packet, or same-cardinality competitor; the capacity obligation is unchanged. The abstract first-order/finite-release regression has no source realization.
+
+Audit.88 promotes the strict full-source shield for simple source-vertex polygons with side lengths at most `sqrt(3)`, including joint packet compatibility across disjoint wall interiors. Any wall-safe site in an `n`-edge polygon requires maximum side length `>2 sin(pi/n)`; a simple five-edge wall opened from unit sides therefore requires some wall-label displacement `>(2 sin(pi/5)-1)/2`. The exact rational rectangle regression shows the `sqrt(3)` cutoff cannot be raised under vertex guards alone. This gives no actual opening motion or spare-site capacity. Any finite activation attempt must still check every old lower constraint, every diameter upper constraint, and the needed packet surplus.
+
+Audit.89 promotes the finite physical-face depth-population bound and the subquadratic-core macroface near-loaded-boundary corollary. The proof uses actual contact paths to actual loaded diameter endpoints and counts only the nonisolated positive-contact core; all source isolates remain retained. It gives no packing currency or finite competitor.
+
+Audit.90 promotes the general unloaded-vertex stress transversal and its strict reduced-source motion when the loaded-only normalized stress face is empty. The `s_Z` preselected-loaded-endpoint refinement and loaded-cycle obstruction use `C-FULLCORE-LOADED-CHORD` only in the canonical full-core near-disk regime, not the container branch. The weighted-derivative regression blocks automatic first-order restoration of deleted contacts along that same descent; no packet, finite activation, or C-II closure follows.
+
+Audit.91 gives conditional exclusions for fixed uniformly conditioned affine-lattice covers of actual loaded endpoints: in the full-core near-disk branch, an `o(1)` physical-error cover of all but `o(D)` endpoints forces `q=o(D)`; in either branch, the diameter-normal count forces `h=o(D)`. An exact-lattice component count leaves a linear endpoint remainder outside those carriers. Do not infer the physical positional cover from coherent phase labels or small train-angle errors; the face-coupled finite-move and arbitrary-container obligations remain unchanged.
+
+Audit.92 makes this transport warning exact for the reduced hypotheses. A triangle-free `M`-by-`M` rhombic grain with phase span below `1/M`, `O(M)` positive area/angular excess, positive pinned equilibrium, and full pinned rank can still have a fixed bow from every uniformly conditioned single affine lattice. Its boundary pins are not certified actual diameter endpoints. Thus this regression blocks the reduced-input implication only; it neither refutes a cover of canonical loaded endpoints nor excludes bounded multiple-lattice covers. Any such source-level positional cover remains a separate proof obligation.
+
+Audit.93 adds an exact fixed-wall capacity guardrail: a triangle-free grid with `Omega(D)` long stopped trains, `Omega(D^2)` actual rhombus crossings, and disjoint direction-frustrated pentagon terminals can still have no positive aggregate wall-safe packet surplus, even for composite contact cycles. This is a finite nonglobal family; its boundary pins are not actual diameter endpoints. Do not infer fixed-wall refill capacity from train bulk and pentagon phase frustration alone. Actual-load coupling or wall motion remains necessary.
+
+Audit.94 gives an exact paired exterior-cap regression. A triangle-free six-spoke source has actual loaded endpoints, positive KKT equilibrium, antipodally paired `Theta(D^2)` isolate caps with `O(D)` Oler allowance, and depth-one cap coverage within `3/5` of actual isolates; a same-cardinality lattice competitor has diameter `D-1/2`. The family fails canonical mixed-rigidity and loaded-diameter density, so it only rules out deriving globality from the reduced features. Audit.183 now derives linearly separated four tips for an antipodal partner of every fixed-positive-area canonical cap and applies Audit.85's paired-cell theorem: the two fixed strict guarded regions have combined capacity at most `|S_1|+|S_2|+3`. A four-site fixed-wall strict-capacity surplus is impossible. Cap refill by another source-preserving mechanism remains open. See the [independent Audit.183](../audits/target_c_macroscopic_antipodal_cap_capacity_independent_audit_2026-10-09.md). Audit.139 adds that any fixed-area actual cap forces the full diameter graph into the Woodall forest branch and keeps `q/D` a fixed amount below `pi`; its `O(D)` deletion and strict reduced-source motions still need a forced full-source refill packet.
+
+Audit.188 records a complementary nonglobal regression: in the same six-spoke family, deleting two actual seam guards and translating both retained core shores admits an explicit two-site refill while every scaled isolate stays fixed. After a small finite downward movement the endpoint is triangle-free and strictly sub-`D`. The source lacks canonical mixed rigidity and linear loaded-diameter density, so this demonstrates neither a canonical refill nor cap extraction; it also prevents treating moved-core refill as universally impossible from cap geometry alone. See the [independent Audit.188](../audits/target_c_exterior_cap_moved_core_refill_independent_audit_2026-10-09.md).
+
+Audit.140 promotes `C-EXTERIOR-INTERNAL-WALL-ONE-GUARD-CAPACITY`. In a canonical hull-augmented cell, omitting the strict guard at one internal vertex of its actual unit-contact path leaves the exact strict packet capacity at `|S_Q|`, including every assigned source-hull isolate. Thus a one-extra-site strict packet confined to one fixed cell cannot restore the labels deleted with that vertex. Audit.160 now promotes `C-EXTERIOR-OCCUPIED-CAP-INTERNAL-WALL-VERTEX`: every occupied actual exterior cap has such an internal path vertex, since its distinct base endpoints have separation greater than one by the canonical cap-chord threshold. Therefore the fixed-cell strict one-extra-site route is closed for every occupied cap cell. This does not provide a packet or address moved-core, multi-cell, or weak-contact refill.
+
+Audit.141 promotes `C-EXTERIOR-CELL-WEAK-GUARD-LEDGER`. With weak guards at the path vertices other than one internal vertex, every retained source label remains at least one from the packet, and every nonwall retained label is strictly clear. Count all packet-internal and packet-to-wall unit contacts as j. The full-source exchange is excluded if it removes every old diameter pair, or if the complete replacement is triangle-free and j<=t with j<t or an old diameter pair removed. This allows exact contacts but neither produces the packet nor certifies its triangle-freeness. Moving walls and combining cells remain open.
+
+Audit.95 records two local common-angle guardrails: closure on one regular-hexagon face with six independent side bits is not Horn-representable, and a strict six-point core descent can lengthen the actual diameter when a contact isolate is retained. Do not assume a Horn encoding for every coupled face closure from the two-owner case, and check every full-source upper pair. These finite examples do not establish a feasible common-angle motion in a canonical source.
+
+Audit.96 records an exact full-packet capped-wall escape regression. Under its whole-source grid/cap/leaf contact hypothesis, the unique actual diameter pair does not act as a fixed wall pin: a sufficiently small common-angle motion preserves all contacts and lowers the actual diameter. The two verified packets are nonglobal. Do not infer arbitrary-source motion, cap extraction from a canonical minimizer, or C-II closure.
+
+Audit.97 gives an exact source-dependent obstruction to a small common-angle endpoint. For a nonconstant integrated binary train pattern on a canonical core with `D>=9`, old-diameter upper feasibility requires a positive `tan(theta/2)` threshold in either direction, or that direction is impossible. This is only a necessary actual-diameter test: it supplies no uniform lower bound and does not check lower pairs, inactive upper pairs, or retained-isolate pairs. Do not infer an endpoint from the positive and negative stress-balanced transverse terms alone.
+
+Audit.98 shows that closure on each actual physical unit-pentagon face makes its five train bits equal. Equality propagates along connected pentagon/train components; reciprocal sparsity forces `f+6` outside terminal occurrences when such a component has `f>=2`, but those terminals all share one bit. Do not count them as independent choices, and do not infer that a large physical component exists from the abstract incidence bound.
+
+## Binding dead routes
+
+Do not use without a new proof:
+
+- incident-diameter sequence `=>` Euler trail/path;
+- FB4 force-bulk localization;
+- incompatible-cut C53 pentagon objection;
+- RSR disk-equality uniqueness;
+- Eppstein near-equality `=>` near quadrangulation;
+- five-host measure saturation `=>` all hosts occupied;
+- inward OP pocket `subset` exterior Reuleaux minor cap;
+- deletion of contact-isolated source points;
+- full-source extension of the §57 affine-kernel theorem;
+- `r/(6C_T)` as the sharp limit of the Section-90 bin method;
+- `G_loc=o(D^2) => G_loc/d=o(1)` in Section 121.
+- same-side equilateral completion of a unit contact edge inside a strict rhombus automatically gives a feasible vacancy; the opposite rhombus vertex can be at distance below one.
+- a nonunit side of a partial wall that lies inside the actual source hull can be treated as an unguarded hull arc; retained isolates beyond that chord may be within one of an otherwise wall-safe replacement point.
+- positive radial-height stresses in the 33 exact sorting packets of Audit.144 imply no all-`M`, all-order, or interval-of-curvature positivity theorem.
+- Audit.145 proves that path contacts cannot strictly surround a one-site point on a convex unit path of total turn below pi when internal vertices are weakly guarded and no path edge has both endpoints at unit distance from the site. It supplies no site or packet; a one-site motion still needs strict full-source margins. The existing half-turn regression shows the strict turn bound cannot be weakened to pi.
+- Audits.148--149 add `C-OO-SHORT-PAIR-PATH-BANDWIDTH`, `C-UNIT-CAPSULE-PACKING-5`, and `C-OO-SHORT-PAIR-PATH-BANDWIDTH-5`. For a short pair already crossing a supplied ordered proper-crosscut path on distinct actual strict-rhombus centerlines, the row span is at most six under `D>10K`, `L<=1+K/D`, and at most five when `L<=21/20` (in particular `D>=20K`). This supplies no path extraction, blocker ownership, exact-swap density, Horn propagation, or source motion; those remain separate obligations.
+
+## Research standard
+
+Before promoting a new lemma, write its exact dependency chain to either an exact unit triangle, a source-preserving strict sub-`D` competitor, or the Level I conclusion. A computation may certify finite arithmetic or a regression; it does not supply global optimality.

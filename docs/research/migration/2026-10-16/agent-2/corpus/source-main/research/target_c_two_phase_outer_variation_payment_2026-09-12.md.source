@@ -1,0 +1,146 @@
+# Target C — two-phase outer-walk variation payment
+
+**Date:** 2026-09-12  
+**Status:** proved candidate awaiting hostile audit; theorem-state authority unchanged  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The exact four-host regression is harmless only for a cell whose attachment polygon is
+parallelogram-shaped. If a two-phase unit-contact carrier is instead coupled to a
+near-geodesic walk around a diameter-scale near-disk, its boundary must contain a linear
+population of contact edges outside the two train directions.
+
+Let u and v be the two unit contact directions of a strict-rhombus phase pair, with
+
+\[
+\theta:=\angle(u,v)\in(\pi/3,2\pi/3),
+\qquad s:=\sin\theta.
+\tag{OV.1}
+\]
+
+For an occurrence-counted closed unit-edge walk W whose convex hull is P, let N_u and
+N_v count occurrences with projective directions [u] and [v], and let N_o count all
+other occurrences. Put b=N_u+N_v+N_o.
+
+The candidate chain is
+
+~~~
+near-geodesic outer walk + two bulk train directions
+ -> coordinate variation in reciprocal directions
+ -> linear non-two-phase boundary population
+ -> source-specific extra-host/interface payment.
+~~~
+
+The final implication remains open.
+
+## 1. Exact coordinate variation
+
+Use the unnormalized determinant functionals x -> det(x,v) and x -> det(u,x). A unit
+step with projective direction [u] has absolute increments s and 0 in these two
+functionals; a step with projective direction [v] has increments 0 and s; and every
+other unit step has each absolute determinant increment at most 1.
+
+The total variation of a real-valued closed walk that visits both support extremes of
+P is at least twice its range. Therefore
+
+\[
+sN_u+N_o\ge2\,\operatorname{width}_{Jv}(P),
+\tag{OV.2}
+\]
+
+\[
+sN_v+N_o\ge2\,\operatorname{width}_{Ju}(P).
+\tag{OV.3}
+\]
+
+where width_w(P) is Euclidean width in the unit normal direction w.
+
+For example, the first inequality uses the determinant functional det(x,v). A [u]
+edge contributes s, a [v] edge contributes zero, and an arbitrary unit edge contributes
+at most 1. Its range on P is width_{Jv}(P).
+
+## 2. Near-disk consequence
+
+Assume the walk has convex hull P_D with
+
+\[
+\operatorname{width}_{Ju}(P_D)=D-o(D),
+\qquad
+\operatorname{width}_{Jv}(P_D)=D-o(D).
+\tag{OV.6}
+\]
+
+Then (OV.2)--(OV.3) give
+
+\[
+N_u+sN_o\ge2D-o(D),
+\qquad
+N_v+sN_o\ge2D-o(D).
+\tag{OV.7}
+\]
+
+Adding and using b=N_u+N_v+N_o yields
+
+\[
+s b+(2-s)N_o\ge4D-o(D).
+\tag{OV.8}
+\]
+
+If the walk is near-geodesic around a Type-II force hull,
+
+\[
+b\le\operatorname{per}(F_D)+o(D)=\pi D+o(D),
+\tag{OV.9}
+\]
+
+then
+
+\[
+N_o\ge {4-\pi s\over2-s}D-o(D).
+\tag{OV.10}
+\]
+
+Since s lies in [sqrt(3)/2,1] and the displayed coefficient decreases on that
+interval,
+
+\[
+\boxed{
+N_o\ge(4-\pi)D-o(D)
+=0.8584073464\ldots D-o(D).
+}
+\tag{OV.11}
+\]
+
+Thus a two-phase boundary cannot be both near-geodesic and supported almost entirely
+by its two bulk directions. The estimate is occurrence-counted and remains valid with
+bridges or repeated boundary vertices.
+
+## 3. Relation to the four-host obstruction
+
+For the oblique grid regression, the attachment polygon is a parallelogram and its
+outer walk uses only [u] and [v]. Its widths are generally far below D; hence (OV.6)
+does not apply.
+
+For a global Type-II force hull, the widths in every direction are D-o(D). If a
+large two-phase rhombic carrier is coupled to a near-geodesic global outer walk,
+(OV.11) forces at least (4-pi)D-o(D) non-two-phase edge occurrences. These occurrences
+are the concrete boundary population that an extra-host theorem must control.
+
+The statement does not identify N_o with P_exc, e_BB-k, or any other canonical
+currency. A bridge edge can be a singleton train, and an arbitrary non-two-phase edge
+need not bound a nonquadrilateral face. Making that identification without a new
+planar incidence lemma would repeat the rejected boundary-order shortcuts.
+
+## 4. Scope and disposition
+
+- The result is a finite projection/variation theorem for a closed unit-edge walk.
+- It uses only the two selected unit directions and the convex hull widths.
+- It does not assume the walk is simple or the rhombus complex is simply connected.
+- It does not produce a unit equilateral triangle or a strict-diameter competitor.
+- It gives a new exact target: charge N_o to the actual extra-host/interface or
+  diameter-minimality ledger.
+
+**Candidate chain:** two-phase near-geodesic walk -> N_o >= (4-pi)D-o(D) ->
+source-level extra-host payment -> C-II contradiction or descent.
+
+**Classification:** proved candidate awaiting hostile audit; canonical theorem state
+unchanged and C-II remains open.

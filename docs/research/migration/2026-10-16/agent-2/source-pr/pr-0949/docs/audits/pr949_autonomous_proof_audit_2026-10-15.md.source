@@ -1,0 +1,112 @@
+<!-- theorem-state: {"artifact_id":"ART-6BA7C9AB5655","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# PR #949 substantive autonomous proof audit
+
+**Initial head:** `1263d5e192b6be594d85dd20256e1739e7ea03bd`.
+**Authority:** state `2026-10-10.audit.234`; Target B and Level I remain open.
+**Status:** AI audit and repairs; independent human mathematical review required.
+This record does not promote any claim or constitute independent human review.
+
+The complete initial 922-line report and its endpoint-arithmetic checker were
+read. This audit concerns the exact initial source plus the repairs below;
+the repository's private closeout receipt records the final commit and hashes.
+The audited report is
+[the atomic Mantel equality gap](../reports/target_b_atomic_mantel_equality_gap_2026-10-10.md).
+
+## Inputs and scope
+
+The proof assumes triangle-free global minimizers in the pure, simply
+connected, strict-rhombic-disk branch. Section 39 of the active Target B module
+supplies the atomic crossing bound, exposed mass restriction, pinned-rank
+bound and train-ratio endpoint. CR and IS are used at their promoted scope in
+`target_b_phase_cut_and_biclique_2026-09-05.md`: proper train crosscuts,
+internally noncrossing families, and family angular intervals strictly shorter
+than pi/3. A union whose two limiting phase classes differ by pi/3 cannot be
+treated as such a family. The report explicitly withdraws that earlier union.
+
+The local grid estimate is taken from
+`target_b_explicit_general_phase_interpolation_2026-09-05.md`, Sections 1–2
+and 5, together with its dependency warning in Section 8. The audit checked
+that the new component argument does not import the global-core balancing
+lemma outside its coverage hypothesis. No argument removes exceptional
+faces, holes, multiple components or flexible survivors from the global
+problem. No finite example is asserted to be a global minimizer.
+
+## Proof reconstruction
+
+1. On each 60-degree direction orbit, weighted Mantel gives at most one
+   quarter of the squared orbit mass. Summing over disjoint orbits gives
+   `r <= sum(m_O^2)/4`; the largest orbit consequently has mass at least
+   `4r/s`. The report's max-degree-neighborhood proof supplies weighted
+   Mantel stability. At the endpoint its quantitative defect is at most
+   `3e-10`. The extraction retains center/leaf masses exceeding `.477` and
+   `.238`, with missing mass below `.0006`. IS retains more than `.94` of
+   the relevant sizes and CR gives `D/T > .421`, contradicting the endpoint
+   requirement `D/T < .4125`. The stated `1+1e-10` train-ratio gap has ample
+   room within these strict estimates. The qualitative extraction selects
+   a single leaf of mass at least `s/4`, preserving CR's angular hypothesis.
+2. For a vanishing-deficit component, the transversal estimate
+   `Delta >= (1-s)x+(1-t)y` first controls the mixed crossings when `s<1`.
+   Local GPI then gives the component remainder bound without global core
+   coverage. For `s=t=1`, restriction to a balanced grid supplies the other
+   case. Minimizing yields `rho >= h(t) >= 2-4c/3 > .529`, where
+   `h(t)=3(1+t)^2/(4c)-2t`. The stronger population estimate follows from
+   `h(t)-(49/625)(1+2t)^2 >
+   (3003-4778t+1827t^2)/5000 >= 52/5000` on `[0,1]`.
+   Thus outside population exceeds `14v/25` and `v/T <= 25/39`.
+3. The finite-window proof splits at `sigma=5e-8 tau`. In the imbalanced
+   case `mu <= 2e-5` gives a loss below `.094` against a margin above `.198`.
+   In the balanced case `epsilon_bal < 5.1e-8`, grid loss below `.092` and
+   deleted loss below `1.1e-7` give the stated positive remainder. These
+   bounds control the stated small-deficit window; fixed positive deficit
+   remains outside the argument.
+4. Under the additional finite covered-grain and vanishing-deficit
+   hypotheses, the capped square-sum allocation is convex on each interval
+   between `0`, `14/39`, `2375/3829` and `1`. Its maximum is exactly
+   `72689/549081 < .1324`, attained at `14/39`. This supports a conditional
+   aggregate train-ratio improvement. It supplies neither component
+   coverage nor a boundary-order shell inequality.
+5. The two-block notch construction has `R=2m^2+2m+2`, `B=8m+6`,
+   `T=4m+3`, and `n=2m^2+6m+6`. For `0<cos(theta)<1/2`, the only unit
+   lattice vectors are the two signed basis directions. Parity excludes
+   equilateral triangles. Its full parallelogram hull gives
+   `G=2m sin(theta)` and `D^2=(5+4cos(theta))(m+1)^2`. The two opposite-block
+   missing crossing families have `2m^2` pairs. For the stated theta
+   sequence the virtual mass is quadratic while `G+E+B` is linear. Its
+   diameter ratio tends to `7/(2c)>3`, so it is a regression against a
+   static payment claim and is excluded by global comparison.
+
+## Defects repaired
+
+- The original chain `2.6167 > 1.0304 x0` is false. In fact
+  `1.0304 x0` is approximately `2.61670164318`. The stronger preceding
+  bound still proves both desired conclusions. They are now stated
+  separately: the absolute estimate exceeds `2.6167`, and cancellation of
+  `c` gives the relative estimate `3/(8 sqrt(.1324)) > 1.0304`.
+- A quantitative center-class fraction shadowed the global geometric
+  constant `c`; it is now `c_ctr` with an explicit local definition.
+- The claim table's split at `2e-8 tau` disagreed with the proof's
+  `5e-8 tau`; the table now matches the proof.
+- The original checker verified only the four allocation endpoints. It now
+  checks the two consequences exactly, uses alternating-series rational
+  Machin bounds to reject the false chain, and refuses Python `-O`.
+- A new rational notch checker independently enumerates all pairs and
+  contacts, reconstructs trains from opposite cell edges, checks missing
+  crossings and counts, and exhibits smaller same-cardinality competitors.
+  A narrowed-notch mutation must fail specifically for extra unit contacts.
+
+## Verification and limits
+
+Run both scripts named in the report's computation section without `-O`.
+The allocation values and rational constant controls pass. The notch cases
+`m=4,5,8` check respectively 1,891, 3,655 and 16,471 pairs, with 62, 86 and
+182 labels and 19, 23 and 35 trains. The mutation is rejected. These are
+finite checks of explicitly supplied inputs; the general lemmas above
+require the analytic proofs. The rational basis is not the report's
+transcendental theta sequence.
+
+The report remains unreviewed and noncanonical. Human review should check
+the orbit compactness/stability extraction, the exact geometric hypotheses
+of CR and IS, the local GPI dependency boundary, and the covered-grain
+assumptions. Canonical state, route modules, certificate registrations and
+active theorem statements are unchanged. No Level I, Target B or shell
+closure follows from this audit.

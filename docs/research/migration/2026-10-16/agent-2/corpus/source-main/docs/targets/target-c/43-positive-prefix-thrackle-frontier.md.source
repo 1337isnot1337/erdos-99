@@ -1,0 +1,89 @@
+# Target C — C87 positive prefix-thrackle frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_positive_prefix_thrackle_collapse_2026-09-01.md](../../reports/target_c_positive_prefix_thrackle_collapse_2026-09-01.md).
+
+In the exact C80 chain-face branch, C86 already forces the C84 simple prefix graph
+`G_P` to be connected on all `D+1` chain levels.
+
+C87 orients every non-chain prefix interval by its physical hull arcs. Split the hull
+at the chain diameter `za` into arcs `L,U`, both ordered from `z` to `a`. For a C83
+interval `(a,b]`, `a<b`:
+
+- `eta_h>0` is the physical diameter `L_a U_b`;
+- `eta_h<0` is `U_a L_b`.
+
+After reversing the negative-`eta` prefix edges, C84's signed KKT circulation becomes
+a positive circulation from `L`-endpoint level to `U`-endpoint level.
+
+## Two-cycle collapse
+
+Every simple directed circulation cycle has length two. A directed cycle alternates
+local prefix minima and maxima. The diameter-thrackle crossing rule makes
+
+`minimum -> next maximum`
+
+strictly order-reversing, and likewise
+
+`maximum -> next minimum`.
+
+Their composition is order-preserving on a finite ordered set, hence is the identity;
+a nontrivial cyclic shift is impossible. Thus only a two-edge cycle survives.
+
+Consequently every used simple prefix interval occurs in both physical orientations,
+with equal total transverse KKT flow.
+
+## Staircase tree
+
+Using one positive-orientation diameter from each simple interval, the thrackle rule
+gives the antitone order
+
+`a<c  =>  b>=d`
+
+for edges `(a,b)` and `(c,d)`. Therefore all simple intervals overlap and share one
+common chain track `tau_r`.
+
+The antitone interval family has at most `D` simple edges. C86 connectivity requires
+at least `D`, so
+
+`|E(G_P)|=D`
+
+and `G_P` is a tree. Every tree edge occurs in both arc orientations, hence
+
+`|H_P|>=2D`,
+
+`|H|>=2D+1`.
+
+Since the complete source diameter graph has at most `q` edges,
+
+`q>=2D+1`.
+
+## Radial bundle sign
+
+For any normalized KKT stress and one paired interval `I`, C87 also proves
+
+`R_I=sum_(h:I_h=I) beta_h c_h >=0`.
+
+The proof couples the equal opposite transverse-flow measures and uses convex-hull
+support monotonicity plus the increasing odd function
+
+`c/sqrt(D^2-c^2)`.
+
+Thus paired opposite transverse flows never produce net backward radial curvature on
+one prefix interval.
+
+## Current chain normal form
+
+The only remaining pure chain-face survivor has:
+
+1. one exact straight `D`-contact chain;
+2. exactly `D` simple prefix intervals forming an ordered staircase tree;
+3. one common chain train crossed by every nonempty interval;
+4. both arc orientations represented over every tree edge;
+5. at least `2D+1` active diameter pairs/endpoints;
+6. nonnegative KKT radial scalar on every paired interval bundle.
+
+The next target is a direct contradiction for this paired staircase tree, preferably
+through the common train cut, exact hull endpoint usage, or C82's exposed-hull/train
+capacity inequalities.

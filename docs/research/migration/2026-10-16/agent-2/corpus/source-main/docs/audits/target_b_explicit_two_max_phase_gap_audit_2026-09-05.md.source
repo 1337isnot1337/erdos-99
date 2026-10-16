@@ -1,0 +1,167 @@
+<!-- theorem-state: {"artifact_id":"ART-2C9E8D49156C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Audit — Target B explicit two-largest-tie phase gap
+
+**Date:** 2026-09-05  
+**Candidate:** `docs/reports/target_b_explicit_two_max_phase_gap_2026-09-05.md`  
+**Verdict:** PASS under its stated dense-core/coherence hypotheses.  
+**Global LEVEL I status:** STILL OPEN.
+
+## 1. Geometric missing floor for the largest pair
+
+If the `A-B` missing density is `mu<=10^(-3)`, the corrected dual-tree theorem gives a complete grid with two-phase omitted population
+
+`L<=3sqrt(mu)+mu+o(1)`.
+
+At `mu=10^(-3)`,
+
+`L<=0.0958683299...`.
+
+Charging the loss once for shorter coherent sums and once for arbitrary omitted-train diagonal cancellation yields
+
+`D^2/b^2>=3-4sqrt(3)L-o(1)`
+
+`>=2.33580-o(1)`.
+
+The full tied component has at most `2b^2+o(b^2)` rhombi, so the lattice comparison gives
+
+`D^2/b^2<2c+o(1)=2.20531558...+o(1)`.
+
+Contradiction. Therefore the largest pair misses at least `10^(-3)b^2-o(b^2)` crossings.
+
+PASS.
+
+## 2. Tied transversal-triple algebra
+
+With
+
+`a=(1-q)b`,
+
+`e_AB=b^2-x`, `e_AC=ba-y`, `e_BC=z`,
+
+the transversal-triple count gives
+
+`bz<=ax+by`.
+
+Hence
+
+`eta b^2=x+y-z>=q x`.
+
+Together with the geometric missing floor this gives
+
+`eta>=(10^(-3)-o(1))q`.
+
+PASS.
+
+## 3. Random balanced restriction
+
+Choose uniformly random subsets `A_0 subset A`, `B_0 subset B` of size `a` and retain all of `C`.
+
+An `A-B` edge survives with probability `(a/b)^2=(1-q)^2`; an edge incident with `C` survives with probability `1-q`, which is larger. Thus
+
+`E[E_0]>=(1-q)^2E`.
+
+Some deterministic choice therefore satisfies this bound. Dividing by
+
+`a^2=(1-q)^2b^2`
+
+gives
+
+`E_0/a^2>=E/b^2=2-q-eta`.
+
+Thus the induced equal-size tripartite graph has balanced defect at most
+
+`e=q+eta`.
+
+PASS.
+
+## 4. Deleted trains are restored explicitly
+
+Under the contradiction assumption `e<10^(-7)`, the explicit balanced combinatorial lemma gives a phase pair in `A_0,B_0,C` with missing density at most
+
+`4sqrt(e)`.
+
+Dual-tree extraction gives a complete grid with internal two-phase omission
+
+`L_grid<=6e^(1/4)+4sqrt(e)+o(1)`.
+
+The restriction deleted exactly
+
+`2(b-a)=2qb`
+
+trains from the original tied component. They are not treated as negligible. Their entire possible diagonal contribution is bounded by their count, giving normalized error
+
+`L_del=2q/(1-q)`
+
+relative to the balanced size `a`.
+
+This is the necessary correction to any shortcut that would simply apply the balanced theorem to the induced graph and forget the deleted original trains.
+
+PASS.
+
+## 5. External errors and the third phase
+
+The unselected balanced phase class has exactly `a` trains and receives its full arbitrary coherent signed cancellation; this is already optimized in `F(1,1)=3`.
+
+Truly non-core train crossings are `o(b^2)=o(a^2)` because `q<10^(-7)`. After a fixed-fraction central trim, penetration depth leaves only `o(a)` truly external diagonal contributors.
+
+PASS.
+
+## 6. Near-balanced numerical contradiction
+
+At `e<=10^(-7)`,
+
+`L_grid<=0.107961676...`,
+
+and
+
+`L_del<=2.000001*10^(-7)`.
+
+Therefore
+
+`D^2/a^2`
+
+`>=3-4sqrt(3)L_grid-2sqrt(3)L_del-o(1)`
+
+`>2.2520-o(1)`.
+
+The full original tied component gives
+
+`D^2/a^2<c(2-e)/(1-q)^2+o(1)`.
+
+For `0<=q<=e<=10^(-7)`, the right side is at most
+
+`2.205317+o(1)`.
+
+Contradiction. Hence
+
+`liminf(q+eta)>=10^(-7)`.
+
+PASS.
+
+## 7. Uniform interpolation
+
+The two established inequalities are
+
+`eta>=(10^(-3)-o(1))q`,
+
+`q+eta>=10^(-7)-o(1)`.
+
+Thus
+
+`q<=eta/(10^(-3)-o(1))`,
+
+and asymptotically
+
+`10^(-7)<=eta(1+10^3)`.
+
+Therefore
+
+`liminf eta>=10^(-10)/1.001`
+
+`=9.99000999...*10^(-11)`.
+
+PASS.
+
+## 8. Scope
+
+The theorem handles exact two-largest-tie class sizes. A general component with `M>b` still requires explicit control of the `M-b` trains before this tied constant can be imported. The local-to-global deficit summation also remains open.

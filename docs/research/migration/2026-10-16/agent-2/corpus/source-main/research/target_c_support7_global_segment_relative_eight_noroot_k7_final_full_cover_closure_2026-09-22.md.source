@@ -1,0 +1,165 @@
+# Target C: full-cover closure of the final eight-no-root `k=7` profile
+
+Date: 2026-09-22
+
+Status: **closed for the current eight-no-root `k=7` finite split.** This note records a complete exact execution of the seven-row functional-lift obstruction for the last surviving profile
+
+```text
+C:(d_v,q,s)=(5,12,12),   d_6=5.
+```
+
+It closes that finite profile. It does **not** promote Target C-II or Erdős Problem #99 to solved; the canonical global Target C state remains governed by `docs/targets/target-c/CURRENT.md` and `docs/state/theorem-state.yaml`.
+
+## 1. Closure criterion
+
+The six-row replacement-functional inequality forces every surviving `d_6=5` shadow to have singleton-functional extra rank ten, the full six-row quotient dimension. After restoring one deleted no-root cycle, deficiency monotonicity forces
+
+```text
+d_7=5,   singleton capacity >= 11.
+```
+
+At seven rows,
+
+```text
+D_7 >= 7 + p_7 + 3 d_7 - 3 s_7
+```
+
+with `D_7=1`, `p_7=12`, and `d_7=5`, so
+
+```text
+s_7 >= 11.
+```
+
+The seven-row functional quotient has dimension exactly eleven. Therefore an actual target must produce a qualifying one-cycle lift whose compatible singleton functionals have extra rank eleven.
+
+The committed verifier implementing this criterion is
+
+```text
+research/verify_target_c_support7_global_segment_relative_seven_noroot_k6_C_d5q12_d5_functional_lift_2026_09_22.py
+```
+
+with Git blob SHA
+
+```text
+3e6eba3fffcbbf4be4f76ec375ad60332568ebe7.
+```
+
+The verifier deliberately inserts every compatible singleton state from every virtual-complete block. This is an over-approximation of an actual all-singleton profile, so failure even in that enlarged family is a valid obstruction.
+
+## 2. Complete execution
+
+The exact 325,955-representative six-row augmentation cover was partitioned into 1,304 disjoint half-open intervals, each of width 250 except the final interval. The intervals cover
+
+```text
+[0,325955)
+```
+
+with no gaps or overlaps. The aggregate census was
+
+```text
+synchronized_states                 1,751,870
+six_full_rank_witnesses               136,450
+seven_d5_capacity_ge11_lifts           968,687
+retained_six_full_span_lifts             49,249
+seven_full_rank_lifts                         0
+max_seven_extra_rank                         10
+```
+
+Every one of the 49,249 lifts that retained the required six-row rank-ten span had seven-row extra rank exactly ten. None reached eleven.
+
+The following macro-range table is the aggregate of the 250-representative execution intervals. `extra11` is zero in every range.
+
+```text
+start,end,sync,witnesses,lifts,retained,extra10,extra11,max_fn_norm2,max_fn_width,max_rel_norm2,max_rel_rows
+0,10000,53696,6955,44665,1383,1383,0,45,24,24,24
+10000,20000,62086,3385,20249,1917,1917,0,39,24,24,24
+20000,30000,75831,3363,18127,3355,3355,0,39,24,22,24
+30000,40000,76079,3761,22829,3753,3753,0,39,25,22,25
+40000,50000,72787,3472,20557,3465,3465,0,40,25,22,25
+50000,60000,67402,3390,24070,3390,3390,0,40,25,22,25
+60000,70000,64220,4184,26707,4183,4183,0,39,25,22,25
+70000,80000,62711,7113,49985,581,581,0,34,24,24,24
+80000,90000,62896,8745,58344,226,226,0,33,24,24,22
+90000,100000,57036,10025,71398,542,542,0,34,24,24,23
+100000,110000,60501,4577,28882,642,642,0,36,25,24,23
+110000,120000,53266,5112,38428,580,580,0,36,25,24,23
+120000,130000,57388,3725,26846,216,216,0,33,25,24,23
+130000,140000,50915,5501,41586,696,696,0,33,25,24,24
+140000,150000,53410,3599,26678,960,960,0,32,25,24,24
+150000,160000,53509,4551,31936,1374,1374,0,35,25,24,24
+160000,170000,48418,4352,32724,408,408,0,32,25,24,24
+170000,180000,50159,3335,24650,530,530,0,33,25,24,24
+180000,190000,50778,3019,23766,1060,1060,0,36,24,24,24
+190000,200000,49072,1166,8924,284,284,0,33,24,24,24
+200000,210000,45934,1829,13808,538,538,0,34,24,24,24
+210000,220000,47304,7613,59676,766,766,0,35,25,24,24
+220000,230000,43880,5598,44492,1132,1132,0,35,25,24,25
+230000,240000,40459,3358,27154,1180,1180,0,33,25,24,25
+240000,250000,50014,2592,20144,962,962,0,38,25,24,25
+250000,260000,43563,3937,29306,784,784,0,33,25,24,25
+260000,270000,45243,4054,29036,1468,1468,0,38,25,24,25
+270000,280000,44103,3443,28024,2210,2210,0,38,25,24,25
+280000,290000,53836,6822,47804,6794,6794,0,34,25,24,25
+290000,300000,52356,3874,27892,3870,3870,0,33,25,22,25
+300000,310000,44282,0,0,0,0,0,0,0,0,0
+310000,320000,39739,0,0,0,0,0,0,0,0,0
+320000,325955,18997,0,0,0,0,0,0,0,0,0
+```
+
+The counts sum exactly to the aggregate census above.
+
+## 3. Exactness over `Q`
+
+All rank computations use
+
+```text
+P = 2^127 - 1.
+```
+
+The Lucas-Lehmer test for exponent 127 returns zero, so `P` is prime.
+
+For complete-block relation ranks, the established universal bound is
+
+```text
+max squared row norm = 12,
+rank <= 15,
+P^2 > 12^15.
+```
+
+Across the full functional-lift execution, the observed global bounds were
+
+```text
+max functional-row squared norm = 45,
+max functional width            = 25,
+max relation-row squared norm   = 24,
+max relation-row count          = 25.
+```
+
+The certificate checks
+
+```text
+P^2 > 45^25,
+P^2 > 24^15.
+```
+
+Hence every modular rank used in the finite obstruction agrees with the rational rank: a nonzero rational minor cannot vanish modulo `P` because its determinant magnitude is strictly below `P` by Hadamard.
+
+For the closure inequality itself, subtracting `rank7 = |C_7|-5` is conservative even without using equality for the enlarged canonical relation family: the complete-block relation rows alone have exact rank `rank7`, so the actual functional extra rank is at most the reported `rank(total)-rank7`. The full execution bounds this quantity by ten everywhere.
+
+## 4. Consequence
+
+A realization of the remaining `C:(5,12,12), d_6=5` branch would require seven-row singleton-functional extra rank eleven. The exhaustive exact scan finds maximum extra rank ten. Therefore
+
+```text
+C:(5,12,12), d_6=5 is impossible.
+```
+
+The `d_6=3` and `d_6=4` sides of this profile were already closed. Therefore
+
+```text
+C:(5,12,12) is impossible.
+```
+
+The companion final profile `C:(4,11,10)` was already closed. Thus the current eight-no-root `k=7` finite split has no surviving profile.
+
+This is a finite-layer closure only. It does not alter the canonical declaration that Target C-II and Erdős Problem #99 remain open.

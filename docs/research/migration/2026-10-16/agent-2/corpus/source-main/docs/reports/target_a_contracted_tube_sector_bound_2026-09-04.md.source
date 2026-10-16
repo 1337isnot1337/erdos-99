@@ -1,0 +1,142 @@
+<!-- theorem-state: {"artifact_id":"ART-ECE68FFA9841","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
+# Erdős Problem #99 — Target A contracted-tube sector bound
+
+**Date:** 2026-09-04  
+**Branch:** `research/target-c-c97-caterpillar-fan-capacity-2026-09-04`  
+**Run type:** exact strengthening of Section 174 using the contracted Schur gammoid  
+**Target:** locked three-channel sector branch  
+**Status:** LEVEL I STILL OPEN
+
+## 1. Physical basis closure is unnecessary after matching contraction
+
+Section 174 first deletes the geometric shield
+
+`W_Sigma^0=V(Sigma) sqcup T_Sigma`
+
+and then physically closes it under the basis matching `mu_0:B->Z`. The closure is useful in the uncontracted alternating graph, but Section 113 permits a smaller construction.
+
+Contract every matched edge
+
+`mu_0(b)->b`, `b in B`,
+
+to one internal gammoid vertex. As proved in `target_a_basis_pair_shield_contraction_2026-09-04.md`, this preserves the Schur linkage matroid.
+
+Define the set of shielded matched pairs
+
+`P_Sigma={b in B : b in V(Sigma) or mu_0(b) in T_Sigma}`.
+
+Also shield
+
+`C_V=C^partial cap V(Sigma)`
+
+and
+
+`O_T=O cap T_Sigma`.
+
+In the contracted directed gammoid let
+
+`Wbar_Sigma=P_Sigma sqcup C_V sqcup O_T`.
+
+A symbol `b in P_Sigma` denotes the contracted pair `{b,mu_0(b)}`.
+
+## 2. Every unshielded matched pair is sector-local
+
+Take `b notin P_Sigma` and put `z=mu_0(b)`. Then
+
+`b notin V(Sigma)`, `z notin T_Sigma`.
+
+The matching edge `bz` is a response edge. Lemma 174.2 says every response edge whose right endpoint is outside `T_Sigma` avoids `|Sigma|`. Since `b` is not a contact vertex on `|Sigma|`, the two endpoints lie in one connected component of
+
+`K^*\|Sigma|`.
+
+Thus every surviving contracted basis pair belongs to exactly one geometric sector. No physical addition of `z` when `b` is shielded, or of `b` when `z` is shielded, is needed: that whole contracted pair is simply one shield vertex.
+
+The same argument applies to every unshielded response edge in a shield-avoiding Schur path. Hence the entire surviving contracted path stays in one sector until its final exterior sink.
+
+## 3. Exact contracted sector rank bound
+
+For each sector `D_i`, let
+
+`C_i^partial=(C^partial\V(Sigma)) cap D_i`,
+
+and let `O_i` be the exterior sinks in `O\T_Sigma` having a surviving response neighbor in `D_i`. Lemma 174.2 makes the `O_i` pairwise disjoint.
+
+### Theorem CT1 — contracted-tube Schur rank
+
+`rank S <= |P_Sigma|+|C_V|+|O_T| + sum_i min(|C_i^partial|,|O_i|)`.
+
+### Proof
+
+Take a maximum family of vertex-disjoint directed Schur paths in the contracted gammoid. At most one path can meet each contracted shield vertex, so at most
+
+`|P_Sigma|+|C_V|+|O_T|`
+
+paths meet `Wbar_Sigma`.
+
+Delete those paths. Every remaining path starts in one `C_i^partial`, stays in sector `D_i` by the preceding sector-locality argument, and ends at a distinct sink in the disjoint set `O_i`. Thus sector `i` contributes at most the displayed minimum. QED.
+
+Subtracting from
+
+`|C^partial|=|C_V|+sum_i |C_i^partial|`
+
+gives:
+
+### Corollary CT2 — contracted-tube sector nullity
+
+`zeta >= sum_i max(0,|C_i^partial|-|O_i|) - |P_Sigma|-|O_T|`.
+
+This is strictly stronger than the physical basis-closed estimate whenever basis closure adds a partner as a second physical vertex.
+
+## 4. Explicit shield-capacity constant
+
+The matched-pair shield obeys the union bound
+
+`|P_Sigma| <= |B cap V(Sigma)| + |Z cap T_Sigma|`.
+
+Therefore
+
+`|P_Sigma|+|O_T|`
+
+`<= |B cap V(Sigma)| + |T_Sigma|`
+
+`<= |V(Sigma)|+|T_Sigma|`.
+
+The nine-site tube theorem gives
+
+`|T_Sigma|<=9|E(Sigma)|`.
+
+Hence:
+
+### Corollary CT3 — ten-per-vertex locked-fan penalty
+
+For an arbitrary finite contact shield,
+
+`|P_Sigma|+|O_T| <= |V(Sigma)|+9|E(Sigma)|`.
+
+For the connected unicyclic locked three-channel fan of Section 172,
+
+`|E(Sigma)|=|V(Sigma)|`,
+
+so
+
+`|P_Sigma|+|O_T| <=10|V(Sigma)|`.
+
+Accordingly a sufficient locked-branch theorem is now
+
+`sum_i max(0,|C_i^partial|-|O_i|) >= s+10|V(Sigma)|`.
+
+The exact criterion is stronger:
+
+`sum_i max(0,|C_i^partial|-|O_i|) >= s+|P_Sigma|+|O_T|`.
+
+The earlier promoted physical-shield constant was `24|V(Sigma)|`; the nine-site improvement plus matching contraction reduces the explicit path-capacity loss to `10|V(Sigma)|`.
+
+## 5. Basis choice remains available
+
+The quantity
+
+`zeta=d_sc-d_int`
+
+is independent of the chosen `Z`-basis. Therefore, after `Sigma` is fixed, one may choose the `Z`-perfect basis matching `mu_0` to minimize `|P_Sigma|`. This is a finite minimum-cost matching problem in which a matched pair costs one exactly when its left endpoint lies in `V(Sigma)` or its right endpoint lies in `T_Sigma cap Z`.
+
+A further exact improvement would identify that minimum cost with a local Hall/cut quantity and bound it from the stress-fan geometry.

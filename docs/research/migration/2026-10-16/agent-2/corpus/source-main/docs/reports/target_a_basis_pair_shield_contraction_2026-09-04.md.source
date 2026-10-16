@@ -1,0 +1,152 @@
+<!-- theorem-state: {"artifact_id":"ART-724F91D2B2C1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
+# Erdős Problem #99 — Target A basis-pair shield contraction
+
+**Date:** 2026-09-04  
+**Branch:** `research/target-c-c97-caterpillar-fan-capacity-2026-09-04`  
+**Run type:** exact strengthening of Section 174.5  
+**Target:** locked three-channel Schur sector branch  
+**Status:** LEVEL I STILL OPEN
+
+## 1. Error of scale in the crude shield charge
+
+Section 174.5 bounds the number of vertex-disjoint Schur paths meeting a basis-closed shield `W=widehat W_Sigma` by `|W|`. This is safe but not sharp for the Section 113 directed gammoid.
+
+Fix the basis matching
+
+`mu_0:B->Z`.
+
+The directed graph has
+
+- unmatched conflict edges oriented left-to-right;
+- matching edges `z->mu_0^{-1}(z)` oriented right-to-left.
+
+A Schur path starts at a nonbasis terminal in `C^partial` and ends at a free right vertex in `O`.
+
+Two structural facts are immediate:
+
+1. every internal `B` vertex is entered only through its unique matched edge from its partner in `Z`, so an internal matched pair `z,b` is traversed consecutively as one unit;
+2. a deep nonbasis vertex in `C^circ` cannot occur on a directed Schur path at all, because no directed edge enters a nonbasis left vertex.
+
+Because the Section 174 shield is basis-closed,
+
+`b in W iff mu_0(b) in W`.
+
+Thus a shielded matched pair can be contracted to one path-capacity vertex.
+
+## 2. Contracted shield capacity
+
+Put
+
+`p_W := |B cap W| = |Z cap W|`,
+
+`c_W := |C^partial cap W|`,
+
+`o_W := |O cap W|`.
+
+Define
+
+`kappa(W):=p_W+c_W+o_W`.
+
+### Theorem BP1 — contracted shield path bound
+
+At most `kappa(W)` paths in any pairwise vertex-disjoint directed `C^partial-to-O` path family can meet `W`.
+
+### Proof
+
+Contract every matching edge `z->b` with `b in B`, `z=mu_0(b)`, to one directed-gammoid vertex. Contraction preserves vertex-disjoint alternating linkages: every internal visit to `z` is followed by the unique matched step to `b`, and every internal visit to `b` is preceded by that matched step.
+
+In the contracted graph a Schur path can meet the basis-closed shield only through one of:
+
+- a shielded terminal in `C^partial`, of which there are `c_W`;
+- a shielded contracted `B-Z` pair, of which there are `p_W`;
+- a shielded sink in `O`, of which there are `o_W`.
+
+Vertices in `C^circ cap W` are absent from every Schur path. Pairwise vertex-disjointness allows at most one path per listed contracted shield vertex. Summing gives `kappa(W)`. QED.
+
+## 3. Strengthened sector rank and nullity inequalities
+
+Retain the Section 174 sector sets `C_i^partial,O_i` outside `W`. Sector locality is unchanged.
+
+Delete from a maximum Schur path family the paths meeting `W`. Theorem BP1 removes at most `kappa(W)` paths. Every remaining path stays in one sector and uses a distinct sink there. Therefore
+
+### Theorem BP2 — basis-contracted sector rank bound
+
+`rank S <= p_W+c_W+o_W + sum_i min(|C_i^partial|,|O_i|)`.
+
+Subtract from
+
+`|C^partial|=c_W+sum_i |C_i^partial|`.
+
+The shielded terminal count cancels exactly, giving
+
+### Corollary BP3 — improved sector nullity
+
+`zeta >= sum_i max(0, |C_i^partial|-|O_i|) - p_W-o_W`.
+
+Compare this with Section 174.19:
+
+`zeta >= sum_i max(0, |C_i^partial|-|O_i|) - |W\C^partial|`.
+
+Since the full shield decomposes as
+
+`W=(B cap W) sqcup (Z cap W) sqcup (C^circ cap W) sqcup (C^partial cap W) sqcup (O cap W)`,
+
+basis closure gives
+
+`|W\C^partial|=2p_W+|C^circ cap W|+o_W`.
+
+Thus BP3 saves exactly
+
+`p_W+|C^circ cap W|`
+
+units over the promoted Section 174 bound.
+
+## 4. New exact closing criterion
+
+The locked sector branch now closes whenever
+
+`sum_i max(0, |C_i^partial|-|O_i|) >= s+p_W+o_W`.
+
+Using the local population identity (174.17), this is equivalently
+
+`sum_i max(0, |X_i|-|Z_i|-|O_i|-|C_i^circ|) >= s+p_W+o_W`.
+
+This strictly strengthens the previous sufficient theorem (174.23) whenever the shield contains a basis pair or a deep nonbasis vertex.
+
+## 5. Dual negative-sector form
+
+Use the notation of `target_a_sector_deficit_duality_2026-09-04.md`. Let
+
+`J=rho^dagger-|Y_0|`,
+
+`g=J-h=Delta_Lambda-d_sc`,
+
+and let `O_iso` be the surviving exterior vertices with no surviving response neighbor. Put
+
+`Q_Sigma=sum_i max(0, |O_i|-|C_i^partial|)`.
+
+The exact signed sector sum is
+
+`sum_i (|C_i^partial|-|O_i|)`
+
+`=s-J-c_W+o_W+|O_iso|`.
+
+Therefore the BP3 closing criterion is equivalent to
+
+### Corollary BP4 — contracted deficit amplification
+
+`Q_Sigma >= J+p_W+c_W-|O_iso|`.
+
+Equivalently,
+
+`Q_Sigma-p_W-c_W+|O_iso|-h >= g`.
+
+The old Section 174 criterion had the larger shield correction `|W\O|-|O_iso|`. The new correction depends only on shielded basis pairs and shielded Schur terminals; shielded deep nonbasis vertices and the duplicate `Z` endpoint of each basis pair no longer cost rank.
+
+## 6. Next target
+
+The remaining shield cost is now matroid-sensitive:
+
+`p_W=|B cap W|`.
+
+The Schur nullity is basis-invariant, so one may choose the `Z`-basis and its perfect matching after the stress fan is fixed. A natural next theorem is to minimize `p_W` over all `Z`-perfect basis matchings, equivalently a minimum-crossing matching problem for the preliminary geometric shield.

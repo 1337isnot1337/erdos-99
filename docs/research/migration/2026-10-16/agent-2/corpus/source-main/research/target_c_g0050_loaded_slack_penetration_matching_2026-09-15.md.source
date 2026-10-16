@@ -1,0 +1,352 @@
+# Erdős Problem #99 — matched `g=0.0050` loaded-slack externalization with penetration matching
+
+**Date:** 2026-09-15  
+**Target:** C-II, canonical contact-minimal full-core Type-II branch  
+**Dependencies:** loaded-degree-slack source externalization; matched iterative-pruning gap `g=0.0050`; Section-171 `epsilon=0.0023374`; shallow-tooth penetration matching and deep purity  
+**Claim class:** proof-only source-level composition awaiting independent audit  
+**External literature:** no new import
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The loaded-slack externalization theorem removes the abstract loaded contact-degree
+currency `s_B`, then pays the remaining loaded flat-pentagon centers by singleton-train
+capacity.  Its original tooth conversion predated the penetration-matching theorem and
+therefore used the coarse bound
+
+\[
+N_2\le4E_{pen}(\eta)+{d_{out}\over\eta}.
+\]
+
+The later finite geometry removes that factor four.  For every admissible fixed
+`eta`, the `eta`-shallow teeth have pairwise-distinct apexes and pairwise-distinct deep
+endpoints, so their selected internal penetration contacts form a matching.  Hence
+
+\[
+\boxed{
+N_2\le E_{pen}(\eta)+{d_{out}\over\eta}+o(D).
+}
+\tag{EM.1}
+
+Combining (EM.1) with the loaded-slack theorem and the matched atomic endpoint gives a
+substantially sharper two-currency reduction:
+
+\[
+\boxed{
+\liminf {E_{pen}(\eta)+4|E_{att}|\over D}
+\ge C_g^{src}(t,\eta),
+}
+\tag{EM.2}
+
+where
+
+\[
+C_g^{src}(t,\eta)
+=13\pi+7C_g-29t
++{1\over2}\left(11-{1\over\eta}\right)R_g(t),
+\tag{EM.3}
+\]
+
+\[
+C_g=2\sqrt{\Delta_2}+g,
+\qquad
+R_g(t)={9t\over2}-2\pi-C_g.
+\tag{EM.4}
+
+The two edge families are physically disjoint:
+
+- `E_pen(eta)` consists of unloaded-to-unloaded internal contacts;
+- `E_att` consists of loaded-to-unloaded contacts.
+
+Thus (EM.2) also gives
+
+\[
+\boxed{
+\liminf {|E_{pen}(\eta)\cup E_{att}|\over D}
+\ge {C_g^{src}(t,\eta)\over4},
+}
+\tag{EM.5}
+
+and the sharper equal-branch alternative
+
+\[
+\boxed{
+\liminf {1\over D}\max\{E_{pen}(\eta),|E_{att}|\}
+\ge {C_g^{src}(t,\eta)\over5}.
+}
+\tag{EM.6}
+
+The denominator five, rather than eight or ten, is the main quantitative gain.
+
+At the independently audited matched endpoint
+
+\[
+g=0.0050,
+\qquad
+C_{146}={4\over9}\left(\pi+\sqrt{\Delta_2}\right),
+\qquad
+t_{50}=C_{146}+0.0023374,
+\]
+
+choose the exact rational threshold
+
+\[
+\eta={17\over250}=0.068.
+\]
+
+It satisfies both
+
+\[
+\eta<{1\over11}
+\]
+
+and the shallow-tooth locality requirement
+
+\[
+\eta<2(1-\cos(\pi/12)).
+\]
+
+Then
+
+\[
+R_g(t_{50})=0.00551830
+\tag{EM.7}
+\]
+
+and
+
+\[
+\boxed{
+C_{0.005}^{src}(t_{50},17/250)
+=1.3641815060647008748\ldots .
+}
+\tag{EM.8}
+
+Consequently
+
+\[
+\boxed{
+\liminf {|E_{pen}(17/250)\cup E_{att}|\over D}
+\ge0.3410453765161752187\ldots,
+}
+\tag{EM.9}
+
+and, more usefully,
+
+\[
+\boxed{
+\liminf {1\over D}\max\{E_{pen}(17/250),|E_{att}|\}
+\ge0.2728363012129401749\ldots .
+}
+\tag{EM.10}
+
+Thus every small-residual low-`t` survivor contains either
+
+1. an internal unloaded-to-unloaded **penetration matching** of size at least
+   `0.2728363D-o(D)`; or
+2. at least `0.2728363D-o(D)` distinct loaded-to-unloaded attachment contacts.
+
+No loaded degree slack, tooth count, or loaded-flat-center count remains in the final
+alternative.
+
+---
+
+## 1. Start from finite loaded-slack externalization
+
+The source-externalization theorem proves
+
+\[
+N_2+2|L_{flat}^{bd}|+4|E_{att}|
++4B_o+12X+{10R_F\over\theta_*}+16
+\ge3q-b.
+\tag{EM.11}
+
+After bridge and degree-excess payments and on `R_F=o(D)`, this becomes
+
+\[
+\liminf {N_2+2|L_{flat}^{bd}|+4|E_{att}|\over D}
+\ge A_g(t)+9\delta+6\kappa,
+\tag{EM.12}
+\]
+
+where
+
+\[
+A_g(t)=11\pi+6C_g-24t,
+\qquad
+\delta={b-P_F\over D},
+\qquad
+\kappa={k\over D}.
+\]
+
+The theorem also gives the singleton-train capacity bound
+
+\[
+\limsup {|L_{flat}^{bd}|\over D}
+\le {5t\over2}-\pi-\delta-\sqrt{\Delta_2}-{g\over2}.
+\tag{EM.13}
+
+---
+
+## 2. Replace the tooth currency without multiplicity loss
+
+The tooth detour identity gives
+
+\[
+N_{sh}(\eta)
+\ge N_2-{d_{out}\over\eta}.
+\tag{EM.14}
+
+The penetration-matching theorem produces exactly one distinct internal contact edge
+per shallow tooth, and the selected edges form a matching.  Therefore
+
+\[
+E_{pen}(\eta)=N_{sh}(\eta)
+\]
+
+for a suitable selected penetration matching, so (EM.14) is equivalent to (EM.1).
+
+Insert (EM.1) into (EM.12):
+
+\[
+\liminf {E_{pen}(\eta)+2|L_{flat}^{bd}|+4|E_{att}|\over D}
+\ge A_g(t)+\left(9-{1\over\eta}\right)\delta+6\kappa.
+\tag{EM.15}
+
+Now subtract twice the upper bound (EM.13).  This yields
+
+\[
+\boxed{
+\liminf {E_{pen}(\eta)+4|E_{att}|\over D}
+\ge
+13\pi+7C_g-29t
++\left(11-{1\over\eta}\right)\delta+6\kappa.
+}
+\tag{EM.16}
+
+For `eta<1/11`, the coefficient of `delta` is negative.  The exact topology envelope
+
+\[
+2\delta+{\kappa\over2}\le R_g(t)
+\tag{EM.17}
+\]
+
+therefore minimizes the right side at `kappa=0`, `delta=R_g(t)/2`, proving
+(EM.2)--(EM.4).
+
+---
+
+## 3. Exact disjointness and the branch constants
+
+Every selected penetration edge lies entirely inside one unloaded positive-contact
+component.  In particular it has two unloaded endpoints.  Every edge in `E_att` has
+one loaded and one unloaded endpoint by construction.  Hence
+
+\[
+E_{pen}(\eta)\cap E_{att}=\varnothing.
+\tag{EM.18}
+
+Let
+
+\[
+p={E_{pen}(\eta)\over D},
+\qquad
+a={|E_{att}|\over D},
+\qquad C=C_g^{src}(t,\eta).
+\]
+
+Equation (EM.2) is
+
+\[
+p+4a\ge C.
+\]
+
+Since the edge classes are disjoint,
+
+\[
+|E_{pen}\cup E_{att}|/D=p+a.
+\]
+
+The minimum of `p+a` subject to `p,a>=0` and `p+4a>=C` is `C/4`, proving (EM.5).
+If both `p<C/5` and `a<C/5`, then `p+4a<C`, contradiction.  This proves (EM.6).
+
+The penetration branch is stronger than a raw edge population: because the selected
+penetration edges form a matching, `pD` such edges use `2pD` distinct unloaded
+vertices, and the deep endpoints have no loaded contact neighbors and internal degree
+three to five.
+
+---
+
+## 4. Matched numerical endpoint
+
+For `g=0.0050` and `t=t_50`, cancellation in (EM.4) gives exactly
+
+\[
+R_g(t_{50})
+={9\over2}(0.0023374)-0.0050
+=0.00551830.
+\tag{EM.19}
+
+Using `eta=17/250`, the companion verifier checks
+
+\[
+C_g^{src}=1.3641815060647008748\ldots,
+\]
+
+\[
+C_g^{src}/4=0.3410453765161752187\ldots,
+\]
+
+and
+
+\[
+C_g^{src}/5=0.2728363012129401749\ldots .
+\]
+
+The locality condition is checked from the exact identity
+
+\[
+2(1-\cos(\pi/12))
+=2-{\sqrt6+\sqrt2\over2}
+>0.068.
+\]
+
+---
+
+## 5. Frontier effect
+
+The small-residual low-`t` branch now has a clean physical two-way obstruction:
+
+```text
+(A) >= 0.2728363 D internal penetration matching edges,
+    using >= 0.5456726 D distinct unloaded vertices,
+    with attachment-free deep endpoints;
+
+or
+
+(B) >= 0.2728363 D distinct loaded-to-unloaded attachment contacts.
+```
+
+The disjoint union always contains at least `0.3410453D` actual unit contacts.
+
+This is substantially sharper than the original loaded-slack theorem, whose final
+union floor lost both the old tooth multiplicity factor and a possible overlap factor.
+The next useful closing work can now separate into two concrete capacity problems:
+
+- continue the penetration matching inward (the second-layer theorem already starts
+  this); or
+- prove an attachment-incidence / loaded-boundary capacity theorem for branch (B).
+
+No positive KKT-weight floor is asserted.  C-II and Level I remain open.
+
+## 6. Scope audit
+
+- The normalized theorem inherits the `R_F=o(D)` low-`t` full-core Type-II scope of
+  loaded-slack externalization.
+- The penetration matching theorem is finite and retains all source points.
+- `E_pen` and `E_att` are disjoint by endpoint type, not by an asymptotic argument.
+- `eta=17/250` lies strictly inside both required fixed thresholds.
+- `g=0.0050` and the corresponding Section-171 floor are independently audited.
+- Contact-isolated source points remain in the full source.
+- No exact unit triangle or strict same-cardinality sub-`D` competitor is produced.

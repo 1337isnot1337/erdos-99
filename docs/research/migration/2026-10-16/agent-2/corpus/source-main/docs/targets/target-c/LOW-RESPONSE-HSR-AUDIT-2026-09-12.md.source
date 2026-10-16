@@ -1,0 +1,241 @@
+# Target C — corrected hostile audit of low-response HSR localization
+
+**Date:** 2026-09-12  
+**Reviewed artifact:** `docs/reports/target_c_low_response_mu_floor_2026-09-12.md`  
+**Disposition:** **PASS after the proof/scope repairs on this branch.**  
+**Theorem authority:** unchanged; audit.46 remains canonical.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+## 1. Audit verdict
+
+The report contains a valid response-defect localization theorem, but its original text had two defects that must not be carried into theorem state:
+
+1. the displayed conclusion (LR.13) was justified by a denominator comparison in the wrong direction; and
+2. the final research target silently upgraded collective stress concentration across at most six near-diameter cells to one cell with stress `D^2-o(D)`.
+
+Neither defect invalidates the actual localization theorem. The first has a short monotonicity repair. The second is a scope overclaim and is removed rather than repaired into a one-cell statement.
+
+The safe result is:
+
+- for `0<=epsilon_D<=1`,
+  \[
+  \mu_D\ge\sqrt{1-\varepsilon_D}-{8\over D};
+  \]
+- if `D epsilon_D -> 0`, all but `o(D^2)` contact stress lies on at most six harmonic components whose attachment diameters are `D-o(1)`;
+- the total response defect `sum E_r` on that family is `o(D)`;
+- no theorem here makes one component carry `D^2-o(D^2)` stress.
+
+The scalar inequality is weaker than the existing RCC scalar floor. The new content is only the stress localization.
+
+## 2. Component Dirichlet-energy identity
+
+For an unloaded positive-contact component `I_r`, let `A_r` be its loaded attachment set and let `c^(r)_{st}` be its Kron response conductances. Harmonicity of both coordinate functions on unloaded vertices and Schur elimination give the exact Dirichlet identity
+
+\[
+S_r=\sum_{s<t\in A_r}c^{(r)}_{st}|s-t|^2.
+\tag{A.1}
+\]
+
+Put
+
+\[
+C_r:=\sum_{s<t}c^{(r)}_{st},
+\qquad
+L_r:=\operatorname{diam}(A_r),
+\]
+
+and define
+
+\[
+E_r:=D^2C_r-S_r
+=\sum_{s<t}c^{(r)}_{st}(D^2-|s-t|^2)\ge0.
+\]
+
+Then
+
+\[
+S_r\le L_r^2C_r.
+\]
+
+If `L_r<D`, eliminating `C_r` yields
+
+\[
+E_r\ge S_r\left({D^2\over L_r^2}-1\right),
+\qquad
+S_r\le {L_r^2\over D^2-L_r^2}E_r.
+\tag{A.2}
+\]
+
+No individual KKT coefficient floor is used.
+
+## 3. Aggregate response-defect inequality
+
+The canonical response decomposition is
+
+\[
+D^2\varepsilon_D=(D^2-1)S_{BB}+\sum_rE_r,
+\tag{A.3}
+\]
+
+while the virial normalization gives
+
+\[
+S_{BB}+\sum_rS_r=D^2.
+\tag{A.4}
+\]
+
+Let `L_*:=max_r L_r` and `T:=sum_r S_r`. If `L_*=D`, the desired diameter lower bound is immediate. Otherwise summing (A.2) gives
+
+\[
+T\le {L_*^2\over D^2-L_*^2}D^2\varepsilon_D,
+\]
+
+hence
+
+\[
+{L_*^2\over D^2}
+\ge {T\over T+D^2\varepsilon_D}.
+\tag{A.5}
+\]
+
+Also (A.3) gives
+
+\[
+S_{BB}\le {D^2\over D^2-1}\varepsilon_D.
+\tag{A.6}
+\]
+
+## 4. Repair of the original LR.13 argument
+
+The original report said that the denominator in (A.5) is at least `D^2` and then inferred a lower bound on the quotient. That implication has the wrong direction and is rejected.
+
+The conclusion nevertheless follows. Put
+
+\[
+t:=T/D^2=1-S_{BB}/D^2.
+\]
+
+For `D>=2`, (A.6) gives
+
+\[
+{S_{BB}\over D^2}
+\le {\varepsilon_D\over D^2-1}
+\le\varepsilon_D,
+\]
+
+so
+
+\[
+t\ge1-\varepsilon_D.
+\]
+
+The function
+
+\[
+f(t)={t\over t+\varepsilon_D}
+\]
+
+is increasing for `t>=0`. Therefore (A.5) gives
+
+\[
+{L_*^2\over D^2}
+\ge {t\over t+\varepsilon_D}
+\ge {1-\varepsilon_D\over1-\varepsilon_D+\varepsilon_D}
+=1-\varepsilon_D.
+\tag{A.7}
+\]
+
+Thus
+
+\[
+L_*\ge D\sqrt{1-\varepsilon_D}.
+\tag{A.8}
+\]
+
+Combining canonical `L_r<=delta_r+2` with `sum_r delta_r<=mu_D D+6` gives
+
+\[
+\boxed{\mu_D\ge\sqrt{1-\varepsilon_D}-{8\over D}.}
+\tag{A.9}
+\]
+
+So the theorem survives; only the original proof sentence was invalid.
+
+If the zero-defect case `epsilon_D=0` is included, it should be handled separately before introducing a variable cutoff that divides by `sqrt(epsilon_D)`: (A.3) then forces `S_BB=0` and every `E_r=0`; (A.2) shows every positive-stress component has `L_r=D`. The localization conclusion is immediate. For positive `epsilon_D`, the cutoff used below is well defined.
+
+## 5. Weighted localization in the low-response branch
+
+For fixed `0<eta<1`, summing (A.2) over cells with `L_r<=(1-eta)D` gives
+
+\[
+\sum_{L_r\le(1-\eta)D}S_r
+\le { (1-\eta)^2\over1-(1-\eta)^2}D^2\varepsilon_D.
+\tag{A.10}
+\]
+
+Assume `D epsilon_D -> 0` and, on positive-defect members, set
+
+\[
+\eta_D:=\sqrt{\varepsilon_D/D}.
+\]
+
+Then
+
+\[
+D^2{\varepsilon_D\over\eta_D}
+=D^2\sqrt{D\varepsilon_D}=o(D^2).
+\]
+
+Hence all but `o(D^2)` of the contact stress lies on components satisfying
+
+\[
+L_r>D-\sqrt{D\varepsilon_D}=D-o(1).
+\tag{A.11}
+\]
+
+The all-phase diameter ledger gives
+
+\[
+\sum_r\delta_r\le2+2\pi D,
+\]
+
+and each component in (A.11) has `delta_r>=D-o(1)-2`. Therefore there are eventually fewer than seven such components, hence at most six.
+
+Finally (A.3) gives
+
+\[
+\sum_rE_r\le D^2\varepsilon_D=o(D).
+\tag{A.12}
+\]
+
+Thus the correct low-response normal form is a family of at most six near-diameter harmonic cells with
+
+\[
+\sum S_r=D^2-o(D^2),
+\qquad
+\sum E_r=o(D),
+\]
+
+where both sums are over that family.
+
+## 6. Rejected one-cell upgrade
+
+The original final paragraph proposed as the next target one harmonic component satisfying
+
+\[
+L_*=D-o(1),\qquad
+S_*=D^2-o(D),\qquad
+E_*=o(D).
+\]
+
+The report does not prove this. At most-six localization plus total stress `D^2-o(D^2)` yields only a pigeonhole lower bound of order `D^2/6` for one cell. It does not yield one cell carrying asymptotically all stress, and it certainly does not yield the stronger remainder `o(D)`.
+
+Any one-cell reduction must therefore come from an additional theorem such as a separately audited C66/C70-type star localization. It cannot be quoted as a consequence of the HSR argument itself.
+
+## 7. Final disposition
+
+The corrected proof-only theorem is valid and useful as a branch reduction. It does not improve the scalar frontier, construct a source motion, exclude the high-response branch, or close C-II.
+
+**PASS after correction:** collective low-response stress localization to at most six near-diameter harmonic cells.  
+**REJECTED:** the original denominator justification and the unsupported one-cell `D^2-o(D)` target.  
+**Canonical theorem state:** unchanged at audit.46.

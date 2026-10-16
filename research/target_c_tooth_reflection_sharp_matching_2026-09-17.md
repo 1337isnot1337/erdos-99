@@ -1,0 +1,238 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "699912923cecb51463b8a4497f97ef18271c08ea", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_sharp_matching_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b4096eac845bab7a60b33195f213afb31ec21f7a01caca392e40de44a3fb0ab4"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — the dedicated `eta=4/15` tooth branch gives a sharper reflection-blocker matching
+
+**Date:** 2026-09-17  
+**Status:** proof-only sharpening of the fixed-slack reflection-blocker matching; no canonical promotion claimed  
+**Scope:** Type-II full-core shallow-tooth branch after reflection/perimeter collapse  
+**Dependencies:** tooth reflection perimeter collapse; fixed-slack reflection-blocker degree theorem; full-source circumradius bound; source unit separation  
+**Certificate:** `research/verify_target_c_tooth_reflection_sharp_matching_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The first fixed-slack blocker-matching theorem used the branch-independent matching/reflection choice
+
+\[
+\eta={15\over56}.
+\]
+
+That choice is convenient for the coupled tooth/long-side floor, but it is not optimal once the proof is already inside the tooth branch. The dedicated reflection/perimeter theorem has the stronger choice
+
+\[
+\boxed{\eta={4\over15}.}
+\tag{SM.1}
+\]
+
+At this threshold the shallow-apex population is
+
+\[
+\boxed{
+U_D>
+(0.4255744656201161781\ldots-o(1))D.
+}
+\tag{SM.2}
+\]
+
+Every surviving apex has an upper reflection blocker whose original length satisfies
+
+\[
+\boxed{
+|xy|>D-C_4,
+\qquad
+C_4={4\sqrt{14}\over15}
+=0.997775303139718\ldots .
+}
+\tag{SM.3}
+\]
+
+The decisive arithmetic is exact:
+
+\[
+C_4^2={224\over225},
+\qquad
+1-C_4^2={1\over225},
+\qquad
+\sqrt{1-C_4^2}={1\over15}.
+\tag{SM.4}
+\]
+
+Therefore the fixed-slack near-diameter degree theorem gives
+
+\[
+\boxed{
+\Delta_{C_4}(D)
+\le
+\left(120\,3^{1/8}+o(1)\right)D^{3/4}.
+}
+\tag{SM.5}
+\]
+
+Choosing one blocker from every apex and greedily extracting a matching now yields
+
+\[
+\boxed{
+|M_D|>
+(0.001545696287901749\ldots-o(1))D^{1/4}.
+}
+\tag{SM.6}
+\]
+
+This improves the earlier `eta=15/56` matching coefficient
+
+\[
+0.0002364408355527397\ldots
+\]
+
+by a factor
+
+\[
+\boxed{6.53734911859\ldots .}
+\tag{SM.7}
+\]
+
+The exponent is unchanged. The point is that the dedicated tooth normalization simultaneously gives many more blocked apices and a much larger angular-separation margin in the fixed-slack star.
+
+---
+
+## 1. Dedicated tooth population
+
+The reflection/perimeter collapse theorem uses
+
+\[
+\eta={4\over15},
+\qquad
+\cos\alpha_\eta={13\over15},
+\qquad
+\sin\alpha_\eta={2\sqrt{14}\over15},
+\qquad
+\alpha_\eta<\frac\pi6.
+\tag{SM.8}
+\]
+
+At the current low-`t` endpoint it proves
+
+\[
+{N_{sh}(4/15)\over D}
+\ge
+0.4255744656201161781\ldots-o(1).
+\tag{SM.9}
+\]
+
+The global-turn theorem makes all but `O(1)` of those occurrences distinct apices, and the perimeter-collapse argument makes all but `o(D)` of them upper-blocked. This is (SM.2).
+
+For one such tooth, reflecting the apex moves it by
+
+\[
+2h\le2h_\eta={4\sqrt{14}\over15}=C_4.
+\]
+
+The reflected point has an upper blocker at distance greater than `D`, so the original apex-blocker pair has length greater than `D-C_4`. This proves (SM.3).
+
+---
+
+## 2. Reuse the fixed-slack degree theorem with the better slack
+
+For every fixed `0<C<1`, the fixed-slack theorem gives
+
+\[
+\Delta_C(D)
+\le
+\left(
+{8\,3^{1/8}\over\sqrt{1-C^2}}+o(1)
+\right)D^{3/4}.
+\tag{SM.10}
+\]
+
+Substituting (SM.4),
+
+\[
+{8\over\sqrt{1-C_4^2}}
+=8\cdot15
+=120.
+\]
+
+Hence (SM.5) follows immediately.
+
+Numerically,
+
+\[
+120\,3^{1/8}=137.664322852785\ldots .
+\tag{SM.11}
+\]
+
+This is substantially smaller than the previous leading degree coefficient
+
+\[
+448\,3^{1/8}=513.946805317\ldots .
+\]
+
+---
+
+## 3. Greedy matching
+
+Choose one upper reflection blocker edge from every apex in the family (SM.2), oriented from the shallow apex toward its blocker. The tails are distinct.
+
+A source vertex is the head of at most `Delta_{C_4}(D)` chosen edges, and is the tail of at most one. Thus one source vertex is incident to at most
+
+\[
+\Delta_{C_4}(D)+1
+\]
+
+chosen edges.
+
+When a greedy algorithm retains one chosen edge `xy`, deleting every chosen edge incident with `x` or `y` removes at most
+
+\[
+2\Delta_{C_4}(D)+1
+\]
+
+chosen edges. Consequently
+
+\[
+|M_D|
+\ge
+{U_D\over2\Delta_{C_4}(D)+1}.
+\tag{SM.12}
+\]
+
+Using (SM.2) and (SM.5),
+
+\[
+|M_D|>
+\left(
+{0.4255744656201161781\ldots
+over240\,3^{1/8}}
+-o(1)
+\right)D^{1/4}.
+\tag{SM.13}
+\]
+
+The coefficient is
+
+\[
+\boxed{
+0.0015456962879017491010\ldots,
+}
+\]
+
+which proves (SM.6).
+
+---
+
+## 4. What this does and does not buy
+
+Every matched edge keeps the full tooth tag:
+
+- one distinct unloaded shallow apex;
+- a loaded base side with `alpha<pi/6`;
+- the inward base-normal cone for the blocker;
+- original blocker length greater than `D-4sqrt(14)/15`;
+- the penetration contact attached to the same shallow apex;
+- midpoint localization in the common `O(D^(3/4))` circumcenter ball.
+
+The matching makes the blocker endpoints pairwise disjoint. It still does not make the loaded base endpoints disjoint and it does not force the matched near-diameter chords to cross. A near-circular source can support large near-parallel fixed-slack chord families, so such a crossing claim would be false without additional tooth-order information.
+
+The next valid target is therefore not another degree constant. It is to exploit the boundary order of the tagged loaded bases or to couple the discrete apex reflections through the matched blocker system.
+
+**Disposition:** replaced the branch-independent `eta=15/56` constants by the dedicated tooth value `eta=4/15`, reducing the fixed-slack blocker-star coefficient by a factor `56/15` and raising the explicit disjoint matching coefficient by `6.5373...`. C-II and Level I remain open.

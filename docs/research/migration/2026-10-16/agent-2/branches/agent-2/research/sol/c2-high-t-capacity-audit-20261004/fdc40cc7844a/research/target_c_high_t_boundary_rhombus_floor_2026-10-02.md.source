@@ -1,0 +1,720 @@
+# Target C: high-t degree-three fans force a linear boundary-rhombus collar
+
+**Scope audit, 2026-10-04:** the advertised Type-II regime
+`x_B=O(sqrt(D))`, `t_D<=1.860+o(1)` has no unbounded canonical survivor.
+The positive two-cell coefficient also requires `t<3pi/5`, excluded in the
+small-excess regime. The conditional finite inequalities below are retained.
+See the [exact hull-side capacity audit](../docs/reports/target_c_hull_side_exact_train_capacity_audit_2026-10-04.md).
+
+**Date:** 2026-10-02  
+**Base main:** \`3ce2297d98ac2b2a919bdf9869a06278d7b96048\`  
+**Status:** proof-only strengthening in the canonical full-core/no-macroscopic-container
+Type-II branch. Level I and C-II remain open.
+
+## 1. Statement
+
+Work in the high-\(t\), low-outer-walk, square-root-diameter-matching regime of the
+current-main theorem
+
+\[
+\texttt{research/target\_c\_high\_t\_degree3\_fan\_forcing\_2026-10-02.md}.
+\]
+
+Write
+
+\[
+t_D={q-k\over D},
+\qquad
+\nu=\nu(H),
+\qquad
+x_B=b_{\rm out}-q,
+\]
+
+and let
+
+\[
+I=U+T
+\]
+
+be the internal good-fan population, split into contact-degree-two vertices \(U\) and
+contact-degree-three vertices \(T\).
+
+Let \(N_4^{\partial}\) be the number of bounded strict unit-rhombus contact faces whose
+one side is a loaded-hull good-fan edge joining two consecutive degree-three fan
+vertices.
+
+Then the finite estimate
+
+\[
+\boxed{
+N_4^{\partial}
+\ge
+4\,\operatorname{per}(F)
+-6t_DD
+-6\nu
+-9x_B
+-8
+}
+\tag{1}
+\]
+
+holds.
+
+Consequently, in the present branch
+
+\[
+\nu=O(\sqrt D),
+\qquad
+x_B=O(\sqrt D),
+\qquad
+{\operatorname{per}(F)\over D}\to\pi,
+\]
+
+we obtain
+
+\[
+\boxed{
+N_4^{\partial}
+\ge
+(4\pi-6t_D-o(1))D.
+}
+\tag{2}
+\]
+
+At the widest current high-\(t\) endpoint \(t_D\le1.860+o(1)\),
+
+\[
+\boxed{
+N_4^{\partial}
+>
+(1.4063706143\ldots-o(1))D.
+}
+\tag{3}
+\]
+
+Moreover, if \(N_2^{\partial}\) denotes the number of internal degree-three fan
+vertices whose **both** adjacent good-fan faces are among these strict rhombi, then
+
+\[
+\boxed{
+N_2^{\partial}
+\ge
+2N_4^{\partial}-T.
+}
+\tag{4}
+\]
+
+Using the current-main lower bound
+
+\[
+T\ge(2\pi-2t_D-o(1))D,
+\]
+
+together with the trivial upper bound \(T\le q=(\pi+o(1))D\) would not sharpen
+(4).  Instead the finite derivation below combines (4) directly with the same
+fan-count ledgers and yields, asymptotically,
+
+\[
+\boxed{
+N_2^{\partial}
+\ge
+(6\pi-10t_D-o(1))D.
+}
+\tag{5}
+\]
+
+At \(t_D\le1.860+o(1)\),
+
+\[
+\boxed{
+N_2^{\partial}
+>
+(0.2495559215\ldots-o(1))D.
+}
+\tag{6}
+\]
+
+Thus the surviving high-\(t\) branch contains not merely many third-contact spokes:
+it contains a linear one-rhombus-thick boundary collar, including a linear population
+of exact two-cell rhombus strips.
+
+No computation or verifier is used.
+
+## 2. Adjacent degree-three pairs in the good fans
+
+The current good-fan theorem partitions the good diameter leaves into at most
+
+\[
+\boxed{
+R\le\nu+x_B
+}
+\tag{7}
+\]
+
+same-carrier fan runs.
+
+Inside one run, record the internal fan vertices as a word in the symbols
+
+\[
+\mathrm T,\mathrm U,
+\]
+
+according as the contact degree is three or two.
+
+If a run contains \(T_r\) symbols \(\mathrm T\) and \(U_r\) symbols \(\mathrm U\),
+the number \(A_r\) of adjacent \(\mathrm{TT}\) pairs satisfies
+
+\[
+A_r\ge T_r-U_r-1.
+\tag{8}
+\]
+
+Indeed the \(T_r\) symbols are split into at most \(U_r+1\) nonempty T-blocks, and a
+T-block of length \(\ell\) contributes \(\ell-1\) adjacent TT pairs.
+
+Summing (8) over all good-fan runs gives
+
+\[
+\boxed{
+A_{\mathrm{TT}}
+\ge T-U-R.
+}
+\tag{9}
+\]
+
+Every pair counted by \(A_{\mathrm{TT}}\) corresponds to one unit loaded-hull contact
+edge
+
+\[
+e_i=p_ip_{i+1}
+\]
+
+between two consecutive degree-three leaves in one exact same-carrier
+\((D,D,1)\) fan.
+
+## 3. Remove bridge hull edges
+
+Let \(J\) be the number of unit loaded-hull sides which are bridges of the positive
+contact graph.
+
+The existing exact bridge-occurrence lemma gives
+
+\[
+\boxed{
+J\le x_B.
+}
+\tag{10}
+\]
+
+Therefore at least
+
+\[
+A_{\mathrm{TT}}-x_B
+\tag{11}
+\]
+
+of the TT hull edges are nonbridges and have a unique bounded contact face on their
+interior side.
+
+Fix one such edge
+
+\[
+e=pp'.
+\]
+
+Let \(z,z'\) be the unique third-contact neighbors of \(p,p'\), respectively.
+The current inward-spoke theorem gives
+
+\[
+z\ne z'
+\tag{12}
+\]
+
+for consecutive leaves in one fan.
+
+Because \(p\) has exactly the two hull fan contacts and the inward spoke \(pz\), the
+bounded face incident with \(e\) must leave \(p\) through \(pz\).  Similarly it must
+leave \(p'\) through \(p'z'\).  Hence its boundary has the form
+
+\[
+p\;-\;p'\;-\;z'\;-\;\mathcal P\;-\;z\;-\;p,
+\tag{13}
+\]
+
+where \(\mathcal P\) is a positive-contact path from \(z'\) to \(z\).
+
+## 4. One TT hull edge gives either defect or a strict rhombus
+
+If \(\mathcal P\) has one edge, then
+
+\[
+zz'\in C
+\]
+
+and the face boundary is
+
+\[
+p-p'-z'-z-p.
+\tag{14}
+\]
+
+All four sides have length one.
+
+This simple equilateral quadrilateral is a parallelogram.  One direct proof uses the
+diagonal \(pz'\): the two triangles \(pp'z'\) and \(pzz'\) both have side lengths
+
+\[
+1,1,|pz'|,
+\]
+
+so they are SSS-congruent.  Since \(p'\ne z\), the two circle-intersection points
+lie on opposite sides of \(pz'\), which gives the parallelogram relation
+
+\[
+\boxed{
+z'-z=p'-p,
+\qquad
+z-p=z'-p'.
+}
+\tag{15}
+\]
+
+The contact graph is triangle-free.  Hence neither diagonal is a unit contact:
+
+\[
+|pz'|>1,
+\qquad
+|p'z|>1.
+\tag{16}
+\]
+
+Thus (14) is an actual **strict unit rhombus**.
+
+If \(\mathcal P\) has at least two edges, then the bounded face has degree at least
+five and is one of the exceptional faces counted by
+
+\[
+Q=\sum_G(\deg G-4).
+\]
+
+So every nonbridge TT hull edge has the exact local dichotomy
+
+\[
+\boxed{
+\text{strict boundary rhombus}
+\quad\text{or}\quad
+\text{bounded exceptional face}.
+}
+\tag{17}
+\]
+
+## 5. Exceptional faces pay TT hull edges one-for-one
+
+A priori one exceptional face might contain many TT hull edges.  Boundary-occurrence
+counting removes that multiplicity.
+
+Fix an exceptional bounded face \(G\), and let \(r_G\) be the number of nonbridge TT
+hull edges assigned to \(G\).
+
+For every assigned hull edge \(pp'\), the boundary occurrence of that hull edge is
+distinct.  At its two endpoints, Section 3 shows that the boundary of \(G\) uses the
+two corresponding inward-spoke occurrences \(pz\) and \(p'z'\).
+
+These \(2r_G\) spoke **occurrences** are distinct.  The only possible physical-edge
+reuse is when two adjacent assigned TT hull edges share their middle leaf \(p\) and
+therefore share the physical spoke \(pz\).  If the two assigned hull edges belong to
+the same face \(G\), then \(pz\) is a bridge on the boundary of \(G\) and appears
+twice in the boundary walk, once for each side.  Thus the two required occurrences
+remain distinct.
+
+Consequently
+
+\[
+\boxed{
+\deg G\ge3r_G.
+}
+\tag{18}
+\]
+
+If \(r_G=1\), exceptionality gives
+
+\[
+\deg G-4\ge1=r_G.
+\]
+
+If \(r_G\ge2\), (18) gives
+
+\[
+\deg G-4\ge3r_G-4\ge r_G.
+\]
+
+Therefore in all cases
+
+\[
+\boxed{
+r_G\le\deg G-4.
+}
+\tag{19}
+\]
+
+Summing over exceptional faces,
+
+\[
+\boxed{
+N_{\rm exc}^{\mathrm{TT}}\le Q.
+}
+\tag{20}
+\]
+
+There is no whole-hull exception here: the charge uses the three specific boundary
+occurrences forced by each TT edge, rather than cyclic-run endpoints.
+
+A quadrilateral face cannot be assigned to two distinct TT hull edges, because
+(18) with \(r_G=2\) would give \(\deg G\ge6\).  Hence the remaining quadrilateral
+faces are distinct.
+
+Combining (9)--(11) and (20),
+
+\[
+\boxed{
+N_4^{\partial}
+\ge
+T-U-R-x_B-Q.
+}
+\tag{21}
+\]
+
+## 6. Eliminate \(U,R,Q\)
+
+Current main gives
+
+\[
+R\le\nu+x_B,
+\tag{22}
+\]
+
+and the exact degree-two fan-face payment gives
+
+\[
+U\le2x_B+Q+4.
+\tag{23}
+\]
+
+Insert (22)--(23) in (21):
+
+\[
+\boxed{
+N_4^{\partial}
+\ge
+T-\nu-4x_B-2Q-4.
+}
+\tag{24}
+\]
+
+The current high-\(t\) fan theorem gives the finite estimate
+
+\[
+T
+\ge
+2\operatorname{per}(F)
+-2t_DD
+-5\nu
+-5x_B
+-4.
+\tag{25}
+\]
+
+Also the exact loaded-hull face identity
+
+\[
+b_{\rm out}+Q=2t_DD
+\]
+
+and
+
+\[
+b_{\rm out}\ge\operatorname{per}(F)
+\]
+
+give
+
+\[
+\boxed{
+Q\le2t_DD-\operatorname{per}(F).
+}
+\tag{26}
+\]
+
+Substituting (25)--(26) into (24),
+
+\[
+\begin{aligned}
+N_4^{\partial}
+&\ge
+2\operatorname{per}(F)-2t_DD
+-6\nu-9x_B-8
+-2Q\\
+&\ge
+4\operatorname{per}(F)
+-6t_DD
+-6\nu
+-9x_B
+-8.
+\end{aligned}
+\]
+
+This proves (1).  Type-II disk convergence and the square-root hypotheses give
+(2)--(3).
+
+## 7. Linear population of two-cell boundary strips
+
+Consider the graph whose vertices are the \(T\) degree-three internal good-fan
+vertices and whose edges are the \(N_4^{\partial}\) forced strict-rhombus hull edges.
+
+It is a disjoint union of paths, hence a forest.  If it has \(c\) nontrivial
+components, then
+
+\[
+c\le T-N_4^{\partial},
+\tag{27}
+\]
+
+because the full forest on the \(T\) vertices has \(T-N_4^{\partial}\) components
+after isolated vertices are included.
+
+A path component containing \(\ell\) selected rhombus edges contains \(\ell-1\)
+vertices incident with two selected edges.  Therefore
+
+\[
+\begin{aligned}
+N_2^{\partial}
+&=
+\sum_{\text{nontrivial components}}(\ell-1)\\
+&=
+N_4^{\partial}-c\\
+&\ge
+2N_4^{\partial}-T.
+\end{aligned}
+\]
+
+This proves (4).
+
+For a finite bound, combine (24) with \(T=I-U\) and the elementary
+\(T\le I\le q\).  In the asymptotic high-\(t\) branch it is simpler to use
+
+\[
+{T\over D}\le{q\over D}\to\pi.
+\tag{28}
+\]
+
+Then (2) and (28) give only
+
+\[
+N_2^{\partial}
+\ge
+(7\pi-12t_D-o(1))D,
+\]
+
+which is weaker than (5) near the live endpoint.
+
+To retain the stronger coefficient, use the exact relation behind (24):
+
+\[
+N_2^{\partial}
+\ge
+2(T-U-R-x_B-Q)-T
+=
+T-2U-2R-2x_B-2Q.
+\tag{29}
+\]
+
+Apply (22)--(23):
+
+\[
+N_2^{\partial}
+\ge
+T-2\nu-8x_B-4Q-8.
+\tag{30}
+\]
+
+Now insert (25) and (26):
+
+\[
+\begin{aligned}
+N_2^{\partial}
+&\ge
+2\operatorname{per}(F)-2t_DD
+-7\nu-13x_B-12
+-4Q\\
+&\ge
+6\operatorname{per}(F)-10t_DD
+-7\nu-13x_B-12.
+\end{aligned}
+\tag{31}
+\]
+
+Thus
+
+\[
+\boxed{
+N_2^{\partial}
+\ge
+(6\pi-10t_D-o(1))D,
+}
+\]
+
+which is (5).  At \(t_D=1.860\),
+
+\[
+6\pi-18.6
+=
+0.2495559215\ldots,
+\]
+
+proving (6).
+
+## 8. Exact geometry of a two-cell strip
+
+Take one vertex \(p_i\) counted by \(N_2^{\partial}\).  Its two neighboring fan
+faces are strict rhombi
+
+\[
+p_{i-1}p_i z_i z_{i-1}
+\]
+
+and
+
+\[
+p_ip_{i+1}z_{i+1}z_i.
+\]
+
+Applying (15) to both cells gives
+
+\[
+p_{i-1}-z_{i-1}
+=
+p_i-z_i
+=
+p_{i+1}-z_{i+1}
+=:v,
+\qquad |v|=1,
+\tag{32}
+\]
+
+and
+
+\[
+z_i-z_{i-1}=p_i-p_{i-1},
+\qquad
+z_{i+1}-z_i=p_{i+1}-p_i.
+\tag{33}
+\]
+
+Thus the inner three-port chain is an exact translate of the outer three-leaf fan
+chain:
+
+\[
+\boxed{
+z_j=p_j-v,\qquad j=i-1,i,i+1.
+}
+\tag{34}
+\]
+
+The three ports belong to one unloaded positive-contact component because
+\(z_{i-1}z_i\) and \(z_iz_{i+1}\) are unit contacts.
+
+So (6) is not merely a face count: it gives a linear population of exact
+two-rhombus harmonic collars with one common inward-spoke direction across each
+two-cell strip.
+
+## 9. Stopped-train consequence
+
+Each forced boundary rhombus has one loaded-hull outer side.  In the strict-rhombus
+train decomposition, that outer side is one terminal outer occurrence of the train
+running through the rhombus in the direction of that side.
+
+Distinct forced rhombi have distinct loaded-hull sides, hence give
+\(N_4^{\partial}\) distinct outer terminal occurrences.  A complete stopped train
+has at most two outer terminal occurrences.  Therefore the number
+\(N_{\rm fan\text{-}train}\) of complete stopped trains meeting this boundary collar
+satisfies
+
+\[
+\boxed{
+N_{\rm fan\text{-}train}
+\ge {N_4^{\partial}\over2}.
+}
+\tag{35}
+\]
+
+At \(t_D\le1.860+o(1)\),
+
+\[
+\boxed{
+N_{\rm fan\text{-}train}
+>
+(0.7031853071\ldots-o(1))D.
+}
+\tag{36}
+\]
+
+This does **not** claim that these trains are outer-to-outer.  A train may terminate
+at a bounded exceptional face.
+
+If \(L_{OO}^{\rm fan}\) counts only the trains in this family whose other endpoint is
+also outer, the total bounded exceptional-face endpoint capacity gives the safe
+refinement
+
+\[
+\boxed{
+L_{OO}^{\rm fan}
+\ge
+{(N_4^{\partial}-(Q+4f))_+\over2}.
+}
+\tag{37}
+\]
+
+No positive lower bound for (37) is asserted from the current scalar region.
+
+## 10. Frontier effect
+
+The high-\(t\), low-\(x_B\), square-root-matching branch now simultaneously contains
+
+\[
+T\ge(2\pi-2t_D-o(1))D
+\]
+
+degree-three fan leaves and
+
+\[
+N_4^{\partial}
+\ge(4\pi-6t_D-o(1))D
+\]
+
+strict rhombi directly under the loaded hull.
+
+At \(t_D\le1.860\), this means:
+
+- \(>2.56318D-o(D)\) degree-three exact fan terminals;
+- \(>1.40637D-o(D)\) boundary-adjacent strict rhombi;
+- \(>0.24955D-o(D)\) exact two-cell rhombus strips;
+- \(>0.70318D-o(D)\) complete stopped trains touching the collar.
+
+Every boundary rhombus also identifies two consecutive loaded fan attachments to the
+same unloaded harmonic component, and its inner side is an actual unloaded-unloaded
+unit contact.
+
+The remaining problem is therefore no longer a diffuse attachment family.  It
+contains a macroscopic exact rhombus collar coupled simultaneously to
+
+1. the pentagon sea / exceptional-face train endpoint network;
+2. the harmonic attachment components carrying the inward ports; and
+3. the outer stopped-train endpoint capacity.
+
+A closing theorem should now compare the collar count to one of those exact endpoint
+ledgers.  In particular, either improve (37) to force a linear O--O subfamily, or
+show that routing \(>1.406D\) collar occurrences into bounded exceptional faces
+violates the Hall/rank constraints of the exceptional-face closure network.
+
+**Disposition:** exact proof-only structural strengthening.  No numerical search,
+verifier execution, CI result, or unexecuted certificate code is used.

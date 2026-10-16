@@ -1,0 +1,151 @@
+# Target C: five-no-root slack-two reduction
+
+Date: 2026-09-20
+
+Status: exact strengthening of one five-no-root branch plus a deletion reduction for the six-no-root layer. This does not yet prove the six-no-root density inequality, does not reduce the 3,874-state generic-H6 endpoint, and does not close C-II.
+
+New companion verifier:
+
+`research/verify_target_c_support7_global_segment_relative_five_noroot_k4_p5_slack_2026_09_20.py`
+
+## Defect notation
+
+Write
+
+`D(A) = |A| - 3 delta(A)`
+
+with
+
+`delta(A) = r_M(A) - r_Q(A)`.
+
+The committed work proves `D(A)>=0` for every family with at most five no-root four-cycles. The next direct density layer is six no-root cycles.
+
+There is a useful stronger target at five no-root cycles:
+
+> prove `D(A)>=2` for every five-no-root family.
+
+That stronger statement would close the entire six-no-root factor-three problem without a 325,911-orbit six-no-root local-state scan.
+
+## Deletion lemma
+
+Let `e` be one selected row of `A`, and put `A'=A\{e}`. Since `Q` is a quotient of `M`, deleting one row loses at least as much rank in `M` as in `Q`. Hence
+
+`m_e = delta(A) - delta(A')`
+
+lies in `{0,1}`. Therefore
+
+`D(A') = D(A) - 1 + 3 m_e`.
+
+Now suppose `A` has exactly six no-root rows and `D(A)<0`. Delete any one of those six no-root rows. The resulting family has exactly five no-root rows.
+
+If `m_e=0`, then
+
+`D(A') = D(A)-1 < 0`.
+
+If `m_e=1`, then
+
+`D(A') = D(A)+2 <= 1`.
+
+Thus the five-no-root bound `D>=2` would contradict either possibility. Consequently:
+
+> If every five-no-root family has `D>=2`, then every six-no-root family has `D>=0`.
+
+So a five-no-root slack-two theorem is a sufficient certificate for the full six-no-root density layer.
+
+## New k=4,p=5 exact audit
+
+The committed five-no-root `k=4` containment theorem uses a virtual canonical rank-one coefficient space `P`. Let `C` be its canonical complete-block set,
+
+`c=|C|`,
+
+and
+
+`d = c - rank H(C)`.
+
+For every compatible actual state, if `q` canonical-complete blocks are replaced by incomplete states and `p` is the total number of selected root-0 rows in incomplete blocks, the theorem gives
+
+`D(A) >= 5 + p + 3d - 3q`,
+
+with
+
+`d>=2`
+
+and
+
+`q<=p`.
+
+For `p<=4` this already gives `D>=3`. At `p=5`, the only way the lower bound can be below two is the equality pattern
+
+`(d,q,p)=(2,5,5)`.
+
+Because `q=p=5`, all five replaced canonical-complete blocks must be compatible singletons; there is no row budget left for any other incomplete block.
+
+The new verifier exhausts this equality pattern over the exact 20,451 `S_7` orbits and the same 177,316 virtual canonical rank-one states used by the containment theorem.
+
+There are 342 canonical states with `d=2`. Only nine have at least five canonical-complete blocks admitting a compatible singleton. These produce exactly 44 five-singleton choices. All 44 choices actually realize the target line `P`.
+
+Every one is reranked directly over `Q`. The exact census is
+
+```text
+|A|   delta(A)   D(A)   states
+22       4        10       2
+25       5        10      42
+```
+
+Thus the apparent `D=1` boundary at `p=5` is absent; the minimum exact defect in the only potentially sub-two case is 10.
+
+## k=4,p<=6 now has uniform slack two
+
+The new `p=5` audit combines with the already committed `p=6` residual audit.
+
+At `p=6`, the containment lower bound can fall below two only for
+
+`(d,q,p)=(2,6,6)`.
+
+The existing verifier found exactly seven realizable states of that form and reranked all seven exactly. Every one has
+
+`|A|=23`, `delta(A)=4`, `D(A)=11`.
+
+Every other `p=6` state has containment lower bound at least two. Therefore:
+
+> Every five-no-root `k=4,p<=6` family satisfies `D(A)>=2`.
+
+This is stronger than the previously recorded factor-three statement `D(A)>=0` for that branch.
+
+## Exact remaining slack-two bands at t=5
+
+The crude bound for five no-root rows is
+
+`D(A) >= 5 + p - 3k`.
+
+Therefore a state with `D<2` can occur only in the following ranges:
+
+- `k=2`: `p<=2`;
+- `k=3`: `p<=5`;
+- `k=4`: `p<=8`;
+- `k=5`: `p<=11`.
+
+Existing exact work already gives slack two for
+
+- `k=2,p=0`;
+- `k=3,p<=3`;
+- `k=4,p<=6` after the new audit above.
+
+The remaining five-no-root slack-two target is therefore reduced to
+
+- `k=2,p=1,2`;
+- `k=3,p=4,5`;
+- `k=4,p=7,8`;
+- `k=5,p<=11`.
+
+For `k=5,p<=9`, factor-three nonnegativity is already proved, but the earlier verifier was designed to exclude negative defect rather than exclude defect 0 or 1. Those cases must be audited before the deletion lemma can be invoked.
+
+This slack-two program may be cheaper than attacking 325,911 six-no-root orbits directly. The next small targets are `k=2,p=1,2` and `k=3,p=4,5`, where the existing canonical constraint-space machinery already supplies most of the reduction.
+
+## Direct C-II bottleneck
+
+This remains an auxiliary metric-basis route. The direct generic-H6 endpoint is still
+
+`3874 = 3076 C7 + 798 (C3 disjoint-union C4)`.
+
+The state-specific exact forced-segment-order scan remains the computation most directly capable of removing those cells, followed by quantitative sine-law metric compatibility for survivors. No theorem-state authority file is changed by this result.

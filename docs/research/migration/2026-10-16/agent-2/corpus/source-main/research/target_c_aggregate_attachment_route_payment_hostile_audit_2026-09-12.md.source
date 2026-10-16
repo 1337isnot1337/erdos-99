@@ -1,0 +1,55 @@
+# Hostile audit: aggregate attachment-route payment
+
+**Date:** 2026-09-12  
+**Audited source:** `target_c_aggregate_attachment_route_payment.md`  
+**Verdict:** PASS as a finite proof-only strengthening; no C-II closure  
+**LEVEL I STATUS:** STILL OPEN. C-II REMAINS OPEN.
+
+The audit checks the exact local-to-global algebra against canonical §§122–123.
+
+1. For one harmonic component, Section 82 gives
+
+   \[
+   L+Q=4a-6-2s-2c,
+   \qquad P_{exc}=4f+Q.
+   \]
+
+   The augmented Section-123 identity gives
+   `X:=a-T+Q^+=2a-6-2s`. Subtracting `2a` from the actual identity therefore gives
+   `L+Q-2a=X-2c`, and hence
+
+   \[
+   L+P_{exc}-2a=X-2c+4f.
+   \]
+
+2. Section 123's face-splitting monotonicity gives `Q<=Q^+`; each exceptional face
+   contributes at least one to `Q`, so `f<=Q^+`. Since `Q^+=X-(a-T)`,
+
+   \[
+   L+P_{exc}-2a
+   \le5X-2c-4(a-T).
+   \]
+
+   No correspondence between individual actual and augmented faces is assumed.
+
+3. Summing uses the exact augmented global identity
+   `sum X=2(e_BB-k-d_tile)`. The local credits
+   `C_A=sum c` and `U_A=sum(a-T)` are nonnegative, so
+
+   \[
+   \sum_r(L_r+P_{exc,r}-2a_r)
+   \le10(e_{BB}-k-d_{tile})-2C_A-4U_A.
+   \]
+
+   Replacing `2a_r` by `2d_r` adds exactly `2(a_r-d_r)`, producing the stated
+   aggregate upper bound. This is an algebraic inequality, not an injectivity claim
+   about local outer-walk occurrences.
+
+4. The lower comparison is canonical §122's area-injective zero-host detour floor.
+   Combining the two inequalities gives only a necessary scalar condition; no sign
+   or size estimate currently forces its right side below the positive lower floor.
+
+5. All contact-isolated source points remain outside the positive-contact ledgers and
+   no full-source affine-kernel statement is used. The result is therefore
+   audited-working/proof-only and does not change theorem-state authority.
+

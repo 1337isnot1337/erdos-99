@@ -1,0 +1,443 @@
+# Target C — phase atomicity forces linear global route surplus
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** proof-only research candidate.  
+**Dependencies:** canonical Sections 67--69 and 80, canonical train pseudosegment geometry, and proof-only `research/target_c_punctured_return_master.md`.
+
+The punctured-return master has an exact disk equality at leading order. This note proves that a Type-II survivor cannot actually sit on that equality asymptotically.
+
+The mechanism is not a numerical carrier improvement. It is a structural incompatibility:
+
+- if the global route surplus above the convex perimeter were sublinear, the rotating equilateral three-cut inequalities would force the area-weighted reduced train phases to converge to Haar measure on the phase circle;
+- but `Theta(D^2)` simple rhombus crossings on only `O(D)` stopped trains, together with total angular defect `O(D)`, force every subsequential edge-phase limit to be atomic.
+
+Therefore every Type-II survivor sequence pays a genuinely linear global route surplus.
+
+---
+
+## 1. Statement
+
+Retain the full positive-contact-core notation of the punctured-return master. In particular
+
+\[
+B_{route}:=b+P_{exc}=b+4f+Q
+\]
+
+is the total occurrence-counted length of the outer contact-face walk and all bounded nonquadrilateral face cycles, and `F` is the force hull.
+
+### Theorem 1 — no asymptotically zero global route surplus
+
+Along every Type-II survivor sequence,
+
+\[
+\boxed{
+\liminf_{D\to\infty}
+{B_{route}-\operatorname{per}(F)\over D}>0.
+}
+\tag{1.1}
+\]
+
+Equivalently, a Type-II survivor cannot satisfy
+
+\[
+B_{route}=\operatorname{per}(F)+o(D).
+\tag{1.2}
+\]
+
+Since `b>=per(F)` and `P_exc>=0`, the surplus in (1.1) is nonnegative before taking limits.
+
+The theorem does not yet bound the positive constant effectively.
+
+---
+
+## 2. Assume the contrary and bound the number of stopped trains
+
+Suppose a Type-II subsequence satisfies (1.2). Canonical Section 80 gives
+
+\[
+{\operatorname{per}(F)\over D}\to\pi,
+\qquad
+{R_4\over D^2}\to\Delta_2:={\pi\over2\sqrt3},
+\qquad
+{A_4\over D^2}\to{\pi\over4}.
+\tag{2.1}
+\]
+
+Let `T_D` be the number of stopped trains in the full strict-rhombus complex. Canonical train geometry says every stopped train is a simple arc with exactly two terminal strict-rhombus side occurrences. Every such terminal occurrence lies on the global route system counted by `B_route`. Not every route occurrence need terminate a rhombus train, so only the inequality
+
+\[
+2T_D\le B_{route}
+\tag{2.2}
+\]
+
+is asserted. Under (1.2),
+
+\[
+\boxed{
+\limsup {T_D\over D}\le{\pi\over2}.
+}
+\tag{2.3}
+\]
+
+Every bounded strict rhombus is one crossing of two stopped train centerlines, and canonical pseudosegment geometry gives at most one crossing for a pair. Hence the train-crossing graph is simple and has exactly `R_4` edges.
+
+---
+
+## 3. Reduced-phase counting measure has macroscopic atoms
+
+Put
+
+\[
+L={\pi\over3},
+\qquad
+\mathbb T_L:=\mathbb R/L\mathbb Z.
+\]
+
+Each stopped train has a reduced projective phase `x_tau in T_L`. At a strict-rhombus crossing `e=tau tau'`, canonical Section 68 supplies the acute-angle defect `delta_e>0` and a positive oriented arc of length exactly `delta_e` from one reduced phase to the other. Thus their circular phase distance is at most `delta_e`.
+
+Canonical Section 68 also gives
+
+\[
+\Delta_D:=\sum_{e}\delta_e=O(D).
+\tag{3.1}
+\]
+
+Define the train counting measure at the natural linear scale
+
+\[
+\mu_D:={1\over D}\sum_{\tau=1}^{T_D}\delta_{x_\tau}.
+\tag{3.2}
+\]
+
+By (2.3), these finite measures have uniformly bounded total mass. Pass to a weakly convergent subsequence
+
+\[
+\mu_D\Rightarrow\mu.
+\tag{3.3}
+\]
+
+Fix `epsilon>0`. By (3.1), the number of rhombus crossings with `delta_e>epsilon` is `O(D/epsilon)=o(D^2)`. Therefore all but `o(D^2)` of the `R_4` crossing pairs have reduced-phase distance at most `epsilon`.
+
+Since the crossing graph is simple, every such edge is one distinct unordered pair of train vertices. Consequently
+
+\[
+(\mu_D\times\mu_D)
+\{(x,y):d_{\mathbb T_L}(x,y)\le\epsilon\}
+\ge {2R_4-o(D^2)\over D^2}.
+\tag{3.4}
+\]
+
+The set on the left is closed. Portmanteau and (2.1) give
+
+\[
+(\mu\times\mu)
+\{d(x,y)\le\epsilon\}
+\ge2\Delta_2
+={\pi\over\sqrt3}.
+\tag{3.5}
+\]
+
+Let `epsilon downarrow0`. Continuity from above gives
+
+\[
+\boxed{
+(\mu\times\mu)(\{x=y\})
+=\sum_{x\in\mathbb T_L}\mu(\{x\})^2
+\ge {\pi\over\sqrt3}>0.
+}
+\tag{3.6}
+\]
+
+Thus the train-counting limit has a substantial atomic part. This conclusion uses only simple crossing capacity and the `O(D)` total angular defect.
+
+---
+
+## 4. The rhombus-endpoint phase measure is purely atomic
+
+For the return theorem the relevant measure is not the raw train-counting measure but the degree/area-weighted measure seen by rhombi.
+
+First define the unweighted edge-endpoint probability measure
+
+\[
+\eta_D
+:={1\over2R_4}
+\sum_{e=\tau\tau'}
+(\delta_{x_\tau}+\delta_{x_{\tau'}}).
+\tag{4.1}
+\]
+
+Pass to a further weakly convergent subsequence `eta_D=>eta`.
+
+We claim that `eta` is supported on the atoms of `mu`.
+
+Let `J` be an interval in the phase circle and fix `epsilon>0`. Apart from the `O(D/epsilon)` bad edges of phase defect greater than `epsilon`, every edge endpoint lying in `J` has its opposite endpoint in the `epsilon`-neighborhood `J^epsilon`. Simplicity of the crossing graph therefore gives
+
+\[
+\#\{\text{good directed edge endpoints in }J\}
+\le
+N_D(J)N_D(J^\epsilon),
+\tag{4.2}
+\]
+
+where `N_D(U)` is the number of stopped trains with phase in `U`.
+
+Divide by `2R_4`. For intervals whose endpoints are continuity points of `mu`, pass first `D->infinity` and then `epsilon->0`. The resulting local edge mass is controlled by a constant multiple of the square of the local `mu` mass.
+
+To make the support conclusion explicit, let `E` be a compact set containing no atom of `mu`. Given `varepsilon>0`, cover `E` by finitely many disjoint half-open intervals `J_i` with
+
+\[
+\max_i\mu(J_i)<\varepsilon
+\]
+
+and with endpoints continuity points. Enlarge them by an arbitrarily small common phase radius so that their total `mu` mass tends to `mu(E)` while each enlarged interval still has mass at most `2varepsilon`. Summing (4.2) gives
+
+\[
+\eta(E)
+\le C\varepsilon\,\mu(\mathbb T_L)
+\]
+
+for an absolute normalization constant `C` depending only on `lim R_4/D^2=Delta_2`. Letting `varepsilon->0` yields
+
+\[
+\eta(E)=0.
+\]
+
+By inner regularity, the nonatomic part of `mu` carries no `eta` mass. Hence
+
+\[
+\boxed{\eta\text{ is a purely atomic probability measure.}}
+\tag{4.3}
+\]
+
+Now define the area-weighted endpoint probability measure
+
+\[
+\nu_D
+:={1\over2A_4}
+\sum_{R}
+\operatorname{area}(R)
+(\delta_{x_{u_R}}+\delta_{x_{v_R}}).
+\tag{4.4}
+\]
+
+Every strict rhombus has area `a_0+epsilon_R`, and canonical Section 68 gives
+
+\[
+\sum_R\epsilon_R=E_4=O(D).
+\tag{4.5}
+\]
+
+Since `A_4=Theta(D^2)`, replacing every area weight by `a_0` changes (4.4) in total variation by `o(1)`. Therefore every weak limit of `nu_D` equals the corresponding limit `eta` and is purely atomic:
+
+\[
+\boxed{\nu_D\Rightarrow\nu\quad\Longrightarrow\quad\nu\text{ purely atomic}.}
+\tag{4.6}
+\]
+
+---
+
+## 5. Sublinear route surplus forces Haar phase measure
+
+Let
+
+\[
+k(t):=2-w_{Q^{eq}_0}(u_t)
+\tag{5.1}
+\]
+
+be the equilateral-host one-direction return kernel on the reduced phase circle. Center the period so that `|t|<=pi/6`. Then
+
+\[
+\boxed{k(t)=2-\sqrt3\cos t,\qquad |t|\le\pi/6,}
+\tag{5.2}
+\]
+
+extended with period `L=pi/3`.
+
+For ideal equilateral hosts rotated by `rho`, the total rhombus return is exactly
+
+\[
+W_D^{eq}(\rho)
+=2A_4\int_{\mathbb T_L}k(t-\rho)\,d\nu_D(t).
+\tag{5.3}
+\]
+
+The mean of `k` is
+
+\[
+\bar k
+=2-{3\sqrt3\over\pi}.
+\tag{5.4}
+\]
+
+Hence the rotational mean of (5.3) is
+
+\[
+2A_4\bar k
+=\left(4-{6\sqrt3\over\pi}\right)A_4.
+\tag{5.5}
+\]
+
+Canonical Type-II near-disk convergence lets us realize every ideal rotation by three actual loaded outer-walk cut vertices with
+
+\[
+\Pi_3(\rho)
+=\left({3\sqrt3\over2}+o(1)\right)D
+\tag{5.6}
+\]
+
+and actual host vectors uniformly `o(1)` from the ideal equilateral triple. The induced difference between actual and ideal return is `o(D^2)`, uniformly in `rho`.
+
+The punctured-return master applies to **every** such rotation. Under the contradictory assumption (1.2),
+
+\[
+\begin{aligned}
+W_D^{eq}(\rho)
+&\le
+D\bigl(B_{route}-\Pi_3(\rho)\bigr)+o(D^2)\\
+&=
+\left(\pi-{3\sqrt3\over2}+o(1)\right)D^2
+\end{aligned}
+\tag{5.7}
+\]
+
+uniformly in `rho`.
+
+Using
+
+\[
+{2A_4\over D^2}\to{\pi\over2}
+\]
+
+and the exact identity
+
+\[
+{\pi\over2}\bar k
+=\pi-{3\sqrt3\over2},
+\tag{5.8}
+\]
+
+equation (5.7) becomes
+
+\[
+\boxed{
+\int k(t-\rho)\,d\nu_D(t)
+\le\bar k+o(1)
+}
+\tag{5.9}
+\]
+
+uniformly in `rho`.
+
+Take a weak limit `nu_D=>nu`. Since the translates of the fixed continuous kernel `k` are uniformly equicontinuous, the convolutions converge uniformly. Thus
+
+\[
+(k*\nu)(\rho)\le\bar k
+\quad\text{for every }\rho.
+\tag{5.10}
+\]
+
+But averaging over `rho` gives exactly `bar k`, because `nu` is a probability measure. Hence
+
+\[
+\boxed{k*\nu\equiv\bar k.}
+\tag{5.11}
+\]
+
+---
+
+## 6. The equilateral kernel detects every nonconstant Fourier mode
+
+On the phase circle of length `L=pi/3`, use Fourier modes `exp(i6nt)`. Since `k` is even, only cosine coefficients appear. For `n>=1`, the nonconstant coefficient is
+
+\[
+\begin{aligned}
+\widehat k_n
+&={2\over L}\int_{-\pi/6}^{\pi/6}
+(2-\sqrt3\cos t)\cos(6nt)\,dt\\
+&={6\sqrt3\over\pi}
+{(-1)^n\over36n^2-1}.
+\end{aligned}
+\tag{6.1}
+\]
+
+In particular
+
+\[
+\boxed{\widehat k_n\ne0\quad\text{for every }n>=1.}
+\tag{6.2}
+\]
+
+Taking Fourier coefficients in (5.11) therefore gives
+
+\[
+\widehat\nu_n=0
+\qquad(n\ne0).
+\tag{6.3}
+\]
+
+The unique probability measure on the circle with all nonconstant Fourier coefficients zero is normalized Haar measure. Thus
+
+\[
+\boxed{\nu=\text{Haar measure on }\mathbb T_L.}
+\tag{6.4}
+\]
+
+This contradicts the pure atomicity (4.6).
+
+The assumption (1.2) is impossible, proving Theorem 1.
+
+---
+
+## 7. Structural consequence
+
+Because
+
+\[
+B_{route}-\operatorname{per}(F)
+=\bigl(b-\operatorname{per}(F)\bigr)+P_{exc},
+\tag{7.1}
+\]
+
+Theorem 1 forces at least one genuine linear boundary-order obstruction in every Type-II survivor sequence:
+
+\[
+\boxed{
+\liminf {1\over D}
+\left[
+(b-\operatorname{per}(F))+P_{exc}
+\right]>0.
+}
+\tag{7.2}
+\]
+
+Thus the exact disk-equality model of the punctured-return master cannot be approached with a sublinear inactive/interface route. A survivor must carry linear metric outer detour, linear bounded-defect-face boundary, or both.
+
+Canonical Section 84 then becomes directly relevant: any individual internal inactive chamber with linear perimeter collapses to a doubled near-geodesic corridor, while linear route mass spread among sublinear pieces remains a separate possibility.
+
+This theorem eliminates one full Type-II subbranch but does not yet exclude all Type-II survivors.
+
+---
+
+## 8. Scope audit and next obligation
+
+- Every source point is retained. The proof uses only train geometry inside the nonisolated positive-contact core and the canonical Type-II full-source conclusion.
+- No full-source ZR/ZF affine-kernel statement is used.
+- The train crossing graph is used as a simple graph only through canonical pseudosegment geometry: two stopped train centerlines cross at most once.
+- The `O(D)` total angular defect is canonical Section 68.
+- Area weighting is harmless only because canonical `E_4=O(D)` makes the total rhombus area excess lower order relative to `A_4=Theta(D^2)`.
+- The Haar conclusion uses all nonzero Fourier coefficients of the equilateral return kernel, proved explicitly in (6.1).
+- No effective positive constant in (1.1) is claimed.
+- The macroscopic inactive-container branch is untouched.
+
+The exact next Type-II closing problem is now narrower:
+
+\[
+\boxed{
+\text{rule out the forced linear quantity }
+(b-\operatorname{per}(F))+P_{exc}.
+}
+\]
+
+The two canonical geometric realizations to attack are the Section-84 doubled near-geodesic corridors and a diffuse family of sublinear defect/interface pieces whose total boundary is linear.

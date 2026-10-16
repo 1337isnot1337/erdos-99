@@ -1,0 +1,287 @@
+<!-- theorem-state: {"artifact_id":"ART-718F05D8EF57","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Erdős Problem #99 — sharp contact-arc threshold and failed transfer bridge
+
+**Date:** 2026-09-26
+**Repository commit:** 53ab4cac73738c82f6291b41a7ec88a8577c5d55
+**State version:** 2026-09-14.audit.51
+**Run type:** structural proof / exact regression
+**Target:** Level I and the macroscopic C-II forest branch
+**Starting status:** Level I open; C-I closed; C-II open
+**Active prompt:** [whole-problem prompt](../prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md)
+**External literature search:** not used
+**Computation:** [exact rational certificate](../../research/verify_contact_arc_threshold.py)
+
+## LEVEL I STATUS
+
+STILL OPEN. Proved candidate awaiting independent audit; noncanonical.
+
+## 1. Starting endpoint and implication chains
+
+The previous candidate [direction-cone report](global_contact_direction_cone_caps_2026-09-26.md)
+reduces an additional, whole-positive-contact direction hypothesis to four inactive
+caps and a common line cut for all positive diameter edges. In the canonical
+normalization this leaves a macroscopic-container caterpillar forest, with the
+diameter-carrying core still requiring replacement or release. The hypothesis
+has not been proved for arbitrary global sources.
+
+Two bridges were pursued:
+
+```text
+whole positive-contact direction width <= pi/3
+ -> one monotone positive-contact path
+ -> unique diameter pair and a straight unit chain
+ -> one-dimensional maximal force hull if the stress is maximal
+ -> canonical exclusion of this exact angular endpoint.
+```
+
+```text
+common line cut for all positive diameter pairs
+ -> nonnegative electrical cross-transfer (proposed)
+ -> contradiction with C-ZTA
+ -> elimination of the surviving macroscopic forest (failed).
+```
+
+The second bridge is false, even for exact planar unit contacts, normalized KKT
+equilibrium, and a PSD scalar stress. Section 4 supplies its complete certificate.
+No same-cardinality source competitor follows from either bridge.
+
+## 2. The contact-arc theorem AC60
+
+Let A be a finite triangle-free unit-separated planar source, D=diam(A)>1.
+Choose a normalized nonnegative KKT stress with positive contact set C+, positive
+diameter set H+, and positive-contact vertex set V. Assume the positive-contact
+graph on V is connected. Suppose all its unoriented edge directions lie in one
+closed projective arc of width W <= pi/3. Then:
+
+1. V is a straight consecutive unit chain with D edges; in particular D is an integer.
+2. H+ consists of its unique endpoint pair.
+3. Every positive contact weight is D and the diameter weight is one.
+
+This is an exact selected-source-support statement. It does not assume global
+optimality, canonical normalization, a lattice scaffold, a minimum weight, or a
+PSD stress. Source points outside V remain in A.
+
+### Complete proof
+
+Rotate coordinates so the projective arc is represented by oriented angles in
+I=[0,W]. Every positive contact vector has its oriented angle in I or I+pi.
+These two intervals are disjoint and each is contained in an open half-plane.
+
+There cannot be two distinct unit neighbors of a vertex in the same interval.
+Their mutual distance is 2 sin(theta/2) <= 1, where theta <= W <= pi/3 is
+the angle between their outgoing unit rays. If the distance is smaller than
+one, separation fails. If it equals one, the vertex and its two neighbors form
+an actual unit equilateral triangle. This is forbidden, whether or not the
+neighbor-neighbor contact has positive multiplier. Thus each vertex has at
+most one outgoing positive contact ray in each interval, and degree at most two.
+
+Orient a simple path consecutively. If an incoming step belongs to I, its
+negative outgoing ray at the shared vertex belongs to I+pi. The next step
+cannot belong to I+pi, by the previous paragraph. Thus every step on that
+path belongs to I. The same argument works with I and I+pi interchanged.
+Every cycle would consequently have all its consecutive steps in one open
+half-plane and could not close. A finite connected graph of maximum degree
+two with an edge and without a cycle is a path. Write its vertices as
+p0,...,pk and its unit steps as u1,...,uk, all oriented in I after reversing
+the path if necessary.
+
+For every i,j, ui dot uj >= cos W >= 1/2. Extending any nonempty sum of
+consecutive steps by one adjacent step increases its squared norm by
+1 + 2 sum(ui dot uj) > 0. Therefore the unique farthest pair on the path
+is p0,pk.
+
+Every endpoint p of a positive diameter edge pq belongs to V. Indeed, if p
+had no positive contact, its equilibrium would say
+sum_r beta_pr (p-r)=0 over its positive diameter neighbors. For each such r,
+
+    (p-q) dot (p-r) = D^2 - |q-r|^2/2 >= D^2/2 > 0.
+
+Taking the dot product contradicts equilibrium. Since H+ is nonempty and
+all of its endpoints are in V, diam(V)=D. The unique farthest-pair result
+therefore forces H+={p0,pk} and |pk-p0|=D.
+
+Each interior vertex pj is unloaded. Its two-contact equilibrium is
+alpha_j uj = alpha_(j+1) u_(j+1). The vectors are unit and the multipliers
+are strictly positive, so alpha_j=alpha_(j+1) and uj=u_(j+1).
+All steps are the same unit vector. Consequently D=k. Normalization sets
+the sole diameter multiplier to one, and endpoint equilibrium sets the
+common contact multiplier to D. This proves every assertion.
+
+### Exact canonical consequence and scope correction
+
+Canonical C12 gives connected positive-contact support for every normalized
+KKT stress of a global source. Therefore AC60 applies to such a selected stress
+whenever its directions satisfy the stated hypothesis.
+
+If the stress has **maximal support**, AC60 makes its force hull a segment.
+The canonical one-dimensional maximal-force-hull exclusion rules this out for
+D>1. Hence the positive contact directions of maximal support in a triangle-free
+global source cannot fit in a projective arc of width at most pi/3. In particular
+the same necessary condition holds for the canonical full-support C-II stress.
+It also holds for the full actual contact direction set of the original source,
+because this contains the maximal positive contact set.
+
+We do not assert this exclusion for every selected stress. The restoration
+audit explicitly allows the selected straight-chain calculation while excluding
+the one-dimensional **maximal** force hull. Confusing those scopes would be an
+invalid promotion. The proof above correctly characterizes the selected case.
+
+### Dependencies
+
+- Canonical KKT equilibrium, [shared local structure](../theory/01-local-structure.md).
+- Canonical C12 and the maximal-force-hull exclusion,
+  [force-hull module, Sections 2 and 6](../targets/target-c/01-force-hull-and-shear.md).
+- Scope clarification, [C53 restoration audit, Section 4](target_c_c53_orientation_and_ci_restoration_2026-09-09.md).
+- Full-support normalization only for the C-II corollary,
+  [C-I restoration](../targets/target-c/56-ci-restored-frontier.md).
+
+The graph and distance arguments in AC60 itself are proved above and require
+none of these global results beyond the stated KKT data.
+
+## 3. Sharpness above pi/3 without global minimality
+
+For any integer k>=3 let c=1/2-1/k^2, s=sqrt(1-c^2), u=(1,0), v=(c,s).
+For any integer m>=2 take
+
+    V_m = {iu : -m<=i<=m} union {iv : -m<=i<=m}.
+
+The shared origin is counted once. The projective contact width is
+theta=arccos(c)>pi/3, tending to pi/3 as k tends to infinity.
+The actual contacts are precisely consecutive pairs on the two chains.
+For mixed nonzero indices their squared distance is
+i^2+j^2-2cij. For opposite signs it exceeds two. For equal signs,
+
+    i^2+j^2-2cij = (|i|-|j|)^2 + 2(1-c)|ij| > 1.
+
+Thus all separations hold and there is no unit triangle. The diameter is 2m,
+attained exactly by the opposite endpoints of each chain: all points are in
+the radius-m disk and no mixed endpoints are antipodal. Put alpha=m on
+each of its 4m contacts and beta=1/2 on each of its two diameters.
+Interior forces cancel; at either endpoint, m times its outward unit contact
+equals one half of its diameter vector. At the origin the four forces cancel.
+This is normalized positive KKT equilibrium on a connected nonstraight core.
+
+Its scalar stress is also PSD. The quadratic form is the sum, over the two
+chains, of
+
+    m sum_(2m steps) (delta f)^2 - (f_end-f_start)^2/2 >= 0
+
+by the inequality (sum_(2m) delta f)^2 <= 2m sum_(2m)(delta f)^2.
+Equality requires f affine along each chain. The shared origin leaves exactly
+three independent scalar parameters, so the kernel is the affine coordinate
+kernel on this noncollinear core. Thus PSD and an affine scalar kernel do not
+extend AC60 through any fixed positive angular excess.
+
+These sources are not asserted globally minimizing. Their diameter count two
+violates the canonical large-source h>=ceil(D) requirement when m>=2.
+Their mixed-framework rank and global optimality are omitted; this is exactly
+the hypothesis distinction that a valid continuation must exploit.
+
+## 4. The failed line-cut transfer bridge: exact hexagon
+
+Use the regular unit hexagon p_i=(cos(i*pi/3),sin(i*pi/3)), i=0,...,5.
+Its actual unit contacts are the six cycle edges, and D=2 with actual diameter
+pairs (0,3),(1,4),(2,5). Set alpha=2/3 on every contact and beta=1/3 on
+every diameter. At p_i the contact reaction is (2/3)p_i and the diameter
+reaction is (1/3)(2p_i), so equilibrium is exact.
+
+Take t=(1,sqrt(3)). The t-coordinates of p0,p1,p2 are 1,2,1; those of
+p3,p4,p5 are -1,-2,-1. All three diameter pairs cross the same line and
+are coherently oriented from its positive side to its negative side.
+
+Let L_C be the contact Laplacian and Q have columns e0-e3,e1-e4,e2-e5.
+Ground vertex 5. Direct rational inversion gives
+
+             [ 9/4   3/4  -3/4 ]
+    K=Q^T L_C^+ Q = [ 3/4   9/4   3/4 ].
+             [-3/4   3/4   9/4 ]
+
+The inverse on mean-zero vectors and the grounded inverse give the same K
+because every column of Q has total zero. In particular K_13=-3/4.
+The scalar stress Omega=L_C-L_H is symmetric and satisfies Omega^2=2 Omega
+and trace(Omega)=6. Its eigenvalues are zero and two, with rank three. It is
+PSD with the affine kernel. The script verifies these identities in rational
+arithmetic and checks every pairwise contact and diameter constraint.
+
+The regular-hexagon response is already a binding canonical example in the C35/C50
+audits. We claim no new hexagon configuration or general response theorem.
+The new failed implication tested here is specifically the attempted use of our
+common-line-cut conclusion as a substitute for a transfer sign theorem.
+
+This example has contact projective directions 0,pi/3,2pi/3, so it does not
+refute a theorem using the additional width <pi/2 contact hypothesis. Its D=2
+also lies below the canonical C-ZTA regime. It does decisively refute the
+unqualified sign shortcut from a line cut, unit separation, KKT, and PSD.
+
+## 5. Exact remaining lemma and frontier effect
+
+AC60 removes the exact W<=pi/3 endpoint on maximal support. Combined with
+the previous candidate it leaves, under that report's extra acute-direction
+hypothesis, only
+
+    pi/3 < W < pi/2,
+
+with four macroscopic inactive regions, a common line cut, and canonical
+caterpillar-forest diameter support. This is a conditional narrowing of the
+original C-II macrocontainer obstruction, not its elimination.
+
+One exact possible next theorem is:
+
+> For the canonical full-support C-II source, if all positive contact directions
+> fit in one projective arc of width W<pi/2, then all coherently oriented
+> diameter-pair transfer entries K_ef are nonnegative.
+
+Such a theorem would contradict canonical C-ZTA for D>=9. It must use the
+actual unit-contact geometry, the strict acute arc, canonical normalization,
+and all diameter constraints; the common line cut is insufficient. Its truth
+has not been established here. The crossed-chain family has zero cross-transfer
+and so does not refute it, but fails canonical mixed rigidity and h>=ceil(D).
+
+The other exact remaining lemma is source-preserving replacement or release of
+the diameter-carrying core while retaining all n source points, all separations,
+and a strictly smaller global diameter. Refilling only the inactive caps while
+keeping the old core cannot meet that conclusion.
+
+## 6. Claim and regression audit
+
+| Claim | Classification | Decisive scope |
+| --- | --- | --- |
+| AC60 | proved/unreviewed candidate | connected selected positive core, all its contact directions |
+| W>pi/3 for maximal support | candidate canonical consequence | uses maximal force hull exclusion |
+| W>pi/3 for every selected stress | not claimed | canonical restoration distinguishes selected chains |
+| any fixed extension of AC60 using KKT+PSD alone | rejected | near-threshold crossed chains |
+| common line cut implies K_ef>=0 | rejected | exact hexagon K_13=-3/4 |
+| acute canonical source implies K_ef>=0 | open | hexagon fails acute arc, cross fails canonical rigidity |
+| Level I closure | absent | arbitrary sources and core replacement remain unresolved |
+
+The proof handles equality at 60 degrees through an **actual** source triangle,
+not a triangle of selected positive contacts. Degree-two chains, source points
+outside the core, and positive weights without lower bounds are retained.
+Stars cannot evade the degree bound at W<=pi/3. The threshold witnesses have
+four-ray stars precisely because their same-half angle is strictly larger.
+No external report from another current PR is used as a dependency.
+
+## 7. Computation and validation
+
+Run `python3 research/verify_contact_arc_threshold.py`.
+The proposition tested is the existence of a negative cross-transfer with an
+actual common line cut, and feasibility/KKT of near-threshold crossed chains.
+Arithmetic is Fraction throughout; points use one formal radical whose square
+is rational, making every squared distance rational. The exact outputs include
+K_13=-3/4 for the hexagon and neighbor distance squared 5001/5000 for k=100.
+The program checks all pairwise constraints, full contact and diameter sets,
+normalized forces, and the displayed PSD matrix identity for the hexagon.
+The all-m,k chain PSD proof and AC60 are analytic, not inferred from samples.
+
+No computation certifies global optimality. No literature theorem was imported.
+
+## 8. Promotion recommendation and handoff
+
+Preserve as **unreviewed**, and obtain independent audit of AC60 and the maximal
+support scope before promotion. Do not change canonical state or Level I status.
+The strongest new theorem is the exact contact-arc-to-straight-chain implication.
+Its canonical chain is C12 -> AC60 -> maximal-force-hull exclusion.
+The transfer bridge is dead without additional acute geometry. Read this report,
+the previous direction-cone report, C-ZTA, and the C53 selected/maximal scope
+paragraph before continuing. The next attack must confront 60-degree excess
+using canonical mixed rigidity or prove a valid acute-contact transfer theorem.

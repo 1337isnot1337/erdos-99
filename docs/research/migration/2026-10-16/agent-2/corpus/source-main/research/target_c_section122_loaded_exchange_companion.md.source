@@ -1,0 +1,210 @@
+# Target C Section 122 companion — loaded exchange may create contacts
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** proof-only strengthening of `target_c_section122_finite_exchange_saturation.md`; theorem state unchanged.  
+**Dependencies:** the canonical choice of a contact-minimal, then diameter-pair-minimal triangle-free global minimizer; elementary convexity.  
+
+Section 122 used only the first lexicographic minimization and therefore required every replacement point to be strictly farther than one from every retained source point.  The second minimization gives a stronger obstruction.  If the deleted core vertex is a loaded diameter endpoint, a replacement supported in the interior of the old convex hull creates no new diameter pair.  Consequently it may create as many new unit contacts as were deleted at the loaded vertex: strict contact decrease contradicts the first minimization, while equality of contact counts contradicts the second minimization.
+
+This matters in the inactive-chamber branch because a finite density-increasing repacking need no longer be completely contact-free.  A repacking with a small triangle-free contact graph is already enough.
+
+---
+
+## 122C.1 Lexicographic loaded-exchange obstruction
+
+Let `A` be a noncollinear triangle-free global minimizer of cardinality `n` and diameter `D=D(n)`, chosen first to minimize its number of unit contacts and then, among those contact-minimal representatives, to minimize its number of actual diameter pairs.
+
+Write
+
+\[
+C(A)=\{xy:|x-y|=1\},
+\qquad
+H(A)=\{xy:|x-y|=D\},
+\]
+
+and put
+
+\[
+K=\operatorname{conv}A.
+\]
+
+Choose a source point `v` satisfying
+
+\[
+d_C(v):=\deg_{C(A)}v\ge1,
+\qquad
+d_H(v):=\deg_{H(A)}v\ge1.
+\tag{122C.1}
+\]
+
+Thus `v` is both nonisolated in the unit-contact graph and loaded by at least one actual diameter pair.  Let `Z subset A\setminus\{v\}` be any finite set of contact-isolated source points.
+
+Let `Y subset int K` be finite with
+
+\[
+|Y|=|Z|+1.
+\tag{122C.2}
+\]
+
+Set
+
+\[
+A'=(A\setminus(Z\cup\{v\}))\cup Y.
+\tag{122C.3}
+\]
+
+Assume:
+
+1. `A'` is unit-separated;
+2. the unit-contact graph `C(A')` is triangle-free; and
+3. if `c_new` denotes the number of unit-contact edges of `A'` incident to at least one vertex of `Y`, then
+   \[
+   c_{new}\le d_C(v).
+   \tag{122C.4}
+   \]
+
+### Theorem 122C.1 — loaded lexicographic exchange obstruction
+
+No such `Y` exists.
+
+#### Proof
+
+Cardinality is preserved by (122C.2): `|A'|=n`.  By assumption `A'` is unit-separated.  Every point of `A'` lies in `K`, so
+
+\[
+\operatorname{diam}A'\le\operatorname{diam}K=D.
+\tag{122C.5}
+\]
+
+The definition of `D(n)` forces equality, so `A'` is another global minimizer.
+
+Because every point of `Z` is contact-isolated, deleting `Z` removes no unit-contact edge.  Deleting `v` removes exactly `d_C(v)` unit-contact edges.  The only unit contacts not inherited unchanged from `A` are the `c_new` edges incident to `Y`.  Therefore
+
+\[
+|C(A')|=|C(A)|-d_C(v)+c_{new}.
+\tag{122C.6}
+\]
+
+If `c_new<d_C(v)`, then `A'` is a triangle-free global minimizer with strictly fewer contacts than `A`, contradicting contact minimality.
+
+It remains to consider
+
+\[
+c_{new}=d_C(v).
+\tag{122C.7}
+\]
+
+Then `A'` has exactly the contact-minimal number of contacts and is therefore eligible for the second lexicographic comparison.
+
+We claim that no point of `Y` lies in an actual diameter pair of `A'`.  Fix `y in int K` and `x in K`.  Since `K` has diameter `D`,
+
+\[
+K\subseteq\overline B(x,D).
+\]
+
+If `|y-x|=D`, then `y` lies on the boundary circle of the closed disk `overline B(x,D)`.  Every Euclidean neighborhood of such a boundary point contains points outside the disk.  But `y in int K` gives a neighborhood of `y` contained in `K subseteq overline B(x,D)`, a contradiction.  Hence
+
+\[
+|y-x|<D
+\qquad(y\in int K,\ x\in K).
+\tag{122C.8}
+\]
+
+Thus `Y` creates no diameter pair.
+
+Deleting `v` removes the `d_H(v)>=1` old diameter pairs incident to `v`; deleting `Z` can only remove further old diameter pairs.  Every surviving diameter pair of `A'` is an old diameter pair between retained source points.  Hence
+
+\[
+|H(A')|\le |H(A)|-d_H(v)<|H(A)|.
+\tag{122C.9}
+\]
+
+This contradicts diameter-pair minimality among contact-minimal triangle-free global minimizers.  `\square`
+
+The proof also covers the possibility that the deletions remove every old diameter pair: in that case (122C.8) would imply `diam A'<D`, contradicting `D(n)` even before the second lexicographic comparison.
+
+---
+
+## 122C.2 Inactive-chamber form
+
+Let `C` be a canonical internal inactive chamber and `Z_C` its assigned contact-isolated source points.  As in Section 122, write
+
+\[
+C_{-1}=\{x\in C:\operatorname{dist}(x,\partial C)>1\}.
+\]
+
+Every point of `C_{-1}` is more than one from every source point outside `Z_C`: any segment from such a point to a source outside the chamber interior crosses `partial C`.
+
+Moreover, because `C` has positive area and lies in the convex source hull, every point of `int C`, and hence every point of `C_{-1}`, lies in `int K`.
+
+Choose any loaded nonisolated core vertex `v` satisfying (122C.1).  Such vertices are the loaded actual-diameter endpoints in the post-ZF positive-contact core.
+
+### Corollary 122C.2 — bounded-contact finite exchange saturation
+
+Fix a finite set `W subseteq Z_C`.  There is no set
+
+\[
+Y\subset C_{-1},
+\qquad |Y|=|W|+1,
+\tag{122C.10}
+\]
+
+such that, after replacing `W union {v}` by `Y`,
+
+1. the resulting source is unit-separated;
+2. its unit-contact graph remains triangle-free; and
+3. the number of new unit-contact edges incident to `Y` is at most `d_C(v)`.
+
+#### Proof
+
+Deep chamber support supplies strict separation from every retained source outside `Z_C`; all possible new unit contacts therefore occur entirely inside the local chamber replacement.  The resulting set is exactly the `A'` of Theorem 122C.1, so the theorem applies.  `\square`
+
+In particular, if one chooses a loaded core vertex with `d_C(v)>=1`, then a protected `k -> k+1` chamber repacking that creates **at most one** new unit contact and no unit triangle is already impossible.  Section 122's zero-new-contact obstruction is therefore not sharp.
+
+---
+
+## 122C.3 Multi-vertex version
+
+The same bookkeeping extends without new geometry.  Let `U subset A` be any finite set of deleted nonisolated core vertices and let `Z` be contact-isolated.  Put
+
+\[
+r=|U|,
+\qquad
+c_{lost}:=\#\{e\in C(A):e\cap U\ne\varnothing\},
+\qquad
+h_{lost}:=\#\{e\in H(A):e\cap(U\cup Z)\ne\varnothing\}.
+\tag{122C.11}
+\]
+
+Suppose `h_lost>0`.  If a set `Y subset int K` with
+
+\[
+|Y|=|Z|+r
+\tag{122C.12}
+\]
+
+produces a unit-separated triangle-free source after replacing `Z union U`, and if the number `c_new` of new unit-contact edges incident to `Y` obeys
+
+\[
+c_{new}\le c_{lost},
+\tag{122C.13}
+\]
+
+then the same proof gives a contradiction: `c_new<c_lost` violates contact minimality, while equality leaves the contact count unchanged and removes at least `h_lost` diameter pairs without creating any new one.
+
+Therefore a protected chamber can also be tested against finite `k -> k+r` repackings funded by deletion of `r` core vertices, provided the replacement contact budget does not exceed the number of old contacts removed.
+
+This multi-vertex version preserves the full cardinality exactly; it does not delete source points without replacement.
+
+---
+
+## 122C.4 Research consequence
+
+The internal macroscopic-container branch can now be eliminated by any theorem that produces, inside the protected chamber interior, one finite density-increasing repacking whose local contact graph is triangle-free and whose new-contact count fits the contact budget of one or finitely many deleted loaded core vertices.
+
+This is strictly weaker than the obligation stated in the base Section 122 module.  A useful constructive exchange may end at first contact; Section 95's zero-force observation does not rescue it if the total new-contact count is small enough, because lexicographic global minimality already forbids the resulting same-cardinality source.
+
+What remains unproved is the packing theorem that forces such an exchange from the canonical chamber hypotheses (`O(D)` total Oler slack, macroscopic protected area, and the Section-87 inverse-diameter near-pair matching).  No claim is made here that those hypotheses already imply the required exchange.
+
+**Lifecycle:** proof-only.  The theorem-state manifest is unchanged pending hostile audit.

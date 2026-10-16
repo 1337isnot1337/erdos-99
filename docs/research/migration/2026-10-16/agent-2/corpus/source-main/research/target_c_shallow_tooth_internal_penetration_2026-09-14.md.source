@@ -1,0 +1,530 @@
+# Target C-II — shallow outer teeth force distinct internal penetration contacts
+
+**Date:** 2026-09-14  
+**Repository base:** `815c8b6ce3c4d8ce1b5c256f384e85811e25f995`  
+**Status:** proof-only Type-II consequence; theorem-state authority unchanged  
+**Scope:** Type-II near-disk branch; numerical corollary also uses the current proof-only AG42/§171 low-`t` floor  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The preceding shallow-tooth theorem produces a linear family of inward unit contacts,
+but its raw count loses a factor two when teeth are assigned to apexes and another
+factor two when selected contacts are deduplicated.  Type-II near-disk geometry removes
+both losses.
+
+The key new observation is local and weight-free:
+
+> a two-edge outer-tooth apex has no loaded unit-contact neighbor other than the two
+> endpoints of its own base.
+
+Thus every tooth apex has an internal unloaded-to-unloaded contact.  For sufficiently
+shallow teeth that contact ends a fixed positive distance inside the local supporting
+line, so its inner endpoint cannot itself be a shallow tooth apex.  Selecting one such
+contact per shallow tooth is therefore injective.
+
+The result upgrades the current low-`t` tooth alternative from
+
+\[
+0.0730476D-o(D)
+\]
+
+distinct penetration contacts to the explicit bound
+
+\[
+\boxed{0.3883231D-o(D)}
+\]
+
+distinct **internal** penetration contacts, with a simultaneous local-normal
+penetration flux above `0.279D`.
+
+---
+
+## 1. Fixed-scale local flatness of the Type-II loaded hull
+
+Canonical Type II gives centers `o_D` and numbers
+
+\[
+r_D=D/2-o(D),\qquad R_{+,D}=D/2+o(D)
+\]
+
+such that
+
+\[
+B(o_D,r_D)\subset F_D\subset B(o_D,R_{+,D}).
+\tag{IP.1}
+\]
+
+The proof of the audited Section-124 chord lemma is uniform on every fixed Euclidean
+scale.  We record the exact consequence needed below.
+
+### Lemma IP.1 — fixed-scale loaded-boundary flatness
+
+Fix `L<infinity`.  Let `a_D b_D` be a loaded-hull side with
+`|a_D-b_D|<=2`, and let `c_D` be any loaded-hull vertex with
+`|c_D-a_D|<=L`.  Then, uniformly over all such choices,
+
+\[
+\operatorname{dist}(c_D,\operatorname{line}(a_Db_D))=o(1).
+\tag{IP.2}
+\]
+
+Moreover, if `c_Dd_D` is another loaded-hull side with both endpoints at bounded
+distance from `a_D`, then
+
+\[
+\angle(\operatorname{line}(a_Db_D),
+       \operatorname{line}(c_Dd_D))=o(1).
+\tag{IP.3}
+\]
+
+### Proof
+
+Translate `o_D` to the origin and put
+
+\[
+\beta_D=\arccos(r_D/R_{+,D})=o(1).
+\]
+
+For two loaded vertices `p,q` with `|p-q|<=L'`, their smaller radial-angle separation
+is at most
+
+\[
+2\arcsin\frac{L'}{2r_D}=o(1)
+\tag{IP.4}
+\]
+
+for every fixed `L'`.  Section 124 proves that every outward side normal at a boundary
+point makes angle at most `beta_D` with the radial direction there.  Consequently all
+oriented side directions on a fixed-scale short polar boundary window lie in an
+angular interval of width `o(1)`, uniformly.
+
+For the short boundary arc from `a_D` to `c_D`, projection onto the midpoint direction
+of that interval gives
+
+\[
+\operatorname{length}(\text{arc}(a_D,c_D))
+\le {L\over\cos(o(1))}=O_L(1).
+\tag{IP.5}
+\]
+
+The side `a_Db_D` lies in the same fixed-scale tangent window.  Projecting the arc in
+the normal direction to `a_Db_D`, its total transverse displacement is therefore
+
+\[
+O_L(1)\sin(o(1))=o(1),
+\]
+
+which proves (IP.2).  Applying the same tangent-window estimate to the two sides gives
+(IP.3).  `square`
+
+This is only the finite-scale form of the already-audited Section-124 geometry; no
+quantitative rate for the Type-II Hausdorff convergence is required.
+
+---
+
+## 2. A tooth apex has exactly two loaded contact neighbors
+
+Take any actual two-edge outer tooth
+
+\[
+a-x-b,
+\]
+
+where `a,b` are consecutive loaded-hull vertices, `x` is unloaded,
+
+\[
+|a-x|=|x-b|=1,
+\qquad
+s:=|a-b|\in(1,2].
+\]
+
+Audited outer-tooth exactness identifies this with one augmented triangular face.
+Choose coordinates with its supporting line horizontal:
+
+\[
+a=(-u,0),\qquad b=(u,0),\qquad x=(0,h),
+\]
+
+where
+
+\[
+u=s/2\in(1/2,1],
+\qquad
+h=\sqrt{1-u^2}.
+\tag{IP.6}
+\]
+
+### Lemma IP.2 — no third loaded neighbor
+
+For all sufficiently large Type-II survivors, if a loaded vertex `c` satisfies
+`|c-x|=1`, then
+
+\[
+c\in\{a,b\}.
+\tag{IP.7}
+\]
+
+### Proof
+
+Since `|a-x|=|x-c|=1`,
+
+\[
+|a-c|\le2.
+\]
+
+Lemma IP.1 with `L=2` gives, in the coordinates above,
+
+\[
+c=(X,z),\qquad z=o(1).
+\tag{IP.8}
+\]
+
+The contact equation gives
+
+\[
+1=X^2+(z-h)^2,
+\]
+
+hence, using `u^2+h^2=1`,
+
+\[
+X^2=u^2+2hz-z^2=u^2+o(1).
+\tag{IP.9}
+\]
+
+Because `u>=1/2`, this implies uniformly
+
+\[
+|X|=u+o(1).
+\]
+
+Thus `c` lies at distance `o(1)` from either `a` or `b`.  Source unit separation makes
+that impossible for a distinct source point once `D` is large.  Therefore `c=a` or
+`c=b`.  `square`
+
+Canonical C26 gives every unloaded contact-core vertex degree at least three.  Hence
+`x` has a contact neighbor `w` distinct from `a,b`.  Lemma IP.2 forces `w` to be
+unloaded.  Therefore
+
+\[
+\boxed{xw\text{ is an internal contact edge of the unloaded component containing }x.}
+\tag{IP.10}
+\]
+
+There is also no possibility that one apex supports two different outer teeth: a
+second tooth would require another pair of loaded contact neighbors.  Consequently
+
+\[
+\boxed{\text{two-edge outer teeth have pairwise distinct unloaded apexes.}}
+\tag{IP.11}
+\]
+
+For arbitrary teeth, selecting one internal edge per tooth already gives at least
+`N_2/2` distinct internal edges, because one undirected edge has only two endpoints.
+The shallow case below removes this final factor two as well.
+
+---
+
+## 3. A shallow tooth's internal contact reaches a deep endpoint
+
+Fix
+
+\[
+0<\eta<\eta_0:=2(1-\cos(\pi/12))
+=0.0681483474\ldots
+\tag{IP.12}
+\]
+
+and call a tooth `eta`-shallow when
+
+\[
+s\ge2-\eta.
+\]
+
+Write
+
+\[
+\alpha=\arccos(s/2),
+\qquad
+0<\alpha\le\alpha_\eta:=\arccos(1-\eta/2)<\pi/12.
+\tag{IP.13}
+\]
+
+Then the coordinates above become
+
+\[
+a=(-\cos\alpha,0),\quad
+b=(\cos\alpha,0),\quad
+x=(0,\sin\alpha).
+\]
+
+Take any extra contact neighbor `w` of `x`.  By Lemma IP.2 it is unloaded, and harmonic
+trapping places it in `F`.  Write
+
+\[
+w-x=(X,Y),\qquad X^2+Y^2=1.
+\]
+
+The triangle-free inequalities `|w-a|>1` and `|w-b|>1` are exactly the ones used in
+the preceding shallow-tooth theorem.  They give
+
+\[
+\boxed{
+Y>\sin(\pi/3-\alpha)
+\ge
+Y_\eta:=\sin(\pi/3-\alpha_\eta).
+}
+\tag{IP.14}
+\]
+
+The previous theorem used only the edge component `Y`.  Here the absolute depth of the
+inner endpoint is the stronger quantity
+
+\[
+\operatorname{depth}_{ab}(w)
+=\sin\alpha+Y
+>
+\sin\alpha+\sin(\pi/3-\alpha).
+\tag{IP.15}
+\]
+
+For `0<=alpha<pi/6`, the right side is increasing because
+
+\[
+\cos\alpha-\cos(\pi/3-\alpha)>0.
+\]
+
+Therefore every selected internal endpoint obeys the uniform bound
+
+\[
+\boxed{
+\operatorname{depth}_{ab}(w)>\sin(\pi/3)={\sqrt3\over2}.
+}
+\tag{IP.16}
+\]
+
+In contrast the shallow apex itself has depth
+
+\[
+\operatorname{depth}_{ab}(x)=\sin\alpha
+\le\sin\alpha_\eta<\sin(\pi/12).
+\tag{IP.17}
+\]
+
+Thus the selected contact crosses a fixed-width boundary layer.
+
+---
+
+## 4. The shallow selections are edge-injective
+
+The only remaining duplication possibility is that an internal edge `xw` selected for
+one shallow tooth is also selected for a shallow tooth whose apex is `w`.  Type-II
+local flatness excludes this.
+
+### Lemma IP.3 — the deep endpoint is not a shallow tooth apex
+
+For every fixed `eta<eta_0` and all sufficiently large Type-II survivors, the endpoint
+`w` in (IP.16) cannot be the apex of another `eta`-shallow outer tooth.
+
+### Proof
+
+Suppose `w` were the apex of a shallow tooth with loaded base `cd`.  Since
+
+\[
+|a-x|=|x-w|=|w-c|=|w-d|=1,
+\]
+
+both `c` and `d` lie within distance three of `a`.  Lemma IP.1 therefore gives
+
+\[
+\angle(ab,cd)=o(1)
+\]
+
+and, throughout this fixed-size neighborhood, the two supporting lines differ by
+`o(1)` in normal position.  Because `|w-a|<=2`,
+
+\[
+\operatorname{depth}_{cd}(w)
+=\operatorname{depth}_{ab}(w)+o(1)
+>{\sqrt3\over2}-o(1).
+\tag{IP.18}
+\]
+
+But a shallow tooth apex over `cd` has
+
+\[
+\operatorname{depth}_{cd}(w)
+\le\sin\alpha_\eta
+<\sin(\pi/12).
+\tag{IP.19}
+\]
+
+The fixed gap between `sqrt(3)/2` and `sin(pi/12)` contradicts (IP.18)--(IP.19) for
+large `D`.  `square`
+
+Now choose one extra contact `xw` for every `eta`-shallow tooth.  The tooth apexes are
+distinct by (IP.11).  If two choices gave the same undirected edge, the two tooth
+apexes would have to be the two endpoints of that edge.  Lemma IP.3 forbids this.
+Hence the choices are injective.
+
+### Theorem IP.4 — internal penetration count
+
+Let `N_2` be the number of two-edge outer teeth, `N_sh(eta)` the number of
+`eta`-shallow teeth, `d_out=b-per(F)`, and `E_int(eta)` the number of distinct internal
+contacts selected as above.  Then for every fixed `eta<eta_0` and all sufficiently
+large Type-II survivors,
+
+\[
+\boxed{
+E_{int}(\eta)
+\ge N_{sh}(\eta)
+\ge N_2-{d_{out}\over\eta}.
+}
+\tag{IP.20}
+\]
+
+Every selected edge has all three properties:
+
+1. both endpoints are unloaded and lie in one positive-contact component;
+2. its inward normal component relative to its tooth base exceeds `Y_eta`;
+3. its inner endpoint lies more than `sqrt(3)/2` inside the tooth-base support line.
+
+No KKT weight lower bound is used.
+
+---
+
+## 5. Current low-`t` numerical consequence
+
+At the present proof-only floor
+
+\[
+t_{42}=C_{146}+0.0013751,
+\]
+
+the low-`t` squeeze gives
+
+\[
+{d_{out}\over D}\le0.002883975+o(1),
+\tag{IP.21}
+\]
+
+while the tooth alternative of the exact tooth/long-side dichotomy gives
+
+\[
+{N_2\over D}
+\ge0.4363893718701161\ldots-o(1).
+\tag{IP.22}
+\]
+
+Choose the simple certified value
+
+\[
+\boxed{\eta=0.06<\eta_0.}
+\]
+
+Then (IP.20) gives
+
+\[
+\boxed{
+{E_{int}(0.06)\over D}
+\ge
+0.4363893718701161\ldots
+-{0.002883975\over0.06}
+-o(1)
+=0.3883231218701161\ldots-o(1).
+}
+\tag{IP.23}
+\]
+
+For this tolerance,
+
+\[
+\alpha_\eta=\arccos(0.97)<\pi/12
+\]
+
+and
+
+\[
+\boxed{
+Y_{0.06}
+={\sqrt3\over2}(0.97)
+-{1\over2}\sqrt{0.06-0.06^2/4}
+=0.7184921838594732\ldots .
+}
+\tag{IP.24}
+\]
+
+Thus the sum of the selected edges' local inward-normal components is at least
+
+\[
+\boxed{
+0.3883231218701161\ldots
+\times0.7184921838594732\ldots D-o(D)
+>
+0.27900712D-o(D).
+}
+\tag{IP.25}
+\]
+
+The inner endpoints simultaneously lie more than
+
+\[
+0.8660254037844386\ldots
+\]
+
+inside their corresponding local hull support lines.
+
+If only count is optimized, one may take any fixed `eta<eta_0` arbitrarily close to
+`eta_0`; (IP.20) then approaches the stronger limiting density
+
+\[
+0.39407029724682\ldots .
+\tag{IP.26}
+\]
+
+The explicit `eta=0.06` version is retained because it leaves comfortable angular
+margin and nearly maximizes the simultaneous count-times-normal-component product.
+
+---
+
+## 6. Frontier effect
+
+The tooth branch is now substantially less diffuse than the preceding theorem showed:
+
+```text
+low t + tooth alternative
+ -> >0.38832 D shallow two-edge outer teeth
+ -> >0.38832 D distinct unloaded shallow apexes
+ -> >0.38832 D distinct internal unit contacts
+ -> each crosses from a <0.244 boundary layer to depth >sqrt(3)/2
+ -> aggregate local-normal penetration >0.27900 D.
+```
+
+The important change is that these edges belong to the **internal unloaded contact
+graph**, not merely to the full contact graph.  They can therefore be inserted directly
+into the canonical per-component quantities `e_r`, `delta_r`, `r_r`, and the pinned
+stress identity
+
+\[
+s_r=e_r+t_r-2n_r-1.
+\]
+
+A closing theorem still has to convert this boundary-to-interior internal-edge family
+into one of the currencies that global minimality cannot absorb.  The most direct next
+target is a componentwise planar/diameter inequality that charges many such fixed-depth
+penetration edges either to Eppstein slack `r_r`, to pinned surplus `s_r`, or to a
+macroscopic attachment-cell diameter.  Unlike a weighted KKT sum, that target cannot
+lose the new population through tiny contact weights.
+
+The long-side alternative remains separate and open.
+
+---
+
+## 7. Reproducibility
+
+Run
+
+```bash
+python3 research/verify_target_c_shallow_tooth_internal_penetration.py
+```
+
+for the displayed constants and angular margins.

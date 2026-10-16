@@ -1,0 +1,64 @@
+# Target C-II stale global-face endpoint regression (2026-09-12)
+
+**Classification:** rejected stale endpoint target / regression.  This is a
+proof-only correction; it does not change theorem-state authority.  The
+repository state is `audit.46`, and C-II remains open.
+
+## Exact conflict
+
+An older provenance report,
+`docs/reports/target_c_zs_strict_terminal_cut_domination_2026-09-09.md`, identifies
+the strict global face inequality
+
+\[
+ b+Q>2h
+\]
+
+with the train surplus target `T-h>2f`.  That target cannot be the strict
+endpoint of the current train/face ledger when `f` is the canonical bounded
+nonquadrilateral-face count.
+
+The active train-closure package records the exact finite identities
+
+\[
+ T=\frac{b+Q}{2}+2f,
+ \qquad
+ \frac{b+Q}{2}=h-s_Z,
+\]
+
+where `s_Z\ge 0` is the mixed-rigidity surplus.  Therefore
+
+\[
+ T=h-s_Z+2f,
+ \qquad
+ T-h-2f=-s_Z\le 0.
+\]
+
+Consequently the strict claim `T-h>2f` is algebraically impossible under the
+same canonical definitions.  In the equality case `s_Z=0`, the ledger gives
+`T-h=2f`, not a strict inequality.  This is an exact normalization/endpoint
+regression, not a numerical issue.
+
+The scope is the old report's identification of its `f` with the canonical
+bounded nonquadrilateral-face count.  A differently defined exceptional-face
+quantity would require a separate translation theorem; this note does not
+rule out such a theorem.
+
+## Consequence for the live C-II route
+
+The old report is retained as provenance, but its strict endpoint must not be
+used as a premise or as the next obligation.  The current canonical target is
+the aggregate detour/source inequality coupling
+
+\[
+ \sum_r(L_r-2d_r)
+\]
+
+to `e_{BB}-k`, together with the separate protected-spare-capacity branch for
+macroscopically inactive Type-I chambers.  The regression does not disprove
+Level I, does not produce a C-II counterexample, and does not close C-II.
+
+No `docs/STATE.md`, theorem-state, route-map, prompt, or generated-artifact
+file is changed here because this correction does not promote a theorem or
+change the canonical frontier.
+

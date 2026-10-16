@@ -1,0 +1,230 @@
+<!-- theorem-state: {"artifact_id":"ART-E27DFED727FE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Whole-source attainment and parallel-contact approximation
+
+**Date:** 2026-10-11
+
+**Base commit:** `ab6dd3336f9f8d440f2bada76edb32153391cddc`
+
+**State version:** `2026-10-10.audit.234`
+
+**Run type:** independent Level I closing-proof research
+
+**Target:** whole problem; no A/B/C theorem imported
+
+**Active prompt:** `docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md`
+
+**Classification:** proved candidate awaiting promotion; regression against a
+strict triangle-free optimal-value gap
+
+**LEVEL I STATUS: STILL OPEN.**
+
+This run uses the exact quantifiers in `docs/problem/statement.md`. It does not
+inspect another worker's proposed solution. The canonical state files remain
+unchanged. All source labels, including contact isolates, are retained.
+
+## 1. Global endpoint
+
+The proposed global chain is
+
+```text
+absence of a positive-clearance optimal plateau for every sufficiently large n
+ -> no triangle-free global minimizer
+ -> Level I
+```
+
+The plateau exclusion is an obligation, not a proved theorem. Before using a
+whole-configuration density or value comparison, it is essential to distinguish
+an attained minimum from an infimum over triangle-free sources. The following
+elementary theorem makes that obstruction stronger: even configurations whose
+entire contact graph is a union of paths approximate the unrestricted optimum.
+
+## 2. Parallel-contact approximation theorem
+
+Let `A={p_1,...,p_n}` be any finite planar set with minimum pair distance exactly
+one. For every `epsilon>0`, there is a source `A_epsilon={q_1,...,q_n}` with
+minimum distance exactly one such that
+
+1. `q_i` tends to `p_i` as `epsilon` tends to zero;
+2. every unit-contact displacement is the same vector up to sign;
+3. its contact graph is a disjoint union of paths and isolated vertices;
+4. `diam(A_epsilon) <= diam(A)*sqrt(1+epsilon+epsilon^3)`.
+
+No global-minimality, stress, hull, lattice, or contact-core hypothesis is needed.
+The theorem does not say that the transformed source remains globally optimal.
+
+### Proof
+
+For `t>0`, put `v(t)=(1,t)` and
+
+\[
+M(t)=I+t v(t)v(t)^T
+=\begin{pmatrix}1+t&t^2\\t^2&1+t^3\end{pmatrix}.
+\]
+
+It is positive definite. Its eigenvalues are `1` and `1+t+t^3`. For each pair
+displacement `u=(x,y)`, its squared transformed length is
+
+\[
+f_u(t)=u^TM(t)u=x^2+y^2+x^2t+2xyt^2+y^2t^3.                 \tag{1}
+\]
+
+Identify displacement vectors differing by sign. If `u` and `w` belong to
+distinct classes, their polynomials in (1) are different. Indeed, equality of
+the coefficients would give
+`x_u^2=x_w^2`, `y_u^2=y_w^2`, and `x_u*y_u=x_w*y_w`, hence `w=+u` or `w=-u`.
+This includes cases where one coordinate is zero.
+
+If there are `s` classes, at most `B=3*binom(s,2)` positive values of `t`
+can give a tie between two classes. Among the `B+1` distinct values
+
+\[
+t_k=\epsilon k/(B+1),\qquad 1\le k\le B+1,
+\]
+
+choose one that gives no such tie. This finite avoidance statement does not
+assume rational source coordinates or rational roots.
+
+Let `L(t)` be the positive definite square root of `M(t)`, and set
+
+\[
+m(t)^2=\min_{i<j} f_{p_i-p_j}(t),\qquad
+q_i=L(t)p_i/m(t).
+\]
+
+Since `M(t)>=I`, `m(t)>=1`. The transformed source is unit-separated and
+has minimum distance exactly one. A unique displacement class realizes the
+minimum, so all its unit-contact displacements are `+w` or `-w` for one
+unit vector `w`.
+
+Every contact component therefore lies on a line parallel to `w`, and a vertex
+has at most one neighbor in each direction. A finite component cannot be a
+cycle: a vertex with maximal projection onto `w` would have only its possible
+negative-direction neighbor. Thus every component is a path or an isolate.
+
+For every pair, the eigenvalue bound and `m(t)>=1` give
+
+\[
+|q_i-q_j|^2\le(1+t+t^3)|p_i-p_j|^2
+\le(1+\epsilon+\epsilon^3)|p_i-p_j|^2.
+\]
+
+Finally `0<t<=epsilon`, `M(t)->I`, and `m(t)->1`, which prove the stated
+labelwise convergence. This proves the theorem. No pair is omitted. QED.
+
+### Global consequence
+
+For each fixed `n>=2`, let `D_parallel(n)` denote the infimum of the diameter
+over unit-separated sources whose unit-contact graph consists of parallel
+unit-step paths. Apply the theorem to a global minimizer and take
+`epsilon->0`. The reverse inequality holds by inclusion of feasible sets, so
+
+\[
+\boxed{D_{\mathrm{parallel}}(n)=D(n).}                       \tag{2}
+\]
+
+In particular the triangle-free diameter infimum equals `D(n)` for **every**
+cardinality, including a cardinality at which all actual minimizers might have
+triangles. Thus a proposed proof by a strict positive gap between these two
+infima fails. Equation (2) does not supply a triangle-free minimizer.
+
+The literature audit's Section 9.1 entry already records triangle-free
+approximation of the optimum. The additional statement here is the explicit
+single-parameter, finite-avoidance construction with a parallel path contact
+graph and a bound for every full-source pair. The proof is self-contained and
+does not import that audited-working entry as a premise.
+
+## 3. Exact global clearance formulation
+
+For `n>=3`, write
+
+\[
+\tau(A)=\min_{i<j<k}\max\{ |p_i-p_j|^2-1,
+|p_i-p_k|^2-1,|p_j-p_k|^2-1\}.
+\]
+
+For a unit-separated finite source, `tau(A)>=0`, and `tau(A)>0` if and only if
+there is no unit equilateral triangle. Define
+
+\[
+F_n(s)=\min\{\operatorname{diam}(A)^2:
+|A|=n,\quad |p_i-p_j|\ge1,\quad\tau(A)\ge s\},\qquad s\ge0.
+\]
+
+Minimum distance is required to be at least one, exactly as in the definition
+of `D(n)`. No auxiliary normalization is imposed on this parameterized
+problem. Its minimizer is not assumed to have minimum distance exactly one
+when `s>0`.
+
+All these minima exist. For feasibility take collinear points with successive
+spacing `sqrt(1+s)`. Translate one point to zero. A minimizing sequence then
+has bounded diameter and hence all labeled coordinates bounded; pair and
+clearance inequalities are closed. Compactness gives a limit with all `n`
+labels distinct.
+
+Let `O_n` be the compact set of global minimizers with their first label at
+zero, and put
+
+\[
+\eta_n=\max_{A\in O_n}\tau(A).
+\]
+
+Compactness and continuity give this maximum. Then
+
+\[
+\boxed{F_n(s)=D(n)^2\ \Longleftrightarrow\ 0\le s\le\eta_n.} \tag{3}
+\]
+
+If `s<=eta_n`, a maximizing source in `O_n` is feasible for `F_n(s)`.
+Conversely an attained equality in (3) supplies a global minimizer whose
+clearance is at least `s`. Consequently
+
+\[
+\boxed{\text{Level I}\ \Longleftrightarrow\
+\exists n_0\ \forall n\ge n_0\ \forall s>0,
+\quad F_n(s)>F_n(0).}                                    \tag{4}
+\]
+
+This retains **every minimizer**, because `eta_n` is a maximum over all of
+them, not a minimum or the clearance of a selected convenient representative.
+
+For `0<=s<=t`, scaling an `F_n(s)` minimizer by
+`sqrt((1+t)/(1+s))` proves
+
+\[
+F_n(s)\le F_n(t)\le\frac{1+t}{1+s}F_n(s).                 \tag{5}
+\]
+
+Thus `F_n` is continuous, nondecreasing, and
+`D(n)^2<=F_n(t)<=(1+t)D(n)^2`. Continuity at zero is compatible with strict
+increase for all positive `t`; it is not a plateau-existence argument.
+
+## 4. Hostile checks and computational scope
+
+`research/verify_global_parallel_contact_density_2026_10_11.py` uses exact
+arithmetic in `Q(sqrt(3))` on a square, a seven-point triangular wheel, and a
+49-label triangular patch. It checks every source pair, the transformed
+minimum, the complete contact graph, absence of cycles and branches,
+triangle clearance, the eigenvalue diameter bound, and absence of identical
+length polynomials for distinct displacement classes. It does not certify
+global optimality of the fixtures, the universal theorem, or (4).
+
+The wheel fixture begins with unit triangles and ends with parallel path
+contacts at strictly larger diameter. It guards against the invalid
+inference that density of triangle-free sources preserves attainment.
+The analytic proofs above supply the general quantifiers.
+
+No local-optimality, PSD, numerical, scaffold, response-network, or
+asymptotic-density evidence is promoted to global optimality. Source isolates
+are retained by the same affine map. No boundary-order loss is used.
+
+## 5. Remaining global obligation
+
+Prove `eta_n=0` for every sufficiently large `n`, equivalently exclude the
+positive plateau in (3). A clearance-dependent packing bound is insufficient
+unless it rules out **every positive** plateau length, including lengths
+depending arbitrarily on `n`. The results of this checkpoint exclude a
+global value-gap tactic; they do not yet establish the required attainment
+obstruction or change canonical theorem state.
+
+**Promotion recommendation:** preserve as unreviewed research. The candidate
+and regression above are self-contained; no Level I promotion is requested.

@@ -1,0 +1,172 @@
+# Hostile audit — Target C Section 131 component-ledger amplification
+
+**Date:** 2026-09-12
+**Reviewed:** `research/target_c_section131_component_ledger_amplification.md`
+**Disposition:** **PASS at proof-only Type-II endpoint scope.** C-II remains open.
+
+## 1. Re-derive the finite inequality independently
+
+Canonical Section 75 gives
+
+\[
+\sum_r\delta_r+R_I+s_B+3k=6+e_{BB}+2s_C,
+\qquad R_I,s_B\ge0.
+\]
+
+Canonical harmonic localization gives `d_r<=delta_r+2`. Hence
+
+\[
+\sum_r d_r
+\le 6+e_{BB}+2s_C-3k+2c_I.
+\tag{A131.1}
+\]
+
+Proof-only Section 125 gives, in Type II,
+
+\[
+e_{BB}=q-m,
+\qquad
+c_I+s_C=m+k-2.
+\]
+
+Substitution into (A131.1) gives
+
+\[
+\begin{aligned}
+\sum_r d_r
+&\le6+q-m+2(m+k-2-c_I)-3k+2c_I\\
+&=q+m-k+2.
+\end{aligned}
+\]
+
+Therefore
+
+\[
+\boxed{q+m-k\ge\sum_r d_r-2.}
+\]
+
+**Verdict:** PASS.  The `c_I` terms cancel exactly.  No asymptotic component-count estimate is used in the finite theorem.
+
+## 2. Endpoint insertion
+
+The repaired and hostile-audited Section 130 gives, only on its stated Section-118 endpoint/common-cap branch,
+
+\[
+\sum_r d_r\ge(S_*-o(1))D,
+\qquad
+S_*=2.798596312209462\ldots .
+\]
+
+Thus
+
+\[
+q+m-k\ge S_*D-o(D).
+\tag{A131.2}
+\]
+
+**Verdict:** PASS at the same proof-only endpoint scope.  The audit uses the binding Section-130 limit repair, not the rejected exact-maximal-arc shortcut.
+
+## 3. Independent check of the second inequality
+
+The corrected Sections-124/127 payment used by the Section-130 hostile audit is
+
+\[
+3(h-s_Z)-2s_C
+\ge(S_*+c_*)D-o(D),
+\qquad
+c_*={\pi\over4}(2-\sqrt3).
+\tag{A131.3}
+\]
+
+Since `h-s_Z=q-k` exactly and
+
+\[
+s_C=m+k-2-c_I,
+\]
+
+(A131.3) is
+
+\[
+3q-2m-5k+4+2c_I
+\ge(S_*+c_*)D-o(D).
+\tag{A131.4}
+\]
+
+Canonical Section 75 gives `c_I=O(D^(2/3))=o(D)`.  Therefore
+
+\[
+\boxed{
+3q-2m-5k
+\ge(S_*+c_*)D-o(D).
+}
+\tag{A131.5}
+\]
+
+**Verdict:** PASS.  Here, unlike the finite inequality of Section 131.1, sublinearity of `c_I` is genuinely used.  Its sign is handled correctly: the `+2c_I` term is absorbed into the `o(D)` error, not simply dropped.
+
+## 4. Elimination and arithmetic
+
+Twice (A131.2) plus (A131.5) gives
+
+\[
+5q-7k
+\ge(3S_*+c_*)D-o(D).
+\]
+
+Using
+
+\[
+q=h+d_H,
+\qquad
+k=d_H+s_Z,
+\]
+
+we obtain
+
+\[
+\boxed{
+5h-2d_H-7s_Z
+\ge(3S_*+c_*)D-o(D).
+}
+\]
+
+The constant is
+
+\[
+3S_*+c_*
+=8.60623574024762\ldots,
+\]
+
+so nonnegativity of `d_H,s_Z` gives
+
+\[
+\boxed{
+\liminf h/D\ge1.72124714804952\ldots .
+}
+\]
+
+The coefficient and inequality directions are correct.
+
+## 5. Regression against recently withdrawn interface claims
+
+The proof does **not** use either recently rejected statement
+
+\[
+(q-k)/D\ge1.9046256\ldots
+\]
+
+or
+
+\[
+(2h-q)/D\ge0.6676585\ldots .
+\]
+
+Its only canonical global component input is Section 75, and its proof-only inputs are Sections 125, 124/127, and the repaired/audited Section 130.  Therefore the main-branch correction withdrawing those interface claims does not invalidate Section 131.
+
+## 6. Scope and remaining obstruction
+
+The result is not an all-Type-II theorem.  The numerical endpoint uses the Section-130 common-cap endpoint branch.  It does not address Type I and does not itself contradict the diameter-thrackle upper range.
+
+What it changes is the endpoint geometry: any surviving endpoint countersequence must have diameter-edge density at least `1.721247...`, far above the universal `2rho=1.47817...` floor.  A closing composition must now exploit this dense thrackle together with the near-circular loaded side sequence or the gap-spanning harmonic cells.
+
+**Final verdict:** PASS as a proof-only endpoint theorem.  Theorem state unchanged; C-II remains open.

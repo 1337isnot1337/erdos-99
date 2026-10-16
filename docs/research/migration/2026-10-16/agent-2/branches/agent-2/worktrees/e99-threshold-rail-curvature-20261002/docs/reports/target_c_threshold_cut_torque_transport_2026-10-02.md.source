@@ -1,0 +1,358 @@
+<!-- theorem-state: {"artifact_id":"ART-586BDE057124","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C — actual cut torque transport and the peripheral-port obstruction
+
+```text
+actual parallel contact cuts + threshold packet reaction law
+ -> reaction lever budget and sublinear contact-force centroid away from the pivot
+ -> a closing move would need spatial control of the same actual port forces
+ -> centroid/PSD control alone fails on exact embedded sources; no branch closes.
+```
+
+Date: 2026-10-02. Starting HEAD: `fbeae9b3fa18a63e07573676b4e2e512a91ca4d5`.
+State version: `2026-09-14.audit.51`.
+Fetched publication base: `3bad7c12bf5133665be466d0396362108fadef2c`.
+The manifest, STATE, Target C route and CURRENT are byte-identical to the
+starting checkout; the isolated branch was advanced to this fetched main
+before publication. The newer merged packets remain unpromoted.
+Branch: `swarm/root/threshold-rail-curvature-20261002`.
+Mission: locate the actual contact and diameter reactions of the threshold
+staircase, rather than infer a multiplier floor from interval rank.
+There was no open GitHub issue/PR assigning this checkout at bootstrap.
+Classification: **proved candidate awaiting promotion** for CT.1--CT.3 and
+CM.1; **conditional** for the threshold consequence; **regression** for the
+embedded examples. Artifact lifecycle remains unreviewed.
+**Level I OPEN; C-I CLOSED; C-II OPEN.**
+
+## 1. Authority and dependencies
+
+Canonical inputs: [actual source KKT equilibrium](../theory/01-local-structure.md),
+Theorem 4.1; [C-I](../targets/target-c/56-ci-restored-frontier.md), for a
+relative-interior stress positive on all actual active rows; and
+[core PSD/affine kernel](../targets/target-c/57-zr-zf-rigidity-audit.md).
+Only PSD, not the affine kernel, is needed for CM.1.
+[Full-source geometry](../targets/target-c/58-full-source-geometry-audit.md), FS.1,
+supplies the elementary midpoint scale in CT.3.
+
+The threshold application explicitly depends on the unpromoted
+[paired staircase](target_c_exact_phase_threshold_paired_staircase_2026-10-01.md)
+and [four-host/cut order](target_c_complete_grid_joint_switch_budget_2026-10-01_r2.md).
+The stronger [length-reaction floor](target_c_threshold_packet_length_and_stress_model_2026-10-02.md)
+from remote `9e042ddb`, subsequently found in fetched main,
+was read and checked at its stated scope: it uses actual intervening diameter
+vertices, convex support tangents, and FS.1, and asserts
+
+\[
+ R_e\ge B_e\min\{D/16,2s_e/3\}\quad(D\ge512).                 \tag{L}
+\]
+
+Its dependency on physical threshold extraction remains unpromoted. Here (L)
+is an explicit premise, not a canonical theorem. No theorem in this report
+requires a positive lower bound on a diameter multiplier.
+
+Remote `3f0f17f9` was also inspected: its midpoint bound improves the canonical
+exponent to 2/3 through constant-width completion/support energy. That report
+is not needed here. Replacing the parameter below by its sharper bound is a
+conditional substitution only. No new literature is imported.
+
+All points, including contact isolates, remain in the actual source. Stress
+energies may ignore zero rows at isolates; no affine-kernel statement is
+extended to their coordinates. A contact cut means an actual membership set,
+not a line in a virtual grid.
+
+## 2. Exact cut force and torque
+
+Let P be a diameter-D planar source carrying a normalized nonnegative
+equilibrium stress alpha on its unit contacts and beta on its actual diameters.
+For an actual cut S, orient every crossing edge from outside to inside.
+Suppose all crossing contacts have one vector u, |u|=1. Put
+
+\[
+ A_S=\sum_{e\in C(S)}\alpha_e>0,\quad
+ W_S=\sum_{h\in H(S)}\beta_h,
+ \quad q(x)=Ju\cdot(x-o),
+\]
+
+where o is any chosen origin. For an edge e write m_e for its midpoint;
+for a crossing diameter write r_h=p_{\rm in}-p_{\rm out}.
+
+### CT.1 — force centroid identity
+
+\[
+ \sum_{h\in H(S)}\beta_h r_h=A_Su,\qquad
+ A_S\bar q_S=-\sum_{h\in H(S)}\beta_h(m_h-o)\times r_h,
+ \quad
+ \bar q_S={\sum_{e\in C(S)}\alpha_e q(m_e)\over A_S}.       \tag{2}
+\]
+
+If every crossing diameter midpoint is within distance b of o, then
+
+\[
+ \boxed{|\bar q_S|\le {DbW_S\over A_S}.}                    \tag{3}
+\]
+
+**Proof.** Sum vertex equilibrium over S. Internal-edge forces cancel, giving
+the first identity. Multiply each equilibrium equation at p by the planar
+moment arm p-o and sum cross products. Internal edges again cancel, since
+their forces are parallel to their endpoint differences. A crossing edge
+contributes (m_e-o) cross its oriented vector: replacing the inside endpoint
+by the midpoint subtracts half that vector and changes no torque. Since
+(m_e-o) cross u = -q(m_e), the second identity follows. Bound each diameter
+torque by |m_h-o| |r_h| <= bD to obtain (3). This uses full vector equilibrium
+at actual vertices, not just projected stationarity. ∎
+
+## 3. Threshold packet lever budget
+
+Assume the actual transversely active gap graph is the paired tree T of the
+threshold theorem. Orient every diameter from the lower A-layer to the higher
+A-layer; its nonempty support is (a,b]. The unique A-parallel diameter h0 has
+vector Du and support on every selected cut. Let o be the midpoint of h0,
+so its transverse moment is zero.
+
+For each simple tree edge e={a,b}, collect **all** actual rows with that
+support, not just a basis or one physical representative. Write
+
+\[
+ B_e=\sum_{h\in H_e}\beta_h,\quad
+ \sum_{h\in H_e}\beta_hr_h=R_eu,\quad R_e>0,
+ \quad T_e=-\sum_{h\in H_e}\beta_h(m_h-o)\times r_h,
+ \quad \ell_e=T_e/R_e.                                     \tag{4}
+\]
+
+The vanishing transverse resultant follows from tree-cut balance of the
+strictly positive circulation. Positivity of R_e is a separately audited
+geometric premise here (and follows from (L)). The axial resultant acts on
+the line q=ell_e. This line is determined by its force and torque even if the
+packet has many diameter bars. It need not be a source line or a contact row.
+
+### CT.2 — additive lever and peripheral-reaction estimates
+
+If all actual diameter midpoints are within b of o, then
+
+\[
+ \boxed{\sum_{e\in E(T)}R_e|\ell_e|
+ =\sum_e|T_e|\le Db\sum_e B_e\le Db.}                       \tag{5}
+\]
+
+In particular, for t>0,
+
+\[
+ \boxed{\sum_{|\ell_e|\ge t}R_e\le Db/t.}                   \tag{6}
+\]
+
+For every selected cut i,
+
+\[
+ A_i=\beta_0D+\sum_{e:i\in(a_e,b_e]}R_e,
+ \qquad A_i\bar q_i=\sum_{e:i\in(a_e,b_e]}R_e\ell_e.         \tag{7}
+\]
+
+**Proof.** The triangle inequality bounds |T_e| by Db B_e. The packets
+partition the nonparallel rows of nonempty A-support, so their total beta
+mass is at most one. Summing proves (5), and (6) follows by restricting the
+sum to |ell_e|>=t. Sum (4) over the packets crossing cut i and include h0;
+CT.1 gives (7). Rows with empty A-support do not cross these cuts and add
+neither force nor torque. ∎
+
+This additive statement bounds the reaction measure, not the count of packets
+or the location of individual contact edges. With b=o(D), axial reaction at
+macroscopic lever distance t=epsilon D has total size o(D).
+
+### CT.3 — contact-force centroids away from the pivot
+
+Let r be the common retained cut index of all intervals of T. If (L) holds,
+put
+
+\[
+ k_i=|i-r|+1,\qquad \kappa_i=\min\{D/16,2k_i/3\}.
+\]
+
+Then
+
+\[
+ \boxed{A_i\ge\kappa_i W_i,\qquad
+ |\bar q_i|\le Db/\kappa_i.}                               \tag{8}
+\]
+
+**Proof.** Every packet interval containing i also contains r, so its length
+is at least k_i. Apply (L) to each such packet. The reference row contributes
+beta_0 D >= kappa_i beta_0. The crossing mass W_i is exactly beta_0 plus
+the masses of those packets. This proves the first inequality; CT.1 proves
+the second. No mass is replaced by an unweighted interval count. ∎
+
+For a canonical source, choose its full-source circumcenter c and put
+
+\[
+ \eta=3^{1/4}\sqrt D,\qquad
+ b_c=\sqrt{D\eta+\eta^2}.
+\]
+
+FS.1 and the midpoint identity
+|m_h-c|^2+D^2/4=(|p_h-c|^2+|q_h-c|^2)/2 give
+|m_h-c|<b_c. As o is itself an actual diameter midpoint, b=2b_c suffices
+for all rows. Thus b=O(D^(3/4)). For |i-r|>=epsilon D, (8) implies
+
+\[
+ |\bar q_i|\le {2b_c\over\min\{1/16,2\epsilon/3\}}
+ =O_\epsilon(D^{3/4}).                                    \tag{9}
+\]
+
+This is a conditional threshold conclusion with canonical midpoint input.
+It concerns the stress centroid of every such **actual** contact cut, even
+when its stress mass is tiny. The sharper unpromoted midpoint theorem would
+replace the exponent by 2/3 after its separate audit.
+
+## 4. Next attack: does centroid localization localize the ports?
+
+The answer is no under equilibrium/PSD alone. The following actual embedded
+sources refute that proposed closing step. They are a specific continuation
+of the repository's shell regressions, not new global-minimizer examples.
+
+For even q>=4 let a=pi/q, R=1/(2 sin a), and take the regular unit q-gon
+of radius R. Its actual contacts are its q sides and its actual diameters
+are its q/2 antipodal pairs of length D=2R. Use
+
+\[
+ \alpha_e=D^2/q,\qquad \beta_h=2/q.                         \tag{10}
+\]
+
+These coefficients are strictly positive, normalized, and satisfy every
+vertex equilibrium equation. The contact Laplacian acts on the coordinate
+modes by 4 alpha sin^2(a)=4/q; the diameter matching acts by 2 beta=4/q.
+The full scalar stress has Fourier eigenvalues
+
+\[
+ \lambda_j={4\over q}\left[
+ {\sin^2(ja)\over\sin^2a}-\mathbf1_{j\ \mathrm{odd}}\right]. \tag{11}
+\]
+
+They are nonnegative, and vanish exactly at j=0,1,q-1: for odd j the smallest
+nonzero sine magnitude is sin a, attained only at 1,q-1; for nonzero even
+j the first term is positive. Thus Omega is PSD with exactly the affine
+scalar kernel. All actual diameter midpoints are zero.
+
+Cut off q/2 consecutive vertices. The two crossing unit sides have the
+same oriented vector u. Their midpoint q-coordinates are
+
+\[
+ \pm R\cos a.
+\]
+
+They have equal positive alpha. Consequently
+
+\[
+ \boxed{\bar q_S=0,\qquad
+ {1\over A_S}\sum_{C(S)}\alpha_e q(m_e)^2
+ ={D^2\over4}\cos^2a.}                                    \tag{12}
+\]
+
+For any fixed 0<epsilon<1/4, all crossing contact mass lies outside
+|q|<=epsilon D, although the diameter midpoint radius and the contact-force
+centroid are identically zero. The contact variance is macroscopic as
+D tends to infinity. When q=2 mod 4 there is also an actual diameter parallel
+to u crossing the cut; the threshold reference line is therefore literal.
+There is only one selected cut here, not the required linear-size complete
+O--O rectangle. Its contact train stops at the bounded polygon face.
+
+The shell has q=Theta(D), fails global optimality for large q, and for q>=6
+fails canonical full mixed rigidity: its e+h=3q/2 rows have a nonzero
+equilibrium dependence, so rank <=3q/2-1<2q-3. These missing hypotheses are
+explicit. Formula (12) rejects centroid+full equilibrium+PSD+affine scalar
+kernel as a spatial-concentration bridge; it does not reject a theorem using
+the actual complete two-shore source, global optimality, and mixed rigidity.
+
+## 5. Repaired next attack: the actual cut moment Gram
+
+One might try to recover port concentration by applying PSD to the first
+transverse moment of the cut indicator. The exact form shows why this also
+supplies no upper variance bound by itself.
+
+Let chi be the membership indicator of S on the positive-contact core.
+The affine coordinate q satisfies Omega q=0. Suppose Omega is PSD. Let
+
+\[
+ G=\begin{pmatrix}
+ \chi^T\Omega\chi&\chi^T\Omega(q\chi)\\
+ (q\chi)^T\Omega\chi&(q\chi)^T\Omega(q\chi)
+ \end{pmatrix}.
+\]
+
+### CM.1 — exact source cut moment form
+
+\[
+ \boxed{
+ G=\begin{pmatrix}
+ A_S-W_S& A_S\bar q_S-\sum_{H(S)}\beta_hq(m_h)\\
+ A_S\bar q_S-\sum_{H(S)}\beta_hq(m_h)&
+ \sum_{C(S)}\alpha_eq(m_e)^2
+ -\sum_{H(S)}\beta_hq(p_{\rm out})q(p_{\rm in})
+ \end{pmatrix}\succeq0.}                                  \tag{13}
+\]
+
+**Proof.** The (1,1) entry is the usual signed cut energy. The direct expansion
+of the off-diagonal entry is the crossing signed sum of the inside endpoint's
+q-coordinate. Summing Omega q=0 over S gives zero signed sum of crossing
+q-differences. Subtract half of that identity to replace inside q by midpoint
+q; parallel crossing contacts have equal endpoint q. For the final entry,
+expand the signed edge energy of q chi and subtract
+sum_v chi_v^2 q_v (Omega q)_v=0. Internal edges cancel; each crossing edge
+leaves its signed weight times q_out q_in. Contacts again have equal q.
+This proves (13), and PSD of the restricted quadratic form proves its sign. ∎
+
+If every diameter midpoint is zero, then the off-diagonal entry is zero by
+CT.1, while
+
+\[
+ G_{22}=\sum_{C(S)}\alpha_e q(m_e)^2
+       +\tfrac14\sum_{H(S)}\beta_h(q(p_{\rm in})-q(p_{\rm out}))^2.
+                                                               \tag{14}
+\]
+
+Both terms are nonnegative. Increasing the contact variance makes this
+particular PSD condition easier to satisfy. The square and hexagon certify
+this sign with exact full-source matrices. Thus the attempted repair through
+this moment Gram also fails; PSD has supplied no upper contact-variance
+estimate. No assertion is made that all possible source inequalities fail.
+
+## 6. Computation and adversarial audit
+
+[Exact verifier](../../research/verify_threshold_cut_torque_2026_10_02.py):
+square over Q and regular hexagon over Q(sqrt(3)). It checks all pair lengths,
+actual contact/diameter sets, normalized positive full vertex equilibrium,
+Omega^2=2 Omega and its affine kernel, every chosen opposite-side cut,
+CT.1 and the complete matrix (13), nonzero peripheral contact variance,
+and invariance under a translated origin. The general lever budget, conditional
+threshold corollary, and all-even-q construction have the analytic proofs above.
+Finite computations do not establish global optimality or an unbounded
+global-minimizer family. The shell regression does not encode the complete
+O--O rectangle, full mixed rigidity, or finite feasibility of any train move.
+
+| Claim | Classification | Exact limit |
+| --- | --- | --- |
+| CT.1 source centroid identity | proved candidate awaiting promotion | actual uniform contact cut and full vertex equilibrium |
+| CT.2 additive lever budget | proved candidate awaiting promotion | actual balanced positive axial packets and midpoint radius |
+| CT.3 distant-pivot centroid bound | conditional | unpromoted threshold tree and length-reaction floor |
+| CM.1 moment form | proved candidate awaiting promotion | actual source PSD and affine harmonic coordinate |
+| Centroid localization implies peripheral port mass o(1) | rejected / regression | even shells have zero centroid and all cut mass peripheral |
+| This cut moment Gram yields a small upper contact variance | rejected / regression | variance enters (14) with positive sign |
+| C-II/Level I closure | unproved | no actual-source finite competitor or branch elimination |
+
+Stars and paths are allowed in the packet theorem. Every actual row is kept;
+no basis deletion, Euler-path inference, coefficient floor, source/scaffold
+identification, or deletion of isolated points is used. No infinitesimal
+calculation is called a finite release.
+
+## 7. Exact remaining gap and disposition
+
+The next source obligation is a **spatial estimate on the actual positive
+contact-port measure beyond its first moment** (or a finite move bypassing
+that measure), using the linear complete rectangle and canonical mixed
+rigidity. The attempted centroid and moment-Gram implications were tested
+and failed, rather than left as presumed closing lemmas. CT.2 remains a valid
+additive reaction constraint for a different co-embedding argument.
+
+This packet eliminates no global branch. Threshold and open-cell exact phase,
+nonconstant phase, split-star O--O, inactive interfaces, macroscopic inactive
+containers/exterior caps, and higher-surplus full-core sources all remain open.
+The canonical manifest, route map and prompt are unchanged. Promotion
+recommendation: preserve unreviewed, independently audit CT.1--CT.3/CM.1,
+and require the full promotion transaction before using any new claim as canonical.

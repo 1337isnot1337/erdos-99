@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+from decimal import Decimal, getcontext
+getcontext().prec = 70
+D = Decimal
+pi = D('3.141592653589793238462643383279502884197169399375105820974944592307816')
+sqrt3 = D(3).sqrt()
+Delta2 = pi / (D(2) * sqrt3)
+r = Delta2.sqrt()
+C0 = D(2) * r + D('0.00042')
+C146 = D(4) / D(9) * (pi + r)
+t42 = C146 + D('0.0013751')
+def A(t):
+    return pi + C0 - D(5) * t / D(2)
+at42 = A(t42)
+a18585 = A(D('1.8585'))
+hidden42 = at42 / D(4)
+hidden18585 = a18585 / D(4)
+chain42 = at42 / D(13)
+chain18585 = a18585 / D(13)
+fstar = r - pi / D(4) + D('0.00021')
+old_center = fstar / D(5)
+old_chain = fstar / D(13)
+assert D('0.4944166') < at42 < D('0.4944168')
+assert D('0.1236041') < hidden42 < D('0.1236042')
+assert D('0.0380320') < chain42 < D('0.0380321')
+assert D('0.4003882') < a18585 < D('0.4003884')
+assert D('0.1000970') < hidden18585 < D('0.1000972')
+assert D('0.0307990') < chain18585 < D('0.0307992')
+assert at42 / old_center > D('14.7')
+assert chain42 / old_chain > D('2.95')
+eps0 = pi / D(12)
+assert D(2) * (pi - eps0) + pi / D(3) > D(2) * pi
+shoulder = D(7) * pi / D(12)
+assert D(4) * shoulder > D(2) * pi
+assert (pi - eps0) + D(2) * shoulder > D(2) * pi
+print('PASS low-t flat-center amplification arithmetic')
+print('t42 =', t42)
+print('V_flat/D at t42 >=', at42)
+print('H_flat/D at t42 >=', hidden42)
+print('C_flat/D at t42 >=', chain42)
+print('V_flat/D at 1.8585 >=', a18585)
+print('H_flat/D at 1.8585 >=', hidden18585)
+print('C_flat/D at 1.8585 >=', chain18585)
+print('center improvement factor =', at42 / old_center)
+print('chain improvement factor =', chain42 / old_chain)

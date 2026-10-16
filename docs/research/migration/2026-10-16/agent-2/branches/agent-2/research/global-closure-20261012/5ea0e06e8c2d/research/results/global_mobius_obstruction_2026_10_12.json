@@ -1,0 +1,85 @@
+{
+  "classification": "exact finite certificate; no globality oracle",
+  "symbolic_identities": "passed",
+  "grids": [
+    {
+      "grid_side": 2,
+      "labels": 4,
+      "pairs": 6,
+      "admissible_poles_tested": 14,
+      "proof_regimes_checked": [
+        "diameter_and_far_unit_pair"
+      ]
+    },
+    {
+      "grid_side": 3,
+      "labels": 9,
+      "pairs": 36,
+      "admissible_poles_tested": 14,
+      "proof_regimes_checked": [
+        "diameter_and_far_unit_pair",
+        "new_pair_in_central_diamond"
+      ]
+    },
+    {
+      "grid_side": 4,
+      "labels": 16,
+      "pairs": 120,
+      "admissible_poles_tested": 14,
+      "proof_regimes_checked": [
+        "diameter_and_far_unit_pair",
+        "new_pair_in_central_diamond"
+      ]
+    },
+    {
+      "grid_side": 5,
+      "labels": 25,
+      "pairs": 300,
+      "admissible_poles_tested": 14,
+      "proof_regimes_checked": [
+        "diameter_and_far_unit_pair",
+        "new_pair_in_central_diamond"
+      ]
+    },
+    {
+      "grid_side": 6,
+      "labels": 36,
+      "pairs": 630,
+      "admissible_poles_tested": 14,
+      "proof_regimes_checked": [
+        "diameter_and_far_unit_pair",
+        "new_pair_in_central_diamond"
+      ]
+    },
+    {
+      "grid_side": 8,
+      "labels": 64,
+      "pairs": 2016,
+      "admissible_poles_tested": 14,
+      "proof_regimes_checked": [
+        "diameter_and_far_unit_pair",
+        "new_pair_in_central_diamond"
+      ]
+    }
+  ],
+  "augmented_full_source": {
+    "labels": 65,
+    "pairs": 2080,
+    "contact_isolates_added": 1,
+    "squared_diameter": 98,
+    "poles_checked": 4
+  },
+  "inactive_pair_control": {
+    "labels": 8,
+    "pairs": 28,
+    "old_active_pair_prediction_d2": 4,
+    "actual_normalized_d2": 8
+  },
+  "whole_source_replacement": {
+    "labels": 9,
+    "pairs": 36,
+    "squared_diameter": "125/17",
+    "strict_squared_margin_against_grid": "11/17",
+    "triangle_free": true
+  }
+}

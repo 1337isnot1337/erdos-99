@@ -1,0 +1,168 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "d03b6573a64aaa7157ddc775ee1fda9226d2ba1e", "source_branch_refs": ["refs/heads/research/sol/target-c-level1-gpt61-2026-10-04"], "source_commit": "316b7e33d3fe0f37a0bc69ea56ce1c34d189ffd5", "source_lifecycle": "not indexed", "source_path": "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "066a4b1b7fbb3f2a5c22c446dddc2509939c696f52816a8107a5c55a3acb1218"} -->
+
+> **Historical branch snapshot; destination authority remains current.** Pinned destination or source main has different content at this path; the current main version remains and branch history is archived.
+
+# Erdős Problem #99 — current Target C continuation
+
+**State:** `2026-10-05.audit.54`
+**LEVEL I STATUS: STILL OPEN.**  
+**C-I: CLOSED.**  
+**C-II: OPEN.**
+
+## Bootstrap
+
+Read, in order:
+
+1. `docs/STATE.md`;
+2. `docs/problem/statement.md`;
+3. `docs/targets/target-c/CURRENT.md`;
+4. `docs/targets/target-c/README.md`;
+5. `docs/targets/target-c/105-121-promotion-audit-2026-09-12.md`;
+6. `docs/targets/target-c/122-123-promotion-audit-2026-09-12.md`;
+7. the canonical modules/reports explicitly named by `docs/state/theorem-state.yaml`;
+8. this prompt last.
+
+Do not infer theorem authority from a merge, date, filename, or section number.
+
+## Mission
+
+Close C-II for every sufficiently large triangle-free global minimizer in the canonical normal form, or produce a valid Level I disproof. Do not spend the run re-proving audited extraction/density machinery or optimizing another carrier decimal unless it creates a new implication to global closure.
+
+## Binding normalization
+
+Use the contact-minimal, then diameter-pair-minimal representative and retain every source point, including contact-isolated points.
+
+The §57 ZR/ZF theorem is only on the nonisolated positive-contact core `V`:
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\qquad
+\operatorname{rank}R_{C\cup H}[V]=2v-3.
+\]
+
+Do not extend this affine-kernel theorem to contact-isolated coordinates. Full-source geometry comes from the separate canonical full-source modules.
+
+## Canonical input to treat as solved
+
+Audit.54 is controlling.
+
+Retain all audit.52--53 structure:
+
+- \(\mu_D\ge\mu_{\rm hull}+\varepsilon_*\);
+- \(R_F\ge(\kappa_{\rm fr}-o(1))D\);
+- \(\sigma_C=0\) and the smooth exact contact manifold;
+- the positive reciprocal \((2,3)\)-sparse bounded-end train graph;
+- \(|\mathcal O|\ge q-k\);
+- simultaneous global face-return quotas;
+- joint bulk/face separator capacity;
+- terminal short-pocket outer-train depletion and physical wall frustration at its exact scope;
+- loaded-flat-pentagon second depletion at its exact scope.
+
+Audit.54 adds two positive theorems.
+
+1. **\`C-EMBEDDED-WALL-REFILL\`.** For pairwise interior-disjoint simple walls of actual unit contacts, let \(S_j\) be the old interior source populations and \(M_j\) certified wall-safe unit-separated refill capacities. If \(T\) covers every actual diameter pair and
+   \[
+   \boxed{
+   \sum_jM_j\ge\sum_j|S_j|+|T|,
+   }
+   \]
+   then there is a same-cardinality unit-separated source with diameter strictly below \(D\).
+
+   In the contact-minimal representative, one wall with enough certified capacity to replace its old interior population already contradicts contact minimality if one deleted interior point carried a contact.
+
+   Exact consequences already canonical:
+   - no actual \(7\times7\) unit square contact patch;
+   - no \(1/50\)-near-square actual contact perturbation of it;
+   - no consecutive affine oblique patch satisfying the audit.54 area inequality.
+
+2. **\`C-PENTAGON-WALL-DISJOINT-BULK\`.** A pentagon-to-pentagon train family can be thinned to pairwise source-vertex-disjoint terminal pentagon walls while retaining a fixed positive fraction of its nonconflicting strict-rhombus crossings.
+
+   In the full-core branch
+   \[
+   m_B=o(D),\qquad u_B=o(D),\qquad Q-f=o(D),
+   \]
+   the canonical post-hull-depletion quadratic bulk is asymptotically pentagon-to-pentagon. Therefore there is a family \(\mathcal L\) with
+   \[
+   \boxed{
+   |\mathcal L|=\Omega(D),\qquad
+   R(\mathcal L)=\Omega(D^2),\qquad
+   |x_\tau-y_\tau|=\Omega(D)\ \forall\tau\in\mathcal L,
+   }
+   \]
+   and all terminal physical pentagon walls are pairwise source-vertex-disjoint.
+
+Two fixed-wall mechanisms are now formally dead:
+
+- \`C-FIXED-WALL-ACTIVATION-REGRESSION\`: positive residual/phase mismatch/KKT rigidity does not imply one fixed-wall spare site, even after deleting one wall point in the finite pentagon packet.
+- \`C-LARGE-WALL-LOCK-REGRESSION\`: arbitrarily large near-triangular unit walls with quadratic interior population can still be completely fixed-wall locked.
+
+Do not infer refill capacity from positive residual, near-triangularity, or wall size alone.
+
+## Exact next split
+
+### Full-core branch
+
+The highest-value live route is now **collective movable-wall activation**.
+
+In the low-endpoint-defect branch
+\[
+m_B=o(D),\qquad u_B=o(D),\qquad Q-f=o(D),
+\]
+you already have:
+
+- \(\Omega(D)\) macroscopically long stopped trains;
+- \(\Omega(D^2)\) retained strict-rhombus crossings;
+- pairwise source-vertex-disjoint terminal physical pentagon walls;
+- globally disjoint loaded-return paths from exceptional-face defect;
+- a smooth exact contact manifold;
+- a positive reciprocal train realization;
+- the Sections 122--123 detour/payment currency.
+
+The target implication is
+\[
+\boxed{
+\text{collective wall motion/defect}
+\Longrightarrow
+\text{certified wall-safe packing surplus}
+\Longrightarrow
+\text{surplus pays an actual diameter cover}
+\Longrightarrow
+\operatorname{diam}<D.
+}
+\]
+
+High-value attacks:
+
+1. construct simultaneous finite motions of many disjoint pentagon walls using contact-manifold coordinates while keeping all cross-wall lower constraints valid;
+2. prove that long-train/quadratic-crossing coupling forces a positive fraction of those walls to acquire a quantitative refill surplus;
+3. route the audit.53 globally distinct loaded returns into a diameter-cover bound compatible with the same wall family;
+4. extract a consecutive near-square or sufficiently oblique affine patch so \`C-EMBEDDED-WALL-REFILL\` applies immediately;
+5. prove that if the diameter cage blocks all such collective motions, the blocker geometry forces an exact unit equilateral triangle.
+
+Do **not** attempt a universal theorem of the form “positive residual implies one spare point” or “sufficiently large near-triangular wall admits strict refill”; audit.54 contains exact regressions to both.
+
+Outside the low-endpoint-defect regime, first force linear \(m_B\), \(u_B\), or \(Q-f\) to pay against the existing canonical scalar/return ledgers, or reduce back to the wall-disjoint branch.
+
+### Macroscopic inactive-container branch
+
+The new embedded-wall theorem gives the desired endpoint here as well: extract actual unit-contact walls with enough certified packing surplus to replace their interiors and pay an actual diameter cover. The obstacle is now extraction/capacity, not the final source-competitor bookkeeping.
+
+## Binding dead routes
+
+Do not use without a new proof:
+
+- incident-diameter sequence `=>` Euler trail/path;
+- FB4 force-bulk localization;
+- incompatible-cut C53 pentagon objection;
+- RSR disk-equality uniqueness;
+- Eppstein near-equality `=>` near quadrangulation;
+- five-host measure saturation `=>` all hosts occupied;
+- inward OP pocket `subset` exterior Reuleaux minor cap;
+- deletion of contact-isolated source points;
+- full-source extension of the §57 affine-kernel theorem;
+- `r/(6C_T)` as the sharp limit of the Section-90 bin method;
+- `G_loc=o(D^2) => G_loc/d=o(1)` in Section 121.
+
+## Research standard
+
+Before promoting a new lemma, write its exact dependency chain to either an exact unit triangle, a source-preserving strict sub-`D` competitor, or the Level I conclusion. A computation may certify finite arithmetic or a regression; it does not supply global optimality.

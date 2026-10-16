@@ -1,0 +1,381 @@
+# Target C — exact decomposition of the aggregate outer-walk detour
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** proof-only research theorem stacked on canonical theorem-state `2026-09-12.audit.46`.  
+**Dependencies:** canonical Sections 62, 75, 82, 122, and 123.
+
+Canonical Sections 122--123 isolate the full-core residual
+
+\[
+S_{\rm out}:=\sum_r(L_r-2d_r)
+\]
+
+but leave it as an aggregate route quantity. The local Section-82 face identity and
+the exact augmented-cell ledger of Section 123 determine this quantity much more
+rigidly than that formulation suggests.
+
+For each unloaded component `I_r`, write
+
+- `a_r=|A_r|` for its number of distinct loaded attachments;
+- `d_r=diam(conv(A_r))`;
+- `s_r=e_r+t_r-2n_r-1` for its pinned surplus;
+- `c_r` for loaded-loaded unit contacts whose endpoints both lie in `A_r`;
+- `Q_r` for the bounded nonquadrilateral degree-above-four defect of the induced
+  harmonic graph `H_r`;
+- `f_r` for its number of bounded nonquadrilateral faces.
+
+Put
+
+\[
+a:=\sum_ra_r,\quad
+C_{\rm loc}:=\sum_rc_r,\quad
+Q_{\rm loc}:=\sum_rQ_r,\quad
+F_{\rm loc}:=\sum_rf_r.
+\]
+
+Let `d_tile` be canonical Section 123's polygon-dissection deficit and
+`k=d_H+s_Z`.
+
+The exact finite identities proved below are
+
+\[
+\boxed{
+S_{\rm out}
+=2\sum_r(a_r-d_r)
++2(e_{BB}-k)
+-2d_{\rm tile}
+-2C_{\rm loc}
+-Q_{\rm loc}.
+}
+\tag{1}
+\]
+
+and, after adding the same exceptional-face perimeter that appears in Section 122,
+
+\[
+\boxed{
+\sum_r(L_r+P_{{\rm exc},r}-2d_r)
+=2\sum_r(a_r-d_r)
++2(e_{BB}-k)
+-2d_{\rm tile}
+-2C_{\rm loc}
++4F_{\rm loc}.
+}
+\tag{2}
+\]
+
+The `Q_loc` term cancels exactly in (2). Thus the aggregate return demand is paid by
+attachment cardinality-minus-diameter, one global loaded-contact scalar, and the
+actual number of local exceptional faces, with three explicit favorable subtractions.
+It is not an independent outer-walk currency.
+
+There is also an equivalent form exposing the canonical all-phase surplus
+
+\[
+\mu_DD:=e_{BB}+2s_C-3k.
+\]
+
+Using the pinned ledger and the exact dissection identity gives
+
+\[
+\boxed{
+S_{\rm out}
+=6q-12-2\mu_DD-4k
+-2\sum_rd_r
+-4d_{\rm tile}
+-2C_{\rm loc}
+-Q_{\rm loc}.
+}
+\tag{3}
+\]
+
+Equation (3) removes `e_BB` completely. It makes clear that a useful upper bound on the
+live outer detour can come from any strengthening of the loaded-vertex count, the
+all-phase surplus, the sum of actual cell diameters, the dissection deficit, or the
+local loaded-contact/face defect.
+
+These identities do not close C-II by themselves. They are a structural reduction of
+the exact currency named in the audit.46 frontier.
+
+---
+
+## 1. Local face algebra
+
+Canonical Section 82 gives, for every harmonic induced graph,
+
+\[
+\boxed{
+L_r+Q_r=4a_r-6-2s_r-2c_r.
+}
+\tag{4}
+\]
+
+Define
+
+\[
+\eta_r:=a_r-3-s_r\ge0.
+\tag{5}
+\]
+
+Then `s_r=a_r-3-eta_r`, so (4) becomes
+
+\[
+\begin{aligned}
+L_r
+&=4a_r-6-2(a_r-3-\eta_r)-2c_r-Q_r\\
+&=2a_r+2\eta_r-2c_r-Q_r.
+\end{aligned}
+\]
+
+Hence
+
+\[
+\boxed{
+L_r-2d_r
+=2(a_r-d_r)+2\eta_r-2c_r-Q_r.
+}
+\tag{6}
+\]
+
+No asymptotic estimate has been used.
+
+---
+
+## 2. Section 123 determines the total `eta` exactly
+
+Canonical Section 123 augments the internal/attachment graph of each component by the
+attachment polygon. Its exact global ledger is
+
+\[
+\boxed{
+e_{BB}-k
+={1\over2}\sum_r(a_r-T_r+Q_r^+)+d_{\rm tile}.
+}
+\tag{7}
+\]
+
+The same section proves locally
+
+\[
+\boxed{
+\eta_r=a_r-3-s_r
+={a_r-T_r+Q_r^+\over2}.
+}
+\tag{8}
+\]
+
+Therefore
+
+\[
+\boxed{
+\sum_r\eta_r=e_{BB}-k-d_{\rm tile}.
+}
+\tag{9}
+\]
+
+Sum (6), use (9), and use the definitions of `C_loc` and `Q_loc`. This gives exactly
+(1).
+
+No injectivity of the `c_r` is required. If one loaded-loaded contact belongs to more
+than one attachment set, it appears with the same multiplicity on both sides of the
+summed local Section-82 identities. Since `C_loc` enters (1) with a favorable minus
+sign, later upper bounds may simply discard it.
+
+---
+
+## 3. Exceptional perimeter cancels the degree excess
+
+For one harmonic graph,
+
+\[
+P_{{\rm exc},r}=4f_r+Q_r.
+\tag{10}
+\]
+
+Adding (10) to (6) gives
+
+\[
+L_r+P_{{\rm exc},r}-2d_r
+=2(a_r-d_r)+2\eta_r-2c_r+4f_r.
+\tag{11}
+\]
+
+Summing and using (9) proves (2).
+
+This cancellation is exact. In particular, replacing `P_exc` by the generic estimate
+`P_exc<=5Q` before summing loses information: the degree-excess part `Q_r` already
+cancels against the `-Q_r` in the outer-face identity.
+
+Canonical Section 122 therefore immediately implies the necessary Type-II condition
+
+\[
+\boxed{
+\liminf_{D\to\infty}{1\over D}
+\left[
+2\sum_r(a_r-d_r)
++2(e_{BB}-k)
+-2d_{\rm tile}
+-2C_{\rm loc}
++4F_{\rm loc}
+\right]
+\ge {\pi\over2}(2-\sqrt3).
+}
+\tag{12}
+\]
+
+This is equivalent to Section 122, not a stronger lower bound. Its value is that every
+term is now a source-level cell/loaded-graph quantity rather than route multiplicity.
+
+---
+
+## 4. Eliminate attachment incidence in favor of the all-phase surplus
+
+Let
+
+\[
+c_I=\#\{I_r\},\qquad s_C=\sum_rs_r.
+\]
+
+Canonical Section 123 defines
+
+\[
+d_{\rm tile}=q-2-a+2c_I,
+\]
+
+so
+
+\[
+\boxed{a=q-2+2c_I-d_{\rm tile}.}
+\tag{13}
+\]
+
+Canonical Section 62 gives the exact pinned ledger
+
+\[
+\boxed{c_I+e_{BB}+s_C=q-2+k,}
+\tag{14}
+\]
+
+hence
+
+\[
+c_I=q-2+k-e_{BB}-s_C.
+\tag{15}
+\]
+
+Substitute (15) into (13):
+
+\[
+\boxed{
+a=3q-6+2k-2e_{BB}-2s_C-d_{\rm tile}.}
+\tag{16}
+\]
+
+Now start from (1), replace `sum(a_r-d_r)` by `a-sum d_r`, and use (16):
+
+\[
+\begin{aligned}
+S_{\rm out}
+={}&6q-12+4k-4e_{BB}-4s_C-2d_{\rm tile}-2\sum_rd_r\\
+&+2e_{BB}-2k-2d_{\rm tile}-2C_{\rm loc}-Q_{\rm loc}\\
+={}&6q-12+2k-2e_{BB}-4s_C
+-2\sum_rd_r-4d_{\rm tile}-2C_{\rm loc}-Q_{\rm loc}.
+\end{aligned}
+\tag{17}
+\]
+
+Since
+
+\[
+-2\mu_DD-4k
+=-2(e_{BB}+2s_C-3k)-4k
+=2k-2e_{BB}-4s_C,
+\]
+
+(17) is exactly (3).
+
+Canonical Section 75 also gives `c_I=O(D^(2/3))` and the asymptotic identity
+
+\[
+\mu_DD=2q-e_{BB}-k+O(D^{2/3}).
+\]
+
+Substitution in (3) yields the equivalent Type-II asymptotic form
+
+\[
+\boxed{
+S_{\rm out}
+=2q+2(e_{BB}-k)-2\sum_rd_r
+-4d_{\rm tile}-2C_{\rm loc}-Q_{\rm loc}
++O(D^{2/3}).
+}
+\tag{18}
+\]
+
+Equation (18) is optional; the finite identities (1)--(3) are the main result.
+
+---
+
+## 5. Immediate consequences and the actual new target
+
+Dropping only favorable nonnegative terms from (1) gives
+
+\[
+\boxed{
+S_{\rm out}
+\le2\sum_r(a_r-d_r)+2(e_{BB}-k).
+}
+\tag{19}
+\]
+
+Dropping favorable terms from (3) gives
+
+\[
+\boxed{
+S_{\rm out}
+\le6q-12-2\mu_DD-4k-2\sum_rd_r.
+}
+\tag{20}
+\]
+
+Neither bound is numerically closing with the currently canonical coarse estimates;
+for example `q<=pi D` is much too weak. The identities instead isolate two plausible
+structural closing routes.
+
+1. **Near-disk attachment geometry.** Because every `A_r` is a subset of the loaded
+   vertices of the asymptotically circular force hull, prove a sharp aggregate lower
+   bound on `sum d_r` or upper bound on `sum(a_r-d_r)` which also retains
+   `d_tile`. The cell polygons are interior-disjoint and `c_I=o(D)`, so this is a
+   finite noncrossing-inscribed-polygon problem rather than arbitrary convex packing.
+2. **Loaded diameter/contact coupling.** Use the Woodall diameter graph and the
+   near-disk loaded-contact structure to improve the combination
+   `6q-2 mu_D D-4k`. This attacks exactly the same source-level quantity as the
+   canonical detour theorem; no carrier decimal is involved.
+
+The first route is especially attractive because the large positive terms in (3) are
+all global while `-2 sum d_r` and `-4d_tile` are already present with the correct
+sign. A lower bound that becomes stronger when the cell dissection fragments is not
+available in the current canonical stack.
+
+---
+
+## 6. Hostile checks
+
+1. **No sign assumption on `a_r-d_r`.** The difference can be negative; equations
+   (1)--(3) are identities and never assert otherwise.
+2. **Repeated loaded-loaded contacts.** `C_loc=sum c_r` is occurrence-counted by
+   cells. No global injectivity is assumed.
+3. **Exceptional faces.** `Q_loc` and `F_loc` are the actual local quantities from the
+   harmonic induced graphs. Equation (2) uses only
+   `P_exc,r=4f_r+Q_r` and therefore has no face-fidelity dependency.
+4. **No unloaded components.** If `c_I=0`, all sums over `r` vanish,
+   `d_tile=q-2`, and the pinned ledger gives `e_BB-k=q-2`; equations (1)--(3)
+   reduce to `0=0`.
+5. **Contact-isolated source points.** They are retained in the full source and do not
+   enter the nonisolated-core attachment ledgers. No affine-kernel conclusion is
+   applied to them.
+6. **Theorem authority.** Audit.46 remains canonical through Section 123. This note is
+   proof-only and does not mutate theorem state.
+
+**Disposition:** proved exact source-level decomposition; C-II remains open.

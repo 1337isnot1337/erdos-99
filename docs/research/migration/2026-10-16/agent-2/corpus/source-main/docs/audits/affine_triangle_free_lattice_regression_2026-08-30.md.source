@@ -1,0 +1,65 @@
+<!-- theorem-state: {"artifact_id":"ART-B0B8B3D50C38","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Exact affine-lattice regression near the hexagonal density
+
+This is a finite, exact obstruction to a density-only proof of the Target A
+statement. It is not a global counterexample to Erdős Problem #99.
+
+For \(0<\varepsilon<1\), let \(u,v\) be vectors with
+
+\[
+|u|=1,\qquad |v|=1+\varepsilon,\qquad u\cdot v=\frac{1+\varepsilon}{2}.
+\]
+
+For an integer pair \((a,b)\), the squared norm in
+\(\Lambda_\varepsilon=\mathbb Zu+\mathbb Zv\) is
+
+\[
+\|au+bv\|^2
+=a^2+(1+\varepsilon)ab+(1+\varepsilon)^2b^2.
+\]
+
+For \(0<\varepsilon<1\), the only nonzero lattice differences of norm one are
+\(\pm u\). In particular, the unit-distance graph of every finite subset of
+\(\Lambda_\varepsilon\) is a union of parallel chains and is triangle-free. The
+fundamental area is
+
+\[
+\det\Lambda_\varepsilon
+=\frac{\sqrt3}{2}(1+\varepsilon),
+\]
+
+which tends to the hexagonal-lattice area \(\sqrt3/2\) as
+\(\varepsilon\downarrow0\).
+
+For the \(L\times L\) coordinate patch
+
+\[
+P_{L,\varepsilon}
+=\{iu+jv:0\le i,j\le L-1\},
+\]
+
+the exact minimum squared distance is \(1\), the patch is triangle-free, and its
+diameter is
+
+\[
+\operatorname{diam}(P_{L,\varepsilon})^2
+=(L-1)^2\bigl(3+3\varepsilon+\varepsilon^2\bigr).
+\]
+
+Taking \(\varepsilon=\alpha/L\) gives a triangle-free family whose determinant
+excess over the hexagonal optimum is \(O(1/L)\), and whose finite patch diameter
+differs from the unstrained patch by only \(O(1)\). Thus:
+
+- triangle-freeness does force strict loss for a fixed periodic lattice;
+- the loss has no uniform positive lower bound;
+- a finite patch can make the loss boundary-scale by taking
+  \(\varepsilon=O(1/L)\).
+
+This is the affine-lattice version of the distributed-strain regression in the
+canonical theorem state. It rules out attempts to finish Target A using only an
+asymptotic density gap or a fixed positive cost per triangle-free cell. Any
+successful argument must use the exact finite diameter boundary, source-specific
+capacity, or a comparable global invariant.
+
+The exact executable check is in research/affine_lattice.py, with tests in
+research/test_affine_lattice.py.

@@ -1,0 +1,170 @@
+# Target C — finite train primitives audit
+
+**Date:** 2026-09-12  
+**Scope:** exact finite stopped-train geometry (`DT`) and the exact outer-to-outer contact shear (`ZGS.1`) only.  
+**Disposition:** **PASS at audited-working scope.**  
+**Theorem authority:** unchanged; audit.46 remains canonical.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This audit isolates two legacy report-level lemmas that are repeatedly reused by newer Target C work. The older reports bundle these lemmas with stronger asymptotic or response claims. Those bundles remain noncanonical. The finite statements below are independently valid and may be cited without importing the rest of those reports.
+
+The audited sources are:
+
+- `docs/reports/campaign_defect_train_extension_2026-09-09.md`, Theorem DT;
+- `docs/reports/target_c_zr_global_train_shear_2026-09-09.md`, only Sections 1–2 / Theorem ZGS.1.
+
+The later ZGS claims involving `A_tau>w_tau`, weighted diameter curvature, or the old `ZK` response theorem are **not** certified here.
+
+## 1. Finite stopped-train theorem
+
+Let `G` be a finite connected straight-line unit-contact graph of a unit-separated triangle-free planar source. Let
+
+- `e` be its number of contact edges;
+- `R` the number of bounded quadrilateral faces;
+- `f` the number of bounded nonquadrilateral faces;
+- `b` the occurrence-counted outer-face boundary-walk length; and
+- `Q=sum_F(deg F-4)` over bounded nonquadrilateral faces.
+
+For every bounded quadrilateral face, join the midpoints of each pair of opposite edges. Regard contact edges incident to no quadrilateral as singleton trains.
+
+### Theorem T1 — exact stopped-train structure
+
+The resulting components are paths. Distinct trains meet in at most one rhombus. Their crossing graph is simple and triangle-free. If `T` is the number of trains, then
+
+\[
+\boxed{
+T=e-2R={b+Q\over2}+2f.
+}
+\tag{T1}
+\]
+
+The statement permits bridges, repeated outer-face occurrences, holes in the rhombic region, and arbitrary bounded exceptional faces.
+
+### Audit
+
+A bounded quadrilateral unit-contact face is a nondegenerate unit rhombus. If its interior angle is `theta`, its diagonals have lengths
+
+\[
+2\sin(\theta/2),\qquad2\cos(\theta/2).
+\]
+
+Triangle-freeness makes both diagonals strictly larger than one, hence
+
+\[
+{\pi\over3}<\theta<{2\pi\over3}.
+\]
+
+For one train choose an orientation of its fixed projective contact-edge direction `u`. Passage through a rhombus moves between opposite `u`-edge midpoints in a direction parallel to the other rhombus side. Choosing the sign with positive `Ju` projection, every midpoint step lies within angle strictly less than `pi/6` of `Ju`. Therefore projection on `Ju` strictly increases along the train. A train cannot close into a cycle or self-intersect.
+
+The auxiliary edge-link graph has one vertex for each contact edge and two links for each quadrilateral face. Every auxiliary vertex has degree at most two because a contact edge has at most two incident faces. Since every component is a path, the auxiliary graph is a forest. Thus
+
+\[
+T=e-2R.
+\]
+
+Now consider two trains that cross in a rhombus. Their projective contact directions differ by an acute angle
+
+\[
+\delta\in(\pi/3,\pi/2].
+\]
+
+Orient their midpoint paths so their normal directions make angle `delta`. Each path has tangent directions in a cone of half-width strictly less than `pi/6` about its normal. Projection on the bisector of the two normals is strictly increasing on both paths, and the two slope intervals in that coordinate are disjoint. Their height difference is therefore strictly monotone on the common projection interval. The two complete trains cross at most once. Hence the crossing graph is simple.
+
+Three trains cannot cross pairwise: three projective directions live on a circle of circumference `pi`, while pairwise crossings would force all three cyclic gaps to exceed `pi/3`. Their sum would exceed `pi`. Thus the crossing graph is triangle-free.
+
+Finally occurrence-counted face incidence gives
+
+\[
+2e=4R+b+\sum_{F\text{ nonquad}}\deg F
+=4R+b+4f+Q.
+\]
+
+Substitute `T=e-2R` to obtain (T1).
+
+**Verdict:** PASS. This agrees with the older consolidated campaign review, which independently recorded that DT's finite proof survives.
+
+## 2. Endpoint geometry for an outer-to-outer train
+
+Let `tau` be a non-singleton stopped train whose two terminal contact-edge occurrences lie on the actual global outer face.
+
+The train midpoint path is simple by Theorem T1. Inside each rhombus it meets the contact graph only at the midpoints of the two train edges. Join its two terminal midpoints by a simple arc in the outer face, disjoint from the embedded graph except at those endpoints. The union is a Jordan curve.
+
+### Lemma T2 — exact cutset
+
+The contact edges crossing the Jordan shore split are exactly the physical train edges of `tau`.
+
+### Audit
+
+Any contact edge joining the two shores must cross the Jordan curve. The outer closing arc meets no contact edge. The midpoint path meets the contact graph only at train-edge midpoints. Hence every crossing contact is a train edge, and every train edge crosses the curve once.
+
+All train edges are parallel. The monotone train orientation from T1 fixes one normal side of the midpoint path, so after choosing shore labels every cut edge oriented from one shore to the other has the same unit vector `u_tau`.
+
+**Verdict:** PASS.
+
+## 3. Exact outer-to-outer contact shear
+
+With the shore labels from T2, define
+
+\[
+\Delta_\theta:=R_\theta u_\tau-u_\tau.
+\]
+
+Translate every source vertex on one shore by `Delta_theta` and leave the other shore fixed.
+
+### Theorem T3 — exact one-train contact shear
+
+For every sufficiently small real `theta`, this finite motion preserves every actual contact length exactly and preserves unit separation of every noncontact pair.
+
+### Audit
+
+A same-shore contact is unchanged because both endpoints receive the same translation. A cut contact has vector `u_tau`, so after the translation its vector is
+
+\[
+u_\tau+\Delta_\theta=R_\theta u_\tau,
+\]
+
+which still has length one. By T2 there is no other cross-shore contact.
+
+The source is finite. Every noncontact pair starts at distance strictly greater than one. Pair distances depend continuously on `theta`, so a sufficiently small common neighborhood of `theta=0` preserves all strict noncontact inequalities simultaneously.
+
+No diameter monotonicity is asserted. In particular, this theorem is a contact-framework shear, not by itself a feasible diameter-decreasing motion.
+
+**Verdict:** PASS.
+
+## 4. Singleton train
+
+If a singleton stopped train occurs in a contact graph with no bounded nonquadrilateral face, the edge is incident to the outer face on both sides and is therefore a bridge. Translating one connected bridge shore by
+
+\[
+R_\theta u-u
+\]
+
+rotates that bridge contact exactly and leaves all other contacts unchanged. The same finite-slack argument preserves noncontact unit separation for sufficiently small `theta`.
+
+Thus singleton trains have the same exact one-coordinate contact shear used in the pure-tooth normal form.
+
+**Verdict:** PASS.
+
+## 5. Explicit non-implications
+
+This audit does not certify the stronger later parts of the ZGS report. In particular it does not use or promote:
+
+- `A_tau>w_tau`;
+- the weighted crossing-diameter curvature identity as a minimality contradiction;
+- the old `ZK` strict terminal-cut response theorem;
+- simultaneous feasibility of several train shears under the diameter constraint; or
+- any assertion that an individual train shear decreases the source diameter.
+
+It also does not promote the asymptotic `DE/DF` consequences bundled with the DT report.
+
+## 6. Consequence for current proof-only work
+
+The proof-only pure-tooth train-shear normal form on PR #357 uses only:
+
+1. T1 for the exact stopped-train count and path structure;
+2. T2–T3 for non-singleton outer-to-outer train shears; and
+3. the bridge version in Section 4 for singleton trains.
+
+Those dependencies now have a narrow independent audit. The remaining claims of that pure-tooth theorem still require their own audit and theorem-state promotion.
+
+**Final disposition:** finite train primitives PASS at audited-working scope; canonical theorem state remains audit.46.

@@ -1,0 +1,548 @@
+# Target C-II — paired-remainder bathtub excludes the full-core branch through `t<=1.84370`
+
+**Date:** 2026-09-15  
+**Status:** proof-only full-core Type-II strengthening  
+**Scope:** full-core/no-macroscopic-container Type-II branch  
+**Dependencies:** scope-safe `g=0.007707` residual stability; hostile-audited two-leaf outer-energy architecture; repaired strong center/leaf branch; paired-remainder bathtub lemma  
+**Certificate:** `research/verify_target_c_remainder_bathtub_exclusion_t184370.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The hostile-audited two-leaf argument currently excludes
+
+\[
+t={q-k\over D}\le1.84365.
+\]
+
+Its leaf energy ledger uses the paired terminal energy of the good O--O populations but discards the remaining retained outer occurrences in those same two leaf phases. The paired-remainder bathtub lemma shows that this discarded measure pays an additional one-well cost in each leaf.
+
+Keeping that energy extends the same full-core exclusion to
+
+\[
+\boxed{
+\liminf_{D\to\infty}{q-k\over D}\ge1.84370.
+}
+\tag{E70.1}
+\]
+
+The exact rounded package is
+
+\[
+h<0.00065,
+\qquad
+W<1.912984,
+\qquad
+E_{dom}>0.90689955,
+\tag{E70.2}
+\]
+
+\[
+z>2.21904,
+\qquad
+z_C,z_U,z_V>0.6904,
+\tag{E70.3}
+\]
+
+\[
+U,V<0.5436.
+\tag{E70.4}
+\]
+
+Thus each leaf has retained O--O pair weight above `0.1468D`. After removing all pair weight with center degree at most half, each leaf still has more than `0.1076D` good pair weight. Trimming both good families to that common weight leaves at least `0.4752D` retained occurrence mass in each leaf outside the paired terminal submeasure. Those two remainders pay independent bathtub costs.
+
+The resulting exact outer-energy contradiction has margin above
+
+\[
+8.0\times10^{-4}D.
+\]
+
+---
+
+## 1. Residual stability remains in scope
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+C_{707}=2\sqrt{\Delta_2}+0.007707,
+\]
+
+and use
+
+\[
+x={\kappa\over2},
+\qquad
+h=U_{net}-C_{707},
+\qquad
+c=1.05.
+\]
+
+Then
+
+\[
+2\delta+x+h
+=R_t:={9t\over2}-2\pi-C_{707}.
+\tag{E70.5}
+\]
+
+The residual-stability theorem requires `U_net<=2.013`. The already-proved `t<=1.844` phase theorem gives total retained dominant outer mass above `1.848D`, hence
+
+\[
+\delta\ge F(1.848)-o(1),
+\qquad
+F(s)=s-6\sin(s/6).
+\]
+
+The exact verifier gives `F(1.848)>0.029`, so at `t<=1.84370`,
+
+\[
+U_{net}<1.957<2.013.
+\]
+
+Thus the audited residual estimate applies:
+
+\[
+R:=U_{net}-W\le1.05h,
+\tag{E70.6}
+\]
+
+where `W=C+U+V` is the dominant exact `pi/3` orbit mass.
+
+---
+
+## 2. Residual slack is below `0.00065`
+
+Set
+
+\[
+T=1.84370,
+\qquad
+H=0.00065.
+\]
+
+At `t=T,h=H,x=0`, let
+
+\[
+\delta_H={R_T-H\over2}
+\]
+
+and
+
+\[
+A_H
+=\pi-{T\over2}-1.05H
+-{1.05^2H^2\over2(1-\delta_H)}.
+\]
+
+The exact certificate proves
+
+\[
+\boxed{F(A_H)-\delta_H>2.7\times10^{-6}.}
+\tag{E70.7}
+\]
+
+The inherited survivor derivatives remain strict,
+
+\[
+Q_x<-2.7,
+\qquad
+Q_h<-2.5,
+\]
+
+so every survivor has
+
+\[
+\boxed{h<0.00065-o(1).}
+\tag{E70.8}
+\]
+
+Consequently
+
+\[
+\boxed{W<1.912984-o(1),}
+\tag{E70.9}
+\]
+
+and the residual exact-orbit crossing contribution is at most `(1.05H)^2/4`. Hence
+
+\[
+\boxed{E_{dom}>0.90689955-o(1).}
+\tag{E70.10}
+\]
+
+Also
+
+\[
+\boxed{\delta<0.05056604+o(1).}
+\tag{E70.11}
+\]
+
+---
+
+## 3. Retained dominant outer mass exceeds `2.21904D`
+
+Let `z` be retained dominant outer-occurrence mass and `p` the retained complement O--O pair mass. The audited retained-mass/complement-incidence system gives
+
+\[
+z+p\ge\pi-{t\over2}-x-1.05h-o(1),
+\tag{E70.12}
+\]
+
+\[
+p\le
+{1.05^2h^2+\delta-F(z)\over2(1-\delta)}+o(1)
+\tag{E70.13}
+\]
+
+on the energy-feasible side.
+
+Assume `z<=Z=2.21904`. The capped left side is increasing in `z`, with certified derivative above `0.96`, so it is enough to use `z=Z`.
+
+Put
+
+\[
+h_*=R_T-2F(Z).
+\]
+
+The exact enclosure gives
+
+\[
+0<h_*<H-2\times10^{-6}.
+\tag{E70.14}
+\]
+
+On the boundary `delta=F(Z)` one has `x=h_*-h`. The capped survivor excess is increasing in `h`, so the adverse point is `h=h_*,x=0`. Exact outward evaluation gives
+
+\[
+\boxed{
+Z+{1.05^2h_*^2\over2(1-F(Z))}
+-\pi+{T\over2}+1.05h_*
+<-2\times10^{-5}.
+}
+\tag{E70.15}
+\]
+
+For `delta<F(Z)`, the parent negative `Q_x,Q_h` derivatives move the adverse point back to the same boundary. Therefore
+
+\[
+\boxed{z>2.21904-o(1).}
+\tag{E70.16}
+\]
+
+---
+
+## 4. Every exact phase retains more than `0.6904D`
+
+For one exact phase atom, let
+
+\[
+f(s)=s-2\sin(s/2).
+\]
+
+The phasewise one-well decomposition gives
+
+\[
+\delta\ge f(z_C)+f(z_U)+f(z_V)-o(1).
+\tag{E70.17}
+\]
+
+Suppose one phase retained at most
+
+\[
+A=0.6904.
+\]
+
+Since `A<Z/3`, convexity makes the cheapest other two phase masses equal. Therefore
+
+\[
+f(z_C)+f(z_U)+f(z_V)
+\ge
+f(A)+2f\left({Z-A\over2}\right)-o(1).
+\]
+
+The exact verifier proves that the right side exceeds the complete detour ceiling in (E70.11) by more than
+
+\[
+2.1\times10^{-6}.
+\]
+
+Hence
+
+\[
+\boxed{z_C,z_U,z_V>0.6904-o(1).}
+\tag{E70.18}
+\]
+
+In particular,
+
+\[
+z_V\le2V+o(1)
+\]
+
+implies the independent lower bound
+
+\[
+\boxed{V>0.3452-o(1).}
+\tag{E70.19}
+\]
+
+This lower bound is used to certify the strong physical pair branch without circularly replacing the actual larger leaf by its contradiction threshold.
+
+---
+
+## 5. Both leaf train masses are below `0.5436D`
+
+Assume for contradiction
+
+\[
+U\ge U_0:=0.5436.
+\]
+
+Use
+
+\[
+W_0=1.912984,
+\qquad
+E_0=0.90689955.
+\]
+
+Put
+
+\[
+C_{low}=W_0-2U_0=0.825784.
+\]
+
+For `C<=C_low`, generic center capacity is increasing and satisfies
+
+\[
+C(W_0-C)<E_0-0.009.
+\]
+
+For
+
+\[
+C\ge1.046,
+\]
+
+generic center capacity is decreasing and satisfies
+
+\[
+C(W_0-C)<E_0-3\times10^{-5}.
+\]
+
+It remains to treat
+
+\[
+0.825784<C<1.046.
+\tag{E70.20}
+\]
+
+The repaired strong-branch scope test applies **before** replacing `U` by `U_0`. From (E70.19),
+
+\[
+C+U=W-V
+<W_0-{A\over2}+o(1).
+\]
+
+Since `U>=U_0`,
+
+\[
+{(C+U-K)_+\over U}
+\le
+{W_0-A/2-K_-\over U_0}+o(1),
+\qquad K={2\over\sqrt3}.
+\]
+
+The exact certificate gives
+
+\[
+\boxed{
+{W_0-A/2-K_-\over U_0}<0.760
+<\sqrt{20/29}.
+}
+\tag{E70.21}
+\]
+
+Moreover `C<1.046<K`; for fixed `C<K`, the excess ratio is nondecreasing in the leaf mass. Since `V<=U`, the smaller leaf ratio is no larger. Thus the physical `1/10` pair branch is valid for both center/leaf pairs on the original configuration.
+
+Only after this scope check do we make the adverse replacements `W->W_0` and `U->U_0`. Set
+
+\[
+V=W_0-C-U_0
+\]
+
+and
+
+\[
+\begin{aligned}
+G(C)=&\ C(W_0-C)\\
+&-{1\over10}\left(1-{V\over C}\right)(C+U_0-K)^2\\
+&-{1\over10}\left(1-{U_0\over C}\right)(C+V-K)^2.
+\end{aligned}
+\tag{E70.22}
+\]
+
+The exact derivative identity gives `G''<-2` throughout (E70.20). At
+
+\[
+c_0=0.9301,
+\]
+
+the tangent bound gives
+
+\[
+\max G
+\le G(c_0)+{G'(c_0)^2\over4}
+<E_0-4.2\times10^{-6}.
+\tag{E70.23}
+\]
+
+This contradicts (E70.10). Therefore
+
+\[
+\boxed{U,V<0.5436-o(1).}
+\tag{E70.24}
+\]
+
+---
+
+## 6. Each leaf retains more than `0.1076D` good O--O pair weight
+
+For phase `i`, the retained terminal inequality gives
+
+\[
+z_i\le M_i+P_i+o(1),
+\]
+
+where `P_i` is retained O--O pair weight. Equations (E70.18) and (E70.24) yield
+
+\[
+\boxed{P_U,P_V>0.6904-0.5436-o(1)=0.1468-o(1).}
+\tag{E70.25}
+\]
+
+Call a retained O--O train bad when its center crossing degree is at most half of the center family. The hostile-audited center/leaf correlation bounds total bad weight across both leaves by
+
+\[
+{2[C(W-C)-E_{dom}]\over C-U}+o(1).
+\]
+
+With the adverse constants `W_0,E_0,U_0`, the assertion that this is below
+
+\[
+B=0.0392
+\]
+
+reduces to a quadratic in `C`. The exact discriminant satisfies
+
+\[
+\boxed{\operatorname{disc}<-3.0\times10^{-4}.}
+\tag{E70.26}
+\]
+
+Thus, even if the entire bad weight is charged to one leaf, each leaf retains good O--O weight
+
+\[
+\boxed{G_U,G_V>0.1468-0.0392-o(1)=0.1076-o(1).}
+\tag{E70.27}
+\]
+
+Every good `U` train and good `V` train cross more than half of the same center family, so they share a center neighbor. Triangle-freeness makes every good cross-leaf pair noncrossing.
+
+---
+
+## 7. Keep the leaf remainder bathtub instead of discarding it
+
+Fix `g<0.1076` and trim each good weighted family to total pair weight exactly `g`. The paired-remainder lemma applies because the two leaf phases differ by `pi/3` and the complete cross-product is noncrossing.
+
+The paired terminal submeasure in each leaf has occurrence mass exactly `2g`. Since the full retained occurrence mass is at least `A`, the nonnegative remainder has mass at least
+
+\[
+A-2g.
+\]
+
+The two trimmed pair energies satisfy
+
+\[
+E_U^g+E_V^g
+\ge(2-\sqrt3)g-o(1),
+\]
+
+while the two remainders pay
+
+\[
+2f(A-2g)-o(1).
+\]
+
+The center phase, which is disjoint from both leaf supports, pays `f(A)-o(1)`. Therefore
+
+\[
+\delta
+\ge
+f(A)+(2-\sqrt3)g+2f(A-2g)-o(1).
+\tag{E70.28}
+\]
+
+Let `g\uparrow0.1076`. Then
+
+\[
+A-2g\downarrow0.4752.
+\]
+
+Using the safe bound `sqrt(3)<1.7321`, the exact certificate gives
+
+\[
+f(0.6904)>0.01363022,
+\]
+
+\[
+(2-\sqrt3)(0.1076)>0.02882604,
+\]
+
+and
+
+\[
+2f(0.4752)>0.00891706.
+\]
+
+Hence
+
+\[
+\boxed{\delta>0.05137333-o(1).}
+\tag{E70.29}
+\]
+
+But (E70.11) gives
+
+\[
+\delta<0.05056604+o(1).
+\]
+
+The exact contradiction margin is more than
+
+\[
+\boxed{8.0\times10^{-4}.}
+\tag{E70.30}
+\]
+
+Therefore no full-core Type-II survivor exists with
+
+\[
+t\le1.84370.
+\]
+
+---
+
+## 8. Frontier effect
+
+The gain from `1.84365` to `1.84370` is not produced by another atomic-gap decimal. It comes from restoring selected occurrence energy that the previous leaf-pair ledger discarded.
+
+The current full-core survivor strip is reduced to
+
+\[
+1.84370\lesssim t\le1.844.
+\]
+
+The paired-remainder ledger still has substantial final energy slack at `1.84370`; the next bottlenecks are again the residual/phase localization and the leaf-mass capacity threshold. A tighter propagation may reach a somewhat larger endpoint, but further numerical work should be compared against the independently merged exact finite multishear theorem, which attacks the same macroscopic O--O family structurally.
+
+**Disposition:** proof-only full-core floor raised from `1.84365` to `1.84370`. C-II and Level I remain open.

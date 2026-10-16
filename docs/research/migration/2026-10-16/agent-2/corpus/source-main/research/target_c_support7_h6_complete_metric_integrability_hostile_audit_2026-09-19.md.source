@@ -1,0 +1,105 @@
+# Hostile audit — generic `H6` complete metric integrability
+
+**Audited source:** `research/target_c_support7_h6_complete_metric_integrability_2026-09-19.md`  
+**Certificate:** `research/verify_target_c_support7_h6_complete_metric_integrability_2026_09_19.py`  
+**Verdict:** PASS at the stated generic scope. C-II remains open.
+
+This audit isolates the assumptions that could invalidate the fifteen-cycle reduction.
+
+## 1. Missing relation edges are still geometric pairs
+
+A missing support edge means only that the corresponding reciprocal pair is not joined by a relation edge. The two reciprocal points still exist. Therefore every triangle `0ij`, including one with missing `ij`, has well-defined ordinary angles and obeys the Euclidean triangle angle sum and the law of sines.
+
+Using those missing pairs in the complete angular lift does not add a support relation or a force term. It only uses geometry already present in any reciprocal realization.
+
+## 2. The complete angle variables are legitimate in generic `H6`
+
+At hull vertices `0,...,5`, every other reciprocal point lies strictly inside the hull interior angle. Hence the seven outgoing rays have a linear order contained in an open wedge of width less than `pi`. Six positive consecutive gaps determine all ordinary angles there. At the ground vertex the stronger previously proved `H6` width bound is `<2pi/3`.
+
+At interior vertices `6,7`, the seven rays have a strict circular order because the branch is generic. Seven positive cyclic gaps sum to `2pi`. The chirotope determines which directed arc represents each ordinary angle; requiring that selected arc to be `<pi` removes the complementary branch. Thus every ordinary angle is an integer-affine expression in the ray-gap variables on a fixed oriented-matroid cell.
+
+No step uses an angle across a reciprocal collinearity wall. Such walls are explicitly outside scope.
+
+## 3. Force-angle ties do not assume a missing force
+
+At each non-ground physical vertex there are exactly five present support edges. Only those five reciprocal rays are tied to the five signed unit-force directions. The common edge signs determine whether two force directions differ from their raw reciprocal directions by the same or opposite half-turns, so every raw angle between two present rays is an exact affine expression in the five cyclic force gaps.
+
+No force-angle equation is imposed for a missing support edge.
+
+## 4. Fifteen, not eight, is the correct complete metric rank
+
+There are seven non-ground reciprocal radii and 21 unordered pairs among them. A positive radius potential has six independent logarithmic differences after global scale is removed, so a complete antisymmetric edge-ratio cochain on `K7` has
+
+\[
+21-6=15
+\]
+
+independent exactness conditions.
+
+The committed certificate checks the equivalent cycle-space calculation exactly. It enumerates all 465 labelled 2-regular missing graphs:
+
+\[
+360\ C_7 + 105\ (C_3\sqcup C_4).
+\]
+
+For each graph, the 14-edge present relation graph is connected and has cycle rank eight. Adding the seven missing pairs completes `K7` and raises the cycle rank to fifteen. Therefore the missing pairs supply seven independent metric conditions modulo the relation-only cycle space.
+
+The certificate independently checks that the fifteen root-fan triangles `1-i-j-1`, `2<=i<j<=7`, have exact row rank fifteen over `Q`.
+
+## 5. Law-of-sines orientation is correct
+
+In triangle `0ij`, let
+
+\[
+A_{ij}=\angle 0ij,
+\qquad
+A_{ji}=\angle 0ji,
+\]
+
+and let `rho_i=|0i|`, `rho_j=|0j|`. The side of length `rho_j` is opposite `A_ij`, while the side of length `rho_i` is opposite `A_ji`. Hence
+
+\[
+\frac{\rho_j}{\rho_i}
+=
+\frac{\sin A_{ij}}{\sin A_{ji}}.
+\]
+
+Thus
+
+\[
+g_{ij}=\log\sin A_{ij}-\log\sin A_{ji}
+=\log\rho_j-\log\rho_i.
+\]
+
+The sign convention in the root-fan cycle identity is therefore consistent.
+
+## 6. Sine ratios plus complete angles really are sufficient
+
+A possible failure would be that the fifteen sine equations reconstruct radii but not the prescribed non-ground ray directions. The source proof addresses this.
+
+For each pair `i,j`, the ground rays already fix the included angle `G_ij` of triangle `0ij`. The affine triangle equation fixes
+
+\[
+A_{ij}+A_{ji}=\pi-G_{ij}=:S,
+\qquad 0<S<\pi.
+\]
+
+For `0<a<S`,
+
+\[
+\frac{d}{da}\log\frac{\sin a}{\sin(S-a)}
+=
+\frac{\sin S}{\sin a\sin(S-a)}>0.
+\]
+
+Therefore the ratio `sin(A_ij)/sin(A_ji)` determines the ordered pair `(A_ij,A_ji)` uniquely once their sum is fixed. The coordinates reconstructed from the root rays and radius potential have the same included angle and the same sine ratio, so their remaining angles must equal the prescribed ones.
+
+This proves sufficiency for common reciprocal-coordinate reconstruction up to similarity. It does not prove force closure.
+
+## 7. What the theorem does not establish
+
+The fifteen equations are a metric-gluing theorem, not an exclusion of the 6,308 current generic `H6` cells. A physical state must still satisfy the seven nonlinear equilateral-pentagon closures. Conversely, satisfying the affine angular lift alone is not enough: the fifteen sine identities are genuinely nonlinear and are not implied by triangle angle sums.
+
+No claim is made about reciprocal-collinearity walls, `H7a`, generic `H7b`, or `H8` by this note. No theorem-state file should change.
+
+**Disposition:** the complete generic-`H6` metric layer is fifteen independent sine-law identities, seven stronger than the relation-only cycle system, and those fifteen are sufficient for reciprocal metric reconstruction once the complete angular lift is imposed. The remaining task is to prove that the affine-plus-metric-plus-force system is empty, or exhibit a genuine realization if it is not.

@@ -1,0 +1,17 @@
+{
+  "active_branch_artifact_count": 21,
+  "branch_file_version_count": 746,
+  "disposition_counts": {
+    "deduplicated_existing_frozen_report_migration": 6,
+    "deduplicated_source_main_allocated_to_agent_1": 166,
+    "deduplicated_source_main_allocated_to_agent_2": 197,
+    "exact_destination_body_duplicate": 1,
+    "exact_destination_content_duplicate": 99,
+    "exact_source_main_body_migrated_by_source_main": 180,
+    "preserved_current_unreviewed_branch_artifact": 21,
+    "preserved_historical_branch_snapshot": 76
+  },
+  "historical_snapshot_count": 76,
+  "materialized_bytes": 2776740,
+  "materialized_file_count": 97
+}

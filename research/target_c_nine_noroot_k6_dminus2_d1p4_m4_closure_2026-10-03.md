@@ -1,0 +1,197 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "55b8c307ea2c0e6eb2ea9d378ba5103a527e9460", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_nine_noroot_k6_dminus2_d1p4_m4_closure_2026-10-03.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "98d2078e9c24403619b338d0e455f61b8f19e8c393656c907ad0ff1f7e559a77"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: close the nine-no-root k=6, D=-2, d_root=1, p=4 four-support slice
+
+Date: 2026-10-03
+Base main: `6c45398dcfe69e3b3bb322920a2911468dfe0573`
+Status: exact finite closure of the `m=4` support slice inside the nine-no-root
+`k=6, D=-2, d_root=1, p=4` branch. This does not close the full p=4 branch,
+Target C-II, Level I, or Erdos Problem #99.
+
+The active primary worker is on the Target-B four-bar `(2,1,1)` stress route.
+This note is disjoint finite Target-C work.
+
+## 1. Structural input
+
+In this branch the external coefficient-constraint space `P <= Q^9` has rank
+three. The all-depth deletion identity gives the generalized-weight floor
+
+```
+(d1,d2,d3)(P) >= (3,4,6).
+```
+
+The previously proved low-p containment and generator-count reduction forces
+exactly four touched singleton root blocks, no touched empty or pair block, and
+every other touched root block complete. Every selected singleton is touched by
+at least four of the nine no-root cycles. The touched-complete root nullity is
+at most one.
+
+Let `F` be the set of distinct tetrahedral four-supports of the nine no-root
+cycles and put `m=|F|`. In the `m=4` slice a support can occur at most three
+times, so the only multiplicity profiles are
+
+```
+(3,3,2,1) and (3,2,2,2).
+```
+
+The four tetrahedron-boundary vectors are independent. Their restriction to the
+four singleton triangles must have kernel dimension at most one, since that
+kernel gives a dependency among touched complete root rows.
+
+## 2. Exact support/root census
+
+An exact enumeration over the 35 four-subsets of `[7]` was performed.
+
+For each four-support set and each multiplicity assignment, the verifier:
+
+1. computes the weighted touch count of every triangle;
+2. chooses every four-triangle singleton set with touch count at least four;
+3. computes the rank of the four tetrahedron-boundary vectors restricted to
+   those singleton triangles;
+4. retains exactly the states with restriction-kernel dimension at most one;
+5. quotients by the full `S_7` vertex action.
+
+The labeled census is
+
+```
+(3,3,2,1): 17640 support/root states
+(3,2,2,2): 17640 support/root states
+```
+
+and the exact orbit counts are
+
+```
+(3,3,2,1): 6 S7 orbits
+(3,2,2,2): 8 S7 orbits.
+```
+
+Every retained orbit has touched-complete nullity exactly one.
+
+The small support-rank calculation is exact: the relevant matrices have at most
+four rows and four columns with entries in `{-1,0,1}`. Hadamard bounds every
+nonzero determinant by 16 in absolute value, so reduction modulo 101 preserves
+zero versus nonzero.
+
+## 3. Orientation and singleton-direction census
+
+For each of the fourteen support/root representatives, every no-root orientation
+choice was enumerated.
+
+For `(3,3,2,1)`, the two tripled supports are fixed while the doubled and
+single supports each have three choices. Thus the six orbit representatives
+give
+
+```
+6 * 9 = 54
+```
+
+oriented support/root states.
+
+For `(3,2,2,2)`, the three doubled supports each have three choices. Thus the
+eight orbit representatives give
+
+```
+8 * 27 = 216
+```
+
+oriented support/root states.
+
+Each of the four singleton root rows has one of the three exact local quotient
+directions
+
+```
+(1,0), (0,1), (1,-1).
+```
+
+Therefore the exact direction-state counts are
+
+```
+(3,3,2,1): 54 * 3^4  = 4374
+(3,2,2,2): 216 * 3^4 = 17496.
+```
+
+Exact rational coefficient ranks leave
+
+```
+(3,3,2,1): 117 rank-three states
+(3,2,2,2): 513 rank-three states.
+```
+
+After imposing `(d1,d2,d3)>=(3,4,6)`, only
+
+```
+(3,3,2,1): 74 states
+(3,2,2,2): 189 states
+```
+
+remain.
+
+Their generalized-weight profiles are
+
+```
+(3,3,2,1):
+  (3,4,6): 16
+  (3,5,7): 42
+  (3,5,8): 8
+  (3,6,8): 8
+
+(3,2,2,2):
+  (3,4,6): 24
+  (3,5,7): 106
+  (3,5,8): 32
+  (3,6,8): 16
+  (4,6,8): 7
+  (4,6,9): 4.
+```
+
+## 4. External relation-rank obstruction
+
+Because `rank P=3` on nine external coordinates,
+
+```
+dim null(P)=6.
+```
+
+The branch arithmetic requires all six external nullspace relation directions
+to survive independently modulo the full complete-root span. Hence a necessary
+condition is an external relation-rank increment of six over the touched
+complete-root span as well.
+
+Using the exact K8 normal form employed by the existing finite Target-C
+certificates, every one of the 263 generalized-weight survivors instead has
+external relation-rank increment exactly one:
+
+```
+(3,3,2,1): {1: 74}
+(3,2,2,2): {1: 189}.
+```
+
+Thus every four-support state is impossible.
+
+The final relation ranks were evaluated modulo the Mersenne prime `2^127-1`.
+The largest squared Euclidean norm of any integer relation row was 38 (34 on
+the `(3,3,2,1)` profile). Since
+
+```
+(2^127-1)^2 > 38^15,
+```
+
+Hadamard's inequality guarantees that these modular ranks equal the rational
+ranks. This is an exact finite certificate, not probabilistic finite-field
+evidence.
+
+## 5. Conclusion
+
+There is no `m=4` state in the nine-no-root
+
+```
+k=6, D=-2, d_root=1, p=4
+```
+
+branch.
+
+This reduces that branch by one complete support slice. The remaining support
+multiplicities are `m=3,5,6`. Independent work has reductions for `m=3`
+and `m=6`, but those are not used as premises here.

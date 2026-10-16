@@ -1,0 +1,623 @@
+# Target C-II — outer-pocket degree moment forced by fixed-pair FREE reuse
+
+**Date:** 2026-09-18
+**Status:** proof-only research candidate; theorem-state authority unchanged
+**Scope:** canonical post-ZF outer-pocket decomposition, with application to the proof-only fixed-pair `PAIR-REUSE` ancestry population
+**Dependencies:** canonical Section 67 outer-pocket/Oler decomposition; elementary reflection plus planar isoperimetry; `target_c_halfplus_outer_charge_full_activation_2026-09-18.md` for the strongest application
+**Certificate:** `research/verify_target_c_tooth_reflection_halfplus_pocket_degree_moment_2026_09_18.py`
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current fixed-pair theorem charges more than `D` distinct fully inactive
+outer-face ancestry vertices to
+
+\[
+Z_{\rm ext}+{2\over\sqrt3}H_{\rm out}-{b-P_F\over2}.
+\]
+
+That still leaves the internal outer-pocket area as a possible linear-scale sink.  The
+present note charges the **population itself** to a sharper discrete OP currency: the
+second moment of the outer-pocket degree excesses.
+
+For an OP pocket `P`, write
+
+\[
+k_P\ge3,
+\qquad
+r_P:=k_P-3,
+\qquad
+\ell_P:=k_P-1=r_P+2,
+\]
+
+where `ell_P` is the number of old unit-contact edges on the pocket chain.  Put
+
+\[
+d_P:=\sum_P r_P,
+\qquad
+S_2:=\sum_P r_P^2.
+\]
+
+Then every triangular pocket (`r_P=0`) contains **no** assigned contact-isolated
+source point, and in general
+
+\[
+\boxed{
+\pi\sqrt3\,Z_{\rm in}
+\le
+S_2+8d_P.
+}
+\tag{PD.1}
+\]
+
+A sharper scalar consequence is
+
+\[
+\boxed{
+Z_{\rm in}
+\le {1\over\pi\sqrt3}
+\max\{9d_P,(d_P+2)^2\}
+\qquad(d_P\ge1),
+}
+\tag{PD.2}
+\]
+
+with `Z_in=0` when `d_P=0`.
+
+Applied to the current truncation-free fixed-pair ancestry theorem, for fixed
+`K>h_*` one gets
+
+\[
+\boxed{
+S_2+8d_P
+\ge
+\pi\sqrt3\left(\nu_KD+{U_1+U_2\over2}-Z_{\rm ext}-o(D)\right),
+\qquad
+\nu_K:=1+{\delta_*\over4}\left(1-{h_*\over K}\right).
+}
+\tag{PD.3}
+\]
+
+Hence if `Z_ext/D<=zeta+o(1)` with `zeta<nu_K`,
+
+\[
+\boxed{
+{d_P\over\sqrt D}
+\ge
+\sqrt{\pi\sqrt3\,(\nu_K-\zeta)}-o(1).
+}
+\tag{PD.4}
+\]
+
+Thus the fixed-pair heavy branch cannot place its linear outer-face ancestry
+population inside the force hull while keeping both external population and
+nontriangular pocket complexity below square-root scale.
+
+---
+
+## 1. One pocket: isolate capacity depends only on its contact-chain length
+
+Use the canonical Section-67 hull augmentation.  One convex outer pocket `P` has
+boundary
+
+\[
+[u,v]\cup (u=p_0,p_1,\ldots,p_{\ell}=v),
+\]
+
+where `[u,v]` is the added force-hull side and the complementary chain has `ell`
+unit-contact edges.  Write
+
+\[
+s:=|u-v|,
+\qquad
+A_P:=\operatorname{area}(P),
+\qquad
+z_P:=\#\{\text{assigned contact-isolated source points in }P\}.
+\]
+
+Since the contact chain joins the chord endpoints,
+
+\[
+s\le\ell.
+\tag{1.1}
+\]
+
+Canonical Section 67.6 applies Oler to the pocket with its boundary source vertices
+and assigned isolates and gives
+
+\[
+z_P
+\le {A_P\over a_0}+{s+\ell\over2}+1-k_P,
+\qquad
+a_0={\sqrt3\over2}.
+\tag{1.2}
+\]
+
+Because `k_P=ell+1`, this is
+
+\[
+z_P
+\le {A_P\over a_0}+{s-\ell\over2}
+\le {A_P\over a_0}.
+\tag{1.3}
+\]
+
+There is a second elementary estimate that removes the chord from the perimeter.
+Reflect `P` across the line through `[u,v]`.  For a nondegenerate pocket the two
+contact chains, one on each side of the chord, form the boundary of the doubled
+domain; if a chain has a collinear chord-touch, split at the touch points and apply
+the same estimate componentwise.  The total doubled area is `2A_P` and the total
+non-chord boundary length is `2ell`.  Planar isoperimetry, followed by
+`sum L_i^2 <= (sum L_i)^2` in the split case, therefore gives
+
+\[
+2A_P\le{(2\ell)^2\over4\pi},
+\qquad
+\boxed{A_P\le{\ell^2\over2\pi}.}
+\tag{1.4}
+\]
+
+Combining (1.3) and (1.4),
+
+\[
+\boxed{
+z_P\le{\ell^2\over\pi\sqrt3}
+={ (r_P+2)^2\over\pi\sqrt3}.}
+\tag{1.5}
+\]
+
+For a triangular outer pocket `r_P=0`, the right side is
+
+\[
+{4\over\pi\sqrt3}<1.
+\]
+
+Since `z_P` is an integer,
+
+\[
+\boxed{r_P=0\quad\Longrightarrow\quad z_P=0.}
+\tag{1.6}
+\]
+
+This is the key removal of the otherwise linear baseline contributed by a large
+family of triangular pockets.
+
+---
+
+## 2. Global second-moment payment
+
+Let `P_+` be the nontriangular outer pockets, and let
+
+\[
+t:=|P_+|.
+\]
+
+Every `r_P` on `P_+` is a positive integer, so
+
+\[
+t\le d_P.
+\tag{2.1}
+\]
+
+Triangular pockets contribute no isolates by (1.6).  Sum (1.5) over `P_+`:
+
+\[
+\begin{aligned}
+\pi\sqrt3\,Z_{\rm in}
+&\le\sum_{P\in P_+}(r_P+2)^2\\
+&=S_2+4d_P+4t\\
+&\le S_2+8d_P.
+\end{aligned}
+\tag{2.2}
+\]
+
+This proves (PD.1).
+
+Because the `r_P` are nonnegative,
+
+\[
+S_2\le d_P^2,
+\tag{2.3}
+\]
+
+which already gives the convenient finite bound
+
+\[
+Z_{\rm in}\le {d_P^2+8d_P\over\pi\sqrt3}.
+\tag{2.4}
+\]
+
+The exact scalar maximum is slightly better.  For a positive integer composition
+`d=r_1+...+r_t`, the quantity to maximize is
+
+\[
+\sum_i(r_i+2)^2.
+\]
+
+Merging two parts changes this sum by
+
+\[
+(r+s+2)^2-(r+2)^2-(s+2)^2=2rs-4.
+\tag{2.5}
+\]
+
+If some part is at least two and there is more than one part, merge that part with
+any other part; then `rs>=2`, so (2.5) is nonnegative.  Repeating this operation
+reduces to the single part `d` without decreasing the objective.  If no part is at
+least two, all parts equal one.  Hence a maximizer is attained at one of these two
+endpoints:
+
+\[
+\boxed{
+\max_{r_i\ge1,\ \sum r_i=d}
+\sum_i(r_i+2)^2
+=\max\{(d+2)^2,9d\}.
+}
+\tag{2.6}
+\]
+
+This proves (PD.2).  In particular, for `d_P>=4`,
+
+\[
+\boxed{
+Z_{\rm in}\le{(d_P+2)^2\over\pi\sqrt3}.}
+\tag{2.7}
+\]
+
+No pocket-area variable remains in (2.2) or (2.7).
+
+---
+
+## 3. Insert the truncation-free `PAIR-REUSE` outer population
+
+The current fixed-pair outer-charge theorem is stronger than the earlier matching-only
+population count.  For fixed `K>h_*`, put
+
+\[
+\alpha_K=1-{h_*\over K},
+\qquad
+\nu_K=1+{\delta_*\alpha_K\over4}.
+\tag{3.1}
+\]
+
+Let `U_1,U_2` be the upper-gate counts of the two extreme FREE ancestries.  The
+truncation-free ancestry theorem gives one ancestry containing at least
+
+\[
+\nu_KD+{U_1+U_2\over2}-o(D)
+\tag{3.2}
+\]
+
+distinct old fully inactive outer-face source points.  At most `Z_ext` of these lie
+outside the force hull.  Consequently
+
+\[
+\boxed{
+Z_{\rm in}
+\ge
+\nu_KD+{U_1+U_2\over2}-Z_{\rm ext}-o(D).
+}
+\tag{3.3}
+\]
+
+Insert (3.3) into (PD.1):
+
+\[
+\boxed{
+S_2+8d_P
+\ge
+\pi\sqrt3\left(
+\nu_KD+{U_1+U_2\over2}-Z_{\rm ext}-o(D)
+\right).
+}
+\tag{PD.3}
+\]
+
+This is strictly stronger at every finite second cutoff than spending only the
+near-unit parity matching.  The latter remains a valid finite substatement: if `M` is
+the half-plus matching, then
+
+\[
+S_2+8d_P\ge\pi\sqrt3\,(2|M|-Z_{\rm ext}).
+\tag{3.4}
+\]
+
+For the scalar consequence, suppose
+
+\[
+{Z_{\rm ext}\over D}\le\zeta+o(1),
+\qquad
+0\le\zeta<\nu_K.
+\]
+
+Then (PD.2) and (3.3) force
+
+\[
+\boxed{
+{d_P\over\sqrt D}
+\ge
+\sqrt{\pi\sqrt3\,(\nu_K-\zeta)}-o(1).
+}
+\tag{PD.4}
+\]
+
+The nonnegative upper-gate term in (PD.3) can only strengthen this floor.
+
+For the explicit fixed choice `K=400`,
+
+\[
+\nu_{400}=1.001042380190805\ldots,
+\]
+
+so `Z_ext=o(D)` forces
+
+\[
+\boxed{
+d_P\ge(2.333895905623207\ldots-o(1))\sqrt D.
+}
+\tag{3.5}
+\]
+
+Taking the fixed-cutoff envelope `K->infinity` after `D->infinity`,
+
+\[
+\nu_\infty
+=1+{\delta_*\over4}
+=1.001043253258118\ldots,
+\]
+
+and the coefficient becomes
+
+\[
+\boxed{
+\sqrt{\pi\sqrt3\,\nu_\infty}
+=2.333896923386203\ldots .
+}
+\tag{3.6}
+\]
+
+Thus, on the fixed-pair heavy branch,
+
+\[
+Z_{\rm ext}=o(D)
+\quad\Longrightarrow\quad
+x_B-a=d_P=\Omega(\sqrt D).
+\tag{3.7}
+\]
+
+The exact PC/HB remainder also reads
+
+\[
+e_{BB}-Q-2(d_H+s_Z)=d_P+c_B,
+\]
+
+so the same square-root pocket term is visible in the loaded-hull slack rather than
+only in an area variable.
+
+---
+
+## 4. The stronger second-moment endpoint
+
+Equation (PD.3) retains more information than the scalar square-root floor.  If
+
+\[
+Z_{\rm ext}=o(D),
+\qquad
+d_P=o(D),
+\]
+
+then for fixed `K`
+
+\[
+\boxed{
+S_2
+\ge
+(\pi\sqrt3\,\nu_K-o(1))D.
+}
+\tag{4.1}
+\]
+
+At the fixed-cutoff envelope the leading coefficient is
+
+\[
+\boxed{
+\pi\sqrt3\,\nu_\infty
+=5.447074848991583\ldots .
+}
+\tag{4.2}
+\]
+
+Let
+
+\[
+r_{\max}:=\max_P r_P.
+\]
+
+Since
+
+\[
+S_2\le r_{\max}d_P,
+\tag{4.3}
+\]
+
+any regime with `d_P<=C sqrt(D)` and `Z_ext=o(D)` has one nontriangular outer pocket
+with
+
+\[
+\boxed{
+{r_{\max}\over\sqrt D}
+\ge
+{\pi\sqrt3\,\nu_K\over C}-o(1).
+}
+\tag{4.4}
+\]
+
+So the critical square-root regime necessarily concentrates pocket degree into a
+mesoscopic carrier; it cannot distribute the half-plus endpoint population over only
+bounded-complexity pockets.
+
+---
+
+## 5. Equality-scale localization
+
+The preceding inequalities identify the scalar endpoint sharply.  Fix `K` and
+suppose along a `PAIR-REUSE` sequence that
+
+\[
+Z_{\rm ext}=o(D),
+\qquad
+{d_P\over\sqrt D}
+\longrightarrow
+c_K:=\sqrt{\pi\sqrt3\,\nu_K}.
+\tag{5.1}
+\]
+
+Then every inequality used above is asymptotically tight at leading order:
+
+\[
+{Z_{\rm in}\over D}\to\nu_K,
+\qquad
+{U_1+U_2\over D}\to0,
+\qquad
+{S_2\over d_P^2}\to1,
+\qquad
+{r_{\max}\over d_P}\to1.
+\tag{5.2}
+\]
+
+Indeed, (3.3) gives the lower population floor, while (2.7) and (5.1) give the
+scalar upper floor.  These bounds also force `(U_1+U_2)/D->0`, and
+(2.2)--(2.3) then squeeze `S_2/d_P^2` to one.  Finally
+`S_2<=r_max d_P<=d_P^2` gives the last limit.
+
+Choose a pocket `P_*` with `r_{P_*}=r_max`.  The remaining degree excess is `o(sqrt D)`.
+Applying (1.5) and (2.2) to the remaining nontriangular pockets shows that they contain
+only `o(D)` assigned isolates.  Hence
+
+\[
+\boxed{
+{z_{P_*}\over D}\to\nu_K.
+}
+\tag{5.3}
+\]
+
+Moreover `ell_*=r_{P_*}+2=(c_K+o(1))sqrt(D)`.  Oler gives
+`z_{P_*}<=A_*/a_0`, while reflected isoperimetry gives
+`A_*<=ell_*^2/(2pi)`.  The constants match exactly because
+
+\[
+{c_K^2\over2\pi}
+={\sqrt3\over2}\nu_K
+=a_0\nu_K.
+\]
+
+Therefore
+
+\[
+\boxed{
+{A_*\over D}\to a_0\nu_K,
+\qquad
+{2\pi A_*\over\ell_*^2}\to1,
+\qquad
+{a_0z_{P_*}\over A_*}\to1.
+}
+\tag{5.4}
+\]
+
+Thus the minimal square-root `d_P` endpoint is rigid at the scalar level: one
+`sqrt(D)`-chain outer pocket carries essentially all of the linear internal inactive
+population, saturates reflected isoperimetry, and saturates triangular-lattice area
+capacity.  The chord ratio is also forced at this endpoint.  Let `s_*` be the force-hull chord
+length and choose the unique `theta_* in (0,pi)` satisfying
+
+\[
+{s_*\over\ell_*}={\sin\theta_*\over\theta_*}.
+\tag{5.5}
+\]
+
+The fixed-length/fixed-chord Dido estimate follows by completing the pocket chain with
+the complementary circular arc and applying planar isoperimetry:
+
+\[
+{A_*\over\ell_*^2}
+\le f(\theta_*),
+\qquad
+f(\theta):={\theta-\sin\theta\cos\theta\over4\theta^2}.
+\tag{5.6}
+\]
+
+A direct derivative gives
+
+\[
+f'(\theta)=
+{\cos\theta(\sin\theta-\theta\cos\theta)\over2\theta^3}.
+\tag{5.7}
+\]
+
+Since `sin(theta)-theta cos(theta)>0` on `(0,pi)`, `f` has its unique maximum at
+`theta=pi/2`, where `f(pi/2)=1/(2pi)`.  Equation (5.4) therefore forces
+
+\[
+\boxed{
+\theta_*\to{\pi\over2},
+\qquad
+{s_*\over\ell_*}\to{2\over\pi},
+\qquad
+{\ell_*-s_*\over\ell_*}\to1-{2\over\pi}.
+}
+\tag{5.8}
+\]
+
+Thus the critical pocket also creates an actual outer-walk chain--chord detour.  Since
+canonical Section 63 decomposes the total outer-walk detour as the sum of the
+consecutive hull-interval deficits, this one pocket contributes one of its
+nonnegative summands.  Hence
+
+\[
+\boxed{
+b-P_F
+\ge \ell_*-s_*
+=\left(\left(1-{2\over\pi}\right)c_K+o(1)\right)\sqrt D.
+}
+\tag{5.9}
+\]
+
+At the fixed-cutoff envelope this coefficient is
+
+\[
+\boxed{
+\left(1-{2\over\pi}\right)
+\sqrt{\pi\sqrt3\,\nu_\infty}
+=0.848091995290680\ldots .
+}
+\tag{5.10}
+\]
+
+No Hausdorff convergence of the pocket boundary is claimed; (5.4) and (5.8) are the
+proved scalar saturation statements.  They are enough to show that the minimum-degree
+endpoint cannot hide in nearly straight pockets.
+
+This is a much narrower regression target than an arbitrary linear-area outer-pocket
+sink.
+
+---
+
+## 6. What remains
+
+The new bridge does not close C-II.  Its useful alternatives are now:
+
+1. `Z_ext` itself pays a linear fraction of the half-plus endpoint population;
+2. `d_P` is supercritical compared with `sqrt(D)`, producing explicit nontriangular
+   outer-walk complexity; or
+3. at the critical `sqrt(D)` scale, one mesoscopic outer pocket carries a linear
+   isolate population, saturates reflected isoperimetry and Oler density at leading
+   order, has chord/chain ratio `2/pi+o(1)`, and contributes
+   `(0.84809...-o(1))sqrt(D)` actual chain--chord detour at the envelope.
+
+The third endpoint is the sharp next geometric target.  A closure would need to rule
+out that scalar-saturated pocket using the fact that its boundary chain consists of
+**actual unit contacts tied to the force core**, or use it to build a protected
+same-cardinality strict sub-`D` replacement.  Density or isoperimetry alone cannot do
+that, because near-triangular interior packings can asymptotically saturate both.
+
+**Disposition:** proved finite outer-pocket population/degree-moment bridge and its
+half-plus reflection consequences; theorem-state authority unchanged.  C-II and Level
+I remain open.

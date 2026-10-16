@@ -1,0 +1,449 @@
+# Target C: star-free outer-train witness cells absorb the split-star branch
+
+Date: 2026-10-02  
+Base main: 75aac1464f80ca91256e96dc70ca0c865e0b3b0e  
+Status: proof-only candidate. Level I and C-II remain open.
+
+## 1. Result
+
+This note removes the common-star hypothesis from the October 1 local witness-cell
+theorem.
+
+Let \(\tau\) be any non-singleton global outer-to-outer stopped train. Let its
+Section-157 Jordan shore split be
+
+\[
+V=S\sqcup T,
+\]
+
+orient every crossing actual diameter vector from \(T\) into \(S\), and let \(u\)
+be the oriented unit train direction. Then the crossing actual-diameter directions
+form one contiguous block in the global oriented diameter-direction order.
+
+Consequently exactly one of the following local alternatives holds.
+
+1. No actual diameter is parallel to \(u\). Then the two global actual-diameter
+   directions immediately bracketing \(u\) are crossing edges
+   \(h_-,h_+\), they are consecutive global directions, and
+
+   \[
+   r_{h_-}\cdot Ju<0<r_{h_+}\cdot Ju .
+   \tag{1}
+   \]
+
+2. The unique actual diameter \(h_0\) parallel to \(u\) exists. Then
+   \(h_-,h_0,h_+\) are three consecutive global actual-diameter directions, all
+   three cross \(\tau\), and the two outer rows satisfy (1).
+
+Thus every O--O train has a canonical opposite-sign Section-157 witness cell in
+the global diameter-direction order, without requiring the two witnesses to share
+a diameter vertex.
+
+For a family \(\mathcal L\) of O--O trains whose projective directions lie in a
+real interval \(J\) of width \(0<W<\pi\), put
+
+\[
+a_D=\arcsin {1\over2D},
+\qquad
+N(W,D)=\left\lfloor {W\over2a_D}\right\rfloor+1,
+\qquad
+M(W,D)=2N(W,D)+1.
+\tag{2}
+\]
+
+There is a subfamily
+
+\[
+\boxed{
+|\mathcal L'|\ge {|\mathcal L|\over M(W,D)}
+}
+\tag{3}
+\]
+
+with one fixed global witness cell. In an open cell the same two consecutive
+actual diameter edges \(h_-,h_+\) cross every retained train with opposite strict
+transverse signs. In a threshold cell the same three consecutive edges
+\(h_-,h_0,h_+\) cross every retained train, every retained train is parallel to
+\(h_0\), and the outer two rows have opposite signs.
+
+For a Section-90 phase shore,
+
+\[
+W_D={4K\over D},
+\qquad 2a_D\ge {1\over D},
+\]
+
+so one may take the existing constant
+
+\[
+\boxed{
+M_K=2\lfloor4K\rfloor+3.
+}
+\tag{4}
+\]
+
+The main application is immediate. Once the October 1 O--O rectangle theorem gives
+
+\[
+|A_0|,|B_0|
+\ge
+\left({\kappa^4\over8\pi^3}-o(1)\right)D,
+\tag{5}
+\]
+
+apply (3) independently on the two Section-90 shores. There are subfamilies
+\(A^\sharp\subseteq A_0\), \(B^\sharp\subseteq B_0\) such that every cross-pair
+still crosses in an actual strict rhombus and
+
+\[
+\boxed{
+|A^\sharp|,|B^\sharp|
+\ge
+\left(
+{\kappa^4\over8\pi^3M_K}-o(1)
+\right)D.
+}
+\tag{6}
+\]
+
+Each shore has one fixed star-free global diameter witness cell.
+
+Therefore the previous O--O fork
+
+\[
+\text{linear split-star shore}
+\quad\hbox{or}\quad
+\text{fixed single-star rectangle}
+\]
+
+is unnecessary. Both cases enter the same fixed-witness-cell rectangle. In
+particular the split-star O--O branch is no longer a separate multiplicity problem.
+
+This is a branch reduction, not a C-II closure. The surviving witness-cell
+mechanisms still include nonconstant open-cell phase, exact open-cell phase, and
+exact threshold phase, as well as the independent inactive-interface branches.
+
+## 2. Diameter endpoints are unique support extrema
+
+Let \(F\) be the convex hull of the actual diameter endpoints. If \(ab\) is an
+actual diameter and
+
+\[
+r=p_b-p_a,\qquad |r|=D,
+\]
+
+then for any other source point \(z\),
+
+\[
+|z-b|^2\le D^2=|r|^2
+\]
+
+gives
+
+\[
+(z-a)\cdot r\ge {|z-a|^2\over2}>0.
+\tag{7}
+\]
+
+Similarly
+
+\[
+(z-b)\cdot r\le-{|z-b|^2\over2}<0.
+\tag{8}
+\]
+
+Thus \(a\) is the unique minimum and \(b\) the unique maximum of the linear
+functional \(x\mapsto r\cdot x\) on the source and on \(F\).
+
+This is the same elementary normal-order fact used in the October 1 nested-bundle
+theorem. It also reproves that every actual diameter endpoint is an extreme point.
+
+Distinct actual diameter edges have distinct projective directions. Indeed two
+parallel diameter segments coincide by audited Section 157.1.
+
+## 3. A train shore gives two complementary hull intervals
+
+Represent the O--O train by its proper Jordan crosscut in the outer-face disk, as
+in audited Section 157. The crosscut divides the outer boundary into two arcs
+corresponding to the shores \(T\) and \(S\).
+
+Restrict those arcs to the extreme vertices of \(F\). They give two complementary
+cyclic vertex intervals \(I_T,I_S\) in the convex order of \(F\). Repeated
+outer-face occurrences may be resolved in the standard small regular neighborhood;
+this does not change the cyclic order of the convex extreme vertices or which side
+of the crosscut contains them.
+
+Both intervals are nonempty because Section 157.3 supplies crossing actual
+diameters.
+
+Choose a line strictly separating the two finite vertex intervals. One convenient
+construction is the line through relative interior points of the two transition
+sides between \(I_T\) and \(I_S\). Let \(\phi\) be a normal pointing from \(I_T\)
+toward \(I_S\). Then every segment joining \(I_T\) to \(I_S\), oriented from
+\(T\) to \(S\), satisfies
+
+\[
+\phi\cdot r>0.
+\tag{9}
+\]
+
+Hence all oriented crossing-diameter directions lie in one open semicircle and
+admit one ordinary real angular lift of length less than \(\pi\).
+
+## 4. Crossing diameter directions are a contiguous block
+
+### Lemma 4.1 -- interval normal order
+
+Let \(I,J\) be complementary nonempty cyclic vertex intervals of a convex polygon.
+Suppose two actual diameter vectors \(r_1,r_2\), oriented from \(I\) to \(J\), lie
+in one open angular semicircle. Every actual diameter direction occurring between
+their two lifted directions in that semicircle also joins \(I\) to \(J\).
+
+### Proof
+
+As a support direction rotates, the unique minimizing vertex of a convex polygon
+moves monotonically through cyclic vertex order. In particular, the directions whose
+minimum support lies in one cyclic vertex interval form one cyclic angular interval;
+the same is true for maximum support.
+
+Let the lifted directions of \(r_1,r_2\) be
+\(\theta_1<\theta_2<\theta_1+\pi\). Suppose, for contradiction, that while rotating
+on the short arc from \(\theta_1\) to \(\theta_2\), the minimum support leaves \(I\)
+and later returns to \(I\). Since \(I,J\) are complementary vertex intervals, the
+intervening minimum-support interval for \(J\) would be trapped inside that short
+arc, up to the two transition normals.
+
+But reversing either diameter swaps its unique minimum and maximum endpoints.
+Therefore the antipodal directions
+\(\theta_1+\pi\) and \(\theta_2+\pi\) both have their unique minimum support in
+\(J\). Neither lies on the short arc from \(\theta_1\) to \(\theta_2\). This
+contradicts the fact that the minimum-\(J\) directions form one cyclic interval.
+Hence the minimum support stays in \(I\) throughout the short arc.
+
+Apply the same argument to the maximum support, or equivalently apply the minimum
+argument after reversing every direction. The maximum support stays in \(J\)
+throughout. By Section 2 actual diameter directions have unique extrema, so any
+actual diameter direction between \(\theta_1\) and \(\theta_2\) joins \(I\) to
+\(J\). QED.
+
+Apply Lemma 4.1 with \(I=I_T\), \(J=I_S\). It follows that the actual diameter
+directions crossing the train cut form one contiguous block in the global direction
+order.
+
+No common diameter vertex is used.
+
+## 5. The KKT resultant locates the train direction inside that block
+
+Audited Section 157.2 gives
+
+\[
+A_\tau u
+=
+\sum_{h\pitchfork\tau}\beta_h r_h,
+\qquad
+A_\tau>0,\quad \beta_h>0,
+\tag{10}
+\]
+
+where every crossing vector is oriented from \(T\) into \(S\).
+
+Dot (10) with the separator \(\phi\). Equation (9) gives
+
+\[
+\phi\cdot u>0,
+\tag{11}
+\]
+
+so the orientation of \(u\) lies in the same real angular semicircle as all
+crossing vectors.
+
+Because a positive combination of vectors in an open semicircle lies in their
+positive cone, the angle of \(u\) lies between the extreme crossing directions.
+Audited Section 157.3 strengthens this to strict transverse bracing:
+
+\[
+\exists h_+,h_-\pitchfork\tau:
+\qquad
+r_{h_+}\cdot Ju>0,
+\qquad
+r_{h_-}\cdot Ju<0.
+\tag{12}
+\]
+
+Thus there is at least one crossing direction on each strict side of \(u\).
+
+If no actual diameter direction equals \(u\), take the immediate global predecessor
+and successor of \(u\). They lie between crossing directions of opposite sign.
+Section 4 makes them crossing edges. Since no global diameter direction lies between
+them, they are consecutive and satisfy (1).
+
+If one actual diameter direction equals \(u\), audited parallel-diameter uniqueness
+makes it a unique edge \(h_0\). The immediate global predecessor and successor of
+\(h_0\) again lie between crossing directions of opposite signs, hence are crossing
+by Section 4. This gives the three-edge threshold cell.
+
+This proves the star-free local witness-cell theorem.
+
+## 6. Uniform extraction in a narrow phase interval
+
+Let the distinct actual diameter directions in \(J\) be
+
+\[
+d_1<\cdots<d_N.
+\]
+
+Canonical shared/disjoint direction spacing implies every two consecutive global
+diameter directions are separated by at least \(2a_D\). Hence
+
+\[
+N\le
+\left\lfloor {W\over2a_D}\right\rfloor+1.
+\tag{13}
+\]
+
+The \(N\) singleton threshold directions and the at most \(N+1\) open complementary
+cells partition \(J\) into at most \(2N+1\le M(W,D)\) witness classes.
+
+The local theorem shows that the witness cell of a train depends only on the cell
+containing its direction, not on a chosen star. Pigeonholing proves (3).
+
+In one retained open cell, its two boundary diameter edges are the same fixed
+consecutive global edges for every train. They cross every retained train and have
+opposite strict Section-157 signs.
+
+In one retained threshold cell, all retained train directions are the same actual
+diameter direction \(h_0\). The two adjacent global edges and \(h_0\) are fixed and
+cross every retained train.
+
+This proves the family theorem.
+
+## 7. Split-star geometry becomes a special case, not a branch
+
+Suppose a retained train is genuinely split-star: no one diameter vertex carries
+both opposite-sign Section-157 witnesses.
+
+In an open witness cell, the two canonical boundary witnesses \(h_-,h_+\) must be
+vertex-disjoint. If they shared a vertex, that vertex itself would carry both strict
+signs and would single-star brace the train.
+
+The same conclusion holds for the outer witnesses of a threshold triple
+\(h_-,h_0,h_+\): \(h_-\) and \(h_+\) are vertex-disjoint.
+
+Hence after the family extraction, a linear split-star family is not a diffuse
+collection of cut-dependent witness pairs. It has one fixed pair of vertex-disjoint
+actual diameter edges crossing every retained train cut with opposite signs
+(and, in the threshold case, one additional fixed parallel full-support diameter).
+
+In the square-root matching regime this is compatible with the current Woodall
+leaf/core theorem but much more localized than its raw \(O(\sqrt D)\)-carrier
+conclusion. The Section-90 narrow-bin theorem gives the stronger constant number of
+possible cells before any matching estimate is used.
+
+## 8. The complete O--O rectangle can bypass star pigeonholing
+
+The October 1 complete-rectangle theorem supplies (5). All directions on one
+Section-90 shore lie in width \(4K/D\), so apply Section 6 independently to \(A_0\)
+and \(B_0\). Completeness of the crossing rectangle is preserved under taking
+subfamilies, giving (6).
+
+This improves the previous fixed-star extraction in two ways.
+
+First, it has no exceptional split-star alternative.
+
+Second, it does not pay the old factor \(2C_K\) from first discarding a possible
+linear split population and then pigeonholing single-star bracing vertices. The old
+fixed-star/common-cell lower coefficient
+
+\[
+{\kappa^4\over16\pi^3 C_K M_K}
+\]
+
+is replaced at proof-only scope by
+
+\[
+\boxed{
+c_{\rm UWC}:={\kappa^4\over8\pi^3 M_K}.
+}
+\tag{14}
+\]
+
+No numerical value of \(K\) or \(\kappa\) is needed for the theorem.
+
+## 9. Downstream modules that no longer need a common star
+
+The following October 1 arguments can be entered from the star-free rectangle
+because their load-bearing hypotheses after extraction are the ordered O--O trains,
+a common global witness cell, and fixed full-support witness rows, not a common
+witness vertex.
+
+1. The complete-grid rank-switching theorem is already stated for arbitrary ordered
+   O--O trains and gives full rank, linearly many proper-support diameter rows, and
+   linearly many support switches.
+
+2. The witness-cell blocker dichotomy uses only the absence/presence of global
+   diameter directions inside the common cell and the fact that its boundary witness
+   rows are full-support. Thus distinct adjacent train directions are TB1, while an
+   exact-direction plateau is TB2.
+
+3. The arbitrary open-cell block transposition uses only the same fixed cell and
+   full-support boundary rows. Therefore the nonconstant-phase star-free branch has
+   the same TWO-SIGN versus inverse-\(D\) inactive-near-activity fork.
+
+4. In exact phase, the gap-graph connectivity theorem is already a consequence of
+   rank alone. If the common cell is a threshold cell, the fixed parallel row \(h_0\)
+   supplied by the universal localization is full-support, so the paired-staircase
+   proof has the same geometric input. If the common cell is open, the general
+   nested-bundle theorem applies to nested exact-phase cuts and their KKT resultants.
+
+Thus the old single-star/split-star distinction is not part of the live O--O
+handoff after (6). The remaining distinctions are geometric witness-cell types.
+
+This paragraph is a dependency composition of already proof-only October 1 modules;
+it does not promote those modules or change theorem-state authority.
+
+## 10. Scope and hostile checks
+
+- The theorem uses the audited Section-157 Jordan shore split and positive KKT cut
+  resultant.
+- It uses only actual diameter endpoints and their convex normal order. No Euler
+  trail or diameter-path inference is made.
+- Parallel-diameter uniqueness is exactly audited Section 157.1.
+- Contact-isolated source points are not deleted or inserted into a rigidity matrix.
+- Repeated outer-face occurrences are handled by the same regular-neighborhood
+  resolution used by the O--O crosscut stack.
+- No individual KKT coefficient lower bound is used.
+- A fixed pair of vertex-disjoint diameter rows may cross arbitrarily many nested
+  cuts. The theorem does not claim otherwise.
+- Constant-width/Reuleaux star regressions do not contradict the theorem; they lack
+  the O--O contact-cut/KKT resultant hypotheses needed to select \(u\).
+- The theorem does not exclude the resulting common-cell rectangle.
+- Inactive-interface and macroscopic inactive-container branches are untouched.
+
+## 11. New frontier
+
+The O--O endpoint no longer needs a separate split-star multiplicity theorem.
+
+Starting from a quadratic O--O crossing mass, the route is now
+
+\[
+\text{dense O--O crossings}
+\Longrightarrow
+\text{linear complete rectangle}
+\Longrightarrow
+\text{linear star-free fixed-witness-cell rectangle}
+\Longrightarrow
+\begin{cases}
+\text{open-cell nonconstant phase},\\
+\text{open-cell exact phase},\\
+\text{threshold exact phase}.
+\end{cases}
+\tag{15}
+\]
+
+The highest-value next step is therefore not to bound the number of split-star
+witness pairs. It is to attack the common-cell rectangle directly, with the stronger
+coefficient \(c_{\rm UWC}\), using the rank-distributed proper diameter rows and the
+current TB1/TB2 finite-move machinery.
+
+Disposition: proof-only theorem and dependency reduction. No numerical search,
+verifier execution, CI output, or unexecuted certificate code is used.

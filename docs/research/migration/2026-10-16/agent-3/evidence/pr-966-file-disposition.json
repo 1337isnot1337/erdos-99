@@ -1,0 +1,91 @@
+{
+  "base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+  "files": [
+    {
+      "additions": 525,
+      "bytes": 24335,
+      "changes": null,
+      "deletions": 0,
+      "destination_blob_same_path": "6913676149bb32c1c128aeba40231e6cf3995dd9",
+      "destination_identical_blob_paths": [
+        "docs/reports/target_a_seed066_coembedded_locked_fullrank_2026-10-13.md"
+      ],
+      "destination_same_path_relation": "identical",
+      "path": "docs/reports/target_a_seed066_coembedded_locked_fullrank_2026-10-13.md",
+      "sha256": "4ae3230a57b6222b86a7a18b9e0a148ebc3e21d38afbf6ad30c0ec7dc0cff4fc",
+      "source_blob": "6913676149bb32c1c128aeba40231e6cf3995dd9",
+      "source_head": "88b473899edc5f63c50aa6f90bf9a4d63112a66d",
+      "source_mode": "100644",
+      "status": "added_or_modified_at_head"
+    },
+    {
+      "additions": 1,
+      "bytes": 431915,
+      "changes": null,
+      "deletions": 0,
+      "destination_blob_same_path": "97ed5ce70e9f90c6448884c73efcfcfafd958404",
+      "destination_identical_blob_paths": [],
+      "destination_same_path_relation": "different",
+      "path": "docs/state/artifact-index.jsonl",
+      "sha256": "0c4e6bc91e32e1c8175284c6b14749acba0d793748b1f260b45b44766f5ca107",
+      "source_blob": "20d5b867d2faebe4add8a584f0b37ae38afede10",
+      "source_head": "88b473899edc5f63c50aa6f90bf9a4d63112a66d",
+      "source_mode": "100644",
+      "status": "added_or_modified_at_head"
+    },
+    {
+      "additions": 21,
+      "bytes": 262287,
+      "changes": null,
+      "deletions": 0,
+      "destination_blob_same_path": "690710626e0c7e9c24d1890b812536bee9e107fa",
+      "destination_identical_blob_paths": [],
+      "destination_same_path_relation": "different",
+      "path": "research/README.md",
+      "sha256": "e68a5226f392c8f5979fd152e63899100f789ff6b383de750f361b2afa9982ea",
+      "source_blob": "723af63d3f4002162010fb8589eec66deb30d2e6",
+      "source_head": "88b473899edc5f63c50aa6f90bf9a4d63112a66d",
+      "source_mode": "100644",
+      "status": "added_or_modified_at_head"
+    },
+    {
+      "additions": 142,
+      "bytes": 4205,
+      "changes": null,
+      "deletions": 0,
+      "destination_blob_same_path": "284451fb2280b8e358e84b277536bb7b781574b4",
+      "destination_identical_blob_paths": [
+        "research/target_a_seed066_locked_fullrank_certificate.json"
+      ],
+      "destination_same_path_relation": "identical",
+      "path": "research/target_a_seed066_locked_fullrank_certificate.json",
+      "sha256": "9e789d9cfd1c1bafc3bffe434b541529d75a3faa730f9f39359befc85a3b5146",
+      "source_blob": "284451fb2280b8e358e84b277536bb7b781574b4",
+      "source_head": "88b473899edc5f63c50aa6f90bf9a4d63112a66d",
+      "source_mode": "100644",
+      "status": "added_or_modified_at_head"
+    },
+    {
+      "additions": 404,
+      "bytes": 16160,
+      "changes": null,
+      "deletions": 0,
+      "destination_blob_same_path": "4bfd04586257b699555c7816250da585a5f1933a",
+      "destination_identical_blob_paths": [
+        "research/verify_target_a_seed066_locked_fullrank.py"
+      ],
+      "destination_same_path_relation": "identical",
+      "path": "research/verify_target_a_seed066_locked_fullrank.py",
+      "sha256": "0426b56c5289e2624e1e49b8b17f0296c9531e41e8e101b29ffc83c8845c53ef",
+      "source_blob": "4bfd04586257b699555c7816250da585a5f1933a",
+      "source_head": "88b473899edc5f63c50aa6f90bf9a4d63112a66d",
+      "source_mode": "100644",
+      "status": "added_or_modified_at_head"
+    }
+  ],
+  "head_ref": "research/seed-066-schur-response-capacity",
+  "head_sha": "88b473899edc5f63c50aa6f90bf9a4d63112a66d",
+  "number": 966,
+  "title": "Target A: coembedded locked hulls with full Schur rank (seed 66)",
+  "url": "https://github.com/1337isnot1337/e-99/pull/966"
+}

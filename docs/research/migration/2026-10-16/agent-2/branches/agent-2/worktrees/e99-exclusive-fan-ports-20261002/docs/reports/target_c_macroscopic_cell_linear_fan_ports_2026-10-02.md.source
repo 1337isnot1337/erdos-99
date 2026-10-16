@@ -1,0 +1,365 @@
+# Target C — macroscopic harmonic cells carry linear exact fan populations
+
+```text
+actual small-matching / small-outer-excess source
+ -> almost every loaded attachment is a degree-three good-fan vertex
+ -> canonical pinned-incidence identity forces linear fan population in a macroscopic cell
+ -> a finite source competitor or contradiction must act on that same cell and its ports.
+The last source surgery/contradiction is not proved. Level I and C-II remain OPEN.
+```
+
+**Date:** 2026-10-02.
+**Starting prior research branch:** `1baea560b5f07a7a51017f270b93c184c7749afe`.
+**Fresh isolated base:** `7c95482d3a0c1c0df7319aa70a0f5fe0878d7707`.
+**State version:** `2026-09-14.audit.51`.
+**Branch:** `swarm/sol/exclusive-fan-ports-20261002`.
+**Mission:** actual cell concentration and the fan/attachment source bridge.
+**Classification:** proved candidates awaiting independent audit and promotion;
+artifact lifecycle **unreviewed**. The alternating-port packet is a **regression**.
+**Canonical dependencies:** C-I restoration; C-ZRF; C-WOODALL; the canonical
+loaded degree cap; Sections 61–63, 75, 83 and 88 as stated below.
+**Unpromoted leads:** current high-t fan forcing, inward-spoke and harmonic-return
+reports, and PR #631's local island budget. All facts used here are rederived
+from canonical inputs; no unpromoted theorem is a premise.
+**Active prompt:** [current C continuation](../prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md).
+**Certificate:** [exact reductions](../../research/verify_target_c_macroscopic_fan_ports_2026_10_02.py).
+**Literature:** no import. No promotion transaction is attempted.
+
+## 1. Objects and actual scope
+
+Use the canonical contact-minimal then diameter-pair-minimal triangle-free global
+source with D≥9. Retain all source points, including contact isolates. V is the
+nonisolated positive-contact core, B is the full actual diameter endpoint set,
+q=|B|, h=|H|, ν=ν(H), and x_B=b_out−q. The full supports C,H have positive
+coefficients in a relative-interior normalized KKT stress. Canonical mixed rank
+on V is 2|V|−3. All core point positions and edges are the original source objects.
+
+Let I_r be the components of C[V\B], A_r their distinct loaded attachment sets,
+a_r=|A_r|, n_r=|I_r|, e_r=|C[I_r]|, and t_r the number of contacts from I_r to B.
+Use canonical notation
+
+\[
+ s_r=e_r+t_r-2n_r-1\ge0,\quad
+ r_r=2n_r-\delta_r-2-e_r\ge0,\quad
+ \delta_r=\operatorname{diam}_{graph}C[I_r],
+\]
+
+with δ_r=0 for a singleton. Define P_r=conv(A_r), d_r=diam(P_r).
+Every |A_r|≥3. Canonical harmonic trapping puts I_r in P_r and
+d_r≤δ_r+2. Section 62 gives the exact identity
+
+\[
+ \boxed{t_r=\delta_r+3+s_r+r_r.}                         \tag{1}
+\]
+
+Let J be all internal vertices of good unit-contact runs in same-carrier
+diameter-leaf blocks. Every p∈J has its two neighboring leaves joined to p by
+actual unit contacts. They and p share one actual diameter carrier. Let κ=q−|J|
+count the remaining loaded vertices. Let N_r=|J∩A_r|.
+
+## 2. Only O(ν+x_B) loaded vertices fail the good-fan test
+
+The following rederives the relevant good-fan count from canonical Woodall
+topology, rather than importing a report's unsupported equality.
+
+### 2.1 Same-carrier leaves are contiguous
+
+If p,q are diameter leaves with common carrier a, any loaded vertex z on the
+open hull arc from p to q not containing a is also a leaf at a. For any other
+diameter zw, the diameter-thrackle rule would make zw cross both ap and aq.
+The permitted positions of w lie in disjoint hull arcs. Thus only za is possible.
+This proves one consecutive leaf block per carrier.
+
+Write P for the number of leaf-to-nonleaf diameter edges and c for the number
+of carriers with such leaves. One pendant edge per carrier is a matching, so
+c≤ν. The number of within-block loaded adjacencies is S=P−c.
+
+In the forest branch, let K count isolated K_2 components and m count edges
+between nonleaves. Woodall makes the nonleaf core a disjoint union of paths.
+If its matching number is μ, m≤2μ and μ+K≤ν. Hence P=h−m−K≥h−2ν and
+S≥h−3ν. In the odd-unicyclic branch with leaves, a pendant edge plus a
+matching of the even path left after deleting its cycle vertex gives cycle
+length at most 2ν−1. Again P≥h−2ν and S≥h−3ν. With no leaves the same
+inequality is vacuous and true. Also d_H=q−h≤ν in both topology branches.
+
+### 2.2 Bad outer intervals and run endpoints
+
+Canonical Section 61 splits the outer walk into q intervals between consecutive
+loaded hull vertices. Their lengths ℓ_i satisfy Σ(ℓ_i−1)=x_B. At most x_B
+intervals are bad; every other interval is an actual unit hull-side contact.
+Thus at least S−x_B same-carrier adjacencies are good. Their nonempty good
+runs number at most c+x_B. A run of g edges contributes g−1 internal vertices.
+It follows that
+
+\[
+ |J|\ge h-4\nu-2x_B,\qquad
+ \boxed{\kappa=q-|J|\le5\nu+2x_B.}                      \tag{2}
+\]
+
+The bound concerns actual loaded source vertices. In particular, in the low
+matching/outer-excess branch ν+x_B=o(D), almost every loaded vertex is in J.
+
+## 3. Every good-fan attachment is exclusive and has an unloaded port
+
+Fix p∈J with carrier a and fan neighbors p_−,p_+. Put
+u=(p−a)/D, choose a unit transverse vector v_0, and write
+
+\[
+ \epsilon={1\over2D},\quad \tau=\sqrt{1-\epsilon^2},\quad
+ p-p_\pm=\epsilon u\pm\tau v_0.
+\]
+
+The canonical loaded contact-degree cap is three. If p belongs to any A_r,
+it already has the two loaded fan contacts and must have exactly one further
+contact pz, with z∈I_r. Hence it belongs to exactly one attachment set and
+N_r counts distinct exclusive loaded attachment vertices and their distinct
+loaded-to-unloaded contact edges.
+
+For completeness, a third contact is automatically unloaded even before an
+attachment set is specified. Let p−z=ru+sv_0. The source diameter bound to
+a gives r≥ε; unit separation from p_−,p_+ forces this vector into the inward
+30-degree cone, giving
+
+\[
+ r\ge{\epsilon+\sqrt3\tau\over2},\qquad
+ |s|\le{\tau-\sqrt3\epsilon\over2}<\tfrac12.              \tag{3}
+\]
+
+In coordinates with p=0 and a=(−D,0), the fan neighbors are (−ε,±τ).
+For D≥9, z=(−r,−s) lies strictly inside their triangle with a: r>ε, r<D,
+and |s|<1/2<τ(D−r)/(D−ε). Actual diameter endpoints are extreme source
+points, so z has no diameter edge. Its positive contact to p puts it in an I_r.
+
+This uses the actual source triangle and retains inactive constraints; it is
+not a harmonic-carrier substitution.
+
+## 4. Linear fan population in every macroscopic actual cell
+
+Let B_r be the number of contacts from I_r to loaded vertices outside J.
+Because every good-fan attachment is exclusive,
+
+\[
+ t_r=N_r+B_r,\quad
+ \sum_rB_r\le3\kappa,
+\]
+
+by the loaded degree cap. Combining with (1) gives
+
+\[
+ \boxed{N_r=\delta_r+3+s_r+r_r-B_r
+ \ge d_r+1+s_r+r_r-B_r.}                               \tag{4}
+\]
+
+Consequently, for every cell,
+
+\[
+ \boxed{N_r\ge d_r+1+s_r+r_r-15\nu-6x_B.}               \tag{5}
+\]
+
+The error can be charged once globally, rather than separately per cell:
+
+\[
+ \boxed{\sum_rN_r\ge\sum_rd_r+c_I+s_C+\sum_rr_r-3\kappa.}\tag{6}
+\]
+
+These are finite, same-source inequalities. They improve the concentration
+mechanism based solely on averaging over c_I components. The cell's actual
+attachment incidence, graph diameter and pinned surplus are coupled directly.
+
+In canonical Type II, Section 88 supplies actual harmonic cells with
+
+\[
+ d_*\ge(\mu_0-o(1))D,\quad
+ \mu_0=0.8896708101\ldots,
+ \quad \mu_0/3=6\arcsin\mu_0-2\pi.
+\]
+
+Therefore if ν+x_B=o(D), one such cell has
+
+\[
+ \boxed{N_*\ge(\mu_0-o(1))D,
+ \quad N_*>(0.8896-o(1))D.}                             \tag{7}
+\]
+
+No high-t cutoff is needed. This is a linear fan population in one actual
+macroscopic harmonic cell, replacing the weaker square-root concentration
+from the existing return fork. If a stronger canonical carrier bound applies,
+its coefficient substitutes for μ_0 in exactly the same equation.
+
+## 5. Linear deep diameter-inactive ports in that same cell
+
+Each p counted by N_r has a third neighbor z in I_r. A source vertex has at
+most five unit neighbors in the triangle-free core, so these N_r incidences
+give at least N_r/5 distinct vertices in I_r. They are nonisolated and have
+no actual diameter edges.
+
+We also rederive a full-source depth bound. Set h_0=√3/2. An interior source
+point at depth <h_0 in the force hull cannot have a unit hull side as its nearest
+boundary segment: the perpendicular foot lies in that unit segment, so at
+least one endpoint would be at distance <√(1/4+h_0²)=1. A nearest vertex
+would directly violate unit separation. Every shallow source point can thus
+be assigned to a nonunit hull side, with perpendicular foot in that side.
+
+The bad-side count is at most x_B and their total Euclidean length at most
+2x_B, by the canonical outer-walk intervals. For a side of length ℓ, the
+assigned points lie in a strip rectangle ℓ by h_0. Their disjoint radius-1/2
+disks lie in a rectangle (ℓ+1) by (h_0+1). Summing the resulting area bounds
+over the assigned side classes gives
+
+\[
+ \#\{z\in A\cap\operatorname{int}F:
+        \operatorname{dist}(z,\partial F)<h_0\}
+ \le {12(1+h_0)\over\pi}x_B<8x_B.                       \tag{8}
+\]
+
+The sum is over assigned disjoint point classes; overlaps between the covering
+rectangles do not cause double counting of points. This argument includes
+contact isolates in A and supplies no force to them.
+
+Hence I_r contains at least
+
+\[
+ \boxed{Z_{r,deep}\ge N_r/5-8x_B}                       \tag{9}
+\]
+
+distinct such port vertices at loaded-hull depth ≥h_0. For every one and every
+full-source point y, B(z,h_0)⊂F⊂B(y,D), so
+
+\[
+ \boxed{|z-y|\le D-h_0.}                               \tag{10}
+\]
+
+Using (7), the same macroscopic cell contains
+
+\[
+ \boxed{Z_{*,deep}\ge(\mu_0/5-o(1))D
+       >(0.17792-o(1))D.}                              \tag{11}
+\]
+
+These are actual positive-core vertices protected from every upper-distance
+constraint by one fixed margin. This does not make them unit-clear sites.
+
+## 6. Exact noncrossing compression and a joint cell budget
+
+There is a further finite restriction on how ports can be distributed. Choose
+any subset E of exclusive loaded attachment vertices, N=|E|, N_r=|E∩A_r|.
+Here E need not be the good-fan set; this paragraph reuses N_r for this general
+exclusive count. Let g_r count gaps between consecutive members of A_r that
+contain vertices of E belonging to other cells.
+
+Canonical Section 83 forbids alternating attachment pairs. Every other cell's
+exclusive vertices consequently lie in one A_r-gap; otherwise two such vertices
+and two separating A_r vertices would alternate. Thus g_r≤c_I−1.
+
+Delete those N−N_r other-cell vertices from the cyclic loaded order. The retained
+cycle has q−N+N_r vertices and contains A_r. Its edges with both endpoints in
+A_r number at least 2a_r−(q−N+N_r). At most g_r of those edges were created
+by deletion; at most x_B original cyclic adjacencies lack a known unit contact.
+Thus the induced loaded contact count c_r=|C[A_r]| obeys
+
+\[
+ \boxed{c_r\ge2a_r-q+N-N_r-g_r-x_B.}                   \tag{12}
+\]
+
+The canonical local face identity is
+L_r+Q_r=4a_r−6−2s_r−2c_r. Also the triangle-free penny-graph diameter bound
+for C[I_r∪A_r] gives δ_{K_r}+s_r+c_r≤2a_r−3. Consequently
+
+\[
+ \boxed{\delta_{K_r}+s_r+N-N_r
+       \le q+g_r+x_B-3,}                               \tag{13}
+\]
+
+and
+
+\[
+ \boxed{(L_r+Q_r)/2+s_r+N-N_r
+       \le q+g_r+x_B-3.}                               \tag{14}
+\]
+
+Specialize back to E equal to all good-fan attachment vertices. Apply (4) to
+the other cells and charge their B_s once. Since N≤q and Σ B_s≤3κ,
+
+\[
+ \boxed{(L_r+Q_r)/2+\sum_{s\ne r}d_s+s_C
+       \le q+g_r+x_B-3+3\kappa.}                       \tag{15}
+\]
+
+We dropped the nonnegative other-cell r_s and additive constants; the weaker
+form (15) avoids any asymptotic assumption. In low matching/outer-excess Type II,
+c_I=o(D). Under the explicit additional ledger condition s_C=k+o(D), writing
+t_D=(q−k)/D, this becomes
+
+\[
+ \boxed{(L_r+Q_r)/2+\sum_{s\ne r}d_s\le t_DD+o(D).}    \tag{16}
+\]
+
+Thus the chosen cell's actual outer walk and exceptional-face currency compete
+with every other actual cell's diameter in one source budget. Condition
+s_C=k+o(D) is stated explicitly; it is not inferred just from ν+x_B=o(D).
+
+## 7. Hostile audit and the continued closing attack
+
+The direct incidence proof in Section 4 is stronger than using (13) and a
+global high-t lower bound on N. The latter would give only a safe 0.3111D
+cell population at t_D≤1.860. Equation (7) supplies 0.8896D without that
+cutoff. The certificate checks both constants but the weaker route is not
+presented as the frontier.
+
+Dropping actual noncrossing makes (12) false. In a six-position cyclic packet
+take A={0,2,4} and assign the three other positions to one second cell. Its
+two alternating triples have crossing convex hulls. The original cycle has
+no A–A adjacency, but the false substitution g≤c_I−1=1 would demand two.
+This is an exact combinatorial regression, not an actual KKT source or a
+counterexample to the canonical noncrossing theorem. Exclusivity is equally
+necessary: designating an owner does not delete a vertex shared with A_r.
+
+I next tried to use (7) to force a source triangle from inward spokes. That
+fails because each port is inactive only in the diameter graph. Its lower
+unit contacts remain active, and its positive harmonic equilibrium may trap
+it. Equation (10) supplies upper slack but no vacancy or simultaneous lower
+release. The rhombic-collar regression already on PR #627 protects this
+distinction. No diameter-inactive vertex is discarded or automatically moved.
+
+The next attack used the actual complete shore in the macroscopic cell. A
+linear family of fan boundary directions need not cross both shores; a
+direction-preserving train can terminate at an exceptional face or traverse
+only one shore. Its stopping endpoint must be charged at boundary order.
+The exact budget (16) retains those costs, but it currently permits a single
+large cell with ordinary fan ears and a linear internal exceptional-face
+population. It does not turn many separate port releases into a compatible
+full-source move. No finite competitor is claimed.
+
+The precise remaining obligation is to make a simultaneous lower-feasible
+source surgery in the cell singled out by (7)–(11), or prove that its actual
+fan-started trains exhaust (16) before supplying the quadratic rhombic core.
+The untouched source, every old diameter and all inactive pairs must be retained
+until a replacement is certified.
+
+## 8. Computation, dependencies and lifecycle
+
+The verifier exhausts finite Woodall path/odd-cycle leaf packets and good/bad
+fan runs, cyclic compression configurations through q=10 with every possible
+missing-side count, and integer pinned-incidence identities. It certifies
+rational alternating-series bounds for μ_0>0.8896, the 0.17792 coefficient,
+and strip arithmetic. Its graph packets omit Euclidean geometry, actual
+positive stress, source train placement, Type-II limits and global optimality.
+Its cyclic packets encode the gap count directly; the source geometry that
+bounds it is proved in Section 6. The analytic proofs above do not follow
+from finite enumeration alone.
+
+Dependencies are [C-I restoration](../targets/target-c/56-ci-restored-frontier.md),
+[C-ZRF](../targets/target-c/57-zr-zf-rigidity-audit.md), canonical C-WOODALL,
+the loaded degree cap in [Target C 03](../targets/target-c/03-pinned-block-and-loaded-boundary-frontier.md),
+the outer-walk facts in [Section 61](../targets/target-c/61-linear-nonmatching-excess-audit.md),
+the pinned and attachment identities in [Section 62](../targets/target-c/62-attachment-incidence-currency-audit.md),
+[Section 75](../targets/target-c/75-all-phase-component-deatomization-audit.md),
+the same-source noncrossing proof in [Section 83](../targets/target-c/83-attachment-cell-disjoint-tiling-audit.md),
+the Type-II macroscopic carrier in [Section 88](../targets/target-c/88-harmonic-wrapping-diameter-audit.md),
+and the exact local face identity in [Section 89](../targets/target-c/89-harmonic-cell-train-budget-audit.md).
+
+No canonical state or active prompt is changed. These claims remain proved
+candidates awaiting independent audit/promotion. The macroscopic inactive
+container, higher matching, larger x_B, split-star, nonconstant-phase and
+other C-II branches are not eliminated. The result is actual macroscopic
+cell concentration with globally protected inactive ports, not Level I closure.

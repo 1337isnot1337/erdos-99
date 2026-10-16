@@ -1,0 +1,90 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "346e27ed678dd2342a2326ac1f80ef20d15a39c2", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "docs/targets/target-c/42-lexicographic-critical-flatness-frontier.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "66e314ce3f47125b0c3649e5b899f7e276b71cab9137cdd0ca187f96a5c8ac0a"} -->
+
+> **Historical source snapshot; destination authority remains current.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical. Source path: `docs/targets/target-c/42-lexicographic-critical-flatness-frontier.md`. Source commit: `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`.
+
+# Target C — C86 lexicographic critical-flatness frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_lexicographic_critical_flatness_2026-09-01.md](../../reports/target_c_lexicographic_critical_flatness_2026-09-01.md).
+
+C63 and C65 together imply an exact finite statement that is stronger than their
+original normalization use.
+
+In the C65 lexicographically normalized hypothetical counterexample,
+
+`C=C_*` and `H=H_*`.
+
+Thus every active contact and every active diameter row is strong. For every
+fixed-diameter critical velocity `v`, C63 gives an actual nearby feasible realization
+
+`p(t)=p+t v+O(t^2)`.
+
+Inactive pairs retain strict slack, so no new contact or diameter pair appears.
+Primary contact minimality therefore prevents any old unit contact from opening.
+After the contact graph is fixed, secondary diameter-pair minimality prevents any old
+diameter pair from shortening. Consequently every C63 realization stays in the exact
+active equality face:
+
+`|p_i(t)-p_j(t)|=1` for every `ij in C`,
+
+`|p_i(t)-p_j(t)|=D` for every `ij in H`.
+
+## Exact-chain consequence
+
+In the C80 chain-face branch,
+
+`z=x_0,x_1,...,x_D=a`
+
+is a literal `D`-edge unit-contact chain and `|z-a|=D`. Along every integrated critical
+motion,
+
+`D=|a(t)-z(t)| <= sum_j |x_j(t)-x_(j-1)(t)|=D`.
+
+Equality in the triangle inequality forces all `D` unit chain edges to remain
+parallel and co-oriented. Hence every critical velocity gives all chain edges one
+common angular rate.
+
+For the C80 ordered chain tracks `P={tau_1,...,tau_D}` this says
+
+`v_tau1=...=v_tauD`
+
+for every train-angle critical velocity.
+
+Therefore the mean-zero chain-supported neutral space is zero:
+
+`N_P={0}`.
+
+C84 gives
+
+`dim N_P=c(G_P)-1`,
+
+so the prefix graph is necessarily connected.
+
+## Combined C84 consequence
+
+C84 already proves that the non-chain prefix interval multigraph carries a nowhere-zero
+KKT circulation and has no bridges. Connectivity now gives
+
+`|H_P|>=D+1`,
+
+hence, including the chain bar,
+
+`|H|>=D+2`.
+
+Every chain cut is crossed by at least two non-chain diameter intervals with opposite
+transverse KKT-flow signs.
+
+## Effect on C85
+
+C85's null-face half-mass theorem remains correct as a conditional statement, but its
+hypothesis `N_P!=0` cannot occur in the C65 lexicographically normalized source.
+The live exact-chain branch is therefore only the connected, bridgeless,
+first-order high-capacity phase.
+
+## Next target
+
+Rule out a connected bridgeless prefix interval circulation on all `D+1` ordered chain
+levels when its edges are actual planar diameter chords. Candidate inputs are the
+straight-line diameter-thrackle property, shared-endpoint angular separation, near-disk
+boundary curvature, and the extra train-separation cost of backward intervals.

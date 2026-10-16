@@ -1,0 +1,370 @@
+# Erdos Problem #99 - flat-center degree-four activation dichotomy
+
+**Date:** 2026-09-14  
+**Target:** C-II, canonical contact-minimal full-core Type-II branch  
+**Dependencies:** low-t flat-center amplification; canonical unloaded-degree lower bound; loaded contact-degree cap; triangle-free unit-contact geometry  
+**Claim class:** proof-only structural refinement; theorem-state authority unchanged
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The low-t flat-center theorem removes the old multiplicity-five loss: on the
+small-residual branch there are linearly many **distinct** source vertices `m` that are
+the distinguished middle of a pentagonal boundary chain
+
+\[
+l-m-r,
+\qquad |l-m|=|m-r|=1,
+\qquad \alpha_m:=\angle lmr=\pi-o(1).
+\]
+
+The same local geometry forces substantially more structure at every such center.
+For all sufficiently large sources:
+
+1. every flat center has contact degree at most four;
+2. an unloaded flat center therefore has degree three or four, while a loaded flat
+   center has degree at most three by the canonical loaded-degree cap;
+3. every degree-four flat center produces two endpoint-disjoint hidden near-contacts
+   between its contact neighbors, and these hidden gaps have total excess `o(1)` per
+   center.
+
+Consequently, if `V_flat` is the flat-center population and `V_4` is the number of
+flat centers of contact degree four, there is a family `H_4` of pairwise
+endpoint-disjoint hidden source pairs such that
+
+\[
+\boxed{|H_4|\ge {2V_4\over9}.}
+\tag{FD.1}
+\]
+
+Every pair `xy in H_4` has a common flat center `m` with
+
+\[
+|m-x|=|m-y|=1,
+\qquad
+1<|x-y|=1+o(1),
+\tag{FD.2}
+\]
+
+and on the diagonal flatness scale the whole selected family obeys
+
+\[
+\boxed{
+\sum_{xy\in H_4}(|x-y|-1)=o(D).
+}
+\tag{FD.3}
+\]
+
+Thus the low-t small-residual branch has the following source-level alternative:
+
+\[
+\boxed{
+V_{\le3}\ge {V_{flat}\over2}
+\quad\text{or}\quad
+|H_4|\ge {V_{flat}\over9},
+}
+\tag{FD.4}
+\]
+
+where `V_{<=3}` counts flat centers of contact degree at most three.
+In the first branch, splitting by loaded status gives the sharper nested alternative
+
+\[
+\boxed{
+V_{loaded}\ge {V_{flat}\over4}
+\quad\text{or}\quad
+V_{u,3}\ge {V_{flat}\over4},
+}
+\tag{FD.5}
+\]
+
+unless the degree-four hidden-contact branch of (FD.4) already holds. Here `V_{u,3}`
+counts unloaded degree-three flat centers.
+
+Near the current proof-only low-t floor, where the flat-center theorem gives
+
+\[
+{V_{flat}\over D}\ge0.4944166723690961\ldots-o(1),
+\]
+
+(FD.4)--(FD.5) imply at least one of
+
+\[
+\boxed{
+{V_{loaded}\over D}\ge0.1236041680922740\ldots-o(1),
+}
+\tag{FD.6}
+\]
+
+\[
+\boxed{
+{V_{u,3}\over D}\ge0.1236041680922740\ldots-o(1),
+}
+\tag{FD.7}
+\]
+
+or
+
+\[
+\boxed{
+{|H_4|\over D}\ge0.0549351858187884\ldots-o(1),
+}
+\tag{FD.8}
+\]
+
+with the `L^1` hidden-gap conclusion (FD.3).
+
+Throughout the broader conditional band `t<=1.8585`, the corresponding safe
+coefficients are `0.1000970668294269...` in (FD.6)--(FD.7) and
+`0.0444875852575231...` in (FD.8).
+
+---
+
+## 1. Angular separation of contact rays
+
+Fix a source vertex `m`. If `x,y` are two distinct unit-contact neighbors, then source
+unit separation gives
+
+\[
+|x-y|\ge1.
+\]
+
+If `beta in (0,pi]` is the smaller angle between the rays `mx,my`, then
+
+\[
+|x-y|=2\sin(\beta/2),
+\]
+
+so
+
+\[
+\boxed{\beta\ge\pi/3.}
+\tag{FD.9}
+\]
+
+In the triangle-free branch equality is impossible: `|x-y|=1` would make `mxy` an
+exact unit equilateral triangle. Thus every cyclic gap between consecutive contact rays
+is strictly larger than `pi/3`.
+
+---
+
+## 2. A sufficiently flat middle has contact degree at most four
+
+Choose the diagonal flatness scale from the low-t flat-center theorem so that every
+retained center satisfies
+
+\[
+\alpha_m>\pi-\epsilon_D,
+\qquad \epsilon_D\to0.
+\tag{FD.10}
+\]
+
+The pentagon sector at `m` is one cyclic gap between consecutive contact rays. Suppose
+`d_C(m)>=5`. Besides that gap there are at least four other cyclic contact-ray gaps,
+each strictly larger than `pi/3` by (FD.9). Therefore
+
+\[
+2\pi
+>
+(\pi-\epsilon_D)+4{\pi\over3}.
+\]
+
+For all sufficiently large `D`, say `epsilon_D<pi/3`, the right side exceeds `2pi`, a
+contradiction. Hence
+
+\[
+\boxed{d_C(m)\le4.}
+\tag{FD.11}
+\]
+
+Canonical C-II structure says every unloaded positive-contact vertex has contact
+degree at least three, while every loaded vertex has contact degree at most three.
+Thus an unloaded flat center has degree `3` or `4`, and every degree-four flat center
+is automatically unloaded.
+
+---
+
+## 3. A degree-four flat center creates three complementary near-contacts
+
+Let `m` have degree four. List its four contact neighbors cyclically so that the large
+pentagon sector is the gap from `l` to `r`, of size
+
+\[
+\alpha_m=\pi-\varepsilon_m,
+\qquad 0<\varepsilon_m\le\epsilon_D.
+\tag{FD.12}
+\]
+
+Write the other two contact neighbors as `u,v` in the complementary order
+
+\[
+r,u,v,l.
+\]
+
+Let the three complementary angular gaps be `beta_1,beta_2,beta_3`. Their sum is
+
+\[
+\beta_1+\beta_2+\beta_3
+=2\pi-\alpha_m
+=\pi+\varepsilon_m.
+\tag{FD.13}
+\]
+
+Each `beta_j>pi/3`, so putting
+
+\[
+e_j:=\beta_j-\pi/3>0
+\]
+
+gives the exact identity
+
+\[
+\boxed{e_1+e_2+e_3=\varepsilon_m.}
+\tag{FD.14}
+\]
+
+The three consecutive neighbor pairs
+
+\[
+(r,u),\qquad(u,v),\qquad(v,l)
+\]
+
+are source pairs with a common unit-contact neighbor `m`. Their distances are
+
+\[
+d_j=2\sin(\beta_j/2)>1.
+\tag{FD.15}
+\]
+
+Because the derivative of `2 sin(beta/2)` is `cos(beta/2)<=1`,
+
+\[
+0<d_j-1\le e_j.
+\tag{FD.16}
+\]
+
+Hence
+
+\[
+\boxed{
+\sum_{j=1}^3(d_j-1)\le\varepsilon_m\le\epsilon_D.
+}
+\tag{FD.17}
+\]
+
+In particular all three hidden neighbor-neighbor distances are `1+o(1)`. This is a
+local consequence of the flat **middle** and does not use the separate leaf-tooth
+hidden diagonals of the pentagon.
+
+---
+
+## 4. Two endpoint-disjoint hidden pairs per degree-four center
+
+From every degree-four flat center keep the first and third complementary pairs
+
+\[
+(r,u),\qquad(v,l).
+\tag{FD.18}
+\]
+
+They are endpoint-disjoint within that center. Across all degree-four centers this
+produces `2V_4` hidden-pair objects.
+
+A source vertex `x` can be an endpoint of such an object only when it is a unit-contact
+neighbor of the corresponding center `m`. The triangle-free unit-contact degree bound
+is at most five, so `x` can be adjacent to at most five selected centers. Since it is
+used in at most one of the two chosen pairs for each center, `x` occurs in at most five
+hidden-pair objects.
+
+Therefore the conflict graph on the `2V_4` hidden pairs, joining pairs that share an
+endpoint, has maximum degree at most
+
+\[
+(5-1)+(5-1)=8.
+\tag{FD.19}
+\]
+
+A greedy independent set retains at least one ninth of the objects, proving (FD.1).
+
+The low-t flat-center population is `O(D)` on every convergent normalized subsequence.
+Summing (FD.17) over all degree-four centers therefore gives at most
+
+\[
+V_4\epsilon_D=o(D)
+\]
+
+total hidden-side excess before extraction. Passing to the endpoint-disjoint subfamily
+can only decrease this nonnegative sum, proving (FD.3).
+
+---
+
+## 5. Global degree/activation split
+
+The distinct flat centers partition as
+
+\[
+V_{flat}=V_{\le3}+V_4.
+\tag{FD.20}
+\]
+
+If `V_4>=V_flat/2`, equation (FD.1) gives
+
+\[
+|H_4|\ge{2\over9}{V_{flat}\over2}={V_{flat}\over9}.
+\]
+
+Otherwise `V_{<=3}>=V_flat/2`. Every unloaded vertex in this class has degree exactly
+three. Splitting `V_{<=3}` into loaded and unloaded vertices, one of the two classes
+has size at least `V_flat/4`. This proves (FD.4)--(FD.5).
+
+At the current low-t floor use
+
+\[
+V_{flat}/D\ge0.4944166723690961\ldots-o(1).
+\]
+
+Division by four and nine gives (FD.6)--(FD.8). The `t<=1.8585` constants follow in
+the same way from the existing flat-center floor
+
+\[
+V_{flat}/D\ge0.4003882673177079\ldots-o(1).
+\]
+
+---
+
+## 6. Why this is a new bridge
+
+The low-t small-residual survivor now has a finite three-way source-level obstruction:
+
+1. linearly many **loaded** almost-straight centers, directly exposing a large subset
+   of the Woodall diameter graph vertices;
+2. linearly many **unloaded degree-three** almost-straight centers, each carrying one
+   additional exact contact ray in the complementary half-plane; or
+3. linearly many endpoint-disjoint hidden near-contacts created by degree-four centers,
+   with only `o(D)` total gap to activation.
+
+The third branch is structurally different from the pentagon leaf-tooth extraction:
+its hidden pairs lie between neighbors of the flat middle and are forced solely by the
+contact-degree-four geometry. The first two branches identify exactly which KKT vertex
+type must carry the flat-center sea if this extra activation family is absent.
+
+No exact hidden contact, simultaneous activation motion, or strict sub-`D` competitor
+is claimed here. The next target is to combine branch (1) with near-extremal Woodall
+caterpillar/odd-cycle topology, or branch (2) with the single extra contact ray and the
+outer-train phase system; branch (3) is ready for an `L^1` simultaneous-contact
+activation argument.
+
+## 7. Scope audit
+
+- Flat centers are actual source vertices and are distinct by the preceding low-t
+  flat-center theorem.
+- The degree-four hidden pairs are actual source pairs, not train-graph abstractions.
+- Strict `d_j>1` uses triangle-freeness; no inactive pair is silently promoted to a
+  contact.
+- The matching denominator `9` uses only the unit-contact degree cap five and two
+  endpoint-disjoint pairs per center.
+- (FD.3) uses the diagonal scale `epsilon_D->0` and the already-known `O(D)` flat-center
+  count; it does not require a quantitative residual-to-angle modulus.
+- Contact-isolated source points remain in the source.
+- C-II and Level I remain open.

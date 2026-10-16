@@ -1,0 +1,35 @@
+{
+  "blockers": [
+    {
+      "assigned_agent": 1,
+      "branch_hash_remainder_mod_3": 0,
+      "evidence": "Frozen audit reports the registered worktree path is absent; no file path exists to hash or recover.",
+      "recorded_head_sha": "9ddd9538c29244fd22183f9682b2835f54cde0c3",
+      "recorded_path": null,
+      "snapshot_type": "registered_unavailable_worktree",
+      "source_ref": "refs/heads/swarm/tb1-augmented-thrackle-20261001",
+      "status": "unresolved_inaccessible_worktree_without_recorded_path"
+    },
+    {
+      "assigned_agent": 3,
+      "branch_hash_remainder_mod_3": 2,
+      "evidence": "Frozen audit reports the registered worktree is not a Git repository; no file path exists to hash or recover. Listed for coordination only; not taken by Agent 1.",
+      "recorded_head_sha": "d33db214ef05caf19bf31e21ab2fd49c50a86bc3",
+      "recorded_path": null,
+      "snapshot_type": "registered_unavailable_worktree",
+      "source_ref": "refs/heads/swarm/sol/diameter-stress-gap-20261002",
+      "status": "unresolved_inaccessible_worktree_without_recorded_path"
+    }
+  ],
+  "cross_agent_dependency": {
+    "assigned_agent": 3,
+    "source_path": "docs/theory/02-nonlinear-and-regressions.md",
+    "status": "awaiting Agent 3 assigned source-main reconciliation; Agent 1 did not take this unit."
+  },
+  "resolved_same_path_differences": {
+    "resolution": "Destination bytes retained at canonical paths; assigned source revisions archived below the Agent 1 migration directory with both hashes.",
+    "source_main_agent1": 35,
+    "source_pr_737": 5
+  },
+  "scope": "Evidence-backed blockers from the frozen source audit; source worktrees were not changed."
+}

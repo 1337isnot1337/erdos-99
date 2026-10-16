@@ -1,0 +1,28 @@
+{
+  "agent_2_branch_artifacts_excluded": 154,
+  "agent_2_branch_artifacts_preserved": 387,
+  "agent_2_branch_file_rows": 541,
+  "agent_2_dirty_worktree_excluded_registry": 2,
+  "agent_2_dirty_worktree_paths": 11,
+  "agent_2_dirty_worktree_preserved": 9,
+  "agent_2_non_pr_ahead_heads": 30,
+  "branch_file_dispositions_sha256": "2810b604c1f9e3e46d47cf6eb5dfd65a02202ae63ec810c2bf0262387f74c361",
+  "branch_head_assignment_sha256": "19feeaa967e4e2353b3d7078c9e11fe19a1573780dce07c9d2686ff991b9b1cc",
+  "branch_head_summaries_sha256": "c0c9a129a7825e2367e147df3e07b2421fc28ed849e13eefeaa2dd9ab1dc44da",
+  "destination_main": "c6e0394b3152d21075328bf4f26e6c070229bf13",
+  "dirty_worktree_audit_rows": 32,
+  "dirty_worktree_paths_by_remainder": {
+    "0": 10,
+    "1": 11,
+    "2": 9
+  },
+  "dirty_worktree_paths_with_identity": 30,
+  "live_remote_branch_ref_count": 45,
+  "local_branch_ref_count": 107,
+  "non_pr_ahead_heads": 85,
+  "open_source_pr_count": 21,
+  "source_main": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "unique_refname_head_pairs": 147,
+  "unresolved_missing_registered_worktree_rows": 2,
+  "worktree_path_assignment_sha256": "198e14e83f63faaf6926ee174972231006f20715c8bfc2c8bb090a6ab701cdd9"
+}

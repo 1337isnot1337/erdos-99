@@ -1,0 +1,209 @@
+# Target C-II — one-site open-guard criterion for Type-I containers
+
+**Date:** 2026-09-13  
+**Classification:** proved candidate awaiting promotion; proof-only Type-I refinement.  
+**LEVEL I STATUS:** STILL OPEN. C-II REMAINS OPEN.
+
+This note composes the open-guard packing-saturation theorem with the audited
+contact-wall shields for the two Type-I inactive-container geometries. It replaces the
+vertex-cover requirement in the strict-diameter exchange by a one-site requirement.
+It does not prove that the required site exists.
+
+The implication chain is
+
+```text
+strict contact-wall safe region with area > a0 times isolate count
+-> lattice packing of one more site
+-> strictify in the open region
+-> delete all assigned isolates and one nonisolated contact vertex
+-> fewer contacts, same diameter if necessary
+-> contradiction to contact-minimality.
+```
+
+## 1. Normalized source and container
+
+Let `A` be the contact-minimal, then diameter-pair-minimal triangle-free global
+minimizer in the canonical C-II normal form, with diameter `D>1`. Let `C` be one
+macroscopic Type-I inactive container, internal or exterior, and let `Z` be all actual
+contact-isolated source points assigned to `C`; write `z=|Z|`.
+
+The audited Type-I container theorem supplies:
+
+1. `C` is a positive-area convex subset of `int(conv A)`;
+2. every source point outside `Z` lies outside `int(C)`; and
+3. the contact-wall shield protects points in the container from every source point
+   outside its interior.
+
+For an internal container, let `V_C` be its cyclic actual unit-contact boundary
+   vertices. Define the strict safe region
+
+\[
+ S_C^\circ:=\{x\in\operatorname{int}C:
+                    |x-p|>1\quad(p\in V_C)\}.
+\tag{1.1}
+\]
+
+For an exterior cap with closing chord `[u,v]` and actual unit-contact path vertices
+`V_C`, define
+
+\[
+ S_C^\circ:=\{x\in\operatorname{int}C:
+       \operatorname{dist}(x,[u,v])>1,
+       \ |x-p|>1\quad(p\in V_C)\}.
+\tag{1.2}
+\]
+
+These sets are open. The strict contact-wall audit shows that changing the weak guards
+in the audited safe-area theorem to strict guards changes only finitely many circle
+arcs and therefore does not change the area lower bounds.
+
+## 2. Strict protection against the retained source
+
+Fix any nonisolated positive-contact vertex `v` and put
+
+\[
+ R=A\setminus(Z\cup\{v\}).
+\tag{2.1}
+\]
+
+The contact neighbor of `v` is not in `Z`, so `R` is nonempty. Then
+
+\[
+ \boxed{S_C^\circ\subseteq U_R}
+\tag{2.2}
+\]
+
+where
+
+\[
+ U_R=\{x:1<|x-r|<D\text{ for every }r\in R\}.
+\tag{2.3}
+\]
+
+### Proof
+
+Take `x in S_C^circ` and `r in R`. The point `r` lies outside `int(C)`. If the segment
+`xr` leaves `C` through an internal unit-contact boundary edge, the two-endpoint
+crossing shield applied with `|x-r|<=1` forces one boundary endpoint to be at distance
+at most one from `x`, contradicting the strict vertex guards. Exit through a boundary
+vertex contradicts the same guards directly. In an exterior cap, exit through the
+closing chord contradicts the strict distance-to-chord guard. Hence `|x-r|>1`.
+
+Also `x in int(conv A)` and `r in conv A`, so `|x-r|<D`: an interior point of a convex
+body of diameter `D` cannot be at distance `D` from another point of that body. Thus
+`x in U_R`. \(\square\)
+
+The argument retains all source points outside `Z`; no contact-isolated point is put in
+the positive-core affine kernel.
+
+## 3. One-site saturation theorem
+
+Let `a_0=sqrt(3)/2`. If
+
+\[
+ \boxed{\operatorname{area}(S_C^\circ)>a_0 z,}
+\tag{3.1}
+\]
+
+then the Type-I survivor is impossible.
+
+### Proof
+
+Translate the unit triangular lattice over a fundamental parallelogram. The mean
+number of lattice points in `S_C^circ` is `area(S_C^circ)/a_0`, so (3.1) gives a
+finite unit-separated set `B subset S_C^circ` with `|B|>=z+1`. Since `S_C^circ` is
+open and lies in `int(conv A)`, every finite `B` has diameter strictly below `D`.
+
+The dilation strictification lemma applied inside `S_C^circ` gives `B'` with the same
+cardinality, all internal distances strictly greater than one, and diameter strictly
+below `D`. By (2.2), every cross distance from `B'` to `R` is also strictly between
+one and `D`.
+
+Choose any subset `Y\subseteq B'` with `|Y|=z+1`, and set
+
+\[
+ A' = R\cup Y.
+\]
+
+Then `|A'|=|A|`, no new unit contact is created, and all contacts incident to `v` are
+removed. If `diam A'<D`, global minimality is contradicted. If `diam A'=D`, `A'` is a
+triangle-free global minimizer with fewer contacts, contradicting contact-minimality.
+This is exactly the full-source open-guard theorem; the source points `Z` are replaced
+one-for-one and are not discarded. \(\square\)
+
+Thus every Type-I survivor satisfies the sharp one-site area ceiling
+
+\[
+\boxed{\operatorname{area}(S_C^\circ)\le a_0 z.}
+\tag{3.2}
+\]
+
+This is stronger than the §165 diameter-cover condition, which requires enough sites to
+delete a vertex cover of the complete diameter graph. Here the surviving diameter pair
+may remain; contact-minimality supplies the contradiction.
+
+## 4. Explicit residual inequalities
+
+The audited contact-wall area bounds now have a direct source-level consequence.
+
+### Internal chamber
+
+If `m` is the number of unit boundary edges and
+
+\[
+ r_\partial={A_C\over a_0}-{m\over2}+1-z,
+ \qquad
+ \kappa_*={\pi\over3\sqrt3},
+ \qquad
+ C_*={1\over2}+{2\pi\over3\sqrt3},
+\tag{4.1}
+\]
+
+then the strict safe-area lower bound and (3.2) give
+
+\[
+\boxed{r_\partial\le \kappa_*m+C_* .}
+\tag{4.2}
+\]
+
+The inequality is a necessary condition for survival, not a lower bound on spare
+capacity. In particular, a positive linear residual above the right side would close
+the internal Type-I branch immediately.
+
+### Exterior cap
+
+If the closing chord has length `s`, the actual contact path has `ell` unit edges, and
+
+\[
+ r_C={A_C\over a_0}+{s+\ell\over2}+1-z-(\ell+1),
+ \qquad
+ \lambda_*={2\over\sqrt3}+{1\over2},
+\tag{4.3}
+\]
+
+then
+
+\[
+\boxed{
+ r_C\le \kappa_*\ell+\lambda_*s+{2\pi\over3\sqrt3}-{1\over2} .
+}
+\tag{4.4}
+\]
+
+Again this is a saturation barrier. It does not claim that the residual is positive or
+that the area inequality is strict.
+
+## 5. Exact surviving obligation
+
+The one-site theorem removes the combinatorial diameter-cover cost from the Type-I
+exchange, but it leaves a discrete realization problem:
+
+> prove `area(S_C^circ)>a_0|Z|` for one actual macroscopic container, or construct a
+> spare point by a finite exact-contact argument when equality holds.
+
+The current force-hull residual identity only gives a nonnegative aggregate Oler
+residual. It does not provide the strict inequality above. Equality can be approached
+by perturbed near-triangular packings with no unit contacts, so area alone cannot be
+silently upgraded to a strict spare-site conclusion.
+
+No theorem-state file is changed. C-II and Level I remain open.

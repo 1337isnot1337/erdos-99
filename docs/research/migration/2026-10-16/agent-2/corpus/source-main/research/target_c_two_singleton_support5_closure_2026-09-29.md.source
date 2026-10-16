@@ -1,0 +1,62 @@
+# Target C: exact exclusion of two-singleton support 5
+
+Date: 2026-09-29
+
+Support 5 in the committed thirteen-support narrowing is
+
+`[0123]^3 [0124] [0125] [0134] [0145] [0234] [1234]`.
+
+This note records a complete orientation-level exclusion for that support in the nine-no-root `k=4, D=-1, d_root=0, p=2` two-selected-singleton profile.
+
+Companion verifier:
+
+`research/verify_target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_two_singleton_support5_eight_empty_obstruction_2026_09_29.py`
+
+## Structural lower bound on empty blocks
+
+For every orientation of this support, the touched block family `T` is support-determined and has
+
+`|T| = 15`, `rank H(T) = 9`.
+
+Let `C` be the touched actual-complete blocks, `S` the touched selected-singleton blocks, and `E` the touched actual-empty blocks. Because `d_root=0`, the triangle rows `H(C)` are independent, so `|C|=rank H(C)`. The established four-direction capacity condition gives
+
+`rank H(T) - rank H(C) >= 4`.
+
+Therefore `|C| <= 5`. Since at most two selected singletons lie in `T`,
+
+`|E| = 15 - |C| - |S| >= 15 - 5 - 2 = 8`.
+
+Thus every realizable state contains at least eight touched actual-empty blocks.
+
+## Exact eight-empty obstruction
+
+There are six multiplicity-one tetrahedral supports after the triple support, hence exactly `3^6 = 729` raw orientation assignments. For each orientation, the verifier examines all `C(15,8)=6435` eight-block subsets, for a total of
+
+`729 * 6435 = 4,691,115`
+
+subsets.
+
+For an eight-block set `F`, let
+
+`U(F) = sum_{b in F} E_b`,
+
+where `E_b` is the exact rational local empty-block constraint space in the nine external coordinates.
+
+If `rank_Q U(F) >= 5`, then `F` cannot be contained in the actual aggregate constraint space `W`, because `dim W=4`.
+
+The verifier first computes rank modulo 2. This is one-sided: reduction modulo 2 cannot increase rank, so `rank_F2 U(F) >= 5` rigorously implies `rank_Q U(F) >= 5`. The exact census is:
+
+- `4,691,007` eight-block subsets have rank at least five already modulo 2;
+- `108` subsets have rank four modulo 2.
+
+For each of the 108 exceptional subsets, the verifier recomputes the rowspace exactly over `Q`. Every one has exact rank four.
+
+If such a subset were eight actual-empty blocks, its exact four-dimensional span would equal the actual rank-four aggregate constraint space `W`. But every one of these 108 spaces fails the committed necessary generalized-weight filter `parity_profile_ok(W)`. Hence none can be the aggregate space of an actual state.
+
+Therefore no orientation of support 5 is realizable.
+
+## Consequence
+
+The committed thirteen-support narrowing now has exact exclusions for supports 1, 2, 3, 4, 5, and 12. The unresolved two-selected-singleton support orbits are supports 6, 7, 8, 9, 10, 11, and 13: seven support orbits.
+
+This closes support 5 only. It does not close the full two-singleton profile, the full `D=-1,p=2` branch, or Erdos Problem #99.

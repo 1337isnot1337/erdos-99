@@ -1,0 +1,190 @@
+# Target C — Section-162 endpoint gap extension to `eta=9/10000`
+
+**Date:** 2026-09-12  
+**Lifecycle:** proof-only arithmetic extension of audited-working Section 162.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The audited-working Section-162 endpoint argument proves a Type-II density gap above
+
+\[
+C_{146}:=\frac49\left(\pi+\sqrt{\frac\pi{2\sqrt3}}\right)
+=1.8195135379794445\ldots .
+\]
+
+Its published choice `eta=1/1250` is conservative.  Repeating exactly the same
+near-Mantel and atom-versus-detour argument with
+
+\[
+\boxed{\eta_0=\frac9{10000}}
+\]
+
+still leaves a strict rational margin.  Therefore, under the same audited-working
+dependencies and scope as Section 162,
+
+\[
+\boxed{
+\liminf_{D\to\infty}\frac{q-k}{D}
+\ge C_{146}+\frac9{10000}
+=1.8204135379794445\ldots .
+}
+\tag{E.1}
+\]
+
+This is a proved candidate awaiting promotion only as an arithmetic strengthening;
+it does not close the full-core positive-slack regime or the Type-I inactive-container
+branch.
+
+## 1. The inherited implication chain
+
+Assume, along a Type-II subsequence, that
+
+\[
+t_D:=\frac{q-k}{D}\le C_{146}+\eta_0+o(1).
+\tag{E.2}
+\]
+
+Use the audited-working Section-146 endpoint stability inequalities exactly as in
+Section 162.  With `s=sqrt(pi/(2 sqrt(3)))`, they give
+
+\[
+0\le\frac{k}{D}\le9\eta_0+o(1),
+\qquad
+\frac{b-\operatorname{per}(F)}D\le\frac94\eta_0+o(1).
+\tag{E.3}
+\]
+
+Let `A` be the absolute `D`-density of atomic stopped-train phase mass, and let `N`
+be its nonatomic mass.  The same train ledger and weighted Mantel estimates give
+
+\[
+2s\le A\le A_0+o(1),
+\qquad
+A_0:=2s+\frac92\eta_0,
+\tag{E.4}
+\]
+
+and the mass outside one dominant three-axis phase orbit is at most
+
+\[
+R_0:=A_0-\frac{4s^2}{A_0}.
+\tag{E.5}
+\]
+
+The outer-terminal occurrence ledger then gives one outer direction atom of mass at
+least
+
+\[
+\ell_0:=
+\frac{\pi-C_{146}-10\eta_0-2R_0}{3}.
+\tag{E.6}
+\]
+
+The Section-162 atom-versus-detour lemma says that an outer direction atom of mass
+`ell` forces normalized projection excess at least
+
+\[
+\mathcal E(\ell):=\frac{\ell^3}{2\pi^2+\ell^2}.
+\tag{E.7}
+\]
+
+On the other hand (E.3) bounds that same excess by `(9/2)eta_0`.  Thus (E.2) is
+impossible whenever
+
+\[
+\mathcal E(\ell_0)>\frac92\eta_0.
+\tag{E.8}
+\]
+
+This is the complete candidate implication chain:
+
+```text
+E.2 -> E.3--E.6 -> E.7--E.8 -> contradiction -> E.1.
+```
+
+No new geometric premise is introduced.
+
+## 2. Exact rational certificate
+
+For the certificate, use the rational enclosures
+
+\[
+\begin{aligned}
+\frac{3141592653589793}{10^{15}}&<\pi<
+\frac{3141592653589794}{10^{15}},\\
+\frac{1732050807568877}{10^{15}}&<\sqrt3<
+\frac{1732050807568878}{10^{15}},\\
+\frac{9523128}{10^7}&<s<\frac{9523129}{10^7}.
+\end{aligned}
+\tag{E.9}
+\]
+
+The first two are standard Machin-series/rational-square enclosures.  The last
+follows from the first two because
+
+\[
+\left(\frac{9523128}{10^7}\right)^2
+<\frac{\pi_{lo}}{2\sqrt3_{hi}},
+\qquad
+\left(\frac{9523129}{10^7}\right)^2
+>\frac{\pi_{hi}}{2\sqrt3_{lo}}.
+\]
+
+Write `c=(9/2)eta_0` and
+
+\[
+R(s)=A_0-\frac{4s^2}{A_0}
+     =c\frac{4s+c}{2s+c}.
+\tag{E.10}
+\]
+
+The last expression is increasing in `s`.  Consequently the lower and upper
+rational evaluations
+
+\[
+\ell_{lo}=\frac{5\pi_{lo}/9-4s_{hi}/9-10\eta_0-2R(s_{hi})}{3},
+\]
+
+\[
+\ell_{hi}=\frac{5\pi_{hi}/9-4s_{lo}/9-10\eta_0-2R(s_{lo})}{3}
+\]
+
+enclose `ell_0`.  The certificate obtains
+
+\[
+\ell_{lo}>0.4322987538,
+\qquad
+\ell_{hi}<0.4322987687,
+\]
+
+and hence
+
+\[
+\frac{\ell_0^3}{2\pi^2+\ell_0^2}
+\ge
+\frac{\ell_{lo}^3}{2\pi_{hi}^2+\ell_{hi}^2}
+>0.0040544303
+>0.00405=\frac92\eta_0.
+\tag{E.11}
+\]
+
+The strict margin is greater than `4.4e-6` under these deliberately short rational
+enclosures.  Run
+
+```sh
+python3 research/verify_target_c_section162_gap_extension.py
+```
+
+to reproduce the exact Fraction comparison.
+
+## 3. Scope and classification
+
+- The argument imports the audited-working Section-146 stability inequalities and the
+  audited-working Section-162 atom-versus-detour lemma without changing either scope.
+- It uses occurrence-counted outer terminals and retains contact-isolated source
+  points; no full-source affine-kernel statement is used.
+- The result is a scalar endpoint separation.  It supplies no upper bound for the
+  surviving positive-slack interval and no source-preserving deformation.
+- The Type-I inactive-container branch is untouched.
+
+**Classification:** proved candidate awaiting promotion.  The theorem-state lock,
+canonical route map, and generated state views remain unchanged.

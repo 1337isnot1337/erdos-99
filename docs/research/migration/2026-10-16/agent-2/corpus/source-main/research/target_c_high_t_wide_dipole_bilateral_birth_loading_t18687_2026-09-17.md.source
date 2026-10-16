@@ -1,0 +1,245 @@
+# Target C-II — fixed-angle antipodal dipoles force bilateral diameter loading of their birth layers
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` topological/metric strengthening; no canonical promotion claimed  
+**Scope:** any fixed `rho>0` wide exact-antipodal family on one side of the common hub inside the ordered O--O path  
+**Dependencies:** phase-free path-region switching identity PRS.4; opposite-terminal O--O path topology; fixed-angle central-diamond endpoint separation; full-source perimeter bound `P(K)<=pi D`; diameter endpoints are convex-hull vertices  
+**Certificate:** `research/verify_target_c_high_t_wide_dipole_bilateral_birth_loading_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The fixed-angle theorem gives two switching diameter chords at every `rho`-wide exact-antipodal interface.  The central-diamond theorem shows that **any endpoint of one chord is macroscopically separated from any endpoint of the other**.  Because both chords are born at the same path layer, this metric separation interacts with the exact two-arc topology of an O--O path region.
+
+The result is an almost-exact bilateral loading theorem.
+
+Let
+
+\[
+R_0\xleftrightarrow{\tau_1}R_1\xleftrightarrow{\tau_2}\cdots\xleftrightarrow{\tau_m}R_m
+\tag{BL.1}
+\]
+
+be the selected path, with all `tau_i` joining the same two disjoint outer-boundary host arcs.  For an internal layer `R_i`, let
+
+\[
+C_i^+,C_i^-
+\tag{BL.2}
+\]
+
+be the two outer-boundary subarcs cut out between the endpoints of `tau_i` and `tau_{i+1}` on the two host arcs.
+
+Fix `rho>0`.  For every `rho`-wide exact-antipodal interface `i`, choose its two fixed-angle blocker diameter edges `e_i^+,e_i^-`.  By the switching identity, each has exactly one endpoint in `R_i`; call these birth endpoints
+
+\[
+x_i^+,x_i^-\in R_i.
+\tag{BL.3}
+\]
+
+Then the number of wide interfaces for which `x_i^+` and `x_i^-` lie on the **same** host subarc is bounded independently of `D`:
+
+\[
+\boxed{
+N_{\rm same}(D,\rho)
+\le
+{\pi D\over D\sin(\rho/2)-2L_D},
+}
+\tag{BL.4}
+\]
+
+where
+
+\[
+L_D=\sqrt{D\,3^{1/4}\sqrt D+\sqrt3 D}
+=O(D^{3/4}).
+\tag{BL.5}
+\]
+
+Consequently
+
+\[
+\boxed{
+\limsup_{D\to\infty}N_{\rm same}(D,\rho)
+\le{\pi\over\sin(\rho/2)}<\infty.
+}
+\tag{BL.6}
+\]
+
+Thus all but `O_rho(1)` wide exact-antipodal interfaces are **bilateral**:
+
+\[
+\boxed{
+\{x_i^+,x_i^-\}
+\text{ meets both }C_i^+\text{ and }C_i^-.
+}
+\tag{BL.7}
+\]
+
+If the wide-EA side has positive linear density, this produces two linearly long ordered sequences of distinct actual diameter endpoints, one on each host arc, indexed by the same birth-interface set.
+
+This eliminates a remaining local regression in which both fixed-angle blockers at each interface could hide on one boundary side of the strip.
+
+---
+
+## 1. A switching blocker has one birth endpoint in the physical layer
+
+For the exact O--O path coordinates, PRS.4 identifies the switching set at internal layer `R_i` as
+
+\[
+H_{sw,i}
+=\{xy\in H:\rho(x)=R_i\text{ or }\rho(y)=R_i\}.
+\tag{BL.8}
+\]
+
+On the selected side of the common diameter-routing hub all switching is one-sided toward the hub.  Hence every switching diameter edge at interface `i` has exactly one endpoint in `R_i` and its other endpoint in a hubward region.
+
+Therefore each chosen blocker edge `e_i^\pm` has a well-defined birth endpoint `x_i^\pm` in `R_i`.
+
+Every endpoint of an actual diameter edge is an exposed, hence extreme, point of the full convex hull `K`.  The only hull pieces belonging to the region between two consecutive proper crosscuts `tau_i,tau_{i+1}` are the two boundary subarcs `C_i^+,C_i^-`.  Thus
+
+\[
+\boxed{x_i^\pm\in C_i^+\cup C_i^-.}
+\tag{BL.9}
+\]
+
+The interiors of the `C_i^+` are pairwise disjoint as `i` varies, and the same is true for the `C_i^-`; altogether these subarcs are occurrence-disjoint pieces of the outer boundary except for harmless shared endpoints.
+
+---
+
+## 2. Wide dipoles separate their two birth endpoints by a linear distance
+
+The wide-dipole central-diamond theorem proves that if the projective angle of the two diameter chords is at least `rho`, then every endpoint of one chord and every endpoint of the other satisfy
+
+\[
+|p-q|
+\ge D\sin{\rho\over2}-2L_D.
+\tag{BL.10}
+\]
+
+Apply this to the two birth endpoints:
+
+\[
+\boxed{
+|x_i^+-x_i^-|
+\ge D\sin{\rho\over2}-2L_D.
+}
+\tag{BL.11}
+\]
+
+For fixed `rho>0` the right side is positive and asymptotic to `D sin(rho/2)`.
+
+No KKT multiplier or local train-length estimate enters this metric statement.
+
+---
+
+## 3. Same-side birth consumes a macroscopic disjoint hull arc
+
+Suppose both birth endpoints of a wide interface lie on the same host subarc, say
+
+\[
+x_i^+,x_i^-\in C_i^+.
+\]
+
+The polygonal arc length of `C_i^+` between these two vertices is at least their Euclidean distance.  Hence (BL.11) gives
+
+\[
+\operatorname{len}(C_i^+)
+\ge D\sin{\rho\over2}-2L_D.
+\tag{BL.12}
+\]
+
+The same statement holds with `+` replaced by `-`.
+
+For different layer indices, the corresponding host subarcs have disjoint interiors.  Therefore, if `N_same` wide interfaces have same-side birth pairs, summing (BL.12) over the particular subarc used by each interface yields
+
+\[
+N_{\rm same}
+\left(D\sin{\rho\over2}-2L_D\right)
+\le P(K).
+\tag{BL.13}
+\]
+
+Cauchy's perimeter-diameter inequality gives
+
+\[
+P(K)\le\pi D.
+\tag{BL.14}
+\]
+
+Equations (BL.13)--(BL.14) prove (BL.4).  Divide by `D` and use `L_D/D->0` to obtain (BL.6).
+
+Thus a fixed-angle pair can use one host side twice only a bounded number of times over the entire path, regardless of the number of selected layers.
+
+---
+
+## 4. Linear wide-EA density becomes bilateral linear endpoint density
+
+Let `W_D(rho)` be any `rho`-wide exact-antipodal interface family with
+
+\[
+|W_D(\rho)|\ge\lambda D-o(D)
+\tag{BL.15}
+\]
+
+for fixed `lambda>0`.  By (BL.6), after deleting only `O_rho(1)` interfaces, every remaining interface has one birth endpoint on each host subarc:
+
+\[
+x_i^{(+)}\in C_i^+,
+\qquad
+x_i^{(-)}\in C_i^-.
+\tag{BL.16}
+\]
+
+Regions are disjoint, so all these birth endpoints are distinct across different `i`.  Therefore each of the two global host arcs contains at least
+
+\[
+\boxed{
+\lambda D-o(D)
+}
+\tag{BL.17}
+\]
+
+distinct actual diameter endpoints, one in each of a linearly large ordered family of layer subarcs.
+
+Moreover the order is inherited directly from the proper-crosscut path:
+
+```text
+host arc + :  ... C_i^+ ... C_j^+ ...
+host arc - :  ... C_i^- ... C_j^- ...
+```
+
+with the corresponding reversal determined by the orientation of the two host arcs.  The same interface index labels one endpoint on each side.
+
+In the winning side of the parameterized robust fork one may take
+
+\[
+\lambda={c_0-6\rho\over2}
+\tag{BL.18}
+\]
+
+up to the usual `o(1)` loss whenever the wide-EA alternative is the larger side.
+
+---
+
+## 5. Frontier effect
+
+The exact-antipodal branch has now acquired three simultaneous scales:
+
+```text
+local tag:
+    both blockers are born at the same path layer R_i;
+
+central scale:
+    their four-endpoint hull contains one common radius-Theta_rho(D) central disk;
+    their diagonal crossing lies O_rho(D^(3/4)) from the common circumcenter;
+
+outer-boundary scale:
+    except at O_rho(1) interfaces, the two birth endpoints occupy opposite
+    host-arc pieces C_i^+, C_i^- of that same layer.
+```
+
+Thus a linear wide-EA survivor is a **bilaterally loaded ordered strip family**: linearly many consecutive birth layers each carry one actual diameter endpoint on each outer side, while the two associated diameter diagonals cross centrally at fixed angle.
+
+This is closer to the train rectangle than the earlier unstructured dipole statement.  A remaining closure argument can now compare the two ordered birth-endpoint sequences against the common transverse train family and the near-central antipodal partner map.  Merely placing both blockers on one side of each strip is no longer a linear-density escape.
+
+No C-II or Level-I closure is claimed.
+
+**Disposition:** proved that same-host-side birth of a fixed-angle antipodal blocker pair occurs only `O_rho(1)` times; any positive-density wide-EA branch is bilaterally diameter-loaded on the two ordered host arcs. C-II and Level I remain open.

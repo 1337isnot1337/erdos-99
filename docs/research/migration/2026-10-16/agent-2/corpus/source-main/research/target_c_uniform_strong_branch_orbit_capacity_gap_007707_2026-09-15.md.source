@@ -1,0 +1,174 @@
+# Target C-II — corrected uniform strong-branch orbit-capacity gap `0.007707`
+
+**Date:** 2026-09-15  
+**Status:** proof-only matched all-train/rhombic strengthening  
+**Scope:** identical to the hostile-audited scope-safe `g=0.0077` theorem  
+**Certificate:** `research/verify_target_c_uniform_strong_branch_orbit_capacity_gap_007707.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The scope-correct three-branch phase-star capacity proof has a small amount of exact
+margin beyond the current safe value `g=0.0077`.  Re-running the same proof with
+
+\[
+\boxed{g=0.007707}
+\]
+
+still passes every branch hypothesis and every load-bearing derivative check by exact
+rational arithmetic.
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+C_{707}:=2\sqrt{\Delta_2}+0.007707.
+\]
+
+Then, at the same proof-only scope,
+
+\[
+\boxed{
+\liminf {T-q/2\over D}\ge C_{707},
+}
+\tag{G707.1}
+\]
+
+and independently on the strict-rhombus train graph,
+
+\[
+\boxed{
+\liminf {T_R\over D}\ge C_{707},
+\qquad
+\liminf {\sigma_R\over D}\ge0.015414.
+}
+\tag{G707.2}
+
+No branch is extended beyond the hypotheses already audited at `g=0.0076` and
+`g=0.0077`.
+
+---
+
+## 1. Unchanged three-branch proof
+
+Let one exact projective `pi/3` orbit have total mass `W`, with ordered phase masses
+
+\[
+C\ge U\ge V\ge0,
+\qquad W=C+U+V.
+\]
+
+Put
+
+\[
+K={2\over\sqrt3},
+\qquad r_{crit}=\sqrt{20/29}.
+\]
+
+The proof uses exactly the same exhaustive split as the corrected `g=0.0077` theorem.
+
+### Strong branch
+
+While the center/leaf excess ratio is below `r_crit`, use the physical
+iterative-pruning pair theorem
+
+\[
+\rho\ge {1\over10}(a+b-K)_+^2.
+\]
+
+For a fixed total orbit mass `W`, the resulting one-orbit capacity is denoted
+`Psi_s(W)`.
+
+### Fallback branch
+
+Past the strong threshold but while `C<=K`, use only the unconditional physical pair
+bound
+
+\[
+\rho\ge {2\over29}(a+b-K)_+^2.
+\]
+
+### High-center branch
+
+For `C>K`, use no physical pair theorem.  The generic triangle-free capacity
+
+\[
+E\le C(W-C)
+\]
+
+is maximized at the boundary `C=K` throughout the relevant orbit interval.
+
+This is the same scope repair that was independently hostile-audited before the
+`0.0077` strengthening.
+
+---
+
+## 2. Exact certificate at `0.007707`
+
+The committed verifier uses only `Fraction` arithmetic, Machin bounds for `pi`, and
+integer-square-root enclosures.  It checks the full chain with
+
+\[
+C_{707}=2\sqrt{\Delta_2}+{7707\over10^6}.
+\]
+
+The strong-branch tangent is taken at the rational point
+
+\[
+c_0={935389\over10^6}.
+\]
+
+The exact outward checks include:
+
+- the full orbit interval remains below `2K`;
+- the strong-branch center/leaf excess ratio remains below `sqrt(20/29)`;
+- the left-center derivative remains positive;
+- the total strong-capacity derivative in dominant mass remains positive;
+- the fallback-boundary derivative remains positive after including the moving
+  boundary term;
+- the high-center branch remains more than `0.032` below `Delta_2` at the endpoint.
+
+Most importantly, the strong endpoint still has the exact positive margin
+
+\[
+\boxed{
+\Delta_2-\Psi_s(C_{707})>2\times10^{-7}.
+}
+\tag{G707.3}
+
+The fallback endpoint remains more than `1.3e-3` below `Delta_2`, so the strong branch
+continues to control the scalar ceiling.
+
+The same certificate gives a lower bound above `0.5966` for the load-bearing strong
+`W`-slope after residual-square subtraction.  Thus the residual-stability machinery
+used downstream at `g=0.0077` remains available with room.
+
+---
+
+## 3. Why the value stops at `0.007707`
+
+A non-load-bearing numerical solve puts the strong-capacity zero near
+
+\[
+0.00770727\ldots .
+\]
+
+The exact margin at `0.007707` is already only about `2.5e-7`; the architecture is
+essentially exhausted.  No claim is made at `0.0077072` or at the numerical root,
+even though exploratory arithmetic remains positive slightly farther.
+
+The useful consequence is not the seventh decimal itself.  It is that the complete
+scope-safe atomic input can now be substituted into the residual survivor system:
+
+```text
+C_707 = 2 sqrt(Delta_2) + 0.007707,
+(T-q/2)/D >= C_707 - o(1),
+T_R/D       >= C_707 - o(1),
+sigma_R/D   >= 0.015414 - o(1).
+```
+
+The next step is to propagate `C_707` through the already-audited correlated residual
+triangle.  Because the previous proof-only floor is `1.843578`, a successful
+propagation needs to certify a new rounded endpoint rather than merely restate the
+atomic gain.
+
+**Disposition:** proved proof-only matched atomic strengthening. C-II and Level I remain open.

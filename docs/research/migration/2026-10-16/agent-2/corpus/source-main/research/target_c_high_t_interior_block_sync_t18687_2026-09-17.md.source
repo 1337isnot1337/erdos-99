@@ -1,0 +1,515 @@
+# Target C-II — interior-block averaging gives a much larger synchronized train/diameter rectangle
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch with `t=(q-k)/D<=1.8687`  
+**Dependencies:** coupled O--O path; complete-train interval-neighborhood/right-endpoint argument; train ledger; phase-free path-region saturation; common diameter hub and one-sided switching; metric grid span; post-synchronization phase purification  
+**Certificate:** `research/verify_target_c_high_t_interior_block_sync_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The existing complete-rectangle proof partitions the selected O--O path into nine blocks and uses one block with few crossing-interval right endpoints. The later diameter synchronization then discards a hub side and another median half of that block. Those fixed losses are avoidable.
+
+The key observation is that only three path blocks need be forbidden before the right-endpoint averaging:
+
+1. the first block, so a chosen pre-hub block has a full outward block of regions before it;
+2. the last block, for the symmetric post-hub case; and
+3. at most one block that actually straddles the common hub region.
+
+Every other block is already wholly on one hub side and has a full neighboring block in the outward direction. Averaging the global `3.0605D` right-endpoint budget over those eligible blocks produces a complete train rectangle that is synchronized with an equally large family of actual diameter supports **without any subsequent side/median factor**.
+
+For an `N`-block partition, `N>=8`, define
+
+\[
+a_N:={0.0002038\over N},
+\qquad
+b_N:=0.6536-{3.0605\over N-3}.
+\tag{IB.1}
+\]
+
+Then `b_N>0`, and the high-`t` survivor contains families
+
+\[
+E_N,\quad A_N,\quad B_N
+\]
+
+with
+
+\[
+|E_N|,|A_N|>a_ND-o(D),
+\qquad
+|B_N|>b_ND-o(D),
+\tag{IB.2}
+\]
+
+such that
+
+\[
+E_N\times A_N
+\]
+
+is complete in exact selected-cut support incidence and
+
+\[
+A_N\times B_N
+\]
+
+is complete in strict-rhombus incidence, with both train shores internally noncrossing.
+
+Two parameter choices are useful.
+
+- `N=8` maximizes the guaranteed synchronized diameter/row density among the positive family:
+  \[
+  |E_8|,|A_8|>2.5475\times10^{-5}D-o(D),
+  \qquad
+  |B_8|>0.0415D-o(D).
+  \]
+- `N=14` maximizes the guaranteed raw train-grid product `a_N b_N`:
+  \[
+  |E_{14}|,|A_{14}|>1.45571428\times10^{-5}D-o(D),
+  \]
+  \[
+  |B_{14}|>0.3753727D-o(D).
+  \]
+
+After choosing one consistent transverse orientation and applying the post-synchronization phase-purification theorem with `epsilon=0.1`, the `N=14` scaffold contains
+
+\[
+|E_{14}|>1.45571428\times10^{-5}D-o(D),
+\]
+
+\[
+|A_{14,90}|>1.31014285\times10^{-5}D-o(D),
+\]
+
+\[
+|B_{14,90}|>0.1689177D-o(D),
+\]
+
+with every train-grid angle equal to `pi/3+O(1/D)`, explicit defect coefficient below `4.09e7/D`, row-normal metric span above `0.14628D-o(D)`, and column-normal metric span above `1.1346e-5D-o(D)`.
+
+This strictly improves the previous post-synchronization phase scaffold in both train-shore cardinalities while more than doubling the synchronized actual-diameter population.
+
+---
+
+## 1. An `N`-block version of the complete-rectangle argument
+
+Write the selected O--O path as
+
+\[
+\tau_1,\ldots,\tau_m,
+\]
+
+with
+
+\[
+\boxed{m>\rho D-o(D),
+\qquad \rho=0.0002038.}
+\tag{IB.3}
+\]
+
+Every selected row satisfies the established crossing-neighbor floor
+
+\[
+\boxed{|\Gamma(\tau_j)|>rD-o(D),
+\qquad r=0.6536.}
+\tag{IB.4}
+\]
+
+For every complete stopped train `sigma`, its selected-path crossing set
+
+\[
+I_\sigma:=\{j:\sigma\text{ crosses }\tau_j\}
+\]
+
+is an interval. The total number of nonempty interval right endpoints, counted with train multiplicity, is at most the complete-train count
+
+\[
+\boxed{T_{tr}<TD+o(D),
+\qquad T=3.0605.}
+\tag{IB.5}
+\]
+
+Fix an integer `N>=8` and partition the selected path into `N` consecutive blocks of sizes differing by at most one. Every block has
+
+\[
+>{\rho\over N}D-o(D)=a_ND-o(D)
+\tag{IB.6}
+\]
+
+rows.
+
+Let the common diameter-routing hub be the complementary region `R_k`. At most one path block can contain selected rows on both sides of `R_k`: such a block must contain the adjacent pair `tau_k,tau_{k+1}`. Call it the hub-straddling block if it exists.
+
+Exclude:
+
+- the first path block;
+- the last path block;
+- the hub-straddling block, if any.
+
+There remain at least `N-3` **eligible** blocks. Each eligible block is wholly on one strict side of the hub and, because it is not a path-end block, has a full neighboring path block in the direction away from the hub.
+
+Assign every nonempty interval `I_sigma` to the block containing its right endpoint. By (IB.5), some eligible block `J` receives at most
+
+\[
+{T\over N-3}D+o(D)
+\tag{IB.7}
+\]
+
+right endpoints.
+
+Let `tau_a` be the first selected row in `J`. A complete train that crosses `tau_a` but fails to cross every row of `J` must have its right endpoint inside `J`, exactly as in the original nine-block proof. Therefore
+
+\[
+\left|\bigcap_{\tau_j\in J}\Gamma(\tau_j)\right|
+>
+\left(r-{T\over N-3}\right)D-o(D).
+\]
+
+Set
+
+\[
+A_N:=J,
+\qquad
+B_N:=\bigcap_{\tau_j\in J}\Gamma(\tau_j).
+\]
+
+Then
+
+\[
+\boxed{|A_N|>a_ND-o(D),}
+\tag{IB.8}
+\]
+
+\[
+\boxed{|B_N|>b_ND-o(D),}
+\tag{IB.9}
+\]
+
+and every `A_N x B_N` pair is one strict-rhombus crossing. The `A_N` rows are pairwise noncrossing because they belong to the selected O--O path. The `B_N` columns are pairwise noncrossing because two of them plus `tau_a` would otherwise form a triangle in the complete-train crossing graph.
+
+At `N=8`,
+
+\[
+b_8=0.6536-{3.0605\over5}=0.0415>0,
+\]
+
+so every `N>=8` in the useful range starts with a genuine linear transverse shore.
+
+---
+
+## 2. The same full block synchronizes with an equally large diameter family
+
+Because `J` is eligible, it is entirely on one hub side. Reverse the path if necessary and suppose `J` is pre-hub. Since `J` is not the first path block, the preceding block lies farther from the hub and contains
+
+\[
+>a_ND-o(D)
+\]
+
+path rows and therefore the same asymptotic number of internal pre-hub complementary regions available for births.
+
+Choose `a_ND-o(D)` distinct internal regions strictly outward of the first row of `J`; the possible one-row block-size discrepancy is absorbed by the `o(D)` term. Phase-free region saturation supplies at least one actual switching diameter born in each. The one-sided switching theorem sends the other endpoint hubward, beyond every row of `J`. Hence each chosen diameter support contains every selected cut in `A_N`.
+
+The bars are distinct because their birth regions are distinct and an actual diameter support containing the hub cannot have two distinct pre-hub birth regions.
+
+Thus there is a family `E_N` with
+
+\[
+\boxed{|E_N|>a_ND-o(D)}
+\tag{IB.10}
+\]
+
+and
+
+\[
+\boxed{
+E_N\times A_N
+\text{ complete in exact selected-cut support incidence.}
+}
+\tag{IB.11}
+\]
+
+The post-hub case is identical after reversing the path.
+
+This is the improvement over the previous hub/median construction: the whole train block survives. The synchronization density is `rho/N`, rather than one quarter of a preselected block density.
+
+---
+
+## 3. Metric span is automatic on every synchronized block
+
+Apply the exact train-step metric lemma to the complete rectangle `A_N x B_N`. Every row has crossing-center span
+
+\[
+>{\sqrt3\over2}(|B_N|-1),
+\]
+
+and every column has crossing-center span
+
+\[
+>{\sqrt3\over2}(|A_N|-1)
+\]
+
+in its train-adapted monotone coordinate.
+
+Hence
+
+\[
+\boxed{
+\operatorname{rowspan}(A_N,B_N)
+>
+\left({\sqrt3\over2}b_N-o(1)\right)D,
+}
+\tag{IB.12}
+\]
+
+\[
+\boxed{
+\operatorname{colspan}(A_N,B_N)
+>
+\left({\sqrt3\over2}a_N-o(1)\right)D.
+}
+\tag{IB.13}
+\]
+
+The selected O--O rows lie in one shrinking dominant phase window, so the row-adapted coordinates in (IB.12) can be replaced by one common row-normal coordinate with `o(D)` loss.
+
+---
+
+## 4. Diameter-heavy specialization: `N=8`
+
+For `N=8`,
+
+\[
+a_8={0.0002038\over8}=2.5475\times10^{-5},
+\]
+
+\[
+b_8=0.0415.
+\]
+
+Thus
+
+\[
+\boxed{|E_8|,|A_8|>2.5475\times10^{-5}D-o(D),}
+\tag{IB.14}
+\]
+
+\[
+\boxed{|B_8|>0.0415D-o(D).}
+\tag{IB.15}
+\]
+
+Fixing one physical birth host among the `E_8` bars and using same-host diameter exclusion plus support ordering gives a strictly nested opposite-host-or-terminal rail of density
+
+\[
+\boxed{1.27375\times10^{-5}D-o(D).}
+\tag{IB.16}
+\]
+
+Fixing one of those two physical destinations leaves
+
+\[
+\boxed{6.36875\times10^{-6}D-o(D)}
+\tag{IB.17}
+\]
+
+strictly nested diameter bars, all spanning the same complete row block `A_8`.
+
+This is the strongest current guaranteed cardinality for a diameter rail that is simultaneously locked to one complete linear transverse train family.
+
+---
+
+## 5. Product-optimal specialization: `N=14`
+
+The raw synchronized grid product coefficient is
+
+\[
+f(N):=a_Nb_N
+={\rho\over N}\left(r-{T\over N-3}\right).
+\tag{IB.18}
+\]
+
+For real `x>3`, its derivative has sign opposite to
+
+\[
+6536x^2-100426x+150639.
+\]
+
+The larger root is
+
+\[
+13.680331\ldots,
+\]
+
+so the integer maximizer over `N>=8` is
+
+\[
+\boxed{N=14.}
+\tag{IB.19}
+\]
+
+At `N=14`,
+
+\[
+\boxed{
+a_{14}={1019\over70{,}000{,}000}
+=1.4557142857\ldots\times10^{-5},
+}
+\tag{IB.20}
+\]
+
+and
+
+\[
+\boxed{
+b_{14}={41291\over110000}
+=0.3753727272\ldots .
+}
+\tag{IB.21}
+\]
+
+Therefore
+
+\[
+\boxed{|E_{14}|,|A_{14}|>1.45571428\times10^{-5}D-o(D),}
+\tag{IB.22}
+\]
+
+\[
+\boxed{|B_{14}|>0.3753727D-o(D).}
+\tag{IB.23}
+\]
+
+The complete strict-rhombus product coefficient is
+
+\[
+\boxed{a_{14}b_{14}=5.4643544\ldots\times10^{-6}.}
+\tag{IB.24}
+\]
+
+Every synchronized row has common dominant-phase metric span
+
+\[
+>(0.32508-o(1))D
+\]
+
+across the full `B_14` shore; the exact certificate retains the symbolic `sqrt(3)b_14/2` value rather than using this rounded display.
+
+---
+
+## 6. Re-purifying phase after the `N=14` synchronization
+
+Apply the same orientation reduction as in the phase-collapse theorem. After deleting only `O(1)` ambiguous columns, one orientation class `B_{14,+}` has
+
+\[
+\boxed{|B_{14,+}|>{b_{14}\over2}D-o(D)
+>0.1876863D-o(D).}
+\tag{IB.25}
+\]
+
+The exact additive phase decomposition
+
+\[
+\delta_{ab}=g+r_a+q_b
+\]
+
+holds on `A_14 x B_{14,+}`. The global angular-defect sum is still less than
+
+\[
+C_{phase}D,
+\qquad
+C_{phase}={\pi^2\sqrt3(2+\sqrt3)\over12}.
+\]
+
+The product density before phase thinning is
+
+\[
+a_{14}{b_{14}\over2}
+=2.7321772\ldots\times10^{-6}.
+\tag{IB.26}
+\]
+
+Hence the average angular defect on this already synchronized product is at most
+
+\[
+{1.945888\times10^6\over D}+o(D^{-1}).
+\tag{IB.27}
+\]
+
+Using the post-synchronization Markov theorem with `epsilon=0.1`, retain ninety percent of each train shore. The entire diameter family `E_14` remains unthinned. Thus there are
+
+\[
+\boxed{|A_{14,90}|>1.31014285\times10^{-5}D-o(D),}
+\tag{IB.28}
+\]
+
+\[
+\boxed{|B_{14,90}|>0.1689177D-o(D),}
+\tag{IB.29}
+\]
+
+while
+
+\[
+\boxed{|E_{14}|>1.45571428\times10^{-5}D-o(D).}
+\tag{IB.30}
+\]
+
+Every `A_14,90 x B_14,90` crossing is in one common orientation and satisfies
+
+\[
+\boxed{
+{\pi\over3}<\theta_{ab}
+<{\pi\over3}+{4.09\times10^7\over D}+o(D^{-1}).
+}
+\tag{IB.31}
+\]
+
+The purified grid still has more than
+
+\[
+\boxed{(2.2130\times10^{-6}-o(1))D^2}
+\tag{IB.32}
+\]
+
+strict-rhombus crossings.
+
+Because both purified phase spreads are `O(1/D)`, the metric train coordinates transfer to two common directions with only `O(1)` loss. Every retained row has crossing-center span
+
+\[
+\boxed{>(0.14628-o(1))D,}
+\tag{IB.33}
+\]
+
+and every retained column has span
+
+\[
+\boxed{>(1.1346\times10^{-5}-o(1))D.}
+\tag{IB.34}
+\]
+
+This dominates the preceding ninety-percent post-synchronization scaffold in both train-shore sizes and has a smaller inverse-`D` angle constant.
+
+---
+
+## 7. Frontier effect
+
+The synchronized high-`t` geometry can now be chosen from a one-parameter family rather than from one fixed nine-block extraction.
+
+```text
+N=8  : maximize guaranteed synchronized diameter/row density
+        E,A > 2.5475e-5 D, B > 0.0415 D
+
+N=14 : maximize guaranteed complete-grid product
+        E,A > 1.4557e-5 D, B > 0.37537 D
+        after orientation + 90% phase purification:
+        E > 1.4557e-5 D (unthinned)
+        A > 1.3101e-5 D
+        B > 0.168917 D
+        all angles = pi/3 + O(1/D)
+```
+
+The previous `5.65e-6D` synchronized diameter count was not a structural limit; it came from synchronizing only after a particular rectangle block had already been chosen and then paying a side/median loss. Interior-block averaging eliminates that loss.
+
+The remaining obstruction is unchanged in kind but now has much more room: exact support incidence still does not force a straight diameter chord to cross a row inside the train-grid patch. Any future channel/order argument should use the `N=8` diameter-heavy scaffold if it needs many nested diameter bars, or the `N=14` product-optimal purified scaffold if it needs the largest near-triangular train rectangle.
+
+**Disposition:** replaced the fixed synchronized rectangle by an optimized interior-block family; increased the guaranteed synchronized actual-diameter population to `2.5475e-5D` in the diameter-heavy choice and produced a product-optimal `N=14` inverse-`D` grid with larger row and column shores than the previous post-synchronization phase scaffold. C-II and Level I remain open.

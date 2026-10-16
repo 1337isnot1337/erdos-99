@@ -1,0 +1,115 @@
+# Hostile audit — multi-rhombic empty pentagon population
+
+**Date:** 2026-09-15  
+**Reviewed:** `research/target_c_multirhombic_empty_pentagons_2026-09-15.md`  
+**Disposition:** **PASS at its stated Branch-R incidence scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The candidate strengthens the modern Branch R rhombus/pentagon incidence floor by forcing many individual pentagons to carry at least two or three rhombic sides.  The argument is combinatorial once the audited parent envelopes are fixed.
+
+## 1. `I_5` really is the sum of rhombic side counts
+
+`I_5` counts contact-side occurrences with a strict rhombus on one side and a pentagonal bounded contact face on the other.  Each pentagon side contributes either zero or one such occurrence.  Therefore, with `d_R(P)` the number of rhombus-adjacent sides of pentagon `P`,
+
+\[
+I_5=\sum_Pd_R(P)
+\]
+
+exactly.  No side can be counted twice for one pentagon.
+
+**Verdict:** PASS.
+
+## 2. Threshold-count inequalities use the correct extremal allocation
+
+Let `X_2` count pentagons with `d_R>=2`.  To maximize `I_5` for fixed `P_5,X_2`, every pentagon outside `X_2` may contribute at most one and every pentagon inside at most five.  Hence
+
+\[
+I_5\le P_5+4X_2,
+\qquad
+X_2\ge{I_5-P_5\over4}.
+\]
+
+Likewise, if `X_3` counts `d_R>=3`, the adverse allocation is two incidences on every nonmember and five on every member:
+
+\[
+I_5\le2P_5+3X_3,
+\qquad
+X_3\ge{I_5-2P_5\over3}.
+\]
+
+These are sharp finite inequalities for the available information.
+
+**Verdict:** PASS.
+
+## 3. Replacing `P_5` by `Q` is in the adverse direction
+
+Every pentagon contributes exactly one unit to
+
+\[
+Q=\sum_P(\deg P-4),
+\]
+
+while every other exceptional face contributes a nonnegative amount.  Thus `P_5<=Q`.
+
+Both lower bounds above decrease as `P_5` increases.  Therefore replacing `P_5` by the larger quantity `Q` weakens the lower bound and is safe:
+
+\[
+X_2\ge{I_5-Q\over4},
+\qquad
+X_3\ge{I_5-2Q\over3}.
+\]
+
+There is no illicit combination of a lower bound for `P_5` with an upper bound for `P_5`; the proof uses only the exact inequality `P_5<=Q` and the audited `Q` upper envelope.
+
+**Verdict:** PASS.
+
+## 4. Parent Branch-R inequalities are inserted consistently
+
+The modern train-slack theorem gives in Branch R
+
+\[
+I_5\ge5(2f-Q)-\tau_0D-o(D),
+\qquad
+\tau_0=0.7467921.
+\]
+
+The modern all-train theorem supplies, at `t<=T`,
+
+\[
+f/D\ge C_{707}/2-T/4-o(1),
+\qquad
+Q/D\le2T-\pi+o(1).
+\]
+
+The coefficient of `f` in the `I_5` lower bound is positive and that of `Q` is negative, so using the `f` lower and `Q` upper values is again adverse.  The subsequent `X_2,X_3` formulas subtract one or two additional copies of `Q`, so the same `Q` upper remains adverse.
+
+A Pyroam exact-`Fraction` regression, using the same Machin and integer-square-root enclosures as the parent certificate, gives:
+
+```text
+T=1.850:  X2/D > 0.20985672, X3/D > 0.09367318
+T=1.855:  X2/D > 0.19173172, X3/D > 0.06617318
+T=1.860:  X2/D > 0.17360672, X3/D > 0.03867318
+T=1.8623: X2/D > 0.16526922, X3/D > 0.02602318
+```
+
+The candidate rounds strictly downward in every row.
+
+**Verdict:** PASS.
+
+## 5. The empty-face and adjacent-side conclusions are valid
+
+The merged isolate-host theorem says every bounded pentagonal contact face has empty source interior.  Therefore the `X_2` and `X_3` populations are genuinely source-empty pentagonal holes.
+
+For `X_3`, three marked sides of a 5-cycle cannot be pairwise nonadjacent because the independence number of `C_5` is two.  Hence each `X_3` pentagon has at least one vertex whose two incident pentagon sides both border strict rhombi.
+
+The candidate correctly counts face-corner pairs, not necessarily distinct source vertices.
+
+**Verdict:** PASS.
+
+## 6. Scope limitation
+
+The theorem does not yet extract a uniform angular defect from a double-rhombic corner.  A convex equilateral pentagon can approach the sharp Oler area floor `3sqrt(3)/4` through a near-degenerate configuration in which a nonboundary diagonal approaches unit length, so no uniform per-pentagon area surplus may be assumed.
+
+The result is nevertheless a genuine localization: the diffuse Branch-R incidence currency contains a linear family of explicit empty five-cycles with two strict rhombi meeting at one boundary corner.
+
+**Final verdict:** **PASS.** The multi-rhombic population and all displayed rounded constants are valid at the stated scope. C-II remains open.

@@ -1,0 +1,174 @@
+<!-- theorem-state: {"artifact_id":"ART-1F8D26602036","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: exact-contact replacement with a contact budget
+
+Date: 2026-10-05. Base main: `ad8809fd96c2c0af9a6de4d965e9ab33efe092c6`.
+State: `2026-10-05.audit.59`.
+Classification: **proved candidate synthesis awaiting independent audit**;
+artifact lifecycle **unreviewed**. This is a bookkeeping endpoint, not a
+packing-existence theorem or a claim of a novel normalization principle.
+Level I and C-II remain open.
+
+## 1. Exact chain
+
+```
+actual finite exact-contact packet with no contact-count increase
++ destruction of at least one old diameter and no replacement diameter
+-> same-cardinality triangle-free competitor with smaller lexicographic
+   (diameter, contact count, diameter-pair count)
+-> contradict canonical normalization.
+```
+
+Unlike a strict sub-D exchange, this endpoint need not destroy every old
+active diameter. It is therefore usable in both exhaustive C-II branches,
+independently of s_Z, when actual finite packet geometry is supplied.
+Audit.59 excludes a mean-area guarantee for a strict packet; it does not
+exclude an explicitly certified exact-contact packet.
+
+## 2. Finite replacement theorem
+
+Let A be a triangle-free global diameter minimizer, contact-minimal among
+triangle-free global minimizers and then diameter-pair-minimal among those
+with the minimum contact count. Write C,H for its actual unit-contact and
+diameter-pair graphs and D for its diameter.
+
+Choose R subset A and an actual finite set Y with |Y|=|R|. Let
+
+    t=number of C edges incident to R,
+    d=number of H edges incident to R.
+
+Assume:
+
+1. every pair in Y and every pair from Y to A minus R has distance >=1;
+2. every such distance is strictly below D;
+3. the new source A'=(A minus R) union Y is triangle-free;
+4. j, the number of new unit contacts with at least one endpoint in Y,
+   satisfies j<=t;
+5. either j<t, or d>0.
+
+Then such a packet cannot exist for A.
+
+**Proof.** All new points are distinct and distinct from retained points
+by item 1, so cardinality is unchanged. The new source is unit-separated,
+triangle-free and has diameter at most D. If its diameter is below D,
+global minimality fails. Otherwise it is a triangle-free global minimizer.
+Its exact contact count is
+
+    |C(A')|=|C|-t+j.
+
+If j<t, contact minimality fails. If j=t, every new-involving pair is
+strictly below D by item 2, so its exact diameter-pair count is
+
+    |H(A')|=|H|-d.
+
+Since d>0, secondary minimality fails. QED.
+
+The strict upper condition can be checked directly. It also follows if
+all Y sites lie in int(conv A): an interior point cannot be a diameter
+endpoint of that compact convex hull. No isolate is dropped; its label
+is retained or explicitly replaced.
+
+All contacts between inserted and retained points count in j. Counting
+only the packet's internal contacts is insufficient. Likewise a forest
+inside Y does not prove item 3 if cross contacts are present: triangles
+using one or two inserted points must also be excluded.
+
+## 3. Why two-contact packets cannot supply a new mechanism
+
+If every inserted site is strictly clear of retained points, a sufficiently
+small common dilation of Y opens all its internal unit contacts. All
+inactive lower and strict upper inequalities persist by their finite
+margins. Thus internal exact contacts alone reduce to strict refill;
+a genuine exact-contact route needs retained-source anchor contacts.
+
+More generally any finite feasible packet with at most two new unit
+contacts, strict upper bounds and unchanged retained points can be
+perturbed to open all its new contacts.
+
+**Proof.** Let the gradients of these at most two squared-distance
+constraints be rows on the inserted coordinates. Unless a positive
+combination of these rows is zero, elementary separation gives a direction
+strictly increasing both active lower distances. A small straight step
+opens them and preserves every inactive inequality.
+
+One row cannot vanish, since it contains a nonzero unit-edge vector at
+an inserted endpoint. Two rows can be negative proportional only when
+they are two cross edges joining the same inserted point to two opposite
+retained unit neighbors. Distinct internal edges cannot have that
+property: their nonzero coordinate supports differ, except if they were
+the same unordered edge, which is counted only once. An internal and a
+cross edge likewise have different supports. Two cross edges at different
+inserted points have disjoint supports.
+
+In the exceptional case, move that inserted point perpendicularly to
+the line of its two retained neighbors. Both squared unit distances
+become 1+epsilon^2. Other inserted points stay fixed, and all remaining
+pairs have finite strict margins. This again opens every new contact.
+QED.
+
+Consequently if R removes an old contact, an equal-cardinality interior
+packet has at least three new unit contacts. Otherwise the preceding
+perturbation would give an equal-cardinality strict refill, contradicting
+contact minimality. This excludes every putative two-contact-budget
+packet for one loaded degree-two vertex plus any number of isolates.
+An internal unit dimer or two-edge path is therefore not a distinct
+closure route, even if initially written with exact unit lengths.
+
+The same first-order separation argument gives a necessary pinned
+nonnegative equilibrium stress for every feasible equal-cardinality
+packet replacing a contact-active deletion: without one, a contact-opening
+direction produces the forbidden strict refill. This is only necessary;
+the opposite-anchor example above shows why first-order stress alone
+does not certify a finite obstruction. No kernel or rank claim is imported
+from the original core to the new packet.
+
+For a single feasible replacement site x in int K, audit.59 gives a stronger
+geometric statement. Its retained unit neighbors must strictly surround
+x: otherwise there is a nonzero direction w with
+
+    (x-a) dot w >=0
+
+for every unit neighbor a. The step x+epsilon*w opens every such unit
+distance, including those whose linear derivative is zero, because the
+quadratic term is positive. All other inequalities remain strict. Thus
+there must be at least three unit neighbors and zero must lie in the
+interior of the convex hull of their unit vectors. This is a local pinned
+site statement, not positive equilibrium on original isolate coordinates.
+
+A first genuinely anchored candidate uses a loaded degree-three deletion
+and an interior site at unit distance from three retained vertices,
+strictly farther than one from every other retained point. The three
+neighbors must strictly surround the site, and their mutual unit edges
+must be absent to keep the new source triangle-free. With exactly three
+new contacts, the contact budget is unchanged and an old diameter is
+removed. Section 2 then contradicts normalization. Existence of that
+three-anchor site is unproved; an arbitrary unit circumcenter does not
+satisfy clearance or triangle-freeness automatically.
+
+A fan reflection preserves its two old contacts. Subsequent replacement
+of only contact isolates has zero remaining contact budget. A wall-touching
+jammed site that adds contacts is not an equal-budget repair. Additional
+old contacts must be removed, or a strict sub-D source must be proved
+independently of contact counting.
+
+## 4. Composition and limits
+
+This theorem supplies the spendable quantity for audit.59's explicit
+exact-contact route: removed actual contacts, together with one removed
+actual diameter. It reduces the original-source packet target from
+paying a diameter cover to a finite contact-budget comparison. A packet
+creating a triangle cannot use the contact/diameter normalization endpoint;
+its diameter must be proved strictly smaller directly.
+
+No audit.52--59 theorem presently cited in this argument produces the
+required anchored three-contact site or general packet with certified retained-source
+clearance. Positive residual, a large wall, a near-unit blocker matching,
+and old strict isolate margins do not certify them. The fan octagon
+capacity-loss regression also prevents transporting those margins through
+the reflection. Both full-core and macroscopic-container existence
+obligations remain open; no authoritative lifecycle transition is made.
+
+## 5. Validation
+
+The proof is finite analytic contact and diameter counting. No numerical
+verifier is needed or claimed. Repository checks validate metadata and
+state consistency, not packet existence or Level I closure.

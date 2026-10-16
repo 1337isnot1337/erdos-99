@@ -1,0 +1,130 @@
+<!-- theorem-state: {"artifact_id":"ART-EFB49A7EA37C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: all-small-curvature M=5 one-deficit packet and a profile-flexible root
+
+Date: 2026-10-07. Authority: main `4b0b982451effe3e8183edfce349ce4c25f9a3bb`,
+state `2026-10-07.audit.74`. **Proved candidate awaiting independent audit**
+for the M=5 family and the root lemma below. No canonical self-promotion.
+C-II and Level I remain open.
+
+## 1. The M=5 one-deficit family is excluded
+
+For every sufficiently small positive curvature in the specified M=5
+six-direction unit wall, there is a strict N=61-site packet after deletion
+of wall vertex (1,4). Thus an arbitrary canonical old interior cloud with
+z=N-1=60 points yields a contact-loss contradiction. The old points have
+no assumed lattice, contact or vacancy structure.
+
+The proof follows the independently certified construction in
+`target_c_one_deficit_all_small_curvature_M4_2026-10-07.md`: start with the
+descending-rate sorting chart, remove target site (1,3), strictly open every
+remaining auxiliary contact, then add the inward root. Every deleted old
+interior label and the deleted wall label is paid. No new contact or unit
+triangle is introduced. The canonical one-vertex shield retains all outside
+isolates; strict containment gives every new upper constraint. At least two
+old contacts disappear. This is the audit.64 endpoint, not a new normal-form
+assumption.
+
+The new M=5 basis has 121 moving/eta columns and gives positive leading
+coefficients on *all* 146 exact unit rows for t=tan(theta/2)>0 sufficiently
+small. Leading orders range from zero through seven; every tracked
+remainder order is at least 19. All 3829 inactive wall-plus-chart pairs have
+positive leading squared-distance gaps. The exact unit-support identity is
+checked independently by coefficients of the complex unit factors.
+
+Inputs: `research/target_c_one_deficit_opening_basis_M5_2026_10_07.json`.
+Run `python3 research/verify_target_c_one_deficit_symbolic_opening_2026_10_07.py 5`.
+Output: `research/target_c_one_deficit_symbolic_opening_M5_certificate_2026_10_07.json`.
+The basis was found by an exact Q(sqrt(3)) simplex search at t=1/10000,
+not by accepting a floating near-zero margin. An independent full finite
+endpoint at that parameter is in the strict-root packet certificate.
+The positive Laurent coefficients, not that one sample, prove the
+all-small-curvature statement.
+
+Simply transporting a floating-discovered basis from a larger angle
+failed an exact leading row. That failed *basis* is not an impossibility
+result for the packet. The exact replacement basis resolves the scope gap.
+
+## 2. A root lemma for arbitrary strictly ordered symmetric rate profiles
+
+The following broadens the arithmetically spaced root calculation without
+assuming a general opening theorem.
+
+Let M>=3 and let a_0>a_1>...>a_(M-1) be any fixed strictly decreasing
+symmetric real rate list: a_(M-1-h)=-a_h. Put A=a_0>0 and
+Delta=a_0-a_1>0. Symmetry implies a_1>=0 for M>=3, so Delta<=A.
+Construct the six-sided wall by sorting exp(i a_h theta) along each side,
+and its descending-prefix sorting interior. For sufficiently small theta>0
+this is a strictly convex unit-separated unit wall with corner radius
+L(theta)=sum cos(a_h theta), and the sorting chart is unit-separated.
+Omit target h=(1,M-2), and let v be wall vertex (1,M-1). With
+w=v_basis-u_basis, define
+
+`r=exp(i(a_0+a_1)theta/2) w`,
+`root=v+3 sin(Delta theta/2) Jr`.
+
+**Lemma.** For every sufficiently small positive theta, this root lies
+strictly inside the wall and is strictly more than one from every
+remaining wall/chart site other than the omitted target and old v.
+
+*Neighbour clearance.* The two adjacent wall tangents have angles
+(a_0-Delta)theta and a_0 theta relative to w, so exact squared root
+clearances to both wall neighbours are
+
+`1+3 sin^2(Delta theta/2)>1`.
+
+The only remaining limiting interior unit neighbour is x=(0,M-1).
+The first velocities are
+
+`v'=-A Jw`, `x'=A Jv_basis`,
+`root'=(3Delta/2-A)Jw`.
+
+Since v(0)-x(0)=u_basis, its half-squared-distance derivative is
+
+`(sqrt(3)/2)(2A-3Delta/2)>0`,
+
+using Delta<=A. The omitted target has velocity A Ju_basis, and its
+corresponding derivative would be -3sqrt(3)Delta/4<0. Every other pair
+has strict limiting distance above one, so no further blocker is omitted.
+
+*Every wall support line.* Write b_j=a_(M-1-j) for the ascending wall
+rates and alpha_j=sum_(h<j)b_h. The edge-j first containment coefficient
+from its initial endpoint to the root is
+
+`3Delta/2-A-alpha_j-b_j(M-1-j)`.
+
+Because b_h>=b_j for h=j,...,M-2,
+
+`alpha_j+b_j(M-1-j) <= sum_(h=0)^(M-2) b_h=-A`.
+
+The coefficient is therefore at least 3Delta/2>0, including j=M-1.
+At zero the root is in the relative interior of this wall side, so every
+other side has strict limiting containment. Hence the root is inside
+the actual convex wall. All claims are fixed-profile, sufficiently-small-
+curvature statements, with no uniform onset or generic-container premise.
+
+Consequently *any* strict opening of the descending sorting chart with
+this one boundary-row vacancy can be converted into the N-site full-source
+exchange, even for these nonuniform symmetric profiles. The role of the
+root is now separated from the harder simultaneous-opening theorem.
+This flexibility is available for parameter discovery or chamber transfer;
+it does not itself supply either.
+
+## 3. Exact search and remaining quantified obligation
+
+`research/discover_target_c_exact_one_deficit_opening_2026_10_07.py` implements
+exact finite Q(sqrt(3)) primal simplex on all actual unit rows of the
+specified chart, with velocity coordinates bounded by one. A positive
+output gives exact opening derivatives only. A fully checked dual gives
+nonexistence of strict opening only at that precise auxiliary packet.
+Iteration limits give no mathematical nonexistence claim. Finite amplitude,
+all inactive pairs, root clearance, full-source shielding and universal
+parameter continuation remain separate obligations; the two verifiers
+above supply them for the listed M=4,5 results.
+
+The still-missing wall theorem is an all-M construction or induction for
+one-deficit opening, especially as M becomes macroscopic. M=4 and M=5
+are quantified curvature families, not an unbounded population family.
+Canonical audit.74 localizes z=N clouds but does not exclude them at
+finite curvature. Arbitrary actual chamber extraction, paired exterior-
+cap/core release and full-core face-coupled finite motion remain open.
+The exact M=6 search continues; no outcome is claimed before its certificate.

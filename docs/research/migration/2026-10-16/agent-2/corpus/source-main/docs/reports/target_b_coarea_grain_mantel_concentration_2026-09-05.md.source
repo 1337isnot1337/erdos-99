@@ -1,0 +1,211 @@
+<!-- theorem-state: {"artifact_id":"ART-10BA36B884E7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Erdos Problem #99 - Target B coarea-grain Mantel concentration
+
+**Date:** 2026-09-05  
+**Run type:** exact extremal aggregation after boundary-order phase coarea  
+**Target:** multi-grain local-to-global concentration  
+**Depends on:** phase-coarea boundary-order grain decomposition PCA2-PCA3; triangle-free train crossing graph; `R/D^2 -> Delta_2`; `T=O(D)`  
+**LEVEL I STATUS:** STILL OPEN
+
+## 1. Setup
+
+Fix a small phase-bin diameter `eta>0` and use PCA2 to delete only
+
+`O_eta(D)`
+
+train crossings/rhombi. Let the surviving train-crossing components be
+
+`H_1,...,H_m`,
+
+with
+
+`v_j=|V(H_j)|`, `e_j=|E(H_j)|`.
+
+The deleted crossing count is lower order on the quadratic scale, so if `R` is the original pure-rhombic crossing count,
+
+`R_*:=sum_j e_j=R-o(D^2)`
+
+and
+
+`R_*/D^2 -> Delta_2=pi/(2sqrt(3))`.                     (1.1)
+
+The component train vertex sets are disjoint, hence
+
+`sum_j v_j <= T`.                                       (1.2)
+
+Define crossing-mass fractions
+
+`theta_j=e_j/R_*`,
+
+so
+
+`theta_j>=0`, `sum_j theta_j=1`.                        (1.3)
+
+## 2. Componentwise Mantel sums globally
+
+The full train-crossing graph is triangle-free, so every component is triangle-free. Mantel gives
+
+`e_j<=v_j^2/4`,
+
+hence
+
+`v_j>=2sqrt(e_j)`.                                      (2.1)
+
+Summing and using (1.2),
+
+`T>=2 sum_j sqrt(e_j)`
+
+`=2sqrt(R_*) sum_j sqrt(theta_j)`.                      (2.2)
+
+Therefore:
+
+### Theorem GMC1 - grain concentration entropy bound
+
+If
+
+`x=T/D`,
+
+then
+
+`boxed{
+ sum_j sqrt(theta_j)
+ <= x/(2sqrt(Delta_2))+o(1).
+}`                                                       (2.3)
+
+This is a direct global constraint on the distribution of physical rhombi among coherent coarea grains. No component minimum degree is used.
+
+## 3. Exact largest-grain bound below the two-grain threshold
+
+Let
+
+`Theta=max_j theta_j`.
+
+Suppose
+
+`x<2sqrt(2Delta_2)-epsilon`                             (3.1)
+
+along a subsequence, for some fixed `epsilon>0`. Then the right side of (2.3) is strictly below `sqrt(2)`.
+
+In particular `Theta>1/2+o(1)`: if every grain had mass at most one half, the minimum possible value of `sum sqrt(theta_j)` subject to `sum theta_j=1` is `sqrt(2)`, attained by two equal grains. Splitting mass further only increases the concave-square-root sum.
+
+When `Theta>=1/2`, the minimum `sum sqrt(theta_j)` for fixed largest mass `Theta` is obtained by putting all remaining mass into one second grain. Thus
+
+`sum_j sqrt(theta_j) >= sqrt(Theta)+sqrt(1-Theta)`.     (3.2)
+
+Put
+
+`S=x/(2sqrt(Delta_2))`.                                 (3.3)
+
+For `1<=S<sqrt(2)`, inequality
+
+`sqrt(Theta)+sqrt(1-Theta) <= S`                        (3.4)
+
+with `Theta>=1/2` is equivalent to
+
+`Theta(1-Theta) <= ((S^2-1)/2)^2`.                     (3.5)
+
+Hence:
+
+### Theorem GMC2 - explicit dominant-grain fraction
+
+For every bounded subsequential value
+
+`2sqrt(Delta_2)<=x<2sqrt(2Delta_2)`,
+
+the largest coarea grain satisfies
+
+`boxed{
+Theta
+>=
+1/2 [1+sqrt(1-(S^2-1)^2)]-o(1),
+qquad
+S=x/(2sqrt(Delta_2)).
+}`                                                       (3.6)
+
+The threshold is
+
+`2sqrt(2Delta_2)=2.6935473741...`.                      (3.7)
+
+## 4. Numerical value at the current Section-39 lower edge
+
+The canonical Section-39 lower bound is
+
+`x>=2.5395008183...`.
+
+At exactly this coefficient,
+
+`S=4/3`
+
+(up to the displayed numerical precision), and (3.6) gives
+
+`Theta>=0.8142696805...-o(1)`.                          (4.1)
+
+Thus a survivor whose train count is near the current minimum cannot distribute its physical rhombi among several comparable grains: one coherent phase grain carries at least about `81.4%` of the entire quadratic crossing mass.
+
+## 5. General capped-mass form
+
+For completeness, GMC1 gives a concentration bound above the two-grain threshold as well.
+
+Fix `0<q<=1` and suppose every grain has `theta_j<=q`. Among probability vectors with this cap, the minimum of `sum sqrt(theta_j)` is obtained by filling as many coordinates as possible to `q`, with one final remainder.
+
+Write
+
+`r=floor(1/q)`,
+
+`u=1-rq`, `0<=u<q`.
+
+Then
+
+`sum_j sqrt(theta_j) >= r sqrt(q)+sqrt(u)`.             (5.1)
+
+Therefore any proposed global grain cap `q` must satisfy
+
+`r sqrt(q)+sqrt(1-rq)
+<= x/(2sqrt(Delta_2))+o(1)`.                            (5.2)
+
+This form can be combined with future local theorems excluding grains above some fixed crossing-mass fraction.
+
+## 6. Relation to the explicit local phase exclusions
+
+The explicit unique-max/balanced/two-max/GPI reports currently assume that one coherent component carries the global quadratic rhombus core at its scale. GMC2 does not reach that hypothesis: `81.4%` is not `1-o(1)`.
+
+However it turns the multi-grain problem into a quantitative interface problem rather than an arbitrary decomposition. In the low-`T/D` range, only a small residual fraction of the rhombi can lie outside the dominant grain.
+
+A useful next theorem would be a **fractional dominant-component version** of the trimmed-grid phase exclusion:
+
+> if one coherent component carries fraction `Theta` of all rhombi, derive a diameter contradiction for `Theta>Theta_crit(s,t,Delta)` rather than requiring `Theta->1`.
+
+The grid lower bounds in the existing explicit phase reports already have enough numerical margin to make `Theta_crit<1` in several phase-ratio regimes. GMC2 can then be compared directly with that threshold.
+
+## 7. What remains
+
+GMC1-GMC2 do not settle the range `x>=2.693547...`, where two equal quadratic grains are compatible with componentwise Mantel. Nor do they by themselves exclude the `~81%` dominant grain near the present lower edge.
+
+The next concrete route is:
+
+1. rewrite the existing complete-grid diameter proofs with a global rhombus fraction parameter `Theta`;
+2. obtain explicit `Theta_crit<1` for balanced and near-balanced phase classes;
+3. combine with GMC2 to eliminate a low-`x` interval;
+4. use PC3/MCP and MG3-MG4 for the remaining higher-train/multi-grain phase.
+
+## Handoff
+
+```text
+After the O_eta(D) phase-coarea cut, let theta_j be the fraction of retained rhombi in grain j.
+Componentwise Mantel gives
+
+  T >= 2 sqrt(R_*) sum_j sqrt(theta_j).
+
+Hence
+
+  sum_j sqrt(theta_j)
+    <= (T/D)/(2 sqrt(Delta_2)) + o(1).
+
+If x=T/D<2sqrt(2Delta_2)=2.693547..., the largest grain fraction obeys
+
+  Theta >= 1/2[1+sqrt(1-(x^2/(4Delta_2)-1)^2)]-o(1).
+
+At x=2.5395008183..., Theta>=0.8142696805... .
+
+This is the first quantitative crossing-mass concentration theorem for the boundary-order coherent grain decomposition.
+```

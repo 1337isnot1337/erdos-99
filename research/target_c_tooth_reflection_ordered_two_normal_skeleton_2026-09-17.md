@@ -1,0 +1,196 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "66811143a305faae5604d5ef58d72c838048d9b2", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_ordered_two_normal_skeleton_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "eb627c53a01f666000310a5bae19ca8a8310defabf234bd19a9647597a8be5bc"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — the two-normal shared skeleton contains a long common ancestry order
+
+**Date:** 2026-09-17  
+**Status:** proved candidate awaiting promotion; proof-only refinement of the two-normal shared-skeleton branch  
+**Scope:** TWO-NORMAL-SKELETON for an ordered slow-scale all-inactive FREE family  
+**Dependencies:** two-normal shared FREE skeleton; Erdos-Szekeres monotone subsequence theorem  
+**Certificate:** `research/verify_target_c_tooth_reflection_ordered_two_normal_skeleton_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The two-normal theorem gives many vertex-disjoint original source pairs that occur as lower gates in two different FREE activation ancestries. Those shared gates need not occur in the same ancestry order a priori. A direct permutation argument forces a long order-coherent subfamily.
+
+Use the notation of the two-normal theorem. Thus two fixed modules `i,j` have normals separated by at least
+
+\[
+{c_0-o(1)\over\omega_D},
+\]
+
+and there is a shared low-activation matching
+
+\[
+M'_{ij}
+\]
+
+with
+
+\[
+|M'_{ij}|
+\ge
+\left({\alpha_K\over22}-o(1)\right){D\over m^2},
+\qquad
+\alpha_K=1-{h_*\over K},
+\tag{OS.1}
+\]
+
+such that every edge `e` satisfies
+
+\[
+1<|e|\le1+{K\over D}
+\tag{OS.2}
+\]
+
+and
+
+\[
+\Delta_i(e),\Delta_j(e)
+\le
+\left({44h_*\over\alpha_K}+o(1)\right){m^2\over D}.
+\tag{OS.3}
+\]
+
+Then there is a submatching
+
+\[
+Q_{ij}\subseteq M'_{ij}
+\]
+
+with
+
+\[
+\boxed{
+|Q_{ij}|
+\ge
+\left(\sqrt{\alpha_K/44}-o(1)\right){\sqrt D\over m}
+}
+\tag{OS.4}
+
+having all of the following properties.
+
+1. Every edge of `Q_ij` has the same **relative traversal orientation** in the two ancestries: either all are traversed in the same endpoint direction, or all are traversed in opposite endpoint directions.
+2. If the edges of `Q_ij` are listed in their occurrence order along ancestry `i`, then their occurrence order along ancestry `j` is monotone: either exactly the same order or exactly the reverse order.
+3. Every edge retains (OS.2)--(OS.3), so it is an inverse-`D` original near-unit pair and reaches exact unit length after only `O(m^2/D)` relative activation displacement in each of the two repairs.
+
+For `K=1`,
+
+\[
+\boxed{
+\sqrt{\alpha_1/44}
+=0.122960822997972\ldots .
+}
+\tag{OS.5}
+
+In the full slow-scale regime
+
+\[
+m=\Theta(D^{1/4}/\kappa_D),
+\]
+
+this becomes
+
+\[
+\boxed{|Q_{ij}|=\Omega(\kappa_DD^{1/4}).}
+\tag{OS.6}
+
+Thus the heavy-reuse branch does not merely produce a scattered common matching. It produces two distinct reflection repairs, separated in normal direction on the `1/omega_D` scale, that encounter a `kappa_D D^(1/4)`-scale family of the **same** old inactive near-unit source pairs in a coherent common order (or coherent reverse order).
+
+For example, with a subpolynomial slow scale and
+
+\[
+\omega_D=\log\log D,
+\]
+
+the residual branch has two normals separated by `Omega(1/log log D)` and a common order-coherent skeleton of `Omega(kappa_D D^(1/4))` disjoint lower gates. On every skeleton edge both activation corrections remain
+
+\[
+O(1/(\kappa_D^2\sqrt D)).
+\]
+
+This is now an ordered two-deformation obstruction rather than a generic planar routing problem. The remaining local question is whether the SAME-order and REVERSE-order cases can survive the planar short-edge network together with the two separated support directions. In the reverse-order case, the two ancestries exchange a growing sequence of common gates; in the same-order case, they carry a growing common directed skeleton. Either case is substantially more rigid than arbitrary corridor reuse.
+
+---
+
+## 1. Fix the relative traversal orientation
+
+Every edge of `M'_ij` occurs once on each ancestry because activation times strictly increase and a source vertex activates only once in a given repair. Give a shared unordered edge one of two labels:
+
+- `SAME` if the two ancestries traverse its endpoints in the same direction;
+- `OPPOSITE` if they traverse them in opposite directions.
+
+One label class contains at least half of `M'_ij`. Retain that class and call it `M''_ij`. By (OS.1),
+
+\[
+|M''_{ij}|
+\ge
+\left({\alpha_K\over44}-o(1)\right){D\over m^2}.
+\tag{OS.7}
+\]
+
+The retained edges are still vertex-disjoint and still satisfy all metric and activation-time bounds from the two-normal theorem.
+
+---
+
+## 2. The two ancestry orders define a permutation
+
+List the edges of `M''_ij` in the order in which they occur on ancestry `i`:
+
+\[
+e_1,e_2,\ldots,e_N.
+\]
+
+Because each retained edge occurs exactly once on ancestry `j`, record its position in the `j`-order. These positions are distinct and hence define a permutation
+
+\[
+p_1,p_2,\ldots,p_N.
+\]
+
+The Erdos-Szekeres monotone subsequence theorem gives an increasing or decreasing subsequence of length at least
+
+\[
+\sqrt N.
+\]
+
+The corresponding edge set is `Q_ij`. If the subsequence is increasing, the two ancestries see those edges in the same order. If it is decreasing, the orders are reversed.
+
+Using (OS.7),
+
+\[
+|Q_{ij}|
+\ge
+\sqrt{|M''_{ij}|}
+\ge
+\left(\sqrt{\alpha_K/44}-o(1)\right){\sqrt D\over m},
+\]
+
+which proves (OS.4).
+
+---
+
+## 3. Slow-scale specialization
+
+When
+
+\[
+m=\Theta(D^{1/4}/\kappa_D),
+\]
+
+one has
+
+\[
+{\sqrt D\over m}=\Theta(\kappa_DD^{1/4}),
+\]
+
+proving (OS.6). The activation-time bound from (OS.3) simultaneously becomes
+
+\[
+{m^2\over D}=\Theta(1/(\kappa_D^2\sqrt D)).
+\]
+
+No further metric loss is incurred by the orientation or monotone-subsequence extraction.
+
+C-II remains open. No theorem-state authority is changed.
+
+**Disposition:** converted the common two-normal matching into a long shared gate skeleton with uniform relative traversal orientation and a common monotone or reverse ancestry order.

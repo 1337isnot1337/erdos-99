@@ -1,0 +1,168 @@
+# Hostile audit — Section-152 retained area-slack diameter tradeoff
+
+**Date:** 2026-09-12  
+**Reviewed:** `research/target_c_section152_area_slack_diameter_edge_tradeoff.md`  
+**Disposition:** **PASS at proof-only Type-II scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This audit checks the retained component remainder, its conversion into an
+area-slack lower bound, and the numerical frontier specialization. The result is
+not canonical theorem-state authority and does not close Type II away from the
+specified carrier profile.
+
+## 1. Exact retained remainder
+
+The Type-II component ledger gives
+
+\[
+\sum_r\delta_r+R_I+s_B
+=2+q+m-k-2c_I.
+\]
+
+With
+
+\[
+\eta_r:=\delta_r+2-d_r\ge0,
+\]
+
+one has
+
+\[
+\sum_rd_r=\sum_r\delta_r+2c_I-\sum_r\eta_r.
+\]
+
+Therefore the exact remainder
+
+\[
+G_D:=2+q+m-k-\sum_rd_r
+\]
+
+satisfies
+
+\[
+\boxed{G_D=R_I+s_B+\sum_r\eta_r\ge0.}
+\]
+
+Solving for `m` gives
+
+\[
+m=G_D+\sum_rd_r-q+k-2.
+\]
+
+**Verdict:** exact and sign-safe.
+
+## 2. Strengthened elimination
+
+The audited Section-148 weighted payment is
+
+\[
+3q-2m-5k\ge\sum_rd_r+c_{det}D-o(D),
+\qquad c_{det}=\frac\pi4(2-\sqrt3).
+\]
+
+Substituting the solved expression for `m` gives
+
+\[
+5q-7k-2G_D-3\sum_rd_r+4
+\ge c_{det}D-o(D).
+\]
+
+Along an unbounded sequence the constant `4` is absorbed into `o(D)`, hence
+
+\[
+\boxed{5q-7k\ge3\sum_rd_r+2G_D+c_{det}D-o(D).}
+\]
+
+Using `q=h+d_H` and `k=d_H+s_Z` yields
+
+\[
+\boxed{5h-2d_H-7s_Z
+\ge3\sum_rd_r+2G_D+c_{det}D-o(D).}
+\]
+
+No inequality is reversed when retaining `G_D`; it enters with the favorable positive
+coefficient on the right.
+
+**Verdict:** valid.
+
+## 3. Carrier area-slack substitution
+
+For one harmonic component `r`, the audited internal-face isoperimetric inequality is
+
+\[
+r_r+\eta_r
+\ge\sqrt{\pi A_{4,r}^{int}}+2-d_r,
+\]
+
+where `0\le r_r\le R_I` and `0\le\eta_r\le\sum_s\eta_s`. Consequently
+
+\[
+G_D=R_I+s_B+\sum_s\eta_s
+\ge r_r+\eta_r.
+\]
+
+If `A_{4,r}^{int}\ge(A-o(1))D^2` and `d_r/D\to\lambda`, division by `D` gives
+
+\[
+\liminf G_D/D
+\ge[\sqrt{\pi A}-\lambda]_+.
+\]
+
+The positive-part form is the safe all-profile statement. The untruncated expression
+is used only when its displayed margin is positive.
+
+**Verdict:** valid, with the carrier and diameter referring to the same component.
+
+## 4. Frontier numerical specialization
+
+At the audited Section-118 carrier profile, the inputs are
+
+\[
+\lambda_*=0.9762439137425688\ldots,
+\quad
+A_*=0.4703752868004241\ldots,
+\quad
+S_*=2.798596312209462\ldots .
+\]
+
+The internal-face margin is
+
+\[
+\sqrt{\pi A_*}-\lambda_*
+=0.239374260456223\ldots>0.
+\]
+
+Thus the strengthened coefficient is
+
+\[
+3S_*+2(0.239374260456223\ldots)+c_{det}
+=9.084984261160066\ldots,
+\]
+
+and dropping the nonnegative defect terms gives
+
+\[
+h/D\ge1.816996852232013\ldots-o(1).
+\]
+
+The arithmetic is consistent. This value is a conditional frontier-profile
+consequence, not a universal Type-II lower bound solely from
+`diameter(carrier)\ge\lambda_*D`.
+
+**Verdict:** arithmetic and scope pass.
+
+## 5. Frontier split and limitations
+
+The source correctly identifies two cases: a carrier profile near the Section-118
+frontier, where the retained `G_D` term strengthens the scalar bound, or a separated
+wrapping parameter, where the actual carrier area, diameter, and complement-gap
+moment must be recomputed together.
+
+The result does not assert that `G_D=o(D)` in a general Type-II survivor, does not
+turn a linear `G_D` into a diameter descent, and does not address the Type-I
+inactive-container exchange. Contact-isolated source points remain outside all core
+rigidity matrices.
+
+**Final classification:** audited-working proof-only Type-II tradeoff. Theorem-state
+authority is unchanged; C-II remains open.
+

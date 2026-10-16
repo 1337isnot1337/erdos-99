@@ -1,0 +1,167 @@
+# Hostile audit — mixed-phase matching-splice train deficit
+
+**Date:** 2026-09-15\
+**Audited source:** `research/target_c_mixed_flower_matching_splice_deficit_2026-09-15.md`\
+**Verdict:** **PASS at proof-only asymptotic scope.**\
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The theorem claims that a linear family of local through-pair flower connectors, even
+with unrelated limiting phases, contains a vertex-disjoint subfamily whose two-piece
+supertrains have a simple intersection graph.  The resulting global train-crossing
+deficit is at least `L^2/18-o(D^2)` for `L` local through pairs.
+
+The audit targets the five vulnerable steps: matching size, supertrain simplicity,
+connector interference, the exact `60`-degree crossing threshold, and the final edge
+count.
+
+## 1. The splice graph really has maximum degree two
+
+One selected flower contributes one edge joining the two distinct complete trains used
+by its local through pair.  A train cannot supply both endpoints to the same bounded
+face, so there is no loop.  Every complete train has exactly two terminal occurrences,
+so it can appear in at most two selected flower edges.  Parallel splice edges between
+the same two train vertices do not break the degree bound.
+
+Thus the splice multigraph is loopless with maximum degree at most two.
+
+A greedy matching step selects one edge and removes at most three edges: the selected
+edge plus at most one other at each endpoint.  Hence at least `ceil(L/3)` edges can be
+selected.  This bound remains true for triangles, odd cycles, and parallel-edge
+components, so no hidden bipartiteness or path assumption is present.
+
+## 2. A matched two-piece supertrain is simple
+
+The two constituent train projective directions differ by `epsilon_D->0`.  For large
+`D` this is below `pi/3`, while a strict-rhombus crossing requires projective
+separation strictly greater than `pi/3`.  The two constituent train paths therefore do
+not cross one another.
+
+Each train midpoint path is simple.  The connector lies in the interior of the selected
+bounded exceptional face and meets the contact complex only at its two terminal
+midpoints.  The concatenation is therefore simple.
+
+Matching is essential here: no train belongs to two selected splices, so a supertrain
+contains exactly two train pieces and cannot accumulate phase drift along a long
+splice chain.
+
+## 3. Connectors cannot create hidden intersections
+
+Different selected connectors lie in interiors of distinct bounded faces, whose
+interiors are disjoint.  A stopped train midpoint path runs through strict rhombi and
+terminates at an exceptional-face boundary; it does not enter that face interior.
+Thus a connector cannot intersect an unrelated train piece or another selected
+connector in its interior.
+
+Every intersection of two supertrains is consequently one original strict-rhombus
+intersection of constituent stopped trains.
+
+## 4. Pairwise common projection works uniformly
+
+Take two matched supertrains with representative projective directions `alpha,beta`
+and choose representatives with separation
+
+\[
+0\le d=\beta-\alpha\le\pi/2.
+\]
+
+Every segment of the first supertrain lies within `pi/6+o(1)` of `Jalpha`, and every
+segment of the second within the same cone around `Jbeta`.  The angular bisector of
+these normals is at distance at most
+
+\[
+\pi/4+\pi/6+o(1)=5\pi/12+o(1)<\pi/2
+\]
+
+from every segment.  Hence whenever crossings are directionally possible, both
+supertrains are strictly monotone graphs over one pair-specific coordinate.
+
+If `d<pi/3-O(epsilon_D)`, no constituent direction pair can satisfy the strict
+rhombus threshold and there is no crossing.  No uniform gap from `pi/3` is needed.
+
+## 5. The exact `pi/3` threshold does not allow opposite crossing signs
+
+This is the main hostile check.
+
+For one actual rhombus crossing choose oriented projective representatives `u,v` so
+`v` lies counterclockwise from `u` and their projective separation is in
+`(pi/3,pi/2]`.  Canonical positive-normal orientation of the `u` train makes its local
+midpoint displacement `+v`.  Canonical positive-normal orientation of the `v` train
+makes its local displacement `-u`, since
+
+\[
+\det(v,-u)=\det(u,v)>0.
+\]
+
+Thus the graph-crossing sign is determined solely by the ordered pair of narrow
+projective windows and is the same at every crossing between the two supertrains.
+This remains true when their limiting separation is exactly `pi/3`: only constituent
+pairs whose finite separation has moved to the crossing side `>pi/3` can intersect,
+and all such pairs have the same orientation.
+
+Two monotone graphs cannot cross twice with the same transverse sign.  Therefore any
+two matched supertrains meet at most once.
+
+The same argument applies when one of the two supertrains is unspliced.
+
+## 6. No rhombus is lost inside a matched component
+
+The two trains merged by one matching edge have direction mismatch `o(1)<pi/3`, so
+they do not cross in a strict rhombus.  Hence no original rhombus becomes an internal
+self-intersection after splicing.
+
+Every original strict rhombus maps to an intersection of two distinct supertrains.
+Pairwise simplicity prevents two rhombi from mapping to the same unordered
+supertrain pair.  Therefore the supertrain intersection graph has exactly `R_D`
+edges, not merely at most `R_D`.
+
+## 7. The final combinatorial algebra is correct
+
+With `P` matched splices there are
+
+\[
+r=P
+\]
+
+two-piece supertrains and
+
+\[
+s=T-2P
+\]
+
+unspliced original trains.  The induced crossing graph on the `s` unspliced trains is
+triangle-free, so it has at most `s^2/4` edges.  Pairwise simplicity gives at most
+
+\[
+rs+\binom r2
+\]
+
+additional edges incident with a two-piece supertrain.  Therefore
+
+\[
+R\le {s^2\over4}+rs+\binom r2
+={T^2\over4}-{P^2\over2}-{P\over2}.
+\]
+
+The companion finite regression verifies this identity over a large integer box and
+checks
+
+\[
+P\ge L/3\Longrightarrow P^2/2\ge L^2/18.
+\]
+
+The favorable linear `-P/2` term is discarded in the normalized theorem.
+
+## 8. Scope of the flower composition
+
+The three-dominant local theorem supplies through pairs with one uniform mismatch and
+connector error scale tending to zero over the selected flower population, by
+compactness.  Therefore it satisfies the hypotheses of the matching theorem.
+
+What is **not** proved is a global finite source deformation, a diameter decrease, or
+a contradiction from the new deficit alone.  Numerically the existing full-flower
+branch already has a larger aggregate Mantel deficit.  The new content is a deficit
+certified by actual local through mechanisms and valid across mixed complement phases.
+That structure can now be coupled to diameter bracing or closure rank without first
+forcing all splices into one dominant orbit.
+
+**Final verdict:** PASS at proof-only asymptotic scope.

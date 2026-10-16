@@ -1,0 +1,299 @@
+<!-- theorem-state: {"artifact_id":"ART-8C1AB086AA81","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Erdős Problem #99: campaign ledger and remaining obstruction
+
+**Date:** 2026-09-09
+
+**Base:** `7838f6c0aabe0e3d63369bda804643c3c7833426`
+
+**LEVEL I STATUS: STILL OPEN**
+
+The proofs and finite checks produced in this campaign are in
+[the theorem report](campaign_zero_transfer_and_narrow_paths_2026-09-09.md).
+The subsequent [exceptional-face train report](campaign_defect_train_extension_2026-09-09.md)
+extends the train count across general topology and proves a necessary linear
+exceptional-face count for an asymptotically full contact core.
+The [consolidated review](campaign_zero_transfer_defect_review_2026-09-09.md) records the merged
+authority state, proof audit, overlapping results, and final verification.
+This is a working ledger, not a route-map promotion or a certificate that no
+untried proof exists. In particular, a regression omitting global optimality
+does not establish logical independence from the complete canonical hypotheses.
+
+## 1. Authority reconciliation
+
+During publication, `origin/main` advanced to `d9f8f3c`. Its focused C53 audit
+agrees with the PSD/integration derivation used here, and rejects the old pentagon
+counterexample for mixing projective cuts. Its independent near-path theorem
+overlaps this campaign's Theorem P; neither is counted twice as new mathematics.
+The same remote state withdraws the invalid force-bulk promotion. The heptagon
+plus isolated center is an exact globally optimal eight-point regression to that
+promotion's stated point-localization claim; it does not disprove an asymptotic
+bound on isolated points. This campaign already retained that missing variable.
+The later merge through `ddbef9b` explicitly promotes C53/C63 and the lexicographic
+normal form in [56-ci-restored-frontier.md](../targets/target-c/56-ci-restored-frontier.md).
+That module now controls: C-I is closed and C-II remains open. It does not promote
+C56 or this campaign's ZR/ZF/DF consequences by association.
+
+Target A's route map explicitly reaches Section 174. Its Section-167 active
+prompt and the shorter frontier descriptions in the top documentation cannot
+roll that state back. The endpoint used here is the basis-closed tube-shield
+population inequality, with the exact nonterminal shield cost. The September 5
+sink-surplus report is an algebraic reformulation, not a proof of that inequality.
+The fetched September 8 tube-only report further reduces the charge to
+`zeta>=t_Sigma+delta_Sigma-|T_Sigma|`. Its directed-path proof survives review,
+but the sufficient population inequality is still unproved.
+
+At the initial base, the older C map left both gates open. The conflict with later
+numbered PSD and integration claims was resolved by checking the chord signs,
+weighted-Robinson calculation, and fixed-matrix Farkas/Hoffman iteration. The
+subsequently merged explicit promotion now resolves the authority conflict as well.
+C56's weighted kernel proof and this campaign's zero-transfer argument remain
+separately audited dependencies. No claim that C-II was already closed survives:
+later response estimates either impose a small-defect hypothesis or assume pure
+rhombic topology.
+
+The C97 terminal-twist and C99–C102 near-chain audits are explicitly confined to
+pure simply connected strict-rhombic disks. The new ZB implication would exclude
+that entire canonical pure class for large diameter under its additional audited
+kernel inputs. It does not promote a pure-disk conclusion to general topology.
+
+Target B's current strict lattice comparison is
+`D(n)^2<(2sqrt(3)/pi)(n-1)`. It gives the strict pure shell window
+`G+E<c0 B`, not a window with an extra free `a0` constant. The newer coherent-phase
+and extraction audits retain their dense-component and near-extremality hypotheses.
+The corrected extraction uses a dual tree and an almost-spanning path, not the
+false assertion that arbitrary noncrossing crosscuts are linearly ordered.
+
+## 2. Common source and notation
+
+Assume a triangle-free global minimizer exists at arbitrarily large cardinalities.
+At each such cardinality choose a contact-minimal representative. For the C/ZF
+argument additionally minimize diameter-pair count, as stated in that theorem.
+This finite integer minimization does not impose a new compactness claim.
+
+The shared canonical reductions supply the fixed-diameter critical cone, ordinary
+normalized KKT stresses, local degree caps, the pinned-core theorem, and the
+flexible-forest versus almost-rhombic alternatives. These normalizations must be
+carried by the actual representative; a replacement response optimum is a different
+point set unless a specific source-label theorem identifies a map to it.
+
+For Target A write
+`s=Delta_Lambda-d_int`, `zeta=dim ker S`, and `j_*=N-|Y_0|-m^*`.
+For the basis-closed tube shield write `W=widehat W_Sigma` and
+`a_i=|X_i|-|Z_i|-|O_i|-|C_i^circ|=|C_i|-|O_i|`.
+For Target C write `v=|V(C)|`, `e=|C|`, `h=|H|`, and let `delta` be the graph
+diameter of the contact core. None of these `v` symbols counts isolated source
+points.
+
+## 3. Branch ledger
+
+The four dispositions below concern the specific branch, not the whole problem.
+“Reduced” states an exact remaining theorem; it does not assert formal independence.
+
+| Branch | Exact hypotheses and available result | Target and attempted implication | Disposition / counterexample / next strongest attack |
+|---|---|---|---|
+| A: fixed-source Hall excess | Unit-separated replacement `Q` in the same source hull `H`; exact capacity flag | Deficiency greater than `p_hat_H` to force an add-one exchange | **Disproved by exact regression/bound.** Always `|Q|-|N_A(Q)|<=p_hat_H`; the flag attains equality. Only a strict diameter improvement or a genuine source change can add information. |
+| A: local common-neighbor SDR | Two unit-separated shores, strict source matching, generic triangular lattice; Sections 164–166 | Replace every common-neighbor certificate by a distinct lattice neighbor | **Disproved by exact regression.** The two pairs in Section 166 both have unique common neighbor zero. Global matching/response data is necessary. |
+| A: activation rank creates Schur nullity | The actual activation sequence and preserved KKT polytope; Sections 152–158 | Charge each independent activation constraint to `zeta` | **Disproved by exact regression.** Coherent monomers have full matching rank, and activation edges are universally zero-stressed relative coloops. Need a map involving the actual Schur response, not activation rank. |
+| A: labels and crossing congestion | Actual plateau-response terminals with genuine-source labels; Sections 165,167 and the V-path audit | Force a linkage to omit at least `s` terminals | **Reduced:** prove `rank S<=|C^partial|-s` using all simultaneous labels and crossing-created conflicts, or produce a strict sub-`D` source competitor. Noncrossing drawings and bounded congestion alone admit full-rank routing. |
+| A: zero-slack source | Section 168 capacity endpoint; all actual response vertices and all `Y_in` vertices independently source-matched | Use the two saturating matchings as one compatible correspondence | **Reduced:** prove the tube-shield inequality below using their joint incidence. The two matchings are not identified; the SDR collision survives. |
+| A: inner-source defect | `r=m^*-|A^0 cap K^*|`, with `0<=r<=12d+9` | Infer `s<=r`, then enough omitted terminals | **Reduced:** require both `s<=r` and an actual gate/sector nullity lower bound `zeta>=r`, or prove the endpoint directly. Neither follows from the displayed count identities. |
+| A: plateau descent | An exact triangle-free `m^*`-point optimum at smaller diameter | Treat decreasing cardinality as a contradiction | **Reduced:** prove a descent invariant that cannot terminate in the known finite small-cardinality regime. A decreasing positive integer by itself is not a contradiction: the hypotheses can cease to be asymptotic. |
+| A: locked three-channel fan | Locked triangle in the actual `X^*`, positive contact/facet stress, three disjoint reaction channels; Sections 169–174 | Pay shield cost by sector population surplus | **Reduced:** `sum_i max(0,a_i)>=s+|W\C^partial|`, or an actual strict sub-`D` competitor. The topology is proved; the population inequality is not. |
+| A: tube-only charge refinement | Same actual alternating response graph and basis matching; September 8 report | Charge paths meeting the shield only to tube rows | **Reduced more sharply:** `zeta>=t_Sigma+delta_Sigma-|T_Sigma|`; it suffices to prove `t_Sigma+delta_Sigma>=s+|T_Sigma|`. The alternating path `c -> z -> b -> o` shows why tube capacity cannot simply be omitted. |
+| A: exterior-sink reformulation | Same basis-closed shield and exact sector assignment | Extract a hidden bulk gain from `s` | **Reduced:** `sum_i max(0,|O_i|-|C_i|)>=j_*+|W\O|-|O_iso|`. This is exactly the previous inequality. No bulk gain appears from rewriting it. |
+| A: finite strain / Kuperberg | Fixed-shape, aligned gap geometry; Sections 157,160–162 | Fit a finite add-one witness inside the allowed collar | **Reduced:** prove an exterior-compatible witness at the actual source's strain/support scale. Current architecture has quartic local gain and `limsup d^3 log W(d)<=sqrt(3)log(3)/8`; its established exponent cannot simply be replaced by a polynomial rate. |
+| B: fixed-angle or fixed-covolume lattice | One exact or bounded-displacement lattice with covolume bounded above the triangular value | Quadratic area loss beats the perimeter correction | **Closed by contradiction** under the stated fixed-gap hypothesis; B46–48. A varying strain at the boundary scale remains outside it. |
+| B: unique-max, balanced, two-max coherent cores | One quadratic coherent component near its phase-sensitive edge maximum; audited ordered extraction | Additive grid diagonal cost exceeds the global lattice upper bound | **Closed by contradiction** in those conditional near-saturation regimes, as in the existing GPS1 and phase audits. They do not exhaust general class sizes plus interface defects. |
+| B: non-near-extremal or split coherent components | Dense cores exist, but no single component satisfies the needed near-saturation hypothesis | Infer a large global additive grid anyway | **Reduced:** obtain an actual grid with squared diagonal cost greater than `D(n)^2`, or prove the exact global shell inequality. A raw biclique and different coordinate bases do not suffice. |
+| B: pure rhombic canonical source | Contact-minimal global source; all vertices in one pure disk; audited later C inputs | ZF forces `h>=T`, while B39 gives `h<=q<T` | **Closed by contradiction under the explicit C53–C63 dependencies**, new Corollary ZB. No asymptotic one-integer error remains: B39 has a positive linear margin. |
+| B: exceptional faces and topology | General almost-rhombic source; `O(D)` exceptional structure | Transfer the pure rank contradiction with an `O(D)` loss | **Reduced more sharply:** DT makes the stopped-train count exact across holes and bridges. DF proves `liminf f_exc/D>=sqrt(pi/(2sqrt(3)))-pi/4` whenever `n-v=o(D^2)`. Sublinear exceptional-face count is thereby excluded; the linear branch still requires `b+sum_F(deg F-4)>2h` or joint shell stability. |
+| B: face-local charge for linear defects | Strict convex unit-separated exceptional faces | Convert DF's linear face count to a uniform area surplus | **Disproved by exact regression:** DP's unit pentagons have Oler excess strictly between zero and `3u`, with `u->0`. Ordinary facewise Oler cancels the face count exactly. A simultaneous source inequality is still needed. |
+| C-II: few defects and invisible population | `f_exc<=eta D`, with `eta<sqrt(pi/(2sqrt(3)))-pi/4`; audited C stack | Treat invisible population as negligible | **Reduced:** DF forces `liminf(n-v)/D^2>0` in this branch. Exclude that quadratic population by actual source capacity; it cannot be removed from the counting variables. |
+| B: virtual area and interfaces | Exact support-depth/virtual-zonotope identities, local interface certificates | Charge each missing crossing as an uncancelled shell-area gain | **Reduced:** prove joint outer-shell stability including every exposed-hull and interface correction. The support-turning term can cancel quadratic raw support depth. |
+| C-I: arbitrary selected-stress PSD | Actual circular-planar response, convex diameter thrackle, affine equilibrium | Make every nonnegative equilibrium multiplier quadratic-nonnegative | **Closed by proof** of the C53 mechanism audited in the theorem report. Abstract off-matching signs alone are insufficient; the full circular split cone is used. |
+| C-I: zero multipliers and finite integration | PSD for every normalized stress on arbitrary displacements | Integrate a relative-interior weak-release velocity | **Closed by contradiction to contact minimality** via the fixed-matrix Newton–Hoffman proof. A chosen single stress or a second-order jet alone would not close it. |
+| C-II: zero-transfer stress | Relative-interior fully visible stress, `D>=9`, hence at least six terminals | Make separate zero-transfer diameter components harmless | **Closed by contradiction**, Theorem Z plus SEPq. The full terminal metric is additive, not just the separate component metrics. |
+| C-II: negative minimum transfer | Same actual source; C56-G | Convert scalar stress rank to a diameter contradiction | **Reduced:** new ZR/ZF gives `rank Omega=v-3`, infinitesimal rigidity, `e+h>=2v-2`, and `h>=delta`. A further global bound in the opposite direction is required. |
+| C-II: large response defect | `epsilon=sum c_bk-1` not `o(1/D)` | Treat failure of the near-zero reduction as an exclusion | **Reduced:** a source-specific response/packing inequality must contradict `epsilon D` bounded away from zero or unbounded. No existing identity supplies that upper rate. |
+| C-II: near-zero multiport return | `epsilon=o(1/D)`, near-star mass, several physical contact ports | Replace topological articulation stability by quantitative conductance | **Reduced:** prove a uniform response-defect/return inequality for the actual unit embedding, or a strict competitor. Tiny positive conductances defeat a topology-only estimate. |
+| C-II: single-port near-zero | The actual single-port hypothesis and C98 mesh bound | Force a dominant diameter edge | **Reduced:** C98 gives `beta_za->1`; outside pure topology a further exclusion is needed. It cannot be applied to the multiport branch. |
+| C-II: exact pure chain | Pure disk plus a contact geodesic of Euclidean length `D` | Prefix circulation and terminal twist | **Closed by contradiction** by the existing C97/no-geodesic audit, also covered by the stronger large-pure ZB implication. |
+| C-II: narrow near-chain | Pure train model and dominant weight satisfying (P2) | Recover exact chain conclusions from vanishing angles | **Reduced geometrically:** new Theorem P excludes internal diameter endpoints. It does not give degree four or `k=D`. In the large canonical pure source, ZB already supplies a separate contradiction. |
+| Disproof: regular shells and fillings | Exact stresses and local polygonal optimality; optional asymptotically dense strict fillings | Prove infinitely many exact values `D(n_h)=D_h` | **Reduced:** supply a global lower bound `diam A>=D_h` for every `n_h`-point packing. No such bound was produced. Bare large shells are explicitly nonoptimal. |
+| Disproof: disk-clipped oblique grids | Triangle-free unit separation, strain tending to zero; B53 | Convert leading optimal density into exact global optimality | **Disproved as a sufficient implication.** Density and feasibility do not compare with the exact `D(n)`. The missing statement is again a global lower bound matching the constructed diameter. |
+| Disproof/proof: positive diameter gap | Fixed `n`, minimum separation exactly one | Separate all triangle-free competitors from `D(n)` by a positive number | **Disproved by exact regression**, Proposition N. The triangle-free infimum equals `D(n)` for every `n`; exact attainment is the issue. |
+
+## 4. The shortest remaining scalar theorem on the new C route
+
+Subject to the audited C53–C63 inputs, the following single statement suffices for
+Level I. It includes the actual global hypothesis and does not assume away rattlers.
+
+> **Global boundary/face inequality.** There is `n0` such that every triangle-free
+> global `n`-point minimizer with `n>=n0`, chosen first to minimize contact count and
+> then diameter-pair count, satisfies, on its nonisolated contact core,
+> `b+sum_F(deg F-4)>2|H|`.
+
+Here `b` is the outer-face boundary-walk length, bridges counted twice, and the
+sum runs over **all** bounded contact faces, not just exceptional rhombi. This
+is an exact integer inequality.
+
+To verify sufficiency, Euler and double-counting face incidences give
+
+\[
+2e=b+\sum_F\deg F,
+\qquad f=e-v+1,
+\]
+
+and therefore
+
+\[
+e=2v-2-\frac12\left(b+\sum_F(\deg F-4)\right).
+\tag{L1}
+\]
+
+The asserted strict inequality is equivalent to `e+h<2v-2`, contradicting ZF.
+An unbounded sequence of source cardinalities has unbounded diameter, since
+disjoint radius-`1/2` disks around its points fit in a bounded enlargement when
+diameter is bounded. Thus the finite cutoff `D>=9` causes no asymptotic gap.
+
+This is a shorter sufficient theorem, not a proof that this is the only possible
+remaining route or that it follows from existing shell bounds. An equivalent
+rank form is `e+h<=2v-3`. The original A and B endpoints remain valid independent
+sufficient targets.
+
+### Exact obstruction to dropping global optimality
+
+For a regular unit odd `q`-gon, `C` is its boundary cycle and `H` its diameter
+cycle. Then `v=e=h=q`, the outer walk has length `b=q`, and the sole bounded
+face has degree `q`. Consequently
+
+\[
+b+\sum_F(\deg F-4)=2q-4<2q=2h.
+\tag{L2}
+\]
+
+This violates the proposed closing inequality at arbitrarily large diameter,
+while satisfying exact positive KKT scalar and tensor identities. The normalized
+weights are `alpha=D_q^2/q` and `beta=1/q`, where
+`D_q=1/(2sin(pi/(2q)))`. For prime `q` the canonical polygon theorem also supplies
+local diameter minimality. Thus local rigidity, planarity, positive equilibrium,
+and large diameter do not prove the closing inequality.
+
+The unfilled shells are not global minimizers for odd `q>=11`: `sin x<x` gives
+`D_q^2>q^2/pi^2`, while `2pi sqrt(3)<11` and the strict lattice bound give
+`D(q)^2<(2sqrt(3)/pi)(q-1)<q^2/pi^2`. Filling with isolated near-triangular lattice
+points preserves the stress and supplies the known leading-density regression,
+but does not certify exact global optimality of the filled configuration.
+
+This is a certified obstruction to the **weaker hypothesis signature**. It is
+not a counterexample to the theorem with global optimality retained, and not a
+formal independence certificate for the full repository.
+
+## 5. Why the exceptional-face transfer has not been closed
+
+For a pure disk, (L1) is `e=2v-T-2`, so the required inequality is `T>h`.
+The canonical exposed-hull theorem proves it with a positive linear margin.
+If train segments are terminated at exceptional faces, their naive count is
+`T_ext=(b+sum_exceptional deg F)/2`; the Euler currency is instead
+
+\[
+\frac12\left(b+\sum_F(\deg F-4)\right)
+=T_{\rm ext}-2 f_{\rm exc}.
+\]
+
+Thus even where that train interpretation is valid, the necessary extension is
+`T_ext-h>2 f_exc`, not merely `T_ext>h`. The canonical bound `f_exc=O(D)` is at
+the same scale as the pure margin. No sign or constant comparison was obtained.
+The subsequent DT theorem supplies this exact train interpretation even with holes,
+bridges, and disconnected rhombic pieces; it also excludes repeated crossings by
+a strict direction-cone argument. Its DE extension preserves the pure leading
+train/hull margin when `n-v=o(D^2)`. The precise consequence is now
+`liminf f_exc/D>=sqrt(pi/(2sqrt(3)))-pi/4=0.166914...`, not a contradiction to
+the available `f_exc=O(D)` upper bound. DP disproves a uniform local Oler charge
+per exceptional face, and ordinary facewise Oler cancels the count exactly.
+Euler's (L1) continues to apply to the full connected contact core.
+
+Isolated points present an additional issue: the near-maximal area bound uses the
+total source cardinality, while (L1) uses only core vertices. Replacing one by the
+other would assume the missing Target A estimate. The new scalar stress kernel
+does not constrain the positions of isolated points.
+
+## 6. Adversarial regression audit
+
+| Regression | Exact limitation retained |
+|---|---|
+| Regular shells | They satisfy the new rigidity conclusion and violate a global-free version of the closing face inequality, as (L2) shows. |
+| Coherent strained monomers | Their independent activation constraints do not create Schur nullity; no activation-to-response rank map is claimed. |
+| Annular routing and full-rank responses | Theorem Z uses an electrical resistance metric and a diagonal thrackle transfer matrix. It is not a theorem about arbitrary planar Schur incidence matrices. |
+| Common-neighbor SDR collision | Both source-label matchings remain distinct; no perfect common-neighbor SDR is used. |
+| Activation and zero-stress families | C63 needs PSD for every equilibrium multiplier, a fixed matrix, and a convergent correction. Zero coefficients alone never imply integration. |
+| Diameter stars with small covers | No lower bound on a source diameter-cover number is inferred from C34 or ZF. Small-cover cases still exist in the A bookkeeping. |
+| Near-star circular-planar networks | Z is an exact zero-transfer statement. No uniform lower bound on a small nonzero defect is asserted. |
+| Crossing diameter matchings | They are expressly covered by the complete interval-sign check; no uncrossing or matching contraction discards an edge. |
+| Two-edge crossing square | It has diagonal transfer and nonadditive resistance. Z requires at least three edges. |
+| Nonthrackle selected tree | A three-edge path has diagonal edge transfer but nonadditive terminal resistance. Z requires pairwise intersecting selected chords. |
+| Disk-clipped oblique grids | They are feasible and asymptotically dense. They have neither a certified global optimum nor the full canonical pure normal form needed by ZB. |
+| Pure-rhombic chain-face survivors | The existing exact-chain audit and the new conditional ZB contradiction retain their global and pure-topology hypotheses. |
+| Boundary-order losses | The general transfer still needs `T_ext-h>2f_exc`. No `O(D)` remainder is discarded. |
+| Hidden source/scaffold changes | The contact stress matrix `Omega` and the A Schur matrix `S` remain different operators on different source data. No rank is transferred between them. |
+| Vanishing conductance on many strict minors | ZR is an exact nullity statement, not a spectral-gap estimate. Positive eigenvalues may tend to zero at any rate. |
+| Sharp 15-degree path | The exact family in Theorem P's regression is triangle-free and unit-separated, but not globally optimal. It disproves the non-strict threshold without global hypotheses. |
+| Almost opposite rays at degree five | Theorem P proves non-diametrality, not degree four. The canonical five-sector rhombic examples forbid that shortcut. |
+| Infimum versus minimum | Proposition N gives a unique-unit-pair approximating sequence at every fixed cardinality. Its limit can gain unit triangles. |
+
+## 7. Literature and computation used
+
+The theorem report records the exact circular-planar and Hoffman imports. The
+primary [Eppstein paper](https://arxiv.org/abs/1708.05152) confirms the contact-edge
+bound with **graph** diameter `delta`, not geometric diameter without a path
+comparison. The normalization here uses unit contact lengths, giving `delta>=D`.
+The [Bowen complete-saturation paper](https://arxiv.org/abs/math/0110260) concerns
+finite replacements in infinite packings. It does not provide a finite variable-
+container global diameter theorem, a uniform rearrangement radius at vanishing
+strain, or a source-to-Schur transfer. It was not imported as a closing result.
+Searches did not identify an exact theorem with the missing global face/shell
+hypothesis signature. This is a report of the searches, not a literature-wide
+nonexistence claim.
+
+The new exact verifier uses integers and `fractions.Fraction`, including exact
+sign comparisons in `Q(sqrt(3))`; its scope and output are in the theorem report.
+Earlier floating-point probes were used only to look for false chord-sign claims;
+the durable checks replace them with exact arithmetic. No global optimum is
+certified by a numerical search.
+
+## 8. Repository changes and scope of completion
+
+Written in this campaign:
+
+1. `docs/reports/campaign_zero_transfer_and_narrow_paths_2026-09-09.md`: proofs,
+   dependence audit, pure-branch implication, sharp regression, and approximation
+   obstruction.
+2. This ledger.
+3. `research/campaign_2026_09_09_exact.py` and its research README entry.
+4. `docs/reports/campaign_defect_train_extension_2026-09-09.md` and
+   `research/campaign_2026_09_09_defect_trains.py`: general-topology train count,
+   conditional linear-defect theorem, and exact pentagon obstruction.
+5. `docs/reports/campaign_zero_transfer_defect_review_2026-09-09.md`: merged proof-status review,
+   verification record, and correction of SEPq's definiteness wording.
+
+Proposed canonical edits after review:
+
+1. Add Theorem Z and its small-support regressions to the C zero-transfer frontier;
+   replace componentwise-only frontier language with the complete-terminal result.
+2. The merged C-I restoration has already reconciled C53/C63 and the
+   lexicographic normal form. Any promotion of C56/ZR must be explicit and separate.
+3. If the dependencies and local selection argument are accepted, add ZF and ZB to
+   both C and B maps. The remaining B transfer is the exact topology-corrected
+   inequality, not a pure-disk higher-order rank problem.
+4. Deduplicate the two `pi/12` path derivations if either is promoted, retain their
+   equality regressions, and keep the degree-five warning. Separately consider DT/DE
+   for the general-topology train frontier and DF with its population hypothesis.
+5. Synchronize the active A prompt with Section 174, and the C prompt with whichever
+   results are actually promoted. Do not change A's Schur endpoint.
+
+No claim is made that the repository has been exhaustively read line by line,
+that every serious new route has been exhausted, or that the remaining theorem
+is formally independent of all canonical results. Those requested completion
+conditions have not been established. The completed artifacts are proofs and
+specific scope obstructions; they are not a Level I settlement or a certified
+impossibility of obtaining one from this repository.

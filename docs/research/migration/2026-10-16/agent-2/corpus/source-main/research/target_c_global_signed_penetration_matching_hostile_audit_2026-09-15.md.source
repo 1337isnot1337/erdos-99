@@ -1,0 +1,185 @@
+# Hostile audit — global signed penetration matching
+
+**Date:** 2026-09-15  
+**Reviewed:** `research/target_c_global_signed_penetration_matching_2026-09-15.md`  
+**Disposition:** **PASS at proof-only current low-`t` full-core Type-II scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The claimed gain is a physical matching, so the failure modes are sharper than for a
+mere edge count. This audit checks the three nontrivial steps: nearby route occurrences
+must have nearly equal hull normals, a common penetration endpoint must have
+multiplicity at most two, and the opposite endpoint of a penetration must lie outside
+the straight-vertex set.
+
+---
+
+## 1. Nearby route occurrences force nearby hull normals
+
+For an occurrence `x` on route `W_i`, the previously hostile-audited signed
+penetration proof gives
+
+\[
+|x-M_i|\le s_i+d_i/2,
+\]
+
+where `M_i` is the midpoint of the corresponding loaded-hull side, `s_i` its side
+length, and `d_i` the route detour. The uniform loaded-side collapse gives
+`max_i s_i=o(D)`.
+
+For occurrences `x,y` with `|x-y|=O(1)`, triangle inequality gives
+
+\[
+|M_i-M_j|
+\le s_i+s_j+O(1)+(d_i+d_j)/2.
+\]
+
+Full-core near-disk convergence places the side midpoints at radius `D/2+o(D)` and
+aligns their radial directions with the side normals up to `o(1)`. If `theta` is the
+normal-angle separation,
+
+\[
+D\sin(\theta/2)
+\le(d_i+d_j)/2+o(D).
+\]
+
+Since `d_i+d_j<=d_out`,
+
+\[
+\sin(\theta/2)\le\delta/2+o(1),
+\qquad
+\delta=d_{out}/D.
+\]
+
+At the current endpoint `delta<=0.002883975+o(1)`, so
+
+\[
+\theta<0.0028841+o(1).
+\]
+
+The argument uses only a fixed `O(1)` bound on `|x-y|`; it therefore applies both to
+points sharing a unit edge and to two penetration tails sharing one unit-distance
+endpoint.
+
+**Verdict:** PASS.
+
+---
+
+## 2. A common endpoint receives at most two penetrations
+
+For a `15`-degree straight penetration `x_aw`, put `e_a=w-x_a`. Signed inwardness gives
+
+\[
+e_a\cdot n_a>1/\sqrt2,
+\]
+
+so `e_a` lies within `pi/4` of its hull normal `n_a`.
+
+If several penetrations share `w`, their outer endpoints are pairwise at distance at
+most two. Section 1 makes all associated normals lie in an angular window of width
+`o(1)`. Therefore all `e_a` lie in one interval of width
+
+\[
+\pi/2+o(1)<2\pi/3.
+\]
+
+At `w`, the contact rays toward the outer endpoints are `-e_a`. Unit separation gives
+pairwise angular separation at least `pi/3`; equality would make the two outer
+neighbors unit-separated from each other and form a forbidden unit equilateral
+triangle with `w`. Thus all pairwise separations are strictly greater than `pi/3`.
+
+Three directions in an interval shorter than `2pi/3` are impossible: after ordering
+them, the first-to-second and second-to-third gaps would already sum to more than
+`2pi/3`.
+
+Hence one endpoint receives at most two penetrations.
+
+**Verdict:** PASS.
+
+---
+
+## 3. The opposite endpoint cannot itself be `15`-degree straight
+
+Let `xw` be an extra signed penetration at straight vertex `x`. Suppose `w` also
+supports a `15`-degree straight occurrence. Since `|x-w|=1`, Section 1 makes the two
+associated hull normals asymptotically equal.
+
+If `xw` is extra at `w`, signed inwardness points the same physical edge in opposite
+directions against two almost equal normals, immediately impossible.
+
+If `xw` is a route edge at `w`, its absolute normal component there is strictly less
+than
+
+\[
+\sin(\pi/12)=0.258819\ldots.
+\]
+
+Changing the normal from `n_w` to `n_x` costs at most
+
+\[
+|n_w-n_x|\le0.002884+o(1).
+\]
+
+Thus the edge's inward component relative to `n_x` is below `0.262`, contradicting the
+required value `>1/sqrt2=0.7071...`.
+
+So the straight-tail set and the opposite-endpoint set are physically disjoint.
+
+**Verdict:** PASS.
+
+---
+
+## 4. The matching conclusion is graph-theoretically exact
+
+Every `15`-degree straight vertex has contact degree three or four and exactly two
+route incidences, hence one or two extra penetration incidences. Thus its degree in the
+all-extra penetration graph is at most two.
+
+Section 2 gives opposite-endpoint degree at most two. Section 3 makes the two endpoint
+classes disjoint. The penetration graph is therefore bipartite with maximum degree
+two, hence a disjoint union of paths and even cycles. Its edges split into two
+matchings, so
+
+\[
+\nu\ge |E|/2.
+\]
+
+Using the proved all-extra edge floor
+
+\[
+E/D\ge1.1543116921171727469\ldots-o(1)
+\]
+
+gives
+
+\[
+\nu/D\ge0.5771558460585863734\ldots-o(1).
+\]
+
+The same argument survives restriction to any edge subfamily. Applying it to the
+non-singleton-rhombic-train penetration family gives
+
+\[
+M_{R,15}/D\ge0.1190397115637251974\ldots-o(1),
+\]
+
+and to the simple-outer rhombic-train family gives
+
+\[
+M_{R,simp,15}/D\ge0.0960714416082082916\ldots-o(1).
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 5. Scope
+
+The matching does not imply distinct train support: many vertex-disjoint penetration
+edges can belong to one long non-singleton train. Nor does it imply that moving the
+matched endpoint pairs independently preserves the other active contact constraints.
+
+What it removes is physical endpoint reuse. Any later simultaneous-deformation or
+train-occupancy argument may now take a linear subfamily in which the penetration
+contacts themselves share no source vertices.
+
+**Final verdict:** **PASS. C-II remains open.**

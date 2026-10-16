@@ -1,0 +1,138 @@
+# Target C-II — exact-angle parity and triangle-free regression leaves all 388 collapsed rotation cells alive
+
+**Date:** 2026-09-19  
+**Claim class:** exact finite negative regression; theorem-state authority unchanged  
+**Scope:** the 388 collapsed support-six rational rotation cells from `target_c_support6_collapsed_rotation_cell_reduction_2026-09-19.md`  
+**Depends on:** the exact rotation-cell census; the audited mod-2 relation-cycle equation (MI.1); the strict unit-rhombus crossing-angle necessity; the audited theorem that the stopped-train crossing graph is simple and triangle-free  
+**Certificate:** `research/verify_target_c_support6_collapsed_exact_angle_parity_2026_09_19.cpp`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The preceding coarse-parity regression left a logical gap: it freed a crossing bit whenever its angle window intersects the whole rational rotation cell, even when the crossing windows for several selected train pairs are not jointly feasible. It also did not impose the exact triangle-free theorem on the selected train-crossing graph.
+
+This note closes both gaps, but the result is negative for the proposed shortcut.
+
+For every one of the 388 labelled collapsed support-six rotation cells, there exists:
+
+1. a point of the open rational angle cell;
+2. a set `X` of train-pair crossing bits;
+3. for every `{e,f} in X`, a simultaneous strict angle assignment satisfying
+   \[
+   1<|x_e-x_f|<2,
+   \qquad x_e={3\alpha_e\over\pi};
+   \]
+4. a triangle-free crossing graph on the twelve internal relation trains; and
+5. all mod-2 cycle-intersection equations (MI.1).
+
+Thus the exact angle-window constraints, MI.1, and triangle-freeness still do **not** eliminate even one of the 388 rational rotation cells before the nonlinear six-pentagon closure equations or stronger plane-embedding information is used.
+
+The exact minimum number of selected crossing pairs under these three necessary conditions is:
+
+\[
+\boxed{
+\begin{array}{c|rrrrr}
+\text{matching type}&2&3&4&5&6\\ \hline
+M_X=\{03,14,25\}&36&48&60&24&12\\
+M_M=\{01,23,45\}&8&32&80&48&40
+\end{array}}
+\]
+
+Every cell has a witness with at most six selected crossing pairs.
+
+---
+
+## 1. Exact affine parity space
+
+Fix one of the 388 rotation cells. A train-pair variable `z_{ef}` is retained only when at least one strict crossing orientation
+
+\[
+1<x_e-x_f<2
+\qquad\text{or}\qquad
+1<x_f-x_e<2
+\]
+
+intersects the base angle cell. If neither orientation intersects, `z_{ef}=0` in every actual realization and the variable is deleted.
+
+For every edge-disjoint pair of simple cycles of `K_6\setminus M`, the verifier then writes (MI.1) exactly over `F_2`. Gaussian elimination produces an affine solution space. This is the same exact parity system used in the coarse regression, but here the candidate binary solutions are subsequently checked against their crossing windows jointly rather than only pairwise.
+
+The verifier enumerates the affine space by Gray code. The largest affine dimension remains 19, so the worst cell has only `2^19` parity assignments before the triangle-free filter.
+
+---
+
+## 2. Exact triangle-free filter
+
+For one binary parity solution, regard the twelve relation trains as vertices and the selected crossing bits as edges. The audited stopped-train theorem says this graph is triangle-free.
+
+The verifier checks every triple implicitly by adjacency-bitset intersections and rejects any parity solution containing a triangle. No Mantel relaxation is used here: triangle-freeness itself is imposed exactly.
+
+---
+
+## 3. Joint angle-window feasibility
+
+For every selected crossing pair `{e,f}`, an actual strict rhombus crossing requires one of the two open difference systems
+
+\[
+1<x_e-x_f<2,
+\qquad
+1<x_f-x_e<2.
+\]
+
+The base rotation cell and every crossing-window choice are strict integer difference constraints in the scaled variables `x=3 alpha/pi`. The existing exact Bellman--Ford transform decides feasibility without floating point.
+
+For a candidate crossing set, the certificate recursively chooses one of the two crossing orientations for each selected pair, pruning as soon as the accumulated strict difference system becomes infeasible. A candidate is accepted only if one complete orientation choice is feasible. Therefore the accepted crossing windows are simultaneous, not merely individually compatible with the coarse cell.
+
+A zero crossing bit imposes no angle-window restriction. This is necessary: a pair of train directions may be capable of making a unit rhombus without the two particular stopped trains ever meeting.
+
+---
+
+## 4. Minimum selected-crossing counts
+
+The verifier searches parity solutions in increasing Hamming weight. For a fixed weight it checks every triangle-free parity solution of that weight until it either finds a jointly feasible crossing-window assignment or exhausts that weight.
+
+All 388 cells obtain a witness by weight six. The exact histogram is
+
+```text
+all-cross matching: 2:36 3:48 4:60 5:24 6:12
+mixed matching:     2:8  3:32 4:80 5:48 6:40
+```
+
+Because every lower Hamming weight is exhausted before the first feasible witness is accepted, these are the exact minima for the finite system being tested.
+
+The certificate also reproduces the underlying labelled cell counts `180+208=388`; disagreement with the established rotation-cell census aborts the run.
+
+---
+
+## 5. What this proves and what it does not
+
+This is a regression against a proof strategy, not evidence that the collapsed block is globally realizable.
+
+The verifier does **not** impose:
+
+- the nonlinear vector closure equations
+  \[
+  s_v e_1+\sum_{e\ni v}\epsilon_{v,e}e^{i\alpha_e}=0;
+  \]
+- a planar ribbon realization of the chosen crossing set with the prescribed exceptional-face rotations;
+- the order of multiple crossings along one stopped train;
+- the full Jordan-separator constraints beyond MI.1;
+- source-point embedding and noncontact separation outside the six exceptional faces; or
+- the diameter/KKT locking system.
+
+The conclusion is only
+
+\[
+\boxed{
+\text{rotation-cell inequalities + crossing-angle necessity + MI.1 + triangle-free crossing graph}
+\text{ do not close collapsed support six.}
+}
+\]
+
+This matters because the previous next-step plan was to subdivide the 42 symmetry representatives along all crossing-threshold walls and hope that MI.1 plus the triangle-free theorem kills every subcell. The exact existential search proves that this cannot work by itself: every labelled rotation cell contains at least one angle/crossing state surviving those conditions.
+
+The next useful finite layer must add information that is absent here. The two most direct options are:
+
+1. impose the nonlinear six-pentagon closure equations inside the rational crossing cells; or
+2. impose full planarization/rotation compatibility for the chosen train crossings, including crossing order along each train, before using Jordan separators.
+
+The second route is purely finite and combinatorial once a crossing set is fixed. The first route uses the regular two-parameter collapsed closure manifold and may remove most of the 388 rational cells before topology is revisited.
+
+**Disposition:** exact negative regression. Every one of the 388 collapsed support-six rational rotation cells admits a jointly angle-compatible, triangle-free train-crossing assignment satisfying every MI.1 equation. C-II remains open, and further work should not spend effort on crossing-threshold subdivision plus MI.1/triangle-freeness alone.

@@ -1,0 +1,17 @@
+{
+  "agent_3_unique_commit_count": 49,
+  "candidate_branch_only_versions": 51,
+  "changed_path_events_across_owned_commits": 838,
+  "destination_conflict_versions": 46,
+  "exact_destination_versions": 99,
+  "exact_source_main_versions": 549,
+  "source_main_conflict_versions": 1,
+  "source_relation_counts": {
+    "branch_only_content": 51,
+    "exact_destination_content_copy": 99,
+    "exact_source_main_content_copy": 549,
+    "same_path_destination_conflict": 46,
+    "same_path_source_main_conflict": 1
+  },
+  "unique_mathematical_file_versions": 746
+}

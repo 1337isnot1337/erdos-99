@@ -1,0 +1,99 @@
+# Target C Section 116 companion — exact exceptional-face-count form
+
+The zero-host theorem has an exact simplification that is obscured by the coarse
+`P_exc<=5Q` corollary.
+
+Let `f_exc` be the number of bounded nonquadrilateral faces of the harmonic carrier.
+By definition of the bounded-face degree excess,
+
+\[
+Q=\sum_{f\ \rm bounded}(\deg f-4),
+\]
+
+and every bounded quadrilateral is a retained strict rhombus.  Therefore
+
+\[
+\boxed{
+P_{\rm exc}
+:=\sum_{f\ \rm nonquad}\deg f
+=4f_{\rm exc}+Q.
+}
+\tag{116.F1}
+\]
+
+Canonical Section 82 gives the exact face ledger
+
+\[
+\boxed{L+Q=4a-6-2s-2c.}
+\tag{116.F2}
+\]
+
+Subtracting `Q` in (116.F1)--(116.F2) gives the cancellation
+
+\[
+\boxed{
+L+P_{\rm exc}
+=4a-6-2s-2c+4f_{\rm exc}.
+}
+\tag{116.F3}
+\]
+
+Hence the exact two-arc zero-host return theorem is equivalently
+
+\[
+\boxed{
+ d\bigl(
+ 4a-6-2s-2c+4f_{\rm exc}-2d
+ \bigr)
+ \ge(4-2\sqrt3)A_4.
+}
+\tag{116.F4}
+\]
+
+The three-arc theorem likewise becomes
+
+\[
+\boxed{
+ d\bigl(
+ 4a-6-2s-2c+4f_{\rm exc}-\Pi_3^{\max}
+ \bigr)
+ \ge(2-\sqrt3)A_4.
+}
+\tag{116.F5}
+\]
+
+And the one-closed-outer-walk form is
+
+\[
+\boxed{
+ d\bigl(4a-6-2s-2c+4f_{\rm exc}\bigr)
+ \ge4A_4.
+}
+\tag{116.F6}
+\]
+
+A useful rearrangement of (116.F4) is the explicit exceptional-face lower bound
+
+\[
+\boxed{
+ f_{\rm exc}
+ \ge
+ {1\over4}
+ \left[
+ { (4-2\sqrt3)A_4\over d}
+ -4a+2d+6+2s+2c
+ \right].
+}
+\tag{116.F7}
+\]
+
+The right side may be negative, in which case the statement is vacuous; when it is
+positive, however, it forces a linear exceptional-face population directly from
+signed return.  Since `f_exc<=Q`, the same positive lower bound also applies to `Q`.
+
+The important conceptual point is that the zero-host treatment pays each bounded
+defect face once as a closed return cycle.  Its degree does not survive in the final
+exact ledger: all degree-excess currency cancels against the outer-face identity.
+
+This corollary is finite, source-level, and independent of the near-endpoint wrapping
+analysis.  It does not by itself close C-II.

@@ -1,0 +1,317 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "56993288ba4714a0dd88267298e27719f13ed709", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "docs/targets/target-c/160-161-component-remainder-area-slack-audited.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c53b7052392714876f5277786b2c6ffae27a7051dc52ad1de52b8aa1eebbb8cc"} -->
+
+> **Historical source snapshot; destination authority remains current.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical. Source path: `docs/targets/target-c/160-161-component-remainder-area-slack-audited.md`. Source commit: `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`.
+
+# Target C — audited §§160–161 retained component remainder and internal-face area slack
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working proof-only route module; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module extracts the live all-regime content from the historical component-geodesicity / area-slack branch. The old scalar endpoint consequences are deliberately not promoted: the conditional `h/D=1.8169968...` bound is weaker than the already audited unconditional §146 floor `1.8195135...`, and the older §148 lower-edge endpoint is therefore no longer a live branch.
+
+The useful surviving structure is stronger because it retains a nonnegative component remainder instead of discarding it.
+
+---
+
+# §160 — exact component remainder and internal-face isoperimetric slack
+
+For each unloaded positive-contact component `I_r`, write
+
+- `delta_r` for its contact-graph diameter;
+- `d_r=diam(P_r)` for its loaded attachment-cell diameter;
+- `r_r:=2n_r-delta_r-2-e_r>=0` for its Eppstein deficit; and
+- `eta_r:=delta_r+2-d_r>=0` for its graph-to-Euclidean diameter slack.
+
+Let
+
+\[
+R_I:=\sum_r r_r,
+\]
+
+and retain the canonical nonnegative loaded-degree slack `s_B`.
+
+Define
+
+\[
+\boxed{
+G_D:=2+q+m-k-\sum_r d_r.
+}
+\tag{160.1}
+\]
+
+Then every sufficiently large Type-II survivor satisfies the exact finite identity
+
+\[
+\boxed{
+G_D
+=R_I+s_B+\sum_r\eta_r
+\ge0.
+}
+\tag{160.2}
+\]
+
+This identity is an exact refinement of the component-diameter inequality used in the weighted post-123 ledger.
+
+## 160.1 Proof of the exact remainder identity
+
+The canonical component ledger, after the centralized Type-II loaded-contact theorem `c_B=0`, is
+
+\[
+\sum_r\delta_r+R_I+s_B
+=2+q+m-k-2c_I.
+\tag{160.3}
+\]
+
+By definition of `eta_r`,
+
+\[
+\sum_r d_r
+=\sum_r\delta_r+2c_I-\sum_r\eta_r.
+\tag{160.4}
+\]
+
+Subtract (160.4) from `2+q+m-k` and use (160.3). This gives (160.2) with no limiting argument.
+
+## 160.2 Internal-face formula for one component
+
+Let `L_r^I` be the occurrence-counted outer-face length of the internal plane graph `C[I_r]`, and let
+
+\[
+Q_r^I:=\sum_F(\deg F-4)
+\]
+
+over its bounded nonquadrilateral faces. Triangle-freeness gives bounded face degree at least four. Euler plus face incidence yields exactly
+
+\[
+e_r=2n_r-2-{L_r^I+Q_r^I\over2}.
+\tag{160.5}
+\]
+
+Therefore
+
+\[
+\boxed{
+r_r={L_r^I+Q_r^I\over2}-\delta_r.}
+\tag{160.6}
+\]
+
+Since `Q_r^I>=0`,
+
+\[
+L_r^I\le2(\delta_r+r_r).
+\tag{160.7}
+\]
+
+## 160.3 Isoperimetry with bridges and articulation points
+
+For any finite connected straight-line plane graph with unit edges and occurrence-counted outer-face length `L`, take the union of the closures of all bounded faces. Its positive-area connected components may meet at articulation points or other zero-area sets. If their outer boundary lengths are `p_1,...,p_s`, then every physical edge on these outer boundaries contributes at least one occurrence to the graph's outer-face walk, while bridges contribute outer occurrences but no bounded-area boundary. Hence
+
+\[
+\sum_jp_j\le L.
+\tag{160.8}
+\]
+
+Planar isoperimetry gives
+
+\[
+\sum_jA_j
+\le {1\over4\pi}\sum_jp_j^2
+\le {L^2\over4\pi}.
+\tag{160.9}
+\]
+
+Let `A_{4,r}^{int}` be the total area of strict-rhombus bounded faces whose four vertices lie in `I_r`. These faces lie in the bounded-face union of `C[I_r]`. Combining (160.7)–(160.9),
+
+\[
+\boxed{
+A_{4,r}^{int}
+\le{(\delta_r+r_r)^2\over\pi}.
+}
+\tag{160.10}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+r_r+\eta_r
+\ge\sqrt{\pi A_{4,r}^{int}}+2-d_r.}
+\tag{160.11}
+\]
+
+Since `G_D` contains `R_I` and the full sum of `eta_s`,
+
+\[
+\boxed{
+G_D\ge r_r+\eta_r
+\ge\left[\sqrt{\pi A_{4,r}^{int}}+2-d_r\right]_+.
+}
+\tag{160.12}
+\]
+
+The positive part is the safe all-profile form.
+
+## 160.4 Loaded-touching rhombi are only boundary order
+
+For one harmonic cell, the attachment set has `a_r=O(D)` loaded vertices and every loaded vertex has full contact degree at most three. Thus only `O(D)` strict-rhombus faces of that harmonic cell can touch a loaded attachment. A unit rhombus has area at most one.
+
+Therefore
+
+\[
+\boxed{
+A_{4,r}^{int}
+\ge A_{4,r}-O(D).
+}
+\tag{160.13}
+\]
+
+This transfer is useful whenever a macroscopic carrier has a quadratic strict-rhombus area floor.
+
+If along a subsequence
+
+\[
+A_{4,r}^{int}\ge(A-o(1))D^2,
+\qquad
+{d_r\over D}\to\lambda,
+\]
+
+then (160.12) gives
+
+\[
+\boxed{
+\liminf {G_D\over D}
+\ge[\sqrt{\pi A}-\lambda]_+.
+}
+\tag{160.14}
+\]
+
+This is the live geometric content of the historical endpoint-isoperimetry argument.
+
+---
+
+# §161 — retained-remainder weighted payment
+
+Normalized §148 gives the audited-working weighted Type-II payment
+
+\[
+3q-2m-5k
+\ge\sum_r d_r+c_*D-o(D),
+\qquad
+c_*={\pi\over4}(2-\sqrt3).
+\tag{161.1}
+\]
+
+Solve (160.1) for `m`:
+
+\[
+m=G_D+\sum_r d_r-q+k-2.
+\tag{161.2}
+\]
+
+Substituting into (161.1) gives
+
+\[
+5q-7k-2G_D-3\sum_r d_r+4
+\ge c_*D-o(D).
+\]
+
+Absorb the constant `4` into `o(D)` along an unbounded sequence:
+
+\[
+\boxed{
+5q-7k
+\ge3\sum_r d_r+2G_D+c_*D-o(D).
+}
+\tag{161.3}
+\]
+
+Using
+
+\[
+q=h+d_H,
+\qquad k=d_H+s_Z,
+\]
+
+we obtain the source-level form
+
+\[
+\boxed{
+5h-2d_H-7s_Z
+\ge3\sum_r d_r+2G_D+c_*D-o(D).
+}
+\tag{161.4}
+\]
+
+This strictly refines the same weighted inequality with `G_D` discarded.
+
+## 161.1 Profile specialization
+
+Suppose along a Type-II subsequence
+
+\[
+{1\over D}\sum_r d_r\ge S-o(1),
+\]
+
+and one selected harmonic component satisfies
+
+\[
+A_{4,r}^{int}\ge(A-o(1))D^2,
+\qquad
+{d_r\over D}\to\lambda.
+\]
+
+Then §§160–161 give
+
+\[
+\boxed{
+5h-2d_H-7s_Z
+\ge
+\left[
+3S+2[\sqrt{\pi A}-\lambda]_++c_*
+\right]D-o(D).
+}
+\tag{161.5}
+\]
+
+The carrier and area parameters must refer to the **same** component. No independent optimization of `A` and `lambda` is permitted.
+
+At the historical safe §118 frontier profile,
+
+\[
+\lambda_*=0.9762439137425688\ldots,
+\qquad
+A_*=0.4703752868004241\ldots,
+\qquad
+S_*=2.798596312209462\ldots,
+\]
+
+one has
+
+\[
+\sqrt{\pi A_*}-\lambda_*
+=0.239374260456223\ldots,
+\]
+
+so (161.5) gives coefficient
+
+\[
+3S_*+2(0.239374260456223\ldots)+c_*
+=9.084984261160066\ldots.
+\tag{161.6}
+\]
+
+The derived scalar `h/D>=1.8169968522...` is **not** promoted as an improvement: it is weaker than the unconditional audited §146 bound `h/D>=1.8195135379...`. The value of (161.5) is the retained `d_H,s_Z,G_D` structure and its applicability away from a scalar h-only projection.
+
+## 161.2 Scope and frontier effect
+
+- `G_D` is exact and nonnegative; no endpoint saturation is assumed in (161.3)–(161.4).
+- The internal-face estimate is valid with bridges and articulation points because it uses occurrence-counted outer length and componentwise planar isoperimetry.
+- The historical inference “near equality in Eppstein implies a doubled near-geodesic boundary” remains rejected; no such squaregraph stability is used here.
+- Contact-isolated source points remain outside the unloaded positive-contact components and core rigidity matrices.
+- The theorem does not address the Type-I inactive-container branch.
+
+The next useful use of (161.4) is an **all-regime correlated optimization**: combine the actual complement-gap diameter moment, the strict-rhombus area of the same carrier, and the explicit Type-II defect variables instead of optimizing any one scalar in isolation.
+
+**Disposition:** §§160–161 are audited-working proof-only Type-II theorems. C-II and Level I remain open.
+

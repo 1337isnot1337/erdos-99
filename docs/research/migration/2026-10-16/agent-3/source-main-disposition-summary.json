@@ -1,0 +1,26 @@
+{
+  "agent_3_allocated_file_count": 1014,
+  "destination_baseline": "c6e0394b3152d21075328bf4f26e6c070229bf13",
+  "disposition_counts": {
+    "archive_first_party_literature_review": 1,
+    "archive_historical_research_context": 35,
+    "archive_source_state_snapshot": 1,
+    "exclude_nonmathematical_infrastructure": 28,
+    "exclude_shared_navigation": 7,
+    "exclude_third_party": 22,
+    "exclude_unrelated_nonresearch": 1,
+    "preserve_research": 919
+  },
+  "excluded_third_party_file_count": 22,
+  "materialized_bytes": 7189651,
+  "materialized_file_count": 956,
+  "migration_status_counts": {
+    "exclude_nonmathematical_infrastructure": 28,
+    "exclude_shared_navigation": 7,
+    "exclude_third_party": 22,
+    "exclude_unrelated_nonresearch": 1,
+    "preserved_at_source_path": 894,
+    "preserved_historical_snapshot": 62
+  },
+  "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+}

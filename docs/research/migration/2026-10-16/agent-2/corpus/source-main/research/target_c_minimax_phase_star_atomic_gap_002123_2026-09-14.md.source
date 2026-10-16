@@ -1,0 +1,300 @@
+# Erdos Problem #99 - certified minimax phase-star atomic gap 0.002123
+
+**Date:** 2026-09-14  
+**Target:** C-II, canonical full-core Type-II branch  
+**Dependencies:** audited `target_c_minimax_phase_star_atomic_gap_0021_2026-09-14.md`; hostile audit `target_c_minimax_phase_star_atomic_gap_0021_hostile_audit_2026-09-14.md`; audited-working Sections 163, 164, 168, 171  
+**Claim class:** proof-only quantitative refinement awaiting independent audit  
+**External literature:** none
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The hostile audit of the minimax phase-star theorem validates all load-bearing steps of
+the `g=0.0021` proof: the weighted two-leaf deficit inequality, the best-leaf lower
+bound, the one-dimensional monotonicity relaxation, the common-neighbor pruning, and
+the rhombic-only transfer. The same proof is parameterized by the atomic excess `g`.
+A tighter self-contained outward certificate pushes the safe round value from
+`0.0021` to
+
+\[
+\boxed{g=0.002123.}
+\tag{M23.1}
+\]
+
+Thus
+
+\[
+\boxed{
+\liminf {T-q/2\over D}
+\ge 2\sqrt{\Delta_2}+0.002123,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+}
+\tag{M23.2}
+\]
+
+and the rhombic-only transfer gives
+
+\[
+\boxed{
+\liminf {T_R\over D}
+\ge2\sqrt{\Delta_2}+0.002123,
+\qquad
+\liminf {\sigma_R\over D}\ge0.004246.
+}
+\tag{M23.3}
+\]
+
+Feeding the same `g` into audited Section 171 gives the safe all-Type-II floor
+
+\[
+\boxed{
+\liminf {q-k\over D}
+\ge {4\over9}\left(\pi+\sqrt{\Delta_2}\right)+0.0017327
+=1.82124623797944\ldots .
+}
+\tag{M23.4}
+\]
+
+This is a small numerical gain over `g=0.0021`, but it is certified by the same
+already-audited proof architecture and is useful because every low-`t` endpoint ledger
+depends on these constants.
+
+## 1. What changes from the audited 0.0021 proof
+
+Nothing structural changes. In the notation of the hostile-audited minimax theorem,
+put
+
+\[
+s:=\sqrt{\Delta_2},\qquad
+\bar A:=2s+g,
+\]
+
+\[
+W_0:={4s^2\over\bar A},
+\qquad
+d_0:=sg+{g^2\over4}.
+\]
+
+For dominant-orbit center imbalance `z=C-W/2`, the audited weighted best-leaf theorem
+reduces the contradiction to
+
+\[
+\Phi_g(z):=
+{3W_0\over4}+{z\over2}
+-6\sqrt{(d_0-z^2){W_0+2z\over W_0+6z}}
+>{2\over\sqrt3}
+\tag{M23.5}
+\]
+
+for `z<0`, with the ratio safely replaced by `1` for `z>=0`. The exact same common-
+neighbor conditions must also hold.
+
+The new verifier differs from the hardened `0.0021` certificate in two conservative
+ways:
+
+1. it derives a 45-decimal outward bracket for `s` directly from certified bounds on
+   `pi` and `sqrt(3)` rather than using the coarse ten-decimal bracket; and
+2. it covers `[-0.045,0.045]` by exact rational intervals of width `0.000005`.
+
+The actual `z` domain is strictly inside this interval. On every interval the verifier
+uses the same safe monotonicity directions passed by the hostile audit: left endpoint
+for the raw lower term, point nearest zero for the `d_0-z^2` upper bound, and for
+negative `z` the lower `W` bound plus the left endpoint for the loss ratio.
+
+The worst certified interval is
+
+\[
+[-0.005840,-0.005835].
+\]
+
+Even there the exact outward computation gives
+
+\[
+\boxed{
+\Phi_{0.002123}(z)
+>{2\over\sqrt3}+1.13\times10^{-5}.
+}
+\tag{M23.6}
+\]
+
+The structural post-selection checks also remain strict: every possible selected
+center lies below `2/sqrt(3)`, and the uniform center lower bound exceeds five times
+the largest missing-pair threshold compatible with the selected degree-sum bound.
+Therefore the already-audited Section-163 pruning and opposite-corner contradiction
+apply unchanged.
+
+## 2. Section-171 propagation
+
+Set
+
+\[
+C_{146}:={4\over9}(\pi+s),
+\qquad
+epsilon_0:=0.0017327,
+\qquad t_0:=C_{146}+\epsilon_0.
+\]
+
+For atomic gap `g=0.002123`, the Section-171 feasible detour endpoint is
+
+\[
+\delta_0
+={{9\over2}\epsilon_0-g\over2}
+=0.002837075.
+\tag{M23.7}
+\]
+
+The exact rational companion certificate bounds the cube-root term outward and proves
+that the Section-171 endpoint feasibility function is negative by more than
+`3.6e-5`. Its derivative with respect to `delta` remains above `142` throughout the
+feasible interval. Together with the audited monotonicity in `t`, no Type-II limit can
+have `t<=t_0`, proving (M23.4).
+
+A high-precision non-load-bearing regression puts the scalar endpoint slightly above
+this safe round value; no endpoint-tight claim is made.
+
+## 3. Immediate global propagations
+
+Audited Section 164 gives
+
+\[
+\boxed{
+\liminf {2f-k\over D}
+\ge 2s- {\pi\over2}+0.002123
+=0.335952286933018\ldots .
+}
+\tag{M23.8}
+\]
+
+The Section-146 elimination gain becomes
+
+\[
+{2g\over9}=0.000471777777777\ldots .
+\tag{M23.9}
+\]
+
+The detour-free exceptional-train constant becomes
+
+\[
+\boxed{
+c_{DF}^{(23)}
+=s-{\pi\over4}+{5g\over2}
+=0.172222143466509\ldots .
+}
+\tag{M23.10}
+\]
+
+The q-k-amplified bridge-subtracted train proof also updates algebraically. Its total
+train-defect floor is
+
+\[
+\boxed{
+L_{23}:=t_0+2g
+=1.825492237979444\ldots .
+}
+\tag{M23.11}
+\]
+
+No new geometric input is used in these propagations.
+
+## 4. Updated low-t endpoint diagnostics
+
+Use
+
+\[
+C_0^{(23)}:=2s+0.002123.
+\]
+
+At the safe floor `t=t_0`, the existing exact low-`t` ledgers give, after dropping
+nonnegative detour/topology bonuses,
+
+\[
+\boxed{{f\over D}\ge0.498062747369096\ldots-o(1),}
+\tag{M23.12}
+\]
+
+\[
+\boxed{{Q-f\over D}\le0.002837075+o(1),}
+\tag{M23.13}
+\]
+
+\[
+\boxed{{p_5\over D}\ge0.495225672369096\ldots-o(1),}
+\tag{M23.14}
+\]
+
+and
+
+\[
+\boxed{
+\delta\le0.002837075+o(1),
+\qquad {k\over D}\le0.011348300+o(1).
+}
+\tag{M23.15}
+\]
+
+The simultaneous outer-to-outer train floor is
+
+\[
+\boxed{{L_{OO}\over D}\ge0.318546770872156\ldots-o(1).}
+\tag{M23.16}
+\]
+
+The singleton leaf-tooth gate can likewise be updated without changing its incidence
+proof. With
+
+\[
+A_0(t_0)={9t_0\over4}-\pi-{C_0^{(23)}\over2}=0.002837075,
+\]
+
+its gate coefficient becomes
+
+\[
+\boxed{
+G_{23}:=L_{23}-8A_0(t_0)-4t_0+2\pi
+=0.800995993241252\ldots .
+}
+\tag{M23.17}
+\]
+
+Hence its unconditional two-way numerical alternative improves to
+
+\[
+\max\left\{{\sigma_R\over D},{A_\eta^{leaf}\over D}\right\}
+\ge {G_{23}\over105}-o(1)
+=0.007628533268964\ldots-o(1),
+\tag{M23.18}
+\]
+
+and on a hypothetical `sigma_R=o(D)` branch its extracted leaf-tooth density becomes
+
+\[
+{G_{23}\over104}=0.007701884550396\ldots .
+\tag{M23.19}
+\]
+
+These last statements are algebraic substitutions into the already-proved singleton
+leaf-tooth gate; they do not alter its scope.
+
+## 5. Scope audit
+
+- Every structural step is inherited from the independently hostile-audited `0.0021`
+  theorem. This note changes only the certified scalar endpoint and downstream
+  arithmetic.
+- The new atomic verifier derives its `sqrt(Delta_2)` bracket from outward rational
+  bounds on `pi` and `sqrt(3)`.
+- The interval mesh enlarges the actual center-imbalance domain and rounds every loss
+  term upward.
+- The Section-171 verifier uses a strict endpoint-negativity margin greater than
+  `3e-5`, not a floating-point root.
+- The rhombic-only transfer inherits exactly the scope passed by the `0.0021` hostile
+  audit.
+- Low-`t`, bridge-subtracted, detour-free, and singleton-leaf consequences are only
+  algebraic propagations; their original geometric hypotheses remain binding.
+- Contact-isolated points remain in the full source.
+- No exact unit equilateral triangle or strict same-cardinality sub-`D` source is
+  produced.
+
+**Disposition:** new strongest proof-only scalar endpoint, awaiting independent audit.
+C-II and Level I remain open.

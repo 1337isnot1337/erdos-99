@@ -1,0 +1,335 @@
+# Erdős Problem #99 — AG58 propagation through the Type-II scalar and defect ledgers
+
+**Date:** 2026-09-14  
+**Target:** Target C-II canonical full-core Type-II branch  
+**Claim class:** proof-only propagation of AG58  
+**External input:** none  
+**Computation:** exact-rational endpoint certificate for Section 171
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The weighted-minority allocation refinement proves the proof-only atomic gain
+
+\[
+\eta_{grid}=0.00058.
+\]
+
+This note propagates that change through the existing correlated stopped-train, Section-171, chamber-interface, rhombus-deficit, and residual-budget ledgers. It introduces no new geometry beyond AG58.
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+s_2=\sqrt{\Delta_2},
+\qquad
+\rho=0.7390851332151606\ldots,
+\]
+
+where `rho=cos(rho)`, and
+
+\[
+C_{146}={4\over9}(\pi+s_2).
+\]
+
+---
+
+## 1. Correlated stopped-train split
+
+The exact identity
+
+\[
+\rho_{rec}+\sigma_R-q
+=2\left(T-{q\over2}-2\sqrt{R_4}\right)
+\]
+
+and AG58 give
+
+\[
+\boxed{
+\liminf {\rho_{rec}+\sigma_R-q\over D}\ge0.00116.
+}
+\tag{P58.1}
+\]
+
+Using `q/D>=2rho-o(1)`,
+
+\[
+\boxed{
+\liminf {\rho_{rec}+\sigma_R\over D}
+\ge2\rho+0.00116
+=1.479330266430321\ldots .
+}
+\tag{P58.2}
+\]
+
+Hence at least one of
+
+\[
+\boxed{
+S={\rho_{rec}\over2}
+\ge(\rho/2+0.00029-o(1))D
+=0.369832566607580\ldots D-o(D),
+}
+\tag{P58.3}
+\]
+
+or
+
+\[
+\boxed{
+\sigma_R\ge(\rho+0.00058-o(1))D
+=0.739665133215160\ldots D-o(D)
+}
+\tag{P58.4}
+\]
+
+must hold.
+
+On the rhombic branch,
+
+\[
+M_R={\sigma_R\over8}
+\left(4\sqrt{R_4}+{\sigma_R\over2}\right)
+\]
+
+gives
+
+\[
+\boxed{
+\liminf {M_R\over D^2}
+\ge {\rho+0.00058\over8}
+\left(4s_2+{\rho+0.00058\over2}\right)
+=0.386390321406654\ldots .
+}
+\tag{P58.5}
+\]
+
+The exact post-endpoint scalar identity improves to
+
+\[
+\boxed{
+\liminf\mu_D
+\ge\mu_{TC}+{\rho\over5}+{0.00058\over5}
+=1.785495210824532\ldots .
+}
+\tag{P58.6}
+\]
+
+The direct correlated endpoint/interface floor is
+
+\[
+\boxed{
+\liminf {J\over D}
+\ge2\rho+4s_2-\pi+0.00116
+=2.146988840296358\ldots .
+}
+\tag{P58.7}
+\]
+
+---
+
+## 2. Section-171 endpoint with `g=0.00058`
+
+Audited Section 171 reduces every Type-II subsequential limit
+
+\[
+t=\lim{q-k\over D},
+\qquad
+\delta=\lim{b-P_F\over D}\ge0
+\]
+
+to
+
+\[
+F_t(\delta)=
+10t-5\pi-5\delta
++\left(81(\pi+\delta)^2\delta\right)^{1/3}
+-{8\Delta_2\over9t/2-2\pi-2\delta}
+\ge0.
+\tag{P58.8}
+\]
+
+With train gain `g`, the feasible detour interval is
+
+\[
+0\le\delta\le
+{{9\over2}(t-C_{146})-g\over2}.
+\tag{P58.9}
+\]
+
+Set
+
+\[
+g=0.00058,
+\qquad
+\varepsilon_{58}=0.0014085,
+\qquad
+t_{58}=C_{146}+\varepsilon_{58}.
+\tag{P58.10}
+\]
+
+Then the right endpoint is
+
+\[
+\delta_{58}=0.002879125.
+\tag{P58.11}
+\]
+
+The exact-rational certificate verifies:
+
+1. `F_{t58}` is strictly increasing throughout the feasible detour interval;
+2. `F_{t58}(delta58)<0` with positive outward-rounding margin; and
+3. the Section-171 derivative in `t` is positive on the same domain.
+
+Therefore no feasible Type-II limit has `t<=t58`, and
+
+\[
+\boxed{
+\liminf {q-k\over D}
+\ge C_{146}+0.0014085
+=1.820922037979444\ldots .
+}
+\tag{P58.12}
+\]
+
+A direct numerical solve of the unchanged endpoint equation gives an offset about
+
+\[
+0.0014087787596,
+\]
+
+so `0.0014085` keeps a nontrivial safety margin. Further decimal tuning of Section 171 remains low-value.
+
+---
+
+## 3. Mandatory chamber/interface floor
+
+AG58 gives
+
+\[
+{T-q/2\over D}\ge2s_2+0.00058-o(1).
+\]
+
+Using the exact identity `J=2T-P_F`, `P_F/D->pi`, and (P58.12),
+
+\[
+\boxed{
+\liminf {J\over D}
+\ge j_{58}:=t_{58}+2(2s_2+0.00058)-\pi
+=2.489740611845480\ldots .
+}
+\tag{P58.13}
+\]
+
+The exact chamber decomposition
+
+\[
+\Sigma_{ch}=J+a+L_{add}+R_F
+\]
+therefore gives
+
+\[
+\boxed{
+\liminf {\Sigma_{ch}\over D}
+\ge2.489740611845480\ldots .
+}
+\tag{P58.14}
+\]
+
+As before, this is mandatory boundary/interface credit, not genuine repacking spare.
+
+---
+
+## 4. Exact `H` bootstrap and linear rhombus deficit
+
+The exact relation
+
+\[
+H={J\over2}+(q-k)-{P_F\over2}
+\]
+
+with `P_F/D->pi` gives
+
+\[
+\boxed{
+\liminf {H\over D}
+\ge h_{58}:={j_{58}\over2}+t_{58}-{\pi\over2}
+=1.494996017107288\ldots .
+}
+\tag{P58.15}
+\]
+
+Hence
+
+\[
+\boxed{
+\liminf {A_{ch}-a_0Z_{ch}\over D}
+\ge {\sqrt3\over4}h_{58}
+=0.647352264685733\ldots,
+}
+\tag{P58.16}
+\]
+
+and
+
+\[
+\boxed{
+\liminf {\Delta_2D^2-R_4\over D}
+\ge {h_{58}\over2}
+=0.747498008553644\ldots .
+}
+\tag{P58.17}
+\]
+
+---
+
+## 5. Corrected residual budget
+
+The finite corrected residual cap remains
+
+\[
+R_F+\Sigma_{ext}
+<{P_K\over2}+P_F-q-{\delta_K+E_4\over a_0}.
+\]
+
+Using `q>=q-k`, `P_K,P_F<=pi D`, and (P58.12),
+
+\[
+\boxed{
+\limsup {R_F+\Sigma_{ext}\over D}
+\le {3\pi\over2}-t_{58}
+=2.891466942405245\ldots .
+}
+\tag{P58.18}
+\]
+
+Thus AG58 moves the two relevant first-order quantities in opposite directions:
+
+- mandatory chamber/interface complexity rises;
+- genuine chamber-plus-exterior residual allowance falls.
+
+The gap is still not contradictory.
+
+---
+
+## 6. Current geometric split
+
+At proof-only scope, every full-core survivor now lies in at least one of the following two mechanisms:
+
+```text
+singleton branch:
+    S >= 0.3698325666 D - o(D);
+
+rhombic branch:
+    sigma_R >= 0.7396651332 D - o(D),
+    M_R >= 0.3863903214 D^2 - o(D^2).
+```
+
+The scalar envelope is no longer the sensible target. The remaining work should use geometry of singleton stopped trains, or the quadratic missing-crossing structure in the rhombic branch.
+
+The exact Section-171 certificate is `research/verify_target_c_ag58_global_propagation.py`.
+
+**Disposition:** proof-only AG58 propagation. C-II and Level I remain open.

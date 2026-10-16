@@ -1,0 +1,247 @@
+# Target C-II — a linear terminal-free rhombic corridor inside the high-`t` strip
+
+**Date:** 2026-09-15  
+**Status:** proof-only high-`t` structural strengthening  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch with `t=(q-k)/D<=1.8687`  
+**Dependencies:** finite-defect/KKT strip through `1.8687`; coupled paired-remainder train-length bound; stopped-train terminal decomposition; common-order high-`t` rectangle/joint cusp  
+**Certificate:** `research/verify_target_c_high_t_terminal_free_rhombic_corridor_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current high-`t` frontier contains an adjacent pair of selected O--O trains bounding a physical strip with only finitely many stopped-train terminal occurrences. Separately, each selected boundary train has linearly many strict-rhombus crossing neighbors. Combining those two facts forces a **linear consecutive block of through-going transverse trains with no stopped-train terminal occurrence between consecutive columns**.
+
+This is useful because a bounded nonquadrilateral contact face necessarily contributes stopped-train terminal occurrences on its boundary. Hence the retained corridor is contact-face pure-rhombic: every bounded contact face meeting its open interior is a strict rhombus. Contact-isolated source points may still lie inside those rhombic faces; no source-empty claim is made.
+
+The stronger numerical conclusion is
+
+\[
+\boxed{M_{clean}>9.2\times10^{-6}D-o(D)}
+\tag{RC.1}
+\]
+
+for a terminal-free consecutive transverse block inside one finite-defect strip through `t<=1.8687`.
+
+Inside the phase-collapsed joint cusp one can simultaneously retain the inverse-`D` crossing-angle control. There is then a terminal-free consecutive block of
+
+\[
+\boxed{M_{phase}>7\times10^{-8}D-o(D)}
+\tag{RC.2}
+\]
+
+ordered common transverse trains such that every retained row-column crossing still has angle
+
+\[
+{\pi\over3}<\theta<{\pi\over3}+{1.416\times10^7\over D}+o(D^{-1}).
+\tag{RC.3}
+\]
+
+Thus the unresolved high-`t` KKT cusp can be placed next to an actual linear contact-face-pure rhombic corridor; and, after paying a smaller constant, inside an ordered near-triangular corridor with the same phase control as the joint-cusp theorem.
+
+---
+
+## 1. The finite-defect strip has a linear common transverse family
+
+Use the finite-defect/KKT strip through `t<=1.8687`. It provides consecutive selected O--O trains
+
+\[
+\tau_0,\tau_1
+\]
+
+bounding one nonhub physical strip, with
+
+\[
+L\le70954
+\tag{RC.4}
+\]
+
+stopped-train terminal face-side occurrences in the intervening region.
+
+The same selected path trains satisfy the audited complement train rhombus-incidence inequality
+
+\[
+{r_\tau\over D}\ge1-\delta-{e_\tau\over2}-o(1).
+\]
+
+At `t<=1.8687`, the coupled paired-remainder selection gives
+
+\[
+e_\tau\le0.5857-\delta,
+\qquad
+\delta<0.107+o(1),
+\]
+
+hence
+
+\[
+{r_\tau\over D}>0.6536-o(1).
+\tag{RC.5}
+\]
+
+Each strict rhombus on a complete train is one crossing with a distinct complete stopped train. Therefore
+
+\[
+|\Gamma(\tau_j)|>0.6536D-o(D)
+\qquad(j=0,1).
+\tag{RC.6}
+\]
+
+The finite-strip terminal-topology theorem gives
+
+\[
+|\Gamma(\tau_0)\triangle\Gamma(\tau_1)|\le L\le70954.
+\tag{RC.7}
+\]
+
+Consequently the common through-going family
+
+\[
+\mathcal C:=\Gamma(\tau_0)\cap\Gamma(\tau_1)
+\]
+
+satisfies
+
+\[
+\boxed{|\mathcal C|>0.6536D-o(D).}
+\tag{RC.8}
+\]
+
+As in the common-transverse ladder theorem, `\mathcal C` is pairwise noncrossing and has one common order along both boundary trains.
+
+---
+
+## 2. Terminal occurrences cut the ordered family into only finitely many blocks
+
+Write the common transverse trains in their common order as
+
+\[
+\sigma_1,\ldots,\sigma_M,
+\qquad M=|\mathcal C|.
+\]
+
+Their midpoint arcs between `\tau_0` and `\tau_1` are pairwise disjoint proper crosscuts of the strip. They divide the strip into consecutive slabs. Because each `\sigma_j` is through-going and its segment between the two boundary crossings consists entirely of strict-rhombus steps, no stopped-train terminal occurrence lies in the interior of a retained column arc.
+
+Call an internal gap between `\sigma_j` and `\sigma_{j+1}` **contaminated** if the corresponding open slab contains at least one of the `L` terminal face-side occurrences. There are at most `L` contaminated gaps. Delete those gaps. The ordered column family breaks into at most
+
+\[
+L+1\le70955
+\]
+
+consecutive blocks, every internal gap of each block being terminal-free.
+
+Hence the largest block has size at least
+
+\[
+{M\over L+1}.
+\]
+
+Using (RC.8),
+
+\[
+M_{clean}
+>{0.6536\over70955}D-o(D).
+\]
+
+The exact certificate proves
+
+\[
+{0.6536\over70955}>9.2\times10^{-6},
+\]
+
+which gives (RC.1).
+
+---
+
+## 3. A terminal-free block is contact-face pure-rhombic
+
+Take two consecutive retained columns inside a terminal-free block. Suppose a bounded nonquadrilateral contact face met the open slab between them. In the audited stopped-train decomposition, every side occurrence of a bounded nonquadrilateral face is a terminal face-side occurrence of a complete stopped train. At least one such occurrence would therefore lie in that slab, contradicting terminal-freeness.
+
+Thus every bounded contact face meeting the open slab is a strict rhombus. Repeating across the whole retained block gives:
+
+### Theorem RC.1 — linear terminal-free rhombic corridor
+
+For every sufficiently large canonical Type-II survivor in the stated `t<=1.8687` scope, there exist two consecutive O--O boundary trains and a consecutive common transverse family
+
+\[
+\mathcal C_{clean}
+\]
+
+with
+
+\[
+|\mathcal C_{clean}|>9.2\times10^{-6}D-o(D)
+\]
+
+such that every bounded contact face in the open corridor swept between the first and last retained columns is a strict rhombus.
+
+The theorem is about the contact-face structure. It does not exclude contact-isolated source points lying in interiors of those rhombic faces.
+
+---
+
+## 4. Phase-controlled terminal-free corridor inside the joint cusp
+
+The high-`t` rectangle joint-cusp theorem gives an adjacent selected row pair together with an ordered common transverse family `B_0` satisfying
+
+\[
+|B_0|>0.0783D-o(D),
+\tag{RC.9}
+\]
+
+and
+
+\[
+L\le1{,}108{,}999.
+\tag{RC.10}
+\]
+
+For every `b in B_0`, both row-column crossings satisfy the uniform near-triangular estimate
+
+\[
+0<\theta-\pi/3<{1.416\times10^7\over D}+o(D^{-1}).
+\tag{RC.11}
+\]
+
+Apply exactly the same contaminated-gap deletion. There are at most `1,108,999` contaminated gaps, so the retained ordered family contains one terminal-free consecutive block of size
+
+\[
+>{0.0783\over1{,}109{,}000}D-o(D).
+\]
+
+The exact certificate proves
+
+\[
+{0.0783\over1{,}109{,}000}>7\times10^{-8}.
+\]
+
+This proves (RC.2). Since the block is a subfamily of `B_0`, all phase and common-order conclusions are inherited unchanged, including (RC.3).
+
+---
+
+## 5. Frontier effect
+
+The high-`t` survivor now contains two nested normal forms.
+
+The larger one is
+
+```text
+one nonhub O-O strip
++ >9.2e-6 D consecutive common transverse trains
++ no stopped-train terminal occurrence between consecutive retained columns
++ every bounded contact face in the retained corridor is a strict rhombus
++ exact nonzero strip reaction generated by <=2 diameter bars.
+```
+
+The phase-controlled one is smaller but more rigid:
+
+```text
+one adjacent row pair inside the complete high-t rectangle
++ >7e-8 D consecutive terminal-free common columns
++ common crossing order
++ every row-column angle = pi/3 + O(1/D)
++ every bounded contact face in the corridor is a strict rhombus
++ bounded terminal/switching/KKT cusp at the same row interface.
+```
+
+The natural next step is to use the arbitrary-O--O exact multishear on several retained trains inside this terminal-free corridor. The finite defect set has been pushed to the ends of a linear rhombic block, while the diameter obstruction is still generated by only one or two switching bars.
+
+No diameter-decreasing deformation is proved here, and no C-II or Level-I closure is claimed.
+
+**Disposition:** proved a linear terminal-free contact-face-pure rhombic corridor, plus a phase-controlled version, through `t<=1.8687`. C-II and Level I remain open.

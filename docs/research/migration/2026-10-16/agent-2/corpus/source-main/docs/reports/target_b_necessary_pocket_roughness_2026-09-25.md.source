@@ -1,0 +1,362 @@
+<!-- theorem-state: {"artifact_id":"ART-8678A45E36B7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Erdős Problem #99 — necessary pocket roughness in the pure rhombic branch
+
+**Phase 2 preservation provenance:** PR #576, branch research/target-b-global-coupling-20260925, audited source head 73ea65f3d26fee2f20c004fb0139e049383d34e0. This later report corrects the attempted canonical use of PR #564: its Q_U=o(D) antecedent cannot occur in the stated canonical pure-disk survivor; the finite inequality remains unrefuted, while deep-boundary concentration is the corrected consequence.
+
+**Date:** 2026-09-25
+**Repository commit:** `f5f68718da7d742128fb7b297854161550d2cce8`
+**State version:** `2026-09-14.audit.51`
+**Run type:** closing-proof attempt and regression audit
+**Target:** B
+**Starting status:** Target B open; PR #564 is an unpromoted candidate
+**Active prompt:** `docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md`
+**External literature search:** not used
+**Computation:** not used
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+## 1. Starting endpoint and attempted implication
+
+The canonical sufficient Target B closure is
+
+\[
+G+E\ge \frac{\sqrt3}{4}B+\frac{\sqrt3}{2}(t+\chi-1).
+\]
+
+In the pure rhombic disk this reads `G+E >= (sqrt(3)/4)B`, whereas a
+global minimizer satisfies the strict reverse inequality. The attempted
+interface route was
+
+```text
+small physical phase cut + small original pocket roughness
+  -> one dominant retained grain (PR #564)
+  -> globalize a coherent-grain inequality
+  -> Target B shell closure.
+```
+
+PR #564 proposes the first conditional geometric arrow, but its additional input
+`Q_U=o(D)` is impossible in the canonical pure-disk survivor regime. This
+report gives a direct finite obstruction and a stronger asymptotic one.
+
+## 2. New result: atomic trains force interior pocket boundary
+
+**Classification:** proved candidate awaiting independent audit; noncanonical.
+
+Let `U` be the union of faces of a pure, simply connected, edge-to-edge strict
+unit-rhombus disk, and let `K=conv(U)`. Its boundary has `B=2T` unit-edge
+occurrences, one pair of terminal edges for each of the `T` trains. Set
+
+\[
+Q_U=\mathcal H^1(\partial U\cap\operatorname{int}K),\qquad
+D=\operatorname{diam}K.
+\]
+
+For any sequence of sufficiently large triangle-free pure-rhombic-disk global
+minimizers in the canonical jammed branch, with `D -> infinity`,
+
+\[
+\boxed{
+\liminf_{D\to\infty}\frac{Q_U}{D}
+\ge 4\sqrt{\frac{\pi}{2\sqrt3}}
+=3.8092512274\ldots .
+}
+\tag{2.1}
+\]
+
+In particular, the small-roughness hypothesis `Q_U=o(D)` in PR #564 has no
+canonical pure-disk global-minimizer sequence to which it can apply. Section 3
+replaces total roughness by boundary at fixed positive depth inside the hull.
+
+### Finite obstruction
+
+Write `H_U=H^1(\partial U\cap\partial K)`. Apart from finitely many
+vertices, the polygonal boundary of `U` is partitioned between `int(K)` and
+`\partial K`. Thus `B=Q_U+H_U`, and `H_U<=per(K)<=pi D`. Hence, without any
+phase argument,
+
+\[
+\boxed{Q_U\ge B-\operatorname{per}(K)\ge 2T-\pi D.}
+\tag{2.2}
+\]
+
+Canonical Section 39.7 gives
+`liminf T/D >= 8/(3 sqrt(c)) = 2.5395008183...`, where
+`c=2 sqrt(3)/pi`. Equation (2.2) already yields
+
+\[
+\liminf Q_U/D\ge 16/(3\sqrt c)-\pi
+=1.9374089830\ldots>0.
+\tag{2.3}
+\]
+
+### Proof of the stronger bound
+
+Suppose the stated sequence exists. Section 39.1 gives `T=Theta(D)` and
+`R/D^2 -> 1/c`. Pass to an arbitrary subsequence on which `T/D -> x` and
+the projective-direction probability measures of the trains converge weakly
+to `mu`. Let `s` be the total atomic mass of `mu`. Canonical Section 39.2
+gives
+
+\[
+1/c=\lim R/D^2\le x^2s^2/4,
+\qquad\text{hence}\qquad 2xs\ge 4/\sqrt c.
+\tag{2.4}
+\]
+
+Fix `epsilon>0` and choose finitely many atoms of `mu` with total mass at
+least `s-epsilon`. Choose disjoint projective angular neighborhoods of radius
+`delta` around those atoms, with boundary carrying zero `mu` mass. Weak
+convergence then shows that at least `(s-epsilon-o(1))T` trains have directions
+in these neighborhoods. Their two terminal unit edges contribute at least
+`2(s-epsilon-o(1))T` boundary-edge occurrences.
+
+Only a fraction tending to zero with `delta` of those occurrences can lie on
+`\partial K`. To see this without assuming that boundary edges are isolated
+hull sides, scale `K` by `1/D`. The canonical area/isodiametric estimates imply
+Hausdorff convergence, after translation, to the disk of diameter one.
+The surface-area measures of these convex polygons therefore converge weakly
+to the uniform, atom-free surface-area measure of that disk, as proved in
+Section 39.2. A unit edge of `\partial U` lying on `\partial K` contributes
+one unit of hull perimeter measure at a normal obtained by rotating its train
+direction by a quarter turn. The chosen finitely many projective
+neighborhoods correspond to finitely many pairs of normal arcs. Their limiting
+surface-area measure tends to zero with `delta`. Hence the number of such
+hull-terminal edges, divided by `D`, tends to zero as `delta -> 0`.
+
+Every remaining terminal edge has its relative interior in `int(K)`, and
+distinct trains have distinct terminal-edge occurrences. They are counted
+by `Q_U`. First let the sequence index tend to infinity, then `delta -> 0`,
+and finally `epsilon -> 0`. This gives
+
+\[
+\liminf Q_U/D\ge 2xs\ge4/\sqrt c.
+\]
+
+Because the starting subsequence was arbitrary, (2.1) holds for the whole
+sequence. No source point was deleted or identified with a scaffold.
+
+### Dependencies and scope
+
+- Canonical `docs/targets/target-b/01-jammed-rhombic-branch.md`, Sections
+  39.1–39.4: `R/D^2 -> 1/c`, `T=Theta(D)`, the atomic crossing bound, and
+  disk-limit surface-area measures.
+- Canonical pure-disk train geometry: every train has two distinct unit
+  terminal boundary edges and `B=2T`.
+- `docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md`, PC: used
+  only to identify the proposed phase-cut application, not in the proof.
+- PR #564 is unpromoted. Its finite relative-isoperimetric theorem is left
+  intact; only its proposed `Q_U=o(D)` application to canonical survivors is
+  ruled out.
+
+This is a necessary geometric condition for a hypothetical sequence of
+global minimizers in the pure jammed disk branch. It makes no claim about
+exceptional faces, holes, multiple rhombic components, flexible survivors,
+or all Level I minimizers.
+
+## 3. Deep-boundary concentration theorem
+
+**Classification:** proved candidate awaiting independent audit; noncanonical.
+
+Retain the canonical sequence and choose centers `z_D` such that the rescaled
+convex hulls `(K-z_D)/D` converge to the radius-`1/2` disk. For fixed
+`rho in (0,1/2)`, put
+
+\[
+V_{\rho,D}=B\bigl(z_D,(1/2-\rho)D\bigr),\qquad
+Q_\rho(D)=\mathcal H^1(\partial U\cap V_{\rho,D}).
+\]
+
+For every fixed `rho`, `V_{rho,D}` lies inside `K` for all sufficiently large
+`D`. Let `F_D` be any collection of physical rhombi. Partition the retained
+faces into **edge grains**: two faces belong to the same grain if a chain of
+retained faces joins them across full shared edges. Let `C_{j,D}` denote
+their face unions. Vertex-only contact does not join grains. If
+
+\[
+|F_D|=o(D),\qquad Q_\rho(D)=o(D)
+\quad\text{for every fixed }\rho>0,
+\tag{3.1}
+\]
+
+then one retained edge grain has
+
+\[
+\boxed{\operatorname{area}(C_{*,D})=\operatorname{area}(K)-o(D^2),
+\qquad R(C_{*,D})=R-o(D^2).}
+\tag{3.2}
+\]
+
+All rhombi in this grain lie in one component of the retained train crossing
+graph: faces sharing a full edge share the train passing through that edge.
+Thus that train component also contains `R-o(D^2)` rhombi. Mere vertex
+contact would not support this transfer; concurrent PR #575 gives an exact
+`2 x 2` grid regression.
+
+The second conclusion uses the fact that each rhombus has area at least
+`a_0`; it applies in particular to the PC cut
+when `E=o(D)`, since PC then gives `|F_D|=o(D)`.
+
+### Proof
+
+Fix `rho>0` and abbreviate `V=V_{rho,D}`. The canonical shell window gives
+`G=area(K)-area(U)=O(D)`, so `area(V\U)=O(D)`. The total area of deleted
+rhombi is at most `|F_D|=o(D)` because every unit rhombus has area at most
+one. Hence the retained edge grains cover `area(V)-o(D^2)` of `V`.
+
+For any union `S` of retained edge grains, set `A=area(S\cap V)` and let
+`I=H^1(\partial(S\cap V)\cap int V)`. Two retained faces sharing a full edge
+belong to the same grain. Therefore every internal boundary edge of `S`
+inside `V` is either an original boundary edge of `U`, or is incident to a
+deleted rhombus. Different deleted rhombi together have at most `4|F_D|`
+unit sides. Vertex-only contacts have zero perimeter measure. Therefore
+
+\[
+I\le Q_\rho(D)+4|F_D|=o(D).
+\tag{3.3}
+\]
+
+The finite-perimeter identity for the partition of the disk `V` gives
+`per(S\cap V)+per(V\setminus S)=per(V)+2I`. Applying planar isoperimetry to
+both parts yields
+
+\[
+\sqrt{\pi A}+\sqrt{\pi(|V|-A)}
+\le \frac{\operatorname{per}(V)}2+I
+=\sqrt{\pi|V|}+o(D).
+\tag{3.4}
+\]
+
+Since `|V|=Theta(D^2)`, (3.4) says that the area fraction of **every** union
+of retained edge grains in `V` tends to zero or one. If no single grain
+occupied `|V|-o(D^2)`, take a largest grain when its area is a fixed
+fraction of `|V|`, or greedily add smaller grains until their union first
+passes a fixed fraction. Because the grains cover `|V|-o(D^2)`, this
+produces a union with area fraction bounded away from both zero and one,
+contradicting (3.4). Thus one edge grain `C_{rho,D}` has
+`area(C_{rho,D}\cap V)=|V|-o(D^2)`.
+
+For each fixed `rho`, the largest edge grain by total area is at least as
+large as `C_{rho,D}`. Consequently
+
+\[
+\liminf_{D\to\infty}
+\frac{\max_j\operatorname{area}(C_{j,D})}{|K|}
+\ge (1-2\rho)^2.
+\]
+
+The hypothesis (3.1) holds for every fixed `rho`, so let `rho` decrease to
+zero. This proves the area assertion in (3.2). Since the area outside the
+largest edge grain is `o(D^2)` and every original rhombus has area at least
+`a_0`, the rhombus population outside it is `o(D^2)` as well. This proves
+(3.2). Notice that the dominant grain may depend on `D`, but the
+largest-grain argument avoids any incompatibility between different
+values of `rho`.
+
+Unlike `Q_U=o(D)`, the hypothesis `Q_rho=o(D)` is not contradicted by (2.1):
+atomic train ends can lie in shallow outer pockets. This theorem isolates
+macroscopic deep fjords as the remaining topological obstruction. It does
+not prove that canonical global minimizers lack those fjords.
+
+The same argument gives a quantitative contrapositive. Fix
+`eta in (0,1/2]`, put `rho=eta/16`, and suppose the largest retained
+edge grain has area at most `(1-eta)|K|`. Since
+`|V_{rho,D}|/|K|=(1-eta/8)^2+o(1)>=1-eta/4+o(1)`, for large `D` no grain
+occupies more than `(1-eta/2)|V_{rho,D}|` inside the inner disk. The retained
+grains cover `|V_{rho,D}|-o(D^2)`. Taking a smaller side or greedily
+grouping grains gives a union whose inner-disk area fraction lies in
+`[eta/8,1/2]`, up to a vanishing endpoint error. Applying (3.4) before
+using (3.1) yields
+
+\[
+\boxed{
+Q_{\eta/16}(D)+4|F_D|
+\ge \pi\left(\frac12-\frac\eta{16}\right)
+\left(\sqrt{\frac\eta8}+\sqrt{1-\frac\eta8}-1\right)D-o(D).
+}
+\tag{3.5}
+\]
+
+Thus two macroscopic phase-cut edge grains require **deep** pocket-boundary
+length of order `D` when the physical cut has sublinear size. The unavoidable
+total roughness from (2.1) is irrelevant to this test.
+
+## 4. Frontier effect and exact remaining lemma
+
+The canonical Target B inequality is unchanged. The conditional concentration
+argument of PR #564 cannot be activated by proving `Q_U=o(D)` for this branch:
+the stronger opposite bound (2.1) is necessary. Section 3 gives a replacement
+which ignores shallow outer zigzags and counts only deep pocket boundary.
+
+One precise next subproblem is:
+
+> **Small-surplus deep-fjord exclusion.** For every fixed `rho>0`, prove that
+> a sequence of triangle-free pure-rhombic-disk global minimizers satisfying
+> `E=o(D)` also satisfies `Q_rho(D)=o(D)`, or construct from a contrary
+> sequence an actual source-preserving unit-separated competitor of diameter
+> `<D`.
+
+This statement uses the actual source and allows `Q_U=Theta(D)`, as (2.1)
+requires. Together with PC and Section 3 it would remove the
+small-angular-surplus multi-grain escape; one would still need a
+dominant-grain phase-density/diameter bridge and the topology/flexible cases
+for Level I closure.
+
+### Why scalar shell bookkeeping alone stalls
+
+There is an exact currency-neutral slit operation on an **abstract selected
+rhombic subcomplex**. Start with a pure unit-rhombus disk and delete `m`
+faces forming a dual-tree chain, attached to the old outer boundary along
+exactly one edge, while leaving the convex hull unchanged. Assume the chain
+has no other boundary incidence. Its `m-1` internal shared edges give
+`4m=2(m-1)+1+b_in`, so `b_in=2m+1`. The new boundary count is
+`B'=B-1+b_in=B+2m`. For removed face areas `s_i`, the pocket area increases
+by `sum s_i` and the angular surplus decreases by `sum(s_i-a_0)`.
+Consequently
+
+\[
+(G'+E')-(G+E)=a_0m=c_0(B'-B),
+\qquad
+(G'+E'-c_0B')=(G+E-c_0B).
+\tag{4.1}
+\]
+
+This calculation shows that the scalar shell balance cannot charge a
+one-face-wide slit merely by its length. It is **not** a source construction:
+deleting selected faces while keeping their vertices fixed can leave unit
+contacts across the supposed slit, so the resulting subcomplex need not be
+the actual contact complex of any new configuration. A proof of the
+deep-fjord exclusion must use source geometry, stress, or an actual
+source-preserving deformation, not only (4.1).
+
+## 5. Regression audit
+
+| Proposed inference | Result | Exact reason |
+| --- | --- | --- |
+| `E=o(D)` implies `Q_U=o(D)` | Rejected in the canonical pure-disk survivor regime | (2.1) forces `Q_U=Omega(D)` independently of `E` beyond canonical bounds. |
+| `G=O(D)` and `|F|=o(D)` suffice for PR #564 concentration | Unsupported | Its relative perimeter identity retains the original outer boundary `Q_U`, which is necessarily linear. |
+| Euclidean retained-face connectivity transfers to a train component | Rejected for vertex-only contact | Two diagonal faces in a `2 x 2` rhombus grid can meet at one vertex while their train crossing edges are disjoint; Section 3 uses edge grains. |
+| A one-face-wide slit must create positive shell surplus per unit length | Rejected for selected subcomplex bookkeeping | The exact identity (4.1) makes its scalar shell increment zero; realization as a new source is not asserted. |
+| PR #564 finite inequality itself is false | Not claimed | The result here addresses its application hypothesis, not the finite isoperimetric proof. |
+| Phase-cut deletion removes source points | Rejected | A deleted crossing/rhombus is only an analytic decomposition; all source points remain. |
+
+No external theorem or computation was used. The finite inequality (2.2) and
+atomic proof are exact conditional deductions from the named canonical
+inputs. The Section 3 proof also uses the elementary finite-perimeter
+partition identity and planar isoperimetry, with the same proof structure as
+the unpromoted PR #564 but on a fixed inner disk. Concurrent unpromoted PR
+#575 identified the vertex-contact regression and proves a sharper finite
+edge-grain interface theorem; this report uses only the elementary
+`4|F|` interface count proved above. No theorem-state or
+route-map file is changed pending independent audit.
+
+## 6. Promotion recommendation and handoff
+
+**Unreviewed candidate.** An independent audit should verify the terminal-edge
+count, the surface-area-measure transfer, and the inner-disk interface count,
+then record the no-go and replacement concentration consequences near the
+Target B multi-grain route. The next agent should attack the small-surplus
+deep-fjord exclusion above using source optimality, exact Oler payment, or a
+source-preserving competitor. A relative-isoperimetric argument whose only
+correction is total `Q_U` cannot close this branch.

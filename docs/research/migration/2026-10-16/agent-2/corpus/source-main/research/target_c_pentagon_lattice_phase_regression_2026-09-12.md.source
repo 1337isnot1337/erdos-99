@@ -1,0 +1,140 @@
+# Target C-II — exact pentagon lattice-phase regression
+
+**Date:** 2026-09-12
+**Classification:** regression / rejected bridge lemma
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This note gives an explicit family showing that a convex unit pentagonal contact face
+can have all five edge directions arbitrarily close to the three projective lattice
+lines at angles `0`, `pi/3`, and `2pi/3`, while every non-edge source separation is
+strictly greater than one. Consequently, the hoped-for implication
+
+```text
+near-lattice phase purity + convex pentagonal face
+    -> a transverse train endpoint with a uniform angular gap
+```
+
+is false without an additional quantitative nondegeneracy theorem.
+
+## 1. The family
+
+For `0<delta<delta_0`, put
+
+\[
+\alpha(\delta):=\arccos(\cos\delta-1/2)
+\]
+
+and take five successive unit edge vectors with arguments
+
+\[
+\theta_0=\frac\pi3-\alpha(\delta),\quad
+\theta_1=\frac\pi3,\quad
+\theta_2=\frac\pi3+\alpha(\delta),
+\]
+
+\[
+\theta_3=\frac{4\pi}3-\delta,\quad
+\theta_4=\frac{4\pi}3+\delta.
+\tag{PR.1}
+\]
+
+Choose `delta_0` small enough that
+
+\[
+0<\alpha(\delta)<\frac{2\pi}3,
+\qquad
+\alpha(\delta)+\delta<\pi,
+\qquad
+2\delta<\frac{2\pi}3.
+\tag{PR.2}
+\]
+
+The first three vectors sum to
+
+\[
+e^{i\pi/3}(1+2\cos\alpha)
+=2\cos\delta\,e^{i\pi/3},
+\]
+
+whereas the final two sum to
+
+\[
+2\cos\delta\,e^{i4\pi/3}
+=-2\cos\delta\,e^{i\pi/3}.
+\]
+
+Thus the five vectors close exactly. Their cyclic direction gaps are
+
+\[
+\alpha,\quad \alpha,\quad \pi-\alpha-\delta,
+\quad 2\delta,\quad \pi-\alpha-\delta.
+\tag{PR.3}
+\]
+
+By (PR.2), all gaps are positive and less than `2pi/3`. Therefore the closed polygon
+is strictly convex.
+
+## 2. All non-edge separations are strictly greater than one
+
+For two consecutive edges whose direction gap is `g`, the corresponding two-edge
+diagonal has length
+
+\[
+|e^{i\theta}+e^{i(\theta+g)}|=2\cos(g/2).
+\]
+
+Every gap in (PR.3) is strictly below `2pi/3`, so each such diagonal is strictly
+greater than one. Every other diagonal of a pentagon is the negative of a consecutive
+two-edge sum, because the five edge vectors close. Hence all five non-edge diagonals
+are strictly greater than one.
+
+The polygon is therefore compatible with unit separation and with the absence of an
+additional unit contact chord. It is a legitimate strict convex pentagonal face at
+the finite `delta` level.
+
+## 3. Phase collapse
+
+As `delta` tends to zero,
+
+\[
+\alpha(\delta)\longrightarrow\frac\pi3,
+\]
+
+and the projective edge directions in (PR.1) converge to the three lines
+
+\[
+[0],\quad [\pi/3],\quad [2\pi/3].
+\]
+
+The two final edges have arguments `4pi/3+-delta`, which project to a single one of
+these three lines. The face remains strictly convex for every `delta>0`, and all
+non-edge separations remain `>1`, although two of them tend to one as `delta->0`.
+
+Thus a linearly large pentagon population can, at least locally, absorb endpoint
+closure while its train directions approach the same three lattice phases that carry
+the quadratic rhombus crossing density. No uniform transverse phase mass follows
+from pentagon existence alone.
+
+## 4. Frontier effect
+
+This regression blocks the following proposed closure of the Section-146 endpoint:
+
+1. phase saturation forces the atomic train directions into at most three lattice
+   projective lines;
+2. every pentagonal defect face must then use a transverse train direction;
+3. the outer boundary has no capacity for those transverse endpoints.
+
+Step 2 is false. The exact family above has no transverse projective direction in the
+limit, and the strict finite source inequalities do not prevent that limit.
+
+A valid closure must therefore supply one of the missing quantitative inputs:
+
+- a uniform lower bound on the relevant pentagon diagonal slack;
+- a source-minimality theorem that converts the near-unit diagonals into an admissible
+  contact/descent operation;
+- a metric coefficient bound on the pentagon closure rows; or
+- a different coupling of the pentagon network to the diameter graph.
+
+The construction is local and does not assert that these pentagons co-embed in a
+global C-II minimizer. It is nevertheless an exact finite geometric regression to the
+uniform face-phase bridge. Theorem-state authority is unchanged.

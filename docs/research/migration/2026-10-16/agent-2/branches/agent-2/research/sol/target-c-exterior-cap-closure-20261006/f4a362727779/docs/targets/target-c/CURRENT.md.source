@@ -1,0 +1,216 @@
+# Target C — current C-II frontier
+
+<!-- BEGIN GENERATED: target-c-ledger -->
+**Generated ledger snapshot (`2026-10-06.audit.66`):** C-I **CLOSED**; C-II **OPEN**.
+
+Canonical IDs: `C-ZTA`, `C-ZRF`, `C-FS-GEOM`, `C-FSD`, `C-DB-DENSITY`, `C-FS-STABILITY`, `C-MATCHING-EXCLUSION`, `C-LINEAR-NONMATCH`, `C-ATTACH-CURRENCY`, `C-LOADED-HULL`, `C-EXTREME-TRANSFER`, `C-PRIMITIVE-SPLIT`, `C-FOREST-DOUBLE-GAP`, `C-RHOMBUS-POP`, `C-PUNCTURED-PHASE`, `C-COHERENT-GRAINS`, `C-FOREST-ENDPOINT-GEOM`, `C-EXTREME-ATTACH-GEOM`, `C-PRIMITIVE-SHELL-LF`, `C-PSEUDO-GRID`, `C-GRID-PHASE-COLLAPSE`, `C-COMP-DEATOMIZATION`, `C-HOLE-GRID-DIAMETER`, `C-INACTIVE-CHAMBER`, `C-INACTIVE-HULL-STABILITY`, `C-INACTIVE-NEAR-MATCHING`, `C-INACTIVE-DEEP-MATCHING`, `C-INACTIVE-DICHOTOMY`, `C-FULLCORE-NEAR-DISK`, `C-HARMONIC-CARRIER-QUAD`, `C-HARMONIC-CELL-TILING`, `C-HARMONIC-WRAPPING`, `C-TYPEII-INTERFACE-COLLAPSE`, `C-TRAIN-INTERFACE-CURRENCY`, `C-HARMONIC-TRAIN-BUDGET`, `C-DENSE-PHASE-CORE`, `C-EXPLICIT-ORDERED-GRID`, `C-WRAP-PERIMETER`, `C-WRAP-FULL-GAP`, `C-WRAP-THREE-GAP`, `C-WRAP-OUTER-WALK-GAP`, `C-WRAP-CAUCHY`, `C-WRAP-MIXED-CAUCHY`, `C-WRAP-ANGULAR-MEASURE`, `C-WRAP-COMPLEMENT-CHORD`, `C-PHASE-CORRIDOR-ENDPOINT-EXCLUSION`, `C-UNIQUE-WRAP-CAP-DEFICIT`, `C-WRAP-QUANT-PHASE-GAP`, `C-ROUTE-EXCESS-OPT`, `C-STRONG-PHASE-SHORES`, `C-WRAP-AREA-RIGIDITY`, `C-AREA-BOOSTED-PHASE-GAP`, `C-PHASE-SHORE-BASELINE`, `C-LOCAL-TRAIN-COUNT-GAP`, `C-JOINT-PHASE-SHORES`, `C-AGGREGATE-PROJECTION-GAP`, `C-EXTENDED-STABILITY-GAP`, `C-STABILITY-ENVELOPE`, `C-INTEGRATED-TOOTH-LEAKAGE`, `C-ZERO-HOST-SIGNED-RETURN`, `C-SIGNED-RETURN-TRANSPORT`, `C-CORRELATED-SLACK-RETURN`, `C-ANALYTIC-SLACK-ENVELOPE`, `C-ANISOTROPIC-TWO-ARC-RETURN`, `C-LOCAL-RETURN-OLER-BRIDGE`, `C-AGGREGATE-TWO-ARC-DETOUR`, `C-AUGMENTED-CELL-DEFECT-BUDGET`, `C-FULLCORE-DIAMETER-BUDGET-FLOOR`, `C-FULLCORE-MU-ONE-CELL`, `C-FULLCORE-LOADED-CHORD`, `C-FULLCORE-TRAIN-SURPLUS-FLOOR`, `C-FULLCORE-FLOOR-ENDPOINT-EXCLUSION`, `C-OBLIQUE-LATTICE-COMPETITOR`, `C-HARMONIC-GRID-LOCAL`, `C-WOODALL`, `C-COMMON-BLOCK`, `C-MU-09604`, `C-RSR-DD`, `C-PD`, `C-CYCLIC-STRUCTURAL`, `C-P1-PRX`, `C-S1-RSQ`, `C-FULLCORE-HULL-DEPLETION-FLOOR`, `C-AUGMENTED-TRAIN-RANK`, `C-FULLCORE-RESIDUAL-FLOOR`, `C-CONTACT-FACE-REGULARITY`, `C-RECIPROCAL-TRAIN-GRAPH`, `C-OUTER-TRAIN-DETERMINATION`, `C-GLOBAL-FACE-RETURN-QUOTAS`, `C-JOINT-BULK-FACE-SEPARATOR`, `C-TERMINAL-PHYSICAL-FRUSTRATION`, `C-LOADED-FLAT-PENTAGON-DEPLETION`, `C-EMBEDDED-WALL-REFILL`, `C-PENTAGON-WALL-DISJOINT-BULK`, `C-BOUNDED-FACE-ENDPOINT-FAN`, `C-FULL-FLOWER-PROJECTIVE-BLOCKER`, `C-GOOD-HULL-SINGLETON-CHARGE`, `C-FULL-FLOWER-K-PAYMENT`, `C-CONTACT-DIAMETER-COORDINATES`, `C-SHORT-WALL-ZERO-CAPACITY`, `C-CENTERED-FAN-REFLECTIONS`, `C-TRANSLATION-LENS-EXPOSURE`, `C-ADAPTIVE-STRICT-SAFE-SATURATION`, `C-LONG-PAIR-ISOLATE-DISPATCH`, `C-DISJOINT-SWAP-2SAT`, `C-NEAR-UNIT-CONFLICT-GEOMETRY`, `C-OO-LOWER-BLOCKER-LOCALIZATION`, `C-LOADED-NEAR-UNIT-ADJACENCY`, `C-LOADED-HULL-CAP-BUDGET`, `C-OO-TERMINAL-OWNER-CAPACITY`, `C-OWNER-REGION-TREE-RECURRENCE`, `C-ACUTE-BINARY-OO-LAMINARITY`, `C-BINARY-LOADED-WITNESS-POCKET-BUDGET`, `C-OO-TERMINAL-TRAIN-POPULATION`, `C-ONE-VERTEX-CONVEX-WALL-SHIELD`, `C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT`, `C-TWO-CONTACT-PACKET-OPENING`, `C-ONE-SITE-CONTACT-SURROUND`, `C-REGULAR-SHELL-BLOCKER-PAYMENT`, `C-COLLECTIVE-WALL-EXTERIOR-SHIELD`, `C-COLLECTIVE-WALL-DELETION-BANK`.
+Regression IDs: `C-UNARY-RHOMBUS-BLOCKER-REGRESSION`, `C-OWNER-CONTRACTION-CYCLE-REGRESSION`, `C-ACTUAL-CUT-FINITE-BARRIER-REGRESSION`, `C-FIXED-WALL-ACTIVATION-REGRESSION`, `C-LARGE-WALL-LOCK-REGRESSION`, `C-S1-Q13`, `C-CROSSING-MULTISHEAR-INDEPENDENT-OWNER-REGRESSION`, `C-TWO-WALL-DELETION-EXTERIOR-SHIELD-REGRESSION`, `C-ABSTRACT-OWNER-HORN-PACKET`, `C-REGULAR-SHELL-BARRIER-NONGLOBAL-FAMILY`, `C-HEPTAGON-WALL-CAPACITY-REGRESSION`.
+Rejected/overridden IDs: `C-PATH-EULER`, `C-FB4`, `C53-BAD-PENTAGON`, `RSR-EQUALITY-UNIQUE`, `C-FIVE-ARC-NEAR-QUAD`, `C-FIVE-HOST-OCCUPANCY`, `C-CYCLIC-CAP-DETOUR`, `C-CYCLIC-099554`, `C-ZRF-FULL-SOURCE`.
+<!-- END GENERATED: target-c-ledger -->
+
+**State date:** 2026-10-06
+**LEVEL I STATUS: STILL OPEN.**  
+**C-I: CLOSED.**  
+**C-II: OPEN.**
+
+Read `../../STATE.md` first. This file is the compact live Target C frontier. Historical handoffs and unpromoted research files do not override it.
+
+Promotion audits:
+
+- [Finite contact-budget / diameter exchange audit.64](../../audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md)
+- [Odd-shell wall-barrier audit.65](../../audits/target_c_odd_shell_barrier_payment_independent_audit_2026-10-06.md)
+- [Collective wall-capacity audit.66](../../audits/target_c_collective_wall_capacity_independent_audit_2026-10-06.md)
+
+- [`105-121-promotion-audit-2026-09-12.md`](105-121-promotion-audit-2026-09-12.md)
+- [`122-123-promotion-audit-2026-09-12.md`](122-123-promotion-audit-2026-09-12.md)
+- [`October structural promotion audit`](../../audits/target_c_october_structural_promotion_audit_2026-10-05.md)
+- [`Reciprocal/return promotion audit`](../../audits/target_c_returns_reciprocal_promotion_audit_2026-10-05.md)
+- [`Collective-wall promotion audit`](../../audits/target_c_collective_wall_promotion_audit_2026-10-05.md)
+- [`Singleton/flower promotion audit`](../../audits/target_c_singleton_flower_promotion_audit_2026-10-05.md)
+- [`Local active-diameter coordinate audit`](../../audits/target_c_local_diameter_coordinates_promotion_audit_2026-10-05.md)
+- [`Short-wall zero-capacity audit`](../../audits/target_c_short_unit_wall_zero_capacity_promotion_audit_2026-10-05.md)
+- [`Finite-motion/exposure promotion audit`](../../audits/target_c_finite_motion_exposure_promotion_audit_2026-10-05.md)
+- [`Adaptive strict-safe saturation audit`](../../audits/target_c_adaptive_safe_saturation_promotion_audit_2026-10-05.md)
+- [`Loaded near-unit / cap geometry audit`](../../audits/target_c_loaded_near_unit_cap_promotion_audit_2026-10-05.md)
+- [`Owner-order and terminal-capacity audit.63`](../../audits/target_c_owner_order_and_terminal_capacity_promotion_audit_2026-10-06.md)
+
+## Normal form and ZR/ZF scope
+
+Use a contact-minimal, then diameter-pair-minimal triangle-free global minimizer and retain every source point, including contact-isolated points. Let `V` be the nonisolated positive-contact core and `v=|V|`.
+
+The canonical §57 theorem is
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\qquad
+\operatorname{rank}R_{C\cup H}[V]=2v-3,
+\]
+
+so `e+h>=2v-2` and `h>=delta>=ceil(D)` in the core ledger. This is not a full-source affine-kernel theorem. Contact-isolated coordinates add zero stress rows/columns and independent kernel directions. `C-ZRF-FULL-SOURCE` is rejected.
+
+## Canonical state through audit.66
+
+Audit.66 controls theorem authority.
+
+All audit.52--66 results are canonical. Audit.61 reduces sufficiently small O--O finite-motion failure to
+\[
+\boxed{
+\text{outer-face near-unit implication structure}
++\text{explicit unary rhombus blockers}
++\text{at most }d_H\text{ inactive upper exceptions}.
+}
+\]
+
+Audit.62 adds two exact finite source-geometry restrictions on that remaining blocker structure.
+
+### Loaded near-unit adjacency
+
+Canonical \`C-LOADED-NEAR-UNIT-ADJACENCY\` is a universal finite statement. Let \(B\) be the set of actual diameter endpoints and assume \(\operatorname{conv}B\) has positive area. Put
+\[
+\tau_D=\frac{3D}{\sqrt{3D^2+4}+1}.
+\]
+If loaded endpoints \(a,b\in B\) are nonconsecutive on the loaded hull and \(|ab|<D\), then
+\[
+\boxed{|ab|\ge\tau_D.}
+\]
+
+For \(D\ge6\),
+\[
+\tau_D>\frac32>\frac{13}{12},
+\]
+so every loaded pair of length at most \(13/12\) is a side of the loaded hull. Therefore the loaded near-unit graph
+\[
+\{ab\subset B:\ |ab|\le13/12\}
+\]
+is a subgraph of the cyclic loaded hull and has maximum degree at most two.
+
+This is stronger than merely saying loaded near-unit clauses are planar: their loaded endpoint incidence order is the actual loaded-hull order.
+
+### Loaded-hull cap / attachment budget
+
+Canonical \`C-LOADED-HULL-CAP-BUDGET\` applies to a finite unit-separated source \(A\) with \(K=\operatorname{conv}A\), cyclic loaded-hull vertex set \(B\), \(q=|B|\), \(F=\operatorname{conv}B\), and positive-contact core contained in \(F\). Put
+\[
+W=\operatorname{per}K-q.
+\]
+
+Then:
+
+\[
+\boxed{
+\#\{\text{occupied loaded-hull caps}\}\le W,
+\qquad
+\sum_{\rm occupied}L_{ab}\le2W,
+\qquad
+\sum_{\rm occupied}|ab|\le2W.
+}
+\]
+
+If \(P\) is the set of core points within distance \(<\sqrt2\) of a source point outside \(F\), then
+\[
+\boxed{|P|\le68W.}
+\]
+
+If \(X\) is the set of nonloaded source points in \(F\) within distance \(1/2\) of \(\partial F\), then
+\[
+\boxed{|X|\le12W.}
+\]
+
+Every source point \(p\in F\) with boundary distance at least \(1/2\) has the exact upper margin
+\[
+\boxed{|p-y|\le D-\frac12\qquad\forall y\in K.}
+\]
+
+Finally,
+\[
+\boxed{\#(\operatorname{ext}K\setminus B)\le W.}
+\]
+
+Canonical full-source geometry gives \(\operatorname{per}K<\pi D\). Hence along every canonical subsequence with
+\[
+q/D\to\pi,
+\]
+one has
+\[
+W=o(D),
+\]
+and therefore
+\[
+\boxed{
+|P|=o(D),\qquad
+|X|=o(D),\qquad
+\#(\operatorname{ext}K\setminus B)=o(D).
+}
+\]
+
+Thus hull-cap exterior geometry can support only a sublinear blocker population in the terminal \(q/D\to\pi\) regime.
+
+### Audit.63 owner, terminal-train, and wall results
+
+For every canonical full-core Type-II sequence with q/D -> pi and u_B=o(D), the complete stopped O--O train population is o(D), including singleton bridges. The exact face ledger gives 3x_B+5K_top+2X+S_BB <= [2(pi-s)+o(1)]D, where s=sqrt(pi/(2sqrt(3))); smaller linear banks remain possible.
+
+In the narrow-window independent-binary owner scope, selected O--O trains are bounded by x_B+m_B+1; owner-region components obey K_own+rho_own <= T_OO; acute crossings are laminar; and distinct loaded binary witnesses number at most u_B. These statements do not cover general crossing multishear assignments.
+
+For a convex actual unit-contact wall with one deleted vertex, strict clearance from the remaining wall vertices shields a replacement point from all exterior source points, including isolates. The one-deletion strict-safe region is empty for walls with at most five sides. In canonical physical unit hexagon faces, each interior point is covered by at least two closed unit disks centered at wall vertices. This is not a packet-capacity theorem. The two-deletion isolate counterexample remains binding.
+
+### Audit.64 finite packet endpoints
+
+For a contact-minimal, then diameter-pair-minimal full-source representative, let t count all old contacts removed by R, d the old actual diameter pairs removed, and j every new unit pair touching an inserted point. A finite same-cardinality triangle-free packet with all new distances in [1,D) is impossible when j<=t and either j<t or d>0. This uses the full source, including retained isolates.
+
+A finite packet with at most two new unit contacts and strict upper slack can open all new contacts by an arbitrarily small perturbation of inserted points. A one-site packet without such an opening direction must have at least three retained unit neighbors whose displacement vectors strictly surround the site. These lemmas constrain candidate packets; they do not establish that a protected packet exists.
+
+### Audit.65 regular-shell wall barrier
+
+In a regular odd unit `q`-gon (`q>=65`), one strict interior contact isolate can block at most two adjacent inward one-vertex proposals. Thus blocking all proposals costs at least `(q+1)/2` distinct isolates in a fixed radial collar. A matching/singleton collar cover and deep lattice filling realize the barrier, but the resulting quadratic source is not globally optimal: an independent whole-source packet of the same cardinality has strictly smaller diameter. The result sharpens the one-vertex wall-shield guardrail without bounding capacity in arbitrary macroscopic containers.
+
+### Audit.66 collective wall deletion
+
+For a convex actual unit-contact wall, a deleted vertex set `B` with pairwise distances at least two has a collective exterior shield: a replacement point strictly clear of the remaining wall is strictly separated from every retained exterior source point, including isolates. The `M` wall vertices of a unit-separated source contain at least `ceil(M/25)` such deletions. If a unit-separated packet of size `|A intersect int(F)|+|B|` fits in this region, Audit.64's generic finite endpoint rules it out by losing at least `2|B|` contacts. The exact D(8) heptagon-plus-center source shows the region can have capacity only one even at a global minimizer; no large-source capacity theorem follows.
+
+## Exact remaining split
+
+### Full-core branch
+
+The audit.61 finite-motion obstruction remains
+\[
+\text{outer-face near-unit owner/implication structure}
++\text{unary rhombus blockers}
++\text{at most }d_H\text{ upper exceptions},
+\]
+but audit.62 removes two large sources of ambiguity and audit.63 rules out a linear O--O train bank in the q/D -> pi, u_B=o(D) regime.
+
+1. **Loaded-loaded lower clauses are cyclically ordered.** Any loaded pair in the audit.61 near-unit range is forced onto the loaded hull cycle; each loaded vertex supports at most two such loaded neighbors.
+
+2. **Terminal cap/exterior blockers are sublinear.** Along \(q/D\to\pi\), exterior extreme isolates, short core-to-outside attachments through loaded-hull caps, and the shallow nonloaded loaded-hull boundary layer are all \(o(D)\). Deep core points have an exact \(D-1/2\) inactive-upper margin.
+
+Therefore any *linear* family of lower blockers surviving in the terminal regime must concentrate in one of the following:
+
+- actual outer-contact-face geometry inside the loaded hull;
+- the cyclic loaded-hull near-unit graph;
+- explicitly retained unary rhombus blockers;
+- the at most \(d_H\) inactive upper exceptions.
+
+The highest-value next theorem is a source-realized **face-coupled finite-move theorem**: from the remaining outer-to-bounded or bounded-to-bounded train system, construct a finite move or discrete replacement that passes every source lower constraint, actual-diameter upper constraint, and unary rhombus test, then yields strict contact loss at diameter D or a strict sub-D competitor. Owner-order arguments should serve this endpoint directly.
+
+A source-level path forest remains insufficient after owner contraction.
+
+### Macroscopic-container branch
+
+Audit.63 adds a one-deleted-vertex shield; Audit.66 extends it to pairwise-separated deletion sets. Audit.65 quantifies the collar isolate population needed to block every regular-shell proposal and gives a strictly nonglobal blocked filling. The D(8) capacity regression shows these shields need not yield a replacement slot for small sources. No result establishes packet capacity for arbitrary large containers or closes the separate macroscopic inactive-container route. Audit.59's strict-safe area no-go remains binding.
+
+## Binding rejected routes
+
+Do not use without a new proof:
+
+- incident-diameter sequence `=>` Euler trail/path;
+- FB4 force-bulk localization;
+- incompatible-cut C53 pentagon objection;
+- RSR disk-equality uniqueness;
+- Eppstein near-equality `=>` near quadrangulation;
+- five-host occupancy from angular-measure saturation;
+- inward OP pocket `subset` exterior Reuleaux minor cap;
+- deletion of contact-isolated source points;
+- full-source extension of the §57 affine-kernel theorem;
+- `r/(6C_T)` as the sharp Section-90 bin-method limit;
+- the withdrawn §121 normalization `G_loc=o(D^2) => G_loc/d=o(1)`.
+
+The PR #191 `0.995540...` theorem remains rejected. The finite S1 `q=13` object remains a regression, not a global-minimizer theorem.

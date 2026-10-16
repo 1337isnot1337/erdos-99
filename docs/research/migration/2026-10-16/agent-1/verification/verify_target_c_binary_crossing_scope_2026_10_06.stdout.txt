@@ -1,0 +1,1 @@
+{"classification": "exact finite scope regression", "contact_preserving_owner_states": [[0, 0, 0], [1, 1, 1]], "failed_owner_contact_squared_excess": "-47928/13000013", "omitted": ["canonical KKT", "beneficial old-diameter state", "global optimality"], "owner_pair_checks": 48, "train_pair_checks": 24}

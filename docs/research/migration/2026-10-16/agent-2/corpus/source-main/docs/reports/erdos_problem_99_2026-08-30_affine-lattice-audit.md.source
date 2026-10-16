@@ -1,0 +1,89 @@
+<!-- theorem-state: {"artifact_id":"ART-31A7F4F7C481","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Erdős Problem #99 — fixed affine-lattice bulk exclusion
+
+## Theorem
+
+Let \(u,v\) be linearly independent vectors and let
+\[
+\Lambda=\mathbb Zu+\mathbb Zv,
+\qquad
+a_\Lambda=|\det(u,v)|.
+\]
+Put
+\[
+R_\Lambda=\frac12\max\{|u+v|,\ |u-v|\}.
+\]
+For every finite \(n\)-point subset \(P\subset\Lambda\), let
+\(K=\operatorname{conv}P\) and \(D_P=\operatorname{diam}P\). Then
+\[
+n a_\Lambda
+\le \operatorname{area}(K+B(0,R_\Lambda))
+\le \frac{\pi}{4}(D_P+2R_\Lambda)^2.
+\tag{A.1}
+\]
+Consequently, if \(P\) is a global diameter minimizer, the strict triangular-lattice
+comparison
+\[
+D_P^2=D(n)^2<c n,
+\qquad
+c=\frac{2\sqrt3}{\pi},
+\]
+gives
+\[
+\boxed{
+a_\Lambda-\frac{\sqrt3}{2}
+<
+\pi R_\Lambda\sqrt{\frac{c}{n}}
+\;+\frac{\pi R_\Lambda^2}{n}.
+}
+\tag{A.2}
+\]
+In particular, for every fixed lattice with
+\[
+a_\Lambda>\frac{\sqrt3}{2},
+\]
+there is an \(n_0(\Lambda)\) such that no \(n\)-point subset of that lattice is a
+global minimizer for \(n\ge n_0(\Lambda)\).
+
+## Proof
+
+Use the half-open centered fundamental parallelogram
+\[
+F=\{su+tv:-\tfrac12\le s,t<\tfrac12\}.
+\]
+Its translates by \(\Lambda\) have disjoint interiors and each has area
+\(a_\Lambda\). The norm is convex as a function of \((s,t)\), so its maximum on the
+closed coefficient square is attained at a corner. Hence
+\[
+F\subseteq B(0,R_\Lambda).
+\]
+Since \(p\in K\) for every \(p\in P\), the disjoint cells \(p+F\) lie in
+\(K+B(0,R_\Lambda)\). This proves the first inequality in (A.1). The Minkowski sum
+has diameter at most \(D_P+2R_\Lambda\), so the isodiametric inequality proves the
+second.
+
+If \(P\) is globally optimal, \(D_P^2<c n\). Substituting this into (A.1) gives
+\[
+n a_\Lambda
+<
+\frac{\pi}{4}(\sqrt{c n}+2R_\Lambda)^2
+=\frac{\sqrt3}{2}n+\pi R_\Lambda\sqrt{c n}+\pi R_\Lambda^2,
+\]
+which is (A.2). The fixed-lattice exclusion follows because the right side of
+(A.2) tends to zero after division by \(n\). \(\square\)
+
+## Relation to the current frontier
+
+The theorem includes the fixed-angle oblique-lattice exclusion as the special case
+\(|u|=|v|=1\), where \(a_\Lambda=\sin\theta\). It also covers fixed anisotropic
+affine images not represented by a single rhombus angle.
+
+It does not exclude a sequence of affine lattices whose covolume approaches
+\(\sqrt3/2\) at the boundary scale \(O(n^{-1/2})\). This is exactly the scale of the
+distributed-strain regression: fixed affine bulk is eliminated, but vanishing strain
+can still pay only \(O(\sqrt n)\) total area. Nor does the theorem control a
+nonlattice rhombic mesh or the exterior constraints of a finite monomer domain.
+
+Thus this is a genuine quantitative narrowing, not a Level I solution. The remaining
+Target A bridge is still the source-Hall/Schur response inequality, or a finite
+boundary-compatible concentration theorem for the surviving vanishing-strain branch.

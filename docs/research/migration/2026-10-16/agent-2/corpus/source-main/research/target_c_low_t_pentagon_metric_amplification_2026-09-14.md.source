@@ -1,0 +1,281 @@
+# Erdős Problem #99 — low-`t` pentagon metric amplification
+
+**Date:** 2026-09-14  
+**Target:** C-II, canonical full-core Type-II branch  
+**Dependencies:** low-`t` pentagon sea; empty-pentagon trapezoid endpoint; flat-pentagon chain extraction; pentagonal two-contact tooth extraction  
+**Claim class:** proof-only structural synthesis; theorem-state authority unchanged  
+**External literature:** no new import
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The existing flat-chain and two-contact-tooth theorems use only the coarse all-Type-II
+exceptional-face floor.  In the low-`t` regime the actual pentagon count is much larger.
+On the small true force-hull residual branch, that stronger count passes directly to
+metric source objects.
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad C_0:=2\sqrt{\Delta_2}+0.00042,
+\]
+
+and on a convergent Type-II subsequence write
+
+\[
+t:=\lim{q-k\over D},\qquad
+\delta:=\lim{b-P_F\over D},\qquad
+\kappa:=\lim{k\over D}.
+\]
+
+Define
+
+\[
+P(t,\delta,\kappa)
+:=\pi+C_0-{5t\over2}+\delta+{\kappa\over2}.
+\tag{MA.1}
+\]
+
+The low-`t` pentagon theorem gives
+
+\[
+\boxed{{p_5\over D}\ge P(t,\delta,\kappa)-o(1).}
+\tag{MA.2}
+\]
+
+Assume additionally
+
+\[
+R_F=o(D).
+\tag{MA.3}
+\]
+
+Then there is a scale `epsilon_D->0` for which
+
+\[
+\boxed{
+{V_{flat}\over D}\ge {P(t,\delta,\kappa)\over5}-o(1),
+}
+\tag{MA.4}
+\]
+
+\[
+\boxed{
+{C_{flat}\over D}\ge {P(t,\delta,\kappa)\over13}-o(1),
+}
+\tag{MA.5}
+\]
+
+where `V_flat` counts distinct positive-core source vertices having two exact unit
+contacts whose angle tends to `pi`, and `C_flat` counts a pairwise vertex-disjoint
+family of the corresponding length-two contact chains.
+
+For every fixed `eta>0`, let `H_eta` be the maximum number of endpoint-disjoint hidden
+chords from pentagonal two-contact teeth, and let `T_eta` be the maximum number of
+vertex-disjoint such teeth.  Then
+
+\[
+\boxed{
+{H_\eta\over D}\ge {P(t,\delta,\kappa)\over9}-o(1),
+\qquad
+{T_\eta\over D}\ge {P(t,\delta,\kappa)\over13}-o(1).
+}
+\tag{MA.6}
+\]
+
+Every hidden chord counted by `H_eta` has length in `(1,1+eta)` and has endpoints with
+a common source neighbor joined to each by an exact unit contact.
+
+No assumption `Q-f=o(D)` is needed in (MA.4)--(MA.6).  The low-`t` pentagon theorem
+has already paid for the nonpentagonal exceptional faces.
+
+## 1. Almost every low-`t` pentagon is metrically good when `R_F=o(D)`
+
+Fix `epsilon>0`.  The empty-pentagon trapezoid theorem and Wegner first-jump argument
+supply a threshold `theta(epsilon)>0` such that a pentagon with local residual below
+`theta(epsilon)` is isolate-free and `epsilon`-close to the flat unit trapezoid.
+
+All local exceptional-face residuals are nonnegative and their sum is at most `R_F`.
+Thus (MA.3) implies that only
+
+\[
+{R_F\over\theta(\epsilon)}=o(D)
+\]
+
+pentagons fail the threshold.  If `G_epsilon` is the number of good pentagons, then
+(MA.2) gives
+
+\[
+\boxed{
+{G_\epsilon\over D}\ge P(t,\delta,\kappa)-o(1).
+}
+\tag{MA.7}
+\]
+
+This is the composition missing from the earlier coarse metric-extraction notes.
+
+## 2. Near-straight exact-contact chains
+
+Select the distinguished almost-flat middle vertex from each good pentagon.  A source
+vertex belongs to at most five bounded face sectors in the triangle-free unit-contact
+graph.  Hence
+
+\[
+G_\epsilon\le5V_{flat}(\epsilon).
+\tag{MA.8}
+\]
+
+For each good pentagon select its three-vertex boundary path through that middle
+vertex.  Two selected paths conflict when they share a source vertex.  Each path has
+three vertices and each source vertex occurs in at most five selected face paths, so
+the conflict graph has degree at most `3(5-1)=12`.  Therefore
+
+\[
+C_{flat}(\epsilon)\ge {G_\epsilon\over13}.
+\tag{MA.9}
+\]
+
+Equations (MA.7)--(MA.9) prove the fixed-`epsilon` versions of (MA.4)--(MA.5).
+Choosing `epsilon_D->0` sufficiently slowly preserves the same first-order constants.
+
+## 3. Two-contact near-equilateral teeth
+
+In the flat-trapezoid equality model, each leaf supplies a two-edge boundary path of
+exact unit contacts whose hidden chord is also unit.  Trapezoid stability therefore
+implies that for every fixed `eta>0`, every sufficiently low-residual good pentagon
+contains a tooth whose hidden chord has length below `1+eta`.  The hidden chord is
+strictly longer than one in an actual exceptional face, since a unit chord would be a
+contact splitting the face and would create the forbidden unit triangle.
+
+Choose one tooth per good pentagon.  The conflict graph on hidden chord endpoints has
+maximum degree at most eight, so at least `G_eta/9` chosen hidden chords are
+endpoint-disjoint.  The conflict graph on whole three-vertex teeth has maximum degree
+at most twelve, so at least `G_eta/13` teeth are vertex-disjoint.  Equation (MA.7)
+proves (MA.6).
+
+## 4. Current-floor constants
+
+Let
+
+\[
+C_{146}:={4\over9}\left(\pi+\sqrt{\Delta_2}\right),
+\qquad
+t_{42}:=C_{146}+0.0013751
+=1.8208886379794447\ldots .
+\]
+
+At the most permissive endpoint profile `delta=kappa=0`,
+
+\[
+P(t_{42},0,0)=0.4944166723690961\ldots .
+\tag{MA.10}
+\]
+
+Consequently every `R_F=o(D)` survivor at this floor satisfies
+
+\[
+\boxed{{V_{flat}\over D}\ge0.0988833344738192\ldots-o(1),}
+\tag{MA.11}
+\]
+
+\[
+\boxed{
+{C_{flat}\over D},\ {T_\eta\over D}
+\ge0.0380320517206997\ldots-o(1),
+}
+\tag{MA.12}
+\]
+
+and
+
+\[
+\boxed{{H_\eta\over D}\ge0.0549351858187884\ldots-o(1).}
+\tag{MA.13}
+\]
+
+These coefficients improve the corresponding coarse all-Type-II small-residual floors
+by factors
+
+\[
+{0.4944166723\ldots\over0.1671246434\ldots}>2.95.
+\tag{MA.14}
+\]
+
+The concurrent low-`t` two-window theorem also gives, at the same profile,
+
+\[
+{T_{off}(u,v;\epsilon)\over D}
+\ge0.247208336184549\ldots-o(1)
+\]
+
+for every fixed pair of narrow projective windows, while the low-`t` topology theorem
+gives
+
+\[
+{L_{OO}\over D}\ge0.320334770872156\ldots-o(1)
+\]
+
+actual outer-to-outer trains, each two-sidedly braced by diameter edges.  Thus all of
+these local metric and global train populations occur simultaneously in the hard
+low-`t`, small-residual corner.
+
+## 5. Uniform `t<=1.8585` constants
+
+If `t<=1.8585`, then after dropping `delta,kappa>=0`,
+
+\[
+P(t,\delta,\kappa)
+\ge0.4003882673177079\ldots .
+\tag{MA.15}
+\]
+
+Hence
+
+\[
+\boxed{{V_{flat}\over D}\ge0.0800776534635415\ldots-o(1),}
+\tag{MA.16}
+\]
+
+\[
+\boxed{
+{C_{flat}\over D},\ {T_\eta\over D}
+\ge0.0307990974859775\ldots-o(1),
+}
+\tag{MA.17}
+\]
+
+and
+
+\[
+\boxed{{H_\eta\over D}\ge0.0444875852575231\ldots-o(1).}
+\tag{MA.18}
+\]
+
+The same band already has `T_off/D>=0.200194133658854...` for every two-window pair
+and `L_OO/D>=0.132277960769379...`.
+
+## 6. Frontier effect and scope
+
+This theorem does not close C-II.  It makes the remaining low-`t`, small-residual
+geometry much less permissive: a linear family of almost-straight exact-contact
+chains, a linear family of structured almost-equilateral two-contact teeth, a
+macroscopic train population outside every two projective windows, and a macroscopic
+two-sidedly diameter-braced outer-train family must coexist.
+
+A closing theorem can now target a simultaneous perturbation of the disjoint local
+chains/teeth or a charge from their vanishing metric defects into the near-extremal
+Woodall diameter graph.  This note does not assert such a deformation or charge.
+
+Scope checks:
+
+- (MA.2) uses the proof-only AG42 low-`t` pentagon theorem.
+- (MA.4)--(MA.6) additionally require `R_F=o(D)`.
+- No `Q-f=o(D)` assumption is used.
+- All counted objects are finite-source vertices, edges, faces, and trains.
+- The fixed-threshold statements are proved before diagonalizing the metric tolerance.
+- No exact hidden contact, exact triangle, or same-cardinality strict sub-`D`
+  competitor is claimed.
+
+C-II and Level I remain open.

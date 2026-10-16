@@ -1,0 +1,146 @@
+# Target C — interface / augmented-defect dichotomy
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working route module; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module normalizes the independently audited content of the former proof-only
+“Section 127” branch without reusing a section number.
+
+Use canonical Section-123 augmented-cell quantities
+
+\[
+A_*:=\sum_r(a_r-T_r),
+\qquad
+Q_*:=\sum_rQ_r^+,
+\qquad
+J_{\rm aug}:=A_*+Q_*+2d_{\rm tile}.
+\]
+
+Canonical Section 123 gives the exact finite identity
+
+\[
+\boxed{
+J_{\rm aug}=2(e_{BB}-k).
+}
+\tag{IA.1}
+\]
+
+Let `R_4` be the number of global bounded strict-rhombus faces, `f` the number of
+global bounded nonquadrilateral faces, and `q=|B|`. Then every finite post-ZF C-II
+source satisfies
+
+\[
+\boxed{
+(q-k)+J_{\rm aug}\ge2\sqrt{R_4}.
+}
+\tag{IA.2}
+\]
+
+## 1. Finite proof
+
+Canonical Section 63 gives
+
+\[
+e_{BB}=Q+2k+u_B+c_B,
+\]
+
+where all displayed defect terms are nonnegative. Hence
+
+\[
+e_{BB}-k=Q+k+u_B+c_B\ge Q.
+\]
+
+Every bounded nonquadrilateral face has degree at least five, so
+
+\[
+Q\ge f.
+\]
+
+Therefore (IA.1) gives
+
+\[
+\boxed{J_{\rm aug}\ge2f.}
+\tag{IA.3}
+\]
+
+Canonical Section 85 gives the finite interface inequality
+
+\[
+\boxed{q-k+2f\ge2\sqrt{R_4}.}
+\tag{IA.4}
+\]
+
+Combining (IA.3) and (IA.4) proves (IA.2). No local/global boundary occurrence
+identification is used.
+
+## 2. Type-II split
+
+In the canonical full-core Type-II branch,
+
+\[
+{R_4\over D^2}\to
+\Delta:=\frac\pi{2\sqrt3}.
+\]
+
+Thus
+
+\[
+\boxed{
+\liminf_{D\to\infty}
+{(q-k)+J_{\rm aug}\over D}
+\ge2\sqrt\Delta
+=2\sqrt{\frac\pi{2\sqrt3}}.
+}
+\tag{IA.5}
+\]
+
+The defect term must remain explicit. In particular,
+
+\[
+J_{\rm aug}=o(D)
+\quad\Longrightarrow\quad
+\liminf{q-k\over D}\ge2\sqrt\Delta.
+\tag{IA.6}
+\]
+
+More generally, for fixed `eta>0`, if along a Type-II subsequence
+
+\[
+{q-k\over D}\le2\sqrt\Delta-\eta+o(1),
+\]
+
+then
+
+\[
+\boxed{
+J_{\rm aug}\ge(\eta-o(1))D.
+}
+\tag{IA.7}
+\]
+
+This is a dichotomy, not an unconditional `q-k` floor. The recently rejected
+`1.9046...` standalone loaded-hull floor must not be inferred from (IA.5) unless the
+augmented defect is known to be sublinear.
+
+## 3. Hostile-audit checks
+
+The following points were recomputed independently.
+
+- (IA.1) is exactly the Section-123 identity
+  `e_BB-k = (1/2) sum_r(a_r-T_r+Q_r^+) + d_tile`.
+- `e_BB-k>=Q>=f` follows from canonical Section 63 and the degree-at-least-five
+  property of each bounded nonquadrilateral face.
+- The factor `2` in `J_aug>=2f` is correct.
+- Substituting into canonical Section 85 preserves the inequality direction.
+- The Type-II passage uses only the canonical rhombus-density limit.
+- No source point is removed and no affine-kernel statement is extended to
+  contact-isolated coordinates.
+
+## 4. Scope
+
+The result does not bound `J_aug` from above and does not eliminate either branch of
+the split. It does not address the macroscopic inactive-container branch. It is safe
+as a research dependency but is not a theorem-state promotion.
+
+**Verdict:** PASS at audited-working scope. C-II remains open.

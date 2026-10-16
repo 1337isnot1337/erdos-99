@@ -1,0 +1,331 @@
+# Target C-II — singleton/full-rhombic-pentagon-flower dichotomy extends through `t<=2.02`
+
+**Date:** 2026-09-15  
+**Status:** proof-only scope propagation / high-`t` structural strengthening  
+**Scope:** canonical full-core Type-II train-measure branch  
+**Dependencies:** hostile-audited uniform all-train gap `g=0.007707`; exact singleton/full-flower incidence inequality; modern train-slack identity; isolate-host face degree-`>=7` theorem  
+**Certificate:** `research/verify_target_c_full_pentagon_flower_extended_range.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The modern singleton/full-pentagon-flower theorem was originally tabulated only through
+
+\[
+t={q-k\over D}\le1.8623.
+\]
+
+That endpoint came from the then-current pentagon/path discussion.  Its two actual inputs are broader:
+
+1. the all-train pentagon floor is available throughout the full-core Type-II train-measure branch; and
+2. the exact finite inequality
+   \[
+   P_5-F_5^{full}\le2S
+   \]
+   has no `t` restriction.
+
+Therefore the same dichotomy persists throughout the full range where the uniform pentagon lower envelope is positive, namely every fixed
+
+\[
+\boxed{t<2.02157\ldots .}
+\]
+
+At the useful round endpoint `t<=2.000`, every survivor has
+
+\[
+\boxed{
+S>0.0179D-o(D)
+\quad\text{or}\quad
+F_5^{full}>0.0179D-o(D).
+}
+\tag{FF.1}
+\]
+
+All fully rhombic pentagons in the second branch are source-empty.  If that branch occurs, then additionally
+
+\[
+\boxed{\sigma_R>1.457D-o(D),}
+\tag{FF.2}
+\]
+
+\[
+\boxed{{T_R^2\over4}-R_4>0.826D^2-o(D^2),}
+\tag{FF.3}
+\]
+
+and more than
+
+\[
+\boxed{0.0449D-o(D)}
+\tag{FF.4}
+\]
+
+distinct strict-rhombus stopped trains terminate on fully rhombic pentagonal flowers.
+
+Even at `t<=2.020` the common singleton/full-flower floor remains positive.
+
+---
+
+## 1. Uniform pentagon floor
+
+The scope-safe matched all-train theorem gives throughout the full-core train-measure branch
+
+\[
+\liminf{T_{train}-q/2\over D}
+\ge C_{707}:=2\sqrt{\Delta_2}+0.007707,
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\tag{FF.5}
+\]
+
+Canonical stopped-train and loaded-hull bookkeeping then gives, at any fixed endpoint `t<=X`,
+
+\[
+\boxed{
+\liminf {P_5\over D}
+\ge p_5(X):=C_{707}+\pi-{5X\over2}.
+}
+\tag{FF.6}
+\]
+
+The right side is positive for
+
+\[
+X<{2(C_{707}+\pi)\over5}=2.02157\ldots .
+\tag{FF.7}
+\]
+
+The exact companion certificate gives a lower enclosure of the threshold above `2.0215`.
+
+---
+
+## 2. Exact finite full-flower incidence inequality
+
+Let `S` be the number of singleton stopped trains, equivalently contact edges incident to no strict-rhombus face.  Let `F_5^{full}` count bounded pentagons with a strict unit rhombus across each of all five sides.
+
+If a pentagon is not fully rhombic, at least one of its boundary edges has no strict rhombus on either side, because the pentagon itself is not a rhombus.  That edge is singleton.  One singleton edge has only two face sides, so it can witness non-fullness of at most two pentagons.
+
+Hence finitely
+
+\[
+\boxed{P_5-F_5^{full}\le2S.}
+\tag{FF.8}
+\]
+
+This is the same exact inequality as in the parent theorem and has no asymptotic or phase hypothesis.
+
+---
+
+## 3. Balanced dichotomy at an arbitrary fixed endpoint
+
+Define
+
+\[
+s(X):={p_5(X)\over3}.
+\tag{FF.9}
+\]
+
+If
+
+\[
+S\ge s(X)D-o(D),
+\]
+
+the singleton alternative holds.  Otherwise, using (FF.6) and (FF.8),
+
+\[
+\begin{aligned}
+F_5^{full}
+&\ge P_5-2S\\
+&>p_5(X)D-2s(X)D-o(D)\\
+&=s(X)D-o(D).
+\end{aligned}
+\]
+
+Thus
+
+\[
+\boxed{
+\max\{S,F_5^{full}\}
+\ge s(X)D-o(D).
+}
+\tag{FF.10}
+\]
+
+Safe exact rows are
+
+\[
+\begin{array}{c|c}
+X & s(X)\text{ lower}\\ \hline
+1.880 & 0.1179\\
+1.900 & 0.1013\\
+1.920 & 0.0846\\
+1.950 & 0.0596\\
+1.960 & 0.0513\\
+2.000 & 0.0179\\
+2.020 & 0.0013.
+\end{array}
+\tag{FF.11}
+
+Every fully rhombic pentagon in (FF.10) has empty source interior by the merged isolate-host theorem.
+
+---
+
+## 4. Failure of the singleton alternative forces very large rhombic train slack
+
+The exact stopped-train split gives
+
+\[
+\rho_{rec}=2S,
+\qquad
+2\tau_D=\rho_{rec}+\sigma_R,
+\tag{FF.12}
+\]
+
+and the hostile-audited modern theorem gives
+
+\[
+\tau_D\ge(\tau_0-o(1))D,
+\qquad
+\tau_0=0.7467921.
+\tag{FF.13}
+\]
+
+In the full-flower side of (FF.10),
+
+\[
+S<s(X)D+o(D),
+\]
+
+so
+
+\[
+\boxed{
+\liminf {\sigma_R\over D}
+\ge \sigma_0(X):=2[\tau_0-s(X)].
+}
+\tag{FF.14}
+\]
+
+Representative safe lower rows are
+
+\[
+\begin{array}{c|c}
+X & \sigma_0(X)\\ \hline
+1.880 & 1.257\\
+1.900 & 1.290\\
+1.920 & 1.324\\
+1.950 & 1.374\\
+1.960 & 1.390\\
+2.000 & 1.457\\
+2.020 & 1.490.
+\end{array}
+\tag{FF.15}
+
+The increasing lower bound is not paradoxical: as the forced pentagon population shrinks, the balanced alternative permits a smaller singleton count; failure of that smaller singleton alternative forces more of the fixed total train slack into `sigma_R`.
+
+---
+
+## 5. Quadratic Mantel deficit in the full-flower branch
+
+For the strict-rhombus stopped-train crossing graph,
+
+\[
+\sigma_R=2T_R-4\sqrt{R_4}
+\]
+
+and exactly
+
+\[
+\boxed{
+{T_R^2\over4}-R_4
+={\sigma_R\sqrt{R_4}\over2}
++{\sigma_R^2\over16}.
+}
+\tag{FF.16}
+\]
+
+Since
+
+\[
+R_4/D^2\to\Delta_2,
+\]
+
+(FF.14) gives
+
+\[
+\liminf D^{-2}\left({T_R^2\over4}-R_4\right)
+\ge {\sigma_0(X)\sqrt{\Delta_2}\over2}
++{\sigma_0(X)^2\over16}.
+\tag{FF.17}
+\]
+
+The exact certificate gives safe rows
+
+\[
+\begin{array}{c|c}
+X & \text{Mantel deficit}/D^2\text{ lower}\\ \hline
+1.880 & 0.697\\
+1.900 & 0.718\\
+1.920 & 0.740\\
+1.950 & 0.772\\
+1.960 & 0.783\\
+2.000 & 0.826\\
+2.020 & 0.848.
+\end{array}
+\tag{FF.18}
+
+---
+
+## 6. Fully rhombic flowers force terminal train mass
+
+A fully rhombic pentagon has five terminal strict-rhombus face-side occurrences.  A complete stopped train has at most two terminal occurrences.  Therefore, if `N_full` is the number of distinct non-singleton stopped trains ending at fully rhombic pentagons,
+
+\[
+\boxed{N_{full}\ge{5\over2}F_5^{full}.}
+\tag{FF.19}
+\]
+
+In the full-flower alternative this gives
+
+\[
+\liminf {N_{full}\over D}
+\ge {5\over2}s(X).
+\tag{FF.20}
+\]
+
+Safe rows are
+
+\[
+\begin{array}{c|c}
+X & N_{full}/D\text{ lower}\\ \hline
+1.880 & 0.2949\\
+1.900 & 0.2532\\
+1.920 & 0.2116\\
+1.950 & 0.1491\\
+1.960 & 0.1282\\
+2.000 & 0.0449\\
+2.020 & 0.0032.
+\end{array}
+\tag{FF.21}
+
+---
+
+## 7. Frontier effect
+
+The modern full-core high-`t` train network therefore has the following scope-independent hierarchy:
+
+```text
+for every fixed t < 2.02157...:
+    either a linear singleton-train population
+    or a linear population of source-empty fully rhombic pentagonal flowers;
+
+in the full-flower branch:
+    a correspondingly large rhombic train-isoperimetric slack;
+    a quadratic Mantel deficit;
+    linearly many rhombic trains terminating on the flowers.
+```
+
+This remains separate from the corrected O--O path/hub theorem, whose current endpoint is `t<=1.860`.  No hub or finite-strip conclusion is imported above that range.
+
+Local metric regressions still prevent assigning a uniform angular defect to one fully rhombic flower.  The closing target is therefore network-theoretic: exploit the incidence graph between many empty five-rhombus holes and the highly non-Mantel rhombic train system, or exploit the singleton endpoint graph in the opposite branch.
+
+**Disposition:** proved scope propagation of the singleton/full-flower dichotomy through `t<=2.02`, with exact train-slack and Mantel consequences. C-II and Level I remain open.

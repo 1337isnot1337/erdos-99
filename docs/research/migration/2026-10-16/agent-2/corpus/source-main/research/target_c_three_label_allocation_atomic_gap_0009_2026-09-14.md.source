@@ -1,0 +1,474 @@
+# Erdős Problem #99 — three-label low-overlap allocation raises the atomic gap to 0.0009
+
+**Date:** 2026-09-14  
+**Repository base:** `d4154841` on `research/c2-gluing-sol-20260914`  
+**Target:** Target C-II, canonical full-core Type-II branch  
+**Claim class:** proof-only strengthening of TL69 / AG58 / AG47  
+**External input:** none beyond the existing stopped-train, Mantel-stability, and chain-cover stack
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The current two-leaf theorem TL69 proves the atomic train gap `eta_grid=0.000698` after first majority-assigning each of the three dominant-orbit atom windows to one Mantel shore. That assignment discards up to `sqrt(6 d_0)D` atom mass. The discard is not necessary.
+
+The three labels can be handled before majority assignment. If the two Mantel shores have equal trimmed mass `s` and the same-label missing mass is `p`, then some **distinct** labels satisfy
+
+\[
+ x_i+y_j\ge {3s\over2}-{2p\over s}.
+\]
+
+Thus low same-label overlap already forces one large cross-label pair, with only an `O(p)` loss rather than the previous `O(sqrt(p))` loss. Applying the AG47 chain-cover/ordered-path argument to that pair gives
+
+\[
+\boxed{
+ x\sigma\ge2\sqrt{\Delta_2}+0.0009,
+ \qquad \Delta_2={\pi\over2\sqrt3}.
+}
+\tag{LA90.1}
+\]
+
+Hence at the same proof-only scope one may take
+
+\[
+\boxed{\eta_{grid}=0.0009.}
+\tag{LA90.2}
+\]
+
+This is a structural improvement over TL69, not decimal tuning of its final inequality.
+
+---
+
+## 1. Exact three-label allocation lemma
+
+Let
+
+\[
+ x_1,x_2,x_3,y_1,y_2,y_3\ge0,
+ \qquad
+ \sum_i x_i=\sum_i y_i=s>0,
+\]
+
+and put
+
+\[
+ p:=\sum_i x_i y_i,
+ \qquad
+ L_*:=\max_{i\ne j}(x_i+y_j).
+\tag{LA90.3}
+\]
+
+### Lemma LA90.1
+
+If `p<s^2/4`, then
+
+\[
+\boxed{
+L_*\ge {3s\over2}-{2p\over s}.
+}
+\tag{LA90.4}
+\]
+
+Consequently there are distinct labels `i != j` such that
+
+\[
+\boxed{
+ x_i+y_j\ge {3s\over2}-{2p\over s},
+ \qquad
+ \min\{x_i,y_j\}\ge {s\over2}-{2p\over s}.
+}
+\tag{LA90.5}
+\]
+
+The second inequality follows because each coordinate is at most `s`.
+
+### Proof
+
+Scale to `s=1`. Write `L=L_*`. If `L>=3/2`, the claim is immediate, so consider `L<3/2`.
+
+Relabel the coordinates so
+
+\[
+ x_1\le x_2\le x_3.
+\]
+
+For fixed `x` and `L`, the six inequalities `x_i+y_j<=L` for `i!=j` imply
+
+\[
+ y_1\le a,
+ \qquad y_2\le a,
+ \qquad y_3\le L-x_2,
+ \qquad a:=L-x_3.
+\tag{LA90.6}
+\]
+
+Among all feasible `y` with sum one, the scalar product
+
+\[
+p=x_1y_1+x_2y_2+x_3y_3
+\]
+
+is minimized by filling the cheapest coordinate first: fill `y_1` to its cap, then `y_2`, then `y_3`. This is the usual exchange argument for a linear objective with ordered costs `x_1<=x_2<=x_3`.
+
+We first treat `1<=L<=3/2`.
+
+#### Case A: `a>=1`
+
+Then the minimizing vector is `y=(1,0,0)` and `p>=x_1`. Since
+
+\[
+x_3\le L-1\le {1\over2},
+\]
+
+we have
+
+\[
+x_1=1-x_2-x_3\ge1-2x_3\ge3-2L.
+\]
+
+For `L<=3/2`,
+
+\[
+3-2L\ge {3/2-L\over2}.
+\tag{LA90.7}
+\]
+
+#### Case B: `1/2<=a<1`
+
+The minimizing allocation is
+
+\[
+y_1=a,\qquad y_2=1-a,\qquad y_3=0,
+\]
+
+so
+
+\[
+p\ge ax_1+(1-a)x_2.
+\tag{LA90.8}
+\]
+
+For fixed `x_3`, the coefficient of `x_1` is at least the coefficient of `x_2`, so the right side is minimized by making `x_1` as small as the ordering permits.
+
+If `x_3>=1/2`, take `x_1=0`, `x_2=1-x_3`. Then
+
+\[
+p\ge(1-L+x_3)(1-x_3).
+\tag{LA90.9}
+\]
+
+The right side is concave in `x_3`. On the allowed interval
+
+\[
+{1\over2}\le x_3\le L-{1\over2},
+\]
+
+its minimum is attained at an endpoint, and both endpoints give
+
+\[
+p\ge {3/2-L\over2}.
+\tag{LA90.10}
+\]
+
+If `x_3<1/2`, the smallest possible `x_1` occurs at `x_2=x_3`, hence
+
+\[
+p\ge L-3Lx_3+3x_3^2.
+\tag{LA90.11}
+\]
+
+Because `x_3<=1/2<=L/2`, this quadratic decreases up to the endpoint `x_3=1/2`, where it again equals `(3/2-L)/2`.
+
+#### Case C: `a<1/2`
+
+The minimizing allocation is
+
+\[
+y_1=y_2=a,\qquad y_3=1-2a.
+\]
+
+Using `x_1+x_2=1-x_3` and `a=L-x_3`,
+
+\[
+p\ge L-3Lx_3+3x_3^2.
+\tag{LA90.12}
+\]
+
+Now `x_3>L-1/2>=L/2`, so the quadratic is increasing. Its infimum occurs at `x_3=L-1/2` and equals
+
+\[
+p\ge {3/2-L\over2}.
+\tag{LA90.13}
+\]
+
+Thus for every `1<=L<=3/2`,
+
+\[
+p\ge {3/2-L\over2}.
+\tag{LA90.14}
+\]
+
+At `L=1` this gives `p>=1/4`. If `L<1`, the feasible set is a subset of the feasible set at `L=1`, so again `p>=1/4`. Therefore the hypothesis `p<1/4` forces `L>=1`, and (LA90.14) rearranges to
+
+\[
+L\ge {3\over2}-2p.
+\]
+
+Rescaling by `s` proves (LA90.4). `square`
+
+### Sharpness
+
+For `0<=p<=s^2/4`, take
+
+\[
+ x=(s/2,s/2,0),
+ \qquad
+ y=(2p/s,0,s-2p/s).
+\]
+
+Then `x dot y=p` and
+
+\[
+L_*={3s\over2}-{2p\over s}.
+\]
+
+So the allocation inequality itself cannot be improved.
+
+---
+
+## 2. Apply the lemma before majority assignment
+
+Assume for contradiction that a Type-II train-measure limit satisfies
+
+\[
+A:=x\sigma\le\bar A:=2s_2+\eta,
+\qquad
+s_2:=\sqrt{\Delta_2},
+\qquad
+\eta:=0.0009.
+\tag{LA90.15}
+\]
+
+Use the same dominant-orbit reduction as audited-working Section 168, AG47, AG58, and TL69. A dominant three-direction orbit has mass at least
+
+\[
+M_0={4s_2^2\over\bar A},
+\tag{LA90.16}
+\]
+
+with outside mass at most
+
+\[
+R_0=\bar A-M_0,
+\]
+
+and conservative Mantel deficit
+
+\[
+d_0={\bar A^2\over4}-s_2^2+{R_0^2\over4}.
+\tag{LA90.17}
+\]
+
+The maximum-degree Mantel partition gives two shores whose dominant-orbit masses are each at least
+
+\[
+\boxed{
+s_0:={M_0\over2}-\sqrt{d_0}.
+}
+\tag{LA90.18}
+\]
+
+There are at most three atom windows in the orbit. Write their normalized shore masses as `x_i,y_i`. Same-window pairs do not cross, so the total same-label product obeys
+
+\[
+\sum_i x_i y_i\le2d_0.
+\tag{LA90.19}
+\]
+
+If one shore has mass larger than `s_0`, trim its three coordinates downward until its sum is exactly `s_0`; do the same independently on the other shore. Trimming cannot increase (LA90.19). Thus Lemma LA90.1 applies to equal-mass vectors of sum `s_0` with
+
+\[
+p\le2d_0.
+\]
+
+The exact certificate verifies
+
+\[
+2d_0<{s_0^2\over4}.
+\tag{LA90.20}
+\]
+
+Therefore there are distinct atom labels whose original families have normalized masses `a,b` satisfying
+
+\[
+\boxed{
+a+b\ge P_0:={3s_0\over2}-{4d_0\over s_0},}
+\tag{LA90.21}
+\]
+
+and individually
+
+\[
+\boxed{
+\min\{a,b\}\ge m_0:={s_0\over2}-{4d_0\over s_0}.
+}
+\tag{LA90.22}
+\]
+
+Because the labels are distinct members of one projective three-cycle, their limiting axes differ by exactly `pi/3`.
+
+---
+
+## 3. Chain cover and ordered-path contradiction
+
+The chosen two atom families inherit at most the full Mantel missing-pair budget
+
+\[
+(2d_0+o(1))D^2.
+\]
+
+Put
+
+\[
+p_0:=\sqrt{2d_0}.
+\tag{LA90.23}
+\]
+
+Exactly as in AG47, every phase inversion is a missing pair and the inversion graph is a chain graph. A minimum vertex cover deletes all inversions using at most
+
+\[
+(\sqrt2\,p_0+o(1))D
+\]
+
+trains total across the two shores.
+
+Then delete every remaining train missing more than `(p_0+o(1))D` opposite trains. Markov deletes at most `(p_0+o(1))D` trains from each shore. Every retained train misses at most that many opposite trains.
+
+Even if the whole chain-cover loss falls on the smaller family, the retained smaller shore has normalized mass at least
+
+\[
+m_0-(\sqrt2+1)p_0-o(1).
+\]
+
+The exact certificate gives
+
+\[
+\boxed{
+m_0-(4+\sqrt2)p_0>0.23327.}
+\tag{LA90.24}
+\]
+
+Hence every pair and every triple on one retained shore has a common neighbor on the other. The actual-`K_{2,2}` consistency argument from Section 163 globalizes the crossing orders.
+
+Take the usual opposite-corner two-leg path. Relative to the original two selected atom families, the selected degree sum loses at most
+
+- `sqrt(2) p_0` from phase inversion cover;
+- `2p_0` from degree pruning;
+- `2p_0` from the two corner missing-degree deficits.
+
+Thus
+
+\[
+1\ge{\sqrt3\over2}
+\left[P_0-(4+\sqrt2)p_0\right]-o(1).
+\tag{LA90.25}
+\]
+
+At `eta=0.0009`, exact interval arithmetic gives
+
+\[
+\begin{aligned}
+M_0&=1.903726038807480\ldots,\\
+R_0&=0.001799574920434\ldots,\\
+d_0&=0.000858093643651\ldots,\\
+s_0&=0.922569783944830\ldots,\\
+P_0&=1.380134226110264\ldots,\\
+m_0&=0.457564442165433\ldots,\\
+p_0&=0.041426890871778\ldots,
+\end{aligned}
+\tag{LA90.26}
+\]
+
+and
+
+\[
+\boxed{
+{\sqrt3\over2}
+\left[P_0-(4+\sqrt2)p_0\right]
+>1.0009869.
+}
+\tag{LA90.27}
+\]
+
+This contradicts (LA90.25). Therefore (LA90.1) holds.
+
+---
+
+## 4. Immediate propagation
+
+Every proof-only consequence depending only on the atomic train gain may now use `g=0.0009`. In particular,
+
+\[
+\boxed{
+\liminf {T-q/2\over D}
+\ge2\sqrt{\Delta_2}+0.0009,
+}
+\tag{LA90.28}
+\]
+
+and the rhombic-only transfer gives
+
+\[
+\boxed{
+\liminf {\sigma_R\over D}\ge0.0018.
+}
+\tag{LA90.29}
+\]
+
+The correlated stopped-train identity gives
+
+\[
+\boxed{
+\liminf {\rho_{rec}+\sigma_R-q\over D}\ge0.0018.
+}
+\tag{LA90.30}
+\]
+
+The Section-171 orbit/detour endpoint and the chamber/residual coefficients should be recomputed from `g=0.0009`; they are not copied from the earlier AG58/TL69 constants here.
+
+---
+
+## 5. Method ceiling and next target
+
+The unchanged one-pair chain-cover calculation with the sharp allocation lemma has its numerical root near
+
+\[
+\eta=0.00090740775\ldots .
+\]
+
+So `0.0009` is close to the ceiling of the **one selected cross-label pair** architecture.
+
+There is still unused structure. Before majority assignment, the global missing budget decomposes as
+
+\[
+\sum_i x_i y_i
++
+\sum_{i\ne j}\rho_{ij},
+\]
+
+and TL69 gives a separate lower payment for every cross-label pair with `x_i+y_j>2/sqrt3`. A direct six-pair optimization should therefore be stronger than LA90. The numerical finite optimization suggests a substantially larger possible gap, but no theorem is asserted until that optimization is proved analytically.
+
+---
+
+## 6. Scope audit
+
+- The theorem has the same full-core Type-II train-measure scope as audited Section 168 and TL69.
+- The dominant-orbit/Mantel bounds are unchanged.
+- No majority assignment is used.
+- Trimming is only an inequality operation on limiting atom masses; no source point or train is deleted from the physical configuration.
+- The selected atom labels are distinct, hence their limiting axes differ by exactly `pi/3`.
+- The phase-inversion chain cover and global crossing-order argument are exactly the audited AG47/Section-163 mechanisms.
+- Contact-isolated source points remain in the source throughout.
+- No global competitor, exact unit triangle, or Level-I closure is claimed.
+
+**Disposition:** proof-only LA90 candidate awaiting independent audit. C-II remains open.

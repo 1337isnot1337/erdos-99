@@ -1,0 +1,61 @@
+# Target C branch-recovery index
+
+**Audit date:** 2026-09-04  
+**Canonical status:** LEVEL I STILL OPEN
+
+This file indexes research material recovered from non-main branches during the 2026-09-04 all-branch consolidation. The recovered files are part of the main corpus for preservation and reuse, but their historical `Cxx` labels do not override later canonical theorem numbering.
+
+Full branch-by-branch disposition: [branch_consolidation_audit_2026-09-04.md](../../reports/branch_consolidation_audit_2026-09-04.md).
+
+## Matching-contraction regression
+
+- [general matching contraction audit](../../reports/target_c_general_matching_contraction_audit_2026-08-31.md)
+- [audit script](../../../research/target_c_matching_contraction_audit.py)
+
+The recovered audit records an exact counterexample to the naive cross-cut sign proof while retaining PSD contraction defect in the witness. Use it as a guardrail for the arbitrary-matching route: the remaining target is a Gale-matrix / matrix-Kalmanson / planar-dual certificate.
+
+## Gate C-I alternate and intermediate proofs
+
+- [formal integrability Gate C-I closure](../../reports/target_c_formal_integrability_gate_c1_closure_2026-08-31.md)
+- [facial second-order strictification](../../reports/target_c_facial_second_order_strictification_2026-08-31.md)
+
+The formal-integrability report is an alternate exact closure proof using formal series and real-closed-field transfer. The facial report isolates the second-order exposed-face strictification lemma. The current Newton-Hoffman C63 route remains canonical.
+
+## Response PSD transport currency
+
+- [fully visible response PSD transport](../../reports/target_c_fully_visible_response_psd_transport_2026-08-31.md)
+
+The current PSD response-cut theorem retains `M=Lambda-L_H >= 0`. The recovered report additionally gives pairwise and bounded-degree charging inequalities, including the `tr(M)/2` matching budget and diameter-matching total-variation bound.
+
+## Diameter-class rigidity and reciprocal decomposition
+
+- [diameter-contracted contact rigidity](../../reports/target_c_diameter_contraction_rigidity_2026-08-31.md)
+- [diameter-class stress](../../reports/target_c_diameter_class_stress_2026-08-31.md)
+- [diameter-component reciprocal decomposition](../../reports/target_c_diameter_component_reciprocal_2026-08-31.md)
+
+These are exact C-II structural lemmas: contraction to full-diameter translation classes, positive cross-class self-stress, and a componentwise reciprocal-polygon/Minkowski decomposition.
+
+## Low-diameter-support prestress sequence
+
+- [low-diameter prestress and rattler dichotomy](../../reports/target_c_low_diameter_prestress_2026-08-31.md)
+- [response-matrix inertia budget](../../reports/target_c_response_inertia_budget_2026-08-31.md)
+- [two-direction cross-chain normal form](../../reports/target_c_two_direction_cross_chain_2026-08-31.md)
+- [two-diameter weak-contact elimination](../../reports/target_c_two_diameter_weak_contact_elimination_2026-08-31.md)
+
+These reports contain special-support PSD/inertia statements and geometric normal forms that remain useful even though their Gate C-I proof target is globally superseded by C63.
+
+## Star max-flow reduction
+
+- [arbitrary-cut star transport and max-flow saturation](../../reports/target_c_star_leaf_maxflow_2026-08-31.md)
+
+This gives an arbitrary star-separating contact-cut lower bound and a max-flow/min-cut stress-transport formulation absent from the later mainline text.
+
+## Two-terminal harmonic corridor
+
+- [two-terminal harmonic corridors](../../reports/target_c_two_terminal_corridor_2026-08-31.md)
+
+This preserves the unloaded-domain convex-hull principle and the exact two-terminal harmonic collapse. Later bridge theorems strengthen the canonical route but do not state this general harmonic formulation.
+
+## Use rule
+
+When a recovered report conflicts with a later mainline theorem, use the later mainline theorem. Recovered reports are retained for unique lemmas, alternate proofs, counterexamples, computations, and proof-route provenance; they do not roll back corrections or supersessions documented in the consolidation audit.

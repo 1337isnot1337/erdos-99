@@ -1,0 +1,369 @@
+# Target C-II — double-unit corner / flat-center overlap
+
+**Date:** 2026-09-14
+**Target:** C-II, canonical full-core Type-II branch
+**Dependencies:** teeth-versus-double-unit-corner squeeze; bridge-subtracted outer-face isoperimetry; low-`t` pentagon sea; empty-pentagon trapezoid stability; minimax atomic gap `0.0021`
+**Claim class:** proof-only structural refinement awaiting independent audit
+**LEVEL I STATUS:** `STILL OPEN`
+
+The current boundary theorem forces either many outer two-edge teeth or many exact
+double-unit loaded hull corners. Its degree-two double-unit branch was previously
+recorded only as loaded contact-degree slack. In the small true-residual regime that
+loses geometric information: except for an explicitly paid set of bridge, high-degree,
+and high-residual incidences, a small-turn degree-two double-unit corner is the flat
+middle vertex of an actual pentagonal exceptional face.
+
+Let
+
+- `N_2` be the genuine two-edge outer-tooth count;
+- `C_11` be the number of loaded hull vertices whose two adjacent loaded-hull sides
+  both have length exactly one;
+- `B_o` be the number of outer-face graph bridges;
+- `X:=Q-f=sum_{d>=6}(d-5)n_d` be exceptional-face degree excess above pentagons;
+- `R_F` be the true force-hull residual;
+- `L_flat^bd` be the set of loaded flat-pentagon centers produced below; and
+- `E_in^(4)` be the distinct third contacts at degree-three `C_11` corners whose
+  exterior turn is smaller than `pi/4`.
+
+There is a fixed residual threshold `theta_*>0` such that every sufficiently large
+finite source obeys
+
+\[
+\boxed{
+N_2+|L_{flat}^{bd}|+|E_{in}^{(4)}|+2B_o+6X+{5R_F\over\theta_*}
+\ge 2q-P_F-3d_{out}-8.
+}
+\tag{OF.1}
+\]
+
+Here `P_F=per(F)` and `d_out=b-P_F`. Every edge in `E_in^(4)` is a loaded-to-unloaded
+unit contact and has inward angle-bisector component greater than `sqrt(3)/2`.
+
+On a convergent low-`t` Type-II subsequence with
+
+\[
+t={q-k\over D},\qquad
+\kappa={k\over D},\qquad
+\delta={d_{out}\over D},\qquad R_F=o(D),
+\]
+
+put
+
+\[
+\Delta_2={\pi\over2\sqrt3},\qquad
+C_{21}:=2\sqrt{\Delta_2}+0.0021.
+\]
+
+Then bridge-subtracted isoperimetry and the low-`t` degree-excess bound turn (OF.1)
+into
+
+\[
+\boxed{
+\liminf {N_2+|L_{flat}^{bd}|+|E_{in}^{(4)}|\over D}
+\ge
+5\pi+3C_{21}-{23\over2}t+2\delta+{7\over2}\kappa.
+}
+\tag{OF.2}
+\]
+
+In particular,
+
+\[
+\boxed{
+\liminf {N_2+|L_{flat}^{bd}|+|E_{in}^{(4)}|\over D}
+\ge
+5\pi+3C_{21}-{23\over2}t.
+}
+\tag{OF.3}
+\]
+
+The right side stays positive for
+
+\[
+t<{2\over23}(5\pi+3C_{21})=1.8633165312\ldots .
+\]
+
+At the current proof-only endpoint
+
+\[
+t_{21}={4\over9}\left(\pi+\sqrt{\Delta_2}\right)+0.0017279
+=1.82124143797944\ldots,
+\]
+
+(OF.3) gives
+
+\[
+\boxed{
+{N_2+|L_{flat}^{bd}|+|E_{in}^{(4)}|\over D}
+\ge0.483863572369096\ldots-o(1),
+}
+\tag{OF.4}
+\]
+
+and hence
+
+\[
+\boxed{
+\max\{N_2,|L_{flat}^{bd}|,|E_{in}^{(4)}|\}
+\ge0.161287857456365\ldots D-o(D).
+}
+\tag{OF.5}
+\]
+
+Even uniformly on `t<=1.8585`, (OF.3) remains positive and gives the corresponding
+three-way maximum floor `0.0184633697109034...D-o(D)`.
+
+The gain is structural rather than numerical: the old `s_B` escape has been replaced
+by actual loaded flat pentagon centers, placing that branch directly inside the global
+flat-center stress/activation trichotomy.
+
+## 1. Small-turn double-unit corners
+
+Let `A,B,C` be consecutive loaded force-hull vertices with
+
+\[
+|A-B|=|B-C|=1.
+\]
+
+Write `phi_B` for the exterior turn at `B`. Since the total exterior turn of the
+convex force hull is `2pi`, at most eight loaded hull vertices satisfy
+
+\[
+\phi_B\ge\pi/4.
+\tag{OF.6}
+\]
+
+Restrict to `C_11` corners with `phi_B<pi/4`. The hull interior angle at `B` is then
+
+\[
+\theta_B=\pi-\phi_B>3\pi/4.
+\tag{OF.7}
+\]
+
+The loaded contact-degree bound gives `deg_C(B)=2` or `3`.
+
+If `deg_C(B)=3`, let `BW` be the third contact. The double-unit-corner theorem already
+proves that `W` is unloaded and that `BW` points strictly into the hull with normal
+component at least `sqrt(3)/2`. Different corners have different loaded endpoints, so
+these selected third-contact edges are distinct. They form `E_in^(4)`.
+
+It remains to understand the degree-two corners.
+
+## 2. Degree two plus no bridge gives one bounded face
+
+Suppose `deg_C(B)=2` and neither `AB` nor `BC` is an outer-face bridge. Since `B` is
+on the convex hull and has only the two incident contact edges, its rotation has two
+face sectors: the exterior sector and the hull-interior sector between `BA` and `BC`.
+The exterior sector is the unbounded face. Each nonbridge boundary edge has a bounded
+face on its other side, so the two interior-side face incidences must be the same
+bounded face; call it `P_B`.
+
+If at least one of `AB,BC` is an outer bridge, charge this corner to such a bridge.
+Every bridge has only two endpoints, so the number of degree-two `C_11` corners lost
+in this way is at most
+
+\[
+2B_o.
+\tag{OF.8}
+\]
+
+This count is by physical edges and remains valid when the outer-face walk repeats
+vertices or bridge occurrences.
+
+## 3. The bounded face cannot be quadrilateral
+
+Every bounded contact face has unit boundary sides. If `P_B` had degree four, it
+would be a convex equilateral quadrilateral, hence a unit rhombus. If `theta` is one
+of its interior angles, its two diagonals have lengths
+
+\[
+2\sin(\theta/2),\qquad 2\cos(\theta/2).
+\]
+
+Unit separation and triangle-freeness make both nonadjacent distances strictly larger
+than one. Therefore
+
+\[
+\pi/3<\theta<2\pi/3.
+\tag{OF.9}
+\]
+
+But the angle of `P_B` at `B` is the whole hull-interior sector and hence equals
+`theta_B>3pi/4`, contradicting (OF.9). Thus
+
+\[
+\deg P_B\ge5.
+\tag{OF.10}
+\]
+
+So every remaining degree-two small-turn double-unit corner is incident to an
+exceptional bounded face.
+
+## 4. Pay the nonpentagons exactly by `6X`
+
+Let `n_d` be the number of bounded exceptional faces of degree `d`. For `d>=6`,
+
+\[
+d\le6(d-5).
+\]
+
+Hence the total number of boundary-vertex incidences on nonpentagonal exceptional
+faces is at most
+
+\[
+\sum_{d\ge6}d n_d
+\le6\sum_{d\ge6}(d-5)n_d
+=6X.
+\tag{OF.11}
+\]
+
+Deleting all degree-two corners whose `P_B` has degree at least six therefore costs at
+most `6X` corners, with occurrence counting already built into the face degrees.
+
+Every remaining corner is incident to a pentagonal exceptional face.
+
+## 5. Cheap pentagons identify the corner as the flat center
+
+At the zero-residual pentagon endpoint the unique equality shape is the flat unit
+trapezoid. Its five interior angles are, up to cyclic order,
+
+\[
+\pi,\quad {2\pi\over3},\quad {2\pi\over3},\quad {\pi\over3},\quad {\pi\over3}.
+\tag{OF.12}
+\]
+
+Choose a fixed trapezoid-stability neighborhood small enough that every non-middle
+vertex of a retained pentagon has interior angle strictly below `3pi/4`. Combine its
+residual threshold with the first Wegner residual jump, and call the resulting positive
+constant `theta_*`.
+
+All local exceptional-face residuals are nonnegative and their sum is at most `R_F`.
+Thus the number of pentagons with residual at least `theta_*` is at most
+`R_F/theta_*`. Each such pentagon has five boundary incidences, so deleting all
+high-residual pentagon-corner incidences costs at most
+
+\[
+{5R_F\over\theta_*}.
+\tag{OF.13}
+\]
+
+For every retained pentagon, the angle at `B` is larger than `3pi/4` by (OF.7), while
+all four non-middle angles are smaller than `3pi/4`. Therefore `B` is exactly the
+distinguished almost-flat middle vertex. It is loaded by construction, so `B` belongs
+to the loaded flat-center class from the global stress trichotomy. Distinct corners
+are distinct source vertices, so no multiplicity loss remains.
+
+Consequently, among the small-turn `C_11` corners,
+
+\[
+\boxed{
+|L_{flat}^{bd}|+|E_{in}^{(4)}|
+\ge C_{11}-8-2B_o-6X-{5R_F\over\theta_*}.
+}
+\tag{OF.14}
+\]
+
+## 6. Combine with the exact tooth/corner squeeze
+
+The finite boundary theorem gives
+
+\[
+N_2+C_{11}\ge2q-P_F-3d_{out}.
+\tag{OF.15}
+\]
+
+Substituting (OF.14) proves the finite burden (OF.1).
+
+This step is the main point: degree-two double-unit corners are not left as one unit of
+abstract loaded contact-degree slack. After explicit error payments they become
+actual loaded flat centers.
+
+## 7. Low-`t` normalization
+
+For the canonical full positive-contact core, the bounded-face union has asymptotic
+area `pi D^2/4`. Bridge-subtracted outer-face isoperimetry therefore gives, on a
+convergent subsequence,
+
+\[
+\limsup {2B_o\over D}\le\delta.
+\tag{OF.16}
+\]
+
+The audited low-`t` identities with the minimax atomic gap `0.0021` give
+
+\[
+x:={X\over D}
+\le {9t\over4}-\pi-{C_{21}\over2}-\delta-{\kappa\over4}+o(1).
+\tag{OF.17}
+\]
+
+Divide (OF.1) by `D`, use `q/D=t+kappa`, `P_F/D->pi`, `R_F/D->0`, then apply
+(OF.16)--(OF.17):
+
+\[
+\begin{aligned}
+\liminf {N_2+|L_{flat}^{bd}|+|E_{in}^{(4)}|\over D}
+&\ge 2t+2\kappa-\pi-4\delta-6x\\
+&\ge 5\pi+3C_{21}-{23\over2}t
+       +2\delta+{7\over2}\kappa.
+\end{aligned}
+\]
+
+This is (OF.2); dropping the nonnegative bonuses gives (OF.3).
+
+## 8. Optional conversion of the tooth branch
+
+For every fixed admissible tooth threshold `eta`, the shallow-tooth penetration theorem
+gives
+
+\[
+4E_{pen}(\eta)\ge N_2-{d_{out}\over\eta}.
+\tag{OF.18}
+\]
+
+Hence (OF.2) also implies
+
+\[
+\boxed{
+\liminf {4E_{pen}(\eta)+|L_{flat}^{bd}|+|E_{in}^{(4)}|\over D}
+\ge
+5\pi+3C_{21}-{23\over2}t
++\left(2-{1\over\eta}\right)\delta+{7\over2}\kappa.
+}
+\tag{OF.19}
+\]
+
+At the endpoint profile `t=t_21`, using `delta<=0.002837775` and `eta=0.06`, the
+right side is at least
+
+\[
+0.442242872369096\ldots .
+\tag{OF.20}
+\]
+
+Thus at the current endpoint one of the three actual source structures
+`E_pen(0.06)`, `L_flat^bd`, `E_in^(4)` has density at least
+`0.0737071453948493...D-o(D)`, where both edge families consist of strongly inward
+unit contacts and the middle alternative is a loaded flat-pentagon-center population.
+
+## 9. Scope audit
+
+- `C_11` consists of exact unit loaded-hull sides; no near-unit side is promoted to a
+  contact.
+- The common bounded face in Section 2 uses only degree two, convex-hull sidedness, and
+  the definition of an outer bridge.
+- The quadrilateral exclusion uses strict unit separation of the two rhombus diagonals;
+  equality would already create a forbidden unit equilateral triangle.
+- The `6X` payment is an incidence bound, so one high-degree face may pay several bad
+  corners without undercounting.
+- The `5R_F/theta_*` payment likewise counts pentagon incidences rather than just
+  pentagons.
+- The bridge estimate (OF.16) uses the canonical full-core near-isodiametric bounded
+  face union; it is not asserted for an arbitrary selected subgraph.
+- The normalized theorem additionally assumes the true small-residual branch
+  `R_F=o(D)`.
+- The numerical constants inherit the proof-only minimax-atomic-gap lifecycle.
+- No exact unit equilateral triangle or strict same-cardinality sub-`D` competitor has
+  yet been produced.
+
+**Disposition:** new proof-only structural candidate. C-II and Level I remain open.

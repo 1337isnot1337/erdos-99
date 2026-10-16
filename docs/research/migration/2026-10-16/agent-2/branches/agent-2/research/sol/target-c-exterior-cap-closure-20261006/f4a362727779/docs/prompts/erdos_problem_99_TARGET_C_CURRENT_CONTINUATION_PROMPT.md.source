@@ -1,0 +1,178 @@
+# Erdős Problem #99 — current Target C continuation
+
+**State:** `2026-10-06.audit.66`
+**LEVEL I STATUS: STILL OPEN.**  
+**C-I: CLOSED.**  
+**C-II: OPEN.**
+
+## Bootstrap
+
+Read, in order:
+
+1. `docs/STATE.md`;
+2. `docs/problem/statement.md`;
+3. `docs/targets/target-c/CURRENT.md`;
+4. `docs/targets/target-c/README.md`;
+5. `docs/targets/target-c/105-121-promotion-audit-2026-09-12.md`;
+6. `docs/targets/target-c/122-123-promotion-audit-2026-09-12.md`;
+7. the canonical modules/reports explicitly named by `docs/state/theorem-state.yaml`;
+8. this prompt last.
+
+Do not infer theorem authority from a merge, date, filename, or section number.
+
+## Mission
+
+Close C-II for every sufficiently large triangle-free global minimizer in the canonical normal form, or produce a valid Level I disproof. Do not spend the run re-proving audited extraction/density machinery or optimizing another carrier decimal unless it creates a new implication to global closure.
+
+## Binding normalization
+
+Use the contact-minimal, then diameter-pair-minimal representative and retain every source point, including contact-isolated points.
+
+The §57 ZR/ZF theorem is only on the nonisolated positive-contact core `V`:
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\qquad
+\operatorname{rank}R_{C\cup H}[V]=2v-3.
+\]
+
+Do not extend this affine-kernel theorem to contact-isolated coordinates. Full-source geometry comes from the separate canonical full-source modules.
+
+## Canonical input to treat as solved
+
+Audit.66 is controlling.
+
+Retain the complete audit.52--66 stack.
+
+Audit.61 already reduces a sufficiently small O--O finite motion to
+\[
+\boxed{
+\text{old diameter constraints}
++\ |J|\le d_H\text{ inactive upper exceptions}
++\ \text{unary rhombus tests}
++\ \text{outer-face near-unit pairs}.
+}
+\]
+
+Audit.62 adds two exact finite restrictions.
+
+### Loaded near-unit adjacency
+
+For the actual loaded set \(B\),
+\[
+\tau_D=\frac{3D}{\sqrt{3D^2+4}+1}.
+\]
+If loaded endpoints \(a,b\) are nonconsecutive on the loaded hull and \(|ab|<D\), then
+\[
+\boxed{|ab|\ge\tau_D.}
+\]
+For \(D\ge6\), every loaded pair of length at most \(13/12\) is a loaded-hull side. Thus the loaded near-unit graph is a subgraph of the loaded hull cycle and has maximum degree two.
+
+Do not model loaded-loaded lower clauses as an arbitrary planar graph.
+
+### Loaded-hull cap budget
+
+Put
+\[
+K=\operatorname{conv}A,\qquad
+F=\operatorname{conv}B,\qquad
+W=\operatorname{per}K-q.
+\]
+
+Canonically:
+
+- occupied loaded-hull caps: at most \(W\);
+- total occupied cap arc/base length: at most \(2W\);
+- core points within \(<\sqrt2\) of a source point outside \(F\): at most \(68W\);
+- nonloaded source points in \(F\) within boundary distance \(1/2\): at most \(12W\);
+- every deeper point has exact upper margin \(D-1/2\);
+- extreme source vertices outside \(B\): at most \(W\).
+
+Since \(\operatorname{per}K<\pi D\), every subsequence with
+\[
+q/D\to\pi
+\]
+has
+\[
+W=o(D),
+\]
+so all three cap/exterior blocker populations above are \(o(D)\).
+
+### Audit.63 owner, terminal-train, and wall results
+
+In every canonical full-core Type-II sequence with q/D -> pi and u_B=o(D), complete stopped O--O terminal trains, including singleton bridges, are o(D). Do not infer a linear O--O supply from owner topology or terminal-count budgets. In the narrow-window independent-binary scope, distinct loaded witness pairs are at most u_B and selected train capacity is at most x_B+m_B+1. These binary claims do not cover general crossing multishears.
+
+For a convex unit-contact wall with one deleted vertex, a strictly clear replacement point is separated from all exterior source points, including retained isolates. At most five wall sides leave no one-deletion strict-safe site; canonical physical unit hexagon interiors have twofold closed-unit-disk coverage. This gives no general packet-capacity result, and two deletions can fail because of a retained isolate.
+
+### Audit.64 finite packet endpoints
+
+Any finite replacement of a canonical contact-minimal then diameter-pair-minimal source must count every new unit pair, including inserted-to-retained contacts. If j is the new contact count, t the old contacts removed, and d the actual diameter pairs removed, no triangle-free same-cardinality packet with all new distances in [1,D) can have j<=t and either j<t or d>0. This is a normalization endpoint only; it does not construct a packet.
+
+With strict upper slack, a packet having at most two new unit contacts can open them by a small finite perturbation. A one-site packet that cannot open its unit contacts must have at least three retained unit neighbors strictly surrounding it. Do not infer existence from this necessary condition or from residual area.
+
+### Audit.65 regular-shell wall barrier
+
+For a regular odd unit `q`-gon with `q>=65`, a strict interior contact isolate blocks at most two adjacent inward one-vertex proposals. Blocking every proposal requires at least `(q+1)/2` distinct isolates in the specified radial collar. An explicit matching/singleton blocker cover plus deep triangular-lattice filling is not globally optimal: a whole-source same-cardinality packet has diameter strictly below the wall diameter. This is a guardrail about that regular-shell family; it supplies no capacity bound for arbitrary macroscopic containers and does not change the face-coupled finite-move target.
+
+### Audit.66 collective wall deletion
+
+For a convex actual unit-contact wall, deleting a set `B` of wall vertices with pairwise distances at least two gives a collective exterior shield: every point strictly clear of all remaining wall vertices is also strictly unit-clear from every retained exterior source point, including isolates. A greedy choice supplies at least `ceil(M/25)` eligible deletions from any `1`-separated set of `M` candidate vertices. If a unit-separated packet of size `|A intersect int(F)|+|B|` fits in the shield region, Audit.64's finite contact-budget endpoint rules it out by contact loss. The D(8) heptagon-plus-center regression shows that shield capacity need not gain even one slot at an optimal source. This is not an asymptotic capacity result; the large canonical interior remains the unresolved macroscopic-container obligation.
+
+### Binding regressions
+
+Do not infer:
+
+- small amplitude + contact preservation \(\Rightarrow\) unary rhombus immunity;
+- source-level path forest \(\Rightarrow\) acyclic owner implication graph.
+
+Both are exactly false.
+
+## Exact next split
+
+### Full-core branch
+
+The remaining small-motion obstruction is now
+\[
+\boxed{
+\text{outer-face owner/implication structure inside the loaded hull}
++\text{cyclic loaded-hull near-unit clauses}
++\text{unary rhombus blockers}
++\text{at most }d_H\text{ upper exceptions}.
+}
+\]
+
+Along q/D -> pi with u_B=o(D), loaded-hull caps, exterior extreme isolates, short cap attachments, the shallow nonloaded boundary layer, and the complete stopped O--O train population are sublinear. Distinct narrow-window binary loaded witnesses are also at most u_B. Any remaining linear obstruction must be supplied by face-coupled outer-to-bounded or bounded-to-bounded trains, explicit unary rhombus blockers, or the at most d_H upper exceptions, and must pass every full-source lower and actual-diameter upper test.
+
+Exact next obligation: produce a source-realized finite move or discrete replacement from the remaining outer-to-bounded or bounded-to-bounded train and face system that yields strict contact loss at diameter D or a strict sub-D competitor.
+
+Highest-value attacks:
+
+1. identify the remaining face-coupled trains after using N_OO=o(D), and specify a finite move whose train endpoints and owners are actual source objects;
+2. prove simultaneous feasibility for every old unit contact, every full-source noncontact lower pair, every actual diameter upper pair, the at most d_H inactive upper exceptions, and each unary rhombus diagonal;
+3. use loaded-hull cyclic order, loaded-return paths, active-diameter coordinates, and implication structure only where they establish this finite endpoint;
+4. if no move is possible, derive a strict same-cardinality sub-D competitor with every source point, including contact isolates, retained in the feasibility audit.
+Do not spend the run proving another generic near-unit planarity statement or an O--O supply theorem; audit.61--63 already bound those routes sharply.
+
+### Macroscopic inactive-container branch
+
+Audit.63 adds the one-deleted-vertex shield and a necessary twofold disk-coverage condition for canonical unit hexagons. It does not establish general packet capacity or close the separate macroscopic inactive-container route.
+
+## Binding dead routes
+
+Do not use without a new proof:
+
+- incident-diameter sequence `=>` Euler trail/path;
+- FB4 force-bulk localization;
+- incompatible-cut C53 pentagon objection;
+- RSR disk-equality uniqueness;
+- Eppstein near-equality `=>` near quadrangulation;
+- five-host measure saturation `=>` all hosts occupied;
+- inward OP pocket `subset` exterior Reuleaux minor cap;
+- deletion of contact-isolated source points;
+- full-source extension of the §57 affine-kernel theorem;
+- `r/(6C_T)` as the sharp limit of the Section-90 bin method;
+- `G_loc=o(D^2) => G_loc/d=o(1)` in Section 121.
+
+## Research standard
+
+Before promoting a new lemma, write its exact dependency chain to either an exact unit triangle, a source-preserving strict sub-`D` competitor, or the Level I conclusion. A computation may certify finite arithmetic or a regression; it does not supply global optimality.

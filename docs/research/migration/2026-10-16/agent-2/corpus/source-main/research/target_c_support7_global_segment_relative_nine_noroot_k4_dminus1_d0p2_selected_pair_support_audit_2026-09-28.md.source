@@ -1,0 +1,36 @@
+# Target C: selected-pair support audit
+
+Date: 2026-09-28
+
+Status update: superseded as the active certificate by
+`target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_selected_pair_support_reimplementation_2026-09-28.md`
+and its persisted, executed verifier. The source-persistence gap described below
+is therefore closed. This file is retained as the historical record of the
+earlier independent computation.
+
+The earlier run narrowed the nine-no-root `k=4, D=-1, d_root=0, p=2`
+selected-pair profile to exactly two `S_7` support-multiset orbits from the
+`103247` orbits with `h<=24`.
+
+It used only one-sided local-rank implications: repeated containing support
+forces rank two; nonrepeated incidence two or three permits only rank one;
+nonrepeated incidence at least four permits rank one or rank two. Pairwise
+filters were necessary consequences of
+`(d1,d2,d3,d4,d5)>=(2,4,5,7,8)`. Complete touched rows were required to be
+independent, with `rank H(T)-rank H(C)>=4`.
+
+Historical executed census: `121458` size-nine support orbits; `103247`
+with `h<=24`; `966977` raw size-nine extensions; `802570` raw extensions
+with `h<=24`; `8957` internal final empty-family states; two support
+survivors.
+
+The two canonical survivors were:
+
+1. `[0,1,2,3]^3, [0,1,2,4]^3, [0,1,3,4], [0,2,3,4], [1,2,3,4]`;
+2. `[0,1,2,3]^3, [0,1,2,4], [0,1,3,4], [0,1,4,5], [0,2,3,4], [0,2,4,5], [1,2,3,4]`.
+
+The earlier exact source had local Git blob hash
+`1d594c213884c521cf1da6766c70efd1cd8170fb`, but that source was not
+persisted. The independent repository verifier now on main has a different
+internal final-state census but reproduces the exhaustive support-orbit counts
+and exactly the same two survivor orbits.

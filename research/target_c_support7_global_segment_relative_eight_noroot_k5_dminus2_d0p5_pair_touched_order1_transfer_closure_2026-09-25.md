@@ -1,0 +1,26 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "407d5cacbea71ba111df49841fbbfcadb3a69221", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus2_d0p5_pair_touched_order1_transfer_closure_2026-09-25.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "e3003524b288f5114d46de70fbc7bf34ae1303449afdf1f1a3fd12ba7726c87d"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: pair-touched D=-2,p=5 residual after order-1 certificate integration
+
+Date: 2026-09-25
+
+The current-main pair-promotion theorem applies to every D=-2,d_root=0,p=5,(s,t)=(3,1),m=4,(3,2,2,1) state after promoting its touched pair block to complete. It preserves the coefficient space and singleton basis, gives promoted touched-complete nullity one, and gives
+
+r_pair <= r_prom + 1.
+
+The exact D=-1,d_root=1,p=3 certificates now integrated for the support orbits
+
+{1234,1235,1246,1367}
+{1234,1235,1456,2467}
+
+have zero external increment for every generalized-weight-admissible promoted state. The present D=-2 states satisfy the stronger generalized-weight bounds (3,4,6), so for both support orbits r_prom=0. Hence r_pair<=1, contradicting the D=-2,p=5 saturation requirement r_pair=5.
+
+Therefore both trivial-stabilizer residual support orbits are empty in the D=-2,p=5,(3,1) profile.
+
+The only remaining support orbit in that profile is
+
+{1234,1235,1267,1467}.
+
+No new exhaustive computation is claimed here. The finite inputs are the already-executed exact p=3 certificates integrated in the preceding commits. The five-singleton (5,0) profile and D=-1,(d_root,p)=(0,6) remain open.

@@ -1,0 +1,416 @@
+# Target C-II — loaded-unit shell wedges collapse to sibling leaves or switches
+
+**Date:** 2026-09-14  
+**Status:** proof-only structural refinement; theorem-state authority unchanged  
+**Scope:** canonical full-core near-disk C-II branch; numerical corollaries use the proof-only minimax atomic gap `0.0021` and audited §171  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The loaded-unit near-diameter-switch theorem leaves a nominal “shell-wedge” branch:
+a unit loaded-hull edge `AB` whose endpoints share an actual diameter neighbor `Z`.
+That terminology hides a stronger fact.  Unless both endpoints are actual diameter
+leaves with unique neighbor `Z`, the same four-point argument already produces an
+inactive near-diameter switch.  The genuinely switch-free residue is therefore a
+matching of **sibling diameter leaves**, not a regular-shell-like diameter cycle.
+
+This matters because every such leaf endpoint must carry another positive contact.
+Loaded-chord elimination then forces that extra contact either to make the endpoint an
+exact double-unit hull corner or to run from the loaded leaf into an unloaded core
+vertex.  Combining this with the boundary-atom ledger eliminates the abstract
+loaded-unit count completely.
+
+Use the following notation.
+
+- `e_BB` is the number of loaded-loaded unit contacts.  Canonical loaded-chord
+  elimination identifies these with exact unit loaded-hull sides.
+- `M_BB` is a maximum matching in that unit-side subgraph.
+- `C_11` is the number of loaded hull vertices whose two adjacent hull sides both have
+  length exactly one.
+- `N_sw` is the number of distinct inactive source pairs selected below, each of length
+  at least `D-epsilon_D`.
+- `E_leaf` is a set of distinct loaded-to-unloaded unit contacts selected at pure
+  sibling-leaf endpoints which are not in `C_11`.
+- `N_2` is the genuine two-edge outer-tooth count.
+
+The near-switch scale is the explicit finite quantity from the preceding theorem,
+
+\[
+\eta_D=3^{1/4}\sqrt D,
+\qquad
+L_D=\sqrt{D\eta_D+\eta_D^2},
+\qquad
+\varepsilon_D={4L_D+1\over D}=O(D^{-1/4}).
+\tag{SL.1}
+\]
+
+## 1. Every non-pure shell edge already gives a switch
+
+Let `AB` be an edge of `M_BB`.
+
+The preceding loaded-unit theorem proves that if `A` and `B` have no common actual
+diameter neighbor, then one can select an inactive source pair of length at least
+
+\[
+D-\varepsilon_D.
+\tag{SL.2}
+\]
+
+Now suppose instead that they share an actual diameter neighbor `Z`:
+
+\[
+|A-Z|=|B-Z|=D.
+\tag{SL.3}
+\]
+
+Assume `A` has another actual diameter neighbor `X\ne Z`.  Apply the same four-point
+argument to the two actual diameter edges
+
+\[
+AX,
+\qquad BZ.
+\]
+
+Their opposite cross-pairs are `AZ` and `BX`.  The pair `AZ` is already an actual
+diameter edge.  If `BX` were also an actual diameter edge, then
+
+\[
+A-X-B-Z-A
+\]
+
+would be a four-cycle in the actual diameter graph.  Canonical Woodall topology
+excludes an even cycle.  Hence `BX` is inactive and, by the same midpoint/Ptolemy
+estimate,
+
+\[
+|B-X|\ge D-\varepsilon_D.
+\tag{SL.4}
+\]
+
+The same argument applies if `B` has a second diameter neighbor.
+
+Therefore a matching edge can fail to produce an inactive near-diameter switch only
+if
+
+\[
+\boxed{
+\deg_H(A)=\deg_H(B)=1
+\quad\text{and}\quad
+N_H(A)=N_H(B)=\{Z\}.
+}
+\tag{SL.5}
+\]
+
+Call such an edge a **pure sibling wedge**.  Its two endpoints are genuine sibling
+leaves of the actual Woodall diameter graph.
+
+This is strictly narrower than the regular odd-shell regression.  In a regular odd
+shell every diameter vertex has degree two, so its boundary unit edges are not pure
+sibling wedges and fall on the switch-producing side of (SL.5).
+
+## 2. Multiplicity of selected switches
+
+Partition the matching
+
+\[
+M_{BB}=M_{sib}\sqcup M_{sw},
+\]
+
+where `M_sib` consists of pure sibling wedges and every edge of `M_sw` supplies one
+inactive near-diameter pair by Section 1.
+
+One selected inactive pair can be supplied by at most two matching edges.  Indeed,
+every selected pair contains at least one endpoint of its generating matching edge,
+while distinct edges of `M_BB` have disjoint endpoint sets.  The same unordered pair
+can therefore be charged only once through each of its two endpoints.
+
+Consequently
+
+\[
+\boxed{
+N_{sw}\ge {|M_{sw}|\over2}.
+}
+\tag{SL.6}
+\]
+
+Every pair counted by `N_sw` is strictly inactive at the finite source and satisfies
+(SL.2).
+
+## 3. A pure sibling leaf needs another contact
+
+Fix a pure sibling wedge `AB` with common diameter neighbor `Z`.  At endpoint `A`,
+the actual diameter graph has degree one.  In the relative-interior full-core KKT
+stress, the diameter reaction at `A` is therefore a positive multiple of `A-Z`.
+
+If `AB` were the only contact incident with `A`, KKT equilibrium would force
+
+\[
+\alpha_{AB}(A-B)=\beta_{AZ}(A-Z)
+\tag{SL.7}
+\]
+
+with both coefficients positive.  But the two vectors are not parallel.  Indeed, if
+`A,B,Z` were collinear with `|A-B|=1` and `|A-Z|=|B-Z|=D`, then the two latter
+distances would differ by one.  Thus (SL.7) is impossible.
+
+Hence every pure sibling endpoint has at least one further unit contact.
+
+Now take a pure sibling endpoint `A` which is **not** counted by `C_11`.  Any further
+contact from `A` to another loaded vertex would, by canonical loaded-chord elimination,
+be a loaded hull side.  Since `AB` is already one of the two hull sides incident with
+`A`, this would make both adjacent hull sides unit and put `A` in `C_11`, contrary to
+assumption.
+
+Therefore every pure sibling endpoint outside `C_11` has a contact to an unloaded
+positive-core vertex.  Choose one such contact.  Choices at distinct loaded endpoints
+are distinct physical edges, so if `E_leaf` denotes the resulting selected edge set,
+
+\[
+\boxed{
+2|M_{sib}|\le C_{11}+|E_{leaf}|.
+}
+\tag{SL.8}
+\]
+
+This uses no KKT coefficient floor.  It uses positivity only to rule out a one-contact
+loaded leaf.
+
+## 4. Eliminate the shell-wedge count
+
+From (SL.6),
+
+\[
+4N_{sw}\ge2|M_{sw}|.
+\tag{SL.9}
+\]
+
+Adding this to (SL.8) gives
+
+\[
+C_{11}+|E_{leaf}|+4N_{sw}
+\ge2|M_{sib}|+2|M_{sw}|
+=2|M_{BB}|.
+\tag{SL.10}
+\]
+
+The exact loaded-unit hull-side graph is a subgraph of one cycle.  A union of path
+components has matching number at least half its edge count, while the only possible
+loss for a cycle is one edge when the full cycle is odd.  Hence
+
+\[
+2|M_{BB}|\ge e_{BB}-1.
+\tag{SL.11}
+\]
+
+Therefore
+
+\[
+\boxed{
+C_{11}+|E_{leaf}|+4N_{sw}\ge e_{BB}-1.
+}
+\tag{SL.12}
+\]
+
+The old loaded-unit branch is now replaced by three actual finite structures:
+
+double-unit corners, loaded-to-unloaded leaf contacts, or inactive near-diameter
+switches.
+
+## 5. Combine with the exact boundary-atom ledger
+
+The boundary-atom theorem gives the finite full-core inequality
+
+\[
+N_2+2e_{BB}\ge3q-b.
+\tag{SL.13}
+\]
+
+Equation (SL.12) gives
+
+\[
+e_{BB}\le C_{11}+|E_{leaf}|+4N_{sw}+1.
+\]
+
+Substitute this upper bound into the left side of (SL.13).  Since the substituted
+quantity is no smaller than `e_BB`,
+
+\[
+\boxed{
+N_2+2C_{11}+2|E_{leaf}|+8N_{sw}
+\ge3q-b-2.
+}
+\tag{SL.14}
+\]
+
+This is the main finite theorem.  It contains no metric long-side currency and no
+abstract shell-wedge count.
+
+## 6. Low-`t` normalized form with the `0.0021` atomic gap
+
+On a convergent Type-II subsequence write
+
+\[
+t={q-k\over D},
+\qquad
+\kappa={k\over D},
+\qquad
+\delta={b-P_F\over D}.
+\]
+
+Then
+
+\[
+{q\over D}=t+\kappa,
+\qquad
+{b\over D}=\pi+\delta+o(1).
+\tag{SL.15}
+\]
+
+The hostile-audited minimax atomic gap `0.0021` gives
+
+\[
+C_{21}:=2\sqrt{\Delta_2}+0.0021,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+\]
+
+and audited §171 gives the low-`t` squeeze
+
+\[
+2\delta+{\kappa\over2}\le R_{21}(t),
+\qquad
+R_{21}(t):={9t\over2}-2\pi-C_{21}.
+\tag{SL.16}
+\]
+
+Divide (SL.14) by `D`.  Its right side is
+
+\[
+3t+3\kappa-\pi-\delta-o(1).
+\]
+
+At fixed `t`, the minimum of `3\kappa-\delta` under (SL.16) occurs at
+`\kappa=0`, `\delta=R_{21}(t)/2`.  Therefore
+
+\[
+\boxed{
+\liminf {N_2+2C_{11}+2|E_{leaf}|+8N_{sw}\over D}
+\ge {3t\over4}+{C_{21}\over2}.
+}
+\tag{SL.17}
+\]
+
+The cancellation of `pi` in (SL.17) is exact.
+
+Consequently
+
+\[
+\boxed{
+\liminf {1\over D}
+\max\{N_2,C_{11},|E_{leaf}|,N_{sw}\}
+\ge {\frac34t+\frac12C_{21}\over13}.
+}
+\tag{SL.18}
+\]
+
+The denominator `13` is the sum of the coefficients `1+2+2+8` in (SL.14).
+
+At the current proof-only floor
+
+\[
+t_{21}={4\over9}\left(\pi+\sqrt{\Delta_2}\right)+0.0017279
+=1.82124143797944\ldots,
+\]
+
+one obtains
+
+\[
+{3t_{21}\over4}+{C_{21}\over2}
+=2.31929388534854\ldots,
+\tag{SL.19}
+\]
+
+and hence
+
+\[
+\boxed{
+\max\{N_2,C_{11},|E_{leaf}|,N_{sw}\}
+\ge0.178407221949887\ldots D-o(D).
+}
+\tag{SL.20}
+\]
+
+The decimal is orientation only; (SL.17)--(SL.18) are the theorem.
+
+## 7. Diameter-topology consequence of the pure sibling subbranch
+
+Let `ell_H` be the number of degree-one vertices of the actual diameter graph and put
+
+\[
+\Xi_H:=\sum_{v:\deg_H(v)\ge3}(\deg_H(v)-2).
+\]
+
+Every pure sibling matching edge contributes two distinct diameter leaves, so
+
+\[
+\ell_H\ge2|M_{sib}|.
+\tag{SL.21}
+\]
+
+Woodall topology gives the exact degree identity
+
+\[
+\boxed{
+\Xi_H=\ell_H-2d_H.
+}
+\tag{SL.22}
+\]
+
+Indeed, in the forest case `d_H` is the number of nontrivial tree components and the
+usual tree degree identity gives `ell_H=2d_H+Xi_H`; in the connected unicyclic case
+`d_H=0` and the signed degree sum gives `ell_H=Xi_H`.
+
+Thus if the switch count is negligible and most of `M_BB` lies in the pure sibling
+class, the diameter graph is forced to carry a linear branching-excess population.
+This is a genuine caterpillar/odd-unicyclic restriction, not a generic shell cycle.
+
+At the current endpoint the loaded-unit matching floor is
+
+\[
+{|M_{BB}|\over D}
+\ge {t_{21}\over8}+{C_{21}\over12}-o(1)
+=0.386548980891423\ldots-o(1).
+\]
+
+If at least half of that matching is pure sibling, then
+
+\[
+{\ell_H\over D}\ge0.386548980891423\ldots-o(1).
+\]
+
+Using `d_H\le k` and `\kappa\le2R_{21}(t_{21})=0.0113511...`, (SL.22) gives
+
+\[
+{\Xi_H\over D}\ge0.363846780891425\ldots-o(1).
+\tag{SL.23}
+\]
+
+This does not yet contradict Woodall: large-degree star centers can absorb linear
+branching excess.  It does rule out interpreting the pure-sibling residue as a nearly
+2-regular regular-shell diameter graph.
+
+## 8. Scope audit
+
+- All diameter edges used above are actual edges of the restored full diameter support.
+- The near-switch estimate is the finite midpoint/Ptolemy estimate, not a qualitative
+  limiting replacement of an inactive pair by an active pair.
+- The even-four-cycle exclusion is used only for actual diameter edges.
+- Loaded-chord elimination is used only in its canonical full-core near-disk scope.
+- The KKT argument in Section 3 uses the relative-interior full-core stress so every
+  incident actual contact and diameter edge has positive coefficient.
+- `E_leaf` counts physical contact edges and has no occurrence multiplicity.
+- Contact-isolated source points remain in the full source.
+- The numerical low-`t` constants inherit the proof-only `0.0021` minimax-gap
+  lifecycle.
+- No exact unit equilateral triangle or strict same-cardinality sub-`D` competitor is
+  produced.
+
+**Disposition:** proof-only structural theorem.  C-II and Level I remain open.

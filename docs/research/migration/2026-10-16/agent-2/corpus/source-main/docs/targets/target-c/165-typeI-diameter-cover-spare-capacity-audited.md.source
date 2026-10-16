@@ -1,0 +1,348 @@
+# Target C — audited §165 Type-I diameter-cover spare-capacity criterion
+
+**Date:** 2026-09-12
+**Lifecycle:** audited-working proof-only route module; theorem-state authority unchanged.
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module normalizes the hostile-audited diameter-vertex-cover repacking theorem and
+extends it, using §162, from an internal inactive chamber to **either** Type-I
+macroscopic inactive container: an internal chamber or an exterior cap.
+
+The key point is that one need not find a triangle-free one-extra-point exchange.
+If a protected inactive container can absorb its current isolate population plus a
+vertex cover of the **complete actual diameter graph**, then deleting that cover removes
+all old diameter pairs and repacking deep inside the old source hull creates no new
+ones. The resulting same-cardinality unit-separated source has strict diameter below
+`D(n)`, a direct contradiction.
+
+---
+
+## 165.1 Protected packing capacity
+
+Let `C_*` be the Type-I macroscopic inactive container supplied by §162, internal or
+exterior, and let `Z_*` be its assigned contact-isolated source set. Put
+
+\[
+z_*:=|Z_*|.
+\]
+
+Every source point not assigned to `Z_*` lies outside `int(C_*)`, and for every fixed
+positive depth the inner parallel body exists for all sufficiently large `D`.
+Define
+
+\[
+C_{*,-1}:=\{x\in C_*:\operatorname{dist}(x,\partial C_*)>1\}
+\]
+
+and its protected unit-packing capacity
+
+\[
+\boxed{
+M_1(C_*):=\sup\Bigl\{|Y|:
+Y\subset C_{*,-1},\ |y-y'|\ge1\ (y\ne y')\Bigr\}.
+}
+\tag{165.1}
+\]
+
+For every `y in C_{*,-1}` and every retained source point `a notin int(C_*)`, convexity
+implies
+
+\[
+|y-a|>1:
+\]
+
+the segment from `y` to `a` meets `partial C_*` only after traveling more than one
+unit.
+
+Moreover `C_{*,-1} subset int(C_*) subset int(K)`, where `K=conv(A)` is the old full
+source hull. The last inclusion holds for both container types: an interior point of a
+positive-area convex subset of `K` cannot lie on a supporting line of `K`.
+
+---
+
+## 165.2 Deleting a diameter vertex cover gives strict global descent
+
+Let
+
+\[
+H=(B,E_H)
+\]
+
+be the **complete actual diameter graph** supplied by C65, and let `U subset B` be any
+vertex cover of `H`.
+
+Suppose
+
+\[
+\boxed{M_1(C_*)\ge z_*+|U|.}
+\tag{165.2}
+\]
+
+Choose a unit-separated set
+
+\[
+Y\subset C_{*,-1},
+\qquad |Y|=z_*+|U|,
+\]
+
+and define
+
+\[
+A':=(A\setminus(Z_*\cup U))\cup Y.
+\tag{165.3}
+\]
+
+Then
+
+\[
+\boxed{
+|A'|=|A|,
+\qquad
+\min_{x\ne y\in A'}|x-y|\ge1,
+\qquad
+\operatorname{diam}A'<D.
+}
+\tag{165.4}
+\]
+
+### Proof
+
+Cardinality is exact because `Z_*` and `U` are disjoint: `Z_*` consists of
+contact-isolated inactive points, while `U` consists of loaded endpoints of actual
+diameter pairs.
+
+Retained old-old pairs remain unit-separated. New-new pairs are unit-separated by the
+choice of `Y`. Every retained old point lies outside `int(C_*)`, so the protected-depth
+argument above gives strict new-old distance greater than one.
+
+Because `U` covers the complete actual diameter graph, every retained old-old pair has
+distance strictly below `D`.
+
+Every new point lies in `int(K)`. For any `x in K` and `y in int(K)`,
+
+\[
+|x-y|<D.
+\tag{165.5}
+\]
+
+Indeed `K subset \overline B(x,D)` for each `x in K`, since `diam(K)=D`; an interior
+point of `K` cannot lie on the boundary circle of that disk. Thus every new-old and
+new-new distance is strictly below `D`.
+
+All pair distances in the finite set `A'` are therefore strictly below `D`, so
+
+\[
+\operatorname{diam}A'<D=D(n),
+\]
+
+contradicting global minimality. \(\square\)
+
+No triangle-free condition on `A'` is needed, and no contact count or KKT force is
+compared. The contradiction is direct diameter descent.
+
+---
+
+## 165.3 Woodall gives a half-terminal cover
+
+Let
+
+\[
+q:=|V(H)|.
+\]
+
+The canonical Woodall classification gives two possibilities for the actual diameter
+graph.
+
+### Forest branch
+
+If `H` is a forest, it is bipartite. The smaller color class is a vertex cover, so
+
+\[
+\tau(H)\le\left\lfloor {q\over2}\right\rfloor.
+\tag{165.6}
+\]
+
+### Connected odd-unicyclic branch
+
+Suppose the unique cycle has length `2k+1` and every remaining loaded vertex is a
+pendant leaf attached directly to a cycle vertex. Let `L` be the number of pendant
+leaves.
+
+If `L=0`, then
+
+\[
+\tau(H)=k+1
+=\left\lceil{2k+1\over2}\right\rceil.
+\tag{165.7}
+\]
+
+This bare odd-cycle case is separated explicitly; the strict averaging inequality used
+below requires `L>0`.
+
+If `L>0`, let `ell_i` be the number of leaves at cycle vertex `i`. Among the `2k+1`
+maximum independent sets of size `k` in the odd cycle, each cycle vertex occurs in
+exactly `k` sets. Hence the average attached-leaf weight of such an independent set is
+
+\[
+{k\over2k+1}L<{L\over2}.
+\tag{165.8}
+\]
+
+Choose one maximum independent set `I` with leaf weight below `L/2`. Take as a vertex
+cover all cycle vertices outside `I` together with all leaves attached to vertices of
+`I`. Its size is at most
+
+\[
+\left\lceil {q\over2}\right\rceil.
+\]
+
+Thus in every Woodall branch
+
+\[
+\boxed{
+\tau(H)\le\left\lceil {q\over2}\right\rceil.
+}
+\tag{165.9}
+\]
+
+The loaded vertices occur in convex position and are mutually unit-separated around
+the force hull, so
+
+\[
+q\le\operatorname{per}(F)\le\pi D.
+\]
+
+Therefore
+
+\[
+\boxed{
+\tau(H)
+\le\left\lceil {q\over2}\right\rceil
+\le {\pi D\over2}+1.
+}
+\tag{165.10}
+\]
+
+---
+
+## 165.4 Exact Type-I survivor inequality
+
+Taking `U` to be a minimum vertex cover in §165.2 gives the necessary survivor
+condition
+
+\[
+\boxed{
+M_1(C_*)\le z_*+\tau(H)-1.
+}
+\tag{165.11}
+\]
+
+Equivalently, define the protected spare capacity
+
+\[
+\operatorname{spare}(C_*):=M_1(C_*)-z_*.
+\]
+
+Every Type-I survivor must satisfy
+
+\[
+\boxed{
+\operatorname{spare}(C_*)<\tau(H)
+\le\left\lceil {q\over2}\right\rceil.
+}
+\tag{165.12}
+\]
+
+Hence either Type-I container branch closes as soon as one proves the **lower bound**
+
+\[
+\boxed{
+M_1(C_*)-z_*\ge\tau(H).
+}
+\tag{165.13}
+\]
+
+A topology-free sufficient condition is
+
+\[
+\boxed{
+M_1(C_*)-z_*
+\ge\left\lceil {q\over2}\right\rceil.
+}
+\tag{165.14}
+\]
+
+The direction in (165.13)–(165.14) is binding. The hostile audit of the historical
+source corrected an erroneous final prose sentence that had described the desired
+spare-capacity estimate with the opposite inequality direction. Since
+`tau(H)<=pi D/2+O(1)`, at most that many extra protected slots are required, but the
+theorem to prove is a **lower bound** on the number of available slots.
+
+---
+
+## 165.5 Baseline lattice lower bound and exact residual gap
+
+Let `Lambda` be the unit triangular lattice, with covolume
+
+\[
+a_0={\sqrt3\over2}.
+\]
+
+Averaging
+
+\[
+|(t+\Lambda)\cap C_{*,-1}|
+\]
+
+over one translation fundamental domain gives mean
+
+\[
+{\operatorname{area}(C_{*,-1})\over a_0}.
+\]
+
+Therefore some translate gives
+
+\[
+\boxed{
+M_1(C_*)
+\ge
+\left\lceil{\operatorname{area}(C_{*,-1})\over a_0}\right\rceil.
+}
+\tag{165.15}
+\]
+
+This baseline does **not** by itself prove (165.13). The canonical container may have a
+linear boundary-order packing surplus/slack. Thus the exact Type-I frontier is now a
+linear protected packing-capacity problem:
+
+> prove that a macroscopic near-capacity convex inactive packing has at least
+> `tau(H)` spare unit-packing slots in its depth-one inner core, or prove a sharper
+> topology-dependent lower bound sufficient for the actual Woodall diameter graph.
+
+This target is stronger and cleaner than producing independent first-contact motions:
+once (165.13) holds, all actual diameter pairs disappear simultaneously and no
+triangle-free comparison-class condition remains.
+
+---
+
+## Scope audit
+
+- C65 is essential: `U` covers the complete actual diameter graph, not merely one
+  selected positive KKT diameter support.
+- The exterior-cap extension uses §162's protected-depth theorem. No new assumption on
+  cap containment is introduced.
+- Every deleted isolate is replaced one-for-one; the additional `|U|` replacement
+  slots correspond exactly to the deleted loaded diameter-cover vertices.
+- New points lie strictly inside the old full source hull and therefore create no
+  distance-`D` pairs.
+- Fixed depth `>1` protects unit separation from every retained source outside the
+  selected container interior.
+- Triangle-freeness of the competitor is intentionally unnecessary.
+- Contact-isolated coordinates never enter the Section-57 core affine kernel.
+- The bare odd-cycle `L=0` case is handled separately before the leaf-weight averaging
+  argument.
+- The lattice bound is only a baseline; no unsupported linear boundary gain is claimed.
+
+**Disposition:** §165 PASS at audited-working proof-only scope. It reduces both Type-I
+macroscopic-container alternatives to the single quantitative spare-capacity condition
+(165.13). C-II and Level I remain open.

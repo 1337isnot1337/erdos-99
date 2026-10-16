@@ -1,0 +1,41 @@
+{
+  "independent_cartesian_checks": [
+    {
+      "k": 2,
+      "R": 24,
+      "n": 1893,
+      "direct_lattice_source_pairs": 1788886,
+      "isolate_pairs": 1892,
+      "diameter_margin_squared": "304",
+      "bad_cells_in_verified_endpoint": 1788
+    },
+    {
+      "k": 2,
+      "R": 64,
+      "n": 13141,
+      "direct_lattice_source_pairs": 0,
+      "isolate_pairs": 13140,
+      "diameter_margin_squared": "848",
+      "bad_cells_in_verified_endpoint": 12876
+    },
+    {
+      "k": 3,
+      "R": 40,
+      "n": 5259,
+      "direct_lattice_source_pairs": 13820653,
+      "isolate_pairs": 5258,
+      "diameter_margin_squared": "552",
+      "bad_cells_in_verified_endpoint": 5086
+    },
+    {
+      "k": 3,
+      "R": 144,
+      "n": 66657,
+      "direct_lattice_source_pairs": 0,
+      "isolate_pairs": 66656,
+      "diameter_margin_squared": "1980",
+      "bad_cells_in_verified_endpoint": 66064
+    }
+  ],
+  "global_optimality_proved": false
+}

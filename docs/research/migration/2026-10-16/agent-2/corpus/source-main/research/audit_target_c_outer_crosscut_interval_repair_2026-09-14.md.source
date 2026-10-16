@@ -1,0 +1,121 @@
+# Target C-II - hostile audit and repair of outer-crosscut extraction
+
+**Date:** 2026-09-14
+**Audited report:** `docs/reports/target_c_fullcore_floor_outer_track_endpoint_exclusion_2026-09-14.md`
+**Status:** proof-only topology repair; C-II remains open
+
+## Verdict
+
+The report's Lemma 4.1 contains a false sentence: pairwise disjoint proper crosscuts of a disk do **not** necessarily divide the disk into a linear chain. Their region dual is a tree and can branch.
+
+However, the near-complete extraction used downstream is still valid. Replacing the false chain claim by the dual-tree statement yields the same `a-o(D)` by `b-o(D)` complete product under Lemma 4.2's hypotheses.
+
+So:
+
+- original global interval lemma: **FAIL as stated**;
+- near-complete extraction: **PASS after repair**;
+- later endpoint argument can use the repaired extraction, subject to its other independent hypotheses.
+
+## 1. Counterexample to the global chain claim
+
+Take three pairwise disjoint proper crosscuts `A1,A2,A3`, each cutting off a small disjoint boundary cap of a disk. The complement has one central region and three caps; its dual is `K_{1,3}`, not a path.
+
+Even the claimed common interval order can fail with a pairwise-disjoint second family. Put two ports on each `Ai`, cyclically ordered on the central region as
+
+```text
+A1: p31,p12 ; A2: p12,p23 ; A3: p23,p31.
+```
+
+Join equal labels by three disjoint arcs in thin collars of the three intervening central-boundary arcs, then extend across the corresponding `Ai` into the caps. The resulting disjoint arcs `B12,B23,B31` have
+
+\[
+N(B_{12})=\{A_1,A_2\},\quad
+N(B_{23})=\{A_2,A_3\},\quad
+N(B_{31})=\{A_3,A_1\}.
+\]
+
+No linear order of three symbols makes all three pairs consecutive. Thus the proof cannot infer a global chain from proper-crosscut topology alone.
+
+## 2. Correct dual-tree lemma
+
+Let `A={A1,...,Aa}` be pairwise disjoint proper crosscuts of a disk, with distinct boundary endpoints after the report's collar perturbation. Cutting along each new crosscut increases the region count by one. Hence the region dual `T_A` is connected with `a+1` vertices and `a` edges:
+
+\[
+\boxed{T_A\text{ is a tree}.}
+\tag{CR.1}
+\]
+
+Let `B` be a simple arc transverse to the `Ai`, crossing each at most once. Traversing `B` gives a walk in `T_A`; each crossed `Ai` is the corresponding dual edge. Since no dual edge is repeated and a tree has no nonempty closed trail, the walk cannot revisit a vertex. Therefore
+
+\[
+\boxed{N(B)\text{ is the edge set of one simple path in }T_A.}
+\tag{CR.2}
+\]
+
+This is the exact replacement for the false global interval statement.
+
+## 3. Repaired near-complete extraction
+
+Assume the original Lemma 4.2 hypotheses:
+
+\[
+|A|=a,\qquad |B|=b,\qquad a,b=\Theta(D),
+\]
+
+all `A`--`B` pairs cross at most once, and
+
+\[
+q:=ab-e(A,B)=o(ab).
+\]
+
+For each `B`, put `m_B=a-|N(B)|`, so `sum_B m_B=q`. Choose `B_*` with minimum missing count. Then
+
+\[
+m_{B_*}\le q/b=o(a).
+\]
+
+By (CR.2), `P_*=N(B_*)` is a path in `T_A` with
+
+\[
+|P_*|=a-o(a).
+\tag{CR.3}
+\]
+
+Delete the `o(a)` `A`-crosscuts outside `P_*` and order the remainder along this path. For any other `B`, `N(B)` is a tree path, and the intersection of two tree paths is connected or empty. Hence
+
+\[
+N(B)\cap P_*
+\]
+
+is an interval in this order. Its missing count inside `P_*` is at most `m_B`.
+
+Choose `eta_D downarrow0` with `q/(eta_D a b)->0`. Delete every `B` with `m_B>eta_D a`; Markov deletes only `o(b)` members. Every surviving interval then misses at most `eta_D a` points of `P_*`, so it contains the central subpath obtained by deleting `ceil(eta_D a)` points from each end.
+
+Calling that central subpath `A0` and the retained second family `B0` gives
+
+\[
+\boxed{|A_0|=a-o(D),\qquad |B_0|=b-o(D),}
+\tag{CR.4}
+\]
+
+and every `A0` crosses every `B0`.
+
+Thus the near-complete complete-product extraction is valid without any global chain hypothesis.
+
+## 4. Effect on the endpoint report
+
+The report used Lemma 4.1 only to linearize the first family before its Markov/central-trimming argument. The dual-tree proof above supplies that linearization after only `o(D)` loss, because one near-complete `B_*` already selects an `a-o(D)` path in the dual tree.
+
+Therefore the false sentence should be withdrawn, but the downstream complete-product conclusion need not be withdrawn. The later angular-clustering and hole-stable grid steps are separate dependencies and are not re-audited here.
+
+## 5. Current C-II use
+
+This repair is reusable whenever a branch supplies:
+
+1. a linear pairwise-disjoint outer-ended train family `A`;
+2. a linear pairwise-disjoint train family `B`; and
+3. `o(D^2)` missing crossings between them.
+
+The weighted hidden-rank minimax branch supplies large OO mass and a rigid degree-`{2,5}` flat-pentagon equality model. It does **not** yet supply item 3. No dense OO-versus-degree-five crossing product is assumed here.
+
+**Disposition:** false global interval lemma corrected; near-complete extraction recovered. C-II remains open.

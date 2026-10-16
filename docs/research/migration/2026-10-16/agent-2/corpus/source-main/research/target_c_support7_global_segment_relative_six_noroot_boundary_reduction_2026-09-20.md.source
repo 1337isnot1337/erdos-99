@@ -1,0 +1,214 @@
+# Target C: six-no-root boundary-shadow reduction
+
+Date: 2026-09-20
+
+Status: exact reduction of any hypothetical six-no-root factor-three counterexample to the sharp `D=0` or `D=1` boundary of the five-no-root problem. This also disproves the proposed blanket five-no-root slack-two shortcut. It does not prove the six-no-root inequality, does not reduce the 3,874-state generic-H6 endpoint, and does not close C-II.
+
+Companion verifiers:
+
+- `research/verify_target_c_support7_global_segment_relative_five_noroot_k5_slack_p9_2026_09_20.py`
+- `research/verify_target_c_support7_global_segment_relative_five_noroot_sharp_boundary_2026_09_20.py`
+
+## Defect notation
+
+Write
+
+`D(A) = |A| - 3 delta(A)`
+
+with
+
+`delta(A) = r_M(A) - r_Q(A)`.
+
+The committed density theorem gives
+
+`D(A) >= 0`
+
+for every family with at most five no-root four-cycles.
+
+A previous reduction proposed strengthening this to `D(A)>=2` for every five-no-root family. If true, that would have closed the six-no-root layer by deletion. The strengthening is false.
+
+## The five-no-root bound is sharp
+
+The new sharp-boundary verifier gives an explicit five-no-root `k=5,p=10` family with
+
+`|A|=27`, `r_M(A)=27`, `r_Q(A)=18`, `delta(A)=9`,
+
+so
+
+`D(A)=27-3*9=0`.
+
+It also gives an explicit five-no-root `k=5,p=11` family with
+
+`|A|=34`, `r_M(A)=34`, `r_Q(A)=23`, `delta(A)=11`,
+
+so
+
+`D(A)=34-3*11=1`.
+
+All of these ranks are recomputed directly over the rationals in the companion verifier. Thus the global five-no-root lower bound `D>=0` is sharp, and no universal five-no-root `D>=2` theorem exists.
+
+For both displayed families, every one of the other 100 no-root four-cycles raises `r_M` and `r_Q` by one when added while the root-0 selection is held fixed. Hence neither explicit boundary family itself has a delta-increasing no-root extension. This is only an obstruction for these two examples, not yet a classification of the full boundary.
+
+## k=5 has no low-defect state through p=9
+
+The second new verifier strengthens the committed five-no-root `k=5` audit. It exhausts every `p<=9` local state whose all-complete rank bound is below two.
+
+Across the exact 20,451 `S_7` five-subset orbits, there are 323,545 such residual states. Their exact defect census is
+
+```text
+D=7      127459
+D=8       62173
+D=9         155
+D=10     108520
+D=11      19675
+D=13       5563
+```
+
+The minimum is 7. The maximum squared relation-row norm is 24, and the verifier checks the same `2^127-1` primality/Hadamard criterion used by the established exact rank audits.
+
+Since the crude `k=5` bound is
+
+`D >= p-10`,
+
+all `p>=12` states already have `D>=2`. Therefore a five-no-root `k=5` family with `D<2` can occur only at
+
+`p=10` or `p=11`.
+
+The explicit sharp families above show that both boundary values actually occur.
+
+## Deletion-shadow theorem for six no-root cycles
+
+Let `B` contain exactly six no-root rows and suppose
+
+`D(B)<0`.
+
+Choose any no-root row `e` of `B` and put
+
+`A = B \ {e}`.
+
+Adding one row changes each of `r_M` and `r_Q` by either zero or one. Because `Q` is a quotient of `M`, a row dependent in `M` is also dependent in `Q`. Hence
+
+`m_e = delta(B) - delta(A)`
+
+lies in `{0,1}`.
+
+The defect identity is
+
+`D(A) = D(B) - 1 + 3 m_e`.
+
+But `A` has five no-root rows, so the established theorem gives `D(A)>=0`.
+
+If `m_e=0`, then
+
+`D(A)=D(B)-1<0`,
+
+which is impossible. Therefore
+
+`m_e=1`
+
+for every one of the six no-root rows of `B`. It follows that
+
+`D(A)=D(B)+2>=0`,
+
+so
+
+`D(B)>=-2`.
+
+Thus every hypothetical six-no-root counterexample has exactly one of the two forms
+
+- `D(B)=-2`, and every no-root deletion shadow has `D(A)=0`;
+- `D(B)=-1`, and every no-root deletion shadow has `D(A)=1`.
+
+There is no deeper negative defect to search.
+
+Moreover, `m_e=1` forces the rank increments to be
+
+`r_M(B)-r_M(A)=1`
+
+and
+
+`r_Q(B)-r_Q(A)=0`.
+
+So every no-root row of a six-no-root counterexample must be a coloop in the restricted `M` row matroid and simultaneously a non-coloop in the restricted `Q` row matroid.
+
+This is a much stronger necessary condition than merely lying in one of the four crude six-no-root `(k,p)` danger bands.
+
+## Exact five-no-root boundary bands
+
+For five no-root rows the crude bound is
+
+`D >= 5 + p - 3k`.
+
+Also
+
+`D congruent |A| congruent 5+p (mod 3)`.
+
+Combine this arithmetic with the committed slack results:
+
+- `k=2`: the new containment theorem already gives `D>=2` for all `p`;
+- `k=3`: the canonical containment theorem gives `D>=2` for `p<=3`;
+- `k=4`: the containment and residual audits give `D>=2` for `p<=6`;
+- `k=5`: the new exhaustive audit gives `D>=2` for `p<=9`.
+
+Therefore the entire five-no-root `D=0` boundary is restricted to exactly
+
+`(k,p) = (3,4), (4,7), (5,10)`,
+
+and the entire `D=1` boundary is restricted to exactly
+
+`(k,p) = (3,5), (4,8), (5,11)`.
+
+Consequently any six-no-root counterexample must have all six of its five-no-root deletion shadows inside one of these six narrow boundary bands. A `D=-2` counterexample has six `D=0` shadows; a `D=-1` counterexample has six `D=1` shadows.
+
+## k=5 boundary as a weighted spanning problem
+
+The `k=5` boundary has an additional useful linear-algebra reduction.
+
+Fix the five no-root rows and complete every touched root-0 quotient block. Let the resulting relation matrix have rows
+
+`H_b` for the `m` complete blocks and `E_i` for the five external rows. Put
+
+`d = (m+5) - rank(H_b,E_i)`.
+
+Thus `d` is the dimension of the dependency space of the all-complete relation matrix.
+
+If block `b` is changed from complete to a compatible incomplete local state `s`, its row `H_b` disappears and each external row changes by a scalar multiple of `H_b`:
+
+`E_i -> E_i + lambda_{i,b,s} H_b`.
+
+On the all-complete dependency space, with dependency coordinates `(z_b,x_i)`, this replacement imposes the linear functional
+
+`L_{b,s}(z,x) = z_b - sum_i lambda_{i,b,s} x_i`.
+
+For a set `R` of incomplete blocks, let `r_L` be the rank of the chosen functionals `L_{b,s}`, one functional per block in `R`. Then the actual relation nullity is
+
+`d-r_L`,
+
+and direct row counting gives the exact identity
+
+`D = p - 10 + 3(d-r_L)`.
+
+Therefore:
+
+- at `p=10`, `D=0` exactly when the chosen local functionals span the full `d`-dimensional dependency space;
+- at `p=11`, `D=1` exactly when they span the full dependency space.
+
+Each block offers at most one compatible singleton choice of cost one and three pair choices of cost two, while complete has cost zero. Thus classification of the `k=5` sharp boundary is a weighted partition-constrained linear spanning problem, not a multi-billion-state local enumeration. This should be the next implementation target for the `k=5` part of the deletion-shadow program.
+
+## Updated next target
+
+The blanket slack-two route is dead. The replacement route is sharper:
+
+1. classify `D=0` and `D=1` five-no-root states only in the six boundary bands above;
+2. for each boundary class, test whether any no-root extension has rank increment `(Delta r_M, Delta r_Q)=(1,0)`;
+3. if no such extension exists, the entire six-no-root density layer is closed without enumerating all 325,911 six-subset orbits and their local states.
+
+For `k=5`, use the weighted-functional spanning formulation above. For `k=3` and `k=4`, the existing canonical containment machinery already isolates the only remaining values `p=4,5` and `p=7,8` respectively.
+
+## Direct C-II bottleneck
+
+This remains an auxiliary metric-basis route. The direct generic-H6 endpoint is still
+
+`3874 = 3076 C7 + 798 (C3 disjoint-union C4)`.
+
+The state-specific exact forced-segment-order scan remains the computation most directly capable of removing those cells, followed by quantitative sine-law metric compatibility for survivors. No theorem-state authority file is changed by this result.

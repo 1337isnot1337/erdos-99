@@ -1,0 +1,476 @@
+<!-- theorem-state: {"artifact_id":"ART-9C75A1EB6349","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
+# Target A — alternating-strip quadratic gap gain
+
+`alternating-strip finite gain -> free aligned-gap support radius -> fixed-shape same-hull add-one competitor -> restricted Target A closure; arbitrary-source embedding remains open`
+
+**Date:** 2026-10-02  
+**Starting commit:** `fbeae9b3fa18a63e07573676b4e2e512a91ca4d5`  
+**State version:** `2026-09-14.audit.51`  
+**Assigned mission:** independent Target A source-capacity/strict-competitor route  
+**Branch:** `swarm/sol/source-schur-20261002`  
+**Run type:** closing-proof attempt, exact geometric construction  
+**Claim classification:** proved candidate awaiting promotion; artifact unreviewed  
+**Active prompt:** `docs/prompts/erdos_problem_99_TARGET_A_CURRENT_CONTINUATION_PROMPT.md`  
+**External literature imports:** none  
+**Computation:** `research/kuperberg_alternating_strip_exact.py`
+
+**LEVEL I STATUS: STILL OPEN. TARGET A REMAINS OPEN.**
+
+## 1. Canonical endpoint and dependencies
+
+The live route is through Section 177. The global Schur endpoint remains
+
+\[
+\operatorname{rank}S\le d_{\rm int}+|C^\partial|-\Delta_\Lambda.
+\]
+
+The locked endpoint is Section 175's
+
+\[
+|O_{\rm iso}|+\sum_i\max(0,|O_i|-|C_i|)\ge j_*+|T_Z|.
+\]
+
+This report attacks the distinct geometric-strain alternative. Its canonical inputs
+are Section 148's split-gap same-hull construction in
+[`05-fixed-shape-and-separator-audit.md`](../targets/target-a/05-fixed-shape-and-separator-audit.md),
+Section 157's aligned-gap model, finite terminal insertion, and nesting principle in
+[`10-quantitative-kuperberg-rate.md`](../targets/target-a/10-quantitative-kuperberg-rate.md),
+and Sections 160–162's five-block translation benchmark in
+[`12-toeout-kuperberg-improvement.md`](../targets/target-a/12-toeout-kuperberg-improvement.md),
+[`13-five-block-local-optimality.md`](../targets/target-a/13-five-block-local-optimality.md),
+and [`14-sharp-symmetric-five-block.md`](../targets/target-a/14-sharp-symmetric-five-block.md).
+No unpromoted report is used as a premise.
+
+The construction below changes the number of blocks with the gap width. It does not
+contradict the canonical quartic theorem for the fixed five-block architecture.
+
+## 2. The finite strip theorem
+
+Use the paper normalization: minimum center distance two and triangular lattice
+
+\[
+\Lambda_2=\{(2i+j,\sqrt3j):i,j\in\mathbb Z\}.
+\]
+
+For `d>0`, the points with `j>=0` are shifted upward by `(0,d)`; the points with
+`j<0` stay fixed. Denote this infinite, unit-separated-after-rescaling gap packing by
+`P(d)`.
+
+**Theorem 1 (finite alternating-strip widening).** Let `n>=3`, `r>=1`,
+`0<d<=1/8`, and `rd<=2`. There is a finite three-stage, contact-feasible motion of
+`4r+1` rigid triangular blocks of `P(d)`, with every other center fixed, such that:
+
+1. the middle upward triangle of size `n-1` is translated exactly vertically;
+2. its base gap increases from `d` to `d+v`;
+3. the exact gain is
+
+   \[
+   \boxed{v={r^2d^4\over128\sqrt3};}
+   \]
+
+4. the support lies in a lattice trapezoid of height `n-1` and base-index width
+   `(2r+1)(n+1)-3`;
+5. all points, including points outside the blocks, remain at pairwise distance at
+   least two throughout the motion.
+
+In particular, choosing `r=ceil(1/d)` is admissible and yields
+
+\[
+\boxed{v\ge{d^2\over128\sqrt3}.}
+\tag{1}
+\]
+
+This is a finite motion of the actual gap packing. It does not add points until the
+terminal insertion is performed, and it does not assert that `P(d)` is globally
+optimal.
+
+### 2.1 Exact block partition
+
+Put `a=n-1`. Tile the lattice trapezoid by upward triangles `U_0,...,U_{2r}` and
+downward triangles `V_0,...,V_{2r-1}`. There are `4r+1` blocks in left-to-right order.
+All upward triangles have size `n` except `U_r`, which has size `n-1`.
+
+An explicit index definition removes any picture-dependent convention. Start with
+`b_0=0`. For `k=0,...,2r`, put
+
+\[
+t_k=a-\mathbf1_{k=r},\qquad b_{k+1}=b_k+t_k+2.
+\]
+
+Then
+
+\[
+U_k=\{(i,j):0\le j\le t_k,\ b_k\le i\le b_k+t_k-j\},
+\]
+
+and, for `k<2r`,
+
+\[
+V_k=\{(i,j):0\le j\le a,\ b_k+t_k+1-j\le i\le b_k+t_k+1\}.
+\]
+
+The union is exactly
+
+\[
+0\le j\le n-1,\qquad
+0\le i\le(2r+1)(n+1)-3-j.
+\tag{2}
+\]
+
+The middle block is the upward triangle `U_r`. Label the blocks `1,...,4r+1` in
+order, with middle label `2r+1`. Reflection in the vertical symmetry axis sends label
+`ell` to `4r+2-ell`. At `r=1` this is exactly the canonical five-block partition.
+
+### 2.2 Explicit final translations
+
+Put
+
+\[
+\varepsilon={d^2\over16},\qquad
+A_\ell=\ell\varepsilon\quad(1\le\ell\le2r),\qquad
+c=A_{2r}={rd^2\over8},\qquad
+v={c^2\over2\sqrt3}.
+\tag{3}
+\]
+
+For a block on the left of the middle, translate by
+
+\[
+\tau_\ell=
+\begin{cases}
+(-A_\ell,-d+A_\ell/\sqrt3),&\ell\text{ odd},\\
+(-A_\ell,-A_\ell/\sqrt3),&\ell\text{ even}.
+\end{cases}
+\tag{4}
+\]
+
+Reflect these translations on the right. Translate the middle block by `(0,v)`.
+Since `rd<=2`,
+
+\[
+0<A_\ell\le c\le d/4.
+\tag{5}
+\]
+
+Thus upward blocks descend by `b_ell=d-A_ell/sqrt(3)>0`, downward blocks descend
+by `A_ell/sqrt(3)`, and the horizontal translations accumulate toward the middle.
+
+### 2.3 Complete interface audit
+
+Within each block, distances are unchanged. Every cross-block original nearest
+neighbor has one of the following types, up to reflection and reversing endpoints.
+The table is exhaustive directly from the index partition (2). The two diagonal
+directions to a fixed shore differ only by the sign of their horizontal unit entry;
+the table lists the smaller squared-distance margin.
+
+| Interface | Squared-distance margin above four |
+| --- | --- |
+| Upward block to fixed lower diagonal | `4A^2/3` |
+| Downward block to fixed upper diagonal | `4A^2/3` |
+| Upward block to fixed upper diagonal, or downward block to fixed lower diagonal | `2sqrt(3)d-4A+A^2+(d-A/sqrt(3))^2` |
+| Outer upward block to fixed upper horizontal neighbor | `(2-epsilon)^2+(d-epsilon/sqrt(3))^2-4` |
+| Consecutive nonmiddle blocks, horizontal | `(2-epsilon)^2+g^2-4`, with `g=d-(A+A')/sqrt(3)` |
+| Consecutive nonmiddle blocks, diagonal | `(1-epsilon)^2+(sqrt(3)+g)^2-4` |
+| Middle block to adjacent downward block, horizontal | `(2+c)^2+(c/sqrt(3)+v)^2-4` |
+| Middle block to adjacent downward block, diagonal | `(1+c)^2+(sqrt(3)-c/sqrt(3)-v)^2-4` |
+| Two downward blocks above the shortened middle triangle | `(2+2c)^2-4` |
+| Middle block to fixed lower diagonal | `2sqrt(3)(d+v)+(d+v)^2` |
+
+There is no middle-to-fixed-upper nearest neighbor: the middle triangle is shorter
+by one row. There are no other moved-to-fixed horizontal interfaces: only the two
+outer triangles meet the sides of the trapezoid.
+
+All margins are nonnegative. For the adverse fixed diagonal margin, (5) gives
+
+\[
+2\sqrt3d-4A\ge(2\sqrt3-1)d>0.
+\]
+
+For consecutive nonmiddle blocks,
+
+\[
+g\ge d\left(1-{1\over2\sqrt3}\right)>{2d\over3}.
+\]
+
+Hence the horizontal margin is at least
+
+\[
+-4\varepsilon+g^2
+\ge-{d^2\over4}+{4d^2\over9}={7d^2\over36}>0.
+\tag{6}
+\]
+
+The outer horizontal margin has the same lower bound. The nonmiddle diagonal
+margin is at least `-2epsilon+2sqrt(3)g>0`.
+
+The only potentially restrictive middle margin simplifies exactly, using (3), to
+
+\[
+{4c^2\over3}-2(\sqrt3-c/\sqrt3)v+v^2
+={c^2\over3}+{c^3\over3}+{c^4\over12}>0.
+\tag{7}
+\]
+
+The remaining listed margins are manifestly nonnegative.
+
+### 2.4 Finite integration, not merely an endpoint
+
+The following three-stage path integrates the construction.
+
+**Stage I.** Move every nonmiddle upward block vertically to its final height,
+keeping all horizontal coordinates, all downward blocks, and the middle fixed.
+Parameterize this stage by `s in [0,1]` and use vertical displacement
+`-s(d-A/sqrt(3))`. Horizontal interface lengths increase; the diagonal interfaces
+between upward and downward blocks open. Fixed-upper diagonal distances increase.
+The remaining lower gap is at least `A/sqrt(3)>0`, so fixed-lower distances do not
+fall below two.
+
+**Stage II.** Keep those upward-block heights fixed. Set every left horizontal
+translation to `-sA`, and every left downward-block vertical translation to
+`-sA/sqrt(3)`, reflecting on the right. Keep the middle fixed. The upward-to-lower
+worst margin is now
+
+\[
+(1-sA)^2+(\sqrt3+A/\sqrt3)^2-4
+=2A(1-s)+s^2A^2+A^2/3\ge0.
+\]
+
+The downward-to-upper worst margin is `4s^2A^2/3`. The adverse fixed diagonal
+margins are at least `2sqrt(3)d-4A>0`. Across each nonmiddle horizontal or
+diagonal interface the vertical clearance is
+
+\[
+g_s=d-(A+sA')/\sqrt3\quad\text{or}\quad d-(sA+A')/\sqrt3,
+\]
+
+and therefore remains above `2d/3`. The horizontal increment is `s epsilon`, so
+(6) remains a lower bound. The outer horizontal margin is also bounded below by
+(6). Middle diagonal margins are `4s^2c^2/3`; middle horizontal and the two
+downward-block horizontal margins increase.
+
+**Stage III.** Move only the middle vertically from zero to `v`. Its lower and
+horizontal distances increase. Its adverse diagonal margin decreases monotonically
+until the endpoint (7), because `sqrt(3)-c/sqrt(3)-sv>0` throughout. Thus (7)
+certifies the entire last stage.
+
+At all stages every center displacement has norm below `2d`. Original
+non-nearest-neighbor distances in `P(d)` are at least `2sqrt(3)`; opening the initial
+gap cannot decrease a cross-gap distance. Such pairs therefore remain at distance
+at least
+
+\[
+2\sqrt3-4d\ge2\sqrt3-1/2>2.
+\]
+
+This handles every non-neighbor pair, including pairs with a fixed endpoint. The
+nearest-neighbor audit and the three-stage verification prove Theorem 1. ∎
+
+## 3. Improved free aligned-gap support bound
+
+**Theorem 2 (candidate support rate).** In the canonical minimum-center-distance-one
+normalization, constants `C_1,C_2,C_3,d_0>0` exist such that
+
+\[
+\boxed{
+W(d)\le C_1\exp\left({C_2\over d}\log{C_3\over d}\right)
+\qquad(0<d<d_0).
+}
+\tag{8}
+\]
+
+Here `W` has exactly Section 150/157's free aligned-gap meaning. The exterior is
+the complete gap packing, not an arbitrary source packing. The conclusion is
+strictly stronger in exponent scale than the canonical `exp(O(d^-3))` bound.
+
+### Proof
+
+First work at center distance two. At current gap width `x<=1/8`, choose
+`r(x)=ceil(1/x)` and apply Theorem 1. The new width is `x+v(x)`, where
+
+\[
+\kappa x^2\le v(x)\le Kx^2,
+\qquad
+\kappa={1\over128\sqrt3},
+\quad K={(9/8)^2\over128\sqrt3}.
+\tag{9}
+\]
+
+It takes at most `C/x_initial` stages to reach `1/8`: while below that threshold,
+
+\[
+{1\over x}-{1\over x+v(x)}
+={v(x)\over x(x+v(x))}
+\ge{\kappa\over1+K/8}>0.
+\]
+
+Once width `1/8` is reached, the canonical finite-gap insertion theorem provides a
+fixed finite positive-cardinality witness. Its support and radius-three interaction collar
+have fixed size, independent of the initial width. Choose the last middle triangle
+large enough to contain that witness's upper-half support and collar. Its lower-half
+support lies in the unchanged lower half-lattice. A wider terminal gap causes no
+problem: the last middle lift may be reduced to give exactly width `1/8`, since
+Stage III remains feasible for every smaller positive lift.
+
+The preceding widening templates can be nested backwards into successive middle
+triangles. Formula (2) gives base-index width `(2r+1)(n+1)-3`. A fixed lattice collar
+around its upper-half footprint fits into a preceding upward triangle whenever the
+preceding size is at least
+
+\[
+(2r+1)(n+1)+C_0.
+\tag{10}
+\]
+
+The collar is necessary: every nearest neighbor of a newly moved upper point must
+still be in the uniformly translated preceding middle triangle. Only the original
+lower half-lattice is allowed across the base. A fixed extra lattice-index buffer
+on the sloping sides and top achieves this, with `C_0` independent of `r,n,x`.
+
+At width `x>=d`, the nesting factor in (10) is at most `C_4/d`. There are at most
+`C_5/d` stages. Thus the initial size and the full support radius are bounded by
+
+\[
+C_6(C_4/d)^{C_5/d}
+=C_6\exp\left({C_5\over d}\log{C_4\over d}\right).
+\tag{11}
+\]
+
+The collar also proves nearest-neighbor compatibility between successive templates.
+For non-neighbors, all ancestral middle shifts telescope into the difference of
+current and initial gap widths. Before the terminal insertion, each original point's
+total displacement is below `3/8`: accumulated middle lifts are at most `1/8`, and
+its own nonmiddle translation has norm below `2(1/8)`. Therefore an original
+non-neighbor pair remains at distance above `2sqrt(3)-3/4>2`. At the terminal step,
+the complete finite witness and its radius-three interaction collar lie in the
+final uniform gap region. All original upper centers in that collar are therefore
+the exact centers of the canonical terminal gap packing. Every upper center outside
+the collar differs from its hypothetical position in the complete final gap packing
+by less than `1/2`: its displacement from the original initial-gap packing is below
+`3/8`, and the two uniform gap heights differ by at most `1/8`. Thus an outside
+center remains at distance above `3-1/2>2` from every changed or new terminal
+point. Lower centers are exactly those of the complete terminal gap packing. The
+canonical exterior-compatibility theorem therefore applies to the replacement,
+including actual exterior points beyond the last triangle.
+
+The insertion gains at least one center. Rescaling all lengths by one half changes
+the constants in (11), and proves (8). ∎
+
+## 4. Push to the same-hull capacity consequence
+
+**Corollary 3 (candidate vanishing-strain range).** Retain Section 148's fixed
+full-dimensional convex triangular-lattice polygon `K`, with `0 in int K`, and let
+`P_L=Lambda cap LK`. Suppose `alpha_L>0`, `alpha_L->0`, and
+
+\[
+\boxed{
+\alpha_L^{-1}\log(1/\alpha_L)=o(\log L).
+}
+\tag{12}
+\]
+
+For all sufficiently large integer `L`, the hull `(L+alpha_L)K` contains a
+unit-separated set with `|P_L|+1` points.
+
+### Proof
+
+Choose `rho>0` with `rho B subset K`. Split `P_L` along a primitive horizontal
+lattice row and translate the two halves by `+/- a_L` in the normal direction,
+where `a_L=rho alpha_L/2`. Exactly as in Section 148, the split patch stays in
+`(L+alpha_L)K`, has the same cardinality, and creates a free aligned gap of width
+`rho alpha_L`. By (8) and (12), the insertion witness and its collar have radius
+
+\[
+\exp\{O(\alpha_L^{-1}\log(1/\alpha_L))\}=L^{o(1)}=o(L).
+\]
+
+They therefore fit in the fixed-shape expanding patch and hull. Replace the old
+witness by the new one and retain exactly one extra point. ∎
+
+For example, the sufficient regime includes
+`alpha_L=(log log L)^2/log L`, which is far below the old sufficient scale
+`(log L)^(-1/3)`. More generally it includes any
+`alpha_L=(log log L)^(1+eta)/log L` for fixed `eta>0`.
+
+This consequence reaches the exact same-hull cardinality endpoint for that model.
+It does **not** create an arbitrary-source Schur kernel. An embedded source patch
+must separately permit the row split and contain the complete moving/insertion
+footprint without conflicts with exterior source points.
+
+## 5. Failed first attack and repaired mechanism
+
+The first test allowed rigid rotations of the canonical five blocks, followed by
+independent motion of each original point in the same footprint. Floating-point
+optimization at several small widths returned the canonical toe-out gain, with no
+useful rotational improvement. That is discovery evidence, not an optimality
+certificate; no theorem rejecting rotations or arbitrary internal deformation is
+claimed.
+
+The repaired attack changes the footprint. It concatenates many alternating upward
+and downward triangles along the existing gap. Horizontal clearance of order `d^2`
+at each interface accumulates into an inner translation of order `rd^2`; the middle
+quadratic cage then permits gain of order `r^2d^4`. Taking `r=ceil(1/d)` turns this
+into a quadratic gain. Equations (3)–(7) are an exact construction, not a numerical
+survival claim.
+
+The stronger proposed shortcut “every finite local rigid-block gap move has uniformly
+quartic gain regardless of its number of blocks” is therefore false. Theorem 1
+provides an exact family disproving it. Sections 161–162 never made that shortcut.
+
+## 6. Regression and scope audit
+
+| Check | Result |
+| --- | --- |
+| Fixed five-block quartic optimality | Preserved: the new family uses `4ceil(1/d)+1` blocks. At fixed `r`, its gain is still quartic. |
+| Star/shell/local-optimum regressions | No global-optimality assertion is made for the gap packing or any shell. |
+| Source/scaffold/response identification | None made; only a proved fixed-shape capacity application is claimed. |
+| Simultaneous compatibility | Every moved/moved and moved/fixed nearest-neighbor interface is checked; non-neighbors have a uniform clearance bound. |
+| Infinitesimal-to-finite release | An explicit three-stage feasible motion is proved. |
+| Contacts at equality | Retained exactly within every rigid block and on some Stage II diagonal interfaces. |
+| Isolated source points | An arbitrary source is never pruned. For an embedded use, every exterior source point remains an obligation. |
+| Exact Level I quantifiers | No claim about all sufficiently large global minimizers follows yet. |
+
+## 7. Exact computation and validation boundary
+
+The standard-library verifier reconstructs (2), checks reflection, checks equality
+with the canonical five-block partition when `r=1`, and uses exact arithmetic in
+`Q(sqrt(3))` to check every original nearest-neighbor constraint with a moved
+endpoint. It also checks within-block contacts. Run:
+
+```text
+python3 research/kuperberg_alternating_strip_exact.py
+```
+
+Its finite cases are independent bookkeeping checks. The table and inequalities
+prove all `n,r,d` in Theorem 1. The non-neighbor bound and the recursive collar
+argument are human proofs, not outputs of finite enumeration. The script does not
+certify global optimality, arbitrary-source embedding, or promotion.
+
+Verified output in this run: **96 exact strip endpoints, 24 exact path samples,
+357,434 nearest-neighbor constraints; all passed.** The theorem-state checker and
+`git diff --check` also passed. Regenerating the artifact index additionally supplied
+missing default-unreviewed metadata headers for 28 pre-existing reports from the
+starting commit; those metadata-only changes promote no claim and alter no proof.
+
+## 8. Exact remaining obligation and promotion boundary
+
+The new free-gap architecture gives (8), and (12) supplies a stronger restricted
+capacity theorem. The next source-level obligation is precise:
+
+> In a surviving Target A source branch, extract a primitive-direction aligned gap
+> of width `d_D` together with its full uniformly phased moving/insertion region,
+> unblocked by any exterior source point, with available radius `R_D` satisfying
+> `d_D^(-1) log(1/d_D)=o(log R_D)`; carry the final add-one set in a container of
+> diameter strictly below the source diameter or convert it into the exact Schur
+> deficiency.
+
+Neither contact-forest dimension nor positive strain alone proves this quantitative
+and exterior-compatible extraction. The Schur sector surplus remains open. A source
+with an arbitrarily small gap or an exterior-blocked patch is not eliminated by this
+report.
+
+**Promotion recommendation:** preserve as an unreviewed research packet and obtain
+an independent proof/collar audit. A promotion of (8) must update the manifest,
+Target A route and active prompt, relevant Section 157/160 frontier language,
+generated state views, and the registered certificate in one transaction. The
+canonical five-block results remain valid and should remain available as the fixed
+architecture benchmark.

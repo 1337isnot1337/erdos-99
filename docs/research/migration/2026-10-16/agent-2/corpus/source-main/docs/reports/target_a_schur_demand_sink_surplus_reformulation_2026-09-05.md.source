@@ -1,0 +1,231 @@
+<!-- theorem-state: {"artifact_id":"ART-6D562DACAEEA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
+# Erdős Problem #99 — Target A Schur demand as exterior-sink surplus
+
+**Date:** 2026-09-05  
+**Run type:** exact algebraic reformulation  
+**Target:** Sections 99, 102, 174  
+**Depends on:** dual Hall/lattice-deficit identity; plateau-terminalized Schur normal form; tube-shield sector balance  
+**LEVEL I STATUS:** STILL OPEN
+
+## 1. Plateau-terminalized collar demand
+
+Retain the canonical Target A notation. The original lattice population deficit is
+
+`Delta_Lambda = N-|Y|`,
+
+with
+
+`Y=Y_0 sqcup Y_in`.
+
+Write
+
+`k=|Y_0|`,
+
+and let the actual plateau-terminalized optimum have
+
+`m^*=|X^*|`.
+
+Define the residual collar demand after plateau terminalization by
+
+`j_* := N-k-m^*`.
+
+This is only a bookkeeping definition. Since
+
+`|Y|=k+|Y_in|`,
+
+we have the exact identity
+
+`Delta_Lambda = j_* + m^* - |Y_in|`.                 (1.1)
+
+Now split
+
+`Y_in=Z sqcup O`.
+
+Section 102 chooses a full `Z`-row basis `B` of size `|Z|`, with nonbasis set
+
+`C=X^*\B=C^circ sqcup C^partial`.
+
+The deep nonbasis set has
+
+`|C^circ|=d_int`.
+
+Therefore
+
+`|C^partial| = m^* - |Z| - d_int`.                  (1.2)
+
+## 2. Exact Schur-demand simplification
+
+The canonical Schur demand is
+
+`s = Delta_Lambda-d_int`.
+
+Insert (1.1), `|Y_in|=|Z|+|O|`, and (1.2):
+
+` s
+ = j_* + m^* - |Z|-|O|-d_int
+ = j_* + |C^partial|-|O|.`
+
+### Theorem 1 — boundary count form of the Schur demand
+
+`boxed{s = |C^partial|-|O|+j_*}`.                   (2.1)
+
+Thus the remaining Target A demand contains no hidden bulk term. It is exactly:
+
+1. boundary Schur-source count `|C^partial|`;
+2. minus exterior sink count `|O|`;
+3. plus the residual collar cardinality demand `j_*`.
+
+This is the plateau-terminalized version of the older duality `h(G)>=j`.
+
+Indeed Section 102 gives
+
+`zeta=dim ker S=|C^partial|-rank S`,
+
+and
+
+`h(G)=|O|-rank S`.
+
+Therefore
+
+`zeta-s = h(G)-j_*`.                                 (2.2)
+
+So the exact Schur endpoint
+
+`zeta>=s`
+
+is equivalent to the transparent right-deficiency endpoint
+
+`h(G)>=j_*`.                                         (2.3)
+
+## 3. Exact tube-shield target in sink-surplus form
+
+Let `W=widehat W_Sigma` be the basis-closed tube shield of Section 174. For the components
+
+`D_1,...,D_k`
+
+of `K^*\|Sigma|`, put
+
+`C_i=(C^partial\W) cap D_i`,
+
+and let `O_i` be the surviving exterior sinks assigned to sector `D_i` by their surviving response neighbors.
+
+A surviving `O` vertex may have no surviving response neighbor after shield deletion. Let
+
+`O_iso={o in O\W: o has no surviving response neighbor}`.
+
+Section 174.2 makes the nonisolated surviving `O` sets sector-unique, so the `O_i` are disjoint and partition
+
+`(O\W)\O_iso`.
+
+Define the signed sector surplus
+
+`a_i=|C_i|-|O_i|`.
+
+Then
+
+`sum_i a_i
+ = |C^partial|-|C^partial cap W|
+   -|O|+|O cap W|+|O_iso|`.                          (3.1)
+
+The positive-part population in Theorem 174.19 is
+
+`P=sum_i max(0,a_i)`.
+
+Write the total sink-heavy sector surplus as
+
+`Q=sum_i max(0,-a_i)
+  =sum_i max(0,|O_i|-|C_i|)`.
+
+Since `P-Q=sum_i a_i`, the Section-174 sufficient condition
+
+`P >= s+|W\C^partial|`                                (3.2)
+
+can be rewritten exactly by substituting (2.1) and (3.1).
+
+### Theorem 2 — exact three-sector sink-surplus target
+
+Condition (3.2), hence the desired Schur nullity bound, is equivalent to
+
+`boxed{
+Q >= j_* + |W\O| - |O_iso|.
+}`                                                       (3.3)
+
+### Proof
+
+Subtract (3.1) from the right side of (3.2):
+
+`[s+|W\C^partial|]-sum_i a_i`
+
+`=[|C^partial|-|O|+j_* + |W|-|C^partial cap W|]`
+
+` -[|C^partial|-|C^partial cap W|-|O|+|O cap W|+|O_iso|]`
+
+`=j_*+|W|-|O cap W|-|O_iso|`
+
+`=j_*+|W\O|-|O_iso|`.
+
+Since `P-sum_i a_i=Q`, (3.2) is equivalent to (3.3). `square`
+
+## 4. Interpretation
+
+The Section-174 theorem was previously phrased as the need for enough **positive left surplus**
+
+`sum max(0,|C_i|-|O_i|)`.
+
+The exact algebra shows the genuinely new information required from the stress-generated three-sector geometry is the dual statement:
+
+> after paying the non-`O` shield vertices, the sectors must contain at least `j_*` units of **exterior-sink surplus** beyond their local Schur-source counts, up to the automatic credit from isolated surviving sinks.
+
+The global signed terminal difference `|C^partial|-|O|` is already built into `s`; it is not the hard part. The hard gain is exactly the residual collar demand `j_*` plus shield overhead.
+
+This sharpens the target for the source-labeled sector program. One no longer needs an opaque inequality involving `Delta_Lambda` or `d_int`; one needs to force sink-heavy sectors.
+
+## 5. Interaction with the new source localization
+
+The source-label crossing theorem and exterior-gate budget now imply that a zero-slack `X^*->A^0` matching is sector-preserving outside at most
+
+`5|V(Sigma)|+12d+9`
+
+vertices. The inner-source capacity theorem also gives
+
+`|A^0 cap K^*| >= m^*-(12d+9)`.
+
+These facts do not yet prove (3.3). Fixed-hull source capacity by itself does not force exterior-sink surplus; the two canonical source and response matchings remain independent.
+
+The exact remaining bridge is therefore:
+
+> use the nearly full genuine source inside `K^*`, the sector-preserving source labels, or the locked three-channel stress to prove the sink-surplus inequality (3.3), or construct a strict sub-`D` competitor.
+
+## 6. Regression checks
+
+- No identification is made between the separate `X^*->A^0` and `Y_in->A^0` saturating matchings.
+- No common-neighbor SDR is assumed.
+- Isolated surviving `O` vertices are retained explicitly as the favorable term `|O_iso|`.
+- Shielded `O` vertices are not charged twice; their contribution is absorbed by `|W\O|`.
+- The reformulation is exact algebra and does not use planarity to infer nullity.
+
+## 7. Handoff
+
+```text
+LEVEL I STATUS: STILL OPEN.
+
+Define j_* = N-|Y_0|-m^* after plateau terminalization.
+Then exactly
+
+  s=Delta_Lambda-d_int
+   =|C^partial|-|O|+j_*,
+
+and
+
+  zeta-s = h(G)-j_*.
+
+For a basis-closed tube shield W, let O_iso be surviving O rows with no surviving neighbor and let
+
+  Q=sum_i max(0, |O_i|-|C_i|).
+
+The Section-174 three-sector condition is exactly equivalent to
+
+  Q >= j_* + |W\O| - |O_iso|.
+
+So the missing theorem is specifically an exterior-sink-surplus theorem, not a generic Schur-rank theorem.
+```

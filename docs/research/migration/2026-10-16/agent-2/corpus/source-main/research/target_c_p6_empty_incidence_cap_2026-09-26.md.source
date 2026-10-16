@@ -1,0 +1,46 @@
+# Target C: final p=6 empty-incidence cap
+
+Date: 2026-09-26
+
+Scope: final eight-no-root branch k=5, D=-1, d_root=0, p=6.
+
+Committed inputs: rank(P)=3, generalized weights (d1,d2,d3)>=(2,4,5), exactly six touched actual-singleton blocks, no selected pair block, and e touched actual-empty blocks.
+
+For a touched triangle block b, let I_b be the set of the eight external cycle coordinates whose tetrahedral support contains b, and n_b=|I_b|. Each external cycle has four triangle faces, so sum_b n_b=32.
+
+Each of the six singleton blocks is touched, hence n_b>=1.
+
+For an actual-empty block b, let E_b<=P be its local empty-block constraint space. If dim(E_b)=1, d1(P)>=2 gives n_b>=2. If dim(E_b)=2, d2(P)>=4 gives n_b>=4.
+
+Let r be the number of rank-two empty blocks. Among the other e-r rank-one empty blocks, let z be the number with n_b=2. Every remaining rank-one empty block has n_b>=3. Ignoring touched complete blocks only weakens the count, so
+
+32 >= 6 + 4r + 2z + 3(e-r-z) = 6 + 3e + r - z.
+
+Hence
+
+z >= 3e + r - 26.   (1)
+
+Now take a rank-one empty block b with n_b=2. Since E_b is nonzero and d1(P)>=2, its unique nonzero line is supported on exactly I_b.
+
+For two distinct such blocks b,c, the pairs I_b and I_c are distinct. If they were the same pair of external coordinates, those two cycle coordinates would have tetrahedral supports containing both distinct triangles b and c. Two distinct tetrahedra cannot share two distinct triangular faces, so the two cycle coordinates would have the same tetrahedral support. That support would then have multiplicity at least two, which makes every one of its faces rank-two as an empty-block constraint, contradicting dim(E_b)=1.
+
+Thus E_b and E_c are distinct lines. Their span is a two-dimensional subcode of P supported inside I_b union I_c. Since d2(P)>=4, the two size-two supports must be disjoint.
+
+Therefore the z corresponding nonzero vectors have pairwise disjoint supports. They are linearly independent. Since rank(P)=3,
+
+z <= 3.   (2)
+
+Combining (1) and (2) gives
+
+3e + r <= 29.
+
+Consequences:
+
+- e<=9. Every e>=10 slice of the final p=6 branch is impossible.
+- For e=9, r<=2.
+- More precisely, for e=9: r=0 implies z>=1; r=1 implies z>=2; r=2 forces z=3.
+- In the e=9,r=2 equality case, all inequalities above are equalities: all six singleton blocks have incidence one; the two rank-two empties have incidence four; exactly three rank-one empties have incidence two; the remaining four rank-one empties have incidence three; there is no touched complete block; and the three incidence-two empty lines form a disjoint-support basis of P.
+
+Thus, after the committed e<=6 closures, the remaining final p=6 branch is reduced to e in {7,8,9}, with e=9 restricted further by r<=2.
+
+This is a proof-level reduction. No finite search or modular-rank computation is used.

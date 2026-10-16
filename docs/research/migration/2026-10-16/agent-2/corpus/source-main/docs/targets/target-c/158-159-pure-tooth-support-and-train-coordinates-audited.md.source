@@ -1,0 +1,322 @@
+# Target C — audited §§158–159 pure-tooth support regression and exact train coordinates
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working proof-only route module; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This is the collision-free normalization of the two unique pure-tooth results from PR #392. The general exceptional-face closure/Hall and two-sided train-bracing theorems are already §§156–157 and are not duplicated here.
+
+The two results separate combinatorial support from realized metric geometry:
+
+1. §158 gives an infinite abstract regression family showing that circular support incidence, triangle-free train crossings, an odd-unicyclic convex-thrackle diameter graph, rank `q-1`, an all-ones right kernel, and a positive left kernel do **not** by themselves close the pure-tooth endpoint.
+2. §159 restores the omitted metric information: every realized core displacement is an exact signed sum of actual unit train vectors. Every actual diameter pair is separated by at least `ceil(D)` stopped-train cuts, so the exact pure-tooth endpoint carries at least `q ceil(D)` diameter/train incidences.
+
+No theorem-state promotion is attempted.
+
+---
+
+# §158 — support combinatorics alone do not close the pure-tooth endpoint
+
+At the exact pure-tooth endpoint the diameter/train first-variation matrix has the algebraic form
+
+\[
+\operatorname{rank}A=q-1,
+\qquad A\mathbf1=0,
+\qquad \beta^TA=0,
+\qquad \beta>0.
+\tag{158.1}
+\]
+
+Its zero pattern is constrained by circular order: rows correspond to diameter chords in an odd-unicyclic convex thrackle, columns correspond to outer-to-outer stopped-train cuts, and an entry can be nonzero only when the corresponding chords cross.
+
+These properties alone are insufficient.
+
+## 158.1 Infinite exact abstract regression family
+
+For every integer `q>=5`, place `2q` train-end slots cyclically as
+
+\[
+0,1,\ldots,2q-1.
+\]
+
+Use train chords
+
+\[
+(0,2),
+\qquad
+(2i-1,2i+2)\quad(1\le i\le q-2),
+\qquad
+(2q-3,2q-1).
+\tag{158.2}
+\]
+
+Call them `tau_0,...,tau_{q-1}` in this order. Consecutive train chords cross and nonconsecutive ones do not, so the train crossing graph is exactly
+
+\[
+\tau_0-\tau_1-\cdots-\tau_{q-1}.
+\tag{158.3}
+\]
+
+It is simple and triangle-free.
+
+Put loaded vertices `0,1,...,q-1` in convex cyclic order and use diameter support
+
+\[
+(0,j)\quad(1\le j\le q-1),
+\qquad
+(1,q-1).
+\tag{158.4}
+\]
+
+This has `q` edges on `q` vertices, is connected, and has unique odd cycle
+
+\[
+0-1-(q-1)-0.
+\]
+
+Every pair of its edges meets in the convex-thrackle sense: star edges share vertex `0`, while `(1,q-1)` crosses every `(0,j)` for `2<=j<=q-2` and shares an endpoint with the two remaining star edges.
+
+Place loaded vertex `i` between train-end slots `2i-1` and `2i` in the alternating pure-tooth order. Direct chord alternation gives a `q x q` support matrix `S_q` with
+
+\[
+(S_q)_{i,i}=(S_q)_{i,i+1}=1
+\qquad(0\le i\le q-2),
+\tag{158.5}
+\]
+
+and final-row support
+
+\[
+(S_q)_{q-1,j}=1
+\iff
+j\in\{0,1,q-2,q-1\}.
+\tag{158.6}
+\]
+
+Every row and column has degree at least two.
+
+## 158.2 Balanced rank-`q-1` matrix on this support
+
+For rows `0,...,q-2`, set
+
+\[
+(A_q)_{i,i}=a_i,
+\qquad
+(A_q)_{i,i+1}=-a_i,
+\tag{158.7}
+\]
+
+where
+
+\[
+a_0=1,
+\qquad
+a_i=2\quad(1\le i\le q-3),
+\qquad
+a_{q-2}=3.
+\tag{158.8}
+\]
+
+In the final row set
+
+\[
+(A_q)_{q-1,0}=-1,
+\quad
+(A_q)_{q-1,1}=-1,
+\quad
+(A_q)_{q-1,q-2}=-1,
+\quad
+(A_q)_{q-1,q-1}=3,
+\tag{158.9}
+\]
+
+and zero elsewhere.
+
+Every displayed support entry is nonzero. Row and column bookkeeping gives
+
+\[
+A_q\mathbf1=0,
+\qquad
+\mathbf1^TA_q=0.
+\tag{158.10}
+\]
+
+Thus `1` is both a right-kernel vector and a strictly positive left-kernel vector. The leading `(q-1)x(q-1)` minor is upper triangular with determinant
+
+\[
+3\,2^{q-3}\ne0,
+\tag{158.11}
+\]
+
+so
+
+\[
+\boxed{\operatorname{rank}A_q=q-1.}
+\tag{158.12}
+\]
+
+Both kernels are one-dimensional and have exactly the algebraic form allowed by the pure-tooth endpoint.
+
+## 158.3 Regression consequence
+
+For arbitrarily large `q`, this abstract family simultaneously has
+
+- circular chord incidence;
+- a triangle-free train crossing graph;
+- connected odd-unicyclic convex-thrackle diameter support;
+- minimum row and column support degree at least two;
+- rank `q-1`;
+- `A1=0`; and
+- a strictly positive left-kernel vector.
+
+Therefore none of these support/rank properties alone closes the pure-tooth endpoint. A successful argument must use metric information: the actual unit train vectors, actual diameter vectors, exact shear coefficients, near-disk geometry, or another source-level relation.
+
+This is only an abstract support/linear-algebra regression. It is **not** a unit-separated realization or a diameter minimizer.
+
+---
+
+# §159 — exact train-cut coordinates reconstruct every core displacement
+
+Assume the exact pure-tooth endpoint of the audited train-shear normal form:
+
+- one unloaded positive-contact component;
+- full attachment set `A=B`;
+- `T_triangle=q` and `Q^+=0`;
+- exactly `q` outer-to-outer stopped trains; and
+- the contact-flex quotient is identified with `R^q` by train angular rates.
+
+C65 is binding when this theorem is applied to actual diameter pairs: it identifies `H` with the full actual diameter graph and excludes contact-isolated diameter endpoints. Contact-isolated points remain outside this core coordinate map.
+
+For each train `tau`, choose one exact one-train shore shear and orient its unit contact vector `u_tau` so the moving shore has infinitesimal translation `Ju_tau`. For core vertices `x,y`, define
+
+\[
+\epsilon_{xy}(\tau)=
+\begin{cases}
++1,&x\text{ lies on the moving shore and }y\text{ on the fixed shore},\\
+-1,&y\text{ lies on the moving shore and }x\text{ on the fixed shore},\\
+0,&x,y\text{ lie on the same shore}.
+\end{cases}
+\tag{159.1}
+\]
+
+Then
+
+\[
+\boxed{
+p_x-p_y
+=\sum_{\tau=1}^{q}\epsilon_{xy}(\tau)u_\tau.
+}
+\tag{159.2}
+\]
+
+This is an exact finite identity in the realized geometry.
+
+## 159.1 Sum of one-train shears equals rotation modulo translation
+
+Let `v^(tau)` be the infinitesimal velocity field of the exact shear for train `tau`. Under the pure-tooth train-angle isomorphism, `v^(tau)` maps to the standard basis vector `e_tau`. Therefore
+
+\[
+V:=\sum_{\tau=1}^{q}v^{(\tau)}
+\]
+
+has all-ones train-angle vector.
+
+Global infinitesimal rotation `R_x=Jp_x` has the same train-angle vector. The kernel of the train-angle map is exactly translation, so one constant vector `t` satisfies
+
+\[
+V_x=Jp_x+t
+\tag{159.3}
+\]
+
+on every positive-core vertex. Subtracting the equations for `x` and `y`,
+
+\[
+J(p_x-p_y)
+=\sum_\tau\bigl(v_x^{(\tau)}-v_y^{(\tau)}\bigr).
+\tag{159.4}
+\]
+
+A single train shear contributes exactly
+
+\[
+v_x^{(\tau)}-v_y^{(\tau)}
+=\epsilon_{xy}(\tau)Ju_\tau.
+\tag{159.5}
+\]
+
+Substitution and application of `-J` give (159.2).
+
+This formulation is path-independent: `epsilon_xy(tau)` is a signed **shore-separation indicator**, not the number of intersections of an arbitrarily chosen contact path with the train. Reversing the chosen shore orientation changes both `epsilon` and `u_tau`, leaving their product invariant.
+
+## 159.2 Exact diameter/train incidence floor
+
+Since every `u_tau` is an actual unit-contact vector,
+
+\[
+|p_x-p_y|
+\le
+\#\{\tau:\tau\text{ separates }x,y\}.
+\tag{159.6}
+\]
+
+For an actual diameter pair `h=xy`, C65 puts both endpoints in this core calculation and `|p_x-p_y|=D`. Therefore
+
+\[
+\boxed{
+\deg_T(h)
+:=\#\{\tau:\tau\text{ separates the endpoints of }h\}
+\ge\lceil D\rceil.
+}
+\tag{159.7}
+\]
+
+In the exact pure-tooth endpoint, the canonical ledgers give
+
+\[
+e_{BB}-k=0,
+\qquad k=d_H+s_Z.
+\]
+
+Nonnegativity forces `d_H=s_Z=0`, so `h=q`. Summing (159.7) over all actual diameter edges gives
+
+\[
+\boxed{
+I_{H,T}
+:=\#\{(h,\tau):h\text{ crosses the cut of }\tau\}
+\ge q\lceil D\rceil.
+}
+\tag{159.8}
+\]
+
+Thus the realized diameter/train incidence matrix is macroscopically dense; the sparse abstract support family of §158 cannot model the metric endpoint.
+
+For a diameter vector `r_h=p_x-p_y` and unit direction `n_h=r_h/D`, (159.2) also yields
+
+\[
+\sum_{\tau\pitchfork h}
+\epsilon_{h\tau}(n_h\cdot u_\tau)=D,
+\tag{159.9}
+\]
+
+and
+
+\[
+\sum_{\tau\pitchfork h}
+\epsilon_{h\tau}(n_h\cdot Ju_\tau)=0.
+\tag{159.10}
+\]
+
+Equation (159.10) is the row-sum-zero first-variation relation; (159.9) is the additional longitudinal metric information absent from support-only models.
+
+## 159.3 Scope and frontier effect
+
+- The coordinate identity is on the nonisolated positive-contact core.
+- Contact isolates remain in the full source but outside the train-coordinate map.
+- C65 is required before applying the incidence theorem to the full actual diameter graph.
+- Repeated contact-path crossings cannot inflate (159.7), because the coefficient is a shore indicator.
+- Every train vector has norm exactly one.
+- No response coefficient floor or support-only matrix assumption enters the metric identity.
+
+The incidence bound is not itself a contradiction: `q=Theta(D)` and different train vectors can cancel. A closing theorem must combine the dense incidence with the actual odd-unicyclic diameter thrackle, train crossing order, directional geometry, or a simultaneous source-preserving diameter-decreasing motion.
+
+**Disposition:** §§158–159 are audited-working proof-only results. C-II and Level I remain open.

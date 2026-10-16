@@ -1,0 +1,348 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "4faf235f7986f9f396a2bec58486cb080ed12748", "source_branch_refs": ["refs/heads/research/sol/target-c-level1-gpt61-2026-10-04"], "source_commit": "fb895e5c738ac8cb5c10dc418c57aad075bf7725", "source_lifecycle": "not indexed", "source_path": "research/target_c_full_flower_projective_blocker_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "352eb69fe298d46189fa0c1a04dcd24ac3e5861aec7ab74abcce7de91d8e3f9d"} -->
+
+> **Historical branch snapshot; destination authority remains current.** Pinned destination or source main has different content at this path; the current main version remains and branch history is archived.
+
+# Target C-II — fully rhombic pentagons are exact two-blockers in the train-crossing graph
+
+**Date:** 2026-09-15\
+**Status:** proof-only exact structural theorem\
+**Scope:** canonical fully force-visible full-core Type-II branch; finite statement once a fully rhombic pentagonal face exists\
+**Dependencies:** strict convexity/unit separation of bounded pentagonal contact faces; finite stopped-train crossing geometry; bounded-face endpoint fan\
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+Let `F` be a fully rhombic bounded pentagonal face.  Its five unit boundary contacts
+belong to five distinct non-singleton strict-rhombus stopped trains; denote this set by
+
+\[
+I(F)=\{\tau_1,\ldots,\tau_5\}.
+\]
+
+The key local fact is purely metric:
+
+\[
+\boxed{
+\text{no projective arc of length }\pi/3\text{ contains four side directions of }F.
+}
+\tag{FB.1}
+\]
+
+A strict-rhombus crossing between two complete trains requires projective direction
+separation strictly greater than `pi/3`.  For one fixed train direction, the set of
+projective directions that can satisfy this necessary crossing condition is one open
+arc of length exactly `pi/3`.  Therefore (FB.1) implies
+
+\[
+\boxed{
+\text{every train }\sigma\notin I(F)
+\text{ is noncrossing with at least two members of }I(F).
+}
+\tag{FB.2}
+\]
+
+Equivalently, every external train crosses at most three of the five flower trains.
+This gives an exact degree inequality in the strict-rhombus train-crossing graph
+`G_R` with `T_R` vertices and `R_4` edges:
+
+\[
+\boxed{
+\sum_{\tau\in I(F)}d_R(\tau)\le3(T_R-5).
+}
+\tag{FB.3}
+\]
+
+If `M` fully rhombic pentagons are present and
+
+\[
+s_\tau:=\#\{F:\tau\in I(F),\ F\text{ fully rhombic pentagon}\}\in\{0,1,2\},
+\]
+
+then summing (FB.3) gives the weighted endpoint-degree bound
+
+\[
+\boxed{
+\sum_\tau s_\tau d_R(\tau)
+\le3M(T_R-5),
+\qquad
+\sum_\tau s_\tau=5M.
+}
+\tag{FB.4}
+\]
+
+Thus the average crossing degree seen from a full-flower terminal occurrence is at
+most
+
+\[
+\boxed{{3\over5}(T_R-5).}
+\tag{FB.5}
+\]
+
+There is also a global blocker consequence.  Any train `sigma` is incident to at most
+two fully rhombic pentagons.  For every other full flower, (FB.2) supplies two blocker
+terminal occurrences; one blocker train can account for at most its two endpoints.
+Hence
+
+\[
+\boxed{
+\bar d_R(\sigma)\ge M-2
+\qquad\text{for every strict-rhombus train }\sigma,
+}
+\tag{FB.6}
+\]
+
+where `bar d_R` is nondegree among the other strict-rhombus trains.  Consequently
+
+\[
+\boxed{
+{T_R\choose2}-R_4\ge {T_R(M-2)\over2}.
+}
+\tag{FB.7}
+\]
+
+The useful new information is not another scalar Mantel floor: the modern full-flower
+branch already has a much larger aggregate Mantel deficit.  The gain is localization.
+Equations (FB.3)--(FB.5) force that deficit to be visible on the actual trains
+terminating at full pentagonal flowers, with no phase-purity or near-lattice
+assumption.  This is the missing interface between the general full-flower normal form
+and phase-resolved train allocation arguments such as dominant-pentagon splicing.
+
+---
+
+## 1. Strict convex unit pentagons have turns below `2pi/3`
+
+Orient the boundary of `F` counterclockwise and let its successive unit side vectors be
+
+\[
+e_1,\ldots,e_5,
+\qquad |e_i|=1,
+\qquad \sum_i e_i=0.
+\]
+
+Let `g_i in (0,pi)` be the positive turning angle from `e_i` to `e_{i+1}`.  The
+corresponding two-edge diagonal has length
+
+\[
+|e_i+e_{i+1}|=2\cos(g_i/2).
+\]
+
+It joins two nonconsecutive source vertices, so unit separation and the fact that the
+pentagon has no diagonal contact give
+
+\[
+|e_i+e_{i+1}|>1.
+\]
+
+Therefore
+
+\[
+\boxed{0<g_i<2\pi/3\quad(1\le i\le5).}
+\tag{FB.8}
+\]
+
+This is exactly the strict-turn fact used below.
+
+---
+
+## 2. Four projective side directions cannot fit in a `pi/3` arc
+
+Assume for contradiction that at least four projective side directions lie in a
+closed projective arc `A` of width
+
+\[
+w\le\pi/3.
+\]
+
+Rotate coordinates so the midpoint axis of `A` is horizontal.  Every oriented side
+whose projective direction lies in `A` lies either in the lifted cone `A_+` around the
+positive horizontal axis or in the antipodal cone `A_-`.  Each cone has angular width
+at most `pi/3`, so every such side has horizontal projection of absolute value at
+least
+
+\[
+c:=\cos(w/2)\ge\cos(\pi/6)={\sqrt3\over2}.
+\tag{FB.9}
+\]
+
+First suppose all five projective directions lie in `A`.  Among five oriented vectors,
+one of the two cones contains at least three sides and the other at most two.  Taking
+the sign of the majority cone positive, the total horizontal projection has magnitude
+at least
+
+\[
+3c-2>0,
+\]
+
+contradicting `sum e_i=0`.
+
+Now suppose exactly four side directions lie in `A`.  Count how their oriented lifts
+split between `A_+` and `A_-`.
+
+### 2.1 A `4+0` or `3+1` split cannot close
+
+For a `4+0` split, the four selected sides have total horizontal projection at least
+`4c`; the fifth side contributes at worst `-1`, so the total is positive.
+
+For a `3+1` split, orient the majority cone positively.  The three positive sides
+contribute at least `3c`; the one selected negative side and the fifth arbitrary unit
+side contribute at worst `-1` each.  Hence the total horizontal projection is at least
+
+\[
+3c-2\ge {3\sqrt3\over2}-2>0,
+\]
+
+again contradicting closure.  The reflected `1+3` and `0+4` cases are identical.
+
+### 2.2 A `2+2` split contradicts the strict turn bound
+
+It remains that two selected oriented sides lie in `A_+` and two in `A_-`.  On the
+oriented direction circle, the two lifted cones are antipodal and each has width at
+most `w`.  The two complementary gaps between them therefore each have angular length
+at least
+
+\[
+\pi-w\ge2\pi/3.
+\tag{FB.10}
+\]
+
+The fifth side has projective direction outside `A`, so its oriented direction lies
+outside `A_+ union A_-`.  It can lie in only one of the two complementary gaps.  The
+other gap remains a gap between two consecutive oriented side directions of the
+pentagon and has size at least `2pi/3`, contradicting (FB.8).
+
+All cases are impossible.  This proves (FB.1).
+
+The constant is sharp at the combinatorial level: the exact pentagon lattice-phase
+regression has three projective side directions collapsing into one phase while the
+other two approach the two adjacent triangular-lattice phases.  Thus `three` in
+(FB.1) cannot be replaced by `two` without additional global-minimality input.
+
+---
+
+## 3. Every external train has two blockers at one full flower
+
+Fix a complete strict-rhombus train `sigma` with projective contact direction `phi`.
+On the projective direction circle of circumference `pi`, define
+
+\[
+C_\phi:=\{\psi:d_{proj}(\phi,\psi)>\pi/3\}.
+\]
+
+Because `d_proj<=pi/2`, `C_phi` is one open arc of length exactly `pi/3`.
+A strict unit-rhombus crossing of `sigma` with another train can occur only if that
+other train's direction lies in `C_phi`.
+
+If `sigma notin I(F)`, all five flower trains are distinct from `sigma`.  By (FB.1),
+at most three of their projective directions lie in `C_phi`.  Therefore at least two
+members of `I(F)` cannot cross `sigma`.  This proves (FB.2).
+
+If `sigma in I(F)`, the bounded-face endpoint fan says `sigma` crosses none of the
+other four trains in `I(F)` anyway.
+
+---
+
+## 4. Degree localization on one flower
+
+Count incidences
+
+\[
+(\sigma,\tau),
+\qquad
+\sigma\notin I(F),\quad
+\tau\in I(F),\quad
+\sigma\pitchfork\tau.
+\]
+
+There are `T_R-5` choices for `sigma`, and by (FB.2) at most three choices for a
+crossing `tau`.  Since the five trains in `I(F)` are pairwise noncrossing by the
+bounded-face endpoint fan, this incidence count is exactly
+
+\[
+\sum_{\tau\in I(F)}d_R(\tau).
+\]
+
+Hence
+
+\[
+\sum_{\tau\in I(F)}d_R(\tau)
+\le3(T_R-5),
+\]
+
+which is (FB.3).
+
+Summing over all `M` fully rhombic pentagons counts `d_R(tau)` exactly `s_tau` times.
+Every complete train has two terminal occurrences, so `s_tau<=2`, while the five
+terminal occurrences at each flower give
+
+\[
+\sum_\tau s_\tau=5M.
+\]
+
+This proves (FB.4)--(FB.5).
+
+---
+
+## 5. Every train has linearly many blockers when flowers are linear
+
+Fix one strict-rhombus train `sigma`.  It can terminate on at most two fully rhombic
+pentagons.  For each of the remaining at least `M-2` full flowers, (FB.2) supplies at
+least two train-terminal blocker occurrences belonging to trains nonadjacent to
+`sigma` in `G_R`.
+
+A fixed blocker train has only two terminal occurrences, so it can be supplied by at
+most two different flowers.  Therefore the at least `2(M-2)` blocker occurrences use
+at least `M-2` distinct blocker trains.  Thus
+
+\[
+\bar d_R(\sigma)\ge M-2.
+\]
+
+Summing this nondegree floor over all `T_R` vertices and dividing by two proves
+(FB.7).
+
+A slightly more informative finite form is
+
+\[
+\boxed{
+R_4\le {T_R(T_R-M+1)\over2}.
+}
+\tag{FB.11}
+\]
+
+No endpoint-simplicity theorem between two bounded faces is needed for this argument;
+the two-terminal capacity of one complete train is enough.
+
+---
+
+## 6. Relation to the live full-flower branch
+
+The modern singleton/full-flower theorem gives a linear `M` in its full-flower branch,
+and its scope extensions push that alternative far above the current O--O path
+endpoint.  The existing theorem records only
+
+1. the number of flower-terminal trains;
+2. a global train-isoperimetric slack; and
+3. the resulting aggregate Mantel deficit.
+
+The blocker theorem adds directional localization:
+
+```text
+one full flower
+    -> five distinct strict-rhombus train terminals
+    -> every external train misses at least two of them
+    -> sum of the five crossing degrees <= 3(T_R-5);
+
+M full flowers
+    -> weighted flower-endpoint average degree <= 3(T_R-5)/5
+    -> every train has at least M-2 flower-supplied nonneighbors.
+```
+
+This does not by itself close C-II.  In the current full-flower branch the already
+known aggregate Mantel deficit can be numerically larger than the coarse scalar
+consequence (FB.7).  The new content is where the missing crossings live.  A useful
+next step is to combine (FB.4) with the exact atomic-orbit allocation: if too many of
+the `5M` flower terminals lie in the dominant orbit, their localized degree loss can
+be charged directly against dominant crossing mass; if many lie outside it, the same
+terminal occurrences force complement atomic mass.  That is a genuine dominant-vs-
+complement dichotomy not present in the current scalar flower theorem.
+
+**Disposition:** proved proof-only exact full-flower two-blocker and endpoint-degree
+localization theorem.  C-II and Level I remain open.

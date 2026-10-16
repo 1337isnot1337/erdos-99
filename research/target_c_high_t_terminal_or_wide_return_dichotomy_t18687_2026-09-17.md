@@ -1,0 +1,540 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "41228bf5fd9186b8bd9cd33773d507ab5d8a6cb4", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_terminal_or_wide_return_dichotomy_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f91e9c1a9b72e7e074a79b50210af2ddabc4328ee0239e17b904bbbd9341e808"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — paired force geometry gives a terminal-span or fixed-wide-return dichotomy
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural/metric strengthening; no canonical promotion claimed  
+**Scope:** the no-positive-density-TB1 near-full exact-force shore through `t=(q-k)/D<=1.8687`  
+**Dependencies:** near-full paired destination regime; gap-free bilateral force weave; host-cap force-pair separation; coupled host transverse margin; full-source diameter-midpoint localization; one-sided path-region order  
+**Certificate:** `research/verify_target_c_high_t_terminal_or_wide_return_dichotomy_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The paired-destination theorem leaves the word
+
+```text
+TT  ->  mixed  ->  OO
+```
+
+on a near-full one-sided exact-force population of density
+
+\[
+{c\over2},\qquad c={113\over5{,}000{,}000}.
+\]
+
+There is a sharper two-way geometric consequence which does not pay the previous factor-three regime loss.
+
+Either a `TT` center exists. Then the two hubward endpoints of that one force pair both lie in the far terminal piece `T_m`, while the host transverse margin places them in opposite macroscopic endpoint caps. Consequently
+
+\[
+\operatorname{diam}(T_m\cap S)\ge(c_H-o(1))D,
+\]
+
+and its central angular span is at least
+
+\[
+2\gamma_H-o(1)=53.9780585\ldots^\circ-o(1).
+\]
+
+Or no `TT` center exists. Then one of the two force lanes goes to its opposite physical host at **every** center of the near-full population. For the first half of those centers, the opposite-host partner and the mate birth lie on the same physical host, and the boundary arc between them contains all later mate births. Unit separation plus the host normal-width bound forces that same-host return chord to have fixed linear size. A projectively narrow force pair would make exactly that return chord small by near-antipodality and midpoint localization. Comparing the two estimates forces a fixed projective pair gap.
+
+The result is
+
+\[
+\boxed{
+\text{large terminal piece}
+\quad\text{or}\quad
+>\left({c\over4}-o(1)\right)D
+\text{ force pairs with gap }\ge\rho_R-o(1),
+}
+\]
+
+where
+
+\[
+\boxed{
+\rho_R:=2\arcsin\!\left({c_Hc\over4}\right)
+=5.12816471098\ldots\times10^{-6}\ \text{radians}.
+}
+\]
+
+Thus the mixed/OO side of the paired obstruction cannot remain projectively degenerate along the near-full diagonal. Projective collapse can survive only by forcing the far terminal piece itself to have a chord diameter at least `0.453819...D`.
+
+---
+
+## 1. Input: the near-full paired population
+
+Use the near-full exact-force diagonal. After the finite bilateral deletion, write its centers in increasing pre-hub order
+
+\[
+i_1<i_2<\cdots<i_N<k,
+\qquad
+N>\left({c\over2}-o(1)\right)D,
+\tag{TR.1}
+\]
+
+with
+
+\[
+c={113\over5{,}000{,}000}.
+\tag{TR.2}
+\]
+
+At center `s` write the two force bars
+
+\[
+h_s^A=x_s^Ay_s^A,
+\qquad
+h_s^B=x_s^By_s^B,
+\tag{TR.3}
+\]
+
+where `x_s^A` lies on physical birth host `A` and `x_s^B` lies on physical birth host `B`.
+
+The paired nesting theorem gives terminal cutoffs
+
+\[
+r_A,r_B\in\{0,1,\ldots,N\}
+\tag{TR.4}
+\]
+
+such that
+
+\[
+y_s^A\in T_m\iff s\le r_A,
+\qquad
+y_s^B\in T_m\iff s\le r_B.
+\tag{TR.5}
+\]
+
+After a lane leaves `T_m`, same-host diameter exclusion forces its partner onto the opposite physical host. Thus the paired word is exactly `TT -> mixed -> OO`.
+
+Write
+
+\[
+c_H=0.453819885927\ldots,
+\qquad
+\gamma_H:=\arcsin c_H=0.471047423019\ldots .
+\tag{TR.6}
+\]
+
+The host theorem gives the whole physical host arc a support-normal width at most
+
+\[
+2\vartheta_H+o(1),
+\qquad
+\vartheta_H:=\arccos c_H<\pi/2.
+\tag{TR.7}
+\]
+
+For every actual diameter edge let `m` denote its midpoint. The common source circumcenter `o` satisfies
+
+\[
+|m-o|\le L_D,
+\qquad
+L_D=O(D^{3/4})=o(D).
+\tag{TR.8}
+\]
+
+---
+
+## 2. One TT center already makes the far terminal piece macroscopic
+
+Suppose there is a `TT` center `s`. Then
+
+\[
+y_s^A,y_s^B\in T_m.
+\tag{TR.9}
+\]
+
+The host-cap force theorem gives opposite endpoint-cap coordinates for the two partner endpoints. Equivalently, the gap-free bilateral theorem gives the partner-rung estimate
+
+\[
+\boxed{
+|y_s^A-y_s^B|\ge(c_H-o(1))D.
+}
+\tag{TR.10}
+\]
+
+Therefore
+
+\[
+\boxed{
+\operatorname{diam}(T_m\cap S)\ge(c_H-o(1))D.
+}
+\tag{TR.11}
+\]
+
+This is far stronger than the previous density-only terminal-span bound. It uses one paired force cell, not a linear terminal rail.
+
+There is also a central-angle form. Radially project the two terminal endpoints to the circle of radius `D/2` about `o`:
+
+\[
+z^\sigma=o+{D\over2}{y_s^\sigma-o\over|y_s^\sigma-o|}.
+\tag{TR.12}
+\]
+
+Midpoint localization gives
+
+\[
+|z^\sigma-y_s^\sigma|\le L_D.
+\tag{TR.13}
+\]
+
+If `Theta_s` is the smaller central angle between the two terminal rays, then
+
+\[
+D\sin{\Theta_s\over2}
+=|z^A-z^B|
+\ge(c_H-o(1))D.
+\tag{TR.14}
+\]
+
+Hence
+
+\[
+\boxed{
+\operatorname{angdiam}_o(T_m\cap S)
+\ge2\arcsin c_H-o(1)
+=2\gamma_H-o(1).
+}
+\tag{TR.15}
+\]
+
+Numerically,
+
+\[
+\boxed{
+2\gamma_H=0.942094846038\ldots\ \text{rad}
+=53.978058579\ldots^\circ.
+}
+\tag{TR.16}
+\]
+
+Thus any surviving TT cell forces a genuinely large far terminal boundary piece. The terminal branch cannot be realized by a small cap even if TT occurs only once.
+
+---
+
+## 3. Host-arc projection lemma
+
+The second branch uses one elementary metric fact which is implicit in the host-normal theorem.
+
+Let `Gamma` be any oriented subarc of one selected physical host, and let `p,q` be its endpoints in boundary order. All outward support normals along that host lie in an interval of width
+
+\[
+2\vartheta_H+o(1)<\pi.
+\]
+
+After rotating by `pi/2`, all consistently oriented boundary-edge tangents lie in an interval of the same width. Let `w_D` be the midpoint tangent direction. Every oriented edge vector `e` of `Gamma` therefore satisfies
+
+\[
+e\cdot w_D\ge(c_H-o(1))|e|.
+\tag{TR.17}
+\]
+
+Summing over the polygonal boundary arc gives
+
+\[
+(q-p)\cdot w_D
+\ge(c_H-o(1))\operatorname{len}(\Gamma).
+\tag{TR.18}
+\]
+
+Therefore
+
+\[
+\boxed{
+|q-p|
+\ge(c_H-o(1))\operatorname{len}(\Gamma).
+}
+\tag{TR.19}
+\]
+
+The strict host-normal width below `pi` is essential. On an unrestricted convex boundary arc, large boundary length can of course return to a short chord.
+
+---
+
+## 4. If TT is absent, one opposite-host lane persists through every center
+
+Assume now that there is no TT center. By (TR.5),
+
+\[
+\min(r_A,r_B)=0.
+\tag{TR.20}
+\]
+
+After interchanging `A,B` if necessary, suppose
+
+\[
+r_B=0.
+\tag{TR.21}
+\]
+
+Then the `B`-born force bar never terminates in `T_m`. Same-host diameter exclusion leaves only the opposite physical host, so
+
+\[
+\boxed{
+y_s^B\in Q^A\quad\text{for every }1\le s\le N.}
+\tag{TR.22}
+\]
+
+Thus one fixed lane `B -> A` persists through the entire mixed/OO suffix, which here is the full population.
+
+Now compare `y_s^B` with the mate birth `x_s^A`. Both lie on physical host `A`: `x_s^A` is pre-hub in layer `R_{i_s}`, while `y_s^B` lies on the post-hub piece `Q^A`.
+
+By the one-sided path-region order, the host-`A` boundary arc from `x_s^A` toward `y_s^B` contains every later mate birth
+
+\[
+x_{s+1}^A,x_{s+2}^A,\ldots,x_N^A.
+\tag{TR.23}
+\]
+
+Birth vertices from different centers lie in different path regions, hence are distinct source points. The source is unit-separated, so consecutive selected birth vertices on this host satisfy
+
+\[
+|x_t^A-x_{t+1}^A|\ge1.
+\tag{TR.24}
+\]
+
+Therefore the boundary arc in (TR.23) has length at least
+
+\[
+N-s.
+\tag{TR.25}
+\]
+
+The host-arc projection lemma gives the **lower** return estimate
+
+\[
+\boxed{
+|x_s^A-y_s^B|
+\ge(c_H-o(1))(N-s).
+}
+\tag{TR.26}
+\]
+
+This uses only the later mate births themselves. No lower bound on the spacing of train terminals is needed.
+
+---
+
+## 5. A projectively narrow pair gives the opposite upper estimate
+
+Orient both force diameters from their hubward endpoints toward their birth endpoints and write
+
+\[
+d_s^A={x_s^A-y_s^A\over D},
+\qquad
+d_s^B={x_s^B-y_s^B\over D}.
+\tag{TR.27}
+\]
+
+Let
+
+\[
+\eta_s=d_{\mathbb{RP}^1}([d_s^A],[d_s^B])
+\in[0,\pi/2]
+\tag{TR.28}
+\]
+
+be the projective force-pair gap.
+
+The ordinary positive-force lift brackets the reaction axis and has separation
+
+\[
+\Delta_s\ge2\gamma_H-o(1).
+\tag{TR.29}
+\]
+
+If `eta_s<gamma_H` for sufficiently large `D`, the ordinary-narrow realization `Delta_s=eta_s` is impossible. Hence the pair is in the near-antipodal realization
+
+\[
+\Delta_s=\pi-\eta_s.
+\tag{TR.30}
+\]
+
+Let `m_s^A,m_s^B` be the two diameter midpoints. From
+
+\[
+x_s^A=m_s^A+{D\over2}d_s^A,
+\qquad
+y_s^B=m_s^B-{D\over2}d_s^B
+\tag{TR.31}
+\]
+
+and `|m_s^A-m_s^B|\le2L_D`, we get
+
+\[
+\begin{aligned}
+|x_s^A-y_s^B|
+&\le2L_D+{D\over2}|d_s^A+d_s^B|\\
+&=2L_D+D\sin{\eta_s\over2}.
+\end{aligned}
+\tag{TR.32}
+\]
+
+Combining (TR.26) and (TR.32), every narrow center satisfies
+
+\[
+\boxed{
+\sin{\eta_s\over2}
+\ge(c_H-o(1)){N-s\over D}-{2L_D\over D}.
+}
+\tag{TR.33}
+\]
+
+This is a gap ramp: the farther a center lies from the end of the paired population, the less projectively antiparallel its force pair is allowed to be.
+
+---
+
+## 6. The first half has one fixed positive projective gap
+
+For
+
+\[
+1\le s\le\left\lfloor{N\over2}\right\rfloor,
+\]
+
+we have
+
+\[
+N-s\ge{N\over2}-O(1).
+\tag{TR.34}
+\]
+
+Using (TR.1),
+
+\[
+{N-s\over D}
+\ge{c\over4}-o(1).
+\tag{TR.35}
+\]
+
+Define
+
+\[
+\boxed{
+\rho_R:=2\arcsin\!\left({c_Hc\over4}\right).
+}
+\tag{TR.36}
+\]
+
+Since `rho_R << gamma_H`, equations (TR.29)--(TR.35) imply uniformly on the first half
+
+\[
+\boxed{
+\eta_s\ge\rho_R-o(1).
+}
+\tag{TR.37}
+\]
+
+Indeed, if `eta_s>=gamma_H` the claim is automatic, while if `eta_s<gamma_H`, (TR.33) applies and gives (TR.37).
+
+The first half contains
+
+\[
+\boxed{
+>\left({c\over4}-o(1)\right)D
+=\left({113\over20{,}000{,}000}-o(1)\right)D
+}
+\tag{TR.38}
+\]
+
+centers. Numerically,
+
+\[
+\boxed{
+{c\over4}=5.65\times10^{-6},
+}
+\tag{TR.39}
+\]
+
+and, using `c_H=0.453819885927...`,
+
+\[
+\boxed{
+{c_Hc\over4}=2.56408235549\ldots\times10^{-6},
+}
+\tag{TR.40}
+\]
+
+\[
+\boxed{
+\rho_R
+=5.12816471098\ldots\times10^{-6}\ \text{rad}
+=0.000293822194587\ldots^\circ.
+}
+\tag{TR.41}
+\]
+
+The angle is numerically small because the guaranteed near-full center density is small, but it is a fixed positive constant independent of `D`. Consequently every theorem requiring a fixed projective force-pair aperture, including the central-diamond estimates, applies on this `c/4`-density prefix.
+
+---
+
+## 7. Sharpened paired obstruction
+
+The near-full no-TB1 paired obstruction therefore satisfies the following exact alternative along its diagonal sequence.
+
+### Terminal branch
+
+At least one TT cell occurs. Then
+
+\[
+\boxed{
+{\operatorname{diam}(T_m\cap S)\over D}
+\ge c_H-o(1)
+=0.453819885927\ldots-o(1),
+}
+\tag{TR.42}
+\]
+
+and
+
+\[
+\boxed{
+\operatorname{angdiam}_o(T_m\cap S)
+\ge0.942094846038\ldots-o(1).
+}
+\tag{TR.43}
+\]
+
+### Return branch
+
+No TT cell occurs. Then more than
+
+\[
+\boxed{(5.65\times10^{-6}-o(1))D}
+\tag{TR.44}
+\]
+
+centers form a fixed-aperture exact-force family with
+
+\[
+\boxed{
+\eta_s\ge5.12816471098\ldots\times10^{-6}-o(1),
+}
+\tag{TR.45}
+\]
+
+and one force lane goes to the opposite physical host throughout the full parent population. The same-host return arc at the earlier half of those centers contains a linear tail of distinct mate births.
+
+This is stronger than simply selecting the largest of TT, mixed, and OO. It uses the prefix structure of terminal membership and the full physical host geometry.
+
+---
+
+## 8. Frontier effect
+
+The paired high-`t` obstruction now has two materially different surviving geometries.
+
+If TT occurs at all, the far terminal piece is not merely positive-span: it occupies two opposite force caps separated by almost `0.454D` and by about `54` degrees around the source circumcenter.
+
+If TT never occurs, the mixed/OO population cannot escape through projectively collapsing force pairs. A `c/4`-density prefix has a fixed projective gap, and the gap comes from a long same-host return arc forced by the global birth order.
+
+The next useful closing attack can therefore be split cleanly:
+
+1. derive an upper bound on the terminal-piece chord/angular span from the stopped-train or terminal-energy ledger and compare it with (TR.42)--(TR.43); or
+2. on the return branch, combine the fixed central-diamond aperture from (TR.45), the same-host return arc, and the common near-equilateral train grid to force a strict sub-`D` competitor or an impossible host order.
+
+C-II remains open. No terminal upper bound or final return-branch contradiction is claimed here.
+
+**Disposition:** replaced the TT/mixed/OO cardinality trichotomy by a terminal-span versus fixed-wide-return geometric dichotomy, with a `0.453819...D` terminal chord floor in the TT branch and a `c/4`-density fixed-gap family in the no-TT branch. C-II and Level I remain open.

@@ -1,0 +1,47 @@
+{
+  "destination_main": "c6e0394b3152d21075328bf4f26e6c070229bf13",
+  "results": [
+    {
+      "elapsed_seconds": 0.044,
+      "exit_code": 0,
+      "label": "Target A",
+      "path": "research/verify_target_a_five_per_added_edge_unit_tube_2026_10_03.py",
+      "sha256": "27cd012b44c6930f86dc663b78eb40aafcf75a811916e7c9d7704cc854083d61",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "radius-two lattice points: 19\nanchored six-sets: 54\ndihedral/translation orbits: 3\norbit multiplicity 12 : ((-2, 0), (-2, 1), (-2, 2), (-1, 0), (-1, 1), (0, 0))\norbit multiplicity 36 : ((-2, 0), (-2, 1), (-1, -1), (-1, 0), (-1, 1), (0, 0))\norbit multiplicity 6 : ((-2, 0), (-2, 1), (-1, -1), (-1, 1), (0, -1), (0, 0))\n"
+    },
+    {
+      "elapsed_seconds": 0.386,
+      "exit_code": 0,
+      "label": "Target B",
+      "path": "research/verify_target_b_five_bar_arithmetic_2026_09_22.py",
+      "sha256": "ccdc015d0a6dc2979ca97a7a37405d0b3122f5b9b7cc88f92891d003e24f113c",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS: all 1024 forward graphs; exactly six supports, each with a rational-weight witness\nPASS: E1 dual class 2 excluded for every primitive parity residue modulo 16\nPASS: E2 class 3 excluded for every primitive 3-adic residue modulo 9\nPASS: (a,b)=(2,-3), discriminant 2304, #E(F5)=8, 8 exhibited rational points\nPASS: (a,b)=(6,-3), discriminant 6912, #E(F5)=6, 6 exhibited rational points\nPASS: triangle, fork, and chain identities and both elliptic-curve substitutions\nAll exact certificates passed; the report supplies the source reduction and standard descent premises.\n"
+    },
+    {
+      "elapsed_seconds": 31.927,
+      "exit_code": 0,
+      "label": "Target C-II finite support closure",
+      "path": "research/verify_target_c_p6_e8_support_closure_2026_09_26.py",
+      "sha256": "97d20e5805bd290a4e61cbfe30a9967b5d1d2c52892a63897c2bbdaa02eb2e77",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "PASS: p=6 e=8 support-level closure\norbit_counts_size_0_through_8 (1, 1, 4, 14, 61, 268, 1283, 6032, 27763)\nsupport_multiset_orbits_size_8 27763\ntouch_at_least_14 27590\nat_least_8_individually_eligible 3105\npairwise_compatible_support_orbits 2\npairwise_compatible_empty_octuples 3\nz_census {4: 3}\nz_le_3_survivors 0\n"
+    },
+    {
+      "elapsed_seconds": 0.05,
+      "exit_code": 0,
+      "label": "Global obstruction",
+      "path": "research/verify_global_two_copy_obstruction_2026_10_12.py",
+      "sha256": "89ac14a34d454243e87a6193f15d84c9a3d49054c5e75742bd1930987b031dd5",
+      "status": "PASS",
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"regression; no global optimality or Level I claim\",\n  \"arithmetic\": \"integer and Fraction only\",\n  \"roundness_coefficient_fixtures\": [\n    5,\n    16,\n    64,\n    256\n  ],\n  \"fixtures\": [\n    {\n      \"q\": 33,\n      \"source_n\": 34,\n      \"interior_isolates\": 1,\n      \"competitor_available\": 61,\n      \"competitor_retained\": 34,\n      \"certified_diameter_gap_lower\": \"359590381387144277489142194/180871372855350180158203125\",\n      \"strictly_separated_competitor_gap_lower\": \"12222993121337375573507174628885056689825716167408699/6228817441383453309322772216402153970593421750000000\",\n      \"rim_anchor_height_upper\": \"17218914588448662618112448/180871372855350180158203125\",\n      \"two_copy_unsat_path_lengths\": {\n        \"(False, False)\": [\n          33,\n          33\n        ],\n        \"(False, True)\": [\n          3,\n          5\n        ],\n        \"(True, False)\": [\n          5,\n          3\n        ],\n        \"(True, True)\": [\n          33,\n          33\n        ]\n      },\n      \"pi_interval_width\": \"40709998951047044365444/44725340644460855587951171875\"\n    },\n    {\n      \"q\": 65,\n      \"source_n\": 186,\n      \"interior_isolates\": 121,\n      \"competitor_available\": 313,\n      \"competitor_retained\": 186,\n      \"certified_diameter_gap_lower\": \"710371225712671899614142194/356261795018113991220703125\",\n      \"strictly_separated_competitor_gap_lower\": \"24110862665582506070292148135113392512812976104908699/12268882839088620154726672547458788123896133750000000\",\n      \"rim_anchor_height_upper\": \"17218914588448662618112448/356261795018113991220703125\",\n      \"two_copy_unsat_path_lengths\": {\n        \"(False, False)\": [\n          65,\n          65\n        ],\n        \"(False, True)\": [\n          3,\n          5\n        ],\n        \"(True, False)\": [\n          5,\n          3\n        ],\n        \"(True, True)\": [\n          65,\n          65\n        ]\n      },\n      \"pi_interval_width\": \"40709998951047044365444/44725340644460855587951171875\"\n    },\n    {\n      \"q\": 129,\n      \"source_n\": 1054,\n      \"interior_isolates\": 925,\n      \"competitor_available\": 1393,\n      \"competitor_retained\": 1054,\n      \"certified_diameter_gap_lower\": \"16891845349493700453875970127388267923/8458797721754894889582317280392578125\",\n      \"strictly_separated_competitor_gap_lower\": \"6853936668075274664893007067453901861954172006521000534078653987993804011/3485037385572331783411078663944461361488560454381069456952453763968750000\",\n      \"rim_anchor_height_upper\": \"206000752128714602309315467175106616/8458797721754894889582317280392578125\",\n      \"two_copy_unsat_path_lengths\": {\n        \"(False, False)\": [\n          129,\n          129\n        ],\n        \"(False, True)\": [\n          3,\n          5\n        ],\n        \"(True, False)\": [\n          5,\n          3\n        ],\n        \"(True, True)\": [\n          129,\n          129\n        ]\n      },\n      \"pi_interval_width\": \"2325395850082757775136026724/78061994479096482923424854931640625\"\n    },\n    {\n      \"q\": 257,\n      \"source_n\": 4932,\n      \"interior_isolates\": 4675,\n      \"competitor_available\": 5773,\n      \"competitor_retained\": 4932,\n      \"certified_diameter_gap_lower\": \"33678296642278608141729250931888267923/16852023368147348733508957682642578125\",\n      \"strictly_separated_competitor_gap_lower\": \"13659907606922879996942624787292808222544287330869442109105748975743804011/6943058977458056343694939663827337751182635943999494964626206335968750000\",\n      \"rim_anchor_height_upper\": \"206000752128714602309315467175106616/16852023368147348733508957682642578125\",\n      \"two_copy_unsat_path_lengths\": {\n        \"(False, False)\": [\n          257,\n          257\n        ],\n        \"(False, True)\": [\n          3,\n          5\n        ],\n        \"(True, False)\": [\n          5,\n          3\n        ],\n        \"(True, True)\": [\n          257,\n          257\n        ]\n      },\n      \"pi_interval_width\": \"2325395850082757775136026724/78061994479096482923424854931640625\"\n    }\n  ]\n}\n"
+    }
+  ],
+  "scope": "selected exact or finite checkers across Agent 2 Target A, B, C-II, and global artifacts; not a proof of Level I or C-II closure",
+  "source_main": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+}

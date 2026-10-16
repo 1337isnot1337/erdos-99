@@ -1,0 +1,282 @@
+# Target C-II — growing disjoint braid of deep two-sided exact-force cells
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** the no-fixed-margin-TB1 side of the high-`t` branch through `t=(q-k)/D<=1.8687`  
+**Dependencies:** deep two-sided exact-phase cusp cells; source-wide diameter-degree bound; convex diameter-thrackle property; bilateral birth loading; one-sided laminar switching support  
+**Certificate:** `research/verify_target_c_high_t_disjoint_deep_force_braid_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The deep two-sided theorem gives a positive linear density of robust exact-force centers for every prescribed fixed exact-phase radius. Two possible overlap mechanisms remain: their exact-phase neighborhoods may overlap heavily in the interface index, and their force diamonds may reuse diameter vertices.
+
+Both can be removed simultaneously. The resulting object is a growing family of deep local cells that are disjoint both combinatorially along the train path and at the source vertices, while all force-diamond chords from different cells cross each other.
+
+Put
+
+\[
+c={113\over5{,}000{,}000},
+\qquad
+\delta_0={c\over64},
+\qquad
+\rho_0={c\over48}.
+\tag{DF.1}
+\]
+
+The source-wide diameter degree estimate is
+
+\[
+\Delta(H)
+\le\left(4\,3^{1/8}+o(1)\right)D^{3/4}.
+\tag{DF.2}
+\]
+
+For every fixed radius `r`, the deep two-sided theorem gives a center family `Q_D^{two}(r)` with
+
+\[
+|Q_D^{two}(r)|>{c\over32}D-o(D).
+\tag{DF.3}
+\]
+
+Every center `i` has a selected exact-force pair
+
+\[
+P_i=\{h_i^-,h_i^+\}
+\tag{DF.4}
+\]
+
+with four distinct endpoints, bilateral birth, projective pair gap at least `rho_0`, and both bars at projective distance at least `delta_0` from the reaction axis. Its radius-`r` interface window is
+
+\[
+W_i(r):=[i-r,i+r].
+\tag{DF.5}
+\]
+
+### Theorem DF — simultaneous window/vertex-disjoint extraction
+
+For every fixed `r`, there is a subfamily `M_D(r)` satisfying
+
+\[
+\boxed{
+|M_D(r)|
+\ge
+{|Q_D^{two}(r)|\over4\Delta(H)+4r+1}.
+}
+\tag{DF.6}
+\]
+
+In particular,
+
+\[
+\boxed{
+|M_D(r)|
+>
+\left(
+{c\over512\,3^{1/8}}-o(1)
+\right)D^{1/4}.
+}
+\tag{DF.7}
+\]
+
+For distinct `i,j in M_D(r)`:
+
+1. the exact-phase windows are disjoint:
+   \[
+   W_i(r)\cap W_j(r)=\varnothing;
+   \tag{DF.8}
+   \]
+2. the four-endpoint sets of `P_i` and `P_j` are disjoint;
+3. every one of the four cross-cell pairs of diameter chords intersects geometrically;
+4. the two birth endpoints at each center lie on opposite ordered host arcs, and the selected centers preserve the common interface order on both host arcs;
+5. every center retains the fixed two-sided elementary-dipole cusp
+   \[
+   |\ell_{h_i^\pm}(s d^{(i)})|
+   \ge2D|s|\sin\delta_0
+   \tag{DF.9}
+   \]
+   with opposite signs.
+
+Moreover there is a diagonal subsequence with radii `r_D->infinity`, `r_D=o(D^{3/4})`, for which
+
+\[
+\boxed{
+|M_D(r_D)|
+>
+\left(
+{c\over512\,3^{1/8}}-o(1)
+\right)D^{1/4}.
+}
+\tag{DF.10}
+\]
+
+Thus the exact-antipodal branch contains an unbounded family of **pairwise independent deep cells**: each cell has its own growing exact-phase neighborhood and its own four source vertices, while its two macroscopic central diameter diagonals cross both diagonals from every other selected cell.
+
+---
+
+## 1. Build one conflict graph encoding both overlap mechanisms
+
+Fix `r` and write `Q=Q_D^{two}(r)`. Construct a graph `Gamma_D(r)` on the center set `Q`. Join two distinct centers `i,j` when either:
+
+- their exact-phase windows overlap, equivalently `|i-j|<=2r`; or
+- their selected force-pair endpoint sets intersect.
+
+An independent set in `Gamma_D(r)` has exactly the two disjointness properties required in (DF.8) and item 2 above.
+
+For a fixed center `i`, there are at most `4r` other integer interface indices `j` satisfying
+
+\[
+0<|i-j|\le2r.
+\tag{DF.11}
+\]
+
+Hence the window-overlap contribution to its conflict degree is at most `4r`.
+
+The pair `P_i` has four distinct source endpoints because its two diameter bars have fixed projective gap `rho_0`. At any one endpoint, at most `Delta(H)` actual diameter bars are incident. Selected force bars from different centers are distinct because switching supports at distinct interfaces are disjoint. Therefore, through any fixed endpoint of `P_i`, at most `Delta(H)` other selected center-pairs can conflict with `P_i`. Summing over four endpoints gives endpoint-conflict degree at most
+
+\[
+4\Delta(H).
+\tag{DF.12}
+\]
+
+Thus
+
+\[
+\boxed{
+\Delta(\Gamma_D(r))
+\le4\Delta(H)+4r.
+}
+\tag{DF.13}
+\]
+
+A greedy independent-set algorithm in a graph of maximum degree `Delta` retains at least `|V|/(Delta+1)` vertices. This proves (DF.6).
+
+---
+
+## 2. Fixed-radius asymptotics give a `D^(1/4)` family
+
+For fixed `r`, combine (DF.2), (DF.3), and (DF.6):
+
+\[
+|M_D(r)|
+>
+{(c/32)D-o(D)
+\over
+(16\,3^{1/8}+o(1))D^{3/4}+4r+1}.
+\tag{DF.14}
+\]
+
+Since `r` is fixed,
+
+\[
+|M_D(r)|
+>
+\left(
+{c/32\over16\,3^{1/8}}-o(1)
+\right)D^{1/4},
+\]
+
+which is exactly (DF.7).
+
+The explicit leading coefficient is
+
+\[
+{c\over512\,3^{1/8}}
+\approx3.84767446658\times10^{-8}.
+\tag{DF.15}
+\]
+
+The constant is small but strictly positive and independent of `r` at every fixed-radius stage.
+
+---
+
+## 3. Vertex-disjoint diameter pairs form a complete crossing braid
+
+Take distinct retained centers `i,j`. By construction the endpoint sets of `P_i` and `P_j` are disjoint. Every bar in either pair is an actual diameter edge of the same convex source.
+
+The actual diameter graph in convex position is a geometric thrackle: two vertex-disjoint diameter edges cross. Therefore
+
+\[
+h_i^\sigma\cap h_j^\tau\ne\varnothing
+\qquad
+(\sigma,\tau\in\{-,+\}).
+\tag{DF.16}
+\]
+
+All four cross-cell chord pairs cross. Inside each cell the two selected bars already cross because their fixed projective gap forbids a shared endpoint.
+
+Hence the union of all selected force bars is a complete pairwise-crossing matching after forgetting the within-cell pairing, with the extra structure that its edges are grouped into exact-force dipoles tagged by disjoint deep train neighborhoods.
+
+The full-source midpoint theorem simultaneously places every selected diameter chord midpoint in the common `O(D^(3/4))` ball about the same source circumcenter. Thus this complete crossing braid is also asymptotically centrally antipodal.
+
+---
+
+## 4. The bilateral host-arc order survives thinning
+
+At every center, bilateral birth loading supplies one birth endpoint in `C_i^+` and one in `C_i^-`, the two layer subarcs on the fixed opposite host arcs.
+
+The subarcs are ordered by interface index and occurrence-disjoint along each host arc. Passing to a subset of interface indices preserves that order. Therefore the retained family has two synchronized ordered birth sequences
+
+```text
+host + :  ... x_i^+ ... x_j^+ ...
+host - :  ... x_i^- ... x_j^- ...
+```
+
+for `i<j`, with the physical reversal dictated by the opposite orientations of the two host arcs.
+
+The extraction does not alter the one-sided laminar support interval of any selected diameter edge. Each selected bar is born at its tagged center and remains incident to every selected hubward train cut until its support interval terminates.
+
+Thus the braid retains both geometric crossing order and train-cut staircase order.
+
+---
+
+## 5. Growing-depth diagonal extraction preserves `D^(1/4)` growth
+
+The two-sided deep theorem allows the exact-phase radius to tend to infinity along a diagonal subsequence. Choose that diagonal more slowly so that
+
+\[
+r_D\to\infty,
+\qquad
+r_D=o(D^{3/4}),
+\tag{DF.17}
+\]
+
+and so that the center count still satisfies
+
+\[
+|Q_D^{two}(r_D)|>{c\over32}D-o(D).
+\tag{DF.18}
+\]
+
+This is possible because every fixed radius has the same leading density `c/32`: recursively choose the next source size after fixing the next radius, while also requiring `r_D/D^{3/4}` to be arbitrarily small.
+
+Then the proximity term `4r_D` in (DF.13) is negligible relative to the diameter-degree term `Theta(D^{3/4})`. Therefore the fixed-radius calculation remains valid and gives (DF.10).
+
+Every selected radius-`r_D` window is disjoint from every other. Inside each window:
+
+- all rows share one exact phase;
+- local switching complexity is `O(r_D)`;
+- normalized switching mass and normalized reaction tend to zero after the same diagonal choice;
+- the center carries the fixed-angle, bilateral, two-sided force diamond and uniform local cusp.
+
+The selected cells are therefore separated by at least `2r_D+1` interfaces while their number still diverges like a positive constant times `D^(1/4)`.
+
+---
+
+## 6. Frontier effect
+
+The no-fixed-margin-TB1 branch cannot hide its robust force diamonds in one crowded exact-phase zone, one reused set of diameter vertices, or heavily overlapping local neighborhoods. It contains an unbounded collection of genuinely separate local witnesses:
+
+```text
+Omega(D^(1/4)) cells
++ pairwise disjoint growing exact-phase neighborhoods
++ pairwise disjoint four-vertex force diamonds
++ all cross-cell diameter bars geometrically crossing
++ synchronized bilateral birth order on the two host arcs
++ one-sided laminar staircase support toward the common hub
++ uniform two-sided first-order cusp at every center.
+```
+
+This is a finite combinatorial-geometric target for the next closure step. A contradiction may now be sought from the simultaneous cyclic endpoint order of the complete crossing matching and the synchronized birth/staircase order, without interference from shared vertices or overlapping exact-phase neighborhoods.
+
+No C-II or Level-I closure is claimed.
+
+**Disposition:** extracted an `Omega(D^(1/4))` complete crossing braid of robust exact-force dipoles whose exact-phase neighborhoods and source endpoint sets are simultaneously pairwise disjoint; the extraction survives a growing-depth diagonal. C-II and Level I remain open.

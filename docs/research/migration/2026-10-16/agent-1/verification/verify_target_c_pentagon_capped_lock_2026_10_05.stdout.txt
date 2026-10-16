@@ -1,0 +1,7 @@
+M=24, radial pins=False: 649 source points, 8 disjoint pentagons, 4 selected rhombi; all noncontacts have positive certified gap
+M=30, radial pins=False: 997 source points, 12 disjoint pentagons, 9 selected rhombi; all noncontacts have positive certified gap
+M=36, radial pins=False: 1417 source points, 16 disjoint pentagons, 16 selected rhombi; all noncontacts have positive certified gap
+M=32, radial pins=True: 1145 source points, 8 disjoint pentagons, 4 selected rhombi; all noncontacts have positive certified gap
+M=40, radial pins=True: 1765 source points, 12 disjoint pentagons, 9 selected rhombi; all noncontacts have positive certified gap
+PASS: {'points': 5973, 'pairs': 3921688, 'contacts': 11420, 'caps': 56, 'crossings': 42}
+No actual diameter loads, canonical full-core sequence, global optimum, or numerical uniqueness window is asserted.
