@@ -11,3 +11,5 @@ Release handling is recorded per row. The first batch preserves one missing exac
 Batch 02 (indexes 516–542) imports 27 full reports and four verifier scripts relocated under `evidence/research/`; report references point to those shard-local copies. Reports remain unreviewed and noncanonical.
 
 Batch 03 (indexes 543–569) imports 27 full reports and three supporting scripts (including one transitive verifier helper) under shard evidence. The projective-circle area report retains only the external theorem citation; no paper is copied. All report lifecycle labels remain unreviewed and noncanonical.
+
+Batch 04 (indexes 570–596) imports 27 full reports. This batch adds exact pure-disk and post-ZF endpoint arguments, radial transport/stress bounds, finite rattler absorption, and regular-shell regressions. No report-declared verifier scripts or third-party papers accompany these reports; cited external results remain citations only. All imported lifecycle labels remain unreviewed and noncanonical.
