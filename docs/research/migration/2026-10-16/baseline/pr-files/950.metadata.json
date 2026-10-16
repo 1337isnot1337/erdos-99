@@ -1,0 +1,11 @@
+{
+  "number": 950,
+  "title": "Target C: rigidity-forced attachment-to-grid linkage",
+  "head_sha": "cbf066bb7489115559bcda34f9f810a1d78826ce",
+  "head_tree": "80dd0d6db99d9aa6698ee6500c91a3f670c63aae",
+  "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "merge_base_sha": "9327a3a13f0641f2a8c1897aec0c088be016743a",
+  "changed_file_count": 3,
+  "shortstat": "3 files changed, 661 insertions(+)",
+  "url": "https://github.com/1337isnot1337/e-99/pull/950"
+}

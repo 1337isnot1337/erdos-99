@@ -1,0 +1,9 @@
+A	docs/audits/pr959_autonomous_proof_audit_2026-10-15.md
+A	docs/reports/global_reflected_scale_competitors_2026-10-12.md
+A	docs/reports/global_reflection_moment_obstruction_2026-10-12.md
+A	docs/reports/global_steiner_capacity_loss_2026-10-12.md
+M	docs/state/artifact-index.jsonl
+M	research/README.md
+A	research/global_capacity_run_2026_10_12.md
+A	research/verify_global_reflected_scale_2026_10_12.py
+A	research/verify_global_steiner_capacity_loss_2026_10_12.py

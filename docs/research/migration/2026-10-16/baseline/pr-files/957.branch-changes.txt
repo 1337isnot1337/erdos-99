@@ -1,0 +1,7 @@
+A	docs/audits/pr957_autonomous_proof_audit_2026-10-15.md
+A	docs/reports/global_joint_diameter_cover_exchange_2026-10-12.md
+M	docs/state/artifact-index.jsonl
+M	research/README.md
+A	research/global_exchange_run_2026_10_12.md
+A	research/verify_global_exchange_star_family_2026_10_12.py
+A	research/verify_global_joint_exchange_2026_10_12.py

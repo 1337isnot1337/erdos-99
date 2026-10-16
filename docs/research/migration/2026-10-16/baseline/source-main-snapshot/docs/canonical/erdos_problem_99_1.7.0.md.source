@@ -1,0 +1,18 @@
+# Compatibility pointer — Erdős Problem #99 v1.7.0
+
+Older audit and frontier files refer to this path as the canonical v1.7.0 report.
+After repository reorganization, the active theorem state is **modular**, not a
+second monolithic file.
+
+Use the [current documentation map](../README.md), especially:
+
+- [`../problem/`](../problem/)
+- [`../theory/`](../theory/)
+- [`../targets/target-a/`](../targets/target-a/)
+- [`../targets/target-b/`](../targets/target-b/)
+
+The exact pre-reorganization monolithic snapshot is preserved for provenance at
+[`../archive/erdos_problem_99_1.7.0-full.md`](../archive/erdos_problem_99_1.7.0-full.md).
+It does not override later audited additions in the active route modules.
+
+**LEVEL I STATUS: STILL OPEN. TARGET A REMAINS UNRESOLVED.**

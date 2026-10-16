@@ -1,0 +1,165 @@
+> **Historical source dependency, not current theorem authority.** Frozen at `42f0296d1aca068c809f74cee5dcdb4ebdb27c73` from `docs/README.md`.
+
+# Current research documentation map
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Start with [`STATE.md`](STATE.md). It is the repository's authoritative lifecycle lock:
+it says which results are canonical, audited-working, conditional, superseded, rejected,
+or provenance-only. The machine-readable mirror is
+[`state/theorem-state.yaml`](state/theorem-state.yaml).
+
+The September 11 consolidation preserved all branch work on `main`; it did **not**
+promote every merged report. Never infer theorem status from Git ancestry, PR merge
+state, filename numbering, or recency.
+
+## Active routes
+
+### Target A — source capacity / Schur response
+
+Authority: [`targets/target-a/README.md`](targets/target-a/README.md).
+
+**Status: open.** The canonical chain now runs through **Section 177**, not Section 167.
+The old source-labeled Menger problem and Section-174 full basis-closed shield penalty
+are historical frontiers. The global closing inequality remains
+
+\[
+\operatorname{rank}S\le d_{\rm int}+|C^\partial|-\Delta_\Lambda,
+\qquad d_{\rm sc}\ge\Delta_\Lambda.
+\]
+
+Section 175 reduces the locked-response branch to the interior-tube right-deficiency
+inequality
+
+\[
+|O_{\rm iso}|+\sum_i\max\{0,|O_i|-|C_i|\}\ge j_*+|T_Z|.
+\]
+
+Section 176 bounds the zero-slack inner-source defect by `12d+9` and makes saturating
+source matchings sector-local outside an explicit boundary-order exceptional set.
+Section 177 adds an edge-lens/coarse-Hall route and disjoint source-gate lower bounds;
+these are source/response resources, not a Schur-nullity or strict-competitor theorem.
+Both the locked right-sector-surplus conversion and the zero-slack conversion to Schur
+deficiency or a strict competitor remain open.
+
+### Target B — jammed shell stability
+
+**Status: open.**
+
+Authority: [`targets/target-b/README.md`](targets/target-b/README.md).
+
+The exact sufficient closure remains the joint outer-shell stability inequality
+
+\[
+G+E\ge {\sqrt3\over4}B+{\sqrt3\over2}(t+\chi-1).
+\]
+
+The coherent near-extremal core is excluded. The September 11 independent dense-grid /
+penetration / interpolation audit promotes its corrected local tools under their stated
+pure-disk/coherence hypotheses, including the dominant-component GPI gap. Those tools do
+not supply the missing multi-grain local-to-global transfer, so the global shell-stability
+endpoint and general topology corrections remain open.
+
+### Target C — KKT force hull / reciprocal geometry
+
+Authority: [`targets/target-c/README.md`](targets/target-c/README.md) and
+[`targets/target-c/CURRENT.md`](targets/target-c/CURRENT.md).
+
+**C-I is closed. C-II remains open.** The current canonical C-II state additionally has:
+
+- strict negative non-additive response transfer (`min K_ef<0` for the relevant
+  distinct edges, with no uniform gap claimed);
+- exact Woodall topology: either one odd-unicyclic loaded diameter graph (`d_H=0`) or
+  exactly `d_H` caterpillar components (`d_H>0`);
+- one common positive-contact bridge block for all selected diameter routes;
+- the independently audited all-phase renormalized-surplus theorem above `0.9604`;
+- the independently audited RSR/DD ordinary-surplus floor above `0.5983685`;
+- rejection of the PR #191 `0.995540...` theorem because its inward-pocket/exterior-cap
+  containment is false;
+- a certified primitive cyclic-shell split in which P1 is impossible and S1 remains
+  open with the reciprocal-square reduction.
+
+There are currently no Target C theorem families classified as `audited-working` in the
+manifest. Unlisted reports remain `unreviewed` by default; rejected and regression
+material remains valuable provenance but is not a theorem premise.
+
+The exact remaining C-II split is in [`targets/target-c/CURRENT.md`](targets/target-c/CURRENT.md).
+The full-core branch still needs a source-realized face-coupled finite move or discrete
+replacement that passes the full source lower bounds, actual-diameter upper bounds, and
+unary rhombus tests, then gives contact loss at diameter `D` or a strict sub-`D`
+competitor. The separate macroscopic-container branch still lacks arbitrary-container
+packet capacity or a moved-core strict-diameter closure. Audit.230's quarter-fold
+population count does not provide an integrated endpoint or capacity under moved
+geometry.
+
+## Reading order for new research
+
+1. [`STATE.md`](STATE.md)
+2. [`problem/statement.md`](problem/statement.md)
+3. the relevant route map
+4. every active module explicitly named by that route map
+5. only the shared theory modules actually used
+6. the current route prompt from [`prompts/README.md`](prompts/README.md)
+7. unpromoted reports only when the route/state lock names them as useful working input
+   or when provenance is required
+
+For cross-target force-hull/source-hull geometry, use
+[`theory/04-ambient-force-and-cap-transport.md`](theory/04-ambient-force-and-cap-transport.md).
+
+## Operational documentation
+
+- [`../AGENTS.md`](../AGENTS.md) — mandatory authority and research rules for agents
+- [`KNOWLEDGE_MAP.md`](KNOWLEDGE_MAP.md) — minimal task-to-file navigation
+- [`RESEARCH_WORKFLOW.md`](RESEARCH_WORKFLOW.md) — proof, audit, synthesis, and promotion
+  procedure
+- [`state/README.md`](state/README.md) — lifecycle/status semantics
+- [`prompts/PROMPTING_GUIDE.md`](prompts/PROMPTING_GUIDE.md) — prompt construction
+- [`reports/REPORT_TEMPLATE.md`](reports/REPORT_TEMPLATE.md) — substantial run format
+
+Operational documents do not independently prove mathematics. They must agree with the
+state lock and route maps.
+
+## Source layers
+
+### Canonical theorem state
+
+- `problem/`
+- `theory/`
+- route modules explicitly named by `targets/target-*/README.md`
+- reports explicitly promoted by a route map or `STATE.md`
+
+### Audited-working material
+
+Dated proof reports with some audit/correction history but no explicit promotion. These
+are research inputs, not unqualified theorem premises.
+
+### Regression / correction material
+
+Exact counterexamples, dependency audits, and scope corrections. These can override a
+claim even when the original file remains for provenance.
+
+### Provenance
+
+- historical prompts
+- unpromoted historical reports
+- `archive/`
+- compatibility pointers under `canonical/`
+- Target C co-located modules not named by the current route map
+
+More detail, a newer date, or a larger section number does not increase authority.
+
+## Historical preservation
+
+The original v1.7 snapshot remains at
+[`archive/erdos_problem_99_1.7.0-full.md`](archive/erdos_problem_99_1.7.0-full.md).
+
+The large pre-cleanup Target C route map is preserved verbatim at
+[`targets/target-c/HISTORY-pre-cleanup-2026-09-11.md`](targets/target-c/HISTORY-pre-cleanup-2026-09-11.md).
+Its promoted-addenda catalog remains valid subject to later overrides in `STATE.md`.
+
+## Promotion invariant
+
+A frontier-changing theorem must update `STATE.md`,
+`state/theorem-state.yaml`, the affected route map/current-frontier file, and the active
+prompt when the next obligation changes. `tools/check_theorem_state.py` checks the
+mechanical consistency of that rule.

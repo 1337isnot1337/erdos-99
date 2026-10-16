@@ -1,0 +1,11 @@
+{
+  "number": 951,
+  "title": "Target C: one-vacancy wall release and exact restoration barriers",
+  "head_sha": "0023585a98d8f5f23df64174a091c143710ba78a",
+  "head_tree": "c2b173233320394fdc1ec5b9a29b0a838c2eca2e",
+  "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "merge_base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+  "changed_file_count": 19,
+  "shortstat": "19 files changed, 30303 insertions(+)",
+  "url": "https://github.com/1337isnot1337/e-99/pull/951"
+}

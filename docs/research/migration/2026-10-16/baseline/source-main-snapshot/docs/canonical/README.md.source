@@ -1,0 +1,8 @@
+# Canonical compatibility index
+
+The active theorem state is modular and is indexed from [`../README.md`](../README.md).
+This directory exists only to keep older audit/report references to a monolithic
+`docs/canonical/...` path resolvable.
+
+Do **not** treat files here as a second theorem source. For current mathematics, read
+the problem, theory, and Target A/Target B modules linked from the documentation map.

@@ -1,0 +1,11 @@
+{
+  "number": 958,
+  "title": "Global endpoint certificates and complete-source obstruction checks",
+  "head_sha": "0a72556e786024c9313c7d6287e26c20c1e9b9b8",
+  "head_tree": "7b37e2fc5af3bb2e0471a690195a21f9d9fd0d2c",
+  "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "merge_base_sha": "d6f953100d62a84de72e991642041fdd026e82ba",
+  "changed_file_count": 11,
+  "shortstat": "11 files changed, 1433 insertions(+)",
+  "url": "https://github.com/1337isnot1337/e-99/pull/958"
+}
