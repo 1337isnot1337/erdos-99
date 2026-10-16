@@ -206,3 +206,35 @@ global-minimizer extraction or Level I closure. The [focused track](../docs/rese
 connects the claims, limitations, and next obligations. The source AI audit is
 retained as provenance, not as the destination's independent exact-head
 mathematical audit. No claim or certificate is canonically promoted.
+
+
+## Source PR #960 and merged PR #995 — factorized maps and planar replacement limits
+
+Run the exact local checkers from the repository root:
+
+- `python3 research/verify_global_factorized_distance_barrier.py`
+- `python3 research/verify_global_factorized_graph_alternative.py`
+- `python3 research/verify_global_dense_factorized_barrier.py`
+- `python3 research/verify_global_planarity_and_radius_barriers.py`
+- `python3 research/verify_global_vertex_factor_relocation_2026_10_12.py`
+
+The graph helper `research/global_factorized_graph_alternative.py` supplies the
+cycle/DAG certificate algorithm. The reports establish a balanced-incidence
+obstruction for positive vertex factors, its constructive abstract-array
+alternative, a triangle-free unbounded regression satisfying the sharp
+`D^(2/3)` population reserve but failing globality, and distinct rank, radius,
+metric-realizability, pole-feasibility, and finite inversion results. The
+Möbius classification and basic factor obstruction overlap the already retained
+`global_separable_distortion_obstruction_2026-10-12.md`; the squared-distance
+rank barrier overlaps PR #958. The #960 track identifies what is new, what is
+subsumed, and the missing global planar endpoint.
+
+The merged #995 hull/train reconciliation links preserved Target C evidence
+from earlier research programs and records a conditional chord fork without a
+global endpoint. The source AI audits are provenance only. All imported claims
+remain unreviewed and outside theorem-state. Reproduce the related historical
+finite checks with the commands in the
+[focused track](../docs/research/tracks/global-factorized-distance-planarity-pr960.md).
+The [per-file migration ledger](../docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl)
+records exact frozen identities, transformations, duplicates and the excluded
+operational recovery file.

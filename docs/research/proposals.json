@@ -125,5 +125,27 @@
       "research/verify_global_separable_distortion_obstruction.py"
     ],
     "scope": "Formal continuum matrix-field theorem and explicit non-global geometric/planarity regressions; no extraction from arbitrary global minimizers or Level I closure"
+  },
+  {
+    "source_proposal_number": 960,
+    "source_head": "c75e519426e3a88839567411fe3381160f3aa3cb",
+    "title": "Target C: factorized transformations, sharp-reserve regression, and planar replacement barriers",
+    "status": "unreviewed proposal; not canonical",
+    "public_files": [
+      "docs/audits/pr960_autonomous_proof_audit_2026-10-15.md",
+      "docs/reports/global_dense_factorized_barrier_2026-10-12.md",
+      "docs/reports/global_factorized_distance_barrier_2026-10-12.md",
+      "docs/reports/global_planarity_and_radius_barriers_2026-10-12.md",
+      "docs/reports/global_vertex_factor_relocation_2026-10-12.md",
+      "docs/reports/hull_train_preservation_reconciliation_2026-10-15.md",
+      "docs/research/tracks/global-factorized-distance-planarity-pr960.md",
+      "research/global_factorized_graph_alternative.py",
+      "research/verify_global_dense_factorized_barrier.py",
+      "research/verify_global_factorized_distance_barrier.py",
+      "research/verify_global_factorized_graph_alternative.py",
+      "research/verify_global_planarity_and_radius_barriers.py",
+      "research/verify_global_vertex_factor_relocation_2026_10_12.py",
+      "tasks/target-c-factorized-planar-escape.md"
+    ]
   }
 ]

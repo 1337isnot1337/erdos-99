@@ -181,3 +181,28 @@ minimizer, or a full-label repacking argument using stronger global-source
 geometry. See the [track](tracks/global-reflected-scale-capacity-pr959.md),
 [candidate registry](../targets/target-c/candidate-registry.json), and
 [scientific reconciliation](migration/2026-10-16/scientific-reconciliation.md).
+
+
+## Factorized maps, planar endpoint and sharp-reserve limits
+
+Source PR #960 and merged #995 are reconciled in the
+[factorization/planarity track](tracks/global-factorized-distance-planarity-pr960.md).
+Balanced contact/diameter incidence blocks every realized positive vertex-factor
+map; the two-state digraph either returns that certificate or gives only an
+abstract all-pair array. The unbounded triangle-free counterexample meets the
+sharp `D^(2/3)` population reserve and still has an explicit strict competitor,
+so population plus factorization stability does not imply globality. Uniform
+squared-distance contraction is nonplanar for `n>=4`; rank-two truncation is
+affine, and the radius bounds apply only when their enclosing-radius hypothesis
+is separately known. The exact six-point replacement and seven-point inversion
+examples are finite controls, not eventual global results.
+
+The missing implication is source-wide: derive a planar, same-cardinality
+strict-`D` endpoint or a unit triangle for every sufficiently large triangle-free
+global minimizer. The endpoint must check all lower and upper pair constraints,
+including newly active pairs and contact isolates. For the factorized route,
+extract an eventual obstruction escape or prove a globality-specific exclusion
+of balanced certificates; for the DAG branch, supply planar coordinates; for
+the radius branch, derive its radius premise from global optimality. The chord
+fork from the hull/train reconciliation still has no diameter or endpoint
+payment. Candidate records remain unreviewed and theorem-state is unchanged.

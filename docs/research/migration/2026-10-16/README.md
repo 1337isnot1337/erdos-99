@@ -1,6 +1,6 @@
 # Erdős #99 source research migration
 
-**Overall migration status: INCOMPLETE.** Exact source and destination baselines are frozen under the baseline directory. Source-main audit batch 1 merged as PR #19; PR #1008 merged as destination PR #20; PR #951 merged as destination PR #21; PR #947 merged as destination PR #22; PR #950 merged as destination PR #23; source PR #948 merged as destination PR #24 at `621f7c7dcd5b12c949f83951d1d1521e09bbbe17` (tree `978550c0ab3248aee7ac41d9e8b5438a53c5687a`); source PR #952 merged as destination PR #25 at `d369420f85ed94b73ebfeb09eaace7ada1a526a8` (tree `538dbfa15e98bf7ba56a978fa05f91b07adf416c`); source PR #955 merged as destination PR [#26](https://github.com/1337isnot1337/erdos-99/pull/26) at `1c5830ee3219a83c3aac43abbc571ffa6870b239` (tree `04f93f2c057b1a1ccc20f17c12b0f59ee2a469af`); and source PR #956 merged as destination PR [#27](https://github.com/1337isnot1337/erdos-99/pull/27) at `a88a5e20e77169417c2385d9228dccd937a927b8` (tree `08bdde5888ec23c81c604ad3b79211bec44f1aa7`). Destination PR #16 was also merged as `e89d508c97af781d7957768f778d6bdd26535f2c` to remove a private source URL from the public schema identifier. Source PR #957 merged as destination PR #28 at 14d5367b90af822f43c99c201f1dcf8e95bf80da (tree 53d3040394dcb38e5cdc5cfb2e3ca9eac565f098); source PR #958 merged as destination PR [#29](https://github.com/1337isnot1337/erdos-99/pull/29) at `b6423914251eb482a8c674bb922c7b3598b4f0cb` (tree `1597f4abfdef567ee8c1d14535c35ea4cd7dd843`); source PR #959 is the current focused integration batch in destination PR #30 from frozen head `e25041f236d268a7e815dacd346180989690ed71`; source PR #960 remains queued. The 826 source-main reports missing at the frozen baseline, bulk research tree, other open-PR additions, and historical PR work remain queued.
+**Overall migration status: INCOMPLETE.** Exact source and destination baselines are frozen under the baseline directory. Source-main audit batch 1 merged as PR #19; PR #1008 merged as destination PR #20; PR #951 merged as destination PR #21; PR #947 merged as destination PR #22; PR #950 merged as destination PR #23; source PR #948 merged as destination PR #24 at `621f7c7dcd5b12c949f83951d1d1521e09bbbe17` (tree `978550c0ab3248aee7ac41d9e8b5438a53c5687a`); source PR #952 merged as destination PR #25 at `d369420f85ed94b73ebfeb09eaace7ada1a526a8` (tree `538dbfa15e98bf7ba56a978fa05f91b07adf416c`); source PR #955 merged as destination PR [#26](https://github.com/1337isnot1337/erdos-99/pull/26) at `1c5830ee3219a83c3aac43abbc571ffa6870b239` (tree `04f93f2c057b1a1ccc20f17c12b0f59ee2a469af`); and source PR #956 merged as destination PR [#27](https://github.com/1337isnot1337/erdos-99/pull/27) at `a88a5e20e77169417c2385d9228dccd937a927b8` (tree `08bdde5888ec23c81c604ad3b79211bec44f1aa7`). Destination PR #16 was also merged as `e89d508c97af781d7957768f778d6bdd26535f2c` to remove a private source URL from the public schema identifier. Source PR #957 merged as destination PR #28 at 14d5367b90af822f43c99c201f1dcf8e95bf80da (tree 53d3040394dcb38e5cdc5cfb2e3ca9eac565f098); source PR #958 merged as destination PR [#29](https://github.com/1337isnot1337/erdos-99/pull/29) at `b6423914251eb482a8c674bb922c7b3598b4f0cb` (tree `1597f4abfdef567ee8c1d14535c35ea4cd7dd843`); source PR #959 was merged as destination PR #30 at `aa0a8196e88a840ef3ad2dc63626c9e76d91ebf9`; source PR #960 and merged PR #995 support are integrated on the current destination PR #31 branch from the frozen heads recorded below. The 826 source-main reports missing at the frozen baseline, bulk research tree, other open-PR additions, and historical PR work remain queued.
 
 ## Open source PR batch — #1008 population reserve
 
@@ -278,3 +278,47 @@ python3 docs/research/migration/2026-10-16/verify_source_pr_imports.py \
 The reflected-scale decision theorem, full-source moment obstruction, and Steiner-capacity counterexamples remain unreviewed and noncanonical. Their exact scopes, dependencies, regressions, and missing source-extraction steps are in the [scientific reconciliation](scientific-reconciliation.md) and [focused track](../../tracks/global-reflected-scale-capacity-pr959.md). The source audit's human-review language was corrected to the destination independent exact-head AI-agent policy; account-specific hosted-CI details were omitted from the run note. No source data or third-party papers are bundled.
 
 Batch-specific integrity, exact verifier outcomes, and destination checks are recorded in the [PR #959 verification receipt](receipts/target-c-pr959-local-verification.json). This is a focused research batch, not the full source-main migration or Gate 2 release verification.
+
+
+## Source PR #960 and merged PR #995 — factorized and planar replacement batch
+
+Source PR #960 is frozen at draft head
+`c75e519426e3a88839567411fe3381160f3aa3cb` (tree
+`65f7e6e67cbead52038792617df9de48208d99d7`) against source main
+`42f0296d1aca068c809f74cee5dcdb4ebdb27c73`; its merge base is
+`a43c69dac7e7b0627dec2900e12c60fd4608d519`. Merged source PR #995 is frozen at
+`8db48831a8212dfac1e24a1d26e7f9d53a67335b` (tree
+`b73c1114989079472aeeb883fee7ac9d28f8af57`), with merge base
+`8ba00e900439a15ccd009f935f3e232f93e7480f`. The exact per-path ledger records
+all source blobs, destination hashes, adaptations, duplicates and blocked
+operational metadata.
+
+The batch preserves the full PR #960 reports and four runnable verifiers, its
+graph helper, the #995 vertex-factor report/checker, and the cross-target
+hull/train reconciliation. It adapts source audit and README wording, regenerates
+the artifact index, adds the focused track and candidate registry entries, and
+updates current frontier navigation and adds the active [source-wide escape task](../../../../tasks/target-c-factorized-planar-escape.md). The #960 factorization barrier and #995
+Möbius classification overlap the stronger existing formal-array result; the
+rank obstruction overlaps PR #958. Those overlaps are explicit and not counted
+as separate advances. The distinct pole test, sharp-reserve regression, graph
+alternative, radius controls and exact finite counterexamples are retained.
+
+The owner-authorized operational recovery JSON from merged #995 is intentionally
+excluded from the mathematical corpus because it records private recovery and
+history operations. The bulk-separator checker from #995 is an exact duplicate
+of an existing destination file, verified by SHA-256. The hull/train and
+vertex-factor reports remain noncanonical. The destination theorem-state is
+unchanged and the repository remains private. Local results and receipts are
+recorded under `receipts/target-c-pr960-local-verification.json`; this focused
+batch is not the full source migration or Gate 2 verification.
+
+The pinned CPython 3.14.7 candidate verifier ran against payload commit
+`cc0e388404c5e168ef89025121e10e74b4ff19fe` and its 560-entry artifact index.
+All 132 tool tests, 8 corpus tests, 94 registered certificates, public/source
+integrity, theorem-state, current-tree Gitleaks, actionlint, and whitespace
+checks passed; the candidate commit and tree remained unchanged during the run.
+The release audit returned `BLOCKED` on existing owner-rights evidence for the
+810-entry inclusion set and 88 reachable personal-domain Git metadata
+occurrences. The audit findings and historical PEM-delimiter false-positive
+review are recorded in the local verification receipt. Gate 2 is not claimed,
+no hosted PR jobs have run, and Gate 3 remains separate.

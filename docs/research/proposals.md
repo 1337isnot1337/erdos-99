@@ -293,3 +293,20 @@ near-identity endpoint from every sufficiently large triangle-free global
 minimizer, meeting every lower and upper pair constraint, or prove a global
 source-specific full-label repacking theorem. See the
 [per-file migration ledger](migration/2026-10-16/ledger/source-pr-files.jsonl).
+
+
+## Source PR #960 and merged PR #995 — factorized-distance and planar replacement tests
+
+The [focused track](tracks/global-factorized-distance-planarity-pr960.md)
+reconciles three full #960 reports, their four executable checkers and graph
+helper, plus the merged #995 vertex-factor report/checker and hull/train
+reconciliation. The balanced-incidence and planar Möbius claims overlap the
+stronger existing formal-array report; squared-distance rank overlaps PR #958.
+The distinct additions include a cycle/DAG certificate alternative, a
+sharp-`D^(2/3)`-reserve triangle-free nonglobal family, radius and rank-two
+truncation limits, a quartic full-pair pole test, exact metric-realizability
+regressions, a seven-label inversion competitor, and one conditional hull/chord
+fork. The exact missing global step and finite limits are explicit in the track
+and [machine-readable candidate registry](../targets/target-c/candidate-registry.json).
+The active source-wide follow-up is [target-c-factorized-planar-escape](../../tasks/target-c-factorized-planar-escape.md). No new theorem is promoted. Merged #995's operational recovery ledger is not
+part of the research corpus; the PR file ledger records that exclusion.

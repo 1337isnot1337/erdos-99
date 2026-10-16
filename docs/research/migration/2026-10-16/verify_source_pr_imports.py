@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify a frozen source open-PR file ledger against Git and destination bytes."""
+"""Verify a frozen source open or merged-PR file ledger against Git and destination bytes."""
 
 from __future__ import annotations
 
@@ -32,7 +32,7 @@ def main() -> int:
         for line in LEDGER.read_text(encoding="utf-8").splitlines()
         if line.strip()
     ]
-    selected = [r for r in records if r.get("record_type") == "source_open_pr_file" and r.get("source_pr") == args.pr]
+    selected = [r for r in records if r.get("record_type") in {"source_open_pr_file", "source_merged_pr_file"} and r.get("source_pr") == args.pr]
     if not selected:
         print(f"ERROR: no source open-PR ledger rows for PR #{args.pr}", file=sys.stderr)
         return 1
@@ -88,7 +88,7 @@ def main() -> int:
         recorded_blob = row.get("destination_git_blob_sha")
         if recorded_blob and dest_blob != recorded_blob:
             errors.append(f"destination Git blob mismatch: {destination_path}")
-        if relation == "exact_copy":
+        if relation in {"exact_copy", "exact_duplicate"}:
             if source_bytes != dest_bytes:
                 errors.append(f"exact-copy bytes differ: {path}")
             exact += 1
@@ -107,6 +107,7 @@ def main() -> int:
         "source_head": head,
         "source_tree": actual_tree,
         "source_paths_checked": len(selected),
+        "record_types": sorted({r.get("record_type") for r in selected}),
         "exact_copies": exact,
         "transformed_or_regenerated": transformed,
         "rights_or_scope_blocked": blocked,
