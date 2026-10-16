@@ -289,6 +289,137 @@
       ],
       "description": "Conditional full-core Mantel-floor endpoint contradiction under a simply connected proper-train disk.",
       "unresolved_bridge": "holes/interfaces and canonical full-core disk globalization"
+    },
+    {
+      "id": "pure-rhombic-endpoint-exclusions",
+      "description": "Exact pure-rhombic train-count contradiction under disk topology and bounded-isolate hypotheses.",
+      "indices": [
+        570
+      ],
+      "unresolved_bridge": "extract the exact simply connected pure rhombic disk and O(D) isolate bound from general C-II"
+    },
+    {
+      "id": "post-zf-variational-floors",
+      "description": "Exact post-ZF scalar optimization, endpoint equality obstructions, and nonexplicit gaps.",
+      "indices": [
+        571,
+        572,
+        573,
+        580,
+        586,
+        587,
+        588,
+        593,
+        594,
+        595,
+        596
+      ],
+      "unresolved_bridge": "convert remaining all-phase scalar lower bounds into a source-realized strict-D competitor or global contradiction"
+    },
+    {
+      "id": "quadrangulation-core-capacity-and-stability",
+      "description": "Force-visible rhombic capacity, quantitative train-phase stability, and near-circle component/support bounds.",
+      "indices": [
+        574,
+        575,
+        577,
+        579,
+        584
+      ],
+      "unresolved_bridge": "control omitted isolates, extract the conditional branch, and close the macroscopic cavity or train endpoint"
+    },
+    {
+      "id": "quadratic-population-and-response-regressions",
+      "description": "Quadratic-density component concentration and exact negative response regressions.",
+      "indices": [
+        575,
+        576,
+        591,
+        592
+      ],
+      "unresolved_bridge": "derive global-minimality constraints linking these local stress/response models to a diameter-scale population"
+    },
+    {
+      "id": "train-phase-endpoint-stability",
+      "description": "Weighted-Mantel slack and quantitative V-cover structure near train/wrapping endpoints.",
+      "indices": [
+        577,
+        578
+      ],
+      "unresolved_bridge": "extract and globalize the pure chain-face or rooted-wrapping hypotheses without reviving withdrawn inverse-phase inferences"
+    },
+    {
+      "id": "quantitative-near-endpoint-support",
+      "description": "Sublinear diameter carrier rates and near-endpoint loaded-hull V-covers.",
+      "indices": [
+        578,
+        579
+      ],
+      "unresolved_bridge": "improve sublinear carrier counts to linear/global response mass or establish the branch hypotheses from C-II"
+    },
+    {
+      "id": "radial-transport-and-stress",
+      "description": "Radial coarea, pointwise outward flux, and winner-take-all branching constraints.",
+      "indices": [
+        580,
+        581,
+        582,
+        583
+      ],
+      "unresolved_bridge": "charge low-weight transverse contacts and turn radial transport into a full-source contradiction"
+    },
+    {
+      "id": "rattler-localization-and-endpoints",
+      "description": "Rattler defect-face localization, first-contact absorption, and exact RD endpoint equality/exclusion.",
+      "indices": [
+        584,
+        585,
+        586,
+        587,
+        588
+      ],
+      "unresolved_bridge": "control outer-face/large-defect cavities and retain positive KKT visibility under same-D motions"
+    },
+    {
+      "id": "finite-source-motions",
+      "description": "Same-cardinality, same-diameter finite first-contact absorption of isolated points.",
+      "indices": [
+        585
+      ],
+      "unresolved_bridge": "show newly created contacts can be made compatible with the force-visible/contact-minimal normalization"
+    },
+    {
+      "id": "reaction-free-block-capacity",
+      "description": "Pinned-rigidity capacity for reaction-free bridge blocks and its canonical successor.",
+      "indices": [
+        589
+      ],
+      "unresolved_bridge": "use the bridge-degree budget to exclude all reaction-free mass in a global minimizer"
+    },
+    {
+      "id": "regular-shell-stress-and-transfer",
+      "description": "Exact regular-shell stress polytopes and strict-negative cycle response models.",
+      "indices": [
+        576,
+        590,
+        591,
+        592
+      ],
+      "unresolved_bridge": "extend regular-shell/regression facts to general source geometry with global population/minimality controls"
+    },
+    {
+      "id": "renormalized-pocket-endpoints",
+      "description": "RP/RL/SC exact scalar floors and equality-case endpoint obstructions.",
+      "indices": [
+        571,
+        573,
+        580,
+        593,
+        594,
+        595,
+        596
+      ],
+      "unresolved_bridge": "obtain explicit stability away from scalar endpoints and compare the remaining all-phase geometry"
     }
   ]
 }
