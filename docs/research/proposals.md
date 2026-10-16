@@ -235,3 +235,34 @@ noncanonical; the exact missing bridge is to find a successful packet and
 cover for every sufficiently large triangle-free global minimizer. See the
 two [exact finite verifiers](../research/README.md) and [per-file migration
 ledger](migration/2026-10-16/ledger/source-pr-files.jsonl).
+
+## Source PR #958 — colour lifts, planar rank barriers, and finite palettes
+
+The [colour-lift report](../reports/global_colouring_lift_and_planar_rank_barrier_2026-10-12.md)
+proves a full-contact strict metric descent under uniform squared-distance
+interpolation, but its centered Gram rank \(n-1\) prevents a planar realization
+for \(n\ge4\). A separate proper three-colouring of every finite triangle-free
+contact graph gives strict full-label descent in four dimensions. The report
+characterizes exactly when this specified lift flattens into the source plane;
+the two-colour case requires parallel colour lines, which is not extracted from
+a global minimizer.
+
+The [palette report](../reports/global_palette_endpoints_and_full_source_exhaustion_2026-10-12.md)
+formulates arbitrary planar endpoints by checking every lower and strict upper
+pair quadratic at one common parameter. Finite palette feasibility is exactly
+an independent-transversal problem in the complete lower/upper conflict graph.
+Its 43-gon example has a strict finite endpoint. A fixed palette exhaustively
+fails on all assignments for one 175-label filled source; a separate
+175-label packing is a strict competitor, so this is a nonglobal regression,
+not a global obstruction. The coordinate data are not bundled pending
+redistribution permission; the result is retained as source-reported evidence,
+and the destination verifier requires a locally supplied directory with
+expected hashes.
+
+The [focused track](tracks/global-planar-endpoint-palette-pr958.md) links every
+report, verifier, source-audit provenance record, and proof obligation. The
+claims remain unreviewed and outside theorem-state. The missing bridge is an
+actual planar full-label endpoint meeting every lower/upper pair constraint
+for every sufficiently large triangle-free global minimizer, or an unbounded
+family with independently proved global optimality. Exact per-path source and
+destination treatment is in the [migration ledger](migration/2026-10-16/ledger/source-pr-files.jsonl).

@@ -4118,6 +4118,799 @@
         "visibility": "destination repository remains private",
         "destination_claim_status": "unreviewed; theorem-state unchanged"
       }
+    },
+    {
+      "candidate_id": "GLOBAL-SQUARED-DISTANCE-INTERPOLATION-PR958",
+      "title": "Uniform squared-distance interpolation and planar rank barrier",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed candidate or finite regression from frozen open source PR #958; theorem-state remains authoritative.",
+      "source_proposed_status": "unreviewed",
+      "target_scope": [
+        "Level I whole-source strict-diameter comparison",
+        "Target C cross-route evidence"
+      ],
+      "claim": {
+        "statement": "For each pair i,j in a finite unit-separated source of diameter D>1, define d prime squared by d′_{ij}²=1+λ(d_{ij}²−1), with 0<λ<1. This preserves every unit contact and strictly decreases each noncontact distance; the diameter decreases. For centered source Gram matrix G and centering matrix J=I−11ᵀ/n, the interpolated Gram matrix is λG+(1−λ)J/2 and has rank n−1 for n distinct points.",
+        "hypotheses": [
+          "The source is finite, unit-separated, and all pair distances are interpolated.",
+          "The stated Gram identity is applied to the complete squared-distance matrix."
+        ],
+        "not_claimed": [
+          "For n>=4 this particular interpolation is not planar.",
+          "No global result follows without a planar realization."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No existing canonical claim is changed, replaced, or promoted. This is a separate global-endpoint route.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_colouring_lift_and_planar_rank_barrier_2026-10-12.md",
+          "role": "full analytic report",
+          "source_git_blob_sha": "6e2a1d248af683691541676a0ac7daac82664f5e",
+          "source_sha256": "e875fe65415f40be197c4f8c80e4a802b57bfcb2ff55d0aa62e7900642d77340",
+          "destination_sha256": "ab1fc0f0d2cdd3b1f72b801a7b873d56f5db6bed68bfd231f29d88b5945538bc",
+          "source_claim_ids": [],
+          "source_artifact_id": "ART-4DE55BC9FA0D"
+        },
+        {
+          "path": "docs/audits/pr958_autonomous_proof_audit_2026-10-15.md",
+          "role": "source AI audit provenance",
+          "source_git_blob_sha": "a27e7e6120d369c86fe69e2dcee345b2cf41138f",
+          "source_sha256": "8959e9d4a6fe5a8e1a84902985efe903296cfd18033c5605969561cef5f44639",
+          "destination_sha256": "d32fa3e8b2d267d28e2963f653671989aee7584c5e456ca5e3730a7d8fa0b90a",
+          "source_claim_ids": [],
+          "source_artifact_id": "ART-9FAA8DEBDCFB"
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [],
+        "description": "Same squared-distance interpolation and rank-n−1 claim as source PR #960 report global_planarity_and_radius_barriers_2026-10-12.md (t=1−lambda); do not count as independent. PR #960 adds rank-two-truncation and separate radius results. The PR #958 colour-specific and palette claims are distinct."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "planarity",
+          "result": "Centered rank n−1 exceeds two for n>=4; no planar embedding exists for this metric."
+        }
+      ],
+      "validation": {
+        "command": "No separate scalar replay.",
+        "result": "The colour verifier checks representative Gram ranks and exact controls.",
+        "boundary": "Finite rank cases do not prove the analytic statement."
+      },
+      "next_proof_obligations": [
+        "Find a separate planar realization or a global family showing the rank obstruction is decisive."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 958,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/958",
+        "source_pr_draft": true,
+        "source_head_sha": "0a72556e786024c9313c7d6287e26c20c1e9b9b8",
+        "source_head_tree": "7b37e2fc5af3bb2e0471a690195a21f9d9fd0d2c",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base": "d6f953100d62a84de72e991642041fdd026e82ba",
+        "source_merge_base_tree": "3d6ac96556b891d7b17ea7c13ae9364e0c5082f0"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party report, verifier and project-agent material.",
+        "third_party_material": "Only external bibliographic links and coordinate-table URLs/hashes are retained. Packomania coordinate files are withheld pending explicit redistribution permission.",
+        "visibility": "Destination repository remains private.",
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged."
+      }
+    },
+    {
+      "candidate_id": "GLOBAL-TRIANGLE-FREE-FOUR-DIMENSIONAL-COLOUR-LIFT-PR958",
+      "title": "Contact-preserving strict diameter descent in four dimensions",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed candidate or finite regression from frozen open source PR #958; theorem-state remains authoritative.",
+      "source_proposed_status": "unreviewed",
+      "target_scope": [
+        "Level I whole-source strict-diameter comparison",
+        "Target C cross-route evidence"
+      ],
+      "claim": {
+        "statement": "Every finite triangle-free unit-separated planar source has a 2-degenerate contact graph and a proper coloring with at most three colors. Assigning regular-simplex heights and setting p_i(t)=(p_i,t z_c)/sqrt(1+t²) preserves contacts and gives a full-label strict diameter decrease in R4 for sufficiently small positive t.",
+        "hypotheses": [
+          "All source labels, including contact isolates, are retained.",
+          "Finiteness gives positive slack for distinct same-color pairs."
+        ],
+        "not_claimed": [
+          "The lift generally has affine dimension three and is not a planar competitor.",
+          "No planar source-wide endpoint is extracted."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No existing canonical claim is changed, replaced, or promoted. This is a separate global-endpoint route.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_colouring_lift_and_planar_rank_barrier_2026-10-12.md",
+          "role": "full analytic report",
+          "source_git_blob_sha": "6e2a1d248af683691541676a0ac7daac82664f5e",
+          "source_sha256": "e875fe65415f40be197c4f8c80e4a802b57bfcb2ff55d0aa62e7900642d77340",
+          "destination_sha256": "ab1fc0f0d2cdd3b1f72b801a7b873d56f5db6bed68bfd231f29d88b5945538bc",
+          "source_claim_ids": [],
+          "source_artifact_id": "ART-4DE55BC9FA0D"
+        },
+        {
+          "path": "research/verify_global_colouring_lift_rank_2026_10_12.py",
+          "role": "exact finite verifier",
+          "source_git_blob_sha": "38ea395e90ab79fbee9e6dd67277b76702a009ce",
+          "source_sha256": "c1099da22d605d61de95c987f576116985d9bea02a68517da26ec0ab65c63b72",
+          "destination_sha256": "c1099da22d605d61de95c987f576116985d9bea02a68517da26ec0ab65c63b72",
+          "source_claim_ids": []
+        },
+        {
+          "path": "docs/audits/pr958_autonomous_proof_audit_2026-10-15.md",
+          "role": "source AI audit provenance",
+          "source_git_blob_sha": "a27e7e6120d369c86fe69e2dcee345b2cf41138f",
+          "source_sha256": "8959e9d4a6fe5a8e1a84902985efe903296cfd18033c5605969561cef5f44639",
+          "destination_sha256": "d32fa3e8b2d267d28e2963f653671989aee7584c5e456ca5e3730a7d8fa0b90a",
+          "source_claim_ids": [],
+          "source_artifact_id": "ART-9FAA8DEBDCFB"
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [],
+        "description": "Triangle-freeness gives the 2-degenerate graph; the report proves the distance inequalities."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "planarity",
+          "result": "A unit-square control has rank-three lift."
+        }
+      ],
+      "validation": {
+        "command": "python3 research/verify_global_colouring_lift_rank_2026_10_12.py",
+        "result": "Passed in isolated CPython 3.14.6 with SymPy 1.14.0 and mpmath 1.3.0.",
+        "boundary": "Finite algebra and fixture checks only; no universal planar endpoint."
+      },
+      "next_proof_obligations": [
+        "Prove a planar realization for an extracted source-wide coloring class or find a different planar endpoint construction."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 958,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/958",
+        "source_pr_draft": true,
+        "source_head_sha": "0a72556e786024c9313c7d6287e26c20c1e9b9b8",
+        "source_head_tree": "7b37e2fc5af3bb2e0471a690195a21f9d9fd0d2c",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base": "d6f953100d62a84de72e991642041fdd026e82ba",
+        "source_merge_base_tree": "3d6ac96556b891d7b17ea7c13ae9364e0c5082f0"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party report, verifier and project-agent material.",
+        "third_party_material": "Only external bibliographic links and coordinate-table URLs/hashes are retained. Packomania coordinate files are withheld pending explicit redistribution permission.",
+        "visibility": "Destination repository remains private.",
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged."
+      }
+    },
+    {
+      "candidate_id": "GLOBAL-COLOUR-LIFT-AFFINE-FLATTENING-PR958",
+      "title": "Exact criterion for a colour lift to flatten into the plane",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed candidate or finite regression from frozen open source PR #958; theorem-state remains authoritative.",
+      "source_proposed_status": "unreviewed",
+      "target_scope": [
+        "Level I whole-source strict-diameter comparison",
+        "Target C cross-route evidence"
+      ],
+      "claim": {
+        "statement": "For a noncollinear source and positive lift parameter, the lift has affine dimension at most two exactly when centered color-vector columns lie in the centered source-plane span. Two used colors require parallel color lines; three used colors cannot flatten when n>=4.",
+        "hypotheses": [
+          "The statement concerns this specified lift with centered regular-simplex color vectors.",
+          "The source is noncollinear."
+        ],
+        "not_claimed": [
+          "No parallel-line coloring is extracted from a global minimizer.",
+          "Other planar rearrangements are not excluded."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No existing canonical claim is changed, replaced, or promoted. This is a separate global-endpoint route.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_colouring_lift_and_planar_rank_barrier_2026-10-12.md",
+          "role": "full analytic report",
+          "source_git_blob_sha": "6e2a1d248af683691541676a0ac7daac82664f5e",
+          "source_sha256": "e875fe65415f40be197c4f8c80e4a802b57bfcb2ff55d0aa62e7900642d77340",
+          "destination_sha256": "ab1fc0f0d2cdd3b1f72b801a7b873d56f5db6bed68bfd231f29d88b5945538bc",
+          "source_claim_ids": [],
+          "source_artifact_id": "ART-4DE55BC9FA0D"
+        },
+        {
+          "path": "research/verify_global_colouring_lift_rank_2026_10_12.py",
+          "role": "exact finite verifier",
+          "source_git_blob_sha": "38ea395e90ab79fbee9e6dd67277b76702a009ce",
+          "source_sha256": "c1099da22d605d61de95c987f576116985d9bea02a68517da26ec0ab65c63b72",
+          "destination_sha256": "c1099da22d605d61de95c987f576116985d9bea02a68517da26ec0ab65c63b72",
+          "source_claim_ids": []
+        },
+        {
+          "path": "docs/audits/pr958_autonomous_proof_audit_2026-10-15.md",
+          "role": "source AI audit provenance",
+          "source_git_blob_sha": "a27e7e6120d369c86fe69e2dcee345b2cf41138f",
+          "source_sha256": "8959e9d4a6fe5a8e1a84902985efe903296cfd18033c5605969561cef5f44639",
+          "destination_sha256": "d32fa3e8b2d267d28e2963f653671989aee7584c5e456ca5e3730a7d8fa0b90a",
+          "source_claim_ids": [],
+          "source_artifact_id": "ART-9FAA8DEBDCFB"
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [],
+        "description": "Linear-algebra characterization of the specified lift."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "three colors",
+          "result": "An invertible affine map would give at most one point per color, so n<=3."
+        }
+      ],
+      "validation": {
+        "command": "python3 research/verify_global_colouring_lift_rank_2026_10_12.py",
+        "result": "Passed in isolated CPython 3.14.6 with SymPy 1.14.0 and mpmath 1.3.0.",
+        "boundary": "Finite algebra and fixture checks only; no universal planar endpoint."
+      },
+      "next_proof_obligations": [
+        "Derive the required affine coloring from global optimality or use another planar realization."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 958,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/958",
+        "source_pr_draft": true,
+        "source_head_sha": "0a72556e786024c9313c7d6287e26c20c1e9b9b8",
+        "source_head_tree": "7b37e2fc5af3bb2e0471a690195a21f9d9fd0d2c",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base": "d6f953100d62a84de72e991642041fdd026e82ba",
+        "source_merge_base_tree": "3d6ac96556b891d7b17ea7c13ae9364e0c5082f0"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party report, verifier and project-agent material.",
+        "third_party_material": "Only external bibliographic links and coordinate-table URLs/hashes are retained. Packomania coordinate files are withheld pending explicit redistribution permission.",
+        "visibility": "Destination repository remains private.",
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged."
+      }
+    },
+    {
+      "candidate_id": "GLOBAL-PLANAR-ENDPOINT-ALL-PAIR-QUADRATICS-PR958",
+      "title": "Full-pair quadratic certificate for planar endpoints",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed candidate or finite regression from frozen open source PR #958; theorem-state remains authoritative.",
+      "source_proposed_status": "unreviewed",
+      "target_scope": [
+        "Level I whole-source strict-diameter comparison",
+        "Target C cross-route evidence"
+      ],
+      "claim": {
+        "statement": "For prescribed planar targets v_i and one common parameter t, y_i=(p_i+t v_i)/sqrt(1+t²) meets lower constraints exactly when (d²−1)+2bt+(c−1)t²>=0 and strictly improves D exactly when (D²−d²)−2bt+(D²−c)t²>0 for every pair, where d²=|p_i−p_j|², b=(p_i−p_j)·(v_i−v_j), c=|v_i−v_j|².",
+        "hypotheses": [
+          "Every unordered source pair and the same endpoint parameter are checked.",
+          "No feasible path is required."
+        ],
+        "not_claimed": [
+          "The criterion does not find targets for arbitrary global minimizers.",
+          "Contact-only or first-order checks are insufficient."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No existing canonical claim is changed, replaced, or promoted. This is a separate global-endpoint route.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_colouring_lift_and_planar_rank_barrier_2026-10-12.md",
+          "role": "full analytic report",
+          "source_git_blob_sha": "6e2a1d248af683691541676a0ac7daac82664f5e",
+          "source_sha256": "e875fe65415f40be197c4f8c80e4a802b57bfcb2ff55d0aa62e7900642d77340",
+          "destination_sha256": "ab1fc0f0d2cdd3b1f72b801a7b873d56f5db6bed68bfd231f29d88b5945538bc",
+          "source_claim_ids": [],
+          "source_artifact_id": "ART-4DE55BC9FA0D"
+        },
+        {
+          "path": "docs/reports/global_palette_endpoints_and_full_source_exhaustion_2026-10-12.md",
+          "role": "full analytic report",
+          "source_git_blob_sha": "d01574fc612e1cd1baa796e03dfdd8c63825e770",
+          "source_sha256": "0daf13555133af3f7503e8e59a4904c827cd09f58f1af815a763a6f80729df60",
+          "destination_sha256": "e0ac1c388070ae91c00e716d1b511924978c029ba90797a6ba562b12e811450c",
+          "source_claim_ids": [],
+          "source_artifact_id": "ART-AB692686F9CB"
+        },
+        {
+          "path": "research/verify_global_colouring_lift_rank_2026_10_12.py",
+          "role": "exact finite verifier",
+          "source_git_blob_sha": "38ea395e90ab79fbee9e6dd67277b76702a009ce",
+          "source_sha256": "c1099da22d605d61de95c987f576116985d9bea02a68517da26ec0ab65c63b72",
+          "destination_sha256": "c1099da22d605d61de95c987f576116985d9bea02a68517da26ec0ab65c63b72",
+          "source_claim_ids": []
+        },
+        {
+          "path": "research/verify_global_palette_transversal_2026_10_12.py",
+          "role": "finite verifier with external-data gate",
+          "source_git_blob_sha": "b1545956ed6dc8b470d84269521d958a990150ab",
+          "source_sha256": "296b26f6cface2ea19800f5e679759baa5c7bf9a0700906f1c82cea637683430",
+          "destination_sha256": "20f09bd8016fc8e5e0e187cf9da23d5e95f5f6f7ebb0e7da3a0689b738e8badf",
+          "source_claim_ids": []
+        },
+        {
+          "path": "docs/audits/pr958_autonomous_proof_audit_2026-10-15.md",
+          "role": "source AI audit provenance",
+          "source_git_blob_sha": "a27e7e6120d369c86fe69e2dcee345b2cf41138f",
+          "source_sha256": "8959e9d4a6fe5a8e1a84902985efe903296cfd18033c5605969561cef5f44639",
+          "destination_sha256": "d32fa3e8b2d267d28e2963f653671989aee7584c5e456ca5e3730a7d8fa0b90a",
+          "source_claim_ids": [],
+          "source_artifact_id": "ART-9FAA8DEBDCFB"
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [],
+        "description": "The reports derive the all-pair conditions."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "negative control",
+          "result": "An infeasible square contraction is rejected despite decreasing diameter."
+        }
+      ],
+      "validation": {
+        "command": "python3 research/verify_global_colouring_lift_rank_2026_10_12.py",
+        "result": "Passed in isolated CPython 3.14.6 with SymPy 1.14.0 and mpmath 1.3.0.",
+        "boundary": "Finite algebra and fixture checks only; no universal planar endpoint."
+      },
+      "next_proof_obligations": [
+        "Find targets and a common parameter satisfying every pair bound for every sufficiently large triangle-free global minimizer."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 958,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/958",
+        "source_pr_draft": true,
+        "source_head_sha": "0a72556e786024c9313c7d6287e26c20c1e9b9b8",
+        "source_head_tree": "7b37e2fc5af3bb2e0471a690195a21f9d9fd0d2c",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base": "d6f953100d62a84de72e991642041fdd026e82ba",
+        "source_merge_base_tree": "3d6ac96556b891d7b17ea7c13ae9364e0c5082f0"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party report, verifier and project-agent material.",
+        "third_party_material": "Only external bibliographic links and coordinate-table URLs/hashes are retained. Packomania coordinate files are withheld pending explicit redistribution permission.",
+        "visibility": "Destination repository remains private.",
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged."
+      }
+    },
+    {
+      "candidate_id": "GLOBAL-FINITE-PALETTE-INDEPENDENT-TRANSVERSAL-PR958",
+      "title": "Finite palette endpoints are exactly independent transversals",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed candidate or finite regression from frozen open source PR #958; theorem-state remains authoritative.",
+      "source_proposed_status": "unreviewed",
+      "target_scope": [
+        "Level I whole-source strict-diameter comparison",
+        "Target C cross-route evidence"
+      ],
+      "claim": {
+        "statement": "A full-label planar endpoint from finite option sets exists exactly when the complete same-label and lower/upper cross-conflict graph has an independent transversal selecting one option per label.",
+        "hypotheses": [
+          "Every pair at distance below one or at least D is a conflict.",
+          "One option is selected for each label."
+        ],
+        "not_claimed": [
+          "The equivalence proves no universal palette theorem.",
+          "One palette UNSAT result excludes only that palette."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No existing canonical claim is changed, replaced, or promoted. This is a separate global-endpoint route.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_palette_endpoints_and_full_source_exhaustion_2026-10-12.md",
+          "role": "full analytic report",
+          "source_git_blob_sha": "d01574fc612e1cd1baa796e03dfdd8c63825e770",
+          "source_sha256": "0daf13555133af3f7503e8e59a4904c827cd09f58f1af815a763a6f80729df60",
+          "destination_sha256": "e0ac1c388070ae91c00e716d1b511924978c029ba90797a6ba562b12e811450c",
+          "source_claim_ids": [],
+          "source_artifact_id": "ART-AB692686F9CB"
+        },
+        {
+          "path": "research/verify_global_palette_transversal_2026_10_12.py",
+          "role": "finite verifier with external-data gate",
+          "source_git_blob_sha": "b1545956ed6dc8b470d84269521d958a990150ab",
+          "source_sha256": "296b26f6cface2ea19800f5e679759baa5c7bf9a0700906f1c82cea637683430",
+          "destination_sha256": "20f09bd8016fc8e5e0e187cf9da23d5e95f5f6f7ebb0e7da3a0689b738e8badf",
+          "source_claim_ids": []
+        },
+        {
+          "path": "research/fixtures/global_palette_translation_2026_10_12/provenance.json",
+          "role": "external data attribution and hashes",
+          "source_git_blob_sha": "77e40f7a9486063340b18e872852e16cb549b999",
+          "source_sha256": "fc83a1d75459d20f8f1cafa09d55a22e7fe732b5aee16c8297b38394fe71238e",
+          "destination_sha256": "a478df25d12190a279cccfc3f069f5f4cc2f8e17a5bbbef8b76597f7541840a3",
+          "source_claim_ids": []
+        },
+        {
+          "path": "docs/audits/pr958_autonomous_proof_audit_2026-10-15.md",
+          "role": "source AI audit provenance",
+          "source_git_blob_sha": "a27e7e6120d369c86fe69e2dcee345b2cf41138f",
+          "source_sha256": "8959e9d4a6fe5a8e1a84902985efe903296cfd18033c5605969561cef5f44639",
+          "destination_sha256": "d32fa3e8b2d267d28e2963f653671989aee7584c5e456ca5e3730a7d8fa0b90a",
+          "source_claim_ids": [],
+          "source_artifact_id": "ART-9FAA8DEBDCFB"
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [],
+        "description": "Exact finite graph reformulation. External tables are needed only for 132/175 controls."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "global quantifier",
+          "result": "No universal palette is extracted for all sufficiently large triangle-free global minimizers."
+        }
+      ],
+      "validation": {
+        "command": "python3 research/verify_global_palette_transversal_2026_10_12.py --core-only",
+        "result": "The core-only mode was run and passed its exact finite checks. The 132/175 input-dependent checks remain unrun pending redistribution permission.",
+        "boundary": "The 43-gon is a finite nonglobal example. The source audit alone records the historical data-dependent results."
+      },
+      "next_proof_obligations": [
+        "Derive universal palettes from global geometry and prove a transversal, or another complete-source contradiction."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 958,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/958",
+        "source_pr_draft": true,
+        "source_head_sha": "0a72556e786024c9313c7d6287e26c20c1e9b9b8",
+        "source_head_tree": "7b37e2fc5af3bb2e0471a690195a21f9d9fd0d2c",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base": "d6f953100d62a84de72e991642041fdd026e82ba",
+        "source_merge_base_tree": "3d6ac96556b891d7b17ea7c13ae9364e0c5082f0"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party report, verifier and project-agent material.",
+        "third_party_material": "Only external bibliographic links and coordinate-table URLs/hashes are retained. Packomania coordinate files are withheld pending explicit redistribution permission.",
+        "visibility": "Destination repository remains private.",
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged."
+      }
+    },
+    {
+      "candidate_id": "GLOBAL-43GON-THREE-TRANSLATION-ENDPOINT-PR958",
+      "title": "Exact 43-label three-translation strict endpoint",
+      "status": "regression",
+      "source_lifecycle": "Unreviewed candidate or finite regression from frozen open source PR #958; theorem-state remains authoritative.",
+      "source_proposed_status": "regression",
+      "target_scope": [
+        "Level I whole-source strict-diameter comparison",
+        "Target C cross-route evidence"
+      ],
+      "claim": {
+        "statement": "For a unit regular 43-gon, the reported search at alpha=17/20 finds a three-translation choice with all 903 pair distances above one and squared endpoint diameter below 185, while the old squared diameter exceeds 187.4262.",
+        "hypotheses": [
+          "The exact interval and palette calculation applies to this finite source.",
+          "The source is already nonglobal."
+        ],
+        "not_claimed": [
+          "This is not a global-minimizer result.",
+          "It does not imply success for other sources or palettes."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No existing canonical claim is changed, replaced, or promoted. This is a separate global-endpoint route.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_palette_endpoints_and_full_source_exhaustion_2026-10-12.md",
+          "role": "full analytic report",
+          "source_git_blob_sha": "d01574fc612e1cd1baa796e03dfdd8c63825e770",
+          "source_sha256": "0daf13555133af3f7503e8e59a4904c827cd09f58f1af815a763a6f80729df60",
+          "destination_sha256": "e0ac1c388070ae91c00e716d1b511924978c029ba90797a6ba562b12e811450c",
+          "source_claim_ids": [],
+          "source_artifact_id": "ART-AB692686F9CB"
+        },
+        {
+          "path": "research/verify_global_palette_transversal_2026_10_12.py",
+          "role": "finite verifier with external-data gate",
+          "source_git_blob_sha": "b1545956ed6dc8b470d84269521d958a990150ab",
+          "source_sha256": "296b26f6cface2ea19800f5e679759baa5c7bf9a0700906f1c82cea637683430",
+          "destination_sha256": "20f09bd8016fc8e5e0e187cf9da23d5e95f5f6f7ebb0e7da3a0689b738e8badf",
+          "source_claim_ids": []
+        },
+        {
+          "path": "docs/audits/pr958_autonomous_proof_audit_2026-10-15.md",
+          "role": "source AI audit provenance",
+          "source_git_blob_sha": "a27e7e6120d369c86fe69e2dcee345b2cf41138f",
+          "source_sha256": "8959e9d4a6fe5a8e1a84902985efe903296cfd18033c5605969561cef5f44639",
+          "destination_sha256": "d32fa3e8b2d267d28e2963f653671989aee7584c5e456ca5e3730a7d8fa0b90a",
+          "source_claim_ids": [],
+          "source_artifact_id": "ART-9FAA8DEBDCFB"
+        },
+        {
+          "path": "research/exact_trig_intervals_2026_10_12.py",
+          "role": "directed exact interval arithmetic helper",
+          "source_git_blob_sha": "d5d05ffd6a37976279f43f4b12bb00070630f60d",
+          "source_sha256": "070893d12b71893922823e5bd5ad9d3101fd0a48026270144c6ed0969f43e47d",
+          "destination_sha256": "070893d12b71893922823e5bd5ad9d3101fd0a48026270144c6ed0969f43e47d",
+          "source_claim_ids": []
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [],
+        "description": "The destination verifier can replay this case in core-only mode without external tables."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "globality",
+          "result": "The finite source is nonglobal."
+        }
+      ],
+      "validation": {
+        "command": "python3 research/verify_global_palette_transversal_2026_10_12.py --core-only",
+        "result": "PASS in CPython 3.14.6: 4,100 Boolean-kernel controls; 43 labels, all 903 pairs, 13 search nodes; minimum squared distance >1.01 and squared diameter <185.",
+        "boundary": "The 43-gon is a finite nonglobal example. The source audit alone records the historical data-dependent results."
+      },
+      "next_proof_obligations": [
+        "Retain as a finite regression; do not infer Level I closure."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 958,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/958",
+        "source_pr_draft": true,
+        "source_head_sha": "0a72556e786024c9313c7d6287e26c20c1e9b9b8",
+        "source_head_tree": "7b37e2fc5af3bb2e0471a690195a21f9d9fd0d2c",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base": "d6f953100d62a84de72e991642041fdd026e82ba",
+        "source_merge_base_tree": "3d6ac96556b891d7b17ea7c13ae9364e0c5082f0"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party report, verifier and project-agent material.",
+        "third_party_material": "Only external bibliographic links and coordinate-table URLs/hashes are retained. Packomania coordinate files are withheld pending explicit redistribution permission.",
+        "visibility": "Destination repository remains private.",
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged."
+      }
+    },
+    {
+      "candidate_id": "GLOBAL-175-PALETTE-EXHAUSTION-PR958",
+      "title": "One fixed palette fails for every assignment on a 175-label source",
+      "status": "regression",
+      "source_lifecycle": "Unreviewed candidate or finite regression from frozen open source PR #958; theorem-state remains authoritative.",
+      "source_proposed_status": "regression",
+      "target_scope": [
+        "Level I whole-source strict-diameter comparison",
+        "Target C cross-route evidence"
+      ],
+      "claim": {
+        "statement": "For the reported filled 175-label source and fixed alpha=17/20 three-translation palette, the permissive system has 2,039 constrained pairs and exhaustively rejects all 3^175 assignments in four search nodes.",
+        "hypotheses": [
+          "The 132/175 inputs match the expected hashes in provenance.json.",
+          "The claim is restricted to this source and palette."
+        ],
+        "not_claimed": [
+          "This does not exclude another palette or arbitrary planar endpoint.",
+          "The destination did not rerun the external-data computation because redistribution permission is unresolved."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No existing canonical claim is changed, replaced, or promoted. This is a separate global-endpoint route.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_palette_endpoints_and_full_source_exhaustion_2026-10-12.md",
+          "role": "full analytic report",
+          "source_git_blob_sha": "d01574fc612e1cd1baa796e03dfdd8c63825e770",
+          "source_sha256": "0daf13555133af3f7503e8e59a4904c827cd09f58f1af815a763a6f80729df60",
+          "destination_sha256": "e0ac1c388070ae91c00e716d1b511924978c029ba90797a6ba562b12e811450c",
+          "source_claim_ids": [],
+          "source_artifact_id": "ART-AB692686F9CB"
+        },
+        {
+          "path": "research/verify_global_palette_transversal_2026_10_12.py",
+          "role": "finite verifier with external-data gate",
+          "source_git_blob_sha": "b1545956ed6dc8b470d84269521d958a990150ab",
+          "source_sha256": "296b26f6cface2ea19800f5e679759baa5c7bf9a0700906f1c82cea637683430",
+          "destination_sha256": "20f09bd8016fc8e5e0e187cf9da23d5e95f5f6f7ebb0e7da3a0689b738e8badf",
+          "source_claim_ids": []
+        },
+        {
+          "path": "research/fixtures/global_palette_translation_2026_10_12/provenance.json",
+          "role": "external data attribution and hashes",
+          "source_git_blob_sha": "77e40f7a9486063340b18e872852e16cb549b999",
+          "source_sha256": "fc83a1d75459d20f8f1cafa09d55a22e7fe732b5aee16c8297b38394fe71238e",
+          "destination_sha256": "a478df25d12190a279cccfc3f069f5f4cc2f8e17a5bbbef8b76597f7541840a3",
+          "source_claim_ids": []
+        },
+        {
+          "path": "docs/audits/pr958_autonomous_proof_audit_2026-10-15.md",
+          "role": "source AI audit provenance",
+          "source_git_blob_sha": "a27e7e6120d369c86fe69e2dcee345b2cf41138f",
+          "source_sha256": "8959e9d4a6fe5a8e1a84902985efe903296cfd18033c5605969561cef5f44639",
+          "destination_sha256": "d32fa3e8b2d267d28e2963f653671989aee7584c5e456ca5e3730a7d8fa0b90a",
+          "source_claim_ids": [],
+          "source_artifact_id": "ART-9FAA8DEBDCFB"
+        },
+        {
+          "path": "https://www.packomania.com/cci/txt/cci132.txt",
+          "role": "withheld third-party input; redistribution permission not established",
+          "source_git_blob_sha": "eb22940d1de93c1c37df6661a3f8eba266820e12",
+          "source_sha256": "64c8a85573a5ced26e666fa25b713c4fc6264c409d811eab101cd13ff65ef00a",
+          "destination_sha256": null,
+          "source_claim_ids": []
+        },
+        {
+          "path": "https://www.packomania.com/cci/txt/cci175.txt",
+          "role": "withheld third-party input; redistribution permission not established",
+          "source_git_blob_sha": "237816830b00e8f17f023946b792aea21f0d4fa4",
+          "source_sha256": "6f889e1143dbb5aee039224198617355070104f161a2bdd0705166eaf814f140",
+          "destination_sha256": null,
+          "source_claim_ids": []
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [],
+        "description": "The source audit preserves the historical exhaustive result; raw inputs remain withheld."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "inactive population",
+          "result": "A rim endpoint need not extend to every interior label."
+        }
+      ],
+      "validation": {
+        "command": "python3 research/verify_global_palette_transversal_2026_10_12.py --core-only",
+        "result": "The self-contained 43-gon palette replay is available without external tables. The 132/175 replay was not repeated due unresolved redistribution permission.",
+        "boundary": "The 43-gon is a finite nonglobal example. The source audit alone records the historical data-dependent results."
+      },
+      "next_proof_obligations": [
+        "Obtain permission or authorized local inputs and rerun; keep the claim palette-specific."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 958,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/958",
+        "source_pr_draft": true,
+        "source_head_sha": "0a72556e786024c9313c7d6287e26c20c1e9b9b8",
+        "source_head_tree": "7b37e2fc5af3bb2e0471a690195a21f9d9fd0d2c",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base": "d6f953100d62a84de72e991642041fdd026e82ba",
+        "source_merge_base_tree": "3d6ac96556b891d7b17ea7c13ae9364e0c5082f0"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party report, verifier and project-agent material.",
+        "third_party_material": "Only external bibliographic links and coordinate-table URLs/hashes are retained. Packomania coordinate files are withheld pending explicit redistribution permission.",
+        "visibility": "Destination repository remains private.",
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged."
+      }
+    },
+    {
+      "candidate_id": "GLOBAL-175-POINT-INDEPENDENT-PACKING-NONGLOBALITY-PR958",
+      "title": "Independent 175-label packet makes the filled source nonglobal",
+      "status": "regression",
+      "source_lifecycle": "Unreviewed candidate or finite regression from frozen open source PR #958; theorem-state remains authoritative.",
+      "source_proposed_status": "regression",
+      "target_scope": [
+        "Level I whole-source strict-diameter comparison",
+        "Target C cross-route evidence"
+      ],
+      "claim": {
+        "statement": "The source report records a rescaled 175-label unit-separated packet checking 15,225 pairs with squared diameter below 183.2352, strictly below the filled rim source diameter.",
+        "hypotheses": [
+          "The external 175-point table matches its retained expected hash.",
+          "Normalization recomputes the minimum pair distance."
+        ],
+        "not_claimed": [
+          "This proves only nonglobality of the displayed finite source.",
+          "Destination replay remains unrun pending permission."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No existing canonical claim is changed, replaced, or promoted. This is a separate global-endpoint route.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_palette_endpoints_and_full_source_exhaustion_2026-10-12.md",
+          "role": "full analytic report",
+          "source_git_blob_sha": "d01574fc612e1cd1baa796e03dfdd8c63825e770",
+          "source_sha256": "0daf13555133af3f7503e8e59a4904c827cd09f58f1af815a763a6f80729df60",
+          "destination_sha256": "e0ac1c388070ae91c00e716d1b511924978c029ba90797a6ba562b12e811450c",
+          "source_claim_ids": [],
+          "source_artifact_id": "ART-AB692686F9CB"
+        },
+        {
+          "path": "research/verify_global_palette_transversal_2026_10_12.py",
+          "role": "finite verifier with external-data gate",
+          "source_git_blob_sha": "b1545956ed6dc8b470d84269521d958a990150ab",
+          "source_sha256": "296b26f6cface2ea19800f5e679759baa5c7bf9a0700906f1c82cea637683430",
+          "destination_sha256": "20f09bd8016fc8e5e0e187cf9da23d5e95f5f6f7ebb0e7da3a0689b738e8badf",
+          "source_claim_ids": []
+        },
+        {
+          "path": "research/fixtures/global_palette_translation_2026_10_12/provenance.json",
+          "role": "external data attribution and hashes",
+          "source_git_blob_sha": "77e40f7a9486063340b18e872852e16cb549b999",
+          "source_sha256": "fc83a1d75459d20f8f1cafa09d55a22e7fe732b5aee16c8297b38394fe71238e",
+          "destination_sha256": "a478df25d12190a279cccfc3f069f5f4cc2f8e17a5bbbef8b76597f7541840a3",
+          "source_claim_ids": []
+        },
+        {
+          "path": "docs/audits/pr958_autonomous_proof_audit_2026-10-15.md",
+          "role": "source AI audit provenance",
+          "source_git_blob_sha": "a27e7e6120d369c86fe69e2dcee345b2cf41138f",
+          "source_sha256": "8959e9d4a6fe5a8e1a84902985efe903296cfd18033c5605969561cef5f44639",
+          "destination_sha256": "d32fa3e8b2d267d28e2963f653671989aee7584c5e456ca5e3730a7d8fa0b90a",
+          "source_claim_ids": [],
+          "source_artifact_id": "ART-9FAA8DEBDCFB"
+        },
+        {
+          "path": "https://www.packomania.com/cci/txt/cci175.txt",
+          "role": "withheld third-party input; redistribution permission not established",
+          "source_git_blob_sha": "237816830b00e8f17f023946b792aea21f0d4fa4",
+          "source_sha256": "6f889e1143dbb5aee039224198617355070104f161a2bdd0705166eaf814f140",
+          "destination_sha256": null,
+          "source_claim_ids": []
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [],
+        "description": "The report and source audit record the result without copying coordinate data."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "interpretation",
+          "result": "The fixed-palette failure is not a global obstruction because this source has a strict competitor."
+        }
+      ],
+      "validation": {
+        "command": "python3 research/verify_global_palette_transversal_2026_10_12.py --core-only",
+        "result": "The self-contained 43-gon palette replay is available without external tables. The 132/175 replay was not repeated due unresolved redistribution permission.",
+        "boundary": "The 43-gon is a finite nonglobal example. The source audit alone records the historical data-dependent results."
+      },
+      "next_proof_obligations": [
+        "Keep this counterexample attached to the palette-failure claim; do not promote it."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 958,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/958",
+        "source_pr_draft": true,
+        "source_head_sha": "0a72556e786024c9313c7d6287e26c20c1e9b9b8",
+        "source_head_tree": "7b37e2fc5af3bb2e0471a690195a21f9d9fd0d2c",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base": "d6f953100d62a84de72e991642041fdd026e82ba",
+        "source_merge_base_tree": "3d6ac96556b891d7b17ea7c13ae9364e0c5082f0"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party report, verifier and project-agent material.",
+        "third_party_material": "Only external bibliographic links and coordinate-table URLs/hashes are retained. Packomania coordinate files are withheld pending explicit redistribution permission.",
+        "visibility": "Destination repository remains private.",
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged."
+      }
     }
   ]
 }

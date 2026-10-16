@@ -137,3 +137,27 @@ step is extraction of owner-respecting loaded ports for every upper-relevant
 label and isolate, followed by a nonzero solution of the complete lower/upper
 closure. The global near-disk proximity bound does not supply the needed owner
 incidence. All five candidate records remain unreviewed.
+
+## Planar endpoints, colour lifts, and palettes
+
+Source PR #958 adds two linked global routes. Squared-distance interpolation
+gives a full-contact strict metric descent but has centered rank \(n-1\);
+triangle-free contact colouring gives a full-source strict descent in four
+dimensions, whose planar obstruction is explicit. The exact flattening
+criterion requires parallel-line colour classes in the two-colour case.
+Separately, arbitrary planar endpoint checks reduce to complete lower/upper
+pair quadratics, while finite palette endpoints are independent transversals
+in the full conflict graph.
+
+The finite controls include a successful 43-gon palette endpoint and a
+different filled 175-label source where that same palette fails every
+assignment. The filled source has its own strict competitor, so it is a
+nonglobal regression. The coordinate-table replay remains source-reported
+because the external tables are not redistributed. None of these results
+constructs a planar endpoint for every sufficiently large triangle-free global
+minimizer. The precise next step is a universal source-derived planar target
+family satisfying every lower and upper pair bound, or a separately proved
+unbounded global-minimizer family. See the
+[full track](tracks/global-planar-endpoint-palette-pr958.md), reports, exact
+verifiers and file-level dispositions in the
+[migration reconciliation](migration/2026-10-16/scientific-reconciliation.md).

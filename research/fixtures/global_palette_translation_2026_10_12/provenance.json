@@ -1,0 +1,17 @@
+{
+  "reused_utc_date": "2026-10-13",
+  "normalization": "Decimal coordinates are exact rational input; no published optimality claim is used. Minimum pair distance is recomputed before rational strict inflation.",
+  "sources": [
+    {
+      "cardinality": 132,
+      "url": "https://www.packomania.com/cci/txt/cci132.txt",
+      "sha256": "64c8a85573a5ced26e666fa25b713c4fc6264c409d811eab101cd13ff65ef00a"
+    },
+    {
+      "cardinality": 175,
+      "url": "https://www.packomania.com/cci/txt/cci175.txt",
+      "sha256": "6f889e1143dbb5aee039224198617355070104f161a2bdd0705166eaf814f140"
+    }
+  ],
+  "source_fixture_lineage": "The source report states that the tables were reused from an earlier first-party research fixture. The coordinate tables are not included here pending redistribution permission; the original URLs and exact expected hashes below identify the external inputs."
+}

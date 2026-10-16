@@ -642,3 +642,34 @@ destination catalogue, the destination index was regenerated, and the source
 README was adapted. No claims were promoted; Level I, A/B, C-I, and C-II status
 remain unchanged. The exact local verifier and repository check results are in
 [`receipts/target-c-pr957-local-verification.json`](receipts/target-c-pr957-local-verification.json).
+
+## Source PR #958 — colour lifts, planar rank barriers, and finite palettes
+
+**Frozen source state:** main 42f0296d1aca068c809f74cee5dcdb4ebdb27c73; open draft PR #958 head 0a72556e786024c9313c7d6287e26c20c1e9b9b8, tree 7b37e2fc5af3bb2e0471a690195a21f9d9fd0d2c; merge base d6f953100d62a84de72e991642041fdd026e82ba, tree 3d6ac96556b891d7b17ea7c13ae9364e0c5082f0. The exact PR delta has 11 paths. Every path has a source blob, byte count, SHA-256, lifecycle, dependency and explicit disposition in ledger/source-pr-files.jsonl.
+
+The three substantive documents preserve two complete first-party reports and one source AI audit. The audit was retained as provenance and edited to state the destination's exact-head review policy; it is not a substitute for destination review. The reports claim:
+
+1. For every finite unit-separated source of diameter greater than one, squared-distance interpolation \(d'_{ij}{}^2=1+\lambda(d_{ij}^2-1)\) preserves contacts and strictly contracts every distance above one. Its centered Gram matrix has rank \(n-1\); this blocks a planar realization for \(n\ge4\).
+2. A triangle-free contact graph is 2-degenerate, so three colours suffice. Assigning a regular-simplex height to each colour gives a contact-preserving strict diameter descent for every source label in \(\mathbb R^4\), for sufficiently small positive parameter. This does not give a planar endpoint. The square lift has rank three.
+3. The specified lift flattens exactly when centered colour vectors lie in the centered source-plane span. Two used colours require parallel colour lines; three used colours cannot flatten for \(n\ge4\).
+4. For supplied planar targets, all lower and strict upper constraints reduce to two explicit quadratics for every unordered pair at one common endpoint parameter. Feasibility of the endpoint does not require a feasible interpolating path, but the report does not supply targets for all global minimizers.
+5. For a finite palette, an acceptable endpoint exists exactly when the complete lower/upper conflict graph has an independent transversal choosing one option per label.
+
+**Content comparison with frozen source PR #960:** its report
+global_planarity_and_radius_barriers_2026-10-12.md contains the same general
+squared-distance interpolation and rank-\(n-1\) nonplanarity obstruction, with
+parameter \(t=1-\lambda\). These are the same mathematical claim, so this
+candidate is not counted as a distinct result from PR #960. PR #960 further
+analyzes why rank-two truncation preserves the original affine image and gives
+separate enclosing-radius and finite replacement results; those additions
+remain in the queued PR #960 batch. PR #958's triangle-free contact-colour
+lift, exact flattening condition, all-pair endpoint quadratics, and palette
+regressions are distinct and remain fully recorded here.
+
+The finite source controls are deliberately bounded. A unit regular 43-gon has a verified three-translation strict endpoint with all 903 pairs checked, but it is nonglobal. For one fixed alpha and palette, the permissive 175-label system checks 2,039 constrained pairs and exhaustively rejects all \(3^{175}\) assignments. An independent 175-label packet checks all 15,225 pairs and has squared diameter below 183.2352, so the filled source is itself nonglobal. Thus a rim improvement need not extend to the inactive population, and a palette-specific failure is not a global obstruction.
+
+**Exact destination verification:** the colour-lift verifier passed in isolated CPython 3.14.6 with SymPy 1.14.0 and mpmath 1.3.0. The palette verifier's self-contained 43-gon mode passed 4,100 Boolean-kernel controls and all 903 endpoint-pair checks with a 13-node search. Its 132/175 data-dependent run was not repeated because redistribution permission is unresolved. The source audit records its prior replay; this report does not claim an independent destination replay of those tables. Both analytic reports and the source audit remain noncanonical and unreviewed; no theorem-state, canonical claim, Level I, A/B, C-I, or C-II status changes.
+
+**Per-file disposition:** the two reports, exact interval helper, palette verifier, colour-lift verifier and attribution JSON are integrated. The audit is retained with lifecycle clarification. The destination artifact index was regenerated, and the source README was adapted into destination navigation. The attribution JSON was transformed to remove an unavailable source-branch fixture pointer while preserving the prior-lineage note, source URLs, and hashes. Packomania's cci132.txt and cci175.txt are the two explicit rights-blocked source paths: the destination retains only their source URLs and hashes. The report and verifier describe how an authorized local copy can be passed with a fixture-directory argument. The inspected [Packomania homepage](https://www.packomania.com/) and [submission-format page](https://www.packomania.com/hints.html) did not provide an explicit redistribution grant.
+
+The precise remaining global step is a planar, full-label endpoint of diameter strictly below D that respects every lower pair bound for every sufficiently large triangle-free global minimizer, or an independently established unbounded family of such global minimizers. A four-dimensional descent, one finite palette, a successful rim replacement, or finite exhaustive failure for one palette does not supply that statement.

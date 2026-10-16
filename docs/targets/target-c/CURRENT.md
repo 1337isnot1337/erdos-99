@@ -235,3 +235,34 @@ intermediate assertions are withdrawn. The corrected diagonal-cutoff argument
 gives only `q=o(D)` under both original global hypotheses. It has agent audit
 and still needs the independent AI-agent mathematical audit before canonical reuse. This correction
 extracts no global phase/tail premise, finite move, or source competitor.
+
+## Global planar endpoint routes: colour lifts and finite palettes
+
+Source PR #958 adds a separate, **unreviewed** whole-source endpoint route. The
+uniform squared-distance interpolation preserves contacts and strictly
+decreases diameter, but its centered Gram matrix has rank \(n-1\), so it does
+not give a planar configuration for \(n\ge4\). Triangle-free contact graphs
+are 2-degenerate; a proper three-colouring yields a contact-preserving
+full-label strict descent in \(\mathbb R^4\). The unit-square control has
+rank-three lift. The exact affine flattening condition requires two
+parallel-line colour classes; no such coloring is extracted from global
+optimality.
+
+For planar endpoints, the report gives all-pair lower and upper quadratic
+conditions for one common endpoint parameter, with no feasible-path premise.
+For a finite palette, feasibility is exactly an independent transversal in
+the full lower/upper conflict graph. The 43-gon has a finite strict
+competitor. A fixed palette then fails all assignments on one 175-label
+filled source, which itself has a separate strict competitor and is therefore
+nonglobal. The 175-source data-dependent replay is preserved as source-reported
+finite evidence; raw Packomania tables are not included pending redistribution
+permission.
+
+The exact missing implication is still a planar all-pair endpoint for every
+sufficiently large triangle-free global minimizer, or an unbounded family of
+such minimizers with independently established global optimality. Read the
+[colour-lift and planar-rank report](../../reports/global_colouring_lift_and_planar_rank_barrier_2026-10-12.md),
+the [palette endpoint report](../../reports/global_palette_endpoints_and_full_source_exhaustion_2026-10-12.md),
+the [focused track](../../research/tracks/global-planar-endpoint-palette-pr958.md),
+and its [candidate registry](candidate-registry.json). All claims remain
+noncanonical; the theorem-state is unchanged.
