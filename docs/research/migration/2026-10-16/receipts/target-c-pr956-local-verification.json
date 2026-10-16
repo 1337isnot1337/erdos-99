@@ -1,0 +1,138 @@
+{
+  "schema_version": "erdos-99-local-migration-verification/v1",
+  "recorded_at_utc": "2026-10-16T11:22:40Z",
+  "verification_subject": {
+    "destination_repository": "https://github.com/1337isnot1337/erdos-99",
+    "branch": "research/global-pr956-lattice-density-20261016",
+    "commit": "b21a54c698c7c8e8b893672c943032c4dd0ec21f",
+    "tree": "ca2f26f9e27d0eba3c57afe9047e053b98846020",
+    "base_main_commit": "1c5830ee3219a83c3aac43abbc571ffa6870b239",
+    "base_main_tree": "04f93f2c057b1a1ccc20f17c12b0f59ee2a469af"
+  },
+  "runtime": {
+    "system_python": "CPython 3.12.3",
+    "new_research_verifiers": "CPython 3.14.6",
+    "runtime_note": "The requested earlier CPython 3.14.7 runtime was not available in the installed uv index; the four new verifiers were run on its nearest available CPython 3.14 release."
+  },
+  "frozen_source": {
+    "repository": "https://github.com/1337isnot1337/e-99",
+    "main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "main_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+    "pull_request": 956,
+    "pull_request_state_at_freeze": "open draft",
+    "pull_request_head": "bbc549f36ac964fd7eee211782eb2c979d12af32",
+    "pull_request_head_tree": "3d8550adf520dcacd17876d6ddf1970a6c9e857e",
+    "pull_request_merge_base": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "pull_request_merge_base_tree": "8c9e8868acbef9a1b50860e0a34f00edba13bbf8",
+    "changed_source_paths": 11,
+    "ledger": "docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl",
+    "ledger_result": "PASS; all eleven frozen paths have explicit source identity, hash, disposition, destination treatment, lifecycle, and rights/provenance notes."
+  },
+  "commands": [
+    {
+      "command": "python3 tools/build_artifact_index.py",
+      "result": "PASS; 545 destination artifact rows"
+    },
+    {
+      "command": "python3 tools/check_theorem_state.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python3 tools/check_public.py",
+      "result": "PASS; zero integrity errors; mathematical_proof=false; 94 certificates, 451 claims, 845 edges, 810 retained source files, 20 tasks"
+    },
+    {
+      "command": "python3.14 research/verify_global_boundary_zigzag_2026_10_11.py",
+      "result": "PASS; 154 packets across five cases, 15,460 inserted labels, 155,481 exact neighbor checks; no universal theorem inferred by the finite checker"
+    },
+    {
+      "command": "python3.14 research/verify_global_lattice_population_bound_2026_10_11.py",
+      "result": "PASS; 16 exact crops, 309 supporting-side checks, 18,154 labels; four periodic patterns, 5,462 labels, 1,112 full-period separation checks; invalid cross-coset union rejected"
+    },
+    {
+      "command": "python3.14 research/verify_global_straight_interface_payment_2026_10_11.py",
+      "result": "PASS; seven seams, 14 stacks, 1,395 labels, 73,890 pairs; six finite windows, 5,694 source cross-pairs; no global source extraction inferred"
+    },
+    {
+      "command": "python3.14 research/verify_global_stress_density_regression_2026_10_11.py",
+      "result": "PASS; 11,076 inactive ring pairs, 350 spectral modes, 350 rigidity modes, 364,404 isolate-involving pairs; finite nonglobal regressions only"
+    },
+    {
+      "command": "python3 -m unittest tools.test_public_proof_graph tools.test_public_rights tools.test_public_release_audit tools.test_verify_publication_candidate tools.test_clean_public_snapshot",
+      "result": "PASS; 50 tests"
+    },
+    {
+      "command": "python3 docs/research/migration/2026-10-16/verify_migration_provenance.py --source-repo <frozen e-99 checkout> --destination <this erdos-99 checkout>",
+      "result": "PASS; 1,446 source artifact records; 490 public artifact hashes; 1,287 Target C artifacts; 2,912 source-file records; 232 public source hashes; 100 dependency links / 73 hashes; 384 evidence edges; zero unresolved or rights-blocked dependencies"
+    },
+    {
+      "command": "python3 tools/verify_publication_sources.py --source-repo <frozen e-99 checkout>",
+      "result": "PASS; 4,793 source records; 810 retained public hashes; 3,977 excluded files"
+    },
+    {
+      "command": "candidate registry JSON identity/reference check (inline Python)",
+      "result": "PASS; 42 unique candidate IDs; all four PR #956 entries remain unreviewed and reference their eight local report/verifier paths"
+    },
+    {
+      "command": "gitleaks v8.30.1 detect --no-banner --redact --source . --log-opts origin/main..HEAD",
+      "result": "PASS; gitleaks v8.30.1 scanned two commits and found no leaks"
+    },
+    {
+      "command": "actionlint v1.7.12 -color=false .github/workflows/*.yml",
+      "result": "PASS; actionlint v1.7.12"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    },
+    {
+      "command": "python3 tools/run_theorem_certificates.py",
+      "result": "PASS; 94 selected of 94 unique registered certificates; process exit 0 on CPython 3.12.3"
+    }
+  ],
+  "hosted_actions": {
+    "destination_pr": 27,
+    "workflow": "public-research-integrity",
+    "run_id": 38893292903,
+    "run_url": "https://github.com/1337isnot1337/erdos-99/actions/runs/38893292903",
+    "head_sha": "1d361a8b382e314335f2595df00473f2758f7d68",
+    "status": "completed",
+    "conclusion": "skipped",
+    "jobs": [
+      {
+        "name": "plan",
+        "conclusion": "skipped",
+        "steps": 0
+      },
+      {
+        "name": "replay",
+        "conclusion": "skipped",
+        "steps": 0
+      }
+    ],
+    "success_claimed": false,
+    "note": "Both owner-gated jobs were skipped with zero steps because E99_PUBLIC_CI is unset; no hosted verification success is claimed."
+  },
+  "theorem_and_release_status": {
+    "theorem_state_changed": false,
+    "target_c_status_changed": false,
+    "registered_certificate_set_changed": false,
+    "publication_inclusion_membership_changed": false,
+    "retained_inclusion_count": 810,
+    "canonical_claims_promoted": 0,
+    "candidate_registry_entries_added": 4,
+    "migration_status": "INCOMPLETE; source-main and remaining open-PR research batches are not yet fully integrated",
+    "destination_private": true,
+    "gate_2_pass_claimed": false,
+    "gate_3_visibility_approval": false
+  },
+  "limitations": [
+    "All four PR #956 analytic candidates remain unreviewed and noncanonical. Finite verifiers test encoded checks and do not prove the universal arguments.",
+    "The boundary reserve is weaker than the distinct unreviewed PR #1008 reserve; no lattice, periodic motif, or grain decomposition is extracted from every triangle-free global minimizer.",
+    "Periodic estimates require separation of the whole infinite packing, including cross-coset pairs; finite-union substitutions are rejected by an exact regression.",
+    "The straight-interface theorem does not supply source extraction, sublinear junction cost, disjoint area allocation, or an all-label decomposition.",
+    "The stress-ring examples are strictly nonglobal and only refute local-data-only density-loss implications.",
+    "Full publication Gate 2 is not claimed; final Gate 2 must be rerun against the completed final main SHA.",
+    "The PR #27 public-research-integrity run completed with plan and replay skipped and zero steps because the owner-gated E99_PUBLIC_CI variable is unset; all claimed verification is local."
+  ]
+}

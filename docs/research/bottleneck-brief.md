@@ -12,6 +12,24 @@ These are research priorities, not theorem-success probabilities. Re-deriving an
 
 The [20 task cards](../../tasks/README.md) include direct route bridges, independent audits, finite computations, shared geometric/analytic dependencies and alternative approaches. Their weights are retained from the source to diversify attention. Proposed adjacent results are [noncanonical snapshots](proposals.md), never new accepted premises. [Family status](research-family-status.md) states which restricted shortcuts are blocked and which changed hypotheses would justify revisiting them.
 
+## Global population reserve, lattice extraction, and paid interfaces
+
+Source PR #956 preserves a second, independent **unreviewed** linear reserve
+`g_A >= D/320000` for `D > 1280000`, alongside the stronger unreviewed PR
+#1008 `D/600` candidate. Its uniform lattice count yields a conditional
+full-source defect bound; its periodic finite-subset bound applies for
+`1 <= q <= D/16` and requires a globally separated infinite packing with all
+cross-coset pairs checked. Neither theorem extracts
+that model from every triangle-free global minimizer. A separate exact seam
+inequality pays boundary-row credits for complete parallel lattice
+half-planes, but no current argument makes canonical coherent grains into
+those half-planes with `o(D)` junction and outer costs. The odd-ring
+regression rules out using local stress, mixed rigidity, and asymptotically
+optimal density alone as a global-minimality substitute. See the [full
+track](tracks/global-population-lattice-interface-pr956.md) and [four
+candidate records](../targets/target-c/candidate-registry.json).
+
+
 ## Train-return quantiles and rigidity-forced grid linkages
 
 Source PR #950 adds an unreviewed proof candidate over the canonical quadratic

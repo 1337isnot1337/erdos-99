@@ -127,3 +127,14 @@ loaded ports for every upper-relevant label and isolate, followed by a nonzero
 solution of the exact full-source lower/upper closure. All five candidates
 remain unreviewed and outside theorem-state. The [migration ledger](../docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl)
 records all 17 source PR paths, including the rebuilt index and adapted README.
+
+## Source PR #956 — global reserve, lattice bound, interface payment, and regression
+
+The [four-report track](../docs/research/tracks/global-population-lattice-interface-pr956.md) records all four unreviewed analytic scopes, the exact global hypotheses, regressions, and next proof obligations. Run the corresponding finite/formal checks from the repository root:
+
+- `python3 research/verify_global_boundary_zigzag_2026_10_11.py`
+- `python3 research/verify_global_lattice_population_bound_2026_10_11.py`
+- `python3 research/verify_global_straight_interface_payment_2026_10_11.py`
+- `python3 research/verify_global_stress_density_regression_2026_10_11.py`
+
+The first three verifiers do not establish their universal analytic arguments; the lattice defect and periodic-motif consequences also depend on the unreviewed boundary reserve. The periodic finite-subset bound assumes `1 <= q <= D/16` and requires separation of the entire infinite packing, including cross-coset pairs. The fourth report is a nonglobal regression, not a global-minimizer counterexample. The source audit is preserved as provenance and does not satisfy the destination's independent exact-head review policy. The [per-file ledger](../docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl) records exact source hashes and README/index transformations.

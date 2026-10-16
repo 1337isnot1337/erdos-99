@@ -1,6 +1,6 @@
 # Erdős #99 source research migration
 
-**Overall migration status: INCOMPLETE.** Exact source and destination baselines are frozen under the baseline directory. Source-main audit batch 1 merged as PR #19; PR #1008 merged as destination PR #20; PR #951 merged as destination PR #21; PR #947 merged as destination PR #22; PR #950 merged as destination PR #23; source PR #948 merged as destination PR #24 at `621f7c7dcd5b12c949f83951d1d1521e09bbbe17` (tree `978550c0ab3248aee7ac41d9e8b5438a53c5687a`); and source PR #952 merged as destination PR #25 at `d369420f85ed94b73ebfeb09eaace7ada1a526a8` (tree `538dbfa15e98bf7ba56a978fa05f91b07adf416c`). The current PR #955 batch starts from the #25 tree and uses frozen source head `d5afc236a7b1de9567dcb6dda65d957ed91c726b`. Its eight source-main-to-head paths comprise six mathematical/evidence files, a generated index, and a research README; the six mathematical/evidence files were already present in the destination. The 826 source-main reports missing at the frozen baseline, bulk research tree, other open-PR additions, and historical PR work remain queued.
+**Overall migration status: INCOMPLETE.** Exact source and destination baselines are frozen under the baseline directory. Source-main audit batch 1 merged as PR #19; PR #1008 merged as destination PR #20; PR #951 merged as destination PR #21; PR #947 merged as destination PR #22; PR #950 merged as destination PR #23; source PR #948 merged as destination PR #24 at `621f7c7dcd5b12c949f83951d1d1521e09bbbe17` (tree `978550c0ab3248aee7ac41d9e8b5438a53c5687a`); source PR #952 merged as destination PR #25 at `d369420f85ed94b73ebfeb09eaace7ada1a526a8` (tree `538dbfa15e98bf7ba56a978fa05f91b07adf416c`); and source PR #955 merged as destination PR [#26](https://github.com/1337isnot1337/erdos-99/pull/26) at `1c5830ee3219a83c3aac43abbc571ffa6870b239` (tree `04f93f2c057b1a1ccc20f17c12b0f59ee2a469af`). Destination PR #16 was also merged as `e89d508c97af781d7957768f778d6bdd26535f2c` to remove a private source URL from the public schema identifier. Source PR #956 is the next focused integration batch; #957–#960 remain queued for separate content reconciliation. The 826 source-main reports missing at the frozen baseline, bulk research tree, other open-PR additions, and historical PR work remain queued.
 
 ## Open source PR batch — #1008 population reserve
 
@@ -128,6 +128,16 @@ source paths, plus the release-safety transformations for retained reports
 from source main and PR #952. The [scientific reconciliation](scientific-reconciliation.md)
 records the full content comparison and authority boundary.
 
+
+
+## Source PR #956 — global population and interface batch
+
+Frozen source main is `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`; source PR #956 was an open draft at head `bbc549f36ac964fd7eee211782eb2c979d12af32` (tree `3d8550adf520dcacd17876d6ddf1970a6c9e857e`), merge base `eb51394f371aee958b0d9332f80faf75ae694b9e` (tree `8c9e8868acbef9a1b50860e0a34f00edba13bbf8`). All eleven changed paths are individually reconciled in the [PR file ledger](ledger/source-pr-files.jsonl).
+
+Four new full reports and four exact verifiers preserve (1) the boundary-zigzag `D/320000` population candidate, (2) a uniform lattice count and conditional full-source/periodic defect results, (3) exact payment for complete parallel lattice interfaces, and (4) a nonglobal odd-ring regression against local-only density arguments. The substantive claims remain unreviewed. The source AI proof audit is retained with a policy clarification; it does not satisfy destination exact-head review. The original source index was not copied over the destination catalogue: its generated rows were rebuilt while retaining the destination's prior entries. The source research README was adapted into the existing destination catalogue.
+
+The exact mathematical scopes, relation to the stronger PR #1008 reserve, 39-lattice and odd-ring obstructions, candidate status, and next obligations are in the [focused track](../../tracks/global-population-lattice-interface-pr956.md) and [independent scientific reconciliation](scientific-reconciliation.md). All four verifier commands are recorded in the root [research reproduction index](../../../../research/README.md); their results are in the batch receipt. Canonical theorem-state and the registered certificate set are unchanged.
+
 ## Frozen repositories
 
 - Source main: `42f0296d1aca068c809f74cee5dcdb4ebdb27c73` (tree `e061f039eac44c286a00eacdcaa9a4cbbb877891`).
@@ -140,7 +150,7 @@ records the full content comparison and authority boundary.
 - PR #24 merged as 621f7c7dcd5b12c949f83951d1d1521e09bbbe17 (tree 978550c0ab3248aee7ac41d9e8b5438a53c5687a).
 - PR #25 merged as d369420f85ed94b73ebfeb09eaace7ada1a526a8 (tree 538dbfa15e98bf7ba56a978fa05f91b07adf416c); the PR #955 batch starts from this exact tree.
 
-## Current batch — source PR #955 global Level I research
+## Integrated batch — source PR #955 global Level I research (destination PR #26)
 
 The frozen source is main `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`, draft
 PR #955 head `d5afc236a7b1de9567dcb6dda65d957ed91c726b`, tree
@@ -155,13 +165,14 @@ review. The source README's #955 content is adapted into the
 [focused global route](../../tracks/global-level-i-attainment-annular-matching.md);
 the source artifact index is locally rebuilt.
 
-At the destination base, the only other live open PR was destination PR #16,
-head `bb274e5001df8aa123cd11849d3b3aee84da577d`, titled “Remove private source
-URL from schema identifier.” It is outside this research batch and remains
-separate. It also edits the inclusion manifest; refresh its exact-head status
-after integration. The [Gate 2 instructions](../../../launch/GATE_2_VERIFICATION.md)
-record that its imported-file hash change requires separate attestation
-reconciliation before a release-ready claim.
+At the destination base for this batch, destination PR #16 was open at head
+`bb274e5001df8aa123cd11849d3b3aee84da577d`, titled “Remove private source URL
+from schema identifier.” It was merged as `e89d508c97af781d7957768f778d6bdd26535f2c`
+before PR #26. PR #26 was merged at `1c5830ee3219a83c3aac43abbc571ffa6870b239`;
+both changes are in the current destination history. The repository remains
+private, and neither merge constitutes final publication Gate 2 verification.
+The [Gate 2 instructions](../../../launch/GATE_2_VERIFICATION.md) still govern
+the final-SHA release receipt.
 
 The route records two separate unreviewed candidates. The one-contact
 approximation makes equality of the triangle-free and unrestricted diameter
@@ -189,6 +200,6 @@ The source Target C artifact index has 1,287 rows: 83 missing audits and two lin
 
 The 2,707 source-main C research files, 157 route documents, and shared candidates are inventoried in [`ledger/source-main-files.jsonl`](ledger/source-main-files.jsonl). Of the research files, 2,536 other files are queued, 152 are exact destination duplicates, and two of 19 linked dependencies are integrated here; the remaining 17 linked dependencies and all other route files retain explicit queued or duplicate dispositions.
 
-The pinned source inventory contains 21 open PR heads. PRs #947, #948, #950, #951, and #952 are reconciled as destination batches (#952 merged as destination PR #25). Source PR #955 is in the current integration batch from its frozen head; its eight source-main-to-head paths have explicit per-file dispositions. Source PRs #956–#960 remain queued for separate comparison.
+The pinned source inventory contains 21 open PR heads. PRs #947, #948, #950, #951, #952, and #955 are reconciled as destination batches (#955 merged as destination PR #26). Source PR #956 is the next focused integration batch from its frozen head; its eleven changed paths have explicit per-file dispositions. Source PRs #957–#960 remain queued for separate comparison.
 
 Source lifecycle labels are provenance only. The destination theorem-state remains authoritative. No theorem is promoted by this import. Historical versions are visibly distinguished, including the earlier inverse-phase audit that asserts a global `K'/D`-Lipschitz chart and `q=O(D^(4/5))`; those inferences were withdrawn and must not be used as premises.
