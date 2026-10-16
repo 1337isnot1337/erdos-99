@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/1337isnot1337/e-99/blob/main/docs/state/theorem-state.schema.json",
+  "$id": "urn:erdos-99:theorem-state.schema",
   "title": "Erdos 99 theorem-state manifest",
   "type": "object",
   "additionalProperties": false,

@@ -9,7 +9,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from tools.audit_public_release import audit
+from tools.audit_public_release import PRIVATE_REFERENCE_PATTERNS, audit
 
 
 class ReleaseAuditFixtures(unittest.TestCase):
@@ -91,6 +91,19 @@ class ReleaseAuditFixtures(unittest.TestCase):
         with patch("tools.audit_public_release.OWNER_APPROVED_MANIFEST_BLOB",
                    self.approved_manifest_blob):
             return audit(self.root)
+
+    def test_private_reference_signatures_still_detect_exact_examples(self):
+        source_url = b"https://github.com/1337isnot1337/" + b"e-99/tree/main"
+        worktree_path = b"/tmp/e99-" + b"private/checkout"
+        self.assertTrue(PRIVATE_REFERENCE_PATTERNS["private-source-url"].search(source_url))
+        self.assertTrue(PRIVATE_REFERENCE_PATTERNS["private-worktree-path"].search(worktree_path))
+
+    def test_published_theorem_schema_has_no_private_source_identifier(self):
+        schema_path = Path(__file__).resolve().parents[1] / "docs/state/theorem-state.schema.json"
+        schema_bytes = schema_path.read_bytes()
+        schema = json.loads(schema_bytes)
+        self.assertEqual(schema["$id"], "urn:erdos-99:theorem-state.schema")
+        self.assertIsNone(PRIVATE_REFERENCE_PATTERNS["private-source-url"].search(schema_bytes))
 
     def test_manifest_pinned_owner_authorization_clears_pending_source_rights(self):
         self.set_owner_attestation()

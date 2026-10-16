@@ -29,7 +29,8 @@ TOKEN_PATTERNS = {
 }
 PRIVATE_REFERENCE_PATTERNS = {
     "private-source-url": re.compile(rb"https?://(?:www\.)?github\.com/1337isnot1337/e-99(?:[/#?]|\b)"),
-    "private-worktree-path": re.compile(rb"(?:/tmp/e99-private|/home/oai/|/workspace/projects/)"),
+    # Split the first sentinel so this scanner does not warn on its own pattern.
+    "private-worktree-path": re.compile(rb"(?:/tmp/e99-" + rb"private|/home/oai/|/workspace/projects/)"),
 }
 SAFE_EMAIL_SUFFIXES = ("@users.noreply.github.com", "@noreply.github.com", "@example.invalid")
 SAFE_EXACT_EMAILS = {"noreply@github.com"}
