@@ -3,9 +3,11 @@
 ## Expanded Target C corpus: exact-commit verification scope
 
 The audit narrative below records the earlier 810-entry publication candidate.
-The separate five-shard migration now adds 813 source-main Target C reports and
-four support files, with explicit scientific disposition and additive first-party
-rights/provenance records in the [current migration reconciliation](../research/migration/2026-10-16/scientific-reconciliation.md).
+The separate five-shard migration adds 813 source-main Target C reports and
+four newly imported cross-shard support files. Its additive rights ledger now
+accounts for those reports and 21 total supporting files, with explicit
+scientific disposition and provenance in the
+[current migration reconciliation](../research/migration/2026-10-16/scientific-reconciliation.md).
 Those additions do not change the pinned 810-entry inclusion manifest or the
 canonical theorem ledger. Prior Gate 2 results remain historical for their exact
 SHAs; any release claim for the expanded tree must cite the detached full Gate 2
@@ -30,6 +32,18 @@ own Git email address; a live walk of 47 commits from 22 refs observed no other
 personal-domain email. The mandatory clean-root migration recommendation therefore
 no longer applies **solely to this email metadata**. The prior release receipts
 remain pinned to older commits.
+
+**2026-10-16 migration rights and history update:** The owner authorized
+publication and reuse of first-party research and AI-agent-generated project
+material for the frozen Target C migration. The additive authorization record
+covers 813 reports and 21 supporting files (834 unique source paths) outside
+the unchanged 810-entry inclusion manifest. It grants no third-party rights.
+The updated auditor validates both this rights ledger and every frozen report
+disposition. With all advertised PR-head refs fetched, the expanded reachable
+history contains one additional unapproved non-noreply identity (14
+author/committer occurrences); consent for the owner's public email does not
+cover it. The repository remains private and the history remains intact, so
+this is a release blocker.
 
 ## Exact scientific freeze
 
@@ -107,19 +121,22 @@ historical audit.
 | Source identities, modes and public-byte checks | RESOLVED | 810 imports; standalone/optional-source verifier and corruption controls |
 | Outsider-discovered prerequisite and endpoint defects | RESOLVED | Public context tool, explicit prerequisite supplement, corrected B/C reading paths |
 | Rights grouping and contribution-history evidence | RESOLVED | Grouped generator covers every retained tracked file at its stated candidate |
-| Imported owner-directed expression, 810 records | OWNER AUTHORIZATION RECORDED | Owner grant on PR #9 tied to exact 810-entry manifest blob `f5218507`; source pins all matched; see current rights review |
+| Imported owner-directed expression, 810 records | OWNER AUTHORIZATION RECORDED | Owner grant on PR #9 remains bound to the same 810 source paths and pins; exact current manifest blob is `96df5a7d`; see current rights review |
+| Additional first-party migration expression, 834 paths | OWNER AUTHORIZATION RECORDED | 813 frozen reports and 21 support files are separately covered by `first-party-migration-authorization.json` and the exact additive rights ledger |
 | Local clean-root privacy preparation | RESOLVED | Exporter plus all-object/tree/fsck controls; final detached export receipt |
-| Identified personal-domain Git author metadata | OWNER-AUTHORIZED | Owner consent covers their address; 47 reachable commits across 22 refs contain no other personal-domain email. No clean migration required for this issue alone; Gate 2 still scans history/contents |
+| Personal-domain Git author metadata | BLOCKING | Owner consent covers one identity. The expanded history contains one additional unapproved identity with 14 author/committer occurrences; preserve history and do not treat this audit as authorization |
 | Hosted fork canary | BLOCKED | Account billing restriction; observed jobs executed zero steps; both rollout variables stay unset |
 | Independent AI-agent audit before canonical reuse of repaired sequence proof | NONBLOCKING | Audited-working label remains; publishing scoped working research requires no theorem promotion |
 | Final visibility and anonymous-access verification | OWNER DECISION REQUIRED | Separate explicit approval only after Gate 2 current-commit security/technical verification |
 
-The [current rights review](../publication/rights-review.md) and owner attestation
-record source expression consent for all 810 imported files. Historical pending
-flags remain in the source-identity manifest; the release auditor now explicitly
-checks the separate owner attestation against the exact manifest Git blob,
-while retaining fail-closed behavior for changes or exceptions. Rights for
-any actually copied third-party prose or code cannot be granted by the owner.
+The [current rights review](../publication/rights-review.md), owner attestation,
+and additive migration authorization record first-party source expression for
+the 810-entry manifest and the separate 834-path Target C migration. Historical
+pending flags remain in the source-identity manifest; the release auditor checks
+the owner attestation against the exact current manifest blob and verifies the
+prior-manifest reconciliation and additive ledger. Rights for any copied
+third-party prose or code cannot be granted by the owner. The additional
+unapproved Git identities remain a separate publication blocker.
 Load-bearing proofs have been preserved rather than removed to make a scanner pass.
 
 ## Executable evidence and outsider limit
@@ -129,9 +146,9 @@ and detached receipt. A final receipt must identify the actual commit and tree,
 not merely reuse an earlier green run. The gate executes the complete registry,
 corpus/tool tests, theorem/generated-view consistency, full content/history audit,
 manifest checks, secret scans and workflow lint. Its executable outcome is separate from rights/privacy and explicit public
-visibility approval. An audit exit of one may still occur until tools explicitly
-reconcile recorded owner authorizations, and any independently detected issue
-must still be investigated. Passing finite checks proves no global theorem.
+visibility approval. An audit exit of one indicates an invalid authorization
+record or another concrete release blocker that still requires investigation.
+Passing finite checks proves no global theorem.
 
 The [initial outsider exercises](../research/onboarding-evaluation-2026-10-15.md)
 used three isolated route clones by one public-only auditor. Separate public-only

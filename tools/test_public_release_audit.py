@@ -81,6 +81,14 @@ class ReleaseAuditFixtures(unittest.TestCase):
             "release_boundaries": {
                 "repository_visibility_change_authorized": False
             },
+            "current_manifest_reconciliation": {
+                "prior_owner_attested_manifest_git_blob_sha": blob,
+                "current_manifest_git_blob_sha": blob,
+                "same_810_included_public_paths_as_prior_attestation": True,
+                "same_source_commit_and_12_source_pins": True,
+                "changed_manifest_entry_count": 0,
+                "changed_manifest_paths": [],
+            },
         }
         self.write("docs/publication/owner-rights-authorization.json",
                    json.dumps(attestation, indent=2) + "\n")
@@ -89,7 +97,9 @@ class ReleaseAuditFixtures(unittest.TestCase):
         # Fixtures are intentionally tiny; simulate the fixed manifest SHA in this
         # test only. Production keeps the immutable 810-entry Git blob hard-pinned.
         with patch("tools.audit_public_release.OWNER_APPROVED_MANIFEST_BLOB",
-                   self.approved_manifest_blob):
+                   self.approved_manifest_blob), \
+                patch("tools.audit_public_release.OWNER_APPROVED_MANIFEST_ENTRIES", 1), \
+                patch("tools.audit_public_release.OWNER_APPROVED_CHANGED_MANIFEST_ENTRIES", 0):
             return audit(self.root)
 
     def test_private_reference_signatures_still_detect_exact_examples(self):
@@ -189,6 +199,15 @@ class ReleaseAuditFixtures(unittest.TestCase):
         result = audit(self.root)
         self.assertEqual(result["status"], "BLOCKED")
         self.assertIn("rights-clearance-pending", {v["kind"] for v in result["blockers"]})
+
+    def test_frozen_target_c_source_requires_additive_rights_record(self):
+        manifest = json.loads((self.root / "docs/publication/inclusion.json").read_text())
+        manifest["latest_observed_source_main"] = "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        self.write("docs/publication/inclusion.json", json.dumps(manifest))
+        self.git("add", "-A")
+        self.git("commit", "-qm", "declare frozen source migration")
+        kinds = {item["kind"] for item in audit(self.root)["blockers"]}
+        self.assertIn("missing-additive-first-party-rights-record", kinds)
 
     def test_approved_records_only_are_structurally_clean(self):
         self.set_inventory("approved")

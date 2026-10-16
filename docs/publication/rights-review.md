@@ -9,13 +9,33 @@ the actual release commit) and Gate 3 (explicit visibility approval).
 The controlling machine-readable owner declaration is
 [`owner-rights-authorization.json`](owner-rights-authorization.json),
 which pins the **exact Git blob** of
-[`inclusion.json`](inclusion.json) (`f521850703b01b204399613d640a0b99ca895080`).
+[`inclusion.json`](inclusion.json) (`96df5a7db05e8b65e8bca605a770d0b09ab27596`).
 The owner provided a blanket grant for all **810 included files** developed
 through the owner's AI agents. That statement is retained as an
 [owner-authored GitHub record](https://github.com/1337isnot1337/erdos-99/pull/9#issuecomment-6207244081):
 "all of those 810 are all work i have done with my AI agents. i authorize anything done with them."
 The project already chose Apache-2.0 for expression within its rights. No
 individual permission from the AI tools is a required release gate.
+
+On 2026-10-16, the owner separately authorized publication and reuse of their
+first-party research and AI-agent-generated material in the frozen Target C
+migration. The coordinator recorded that instruction in
+[`first-party-migration-authorization.json`](first-party-migration-authorization.json),
+which covers 813 frozen reports and 21 supporting files (834 unique source
+paths) through an additive rights ledger. Four support paths were newly
+imported in the coordinator support batch; 17 had already been integrated and
+retain their individual provenance rows. This authorization is separate from
+the 810-entry inclusion manifest, does not grant rights to independently owned
+expression, and is a coordinator record of the owner's instruction rather than
+a signed owner statement.
+
+The previous owner-attested inclusion-manifest blob was
+`f521850703b01b204399613d640a0b99ca895080`. The current blob has the same 810
+public paths, source commit and 12 source pins. An exact entry comparison found
+eight records changed only in `public_sha256` and/or `editorial_change`; their
+source paths, source commits, source blobs, source hashes and public paths are
+unchanged. The release auditor checks this comparison against the prior blob
+and requires the exact current blob above.
 
 ## Exact evidence and disposition
 
@@ -108,11 +128,14 @@ mathematical dependencies.
 The owner accepts publication of their own `cinnajdavis@gmail.com`
 Git author/committer email, as
 [recorded on PR #9](https://github.com/1337isnot1337/erdos-99/pull/9#issuecomment-6207434631).
-A separate live review traversed all **47 Git commits reachable through
-22 advertised refs** and observed no other personal-domain email,
-only that address and standard GitHub `noreply` variants.
-This authorizes the identified Git metadata and removes the
-*email-only* reason for mandatory clean-root migration.
+A separate live review on 2026-10-15 traversed **47 Git commits reachable
+through 22 advertised refs** and observed no other personal-domain email,
+only that address and standard GitHub `noreply` variants. The expanded
+migration history was audited on 2026-10-16 with all advertised PR-head refs
+fetched. It contains one additional distinct non-noreply identity with 14
+author/committer occurrences. That identity has no owner authorization
+recorded and remains a release blocker; no
+email addresses are reproduced here, and public history has not been rewritten.
 It does **not** promise that GitHub retains no unadvertised objects,
 nor waive actual credential or non-email privacy findings.
 The owner wishes to keep the current `1337isnot1337/erdos-99`
@@ -120,9 +143,11 @@ repository and its pull-request history.
 
 ## Remaining technical and approval boundaries
 
-1. **Gate 1 owner declaration:** recorded and scoped to all 810 imported
-   source records; no known third-party redistribution exception found.
-   The root license cannot relicense any independently owned text.
+1. **Gate 1 owner declaration:** the prior declaration remains scoped to the
+   810-entry inclusion set; the 2026-10-16 instruction and additive record
+   separately cover 813 frozen Target C reports and 21 support files. No known
+   third-party redistribution exception was identified. The root license and
+   owner instruction cannot relicense independently owned expression.
 2. **Gate 2 technical receipt:** required on the actual final `main`
    commit. The older full 94-certificate/109-tool/8-corpus receipts
    belong to their pinned earlier trees. The manifest retains historical `publication_clearance: pending ...`

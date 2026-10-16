@@ -2,10 +2,10 @@
   "schema_version": 1,
   "record_type": "owner-sourced-research-rights-attestation",
   "repository": "1337isnot1337/erdos-99",
-  "recorded_date": "2026-10-15",
+  "recorded_date": "2026-10-16",
   "source_manifest": {
     "path": "docs/publication/inclusion.json",
-    "git_blob_sha": "f521850703b01b204399613d640a0b99ca895080",
+    "git_blob_sha": "96df5a7db05e8b65e8bca605a770d0b09ab27596",
     "retained_source_records": 810,
     "source_pins": 12
   },
@@ -75,5 +75,32 @@
     "Not every line of all 810 files was independently compared with third-party publications; any subsequently identified substantial borrowed expression still requires separate permission, license compliance or replacement.",
     "Source identity pins and file modes are provenance evidence, not legal ownership proofs; owner declaration supplies project-control authorization.",
     "This artifact does not waive independent secret scans, host CI restrictions, theorem-review policy, or final visibility approval."
-  ]
+  ],
+  "current_manifest_reconciliation": {
+    "prior_owner_attested_manifest_git_blob_sha": "f521850703b01b204399613d640a0b99ca895080",
+    "current_manifest_git_blob_sha": "96df5a7db05e8b65e8bca605a770d0b09ab27596",
+    "same_810_included_public_paths_as_prior_attestation": true,
+    "same_source_commit_and_12_source_pins": true,
+    "changed_manifest_entry_count": 8,
+    "changed_manifest_paths": [
+      "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md",
+      "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md",
+      "docs/reports/global_level_i_attainment_and_one_contact_2026-10-11.md",
+      "docs/reports/seed090_finite_rhombus_contraction_2026-10-13.md",
+      "docs/reports/target_c_deep_face_persistence_and_isolate_transport_slot02_2026-10-10.md",
+      "docs/reports/target_c_outer_owner_amplification_and_common_release_2026-10-10.md",
+      "docs/reports/target_c_quarter_fold_face_obstructions_slot02_2026-10-10.md",
+      "docs/state/theorem-state.schema.json"
+    ],
+    "change_scope": "Only each listed entry public_sha256 and/or editorial_change metadata was updated. The included public-path set, source pins, source blobs, count, and existing owner-rights scope did not change; current public bytes passed the source provenance and release checks apart from the independently documented history-email blocker.",
+    "authorization_continuation": "Owner instruction received 2026-10-16 confirmed that the previously reviewed 810-entry inclusion set remains owner-authorized. This rebind records the exact current manifest bytes without expanding its path set."
+  },
+  "additional_first_party_migration_authorization": {
+    "record": "docs/publication/first-party-migration-authorization.json",
+    "frozen_report_paths": 813,
+    "support_paths": 21,
+    "cross_shard_support_paths": 4,
+    "total_additive_first_party_paths": 834,
+    "scope": "Separately accounted first-party migration material outside the 810-entry inclusion manifest."
+  }
 }

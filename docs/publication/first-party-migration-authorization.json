@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "record_type": "coordinator-recorded-owner-authorization-for-first-party-migration",
+  "repository": "1337isnot1337/erdos-99",
+  "recorded_date": "2026-10-16",
+  "authorization_basis": {
+    "source": "Owner direction in the migration-coordination task received 2026-10-16.",
+    "scope": "The owner explicitly authorized publication and reuse of their first-party research and AI-agent-generated project material in this migration, and required additive rights accounting for new files.",
+    "recording_note": "This is a transparent coordinator record of the owner instruction, not a signed owner statement and not a grant over independently owned expression."
+  },
+  "source_scope": {
+    "repository": "1337isnot1337/e-99",
+    "commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+    "destination_assignment_baseline": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+    "target": "target-c",
+    "frozen_report_count": 813,
+    "frozen_index": "docs/research/migration/2026-10-16/shards/frozen-813-index.jsonl",
+    "disposition_ledger": "docs/research/migration/2026-10-16/frozen-target-c-813-dispositions.jsonl",
+    "disposition_ledger_sha256": "c2594b6caa8f9db1b56c274bfa55065119b7a961cbaf0eaf545938edabc3ee57",
+    "frozen_index_sha256": "12e5b08b2ff78f48e28ce00cbf8b351ac16b5ea0856c5fb102f75fe182d211ca"
+  },
+  "additive_rights_ledger": {
+    "path": "docs/research/migration/2026-10-16/ledger/coordinator-first-party-rights-addendum.jsonl",
+    "sha256": "ac20531ba00089789fddcac45c83b764385d20bf196c18765f18edd8dc174e8b",
+    "rows": 834,
+    "covered_report_paths": 813,
+    "covered_support_paths": [
+      "research/diameter_endpoint_gap_audit.py",
+      "research/target_c_dominant_pentagon_through_splicing_2026-09-15.md",
+      "research/target_c_efaq_uniform_cap.py",
+      "research/target_c_open_cell_phase_flux_2026-10-03.md",
+      "research/target_c_s1_q13_shell_regression.py",
+      "research/target_c_two_halfdisk_scalar_regression_2026-09-12.md",
+      "research/verify_aligned_swap_horn_obstructions.py",
+      "research/verify_antipode_transition.py",
+      "research/verify_convex_shared_witness_outer_occurrences.py",
+      "research/verify_diameter_first_joint_depth_2026_10_02.py",
+      "research/verify_diameter_star_contiguity.py",
+      "research/verify_s1_q13_kkt_endpoints.py",
+      "research/verify_target_c_annular_atlas_2026_09_26.py",
+      "research/verify_target_c_antitone_interval_scc_2026_10_03.py",
+      "research/verify_target_c_ball_hull_lattice_2026_10_02.py",
+      "research/verify_target_c_central_face_two_geodesic_corridor.py",
+      "research/verify_target_c_collinear_punctures_2026_10_02.py",
+      "research/verify_target_c_deep_isolate_octagon_flip_2026_10_02.py",
+      "research/verify_target_c_dominant_pentagon_through_splicing.py",
+      "research/verify_target_c_star_ray_staircase_2026_10_01.py",
+      "research/verify_target_c_two_halfdisk_scalar_regression.py"
+    ],
+    "required_additional_first_party_paths": 834,
+    "newly_integrated_cross_shard_support_paths": [
+      "research/target_c_dominant_pentagon_through_splicing_2026-09-15.md",
+      "research/target_c_open_cell_phase_flux_2026-10-03.md",
+      "research/verify_target_c_dominant_pentagon_through_splicing.py",
+      "research/verify_target_c_star_ray_staircase_2026_10_01.py"
+    ],
+    "previously_integrated_support_paths": [
+      "research/diameter_endpoint_gap_audit.py",
+      "research/target_c_efaq_uniform_cap.py",
+      "research/target_c_s1_q13_shell_regression.py",
+      "research/target_c_two_halfdisk_scalar_regression_2026-09-12.md",
+      "research/verify_aligned_swap_horn_obstructions.py",
+      "research/verify_antipode_transition.py",
+      "research/verify_convex_shared_witness_outer_occurrences.py",
+      "research/verify_diameter_first_joint_depth_2026_10_02.py",
+      "research/verify_diameter_star_contiguity.py",
+      "research/verify_s1_q13_kkt_endpoints.py",
+      "research/verify_target_c_annular_atlas_2026_09_26.py",
+      "research/verify_target_c_antitone_interval_scc_2026_10_03.py",
+      "research/verify_target_c_ball_hull_lattice_2026_10_02.py",
+      "research/verify_target_c_central_face_two_geodesic_corridor.py",
+      "research/verify_target_c_collinear_punctures_2026_10_02.py",
+      "research/verify_target_c_deep_isolate_octagon_flip_2026_10_02.py",
+      "research/verify_target_c_two_halfdisk_scalar_regression.py"
+    ]
+  },
+  "rights_limits": [
+    "The grant covers owner-controlled first-party research and project material only.",
+    "It does not grant rights to independently owned papers, PDFs, extracted text, or unrelated private material.",
+    "Third-party sources remain citations and links; no third-party paper collection or extracted paper text was imported.",
+    "This authorization does not modify the 810-entry inclusion manifest, canonical theorem state, or repository visibility.",
+    "The 17 previously integrated support paths listed in the additive ledger retain their earlier per-file provenance; this record brings their existing first-party authorization into the same exact 834-path accounting."
+  ]
+}

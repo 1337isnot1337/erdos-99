@@ -17,6 +17,29 @@ SOURCE_TREE = "e061f039eac44c286a00eacdcaa9a4cbbb877891"
 DESTINATION_BASELINE = "358af8253f85ab7b9cdbf976ce186ee8426718e4"
 PRE_COORDINATOR_TREE = "0ac22c4709f00afdbc5a84d0eb30810e953d2305"
 MIGRATION = Path("docs/research/migration/2026-10-16")
+SUPPORT_PATHS = (
+    "research/diameter_endpoint_gap_audit.py",
+    "research/target_c_dominant_pentagon_through_splicing_2026-09-15.md",
+    "research/target_c_efaq_uniform_cap.py",
+    "research/target_c_open_cell_phase_flux_2026-10-03.md",
+    "research/target_c_s1_q13_shell_regression.py",
+    "research/target_c_two_halfdisk_scalar_regression_2026-09-12.md",
+    "research/verify_aligned_swap_horn_obstructions.py",
+    "research/verify_antipode_transition.py",
+    "research/verify_convex_shared_witness_outer_occurrences.py",
+    "research/verify_diameter_first_joint_depth_2026_10_02.py",
+    "research/verify_diameter_star_contiguity.py",
+    "research/verify_s1_q13_kkt_endpoints.py",
+    "research/verify_target_c_annular_atlas_2026_09_26.py",
+    "research/verify_target_c_antitone_interval_scc_2026_10_03.py",
+    "research/verify_target_c_ball_hull_lattice_2026_10_02.py",
+    "research/verify_target_c_central_face_two_geodesic_corridor.py",
+    "research/verify_target_c_collinear_punctures_2026_10_02.py",
+    "research/verify_target_c_deep_isolate_octagon_flip_2026_10_02.py",
+    "research/verify_target_c_dominant_pentagon_through_splicing.py",
+    "research/verify_target_c_star_ray_staircase_2026_10_01.py",
+    "research/verify_target_c_two_halfdisk_scalar_regression.py",
+)
 
 
 def git(repo: Path, *args: str) -> bytes:
@@ -46,17 +69,19 @@ def source_blob_exists(repo: Path, commit: str, path: str) -> bool:
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--source-repo", type=Path, required=True)
+    parser.add_argument("--source-repo", type=Path, help="Optional frozen source clone for raw source-byte replay")
     parser.add_argument("--destination", type=Path, default=Path(__file__).resolve().parents[1])
     args = parser.parse_args()
-    source = args.source_repo.resolve()
+    source = args.source_repo.resolve() if args.source_repo else None
     destination = args.destination.resolve()
     errors: list[str] = []
     counts: Counter[str] = Counter()
 
-    source_tree = git(source, "rev-parse", f"{SOURCE_COMMIT}^{{tree}}").decode().strip()
-    if source_tree != SOURCE_TREE:
-        errors.append(f"frozen source tree mismatch: {source_tree}")
+    source_tree = SOURCE_TREE
+    if source is not None:
+        source_tree = git(source, "rev-parse", f"{SOURCE_COMMIT}^{{tree}}").decode().strip()
+        if source_tree != SOURCE_TREE:
+            errors.append(f"frozen source tree mismatch: {source_tree}")
     frozen = read_jsonl(destination / MIGRATION / "shards/frozen-813-index.jsonl")
     ledger = read_jsonl(destination / MIGRATION / "frozen-target-c-813-dispositions.jsonl")
     if len(frozen) != 813:
@@ -79,6 +104,15 @@ def main() -> int:
         if path in rights_by_path:
             errors.append(f"duplicate rights record: {path}")
         rights_by_path[path] = row
+    expected_rights_paths = {row.get("path") for row in frozen} | set(SUPPORT_PATHS)
+    if len(rights) != 834:
+        errors.append(f"additive rights ledger has {len(rights)} rows, expected 834")
+    if set(rights_by_path) != expected_rights_paths:
+        errors.append(
+            "additive rights ledger paths differ from the frozen 813 reports plus 21 supporting files: "
+            f"missing={len(expected_rights_paths - set(rights_by_path))}, "
+            f"extra={len(set(rights_by_path) - expected_rights_paths)}"
+        )
 
     base_state = git(destination, "show", f"{DESTINATION_BASELINE}:docs/state/theorem-state.yaml")
     current_state = (destination / "docs/state/theorem-state.yaml").read_bytes()
@@ -106,15 +140,27 @@ def main() -> int:
             errors.append(f"source pin differs at index {index}: {path}")
         if source_record.get("git_blob_sha1") != frozen_row.get("source_git_blob_sha"):
             errors.append(f"source blob identity differs at index {index}: {path}")
-        try:
-            source_bytes = git(source, "cat-file", "blob", f"{SOURCE_COMMIT}:{path}")
-            source_mode_line = git(source, "ls-tree", SOURCE_COMMIT, "--", path).decode("ascii").split()
-            source_mode = source_mode_line[0]
-        except subprocess.CalledProcessError:
-            errors.append(f"source path missing from frozen commit: {path}")
-            continue
-        if sha256(source_bytes) != frozen_row.get("source_sha256") or sha256(source_bytes) != source_record.get("sha256"):
-            errors.append(f"source SHA-256 mismatch at index {index}: {path}")
+        if source_record.get("sha256") != frozen_row.get("source_sha256"):
+            errors.append(f"source SHA-256 pin differs from frozen index at index {index}: {path}")
+        source_bytes = None
+        if source is not None:
+            try:
+                source_bytes = git(source, "cat-file", "blob", f"{SOURCE_COMMIT}:{path}")
+                source_mode_line = git(source, "ls-tree", SOURCE_COMMIT, "--", path).decode("ascii").split()
+                source_mode = source_mode_line[0]
+            except subprocess.CalledProcessError:
+                errors.append(f"source path missing from frozen commit: {path}")
+                continue
+            if sha256(source_bytes) != frozen_row.get("source_sha256") or sha256(source_bytes) != source_record.get("sha256"):
+                errors.append(f"source SHA-256 mismatch at index {index}: {path}")
+            if git_blob_sha(source_bytes) != frozen_row.get("source_git_blob_sha"):
+                errors.append(f"source Git blob mismatch at index {index}: {path}")
+            counts["source_blobs_checked"] += 1
+        else:
+            recorded_right = rights_by_path.get(path, {})
+            source_mode = recorded_right.get("source_mode")
+            if source_mode not in ("100644", "100755"):
+                errors.append(f"recorded source mode is absent or invalid at index {index}: {path}")
         if source_record.get("canonical") is not False or source_record.get("lifecycle") != "unreviewed":
             errors.append(f"source lifecycle/canonical guard is wrong at index {index}: {path}")
 
@@ -152,9 +198,10 @@ def main() -> int:
             match = re.search(r"Replaced exactly (\d+) source byte sequence\(s\) 0x0c followed by \"rac\" with the LaTeX command bytes \\frac; all remaining source bytes are unchanged\.", details)
             if match:
                 count = int(match.group(1))
-                replaced = source_bytes.count(b"\x0crac")
-                if replaced != count or source_bytes.replace(b"\x0crac", b"\\frac") != data:
-                    errors.append(f"recorded LaTeX form-feed repair does not reproduce destination bytes at index {index}: {path}")
+                if source_bytes is not None:
+                    replaced = source_bytes.count(b"\x0crac")
+                    if replaced != count or source_bytes.replace(b"\x0crac", b"\\frac") != data:
+                        errors.append(f"recorded LaTeX form-feed repair does not reproduce destination bytes at index {index}: {path}")
         if actual_blob != dest_record.get("final_git_blob_sha1"):
             errors.append(f"final destination Git blob mismatch at index {index}: {destination_path}")
         counts[dest_record.get("disposition", "missing-disposition")] += 1
@@ -256,38 +303,44 @@ def main() -> int:
     if overlap:
         errors.append(f"unexpected overlap between frozen 813 corpus and exact 810 inclusion manifest: {len(overlap)}")
 
-    support_paths = (
-        "research/verify_target_c_star_ray_staircase_2026_10_01.py",
-        "research/target_c_open_cell_phase_flux_2026-10-03.md",
-        "research/target_c_dominant_pentagon_through_splicing_2026-09-15.md",
-        "research/verify_target_c_dominant_pentagon_through_splicing.py",
-    )
-    for path in support_paths:
+    for path in SUPPORT_PATHS:
         right = rights_by_path.get(path)
         if right is None:
             errors.append(f"missing additive rights row for cross-shard support import: {path}")
             continue
-        try:
-            source_bytes = git(source, "show", f"{SOURCE_COMMIT}:{path}")
-        except subprocess.CalledProcessError:
-            errors.append(f"support dependency absent from frozen source commit: {path}")
-            continue
+        source_bytes = None
+        if source is not None:
+            try:
+                source_bytes = git(source, "show", f"{SOURCE_COMMIT}:{path}")
+            except subprocess.CalledProcessError:
+                errors.append(f"support dependency absent from frozen source commit: {path}")
+                continue
         destination_path = right.get("destination_path")
         target = destination / destination_path
         if not target.is_file():
             errors.append(f"support dependency absent from destination tree: {destination_path}")
             continue
         dest_bytes = target.read_bytes()
-        source_mode = git(source, "ls-tree", SOURCE_COMMIT, "--", path).decode("ascii").split()[0]
-        if sha256(source_bytes) != right.get("source_sha256") or sha256(dest_bytes) != right.get("destination_sha256"):
+        source_mode = right.get("source_mode")
+        if source is not None:
+            source_mode = git(source, "ls-tree", SOURCE_COMMIT, "--", path).decode("ascii").split()[0]
+        if source_bytes is not None and sha256(source_bytes) != right.get("source_sha256"):
+            errors.append(f"support dependency source SHA-256 mismatch: {path}")
+        if source_bytes is not None and git_blob_sha(source_bytes) != right.get("source_git_blob_sha"):
+            errors.append(f"support dependency source Git blob mismatch: {path}")
+        if sha256(dest_bytes) != right.get("destination_sha256"):
             errors.append(f"support dependency source/destination hash mismatch: {path}")
+        if right.get("transformation") in ("none", "none; exact source bytes preserved") and git_blob_sha(dest_bytes) != right.get("source_git_blob_sha"):
+            errors.append(f"untransformed support dependency differs from pinned source Git blob: {path}")
         if source_mode != right.get("source_mode"):
             errors.append(f"support dependency source mode mismatch: {path}")
         permission = target.stat().st_mode
         destination_mode = "100755" if permission & 0o111 else "100644"
         if destination_mode != right.get("destination_mode"):
             errors.append(f"support dependency destination mode mismatch: {path}")
-        counts["cross_shard_support_files_checked"] += 1
+        if source_bytes is not None:
+            counts["support_source_blobs_checked"] += 1
+        counts["support_files_checked"] += 1
 
     destination_head = git(destination, "rev-parse", "HEAD").decode().strip()
     destination_tree = git(destination, "rev-parse", "HEAD^{tree}").decode().strip()
@@ -297,12 +350,13 @@ def main() -> int:
         "destination_head_tree": destination_tree,
         "source_main": SOURCE_COMMIT,
         "source_tree": source_tree,
+        "source_clone_replay": source is not None,
         "destination_assignment_baseline": DESTINATION_BASELINE,
         "pre_coordinator_destination_tree": PRE_COORDINATOR_TREE,
         "counts": {"frozen_paths": len(frozen), "disposition_rows": len(ledger), **dict(counts)},
         "dispositions": dict(counts),
         "errors": errors,
-        "scope_note": "Verifies corpus inventory, source identities, destination hashes/modes, worker evidence pointers, additive rights rows, unchanged theorem-state and inverse-phase warning. It is not a mathematical proof audit or complete Gate 2 release verification.",
+        "scope_note": "Always verifies frozen source pins as recorded, destination hashes/modes, worker evidence pointers, additive rights rows, unchanged theorem-state and inverse-phase warning. When --source-repo is supplied, also verifies each raw frozen source blob/mode and replays recorded byte repairs. This is not a mathematical proof audit or complete Gate 2 release verification.",
     }
     print(json.dumps(result, indent=2))
     return 1 if errors else 0

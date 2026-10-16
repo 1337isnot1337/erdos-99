@@ -8,6 +8,14 @@ The source's inherited state-version label remains `2026-10-10.audit.234`, despi
 
 All observed source PRs were submitted through the owner's account. Git author identities include the owner and project automation aliases; identities alone do not establish mathematical authorship or third-party rights. The root Apache-2.0 license records the destination's intended license. The owner subsequently supplied explicit permission for all 810 retained project-derived source files (recorded in [owner-rights-authorization.json](owner-rights-authorization.json)), keyed to the exact inclusion-manifest Git blob. This owner declaration, not Git author labels or an automated scan, supplies permission for owner-controlled project expression; any substantial separately owned code/prose still requires an applicable license, consent, or replacement. External mathematical results retain their named attribution and bibliography. No external paper, page image or extracted paper text is redistributed. Source-specific rights review and credential/history scan results are in the [publication audit](../launch/PUBLICATION_AUDIT.md).
 
+For the 2026-10-16 Target C migration, a separate owner instruction authorizes
+publication and reuse of first-party research and AI-agent-generated project
+material across 813 frozen reports and 21 supporting files. The coordinator
+records its exact scope and provenance in
+[first-party-migration-authorization.json](first-party-migration-authorization.json)
+and the additive 834-path rights ledger. This does not alter the 810-entry
+inclusion manifest or grant rights to independently owned expression.
+
 ## Historical navigation
 
 Links to excluded administrative ledgers are redirected here. They concerned campaign/branch status, historical check commands or promotion transactions. The dedicated mathematical proof, exact regression and scoped audit sources remain in the corpus. The old 20,157-line monolith was linked solely as historical navigation; its current mathematical sections are retained in canonical route/shared modules. A short conditional boundary/face endpoint and its nonglobal obstruction remain from an older ledger because they are mathematically useful.
