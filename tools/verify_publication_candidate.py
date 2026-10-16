@@ -43,7 +43,7 @@ def verify_committed_worktree(root: Path, candidate: str) -> int:
         metadata = target.lstat()
         if not stat.S_ISREG(metadata.st_mode):
             raise ValueError('candidate worktree contains a nonregular tracked file')
-        if bool(metadata.st_mode & stat.S_IXUSR) != (mode == '100755'):
+        if bool(metadata.st_mode & 0o111) != (mode == '100755'):
             raise ValueError('candidate worktree execute mode differs from committed tree')
         data = target.read_bytes()
         actual = hashlib.sha1(b'blob ' + str(len(data)).encode('ascii') + b'\0' + data).hexdigest()
