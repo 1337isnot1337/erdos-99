@@ -52,3 +52,11 @@ SHA-256 were checked; destination bytes were compared exactly and have the same
 SHA-256. No independent mathematical audit is claimed. The reports’ proofs,
 conditional hypotheses, and finite evidence remain at their source-stated
 scopes.
+
+The final shard check passed for all 163 manifest rows and exact blob/SHA
+identities. `tools/check_theorem_state.py` currently stops only because the
+centrally owned generated `artifact-index.jsonl` has not yet been rebuilt to
+include this shard; no theorem-state file was changed. `git diff --check`
+reports one source-preserved extra blank line at EOF in
+`target_c_all_zf_low_outer_defect_exclusion_2026-09-11.md`. Its bytes remain
+unchanged to keep the recorded source SHA exact.
