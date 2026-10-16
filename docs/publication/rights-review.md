@@ -123,23 +123,28 @@ possible copyright overlap. If one is identified, determine the
 relevant source license or replace/exclude the expression while retaining
 mathematical dependencies.
 
-## Existing Git-history privacy decision
+## Git-history attribution and privacy policy
 
 The owner accepts publication of their own `cinnajdavis@gmail.com`
-Git author/committer email, as
-[recorded on PR #9](https://github.com/1337isnot1337/erdos-99/pull/9#issuecomment-6207434631).
-A separate live review on 2026-10-15 traversed **47 Git commits reachable
-through 22 advertised refs** and observed no other personal-domain email,
-only that address and standard GitHub `noreply` variants. The expanded
-migration history was audited on 2026-10-16 with all advertised PR-head refs
-fetched. It contains one additional distinct non-noreply identity with 14
-author/committer occurrences. That identity has no owner authorization
-recorded and remains a release blocker; no
-email addresses are reproduced here, and public history has not been rewritten.
-It does **not** promise that GitHub retains no unadvertised objects,
-nor waive actual credential or non-email privacy findings.
-The owner wishes to keep the current `1337isnot1337/erdos-99`
-repository and its pull-request history.
+Git email, as [recorded on PR #9](https://github.com/1337isnot1337/erdos-99/pull/9#issuecomment-6207434631).
+The owner has additionally directed that ordinary Git attribution from all
+contributors and agents remain intact. Author, committer, tagger and
+Co-authored-by metadata is not considered a credential leak or an automatic
+publication blocker solely because an address is not a GitHub noreply address.
+There is no per-domain email allowlist and no history rewrite for attribution.
+
+A 2026-10-15 review observed 47 commits through 22 refs with only the owner's
+personal address and GitHub noreply identities. The expanded 2026-10-16 scan
+identified 14 author/committer occurrences of `OpenAI Codex <codex@openai.com>`
+across eight commits. These were previously blocked solely by the email-domain
+rule and are now classified as ordinary Git attribution. The original commit
+and PR history is preserved.
+
+This policy does **not** grant permission to redistribute independently owned
+source expression, excuse secrets in Git messages or metadata, or claim that
+GitHub retains no unadvertised objects. Token, private-key, restricted-content,
+and source-rights checks remain mandatory. The owner wishes to keep the
+existing `1337isnot1337/erdos-99` repository and pull-request history.
 
 ## Remaining technical and approval boundaries
 
@@ -153,7 +158,8 @@ repository and its pull-request history.
    belong to their pinned earlier trees. The manifest retains historical `publication_clearance: pending ...`
    annotations. The release auditor now **explicitly checks the separate
    Git-blob-pinned owner attestation**, preserving default failure for a changed
-   manifest, unapproved email, or declared external-rights exception.
+   manifest, declared external-rights exception, or actual credential finding.
+   Ordinary Git attribution does not require email-specific permission.
    Gate 2 must rerun the complete release suite at the final commit; this
    scoped authorization never changes mathematical metadata.
 3. **Hosted CI:** account infrastructure has not executed a canary;

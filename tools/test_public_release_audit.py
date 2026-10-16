@@ -146,27 +146,37 @@ class ReleaseAuditFixtures(unittest.TestCase):
         self.assertIn("unverified-owner-rights-record", kinds)
         self.assertIn("rights-clearance-pending", kinds)
 
-    def test_owner_grant_licenses_only_the_named_personal_git_email(self):
+    def test_owner_rights_are_independent_of_git_attribution_email(self):
         self.set_owner_attestation()
         self.git("config", "user.email", "cinnajdavis@gmail.com")
         self.git("add", "-A")
-        self.git("commit", "-qm", "owner-provided rights and email permission")
+        self.git("commit", "-qm", "record owner-scoped source rights")
         result = self.audit_authorized()
         self.assertEqual(result["status"], "STRUCTURAL_PRECHECK_PASSED", result["blockers"])
-        self.assertGreater(result["counts"].get("owner_authorized_git_email_occurrences", 0), 0)
+        self.assertGreater(result["counts"].get("git_author_email_metadata_records", 0), 0)
 
         self.git("config", "user.email", "independent-person@example.org")
-        self.git("commit", "--allow-empty", "-qm", "other contributor is not covered")
-        kinds = {v["kind"] for v in self.audit_authorized()["blockers"]}
-        self.assertIn("personal-git-email", kinds)
+        self.git("commit", "--allow-empty", "-qm", "preserve ordinary third-party attribution")
+        result = self.audit_authorized()
+        self.assertEqual(result["status"], "STRUCTURAL_PRECHECK_PASSED", result["blockers"])
+        self.assertNotIn("personal-git-email", {v["kind"] for v in result["blockers"]})
 
-    def test_auth_record_cannot_expand_email_consent_unilaterally(self):
+    def test_legacy_email_consent_does_not_change_source_rights_scope(self):
         self.set_owner_attestation(email="independent-person@example.org")
         self.git("config", "user.email", "independent-person@example.org")
         self.git("add", "-A")
-        self.git("commit", "-qm", "unsupported author email")
+        self.git("commit", "-qm", "preserve attributed project work")
+        result = self.audit_authorized()
+        self.assertEqual(result["status"], "STRUCTURAL_PRECHECK_PASSED", result["blockers"])
+
+        # Altering a historical consent field cannot authorize a separate
+        # third-party rights exception or expand the pinned inclusion manifest.
+        self.set_owner_attestation(email="anyone@example.org", exceptions=["reports/current.md"])
+        self.git("add", "-A")
+        self.git("commit", "-qm", "record excluded third-party expression")
         kinds = {v["kind"] for v in self.audit_authorized()["blockers"]}
-        self.assertIn("personal-git-email", kinds)
+        self.assertIn("unverified-owner-rights-record", kinds)
+        self.assertIn("rights-clearance-pending", kinds)
 
     def test_owner_rights_attestation_never_waives_secrets(self):
         self.set_owner_attestation()
@@ -224,29 +234,26 @@ class ReleaseAuditFixtures(unittest.TestCase):
         result = audit(self.root)
         self.assertIn("hash-mismatch", {v["kind"] for v in result["blockers"]})
 
-    def test_non_noreply_git_email_requires_owner_signoff(self):
+    def test_non_noreply_git_email_does_not_block_release(self):
         self.set_inventory("approved")
         self.git("add", "-A")
         self.git("commit", "-qm", "approved fixture")
         self.git("config", "user.email", "fixture@personaldomain.example")
-        self.write("reports/current.md", "Current scoped mathematical evidence.\n")
-        self.git("commit", "--allow-empty", "-qm", "individual author email")
+        self.git("commit", "--allow-empty", "-qm", "attributed author")
         result = audit(self.root)
-        self.assertIn("personal-git-email", {v["kind"] for v in result["blockers"]})
+        self.assertEqual(result["status"], "STRUCTURAL_PRECHECK_PASSED", result["blockers"])
+        self.assertGreater(result["counts"].get("git_author_email_metadata_records", 0), 0)
+        self.assertGreater(result["counts"].get("git_committer_email_metadata_records", 0), 0)
 
-    def test_github_web_merge_noreply_email_is_safe_but_other_github_emails_are_not(self):
+    def test_github_web_merge_and_other_emails_do_not_block(self):
         self.set_inventory("approved")
         self.git("add", "-A")
         self.git("commit", "-qm", "approved fixture")
         self.git("-c", "user.email=noreply@github.com", "commit", "--allow-empty", "-qm", "GitHub web merge")
         self.git("-c", "user.email=noreply@github.com", "tag", "-a", "v-github-web-merge", "-m", "GitHub tag")
-        safe = audit(self.root)
-        self.assertEqual(safe["status"], "STRUCTURAL_PRECHECK_PASSED", safe["blockers"])
-        self.assertEqual(safe["counts"].get("personal_domain_git_emails", 0), 0)
-
-        self.git("-c", "user.email=person@github.com", "commit", "--allow-empty", "-qm", "unapproved GitHub-domain author")
-        blocked = audit(self.root)
-        self.assertIn("personal-git-email", {v["kind"] for v in blocked["blockers"]})
+        self.git("-c", "user.email=person@github.com", "commit", "--allow-empty", "-qm", "ordinary GitHub-domain attribution")
+        result = audit(self.root)
+        self.assertEqual(result["status"], "STRUCTURAL_PRECHECK_PASSED", result["blockers"])
 
     def test_secret_indicator_is_redacted(self):
         self.set_inventory("approved")
@@ -274,12 +281,28 @@ class ReleaseAuditFixtures(unittest.TestCase):
         self.assertIn("dirty-candidate", kinds)
         self.assertIn("rights-clearance-pending", kinds)
 
-    def test_annotated_tag_metadata_is_scanned_without_printing_email(self):
-        email = "tag-fixture@personaldomain.example"
-        self.git("-c", "user.email=" + email, "tag", "-a", "v-fixture", "-m", "tag")
+    def test_tag_and_contributor_attribution_are_not_blockers(self):
+        self.set_inventory("approved")
+        self.git("add", "-A")
+        self.git("commit", "-qm", "approved fixture")
+        self.git("-c", "user.email=tag-fixture@personaldomain.example", "tag", "-a", "v-fixture", "-m", "tag")
+        self.git("commit", "--allow-empty", "-qm",
+                 "preserve attribution\n\nCo-authored-by: Contributor <contributor@example.org>")
         result = audit(self.root)
-        self.assertIn("personal-git-trailer-or-tag-email", {v["kind"] for v in result["blockers"]})
-        self.assertNotIn(email, json.dumps(result))
+        self.assertEqual(result["status"], "STRUCTURAL_PRECHECK_PASSED", result["blockers"])
+        self.assertGreaterEqual(result["counts"].get("git_tag_and_contributor_email_metadata_records", 0), 2)
+
+    def test_credential_in_git_author_metadata_is_still_blocked(self):
+        self.set_inventory("approved")
+        self.git("add", "-A")
+        self.git("commit", "-qm", "approved fixture")
+        token = "ghp_" + "A" * 36
+        self.git("-c", "user.email=" + token + "@example.org",
+                 "commit", "--allow-empty", "-qm", "attribution with synthetic credential")
+        result = audit(self.root)
+        self.assertIn("historical-credential-indicator",
+                      {v["kind"] for v in result["blockers"]})
+        self.assertNotIn(token, json.dumps(result))
 
     def test_uncommitted_substitution_cannot_hide_committed_secret(self):
         secret = "ghp_" + "C" * 36
@@ -292,8 +315,6 @@ class ReleaseAuditFixtures(unittest.TestCase):
         self.assertIn("credential-indicator", kinds)
         self.assertIn("dirty-candidate", kinds)
         self.assertNotIn(secret, json.dumps(result))
-
-
 
     def test_deleted_historical_token_is_still_a_blocker(self):
         self.set_inventory("approved")

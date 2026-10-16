@@ -102,13 +102,15 @@ committed bytes differ from the reviewed blob.
 ## Separate publication decisions
 
 The release auditor checks the original exact-manifest owner attestation, the
-prior-to-current manifest reconciliation, the additive 834-path first-party
-migration authorization and the narrowly authorized Git email. The expanded
-history currently has one additional unapproved non-noreply identity (14
-author/committer occurrences); the owner's authorization does not clear it. Source-rights
-reconciliation remains Gate 1; visibility authorization and eventual anonymous
-access remain Gate 3. A scan does not establish legal ownership or clearance of
-independently owned prose.
+prior-to-current manifest reconciliation, and the additive 834-path first-party
+migration authorization. Ordinary Git author, committer, tagger, and contributor
+trailer metadata is preserved regardless of email domain and is not a release
+blocker by itself. The previously flagged 14 OpenAI Codex author/committer
+occurrences are ordinary attribution, not evidence of a leaked credential or
+of independently owned copyrighted expression. Full Git-object credential and
+restricted-content scans remain mandatory. Source-rights reconciliation is Gate 1;
+visibility authorization and eventual anonymous access remain Gate 3. A scan does
+not establish legal ownership or clearance of independently owned prose.
 
 The schema's existing source-repository URL is a local schema identifier, not a
 credential or a runtime network/private-archive dependency. Scanner regex

@@ -39,11 +39,13 @@ material for the frozen Target C migration. The additive authorization record
 covers 813 reports and 21 supporting files (834 unique source paths) outside
 the unchanged 810-entry inclusion manifest. It grants no third-party rights.
 The updated auditor validates both this rights ledger and every frozen report
-disposition. With all advertised PR-head refs fetched, the expanded reachable
-history contains one additional unapproved non-noreply identity (14
-author/committer occurrences); consent for the owner's public email does not
-cover it. The repository remains private and the history remains intact, so
-this is a release blocker.
+disposition. The earlier all-ref scan observed 14 author/committer occurrences
+of OpenAI Codex attribution across the shard-1 history; that observation was
+previously classified as an email-approval blocker. Under the owner-directed
+policy, ordinary Git metadata is retained without per-domain authorization,
+so this finding is no longer a release blocker. Actual credentials, restricted
+content, unlicensed third-party expression, and invalid rights records remain
+independent blockers. The repository remains private and history is intact.
 
 ## Exact scientific freeze
 
@@ -124,7 +126,7 @@ historical audit.
 | Imported owner-directed expression, 810 records | OWNER AUTHORIZATION RECORDED | Owner grant on PR #9 remains bound to the same 810 source paths and pins; exact current manifest blob is `96df5a7d`; see current rights review |
 | Additional first-party migration expression, 834 paths | OWNER AUTHORIZATION RECORDED | 813 frozen reports and 21 support files are separately covered by `first-party-migration-authorization.json` and the exact additive rights ledger |
 | Local clean-root privacy preparation | RESOLVED | Exporter plus all-object/tree/fsck controls; final detached export receipt |
-| Personal-domain Git author metadata | BLOCKING | Owner consent covers one identity. The expanded history contains one additional unapproved identity with 14 author/committer occurrences; preserve history and do not treat this audit as authorization |
+| Ordinary Git attribution metadata | POLICY RESOLVED; NOT BLOCKING | Preserve author, committer, tagger and contributor metadata without email-domain whitelists; 14 historical Codex role occurrences were reclassified as routine attribution. Credential scanning and content rights remain mandatory |
 | Hosted fork canary | BLOCKED | Account billing restriction; observed jobs executed zero steps; both rollout variables stay unset |
 | Independent AI-agent audit before canonical reuse of repaired sequence proof | NONBLOCKING | Audited-working label remains; publishing scoped working research requires no theorem promotion |
 | Final visibility and anonymous-access verification | OWNER DECISION REQUIRED | Separate explicit approval only after Gate 2 current-commit security/technical verification |
@@ -135,9 +137,10 @@ the 810-entry manifest and the separate 834-path Target C migration. Historical
 pending flags remain in the source-identity manifest; the release auditor checks
 the owner attestation against the exact current manifest blob and verifies the
 prior-manifest reconciliation and additive ledger. Rights for any copied
-third-party prose or code cannot be granted by the owner. The additional
-unapproved Git identities remain a separate publication blocker.
-Load-bearing proofs have been preserved rather than removed to make a scanner pass.
+third-party prose or code cannot be granted by the owner. Ordinary Git author,
+committer, tagger and contributor metadata is not a separate publication gate.
+Load-bearing proofs and original history have been preserved rather than removed
+to make a scanner pass.
 
 ## Executable evidence and outsider limit
 
@@ -171,7 +174,9 @@ visibility decision. A clean-root local artifact is preparation, not publication
 or proof that old GitHub objects were erased.
 
 This audit and tooling used substantial AI assistance. Gate 1 owner-scope rights
-and the identified personal-email consent are recorded. The rights scanner now verifies the exact-manifest owner declaration and named
-email consent with strict regression tests. Next run the complete Gate 2 verifier
-on the actual final commit and address concrete security findings if any. Keep the existing repository private until the owner separately
-approves Gate 3 visibility.
+and the owner's historical personal-email consent remain recorded. The release
+auditor verifies the exact-manifest rights declaration and additive migration
+record, while preserving ordinary Git attribution without email-domain gates.
+Tests still reject committed or historical credentials, including those embedded
+in Git metadata. Run complete Gate 2 against the actual final commit; keep the
+repository private until the owner separately approves Gate 3 visibility.
