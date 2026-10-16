@@ -64,7 +64,7 @@
       "output": "theorem-state: OK"
     },
     {
-      "command": "python3 docs/research/migration/2026-10-16/verify_migration_provenance.py --source-repo /home/cinna/math/e-99 --destination /home/cinna/e99-integration",
+      "command": "python3 docs/research/migration/2026-10-16/verify_migration_provenance.py --source-repo <frozen-source-clone> --destination <destination-checkout>",
       "result": "PENDING_AFTER_CENTRAL_UPDATE"
     },
     {
@@ -84,5 +84,6 @@
     "hosted_ci": "NOT_CLAIMED",
     "final_tree_receipt_required": true
   },
-  "authority_note": "All reports remain unreviewed noncanonical research. Exact finite checks do not certify global optimality. Theorem-state remains authoritative; this receipt does not establish complete 813-path coverage or publication readiness."
+  "authority_note": "All reports remain unreviewed noncanonical research. Exact finite checks do not certify global optimality. Theorem-state remains authoritative; this receipt does not establish complete 813-path coverage or publication readiness.",
+  "execution_environment": "Executed against isolated local clones; private local filesystem paths are intentionally omitted from this repository receipt."
 }

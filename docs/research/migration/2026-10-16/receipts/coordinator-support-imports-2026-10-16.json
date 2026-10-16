@@ -36,7 +36,7 @@
       "output": "artifact-index: wrote 761 records; updated 0 metadata headers"
     },
     {
-      "command": "python3 docs/research/migration/2026-10-16/verify_migration_provenance.py --source-repo /home/cinna/math/e-99 --destination /home/cinna/e99-integration",
+      "command": "python3 docs/research/migration/2026-10-16/verify_migration_provenance.py --source-repo <frozen-source-clone> --destination <destination-checkout>",
       "result": "PASS",
       "scope_counts": {
         "source_artifact_records": 1446,
@@ -116,5 +116,6 @@
       "result": "PASS",
       "scope": "exact stress, kernel, incidence, cut, and competitor arithmetic fixtures"
     }
-  ]
+  ],
+  "execution_environment": "Executed against isolated local clones; private local filesystem paths are intentionally omitted from this repository receipt."
 }

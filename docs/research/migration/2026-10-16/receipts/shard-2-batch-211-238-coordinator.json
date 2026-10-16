@@ -61,7 +61,7 @@
       "details": "All source and destination bytes identical; no transformations."
     },
     {
-      "command": "All 13 source-relative Markdown dependencies from reports 211\u2013238 checked at destination e1f8ba75",
+      "command": "All 13 source-relative Markdown dependencies from reports 211–238 checked at destination e1f8ba75",
       "result": "PASS",
       "details": "All referenced paths exist in merged main."
     },
@@ -80,7 +80,7 @@
       "result": "PASS"
     },
     {
-      "command": "python3 docs/research/migration/2026-10-16/verify_migration_provenance.py --source-repo /home/cinna/math/e-99 --destination /home/cinna/e99-integration",
+      "command": "python3 docs/research/migration/2026-10-16/verify_migration_provenance.py --source-repo <frozen-source-clone> --destination <destination-checkout>",
       "result": "PASS",
       "scope": "1446 artifact rows; 725 public artifact hashes; 2975 research-file rows; 293 public file hashes; 111 linked-dependency rows; 91 public dependency hashes; 418 edges; zero unresolved/rights-blocked dependencies. Historical script comparison baseline is 60c2576; this is source identity/retained-byte provenance, not final release verification."
     },
@@ -134,8 +134,5 @@
     "final_tree_receipt_required": true
   },
   "authority_note": "All reports remain unreviewed noncanonical research. Verifier passes are finite computational evidence only. Destination theorem-state is unchanged and authoritative; this receipt does not establish full 813-path coverage or publication readiness.",
-  "execution_environment": {
-    "python": "Python 3.12.3",
-    "platform": "current coordinator checkout"
-  }
+  "execution_environment": "Executed against isolated local clones; private local filesystem paths are intentionally omitted from this repository receipt."
 }
