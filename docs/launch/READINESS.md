@@ -73,10 +73,10 @@ publication of their own existing personal-domain Git author email. As a result,
 a clean-root migration is no longer required **solely for this identified email**.
 The clean-root export remains available as a separate privacy option; the owner
 wishes to preserve the current repository and PR history. The older candidate's
-rights/HOLD receipt remains historical. The new Gate 2 release verifier must
-reconcile this owner's documented grant rather than silently disregard the
-manifest's historical pending labels, and must address any actual independent
-third-party or security finding. No visibility change is authorized here.
+rights/HOLD receipt remains historical. The release auditor now reconciles the owner's recorded grant through an
+exact-manifest Git-blob check rather than silently discarding the historical
+pending labels. Gate 2 must still execute and verify the full release suite and
+address any independent third-party or security finding. No visibility change is authorized here.
 
 Hosted execution remains unverified because the account restriction prevented
 jobs from starting. Both protective rollout gates remain unset. No paid usage or

@@ -7,6 +7,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from tools.audit_public_release import audit
 
@@ -48,6 +49,128 @@ class ReleaseAuditFixtures(unittest.TestCase):
         }], "unresolved_dependencies": []}
         self.write("docs/publication/inclusion.json", json.dumps(inc))
         self.write("docs/publication/exclusion.json", "[]")
+
+    def set_owner_attestation(self, *, email="cinnajdavis@gmail.com", exceptions=None):
+        """Write the real owner-record schema for a one-file synthetic manifest."""
+        manifest_path = "docs/publication/inclusion.json"
+        blob = self.git("hash-object", manifest_path).stdout.decode("ascii").strip()
+        self.approved_manifest_blob = blob
+        manifest = json.loads((self.root / manifest_path).read_text())
+        entries = manifest["entries"]
+        attestation = {
+            "schema_version": 1,
+            "repository": "1337isnot1337/erdos-99",
+            "source_manifest": {
+                "path": manifest_path,
+                "git_blob_sha": blob,
+                "retained_source_records": len(entries),
+                "source_pins": len({e["source_commit"] for e in entries}),
+            },
+            "owner_declaration": {
+                "evidence_url": "https://github.com/1337isnot1337/erdos-99/pull/9#issuecomment-6207244081",
+                "disposition": "OWNER AUTHORIZED FOR PROJECT-CONTROLLED SOURCE EXPRESSION",
+                "license_terms": "Apache-2.0 for owner-controlled source expression",
+            },
+            "external_expression_review": {
+                "confirmed_uncleared_redistributed_third_party_exceptions": exceptions or []
+            },
+            "history_email_consent": {
+                "comment_url": "https://github.com/1337isnot1337/erdos-99/pull/9#issuecomment-6207434631",
+                "personal_domain_emails_found": [email],
+            },
+            "release_boundaries": {
+                "repository_visibility_change_authorized": False
+            },
+        }
+        self.write("docs/publication/owner-rights-authorization.json",
+                   json.dumps(attestation, indent=2) + "\n")
+
+    def audit_authorized(self):
+        # Fixtures are intentionally tiny; simulate the fixed manifest SHA in this
+        # test only. Production keeps the immutable 810-entry Git blob hard-pinned.
+        with patch("tools.audit_public_release.OWNER_APPROVED_MANIFEST_BLOB",
+                   self.approved_manifest_blob):
+            return audit(self.root)
+
+    def test_manifest_pinned_owner_authorization_clears_pending_source_rights(self):
+        self.set_owner_attestation()
+        self.git("add", "-A")
+        self.git("commit", "-qm", "record original-source owner grant")
+        result = self.audit_authorized()
+        self.assertEqual(result["status"], "STRUCTURAL_PRECHECK_PASSED", result["blockers"])
+        self.assertEqual(result["counts"].get("owner_attested_pending_source_records"), 1)
+        self.assertEqual(result["counts"].get("pending_rights_reviews", 0), 0)
+
+    def test_owner_authorization_fails_closed_if_manifest_changes(self):
+        self.set_owner_attestation()
+        self.git("add", "-A")
+        self.git("commit", "-qm", "record scoped grant")
+        path = "docs/publication/inclusion.json"
+        changed = json.loads((self.root / path).read_text())
+        changed["post_authorization_change"] = True
+        self.write(path, json.dumps(changed))
+        self.git("add", "-A")
+        self.git("commit", "-qm", "mutate manifest after authorization")
+        kinds = {v["kind"] for v in self.audit_authorized()["blockers"]}
+        self.assertIn("unverified-owner-rights-record", kinds)
+        self.assertIn("rights-clearance-pending", kinds)
+
+    def test_owner_grant_does_not_cover_independent_exception(self):
+        self.set_owner_attestation(exceptions=["reports/current.md"])
+        self.git("add", "-A")
+        self.git("commit", "-qm", "declare unlicensed external exception")
+        kinds = {v["kind"] for v in self.audit_authorized()["blockers"]}
+        self.assertIn("unverified-owner-rights-record", kinds)
+        self.assertIn("rights-clearance-pending", kinds)
+
+    def test_owner_grant_licenses_only_the_named_personal_git_email(self):
+        self.set_owner_attestation()
+        self.git("config", "user.email", "cinnajdavis@gmail.com")
+        self.git("add", "-A")
+        self.git("commit", "-qm", "owner-provided rights and email permission")
+        result = self.audit_authorized()
+        self.assertEqual(result["status"], "STRUCTURAL_PRECHECK_PASSED", result["blockers"])
+        self.assertGreater(result["counts"].get("owner_authorized_git_email_occurrences", 0), 0)
+
+        self.git("config", "user.email", "independent-person@example.org")
+        self.git("commit", "--allow-empty", "-qm", "other contributor is not covered")
+        kinds = {v["kind"] for v in self.audit_authorized()["blockers"]}
+        self.assertIn("personal-git-email", kinds)
+
+    def test_auth_record_cannot_expand_email_consent_unilaterally(self):
+        self.set_owner_attestation(email="independent-person@example.org")
+        self.git("config", "user.email", "independent-person@example.org")
+        self.git("add", "-A")
+        self.git("commit", "-qm", "unsupported author email")
+        kinds = {v["kind"] for v in self.audit_authorized()["blockers"]}
+        self.assertIn("personal-git-email", kinds)
+
+    def test_owner_rights_attestation_never_waives_secrets(self):
+        self.set_owner_attestation()
+        self.write("reports/token.txt", "ghp_" + "A" * 36)
+        self.git("add", "-A")
+        self.git("commit", "-qm", "unsafe synthetic credential")
+        kinds = {v["kind"] for v in self.audit_authorized()["blockers"]}
+        self.assertIn("historical-credential-indicator", kinds)
+
+    def test_retargeting_both_manifest_and_record_cannot_expand_scope(self):
+        self.set_owner_attestation()
+        self.git("add", "-A")
+        self.git("commit", "-qm", "record narrowly scoped grant")
+        path = "docs/publication/inclusion.json"
+        changed = json.loads((self.root / path).read_text())
+        changed["post_authorization_change"] = "new contents"
+        self.write(path, json.dumps(changed))
+        record_path = "docs/publication/owner-rights-authorization.json"
+        record = json.loads((self.root / record_path).read_text())
+        record["source_manifest"]["git_blob_sha"] = self.git(
+            "hash-object", path).stdout.decode("ascii").strip()
+        self.write(record_path, json.dumps(record))
+        self.git("add", "-A")
+        self.git("commit", "-qm", "try to broaden grant to a different manifest")
+        kinds = {v["kind"] for v in self.audit_authorized()["blockers"]}
+        self.assertIn("unverified-owner-rights-record", kinds)
+        self.assertIn("rights-clearance-pending", kinds)
 
     def test_pending_rights_are_blockers(self):
         result = audit(self.root)
