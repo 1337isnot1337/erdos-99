@@ -1,0 +1,27 @@
+{
+  "batch": "372-394",
+  "shard": 3,
+  "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "destination_baseline": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+  "assigned_indexes": [372, 394],
+  "report_count": 23,
+  "first_path": "docs/reports/target_c_fullcore_high_surplus_endpoint_side_gap_2026-09-14.md",
+  "last_path": "docs/reports/target_c_global_sublinear_diameter_star_2026-09-09.md",
+  "evidence": {
+    "new_finite_verifier_scripts": 2,
+    "new_scripts_passed": 2,
+    "shared_source_artifact": "research/target_c_general_mu05947_certificate.py is referenced by report 384 and is proposed byte-identically in sibling Worker 3 PR #41; no duplicate path was added here.",
+    "details": "See evidence-372-394.jsonl for exact outcomes and sibling PR dependency."
+  },
+  "rights_privacy": "No third-party PDF or independently owned research payload was imported. Two literature links remain citations/near-miss references only; the reports explicitly state those results are not proof inputs. No embedded images, long blockquotes, email, credential-like content, or owner-local path was detected.",
+  "verification": {
+    "source_blob_sha256_and_destination_blob_sha256": "recorded for every report and evidence file",
+    "body_preservation": "all 23 report bodies match source after recorded header/provenance and privacy transformations",
+    "finite_verifiers": "2/2 passed; graph/arithmetic scope limits preserved",
+    "theorem_manifest_or_generated_index_changed": false,
+    "publication_manifest_changed": false,
+    "shared_navigation_changed": false,
+    "other_shards_changed": false
+  },
+  "integration": "all imported results remain unreviewed and noncanonical; coordinator owns merge and integration-wide validation"
+}

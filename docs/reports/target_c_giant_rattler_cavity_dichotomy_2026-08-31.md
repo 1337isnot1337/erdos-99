@@ -1,0 +1,244 @@
+<!-- migration-source: path=docs/reports/target_c_giant_rattler_cavity_dichotomy_2026-08-31.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=184020d2e2c109ef07a53d7da5bb250e9d06c571; lifecycle=unreviewed; canonical=false -->
+> **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
+
+# Erdős Problem #99 — Target C C50: a macroscopic KKT-invisible population forces a giant cavity or outer-face sea
+
+**Date:** 2026-08-31  
+**Target:** C-II / force-bulk gap  
+**Depends on:** C49 and canonical Oler/isoperimetric inequalities  
+**Computation:** not used
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+C49 confines every contact-isolated source point to the outer contact face or to bounded nonquadrilateral defect faces whose total contact-boundary length is `O(D)`.
+
+C50 quantifies the bounded-face part. If a bounded defect face has boundary-walk length `k` and contains `z` contact-isolated source points, then
+
+\[
+\boxed{
+ z
+\le
+1+\frac{k}{2}+\frac{k^2}{2\pi\sqrt3}.}
+\]
+
+Consequently, if `Z_def` isolated points lie in bounded defect faces and
+
+`Z_def >= eta D^2`,
+
+then one bounded defect face has perimeter at least
+
+\[
+\boxed{
+ k_{max}
+\ge
+\frac{\sqrt3}{10}(\eta D-14\pi),}
+\]
+
+using the canonical `q<=pi D` bound.
+
+Therefore, if the total KKT-invisible population `n-m` is a positive fraction of `D^2`, then either a positive fraction lies in the outer contact face or there is one bounded nonquadrilateral contact face with `Omega(D)` boundary length. The force-bulk obstruction is reduced to a macroscopic cavity/shell phase.
+
+---
+
+## 1. Capacity of one bounded defect face
+
+Let `f` be a bounded nonquadrilateral face of the contact core. Let its boundary walk have `k_f` unit contact edges, and let `z_f` contact-isolated source points lie in its interior.
+
+Let `K_f` be the convex hull of the boundary vertices of `f`. Every isolated point in the face lies in `K_f`. The convex hull perimeter is no larger than the length of the boundary polygonal walk:
+
+\[
+\operatorname{per}(K_f)\le k_f.
+\tag{C50.1}
+\]
+
+By the planar isoperimetric inequality,
+
+\[
+\operatorname{area}(K_f)
+\le
+\frac{\operatorname{per}(K_f)^2}{4\pi}
+\le
+\frac{k_f^2}{4\pi}.
+\tag{C50.2}
+\]
+
+The `z_f` isolated points are unit-separated. Apply Oler inside `K_f`:
+
+\[
+\frac{\sqrt3}{2}(z_f-1)
+\le
+\operatorname{area}(K_f)
++
+\frac{\sqrt3}{4}\operatorname{per}(K_f).
+\tag{C50.3}
+\]
+
+Using C50.1-C50.2 and multiplying by `2/sqrt3` gives:
+
+### Lemma C50.1 — defect-face rattler capacity
+
+\[
+\boxed{
+ z_f
+\le
+1+\frac{k_f}{2}+rac{k_f^2}{2\pi\sqrt3}.}
+\tag{C50.4}
+\]
+
+This bound deliberately ignores the additional unit-separation constraints from the face-boundary vertices, so it is safe but not sharp.
+
+---
+
+## 2. Sum over all bounded defect faces
+
+Let
+
+- `N_def` be the number of bounded defect faces;
+- `L_def=sum k_f` their total boundary length;
+- `K=max k_f`; and
+- `Z_def=sum z_f`.
+
+C49 gives
+
+\[
+N_{def}\le Q,
+\qquad
+L_{def}\le5Q.
+\tag{C50.5}
+\]
+
+Summing C50.4,
+
+\[
+Z_{def}
+\le
+N_{def}+\frac12L_{def}
++
+\frac1{2\pi\sqrt3}\sum_f k_f^2.
+\tag{C50.6}
+\]
+
+Since `sum k_f^2 <= K L_def`,
+
+\[
+\boxed{
+Z_{def}
+\le
+\frac72Q
++
+\frac{5KQ}{2\pi\sqrt3}.}
+\tag{C50.7}
+\]
+
+C49 also has
+
+\[
+Q\le4q-B-4<4q
+\le4\pi D.
+\tag{C50.8}
+\]
+
+Therefore
+
+\[
+\boxed{
+Z_{def}
+<
+14\pi D
++
+\frac{10}{\sqrt3}KD.}
+\tag{C50.9}
+\]
+
+---
+
+## 3. Giant bounded cavity consequence
+
+If
+
+\[
+Z_{def}\ge\eta D^2,
+\tag{C50.10}
+\]
+
+then C50.9 gives
+
+\[
+\eta D^2
+<14\pi D+rac{10}{\sqrt3}KD.
+\]
+
+Divide by `D` and rearrange:
+
+### Theorem C50.2 — macroscopic bounded rattlers force macroscopic face perimeter
+
+\[
+\boxed{
+K
+>
+\frac{\sqrt3}{10}(\eta D-14\pi).}
+\tag{C50.11}
+\]
+
+In particular `K=Omega_eta(D)` for fixed `eta>0` and large `D`.
+
+Equivalently, if every bounded defect face has perimeter `o(D)`, then
+
+\[
+Z_{def}=o(D^2).
+\tag{C50.12}
+\]
+
+---
+
+## 4. Full force-bulk dichotomy
+
+Let
+
+`Z=n-m`
+
+be the total number of contact-isolated source points, and split
+
+`Z=Z_out+Z_def`,
+
+where `Z_out` lies in the outer contact face and `Z_def` in bounded defect faces, as guaranteed by C49.
+
+If
+
+`Z>=eta D^2`,
+
+then either
+
+1. `Z_out>=eta D^2/2`; or
+2. `Z_def>=eta D^2/2`, in which case C50.11 with `eta/2` gives a bounded defect face of perimeter `Omega_eta(D)`.
+
+### Theorem C50 — giant rattler cavity dichotomy
+
+A macroscopic failure of force-bulk cannot be diffuse. It forces one of two phases:
+
+```text
+outer-shell phase:
+    Omega(D^2) KKT-invisible points in the outer contact face;
+
+giant-hole phase:
+    one bounded nonquadrilateral contact face has Omega(D) boundary length
+    and supports a macroscopic invisible packing population.
+```
+
+---
+
+## 5. Interaction with C42/C48
+
+C42 says the contact core is quadrangulated up to only `O(D)` defect; C49-C50 show that this does **not** automatically imply `n-m=O(D)`. A single `Theta(D)`-perimeter defect face can still contain `Theta(D^2)` unit-separated points.
+
+Thus any force-bulk theorem must rule out precisely the two macroscopic cavity phases above rather than trying to count arbitrary isolated points.
+
+This is a much smaller geometric target.
+
+## Regression audit
+
+- A regular shell with a large KKT-invisible interior packing belongs to the outer-shell phase and remains a live local/global-capacity regression.
+- One giant bounded hole of perimeter `Theta(D)` is explicitly allowed by C50; it is the second remaining phase.
+- Many small holes cannot collectively hold a macroscopic population because their total boundary length is only `O(D)`.

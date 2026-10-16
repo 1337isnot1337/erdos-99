@@ -1,0 +1,146 @@
+<!-- migration-source: path=docs/reports/target_c_general_rhombus_transport_audit_2026-09-11.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=2d899c965ea21a6a9d7d2886bd5b1d53a0504241; lifecycle=unreviewed; canonical=false -->
+> **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
+
+# Erdős Problem #99 — audited general post-ZF rhombus transport
+
+**Date:** 2026-09-11  
+**Run type:** Target C C-II theorem-level continuation  
+**Status:** unpromoted report; Level I remains open
+
+This note records a branch-uniform consequence of the post-ZF face ledger. It is
+useful in the remaining forest and positive-surplus branches, where the earlier
+cyclic argument cannot be applied directly.
+
+Let \(F\) be the force hull, let \(N_F\) be the number of all source points in \(F\)
+(including contact-isolated points), and put \(Z_{\rm ext}=n-N_F\). Let \(R_4\) be the
+number of bounded quadrilateral contact faces, \(E\) the sum of their excesses over
+\(\sqrt3/2\), and \(A_{\rm exc}\) the total area of the other bounded faces. Write
+
+\[
+a_0=\frac{\sqrt3}{2},\qquad c_0=\frac{\sqrt3}{4},
+\qquad \delta_F=\frac{\pi D^2}{4}-\operatorname{area}F.
+\]
+
+## Theorem
+
+For every post-ZF survivor, with arbitrary \(d_H\ge0\) and \(s_Z\ge0\),
+
+\[
+\boxed{a_0N_F\le \operatorname{area}F+c_0\operatorname{per}F+a_0-E.}
+\tag{RT.1}
+\]
+
+Consequently, the strict translated-lattice comparison for a global minimizer gives
+
+\[
+\boxed{E+\delta_F<a_0Z_{\rm ext}+c_0\operatorname{per}F.}
+\tag{RT.2}
+\]
+
+In particular, if \(Z_{\rm ext}=o(D^2)\), then \(E=o(D^2)\) and
+\(\delta_F=o(D^2)\). If \(Z_{\rm ext}=O(D)\), both quantities are \(O(D)\).
+
+## Proof
+
+Use the post-ZF notation \(m=|V(C)|\), \(q=|B_+|\), \(h=|H|\), and
+
+\[
+d_H=q-h,\qquad s_Z=e+h-(2m-2),\qquad k=d_H+s_Z.
+\]
+
+The exact boundary identity is
+
+\[
+b+Q=2(h-s_Z)=2(q-k),
+\tag{RT.3}
+\]
+
+where \(b\) is the outer contact-face walk length and \(Q\) is the total exceptional
+face degree surplus. Euler's formula and face incidence therefore give
+
+\[
+m=R_4+f+q-k+1,
+\tag{RT.4}
+\]
+
+where \(f\) is the number of exceptional bounded faces.
+
+Every bounded quadrilateral is a unit rhombus, so its total area is
+
+\[
+A_4=a_0R_4+E.
+\tag{RT.5}
+\]
+
+For an exceptional face of degree \(4+r_i\), Oler applied to its boundary vertices
+and its \(z_i\) interior isolated source points gives
+
+\[
+\operatorname{area}F_i\ge a_0z_i+a_0+c_0r_i.
+\tag{RT.6}
+\]
+
+Summing (RT.6), inserting (RT.4)--(RT.5), and writing
+\(Z_{\rm def}=\sum z_i\), one obtains
+
+\[
+a_0(m+Z_{\rm def})
+\le A_{\rm bnd}-E-c_0Q+a_0(q-k)+a_0.
+\tag{RT.7}
+\]
+
+The general outer-pocket estimate for isolated points in the outer contact face is
+
+\[
+a_0Z_{\rm in}
+\le \operatorname{area}F-A_{\rm bnd}+c_0(\operatorname{per}F-b).
+\tag{RT.8}
+\]
+
+Add (RT.8) to (RT.7). Since \(N_F=m+Z_{\rm def}+Z_{\rm in}\), the only
+topology-dependent term is
+
+\[
+-c_0(Q+b)+a_0(q-k).
+\]
+
+By (RT.3), \(Q+b=2(q-k)\), while \(a_0=2c_0\), so this term is exactly zero.
+This proves (RT.1), including all contact-isolated points inside \(F\), for every
+\(d_H\) and \(s_Z\).
+
+Finally the unconditional strict translated-lattice comparison is
+
+\[
+a_0(n-1)>\frac{\pi D^2}{4}.
+\tag{RT.9}
+\]
+
+Substitute (RT.1), use \(n=N_F+Z_{\rm ext}\), and rearrange. This gives (RT.2).
+\(\square\)
+
+## What this closes and what it does not
+
+The identity removes a possible false escape: neither forest defect \(d_H\) nor
+positive circuit surplus \(s_Z\) can by itself pay the full-source rhombus/area
+defect. Any such payment must come from source points outside the force hull.
+
+It does **not** prove that \(Z_{\rm ext}=o(D^2)\). The contact-minimal
+representative may have a quadratic population of fully inactive points outside \(F\),
+and moving those points to first contact changes the contact set without preserving
+the KKT-positive support. Thus (RT.2) cannot be combined with the post-ZF force
+identities after such a move.
+
+The exact surviving alternatives are therefore:
+
+1. \(Z_{\rm ext}=o(D^2)\), in which case the force hull is asymptotically disk-like
+   and the strict rhombus excess is subquadratic, but no contradiction follows from
+   near-equilateral equality alone; or
+2. a genuinely external-rattler branch with \(Z_{\rm ext}=\Omega(D^2)\), for which
+   (RT.2) permits the force-hull area deficit and the current population estimate
+   does not supply a reverse bound.
+
+The bridge-response route remains independently blocked by the exact regular-hexagon
+2-connected response: off-diagonal transfers can be negative, so the common-bridge
+sign argument cannot be promoted to a general block cut.
+
+This theorem is not a Level I settlement and is not promoted into the route map.
