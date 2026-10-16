@@ -10,6 +10,10 @@ remain open; C-I is closed in its stated scope.
 
 ## Final receipt contract
 
+See [Gate 2 reproduction and scanner review](GATE_2_VERIFICATION.md) for the
+exact environment, public A/B/C routes and retained raw historical fixture
+finding. A reviewed false positive is distinct from a zero-finding scan.
+
 The immutable candidate is identified by the **detached release manifest and
 verification receipt** delivered alongside it. Keeping the receipt outside the
 Git tree avoids a self-referential commit hash. Each receipt records the candidate

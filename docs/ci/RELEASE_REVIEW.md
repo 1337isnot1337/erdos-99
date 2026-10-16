@@ -9,9 +9,15 @@ Do not configure a skipped check as evidence that the corpus was verified.
 
 ## Reviewed boundaries and repairs
 
-- The only trigger is ordinary `pull_request`; no `pull_request_target`, push,
+- The research workflow's only trigger is ordinary `pull_request`; no `pull_request_target`, push,
   schedule, dispatch, dynamic matrix, or automatic full certificate replay is
   enabled. Workflow permissions are `contents: read`.
+- The separate branch-maintenance workflow uses `pull_request_target: closed`,
+  a workflow-path-only main push and manual dispatch. Its trusted inline code
+  performs GitHub API operations with `contents: write`; it has no checkout or
+  execution of PR code. It snapshots paginated branches before deletion and
+  preserves protected/default/open-PR/advanced/unassociated branches. Offline
+  tests of its actual embedded code are distinct from hosted execution evidence.
 - Actions use exact commit pins. Both checkouts set `persist-credentials: false`.
   Control scripts and dependency locks come from the trusted base SHA. The fork
   head is checked out separately, with base ancestry fetched explicitly.
