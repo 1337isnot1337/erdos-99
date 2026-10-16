@@ -253,3 +253,12 @@ These reports and tools are retained as first-party, noncanonical research from 
 - `python3 research/verify_target_c_collinear_punctures_2026_10_02.py` — exact finite stress, rigidity, seam, crossing, and competitor checks.
 
 A passing script supports only the finite checks it performs. Analytic claims remain unreviewed unless theorem-state explicitly says otherwise; none of these commands establishes global-minimizer extraction, a same-cardinality strict-diameter endpoint, C-II closure, or Level I closure. Provenance, exact hashes, rights accounting, and full proof obligations are in the [migration ledger](../docs/research/migration/2026-10-16/README.md) and [candidate registry](../docs/targets/target-c/candidate-registry.json).
+
+## Cyclic q=13 S1 shell regression
+
+Reproduce the finite q=13 shell construction and its independent numerical KKT-segment endpoint check from the repository root:
+
+- `python3 research/target_c_s1_q13_shell_regression.py`
+- `PYTHONPATH=research python3 research/verify_s1_q13_kkt_endpoints.py`
+
+These scripts are exact-source duplicates already present in the destination baseline. The checks construct a strict S1 shell with 13 contacts, 12 diameter pairs, positive full-support equilibrium stress, and rank-10 scalar stress matrix; the endpoint check also finds two PSD KKT-segment endpoints. This refutes the shell-only contradiction implication. It is finite numerical regression evidence, not interval certification of global optimality and not a counterexample to Erdős #99. See the [full report](../docs/reports/target_c_cyclic_s1_q13_shell_regression_2026-09-10.md) and the [cyclic/Reinhardt research track](../docs/research/tracks/target-c-cyclic-reinhardt-corpus-2026-10-16.md).

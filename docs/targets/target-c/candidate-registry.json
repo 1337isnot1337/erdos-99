@@ -8308,6 +8308,671 @@
         "third_party_material": "No third-party paper or PDF is included.",
         "visibility": "Destination remains private; no theorem promotion."
       }
+    },
+    {
+      "candidate_id": "TARGET-C-CYCLIC-ARITHMETIC-RESTRICTIONS-20261016",
+      "title": "Cyclic arithmetic restrictions on two endpoint families",
+      "status": "unreviewed source reports; conditional cyclic-endpoint research",
+      "source_lifecycle": "All listed source-main reports are indexed unreviewed/noncanonical. Seven destination files contain only the exact documented TeX form-feed repair; no theorem promotion follows.",
+      "target_scope": [
+        "Target C cyclic primitive-survivor route",
+        "Level I only through the unproved source-wide branch reduction"
+      ],
+      "claim": {
+        "statement": "Two unreviewed reports state (i) no cyclic P1 survivor when q-2=3*2^k, using separate 2-adic Newton polygon cluster analysis, and (ii) block antiperiodicity of a Littlewood closure for q=2^a p^b with odd prime p. These are endpoint restrictions for specific algebraic families.",
+        "hypotheses": [
+          "The cyclic P1 and Littlewood closure hypotheses in the source reports hold.",
+          "The exact polynomial, Newton polygon, and reciprocal-lift arguments are independently audited."
+        ],
+        "not_claimed": [
+          "No arithmetic family exclusion is a global-minimizer reduction.",
+          "Neither report settles C-II or Level I.",
+          "No claim here is canonical or proof-audited."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No canonical theorem is changed or extended by this import. The reports work under cyclic phase and stress hypotheses; no source-wide cyclic reduction is supplied.",
+        "replacement_status": "none; retain as unreviewed research and regression evidence."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_cyclic_p1_three_times_power_two_exclusion_2026-09-10.md",
+          "role": "Erdős Problem #99 — cyclic P1: exclude `q-2 = 3*2^k`",
+          "frozen_index": 183,
+          "source_artifact_id": "ART-5D56035B9B92",
+          "source_git_blob_sha": "ef677a5b26843bcce478ffc980d316fee65439c2",
+          "source_sha256": "932407eb9d7a8d8939782bfcf06c9ed8832269210d9dd7828fb30bfdf804478b",
+          "destination_sha256": "932407eb9d7a8d8939782bfcf06c9ed8832269210d9dd7828fb30bfdf804478b",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 183
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_prime_power_periodicity_2026-09-09.md",
+          "role": "Erdős Problem #99 — prime-power odd part forces periodic Reinhardt symmetry",
+          "frozen_index": 186,
+          "source_artifact_id": "ART-2F2A6C35FFA6",
+          "source_git_blob_sha": "d7bd7c6a7ccd34b57fbf9a61885a71a5c1f1073d",
+          "source_sha256": "28e7a1b32a5a2cf621f9e237ded37dae1a6896d407e1b9022d6dbc38ec4e9cda",
+          "destination_sha256": "28e7a1b32a5a2cf621f9e237ded37dae1a6896d407e1b9022d6dbc38ec4e9cda",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 186
+        }
+      ],
+      "dependencies": {
+        "report_declared_prior_work": [
+          {
+            "source_report_declared_dependency": "P2 arithmetic reduction on this branch; PR #118 signed-closure theorem SC.1",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "RS sign-word closure in this PR",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          }
+        ],
+        "registered_theorem_dependencies": [],
+        "computational_evidence": [],
+        "dependency_boundary": "Source prose references are preserved; absent exact relative links are not represented as verified artifact edges."
+      },
+      "validation": {
+        "command": "Frozen source Git blob/SHA-256 and destination bytes checked per artifact; seven exact TeX repair mappings checked. For the q=13 shell regression: python3 research/target_c_s1_q13_shell_regression.py; PYTHONPATH=research python3 research/verify_s1_q13_kkt_endpoints.py.",
+        "result": "Source provenance checks pass for all listed reports. q=13 numerical regressions pass. No independent analytic proof audit was performed.",
+        "boundary": "Numerical KKT/PSD checks and report preservation do not establish global optimality, cyclic source reduction, C-II, or Level I closure."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "global route",
+          "result": "Cyclic phase hypotheses and local stress/tree constraints do not imply that every global minimizer enters the cyclic branch."
+        }
+      ],
+      "next_proof_obligations": [
+        "Independently audit the full 2-adic and Littlewood arguments at the exact imported report hashes.",
+        "Prove a source-wide implication that places every sufficiently large global minimizer in an excluded endpoint family, or identify a separate global contradiction."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "destination_baseline": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+        "destination_integrated_main_at_import": "2bdecc7fe333ff1c0c2ac5c0b206f457a932a3a5",
+        "shard": "2",
+        "frozen_indexes": [
+          183,
+          186
+        ],
+        "per_file_provenance": "docs/research/migration/2026-10-16/ledger/source-main-artifacts.jsonl"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research reports; citation links only, no third-party PDFs or extracted text.",
+        "repository_visibility": "private",
+        "authority_note": "Canonical theorem-state remains authoritative."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-CYCLIC-DH0-REINHARDT-STRUCTURE-20261016",
+      "title": "Cyclic d_H=0 stress, Reinhardt equality, and finite obstructions",
+      "status": "unreviewed source reports; conditional cyclic-endpoint research",
+      "source_lifecycle": "All listed source-main reports are indexed unreviewed/noncanonical. Seven destination files contain only the exact documented TeX form-feed repair; no theorem promotion follows.",
+      "target_scope": [
+        "Target C cyclic primitive-survivor route",
+        "Level I only through the unproved source-wide branch reduction"
+      ],
+      "claim": {
+        "statement": "The d_H=0 report family claims an exact scalar KKT recurrence, equality with a Reuleaux/Reinhardt completion, consequences for force-hull population, area, rattler depth, shell width, contact stress, and packing. It also preserves a q=13 S1 shell where signed closure, positive full-support KKT stress, and maximal-rank PSD stress all coexist; this rejects a shell-only contradiction route.",
+        "hypotheses": [
+          "A sufficiently large cyclic primitive survivor exists in the stated d_H=0 branch and satisfies each report's own hypotheses.",
+          "The individual analytic arguments are not independently audited; numerical q=13 checks are regression evidence only."
+        ],
+        "not_claimed": [
+          "The reports do not prove every global minimizer is cyclic or has d_H=0.",
+          "The q=13 S1 framework is a finite nonglobal shell regression, not a global minimizer or counterexample to Erdős #99.",
+          "The exact d_H=0 results do not close the d_H=1 or d_H=2 branches.",
+          "No source-wide strict-diameter competitor, C-II closure, or Level I closure follows."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No canonical theorem is changed or extended by this import. The reports work under cyclic phase and stress hypotheses; no source-wide cyclic reduction is supplied.",
+        "replacement_status": "none; retain as unreviewed research and regression evidence."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_cyclic_path_stress_recurrence_2026-09-09.md",
+          "role": "Erdős Problem #99 — the full `d_H=0` KKT family reduces to one stress variable per Reuleaux path",
+          "frozen_index": 184,
+          "source_artifact_id": "ART-F40F19F95321",
+          "source_git_blob_sha": "31b2ca87061ad457f4b6fce14afdebba0dbaab49",
+          "source_sha256": "01b69fce5b5a784fe7c811459d32dfeb6ce84e2b97f5257fb1ccf97fd8e55313",
+          "destination_sha256": "d5d48edfdf9964dc4085a9fc17e20375748cb4147ad02c4d4265e79c0bb8b507",
+          "destination_transformed": true,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 184
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_reinhardt_completion_core_growth_2026-09-09.md",
+          "role": "Erdős Problem #99 — Reinhardt completion traps all rattlers and forces a growing diameter core",
+          "frozen_index": 187,
+          "source_artifact_id": "ART-9702F2441320",
+          "source_git_blob_sha": "653b2156fd1a19020740b7f96de37ce895bf28b6",
+          "source_sha256": "0d4beb064e31c6d378faff4c6548b192c81cc9ca8b8e7e27b2892dbfb1e680c0",
+          "destination_sha256": "40378418f85f79054b9b873105e18591f83b405a41fbf49aac1cfc21e26a2ef5",
+          "destination_transformed": true,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 187
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_reinhardt_exact_cap_area_2026-09-09.md",
+          "role": "Erdős Problem #99 — exact area gap between the Reinhardt completion and force hull",
+          "frozen_index": 188,
+          "source_artifact_id": "ART-AD41F741E102",
+          "source_git_blob_sha": "6c85d7f951d868e9637c142734b689bd71d25bd6",
+          "source_sha256": "7119d8ebff1d66fd7e086b95a584c7d7fafa8f8aa0bb6d4d3940890190f849c0",
+          "destination_sha256": "d054964d71ca796d93e5e1f322a83f140acd47f08b00613e3806d225a97e65d9",
+          "destination_transformed": true,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 188
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_reinhardt_exact_collapse_2026-09-09.md",
+          "role": "Erdős Problem #99 — cyclic unicyclic phase collapses to exact Reinhardt equality",
+          "frozen_index": 189,
+          "source_artifact_id": "ART-EF15A8A43F18",
+          "source_git_blob_sha": "1f2ca068c4c22c8d5ddd0a9eddb6533b22bfd1c9",
+          "source_sha256": "1a07f3ff7814068e14e4819f435e2f231b2a675a019ba89427931e4836c982af",
+          "destination_sha256": "1a07f3ff7814068e14e4819f435e2f231b2a675a019ba89427931e4836c982af",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 189
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_reinhardt_force_bulk_closure_2026-09-09.md",
+          "role": "Erdős Problem #99 — exact cyclic Reinhardt phase has no external force-hull population",
+          "frozen_index": 190,
+          "source_artifact_id": "ART-18C18FE66D37",
+          "source_git_blob_sha": "7a2e4a4a62c0bfbd1bd683507a63c8b47d934f5d",
+          "source_sha256": "7713635d0bb3ff08dcb1fba3ab07b2fef283cdf2adbc028785bb0dacae48740c",
+          "destination_sha256": "7713635d0bb3ff08dcb1fba3ab07b2fef283cdf2adbc028785bb0dacae48740c",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 190
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_reinhardt_polygonal_match_2026-09-09.md",
+          "role": "Erdős Problem #99 — cyclic endpoint: Reinhardt/polygonal-isoperimetric scale matching",
+          "frozen_index": 191,
+          "source_artifact_id": "ART-16F8C673845F",
+          "source_git_blob_sha": "ee69a9d37799cd01444bb4d46773f6a9ef127517",
+          "source_sha256": "8ea570999e03baa37cdafdd02ab5c8780ba6ec272403c40d5464eeb9f6e269b8",
+          "destination_sha256": "ab9db94ff5a08cfba910b32f833e8a8b3acbab59de9f4c3ebe3bbc5b50ad3b2d",
+          "destination_transformed": true,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 191
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_reinhardt_rattler_depth_2026-09-09.md",
+          "role": "Erdős Problem #99 — exact Reinhardt shell forces a uniform rattler boundary depth",
+          "frozen_index": 192,
+          "source_artifact_id": "ART-5CE9BA81D26D",
+          "source_git_blob_sha": "549455223828f5d51f12a28b16281db0a50e06f6",
+          "source_sha256": "bbc10be73e70cdbf034869953cdd9c841959822a98a22d2676846d44247681cd",
+          "destination_sha256": "bbc10be73e70cdbf034869953cdd9c841959822a98a22d2676846d44247681cd",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 192
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_reinhardt_second_order_defect_2026-09-09.md",
+          "role": "Erdős Problem #99 — cyclic Reinhardt ladder defect is bounded explicitly by `d_H`",
+          "frozen_index": 193,
+          "source_artifact_id": "ART-774CF2674477",
+          "source_git_blob_sha": "8fc71a64c2225261dcf7e3865be4872422fd63fa",
+          "source_sha256": "3d5b5fd37188c0bf262dd96ed0cde9adcb99c58a7ce1d2cc92a7560a3795db8b",
+          "destination_sha256": "f5b50c8e5a31c7420b6afa7586bdece551e3137517dc922729c53d49dcda1178",
+          "destination_transformed": true,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 193
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_reinhardt_sign_obstruction_2026-09-09.md",
+          "role": "Erdős Problem #99 — cyclic equality gives a Reinhardt sign equation",
+          "frozen_index": 194,
+          "source_artifact_id": "ART-840E4E5A55D7",
+          "source_git_blob_sha": "c224e02f31efa5e64a2742b69d66a55567b519fb",
+          "source_sha256": "1f1cf10680bba3f0c40c2ab9871053f4808f9d4c9bbfc77e703d4a77ebde7d38",
+          "destination_sha256": "1f1cf10680bba3f0c40c2ab9871053f4808f9d4c9bbfc77e703d4a77ebde7d38",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 194
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_reinhardt_uniform_stress_2026-09-09.md",
+          "role": "Erdős Problem #99 — exact Reinhardt shell has a canonical uniform KKT stress",
+          "frozen_index": 195,
+          "source_artifact_id": "ART-76EF7DDB27BF",
+          "source_git_blob_sha": "491cf59d74852477f631dabb672c84f777c42619",
+          "source_sha256": "29c13a976dc3e893b7142ae683a84d9fe3e8c2eec57c982bcd8baf3b21e0fede",
+          "destination_sha256": "29c13a976dc3e893b7142ae683a84d9fe3e8c2eec57c982bcd8baf3b21e0fede",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 195
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_reuleaux_aggregate_composition_energy_2026-09-09.md",
+          "role": "Erdős Problem #99 — additive Reuleaux energy controls the full Reinhardt leaf composition",
+          "frozen_index": 196,
+          "source_artifact_id": "ART-AB02ECDD6D66",
+          "source_git_blob_sha": "c2431aaa014e1281845803bb928e21cecd303877",
+          "source_sha256": "f2f9e2e840d9a3ab823c67964c3accb35ad2531604ab1423f29d6d788eb6ea2b",
+          "destination_sha256": "f2f9e2e840d9a3ab823c67964c3accb35ad2531604ab1423f29d6d788eb6ea2b",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 196
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_rhombus_excess_transport_2026-09-10.md",
+          "role": "Erdős Problem #99 — cyclic circuit Oler cancellation exposes only O(D) rhombus defect",
+          "frozen_index": 197,
+          "source_artifact_id": "ART-F47E8F741FC5",
+          "source_git_blob_sha": "7d5ba62019a52eb81996104c003a923be13b9cb1",
+          "source_sha256": "ee836d8c2e77755c49cce5f84dfd0aafe25281c77d41fafea47d951ba127b220",
+          "destination_sha256": "ee836d8c2e77755c49cce5f84dfd0aafe25281c77d41fafea47d951ba127b220",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 197
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_s1_q13_shell_regression_2026-09-10.md",
+          "role": "Erdős Problem #99 — a strict `q=13` S1 shell survives closure, positive KKT, and maximal-rank PSD stress",
+          "frozen_index": 198,
+          "source_artifact_id": "ART-7A2B3FF788EF",
+          "source_git_blob_sha": "04b4e6ac2ba34b8582fb4a767c698c95f4d809d2",
+          "source_sha256": "061d0caaf299a60d45f3315ff66de15bad11ecde51ff82a07ccb1b378c749b69",
+          "destination_sha256": "8c1ba5ecd2bf7a3a9c7926d5afe3dc326c9332f341b87a770bdfaab7c295b2d5",
+          "destination_transformed": true,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 198
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_second_order_pocket_rigidity_2026-09-11.md",
+          "role": "Erdős Problem #99 — second-order rigidity of the cyclic atomic endpoint",
+          "frozen_index": 199,
+          "source_artifact_id": "ART-5945D6C0AE38",
+          "source_git_blob_sha": "3947652c4cc5f8c2c4183f66df7ecb50335418e3",
+          "source_sha256": "215f316a49caab47fdca566ce4abd5aa10266d6c2a6fc3f3c20ede5f01e74fe1",
+          "destination_sha256": "215f316a49caab47fdca566ce4abd5aa10266d6c2a6fc3f3c20ede5f01e74fe1",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 199
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_selected_genericity_2026-09-09.md",
+          "role": "Erdős Problem #99 — cyclic endpoint: every selected stress is generic and maximal-rank",
+          "frozen_index": 200,
+          "source_artifact_id": "ART-13A54EF55684",
+          "source_git_blob_sha": "e0437f9aa36ad82b719f7529b780aa80a8b83e38",
+          "source_sha256": "1adf50e5a3a6ced31c4bdf04240cc66dba8a942201b42cc52e218a2fd85468c1",
+          "destination_sha256": "1adf50e5a3a6ced31c4bdf04240cc66dba8a942201b42cc52e218a2fd85468c1",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 200
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_shell_local_optimality_2026-09-09.md",
+          "role": "Erdős Problem #99 — cyclic force hull is a locally diameter-minimal equilateral polygon",
+          "frozen_index": 201,
+          "source_artifact_id": "ART-AD769136F935",
+          "source_git_blob_sha": "8f33c4dd11bce5a3971046940cca59090465d0b4",
+          "source_sha256": "f462e80ad6b3208fa13e3adcfe34cf25467b17df20765d3fa95cde28c19fcf3e",
+          "destination_sha256": "f462e80ad6b3208fa13e3adcfe34cf25467b17df20765d3fa95cde28c19fcf3e",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 201
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_star_run_audit_2026-09-09.md",
+          "role": "Erdős Problem #99 — cyclic ordinary-gap audit: path inference is false, star-run saturation survives",
+          "frozen_index": 202,
+          "source_artifact_id": "ART-2BFB2DDC46AB",
+          "source_git_blob_sha": "5eb10d415d2989be9f1f575ce298dc69a94cad1f",
+          "source_sha256": "5672d224fcb8136f1322a5a31aaa2d9e345810cd22b4e1d15fcb0b27a060ebc3",
+          "destination_sha256": "5672d224fcb8136f1322a5a31aaa2d9e345810cd22b4e1d15fcb0b27a060ebc3",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 202
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_uniform_contact_stress_2026-09-09.md",
+          "role": "Erdős Problem #99 — every `d_H=0` KKT stress has asymptotically uniform shell-contact weights",
+          "frozen_index": 207,
+          "source_artifact_id": "ART-F814C5D87563",
+          "source_git_blob_sha": "bfc1ea36e399f388cdb08ced25c4cb51057b833b",
+          "source_sha256": "6f8c22ae589ef273f7a00f276e8b36064bdf2887811fe004141ea577309222a6",
+          "destination_sha256": "6f8c22ae589ef273f7a00f276e8b36064bdf2887811fe004141ea577309222a6",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 207
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_wegner_packing_upgrade_2026-09-09.md",
+          "role": "Erdős Problem #99 — Wegner finite-packing upgrade in the exact cyclic Reinhardt branch",
+          "frozen_index": 210,
+          "source_artifact_id": "ART-1DD5C53C100B",
+          "source_git_blob_sha": "eaabb767f155481982bca94f008440706efe557d",
+          "source_sha256": "2a6ef00b77ae505b9d2f01bcce65f809b921df7148756d234b70e8fb7fc391b2",
+          "destination_sha256": "2b98d79cbea175a0ee64d15045439a0ff6f0e0e5841dbde83c5323d7d49529c9",
+          "destination_transformed": true,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 210
+        }
+      ],
+      "dependencies": {
+        "report_declared_prior_work": [
+          {
+            "source_report_declared_dependency": "AC/AD on PR #118; DG on PR #119",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "CE exact cyclic difference-body equality in this stacked PR; elementary Minkowski polygon edge merge; elementary cyclotomic minimal polynomials",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "CY cyclic endpoint, DA/DP diameter-direction polygon, polygonal isoperimetry",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "CY.1-CY.2, C53/C56, Theorem Z zero-transfer exclusion, SEPq degree contradiction, C11 Schur/SVD correspondence",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "D1/SC on PR #118; RSQ on this branch",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "DP exact difference-body lower bound and `q/D->pi`; classical polygonal isoperimetric inequality; Reinhardt's perimeter-diameter inequality for convex polygons",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "FB force-hull closure, RE exact cyclic perimeter, RC Reuleaux completion/core notation",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "KL signed-stress recurrence in this PR; PR #125 LC Reuleaux leaf composition; exact gap angle `theta=pi/q`",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "KL/EZ/PP in this PR; PS path-stress reduction; PR #125 AE bound `phi_max=O(D^-1/3)`",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "LC Reuleaux leaf composition in this PR; PR #118 exact Reinhardt completion and WG finite-packing area bound",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "RE exact Reinhardt collapse, CY/CG selected-stress framework",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "RE exact Reinhardt equality, C65 full diameter visibility, Oler packing bound, canonical strict global diameter comparison",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "RE exact Reinhardt equality, RC Reuleaux completion, promoted C-I restoration `C=C_*`, C65 rattler isolation",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "RE exact Reinhardt relation and FB cap decomposition",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "RE exact Reinhardt shell, RC Reuleaux completion, RD rattler depth",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "RP `q_R(D)-q=O(D^-2)`, DA exact difference-body lower bound, polygonal isoperimetry",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "UFB `F=conv A`, CY/C-I actual contact graph `C_q`, C65 contact-then-diameter lexicographic normalization",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          }
+        ],
+        "registered_theorem_dependencies": [],
+        "computational_evidence": [
+          "research/target_c_s1_q13_shell_regression.py",
+          "research/verify_s1_q13_kkt_endpoints.py"
+        ],
+        "dependency_boundary": "Source prose references are preserved; absent exact relative links are not represented as verified artifact edges."
+      },
+      "validation": {
+        "command": "Frozen source Git blob/SHA-256 and destination bytes checked per artifact; seven exact TeX repair mappings checked. For the q=13 shell regression: python3 research/target_c_s1_q13_shell_regression.py; PYTHONPATH=research python3 research/verify_s1_q13_kkt_endpoints.py.",
+        "result": "Source provenance checks pass for all listed reports. q=13 numerical regressions pass. No independent analytic proof audit was performed.",
+        "boundary": "Numerical KKT/PSD checks and report preservation do not establish global optimality, cyclic source reduction, C-II, or Level I closure."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "q=13 S1 shell-only route",
+          "result": "A strict q=13 shell survives signed closure, positive full-support KKT stress, and maximal-rank PSD stress; this blocks the shell-only contradiction implication."
+        }
+      ],
+      "next_proof_obligations": [
+        "Audit the scalar recurrence, exact Reinhardt collapse, force-hull containment, area/depth bounds, and their stated canonical inputs independently.",
+        "Derive the source-wide branch reduction from every sufficiently large global minimizer without using the withdrawn inverse-phase inference.",
+        "For the q=13 regression, retain the numerical boundary: no interval-certified global optimality statement is supplied.",
+        "Connect a valid branch theorem to a strict diameter competitor or a finite endpoint contradiction."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "destination_baseline": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+        "destination_integrated_main_at_import": "2bdecc7fe333ff1c0c2ac5c0b206f457a932a3a5",
+        "shard": "2",
+        "frozen_indexes": [
+          184,
+          187,
+          188,
+          189,
+          190,
+          191,
+          192,
+          193,
+          194,
+          195,
+          196,
+          197,
+          198,
+          199,
+          200,
+          201,
+          202,
+          207,
+          210
+        ],
+        "per_file_provenance": "docs/research/migration/2026-10-16/ledger/source-main-artifacts.jsonl"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research reports; citation links only, no third-party PDFs or extracted text.",
+        "repository_visibility": "private",
+        "authority_note": "Canonical theorem-state remains authoritative."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-CYCLIC-MULTIPHASE-TOPOLOGY-CAPACITY-20261016",
+      "title": "Cyclic multi-phase topology, pocket surplus, and capacity limits",
+      "status": "unreviewed source reports; conditional cyclic-endpoint research",
+      "source_lifecycle": "All listed source-main reports are indexed unreviewed/noncanonical. Seven destination files contain only the exact documented TeX form-feed repair; no theorem promotion follows.",
+      "target_scope": [
+        "Target C cyclic primitive-survivor route",
+        "Level I only through the unproved source-wide branch reduction"
+      ],
+      "claim": {
+        "statement": "The multi-phase reports claim a cyclic pocket-surplus bound, a remaining capacity gap, convex-thrackle tree-cut structure, four-block normal forms in d_H=1 and d_H=2, and phase-uniform force-hull/width consequences. These are branch-conditional tools, not a proof that the source enters those phases or that their capacity gap closes.",
+        "hypotheses": [
+          "The source belongs to the cyclic primitive survivor framework and meets the phase-specific contact, diameter-tree, and force-visible hypotheses stated in each report.",
+          "Each report's proof and the compatibility of shared notation across d_H phases require independent review."
+        ],
+        "not_claimed": [
+          "The surplus-capacity report itself classifies cyclic C-II closure as unproved.",
+          "The reports do not exclude a noncyclic global minimizer or derive the missing global population bound.",
+          "A local finite stress/tree condition is not promoted to a global source theorem."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No canonical theorem is changed or extended by this import. The reports work under cyclic phase and stress hypotheses; no source-wide cyclic reduction is supplied.",
+        "replacement_status": "none; retain as unreviewed research and regression evidence."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_cyclic_pocket_complexity_2026-09-11.md",
+          "role": "Erdős Problem #99 — cyclic pocket complexity after the exceptional-face floor",
+          "frozen_index": 185,
+          "source_artifact_id": "ART-7EA43AA25AF7",
+          "source_git_blob_sha": "2371762b7609ceb39b4d0fc1cc3f10aa59f35c13",
+          "source_sha256": "20ef31a6ac211d493abea8a674aa381da1bd7d9ef0a560e096e18d4eaf1cc837",
+          "destination_sha256": "20ef31a6ac211d493abea8a674aa381da1bd7d9ef0a560e096e18d4eaf1cc837",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 185
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_surplus_cap_and_capacity_gap_2026-09-11.md",
+          "role": "Erdős Problem #99 — cyclic surplus cap and the remaining capacity gap",
+          "frozen_index": 203,
+          "source_artifact_id": "ART-1FC020EEE920",
+          "source_git_blob_sha": "2c79e314341d873d2ffebe3fcbd8c8a92b1535bd",
+          "source_sha256": "fa6249519f2a3e4404681ba75c194b2cce00d623bcbdc07f1d0dffc2a590f766",
+          "destination_sha256": "fa6249519f2a3e4404681ba75c194b2cce00d623bcbdc07f1d0dffc2a590f766",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 203
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_thrackle_tree_cut_2026-09-09.md",
+          "role": "Erdős Problem #99 — cyclic endpoint: convex-thrackle tree cuts and reciprocal parallelograms",
+          "frozen_index": 204,
+          "source_artifact_id": "ART-D885AE81B4DE",
+          "source_git_blob_sha": "9b6f10789ba64e082a81133ef311a6af215a240d",
+          "source_sha256": "8dd990276d51d56ab6b1d66b324022acaf04f6b8f0b0261e5ccc7508cb46bb45",
+          "destination_sha256": "8dd990276d51d56ab6b1d66b324022acaf04f6b8f0b0261e5ccc7508cb46bb45",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 204
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_tree_endpoint_unification_2026-09-09.md",
+          "role": "Erdős Problem #99 — cyclic `d_H=1` zeroed edges force four-block corner cuts",
+          "frozen_index": 205,
+          "source_artifact_id": "ART-06BF898834C2",
+          "source_git_blob_sha": "6846d7b2d23d45afe138892266c3071f38570960",
+          "source_sha256": "3823cd112352281644b0f0c38f83e5136b73c7fdc8aaaa0ede7247ac1e3376dd",
+          "destination_sha256": "3823cd112352281644b0f0c38f83e5136b73c7fdc8aaaa0ede7247ac1e3376dd",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 205
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_two_tree_four_block_normal_form_2026-09-09.md",
+          "role": "Erdős Problem #99 — cyclic `d_H=2` collapses to a four-block two-tree normal form",
+          "frozen_index": 206,
+          "source_artifact_id": "ART-B443F99586F2",
+          "source_git_blob_sha": "90d2685f03edb306c9e1bd4b1f4576d6c685970d",
+          "source_sha256": "7780fa4bd1f7d76a1bbae96f1ee85ab6a96dd439195b0bbec3b214bb8df8bf63",
+          "destination_sha256": "7780fa4bd1f7d76a1bbae96f1ee85ab6a96dd439195b0bbec3b214bb8df8bf63",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 206
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_uniform_width_collapse_2026-09-09.md",
+          "role": "Erdős Problem #99 — every cyclic force hull is uniformly constant-width to order `1/D`",
+          "frozen_index": 208,
+          "source_artifact_id": "ART-8DC434EF0E29",
+          "source_git_blob_sha": "ca7ef5db4644dccff46fc88fd68411386fba2004",
+          "source_sha256": "b3d17cb6be326c6c599b032abb3e50bac18b10d46ca9d88f7eb9700ad40370a8",
+          "destination_sha256": "b3d17cb6be326c6c599b032abb3e50bac18b10d46ca9d88f7eb9700ad40370a8",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 208
+        },
+        {
+          "path": "docs/reports/target_c_cyclic_universal_force_bulk_closure_2026-09-09.md",
+          "role": "Erdős Problem #99 — all cyclic phases have no external force-hull population",
+          "frozen_index": 209,
+          "source_artifact_id": "ART-EE281D3D6A3A",
+          "source_git_blob_sha": "c4834e34fc09569017e945d16ecec74b1114fe04",
+          "source_sha256": "6e65184a8574b3f867ad0867dc0c60f81a1f987753d7578b36a36427a93b7494",
+          "destination_sha256": "6e65184a8574b3f867ad0867dc0c60f81a1f987753d7578b36a36427a93b7494",
+          "destination_transformed": false,
+          "detailed_disposition_record": "docs/research/migration/2026-10-16/shards/02/batch-183-210/dispositions.jsonl",
+          "detailed_disposition_index": 209
+        }
+      ],
+      "dependencies": {
+        "report_declared_prior_work": [
+          {
+            "source_report_declared_dependency": "C67 projective diameter-direction separation, RP/R2 ladder notation, DA inclusion `P_H subset F-F`",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "CY cyclic force hull, RP Reinhardt-scale perimeter matching, classical Reinhardt perimeter-diameter inequality",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "DC two-tree classification, TC same-color block argument, CY full positive contact cycle and unique normalized stress",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "DC, D2, TC, LF, CG selected scalar-rank theorem",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          },
+          {
+            "source_report_declared_dependency": "convex position of loaded terminals, geometric-thrackle property of the diameter graph, CY full positive contact cycle, LF/CG KKT face structure",
+            "validation_status": "not yet reconciled to an exact source PR head or destination path; informational prior-work reference only"
+          }
+        ],
+        "registered_theorem_dependencies": [],
+        "computational_evidence": [],
+        "dependency_boundary": "Source prose references are preserved; absent exact relative links are not represented as verified artifact edges."
+      },
+      "validation": {
+        "command": "Frozen source Git blob/SHA-256 and destination bytes checked per artifact; seven exact TeX repair mappings checked. For the q=13 shell regression: python3 research/target_c_s1_q13_shell_regression.py; PYTHONPATH=research python3 research/verify_s1_q13_kkt_endpoints.py.",
+        "result": "Source provenance checks pass for all listed reports. q=13 numerical regressions pass. No independent analytic proof audit was performed.",
+        "boundary": "Numerical KKT/PSD checks and report preservation do not establish global optimality, cyclic source reduction, C-II, or Level I closure."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "global route",
+          "result": "Cyclic phase hypotheses and local stress/tree constraints do not imply that every global minimizer enters the cyclic branch."
+        }
+      ],
+      "next_proof_obligations": [
+        "Audit the tree-cut and four-block normal-form arguments with all zero-stress edge cases.",
+        "Find the exact missing inequality that converts the pocket surplus cap into a contradiction in each phase.",
+        "Compare the d_H=0,1,2 branches under one common global objective and identify a finite valid endpoint."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "destination_baseline": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+        "destination_integrated_main_at_import": "2bdecc7fe333ff1c0c2ac5c0b206f457a932a3a5",
+        "shard": "2",
+        "frozen_indexes": [
+          185,
+          203,
+          204,
+          205,
+          206,
+          208,
+          209
+        ],
+        "per_file_provenance": "docs/research/migration/2026-10-16/ledger/source-main-artifacts.jsonl"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research reports; citation links only, no third-party PDFs or extracted text.",
+        "repository_visibility": "private",
+        "authority_note": "Canonical theorem-state remains authoritative."
+      }
     }
   ]
 }
