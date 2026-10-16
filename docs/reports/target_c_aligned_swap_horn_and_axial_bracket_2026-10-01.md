@@ -569,7 +569,7 @@ one of the 4096 zero-satisfiable three-variable Horn systems is checked against
 an independent full truth table, in addition to the previous 176 two-variable
 2-CNF checks and actual source fixtures.
 
-[The new exact verifier](../../research/verify_aligned_swap_horn_obstructions.py)
+[The new exact verifier](../research/migration/2026-10-16/shards/01/support/research/verify_aligned_swap_horn_obstructions.py)
 checks the four rational joint-only and three two-hit unit-chord regressions,
 the failed slack estimate,
 the rational contradiction constants, 2934 independent bracketed pair/move
