@@ -1,0 +1,423 @@
+# Target C-II — free reflection modules force a core gate or two lower gates
+
+**Date:** 2026-09-17  
+**Status:** proved candidate awaiting promotion; proof-only strengthening of the current shallow-tooth reflection branch  
+**Scope:** FREE-MODULE side of the slow-scale reflection module-anchor dichotomy at `eta=3/26`  
+**Dependencies:** free-module rigid near-contact gate; C-I contact-minimal strong-contact closure; connected positive contact support; C65 full diameter visibility; retained-tooth reflection lower safety  
+**Certificate:** `research/verify_target_c_tooth_reflection_free_module_two_gate_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The first rigid-gate theorem says that a FREE reflection module cannot translate its whole upper-blocker set inward far enough to make the reflected apex diameter-feasible without meeting at least one new unit-distance obstruction. A single such gate is not the end of the repair attempt. If the guard is itself one of the canonical fully inactive rattlers, it can be absorbed into the moving cluster and translated with the blockers. The one new contact is then preserved exactly.
+
+That one-step absorption is enough to force a stronger alternative.
+
+Let
+
+\[
+U=\{z\in A:|z-q|>D\},
+\qquad
+L=D+\delta,
+\qquad
+N={y-q\over L},
+\]
+
+be one FREE module, with canonical farthest blocker `y`, and put
+
+\[
+t_D:=\delta+D^{-1/3}.
+\]
+
+As before,
+
+\[
+0<\delta<h_*:=\frac{\sqrt{303}}{52}=0.3347479843\ldots .
+\]
+
+Then every FREE module satisfies the following exact finite alternative.
+
+\[
+\boxed{
+\begin{array}{ll}
+\text{CORE-GATE:}&\text{within at most two gate steps, the moving module meets an original}\\
+&\text{nonisolated contact-core vertex at unit distance;}\\[1mm]
+\text{DOUBLE-GATE:}&\text{before the reflected apex becomes diameter-feasible, at least two distinct}\\
+&\text{new lower gate edges are forced among original fully inactive vertices.}
+\end{array}}
+\tag{TG.1}
+\]
+
+Every original source pair underlying one of those gate edges obeys
+
+\[
+\boxed{
+1<|uv|\le 1+t_D
+<1+h_*+o(1)
+=1.3347479843\ldots+o(1).
+}
+\tag{TG.2}
+\]
+
+The CORE-GATE alternative is also local: the core guard is connected to the original blocker set `U` by a chain of at most two original source pairs satisfying (TG.2). Hence it lies within
+
+\[
+\boxed{2(1+h_*)+o(1)=2.6694959686\ldots+o(1)}
+\tag{TG.3}
+\]
+
+of `U`.
+
+The point of (TG.1) is that a FREE module cannot be protected by one isolated rattler and then become repairable. One isolated guard is insufficient. Either the repair reaches the old force-visible contact core, or the lower obstruction must have multiplicity at least two.
+
+---
+
+## 1. Reuse the first rigid gate
+
+For the original blocker set use the rigid motion
+
+\[
+z(s)=z-sN,
+\qquad z\in U,
+\qquad 0\le s\le t_D.
+\tag{TG.4}
+\]
+
+The free-module rigid-gate theorem already proves two facts for all sufficiently large `D`:
+
+1. no upper-distance violation is created anywhere along (TG.4);
+2. at `s=t_D`, every translated blocker satisfies
+   \[
+   |z(t_D)-q|<D.
+   \tag{TG.5}
+   \]
+
+Since every `z in U` is contact-isolated in the original source, distances internal to `U` are strictly greater than one and remain constant under (TG.4).
+
+Let `s_1` be the first time at which some moving blocker meets a fixed source point at unit distance. The audited gate theorem allows the endpoint case
+
+\[
+0<s_1\le t_D.
+\tag{TG.6}
+\]
+
+If at `s_1` at least two distinct cross-pairs reach unit distance, then the DOUBLE-GATE conclusion is already present unless one of the fixed endpoints belongs to the old nonisolated contact core, in which case CORE-GATE already holds.
+
+It remains only to treat the case of exactly one first gate,
+
+\[
+|z-s_1N-v|=1,
+\qquad z\in U,
+\qquad v\notin U.
+\tag{TG.7}
+\]
+
+If `v` has positive old contact degree, this is CORE-GATE. So assume from now on that `v` is contact-isolated in the original source.
+
+By C65 full diameter visibility, every contact-isolated point is also actual-diameter-isolated. Thus
+
+\[
+\deg_C(v)=\deg_H(v)=0.
+\tag{TG.8}
+\]
+
+The first gate itself gives the original-source bound
+
+\[
+1<|z-v|\le 1+s_1\le1+t_D,
+\tag{TG.9}
+\]
+
+which is (TG.2) for the first edge.
+
+---
+
+## 2. Absorb the unique inactive guard
+
+At time `s_1`, add `v` to the moving cluster. For `s in [s_1,t_D]` define
+
+\[
+v(s):=v-(s-s_1)N,
+\tag{TG.10}
+\]
+
+while every blocker continues to follow (TG.4).
+
+The first new contact is preserved exactly:
+
+\[
+|z(s)-v(s)|=1
+\qquad(s\ge s_1).
+\tag{TG.11}
+\]
+
+Every other blocker-to-`v` distance was strictly greater than one at the unique first event and is also preserved from then on. Distances internal to `U` remain unchanged as well.
+
+The only possible new lower obstruction is therefore another contact between the enlarged moving cluster `U union {v}` and a still-fixed source point.
+
+The only issue that must be rechecked is the upper diameter bound for the newly absorbed point `v`.
+
+---
+
+## 3. The absorbed guard stays in the same support cap
+
+Write
+
+\[
+H=h_K(N),
+\qquad
+a_r:=H-N\cdot r
+\]
+
+for support depth in the canonical module direction.
+
+For every original blocker the rigid-gate theorem gives
+
+\[
+a_z\le B_D=O(\sqrt D).
+\tag{TG.12}
+\]
+
+At the first gate, (TG.7) implies
+
+\[
+\begin{aligned}
+a_v
+&=H-N\cdot v\\
+&\le H-N\cdot(z-s_1N)+1\\
+&=a_z+s_1+1\\
+&\le B_D+t_D+1.
+\end{aligned}
+\tag{TG.13}
+\]
+
+Hence
+
+\[
+\boxed{a_v=O(\sqrt D).}
+\tag{TG.14}
+\]
+
+So the absorbed guard lies in the same `O(sqrt(D))` support cap as the blocker module.
+
+---
+
+## 4. Moving the absorbed guard creates no upper violation
+
+Fix a source point `w` that remains fixed after `s_1`. Put `tau=s-s_1`, so
+
+\[
+0\le\tau\le t_D-s_1<t_D<\frac12
+\]
+
+for all sufficiently large `D`.
+
+Suppose, for contradiction, that
+
+\[
+|v-\tau N-w|>D.
+\tag{TG.15}
+\]
+
+The original source satisfies `|v-w|<=D`. Squaring gives
+
+\[
+|v-\tau N-w|^2-|v-w|^2
+=-2\tau N\cdot(v-w)+\tau^2>0,
+\]
+
+hence
+
+\[
+N\cdot(v-w)<\frac\tau2<\frac14.
+\tag{TG.16}
+\]
+
+Therefore
+
+\[
+a_w-a_v=N\cdot(v-w)<\frac14,
+\]
+
+and (TG.14) gives
+
+\[
+\boxed{a_w=O(\sqrt D).}
+\tag{TG.17}
+\]
+
+The canonical full-source circumradius estimate places the whole source in a disk of radius
+
+\[
+\frac D2+O(\sqrt D),
+\]
+
+while the canonical support line in direction `N` is at signed radius
+
+\[
+\frac D2-O(\sqrt D).
+\]
+
+Two source points whose support depths are both `O(sqrt(D))` therefore have transverse coordinates only `O(D^(3/4))`. Consequently
+
+\[
+|v-w|=O(D^{3/4})=o(D).
+\tag{TG.18}
+\]
+
+Since `tau<1/2`,
+
+\[
+|v-\tau N-w|\le|v-w|+\tau=o(D)<D,
+\]
+
+contradicting (TG.15).
+
+Thus
+
+\[
+\boxed{|v(s)-w|\le D}
+\tag{TG.19}
+\]
+
+throughout the continuation. Pairs between `v(s)` and the moving blockers are constant after `s_1`; all other pairs are covered by the original rigid-gate theorem. The one-guard absorbed continuation therefore creates no upper-diameter violation anywhere.
+
+---
+
+## 5. If no second gate appears, the terminal repair contradicts the canonical normalization
+
+Assume no second lower gate occurs on `[s_1,t_D]`, including at the terminal time.
+
+Then at `s=t_D`:
+
+- every blocker in `U` is strictly within diameter `D` of `q` by (TG.5);
+- the first gate `zv` is still exactly unit length;
+- every other moving-cluster/fixed-source distance is strictly greater than one;
+- no upper-distance violation has occurred.
+
+The absorbed guard also remains diameter-safe relative to `q`. Indeed (TG.13) gives
+
+\[
+N\cdot(v-q)=L-a_v=D-O(\sqrt D)>0.
+\tag{TG.20}
+\]
+
+Hence moving `v` by `-tau N` strictly decreases its distance to `q` for large `D`. Since `v notin U`, originally `|v-q|<=D`, and therefore
+
+\[
+|v(t_D)-q|<D.
+\tag{TG.21}
+\]
+
+Equation (TG.20) also gives `|v(t_D)-q|>1` for large `D`. Every translated blocker is at distance `>D-t_D>1` from `q`.
+
+Now replace the unloaded shallow apex `x` by its reflected point `q`.
+
+The retained-tooth reflection theorem gives unit separation from all fixed original source points, with exactly the two intended base equalities
+
+\[
+|q-a|=|q-b|=1.
+\tag{TG.22}
+\]
+
+Equations (TG.5) and (TG.21) handle the moved cluster. Thus the reflected configuration is unit-separated and has diameter at most `D`; global optimality forces its diameter to equal `D`.
+
+Because the first gate was unique and no second gate appeared, exactly one new contact has been created, namely `zv`. Both endpoints were old contact isolates, so this is a separate two-vertex contact component. The reflection preserves the two base contacts and breaks every other old contact at `x`.
+
+Let
+
+\[
+d:=\deg_C(x)\ge3
+\]
+
+by canonical C26. The terminal reflected source has contact count
+
+\[
+|C'|=|C|-(d-2)+1=|C|-(d-3).
+\tag{TG.23}
+\]
+
+If `d>=4`, then `|C'|<|C|`, contradicting the primary contact-minimal choice among triangle-free global minimizers.
+
+If `d=3`, then `|C'|=|C|`. The new source is still triangle-free: the only new contact is the isolated edge `zv`, and the reflected apex has no contact other than `qa,qb`; moreover `|a-b|>1` for a shallow tooth. Hence the new source is another contact-minimal triangle-free global minimizer.
+
+C-I then makes every one of its actual contacts strong. Taking a relative-interior normalized stress makes the positive contact graph equal to the whole contact graph. Canonical connected positive support says that graph has exactly one nontrivial connected component.
+
+But `zv` is one nontrivial component, while `q` together with `a,b` lies in another. Contradiction.
+
+Therefore the absorbed one-gate repair cannot reach `t_D` without another gate.
+
+---
+
+## 6. The second event gives the claimed alternative
+
+A second event has a moving endpoint `p(s_2)` and a still-fixed original source point `w`, with
+
+\[
+|p(s_2)-w|=1,
+\qquad
+s_1<s_2\le t_D.
+\tag{TG.24}
+\]
+
+If `w` has positive old contact degree, CORE-GATE holds. If `w` is contact-isolated, C65 again makes it fully inactive, and the first edge together with this second edge gives DOUBLE-GATE.
+
+The second original-source pair also satisfies (TG.2). If the moving endpoint comes from an original blocker `u in U`, then
+
+\[
+|u-w|\le1+s_2\le1+t_D.
+\]
+
+If the moving endpoint is the absorbed guard, then
+
+\[
+|v-w|\le1+(s_2-s_1)\le1+t_D.
+\]
+
+Thus every edge in the local gate chain is an original strict noncontact of length at most `1+h_*+o(1)`.
+
+If CORE-GATE occurs only at the second event, the first inactive guard supplies a two-edge chain from `U` to the old contact core. This proves (TG.3).
+
+---
+
+## 7. Source-wide consequence for the FREE side
+
+The module-anchor theorem gives a FREE-MODULE population of at least
+
+\[
+\left(\frac{c_*}{2}-o(1)\right)\frac{D^{1/4}}{\kappa_D},
+\qquad
+c_*=0.129220199818177\ldots,
+\]
+
+whenever the FREE side wins the anchored/free split.
+
+Apply (TG.1) to every retained FREE module. The slow-scale module separation is
+
+\[
+\Omega(\kappa_DD^{3/4}),
+\]
+
+whereas every one- or two-step gate endpoint lies only `O(1)` from its own blocker set. Hence gate chains from distinct modules are vertex-disjoint for sufficiently large `D`.
+
+After one final two-way pigeonhole, the FREE branch therefore has one of the following populations:
+
+\[
+\boxed{
+\left(\frac{c_*}{4}-o(1)\right)\frac{D^{1/4}}{\kappa_D}
+}
+\tag{TG.25}
+\]
+
+with
+
+\[
+\frac{c_*}{4}=0.03230504995454425\ldots .
+\]
+
+Either:
+
+1. **CORE-CHAIN:** that many distinct free modules have a distinct old contact-core vertex within at most two `1+h_*+o(1)` near-unit hops of the blocker cap; or
+2. **DOUBLE-RATTLER:** that many distinct free modules contain two distinct original strict noncontact pairs of length at most `1+h_*+o(1)`, all of whose endpoints are old fully inactive rattlers.
+
+This is strictly stronger than the one-gate theorem. A FREE module cannot terminate in a single isolated near-contact obstruction. The lower-distance obstruction either reaches the force-visible contact core within two steps or duplicates inside the inactive population.
+
+**Disposition:** proved one-step inactive-guard absorption and the resulting two-gate/core amplification for FREE reflection modules. C-II and Level I remain open. The next local targets are to rule out the DOUBLE-RATTLER two-edge patterns in a thin blocker cap, or to exploit the CORE-CHAIN population to couple the reflection braid directly back to the positive contact network.

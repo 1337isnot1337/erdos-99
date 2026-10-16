@@ -1,0 +1,294 @@
+# Erdős Problem #99 — singleton/hole incidence coupling
+
+**Date:** 2026-09-14  
+**Target:** C-II, canonical full-core Type-II branch  
+**Dependencies:** audited-working stopped-train decomposition; strict-rhombus hole charge; detour-free exceptional-train gate  
+**Claim class:** proof-only structural refinement; theorem-state authority unchanged
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The existing strict-rhombus hole theorem charges every bounded-hole boundary edge to a bounded exceptional-face edge incidence:
+
+\[
+P_{\rm hole}\le 4f+Q.
+\]
+
+The exceptional-singleton gate separately counts singleton stopped trains having at least one bounded exceptional-face terminal incidence; call that number `S_E`.
+
+These two charges are not independent. A hole-boundary edge belongs to a strict rhombus, while a singleton stopped-train edge belongs to no strict rhombus. Therefore their chosen exceptional-face incidences are disjoint. The exact sharpened budget is
+
+\[
+\boxed{P_{\rm hole}+S_E\le4f+Q.}
+\tag{SH.1}
+\]
+
+Consequently
+
+\[
+\boxed{5g_R+S_E\le4f+Q,}
+\tag{SH.2}
+\]
+
+where `g_R` is the total number of bounded complementary components of the full strict-rhombus complex.
+
+This strengthens two rhombic-complex outputs. If `T_R` is the number of non-singleton rhombic stopped trains, then
+
+\[
+\boxed{
+\dim\mathcal F_{\rm train}
+\ge T_R-{2\over5}(4f+Q-S_E),
+}
+\tag{SH.3}
+\]
+
+and if `N_oo` denotes rhombic trains whose two ends lie on the unbounded-component boundary of the strict-rhombus complex, then
+
+\[
+\boxed{
+N_{oo}\ge T_R-(4f+Q)+S_E.
+}
+\tag{SH.4}
+\]
+
+Thus the exceptional-singleton escape simultaneously removes capacity from bounded rhombic holes and creates additional exact one-coordinate shears in the isolated rhombus subframework.
+
+Combining (SH.1) with the detour-free gate gives a correlated lower bound containing no separate `S_E` term. Put
+
+\[
+X:=Q-f,
+\qquad
+T_R=2\sqrt{R_4}+{\sigma_R\over2},
+\]
+
+and
+
+\[
+c_{DF}:=\sqrt{\Delta_2}-{\pi\over4}+0.00105
+=0.167964643466509\ldots .
+\]
+
+The detour-free gate is
+
+\[
+\sigma_R+2S_E
+\ge c_{DF}D+{5\over2}k+X-o(D).
+\tag{SH.5}
+\]
+
+Then (SH.3) implies
+
+\[
+\boxed{
+\dim\mathcal F_{\rm train}
+\ge
+2\sqrt{R_4}
++{c_{DF}\over5}D
++{k\over2}
+-2f-{X\over5}
++{3\over10}\sigma_R
+-o(D),
+}
+\tag{SH.6}
+\]
+
+while (SH.4) implies
+
+\[
+\boxed{
+N_{oo}
+\ge
+2\sqrt{R_4}
++{c_{DF}\over2}D
++{5\over4}k
+-5f-{X\over2}
+-o(D).
+}
+\tag{SH.7}
+\]
+
+Equations (SH.6)--(SH.7) do not close C-II by row count: non-rhombus contact bars and diameter bars can still lock these rhombic-subframework motions. Their value is that the large-`S_E` branch can no longer be treated as simultaneously maximizing bounded-hole topology. Any later locking theorem may use the reduced hole budget rather than paying `4f+Q` and `S_E` independently.
+
+---
+
+## 1. Incidence partition
+
+Let `mathcal R` be the union of all closed strict-rhombus faces. For every physical rhombus-boundary edge occurrence bordering a bounded complementary component of `mathcal R`, the existing hole-charge theorem maps that occurrence injectively to the incidence of the same contact edge with the bounded exceptional face on its other side. Denote the image set of incidences by `I_hole`. Thus
+
+\[
+|I_{\rm hole}|=P_{\rm hole}.
+\tag{SH.8}
+\]
+
+Now let `E_E` be the set of singleton stopped trains having at least one terminal incidence on a bounded exceptional face. By definition `|E_E|=S_E`. For each singleton edge choose one such bounded exceptional-face terminal incidence. Distinct singleton stopped trains are distinct contact edges, hence the chosen incidences form a set `I_sing` with
+
+\[
+|I_{\rm sing}|=S_E.
+\tag{SH.9}
+\]
+
+The two incidence sets are disjoint. An incidence in `I_hole` belongs to an edge incident with a strict rhombus on its opposite side, so that edge lies in the strict-rhombus complex and belongs to a non-singleton rhombic stopped train. An incidence in `I_sing` belongs to a singleton stopped-train edge, which by the exact decomposition `T=T_R+S` lies in no strict rhombus. One contact edge cannot satisfy both descriptions.
+
+Every incidence in either set is one of the bounded exceptional-face boundary incidences, whose total number is exactly
+
+\[
+\sum_F\deg F=4f+Q.
+\tag{SH.10}
+\]
+
+Therefore
+
+\[
+P_{\rm hole}+S_E
+=|I_{\rm hole}|+|I_{\rm sing}|
+\le4f+Q,
+\]
+
+proving (SH.1).
+
+No assumption is made that a singleton edge has only one exceptional side. If it has two, choosing either one is enough; the argument uses one distinct incidence per singleton train.
+
+---
+
+## 2. Hole and train-flex consequences
+
+Every bounded complementary component of `mathcal R` has physical boundary length at least five in the triangle-free branch. Hence
+
+\[
+5g_R\le P_{\rm hole}.
+\]
+
+Together with (SH.1),
+
+\[
+5g_R+S_E\le4f+Q,
+\]
+
+which proves (SH.2).
+
+The train-angle period theorem gives
+
+\[
+\dim\mathcal F_{\rm train}\ge T_R-2g_R.
+\tag{SH.11}
+\]
+
+Using (SH.2),
+
+\[
+g_R\le{4f+Q-S_E\over5},
+\]
+
+so
+
+\[
+\dim\mathcal F_{\rm train}
+\ge T_R-{2\over5}(4f+Q-S_E),
+\]
+
+proving (SH.3).
+
+Likewise every rhombic train that is not unbounded-boundary-to-unbounded-boundary has at least one endpoint occurrence on a bounded hole. Assign one such occurrence to each such train. Distinct trains have distinct terminal boundary occurrences, so
+
+\[
+T_R-N_{oo}\le P_{\rm hole}.
+\]
+
+Equation (SH.1) gives
+
+\[
+N_{oo}\ge T_R-(4f+Q)+S_E,
+\]
+
+which is (SH.4).
+
+The `N_oo` in this note is the rhombic-complex notion: both ends lie on the boundary of the unbounded complementary component of `mathcal R`. It is not identified with the narrower full-contact-graph notion of a train terminating twice on the actual outer contact face.
+
+---
+
+## 3. Composition with the detour-free gate
+
+Write `Q=f+X`. From (SH.3),
+
+\[
+\begin{aligned}
+\dim\mathcal F_{\rm train}
+&\ge
+2\sqrt{R_4}+{\sigma_R\over2}
+-2f-{2X\over5}+{2S_E\over5}\\
+&=
+2\sqrt{R_4}-2f-{2X\over5}
++{3\sigma_R\over10}
++{\sigma_R+2S_E\over5}.
+\end{aligned}
+\tag{SH.12}
+\]
+
+Insert (SH.5) to obtain (SH.6).
+
+Similarly (SH.4) gives
+
+\[
+\begin{aligned}
+N_{oo}
+&\ge
+2\sqrt{R_4}+{\sigma_R\over2}-5f-X+S_E\\
+&=
+2\sqrt{R_4}-5f-X
++{\sigma_R+2S_E\over2}.
+\end{aligned}
+\tag{SH.13}
+\]
+
+Using (SH.5) gives (SH.7).
+
+The signs are important: the positive `X/2` supplied by (SH.5) cancels half of the `-X` exceptional-incidence cost in (SH.13). In the train-flex inequality it cancels one of the two fifths of `X`.
+
+---
+
+## 4. Endpoint-scale diagnostic
+
+For orientation only, on the narrow formal profile
+
+\[
+{R_4\over D^2}\to\Delta_2,
+\qquad
+{f\over D}\to f_*,
+\qquad
+{X\over D}\to0,
+\qquad
+{k\over D}\to0,
+\]
+
+where
+
+\[
+f_*:=\sqrt{\Delta_2}-{\pi\over4}+0.00021,
+\]
+
+(SH.7) gives
+
+\[
+\liminf {N_{oo}\over D}
+\ge 2\sqrt{\Delta_2}+{c_{DF}\over2}-5f_*.
+\tag{SH.14}
+\]
+
+This coefficient is positive and of order one. The statement is only a diagnostic of the correlated ledger; the formal profile is not asserted for the surviving branch, and `N_oo` still concerns isolated-rhombus-complex shears rather than full-source feasible motions.
+
+---
+
+## 5. Scope audit and remaining implication
+
+- `S_E` is counted once per singleton stopped train, not once per exceptional incidence.
+- The proof chooses one exceptional incidence per `S_E` train; a train touching two exceptional faces is not double-counted.
+- Hole incidences and chosen singleton incidences are disjoint because the former edges belong to at least one strict rhombus and the latter belong to none.
+- Bridges, articulation vertices, repeated outer-face vertices, and contact-isolated source points are retained.
+- (SH.3) is first-order. (SH.4) gives exact finite shears only in the isolated strict-rhombus subframework, exactly as in the parent theorem.
+- No rank claim for external contact/diameter rows is strengthened here; the existing pure-row-count barrier remains valid.
+- No exact unit equilateral triangle or same-cardinality strict sub-`D` source is produced.
+
+The next useful target is geometric locking: show that a linear subfamily of the `N_oo` coordinate shears cannot all be independently locked by the actual exceptional-face and diameter rows once the same exceptional incidences are already consumed by `S_E`, or combine the reduced hole budget with the global pentagon/two-window theorem to force a large signed-monotone train subsystem.
+
+C-II and Level I remain open.

@@ -1,0 +1,247 @@
+# Target C — Type-II capacity dichotomy for exact four-host return
+
+**Date:** 2026-09-12  
+**Status:** proved candidate awaiting hostile audit; theorem-state authority unchanged  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The four-host regression shows that an attachment route can have zero signed-return
+loss in two strict-rhombus directions when its host directions are
+`{+u,-u,+v,-v}`.  This note records the source-level restriction supplied by the
+Type-II near-disk geometry:
+
+> A macroscopic attachment cell whose **only** nonzero host directions are
+> `{+u,-u,+v,-v}` is an asymptotically rectangular cell centered at the force-hull
+> center.  Hence there can be at most one such macroscopic cell, and its area is at
+> most `D^2/2+o(D^2)`.
+
+Consequently the Type-II area-saturation identity
+
+\[
+ \sum_r\operatorname{area}(P_{r,D})
+ =\left({\pi\over4}-o(1)\right)D^2
+\tag{FH.1}
+\]
+
+cannot be carried entirely by exact four-host zero-return cells.  At least one
+positive-area cell must either have an additional host direction or leave the exact
+four-host class.  This is a genuine capacity restriction on the regression, but it
+does not yet give a positive width payment: extra hosts can still contain the same
+antipodal four directions.
+
+The candidate chain is
+
+```text
+exact four-host zero return
+ -> parallelogram attachment cell
+ -> near-disk annulus forces a centered rectangle
+ -> at most one macroscopic cell, with area <= D^2/2+o(D^2)
+ -> positive-area non-four-host cell
+ -> required extra-host/interface payment or source-preserving descent.
+```
+
+The final arrow remains open.
+
+## 1. Exact host saturation forces four side directions
+
+For a finite host set `Q` contained in the closed unit disk, write
+
+\[
+ w_Q(x):=\max_{q\in Q}q\cdot x-\min_{q\in Q}q\cdot x
+ \qquad (|x|=1).
+\tag{FH.2}
+\]
+
+If `w_Q(u)=2`, then there are hosts `q_+,q_-` with
+
+\[
+q_+\cdot u=1,
+\qquad q_-\cdot u=-1.
+\]
+
+Equality in Cauchy is rigid, so
+
+\[
+\boxed{w_Q(u)=2\Longrightarrow q_+=u, q_-=-u.}
+\tag{FH.3}
+\]
+
+The same statement holds for a second nonparallel direction `v`.  Thus simultaneous
+zero return for the two train directions of a strict rhombus,
+
+\[
+2-w_Q(u)=2-w_Q(v)=0,
+\tag{FH.4}
+\]
+
+requires the four antipodal host directions
+
+\[
+\{+u,-u,+v,-v\}\subset Q.
+\tag{FH.5}
+\]
+
+For a harmonic attachment cell `P=conv(A)`, the nonzero hosts are the normalized
+displacements of consecutive attachment vertices.  If these are the **only** four
+directions in (FH.5), every side of `P` is parallel to `u` or `v`.  After suppressing
+collinear redundant vertices, a convex polygon with these four cyclic side directions
+has exactly one side in each direction and is a parallelogram.
+
+This is the precise scope of “exact four-host cell” below.  It does not include a cell
+whose host set contains additional directions, even if those extra hosts do not change
+the width in (FH.4).
+
+## 2. Approximate cyclic parallelograms are rectangles
+
+Let `P_D` be a sequence of such parallelograms in the Type-II branch.  Translate the
+Type-II force-hull center to the origin and put `R_D=D/2`.  Canonical near-disk
+stability gives a number `epsilon_D->0` such that every force-hull vertex, and hence
+every attachment vertex, satisfies
+
+\[
+ R_D-\epsilon_DD\le |x|\le R_D+\epsilon_DD.
+\tag{FH.6}
+\]
+
+Write the four vertices of `P_D` as
+
+\[
+ c_D\pm r_D\pm s_D.
+\tag{FH.7}
+\]
+
+Assume for the moment that
+
+\[
+\operatorname{area}(P_D)\ge\eta D^2
+\tag{FH.8}
+\]
+
+for a fixed `eta>0`.  Squaring (FH.6) at the four sign choices and subtracting
+opposite and adjacent values gives
+
+\[
+ c_D\cdot r_D=o(D^2),
+\qquad
+ c_D\cdot s_D=o(D^2),
+\qquad
+ r_D\cdot s_D=o(D^2).
+\tag{FH.9}
+\]
+
+Indeed each difference of squared norms is `O(epsilon_DD^2)`.  The area lower bound
+and the `O(D)` diameter bound on `r_D,s_D` make `r_D,s_D` uniformly nondegenerate in
+the two-dimensional sense; solving the two scalar equations for `c_D` therefore gives
+
+\[
+\boxed{|c_D|=o(D).}
+\tag{FH.10}
+\]
+
+Average the four squared norms in (FH.6).  Using (FH.9)--(FH.10),
+
+\[
+ |r_D|^2+|s_D|^2=R_D^2+o(D^2).
+\tag{FH.11}
+\]
+
+The parallelogram area is
+
+\[
+\operatorname{area}(P_D)=4|r_D\times s_D|
+ \le 2(|r_D|^2+|s_D|^2)
+ ={D^2\over2}+o(D^2),
+\tag{FH.12}
+\]
+
+where the inequality is `2|r\times s|<=|r|^2+|s|^2`.
+
+Moreover (FH.8) and the `O(D)` bounds imply that the distances from `c_D` to the
+four side lines are bounded below by a positive multiple of `D`.  Together with
+(FH.10), this gives
+
+\[
+\boxed{0\in\operatorname{int}(P_D)\quad\text{for all sufficiently large }D.}
+\tag{FH.13}
+\]
+
+So a macroscopic exact four-host cell is a centered, asymptotically rectangular
+carrier.  The area bound (FH.12) is sharp at the square limit.
+
+## 3. At most one macroscopic exact four-host cell
+
+Canonical harmonic-cell disjointness gives pairwise disjoint cell interiors.  If two
+cells each satisfy (FH.8) and the exact four-host hypothesis, (FH.13) puts the origin
+in the interior of both.  Their interiors would then overlap, which is impossible.
+
+Hence for every fixed `eta>0` there is at most one exact four-host cell with area at
+least `eta D^2`.
+
+The canonical square-root budget
+
+\[
+\sum_r\sqrt{\operatorname{area}(P_{r,D})}=O(D)
+\tag{FH.14}
+\]
+
+controls the remaining cells.  If `area(P_{r,D})<eta D^2`, then
+
+\[
+\sum_{\operatorname{area}(P_{r,D})<\eta D^2}
+\operatorname{area}(P_{r,D})
+\le
+\sqrt\eta D\sum_r\sqrt{\operatorname{area}(P_{r,D})}
+=O(\sqrt\eta)D^2.
+\tag{FH.15}
+\]
+
+Suppose every cell of area at least `eta D^2` were exact four-host.  By the preceding
+paragraph and (FH.12), the total cell area would satisfy
+
+\[
+\sum_r\operatorname{area}(P_{r,D})
+\le {D^2\over2}+O(\sqrt\eta)D^2+o(D^2).
+\tag{FH.16}
+\]
+
+Choose `eta` small enough that the `O(\sqrt\eta)` coefficient is less than
+`(\pi-2)/4`.  This contradicts (FH.1).  Therefore:
+
+\[
+\boxed{
+\text{some cell of area }\ge\eta D^2\text{ has an additional host direction
+or is outside the exact four-host class.}}
+\tag{FH.17}
+\]
+
+The conclusion is a fixed positive-area alternative, not merely a statement about a
+single vanishing cell.
+
+## 4. Relation to the live C-II currency
+
+For a cell with attachment-route host set `Q_{att}`, the audited route theorem gives
+
+\[
+d_rE_{att,r}\ge
+\sum_{R\subset P_r}\operatorname{area}(R)
+\bigl[4-w_{Q_{att}}(u_R)-w_{Q_{att}}(v_R)\bigr].
+\tag{FH.18}
+\]
+
+The exact four-host regression makes the bracket vanish for a two-direction square
+grid.  The dichotomy above shows that a Type-II near-disk cell system cannot put all
+of its leading area into that exact regression class.  It does **not** show that the
+bracket in (FH.18) is positive on the remaining cell: additional hosts may still
+contain the same antipodal four directions.  A closing step must therefore prove one
+of the following source-level statements:
+
+1. additional host directions force a positive-width train population;
+2. the interfaces needed to carry the remaining `\pi/4-1/2` area pay the aggregate
+   outer-detour currency; or
+3. the centered rectangle branch admits a simultaneous source-preserving shear or an
+   exact unit equilateral triangle.
+
+None of these three statements is proved here.  The theorem is a capacity restriction
+on the four-host regression, classified as a proved candidate awaiting hostile audit;
+the canonical theorem state remains unchanged and C-II remains open.
+
+

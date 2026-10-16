@@ -1,0 +1,209 @@
+<!-- theorem-state: {"artifact_id":"ART-59024E594557","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: finite release of sparse packets anchored only at loaded vertices
+
+Date: 2026-10-05. Base main: `ad8809fd96c2c0af9a6de4d965e9ab33efe092c6`.
+State: `2026-10-05.audit.59`.
+Classification: **proved candidate awaiting independent audit**; artifact
+lifecycle **unreviewed**. C-II and Level I remain open.
+
+## 1. Exact chain
+
+```
+feasible equal-cardinality replacement removing an original contact
++ strict upper bounds at every inserted site
++ only loaded retained core anchors and sufficiently few new contacts
+-> positive pinned stresses reduce to collinear chains in a thin strip
+-> an explicit straight finite motion opens every new unit contact
+-> fewer contacts at the same or smaller diameter
+-> contradiction of canonical contact minimality.
+```
+
+This is a finite opening theorem with its nonlinear step proved, not an
+assertion that a zero multiplier automatically integrates. It excludes
+small static replacement attempts; it does not construct the larger
+packet needed for closure. Retained source isolates are free variables
+in the opening, not discarded labels or rigidity coordinates.
+
+## 2. Finite replacement statement
+
+Let A be a canonical triangle-free contact-minimal global minimizer of
+diameter D, with positive-contact core V and actual loaded vertices B.
+Canonical H=H_* gives every source isolate strict upper slack. Let T be
+any common bound on the distances of all actual diameter midpoints from
+one center, as supplied by canonical Section 58, FS.6.
+
+Delete R subset A with at least one original contact incident to R.
+Insert Y with |Y|=|R|, obtaining an actual unit-separated configuration
+A'. Assume every pair involving an inserted point is strictly below D.
+Triangle-freeness of A' is not required: the opening below removes all
+new contacts. Let J be the number of unit edges of A' with at least one
+endpoint in Y. Assume every retained original nonisolated vertex incident
+to such an edge belongs to B, and
+
+    J(J+2T)<D/4.                                      (2.1)
+
+Then this replacement cannot exist for A.
+
+The case J=0 already contradicts contact minimality. For J>=1, retain all
+original nonisolated vertices outside R as fixed points. Treat Y and
+**every retained original isolate** as free. Their initially active unit
+edges are precisely the J new edges: an original isolate had no old
+contact, and retained core-core contacts are fixed and excluded from this
+opening system. All upper pairs involving free points are strict, as are
+all initially inactive lower pairs. Cardinality is never changed again.
+
+## 3. Positive-stress components are confined to thin strips
+
+Let A_L be the matrix of active squared-distance differentials on the
+free coordinates. Consider all nonnegative pinned equilibrium stresses
+
+    lambda>=0, A_L^T lambda=0.
+
+Choose one whose positive support E+ is the union of all possible
+positive supports, by adding finitely many witnessing stresses and
+normalizing. If no stress exists, E+ is empty.
+
+For any connected positive-support component, equilibrium at each free
+vertex makes its position a weighted average of its neighbors. A component
+without a fixed pin is impossible: a uniquely extreme free point violates
+positive equilibrium. With pins, the discrete harmonic maximum principle
+puts all its free positions in the convex hull of its pins. Equivalently,
+the grounded positive Laplacian is invertible and its harmonic extension
+has nonnegative weights summing to one.
+
+Every pin is an original actual loaded vertex. Any two pins of the
+component are joined by a path of at most J unit edges, so their distance
+is at most J. Choose one actual diameter partner for each pin v_i and set
+
+    n_i=(v_i-a_i)/D, m_i=(v_i+a_i)/2.
+
+Then D(n_i-n_j)=2(v_i-v_j)-2(m_i-m_j), and
+
+    sin(theta_ij/2)<=(J+2T)/D=:rho.
+
+Condition (2.1) gives rho<1/(4J)<=1/4. Thus all pin normals lie in one
+ordinary angular interval of width at most alpha=2asin(rho)<pi/2.
+To check the common interval, lift relative to the first normal into
+[-alpha,alpha]; the extreme difference is less than pi, so the pairwise
+bound forces that difference to be at most alpha.
+
+Each chosen normal uniquely supports the old source hull at its pin,
+because for every other old source point w,
+
+    n_i dot(w-v_i)<=-|w-v_i|^2/(2D)<0.
+
+Order the pin normals in the short interval. Chord directions between
+pins lie between the corresponding quarter-turned support normals.
+Using the first quarter-turn as the horizontal axis, the transverse
+coordinate difference of any two pins is therefore at most
+
+    J sin(alpha)<=2J rho<1/2.
+
+The pins, and hence every free point in their harmonic convex hull, lie
+in a strip of width w<1/2. One-pin components would collapse their free
+points to the pin, contradicting unit separation, so cause no exception.
+
+## 4. Strip separation forces straight chains
+
+Fix a free point of a positive-support component. All its stressed unit
+neighbors are in the same strip. For two unit neighbors on the same
+horizontal side, their horizontal coordinate difference is at most
+1-sqrt(1-w^2), and their vertical difference is at most w. Thus their
+squared separation is at most
+
+    (1-sqrt(1-w^2))^2+w^2
+    =2-2sqrt(1-w^2)<1.
+
+This contradicts source unit separation. There is at most one stressed
+unit neighbor on each side, so every free stressed vertex has degree at
+most two. Positive equilibrium excludes degree one. At degree two the
+two unit vectors are opposite and the two weights equal.
+
+Consequently the positive-support graph is a union of collinear chains
+of free vertices between fixed pins. Split a component at its fixed pins;
+pins can branch, but no free vertex belongs to two different chains.
+A chain cannot close without pins because opposite unit vectors would
+make a nontrivial straight closed polygon. At each chain vertex the
+perpendicular velocity is an independent variable in ker A_L[E+].
+
+## 5. Opening weak rows and buckling the positive chains
+
+The elementary linear alternative supplies a velocity u_0 with
+
+    A_L u_0>=0,
+    (A_L u_0)_e=0 for e in E+,
+    (A_L u_0)_e>0 for e outside E+.
+
+Here is the precise support argument. For K={u:A_Lu>=0}, a row outside
+E+ cannot vanish on every u in K. Otherwise -A_e belongs to the dual
+cone generated by the rows of A_L, giving a nonnegative zero relation
+with positive coefficient on e, contrary to its absence from E+.
+Choose a nonnegative velocity making each such row positive and add
+them. Every row in E+ must vanish on K by summing against its positive
+stress coefficient. This proves the displayed alternative.
+
+Perturb u_0 arbitrarily little within ker A_L[E+] while preserving all
+the strict weak-row inequalities. On every collinear stressed chain,
+free perpendicular velocities are independent. For every stressed edge,
+the equality u_i=u_j is therefore a proper linear subspace of this
+kernel, including an edge to a fixed pin whose velocity is zero.
+Avoid the finite union of these proper subspaces. The resulting u has
+
+    A_L[E+]u=0, u_i-u_j!=0 on every edge in E+,
+
+and still strictly opens every other active row to first order.
+
+Now use the actual straight motion p_i(t)=p_i+t*u_i at free vertices and
+keep pins fixed. For each originally unit edge,
+
+    |p_i(t)-p_j(t)|^2
+    =1+t*(A_Lu)_e+t^2|u_i-u_j|^2.
+
+Every weak row opens linearly. Every positive-support row opens by its
+strictly positive quadratic term. Thus every new unit contact becomes
+strictly longer than one for small positive t. All inactive lower and
+strict upper constraints persist by their finite margins. No convergence
+or active-set pivot claim is hidden in this step.
+
+## 6. Canonical contradiction and scope
+
+The endpoint retains cardinality n, unit separation and diameter at most
+D. All contacts involving free points have disappeared; the only contacts
+left are retained old core-core contacts. At least one original contact
+was deleted by R, so the endpoint has fewer contacts than A. Its contact
+graph is triangle-free even if A' initially was not, since it is an
+induced subgraph of the original contact graph plus isolates.
+If its diameter is below D, global optimality fails. Otherwise it is a
+triangle-free global minimizer with fewer contacts. Contradiction.
+
+Therefore any feasible equal-cardinality replacement of a contact-active
+set with strict inserted upper bounds must either touch a retained
+**unloaded core anchor**, or satisfy
+
+    J(J+2T)>=D/4.
+
+This statement allows tiny motions of retained original isolates during
+the opening; their original lower and upper slack is essential and is
+not assigned a uniform size. It does not permit moving the fixed core
+pins, nor does it classify packets with new active diameter pairs.
+
+In the primitive all-loaded shell V=B, the unloaded-anchor alternative
+is absent. Any such packet needs J>=sqrt(T^2+D/4)-T. Since canonical
+T=O(D^(3/4)), this is Omega(D^(1/4)). In particular a bounded contact-budget
+exchange cannot close that branch. A proper consecutive loaded-hull run
+of length ell removes ell+1 contacts in the primitive cycle; deleting
+isolates adds no contacts. An equal-budget packet therefore requires
+ell+1>=sqrt(T^2+D/4)-T. Static exchanges of a bounded number of guards
+are excluded; a growing collective packet or moved core anchors remain.
+
+This is a necessary-size theorem, not enough capacity, an asymptotic
+closure, or a lower bound on the original stress coefficients. Both
+exhaustive C-II branches remain open. Generic isolate avoidance is not
+needed here because retained isolates are allowed to move with the packet.
+
+## 7. Validation
+
+The finite geometry, cone alternative and straight-motion identity are
+analytic. No numerical verifier or global-optimality computation is
+claimed. Required repository checks validate state and artifact
+consistency; this new proof still requires independent mathematical audit.

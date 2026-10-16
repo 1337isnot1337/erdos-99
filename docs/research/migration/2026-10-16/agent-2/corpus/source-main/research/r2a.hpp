@@ -1,0 +1,18 @@
+#include <algorithm>
+#include <array>
+#include <bit>
+#include <cstdint>
+#include <functional>
+#include <iostream>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
+using namespace std;
+static constexpr int MOD=2147483647;
+struct Multiset{array<unsigned char,8>a{};unsigned char n=0;bool operator==(Multiset const&o)const{return n==o.n&&a==o.a;}};
+struct MH{size_t operator()(Multiset const&x)const{size_t h=x.n;for(int i=0;i<x.n;i++)h=h*37+x.a[i]+1;return h;}};
+struct BD{uint16_t mask=0;bool repeated=false;int inc=0;};
+vector<array<int,4>> SUP; int SI[128]; vector<array<int,3>> TRI; int TI[128]; vector<array<int,2>> ED; int EI[128]; array<array<int,21>,35>TROW; unordered_map<uint64_t,int>RC;
+int rankm(vector<vector<int>>A){if(A.empty())return 0;int m=A.size(),n=A[0].size(),r=0;for(auto&row:A)for(int&x:row){x%=MOD;if(x<0)x+=MOD;}for(int c=0;c<n&&r<m;c++){int p=-1;for(int i=r;i<m;i++)if(A[i][c]){p=i;break;}if(p<0)continue;swap(A[r],A[p]);long long inv=1,b=A[r][c],e=MOD-2;while(e){if(e&1)inv=inv*b%MOD;b=b*b%MOD;e>>=1;}for(int j=c;j<n;j++)A[r][j]=(long long)A[r][j]*inv%MOD;for(int i=0;i<m;i++)if(i!=r&&A[i][c]){int q=A[i][c];for(int j=c;j<n;j++){A[i][j]=(A[i][j]-(long long)q*A[r][j])%MOD;if(A[i][j]<0)A[i][j]+=MOD;}}r++;}return r;}
+int trank(uint64_t m){auto it=RC.find(m);if(it!=RC.end())return it->second;vector<vector<int>>A;for(int b=0;b<35;b++)if((m>>b)&1ULL)A.emplace_back(TROW[b].begin(),TROW[b].end());int r=rankm(move(A));RC[m]=r;return r;}

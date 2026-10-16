@@ -1,0 +1,411 @@
+# Target C closure run — active attempt ledger
+
+Run branch: `research/target-c-residual-closure-20261005`.
+Worktree: `/tmp/e99-target-c-residual-closure-20261005`.
+Fetched authority: `3c94a1a93641a5f8fa24d43068d487594d3e38cd`, audit.57.
+A later fetch still returned that authority. Draft review: PR #722.
+This run is active. Level I, full-core and macroscopic-container remain open.
+
+## Durable checkpoints
+
+- `28345eac`: exact finite residual-cage cover/refill composition;
+  oriented-matroid positive-circuit formulation; sharp topology-only
+  matching regression; correction of the weaker positive-spanning criterion.
+- `cccae64d`: sharp noncontact-wall shield up to sqrt(3), rational
+  sharpness source and verifier, fixed pentagon activation barrier;
+  one-spare-site contact-minimality endpoint with prior-art attribution.
+- `02d22b9f`: contact-opening KKT-support transversal and strict straight
+  descent on the reduced source; second-order distinction between
+  covector cost and finite nonlinear release.
+
+All reports remain unreviewed; none is a canonical promotion. Positive
+proofs await independent audit; the decorated families have regression scope.
+
+- `b98b09c2`: actual pentagon-capped quadratic train banks with no positive
+  contact-wall packet surplus, including arbitrary composite cycles.
+- `f67220b3`: stronger family with positive equilibrium at every unpinned
+  vertex, minimum unpinned degree three and full pinned contact rank.
+  Pins are not actual diameter endpoints; the certified finite examples
+  cover 3,921,688 source pairs. No canonical-source counterexample is claimed.
+
+## Current implication chain
+
+For strict packets at the ORIGINAL canonical source:
+
+    one protected spare site after replacing all old interior labels
+    -> delete any nonisolated vertex and strictly refill
+    -> same cardinality, triangle-free, diameter <= D, fewer contacts
+    -> contradict canonical contact minimality or global optimality.
+
+Thus s_Z=o(D) versus s_Z=Omega(D) does not alter the integer capacity target
+for this endpoint. Paying kappa<=s_Z+1 is sufficient for a strict sub-D
+construction, but is stronger than necessary when a strict packet exists
+before motion. This observation does not prove packet existence.
+
+For packets available only AFTER motion:
+
+    delete a positive KKT-support transversal
+    -> strict opening/diameter descent on the reduced source
+    -> a controlled finite continuation reaching actual capacity
+    -> restore every deleted label by a certified strict packet.
+
+Only the first strict step is proved. Finite continuation and cardinality
+recovery are unresolved.
+
+## Attempts and exact blockers
+
+| Attempt | Outcome | Exact issue that remains |
+| --- | --- | --- |
+| Mandatory residual-basis deletion/refill | Proved candidate | Requires actual certified packets |
+| Loss of positive spanning as deletion criterion | Rejected | Opposing surviving rows still prevent strict descent |
+| Improve cage cost from only Woodall topology/rank/positivity | Exact abstract regression | Disjoint opposing pairs attain s_Z+1; additional geometric premises are needed |
+| Preserved pentagon activation | Canonically impossible | audit.57 winding obstruction |
+| Infinitesimal contact opening of a pentagon | Quantitatively insufficient | Some side must exceed 2 sin(pi/5), a fixed positive increase |
+| Shield using noncontact wall edges | Proved candidate up to sqrt(3) | Does not produce a feasible expanded wall or packing surplus |
+| Extend that shield above sqrt(3) | Exact rational regression | Vertex-clear packet point clashes with an exterior old point |
+| Merge short faces without burying any source vertex | No capacity | All constituent vertices remain wall guards and cover their faces |
+| Composite wall which buries vertices | Unresolved | Must exceed those old interior populations; large-wall lock remains binding |
+| Crossings plus frustrated disjoint pentagon terminals force wall surplus | Actual geometric regression | The capped near-triangular grids have no wall surplus; actual diameter loading is absent |
+| Add positive equilibrium and full pinned rank to that implication | Stronger actual regression | Exterior unit pins preserve the lock; arbitrary pins need not be hull-extreme diameter endpoints |
+| Use loaded-return/reciprocal length as spare capacity | No valid implication identified | Paths and force lengths are not packing sites; no currency is counted twice |
+| Optimize via contact opening | Proved finite first-step criterion | A new lower constraint or reduced KKT support can block finite opening |
+| Treat positive-circuit cost as nonlinear optimum | Rejected abstraction | A zero covector can shorten quadratically |
+| Macroscopic-container density alone | Insufficient | O(D) boundary errors dominate the one-site integer requirement |
+
+The topology regression is NOT a canonical-source counterexample: it has no
+unit-distance embedding, actual contact geometry, nonmatching theorem,
+loaded-return structure or global optimality. It kills only the stated
+reduced-input inference. The quadratic regression is also an abstract
+smooth cage. Neither is a disproof of Erdős #99.
+
+## Next concrete attack
+
+The capped regression rules out spending crossings, physical frustration,
+positive pinned equilibrium and pinned rank alone on fixed-wall capacity.
+The next bridge must use actual loaded extremality and diameter reaction
+balance, or a finite motion changing the guard vertices. Do not weaken
+"actual loaded end" into "prescribed boundary pin".
+
+The actual-load audit in Section 10 of the capped-regression report gives
+a quantitative failure: its whole source hull has at most 60 extreme
+vertices (28 without radial pins), regardless of M. Since D>=M, no
+choice of existing load labels can satisfy canonical h>=ceil(D) once
+M>60. Translating more identical caps on the same four sides cannot fix
+this. A source-level use of this model requires new hull geometry or new
+extreme vertices, and the capacity lock after that change is unproved.
+
+Use actual source contact geometry to control a finite contact-opening
+continuation after deleting a KKT-support transversal. A useful theorem
+must either cross the pentagon activation barrier with every surviving
+lower/upper constraint verified, or construct a capacity-improving larger
+protected region. Do not infer termination from finitely many graph types.
+
+The container branch uses the same one-spare endpoint. Its inactive points
+are retained or explicitly replaced; no source-population or affine-kernel
+claim drops isolates. Boundary-order saturation alone does not supply a
+site. Any container attack must certify its actual protected packing number.
+
+## Validation
+
+The four requested state/index/route commands and diff check pass at every
+pushed checkpoint. `research/verify_target_c_noncontact_wall_shield_2026_10_05.py`
+passes the exact rational sharpness source, positive four-edge packet,
+and 160 weighted-square identities. System Python lacks jsonschema;
+`/tmp/e99-theorem-check-venv/bin/python` passes theorem-state validation.
+These checks establish repository consistency and finite arithmetic, not
+independent mathematical audit, capacity existence or Level I closure.
+
+
+The capped-bank verifier checks three base families and two radial-pin
+variants. Its exact directed intervals certify all 3,921,688 source pairs,
+11,420 contacts, 56 disjoint caps and 42 selected crossing cells. Exact
+unit identities and analytic positive equilibrium/pinned-rank arguments
+supply the equality statements. The no-surplus proof uses Oler and the
+canonical wall shield, not a numerical packing search. Main remains
+`3c94a1a9` / audit.57 after the latest fetch. PR #722's remote state check
+is queued; only local validation is presently complete.
+
+## Exact attachment-lattice checkpoint
+
+The loaded-attachment lattice report proves a source-specific necessary
+condition using canonical Section 75: exact uniformly conditioned lattice
+attachment sets cover only O(D^(8/9)) loaded vertices. Consequently at
+least D-O(D^(8/9)) actual loaded vertices are unused by unloaded components
+or are attached through components without that exact lattice property.
+This excludes an exact-crystal attachment subcase, not the exhaustive
+full-core or container branch. Fixed-width coherent phases do not imply
+exact lattice membership. The next possible spendable input is actual
+nonlattice attachment transfer or the unused loaded boundary, not a new
+scalar surplus floor. The external manuscript lead is independently
+rederived; its source-wide rigidity hypothesis is not imported.
+
+## Robust loaded near-lattice checkpoint
+
+Section 7 of the attachment-lattice report excludes a full-core near-disk
+sequence whose loaded endpoints, except o(D) exceptions, are within o(1)
+of a bounded number of uniformly conditioned affine lattices. The finite
+bound handles interleaving carrier labels by summing disjoint forward
+hull arcs. It uses the canonical radial arclength estimate and all hull
+sides, not a nonexistent curvature lower bound. This is stronger than
+exact lattice membership, but it still does not follow from fixed-width
+phase coherence: macroscopic path accumulation can retain order-one
+positional errors when angular errors are of order 1/D. Neither the
+full-core nor container exhaustive branch is closed.
+
+## Branch-independent near-lattice diameter checkpoint
+
+Section 8 removes the disk hypothesis by counting actual diameter edges.
+Short-edge normal windows of each approximate lattice carrier leave
+only finitely many gap-spanning corner cones; long-edge incident
+vertices contribute O(D/L). Actual diameter direction separation then
+gives h=o(D) if all but o(D) loaded endpoints are o(1)-close to boundedly
+many uniformly conditioned lattices. This contradicts canonical h>=D
+in both branches. The missing canonical implication is actual endpoint
+transport with vanishing positional error and bounded lattice count;
+fixed-width phase coherence supplies neither. Source isolates remain
+retained and no theorem state is promoted.
+
+## Bent-grid transport regression
+
+The new exact bent-grid family kills the reduced-input inference from
+boundary-order angular excess and O(1/D) phase variation to vanishing
+single-lattice positional error, even with positive pinned equilibrium
+and full pinned rank. A rational boundary bow stays above 1/10. Actual
+loaded constraints are absent, so this does not kill the canonical
+endpoint-transport route or a bounded multiple-lattice cover. The next
+bridge must control the actual diameter-normal boundary, rather than
+spend bulk phase coherence as a positional or packing currency.
+
+## Unloaded stress-transversal checkpoint
+
+A missing unit loaded-hull side, in canonical full-core loaded-chord
+scope, excludes loaded-only stresses by the hull-side leaf argument.
+Minimal empty intersections of unloaded-vertex stress faces give
+<=s_Z+1 unloaded labels hitting all stresses, with every original H edge
+retained. This permits refill demand |S union U| and can avoid extra
+cage payment if U lies in replaced interiors. It does not force an
+actual strict equal-cardinality refill. If loaded-only stress survives,
+no interior deletion can kill it; full-core localization identifies
+positive contact support as the entire unit loaded-hull cycle, with
+positive diameter support covering all loaded vertices. Primitive-source
+ZR/ZF is not extended to this selected boundary subframework. The
+container branch uses the general stress-face criterion, not the
+full-core missing-side test.
+
+Composing the interior deletion with the original positive stress gives
+an exact vacancy-compression identity: retained contact-opening and
+diameter-shortening work is positive, so the weighted missing contact
+work at deleted unloaded labels is negative, independently of their
+assigned velocities. Local reinsertion cannot simply follow the release.
+Full signed-row spanning also gives a source-dependent finite core
+isolation neighborhood. No uniform radius or global exclusion follows;
+an activating refill must be nonlocal in core coordinates.
+
+## One boundary label plus interior cage deletions
+
+If full-core loaded-only stress survives, every such stress loads every
+vertex of the entire unit hull cycle. Deleting any chosen loaded vertex
+b removes all of those stresses. Its stress-zero face is proper, with
+dimension at most s_Z-1; at most s_Z unloaded vertex faces then kill the
+remaining stresses. Thus only one deletion need lie outside a refill
+population containing the interior transversal. The actual unit hull
+wall contains every unloaded core label, so its required outside cage
+payment is one independently of s_Z. The hull-wall capacity and any
+finite activating motion remain unproved; positive residual is not
+spent as capacity.
+
+## Periodic-packing source check: no imported capacity theorem
+
+Checked Connelly--Dickinson, *Periodic Planar Disk Packings*, author PDF
+https://pi.math.cornell.edu/~connelly/Connelly-Dickinson-V3.pdf
+(pp. 5--8, 15--17; also arXiv:1201.5965). The general one-disk density
+gap is explicitly Conjectures 2--3, not a proved theorem. Theorem 9
+classifies collectively jammed all-rhombus packings on a fixed torus:
+congruent two-direction rhombi and tours visiting every vertex. Theorem 4's
+density result requires a triangular torus, only triangle/rhombus faces,
+and its stated vertex-degree hypotheses. Canonical Target C's physical
+exceptional faces and finite loaded boundary supply neither a torus
+co-embedding nor those face hypotheses. Thus this literature does not
+prove strict refill for the unit loaded-hull cycle or terminate the finite
+pivot route. No density gap or periodic boundary identification is
+imported. Eppstein's original 2018 paper, Figure 2 and Lemma 1, also
+explicitly permits all convex-hull vertices to have degree three; its
+low-degree vertices need not be hull vertices. It supplies no stronger
+convex-wall packing-capacity theorem here.
+
+## Macroscopic physical-face depth checkpoint
+
+Canonical global face returns force |V|>=k+sum of the k smallest
+rounded Euclidean boundary depths to B, k=ceil((m+2)/2). Thus with
+subquadratic core, a physical macroface cannot have more than half
+its wall macroscopically deep; at least half its wall is close to
+actual loaded vertices at every fixed macroscopic scale. This excludes
+a deeply internal physical-face subcase, not boundary-attached walls,
+long-chord pockets, exterior caps or quadratic-core container cases.
+The macroface interior is isolate-only, so deletion-overlap savings
+cannot be counted there; its original strict refill still needs one
+extra site. The manifest confirms contact coordinates/residual cage
+scope on the container core, but supplies no protected wall or surplus.
+
+## Audit.58 authority refresh and primitive blocker scope
+
+Fetched origin/main d99168a39401a00f1716fe1603dfc2fd7468dff3 and
+merged it into the single owned branch. Controlling state is now
+2026-10-05.audit.58; Level I and C-II remain open. Read the changed
+state/frontier, both newly promoted reports, their independent promotion
+audit, and the current continuation prompt. The full audit.52--57 stack
+remains available; previous branch candidates are not promoted.
+
+C-CENTERED-FAN-REFLECTIONS solves every upper constraint and every
+moving-moving lower constraint for its exact independent fan geometry.
+C-TRANSLATION-LENS-EXPOSURE solves exposed cross-upper constraints for
+actual rigid translations; neither theorem supplies source extraction
+or lower repair. Their existing collision-transfer certificates prohibit
+repair by independently moving only the first blocker.
+
+In the exact primitive all-loaded cycle source of Section 72, V=B.
+Audit.58's blocker is diameter-inactive, hence lies outside V and is
+a contact isolate. Thus a usable primitive fan's repair problem is
+necessarily a full-source isolate problem. The positive-contact core's
+rigidity, selected stress ranks, and unloaded contact equilibrium do not
+apply to those blocker coordinates. This is a direct scope composition,
+not a new packing theorem. No large primitive fan population is inferred.
+
+Attempted composition with original strict packet replacement still needs
+actual clearance after the finite reflection. The reflection displacement
+is 1/D, whereas existing strict isolate slack has no proved uniform
+lower bound. A source-dependent local chart or positive original margin
+cannot certify that endpoint. For a physical chamber whose boundary
+moves, its original isolate packing likewise need not stay in the new
+strict wall-safe set. No spare or equal-cardinality activation is claimed.
+
+## Exact endpoint capacity-loss regression
+
+An actual eight-edge unit wall with an actual degree-two diameter fan
+admits a strict old site. The fan reflection preserves all wall contacts
+and every upper source bound, but the reflected polygon is covered by
+six vertex-disk-covered triangles, so its strict wall-safe region is
+empty. This independently kills transport of original strict packet
+margins through the finite fan endpoint, even for walls beyond the
+seven-edge necessary threshold. Exact arithmetic certifies five finite
+packets and the unit circumcircle identities. The ten-point family is
+nonglobal and has no positive KKT certificate; unrestricted isolate
+relocation and canonical-source repair remain possible routes.
+
+## Audit.59 and exact-contact exchange endpoint
+
+Fetched and incorporated main ad8809fd96c2c0af9a6de4d965e9ab33efe092c6,
+state 2026-10-05.audit.59. Adaptive strict-safe saturation is now
+canonical. It prohibits mean-area credit after contact breaking, not an
+explicit discrete packet. The owned candidates remain unpromoted.
+
+An exact-contact packet with no contact-count increase and strict new
+upper pairs needs only destroy one old diameter, not cover H. This is
+finite normalization bookkeeping, not a packing theorem. For one deleted
+loaded degree-two vertex plus isolates, the total recreated-contact budget
+is two. Hostile audit eliminates this as a genuinely exact-contact route:
+any packet with at most two new contacts can be strictly opened, including
+the opposite-anchor case by perpendicular motion. A genuine anchored
+packet needs at least three new contacts. An interior three-anchor site
+replacing a loaded degree-three vertex would have the right equal budget,
+but its actual clearance and triangle-freeness remain unproved. Cross
+contacts and mixed triangles must be counted. A fan reflection has no remaining contact budget if only
+isolates are subsequently replaced, so adding jammed wall contacts alone
+is not an admissible repair. Actual simultaneous sites remain unproved.
+
+## Static three-anchor audit
+
+Three old contact neighbors of a loaded degree-three vertex have that
+boundary vertex as their unique unit circumcenter; preserving all three
+cannot produce an interior replacement. Isolates can also be chosen
+arbitrarily generically inside their finite strict-slack neighborhood,
+without changing C, H, D, cardinality or lexicographic normalization.
+Avoiding finitely many unit-circumcircle polynomial equations forces every
+static surrounding singleton anchor to be an actual core vertex. Thus
+isolated fan blockers cannot be promoted to exact static anchors solely
+from inverse-D near-unit proximity. A new core triple with a unit
+circumcenter, clearance from all other retained points and no induced
+triangle remains unproved. Collective packets and motions creating new
+anchor equalities are explicitly outside this exclusion.
+
+Composed static anchors with the canonical short-wall winding proof.
+Weak clearance is impossible for at most five unit sides; for six sides
+it forces a regular unit hexagon and its center, whose insertion creates
+unit triangles. Thus preserved pentagon/hexagon faces cannot host a
+triangle-free exact-contact packet either. Deleted wall guards invalidate
+this particular winding exclusion; strict sub-D competitors may contain
+triangles. Neither distinction is suppressed.
+
+Further composition: canonical midpoint concentration puts the actual
+diameter normals of any loaded unit-circle cluster in a short interval.
+Its hull chain cannot surround the unit center. Together with generic
+isolate avoidance, every static feasible singleton replacement needs an
+unloaded core anchor. For the primitive V=B shell the entire interior
+singleton route is excluded, regardless of new contact count. Collective
+replacement, changed anchors and strict sub-D constructions remain open.
+
+## Sparse collective packets with only loaded core anchors
+
+Extended the static singleton exclusion to actual collective packets.
+Retained isolates are free variables, so no generic pin assumption is
+needed. A positive pinned stress component with at most J new contacts
+has loaded pins of diameter at most J. Canonical midpoint concentration
+puts its harmonic convex hull in width <1/2 when J(J+2T)<D/4. Unit
+separation forces free stressed degree two, hence straight chains.
+The weak-row cone alternative plus generic perpendicular chain velocities
+opens all new contacts by one actual straight motion, including the
+quadratic stressed rows. Thus a contact-active equal-cardinality refill
+with strict new upper bounds must touch an unloaded core anchor or have
+J(J+2T)>=D/4. Primitive V=B has no such anchor, forcing Omega(D^(1/4))
+new contacts and a growing removed-contact budget. This excludes bounded
+static guard exchanges; it does not supply the larger closing packet.
+
+## Audit.60--61 refresh and exact owner closure
+
+Fetched and incorporated main 0351c2c3aecd34c0427d0ad081afae563468d401,
+state 2026-10-05.audit.61. Canonical inputs now include full-source long-pair
+isolate dispatch, exact disjoint-swap 2-SAT, near-unit cofacial geometry,
+and finite stopped O--O bounded-face isolate transport. Their extraction
+and unary-rhombus hypotheses remain explicit; the two-phase specialization
+is not silently promoted.
+
+The original all-zero assignment makes every compiled formula Horn:
+implications, forbidden simultaneous pairs, unary forbidden owners.
+Forward closure of the at-most-two pinned true owners gives an exact
+admissible assignment or a path to a forbidden owner / two paths to a
+forbidden pair. Pure cycles do not supply failure. Exhaustive finite
+logic checks pass 4,131 formulas and 110,887 pinned instances. Under the
+actual O--O hypotheses the remaining lower certificates are outer-face
+paths/forks after unary rhombi and upper exceptions are handled. No
+canonical geometry presently excludes all of those certificates.
+
+## Loaded-neighbor incidence and outer-owner capacity
+
+Canonical diameter midpoint concentration makes every bounded loaded
+cluster an almost straight hull chain. Three loaded neighbors in a fixed
+source annulus [1,t], t<sqrt(2), would converge to three separated collinear
+points in that annulus, which is impossible. Thus every source vertex
+has at most two such loaded neighbors. Near-unit loaded-loaded pairs are
+consecutive full-hull pairs; noncontacts charge nonunit loaded-hull sides.
+Combining these with audit.61's actual outer-face singleton witnesses
+gives k<=2m_B+3(x_B+Z_out), replacing the older q-sized boundary capacity.
+A linear safe owner family with sublinear hull/outer defects therefore
+forces linear outer isolates. Actual O--O extraction, unary safety,
+upper-exception handling and the isolate bank remain explicit unresolved
+hypotheses; pentagon-pair trains are not silently relabeled O--O proposals.
+
+## Active outer-isolate collars
+
+Canonical pocket identities give total pocket perimeter <=2(x_B+m_B).
+In Type-II near-disk geometry the actual K-versus-F exterior caps have
+total perimeter <=3(x_B+m_B), by supporting-normal/tangent projection;
+no Reuleaux containment is used. Keep pocket isolates fixed, transport
+bounded-face isolates with their common owner, and dispatch only actual
+long-pair exterior extremes. Every isolate lower witness must be in a
+5/4 boundary collar, whose separated population is <48(x_B+m_B).
+Together with loaded incidence this gives k<=150(x_B+m_B) for checked
+safe shortening singletons, and r<=150(x_B+m_B)+2d_H when the canonical
+upper-exception deletion applies. Total outer isolate population is no
+longer an independent blocker bank in this move scope. Low-defect linear
+O--O proposal families are excluded, but their extraction and unary/upper
+safety are not proved for every full-core source; Type I is not covered.

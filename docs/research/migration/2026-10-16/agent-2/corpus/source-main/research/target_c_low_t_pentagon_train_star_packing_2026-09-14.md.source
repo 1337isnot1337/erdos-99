@@ -1,0 +1,383 @@
+# Erdos Problem #99 - low-t pentagon train-star packing
+
+**Date:** 2026-09-14  
+**Target:** C-II, canonical full-core Type-II branch  
+**Dependencies:** low-t pentagon sea; empty-pentagon trapezoid stability; audited stopped-train decomposition; audited bounded-face no-return/singleton-loop exclusion  
+**Claim class:** proof-only structural composition awaiting independent audit  
+**External literature:** no new import
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The small-residual low-`t` pentagon sea has more structure than a population of local
+source defects. Every good pentagon is a stopping face for five **distinct complete
+stopped trains**, and its flat-trapezoid normal form arranges those five train directions
+in a local `3:1:1` phase star.
+
+The fact that a complete train has exactly two terminal face-side occurrences gives a
+strong global packing theorem for these local train stars.
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad C_0:=2\sqrt{\Delta_2}+0.00042,
+\]
+
+and on a convergent Type-II subsequence write
+
+\[
+t:=\lim{q-k\over D},\qquad
+\delta:=\lim{b-P_F\over D},\qquad
+\kappa:=\lim{k\over D}.
+\]
+
+Define the low-`t` pentagon coefficient
+
+\[
+P(t,\delta,\kappa)
+:=\pi+C_0-{5t\over2}+\delta+{\kappa\over2}.
+\tag{TS.1}
+\]
+
+Assume
+
+\[
+R_F=o(D).
+\tag{TS.2}
+\]
+
+Then there is a scale `eta_D->0` and a family of
+
+\[
+G\ge(P(t,\delta,\kappa)-o(1))D
+\tag{TS.3}
+\]
+
+good pentagons with the following simultaneous train-level consequences.
+
+### A. Pairwise train-disjoint near-60-degree hinges
+
+Each good pentagon has two edge-disjoint leaf teeth. Taking both gives `2G` two-train
+hinge objects. There is a subfamily of pairwise train-disjoint hinges of size at least
+
+\[
+\boxed{
+H_{60}\ge {2G\over3},
+\qquad
+{H_{60}\over D}\ge {2P(t,\delta,\kappa)\over3}-o(1).
+}
+\tag{TS.4}
+\]
+
+For every selected hinge, the two terminal contact edges share a source vertex, both
+are exact unit contacts, their complete train axes have projective separation
+`pi/3+o(1)`, and the hidden third side of the leaf triangle lies in `(1,1+eta_D)`.
+
+### B. Pairwise train-disjoint almost-parallel flat hinges
+
+Each good pentagon has one distinguished flat-middle pair formed by its two consecutive
+long-base contact edges. There is a pairwise train-disjoint subfamily of size at least
+
+\[
+\boxed{
+H_{0}\ge {G\over3},
+\qquad
+{H_0\over D}\ge {P(t,\delta,\kappa)\over3}-o(1).
+}
+\tag{TS.5}
+\]
+
+The two terminal train axes in each selected pair have projective separation `o(1)`,
+and their terminal contact rays at the common middle source vertex have angle
+`pi-o(1)`.
+
+### C. Pairwise train-disjoint majority triples
+
+The `3` in the local `3:1:1` phase star gives one three-train majority object per good
+pentagon. A pairwise train-disjoint subfamily has size at least
+
+\[
+\boxed{
+M_3\ge {G\over4},
+\qquad
+{M_3\over D}\ge {P(t,\delta,\kappa)\over4}-o(1).
+}
+\tag{TS.6}
+\]
+
+All three projective train directions in one selected majority triple lie in an
+`o(1)`-window around a common axis.
+
+### D. Pairwise train-disjoint full `3:1:1` stars
+
+Finally, a pairwise train-disjoint family of whole five-train pentagon stars has size
+at least
+
+\[
+\boxed{
+S_5\ge {G\over6},
+\qquad
+{S_5\over D}\ge {P(t,\delta,\kappa)\over6}-o(1).
+}
+\tag{TS.7}
+\]
+
+Within every selected star the five train axes are an `o(1)` perturbation of three
+projective axes separated by `pi/3`, with multiplicities `3,1,1`.
+
+These are packings in **train variables**, not source-vertex packings. That is the
+point: the train closure matrix assigns one angular variable to each complete stopped
+train, so train-disjoint local objects have disjoint column supports.
+
+## 1. Good pentagons and five distinct terminal trains
+
+The low-`t` pentagon-sea theorem gives
+
+\[
+{p_5\over D}\ge P(t,\delta,\kappa)-o(1).
+\tag{TS.8}
+\]
+
+Fix a geometric tolerance `eta>0`. Empty-pentagon stability and the first Wegner jump
+supply a threshold `theta(eta)>0` such that a pentagon of residual below this threshold
+is isolate-free and `eta`-close to the flat unit trapezoid. Since all face residuals
+are nonnegative and sum to `R_F=o(D)`, all but `o(D)` of the pentagons are good. This
+proves (TS.3) for fixed `eta`, and the standard slow diagonal gives `eta_D->0`.
+
+Every boundary edge of a bounded exceptional face is a terminal occurrence of its
+complete stopped train. A complete stopped train has exactly two terminal face-side
+occurrences. The audited no-bounded-return theorem, together with the singleton
+bounded-loop exclusion, says one train cannot use the same bounded face at both ends.
+Therefore the five boundary edges of one good pentagon belong to five distinct complete
+trains.
+
+It follows immediately that a fixed complete train can occur in the good-pentagon
+family at most twice: once for each of its two terminal occurrences.
+
+## 2. A reusable train-packing lemma
+
+Let `A` be a finite family of objects, each object being a set of `r` complete trains.
+Suppose a complete train belongs to at most two objects of `A`. Build the conflict graph
+on `A`, joining two objects when they share a train.
+
+For any object, each of its `r` train members can belong to at most one other object.
+Hence the conflict graph has maximum degree at most `r`. A greedy independent set gives
+
+\[
+\boxed{
+\nu(A)\ge {|A|\over r+1},
+}
+\tag{TS.9}
+\]
+
+where `nu(A)` is the maximum number of pairwise train-disjoint objects.
+
+For the two leaf hinges below there are two objects per pentagon, but they are
+themselves train-disjoint inside that pentagon. Therefore a train still belongs to at
+most one chosen leaf-hinge object at each terminal occurrence, hence to at most two
+objects globally. Equation (TS.9) remains valid with `|A|=2G`.
+
+## 3. Two leaf hinges per pentagon
+
+Use the flat-trapezoid labels
+
+\[
+l,m,r,a,b
+\]
+
+with `l-m-r` the long base. The two leaf triples are
+
+\[
+(m,l,b),\qquad(m,r,a).
+\tag{TS.10}
+\]
+
+Their boundary edge pairs are
+
+\[
+\{lm,lb\},\qquad\{mr,ra\}.
+\tag{TS.11}
+\]
+
+These pairs are edge-disjoint. They therefore define two distinct two-train objects per
+good pentagon, with no train repeated between the two objects of one face.
+
+Both contact sides in each object have length exactly one. Trapezoid stability gives
+hidden side length `1+o(1)`, strictly greater than one in the actual triangle-free
+source. By the law of cosines, the angle between the two contact rays tends to `pi/3`.
+Thus the projective directions of their complete trains also differ by `pi/3+o(1)`.
+
+Apply (TS.9) with `r=2` to the `2G` leaf objects. This proves (TS.4).
+
+## 4. Flat-middle train hinges
+
+The two consecutive long-base sides
+
+\[
+lm,\qquad mr
+\]
+
+belong to two distinct complete trains. They define one two-train object for every good
+pentagon. At the middle vertex `m`, the two contact rays become antipodal:
+
+\[
+\angle lmr=\pi-o(1).
+\tag{TS.12}
+\]
+
+Equivalently their projective train directions differ by `o(1)`. Apply (TS.9) with
+`r=2` and `|A|=G` to obtain (TS.5).
+
+This object is different from the leaf hinge: the leaf hinge is a near-60-degree pair
+supporting an almost-unit hidden chord, whereas the flat hinge is an almost-parallel
+pair supporting a near-straight contact chain.
+
+## 5. Majority triples and full phase stars
+
+The equality model has oriented boundary direction multiset
+
+\[
+\{0,0,2\pi/3,\pi,4\pi/3\},
+\tag{TS.13}
+\]
+
+so projectively its multiplicities are `3,1,1` on three axes separated by `pi/3`.
+Stability preserves this pattern up to `o(1)` angular errors.
+
+Take the three terminal trains in the majority projective axis as one object. There is
+one such object per good pentagon and it has `r=3`, so (TS.9) gives (TS.6).
+
+Taking all five terminal trains gives one `r=5` object per good pentagon, and (TS.9)
+gives (TS.7).
+
+The audited bounded-face endpoint-simplicity theorem additionally says that two
+distinct complete trains cannot join the same two bounded stopping faces. Thus the
+pentagon/train incidence network has no repeated bounded-face edge. This is not needed
+for the numerical packing factors in (TS.4)--(TS.7), but it removes a potential
+multigraph degeneracy from later topology arguments.
+
+## 6. Current-floor constants
+
+At the current proof-only floor
+
+\[
+t_{42}
+={4\over9}\left(\pi+\sqrt{\Delta_2}\right)+0.0013751
+=1.8208886379794447\ldots,
+\]
+
+and after conservatively dropping the nonnegative `delta,kappa` bonuses,
+
+\[
+P(t_{42},0,0)=0.4944166723690961\ldots .
+\tag{TS.14}
+\]
+
+Therefore the small-residual low-`t` branch contains at least
+
+\[
+\boxed{{H_{60}\over D}\ge0.3296111149127307\ldots-o(1),}
+\tag{TS.15}
+\]
+
+pairwise train-disjoint near-60-degree hinges,
+
+\[
+\boxed{{H_0\over D}\ge0.1648055574563653\ldots-o(1),}
+\tag{TS.16}
+\]
+
+pairwise train-disjoint almost-parallel flat hinges,
+
+\[
+\boxed{{M_3\over D}\ge0.1236041680922740\ldots-o(1),}
+\tag{TS.17}
+\]
+
+pairwise train-disjoint majority triples, and
+
+\[
+\boxed{{S_5\over D}\ge0.0824027787281826\ldots-o(1),}
+\tag{TS.18}
+\]
+
+pairwise train-disjoint full `3:1:1` phase stars.
+
+The selected leaf-hinge packing alone uses
+
+\[
+2H_{60}\ge0.6592222298254615\ldots D-o(D)
+\tag{TS.19}
+\]
+
+distinct complete train variables.
+
+For comparison, on any such subsequence with `t<=1.8585`, the conservative pentagon
+floor is `P>=0.4003882673177079...`, giving
+
+\[
+{H_{60}\over D}\ge0.2669255115451386\ldots-o(1),
+\]
+
+\[
+{H_0\over D}\ge0.1334627557725693\ldots-o(1),
+\]
+
+\[
+{M_3\over D}\ge0.1000970668294269\ldots-o(1),
+\]
+
+and
+
+\[
+{S_5\over D}\ge0.0667313778862846\ldots-o(1).
+\tag{TS.20}
+\]
+
+## 7. Frontier effect
+
+The low-`t`, small-residual corner is therefore not merely pentagon-rich. It contains a
+large collection of disjoint **train-coordinate** gadgets:
+
+```text
+0.3296 D disjoint near-60-degree two-train hinges,
+0.1648 D disjoint almost-parallel two-train hinges,
+0.1236 D disjoint coherent majority triples,
+0.0824 D disjoint full 3:1:1 train stars,
+```
+
+at the current `t42` profile.
+
+This aligns directly with the train-angle closure formulation: each packed gadget has
+disjoint train columns, while the global diameter system must lock all non-Euclidean
+train-angle motions. A useful next target is therefore a **block-local locking bound**:
+show that one actual diameter row can lock only boundedly many train-disjoint flat or
+60-degree hinges after the face-closure equations are imposed. Any bound below the
+packing density forced above would convert these local objects into a global rigidity
+contradiction.
+
+A second concrete target is the conflict-cycle obstruction for the flat hinges. Their
+conflict graph has maximum degree two. A triangle component would consist of three
+bounded pentagons joined cyclically by three almost-parallel complete trains. Excluding
+such same-phase train triangles would improve the packing factor in (TS.5) from `1/3`
+to `1/2` on all noncyclic components and isolate a sharply defined residual topology.
+
+No exact unit triangle or strict sub-`D` source is produced here. C-II and Level I
+remain open.
+
+## 8. Scope audit
+
+- The theorem requires both the proof-only low-`t` pentagon theorem and `R_F=o(D)`.
+- The five train occurrences on one good pentagon are distinct by bounded-face
+  no-return plus the singleton bounded-loop exclusion.
+- Each complete train is used by at most two good pentagons because it has exactly two
+  terminal face-side occurrences.
+- The two leaf hinges of one pentagon are train-disjoint; this is what permits the
+  `2G/3` factor rather than `G/3`.
+- Pairwise train-disjoint does not mean source-vertex-disjoint. The theorem is designed
+  for train-coordinate arguments, not direct source surgery.
+- The direction claims are asymptotic and come from the empty-pentagon stability
+  theorem; no exact `pi/3` or exact parallelism is asserted at finite `D`.
+- C-II remains open.

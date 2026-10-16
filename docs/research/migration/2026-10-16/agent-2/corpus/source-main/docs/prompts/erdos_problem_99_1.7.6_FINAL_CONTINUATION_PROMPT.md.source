@@ -1,0 +1,89 @@
+# Erdős Problem #99 — continuation after the canonical activation/backbone frontier
+
+Work in one context. Do not delegate to subagents or separate research workers.
+
+## Objective and quantifiers
+
+Obtain a Level I proof or disproof of Erdős Problem #99, with immediate priority on
+Target A. A proof must handle every sufficiently large global minimum-diameter
+configuration; a disproof requires triangle-free global minimizers for infinitely many
+cardinalities. Do not promote a local, KKT, asymptotic, or numerical configuration to a
+global counterexample without an exact certificate.
+
+## Authoritative files
+
+Read `../README.md`, `../problem/statement.md`, the shared theory modules actually used,
+and every active Target A module linked by `../targets/target-a/README.md`. The current
+canonical frontier is Sections 152–159, including the quantitative Kuperberg module,
+the fixed-hull and source-backbone modules, and the activation-coloop/locked-boundary
+module. Reports and older prompts are provenance only.
+
+## Exact Target A endpoint
+
+For the plateau-terminalized scaffold,
+
+\[
+\zeta=\dim\ker S=|C^\partial|-\operatorname{rank}S,
+\qquad s=\Delta_\Lambda-d_{\rm int},
+\]
+
+and a surviving counterexample has
+
+\[
+g=s-\zeta=\Delta_\Lambda-d_{\rm sc}\ge1.
+\]
+
+Target A closes exactly if
+
+\[
+\boxed{\dim\ker S\ge s}
+\qquad\text{or, equivalently,}\qquad
+\boxed{\operatorname{rank}S\le d_{\rm int}+|C^\partial|-\Delta_\Lambda}.
+\]
+
+The alternative exact closure is an \(N\)-point unit-separated competitor of diameter
+strictly below \(D(N)\).
+
+## Trusted frontier and its limits
+
+- The fixed-source Hall ceiling is \(|Q|-|N_A(Q)|\le\widehat p_H\); capacity
+  bookkeeping alone cannot exceed this slack.
+- Section 156 gives an exact affine orthant releasing every pair created by monotone
+  activation. The complementary fixed-hull flat is finite and global, but is not a
+  map into the response boundary space.
+- Section 157 proves the exact free aligned-gap Kuperberg support bound
+  \(W(d)\le C_1\exp(C_2d^{-3})\). Its unresolved issue is exterior compatibility with
+  the finite source/scaffold domain, not the free support exponent.
+- The source-backbone module gives a diameter-cover Hall deficiency and, in the common
+  placement, strict-rattler capture plus the graft inequality. It still does not
+  identify source rattlers with Schur terminals.
+- The activation-coloop module gives simultaneous finite release and a boundary-reaching
+  stress for a universally locked triangle. Source-hull boundary points are not the
+  independent scaffold set \(C^\partial\).
+
+Do not claim that any of these statements alone proves Target A.
+
+## Highest-priority routes
+
+1. Prove a finite, exterior-compatible gap-concentration/rearrangement theorem for the
+   Section-157 monomer domain, with an exact strict-diameter certificate.
+2. Prove two-shadow compatibility in the very-super-boundary source/scaffold placement,
+   or transport the captured rattlers and fixed-hull directions into \(\ker S\).
+3. For the first triangle-producing exchange transition, either construct a different
+   triangle-free optimum at the same cardinality or prove \(s\) independent response
+   null directions.
+4. Prove a direct directed-separator saving of \(s\) in the canonical Schur response.
+
+## Binding regressions
+
+Keep active the coherent strained-monomer, regular-shell, long straight-chain,
+overlapping-circuit, zero-charge-bulk, and annular-routing regressions. Do not use pure
+planarity, arbitrary optima coordinate-identification, width-one-annulus assumptions,
+or infinite-plane Kuperberg statements without a finite-container transfer.
+
+## Output contract
+
+If the exact endpoint is proved, derive the displayed integer inequality explicitly. If
+not, report only genuinely new rigorous progress, its complete proof, the exact remaining
+implication, and any newly exposed failed route. Preserve the statement
+`LEVEL I STATUS: STILL OPEN` until one of the exact closures above is established.

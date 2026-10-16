@@ -1,0 +1,375 @@
+# Target C: reduce eight-no-root `k=6, D=-1, p=9` by functional-rank puncturing
+
+Date: 2026-09-22
+
+Status: rigorous structural reduction of the last `D=-1` side of the eight-no-root `k=6` layer. The puncture-functoriality proved in the preceding `D=-2,p=8` closure eliminates all virtual-deficiency-one profiles, eliminates the `d_v=2,q=9` profile and the all-singleton subcase of `d_v=2,q=8`, and forces strong all-shadow conditions on the two remaining global profiles. No new large finite census is used.
+
+Companion arithmetic/combinatorial checker:
+
+`research/verify_target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_functional_puncture_reduction_2026_09_22.py`
+
+Main dependencies:
+
+- `research/target_c_support7_global_segment_relative_eight_noroot_k6_reduction_2026-09-22.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k6_functional_rank_reduction_2026-09-22.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus2_p8_functional_puncture_closure_2026-09-22.md`;
+- `research/verify_target_c_support7_global_segment_relative_seven_noroot_k5_dminus1_d1p4_2026_09_21.py`;
+- `research/verify_target_c_support7_global_segment_relative_five_noroot_k3_p5_sharp_2026_09_21.py`;
+- `research/verify_target_c_support7_global_segment_relative_six_noroot_k4_d2_singleton_capacity_2026_09_21.py`.
+
+## 1. Starting profiles and full-rank requirement
+
+After the preceding eight-no-root `k=6` reduction and the new closure of the entire `D=-2` side, the only remaining global arithmetic branch is
+
+```text
+D=-1,
+d_root=0,
+p=9.
+```
+
+Its surviving virtual profiles are
+
+```text
+(d_v,q,singleton_min) =
+(1,7,5), (1,8,7),
+(2,8,7), (2,9,9), (3,9,9).
+```
+
+The maximal replacement-functional rank theorem says that every surviving profile must fill its entire canonical functional quotient. Since `t=8` and `rank(P)=2`, the quotient dimension is
+
+```text
+6+d_v.
+```
+
+Thus the five profiles require ranks
+
+```text
+7, 7, 8, 8, 9
+```
+
+respectively.
+
+As before, the rank-two coefficient space has at least two three-clean coordinates. Fix one such coordinate `i`. Every puncture obtained by deleting `i` and then up to two further coordinates retains coefficient rank two.
+
+The puncture-functoriality theorem from the preceding closure will be used repeatedly:
+
+> under a rank-preserving puncture, the canonical functional quotient maps surjectively to the punctured quotient; a replacement functional maps to its punctured replacement functional if its block remains virtual-complete and maps to zero otherwise. Therefore a full spanning set of actual replacement functionals descends to a full spanning set after puncturing.
+
+For rank two, the quotient dimensions at seven, six and five rows are
+
+```text
+seven rows: 5+d,
+six rows:   4+d,
+five rows:  3+d.
+```
+
+## 2. Two reusable low-deficiency obstructions
+
+### 2.1 No depth-two-synchronized seven-row `d=2` full-singleton state
+
+The proof of the preceding `D=-2,p=8` closure used only the following structural hypotheses at seven rows:
+
+- coefficient rank two;
+- every one- and two-coordinate puncture retains rank two;
+- virtual deficiency `d_7=2`;
+- compatible singleton replacement functionals span the full seven-dimensional quotient.
+
+It did not use the seven-row value of `p` after those hypotheses were established.
+
+Indeed, full span descends to every synchronized six-row puncture. A six-row `d=1` child would need five compatible singleton functionals, contradicting the exact synchronized six-row `d=1` capacity maximum three. Hence every child has `d_6=2` and singleton capacity at least six. Descending again rules out five-row `d=1`, because a full four-dimensional quotient would need four compatible singletons while the exact five-row `d=1` capacity maximum is three. Therefore every five-row projection has `d_5=2`. The committed exact six-row `d=2` audit has zero capacity-at-least-six states with all six five-row deficiencies equal to two.
+
+Hence:
+
+> There is no depth-two-synchronized seven-row rank-two `d=2` virtual state whose compatible singleton replacement functionals span the full quotient of dimension seven.          (2.1)
+
+### 2.2 No synchronized six-row `d=2` full-singleton state
+
+The same argument starts one level lower. Suppose a synchronized six-row rank-two `d=2` state had singleton replacement functionals spanning its full six-dimensional quotient. Every five-row puncture has deficiency one or two. Deficiency one would require four compatible singleton functionals, impossible by the exact capacity-three bound, so every five-row puncture has deficiency two. The state has singleton capacity at least six. This is exactly the zero-survivor class of the committed six-row `d=2` audit.
+
+Therefore:
+
+> There is no synchronized six-row rank-two `d=2` virtual state whose compatible singleton replacement functionals span the full quotient of dimension six.          (2.2)
+
+These two consequences will remove the all-singleton `d=2` cases without new computation.
+
+## 3. Close global `d_v=1,q=8`
+
+The earlier reduction proves that this profile has exactly
+
+```text
+seven singleton replacement blocks + one pair replacement block.
+```
+
+A three-clean seven-row puncture has deficiency exactly one: the child deficiency is at least one by containment and at most the global `d_v=1` by complete-set monotonicity.
+
+Its quotient therefore has dimension six. Full-span puncturing requires at least six surviving replacement functionals.
+
+But the exact seven-row deficiency-one capacity lemma gives at most four compatible singleton blocks. There is only one pair block globally. Thus at most
+
+```text
+4 + 1 = 5
+```
+
+of the actual replacement blocks can survive as virtual-complete in the seven-row state. They cannot span a six-dimensional quotient.
+
+Hence
+
+```text
+(d_v,q)=(1,8)
+```
+
+is impossible.
+
+## 4. Close global `d_v=1,q=7`
+
+The previous reduction already excludes seven singleton replacement blocks. The global type therefore has either
+
+```text
+six singletons + one pair,
+```
+
+or
+
+```text
+five singletons + two pairs.
+```
+
+### 4.1 Six singletons plus one pair
+
+Again every three-clean seven-row puncture has deficiency one and quotient dimension six. Such a state has singleton capacity at most four and only one pair is available, so at most five actual replacement blocks can survive. This cannot span dimension six.
+
+Thus the six-singleton form is impossible.
+
+### 4.2 Five singletons plus two pairs
+
+Fix a three-clean coordinate `i` and consider the seven-row puncture `X_7`.
+
+Its deficiency is one and its quotient dimension is six. Full-span descent requires at least six surviving replacement blocks. The seven-row singleton capacity is at most four. Since only two pair blocks exist globally, the only possibility is exactly
+
+```text
+four singleton blocks + both pair blocks,
+```
+
+all six spanning the quotient. In particular one of the five global singleton blocks leaves the seven-row virtual-complete set.
+
+Now delete any coordinate `j` of `X_7`. Three-cleanliness of the original coordinate `i` makes the resulting six-row coefficient plane synchronized. Its deficiency is again exactly one, because the complete set only shrinks and the synchronized six-row theorem gives deficiency at least one.
+
+The six-row quotient has dimension five. Full-span descent therefore requires at least five surviving actual replacement blocks. The exact synchronized six-row `d=1` census gives singleton capacity at most three. With only two pair blocks available, the only possible surviving type is exactly
+
+```text
+three singleton blocks + both pair blocks.
+```
+
+So for every one of the seven choices of `j`, exactly one of the four singleton blocks of `X_7` leaves the virtual-complete singleton-capable set, while both pair blocks remain.
+
+Fix one of those four singleton blocks `b`. The disappearance argument already used in the seven-row deficiency-one capacity lemma applies: because all one- and two-coordinate punctures retain coefficient rank two, a seven-row virtual-complete singleton-capable block can leave the singleton-capable complete set for at most two deletion coordinates. One coordinate can make the block untouched, and at most one distinct coordinate can make it virtual-empty. Hence `b` survives in at least
+
+```text
+7-2 = 5
+```
+
+of the six-row punctures.
+
+The exact synchronized six-row `d=1` census proves a stronger fact than capacity three: every compatible singleton block in those 31 states is touched by exactly three of the six external rows.
+
+Let `m` be the number of the seven external rows of `X_7` that touch `b`. After deleting coordinate `j`, the projected support size is
+
+```text
+m-1  if j touches b,
+m    otherwise.
+```
+
+For this to equal three:
+
+- if `m=3`, only the four non-touching deletions work;
+- if `m=4`, only the four touching deletions work;
+- for every other `m`, no deletion works.
+
+Thus at most four coordinate deletions can produce a six-row surviving compatible singleton of support three. But `b` must survive in at least five. Contradiction.
+
+Therefore the five-singleton/two-pair form is also impossible, and the entire global profile
+
+```text
+(d_v,q)=(1,7)
+```
+
+is closed.
+
+## 5. Close global `d_v=2,q=9`
+
+Since `p=9` and `q=9`, all nine changed virtual-complete blocks are singletons. The global quotient has dimension eight and the nine singleton functionals span it.
+
+Take a three-clean seven-row puncture. Its deficiency is either one or two.
+
+If `d_7=1`, its quotient has dimension six, but the exact seven-row `d=1` singleton capacity is at most four. Full-span descent is impossible.
+
+If `d_7=2`, its quotient has dimension seven and the surviving singleton functionals must span it. This is excluded by (2.1).
+
+No three-clean puncture can exist, contradicting the already proved existence of at least two such coordinates. Hence
+
+```text
+(d_v,q)=(2,9)
+```
+
+is impossible.
+
+## 6. Reduce global `d_v=2,q=8` to the mixed profile
+
+Here the minimum singleton count is seven. There are two possible types among the eight changed virtual-complete blocks:
+
+```text
+eight singletons,
+```
+
+or
+
+```text
+seven singletons + one pair.
+```
+
+The all-singleton type closes exactly as in Section 5. A three-clean puncture has deficiency one or two; deficiency one is impossible by the seven-row capacity-four bound, and deficiency two is impossible by (2.1).
+
+Therefore only
+
+```text
+seven singleton blocks + one pair block
+```
+
+can remain globally.
+
+Fix a three-clean puncture `X_7`. A seven-row deficiency-one state would have quotient dimension six but could retain at most four singleton blocks plus the one pair, only five functionals. Therefore
+
+```text
+d_7=2.
+```
+
+The seven-row quotient has dimension seven and the surviving actual replacement functionals span it.
+
+Delete any further coordinate. The resulting six-row state is synchronized and has deficiency one or two. If `d_6=1`, its quotient has dimension five, but the exact singleton capacity is at most three and there is only one pair, so at most four actual replacement blocks can survive. Therefore
+
+```text
+d_6=2.
+```
+
+Its quotient has dimension six and the surviving actual replacement functionals span it.
+
+### Five-row deficiency one is impossible even with the pair
+
+Delete one more coordinate. A five-row child has deficiency one or two.
+
+If `d_5=1`, full-span descent requires rank four in the functional quotient. With only one pair available, there are two possibilities:
+
+1. four singleton functionals, impossible because five-row `d=1` singleton capacity is at most three;
+2. three singleton functionals plus the pair functional.
+
+The second possibility is also exactly excluded by the committed sharp five-row `k=3,p=5` audit. That verifier exhausts every `d=1` canonical state, every choice of three compatible singleton replacement blocks, and every distinct pair replacement block. It finds 144 realizable such states, all with exact defect seven. For the state consisting only of these replacements,
+
+```text
+t=5,
+p=5,
+d=1,
+D=7.
+```
+
+The functional identity
+
+```text
+D = t+p+3d-3s
+```
+
+therefore gives
+
+```text
+7 = 5+5+3-3s,
+s=2.
+```
+
+So the three singleton plus one pair functionals gain rank only two, never the required four.
+
+Hence every five-row puncture has
+
+```text
+d_5=2.
+```
+
+### Exact form of every six-row child
+
+We now have a synchronized six-row `d_6=2` state with full functional rank six and all six five-row projections of deficiency two.
+
+The old exact `d=2` singleton-shadow audit proves that no such six-row state can have singleton capacity at least six. Therefore its singleton capacity is at most five.
+
+But full rank six must be supplied by the actual surviving replacements, and globally there is only one pair. Hence the pair must survive, and at least five singleton replacements must survive. The capacity bound makes this exact:
+
+```text
+pair block survives,
+singleton capacity = 5,
+five actual singleton replacement blocks survive,
+the pair + five singleton functionals span rank 6.
+```
+
+Thus the global `d_v=2,q=8` profile is reduced to a very small mixed full-rank all-shadow configuration.
+
+## 7. Reduce global `d_v=3,q=9`
+
+Again `p=q=9`, so all nine changed blocks are singletons. The global quotient has dimension nine and the singleton functionals span it.
+
+For a three-clean seven-row puncture, deficiency is in `{1,2,3}`.
+
+- `d_7=1` is impossible because full span would require six singleton functionals while capacity is at most four.
+- `d_7=2` is impossible by (2.1).
+
+Therefore every three-clean seven-row puncture satisfies
+
+```text
+d_7=3,
+full singleton-functional rank = 8.
+```
+
+Now puncture once more. Every resulting six-row state is synchronized and has deficiency in `{1,2,3}`.
+
+- `d_6=1` is impossible because full span would require five singleton functionals while capacity is at most three.
+- `d_6=2` is impossible by (2.2).
+
+Hence every such six-row state has
+
+```text
+d_6=3,
+full singleton-functional rank = 7.
+```
+
+A further five-row puncture has deficiency at most three and at least one. Deficiency one is impossible because full span would require four singleton functionals while five-row `d=1` capacity is at most three. Therefore every five-row puncture satisfies
+
+```text
+d_5 in {2,3},
+full singleton-functional rank = 5 or 6 respectively.
+```
+
+This is now the exact low-dimensional residual for the global `d_v=3,q=9` profile.
+
+## 8. Remaining eight-no-root `k=6` target
+
+The three global profiles
+
+```text
+(d_v,q)=(1,7),(1,8),(2,9)
+```
+
+are closed, and the all-singleton subcase of `(2,8)` is closed.
+
+Only two global configurations remain:
+
+```text
+A: d_v=2, q=8,
+   seven singleton replacements + one pair replacement,
+   global functional rank 8;
+
+B: d_v=3, q=9,
+   nine singleton replacements,
+   global functional rank 9.
+```
+
+For A, every three-clean seven-row shadow has `d_7=2` and full rank seven; every synchronized six-row child has `d_6=2`, the pair survives, exactly five singleton-compatible blocks remain, and those six actual functionals span rank six; every five-row child has `d_5=2`.
+
+For B, every three-clean seven-row shadow has `d_7=3` and full singleton rank eight; every synchronized six-row child has `d_6=3` and full singleton rank seven; every five-row child has `d_5 in {2,3}` and fills the corresponding quotient.
+
+The next exact computation should target these two six-row classes directly. Profile A needs only the 156 synchronized six-row `d=2` states of singleton capacity five from the existing census, filtered by all-six `d_5=2`, one compatible pair block, and full mixed functional rank six. Profile B needs synchronized six-row `d=3` states with singleton capacity at least seven and full singleton rank seven, then only their five-row `d=2/3` punctures. This is much smaller than an unrestricted seven- or eight-row assembly search.

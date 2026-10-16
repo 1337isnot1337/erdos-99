@@ -1,0 +1,361 @@
+# Target C — audited §162 explicit quantitative gap above the §146 Type-II endpoint
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working proof-only route module; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module is the collision-free normalization of the valid theorem developed on PR #426. It strengthens the §155 `+1/2000` Fejér endpoint separation to an explicit `+1/1250` gap by using near-Mantel concentration and a quantitative atom-versus-detour inequality.
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},\qquad
+s:=\sqrt{\Delta_2},\qquad
+C_{146}:={4\over9}(\pi+s)
+=1.8195135379794445\ldots .
+\]
+
+Then every unbounded Type-II C-II survivor sequence satisfies
+
+\[
+\boxed{
+\liminf_{D\to\infty}{q-k\over D}
+\ge C_{146}+{1\over1250}
+=1.8203135379794445\ldots .
+}
+\tag{162.1}
+\]
+
+The theorem is independent of the carrier-decimal optimization. It does not close Type II or C-II.
+
+---
+
+## 162.1 Near the §146 endpoint, atomic train mass is almost minimal
+
+Let
+
+\[
+\eta={1\over1250},\qquad t_D={q-k\over D}.
+\]
+
+Assume for contradiction that along a Type-II subsequence
+
+\[
+t_D\le C_{146}+\eta+o(1).
+\tag{162.2}
+\]
+
+Pass further so all normalized currencies and empirical train-phase measures converge. Write
+
+\[
+\kappa=\lim{k\over D}\ge0,
+\qquad x=\lim{T\over D}.
+\]
+
+The audited §146 stability inequalities give
+
+\[
+0\le\kappa\le9\eta
+\tag{162.3}
+\]
+
+and
+
+\[
+\lambda:=\limsup {b-\operatorname{per}(F)\over D}
+\le {9\over4}\eta.
+\tag{162.4}
+\]
+
+The exact train and outer-walk ledgers are
+
+\[
+T=(q-k)+2f,\qquad Q=2(q-k)-b,\qquad f\le Q,
+\]
+
+and Type II gives `per(F)/D -> pi`. Hence
+
+\[
+x\le5t-2\pi.
+\tag{162.5}
+\]
+
+Let `a` be the total atomic mass of the limiting empirical **probability** measure of train phases, and use absolute `D`-density masses
+
+\[
+A:=xa,\qquad N:=x(1-a).
+\]
+
+Audited §142 gives
+
+\[
+A\ge2s
+\tag{162.6}
+\]
+
+and
+
+\[
+{q/T}\le2(1-a),
+\]
+
+so
+
+\[
+N\ge {t+\kappa\over2}.
+\tag{162.7}
+\]
+
+Using (162.2), (162.5), and (162.7),
+
+\[
+A=x-N
+\le{9\over2}t-2\pi-{\kappa\over2}
+\le2s+{9\over2}\eta.
+\tag{162.8}
+\]
+
+Likewise, from `A>=2s`,
+
+\[
+N=x-A
+\le {C_{146}\over2}+5\eta.
+\tag{162.9}
+\]
+
+No unconditional `1.9046256...` loaded-hull floor is used here.
+
+---
+
+## 162.2 Near-Mantel concentration leaves one dominant three-axis orbit
+
+The exact projective `pi/3` relation decomposes the atomic support into disjoint three-point orbits. Let `m_j` be the absolute train-density mass in orbit `j`. Then
+
+\[
+\sum_jm_j=A.
+\]
+
+Weighted Mantel on the atomic crossing graph gives
+
+\[
+s^2=\Delta_2\le{1\over4}\sum_jm_j^2.
+\tag{162.10}
+\]
+
+Let
+
+\[
+M=\max_jm_j,\qquad R=A-M.
+\]
+
+Since
+
+\[
+\sum_jm_j^2\le M\sum_jm_j=MA,
+\]
+
+we have
+
+\[
+M\ge{4s^2\over A},
+\qquad
+R\le A-{4s^2\over A}.
+\]
+
+The right-hand side is increasing for positive `A`. Put
+
+\[
+A_\eta:=2s+{9\over2}\eta,
+\qquad
+R_\eta:=A_\eta-{4s^2\over A_\eta}.
+\tag{162.11}
+\]
+
+Then all train density outside one dominant three-axis orbit is at most
+
+\[
+B_\eta:={C_{146}\over2}+5\eta+R_\eta.
+\tag{162.12}
+\]
+
+Every complete stopped train has at most two outer terminal occurrences. Therefore the outer-walk occurrence mass carried by the dominant orbit is at least
+
+\[
+L_\eta:=\pi-2B_\eta
+=\pi-C_{146}-10\eta-2R_\eta.
+\tag{162.13}
+\]
+
+After taking shrinking phase neighborhoods in the standard fixed-window-then-diagonal order, this becomes actual atomic mass of the limiting projective outer-edge direction measure on the three orbit directions. Consequently at least one outer-direction atom has mass
+
+\[
+\ell_\eta:={L_\eta\over3}.
+\tag{162.14}
+\]
+
+Occurrence multiplicity is retained throughout; singleton trains and bridge occurrences are not dropped.
+
+---
+
+## 162.3 An outer-direction atom forces positive detour
+
+Let `nu` be the normalized limiting outer-edge direction measure. Set
+
+\[
+K(\theta)=|\cos\theta|,\qquad F=K*\nu,\qquad g=F-2.
+\]
+
+Projection variation and Type-II width convergence give
+
+\[
+g\ge0.
+\]
+
+If `beta=nu(total)=lim b/D`, then
+
+\[
+E:=\int_0^\pi g(\theta)\,d\theta
+=2(\beta-\pi)
+=2\lim {b-\operatorname{per}(F)\over D}.
+\]
+
+Thus (162.4) gives
+
+\[
+E\le {9\over2}\eta.
+\tag{162.15}
+\]
+
+On the projective period-`pi` circle,
+
+\[
+K''+K=2\delta_{\pi/2}.
+\]
+
+After translating `nu` by `pi/2` to a measure `mu`,
+
+\[
+g''+g=2(\mu-d\theta).
+\tag{162.16}
+\]
+
+### Lemma 162.1 — atom-versus-detour
+
+If `nu` has an atom of mass at least `ell`, with `0<ell<pi`, then
+
+\[
+\boxed{
+E\ge {\ell^3\over2\pi^2+\ell^2}.
+}
+\tag{162.17}
+\]
+
+**Proof.** Put the corresponding atom of `mu` at zero, let `r=ell/2`, and use the period-`pi` test function
+
+\[
+\psi(\theta)=
+\begin{cases}
+\cos^2\!\left({\pi\theta\over2r}\right),&|\theta|\le r,\\
+0,&r<|\theta|\le\pi/2.
+\end{cases}
+\]
+
+It is `C^1`, piecewise `C^2`, nonnegative, satisfies
+
+\[
+\psi(0)=1,\qquad \int\psi=r,
+\]
+
+and
+
+\[
+\|\psi''+\psi\|_\infty
+\le {2\pi^2\over\ell^2}+1.
+\]
+
+Pair (162.16) with `psi`. Positivity of `mu` gives
+
+\[
+2\ell
+\le \int g(\psi''+\psi)+2\int\psi
+\le\left({2\pi^2\over\ell^2}+1\right)E+\ell.
+\]
+
+Rearranging gives (162.17). `square`
+
+Applying the lemma to (162.14) and using (162.15), a necessary condition for (162.2) is
+
+\[
+{9\over2}\eta
+\ge
+{\ell_\eta^3\over2\pi^2+\ell_\eta^2}.
+\tag{162.18}
+\]
+
+---
+
+## 162.4 Exact numerical separation at `eta=1/1250`
+
+For
+
+\[
+\eta={1\over1250},
+\]
+
+recalculation gives
+
+\[
+R_\eta=0.0071932083502566\ldots,
+\]
+
+\[
+L_\eta=1.2996926989098354\ldots,
+\]
+
+and
+
+\[
+\ell_\eta=0.4332308996366118\ldots .
+\]
+
+Therefore
+
+\[
+{\ell_\eta^3\over2\pi^2+\ell_\eta^2}
+=0.0040805488365804\ldots,
+\]
+
+whereas
+
+\[
+{9\over2}\eta=0.0036.
+\]
+
+The contradiction margin is more than `4.8e-4`. The original proof branch also carries an exact-rational certificate based on Machin-series bounds for `pi` and rational squaring bounds for `sqrt(3)`; no rounded decimal is needed as a logical premise.
+
+Hence (162.2) is impossible and (162.1) follows.
+
+---
+
+## 162.5 Audit disposition and interaction with nearby results
+
+The proof was independently checked at the following fragile points.
+
+- `A=xa` and `N=x(1-a)` use absolute train density; no probability/density factor is lost.
+- Weighted Mantel is applied orbitwise to the exact projective `pi/3` atomic relation.
+- The outer-terminal capacity is occurrence-counted. Each physical complete train contributes at most two outer terminal occurrences.
+- Shrinking train-phase neighborhoods produce literal atoms of the limiting outer-direction measure; nonatomic train mass can only make the lower bound more conservative.
+- The distributional identity has the correct factor two, and the compact `C^1` test function produces no endpoint delta terms.
+- The `9/2` detour factor is correct because `int g` is twice the normalized excess `b-per(F)`.
+- The constants in (162.11)–(162.18) were recomputed independently.
+- The theorem does not use the rejected unconditional `1.9046256...` floor.
+
+§155 remains the reusable all-regime Fejér tradeoff. The newer unnumbered atomic-cusp endpoint-charge theorem on `main` gives another continuous detour tradeoff but is much weaker numerically at the `1/1250` scale. The qualitative strict stopped-train phase gap is logically different: it separates the §142 train-phase currency without extracting an explicit constant.
+
+**Final disposition:** PASS at audited-working proof-only Type-II scope. The explicit current lower bound from this theorem is
+
+\[
+\boxed{\liminf(q-k)/D\ge1.8203135379794445\ldots .}
+\]
+
+C-II and Level I remain open.

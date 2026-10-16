@@ -1,0 +1,384 @@
+# Target C: global square-root leaf-fan port / stress-flat fork
+
+**Date:** 2026-10-02  
+**Base main:** 61e4238bad5baab3dd4b466a487408b1d037f0dc  
+**Status:** proof-only reduction. Level I and C-II remain open.
+
+## 1. Purpose
+
+The current square-root matching branch has two local inputs.
+
+1. research/target_c_leaf_fan_outerwalk_fork_2026-10-02.md proves that if the
+   actual-diameter matching number and loaded outer-walk excess are both
+   \(O(\sqrt D)\), then \(D-O(\sqrt D)\) loaded-hull contacts lie in exact
+   same-carrier diameter-leaf fans.
+2. research/target_c_leaf_fan_inward_spoke_kkt_fork_2026-10-02.md proves a
+   local fork for one good fan run: many degree-three fan vertices give inward
+   third-contact spokes, while many degree-two fan vertices give exact KKT stress
+   transport.
+
+The local report extracted only an \(\Omega(D^{1/4})\) object from one
+\(\Omega(\sqrt D)\)-long fan. The present note globalizes over all good fan runs.
+Because the entire good-fan population is linear while the number of runs is only
+\(O(\sqrt D)\), the exponent improves from \(1/4\) to \(1/2\).
+
+No computation is used.
+
+## 2. Setup and exact good-fan population
+
+Let
+\[
+H=(B,E_H),\qquad h=|E_H|,\qquad \nu=\nu(H),
+\]
+and let
+\[
+x_B=b_{\rm out}-q
+\]
+be the loaded outer-walk excess.
+
+Assume fixed constants \(K_\nu,K_x>0\) such that
+\[
+\boxed{
+\nu\le K_\nu\sqrt D,\qquad x_B\le K_x\sqrt D.
+}
+\tag{1}
+\]
+
+The current outer-walk/fan theorem gives a family of pairwise disjoint good fan runs
+\[
+p^{(r)}_0,p^{(r)}_1,\ldots,p^{(r)}_{g_r}
+\]
+with a common diameter carrier \(a_r\) on each run and
+\[
+|p^{(r)}_i-a_r|=D,\qquad
+|p^{(r)}_i-p^{(r)}_{i+1}|=1.
+\tag{2}
+\]
+
+Let
+\[
+A:=\sum_r g_r
+\]
+be the total number of good fan contacts, and let \(R\) be the number of nonempty
+good runs. The preceding theorem gives
+\[
+A\ge h-3\nu-x_B
+\tag{3}
+\]
+and
+\[
+R\le \nu+x_B.
+\tag{4}
+\]
+
+Canonical ZF gives \(h\ge\lceil D\rceil\).
+
+A run with \(g_r\) fan contacts has \(g_r-1\) internal fan vertices. Therefore the
+total number \(I\) of internal good-fan vertices is
+\[
+I=\sum_r(g_r-1)=A-R.
+\]
+Using (3)--(4),
+\[
+\boxed{
+I\ge h-4\nu-2x_B.
+}
+\tag{5}
+\]
+Under (1),
+\[
+\boxed{
+I\ge
+\lceil D\rceil-(4K_\nu+2K_x)\sqrt D.
+}
+\tag{6}
+\]
+
+Thus all but \(O(\sqrt D)\) of a linear population are internal vertices of exact
+\((D,D,1)\) leaf fans.
+
+## 3. Internal fan vertices have contact degree two or three
+
+An internal fan vertex \(p_i^{(r)}\) is a diameter leaf, so its full actual-diameter
+degree is one. It already has the two positive fan contacts
+\[
+p_i^{(r)}p_{i-1}^{(r)},\qquad
+p_i^{(r)}p_{i+1}^{(r)}.
+\]
+
+Canonical loaded-terminal geometry gives positive contact degree at most three.
+Hence every internal good-fan vertex has exactly one of two types:
+
+- **type 2:** exactly the two fan contacts;
+- **type 3:** the two fan contacts plus one third unit contact.
+
+Let
+\[
+T:=\#\{\text{type-3 internal fan vertices}\},
+\qquad
+U:=I-T.
+\tag{7}
+\]
+
+For a type-3 vertex \(p\), denote its third contact neighbor by \(z(p)\).
+
+## 4. Global unit-contact degree is at most five
+
+### Lemma 4.1
+
+Every source vertex has at most five unit-contact neighbors.
+
+### Proof
+
+Fix a source vertex \(z\). All of its contact neighbors lie on the unit circle
+centered at \(z\). Any two distinct such neighbors are source points and hence are
+at distance at least one. Their central angular separation at \(z\) is therefore at
+least \(\pi/3\).
+
+So \(z\) has at most six unit-contact neighbors.
+
+If it had six, the six angular gaps around \(z\) would sum to \(2\pi\) while each
+is at least \(\pi/3\). Hence every gap would equal \(\pi/3\). Consecutive neighbors
+would then be at mutual distance exactly one, producing a unit contact triangle with
+\(z\), forbidden by the triangle-free source hypothesis.
+
+Therefore
+\[
+\boxed{\deg_C(z)\le5.}
+\tag{8}
+\]
+QED.
+
+This uses only unit separation and triangle-freeness. It does not use planarity,
+KKT weights, or loaded status of \(z\).
+
+## 5. Type-3 vertices force globally many distinct inward ports
+
+The current inward-spoke theorem applies to every type-3 internal fan vertex. Write
+\[
+\varepsilon={1\over2D},
+\qquad
+\tau=\sqrt{1-\varepsilon^2},
+\qquad
+\delta_D={\sqrt3\,\tau-\varepsilon\over2}.
+\tag{9}
+\]
+
+If \(p\) has carrier \(a\) and third neighbor \(z=z(p)\), then
+\[
+\boxed{
+|z-a|\le D-\delta_D,
+\qquad
+\delta_D\longrightarrow{\sqrt3\over2}.
+}
+\tag{10}
+\]
+
+There are \(T\) distinct third-contact edges \(p\,z(p)\), one from each type-3
+fan vertex. By Lemma 4.1, one source vertex \(z\) can be the third neighbor of at
+most five such fan vertices. Therefore the number \(Z\) of distinct third-contact
+neighbors satisfies
+\[
+\boxed{
+Z\ge {T\over5}.
+}
+\tag{11}
+\]
+
+Thus a square-root population of type-3 fan vertices produces a square-root
+population of distinct source vertices at a fixed positive inward depth from their
+respective diameter carriers.
+
+No same-carrier assumption is made in (11).
+
+The companion theorem
+research/target_c_leaf_fan_third_neighbor_inactivity_2026-10-02.md strengthens this:
+every such third neighbor lies strictly inside the triangle formed by its carrier and
+the two adjacent fan leaves. Hence every one of the (Z) vertices has
+[
+deg_H(z)=0.
+]
+Thus the large-(T) alternative is a population of genuinely diameter-inactive
+positive-contact ports.
+
+## 6. Type-2 vertices force a long exact stress-flat block
+
+Along one good fan run, type-3 vertices split the type-2 internal vertices into
+consecutive type-2 blocks.
+
+If run \(r\) contains \(T_r\) type-3 internal vertices, it contains at most
+\(T_r+1\) type-2 blocks. Summing over all runs, the total number \(B_2\) of nonempty
+type-2 blocks obeys
+\[
+\boxed{
+B_2\le T+R.
+}
+\tag{12}
+\]
+
+Hence, whenever \(U>0\), one type-2 block has length \(L\) satisfying
+\[
+\boxed{
+L\ge {U\over T+R}
+=
+{I-T\over T+R}.
+}
+\tag{13}
+\]
+
+Every vertex of this block has contact degree exactly two. The exact KKT transport
+proved in the current inward-spoke report therefore applies throughout the block.
+
+If the block contains \(L\) consecutive internal vertices, then its \(L+1\) fan
+contact edges have one common positive contact multiplier \(\lambda\), and its
+\(L\) pendant diameter edges have exactly equal multipliers
+\[
+\boxed{
+\beta_i={\lambda\over D^2}
+\qquad (1\le i\le L).
+}
+\tag{14}
+\]
+
+Thus (13) is not merely a geometric chain-length statement: it gives an exact
+stress-flat source segment.
+
+## 7. Quantitative square-root dichotomy
+
+Fix any constant \(\theta>0\).
+
+If
+\[
+T\ge\theta\sqrt D,
+\]
+then (11) gives
+\[
+\boxed{
+Z\ge{\theta\over5}\sqrt D.
+}
+\tag{15}
+\]
+
+Otherwise \(T<\theta\sqrt D\). Using (4), (6), and (13),
+\[
+L
+\ge
+{\lceil D\rceil-(4K_\nu+2K_x+\theta)\sqrt D
+ \over
+ (K_\nu+K_x+\theta)\sqrt D}.
+\tag{16}
+\]
+Therefore
+\[
+\boxed{
+L\ge
+\left(
+{1\over K_\nu+K_x+\theta}-o(1)
+\right)\sqrt D.
+}
+\tag{17}
+\]
+
+Combining (15) and (17),
+\[
+\boxed{
+\begin{array}{c}
+\text{at least }(\theta/5)\sqrt D
+\text{ distinct diameter-inactive constant-depth third-contact vertices},\\[2mm]
+\text{or}\\[2mm]
+\text{an exact stress-flat degree-two fan block of length }
+\left({1\over K_\nu+K_x+\theta}-o(1)\right)\sqrt D.
+\end{array}
+}
+\tag{18}
+\]
+
+One may balance the two displayed constants. Put
+\[
+S:=K_\nu+K_x,
+\qquad
+\theta_*={\sqrt{S^2+20}-S\over2},
+\tag{19}
+\]
+so that
+\[
+{\theta_*\over5}={1\over S+\theta_*}.
+\]
+Then for every fixed
+\[
+0<c<{\sqrt{S^2+20}-S\over10},
+\tag{20}
+\]
+all sufficiently large members of the branch satisfy
+\[
+\boxed{
+Z\ge c\sqrt D
+\quad\text{or}\quad
+L\ge c\sqrt D.
+}
+\tag{21}
+\]
+
+## 8. Improvement over the one-run fork
+
+The previous local argument selected one good fan run of length
+\(\Omega(\sqrt D)\) and then split that one run at its degree-three vertices. That
+gave only
+\[
+\Omega(D^{1/4})
+\]
+inward spokes or an \(\Omega(D^{1/4})\) degree-two block.
+
+The present argument uses the linear total internal-fan population (5), not just the
+longest run. The only global losses are
+
+- \(R=O(\sqrt D)\) fan-run boundaries; and
+- \(T\) actual degree-three separator vertices.
+
+The unit-contact degree cap converts the large-\(T\) case directly into distinct
+source-level inward ports, while the small-\(T\) case leaves only \(O(\sqrt D)\)
+blocks across a linear number of degree-two vertices.
+
+Hence the exponent improves sharply:
+\[
+\boxed{
+D^{1/4}\longrightarrow D^{1/2}.
+}
+\tag{22}
+\]
+
+## 9. Remaining bottleneck
+
+This still does not close C-II.
+
+The low-\(x_B\), square-root-matching branch is now forced into one of two
+source-level structures of the same square-root scale as the actual-diameter
+matching:
+
+1. **inward-port branch:** \(\Omega(\sqrt D)\) distinct diameter-inactive third-contact vertices,
+   each attached by a unit edge to a diameter leaf and lying at carrier-radius
+   deficit at least
+   \[
+   \delta_D\to\sqrt3/2;
+   \]
+2. **stress-flat fan branch:** an \(\Omega(\sqrt D)\)-long exact circular fan whose
+   internal vertices have contact degree two, all fan-contact multipliers are equal,
+   and all pendant-diameter multipliers are exactly equal to that common contact
+   multiplier divided by \(D^2\).
+
+The next closure attempts are branch-specific.
+
+- For the inward-port branch, couple the distinct diameter-inactive ports to the
+  canonical inactive attachment/interface or ball-hull capacity ledgers. Lemma 4.1
+  removes arbitrary many-to-one reuse of the third neighbors, while the companion
+  inactivity theorem removes loaded-diameter reuse entirely.
+- For the stress-flat branch, propagate the common multiplier through the
+  2-edge-connected positive-contact block or construct a finite fan release. The
+  current theorem gives a segment long enough to interact with square-root-scale
+  diameter localization.
+
+No claim of a unit triangle, strict sub-\(D\) competitor, C-II closure, or Level I
+closure is made.
+
+**Disposition:** theorem/proof-only structural strengthening. No numerical search,
+verifier execution, CI output, or unexecuted certificate code is used.

@@ -1,0 +1,247 @@
+# Target C-II — host geometry forces every switching diameter a fixed angle away from the row axis
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` geometric strengthening; no canonical promotion claimed  
+**Scope:** selected O--O path through `t=(q-k)/D<=1.8687`; consequences stated for the deep exact-force branch  
+**Dependencies:** coupled paired-remainder O--O path; exact diameter support-normal theorem; phase-free path-region switching identity; one-sided common-hub switching; exact-antipodal force-pair theorem  
+**Certificate:** `research/verify_target_c_high_t_host_forced_transverse_force_margin_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The previous deep-force argument used global C67 direction packing to delete force rays lying close to the exact reaction/row axis. The physical O--O host geometry gives a stronger pointwise statement, with no density loss.
+
+Put
+
+\[
+c_*={4143\over10000}=0.4143,
+\qquad
+\vartheta_*:=\arccos c_*,
+\qquad
+\gamma_*:={\pi\over2}-\vartheta_*=\arcsin c_*.
+\tag{HT.1}
+\]
+
+Numerically,
+
+\[
+\boxed{
+\gamma_*=0.4271735560\ldots
+=24.47524188\ldots^\circ.
+}
+\tag{HT.2}
+
+Then every actual switching diameter `h` at every nonhub selected high-`t` interface satisfies
+
+\[
+\boxed{
+ d_{\mathbb{RP}^1}([d_h],[u_i])
+ \ge\gamma_*-o(1),
+}
+\tag{HT.3}
+
+or equivalently
+
+\[
+\boxed{
+|d_h\cdot Ju_i|\ge0.4143-o(1).
+}
+\tag{HT.4}
+
+This applies to every switching diameter, not merely to a positive-density extraction.
+
+---
+
+## 1. The two physical host arcs have width strictly below a semicircle
+
+The coupled path uses terminal-energy threshold
+
+\[
+e_\tau\le0.5857+o(1).
+\]
+
+At either terminal of a selected O--O train, if `alpha` is the deviation of the outward support normal from the corresponding ideal oriented normal branch, the terminal-energy estimate gives
+
+\[
+1-\cos\alpha\le e_\tau+o(1).
+\]
+
+Hence
+
+\[
+\cos\alpha\ge0.4143-o(1),
+\qquad
+|\alpha|\le\vartheta_*+o(1).
+\tag{HT.5}
+
+All selected row phases lie in one shrinking projective window about `[u_*]`. The two ideal terminal-normal branches are therefore `+Ju_*` and `-Ju_*` up to `o(1)`. Outward support-normal angle is monotone along a convex boundary, so every support normal on either entire physical host arc lies within
+
+\[
+\vartheta_*+o(1)
+\]
+
+of the corresponding branch.
+
+Thus each host arc has support-normal width at most
+
+\[
+2\vartheta_*+o(1)<\pi.
+\tag{HT.6}
+
+---
+
+## 2. A diameter direction is an exact support normal at its endpoint
+
+Let `xy` be an actual diameter edge, `|x-y|=D`. For every `z` in the source hull,
+
+\[
+|z-y|^2\le D^2=|x-y|^2.
+\]
+
+Expanding around `x` gives
+
+\[
+2(x-y)\cdot(z-x)+|z-x|^2\le0,
+\]
+
+so
+
+\[
+(x-y)\cdot(z-x)\le0
+\quad\text{for every }z.
+\]
+
+Therefore `x-y` is an exact outward support normal at `x`; similarly `y-x` is an exact outward support normal at `y`.
+
+Now take a switching diameter at nonhub interface `i`. The path-region switching identity and one-sided hub routing give one unique birth endpoint in the physical layer `R_i`. Every diameter endpoint is extreme, so that birth endpoint lies on one of the two layer host subarcs. The diameter line is therefore one of the support-normal lines covered by (HT.5).
+
+Since `[u_i]=[u_*]+o(1)`, the projective triangle inequality gives
+
+\[
+d_{\mathbb{RP}^1}([d_h],[u_i])
+\ge {\pi\over2}-\vartheta_*-o(1)
+=\gamma_*-o(1),
+\]
+
+proving (HT.3)--(HT.4).
+
+The near-disk radial/midpoint approximation is not needed.
+
+---
+
+## 3. Exact force pairs get a fixed two-sided dipole cusp
+
+At an exact-antipodal interface the reaction axis equals the row line projectively:
+
+\[
+e_i={G_i\over|G_i|}=\pm u_i.
+\]
+
+Choose the exact positive force pair `h_i^-,h_i^+`. Both are switching diameter edges, so (HT.4) applies to both.
+
+For the elementary exact-antipodal dipole coordinate `d^(i)`, the squared-length derivative on an actual diameter bar is
+
+\[
+\ell_h(s d^{(i)})
+=2Ds\,d_h\cdot Je_i
+\]
+
+up to the common interface orientation sign. Hence
+
+\[
+\boxed{
+|\ell_{h_i^\pm}(s d^{(i)})|
+\ge(0.8286-o(1))D|s|.
+}
+\tag{HT.7}
+
+The two force bars have opposite transverse signs, so one lengthens for either sign of `s`.
+
+If their lifted deviations from `e_i` are `p_i,q_i>0`, `p_i+q_i<pi`, the exact force coefficients are
+
+\[
+\lambda_i^-={|G_i|\over D}{\sin q_i\over\sin(p_i+q_i)},
+\qquad
+\lambda_i^+={|G_i|\over D}{\sin p_i\over\sin(p_i+q_i)}.
+\]
+
+The projective margin gives
+
+\[
+\sin p_i,\sin q_i\ge0.4143-o(1),
+\]
+
+while `sin(p_i+q_i)<=1`. Therefore
+
+\[
+\boxed{
+\lambda_i^\pm
+\ge(0.4143-o(1)){|G_i|\over D}.
+}
+\tag{HT.8}
+
+No absolute multiplier floor is claimed because `|G_i|/D` may vanish.
+
+---
+
+## 4. The old axis-near density deletion disappears
+
+In the parameterized deep-force construction, the previous proof deleted up to
+
+\[
+2\delta D+o(D)
+\]
+
+centers solely to ensure that both selected force bars stayed away from the row axis. Sections 1--3 show that every selected switching bar already has the stronger fixed margin `gamma_*-o(1)`. That deletion is unnecessary.
+
+Combined with the host-sharpened robust fork, the no-positive-density-strong-TB1 branch starts with
+
+\[
+|E_D|>c_0D-o(D),
+\qquad
+c_0={113\over20{,}000{,}000}.
+\]
+
+After imposing pair gap at least `rho` and deleting radius-`r` separator neighborhoods of density `eta`, the deep exact-force family has
+
+\[
+\boxed{
+(c_0-2\rho-\eta)D-o(D)
+}
+\tag{HT.9}
+
+centers, each with the fixed host margin (HT.3), exact positive force compression, bilateral birth, the common inverse-`D` train grid, and arbitrary prescribed finite exact-phase depth.
+
+With the displayed choices
+
+\[
+\rho={c_0\over100},
+\qquad
+\eta={c_0\over50},
+\]
+
+this becomes
+
+\[
+\boxed{0.96c_0=5.424\times10^{-6}.}
+\tag{HT.10}
+
+The existing diagonal argument permits exact-phase depth tending to infinity while preserving this leading density. The normalized KKT scale may vanish, but the geometric dipole slope remains at least `0.8286-o(1)` after division by `D`.
+
+---
+
+## 5. Frontier effect
+
+The exact-force branch can now be normalized as
+
+```text
+(c0-o(1))D deep exact-force centers
++ arbitrary prescribed/growing exact-phase depth
++ bilateral ordered birth
++ both force bars at least 24.475 degrees from the row/reaction line
++ dipole slope at least (0.8286-o(1))D on each selected bar
++ force coefficients >=(0.4143-o(1))|G_i|/D
++ one common inverse-D near-triangular train grid.
+```
+
+The `axis-near force ray` degeneration is gone pointwise, rather than merely at positive density. C-II remains open because the exact KKT scale can still vanish and the fixed-transverse force pairs remain compatible with the current global endpoint order.
+
+**Disposition:** every switching diameter on the selected high-`t` path inherits a fixed source-geometric transverse margin directly from exact diameter support-normality; the deep exact-force branch keeps this margin with no C67 axis-near deletion.

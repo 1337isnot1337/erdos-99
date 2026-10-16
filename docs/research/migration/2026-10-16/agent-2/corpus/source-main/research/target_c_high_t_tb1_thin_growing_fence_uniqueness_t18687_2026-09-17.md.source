@@ -1,0 +1,230 @@
+# Target C-II - the THIN uniqueness fork extends to growing phase-pure fences
+
+**Date:** 2026-09-17  
+**Status:** proof-only strengthening of the THIN two-sided incidence system; no canonical promotion claimed  
+**Scope:** THIN side of the 15-spaced one-sign strong-TB1 Horn upper family through `t=(q-k)/D<=1.8687`  
+**Dependencies:** two-sided incidence purification; train-step cone theorem DT; THIN inverse-D directional capacity/dispersion  
+**Certificate:** `research/verify_target_c_high_t_tb1_thin_growing_fence_uniqueness_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The two-sided incidence-purification theorem produced a growing braid and growing phase-pure train fences with one homogeneous two-bit meet/avoid type, but deliberately did not claim that a chord/train meeting is unique. The later phase-cone argument established uniqueness only against four fixed macroscopic guards.
+
+The same cone argument applies simultaneously to the whole purified fence. After deleting only `O(1)` THIN chords near the three phase-sector boundaries and retaining one direction sector, one obtains a balanced subsystem of size
+\[
+\left({1\over12}-o(1)\right)\log_2\log D
+\]
+with an exact fork:
+
+1. **ROW-UNIQUE:** every selected THIN chord meets every retained selected row exactly once; or
+2. **FENCE-UNIQUE:** every selected THIN chord meets every selected left and right fence train at most once.
+
+In the FENCE-UNIQUE case the already homogeneous incidence bits become exact intersection counts. Thus the whole growing braid/fence incidence system is one of four exact `0/1` rectangles, not merely four nonempty/disjointness patterns.
+
+For any prescribed fixed `L`, the THIN directional-capacity theorem further leaves `Theta(log log D)` braid chords whose directions are pairwise more than `L/D` apart, without changing the uniqueness mode or the exact incidence type.
+
+---
+
+## 1. Input: a homogeneous growing braid/fence system
+
+At the half-exponent choice of the logarithmic braid/fence theorem, the two-sided incidence purification gives sets
+\[
+F_D,\quad L_D,\quad R_D
+\tag{GFU.1}
+\]
+of common size
+\[
+\boxed{
+s_D=\left({1\over4}-o(1)\right)\log_2\log D
+}
+\tag{GFU.2}
+\]
+and bits `sigma_L,sigma_R in {0,1}` such that
+\[
+\chi(e,b)=\sigma_L
+\quad(e\in F_D,b\in L_D),
+\tag{GFU.3}
+\]
+\[
+\chi(e,b)=\sigma_R
+\quad(e\in F_D,b\in R_D).
+\tag{GFU.4}
+\]
+Here `chi=1` means nonempty intersection of the straight THIN chord with the complete stopped-train midpoint curve.
+
+The same system has a common selected-row family `A_D` with
+\[
+|A_D|=D^{1/2-o(1)}.
+\tag{GFU.5}
+\]
+Every chord and every selected fence train crosses every row in `A_D`. The rows lie in one inverse-`D` projective phase. Each of `L_D,R_D` is separately phase-pure, with its transverse direction in one of the two column phase cones relative to the row phase. All selected fence trains are pairwise noncrossing.
+
+Every chord in `F_D` is THIN:
+\[
+D-|e|<{1\over4D}.
+\tag{GFU.6}
+\]
+
+---
+
+## 2. Clear the three phase boundaries at constant cost
+
+Let `[u_*]` be the common row transverse phase. As in the four-guard phase-cone theorem, define the ideal projective step sectors
+\[
+\mathcal S_-=
+([u_*],[u_*]+\pi/3),
+\tag{GFU.7}
+\]
+\[
+\mathcal S_0=
+([u_*]+\pi/3,[u_*]+2\pi/3),
+\tag{GFU.8}
+\]
+\[
+\mathcal S_+=
+([u_*]+2\pi/3,[u_*]+\pi).
+\tag{GFU.9}
+\]
+The row-train step cone is an `O(D^-1)` perturbation of `S_0`; a train in either column phase has step cone an `O(D^-1)` perturbation of `S_-` or `S_+`.
+
+Choose one fixed clearance constant `L_0` larger than all phase-error coefficients. Delete every THIN chord whose projective direction lies within `L_0/D` of one of the three ideal sector boundaries.
+
+The THIN fixed-tube capacity theorem gives a source-independent bound on the number of vertex-disjoint THIN chords in each such inverse-`D` tube. Hence only
+\[
+O(1)
+\tag{GFU.10}
+\]
+chords are deleted.
+
+Split the remaining chords by `S_-`, `S_0`, `S_+` and retain a largest class `F_D^*`. Then
+\[
+\boxed{
+|F_D^*|
+\ge {s_D-O(1)\over3}
+=\left({1\over12}-o(1)\right)\log_2\log D.
+}
+\tag{GFU.11}
+\]
+Trim `L_D,R_D` if desired to the same size. Equations (GFU.3)--(GFU.4) remain valid.
+
+---
+
+## 3. Sector outside S0 gives ROW-UNIQUE
+
+Suppose `F_D^*` lies in `S_-` or `S_+`. Every chord direction then lies outside the closed step cone of every retained selected row, with fixed inverse-`D` clearance after the phase perturbation.
+
+By the line/train uniqueness lemma, a selected chord meets a selected row midpoint curve at most once. Exact selected-cut support already makes every chord meet every retained row at least once. Therefore
+\[
+\boxed{
+|e\cap a|=1
+\quad(e\in F_D^*,\ a\in A_D).
+}
+\tag{GFU.12}
+\]
+This is the ROW-UNIQUE branch, now retaining growing phase-pure train fences and the homogeneous two-bit fence-incidence type.
+
+The row-order stabilization theorem can then be applied unchanged if a one-sided ordered-cable normal form is desired.
+
+---
+
+## 4. Sector S0 gives FENCE-UNIQUE on the whole growing fence
+
+Suppose instead `F_D^*` lies in `S_0`. Every selected train in `L_D union R_D` belongs to one of the two column phases, so its train-step cone is an `O(D^-1)` perturbation of `S_-` or `S_+`.
+
+After the boundary clearance from Section 2, every chord direction in `F_D^*` lies outside the closed step cone of every selected fence train. The line/train uniqueness lemma therefore gives
+\[
+\boxed{
+|e\cap b|\le1
+\quad(e\in F_D^*,\ b\in L_D\cup R_D).
+}
+\tag{GFU.13}
+\]
+
+Now combine this with the already homogeneous binary incidence. For every left train,
+\[
+\boxed{
+|e\cap b|=\sigma_L
+\quad(e\in F_D^*,\ b\in L_D),
+}
+\tag{GFU.14}
+\]
+and for every right train,
+\[
+\boxed{
+|e\cap b|=\sigma_R
+\quad(e\in F_D^*,\ b\in R_D).
+}
+\tag{GFU.15}
+\]
+Thus each of the four patterns
+\[
+(\sigma_L,\sigma_R)\in\{00,10,01,11\}
+\tag{GFU.16}
+\]
+is now an exact intersection-count statement on two complete bipartite rectangles of diverging size.
+
+After trimming both fences to `|F_D^*|`, the FENCE-UNIQUE subsystem has balanced size
+\[
+\boxed{
+\left({1\over12}-o(1)\right)\log_2\log D
+}
+\tag{GFU.17}
+\]
+on each of its three shores, while all objects still coexist on the same `D^(1/2-o(1))` row stack.
+
+---
+
+## 5. Robust inverse-D direction separation is compatible with the fork
+
+Fix any constant `L>0`. The THIN fixed-tube capacity theorem gives an eventual constant
+\[
+C_L=2+\left\lceil\sqrt{2+4L^2}\right\rceil
+\tag{GFU.18}
+\]
+such that every radius-`L/D` projective direction tube contains fewer than `C_L` selected THIN matching edges.
+
+Greedy selection inside `F_D^*` gives a subfamily `F_D^{sep}` with
+\[
+\boxed{
+|F_D^{sep}|
+\ge
+\left({1\over12C_L}-o(1)\right)\log_2\log D
+}
+\tag{GFU.19}
+\]
+and
+\[
+d_{\mathbb{RP}^1}([e],[f])>{L\over D}
+\quad(e\ne f).
+\tag{GFU.20}
+\]
+Trimming each fence to the same cardinality preserves all conclusions. Thus either uniqueness mode may be assumed together with angular separation beyond any fixed phase-error scale.
+
+---
+
+## 6. Frontier effect
+
+The previous four-guard theorem removed intersection multiplicity only for four selected trains. The entire homogeneous two-sided fence can now be put under the same uniqueness control.
+
+The THIN branch therefore contains an unbounded subsystem of one of the following exact forms:
+
+```text
+ROW-UNIQUE:
+    Theta(log log D) pairwise-crossing THIN chords;
+    D^(1/2-o(1)) common rows, each met exactly once by every chord;
+    Theta(log log D) phase-pure trains on each circumcenter flank;
+    one homogeneous two-bit chord/fence incidence type.
+
+FENCE-UNIQUE:
+    Theta(log log D) pairwise-crossing THIN chords;
+    Theta(log log D) pairwise-noncrossing phase-pure left trains;
+    Theta(log log D) pairwise-noncrossing phase-pure right trains;
+    every chord/train pair has exact intersection count 0 or 1;
+    the count is constant on each whole flank;
+    all coexist on D^(1/2-o(1)) common rows.
+```
+
+For every fixed `L`, either form retains `Theta(log log D)` chords with pairwise direction separation greater than `L/D`.
+
+The remaining FENCE-UNIQUE task is now purely an order problem for exact pseudoline-type incidence rectangles: rule out one of `00,10,01,11` using the common row order, the two circumcenter flanks, and the fact that the chord shore is internally a pairwise-crossing matching while the train shore is internally noncrossing.
+
+**Disposition:** upgraded the THIN phase-cone fork from four guards to the whole growing two-sided phase-pure fence, turning homogeneous meet/avoid bits into exact `0/1` intersection counts in the FENCE-UNIQUE branch. C-II and Level I remain open.

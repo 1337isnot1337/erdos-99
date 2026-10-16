@@ -1,0 +1,79 @@
+# Target C: exact exclusion of two-singleton support 8
+
+Date: 2026-09-29
+
+Support 8 in the committed thirteen-support narrowing is
+
+`[0123]^3 [0124] [0134] [0145] [0234] [0245] [1234]`.
+
+This note records a complete orientation-level exclusion for that support in the
+nine-no-root `k=4, D=-1, d_root=0, p=2` two-selected-singleton profile.
+
+Companion verifier:
+
+`research/verify_target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_two_singleton_support8_eight_empty_obstruction_2026_09_29.py`
+
+## Structural lower bound on empty blocks
+
+For every orientation of this support, the touched block family `T` has
+
+`|T| = 15`, `rank H(T) = 9`.
+
+Let `C` be the touched actual-complete blocks, `S` the touched selected-singleton
+blocks, and `E` the touched actual-empty blocks. Because `d_root=0`, the rows
+`H(C)` are independent, so `|C|=rank H(C)`. The established four-direction
+capacity condition gives
+
+`rank H(T) - rank H(C) >= 4`.
+
+Hence `|C| <= 5`. Since at most two selected singleton blocks lie in `T`,
+
+`|E| = 15 - |C| - |S| >= 15 - 5 - 2 = 8`.
+
+Thus every realizable state contains at least eight touched actual-empty blocks.
+
+## Exact eight-empty obstruction
+
+There are six multiplicity-one supports after `[0123]^3`, so there are exactly
+`3^6 = 729` raw orientation assignments. For each orientation, the verifier
+examines all `C(15,8)=6435` eight-block subsets, for
+
+`729 * 6435 = 4,691,115`
+
+cases.
+
+For an eight-block set `F`, let `U(F)` be the sum of the exact local
+empty-block constraint spaces. If `F` were a set of actual-empty blocks, then
+`U(F)` would be contained in the actual aggregate constraint space `W`, which
+has dimension four.
+
+The exact census is:
+
+- `4,691,007` subsets have rank at least five already modulo 2;
+- `108` subsets have rank four modulo 2;
+- all `108` exceptional subsets have exact rational rank four;
+- all `108` exact rank-four spaces fail the committed necessary generalized-weight
+  filter `parity_profile_ok`.
+
+Reduction modulo 2 cannot increase rank, so the first class cannot lie in a
+four-dimensional rational space. In the second class, an actual eight-empty
+set would have `U(F)=W`; but every such `U(F)` fails a necessary condition
+for the actual `W`. Therefore no orientation is realizable.
+
+The persisted verifier blob is
+`b637000d1a23df649eece5428bc9bbf8d3ee033e`. That exact verifier source was
+executed locally. Its imported current-main helper is
+`research/verify_target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_selected_pair_orientation_2026_09_28.py`,
+blob `867e8e583f6073c92b1f7afbf2aaf536e2567fa9`. The local execution used a
+transcription of the relevant audited helper routines; as a cross-check, that
+transcription exactly reproduced the committed support-5 census before the new
+support-8 run.
+
+## Consequence
+
+Support 8 is excluded. On authoritative main before this contribution, supports
+1, 2, 3, 4, 5, and 12 were already closed. Separate pushed branches contain
+support-6 and support-7 exclusions but are not yet on main.
+
+This closes support 8 only. It does not close the full two-singleton profile,
+the full `D=-1,p=2` branch, or Erdos Problem #99.

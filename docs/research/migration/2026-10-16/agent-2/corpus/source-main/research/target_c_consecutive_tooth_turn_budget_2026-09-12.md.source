@@ -1,0 +1,228 @@
+# Target C — consecutive near-triangular teeth consume hull-turn budget
+
+**Date:** 2026-09-12
+**State base:** audit.46, canonical through Section 123
+**Status:** proved candidate awaiting hostile audit; noncanonical
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The normalized Sections 124–125 reduction leaves a full-core regime in which a
+linear family of augmented triangular faces may be supported by two-edge unit
+teeth.  The artificial base of such a tooth is a nonunit global force-hull side.
+This note records an exact local constraint that has not been used in that ledger:
+two consecutive teeth cannot follow a hull turn for free.
+
+The candidate chain is
+
+```text
+two consecutive teeth
+  -> exact apex separation inequality
+  -> turn <= base-excess function on the two sides
+  -> a quantitative base-spacing cost for a long tooth run.
+```
+
+It does not close C-II.  In the near-disk scaling, a full tooth cycle can pay the
+required turn with only a constant total base excess, while the current global
+Section-125 budget allows `O(D)` base excess.  The result is therefore a precise
+constraint on the remaining tooth regime, not a global contradiction.
+
+## 1. Finite setup
+
+Let `p_i,p_{i+1},p_{i+2}` be three consecutive vertices of a strictly convex
+counterclockwise loaded force hull.  Put
+
+\[
+b_i=|p_{i+1}-p_i|=1+e_i,
+\qquad
+b_{i+1}=|p_{i+2}-p_{i+1}|=1+e_{i+1},
+\]
+
+and suppose both sides carry augmented triangular teeth.  Thus there are unloaded
+source points `x_i,x_{i+1}` on the inward side of the corresponding hull sides with
+
+\[
+|x_i-p_i|=|x_i-p_{i+1}|=1,
+\qquad
+|x_{i+1}-p_{i+1}|=|x_{i+1}-p_{i+2}|=1.
+\]
+
+The tooth bases satisfy `1< b_i,b_{i+1} <=2`, so `0<e_i,e_{i+1}<1`.
+Let `alpha_i` be the exterior turn of the loaded hull at `p_{i+1}`:
+
+\[
+\alpha_i=\angle(p_{i+1}-p_i,p_{i+2}-p_{i+1})\in(0,\pi).
+\]
+
+Define
+
+\[
+\beta(e):=\arccos\frac{1+e}{2},
+\qquad
+f(e):=\frac\pi3-\beta(e).
+\tag{TT.1}
+\]
+
+Then `f(0)=0`, `f(1)=pi/3`, and `f` is increasing and strictly convex on
+`[0,1)`.
+
+## 2. Exact adjacent-tooth inequality
+
+### Lemma TT.1
+
+For every pair of consecutive teeth as above,
+
+\[
+\boxed{\alpha_i\le f(e_i)+f(e_{i+1}).}
+\tag{TT.2}
+\]
+
+### Proof
+
+At the common loaded vertex `p_{i+1}`, the ray to `x_i` has length one and makes
+angle `pi-beta(e_i)` with the preceding hull side.  The ray to `x_{i+1}` has length
+one and makes angle `alpha_i+beta(e_{i+1})` with that same side.  Since both tooth
+apices lie on the inward side of their global hull sides, both rays lie in the common
+interior wedge.  In particular
+
+\[
+\alpha_i+\beta(e_{i+1})\le\pi,
+\qquad
+\alpha_i+\beta(e_i)\le\pi,
+\]
+
+so their order in that wedge is fixed.  Their smaller angular separation is therefore
+
+\[
+\gamma_i=\pi-\alpha_i-\beta(e_i)-\beta(e_{i+1}).
+\tag{TT.3}
+\]
+
+The two unloaded points are distinct source points, so unit separation gives
+
+\[
+1\le|x_i-x_{i+1}|=2\sin(\gamma_i/2).
+\]
+
+The wedge geometry has `0<=gamma_i<pi`; hence `gamma_i>=pi/3`. Substituting into
+(TT.3) gives
+
+\[
+\alpha_i
+\le\frac{2\pi}{3}-\beta(e_i)-\beta(e_{i+1})
+=f(e_i)+f(e_{i+1}),
+\]
+
+which proves the lemma. `square`
+
+The inequality is sharp at the geometric boundary: when the two apexes are exactly
+one unit apart, equality holds. A strict triangle-free source has no uniform positive
+gap because the apex separation may approach one from above.
+
+## 3. A tooth-run corollary
+
+Let sides `i=r,...,s` form a maximal consecutive run of tooth bases. Summing (TT.2)
+over the internal vertices of the run gives
+
+\[
+\boxed{
+\sum_{i=r}^{s-1}\alpha_i
+\le f(e_r)+2\sum_{i=r+1}^{s-1}f(e_i)+f(e_s).
+}
+\tag{TT.4}
+\]
+
+This is an exact finite inequality; it does not identify repeated source labels or
+discard contact-isolated points.
+
+If every side of a strictly convex loaded polygon is a tooth, summing cyclically
+gives
+
+\[
+2\pi\le2\sum_i f(e_i),
+\qquad
+\sum_i f(e_i)\ge\pi.
+\tag{TT.5}
+\]
+
+Because `f` is convex and joins `(0,0)` to `(1,pi/3)`,
+
+\[
+f(e)\le\frac\pi3e\qquad(0\le e\le1),
+\]
+
+so every all-tooth convex cycle obeys the universal finite bound
+
+\[
+\boxed{\sum_i(b_i-1)=\sum_i e_i\ge3.}
+\tag{TT.6}
+\]
+
+For a uniform small-base regime `0<=e_i<=eta<1`, the derivative
+
+\[
+f'(e)=\frac1{\sqrt{4-(1+e)^2}}
+\]
+
+is at most `1/sqrt(4-(1+eta)^2)`. Therefore
+
+\[
+f(e)\le\frac{e}{\sqrt{4-(1+\eta)^2}},
+\]
+
+and (TT.5) strengthens to
+
+\[
+\boxed{
+\sum_i(b_i-1)
+\ge\pi\sqrt{4-(1+\eta)^2}.
+}
+\tag{TT.7}
+\]
+
+As `eta` tends to zero, the right side tends to `pi sqrt(3)`. This is the sharp
+small-base first-order turn cost. The universal bound (TT.6) is safer when some
+tooth bases are not close to one.
+
+## 4. Handoff to the Section-125 residual
+
+Section 125 identifies the unresolved case by the exact currencies
+
+\[
+\sum_r(L_r+P_{{\rm exc},r}-2d_r)
+\le
+10(e_{BB}-k)+2\sum_r(a_r-d_r)
+-10d_{tile}-4M_{miss}-6C_\partial.
+\tag{TT.8}
+\]
+
+The all-tooth subcase has `M_miss=0` and `C_partial=0`: every augmented boundary
+face is a two-edge tooth over a nonunit global hull side. Lemma TT.1 adds the exact
+constraint (TT.4) to that subcase. In particular, a full cycle of such teeth must
+spend at least three units of aggregate base excess, and a uniformly small-base cycle
+must spend the stronger amount in (TT.7).
+
+This removes the degenerate algebraic picture in which a closed tooth cycle has
+positive hull turn and zero base-spacing excess. It does not remove the actual
+near-disk regression: a cycle with `Theta(D)` sides can distribute a constant total
+excess over those sides, and the promoted Section-125 budget permits a linear amount.
+Consequently the exact missing bridge remains one of:
+
+1. a source-level theorem converting the turn/base-excess cost into a strict diameter
+   improvement;
+2. a bulk contact or response theorem that prevents the tooth cycle from being the
+   only boundary layer of the harmonic carrier; or
+3. a global capacity estimate that makes even the constant second-order tooth cost
+   incompatible with `D(n)`.
+
+## 5. Scope audit and classification
+
+- The two apex points are retained source points; no source point is removed.
+- The argument uses only unit separation, strict convexity, and the two unit tooth
+  edges at each apex.
+- It applies to actual global hull sides, as supplied for augmented triangular faces
+  by proof-only Section 124/125.
+- It does not extend the ZR/ZF affine-kernel theorem to contact-isolated points.
+- It does not infer a global minimizer from the local tooth polygon.
+- It does not claim an exact unit triangle: equality is approached, not attained.
+
+**Classification:** proved candidate awaiting hostile audit. The theorem state remains
+unchanged; C-II remains open.

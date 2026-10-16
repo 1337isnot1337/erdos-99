@@ -1,0 +1,588 @@
+# Target C-II - asymmetric THIN braid/fence extraction gives exact ordered uniqueness normal forms
+
+**Date:** 2026-09-17  
+**Status:** proof-only geometric/combinatorial strengthening of the THIN growing-fence and phase-cone theorems; no canonical promotion claimed  
+**Scope:** THIN side of the 15-spaced one-sign strong-TB1 Horn upper family through `t=(q-k)/D<=1.8687`  
+**Dependencies:** logarithmic THIN braid/fence count; inverse-`D` directional-capacity lemma; stopped-train step-cone monotonicity; proper-crosscut realization of complete trains; superdiameter thrackle theorem  
+**Certificate:** `research/verify_target_c_high_t_tb1_thin_asymmetric_unique_grid_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The preceding phase-cone theorem used four fixed train guards in order to retain a
+`Theta(log D)` braid on `D^(1/2-o(1))` common rows. The growing-fence count has a
+useful asymmetric regime which is stronger for incidence questions: keep
+`Theta(log D)` braid chords but only `sqrt(log D)` trains on each flank. Synchronizing
+the train fence then costs only `D^o(1)`, so the braid may use the much larger
+`5^{-r}` budget.
+
+This gives a common system with
+
+\[
+r_D=\left({1\over2\log5}+o(1)\right)\log D
+\tag{AU.1}
+\]
+
+pairwise-crossing THIN chords,
+
+\[
+s_D=(1+o(1))\sqrt{\log D}
+\tag{AU.2}
+\]
+
+fixed trains on each circumcenter flank, and
+
+\[
+\boxed{|A_D|=D^{1/2-o(1)}}
+\tag{AU.3}
+\]
+
+common inverse-`D` phase rows.
+
+After deleting only `O(1)` braid chords near the three phase-sector boundaries and
+retaining one of the three direction sectors, one obtains one of two exact normal
+forms.
+
+1. **ROW-UNIQUE.** A `Theta(log D)` pairwise-crossing sub-braid meets every row in
+   `A_D` exactly once. After retaining another `D^(1/2-o(1))` rows, the order of all
+   braid intersections is identical on every retained row. A further
+   Erdos--Szekeres extraction gives `Theta(sqrt(log D))` braid chords whose pairwise
+   mutual crossings all lie on one side of the whole retained row slab.
+
+2. **GUARD-UNIQUE.** A `Theta(log D)` pairwise-crossing sub-braid meets every one of
+   the `2s_D` fixed fence trains at most once. Every such intersection is a proper
+   crossing. Relative to the common fence order, the guards met by one chord form one
+   consecutive interval. After keeping one orientation class these intervals are
+   nested. Since a nested chain on `2s_D` guards has at most `2s_D+1` distinct sets,
+   there is a sub-braid of size
+   \[
+   \boxed{
+   \left({1\over24\log5}-o(1)\right)\sqrt{\log D}
+   }
+   \tag{AU.4}
+   \]
+   whose chords have exactly the same `0/1` intersection pattern against all
+   `2s_D=(2+o(1))sqrt(log D)` fixed guards.
+
+There is an additional topological strengthening which is useful in both cases. The
+set of selected path rows met by any complete train is an interval in the path order.
+Consequently every fixed fence train, not only every braid chord, crosses the entire
+consecutive selected-row block from `min A_D` through `max A_D`. That block has length
+at least `D^(1/2-o(1))`. The near-`pi/3` purification is still asserted only on the
+rows of `A_D`; the interval extension is topological and does not promote the
+intermediate crossings to the same quantitative angle estimate.
+
+This removes two remaining ambiguities at once. The ROW-UNIQUE side now has a genuine
+fixed braid order on a polynomial-height row subsystem. The GUARD-UNIQUE side no
+longer carries an arbitrary binary braid/fence incidence matrix: it is a nested
+interval system, and a balanced `sqrt(log D)` by `sqrt(log D)` exact homogeneous
+subsystem survives.
+
+---
+
+## 1. Asymmetric use of the growing-fence count
+
+Retain the notation
+
+\[
+q_0=0.05470272542658\ldots,
+\qquad
+T_*=3.0605,
+\]
+
+and let `N=Theta(D)` be the owned THIN blocker population. The finite
+braid/fence count proved previously gives, uniformly for growing parameters in the
+range used below, fixed objects on at least
+
+\[
+\left({3\over4}-o(1)\right)
+{N\over 5^r}
+\left({q_0\over T_*}\right)^{2s}
+\tag{AU.5}
+\]
+
+common phase-pure rows. The same estimate follows directly from the greedy matching
+product and the two flank falling-factorial counts.
+
+Choose
+
+\[
+\boxed{
+r_D=\left\lfloor{\log D\over2\log5}\right\rfloor,}
+\qquad
+\boxed{
+s_D=\left\lfloor\sqrt{\log D}\right\rfloor.}
+\tag{AU.6}
+\]
+
+The matching correction remains negligible because
+
+\[
+{r_D^2D^{3/4}\over D}\to0,
+\tag{AU.7}
+\]
+
+and the train falling-factorial correction remains negligible because
+
+\[
+{s_D^2\over D}\to0.
+\tag{AU.8}
+\]
+
+No convergence-rate assumption on the existing `o(1)` terms is needed for the
+exponent statement: raising a factor `c-o(1)` to `O(log D)` contributes only
+`D^{o(1)}`.
+
+Now
+
+\[
+5^{r_D}=D^{1/2+o(1)}
+\tag{AU.9}
+\]
+
+and
+
+\[
+\left({T_*\over q_0}\right)^{2s_D}
+=\exp\!\left((8.04884009424\ldots+o(1))\sqrt{\log D}\right)
+=D^{o(1)}.
+\tag{AU.10}
+\]
+
+Since `N=Theta(D)`, (AU.5) yields (AU.3).
+
+Thus there are fixed families
+
+\[
+F_D,\qquad L_D,\qquad R_D
+\]
+
+with
+
+\[
+|F_D|=r_D,
+\qquad
+|L_D|=|R_D|=s_D,
+\tag{AU.11}
+\]
+
+such that
+
+- the chords in `F_D` are vertex-disjoint THIN hull chords and every two cross
+  properly;
+- the `2s_D` trains in `L_D union R_D` are pairwise noncrossing and have one common
+  order on every row of `A_D`;
+- every chord and every fixed train crosses every row of `A_D`;
+- all rows of `A_D` have one projective transverse phase to `O(D^-1)`;
+- every left train crosses each retained row below `-0.01D`, and every right train
+  crosses it above `+0.01D`.
+
+---
+
+## 2. A complete train crosses an interval of the selected path
+
+Let
+
+\[
+\tau_1,\ldots,\tau_m
+\]
+
+be the selected O--O path rows in their path order. They are pairwise disjoint proper
+crosscuts of the outer-face disk, and every intermediate row separates the earlier
+rows from the later rows.
+
+### Lemma AU.1 - connected-crosscut interval support
+
+For any path `gamma` in the disk, define
+
+\[
+J(\gamma):=\{j:\gamma\cap\tau_j\ne\varnothing\}.
+\]
+
+If `gamma` meets both `tau_i` and `tau_k` with `i<k`, then it meets every
+`tau_j`, `i<j<k`. Hence `J(gamma)` is an integer interval whenever it is nonempty.
+
+### Proof
+
+Choose points
+
+\[
+x\in\gamma\cap\tau_i,
+\qquad y\in\gamma\cap\tau_k.
+\]
+
+For `i<j<k`, the proper crosscut `tau_j` separates `tau_i` from `tau_k` in the
+selected path disk. Any subpath of `gamma` joining `x` to `y` must cross `tau_j`.
+This holds for every intermediate `j`. `square`
+
+Apply the lemma to each fixed complete train `b in L_D union R_D`. Since `b` meets
+every row in `A_D`,
+
+\[
+\boxed{
+[\min A_D,\max A_D]\subset J(b).
+}
+\tag{AU.12}
+
+The exact selected-cut support of every THIN braid chord is already an interval and
+contains `A_D`, so the same inclusion holds for every `e in F_D`.
+
+Put
+
+\[
+K_D=[\min A_D,\max A_D]\cap\mathbb Z.
+\tag{AU.13}
+\]
+
+Then
+
+\[
+\boxed{|K_D|\ge|A_D|=D^{1/2-o(1)},}
+\tag{AU.14}
+\]
+
+and every braid chord and every fixed fence train intersects every selected row in
+`K_D`.
+
+Equation (AU.14) is only a topological grid statement. The phase and angular-defect
+bounds inherited from the double count are asserted on `A_D`, not automatically on
+all of `K_D`.
+
+---
+
+## 3. The three phase sectors applied to the asymmetric system
+
+Use the common retained-row phase `[u_*]`. As in the phase-cone theorem, the row-step
+sector and the two possible column-train step sectors divide the projective direction
+circle into three open `pi/3` sectors
+
+\[
+\mathcal S_-,\qquad \mathcal S_0,\qquad \mathcal S_+,
+\tag{AU.15}
+\]
+
+where `S_0` is the row-step sector and `S_-`,`S_+` are the two possible fixed-train
+step sectors.
+
+Delete every braid chord whose projective direction lies in an `L_0/D` neighborhood
+of one of the three sector boundaries, with `L_0` larger than all fixed phase-error
+constants. The inverse-`D` directional-capacity lemma, applied with the THIN shell
+`D-1/(4D)<|e|<D`, deletes only `O(1)` chords.
+
+One sector therefore contains a sub-braid `F_D^0` with
+
+\[
+\boxed{
+|F_D^0|\ge{r_D-O(1)\over3}
+=\left({1\over6\log5}-o(1)\right)\log D.
+}
+\tag{AU.16}
+
+There are two cases.
+
+### Case R - `F_D^0` lies in `S_-` or `S_+`
+
+Every chord direction is outside the closed step cone of every retained row. The
+line/train monotonicity lemma gives at most one intersection with a row, while exact
+selected-cut support gives at least one. Thus
+
+\[
+\boxed{
+|e\cap a|=1
+\quad(e\in F_D^0,\ a\in A_D).
+}
+\tag{AU.17}
+
+This is the ROW-UNIQUE branch.
+
+### Case G - `F_D^0` lies in `S_0`
+
+Every fixed fence train has one of the two column transverse phases relative to
+`[u_*]`, so its step cone is a perturbation of `S_-` or `S_+`. The sector clearance
+therefore gives
+
+\[
+\boxed{
+|e\cap b|\le1
+\quad(e\in F_D^0,\ b\in L_D\cup R_D).
+}
+\tag{AU.18}
+
+Moreover the signed line-normal coordinate used in the line/train uniqueness proof is
+**strictly monotone** along the oriented train. Hence whenever the intersection in
+(AU.18) exists, the train passes from one side of the chord line to the other. It is
+not a tangential one-point contact. Thus every nonempty chord/guard intersection in
+Case G is a proper crossing.
+
+---
+
+## 4. ROW-UNIQUE has a polynomial-height constant braid order
+
+Assume Case R and order the rows of `A_D` by their selected-path indices. Delete a row
+if it contains the crossing point of two chords of `F_D^0`. The rows are pairwise
+disjoint, so each of the
+
+\[
+{ |F_D^0|\choose2}=O((\log D)^2)
+\]
+
+chord-crossing points deletes at most one row. This is negligible compared with
+`|A_D|=D^(1/2-o(1))`.
+
+Every remaining row meets every braid chord exactly once. Orient the rows consistently
+and record the permutation of braid intersections along the row.
+
+### Lemma AU.2 - one chord pair changes row order at most once
+
+For two straight braid chords `e,f`, their relative intersection order along the
+ordered disjoint rows can change only across the unique point `e cap f`. Hence it can
+change in at most one gap between consecutive retained rows.
+
+### Proof
+
+The two straight chords are simple arcs with exactly one proper mutual crossing. Cut
+the disk along any retained row. Because both chords meet that row exactly once, the
+relative order of their two row intersections records on which side of `e cap f` the
+row lies. Two ordered disjoint rows with different relative orders must separate the
+unique crossing point. Disjoint rows occur linearly along the selected path, so this
+can happen in only one row gap. `square`
+
+Across the whole braid there are at most
+
+\[
+{ |F_D^0|\choose2}
+\]
+
+row gaps at which the full intersection permutation changes. Therefore one
+consecutive block in the `A_D` order has constant full braid permutation and size at
+least
+
+\[
+{ |A_D|-O((\log D)^2)\over { |F_D^0|\choose2}+1}
+=D^{1/2-o(1)}.
+\tag{AU.19}
+
+Call this row family `A_D^ord`. We have proved
+
+\[
+\boxed{
+\text{every row in }A_D^{ord}\text{ sees the entire braid in one identical order.}
+}
+\tag{AU.20}
+
+The fixed train fence already has one identical order on every retained row, so Case R
+contains two simultaneous fixed orders on the same polynomial-height row subsystem.
+
+There is a useful further extraction. Fix any row in `A_D^ord`. Order the braid
+chords by their endpoints on one complementary hull shore of that row. Since every
+two chords cross, the endpoint order on the other shore is reversed. The common row
+intersection order is one permutation of these chords. Erdos--Szekeres gives a
+monotone subsequence `G_D` with
+
+\[
+\boxed{
+|G_D|\ge\sqrt{|F_D^0|}
+=\left({1\over\sqrt{6\log5}}-o(1)\right)\sqrt{\log D}.
+}
+\tag{AU.21}
+
+If the row order on `G_D` agrees with the first-shore endpoint order, the chord arcs on
+that side of the row are pairwise noncrossing, so every mutual braid crossing lies on
+the opposite side. If the row order is reversed, the symmetric statement holds.
+Because the row permutation is the same throughout `A_D^ord`, the same side works for
+the entire row slab. Thus
+
+\[
+\boxed{
+\text{all pairwise crossings of }G_D
+\text{ lie beyond one side of the }A_D^{ord}\text{ slab.}
+}
+\tag{AU.22}
+
+Inside the slab the selected chords form an ordered noncrossing bundle, despite being a
+pairwise-crossing hull braid globally.
+
+---
+
+## 5. GUARD-UNIQUE incidence is an interval, not an arbitrary bit word
+
+Assume Case G. Fix one row `a_0 in A_D`. Its proper crosscut divides the outer
+boundary into complementary arcs `P,Q`. Every fixed guard crosses `a_0`, so each guard
+has one boundary endpoint on `P` and one on `Q`. Every braid chord also crosses
+`a_0`, so its two hull endpoints likewise lie one on each arc.
+
+Write
+
+\[
+G=L_D\cup R_D,
+\qquad m:=|G|=2s_D.
+\tag{AU.23}
+
+The guards are pairwise disjoint proper crosscuts. Order their endpoints on `P` as
+
+\[
+p_1,\ldots,p_m
+\]
+
+and orient the order on `Q` compatibly, so their other endpoints occur as
+
+\[
+q_1,\ldots,q_m.
+\tag{AU.24}
+
+For a braid chord `e`, let `p(e) in P`, `q(e) in Q` be its endpoints and define
+
+\[
+\alpha(e)=\#\{j:p_j\text{ precedes }p(e)\},
+\qquad
+\beta(e)=\#\{j:q_j\text{ precedes }q(e)\}.
+\tag{AU.25}
+
+Thus `alpha,beta in {0,...,m}`.
+
+### Lemma AU.3 - exact guard-incidence interval
+
+For every `e in F_D^0`,
+
+\[
+\boxed{
+\{j:e\cap g_j\ne\varnothing\}
+=\{\min(\alpha,\beta)+1,\ldots,\max(\alpha,\beta)\}.
+}
+\tag{AU.26}
+
+The set is empty when `alpha=beta`.
+
+### Proof
+
+A proper crosscut `g_j` separates the disk into two sides. In the compatible boundary
+orders, `p(e)` and `q(e)` lie on opposite sides of `g_j` exactly when the Boolean
+statements
+
+\[
+j\le\alpha(e),
+\qquad
+j\le\beta(e)
+\]
+
+differ. This is equivalent to `j` lying strictly between the two ranks in the sense
+of the right side of (AU.26).
+
+If the endpoints are on opposite sides, the chord must meet `g_j`. Conversely, by
+(AU.18) there is at most one intersection, and the strict line-normal monotonicity from
+Section 3 makes any such intersection a proper crossing. Therefore a meeting changes
+sides and occurs exactly in the endpoint-separation case. `square`
+
+Thus the exact `0/1` incidence word against all `m=Theta(sqrt(log D))` guards is one
+contiguous interval. No Ramsey or arbitrary binary-pattern purification is needed.
+
+---
+
+## 6. Pairwise crossing makes the guard intervals nested after one split
+
+Order the chords of `F_D^0` by their `P` endpoints. Their actual `P` endpoints are
+distinct. Since every two braid chords cross properly, their `Q` endpoint order is the
+reverse order in the compatible `Q` orientation.
+
+Consequently
+
+\[
+\alpha_1\le\alpha_2\le\cdots,
+\qquad
+\beta_1\ge\beta_2\ge\cdots.
+\tag{AU.27}
+
+Split the chords into the two orientation classes
+
+\[
+\alpha_i\le\beta_i
+\quad\text{and}\quad
+\alpha_i>\beta_i,
+\tag{AU.28}
+\]
+
+assigning equality to the first class. Retain the larger class. It has at least
+
+\[
+{|F_D^0|\over2}
+\tag{AU.29}
+
+chords.
+
+In the first class, (AU.26) is
+
+\[
+I_i=\{\alpha_i+1,\ldots,\beta_i\},
+\]
+
+and (AU.27) makes the sets weakly decrease by inclusion. In the second class,
+
+\[
+I_i=\{\beta_i+1,\ldots,\alpha_i\},
+\]
+
+and the sets weakly increase by inclusion. Hence in either case
+
+\[
+\boxed{
+\text{the exact guard-incidence sets form one nested chain.}
+}
+\tag{AU.30}
+
+A nested chain of subsets of an `m`-element set has at most `m+1` distinct sets, since
+every strict inclusion changes cardinality by at least one. Therefore some one exact
+incidence interval occurs on at least
+
+\[
+{ |F_D^0|\over 2(m+1)}
+\tag{AU.31}
+
+chords. Using (AU.2), (AU.16), and `m=2s_D`, this is
+
+\[
+\boxed{
+\left({1\over24\log5}-o(1)\right)\sqrt{\log D},
+}
+\tag{AU.32}
+
+which proves (AU.4).
+
+Every selected chord in this homogeneous sub-braid has exactly the same intersection
+set against all `2s_D` fixed trains, and every `1` is exactly one proper crossing.
+The common set is a consecutive interval in the global fence order and may be empty.
+
+---
+
+## 7. Frontier effect
+
+The THIN branch now admits an exact ordered reduction at a scale larger than the prior
+four-guard or generic binary-incidence normal forms.
+
+In ROW-UNIQUE, one retains
+
+```text
+Theta(log D) pairwise-crossing THIN chords;
+D^(1/2-o(1)) rows with one exact common braid-intersection order;
+2 sqrt(log D) fixed ordered fence trains;
+and a Theta(sqrt(log D)) sub-braid whose mutual crossings all lie beyond one side
+of the row slab.
+```
+
+In GUARD-UNIQUE, one retains
+
+```text
+Theta(log D) pairwise-crossing THIN chords with nested guard-incidence intervals;
+2 sqrt(log D) fixed ordered train guards;
+Theta(sqrt(log D)) chords with one identical exact interval incidence word;
+D^(1/2-o(1)) common phase-pure rows;
+and a consecutive D^(1/2-o(1))-long selected-row block crossed topologically by
+all selected chords and all fixed guards.
+```
+
+The remaining THIN problem is therefore no longer intersection multiplicity or an
+arbitrary braid/fence incidence matrix. In the ROW-UNIQUE branch the missing step is
+metric: rule out a long near-diameter braid which traverses a polynomial-height
+near-equilateral slab as one fixed noncrossing order and performs all mutual crossings
+outside one end. In the GUARD-UNIQUE branch the missing step is likewise metric:
+rule out a `sqrt(log D)` homogeneous almost-diameter braid whose exact crossings with a
+`sqrt(log D)` noncrossing train fence form one common consecutive guard interval.
+
+No contradiction with extremality is claimed here. C-II and Level I remain open.

@@ -1,0 +1,409 @@
+<!-- theorem-state: {"artifact_id":"ART-0E3109ADF4B1","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: exterior exact-contact packets release, and caps admit unloaded core cuts
+
+**Date:** 2026-10-06. **Authority:** `583203ac1dc1d7bc49f0ca0574d75e85f9de2ee1`,
+`2026-10-05.audit.62`. **Worker:** 2, exterior-cap branch.
+**Classification:** proved candidates awaiting independent audit; unreviewed
+repository lifecycle. **C-II / Level I:** open. No promotion transaction.
+No external literature is used in the proofs below.
+
+## 1. Scope and the exact question
+
+The canonical Sections 77--80 exterior branch supplies actual convex caps
+containing quadratic populations of retained contact isolates. The proposed
+paired-cap endpoint must replace/move diameter-carrying core points, rather
+than only change isolates. Two finite facts narrow that problem:
+
+```text
+one-sided cap packets + strict involving upper distances
+  -> all new contacts can be opened
+  -> no such packet can restore deleted contact-active core cardinality;
+
+occupied actual cap + audit.62 loaded unit adjacency
+  -> no KKT stress supported only on loaded vertices
+  -> <=s_Z+1 unloaded core deletions destroy every KKT stress
+  -> reduced-source strict diameter descent
+  -> actual nonlocal equal-cardinality refill (not proved).
+```
+
+The second chain adapts the exact transversal argument in PR #722's
+`target_c_unloaded_stress_transversal_2026-10-05.md`, inspected at branch
+`research/target-c-residual-closure-20261005`, commit `ed535f5a`. That report
+restricts its missing-side test to full-core scope because it predates the
+universal loaded-unit adjacency in audit.62. Only the precise needed proof
+is rederived here. The result remains proof-only.
+
+## 2. Finite exterior packet contact release
+
+Let A be a triangle-free contact-minimal global minimizer, D=diam(A)>1.
+Delete R and put T=A\R. Let Y be a finite unit-separated packet, disjoint
+from T, with |Y|=|R| and |y-a|>=1 for all y in Y, a in T. Partition
+Y into Y_1,...,Y_r. Assume for each i there are a unit vector u_i and a
+real c_i such that
+
+\[
+u_i\cdot a\le c_i\quad(a\in T),\qquad
+u_i\cdot y>c_i\quad(y\in Y_i).                 \tag{1}
+\]
+
+Assume also
+
+\[
+|y-y'|>1\quad(y\in Y_i,y'\in Y_j,i\ne j),       \tag{2}
+\]
+and **every pair involving Y** has distance strictly below D, including
+new-new pairs. No triangle-free condition is imposed on the initial Y.
+
+**Theorem E.1.** Such a replacement is impossible if R removes an old
+unit contact. If R covers all old diameter pairs, it is impossible from
+global diameter minimality alone.
+
+**Proof.** Translate each Y_i by epsilon u_i, with epsilon>0. For y in
+Y_i and a in T the exact change is
+
+\[
+|y+\epsilon u_i-a|^2-|y-a|^2
+=2\epsilon u_i\cdot(y-a)+\epsilon^2>0.        \tag{3}
+\]
+
+Within Y_i, distances do not change. Cross-packet lower distances and all
+involving upper distances have positive finite margins; choose epsilon
+small enough that they remain strict. Therefore all new-old lower
+distances are now strictly greater than one.
+
+Dilate each translated packet by a factor 1+eta about any fixed center,
+with eta>0 sufficiently small. This opens every internal unit contact.
+All previously strict cross-packet, new-old and upper inequalities persist
+by continuity and finiteness. Let the resulting packet be Y'. Every pair
+involving Y' has lower distance >1 and upper distance <D. T is unchanged.
+
+The source T union Y' has cardinality |A| and diameter at most D. If its
+diameter is D, it is a global minimizer; its contact graph is precisely
+the induced old graph on T and is triangle-free. Deleting even one old
+contact contradicts contact minimality. If no old diameter remains in T,
+all pairs are strictly below D and global optimality is contradicted
+directly. No inference from zero multipliers or infinitesimal release is
+used: (3) and the two finite margin choices give the actual endpoint. QED.
+
+Points need not remain in the old hull under this construction: the full
+finite upper inequalities are checked directly. Alternatively all Y_i
+strictly inside the old hull have the required upper margin, so sufficiently
+small motions stay there. Outer hull points are covered by E.1 whenever
+their involving distances already have strict upper margin.
+
+### Corollary E.2: exact contacts in deep caps do not pay deleted core points
+
+Take one actual cap with closing line u dot x=c, and delete its complete
+external population Z together with any core labels U. Any packet of
+|Z|+|U| points lying in the open cap half-plane, unit-clear from the
+retained source, and having strict involving upper distances is forbidden
+as soon as U removes a contact. Exact new-old anchors and exact new-new
+contacts do not avoid E.1. Internal triangles in a proposed triangular
+lattice packet do not avoid it either: the constructed dilation removes
+them before the contact-minimal comparison.
+
+For finitely many caps the same statement holds if their packets have
+strict cross-packet separation. In particular the two macroscopic paired
+caps below are separated by Omega(D), so this holds for large D.
+
+This is stronger than a strict-safe *area* restriction. It excludes an
+actual non-strict finite packet with the stated geometry. It does not
+exclude packets crossing a closing chord, moved retained core points,
+or new actual diameter constraints lacking strict upper margin.
+
+### Corollary E.3: a one-guard non-strict capacity is exactly saturated
+
+Let v be any contact-active label outside an actual cap population Z,
+and let z=|Z|. The maximum number of unit-separated sites in
+int(K) intersect {u dot x>c}, unit-clear (>=1) from A\(Z union {v}),
+is exactly z.
+
+A packet of z+1 would violate E.1 after deleting Z union {v}.
+Conversely every original point of Z is contact-isolated and is not an
+actual diameter endpoint. Move these finitely many points a sufficiently
+small distance into int(K) intersect {u dot x>c}. Their strict lower and
+upper distances persist, yielding z admissible sites. In particular
+deleting one contact guard produces no extra exact-contact exterior slot.
+
+## 3. Scope audit of antipodal macroscopic pairing
+
+The proof at
+`target_c_antipodal_exterior_cap_pairing_2026-09-25.md` is unreviewed in
+the state lock. Here is an audit of the needed implication.
+
+Translate the full-source circumcenter to zero. Section 58 gives
+
+\[
+B(0,D/2-O(\sqrt D))\subset K\subset B(0,D/2+O(\sqrt D)),
+\qquad |b+k|=O(D^{3/4})                       \tag{4}
+\]
+
+for every actual diameter pair b,k. The first inclusion follows because
+an inball center c satisfies |c|+r<=R, and R-r=O(sqrt(D)). Every loaded
+vertex has radius D/2+O(sqrt(D)). Thus each normalized Hausdorff limit
+S of the complete loaded vertex sets lies on the radius-1/2 circle and
+satisfies S=-S. Section 59 puts a fixed centered inball in F, so polar
+loaded order is cyclic hull order for large D.
+
+A macroscopic cap's two consecutive loaded endpoints limit to distinct
+circle points b_-,b_+, with an empty shorter arc of positive length.
+The arc has length strictly below pi because of the centered force-hull
+inball. Its antipodal arc is empty in S and has its endpoints in S.
+For each large source choose the loaded side straddling the middle of
+that opposite arc. Its endpoints converge to -b_-,-b_+. An endpoint
+limit inside the empty arc would violate the definition of S; limits
+beyond its endpoints would omit an existing limiting endpoint of S.
+Thus this side bounds a distinct opposite macroscopic cap.
+
+The source hull converges to the disk, so the two cap limits are opposite
+circular segments of equal area. Section 80's individual nonnegative
+cap slacks, total slack O(D), and total perimeter O(D) give
+z_C=area(C)/a_0+O(D), uniformly over individual caps. Thus the paired
+populations differ by o(D^2). Oler on each actual isolate hull yields an
+O(D) area deficit; the inball/support-triangle estimate rederived in
+the September report yields O(sqrt(D)) support error to its *own* cap.
+
+The audit passes these claims, with these limits: antipodality between
+the two caps/hulls is o(D), not O(sqrt(D)); pairing is not exact finite
+symmetry; the internal-chamber hull-stability theorem is not extended
+outside its scope. This is a proof check, not canonical promotion.
+
+The cap closing lines are at distance at least
+(sin(rho)/2-o(1))D from the common center, by DB.30. Their opposite
+normal limits consequently give separation Omega(D) between the paired
+caps, establishing the cross-packet margin used in Corollary E.2.
+
+## 4. Every occupied cap excludes a loaded-only KKT stress
+
+Let B be all actual diameter endpoints, F=conv(B), and V the nonisolated
+positive-contact core of the canonical source. Assume D>=6. Write P for
+the normalized nonnegative KKT polytope on all actual C,H and put
+
+\[
+P_B=\{s\in P:\alpha_e=0\text{ for every contact incident to }V\setminus B\}.
+\]
+
+**Theorem E.4.** If even one actual exterior cap is occupied, then P_B
+is empty. This needs no full-core assumption and no macroscopic scaling.
+
+**Proof.** Audit.62 `C-LOADED-NEAR-UNIT-ADJACENCY` makes every unit pair
+in B a consecutive loaded-hull side. The positive contact graph of any
+s in P_B is therefore a subgraph of the loaded cycle.
+
+Suppose this graph has a leaf p, with sole positive contact neighbor b.
+Choose the outward normal n of the hull side pb. Its contact force is
+tangent to that side. Every actual diameter partner q of p is a hull
+vertex other than p,b (D>1), hence n dot (p-q)>0. Equilibrium's normal
+component forces all diameter weights at p to zero. Its nonzero single
+contact force then cannot balance. A leaf is impossible.
+
+The virial identity is sum_C alpha=D^2 sum_H beta=D^2, so the positive
+contact graph is nonempty. A proper nonempty subgraph of a simple cycle
+has a path and a leaf. Thus the graph must be the entire hull cycle,
+requiring every loaded-hull side to be unit.
+
+The closing side of an occupied exterior cap has length >=tau_D>3/2
+if it is shorter than D, by the canonical occupied-cap threshold. A
+side of length D is also nonunit. Hence that side is nonunit, giving
+the contradiction. QED.
+
+The leaf/cycle argument is precisely PR #722's U.1, with its old
+full-core loaded-chord premise replaced by universal canonical audit.62
+adjacency. No owner/train theorem is imported.
+
+## 5. Unloaded core cut and actual diameter descent
+
+Let s_Z=e+h-(2v-2). Canonical Section 64.1 gives dim_aff(P)=s_Z.
+
+**Theorem E.5.** In E.4's scope there exists U subset V\B with
+|U|<=s_Z+1 such that A\U has a straight, sufficiently small motion
+strictly increasing every surviving old unit-contact distance and
+strictly decreasing every old actual diameter distance. All isolates
+are retained at their original coordinates. In particular it produces
+a unit-separated (n-|U|)-point source of diameter <D.
+
+**Proof.** For u in V\B define the nonnegative linear functional
+f_u(s)=sum of contact coefficients incident to u and its zero face
+F_u={s:f_u(s)=0}. Their total intersection is P_B, empty by E.4.
+Choose a minimal empty subfamily indexed by U. For each u in U there
+is a stress s_u in all other faces, with f_u(s_u)>0. Applying f_w to
+an affine dependence of the s_u forces the coefficient of s_w to be
+zero for every w. Therefore these stresses are affinely independent,
+and |U|<=s_Z+1.
+
+A KKT stress on the reduced source extends by zero to an element of
+all selected faces, impossible. Let r_c be the derivative row of half
+the squared contact length, and -r_h the signed upper row. A nonzero
+nonnegative zero relation among these rows would have positive total
+diameter coefficient: pairing it with the original position field gives
+sum alpha=D^2 sum beta, and beta=0 would force alpha=0. Hence such a
+relation would normalize to an excluded reduced KKT stress.
+
+Zero lies outside the convex hull of the signed rows. Its closest point
+provides a velocity strictly positive on every signed row. Retain all
+isolates with velocity zero. For sufficiently small positive time all
+surviving contacts open and all old diameters shorten; every initially
+strict full-source lower/upper pair retains its finite positive margin.
+There is no omitted isolate constraint. Cardinality has decreased by
+|U|, so this is not a contradiction at the original n. QED.
+
+The face proof and strict separation are rederived PR #722 U.2; only
+the unconditional occupied-cap premise E.4 is new. There is no uniform
+motion radius, no uniform decrease, and no refill conclusion.
+
+## 6. Closing-chord contacts also release: the whole exterior packet barrier
+
+The one-sided theorem is not the strongest finite restriction. Retained
+isolates can move, and even packet points **on** a closing chord cannot
+pay the deleted core population when all involving upper distances are strict.
+
+Let V be the original positive-contact core, F=conv(V)=conv(B), and
+Z=A\V the original contact isolates. Delete any R, pin V\R at their old
+positions, and regard Z\R together with the inserted Y as free variables.
+Assume |Y|=|R|, the proposed source is unit-separated, every pair involving
+Y is strictly shorter than D, and
+
+\[
+Y\subseteq\mathbb R^2\setminus\operatorname{int}F.       \tag{8}
+\]
+
+The original retained isolates have strict upper slack, since every actual
+diameter endpoint belongs to V. Define E to be the new unit contacts.
+Every member of E is incident to Y: original isolates had no old contact
+and contacts entirely between retained core vertices are unchanged pins.
+
+**Theorem E.6.** There is a straight, arbitrarily small finite motion of
+these free variables opening **every** edge of E, with all pinned core
+contacts unchanged and every moving-pair upper distance below D.
+Therefore the packet (8) is impossible whenever R removes an old contact.
+Its initial contact graph may contain triangles. If R covers H, the
+strict sub-D endpoint is impossible by global optimality alone.
+
+**Proof.** Write A_E for the pinned contact derivative matrix: each row
+is the derivative of half the squared length of its contact, with zero
+velocity at pins. Let E+ be the union of supports of all nonnegative
+pinned equilibrium stresses on E.
+
+Because E is finite, sum one witness stress for each member of E+. This
+gives a single nonnegative stress positive on the entire union, so the
+following support-component argument applies to E+ itself.
+
+In a positive-support connected component each free vertex is a weighted
+average of its neighbors. It lies in the convex hull of that component's
+pins. One direct proof fixes a linear functional and applies the maximum
+principle; a maximum beyond all pins propagates through positive neighbors,
+and is impossible. A component with no pins would make every coordinate
+constant, contradicting a positive unit edge. Thus every stressed free
+vertex lies in F.
+
+An edge of E+ has an endpoint in Y. That endpoint is outside int(F), so
+it must lie on partial(F). Choose a supporting normal there. Equality
+in its harmonic average forces all its positive neighbors onto the same
+supporting line. At an extreme vertex of F this would force equal
+positions and is impossible. At the interior of a hull side its unit
+neighbors on that line number at most two, one in each direction.
+Equilibrium requires both. A free neighbor on that line has the same
+property. Hence E+ is a union of collinear unit chains between fixed pins,
+split at pins; no positive edge connects to a free point inside F.
+All chains may lie on different sides and may meet at fixed pins.
+
+For every row e outside E+ there is a velocity u_e with A_E u_e>=0 and
+(A_E u_e)_e>0. Otherwise that row vanishes on the cone {u:A_E u>=0};
+the finite linear alternative gives -A_e as a nonnegative combination
+of the other rows, producing a nonnegative zero relation with a positive
+coefficient at e. This would put e in E+. Summing these velocities gives
+u_0 with all weak rows positive and all positive-support rows zero. The
+latter assertion follows by summing against a stress positive on each
+such row, while all row derivatives are nonnegative.
+
+At every free vertex of a positive collinear chain, an independent
+perpendicular velocity belongs to ker(A_E[E+]). Perturb u_0 within this
+kernel, as slightly as needed to preserve the weak-row strict signs.
+Avoid the finitely many proper subspaces u_i=u_j on positive edges.
+They are proper because every edge has a free endpoint with such an
+independent perpendicular variable. Obtain u such that
+
+\[
+A_Eu\ge0,\qquad (A_Eu)_e>0\ (e\notin E+),\qquad
+u_i-u_j\ne0\ (ij\in E+).                      \tag{9}
+\]
+
+Along the actual straight motion p_i(t)=p_i+t u_i, every active lower
+squared distance changes by
+
+\[
+2t(A_Eu)_{ij}+t^2|u_i-u_j|^2>0\quad(t>0).      \tag{10}
+\]
+
+This proves finite opening even on stressed chains whose first derivatives
+are zero. It is not an unsupported zero-multiplier integration. All other
+lower pairs and all upper pairs involving free variables have finite
+strict margins, which persist for sufficiently small t. Pinned contacts
+and old diameters remain unchanged except those deleted with R. Every
+new contact disappears, so the final graph is precisely the induced old
+contact graph on A\R and is triangle-free. The contact-minimal/global
+contradiction is then exactly the one in E.1. QED.
+
+The linear support/buckling method is prior work in PR #722's
+`target_c_loaded_anchor_sparse_packet_release_2026-10-05.md`, inspected
+at `ed535f5a`. That result assumes a sparse packet graph to obtain
+collinear positive supports in a strip. Here exterior location (8)
+forces collinearity by a supporting-face argument, **without** a sparse
+contact-count hypothesis or loaded-only anchor restriction. This is an
+exterior-specific scope extension, not a train or internal-wall theorem.
+
+For example pins (0,0),(2,0) and a new chord site (1,0) admit a positive
+two-edge pinned stress. The motion (1,t) makes both squared lengths
+1+t^2>1. Retained cap isolates are not dropped: they are free variables
+with all original constraints, or remain fixed if a chosen motion permits
+it. Their strict inactive margins fix how small t must be.
+
+In particular, static replacement packets confined to the two **closed**
+exterior caps, including both long closing chords, cannot restore deleted
+contact-active core cardinality. Allowing exact contacts or triangular
+packets does not change that conclusion. A successful actual packet must
+use sites strictly inside F, move the retained contact core, or carry new
+active diameter constraints beyond this strict-upper hypothesis.
+
+## 7. Exact remaining cap obligation
+
+**Cap-backed nonlocal refill.** Given a sufficiently large canonical
+source with the antipodal cap pair from Section 3, find an unloaded
+stress transversal U as in E.5 and a finite endpoint of the reduced
+source, together with exactly |U| additional sites, such that all full
+source lower distances are >=1 and all full source upper distances are
+<D. Sites may cross the two closing chords and the retained core may move.
+The competitor may contain triangles.
+
+E.5 supplies genuine movement of every original diameter endpoint, but
+does not supply those |U| sites. E.6 forbids a static exterior-only
+restoration at the original source. PR #722's positive-stress work
+identity and mixed-rigidity local isolation also forbid automatic local
+restoration at the original deleted core coordinates. A successful refill
+must prove the actual nonlocal geometry or an independent cardinality
+comparison; neither is established here.
+
+## 8. Regressions, dependencies, and disposition
+
+Dependencies: canonical Sections 56/57 (normalization/full active support),
+58/59 (full-source geometry), 64.1 (stress dimension), 77/80 (actual caps,
+all isolates), audit.62 loaded adjacency/occupied cap threshold. Adaptive
+strict-safe saturation is consistent with E.1 and is not used to infer a
+site. The September antipodal report and PR #722 are explicitly proof-only
+origins, with the needed implications checked/reproved above.
+
+| Binding check | Result |
+| --- | --- |
+| Strained triangular cap with no spare strict site | E.1 supplies no spare site and also rules out deep non-strict replacement credit |
+| Adaptive strict-safe saturation | Strengthened for one-sided finite packets; no area reversal |
+| Fixed old diameter core | E.5 actually shortens every old diameter after deletions; its cardinality cost remains |
+| Positive KKT with inactive zero-weight components | Isolates remain fixed in E.5, and cannot be promoted to positive stress |
+| Near-disk/asymptotic symmetry | Only o(D) antipodality is used |
+| Boundary O(D) cap slack | Does not imply refill |
+| Internal chamber / actual unit walls | No shield or wall theorem is asserted for a nonunit cap base |
+| Inactive near-pairs without multiplier | All finite inactive pair margins are checked |
+
+**Disposition:** retain as unreviewed proved candidates awaiting independent
+audit. No canonical files, theorem-state version, or active prompt are changed.
+Exterior caps, internal inactive chambers, full-core C-II and Level I remain
+open. No computation is logically needed for these finite proofs.

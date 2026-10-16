@@ -1,0 +1,171 @@
+# Independent hostile audit — localized Type-II train/hull low-response gap
+
+**Date:** 2026-09-12  
+**Reviewed:** `target_c_harmonic_internal_outer_face_2026-09-12.md` and `target_c_low_response_typeii_localized_train_hull_gap_2026-09-12.md`  
+**Disposition:** **PASS at proof-only scope.** C-II remains open.
+
+## 1. Response-selected component
+
+C41 decomposes the response into direct loaded-loaded unit contacts and Kron responses of unloaded components; the response support of component `I_r` lies on pairs in its attachment set `A_r`. Thus if `d_* = max_r diam(A_r)`,
+
+\[
+D^2=\sum_{b<k}c_{bk}|b-k|^2\le \max\{1,d_*^2\}(1+\varepsilon_D).
+\]
+
+In Type II, `D -> infinity`, so for large `D`, `d_*>1`, and `epsilon_D->0` gives
+
+\[
+ d_*/D\ge(1+\varepsilon_D)^{-1/2}=1-o(1).
+\]
+
+C40 then gives `delta_* >= d_*-2`, hence `liminf delta_*/D >= 1`. The proof never needs the stronger false statement `delta_*/D -> 1`.
+
+**Verdict:** PASS.
+
+## 2. HOF face-preservation lemma
+
+Canonical Section 82 states `A_r subset B`, every member of `A_r` is a vertex of `P_r=conv(A_r)`, and `I_r subset int(P_r)`. Since `I_r` is finite,
+
+\[
+K_r=conv(I_r)\subset int(P_r),
+\]
+
+so every attachment vertex lies outside `K_r`.
+
+For an attachment edge `[a,u]` or a loaded-loaded contact `[a,b]` with endpoints in `A_r`, straight-line planarity makes its relative interior disjoint from `C[I_r]`. Starting from an endpoint outside `K_r`, the edge lies initially in the unbounded complementary component of `C[I_r]`; it cannot enter an old bounded face without crossing `C[I_r]`. Therefore every added loaded edge lies in the closure of the original outer-face region.
+
+This preserves every original bounded face of `C[I_r]`. Conversely an all-unloaded bounded face of the induced harmonic graph uses only `C[I_r]` vertices and edges, so it is an original bounded face. Hence the bounded four-faces of `C[I_r]` are exactly the unloaded-only strict rhombi assigned to `I_r`.
+
+The repaired wording "original outer-face region" is essential; the stronger sequential-current-outer-face statement would be false after earlier added edges subdivide that region.
+
+**Verdict:** PASS.
+
+## 3. Local Euler/train ledger
+
+For the connected internal graph `G_*=C[I_*]`, with `k_*` the occurrence-counted outer walk and `Q_*` the bounded-face degree excess, Euler plus face-incidence counting gives exactly
+
+\[
+k_*+Q_*=2(\delta_*+r_*).
+\]
+
+If `R_*` is the number of bounded four-faces and `B_*` their physical boundary occurrence count, the finite train theorem gives
+
+\[
+B_*\ge4\sqrt{R_*}.
+\]
+
+Every such occurrence faces either the outer face or one bounded nonquadrilateral face. Thus
+
+\[
+B_*\le k_*+4f_*+Q_*\le k_*+5Q_*,
+\]
+
+because `f_*<=Q_*`. Eliminating `Q_*` gives
+
+\[
+B_*\le10(\delta_*+r_*)-4k_*.
+\]
+
+The coefficient five is necessary; no unsupported replacement by four is made.
+
+**Verdict:** PASS.
+
+## 4. Perimeter and local Type-II saturation
+
+Each attachment vertex is within unit distance of `K_*`, so
+
+\[
+K_*\subset P_*\subset K_*+B(0,1).
+\]
+
+The outer walk of `G_*` has `k_*` unit edge occurrences, hence `per(K_*)<=k_*`, and Cauchy width gives
+
+\[
+per(P_*)\le k_*+2\pi.
+\]
+
+Canonical Section 83 gives nonnegative local deficits
+
+\[
+area(P_r)-A_{4,r}\ge0,
+\qquad
+\sum_r(area(P_r)-A_{4,r})=o(D^2).
+\]
+
+Therefore the response-selected, `D`-dependent cell still has local deficit `o(D^2)`. Likewise every strict-rhombus excess `area(R)-sqrt(3)/2` is nonnegative, and the global Type-II sum of those excesses is `o(D^2)`, so the selected rhombus subfamily has `o(D^2)` excess. If `a=lim area(P_*)/D^2`, then
+
+\[
+R_*/D^2\to a/a_0,
+\qquad a_0=\sqrt3/2.
+\]
+
+Combining the train bound, perimeter bound, and planar isoperimetry yields
+
+\[
+\gamma\ge C_*\sqrt a,
+\qquad
+C_*={4\over5}\sqrt\pi+{2\over5\sqrt{a_0}},
+\]
+
+for `gamma=lim (delta_*+r_*)/D`.
+
+**Verdict:** PASS.
+
+## 5. Remaining-cell area and scalar optimization
+
+Let
+
+\[
+t=\lim D^{-1}\sum_{r\ne *}\delta_r.
+\]
+
+C40 and isodiametry give
+
+\[
+\sum_{r\ne *}area(P_r)\le {\pi\over4}\sum_{r\ne *}(\delta_r+2)^2.
+\]
+
+The finite-`mu` subsequence gives `sum delta_r=O(D)`, while the canonical component count is `O(D)`. Hence
+
+\[
+\sum_{r\ne *}(\delta_r+2)^2\le t^2D^2+o(D^2),
+\]
+
+and Type-II cell-area saturation gives
+
+\[
+a\ge {\pi\over4}(1-t^2)
+\]
+
+for `0<=t<=1`. Therefore
+
+\[
+\gamma\ge M_*\sqrt{1-t^2},
+\qquad
+M_*={2\over5}\left(\pi+\sqrt{\pi/(2\sqrt3)}\right).
+\]
+
+The exact ZK ledger gives `mu>=gamma+t` and `gamma>=1`. If `t>=M_*-1`, then `mu>=1+t>=M_*`. Otherwise
+
+\[
+\mu\ge M_*\sqrt{1-t^2}+t.
+\]
+
+The right side is concave on `[0,M_*-1]`; its minimum is at an endpoint, equals `M_*` at zero, and is strictly larger at `t=M_*-1`. Thus
+
+\[
+\boxed{\liminf\mu_D\ge M_*=1.6375621841\ldots}.
+\]
+
+**Verdict:** PASS.
+
+## 6. Scope
+
+- Type II only.
+- Requires `epsilon_D -> 0`.
+- Does not use one-cell stress concentration.
+- Does not delete contact-isolated source points.
+- Gives a lower bound on the ZK currency, not an upper bound or contradiction.
+- Does not settle C-II or Level I.
+
+**Final classification:** independently audited-working proof-only theorem.

@@ -1,0 +1,69 @@
+# Hostile audit — aggregate-detour endpoint floor
+
+**Audited source:** `target_c_aggregate_detour_endpoint_floor_2026-09-13.md`
+**Verdict:** PASS at proof-only scope.
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+## 1. Face-incidence identity
+
+For each induced harmonic graph,
+
+\[
+L_r+P_{{\rm exc},r}=2M_r-4R_r.
+\]
+
+Summing gives `2(e_C-e_BB+C_att)-4R_loc`. The canonical full face ledger gives
+`e_C=2R_4+2f+q-k`. Therefore
+
+\[
+E_\Sigma
+ =4(R_4-R_{loc})+4f+2(q-k-e_{BB}+C_{att})-2d_\Sigma,
+\]
+
+which is (AD.4). No global injectivity of local boundary occurrences is needed.
+
+## 2. Endpoint-profile Type-II inequalities
+
+The audited Type-II `c_B=0` theorem makes every loaded-loaded contact a force-hull
+side. Pairwise interior-disjoint attachment cells use such a side at most once, so
+`C_att≤e_BB`. The audited Section-126 localization gives
+`R_4-R_loc=O(D^{2/3})`. On the Section-118 endpoint/common-cap profile the audited
+diameter-moment bound is `d_Σ/D≥S_*−o(1)`. Since `f≤Q`, the exact ledger
+`b+Q=2(q-k)`, and `b/D→π+δ`, the upper estimate
+
+\[
+E_\Sigma/D\le10t-4π-4δ-2S_*+o(1)
+\]
+
+has the correct signs. Section 122 supplies the lower bound `c_0`; taking liminf and
+limsup yields (AD.8). No near-geodesic assumption is hidden in this step.
+
+## 3. Orbit-envelope composition on that profile
+
+The §171 feasibility expression is used exactly in its audited-working scope, with
+`δ=b/D-π`; its denominator is bounded below by the stated `2√Δ_2+0.0004` feasibility
+condition. Its `t` derivative is positive. On `0<δ≤0.00014`, the cubic derivative
+term is bounded below by `1170`, while the negative denominator derivative is below
+`4`; thus `∂_δF_{t_0}>1160` is conservative.
+
+Using `t_0=1.8585`, the exact constants from the audited floors give
+`A_0=0.0001357884958...` and `F_{t_0}(A_0)=-0.1350172...`. Therefore all
+endpoint/common-cap `t≤t_0` limits are excluded: (AD.8) either has a negative right
+side or places
+`δ` in `[0,A_0]`, where monotonicity makes `F_t(δ)` no larger than the negative
+endpoint value.
+
+The decimal checks are reproduced by
+`verify_target_c_aggregate_detour_endpoint_floor.py`; they are not used to assert
+global optimality or to alter theorem state.
+
+## 4. Scope boundaries
+
+- `R_4-R_loc=o(D)` is a proof-only audited-working input, not a state promotion.
+- The argument retains contact-isolated source points; none enter the core kernel.
+- The result excludes a normalized low-`t` endpoint/common-cap Type-II branch only.
+  It does not touch other Type-II profiles, Type I, high-`t` Type II, exact triangle
+  production, or strict source descent.
+
+**Final verdict:** PASS at proof-only scope. The theorem state and route map remain
+unchanged.

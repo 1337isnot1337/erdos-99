@@ -1,0 +1,316 @@
+<!-- theorem-state: {"artifact_id":"ART-DDE30BE0AE76","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Global contact opening with frozen diameter endpoints
+
+**Date:** 2026-10-11  
+**Base:** `ab6dd3336f9f8d440f2bada76edb32153391cddc`, state `2026-10-10.audit.234`  
+**Target:** independent Level I global source competitor route  
+**Classification:** proved candidate awaiting promotion  
+**Level I:** STILL OPEN. The general contact-opening bridge in Section 7 is unproved.
+
+Every construction below retains the full source, including arbitrary contact-isolated
+points. No second configuration is silently substituted for the source. The only
+load-bearing canonical input is normalized nonnegative KKT equilibrium, shared
+theory `01-local-structure.md`, Theorem 4.1. Elementary convex-hull, circle, and
+lattice estimates are proved or specified below. No ordinary bar-rigidity or
+contact-minimality assumption is used.
+
+## 1. The direct global contradiction
+
+```text
+finite full-source contact opening, fixing all actual diameter endpoints
+  -> another n-point global minimizer with the same actual diameter graph
+  -> normalized KKT equilibrium at that endpoint
+  -> some contact component has diameter at least (sqrt(3)-1)D
+```
+
+For the grid charts below the motion leaves only contact components of diameter
+O(D^(2/3)), giving a contradiction. The endpoint is actually constructed; all
+inactive lower and upper pairs are retained using their finite strict margins.
+
+## 2. Balanced diameter-force components must be macroscopic
+
+**Lemma.** In any finite planar unit-separated source of diameter D having
+normalized nonnegative KKT equilibrium, some component of the positive-contact
+graph has diameter at least `(sqrt(3)-1)D`. More precisely, this holds for every
+positive-contact component incident to a positive diameter multiplier.
+
+**Proof.** Let U be such a component and let r=diam(U). If a positive diameter
+edge has both endpoints in U, r>=D and the assertion follows. Otherwise sum
+equilibrium over U. Positive contact forces cancel internally, leaving
+
+\[
+\sum_{e\in\partial_H U}\beta_e(a_e-b_e)=0,
+\]
+
+where a_e is in U and b_e is outside U. The sum of these beta weights is positive.
+After normalizing them to probabilities, the two endpoint distributions have the
+same centroid c. Their variances satisfy
+
+\[
+V_a\le r^2/3,\qquad V_b\le D^2/3.
+\]
+
+Here the elementary planar Jung bound puts a diameter-d set in a disk of radius
+at most d/sqrt(3), and variance is no larger than the mean squared distance from
+any chosen center. To recall the Jung proof: a minimum enclosing circle is
+supported by two antipodal points or by three points whose convex hull contains
+its center. In the latter case their largest central gap is between 2pi/3 and pi,
+so one chord is at least sqrt(3) times the radius; the two-point case is stronger.
+
+Since every crossing edge has length D, Cauchy-Schwarz for the joint endpoint
+distribution gives
+
+\[
+D^2=\mathbb E|a-b|^2
+\le(\sqrt{V_a}+\sqrt{V_b})^2
+\le(r+D)^2/3.
+\]
+
+Thus r>=(sqrt(3)-1)D. There is at least one positive diameter multiplier because
+their normalized sum is one. Its endpoint belongs to a positive-contact component:
+otherwise the same argument for its singleton gives an immediate contradiction.
+This proves existence as well as the componentwise statement. Zero-weight contacts
+do not affect the argument. The same size lower bound also applies to the full
+contact component containing each such positive component.
+
+### A universal necessary theorem for every global minimizer
+
+**Frozen-island theorem (proved candidate awaiting promotion).** For any finite
+global minimizer, let Q be its complete set of actual diameter endpoints and define
+
+\[
+F_Q=\{w:r_{ij}\cdot(w_i-w_j)=0\ (ij\in C),\quad w_i=0\ (i\in Q)\}.
+\]
+
+Call a contact frozen if w_i=w_j for every w in F_Q. The graph of frozen contacts
+has a connected component of diameter at least (sqrt(3)-1)D which meets Q.
+Every vertex of that component is fixed pointwise by every velocity in F_Q.
+This theorem uses neither a lattice nor a triangle-free hypothesis.
+
+**Proof.** For each nonfrozen contact, the subspace where w_i=w_j is proper in
+F_Q. A finite union of such proper subspaces cannot cover F_Q. Choose one w
+outside all of them, or w=0 if all contacts are frozen. For a small finite t,
+the straight-line motion p_i+t w_i opens every nonfrozen contact by its positive
+t^2|w_i-w_j|^2 term and preserves every frozen contact. It fixes every actual
+diameter pair, and the finite strict margins preserve all old inactive lower
+and upper pairs, including contact-isolate pairs. Its contact graph is exactly
+the frozen-contact graph. Global minimality makes this feasible endpoint another
+global minimizer. Apply normalized KKT equilibrium there and the extent lemma
+above. A positive-contact component incident to a positive diameter edge is
+macroscopic and meets Q; its full frozen-contact component is also macroscopic.
+Along every frozen edge the chosen velocity is equal at its two endpoints, so
+each frozen component translates rigidly. The one meeting Q has zero velocity
+at that pin and is therefore unchanged. For *every* vector in F_Q, equality
+along all frozen edges propagates that zero pin velocity to the whole component.
+The claimed component and its size thus belong to the original source.
+
+This is a spatial strengthening of the usual adapted-stress argument: it forces
+a macroscopic pointwise frozen island instead of assuming that most source
+vertices are stressed. It does not imply that the island contains an exact unit
+triangle, has quadratic population, or is rigid when the diameter pins are freed.
+
+## 3. An explicit full-source contact-opening chart
+
+Suppose every nontrivial component G_j of the **full actual unit-contact graph**
+uses at most two independent unit directions u_j,v_j. Assume their basis angle is
+in [pi/3,2pi/3]. A one-direction component may use any perpendicular second
+direction. Connectivity labels every point in G_j uniquely as
+
+\[
+p_{ab}=z_j+a u_j+b v_j,\qquad (a,b)\in\mathbb Z^2.
+\]
+
+This follows by summing the integer unit steps along a contact path; independence
+of the basis makes the resulting coordinates consistent around every cycle.
+Different components can have different directions, origins, and label sets.
+No full-product, convexity, common lattice, or common phase assumption is imposed.
+
+Let P_j be the actual diameter endpoints lying in G_j, and put q_j=|P_j|. Let
+A_j and B_j be the sets of their integer a- and b-coordinates. Choose functions
+f_j and g_j on the finitely many source coordinates satisfying:
+
+- f_j=0 on B_j, and its values elsewhere are nonzero and pairwise distinct;
+- g_j=0 on A_j, and its values elsewhere are nonzero and pairwise distinct.
+
+For every source point in G_j choose its velocity uniquely by
+
+\[
+u_j\cdot w_{ab}=f_j(b),\qquad v_j\cdot w_{ab}=g_j(a).
+\]
+
+Give every original contact-isolated point velocity zero. All actual diameter
+endpoints have velocity zero, including any isolated endpoints.
+
+For a horizontal unit contact the relative velocity has zero u_j projection.
+It is zero exactly when both adjacent a-coordinates belong to A_j; otherwise it
+is nonzero. Vertical contacts have the corresponding rule for B_j. Consequently
+every old contact either remains exactly unchanged or obeys
+
+\[
+|r+t\Delta w|^2=1+t^2|\Delta w|^2>1\quad(t\ne0).
+\]
+
+All old noncontact pairs have strictly positive lower margin. Every old pair
+outside the diameter graph has strictly positive upper margin. There are finitely
+many full-source pairs, so one common sufficiently small positive t preserves
+every one of these margins. All old diameter pairs are fixed exactly. The new
+source therefore has the same cardinality, diameter D, and actual diameter graph;
+its contacts are precisely the old contacts with zero relative velocity.
+This check includes pairs between different original components and pairs
+involving all old contact isolates. No new contacts are introduced.
+
+Every new contact component is translated rigidly by this motion. Its a-range
+can cross an integer gap only when both endpoints of that gap are in A_j.
+Its b-range has the analogous restriction. Thus its old and new diameters obey
+
+\[
+r_{\rm new}\le (|A_j|-1)_+ + (|B_j|-1)_+
+\le 2(q_j-1)_+.
+\]
+
+If q_j=0 or 1, every old contact in G_j opens and the remaining components are
+singletons. This is an exact finite deformation, not a formal rank argument.
+
+## 4. A uniform loaded-lattice hull bound
+
+Every actual diameter endpoint is a vertex of the full source hull. Indeed, if p
+were a nontrivial convex combination of other source points and |p-y|=D,
+strict convexity of squared distance would give |p-y|^2<D^2. Hence every point
+of P_j is a vertex of conv(P_j).
+
+The unit lattice with basis angle in [pi/3,2pi/3] is uniformly unit-separated:
+for a nonzero integer vector (a,b),
+
+\[
+|a u_j+b v_j|^2\ge a^2+b^2-|ab|\ge1.
+\]
+
+If q_j>=64, let L=sqrt(q_j)/8>=1. At most 4(L+1/2)^2<=9L^2 lattice vectors
+have norm below L, by placing disjoint radius-1/2 disks around them. The oriented
+edge vectors of the convex polygon conv(P_j) are distinct. At least q_j/2 of
+its sides therefore have length at least L, because 9L^2=9q_j/64<q_j/2.
+Writing P for its perimeter,
+
+\[
+P\ge q_j^{3/2}/16,
+\qquad q_j\le(16P)^{2/3}\le(16\pi D)^{2/3}.
+\]
+
+The final inequality is Cauchy's perimeter formula
+`P=integral_0^pi width(phi) dphi<=pi D`. Collinear pin sets contain at most two
+points because all of their points must be extreme. The small-q case gives the
+uniform estimate
+
+\[
+q_j\le64+(16\pi D)^{2/3}\le64+16D^{2/3}.
+\]
+
+The last inequality uses pi<4. This is an elementary lattice-hull argument; no
+angle-dependent Jarnik constant or outside uniformity assumption is imported.
+
+## 5. Global theorem without ordinary bar rigidity
+
+**Theorem (proved candidate awaiting promotion).** If D>=2^24, no planar
+unit-separated global diameter minimizer can have every contact component in
+the two-direction chart class of Section 3. This includes arbitrarily many
+components, arbitrary phases, arbitrary contact-isolated points, holes, and
+angles that approach pi/3 or 2pi/3 at any rate.
+
+**Proof.** If the source were global, the full-source motion in Section 3 would
+produce another global minimizer of the same cardinality and diameter. By
+Sections 3--4 each of its full contact components has diameter at most
+
+\[
+128+32D^{2/3}\le128+D/8<D/4,
+\]
+
+where D>=2^24 implies D^(1/3)>=256. KKT equilibrium at this actual new source
+is therefore impossible by Section 2, whose required component diameter is
+(sqrt(3)-1)D>D/4. This contradicts global minimality. The proof uses no ordinary
+active-bar rigidity and does not need the positive-contact core to contain a
+large fraction of the source.
+
+The D threshold is deliberately crude. Since disjoint radius-1/2 source disks
+fit in a disk of radius D+1/2 centered at any source point,
+`n<=4(D+1/2)^2`. Thus the theorem also applies at every sufficiently large n.
+
+## 6. Whole unit-rhombic-lattice corollary, including hexagonal endpoints
+
+**Corollary.** Every sufficiently large global minimizer contained in one
+translate and rotation of a lattice generated by two unit vectors of angle
+in [pi/3,2pi/3] contains a unit equilateral triangle. The angle may vary with n.
+No source rigidity, full-product shape, or absence-of-isolates hypothesis is
+required.
+
+For an angle strictly between the endpoints the only unit lattice differences
+are the two generator axes, so Section 5 rules out a global minimizer in that
+lattice, triangle-free or otherwise. This is a uniform exclusion of the whole
+strict-oblique source class, including the inverse-diameter shear regime.
+
+At either endpoint the lattice is triangular. A triangle-free subset has a
+fixed positive density deficit. Here is the complete counting argument. Put
+u=(1,0), v=(1/2,sqrt(3)/2), a0=sqrt(3)/2. The index-three sublattice generated
+by 2u-v and u+v partitions the unit lattice into disjoint unit triples
+`{z,z+u,z+v}`. A triangle-free source occupies at most two sites in each triple.
+If a triple meets K=conv(A), its root z lies in K+B(0,1). The centered fundamental
+parallelogram at that root has area 3a0 and radius at most 3/2. These disjoint
+cells all lie in K+B(0,5/2). Thus
+
+\[
+n\le\frac{2}{3a_0}
+ \left(\operatorname{area}K+\tfrac52\operatorname{per}K+
+                 \tfrac{25}{4}\pi\right)
+\le\frac{\pi D^2}{6a_0}+O(D).
+\]
+
+The parallel-body formula and isodiametric inequality are used with the actual
+source hull. Conversely translated triangular-lattice averaging gives every
+global minimizer `D^2<=4a0 n/pi`, or `n>=pi D^2/(4a0)`. To recall the averaging
+argument, a disk of area a0 n has mean translated lattice population n, so one
+translate contains at least n sites; those sites have diameter at most
+sqrt(4a0 n/pi). The quadratic leading coefficients in the two population
+inequalities differ, so the triangle-free endpoint case is excluded for all
+sufficiently large D. This proves the corollary.
+
+The existing literature audit of Das, Theorem 1.5, retains an ordinary-rigidity
+premise. The present proof removes it in this whole unit-rhombic-lattice scope.
+The canonical finite oblique comparison already excludes angles sufficiently
+far from the hexagonal endpoints; the new finite contact opening also excludes
+angles arbitrarily close to them. These statements remain candidates until
+independently audited and promoted.
+
+## 7. Exact remaining Level I bridge
+
+The following **global contact-opening bridge is unproved**:
+
+> Every sufficiently large triangle-free global minimizer admits a finite
+> full-source motion fixing all actual diameter endpoints, preserving every
+> old noncontact lower margin and every inactive upper margin, and leaving
+> only contact components of diameter less than (sqrt(3)-1)D.
+
+Section 2 would contradict that endpoint's KKT equilibrium and settle Level I.
+Sections 3--5 establish the bridge only for the explicitly defined two-direction
+component class. A general contact component can use many directions; assigning
+two-coordinate row/column velocities there is not justified. Phase labels or
+virtual train charts cannot be substituted for an actual source contact chart.
+No general crystallization or chart-extraction theorem is asserted.
+A full Level I proof may use an unrestricted same-cardinality replacement that
+moves the old diameter endpoints. The frozen-endpoint bridge is a sufficient
+research target, not a necessary restriction on the problem's solution.
+
+## 8. Exact verification and lifecycle
+
+`research/verify_global_loaded_grid_opening_2026_10_11.py` checks the full-pair
+motion on a 2x3 square product with retained unit pairs, a 7x7 square source
+with nine removed grid labels and one arbitrary rational isolate, and the
+nine-label rational oblique packet from the companion report. It checks all
+old/new contacts, all actual diameter pairs, every full-source lower and upper
+constraint, and the component range bound. The 2x2 square is a binding control:
+its loaded-coordinate motion is zero and its contact component remains of
+diameter D, as required by its known optimality.
+
+The script also verifies the index-three triangular-lattice partition exactly.
+Finite output does not prove the general deformation theorem, the lattice-hull
+bound, the asymptotic counting argument, or global optimality. Those arguments
+are analytical above. All claims are unreviewed candidates awaiting an
+independent audit. No canonical state or active route prompt is changed.

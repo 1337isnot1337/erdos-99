@@ -1,0 +1,188 @@
+# Target B — cross-grain virtual determinant floor
+
+**Date:** 2026-10-02  
+**Base main:** `46cdb4fd3cb5f078f298fa51857e23e321ac9204`  
+**Status:** proved candidate, noncanonical. Target B remains open.
+
+Fix Section-50 parameters \(0<\eta,\lambda<1\). Delete crossings with angular
+defect \(>D^{-1+\eta}\), then prune train vertices of current degree
+\(<\lambda D\). Let \(H_1,\dots,H_k\) be the retained components. Write the
+three phase-class sizes in \(H_i\) as \(M_i\ge b_i\ge a_i\).
+
+Theorem 50.1 gives
+
+\[
+|E_{\rm hi}|\le C_\delta D^{2-\eta}=o(D^2)
+\]
+
+and minimum retained degree at least \(\lambda D\).
+
+## Lemma 1 — every retained grain has two linear phase classes
+
+For every retained component,
+
+\[
+\boxed{b_i\ge \lambda D/2.}
+\]
+
+A train in the largest phase class has no neighbor in its own class because every
+retained crossing changes the \(\mathbb Z/3\) phase potential by \(\pm1\). Its
+degree is at most \(a_i+b_i\le2b_i\), while retained degree is at least
+\(\lambda D\).
+
+## Lemma 2 — four-direction determinant floor
+
+For every real \(\theta\),
+
+\[
+\boxed{
+2|\sin\theta|+
+|\sin(\theta+\pi/3)|+
+|\sin(\theta-\pi/3)|
+\ge\sqrt3.
+}
+\]
+
+Indeed,
+
+\[
+|\sin(\theta+\pi/3)|+|\sin(\theta-\pi/3)|
+\ge\sqrt3|\cos\theta|,
+\]
+
+and the result follows from
+\(2|\sin\theta|+\sqrt3|\cos\theta|
+\ge\sqrt3(|\sin\theta|+|\cos\theta|)\ge\sqrt3\).
+
+## Uniform phase coherence
+
+Put
+
+\[
+L_0=\left\lceil {3T\over\lambda D}\right\rceil,
+\qquad
+\varepsilon_D=L_0D^{-1+\eta}.
+\]
+
+Since \(T=O(D)\), \(\varepsilon_D=o(1)\). Theorem 50.1 and the signed lift
+formula imply that every train in phase class \(r\) of \(H_i\) is within
+\(\varepsilon_D\), projectively, of \(\alpha_i+r\pi/3\).
+
+## Theorem — quadratic cross-grain virtual mass
+
+For distinct retained components \(H_i,H_j\), define
+
+\[
+W_{ij}=
+\sum_{\substack{\tau\in H_i,\ \sigma\in H_j\\
+\tau,\sigma\ {\rm do\ not\ cross}}}
+|\det(u_\tau,u_\sigma)|.
+\]
+
+Then
+
+\[
+\boxed{
+W_{ij}\ge
+(\sqrt3-8\varepsilon_D)b_ib_j
+-|E_{\rm hi}(H_i,H_j)|.
+}
+\tag{1}
+\]
+
+Consequently,
+
+\[
+\boxed{
+W_{ij}\ge{\sqrt3\over4}\lambda^2D^2-o(D^2).
+}
+\tag{2}
+\]
+
+Choose the two largest phase classes in each component. Their ideal direction sets
+can be written
+
+\[
+\{\alpha,\alpha+\pi/3\},
+\qquad
+\{\beta,\beta+\pi/3\}.
+\]
+
+Each of the four class products has at least \(b_ib_j\) pairs. Actual angles differ
+from ideal by at most \(2\varepsilon_D\). Since \(x\mapsto|\sin x|\) is
+1-Lipschitz, Lemma 2 gives determinant mass at least
+\(b_ib_j(\sqrt3-8\varepsilon_D)\) before physical crossing pairs are removed.
+
+If a train in \(H_i\) physically crosses one in \(H_j\), that edge must be in the
+initial high-defect deletion. Otherwise both retained endpoints would still be
+joined and would lie in the same retained component. Removing physical crossing
+pairs loses at most their number because \(|\det|\le1\). This proves (1), and
+Lemma 1 gives (2).
+
+## Global form
+
+Let \(V_{\rm cross}=\sum_{i<j}W_{ij}\). High-defect edges are charged at most once,
+so
+
+\[
+\boxed{
+V_{\rm cross}
+\ge
+(\sqrt3-8\varepsilon_D)\sum_{i<j}b_ib_j-|E_{\rm hi}|
+=
+\sqrt3\sum_{i<j}b_ib_j-o(D^2).
+}
+\tag{3}
+\]
+
+Hence
+
+\[
+\boxed{
+{V_{\rm cross}\over D^2}
+\ge
+{\sqrt3\lambda^2\over4}\binom{k}{2}-o(1).
+}
+\tag{4}
+\]
+
+Thus every additional retained dense grain forces a positive quadratic amount of
+cross-grain noncrossing determinant mass, regardless of relative grain phase.
+
+The exact virtual-zonotope identity gives
+\(V_{\rm miss}=\operatorname{area}(Z)-\operatorname{area}(\mathcal R)\), with
+\(V_{\rm cross}\le V_{\rm miss}\). In a pure disk,
+\(\operatorname{per}(Z)=2T\), hence
+\(\operatorname{area}(Z)\le T^2/\pi\). Section 36 and
+\(G+E<c_0B\) give
+\(\operatorname{area}(\mathcal R)=\pi D^2/4-O(D)\). Therefore
+
+\[
+\boxed{
+\sqrt3\sum_{i<j}b_ib_j
+\le
+{T^2\over\pi}-{\pi D^2\over4}+o(D^2).
+}
+\tag{5}
+\]
+
+If \(x=T/D\),
+
+\[
+\boxed{
+{\sqrt3\lambda^2\over4}\binom{k}{2}
+\le
+{x^2\over\pi}-{\pi\over4}+o(1).
+}
+\tag{6}
+\]
+
+## Scope
+
+This is independent of the current Target C-II fan and inactive-chamber work and
+does not use GPI's dominant-component hypothesis.
+
+It does not close Target B. Virtual determinant mass is not automatically Oler
+surplus. The remaining step is to convert the cross-grain mass in (3), or the
+complementary pruned-train virtual mass, into \(G+E\ge c_0B\) or a strict
+smaller-diameter competitor.

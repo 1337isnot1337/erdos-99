@@ -1,0 +1,549 @@
+# Target C-II — all flat pentagon centers force inactive near-contact blockers
+
+**Date:** 2026-09-14  
+**Status:** proof-only source-level theorem; theorem-state authority unchanged  
+**Scope:** canonical full-core Type-II branch, small true force-hull residual `R_F=o(D)`; low-`t` numerical form uses the audited minimax atomic gap `g=0.0021`  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The existing boundary reflection theorem treats only loaded flat pentagon centers of
+contact degree two.  The loadedness restriction is unnecessary.  For every sufficiently
+flat pentagonal face, reflection of the distinguished almost-flat center across its
+hidden chord strictly lengthens every old contact other than the two face-edge
+contacts.  Consequently:
+
+- an unloaded flat center would give a strict contact-count decrease unless the
+  reflected point is blocked;
+- a loaded flat center of degree three gives the same primary contradiction;
+- a loaded flat center of degree two is excluded by the existing secondary
+  diameter-pair lexicographic comparison.
+
+Thus **every** sufficiently flat pentagon center has a previously inactive source
+blocker at distance `1+o(1)` from the original center.
+
+On `R_F=o(D)`, the low-`t` pentagon sea therefore yields an endpoint-disjoint inactive
+near-contact matching of density
+
+\[
+\boxed{
+{H_{flat}\over D}
+\ge {1\over13}
+\left(\pi+C_0-{5t\over2}+\delta+{\kappa\over2}\right)-o(1),
+}
+\tag{AR.1}
+\]
+
+where
+
+\[
+C_0=2\sqrt{\Delta_2}+0.0021,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+\]
+
+\[
+t={q-k\over D},\qquad
+\delta={b-P_F\over D},\qquad
+\kappa={k\over D}.
+\]
+
+Every pair in `H_flat` is inactive in the original contact graph and has length
+`1+o(1)` uniformly; in fact the total activation gap of the matching is `o(D)`.
+
+At the current proof-only low-`t` floor
+
+\[
+t_{21}={4\over9}\left(\pi+\sqrt{\Delta_2}\right)+0.0017279
+=1.82124143797944\ldots,
+\]
+
+the most permissive profile `delta=kappa=0` gives
+
+\[
+\boxed{
+{H_{flat}\over D}
+\ge0.0380934363\ldots-o(1).
+}
+\tag{AR.2}
+
+This removes the loaded/unloaded and weak-contact alternatives from the flat-pentagon
+small-residual endpoint: the whole pentagon sea forces inactive near-contact blockers.
+
+## 1. Local flat-pentagon coordinates
+
+Let `P` be a sufficiently low-residual pentagonal exceptional face in the unique
+flat-trapezoid stability regime.  Let `m` be its distinguished almost-flat boundary
+vertex and `l,r` its two face neighbors.  Thus
+
+\[
+|l-m|=|m-r|=1,
+\qquad
+\angle lmr=\pi-\epsilon,
+\qquad
+\epsilon>0,
+\tag{AR.3}
+\]
+
+with `epsilon` arbitrarily small on the diagonalized small-residual family.
+
+Choose coordinates so that
+
+\[
+l=(-a,0),\qquad r=(a,0),\qquad m=(0,-h),
+\tag{AR.4}
+\]
+
+where
+
+\[
+a=\cos(\epsilon/2),
+\qquad
+h=\sin(\epsilon/2).
+\tag{AR.5}
+\]
+
+The pentagon lies locally on the upper side of the chord `lr`.  Reflect `m` across the
+line `lr`:
+
+\[
+m^*=(0,h).
+\tag{AR.6}
+\]
+
+Then
+
+\[
+|m^*-l|=|m^*-r|=1,
+\qquad
+|m-m^*|=2h=2\sin(\epsilon/2).
+\tag{AR.7}
+\]
+
+The empty-pentagon trapezoid stability theorem implies more than angle convergence.
+In the limiting flat unit trapezoid, the midpoint of the long base has a positive
+inward segment inside the convex quadrilateral formed by the two long-base endpoints
+and the two opposite top vertices.  Therefore, for all sufficiently small `epsilon`,
+
+\[
+\boxed{m^*\in\operatorname{int}(\operatorname{conv}A).}
+\tag{AR.8}
+\]
+
+This containment is purely geometric; it does not use whether `m` is loaded.
+
+## 2. Every old extra contact strictly lengthens under reflection
+
+The interior face sector at `m` is the angular interval between the two face-edge
+rays `mr` and `ml`, of width `pi-epsilon`.  Since `P` is a face, no other contact ray
+from `m` lies in the open face sector.
+
+Write
+
+\[
+\phi={\epsilon\over2}.
+\]
+
+In the coordinates above the ray `mr` has angle `phi`, while `ml` has angle
+`pi-phi`.  Hence every extra contact ray lies in the complementary sector
+
+\[
+[\pi-\phi,2\pi+\phi]
+\]
+
+modulo `2pi`.
+
+Let `z` be any old contact neighbor of `m` other than `l,r`, and write
+
+\[
+z-m=u,
+\qquad |u|=1.
+\]
+
+Unit separation of the contact neighbors gives angular separation at least `pi/3`
+from each of the face-edge rays.  Equality would make `z,m,l` or `z,m,r` a unit
+equilateral triangle, so triangle-freeness makes both separations strict.  Therefore
+for `epsilon<pi/3` the direction of `u` lies strictly in
+
+\[
+\left( {4\pi\over3}-\phi,
+        {5\pi\over3}+\phi\right),
+\tag{AR.9}
+\]
+
+and in particular
+
+\[
+\boxed{u_y<0.}
+\tag{AR.10}
+\]
+
+Now
+
+\[
+z-m^*=u-(0,2h),
+\]
+
+so
+
+\[
+\begin{aligned}
+|z-m^*|^2-|z-m|^2
+&=|u-(0,2h)|^2-|u|^2\\
+&=4h^2-4hu_y\\
+&>0.
+\end{aligned}
+\tag{AR.11}
+\]
+
+Thus
+
+\[
+\boxed{|z-m^*|>1}
+\tag{AR.12}
+\]
+
+for every old extra contact `mz`.
+
+This is the step that removes the weak-contact escape: no pre-existing extra contact,
+regardless of its KKT weight, can block the reflection.
+
+## 3. Lexicographic minimality forces a previously inactive blocker
+
+Suppose, for contradiction, that
+
+\[
+|m^*-z|>1
+\tag{AR.13}
+\]
+
+for every source point
+
+\[
+z\in A\setminus\{m,l,r\}.
+\]
+
+Replace `m` by `m^*` and call the new source `A'`.
+
+By (AR.7) and (AR.13), `A'` is unit-separated and its only new contacts incident to
+`m^*` are `m^*l` and `m^*r`.  Also
+
+\[
+|l-r|>1,
+\]
+
+because equality would make the original triple `l,m,r` a forbidden unit equilateral
+triangle.  Therefore `A'` remains triangle-free.
+
+By (AR.8), every point of `A'` lies in the old source hull, so
+
+\[
+\operatorname{diam}A'\le D.
+\]
+
+Since `|A'|=|A|=n`, global minimality forces `diam A'=D`.
+
+There are now two cases.
+
+### 3.1 `m` is unloaded
+
+Canonical full-force visibility gives
+
+\[
+3\le\deg_C(m)\le5.
+\tag{AR.14}
+\]
+
+The reflection keeps exactly the two face-edge contacts and, by Section 2, removes
+every other old contact at `m`.  Hence
+
+\[
+|C(A')|<|C(A)|.
+\]
+
+This contradicts the primary choice of `A` as a triangle-free global minimizer with
+minimum contact count.
+
+### 3.2 `m` is loaded
+
+Loaded contact degree is at most three.  If `deg_C(m)=3`, the reflection again reduces
+the contact count and gives the same primary contradiction.
+
+If `deg_C(m)=2`, the reflection creates exactly as many contacts as it deletes.  Since
+`m^*` lies in the interior of the old source hull, it creates no diameter pair.  The
+old loaded vertex `m` loses at least one actual diameter pair.  The loaded
+lexicographic exchange theorem therefore contradicts the secondary minimization of the
+number of actual diameter pairs among contact-minimal representatives.
+
+Hence (AR.13) is impossible in all cases.  There exists
+
+\[
+z(m)\notin\{m,l,r\}
+\]
+
+with
+
+\[
+|m^*-z(m)|\le1.
+\tag{AR.15}
+\]
+
+By (AR.12), `z(m)` cannot be any old extra contact neighbor of `m`.  Therefore
+
+\[
+\boxed{|m-z(m)|>1,}
+\tag{AR.16}
+\]
+
+so `mz(m)` is inactive in the original contact graph.
+
+Using (AR.7) and (AR.15),
+
+\[
+\boxed{
+1<|m-z(m)|
+\le1+2\sin(\epsilon/2).
+}
+\tag{AR.17}
+\]
+
+Every sufficiently flat pentagon center therefore produces one previously inactive
+near-contact blocker.
+
+## 4. A source vertex is the flat center of at most one good pentagon
+
+This removes the factor-five multiplicity loss present in earlier flat-center counts.
+
+Assume
+
+\[
+\epsilon<\pi/6.
+\tag{AR.18}
+\]
+
+Every good pentagon has interior face angle at its distinguished center greater than
+`5pi/6`.
+
+A bounded contact face is strictly convex, so every bounded face angle is strictly
+less than `pi`.  If a contact vertex has degree two, its two angular sectors sum to
+`2pi`; therefore at most one of them can be the angle of a bounded strictly convex
+face.
+
+If the contact degree is at least three, the cyclic angular gaps between consecutive
+unit-contact rays are each strictly greater than `pi/3`: unit separation gives
+`>=pi/3`, and equality would make a unit triangle.  Two distinct pentagonal face
+sectors at the same vertex, each greater than `5pi/6`, would already consume more than
+`5pi/3` of the full angle, leaving less than `pi/3` for at least one remaining contact
+sector.  This is impossible.
+
+Hence
+
+\[
+\boxed{
+\text{for }\epsilon<\pi/6,\text{ every source vertex is the distinguished flat center of at most one good pentagon.}
+}
+\tag{AR.19}
+
+Thus the number of good pentagons and the number of good flat centers are equal, up to
+the `o(D)` residual cut below.
+
+## 5. Small residual makes almost every low-`t` pentagon good
+
+For every fixed `epsilon>0`, the Wegner residual jump plus empty-pentagon trapezoid
+stability gives a threshold
+
+\[
+\theta(\epsilon)>0
+\]
+
+such that any pentagonal exceptional face with local fixed-boundary residual below
+`theta(epsilon)`
+
+1. has no assigned interior isolate; and
+2. is `epsilon`-close to the unique flat unit trapezoid.
+
+All local chamber residuals are nonnegative and their sum is `R_F`.  Under
+
+\[
+R_F=o(D),
+\tag{AR.20}
+\]
+
+at most
+
+\[
+{R_F\over\theta(\epsilon)}=o(D)
+\]
+
+pentagons fail the fixed threshold.
+
+Choose `epsilon_D->0` sufficiently slowly that
+
+\[
+{R_F\over D\,\theta(\epsilon_D)}\to0.
+\tag{AR.21}
+\]
+
+Let `G_D` be the surviving good pentagons.  Then
+
+\[
+\boxed{G_D=p_5-o(D),}
+\tag{AR.22}
+\]
+
+and every member satisfies the reflection blocker theorem with a common
+`epsilon_D->0`.  By (AR.19), the associated centers are all distinct for large `D`.
+
+## 6. One blocker serves at most six centers
+
+For every assigned pair `(m,z(m))`, equation (AR.17) gives
+
+\[
+1<|m-z(m)|\le1+\eta_D,
+\qquad
+\eta_D:=2\sin(\epsilon_D/2)\to0.
+\tag{AR.23}
+\]
+
+Fix one source point `z`.  If it blocked seven distinct centers, two center rays about
+`z` would have angular separation at most `2pi/7`.  Once `eta_D<=1/20`, the same
+finite annulus estimate as in the loaded reflection theorem gives for those two
+centers
+
+\[
+|m_i-m_j|
+\le {1\over20}+{21\over20}\,2\sin(\pi/7)
+<0.962<1,
+\]
+
+contradicting source unit separation.
+
+Therefore
+
+\[
+\boxed{
+\text{every source point blocks at most six good centers.}
+}
+\tag{AR.24}
+
+## 7. Endpoint-disjoint near-contact matching
+
+Assign one blocker `z(m)` to every good center.  Form the graph whose edges are the
+unordered pairs
+
+\[
+\{m,z(m)\}.
+\]
+
+By (AR.19), every source point is a center of at most one assignment.  By (AR.24), it
+is a blocker of at most six assignments.  Hence the assignment graph has maximum
+degree at most seven.
+
+A greedy edge matching loses at most thirteen assignment edges per selected edge, so
+there is an endpoint-disjoint matching `H_flat` with
+
+\[
+\boxed{|H_{flat}|\ge {G_D\over13}.}
+\tag{AR.25}
+\]
+
+Every matching edge is inactive in the original source and, by (AR.23),
+
+\[
+1<|x-y|\le1+\eta_D.
+\tag{AR.26}
+\]
+
+Since `G_D=O(D)` and `eta_D->0`, the total activation gap satisfies
+
+\[
+\boxed{
+\sum_{xy\in H_{flat}}(|x-y|-1)=o(D).
+}
+\tag{AR.27}
+
+## 8. Compose with the low-`t` pentagon sea
+
+The low-`t` pentagon count is
+
+\[
+{p_5\over D}
+\ge
+P(t,\delta,\kappa)-o(1),
+\tag{AR.28}
+\]
+
+where, after propagating the audited minimax gap,
+
+\[
+P(t,\delta,\kappa)
+:=\pi+C_0-{5t\over2}+\delta+{\kappa\over2},
+\qquad
+C_0=2\sqrt{\Delta_2}+0.0021.
+\tag{AR.29}
+\]
+
+Equations (AR.22), (AR.25), and (AR.28) prove (AR.1).
+
+At `t=t_21` and the conservative profile `delta=kappa=0`,
+
+\[
+P(t_{21},0,0)
+=0.495214672369096\ldots,
+\]
+
+so
+
+\[
+{P(t_{21},0,0)\over13}
+=0.0380934363360843\ldots .
+\]
+
+This proves (AR.2).
+
+## 9. Frontier effect
+
+The small-residual low-`t` endpoint no longer has a loaded-flat-center / unloaded-flat-
+center / weak-contact trichotomy.  Every one of the linearly many low-residual flat
+pentagons forces a previously inactive near-contact blocker.
+
+The surviving source-level endpoint is therefore
+
+```text
+R_F=o(D), low t
+  -> about 0.495D flat pentagons
+  -> about 0.495D distinct flat centers
+  -> endpoint-disjoint inactive near-contact matching
+     of size at least about 0.0381D
+     with total gap o(D).
+```
+
+This is compatible with the known warning that inactive near-contacts are invisible to
+a fixed active-set KKT matrix.  A closing theorem must use the matching globally: for
+example a simultaneous first-contact exchange, a second-order motion, or a packing
+loss that depends on the endpoint-disjoint `o(D)` total activation gap.
+
+The theorem strictly strengthens the loaded-only reflection dichotomy and makes the
+weak-contact collapse unnecessary as a description of the flat-center branch.
+
+## 10. Scope audit
+
+- Reflection is used only as a hypothetical replacement; `m` and `m^*` are never kept
+  simultaneously.
+- The strict lengthening of extra contacts is geometric and independent of KKT
+  multipliers.
+- The unloaded case uses canonical `3<=deg_C(m)<=5`; the loaded case uses the loaded
+  degree cap and the already-audited loaded lexicographic exchange theorem.
+- Reflected-point containment comes from the same empty-pentagon trapezoid stability
+  geometry used in the loaded reflection theorem and does not use loadedness.
+- The center multiplicity-one lemma uses strict convexity of bounded faces and strict
+  `>pi/3` separation of consecutive contact rays.
+- Blocker multiplicity is finite (at most six) once the diagonalized annulus width is
+  below `1/20`.
+- Every matching pair is inactive in the original contact graph; old extra contacts
+  cannot be blockers because they strictly lengthen under reflection.
+- All source points, including contact-isolated points, are retained except for the
+  single hypothetical replacement in the lexicographic contradiction.
+- Numerical constants inherit the proof-only audited `g=0.0021` lifecycle.
+- No exact unit equilateral triangle or strict same-cardinality sub-`D` competitor has
+  been produced.
+
+**Disposition:** proof-only structural theorem.  C-II and Level I remain open.

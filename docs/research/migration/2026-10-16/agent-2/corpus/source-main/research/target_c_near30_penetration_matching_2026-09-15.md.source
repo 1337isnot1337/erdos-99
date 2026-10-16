@@ -1,0 +1,497 @@
+# Target C-II — near-30-degree convex-route penetration matching
+
+**Date:** 2026-09-15  
+**Status:** proved proof-only strengthening; theorem-state authority unchanged  
+**Scope:** current low-`t` full-core Type-II endpoint  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The `15`-degree window is useful because it gives an exact local phase-gate normal
+form. It is not optimal for producing a large physical penetration matching.
+
+After the merged convex-route sharpening, the straight-occurrence loss is only
+
+\[
+{d_{out}\over1-\cos\beta}.
+\]
+
+We can therefore move the angular window very close to `30` degrees. The only reason
+not to take `beta=pi/6` exactly is the matching argument: at the opposite endpoint we
+need three incoming penetration rays to be impossible, and we need a penetration edge
+to be quantitatively separated from a route edge at another straight vertex.
+
+The current detour bound gives a uniform nearby-normal spread below `0.0028841`
+radians. Choosing
+
+\[
+\boxed{\beta_*={\pi\over6}-0.003}
+\]
+
+leaves a strict finite margin for both requirements.
+
+The result is
+
+\[
+\boxed{
+M_*\ge0.6279410342628509\ldots D-o(D)
+}
+
+pairwise vertex-disjoint signed penetration contacts. Moreover at least
+
+\[
+\boxed{
+0.1698248997679897\ldots D-o(D)
+}
+
+of a matching can be required to lie on non-singleton strict-rhombus trains. If the
+outer tail is also required to be simple-outer, the train-supported matching floor is
+still
+
+\[
+\boxed{
+0.1468566298124728\ldots D-o(D).
+}
+
+This is strictly stronger than the `15`-degree matching for deformation/train work,
+while the `15`-degree theorem remains stronger for local phase classification.
+
+---
+
+## 1. Convex straight-occurrence count at `beta_*`
+
+Put
+
+\[
+\varepsilon:=0.003,
+\qquad
+\beta_*={\pi\over6}-\varepsilon,
+\tag{N30.1}
+\]
+
+and
+
+\[
+c_*:=1-\cos\beta_*.
+\]
+
+The merged convex-route theorem gives
+
+\[
+S_*
+\ge
+x_B-{d_{out}\over c_*}.
+\tag{N30.2}
+\]
+
+With the usual normalized variables
+
+\[
+t={q-k\over D},\qquad
+\kappa={k\over D},\qquad
+\delta={d_{out}\over D},
+\]
+
+this becomes
+
+\[
+\liminf {S_*\over D}
+\ge
+\pi-t-\kappa-
+\left({1\over c_*}-1\right)\delta.
+\tag{N30.3}
+\]
+
+At `beta_*`,
+
+\[
+{1\over c_*}-1
+=6.548394897186289\ldots>4.
+\]
+
+Thus the low-`t` constraint
+
+\[
+2\delta+{\kappa\over2}\le R(t)
+\]
+
+again has its worst endpoint at `delta=R(t)/2`, `kappa=0`. At `t=t_42`,
+
+\[
+\boxed{
+{S_*\over D}
+\ge1.3018186084367357059\ldots-o(1).
+}
+\tag{N30.4}
+
+This is an occurrence count.
+
+---
+
+## 2. Distinct physical straight tails
+
+Let `V_out` be the number of distinct physical outer-face vertices. The merged
+near-simple theorem gives the full repetition-surplus bound
+
+\[
+{b-V_{out}\over D}
+\le0.0459365399110338116\ldots+o(1).
+\tag{N30.5}
+\]
+
+If a physical vertex supports `m_x` outer occurrences, then any straight occurrences
+at that vertex can exceed one by at most `m_x-1`. Therefore
+
+\[
+S_*-V_*
+\le
+b-V_{out},
+\tag{N30.6}
+\]
+
+where `V_*` is the number of distinct physical vertices supporting at least one
+`beta_*`-straight occurrence. Hence
+
+\[
+\boxed{
+{V_*\over D}
+\ge1.2558820685257018943\ldots-o(1).
+}
+\tag{N30.7}
+
+Because `beta_*<pi/6`, the degree-collapse theorem applies at every chosen occurrence:
+each tail is unloaded and has contact degree exactly three or four.
+
+For each physical tail in `V_*`, choose one of its straight occurrences and then
+choose one extra contact edge at that occurrence. Denote the resulting set by `E_*`.
+
+---
+
+## 3. Signed inward margin
+
+At every chosen occurrence the signed straight-event theorem gives
+
+\[
+(w-x)\cdot n_i
+>
+\sin(\pi/3-\beta_*)
+=\sin(\pi/6+\varepsilon).
+\tag{N30.8}
+\]
+
+Numerically,
+
+\[
+\boxed{
+(w-x)\cdot n_i>0.5025958223159282\ldots.
+}
+\tag{N30.9}
+
+A route edge at a `beta_*`-straight occurrence has absolute normal component less than
+
+\[
+\sin\beta_*
+=0.4973996776874467\ldots.
+\tag{N30.10}
+\]
+
+The finite gap between (N30.9) and (N30.10) is
+
+\[
+\boxed{0.0051961446284815\ldots.}
+\tag{N30.11}
+\]
+
+---
+
+## 4. Nearby outer tails have almost identical hull normals
+
+The signed-penetration matching audit proved the general bounded-distance estimate.
+If two outer-route occurrences are at Euclidean distance `O(1)` and their associated
+hull-side inward normals make angle `theta`, then
+
+\[
+\sin{\theta\over2}
+\le {\delta\over2}+o(1).
+\tag{N30.12}
+\]
+
+At the current endpoint `delta<=0.002883975+o(1)`, so
+
+\[
+\boxed{
+\theta
+\le
+2\arcsin(0.0014419875)+o(1)
+=0.0028839759994559\ldots+o(1).
+}
+\tag{N30.13}
+
+Call the displayed finite constant `theta_0`. Our choice
+
+\[
+\varepsilon=0.003>\theta_0
+\tag{N30.14}
+\]
+
+has a positive margin.
+
+---
+
+## 5. The chosen physical edges are distinct
+
+Suppose one physical edge `xy` were chosen as an extra contact at straight occurrences
+at both endpoints. Let `e=y-x`. Equation (N30.8) at the two endpoints gives
+
+\[
+e\cdot n_i>\sin(\pi/6+\varepsilon),
+\]
+
+and
+
+\[
+e\cdot n_j<-\sin(\pi/6+\varepsilon).
+\]
+
+Thus the two hull normals are separated by a fixed angle strictly larger than
+
+\[
+\pi-2\left({\pi\over3}-\varepsilon\right)
+={\pi\over3}+2\varepsilon.
+\]
+
+The merged signed-injectivity geometry then forces the corresponding hull-side
+midpoints to be a positive fraction of `D` apart, while the two outer endpoints are
+unit distance apart. The route-midpoint estimate would require `Theta(D)` total outer
+detour, contradicting `d_out<=0.002883975D+o(D)`.
+
+Hence the one-per-tail selection is globally edge-injective:
+
+\[
+\boxed{|E_*|=V_*.}
+\tag{N30.15}
+
+---
+
+## 6. At most two chosen penetrations share one opposite endpoint
+
+Suppose distinct chosen contacts
+
+\[
+x_1w,\ldots,x_rw
+\]
+
+share the same opposite endpoint `w`. Their outer tails satisfy
+
+\[
+|x_a-x_b|\le2,
+\]
+
+so their hull normals have pairwise angular spread at most `theta_0+o(1)` by
+(N30.13).
+
+A selected direction `e_a=w-x_a` lies within angle
+
+\[
+\arccos\sin(\pi/6+\varepsilon)
+={\pi\over3}-\varepsilon
+\]
+
+of its local normal. Therefore all incoming directions lie in an angular interval of
+width at most
+
+\[
+2\left({\pi\over3}-\varepsilon+\theta_0\right)+o(1).
+\tag{N30.16}
+\]
+
+By (N30.14), this is strictly less than `2pi/3` for all sufficiently large `D`.
+
+At `w`, triangle-freeness forces the contact rays toward distinct `x_a` to have
+pairwise angular separation strictly greater than `pi/3`. Three such rays cannot fit
+in an interval shorter than `2pi/3`. Hence
+
+\[
+\boxed{r\le2.}
+\tag{N30.17}
+
+---
+
+## 7. The opposite endpoint is not another chosen straight tail
+
+Let `xw` be chosen at tail `x` and suppose `w` supports a chosen `beta_*`-straight
+occurrence. Since `|x-w|=1`, their hull normals differ by at most `theta_0+o(1)`.
+
+If `xw` is extra at `w`, the signed inequalities point the same unit edge inward at
+both endpoints with opposite orientations, which is incompatible with nearly equal
+normals.
+
+If `xw` is a route edge at `w`, then by (N30.10)
+
+\[
+|e\cdot n_w|<\sin\beta_*.
+\]
+
+Changing the unit normal by angle at most `theta_0+o(1)` changes this dot product by at
+most `theta_0+o(1)`. Therefore
+
+\[
+e\cdot n_x
+<
+\sin\beta_*+\theta_0+o(1).
+\]
+
+The verifier checks the strict finite inequality
+
+\[
+\sin\beta_*+\theta_0
+<
+\sin(\pi/6+\varepsilon),
+\tag{N30.18}
+\]
+
+contradicting (N30.8).
+
+Thus the chosen tail set and opposite-endpoint set are disjoint.
+
+---
+
+## 8. Physical matching floor
+
+The graph with left side the distinct tails `V_*`, right side their opposite endpoints,
+and edge set `E_*` is bipartite. Every left vertex has degree one by construction, and
+every right vertex has degree at most two by (N30.17). Therefore its edges can be
+covered by a matching of size at least half:
+
+\[
+\nu(E_*)\ge{|E_*|\over2}={V_*\over2}.
+\]
+
+Using (N30.7),
+
+\[
+\boxed{
+{M_*\over D}
+\ge0.6279410342628509471\ldots-o(1).
+}
+\tag{N30.19}
+
+These contacts are pairwise vertex-disjoint in the physical source graph and each has
+signed inward component greater than `0.5025958`.
+
+---
+
+## 9. Simple-outer and train-supported subfamilies
+
+A straight physical vertex is simple-outer if it has no other outer-face occurrence.
+To lower-bound the simple-outer straight population from an occurrence count, one pays
+the repetition surplus twice: once to deduplicate straight occurrences and once to
+remove repeated physical vertices. Hence
+
+\[
+V_{simp,*}
+\ge
+S_*-2(b-V_{out}).
+\tag{N30.20}
+\]
+
+At the current endpoint,
+
+\[
+\boxed{
+{V_{simp,*}\over D}
+\ge1.2099455286146680827\ldots-o(1).
+}
+\tag{N30.21}
+
+Choose one extra contact per such simple tail. The same injectivity and endpoint
+arguments apply.
+
+Use the conservative independently audited singleton stopped-train budget
+
+\[
+{S_{train}\over D}
+\le0.9162322689897223521\ldots+o(1).
+\tag{N30.22}
+
+At most that many selected physical edges can avoid all strict rhombi. Thus
+
+\[
+\boxed{
+{E_{R,*}\over D}
+\ge
+1.2558820685257018943
+-0.9162322689897223521
+-o(1)
+}
+\]
+
+so
+
+\[
+\boxed{
+{E_{R,*}\over D}
+\ge0.3396497995359795422\ldots-o(1).
+}
+\tag{N30.23}
+
+The matching argument survives restriction to this subfamily:
+
+\[
+\boxed{
+{M_{R,*}\over D}
+\ge0.1698248997679897711\ldots-o(1).
+}
+\tag{N30.24}
+
+For simple-outer tails,
+
+\[
+\boxed{
+{E_{R,simp,*}\over D}
+\ge0.2937132596249457306\ldots-o(1),
+}
+\tag{N30.25}
+
+and hence
+
+\[
+\boxed{
+{M_{R,simp,*}\over D}
+\ge0.1468566298124728653\ldots-o(1).
+}
+\tag{N30.26}
+
+---
+
+## 10. Two-window frontier
+
+The strongest current use of the outer-route geometry is now a two-window argument.
+
+### `beta=pi/12`
+
+Use this narrower window for the exact local phase classification:
+
+- degree three or four;
+- positive local turn `<pi/6`;
+- cubic mixed/double-obtuse dichotomy;
+- quartic acute-fan identity;
+- retained phase-gate accounting.
+
+The convex-route update gives at least `1.1930133014D-o(D)` simple-outer vertices in
+this rigid class.
+
+### `beta=pi/6-0.003`
+
+Use this wider window for deformation and train support:
+
+- `>=1.2558820685D-o(D)` distinct straight physical tails;
+- `>=0.6279410342D-o(D)` vertex-disjoint signed penetration matching;
+- `>=0.1698248997D-o(D)` train-supported matching;
+- `>=0.1468566298D-o(D)` simple-outer train-supported matching.
+
+The remaining obstruction is no longer endpoint reuse. A macroscopic rhombic strip can
+still carry many of these pairwise vertex-disjoint penetration edges along one train.
+The next theorem must therefore control strip occupancy by boundary turning/phase,
+produce a source-level strip competitor, or force too many independent diameter
+braces.
+
+**C-II remains open.**

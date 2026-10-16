@@ -1,0 +1,19 @@
+{
+  "retrieved_utc_date": "2026-10-12",
+  "table_last_update": "2024-12-25",
+  "normalization": "coordinates are exact decimal input data; certification rescales using measured exact minimum distance, not presumed optimality",
+  "sources": [
+    {
+      "cardinality": 132,
+      "url": "https://www.packomania.com/cci/txt/cci132.txt",
+      "page": "https://www.packomania.com/cci/cci132.html",
+      "sha256": "64c8a85573a5ced26e666fa25b713c4fc6264c409d811eab101cd13ff65ef00a"
+    },
+    {
+      "cardinality": 175,
+      "url": "https://www.packomania.com/cci/txt/cci175.txt",
+      "page": "https://www.packomania.com/cci/cci175.html",
+      "sha256": "6f889e1143dbb5aee039224198617355070104f161a2bdd0705166eaf814f140"
+    }
+  ]
+}

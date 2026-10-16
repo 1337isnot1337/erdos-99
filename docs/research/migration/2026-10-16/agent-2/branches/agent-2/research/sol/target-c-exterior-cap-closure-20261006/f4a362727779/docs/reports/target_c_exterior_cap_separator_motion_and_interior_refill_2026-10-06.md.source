@@ -1,0 +1,510 @@
+<!-- theorem-state: {"artifact_id":"ART-22C539388FC2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: a cap forces a diameter separator, and interior sites can pay its cut
+
+**Date:** 2026-10-06. **Authority:** main
+`583203ac1dc1d7bc49f0ca0574d75e85f9de2ee1`, state
+`2026-10-05.audit.62`. **Worker:** 2, actual macroscopic exterior caps.
+**Classification:** proved candidates awaiting independent audit for the
+separator and motion; regression/discovery theorem for the explicit refill.
+Repository lifecycle remains unreviewed. C-II and Level I remain open.
+No external literature or unpromoted Worker 1 theorem is used.
+
+## 1. The new composition and its limit
+
+The previous unloaded stress cut moved every actual diameter but supplied
+no locations for the deleted labels. Here the actual cap chord gives a
+geometric cut, without a stress-space selection:
+
+```text
+actual macroscopic cap + actual diameter partners
+  -> loaded endpoints avoid a line through the source center
+  -> every actual diameter crosses that line; H is a forest
+  -> delete only one shore's contact guards in a width-one strip
+  -> translate the retained core shores inward, keeping all other contacts
+  -> strict reduced-source diameter, with every original isolate retained
+  -> enough interior replacement sites (not forced in canonical sources).
+```
+
+There is also a fixed-width full-source strip version with a uniform finite
+translation. Its deletion cost is O(D), including the removed isolates.
+Both versions move the old diameter-carrying core. Neither claims that
+strict-safe area supplies a site.
+
+The explicit family in Section 5 does restore cardinality: two interior
+sites, each anchored by two exact unit contacts, replace two unloaded seam
+guards after a finite core translation. All actual old diameters disappear.
+It even admits a triangle-free strict-sub-D endpoint. This is an actual
+cap/core packet mechanism, but the family's deficient core prevents an
+inference about canonical sources. The missing statement is a **forced
+interior packet after the cap-induced cut**, specified in Section 6.
+
+## 2. A finite loaded-endpoint separator from one actual cap
+
+Translate the full-source circumcenter to zero. Let R be its circumradius,
+and suppose every actual diameter midpoint has norm at most L. Canonical
+FS.1/FS.6 allow
+
+\[
+ R<D/2+\eta,\qquad L=\sqrt{D\eta+\eta^2},\qquad
+ \eta=3^{1/4}\sqrt D.                                      \tag{1}
+\]
+
+Let an actual exterior cap have closing line u dot x=c, where |u|=1,
+F lies in u dot x<=c, and c>=0. Put w=Ju and r=D-R. Assume
+
+\[
+ c+2L<r,\qquad
+ g:=\sqrt{r^2-(c+2L)^2}>L.                                \tag{2}
+\]
+
+**Theorem S.1 (finite cap separator).** Every loaded endpoint b satisfies
+|w dot b|>=g, and the endpoints of every actual diameter have opposite
+w signs. In particular every actual diameter crosses the line w dot x=0.
+
+**Proof.** A loaded endpoint b has an actual partner k. Since |k|<=R and
+|b-k|=D, |b|>=r. Also b,k belong to F, so u dot b,u dot k<=c. The
+midpoint bound |b+k|<=2L yields u dot b>=-c-2L. Hence
+|u dot b|<=c+2L and
+
+\[
+ |w\cdot b|^2=|b|^2-|u\cdot b|^2\ge g^2.                 \tag{3}
+\]
+
+If an actual pair b,k had the same w sign, then
+|w dot (b+k)|>=2g>2L, impossible. QED.
+
+### Macroscopic application
+
+For a cap sequence with area(C)>=alpha D^2, alpha>0 fixed, (2) holds for
+all sufficiently large D, and g>=gamma_alpha D for some gamma_alpha>0.
+Indeed C lies in the radius-R disk above its closing line. Since R/D->1/2,
+a sequence c/D->1/2 would have area(C)/D^2->0 by the circular-segment
+area formula (or scaled disk convergence). Thus c/D<=1/2-epsilon_alpha
+eventually. Since r/D->1/2 and L/D->0, (2)--(3) give the claimed linear
+gap. Canonical DB.30 ensures c>0. No exact central symmetry is assumed.
+
+**Corollary S.2.** For every sufficiently large canonical source with a
+macroscopic exterior cap, its **full actual diameter graph is in the
+Woodall forest branch**: d_H=q-h>0, and its components are caterpillars.
+
+The separator makes H bipartite. Canonical C-WOODALL says the only other
+possibility is one odd-unicyclic component with pendant leaves, which is
+not bipartite. This rules out that alternative. It does not exclude the
+nonmatching forest. Canonical C-MATCHING-EXCLUSION only excludes a forest
+made entirely of isolated matching edges.
+
+The branch is also quantitatively nonterminal. If A_C is the source-hull
+arc length of the cap between its loaded endpoints, split partial(K)
+into the q consecutive loaded arcs. Every other arc has length at least
+one, so
+
+\[
+ q\le\operatorname{per}(K)-A_C+1\le\pi D-A_C+1.          \tag{3a}
+\]
+
+A macroscopic cap has A_C=Omega(D). Thus q/D is bounded away from pi
+by a fixed positive amount. Worker 1's terminal O--O depletion, which
+assumes q/D->pi, cannot be applied to this exterior-cap sequence.
+
+The argument uses one actual closing chord and its endpoints' actual
+partners. The audited proof-only antipodal pairing is consistent with it,
+but is not a premise: the opposite slab restriction follows directly
+from the actual partners. The line passes through the two limiting cap
+middles and misses every loaded endpoint by Omega(D).
+
+## 3. Delete a width-one contact cut and preserve the remaining contacts
+
+Use S.1, with g>1. Partition the original positive-contact core as
+
+\[
+ V_-=\{p\in V:w\cdot p\le0\},\qquad
+ V_+=\{p\in V:w\cdot p>0\}.
+\]
+
+Let E_cross be the old unit contacts joining these shores, and let
+
+\[
+ R_-:=\{p\in V_-:\exists q\in V_+,\ pq\in C\}.            \tag{4}
+\]
+
+Thus every cross contact is deleted by removing its negative-shore end.
+Every point of R_- has -1<w dot p<=0. No loaded endpoint belongs to R_-,
+because all of them have projection magnitude at least g>1.
+
+**Theorem S.3 (cap-induced contact cut).** The set R_- is nonempty,
+consists only of unloaded core labels, and satisfies
+
+\[
+ |R_-|\le (1/a_0+1)D+2,
+ \qquad a_0=\sqrt3/2.                                    \tag{5}
+\]
+
+There is a sufficiently small epsilon>0 for which the motion
+
+\[
+ p\mapsto p+\epsilon w\ (p\in V_-\setminus R_-),\qquad
+ p\mapsto p-\epsilon w\ (p\in V_+),                       \tag{6}
+\]
+
+with **every original contact isolate fixed**, has all the following
+properties:
+
+- every surviving old contact stays exactly unit;
+- every old actual diameter remains present and becomes strictly shorter;
+- every other full-source lower/upper constraint is checked and preserved;
+- the resulting (n-|R_-|)-point source has diameter strictly below D.
+
+**Proof.** The connected core contains loaded endpoints on both shores,
+so it has a cross contact. This proves nonemptiness. The width-one
+rectangle containing R_- has tangential span at most D. Its area is at
+most D and perimeter at most 2D+2. Oler applied to conv(R_-) gives (5),
+including the harmless relaxed constant 2. The singleton case also
+satisfies (5).
+
+After (4) no surviving contact crosses the shores. Every surviving
+contact's endpoints therefore receive the same translation in (6).
+For an old diameter with negative endpoint b and positive endpoint k,
+let d=w dot (k-b)>=2g. Its exact new squared length is
+
+\[
+ D^2-4\epsilon d+4\epsilon^2<D^2
+ \quad(0<\epsilon<2g).                                  \tag{7}
+\]
+
+All such endpoints are retained. No old diameter lies within one shore.
+For every originally strict lower pair, and every originally strict
+upper pair, take its positive distance margin. Pairs involving isolates
+have both margins because isolates have neither contacts nor diameters.
+The finite minimum of the relevant strict margins is positive. Choose
+epsilon smaller than one fourth of that minimum and smaller than g.
+Each moving-pair distance changes by at most 2epsilon, so all these
+strict inequalities persist. Isolate-isolate distances are unchanged.
+This proves finite feasibility and strict upper distances for every pair.
+It introduces no new contact. QED.
+
+This is an actual motion of core coordinates, not a choice of independent
+train owners. Its amplitude has **no uniform lower bound**: retained
+isolates can make the finite margin choice small. The deletion set is
+geometrically localized, unlike the earlier abstract <=s_Z+1 transversal.
+Both cuts are valid; neither controls the other's cardinality.
+
+The contact cut is itself a stress transversal. The stress-work identity
+on the reduced source would equate zero contact work with strictly
+negative diameter work along (6). Normalization makes the total diameter
+weight positive; virial excludes a nonzero contact-only stress. This
+observation supplies no insertion credit.
+
+### Localized small stress cuts and an exact aggregate force bound
+
+The same separator argument works at every parallel line w dot x=t,
+where -g+1<t<g-1. Let R_t be the negative-shore ends of its cross
+contacts. Then R_t lies in the width-one strip t-1<w dot x<=t and
+contains no loaded point. All old diameters still cross this cut.
+
+**Theorem S.3-L.** Each R_t contains an unloaded stress transversal
+U_t with |U_t|<=s_Z+1, where s_Z is the canonical affine dimension of
+the normalized KKT polytope. There are Omega(D) pairwise disjoint such
+transversals if the cut parameters are chosen two units apart. Moreover,
+for **every** normalized nonnegative KKT stress,
+
+\[
+ \sum_{e\in C\text{ crossing }t}\alpha_e\,d_e
+ =\sum_{h\in H}\beta_h\,d_h\ge2g,
+ \qquad d_e=w\cdot(q_e-p_e)>0,                           \tag{7a}
+\]
+
+where each pair is ordered from the negative to the positive shore.
+In particular sum_cross alpha_e>=2g, since d_e<=1 for a unit contact.
+
+**Proof.** Give the original core the step velocity +w on its negative
+shore and -w on its positive shore, including the labels to be deleted.
+Internal contact work is zero. A cross contact's half-squared-distance
+derivative is -2d_e; an actual diameter's is -2d_h. Pairing the KKT
+equilibrium with this velocity gives the equality in (7a). Every
+diameter span is at least 2g and sum beta=1, proving the inequality.
+Thus no normalized stress can vanish on all contacts incident to R_t.
+
+For each u in R_t use the zero face F_u of its incident contact load.
+Their intersection is empty by (7a). In a minimal empty subfamily U_t,
+choose, for each u, a stress belonging to all other selected faces.
+Its incident load at u is positive. These witness stresses are affinely
+independent: apply each incident-load functional to an affine dependence
+to isolate its one coefficient. Hence |U_t|<=dim_aff(P)+1=s_Z+1,
+using canonical Section 64.1. Each U_t is nonempty and destroying its
+incident contacts removes every normalized KKT stress. The signed-row
+separation proof in the earlier E.5 then supplies strict reduced-source
+descent after deleting U_t, retaining every isolate. Width-one strips
+at two-unit-separated t are disjoint, and the interval of available
+t has length 2g-2=Omega(D), proving the disjointness assertion. QED.
+
+These small localized cuts generally require E.5's full core motion;
+deleting only U_t does not guarantee the two rigid-shore motion (6).
+Equation (7a) is an **aggregate** lower force bound on a physical cut,
+not a lower bound on individual KKT coefficients. Neither localization
+nor the many disjoint choices implies packet capacity or simultaneous
+independent motions. No owner or train argument is being assumed.
+
+## 4. A uniform finite translation after a full-source strip deletion
+
+For 1/2<a<g put R_a={p in A:|w dot p|<a}. Delete **all** these labels,
+including the actual isolates in the two caps, and move each remaining
+negative/positive source shore by +/-epsilon w, where
+
+\[
+ 0<\epsilon<a-1/2.                                      \tag{8}
+\]
+
+**Theorem S.4.** This produces a unit-separated (n-|R_a|)-point source
+of diameter <D and removes only
+
+\[
+ |R_a|\le (2a/a_0+1)D+2a+1                             \tag{9}
+\]
+
+labels. All actual diameter endpoints are retained.
+
+**Proof.** Within either shore every distance is unchanged. Across the
+shores the new normal separation is at least 2(a-epsilon)>1. If d is
+the old normal separation, d>=2a, the squared length changes by
+-4epsilon d+4epsilon^2<=-4epsilon(2a-epsilon)<0. Every cross upper
+distance decreases. A same-shore pair is strictly shorter than D because
+S.1 puts every old actual diameter across the shores. Thus the full
+endpoint is strict-sub-D. The width-2a, length-at-most-D rectangle gives
+(9) by Oler. QED.
+
+If D_-,D_+ are the two old shore diameters, an explicit bound is
+
+\[
+ D_{new}\le\max\{D_-,D_+,\sqrt{D^2-4\epsilon(2a-\epsilon)}\}<D. \tag{10}
+\]
+
+For a=1, epsilon=1/4, all cross lower projections are at least 3/2,
+and their squared lengths drop by at least 7/4. Every old actual
+diameter has the stronger drop 2g-1/4=Omega(D). Same-shore inactive
+pairs may still control (10); no uniform full-source diameter decrease
+is claimed. Each macroscopic cap loses only O(D) source labels, so
+both retain their quadratic populations. This is a uniform finite
+**reduced-cardinality** motion, not a global competitor.
+
+## 5. An exact interior refill after the actual diameter core moves
+
+Reuse only the explicitly defined nonglobal spoke family from
+`target_c_paired_cap_spoke_global_comparison_2026-10-06.md`. The finite
+packet below is different from that report's independent disk competitor.
+
+In triangular basis e1=(1,0), e2=(1/2,sqrt(3)/2), let the six unit rays
+be v_j, j=0,...,5. For integer M>=20 the core is
+T_M={k v_j:1<=k<=M}. It has six unit spokes and a central unit hexagon.
+Its only actual diameters are the three pairs +/-M v_j, with D=2M.
+Every actual core contact and diameter has the positive KKT weights
+alpha=2M/3 and beta=1/3. Let
+
+\[
+ s=1+1/(100M^2),\quad R_0=M-1/4,
+\]
+
+and retain the cloud sI_M, where I_M consists of the lattice sites in
+B(0,R_0) whose lattice distance from T_M is greater than one.
+All these cloud points are actual contact isolates. The six actual
+loaded-hull caps are macroscopic, pair antipodally, have boundary-order
+slack, and satisfy the previously proved deep-cap coverage.
+
+Take w=e2-e1, so w dot (i e1+j e2)=(j-i)/2. The only cross contacts
+are v0-v1 and v3-v4. S.3's cut is precisely
+
+\[
+ R_- =\{v_0,v_4\}=\{(1,0),(0,-1)\}.                      \tag{11}
+\]
+
+Delete them and use (6) with epsilon=1/10, keeping **all** cloud points
+fixed. Insert just two sites
+
+\[
+ y_k=(k+1)e_1-e_2+\epsilon w,\qquad k\in\{3,5\}.         \tag{12}
+\]
+
+Each has exact unit contacts to the retained, translated pair
+k e1,(k+1)e1. Each lies deep inside the old force hull. They are
+interior guard sites, not sites in either exterior cap or its base.
+
+**Theorem S.5 (parametric discovery exchange).** For every integer
+M>=20, (11)--(12) produces a same-cardinality unit-separated endpoint
+with exact diameter
+
+\[
+ D_{new}=\sqrt{4M^2-(2/5)M+1/25}<2M.                      \tag{13}
+\]
+
+Six old contacts are lost and four new ones are created. The initial
+packet creates two unit triangles; these are allowed by the strict
+diameter comparison. Alternatively both new sites can be moved a
+sufficiently small common distance vertically downward to remove all
+four new contacts, giving a triangle-free strict-sub-D endpoint.
+
+**Proof of all lower constraints.** Within a core shore all old
+distances remain unchanged. After deleting the two cross contacts,
+the smallest old cross-core distance is at least sqrt(3), since
+lattice squared lengths are integers and all unit cross pairs were
+deleted. A displacement of at most 1/5 leaves these distances >1.
+Each core-cloud distance is at least sqrt(3)-1/(100M)-1/10>1.
+Cloud-cloud distances are unchanged and strict.
+
+For a site q_k=(k+1,-1), its only unit core neighbors are k e1 and
+(k+1)e1; they move with it. All other same-shore core distances were
+at least sqrt(3). Its normal separation from every opposite-shore
+core point remains greater than 3, so those pairs are strict too.
+The two inserted sites are distance 2 apart.
+
+Any cloud lattice index m with |q_k-m|>=sqrt(3) satisfies
+|y_k-sm|>=sqrt(3)-1/10-1/(100M)>1. Among q_k's six lattice unit
+neighbors, only m=(k+1,-2) and m=(k+2,-2) can be non-guards. For
+these q_k-m is respectively e2 or w, so
+
+\[
+ |q_k-m+\epsilon w|^2\ge1+\epsilon+\epsilon^2=111/100.
+\]
+
+Scaling m changes this distance by at most 1/(100M), giving a
+strict lower distance >1. This checks every old isolate, including
+any near-unit inactive blocker at (12).
+
+**Proof of all upper constraints.** The largest retained non-diameter
+core distance was at most 2M-1; shore translations increase any such
+distance by at most 1/5. The two old diameters in directions v0,v1
+now have squared length 4M^2-(2/5)M+1/25; the third has smaller
+squared length 4M^2-(4/5)M+1/25. Thus the largest core distance is
+(13). A moved core point has radius at most M+1/10; a cloud point
+has radius at most M-1/4+1/(100M). Every core-cloud distance is
+therefore at most 2M-3/20+1/(100M)<2M-7/50<D_new. Cloud-cloud
+distances are smaller still. A new site has radius below 6, giving
+all its distances to the remaining source below M+61/10<2M-7/50
+for M>=20. The two new sites are distance 2 apart. Every upper
+pair has now been checked.
+
+Each deleted core vertex has degree three, and they are nonadjacent,
+so old contact loss is six. The only new contacts are the four specified
+ones. For the triangle-free endpoint, the vectors from either new
+site to its two core anchors have negative vertical component. A
+common sufficiently small downward translation strictly opens these
+four contacts. All other involving lower and upper distances have
+positive finite margins. They persist; no other contact changes. QED.
+
+The proof is analytic for all M>=20. The exact verifier checks full
+M=20 and M=32 endpoints with two independent integer squared-distance
+formulas. It also chooses and verifies a rational finite downward step;
+there is no reliance on an infinitesimal assertion. The complete M=20
+old source, initial packet endpoint, and triangle-free endpoint are saved.
+
+### Why this is still a regression, not cap closure
+
+This family has h=3 and q=6 for all M. Its e+h=6M+3 is below the
+canonical requirement 2v-2=12M-2. It fails canonical mixed rigidity,
+the affine core kernel, the linear loaded/diameter populations, and
+the unloaded-degree requirement. Positive KKT, cap pairing, near-disk
+geometry and isolate saturation do not repair these missing hypotheses.
+The packet proves an actual finite cap/core release in the stated family;
+it is not forced in a canonical source.
+
+In particular, (12)'s interior guard vacancies are deliberately present
+in this one-chart cloud. Canonical density and near-unit matching do not
+supply such vacancies. No strict-area or generic Oler estimate is used
+to assert that they exist in an actual survivor.
+
+### Exact failure of a proposed extension to arbitrary core edges
+
+One tempting next inference would be that every same-shore unit core
+edge provides an equilateral-completion site like (12) after (6).
+An actual strict unit rhombus already defeats that inference. Put
+
+\[
+ a=(0,0),\quad b=(1,0),\quad
+ d=(3/7,2\sqrt{10}/7),\quad c=b+d.
+\]
+
+All four boundary edges have length one; the squared diagonal lengths
+are 8/7 and 20/7, both greater than one. This is a unit-separated,
+unit-triangle-free strict rhombus, an allowed canonical physical-face
+geometry. Its equilateral completion of ab into the face is
+q=(1/2,sqrt(3)/2), and
+
+\[
+ |q-d|^2=(11-2\sqrt{30})/7\in(0,1).                      \tag{14}
+\]
+
+If the entire face belongs to one shore, its core translation and
+the corresponding completion-site translation leave (14) unchanged.
+The completion is blocked by a retained **core** point, rather than
+an exterior isolate that the motion might clear. More generally a
+unit-rhombus angle theta in (pi/3,pi/2] puts that other unit neighbor
+within 2sin((theta-pi/3)/2)<=2sin(pi/12)<1 of the completion.
+
+This is a regression against the edge-to-vacancy inference, not against
+S.1--S.5 or the universal cap theorem. It does not assert a complete
+canonical/global source embedding. The exact certificate records the
+rhombus and (14). Any forced packet proof must distinguish actual
+outer-face interior pockets from these occupied rhombic completions;
+unit-contact density alone supplies no sites.
+
+## 6. The exact stronger packet obligation
+
+For a canonical macroscopic-cap source choose S.1's separator. Either
+use the unloaded contact cut R_- and its feasible endpoint A_epsilon,
+or the full-source strip R_a and endpoint A_{a,epsilon}. Let r be
+the exact number of deleted labels. A sufficient finite closing lemma is:
+
+> At one of these actual feasible endpoints there is a unit-separated
+> packet Y of at least r sites, unit-clear from every retained source
+> point, with all pairs involving Y strictly below the original D.
+
+Selecting exactly r sites gives the same original cardinality and
+diameter <D. The packet may contain triangles and use int(F); all
+original source constraints must be checked. Further movement of the
+retained source is allowed in the broader nonlocal-refill obligation,
+but is not supplied by S.1--S.4. The stated fixed-endpoint packet
+lemma is sufficient, not claimed necessary for every possible cap route.
+
+The newly explicit cut and motion eliminate two earlier ambiguities:
+which actual diameter endpoints move, and which removed labels must be
+restored. S.5 shows that exact-contact interior packets can pay those
+labels after a finite move. What remains is **forcing enough such
+sites in the canonical source**, where the defective spoke guards are
+unavailable. No uniform motion amplitude is claimed for S.3, and no
+packet credit follows from S.4's uniform motion or remaining cap area.
+
+S.3-L additionally permits the <=s_Z+1 deletion set to be selected inside
+any one of linearly many disjoint width-one strips. This localizes the
+abstract nonlocal-refill problem. It does not prove a fixed-endpoint
+packet for either the full shore cut or that smaller transversal.
+
+The old exterior packet release E.1/E.6 applies with the old core fixed.
+It neither supplies nor rules out (12) after the core moves. The missing
+canonical packet must still cross into the core region or otherwise use
+the actual moved geometry. The exact-contact sites in S.5 are an explicit
+example of that distinction.
+
+## 7. Regression and coordination audit
+
+| Binding condition | Treatment |
+| --- | --- |
+| Strained triangular cap / no spare strict site | No cap spare inferred; S.5 uses explicit interior guard sites |
+| Adaptive strict-safe saturation | Fully retained; only moved-source packet sites are used |
+| Old diameter core fixed | Both actual loaded shores move; every H edge is checked |
+| KKT invisible isolate mass | All isolates retained/fixed in S.3 and S.5; fully counted in S.4 |
+| Approximate antipodality | S.1 uses the finite midpoint bound; no exact symmetry is imposed |
+| Boundary-order cap slack | No slack threshold or scalar capacity reversal is asserted |
+| Inactive near-pairs | Finite margins in S.3; uniform separation in S.4; exact complete checks in S.5 |
+| Unit triangle in a competitor | Permitted because full diameter is strictly smaller; a triangle-free endpoint is also provided |
+| Canonical mixed rigidity / h density | Explicitly absent in S.5; no universal refill conclusion |
+
+Worker 1 was refreshed to `ece938d9`. Its new `5c1b72f8` odd-shell
+one-vertex blocker report was read completely. It concerns a full unit
+odd-cycle wall and internal isolates; macroscopic exterior caps here
+force the diameter forest and have nonunit closing chords. No theorem
+from that report is imported, and no wall-shield or owner/train result
+is reproved. Its subsequent coordination commit records this same
+exterior/internal distinction. The two owned branches remain separate.
+
+**Disposition:** retain as unreviewed proved candidates and a scoped
+exact regression. No canonical state/prompt is changed. Exterior caps
+remain open until Section 6's actual cardinality-restoring implication,
+or another strict global comparison, is proved.

@@ -1,0 +1,276 @@
+# Target C-II — the 15-spaced TB1 exact-swap system is a directed closure problem
+
+**Date:** 2026-09-17  
+**Status:** proof-only continuation of the short-blocker bandwidth reduction; no canonical promotion claimed  
+**Scope:** the 15-spaced one-sign strong-TB1 exact-swap family through `t=(q-k)/D<=1.8687`  
+**Dependencies:** short-pair path-bandwidth theorem; active-diameter decoupling; two-swap truth table; bounded genuine-upper binary family; canonical contact-minimal then diameter-pair-minimal normalization  
+**Certificate:** `research/verify_target_c_high_t_tb1_spaced_horn_reduction_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The short-blocker bandwidth theorem produced a retained exact-swap family
+
+\[
+P_D,
+\qquad
+|P_D|>{s_0\over30}D-o(D),
+\qquad
+s_0={791\over320{,}000{,}000},
+\tag{HR.1}
+\]
+
+whose path indices are pairwise at least fifteen apart and on which no previously strict pair can be safe under both singleton swaps but become bad only under the joint swap.
+
+Because every source pair has endpoints in at most two physical path layers, that pairwise statement is already enough to classify the **entire** finite-swap feasibility system.
+
+There is a directed graph `I_D` on `P_D` and a set `F_D` of forbidden coordinates such that a swap subset `S subseteq P_D` preserves every previously strict metric constraint if and only if
+
+\[
+\boxed{
+S\cap F_D=\varnothing
+\quad\text{and}\quad
+(i\in S,\ i\to j\in I_D)\Longrightarrow j\in S.
+}
+\tag{HR.2}
+\]
+
+Thus the remaining inactive system is a positive implication/Horn closure system. No higher-order condition survives.
+
+Moreover every implication edge is an **upper near-diameter** interaction. The 15-spacing theorem makes every lower near-unit singleton blocker permanent, so lower geometry contributes only forbidden vertices and never implication edges.
+
+Canonical minimality says no nonempty subset satisfying (HR.2) may exist. A finite directed-graph characterization then gives the exact remaining obstruction:
+
+\[
+\boxed{
+\text{every sink strongly connected component of }I_D
+\text{ intersects }F_D.
+}
+\tag{HR.3}
+\]
+
+Conversely, if even one sink SCC avoids `F_D`, swapping exactly that SCC is a valid nonzero finite move and contradicts canonical minimality.
+
+This turns the strong-TB1 finite-swap problem into a sharply stated global target. The remaining work is no longer to control arbitrary two-coordinate truth tables. It is to show that a linear ordered family of upper near-diameter implications cannot have all of its sink SCCs poisoned by permanent lower or persistent/external upper blockers inside the common train geometry.
+
+---
+
+## 1. Retained exact-swap coordinates and support size
+
+Use the family `P_D` from the short-blocker bandwidth theorem. Distinct retained path indices satisfy
+
+\[
+|i-j|\ge15.
+\tag{HR.4}
+\]
+
+Hence they are nonadjacent. The active-diameter decoupling theorem applies to **every** subset of `P_D`:
+
+- every old unit contact remains exactly unit;
+- every old actual diameter is unchanged or strictly shortened;
+- every selected nonempty coordinate set shortens at least one old actual diameter.
+
+A source vertex belongs to one physical path layer. Therefore a source pair `xy` is affected by at most the two retained coordinates containing its endpoints. Its Boolean support relative to `P_D` has size zero, one, or two.
+
+Pairs of support zero remain strict and are irrelevant.
+
+---
+
+## 2. One-coordinate blockers are forbidden coordinates
+
+Suppose a previously strict pair has retained support `{i}`. If the singleton exact swap at `i` violates the unit or diameter bound, no other retained swap changes either endpoint of that pair. Hence every subset containing `i` violates the same pair.
+
+Declare
+
+\[
+i\in F_D.
+\tag{HR.5}
+\]
+
+This includes every lower near-unit blocker. Indeed the short-pair path-bandwidth theorem shows that any lower singleton blocker at `i` has its other endpoint within fourteen path regions of `R_i`; by (HR.4) that endpoint cannot lie in another retained layer. Thus
+
+\[
+\boxed{
+\text{every lower-bound obstruction contributes only to }F_D.
+}
+\tag{HR.6}
+\]
+
+No lower obstruction can produce a directed implication on `P_D`.
+
+---
+
+## 3. Exact encoding of a two-coordinate pair
+
+Now let a previously strict pair have retained support exactly `{i,j}`. Write its three nonzero exact-swap states as
+
+\[
+10,\qquad01,\qquad11.
+\]
+
+The construction of `P_D` deleted the bounded genuine-upper binary exception, while 15-spacing eliminates the genuine-lower binary exception. Therefore
+
+\[
+\boxed{
+11\text{ bad}\Longrightarrow10\text{ bad or }01\text{ bad}.
+}
+\tag{HR.7}
+
+For this one pair, process each bad singleton independently.
+
+### Singleton `10` is bad
+
+If `11` is also bad, selecting `i` is impossible whether or not `j` is selected. Put
+
+\[
+i\in F_D.
+\tag{HR.8}
+\]
+
+If instead `11` is safe, the pair says exactly that selecting `i` requires also selecting `j`. Add the implication
+
+\[
+\boxed{i\longrightarrow j.}
+\tag{HR.9}
+
+### Singleton `01` is bad
+
+Symmetrically, if `11` is bad put `j in F_D`; if `11` is safe add
+
+\[
+\boxed{j\longrightarrow i.}
+\tag{HR.10}
+
+If both singleton states are bad while `11` is safe, the same pair contributes both implications and forces `i,j` to be selected together. If both singleton states and `11` are bad, both coordinates are forbidden. If neither singleton state is bad, (HR.7) says `11` is safe as well and the pair contributes no constraint.
+
+Thus for every possible two-coordinate truth table remaining on `P_D`, the pair is safe in a selected state exactly when that state avoids the pair's forbidden coordinates and obeys its implication arcs.
+
+Taking the union over all previously strict pairs proves (HR.2).
+
+---
+
+## 4. All implication edges are upper near-diameter pairs
+
+Equation (HR.6) already rules out lower implication edges.
+
+Therefore if
+
+\[
+i\to j
+\]
+
+is an arc of `I_D`, it is realized by a previously strict pair that reaches the diameter upper boundary under the singleton swap at `i` and is pulled back below `D` when the swap at `j` is added.
+
+In particular its original length lies in the inverse-`D` upper window
+
+\[
+D-O(D^{-1})\le |xy|<D.
+\tag{HR.11}
+
+So the graph `I_D` is not an abstract implication graph. Every one of its arcs carries a tagged near-diameter source chord joining two 15-separated path layers. The existing signed/superdiameter refinements, midpoint localization, and dense train-grid synchronization are available for these arcs when their corresponding quantitative subcases are selected.
+
+This is the geometric object left to attack.
+
+---
+
+## 5. Canonical minimality forbids every nonempty closed set
+
+Call `S subseteq P_D` **closed** when
+
+\[
+i\in S,\ i\to j\in I_D
+\quad\Longrightarrow\quad
+j\in S.
+\tag{HR.12}
+
+Suppose
+
+\[
+S\ne\varnothing,
+\qquad
+S\cap F_D=\varnothing,
+\qquad
+S\text{ is closed}.
+\tag{HR.13}
+
+By (HR.2), every previously strict pair remains strictly between the unit and diameter bounds after simultaneously applying the exact swaps in `S`.
+
+The active-diameter decoupling theorem simultaneously gives:
+
+- all old contacts remain exactly unit;
+- all old diameters remain at most `D`;
+- at least one old actual diameter is strictly shortened.
+
+If an unaffected old diameter remains, the resulting source is another global diameter-`D` minimizer with the same contact set but fewer diameter pairs, contradicting the canonical diameter-pair-minimal tie-break. If none remains, the source diameter is strictly below `D`, contradicting global optimality.
+
+Therefore
+
+\[
+\boxed{
+\text{there is no nonempty closed }S\subseteq P_D\setminus F_D.
+}
+\tag{HR.14}
+
+---
+
+## 6. Sink-SCC characterization
+
+Let the strongly connected components of `I_D` be contracted to form its condensation DAG.
+
+### Lemma HR.1
+
+A finite directed graph with forbidden vertex set `F` contains a nonempty out-closed set disjoint from `F` if and only if it has a sink strongly connected component disjoint from `F`.
+
+### Proof
+
+If `C` is a sink SCC and `C cap F` is empty, then `C` itself is nonempty, disjoint from `F`, and has no outgoing arc, hence is out-closed.
+
+Conversely suppose `S` is nonempty, out-closed, and disjoint from `F`. Choose any SCC represented in `S` and follow outgoing edges in the condensation DAG. Closure keeps every reached component inside `S`. Because the condensation is finite and acyclic, the walk reaches a sink SCC contained in `S`, hence disjoint from `F`. `square`
+
+Combining Lemma HR.1 with (HR.14) gives
+
+\[
+\boxed{
+\text{every sink SCC of }I_D\text{ contains a forbidden coordinate.}
+}
+\tag{HR.15}
+
+This is equivalent to the absence of a finite exact-swap descent on `P_D`.
+
+---
+
+## 7. Geometric meaning of the forbidden set
+
+A forbidden coordinate can arise in three ways relevant to the current reduction.
+
+1. **Permanent lower blocker.** A `1+O(D^-1)` pair supported in a path window of width at most fourteen. This is the only lower-bound mechanism.
+2. **Persistent upper blocker with two retained endpoints.** The singleton upper violation remains bad after the partner swap. Outside the ultra-thin exceptional shells, the existing two-swap truth table makes such persistence `q`-descending.
+3. **External upper blocker.** The near-diameter pair's other endpoint lies outside `P_D`, so no retained coordinate can disarm it.
+
+Thus (HR.15) says every sink component of the **upper near-diameter implication graph** must contain at least one of these permanent obstructions.
+
+The graph can still be large and strongly connected because different implication arcs may use unrelated source vertices inside a shared path layer. This is the same endpoint-telescoping issue that appears in the directed common-super-swap arborescence, now isolated inside a single metric type.
+
+---
+
+## 8. Frontier effect
+
+The 15-spaced exact-swap subsystem now has the exact finite normal form
+
+```text
+linear coordinate set P_D, density > s0/30;
+all old active constraints decoupled;
+all lower inactive blockers are permanent one-coordinate forbiddances;
+all two-coordinate disarming arcs are near-diameter upper pairs;
+no joint-only two-coordinate obstruction survives;
+no higher-arity source-pair support exists;
+feasible swap subsets = out-closed sets avoiding F_D;
+canonical minimality = every sink SCC is poisoned by F_D.
+```
+
+A closing continuation should target (HR.15), not the old arbitrary binary CSP. Two concrete routes remain:
+
+1. prove that the ordered path/train geometry forces an unpoisoned sink SCC in `I_D`; or
+2. prove that poisoning every sink SCC forces positive density in one forbidden geometry (14-local near-unit, `q`-descending persistent upper, or external upper), then eliminate that geometry by the existing train-grid / thrackle machinery.
+
+No such final contradiction is claimed here.
+
+**Disposition:** converted the linear 15-spaced strong-TB1 finite-swap system into an exact directed closure problem whose only interaction edges are inactive near-diameter upper pairs. C-II and Level I remain open.

@@ -1,0 +1,45 @@
+# Hostile audit — outer-detour diameter-moment floor
+
+**Date:** 2026-09-12  
+**Reviewed:** target_c_outer_detour_diameter_moment_floor_2026-09-12.md  
+**Disposition:** PASS at proof-only Type-II scope; C-II remains open.
+
+## 1. Outer-walk lower bound
+
+The diameter endpoints of conv(A_r) are attachment vertices and hence extreme
+vertices of the attachment polygon. They occur on the outer face of the induced
+harmonic graph. The closed occurrence-counted outer walk has two arcs between the
+chosen endpoint occurrences. Each arc is a polygonal path joining points at distance
+d_r, so its length is at least d_r. Thus L_r>=2d_r; bridges and repeated vertices
+only add occurrences.
+
+## 2. Algebraic cancellation
+
+Starting from the exact identity
+
+S_out=2(a-S_D)+2(e_BB-k)-2d_tile-2C_A-Q_loc,
+
+use e_BB-C_A<=2d_tile to obtain
+
+S_out <= 2a-2S_D-2k+2d_tile-Q_loc.
+
+With a=q-2+2c_I-d_tile, this becomes
+
+S_out <= 2(q-k)-2S_D+4c_I-4-Q_loc.
+
+The signs of d_tile, C_A, and Q_loc are all favorable in this direction. No
+identification of Q_loc with the full global Q is made; loaded-touching global faces
+may remain outside Q_loc.
+
+## 3. Asymptotic consequence
+
+The lower bound S_out>=0, Q_loc>=0, and c_I=O(D^(2/3)) give
+q-k>=S_D-o(D), hence liminf(q-k)/D >= liminf S_D/D. The endpoint consequence
+is a high-t floor only; no standalone lower bound on the outer-walk detour delta is
+claimed.
+
+The arithmetic script checks the endpoint constants and a separate high-t
+normalized point. It does not certify a contact complex or global optimality.
+
+**Classification:** audited-working proof-only Type-II floor; no theorem-state
+promotion; C-II remains open.

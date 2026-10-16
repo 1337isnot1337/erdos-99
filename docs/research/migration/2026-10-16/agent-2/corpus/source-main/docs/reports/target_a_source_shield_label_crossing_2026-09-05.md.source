@@ -1,0 +1,166 @@
+<!-- theorem-state: {"artifact_id":"ART-87758783D947","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
+# Erdős Problem #99 — Target A source-label crossing charge for contact shields
+
+**Date:** 2026-09-05  
+**Run type:** exact source/response geometric transport  
+**Target:** Target A Sections 168–174  
+**Depends on:** zero-slack source matching (168.2), unit-edge crossing barrier (103.1), contact-shield geometry (173–174)  
+**LEVEL I STATUS:** STILL OPEN
+
+## 1. Purpose
+
+Section 174 turns a stress-generated contact shield into exact geometric response sectors, but its remaining population inequality still needs genuine source input. In the zero-slack branch, Theorem 168.2 gives a strict matching
+
+`M_A : X^* -> A^0`
+
+from every response point to a distinct point of the triangle-free fixed-hull capacity source `A^0`, with every matching segment shorter than one.
+
+This note proves that those source-label segments cannot cross a contact shield for free. Every crossing forces the source label into an open unit disk around a shield vertex. Since `A^0` is unit-separated, at most five distinct source labels can be charged to one shield vertex.
+
+The resulting bound is linear in the number of shield vertices and is independent of the lengths of the shield paths.
+
+## 2. A short source-label segment crossing a unit contact
+
+### Lemma 1 — source-label crossing rule
+
+Let `p q` be a unit contact edge of `X^*`. Let `x in X^* \ {p,q}` and `a in A^0` satisfy
+
+`|x-a|<1`.
+
+If the segment `[x,a]` properly crosses the relative interior of `[p,q]`, then
+
+`|a-p|<1` or `|a-q|<1`.
+
+### Proof
+
+Because `X^*` is unit-separated and `x` is distinct from `p,q`,
+
+`|x-p|>=1`, `|x-q|>=1`.
+
+If also `|a-p|>=1` and `|a-q|>=1`, the unit-edge crossing barrier of Lemma 103.1 applied to the crossing segment `x a` and the unit segment `p q` gives
+
+`|x-a|>=sqrt(3)`.
+
+This contradicts `|x-a|<1`. Hence one of `|a-p|,|a-q|` is strictly below one. `square`
+
+This is the same geometry as Lemma 169.5, but the short segment now ends at a genuine source point rather than a response-lattice vertex.
+
+## 3. Any intersection with a contact shield is charged to a shield vertex
+
+Let `Sigma` be any finite unit-contact subgraph of `X^*`. Let `x in X^*\V(Sigma)` and let `a in A^0` satisfy `|x-a|<1`.
+
+### Lemma 2 — shield intersection charge
+
+If `[x,a]` intersects `|Sigma|`, then there is a vertex `p in V(Sigma)` with
+
+`|a-p|<1`.
+
+### Proof
+
+Choose an intersected shield edge `p q`.
+
+If `[x,a]` meets a shield vertex, say `p`, then `p!=x`. If `p` lies in the relative interior of `[x,a]`,
+
+`|a-p|<|a-x|<1`.
+
+If `p=a`, the conclusion is immediate.
+
+Otherwise the intersection lies in the relative interior of `p q`. A nontrivial collinear overlap is impossible: since `x notin {p,q}` and `X^*` is unit-separated, `x` is at distance at least one from both endpoints of the unit segment, while `[x,a]` has total length below one and therefore cannot reach the relative interior of `p q` along the same line. Hence the remaining intersection is proper, and Lemma 1 gives `|a-p|<1` or `|a-q|<1`. `square`
+
+## 4. Five source labels per shield vertex
+
+### Lemma 3 — open-unit-disk source cap
+
+For every point `p in R^2`, the open unit disk `B(p,1)` contains at most five points of the unit-separated set `A^0`.
+
+### Proof
+
+Assume six distinct source points lie in `B(p,1)`. Order them by polar angle around `p`. Two consecutive points have angular separation at most `pi/3`. Let their radii be `r,s<1` and their angular separation `theta<=pi/3`. Then
+
+`|a-b|^2 = r^2+s^2-2rs cos(theta)`
+
+`<= r^2+s^2-rs < 1`.
+
+The last strict inequality holds on `0<=r,s<1`: the maximum of `r^2+s^2-rs` on the closed unit square is one and equality occurs only on its boundary. This contradicts unit separation. `square`
+
+Now fix the zero-slack matching `M_A` from Theorem 168.2. For `x in X^*`, write `a_x` for its distinct source label.
+
+### Theorem 4 — source-label shield-crossing bound
+
+For every finite unit-contact shield `Sigma`,
+
+`#{x in X^*\V(Sigma) : [x,a_x] intersects |Sigma|} <= 5 |V(Sigma)|`.
+
+### Proof
+
+By Lemma 2, every counted matching edge has source endpoint `a_x` in `B(p,1)` for at least one `p in V(Sigma)`. The matching `M_A` has distinct source endpoints. Lemma 3 allows at most five such endpoints per shield vertex. A union bound gives the claim. `square`
+
+The constant five is the exact elementary angular-packing constant for an open unit disk; no response-graph degree bound is used.
+
+## 5. Sector-local consequence inside the response hull
+
+Let
+
+`D_1,...,D_k`
+
+be the components of `K^*\|Sigma|`, as in Sections 173–174. Define
+
+`X_i=(X^*\V(Sigma)) cap D_i`.
+
+Call `x in X_i` an **internal-label vertex** when its source label `a_x` lies in `K^*`.
+
+### Corollary 5 — almost all internal source labels stay in their sector
+
+All but at most `5|V(Sigma)|` internal-label vertices satisfy
+
+`a_x in D_i`
+
+for the same sector `D_i` containing `x`.
+
+### Proof
+
+If `x,a_x in K^*` lie in different components of `K^*\|Sigma|`, convexity of `K^*` puts the whole segment `[x,a_x]` in `K^*`, and every path joining the two components must meet `|Sigma|`. Hence `[x,a_x]` intersects the shield and Theorem 4 charges `x` to the exceptional set. `square`
+
+Thus the zero-slack source matching is sector-preserving on its `K^*`-internal labels up to a defect of at most five source labels per shield vertex.
+
+For the three-channel stress fan, `Sigma` is connected and unicyclic. The theorem therefore gives an explicit `O(|V(Sigma)|)` source-sector transport loss with no dependence on the ambient cardinality.
+
+## 6. Why this does not yet prove the Section 174 population inequality
+
+The theorem controls **cross-sector** source labels. It does not bound the number of matching labels `a_x` lying outside `K^*`. The descent-or-gates theorem 168.3 gives a lower bound on the number of such exterior labels in every matching, not an upper bound.
+
+Therefore it would be invalid to infer directly that
+
+`|X_i| <= |A^0 cap D_i| + O(|V(Sigma)|)`
+
+for every sector: exterior source gates may account for additional matched `X_i` vertices without crossing the contact shield.
+
+This is the precise remaining source-side defect. A closing sector theorem can now be split into two independent obligations:
+
+1. charge cross-sector internal labels by Theorem 4; and
+2. charge exterior source gates to the sector population surplus, to the response collar, or to a strict sub-`D` replacement.
+
+The first obligation is closed here with constant five.
+
+## 7. Regression audit
+
+- The result does not infer Schur nullity from planarity alone; it uses the zero-slack genuine-source matching.
+- The Section 166 common-neighbor SDR collision is irrelevant: no common lattice-neighbor SDR is selected.
+- Annular full-linkage response networks remain possible; the theorem only bounds source-label crossings of a specified contact shield.
+- Exterior source gates are explicitly retained as an unresolved population and are not silently assigned to sectors.
+- No same-hull Hall surplus above source capacity is claimed.
+
+## 8. Handoff
+
+```text
+LEVEL I STATUS: STILL OPEN.
+
+For the zero-slack matching x -> a_x and any unit-contact shield Sigma:
+
+  #{x outside V(Sigma): [x,a_x] meets |Sigma|} <= 5 |V(Sigma)|.
+
+Hence, among labels a_x lying in K*, all but at most 5|V(Sigma)| stay in the same geometric response sector as x.
+
+Remaining sector defect:
+matching labels outside K* can bypass the contact shield through the response-hull boundary. The next useful theorem must charge those exterior gates to the Section-174 signed population surplus, the collar population, or a strict smaller-diameter competitor.
+```

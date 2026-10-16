@@ -1,0 +1,239 @@
+# Target C — post-104 reconciliation audit
+
+**Date:** 2026-09-12  
+**State lock:** `2026-09-12.audit.44`  
+**Lifecycle:** noncanonical audit note; theorem state unchanged  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This note reconciles the proof-only Target C chain after canonical Section 104. It separates mathematical validity from repository authority. Presence on `main`, a larger section number, a passing scalar script, or a merged PR does not promote a theorem. The manifest remains audit.44.
+
+## Certified disposition
+
+1. **Canonical §§101--104 remain valid.** Audit.44 correctly promotes §104 and the explicit carrier coefficient `mu_9=0.9760407675809149535...`.
+2. **§§107--108 pass proof-level audit.** The compact-support circular-segment area identity, widened gap stability, area-to-rhombus transfer, phase extraction, leakage reuse, bridge occurrence accounting, and projection contradiction are valid.
+3. **§109 has one real error.** Its sufficient theorem for `a<r/(6C_T)` is valid, but the claim that `r/(6C_T)` is the limit of the phase-bin method is false. The correct joint-shore threshold is
+   \[
+   \boxed{a<{r\over3C_T}.}
+   \]
+4. **Post-108 numbering is not reliable provenance.** Two distinct theorems landed as “§109”; no §110 source exists on `main`; §111 cites that absent source; two distinct theorems landed as “§112”; and there are no §114 or §115 files on `main`. Use filenames and stated dependencies, not bare section numbers.
+5. **`research/target_c_section112_optimized_joint_train_gap.md` is valid and self-contained.** It rederives the exact train ceiling and corrected joint-shore argument and supports `0.976051176417287175...` at proof-only scope.
+6. **`research/target_c_section113_extended_stability_gap.md` passes its hostile audit.** It is dependency-clean with respect to §§105--112 and supports `0.976073147411914233...` through `sigma<=1.4e-3`.
+7. **§116 zero-host transport is valid.** Bounded defect-face cycles can be assigned the common host `0`; splitting the outer walk at an attachment-cell diameter pair gives the exact two-arc theorem
+   \[
+   \boxed{d(L+P_{exc}-2d)\ge(4-2\sqrt3)A_4.}
+   \]
+   The exact face-count form is
+   \[
+   \boxed{d(4a-6-2s-2c+4f_{exc}-2d)\ge(4-2\sqrt3)A_4.}
+   \]
+8. **§117 passes a full hostile audit.** Whole-area signed return, the three-host constant, area transport, diffuse-bad-train control, directional tangent capacity, and the order of limits are valid. It supports `0.9761078160770649...` through `sigma<=0.0029`.
+9. **§118's correlated-slack decomposition is valid.** The exact identity `sigma=x+y+z+w` correctly separates gap, base-spacing, face/route, and chord slacks. Its corrected sharp companion is also valid. The shared face currency gives
+   \[
+   B(x,y,z,w)\le Q_{tooth}(y)+y+{3\over2}x+10z+{35\over3}w.
+   \]
+   The resulting safe proof-only window is `sigma<=0.0088`, with carrier coefficient
+   \[
+   \boxed{0.9762439137425688\ldots .}
+   \]
+10. **§119 is valid but quantitatively superseded.** Its one-variable analytic relaxation gives `sigma<=0.0073`, weaker than the corrected §118 companion's `0.0088` window.
+11. **C-II remains open.** None of the post-104 results forces an exact unit equilateral triangle, constructs a source-preserving strict sub-`D` competitor, or closes the separate macroscopic inactive-container branch.
+
+## Train direction convention
+
+There is no hidden quarter-turn in the phase/corridor arguments. A train's projective phase is the direction of its parallel physical rhombus edges. Its centerline is transverse, but each terminal boundary edge has the train phase direction.
+
+Orient a physical rhombus-boundary edge with its incident retained rhombus on the left. A complete train then has opposite terminal orientations `u` and `-u`. This is the convention used by signed return.
+
+## §104 and §§107--108
+
+The §104 proof is valid with its stated order of limits: fix the micro/macro cutoff, take `D->infinity`, then exhaust the cutoff. Convex Hausdorff/perimeter continuity transfers tangent-window estimates, and boundary data are counted by edge occurrence, including bridges.
+
+For a compact wrapping support with complement gaps `g_j`, the disk outside its convex hull is the union, modulo boundary measure zero, of the minor circular segments over the complement components. Hence
+
+\[
+\operatorname{area}(\operatorname{conv}S)={\pi\over4}-{1\over8}\sum_j(g_j-\sin g_j).
+\]
+
+The identity remains valid for countably many components. §§107--108 correctly use it to obtain the safe finite rhombus count `R_D>=0.472D^2` and to transport widened gap stability into the phase/corridor contradiction.
+
+## §109 correction
+
+For one fixed pair of distinct phase labels let `a_j,b_j` be shore sizes in bin `j` and `e_j<=a_jb_j` its simple crossing count. If every bin has one shore below `aD`, partition bins by which shore is small:
+
+\[
+X=\{j:a_j<aD\},\qquad Y=\{j:a_j\ge aD,\ b_j<aD\}.
+\]
+
+Then
+
+\[
+\sum_{j\in X}e_j\le aD\sum_{j\in X}b_j,\qquad
+\sum_{j\in Y}e_j\le aD\sum_{j\in Y}a_j.
+\]
+
+Because the phase labels are distinct, the trains counted on the two right-hand sides are disjoint members of the same local train set. Therefore
+
+\[
+\sum_{j\in X}b_j+\sum_{j\in Y}a_j\le T_D\le C_TD
+\]
+
+and
+
+\[
+\boxed{\sum_j e_j\le aC_TD^2.}
+\]
+
+The older proof used the valid but nonsharp ceiling `2aC_TD^2`. Thus its theorem `a<r/(6C_T)` survives, but its claimed method limit does not. The corrected limit is `r/(3C_T)`.
+
+## Exact train ceiling
+
+Canonical §§82 and 89 give
+
+\[
+L_D+Q_D=4a_D-6-2s_D-2c_D,\qquad
+P_{R,D}\le L_D+5Q_D,\qquad
+2T_D=P_{R,D}.
+\]
+
+Hence
+
+\[
+T_D\le2a_D-3-s_D-c_D+2Q_D.
+\]
+
+Retaining the favorable §101 face currency gives
+
+\[
+C\le2\alpha-\limsup_D{2s_D+c_D+Q_D\over D},\qquad 2\alpha-C\le\sigma,
+\]
+
+so
+
+\[
+{Q_D\over D}\le\sigma+o(1),\qquad
+\boxed{{T_D\over D}\le U(\theta)+2\sigma+o(1).}
+\]
+
+This argument is valid. Its first landed copy was another file labeled “§109,” which is a numbering defect rather than a proof defect.
+
+## §116 zero-host closed-face transport
+
+For a directed unit-edge walk `W` with displacement `z`, put `q=z/|z|` when `z!=0` and `q=0` when `z=0`. In either case
+
+\[
+\ell(W)-|z|=\sum_{e\in W}(1-q\cdot v_e).
+\]
+
+Every bounded nonquadrilateral face boundary is a closed contact cycle. Oriented with the defect face on the right, each occurrence adjacent to a strict rhombus has exactly the physical train-end orientation, while the cycle has host `0`. The occurrence-counted outer walk absorbs all remaining physical train ends.
+
+Cut the outer walk at an attachment-cell diameter pair. The two open arcs have hosts `q,-q`; every bounded defect-face cycle has host `0`. Thus all complete trains are double-good and
+
+\[
+w_{\{q,-q,0\}}(u)=2|q\cdot u|.
+\]
+
+For the two train directions of a strict rhombus the return loss is greater than `4-2sqrt(3)`. Area transport along a complete train is bounded by the attachment-cell diameter `d`, yielding
+
+\[
+\boxed{d(L+P_{exc}-2d)\ge(4-2\sqrt3)A_4.}
+\]
+
+The face ledger gives `P_exc=4f_exc+Q` and `L+Q=4a-6-2s-2c`, so `Q` cancels and gives the exact face-count form recorded above. This removes bounded defect-face ends from the uncontrolled bad-endpoint population; the unresolved quantity is the outer-walk detour.
+
+## §117 whole-area signed return
+
+For actual directed routes with hosts `q_j`, injectively assign good physical train endpoints to matching route occurrences. For double-good trains,
+
+\[
+E\ge\sum_\tau(2-w_Q(u_\tau)).
+\]
+
+With at most three unit hosts, two train directions crossing at projective angle greater than `pi/3` have combined return loss at least `2-sqrt(3)`. Summing over good-good rhombi gives
+
+\[
+dE\ge(2-\sqrt3)A_{gg}.
+\]
+
+The diffuse-bad-train estimate
+
+\[
+A_{gg,D}\ge A_{4,D}-2T_DM_{bad}(\epsilon)-{\Delta_D\over\epsilon}
+\]
+
+is valid with the required order `epsilon fixed -> D->infinity -> epsilon->0`. The hostile audit's proof-only `sigma<=0.0029` window is sound.
+
+## §118 correlated slack and sharp companion
+
+Canonical §101 gives the exact nonnegative decomposition
+
+\[
+\boxed{\sigma=x+y+z+w}
+\]
+
+with `x=U-|S|`, `y=|S|-2alpha`, `z=2alpha-C`, and `w=C-M`.
+
+On a common subsequence, write `Q_D/D->q`, `c_D/D->c`, `s_D/D->s_0`. Retained face currency gives
+
+\[
+2s_0+c+q\le z,\qquad q+c\le z.
+\]
+
+The exact §104 micro-route proof refines exceptional-micro capacity to `3z+6c`. Combining bounded nonquadrilateral boundary `5q`, nonprincipal routes `z+C_tail`, and the micro-route term gives at most `10z+C_tail`. Together with small-span and tooth terms,
+
+\[
+\boxed{B(x,y,z,w)\le Q_{tooth}(y)+y+{3\over2}x+10z+{35\over3}w.}
+\]
+
+The corrected companion's one-variable maximization is valid. At `sigma=0.0088`, independent recalculation gives
+
+\[
+A_*=0.4703752868004241\ldots,\quad
+C_T=1.848752398466895\ldots,\quad
+B_*=0.1162704799276074\ldots,
+\]
+
+and signed return forces normalized route excess
+
+\[
+0.0111063071953309\ldots>0.0088,
+\]
+
+with margin `0.0023063071953309...`. Therefore the strongest safe quantitative bound audited here is
+
+\[
+\boxed{\operatorname{diam}(P_*)\ge(0.9762439137425688\ldots-o(1))D.}
+\]
+
+This remains proof-only and noncanonical.
+
+## §119 analytic envelope
+
+§119's calculus is correct. Its older relaxation gives safe window `sigma<=0.0073` and coefficient `0.9762093528016385...`. It is quantitatively superseded by the corrected sharp §118 companion's `0.0088` window and should be read as a transparent analytic relaxation, not the numerical frontier.
+
+## Actual remaining obligations
+
+The full-core branch has two source-level structural formulations stronger than another decimal optimization.
+
+### A. Outer-walk detour route
+
+Use the exact §116 inequality
+
+\[
+d(L+P_{exc}-2d)\ge(4-2\sqrt3)A_4
+\]
+
+and canonical Oler/interface/global-minimality currencies to prove an incompatible upper bound on the same outer-walk detour, or show that a carrier with the required linear detour admits a source-preserving strict diameter decrease.
+
+### B. Signed-return route
+
+For one actual harmonic cell, prove a source-specific inequality
+
+\[
+\sum_{\tau\in\mathcal T_{gg}}(2-w_Q(u_\tau))>\sum_j(\ell_j-|z_j|)
+\]
+
+with complete physical trains, injective endpoint-to-route occurrence assignments, and every exceptional endpoint charged. §§117--118 establish this contradiction only in a bounded near-endpoint slack regime; general survivors may still have linear route excess and linear exceptional capacity.
+
+Separately, the macroscopic inactive-container branch remains open. Its protected isolate/blocker structure has not forced an exact unit triangle, altered the old diameter-carrying core, or produced a same-cardinality strict sub-`D` source.
+
+Those are the genuine C-II closing problems. Audit.44 remains the canonical state lock.

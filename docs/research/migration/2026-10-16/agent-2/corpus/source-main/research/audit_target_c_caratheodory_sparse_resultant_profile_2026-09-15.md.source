@@ -1,0 +1,280 @@
+# Hostile audit — Carathéodory sparse cut-resultant profile
+
+**Date:** 2026-09-15<br>
+**Reviewed:**
+- `research/target_c_caratheodory_sparse_resultant_profile_2026-09-15.md`
+- `research/verify_target_c_caratheodory_sparse_resultant_profile.py`
+- the audited laminar interval-support theorem
+- the audited Section 157 cut-resultant identity
+- the audited high-phase adjacent-cut path and phase-defect budget
+- the adjacent switching-layer/caterpillar theorem
+
+**Disposition:** **PASS at the stated cut-resultant-certificate scope.**<br>
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The candidate introduces a different sparsification from the existing `N<1800`
+adjacent-cusp theorem.  It does not sparsify the active constraint set.  It sparsifies
+the nonnegative diameter representation of the selected-cut KKT resultant vector.
+That distinction is explicit and mathematically necessary.
+
+The main claim is valid: on an `m`-cut laminar O--O path, all exact cut resultants can
+be represented by a normalized nonnegative measure on at most `2m+1` actual diameter
+rows.  Interval support then bounds the sparse measure's total switch count by
+`4m+2`.  Combining this with the high-phase path's bounded total phase offset yields a
+linear set of low-cardinality boundaries, one of which is simultaneously phase-close
+and low sparse switching weight.  The four-row safe constant `97500` and the stated
+four-to-eight-row Pareto profile are correctly rounded outward.
+
+---
+
+## 1. The concatenated Carathéodory step is legitimate
+
+For each actual diameter row `h`, define
+
+\[
+X_h=(\varepsilon_{h1}r_h,\ldots,\varepsilon_{hm}r_h)\in\mathbb R^{2m}.
+\]
+
+The laminar orientation/cut-resultant theorem gives, for one globally fixed orientation
+of each diameter row,
+
+\[
+F_j=A_j u_j=\sum_h\beta_h\varepsilon_{hj}r_h.
+\]
+
+Concatenating the `m` vector equations gives
+
+\[
+\mathcal F=(F_1,\ldots,F_m)=\sum_h\beta_hX_h.
+\]
+
+The original relative-interior diameter multipliers are normalized by
+
+\[
+\sum_h\beta_h=1.
+\]
+
+Therefore `mathcal F` is literally in the convex hull of the finite actual-diameter set
+`{X_h}`.  Ordinary Carathéodory in `R^(2m)` gives a convex representation using at
+most `2m+1` points.  Reading its `j`-th two-dimensional block recovers the exact same
+`F_j` for every selected cut.
+
+There is no need to assume affine independence, genericity, or a coefficient lower
+bound.
+
+**Verdict:** PASS.
+
+---
+
+## 2. The sparse object is not being promoted to a full KKT stress
+
+This is the highest-risk scope issue.
+
+The Carathéodory projection preserves:
+
+1. all `2m` selected-cut resultant coordinates;
+2. nonnegativity of the sparse diameter coefficients;
+3. normalization `sum tilde_beta=1`;
+4. support on actual diameter rows.
+
+It does **not** automatically preserve the full vertex-by-vertex equilibrium equations
+of the original KKT stress, nor arbitrary other KKT linear statistics.  The candidate
+states this explicitly and never uses the sparse measure as a replacement global KKT
+stress.
+
+Likewise, active diameter rows outside the sparse support remain genuine active
+constraints of the source.  The theorem only says they are unnecessary for representing
+the selected-cut resultant vector.
+
+This prevents the most tempting but invalid downstream inference: one may not delete
+all unsparsified active rows and claim a four-row local max-function obstruction.
+
+**Verdict:** PASS with the stated scope warning retained.
+
+---
+
+## 3. `4m+2` is the correct total sparse switch budget
+
+Each actual diameter incidence row on the laminar path has the form
+
+\[
+0,\ldots,0,s,\ldots,s,0,\ldots,0,
+\qquad s\in\{-1,1\}.
+\]
+
+Hence it changes incidence at at most two internal path boundaries.  A Carathéodory
+support of size at most `2m+1` therefore gives
+
+\[
+\sum_i\widetilde N_i
+\le2(2m+1)=4m+2.
+\]
+
+For the weighted switch mass
+
+\[
+\widetilde B_i
+=\sum_h\widetilde\beta_h
+ |\varepsilon_{h,i+1}-\varepsilon_{hi}|,
+\]
+
+a nonzero change is `0<->s`, not `-1<->+1`, because the sign is constant across one
+interval.  Thus every supported row contributes exactly its coefficient at each of at
+most two switches.  Since `sum tilde_beta=1`,
+
+\[
+\sum_i\widetilde B_i\le2.
+\]
+
+There is no missing factor two.
+
+**Verdict:** PASS.
+
+---
+
+## 4. The low-cardinality boundary count is exact
+
+For fixed `k>=4`, let
+
+\[
+G_k=\{i:\widetilde N_i\le k\}.
+\]
+
+Every boundary outside `G_k` spends at least `k+1` switch events.  Hence
+
+\[
+(m-1-|G_k|)(k+1)\le4m+2,
+\]
+
+so
+
+\[
+|G_k|
+\ge{(k-3)m-(k+3)\over k+1}.
+\]
+
+For `k=4`, this is
+
+\[
+|G_4|\ge{m-7\over5}.
+\]
+
+Since the audited high-phase path has `m>pD-o(D)` with `p>0`, this is a linear number
+of candidate boundaries for every fixed `k>=4`.
+
+The companion certificate checks the finite algebra directly for a range of integer
+`m`; the identity itself is symbolic and needs no numerical extrapolation.
+
+**Verdict:** PASS.
+
+---
+
+## 5. The phase/sparse-weight averaging has the correct scale
+
+The audited path gives
+
+\[
+\sum_jq_j\le Q_{ph}+o(1),
+\qquad Q_{ph}<33.595772,
+\]
+
+and therefore for any subset of internal boundaries
+
+\[
+\sum_i(q_i+q_{i+1})\le2Q_{ph}+o(1).
+\]
+
+Restricting to `G_k` and adding the sparse switch-weight budget gives
+
+\[
+\sum_{i\in G_k}
+D(\widetilde B_i+q_i+q_{i+1})
+\le2D(Q_{ph}+1)+o(D).
+\]
+
+Using
+
+\[
+|G_k|\ge\left({k-3\over k+1}p-o(1)\right)D
+\]
+
+produces
+
+\[
+D(\widetilde B_i+q_i+q_{i+1})
+\le
+{2(Q_{ph}+1)(k+1)\over(k-3)p}+o(1)
+\]
+
+for at least one `i in G_k`.
+
+The exact rational verifier gives the unrounded constants
+
+```text
+k=4: 97065.1665895...
+k=5: 58239.0999537...
+k=6: 45297.0777418...
+k=7: 38826.0666358...
+k=8: 34943.4599722...
+```
+
+so the safe values `97500, 58500, 45500, 39000, 35000` are all outward.
+
+An independent Pyroam regression also generated 275 random finite interval-resultant
+systems and solved the corresponding nonnegative equality systems.  Every instance
+admitted an exact normalized representation with support at most `2m+1`, and every
+resulting support obeyed the `4m+2` switch bound.  This regression is non-load-bearing;
+the proof is the exact convexity argument above.
+
+**Verdict:** PASS.
+
+---
+
+## 6. The sparse resultant-jump identity is exact
+
+At the selected boundary, subtract the two sparse cut equations:
+
+\[
+F_{i+1}-F_i
+=\sum_h\widetilde\beta_h
+(\varepsilon_{h,i+1}-\varepsilon_{hi})r_h.
+\]
+
+Every nonswitching row cancels identically.  The remaining set has cardinality at most
+`k`, and because each switch has absolute incidence change one, its total coefficient
+mass is exactly `tilde B_i`.  With `|r_h|=D`,
+
+\[
+\|F_{i+1}-F_i\|\le D\widetilde B_i.
+\]
+
+Thus the four-row corollary really is an exact representation of the **resultant jump**
+by at most four actual diameter vectors; it is not an approximation obtained by
+throwing away small original KKT coefficients.
+
+The adjacent switching theorem further identifies those rows as edges of the layer cut
+`delta_H(S_{i+1}\setminus S_i)`.  Since the full switching graph is a caterpillar
+forest, the sparse switching support inherits that topology.
+
+**Verdict:** PASS.
+
+---
+
+## 7. What remains open
+
+The new theorem does not itself produce a feasible deformation direction.  The positive
+full-support original KKT stress and the full-rank diameter derivative matrix still
+rule out a nonzero first-order feasible train-shear direction.
+
+The actual active switching set can still contain up to `1800+o(1)` rows at the
+Pareto-refined interface.  The new four-row object is instead an exact compressed
+certificate for the two neighboring cut-resultant equations.
+
+The new concrete downstream target is therefore finite but nontrivial: classify
+four-or-fewer diameter edges in one bipartite caterpillar layer cut whose weighted
+vectors equal the jump between two positive train resultants with projective direction
+gap `O(1/D)`, while remaining compatible with the cyclic order of a straight-line
+diameter thrackle and the unsparsified active constraints.
+
+**Final verdict:** PASS as a new structural reduction.  No C-II or Level-I closure is
+claimed.

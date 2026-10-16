@@ -1,0 +1,199 @@
+# Target C — Section 124: Type-II near-disk geometry localizes loaded unit contacts
+
+**Date:** 2026-09-12
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+**Status:** proof-only research candidate on theorem-state `2026-09-12.audit.46`.
+**Dependencies:** canonical Sections 63 and 80.
+
+The canonical Type-II branch gives a loaded force hull `F_D` which, after translation
+and scaling by `D`, converges to the diameter-one disk. This section extracts an exact
+combinatorial consequence of that convergence:
+
+\[
+\boxed{
+ b,b'\in B,\ |b-b'|=1
+ \Longrightarrow
+ b,b'\text{ are consecutive vertices of }F_D
+}
+\tag{124.1}
+\]
+
+for all sufficiently large Type-II survivors. In the exact Section-63 notation,
+
+\[
+\boxed{c_B=0.}
+\tag{124.2}
+\]
+
+Thus the loaded-loaded unit-contact graph is eventually a subgraph of the cyclic loaded
+hull graph. The theorem does not use any post-123 carrier coefficient.
+
+## 124.1 Finite near-disk chord lemma
+
+Let `K` be a convex polygon and suppose
+
+\[
+d_H(K,B(o,R))\le\delta<R.
+\tag{124.3}
+\]
+
+Translate `o` to the origin and put
+
+\[
+r=R-\delta,
+\qquad R_+=R+\delta.
+\]
+
+For convex compact sets Hausdorff distance equals uniform support-function distance, so
+
+\[
+B(0,r)\subset K\subset B(0,R_+).
+\tag{124.4}
+\]
+
+Let
+
+\[
+\beta=\arccos(r/R_+).
+\tag{124.5}
+\]
+
+If `x in partial K` and `u` is any outward unit supporting normal at `x`, then
+
+\[
+u\cdot x=h_K(u)\ge r,
+\qquad |x|\le R_+,
+\]
+
+hence
+
+\[
+\angle(u,x)\le\beta.
+\tag{124.6}
+\]
+
+Now let `p,q` be vertices with `|p-q|=1`. Since `|p|,|q|>=r`, their smaller radial
+angle `gamma` satisfies
+
+\[
+1=|p-q|\ge2r\sin(\gamma/2),
+\]
+
+so
+
+\[
+\gamma\le2\arcsin(1/(2r)).
+\tag{124.7}
+\]
+
+Because `0` lies in the interior of `K`, radial projection preserves cyclic order on
+`partial K`. Choose the boundary arc from `p` to `q` whose polar angle runs through the
+shorter radial interval. Every point of every side on this arc has radial angle in that
+interval. By (124.6), all outward side normals, and hence all oriented side directions,
+lie in one angular interval of width at most
+
+\[
+\tau
+:=2\arccos(r/R_+)+2\arcsin(1/(2r)).
+\tag{124.8}
+\]
+
+### Lemma 124.1
+
+Assume every side of `K` has length at least one and `tau<2pi/3`. Then every unit
+chord between vertices of `K` is a polygon side.
+
+### Proof
+
+If unit-separated vertices `p,q` were nonconsecutive, the selected short-polar arc
+would have at least two side vectors `v_1,...,v_j`, `j>=2`. Let `w` be the midpoint
+unit direction of their common direction interval. Then
+
+\[
+\begin{aligned}
+1=|q-p|
+&\ge w\cdot(q-p)\\
+&=\sum_iw\cdot v_i\\
+&\ge\sum_i|v_i|\cos(\tau/2)\\
+&\ge2\cos(\tau/2)>1,
+\end{aligned}
+\]
+
+contradiction. `square`
+
+## 124.2 Type-II application
+
+Canonical Section 80 gives centers `o_D` such that
+
+\[
+\delta_D:=d_H(F_D,B(o_D,D/2))=o(D).
+\tag{124.9}
+\]
+
+Set
+
+\[
+r_D=D/2-\delta_D,
+\qquad R_{+,D}=D/2+\delta_D.
+\]
+
+Then
+
+\[
+r_D/R_{+,D}\to1,
+\qquad r_D\to\infty,
+\]
+
+and therefore the quantity in (124.8) tends to zero. Every side of `F_D` joins two
+source points and has length at least one. Lemma 124.1 applies for all sufficiently
+large `D`, proving (124.1).
+
+Canonical Section 63 defines
+
+\[
+c_B=e_{BB}-(q-m),
+\]
+
+where `m` is the number of nonunit loaded-hull sides. Since every loaded-loaded unit
+contact is now a unit hull side,
+
+\[
+\boxed{c_B=0,
+\qquad e_{BB}=q-m.}
+\tag{124.10}
+\]
+
+The exact Section-63 identities specialize to
+
+\[
+\boxed{e_{BB}=Q+2k+u_B,}
+\tag{124.11}
+\]
+
+\[
+\boxed{c_I+s_C=m+k-2,}
+\tag{124.12}
+\]
+
+where `k=d_H+s_Z` and `u_B=x_B-m`.
+
+A local corollary will be used next: every loaded-loaded unit contact with both
+endpoints in one attachment set `A_r` is a side of the global force hull, never an
+internal loaded chord.
+
+## 124.3 Hostile checks
+
+1. The proof needs only `delta_D/D->0`; `delta_D` itself may diverge.
+2. It uses the short **polar** arc, so there is no ambiguity from a long complementary
+   Gauss-map arc.
+3. The normal estimate (124.6) holds at every point of each side, not only at endpoint
+   normal cones.
+4. The strict threshold `2pi/3` is safe because the Type-II angular width tends to
+   zero.
+5. One unit hull side is allowed; the theorem forbids only a nonconsecutive unit chord.
+6. Nonunit hull sides and shallow two-edge outer detours remain possible.
+7. Contact-isolated source points are untouched. No full-source ZR/ZF statement is
+   used.
+
+**Conclusion:** Section 124 is a proof-only Type-II structural theorem. C-II remains
+open.

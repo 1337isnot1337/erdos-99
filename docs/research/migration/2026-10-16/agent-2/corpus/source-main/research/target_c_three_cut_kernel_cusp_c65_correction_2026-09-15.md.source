@@ -1,0 +1,99 @@
+# Target C-II — C65 removes the three-cut zero-KKT blocker branch
+
+**Date:** 2026-09-15  
+**Status:** proof-only scope correction / structural strengthening  
+**Reviewed:** `research/target_c_three_cut_kernel_cusp_2026-09-15.md`  
+**Dependency:** canonical `C65` full actual-diameter visibility (`docs/targets/target-c/21-full-diameter-visibility-frontier.md`)  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The new three-cut kernel theorem states a dichotomy after producing a nonzero first derivative on its finite exceptional diameter set:
+
+```text
+positive-stress exceptional rows occur with both derivative signs
+OR
+some nonzero exceptional derivative is carried by a universally zero-KKT
+active diameter row.
+```
+
+That dichotomy is valid for a general active-constraint system, but the second branch is unavailable at the theorem's stated **canonical Target C-II scope**.
+
+Canonical C65 already proves, for the contact-minimal and then diameter-pair-minimal representative used throughout the current C-II stack,
+
+\[
+\boxed{H=H_*}
+\]
+
+and therefore supplies a relative-interior normalized KKT stress satisfying
+
+\[
+\boxed{\beta_h>0\qquad\text{for every actual diameter edge }h\in H.}
+\tag{VC.1}
+\]
+
+Thus there are no universally zero-KKT actual diameter rows in the canonical source.
+
+---
+
+## 1. Apply C65 to the three-cut exceptional set
+
+Let `H_exc` be the finite exceptional set from the three-cut theorem and write
+
+\[
+\ell_h
+:={d\over dt}|r_h(t)|^2\Big|_{t=0}.
+\]
+
+The three-cut theorem proves
+
+\[
+\boxed{\exists h\in H_{exc}:\ell_h\ne0}
+\tag{VC.2}
+\]
+
+by mixed infinitesimal rigidity.
+
+It also proves the exact KKT balance
+
+\[
+\boxed{
+\sum_{h\in H_{exc}}\beta_h\ell_h=0.
+}
+\tag{VC.3}
+\]
+
+By C65, every coefficient in (VC.3) is strictly positive.  Pick `h_0` from (VC.2).
+
+- If `ell_{h_0}>0`, equation (VC.3) forces some `h_- in H_exc` with `ell_{h_-}<0`.
+- If `ell_{h_0}<0`, equation (VC.3) forces some `h_+ in H_exc` with `ell_{h_+}>0`.
+
+Hence the canonical three-cut obstruction satisfies the unconditional sign-cusp conclusion
+
+\[
+\boxed{
+\exists h_+,h_-\in H_{exc}:\qquad
+\ell_{h_+}>0>\ell_{h_-}.
+}
+\tag{VC.4}
+\]
+
+Both rows are actual force-visible diameter edges.
+
+---
+
+## 2. Correct canonical interpretation
+
+At canonical C-II scope, Section 6 of the parent three-cut theorem should therefore be read as
+
+```text
+finite positive-stress cusp with both first-derivative signs
+```
+
+with no alternative zero-KKT branch.
+
+The parent theorem's first-order kernel, finite exceptional-set localization, exact weighted balance, and nonparallel finite integration are unchanged.  This correction only removes a branch that canonical C65 had already excluded globally.
+
+This matters strategically.  The next obstruction is not weak-constraint release.  It is an **ordered full-support diameter cusp** on the two adjacent switching interfaces.  Any closing move must defeat that positive-stress sign cusp, combine the two interface orders, or leave the old contact-preserving shear space.
+
+No source-level diameter descent is claimed.
+
+**Disposition:** PASS AFTER SCOPE SHARPENING.  The universally zero-KKT branch is empty for the canonical C-II representative; the three-cut exceptional set necessarily contains force-visible rows of both first-derivative signs. C-II and Level I remain open.

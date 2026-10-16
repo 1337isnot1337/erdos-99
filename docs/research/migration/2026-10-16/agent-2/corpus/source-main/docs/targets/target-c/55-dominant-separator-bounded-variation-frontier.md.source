@@ -1,0 +1,61 @@
+# Target C — C102 dominant-separator bounded-variation frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Proof: [target_c_dominant_separator_bounded_variation_2026-09-05.md](../../reports/target_c_dominant_separator_bounded_variation_2026-09-05.md).
+
+Audit: [target_c_c102_bounded_variation_audit_2026-09-05.md](../../audits/target_c_c102_bounded_variation_audit_2026-09-05.md).
+
+C98-C100 reduce the C71-B near-zero phase to one dominant diameter `za` with beta weight
+
+`b=1-o(1)`
+
+whose separator trains are pairwise noncrossing, nested, and uniformly close to the diameter direction `u`.
+
+C102 strengthens uniform closeness to a bounded-total-curvature statement. If the ordered separator directions are
+
+`a_1,...,a_k`,
+
+and `eta=1-b`, then with virtual endpoints `a_0=a_(k+1)=u`,
+
+`sum_(j=0)^k |a_(j+1)-a_j| <= 4 eta/(2b-1)`.
+
+Hence the total angular variation is at most
+
+`2 pi eta/(2b-1)`.
+
+The mechanism is exact. For each separator train `tau_j`, the KKT force crossing that train is
+
+`F_j=A_j a_j`,
+
+where `A_j` is its total contact stress. Removing the constant dominant contribution `bD u` leaves a residual sequence `G_j`. Every residual diameter contributes one fixed vector on one consecutive prefix interval, so
+
+`TV(G)<=2D eta`.
+
+Normalizing the force vectors yields the displayed direction-variation bound.
+
+By C99, a shortest contact path from `z` to `a` crosses exactly those nested separator trains, once each and in order. Therefore it has the same successive unit directions and the same total-turn bound.
+
+Combined with C100's separator-count estimate,
+
+`k-D=O(D eta^2)`,
+
+C71-B now contains a diameter-spanning unit-contact path with:
+
+- `O(D eta^2)` excess length over the Euclidean diameter;
+- uniform angular error `O(eta)`;
+- total turning `O(eta)`, independent of `D`.
+
+The exact C97 endpoint has `eta=0`, `k=D`, and zero total turning, and is impossible in the pure-rhombic branch.
+
+## Live gate
+
+The remaining stability problem is no longer uncontrolled angular oscillation. It is:
+
+> Can a diameter-spanning unit-contact geodesic with vanishing total curvature and `o(D)` excess edges persist in a triangle-free global minimizer while avoiding the terminal-twist/full-span-prefix contradiction of C97?
+
+A closure may come from either:
+
+1. a quantitative terminal-twist theorem for small total curvature;
+2. a lower bound on response/shell defect per nonzero unit of total curvature or excess path length; or
+3. a theorem showing that enough internal near-chain vertices are non-extreme, recovering the C97 degree-four strip on a long subinterval.

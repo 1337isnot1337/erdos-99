@@ -1,0 +1,45 @@
+# Target C — C90 secondary-train caterpillar frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_secondary_train_caterpillar_2026-09-01.md](../../reports/target_c_secondary_train_caterpillar_2026-09-01.md).
+
+In the pure C80 chain-face rhombic disk, the D chain trains are exactly the trains
+separating the chain endpoints `z,a`. Therefore every non-chain train has both boundary
+terminals on the same `z`-to-`a` boundary arc.
+
+A fixed train cuts the source diameter endpoints into complementary cyclic convex-hull
+intervals `A,B`. Let `H_tau` contain the complete source diameter pairs crossing this
+train cut. Then:
+
+- `H_tau subseteq A x B`, so it is bipartite;
+- every planar diameter-graph cycle is odd, so `H_tau` is a forest;
+- independent cross-cut diameter edges are order-monotone by the geometric-thrackle
+  crossing rule;
+- no diameter vertex can have three non-leaf neighbors;
+- deleting all leaves from any component leaves a path.
+
+Hence every `H_tau` is a disjoint union of caterpillar trees. This is the C25
+common-cut theorem transferred from a positive-contact bridge cut to an arbitrary
+rhombic train cut.
+
+C88 forces at least `D(D-1)` selected diameter/non-chain-train separation incidences.
+Using `T<=2pi D+o(D)`, some non-chain train `tau_*` therefore has
+
+`|E(H_(tau_*))| >= (1/(2pi-1)+o(1))D`
+
+with `1/(2pi-1)=0.189279...`.
+
+Thus one secondary train carries an Omega(D)-edge ordered diameter caterpillar forest
+and uses Omega(D) distinct diameter endpoints. Moreover either it is leaf-rich, with
+at least half that many diameter leaves, or spine-rich, with at least half that many
+non-leaf spine vertices.
+
+The live target is now an intersection theorem between:
+
+1. C87's paired D-edge staircase tree in chain-prefix order; and
+2. C90's macroscopic caterpillar order across one secondary train cut.
+
+A contradiction may come from incompatible order patterns, a forced even diameter
+cycle, a quantitatively excessive diameter star, or an additive two-train Cartesian
+block.

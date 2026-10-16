@@ -1,0 +1,220 @@
+# Hostile audit — diameter-thrackle / dual-Helly common extended cell
+
+**Date:** 2026-09-15  
+**Reviewed:** `research/target_c_diameter_thrackle_dual_helly_cell_2026-09-15.md`  
+**Disposition:** **PASS after the collar-extension repair, at proof-only structural scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The first draft had one real scope gap: it treated the audited train disk as if it were
+convex, so an actual straight diameter segment was assumed to remain inside that disk.
+That is not guaranteed.  The revised theorem fixes this by extending every proper train
+crosscut through a collar to a large convex ambient disk.  The audit below checks that
+this repair preserves both the dual tree and the literal straight-chord geometry.
+
+---
+
+## 1. Planar diameter segments really form a geometric thrackle
+
+For a diameter pair `ab`, the inequality
+
+\[
+|x-b|^2\le|a-b|^2
+\]
+
+implies
+
+\[
+(x-a)\cdot(b-a)\ge|x-a|^2/2.
+\]
+
+Thus `a` is exposed, and similarly every diameter endpoint is exposed.  Four distinct
+endpoints belonging to two diameter pairs are therefore in strict convex position.
+
+If the two diameter segments were disjoint, they would be opposite sides of that
+convex quadrilateral.  The two diagonals cross at an interior point `o`, and strict
+triangle inequality gives
+
+\[
+|ab|+|cd|<|ac|+|bd|.
+\]
+
+The left side is `2D`, so one diagonal would exceed the diameter.  Contradiction.
+
+Shared endpoints are already intersections.  Collinear-disjoint degeneracy cannot
+occur because four distinct exposed points cannot have one between two others, and in
+any case the total span would exceed `D`.
+
+**Verdict:** PASS.
+
+---
+
+## 2. The collar extension exists and keeps the crosscuts disjoint
+
+The audited topology starts with an embedded closed topological disk `B` and finitely
+many pairwise-disjoint proper crosscuts `gamma_i`.  Choose a large Euclidean round disk
+`K` with `B subset int(K)` and containing the full finite source.
+
+The region
+
+\[
+K\setminus\operatorname{int}B
+\]
+
+is an annulus.  By Jordan--Schoenflies / the collar theorem for a disk boundary it is
+homeomorphic to `S^1 x [0,1]`, with the two boundary circles corresponding to
+`partial B` and `partial K`.  Extending each crosscut endpoint along its distinct
+vertical fiber produces two disjoint extension arcs.  Distinct endpoints use distinct
+fibers, so extensions belonging to different train crosscuts cannot meet in the
+annulus.  Inside `B` the crosscuts were already disjoint.
+
+Thus every `gamma_i` becomes one proper crosscut `tilde gamma_i` of `K`, and the family
+remains pairwise disjoint.
+
+**Verdict:** PASS.
+
+---
+
+## 3. The complement-dual tree is unchanged by the collar
+
+A possible failure would be that two different old complement regions merge through
+the added annulus.  They cannot.
+
+There are `m` pairwise-disjoint proper crosscuts in `B`, hence exactly `m+1` old
+regions and a tree dual with `m` edges.  The extended family consists of `m`
+pairwise-disjoint proper crosscuts in the disk `K`, hence also has exactly `m+1`
+complement regions and a tree dual with `m` edges.
+
+Each old region is contained in an extended complement component.  Two old regions
+separated by `gamma_i` remain on opposite sides of its extension `tilde gamma_i`, so
+they cannot lie in the same extended component.  Therefore the map from old regions
+to extended components is injective.  Since both sets have `m+1` elements, it is a
+bijection preserving which crosscut separates which pair of regions.  The dual trees
+are canonically isomorphic.
+
+This counting/separation argument is stronger and cleaner than relying only on the
+informal phrase “collar sectors do not merge.”
+
+**Verdict:** PASS.
+
+---
+
+## 4. Literal diameter chords stay inside the enlarged disk
+
+`K` is chosen convex and contains every source point.  Hence the Euclidean segment
+between any two source points lies in `K`, in particular every actual diameter chord.
+No retraction, isotopy, or replacement curve is used.  Pairwise chord intersections
+from Section 1 therefore remain literal common Euclidean points in the same ambient
+disk used for the dual-cell traces.
+
+This is why the collar extension repairs the original nonconvex-disk gap without
+weakening the geometric-thrackle input.
+
+**Verdict:** PASS.
+
+---
+
+## 5. Cell-closure traces are connected subtrees even with repeated crossings
+
+For one connected curve `s`, let `R(s)` be the set of extended complement cells whose
+closures meet `s`.  Take two cells in `R(s)` and an edge of the unique dual path between
+them.  The associated proper crosscut separates the two cell unions.  A connected set
+meeting both closures must meet the separator.  At that separator point, both incident
+cell closures meet `s`.  Repeating along every path edge puts the whole dual path in
+`R(s)`.
+
+Nothing in this proof assumes that `s` crosses a train crosscut once.  If `s` is
+tangent to a crosscut, overlaps it, or crosses it repeatedly, closure-based membership
+only enlarges `R(s)` while preserving connectedness.
+
+**Verdict:** PASS.
+
+---
+
+## 6. Pairwise trace intersection is not lost at crosscut points
+
+Two diameter chords meet at a Euclidean point `p`.  If `p` lies in an open extended
+cell, that cell is plainly in both trace subtrees.  If `p` lies on one or more extended
+crosscuts or on the ambient boundary, choose any incident extended cell.  Its closure
+contains `p`, so it belongs to both trace subtrees.
+
+Thus the trace subtrees are genuinely pairwise intersecting even at all boundary and
+separator degeneracies.
+
+**Verdict:** PASS.
+
+---
+
+## 7. The tree Helly proof is correct
+
+Connected subgraphs of a tree are convex in the graph metric.  The candidate gives a
+self-contained proof: root the tree; for each subtree choose its nearest-root vertex;
+select the subtree whose such vertex has maximum depth.  Pairwise intersection with
+that subtree forces its nearest-root vertex to lie on the path between the other
+subtree's nearest-root vertex and a common point, hence inside the other subtree.
+
+Therefore all finite diameter trace subtrees share one dual vertex `R_*`.
+
+**Verdict:** PASS.
+
+---
+
+## 8. The conclusion is an extended-cell statement, not an original-strip statement
+
+This distinction is essential.
+
+The common dual vertex labels both an original train-disk region and its collar-enlarged
+cell.  The theorem proves that every straight diameter segment meets the closure of the
+**extended** cell.  The meeting point may lie in the collar outside the original train
+disk.  Therefore the theorem does not yet put all diameter chords through one bounded
+rhombic strip or one small Euclidean neighborhood.
+
+The proof note now states this explicitly.  Any downstream metric use must either:
+
+1. show that the relevant common-cell intersections occur inside the original train
+   disk; or
+2. control the geometry of the collar portion for the selected backbone.
+
+No such metric claim is silently imported here.
+
+**Verdict:** PASS with stated limitation.
+
+---
+
+## 9. Projection to a backbone is topologically safe
+
+Let `P` be a dual-tree path and `Q_*` the tree projection of `R_*` to `P`.  If one
+actual diameter chord has nonzero shore incidence on a selected cut, its endpoints lie
+on opposite sides of the corresponding extended proper crosscut.  The connected
+straight chord meets that crosscut, so its trace subtree meets `P`.  Since the trace
+subtree also contains `R_*`, connectedness forces it to contain `Q_*`.
+
+Thus every active diameter row has a straight geometric trace meeting the closure of
+the same extended-cell label `Q_*`.
+
+This still does **not** imply that its endpoint-region support interval contains
+`Q_*`.  Repeated geometric crossings can create trace branches outside the minimal
+endpoint path.  The candidate explicitly refuses that stronger inference.
+
+**Verdict:** PASS.
+
+---
+
+## Final disposition
+
+After repairing the nonconvex-disk issue, the theorem is valid at its stated exact
+finite scope:
+
+```text
+pairwise-disjoint proper O-O crosscuts
++ planar diameter-chord thrackle
++ convex collar extension preserving the same dual tree
++ subtree Helly
+=
+one common extended dual cell met by every actual diameter chord.
+```
+
+On the live `0.017104D-o(D)` backbone, all shore-active diameter rows additionally
+have trace subtrees through the projection of that common cell to the backbone.  This
+is new structural information but not yet a C-II contradiction.
+
+**Final verdict:** PASS. C-II and Level I remain open.

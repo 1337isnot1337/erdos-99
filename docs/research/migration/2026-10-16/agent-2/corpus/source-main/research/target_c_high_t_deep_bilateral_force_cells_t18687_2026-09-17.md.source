@@ -1,0 +1,471 @@
+# Target C-II — robust exact-force diamonds occur at positive density arbitrarily deep inside bounded-complexity exact-phase neighborhoods
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** unbounded canonical high-`t` survivor sequences through `t=(q-k)/D<=1.8687` on one selected one-sided O--O shore  
+**Dependencies:** linear one-sided joint-cost budget; fixed-angle force-carrying robust fork; non-antipodal TB2 direction localization; C67 direction separation; growing exact-phase force-block argument; exact-antipodal force-pair theorem; wide-dipole bilateral birth loading; wide-dipole central-diamond theorem  
+**Certificate:** `research/verify_target_c_high_t_deep_bilateral_force_cells_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current high-`t` frontier has two separate facts.
+
+1. If a positive-density fixed-margin TB1 family does not survive, exact-antipodal interfaces dominate after one lets the local-complexity threshold grow.
+2. A fixed positive density of exact-antipodal interfaces carries fixed-angle, exact force-generating central diameter diamonds, and all but `O(1)` of those wide pairs are bilaterally born on the two ordered host arcs.
+
+The missing synthesis is local depth. A wide force diamond could, a priori, sit next to a non-antipodal or high-complexity separator even if some unrelated exact run elsewhere is long.
+
+That escape can be removed. For every fixed radius `r`, a positive linear density of robust bilateral force diamonds lies at the center of an exact-phase neighborhood of radius `r`, with every interface in that neighborhood having complexity bounded by a constant depending only on `r`. The density lower bound is independent of `r`. A diagonal subsequence then gives a positive linear density of wide bilateral force diamonds whose exact-phase depth tends to infinity while their normalized switching stress tends to zero.
+
+Put
+
+\[
+c={113\over5{,}000{,}000},
+\qquad
+C=1{,}109{,}000,
+\qquad
+c_0={c\over4}={113\over20{,}000{,}000},
+\tag{DB.1}
+\]
+
+and retain the fixed robust angle
+
+\[
+\rho_0={c_0\over12}={c\over48}={113\over240{,}000{,}000}.
+\tag{DB.2}
+\]
+
+The selected consecutive one-sided shore `I_D` satisfies
+
+\[
+|I_D|>{c\over2}D-o(D),
+\tag{DB.3}
+\]
+
+and its joint costs
+
+\[
+J_i=N_i+L_i+DB_i+S_i+S_{i+1}
+\tag{DB.4}
+\]
+
+obey
+
+\[
+\sum_{i\in I_D}J_i<CcD+o(D).
+\tag{DB.5}
+\]
+
+Here `B_i` is the original switching KKT multiplier mass at interface `i`.
+
+---
+
+## Theorem DB — deep robust-force-cell dichotomy
+
+After passage to a subsequence, at least one of the following holds.
+
+### DB-A — positive-density fixed-margin TB1 obstruction
+
+There are constants `epsilon>0` and `rho>0`, independent of `D`, such that at least `epsilon D` one-sided interfaces have a TB1 switching diameter bar lying at projective distance at least `rho` from both local dual-cone rays. In particular every such bar has a fixed first-order opening margin `D sin rho`.
+
+### DB-B — robust bilateral force diamonds are deep inside exact phase
+
+DB-A does not occur. Then for every fixed integer `r>=0`, set
+
+\[
+m_r:=2r+1,
+\qquad
+T_r:=16m_r=16(2r+1).
+\tag{DB.6}
+\]
+
+For all sufficiently large `D`, there is a family `Q_D(r)` of interface centers satisfying
+
+\[
+\boxed{
+|Q_D(r)|>{c\over16}D-o(D)
+={113\over80{,}000{,}000}D-o(D).
+}
+\tag{DB.7}
+\]
+
+Every `i in Q_D(r)` has all of the following properties.
+
+1. **Exact-phase depth `r`.** Every interface
+   \[
+   j\in[i-r,i+r]
+   \tag{DB.8}
+   \]
+   is exact-antipodal and `T_r`-good:
+   \[
+   J_j<T_rC.
+   \tag{DB.9}
+   \]
+   Hence
+   \[
+   u_{i-r}=u_{i-r+1}=\cdots=u_{i+r+1}=:v_i.
+   \tag{DB.10}
+   \]
+
+2. **Uniformly bounded local complexity.** For every `j` in (DB.8),
+   \[
+   N_j,L_j<T_rC,
+   \qquad
+   B_j<{T_rC\over D},
+   \qquad
+   S_j+S_{j+1}<T_rC.
+   \tag{DB.11}
+   \]
+
+3. **Uniformly bounded exact reactions.** Every local exact-antipodal reaction is collinear with the same ordinary axis and
+   \[
+   \boxed{
+   0<|G_j|\le DB_j<T_rC.
+   }
+   \tag{DB.12}
+   \]
+   The associated cut-resultant magnitudes are strictly monotone across the whole radius-`r` neighborhood.
+
+4. **Robust center diamond.** The center interface `i` has an exact positive two-bar force compression
+   \[
+   G_i=D(\lambda_i^-d_i^-+\lambda_i^+d_i^+),
+   \qquad
+   \lambda_i^\pm>0,
+   \tag{DB.13}
+   \]
+   by two actual switching diameter bars whose projective gap is at least `rho_0`.
+
+5. **Bilateral birth.** The two center bars have one birth endpoint on each of the two layer host subarcs `C_i^+,C_i^-`.
+
+6. **Macroscopic central geometry.** The two center bars form a four-endpoint central diamond containing the common radius-`Theta(D)` disk supplied by the wide-dipole theorem; their diagonal intersection lies in the common `O(D^(3/4))` central ball; every endpoint of one bar is separated from every endpoint of the other by
+   \[
+   D\sin(\rho_0/2)-O(D^{3/4}).
+   \tag{DB.14}
+   \]
+
+7. **Vanishing original and compressed switching stress.** Every original switching multiplier at every local interface is at most `T_rC/D`. At the robust center the compressed coefficients also satisfy
+   \[
+   \boxed{
+   \lambda_i^\pm
+   \le {T_rC\over D\sin\rho_0}.
+   }
+   \tag{DB.15}
+   \]
+
+For each fixed `r`, (DB.11)--(DB.15) are finite absolute bounds apart from their explicit `1/D` factors.
+
+Moreover the radius can be made to diverge. There is a diagonal subsequence `D_k->infinity` and integers `r_k->infinity` with `r_k=o(D_k)` such that at least
+
+\[
+{c\over16}D_k-o(D_k)
+\tag{DB.16}
+\]
+
+robust bilateral centers at scale `D_k` have exact-phase depth `r_k`, while throughout each corresponding neighborhood
+
+\[
+\max_j B_j
+\le {16(2r_k+1)C\over D_k}=o(1),
+\tag{DB.17}
+\]
+
+and
+
+\[
+\max_j {|G_j|\over D_k}
+\le {16(2r_k+1)C\over D_k}=o(1).
+\tag{DB.18}
+\]
+
+Thus, unless the fixed-margin TB1 branch survives, the high-`t` survivor contains a positive linear density of **deep bulk exact-phase force cells**: a fixed-angle bilateral macroscopic diameter diamond sits arbitrarily far, in interface distance, from every non-antipodal or high-complexity separator, while all normalized switching stress in the growing neighborhood vanishes.
+
+---
+
+## 1. `T`-good non-antipodal interfaces are negligible unless DB-A holds
+
+Fix a constant threshold `T>=4` and call `i in I_D` **`T`-good** when
+
+\[
+J_i<TC.
+\tag{DB.19}
+\]
+
+Let `Z_D^{bad}(T)` be the threshold-bad interfaces. By (DB.5),
+
+\[
+TC|Z_D^{bad}(T)|
+\le \sum_iJ_i
+<CcD+o(D),
+\]
+
+so
+
+\[
+\boxed{
+|Z_D^{bad}(T)|<{c\over T}D+o(D).
+}
+\tag{DB.20}
+\]
+
+Now split the `T`-good non-antipodal interfaces into TB1 and genuine TB2 classes.
+
+For TB2, fixed `T` gives
+
+\[
+N_i,L_i<TC,
+\qquad
+S_i+S_{i+1}<TC.
+\tag{DB.21}
+\]
+
+The standard common-column estimate puts both selected TB2 diameter directions within `O_T(D^-1)` of the projective normal to the row direction. All row directions lie in one `o(1)` projective window. Hence all selected TB2 directions lie in one common `o(1)` interval. Switching supports at distinct interfaces are disjoint and C67 separates distinct actual diameter directions by at least `1/D`, so
+
+\[
+\boxed{
+|Z_D^{TB2}(T)|=o(D).
+}
+\tag{DB.22}
+\]
+
+For TB1, suppose a `T`-good TB1 population had density at least `eta>0` along a subsequence. Choose `rho=eta/16`. The projective `2rho`-ball around the common row phase contains at most `4rho D+O(1)=eta D/4+O(1)` distinct chosen diameter directions by C67. For large `D` the row phase window is narrower than `rho`, so at least a fixed positive fraction of the chosen TB1 bars lie at distance at least `rho` from both local cone rays. That is DB-A.
+
+Therefore, if DB-A does not occur,
+
+\[
+\boxed{
+|Z_D^{TB1}(T)|=o(D)
+}
+\tag{DB.23}
+\]
+
+for every fixed `T`.
+
+Define the full separator set
+
+\[
+Z_D(T):=
+Z_D^{bad}(T)
+\cup Z_D^{TB1}(T)
+\cup Z_D^{TB2}(T).
+\tag{DB.24}
+\]
+
+Every interface in `I_D\setminus Z_D(T)` is `T`-good and exact-antipodal, and
+
+\[
+\boxed{
+|Z_D(T)|<{c\over T}D+o(D).
+}
+\tag{DB.25}
+\]
+
+---
+
+## 2. A fixed linear family of robust exact-force centers survives in the no-DB-A branch
+
+Use the force-carrying robust fork at the fixed angle `rho_0=c_0/12`. It gives
+
+\[
+|E_D^{force}(\rho_0)|+|S_D(\rho_0)|
+>{c_0\over2}D-o(D).
+\tag{DB.26}
+\]
+
+The strong family `S_D(rho_0)` is a fixed-margin non-antipodal TB1 family. In the no-DB-A branch it is sublinear. Therefore
+
+\[
+\boxed{
+|E_D^{force}(\rho_0)|
+>{c_0\over2}D-o(D)
+={c\over8}D-o(D).
+}
+\tag{DB.27}
+\]
+
+Every interface in this family is exact-antipodal, carries a `rho_0`-wide exact force pair, and comes from the original fixed local threshold. Since `T_r>=16`, it is automatically `T_r`-good for every `r>=0` once `D` is large.
+
+The bilateral birth-loading theorem applies to the same selected fixed-angle force pair: the number of interfaces whose two birth endpoints use the same host side is `O_{rho_0}(1)`. Write that bounded exceptional set as `U_D`.
+
+---
+
+## 3. Separator neighborhoods cost only `cD/16`
+
+Fix `r>=0`, put `m_r=2r+1`, and set
+
+\[
+T_r=16m_r.
+\tag{DB.28}
+\]
+
+A center `i` fails the desired exact-phase depth only if the radius-`r` window `[i-r,i+r]` meets the separator set `Z_D(T_r)`.
+
+Each separator position contaminates at most `m_r` possible center positions. Hence
+
+\[
+\#\{i:[i-r,i+r]\cap Z_D(T_r)\ne\varnothing\}
+\le m_r|Z_D(T_r)|.
+\tag{DB.29}
+\]
+
+Using (DB.25) and (DB.28),
+
+\[
+\begin{aligned}
+m_r|Z_D(T_r)|
+&<m_r{c\over T_r}D+o(D)\\
+&={c\over16}D+o(D).
+\end{aligned}
+\tag{DB.30}
+\]
+
+The `o(D)` term remains `o(D)` because `r`, hence `m_r`, is fixed in this step.
+
+Start from the robust force family (DB.27), remove every center whose radius-`r` window meets a separator, and remove the bounded unilateral set `U_D`. The surviving family therefore has size
+
+\[
+\begin{aligned}
+|Q_D(r)|
+&>{c\over8}D-{c\over16}D-o(D)-O_{rho_0}(1)\\
+&>{c\over16}D-o(D).
+\end{aligned}
+\tag{DB.31}
+\]
+
+This is (DB.7).
+
+The key point is that the retained density `c/16` does not depend on `r`. Increasing the desired exact-phase depth only increases the allowed local threshold linearly through `T_r=16(2r+1)`.
+
+---
+
+## 4. Every clean radius-`r` window is a bounded-complexity exact-force block
+
+Take `i in Q_D(r)`. By construction every `j in[i-r,i+r]` lies outside `Z_D(T_r)`. Thus every such interface is `T_r`-good and exact-antipodal.
+
+Exact antipodality at consecutive interfaces gives
+
+\[
+u_j=u_{j+1}
+\]
+
+throughout the window, proving (DB.10).
+
+The `T_r`-good inequality immediately gives (DB.11). Exact KKT telescoping gives
+
+\[
+G_j=D\sum_{h\in X_j}\beta_hd_h,
+\qquad
+B_j=\sum_{h\in X_j}\beta_h,
+\tag{DB.32}
+\]
+
+so
+
+\[
+|G_j|\le DB_j<T_rC,
+\tag{DB.33}
+\]
+
+proving (DB.12). Every original switching multiplier satisfies
+
+\[
+0<\beta_h\le B_j<{T_rC\over D}.
+\tag{DB.34}
+\]
+
+All row directions in the window equal `v_i`. The common one-sided functional has `phi(G_j)>0`, so every scalar reaction along `v_i` has the same strict sign. Hence the local cut-resultant magnitudes are strictly monotone.
+
+At the center, the retained robust family supplies a force pair with exact representation (DB.13). Let its lifted deviations from the reaction axis be `p_i,q_i>0`, so `p_i+q_i<pi`. Because the projective gap is at least `rho_0`,
+
+\[
+\rho_0\le p_i+q_i\le\pi-\rho_0,
+\tag{DB.35}
+\]
+
+and therefore
+
+\[
+\sin(p_i+q_i)\ge\sin\rho_0.
+\tag{DB.36}
+\]
+
+The explicit exact-force coefficients are
+
+\[
+\lambda_i^-={|G_i|\over D}{\sin q_i\over\sin(p_i+q_i)},
+\qquad
+\lambda_i^+={|G_i|\over D}{\sin p_i\over\sin(p_i+q_i)}.
+\tag{DB.37}
+\]
+
+Equations (DB.33) and (DB.36) prove (DB.15).
+
+The removal of `U_D` makes the center pair bilateral. The central-diamond and endpoint-separation theorems then give (DB.14) and the common-center geometry.
+
+Thus the retained center is geometrically macroscopic while the entire fixed-radius switching neighborhood has original and compressed KKT coefficients of order `1/D`.
+
+---
+
+## 5. Diagonal extraction gives growing exact-phase depth at positive linear density
+
+For every fixed integer `r`, (DB.31) holds eventually with the same leading density `c/16`. Choose an increasing sequence `r_k->infinity`. Recursively choose a subsequence `D_k->infinity` so large that:
+
+1. the fixed-`r_k` estimate (DB.31) holds with an error smaller than `cD_k/k`;
+2. `r_k/D_k->0`, for example `D_k>k r_k^2`;
+3. the fixed-angle bilateral and central-diamond asymptotics are valid.
+
+At scale `D_k`, use the family `Q_{D_k}(r_k)`. Its size remains
+
+\[
+>{c\over16}D_k-o(D_k),
+\]
+
+while (DB.11)--(DB.12) give
+
+\[
+B_j<{16(2r_k+1)C\over D_k}=o(1),
+\]
+
+and
+
+\[
+{|G_j|\over D_k}
+<{16(2r_k+1)C\over D_k}=o(1).
+\]
+
+This proves (DB.16)--(DB.18).
+
+The same diagonal choice makes the center compressed coefficients vanish:
+
+\[
+\lambda_i^\pm
+\le {16(2r_k+1)C\over D_k\sin\rho_0}
+=o(1).
+\tag{DB.38}
+\]
+
+No lower bound on any KKT coefficient is asserted or needed.
+
+---
+
+## 6. Frontier effect
+
+The no-TB1 branch can no longer place its robust antipodal diamonds only near exceptional interfaces. For every prescribed finite depth, a fixed positive linear density of wide exact-force diamonds lies in the bulk of an exact phase plateau with bounded local support complexity. After diagonal extraction, the depth itself tends to infinity while normalized switching stress tends to zero.
+
+The surviving high-`t` alternative is therefore:
+
+```text
+positive-density fixed-margin TB1 bars
+OR
+positive-density robust bilateral central force diamonds
+with exact-phase depth -> infinity,
+local switching mass -> 0,
+normalized reaction -> 0,
+and all local reactions collinear and one-sided.
+```
+
+This is a sharper finite target than the previous single growing block. A closing argument may now fix any finite radius needed by a local train/diameter classification and assume that a positive linear density of robust centers have that entire exact-phase neighborhood available. Boundary effects from non-antipodal or high-cost separators cannot account for the robust wide diamonds.
+
+The theorem does **not** claim that the small KKT weights contradict relative-interior stress; positive weights may vanish with `D`. It also does not claim that neighboring exact-force pairs are themselves wide. Only the retained center pair has the fixed angle `rho_0`.
+
+No C-II or Level-I closure is claimed.
+
+**Disposition:** upgraded the no-fixed-margin-TB1 branch to positive linear density of robust bilateral force diamonds arbitrarily deep inside bounded-complexity exact-phase neighborhoods, with a diagonal growing-depth/vanishing-normalized-stress corollary. C-II and Level I remain open.

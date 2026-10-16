@@ -1,0 +1,196 @@
+# Target C — current C-II frontier
+
+<!-- BEGIN GENERATED: target-c-ledger -->
+**Generated ledger snapshot (`2026-09-14.audit.51`):** C-I **CLOSED**; C-II **OPEN**.
+
+Canonical IDs: `C-ZTA`, `C-ZRF`, `C-FS-GEOM`, `C-FSD`, `C-DB-DENSITY`, `C-FS-STABILITY`, `C-MATCHING-EXCLUSION`, `C-LINEAR-NONMATCH`, `C-ATTACH-CURRENCY`, `C-LOADED-HULL`, `C-EXTREME-TRANSFER`, `C-PRIMITIVE-SPLIT`, `C-FOREST-DOUBLE-GAP`, `C-RHOMBUS-POP`, `C-PUNCTURED-PHASE`, `C-COHERENT-GRAINS`, `C-FOREST-ENDPOINT-GEOM`, `C-EXTREME-ATTACH-GEOM`, `C-PRIMITIVE-SHELL-LF`, `C-PSEUDO-GRID`, `C-GRID-PHASE-COLLAPSE`, `C-COMP-DEATOMIZATION`, `C-HOLE-GRID-DIAMETER`, `C-INACTIVE-CHAMBER`, `C-INACTIVE-HULL-STABILITY`, `C-INACTIVE-NEAR-MATCHING`, `C-INACTIVE-DEEP-MATCHING`, `C-INACTIVE-DICHOTOMY`, `C-FULLCORE-NEAR-DISK`, `C-HARMONIC-CARRIER-QUAD`, `C-HARMONIC-CELL-TILING`, `C-HARMONIC-WRAPPING`, `C-TYPEII-INTERFACE-COLLAPSE`, `C-TRAIN-INTERFACE-CURRENCY`, `C-HARMONIC-TRAIN-BUDGET`, `C-DENSE-PHASE-CORE`, `C-EXPLICIT-ORDERED-GRID`, `C-WRAP-PERIMETER`, `C-WRAP-FULL-GAP`, `C-WRAP-THREE-GAP`, `C-WRAP-OUTER-WALK-GAP`, `C-WRAP-CAUCHY`, `C-WRAP-MIXED-CAUCHY`, `C-WRAP-ANGULAR-MEASURE`, `C-WRAP-COMPLEMENT-CHORD`, `C-PHASE-CORRIDOR-ENDPOINT-EXCLUSION`, `C-UNIQUE-WRAP-CAP-DEFICIT`, `C-WRAP-QUANT-PHASE-GAP`, `C-ROUTE-EXCESS-OPT`, `C-STRONG-PHASE-SHORES`, `C-WRAP-AREA-RIGIDITY`, `C-AREA-BOOSTED-PHASE-GAP`, `C-PHASE-SHORE-BASELINE`, `C-LOCAL-TRAIN-COUNT-GAP`, `C-JOINT-PHASE-SHORES`, `C-AGGREGATE-PROJECTION-GAP`, `C-EXTENDED-STABILITY-GAP`, `C-STABILITY-ENVELOPE`, `C-INTEGRATED-TOOTH-LEAKAGE`, `C-ZERO-HOST-SIGNED-RETURN`, `C-SIGNED-RETURN-TRANSPORT`, `C-CORRELATED-SLACK-RETURN`, `C-ANALYTIC-SLACK-ENVELOPE`, `C-ANISOTROPIC-TWO-ARC-RETURN`, `C-LOCAL-RETURN-OLER-BRIDGE`, `C-AGGREGATE-TWO-ARC-DETOUR`, `C-AUGMENTED-CELL-DEFECT-BUDGET`, `C-FULLCORE-DIAMETER-BUDGET-FLOOR`, `C-FULLCORE-MU-ONE-CELL`, `C-FULLCORE-LOADED-CHORD`, `C-FULLCORE-TRAIN-SURPLUS-FLOOR`, `C-FULLCORE-FLOOR-ENDPOINT-EXCLUSION`, `C-OBLIQUE-LATTICE-COMPETITOR`, `C-HARMONIC-GRID-LOCAL`, `C-WOODALL`, `C-COMMON-BLOCK`, `C-MU-09604`, `C-RSR-DD`, `C-PD`, `C-CYCLIC-STRUCTURAL`, `C-P1-PRX`, `C-S1-RSQ`.
+Regression IDs: `C-S1-Q13`.
+Rejected/overridden IDs: `C-PATH-EULER`, `C-FB4`, `C53-BAD-PENTAGON`, `RSR-EQUALITY-UNIQUE`, `C-FIVE-ARC-NEAR-QUAD`, `C-FIVE-HOST-OCCUPANCY`, `C-CYCLIC-CAP-DETOUR`, `C-CYCLIC-099554`, `C-ZRF-FULL-SOURCE`.
+<!-- END GENERATED: target-c-ledger -->
+
+**State date:** 2026-09-14
+**LEVEL I STATUS: STILL OPEN.**  
+**C-I: CLOSED.**  
+**C-II: OPEN.**
+
+Read `../../STATE.md` first. This file is the compact live Target C frontier. Historical handoffs and unpromoted research files do not override it.
+
+Promotion audits:
+
+- [`105-121-promotion-audit-2026-09-12.md`](105-121-promotion-audit-2026-09-12.md)
+- [`122-123-promotion-audit-2026-09-12.md`](122-123-promotion-audit-2026-09-12.md)
+
+## Normal form and ZR/ZF scope
+
+Use a contact-minimal, then diameter-pair-minimal triangle-free global minimizer and retain every source point, including contact-isolated points. Let `V` be the nonisolated positive-contact core and `v=|V|`.
+
+The canonical §57 theorem is
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\qquad
+\operatorname{rank}R_{C\cup H}[V]=2v-3,
+\]
+
+so `e+h>=2v-2` and `h>=delta>=ceil(D)` in the core ledger. This is not a full-source affine-kernel theorem. Contact-isolated coordinates add zero stress rows/columns and independent kernel directions. `C-ZRF-FULL-SOURCE` is rejected.
+
+## Canonical state through normalized Section 123 plus the full-core budget floor
+
+Audit.50 controls theorem authority.
+
+The pre-105 stack remains unchanged: §§79--80 give the macroscopic-container/full-core dichotomy; §§82--104 give harmonic-cell tiling, near-disk geometry, exact train/interface budgets, wrapping support/gap geometry, dense inverse-phase trains, and the first quantitative phase/corridor contradiction.
+
+The promoted tail is:
+
+1. **§§105--106:** stronger principal-route and phase-shore accounting.
+2. **§107:** wrapping-support area rigidity; in the near-endpoint window the wrapping carrier has normalized area `>0.473`.
+3. **§108:** that carrier mass enlarges the inverse-phase shores.
+4. **§109:** the theorem `a<r/(6C_T)` is valid as a baseline only. Its old sharpness claim is withdrawn.
+5. **§111:** joint capacity of the two disjoint phase-label shores gives
+   \[
+   a<{r\over3C_T}.
+   \]
+6. **§§112--115:** aggregate projection, extended stability, scalar-envelope optimization, and integrated tooth leakage.
+7. **§116:** zero-host occurrence-counted return:
+   \[
+   d(L+P_{exc}-2d)\ge(4-2\sqrt3)A_4.
+   \]
+8. **§117:** whole-core signed-return transport.
+9. **§118:** corrected correlated-slack signed return, giving the strongest promoted explicit full-core carrier coefficient
+   \[
+   \boxed{
+   \operatorname{diam}(P_*)
+   \ge(0.9762439137425688\ldots-o(1))D.
+   }
+   \]
+10. **§119:** valid analytic relaxation, but quantitatively weaker than corrected §118.
+11. **§120:** for two chosen **occurrences** on the occurrence-counted outer walk with chord `rq`,
+    \[
+    \boxed{
+    d(L+P_{exc}-2r)
+    \ge
+    \sum_R\operatorname{area}(R)
+    [4-2(|q\cdot u_R|+|q\cdot v_R|)].
+    }
+    \]
+12. **§121:** with `G_loc=area(P)-A_4`, `p=per(P)`, and `c_0=sqrt(3)/4`,
+    \[
+    \boxed{
+    G_{loc}\ge c_0[(L-p)+(2f+Q)]
+    \ge {3c_0\over5}(L+P_{exc}-p).
+    }
+    \]
+    This theorem is finite. The discarded inference `G_loc=o(D^2) => G_loc/d=o(1)` is false for `d=Theta(D)`.
+13. **§122:** summing only unloaded-only rhombi makes the cellwise zero-host inequalities area-injective and gives
+    \[
+    \boxed{
+    \liminf_{D\to\infty}{1\over D}
+    \sum_r(L_r+P_{{\rm exc},r}-2d_r)
+    \ge {\pi\over2}(2-\sqrt3).
+    }
+    \]
+14. **§123:** augmented-cell Euler/dissection accounting pays all local exceptional-face perimeter by one global loaded-hull scalar:
+    \[
+    \boxed{
+    \sum_rP_{{\rm exc},r}\le10(e_{BB}-k),
+    \qquad k=d_H+s_Z.
+    }
+    \]
+15. **Full-core diameter budget floor:** in the full-core near-disk rhombic-saturation
+    branch, the cell area saturation, cell square-root budget, retained conversion
+    \(d_r\le\delta_r+2\), and exact component currency imply
+    \[
+    \boxed{\displaystyle
+    \liminf_{D\to\infty}{e_{BB}+2s_C-3(d_H+s_Z)\over D}\ge1.}
+    \]
+    The proof is an order-of-limits large-cell/isodiametric argument. It excludes
+    the subunit-\(\mu_D\) full-core regime. The promoted loaded-chord/train coupling
+    strengthens this to \(\liminf\mu_D\ge1.6375621841815\ldots\) in the same
+    near-disk branch, but still gives no upper bound or source-level closure.
+
+The exact train-coupled endpoint is now separately excluded by canonical
+`C-FULLCORE-FLOOR-ENDPOINT-EXCLUSION`: no canonical full-core sequence can have
+\(\mu_D\to\mu_{\rm TC}\). The proof uses Mantel endpoint stability, an
+unequal-shore Fox--Pach--Suk pseudosegment extraction, the phase-cut threshold
+chain including right-angle crossings, an \(o(D)\) phase-tail trim, and the
+hole-stable Section-76 diameter inequality. Together with the canonical floor it
+gives an existential, non-explicit uniform gap above the floor, but does not
+eliminate \(\liminf\mu_D>\mu_{\rm TC}\).
+
+The concurrent proof artifacts originally called “Section 120 aggregate detour” and “Section 121 augmented defect” are provenance. Their normalized canonical section numbers are 122 and 123.
+
+## Exact remaining split
+
+### 1. Macroscopic-container branch
+
+One actual internal inactive chamber or exterior cap has `Omega(D^2)` population/area with only `O(D)` perimeter/slack. For an internal chamber, canonical hull stability and deep matching give a protected isolate hull and isolate-only blocker graph. Proof-only §95 explains why contact creation alone need not transfer positive KKT force.
+
+A closure must force an exact unit triangle, alter or replace the old diameter-carrying core, or construct a same-cardinality strict sub-`D` source.
+
+### 2. Full-core branch
+
+The preferred live bridge is no longer another carrier-decimal optimization.
+
+On one harmonic carrier, §§120--121 convert train-direction anisotropy into local detour and then into local non-rhombic area currency. Across the whole harmonic tiling, §§122--123 give
+
+\[
+\liminf {1\over D}
+\sum_r(L_r+P_{{\rm exc},r}-2d_r)
+\ge {\pi\over2}(2-\sqrt3)
+\]
+
+and
+
+\[
+\sum_rP_{{\rm exc},r}\le10(e_{BB}-k).
+\]
+
+The clean source-level obstruction is therefore the aggregate outer-walk detour
+
+\[
+\boxed{\sum_r(L_r-2d_r)}
+\]
+
+coupled to `e_BB-k` and the actual diameter graph.
+
+The new budget-floor theorem removes the full-core subbranch
+\(\liminf\mu_D<1\). The promoted loaded-chord/train coupling raises the necessary
+floor in the same branch to
+\[
+\liminf\mu_D\ge
+\frac{2\pi+2\sqrt{\pi/(2\sqrt3)}}5
+=1.6375621841815\ldots,
+\]
+but this high-surplus branch is not contradicted by the current detour/payment package.
+
+The promoted equality-case companion `C-FULLCORE-MU-ONE-CELL` sharpens the boundary
+case: if \(\mu_D\to1\), one actual attachment cell has diameter \(D-o(D)\), area
+\(\pi D^2/4-o(D^2)\), and disk-shaped normalized limits, while all other cell
+diameters sum to \(o(D)\). It supplies no lattice rigidity or source-preserving
+deformation, so the one-cell equality closure remains open.
+
+A closing theorem should obtain one of:
+
+- an upper bound on that same aggregate detour strong enough to contradict §122 after the §123 payment;
+- a global-minimality theorem turning the forced detour into a source-preserving strict decrease of the global diameter;
+- an exact unit equilateral triangle forced directly by the carrier/loaded-hull geometry.
+
+Further numerical improvement of `0.9762439137425688...` is secondary unless it creates one of these source-level implications.
+
+## Binding rejected routes
+
+Do not use without a new proof:
+
+- incident-diameter sequence `=>` Euler trail/path;
+- FB4 force-bulk localization;
+- incompatible-cut C53 pentagon objection;
+- RSR disk-equality uniqueness;
+- Eppstein near-equality `=>` near quadrangulation;
+- five-host occupancy from angular-measure saturation;
+- inward OP pocket `subset` exterior Reuleaux minor cap;
+- deletion of contact-isolated source points;
+- full-source extension of the §57 affine-kernel theorem;
+- `r/(6C_T)` as the sharp Section-90 bin-method limit;
+- the withdrawn §121 normalization `G_loc=o(D^2) => G_loc/d=o(1)`.
+
+The PR #191 `0.995540...` theorem remains rejected. The finite S1 `q=13` object remains a regression, not a global-minimizer theorem.

@@ -1,0 +1,250 @@
+# Hostile audit — global signed straight-event penetration injectivity
+
+**Date:** 2026-09-15  
+**Reviewed:** `research/target_c_global_straight_signed_penetration_injectivity_2026-09-15.md`  
+**Disposition:** **PASS at proof-only low-`t` Type-II scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This audit attacks the new content rather than the already-audited global straight-event count. The vulnerable steps are: the sign of the transverse contact at a possibly repeated outer-face occurrence, the deduction that double selection separates hull normals by more than `pi/3`, the conversion of normal separation into macroscopic side-midpoint separation, and the route-detour contradiction.
+
+---
+
+## 1. The signed side is fixed by facial orientation
+
+Canonical Section 63 chooses distinguished exterior occurrences of the loaded vertices on one cyclic pass of the actual unbounded-face boundary walk. They occur in force-hull cyclic order, and the subwalks `W_i` partition that same cyclic pass, including bridge excursions and repeated articulation occurrences with multiplicity.
+
+Orient the pass so the unbounded face lies locally on the left of every directed edge occurrence. Then its distinguished loaded occurrences run clockwise around the convex force hull. Consequently, for the chord direction
+
+\[
+u_i=(b_{i+1}-b_i)/|b_{i+1}-b_i|,
+\]
+
+the force-hull inward normal `n_i` is the right normal of `u_i`.
+
+At an internal occurrence `x` of `W_i`, let `v_-` be the directed incoming edge and `v_+` the directed outgoing edge. For a `beta`-straight occurrence, both lie within `beta` of `u_i`. The two rays from `x` along the route are `-v_-` and `v_+`. The particular unbounded-face sector represented by this occurrence is the sector on the left/core-exterior side of the directed walk, centered asymptotically on the left normal of `u_i`.
+
+A contact edge not equal to one of the two route edges cannot enter the open interior of that face sector. This remains true at an articulation vertex: a repeated physical vertex has several cyclic face sectors, but each occurrence records one specific sector, and the other incident edge rays lie outside its open sector.
+
+Triangle-freeness separates every extra contact ray from both route rays by strictly more than `pi/3`. Intersecting the complements of those two forbidden angular caps on the non-face side places every extra ray in the right-normal cone. Therefore
+
+\[
+(w-x)\cdot n_i>\sin(\pi/3-\beta).
+\]
+
+At `beta=pi/6` this is strictly greater than `1/2`.
+
+The argument is occurrence-level; it does not require the whole outer walk or the individual `W_i` to be simple.
+
+**Verdict:** PASS.
+
+---
+
+## 2. Double selection forces normal separation greater than `pi/3`
+
+Suppose one physical contact `xy` is selected at both endpoints. Put `e=y-x`. If the `x` occurrence is on `W_i` and the `y` occurrence on `W_j`, signed penetration gives
+
+\[
+e\cdot n_i>1/2,
+\qquad
+e\cdot n_j<-1/2.
+\]
+
+The first inequality places `n_i` in the open angular cap of radius `pi/3` around `e`. The second places `n_j` in the open cap of radius `pi/3` around `-e`. The circular distance between any point of those two open caps is strictly greater than `pi/3` at the closest boundary configuration. Hence
+
+\[
+\angle(n_i,n_j)>\pi/3.
+\]
+
+If `i=j`, the two scalar inequalities are directly contradictory.
+
+**Verdict:** PASS.
+
+---
+
+## 3. Near-disk geometry makes the corresponding hull sides macroscopically separated
+
+Canonical Type-II near-disk geometry gives, after translation,
+
+\[
+B(o_D,D/2-o(D))\subset F_D\subset B(o_D,D/2+o(D)).
+\]
+
+For a hull side, its support line is at distance `D/2-o(D)` from the center. Canonical Section 84.5 also gives the uniform side-length bound
+
+\[
+s_{max}(F)=o(D).
+\]
+
+Therefore the midpoint `M_i` of any loaded-hull side satisfies
+
+\[
+|M_i-o_D|=D/2+o(D),
+\]
+
+and its radial direction differs by `o(1)` from the outward support normal. Reversing both outward normals to the inward normals preserves angular separation.
+
+Thus `angle(n_i,n_j)>pi/3` implies
+
+\[
+\angle(M_i-o_D,M_j-o_D)>\pi/3-o(1).
+\]
+
+The chord formula at radii `D/2+o(D)` gives
+
+\[
+|M_i-M_j|\ge D/2-o(D).
+\]
+
+The strict `>pi/3` need not have a uniform margin; `pi/3-o(1)` already yields the stated `D/2-o(D)` lower bound.
+
+**Verdict:** PASS.
+
+---
+
+## 4. The route-distance estimate is occurrence-safe
+
+Let `ell_i` be the occurrence-counted length of `W_i`, `s_i` its loaded-hull chord length, and
+
+\[
+d_i=\ell_i-s_i\ge0.
+\]
+
+An internal occurrence of a physical vertex appears at some position `r` along the finite walk. One of the two walk segments from that occurrence to an endpoint has at most `ell_i/2` unit-edge occurrences. Therefore its Euclidean distance to that loaded endpoint is at most `ell_i/2`, regardless of repeated vertices or bridge excursions.
+
+The side midpoint is `s_i/2` from the endpoint, so
+
+\[
+|x-M_i|\le {\ell_i+s_i\over2}=s_i+d_i/2.
+\]
+
+The same holds at `y` on `W_j`. Hence, if `|x-y|=1`,
+
+\[
+|M_i-M_j|
+\le s_i+s_j+1+(d_i+d_j)/2.
+\]
+
+Since `s_i,s_j=o(D)` uniformly, the midpoint lower bound from the preceding section forces
+
+\[
+d_i+d_j\ge D-o(D).
+\]
+
+For `i!=j`, both nonnegative route detours are distinct summands of
+
+\[
+d_{out}=\sum_r d_r,
+\]
+
+so any doubly selected edge forces
+
+\[
+d_{out}\ge D-o(D).
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 5. The low-`t` branch excludes double selection uniformly
+
+The current low-`t` network squeeze gives
+
+\[
+d_{out}/D\le0.002883975+o(1).
+\]
+
+This is incompatible with `d_out>=D-o(D)`. Therefore, for all sufficiently large members of the low-`t` sequence, no physical edge is selected at both endpoints.
+
+The current local Hall argument already prevents one endpoint from selecting the same edge for two different straight occurrences. Combining the local and global statements makes the occurrence-to-selected-edge map injective.
+
+Thus
+
+\[
+E_\perp(\beta)\ge S_\beta,
+\]
+
+not merely `2E_perp>=S_beta`.
+
+**Verdict:** PASS.
+
+---
+
+## 6. Arithmetic and network optimization
+
+The global directional-energy theorem gives
+
+\[
+S_\beta\ge x_B-{2d_{out}\over1-\cos\beta},
+\]
+
+while
+
+\[
+{x_B\over D}=\pi+\delta-t-\kappa+o(1).
+\]
+
+For `beta=pi/6`,
+
+\[
+A:={2\over1-\sqrt3/2}-1=7+4\sqrt3.
+\]
+
+Hence injectivity gives
+
+\[
+\liminf E_\perp/D\ge\pi-t-\kappa-A\delta.
+\]
+
+Under
+
+\[
+2\delta+\kappa/2\le R(t),
+\]
+
+the penalty `kappa+A delta` is maximized at
+
+\[
+\delta=R(t)/2,
+\qquad \kappa=0,
+\]
+
+because `A>4`. Therefore
+
+\[
+\liminf E_\perp/D
+\ge
+\pi-t-\left({7\over2}+2\sqrt3\right)R(t).
+\]
+
+At `t=t_42`, `R=0.00576795`, the Decimal certificate gives
+
+\[
+\boxed{1.28053542569931472276048\ldots}.
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 7. Interaction with the new near-simplicity theorem
+
+Current main independently proves that the low-detour outer walk is almost simple: all but `o(D)`-scale bridge-paid repetitions among the straight occurrences occur at distinct unloaded physical vertices. This is compatible with the signed-injectivity theorem but not needed for it.
+
+The signed theorem is different. It permits two distinct straight occurrences at one articulation vertex and uses the existing local system of distinct representatives there. It only rules out the same **selected physical edge** being reused from two endpoints. Therefore the newer near-simplicity theorem neither supersedes nor contradicts the present argument.
+
+**Verdict:** CONSISTENT.
+
+---
+
+## 8. Non-conclusions
+
+- The selected contacts are distinct edges but need not be vertex-disjoint.
+- The selected contacts need not belong to distinct stopped trains.
+- The theorem is low-`t`: the contradiction to double selection uses the strong `d_out=o(D)` constant at the current endpoint.
+- No positive lower bound on individual contact KKT weights is obtained.
+- No source-preserving diameter decrease or exact unit equilateral triangle is constructed.
+
+The remaining obstruction is genuinely train/strip occupancy rather than occurrence or edge multiplicity.
+
+**Final verdict:** PASS at proof-only low-`t` Type-II scope. C-II remains open.

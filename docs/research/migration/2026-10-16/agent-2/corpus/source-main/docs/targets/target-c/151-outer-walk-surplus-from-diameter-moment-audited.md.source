@@ -1,0 +1,185 @@
+# Target C — audited §151 outer-walk surplus from the harmonic diameter moment
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working proof-only route module; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module extracts the one live general consequence from the older gap-moment branch that is not already contained in normalized §§140 and 148–150. The historical scalar endpoint `h/D=1.721247...` is already excluded by normalized §146, so the associated endpoint-only two-edge-tooth density theorem is not retained as an active research section.
+
+Let
+
+\[
+U_D:=u_B
+\]
+
+be the Type-II extra outer-walk surplus, so after the centralized loaded-contact localization
+
+\[
+b=q+m+u_B,
+\]
+
+where `b` is the occurrence-counted outer contact-walk length and `m` is the number of nonunit loaded force-hull sides. Let
+
+\[
+S_D:=\sum_r d_r
+\]
+
+be the total harmonic-cell diameter moment, and put
+
+\[
+c_*:={\pi\over4}(2-\sqrt3).
+\]
+
+Then every sufficiently large Type-II survivor satisfies
+
+\[
+\boxed{
+U_D
+\ge
+\pi D-{5\over2}(h-s_Z)
++{1\over2}S_D
++{c_*\over2}D
+-o(D).
+}
+\tag{151.1}
+\]
+
+Equivalently, for any subsequence on which
+
+\[
+S_D\ge(S-o(1))D,
+\]
+
+\[
+\boxed{
+{u_B\over D}
+\ge
+\pi-{5\over2}{h-s_Z\over D}
++{1\over2}(S+c_*)-o(1).
+}
+\tag{151.2}
+\]
+
+This is a genuine all-regime Type-II tradeoff. It does **not** assume saturation of the weaker historical `h/D=1.721247...` endpoint.
+
+---
+
+## 151.1 Proof
+
+Type-II near-disk convergence gives
+
+\[
+\operatorname{per}(F)=\pi D+o(D).
+\tag{151.3}
+\]
+
+The occurrence-counted outer contact walk dominates the force-hull perimeter, so
+
+\[
+b\ge\operatorname{per}(F).
+\]
+
+Using `b=q+m+u_B`,
+
+\[
+\boxed{
+u_B\ge\pi D-q-m-o(D).}
+\tag{151.4}
+\]
+
+Normalized §148 gives the audited weighted component/payment inequality
+
+\[
+3q-2m-5k
+\ge
+S_D+c_*D-o(D),
+\qquad k=d_H+s_Z.
+\tag{151.5}
+\]
+
+Solve (151.5) for `m`:
+
+\[
+m
+\le
+{3q-5k-S_D-c_*D\over2}+o(D).
+\tag{151.6}
+\]
+
+Insert (151.6) into (151.4):
+
+\[
+\begin{aligned}
+u_B
+&\ge
+\pi D-q
+-{3q-5k-S_D-c_*D\over2}
+-o(D)\\
+&=
+\pi D-{5\over2}(q-k)
++{1\over2}S_D
++{c_*\over2}D
+-o(D).
+\end{aligned}
+\]
+
+Since
+
+\[
+q-k=(h+d_H)-(d_H+s_Z)=h-s_Z,
+\]
+
+this is exactly (151.1).
+
+No sign reversal occurs: the upper bound for `m` is substituted into the negative term `-m` in (151.4), producing a lower bound for `u_B`.
+
+---
+
+## 151.2 Endpoint/common-cap specialization
+
+On the repaired §140 Section-118 endpoint/common-cap branch,
+
+\[
+S_D\ge(S_*-o(1))D,
+\qquad
+S_*=2.798596312209462\ldots .
+\]
+
+Therefore
+
+\[
+{u_B\over D}
+\ge
+\pi-{5\over2}{h-s_Z\over D}
++{1\over2}(S_*+c_*)-o(1).
+\tag{151.7}
+\]
+
+This specialization is valid only in that endpoint/common-cap branch. The general theorem (151.1) uses the actual diameter moment `S_D` and has no Section-118 endpoint hypothesis.
+
+The older draft substituted the scalar lower edge
+
+\[
+h/D=1.721247148\ldots,
+\qquad s_Z=o(D),
+\]
+
+and obtained `u_B/D>=0.342996...`. That endpoint is no longer live because normalized §146 proves the stronger general Type-II floor
+
+\[
+\liminf h/D\ge1.8195135379794445\ldots .
+\]
+
+Accordingly the historical endpoint-only tooth-density theorem built on `h/D->1.721247...` is mathematically consistent but vacuous in the current audited stack and is not assigned a new section number.
+
+---
+
+## 151.3 Scope
+
+- All source points are retained; no contact-isolated coordinate is inserted into the core affine-kernel theorem.
+- Occurrence multiplicity is retained in `b` and `u_B`.
+- The result uses only Type-II perimeter convergence and the already audited §148 weighted payment.
+- A positive lower bound on `u_B/D` requires a sufficiently strong lower bound on `S_D/D` together with an upper/endpoint control on `(h-s_Z)/D`; (151.1) itself is only a tradeoff.
+- No claim is made that linear outer-walk surplus alone closes C-II.
+
+**Disposition:** audited-working proof-only theorem. C-II and Level I remain open.

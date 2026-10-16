@@ -1,0 +1,49 @@
+<!-- theorem-state: {"artifact_id":"ART-7CB4B66649AA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Audit — Target B general coherent phase near-saturation exclusion
+
+**Date:** 2026-09-05  
+**Candidate:** `docs/reports/target_b_general_phase_near_saturation_exclusion_2026-09-05.md`  
+**Verdict:** PASS as a sequential asymptotic stability theorem under the stated dense-core hypotheses.  
+**LEVEL I status:** STILL OPEN.
+
+## 1. Positive-density second class
+
+If `E=Theta(M^2)` and `E<=M(a+b)` with `b>=a`, then `a+b=Theta(M)` and hence `b=Theta(M)`. Thus one complete grid extracted from an almost-complete largest/second-largest phase pair has two linear dimensions.
+
+PASS.
+
+## 2. Fixed-gap regime
+
+If `b/M<=1-kappa`, then also `a/M<=1-kappa`. This is exactly the hypothesis of the audited unique-max stability theorem. An `o(M^2)` cyclic-order deficit is therefore impossible.
+
+PASS.
+
+## 3. Asymptotic tie reduction
+
+If `b/M->1`, then `M-b=o(M)`. Removing `M-b` trains from the largest class deletes at most `(M-b)(a+b)=o(M^2)` phase edges.
+
+The local cyclic-order extremal value changes by the same order:
+
+`M(a+b)-b(a+b)=(M-b)(a+b)=o(M^2)`.
+
+Hence near saturation descends to the retained tied classes `b,b,a`. Since `b~M`, all `o(M^2)` errors are also `o(b^2)`. The audited two-max theorem applies.
+
+PASS.
+
+## 4. Exhaustion
+
+For any sequence of ratios `b/M in [0,1]`, either some subsequence stays below `1-kappa` for a fixed `kappa>0`, or a subsequence tends to one. The two previous cases exclude both.
+
+PASS.
+
+## 5. Sequential uniform-gap interpretation
+
+Suppose a fixed dense-core regime with `b/M>=tau>0` admitted arbitrarily large components whose normalized local deficit tends to zero. Choosing those components would produce a sequence forbidden by GPS1. Therefore the normalized deficit has positive liminf along every admissible asymptotic sequence.
+
+This is a qualitative stability gap. The report correctly does not claim an explicit universal numerical constant independent of the coherence/pruning regime.
+
+PASS.
+
+## Scope
+
+GPS1 still assumes that one is measuring a coherent component against its local Theorem-51 bound and that the component is quadratic. It does not show that the global crossing count forces the **sum** of those local bounds to be nearly attained. That summation/transfer is now the remaining Target B gate.

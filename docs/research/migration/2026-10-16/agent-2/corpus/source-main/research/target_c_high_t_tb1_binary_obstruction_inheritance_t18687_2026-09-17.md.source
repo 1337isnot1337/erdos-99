@@ -1,0 +1,509 @@
+# Target C-II — genuine two-swap TB1 blockers collapse to the `D^-2` boundary shells
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** parity-thinned one-sign strong-TB1 exact-swap family through `t=(q-k)/D<=1.8687`  
+**Dependencies:** active-diameter decoupling; common oriented TB1 swap-axis cone; uniform `q_i=O(D^-1)` exact-swap scale; superdiameter-thrackle lemma; repeated-witness collapse  
+**Certificate:** `research/verify_target_c_high_t_tb1_binary_obstruction_inheritance_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The active-diameter decoupling theorem reduces the parity-thinned one-sign strong-TB1 branch to a Boolean finite-swap system. Every retained layer `i` has an exact contact-swap vector
+
+\[
+v_i=-q_iw_i,
+\qquad
+q_i=O(D^{-1}),
+\]
+
+and all oriented axes satisfy
+
+\[
+|w_i-w_j|=O(D^{-1}).
+\]
+
+Any previously strict pair depends on at most the two swap coordinates containing its endpoints. The remaining question was whether genuinely binary interaction between two swaps could create a new large inactive obstruction system unrelated to the already-known singleton witnesses.
+
+It cannot, except inside the `O(D^-2)` boundary shells.
+
+The new local statement is:
+
+> **Max-swap inheritance lemma.** Consider a previously strict pair with endpoints in two retained moved layers `i,j`. Suppose `q_i>=q_j`. If the pair is safe both initially and under the singleton exact swap at `i`, but violates the unit or diameter bound when **both** swaps `i,j` are applied, then
+> \[
+> |xy|-1=O(D^{-2})
+> \]
+> in the lower-bound case, or
+> \[
+> D-|xy|=O(D^{-2})
+> \]
+> in the upper-bound case.
+
+Thus, outside the two ultra-thin shells, a violation under the joint state `11` is always inherited from the singleton move of the endpoint with the larger swap magnitude `q`.
+
+Consequently every genuinely new two-coordinate obstruction of the simultaneous exact-swap family is either
+
+\[
+1<|xy|\le1+O(D^{-2}),
+\]
+
+or
+
+\[
+D-O(D^{-2})\le|xy|<D.
+\]
+
+The second class is automatically above the sharp threshold `sqrt(D^2-1)` for all sufficiently large `D`, so every such upper interaction blocker belongs to the geometric superdiameter thrackle.
+
+This also gives a useful Boolean normal form. Away from the `D^-2` shells, any pair that blocks a singleton move and remains blocking after its partner layer is also swapped must be oriented from the **larger** swap magnitude to the smaller one. Hence all non-shell persistent binary blockers strictly decrease `q`; they cannot form a directed cycle. A `11`-only blocker, or a blocker inherited from the smaller-`q` endpoint while the larger-`q` singleton is safe, is necessarily ultra-thin.
+
+The strong-TB1 finite-swap frontier is therefore narrower than a generic arity-two constraint system: all genuinely binary synergy is confined to the same two rigid shells already isolated elsewhere in the project.
+
+---
+
+## 1. Two-coordinate displacement geometry
+
+Take two retained nonadjacent one-sign layers `i,j`. Let
+
+\[
+v_i=-q_iw_i,
+\qquad
+v_j=-q_jw_j,
+\tag{BI.1}
+\]
+
+where, uniformly over the retained family,
+
+\[
+0<q_i,q_j\le {Q\over D}
+\tag{BI.2}
+\]
+
+and
+
+\[
+|w_i-w_j|\le {C\over D}
+\tag{BI.3}
+\]
+
+for fixed constants `Q,C` and all sufficiently large sources. The existing exact-swap theorem supplies such fixed constants.
+
+Orient a previously strict pair `xy` so that its endpoint in `R_i` contributes `v_i` and its endpoint in `R_j` contributes `-v_j` to the relative vector. Write
+
+\[
+r=y-x,
+\qquad
+1<|r|<D.
+\tag{BI.4}
+\]
+
+The four Boolean states are
+
+\[
+r_{00}=r,
+\quad
+r_{10}=r-q_iw_i,
+\quad
+r_{01}=r+q_jw_j,
+\quad
+r_{11}=r-q_iw_i+q_jw_j.
+\tag{BI.5}
+\]
+
+Assume first
+
+\[
+q_i\ge q_j.
+\tag{BI.6}
+\]
+
+Put
+
+\[
+s={q_j\over q_i}\in(0,1],
+\qquad
+t=1-s.
+\tag{BI.7}
+\]
+
+Then
+
+\[
+-q_iw_i+q_jw_j
+=t(-q_iw_i)+e,
+\tag{BI.8}
+\]
+
+where
+
+\[
+e=q_j(w_j-w_i)
+\tag{BI.9}
+\]
+
+and therefore
+
+\[
+|e|
+\le {Cq_j\over D}
+={Csq_i\over D}.
+\tag{BI.10}
+\]
+
+Define the point on the segment from the `00` state to the larger-`q` singleton state
+
+\[
+z=r-tq_iw_i
+=s r+t(r-q_iw_i).
+\tag{BI.11}
+\]
+
+Then
+
+\[
+\boxed{r_{11}=z+e.}
+\tag{BI.12}
+\]
+
+So the joint displacement is an exact convex interpolation between `00` and the larger singleton `10`, plus only an `O(D^-2)` transverse error.
+
+The exact squared-norm interpolation identity gives
+
+\[
+\boxed{
+|z|^2
+=s|r|^2+t|r-q_iw_i|^2-stq_i^2.
+}
+\tag{BI.13}
+\]
+
+This identity is the entire mechanism behind the shell collapse.
+
+---
+
+## 2. Lower interaction blocker implies `1+O(D^-2)`
+
+Assume the original pair and the larger-`q` singleton state both satisfy the strict lower bound,
+
+\[
+|r|>1,
+\qquad
+|r-q_iw_i|>1,
+\tag{BI.14}
+\]
+
+but the joint state violates it:
+
+\[
+|r_{11}|=|z+e|\le1.
+\tag{BI.15}
+\]
+
+Equation (BI.15) gives
+
+\[
+|z|\le1+|e|,
+\]
+
+hence
+
+\[
+|z|^2-1\le2|e|+|e|^2.
+\tag{BI.16}
+\]
+
+Subtracting one from (BI.13), using the positivity of both endpoint lower slacks, and discarding the second positive weighted slack gives
+
+\[
+s(|r|^2-1)
+\le
+2|e|+|e|^2+stq_i^2.
+\tag{BI.17}
+\]
+
+Use (BI.10) and divide by `s>0`:
+
+\[
+|r|^2-1
+\le
+{2Cq_i\over D}
++{sC^2q_i^2\over D^2}
++tq_i^2.
+\tag{BI.18}
+\]
+
+With `q_i<=Q/D`,
+
+\[
+\boxed{
+|r|^2-1
+\le
+{2CQ+Q^2\over D^2}
++{Q^2C^2\over D^4}.
+}
+\tag{BI.19}
+\]
+
+Therefore
+
+\[
+\boxed{|r|-1=O(D^{-2}).}
+\tag{BI.20}
+\]
+
+No lower bound on either swap size is used. If `q_j/q_i` is tiny, the error term in (BI.10) shrinks by the same factor that is divided out in (BI.17).
+
+---
+
+## 3. Upper interaction blocker implies `D-O(D^-2)`
+
+Now assume the original pair and the larger-`q` singleton state both satisfy the strict diameter upper bound,
+
+\[
+|r|<D,
+\qquad
+|r-q_iw_i|<D,
+\tag{BI.21}
+\]
+
+but
+
+\[
+|r_{11}|=|z+e|\ge D.
+\tag{BI.22}
+\]
+
+Because `z` is a convex combination of two points in the open radius-`D` disk,
+
+\[
+|z|<D.
+\tag{BI.23}
+\]
+
+The joint violation yields
+
+\[
+D^2-|z|^2
+\le
+|z+e|^2-|z|^2
+\le
+2D|e|+|e|^2.
+\tag{BI.24}
+\]
+
+From (BI.13),
+
+\[
+D^2-|z|^2
+=s(D^2-|r|^2)
++t(D^2-|r-q_iw_i|^2)
++stq_i^2.
+\tag{BI.25}
+\]
+
+All terms on the right are positive. Hence
+
+\[
+s(D^2-|r|^2)
+\le2D|e|+|e|^2.
+\tag{BI.26}
+\]
+
+Using (BI.10) and dividing by `s`,
+
+\[
+D^2-|r|^2
+\le
+2Cq_i+{sC^2q_i^2\over D^2}
+\le
+{2CQ\over D}+{Q^2C^2\over D^4}.
+\tag{BI.27}
+\]
+
+The joint upper violation and `|r_{11}-r|=O(D^-1)` already imply `|r|=D-O(D^-1)`, so `D+|r|>=D` for all sufficiently large sources. Therefore
+
+\[
+\boxed{
+D-|r|
+={D^2-|r|^2\over D+|r|}
+=O(D^{-2}).
+}
+\tag{BI.28}
+\]
+
+This is one full power of `D` thinner than the original exact-swap inactive window.
+
+---
+
+## 4. Symmetry and the max-swap inheritance law
+
+If instead
+
+\[
+q_j\ge q_i,
+\]
+
+the same argument is applied with the `01` singleton state as the larger move. Thus:
+
+\[
+\boxed{
+\begin{array}{l}
+\text{if `11` violates a boundary while `00` and the singleton state of}\
+\text{the larger-`q` endpoint are safe, then the original pair lies}\
+\text{within }O(D^{-2})\text{ of that boundary.}
+\end{array}}
+\tag{BI.29}
+\]
+
+Equivalently, outside the two shells
+
+\[
+1<|r|\le1+O(D^{-2})
+\tag{BI.30}
+\]
+
+and
+
+\[
+D-O(D^{-2})\le|r|<D,
+\tag{BI.31}
+\]
+
+we have the implication
+
+\[
+\boxed{
+11\text{ bad}
+\Longrightarrow
+\text{the larger-}q\text{ singleton is already bad.}
+}
+\tag{BI.32}
+\]
+
+This is stronger than saying that every pair has support on at most two swap coordinates. It says that non-shell two-coordinate coupling has no new `11` obstruction mode.
+
+---
+
+## 5. Global subset consequence
+
+Take any nonempty subset `S` of the parity-thinned exact-swap coordinates. Old contacts and old actual diameters are safe by the active-diameter decoupling theorem.
+
+Suppose a previously strict pair obstructs the move on `S`.
+
+- If only one endpoint of the pair lies in a selected moved layer, its state under `S` is exactly one singleton state. The obstruction is already a singleton obstruction.
+- If both endpoints lie in selected moved layers, order them so the larger exact-swap magnitude is `q_i>=q_j`. If the same pair also blocks singleton `i`, the obstruction is inherited from that singleton. If singleton `i` is safe, (BI.29) forces the pair into one of the `D^-2` shells.
+
+Therefore
+
+\[
+\boxed{
+\text{every non-shell obstruction of every subset move is inherited from}\
+\text{a singleton exact-swap obstruction at its larger-}q\text{ endpoint.}
+}
+\tag{BI.33}
+\]
+
+So all **genuine binary synergy** in the inactive system lies in the ultra-thin shells.
+
+---
+
+## 6. Upper synergy is automatically a geometric thrackle
+
+If an upper interaction blocker satisfies
+
+\[
+D-|r|\le {K\over D^2}
+\tag{BI.34}
+\]
+
+for one fixed `K`, then for all sufficiently large `D`,
+
+\[
+D-{K\over D^2}
+>
+D-{1\over2D}
+>
+\sqrt{D^2-1}.
+\tag{BI.35}
+\]
+
+Hence every upper-shell genuine binary blocker satisfies
+
+\[
+\boxed{|r|>\sqrt{D^2-1}.}
+\tag{BI.36}
+\]
+
+By the superdiameter-thrackle lemma, the entire upper interaction family is a straight-line geometric thrackle: any two such chords share an endpoint or cross properly, and all their endpoints lie on the convex hull.
+
+Thus the only genuinely binary upper obstruction is not merely an inactive near-diameter pair; it already belongs to the same sharp crossing-order class isolated in the SUPERTHIN branch.
+
+---
+
+## 7. Boolean pattern normal form outside the shells
+
+Write the three nonzero local states of a pair as `10`, `01`, `11`.
+
+The max-swap inheritance law and the earlier repeated-witness collapse imply the following outside the `O(D^-2)` shells.
+
+1. A `11`-only blocker is impossible.
+2. A pair cannot block both singleton states `10` and `01`; such a repeated blocker is ultra-thin by the previous double-witness theorem.
+3. If `10` is bad, `01` is safe, and `11` is also bad, then necessarily
+   \[
+   \boxed{q_i>q_j.}
+   \tag{BI.37}
+   \]
+   Otherwise `q_j>=q_i`, so the larger-`q` singleton `01` would be safe while `11` is bad, forcing the shell by (BI.29).
+4. Symmetrically, `01` and `11` bad with `10` safe forces `q_j>q_i`.
+
+Hence every non-shell pair constraint has one of two nontrivial forms:
+
+```text
+DISARMABLE IMPLICATION:
+    one singleton is bad,
+    but selecting the partner makes 11 safe;
+
+Q-DESCENDING PERSISTENT BLOCKER:
+    one singleton is bad and 11 remains bad,
+    with q_source > q_partner.
+```
+
+The persistent-blocker digraph is therefore acyclic because `q` strictly decreases along every edge.
+
+All departures from this implication / descending-obstruction normal form are forced into
+
+```text
+1 + O(D^-2) lower shell
+or
+D - O(D^-2) upper shell.
+```
+
+The upper shell is a geometric thrackle by Section 6.
+
+---
+
+## 8. Frontier effect
+
+The audit before this note reduced the one-sign strong-TB1 branch to a linear family of nonadjacent exact finite swaps whose old active constraints completely decouple. The apparent remaining object was a generic Boolean arity-two inactive constraint system.
+
+It is not generic.
+
+After this note, the valid finite-swap obstruction system has the form
+
+```text
+linear parity-thinned exact-swap coordinates
++ every old active constraint safe for every subset
+
+inactive blockers:
+    non-shell part
+        -> inherited from singleton blockers
+        -> disarmable implications, or
+        -> persistent edges strictly decreasing q
+
+    genuine binary part
+        -> 1 + O(D^-2) ultra-near-unit pairs
+        or
+        -> D - O(D^-2) superdiameter thrackle chords.
+```
+
+This does not yet produce a nonzero safe subset. A directed implication system can still funnel into `q`-descending persistent blockers, and the lower ultra-near-unit shell is not yet ruled out. But the remaining closure target is now sharper: one must eliminate or exploit the `D^-2` shell families, or show that the implication / descending-`q` normal form cannot block all nonzero exact-swap subsets in the actual path-layer geometry.
+
+No claim of C-II closure is made.

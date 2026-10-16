@@ -1,0 +1,535 @@
+# Target C-II — every large Horn upper obstruction localizes inside a low-defect dense train scaffold
+
+**Date:** 2026-09-17  
+**Status:** proof-only continuation of the Horn poison-forest extraction; no canonical promotion claimed  
+**Scope:** the 15-spaced one-sign strong-TB1 Horn subsystem through `t=(q-k)/D<=1.8687`  
+**Dependencies:** Horn poison-forest theorem; exact O--O path interval support; global complete-train count; global angular-defect and terminal-variation budgets; high-`t` crossing-neighbor floor; exact train-step metric; superdiameter-thrackle lemma  
+**Certificate:** `research/verify_target_c_high_t_tb1_upper_blocker_dense_grid_localization_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The Horn poison-forest theorem says that the 15-spaced finite-swap system has one of three linear obstruction populations. One is a permanent lower family of fixed path bandwidth at most fourteen. The other two are upper near-diameter families:
+
+- a permanent upper family of density at least `gamma/8`; or
+- an implication forest of density at least `gamma/2`,
+
+where
+
+\[
+\gamma={791\over9{,}600{,}000{,}000}.
+\]
+
+Both upper families have a common extra property: every blocker can be assigned injectively to one retained strong-TB1 coordinate which is one endpoint layer of the blocker. For the implication forest use its distinct tail coordinates. For the permanent family, start from the one-chosen-witness-per-forbidden-coordinate construction and, when one upper pair was chosen for both of its retained endpoints, keep one of those two owners. Deduplication then leaves at least `gamma/8` density and no owner is used twice.
+
+This injective ownership plus exact path-interval support is enough to force a growing piece of every upper obstruction into the existing dense near-equilateral train geometry.
+
+Put
+
+\[
+\delta_0:={\gamma\over8}
+={791\over76{,}800{,}000{,}000},
+\qquad
+T_*:=3.0605={6121\over2000}.
+\tag{UL.1}
+\]
+
+Then every non-LOWER Horn branch contains an owned family `E_D` of distinct upper singleton blockers with
+
+\[
+|E_D|>(\delta_0-o(1))D.
+\tag{UL.2}
+
+Let
+
+\[
+L_D=\left\lfloor {D\over\log D}\right\rfloor.
+\tag{UL.3}
+\]
+
+The conclusion is the following dichotomy.
+
+> **Upper blocker localization theorem.** Along every such branch, for all sufficiently large `D`, either:
+>
+> **COMMON-CUT:** one selected O--O row `tau_j` is supported by more than
+> \[
+> \left(c_* -o(1)\right){D\over\log D}
+> \]
+> distinct upper blockers of one common geometric type, SIGNED or THIN; or
+>
+> **LOCAL-WINDOW:** one path window containing at most
+> \[
+> (2+o(1)){D\over\log D}
+> \]
+> consecutive path regions contains both endpoints of more than
+> \[
+> \left(c_* -o(1)\right){D\over\log D}
+> \]
+> distinct upper blockers of one common geometric type.
+>
+> In either case the supporting row/window has total train defect `o(D)` and therefore carries one common family of
+> \[
+> (0.6536-o(1))D
+> \]
+> transverse columns, all at angle `pi/3+o(1)`, together with the usual common `0.01D` circumcenter flanks of density
+> \[
+> (0.0647027254265\ldots-o(1))D.
+> \]
+>
+> Here
+> \[
+> \boxed{
+> c_*={\delta_0\over6T_*}
+> ={791\over1{,}410{,}278{,}400{,}000}
+> =5.60882163408\ldots\times10^{-10}.
+> }
+> \tag{UL.4}
+
+The constant is small because this statement is unconditional across both upper Horn branches and pays for the earlier 15-spacing, poison extraction, interval-length split, rich-location threshold, and SIGNED/THIN split. The point is not the coefficient: the blocker count diverges like `D/log D` while the whole selected scaffold has vanishing normalized train defect.
+
+---
+
+## 1. Owned upper blockers and exact interval support
+
+Use the selected O--O path
+
+\[
+R_0\xleftrightarrow{\tau_1}R_1
+\xleftrightarrow{\tau_2}\cdots
+\xleftrightarrow{\tau_m}R_m.
+\tag{UL.5}
+\]
+
+Every source vertex lies in one path region. If an upper blocker `e=xy` has endpoint regions
+
+\[
+R_a,R_b,
+\qquad a<b,
+\]
+
+then the phase-free path theorem gives its exact selected-cut support
+
+\[
+\boxed{
+I(e)=\{a+1,\ldots,b\},
+\qquad
+\ell(e):=|I(e)|=b-a.
+}
+\tag{UL.6}
+
+Every member of `E_D` has one assigned **owner** retained coordinate, equal to one of `a,b`, and distinct blockers have distinct owners.
+
+The selected rows themselves are complete stopped trains. The audited global train count gives
+
+\[
+\boxed{
+m\le T_*D+o(D),\qquad T_*=3.0605.}
+\tag{UL.7}
+
+This very loose upper bound is enough for the interval averaging below.
+
+---
+
+## 2. Every upper singleton blocker is SIGNED or THIN
+
+At the owner coordinate `i`, orient the blocker vector `r` from its fixed endpoint toward the endpoint in the translated layer. Its local exact swap is
+
+\[
+r\longmapsto r-q_iw_i,
+\qquad
+0<q_i\le {K\over D}+o(D^{-1})
+\tag{UL.8}
+\]
+
+for one source-independent constant `K`, while the singleton state reaches the diameter boundary:
+
+\[
+|r|<D,
+\qquad
+|r-q_iw_i|\ge D.
+\tag{UL.9}
+
+Write
+
+\[
+\xi=D-|r|.
+\]
+
+The triangle inequality gives `0<xi<=q_i`. Split at the sharp superdiameter scale used in the common-super-swap theorem.
+
+### SIGNED
+
+If
+
+\[
+\xi\ge {1\over4D},
+\tag{UL.10}
+\]
+
+then expansion of (UL.9), together with `q_i<=K/D+o(D^-1)`, gives
+
+\[
+\boxed{
+r\cdot w_i
+\le-\left({1\over4K}-o(1)\right)D.}
+\tag{UL.11}
+
+The common strong-TB1 axis satisfies `|w_i-w_*|=O(D^-1)`, so
+
+\[
+\boxed{
+r\cdot w_*
+\le-\left({1\over4K}-o(1)\right)D.}
+\tag{UL.12}
+
+### THIN
+
+If instead
+
+\[
+0<\xi<{1\over4D},
+\tag{UL.13}
+\]
+
+then
+
+\[
+|r|>D-{1\over4D}>\sqrt{D^2-1}
+\tag{UL.14}
+\]
+
+for all sufficiently large `D`. Hence every THIN blocker belongs to the existing straight-line superdiameter geometric thrackle. In particular its endpoints are hull vertices, and any two vertex-disjoint THIN blockers cross properly.
+
+Thus every blocker in `E_D` has one of exactly two useful upper geometries.
+
+---
+
+## 3. Split by path-support length
+
+Put `L=L_D` from (UL.3) and divide `E_D` into
+
+\[
+E_D^{long}=\{e:\ell(e)\ge L\},
+\qquad
+E_D^{short}=\{e:\ell(e)<L\}.
+\tag{UL.15}
+\]
+
+One class has size at least
+
+\[
+>{\delta_0\over2}D-o(D).
+\tag{UL.16}
+
+The two cases use different averaging arguments.
+
+---
+
+## 4. Long supports force a blocker-rich low-defect common cut
+
+Assume
+
+\[
+|E_D^{long}|>{\delta_0\over2}D-o(D).
+\tag{UL.17}
+
+For each selected cut `tau_j`, let
+
+\[
+h_j=|\{e\in E_D^{long}:j\in I(e)\}|.
+\tag{UL.18}
+
+Summing cut incidences gives
+
+\[
+\sum_{j=1}^m h_j
+=\sum_{e\in E_D^{long}}\ell(e)
+>\left({\delta_0\over2}-o(1)\right)DL.
+\tag{UL.19}
+
+Set the rich-cut threshold
+
+\[
+\boxed{
+\vartheta={\delta_0\over3T_*}.}
+\tag{UL.20}
+
+Call a cut rich when
+
+\[
+h_j\ge\vartheta L.
+\tag{UL.21}
+
+The total incidence carried by poor cuts is at most
+
+\[
+m\vartheta L
+\le\left({\delta_0\over3}+o(1)\right)DL.
+\tag{UL.22}
+
+Hence rich cuts carry total incidence
+
+\[
+\boxed{
+\sum_{j\ rich}h_j
+>\left({\delta_0\over6}-o(1)\right)DL.}
+\tag{UL.23}
+
+Let
+
+\[
+F_j=\sum_{b\in\Gamma_j}\delta_{jb}
+\tag{UL.24}
+
+be the full angular-defect sum on row `tau_j`. The canonical global phase budget is
+
+\[
+\sum_jF_j=O(D).
+\tag{UL.25}
+
+Weighted averaging over the rich cuts in (UL.23) gives one rich `j` with
+
+\[
+{F_j\over h_j}=O(L^{-1}).
+\tag{UL.26}
+
+Because blockers have distinct owners,
+
+\[
+h_j\le |E_D|\le m+1=O(D),
+\]
+
+and therefore
+
+\[
+\boxed{F_j=O(D/L)=O(\log D)=o(D).}
+\tag{UL.27}
+
+The rich row supports at least
+
+\[
+h_j\ge\vartheta L
+\tag{UL.28}
+
+upper blockers. Split them into SIGNED and THIN. One type has size at least
+
+\[
+{\vartheta L\over2}
+=\left({\delta_0\over6T_*}-o(1)\right){D\over\log D}
+=(c_*-o(1)){D\over\log D}.
+\tag{UL.29}
+
+This is the COMMON-CUT alternative.
+
+### Dense train scaffold on the rich row
+
+Every selected high-`t` row has
+
+\[
+|\Gamma_j|>(0.6536-o(1))D.
+\tag{UL.30}
+
+Because `F_j=o(D)`, choose `epsilon_D->0` slowly enough that
+
+\[
+{F_j\over\epsilon_D}=o(D).
+\]
+
+Delete every column with angular defect greater than `epsilon_D`. The retained family has
+
+\[
+(0.6536-o(1))D
+\]
+
+columns and every crossing angle is
+
+\[
+{\pi\over3}+o(1).
+\]
+
+The exact train-step metric and source circumdisk bound then give the standard `mu=0.01` initial and terminal flank blocks, each of density
+
+\[
+0.6536-{1.02\over\sqrt3}
+=0.0647027254265\ldots .
+\tag{UL.31}
+
+Every retained blocker in (UL.29) has endpoints on opposite shores of this same selected row by exact support (UL.6).
+
+---
+
+## 5. Short supports force a blocker-rich low-defect window
+
+Now assume
+
+\[
+|E_D^{short}|>{\delta_0\over2}D-o(D).
+\tag{UL.32}
+
+Partition the path-region indices into consecutive blocks of `L` indices,
+
+\[
+B_r=\{rL,\ldots,(r+1)L-1\},
+\]
+
+truncated at the path ends. For a short blocker with endpoint indices `a<b`, assign it to the block containing `a`.
+
+Because
+
+\[
+b-a<L,
+\]
+
+both endpoints lie in the two-block window
+
+\[
+W_r:=B_r\cup B_{r+1}.
+\tag{UL.33}
+
+Let `e_r` be the number of short blockers assigned to `W_r`. There are at most
+
+\[
+{T_*D\over L}+o(D/L)
+\tag{UL.34}
+
+nonempty candidate windows.
+
+Call `W_r` rich if
+
+\[
+e_r\ge\vartheta L
+\tag{UL.35}
+
+with the same `vartheta` as (UL.20). The total number of blockers in poor windows is at most
+
+\[
+\left({T_*D\over L}+o(D/L)\right)\vartheta L
+\le\left({\delta_0\over3}+o(1)\right)D.
+\tag{UL.36}
+
+Thus rich windows contain altogether more than
+
+\[
+\boxed{
+\left({\delta_0\over6}-o(1)\right)D}
+\tag{UL.37}
+
+short blockers.
+
+### Full train-defect cost of a window
+
+For a window `W_r`, let `C_r` be
+
+- the sum of all row angular defects `F_j` on selected rows between the first and last region of `W_r`; plus
+- the sum of all adjacent terminal-variation costs `L_j` between those rows.
+
+The canonical budgets give
+
+\[
+\sum_jF_j=O(D),
+\qquad
+\sum_jL_j=O(D).
+\tag{UL.38}
+
+Each row/interface belongs to at most two two-block windows, so
+
+\[
+\boxed{\sum_r C_r=O(D).}
+\tag{UL.39}
+
+Weighted averaging over the rich windows in (UL.37) gives one rich `W_r` with
+
+\[
+{C_r\over e_r}=O(1).
+\tag{UL.40}
+
+Injective blocker ownership is now essential. Every blocker assigned to `W_r` has its owner at one of its endpoints, hence inside `W_r`, and distinct blockers have distinct owners. A two-block window contains at most
+
+\[
+2L+O(1)
+\]
+
+path-region indices. Therefore
+
+\[
+\boxed{e_r\le2L+O(1).}
+\tag{UL.41}
+
+Combining (UL.40)--(UL.41),
+
+\[
+\boxed{C_r=O(L)=O(D/\log D)=o(D).}
+\tag{UL.42}
+
+The rich window contains at least `vartheta L` blockers. Splitting SIGNED versus THIN leaves one type of size
+
+\[
+>(c_*-o(1)){D\over\log D}.
+\tag{UL.43}
+
+All of their endpoints lie in a path window of at most
+
+\[
+2L+O(1)=(2+o(1)){D\over\log D}
+\]
+
+regions. This is the LOCAL-WINDOW alternative.
+
+### One dense common train ladder across the whole window
+
+For each selected row `tau_j` in the window let `Gamma_j` be its crossing-train family. The adjacent terminal-topology theorem gives
+
+\[
+|\Gamma_j\triangle\Gamma_{j+1}|\le L_j.
+\tag{UL.44}
+
+The `L`-part of (UL.42) is `o(D)`. Starting from one row and intersecting successively therefore leaves
+
+\[
+\boxed{
+\left|\bigcap_{j\in W_r}\Gamma_j\right|
+>(0.6536-o(1))D.}
+\tag{UL.45}
+
+The `F`-part of (UL.42) is also `o(D)`. For each common column `b`, sum its angular defects over all rows of the window. Delete the columns whose summed defect exceeds a threshold `epsilon_D->0` chosen so slowly that the number deleted is `o(D)`. Then one common family of
+
+\[
+(0.6536-o(1))D
+\]
+
+columns remains, and **every** row-column crossing in the whole growing window has angle
+
+\[
+{\pi\over3}+o(1).
+\tag{UL.46}
+
+The columns are pairwise noncrossing and occur in one common order on every row. The exact train-step metric gives the same two `0.01D` circumcenter flank blocks (UL.31) on every row simultaneously.
+
+Thus the short upper obstruction is confined to a sublinear-width, vanishing-defect, dense near-equilateral train ladder.
+
+---
+
+## 6. Unconditional Horn frontier after localization
+
+Combine this theorem with the Horn poison-forest extraction. Along the one-sign strong-TB1 Horn branch, one of the following must occur:
+
+```text
+LOWER:
+    > (gamma/4-o(1)) D permanent near-unit blockers,
+    each with path bandwidth <= 14;
+
+or UPPER / COMMON-CUT:
+    > (c_*-o(1)) D/log D blockers of one type (SIGNED or THIN)
+    all support one selected row having (0.6536-o(1))D
+    pi/3+o(1) columns and common circumcenter flanks;
+
+or UPPER / LOCAL-WINDOW:
+    > (c_*-o(1)) D/log D blockers of one type (SIGNED or THIN)
+    have both endpoints inside <=(2+o(1))D/log D path regions,
+    and that entire window shares (0.6536-o(1))D
+    pi/3+o(1) columns and common circumcenter flanks.
+```
+
+For THIN, every blocker is additionally a superdiameter thrackle chord. For SIGNED, every blocker has a fixed macroscopic negative projection on the common TB1 transverse axis.
+
+This closes the synchronization gap for the upper Horn obstruction: a large implication/permanent-upper system can no longer remain spread arbitrarily through high-defect parts of the O--O path. It contains a growing ordered subfamily inside a train scaffold whose normalized defect tends to zero.
+
+C-II remains open. The remaining upper task is now geometric inside the two displayed scaffolds. The lower task is separate and fixed-bandwidth: eliminate a linear family of permanent near-unit blockers supported on at most fourteen path cuts.

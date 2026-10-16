@@ -1,0 +1,386 @@
+# Target C: Woodall vertex covers force contact-stress concentration
+
+**Date:** 2026-10-02\
+**Base main:** \`abdbe1f5cd53806ab63f581df61e561273a03141\`\
+**Status:** proof-only exact KKT consequence. C-II and Level I remain open.
+
+## 1. Setup
+
+Work with the canonical post-ZF C-II source and a relative-interior normalized
+full-support KKT stress. Let
+
+\[
+H=(B,E_H)
+\]
+
+be the full actual diameter graph and let
+
+\[
+\nu=\nu(H),\qquad \tau=\tau(H)
+\]
+
+be its matching and vertex-cover numbers.
+
+Write the normalized diameter multipliers as
+
+\[
+\beta_e>0,
+\qquad
+\sum_{e\in E_H}\beta_e=1.
+\tag{1}
+\]
+
+For a loaded terminal \(v\), define its incident diameter mass
+
+\[
+s_v:=\sum_{e\ni v}\beta_e
+\tag{2}
+\]
+
+and its diameter reaction vector
+
+\[
+g_v
+:=
+\sum_{vw\in E_H}
+\beta_{vw}(p_v-p_w).
+\tag{3}
+\]
+
+KKT equilibrium gives
+
+\[
+g_v
+=
+\sum_{vy\in C}
+\alpha_{vy}(p_v-p_y),
+\qquad
+\alpha_{vy}>0.
+\tag{4}
+\]
+
+Canonical C26 gives
+
+\[
+\deg_C(v)\le3
+\tag{5}
+\]
+
+for every loaded terminal.
+
+Current main proves the Woodall cover estimate
+
+\[
+\boxed{\tau\le\nu+1.}
+\tag{6}
+\]
+
+The new observation is to apply this cover to **KKT mass**, not only to diameter-edge
+incidence.
+
+## 2. A small diameter cover intercepts unit total KKT mass
+
+Let \(S\subseteq B\) be a minimum vertex cover of \(H\), so \(|S|=\tau\).
+
+Every diameter edge has at least one endpoint in \(S\). Therefore
+
+\[
+\sum_{v\in S}s_v
+=
+\sum_{e\in E_H}
+\beta_e\,|\{ \text{endpoints of }e\text{ lying in }S\}|
+\ge
+\sum_{e\in E_H}\beta_e
+=1.
+\tag{7}
+\]
+
+Hence some \(v\in S\) satisfies
+
+\[
+\boxed{
+s_v\ge{1\over\tau}\ge{1\over\nu+1}.
+}
+\tag{8}
+\]
+
+This step is exact and uses no lower bound on any individual diameter multiplier.
+
+## 3. Diameter reactions at one endpoint cannot cancel
+
+Fix a loaded terminal \(v\). All of its diameter partners lie on the radius-\(D\)
+circle centered at \(v\).
+
+If \(vw_1,vw_2\) are two diameter edges at \(v\), the smaller angle \(\theta\) between
+their rays obeys
+
+\[
+\theta\le{\pi\over3}.
+\tag{9}
+\]
+
+Indeed the opposite endpoints satisfy \(|w_1-w_2|\le D\), while
+
+\[
+|w_1-w_2|
+=
+2D\sin(\theta/2).
+\]
+
+Thus all diameter vectors
+
+\[
+p_v-p_w
+\]
+
+lie in one cone of aperture at most \(\pi/3\).
+
+Let \(n_v\) be the unit bisector of a smallest such cone. Every incident diameter
+vector then has projection at least
+
+\[
+D\cos{\pi\over6}
+=
+{\sqrt3\over2}D
+\]
+
+onto \(n_v\). Therefore
+
+\[
+g_v\cdot n_v
+\ge
+{\sqrt3\over2}D\,s_v,
+\]
+
+and hence
+
+\[
+\boxed{
+|g_v|
+\ge
+{\sqrt3\over2}D\,s_v.
+}
+\tag{10}
+\]
+
+This is a finite estimate; the stronger \(1-o(1)\) alignment from the current
+midpoint/star-aperture theorems is not needed.
+
+## 4. Contact multiplier floor forced by matching number
+
+Apply (10) to the vertex \(v\) from (8). Then
+
+\[
+|g_v|
+\ge
+{\sqrt3\over2}\,{D\over\nu+1}.
+\tag{11}
+\]
+
+Equation (4), unit contact lengths, and the triangle inequality give
+
+\[
+\sum_{vy\in C}\alpha_{vy}
+\ge
+|g_v|.
+\tag{12}
+\]
+
+Since \(\deg_C(v)\le3\), at least one actual unit contact \(e=vy\) satisfies
+
+\[
+\alpha_e
+\ge
+{|g_v|\over3}.
+\]
+
+Thus:
+
+### Theorem 4.1 -- weighted-cover stress concentration
+
+Every canonical post-ZF C-II source admits, in every relative-interior normalized
+full-support KKT stress, an actual unit contact with
+
+\[
+\boxed{
+\alpha_{\max}
+\ge
+{\sqrt3\over6}\,{D\over\nu(H)+1}.
+}
+\tag{13}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+\nu(H)+1
+\ge
+{\sqrt3\over6}\,{D\over\alpha_{\max}}.
+}
+\tag{14}
+\]
+
+No contact-stress upper bound is asserted.
+
+## 5. Consequences for the hard diameter-matching regimes
+
+If
+
+\[
+\nu(H)=o(D),
+\]
+
+then
+
+\[
+\boxed{\alpha_{\max}\to\infty.}
+\tag{15}
+\]
+
+If, more sharply,
+
+\[
+\nu(H)\le K\sqrt D
+\]
+
+for a fixed \(K\), then
+
+\[
+\boxed{
+\alpha_{\max}
+\ge
+\left({\sqrt3\over6K}-o(1)\right)\sqrt D.
+}
+\tag{16}
+\]
+
+Thus the square-root diameter branch cannot distribute normalized KKT stress
+microscopically over all unit contacts. It necessarily contains a loaded terminal
+incident with a superconstant, in fact square-root-scale, contact multiplier.
+
+This removes the mass split in the earlier leaf/core theorem. That theorem obtained
+an \(\Omega(\sqrt D)\) contact multiplier only when diameter mass avoided the pendant
+leaf edges and concentrated on the core. The weighted-cover argument proves the same
+scale **regardless of where the diameter multiplier mass lies**.
+
+## 6. Sharpening with the modern star-aperture theorem
+
+Current main also gives a source-wide aperture
+
+\[
+\varepsilon_D=o(1)
+\]
+
+for all diameter rays at one endpoint; the October cubic/midpoint estimates give an
+explicit \(O(D^{-1/3})\) choice.
+
+Repeating Section 3 with this aperture yields
+
+\[
+|g_v|
+\ge
+D s_v\cos(\varepsilon_D/2)
+=
+(1-o(1))Ds_v.
+\]
+
+Hence the asymptotically sharper form is
+
+\[
+\boxed{
+\alpha_{\max}
+\ge
+\left({1\over3}-o(1)\right){D\over\nu+1}.
+}
+\tag{17}
+\]
+
+At \(\nu\le K\sqrt D\),
+
+\[
+\boxed{
+\alpha_{\max}
+\ge
+\left({1\over3K}-o(1)\right)\sqrt D.
+}
+\tag{18}
+\]
+
+The finite constant (13) is independent of the October aperture theorem; (17) is a
+stronger asymptotic corollary.
+
+## 7. Contact-type fork
+
+The contact \(e=vy\) in Theorem 4.1 starts at the loaded terminal \(v\). Therefore
+exactly one of the following holds.
+
+1. \(y\) is loaded, so \(e\) is a loaded-loaded unit contact.
+2. \(y\) is unloaded, so \(e\) is a loaded-unloaded attachment contact.
+
+In the canonical full-core near-disk branch, every loaded-loaded unit contact is a
+true loaded hull side. Therefore the square-root hard branch forces either
+
+\[
+\boxed{\text{a hull-side multiplier of order }\sqrt D}
+\]
+
+or
+
+\[
+\boxed{\text{a loaded-unloaded attachment multiplier of order }\sqrt D.}
+\]
+
+This is a weighted analogue of the support collar fork, but it needs only one contact.
+
+## 8. Exact virial normalization
+
+For reference, summing the equilibrium equations after dotting with the vertex
+positions gives the standard stress identity
+
+\[
+\boxed{
+\sum_{e\in C}\alpha_e
+=
+D^2\sum_{h\in E_H}\beta_h
+=
+D^2.
+}
+\tag{19}
+\]
+
+Indeed every unit contact contributes \(\alpha_e|p_i-p_j|^2=\alpha_e\), and every
+diameter edge contributes \(\beta_hD^2\).
+
+Thus (16) is compatible with the global normalization: an \(\Omega(\sqrt D)\) contact
+multiplier is large relative to a typical boundary-scale multiplier but still far
+below the total \(D^2\) contact stress.
+
+A closing argument must use where this large multiplier can propagate, not merely its
+existence.
+
+## 9. Next geometric target
+
+At a loaded hull vertex in the near-disk full-core branch, the two hull-side unit
+directions are almost tangent while the diameter reaction is almost radial.
+
+Therefore a large hull-side multiplier cannot terminate locally unless either
+
+- a comparable multiplier propagates into the next hull-side contact, or
+- the third allowed loaded contact is an interior attachment carrying a comparable
+  balancing force.
+
+The theorem above supplies the initial \(\Omega(\sqrt D)\) seed. A useful next
+result is a quantitative propagation lemma turning that seed into either
+
+1. a long high-stress loaded-hull chain, or
+2. many / large loaded-unloaded attachment stresses charged to one harmonic cell.
+
+That propagation is not proved here.
+
+**Disposition:** proof-only exact KKT reduction. No computation, numerical search,
+verifier execution, or CI output is used.
+
+## Slot 2 recovery provenance — 2026-10-05
+
+Recovered from `research/weighted-cover-stress-concentration-2026-10-02` at exact source tip `ab10eeda2bc16a36daacd54be7cb2cbfdeb1fe1f`. No original PR is associated with the source branch. This report remains a proof-only, unreviewed Target C-II candidate; its stated KKT and train hypotheses are not promoted, and it does not close C-II or Level I. No verifier or computational certificate was present in the source lineage.

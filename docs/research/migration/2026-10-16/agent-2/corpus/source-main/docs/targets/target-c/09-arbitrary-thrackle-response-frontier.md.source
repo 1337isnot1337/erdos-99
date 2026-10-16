@@ -1,0 +1,85 @@
+# Target C — arbitrary diameter-thrackle response frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+> **Restored (2026-09-09):** The purported shared-endpoint regression mixed
+> projective cuts. The promoted [dependency audit](56-ci-restored-frontier.md)
+> restores C53 with consistent order/orientation and applies it to C63.
+
+Restored proof: [target_c_arbitrary_thrackle_response_contraction_2026-08-31.md](../../reports/target_c_arbitrary_thrackle_response_contraction_2026-08-31.md), with the September 9 audit controlling its normalization.
+
+## C53 — universal selected-support PSD in the two-dimensional branch
+
+For any normalized KKT stress whose positive diameter endpoint hull is two-dimensional, orient and order the positive diameter edges by projective chord direction. The planar diameter graph is a geometric thrackle: every two diameter edges share an endpoint or cross.
+
+With edge-incidence matrix `Q`, positive diameter weights `B_H`, circular-planar contact response `Lambda`, `R=Lambda^+`, and
+
+`K=Q^T R Q`,
+
+the C11 affine identity gives
+
+`K B_H U = U`,
+
+where the rows of `U=Q^T P` are the oriented diameter-edge vectors. After positive diagonal scaling these vectors are `a_e(1,t_e)` with strictly increasing projective slopes `t_e`.
+
+For every circular interval split, the signed edge-crossing vector `z=Q^T 1_A` obeys, for projective-direction-ordered edges `e<f<g`,
+
+`z_g(z_e-z_f)<=0`,
+
+`z_e(z_g-z_f)<=0`.
+
+The proof is a complete five-type classification of three pairwise-intersecting chords: triangle, three-star, crossing-ended path, one-shared-pair plus a crossing third edge, and disjoint crossing matching.
+
+Therefore the Kalmanson split cone gives
+
+`K_eg <= min(K_ef,K_fg)`.
+
+So `K` is a Robinson similarity on the diameter-edge order. Define
+
+`N=B_H-B_H K B_H`,
+
+`M=E N E`,
+
+`gamma_e=a_e beta_e`.
+
+Then
+
+`M 1=0`, `M t=0`,
+
+and
+
+`M_ef=-gamma_e gamma_f K_ef` for `e!=f`.
+
+C52.R applies and gives
+
+`M>=0`, `B_H^(-1)-K>=0`.
+
+Hence
+
+`Lambda-L_H>=0`
+
+on the centered boundary space, and the full selected stress matrix is
+
+`Omega_s=L_C(alpha)-L_H(beta)>=0`.
+
+There is no remaining selected-support topology capable of producing a negative response mode in the two-dimensional branch.
+
+## Exact C-I effect
+
+For a relative-interior weak-release critical velocity, C13.3 supplies a direction-dependent normalized KKT stress with
+
+`tr(V^T Omega_s V)<=0`.
+
+C53 makes `Omega_s>=0` whenever its positive diameter endpoint hull is two-dimensional. Therefore that certificate lies on the exact equality boundary:
+
+`tr(V^T Omega_s V)=0`,
+
+`Omega_s V_x=Omega_s V_y=0`.
+
+The C-I problem has therefore changed from response positivity to **kernel rigidity**.
+
+PSD alone does not finish the argument: every KKT stress matrix already annihilates `1,x,y`, so affine velocity fields are automatically in the scalar stress kernel. The next theorem must show that a relative-interior critical velocity in the C53 equality kernel has one common strong-diameter angular rate, or classify a non-affine equality mode into a forbidden source structure.
+
+## Next target
+
+Classify the equality kernel of the weighted Robinson defect. A useful sufficient statement is that every non-affine edge-space kernel mode forces a reducible Robinson/Fiedler transform, and that reducibility forces a zero circular-separation pattern in the Kalmanson split support. Convert that zero pattern into a low-order terminal separator in the actual positive unit-contact graph, then use triangle-free contact-degree bounds.

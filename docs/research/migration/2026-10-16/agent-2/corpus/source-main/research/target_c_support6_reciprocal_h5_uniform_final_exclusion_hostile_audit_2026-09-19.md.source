@@ -1,0 +1,62 @@
+# Hostile audit — final uniform H5 support-six exclusion
+
+**Date:** 2026-09-19  
+**Audited note:** `target_c_support6_reciprocal_h5_uniform_final_exclusion_2026-09-19.md`  
+**Certificate:** `verify_target_c_support6_reciprocal_h5_uniform_final_exclusion_2026_09_19.py`  
+**Disposition:** PASS with the scope limits below. C-II remains open.
+
+## 1. The contradiction uses only strict inequalities that are actually available
+
+The target functional is
+
+`D = x00+x01 +(x13+x14) +(x24+x20) +(x30+x31)`.
+
+The terms `x13+x14`, `x24+x20`, and `x30+x31` are cyclically adjacent turn pairs on physical force pentagons at reciprocal vertices `1,2,3`.  The newly audited pentagon theorem applies at every such physical face and gives each pair strictly greater than `2/3` in `pi` units.
+
+The terms `x00,x01` are consecutive exterior turns of the ground force hexagon.  In the uniform noncollapsed H5 branch, the six ground force directions are pairwise nonparallel and form a strict convex equilateral hexagon, so each exterior turn is strictly positive.  Thus `x00+x01>0` is valid.
+
+Therefore `D>2` is strict.  The proof does not rely on replacing a non-strict endpoint inequality by a strict one.
+
+## 2. The three D=2 identities are checked coefficient-by-coefficient
+
+The companion certificate imports the exact affine raw-triangle machinery from the preceding signature-collapse certificate.  For each of `P1,P2,P3`, it reconstructs all present triangle functionals from the exact force cycles, reciprocal edge signs, and ground raw-ray order.
+
+It then constructs the same formal gap row
+
+`x00+x01+x13+x14+x24+x20+x30+x31`
+
+and verifies that the stated sparse combination of `F_i` and `T_ijk` has exactly its negative coefficient vector.  Affine constants are tracked separately.  Only after this polynomial identity is verified are the universal values `F_i=2` and `T_ijk=1` substituted.
+
+The exact evaluations are:
+
+- `P1`: the sparse combination has affine constant `-2` and exact value `-4`, so `D=(-2)-(-4)=2`;
+- `P2`: affine constant `-4` and exact value `-6`, so `D=(-4)-(-6)=2`;
+- `P3`: affine constant `+2` and exact value `0`, so `D=2-0=2`.
+
+The verification uses integer dictionary arithmetic only.  There is no numerical linear program, floating point, tolerance, rank heuristic, or coordinate solve in the proof certificate.
+
+## 3. Every triangle appearing in the sparse identities is legitimate
+
+The missing matching is `{16,25,34}`.  The triangles used are subsets of
+
+- `P1`: `013,023,026,036,124,135,145,246,356,456`;
+- `P2`: `012,023`;
+- `P3`: `015,036,056,124,145,236,246,456`.
+
+None contains a missing edge.  Uniformity excludes collinearity, so every one is an ordinary nondegenerate Euclidean triangle and its interior-angle sum is exactly `pi`.
+
+The raw-angle conversion itself was independently hostile-audited in `target_c_support6_reciprocal_h5_triangle_angle_signature_collapse_hostile_audit_2026-09-18.md`.
+
+## 4. The conclusion is stronger than the preceding cone-signature exclusions, but only within the stated branch
+
+The earlier surface analysis left three uniform sign/order orbits.  The triangle-angle signature note removed two cone signatures but did not remove an orbit.  The adjacent-turn note independently removed the `P1 H(3,3)` signature.  The new `D=2` contradiction does not depend on selecting a cone signature: it applies directly to each full remaining sign/order orbit.  Hence `P1`, `P2`, and `P3` themselves are excluded.
+
+The preceding audited H5 reductions state that, after the nonuniform wall exclusions and earlier uniform-angle exclusions, these three uniform candidates are exactly the remaining noncollapsed degree-pure support-six H5 endpoint.  It is therefore valid to conclude that the noncollapsed degree-pure support-six endpoint is empty.
+
+## 5. The collapsed branch is not touched
+
+The proof uses distinct ground raw rays, the uniform H5 force cycles, and the corresponding raw triangle functionals.  None of these is available in the collapsed support-six branch `y_1=...=y_6`.
+
+That collapsed branch has a separate exact local realization and remains the live support-six obstruction.  This note does not imply support six is globally impossible, does not improve the global corank coefficient by itself, and does not justify changing theorem-state authority.
+
+**Audit disposition:** PASS.  Exact affine triangle identities force `D=2` in each of the final three uniform H5 candidates, while the audited source turn inequalities force `D>2`.  All noncollapsed degree-pure support-six H5 candidates are eliminated.  The collapsed support-six branch remains, and C-II remains open.

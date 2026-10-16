@@ -1,0 +1,261 @@
+# Target C-II — residual-free flat centers force activation or stress degeneration
+
+**Date:** 2026-09-15  
+**Repository base:** branch `research/c2-orbit-routing-sol-20260915`  
+**Status:** proof-only structural strengthening; theorem-state authority unchanged  
+**Scope:** full-core Type-II survivor subsequence with `t=(q-k)/D<=1.826`  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The orbit-pure flat-tooth theorem gives at least
+
+\[
+V_{flat}
+\ge0.4106157004\ldots D-o(D)
+\tag{SD.1}
+\]
+
+distinct flat pentagon centers.  The flat-center bracing theorem on this branch shows that all but `o(D)` of them are unloaded.
+
+The local flat-center contact geometry is independent of the old true-residual hypothesis.  Consequently the surviving center sea has only two macroscopic possibilities:
+
+### Activation branch
+
+There is a family `H_4` of pairwise endpoint-disjoint inactive source pairs such that
+
+\[
+\boxed{
+|H_4|
+\ge0.0456239D-o(D)
+}
+\tag{SD.2}
+\]
+
+and
+
+\[
+\boxed{
+\sum_{xy\in H_4}(|x-y|-1)=o(D).
+}
+\tag{SD.3}
+
+Every selected pair has a common unit-contact center.
+
+### Stress-degeneration branch
+
+There is a set `E_3` of distinct actual positive contact edges such that
+
+\[
+\boxed{
+|E_3|
+\ge0.1026539D-o(D)
+}
+\tag{SD.4}
+
+and, for the canonical relative-interior KKT stress,
+
+\[
+\boxed{
+\sum_{e\in E_3}\alpha_e=o(D^2).
+}
+\tag{SD.5}
+
+Thus a linear positive-contact family carries a vanishing fraction of the exact contact virial
+
+\[
+\sum_{e\in C}\alpha_e=D^2.
+\]
+
+No face residual, empty-face hypothesis, or individual multiplier lower bound is used.
+
+## 1. Local degree classification
+
+Let `m` be a sufficiently flat center with consecutive bounded-face contacts `ml,mr` and
+
+\[
+\angle lmr\ge\pi-\epsilon_D,
+\qquad
+\epsilon_D\to0.
+\]
+
+Two distinct contact rays at one vertex are separated by strictly more than `pi/3`: unit separation gives at least `pi/3`, and equality would create a forbidden unit equilateral triangle.
+
+The complementary angular arc outside the tooth sector has length at most
+
+\[
+\pi+\epsilon_D.
+\]
+
+If `deg_C(m)>=5`, at least four contact-ray gaps lie on that complementary arc, each greater than `pi/3`; for small `epsilon_D` their total exceeds the available angle.  Hence
+
+\[
+\boxed{\deg_C(m)\le4.}
+\tag{SD.6}
+
+Canonical C26 gives `deg_C(m)>=3` at every unloaded core vertex.  Therefore every unloaded flat center has degree exactly three or four.
+
+The branch theorem `target_c_orbit_pure_flat_center_bracing_dichotomy_2026-09-15.md` proves that loaded flat centers are `o(D)`.  Removing those negligible centers, write
+
+\[
+V_{flat}=U_3+U_4+o(D),
+\tag{SD.7}
+\]
+
+where `U_j` counts unloaded flat centers of contact degree `j`.
+
+Thus either
+
+\[
+U_4\ge {V_{flat}\over2}-o(D)
+\tag{SD.8}
+\]
+
+or
+
+\[
+U_3\ge {V_{flat}\over2}-o(D).
+\tag{SD.9}
+
+## 2. Degree four produces an `L^1` activation matching
+
+At a degree-four flat center, let the two exterior contact neighbors be `u,v`, so the cyclic exterior order is
+
+\[
+r,u,v,l.
+\]
+
+If the three complementary angular gaps are
+
+\[
+\theta_j={\pi\over3}+\eta_j,
+\qquad \eta_j>0,
+\]
+
+then their sum is at most `pi+epsilon_D`, hence
+
+\[
+\eta_1+\eta_2+\eta_3\le\epsilon_D.
+\tag{SD.10}
+\]
+
+The three consecutive neighbor pairs
+
+\[
+(r,u),\quad(u,v),\quad(v,l)
+\]
+
+have a common unit neighbor `m`, are strict noncontacts, and satisfy
+
+\[
+0<|x-y|-1\le\eta_j.
+\tag{SD.11}
+\]
+
+Keep only `(r,u)` and `(v,l)` from each center; they are endpoint-disjoint within one center.  Across all degree-four centers this gives `2U_4` pair objects.
+
+A source vertex can occur in such objects only through one of its unit-contact neighbors serving as the center.  The contact-degree cap is five, so each endpoint appears in at most five objects.  The conflict graph therefore has maximum degree at most eight, and a greedy independent set gives
+
+\[
+\boxed{|H_4|\ge {2U_4\over9}.}
+\tag{SD.12}
+
+If (SD.8) holds, then by (SD.1)
+
+\[
+{|H_4|\over D}
+\ge {V_{flat}/D\over9}-o(1)
+\ge0.0456239667\ldots-o(1),
+\]
+
+which proves (SD.2).
+
+Summing (SD.10)--(SD.11) over the `O(D)` degree-four centers gives at most
+
+\[
+U_4\epsilon_D=o(D)
+\]
+
+total excess before extraction.  Passing to a subfamily only decreases the nonnegative sum, proving (SD.3).
+
+## 3. Degree three forces vanishing exterior stress
+
+Let `m` be unloaded of degree three.  Besides `ml,mr`, let `mx` be its unique exterior contact.  Write the three cyclic sector angles as
+
+\[
+A=\pi-\epsilon'_m,
+\qquad B,C>\pi/3,
+\qquad A+B+C=2\pi,
+\]
+
+with `0<=epsilon'_m<=epsilon_D`.
+
+For the positive contact multipliers, planar equilibrium gives the sine-law ratio
+
+\[
+\alpha_{mx}:\alpha_{ml}:\alpha_{mr}
+=\sin A:\sin B:\sin C.
+\]
+
+Therefore
+
+\[
+\boxed{
+\alpha_{mx}
+\le
+R(\epsilon_D)
+\min\{\alpha_{ml},\alpha_{mr}\},
+\qquad
+R(\epsilon):={\sin\epsilon\over\sin(\pi/3-\epsilon)}.
+}
+\tag{SD.13}
+
+Since `R(epsilon_D)->0`, the exterior edge is asymptotically weak relative to both tooth edges.
+
+Sum (SD.13) over all degree-three flat centers.  Each actual face contact can appear among the selected `ml,mr` terms at most twice, once from each endpoint.  The normalized full-support virial identity gives
+
+\[
+\sum_{e\in C}\alpha_e=D^2.
+\]
+
+Hence
+
+\[
+\sum_{m\in U_3}\alpha_{mx}
+\le R(\epsilon_D)D^2=o(D^2).
+\tag{SD.14}
+\]
+
+Let `E_3` be the distinct physical edges among the chosen `mx`.  One edge has only two endpoints, so it is selected by at most two centers.  Thus
+
+\[
+|E_3|\ge {U_3\over2}.
+\tag{SD.15}
+
+If (SD.9) holds, then
+
+\[
+{|E_3|\over D}
+\ge {V_{flat}/D\over4}-o(1)
+\ge0.1026539251\ldots-o(1),
+\]
+
+proving (SD.4).  Deduplication cannot increase total positive stress, so (SD.14) also proves (SD.5).
+
+## 4. Frontier effect
+
+The old flat-center trichotomy had a loaded degree-two escape.  Global orbit purity and near-disk perimeter measure remove that escape entirely.  A low-`t` survivor must now pay through one of two sharply source-level mechanisms:
+
+```text
+Omega(D) endpoint-disjoint near-unit activation pairs
+with o(D) total gap,
+
+or
+
+Omega(D) actual positive contacts
+with o(D^2) total KKT stress.
+```
+
+The activation branch is ready for a simultaneous second-order or guarded-reinsertion argument.  The stress branch is ready for a deletion/softening argument, but no theorem currently converts small aggregate stress into a legal source deformation.
+
+No individual contact multiplier is assigned a lower bound, and no exact hidden unit contact or strict sub-`D` source is claimed.
+
+**Disposition:** proof-only structural strengthening. C-II and Level I remain open.

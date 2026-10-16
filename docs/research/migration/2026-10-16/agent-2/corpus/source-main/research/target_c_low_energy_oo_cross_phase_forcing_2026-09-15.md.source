@@ -1,0 +1,374 @@
+# Target C-II — low-energy dominant O--O pairs from distinct phases must cross
+
+**Date:** 2026-09-15  
+**Status:** proof-only structural theorem  
+**Scope:** full-core Type-II near-disk branch, dominant exact `pi/3` orbit, retained outer-to-outer pair weights  
+**Dependencies:** audited Type-II near-disk perimeter geometry; audited Section 157 outer-to-outer train bracing; audited convex-pocket cyclic-order transfer; audited train-crossing graph  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current dominant O--O staircase produces linear retained pair weight in one exact
+three-phase train orbit, but by itself does not say how those trains interact across
+phase classes.  The missing bridge is geometric: low terminal directional energy pins
+an O--O train close to the diameter normal to its contact phase.  Two such near-diametral
+trains from different exact phase classes have alternating outer endpoints, hence must
+cross.
+
+This yields a direct lower bound on the phase-star crossing mass from retained O--O
+pair weights and their terminal energies.
+
+Let the three exact projective phase classes of the dominant orbit be indexed by
+`i=1,2,3`.  For phase `i`, define
+
+- `P_i` = normalized retained dominant O--O pair weight;
+- `E_i` = normalized retained-pair-weighted terminal directional energy;
+- `X_ij` = normalized strict-rhombus crossing mass between phase classes `i,j`.
+
+Then for every `i!=j`,
+
+\[
+\boxed{
+X_{ij}
+\ge
+\left(P_i-{2E_i\over2-\sqrt3}\right)_+
+\left(P_j-{2E_j\over2-\sqrt3}\right)_+.
+}
+\tag{LE.1}
+
+More generally, for every positive `lambda_i,lambda_j` satisfying
+
+\[
+\lambda_i+\lambda_j<2-\sqrt3,
+\]
+
+\[
+\boxed{
+X_{ij}
+\ge
+\left(P_i-{E_i\over\lambda_i}\right)_+
+\left(P_j-{E_j\over\lambda_j}\right)_+.
+}
+\tag{LE.2}
+
+Equation (LE.1) is the limit of (LE.2) as both thresholds increase to
+`(2-sqrt(3))/2`.
+
+This is the first direct inequality in the current stack that converts retained
+boundary O--O structure into a **lower** bound on an internal phase-star crossing
+population.
+
+---
+
+## 1. Retained pair weights and pair energy
+
+Freeze disjoint shrinking phase windows around the three atoms of the dominant exact
+orbit.  For a dominant O--O train `tau`, let
+
+\[
+a_\tau,b_\tau\in[0,1]
+\]
+
+be the retained weights of its two selected outer terminal occurrences and put
+
+\[
+w_\tau:=\min(a_\tau,b_\tau).
+\tag{LE.3}
+
+For one exact phase class `i`,
+
+\[
+P_i
+:={1\over D}\sum_{\tau\in i}w_\tau.
+\tag{LE.4}
+
+Let the exact route directional-energy contributions of the two terminal occurrences
+be `e_{tau,1},e_{tau,2}>=0`, and set
+
+\[
+e_\tau:=e_{\tau,1}+e_{\tau,2}.
+\]
+
+Define
+
+\[
+E_i
+:={1\over D}\sum_{\tau\in i}w_\tau e_\tau.
+\tag{LE.5}
+
+Because `w_tau<=a_tau,b_tau`,
+
+\[
+w_\tau(e_{\tau,1}+e_{\tau,2})
+\le a_\tau e_{\tau,1}+b_\tau e_{\tau,2}.
+\]
+
+Therefore the pair-weighted phase energies are genuinely paid by the already selected
+dominant outer-edge energy:
+
+\[
+\boxed{
+E_1+E_2+E_3\le E_{dom}\le\delta+o(1).
+}
+\tag{LE.6}
+
+No new energy currency is introduced.
+
+---
+
+## 2. One O--O train: terminal energy measures deviation from an ideal diameter
+
+Take one outer-to-outer complete train `tau` with projective contact phase `phi`.  Let
+its two outer terminal positions cut the round-limit boundary into a smaller oriented
+normal-angle interval of width
+
+\[
+0\le w\le\pi.
+\]
+
+Audited Section 157 gives actual diameter crossings with both transverse signs.  In the
+Type-II near-disk limit this forces one representative of the train phase into that
+normal interval.  Put the interval at `[0,w]` and write that phase representative as
+
+\[
+\phi\in[0,w].
+\]
+
+The two endpoint tangent directions are projectively `pi/2` and `w+pi/2`.  Therefore
+Section 157's terminal-energy calculation is exactly
+
+\[
+e_\tau
+\ge
+[1-\sin\phi]+[1-\sin(w-\phi)]-o(1).
+\tag{LE.7}
+
+Define endpoint deviations from the ideal phase-normal diameter by
+
+\[
+\alpha:=\left|\phi-{\pi\over2}\right|,
+\qquad
+\beta:=\left|w-\phi-{\pi\over2}\right|.
+\tag{LE.8}
+
+Then
+
+\[
+1-\sin\phi=1-\cos\alpha,
+\qquad
+1-\sin(w-\phi)=1-\cos\beta,
+\]
+
+so
+
+\[
+\boxed{
+e_\tau
+\ge(1-\cos\alpha)+(1-\cos\beta)-o(1).}
+\tag{LE.9}
+
+Geometrically, after orienting the two outer endpoints oppositely around the round
+limit, their normal angles differ from the ideal antipodal normals
+
+\[
+\phi-{\pi\over2},
+\qquad
+\phi+{\pi\over2}
+\]
+
+by at most `alpha` and `beta` respectively.
+
+The `o(1)` is uniform after freezing the phase windows and taking the Type-II near-disk
+limit.
+
+---
+
+## 3. Low-energy O--O endpoints lie on opposite normal branches
+
+For the cross-phase argument we must exclude the possibility that both terminal
+positions use the same oriented representative of the projective tangent direction.
+This is automatic at the energy scale used below.
+
+Put
+
+\[
+\Lambda:={2-\sqrt3\over2}
+=1-{\sqrt3\over2}
+<0.134.
+\tag{LE.10}
+
+Suppose `e_tau<=Lambda-o(1)`.  By convexity of `1-cos x` on `[0,pi/2]`, equation
+(LE.9) gives
+
+\[
+2\left[1-\cos\left({\alpha+\beta\over2}\right)\right]
+\le\Lambda+o(1).
+\]
+
+Thus `alpha+beta<0.74` for all sufficiently large sources.  If both outer terminals
+used the same oriented normal branch, their circular normal separation would be at
+most `alpha+beta+o(1)`, so their Euclidean separation in a diameter-`D` near-disk would
+be below `0.37D+o(D)`.
+
+But Section 157's O--O bracing estimate gives, uniformly in the present live window
+`t<=1.860`,
+
+\[
+{r_\tau\over D}
+\ge1-\delta-{e_\tau\over2}-o(1).
+\tag{LE.11}
+
+The matched `g=0.0076` envelope gives `delta<0.088` for `t<=1.860`, while
+`e_tau<=Lambda<0.134`; hence the right side of (LE.11) exceeds `0.845-o(1)`.
+The same-branch alternative is impossible.
+
+Therefore every train at the threshold (LE.10) has one terminal near each of the two
+antipodal ideal normals of its phase.
+
+---
+
+## 4. Two different phases: failure of endpoint alternation costs `2-sqrt(3)`
+
+Take two O--O trains `tau,sigma` from two distinct exact atoms of the same dominant
+orbit.  Their projective phase directions differ by exactly
+
+\[
+{\pi\over3}.
+\]
+
+Use the opposite-branch orientation from Section 3.  In the perfect zero-energy limit,
+the four endpoint normals are the endpoints of two diameters whose axes differ by
+`pi/3`; hence they alternate on the circle.
+
+Suppose the actual four outer endpoints fail to alternate.  Then at least one of the
+two ideal `pi/3` boundary gaps must close.  Consequently two endpoint deviations, one
+from `tau` and one from `sigma`, have sum at least
+
+\[
+{\pi\over3}-o(1).
+\]
+
+If those deviations are `a,b`, convexity gives
+
+\[
+(1-\cos a)+(1-\cos b)
+\ge
+2\left(1-\cos{a+b\over2}\right)
+\ge
+2-\sqrt3-o(1).
+\tag{LE.12}
+
+Those two endpoint costs are included in `e_tau+e_sigma`.  Therefore
+
+\[
+\boxed{
+\text{nonalternating endpoints}
+\Longrightarrow
+e_\tau+e_\sigma\ge2-\sqrt3-o(1).
+}
+\tag{LE.13}
+
+Equivalently, for any fixed thresholds satisfying
+
+\[
+\lambda_i+\lambda_j<2-\sqrt3,
+\]
+
+every phase-`i` O--O train with `e_tau<=lambda_i` and every phase-`j` O--O train with
+`e_sigma<=lambda_j` have alternating endpoints for all sufficiently large sources.
+
+---
+
+## 5. Alternating endpoints force a strict-rhombus train crossing
+
+The audited convex-pocket augmentation pushes outer train endpoints to the loaded-hull
+boundary while preserving cyclic order.  The corresponding complete-train midpoint
+curves are Jordan arcs.  Two such O--O arcs with alternating endpoints on a convex
+boundary cannot be disjoint.
+
+Within the audited complete-train system, two distinct trains meet only through a
+strict-rhombus crossing.  Hence the low-energy phase-`i` and phase-`j` families from
+Section 4 form a complete bipartite subgraph of the strict-rhombus train crossing
+graph.
+
+This uses only topological endpoint alternation plus the already-audited train system;
+it does not assume straight train paths.
+
+---
+
+## 6. Weighted Markov extraction gives the crossing lower bound
+
+For phase `i`, let
+
+\[
+P_i(\lambda_i)
+:={1\over D}
+\sum_{\substack{\tau\in i\\e_\tau\le\lambda_i}}w_\tau.
+\]
+
+Weighted Markov gives
+
+\[
+\boxed{
+P_i(\lambda_i)
+\ge
+\left(P_i-{E_i\over\lambda_i}\right)_+.
+}
+\tag{LE.14}
+
+The same holds for phase `j`.
+
+Every train in the two extracted families crosses every train in the other family.
+Since all retained pair weights lie in `[0,1]`, the actual normalized crossing count
+between the two phase classes dominates the product of their total retained weights:
+
+\[
+X_{ij}
+\ge P_i(\lambda_i)P_j(\lambda_j).
+\]
+
+Combining with (LE.14) proves (LE.2).
+
+Finally choose
+
+\[
+\lambda_i=\lambda_j
+={2-\sqrt3\over2}-\varepsilon,
+\]
+
+pass first to the source limit and phase-window limit, then let `epsilon downarrow0`.
+This gives (LE.1).
+
+---
+
+## 7. Why this matters for the current frontier
+
+The dominant O--O staircase gives, for example,
+
+\[
+t\le1.844
+\Longrightarrow
+P_1+P_2+P_3>0.29-o(1),
+\]
+
+while the total pair energy obeys
+
+\[
+E_1+E_2+E_3\le\delta\approx0.05.
+\]
+
+Equation (LE.1) means this boundary data cannot be assigned among the three exact phase
+classes independently of the internal phase-star graph.  Whenever two phase classes
+retain low-energy O--O mass, a definite block of their crossing matrix is forced to be
+present.  Triangle-freeness then requires compensating missing crossings to the third
+phase through the same center/leaf correlation used in the hostile-audited `g=0.0076`
+capacity theorem.
+
+A preliminary numerical optimization of this coupled system at the coarse `t<=1.844`
+endpoint still leaves about `0.0033D^2` crossing-capacity slack, so (LE.1) alone does
+not close that entire interval.  Nearer the live `1.84355` frontier the slack drops to
+about `6e-5D^2` under the same coarse relaxation, indicating that the new bridge is
+quantitatively relevant.
+
+Those numerical values are exploratory only and are not theorem claims.
+
+**Disposition:** proved proof-only structural bridge from boundary O--O pairs to
+internal phase-star crossings. C-II and Level I remain open.

@@ -1,0 +1,209 @@
+# Hostile audit — generic H7b full-angle reduction
+
+**Date:** 2026-09-19  
+**Audited claim:** in the generic interior-ground `H7b` support-seven branch, the previously surviving 77 order/sign orbits reduce exactly to 27, all of missing-graph type `C7`.  
+**Primary certificate:** `research/verify_target_c_support7_h7b_full_angle_reduction_2026_09_19.py`  
+**Disposition:** **PASS within the stated scope.**  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+This audit treats the new angle system as hostile input and checks the geometric branch choices, the use of missing reciprocal edges, the ground-angle convention, the strict Farkas logic, and the census comparison against the previous endpoint.
+
+## 1. Scope and nonclaims
+
+The result applies only to generic interior-ground `H7b`:
+
+- `y_0=0` is strictly inside the strict convex heptagon `y_1,...,y_7`;
+- no reciprocal collinear triple occurs;
+- each non-ground reciprocal vertex has exactly five present relation edges, with the previously certified `2+3` force-sign pattern;
+- the missing relation graph is either `C7` or `C3\sqcup C4`.
+
+It does **not** address reciprocal-collinearity walls, ground-on-hull `H7a`, `H6`, or the surviving `H8` branch. It also does not claim that any of the 27 affine survivors is metrically realizable.
+
+## 2. The 184-state census is rebuilt independently
+
+The verifier reconstructs from first principles:
+
+1. the 57 admissible interior-ground radial slot vectors;
+2. all missing-graph factors of type `C7` and `C3\sqcup C4`;
+3. all compatible local `2+3` sign states;
+4. quotienting by heptagon dihedral symmetry and global sign reversal.
+
+It obtains exactly
+
+\[
+184=120\,C_7+64\,(C_3\sqcup C_4).
+\]
+
+The new verifier does not import the previous 77-orbit certificate. This prevents a stale prior survivor table from silently determining the new census.
+
+## 3. Full raw-ray order at a hull vertex is forced
+
+Fix a non-ground hull vertex `y_i`. For a strict convex heptagon, the rays from `y_i` to the other six hull vertices occur in boundary order
+
+\[
+i+1,i+2,\ldots,i-1\pmod 7
+\]
+
+inside the open hull interior cone. Since `y_0` lies strictly inside the heptagon, the ray `i0` lies strictly inside that same cone and is inserted at the certified radial slot `k_i`.
+
+Therefore the seven rays from `y_i` to the other reciprocal points have one fixed strict order. If `r_{i,0},...,r_{i,5}` are its six consecutive gaps, then
+
+\[
+r_{i,p}>0,
+\qquad
+\sum_p r_{i,p}<1
+\]
+
+in units of `pi`. The second inequality is the strict convex-hull interior-angle bound. No wraparound ray is used at a hull vertex; all seven rays lie in a cone of width strictly less than `pi`.
+
+This validates the 42 raw-gap positivity inequalities and the seven hull-angle inequalities.
+
+## 4. Missing reciprocal edges are used only as geometric rays
+
+Two of the seven possible non-ground rays at each hull vertex correspond to missing relation edges. The proof still uses those rays in ordinary Euclidean triangle angles.
+
+That is legitimate: a missing stress/relation edge does not delete the two reciprocal points or the straight line segment joining them. The proof does **not** assign a force sign, stress magnitude, or force-polygon edge to a missing relation edge. Missing edges enter only through the geometric raw-ray variables and triangle-angle sums.
+
+Thus the full-angle extension does not smuggle in nonexistent force equations.
+
+## 5. Ground radial chirotope convention is correct
+
+For hull vertices `i,j`, with `y_0=0`,
+
+\[
+\det(y_j-y_i,-y_i)=\det(y_i,y_j).
+\]
+
+The left side is exactly the slot convention used to determine on which side of directed chord `ij` the interior ground lies. Hence the slot-derived sign `gchi(i,k_i,j)` is the sign of the oriented ground angle from ray `0i` to ray `0j`.
+
+If this sign is positive, the counterclockwise ground arc `0i\to0j` lies in `(0,pi)`; if negative, it lies in `(pi,2pi)`. Therefore the triangle interior angle at the ground is respectively that arc or its complement to `2pi`.
+
+This validates both the 21 strict ground-arc inequalities and the branch used for every triangle angle at `y_0`.
+
+## 6. Force-to-raw conversion has no hidden branch ambiguity
+
+At a present reciprocal edge `ij`, the signed unit force direction is the raw ray direction when the edge sign is positive and the antipodal raw direction when the sign is negative.
+
+At a hull vertex all raw rays lie in a cone of width `<pi`. Consequently the cyclic signed-force order is the raw positive class followed by the raw negative class, up to global reversal already quotiented in the census. For two consecutive present rays in raw order:
+
+- if their signs agree, their raw-forward angle equals the corresponding counterclockwise force arc;
+- if their signs differ, their raw-forward angle equals that force arc minus `pi`.
+
+The resulting four raw/force ties per hull vertex are affine identities in the force gaps. The strict hull-cone bound rules out an alternative `2pi` branch.
+
+## 7. All 56 triangle equations are legitimate
+
+The generic branch excludes collinear triples among the eight reciprocal points. Hence each of the
+
+\[
+\binom83=56
+\]
+
+unordered triples is an ordinary nondegenerate triangle with angle sum `pi`.
+
+At a non-ground hull vertex the smaller angle between the two relevant rays is the sum of the consecutive full raw gaps between them, because both rays lie inside the same `<pi` hull cone. At the ground the branch is selected by the chirotope check in Section 5.
+
+Therefore every committed triangle row is a genuine Euclidean angle identity, including triangles containing one or more missing relation edges.
+
+## 8. Pentagon inequalities are exactly the audited local affine hull
+
+For each non-ground physical force pentagon, with normalized force gaps `x_{i,k}`, the verifier uses only
+
+\[
+\sum_kx_{i,k}=2
+\]
+
+and
+
+\[
+x_{i,k}+x_{i,k+1}-x_{i,k+3}>\frac13.
+\]
+
+These are the previously audited turn-simplex equations/facets. No stronger unproved local linear inequality is inserted.
+
+## 9. Strict Farkas certificates are logically sound, including zero RHS
+
+Write the 112 strict inequalities as
+
+\[
+A_rz<b_r
+\]
+
+and the 92 equalities as
+
+\[
+E_sz=d_s.
+\]
+
+For each excluded orbit the verifier checks exact rational multipliers with
+
+\[
+\lambda_r\ge0,
+\qquad
+\sum_r\lambda_r=1,
+\]
+
+such that
+
+\[
+\sum_r\lambda_rA_r-\sum_s\mu_sE_s=0
+\]
+
+and
+
+\[
+\sum_r\lambda_rb_r-\sum_s\mu_sd_s\le0.
+\]
+
+If a strict feasible point existed, the normalization `sum lambda=1` ensures at least one strict inequality receives positive total weight, so the weighted inequality is strict. Substituting the equalities would therefore force the final right-hand side to be strictly positive, contradicting `<=0`.
+
+This remains valid for the 38 certificates whose exact final right-hand side is zero. No epsilon or floating-point tolerance is involved in the committed check.
+
+## 10. Arithmetic and census cross-check
+
+The committed verifier uses only Python integers and `fractions.Fraction` for proof checking. Floating-point linear programming was used only to discover candidate dual supports before rational reconstruction.
+
+The exact verifier reports:
+
+\[
+157\text{ excluded}=93\,C_7+64\,(C_3\sqcup C_4),
+\]
+
+leaving
+
+\[
+27\,C_7.
+\]
+
+The surviving one-based orbit indices are
+
+\[
+115,118,129,130,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,169,170,171,172,173,174,175,176.
+\]
+
+Cross-checking these against the previously committed 77-orbit endpoint shows that all 27 are old survivors. Thus the new layer removes exactly
+
+\[
+50=20\,C_7+30\,(C_3\sqcup C_4)
+\]
+
+additional old survivors. In particular, it removes all 30 `C3\sqcup C4` cases that survived the prior affine-local reduction.
+
+## 11. Attempts that do not justify stronger claims
+
+Two stronger necessary-condition searches were also tested against the 27 survivors but did not eliminate any of them:
+
+- a larger signed-distance negative-type cone using primitive coefficient vectors in `[-2,2]^8`;
+- the necessary ground signed-force condition that no consecutive force-direction gap reaches `pi`.
+
+These computations are not used in the theorem and are not certificates of realizability. They indicate that more of the same linear/angular filtering is unlikely to finish generic `H7b`.
+
+The remaining useful layer is nonlinear: actual equilateral-pentagon vector closure, the seven-force ground closure, law-of-sines radius-cycle integrability, and common reciprocal-coordinate reconstruction.
+
+## 12. Final disposition
+
+The new `77 -> 27` generic `H7b` reduction is supported by exact finite certificates and survives the branch-choice and strictness audit. All surviving generic cases are `C7`; all generic `C3\sqcup C4` cases are excluded.
+
+**Audit disposition: PASS within scope.**
+
+No theorem-state file is changed. C-II remains open.

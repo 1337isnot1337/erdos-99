@@ -1,0 +1,206 @@
+# Erdős Problem #99 — global pentagon two-window escape
+
+**Date:** 2026-09-14
+**Repository base:** active `research/c2-closure-sol-20260914-r5` branch
+**State version:** `2026-09-14.audit.51`
+**Run type:** closing-proof reduction / exact face-degree and train-incidence composition
+**Target:** Target C-II, canonical full-core Type-II branch
+**Claim class:** proof-only consequence awaiting independent audit
+**External literature:** no new import
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The existing exceptional-singleton two-window gate uses singleton trains to force a
+population of pentagons and then invokes the odd-face parity lemma.  The singleton
+localization is unnecessary for obtaining a global two-window escape.  The AG42 face
+floor already supplies linearly many exceptional faces, while the degree-excess
+currency `Q-f` pays every exceptional face that is not a pentagon.
+
+Put
+
+\[
+X:=Q-f
+\]
+
+and, for projective directions `[u],[v]` and a fixed
+
+\[
+0<\epsilon<\epsilon_5:=2\arcsin(1/10),
+\]
+
+let `T_off(u,v;epsilon)` be the number of complete stopped trains whose projective
+direction lies outside both `epsilon`-windows.
+
+Then every canonical full-core Type-II survivor satisfies
+
+\[
+\boxed{
+X+2T_{off}(u,v;\epsilon)
+\ge (f_*-o(1))D,
+}
+\tag{GP.1}
+\]
+
+for **every** pair `[u],[v]`, where
+
+\[
+f_*:=\sqrt{\Delta_2}-{\pi\over4}+0.00021
+=0.167124643466509\ldots,
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\tag{GP.2}
+\]
+
+Thus outer detour, singleton trains, and rhombic Mantel slack are not needed to force
+three-directional complexity.  In particular,
+
+\[
+\boxed{
+\max\left\{{Q-f\over D},{T_{off}(u,v;\epsilon)\over D}\right\}
+\ge {f_*\over3}-o(1)
+=0.055708214488836\ldots-o(1).
+}
+\tag{GP.3}
+\]
+
+If `Q-f=o(D)`, then for every fixed pair of projective directions,
+
+\[
+\boxed{
+T_{off}(u,v;\epsilon)
+\ge\left({f_*\over2}-o(1)\right)D
+=0.083562321733254\ldots D-o(D).
+}
+\tag{GP.4}
+\]
+
+## 1. Degree excess pays all nonpentagons
+
+Let `n_d` be the number of bounded nonquadrilateral contact faces of degree `d>=5`.
+Then
+
+\[
+f=\sum_{d\ge5}n_d,
+\qquad
+Q=\sum_{d\ge5}(d-4)n_d,
+\]
+
+so
+
+\[
+X=Q-f=\sum_{d\ge6}(d-5)n_d.
+\tag{GP.5}
+\]
+
+Let
+
+\[
+p_5:=n_5,
+\qquad
+N_{\ge6}:=\sum_{d\ge6}n_d.
+\]
+
+Every summand in (GP.5) for `d>=6` is at least one. Therefore
+
+\[
+N_{\ge6}\le X
+\]
+
+and hence
+
+\[
+\boxed{p_5=f-N_{\ge6}\ge f-X.}
+\tag{GP.6}
+\]
+
+No bounded-degree cutoff is used.
+
+## 2. Every pentagon forces an off-two-window terminal occurrence
+
+The odd-face two-window theorem proves that every closed unit equilateral pentagon has,
+for any prescribed `[u],[v]` and any fixed `epsilon<epsilon_5`, at least one boundary
+edge whose projective direction lies outside both windows.
+
+Every boundary edge occurrence of a bounded exceptional contact face is a terminal
+occurrence of its complete stopped train.  Choose one off-window occurrence from each
+of the `p_5` pentagons.  These are distinct face-edge incidences.  A complete stopped
+train has exactly two terminal incidences in total, so one train can pay at most two of
+the chosen pentagons. Consequently
+
+\[
+\boxed{2T_{off}(u,v;\epsilon)\ge p_5.}
+\tag{GP.7}
+\]
+
+Combining (GP.6) and (GP.7),
+
+\[
+X+2T_{off}(u,v;\epsilon)\ge f.
+\tag{GP.8}
+\]
+
+The proof-only AG42/Section-171 face bootstrap gives
+
+\[
+{f\over D}\ge f_*-o(1),
+\tag{GP.9}
+\]
+
+which proves (GP.1).
+
+## 3. Quantitative consequences
+
+Equation (GP.1) has two useful forms.
+
+First, if both normalized currencies were strictly below `f_*/3`, then
+
+\[
+X+2T_{off}<f_*D,
+\]
+
+contradicting (GP.1).  This proves (GP.3).
+
+Second, on any subsequence with `X=o(D)`, equation (GP.1) gives the sharper
+
+\[
+T_{off}\ge(f_*/2-o(1))D,
+\]
+
+which is (GP.4).
+
+This is much stronger than extracting off-window trains only from pentagons hit by
+exceptional singleton trains.  It uses every pentagon forced by the global face floor.
+
+## 4. Interaction with the current frontier
+
+The theorem narrows two important branches.
+
+1. **Low degree-excess branch.** If `Q-f=o(D)`, no pair of projective direction
+   windows can carry all but `o(D)` stopped trains.  At least
+   `0.0835623...D-o(D)` complete trains remain outside every such pair.
+
+2. **Near-Mantel phase-star branch.** Existing near-Mantel reductions produce a small
+   number of coherent phase windows.  Equation (GP.4) shows that, when degree excess is
+   sublinear, a genuinely macroscopic third directional population is mandatory; a
+   two-phase degeneration cannot absorb the exceptional-face population.
+
+This does not by itself exclude a three-phase triangular-lattice-like survivor.  Such a
+three-phase endpoint is compatible with near-Groemer pentagons and is precisely the
+configuration that subsequent phase-star or source-minimality arguments must attack.
+
+## 5. Scope audit
+
+- `Q` and `f` are the canonical global bounded exceptional-face currencies.
+- `T_off` counts complete stopped trains, not face incidences.  Division by two in
+  (GP.7) is occurrence-safe because a complete train has exactly two terminal
+  incidences.
+- The odd-face theorem is applied only to actual pentagonal contact faces; no claim is
+  made for even-degree faces.
+- No singleton-train hypothesis, outer-detour bound, near-Mantel hypothesis, or
+  force-hull residual hypothesis is used.
+- The face floor inherits the proof-only AG42/Section-171 lifecycle status.
+- No exact unit equilateral triangle or strict sub-`D` source is produced here.
+
+C-II and Level I remain open.

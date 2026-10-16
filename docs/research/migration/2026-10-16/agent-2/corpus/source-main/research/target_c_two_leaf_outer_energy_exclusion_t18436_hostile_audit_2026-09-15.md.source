@@ -1,0 +1,446 @@
+# Hostile audit — two-leaf outer-energy exclusion through `t=1.8436`
+
+**Date:** 2026-09-15  
+**Reviewed:**
+- `research/target_c_two_leaf_outer_energy_exclusion_t18436_2026-09-15.md`
+- `research/verify_target_c_two_leaf_outer_energy_exclusion_t18436.py`
+- `research/target_c_two_leaf_common_center_energy_t18436_2026-09-15.md`
+- `research/target_c_low_energy_oo_cross_phase_forcing_2026-09-15.md`
+- hostile-audited outer-train bracing/terminal-energy module
+
+**Disposition:** **PASS at the stated proof-only full-core/no-macroscopic-container Type-II scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The candidate excludes the entire current near-frontier branch
+
+\[
+t={q-k\over D}\le1.8436
+\]
+
+by combining a very tight retained-boundary localization with a macroscopic two-leaf
+energy payment.  The final contradiction has order-`10^-2 D` slack, so the main audit
+risk is structural rather than numerical.
+
+The highest-risk dependency had not previously received its own hostile audit: the
+cross-phase statement that two **noncrossing** outer-to-outer trains from exact phases
+separated by `pi/3` must pay at least `2-sqrt(3)` total terminal directional energy.
+This audit checks that implication from its underlying already-audited bracing module,
+then checks the common-center counting and the final energy ledger.
+
+---
+
+## 1. The low-energy cross-phase implication is valid at exactly the scope used
+
+Let `tau` be an outer-to-outer train with projective phase `phi`.  The hostile audit of
+the complement outer-train bracing theorem already proves the geometric fact needed
+here: on the smaller Jordan shore, whose loaded-hull normal interval has width
+`w<=pi`, Section 157's two-sided **actual diameter** bracing forces one representative
+of `phi` into that interval.  If the two terminal normal deviations from the ideal
+antipodal phase normals are `alpha,beta`, then
+
+\[
+e_\tau\ge(1-\cos\alpha)+(1-\cos\beta)-o(1),
+\qquad 0\le\alpha,\beta\le\pi/2.
+\tag{HA.1}
+\]
+
+The same audited module also supplies the train-length/terminal-energy tradeoff
+
+\[
+{r_\tau\over D}\ge1-\delta-{e_\tau\over2}-o(1).
+\tag{HA.2}
+\]
+
+This is enough to justify the branch choice in the cross-phase theorem.  If
+
+\[
+e_\tau<\Lambda:=2-\sqrt3,
+\]
+
+then convexity of `1-cos` on `[0,pi/2]` gives
+
+\[
+2\left(1-\cos{\alpha+\beta\over2}\right)<\Lambda+o(1),
+\]
+
+hence `alpha+beta<0.74` for sufficiently large sources.  The alternative in which the
+two terminals use the same oriented normal branch would put their Euclidean separation
+below `0.37D+o(D)`.  On the live range used by the cross-phase theorem,
+`delta<0.088` and `e_tau<Lambda<0.134`, so (HA.2) gives
+
+\[
+r_\tau>0.845D-o(D),
+\]
+
+which is incompatible with that same-branch separation.  Thus every train occurring
+inside a putative pair with total energy below `Lambda` is on the required opposite
+normal branches.
+
+Now take O--O trains `tau,sigma` from two exact phases separated projectively by
+`pi/3`.  In the zero-energy configuration their two ideal endpoint diameters have
+alternating endpoints; the two smaller inter-family gaps are exactly `pi/3`.  If the
+actual endpoints do **not** alternate, one of those gaps must close.  Therefore one
+endpoint deviation from `tau` and one from `sigma`, say `a,b`, obey
+
+\[
+a+b\ge{\pi\over3}-o(1).
+\]
+
+Using (HA.1) and convexity again,
+
+\[
+e_\tau+e_\sigma
+\ge2\left(1-\cos{a+b\over2}\right)-o(1)
+\ge2-\sqrt3-o(1).
+\tag{HA.3}
+\]
+
+Finally, two noncrossing proper O--O train arcs cannot have alternating boundary
+endpoints after the audited convex-pocket retraction.  Hence
+
+\[
+\boxed{
+\tau\not\pitchfork\sigma
+\Longrightarrow
+ e_\tau+e_\sigma\ge2-\sqrt3-o(1).
+}
+\tag{HA.4}
+\]
+
+There is no hidden assertion that every O--O train is individually low-energy.  To
+prove (HA.4), assume the pair energy were below `Lambda`; then each individual energy
+is below `Lambda`, which is exactly the regime in which the opposite-branch step above
+applies.  This resolves the main dependency-scope concern.
+
+**Verdict:** PASS.
+
+---
+
+## 2. The `z>2.2196` retention maximization has the correct boundary logic
+
+The candidate uses
+
+\[
+2\delta+x+h=R_t,
+\qquad 0\le h<0.00013,
+\]
+
+and the retained-mass/complement ceiling
+
+\[
+z+p\ge\pi-{t\over2}-x-1.05h-o(1),
+\]
+
+\[
+p\le{1.05^2h^2+\delta-F(z)\over2(1-\delta)}+o(1).
+\]
+
+Under a cap `z<=Z=2.2196`, the capped retained quantity is increasing in `z`; the exact
+certificate bounds its `z` derivative below by more than `0.96`.  On the branch
+`delta>=F(Z)`, increasing `x` decreases `delta` and increases the survivor excess until
+`delta=F(Z)`.  The verifier checks the relevant `x` derivative has the claimed positive
+sign throughout the box.
+
+On that boundary,
+
+\[
+x=R_t-h-2F(Z),
+\]
+
+and the survivor excess increases with `t` and with `h`.  Thus the adverse point is
+`t=1.8436` and the largest `h` compatible with `x>=0`, namely
+
+\[
+h_*=R_{1.8436}-2F(Z).
+\]
+
+The exact certificate brackets `h_*` below `0.00013` and gives a strictly negative
+capped-retention margin below `-5e-5`.
+
+On the complementary branch `delta<F(Z)`, the maximally allowed `z` is
+`F^{-1}(delta)<Z`.  This is the same residual survivor function whose previously
+audited derivatives are negative in both `x` and `h`; moving toward smaller `x,h`
+increases `delta` until either the boundary `delta=F(Z)` is met or the global endpoint
+is reached.  At `t=1.8436` the global endpoint is already on the first branch, and
+smaller `t` is easier to exclude by the parent monotonicity.  No interior maximizer is
+missed.
+
+Therefore
+
+\[
+\boxed{z>2.2196-o(1)}
+\]
+
+is valid.
+
+**Verdict:** PASS.
+
+---
+
+## 3. Phasewise bathtub promotion to `z_i>0.7179` is valid
+
+The phase-resolved selected outer-edge supports are disjoint and obey
+
+\[
+\delta\ge f(z_C)+f(z_U)+f(z_V)-o(1),
+\qquad f(s)=s-2\sin(s/2).
+\]
+
+The function `f` is increasing and strictly convex on the relevant interval.  If one
+phase has retained mass at most `a=0.7179`, while total retained mass is at least
+`Z=2.2196`, the minimum energy occurs at
+
+\[
+(a,(Z-a)/2,(Z-a)/2).
+\]
+
+The certificate proves this energy exceeds the uniform detour ceiling by more than
+`8e-7`.  The margin is small but exact and positive; the asymptotic statement is
+strict, so the usual source-limit then phase-window-limit order absorbs the `o(1)`
+terms.
+
+Thus
+
+\[
+\boxed{z_C,z_U,z_V>0.7179-o(1).}
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 4. The leaf pair-weight floor is normalized correctly
+
+For retained terminal weights `a_tau,b_tau in[0,1]`,
+
+\[
+a_\tau+b_\tau\le1+\min(a_\tau,b_\tau).
+\]
+
+Summing inside one exact leaf phase gives
+
+\[
+z_i\le M_i+P_i+o(1).
+\]
+
+The independent near-frontier theorem gives `U,V<0.513-o(1)`.  Combining with the new
+phasewise occurrence floor gives
+
+\[
+\boxed{P_U,P_V>0.2049-o(1).}
+\]
+
+No conversion from weighted mass to an unweighted train count occurs here.
+
+**Verdict:** PASS.
+
+---
+
+## 5. The common-center bad-weight bound is safe
+
+Let
+
+\[
+x=CU-e(C,U),
+\qquad y=CV-e(C,V),
+\]
+
+be the full missing center/leaf crossing masses.  The hostile-audited dominant-orbit
+correlation gives
+
+\[
+\left(1-{V\over C}\right)x+
+\left(1-{U\over C}\right)y
+\le C(W-C)-E_{dom}.
+\tag{HA.5}
+\]
+
+A retained O--O train with center degree at most half the finite frozen center family
+misses at least `CD/2-o(D)` center trains.  Multiplying by its retained pair weight and
+summing shows that the total bad retained weight in the two leaf families is at most
+
+\[
+{2(x+y)\over C}+o(1).
+\]
+
+Since `U>=V`, (HA.5) gives
+
+\[
+{2(x+y)\over C}
+\le
+{2[C(W-C)-E_{dom}]\over C-U}+o(1).
+\]
+
+Substitution of the safe bounds
+
+\[
+W<1.912456,
+\qquad E_{dom}>0.90689967,
+\qquad U<0.513
+\]
+
+is in the adverse direction.  The companion certificate reduces the remaining
+one-variable inequality to
+
+\[
+q(C)=0.03405(C-0.513)
+-2[C(1.912456-C)-0.90689967]>0.
+\]
+
+Its leading coefficient is positive and its exact discriminant is negative.  Hence
+
+\[
+\boxed{B_{bad}<0.03405-o(1).}
+\]
+
+Even if every bad unit of weight is charged to one leaf, both leaves retain good
+weight
+
+\[
+\boxed{G_U,G_V>0.17085-o(1).}
+\]
+
+Every good train has degree strictly greater than half the same finite center set, so
+every good U/V pair shares a center neighbor.
+
+**Verdict:** PASS.
+
+---
+
+## 6. Triangle-freeness forces the full good cross-product to be noncrossing
+
+Take a good U-leaf O--O train and a good V-leaf O--O train.  Their center neighborhoods
+both contain more than half of the center family, so they intersect.  A common center
+train crosses both leaf trains in strict rhombi.
+
+If the two leaf trains also crossed, these three trains would form a triangle in the
+strict-rhombus train-crossing graph, forbidden throughout the triangle-free C-II
+branch.  Thus every pair in the entire good U x V product is noncrossing.
+
+The two leaf exact atoms have mutual projective phase separation `pi/3`: although their
+oriented representatives can differ by `2pi/3`, projectively this is the same
+`pi/3` separation.  Therefore (HA.4) applies uniformly to every pair in this product.
+
+**Verdict:** PASS.
+
+---
+
+## 7. Weighted product averaging has no hidden count/weight conversion
+
+For every good pair,
+
+\[
+e_\tau+e_\sigma\ge\Lambda-o(1),
+\qquad \Lambda=2-\sqrt3.
+\]
+
+Multiplication by `w_tau w_sigma` and summation gives
+
+\[
+G_VE_U^g+G_UE_V^g
+\ge\Lambda G_UG_V-o(1).
+\]
+
+If `G_U<=G_V`, then nonnegativity gives
+
+\[
+G_VE_U^g+G_UE_V^g
+\le G_V(E_U^g+E_V^g),
+\]
+
+so
+
+\[
+E_U^g+E_V^g\ge\Lambda G_U-o(1).
+\]
+
+The symmetric case is identical.  Thus
+
+\[
+E_U+E_V
+\ge\Lambda\min(G_U,G_V)-o(1).
+\]
+
+The phase-window and Type-II geometric errors in the cross-phase endpoint theorem are
+uniform after each window is frozen, so summing over `O(D^2)` weighted pairs and then
+normalizing by `D^2` preserves an `o(1)` error.  No unweighted cardinality lower bound
+is required.
+
+**Verdict:** PASS.
+
+---
+
+## 8. The final energy ledger is genuinely disjoint
+
+For a leaf O--O train, the pair energy is weighted by
+
+\[
+w_\tau=\min(a_\tau,b_\tau)\le a_\tau,b_\tau,
+\]
+
+so `E_U+E_V` is a sub-sum of actual selected outer-edge directional energy in the two
+leaf phase windows.  The center one-well energy `f(z_C)` uses only selected outer-edge
+occurrences in the disjoint center phase window.  Therefore
+
+\[
+\delta\ge f(z_C)+E_U+E_V-o(1)
+\]
+
+adds physically disjoint energy contributions; it does not spend the detour budget
+three times.
+
+Using the safe rational bound `sqrt(3)<1.7321`, the certificate gives
+
+\[
+E_U+E_V>0.045770715-o(1),
+\]
+
+while
+
+\[
+f(0.7179)>0.0153173048.
+\]
+
+Thus
+
+\[
+\delta>0.0610880198-o(1).
+\]
+
+The envelope gives
+
+\[
+\delta<0.05034454+o(1).
+\]
+
+The contradiction margin exceeds `0.01074`, vastly larger than the earlier
+phase-imbalance certification margin.
+
+**Verdict:** PASS.
+
+---
+
+## 9. Certificate and final disposition
+
+The exact certificate is internally consistent with the analytic proof:
+
+- Machin rational bounds enclose `pi`;
+- integer-square-root bounds enclose `sqrt(3)` and `sqrt(Delta_2)`;
+- alternating Taylor bounds are used in the correct outward direction for both `F`
+  and the one-well phase energy;
+- the `z=2.2196` retention boundary is certified inside the `h<0.00013` box;
+- the phase-imbalance sign is positive;
+- the common-center quadratic has negative discriminant;
+- the final energy margin is certified above `0.01`.
+
+The theorem therefore validly excludes the stated proof-only full-core Type-II branch
+through
+
+\[
+\boxed{t\le1.8436.}
+\]
+
+This is not a closure of C-II or Level I.  It is a new lower-frontier exclusion at the
+current full-core scope.
+
+**Final verdict:** **PASS. C-II and Level I remain open.**

@@ -1,0 +1,110 @@
+# Target C-II — coupled paired-remainder path architecture is exhausted near `t=1.86876905613`
+
+**Date:** 2026-09-15  
+**Status:** numerical architecture audit; proof endpoint remains the exact certified `t<=1.86875` theorem  
+**Scope:** same canonical full-core/no-macroscopic-container Type-II branch as the coupled paired-remainder path theorem  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This note records the endpoint audit performed after the exact `t<=1.86875` extension.
+It is not a new certified theorem beyond that rational endpoint. Its purpose is to
+identify whether more effort should be spent tuning the same scalar architecture.
+
+Let
+
+\[
+F(z)=z-6\sin(z/6),
+\qquad
+U_0(T)={9T\over2}-2\pi.
+\]
+
+On the minimum-detour feasibility edge, `z=z_*(T)` is determined by the existing
+retained-mass equality `H_T(z)=0`. Put
+
+\[
+d=F(z_*),
+\qquad
+P=z_*-U_0(T)+2d,
+\qquad
+r=z_*-2P.
+\]
+
+The coupled paired-remainder lower bound with adaptive terminal threshold
+
+\[
+\lambda=d\mapsto a-d,
+\qquad a<2-\sqrt2,
+\]
+
+is
+
+\[
+L(T,a)=P-{d-F(r)\over a-d}.
+\]
+
+A floating high-precision solve gives
+
+\[
+\boxed{T_*=1.868769056131\ldots}
+\]
+
+for the first zero of this architecture. At the same point,
+
+\[
+z_*=2.0472836850558\ldots,
+\qquad
+d=0.0394958801770\ldots,
+\]
+
+and, to numerical precision,
+
+\[
+\boxed{P=0.}
+\]
+
+already. Consequently also `d-F(r)=0` there. Thus the terminal-energy denominator is
+not the limiting mechanism: changing `a` anywhere up to its physical ceiling
+`2-sqrt(2)` leaves the same endpoint to numerical precision.
+
+Representative solves:
+
+```text
+a = 0.5857000000000000 -> T_* = 1.868769056131000...
+a = 0.5857800000000000 -> T_* = 1.868769056131000...
+a = 0.5857860000000000 -> T_* = 1.868769056131000...
+a -> 2-sqrt(2)         -> T_* = 1.868769056131001...
+```
+
+At nearby values with the existing `a=0.5857`, the numerical low-energy floors are
+
+```text
+T = 1.868750 -> L ~= 1.8780e-4
+T = 1.868760 -> L ~= 8.9250e-5
+T = 1.868765 -> L ~= 3.9974e-5
+T = 1.868768 -> L ~= 1.0408e-5
+T = 1.868769 -> L ~= 5.53e-7
+T = 1.868770 -> L ~= -9.30e-6
+```
+
+So the exact committed endpoint `t<=1.86875` is already within about `1.91e-5` of the
+continuous limit of this proof architecture. Certifying another few decimal places
+would be mathematically legitimate but would not change the structural frontier.
+
+The correct next work is therefore **not** further threshold tuning. The path/rectangle
+program must gain a new inequality before the minimum-detour pair mass collapses, or
+use the finite high-`t` obstruction already extracted downstream:
+
+```text
+macroscopic common-order near-triangular rectangle
++ one-sided diameter routing through one dual hub
++ finite switching/terminal/KKT defect on selected interfaces
++ sparse one/two-bar layer reaction
++ fixed-k ladder transfer with only O_k(1) defects.
+```
+
+In particular, the unresolved task remains geometric/variational: eliminate the finite
+one/two-bar cusp inside the macroscopic rhombic grid, or derive a new retained-pair
+lower bound that does not vanish at `T_*`.
+
+**Disposition:** the coupled paired-remainder scalar architecture is numerically
+exhausted; retain `t<=1.86875` as the exact certified endpoint and redirect research to
+the finite-cusp/grid obstruction. C-II remains open.

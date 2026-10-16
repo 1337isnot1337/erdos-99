@@ -1,0 +1,154 @@
+#!/usr/bin/env python3
+from fractions import Fraction as Q
+from math import factorial, isqrt
+
+def atan_inv_bounds(q, n):
+    s = Q(0)
+    for k in range(n):
+        term = Q(1, (2*k+1)*q**(2*k+1))
+        s += term if k % 2 == 0 else -term
+    nxt = Q(1, (2*n+1)*q**(2*n+1))
+    return (s, s+nxt) if n % 2 == 0 else (s-nxt, s)
+
+def sqrt_bounds(lo, hi, scale):
+    a = isqrt((lo.numerator*scale*scale)//lo.denominator)
+    b = isqrt((hi.numerator*scale*scale)//hi.denominator)+1
+    return Q(a,scale), Q(b,scale)
+
+def sin_bounds(x, n=30):
+    s = Q(0)
+    for k in range(n):
+        term = x**(2*k+1)/factorial(2*k+1)
+        s += term if k % 2 == 0 else -term
+    nxt = x**(2*n+1)/factorial(2*n+1)
+    return (s,s+nxt) if n % 2 == 0 else (s-nxt,s)
+
+def F_bounds(z):
+    slo,shi=sin_bounds(z/6)
+    return z-6*shi, z-6*slo
+
+def phase_energy_bounds(z):
+    slo,shi=sin_bounds(z/2)
+    return z-2*shi, z-2*slo
+
+SCALE=10**100
+a5l,a5h=atan_inv_bounds(5,100)
+a239l,a239h=atan_inv_bounds(239,30)
+pi_lo,pi_hi=16*a5l-4*a239h,16*a5h-4*a239l
+n3=isqrt(3*SCALE*SCALE)
+sqrt3_lo,sqrt3_hi=Q(n3,SCALE),Q(n3+1,SCALE)
+K_lo,K_hi=Q(2)/sqrt3_hi,Q(2)/sqrt3_lo
+Delta_lo,Delta_hi=pi_lo/(2*sqrt3_hi),pi_hi/(2*sqrt3_lo)
+s_lo,s_hi=sqrt_bounds(Delta_lo,Delta_hi,SCALE)
+rcrit_lo,_=sqrt_bounds(Q(20,29),Q(20,29),SCALE)
+C707_lo,C707_hi=2*s_lo+Q(7707,1_000_000),2*s_hi+Q(7707,1_000_000)
+T=Q(36873,20000)
+c=Q(21,20)
+H=Q(189,500000)
+Rt_lo=Q(9,2)*T-2*pi_hi-C707_hi
+Rt_hi=Q(9,2)*T-2*pi_lo-C707_lo
+F1848_lo,_=F_bounds(Q(231,125))
+assert F1848_lo > Q(29,1000)
+Unet_scope_hi=Q(9,2)*T-2*pi_lo-2*F1848_lo
+assert Unet_scope_hi < Q(1956,1000) < Q(2013,1000)
+dH_hi=(Rt_hi-H)/2
+assert 0<dH_hi<Q(51,1000)
+B_H_hi=c*c*H*H/(2*(1-dH_hi))
+A_H_lo=pi_lo-T/2-c*H-B_H_hi
+FA_H_lo,_=F_bounds(A_H_lo)
+loc_margin=FA_H_lo-dH_hi
+assert loc_margin > Q(2,10_000_000)
+Fprime_cap=Q(67,500)
+Qx_upper=-1/(2*Fprime_cap)+1
+Qh_upper=-1/(2*Fprime_cap)+c+c*c*Q(101,1000)/(1-Q(51,1000))
+assert Qx_upper<Q(-27,10)
+assert Qh_upper<Q(-5,2)
+WBAR=Q(1912711,1000000)
+assert C707_hi+H < WBAR
+RMAX=c*H
+E0=Q(45344981,50000000)
+assert Delta_lo-RMAX*RMAX/4 > E0
+Z=Q(110967,50000)
+FZ_lo,FZ_hi=F_bounds(Z)
+delta_max_hi=Rt_hi/2
+assert delta_max_hi<Q(51,1000)
+Fprime_Z_hi=Z*Z/Q(72)
+assert 1-Fprime_Z_hi/(2*(1-delta_max_hi)) > Q(96,100)
+xH_lo=Rt_lo-H-2*FZ_hi
+assert xH_lo > Q(3,1_000_000)
+B_x_hi=(1+c*c*H*H-FZ_lo)/(2*(1-delta_max_hi)*(1-delta_max_hi))
+assert B_x_hi<1
+Bz_hi=c*c*H*H/(2*(1-FZ_hi))
+cap_excess_hi=(Z+Bz_hi-pi_lo+T/2+Rt_hi-2*FZ_lo+(c-1)*H)
+assert cap_excess_hi < Q(-2,100000)
+assert Rt_lo/2 > FZ_hi + Q(16,100000)
+A=Q(351,500)
+OTHER=(Z-A)/2
+assert A < Z/3
+fA_lo,_=phase_energy_bounds(A)
+fO_lo,_=phase_energy_bounds(OTHER)
+phase_imbalance_lo=fA_lo+2*fO_lo
+phase_margin=phase_imbalance_lo-delta_max_hi
+assert phase_margin > Q(1,1_000_000)
+U0=Q(663,1250)
+CLOW=WBAR-2*U0
+CHI=Q(10443,10000)
+alpha=Q(1,10)
+assert CLOW>U0
+# Generic center capacity alone excludes the low-center and high-center tails.
+assert CLOW < WBAR/2
+assert CLOW*(WBAR-CLOW) < E0-Q(3,1000)
+assert CHI > WBAR/2
+assert CHI*(WBAR-CHI) < E0-Q(1,100000)
+ratio_hi=(CHI+U0-K_lo)/U0
+assert ratio_hi<rcrit_lo
+def cap(C):
+    V=WBAR-C-U0
+    AA=1-V/C
+    BB=1-U0/C
+    x=alpha*(C+U0-K_hi)**2
+    y=alpha*(C+V-K_hi)**2
+    return C*(U0+V)-AA*x-BB*y
+def cap_prime(C):
+    V=WBAR-C-U0
+    AA=1-V/C
+    BB=1-U0/C
+    eU=C+U0-K_hi
+    eV=C+V-K_hi
+    x=alpha*eU*eU
+    y=alpha*eV*eV
+    AAp=(WBAR-U0)/(C*C)
+    BBp=U0/(C*C)
+    return WBAR-2*C-AAp*x-AA*(2*alpha*eU)-BBp*y
+Dconst=(K_hi*K_hi*WBAR+4*K_hi*U0*U0-4*K_hi*U0*WBAR-U0*U0*WBAR+U0*WBAR*WBAR)
+assert (1+2*alpha)*CLOW**3-alpha*Dconst > CLOW**3
+c0=Q(465707,500000)
+assert CLOW<c0<CHI
+f0=cap(c0); fp0=cap_prime(c0)
+cap_upper=f0+fp0*fp0/4
+leaf_cap_margin=E0-cap_upper
+assert leaf_cap_margin > Q(2,1_000_000)
+PAIR=A-U0
+assert PAIR==Q(429,2500)
+BAD=Q(367,10000)
+disc=(BAD-2*WBAR)**2-8*(2*E0-BAD*U0)
+assert disc < Q(-2,10000)
+GOOD=PAIR-BAD
+assert GOOD==Q(1349,10000)
+SQRT3_UP=Q(17321,10000)
+assert SQRT3_UP*SQRT3_UP>3
+ALT_COST_LO=2-SQRT3_UP
+leaf_energy_lo=ALT_COST_LO*GOOD
+final_energy_lo=leaf_energy_lo+fA_lo
+final_margin=final_energy_lo-delta_max_hi
+assert final_margin > Q(1,100000)
+print('PASS: no full-core Type-II survivor with t<=1.84365')
+print('residual-scope U upper =',float(Unet_scope_hi))
+print('h localization margin =',float(loc_margin))
+print('W upper =',float(WBAR),'dominant crossing lower =',float(E0))
+print('z cap excess upper =',float(cap_excess_hi),'x at h=H lower =',float(xH_lo))
+print('z lower =',float(Z),'phase floor =',float(A),'phase imbalance margin =',float(phase_margin))
+print('leaf mass cap =',float(U0),'strong ratio upper =',float(ratio_hi),'leaf capacity margin =',float(leaf_cap_margin))
+print('pair lower =',float(PAIR),'bad upper =',float(BAD),'good lower =',float(GOOD),'bad quadratic disc =',float(disc))
+print('leaf energy lower =',float(leaf_energy_lo),'center energy lower =',float(fA_lo))
+print('delta budget upper =',float(delta_max_hi),'final contradiction margin =',float(final_margin))

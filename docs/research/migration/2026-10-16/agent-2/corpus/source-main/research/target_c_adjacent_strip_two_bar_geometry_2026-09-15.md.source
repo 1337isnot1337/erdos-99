@@ -1,0 +1,307 @@
+# Target C-II — a minimal two-bar strip blocker is as parallel as the opening cone is narrow
+
+**Date:** 2026-09-15  
+**Status:** proof-only exact geometric strengthening  
+**Scope:** the non-antipodal branch of `target_c_adjacent_strip_two_bar_tangent_certificate_2026-09-15.md`  
+**Dependencies:** one/two-bar tangent certificate; elementary diameter geometry  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The one/two-bar tangent theorem reduces the first-order adjacent-strip obstruction to one or two actual switching diameter edges. This note identifies the geometry of a **minimal two-bar** certificate.
+
+Let `a,b` be the unit physical boundary-contact vectors oriented from the fixed exterior into the translated middle layer, and assume
+
+\[
+b\ne-a.
+\]
+
+Let
+
+\[
+\theta:=\angle(a,b)\in[0,\pi),
+\qquad
+\varepsilon:=\pi-\theta>0.
+\tag{BG.1}
+\]
+
+The tangent directions opening both contact families form the unit-circle arc
+
+\[
+\Omega
+=\{w\in S^1:a\cdot w\ge0,\ b\cdot w\ge0\},
+\]
+
+whose angular length is exactly `epsilon`.
+
+Suppose two switching diameter edges `h_1,h_2` form a **minimal** tangent certificate: together they satisfy the TB obstruction, but neither edge alone does. Let their orientation-independent inward diameter vectors be
+
+\[
+n_1,n_2,
+\qquad |n_1|=|n_2|=D.
+\]
+
+Then
+
+\[
+\boxed{
+ d_{\mathbb{RP}^1}(n_1,n_2)
+ \le\varepsilon.
+}
+\tag{BG.2}
+\]
+
+Thus a narrow physical opening cone forces the two load-bearing diameter bars to be almost parallel projectively.
+
+More quantitatively, after orienting the two unordered diameter segments so their unit directions `u_1,u_2` realize the projective angle
+
+\[
+\eta:=d_{\mathbb{RP}^1}(n_1,n_2),
+\]
+
+and writing them as
+
+\[
+y_j-x_j=D u_j,
+\qquad j=1,2,
+\]
+
+one has
+
+\[
+\boxed{
+|x_2-x_1|\le2D\sin(\eta/2),
+\qquad
+|y_2-y_1|\le2D\sin(\eta/2).
+}
+\tag{BG.3}
+\]
+
+Combining (BG.2)--(BG.3),
+
+\[
+\boxed{
+|x_2-x_1|,\ |y_2-y_1|
+\le2D\sin(\varepsilon/2)
+\le D\varepsilon.
+}
+\tag{BG.4}
+\]
+
+Therefore any subbranch with
+
+\[
+\varepsilon=O(D^{-1})
+\]
+
+has a minimal two-bar certificate whose corresponding diameter endpoints occur in two `O(1)` clusters.
+
+---
+
+## 1. The opening arc has width `epsilon`
+
+Rotate coordinates so
+
+\[
+a=(1,0),
+\qquad
+b=(\cos\theta,\sin\theta),
+\qquad 0\le\theta<\pi.
+\]
+
+The inequality `a dot w>=0` cuts the unit circle to one closed semicircle. The inequality `b dot w>=0` cuts it to another. Their common component is
+
+\[
+\arg w\in[\theta-\pi/2,\ \pi/2],
+\]
+
+so its length is
+
+\[
+\pi/2-(\theta-\pi/2)=\pi-\theta=\varepsilon.
+\]
+
+This proves the claimed width of `Omega`.
+
+---
+
+## 2. A minimal two-bar certificate attaches to opposite ends of the opening arc
+
+For `j=1,2`, define the shortening-direction interval
+
+\[
+I_j:=\{w\in\Omega:n_j\cdot w<0\}.
+\tag{BG.5}
+\]
+
+The two-bar tangent theorem gives
+
+\[
+I_1\cap I_2=\varnothing.
+\tag{BG.6}
+\]
+
+Minimality means neither edge is a one-bar certificate, so
+
+\[
+I_1\ne\varnothing,
+\qquad
+I_2\ne\varnothing.
+\tag{BG.7}
+\]
+
+Parameterize the opening arc by angle
+
+\[
+t\in[0,\varepsilon].
+\]
+
+For one fixed nonzero normal `n`, the condition `n dot w(t)<0` is the intersection of this arc with one open semicircle. Because the ambient arc has length at most `pi`, any nonempty proper such interval touches one endpoint of the ambient arc in its closure. If it touched neither endpoint, both of its zero crossings would lie inside an arc of length at most `pi`, which would force the negative semicircle itself to have length strictly less than `pi`.
+
+Since `I_1,I_2` are nonempty and disjoint, after interchanging their labels if necessary there are numbers
+
+\[
+0\le s_1\le s_2\le\varepsilon
+\tag{BG.8}
+\]
+
+such that, up to endpoint inclusion,
+
+\[
+I_1\subseteq[0,s_1),
+\qquad
+I_2\subseteq(s_2,\varepsilon].
+\tag{BG.9}
+\]
+
+At the interior boundary of `I_1`, the vector `n_1` is perpendicular to `w(s_1)` and points so that the left side is negative. At the interior boundary of `I_2`, `n_2` is perpendicular to `w(s_2)` with the opposite crossing orientation. Hence, after choosing real direction angles `phi_1,phi_2`, one may write
+
+\[
+\phi_1=s_1+\pi/2,
+\qquad
+\phi_2=s_2-\pi/2
+\pmod{2\pi}.
+\tag{BG.10}
+\]
+
+Therefore
+
+\[
+\phi_1-\phi_2
+=\pi-(s_2-s_1).
+\]
+
+Projectivizing removes the `pi`, so
+
+\[
+ d_{\mathbb{RP}^1}(n_1,n_2)
+=s_2-s_1
+\le\varepsilon.
+\]
+
+This proves (BG.2).
+
+The same conclusion includes the endpoint-degenerate cases by continuity: if one shortening interval reaches all the way to the other's boundary, then `s_1=s_2` and the two diameter directions are exactly parallel projectively.
+
+---
+
+## 3. Quantitative parallel-diameter uniqueness
+
+We now prove a finite quantitative form of the standard uniqueness-of-parallel-diameters lemma.
+
+Let a finite Euclidean set have diameter `D`, and suppose it contains two diameter segments
+
+\[
+y_1-x_1=D u_1,
+\qquad
+y_2-x_2=D u_2,
+\qquad |u_1|=|u_2|=1.
+\]
+
+Put
+
+\[
+z:=x_2-x_1.
+\]
+
+Since **every** pair distance is at most `D`, the two cross-distances satisfy
+
+\[
+|y_2-x_1|=|z+D u_2|\le D,
+\tag{BG.11}
+\]
+
+\[
+|y_1-x_2|=|D u_1-z|\le D.
+\tag{BG.12}
+\]
+
+Square and add. After cancelling `2D^2`,
+
+\[
+2|z|^2+2D z\cdot(u_2-u_1)\le0.
+\]
+
+Equivalently,
+
+\[
+\boxed{
+\left|z+{D\over2}(u_2-u_1)\right|
+\le {D\over2}|u_2-u_1|.
+}
+\tag{BG.13}
+\]
+
+The center and radius on the right have the same norm. Thus
+
+\[
+|z|\le D|u_2-u_1|.
+\tag{BG.14}
+\]
+
+Also
+
+\[
+y_2-y_1=z+D(u_2-u_1),
+\]
+
+and (BG.13), now viewed around the opposite center, gives identically
+
+\[
+|y_2-y_1|\le D|u_2-u_1|.
+\tag{BG.15}
+\]
+
+If the projective angle of the two unordered segments is `eta`, reverse the orientation of the second segment if necessary so the ordinary angle of `u_1,u_2` is `eta`. Then
+
+\[
+|u_2-u_1|=2\sin(\eta/2).
+\]
+
+Equations (BG.14)--(BG.15) prove (BG.3).
+
+At `eta=0`, the right side vanishes and the two unordered diameter pairs coincide, recovering the exact parallel-diameter uniqueness theorem.
+
+---
+
+## 4. Interaction with the ordered switching interface
+
+The two certificate edges are switching edges of one adjacent physical layer, so the existing switching-order theorem still applies.
+
+If they are vertex-disjoint, the diameter-thrackle property forces them to cross properly. Equation (BG.4) then says that, in the narrow-opening regime, the two crossing diameter chords have corresponding endpoints in two bounded Euclidean clusters after the projectively aligned orientation is chosen.
+
+If they share an endpoint, one of the two corresponding endpoint distances in (BG.4) can be zero; the other pair of diameter endpoints is then within `D epsilon`.
+
+Hence a narrow-opening TB2 obstruction cannot be spatially diffuse. It is an `O(D epsilon)` local diameter-chord pattern embedded in the one-arc prefix/hub/suffix switching interface.
+
+This is the geometric scale needed for the next packing/contact argument.
+
+---
+
+## 5. Scope audit
+
+- The theorem is conditional on the physical opening-cone width `epsilon`. Projective closeness of the two train directions alone does **not** automatically identify which physical sign branch gives a narrow `epsilon`; that sign issue must be proved separately before substituting an `O(D^-1)` bound.
+- The theorem concerns a **minimal two-bar tangent certificate**. A one-bar certificate is governed instead by the dual-cone condition `n_h in cone{a,b}` from the parent theorem.
+- Endpoint pairing in (BG.3) is chosen after orienting the two unordered diameter segments to realize their projective angle. It need not coincide with left/right strip membership labels.
+- `O(1)` endpoint clustering does not by itself force a unit triangle.
+- No KKT coefficient lower bound is used.
+
+**Disposition:** proved proof-only geometry/localization theorem for minimal two-bar adjacent-strip blockers. C-II and Level I remain open.

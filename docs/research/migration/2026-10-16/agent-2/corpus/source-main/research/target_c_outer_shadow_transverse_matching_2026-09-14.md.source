@@ -1,0 +1,314 @@
+# Erdős Problem #99 — transverse blocker matching on the outer shadow
+
+**Date:** 2026-09-14  
+**Target:** Target C-II, near-low-`t` canonical full-core branch  
+**Claim class:** proof-only geometric refinement of the outer-shadow theorem  
+**External input:** none
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The exact outer-shadow identity pays the angular misalignment of every outer-walk contact edge against its corresponding loaded-hull side. If we retain only edge occurrences lying in a narrow cone around that side, an internal retained occurrence has two nearly antipodal contact rays.
+
+For cone half-width
+
+\[
+0<\alpha<\pi/12,
+\]
+
+triangle-freeness makes these near-antipodal contact pairs a **matching** in the contact-neighbor set of each source vertex. This removes the factor-five occurrence loss from the coarse blocker theorem.
+
+Let `G_alpha` be the number of internal outer-walk occurrences whose incoming and outgoing oriented unit edges both make angle `<alpha` with the corresponding loaded hull-side direction. Let `E_tr(alpha)` be the number of distinct selected blocker contact edges after one blocker is chosen at every source vertex supporting such an occurrence, except loaded degree-two vertices.
+
+Then finitely
+
+\[
+\boxed{
+2s_B+4E_{tr}(\alpha)
+\ge
+x_B-{2(b-P_F)\over1-\cos\alpha}.
+}
+\tag{TM.1}
+
+Moreover every selected blocker edge can be associated with one loaded hull side so that its absolute transverse component relative to that side is strictly greater than
+
+\[
+\boxed{
+Y_\alpha:=\sin(\pi/3-\alpha).
+}
+\tag{TM.2}
+
+Thus the low-`t` outer shadow cannot be supported only by almost-tangent contacts.
+
+For the explicit safe choice
+
+\[
+\alpha=\pi/13<\pi/12,
+\]
+
+and the AG58 Section-171 endpoint,
+
+\[
+\boxed{
+{2s_B+4E_{tr}(\pi/13)\over D}
+\ge1.12538696889038\ldots-o(1),
+}
+\tag{TM.3}
+
+while every selected blocker has transverse component
+
+\[
+\boxed{
+>\sin(10\pi/39)
+=0.721202447343814\ldots .
+}
+\tag{TM.4}
+
+Consequently at least one of `s_B/D` or `E_tr/D` has limsup at least
+
+\[
+\boxed{0.187564494815064\ldots .}
+\tag{TM.5}
+
+The weighted inequality (TM.3), not the max corollary, is the main statement.
+
+---
+
+## 1. Angular projection budget
+
+Retain the loaded-hull interval notation from the outer-shadow theorem. On interval `W_i`, let `nu_i` be the unit chord direction and `e` an oriented unit outer-walk edge occurrence. Exact vector summation gives
+
+\[
+ b-P_F
+ =\sum_{i,e}(1-\nu_i\cdot e).
+\tag{1.1}
+
+Call an edge occurrence `alpha`-bad if its unsigned oriented angle from `nu_i` is at least `alpha`. Then
+
+\[
+1-\nu_i\cdot e\ge1-\cos\alpha.
+\]
+
+Therefore the total bad-edge occurrence count satisfies
+
+\[
+\boxed{
+N_{bad}(\alpha)
+\le{b-P_F\over1-\cos\alpha}.
+}
+\tag{1.2}
+
+There are exactly `x_B=b-q` internal positions on the loaded-hull outer-walk intervals. One bad edge occurrence spoils at most two such positions, so
+
+\[
+\boxed{
+G_\alpha
+\ge x_B-{2(b-P_F)\over1-\cos\alpha}.
+}
+\tag{1.3}
+
+---
+
+## 2. Every good occurrence is a near-antipodal contact pair
+
+At an `alpha`-good internal occurrence, let the incoming and outgoing oriented walk-edge vectors be `e_-` and `e_+`. Both lie within angle `alpha` of `nu_i`.
+
+The two corresponding contact rays from the source vertex are
+
+\[
+-e_-,\qquad e_+.
+\]
+
+Their angular separation from exact antipodality is at most `2alpha`; equivalently their smaller mutual angle is at least
+
+\[
+\pi-2\alpha.
+\tag{2.1}
+
+Call any pair of contact rays satisfying (2.1) an `alpha`-antipodal pair.
+
+---
+
+## 3. For `alpha<pi/12`, the antipodal pairs form a matching
+
+Fix one contact ray `r`. Any second ray `r'` forming an `alpha`-antipodal pair with it must lie within angular distance `2alpha` of the antipodal ray `-r`. Thus all possible partners of `r` lie in one angular arc of total width
+
+\[
+4\alpha<\pi/3.
+\]
+
+Triangle-free unit separation makes any two distinct contact-neighbor rays at one source vertex separated by strictly more than `pi/3`. Therefore the partner arc contains at most one contact ray.
+
+Hence:
+
+\[
+\boxed{
+\text{the graph of `alpha`-antipodal contact-ray pairs at one vertex is a matching.}
+}
+\tag{3.1}
+
+Positive-core contact degree is at most five, so there are at most two such unordered pairs at any source vertex.
+
+For degree at least three, one unordered consecutive pair of incident edges determines at most one face-sector occurrence: the complementary sector contains at least one other incident ray. Thus a degree-`>=3` source vertex supports at most two `alpha`-good outer-face occurrences.
+
+A loaded degree-two vertex has only one ray pair but the same outer face may occupy both sectors, so it supports at most two occurrences as well.
+
+---
+
+## 4. Degree-two versus blocker classification
+
+An `alpha`-good occurrence uses two distinct physical contact incidences. A degree-one bridge turnaround would traverse one edge in opposite directions, and the two oriented occurrences could not both lie within `alpha<pi/2` of the same `nu_i`.
+
+If its source vertex has contact degree two and is unloaded, positive contact equilibrium would require an exact straight balanced two-contact chain. Canonical C26/C35 excludes unloaded positive-core degree-two vertices in C-II. Therefore every degree-two source vertex supporting a good occurrence is loaded and contributes one unit to
+
+\[
+s_B=\sum_{b\in B}(3-\deg_C b).
+\]
+
+Every other supporting vertex has contact degree at least three. Choose one contact edge at that vertex not belonging to one selected good pair and call it a blocker.
+
+Let `V_tr` be the number of distinct blocker vertices. Section 3 gives
+
+\[
+G_\alpha\le2s_B+2V_{tr}.
+\tag{4.1}
+
+One physical blocker edge can be selected at at most its two endpoints, so
+
+\[
+V_{tr}\le2E_{tr}(\alpha).
+\tag{4.2}
+
+Combining (1.3), (4.1), and (4.2) proves (TM.1).
+
+---
+
+## 5. Every blocker is strongly transverse
+
+Fix a blocker vertex and the selected `alpha`-good occurrence used to define it. Let `u=nu_i` and let `n` be a unit normal.
+
+The two walk contact rays lie within `alpha` of `+u` and `-u`. Every third contact ray is separated from each of them by strictly more than `pi/3`.
+
+If the projective angle of the blocker from the axis `Ru` were at most `pi/3-alpha`, it would lie within angular distance at most
+
+\[
+(\pi/3-\alpha)+\alpha=\pi/3
+\]
+
+of one of the two walk contact rays, contradiction.
+
+Therefore its projective angle from `u` is greater than `pi/3-alpha`, and
+
+\[
+\boxed{
+|n\cdot e_{block}|>\sin(\pi/3-\alpha)=Y_\alpha.
+}
+\tag{5.1}
+
+No sign is asserted: for a deep outer indentation the blocker may point toward or away from the loaded hull side. The theorem is an absolute transverse-penetration statement.
+
+---
+
+## 6. AG58 endpoint arithmetic
+
+At the safe AG58 Section-171 endpoint put
+
+\[
+t=t_{58}=1.820922037979444\ldots,
+\]
+
+\[
+\delta={b-P_F\over D},
+\qquad
+\kappa={k\over D}.
+\]
+
+The feasible low-`t` budget is
+
+\[
+2\delta+{\kappa\over2}\le R_{58}=0.00575825.
+\tag{6.1}
+
+Also
+
+\[
+{x_B\over D}=\pi+\delta-t-\kappa+o(1).
+\]
+
+For fixed `alpha`, (TM.1) has normalized right side
+
+\[
+\pi-t-\kappa
++\delta\left(1-{2\over1-\cos\alpha}\right).
+\tag{6.2}
+
+Use the largest feasible `kappa=2R58-4delta`. This becomes
+
+\[
+\pi-t-2R_{58}
++\delta\left(5-{2\over1-\cos\alpha}\right).
+\tag{6.3}
+
+For every `alpha<pi/12`, the coefficient of `delta` is negative, so the worst case is
+
+\[
+\delta=R_{58}/2,
+\qquad
+\kappa=0.
+\]
+
+With `alpha=pi/13`, outward numerical evaluation gives
+
+\[
+\boxed{
+\pi-t+{R_{58}\over2}
+-{R_{58}\over1-\cos(\pi/13)}
+=1.12538696889038\ldots .
+}
+\tag{6.4}
+
+Also
+
+\[
+Y_{\pi/13}
+=\sin\left({\pi\over3}-{\pi\over13}\right)
+=\sin(10\pi/39)
+=0.721202447343814\ldots .
+\]
+
+This proves (TM.3)--(TM.4). If both `s_B/D` and `E_tr/D` were smaller than one sixth of the right side of (TM.3), then `2s_B+4E_tr` would be too small. Hence (TM.5).
+
+---
+
+## 7. Frontier effect
+
+Near the current `q-k` floor the actual source boundary must therefore exhibit one of two first-order mechanisms:
+
+```text
+loaded-slack branch:
+    >=0.18756 D loaded degree slack;
+
+transverse-network branch:
+    >=0.18756 D distinct blocker contacts;
+    each can be tagged to a loaded hull side with transverse component >0.7212.
+```
+
+The branch constants are deliberately symmetric and weaker than the weighted tradeoff. If `s_B` is independently small, (TM.3) forces nearly `0.28D` transverse blocker edges.
+
+This theorem subsumes the local transverse geometry behind shallow two-edge teeth and extends it to arbitrary near-geodesic loaded-hull shadow routes, including the rounded long-side branch.
+
+---
+
+## 8. Scope and remaining obstruction
+
+- The theorem is occurrence-safe in the presence of bridges and repeated articulation vertices.
+- The matching argument uses only the strict `>pi/3` contact-ray separation and `alpha<pi/12`.
+- The transverse component is absolute; no inward sign is claimed for a general outer-shadow blocker.
+- `E_tr` counts physical unit-contact edges, not KKT weight and not stopped trains.
+- Contact-isolated source points do not occur on the positive-contact outer walk.
+- No strict sub-`D` competitor or exact unit triangle is obtained.
+
+The next target is global: couple this linear transverse contact population to the train-phase system or show that the loaded-slack branch is incompatible with the near-extremal diameter thrackle.
+
+**Disposition:** proof-only geometric strengthening. C-II remains open.

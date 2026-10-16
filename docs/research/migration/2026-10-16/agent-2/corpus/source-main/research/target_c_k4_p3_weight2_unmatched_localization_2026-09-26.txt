@@ -1,0 +1,13 @@
+Target C weight-two unmatched-coordinate reduction, 2026-09-26.
+
+Scope: remaining eight-no-root k=4, D=-1, d_root=0, p=3 three-singleton profile.
+
+Let M_1,...,M_r be the disjoint supports of the r>=1 weight-two lines of P<=Q^8, and U the coordinates outside their union. The committed sharp-shadow result gives E_b not contained in P+K_(M_i union {j}) for every selected singleton b, every i, and every j outside M_i.
+
+Therefore a nonzero quotient representative for W_b=(E_b+P)/P cannot have weight one. A weight-two representative cannot meet any M_i, since then its support is contained in M_i union {j} for a suitable j. Hence every weight-two representative is supported inside U.
+
+Consequences: for r=4 the quotient distance is at least three; for r=3 every weight-two representative is exactly the unique unmatched pair. A rank-two singleton with three touches has local multiplicities 1+1+1 and yields two different weight-two quotient representatives whose union has three coordinates, impossible when r>=3. Thus rank-two singletons have at least four touches for r=3,4.
+
+For r=4, the perfect-matching basis makes the singleton line support a union of matched pairs, while each quotient row is active on at least three pair quotients. At four touches the unique local profile is (m_s;m_1,m_2)=(2;1,1). The two nonselected touches form one matched pair and the two selected-direction touches lie in two distinct other pairs, giving exact pair occupancy 2+1+1.
+
+This is a reduction, not closure. The companion exact checker is verify_target_c_support7_global_segment_relative_eight_noroot_k4_dminus1_d0p3_weight2_unmatched_localization_2026_09_26.py.

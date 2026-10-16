@@ -1,0 +1,126 @@
+<!-- theorem-state: {"artifact_id":"ART-A9573D025ACD","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
+# Erdős Problem #99 — Target A contact-edge common lattice neighbor
+
+**Date:** 2026-09-04  
+**Branch:** `research/target-c-c97-caterpillar-fan-capacity-2026-09-04`  
+**Run type:** exact sharpening of the Section 173 right-shore shield  
+**Target:** locked three-channel Schur sector branch  
+**Status:** LEVEL I STILL OPEN
+
+## 1. Equality extension of the Section 164 common-neighbor theorem
+
+Let `Lambda` be the actual response triangular lattice. The common placement chooses its phase generic for the finite response set `X^*`: no response point lies on the lattice and no response-point-to-lattice distance is exactly one.
+
+For a response point `x`, put
+
+`N_Lambda(x)={y in Lambda: |x-y|<1}`.
+
+Section 164.1 proves more geometrically than its strict-distance statement records. If `x` is generic and
+
+`U_x = union_{y in N_Lambda(x)} B(y,1)`,
+
+then its triangle/lozenge cell proof gives
+
+`dist(x, R^2\U_x) >= 1`.
+
+This extends to a unit-distance partner provided that partner is also lattice-generic.
+
+### Theorem CN1 — common strict lattice neighbor on a unit contact
+
+Let `x,a` both be generic for the same unit triangular lattice and suppose
+
+`|x-a|=1`.
+
+Then
+
+`N_Lambda(x) cap N_Lambda(a) != empty`.
+
+### Proof
+
+Assume `a notin U_x`. Since `a` lies in the complement and `|x-a|=1`, the Section-164 distance estimate is sharp at `a`.
+
+If `a` were an interior point of the complement, a sufficiently small displacement from `a` toward `x` would remain in the complement while having distance strictly below one from `x`, contradicting
+
+`dist(x,R^2\U_x)>=1`.
+
+Hence `a` lies on `partial U_x`.
+
+But the boundary of `U_x` is contained in the union of the unit circles centered at the finitely many sites in `N_Lambda(x)`. Thus some `y in N_Lambda(x)` satisfies
+
+`|a-y|=1`,
+
+contradicting genericity of `a`.
+
+Therefore `a in U_x`, so for some `y in N_Lambda(x)` one has `|a-y|<1`. This `y` lies in both strict neighborhoods. QED.
+
+The strict-generic response phase needed here is already available in the Target A common placement.
+
+## 2. Connected contact shields cost at most three new lattice sites per vertex
+
+Let `Sigma` be a connected unit-contact graph in `X^*`, and let the Section 173 right-shore shield be
+
+`R_Sigma = (union_{q in V(Sigma)} N_Lambda(q)) cap Y_in`.
+
+Every generic response vertex has three or four strict lattice neighbors, so
+
+`|N_Lambda(q)|<=4`.
+
+Choose a spanning-tree order `q_1,...,q_v` in which every `q_j`, `j>1`, has an earlier parent joined to it by a unit contact edge. Theorem CN1 gives a common strict lattice neighbor of `q_j` and its parent. Therefore
+
+`|N_Lambda(q_j) \ union_{i<j}N_Lambda(q_i)| <=3`.
+
+Starting with at most four sites gives:
+
+### Corollary CN2 — connected contact-shield bound
+
+`|R_Sigma| <= 3|V(Sigma)|+1`.
+
+This improves the generic Section 173 union bound `4|V(Sigma)|` without any assumption on contact-edge direction.
+
+## 3. The locked fan improves to exactly three sites per fan vertex
+
+For the Section 172 locked fan, the unique cycle is the locked unit equilateral triangle `T` and all remaining contact edges form three vertex-disjoint channel trees attached to its three vertices.
+
+First bound the lattice neighborhood of the three triangle vertices. If `y,y'` are any two lattice sites lying in
+
+`R_T = union_{q in V(T)} N_Lambda(q)`,
+
+choose triangle vertices `q,q'` with
+
+`|y-q|<1`, `|y'-q'|<1`.
+
+The diameter of a unit equilateral triangle is one, so
+
+`|y-y'| < 1+|q-q'|+1 <=3`.
+
+Partition the triangular lattice into the nine cosets of the index-nine sublattice `3Lambda`. Distinct points in one coset are at distance at least three. Hence the strict-diameter estimate above allows at most one point from each coset:
+
+`|R_T|<=9`.
+
+Now grow the three channel trees away from the triangle. Every added response vertex is joined by a unit contact edge to an already present vertex, so Theorem CN1 says its strict lattice neighborhood contributes at most three new sites. If the full fan has `v` vertices, there are `v-3` added vertices. Therefore
+
+### Theorem CN3 — locked-fan right-shore shield
+
+`|R_Sigma| <= 9+3(v-3)=3v`.
+
+## 4. Improved locked Schur endpoint
+
+Combine CN3 with the contracted contact-shield Hall theorem
+
+`zeta >= delta_Sigma-|R_Sigma|`.
+
+For the three-channel locked fan,
+
+`zeta >= delta_fan-3|V(Sigma)|`.
+
+Thus the locked Target A branch closes whenever
+
+`delta_fan >= s+|R_Sigma|`,
+
+and in particular it is enough to prove the explicit bound
+
+`delta_fan >= s+3|V(Sigma)|`.
+
+The promoted Section 173 route originally paid up to `5|V(Sigma)|` after including contact vertices; matching contraction reduced this to `4|V(Sigma)|`; the common-neighbor theorem reduces the locked-fan right-shore cost further to `3|V(Sigma)|`.
+
+This still does not prove the required sector Hall deficiency.

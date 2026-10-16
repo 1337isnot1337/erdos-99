@@ -1,0 +1,494 @@
+# Target C-II — FREE pocket-width routing forces square-root outer-walk/external currency
+
+**Date:** 2026-09-18  
+**Status:** proved candidate awaiting promotion; proof-only continuation of the extreme-FREE `PAIR-REUSE` route  
+**Scope:** all-inactive FREE ancestries; the sharp square-root consequences use the two extreme `PAIR-REUSE` modules  
+**Dependencies:** two-sided gate absorption; external-population/run tradeoff; short inactive-edge planarity; canonical OP convex-pocket augmentation; outer-walk pocket-perimeter capacity; two-normal directional defect; outer-currency forest bridge; outer-pocket detour-area theorem  
+**Certificate:** `research/verify_target_c_tooth_reflection_pocket_width_outerwalk_coupling_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current fixed-pair theorem charges a reused FREE ancestry to the canonical outer-face scalar
+
+\[
+\mathfrak O
+=Z_{\rm ext}+\frac{2}{\sqrt3}H_{\rm out}-\frac{b-P_F}{2}.
+\]
+
+This note converts that scalar into the old outer-walk variable
+
+\[
+x_B:=b-q
+\]
+
+and proves a second, independent routing inequality by measuring how much support-monotone lower ancestry can fit through the convex OP pockets.
+
+The two facts together give a square-root frontier which was not present in the separate reflection and OP ledgers. In the `PAIR-REUSE` branch, either the external population is larger than square-root scale, or the outer walk must carry square-root excess. In the critical window where both are `Theta(sqrt(D))`, their normalized coefficients satisfy explicit product and capacity constraints.
+
+Put
+
+\[
+a_0:=\frac{\sqrt3}{2},
+\qquad
+h_*:=\frac{\sqrt{303}}{52},
+\qquad
+c_*:=0.129220199818177\ldots,
+\]
+
+\[
+\delta_*:=2\left(1-\cos\frac{c_*}{2}\right),
+\qquad
+\alpha_K:=1-\frac{h_*}{K},
+\qquad K>h_*,
+\]
+
+and
+
+\[
+\boxed{
+\nu_K:=1+\frac{\delta_*\alpha_K}{4}.
+}
+\tag{PW.1}
+\]
+
+For the two extreme `PAIR-REUSE` ancestries, the preceding outer-currency theorem has the exact form
+
+\[
+\mathfrak O
+\ge
+\mathcal B_D+\frac{U_1+U_2}{2},
+\tag{PW.2}
+\]
+
+where `U_i` is the upper-gate count and `\mathcal B_D` is its exact angle-adaptive reflection baseline. In particular,
+
+\[
+\boxed{
+\mathcal B_D\ge(\nu_K-o(1))D.
+}
+\tag{PW.3}
+\]
+
+No statement below promotes this proof-only reflection stack into the authoritative theorem ledger.
+
+## 1. The canonical OP currency has an explicit `x_B^2` ceiling
+
+The exact outer-pocket capacity theorem gives
+
+\[
+\boxed{
+H_{\rm out}\le\frac4\pi x_B^2.
+}
+\tag{PW.4}
+\]
+
+Also `b-P_F>=0`. Therefore
+
+\[
+\mathfrak O
+=Z_{\rm ext}+\frac{H_{\rm out}}{a_0}-\frac{b-P_F}{2}
+\le
+Z_{\rm ext}+\frac{4}{\pi a_0}x_B^2.
+\]
+
+Since
+
+\[
+\frac4{\pi a_0}=\frac8{\pi\sqrt3},
+\]
+
+combining with (PW.2) gives the finite nonlinear outer-currency law
+
+\[
+\boxed{
+Z_{\rm ext}
++\frac8{\pi\sqrt3}x_B^2
+\ge
+\mathcal B_D+\frac{U_1+U_2}{2}.
+}
+\tag{PW.5}
+\]
+
+In particular,
+
+\[
+\boxed{
+Z_{\rm ext}
++\frac8{\pi\sqrt3}x_B^2
+\ge
+(\nu_K-o(1))D.
+}
+\tag{PW.6}
+\]
+
+This immediately sharpens one side of the fixed-pair obstruction. If `x_B=o(sqrt(D))`, then `PAIR-REUSE` requires
+
+\[
+Z_{\rm ext}\ge(\nu_K-o(1))D.
+\]
+
+Thus a sub-square-root outer walk cannot be paid by merely a growing sublinear external population; it costs a linear external population.
+
+Conversely, if `Z_ext=o(D)`, then
+
+\[
+\frac{x_B}{\sqrt D}
+\ge
+\sqrt{\frac{\pi\sqrt3}{8}\nu_K}-o(1).
+\]
+
+For `K=400`, this coefficient is
+
+\[
+0.825156810724844\ldots .
+\]
+
+The fixed-`K` envelope is
+
+\[
+\boxed{
+c_{\rm OW}
+:=\sqrt{\frac{\pi\sqrt3}{8}\left(1+\frac{\delta_*}{4}\right)}
+=0.825157170558402\ldots .
+}
+\tag{PW.7}
+\]
+
+## 2. One support-monotone lower run can spend each convex pocket width only once
+
+Fix any all-inactive FREE ancestry and its canonical support normal `N`. Delete the upper gates. The remaining lower gates split into at most `U+1` maximal lower runs.
+
+For an OP outer pocket `P`, let
+
+\[
+w_N(P):=\max_{x\in P}N\cdot x-\min_{x\in P}N\cdot x
+\]
+
+be its width in the ancestry direction.
+
+Consider one maximal lower run `R`. Every lower edge has strictly positive `N`-support gain, so `N dot x` increases strictly along the entire polygonal run, including the relative interiors of its edges.
+
+Take a lower edge whose two endpoints lie in the force hull `F`. Convexity puts the entire segment in `F`. The simultaneous short-edge planarity theorem puts this edge in the same plane graph as every positive unit contact. Since both endpoints are old contact isolates in the original outer face, the segment cannot enter a bounded contact face. Hence it lies in the closure of one OP outer pocket. A segment lying on an added hull side is assigned to that side's unique interior pocket.
+
+For one fixed pocket `P`, the `N`-projection intervals contributed by all such edges of `R` are pairwise interior-disjoint: the run's `N` coordinate is strictly increasing. All those intervals lie inside the projection interval of `P`. Therefore their total support gain is at most `w_N(P)`.
+
+Summing pockets,
+
+\[
+G_{\rm in}(R)
+\le
+\sum_Pw_N(P).
+\tag{PW.8}
+\]
+
+For every convex pocket,
+
+\[
+2w_N(P)\le\operatorname{per}(P),
+\]
+
+because each of the two boundary arcs between an `N`-minimum point and an `N`-maximum point has length at least the projection gap. The exact outer-pocket perimeter theorem gives
+
+\[
+\sum_P\operatorname{per}(P)\le4x_B.
+\]
+
+Hence
+
+\[
+\boxed{
+\sum_Pw_N(P)\le2x_B,
+\qquad
+G_{\rm in}(R)\le2x_B.
+}
+\tag{PW.9}
+\]
+
+This is a directional routing capacity rather than an area bound: one monotone lower run cannot repeatedly harvest the same pocket width.
+
+## 3. External vertices pay for the rest of the lower progress
+
+Call a lower edge external-adjacent when at least one endpoint lies outside `F`. The ancestry is a simple source-vertex sequence. There are only `Z_ext` source vertices outside `F`, and each has path degree at most two. Thus the entire ancestry contains at most
+
+\[
+2Z_{\rm ext}
+\]
+
+external-adjacent lower edges.
+
+Every lower edge has length at most
+
+\[
+1+t_D,
+\qquad
+t_D<h_*+D^{-1/3},
+\]
+
+so its support gain is at most `1+t_D`. The total support gain of all external-adjacent lower edges is therefore at most
+
+\[
+2(1+t_D)Z_{\rm ext}.
+\tag{PW.10}
+\]
+
+There are at most `U+1` maximal lower runs. Equations (PW.9)--(PW.10) give the finite routing ceiling
+
+\[
+\boxed{
+G_{\rm low}
+\le
+2x_B(U+1)+2(1+t_D)Z_{\rm ext}.
+}
+\tag{PW.11}
+\]
+
+The two-sided activation theorem independently gives
+
+\[
+G_{\rm low}>D-O(\sqrt D).
+\tag{PW.12}
+\]
+
+Consequently every all-inactive FREE ancestry satisfies
+
+\[
+\boxed{
+2x_B(U+1)+2(1+t_D)Z_{\rm ext}
+\ge D-O(\sqrt D).
+}
+\tag{PW.13}
+\]
+
+Since every upper gate activates a distinct source point outside `F`, `U<=Z_ext`, and hence
+
+\[
+\boxed{
+2x_B(Z_{\rm ext}+1)
++2(1+t_D)Z_{\rm ext}
+\ge D-O(\sqrt D).
+}
+\tag{PW.14}
+\]
+
+This is independent of the common-edge forest argument. It uses only monotone routing through the actual convex OP pockets.
+
+For the two extreme ancestries one may keep the upper counts instead of replacing them by `Z_ext`. Summing (PW.11) for both modules and dividing by two gives
+
+\[
+\boxed{
+x_B(U_1+U_2+2)
++2(1+t_D)Z_{\rm ext}
+\ge D-O(\sqrt D).
+}
+\tag{PW.15}
+\]
+
+Together, (PW.5) and (PW.15) couple the same upper-gate count to an outer-capacity ceiling and to a routing requirement.
+
+## 4. Exact square-root frontier in the critical window
+
+Suppose along a `PAIR-REUSE` subsequence
+
+\[
+\frac{x_B}{\sqrt D}\to\xi<\infty,
+\qquad
+\frac{Z_{\rm ext}}{\sqrt D}\to\zeta<\infty.
+\]
+
+Then `Z_ext/D->0`. Divide (PW.6) by `D` and (PW.14) by `D`. The lower-order linear terms disappear, giving
+
+\[
+\boxed{
+\frac8{\pi\sqrt3}\xi^2\ge\nu_K,
+\qquad
+2\xi\zeta\ge1.
+}
+\tag{PW.16}
+\]
+
+Define
+
+\[
+\boxed{
+c_K:=\sqrt{\frac{\pi\sqrt3}{8}\nu_K}.}
+\tag{PW.17}
+\]
+
+Then every finite square-root limit point satisfies
+
+\[
+\boxed{
+\xi\ge c_K,
+\qquad
+\zeta\ge\frac1{2\xi}.
+}
+\tag{PW.18}
+\]
+
+Since `c_K>1/sqrt(2)`, the function
+
+\[
+f(\xi)=\xi+\frac1{2\xi}
+\]
+
+is increasing for `xi>=c_K`. Therefore the constraints have the sharp scalar minimum
+
+\[
+\boxed{
+\xi+\zeta
+\ge
+c_K+\frac1{2c_K}.
+}
+\tag{PW.19}
+\]
+
+If either normalized currency is unbounded, (PW.19) is automatic. Thus the `PAIR-REUSE` branch has the unconditional asymptotic combined-currency floor
+
+\[
+\boxed{
+\liminf
+\frac{x_B+Z_{\rm ext}}{\sqrt D}
+\ge
+c_K+\frac1{2c_K}.
+}
+\tag{PW.20}
+\]
+
+For `K=400`,
+
+\[
+c_{400}=0.825156810724844\ldots,
+\qquad
+\frac1{2c_{400}}=0.605945431827417\ldots,
+\]
+
+so
+
+\[
+\boxed{
+\liminf\frac{x_B+Z_{\rm ext}}{\sqrt D}
+\ge1.431102242552261\ldots .
+}
+\tag{PW.21}
+\]
+
+Taking the fixed-`K` envelope after the asymptotic argument gives
+
+\[
+\boxed{
+1.431102338145856\ldots .
+}
+\tag{PW.22}
+\]
+
+The equality frontier is also rigid at scalar level. Any sequence approaching the right side of (PW.20) must have
+
+\[
+\frac{x_B}{\sqrt D}\to c_K,
+\qquad
+\frac{Z_{\rm ext}}{\sqrt D}\to\frac1{2c_K}.
+\tag{PW.23}
+\]
+
+## 5. Near the square-root endpoint, chain-chord detour is forced too
+
+Put
+
+\[
+u_D:=b-P_F\ge0.
+\]
+
+The exact outer-currency lower bound gives
+
+\[
+H_{\rm out}
+\ge
+a_0\left(
+\mathcal B_D+\frac{U_1+U_2}{2}
+-Z_{\rm ext}+\frac{u_D}{2}
+\right).
+\tag{PW.24}
+\]
+
+In the square-root window `Z_ext=O(sqrt(D))`, this and (PW.3) imply
+
+\[
+H_{\rm out}\ge(a_0\nu_K-o(1))D.
+\tag{PW.25}
+\]
+
+The outer-pocket detour-area theorem gives
+
+\[
+H_{\rm out}
+\le
+\frac{\pi}{4\sqrt2}(x_B+a)^{3/2}\sqrt{u_D},
+\]
+
+and `a<=x_B`, hence
+
+\[
+\boxed{
+H_{\rm out}
+\le\frac\pi2x_B^{3/2}\sqrt{u_D}.
+}
+\tag{PW.26}
+\]
+
+Suppose additionally
+
+\[
+\frac{u_D}{\sqrt D}\to\eta<\infty.
+\]
+
+Squaring (PW.25)--(PW.26) and normalizing gives
+
+\[
+\boxed{
+\xi^3\eta
+\ge
+\left(\frac{2a_0\nu_K}{\pi}\right)^2.
+}
+\tag{PW.27}
+\]
+
+For `K=400` the right side is
+
+\[
+0.304597572369000\ldots .
+\]
+
+At the minimal outer-walk coefficient `xi=c_400`, (PW.27) forces
+
+\[
+\eta\ge0.542146891278923\ldots .
+\tag{PW.28}
+\]
+
+At the fixed-cutoff envelope,
+
+\[
+\boxed{
+\left(\frac{2a_0\nu_\infty}{\pi}\right)^2
+=0.304598103683768\ldots,
+\qquad
+\eta_{\rm endpoint}=0.542147127697798\ldots .
+}
+\tag{PW.29}
+\]
+
+Thus the scalar endpoint of the combined `x_B+Z_ext` floor cannot have vanishing chain-chord detour. If the combined currency approaches its minimum, the outer walk simultaneously carries a positive `sqrt(D)` detour.
+
+## 6. What this changes and what remains
+
+The `PAIR-REUSE` branch can no longer hide its `D+Omega(D)` inactive ancestry in a source with both weak external population and weak outer boundary complexity.
+
+The new necessary alternatives are quantitative:
+
+- `x_B=o(sqrt(D))` forces `Z_ext=(nu_K-o(1))D`, not merely `omega(sqrt(D))`;
+- `Z_ext=o(D)` forces `x_B>=(c_K-o(1))sqrt(D)`;
+- at the genuine square-root scale, `2(x_B/sqrt(D))(Z_ext/sqrt(D))>=1` and the combined coefficient is at least `1.431102...` in the fixed-cutoff envelope;
+- approaching that minimum also forces `(b-P_F)/sqrt(D)>=0.542147...` at the scalar endpoint.
+
+This is still not C-II closure. A linear external population is allowed by the current full-source packing stack, and a square-root outer-walk excess is also compatible with the canonical full-core scalar ledgers. The remaining bridge is now more specific: either convert linear external population into a forbidden exterior-cap/source deformation, or convert the forced square-root `x_B` and chain-chord detour into the canonical Section 122--123 aggregate detour/payment variables strongly enough to contradict the full-core branch.
+
+**Disposition:** converted the OP population/area scalar into an explicit nonlinear `Z_ext+x_B^2` capacity law, proved a monotone pocket-width routing ceiling for every all-inactive FREE ancestry, and combined them into an explicit square-root external/outer-walk frontier with a detour-stability endpoint.

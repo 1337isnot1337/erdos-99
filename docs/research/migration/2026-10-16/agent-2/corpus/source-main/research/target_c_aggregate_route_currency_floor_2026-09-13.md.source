@@ -1,0 +1,169 @@
+# Target C-II — aggregate detour forces a stronger route-currency floor
+
+**Date:** 2026-09-13
+**Status:** proof-only composition; theorem-state authority unchanged.
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This note keeps the Section-122 aggregate detour demand before applying the coarse
+bound `f<=Q`. On the Section-118 endpoint/common-cap profile, the exact Section-121
+face identity and the endpoint harmonic diameter-moment floor imply
+
+\[
+\boxed{
+\liminf_{D\to\infty}
+\left({b-\operatorname{per}(F)\over D}+{Q+4f\over D}\right)
+\ge 2S_*+c_0-\pi
+=2.8764935780\ldots .
+}
+\tag{AR.1}
+\]
+
+Here
+
+\[
+S_*=2.798596312209462\ldots,
+\qquad
+c_0={\pi\over2}(2-\sqrt3).
+\]
+
+The bound is a route-currency statement. It does not provide an upper bound on the
+same currency and does not close C-II.
+
+## 1. Exact finite-to-asymptotic reduction
+
+Use the post-ZF Type-II notation of Sections 121--123. Let
+
+\[
+E_\Sigma=\sum_r(L_r+P_{{\rm exc},r}-2d_r),
+\qquad
+P_{\rm exc}=Q+4f,
+\qquad
+t_D={q-k\over D},
+\qquad
+s_D={d_\Sigma\over D}.
+\]
+
+The exact aggregate face-incidence identity is
+
+\[
+E_\Sigma
+ =4\Delta_R+4f+2(q-k-e_{BB}+C_{\rm att})-2d_\Sigma,
+\tag{AR.2}
+\]
+
+where `Delta_R=R_4-sum_r R_r` and `C_att` counts loaded-loaded contacts reused by
+the harmonic cells. In Type II, `c_B=0`, so every loaded-loaded contact is a force-
+hull side. Pairwise interior-disjoint attachment cells use a force-hull side at most
+once, hence
+
+\[
+C_{\rm att}\le e_{BB}.
+\]
+
+The audited full-core localization gives `Delta_R=o(D)`. Therefore (AR.2) gives the
+one-sided finite estimate
+
+\[
+E_\Sigma
+\le 4\Delta_R+4f+2(q-k)-2d_\Sigma.
+\tag{AR.3}
+\]
+
+The canonical Section-122 detour theorem gives
+
+\[
+\liminf {E_\Sigma\over D}\ge c_0.
+\tag{AR.4}
+\]
+
+On the Section-118 endpoint/common-cap profile, the audited complement-gap theorem
+gives
+
+\[
+\liminf s_D\ge S_*.
+\tag{AR.5}
+\]
+
+Since `b+Q=2(q-k)` exactly and `per(F)/D->pi`, define
+
+\[
+\delta_D={b-\operatorname{per}(F)\over D}.
+\]
+
+Then the exact outer ledger is
+
+\[
+{Q\over D}=2t_D-{\operatorname{per}(F)\over D}-\delta_D.
+\tag{AR.6}
+\]
+
+Substitute `4f=P_exc-Q` into (AR.3), then use (AR.6):
+
+\[
+{E_\Sigma\over D}
+\le {P_{\rm exc}\over D}
+ +{\operatorname{per}(F)\over D}+\delta_D-2s_D+o(1).
+\tag{AR.7}
+\]
+
+Combining (AR.4), (AR.5), and `per(F)/D->pi` yields
+
+\[
+\liminf\left({P_{\rm exc}\over D}+\delta_D\right)
+\ge 2S_*+c_0-\pi.
+\tag{AR.8}
+\]
+
+This is (AR.1).
+
+## 2. Safe numerical certificate
+
+The displayed decimal is not used as an exact input. The rational enclosures
+
+\[
+S_*>2.7985,
+\qquad
+3.14159<\pi<3.14160,
+\qquad
+\sqrt3<1.73206
+\]
+
+give the outward-safe margin
+
+\[
+2S_*+c_0-\pi>2.8762.
+\tag{AR.9}
+\]
+
+The accompanying verifier checks (AR.9) and a symbolic rational instance of the
+finite cancellation. The exact value in (AR.1) is only the evaluation of the
+symbolic constant using the audited endpoint value of `S_*`.
+
+## 3. What this changes
+
+The earlier train-boundary floor only used
+
+\[
+\delta_D+P_{\rm exc}/D
+\ge4\sqrt{\pi/(2\sqrt3)}-\pi
+=0.6676585738\ldots .
+\]
+
+The aggregate detour theorem instead pays for the harmonic-cell diameter moment and
+raises the endpoint/common-cap route currency to `2.8762+o(1)`. Combining (AR.8) with
+`f<=Q` recovers the existing endpoint scalar floor
+
+\[
+{q-k\over D}
+\ge {4\pi+2S_*+c_0\over10}-o(1)
+=1.8584456846\ldots-o(1),
+\]
+
+and the audited orbit-capacity composition still excludes the endpoint-profile range
+`(q-k)/D<=1.8585`. The stronger route floor does not control the high-detour region:
+there is still no upper bound on `delta_D+P_exc/D`, no source-preserving strict-
+diameter competitor, and no forced unit equilateral triangle.
+
+**Classification:** proved candidate awaiting independent audit; proof-only and scoped
+to the Section-118 endpoint/common-cap profile. The theorem state remains
+`2026-09-12.audit.46`; C-II remains open.

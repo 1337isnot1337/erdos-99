@@ -1,0 +1,256 @@
+# Target C-II — generic H6 interior force-chirotope reduction
+
+**Date:** 2026-09-19  
+**Status:** exact finite necessary-condition reduction; theorem-state authority unchanged  
+**Scope:** degree-pure support-seven `H6` reciprocal branch with no collinear reciprocal triple  
+**Depends on:** support-seven endpoint reduction; exact H6 ground sign classification; generic H6 oriented-matroid/sign reduction; audited strict equilateral-pentagon one-turn/two-turn bounds  
+**Certificate:** `research/verify_target_c_support7_h6_interior_force_chirotope_reduction_2026_09_19.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The preceding generic `H6` reduction used the local positions-`2,4` sign theorem at the five non-ground hull vertices. It left
+
+\[
+264944=208588\ C_7+56356\ (C_3\sqcup C_4)
+\]
+
+labelled outer cells.
+
+The two reciprocal interior vertices were not yet using even the rank-two oriented-matroid content of their physical force pentagons. Adding that exact condition cuts the census to
+
+\[
+\boxed{14174=10670\ C_7+3504\ (C_3\sqcup C_4)}.
+\tag{1}
+\]
+
+Thus this layer removes
+
+\[
+\boxed{250770}
+\]
+
+of the 264944 previous cells, or exactly `94.650190...%` of that census. The surviving fraction is
+
+\[
+\frac{14174}{264944}=\frac{7087}{132472}.
+\]
+
+This is a necessary-condition reduction only. The 14174 survivors are not claimed geometrically realizable.
+
+## 1. Rank-two force balance for every physical pentagon
+
+At any non-ground reciprocal vertex `v`, the five incident present reciprocal edges correspond to the five sides of a strict unit physical pentagon. Let the five signed unit force directions in cyclic order be
+
+\[
+f_0,f_1,f_2,f_3,f_4.
+\]
+
+Write their consecutive angular gaps as `delta_i`. The already-audited physical pentagon bounds give
+
+\[
+0<\delta_i<\frac{2\pi}{3},
+\qquad
+\frac{2\pi}{3}<\delta_i+\delta_{i+1}<\pi.
+\tag{2}
+\]
+
+Fix `f_i`. The rays `f_{i+1}` and `f_{i+2}` are counterclockwise from `f_i` by angles strictly between `0` and `pi`, while `f_{i-1}` and `f_{i-2}` lie strictly in the opposite open half-plane. Therefore
+
+\[
+\boxed{
+\#\{j\ne i:\det(f_i,f_j)>0\}=2
+}
+\tag{3}
+\]
+
+for every `i`. Equivalently, every force ray has exactly two of the other four force rays in each open half-plane through the origin.
+
+This statement uses only the strict one-turn/two-turn upper bounds. It is weaker than full pentagon closure, but unlike the nonlinear closure equations it is purely combinatorial.
+
+## 2. Convert the force condition to reciprocal chirotope signs
+
+For a present reciprocal edge `va`, let `s_{va}` be the signed scalar from the reciprocal unit-force construction. If `r_{va}` denotes the raw reciprocal ray direction from `v` toward `a`, then the physical force vector is projectively
+
+\[
+f_{va}=\pm s_{va}r_{va}.
+\]
+
+The harmless common sign at vertex `v` cancels from every determinant pair. Hence
+
+\[
+\boxed{
+\operatorname{sgn}\det(f_{va},f_{vb})
+=s_{va}s_{vb}\,\chi(v,a,b),
+}
+\tag{4}
+\]
+
+where `chi` is the generic reciprocal chirotope.
+
+Condition (3) can therefore be checked with signs only:
+
+\[
+\boxed{
+\#\{b\ne a:s_{va}s_{vb}\chi(v,a,b)>0\}=2
+}
+\tag{5}
+\]
+
+for every one of the five incident edges `va`.
+
+No angles, coordinates, trigonometric approximations, or floating point arithmetic enter (5).
+
+## 3. All interior incident edge signs are already fixed except possibly `67`
+
+Label the convex reciprocal hexagon
+
+\[
+0,1,2,3,4,5
+\]
+
+with ground `0`, and let `6,7` be the two strict interior reciprocal points.
+
+The preceding oriented-matroid/sign reduction fixes a generic outer radial order and one of the thirteen exact H6 ground sign patterns. At every non-ground hull vertex `h in {1,...,5}`, deleting the two missing nonneighbors leaves exactly five present rays. The local pentagon theorem says the size-two sign class is in raw positions `2,4`.
+
+After normalizing that local pattern by the already-fixed sign of the ground edge `0h`, the sign of every present edge incident to `h` is fixed. This includes edges from `h` to `6` or `7`, not only hull-hull edges.
+
+Consequently:
+
+- every present edge from an interior vertex to a hull vertex has a fixed sign;
+- the anchor signs `06` and `07` are fixed by the ground pattern;
+- if `67` is missing, there are no remaining sign choices at either interior vertex;
+- if `67` is present, its sign is the only unresolved sign and there are exactly two possibilities to test.
+
+The verifier applies (5) simultaneously at both interior vertices `6` and `7`, trying both signs of `67` when necessary.
+
+## 4. Exact census
+
+The previous layer is reproduced first:
+
+\[
+208588\ C_7+56356\ (C_3\sqcup C_4)=264944.
+\]
+
+After the two interior rank-two force checks:
+
+\[
+\boxed{
+10670\ C_7+3504\ (C_3\sqcup C_4)=14174.
+}
+\tag{6}
+\]
+
+The individual rejection counts are
+
+\[
+208588-10670=197918
+\]
+
+for `C7`, and
+
+\[
+56356-3504=52852
+\]
+
+for `C3+C4`.
+
+The surviving counts by ground positive-position pattern are
+
+```text
+145   144
+156   108
+234     0
+235  1770
+236  3630
+237   108
+245  1390
+256  3630
+345    90
+346  1390
+347   144
+356  1770
+456     0
+```
+
+Thus two of the thirteen exact ground-feasible patterns are impossible in any generic H6 extension:
+
+\[
+\boxed{234\text{ and }456\text{ are excluded}.}
+\tag{7}
+\]
+
+This is a genuinely cross-face exclusion. Both patterns have exact ground-only realizations; they fail only after the signs forced at the hull vertices are propagated to the two interior pentagons.
+
+## 5. Missing-graph and order-type consequences
+
+Before the new check, the previous layer had survivors on
+
+```text
+348 / 360  labelled C7 missing-graph embeddings
+105 / 105  labelled C3+C4 missing-graph embeddings.
+```
+
+After the interior force check this becomes
+
+```text
+276 / 360  labelled C7 missing-graph embeddings
+ 81 / 105  labelled C3+C4 missing-graph embeddings.
+```
+
+So relative to the previous layer, another `72` labelled `C7` embeddings and `24` labelled `C3+C4` embeddings are eliminated completely. Combining with the earlier twelve `C7` exclusions, the generic H6 branch now permits only
+
+\[
+\boxed{276/360\ C_7\quad\text{and}\quad81/105\ (C_3\sqcup C_4)}
+\tag{8}
+\]
+
+labelled missing-graph embeddings.
+
+The number of outer chirotope/radial-order types with at least one surviving graph/sign state falls from
+
+\[
+1848\longrightarrow1824.
+\tag{9}
+\]
+
+## 6. The `67` sign becomes rigid
+
+Among the 14174 surviving cells, edge `67` is present in
+
+\[
+7554+2364=9918
+\]
+
+cells and absent in
+
+\[
+3116+1140=4256
+\]
+
+cells.
+
+For every one of the 9918 survivors with `67` present, exactly one of the two possible signs of `67` satisfies the rank-two force condition simultaneously at vertices `6` and `7`:
+
+\[
+\boxed{
+\text{every surviving generic H6 cell has a completely determined edge-sign assignment.}
+}
+\tag{10}
+\]
+
+This removes the last free reciprocal-edge sign in the generic H6 finite state.
+
+## 7. What remains
+
+Generic H6 is not excluded. The current exact outer state has 14174 labelled cells.
+
+The next layer should use the metric angle data now that every surviving cell has both a full generic chirotope and a complete edge-sign assignment. For each cell one can derive the cyclic order of the five signed force rays at all seven non-ground vertices, express each force turn as an affine function of reciprocal radial-angle gaps, and impose simultaneously:
+
+- all Euclidean triangle angle-sum equations for the eight reciprocal points;
+- strict positivity and the chirotope half-plane inequalities for radial gaps;
+- the five exact turn-simplex inequalities at each of the seven physical pentagons.
+
+A numerical discovery check on an initial sample already finds many of these 14174 cells affine-infeasible, but no numerical result is used in this note. The next rigorous step is to extract exact rational Farkas certificates for that affine system, as was done in the generic `H7b` branch.
+
+Collinear reciprocal triples remain outside this generic branch and must still be handled separately.
+
+No theorem-state file is changed. C-II remains open.

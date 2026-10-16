@@ -1,0 +1,187 @@
+# Target C — Type-II loaded unit contacts are force-hull sides
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working route module; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module centralizes a structural theorem that had been duplicated across several
+post-123 research branches.
+
+Let `F_D=conv(B_D)` be the loaded force hull in the canonical Type-II branch. Then for
+all sufficiently large Type-II survivors,
+
+\[
+\boxed{
+ b,b'\in B_D,\ |b-b'|=1
+ \Longrightarrow
+ b,b'\text{ are consecutive vertices of }F_D.
+}
+\tag{LH.1}
+\]
+
+Equivalently, in canonical Section-63 notation,
+
+\[
+\boxed{c_B=0.}
+\tag{LH.2}
+\]
+
+Thus every loaded-loaded unit contact is a unit side of the global loaded hull.
+
+## 1. Finite near-disk chord lemma
+
+Let `K` be a convex polygon satisfying
+
+\[
+d_H(K,B(o,R))\le\delta<R.
+\]
+
+Translate `o` to the origin and put
+
+\[
+r:=R-\delta,
+\qquad R_+:=R+\delta.
+\]
+
+For convex compact sets, Hausdorff distance is uniform support-function distance, so
+
+\[
+B(0,r)\subseteq K\subseteq B(0,R_+).
+\tag{LH.3}
+\]
+
+If `x in partial K` and `u` is any outward unit supporting normal at `x`, then
+
+\[
+u\cdot x=h_K(u)\ge r,
+\qquad |x|\le R_+.
+\]
+
+Hence
+
+\[
+\angle(u,x)\le
+\beta:=\arccos(r/R_+).
+\tag{LH.4}
+\]
+
+Now let `p,q` be vertices with `|p-q|=1`. Since `|p|,|q|>=r`, if `gamma` is their
+smaller radial angle then
+
+\[
+1=|p-q|\ge2r\sin(\gamma/2),
+\]
+
+so
+
+\[
+\gamma\le2\arcsin(1/(2r)).
+\tag{LH.5}
+\]
+
+Because the origin is interior to `K`, radial projection preserves cyclic order on
+`partial K`. Choose the boundary arc from `p` to `q` through the shorter radial
+interval. Every side on this arc has outward normal within `beta` of a radial
+direction in that interval. Consequently all consistently oriented side directions on
+this arc lie in one angular interval of width at most
+
+\[
+\tau:=2\arccos(r/R_+)+2\arcsin(1/(2r)).
+\tag{LH.6}
+\]
+
+Assume every side of `K` has length at least one and `tau<2pi/3`. If `p,q` were
+nonconsecutive, the chosen arc would contain at least two oriented side vectors
+`v_1,...,v_j`, `j>=2`. Let `w` be the midpoint direction of their common angular
+interval. Then
+
+\[
+\begin{aligned}
+1=|q-p|
+&\ge w\cdot(q-p)\\
+&=\sum_iw\cdot v_i\\
+&\ge\sum_i|v_i|\cos(\tau/2)\\
+&\ge2\cos(\tau/2)>1,
+\end{aligned}
+\]
+
+which is impossible. Therefore every unit chord is a polygon side.
+
+## 2. Type-II application
+
+Canonical Section 80 gives centers `o_D` with
+
+\[
+\delta_D:=d_H(F_D,B(o_D,D/2))=o(D).
+\]
+
+Set
+
+\[
+r_D=D/2-\delta_D,
+\qquad R_{+,D}=D/2+\delta_D.
+\]
+
+Then
+
+\[
+r_D/R_{+,D}\to1,
+\qquad r_D\to\infty,
+\]
+
+so the width `tau_D` from (LH.6) tends to zero. Every force-hull side joins two source
+points and therefore has length at least one. The finite lemma applies for all
+sufficiently large `D`, proving (LH.1).
+
+Canonical Section 63 defines `c_B` as the loaded-loaded unit contacts beyond the unit
+hull sides. Hence (LH.1) gives (LH.2), and
+
+\[
+\boxed{e_{BB}=q-m,}
+\tag{LH.7}
+\]
+
+where `m` is the number of nonunit loaded-hull sides.
+
+The Section-63 ledgers consequently simplify to
+
+\[
+\boxed{e_{BB}=Q+2k+u_B,}
+\tag{LH.8}
+\]
+
+and
+
+\[
+\boxed{c_I+s_C=m+k-2.}
+\tag{LH.9}
+\]
+
+## 3. Hostile-audit checks
+
+The exact conclusion is stronger than the earlier `c_B=o(D)` result, so the following
+points were rechecked independently.
+
+- The proof requires only `delta_D/D->0`; the absolute Hausdorff error may diverge.
+- From `B(0,r) subset K`, every boundary point has radial norm at least `r`.
+- For fixed radial angle, two radii at least `r` have mutual distance at least
+  `2r sin(gamma/2)`, so (LH.5) has the correct direction.
+- The short **polar** boundary arc is used, not the complementary Gauss-map arc.
+- At any relative-interior point of a hull side, its outward normal obeys (LH.4), so
+  the side-direction cone bound is valid on the whole selected arc.
+- Consistent boundary orientation converts the normal cone into one tangent-direction
+  interval of the same width.
+- If a unit chord were nonconsecutive, the selected arc contains at least two hull
+  sides, each of length at least one. Since `tau/2<pi/3`, their projection sum is
+  strictly greater than one.
+- Unit hull sides remain allowed; only nonconsecutive unit chords are excluded.
+- Contact-isolated source points are untouched and no full-source affine-kernel claim
+  is used.
+
+## 4. Scope
+
+This theorem is Type II only because it uses the near-disk force-hull convergence. It
+does not control nonunit hull sides, the inactive-container branch, or the aggregate
+outer-detour currency by itself.
+
+**Verdict:** PASS at audited-working scope. C-II remains open.

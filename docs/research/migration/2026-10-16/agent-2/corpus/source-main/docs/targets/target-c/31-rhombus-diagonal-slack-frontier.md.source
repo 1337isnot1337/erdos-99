@@ -1,0 +1,87 @@
+# Target C — C75 rhombus diagonal-slack capacity frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_rhombus_diagonal_slack_capacity_2026-08-31.md](../../reports/target_c_rhombus_diagonal_slack_capacity_2026-08-31.md).
+
+C49 charged every strict unit-rhombus face only by the limiting area
+`sqrt(3)/2`. C75 retains the amount of strictness.
+
+If `s_f in (1,sqrt(2)]` is the short diagonal of a bounded unit-rhombus contact face,
+then
+
+`area(f)=(1/2)s_f sqrt(4-s_f^2)`.
+
+This function is concave on `[1,sqrt(2)]`. Therefore
+
+`area(f)-sqrt(3)/2 >= c_rh(s_f-1)`,
+
+where
+
+`c_rh=(1-sqrt(3)/2)/(sqrt(2)-1)=0.32344...`.
+
+Let
+
+`Sigma_diag=sum_(bounded 4-faces)(s_f-1)`.
+
+C42's face count and disjoint face interiors give
+
+`m <= (2/sqrt(3))area(F)
+      -lambda_rh Sigma_diag
+      +5q-3c_I-3e_BB-5`,
+
+with
+
+`lambda_rh=2c_rh/sqrt(3)=0.37348...`.
+
+Hence
+
+`m <= Delta_2 D^2
+      -lambda_rh Sigma_diag
+      +5pi D-3c_I-3e_BB-5`.
+
+This is a weight-free strict refinement of the whole-hull C49 capacity estimate.
+
+## Fixed diagonal threshold
+
+For `tau>0`, let `N_tau` be the number of rhombic faces with short diagonal at least
+`1+tau`. Then
+
+`Sigma_diag>=tau N_tau`,
+
+so
+
+`m <= Delta_2D^2-lambda_rh tau N_tau+5pi D-...`.
+
+If a force-visible core satisfies
+
+`m>=Delta_2D^2-O(D)`,
+
+then
+
+`Sigma_diag=O(D)`
+
+and
+
+`N_tau=O_tau(D)`
+
+for every fixed `tau>0`. More generally `N_(tau_D)=O(D/tau_D)`.
+
+## Interaction with C73
+
+C73 says all but `O(D)` core vertices are degree-four vertices surrounded by four
+strict rhombi. Under near-capacity, C75 says all but `O_tau(D)` rhombi have missing
+short diagonal below `1+tau`. Therefore all but `O_tau(D)` core vertices lie in a
+near-triangular missing-diagonal bulk: four surrounding unit rhombi, every missing
+short diagonal in `(1,1+tau)`.
+
+This charges transverse geometry independently of how small its KKT stress is.
+
+## Next target
+
+The exact remaining alternatives are:
+
+1. prove a force-bulk estimate controlling `n-m`, so the C75 core-capacity penalty
+   transfers to the whole source; or
+2. prove a finite perturbation/stability theorem excluding a contact-minimal global
+   minimizer with a quadratic near-triangular missing-diagonal rhombic bulk.

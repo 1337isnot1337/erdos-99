@@ -1,0 +1,254 @@
+# Target C-II — optimized three-cut kernel cusp has at most `1083` exceptional diameter rows
+
+**Date:** 2026-09-15  
+**Status:** proof-only quantitative strengthening  
+**Scope:** full-core Type-II branch with `t=(q-k)/D<=1.844` on the optimized good smallest-leaf backbone  
+**Dependencies:** `target_c_three_cut_kernel_cusp_2026-09-15.md`; `target_c_t1844_retention_2217_2026-09-15.md`; optimized adjacent backbone density; exact laminar interval support  
+**Certificate:** `research/verify_target_c_three_cut_kernel_cusp_1084.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The original three-cut kernel theorem chose three cuts using the older balanced adjacent-boundary averaging constant.  That was enough to isolate the first-order diameter cusp, but it left the coarse bound
+
+\[
+|H_{exc}|<42400+o(1).
+\]
+
+The current `t<=1.844` stack is much tighter.  The retained-mass theorem gives
+
+\[
+z>2.217-o(1),
+\]
+
+which lowers the full actual diameter-edge density, while the optimized fan threshold gives a good-leaf path of density
+
+\[
+p=0.00682246453482\ldots .
+\]
+
+Applying the same two-boundary averaging to those sharper inputs reduces the exact three-cut exceptional set to at most `1083` rows, while preserving inverse-`D` switching KKT mass and inverse-`D` phase variation on the same triple.
+
+### Theorem K1083
+
+Every sufficiently large survivor in the stated branch has three consecutive smallest-leaf O--O cuts
+
+\[
+\tau_i,\tau_{i+1},\tau_{i+2}
+\]
+
+and a nonzero first-order kernel coefficient vector `c` with
+
+\[
+c_i u_i+c_{i+1}u_{i+1}+c_{i+2}u_{i+2}=0
+\]
+
+such that the exceptional diameter set
+
+\[
+H_{exc}
+:=H_{sw,i}\cup H_{sw,i+1}
+\]
+
+satisfies, for all sufficiently large members,
+
+\[
+\boxed{|H_{exc}|\le1083.}
+\tag{K83.1}
+\]
+
+On the same triple,
+
+\[
+\boxed{
+\sum_{h\in H_{exc}}\beta_h=O(D^{-1}),
+}
+\tag{K83.2}
+\]
+
+and
+
+\[
+\boxed{
+ d_{\mathbb{RP}^1}(u_i,u_{i+1})
++d_{\mathbb{RP}^1}(u_{i+1},u_{i+2})
+=O(D^{-1}).
+}
+\tag{K83.3}
+
+All qualitative conclusions of the parent three-cut theorem remain unchanged.  In particular, every active diameter row outside `H_exc` has zero first derivative exactly under the kernel shear; canonical C65 forces the finite exceptional cusp to contain positive-stress rows of both derivative signs; and whenever the three train vectors admit exact `G=0` integration, only these at most `1083` old diameter constraints move at all.
+
+---
+
+## 1. Sharper global switch-count budget
+
+The exact `z>2.217` certificate gives the outward full-diameter-edge bound
+
+\[
+{h_H\over D}
+<1.848545512817+o(1).
+\]
+
+Use the simpler safe rational value
+
+\[
+\boxed{{h_H\over D}<1.848546+o(1).}
+\tag{K83.4}
+\]
+
+Along any selected laminar dual path, each diameter interval starts and stops at most twice.  Hence
+
+\[
+\sum_j N_j\le2h_H.
+\tag{K83.5}
+\]
+
+For a three-cut window define
+
+\[
+U_j:=N_j+N_{j+1}.
+\]
+
+Every internal boundary count appears in at most two such windows, so
+
+\[
+\boxed{
+\sum_jU_j
+\le2\sum_jN_j
+<4(1.848546)D+o(D).
+}
+\tag{K83.6}
+\]
+
+---
+
+## 2. Optimized path density
+
+Use the already-certified count-focused fan parameters
+
+\[
+\lambda=0.6404,
+\qquad
+d_{low}=10^{-4}.
+\]
+
+They produce a single center train crossing a consecutive good-leaf path of length
+
+\[
+m>pD-o(D),
+\]
+
+with exact rational density
+
+\[
+p={461524\over67647695}
+=0.00682246453482\ldots .
+\tag{K83.7}
+\]
+
+Thus the count-only average two-boundary exceptional size is below
+
+\[
+{4(1.848546)\over p}
+=1083.7995511\ldots .
+\tag{K83.8}
+\]
+
+The integer threshold `1084` is therefore strictly above the average.
+
+---
+
+## 3. Keep KKT switching mass and phase variation small on the same triple
+
+The laminar interval budgets give
+
+\[
+\sum_j B_j\le2,
+\]
+
+so the two-boundary windows obey
+
+\[
+\sum_j D(B_j+B_{j+1})\le4D.
+\tag{K83.9}
+\]
+
+The optimized path construction retains the global phase budget
+
+\[
+\sum_jD(q_j+q_{j+1})
+\le {2C_{phase}\over d_{low}}D+o(D),
+\]
+
+hence
+
+\[
+\sum_jD[(q_j+q_{j+1})+(q_{j+1}+q_{j+2})]
+\le {4C_{phase}\over d_{low}}D+o(D).
+\tag{K83.10}
+\]
+
+Use the Pareto union bound with thresholds
+
+\[
+N=1084,
+\qquad
+L_\beta=L_\phi=10^{12}.
+\]
+
+The exact companion certificate bounds the bad-window densities by
+
+\[
+0.00682120295203\ldots,
+\]
+
+\[
+4\times10^{-12},
+\]
+
+and
+
+\[
+2.1266929828\times10^{-7},
+\]
+
+respectively.  Their sum is below `p` by
+
+\[
+>1.04\times10^{-6}.
+\]
+
+Hence one consecutive triple satisfies simultaneously
+
+\[
+U_j<1084+o(1),
+\]
+
+\[
+D(B_j+B_{j+1})<10^{12}+o(1),
+\]
+
+and the analogous `10^12+o(1)` bound for the total two-gap phase cost.
+
+For sufficiently large sources, integrality gives (K83.1), while the latter two estimates give (K83.2)--(K83.3).
+
+---
+
+## 4. Updated finite three-cut normal form
+
+The live exact three-cut obstruction is therefore
+
+```text
+three consecutive smallest-leaf O-O cuts
++ exact nonzero planar kernel c_1 u_1+c_2 u_2+c_3 u_3=0
++ at most 1083 exceptional actual diameter rows
++ exceptional beta mass O(1/D)
++ total two-gap phase variation O(1/D)
++ every nonexceptional diameter row has zero first derivative exactly
++ C65 => the exceptional positive-stress cusp has both derivative signs
++ exact finite G=0 localization except for the classified same-oriented parallel branch.
+```
+
+The one/two-bar adjacent-strip reaction theorems are stronger for tangent and force certificates.  The `1083` bound serves a different purpose: it controls the **complete active set that can move** under the exact three-cut finite motion, which is needed for nonlinear replacement or second-order analysis.
+
+No C-II closure is claimed.
+
+**Disposition:** proved proof-only quantitative strengthening of the exact three-cut kernel cusp from `<42400` exceptional rows to at most `1083`. C-II and Level I remain open.

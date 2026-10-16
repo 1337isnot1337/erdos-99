@@ -1,0 +1,396 @@
+# Target C-II - every reflection module is exact-diameter anchored or entirely active-free
+
+**Date:** 2026-09-17  
+**Status:** proof-only strengthening of the shallow-tooth reflection branch; no canonical promotion claimed  
+**Scope:** Type-II full-core slow-scale reflection modules at `eta=3/26`  
+**Dependencies:** slow-scale central reflection braid; simultaneous reflection block diagonalization; radial-interface loaded-sink theorem; full-source actual-diameter midpoint localization; convex diameter-thrackle property  
+**Certificate:** `research/verify_target_c_tooth_reflection_module_anchor_dichotomy_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The radial-interface theorem is stronger module-by-module than the canonical-head split used in the first loaded-head corollary. For one reflection module
+
+\[
+U_i=\{z\in A:|z-q_i|>D\},
+\]
+
+every component of `G_C[U_i]` either contains a positively diameter-loaded vertex or is one source point with
+
+\[
+\deg_C=\deg_H=0.
+\]
+
+Therefore each whole module has an exact dichotomy:
+
+\[
+\boxed{
+\begin{array}{ll}
+\text{ANCHORED:}&U_i\text{ contains an actual-diameter endpoint};\\[1mm]
+\text{FREE:}&\text{every blocker }z\in U_i\text{ has }\deg_C(z)=\deg_H(z)=0.
+\end{array}}
+\tag{MA.1}
+\]
+
+In an ANCHORED module, choose any loaded blocker `z_i in U_i` and one actual diameter partner `t_i`. The full-source midpoint theorem, together with the already proved opposite-shore localization of `q_i` and `U_i`, gives
+
+\[
+\boxed{|t_i-q_i|=O(D^{3/4}).}
+\tag{MA.2}
+\]
+
+It also gives
+
+\[
+\boxed{
+\angle(z_i-t_i,n_i)=O(D^{-1/4}).
+}
+\tag{MA.3}
+\]
+
+The slow-scale module spacing is much larger:
+
+\[
+\operatorname{dist}(q_i,q_j),
+\operatorname{dist}(U_i,U_j)
+=\Omega(\kappa_DD^{3/4}),
+\qquad
+\kappa_D\to\infty.
+\]
+
+Hence **all anchored modules simultaneously**, with no normal-cone averaging and no constant-factor spacing loss, yield pairwise vertex-disjoint actual diameter edges. Their directions inherit the module-normal separation
+
+\[
+\Omega(\kappa_DD^{-1/4}),
+\]
+
+so the convex diameter-thrackle property makes them an exact crossing braid whose entire crossing set lies in one
+
+\[
+\boxed{B(o,O(D/\kappa_D))=B(o,o(D))}
+\tag{MA.4}
+\]
+
+central disk.
+
+Thus the full slow-scale family of
+
+\[
+(c_*-o(1)){D^{1/4}\over\kappa_D},
+\qquad c_*=0.129220199818177\ldots,
+\]
+
+modules has the stronger source-wide alternative
+
+\[
+\boxed{
+\begin{array}{ll}
+\text{EXACT-BRAID:}&\Theta(D^{1/4}/\kappa_D)\text{ tagged actual diameters}\n
+&\text{are vertex-disjoint and pairwise crossing in one }O(D/\kappa_D)\text{ core};\\[1mm]
+\text{FREE-MODULE:}&\Theta(D^{1/4}/\kappa_D)\text{ modules have every upper blocker}\n
+&\text{contact-isolated and actual-diameter-isolated in the original source.}
+\end{array}}
+\tag{MA.5}
+\]
+
+This supersedes the weaker loaded-head extraction: anchoring by **any** blocker in the module is enough, and the exact diameter partner is automatically localized near the reflected apex at the universal `D^(3/4)` scale.
+
+---
+
+## 1. Module-level dichotomy
+
+Fix one selected reflection module `(q_i,U_i)`. The radial-interface theorem proved:
+
+1. `G_C[U_i]` is a disjoint union of angularly monotone paths and isolated vertices;
+2. every nontrivial component contains a vertex of `B_+`;
+3. a singleton component with any contact to the complement of `U_i` also lies in `B_+`;
+4. a component containing no `B_+` vertex is therefore a single full-contact isolate;
+5. because the relative-interior stress has the full actual diameter graph in its positive support, that full-contact isolate also has diameter degree zero.
+
+If some component contains `B_+`, the module is ANCHORED.
+
+If no component contains `B_+`, every component is one point `z` satisfying
+
+\[
+\boxed{
+\deg_C(z)=\deg_H(z)=0.
+}
+\tag{MA.6}
+
+Since the components partition `U_i`, this proves the FREE side of (MA.1) for **every blocker** in the module, not merely for the canonical farthest head.
+
+---
+
+## 2. Any loaded blocker determines an exact diameter partner near `q_i`
+
+Suppose module `i` is ANCHORED. Choose
+
+\[
+z_i\in U_i\cap B_+.
+\]
+
+Because `z_i` is positively diameter-loaded, choose an actual diameter partner `t_i`:
+
+\[
+|z_i-t_i|=D.
+\tag{MA.7}
+\]
+
+Let
+
+\[
+m_i={z_i+t_i\over2}
+\]
+
+be its midpoint. The full-source geometry theorem gives one common circumcenter `o` with
+
+\[
+\boxed{|m_i-o|=O(D^{3/4})}
+\tag{MA.8}
+\]
+
+uniformly over every actual diameter edge.
+
+The simultaneous reflection theorem gives, uniformly over the full blocker set,
+
+\[
+|z_i-o|={D\over2}+O(\sqrt D),
+\qquad
+\angle(z_i-o,n_i)=O(D^{-1/4}),
+\tag{MA.9}
+\]
+
+while the reflected apex satisfies
+
+\[
+|q_i-o|={D\over2}+O(\sqrt D),
+\qquad
+\angle(q_i-o,-n_i)=O(D^{-1/4}).
+\tag{MA.10}
+\]
+
+Equations (MA.9)--(MA.10) imply the vector cancellation
+
+\[
+\boxed{
+(z_i-o)+(q_i-o)=O(D^{3/4}).
+}
+\tag{MA.11}
+\]
+
+Indeed the angular errors contribute `O(D*D^-1/4)=O(D^3/4)` and the radial errors contribute only `O(sqrt D)`.
+
+Since
+
+\[
+t_i-o=2(m_i-o)-(z_i-o),
+\]
+
+we have
+
+\[
+\begin{aligned}
+t_i-q_i
+&=2(m_i-o)-(z_i-o)-(q_i-o).
+\end{aligned}
+\]
+
+Using (MA.8) and (MA.11),
+
+\[
+\boxed{|t_i-q_i|=O(D^{3/4}).}
+\tag{MA.12}
+\]
+
+No convex-normal averaging is needed.
+
+---
+
+## 3. The exact diameter direction inherits the module normal
+
+From
+
+\[
+z_i-t_i=2(z_i-m_i)
+\]
+
+and (MA.8)--(MA.9),
+
+\[
+z_i-t_i
+=D n_i+O(D^{3/4})
+\tag{MA.13}
+\]
+
+after orienting `n_i` toward the blocker shore. Dividing by the exact length `D` gives
+
+\[
+\boxed{
+\angle(z_i-t_i,n_i)=O(D^{-1/4}).
+}
+\tag{MA.14}
+
+Thus the actual diameter direction is automatically aligned to the reflection module phase.
+
+For the selected slow-scale family, distinct module normals satisfy
+
+\[
+\angle(n_i,n_j)
+\ge(2-o(1))\kappa_DD^{-1/4}.
+\tag{MA.15}
+
+Because `kappa_D->infinity`, (MA.14) is negligible relative to (MA.15). Hence distinct anchored-module diameter directions obey
+
+\[
+\boxed{
+\angle(z_i-t_i,z_j-t_j)
+\ge(2-o(1))\kappa_DD^{-1/4}.
+}
+\tag{MA.16}
+
+All normals lie in one quadrant, so these are ordinary lifted angular gaps and preserve the module order.
+
+---
+
+## 4. All anchored-module diameter edges are vertex-disjoint
+
+The blocker sets `U_i` are pairwise disjoint, so all chosen heads `z_i` are distinct.
+
+The simultaneous block-diagonal theorem gives
+
+\[
+\boxed{
+|q_i-q_j|=\Omega(\kappa_DD^{3/4})
+\qquad(i\ne j).
+}
+\tag{MA.17}
+
+By (MA.12), every partner `t_i` lies in an `O(D^3/4)` ball about `q_i`. Since `kappa_D->infinity`, those partner balls are pairwise disjoint for sufficiently large `D`. Therefore all `t_i` are distinct.
+
+A cross-collision `t_i=z_j` is impossible as well. Equations (MA.9)--(MA.10), together with the fact that all selected normals lie in one quadrant, give
+
+\[
+|q_i-z_j|\ge(1/\sqrt2-o(1))D.
+\tag{MA.18}
+\]
+
+But (MA.12) is `o(D)`. Hence
+
+\[
+\boxed{
+\{z_i,t_i\}\cap\{z_j,t_j\}=\varnothing
+\qquad(i\ne j).
+}
+\tag{MA.19}
+
+No thinning beyond the original slow-scale module selection is needed.
+
+---
+
+## 5. Anchored modules form an exact central diameter braid
+
+The actual diameter graph is a convex geometric thrackle. By (MA.19), every two selected anchored-module diameter edges are vertex-disjoint, so they cross properly.
+
+Their midpoint locations satisfy (MA.8), while their pairwise line-angle gaps satisfy (MA.16). If `c_ij` is the intersection of two supporting lines, the elementary line-intersection estimate gives
+
+\[
+|c_{ij}-m_i|
+\le {O(D^{3/4})\over
+\sin(\Omega(\kappa_DD^{-1/4}))}.
+\]
+
+Because `kappa_D=o(D^1/4)`, the angle tends to zero and its sine is comparable to the angle. Therefore
+
+\[
+\boxed{
+|c_{ij}-o|=O(D/\kappa_D).
+}
+\tag{MA.20}
+
+Since `kappa_D->infinity`, this is `o(D)`. The diameter segments themselves cross, so the line intersections are the actual proper crossing points.
+
+Thus every anchored subfamily is an exact actual-diameter braid through one common `O(D/kappa_D)` core, with one braid edge tagged by each anchored reflection module.
+
+---
+
+## 6. Source-wide anchored/free split
+
+The full slow-scale family has
+
+\[
+M_D>(c_*-o(1)){D^{1/4}\over\kappa_D}
+\tag{MA.21}
+\]
+
+modules. Partition them into ANCHORED and FREE according to (MA.1). One class contains at least `M_D/2` modules.
+
+Hence either:
+
+### EXACT-BRAID
+
+At least
+
+\[
+\boxed{
+(c_*/2-o(1)){D^{1/4}\over\kappa_D}
+}
+\tag{MA.22}
+
+modules contribute vertex-disjoint actual diameter edges. Every two cross properly, their direction gaps are `Omega(kappa_D D^-1/4)`, their opposite endpoints lie `O(D^3/4)` from the corresponding reflected apexes, and all crossings lie in one `O(D/kappa_D)` central disk.
+
+or:
+
+### FREE-MODULE
+
+At least
+
+\[
+\boxed{
+(c_*/2-o(1)){D^{1/4}\over\kappa_D}
+}
+\tag{MA.23}
+
+modules satisfy
+
+\[
+\boxed{
+\deg_C(z)=\deg_H(z)=0
+\quad\text{for every }z\in U_i.
+}
+\tag{MA.24}
+
+Thus the **entire** upper-diameter obstruction set of each retained module consists of original-source points carrying neither an old unit contact nor an old actual diameter edge.
+
+For any subpolynomial divergent `kappa_D=D^{o(1)}`, both surviving populations have size
+
+\[
+D^{1/4-o(1)}.
+\]
+
+Taking `kappa_D=log log D`, for example, forces either an exact tagged diameter braid of size `Theta(D^1/4/log log D)` through an `O(D/log log D)` core, or the same-order family of modules whose complete blocker sets are active-constraint-free.
+
+---
+
+## 7. Frontier effect
+
+The reflection branch can no longer hide behind arbitrary contact propagation or an arbitrary attachment of its upper blockers to the diameter graph.
+
+```text
+one selected reflection module (q_i,U_i)
+    |
+    +-- ANCHORED:
+    |      some z_i in U_i is diameter-loaded
+    |      choose |z_i-t_i|=D
+    |      t_i is automatically O(D^(3/4)) from q_i
+    |      direction(z_i t_i) is O(D^-1/4) from n_i
+    |
+    +-- FREE:
+           every z in U_i has deg_C(z)=deg_H(z)=0
+```
+
+Across the slow-scale family, the anchored half is automatically a full-size exact diameter braid; no head-specific normal-cone averaging and no extra constant-spacing extraction are needed.
+
+C-II remains open. The two resulting local targets are now sharply separated:
+
+1. **EXACT-BRAID:** combine the exact diameter endpoints `z_i,t_i` with the loaded tooth bases and penetration tags. In particular the opposite endpoint `t_i` is forced into the `O(D^3/4)` reflected-apex neighborhood while the diameter direction follows the ordered module normals.
+2. **FREE-MODULE:** perform a finite compensated reflection when **every** diameter violator of `q_i` is an old contact/diameter isolate. Any first obstruction created while moving those blocker isolates must be genuinely new, rather than inherited from the canonical active graph.
+
+**Disposition:** upgraded the radial loaded-sink theorem to a module-level dichotomy. Either a positive fraction of the slow-scale modules produces a full-size, vertex-disjoint exact actual-diameter braid through the same `o(D)` central core, or a positive fraction has its entire upper-blocker set contact- and diameter-isolated. C-II and Level I remain open.

@@ -1,0 +1,319 @@
+# Target C-II — one complete deep-braid partner lane is necessarily nested
+
+**Date:** 2026-09-17  
+**Status:** proof-only sharpening of the partner-rainbow theorem; no canonical promotion claimed  
+**Scope:** the endpoint-disjoint exact-antipodal deep-force braid on one pre-hub high-`t` shore through `t=(q-k)/D<=1.8687`  
+**Dependencies:** partner-rainbow support-order theorem; one-sided common-hub interval support; parameterized deep grid-force density; global one-sided reaction budget  
+**Certificate:** `research/verify_target_c_high_t_nested_partner_support_rail_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The partner-rainbow theorem proves that the hubward partner-region word
+
+\[
+(b_M^+,\ldots,b_1^+,\;b_1^-,\ldots,b_M^-)
+\tag{NR.1}
+\]
+
+is weakly unimodal. It records that at least one birth-side lane is monotone, leaving a nested-rainbow versus advancing-staircase dichotomy for that chosen lane.
+
+The orientation of the two blocks removes that dichotomy. Because the `+` block is written in **reverse interface order** while the `-` block is written in **forward interface order**, weak unimodality forces one natural interface-order lane to have nonincreasing support ends. Hence one entire birth-side lane is always a nested support rainbow; no further thinning is required.
+
+No assertion about which physical hubward host arc contains the partner endpoints is needed.
+
+---
+
+## Theorem NR — complete nested partner rail
+
+Fix a disjoint deep braid with selected centers
+
+\[
+i_1<i_2<\cdots<i_M<k,
+\tag{NR.2}
+\]
+
+and birth-side support-end tags
+
+\[
+b_s^\pm\ge k,
+\qquad
+I_s^\pm=\{i_s+1,\ldots,b_s^\pm\}.
+\tag{NR.3}
+\]
+
+Then there is one fixed birth side
+
+\[
+\sigma\in\{+,-\}
+\tag{NR.4}
+\]
+
+such that
+
+\[
+\boxed{
+b_1^\sigma\ge b_2^\sigma\ge\cdots\ge b_M^\sigma.}
+\tag{NR.5}
+\]
+
+Consequently
+
+\[
+\boxed{
+I_1^\sigma\supsetneq I_2^\sigma\supsetneq\cdots\supsetneq I_M^\sigma.
+}
+\tag{NR.6}
+\]
+
+Thus one selected diameter bar from **every** force cell forms a complete nested support rail of size `M`. All of these bars retain pairwise disjoint endpoints and pairwise geometric crossing from the parent deep braid.
+
+### Proof
+
+The partner-rainbow theorem gives the weakly unimodal sequence
+
+\[
+S=
+(A\,|\,B)
+:=
+(b_M^+,\ldots,b_1^+\,|\,b_1^-,\ldots,b_M^-).
+\tag{NR.7}
+\]
+
+For any weakly unimodal sequence split into two contiguous blocks `A|B`,
+
+\[
+\boxed{
+A\text{ is weakly nondecreasing}
+\quad\text{or}\quad
+B\text{ is weakly nonincreasing}.}
+\tag{NR.8}
+\]
+
+Indeed, if `A` is not nondecreasing, a strict descent already occurs inside `A`; a unimodal sequence can never ascend after its first descent, so all of `B` is nonincreasing. Conversely, if `B` is not nonincreasing, a strict ascent occurs inside `B`; no descent can have occurred earlier, so all of `A` is nondecreasing. Plateaux cause no problem.
+
+Apply (NR.8) to (NR.7).
+
+- If `A=(b_M^+,\ldots,b_1^+)` is nondecreasing in the displayed order, reversing the block gives
+  \[
+  b_1^+\ge b_2^+\ge\cdots\ge b_M^+.
+  \tag{NR.9}
+  \]
+- If `B=(b_1^-,\ldots,b_M^-)` is nonincreasing, then directly
+  \[
+  b_1^-\ge b_2^-\ge\cdots\ge b_M^-.
+  \tag{NR.10}
+  \]
+
+This proves (NR.5).
+
+Finally `i_1<...<i_M` while the chosen `b_s` are nonincreasing and all satisfy `b_s>=k>i_M`. Therefore
+
+\[
+\{i_{s+1}+1,\ldots,b_{s+1}\}
+\subsetneq
+\{i_s+1,\ldots,b_s\}
+\tag{NR.11}
+\]
+
+for every `s`, proving (NR.6). `square`
+
+---
+
+## 1. Coherent transverse-sign nested subrail
+
+The nested birth-side rail chooses exactly one of the two opposite-transverse force bars at each selected cell. Relative to the coherently oriented high-`t` row axes, color each rail bar by the sign of its transverse derivative. One color occurs on at least half the cells.
+
+Hence there is a subrail `L_D` with
+
+\[
+|L_D|\ge\left\lceil{M\over2}\right\rceil
+\tag{NR.12}
+\]
+
+that simultaneously has:
+
+- strictly nested laminar support intervals;
+- pairwise disjoint source endpoints;
+- pairwise geometric crossing;
+- one common transverse sign;
+- pairwise disjoint deep exact-phase neighborhoods;
+- the common inverse-`D` near-triangular train grid;
+- the fixed local two-sided cusp inherited from every force cell.
+
+For a parameterized parent density
+
+\[
+\lambda=c_0-6\rho-\eta-2\delta>0,
+\qquad
+c_0={113\over20{,}000{,}000},
+\tag{NR.13}
+\]
+
+the growing-depth conflict extraction gives
+
+\[
+M>
+\left({\lambda\over16\,3^{1/8}}-o(1)\right)D^{1/4},
+\tag{NR.14}
+\]
+
+so
+
+\[
+\boxed{
+|L_D|>
+\left({\lambda\over32\,3^{1/8}}-o(1)\right)D^{1/4}.
+}
+\tag{NR.15}
+\]
+
+The point is stronger than a generic monotone-support lane: the coherent-sign lane may be chosen **inside a nested support rainbow**.
+
+---
+
+## 2. Stress-dilute nested rail
+
+Impose the global KKT quantile before the endpoint/window conflict extraction. For fixed `0<sigma<1`, delete centers with
+
+\[
+B_i>{1\over\sigma\lambda D}.
+\tag{NR.16}
+\]
+
+The one-sided reaction budget leaves
+
+\[
+>(1-\sigma)\lambda D-o(D)
+\tag{NR.17}
+\]
+
+parent cells satisfying
+
+\[
+\boxed{
+B_i\le{1\over\sigma\lambda D},
+\qquad
+0<|G_i|\le{1\over\sigma\lambda}.
+}
+\tag{NR.18}
+\]
+
+Apply the same endpoint/window conflict extraction and Theorem NR. On the growing-depth diagonal `r_D->infinity`, `r_D=o(D^(3/4))`, one obtains a **nested** rail of size
+
+\[
+\boxed{
+M_D^{budget}>
+\left({(1-\sigma)\lambda\over16\,3^{1/8}}-o(1)\right)D^{1/4},
+}
+\tag{NR.19}
+\]
+
+with (NR.18) at every birth cell. A coherent-sign nested subrail has half this leading coefficient:
+
+\[
+\boxed{
+|L_D^{budget}|>
+\left({(1-\sigma)\lambda\over32\,3^{1/8}}-o(1)\right)D^{1/4}.
+}
+\tag{NR.20}
+\]
+
+The exact compressed force coefficients also retain
+
+\[
+0<\lambda_i^\pm
+\le {1\over\sigma\lambda D\sin\rho}.
+\tag{NR.21}
+\]
+
+Thus nesting, coherent transverse sign, growing exact-phase depth, and `O(D^-1)` per-cell switching stress can all be imposed simultaneously.
+
+---
+
+## 3. Explicit current constants
+
+Use
+
+\[
+\rho=\delta={c_0\over100},
+\qquad
+\eta={c_0\over50},
+\qquad
+\lambda={9c_0\over10},
+\qquad
+\sigma={1\over2}.
+\tag{NR.22}
+\]
+
+Then the stress-dilute nested rail has
+
+\[
+\boxed{
+M_D^{budget}>
+(1.38516280797\times10^{-7}-o(1))D^{1/4},
+}
+\tag{NR.23}
+\]
+
+and every retained cell satisfies
+
+\[
+B_i\le{393313.668\over D},
+\qquad
+0<|G_i|\le393313.668.
+\tag{NR.24}
+\]
+
+After imposing one common transverse sign,
+
+\[
+\boxed{
+|L_D^{budget}|>
+(6.92581403985\times10^{-8}-o(1))D^{1/4}.
+}
+\tag{NR.25}
+\]
+
+Without the stress-quantile loss, the current ninety-percent parent density gives coherent-sign nested coefficient
+
+\[
+1.38516280797\times10^{-7},
+\tag{NR.26}
+\]
+
+and the parameter limit permits this coefficient to approach
+
+\[
+1.53906978663\times10^{-7}.
+\tag{NR.27}
+\]
+
+---
+
+## 4. Scope audit
+
+This theorem deliberately does **not** claim that the nested lane's partner endpoints all lie on one prescribed physical host arc. The earlier attempted shortcut from a four-block whole-boundary picture is too strong: the common hub cut places all births on one complementary boundary shore and all hubward partners on the other, whose region-label word turns once. The correct invariant is the unimodal partner-region word (NR.7).
+
+The reversal of the `+` birth-side block is exactly what upgrades that unimodality to the nested-lane conclusion (NR.5).
+
+No regular-shell contradiction follows from nesting alone. The remaining work is to combine the nested, coherent-sign, stress-dilute rail with the common inverse-`D` train grid and the near-central antipodal metric geometry.
+
+---
+
+## 5. Frontier effect
+
+A surviving exact-antipodal high-`t` branch must contain an unbounded object with all of the following simultaneously:
+
+```text
+one complete birth-side diameter rail
++ strictly nested support intervals
++ pairwise crossing and pairwise endpoint-disjoint bars
++ pairwise disjoint growing exact-phase birth neighborhoods
++ a coherent-transverse-sign subrail of half the size
++ one common inverse-D near-triangular train grid
++ optional depth-independent B_i = O(1/D) stress quantile
++ bounded absolute local reactions.
+```
+
+The previous advancing-staircase alternative is not needed for the guaranteed lane. The next closure target can therefore be stated against a single nested support geometry.
+
+**Disposition:** sharpened partner-rainbow unimodality to an exact full-lane nesting theorem and combined it with the current stress quantile and coherent-sign extraction. C-II and Level I remain open.

@@ -1,0 +1,326 @@
+# Target C-II — shallow outer teeth force linear inward penetration
+
+**Date:** 2026-09-14  
+**Repository base:** `783e2e9711125a4c0028fea2f12c9ebcc42ae699`  
+**Status:** proved proof-only geometric consequence; theorem-state authority unchanged  
+**Scope:** Type-II two-edge tooth branch; numerical corollary uses current AG42/§171 low-`t` floor  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The outer-tooth/long-side dichotomy leaves a concrete tooth branch.  This note turns a
+large two-edge-tooth population plus small outer detour into a linear family of
+distinct, strongly inward unit contacts.
+
+Let a two-edge tooth have loaded base endpoints `a,b`, unloaded apex `x`, and nonunit
+base length
+
+\[
+s=|a-b|\in(1,2].
+\]
+
+Both `ax` and `xb` are unit contacts.  Audited Section 126 identifies these teeth with
+actual augmented triangular faces.
+
+## 1. Most teeth are shallow when detour is small
+
+Each two-edge tooth contributes exactly
+
+\[
+2-s
+\]
+
+to the metric outer detour
+
+\[
+d_{out}=b-\operatorname{per}(F).
+\]
+
+Fix `eta>0` and call a tooth `eta`-shallow if
+
+\[
+s\ge2-\eta.
+\]
+
+If `N_2` is the total tooth count and `N_{sh}(eta)` the shallow count, then Markov's
+inequality applied to the exact detour sum gives
+
+\[
+\boxed{
+N_{sh}(\eta)
+\ge N_2-{d_{out}\over\eta}.
+}
+\tag{ST.1}
+\]
+
+No area estimate is used.
+
+## 2. One apex supports at most two sufficiently shallow teeth
+
+Set
+
+\[
+\alpha_\eta:=\arccos(1-\eta/2).
+\]
+
+For an `eta`-shallow tooth, its two loaded endpoints lie on the unit circle centered
+at `x` and their smaller angular separation `gamma` satisfies
+
+\[
+\gamma\ge\pi-2\alpha_\eta.
+\tag{ST.2}
+\]
+
+All contact neighbors of `x` are source points at mutual distance at least one, so
+their direction angles on the unit circle are pairwise separated by at least `pi/3`.
+For one endpoint of a shallow tooth, every possible partner lies in the arc of radius
+`2 alpha_eta` about its antipodal direction.  The total width of that arc is
+`4 alpha_eta`.
+
+If
+
+\[
+\boxed{\alpha_\eta<\pi/12,}
+\tag{ST.3}
+\]
+
+then this partner arc has width less than `pi/3`, so it contains at most one other
+contact neighbor.  Therefore the endpoint pairs belonging to `eta`-shallow teeth form
+a matching in the contact-neighbor set of `x`.
+
+Canonical C26 gives
+
+\[
+3\le\deg_C(x)\le5
+\]
+
+for every unloaded contact-core vertex.  Hence a matching among the neighbors has at
+most two edges:
+
+\[
+\boxed{
+\text{one unloaded apex supports at most two `eta`-shallow teeth.}
+}
+\tag{ST.4}
+\]
+
+Condition (ST.3) is equivalent to
+
+\[
+\eta<2(1-\cos(\pi/12))
+=0.06814834742186\ldots .
+\]
+
+## 3. Every shallow apex has a strongly inward extra contact
+
+Choose one shallow tooth `a-x-b` at a distinct apex `x`.  Since `deg_C(x)>=3`, choose
+a contact neighbor `w` distinct from `a,b`.
+
+The apex belongs to an unloaded component `I_r`.  Harmonic trapping places every
+unloaded vertex of that component inside its attachment polygon `P_r subset F`; every
+loaded vertex is also in `F`.  Thus
+
+\[
+w\in F.
+\tag{ST.5}
+\]
+
+Choose coordinates with
+
+\[
+a=(-\cos\alpha,0),\qquad
+b=(\cos\alpha,0),\qquad
+x=(0,\sin\alpha),
+\]
+
+where
+
+\[
+0<\alpha\le\alpha_\eta,
+\]
+
+and with `F` in the half-plane `y>=0`.  Write
+
+\[
+w-x=(X,Y),\qquad X^2+Y^2=1.
+\]
+
+Triangle-freeness gives
+
+\[
+|w-a|>1,\qquad |w-b|>1,
+\]
+
+because equality would create a unit equilateral triangle using the contact `xw` and
+one tooth side.  Expanding the two inequalities gives
+
+\[
+\cos\alpha\,|X|-\sin\alpha\,Y<1/2.
+\tag{ST.6}
+\]
+
+Write `Y=sin beta`, `|X|=cos beta` with `beta in[-pi/2,pi/2]`.  Since `w in F`,
+
+\[
+\sin\alpha+\sin\beta\ge0,
+\]
+
+hence `beta>=-alpha`.  Equation (ST.6) gives
+
+\[
+\cos(\alpha+\beta)<1/2.
+\]
+
+Under (ST.3), `0<=alpha+beta<2pi/3`, so
+
+\[
+\beta>\pi/3-\alpha.
+\]
+
+Therefore every such extra contact has inward normal component
+
+\[
+\boxed{
+Y>\sin(\pi/3-\alpha)
+\ge Y_\eta:=\sin(\pi/3-\alpha_\eta).
+}
+\tag{ST.7}
+\]
+
+The explicit algebraic form is
+
+\[
+Y_\eta
+={\sqrt3\over2}(1-\eta/2)
+-{1\over2}\sqrt{\eta-\eta^2/4}.
+\tag{ST.8}
+\]
+
+## 4. Distinct penetration-edge count
+
+By (ST.4), `N_sh(eta)` shallow teeth use at least
+
+\[
+{N_{sh}(\eta)\over2}
+\]
+
+distinct apices.  At each distinct apex choose one shallow tooth and one extra contact
+`xw` as above.  The same undirected contact edge can be selected by at most its two
+endpoints.  Hence the number `E_pen(eta)` of distinct selected penetration contacts
+satisfies
+
+\[
+\boxed{
+E_{pen}(\eta)
+\ge {N_{sh}(\eta)\over4}
+\ge {1\over4}\left(N_2-{d_{out}\over\eta}\right).
+}
+\tag{ST.9}
+\]
+
+Every selected edge has inward normal component greater than `Y_eta` relative to the
+base of its chosen shallow tooth.
+
+This conclusion keeps physical edges distinct; it is not a KKT-weight count.
+
+## 5. Current low-`t` numerical tooth branch
+
+At the present proof-only floor
+
+\[
+t_{42}=C_{146}+0.0013751,
+\]
+
+the low-`t` squeeze gives
+
+\[
+{d_{out}\over D}\le0.002883975+o(1).
+\]
+
+The outer-tooth/long-side dichotomy gives the tooth alternative
+
+\[
+{N_2\over D}\ge
+0.4363893718701161\ldots-o(1).
+\tag{ST.10}
+\]
+
+Choose
+
+\[
+\eta=0.02.
+\]
+
+Then `alpha_eta=arccos(0.99)<pi/12`, so (ST.4) applies.  Equation (ST.1) gives
+
+\[
+\boxed{
+{N_{sh}(0.02)\over D}
+\ge0.2921906218701161\ldots-o(1).
+}
+\tag{ST.11}
+\]
+
+Thus there are at least
+
+\[
+\boxed{
+0.1460953109350580\ldots D-o(D)
+}
+\tag{ST.12}
+\]
+
+distinct shallow-tooth apices, and at least
+
+\[
+\boxed{
+{E_{pen}(0.02)\over D}
+\ge0.0730476554675290\ldots-o(1)
+}
+\tag{ST.13}
+\]
+
+distinct inward penetration contacts.
+
+For `eta=0.02`, (ST.8) gives
+
+\[
+\boxed{
+Y_{0.02}=0.7868314698482648\ldots .
+}
+\tag{ST.14}
+\]
+
+So every selected penetration edge advances at least `0.7868...` in the inward normal
+direction of one near-diameter-two loaded-hull tooth base.
+
+## 6. Frontier effect
+
+This is a genuine geometric strengthening of the tooth branch:
+
+```text
+low t + tooth alternative
+ -> >0.29219 D shallow actual outer teeth
+ -> >0.14609 D distinct unloaded shallow apices
+ -> >0.07304 D distinct inward unit contacts
+ -> each has normal penetration >0.7868.
+```
+
+The theorem does not use or produce a positive lower bound on the KKT weight of those
+contacts.  That is important: the known near-chain regressions can hide transverse
+geometry behind small equilibrium weights.
+
+The next closing target is therefore to inject this **unweighted physical penetration
+population** into one of the already weight-free structures: the coherent rhombic
+phase boundary, the harmonic-cell attachment incidence ledger, or a source-preserving
+multi-tooth shear.  A purely weighted stress summation can still lose the result.
+
+The long-side alternative remains separate and open.
+
+## 7. Reproducibility
+
+Run
+
+```bash
+python3 research/verify_target_c_shallow_tooth_penetration.py
+```
+
+for the constant checks.

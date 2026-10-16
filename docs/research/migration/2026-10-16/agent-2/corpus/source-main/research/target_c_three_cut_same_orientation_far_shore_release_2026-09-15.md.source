@@ -1,0 +1,353 @@
+# Target C-II - same-oriented parallel three-cut triples admit an exact far-shore release
+
+**Date:** 2026-09-15  
+**Status:** proof-only exact source-level structural strengthening  
+**Scope:** the same-oriented projectively-parallel case in `target_c_three_cut_parallel_integration_classification_2026-09-15.md`  
+**Dependencies:** exact finite laminar multishear; nested shore cutsets; canonical contact-minimal/global-minimal normalization  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The rank-one three-cut classification correctly proves that, if all three selected train
+families are required to remain unit contacts, a same-oriented parallel triple has no
+nonconstant exact full-support cancellation curve. That is not the final finite-source
+obstruction in the canonical contact-minimal normalization.
+
+One may preserve the first two train families exactly and deliberately open the third.
+A compensating translation of the far shore then fixes both outermost layers exactly.
+Consequently every diameter row meeting none or all three selected cuts is unchanged
+**exactly**, while only the same bounded two-interface exceptional set can move.
+
+Thus the last rank-one integration regression also reduces to an exact finite diameter
+cusp. The price is favorable: one old unit-contact family is removed.
+
+---
+
+## 1. Three nested cuts with one common shore-oriented direction
+
+Let
+
+\[
+\tau_1,\tau_2,\tau_3
+\]
+
+be three consecutive selected O--O cuts on one laminar complement-dual path. Let their
+nested far shores be
+
+\[
+S_3\subset S_2\subset S_1,
+\]
+
+with indicators `chi_1,chi_2,chi_3`.
+
+Assume the surviving same-orientation rank-one case from the parent classification:
+
+\[
+\boxed{u_1=u_2=u_3=u,\qquad |u|=1.}
+\tag{FS.1}
+\]
+
+(The common negative orientation is absorbed by replacing `u` with `-u`.)
+
+For angles `alpha,beta`, put
+
+\[
+\Delta_\alpha:=R_\alpha u-u,
+\qquad
+\Delta_\beta:=R_\beta u-u.
+\tag{FS.2}
+
+The usual exact cut shears on `tau_1,tau_2` would displace a source vertex `x` by
+
+\[
+\chi_1(x)\Delta_\alpha+\chi_2(x)\Delta_\beta.
+\]
+
+Now add one ordinary translation of the entire far shore `S_3` by
+
+\[
+-(\Delta_\alpha+\Delta_\beta).
+\]
+
+The complete finite displacement field is therefore
+
+\[
+\boxed{
+W_{\alpha,\beta}(x)
+=\chi_1(x)\Delta_\alpha
++\chi_2(x)\Delta_\beta
+-\chi_3(x)(\Delta_\alpha+\Delta_\beta).
+}
+\tag{FS.3}
+
+This is an actual finite source motion, not merely an infinitesimal velocity field.
+
+The four consecutive layer displacements are
+
+\[
+\boxed{
+0,\quad
+\Delta_\alpha,\quad
+\Delta_\alpha+\Delta_\beta,\quad
+0.
+}
+\tag{FS.4}
+
+In particular the two outermost layers are fixed relative to one another.
+
+---
+
+## 2. The first two train families remain unit and the third opens strictly
+
+The audited shore-cut theorem says that the old unit contacts crossing `S_j` are exactly
+the train contacts of `tau_j`. A contact outside the three selected train families has
+the same `chi_j` value at both endpoints for every `j`, so it is translated rigidly and
+is unchanged exactly.
+
+A `tau_1` contact joins the first two layers in (FS.4). Its old vector is `u`, and its
+new vector is
+
+\[
+u+\Delta_\alpha=R_\alpha u,
+\]
+
+so its length stays exactly one.
+
+A `tau_2` contact joins the middle two layers. Its new vector is
+
+\[
+u+\Delta_\beta=R_\beta u,
+\]
+
+so its length also stays exactly one.
+
+A `tau_3` contact joins the third and fourth layers. Its new vector is
+
+\[
+\boxed{
+q(\alpha,\beta)
+:=u-(\Delta_\alpha+\Delta_\beta)
+=3u-R_\alpha u-R_\beta u.
+}
+\tag{FS.5}
+
+Its squared-length excess is the exact identity
+
+\[
+\begin{aligned}
+|q(\alpha,\beta)|^2-1
+&=10-6\cos\alpha-6\cos\beta+2\cos(\alpha-\beta)\\
+&=12\sin^2{\alpha\over2}
+ +12\sin^2{\beta\over2}
+ -4\sin^2{\alpha-\beta\over2}.
+\end{aligned}
+\tag{FS.6}
+
+For real `A,B`,
+
+\[
+\sin^2(A-B)
+\le2\bigl(\sin^2A+\sin^2B\bigr).
+\]
+
+Applying this with `A=alpha/2`, `B=beta/2` gives
+
+\[
+\boxed{
+|q(\alpha,\beta)|^2-1
+\ge4\left(
+\sin^2{\alpha\over2}
++\sin^2{\beta\over2}
+\right).
+}
+\tag{FS.7}
+
+Hence in a neighborhood of `(0,0)`, every nonzero parameter pair satisfies
+
+\[
+\boxed{|q(\alpha,\beta)|>1.}
+\tag{FS.8}
+
+Thus `tau_3` is not merely allowed to move: every one of its old unit contacts opens
+strictly under every nontrivial sufficiently small motion (FS.3).
+
+---
+
+## 3. Diameter rows meeting none or all three cuts are fixed exactly
+
+Orient a source pair by increasing layer index. Its selected-cut support intersects
+`{1,2,3}` in one contiguous subset. Under (FS.3), the exact relative-displacement
+increment depends only on that subset:
+
+\[
+\begin{array}{c|c}
+I_h\cap\{1,2,3\}&\text{relative increment}\\ \hline
+\varnothing&0\\
+\{1\}&\Delta_\alpha\\
+\{2\}&\Delta_\beta\\
+\{3\}&-(\Delta_\alpha+\Delta_\beta)\\
+\{1,2\}&\Delta_\alpha+\Delta_\beta\\
+\{2,3\}&-\Delta_\alpha\\
+\{1,2,3\}&0.
+\end{array}
+\tag{FS.9}
+
+The table follows immediately by subtracting the four layer displacements in (FS.4).
+In particular
+
+\[
+\boxed{
+I_h\cap\{1,2,3\}\in\{\varnothing,\{1,2,3\}\}
+\Longrightarrow
+r_h(\alpha,\beta)=r_h
+\text{ exactly}.}
+\tag{FS.10}
+
+Every remaining support type changes incidence at one of the two internal boundaries.
+Therefore the complete moving diameter set is the same two-interface exceptional set
+from the three-cut kernel theorem:
+
+\[
+\boxed{
+H_{mov}\subseteq H_{sw,1}\cup H_{sw,2}=H_{exc}.
+}
+\tag{FS.11}
+
+No full-span quadratic drift remains. It has been cancelled by the far-shore
+translation.
+
+---
+
+## 4. Canonical minimality converts any feasible parameter into a contradiction
+
+Fix one finite canonical source. Finiteness gives a neighborhood `U` of `(0,0)` in
+which every old strict lower-distance noncontact remains strictly longer than one and
+every old strict subdiameter pair remains strictly shorter than `D` under (FS.3).
+Suppose there is a nonzero pair
+
+\[
+(alpha,beta)\in U
+\]
+
+for which every moving actual diameter in `H_exc` remains at most `D`.
+
+By Sections 2--3:
+
+- every old unit contact outside `tau_3` remains exactly unit;
+- every old `tau_3` contact becomes strictly longer than one;
+- every old diameter outside `H_exc` is unchanged exactly;
+- every moving old diameter is at most `D` by assumption.
+
+All remaining old source pairs were strict lower-distance noncontacts and/or strict
+subdiameter pairs. Their strict slacks persist because `(alpha,beta)` was chosen in
+`U`. No new unit contact is created.
+
+The resulting source is therefore unit-separated, has the same cardinality, and has
+diameter at most `D`, but has strictly fewer unit contacts.
+
+- If its diameter is below `D`, global minimality is contradicted.
+- If its diameter equals `D`, the canonical contact-minimal choice is contradicted.
+
+Consequently a survivor must satisfy the exact finite infeasibility statement
+
+\[
+\boxed{
+\text{every sufficiently small nonzero }(\alpha,\beta)
+\text{ makes at least one }h\in H_{exc}
+\text{ exceed }D.
+}
+\tag{FS.12}
+
+Thus the same-oriented rank-one branch is not a global second-order integration
+obstruction. It is another finite exceptional-diameter cusp.
+
+---
+
+## 5. First-order normal form on the two parameter coordinates
+
+Although the finite theorem above is exact, its tangent system is especially simple.
+At `(alpha,beta)=(0,0)`,
+
+\[
+\Delta_\alpha=\alpha Ju+O(\alpha^2),
+\qquad
+\Delta_\beta=\beta Ju+O(\beta^2).
+\]
+
+For one diameter vector `r_h`, put
+
+\[
+\eta_h:=r_h\cdot Ju.
+\]
+
+Up to the common factor `2`, the first squared-length derivative is one of only three
+linear forms:
+
+\[
+\begin{array}{c|c}
+I_h\cap\{1,2,3\}&\text{first-order form}/(2\eta_h)\\ \hline
+\{1\}&\alpha\\
+\{2,3\}&-\alpha\\
+\{2\}&\beta\\
+\{3\}&-(\alpha+\beta)\\
+\{1,2\}&\alpha+\beta.
+\end{array}
+\tag{FS.13}
+
+Thus the entire same-oriented exceptional cusp lives on the three projective parameter
+rays
+
+\[
+\boxed{
+\alpha,\qquad \beta,\qquad \alpha+\beta.
+}
+\tag{FS.14}
+
+The next finite classification can therefore combine the two audited one-arc switching
+interfaces with a three-ray planar tangent system. It need not handle an arbitrary
+family of first-order functionals.
+
+---
+
+## 6. Relation to the parent rank-one classification
+
+The parent theorem proves the exact statement
+
+\[
+G(\theta_1,\theta_2,\theta_3)=0
+\Longrightarrow \theta=0
+\]
+
+near the origin when the three shore-oriented train vectors are equal and **all three
+train families are kept unit by train rotations**. The radial defect there is genuine.
+
+The present theorem does not contradict that calculation. It changes the finite move:
+
+1. rotate only the first two train cuts;
+2. translate the entire far shore to cancel their accumulated displacement;
+3. deliberately open the third train family.
+
+The canonical optimization makes step 3 useful rather than forbidden. The result is
+an exact localization theorem unavailable inside the all-contacts-preserved chart.
+
+Combining this with the parent classification yields:
+
+```text
+rank two triple:
+    exact full-support cancellation curve;
+
+rank one, mixed shore signs:
+    exact pair-cancellation curve;
+
+rank one, same shore sign:
+    exact far-shore-corrected finite release,
+    preserving two selected train families and opening the third.
+```
+
+Hence **every** three-cut orientation class now admits a genuine finite source motion
+for which all diameter rows outside the two switching interfaces are unchanged exactly.
+Only the bounded positive-KKT exceptional cusp remains.
+
+No diameter descent or C-II closure is claimed here.
+
+**Disposition:** proved proof-only exact far-shore release for the last same-oriented
+parallel three-cut integration regression. The three-cut finite localization is now
+complete across all orientation classes; C-II and Level I remain open.

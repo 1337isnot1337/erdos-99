@@ -1,0 +1,393 @@
+# Hostile audit — `g=0.0076` residual-coupled floor `t>=1.84355`
+
+**Date:** 2026-09-15  
+**Reviewed:**
+- `research/target_c_g0076_residual_floor_184355_2026-09-15.md`
+- `research/verify_target_c_g0076_residual_floor_184355.py`
+
+**Disposition:** **PASS at stated proof-only full-core Type-II scope, with one wording correction recorded below.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The candidate combines the hostile-audited corrected strong-branch atomic theorem
+`g=0.0076` with the already-audited restored dominant/complement outer-energy stack.
+Its new point is to correlate the residual complete-train budget with distance above
+the strong atomic endpoint, instead of assigning the generic two-bin residual
+independently.
+
+It proves the safe floor
+
+\[
+\boxed{
+\liminf {q-k\over D}\ge1.84355
+}
+\]
+
+at proof-only full-core scope.
+
+---
+
+## 1. Generic localization is independent of the new claim
+
+Before using residual stability, the proof uses only the previously audited generic
+inequalities
+
+\[
+z+p\ge\pi-{t+\kappa\over2}-r_2(U)-o(1),
+\]
+
+\[
+p\le
+{\delta-F(z)+r_2(U)^2\over2(1-\delta)}+o(1),
+\qquad
+\delta\ge F(z)-o(1).
+\]
+
+The exact rational verifier certifies the bootstrap
+
+```text
+0      -> z > 2.0753
+2.0753 -> z > 2.1885
+2.1885 -> z > 2.2068
+2.2068 -> z > 2.2099
+2.2099 -> z > 2.2104
+```
+
+for every putative survivor with `t<=1.84355`, and consequently
+
+\[
+U<1.913469+o(1)<1.9135.
+\]
+
+This stage does not assume the conclusion it is trying to prove.
+
+**Verdict:** PASS.
+
+---
+
+## 2. No hidden all-mass-is-atomic assumption
+
+Let
+
+- `A` be total exact atomic train mass;
+- `M` be dominant exact-orbit mass;
+- `C=(T-q/2)/D` be the full train scalar;
+- `U` be the Section-171 upper envelope.
+
+The valid chain is
+
+\[
+M\le A\le C\le U.
+\]
+
+The candidate defines
+
+\[
+R:=U-M.
+\]
+
+This quantity may contain both genuine non-dominant atomic mass and diffuse/non-atomic
+train mass.  That is harmless in both places where it is used:
+
+1. non-dominant atomic crossing mass is at most
+   \((A-M)^2/4\le R^2/4\);
+2. the complete-train population outside the dominant windows is at most the total
+   complete-train mass minus `M`, so the same `U-M=R` upper-bounds the complement
+   complete-train ledger after the Section-171 substitution.
+
+Thus the proof never identifies `A` with `C` or assumes all train mass is atomic.
+
+**Verdict:** PASS.
+
+---
+
+## 3. Generic residual is below `0.009`
+
+The ordinary two-bin capacity theorem gives
+
+\[
+M\ge m_2(U),
+\]
+
+because `A<=U`.  On the localized interval `U<1.9135`, the exact certificate checks
+
+\[
+U-m_2(U)<0.008896<0.009.
+\]
+
+Therefore
+
+\[
+\boxed{R<0.009.}
+\]
+
+This is deliberately a coarse bound used only to linearize the strong endpoint.
+
+**Verdict:** PASS.
+
+---
+
+## 4. Fallback/high-center branches cannot absorb the new envelope room
+
+The hostile audit of the corrected `g=0.0076` theorem gives endpoint deficits
+
+\[
+\Delta_2-B_0(C_{76})>1.49\times10^{-3},
+\]
+
+\[
+\Delta_2-B_H(C_{76})>3.21\times10^{-2},
+\]
+
+and proves the corresponding total-capacity functions with residual
+`(C76-M)^2/4` are maximized at `M=C76` on their audited interval.
+
+Now write
+
+\[
+h=U-C_{76}<0.00128.
+\]
+
+Replacing the old residual term by the relaxed new term changes capacity by exactly
+
+\[
+{(U-M)^2-(C_{76}-M)^2\over4}
+={2hR-h^2\over4}
+\le {hR\over2}
+<5.76\times10^{-6}.
+\]
+
+This is more than two orders of magnitude smaller than the fallback margin and four
+orders below the high-center margin.  Therefore, whenever `M<C76`, neither non-strong
+branch can be feasible in the localized window.
+
+The candidate note contains one overbroad sentence saying that *every* feasible
+dominant orbit in the localized window lies in the strong branch.  The proof only
+needs, and only establishes, the following precise statement:
+
+\[
+\boxed{
+M<C_{76}\Longrightarrow
+\text{the feasible dominant orbit must lie in the hostile-audited strong branch}.}
+\]
+
+If `M>=C76`, branch classification is unnecessary because the desired residual bound
+is immediate:
+
+\[
+U-M\le U-C_{76}.
+\]
+
+This is a wording/scope correction, not a gap in the theorem.
+
+For completeness, the verifier also checks that any tiny dominant-mass interval below
+the original hostile-audit domain is impossible by the generic square capacity alone,
+with margin greater than `0.007`.
+
+**Verdict:** PASS with the stated wording correction.
+
+---
+
+## 5. Strong-branch residual stability
+
+For `M<C76`, the hostile audit gives
+
+\[
+Q_1'(M)>0.5968,
+\qquad
+Q_1(M)=\Psi_1(M)+{(C_{76}-M)^2\over4}.
+\]
+
+Therefore
+
+\[
+\Psi_1'(M)>0.5968.
+\]
+
+The strong endpoint also has a strict positive deficit.  Feasibility implies
+
+\[
+0.5968(C_{76}-M)<{R^2\over4}.
+\]
+
+Since `C76-M=R-h` and `R<0.009`,
+
+\[
+R-h
+<{0.009\over4(0.5968)}R,
+\]
+
+so
+
+\[
+\boxed{R<1.004h.}
+\]
+
+If `M>=C76`, as noted above, the stronger `R<=h` holds directly.  Hence the displayed
+`1.004h` bound is valid uniformly.
+
+**Verdict:** PASS.
+
+---
+
+## 6. Downstream substitution uses the correct residual currency
+
+The shared-retention count becomes
+
+\[
+z+p\ge\pi-{t\over2}-x-1.004h-o(1),
+\qquad x=\kappa/2.
+\]
+
+The complement-rhombus incidence theorem uses non-dominant **atomic** mass.  Since
+
+\[
+A-M\le U-M=R<1.004h,
+\]
+
+its residual crossing allowance is safely bounded by
+
+\[
+{(1.004h)^2\over2}.
+\]
+
+Thus
+
+\[
+p\le
+{\delta-F(z)+(1.004h)^2\over2(1-\delta)}+o(1).
+\]
+
+No double counting is introduced: `F(z)` pays selected dominant terminal energy,
+whereas the `h^2` term bounds residual exact-orbit rhombus incidence.
+
+**Verdict:** PASS.
+
+---
+
+## 7. Feasible-region collapse
+
+With
+
+\[
+2\delta+x+h=R_t,
+\]
+
+define `Z(delta)=F^{-1}(delta)`.  Because
+
+\[
+1-{F'(z)\over2(1-\delta)}>0
+\]
+
+on the entire localized domain, the maximum retained mass under `F(z)<=delta` occurs
+at `z=Z(delta)`.
+
+The relaxed survivor-capacity function is
+
+\[
+Q(t,h,x)=
+Z(\delta)+{1.004^2h^2\over2(1-\delta)}
+-\left(\pi-{t\over2}-x-1.004h\right).
+\]
+
+Using
+
+\[
+F'(Z)\le1-\sqrt3/2<0.134,
+\qquad
+h<0.00128,
+\qquad
+\delta<0.051,
+\]
+
+the derivative signs are separated from zero by large margins:
+
+\[
+Q_x
+<1-{1\over2(0.134)}<0,
+\]
+
+\[
+Q_h
+<-{1\over2(0.134)}+1.004
++{1.004^2(0.00128)\over0.949}<0,
+\]
+
+while `Q_t>0` is immediate because `delta_t=9/4>0` and the explicit `t/2` term is
+positive.
+
+Therefore the most permissive relaxed point under `t<=1.84355` is
+
+\[
+t=1.84355,
+\qquad
+x=0,
+\qquad
+h=0.
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 8. Exact corner certificate
+
+At `h=x=0`, the residual allowance vanishes.  A survivor must satisfy
+
+\[
+\delta_0(t)
+\ge F\left(\pi-{t\over2}\right),
+\]
+
+where
+
+\[
+\delta_0(t)
+={1\over2}\left({9t\over2}-2\pi-C_{76}\right).
+\]
+
+The exact outward certificate uses Machin bounds for `pi`, integer square-root bounds,
+and an alternating sine series.  At `t=1.84355` it proves
+
+\[
+F\left(\pi-{t\over2}\right)-\delta_0(t)
+>1.3029\times10^{-5}>0.
+\]
+
+The arithmetic script also independently reproduces:
+
+```text
+U upper after bootstrap = 1.913468644590096...
+generic residual upper  = 0.008895157877949...
+h upper                 = 0.001274386272085...
+stability factor        = 1.003784374737196...
+extra fallback capacity < 5.76e-6
+corner contradiction    > 1.3029e-5
+```
+
+**Verdict:** PASS.
+
+---
+
+## Final disposition
+
+The corrected logical statement is:
+
+- if `M>=C76`, residual stability is immediate;
+- if `M<C76`, fallback/high-center branches are excluded and the hostile-audited strong
+  branch gives `U-M<1.004(U-C76)`;
+- this correlated residual collapses the relaxed low-`t` feasible region to one corner;
+- the exact corner sign excludes `t<=1.84355`.
+
+Thus the candidate validly establishes
+
+\[
+\boxed{
+\liminf {q-k\over D}\ge1.84355
+}
+\]
+
+at its stated proof-only full-core Type-II scope.
+
+This does not close C-II.  The live structural obstruction remains the separately
+proved retained dominant O--O pair weight `>0.0740D-o(D)` throughout `t<=1.860`, now
+on the surviving interval `1.84355...<=t<=1.860`.

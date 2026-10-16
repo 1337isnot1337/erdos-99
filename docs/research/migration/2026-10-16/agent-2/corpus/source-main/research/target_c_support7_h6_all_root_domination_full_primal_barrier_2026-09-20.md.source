@@ -1,0 +1,84 @@
+# Target C support-seven H6: full all-root domination primal barrier
+
+Date: 2026-09-20
+
+Status: exact negative result for the current 3,874-cell generic-H6 affine endpoint. The theorem-state authority is unchanged. C-II remains open.
+
+## Result
+
+The full fourteen-disjunction all-root interior-domination layer does **not** eliminate any cell of the current exact generic-H6 endpoint.
+
+For every one of the 3,874 frozen endpoint cells, there is one exact rational point in the 85-variable complete-angle affine relaxation that simultaneously:
+
+1. satisfies every complete-angle equality exactly;
+2. satisfies every original strict affine facet strictly; and
+3. selects and satisfies one domination alternative for each of all fourteen root/target pairs.
+
+The audit is stronger than closed-cover feasibility: in every accepted witness all fourteen selected domination inequalities have positive exact slack. Thus the witness lies in the strict interior of the selected domination branches, not on a domination wall.
+
+Consequently no branch-and-bound using only the fourteen proved domination disjunctions, on top of the existing complete-angle affine system, can remove any of these 3,874 cells. Any further elimination needs an additional necessary condition outside that relaxation.
+
+This does **not** prove that any endpoint cell is geometrically realizable. The rational witnesses live only in the current affine angular relaxation; they do not enforce the nonlinear common-metric sine identities.
+
+## Exact audit
+
+The frozen endpoint is
+
+\[
+3874=3076\,C_7+798\,(C_3\sqcup C_4),
+\]
+
+with state-index SHA-256
+
+```text
+b5e05331a267ea5c764b96ef834c1a6ffd5f03599b372e86cae3b8e77ea9666a
+```
+
+The complete scan was run in four deterministic serial ranges:
+
+```text
+[0,1000)     1000/1000 exact joint witnesses
+[1000,2000)  1000/1000 exact joint witnesses
+[2000,3000)  1000/1000 exact joint witnesses
+[3000,3874)   874/874  exact joint witnesses
+```
+
+Every cell succeeded at the root LP point. No branch-and-bound split was needed. Across all four ranges:
+
+```text
+checked cells                 3874
+exact joint witnesses         3874
+non-root searches                0
+unresolved cells                 0
+dead cells                       0
+exact reconstruction limit    1000 for every cell
+maximum primal denominator      813
+minimum original strict slack  1/240
+witnesses touching a selected
+  domination wall                0
+```
+
+The numerical LP is only a branch selector. For one base feasible LP point, the verifier chooses the numerically better side of each domination disjunction. It then rationally reconstructs the point coordinatewise and accepts it only after exact `Fraction` checks of all equalities, all original strict facets, and all fourteen selected domination halfspaces. Floating-point feasibility is never the certificate.
+
+The locally executed audit used a source-equivalent standalone mirror of the committed complete-angle, domination, LP, and rational-primal routines. The repository verifier
+
+`verify_target_c_support7_h6_all_root_domination_full_primal_barrier_2026_09_20.py`
+
+factors the same check through the existing committed modules and supports deterministic chunk output plus an exact summary pass.
+
+## Consequence for the closure search
+
+The earlier depth-one primal audit only proved that, for each domination clause separately, at least one side had an exact affine witness. That left open the possibility that the fourteen clauses were jointly inconsistent. This audit closes that possibility for the present affine relaxation: one exact witness satisfies all fourteen simultaneously in every endpoint cell.
+
+The earlier order-combinatorial work also showed that domination literals by themselves cannot create a directed segment-order cycle. The present result is stronger in a different direction: even their full affine joint interaction with the 85-variable complete-angle system is feasible cell by cell.
+
+The next direct filters therefore need information not already encoded by the complete-angle affine system plus all-root domination. The two main candidates are:
+
+- exact state-specific signs among the 168 rooted segment comparisons, coupled globally by acyclicity in `L(K8)`; and
+- the nonlinear common-metric conditions, preferably short four-cycle sine-law certificates before invoking the full 45-cycle sufficient family.
+
+Additional physical-pentagon branch products can still be useful because their branch-adaptive closure secants are also outside the base complete-angle system.
+
+## Scope
+
+This result is an obstruction to one proof route, not a closure of C-II. It changes no theorem-state authority file and does not lower the 3,874-cell endpoint count.

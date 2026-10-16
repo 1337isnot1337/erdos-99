@@ -1,0 +1,133 @@
+<!-- theorem-state: {"artifact_id":"ART-C04C9EBA6457","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Erdős Problem #99 — Target B strengthened virtual noncrossing-area floor
+
+**Date:** 2026-09-05  
+**Run type:** exact cross-theorem strengthening  
+**Target:** virtual-zonotope / support-depth interface  
+**Depends on:** virtual-zonotope missing-crossing identity; Target B Section 44.1  
+**LEVEL I STATUS:** STILL OPEN
+
+## 1. Correction to the first virtual-area estimate
+
+The virtual-zonotope report proves the exact finite identity
+
+`V_miss := sum_(tau<sigma, tau not cross sigma) |det(u_tau,u_sigma)|`
+
+`= area(Z)-A_R`
+
+and the exact lower bound
+
+`V_miss >= H_partial^K/2`.                                      (1.1)
+
+That report inserted the older Section-24 support-depth floor. In the pure rhombic-disk branch, Section 44.1 is substantially stronger and is already canonical.
+
+Section 44.1 gives
+
+`H_partial^K/D^2 = T/D - pi/2 + o(1)`.                          (1.2)
+
+Using the established pure-disk train lower bound
+
+`T/D >= 2.5395008183... + o(1)`,                               (1.3)
+
+one obtains
+
+`H_partial^K >= 0.9687044915... D^2 - o(D^2)`.                 (1.4)
+
+Insert (1.4) into (1.1).
+
+### Theorem 1 — strong virtual-area floor
+
+Every sufficiently large triangle-free pure-rhombic global-minimizer survivor satisfies
+
+`V_miss >= 0.4843522457... D^2 - o(D^2)`.                      (1.5)
+
+Equivalently, retaining the symbolic dependence on `x=T/D`,
+
+`V_miss/D^2 >= (x-pi/2)/2 - o(1)`.                             (1.6)
+
+This is the correct strongest currently canonical support-depth consequence for the virtual noncrossing determinant mass.
+
+## 2. Comparison with the old Section-24 insertion
+
+The first virtual-zonotope report used
+
+`H_partial^K >= (2sqrt(c)-sqrt(3))n-O(n^(2/3))`
+
+and therefore displayed
+
+`V_miss >= 0.1840497320... n-O(n^(2/3))`.
+
+That bound remains true but is strictly weaker in the pure-disk branch. Since
+
+`D^2/n -> c=2sqrt(3)/pi`,
+
+(1.5) is equivalent to
+
+`V_miss >= 0.534075... n-o(n)`,
+
+with the decimal depending only on the already displayed Section-44 constant and `c`.
+
+The exact symbolic form (1.6) should be preferred in further optimization.
+
+## 3. Interface-population consequence
+
+Let `I` be any subset of train tracks, `|I|=r`, and suppose every noncrossing pair carrying nonzero determinant mass has at least one endpoint in `I`. Since every determinant has magnitude at most one,
+
+`V_miss <= #{unordered train pairs incident with I}`
+
+`= r(T-r) + r(r-1)/2`
+
+`<= r T`.                                                       (3.1)
+
+Combining with (1.6) yields
+
+### Corollary 2 — virtual area cannot be hidden in a sublinear interface
+
+If all virtual determinant mass is incident with a train set `I`, then
+
+`r/D >= [x-pi/2]/(2x) - o(1)`,                                 (3.2)
+
+where `x=T/D`.
+
+Using only `x>=2.5395008183...`, the right side at that endpoint is approximately
+
+`0.1907`.
+
+Thus any attempt to store all required virtual area solely in discarded/interface trains needs a **linear** train population. An `o(D)` interface is impossible.
+
+More generally, if only a fraction `theta` of `V_miss` is carried by pairs incident with `I`, then
+
+`r/D >= theta [x-pi/2]/(2x) - o(1)`.                            (3.3)
+
+## 4. What this does and does not close
+
+Theorem 50.1 controls the number of **deleted crossing edges**, not the number of deleted train vertices. Therefore Corollary 2 does not contradict the current dense-core pruning theorem: a linear population of low-degree trains can be removed while costing only `O(lambda D^2)` physical crossing edges.
+
+The result does, however, eliminate a weaker escape that was still implicit in the first virtual-area handoff. The compulsory virtual determinant mass cannot be relegated to `o(D)` exceptional trains. Either:
+
+1. a positive linear population of low-degree/interface trains persists; or
+2. a positive fraction of `V_miss` is already internal to the retained coherent phase components.
+
+Those are now the two quantitative branches of the global deficit-transfer problem.
+
+## 5. Handoff
+
+```text
+LEVEL I STATUS: STILL OPEN.
+
+Exact:
+  V_miss >= H_partial^K/2.
+
+Section 44.1 sharpens this in the pure disk to
+  V_miss/D^2 >= (T/D-pi/2)/2-o(1)
+               >=0.4843522457...-o(1).
+
+Therefore a set of r trains incident with all virtual determinant mass must satisfy
+  r/D >= (T/D-pi/2)/(2T/D)-o(1),
+so r=Omega(D); at the current minimal T/D the coefficient is about 0.19.
+
+Next split:
+(A) Omega(D) low-degree/interface trains, or
+(B) positive virtual-area mass inside retained coherent phase components.
+Exploit each branch using exposed-hull terminal resources / local phase deficits.
+```

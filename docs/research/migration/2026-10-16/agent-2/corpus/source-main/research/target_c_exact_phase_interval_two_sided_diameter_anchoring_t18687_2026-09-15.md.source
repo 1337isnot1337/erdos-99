@@ -1,0 +1,50 @@
+# Target C-II — exact-phase marker intervals are two-sided diameter anchored through `t<=1.8687`
+
+**Date:** 2026-09-15  
+**Status:** proof-only structural corollary  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch with `t=(q-k)/D<=1.8687`  
+**Depends on:** phase-zero marker interval isolation through `1.8687`; Type-II diameter-normal convergence  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The marker-path theorem classifies every rigid proper interval block whose two coherent boundary train directions are exactly equal.  This note records a geometric consequence that is useful at source level: the two bars in the forced TB2 certificate anchor the moving block on opposite loaded-hull marker arcs.
+
+Let `theta_+,theta_-` be the fixed antipodal phase markers and let `tau_i,tau_j`, `i<j`, be two surviving marker-path cuts with the same coherent real direction
+
+\[
+\nu_i=\nu_j=\nu.
+\]
+
+Let `R_ij` be the path block between them. Then there exist two distinct actual diameter edges `h_+,h_-`, each with exactly one endpoint in `R_ij`, such that after orienting each diameter vector from its fixed endpoint into the moving block,
+
+\[
+(n_{h_+}\cdot J\nu)(n_{h_-}\cdot J\nu)<0.
+\]
+
+Consequently the two moving diameter endpoints lie on opposite open marker-to-marker loaded-hull arcs.  In particular an exact-phase block cannot have all of its diameter anchoring on only one side of the fixed marker pair.
+
+For an exact-phase run of consecutive path cuts
+
+\[
+\tau_a,\tau_{a+1},\ldots,\tau_b,
+\qquad \nu_a=\cdots=\nu_b=\nu,
+\]
+
+with all intervening regions nonhub, every region `R_k` between `tau_k,tau_{k+1}` contains at least one actual-diameter endpoint on each of the two marker-to-marker loaded-hull arcs. Since distinct path regions have disjoint interiors and disjoint assigned loaded-hull subarcs, a run of `r=b-a` exact-phase interfaces forces at least `r` distinct actual-diameter endpoints on each marker arc.
+
+## Proof
+
+For one proper interval block, the hostile-audited marker isolation theorem gives the exact equal-phase alternative: TB1 is impossible and every inclusion-minimal tangent obstruction is a TB2 pair `h_+,h_-` with opposite strict transverse signs
+
+\[
+(n_{h_+}\cdot J\nu)(n_{h_-}\cdot J\nu)<0.
+\]
+
+Minimality makes the two diameter edges distinct. By construction each is block-crossing, hence has exactly one moving endpoint in `R_ij`.
+
+The marker deletion theorem also places every moving diameter endpoint outside shrinking neighborhoods of `theta_+,theta_-`, and uniform Type-II diameter-normal convergence identifies `n_h/D` with the outward loaded-hull normal at that moving endpoint up to `o(rho_D)`. On the oriented normal circle, deleting the antipodal marker pair leaves exactly two open semicircular arcs. The sign of `n\cdot J\nu` is constant on each arc and opposite on the two arcs. Therefore opposite strict transverse signs force the two moving endpoints onto opposite marker-to-marker arcs.
+
+Now take an exact-phase consecutive run. Apply the preceding argument to each adjacent block `R_k`. The loaded-hull boundary assigned to different path regions consists of disjoint consecutive subarcs on each marker-to-marker side. Hence the selected endpoint on a given side for `R_k` cannot equal the selected endpoint for another region. Thus `r` adjacent exact-phase regions give at least `r` distinct diameter endpoints on each side.
+
+No lower bound on KKT multiplier mass is used. No claim is made that the two anchoring diameter edges are disjoint or that their opposite endpoints are distinct.
+
+**Disposition:** proved two-sided diameter anchoring for every exact-phase marker interval, and linear two-sided endpoint growth along exact-phase runs. C-II and Level I remain open.

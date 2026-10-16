@@ -1,0 +1,65 @@
+# Hostile audit — defect-charged train freedom and rank barrier
+
+**Date:** 2026-09-12  
+**Status:** audited-working proof-only material; theorem state unchanged  
+**Audited source:** [defect-charged train freedom and exact locking-rank barrier](target_c_defect_charged_train_flex_and_rank_barrier.md)
+
+## Verdict
+
+The physical-boundary identities, injective hole charge, train-angle flex lower bound,
+outer-to-outer shear count, and Maxwell row-count identity are valid on the
+nonisolated positive-contact core under the stated stopped-train hypotheses. The final
+row-count comparison is intentionally a no-go result: it proves that nominal external
+row count alone cannot contradict mixed rigidity. It does not close C-II.
+
+## Checks
+
+1. Face incidence gives 4R=2(E_R-P_R)+P_R, hence E_R=2R+T, and Euler on the
+   finite rhombus cell complex gives V_R=R+T+c_R-g_R. These formulas use edge
+   occurrences and remain valid with bridges, holes, and vertex-touching components.
+
+2. A physical boundary occurrence on a bounded hole has a bounded contact face on its
+   other side. It cannot be another strict rhombus, or it would belong to the same
+   rhombus union. Since all bounded quadrilateral contact faces are strict rhombi, the
+   opposite face is nonquadrilateral. The map from hole occurrences to nonquadrilateral
+   face-edge incidences is injective, giving P_hole<=4f+Q.
+
+3. A hole of length one or two is impossible in a simple straight-line contact graph.
+   A four-edge hole is an equilateral quadrilateral, hence a unit rhombus; the standard
+   triangle-free rhombus coverage lemma then makes it an actual quadrilateral contact
+   face, not a complementary hole. Therefore each hole has at least five boundary
+   occurrences and 5g_R<=4f+Q.
+
+4. For each edge-connected rhombus component, train angular rates have at most two
+   vector period constraints per hole. The kernel dimension is at least T_C-2g_C.
+   Summing gives dim F_train>=T-2g_R, and the hole bound yields the printed
+   T-(2/5)(4f+Q) estimate.
+
+5. A train with no hole endpoint is outer-to-outer. Hence the count of such trains is
+   at least T-P_hole, and therefore at least T-(4f+Q). Rotating only that train
+   vector closes every rhombus and leaves all hole periods zero; the statement is
+   limited to the rhombus subframework and does not assert preservation of external
+   bars.
+
+6. The Maxwell floor dim ker R_R>=2V_R-E_R=T+2c_R-2g_R follows directly from
+   rank at most the number of rhombus bars. With x=m-V_R, the mixed row count
+   gives the exact difference
+   N_ext-[(2V_R-E_R)-r_x]=2x-2+s_Z+r_x; substituting the three values of r_x
+   yields at least 1+s_Z in every case.
+
+## Limits
+
+- The hole-length-four step depends on the canonical empty-strict-rhombus coverage
+  lemma; it is not a generic statement about arbitrary four-point polygons.
+- The train-angle count is first-order, and finite one-train shears are asserted only
+  for outer-to-outer trains in the rhombus subframework.
+- The external-row difference is an exact nominal count. It does not bound the rank of
+  external rows restricted to train shears, nor does it give a small-singular-value
+  estimate.
+- Contact-isolated source points remain outside the core matrices.
+- No Type-I augmentation, global minimum-diameter implication, or Level-I result is
+  claimed.
+
+**Claim classification:** audited-working exact structural/no-go theorem; proof-only
+research candidate; C-II remains open.
+

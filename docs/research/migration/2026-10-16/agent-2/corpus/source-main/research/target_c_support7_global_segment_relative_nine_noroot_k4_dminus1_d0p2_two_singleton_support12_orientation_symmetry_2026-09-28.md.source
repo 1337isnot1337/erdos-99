@@ -1,0 +1,36 @@
+Support12 orientation symmetry reduction
+
+For support [0123]^3 [0124] [0134] [0145] [0234] [1234] [2346], the 729 raw cycle-choice assignments split into exactly 102 equivalence classes under support automorphisms.
+
+The support automorphism group has exactly eight elements. Vertex 4 is fixed because it is the unique vertex lying in six distinct supports. Vertices 5 and 6 are the only vertices lying in one support each, in supports 0145 and 2346. Thus an automorphism either preserves or swaps 5 and 6 and correspondingly preserves or swaps the pairs {0,1} and {2,3}; inside each pair the two vertices may be swapped independently.
+
+In one-line notation the eight permutations are:
+(0,1,2,3,4,5,6)
+(0,1,3,2,4,5,6)
+(1,0,2,3,4,5,6)
+(1,0,3,2,4,5,6)
+(2,3,0,1,4,6,5)
+(2,3,1,0,4,6,5)
+(3,2,0,1,4,6,5)
+(3,2,1,0,4,6,5)
+
+The tripled support 0123 already contains all three four-cycles. The other six supports each have three cycle choices, so there are 3^6=729 raw assignments.
+
+Under a support automorphism, selected cycles are permuted; a reversal only scales the corresponding coefficient coordinate by -1. Hence generalized Hamming weights are unchanged by the induced coordinate monomial transformation. Touched blocks and triangle rows are permuted, so the empty-space, singleton-line, complete-row-rank, and face-capacity conditions used by the exact orientation verifiers are invariant. Realizability is constant on these group orbits.
+
+For the exact three-cycle ordering used by the selected-pair orientation verifier, the eight automorphisms fix respectively
+729, 9, 9, 9, 27, 3, 3, 27
+six-choice assignments. Their sum is 816. Burnside's lemma gives 816/8=102 orientation classes.
+
+An exact enumeration of the group action gives orbit sizes:
+1 class of size 1,
+2 classes of size 2,
+17 classes of size 4,
+82 classes of size 8.
+These sum to 102 classes and 729 assignments.
+
+The self-contained shard verifiers for [0,27) and [54,81) exclude 54 raw assignments. Their automorphism saturation is 200 assignments in 27 complete symmetry classes. Therefore only 75 symmetry classes representing 529 assignments remain without using the middle shard.
+
+If the recorded [27,54) middle-shard nullity proof is also used, the full [0,81) interval saturates to 288 assignments in 39 symmetry classes, leaving 63 classes representing 441 assignments.
+
+A bounded exact local check of the group action, all 729 assignments, the 102 orbits, and both saturation counts completed successfully. The executed source had local Git blob hash f8a1b4dff9db89e6b38ac21d1569d8e9f1697a1e. The executable source itself is not persisted, so only the group-size and Burnside reduction are claimed as proof-level; the orbit-size and saturation counts are exact computational corroboration.

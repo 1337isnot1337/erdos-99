@@ -1,0 +1,56 @@
+# Target C all-defect phase/train gap
+
+Date: 2026-09-12
+
+Lifecycle: audited-working proof-only consequence; theorem-state authority unchanged.
+C-II and Level I remain open.
+
+For the connected nonisolated positive-contact core, count every contact edge in the
+complete stopped-train decomposition, including singleton trains on edges incident
+to no strict rhombus. Let `T` be the train count, `q` the loaded-hull vertex count,
+`f` the bounded nonquadrilateral-face count, `d_H=q-h`, and
+`s_Z=e+h-(2v-2)`. The exact train/core ledger is
+
+```
+T-q = 2f-(d_H+s_Z).                              (1)
+```
+
+On a Type-II full-core survivor sequence, near-disk convergence and vanishing
+strict-rhombus area excess force the normalized crossing measure onto the three
+projective phase relations. Simplicity of the stopped-train crossing graph and
+weighted Mantel give
+
+```
+2 sqrt(Delta_2) <= liminf (T-q/2)/D,
+Delta_2 = pi/(2 sqrt(3)).
+```
+
+The exposed hull intervals give the matching upper relation between loaded vertices
+and the atomic train mass. Since `q/D <= pi`, the combined inequality yields
+
+```
+liminf (T-q)/D >= 2 sqrt(Delta_2)-pi/2
+                   = 0.333829286933018... .       (2)
+```
+
+Combining (1) and (2), every Type-II survivor has
+
+```
+liminf [2f-(d_H+s_Z)]/D >= 0.333829286933018...,
+```
+
+or equivalently
+
+```
+f >= (d_H+s_Z)/2 + 0.166914643466509...D-o(D).
+```
+
+The proof is robust to holes, bridges, articulation points, exceptional faces of
+arbitrary degree, and contact-isolated source points because the affine-kernel and
+train ledgers are applied only to the nonisolated core. It does not infer a global
+minimizer from a local phase limit, nor does it close the inactive-container branch.
+
+The result is useful as a face-population lower bound. It is equivalent to the
+already-known strict phase gap after the exact train identity, so a further closing
+step must charge these forced faces to a source-preserving descent, a response bound,
+or a sharper global route payment.

@@ -1,0 +1,457 @@
+# Target C-II — FREE ancestry forces a square-root outer-face unit run or a square-root superdiameter braid
+
+**Date:** 2026-09-17  
+**Status:** proved candidate awaiting promotion; strengthens the cube-root FREE face/braid tradeoff  
+**Scope:** non-anchored FREE reflection modules, all-inactive two-sided activation ancestry  
+**Dependencies:** two-sided inactive gate absorption; two-boundary slack tradeoff; two-sided outer-face localization; upper-poor run decomposition; sharp superdiameter-thrackle lemma  
+**Certificate:** `research/verify_target_c_tooth_reflection_sqrt_tradeoff_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The cube-root tradeoff treated every upper near-diameter edge only through its original diameter deficit. The activation geometry contains a second quantity: an upper event also backtracks in the canonical support direction. For an upper gate, a deficit that is not already on the sharp superdiameter scale forces a reciprocal amount of support backtracking. Since all activation-time increments share one `O(1)` budget, many such upper gates force quadratically large total backtracking, and the lower gates must repay it.
+
+This improves the balanced polynomial scale from `D^(1/3)` to `D^(1/2)`.
+
+Put
+
+\[
+h_*={\sqrt{303}\over52}=0.334747984337100\ldots,
+\qquad
+a={49\over100}.
+\]
+
+Define
+
+\[
+\boxed{
+c_*:=\sqrt{a\over4h_*}
+=0.604935482831721\ldots .}
+\tag{SR.1}
+\]
+
+Then every all-inactive FREE ancestry reaching the near-opposite threshold has at least one of the following two original-source outcomes:
+
+1. **SQRT-FACE:** one consecutive all-lower run in the original outer contact face has support span at least
+   \[
+   \boxed{(c_*-o(1))\sqrt D;}
+   \tag{SR.2}
+   \]
+2. **SQRT-SUPER-BRAID:** there is a vertex-disjoint matching of at least
+   \[
+   \boxed{\left(\sqrt{3/8}-o(1)\right)\sqrt D}
+   \tag{SR.3}
+   \]
+   fully inactive outer-face pairs satisfying
+   \[
+   \boxed{D-|x-y|<{49\over100D},}
+   \tag{SR.4}
+   \]
+   and all their straight segments cross properly pairwise. Every endpoint is a vertex of the full source convex hull.
+
+Since `sqrt(3/8)=0.612372435695794... > c_*`, a coarser common statement is that every such ancestry forces a square-root object of size/span at least `(c_*-o(1))sqrt(D)`.
+
+The SQRT-FACE run itself contains a vertex-disjoint matching of
+
+\[
+\boxed{\left({c_*\over4}-o(1)\right)\sqrt D
+=(0.151233870707930\ldots-o(1))\sqrt D}
+\tag{SR.5}
+\]
+
+old fully inactive outer-face pairs with
+
+\[
+\boxed{
+1<|x-y|
+\le
+1+\left({2h_*\over c_*}+o(1)\right)D^{-1/2},
+}
+\tag{SR.6}
+\]
+
+where
+
+\[
+{2h_*\over c_*}=1.106722927774494\ldots .
+\]
+
+At terminal activation the complete selected lower run is an exact weakly support-monotone unit chain.
+
+---
+
+## 1. Exact deficit/backtracking identity for one upper gate
+
+Use the notation of the two-boundary theorem. For an upper ancestry edge let
+
+\[
+\Delta=s_{j+1}-s_j>0,
+\qquad
+|d|=D,
+\qquad
+N\cdot d=-b<0.
+\]
+
+Write the original edge vector and deficit as
+
+\[
+r=d+\Delta N,
+\qquad
+|r|=D-\rho,
+\qquad
+0<\rho\le\Delta.
+\]
+
+Squaring gives
+
+\[
+(D-\rho)^2
+=D^2-2\Delta b+\Delta^2,
+\]
+
+hence the exact identity
+
+\[
+\boxed{
+2\Delta b
+=2D\rho-\rho^2+\Delta^2.
+}
+\tag{SR.7}
+\]
+
+Therefore
+
+\[
+\boxed{
+b\ge {\rho\over\Delta}\left(D-{\rho\over2}\right).}
+\tag{SR.8}
+\]
+
+This is the missing coupling between the upper metric deficit and support backtracking.
+
+---
+
+## 2. Split upper gates at the sharp superdiameter scale
+
+Let `U` be the number of upper edges on the ancestry. Split them into
+
+\[
+E_{\rm thin}:=\left\{j:\rho_j<{a\over D}\right\},
+\qquad
+E_{\rm thick}:=\left\{j:\rho_j\ge {a\over D}\right\},
+\]
+
+with counts
+
+\[
+s:=|E_{\rm thin}|,
+\qquad
+m:=|E_{\rm thick}|,
+\qquad
+s+m=U.
+\]
+
+Because `a=0.49<1/2`, every thin upper edge is strictly above the sharp superdiameter threshold. Indeed
+
+\[
+\left(D-{a\over D}\right)^2-(D^2-1)
+=1-2a+{a^2\over D^2}
+>{1\over50}>0.
+\tag{SR.9}
+\]
+
+Thus
+
+\[
+|e|>D-{a\over D}>\sqrt{D^2-1}
+\tag{SR.10}
+\]
+
+for every thin upper edge. The sharp superdiameter theorem then gives two facts:
+
+- both endpoints of every thin upper edge are vertices of `conv(A)`;
+- any two vertex-disjoint thin upper edges cross properly.
+
+The two-sided outer-face theorem additionally says every ancestry endpoint is an old fully inactive outer-face source point.
+
+---
+
+## 3. If thin upper gates dominate, either the braid or a lower run is already square-root size
+
+Assume
+
+\[
+s\ge {3U\over4}.
+\tag{SR.11}
+\]
+
+The ancestry edges split by index parity into two matchings. One parity contains at least `s/2` thin upper edges, hence a pairwise-properly-crossing superdiameter matching of size at least
+
+\[
+{s\over2}\ge {3U\over8}.
+\tag{SR.12}
+\]
+
+Set
+
+\[
+\lambda:=\sqrt{8\over3}.
+\]
+
+If
+
+\[
+U\ge\lambda\sqrt D,
+\]
+
+then (SR.12) gives
+
+\[
+|E_{\rm braid}|
+\ge
+{3\lambda\over8}\sqrt D
+=
+\boxed{\sqrt{3/8}\,\sqrt D}.
+\tag{SR.13}
+\]
+
+This is SQRT-SUPER-BRAID.
+
+If instead
+
+\[
+U<\lambda\sqrt D,
+\]
+
+use only the fact that upper gates cannot contribute a macroscopic positive amount of support progress. The two-boundary theorem gives total lower support progress
+
+\[
+G_{\rm low}>D-O(\sqrt D).
+\tag{SR.14}
+\]
+
+Deleting the `U` upper edges creates at most `U+1` consecutive lower runs. Since every lower support gain is positive, one run has support span at least
+
+\[
+{G_{\rm low}\over U+1}
+\ge
+\left({1\over\lambda}-o(1)\right)\sqrt D
+=
+\boxed{\left(\sqrt{3/8}-o(1)\right)\sqrt D.}
+\tag{SR.15}
+\]
+
+By two-sided outer-face localization this run lies in the original outer contact face.
+
+Thus the thin-dominant case already has a square-root outcome with coefficient `sqrt(3/8)`.
+
+---
+
+## 4. If thick upper gates dominate, reciprocal activation time forces quadratic backtracking
+
+Assume now
+
+\[
+m>{U\over4}.
+\tag{SR.16}
+\]
+
+The total activation-time budget is
+
+\[
+\sum_j\Delta_j\le t_D,
+\qquad
+t_D<h_*+D^{-1/3}.
+\tag{SR.17}
+\]
+
+For a thick upper gate, `rho>=a/D`, while `rho<=Delta<=t_D`. Equation (SR.8) gives
+
+\[
+\begin{aligned}
+b_j
+&\ge
+{\rho_j\over\Delta_j}\left(D-{\rho_j\over2}\right)\\
+&\ge
+{a\over D\Delta_j}\left(D-{t_D\over2}\right).
+\end{aligned}
+\tag{SR.18}
+\]
+
+Put
+
+\[
+a_D:=a\left(1-{t_D\over2D}\right)=a-o(1).
+\]
+
+Then
+
+\[
+b_j\ge {a_D\over\Delta_j}.
+\tag{SR.19}
+\]
+
+By Cauchy,
+
+\[
+\sum_{j\in E_{\rm thick}}{1\over\Delta_j}
+\ge
+{m^2\over\sum_{j\in E_{\rm thick}}\Delta_j}
+\ge {m^2\over t_D}.
+\tag{SR.20}
+\]
+
+Hence total upper backtracking satisfies
+
+\[
+\boxed{
+B:=\sum_{j\in E_{\rm up}}b_j
+\ge
+{a_Dm^2\over t_D}
+>
+{a_DU^2\over16t_D}.
+}
+\tag{SR.21}
+\]
+
+Let
+
+\[
+A=a_{z_m}-a_{z_0}>D-O(\sqrt D)
+\]
+
+be the full support traverse. The exact support ledger is
+
+\[
+A=G_{\rm low}-B+S_{\rm up},
+\]
+
+where `S_up` is the sum of activation increments on upper edges. Therefore
+
+\[
+G_{\rm low}
+=A+B-S_{\rm up}
+\ge
+D+{a_DU^2\over16t_D}-O(\sqrt D).
+\tag{SR.22}
+\]
+
+Again there are at most `U+1` lower runs. One has support span at least
+
+\[
+{D+\beta_DU^2-O(\sqrt D)\over U+1},
+\qquad
+\beta_D:={a_D\over16t_D}
+\longrightarrow {a\over16h_*}.
+\tag{SR.23}
+\]
+
+For `U` on the square-root scale, AM-GM gives
+
+\[
+{D\over U}+\beta_DU
+\ge2\sqrt{\beta_DD}.
+\]
+
+If `U=o(\sqrt D)` the first term alone is much larger than `sqrt(D)`; if `U\gg\sqrt D` the second term is. The `O(sqrt D)` numerator error is lower order after division in the only balancing regime `U=Theta(sqrt D)`. Consequently (SR.23) yields
+
+\[
+\boxed{
+\operatorname{span}_N(R)
+\ge
+\left(2\sqrt{a\over16h_*}-o(1)\right)\sqrt D
+=
+(c_*-o(1))\sqrt D.
+}
+\tag{SR.24}
+\]
+
+This is SQRT-FACE.
+
+The mechanism is worth isolating: many upper gates that are not superdiameter-thin consume reciprocal activation time, so their total support backtracking grows quadratically in their count. The lower ancestry must repay that backtracking before reaching the near-opposite shore.
+
+---
+
+## 5. The square-root outer-face run contains a square-root near-unit matching
+
+Let `R` be any all-lower run with
+
+\[
+\operatorname{span}_N(R)\ge(c_*-o(1))\sqrt D.
+\]
+
+For each run edge let
+
+\[
+\sigma_j=|z_j-z_{j+1}|-1>0.
+\]
+
+The common boundary-slack ledger gives
+
+\[
+\sum_{j\in R}\sigma_j\le t_D.
+\tag{SR.25}
+\]
+
+Also support gain on one lower edge is at most its original edge length `1+sigma_j`, so
+
+\[
+|E(R)|
+\ge
+\operatorname{span}_N(R)-t_D
+\ge(c_*-o(1))\sqrt D.
+\tag{SR.26}
+\]
+
+At least half these edges satisfy
+
+\[
+\sigma_j
+\le
+{2t_D\over |E(R)|}
+\le
+\left({2h_*\over c_*}+o(1)\right)D^{-1/2}.
+\tag{SR.27}
+\]
+
+Taking the better path parity gives a vertex-disjoint matching of at least
+
+\[
+\left({c_*\over4}-o(1)\right)\sqrt D
+\]
+
+such pairs. Every endpoint is an old fully inactive outer-face source point. This proves (SR.5)--(SR.6).
+
+---
+
+## 6. Relation to the cube-root tradeoff
+
+The earlier cube-root theorem used only
+
+\[
+\sum\rho_j\le O(1)
+\]
+
+and a generic long-matching crossing extraction. That is enough to obtain an upper braid of order `U^2/D`, balanced against a lower run of order `D/U` at `U=D^(2/3)`.
+
+The new argument uses the exact event identity (SR.7). Once upper deficits exceed a fixed fraction of `1/D`, their support backtracking has a reciprocal-`Delta` cost. Cauchy changes the lower-run currency from merely `D/U` to
+
+\[
+{D\over U}+\Theta(U).
+\]
+
+If instead most upper deficits stay below `0.49/D`, the sharp superdiameter theorem makes them a crossing braid directly. The new balance is therefore square-root rather than cube-root.
+
+The cube-root theorem remains valid as a deficit-continuous statement for arbitrary long matchings; SR is stronger for the actual FREE activation geometry.
+
+---
+
+## 7. Hostile checks and limitations
+
+- The reciprocal estimate uses the exact first-hit event geometry, not just the original-source deficit ledger.
+- `rho<=Delta` is the proved reverse-triangle bound from the two-boundary theorem.
+- Cauchy is applied only to thick upper gates; their activation increments are positive and their sum is at most the same clearing-time budget `t_D`.
+- The superdiameter braid is an original-source object. Its crossing and hull-endpoint conclusions come from the sharp source-level superdiameter theorem, not from the terminal deformation.
+- Same-parity ancestry edges are vertex-disjoint because an activation ancestry has distinct vertices.
+- Every lower run and every ancestry endpoint is outer-face localized by the current two-sided outer-face theorem.
+- Neither outcome is yet contradictory. C-II remains open.
+
+**Disposition:** upgraded the all-inactive FREE branch from a cube-root normal form to a square-root fork. Either one original outer-face lower run has `(0.604935...-o(1))sqrt(D)` support span and a square-root near-unit matching, or the original source contains a `(0.612372...-o(1))sqrt(D)` vertex-disjoint crossing braid of fully inactive hull-to-hull pairs with deficit below `0.49/D`.

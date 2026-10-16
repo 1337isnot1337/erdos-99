@@ -1,0 +1,847 @@
+# Final continuation prompt: Erdos Problem #99
+
+Work entirely in this single context.
+
+Do not spawn subagents, parallel agents, delegated workers, or separate research agents.
+
+Do not search the internet.
+
+This is a continuation of a long research investigation, not a fresh attempt.
+
+## Files
+
+The canonical research state is the attached file
+
+`../reports/erdos_problem_99_complete_working_report_SYNTHESIZED.md`.
+
+The seven attached papers are the only external literature sources:
+
+1. P. Erdos, "Some problems in number theory, combinatorics and combinatorial geometry," Mathematica Pannonica 5 (1994), 261-269.
+2. P. Bateman and P. Erdos, "Geometrical Extrema Suggested by a Lemma of Besicovitch," American Mathematical Monthly 58 (1951), 306-314.
+3. A. Bezdek and F. Fodor, "Minimal Diameter of Certain Sets in the Plane," J. Combin. Theory Ser. A 85 (1999), 105-111.
+4. A. Schurmann, "On Extremal Finite Packings," Discrete Comput. Geom. 28 (2002), 389-403.
+5. A. V. Bondarenko, D. P. Hardin, E. B. Saff, "Minimal N-Point Diameters and f-Best-Packing Constants in R^d," Proc. Amer. Math. Soc. 142 (2014), 981-988.
+6. D. Eppstein, "Edge Bounds and Degeneracy of Triangle-Free Penny Graphs and Squaregraphs," J. Graph Algorithms Appl. 22 (2018), 483-499.
+7. A. Bezdek, K. Bezdek, R. Connelly, "Finite and Uniform Stability of Sphere Packings," Discrete Comput. Geom. 20 (1998), 111-130.
+
+Do not attach or use the two superseded parallel continuation files. Their valid content has already been synthesized into Sections 21-23 of the canonical report.
+
+## Absolute trust instruction
+
+READ THE CANONICAL REPORT IN FULL BEFORE BEGINNING NEW WORK.
+
+Then TRUST IT WHOLEHEARTEDLY.
+
+Every theorem, lemma, proposition, corollary, calculation, constant, counterexample, audit conclusion, normal form, and limitation stated as established in that report is available as a theorem.
+
+Do not re-audit it.
+Do not re-prove it for reassurance.
+Do not check its arithmetic again.
+Do not revisit rejected arguments.
+Do not spend time looking for gaps in Sections 1-23.
+Do not re-run old computations.
+Do not compare the two old continuation branches.
+
+In particular, Sections 21-23 are now part of the trusted theorem stack.
+
+Only NEW mathematics introduced in this run should be adversarially checked.
+
+The purpose of this run is to solve the remaining problem, not to verify the work already done.
+
+# Problem
+
+For n >= 2 define
+
+\[
+D(n)=\min\{\operatorname{diam}(A):A\subset\mathbb R^2,\ |A|=n,\ |x-y|\ge1\text{ for }x\ne y\}.
+\]
+
+Prove or disprove:
+
+\[
+\exists n_0\ \forall n\ge n_0\ \forall A,
+\qquad
+\operatorname{diam}(A)=D(n)
+\Longrightarrow
+A\text{ contains a unit equilateral triangle}.
+\]
+
+Equivalently, every sufficiently large global minimum-diameter unit-separated configuration has a triangle in its unit-contact graph.
+
+The quantifiers matter.
+
+A local minimum is not a disproof.
+An asymptotically optimal family is not a disproof.
+One triangle-containing minimizer for each n does not prove the statement.
+A disproof requires triangle-free GLOBAL minimizers for arbitrarily large n.
+
+# Mission
+
+FINISH ERDOS PROBLEM #99.
+
+The structural phase is essentially complete. Do not broaden the investigation back into generic rigidity, stress, graph counting, or asymptotic packing density.
+
+The remaining issue is a sharp finite boundary-capacity phenomenon at scale sqrt(n).
+
+Attack that exact endgame.
+
+If an affirmative proof is possible, prove it.
+If an exact infinite globally optimal triangle-free family emerges, disprove it.
+
+Do not stop merely because the first promising route fails.
+
+# Trusted current endpoint
+
+The canonical report reduces the problem to two branches.
+
+## Target A: super-boundary forest capacity
+
+There is a hybrid triangle-free global minimizer with a fixed pinned-jammed contact-minimal core K and only bridge-forest structure outside K.
+
+If the unpinned forest has u vertices, r fixed roots, and c components, then its pinned contact-preserving lineality satisfies
+
+\[
+\ell=\dim\mathcal L_{\widehat Q}\ge u-r+c\ge u-|Q|+c.
+\]
+
+Since |Q|=O(sqrt(n)),
+
+\[
+\ell=O(\sqrt n)
+\Longrightarrow
+|V(K)|=n-O(\sqrt n).
+\]
+
+Therefore the only genuinely separate flexible obstruction is
+
+\[
+\boxed{\ell=\omega(\sqrt n).}
+\]
+
+Plain area/Oler accounting does NOT eliminate this branch: Section 21 proves that outside-vertex and topology terms cancel from the global shell window.
+
+A Target A proof must use information not visible to plain area alone, such as configuration-space dimension, saturation, free volume, support resources, or a coupling between forest occupancy and the boundary shell.
+
+## Target B: joint Oler/isodiametric/track-depth stability
+
+In the jammed branch,
+
+\[
+Q=V(\operatorname{conv}A),\qquad |Q|=\Theta(\sqrt n),
+\]
+
+\[
+F_4=n-O(\sqrt n),
+\]
+
+and every four-face is a strict unit rhombus with
+
+\[
+60^\circ<\theta_F\le90^\circ,
+\qquad
+\sum_F(\theta_F-\pi/3)=O(\sqrt n).
+\]
+
+The train tracks form a simple triangle-free crossing graph and satisfy
+
+\[
+F_4\le B_{\mathcal R}^2/16,
+\qquad
+B_{\mathcal R}\ge4\sqrt{F_4}.
+\]
+
+At most two tracks run hull-to-hull. Therefore at least
+
+\[
+\boxed{2\sqrt{F_4}-2=2\sqrt n-O(1)}
+\]
+
+train ends enter the non-hull defect network.
+
+Sections 21-23 now quantify that defect network much more sharply.
+
+# New exact boundary machinery
+
+Use the notation
+
+\[
+a_0=\frac{\sqrt3}{2},
+\qquad
+c_0=\frac{\sqrt3}{4},
+\qquad
+c=\frac{2\sqrt3}{\pi},
+\qquad
+C_0=\sqrt{2\pi\sqrt3}.
+\]
+
+## 1. Finite Oler inequality
+
+For N unit-separated points in a convex body K,
+
+\[
+N\le\frac{2}{\sqrt3}\operatorname{area}(K)+\frac12\operatorname{per}(K)+1,
+\]
+
+or
+
+\[
+\operatorname{area}(K)+c_0\operatorname{per}(K)\ge a_0(N-1).
+\]
+
+This gives the improved universal lower bound
+
+\[
+D(n)\ge
+\sqrt{\frac{2\sqrt3}{\pi}(n-1)+\frac34}
+-\frac{\sqrt3}{2}.
+\]
+
+This alone is not enough.
+
+## 2. Exact topology-corrected shell window
+
+For a strict-rhombus complex R inside K=conv(A), with
+
+\[
+R=|\mathcal R|,\quad B=B_{\mathcal R},\quad v=|V(\mathcal R)|,\quad t=n-v,
+\]
+
+Euler characteristic chi, rhombic angular-area excess
+
+\[
+E_{\mathcal R}=\sum_{F\in\mathcal R}(\sin\theta_F-a_0),
+\]
+
+and convexification/non-rhombic area
+
+\[
+G_{\mathcal R}=\operatorname{area}(K)-\sum_{F\in\mathcal R}\sin\theta_F,
+\]
+
+we have the exact identity
+
+\[
+v=R+B/2+\chi.
+\]
+
+The Oler shell window is
+
+\[
+G_{\mathcal R}+E_{\mathcal R}
+\ge c_0(B-P)+a_0(t+\chi-1),
+\]
+
+and for a global minimizer
+
+\[
+G_{\mathcal R}+E_{\mathcal R}
+<c_0B+a_0(t+\chi),
+\]
+
+where P=per(K).
+
+The entire remaining allowance is exactly
+
+\[
+\boxed{c_0P+a_0.}
+\]
+
+All component, hole, topology, and outside-vertex corrections cancel from that remaining capacity window.
+
+## 3. Exact Oler surplus decomposition
+
+For the regular contact-disk setting define
+
+\[
+\mathscr O(A)
+=\operatorname{area}(K)+c_0P-a_0(n-1).
+\]
+
+Then
+
+\[
+\boxed{\mathscr O(A)=\sum_F s_F+\sum_C s_C,}
+\]
+
+where the terms are nonnegative contact-face and indentation-pocket slacks.
+
+For a global minimizer,
+
+\[
+\mathscr O(A)<c_0\pi D+a_0.
+\]
+
+The sufficient closing inequality is therefore
+
+\[
+\boxed{\mathscr O(A)\ge c_0\pi D+a_0.}
+\]
+
+The required asymptotic coefficient is
+
+\[
+c_0C_0
+=\frac{\sqrt3}{4}\sqrt{2\pi\sqrt3}
+=1.4284692103\ldots.
+\]
+
+Any proposed lower-bound route must be checked against this scale before investing heavily in it.
+
+## 4. Convex defect-face and pocket inequalities
+
+Every simple bounded contact face in the jammed branch is a strictly convex equilateral polygon.
+
+For an m-sided contact face,
+
+\[
+\operatorname{area}(F)\ge c_0(m-2).
+\]
+
+For a convex indentation pocket bounded by r unit edges and a closing hull chord of length L,
+
+\[
+\operatorname{area}(C)\ge c_0(r-L).
+\]
+
+In the regular contact-disk case this gives
+
+\[
+G\ge\frac{3\sqrt3}{20}(B-P),
+\]
+
+and for a pure rhombic disk
+
+\[
+G\ge c_0(B-P).
+\]
+
+Together with
+
+\[
+B-P\ge(4-C_0)\sqrt n-O(1),
+\]
+
+these produce explicit shell charges, but their coefficients are not large enough to close the problem by themselves.
+
+Do not re-prove them. Improve or combine them.
+
+## 5. Exact train-end metric charges
+
+Let b_F be the number of rhombic train ends whose non-rhombic side is a bounded contact face.
+
+For a rhombic boundary edge e on the unbounded contact face, with outward unit normal nu_e and midpoint m_e, define
+
+\[
+\rho_e=\max_{x\in A}\nu_e\cdot(x-m_e).
+\]
+
+Thus rho_e=0 on a hull edge and rho_e>0 on a non-hull outer edge.
+
+Put
+
+\[
+H_\infty=\sum_{e\text{ on the unbounded face}}\rho_e.
+\]
+
+A bounded contact face has width at least
+
+\[
+\sqrt3/2.
+\]
+
+Hence the exact train-span inequality is
+
+\[
+B_{\mathcal R}D
+\ge
+4\sum_F\sin\theta_F
++\sqrt3\,b_F
++2H_\infty.
+\]
+
+Every bad train end is now quantitatively classified:
+
+1. a bounded-face end costs at least sqrt(3)/2 of transverse span;
+2. an unbounded non-hull end costs its exact positive depth rho_e;
+3. a true hull end costs zero.
+
+Moreover
+
+\[
+b_F+b_\infty\ge2\sqrt{F_4}-2.
+\]
+
+The only soft Target B escape is therefore a large population of shallow non-hull ends on the unbounded face.
+
+## 6. Directional train-width refinement
+
+Section 23 gives the key synthesis.
+
+For each train tau let nu_tau be its transverse unit normal and
+
+\[
+w_K(\nu)=\max_{x\in K}\nu\cdot x-\min_{x\in K}\nu\cdot x.
+\]
+
+Then
+
+\[
+L_\tau
++\frac{\sqrt3}{2}s_F(\tau)
++\sum_{e\in\partial\tau,\ e\text{ on the unbounded face}}\rho_e
+\le w_K(\nu_\tau)\le D.
+\]
+
+Summing gives
+
+\[
+\boxed{
+\sum_\tau w_K(\nu_\tau)
+\ge
+2\sum_F\sin\theta_F
++\frac{\sqrt3}{2}b_F
++H_\infty.
+}
+\]
+
+At the same time Cauchy's formula gives
+
+\[
+P=\int_0^\pi w_K(\phi)\,d\phi.
+\]
+
+This is now the most direct bridge between train-track geometry and the Oler/perimeter machinery.
+
+DO NOT replace all widths immediately by D. That discards exactly the information the new continuation recovered.
+
+# Primary objective: close Target B
+
+Spend most of the mathematical effort here first. Target B is currently closer to an analytic endgame than Target A.
+
+The desired theorem is a JOINT OUTER-SHELL STABILITY THEOREM strong enough to force
+
+\[
+\mathscr O(A)\ge c_0\pi D+a_0
+\]
+
+for every sufficiently large triangle-free survivor.
+
+The theorem may take a different equivalent form, but it must beat the exact finite global-minimizer allowance, not merely produce another O(sqrt(n)) term.
+
+## Route B1: discrete train widths versus Cauchy perimeter
+
+The central new object is
+
+\[
+\sum_\tau w_K(\nu_\tau)
+\]
+
+versus
+
+\[
+\int_0^\pi w_K(\phi)\,d\phi=P.
+\]
+
+Derive a sharp upper bound for the discrete width sum using the STRUCTURED multiset of train directions.
+
+Do NOT assume
+
+\[
+\frac1T\sum_\tau w_K(\nu_\tau)\le P/\pi.
+\]
+
+That is false without a distribution theorem for the directions.
+
+Instead use the actual constraints:
+
+- two crossing train directions have projective separation > pi/3;
+- each pair of trains crosses at most once;
+- the crossing graph is triangle-free;
+- R=F_4=n-O(sqrt(n));
+- T=B/2=Theta(sqrt(n));
+- at most two trains are hull-to-hull;
+- two-direction cores require Omega(sqrt(R)) non-hull supports;
+- the five-sector C5 construction is a regression test showing that abstract dense triangle-free crossing data alone are insufficient.
+
+Try a quantitative case split on the projective direction distribution.
+
+Possible structure:
+
+1. directions concentrate into two major arcs -> exploit the two-direction support theorem and the compulsory defect shell;
+2. directions occupy several separated sectors -> prove that the sampled width sum cannot stay near T D unless K pays a perimeter/isodiametric penalty;
+3. a near-Mantel crossing graph -> use stability of Mantel to obtain an almost-bipartite train structure and then geometricize it;
+4. a non-near-Mantel graph -> show the larger number of directions/boundary tracks already forces enough shell surplus.
+
+A purely abstract graph argument is not enough. Use the planar train order and actual directions.
+
+## Route B2: convert outer depths into pocket/Oler surplus
+
+For a non-hull outer rhombic edge,
+
+\[
+\rho_e=h_K(\nu_e)-\nu_e\cdot m_e.
+\]
+
+This is an exact support-function deficit.
+
+The Oler run independently decomposes the convexification region into indentation pockets with slacks s_C.
+
+Connect these two descriptions.
+
+Seek an exact or sharp inequality of the form
+
+\[
+\sum_C s_C
+\ge \Phi(H_\infty,\ P,\ B,\text{turning data}),
+\]
+
+or
+
+\[
+G+c_0P
+\ge \Psi(H_\infty,b_\infty),
+\]
+
+with a coefficient strong enough to close the Oler-surplus inequality.
+
+Use Green's theorem, support functions, polygonal mixed area, or exact pocket geometry.
+
+For a single indentation chain, derive the strongest relation you can among:
+
+- the unit-edge chain length r;
+- its hull chord L;
+- pocket area;
+- pocket slack s_C;
+- edge normals;
+- the depths rho_e;
+- total turning.
+
+Then sum without double counting.
+
+This may be the single most promising new calculation.
+
+## Route B3: bounded-face-heavy versus outer-face-heavy dichotomy
+
+There are at least 2 sqrt(n)-O(1) bad train ends.
+
+Split them into b_F bounded-face ends and b_infty outer non-hull ends.
+
+If b_F is large, exploit the sharp sqrt(3)/2 transverse charge per end together with directional widths and perimeter.
+
+If b_infty is large, exploit H_infty and pocket/support-function depth.
+
+Do the constant check immediately.
+
+Do not compare the sqrt(3)/2 span charge directly to the 1.428469... Oler coefficient as if they were already the same currency. First prove the conversion.
+
+But note the numerical opportunity: 2 sqrt(n) ends times sqrt(3)/2 is sqrt(3) sqrt(n) = 1.73205... sqrt(n), which is larger than 1.428469... sqrt(n). If enough of that span penalty can be converted without major loss into Oler/isodiametric surplus, the constants are potentially strong enough.
+
+## Route B4: simultaneous near-equality stability
+
+Section 21 identifies the conceptual endpoint:
+
+near equality in local Oler cells must be incompatible at large scale with both
+
+- the diametral-hull condition Q=V(conv(A)); and
+- near equality in the isodiametric/perimeter bounds.
+
+Formalize this.
+
+Assume a sequence of triangle-free global minimizers survives and the Oler surplus remains below the closing threshold.
+
+Then force quantitative near equality in all relevant inequalities.
+
+Study the consequences:
+
+- what must the convex hull look like if area is near pi D^2/4?
+- what must it look like if perimeter is near pi D?
+- what does "every hull vertex is diametral" add?
+- what do near-equality Oler cells imply about local contact geometry?
+- how can strict rhombus angles all remain >60 degrees under those simultaneous near-equality requirements?
+
+Derive any needed isodiametric or constant-width stability theorem self-containedly rather than searching for one.
+
+Support-function/Fourier methods are encouraged if useful.
+
+## Route B5: equality and stability of the finite Oler cells
+
+Do not merely use Oler's inequality as a black box now.
+
+The report has already proved it and extracted the exact local surplus.
+
+Study the EQUALITY and NEAR-EQUALITY structure of the local face and pocket inequalities.
+
+A shallow pocket with nearly minimal Oler slack may force hidden near-unit diagonals or a restricted turn pattern.
+
+A bounded contact face with nearly minimal area may force a near-triangular pattern.
+
+Try to prove that if too many defects are simultaneously near equality, then either:
+
+- an exact unit triangle appears;
+- a feasible diameter-decreasing boundary motion exists; or
+- the hull cannot have every vertex diametral.
+
+This is the type of simultaneous stability missing from the present report.
+
+## Route B6: exploit the diameter graph on the hull
+
+Every hull vertex is an endpoint of an actual diameter.
+
+Use this aggressively.
+
+Study the support function and width function of a convex polygon all of whose vertices are diametral.
+
+Potential tools:
+
+- antipodal pairs and rotating calipers;
+- diameter graph combinatorics;
+- support-function normal cones;
+- Cauchy width/perimeter formula;
+- constant-width comparison;
+- turning measure;
+- exact relations between a hull indentation direction and the location of diameter partners.
+
+The five-sector boundary-pinned counterexamples fail this exact condition. The 11-point sun shows the condition alone is not a finite local contradiction, so use it in conjunction with global near-equality or train-depth information.
+
+# Target A: do not ignore it, but do not attack it with plain area
+
+If Target B closes, the remaining flexible branch still has to be eliminated unless the new finite-capacity theorem applies directly to all triangle-free minimizers.
+
+A direct theorem covering both branches is ideal.
+
+Otherwise attack the high-dimensional bridge forest.
+
+## Route A1: configuration-space saturation
+
+The forest is a bar framework attached to a fixed core and fixed diameter roots.
+
+Its contact-preserving tangent space has dimension ell=omega(sqrt(n)).
+
+Study the exact configuration space of that forest with unit bars, fixed roots, and the inequalities
+
+\[
+1\le |p_i-p_j|\le D.
+\]
+
+A high-dimensional compact feasible component should require many active blocking constraints at an extremal realization.
+
+Try to turn this into a theorem saying that high forest dimension forces one of:
+
+- many new unit contacts;
+- many new diameter constraints/endpoints;
+- a triangle;
+- a boundary-capacity loss.
+
+Be careful: reaching a different same-D minimizer containing a triangle does NOT by itself eliminate the original triangle-free minimizer. Any representative-selection argument must remain inside the triangle-free class or derive a contradiction to global optimality.
+
+Do not repeat the previously rejected one-root or simple re-anchoring arguments.
+
+## Route A2: charge forest freedom to shell resources
+
+Section 21 proves that a forest vertex has no automatic Oler area penalty.
+
+Therefore use something stronger than count alone.
+
+Possible quantities to charge:
+
+- free volume around a movable forest vertex;
+- dimension of the admissible motion cone;
+- number and geometry of caging roots;
+- support directions required to keep a forest component inside the diameter shell;
+- distance of forest vertices from the fixed core;
+- boundary roots per degree of freedom;
+- Voronoi or Delaunay cells constrained by acyclicity of the contact graph.
+
+The preferred theorem would show that every independent forest degree of freedom consumes a definite amount of the same support/pocket budget that appears in Target B.
+
+Then ell=O(sqrt(n)) would follow automatically and both branches would merge.
+
+## Route A3: bypass the dichotomy
+
+If the Oler/isodiametric stability method can prove directly that every sufficiently large triangle-free GLOBAL minimizer has diameter strictly larger than an explicit n-point competitor, do that.
+
+A direct finite-capacity theorem is better than separately killing A and B.
+
+The existence of arbitrarily dense triangle-free perturbations means there will be no uniform leading-order density gap. The improvement must live at finite boundary order and use global optimality.
+
+# Opposite direction: disproof
+
+Remain genuinely open to disproof, but require exact global certification.
+
+A useful candidate family must satisfy
+
+\[
+M(D_h)=|A_h|,
+\]
+
+where
+
+\[
+M(D)=\max\{|A|:A\text{ unit-separated},\ \operatorname{diam}(A)\le D\}.
+\]
+
+Do not spend time producing more local minima, shell examples, or asymptotically optimal perturbations unless an exact finite packing inequality appears capable of certifying equality.
+
+# Constant gate
+
+At this stage a theorem with the wrong coefficient is not meaningful progress toward closure.
+
+Before proving a long inequality:
+
+1. write its intended final contradiction symbolically;
+2. insert D < sqrt(c n), P <= pi D, B >= 4 sqrt(F_4), and F_4=n-O(sqrt(n));
+3. compute the coefficient of sqrt(n);
+4. compare it against
+   \[
+   c_0C_0=1.4284692103\ldots;
+   \]
+5. abandon or strengthen the route if its best possible constant cannot close.
+
+Existing lower bounds such as 0.182148... sqrt(n) or 0.303581... sqrt(n) are real but insufficient. Do not spend the run reproving variants with similar constants unless they combine with a genuinely new term.
+
+# Regression tests that every new theorem must survive
+
+Treat the report's countermodels as mandatory tests:
+
+1. unit square;
+2. n=8 heptagon plus movable center;
+3. arbitrarily large regular odd-prime polygon local minima;
+4. dense regular-shell constructions;
+5. five-sector C5 rhombic complexes with boundary-pinned jamming, positive stress, n-O(sqrt(n)) strict rhombi, and total defect tending to zero;
+6. the 11-point five-rhombus sun with Q=V(conv(A)) and zero Q-pinned cone, which is nevertheless globally suboptimal.
+
+If a candidate theorem rules one of these out, identify the precise hypothesis that the example fails. Otherwise the theorem is probably false.
+
+# Dead routes: do not regress
+
+Do not spend serious time on:
+
+- a uniform triangle-free density gap;
+- eventual lattice classification;
+- raw edge counts;
+- Laman counting;
+- 2-degeneracy alone;
+- KKT alone;
+- stress moments alone;
+- affine shear;
+- a universal fixed second-order stress;
+- local rigidity alone;
+- "all defects tend to zero, therefore one is zero";
+- defect quantization;
+- boundary-pinned jamming alone;
+- two-direction structure without charging its external supports;
+- extracting a giant Cartesian block from the abstract crossing graph;
+- applying Schurmann's exact lattice deformation unchanged;
+- another unquantified O(sqrt(n)) boundary estimate.
+
+# Computation
+
+Use local computation aggressively for discovery if available.
+
+Particularly useful tasks now include:
+
+- optimize pocket slack versus the depth variables rho_e;
+- enumerate short indentation chains and guess the exact extremizers;
+- solve the variational problem for a convex width function sampled at train directions;
+- optimize direction multisets subject to the >60-degree crossing rule;
+- test near-Mantel direction configurations;
+- numerically search convex polygons all of whose vertices are diametral and measure width/perimeter deficits;
+- search for sharp constants in a joint Oler/isodiametric stability inequality;
+- test whether high-dimensional forest linkages force many blocking constraints.
+
+Use computation to discover and falsify statements. Replace every ingredient of a final proof by exact mathematics.
+
+# Working discipline
+
+Do not produce a running research diary.
+
+Do not continuously edit the report.
+
+Spend the overwhelming majority of the run doing mathematics.
+
+When a route fails, extract the exact obstruction and move on.
+
+When two inequalities use different "currencies" - span, area, Oler slack, support depth, perimeter - do not compare their numerical constants until you have proved a conversion between those currencies.
+
+Prefer one strong quantitative theorem to ten more qualitative necessary conditions.
+
+# If you believe you have solved the problem
+
+Audit ONLY the new closing argument.
+
+Check:
+
+- the exact quantifiers;
+- global versus local optimality;
+- strict versus non-strict inequalities;
+- all sqrt(n) constants;
+- topology, holes, components, and forest vertices;
+- whether the train-direction aggregation is actually justified;
+- whether a width-sampling inequality silently assumes uniform directions;
+- whether the competitor contains exactly n points;
+- every regression example above.
+
+Do not re-audit the trusted report.
+
+# Final output
+
+Begin with exactly one of:
+
+LEVEL I STATUS: SOLVED
+LEVEL I STATUS: DISPROVED
+LEVEL I STATUS: STILL OPEN
+
+If SOLVED:
+
+1. state the complete theorem;
+2. isolate the genuinely new closing lemma(s);
+3. give a rigorous proof using the trusted report as the theorem library;
+4. explicitly explain how Target A and Target B are eliminated, or why one unified theorem bypasses them;
+5. give an explicit n_0 if available;
+6. append the new proof to `../reports/erdos_problem_99_complete_working_report_SYNTHESIZED.md` only after the mathematics is complete.
+
+If DISPROVED:
+
+1. state the infinite family;
+2. prove unit separation and triangle-freeness;
+3. prove exact global optimality for infinitely many sizes;
+4. append the proof to the canonical report at the end.
+
+If STILL OPEN:
+
+Do not return another broad survey.
+
+Return only:
+
+1. the strongest genuinely new theorem proved in this run;
+2. the exact equation or constant it improves;
+3. whether it advances Target A, Target B, or both;
+4. the single remaining lemma after that theorem;
+5. the best numerical constant obtained and whether it is actually sufficient for closure;
+6. a concise statement of the next exact route.
+
+Then append only the verified new material to the canonical report.
+
+# Final directive
+
+The project has already localized the problem to finite boundary order.
+
+The new continuation has now exposed an even more specific bridge:
+
+\[
+\text{train-end depths and directional widths}
+\quad\longleftrightarrow\quad
+\text{support function and perimeter}
+\quad\longleftrightarrow\quad
+\text{Oler surplus and isodiametric stability}.
+\]
+
+This is where the run should concentrate.
+
+Do not rediscover the structural theorem stack.
+Do not settle for another O(sqrt(n)) estimate with an unusable coefficient.
+Do not stop at local rigidity.
+
+Either turn the compulsory 2 sqrt(n)-scale defect network into enough global surplus to contradict optimality, or find an exact globally optimal triangle-free family that shows why this cannot be done.
+
+Finish the problem.

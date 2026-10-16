@@ -1,0 +1,287 @@
+# Target C — exact train-cut coordinates reconstruct every core displacement
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** proof-only strengthening of the exact pure-tooth Section-126 normal form; theorem authority unchanged.  
+**Dependencies:** proof-only Section 126 and the audited exact one-train shear primitive.
+
+In the exact pure-tooth endpoint, the stopped trains do more than coordinatize the
+contact infinitesimal-flex space. Their oriented cut vectors reconstruct the **actual
+finite displacement between every two positive-core vertices**.
+
+Choose, for each of the `q` outer-to-outer stopped trains `tau`, one of its exact
+one-train shears. Let `u_tau` be the unit contact vector oriented so that the moving
+shore has infinitesimal translation `J u_tau`. For core vertices `x,y`, define
+
+\[
+\epsilon_{xy}(\tau)=
+\begin{cases}
++1,&x\text{ is on the moving shore and }y\text{ is on the fixed shore},\\
+-1,&y\text{ is on the moving shore and }x\text{ is on the fixed shore},\\
+0,&x,y\text{ lie on the same shore}.
+\end{cases}
+\tag{1}
+\]
+
+Then
+
+\[
+\boxed{
+ p_x-p_y
+ =\sum_{\tau=1}^q\epsilon_{xy}(\tau)u_\tau.
+}
+\tag{2}
+\]
+
+Consequently
+
+\[
+\boxed{
+|p_x-p_y|
+\le
+\#\{\tau:\tau\text{ separates }x,y\}.
+}
+\tag{3}
+\]
+
+Every actual diameter pair is therefore separated by at least `ceil(D)` stopped
+trains. Since the pure-tooth endpoint has exactly `h=q` diameter edges,
+
+\[
+\boxed{
+I_{H,T}:=
+\#\{(h,\tau):h\text{ crosses the cut of }\tau\}
+\ge q\lceil D\rceil.
+}
+\tag{4}
+\]
+
+Thus the Section-126 diameter/train derivative matrix is necessarily macroscopically
+dense. Sparse support regressions remain useful only as warnings against purely local
+matrix arguments; they are not metric models of a large pure-tooth survivor.
+
+---
+
+## 1. Sum of the exact train shears is global rotation modulo translation
+
+Proof-only Section 126 gives the linear isomorphism
+
+\[
+\Phi:\mathcal F_C/\mathrm{Trans}\longrightarrow\mathbb R^q
+\]
+
+that records the angular rate on every stopped train. The exact one-train shear
+`v^(tau)` has
+
+\[
+\Phi(v^{(\tau)})=e_\tau,
+\]
+
+the corresponding standard basis vector.
+
+Therefore
+
+\[
+V:=\sum_{\tau=1}^qv^{(\tau)}
+\]
+
+has train-angle vector
+
+\[
+\Phi(V)=\mathbf1.
+\tag{1.1}
+\]
+
+The infinitesimal Euclidean rotation
+
+\[
+R_x:=Jp_x
+\]
+
+also has angular rate one on every contact edge, hence
+
+\[
+\Phi(R)=\mathbf1.
+\]
+
+The kernel of `Phi` is exactly the translation space. Thus there is one constant vector
+`t` such that on every positive-core vertex
+
+\[
+\boxed{
+V_x=Jp_x+t.
+}
+\tag{1.2}
+\]
+
+Subtracting the equations for two vertices removes `t`:
+
+\[
+\boxed{
+J(p_x-p_y)
+=\sum_\tau(v_x^{(\tau)}-v_y^{(\tau)}).
+}
+\tag{1.3}
+
+---
+
+## 2. One shear contributes exactly one signed unit cut vector
+
+For the chosen orientation of train `tau`, the exact shear fixes one Jordan shore and
+translates every point of the other by
+
+\[
+R_\theta u_\tau-u_\tau.
+\]
+
+At `theta=0` the moving-shore velocity is
+
+\[
+Ju_\tau,
+\]
+
+while the fixed-shore velocity is zero. Hence
+
+\[
+\boxed{
+ v_x^{(\tau)}-v_y^{(\tau)}
+ =\epsilon_{xy}(\tau)Ju_\tau.
+}
+\tag{2.1}
+
+Insert (2.1) into (1.3) and apply `-J`. This proves the reconstruction identity (2).
+
+The statement is independent of the arbitrary choice of moving shore: reversing the
+shear changes both `epsilon` and `u_tau` by the corresponding sign convention and
+leaves their product unchanged.
+
+---
+
+## 3. Diameter incidence and vector balance
+
+Let `h=xy` be an actual diameter edge and write
+
+\[
+r_h=p_x-p_y,
+\qquad |r_h|=D.
+\]
+
+Equation (2) becomes
+
+\[
+\boxed{
+ r_h=\sum_{\tau\pitchfork h}\epsilon_{h\tau}u_\tau,
+}
+\tag{3.1}
+\]
+
+where the sum is exactly over trains whose cuts separate the two diameter endpoints.
+Taking norms gives
+
+\[
+D
+\le
+\sum_{\tau\pitchfork h}|u_\tau|
+=\deg_T(h),
+\]
+
+so
+
+\[
+\boxed{\deg_T(h)\ge\lceil D\rceil.}
+\tag{3.2}
+\]
+
+In the pure-tooth endpoint `h=q`; summing (3.2) over all diameter rows proves (4).
+Equivalently, the average diameter incidence of a stopped train is at least
+`ceil(D)`.
+
+The vector identity also splits into exact longitudinal and transverse balances. If
+`n_h=r_h/D`, then
+
+\[
+\boxed{
+\sum_{\tau\pitchfork h}
+\epsilon_{h\tau}(n_h\cdot u_\tau)=D,
+}
+\tag{3.3}
+\]
+
+and
+
+\[
+\boxed{
+\sum_{\tau\pitchfork h}
+\epsilon_{h\tau}(n_h\cdot Ju_\tau)=0.
+}
+\tag{3.4}
+\]
+
+The second identity is exactly the row-sum-zero relation in the Section-126 diameter
+derivative matrix, now seen as one coordinate of the stronger vector reconstruction.
+
+---
+
+## 4. Exact local tooth check
+
+For consecutive loaded hull vertices `b_i,b_{i+1}` in the pure-tooth endpoint, the
+outer contact route is exactly
+
+\[
+b_i-x_i-b_{i+1}
+\]
+
+with two unit contact edges. These edges belong to two distinct train cuts. The path
+crosses exactly those two cuts with nonzero signed crossing number, so (2) specializes
+to the elementary tooth identity
+
+\[
+p_{b_{i+1}}-p_{b_i}
+=u_{\tau_1}+u_{\tau_2}
+\]
+
+after orienting the two unit contact vectors along the route. Thus the global
+reconstruction is consistent with every local two-edge tooth.
+
+---
+
+## 5. Research consequence
+
+Any future pure-tooth matrix regression must now satisfy a macroscopic support-density
+condition absent from the support-only family:
+
+\[
+\min_{h\in H}\deg_T(h)\ge D,
+\qquad
+{I_{H,T}\over q^2}\ge {D\over q}+o(1).
+\]
+
+More importantly, the nonzero coefficients cannot be chosen independently on that
+support: for every diameter row the signed unit train directions themselves must sum
+to the actual diameter vector as in (3.1).
+
+This is the next viable closure currency. A successful theorem could combine
+
+- the convex-thrackle cyclic order of diameter chords;
+- the triangle-free crossing order of train chords;
+- the exact vector sums (3.1); and
+- the near-disk loaded-hull geometry
+
+to force either a forbidden train crossing pattern or a strict diameter descent.
+
+No such final incompatibility is claimed here.
+
+---
+
+## 6. Scope audit
+
+- The reconstruction concerns the nonisolated positive-contact core. Contact-isolated
+  source points remain in the full source and are not placed in the Section-57 kernel.
+- The proof uses the exact full-source train shear only to obtain its infinitesimal
+  velocity on the core; no response theorem is invoked.
+- `epsilon_{xy}(tau)` is a signed shore-separation number, not an intersection
+  multiplicity of arbitrary curves.
+- Every train vector has norm exactly one because it is an actual unit-contact vector.
+- The incidence floor is finite and exact.
+
+**Disposition:** proof-only structural strengthening. C-II remains open.

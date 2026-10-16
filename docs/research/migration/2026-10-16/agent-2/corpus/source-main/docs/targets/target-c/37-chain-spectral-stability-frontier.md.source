@@ -1,0 +1,61 @@
+# Target C — C81 one-edge chain spectral stability frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_chain_face_spectral_stability_2026-08-31.md](../../reports/target_c_chain_face_spectral_stability_2026-08-31.md).
+
+C80 gives an exact chain diameter bar `h_0` whose train-angle Hessian is `-D I` on
+the `D-1` dimensional chain-bending space
+
+`W_P={v supported on the D chain tracks, sum_P v=0}`.
+
+C81 proves this negative spectrum is stable if one diameter edge keeps almost all beta
+mass.
+
+For every diameter bar in a pure rhombic train system,
+
+`||H_h||_op <= D+T`,
+
+where `T` is the number of train tracks.
+
+If a normalized KKT stress satisfies
+
+`beta_h0 >=1-delta`,
+
+then its stress-projected train Hessian
+
+`Q_s=sum_h beta_h H_h`
+
+obeys on `W_P`
+
+`Q_s[v,v] <= -[D-delta(2D+T)] ||v||^2`.
+
+Thus, if
+
+`delta < D/(2D+T)`,
+
+then
+
+`nu_-(Q_s)>=D-1`.
+
+In the pure-rhombic regime `T=O(D)`, one-edge concentration
+
+`beta_h0=1-o(1)`
+
+forces `D-1` negative eigenvalues with gap `(1-o(1))D`.
+
+## Exact missing stress-side lemma
+
+C66 only gives star-center concentration
+
+`sum_(h incident z) beta_h=1-o(1)`.
+
+C79 does not force one leaf to carry almost all of that mass. Therefore the next
+stress-side target is now explicit:
+
+- prove one `z`-star edge has beta `1-o(1)`; or
+- prove a multi-leaf star necessarily pays a response/radial/reciprocal defect that
+  rules out `D epsilon->0`.
+
+C81 also does not remove the Target B direction-dependent secondary-stress loophole;
+it quantifies the burden those residual blockers must overcome.

@@ -1,0 +1,245 @@
+<!-- theorem-state: {"artifact_id":"ART-F13E6B0F2243","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: face-coupled finite folds, diameter currency and exact blockers
+
+Date: 2026-10-07. Authority: audit.77.
+**Proved candidates awaiting independent audit**, with explicit regressions.
+No promotion. Full-source isolates remain part of every endpoint.
+
+## 1. Exact finite source equations
+
+Let the actual contact core be a connected plane graph whose bounded
+quadrilateral faces are strict unit rhombi. Opposite rhombus edges define
+the complete stopped trains. For each oriented contact edge ij put
+q_ij=p_j-p_i and choose a sign s_tau in {-1,+1} for its train.
+For each bounded nonquadrilateral face, with boundary occurrences, require
+
+`sum_(ij in partial f) s_(tau(ij))*J(q_ij)=0`.                 (1)
+
+Rhombus equations already cancel on opposite edges. Bounded face cycles
+span the graph's cycle space, including articulation/bridge cases; thus
+(1) permits path-independent integration of a core field U satisfying
+
+`U_j-U_i=s_(tau(ij))*J(q_ij)` on every contact edge.           (2)
+
+This rederives only the needed integration implication of the proof-only
+face-closure modules; it does not import their rank or Hall conclusions.
+Signs are **coupled by actual face equations**, not independent owners
+for crossing multishears. No outer-to-outer train supply is assumed.
+
+Define actual finite coordinates
+
+`X_i(phi)=cos(phi)*p_i+sin(phi)*U_i` on the core.              (3)
+
+Every contact edge has exact unit length, because its vector is
+`cos(phi)*q+sin(phi)*s*J(q)`. Equation (1) gives finite closure as well
+as infinitesimal closure; no higher-order correction is being omitted.
+For each retained isolate choose its U_i explicitly as a free full-source
+coordinate, and use (3) for it too. These coordinates satisfy no automatic
+contact-core rigidity or lower/upper theorem. Their complete pairs remain
+binding. At phi=pi/2 the source endpoint is U, with all old labels retained.
+
+For **every** source pair ij, put r=p_j-p_i and v=U_j-U_i. Its exact
+squared distance along (3) is
+
+`cos(phi)^2*|r|^2+sin(phi)^2*|v|^2`
+`+2*cos(phi)*sin(phi)*(r dot v)`.                            (4)
+
+This includes actual old diameters, inactive upper exceptions, all core
+noncontacts, isolates and crossing-train pairs. All lower and upper bounds
+are the same full finite list, 1<=expression<=D^2. At the quarter-turn,
+these comparisons are simply 1<=|v|^2<=D^2. Source cardinality is fixed;
+a collision is a lower violation, not a silently discarded label.
+
+A continuous feasible path is not required for a finite competitor.
+In particular opposite-signed trains at a rhombus exchange its two
+unit-rhombus diagonals at the quarter-turn: their squared lengths are
+`|a+b|^2` and `|a-b|^2`, swapped. Both exceed one in a strict rhombus.
+This exact statement does not claim immunity during a small shear or
+from other lower pairs.
+
+## 2. Canonical stress supplies strict diameter currency
+
+Use the canonical relative-interior stress alpha>0 on actual contacts,
+beta>0 on actual diameters, sum beta=1. On the contact core write
+`Omega=L_C(alpha)-L_H(beta)`.
+The canonical C-I selected defect and ZR imply Omega>=0 and
+`ker Omega=span{1,p_x,p_y}` on this core only. To make the PSD implication
+explicit: on the grounded/zero-sum contact space, the selected condition
+`B^-1-Q^T*Lambda^-1*Q>=0` says every singular value of
+`Lambda^-1/2*Q*B^1/2` is at most one, hence
+`Lambda-Q*B*Q^T>=0`. Positive interior Schur reconstruction gives the
+full core Omega>=0. This is the canonical selected-matrix/Schur input,
+not a new universal-stress claim about isolated coordinates.
+
+Virial gives sum alpha=D^2. Equation (2) gives
+
+`trace(U^T*Omega*U)=D^2-sum_H beta_h*|U_j-U_i|^2`.            (5)
+
+If U is nonaffine on the core, this trace is strictly positive by the
+exact affine kernel. Consequently the weighted old-diameter mean at the
+quarter-turn is strictly below D^2. At least one old actual diameter
+has shortened. Nonconstant signs alone do not imply nonaffinity: with
+only two contact directions a nonconstant sign state can be affine.
+With at least three distinct projective contact directions, an affine
+contact flex has symmetric part zero and is rotation plus translation;
+then every nonconstant sign state is nonaffine. Alternatively check
+nonaffinity directly from the realized coordinates.
+
+**Finite endpoint criterion.** If such a nonaffine face-coupled sign
+state admits chosen coordinates for all retained isolates and satisfies
+
+- every old contact remains exactly unit (automatic on the core);
+- every old noncontact pair is strictly greater than one;
+- every old actual diameter pair is at most D;
+- every old nondiameter pair is strictly below D;
+
+then the endpoint is impossible in a canonical triangle-free source.
+It retains all labels and all old contacts, creates no new contact or
+triangle, and creates no new diameter pair. Equation (5) removes at
+least one old actual diameter pair. Either diameter is strictly smaller,
+or it equals D with fewer actual diameter pairs at unchanged contacts.
+Both violate the canonical lexicographic endpoint.
+
+Thus the weighted stress resolves the endpoint currency **once full
+feasibility is supplied**. It does not assert that a mean decrease bounds
+each diameter, or infer feasibility from (1).
+
+## 3. A source-realized sign compatibility graph
+
+Take two distinct unit edges ij and jk. Their other endpoints are a
+noncontact in a triangle-free old graph. Let L=|p_k-p_i|. If their signs
+are opposite, the quarter-turn identity is
+
+`|U_k-U_i|^2=4-L^2`.                                      (6)
+
+For L>sqrt(3) this is below one. For L=sqrt(3) it is exactly one,
+creating a unit triangle with the two preserved edges through j.
+Therefore a triangle-free quarter-turn endpoint must use the **same**
+sign on these two trains whenever L>=sqrt(3).
+
+Form Gamma on actual train variables by inserting precisely these
+source-realized two-hop relations. Signs are constant on its connected
+components. Contract Gamma before solving (1); enumerate coupled signs
+on the resulting components and check (4). If Gamma is connected, only
+the two global quarter-turn rotations survive, so this entire nontrivial
+quarter-fold mechanism is blocked in that source. This is a scope closure
+for the mechanism, not C-II closure.
+
+Some exact geometric consequences help identify Gamma:
+
+- At a degree-five triangle-free unit vertex, all cyclic neighbour gaps
+  are strictly greater than pi/3. Every nonconsecutive neighbour pair
+  has angular separation greater than 2pi/3. The complement of a 5-cycle
+  is connected, so all five incident trains have the same sign.
+- At a degree-four vertex, opposite neighbours in cyclic order have
+  separation greater than 2pi/3; each opposite incident pair has the
+  same sign. The two pairs need not have the same sign as each other.
+- Along consecutive collinear unit edges, L=2 and opposite signs collide.
+- Around a convex unit face, a boundary turn at most pi/3 gives L>=sqrt(3)
+  and couples its two consecutive signs. If all turns are at most pi/3,
+  every boundary sign is the same. The prescribed strictly curved six-wall
+  family has this property for sufficiently small curvature: side turns
+  are small and corner turns are below pi/3.
+
+These are constraints on actual realized edges. They are not inferred
+from a path forest, owner topology, planarity alone or infinitesimal
+crossing independence. Rhombus diagonals have L<sqrt(3), so (6) correctly
+does not invent an extra blocker at their quarter-turn endpoint.
+
+## 3.1 Complete convex-face transition classification
+
+There is a stronger exact restriction on any convex unit face, including
+a nonquadrilateral terminal host. In a fully lower-feasible, triangle-free
+quarter-fold, a sign transition at a face vertex is possible only when
+its exterior turn is **strictly greater** than pi/3; at equality the new
+three vertices are a unit triangle. Convex total turn is 2pi, so at most
+five vertices are eligible. A cyclic sign pattern has an even number of
+transitions. Two transitions would select one contiguous plus arc whose
+vector sum is the difference of two distinct source endpoints, hence
+nonzero; this contradicts its part of (1). Therefore a nonconstant pattern
+has exactly four transitions.
+
+Let their cyclic source vertices be a,b,c,d, choosing the two plus arcs
+from a to b and c to d. Face closure gives
+
+`(p_b-p_a)+(p_d-p_c)=0`, hence `p_a+p_c=p_b+p_d`.
+
+Thus the **four actual transition vertices form an inscribed parallelogram**,
+and all four have exterior turns greater than pi/3. At the quarter-turn
+its two diagonals are exchanged in length. This is an exact necessary
+classification, not a generic-position assertion. In particular any
+convex face with fewer than four eligible corners, or with no such actual
+inscribed parallelogram among its eligible vertices, forces all its
+boundary train signs equal. Add these face relations after Gamma before
+enumerating the remaining coupled system. A unit rhombus satisfies the
+four-corner alternative; the regular or curved six-wall does not.
+
+A complete rectangular eight-vertex unit wall provides the sharp simple
+example: four right-angle transition corners do form a parallelogram,
+and its opposite-side sign patterns give the two reflections plus two
+rotations, all full-source feasible and all affine. No blanket prohibition
+on convex faces or on four transitions is inferred.
+
+## 4. Exact regressions against incomplete finite ledgers
+
+### A. Weighted contraction and old upper feasibility do not suffice
+
+Use the regular unit hexagon p_k=exp(i*k*pi/3), contact cycle C6 and
+three opposite diameter pairs H, D=2. Set alpha=2/3 on each contact and
+beta=1/3 on each diameter. Its signed Omega is PSD with affine kernel
+and rank three. Indeed the integer matrix A=3Omega satisfies A^2=6A,
+so x^T*A*x=|A*x|^2/6>=0, and has trace 18 and rank three.
+
+Enumerate all 64 signs on its singleton trains and require (1). There
+are ten face-coupled states, two constant and eight nonconstant. Every
+nonconstant state strictly lowers the weighted old-diameter mean and
+satisfies every old actual diameter upper inequality at the quarter-turn.
+Nevertheless each has a collision among source vertices. Hence no such
+state is a feasible source. The exact complete pair checker records the
+lower failures; no label is removed on collision.
+
+The hexagon is not globally optimal and is not asserted to satisfy the
+canonical mixed-rigidity/C63 conclusions. The six-site center-plus-regular-
+pentagon configuration is unit-separated, triangle-free, and has diameter
+squared (5+sqrt(5))/2<4, proving nonglobality. The regression tests the
+specified stress/finite-mean inference, not a canonical source theorem.
+
+### B. Old diameters can shrink while inactive pairs restore their count
+
+For M=2,3,4 use the full unit rhombic grid
+`{i*u+j*v:0<=i,j<=M}`, with u=(1,0), v=(5/13,12/13).
+Its contact graph is triangle-free. Its 2M complete rhombus trains have
+no exceptional face equations. Gamma connects all u-direction trains,
+and separately all v-direction trains. Complete sign enumeration leaves
+four quarter-turn states with full lower feasibility, all affine.
+
+Opposite signs on the two families swap the long and short corner
+diagonals. The sole old actual diameter strictly shortens, but the old
+inactive opposite corner pair becomes a new diameter of the same length.
+Contacts, triangle-freeness, cardinality and diameter-pair count are all
+unchanged. Thus checking only actual old diameter rows would falsely claim
+a currency win. The full endpoint correctly rejects the proposed strict
+inactive-upper hypothesis. A separate continuous shear toward a square
+beats this rhombic family; it is explicitly nonglobal.
+
+The verifier certifies full pair/contact/diameter ledgers, exact face
+closure, Gamma components, stress identities and complete sign universes
+for these finite examples. It does not establish universal sign existence,
+canonical source geometry or global optimality.
+
+## 5. Exact remaining full-core obligation
+
+For every sufficiently large canonical source in the surviving coupled
+train regime, either find a nonaffine sign state satisfying (1), Gamma
+and the complete finite endpoint inequalities, or derive enough actual
+geometry from their exhaustive blockers to construct a different move.
+No binary state is guaranteed. A large real kernel of C_face does not
+imply a nonconstant sign vector; constants alone can intersect a high-
+dimensional real kernel. Gamma may close this quarter-turn subroute.
+
+Two materially different continuations are: nonbinary finite train angles
+satisfying the exact nonlinear face equations
+`sum_(ij in partial f) exp(i*theta_tau)*q_ij=0`, and collective deletion/
+refill through the actual Delaunay metric-defect skeleton. The macro
+container and cap/core-release obligations remain open. The endpoint here
+is full-source and finite, but existence is the missing theorem.

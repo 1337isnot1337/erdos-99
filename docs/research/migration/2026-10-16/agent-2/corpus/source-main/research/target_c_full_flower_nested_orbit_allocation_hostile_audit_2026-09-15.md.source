@@ -1,0 +1,244 @@
+# Hostile audit — nested-orbit allocation for fully rhombic pentagons
+
+**Date:** 2026-09-15\
+**Audited source:** `research/target_c_full_flower_nested_orbit_allocation_2026-09-15.md`\
+**Verdict:** **PASS at proof-only finite scope after one binding quantifier repair.**\
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The candidate theorem says that four sides of a unit pentagon lying in a small
+projective neighborhood of one exact triangular `pi/3` orbit force the fifth side
+into a slightly larger neighborhood.  Its downstream consequence is that a full
+pentagonal flower which is not all-dominant must spend at least two complement
+terminal occurrences.
+
+The hostile audit checks six possible failures:
+
+1. projective closeness might not give four compatible **oriented** six-ray
+   approximants;
+2. the sum of four approximants might be a nonunit triangular-lattice vector close
+   enough to norm one to invalidate discreteness;
+3. chord closeness of the fifth side might not imply the stated angular window;
+4. the allocation count might double-count one train connecting two flowers;
+5. the atomic-limit statement might silently synchronize two unrelated shrinking
+   rates; and
+6. the claimed interface to dominant-pentagon splicing might require a stronger
+   same-window conclusion than the theorem supplies.
+
+Items 1--4 and 6 pass as written.  Item 5 exposed an overstatement in the first draft;
+that paragraph has been repaired to pass polygon closure directly to the limit.  The
+finite theorem and all allocation inequalities were unchanged.
+
+---
+
+## 1. Projective closeness admits an oriented ray approximant
+
+Let one side have oriented unit vector `e`.  If its projective direction lies within
+`rho` of one of the three orbit axes, then by definition there is one of the two
+oriented rays on that axis whose ordinary angular distance from `e` is at most `rho`.
+Choose that ray as `v`.
+
+For unit vectors at angular distance `theta<=rho`,
+
+\[
+|e-v|=2\sin(\theta/2)\le\theta\le\rho.
+\]
+
+Thus each of the four approximated sides contributes at most `rho` of vector error,
+and the candidate's bound
+
+\[
+|e_5+s|\le4\rho
+\]
+
+is valid with no hidden sign coherence assumption between different sides.
+
+---
+
+## 2. The triangular-lattice norm gap is exact
+
+After rotation, the six orbit rays are the six unit vectors of the triangular lattice
+with basis
+
+\[
+a=(1,0),\qquad b=(1/2,\sqrt3/2).
+\]
+
+The sum of four chosen rays is
+
+\[
+s=ma+nb,\qquad m,n\in\mathbb Z,
+\]
+
+and therefore
+
+\[
+|s|^2=m^2+mn+n^2.
+\]
+
+Modulo three this quadratic form is only `0` or `1`.  Hence it cannot equal `2`.
+The only squared norm below three is consequently `0` or `1`; any nonzero nonunit
+vector has norm at least `sqrt(3)`.
+
+The exact exhaustive six-ray verifier independently gives the complete four-ray
+spectrum
+
+```text
+0, 1, 3, 4, 7, 9, 12, 13, 16
+```
+
+and checks all `360` norm-one ordered four-ray sums close with another one of the six
+unit rays.
+
+For `rho<1/10`,
+
+\[
+4\rho<0.4<\sqrt3-1,
+\qquad
+4\rho<1.
+\]
+
+So the interval `[1-4rho,1+4rho]` contains neither `0` nor any norm at least
+`sqrt(3)`.  The only possible lattice norm is exactly one.  The local proof therefore
+has substantial slack; `1/10` is a safe convenience, not an optimized threshold.
+
+---
+
+## 3. The fifth-side angular enlargement is correct
+
+Once `|s|=1`, both `e_5` and `-s` are unit vectors and
+
+\[
+|e_5-(-s)|=|e_5+s|\le4\rho.
+\]
+
+If their smaller ordinary angular separation is `theta`, then
+
+\[
+2\sin(\theta/2)\le4\rho.
+\]
+
+Because `2rho<1`, monotonicity of `arcsin` gives
+
+\[
+\theta\le2\arcsin(2\rho)=\eta(\rho).
+\]
+
+Projective distance is no larger than ordinary angular distance, so the fifth
+projective side direction lies in `W_eta`.  Also
+
+\[
+\eta(\rho)>4\rho>\rho
+\]
+
+for `rho>0`, because `arcsin x>x` on `(0,1)`.  Hence the original four sides in
+`W_rho` automatically lie in `W_eta` as well.
+
+---
+
+## 4. The two-complement flower count is occurrence-safe
+
+Let `F` be a full flower not all in the enlarged window `W_eta`.  If four of its five
+side directions lay in the inner window `W_rho`, the finite theorem would put all five
+in `W_eta`, contradiction.  Therefore `F` has at least two side occurrences outside
+`W_rho`.
+
+Summing over all non-all-enlarged flowers gives
+
+\[
+C_\rho\ge2(M-P_\eta).
+\]
+
+This count is intentionally by **terminal occurrences**, so a train joining two full
+flowers contributes twice, once at each endpoint.  Such a train has no third terminal
+occurrence.  Therefore converting occurrences to distinct trains loses by at most a
+factor two:
+
+\[
+N_c(\rho)\ge C_\rho/2.
+\]
+
+No bounded-face endpoint-simplicity hypothesis between two different flowers is
+needed.
+
+The dichotomy follows exactly:
+
+- if `P_eta>=M/2`, use the all-enlarged side;
+- otherwise `C_rho> M`, hence `N_c(rho)>M/2`.
+
+Strict versus non-strict inequalities are handled correctly.
+
+---
+
+## 5. The atomic-limit quantifier issue was real and is repaired
+
+The first draft said that if four sides converge to the orbit and `rho_j->0` is a
+shrinking window sequence, then the sides eventually lie in `W_{rho_j}`.  This is
+false for an arbitrary prescribed `rho_j`: the window can shrink faster than the side
+directions converge.
+
+That sentence has been removed.  The atomic statement is now proved independently:
+after passing to a subsequence, the four oriented sides converge to exact orbit rays
+`v_1,...,v_4`, while the fifth converges to a unit vector `w`.  Limiting polygon
+closure gives
+
+\[
+w+v_1+\cdots+v_4=0.
+\]
+
+The lattice vector `s=v_1+...+v_4` therefore has norm `|w|=1`, so `-s` is an exact
+orbit ray and `w` lies in the same orbit.  This proves
+
+\[
+\text{atomic multiplicity }4\Longrightarrow5
+\]
+
+with no window-rate assumption.
+
+For finite train-measure applications, one may instead freeze a fixed inner `rho`,
+take the source limit, and then send `rho->0`, which is the standard nested-limit
+order.
+
+---
+
+## 6. Interface to dominant-pentagon splicing is scope-correct
+
+The through-splicing theorem requires all five pentagon side trains to lie in shrinking
+windows around one exact dominant three-axis orbit.  The present theorem does not say
+that four inner-window sides force the fifth back into the **same** inner window; it
+only forces all five into the enlarged window `eta(rho)`.
+
+That is sufficient for the nested-limit composition because
+
+\[
+\eta(\rho)=2\arcsin(2\rho)\longrightarrow0
+\qquad(\rho\to0).
+\]
+
+Thus an all-`W_eta` flower is an all-dominant flower for the splicing theorem after the
+usual outer limit `rho->0`.  One must not substitute a fixed positive `rho` into the
+asymptotic through-splice theorem and claim an exact `pi/6` connector.  The candidate
+note does not do so.
+
+---
+
+## 7. Numerical consequence is structural, not a closure claim
+
+At the current main full-flower row `M>0.1327D-o(D)`, the finite dichotomy gives in the
+nested limit either
+
+\[
+P_\eta>0.06635D-o(D)
+\]
+
+all-dominant flowers or more than the same number of distinct complement trains with
+bounded full-flower endpoints.  The existing complement train ceiling is still far
+larger than this, so the second branch is not presently contradictory.
+
+The first branch becomes useful only after importing the independently proved
+through-splicing theorem, which yields a quadratic dominant-orbit crossing deficit.
+The candidate correctly records this as the next composition rather than claiming
+C-II closure.
+
+**Final verdict:** PASS at proof-only finite scope after the atomic-limit quantifier
+repair.  The theorem supplies a valid two-complement cost for every full flower that
+evades dominant through-splicing.

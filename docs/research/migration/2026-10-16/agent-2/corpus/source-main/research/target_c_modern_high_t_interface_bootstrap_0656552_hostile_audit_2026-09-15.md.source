@@ -1,0 +1,261 @@
+# Hostile audit — modern high-t Section-85 bootstrap to `0.656552D`
+
+**Date:** 2026-09-15
+**Reviewed:**
+- `research/target_c_modern_high_t_interface_bootstrap_0656552_2026-09-15.md`
+- `research/verify_target_c_modern_high_t_interface_bootstrap_0656552.py`
+
+**Disposition:** `PASS` at the stated proof-only full-core Type-II scope.
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The candidate composes two modern inputs that current main had not yet fed through the
+larger Section-85 interface currency:
+
+1. every surviving full-core sequence has
+   \[
+   \liminf (q-k)/D\ge1.844;
+   \]
+2. the scope-safe matched all-train theorem has
+   \[
+   \liminf (T-q/2)/D\ge2\sqrt{\Delta_2}+0.007707.
+   \]
+
+The exact identity `J_D=2T-P_F` then gives a stronger `J_D` floor, and the canonical
+inequality `H_D>=3J_D/5` transfers it to chamber currency. The argument survives hostile
+review. The main caveat is the new exact repacking barrier on current main: the larger
+chamber surplus is still mandatory boundary credit, not a lower bound on `R_F`.
+
+## 1. The high-t use of `q` has the correct direction
+
+The post-exclusion survivor statement is
+
+\[
+\liminf {q-k\over D}\ge1.844.
+\]
+
+Canonical `k=d_H+s_Z>=0`, so pointwise
+
+\[
+q\ge q-k.
+\]
+
+Therefore
+
+\[
+\liminf q/D\ge1.844.
+\]
+
+No upper/lower liminf reversal occurs.
+
+**Verdict:** PASS.
+
+## 2. `J_D=2T-P_F` is exact
+
+With
+
+\[
+J_D=(b-P_F)+(Q+4f),
+\]
+
+canonical outer/train bookkeeping gives exactly
+
+\[
+J_D=2T-P_F.
+\]
+
+Also
+
+\[
+2T=q+2(T-q/2).
+\]
+
+Hence
+
+\[
+\liminf {J_D\over D}
+\ge1.844+2(2\sqrt{\Delta_2}+0.007707)-\pi.
+\]
+
+The signs are all favorable in the asserted direction: `q` and `T-q/2` are lower
+bounded, while `P_F/D->pi` is an actual limit.
+
+**Verdict:** PASS.
+
+## 3. The `H_D>=3J_D/5` conversion is canonical and correctly oriented
+
+Put
+
+\[
+d=b-P_F\ge0,
+\qquad
+J_D=d+Q+4f,
+\qquad
+H_D=d+Q+2f.
+\]
+
+Every bounded nonquadrilateral face has degree at least five, so `Q>=f`. Therefore
+
+\[
+5H_D-3J_D=2(d+Q-f)\ge0.
+\]
+
+Thus
+
+\[
+H_D\ge3J_D/5.
+\]
+
+This is the same exact Section-85 inequality already used and audited in the older
+correlated-interface stack. The candidate does not identify global `Q+4f` with any
+local induced-cell perimeter.
+
+**Verdict:** PASS.
+
+## 4. The numerical certificate is adverse-direction exact
+
+The companion script uses `Fraction` arithmetic and the same rational enclosures as the
+current modern high-t certificate. It obtains
+
+```text
+J_D/D lower                   2.527072572706579
+H_D/D lower                   1.5162435436239474
+chamber surplus lower         0.6565527133355994
+f/D lower                     0.17076814317664474
+(m-R4)/D lower                2.328918098317925
+Sigma_ch/D lower              2.192426201341908
+rhombus-count deficit lower   0.7581217718119737
+```
+
+The theorem rounds every published coefficient downward.
+
+**Verdict:** PASS.
+
+## 5. Exceptional-face density uses a valid upper inequality
+
+The exact identity
+
+\[
+T-q/2=q/2+2f-k
+\]
+
+and `q<=P_F`, `k>=0` imply
+
+\[
+T-q/2\le P_F/2+2f.
+\]
+
+Combining this with the modern lower bound for `T-q/2` gives
+
+\[
+\liminf f/D
+\ge\sqrt{\Delta_2}-\pi/4+0.007707/2.
+\]
+
+The inequality direction is correct.
+
+**Verdict:** PASS.
+
+## 6. Population, perimeter, chamber-count, and Oler-slack propagation is valid
+
+Canonical Sections 63/67 give
+
+\[
+m-R_4=(P_F+H_D)/2+1.
+\]
+
+Canonical Section 77 gives
+
+\[
+P_{ch}\ge J_D,
+\qquad
+s_{ch}=f+a\ge f.
+\]
+
+The exact chamber slack identity is
+
+\[
+\Sigma_{ch}
+={A_{ch}-a_0Z_{ch}\over a_0}+{P_{ch}\over2}+s_{ch}.
+\]
+
+Since `A_ch-a0 Z_ch>=c0 H_D` and `c0/a0=1/2`, the candidate obtains
+
+\[
+\Sigma_{ch}\ge H_D/2+J_D/2+f
+\ge4J_D/5+f.
+\]
+
+No internal chamber perimeter is cancelled or silently dropped.
+
+**Verdict:** PASS.
+
+## 7. The rhombus-count deficit follows from the full-source Oler bound
+
+The full source obeys
+
+\[
+n\le\Delta_2D^2+\pi D/2+1.
+\]
+
+Since `m<=n` and
+
+\[
+\liminf(m-R_4)/D\ge\pi/2+3J_*/10,
+\]
+
+one gets
+
+\[
+\liminf(\Delta_2D^2-R_4)/D\ge3J_*/10.
+\]
+
+The geometric area version equals the chamber coefficient because
+
+\[
+a_0(3J_*/10)=c_0(3J_*/5).
+\]
+
+This is a consistency identity, not an independent contradiction, and the candidate
+states it that way.
+
+**Verdict:** PASS.
+
+## 8. The new repacking barrier remains binding
+
+Current main now proves the exact identity
+
+\[
+{A_{ch}\over a_0}-Z_{ch}=R_F+H_D/2.
+\]
+
+Therefore
+
+\[
+A_{ch}-a_0Z_{ch}=a_0R_F+c_0H_D.
+\]
+
+The candidate's stronger `H_D` lower bound raises the mandatory boundary-credit part
+from about `0.586223D` to `0.656552D`, but it does **not** imply any positive lower
+bound on `R_F`. In particular it cannot be inserted into the aggregate safe-lattice
+criterion as free residual area.
+
+The candidate does not make that invalid inference. Its stated frontier—internal
+boundary cancellation, phase-conditioned exceptional-face geometry, or a genuinely new
+`R_F` input—is consistent with the exact barrier.
+
+**Verdict:** PASS with binding route caveat.
+
+## Final assessment
+
+The improvement is real and scope-safe:
+
+```text
+current merged modern chamber surplus:  >=0.586223D-o(D)
+new audited Section-85 bootstrap:         >=0.656552D-o(D)
+```
+
+and it simultaneously strengthens the interface, face-count, positive-core,
+chamber-slack, and rhombus-deficit ledgers. It does not close C-II and does not provide
+safe-lattice residual credit.
+
+**Final verdict:** PASS. C-II remains open.

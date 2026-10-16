@@ -1,0 +1,181 @@
+<!-- theorem-state: {"artifact_id":"ART-36F809FF77E8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: the one-deficit population is excluded for all small M=4 wall curvatures
+
+Date: 2026-10-07. Base `88f38a9c`; main
+`dcc21aa879b61662318bceb9aeb174792e074eb0`; state
+`2026-10-06.audit.71`. **Proved candidate awaiting independent audit.**
+No canonical promotion, arbitrary-M assertion, macroscopic extraction or
+Level I closure is claimed.
+
+## 1. Quantified theorem and exact consequence
+
+There exists theta_0>0 such that, for every 0<theta<theta_0, the specified
+six-direction curved unit wall with M=4 admits a strict packet of N=37
+sites after deleting wall vertex (1,3). Thus an arbitrary canonical old
+source with z=N-1=36 interior points in this wall is impossible. More
+generally the same packet pays every z<=36 by selecting z+1 sites.
+
+`all-small-curvature strict N-site packet -> replace every old interior
+label and one actual wall vertex -> zero new contacts, at least two old
+wall contacts lost -> audit.64 full-source contradiction`.
+
+This theorem does not classify any old cloud. In particular no missing
+lattice-site hypothesis is imposed on the source. It directly spends the
+one-deficit population which the inherited N-1-site packet could not pay.
+The auxiliary vacancy belongs only to the newly constructed packet.
+
+## 2. Rational-function opening certificate
+
+Use t=tan(theta/2) and the descending-order sorting geometry. Its complex
+unit factors are
+
+`z_h=((1-t^2)+2it)/(1+t^2)` raised to `3-2h`, h=0,1,2,3.
+
+In a sector, set S_r=sum_(h<r) z_h and
+
+`p_(r,j)=S_(r-j) u+(S_r-S_(r-j)) v`, 0<=j<=r<=4,
+
+then rotate by multiples of pi/3. The radius-four sites are precisely the
+old curved wall. Delete target site h=(1,2), leaving 36 interior sites.
+
+Each site is a linear combination of the four independent complex
+symbols z_h with unit triangular-direction coefficients. A difference
+with exactly one nonzero unit coefficient has *exactly* unit length,
+since |z_h|=1. The supplied verifier checks this coefficient identity
+for all actual unit pairs. It also verifies positive leading squared-
+distance gaps for all 1654 remaining pairs of the full wall-plus-chart
+set. Hence no inactive lower pair is omitted: for all sufficiently small
+t>0 the complete chart has exactly the specified 92 unit rows incident
+to an interior site, and all other such pairs are strictly separated.
+
+Let R(t) contain those 92 moving-coordinate rows. An explicitly stored
+73-row basis defines a square system in the 72 velocity coordinates d
+and one auxiliary eta. A selected contact row is `(R(t)d)_e-eta=0`;
+a selected coordinate row fixes one component of d to +1 or -1.
+The basis and right-hand side are supplied in
+`research/target_c_one_deficit_opening_basis_M4_2026_10_07.json`.
+Its coefficient entries are rational functions in Q(sqrt(3))(t).
+
+The certificate proves that this square matrix has a nonzero determinant:
+all 73 exact Laurent elimination pivots have nonzero leading coefficients.
+Three pivot valuations are one and all others are zero. Therefore it is
+invertible for every sufficiently small t>0 and defines a meromorphic
+velocity field d(t).
+
+For *every* one of the 92 rows the exact solution satisfies
+
+`(R(t)d(t))_e = c_e t^(k_e)+O(t^(p_e))`,
+
+with `c_e>0`, `p_e>k_e`. The orders k_e lie in {0,1,2,3,4,5,6}; every
+certified remainder order is at least nine. Thus each row is strictly
+positive for all sufficiently small t>0. The common onset exists because
+there are finitely many rows. No floating sign or sampled onset is used.
+In particular some contacts only open through order six in this velocity
+certificate. A strict second-order test is not an exhaustive release test.
+
+The certificate uses exact truncated Laurent arithmetic with tracked
+absolute remainder orders. If a=O(t^p) plus a known leading part of
+valuation v, its inverse is known through order p-2v. For a product the
+known order is min(p_a+v_b,p_b+v_a); for a sum it is the minimum input
+order. Gaussian elimination and back substitution use these rules. A
+pivot or sign is accepted only when a known nonzero coefficient lies
+strictly below its certified remainder order. These are identities for
+rational functions, not an extrapolation of finite parameter evaluations.
+
+At each fixed small t, all 92 contacts therefore strictly open under
+`p -> p+epsilon d(t)` for sufficiently small epsilon>0. All inactive
+pairs and interior containment already have strict finite margins, so
+they persist upon choosing epsilon smaller. The field need not be affine,
+C2 in theta, bounded uniformly in M, or a motion of the old source.
+
+## 3. A universal small-curvature root lemma
+
+The following elementary root calculation is valid for every fixed M>=3
+in the same descending-order sorting chart; it requires no opening claim
+for general M. Let v be the wall site (1,M-1), omit the interior target
+h=(1,M-2), put w=v_basis-u_basis=(-1/2,sqrt(3)/2), and define
+
+`r=exp(i(M-2)theta) w`, `root=v+3 sin(theta) Jr`.
+
+The two incident wall edges have directions exp(i(M-3)theta)w and
+exp(i(M-1)theta)w. Direct squaring gives root-to-neighbour distances
+
+`1+3 sin^2(theta)>1`.
+
+At zero, the only other interior unit neighbour of v after omitting h
+is a=(0,M-1). Its sorting velocity is (M-1)Jv_basis. The wall site's
+velocity is -(M-1)Jw and the root's velocity is (4-M)Jw. Therefore
+
+`(v(0)-a(0)) dot (root'(0)-a'(0))=(sqrt(3)/2)(2M-5)>0`.
+
+All remaining root-to-chart or root-to-wall pairs have a strictly positive
+limiting gap, and hence remain above one for small theta. This explicitly
+explains why the omitted target site is the relevant blocker; keeping it
+would instead give a negative first margin -3sqrt(3)/2.
+
+For containment, consider edge j=0,...,M-1 on the same wall side. Its
+limiting tangent is w, first tangent coefficient is (2j-M+1)Jw, and its
+initial endpoint velocity is -j(M-j)Jw. Put k=M-1-j. The first signed
+cross-product coefficient from that edge to the root is
+
+`4-M+j(M-j)-(2j-M+1)(M-1-j)=k^2-k+3>0`.
+
+All other wall sides have strict limiting containment margins, since
+v(0) is in the relative interior of the chosen side. The root is therefore
+strictly inside the actual convex wall for every sufficiently small
+positive theta. This checks all wall support lines, not just the local
+vertex cone.
+
+For M=4, choose epsilon still smaller to preserve all root clearances when
+opening the 36 auxiliary sites. The root plus those opened sites is the
+required strict 37-site packet. This is a finite feasible endpoint for
+*each* small positive theta.
+
+## 4. Complete canonical exchange
+
+Delete all z<=36 old interior points and the old wall vertex v. Assign
+all z+1 deleted labels to distinct sites of the 37-site strict packet.
+No assumption is made about old interior contacts or coordinates.
+
+Retained-to-retained old constraints do not change. Every new lower pair
+inside the packet or to a retained wall vertex is strict. The canonical
+one-vertex convex-wall shield then checks every retained exterior point,
+including contact isolates. Every inserted point lies strictly inside
+the two-dimensional old wall hull, so strict convexity of squared distance
+gives strict upper distance below the actual old D to every retained
+source point. Packet-packet upper distances are likewise strict. Old
+actual diameter pairs are unchanged or removed, and inactive upper
+exceptions are not dropped.
+
+Cardinality is unchanged; there are zero new contacts and therefore no
+new unit triangle. At least the two old incident wall contacts disappear,
+with all old interior contacts counted as further possible losses. Actual
+diameter-pair loss is not needed. Audit.64 excludes this triangle-free
+replacement by global or contact minimality.
+
+## 5. Verification, scope, and continuation
+
+Run `python3 research/verify_target_c_one_deficit_symbolic_opening_2026_10_07.py`.
+Output is preserved in
+`research/target_c_one_deficit_symbolic_opening_certificate_2026_10_07.json`.
+It certifies the full exact unit support, 1654 inactive positive gaps,
+invertible meromorphic basis and all 92 positive leading opening margins.
+The root and full-source exchange are the analytic arguments above.
+The earlier finite-endpoint verifier independently checks two M=4 rational
+curvatures and four larger-curvature packets, with all pair inequalities.
+
+Canonical dependencies: C-ONE-VERTEX-CONVEX-WALL-SHIELD and
+C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT. Worker-1's universal sorting
+classification is not used. Only the explicit sorting geometry is
+rederived and checked; its auxiliary unit triangles are all opened.
+Audit.70's affine barrier and audit.71's full-chart energy demand are not
+violated: this packet has a vacancy, uses nonaffine finite motion and
+pays a deleted actual wall vertex.
+
+The one-deficit count is now excluded for the entire fixed-M=4
+sufficiently-small-curvature family, as a candidate awaiting audit. The
+z=N maximum case, arbitrary M, arbitrary-container extraction, exterior
+caps and full-core moves remain outside this result. Next obtain an
+all-small-curvature opening basis or explicit construction for M>=5,
+then determine whether it can be uniform enough for macroscopic chamber
+transfer. The terminal C-II / Level I goal remains open and active.

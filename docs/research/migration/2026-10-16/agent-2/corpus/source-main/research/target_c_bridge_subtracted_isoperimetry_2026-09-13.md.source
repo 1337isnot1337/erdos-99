@@ -1,0 +1,279 @@
+# Target C — bridge-subtracted outer-face isoperimetry
+
+**Date:** 2026-09-13  
+**Status:** proof-only finite candidate; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The two-phase boundary charge leaves the term `2B_o`, where `B_o` counts graph
+bridges that occur on the unbounded face. This note removes that term whenever the
+same graph carries a near-isodiametric amount of bounded-face area. The result is a
+finite planar incidence lemma followed by an asymptotic corollary.
+
+It does not assert that a selected harmonic carrier has near-disk area, or that the
+whole positive-contact graph is globally two-phase. Those are separate hypotheses.
+
+## 1. Finite bridge-subtracted inequality
+
+Let `G` be a finite connected straight-line plane graph with unit edges. Let `W` be
+the occurrence-counted boundary walk of the unbounded face and let `L` be its length.
+Let `B_o` be the number of graph-theoretic bridges whose two edge sides are incident
+to the unbounded face. Such a bridge occurs exactly twice in `W`.
+
+Let `U` be the union of the closures of all bounded faces. Decompose its positive-area
+part into connected finite-perimeter components `U_1,...,U_s`; components that meet
+only at zero-area sets are kept separate. Write
+
+\[
+A:=\operatorname{area}(U),
+\qquad
+p_j:=\mathcal H^1(\partial U_j).
+\]
+
+The perimeter includes every boundary component of `U_j`, including boundaries of
+holes. Then
+
+\[
+\boxed{\sum_jp_j\le L-2B_o.}
+\tag{BI.1}
+\]
+
+Consequently, by planar isoperimetry,
+
+\[
+\boxed{
+A\le { (L-2B_o)^2\over4\pi}.
+}
+\tag{BI.2}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+B_o\le {L-2\sqrt{\pi A}\over2}.
+}
+\tag{BI.3}
+\]
+
+The right side is nonnegative by (BI.2).
+
+### Proof
+
+Every physical edge in the boundary of `U` has a bounded face on one side. Since
+`U` contains the closures of all bounded faces, its other side is incident to the
+unbounded face. Such an edge is not a bridge with the unbounded face on both sides.
+Conversely, an outer-face bridge has no bounded face on either side and contributes no
+edge to `partial U`.
+
+Each non-bridge edge incident to the unbounded face contributes one occurrence to
+`W`, while each of the `B_o` outer bridges contributes two occurrences. Therefore the
+perimeter edge occurrences available to `partial U` are at most `L-2B_o`. Unit edge
+lengths turn this occurrence bound into (BI.1). This remains true with articulation
+points and repeated boundary vertices; the count is by edge occurrences.
+
+For each finite-perimeter component, the planar isoperimetric inequality gives
+
+\[
+\operatorname{area}(U_j)\le {p_j^2\over4\pi}.
+\]
+
+Summing and using `sum_j p_j^2 <= (sum_j p_j)^2` proves (BI.2). Rearranging its
+nonnegative square root gives (BI.3). `square`
+
+An internal bridge with the bounded face on both sides is deliberately not counted by
+`B_o`; it lies in the interior of the bounded-face union or on a zero-area seam and
+does not consume an outer-face occurrence.
+
+## 2. Near-isodiametric consequence
+
+Suppose a sequence is scaled by a diameter parameter `D` and satisfies
+
+\[
+A_D\ge\left({\pi\over4}-\varepsilon_D\right)D^2,
+\qquad
+L_D\le(\pi+\rho_D)D,
+\]
+
+with `epsilon_D, rho_D -> 0`. From (BI.3),
+
+\[
+0\le {B_{o,D}\over D}
+\le {1\over2}\left[
+\pi+\rho_D-2\sqrt{\pi\left({\pi\over4}-\varepsilon_D\right)}
+\right]
+\longrightarrow0.
+\tag{BI.4}
+\]
+
+Thus a near-isodiametric bounded-face union and a near-geodesic outer walk have only
+`o(D)` outer bridges. The conclusion is false without both hypotheses: a graph can
+have many outer bridges and either carry little bounded area or spend a linear outer
+walk surplus.
+
+The same finite formula gives the nonzero-surplus version. If
+`L_D/D -> M >= pi` and `A_D/D^2 -> pi/4`, then
+
+\[
+\limsup {2B_{o,D}\over D}\le M-\pi.
+\tag{BI.5}
+\]
+
+## 2.1 The full strict-rhombus route variant
+
+The same incidence argument applies when the graph's entire bounded-face union is
+replaced by the union `R` of its strict-rhombus faces. Let `A_4=area(R)`, and let
+`P_R` be the total finite perimeter of its positive-area components, including hole
+boundaries. Every edge on `partial R` has on its other side either the unbounded face
+or a bounded nonquadrilateral face. An outer bridge has the unbounded face on both
+sides and is not on `partial R`. Therefore
+
+\[
+\boxed{
+P_R\le (b-2B_o)+P_{exc},
+}
+\tag{BI.6}
+\]
+
+where `b` is the outer-face walk length and `P_exc` is the total degree of bounded
+nonquadrilateral faces. Isoperimetry gives
+
+\[
+\boxed{
+A_4\le{(b+P_{exc}-2B_o)^2\over4\pi}.
+}
+\tag{BI.7}
+\]
+
+In the Type-II full-core branch, `A_4=\pi D^2/4-o(D^2)`, so
+
+\[
+\boxed{
+(b-\pi D)+P_{exc}-2B_o\ge-o(D).
+}
+\tag{BI.8}
+\]
+
+Equivalently,
+
+\[
+2B_o\le(b-\pi D)+P_{exc}+o(D).
+\tag{BI.9}
+\]
+
+This is an all-detour coupling: outer bridges consume at most half of the same route
+surplus that remains after the full strict-rhombus area is paid for. It does not bound
+the positive route surplus itself.
+
+## 3. Composition with the two-phase boundary charge
+
+Use the notation of the proof-only two-phase boundary occurrence theorem:
+
+- `N_o` counts outer-walk occurrences outside two selected projective directions;
+- `P_exc` is the total degree of bounded nonquadrilateral faces; and
+- `B_o` is the outer-bridge count.
+
+That exact incidence theorem gives
+
+\[
+N_o\le P_{exc}+2B_o.
+\tag{BI.10}
+\]
+
+Assume, in addition, that the two selected directions have sine `s`, the outer-walk
+convex hull has both selected reciprocal widths `D-o(D)`, and `L_D/D -> M`. The
+projection variation argument gives
+
+\[
+{N_o\over D}\ge {4-sM\over2-s}-o(1).
+\tag{BI.11}
+\]
+
+If the **full bounded-face union** also satisfies `A_D/D^2 -> pi/4`, then (BI.5)
+and (BI.10) imply the all-detour necessary payment
+
+\[
+\boxed{
+{P_{exc}\over D}+M-\pi
+\ge {4-sM\over2-s}-o(1).
+}
+\tag{BI.12}
+\]
+
+At the near-geodesic endpoint `M=pi`, this reduces to
+
+\[
+\boxed{
+P_{exc}\ge(4-\pi)D-o(D).
+}
+\tag{BI.13}
+\]
+
+If the graph is an induced harmonic graph to which the Section-123 payment applies,
+`P_exc <= 10(e_BB-k)` then yields the conditional source-level bound
+
+\[
+{e_{BB}-k\over D}\ge {4-\pi\over10}-o(1).
+\tag{BI.14}
+\]
+
+For the canonical **full positive-contact core** in the no-container Type-II branch,
+the full-area hypothesis is in fact a consequence of the existing near-disk stack.
+All core vertices lie in the loaded force hull `F` (loaded vertices are in `F`, and
+each unloaded component is trapped in its attachment cell inside `F`). Hence the
+bounded-face union `U` satisfies
+
+\[
+A_4\le \operatorname{area}(U)\le\operatorname{area}(F).
+\]
+
+Canonical full-core near-disk stability gives
+`A_4/D^2 -> pi/4` and `area(F)/D^2 -> pi/4`, so squeezing yields
+`area(U)/D^2 -> pi/4`. Therefore (BI.12)--(BI.14) apply to that full core whenever
+the stated global two-phase and outer-walk hypotheses hold. This does **not** promote
+the conclusion to an arbitrary selected harmonic carrier: its bounded-face union need
+not carry the global near-disk area.
+
+For a graph where only strict-rhombus area saturation is known, one must use (BI.9),
+which already contains `P_exc`. Combining (BI.9) with (BI.10) gives instead
+
+\[
+\boxed{
+2{P_{exc}\over D}+M-\pi
+\ge {4-sM\over2-s}-o(1).
+}
+\tag{BI.15}
+\]
+
+At `M=pi`, this yields only
+
+\[
+P_{exc}\ge {4-\pi\over2}D-o(D),
+\qquad
+{e_{BB}-k\over D}\ge {4-\pi\over20}-o(1),
+\tag{BI.16}
+\]
+
+when the Section-123 payment applies. The stronger (BI.13)--(BI.14) conclusion
+requires the full-core area sandwich above (or another explicit full bounded-face
+area hypothesis); it does not follow from strict-rhombus saturation for an arbitrary
+graph alone.
+
+This is a bridge-term removal, not a C-II closure. The near-geodesic full-area and
+global two-phase hypotheses are not available for every current Type-II survivor;
+the canonical obstruction remains the aggregate cell detour coupled to the loaded
+diameter graph.
+
+## 4. Scope and classification
+
+- Bridges internal to bounded faces are not subtracted.
+- Every source point remains present; no contact-isolated point is assigned a contact
+  velocity or deleted.
+- The proof uses only plane incidence, unit edge lengths, and ordinary planar
+  isoperimetry.
+- `U` is the full bounded-face union of the graph under discussion. A selected
+  harmonic carrier need not have `A_D=pi D^2/4-o(D^2)`.
+- (BI.8)--(BI.10) are conditional compositions. They do not produce a strict
+  diameter-decreasing motion or an exact unit equilateral triangle.
+
+**Classification:** proved candidate awaiting hostile audit; proof-only. C-II remains
+open.

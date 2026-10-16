@@ -1,0 +1,241 @@
+# Target C-II — every diameter direction is an exact hull normal, so birth order is direction order
+
+**Date:** 2026-09-17  
+**Status:** proof-only geometric sharpening; no canonical promotion claimed  
+**Scope:** all actual diameter edges; high-`t` consequences stated for the selected O--O path  
+**Dependencies:** convexity of the full source hull; canonical C67 separation; selected-path host-arc topology  
+**Certificate:** `research/verify_target_c_high_t_exact_diameter_normal_order_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+Several current high-`t` arguments compare an actual diameter chord with the radial direction or a hull support normal using Type-II near-disk errors. For a true diameter edge this approximation is unnecessary.
+
+If `xy` is an actual diameter edge of the convex source hull `K`, then the chord vector itself is an **exact support normal**:
+
+\[
+\boxed{
+x-y\in N_K(x),
+\qquad
+y-x\in N_K(y).
+}
+\tag{DN.1}
+
+Equivalently, the two endpoint outward normals selected by the diameter are exactly antipodal, and the projective diameter direction is exactly one of the support-normal directions at either endpoint.
+
+This gives two useful high-`t` consequences.
+
+1. The host-forced transverse-margin theorem needs no radial/midpoint approximation: a switching diameter born on one of the two physical host arcs inherits the host support-normal interval **exactly**. Its fixed `arcsin(0.4143)` transverse margin loses only the existing `o(1)` row-phase/terminal-energy error.
+2. On a fixed birth host, distinct switching diameters born in ordered layer subarcs have strictly ordered diameter directions. The order is the convex support-normal order itself, not merely an approximate near-disk order. At the partner endpoint the outward normal is exactly the antipode of the birth normal, so the same direction parameter is transported exactly to the destination boundary.
+
+Thus every fixed-host nested rail in the current frontier is simultaneously an endpoint-ordered and an exact normal-direction-ordered rail.
+
+---
+
+## 1. Diameter endpoints are exact support points in the chord direction
+
+Let `K` be any compact convex set of diameter `D`, and let `x,y in K` satisfy
+
+\[
+|x-y|=D.
+\]
+
+Take arbitrary `z in K`. Since `D` is the diameter,
+
+\[
+|z-y|\le D=|x-y|.
+\]
+
+Expand around `x`:
+
+\[
+|z-y|^2
+=|x-y|^2+2(x-y)\cdot(z-x)+|z-x|^2.
+\]
+
+Therefore
+
+\[
+2(x-y)\cdot(z-x)+|z-x|^2\le0,
+\]
+
+so in particular
+
+\[
+\boxed{
+(x-y)\cdot(z-x)\le0
+\quad\text{for every }z\in K.
+}
+\tag{DN.2}
+
+This is exactly the support-normal condition
+
+\[
+x-y\in N_K(x).
+\]
+
+Interchanging `x,y` gives
+
+\[
+y-x\in N_K(y).
+\]
+
+This proves (DN.1). Convexity is only needed to use the usual normal-cone language; the inequality itself follows directly from the diameter property.
+
+A useful width reformulation is
+
+\[
+\boxed{
+w_K(d)=D}
+\tag{DN.3}
+
+for `d=(x-y)/D`, with `x` and `y` lying on the two supporting lines orthogonal to `d` at distance `D`.
+
+---
+
+## 2. Exact host transverse margin
+
+Let the common selected row phase be `[u_*]`. The coupled-path terminal-energy argument gives, on either physical host arc, an oriented support-normal interval centered at one of the branches `+Ju_*` or `-Ju_*` with half-width
+
+\[
+\vartheta_*+o(1),
+\qquad
+\vartheta_*:=\arccos(0.4143)<{\pi\over2}.
+\tag{DN.4}
+
+Take any switching diameter `xy` at a nonhub selected interface and let `x` be its unique birth endpoint in the layer. The path-region switching identity places `x` on one of the two physical host subarcs. Orient the chord outward at the birth endpoint:
+
+\[
+n_h:={x-y\over D}.
+\tag{DN.5}
+
+By (DN.1), `n_h` itself is an outward support normal at `x`. Hence directly from (DN.4),
+
+\[
+\angle(n_h,\sigma Ju_*)
+\le\vartheta_*+o(1)
+\tag{DN.6}
+
+for the appropriate host sign `sigma`.
+
+Since `[u_i]=[u_*]+o(1)` for every selected row,
+
+\[
+\boxed{
+d_{\mathbb{RP}^1}([n_h],[u_i])
+\ge {\pi\over2}-\vartheta_*-o(1)
+=\arcsin(0.4143)-o(1).}
+\tag{DN.7}
+
+Thus the fixed transverse margin is an exact convex-diameter consequence once the host normal interval is known. No circumcenter, radial approximation, or midpoint estimate is required.
+
+---
+
+## 3. Birth order is exact diameter-direction order
+
+Fix one physical host arc and orient it along the ambient convex boundary so that outward support-normal angle is nondecreasing. Let
+
+\[
+I_1<I_2<\cdots<I_M
+\tag{DN.8}
+
+be pairwise interior-disjoint layer subarcs in this boundary order. For each `s`, let `x_s in I_s` be the birth endpoint of an actual diameter edge `x_s y_s`, and orient its diameter normal outward at birth:
+
+\[
+n_s={x_s-y_s\over D}.
+\tag{DN.9}
+
+By (DN.1), `n_s in N_K(x_s)`. Normal cones of a convex boundary are ordered: if `x_s` precedes `x_t`, then any lifted normal angle selected from the interior of `N_K(x_s)` cannot exceed any lifted normal angle selected from the interior of `N_K(x_t)`, except for a possible shared boundary normal at adjacent vertices.
+
+The current source has canonical C67 separation for distinct actual diameter edges:
+
+\[
+d_{\mathbb{RP}^1}([n_s],[n_t])
+\ge2\arcsin{1\over2D}>0.
+\tag{DN.10}
+
+Hence distinct selected diameter edges cannot use the same normal line. On any host normal interval of width less than `pi`, the projective line has a unique compatible oriented lift. Therefore the weak convex normal order is strict:
+
+\[
+\boxed{
+\arg n_1<\arg n_2<\cdots<\arg n_M
+}
+\tag{DN.11}
+
+up to one global reversal of the chosen host orientation.
+
+So an ordered family of birth layers already carries an exact ordered family of actual diameter directions.
+
+---
+
+## 4. The partner endpoint transports the same normal parameter exactly
+
+At the partner endpoint `y_s`, (DN.1) gives the outward normal
+
+\[
+{y_s-x_s\over D}=-n_s.
+\tag{DN.12}
+
+Thus if `alpha_s` is a lifted outward-normal angle at the birth endpoint, then the diameter selects the partner normal
+
+\[
+\boxed{\alpha_s+\pi}
+\tag{DN.13}
+
+exactly, not merely up to `o(1)`.
+
+Consequently every diameter rail transports one scalar normal parameter from the birth boundary to the destination boundary by the antipodal map. In particular:
+
+- an opposite-host rail matches a strictly ordered birth-normal sequence to its exact antipodal sequence on the opposite host;
+- a far-terminal rail forces the terminal boundary piece to contain the exact antipodes of the birth-normal sequence;
+- a one-death-interface plateau likewise forces that single destination piece to carry the full antipodal normal span of the selected birth family.
+
+Using C67, any `M` distinct bars on one such lifted normal branch have span at least
+
+\[
+\boxed{
+(M-1)\,2\arcsin{1\over2D}.
+}
+\tag{DN.14}
+
+For `M=lambda D-o(D)`, the destination support-normal span is therefore at least
+
+\[
+\boxed{\lambda-o(1)}
+\tag{DN.15}
+
+radians. This recovers the terminal macroscopic-span phenomenon directly in normal coordinates and applies equally to any fixed physical destination piece.
+
+---
+
+## 5. Same-host diameter exclusion becomes immediate
+
+The selected physical host arc has support-normal width at most
+
+\[
+2\vartheta_*+o(1)<\pi.
+\tag{DN.16}
+
+If a diameter had both endpoints on that same host arc, (DN.1) would require the host normal set to contain two antipodal normals whose oriented difference is exactly `pi`. This contradicts (DN.16).
+
+Thus the existing same-host diameter exclusion follows directly from exact diameter normality and the terminal-energy host-width bound. The earlier chord-length computation remains valid, but the normal proof is shorter and exposes the order structure needed later.
+
+---
+
+## 6. Frontier effect
+
+The current high-`t` rail should now be viewed in normal coordinates:
+
+```text
+ordered birth layer
+-> exact outward diameter normal at the birth vertex
+-> strict normal-direction order along the host
+-> exact antipodal normal at the partner vertex
+-> nested support/death order on the destination boundary.
+```
+
+This removes another approximation layer from the remaining geometric problem. The straight diameter direction is not merely close to the boundary normal because the source is near circular; it **is** a boundary support normal exactly.
+
+The unresolved step is to combine this exact antipodal normal transport with the selected-train contact/terminal normal sequences. In the opposite-host branch one must show that the required normal matching is incompatible with the ordered near-triangular train grid or KKT force orientation; in the far-terminal branch one must overcharge the terminal normal span or terminal ledger.
+
+No such final incompatibility is claimed here.
+
+**Disposition:** proved exact support-normality of every diameter edge, upgraded fixed-host rails to exact normal-ordered rails, and transported their direction parameter exactly to the partner boundary. C-II and Level I remain open.

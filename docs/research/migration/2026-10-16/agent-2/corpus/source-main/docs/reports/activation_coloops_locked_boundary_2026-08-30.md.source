@@ -1,0 +1,196 @@
+<!-- theorem-state: {"artifact_id":"ART-C235B737F28F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Erdős Problem #99 — activation coloops and locked-boundary stress
+
+**Date:** 2026-08-30
+**Repository state:** `origin/main` at `bd5c534`; work branch
+`research/activation-flat-2026-08-30` (merged with the promoted Section 157 rate)
+**Run type:** closing-proof audit / theorem promotion
+**Target:** A
+**Active prompt:** `docs/prompts/erdos_problem_99_1.7.5_FINAL_CONTINUATION_PROMPT.md`
+**External web search:** not used for the new proofs
+**Computation:** not used
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+## 1. Starting endpoint
+
+The exact endpoint is
+
+\[
+\zeta=\dim\ker S\ge s,
+\qquad s=\Delta_\Lambda-d_{\rm int},
+\]
+
+equivalently
+
+\[
+\operatorname{rank}S\le d_{\rm int}+|C^\partial|-\Delta_\Lambda.
+\]
+
+The new results were required to turn the activation flat or a universally locked
+first-transition triangle into this source-specific Schur rank saving. They do not.
+
+## 2. Strongest genuinely new audited theorems
+
+### Theorem 158.1 — relative coloops and simultaneous release
+
+For the monotone activation sequence \(A_0,\ldots,A_\ell\), let \(E_0\) be the old
+active pairs, \(E_{\rm new}\) the \(\ell\) created pairs, and \(V_0\) the vertices
+incident with \(E_0\). Then \(E_{\rm new}\) is a forest whose components meet \(V_0\) in
+at most one vertex, and
+
+\[
+\operatorname{rank}(E_0\text{ rigidity rows}+E_{\rm new}\text{ rigidity rows})
+=\operatorname{rank}(E_0\text{ rigidity rows})+\ell.
+\]
+
+Moreover, after fixing \(V_0\) (and one root in each rootless activation component),
+the activation edge derivatives can be prescribed arbitrarily. In particular there
+is a finite velocity whose derivative is \(+1\) on every created unit pair and \(-1\)
+on every created diameter pair. For all sufficiently small positive amplitudes this
+produces a triangle-free global minimizer of the same diameter, with exactly the old
+active pairs \(E_0\); all vertices outside \(V_0\) are strict rattlers.
+
+#### Proof
+
+Before its move, \(r_i\) is strict and isolated in the active graph. The new pair
+\(r_iq_i\) therefore attaches a previously isolated vertex. Persistence makes \(r_i\)
+permanently non-strict, so no creator is repeated; if \(q_i\) is a creator it was
+created earlier. Induction gives the forest and one-root assertions.
+
+No creator is incident with an old active pair, since old pairs persist and would have
+prevented it from being strict. In a row dependence among old and new rigidity rows,
+peel a leaf outside \(V_0\): its coordinate block occurs in only its incident new row,
+forcing that coefficient to vanish. Repetition proves the rank formula.
+
+For an oriented activation tree, fix its root and, for arbitrary \(\lambda_e\), set
+
+\[
+v_w-v_u=\lambda_e\frac{p_w-p_u}{|p_w-p_u|^2}
+\]
+
+along each oriented edge \(u\\to w\). This realizes every prescribed derivative and
+keeps all old active derivatives zero. Taking the signs \(+1\) for unit contacts and
+\(-1\) for diameter pairs gives, for small \(t>0\),
+
+\[
+|p_x+tv_x-p_y-tv_y|^2=1+2t+t^2|v_x-v_y|^2>1
+\]
+
+on created unit edges, and strictly less than \(D^2\) on created diameter edges.
+Inactive pairs retain their strict margins; an old diameter pair remains fixed, so the
+diameter is exactly \(D=D(|A^*|)\). The contact graph is a subgraph of the terminal
+triangle-free graph, and all active pairs incident with an outside vertex have been
+released. This proves the theorem.
+
+### Theorem 159.1 — boundary-transmitting locked-triangle certificate
+
+Let \(H\) be a full-dimensional convex polygon and \(P\subset H\) a finite
+unit-separated set. If a unit equilateral triangle is universally locked in the
+fixed-container expansive cone, then there are nonnegative contact coefficients
+\(\alpha_{ij}\) and active-facet coefficients \(\mu_{if}\), with all three triangle
+edges having positive \(\alpha\), such that
+
+\[
+\sum_j\alpha_{ij}(p_i-p_j)-\sum_f\mu_{if}n_f=0
+\]
+
+at every vertex. The positive-contact component containing the triangle has
+nonzero facet reaction at at least two distinct points of \(P\cap\partial H\).
+
+#### Proof
+
+Write the cone generators as the nonnegative contact derivatives \(a_g\) and the
+active-facet derivatives \(b_{if}=-n_f\cdot v_i\). Universal locking gives both
+\(a_e\) and \(-a_e\) nonnegative on the cone for every triangle edge. Farkas's
+polar-cone theorem therefore gives
+
+\[
+-a_e=\sum_g\lambda_g^{(e)}a_g+\sum_{i,f}\nu_{if}^{(e)}b_{if},
+\qquad \lambda_g^{(e)},\nu_{if}^{(e)}\ge0.
+\]
+
+Summing the three identities and moving the left side yields a zero functional with
+contact coefficient at least one on every triangle edge. Reading vertex blocks gives
+the displayed equilibrium. Summing it over the positive-contact component cancels
+internal forces and leaves a zero sum of outward facet normals. If that component had
+no facet reaction, a uniquely extreme vertex would contradict its nonzero positive
+contact equilibrium. If all reactions were at one boundary point, the pointed normal
+cone of a full-dimensional polygon would make a nonzero nonnegative zero sum
+impossible. Hence two distinct boundary points carry reaction, and connectivity gives
+contact paths from the triangle to both.
+
+## 3. Exact target implication
+
+Theorem 158.1 rules out a universal critical-cone blockage or signed/KKT load created
+by activation rows alone; Theorem 159.1 upgrades a locked local triangle to a
+boundary-transmitting source-hull stress. Neither changes the response quantity
+\(\zeta\), because the source-hull boundary points are not canonically the response
+terminals \(C^\partial\).
+
+## 4. Exact remaining lemma
+
+**Locked-support transport lemma.** For a first bad capacity transition built from the
+terminal activated source, map the boundary reaction paths of Theorem 159.1, or the
+finite directions of Theorem 158.1, into the directed alternating source-to-exterior
+network. Either one certificate gives an independent saved source terminal and \(s\)
+independent certificates give a rank-\(s\) subspace of \(\ker S\), or the associated
+source replacement has diameter strictly below \(D\).
+
+No such map is proved.
+
+## 5. Audit classification and regressions
+
+| Claim | Classification | Audit result |
+| --- | --- | --- |
+| Activation rows are relative coloops | proved | Leaf elimination works modulo the old active rows. |
+| All activations can be released at once | proved | Tree recursion realizes prescribed edge derivatives and strict margins persist. |
+| Activation rank forces KKT load | rejected | Section 153 already gives universal zero load; the new signed result strengthens the no-go. |
+| A locked triangle supplies a Schur separator | unproved | The certificate reaches \(P\cap\partial H\), not \(C^\partial\). |
+| Local cage plus planarity forces response nullity | rejected | Section 149 supplies full-rank planar response data. |
+
+The exact two-leaf cage survives because its whole-cage universal lock is not assumed;
+the Section 152 non-global activation/monomer regression survives; the Section 153
+zero-KKT theorem is strengthened; straight chains remain compatible with quadratic
+opening; regular shells and diameter stars can carry the boundary stress; cyclic and
+overlapping circuits and annular full-linkage responses remain outside the theorem.
+
+## 6. Literature and computation
+
+No external theorem or computation is used in Sections 158–159. The only invoked
+ingredient beyond the canonical modules is finite-dimensional Farkas/polar-cone
+duality and elementary Euclidean geometry.
+
+## 7. Canonical promotion
+
+**Promote now.** The canonical files are:
+
+- `docs/targets/target-a/11-activation-coloops-and-locked-boundary.md`;
+- `docs/targets/target-a/README.md`;
+- `docs/README.md` and `docs/KNOWLEDGE_MAP.md`;
+- `docs/reports/README.md`;
+- `docs/prompts/erdos_problem_99_1.7.5_FINAL_CONTINUATION_PROMPT.md`.
+
+## 8. Compact handoff
+
+```text
+LEVEL I STATUS: STILL OPEN
+
+Strongest new theorem:
+Activation rows are relative coloops and can be simultaneously released in a finite
+global-optimum motion; a universally locked triangle carries a positive contact/facet
+stress to two distinct hull-boundary points.
+
+Exact endpoint:
+dim ker S >= Delta_Lambda - d_int remains unproved.
+
+Binding no-go:
+Activation rank alone gives neither KKT load nor a universal critical-cone lock, and
+source-hull boundary stress is not yet scaffold-terminal stress.
+
+Highest-value next lemma:
+Prove the locked-support transport lemma coupling these source objects to the directed
+alternating response, or obtain a strict sub-D source replacement.
+```

@@ -1,0 +1,87 @@
+# Target C-II — strengthen the `t<=1.860` dominant O--O family to retained pair weight
+
+**Date:** 2026-09-15  
+**Status:** proof-only strengthening of `target_c_dominant_double_outer_trains_g0076_t1860_2026-09-15.md`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The `g=0.0076` wide-window bootstrap proves, for every full-core Type-II survivor with
+
+\[
+t={q-k\over D}\le1.860,
+\]
+
+that the retained dominant outer-terminal mass satisfies
+
+\[
+z>2.0783-o(1)
+\]
+
+and, after feeding its energy back into the network envelope,
+
+\[
+U<2.004193+o(1).
+\]
+
+The parent note converted `z-U` only into a lower bound on the **number** of dominant-window complete trains with two selected outer terminals.  The retained endpoint weights give a stronger conclusion.
+
+Freeze the dominant orbit windows.  For each dominant complete stopped train `tau`, let
+
+\[
+a_\tau,b_\tau\in[0,1]
+\]
+
+be the retained weights of its two outer terminal occurrences, assigning zero to a missing outer terminal.  Then
+
+\[
+a_\tau+b_\tau
+\le1+\min(a_\tau,b_\tau).
+\tag{PW.1}
+
+Define the normalized retained dominant O--O pair weight
+
+\[
+P_{OO}^{dom}
+:={1\over D}\sum_{\tau\,dom}\min(a_\tau,b_\tau).
+\tag{PW.2}
+
+If `M_dom D` is the dominant-window complete-train count, summing (PW.1) gives
+
+\[
+\boxed{z\le M_{dom}+P_{OO}^{dom}+o(1).}
+\tag{PW.3}
+
+After the source limit and then shrinking the phase windows,
+
+\[
+M_{dom}\le A\le {T-q/2\over D}\le U.
+\tag{PW.4}
+
+Therefore the exact certificate from the parent theorem yields
+
+\[
+P_{OO}^{dom}
+\ge z-U-o(1)
+>2.0783-2.004193-o(1).
+\]
+
+Hence
+
+\[
+\boxed{
+P_{OO}^{dom}>0.0740-o(1)
+\qquad(t\le1.860).}
+\tag{PW.5}
+
+This strictly strengthens the parent count statement: retained pair weight is automatically bounded above by the number of O--O trains, while (PW.5) also preserves both endpoint measures used by the round-hull cyclic-order and diameter-bracing arguments.
+
+Combined with the current scalar floor, every survivor in
+
+\[
+1.84332\lesssim t\le1.860
+\]
+
+has a linear weighted family of same-orbit O--O trains with both endpoint measures retained on the outer walk.
+
+The next useful step is to distribute this pair weight among the three exact phase classes and couple its cyclic endpoint order to the near-saturated dominant-orbit crossing graph and Section-157 two-sided diameter bracing.
+
+C-II remains open.

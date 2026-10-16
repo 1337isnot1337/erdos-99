@@ -1,0 +1,361 @@
+# Target C-II — every all-inactive two-sided FREE ancestry is outer-face localized
+
+**Date:** 2026-09-17  
+**Status:** proved candidate awaiting promotion; proof-only strengthening of two-sided inactive gate absorption  
+**Scope:** non-anchored FREE reflection modules, all-inactive two-sided activation ancestry  
+**Dependencies:** C65 full diameter visibility; `F=conv B`; FREE blocker force-hull exclusion; two-sided inactive gate absorption; inactive-chain contact-crossing threshold  
+**Certificate:** `research/verify_target_c_tooth_reflection_two_sided_outer_face_localization_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The two-sided absorption theorem allowed an inactive upper gate to jump between contact faces, so its source-wide lower-gate matching was not previously localized. The upper-gate child, however, cannot lie in the force hull unless an active diameter endpoint becomes tight at the same instant. This removes the face-jump ambiguity on the vertices themselves.
+
+Let
+
+\[
+F=\operatorname{conv}B,
+\]
+
+where `B` is the complete set of actual source-diameter endpoints supplied by C65. In an all-inactive two-sided activation branch, every vertex of the activation ancestry lies in the unbounded face of the original positive contact graph. More precisely:
+
+1. every blocker root lies outside `F`;
+2. every inactive child born at an **upper** gate lies outside `F`;
+3. every **lower** gate preserves the current contact face because its original segment has length below `sqrt(3)` and cannot cross the unit-contact graph.
+
+Hence every maximal lower-gate run lies in the original outer contact face, and every ancestry vertex is an outer-face isolated source point. Upper-gate segments themselves may cross the contact core; no claim is made that the full polygonal ancestry is embedded in the outer face.
+
+This upgrades both branches of the two-boundary slack tradeoff:
+
+- the upper-rich matching consists of old fully inactive pairs whose **endpoints are both outer-face vertices**;
+- the upper-poor deep run from the preceding theorem is **always an outer-face run**, never a bounded exceptional-face run.
+
+It also localizes the source-wide inverse-`D` lower matching from two-sided absorption. For every fixed `K>h_*`, where
+
+\[
+h_*={\sqrt{303}\over52},
+\]
+
+a non-anchored FREE module in the all-inactive branch forces a vertex-disjoint matching of outer-face isolated source points of size
+
+\[
+\boxed{
+\left({1\over2}-{h_*\over2K}-o(1)\right)D
+}
+\]
+
+with
+
+\[
+\boxed{1<|x-y|\le1+{K\over D}.}
+\]
+
+For `K=1`, the coefficient remains
+
+\[
+0.3326260078314499\ldots,
+\]
+
+but the matching is now entirely localized to the old outer contact face.
+
+---
+
+## 1. Active diameter endpoints stay fixed throughout the all-inactive repair
+
+The two-sided activation process moves only blocker roots and old source vertices that were fully inactive in the original source. If a moving vertex first reaches an old active contact/diameter vertex at either metric boundary, the process stops in the `ACTIVE-GATE / exact-anchor` branch.
+
+Consequently, on an all-inactive ancestry, every vertex of
+
+\[
+B
+\]
+
+remains fixed at its original position throughout the activation process.
+
+At every pre-stop time the deformed configuration still satisfies the upper metric inequalities
+
+\[
+|p-b|\le D
+\qquad(b\in B)
+\tag{OF2.1}
+\]
+
+for every moving point `p`. If equality with some `b in B` occurs, that is exactly an active upper gate and the all-inactive branch terminates.
+
+---
+
+## 2. An inactive upper-gate child cannot lie in the force hull
+
+Consider an upper ancestry edge. Immediately before the child activates, let `p` be the current position of the already-moving parent and let `v` be the still-fixed old-inactive child. At the first upper hit,
+
+\[
+|p-v|=D.
+\tag{OF2.2}
+\]
+
+Assume for contradiction that
+
+\[
+v\in F=\operatorname{conv}B.
+\]
+
+Write
+
+\[
+v=\sum_{b\in B}\mu_b b,
+\qquad
+\mu_b\ge0,
+\qquad
+\sum_b\mu_b=1.
+\]
+
+By convexity of the Euclidean norm,
+
+\[
+D=|p-v|
+\le
+\sum_b\mu_b|p-b|
+\le
+\max_{b\in B}|p-b|.
+\tag{OF2.3}
+\]
+
+On the other hand, upper safety (OF2.1) gives
+
+\[
+\max_{b\in B}|p-b|\le D.
+\]
+
+Thus equality holds and there is at least one
+
+\[
+b\in B
+\]
+
+such that
+
+\[
+|p-b|=D.
+\tag{OF2.4}
+\]
+
+But `b` is an old active actual-diameter endpoint and remains fixed. Equation (OF2.4) is therefore a simultaneous active upper gate. The process must stop in the exact-anchor branch instead of activating `v` as an all-inactive child, contradiction.
+
+Hence every upper-gate child on an all-inactive ancestry satisfies
+
+\[
+\boxed{v\notin F.}
+\tag{OF2.5}
+\]
+
+Since the positive contact graph lies in `F`, every point outside `F` lies in its unbounded face. Therefore every inactive upper-gate child is an outer-face source point.
+
+This argument is exact. It does not use small gate slack, the support direction, or an asymptotic estimate.
+
+---
+
+## 3. Lower gates preserve the outer face
+
+Take a lower ancestry edge between original source points `u,v`. The two-sided gate theorem gives
+
+\[
+1<|u-v|
+\le1+\Delta
+\le1+t_D
+<1+h_*+o(1)
+<\sqrt3.
+\tag{OF2.6}
+\]
+
+The sharp contact-crossing lemma says that a source segment crossing a unit-contact edge has length at least `sqrt(3)`. A segment of length below two also cannot pass through a third source point because the source is unit-separated.
+
+Thus the straight segment `uv` does not cross the original positive contact graph and does not pass through one of its vertices. Its endpoints therefore lie in the same face of that graph.
+
+In particular,
+
+\[
+\boxed{
+\text{if }u\text{ lies in the outer contact face and }uv\text{ is a lower gate, then }v\text{ also lies in the outer contact face.}
+}
+\tag{OF2.7}
+
+---
+
+## 4. Induction along the complete ancestry
+
+Let
+
+\[
+z_0,z_1,\ldots,z_m
+\]
+
+be an all-inactive ancestry from a FREE blocker root.
+
+The FREE blocker theorem gives
+
+\[
+z_0\notin F,
+\]
+
+so `z_0` lies in the outer contact face.
+
+Assume `z_j` is an outer-face vertex.
+
+- If `z_jz_{j+1}` is a lower gate, (OF2.7) keeps `z_{j+1}` in the same outer face.
+- If it is an upper gate, (OF2.5) gives `z_{j+1} notin F`, hence `z_{j+1}` lies in the outer face independently of where the upper segment travels.
+
+Induction yields
+
+\[
+\boxed{
+z_0,\ldots,z_m\text{ are all old fully inactive vertices in the original outer contact face.}
+}
+\tag{OF2.8}
+
+Every maximal consecutive lower run is therefore a simple path entirely contained in that same outer face.
+
+The qualification about the edges matters: an upper-gate chord can cross the contact graph. The theorem localizes the source vertices and all lower-gate runs, not the interiors of upper-gate chords.
+
+---
+
+## 5. Consequences for the two-boundary slack tradeoff
+
+The two-boundary theorem has a common defect ledger
+
+\[
+\sum_{j\in E_{\rm low}}(|z_j-z_{j+1}|-1)
++
+\sum_{j\in E_{\rm up}}(D-|z_j-z_{j+1}|)
+\le t_D.
+\tag{OF2.9}
+\]
+
+All pairs in both sums now have outer-face endpoints by (OF2.8).
+
+### Upper-rich branch
+
+If `U>=M`, the existing parity thinning gives a vertex-disjoint matching of size
+
+\[
+{M\over4}-O(1)
+\]
+
+with
+
+\[
+D-{2t_D\over M}
+\le |x-y|<D.
+\]
+
+The new conclusion is
+
+\[
+\boxed{
+\text{every endpoint of this near-diameter matching is an old fully inactive outer-face vertex.}
+}
+\tag{OF2.10}
+
+The matching chords themselves need not remain in the outer face.
+
+### Upper-poor branch
+
+If `U<M`, the support-progress pigeonhole chooses one consecutive all-lower run `R` with
+
+\[
+\operatorname{span}_N(R)
+\ge
+{D-O(\sqrt D)\over M}.
+\]
+
+The preceding upper-poor theorem allowed `R` to lie in a bounded exceptional face or in the outer face. Equation (OF2.8) removes the former alternative:
+
+\[
+\boxed{R\text{ lies in the original outer contact face.}}
+\tag{OF2.11}
+\]
+
+At the reflection-matched scale `M=floor(D^(1/4))`, one therefore gets an **outer-face** simple inactive run with
+
+\[
+\operatorname{span}_N(R)
+\ge D^{3/4}-O(D^{1/4}),
+\]
+
+and an outer-face vertex-disjoint matching of
+
+\[
+\left({1\over4}-o(1)\right)D^{3/4}
+\]
+
+pairs with
+
+\[
+|x-y|-1
+\le
+(0.6694959686742\ldots+o(1))D^{-3/4}.
+\tag{OF2.12}
+\]
+
+There is no bounded exceptional-face escape at this scale.
+
+---
+
+## 6. Source-wide inverse-diameter matching is also outer-face localized
+
+The two-sided activation theorem gives at least
+
+\[
+D-O(\sqrt D)
+\]
+
+lower gates in any ancestry reaching the near-opposite threshold. Their total original unit excess is at most `t_D<h_*+o(1)`.
+
+For every fixed `K>h_*`, after deleting the lower edges with excess above `K/D` and parity thinning, the matching size is
+
+\[
+\left({1\over2}-{h_*\over2K}-o(1)\right)D.
+\]
+
+By (OF2.8), every endpoint of every retained lower edge lies in the outer contact face. Hence
+
+\[
+\boxed{
+\left({1\over2}-{h_*\over2K}-o(1)\right)D
+\text{ disjoint outer-face inactive pairs satisfy }
+1<|x-y|\le1+K/D.
+}
+\tag{OF2.13}
+\]
+
+For `K=1`,
+
+\[
+\boxed{
+(0.3326260078314499\ldots-o(1))D
+}
+\]
+
+such pairs are forced.
+
+For any `K_D->infinity` with `K_D=o(D)`, the outer face contains a matching of
+
+\[
+\boxed{(1/2-o(1))D}
+\]
+
+fully inactive pairs of length `1+o(1)`.
+
+This converts the previously source-wide two-sided near-unit burden into the exact KKT-invisible region already singled out by the outer-pocket/Oler and outer-detour parts of Target C.
+
+---
+
+## 7. Remaining seam
+
+The all-inactive two-sided branch can no longer hide lower-gate mass in bounded exceptional faces. Every lower run, including the support-deep upper-poor run, is in the old outer contact face, and every upper-rich near-diameter witness also has outer-face endpoints.
+
+A closure still needs one more geometric step: charge the resulting outer-face inactive population/run against either
+
+1. the internal outer-pocket area/detour inside `F`, or
+2. the external population outside `F`,
+
+without double-counting the same outer-walk currency already used by the canonical Target C ledger.
+
+**Disposition:** proved force-hull exclusion for every inactive upper-gate child and used it to localize the complete all-inactive two-sided ancestry, all lower-gate runs, the source-wide inverse-`D` lower matching, and both branches of the two-boundary tradeoff to the original outer contact face. C-II and Level I remain open.

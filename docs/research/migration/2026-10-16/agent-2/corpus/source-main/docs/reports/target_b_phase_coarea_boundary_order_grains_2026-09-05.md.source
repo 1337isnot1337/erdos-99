@@ -1,0 +1,277 @@
+<!-- theorem-state: {"artifact_id":"ART-D27C4BC04872","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Erdos Problem #99 - Target B phase-coarea boundary-order grain decomposition
+
+**Date:** 2026-09-05  
+**Run type:** exact graph coarea applied to sixfold train phase  
+**Target:** replace the quadratic low-degree pruning loss in the multi-grain endpoint  
+**Depends on:** pure strict-rhombic disk; total angular defect `sum_F(theta_F-pi/3)=O(D)`; train crossing graph; Mantel  
+**LEVEL I STATUS:** STILL OPEN
+
+## 1. Purpose
+
+Section 50 creates coherent train grains but also prunes low-degree vertices, paying a coarse `C_T lambda D^2` crossing loss. That loss is too large for the physical multigrain perimeter theorem MG3-MG4, whose natural interface scale is linear in `D`.
+
+Coherence itself does not require the low-degree pruning. The sixfold phase has only boundary-order total variation on the train-crossing graph. A one-dimensional coarea cut on the phase circle therefore produces fixed-coherence grains after deleting only boundary-order many physical rhombi.
+
+## 2. Exact phase variation on one rhombus
+
+For every train `tau`, choose its projective unit-edge angle
+
+`phi_tau in R/pi Z`
+
+and define the sixfold phase
+
+`z_tau=exp(6i phi_tau) in S^1`.
+
+If trains `tau,sigma` cross in one strict unit rhombus, let its acute angle be
+
+`theta_(tau sigma)=pi/3+delta_(tau sigma)`,
+
+with
+
+`0<delta_(tau sigma)<=pi/6`.
+
+The phase difference is
+
+`6(theta_(tau sigma))=2pi+6delta_(tau sigma)`
+
+modulo `2pi`. Since `0<=6delta<=pi`, the geodesic angular distance on `S^1` is exactly
+
+### Lemma PCA1 - phase edge length
+
+`d_S1(z_tau,z_sigma)=6 delta_(tau sigma)`.              (2.1)
+
+Therefore, if `Gamma` is the full train-crossing graph and
+
+`W=sum_(tau sigma in E(Gamma)) d_S1(z_tau,z_sigma)`,
+
+then
+
+`W=6 sum_F(theta_F-pi/3)=O(D)`.                         (2.2)
+
+Write a finite bound as
+
+`W<=C_phase D`                                          (2.3)
+
+for the canonical pure-rhombic sequence, where `C_phase` is an absolute constant supplied by the established angular-defect theorem.
+
+## 3. Randomly shifted phase bins
+
+Fix a desired phase diameter
+
+`0<eta<=pi`.
+
+Choose an integer
+
+`m=ceil(2pi/eta)`
+
+and put
+
+`h=2pi/m`.
+
+Then
+
+`eta/2<=h<=eta`.                                        (3.1)
+
+For a shift `s` chosen uniformly in `[0,h)`, partition the phase circle into the `m` half-open arcs
+
+`I_r(s)=[s+rh,s+(r+1)h)` mod `2pi`.
+
+Delete every crossing edge of `Gamma` whose two endpoint phases lie in different bins. Call the deleted edge/rhombus set `F_s`.
+
+For one crossing edge of phase distance `d`, the probability that a bin boundary separates its endpoints is at most
+
+`min(1,d/h)<=d/h`.
+
+Hence
+
+`E_s |F_s| <= W/h <=2W/eta`.                            (3.2)
+
+Therefore some shift satisfies:
+
+### Theorem PCA2 - boundary-order fixed-coherence cut
+
+`boxed{|F_s| <= 2W/eta <= (2C_phase/eta)D.}`            (3.3)
+
+This is an `O_eta(D)` physical-rhombus deletion bound.
+
+## 4. Every surviving train component is three-phase coherent
+
+Let
+
+`H_1,...,H_q`
+
+be the connected components of `Gamma-F_s` that contain at least one retained crossing edge.
+
+No retained edge joins two different phase bins. Therefore every graph component lies entirely in one bin `I_r(s)`, and its sixfold phase diameter is at most `h<=eta`.
+
+Fix one reference lift `phi_0` of the center of that bin. The equation
+
+`exp(6i phi)=z`
+
+has exactly three projective solutions modulo `pi`, separated by `pi/3`. Thus every train of `H_j` belongs uniquely, for `eta<pi`, to one of three projective direction cones centered at
+
+`phi_0`, `phi_0+pi/3`, `phi_0+2pi/3`
+
+with angular radius at most `eta/12` and total cone diameter at most `eta/6`.
+
+Hence:
+
+### Corollary PCA3 - fixed-coherence physical grains
+
+After deleting only `O_eta(D)` rhombi, the full train system decomposes into physical train-crossing components, each supported on three triangular projective phase classes of angular diameter at most `eta/6`.
+
+No minimum-degree hypothesis is used.
+
+Together with MG3-MG4, these components satisfy the exact interface bound
+
+`sum_j P_j<=2T+O_eta(D)`                                (4.1)
+
+and
+
+`sum_j sqrt(R_j)=O_eta(D)`.                             (4.2)
+
+Here `R_j` is the retained rhombus count in component `H_j`.
+
+## 5. Small train components carry little crossing mass in aggregate
+
+Assume the canonical linear train bound
+
+`T<=C_T D`.                                             (5.1)
+
+Let `v_j=|V(H_j)|` and `e_j=|E(H_j)|`.
+
+The train-crossing graph is triangle-free, so Mantel gives
+
+`e_j<=v_j^2/4`.                                         (5.2)
+
+Fix `rho>0`. For components with
+
+`v_j<rho D`,
+
+we have
+
+`e_j<= (rho D/4)v_j`.
+
+Summing and using `sum_j v_j<=T`,
+
+### Lemma PCA4 - small-grain crossing budget
+
+`boxed{
+ sum_(v_j<rho D) e_j <= (C_T rho/4)D^2.
+}`                                                       (5.3)
+
+Thus, after choosing `rho` small, all but an arbitrarily small fixed fraction of the quadratic rhombus population lies in components with `Omega_rho(D)` trains, except for any crossing mass separately discarded in the next sparse-density step.
+
+There are at most
+
+`C_T/rho`                                               (5.4)
+
+such train-macroscopic components.
+
+## 6. Sparse macroscopic components also carry controllably little mass
+
+Fix `kappa>0`. Among the train-macroscopic components, call `H_j` sparse when
+
+`e_j<kappa v_j D`.                                      (6.1)
+
+Then
+
+`sum_(sparse) e_j < kappa D sum_j v_j <=kappa C_TD^2`.
+
+### Lemma PCA5 - sparse-grain crossing budget
+
+`boxed{
+ sum_(sparse) e_j <= kappa C_TD^2.
+}`                                                       (6.2)
+
+Therefore, apart from
+
+`O_eta(D)+(C_T rho/4+kappa C_T)D^2`                    (6.3)
+
+crossings, the rhombus population lies in at most `C_T/rho` coherent components satisfying simultaneously
+
+`v_j>=rho D`,
+
+`e_j>=kappa v_jD`.                                      (6.4)
+
+These are the **dense macroscopic coarea grains**.
+
+## 7. Every dense coarea grain contains a positive-density phase pair
+
+Let one such grain have its three coherent phase classes of sizes
+
+`M>=b>=a`.
+
+There are only three cross-phase pairs, so one pair carries at least `e_j/3` crossings. Let its shore sizes be `p,q<=v_j`.
+
+Its Cartesian crossing density obeys
+
+`rho_pair=e_pair/(pq)`
+
+`>= (e_j/3)/v_j^2`
+
+`>= kappa D/(3v_j)`
+
+`>= kappa/(3C_T)`.                                      (7.1)
+
+Also each shore has linear size:
+
+`p,q>=e_pair/v_j>=kappa D/3`.                           (7.2)
+
+Thus PDG applies with an **absolute positive density depending only on `kappa,C_T`**, and extracts a complete grid with both shores `Omega_(kappa,C_T)(D)`.
+
+This reaches PC1/PC3 without ever imposing a retained minimum degree.
+
+## 8. What this fixes in the previous endpoint
+
+The old Section-50 route needed a fixed minimum degree `lambda D` to make a coherent component have bounded graph diameter. Achieving that by iterative pruning cost up to `C_T lambda D^2` physical crossings, which prevented the multigrain perimeter/interface theorem from seeing the true boundary scale.
+
+PCA2 replaces that step for **phase coherence**:
+
+- deleted physical crossings: `O_eta(D)`, not `Theta(D^2)`;
+- every retained component is already three-phase coherent;
+- crossing mass in tiny/sparse components can be discarded analytically, without pretending those physical rhombi are part of the interface cut;
+- every remaining dense macroscopic component contains a positive-density complete phase grid by PDG.
+
+The physical grain decomposition itself still uses only the `O_eta(D)` coarea cut, so MG3-MG4 retain their boundary-order strength.
+
+## 9. What remains
+
+This still does not close the multi-grain problem.
+
+Density-only PDG can extract grids whose two shores remain below PC3's direct `2D/sqrt(3)` phase-cancellation threshold. Several dense coarea grains can share the global quadratic rhombus population, and the current global diameter bound does not apply separately to each grain.
+
+The remaining quantitative target is now cleaner than the Section-50 formulation:
+
+> For the `O_eta(D)`-interface coarea grains, combine the physical interface perimeter MG3-MG4, the positive-density grids from PCA5+PDG, and penetration charging PC3/MCP to rule out several dense macroscopic grains, or force one grain to carry enough of the global rhombus mass for the explicit local phase-gap theorem GPI to apply.
+
+The coarse quadratic low-degree deletion term is no longer intrinsic to this endpoint.
+
+## Handoff
+
+```text
+Sixfold phase has graph total variation
+
+  W=sum_crossing d_S1(z_tau,z_sigma)
+   =6 sum_F(theta_F-pi/3)
+   =O(D).
+
+Randomly shift bins of width <=eta. Some shift cuts at most
+
+  2W/eta=O_eta(D)
+
+physical crossing edges. Every surviving component lies in one sixfold-phase bin, hence in three projective direction cones of width <=eta/6.
+
+No minimum-degree pruning is needed for coherence.
+
+Small train components v<rho D carry at most
+  (C_T rho/4)D^2
+crossings total.
+Sparse macroscopic components e<kappa vD carry at most
+  kappa C_TD^2.
+
+Every remaining dense macroscopic grain has a phase pair of crossing density >=kappa/(3C_T) and both shores >=kappa D/3, so PDG gives a complete Omega(D) grid.
+
+Next: use MG3-MG4 + PC3/MCP on this boundary-order-interface decomposition.
+```

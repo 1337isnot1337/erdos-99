@@ -1,0 +1,122 @@
+# Target C-II — reciprocal `K_6` forces inherit a strict 120-degree turn-gap bound
+
+**Date:** 2026-09-18  
+**Status:** proved candidate; theorem-state authority unchanged  
+**Scope:** the six-point unit-force reciprocal equilibrium forced by a degree-pure minimal one-anchor `K_5` dual block  
+**Depends on:** `target_c_one_anchor_k5_reciprocal_unit_force_2026-09-18.md`; source separation; completeness of the unit-contact graph  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The reciprocal reduction does not merely give five unit force vectors summing to zero at
+each non-ground reciprocal point.  Those five force vectors are the oriented side
+vectors of an actual bounded unit-contact pentagon.  Source separation therefore places
+a strict upper bound on every cyclic angular gap between consecutive reciprocal force
+directions.
+
+For each non-ground reciprocal vertex `y_i`, write
+
+\[
+f_{ij}:={y_i-y_j\over\lambda_{ij}},
+\qquad j\ne i.
+\]
+
+The five vectors `f_ij` have unit length, sum to zero, and, in cyclic angular order,
+are exactly the five oriented side vectors of the physical pentagon `F_i`.
+
+## 1. Every exterior turn is strictly below 120 degrees
+
+Take two consecutive oriented side vectors `u,v` on one physical pentagon.  Let `theta`
+be their exterior turning angle.  Strict convexity gives
+
+\[
+0<\theta<\pi.
+\]
+
+The vector `u+v` joins the two nonconsecutive endpoints across the common pentagon
+vertex.  Those two source points have distance at least one.  Equality is impossible:
+if `|u+v|=1`, that segment is another unit contact lying inside the strict convex face,
+so the complete unit-contact graph would contain a chord subdividing the face.
+Therefore
+
+\[
+|u+v|>1.
+\]
+
+Since `|u|=|v|=1`,
+
+\[
+|u+v|=2\cos(\theta/2),
+\]
+
+and hence
+
+\[
+\boxed{\theta<{2\pi\over3}.}
+\tag{1.1}
+\]
+
+Applying this to the five reciprocal force vectors gives:
+
+\[
+\boxed{
+\text{at every }y_i\ (i=1,\ldots,5),
+\text{ every cyclic gap between consecutive }f_{ij}\text{ is }<120^\circ.
+}
+\tag{1.2}
+\]
+
+This is stronger than the equilibrium statement `sum_j f_ij=0`, which by itself only
+prevents all five directions from lying in one open semicircle.
+
+## 2. Consequence for reciprocal convex-hull angles
+
+Suppose a non-ground reciprocal point `y_i` is a vertex of the convex hull of
+`{y_0,...,y_5}` and let `phi_i` be its hull interior angle.  The raw directions
+
+\[
+{y_i-y_j\over|y_i-y_j|}
+\]
+
+to the other five reciprocal points lie in one closed cone of angular width `phi_i`.
+Multiplying individual directions by the edge signs `sgn(lambda_ij)` either leaves a
+direction in that cone or rotates it by `pi`.  Thus all five force directions lie in
+the union of two opposite cones, each of width `phi_i`.
+
+The two complementary angular gaps between those cones each have width
+
+\[
+\pi-\phi_i.
+\]
+
+No force direction can lie inside those open gaps.  By (1.2) the largest cyclic empty
+gap is strictly below `2pi/3`.  Therefore
+
+\[
+\pi-\phi_i<{2\pi\over3},
+\]
+
+so
+
+\[
+\boxed{\phi_i>{\pi\over3}.}
+\tag{2.1}
+\]
+
+Every non-ground reciprocal hull vertex therefore has interior angle strictly greater
+than 60 degrees.
+
+An immediate combinatorial consequence is that if the reciprocal convex hull is a
+triangle, then the ground point `y_0=0` must be one of its three vertices.  A triangle
+whose three vertices were all among `y_1,...,y_5` would have all three interior angles
+strictly greater than 60 degrees, impossible because they sum to 180 degrees.
+
+This does not yet exclude a reciprocal triangle containing `y_0`, nor reciprocal hulls
+with four, five, or six vertices.  It does remove one full order-type class from the
+finite `K_6` target and supplies a source-derived strict angular inequality for future
+classification or exact computation.
+
+No theorem-state file is changed.
+
+**Disposition:** transferred the source-separation condition on each physical contact
+pentagon to the reciprocal `K_6`, proving a strict `120`-degree maximum force-direction
+gap and the reciprocal hull-angle bound `phi_i>60` degrees at every non-ground hull
+vertex.  C-II remains open.

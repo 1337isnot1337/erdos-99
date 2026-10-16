@@ -1,0 +1,612 @@
+# Target C — exclude the Section-146 Type-II endpoint by outer direction measure
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** proof-only endpoint exclusion; theorem authority unchanged.  
+**Dependencies:** audited-working §§142 and 146, the audited §146 face-rank endpoint-stability algebra for `k,Q-f,b-per(F)`, and canonical Type-II near-disk convergence.
+
+Put
+
+\[
+\Delta_2:={\pi\over2\sqrt3},
+\qquad
+s:=\sqrt{\Delta_2},
+\]
+
+and let
+
+\[
+\boxed{
+C_{146}:={4\over9}(\pi+s)
+=1.8195135379794445\ldots .
+}
+\tag{1}
+\]
+
+Audited-working §146 gives the Type-II lower bound
+
+\[
+\liminf {q-k\over D}\ge C_{146}
+\]
+
+after retaining its defect terms. This note proves that the endpoint itself is not
+attainable:
+
+> **Theorem.** No unbounded canonical Type-II C-II survivor sequence can satisfy
+> \[
+> {q-k\over D}\longrightarrow C_{146}.
+> \tag{2}
+> \]
+
+The mechanism is different from the older exclusion of the obsolete
+`(2/5)(pi+sqrt(Delta_2))` endpoint. At the §146 endpoint, the complete train graph is
+not globally near-Mantel. Instead its **atomic-phase subgraph** is exactly at Mantel
+capacity, while the non-atomic trains saturate the loaded-hull exposure inequality.
+This forces a positive linear number of outer-walk edge occurrences onto only three
+projective train axes. But an occurrence-counted walk of asymptotically minimal length
+around a near disk has a unique limiting edge-direction measure: uniform Lebesgue
+measure on the projective circle. A positive atomic part is impossible.
+
+No source point is deleted and no contact-isolated coordinate enters the Section-57
+core rigidity theorem.
+
+---
+
+## 1. Scalar endpoint consequences
+
+Write
+
+\[
+t_D:={q-k\over D}.
+\]
+
+Assume (2). The audited §146 endpoint-stability algebra gives
+
+\[
+\boxed{{k\over D}\to0,}
+\tag{3}
+\]
+
+\[
+\boxed{{Q-f\over D}\to0,}
+\tag{4}
+\]
+
+and
+
+\[
+\boxed{{b-\operatorname{per}(F)\over D}\to0.}
+\tag{5}
+\]
+
+Since Type II has
+
+\[
+{\operatorname{per}(F)\over D}\to\pi,
+\]
+
+(5) gives
+
+\[
+\boxed{{b\over D}\to\pi.}
+\tag{6}
+\]
+
+Also `q/D=t_D+k/D`, hence
+
+\[
+\boxed{{q\over D}\to C_{146}.}
+\tag{7}
+\]
+
+We next recover the exact face and train densities at this endpoint. Audited-working
+§146 gives
+
+\[
+{f\over D}
+\ge s-{1\over4}{h\over D}
++{1\over4}{d_H\over D}
++{1\over2}{s_Z\over D}-o(1).
+\tag{8}
+\]
+
+Because `k=d_H+s_Z=o(D)` and `h-s_Z=q-k`,
+
+\[
+{h\over D}=C_{146}+o(1).
+\]
+
+Thus
+
+\[
+\liminf {f\over D}\ge s-{C_{146}\over4}.
+\tag{9}
+\]
+
+The exact outer ledger gives `Q/D<=2t_D-pi+o(1)`, while `Q-f=o(D)`. Therefore
+
+\[
+\limsup {f\over D}\le2C_{146}-\pi.
+\tag{10}
+\]
+
+The two constants are equal because
+
+\[
+2C_{146}-\pi
+=s-{C_{146}\over4}
+={8s-\pi\over9}.
+\]
+
+Set
+
+\[
+\boxed{
+f_0:={8s-\pi\over9}.}
+\tag{11}
+\]
+
+Then
+
+\[
+\boxed{{f\over D}\to f_0,\qquad {Q\over D}\to f_0.}
+\tag{12}
+\]
+
+The exact stopped-train ledger is
+
+\[
+T=q+2f-k.
+\tag{13}
+\]
+
+Hence
+
+\[
+\boxed{
+{T\over D}\to
+x:=C_{146}+2f_0
+={C_{146}\over2}+2s.
+}
+\tag{14}
+\]
+
+In particular
+
+\[
+\boxed{
+x-{C_{146}\over2}=2s.}
+\tag{15}
+\]
+
+This is exactly the equality value in the pre-elimination phase inequality of §142.
+
+---
+
+## 2. Equality in the §142 atomic/non-atomic split
+
+For the empirical projective train-phase measures, pass to the subsequence used in
+§142. Let `mu` be a weak limit, let
+
+\[
+a:=\text{total atomic mass of }\mu,
+\]
+
+and put
+
+\[
+y:={C_{146}\over x}
+=\lim {q\over T}.
+\]
+
+The two key inequalities proved in §142 are
+
+\[
+\boxed{2s\le xa}
+\tag{16}
+\]
+
+from the quadratic strict-rhombus crossing measure, and
+
+\[
+\boxed{y\le2(1-a)}
+\tag{17}
+\]
+
+from loaded-hull exposure.
+
+Equation (17) gives
+
+\[
+xa\le x-{C_{146}\over2}.
+\]
+
+By (15), the right side is exactly `2s`. Thus (16)–(17) are both equalities:
+
+\[
+\boxed{xa=2s,}
+\tag{18}
+\]
+
+\[
+\boxed{x(1-a)={C_{146}\over2}.}
+\tag{19}
+\]
+
+So the endpoint has exactly
+
+\[
+(2s+o(1))D
+\]
+
+atomic-phase trains and
+
+\[
+\left({C_{146}\over2}+o(1)\right)D
+\]
+
+non-atomic trains.
+
+---
+
+## 3. Equality forces one three-axis atomic orbit
+
+We record the equality case of the weighted Mantel step inside §142.
+
+On the projective phase circle `R/pi Z`, two limiting train phases can support a
+positive strict-rhombus crossing density only when their projective separation is
+`pi/3`. The relation `phi -> phi+pi/3` has order three. Hence the phase-relation graph
+decomposes into disjoint three-point orbits
+
+\[
+\{\alpha,\alpha+\pi/3,\alpha+2\pi/3\}.
+\tag{20}
+\]
+
+Let `m_j` be the total atomic phase mass in one such orbit. The finite train-crossing
+graph is triangle-free. On one three-point orbit, weighted Mantel gives crossing mass
+at most `m_j^2/4`. Summing over the disjoint orbits gives total atomic crossing mass at
+most
+
+\[
+{1\over4}\sum_jm_j^2
+\le {1\over4}\left(\sum_jm_j\right)^2
+={a^2\over4}.
+\tag{21}
+\]
+
+At the present endpoint the normalized rhombus crossing density is
+
+\[
+{\Delta_2\over x^2}
+={s^2\over x^2}
+={a^2\over4}
+\tag{22}
+\]
+
+by (18). Thus equality holds throughout (21).
+
+Equality in
+
+\[
+\sum_jm_j^2\le\left(\sum_jm_j\right)^2
+\]
+
+forces all atomic mass into a single three-point orbit. Therefore there is an angle
+`alpha` such that every atom of the limiting train-phase measure lies in
+
+\[
+\boxed{
+\mathcal A
+:=\{\alpha,\alpha+\pi/3,\alpha+2\pi/3\}
+\pmod\pi.
+}
+\tag{23}
+\]
+
+Equivalently, after choosing a slowly shrinking radius `eta_D ->0`, all but `o(D)` of
+the atomic-phase trains have projective contact direction within `eta_D` of
+`mathcal A`.
+
+This is the atomic-subgraph analogue of the three-axis collapse in the older global
+near-Mantel endpoint theorem.
+
+---
+
+## 4. Loaded-hull exposure equality uses all non-atomic outer capacity
+
+The proof of §142's inequality (17) is quantitative enough to retain its equality
+case.
+
+Fix a large route-length cutoff `M`, then small disjoint phase neighborhoods of the
+three atoms in `mathcal A`. The §142 hull-exposure proof has two exceptional classes of
+loaded-hull intervals:
+
+1. intervals whose distinguished outer route has more than `M` edge occurrences;
+   there are at most `2T/(M+1)` of these; and
+2. short intervals all of whose train occurrences lie in the chosen atomic
+   neighborhoods; near-disk perimeter-direction convergence bounds these by
+   `O_M(eta D)+o_eta(D)`.
+
+Every remaining loaded-hull interval contains an outer-face occurrence from a train
+outside the atomic neighborhoods. The loaded-hull intervals are disjoint in the
+occurrence-counted outer walk, so these are distinct outer occurrences.
+
+First take `D->infinity`, then `eta->0`, then `M->infinity`, and diagonalize. Using
+(19), one obtains shrinking neighborhoods `U_D` of `mathcal A` for which
+
+\[
+\boxed{
+N_{out}^{nonatom}
+\ge q-o(D)
+=(C_{146}-o(1))D,
+}
+\tag{24}
+\]
+
+where `N_out^nonatom` counts outer-walk edge occurrences whose complete train phase
+lies outside `U_D`.
+
+On the other hand there are only
+
+\[
+\left({C_{146}\over2}+o(1)\right)D
+\]
+
+trains outside `U_D`, and every complete train has at most two outer terminal
+occurrences. Therefore
+
+\[
+\boxed{
+N_{out}^{nonatom}
+=q+o(D).
+}
+\tag{25}
+\]
+
+Thus the non-atomic train population uses asymptotically **all** of its two-end outer
+capacity. There is no linear non-atomic endpoint budget left for the defect faces.
+
+Since the total outer-walk length satisfies `b=(pi+o(1))D`, equations (6) and (25)
+give
+
+\[
+\boxed{
+N_{out}^{atom}
+:=b-N_{out}^{nonatom}
+=(\pi-C_{146})D+o(D).
+}
+\tag{26}
+\]
+
+The coefficient is strictly positive:
+
+\[
+\pi-C_{146}
+={5\pi-4s\over9}
+=1.322079115610\ldots .
+\tag{27}
+\]
+
+By construction, all but `o(D)` of the occurrences counted in (26) have projective
+edge direction within `eta_D` of the fixed three-axis set `mathcal A`.
+
+So the §146 endpoint forces a positive atomic part in the **outer-walk direction
+measure**.
+
+---
+
+## 5. A perimeter-minimizing near-disk walk has uniform direction measure
+
+We now prove the geometric obstruction in a form stronger than the three-axis special
+case.
+
+For one occurrence-counted outer contact walk, let `phi_e in R/pi Z` be the projective
+direction of each unit edge occurrence and define the normalized direction measure
+
+\[
+\nu_D:={1\over D}\sum_{e\in W_{out}}\delta_{\phi_e}.
+\tag{28}
+\]
+
+Its total mass is
+
+\[
+\nu_D(R/\pi Z)={b\over D}\to\pi.
+\tag{29}
+\]
+
+For a projection direction `theta`, put
+
+\[
+V_D(\theta)
+:=\sum_{e\in W_{out}}|\cos(\theta-\phi_e)|.
+\tag{30}
+\]
+
+This is the total variation of the scalar projection of the closed outer walk. Since
+the convex hull of the outer-walk vertices is exactly `F`,
+
+\[
+\boxed{V_D(\theta)\ge2w_F(\theta)}
+\tag{31}
+\]
+
+for every `theta`, where `w_F(theta)` is the width of `F` in that direction.
+
+Integrating over one projective period and using
+
+\[
+\int_0^\pi|\cos\theta|\,d\theta=2
+\]
+
+and Cauchy's perimeter formula
+
+\[
+\int_0^\pi w_F(\theta)\,d\theta=\operatorname{per}(F),
+\]
+
+we obtain
+
+\[
+\int_0^\pi
+\bigl(V_D(\theta)-2w_F(\theta)\bigr)d\theta
+=2\bigl(b-\operatorname{per}(F)\bigr)
+=o(D).
+\tag{32}
+\]
+
+The integrand is nonnegative. Type-II Hausdorff convergence to a diameter-one disk
+gives, uniformly in `theta`,
+
+\[
+{w_F(\theta)\over D}\to1.
+\tag{33}
+\]
+
+Therefore
+
+\[
+\boxed{{V_D\over D}\to2\quad\text{in }L^1([0,\pi]).}
+\tag{34}
+\]
+
+Pass to a weakly convergent subsequence `nu_D -> nu`. The measures have uniformly
+bounded mass and the kernel
+
+\[
+K(t):=|\cos t|
+\]
+
+is continuous and Lipschitz on the projective circle. Hence
+
+\[
+{V_D(\theta)\over D}
+=(K*\nu_D)(\theta)
+\longrightarrow(K*\nu)(\theta)
+\]
+
+uniformly in `theta`. Comparing with (34),
+
+\[
+\boxed{K*\nu\equiv2.}
+\tag{35}
+\]
+
+### Lemma 5.1 — injectivity of the projective cosine transform
+
+If a finite measure `nu` on `R/pi Z` satisfies `|cos|*nu` constant, then `nu` is a
+constant multiple of Lebesgue measure.
+
+### Proof
+
+On the period-`pi` circle,
+
+\[
+|\cos t|
+={2\over\pi}
++{4\over\pi}
+\sum_{n\ge1}{(-1)^{n+1}\over4n^2-1}\cos(2nt).
+\tag{36}
+\]
+
+Every nonconstant Fourier coefficient in (36) is nonzero. Taking Fourier coefficients
+of `K*nu=constant` therefore gives
+
+\[
+\widehat\nu(n)=0
+\qquad(n\ne0).
+\]
+
+A finite measure on the circle with all nonzero Fourier coefficients zero is a
+constant multiple of Lebesgue measure. `square`
+
+By (29), the total mass of `nu` is `pi`, so the constant is one:
+
+\[
+\boxed{d\nu(\phi)=d\phi.}
+\tag{37}
+\]
+
+In particular `nu` has no atoms.
+
+---
+
+## 6. Contradiction
+
+Equation (26) says that for shrinking neighborhoods of the three fixed axes
+`mathcal A`, the outer direction measure has mass
+
+\[
+\nu_D(U_D)
+\ge\pi-C_{146}-o(1).
+\]
+
+After passing to the same subsequence used above,
+
+\[
+\boxed{
+\nu(\mathcal A)
+\ge\pi-C_{146}>0.
+}
+\tag{38}
+\]
+
+Thus `nu` has a positive atomic part supported on at most three directions.
+
+Equation (37) says that `nu` is Lebesgue measure and has no atoms. Contradiction.
+
+Therefore the assumed endpoint sequence (2) cannot exist. `square`
+
+---
+
+## 7. Consequence and exact scope
+
+The proved statement is qualitative but strict:
+
+\[
+\boxed{
+\text{No Type-II survivor sequence has }
+(q-k)/D\to C_{146}.
+}
+\tag{39}
+\]
+
+Since audited-working §146 gives `liminf (q-k)/D >= C_146`, a standard diagonal
+argument gives a positive separation at the level of possible Type-II subsequential
+limits: hypothetical Type-II families whose limiting values approached `C_146` would
+diagonalize to the forbidden endpoint sequence.
+
+No explicit numerical separation constant is obtained, and no finite inequality of
+the form
+
+\[
+q-k\ge(C_{146}+\epsilon_0)D-C
+\]
+
+is claimed.
+
+This endpoint exclusion does **not** close Type II. Sequences with `(q-k)/D` bounded
+away from `C_146` remain possible, as do the macroscopic inactive-container branches.
+
+---
+
+## 8. Hostile checklist
+
+- **The endpoint is the live §146 endpoint, not the obsolete `1.63756...` floor.**
+- **Atomic versus non-atomic trains:** only the atomic subgraph is Mantel-saturated;
+  the full train graph is not assumed near-Mantel.
+- **Three-axis conclusion:** equality in the atomic weighted-Mantel bound forces all
+  atomic mass into one order-three `pi/3` phase orbit.
+- **Hull-exposure equality:** the proof reuses the actual §142 interval-count argument,
+  not the false implication that every outer edge is non-atomic.
+- **Outer occurrence multiplicity:** `b`, `V_D`, and `nu_D` count physical outer-face
+  occurrences, so bridges and repeated vertices are retained.
+- **Direction-measure uniqueness:** the Fourier argument excludes any positive atomic
+  component, not merely a pure three-axis measure.
+- **Contact-isolated points:** untouched throughout.
+- **Theorem authority:** unchanged; this is proof-only pending independent hostile
+  review.
+
+**Disposition:** proof-only exclusion of the Section-146 scalar endpoint. C-II and
+Level I remain open.

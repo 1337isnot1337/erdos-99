@@ -1,0 +1,52 @@
+# Target C — PSD response-cut frontier
+
+> **Audit update (2026-09-09):** The prior pentagon rejection of C53 mixed
+> incompatible projective cuts and is withdrawn. The promoted
+> [restoration audit](../../reports/target_c_c53_orientation_and_ci_restoration_2026-09-09.md)
+> establishes `M=Lambda-L_H>=0` for the actual selected source response.
+> This restores that premise only; the further quantitative and combinatorial
+> claims below still require their stated hypotheses and separate audits.
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_psd_response_cut_domination_2026-08-31.md](../../reports/target_c_psd_response_cut_domination_2026-08-31.md).
+
+## C64 — the C-II response defect is PSD and strict at linearly many terminals
+
+For the relative-interior fully force-visible KKT stress, let `Lambda` be the positive-contact response on the loaded force-hull boundary `B`, and `L_H` the positive-diameter Laplacian.
+
+C53 descends through the contact Schur complement and gives
+
+`M=Lambda-L_H >= 0`.
+
+Therefore every boundary cut is response-dominated:
+
+`sum_(b in S,k notin S) c_bk >= sum_(b in S,k notin S) beta_bk`.
+
+In particular the response degree `d_b` at each loaded terminal dominates its diameter-load degree `s_b`.
+
+If equality holds at one terminal, `M_bb=0`; PSD then forces the whole row `M_b*=0`. Thus
+
+`c_bk=beta_bk` for every `k`.
+
+A zero-excess terminal has no direct loaded-loaded unit contact, and every harmonic component touching it attaches all other boundary pins at diameter distance from it.
+
+Each harmonic component contains at most one zero-excess terminal: if two zero terminals shared a component, the component's strict response clique and row equality would make three attachments pairwise diametral, contradicting the large-n anti-Reuleaux theorem.
+
+Every zero terminal must be incident to some harmonic component. Such a component has at least three attachments, hence at least two strict-excess attachments. A strict terminal belongs to at most three harmonic attachment sets because its contact degree is at most three. Double counting gives
+
+`2|Z| <= 3|T|`,
+
+so
+
+`|T| >= 2|B|/5 >= (ceil D+2)/5`.
+
+Thus the strict C41 response defect is distributed over `Omega(D)` loaded terminals; it cannot be localized at finitely many boundary exceptions.
+
+## Next target
+
+The remaining issue is magnitude, not support. Convert the linear strict-terminal set into a lower bound on
+
+`sum_b (d_b-s_b) = tr(Lambda-L_H)`
+
+or directly into short-pair response mass. Candidate inputs are the uniform C43 geometric deficit, the C40 total attachment-diameter budget, and the unit-contact mechanical equilibrium that the abstract near-star regression omits.

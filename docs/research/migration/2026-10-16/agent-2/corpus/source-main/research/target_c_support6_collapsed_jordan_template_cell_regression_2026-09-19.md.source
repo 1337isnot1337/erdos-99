@@ -1,0 +1,41 @@
+# Target C-II — coarse Jordan templates do not remove a collapsed rotation cell
+
+**Date:** 2026-09-19  
+**Status:** exact negative regression; theorem-state authority unchanged  
+**Scope:** all 388 labelled collapsed support-six rotation cells from the current angle/order census  
+**Certificate:** `research/verify_target_c_support6_collapsed_jordan_template_cells_2026_09_19.cpp`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current global obstruction schema is a cell-wise test: a simple relation triangle whose three train arcs do not cross, together with two noncrossing spokes leaving opposite sides of that triangle and a noncrossing connector between their other endpoints, is impossible by Jordan separation. The exact coarse-cell test was run on every labelled rotation cell.
+
+The result is negative:
+
+\[
+\begin{array}{c|r|r|r}
+\text{missing matching type}&\text{rotation cells}&\text{cells killed}&\text{survivors}\\ \hline
+\text{all-cross }\{03,14,25\}&180&0&180\\
+\text{mixed }\{01,23,45\}&208&0&208
+\end{array}
+\]
+
+No one of the 388 coarse cells admits this particular Jordan certificate using only the strict angle-order inequalities defining that cell. This is a regression against the tempting but invalid inference that positive ribbon genus or the existence of a triangle in the relation graph automatically supplies a noncrossing separator.
+
+## Exact test
+
+For each cell, every face order is encoded by the existing strict integer difference system. For a pair of relation trains `e,f`, the verifier declares them coarsely noncrossing only when both strict crossing windows
+
+\[
+1<|x_e-x_f|<2
+\]
+
+are infeasible in that entire rational cell. This uses the exact scaled variables `x=3 theta/pi` and the existing Bellman--Ford strict-difference certificate; no floating-point comparison is used.
+
+For every triangle in `K_6` minus the matching, the verifier checks all three triangle trains, both possible side-transport spokes, their opposite cyclic side sectors, and the external connector. Both orientations and every choice of external endpoints are examined. A successful configuration would be exactly the Jordan template used in the certified local-root obstruction, so a positive count would exclude the whole cell. The count is zero in both matching types.
+
+## Interpretation
+
+This result does **not** say that a collapsed cell has a global realization. It does not say that the Jordan method is exhausted: one can use a longer cycle, a separator containing already-forced crossings, or the full crossing-threshold subdivision. It only proves that the simplest noncrossing triangle template cannot be promoted from the two certified local boxes to a coarse all-cell exclusion.
+
+The next task remains metric threshold subdivision. The coarse cell test loses which side of each `|x_e-x_f|=1,2` wall the actual closure point occupies; the mod-2 regression already shows that this information can be decisive. The correct continuation is to retain those crossing-wall choices, apply the mod-2 intersection equations and stronger pseudosegment constraints, and invoke the nonlinear closure equations only on surviving subcells.
+
+**Classification:** exact negative regression, not a theorem-state promotion.

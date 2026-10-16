@@ -1,0 +1,733 @@
+# Target C-II — canonical reflection blockers expose ordered antipodal source-hull caps
+
+**Date:** 2026-09-17  
+**Status:** proof-only strengthening of the current shallow-tooth reflection branch; no canonical promotion claimed  
+**Scope:** Type-II full-core shallow-tooth branch, specialized to the current `eta=3/26` slow-scale central braid  
+**Dependencies:** reflection/perimeter collapse; source diameter bound; slow-scale central reflection braid  
+**Certificate:** `research/verify_target_c_tooth_reflection_canonical_hull_blocker_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current reflection-braid theorems choose an arbitrary upper blocker for each retained shallow tooth. There is a stronger canonical choice that converts every blocker into an exact source-hull support normal.
+
+For a reflected apex `x^-`, choose a source point `y` maximizing `|y-x^-|`. Since the reflection theorem already supplies some upper blocker at reflected distance greater than `D`, this canonical maximizer satisfies
+
+\[
+L:=|y-x^-|>D.
+\]
+
+It may be chosen as a vertex of the full source hull `K=conv(A)`. If
+
+\[
+N:={y-x^-\over L},
+\]
+
+then `N` is an exact outward support normal of `K` at `y`, and `y` is uniquely exposed by `N`.
+
+For one shallow tooth write
+
+\[
+a=p-ct,\qquad b=p+ct,\qquad x=p+hn,\qquad x^-=p-hn,
+\]
+
+with
+
+\[
+|t|=|n|=1,\qquad t\perp n,
+\qquad c=\cos\alpha,\qquad h=\sin\alpha,
+\qquad 0<\alpha<\pi/6.
+\]
+
+Let `theta` be the acute angle between the canonical support normal `N` and the tooth inward normal `n`. The two loaded base endpoints alone force
+
+\[
+\boxed{
+0\le D-W_K(N)
+< L-W_K(N)
+\le \sin(\alpha-\theta),
+\qquad 0\le\theta<\alpha.
+}
+\tag{CH.1}
+\]
+
+Thus an upper reflection obstruction canonically produces a full-source width direction that is within a fixed subunit amount of the actual diameter.
+
+The same calculation traps the entire tooth in the opposite support cap. Relative to the support line opposite `y`, the reflected point `x^-` lies strictly outside `K`, while
+
+\[
+\boxed{
+0\le\operatorname{depth}_N(x)<2h
+}
+\tag{CH.2}
+\]
+
+and
+
+\[
+\boxed{
+0\le\operatorname{depth}_N(a),\operatorname{depth}_N(b)
+<\sin(2\alpha).
+}
+\tag{CH.3}
+\]
+
+At the current slow-scale threshold
+
+\[
+\eta_*={3\over26},
+\qquad
+\cos\alpha_*={49\over52},
+\qquad
+\sin\alpha_*={\sqrt{303}\over52},
+\]
+
+these become
+
+\[
+\boxed{
+D-W_K(N)<{\sqrt{303}\over52}=0.3347479843\ldots,
+}
+\tag{CH.4}
+\]
+
+\[
+\boxed{
+\operatorname{depth}_N(x)<{\sqrt{303}\over26}
+=0.6694959686\ldots<1,
+}
+\tag{CH.5}
+\]
+
+and
+
+\[
+\boxed{
+\operatorname{depth}_N(a),\operatorname{depth}_N(b)
+<{49\sqrt{303}\over1352}
+=0.6308712013\ldots<1.
+}
+\tag{CH.6}
+\]
+
+This canonical choice propagates through the current slow-scale central reflection braid without any density loss. For every
+
+\[
+\kappa_D\to\infty,
+\qquad
+\kappa_D=o(D^{1/4}),
+\]
+
+there is a family of more than
+
+\[
+\boxed{
+(0.129220199818177\ldots-o(1))
+{D^{1/4}\over\kappa_D}
+}
+\tag{CH.7}
+
+pairwise vertex-disjoint, pairwise properly crossing reflection blockers such that:
+
+- every blocker head is an exposed full-source hull vertex;
+- every reflected blocker ray is the exact outward hull normal at that head;
+- all mutual blocker crossings remain in the same `O(D/kappa_D)=o(D)` central core;
+- the five-point tooth/reflection/penetration gadgets remain pairwise disjoint;
+- every opposite tooth triple `{a_i,b_i,x_i}` lies in the subunit support cap given by (CH.5)--(CH.6).
+
+The canonical hull normals also inherit the selected base-normal order. Their consecutive separation is
+
+\[
+\boxed{
+(2-o(1))\kappa_DD^{-1/4},
+}
+\tag{CH.8}
+
+and their total angular span is bounded below independently of `kappa_D`:
+
+\[
+\boxed{
+\operatorname{span}\{N_i\}
+>
+0.258440399636354\ldots-o(1)
+\text{ radians},
+}
+\tag{CH.9}
+
+about `14.8075` degrees. Because each `N_i` uniquely exposes its blocker head, the blocker heads occur on `partial K` in exactly the same cyclic order as the selected loaded-base normals.
+
+The reflection survivor is therefore no longer an arbitrary family of `D-O(1)` inactive chords. It contains a near-quarter-power crossing braid of exact source-hull normal braces: one exposed hull vertex on one side, one disjoint shallow tooth trapped in a subunit antipodal cap on the other side, with both ends ordered over a fixed normal arc and all brace crossings confined to an `o(D)` central core.
+
+---
+
+## 1. Farthest reflected blockers are exposed hull vertices
+
+Fix one shallow tooth and put
+
+\[
+q:=x^-=p-hn.
+\]
+
+The reflection/perimeter theorem supplies at least one source point `z` with
+
+\[
+|z-q|>D.
+\tag{CH.10}
+\]
+
+Consider the convex function
+
+\[
+f(w)=|w-q|^2
+\]
+
+on the compact polygon
+
+\[
+K=\operatorname{conv}(A).
+\]
+
+A maximum of a convex function on a finite polygon is attained at a vertex. Every vertex of `K` is a source point. Choose a hull vertex `y` satisfying
+
+\[
+L:=|y-q|
+=\max_{w\in K}|w-q|
+=\max_{z\in A}|z-q|.
+\tag{CH.11}
+\]
+
+Equation (CH.10) gives
+
+\[
+\boxed{L>D.}
+\tag{CH.12}
+\]
+
+Put
+
+\[
+N={y-q\over L}.
+\tag{CH.13}
+\]
+
+For any `z in K`, maximality gives `|z-q|<=L`. Expanding around `y`,
+
+\[
+|z-q|^2
+=L^2+2L\,N\cdot(z-y)+|z-y|^2.
+\]
+
+Hence
+
+\[
+\boxed{
+N\cdot(z-y)
+\le-{ |z-y|^2\over2L}
+\le0.
+}
+\tag{CH.14}
+\]
+
+The inequality is strict for every `z!=y`. Thus the line through `y` perpendicular to `N` supports `K`, `N` is an outward support normal, and `y` is the unique point of `K` on that support line.
+
+This is stronger than merely replacing an arbitrary blocker by a hull vertex: the reflected blocker ray itself is an exact exposing normal.
+
+---
+
+## 2. The reflected point lies beyond the opposite support line
+
+Write
+
+\[
+H:=h_K(N)=N\cdot y,
+\qquad
+m:=\min_{z\in K}N\cdot z,
+\qquad
+W:=H-m=W_K(N).
+\tag{CH.15}
+\]
+
+Since `diam(K)<=D`,
+
+\[
+W\le D.
+\tag{CH.16}
+\]
+
+Because `q=y-LN`,
+
+\[
+N\cdot q=H-L.
+\]
+
+Using `L>D>=W`,
+
+\[
+H-L<H-W=m.
+\]
+
+Therefore
+
+\[
+\boxed{N\cdot x^-<m.}
+\tag{CH.17}
+\]
+
+The reflected apex is strictly outside `K` beyond the support line opposite the exposed blocker head.
+
+The base midpoint `p`, the loaded endpoints `a,b`, and the original apex `x` all belong to `K`: `a,b,x` are source points and `p=(a+b)/2`. Thus the short reflection segment from `x^-` toward the original tooth actually enters the opposite support cap of the full source hull.
+
+---
+
+## 3. Base feasibility forces the exact support-normal cone
+
+Choose the sign of `t` so that
+
+\[
+N\cdot t\ge0.
+\]
+
+Write
+
+\[
+N\cdot n=\cos\theta,
+\qquad
+N\cdot t=\sin\theta.
+\tag{CH.18}
+\]
+
+Define the opposite-cap depth of the base midpoint
+
+\[
+s_p:=N\cdot p-m.
+\tag{CH.19}
+\]
+
+Since
+
+\[
+y=q+LN=p-hn+LN,
+\]
+
+we have
+
+\[
+H=N\cdot p-hN\cdot n+L,
+\]
+
+so
+
+\[
+\boxed{
+s_p=W-L+h\cos\theta.
+}
+\tag{CH.20}
+\]
+
+The base endpoints have depths
+
+\[
+N\cdot a-m=s_p-c\sin\theta,
+\qquad
+N\cdot b-m=s_p+c\sin\theta.
+\]
+
+Both are nonnegative because `a,b in K`. Hence
+
+\[
+\boxed{s_p\ge c\sin\theta.}
+\tag{CH.21}
+\]
+
+But `W<L`, so (CH.20) also gives
+
+\[
+s_p<h\cos\theta.
+\tag{CH.22}
+\]
+
+In particular `cos(theta)>0`. Combining (CH.20)--(CH.22),
+
+\[
+0<L-W
+\le h\cos\theta-c\sin\theta.
+\tag{CH.23}
+\]
+
+Since `h=sin(alpha)` and `c=cos(alpha)`,
+
+\[
+h\cos\theta-c\sin\theta
+=\sin(\alpha-\theta).
+\tag{CH.24}
+\]
+
+The left side is positive, so
+
+\[
+\boxed{0\le\theta<\alpha.}
+\tag{CH.25}
+\]
+
+Finally `L>D` implies
+
+\[
+0\le D-W<L-W.
+\]
+
+Equations (CH.23)--(CH.25) prove (CH.1).
+
+This recovers the normal-alignment part of the reflection theorem from full-source support geometry alone, and also supplies the width-deficit term that the earlier local coordinate proof did not record.
+
+---
+
+## 4. The tooth occupies a subunit cap opposite the blocker head
+
+The apex depth is
+
+\[
+\begin{aligned}
+s_x
+&:=N\cdot x-m\\
+&=N\cdot(p+hn)-m\\
+&=s_p+h\cos\theta.
+\end{aligned}
+\]
+
+Using (CH.22),
+
+\[
+\boxed{
+0\le s_x<2h\cos\theta\le2h.
+}
+\tag{CH.26}
+\]
+
+For the two base endpoints, the larger depth is
+
+\[
+s_p+c\sin\theta.
+\]
+
+Again by (CH.22),
+
+\[
+s_p+c\sin\theta
+<h\cos\theta+c\sin\theta
+=\sin(\alpha+\theta).
+\]
+
+Since `theta<alpha<pi/6`,
+
+\[
+\boxed{
+\max\{\operatorname{depth}_N(a),
+       \operatorname{depth}_N(b)\}
+<\sin(2\alpha).
+}
+\tag{CH.27}
+\]
+
+The reflected point itself has signed depth
+
+\[
+N\cdot x^- -m
+=H-L-m
+=W-L<0.
+\tag{CH.28}
+\]
+
+Thus the reflection crosses the actual opposite support line:
+
+```text
+x^- : strictly outside K beyond the opposite support line;
+a,b  : inside a cap of depth < sin(2 alpha);
+x    : inside a cap of depth < 2 sin(alpha).
+```
+
+No near-disk asymptotic is used here.
+
+---
+
+## 5. Exact specialization to `eta=3/26`
+
+For an `eta`-shallow unit tooth,
+
+\[
+2c\ge2-\eta,
+\qquad
+c\ge1-{\eta\over2}.
+\]
+
+At
+
+\[
+\eta_*={3\over26},
+\]
+
+we have
+
+\[
+\boxed{
+c\ge {49\over52},
+\qquad
+h\le {\sqrt{303}\over52},
+\qquad
+2h\le {\sqrt{303}\over26}.
+}
+\tag{CH.29}
+\]
+
+The current slow-scale braid uses exactly this threshold, and
+
+\[
+{303\over676}<1.
+\]
+
+From (CH.1),
+
+\[
+D-W_K(N)
+<\sin(\alpha-\theta)
+\le\sin\alpha=h
+\le{\sqrt{303}\over52},
+\]
+
+which proves (CH.4).
+
+Equation (CH.26) gives
+
+\[
+\operatorname{depth}_N(x)
+<2h
+\le{\sqrt{303}\over26}
+=0.669495968674200\ldots<1,
+\]
+
+which is (CH.5).
+
+For the loaded base endpoints,
+
+\[
+\sin(2\alpha)
+=2hc
+\]
+
+is increasing over the current interval `0<alpha<=alpha_*<pi/6`, so
+
+\[
+\sin(2\alpha)
+\le2{\sqrt{303}\over52}{49\over52}
+={49\sqrt{303}\over1352}
+=0.630871201250689\ldots<1.
+\]
+
+This proves (CH.6).
+
+Thus the complete three-point tooth lies in a strict subunit cap opposite the canonical blocker head, and the associated width deficit is below `0.335`.
+
+---
+
+## 6. The canonical hull brace remains a valid fixed-slack blocker
+
+The original and reflected apexes satisfy
+
+\[
+|x-x^-|=2h
+\le C_*:={\sqrt{303}\over26}<1.
+\]
+
+Therefore
+
+\[
+|y-x|
+\ge|y-x^-|-|x-x^-|
+>L-C_*
+>D-C_*.
+\tag{CH.30}
+\]
+
+So the canonical farthest blocker lies in exactly the same fixed-slack graph used by the current slow-scale braid theorem.
+
+Let
+
+\[
+d={y-x\over|y-x|}
+\]
+
+be the original blocker direction. The vectors `y-x` and `y-x^-` differ by `x^--x`, whose norm is at most `C_*`. Since both vector lengths exceed `D-C_*`, the standard normalized-vector estimate gives
+
+\[
+\left|d-N\right|
+\le {2C_*\over D-C_*}.
+\tag{CH.31}
+\]
+
+Hence
+
+\[
+\boxed{
+\angle(d,N)
+\le2\arcsin\left({C_*\over D-C_*}\right)
+=O(D^{-1}).
+}
+\tag{CH.32}
+\]
+
+This is negligible compared with the `kappa_DD^-1/4` normal spacing in the slow-scale braid.
+
+---
+
+## 7. Re-run the slow-scale central braid with canonical blockers
+
+The slow-scale theorem first selects flat shallow teeth by their inward base normals, using bins of width
+
+\[
+w_D=\kappa_DD^{-1/4},
+\qquad
+\kappa_D\to\infty,
+\qquad
+\kappa_D=o(D^{1/4}).
+\]
+
+Only after the tooth selection does it choose one upper blocker per selected tooth. At that choice point choose the canonical farthest blocker from Section 1.
+
+Every downstream hypothesis remains valid:
+
+- (CH.30) gives the same `D-C_*` fixed-slack bound;
+- the fixed-slack midpoint and star estimates apply unchanged;
+- the blocker/base-normal error remains `O(D^-1/4)`;
+- the selected normal spacing dominates that error by the factor `kappa_D`;
+- shared blocker endpoints are still impossible;
+- all supporting-line intersections remain in the common `O(D/kappa_D)` central disk;
+- the five-point tooth/reflection/penetration gadgets remain pairwise disjoint.
+
+Thus the slow-scale count and central-core conclusion are unchanged, proving (CH.7).
+
+Let `n_i` be the selected inward base normals and `N_i` the canonical hull support normals. The current braid theorem gives
+
+\[
+\angle(d_i,n_i)=O(D^{-1/4}),
+\]
+
+and (CH.32) gives
+
+\[
+\angle(N_i,d_i)=O(D^{-1}).
+\]
+
+Therefore
+
+\[
+\boxed{
+\angle(N_i,n_i)=O(D^{-1/4})=o(w_D).
+}
+\tag{CH.33}
+\]
+
+Consecutive selected base normals are separated by at least
+
+\[
+2w_D=2\kappa_DD^{-1/4}.
+\]
+
+Consequently the canonical support normals satisfy
+
+\[
+\boxed{
+\angle(N_i,N_{i+1})
+\ge(2-o(1))\kappa_DD^{-1/4},
+}
+\tag{CH.34}
+\]
+
+which is (CH.8).
+
+---
+
+## 8. The exposed blocker heads preserve the loaded-base cyclic order
+
+All selected base normals lie in one quadrant. Equation (CH.33), together with the diverging spacing factor `kappa_D`, implies that the canonical support normals have exactly the same strict angular order for all sufficiently large `D`.
+
+For a convex polygon, the interiors of its vertex normal cones occur in the same cyclic order as the vertices. Equation (CH.14) says `N_i` uniquely exposes `y_i`, so `N_i` belongs to the interior of the normal cone at `y_i`. Hence increasing support-normal angle is equivalent to moving through the `y_i` in their cyclic order along `partial K`.
+
+Thus
+
+\[
+\boxed{
+\text{the exposed blocker heads }y_i
+\text{ have the same cyclic index order as the selected loaded-base normals.}
+}
+\tag{CH.35}
+
+The slow-scale theorem gives
+
+\[
+M_D>
+(\rho_*-o(1)){D^{1/4}\over\kappa_D},
+\qquad
+\rho_*=0.129220199818177\ldots .
+\tag{CH.36}
+\]
+
+The selected base-normal span is therefore at least
+
+\[
+(M_D-1)2\kappa_DD^{-1/4}
+>
+2\rho_*-o(1).
+\]
+
+The first and last canonical support normals differ from the corresponding base normals by only `O(D^-1/4)=o(1)`, so
+
+\[
+\boxed{
+\operatorname{span}\{N_i\}
+>
+2\rho_*-o(1)
+=
+0.258440399636354\ldots-o(1)
+\text{ radians}.
+}
+\tag{CH.37}
+
+This is (CH.9). Numerically the limiting floor is
+
+\[
+14.8075441548\ldots\text{ degrees}.
+\]
+
+The support-head arc therefore does not collapse even though the individual normal spacing tends to zero.
+
+---
+
+## 9. Resulting canonical central-braid normal form
+
+For any chosen slow scale `kappa_D`, the reflection survivor now contains
+
+\[
+(0.129220199818177\ldots-o(1)){D^{1/4}\over\kappa_D}
+\]
+
+pairwise-disjoint five-point gadgets with all of the following simultaneous structure:
+
+1. the loaded bases are pairwise nonadjacent loaded-hull sides and have one strict cyclic normal order;
+2. the inactive blocker chords have length `D-O(1)`, cross pairwise properly, and all mutual crossings lie in one `O(D/kappa_D)=o(D)` central core;
+3. each blocker head is an exposed vertex of the full source hull;
+4. the reflected blocker ray is the exact outward support normal at that head;
+5. the exposed blocker heads occur in the same cyclic order as the loaded-base normals;
+6. the canonical support-normal family spans at least `0.25844-o(1)` radians;
+7. every canonical width satisfies
+   \[
+   D-W_K(N_i)<0.334748;
+   \]
+8. each loaded base lies in a `<0.630872`-deep cap at the support line opposite its blocker head;
+9. each shallow apex lies in the same opposite cap at depth `<0.669496`, while its reflected competitor lies strictly outside that support line;
+10. the original blocker direction differs from the exact hull support normal by only `O(D^-1)`.
+
+This removes the arbitrary blocker-head placement from the central reflection braid. The live escape is now a source-hull object: an ordered fixed-angle arc of exposed hull normals, each paired with a disjoint shallow tooth in a strict subunit antipodal cap, while the resulting almost-diametral braces form a near-quarter-power crossing braid through one sublinear central core.
+
+The next closure target is correspondingly narrower. A useful theorem must couple the ordered antipodal caps, not merely the blocker chords. Two plausible routes are now concrete:
+
+- prove that the required disjoint two-edge tooth/penetration gadgets cannot occupy all of these subunit opposite caps while their exposing normals sweep a fixed `>0.2584` radian arc; or
+- use the exact support-normal rays to combine several discrete apex reflections with compensating inward motions at the exposed blocker heads, while preserving the loaded contacts and decreasing the active diameter system.
+
+**Disposition:** replaced arbitrary slow-scale reflection blockers by canonical farthest hull blockers, proved an exact width-deficit law and strict subunit antipodal-cap localization, and propagated the canonical choice through the full `D^(1/4-o(1))` central crossing braid without density loss. C-II and Level I remain open.

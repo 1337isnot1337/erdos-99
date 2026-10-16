@@ -1,0 +1,150 @@
+<!-- theorem-state: {"artifact_id":"ART-D935ABC08835","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: zero-state closure certificates for finite owner moves
+
+Date: 2026-10-05. Base main: `0351c2c3aecd34c0427d0ad081afae563468d401`.
+State: `2026-10-05.audit.61`.
+Classification: **proved candidate synthesis awaiting independent audit**;
+artifact lifecycle **unreviewed**. This uses elementary Horn closure;
+no novelty is claimed for the Boolean theorem. C-II and Level I remain open.
+
+## 1. Exact implication
+
+```
+canonical finite disjoint-owner move and a pinned shortening state
+-> its all-zero-valid pair formula has implication/negative-clause form
+-> close the pinned-true owners under directed implications
+-> either explicit admissible shortening assignment, or a path to a
+   forbidden owner / two paths to a forbidden simultaneous pair
+-> source-level failure has a directed path or fork certificate,
+   not merely an owner cycle.
+```
+
+The only canonical Boolean input is C-DISJOINT-SWAP-2SAT, Sections 1--4
+of the promoted simultaneous-swap report and audit.60's Section 4.
+For actual sufficiently small O--O motions, audit.61 additionally
+localizes the lower clauses to outer-face pairs and unary rhombus tests.
+Neither input supplies a move family or excludes every failure certificate.
+
+## 2. The exact zero-state form
+
+In canonical finite compilation, the all-zero assignment is the original
+source and is admissible. Thus no source pair can forbid local state 00.
+After omitting tautologies and repeated clauses, every clause is one of
+
+    x_i -> x_j,
+    not(x_i and x_j),
+    not x_i.
+
+The first forbids 10 or, with reversed labels, 01. The second forbids 11.
+A unary clause can only forbid 1. Distinct-owner clauses have i!=j;
+a repeated-variable negative clause is folded into the unary list.
+There is no positive-positive clause demanding selection of an owner.
+This form holds for arbitrary prescribed translations satisfying the
+canonical disjoint-owner/contact-preservation hypotheses; equal
+translations are not needed.
+
+Write Q for the directed implication graph, Z for the unary-forbidden
+owners, and F for the unordered forbidden simultaneous pairs. For pinned
+true owners P and pinned false owners N, let C(P) be the forward reachable
+closure of P in Q, including P.
+
+## 3. Pinned closure theorem
+
+The pinned formula has a model exactly when
+
+    C(P) intersects (Z union N) trivially,
+    no pair in F has both endpoints in C(P).           (3.1)
+
+When (3.1) holds, setting exactly C(P) true and all other owners false is
+an explicit model.
+
+**Proof.** Every model containing P contains its reachable closure, so
+both conditions are necessary. Conversely that closure is closed under
+every implication. Its complement can be false: negative clauses impose
+no requirement to add further true owners. The two conditions enforce
+all unary and pair exclusions, and the pins are respected. QED.
+
+A failed pin therefore has one of two concrete certificates:
+
+1. a directed path from a member of P to Z or N;
+2. a forbidden pair uv, and directed paths from members of P to u and v.
+
+Paths can be chosen simple, each of length at most k-1. The two origins
+can coincide, producing a fork, or differ for a two-owner pinned state.
+Cycles can occur in Q but are not necessary in either certificate.
+
+Each locally shortening diameter state has at least one pinned true
+owner because state 00 is unchanged. It has at most two pinned owners,
+with a possible false pin in state 10 or 01. Thus (3.1) decides every
+canonical pinned shortening test exactly. If it passes, the explicitly
+constructed closure assignment is a full-source competitor by the
+canonical 2-SAT compilation and normalization consequence.
+
+## 4. Sink classes and what cycles do not prove
+
+Contract the directed strongly connected components of Q. The unpinned
+formula has a nonzero model exactly when at least one sink component S
+has
+
+    S intersects Z trivially,
+    no pair in F lies entirely in S.                 (4.1)
+
+**Proof.** Such a sink is implication-closed, so its indicator is a
+model. Conversely any nonempty true set is closed and contains a global
+sink component reachable from any one of its true components. That sink
+cannot contain a unary prohibition or an internal forbidden pair. QED.
+
+A directed implication cycle by itself is harmless: a three-owner cycle
+has models 000 and 111. A cycle of pure simultaneous conflicts is also
+harmless for singleton selection: a conflict triangle has models 000,
+100,010,001. By contrast the acyclic implications 1->2 and 1->3 together
+with the forbidden pair 23 block the pin x_1=1. Hence cycle elimination
+alone is neither necessary nor sufficient for a proposed beneficial pin.
+These are abstract Boolean certificates, not canonical source examples.
+
+If Q is acyclic and Z is empty, there is a singleton sink, so there is
+a nonzero model regardless of F. Turning that fact into a diameter
+contradiction requires proving that this model shortens an old diameter.
+Neutral repair owners can be sinks; they cannot be silently counted as
+beneficial. In general one must test the actual locally shortening
+patterns through Section 3.
+
+## 5. Composition with audit.61 geometry
+
+For an actual small stopped O--O motion satisfying the promoted cloud,
+ownership, isolate-dispatch and rhombus hypotheses, every lower clause
+in the preceding certificates is supported on an actual outer-face pair,
+except the explicit unary rhombus tests. Inactive upper exceptions remain
+in the separately bounded set; old diameter constraints remain explicit.
+If all upper constraints and unary rhombi have been certified harmless,
+the remaining failure is an outer-face directed path to a fixed/forbidden
+owner or an outer-face conflict pair reached by two propagation paths.
+
+This is the exact next geometric target. A source matching becoming an
+owner cycle is not by itself a failed shortening certificate. The binding
+owner-contraction regression is respected: source-path acyclicity does
+not imply owner acyclicity, and neither is assumed here. Actual ownership
+may identify distant source vertices, so a directed owner path is not
+asserted to be a contiguous source path or a boundary interval.
+
+No promoted return quota, midpoint bound or residual-cage coordinate
+claim cited here excludes all these outer-face path/fork certificates.
+No full-core or container branch is closed. The repeated two-phase
+specialization in Section 5 of the older swap report is unpromoted and
+is not used as a premise.
+
+## 6. Exact verifier
+
+Run `python3 research/verify_target_c_zero_state_horn_closure_2026_10_05.py`.
+It exhaustively checks all 4,131 formulas generated from all possible
+zero-valid nontrivial unary, implication and negative-pair clauses on
+zero through three variables. It compares 110,887 pinned closure tests
+against full truth-table enumeration and checks the sink criterion for
+every formula. It also certifies the harmless directed cycle, harmless
+pure-conflict cycle and acyclic blocking fork.
+
+The verifier proves finite Boolean identities only. It does not encode
+source coordinates, contact preservation, O--O extraction, beneficial
+states, loaded-return geometry, KKT or global optimality. The general
+proofs above are analytic. Repository checks validate lifecycle/index
+consistency, not C-II closure.

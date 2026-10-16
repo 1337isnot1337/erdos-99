@@ -1,0 +1,148 @@
+# Erdős Problem #99 — loaded flat middles force singleton stopped trains
+
+**Date:** 2026-09-14  
+**Target:** Target C-II, canonical full-core Type-II branch  
+**Dependencies:** loaded-flat degree-two theorem; canonical stopped-train decomposition  
+**Claim class:** exact finite structural consequence
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The loaded-flat-middle theorem proves that every sufficiently flat loaded pentagon middle has contact degree exactly two. Since a loaded terminal is an extreme vertex of the positive-core force hull, it lies on the outer face of the embedded contact graph. Its two contact edges bound the pentagonal face on one side and the outer face on the other. Hence neither edge is incident to a strict rhombus.
+
+Therefore both edges are singleton stopped trains.
+
+If `L_flat` distinct loaded flat middles are present, then
+
+\[
+\boxed{S\ge L_{flat},}
+\tag{LS.1}
+\]
+
+where `S` is the global singleton-train count. Equivalently, with the canonical singleton currency
+
+\[
+\rho_{rec}=2S,
+\]
+
+\[
+\boxed{\rho_{rec}\ge2L_{flat}.}
+\tag{LS.2}
+\]
+
+Together with the exact defect payment already proved on this branch,
+
+\[
+\boxed{
+s_B\ge L_{flat},
+\qquad
+e_{BB}+3s_C\ge L_{flat}+3k-6,}
+\tag{LS.3}
+\]
+
+one loaded flat source vertex pays simultaneously in two independent ledgers: one unit of loaded degree slack and at least one singleton stopped train globally.
+
+---
+
+## 1. Both incident edges lie on the outer face
+
+Let `m` be a loaded flat middle on a bounded pentagonal face `F`, with incident face edges
+
+\[
+e_1=ml,
+\qquad e_2=mr.
+\]
+
+The loaded-flat theorem gives
+
+\[
+\deg_C(m)=2.
+\tag{LS.4}
+\]
+
+Because `m` is a force-hull extreme vertex, it lies on the unbounded face of the straight-line contact embedding. Around a degree-two plane-graph vertex there are exactly two edge sectors. One is the interior angle of the bounded pentagonal face `F`. Since the vertex lies on the outer face, the complementary sector is the outer face.
+
+Each incident edge has the same two adjacent faces along its interior. Consequently both `e_1,e_2` separate `F` from the outer face.
+
+In particular neither edge borders a strict-rhombus face.
+
+---
+
+## 2. The two contact edges are singleton trains
+
+In the audited stopped-train decomposition, a non-singleton train is extended across a contact edge through an adjacent strict rhombus to the opposite edge of that rhombus. A contact edge incident to no strict rhombus cannot be extended in either direction and is, by definition, a singleton stopped train.
+
+Section 1 shows exactly this for `e_1,e_2`. Therefore every loaded flat middle is incident to two singleton train edges.
+
+---
+
+## 3. Distinct-edge count
+
+Let `E_flat` be the set of singleton contact edges incident to the selected `L_flat` distinct loaded flat middles. Counting incidences gives
+
+\[
+2L_{flat}
+\le2|E_{flat}|,
+\]
+
+because one ordinary graph edge has at most two endpoints. Hence
+
+\[
+|E_{flat}|\ge L_{flat}.
+\]
+
+Every edge in `E_flat` is a distinct singleton train, so
+
+\[
+S\ge |E_{flat}|\ge L_{flat},
+\]
+
+proving (LS.1). The canonical exact identity `rho_rec=2S` gives (LS.2).
+
+No assumption that two loaded flat middles cannot share a singleton edge is needed; sharing is exactly why the incidence argument gives `S>=L_flat` rather than the stronger but unjustified `S>=2L_flat`.
+
+---
+
+## 4. Combined branch payment
+
+The earlier loaded-flat theorem gives
+
+\[
+s_B=\sum_{b\in B}(3-\deg_Cb)\ge L_{flat}
+\]
+
+and, using the exact post-ZF ledger,
+
+\[
+e_{BB}+3s_C\ge L_{flat}+3k-6.
+\]
+
+Thus the loaded part of any linear flat-middle family obeys the simultaneous finite payment
+
+\[
+\boxed{
+\rho_{rec}\ge2L_{flat},
+\qquad
+s_B\ge L_{flat},
+\qquad
+ e_{BB}+3s_C\ge L_{flat}+3k-6.
+}
+\tag{LS.5}
+\]
+
+These are genuinely different currencies. `rho_rec` is a stopped-train endpoint defect; `s_B` is loaded contact-degree slack; and `e_BB+3s_C` is the exact post-ZF loaded/pinned stress budget.
+
+This does not itself close the loaded branch because the current theorem stack has no sufficiently small simultaneous upper bound on these three currencies. It removes any model in which loaded flat pentagon middles are treated as zero-cost local degeneracies.
+
+---
+
+## 5. Scope audit
+
+- The conclusion uses the loaded-flat theorem's exact degree-two statement.
+- Loaded force-hull extremality is used only to identify the complementary degree-two sector as the outer face.
+- A singleton train here means a contact edge incident to no strict rhombus, exactly as in the canonical stopped-train decomposition.
+- No extra assumption on the other endpoints of the two contact edges is made.
+- No new diameter decrease, response bound, or KKT multiplier lower bound is asserted.
+
+**Disposition:** exact structural payment theorem. C-II remains open.

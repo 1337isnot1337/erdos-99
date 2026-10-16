@@ -1,0 +1,191 @@
+# Hostile audit — finite-window switching-direction collapse through `t<=1.86596`
+
+**Date:** 2026-09-15  
+**Reviewed:**
+- `research/target_c_finite_window_direction_collapse_t186596_2026-09-15.md`
+- `research/verify_target_c_finite_window_defect_strip_t186596.py`
+
+**Verdict:** **PASS at proof-only full-core Type-II scope.**  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The candidate adds the outer-window ledger to the finite-defect/KKT average and then
+uses global source-hull disk convergence to collapse switching diameter directions. The
+load-bearing issues are whether the window lengths really add globally, whether actual
+diameter endpoints lie in those windows, and whether endpoint collapse determines the
+orientation of the antipodal diameter partner.
+
+## 1. The middle boundary windows are disjoint in occurrence space
+
+The selected O--O crosscuts are pairwise disjoint proper crosscuts and form one simple
+complement-dual path. Consecutive crosscuts cut out linearly ordered middle regions.
+Away from crosscut endpoints, the outer-boundary traces of distinct middle regions are
+disjoint on the occurrence circle. Therefore
+
+\[
+\sum_iG_i\le b
+\]
+
+holds even when one physical bridge appears more than once on the outer facial walk:
+its two occurrences are distinct points of the occurrence circle. Endpoint half-edge
+ties have zero effect on the total metric length.
+
+**Verdict:** PASS.
+
+## 2. The high-`t` outer-walk bound is scope-safe
+
+The distinguished-route identity
+
+\[
+b/D=\pi+\delta+o(1)
+\]
+
+is independent of the path extraction. The paired-remainder branch already uses the
+matched `g=.0076` residual envelope
+
+\[
+2\delta+\kappa/2+h=9t/2-2\pi-C_{76},
+\qquad \kappa,h\ge0.
+\]
+
+Thus the adverse `delta` is obtained by setting `t=T=1.86596` and
+`kappa=h=0`. The exact verifier recomputes `C76`, `pi`, and the square root with outward
+rational bounds and proves
+
+\[
+\delta<0.100705,
+\qquad
+(\pi+\delta)<3.2423+o(1).
+\]
+
+No stronger `.007707` gap from a different branch is imported.
+
+**Verdict:** PASS.
+
+## 3. All four costs are averaged on the same eligible regions
+
+For the nonhub internal path regions,
+
+\[
+\sum_iN_i\le2\pi D,
+\quad
+\sum_iL_i\le(10T-4\pi)D+o(D),
+\quad
+\sum_iDB_i\le2D,
+\quad
+\sum_iG_i\le(\pi+\delta_{max})D+o(D).
+\]
+
+All quantities are nonnegative and indexed by the same path regions. Summing before
+averaging is therefore legitimate; no separate favorable strips are combined.
+
+The exact certificate proves
+
+\[
+{10T-\pi+2+\delta_{max}\over17/10^6}<1{,}036{,}395.
+\]
+
+Deleting one hub region and two end regions changes only `O(1)` terms, hence the rounded
+finite conclusion `<1,036,400` holds eventually.
+
+**Verdict:** PASS.
+
+## 4. Switching middle endpoints are genuinely in the two windows
+
+Signed interval support for adjacent cuts gives exactly one middle-layer endpoint for
+each switching diameter edge. Every endpoint of an actual diameter pair is an extreme
+point of the full source convex hull; the standard strict-convexity argument excludes a
+nontrivial convex combination endpoint at distance `D`. Thus the middle endpoint occurs
+on the actual outer boundary and lies on one of the two middle-region boundary arcs
+`J_i^+,J_i^-`.
+
+For source vertices in one outer-walk interval, Euclidean distance is at most the
+outer-walk path length. Since each window has length at most their fixed total, each
+window's switching middle endpoints occupy a set of Euclidean diameter `O(1)=o(D)`.
+
+If both left- and right-switch rows occur, the hostile-audited switching-order theorem
+places every participating middle endpoint on one common middle boundary arc. At the
+adjacent-strip level that arc is one of `J_i^+,J_i^-`; it is not a union of the two.
+
+**Verdict:** PASS.
+
+## 5. Global source-hull disk convergence is sufficient
+
+For any sequence of global minimum-diameter packings,
+
+\[
+n/D^2\to\pi/(2\sqrt3).
+\]
+
+Finite Oler plus `per(K)<=pi D` gives
+
+\[
+\liminf area(K)/D^2\ge\pi/4,
+\]
+
+while the isodiametric inequality gives the reverse upper bound. Hence normalized
+source hull area tends to `pi/4`. Blaschke compactness and uniqueness of equality in the
+planar isodiametric theorem force every translated Hausdorff limit to be the radius
+`1/2` disk.
+
+The proof needs the **full source hull**, not the force hull, so contact-isolated points
+do not create a scope gap.
+
+**Verdict:** PASS.
+
+## 6. A short first-endpoint patch fixes the oriented diameter direction
+
+Take two actual diameter pairs oriented toward first endpoints `x_D,x'_D` with
+`|x_D-x'_D|=o(D)`. After scaling and taking a convergent subsequence the first endpoints
+have the same disk limit `x`. Their opposite endpoints `y,y'` lie in the radius-`1/2`
+disk and satisfy
+
+\[
+|x-y|=|x-y'|=1.
+\]
+
+The only disk point at distance one from a given disk point is its antipode, so
+`y=y'`. Hence the **oriented** normalized diameter vectors converge together. This is
+stronger than projective collapse and justifies (FW.23)--(FW.24).
+
+The uniform family version follows by the usual contradiction/subsequence argument;
+no rate is claimed.
+
+**Verdict:** PASS.
+
+## 7. The mixed-switch reaction inherits the common ray
+
+In the mixed case all layer-oriented switching vectors satisfy
+
+\[
+d_h=\nu_D+o(1)
+\]
+
+uniformly. With positive switching KKT multipliers and
+`B=sum_h beta_h>0`,
+
+\[
+{G\over DB}={1\over B}\sum_h\beta_hd_h=\nu_D+o(1).
+\]
+
+The right side has norm tending to one, so normalizing `G` does not amplify an error:
+
+\[
+G/|G|-\nu_D\to0.
+\]
+
+This remains valid even if `B=O(1/D)` or much smaller. No lower bound on switching KKT
+mass is required.
+
+**Verdict:** PASS.
+
+## 8. What is not proved
+
+The theorem gives only qualitative `o(1)` direction collapse. It does not give an
+`O(1/D)` angular rate, a uniform inactive-slack scale, or a finite deformation that
+bypasses the remaining ray. In the one-orientation case two endpoint windows and two
+limiting rays may remain. In the mixed case one ray remains, but that ray can still be
+strictly first-order load-bearing at every finite `D`.
+
+**Final verdict:** **PASS.** One `t<=1.86596` nonhub strip is simultaneously
+finite-defect, low-KKT, fixed-window, and at-most-two-ray; mixed switching collapses to
+one oriented diameter ray and the exact KKT reaction follows that ray.

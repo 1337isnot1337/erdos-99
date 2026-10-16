@@ -1,0 +1,145 @@
+# Target C-II — parametric complete-rectangle tradeoff in the smallest leaf phase
+
+**Date:** 2026-09-15  
+**Status:** proof-only quantitative strengthening of the repaired dual-tree rectangle theorem  
+**Scope:** full-core Type-II branch with `t=(q-k)/D<=1.844`  
+**Dependencies:** repaired small-leaf complete-rectangle theorem; `P_V>0.0848-o(1)`; weighted center degree `>0.73D-o(D)`; center mass `<1.063D+o(D)`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The repaired rectangle theorem fixed a degree threshold `L=0.57` and obtained a complete
+`0.003D x 0.35D` leaf/center crossing rectangle. The proof actually gives a one-parameter
+family. Retaining the threshold instead of rounding it early gives larger rectangles and
+lets later geometric arguments choose the aspect ratio they need.
+
+Let `P` be the normalized retained smallest-leaf O--O pair weight, let `d_tau D` be the
+number of exact-center trains crossing a leaf O--O train `tau`, and let `C_0D` bound the
+total number of center trains. The certified inputs are
+
+\[
+P>p_0-o(1),\qquad p_0=0.0848,
+\]
+
+\[
+{\sum_\tau w_\tau d_\tau\over\sum_\tau w_\tau}>a-o(1),
+\qquad a=0.73,
+\]
+
+and
+
+\[
+C_0<c_0+o(1),\qquad c_0=1.063.
+\]
+
+Fix `0<L<a`. Call a retained leaf train `L`-good when `d_tau>L`. If `G_LD` is the
+total retained weight of the good trains, weighted averaging gives
+
+\[
+aP<L(P-G_L)+c_0G_L+o(1),
+\]
+
+hence
+
+\[
+\boxed{G_L>g(L)-o(1),\qquad g(L):={(a-L)p_0\over c_0-L}.}
+\tag{RT.1}
+\]
+
+Since every pair weight is at most one, there are more than `g(L)D-o(D)` distinct good
+leaf O--O trains.
+
+Apply the audited dual-tree construction to those good crosscuts. Their complement dual
+is a tree. Double counting good-leaf/center incidences and using at most `c_0D+o(D)`
+center trains shows that some center train crosses a simple dual-tree path containing
+
+\[
+\boxed{s(L)D-o(D),\qquad s(L):={Lg(L)\over c_0}}
+\tag{RT.2}
+\]
+
+good leaf edges. Use that path as the backbone.
+
+Now choose any fixed `alpha` with `0<alpha<s(L)`. Every backbone edge has center degree
+`>LD-o(D)`. Intersections of center paths with the backbone are intervals. The same
+consecutive-block count as in the repaired parent gives an `alpha D-o(D)` consecutive
+leaf block with a common center neighborhood of density at least
+
+\[
+\boxed{
+\beta(L,\alpha)
+:=L-{\alpha c_0\over s(L)}
+=L-{\alpha c_0^2(c_0-L)\over Lp_0(a-L)}.
+}
+\tag{RT.3}
+\]
+
+Whenever `beta(L,alpha)>0`, the current survivor contains a complete crossing rectangle
+
+\[
+\boxed{(\alpha D-o(D))\times(\beta(L,\alpha)D-o(D)).}
+\tag{RT.4}
+\]
+
+No additional topology is used: the global good-leaf dual may branch, and only one
+backbone path is ordered.
+
+The exact `Fraction` verifier
+
+`research/verify_target_c_small_leaf_rectangle_tradeoff_t1844.py`
+
+checks several safe points on (RT.3):
+
+\[
+\boxed{>0.0031D\times>0.35D}\qquad(L=0.602),
+\tag{RT.5}
+\]
+
+\[
+\boxed{>0.0038D\times>0.30D}\qquad(L=0.591),
+\tag{RT.6}
+\]
+
+\[
+\boxed{>0.0051D\times>0.20D}\qquad(L=0.575),
+\tag{RT.7}
+\]
+
+and
+
+\[
+\boxed{>0.0065D\times>0.10D}\qquad(L=0.562).
+\tag{RT.8}
+\]
+
+For example, at `L=0.602`, exact arithmetic gives
+
+\[
+g(L)={6784\over288125}>0.0235453,
+\]
+
+\[
+s(L)={4083968\over306276875}>0.0133342,
+\]
+
+and with `alpha=0.0031`,
+
+\[
+\beta(L,\alpha)
+={23188392797\over65343488000}
+>0.3548692>0.35.
+\]
+
+For a fixed `L`, the product `alpha beta(L,alpha)` is maximized at
+
+\[
+\alpha={Ls(L)\over2c_0},\qquad \beta={L\over2}.
+\]
+
+A nearby rational choice `L=0.591` already gives product density above `0.00114`.
+This is only an optimization diagnostic; the aspect-ratio family (RT.3), rather than one
+product optimum, is the useful statement for the next strip-order argument.
+
+The theorem still does not bound reuse of one actual diameter edge across many
+consecutive leaf cuts. Its purpose is to expose the strongest available rectangle at
+whatever leaf/center aspect ratio that reuse argument requires.
+
+**Disposition:** proved parametric quantitative strengthening; C-II and Level I remain open.

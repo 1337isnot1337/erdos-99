@@ -1,0 +1,214 @@
+<!-- theorem-state: {"artifact_id":"ART-87A38380D96E","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Erdős Problem #99 — Target B unique-max phase stability exclusion
+
+**Date:** 2026-09-05  
+**Run type:** ordered stability theorem  
+**Target:** dense coherent three-phase endpoint  
+**Depends on:** trimmed-grid phase-star exclusion  
+**LEVEL I STATUS:** STILL OPEN
+
+## 1. Result
+
+Let a coherent three-phase train core have class sizes
+
+`M>=b>=a`
+
+and no transversal triangle. The extremal crossing bound is
+
+`E<=M(a+b)`.
+
+If the largest class has a fixed fractional gap from both other classes and the crossing count is within `o(M^2)` of this bound, then both center-to-leaf crossing pairs are asymptotically complete. Ordered train topology then extracts a complete positive-density grid after only `o(M)` deletions. The trimmed-grid diameter theorem excludes that grid even with arbitrary coherent cancellation by the third phase.
+
+Hence a surviving near-saturated endpoint cannot have a uniquely largest phase separated by a fixed fraction.
+
+## 2. Consecutive crossing intervals
+
+Let
+
+`A={alpha_1,...,alpha_M}`
+
+be pairwise noncrossing proper train arcs in their natural order.
+
+### Lemma US1 — interval neighborhood
+
+For any other train `gamma`, the set of indices
+
+`{i: gamma crosses alpha_i}`
+
+is a consecutive interval.
+
+### Proof
+
+The `A` tracks split the disk into a linear chain of `M+1` regions. A proper arc starts in one region and ends in another. Crossing an `A` track changes the region index by one. Since two train tracks cross at most once, `gamma` cannot cross an `A` track, return across it, and cross it again. Therefore it crosses exactly the consecutive tracks between its endpoint regions. QED.
+
+## 3. Dense interval bigraphs contain an almost-full rectangle
+
+Let `B` be a second train family of size `b=Theta(M)`. Suppose only
+
+`q=o(Mb)`
+
+of the possible `A`–`B` crossings are missing.
+
+For `beta in B`, write its crossing interval as `[l_beta,r_beta]` and its missing count as
+
+`m_beta=(l_beta-1)+(M-r_beta)`.
+
+Choose `eta=eta_M->0` with
+
+`q/(eta M b)->0`.
+
+Delete every `beta` with `m_beta>eta M`. Markov deletes only
+
+`q/(eta M)=o(b)`
+
+rows. Every remaining interval contains the common central block
+
+`A'={alpha_i: eta M<i<(1-eta)M}`.
+
+### Lemma US2 — almost-full complete rectangle
+
+There are subfamilies
+
+`|A'|=M-o(M)`,
+
+`|B'|=b-o(M)`
+
+such that every `A'` train crosses every `B'` train.
+
+## 4. Unique-max stability algebra
+
+Let the coherent phase classes be `A,B,C` with
+
+`|A|=M`, `|B|=b`, `|C|=a`,
+
+and assume a fixed gap
+
+`a,b <= (1-kappa)M`
+
+for some `kappa>0`.
+
+Write
+
+`e_AB=Mb-x`,
+
+`e_AC=Ma-y`,
+
+`e_BC=z`,
+
+where `x,y` are missing center-to-leaf crossings. Then
+
+`E=M(a+b)-x-y+z`.
+
+The transversal-triangle count gives
+
+`a e_AB + M e_BC + b e_AC <= 2Mab`.
+
+Substitution yields
+
+`Mz<=ax+by`.
+
+Therefore the deficit
+
+`delta:=M(a+b)-E=x+y-z`
+
+satisfies
+
+`delta >= (1-a/M)x+(1-b/M)y`
+
+`>=kappa(x+y)`.
+
+### Lemma US3 — unique-max near-extremizers are near-stars
+
+If
+
+`M(a+b)-E=o(M^2)`,
+
+then
+
+`x+y=o(M^2)`
+
+and
+
+`z=o(M^2)`.
+
+Thus both center-to-leaf pairs are asymptotically complete and the leaf-to-leaf crossing mass is negligible.
+
+## 5. Extract one complete positive-density grid
+
+If the core has quadratic crossing mass, then
+
+`E=Theta(M^2)`
+
+and `E<=M(a+b)`, so `a+b=Theta(M)`. Hence the larger leaf class obeys
+
+`b>=tau M`
+
+along a subsequence for some `tau>0`.
+
+US3 gives `x=o(M^2)=o(Mb)`. Apply US2 to the `A`–`B` crossing system. We obtain
+
+`|A'|=M-o(M)`,
+
+`|B'|=b-o(M)`
+
+with complete mutual crossing.
+
+The third coherent phase `C` need not be complete to the retained `A'` block for the diameter argument. In the trimmed-grid proof its entire contribution to the selected diagonal is already allowed to be an arbitrary scalar
+
+`x_C w+o(M)`, `|x_C|<=a+o(M)`
+
+in the third phase direction. Thus incompleteness can only reduce or alter that bounded cancellation; it does not invalidate the lower bound.
+
+Assume, as in the dense-core endpoint, that crossings outside the coherent three-phase core are `o(M^2)`. The penetration-depth theorem then makes truly external diagonal error `o(M)`.
+
+## 6. Diameter contradiction
+
+Normalize
+
+`t=b/M`, `s=a/M`.
+
+The trimmed-grid theorem gives the diagonal lower bound
+
+`D^2 >= (F(s,t)-o(1))M^2`,
+
+where
+
+`F(s,t)>c(s+t)`
+
+for all `0<=s<=t<=1` and
+
+`c=2sqrt(3)/pi`.
+
+Meanwhile near saturation gives
+
+`R=E+o(M^2)=M(a+b)+o(M^2)`
+
+and `T=O(M)`, hence
+
+`n=(s+t)M^2+o(M^2)`.
+
+The strict translated-lattice comparison gives
+
+`D(n)^2<(c(s+t)+o(1))M^2`,
+
+contradiction.
+
+### Theorem US4 — unique-largest coherent phase endpoint is impossible
+
+Fix `kappa>0`. No sufficiently large pure-rhombic global-minimizer sequence can have a coherent three-phase core satisfying
+
+`M>=b>=a`,
+
+`a,b<=(1-kappa)M`,
+
+`E=M(a+b)-o(M^2)`,
+
+and carrying all but `o(M^2)` of the quadratic rhombus crossings.
+
+## 7. Frontier reduction
+
+Every unresolved near-saturated coherent three-phase endpoint must therefore lose the unique-largest gap. After relabeling the two largest phase classes,
+
+`b/M->1`.
+
+The remaining endpoint is the two-largest-tie/balanced colour-split regime.

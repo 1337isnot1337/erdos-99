@@ -1,0 +1,124 @@
+# Target C-II — promote the hostile-audited joint-orbit floor to `1.82516`
+
+**Date:** 2026-09-15  
+**Repository base:** `dc0b174fb5d4e8865c998201a980c7ccb68acf23`  
+**Status:** proof-only numerical promotion inside an already hostile-audited theorem  
+**Scope:** fully force-visible no-container/full-core Type-II scope of the merged `g=0.0050` joint orbit theorem  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The merged theorem currently records the safe round conclusion
+
+\[
+\liminf {q-k\over D}\ge 1.82515.
+\]
+
+Its own hostile audit and exact certificate already prove the stronger endpoint sign
+
+\[
+H_{50}(1.82516)>0,
+\]
+
+together with strict monotonicity
+
+\[
+H_{50}'(t)<0
+\]
+
+throughout the excluded interval. Therefore the same proof excludes every convergent Type-II survivor subsequence with
+
+\[
+t={q-k\over D}\le1.82516.
+\]
+
+No new geometric input is required.
+
+## 1. Audited scalar endpoint
+
+The merged `g=0.0050` theorem uses
+
+\[
+C_0=2\sqrt{\Delta_2}+0.0050,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+\]
+
+and the one-variable contradiction function
+
+\[
+H_{50}(t)=\Phi(K_{50}(t))-{R_{50}(t)\over2},
+\]
+
+where
+
+\[
+R_{50}(t)={9t\over2}-2\pi-C_0,
+\]
+
+\[
+K_{50}(t)=\pi+{R_{50}(t)\over2}-t-2C_0+{8\Delta_2\over C_0},
+\]
+
+and
+
+\[
+\Phi(z)=z-6\arcsin(\tanh(z/6)).
+\]
+
+The hostile audit checks
+
+\[
+H_{50}(1.82515)=2.5373341\times10^{-5}>0,
+\]
+
+\[
+\boxed{H_{50}(1.82516)=3.1640100\times10^{-6}>0,}
+\]
+
+\[
+H_{50}(1.82517)=-1.9045315\times10^{-5}<0,
+\]
+
+and brackets the unique scalar zero by
+
+\[
+1.82516142463113334<t_*<1.82516142463113335.
+\]
+
+## 2. Monotonicity makes the promotion rigorous
+
+The same audit proves
+
+\[
+K_{50}'(t)=5/4
+\]
+
+and, on the relevant orbit-mass interval,
+
+\[
+\Phi'(K)<0.025.
+\]
+
+Hence
+
+\[
+H_{50}'(t)={5\over4}\Phi'(K_{50}(t))-{9\over4}<0.
+\]
+
+Thus \(H_{50}\) is strictly decreasing. Since \(H_{50}(1.82516)>0\), every
+\(t\le1.82516\) has positive contradiction margin and is excluded.
+
+### Theorem — promoted joint-orbit floor
+
+Every convergent full-core Type-II survivor subsequence in the merged proof-only scope satisfies
+
+\[
+\boxed{
+\liminf_{D\to\infty}{q-k\over D}\ge1.82516.
+}
+\]
+
+This is a safe round promotion below the hostile-audited root \(t_*\). It does not alter canonical theorem state and does not close C-II.
+
+## 3. Frontier
+
+Further decimal tuning is low value. The joint route relaxation is already exact for its two local costs. The next useful work is structural: dominant-orbit terminal routing, outer-to-outer train bracing, exceptional-face closure rank, or a simultaneous source-preserving train shear.

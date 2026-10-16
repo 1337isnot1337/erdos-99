@@ -1,0 +1,438 @@
+# Target C-II — modern train slack forces either `0.373D` singleton trains or a rhombic-pentagon sea with quadratic Mantel deficit
+
+**Date:** 2026-09-15  
+**Status:** proof-only high-`t` structural strengthening  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch; pentagon-interface consequences stated for `t=(q-k)/D<=1.8623`  
+**Dependencies:** hostile-audited modern train-slack theorem; independently audited singleton/rhombic stopped-train split; modern all-train pentagon sea  
+**Certificate:** `research/verify_target_c_modern_pentagon_train_dichotomy_t18623.py`  
+**Supersedes numerically:** the incidence bounds in `target_c_high_t_pentagon_rhombus_dichotomy_2026-09-15.md`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The modern high-`t` theorem gives the safe train-slack floor
+
+\[
+\liminf {\tau_D\over D}\ge \tau_0,
+\qquad
+\tau_0:=0.7467921.
+\tag{MPT.1}
+\]
+
+The independently audited stopped-train bookkeeping identifies the two exact pieces of
+this slack.  Let
+
+- `S_D` be the number of singleton stopped trains, i.e. contact edges incident to no
+  strict-rhombus face;
+- `T_R=B_4/2` be the number of non-singleton stopped trains in the strict-rhombus
+  complex;
+- `R_4` be the number of strict unit-rhombus faces;
+- `rho_rec=b+4f+Q-B_4` be unused recipient occurrence capacity; and
+- `sigma_R=B_4-4sqrt(R_4)` be rhombic train-isoperimetric slack.
+
+Then exactly
+
+\[
+\boxed{\rho_{rec}=2S_D,}
+\tag{MPT.2}
+\]
+
+and
+
+\[
+\boxed{2\tau_D=\rho_{rec}+\sigma_R.}
+\tag{MPT.3}
+\]
+
+Balancing the two terms at `tau_0` yields a concrete dichotomy.
+
+### Branch S — singleton sea
+
+\[
+\boxed{
+S_D\ge(0.373396-o(1))D.
+}
+\tag{MPT.4}
+\]
+
+### Branch R — rhombic train slack
+
+\[
+\boxed{
+\sigma_R>(0.746792-o(1))D.
+}
+\tag{MPT.5}
+\]
+
+In Branch R the strict-rhombus stopped-train crossing graph is macroscopically far
+from its Mantel endpoint:
+
+\[
+\boxed{
+{T_R^2\over4}-R_4>(0.390-o(1))D^2.
+}
+\tag{MPT.6}
+\]
+
+The modern pentagon-sea theorem now makes Branch R much more geometric.  Throughout
+`t<=1.8623`, Branch R has more than
+
+\[
+\boxed{1.244D-o(D)}
+\tag{MPT.7}
+\]
+
+strict-rhombus/pentagon boundary incidences.  Consequently more than
+
+\[
+\boxed{0.622D-o(D)}
+\tag{MPT.8}
+\]
+
+distinct non-singleton rhombic stopped trains terminate at a pentagon, and more than
+
+\[
+\boxed{0.248D-o(D)}
+\tag{MPT.9}
+\]
+
+distinct pentagons have a strict-rhombus neighbor.  In fact more than `62%` of the
+forced pentagons touch the strict-rhombus complex.
+
+At the currently valid repaired O--O path endpoint `t<=1.8593`, the corresponding
+figures strengthen to more than `1.281D` rhombus/pentagon incidences, `0.640D`
+rhombic trains ending at pentagons, and `0.256D` rhombus-adjacent pentagons.  These
+numbers do not use the path theorem; they are stated only to identify the overlap
+window for later routing arguments.
+
+No C-II contradiction is claimed.  Branch S still permits a linear singleton
+population, and Branch R still permits locally near-degenerate pentagons.  The gain is
+that the modern train slack is now represented by one of two explicit train networks,
+not by an abstract recipient-currency defect.
+
+---
+
+## 1. Exact singleton/rhombic decomposition
+
+The complete stopped-train decomposition includes a singleton train for each contact
+edge incident to no strict-rhombus face.  Every non-singleton stopped train contains at
+least one rhombus and has exactly two boundary occurrences of the strict-rhombus
+complex.  Therefore
+
+\[
+T=T_R+S_D,
+\qquad
+B_4=2T_R.
+\tag{MPT.10}
+\]
+
+The full endpoint handshake is
+
+\[
+2T=b+4f+Q.
+\tag{MPT.11}
+\]
+
+Subtracting `B_4=2T_R` from (MPT.11) gives
+
+\[
+b+4f+Q-B_4
+=2(T-T_R)
+=2S_D,
+\]
+
+which proves (MPT.2).
+
+The hostile-audited modern chamber theorem retains the exact older split
+
+\[
+2\tau_D
+=(b+4f+Q-B_4)+(B_4-4\sqrt{R_4}),
+\]
+
+which is (MPT.3).
+
+If `rho_rec>=tau_0D-o(D)`, (MPT.2) gives Branch S.  Otherwise (MPT.1) and
+(MPT.3) give
+
+\[
+\sigma_R
+=2\tau_D-\rho_{rec}
+>(\tau_0-o(1))D,
+\]
+
+which gives Branch R.
+
+---
+
+## 2. Exact quadratic Mantel deficit in Branch R
+
+Put
+
+\[
+M_D:={T_R^2\over4}-R_4.
+\tag{MPT.12}
+\]
+
+The strict-rhombus stopped-train crossing graph is simple and triangle-free, so
+`M_D>=0`.  More importantly, the definition of `sigma_R` gives
+
+\[
+\sigma_R=2T_R-4\sqrt{R_4},
+\]
+
+and hence exactly
+
+\[
+T_R=2\sqrt{R_4}+{\sigma_R\over2}.
+\tag{MPT.13}
+\]
+
+Substitution into (MPT.12) yields
+
+\[
+\boxed{
+M_D
+={\sigma_R\sqrt{R_4}\over2}
++{\sigma_R^2\over16}.
+}
+\tag{MPT.14}
+\]
+
+Canonical Type II has
+
+\[
+{R_4\over D^2}\to\Delta_2={\pi\over2\sqrt3}.
+\tag{MPT.15}
+\]
+
+Thus Branch R implies
+
+\[
+\liminf {M_D\over D^2}
+\ge {\tau_0\sqrt{\Delta_2}\over2}
++{\tau_0^2\over16}.
+\tag{MPT.16}
+\]
+
+The exact outward certificate evaluates the right side above
+
+\[
+0.3904459>0.390,
+\]
+
+proving (MPT.6).
+
+This is substantially stronger than the weaker rationalized lower bound obtained by
+dropping the `sigma_R^2/16` term and half of the linear term.
+
+---
+
+## 3. Modern pentagon sea at `t<=1.8623`
+
+The modern all-train pentagon theorem proves
+
+\[
+\boxed{
+{P_5\over D}>0.398175-o(1)
+}
+\tag{MPT.17}
+\]
+
+through `t<=1.8623`, and more precisely
+
+\[
+2{f\over D}-{Q\over D}
+>0.398175-o(1).
+\tag{MPT.18}
+\]
+
+Here `P_5` is the number of bounded pentagonal contact faces and
+
+\[
+Q=\sum_P(\deg P-4).
+\]
+
+The equality of the numerical lower expression in (MPT.18) with the pentagon bound is
+not an extra hypothesis: degree arithmetic gives `P_5>=2f-Q`.
+
+---
+
+## 4. Low singleton waste forces pentagons onto the rhombic interface
+
+Let `I_exc` count boundary occurrences having a strict rhombus on one side and a
+bounded nonquadrilateral face on the other.  The total bounded exceptional-face
+recipient capacity is
+
+\[
+4f+Q.
+\]
+
+The total unused recipient capacity over the outer face and all bounded exceptional
+faces is `rho_rec`.  Charging every unused occurrence adversarially to the bounded
+faces gives
+
+\[
+\boxed{I_{exc}\ge4f+Q-\rho_{rec}.}
+\tag{MPT.19}
+\]
+
+Let `C_{6+}` be the total boundary-occurrence capacity of bounded exceptional faces of
+degree at least six.  If `P_5` pentagons are present, then exactly
+
+\[
+C_{6+}=4(f-P_5)+(Q-P_5).
+\tag{MPT.20}
+\]
+
+Since `P_5>=2f-Q`,
+
+\[
+\boxed{C_{6+}\le6(Q-f).}
+\tag{MPT.21}
+\]
+
+Let `I_5` count strict-rhombus/pentagon boundary incidences.  Even if every available
+boundary occurrence of every degree-`>=6` face is used against a rhombus,
+(MPT.19)--(MPT.21) give
+
+\[
+\begin{aligned}
+I_5
+&\ge I_{exc}-C_{6+}\\
+&\ge4f+Q-\rho_{rec}-6(Q-f)\\
+&=5(2f-Q)-\rho_{rec}.
+\end{aligned}
+\tag{MPT.22}
+\]
+
+In Branch R,
+
+\[
+\rho_{rec}<\tau_0D+o(D).
+\]
+
+Combining this with (MPT.18),
+
+\[
+\liminf {I_5\over D}
+\ge5(0.3981752\ldots)-0.7467921
+>1.2440842.
+\tag{MPT.23}
+\]
+
+This proves (MPT.7).
+
+---
+
+## 5. Convert interface occurrences to distinct trains and faces
+
+Each incidence counted by `I_5` lies on a contact edge with a strict rhombus on one
+side.  Therefore its stopped train is non-singleton and belongs to the strict-rhombus
+train complex.  A complete non-singleton train has only two terminal occurrences, so
+if `N_{R5}` counts distinct rhombic stopped trains having a pentagon endpoint,
+
+\[
+\boxed{N_{R5}\ge {I_5\over2}.}
+\tag{MPT.24}
+\]
+
+Equation (MPT.23) gives
+
+\[
+\liminf {N_{R5}\over D}>0.6220421,
+\]
+
+proving (MPT.8).
+
+A pentagon has only five boundary occurrences.  Thus if `P_5^{touch}` counts distinct
+pentagons sharing at least one contact edge with a strict rhombus,
+
+\[
+\boxed{P_5^{touch}\ge {I_5\over5}.}
+\tag{MPT.25}
+\]
+
+Consequently
+
+\[
+\liminf {P_5^{touch}\over D}>0.2488168,
+\]
+
+proving (MPT.9).
+
+Dividing by the total pentagon lower scale from (MPT.17), the exact certificate also
+gives the safe ratio
+
+\[
+\boxed{
+\liminf {P_5^{touch}\over P_5}>0.62
+}
+\tag{MPT.26}
+\]
+
+in the adverse scalar envelope used here.
+
+---
+
+## 6. Overlap with the corrected live O--O path
+
+The former path claims through `1.8623` were retracted because low projective
+terminal energy did not by itself determine the oriented endpoint branches.  The
+corrected opposite-branch theorem proves a live path only through
+
+\[
+1.844<t\le1.8593.
+\]
+
+At `T=1.8593`, the modern pentagon formula improves to
+
+\[
+P_5/D>0.405675-o(1).
+\]
+
+In Branch R, (MPT.22) then gives
+
+\[
+I_5/D>1.281584-o(1),
+\]
+
+so more than `0.640792D-o(D)` rhombic trains terminate at pentagons and more than
+`0.256316D-o(D)` pentagons touch strict rhombi.
+
+These are independent global populations.  This theorem does **not** assert that the
+pentagon-ending rhombic trains lie on, cross, or terminate next to the selected O--O
+path.  Establishing such routing is a separate closing problem.
+
+---
+
+## 7. Updated high-`t` branches
+
+The surviving full-core train-measure branch now has the following exact structural
+split throughout the modern range:
+
+```text
+S branch:
+  >=0.373396 D singleton stopped trains;
+
+R branch (for t<=1.8623):
+  sigma_R >=0.746792 D;
+  >0.390 D^2 strict-rhombus train Mantel deficit;
+  >0.398 D pentagons globally;
+  >1.244 D rhombus/pentagon endpoint incidences;
+  >0.622 D non-singleton rhombic trains terminating at pentagons;
+  >0.248 D distinct pentagons touching strict rhombi.
+```
+
+In the narrower valid O--O path band `t<=1.8593`, this split coexists with the repaired
+common-hub path and its one-sided finite-strip consequence.  No such path statement is
+used above `1.8593`.
+
+The local pentagon regression still prevents a per-face metric contradiction.  The
+next useful work is branch-specific:
+
+1. in Branch S, exploit the `0.373D` singleton contact edges through their exact
+   stopped-train directions, endpoint types, or one-edge flex coordinates; or
+2. in Branch R, route the `0.622D` pentagon-ending rhombic trains through the phase
+   structure and, in the overlap band, against the common-hub diameter intervals.
+
+**Disposition:** proved proof-only modern singleton/rhombic-pentagon dichotomy with a
+quadratic Mantel-deficit branch.  C-II and Level I remain open.

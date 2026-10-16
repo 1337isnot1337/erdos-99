@@ -1,0 +1,134 @@
+# Erdős Problem #99 — actual-outer / flat-pentagon train gate
+
+**Date:** 2026-09-14
+**Target:** C-II, canonical full-core Type-II branch
+**Dependencies:** low-`t` topology/network squeeze; low-`t` pentagon metric amplification; exact stopped-train terminal-occurrence ledger
+**Claim class:** proof-only structural composition awaiting independent audit
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+Let `L_OO` count complete stopped trains with both terminal occurrences on the actual outer contact face. For fixed `epsilon>0`, let `L_OF(epsilon)` count trains with one actual-outer terminal and the other on a pentagon whose true residual is below the empty-pentagon stability threshold `theta(epsilon)`, so that pentagon is isolate-free and `epsilon`-close to the flat unit trapezoid. Put `X:=Q-f`.
+
+The exact finite endpoint payment is
+
+\[
+\boxed{
+2L_{OO}+L_{OF}(\epsilon)
+\ge b-6X-{5R_F\over\theta(\epsilon)}.
+}
+\tag{OF.1}
+\]
+
+Hence on every full-core Type-II subsequence with `R_F=o(D)` there is a slow scale `epsilon_D->0` such that
+
+\[
+\boxed{2L_{OO}+L_{OF}(\epsilon_D)\ge b-6X-o(D).}
+\tag{OF.2}
+\]
+
+If also `X=o(D)`, then `b/D->pi`, so
+
+\[
+\boxed{\max\{L_{OO},L_{OF}(\epsilon_D)\}\ge(\pi/3-o(1))D.}
+\tag{OF.3}
+\]
+
+Thus either at least `1.04719755...D` actual outer-to-outer trains exist or at least that many actual outer-to-flat-pentagon trains exist.
+
+Put
+\[
+\Delta_2={\pi\over2\sqrt3},\qquad C_0:=2\sqrt{\Delta_2}+0.00042,
+\]
+and on a convergent Type-II subsequence write
+\[
+t={q-k\over D},\qquad \delta={b-P_F\over D},\qquad \kappa={k\over D}.
+\]
+The low-`t` ledger gives
+\[
+{X\over D}\le {9t\over4}-\pi-{C_0\over2}-\delta-{\kappa\over4}+o(1),
+\tag{OF.4}
+\]
+while `b/D=pi+delta+o(1)`. Therefore
+\[
+\boxed{\liminf {2L_{OO}+L_{OF}\over D}\ge7\pi+3C_0-{27t\over2}+7\delta+{3\kappa\over2}.}
+\tag{OF.5}
+\]
+Dropping the nonnegative bonuses,
+\[
+\boxed{\liminf {\max\{L_{OO},L_{OF}\}\over D}\ge{1\over3}\left(7\pi+3C_0-{27t\over2}\right).}
+\tag{OF.6}
+\]
+At
+\[
+t_{42}={4\over9}\left(\pi+\sqrt{\Delta_2}\right)+0.0013751,
+\]
+this gives
+\[
+\boxed{\liminf {\max\{L_{OO},L_{OF}\}\over D}\ge1.0414296011965977\ldots,}
+\tag{OF.7}
+\]
+and throughout `t<=1.8585`,
+\[
+\boxed{\liminf {\max\{L_{OO},L_{OF}\}\over D}\ge0.8721784721040989\ldots.}
+\tag{OF.8}
+\]
+
+## 1. Bad bounded terminal occurrences
+
+The bounded terminal occurrences on nonpentagonal faces satisfy
+\[
+B_{\ge6}=\sum_{d\ge6}d n_d\le6\sum_{d\ge6}(d-5)n_d=6X,
+\tag{OF.9}
+\]
+because `d<=6(d-5)` for every `d>=6`.
+
+A pentagon not counted as good has residual at least `theta(epsilon)`. Since all face residuals are nonnegative and sum to `R_F`, there are at most `R_F/theta(epsilon)` such pentagons and at most `5R_F/theta(epsilon)` corresponding terminal occurrences. Thus the number of bad bounded terminal occurrences obeys
+\[
+\boxed{B_{bad}\le6X+{5R_F\over\theta(\epsilon)}.}
+\tag{OF.10}
+\]
+
+## 2. Exact outer endpoint partition
+
+Let `L_OB` count trains with one actual-outer and one bounded terminal occurrence. The exact outer occurrence ledger is
+\[
+b=2L_{OO}+L_{OB}.
+\tag{OF.11}
+\]
+Split `L_OB=L_OF(epsilon)+L_OB^bad`. Every train in `L_OB^bad` consumes one distinct bad bounded terminal occurrence, so
+\[
+L_{OB}^{bad}\le B_{bad}.
+\tag{OF.12}
+\]
+Substitution of (OF.10) into (OF.11) proves (OF.1). The argument counts terminal occurrences, so repeated outer-face or articulation vertices cause no ambiguity.
+
+## 3. Low-`t` substitution
+
+On `R_F=o(D)`, diagonalize `epsilon` slowly so the final term in (OF.1) is `o(D)`. Using (OF.4) and `b/D=pi+delta+o(1)` then gives
+\[
+\begin{aligned}
+\liminf {2L_{OO}+L_{OF}\over D}
+&\ge\pi+\delta-6\left({9t\over4}-\pi-{C_0\over2}-\delta-{\kappa\over4}\right)\\
+&=7\pi+3C_0-{27t\over2}+7\delta+{3\kappa\over2},
+\end{aligned}
+\]
+which is (OF.5). If both normalized train counts were below one third of the right side, their `2:1` weighted sum would be below it, proving (OF.6).
+
+## 4. Frontier effect
+
+Every actual outer-to-outer train is two-sidedly crossed by actual diameter edges by audited Section 157. Every outer-to-flat-pentagon train terminates on a pentagon with an almost-flat exact-contact chain, near-60-degree train hinges, and hidden `1+o(1)` diagonals. Together with the train-star packing theorem, the `L_OF`-rich alternative lands a macroscopic outer-cut family directly on disjoint flat/60-degree train-coordinate gadgets.
+
+The next closing target therefore splits into a cap on nested diameter-braced outer-to-outer trains or a locking/activation obstruction for actual outer trains landing on the packed flat-pentagon train stars.
+
+## 5. Scope audit
+
+- `L_OO` uses the actual outer contact face, not the strict-rhombus unbounded-component boundary.
+- `L_OF` has exactly one actual-outer terminal and one bounded terminal on a good pentagon.
+- No train is double-counted in the bad-occurrence payment.
+- The `6X` nonpentagonal payment is exact; the metric error is explicitly `5R_F/theta(epsilon)`.
+- Low-`t` constants inherit the proof-only AG42 input.
+- No exact hidden contact, unit triangle, or strict sub-`D` source is produced.
+
+C-II and Level I remain open.

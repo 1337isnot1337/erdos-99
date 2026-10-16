@@ -1,0 +1,160 @@
+# Target C: rank-density barrier through two no-root four-cycles
+
+Date: 2026-09-20
+
+Status: exact finite result for the global four-cycle metric-basis subproblem. This does not reduce the current 3,874-state generic-H6 endpoint and does not close C-II.
+
+The companion verifier is
+
+`research/verify_target_c_support7_global_segment_relative_two_noroot_density_2026_09_20.py`.
+
+## Statement
+
+Use the notation of the relative four-cycle normal-form audit. Let `M` be the 85-dimensional four-cycle span modulo the 56 automatic side-triangle rows, let `T` be the 15-dimensional ground-root star space, and let `Q=M/T`. For a four-cycle family `A`, put
+
+`delta(A) = r_M(A) - r_Q(A)`.
+
+The verifier proves:
+
+> If `A` contains at most two simple four-cycles avoiding root `0`, then
+>
+> `3 delta(A) <= |A|`.
+
+Therefore, if `delta(A)=15`, then `|A|>=45`. In particular:
+
+> Every hypothetical sufficient 44-cycle family must contain at least three four-cycles avoiding root `0`.
+
+The committed 45-cycle family `F` consists entirely of cycles containing root `0`. Combining the new result with the already-certified seven-outsider exchange barrier gives a sharper description of any hypothetical 44-cycle replacement: it must use at least eight cycles outside `F`, and at least three of those outsiders must avoid root `0`.
+
+This is still not a proof that 45 is globally minimal. Families with three or more no-root cycles remain untreated by this result.
+
+## Exact coordinate model
+
+The verifier rebuilds the complete 210-row four-cycle system from integer `L(K8)` cycle chains and performs all proof rank calculations over `Q` using `Fraction` arithmetic.
+
+The 105 root-0 cycles split into 35 quotient blocks, one for each three-subset of `{1,...,7}`. In exact quotient coordinates, each block consists of the three vectors
+
+`(1,0), (0,1), (1,-1)`.
+
+Choosing the first two vectors in each block gives 70 quotient coordinates. Appending an exact 15-vector basis for `T` gives an 85-dimensional coordinate basis for `M`. Every one of the 210 four-cycle rows has integral coordinates in this basis, with all coefficients in
+
+`{-2,-1,0,1,2}`.
+
+Every no-root four-cycle has nonzero quotient components in exactly four blocks, the four triangular faces of its vertex four-set.
+
+The verifier checks exactly
+
+- `r_M=85`,
+- `r_Q=70`,
+- `dim T=15`,
+- the 35 local block normal forms, and
+- the four-block support of all 105 no-root cycles.
+
+## Reduction to touched blocks
+
+Fix a family with `t<=2` no-root cycles. Call a local block *touched* if one of those no-root cycles has a nonzero quotient component in that block.
+
+Root-0 rows in untouched blocks decouple in `Q`. An incomplete untouched block contributes no relative direction. A complete untouched block uses three rows and can contribute at most one relative direction. Thus those blocks already satisfy the desired factor-three bound and can be removed from the hard part of the calculation.
+
+Inside the touched blocks, write
+
+- `c` for the number of complete three-row blocks,
+- `p` for the number of selected root-0 rows in incomplete blocks, and
+- `k` for the extra quotient nullity supplied by the `t` no-root rows after quotienting by the selected root-0 block spans.
+
+A singleton incomplete block contributes one to `p`; a double contributes two; an empty block contributes zero. Complete blocks are counted in `c`, not `p`.
+
+The local row count and quotient nullity are
+
+`n = t + 3c + p`,
+
+`K = c + k`.
+
+The actual relative dimension `delta` is at most the quotient nullity `K`, so
+
+`n - 3 delta >= n - 3K = t + p - 3k`.
+
+Consequently only states with `t+p-3k<0` require an exact `M`-rank calculation. This leaves a small finite ledger.
+
+## One no-root cycle
+
+All 105 no-root cycles form one `S_7` orbit under relabeling of vertices `1,...,7`.
+
+For `t=1`, a possible violation requires `k=1` and `p<=1`. Across the four touched blocks, exactly five root-0 selection states satisfy this crude condition.
+
+All five are exactified over `Q`. None violates the rank-density inequality. The minimum exact defect is
+
+`n - 3 delta = 2`.
+
+## Two no-root cycles
+
+The `C(105,2)=5460` unordered pairs of no-root cycles split into exactly seven `S_7` orbits. Their orbit sizes are
+
+`105, 315, 630, 630, 1260, 1260, 1260`.
+
+A pair touches 4, 7, or 8 local quotient blocks, depending on its orbit.
+
+For `t=2`, a possible violation requires either
+
+- `k=1` and `p=0`, or
+- `k=2` and `p<=3`.
+
+Enumerating only states with `p<=3` over one representative of each pair orbit gives the following exact ledger. Each record is
+
+`(orbit size, touched blocks, states tested, crude-potential-negative states)`:
+
+```text
+(1260, 7,  36080, 185)
+(1260, 8, 103168, 315)
+( 315, 8, 103168, 315)
+( 630, 8, 103168, 315)
+(1260, 8, 103168, 315)
+( 105, 4,   1072,  13)
+( 630, 7,  36080, 226)
+```
+
+There are 1,684 crude-potential-negative states in total. Every one is reranked exactly in both `M` and `Q`. None violates the inequality. Again the minimum exact defect is
+
+`n - 3 delta = 2`.
+
+No floating-point or modular rank decision is used to reject one of these states.
+
+## Verified output
+
+The verifier returns
+
+```text
+PASS: relative four-cycle density for at most two no-root cycles
+M_rank 85
+T_rank 15
+Q_rank 70
+root0_blocks 35
+no_root_cycles 105
+one_no_root_orbits 1
+one_no_root_potential_negative_states 5
+one_no_root_min_exact_defect 2
+two_no_root_pair_orbits 7
+two_no_root_orbit_sizes [105, 315, 630, 630, 1260, 1260, 1260]
+two_no_root_potential_negative_states 1684
+two_no_root_min_exact_defect 2
+three_no_root_orbits_for_next_layer 77
+three_no_root_touched_block_range (4, 12)
+corollary_min_no_root_cycles_in_any_sufficient_44_family 3
+```
+
+## Next finite target
+
+The same reduction makes the three-no-root case much smaller than a blind search.
+
+For `t=3`,
+
+`n - 3K = 3 + p - 3k`.
+
+A crude violation is possible only in the two regimes
+
+- `k=2` with `p<=2`, or
+- `k=3` with `p<=5`.
+
+The 187,460 unordered triples of no-root cycles split into 77 `S_7` orbits. Their touched-block counts range from 4 to 12. A three-no-root verifier should work orbitwise and enumerate only the two regimes above, rather than all root-0 block states.
+
+For C-II itself, the direct bottleneck remains the 3,874 generic-H6 states. The exact state-specific forced segment-order scan and then quantitative sine-law metric compatibility are still the direct closure route. This rank-density work is a separate global simplification of the metric test.

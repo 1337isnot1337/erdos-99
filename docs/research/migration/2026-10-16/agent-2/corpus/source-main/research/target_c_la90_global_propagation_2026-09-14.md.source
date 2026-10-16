@@ -1,0 +1,325 @@
+# Erdős Problem #99 — LA90 propagation through the Type-II global ledgers
+
+**Date:** 2026-09-14  
+**Target:** Target C-II, canonical full-core Type-II branch  
+**Repository base:** `c710dd5e` on `research/c2-gluing-sol-20260914-r9`  
+**Claim class:** proof-only propagation of LA90 (`eta_grid=0.0009`)  
+**External input:** none beyond the already-audited Section-171 and stopped-train stack  
+**LEVEL I STATUS:** `STILL OPEN`
+
+LA90 raises the proof-only atomic train gain to
+
+\[
+\eta_{grid}=g=0.0009.
+\]
+
+Its source note deliberately stopped before recomputing the Section-171 endpoint and the downstream chamber/rhombus/residual constants. This note performs that propagation. No new local geometry is asserted here.
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},\qquad
+s_2=\sqrt{\Delta_2},\qquad
+\rho=0.7390851332151606\ldots,
+\]
+
+where `rho=cos(rho)`, and
+
+\[
+C_{146}={4\over9}(\pi+s_2)
+=1.8195135379794447\ldots .
+\]
+
+## 1. Correlated stopped-train split
+
+The exact identity
+
+\[
+\rho_{rec}+\sigma_R-q
+=2\left(T-{q\over2}-2\sqrt{R_4}\right)
+\]
+
+and LA90 give
+
+\[
+\boxed{
+\liminf {\rho_{rec}+\sigma_R-q\over D}\ge0.0018.
+}
+\tag{L90.1}
+\]
+
+Using `q/D>=2rho-o(1)`,
+
+\[
+\boxed{
+\liminf {\rho_{rec}+\sigma_R\over D}
+\ge2\rho+0.0018
+=1.479970266430321\ldots .
+}
+\tag{L90.2}
+\]
+
+Therefore at least one of
+
+\[
+\boxed{
+S={\rho_{rec}\over2}
+\ge\left({\rho\over2}+0.00045-o(1)\right)D
+=0.369992566607580\ldots D-o(D)
+}
+\tag{L90.3}
+\]
+
+or
+
+\[
+\boxed{
+\sigma_R\ge(\rho+0.0009-o(1))D
+=0.739985133215161\ldots D-o(D)
+}
+\tag{L90.4}
+\]
+
+must hold.
+
+On the rhombic branch,
+
+\[
+M_R={\sigma_R\over8}
+\left(4\sqrt{R_4}+{\sigma_R\over2}\right)
+\]
+
+gives
+
+\[
+\boxed{
+\liminf {M_R\over D^2}
+\ge {\rho+0.0009\over8}
+\left(4s_2+{\rho+0.0009\over2}\right)
+=0.386572284461081\ldots .
+}
+\tag{L90.5}
+\]
+
+The exact post-endpoint scalar identity also improves by `(0.0009-0.00058)/5` relative to P58:
+
+\[
+\boxed{
+\liminf\mu_D\ge1.785559210824532\ldots .
+}
+\tag{L90.6}
+\]
+
+The direct correlated endpoint/interface floor becomes
+
+\[
+\boxed{
+\liminf {J\over D}
+\ge2\rho+4s_2-\pi+0.0018
+=2.147628840296357\ldots .
+}
+\tag{L90.7}
+\]
+
+## 2. Section-171 endpoint with `g=0.0009`
+
+Audited Section 171 reduces every Type-II subsequential limit
+
+\[
+t=\lim{q-k\over D},\qquad
+\delta=\lim{b-P_F\over D}\ge0
+\]
+
+to
+
+\[
+F_t(\delta)=
+10t-5\pi-5\delta
++\left(81(\pi+\delta)^2\delta\right)^{1/3}
+-{8\Delta_2\over9t/2-2\pi-2\delta}
+\ge0.
+\tag{L90.8}
+\]
+
+With train gain `g`, the feasible detour interval is
+
+\[
+0\le\delta\le
+{{9\over2}(t-C_{146})-g\over2}.
+\tag{L90.9}
+\]
+
+Take
+
+\[
+g=0.0009,\qquad
+\varepsilon_{90}=0.0014758,
+\qquad
+t_{90}=C_{146}+\varepsilon_{90}.
+\tag{L90.10}
+\]
+
+Then
+
+\[
+\boxed{
+t_{90}=1.8209893379794447\ldots
+}
+\tag{L90.11}
+\]
+
+and the right endpoint of the feasible detour interval is exactly
+
+\[
+\boxed{
+\delta_{90}=0.00287055.
+}
+\tag{L90.12}
+\]
+
+At this endpoint the denominator in the last term of (L90.8) simplifies exactly to
+
+\[
+2s_2+g.
+\]
+
+The exact-rational certificate `verify_target_c_la90_global_propagation.py` proves:
+
+1. `F_{t90}` is strictly increasing on `0<=delta<=delta90`;
+2. `F_{t90}(delta90)<0`, with outward-rounding margin greater than `4e-5`;
+3. `partial F_t(delta)/partial t>0` throughout the feasible domain.
+
+Hence every feasible `delta` gives `F_{t90}(delta)<0`. For `t<t90`, the admissible detour interval only shrinks and `F_t(delta)<F_{t90}(delta)` at fixed `delta`. Thus no Type-II limit can satisfy `t<=t90`.
+
+Therefore
+
+\[
+\boxed{
+\liminf {q-k\over D}
+\ge C_{146}+0.0014758
+=1.8209893379794447\ldots .
+}
+\tag{L90.13}
+\]
+
+A direct high-precision numerical solve of the same endpoint equation gives
+
+\[
+\varepsilon_*=0.0014759617517679997\ldots,
+\]
+
+so the certified value retains about `1.62e-7` of offset slack. Further decimal tuning of this scalar endpoint is not a useful closure route.
+
+## 3. Mandatory chamber/interface floor
+
+Using
+
+\[
+{T-q/2\over D}\ge2s_2+0.0009-o(1),
+\]
+
+`J=2T-P_F`, `P_F/D->pi`, and (L90.13),
+
+\[
+\boxed{
+\liminf {J\over D}
+\ge j_{90}:=t_{90}+2(2s_2+0.0009)-\pi
+=2.490447911845481\ldots .
+}
+\tag{L90.14}
+\]
+
+The chamber decomposition
+
+\[
+\Sigma_{ch}=J+a+L_{add}+R_F
+\]
+
+therefore gives
+
+\[
+\boxed{
+\liminf {\Sigma_{ch}\over D}
+\ge2.490447911845481\ldots .
+}
+\tag{L90.15}
+\]
+
+As in P58, this is mandatory interface complexity, not free packing spare.
+
+## 4. `H` bootstrap and linear rhombus deficit
+
+The exact relation
+
+\[
+H={J\over2}+(q-k)-{P_F\over2}
+\]
+
+gives
+
+\[
+\boxed{
+\liminf {H\over D}
+\ge h_{90}:={j_{90}\over2}+t_{90}-{\pi\over2}
+=1.495416967107289\ldots .
+}
+\tag{L90.16}
+\]
+
+Hence
+
+\[
+\boxed{
+\liminf {A_{ch}-a_0Z_{ch}\over D}
+\ge {\sqrt3\over4}h_{90}
+=0.647534541382595\ldots,
+}
+\tag{L90.17}
+\]
+
+and
+
+\[
+\boxed{
+\liminf {\Delta_2D^2-R_4\over D}
+\ge {h_{90}\over2}
+=0.747708483553644\ldots .
+}
+\tag{L90.18}
+\]
+
+## 5. Corrected residual budget
+
+The finite corrected residual cap remains
+
+\[
+R_F+\Sigma_{ext}
+<{P_K\over2}+P_F-q-{\delta_K+E_4\over a_0}.
+\]
+
+Using `q>=q-k`, `P_K,P_F<=pi D`, and (L90.13),
+
+\[
+\boxed{
+\limsup {R_F+\Sigma_{ext}\over D}
+\le {3\pi\over2}-t_{90}
+=2.891399642405245\ldots .
+}
+\tag{L90.19}
+\]
+
+The stronger atomic theorem therefore continues to move the two first-order ledgers in the desired directions: mandatory chamber/interface complexity increases and genuine residual allowance decreases. Their present scalar gap is still far from a contradiction.
+
+## 6. What changed, and what did not
+
+Relative to the earlier `g=0.00058` propagation:
+
+- the certified `(q-k)/D` offset rises from `0.0014085` to `0.0014758`;
+- the singleton alternative rises to `0.3699925666D-o(D)`;
+- the rhombic alternative rises to `0.7399851332D-o(D)` and `M_R>=0.3865722844D^2-o(D^2)`;
+- the mandatory chamber floor rises to `2.4904479118D-o(D)`;
+- the corrected residual cap falls to `2.8913996424D+o(D)`.
+
+None of these scalar improvements closes C-II. LA90 itself identifies the next possible atomic improvement as a direct six-cross-label optimization, but the one-pair architecture is already near its numerical ceiling. The more promising closure work is therefore structural: combine the stronger low-`t` endpoint with the newly proved pentagon/network and outer-tooth/long-side constraints on `main`.
+
+**Disposition:** proof-only LA90 propagation. C-II and Level I remain open.

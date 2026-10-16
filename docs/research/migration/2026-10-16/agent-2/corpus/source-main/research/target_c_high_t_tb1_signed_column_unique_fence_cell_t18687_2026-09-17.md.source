@@ -1,0 +1,297 @@
+# Target C-II — COLUMN-UNIQUE SIGNED braids share one fixed `B_0` fence cell
+
+**Date:** 2026-09-17  
+**Status:** proof-only strengthening of the SIGNED / COMMON-CUT / COLUMN-UNIQUE branch; no canonical promotion claimed  
+**Scope:** the 15-spaced one-sign strong-TB1 Horn upper family through `t=(q-k)/D<=1.8687`  
+**Dependencies:** SIGNED common-cut robust-owner-grid theorem; proper-crosscut train pseudosegment model; pairwise noncrossing of the common `B_0` train family; line/train uniqueness  
+**Certificate:** `research/verify_target_c_high_t_tb1_signed_column_unique_fence_cell_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The previous SIGNED common-cut theorem leaves one exact alternative in which
+
+\[
+D^{\varepsilon_K-o(1)}
+\]
+
+pairwise-crossing inactive near-diameters meet every train of the fixed linear family `B_0` at most once. The `B_0` trains are pairwise noncrossing proper crosscuts and have one common order on every robust owner row.
+
+That uniqueness converts the whole branch into an interval system.
+
+Number the trains
+
+\[
+b_1,b_2,\ldots,b_M,
+\qquad
+M>0.0783D-o(D),
+\]
+
+in their common crosscut order. They divide the source disk into `M+1` fence cells. For a retained SIGNED chord `e=xy`, let `c(x),c(y)` be the two endpoint-cell ranks.
+
+Because `e` meets each `b_j` at most once and all such meetings are proper, it meets exactly the consecutive set
+
+\[
+\boxed{
+I_B(e)
+=\{\min(c(x),c(y))+1,\ldots,\max(c(x),c(y))\}.
+}
+\]
+
+Equivalently the chord is confined to the closed fence interval
+
+\[
+J_B(e)
+=[\min(c(x),c(y)),\max(c(x),c(y))].
+\]
+
+Any two retained SIGNED chords cross properly. Their closed fence intervals therefore cannot be disjoint: a `B_0` crosscut lying strictly between two disjoint intervals would separate the two straight segments. Hence the intervals `J_B(e)` are pairwise intersecting. One-dimensional Helly gives one fixed cell rank `g_D` lying in every interval.
+
+Thus every chord of the polynomial SIGNED braid connects a cell on the left of `g_D` to a cell on the right of `g_D`, allowing equality. After one four-way pigeonhole, a polynomial sub-braid has one of four exact forms:
+
+1. **THROUGH:** every chord passes strictly through the common cell and therefore crosses the two bounding `B_0` trains once each;
+2. **LEFT-ANCHORED:** every chord has one endpoint in the common cell and the other on the left;
+3. **RIGHT-ANCHORED:** every chord has one endpoint in the common cell and the other on the right;
+4. **CELL-INTERNAL:** both endpoints of every chord lie in the same fixed `B_0` cell.
+
+The surviving size is still
+
+\[
+D^{\varepsilon_K-o(1)}.
+\]
+
+So COLUMN-UNIQUE no longer permits a polynomial crossing braid spread among unrelated train-fence cells. The entire obstruction is forced through one fixed cell of the same source-wide `B_0` fence.
+
+---
+
+## 1. The fixed `B_0` family is an ordered noncrossing fence
+
+Use the COLUMN-UNIQUE outcome of the preceding robust-owner-grid theorem. It supplies:
+
+- a pairwise-properly-crossing vertex-disjoint SIGNED chord family `E_D` with
+  \[
+  |E_D|=D^{\varepsilon_K-o(1)};
+  \]
+- a fixed global transverse train family `B_0` with
+  \[
+  |B_0|>0.0783D-o(D);
+  \]
+- at least `D^(epsilon_K-o(1))` robust owner rows, each crossed by every `b in B_0`;
+- and, crucially,
+  \[
+  \boxed{
+  e\text{ meets }b\text{ at most once}
+  \quad(e\in E_D,\ b\in B_0).
+  }
+  \tag{FC.1}
+  \]
+
+The common-grid theorem gives that the trains in `B_0` are internally noncrossing and occur in one common order on every robust owner row. In the proper-crosscut model they therefore form an ordered fence
+
+\[
+b_1<\cdots<b_M,
+\qquad M=|B_0|.
+\tag{FC.2}
+
+The fence has cells
+
+\[
+C_0,C_1,\ldots,C_M,
+\tag{FC.3}
+
+where `C_s` is the component between `b_s` and `b_{s+1}` with the usual exterior conventions at `s=0,M`.
+
+Every source point not on a train belongs to exactly one such cell. If an endpoint lies on a train, perturb the cell convention infinitesimally in the inherited orientation; the blocker endpoints are source vertices whereas train curves run through contact-edge midpoints, so in the present midpoint model this degeneracy does not occur.
+
+---
+
+## 2. COLUMN-UNIQUE gives an exact consecutive incidence interval
+
+Take a chord
+
+\[
+e=xy\in E_D
+\]
+
+and write
+
+\[
+p=c(x),\qquad q=c(y),
+\qquad 0\le p,q\le M.
+\tag{FC.4}
+
+Assume `p<q`; the other orientation is symmetric.
+
+Every train
+
+\[
+b_{p+1},b_{p+2},\ldots,b_q
+\]
+
+separates the endpoint cells `C_p` and `C_q`, so the connected segment `xy` must meet it at least once. By (FC.1) it meets it exactly once.
+
+Every train `b_j` with `j<=p` or `j>q` has both endpoints on the same side. Any intersection between the straight line and the train is proper because the line direction lies a fixed positive angular distance outside that train's midpoint-step cone. A same-side arc has an even number of proper intersections with a separating proper crosscut; (FC.1) allows at most one. Hence there are none.
+
+Therefore
+
+\[
+\boxed{
+I_B(e)=\{p+1,p+2,\ldots,q\}.
+}
+\tag{FC.5}
+
+Define the closed endpoint-cell interval
+
+\[
+\boxed{
+J_B(e)=[p,q].
+}
+\tag{FC.6}
+
+Equation (FC.5) also says that the whole segment `e` is contained in the closed union of fence cells and boundary trains indexed by `J_B(e)`. It cannot leave that fence slab without crossing one of its boundary trains, which would add a forbidden extra train intersection.
+
+---
+
+## 3. Pairwise crossing forces pairwise interval overlap
+
+Take two distinct retained chords `e,f`. They cross properly by construction.
+
+Suppose their closed cell intervals were disjoint. After relabeling,
+
+\[
+\max J_B(e)<\min J_B(f).
+\tag{FC.7}
+
+Choose any train `b_k` whose index separates those two cell intervals. By (FC.5), neither chord crosses `b_k`: both endpoints of `e` lie on one side and both endpoints of `f` on the other.
+
+Since `b_k` is a proper crosscut, the two closed fence slabs containing `e` and `f` are disjoint. The two straight segments therefore cannot meet, contradicting their proper crossing.
+
+Hence
+
+\[
+\boxed{
+J_B(e)\cap J_B(f)\ne\varnothing
+\quad\text{for every }e,f\in E_D.
+}
+\tag{FC.8}
+
+The family consists of closed intervals on a line. Pairwise intersection is therefore equivalent to total intersection:
+
+\[
+\boxed{
+\bigcap_{e\in E_D}J_B(e)\ne\varnothing.
+}
+\tag{FC.9}
+
+Choose one integer cell rank
+
+\[
+g_D\in\bigcap_{e\in E_D}J_B(e).
+\tag{FC.10}
+
+This rank depends on the source but not on the blocker.
+
+Thus every retained SIGNED chord has endpoint-cell ranks `p,q` satisfying
+
+\[
+\boxed{
+\min(p,q)\le g_D\le\max(p,q).
+}
+\tag{FC.11}
+
+---
+
+## 4. Four exact common-cell normal forms
+
+Orient each chord by its fence-cell ranks so that
+
+\[
+p\le q.
+\]
+
+Because `g_D in [p,q]`, exactly one of the following holds:
+
+### THROUGH
+
+\[
+p<g_D<q.
+\tag{FC.12}
+\]
+
+If `0<g_D<M`, then (FC.5) shows that every THROUGH chord crosses both trains bounding the common cell,
+
+\[
+b_{g_D},\qquad b_{g_D+1},
+\]
+
+exactly once. At an exterior cell only the existing boundary train is present.
+
+### LEFT-ANCHORED
+
+\[
+p<q=g_D.
+\tag{FC.13}
+\]
+
+One endpoint lies in `C_{g_D}` and the other lies strictly to its left.
+
+### RIGHT-ANCHORED
+
+\[
+p=g_D<q.
+\tag{FC.14}
+\]
+
+One endpoint lies in `C_{g_D}` and the other lies strictly to its right.
+
+### CELL-INTERNAL
+
+\[
+p=q=g_D.
+\tag{FC.15}
+\]
+
+Both endpoints lie in the same fixed fence cell `C_{g_D}` and the chord avoids every `B_0` train.
+
+These four classes partition `E_D`. Retain the largest. The resulting sub-braid `E_D^{cell}` satisfies
+
+\[
+\boxed{
+|E_D^{cell}|\ge{1\over4}|E_D|
+=D^{\varepsilon_K-o(1)}.
+}
+\tag{FC.16}
+
+Every chord in `E_D^{cell}` remains:
+
+- vertex-disjoint from every other retained chord;
+- pairwise properly crossing;
+- an inactive pair of length `D-O(D^-1)`;
+- SIGNED with the same fixed macroscopic negative `w_*` projection;
+- supported by the same robust-owner construction from the preceding theorem.
+
+Only its exact fence-cell relation has been purified.
+
+---
+
+## 5. Frontier effect
+
+The SIGNED / COMMON-CUT branch now has exact normal forms on both sides of the row/column uniqueness fork.
+
+```text
+ROW-UNIQUE:
+    Theta(log D) one-sided crossing cable;
+    D^(epsilon_K/2-o(1)) robust co-phased rows;
+    one fixed >0.0783D column family B_0.
+
+COLUMN-UNIQUE:
+    D^(epsilon_K-o(1)) pairwise-crossing SIGNED chords;
+    each is a pseudosegment relative to every b in B_0;
+    all closed B_0 endpoint-cell intervals share one fixed cell C_g;
+    after a four-way split all chords have one exact THROUGH / LEFT-ANCHORED /
+    RIGHT-ANCHORED / CELL-INTERNAL relation to C_g.
+```
+
+The next COLUMN-UNIQUE target is metric. THROUGH gives a polynomial braid crossing one fixed adjacent pair of `B_0` trains exactly once each. The anchored cases put one endpoint population in one fixed train cell. CELL-INTERNAL traps both endpoint populations of every near-diameter in that single fixed cell. Any bound on the metric width or source capacity of one `B_0` cell would therefore attack the whole remaining COLUMN-UNIQUE branch at once.
+
+No such cell-width bound is claimed here.
+
+**Disposition:** converted COLUMN-UNIQUE into one fixed train-fence-cell obstruction and reduced it to four exact cell types. C-II and Level I remain open.

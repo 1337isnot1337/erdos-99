@@ -1,0 +1,61 @@
+# Target C — C78 C75/train-width synthesis
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Audit: [target_c_train_track_crossroute_audit_2026-08-31.md](../../reports/target_c_train_track_crossroute_audit_2026-08-31.md).
+
+The post-C76 audit found that the basic train-width theorem is not new to Target C.
+Shared Theory Section 22 already proves the stronger defect-extended per-track span
+bound, and Target B Section 24 upgrades it to exact hull support width.
+
+The useful Target C contribution is the combination with C75's short-diagonal slack.
+In the notation of Shared Theory Section 22,
+
+`L_tau=sum_(f in tau) sin(phi_f)`
+
+and
+
+`L_tau + (sqrt(3)/2) s_F(tau) + outer-depth terms <= D`.
+
+Summing over tracks gives a bound at least as strong as
+
+`T D >= 2 sum_(f in F_4) area(f)`.
+
+C75 adds
+
+`area(f)>=sqrt(3)/2+c_rh(s_f-1)`.
+
+Therefore the retained synthesis is
+
+`sqrt(3) F_4 + 2 c_rh Sigma_diag
+ + (sqrt(3)/2) b_F + H_infty
+ <= T D`,
+
+when the Section-22 endpoint terms are defined, with
+
+`c_rh=(1-sqrt(3)/2)/(sqrt(2)-1)`.
+
+The corresponding directional version follows by replacing `D` track by track with
+`w_K(nu_tau)` using Target B Section 24 / Shared Theory Section 23.
+
+## What is already known more strongly
+
+Target B already proves:
+
+- `T>=2 sqrt(F_4)` via the train crossing graph;
+- exact support-depth identities;
+- uniform hull-width saturation;
+- sixfold phase coherence and grain decomposition;
+- in the pure rhombic-disk branch,
+  `liminf T/D >= 2.5395008183...`.
+
+So the earlier Target C consequence `T>=(pi/2)D-O(1)` is valid but weaker and should
+not be treated as the frontier.
+
+## Current Target C use
+
+The research target is now cross-route: combine the C66/C76 approach to the exact
+straight-chain KKT face with Target B's macroscopic train-angle neutral/equality space.
+The obstacle in Target B is higher-order diameter locking without quantitative KKT
+weights; Target C's response-defect concentration is a possible way to supply exactly
+that missing weight information.

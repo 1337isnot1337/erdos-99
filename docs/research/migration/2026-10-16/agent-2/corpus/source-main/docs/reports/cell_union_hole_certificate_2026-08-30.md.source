@@ -1,0 +1,130 @@
+<!-- theorem-state: {"artifact_id":"ART-23A79C28A4F5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Exact cell-union localization for the Target A scaffold
+
+This note records a geometric consequence of the exact three-site/four-site
+conflict classification. It is a localization result, not a closure of Erdős
+Problem #99.
+
+Let \(\Lambda\) be the unit triangular lattice and let \(X\) be the blocker shore
+of a compatible-collar scaffold. For \(x\in X\), let
+
+\[
+N_\Lambda(x)=\{v\in\Lambda:|x-v|<1\},\qquad
+C_x=\operatorname{conv}N_\Lambda(x).
+\]
+
+The scaffold classification gives three vertices of an elementary unit triangle
+or four vertices of a unit lozenge, and all of those vertices are at strict distance
+less than one from \(x\). This immediately implies a stronger geometric statement
+than the incidence definition alone suggests.
+
+## Cell-cover lemma
+
+For every \(x\in X\),
+
+\[
+\boxed{C_x\subset B(x,1).}
+\tag{1}
+\]
+
+Indeed, if \(z=\sum_v\lambda_vv\in C_x\), where \(\lambda_v\ge0\) and
+\(\sum_v\lambda_v=1\), then
+
+\[
+|z-x|\le\sum_v\lambda_v|v-x|<\sum_v\lambda_v=1.
+\]
+
+The strict inequality survives because the cell has finitely many vertices and
+every vertex clearance is strict. This proof applies to both a monomer triangle and
+a dimer lozenge; no regularity of the actual blocker position beyond the classified
+vertex inequalities is used.
+
+## Exact lattice-hole identity
+
+The reverse inclusion \(N_\Lambda(x)\subseteq\Lambda\cap C_x\) is tautological. The
+cell-cover lemma gives the other inclusion: every lattice site \(v\in C_x\) obeys
+\(|v-x|<1\). Therefore
+
+\[
+\boxed{
+\Lambda\cap C_x=N_\Lambda(x).
+}
+\tag{2}
+\]
+
+For a finite cell family define its geometric union
+
+\[
+\mathcal U_X=\bigcup_{x\in X}C_x.
+\]
+
+Taking unions in (2) gives
+
+\[
+\boxed{
+\Lambda\cap\mathcal U_X=N_\Lambda(X).
+}
+\tag{3}
+\]
+
+Hence, for the inner lattice shore \(Y_{\rm in}\),
+
+\[
+\boxed{
+Y_{\rm in}\setminus N_\Lambda(X)
+=Y_{\rm in}\setminus\mathcal U_X.
+}
+\tag{4}
+\]
+
+The right side is the set of lattice sites lying in geometric gaps of the cell
+union. Every such site is conflict-free with the entire blocker shore. It is an
+independent right-side set, so it gives the immediate Hall certificate
+
+\[
+\boxed{
+h(G)\ge
+\left|Y_{\rm in}\setminus\mathcal U_X\right|.
+}
+\tag{5}
+\]
+
+This identifies the previously abstract free-sink count \(z\) with a spatial
+lattice-hole count. In a hypothetical survivor, \(h(G)\le j-1\), so at most \(j-1\)
+inner lattice sites can lie outside the cell union:
+
+\[
+\boxed{
+\left|Y_{\rm in}\setminus\mathcal U_X\right|\le j-1.
+}
+\tag{6}
+\]
+
+This is useful because it separates the two possible sources of the remaining Hall
+deficit. If (6) fails, a direct free-sink certificate closes the scaffold. If (6)
+holds, every additional deficit must come from a nontrivial deletion/cycle or
+boundary-routing certificate inside a lattice-hole-sparse cell union.
+
+## What the lemma does not prove
+
+The lattice-hole identity is intentionally discrete. A geometrically long, narrow
+gap can contain no lattice vertex in its interior, so a bound on the number of free
+lattice sites does not by itself bound gap area, inradius, or the number of
+nonlattice source replacement points. It also does not force a cell union with few
+lattice holes to be a single monomer or dimer phase. The all-\(+\) monomer and
+lozenge/dimer crystalline regressions remain exact zero-Hall-deficiency models once
+the right shore is truncated to the cell neighborhood.
+
+Thus the exact Target A endpoint is unchanged:
+
+\[
+\dim\ker S\ge\Delta_\Lambda-d_{\rm int},
+\]
+
+or equivalently \(h(G)\ge j\). The new certificate tells us precisely where a
+failure of the easy free-sink route must live: in a lattice-hole-sparse geometric
+cell union with nontrivial Hall routing.
+
+The executable exact margins for the unit-triangle and unit-lozenge cases are in
+`research/cell_union_certificate.py`, with tests in
+`research/test_cell_union_certificate.py`.

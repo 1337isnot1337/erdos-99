@@ -1,0 +1,166 @@
+<!-- theorem-state: {"artifact_id":"ART-AA9D3237A717","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: one-deficit completion or a bounded Delaunay defect set
+
+Date: 2026-10-07. Authority: audit.75, main
+`baadff26b3fae1107f8ed2d9d18f03f78cd4a23b`.
+**Proved candidate awaiting independent audit.** No promotion.
+
+## 1. Exact one-deficit alternative
+
+Let F be a convex unit wall with b vertices and z old interior points,
+all mutually unit-separated. Put a=sqrt(3)/4, a_0=2*a and
+
+`sigma_0=area(F)-a*(2*z+b-2)`.
+
+Assume 0<=sigma_0<=a_0+1/1000. Extend the packing to a saturated
+auxiliary plane packing as in the effective small-slack report. At most
+one point is added in F. Exactly one of the following occurs:
+
+1. One point is added. The completed cloud has area-form slack at most
+   1/1000 and has the complete developed triangular-lattice polygon
+   chart of that report. The old cloud is that *controlled deformed*
+   chart with the single added point omitted.
+2. No point is added. The old cloud is saturated in F and has a
+   Delaunay triangulation with at most 51 obtuse triangles and at most
+   541 exceptional vertices. Outside this bounded set all incident
+   triangles are acute with individual area excess below 1/100, and
+   every interior vertex has six incident triangles.
+
+This is independent of M and of the cloud's initial coordinates. It does
+not assert the old points form an exact lattice with a vacancy. In the
+second branch the defect set can obstruct global equilateral development;
+no vacancy relocation or packet is supplied by its cardinality alone.
+The metric excess need not localize in that exceptional set. The exact
+macroscopic rhombic-grid regression below has one area-unit of slack,
+no extra insertable site, and no exceptional vertex for M>=7: its metric
+strain is spread over all cells. A controlled metric budget remains
+essential even when the combinatorial defect count is zero.
+
+For the arithmetic six-wall z=N-1 cloud at
+0<theta<=1/(10000*M^3), the full-count area bound gives this hypothesis.
+The new packet already excludes that specified one-deficit wall class.
+This theorem instead makes an arbitrary near-equality unit-wall cloud
+available to future wall extraction/defect movement without relying on
+the unproved strong-solidity classification.
+
+## 2. Completion accounting is exact
+
+Oler applied to the b wall labels and the z interior labels gives
+sigma_0>=0. Each added interior point increases the triangle count
+2*z+b-2 by two. If k points are added, the completed area slack is
+
+`sigma=sigma_0-a_0*k>=0`.
+
+Therefore k<=floor(sigma_0/a_0). Under the hypothesis, k is zero or
+one. No new point can lie in the relative interior of a unit wall edge,
+by separation from its endpoints, so every added point of F is interior.
+If k=1, its residual slack is between zero and 1/1000. Apply the proved
+candidate effective-chart theorem at that exact scope.
+
+The additions are auxiliary. They do not disappear from a source ledger
+and are not a same-cardinality competitor. If one later uses them in a
+finite source replacement, their full count, contacts, triangles and
+upper constraints must be paid and checked separately.
+
+## 3. Defects charged to a single nonoverlapping area currency
+
+The saturated triangulation has sides at least one and circumradii at
+most one. Every triangle has area at least a, and
+`sum_T sigma_T=sigma`, where sigma_T=area(T)-a>=0.
+These are disjoint triangle areas; this is not a sum of overlapping
+nested stress demands.
+
+Let H be the number of obtuse-or-right triangles. For each such triangle,
+its longest edge is internal and the opposite neighbour gives the pair
+gap
+
+`sigma_T+sigma_neighbour >= delta=(2-sqrt(3))/4`.
+
+This exact gap is proved in the effective-chart report from the local
+Delaunay angle inequality and the unit-side/circumradius bounds. Summing
+over obtuse triangles charges each triangle at most four times: once
+as itself, and at most once across each of its three edges as a neighbour.
+Thus
+
+`H*delta<=4*sigma`.
+
+At sigma<=a_0+1/1000 one has 4*sigma<52*delta, so H<=51.
+This is an exact universal bound, not negative computational search.
+
+There are at most floor(100*sigma)<=86 triangles with sigma_T>=1/100.
+Call these and the obtuse triangles defective. Their union has at most
+137 triangles and at most 411 incident vertices. Every remaining triangle
+is acute, has side lengths below 11/10, and satisfies
+
+`max_side-1<=5*sigma_T`,
+`|angle-pi/3|<=50*sigma_T`.
+
+The side/angle proof only uses sigma_T<1/100; the threshold is below
+f(11/10)-a and below 1/2-a, as required by that proof.
+
+At an interior vertex incident to no defective triangle, valence k!=6
+forces the total incident area excess S_v to satisfy
+
+`50*S_v >= |2*pi-k*pi/3| >= pi/3`,
+
+so S_v>1/50. Across all such vertices, sum S_v<=3*sigma. There are
+therefore fewer than 150*sigma<131 such vertices, hence at most 130.
+Together with the vertices incident to defective triangles this gives
+at most 411+130=541 exceptional vertices.
+
+No position, diameter incidence, contact degree or stress multiplier is
+silently inferred from being exceptional. The conclusion is a finite
+Delaunay combinatorial/metric defect budget.
+
+## 4. A general boundary-order completion theorem
+
+The same proof works for arbitrary finite nonnegative sigma_0. It gives
+a completed saturated cloud with
+
+`k<=sigma_0/a_0` auxiliary additions,
+`H<=4*sigma/delta`,
+`number of exceptional vertices <= (12/delta+450)*sigma`,
+
+with integer rounding downward where appropriate. Here sigma is the
+residual slack after the additions. The exceptional set includes vertices
+of triangles with excess >=1/100, all obtuse triangles, and all remaining
+interior vertices of valence other than six. Constants do not depend on
+cardinality, diameter or shape.
+
+Consequently an actual bounded inactive **unit-contact face** in the
+canonical macroscopic branch, with perimeter b=O(D) and area/population
+agreement to O(D), admits an auxiliary completion costing O(D) sites
+and a Delaunay skeleton with O(D) exceptional vertices. The quadratic
+old isolate population is retained. Outside that skeleton the triangles
+have the stated local near-equilateral control and interior valence six.
+
+This is a transfer for bounded closed unit faces, not nonunit-chord
+outer pockets or exterior caps. The completion is not yet a packet, and
+O(D) defect currency cannot be dropped from an exact one-integer argument.
+It identifies the remaining load-bearing theorem: move/pay the completed
+defects and boundary cost through an exact full-source exchange, or
+derive a positive dual supported on this actual skeleton that localizes
+a removable guard/diameter cover.
+
+## 5. Next attacks and limits
+
+Three different attacks survive:
+
+- If the added-point branch occurs, use its controlled missing site and
+  the boundary curvature profiles in a nonaffine vacancy-opening packet.
+- If it does not, propagate or relocate the bounded defect set using
+  exact Delaunay/bar constraints, rather than imposing a vacancy chart.
+- For boundary-order canonical slack, couple the O(D) skeleton to actual
+  wall/core or face-train motion, keeping every boundary and completion
+  label in the contact/diameter/cardinality ledger.
+
+The result supplies neither a global crystalline orientation after removing
+defects nor finite compatibility between different developed regions.
+Defect holonomy and cuts must be proved or paid. No triangle-free globally
+optimal family, general chamber contradiction, C-II or Level I closure
+is asserted. The continuous closure goal remains active.
+
+See `target_c_one_deficit_diffuse_strain_nonglobal_regression_2026-10-07.md`
+for an exact regression against upgrading this alternative to discrete
+vacancy localization. Its whole-source square competitor certifies
+nonglobality, so it supplies no Level I disproof.

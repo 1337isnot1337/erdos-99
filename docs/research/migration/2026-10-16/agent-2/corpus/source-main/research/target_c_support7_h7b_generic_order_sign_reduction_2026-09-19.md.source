@@ -1,0 +1,298 @@
+# Target C-II — generic interior-ground support-seven `H7b` is a finite 176-orbit problem
+
+**Date:** 2026-09-19  
+**Claim class:** exact generic order/sign reduction with eight exact metric exclusions  
+**Scope:** degree-pure support-seven reciprocal branch with ground strictly interior, all seven non-ground reciprocal points in strictly convex position, and no reciprocal collinear triple  
+**Depends on:** audited support-seven endpoint reduction; local non-ground hull `2+3` sign alternation theorem; reciprocal signed trace identity; strict negative type of Euclidean distance  
+**Certificate:** `research/verify_target_c_support7_h7b_generic_order_sign_reduction_2026_09_19.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The support-seven endpoint leaves two `H7` branches. This note treats the generic interior-ground branch:
+
+\[
+y_0=0\in\operatorname{int}\operatorname{conv}\{y_1,\ldots,y_7\},
+\]
+
+with `y_1,...,y_7` the vertices of a strict convex heptagon in cyclic order and no three of the eight reciprocal points collinear.
+
+The exact reduction is
+
+\[
+\boxed{
+184\text{ generic order/sign orbits}
+\longrightarrow
+176,
+}
+\]
+
+with the eight exclusions proved by exact signed-distance certificates. The surviving count is
+
+\[
+\boxed{112\ C_7+64\ (C_3\sqcup C_4).}
+\]
+
+This is not a support-seven exclusion. The collinearity walls classified in `target_c_support7_reciprocal_collinearity_2026-09-19.md`, the ground-on-hull `H7a` branch, and `H6` remain separate.
+
+---
+
+## 1. The interior ground has only five radial slots at each hull vertex
+
+Label the non-ground hull cyclically
+
+\[
+1,2,\ldots,7.
+\]
+
+At hull vertex `i`, the rays to the other six hull vertices occur in the fixed interior-cone order
+
+\[
+i+1,i+2,\ldots,i-1\pmod7.
+\tag{1.1}
+\]
+
+Because `y_0` is strictly interior and the branch is generic, the ray `iy_0` lies strictly between two of those six hull rays, never on a hull ray and never outside the cone bounded by the adjacent hull edges. Hence there is a unique slot
+
+\[
+k_i\in\{1,2,3,4,5\}
+\tag{1.2}
+\]
+
+such that exactly `k_i` hull rays precede the ground ray in (1.1).
+
+Let
+
+\[
+\chi(i,j,0)=\operatorname{sgn}\det(y_j-y_i,-y_i).
+\]
+
+For a fixed slot `k_i`, the sign of `chi(i,j,0)` is positive exactly for the first `k_i` entries of (1.1). Alternation of orientation gives
+
+\[
+\chi(i,j,0)=-\chi(j,i,0).
+\tag{1.3}
+\]
+
+The companion verifier exhausts all `5^7=78125` slot vectors and finds exactly
+
+\[
+\boxed{57}
+\tag{1.4}
+\]
+
+that satisfy all 21 conditions (1.3).
+
+This is used only as a necessary-condition census. The proof does not claim that every one of the 57 abstract slot vectors is realized by an interior point of a convex heptagon.
+
+---
+
+## 2. Local `2+3` alternation reduces each slot/missing-graph state to finite signs
+
+The audited support-seven endpoint gives
+
+\[
+L=K_7\setminus R\cong C_7\quad\text{or}\quad C_3\sqcup C_4.
+\tag{2.1}
+\]
+
+There are exactly 360 labelled `C7` placements and 105 labelled `C3+C4` placements on the seven hull labels.
+
+At non-ground vertex `i`, start with the seven-ray order obtained by inserting the ground ray into (1.1), then delete the two rays corresponding to the two missing neighbors of `i` in `L`. Exactly five present reciprocal rays remain: the ground edge plus four relation edges.
+
+The local hull theorem applies because `i` is a reciprocal hull vertex. The signs split `2+3`, and one sign class occupies exactly raw positions 2 and 4. Thus there are only two local sign choices at each `i`, related by sign complement.
+
+Require the sign assigned to every undirected reciprocal edge to agree at its two endpoints. Exhausting the 465 labelled missing graphs, the 57 radial slot vectors, and the local binary choices leaves
+
+\[
+\boxed{4332}
+\tag{2.2}
+\]
+
+labelled edge-consistent states, split as
+
+\[
+\boxed{2736\ C_7+1596\ (C_3\sqcup C_4).}
+\tag{2.3}
+\]
+
+Quotienting by the dihedral group of the convex heptagon and by global sign reversal gives
+
+\[
+\boxed{184\text{ exact generic }H7b\text{ order/sign orbits}}
+\tag{2.4}
+\]
+
+with type split
+
+\[
+\boxed{120\ C_7+64\ (C_3\sqcup C_4).}
+\tag{2.5}
+\]
+
+All of this is integer/set combinatorics.
+
+---
+
+## 3. Metric residuals available in the generic branch
+
+Write
+
+\[
+d_{ij}=|y_i-y_j|.
+\]
+
+The reciprocal trace identity says
+
+\[
+L_s:=\sum_{ij\in E(H)}s_{ij}d_{ij}=0.
+\tag{3.1}
+\]
+
+Three families of strict negative linear residuals are available.
+
+First, because the branch is generic, every triangle is noncollinear. For any distinct `a,b,c`, for example,
+
+\[
+T(ab;ac,bc):=d_{ab}-d_{ac}-d_{bc}<0.
+\tag{3.2}
+\]
+
+Second, for cyclic hull vertices `1<=a<b<c<d<=7`, strict convexity gives
+
+\[
+Q_1:=d_{ab}+d_{cd}-d_{ac}-d_{bd}<0,
+\tag{3.3}
+\]
+
+\[
+Q_2:=d_{ad}+d_{bc}-d_{ac}-d_{bd}<0.
+\tag{3.4}
+\]
+
+These follow by splitting the two crossing diagonals at their intersection.
+
+Third, Euclidean distance is of strict negative type. For every nonzero real vector `c=(c_0,...,c_7)` with `sum c_i=0`, pairwise distinct points satisfy
+
+\[
+N(c):=\sum_{i<j}2c_ic_jd_{ij}<0.
+\tag{3.5}
+\]
+
+The certificates below use only integer `c_i` in `{-1,0,1}`.
+
+A positive rational combination of residuals (3.2)--(3.5) is strictly negative. Therefore, if its coefficient vector in the 28 distances is exactly the signed trace vector in (3.1), that order/sign orbit is impossible.
+
+Missing reciprocal edges cause no issue: their distances may appear as auxiliary variables inside the residuals, but their total coefficient cancels to zero in the exact certificate.
+
+---
+
+## 4. Eight `C7` orbits have exact signed-trace certificates
+
+The verifier identifies the eight candidates by their complete canonical signature `(L, radial slots, positive present edges)` and checks every certificate over `fractions.Fraction`. No floating point or LP result is trusted by the certificate.
+
+Three candidates have separate rational certificates using `T`, `Q`, and `N` residuals. Their canonical signatures begin with the standard missing cycle
+
+\[
+L=\{12,17,23,34,45,56,67\}
+\tag{4.1}
+\]
+
+and slot vectors
+
+\[
+(1,1,5,5,4,3,2),
+\quad
+(1,3,5,4,3,3,2),
+\quad
+(3,3,3,3,3,3,3).
+\tag{4.2}
+\]
+
+The complete positive edge sets and every rational residual coefficient are hard-coded and coefficient-checked by the exact verifier.
+
+The remaining five candidates have the same signed trace vector. Their missing cycle is
+
+\[
+L=\{14,15,25,26,36,37,47\},
+\tag{4.3}
+\]
+
+and their five slot vectors are
+
+\[
+\begin{aligned}
+&(2,2,2,4,4,4,3),\\
+&(2,2,3,4,4,3,3),\\
+&(2,3,2,4,3,4,3),\\
+&(2,3,3,4,3,3,3),\\
+&(3,3,3,3,3,3,3).
+\end{aligned}
+\tag{4.4}
+\]
+
+For all five, the positive present edges are
+
+\[
+P=\{13,16,24,27,35,46,57\}.
+\tag{4.5}
+\]
+
+They are killed by one particularly simple identity:
+
+\[
+\boxed{
+L_s=\frac12\sum_{r=1}^{14}T_r,
+}
+\tag{4.6}
+\]
+
+where
+
+\[
+\begin{aligned}
+T_r\in\{&T(13;01,03),T(16;01,06),T(24;02,04),T(27;02,07),\\
+&T(35;03,05),T(46;04,06),T(57;05,07),\\
+&T(13;12,23),T(27;12,17),T(16;17,67),\\
+&T(24;23,34),T(35;34,45),T(46;45,56),T(57;56,67)\}.
+\end{aligned}
+\tag{4.7}
+\]
+
+Every `T_r<0`, so (4.6) gives `L_s<0`, contradicting (3.1).
+
+The other three exact coefficient identities are longer but use the same principle. The verifier checks them directly over `Q`; its output does not depend on a numerical optimizer or tolerance.
+
+Therefore
+
+\[
+\boxed{
+184\longrightarrow176
+}
+\tag{4.8}
+\]
+
+in the generic interior-ground `H7b` branch, with final split
+
+\[
+\boxed{112\ C_7+64\ (C_3\sqcup C_4).}
+\tag{4.9}
+\]
+
+---
+
+## 5. Scope and next target
+
+This result is deliberately narrower than a full `H7b` classification.
+
+It assumes no reciprocal collinear triple. On the collinearity walls, some triangle residuals become non-strict and the ground ray may coincide with another radial ray, so the five-slot census must be replaced by the already-classified finite degeneracy types. Nothing here excludes those walls.
+
+It also does not touch:
+
+- `H6`;
+- `H7a` with the ground on the hull;
+- the remaining fully convex `H8` cases, now equipped separately with sine-cycle integrability constraints and the exact pentagon turn simplex.
+
+The immediate finite target is to add the exact triangle-angle/turn equations to the 176 generic `H7b` states. A second route is to attack the finite collinearity walls first; their possible triples/four-sets have already been classified.
+
+No theorem-state file is changed.
+
+**Disposition:** generic interior-ground support seven is reduced to 176 exact dihedral/global-sign order orbits after eight signed-trace exclusions. C-II remains open.

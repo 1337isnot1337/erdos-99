@@ -1,0 +1,302 @@
+# Target C-II — host margin makes exact-force bilateral birth gap-free
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** exact-antipodal force pairs on one strict side of the common hub, through `t=(q-k)/D<=1.8687`  
+**Dependencies:** exact-antipodal exact force-pair theorem; coupled host-margin sharpening; one-sided path-region switching; full-source diameter-midpoint localization; Cauchy perimeter-diameter inequality  
+**Certificate:** `research/verify_target_c_high_t_gap_free_bilateral_force_weave_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The existing bilateral-birth theorem required a fixed positive projective gap between the two force bars. That hypothesis is unnecessary once the host-derived transverse margin is combined with the **ordinary oriented** force-pair geometry.
+
+At an exact-antipodal interface, write the reaction axis as
+
+\[
+e_i={G_i\over |G_i|}.
+\]
+
+The exact positive force-pair theorem chooses two switching diameter directions `d_i^-`,`d_i^+` in one common open semicircle, with ordinary lifted angles
+
+\[
+\alpha_i-p_i,\qquad \alpha_i+q_i,
+\qquad p_i,q_i>0,\qquad p_i+q_i<\pi,
+\tag{GB.1}
+\]
+
+about the ordinary angle `alpha_i` of `e_i`. The sharpened host theorem gives every switching diameter the projective row-axis margin
+
+\[
+d_{\mathbb{RP}^1}([d],[e_i])\ge \gamma_H-o(1),
+\qquad
+\gamma_H:=\arcsin c_H,
+\tag{GB.2}
+\]
+
+where
+
+\[
+c_H=0.453819885927\ldots .
+\tag{GB.3}
+\]
+
+Since `p_i,q_i in (0,pi)`, their projective distances from the axis are
+
+\[
+\min\{p_i,\pi-p_i\},\qquad \min\{q_i,\pi-q_i\}.
+\]
+
+Therefore
+
+\[
+\boxed{p_i,q_i\ge\gamma_H-o(1)}
+\tag{GB.4}
+\]
+
+and the **ordinary** angle between the two consistently oriented force rays obeys
+
+\[
+\boxed{
+2\gamma_H-o(1)
+\le \Delta_i:=p_i+q_i<\pi.
+}
+\tag{GB.5}
+\]
+
+Numerically `2 gamma_H=53.97805857... degrees`. Thus a force pair may become projectively narrow only by approaching the antipodal end `Delta_i -> pi`; it can never become an ordinary narrow pair.
+
+This distinction yields a gap-free bilateral theorem and a two-lane crossing theorem.
+
+---
+
+## 1. Every exact force pair has macroscopic birth and partner rungs
+
+Orient each selected switching diameter from its hubward endpoint toward its birth endpoint. Write
+
+\[
+d_i^\sigma={x_i^\sigma-y_i^\sigma\over D},
+\qquad \sigma\in\{-,+\},
+\tag{GB.6}
+\]
+
+where `x_i^sigma` lies in the birth layer and `y_i^sigma` lies hubward. Let
+
+\[
+m_i^\sigma={x_i^\sigma+y_i^\sigma\over2}
+\]
+
+be its midpoint. The full-source midpoint theorem gives one common circumcenter `o` and
+
+\[
+|m_i^\sigma-o|<L_D,
+\qquad L_D=O(D^{3/4})=o(D).
+\tag{GB.7}
+\]
+
+Using
+
+\[
+x_i^\sigma=m_i^\sigma+{D\over2}d_i^\sigma,
+\qquad
+y_i^\sigma=m_i^\sigma-{D\over2}d_i^\sigma,
+\]
+
+we obtain
+
+\[
+\begin{aligned}
+|x_i^- -x_i^+|
+&\ge {D\over2}|d_i^- -d_i^+|-|m_i^- -m_i^+|\\
+&>D\sin{\Delta_i\over2}-2L_D,
+\end{aligned}
+\tag{GB.8}
+\]
+
+and identically
+
+\[
+|y_i^- -y_i^+|>D\sin{\Delta_i\over2}-2L_D.
+\tag{GB.9}
+\]
+
+Because `Delta_i/2 in [gamma_H-o(1),pi/2)`, sine is increasing there. Hence (GB.2)--(GB.5) give
+
+\[
+\boxed{
+|x_i^- -x_i^+|,
+|y_i^- -y_i^+|
+\ge(c_H-o(1))D-2L_D
+=(c_H-o(1))D.
+}
+\tag{GB.10}
+\]
+
+This lower bound is independent of the projective pair gap. In particular every exact force pair has two macroscopically separated birth endpoints and two macroscopically separated hubward endpoints.
+
+The four endpoints are distinct for all sufficiently large `D`: the two births and two partners are separated by (GB.10), while a birth endpoint and a hubward endpoint lie in different path regions on a strict one-sided interface. Consequently the two actual diameter bars are vertex-disjoint and, by the convex diameter-thrackle property, cross geometrically.
+
+---
+
+## 2. Only six exact-force interfaces can be born twice on one host side
+
+For an internal birth layer `R_i`, let `C_i^+`,`C_i^-` be the two outer-boundary host subarcs between the consecutive O--O crosscuts. Every switching diameter has exactly one birth endpoint in the layer, hence every force-pair birth belongs to
+
+\[
+x_i^\pm\in C_i^+\cup C_i^-.
+\tag{GB.11}
+\]
+
+Suppose both force bars are born on the same host subarc, say `C_i^+`. The subarc between the two birth vertices has length at least their Euclidean separation. By (GB.10),
+
+\[
+\operatorname{len}(C_i^+)\ge(c_H-o(1))D.
+\tag{GB.12}
+\]
+
+The layer host subarcs have pairwise disjoint interiors as `i` varies. The full convex source hull has perimeter at most `pi D`. Hence if `N_uni(D)` exact-force interfaces have both births on the same host side,
+
+\[
+N_{\rm uni}(D)(c_H-o(1))D\le\pi D.
+\tag{GB.13}
+\]
+
+Since
+
+\[
+7c_H-\pi=0.03514654789\ldots>0,
+\]
+
+for all sufficiently large `D`,
+
+\[
+\boxed{N_{\rm uni}(D)\le6.}
+\tag{GB.14}
+\]
+
+Thus **every exact-antipodal force family is bilateral after deleting at most six interfaces**, with no fixed pair-gap hypothesis and no density loss.
+
+This strictly strengthens the previous `O_rho(1)` bilateral theorem on the exact-force population. The old fixed-gap theorem remains useful when a macroscopic central diamond radius depending on `rho` is required.
+
+---
+
+## 3. Coherently oriented force lanes have no cross-sign endpoint collisions
+
+Fix any exact-force subfamily on one strict side of the common hub for which the **ordinary** reaction axes lie in one shrinking angular window. This hypothesis holds automatically on every exact-phase block. It also holds on at least half of any projectively phase-collapsed exact-force population: choose a reference representative of the common projective phase; the ordinary reaction axes have only the two antipodal lifts, so one lift contains at least half the interfaces.
+
+Orient every reaction axis in that common ordinary lift and label each force pair so that
+
+\[
+d_i^-\cdot Je_i<0<d_i^+\cdot Je_i.
+\tag{GB.15}
+\]
+
+By (GB.4), any `-` force direction and any `+` force direction in this coherently oriented subfamily have ordinary angular separation at least
+
+\[
+2\gamma_H-o(1).
+\tag{GB.16}
+\]
+
+Indeed, write the ordinary reaction angles as `alpha_i=alpha_*+o(1)`. The force-pair lift gives
+
+\[
+\arg d_i^- = \alpha_i-p_i,
+\qquad
+\arg d_i^+ = \alpha_i+q_i,
+\]
+
+with `p_i,q_i>=gamma_H-o(1)`. Hence
+
+\[
+\arg d_j^+-\arg d_i^-
+\ge2\gamma_H-o(1)
+\]
+
+in the common semicircle lift.
+
+Now suppose `h_i^-` and `h_j^+` shared an endpoint. For `i=j`, this contradicts the four-endpoint conclusion of Section 1. For `i\ne j`, births belong to distinct pre-hub path regions, so the shared endpoint can only be the common hubward partner `y`.
+
+Let the other endpoints be `x_i,x_j`. Since both `yx_i` and `yx_j` are actual diameter edges,
+
+\[
+{x_i+y\over2},\ {x_j+y\over2}\in B(o,L_D).
+\]
+
+Therefore
+
+\[
+|x_i-x_j|<4L_D.
+\tag{GB.17}
+\]
+
+The angle `vartheta` between the two rays from `y` satisfies
+
+\[
+2D\sin{\vartheta\over2}=|x_i-x_j|<4L_D,
+\]
+
+so
+
+\[
+\vartheta<2\arcsin{2L_D\over D}=o(1).
+\tag{GB.18}
+\]
+
+This contradicts (GB.16). Thus, for all sufficiently large `D`,
+
+\[
+\boxed{
+V(h_i^-)\cap V(h_j^+)=\varnothing
+\quad\text{throughout every coherently oriented exact-force subfamily.}
+}
+\tag{GB.19}
+\]
+
+Every minus-lane bar is therefore vertex-disjoint from every plus-lane bar in that subfamily. The convex diameter-thrackle property gives
+
+\[
+\boxed{
+\text{every minus-lane force bar crosses every plus-lane force bar.}
+}
+\tag{GB.20}
+\]
+
+Same-sign partner stars are not excluded. Nor is a global ordinary-axis lift asserted when the common projective phase approaches the boundary of the one-sided reaction semicircle. The unconditional statement is instead: every exact-phase block has the complete bipartite crossing weave, and any projectively collapsed population contains a subfamily of at least half its size with that property.
+
+---
+
+## 4. Consequence for growing exact-force diagonals
+
+Apply Sections 1--3 to the near-full-shore growing exact-force diagonal. Its projective pair gap `rho_D` is allowed to tend to zero. That no longer weakens bilateral birth or the two-lane crossing geometry.
+
+After deleting at most six center interfaces over the entire shore, every retained exact-force center has
+
+\[
+\boxed{
+|x_i^- -x_i^+|,
+|y_i^- -y_i^+|
+\ge(c_H-o(1))D,
+}
+\tag{GB.21}
+\]
+
+one birth on each physical host arc, and every growing exact-phase neighborhood has the complete crossing relation (GB.20). Globally, at least half of the centers may be chosen with one coherent ordinary reaction-axis lift and hence one complete cross-sign weave. These conclusions coexist with the growing exact-phase depth, vanishing normalized switching/KKT complexity, exact positive two-ray force identities, common train grid, and fixed individual transverse derivative margin already proved on that diagonal.
+
+The shrinking projective pair gap has a precise remaining meaning: it controls whether the two ordinary force rays approach the antipodal end `Delta_i=pi`, and therefore controls the radius of the central four-endpoint diamond. It does **not** allow the two birth endpoints, the two partner endpoints, or the two ordinary oriented force rays to collapse together.
+
+---
+
+## 5. Frontier effect
+
+The no-TB1 exact-force obstruction can now be viewed as two macroscopic endpoint lanes rather than a collection of possibly degenerating local pairs:
+
+```text
+one force bar born on each physical host at all but <=6 interfaces;
+birth rungs and partner rungs have length >=(0.4538198859-o(1))D;
+minus and plus lanes are completely crossing on every exact-phase block;
+projective pair gap may still tend to zero only through near-antipodality;
+all existing exact-force/KKT/common-grid metadata is retained.
+```
+
+This removes the fixed-angle hypothesis from bilateral loading and removes cross-sign endpoint stars as an escape on every coherent exact-phase block. It does not close C-II: a near-antipodal pair can still have projectively close unoriented lines while its endpoints remain macroscopically separated. The remaining geometric task is to reconcile this two-lane macroscopic weave with the paired nested destination order and the common near-equilateral train grid, or to turn that incompatibility into a source-preserving strict diameter decrease.
+
+**Disposition:** proved gap-free bilateral birth, macroscopic birth/partner rung separation, and a complete cross-sign crossing weave on coherent exact-force blocks. C-II and Level I remain open.

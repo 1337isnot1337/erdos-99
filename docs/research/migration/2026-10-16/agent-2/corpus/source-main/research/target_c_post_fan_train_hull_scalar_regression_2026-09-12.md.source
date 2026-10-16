@@ -1,0 +1,46 @@
+# Target C — post-fan/train/hull scalar regression (retracted)
+
+**Date:** 2026-09-12  
+**Status:** retracted regression against an invalid normalized fan claim.
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The former fan/train/hull argument claimed to exclude Type-II limits below
+`t_*=2.5147823986...`. The exact point below checks only that the remaining scalar
+ledgers are compatible at one historical parameter choice; it is not a geometric
+source or a global minimizer.
+
+**Retraction.** The purported fan density floor is invalid: the exact finite fan
+inequality has `20f=O(D)`, so its `D^2` normalization does not contain a `20f/D`
+term. This point is retained only as a weak arithmetic compatibility check for the
+other ledgers; it no longer supports a post-floor conclusion.
+
+Take
+
+```text
+t=13/5, kappa=0, S=3, G=1/2, mu=7/2,
+m=9/10, e=17/10, u=1, Q=7/10, f=7/10, T=4.
+```
+
+The identities `mu=S+G`, `m=mu-t`, `e=2t+kappa-mu`, `Q=e-u`, and `T=t+2f`
+hold exactly. The fan pair inequality has positive asymptotic margin
+
+\[
+(t+2f)^2-20f-2\Delta_2
+=2-2\Delta_2>0.
+\]
+
+The witness also satisfies
+
+\[
+T-q/2=27/10>2\sqrt{2\Delta_2},
+\qquad T>1+\pi/2,
+\]
+
+the two retained moment inequalities, `u+mu>pi`, `4f+Q<10e`, `f<=Q`, and
+`Q<=2t-pi`. It lies strictly above the new floor because `13/5>t_*`.
+
+Thus the rational point is only an arithmetic compatibility witness. No Type-II
+exclusion follows, and a geometric/source-level correlation is still missing.
+
+**Classification:** retracted regression against the invalid fan normalization; the
+underlying rational point is provenance only. C-II remains open.

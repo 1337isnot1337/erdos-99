@@ -1,0 +1,161 @@
+# Hostile audit — contact-chain safe-area and lattice-capacity theorem
+
+**Date:** 2026-09-12  
+**Audited source:** `research/target_c_contact_chain_safe_area_capacity.md`  
+**Verdict:** PASS at the stated proof-only scope.  
+**LEVEL I STATUS:** STILL OPEN. C-II REMAINS OPEN.
+
+## 1. Incremental constant
+
+For unit disks centered one unit apart, the full overlap lens has area
+
+\[
+ L=2\pi/3-\sqrt3/2.
+\]
+
+The edge line bisects that lens. A half-disk has area `pi/2`, so the one-sided part of
+the new disk not already covered by the preceding disk is
+
+\[
+ c_*=\pi/2-L/2
+ =\pi/6+\sqrt3/4.
+\]
+
+The complementary constant is
+
+\[
+ h_*=\pi/2-c_*=\pi/3-\sqrt3/4.
+\]
+
+These identities are exact.
+
+## 2. Convex-chain union bound
+
+Order a convex unit-contact boundary path as `p_0,...,p_ell`. For each `i>=1`, the
+whole convex polygon lies in the interior half-plane of the preceding boundary edge
+`[p_{i-1},p_i]`. The portion of disk `B(p_i,1)` which was not covered by **all**
+earlier disks is a subset of the portion not covered by the immediately preceding
+disk. It is therefore at most `c_*` in area.
+
+The initial disk is contained in the interior half-plane of the first boundary edge,
+so it contributes at most `pi/2`.
+
+This argument does not assume that nonconsecutive disks are disjoint; extra overlap
+only strengthens the upper bound. It also does not assume a small-turn boundary.
+
+**Verdict:** Theorem 2.1 is valid.
+
+## 3. Internal safe area
+
+A convex internal contact face with `m` boundary vertices is handled by opening its
+cycle at one vertex and using the path through all `m` vertices. The path has `m-1`
+unit edges, so the entire forbidden union of boundary-vertex unit disks has area at
+most
+
+\[
+ \pi/2+(m-1)c_*=mc_*+h_*.
+\]
+
+The safe region differs from the complement of the closed disk union only on
+measure-zero circles/boundary pieces, so the area inequality is unaffected.
+
+**Verdict:** the internal bound is valid.
+
+## 4. Exterior safe area
+
+For a boundary closing chord of length `s`, the unit neighborhood on the interior side
+of the supporting line is a rectangle of area `s` plus two quarter-disks, hence area
+`s+pi/2`.
+
+This neighborhood contains the full unit disks centered at both chord endpoints.
+Therefore only the `ell-1` internal vertices of the complementary `ell`-edge contact
+path need be added. Adding them in path order costs at most `(ell-1)c_*` by the same
+half-plane argument. Hence total forbidden area is at most
+
+\[
+ s+\pi/2+(\ell-1)c_*=s+\ell c_*+h_*.
+\]
+
+No assumption about the chord being a contact is made.
+
+**Verdict:** the exterior bound is valid.
+
+## 5. Lattice realization
+
+The unit triangular lattice has covolume `a_0=sqrt(3)/2`. Translation averaging of
+the integer-valued count in a bounded measurable region gives mean `area/a_0`, hence
+some translate has at least its floor. The selected lattice set is unit-separated.
+
+The companion wall-shield theorems then provide separation from retained old source
+points, so the lattice points are actual replacement points rather than a density
+heuristic.
+
+**Verdict:** the capacity lower bound is constructive.
+
+## 6. Constant algebra
+
+For the internal residual
+
+\[
+ r_\partial=A/a_0-m/2+1-z,
+\]
+
+one has `A/a_0=z+r_partial+m/2-1`. Also
+
+\[
+ {c_*\over a_0}=1/2+{\pi\over3\sqrt3},
+\qquad
+ {h_*\over a_0}={2\pi\over3\sqrt3}-1/2.
+\]
+
+Therefore
+
+\[
+ {area(S_\partial)\over a_0}
+ \ge z+r_\partial-{\pi\over3\sqrt3}m
+ -\left({1\over2}+{2\pi\over3\sqrt3}\right),
+\]
+
+which gives the printed internal floor bound exactly.
+
+For an exterior cap, canonical graph-boundary count is `k_C=ell+1`: the `ell` old
+contact edges plus the one added closing edge form a simple augmented polygon. Thus
+
+\[
+ r_C=\sigma_C-k_C=A/a_0+s/2-\ell/2-z,
+\]
+
+and
+
+\[
+ A/a_0=z+r_C+\ell/2-s/2.
+\]
+
+Subtracting the safe-area loss `s+ell c_*+h_*` divided by `a_0` gives exactly
+
+\[
+ z+r_C-{\pi\over3\sqrt3}\ell
+ -\left({2\over\sqrt3}+{1\over2}\right)s
+ -{h_*\over a_0}.
+\]
+
+The closure thresholds follow because `tau(H)` is an integer and
+`floor(X)>=tau(H)` whenever `X>=tau(H)`.
+
+**Verdict:** all coefficients and floors are correct.
+
+## 7. Scope and limitation
+
+The theorem does not show that a selected Type-I chamber has residual above the
+printed threshold. It only converts sufficiently large residual into realized packing
+slots with an exact coefficient.
+
+Residual conservation still gives only `sum r_j=R_F`; it does not force the
+macroscopic chamber to own a fixed fraction of `R_F`.
+
+No Oler inequality is reversed, no KKT coefficient floor is assumed, no source point
+is lost, and no contact isolate enters the Section-57 affine kernel.
+
+**Final verdict:** PASS. This is genuine Type-I progress: the former qualitative
+capacity realization gap now has an explicit finite sufficient condition with a
+universal contact-chain coefficient. C-II remains open.

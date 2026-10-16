@@ -1,0 +1,177 @@
+# Hostile audit — strong-TB1 contact-swap and inactive-slack branch
+
+**Date:** 2026-09-17  
+**Verdict:** PASS as proof-only high-`t` work, with the scope restrictions below  
+**Audited files:**
+
+- `target_c_high_t_tb1_contact_swap_obstruction_fork_t18687_2026-09-17.md`
+- `target_c_high_t_tb1_overswap_contact_minimality_t18687_2026-09-17.md`
+- `target_c_high_t_tb1_inactive_slack_matching_t18687_2026-09-17.md`
+
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+This audit rechecks the new branch from the source-level layer translation rather than accepting the theorem statements by analogy with the exact-antipodal work.
+
+## 1. Exact swap and overswap algebra
+
+For unit rooted boundary vectors `a,b`, put
+
+\[
+q=|a+b|,
+\qquad
+w={a+b\over q}.
+\]
+
+For the translation
+
+\[
+v(\lambda)=-\lambda(a+b),
+\]
+
+direct expansion gives
+
+\[
+|a+v(\lambda)|^2
+=|b+v(\lambda)|^2
+=1+q^2\lambda(\lambda-1).
+\]
+
+Thus `lambda=1` is exactly the second unit-contact intersection and every `lambda>1` opens both boundary contact families. No linearization is used.
+
+At a one-sign TB1 interface every moving actual diameter has inward vector `n_h` with
+
+\[
+n_h\cdot w\ge(c_H-o(1))D.
+\]
+
+Its exact squared-length change is
+
+\[
+-2\lambda q(n_h\cdot w)+\lambda^2q^2.
+\]
+
+Since `q=O(D^-1)`, this is negative at `lambda=1+1/D` for all sufficiently large `D`. Nonswitching pairs are exactly invariant under the layer translation. These two calculations are correct.
+
+## 2. Minimality argument
+
+The overswap is the cleaner proof.
+
+Assume every previously strict pair remains strictly in `(1,D)` at the overswap endpoint. Then:
+
+- all old contacts outside the two boundary trains are unchanged;
+- both boundary train contact families are strictly opened;
+- no new contact is created;
+- every moving old diameter is strictly shortened;
+- every nonswitching old diameter is unchanged;
+- no old strict nondiameter reaches `D`.
+
+If a nonswitching diameter remains, the translated source is another diameter-`D` global minimizer with fewer contacts, contradicting contact minimality. If no nonswitching diameter remains, the diameter is strictly below `D`, contradicting global minimality.
+
+Therefore a previously strict pair must reach or cross one of the active distance boundaries. Because the overswap norm is
+
+\[
+(1+D^{-1})q
+<{31.4\times10^6\over D}+o(D^{-1}),
+\]
+
+the triangle inequality gives exactly the two claimed inverse-`D` witness windows.
+
+This argument uses contact minimality only. The earlier exact-swap proof through diameter-pair minimality remains valid but is no longer the preferred dependency.
+
+## 3. Witness multiplicity
+
+The adjacent path layers are pairwise disjoint set differences of nested shores. An unordered pair `xy` moves under layer `R_i` exactly when one endpoint lies in `R_i` and the other does not. Each endpoint belongs to at most one layer, so a fixed pair can be moved by at most two layer translations.
+
+Hence `M` one-sign interfaces force at least `M/2` distinct inactive witnesses. This counting step is exact; it does not use geometric genericity.
+
+## 4. Opposite-sign switching bars
+
+The coupled host theorem puts the two physical host-normal branches in fixed neighborhoods of `+Ju_*` and `-Ju_*`, with transverse floor `c_H-o(1)`. Since the local swap axis `w_i` differs from the corresponding transverse direction by `O(D^-1)`, positive and negative `n_h dot w_i` select the two physical host branches for all large `D`.
+
+If one positive and one negative switching diameter at the same interface shared an endpoint, the source circumradius estimate would make their ordinary angle `O(D^-1/4)`. Opposite transverse signs would then force both directions into the same `O(D^-1/4)` projective neighborhood of the row line, contradicting the fixed host transverse margin. Thus the pair is pointwise vertex-disjoint for large `D`, not merely after a density thinning. The diameter-thrackle property then makes the pair cross properly.
+
+## 5. Narrow-pair capacity
+
+The only step needing care is that the exact-force reaction is not available on the TB1 side. It is also not needed for the capacity estimate.
+
+On one fixed hub side:
+
+- switching supports at distinct interfaces are disjoint;
+- the two sign classes have births on the two fixed host arcs;
+- outward support-normal angle is monotone on each convex host arc;
+- the two host lanes move in opposite angular directions as interface index increases;
+- distinct actual diameter directions have C67 projective spacing `delta_D`.
+
+Therefore the ordinary opening between the two selected host directions contracts by at least `2 delta_D` per retained interface. Since each host direction stays at least `gamma_H-o(1)` from the row line, a projectively `rho`-narrow pair with fixed `rho<gamma_H` cannot be ordinary-small. It is near-antiparallel. Its projective gap consequently increases by at least `2 delta_D` along the narrow prefix, giving
+
+\[
+N_{narrow}(\rho)
+\le {\rho\over2\delta_D}+1
+\le {\rho D\over2}+1.
+\]
+
+So the double-C67 capacity used in the contact-swap fork is genuinely geometric and does not import an exact-antipodal KKT premise.
+
+## 6. Inactive-slack matching theorem
+
+### Near-unit case
+
+For `q_D=O(D^-1)`, seven neighbors of one point at distances in `[1,1+q_D]` would contain two rays separated by at most `2pi/7`. The crude radial-extension bound
+
+\[
+|y-z|
+\le2q_D+2(1+q_D)\sin(\pi/7)
+<1
+\]
+
+holds for all sufficiently large `D`, contradicting unit separation. Thus the near-unit graph has maximum degree at most six. Greedy matching loses at most eleven edges per retained edge, giving the stated linear matching coefficient.
+
+### Near-diameter case
+
+For `|xy|>=D-q_D`, the midpoint identity and the source circumradius bound give
+
+\[
+|m_{xy}-o|
+\le(3^{1/8}+o(1))D^{3/4}.
+\]
+
+At one endpoint, all near-diameter neighbor rays therefore lie in an angular interval of width
+
+\[
+(8\,3^{1/8}+o(1))D^{-1/4}.
+\]
+
+Because two such radial lengths differ by at most `q_D=o(1)` while the neighbor endpoints are unit-separated, their angular separation is at least `(1+o(1))/D`. Hence the near-diameter degree is at most
+
+\[
+(8\,3^{1/8}+o(1))D^{3/4},
+\]
+
+and the stated `Omega(D^(1/4))` matching follows by greedy selection.
+
+The constants are conservative; no sharper coefficient is needed for the structural fork.
+
+## 7. Scope restrictions
+
+The audited results do **not** establish any of the following:
+
+- that the inactive near-unit witnesses are actual contacts;
+- that the inactive near-diameter witnesses are active diameter edges;
+- that the wide TB1 crossing pairs carry the exact KKT reaction;
+- that either inactive matching contradicts packing by cardinality alone;
+- that the high-`t` proof-only line is canonical or closes the canonical Section-123 frontier.
+
+The result that survives audit is narrower and useful:
+
+```text
+winning strong-TB1 density
+-> either linear fixed-angle genuine crossing diameter pairs
+   or linear distinct inverse-D inactive witnesses
+-> inactive witnesses further give
+   a linear near-unit matching
+   or an Omega(D^(1/4)) centrally localized near-diameter matching.
+```
+
+The next nontrivial seam is layer-tag geometry. Every inactive witness is attached to one of at most two physical path layers. A closure needs to show that this tagged inactive matching is incompatible with the common near-equilateral train order, or use it to construct a simultaneous finite exchange. Counting alone is insufficient.
+
+**Disposition:** PASS. The exact contact swap, contact-minimal overswap, density split, and inactive matching consequences are internally consistent under the cited high-`t` parent theorems. C-II and Level I remain open.

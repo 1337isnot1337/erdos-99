@@ -1,0 +1,63 @@
+# Target C — C72 radial cut-transport frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_radial_cut_transport_2026-08-31.md](../../reports/target_c_radial_cut_transport_2026-08-31.md).
+
+C71 reduces the `D epsilon -> 0` phase to either a multi-port return component at the mechanical star center `z`, or one single physical contact port carrying essentially all star load. C72 quantifies the stress transport after that port.
+
+For `r_i=|p_i-z|`, define
+
+`Q_z=sum_C alpha_ij[1-(r_i-r_j)^2]`
+
+and
+
+`T_z=sum_C alpha_ij |r_i-r_j|`.
+
+Then
+
+`Q_z/2 <= D^2-T_z <= Q_z`.
+
+Since C68 gives `Q_z<=D^2(1-S_z)`,
+
+`T_z>=D^2 S_z`.
+
+At the C66 center,
+
+`T_z>=D^2-(2pi/kappa_0)D^3 epsilon`.
+
+The exact Euclidean radial coarea identity is
+
+`T_z=integral_0^D A_z(t) dt`,
+
+where `A_z(t)` is total contact stress crossing `{r<t}`.
+
+There is also a contact-graph cut law. Put `ell(v)=d_C(z,v)` and `L=ceil(D)`. Every diameter partner of `z` has `ell>=L`. For every `0<=j<L`, summed KKT equilibrium on `U_j={ell<=j}` gives
+
+`A_j>=|g_z|-2D(1-S_z)`.
+
+The corresponding cut edge sets are disjoint in stress measure, so
+
+`A_up>=L[|g_z|-2D(1-S_z)]_+`.
+
+C14 yields
+
+`|g_z|>=(sqrt(3)/2)D S_z`,
+
+hence in the near-zero phase
+
+`liminf A_up/D^2>=sqrt(3)/2`.
+
+Together C68, C71, and C72 force the single-port branch into an aggregate normal form:
+
+- one `Omega(D)` port edge;
+- depth at least `ceil(D)` before a star diameter leaf;
+- every pre-leaf graph cut transmits `Omega(D)` stress;
+- at least `sqrt(3)/2-o(1)` of all alpha mass lies on graph-outward contacts; and
+- the alpha-weighted Euclidean radial progress is `D^2-o(D^2)`.
+
+C67 simultaneously forces a quadratic-area force hull. The remaining escape is therefore two-dimensional geometry carried by asymptotically negligible transverse stress.
+
+## Next target
+
+Do not try to squeeze more from one fixed alpha measure. The next useful input must charge low-stress transverse structure independently: KKT-certificate variation, reciprocal-dual width/area, contact-minimal source capacity, or quantitative closure of C71-A's return/separator branch.

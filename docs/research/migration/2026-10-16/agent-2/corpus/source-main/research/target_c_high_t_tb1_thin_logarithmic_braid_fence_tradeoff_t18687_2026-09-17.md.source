@@ -1,0 +1,376 @@
+# Target C-II - logarithmic THIN braid and train-fence widths survive on polynomially many common rows
+
+**Date:** 2026-09-17  
+**Status:** proof-only quantitative strengthening of the growing-braid/growing-fence theorem; no canonical promotion claimed  
+**Scope:** THIN side of the 15-spaced one-sign strong-TB1 Horn upper family through `t=(q-k)/D<=1.8687`  
+**Dependencies:** growing THIN braid/growing train fence; uniform `O(D^(3/4))` row-blocker degree; linear left/right purified flank density; linear global complete-train count  
+**Certificate:** `research/verify_target_c_high_t_tb1_thin_logarithmic_braid_fence_tradeoff_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The growing-fence theorem diagonalized the braid width and the left/right fence widths arbitrarily slowly in order to retain `D^(1-o(1))` common rows. The same finite count gives a stronger quantitative tradeoff: all three widths may be chosen proportional to `log D` while a polynomial number of common rows survives.
+
+Retain
+
+\[
+q_0=0.05470272542658\ldots,
+\qquad
+T_*=3.0605,
+\]
+
+and define
+
+\[
+\boxed{
+C_*:=5\left({T_*\over q_0}\right)^2
+=15650.8108585888\ldots,
+}
+\tag{LT.1}
+\]
+
+so
+
+\[
+\boxed{
+\log C_*=9.65827800667650\ldots .
+}
+\tag{LT.2}
+\]
+
+For every fixed constant
+
+\[
+0<c<{1\over\log C_*}=0.10353812546177\ldots,
+\tag{LT.3}
+\]
+
+put
+
+\[
+k_D=\lfloor c\log D\rfloor.
+\tag{LT.4}
+\]
+
+Then the THIN branch contains
+
+- a `k_D`-edge vertex-disjoint pairwise-crossing THIN braid;
+- `k_D` fixed left-flank complete trains;
+- `k_D` fixed right-flank complete trains;
+- a common inverse-`D` phase row family with
+
+\[
+\boxed{
+|A_D|\ge D^{1-c\log C_*-o(1)}.
+}
+\tag{LT.5}
+\]
+
+Every braid chord crosses every retained row. Every fixed train crosses every retained row. All `2k_D` fixed trains are pairwise noncrossing and have one common order on every retained row. Every left crossing lies below `-0.01D`; every right crossing lies above `+0.01D`. All braid chords share one consecutive selected-cut support block at least as long as the retained row family.
+
+In particular, taking
+
+\[
+c={1\over2\log C_*}
+=0.05176906273089\ldots
+\tag{LT.6}
+\]
+
+gives
+
+\[
+\boxed{k_D=(0.05176906273089\ldots+o(1))\log D}
+\tag{LT.7}
+\]
+
+simultaneously on the braid and on each flank, while retaining
+
+\[
+\boxed{D^{1/2-o(1)}}
+\tag{LT.8}
+\]
+
+common rows. Choosing `c=1/(4 log C_*)` instead gives width
+
+\[
+(0.02588453136544\ldots+o(1))\log D
+\]
+
+through `D^(3/4-o(1))` common rows.
+
+This is stronger than the previous unspecified slow diagonal. It gives a concrete logarithmic-size crossing braid trapped inside a concrete logarithmic-size noncrossing train fence on a polynomial-height near-equilateral row stack.
+
+---
+
+## 1. Exact finite counting form
+
+Let `N=Theta(D)` be the owned THIN blocker population and let `R_D` be the rich low-defect row family. Uniformly in `a in R_D`, write
+
+\[
+E_a:=|B_a|>\left({1\over5}-\epsilon_D\right)N,
+\tag{LT.9}
+\]
+
+\[
+m_a^-,m_a^+>(q_0-\epsilon_D)D,
+\tag{LT.10}
+\]
+
+where `epsilon_D->0`, and let
+
+\[
+\Delta_D:=\max_a\Delta(B_a)=O(D^{3/4}).
+\tag{LT.11}
+\]
+
+Also let the total complete-train count obey
+
+\[
+M_D<(T_*+\epsilon_D)D.
+\tag{LT.12}
+\]
+
+For an integer `k`, the greedy matching bound gives
+
+\[
+M_k(a)\ge {1\over k!}
+\prod_{j=0}^{k-1}(E_a-2j\Delta_D).
+\tag{LT.13}
+\]
+
+The number of `k`-subsets available on each flank is exactly
+
+\[
+{m_a^-\choose k},
+\qquad
+{m_a^+\choose k}.
+\tag{LT.14}
+\]
+
+Therefore the same row/braid/left-fence/right-fence count as in the growing-fence theorem gives, before the row-phase split,
+
+\[
+\#\mathrm{incidences}
+\ge
+|R_D|\min_a M_k(a)
+\min_a{m_a^-\choose k}
+\min_a{m_a^+\choose k}.
+\tag{LT.15}
+\]
+
+The total number of possible fixed triples `(braid,left fence,right fence)` is at most
+
+\[
+{N\choose k}{M_D\choose k}^2.
+\tag{LT.16}
+\]
+
+After pigeonhole and one factor-two row-phase split, the number of common rows is at least one half of the ratio (LT.15)/(LT.16).
+
+---
+
+## 2. Logarithmic `k` does not damage the local combinatorics
+
+Take
+
+\[
+k=k_D=\lfloor c\log D\rfloor
+\tag{LT.17}
+\]
+
+for fixed `c>0`.
+
+Because `E_a=Theta(D)` and `Delta_D=O(D^(3/4))`,
+
+\[
+{k^2\Delta_D\over E_a}
+=O\left({(\log D)^2\over D^{1/4}}\right)
+=o(1).
+\tag{LT.18}
+\]
+
+Hence uniformly in `a`,
+
+\[
+\prod_{j=0}^{k-1}(E_a-2j\Delta_D)
+=E_a^k\exp(o(1)).
+\tag{LT.19}
+\]
+
+Similarly `m_a^\pm=Theta(D)` and
+
+\[
+{k^2\over m_a^\pm}=o(1),
+\tag{LT.20}
+\]
+
+so
+
+\[
+{m_a^\pm\choose k}
+={ (m_a^\pm)^k\over k!}\exp(o(1)).
+\tag{LT.21}
+\]
+
+The same estimate applies to the global binomial coefficients in (LT.16).
+
+The unspecified `epsilon_D` terms do not require `epsilon_D log D->0`. Indeed
+
+\[
+\left({1\over5}-\epsilon_D\right)^k
+=5^{-k}\exp(o(\log D)),
+\tag{LT.22}
+\]
+
+because `epsilon_D=o(1)` and `k=O(log D)`. Likewise
+
+\[
+\left({q_0-\epsilon_D\over T_*+\epsilon_D}\right)^{2k}
+=\left({q_0\over T_*}\right)^{2k}
+\exp(o(\log D)).
+\tag{LT.23}
+\]
+
+Thus all unquantified upstream `o(1)` errors cost only a factor `D^{o(1)}` at logarithmic width.
+
+---
+
+## 3. Polynomial common-row exponent
+
+Using `|R_D|=(Theta(1))N` and substituting (LT.19)-(LT.23) into the ratio (LT.15)/(LT.16), after the phase split we obtain
+
+\[
+|A_D(k)|
+\ge
+N\,5^{-k}
+\left({q_0\over T_*}\right)^{2k}
+D^{-o(1)}.
+\tag{LT.24}
+\]
+
+Equivalently,
+
+\[
+|A_D(k)|
+\ge
+N\,C_*^{-k}D^{-o(1)}.
+\tag{LT.25}
+\]
+
+Since `N=Theta(D)` and `k=c log D+O(1)`,
+
+\[
+C_*^{-k}
+=
+\exp(-c\log C_*\log D+O(1))
+=D^{-c\log C_*+o(1)}.
+\tag{LT.26}
+\]
+
+Therefore
+
+\[
+\boxed{
+|A_D(k)|
+\ge D^{1-c\log C_*-o(1)}.
+}
+\tag{LT.27}
+\]
+
+The exponent is positive precisely for (LT.3).
+
+---
+
+## 4. Two useful concrete choices
+
+For
+
+\[
+c_{1/2}:={1\over2\log C_*},
+\]
+
+we have
+
+\[
+1-c_{1/2}\log C_*={1\over2}.
+\]
+
+Hence there are braid and left/right fence widths
+
+\[
+\boxed{
+(0.05176906273089\ldots+o(1))\log D
+}
+\tag{LT.28}
+\]
+
+through
+
+\[
+\boxed{D^{1/2-o(1)}}
+\tag{LT.29}
+\]
+
+common rows.
+
+For
+
+\[
+c_{3/4}:={1\over4\log C_*},
+\]
+
+the three widths are
+
+\[
+\boxed{
+(0.02588453136544\ldots+o(1))\log D
+}
+\tag{LT.30}
+\]
+
+and the common row family has size
+
+\[
+\boxed{D^{3/4-o(1)}}.
+\tag{LT.31}
+\]
+
+The second choice is useful because its row-stack exponent matches the current `D^(3/4)` scale of the generic THIN partner-star and midpoint errors while still supplying an unbounded logarithmic braid and two logarithmic train flanks.
+
+---
+
+## 5. Geometry retained at logarithmic width
+
+Nothing in the quantitative choice changes the geometry established by the growing-fence theorem. Thus for either concrete choice, or any `c` satisfying (LT.3):
+
+1. the `k_D` THIN braid edges are vertex-disjoint hull chords of length `D-O(D^-1)` and cross pairwise properly;
+2. the `2k_D` fixed fence trains are pairwise noncrossing and have one common order along every retained row;
+3. every left train is below `-0.01D` and every right train above `+0.01D` in the row-normal circumcenter coordinate;
+4. every retained row is in one common inverse-`D` projective phase;
+5. after one phase split inside each flank, at least `k_D/2` left and `k_D/2` right trains remain in fixed inverse-`D` column phases;
+6. all braid support intervals contain one consecutive selected-cut block of length at least `|A_D(k)|`.
+
+So at the half-exponent choice, for example, a single source contains a complete row/train grid with
+
+\[
+D^{1/2-o(1)}
+\]
+
+rows and `Theta(log D)` fixed columns on each circumcenter flank, while `Theta(log D)` pairwise-crossing almost-diameters cross every row.
+
+---
+
+## 6. Frontier effect
+
+The current THIN seam is no longer merely an asymptotic statement that some widths diverge. The finite incidence count supports a concrete scale:
+
+```text
+Theta(log D) pairwise-crossing THIN almost-diameters
++ Theta(log D) fixed left-flank trains
++ Theta(log D) fixed right-flank trains
++ D^(1/2-o(1)) common inverse-D phase rows
+```
+
+using the symmetric half-exponent choice.
+
+This creates enough persistent objects for finite-order or Ramsey-type arguments whose required size grows logarithmically, while still leaving a polynomially large metric row scaffold. The remaining task is to exploit the incompatible crossing orders of the braid and the noncrossing fence, or to prove that one of the fixed train bundles must meet too many braid chords in a way forbidden by the unit-rhombus/train topology.
+
+**Disposition:** upgraded the arbitrary slow braid/fence diagonal to an explicit logarithmic-width versus polynomial-height tradeoff, including a `0.051769... log D` braid and each train flank across `D^(1/2-o(1))` common rows. C-II and Level I remain open.

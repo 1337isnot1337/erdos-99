@@ -1,0 +1,243 @@
+# Target B: exact phase-deficit to Mantel-slack transfer
+
+Date: 2026-10-03
+Base main: 7a327e1ad95cd2e9cb035b9b96fb34fd8f12114d
+Status: conditional exact algebra, noncanonical. Target B and Level I remain open.
+
+The identities below apply to any finite family of retained phase-coarea grains
+with the class sizes and crossing counts defined here, provided their vertex sets
+are disjoint subsets of the global train set and their retained crossing counts
+sum to `R_*`. For the displayed Mantel comparisons, assume each grain satisfies
+`Delta_i >= 0`; canonical Section 51.1 supplies this when the grain is one of its
+retained phase-core components, while other grain models must establish it
+separately.
+
+Any positive lower bound `Delta_* >= delta`, high-mass condition on `Theta`,
+coarea decomposition, or asymptotic relation between `R_*` and `D^2` is an
+additional input. This note does not prove those inputs or promote any separate
+phase-deficit candidate. The algebraic implications do not use a verifier or
+numerical search.
+
+## 1. Exact one-grain identity
+
+Let a retained phase-coarea grain have coherent phase-class sizes
+
+    M >= b >= a,
+
+and write
+
+    s=a/M,   t=b/M,   u=s+t,
+
+    Delta=[M(a+b)-E]/M^2,
+
+where E is its retained physical crossing count. Thus
+
+    E=M^2(u-Delta).                                      (1)
+
+The grain uses exactly
+
+    V=M+a+b=M(1+u)                                      (2)
+
+train vertices.
+
+### Lemma 1 — phase deficit is Mantel slack
+
+One has the exact identity
+
+    V^2/4-E
+      = M^2 [ Delta + (u-1)^2/4 ].                       (3)
+
+Equivalently,
+
+    V^2-4(1+Delta)E
+      = M^2 [u-(1+2Delta)]^2.                            (4)
+
+Proof. Expanding (1)-(2),
+
+    V^2/4-E
+      = M^2[(1+u)^2/4-u+Delta]
+      = M^2[Delta+(u-1)^2/4].
+
+Subtracting Delta E from both sides of (3), or expanding directly, gives
+
+    V^2/4-(1+Delta)E
+      = M^2[u-(1+2Delta)]^2/4.
+
+This is (4). QED.
+
+Two consequences are immediate.
+
+First,
+
+    boxed{ V >= 2 sqrt((1+Delta)E). }                    (5)
+
+This strictly strengthens componentwise Mantel whenever Delta>0. Equality in
+(5) is possible only when
+
+    u=1+2Delta.                                          (6)
+
+Second, if E>0 and
+
+    M_H:=V^2/4-E
+
+is the ordinary graph-theoretic Mantel slack of the grain, then
+
+    boxed{ M_H/E >= Delta. }                             (7)
+
+So the Theorem-51 phase deficit is a direct lower bound for relative Mantel
+slack.
+
+## 2. Global coarea transfer
+
+Let the retained coarea grains be H_i, with crossing counts E_i, train counts
+V_i, and phase deficits Delta_i. The grain vertex sets are disjoint subsets of
+the global train set; trains isolated after the coarea cut only increase T.
+Hence
+
+    T >= sum_i V_i.                                      (8)
+
+Also
+
+    R_*=sum_i E_i.                                       (9)
+
+Applying (5) grainwise gives
+
+    boxed{
+    T >= 2 sum_i sqrt((1+Delta_i)E_i).
+    }                                                    (10)
+
+This is the general-phase analogue of the balanced-grain train budget, with no
+equal-phase-size assumption.
+
+Now distinguish one grain H_* and put
+
+    Theta=E_*/R_*.
+
+Assume `R_*>0` for this normalization.
+
+If Delta_* >= delta, then all other grains still satisfy ordinary Mantel, so
+
+    T
+      >= 2 sqrt((1+delta)E_*)
+         +2 sum_{i != *} sqrt(E_i)
+
+      >= 2 sqrt(R_*)[
+             sqrt((1+delta)Theta)+sqrt(1-Theta)
+           ].                                            (11)
+
+The last step uses
+
+    sum_{i != *} sqrt(E_i)
+      >= sqrt(sum_{i != *} E_i).
+
+If, separately, the retained grains satisfy
+
+    R_*/D^2 -> Delta_2=pi/(2sqrt(3)),
+
+then every subsequence on which Theta -> theta and liminf Delta_* >= delta satisfies
+
+    boxed{
+    liminf T/D
+      >= 2 sqrt(Delta_2)
+         [sqrt((1+delta)theta)+sqrt(1-theta)].
+    }                                                    (12)
+
+Under the stated grain and mass premises, this is a direct local-to-global
+conversion of an assumed GPI phase gap into train population.
+
+## 3. Deficit-refined grain concentration
+
+Equation (11) can also be inverted. Put
+
+    A=1+delta,
+    L=X/[2 sqrt(Delta_2)].
+
+Assume the same retained-mass premise as in (12),
+`R_*/D^2 -> Delta_2`.
+
+Assume the largest grain obeys Delta_* >= delta and a subsequence satisfies
+
+    T/D <= X+o(1).
+
+Assume also the high-mass branch condition
+
+    Theta >= A/(A+1),
+
+and the admissible range
+
+    sqrt(A) <= L <= sqrt(A+1).
+
+On this branch the function
+
+    f_delta(Theta)=sqrt(A Theta)+sqrt(1-Theta)
+
+is strictly decreasing. Hence (11) implies
+
+    Theta >= C_delta(X)-o(1),                            (13)
+
+where the high-mass root is
+
+    C_delta(X)
+      = 1 - [
+          {L-sqrt(A(A+1-L^2))over A+1}
+        ]^2.                                             (14)
+
+For delta=0 this reduces to the usual two-grain Mantel concentration bound.
+For every fixed delta>0 in the same admissible range,
+
+    C_delta(X)>C_0(X).                                   (15)
+
+Thus a positive GPI deficit gives a strict strengthening of the two-grain
+concentration bound whenever its high-mass and admissibility conditions hold.
+Those conditions and a usable `delta` require a separate theorem. The current
+route's canonical GPI gives a local deficit only for a dominant coherent
+component with `t=b/M >= tau > 0`; applying it here requires verifying that exact
+component and parameter scope. This note does not derive a 79% mass concentration
+or a fixed `delta` from `T/D <= 2.56`.
+
+## 4. Exact equality conditions
+
+For exact equality in (11), first there can be no trains outside the retained
+grains, and the distinguished-grain replacement requires `Delta_*=delta` when
+`E_*>0`. Equality in the grain terms and residual sum then requires the following.
+
+For equality in the distinguished-grain term, (6) requires
+
+    s_*+t_*=1+2Delta_*.
+
+For every residual grain contributing positive crossing mass, equality in its
+ordinary Mantel bound requires
+
+    Delta_i=0,
+    s_i+t_i=1.
+
+Finally, equality in
+
+    sum_{i != *} sqrt(E_i)
+      >= sqrt(sum_{i != *}E_i)
+
+requires at most one residual grain to carry positive crossing mass.
+
+Thus exact equality in (11) requires at most two crossing-carrying grains: the
+distinguished grain lies on `u=1+2Delta`, and any residual crossing-carrying
+grain lies on the `Delta=0, u=1` Mantel locus. These are equality conditions
+only; no quantitative near-equality stability theorem is proved here.
+
+## 5. What this resolves and what remains
+
+Equations (5), (10), and (11) convert an assumed phase deficit into a train
+population lower bound at fixed retained crossing mass. The report does not prove
+that the grains partition all leading crossing mass, that one grain has positive
+`Delta`, or that the high-mass condition holds. The canonical local GPI does not
+by itself provide this multi-grain globalization. Target B remains open; any use
+of this transfer must first establish its inputs.
+
+The remaining global task is to:
+
+1. strengthen the local GPI deficit enough that (11) exceeds the Section-39
+   allowance; or
+2. combine the equality structure in Section 4 with the physical shell,
+   penetration, or boundary ledger to show that the two-grain near-equality
+   profile has an additional positive cost.
+
+No computational evidence is used as a proof premise.

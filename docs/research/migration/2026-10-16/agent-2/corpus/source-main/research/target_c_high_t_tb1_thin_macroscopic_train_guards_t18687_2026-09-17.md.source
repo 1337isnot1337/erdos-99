@@ -1,0 +1,421 @@
+# Target C-II - a logarithmic THIN braid admits four macroscopically separated train guards
+
+**Date:** 2026-09-17  
+**Status:** proof-only strengthening of the THIN rich-row/growing-braid normal form; no canonical promotion claimed  
+**Scope:** THIN side of the 15-spaced one-sign strong-TB1 Horn upper family through `t=(q-k)/D<=1.8687`  
+**Dependencies:** THIN rich-cut phase synchronization; uniform THIN row-blocker degree bound; exact train-step metric; complete-train count; triangle-free train crossing graph  
+**Certificate:** `research/verify_target_c_high_t_tb1_thin_macroscopic_train_guards_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The logarithmic growing-fence theorem keeps `Theta(log D)` fixed trains on each flank, but those trains need not be macroscopically separated within a flank. For geometric closure it is useful to retain fewer trains with a stronger metric guarantee.
+
+A different double count gives exactly that. On each THIN-rich row, the purified left and right flank families each contain `Theta(D)` trains. Color every flank train by its two possible projective column-phase signs relative to that row. Each flank contains quadratically many **same-phase pairs whose row-normal crossing centers are a fixed positive fraction of `D` apart**.
+
+Synchronizing one such pair on each flank costs only a constant factor, rather than the exponential-in-`k` cost of synchronizing `k` whole train subsets. Consequently the blocker braid may be made much wider.
+
+> **Macroscopic four-guard theorem.** Put
+> \[
+> q_0=0.05470272542658\ldots,
+> \qquad
+> T_*=3.0605,
+> \]
+> and
+> \[
+> \eta_*:={\sqrt3\,q_0\over16}>0.
+> \tag{MG.1}
+> \]
+> For every fixed
+> \[
+> 0<c<{1\over\log5},
+> \tag{MG.2}
+> \]
+> the THIN branch contains, for all sufficiently large `D`,
+>
+> - a vertex-disjoint pairwise-properly-crossing THIN braid `F_D` with
+>   \[
+>   |F_D|=k_D:=\lfloor c\log D\rfloor;
+>   \]
+> - two fixed complete trains `ell_1,ell_2` on the left flank and two fixed complete trains `r_1,r_2` on the right flank;
+> - a common inverse-`D` phase row family `A_D` with
+>   \[
+>   \boxed{|A_D|\ge D^{1-c\log5-o(1)};}
+>   \tag{MG.3}
+>   \]
+>
+> such that every selected chord and every one of the four trains crosses every row in `A_D`, all four trains are pairwise noncrossing, and on every `a in A_D`,
+> \[
+> h_a(z_{a,\ell_i})<-0.01D,
+> \qquad
+> h_a(z_{a,r_i})>+0.01D,
+> \tag{MG.4}
+> \]
+> while
+> \[
+> \boxed{
+> |h_a(z_{a,\ell_2})-h_a(z_{a,\ell_1})|
+> >(\eta_*-o(1))D,
+> }
+> \tag{MG.5}
+> \]
+> and
+> \[
+> \boxed{
+> |h_a(z_{a,r_2})-h_a(z_{a,r_1})|
+> >(\eta_*-o(1))D.
+> }
+> \tag{MG.6}
+> \]
+> Each fixed pair is in one inverse-`D` column phase.
+
+There is then a free exact incidence purification. Record, for each braid chord, whether it meets each of the four complete train curves. There are only `16` possible four-bit patterns, so one pattern occurs on at least `k_D/16` braid chords. Thus a sub-braid
+
+\[
+F_D^{hom}\subset F_D
+\]
+with
+
+\[
+\boxed{
+|F_D^{hom}|\ge {k_D\over16}
+=\left({c\over16}-o(1)\right)\log D
+}
+\tag{MG.7}
+\]
+has one identical meet/avoid pattern against all four macroscopically separated guards.
+
+At the useful half-exponent choice
+
+\[
+c={1\over2\log5},
+\tag{MG.8}
+\]
+this gives
+
+\[
+\boxed{
+|A_D|\ge D^{1/2-o(1)}
+}
+\tag{MG.9}
+\]
+and
+
+\[
+\boxed{
+|F_D^{hom}|
+\ge
+\left({1\over32\log5}-o(1)\right)\log D.
+}
+\tag{MG.10}
+\]
+
+This is complementary to the two-sided growing-fence incidence theorem. That theorem preserves a diverging number of trains on each flank and obtains a `Theta(log log D)` homogeneous braid/fence subsystem. The present theorem keeps only two trains per flank, but forces each pair to have macroscopic row-normal width and preserves a `Theta(log D)` homogeneous braid.
+
+---
+
+## 1. Uniform rich-row input
+
+Use the notation of the THIN rich-row and growing-braid theorems. Let
+
+\[
+N=|T_D|=\Theta(D)
+\]
+be the owned THIN blocker population and let `R_D` be the rich low-defect row family. Uniformly in `a in R_D`,
+
+\[
+|R_D|>\left({3\over2}-o(1)\right)N,
+\tag{MG.11}
+\]
+
+\[
+|B_a|>\left({1\over5}-o(1)\right)N,
+\tag{MG.12}
+\]
+
+and
+
+\[
+\Delta(B_a)=O(D^{3/4}).
+\tag{MG.13}
+\]
+
+The purified complete-train family on `a` has flank subfamilies
+
+\[
+P_a^-,P_a^+
+\]
+with
+
+\[
+|P_a^-|,|P_a^+|>(q_0-o(1))D,
+\tag{MG.14}
+\]
+
+where every left crossing has `h_a<-0.01D`, every right crossing has `h_a>+0.01D`, and consecutive purified crossing centers in the common train order differ in row-normal coordinate by more than `sqrt(3)/2`.
+
+The global number `M_D` of complete stopped trains obeys
+
+\[
+M_D<(T_*+o(1))D.
+\tag{MG.15}
+
+For `k=O(log D)`, the existing greedy matching estimate is uniform:
+
+\[
+M_k(a)
+\ge
+{1\over k!}
+\prod_{j=0}^{k-1}(|B_a|-2j\Delta(B_a))
+>
+{N^k\over k!5^k}D^{-o(1)}.
+\tag{MG.16}
+
+Every such matching is a vertex-disjoint pairwise-crossing THIN braid.
+
+---
+
+## 2. Every flank has quadratically many wide same-phase train pairs
+
+Fix a row `a` and one flank, and write its ordered purified trains as
+
+\[
+b_1,\ldots,b_m,
+\qquad
+m>(q_0-o(1))D.
+\tag{MG.17}
+
+Each train has one of two projective column-phase signs relative to `a`. Color the `m` indices by these two signs.
+
+The number of same-color unordered pairs is at least
+
+\[
+{m^2\over4}-{m\over2}.
+\tag{MG.18}
+
+Put
+
+\[
+g=\left\lceil{m\over8}\right\rceil.
+\]
+
+The total number of index pairs with
+
+\[
+0<j-i<g
+\]
+is at most
+
+\[
+m(g-1)<{m^2\over8}.
+\tag{MG.19}
+
+Therefore the number of same-phase pairs with
+
+\[
+j-i\ge g
+\]
+is at least
+
+\[
+\boxed{
+{m^2\over8}-{m\over2}.
+}
+\tag{MG.20}
+
+For any such pair, the exact train-step inequality gives
+
+\[
+|h_a(z_{a,b_j})-h_a(z_{a,b_i})|
+>{\sqrt3\over2}(j-i)
+\ge {\sqrt3\over16}m.
+\tag{MG.21}
+
+Using (MG.17), every wide same-phase pair therefore has separation
+
+\[
+\boxed{
+|h_a(z_{a,b_j})-h_a(z_{a,b_i})|
+>(\eta_*-o(1))D,
+\qquad
+\eta_*={\sqrt3q_0\over16}.
+}
+\tag{MG.22}
+
+Moreover each flank contains at least
+
+\[
+\boxed{
+\left({q_0^2\over8}-o(1)\right)D^2
+}
+\tag{MG.23}
+
+such pairs.
+
+Apply this independently to the left and right flanks.
+
+---
+
+## 3. Double count braid plus one wide pair on each flank
+
+Fix
+
+\[
+k=k_D=\lfloor c\log D\rfloor
+\]
+with fixed `c>0`.
+
+Count quadruples
+
+\[
+(a,F,L,R)
+\tag{MG.24}
+\]
+where
+
+- `a in R_D`;
+- `F` is a `k`-edge matching in the THIN blocker graph `B_a`;
+- `L` is a wide same-phase pair from `P_a^-`;
+- `R` is a wide same-phase pair from `P_a^+`.
+
+Equations (MG.11), (MG.16), and (MG.23) give
+
+\[
+\#\{(a,F,L,R)\}
+>
+|R_D|\,{N^k\over k!5^k}
+{q_0^4D^4\over64}
+D^{-o(1)}.
+\tag{MG.25}
+
+There are at most
+
+\[
+{N\choose k}\le {N^k\over k!}
+\tag{MG.26}
+
+possible blocker `k`-sets. There are at most
+
+\[
+{M_D\choose2}^2
+\le {M_D^4\over4}
+<\left({T_*^4\over4}+o(1)\right)D^4
+\tag{MG.27}
+
+possible ordered choices of one global train pair for the left role and one for the right role.
+
+Pigeonhole therefore gives one fixed braid `F_D`, one fixed left pair, and one fixed right pair which coexist on at least
+
+\[
+\left(
+{q_0^4\over16T_*^4}-o(1)
+\right)
+|R_D|\,5^{-k}D^{-o(1)}
+\tag{MG.28}
+
+rows.
+
+Split those rows by their two projective row-phase signs relative to one fixed guard train and retain the larger class. Using (MG.11), the surviving family `A_D` has size at least
+
+\[
+\left(
+{3q_0^4\over64T_*^4}-o(1)
+\right)
+N\,5^{-k}D^{-o(1)}.
+\tag{MG.29}
+
+All retained rows consequently lie in one inverse-`D` projective phase.
+
+Because `N=Theta(D)` and
+
+\[
+5^{-k}
+=D^{-c\log5+o(1)},
+\tag{MG.30}
+
+we obtain
+
+\[
+\boxed{
+|A_D|\ge D^{1-c\log5-o(1)}.
+}
+\tag{MG.31}
+
+This diverges polynomially exactly for (MG.2).
+
+---
+
+## 4. The four fixed guards retain their metric and topological structure
+
+The left pair was selected from `P_a^-` on every retained row, so (MG.4) and (MG.5) hold uniformly. The right pair similarly gives (MG.4) and (MG.6). Each pair was selected same-phase rowwise; after the row-phase split its two fixed train directions therefore lie in one inverse-`D` column phase.
+
+Every one of the four fixed trains crosses every retained row. If two fixed guards crossed each other, then those two trains together with any retained row would form a triangle in the complete-train crossing graph. That graph is triangle-free. Therefore all four fixed guards are pairwise noncrossing.
+
+The standard two-shore train-order lemma then gives one common order of the four guards along every retained row. In that order the left pair precedes the right pair because of the strict signs in (MG.4).
+
+The braid geometry is unaffected by this train-pair synchronization: its chords remain vertex-disjoint THIN hull chords, pairwise properly crossing, and every braid chord crosses every retained row. Their common exact selected-cut support block also survives.
+
+---
+
+## 5. Four-bit incidence purification preserves a logarithmic braid
+
+For each `e in F_D`, define the four-bit word
+
+\[
+\omega(e)=
+\bigl(
+\chi(e,\ell_1),
+\chi(e,\ell_2),
+\chi(e,r_1),
+\chi(e,r_2)
+\bigr)
+\in\{0,1\}^4,
+\tag{MG.32}
+
+where `chi=1` means that the straight THIN segment has nonempty intersection with the complete stopped-train midpoint curve, and `chi=0` means disjointness.
+
+There are only `16` words. Hence one word occurs on at least
+
+\[
+\left\lceil{k\over16}\right\rceil
+\tag{MG.33}
+
+braid chords. Retain those chords as `F_D^hom`. Then all selected chords have one identical incidence type against the same four fixed, macroscopically separated guards.
+
+No uniqueness or transversality of chord/train intersections is used.
+
+For the half-exponent choice (MG.8),
+
+\[
+k_D=
+\left({1\over2\log5}+o(1)\right)\log D
+\tag{MG.34}
+\]
+and therefore
+
+\[
+\boxed{
+|F_D^{hom}|
+\ge
+\left({1\over32\log5}-o(1)\right)\log D,
+}
+\tag{MG.35}
+\]
+while (MG.31) becomes (MG.9).
+
+---
+
+## 6. Frontier effect
+
+The THIN branch now has two complementary incidence normal forms.
+
+The growing-fence purification keeps a diverging number of train curves on each side and reduces their arbitrary incidence with a common sub-braid to four two-sided all-meet/all-avoid cases, at `Theta(log log D)` width.
+
+The present theorem instead gives a larger
+
+\[
+Theta(\log D)
+\]
+homogeneous crossing braid against four **fixed, macroscopically separated** train guards, with two guards on each side of the circumcenter corridor. At the half-exponent choice this occurs on `D^(1/2-o(1))` common rows.
+
+The remaining THIN task is now more metric. A closure argument may use the fixed positive guard-pair widths (MG.5)-(MG.6) together with the common row phase and near-diameter midpoint localization. It only has to handle one of sixteen exact chord/guard incidence words on the retained logarithmic braid.
+
+**Disposition:** synchronized two macroscopic same-phase train guards on each circumcenter flank while retaining a logarithmic pairwise-crossing THIN braid and a polynomial-height common row stack; then reduced the braid to one fixed four-bit guard-incidence type without losing logarithmic size. C-II and Level I remain open.

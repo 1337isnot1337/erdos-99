@@ -1,0 +1,397 @@
+# Erdos Problem #99 - loaded-flat-center weak-contact collapse at gap 0.002123
+
+**Date:** 2026-09-14
+**Target:** C-II, canonical contact-minimal full-core Type-II branch
+**Dependencies:** certified minimax phase-star atomic gap `g=0.002123`; low-t flat-center multiplicity one; loaded-flat-center singleton gate; flat-center contact-degree trichotomy; global degree-three stress estimate
+**Claim class:** proof-only structural refinement awaiting independent audit
+**External literature:** no new import
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The current flat-center analysis leaves loaded centers, unloaded degree-three centers,
+and unloaded degree-four centers. Paying the loaded centers by singleton trains gives a
+linear unloaded remainder. Previously the degree-four remainder was sent to a hidden
+near-contact activation branch. That split is unnecessary.
+
+At an unloaded degree-four flat center, the two contacts on the complementary side of
+the almost-straight pentagon angle also have asymptotically vanishing KKT weight. Thus
+**every unloaded flat center**, whether degree three or four, contributes actual weak
+positive contact edges. After endpoint multiplicity is paid, the entire low-`t`,
+small-residual branch has one common source-level degeneracy: linearly many exact
+contacts carrying only `o(D^2)` total normalized KKT weight.
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},\qquad s:=\sqrt{\Delta_2},
+\qquad g:=0.002123.
+\]
+
+On a convergent Type-II subsequence write
+
+\[
+t:=\lim {q-k\over D},\qquad
+\delta:=\lim {b-P_F\over D},\qquad
+\kappa:=\lim {k\over D},
+\]
+
+and assume
+
+\[
+R_F=o(D).
+\tag{WC.1}
+\]
+
+Let `L` be the loaded flat centers and let `U=U_3\sqcup U_4` be the unloaded degree-three
+and degree-four flat centers. Then
+
+\[
+\boxed{
+\liminf {|U|\over D}
+\ge
+U_g(t,\delta,\kappa)
+:=2\pi+3s+{3g\over2}-5t+2\delta+{\kappa\over2}.
+}
+\tag{WC.2}
+\]
+
+There is a set `E_{weak}` of distinct positive contact edges satisfying
+
+\[
+\boxed{
+\liminf {|E_{weak}|\over D}
+\ge {1\over2}U_g(t,\delta,\kappa),
+}
+\tag{WC.3}
+\]
+
+and, for the canonical relative-interior normalized KKT stress,
+
+\[
+\boxed{
+\sum_{e\in E_{weak}}\alpha_e=o(D^2).
+}
+\tag{WC.4}
+\]
+
+Thus the low-`t`, small-residual branch no longer has a degree-three/degree-four escape:
+a positive unloaded-center floor automatically forces a linear weak-contact family.
+
+## 1. Updated unloaded-center floor
+
+The `g=0.002123` minimax theorem gives both
+
+\[
+\liminf {T-q/2\over D}\ge2s+g
+\tag{WC.5}
+\]
+
+and, on the strict-rhombus train graph,
+
+\[
+\liminf {T_R\over D}\ge2s+g.
+\tag{WC.6}
+\]
+
+The low-`t` pentagon ledger therefore gives the distinct flat-center floor
+
+\[
+\liminf {V_{flat}\over D}
+\ge
+\pi+2s+g-{5t\over2}+\delta+{\kappa\over2}.
+\tag{WC.7}
+\]
+
+Every loaded flat center contributes two distinct singleton stopped trains, so
+
+\[
+2|L|\le S,
+\tag{WC.8}
+\]
+
+where `S=T-T_R` is the singleton population. The exact terminal ledger and `f<=Q`
+give
+
+\[
+\limsup {T\over D}\le5t-2\pi-2\delta.
+\tag{WC.9}
+\]
+
+Subtracting (WC.6),
+
+\[
+\limsup {S\over D}
+\le5t-2\pi-2\delta-2s-g,
+\tag{WC.10}
+\]
+
+hence
+
+\[
+\limsup {|L|\over D}
+\le {5t\over2}-\pi-\delta-s-{g\over2}.
+\tag{WC.11}
+\]
+
+Since `U=V_flat-L`, (WC.7)--(WC.11) give exactly (WC.2).
+
+## 2. Degree-three centers: the existing weak edge
+
+Let `m in U_3`. Besides the two flat-face contacts `ml,mr`, there is one exterior
+contact `mx`. If the large face angle is at least `pi-epsilon`, the existing local KKT
+estimate gives
+
+\[
+\alpha_{mx}
+\le
+R(\epsilon)\min\{\alpha_{ml},\alpha_{mr}\},
+\qquad
+R(\epsilon):={\sin\epsilon\over\sin(\pi/3-\epsilon)}.
+\tag{WC.12}
+\]
+
+On the diagonal flatness scale `epsilon_D->0`, summing over all degree-three centers and
+using the full-support virial identity
+
+\[
+\sum_{e\in C}\alpha_e=D^2
+\tag{WC.13}
+\]
+
+gives the already-proved occurrence bound
+
+\[
+\sum_{m\in U_3}\alpha_{e_m}
+\le R(\epsilon_D)D^2=o(D^2).
+\tag{WC.14}
+\]
+
+There is one selected exterior-edge occurrence per center in `U_3`.
+
+## 3. Degree-four centers also force weak exact contacts
+
+Let `m in U_4`. Write the four contact neighbors in cyclic order so that the bounded
+pentagon uses the large sector from `l` to `r`, while the complementary arc runs
+
+\[
+r,\ x,\ y,\ l.
+\]
+
+Let its three complementary angular gaps be
+
+\[
+\theta_i={\pi\over3}+\eta_i,
+\qquad \eta_i>0,
+\]
+
+with
+
+\[
+\eta_1+\eta_2+\eta_3=:\eta\le\epsilon.
+\tag{WC.15}
+\]
+
+Rotate coordinates so the contact direction `mr` has angle zero. Then the other
+contact directions have angles
+
+\[
+0,
+\quad {\pi\over3}+\eta_1,
+\quad {2\pi\over3}+\eta_1+\eta_2,
+\quad \pi+\eta.
+\tag{WC.16}
+\]
+
+The center is unloaded, so positive KKT equilibrium is
+
+\[
+\alpha_r u_r+\alpha_xu_x+\alpha_yu_y+\alpha_lu_l=0.
+\tag{WC.17}
+\]
+
+Take the component perpendicular to `u_r`. Because
+
+\[
+\sin\left({\pi\over3}+\eta_1\right)
+\ge \sin(\pi/3-\epsilon),
+\]
+
+and, using `\eta_1+\eta_2<=\eta<=\epsilon`,
+
+\[
+\sin\left({2\pi\over3}+\eta_1+\eta_2\right)
+\ge \sin(\pi/3-\epsilon),
+\]
+
+while
+
+\[
+\sin(\pi+\eta)=-\sin\eta,
+\]
+
+equation (WC.17) gives
+
+\[
+\boxed{
+\alpha_x+\alpha_y
+\le
+R(\epsilon)\alpha_l.
+}
+\tag{WC.18}
+\]
+
+Thus both complementary contacts of every unloaded degree-four flat center are weak in
+aggregate, with the same vanishing factor as the degree-three estimate.
+
+Sum (WC.18) over `U_4`. Each selected face edge `ml` can occur for at most its two
+endpoints, so
+
+\[
+\sum_{m\in U_4}\alpha_{ml}
+\le2D^2.
+\]
+
+Therefore
+
+\[
+\boxed{
+\sum_{m\in U_4}(\alpha_{mx}+\alpha_{my})
+\le2R(\epsilon_D)D^2=o(D^2).
+}
+\tag{WC.19}
+\]
+
+No lower bound on any individual contact multiplier is used.
+
+## 4. Deduplicate all unloaded weak edges at once
+
+Select one exterior edge occurrence at every center in `U_3` and both complementary
+edge occurrences at every center in `U_4`. The total number of selected occurrences is
+
+\[
+|U_3|+2|U_4|.
+\tag{WC.20}
+\]
+
+One undirected contact edge can be selected at most twice, once from each endpoint.
+Hence the set `E_weak` of distinct selected edges obeys
+
+\[
+|E_{weak}|
+\ge {|U_3|+2|U_4|\over2}
+\ge {|U_3|+|U_4|\over2}
+={|U|\over2}.
+\tag{WC.21}
+\]
+
+Combining (WC.14) and (WC.19), and noting that deduplication cannot increase a sum of
+nonnegative weights,
+
+\[
+\sum_{e\in E_{weak}}\alpha_e
+\le3R(\epsilon_D)D^2=o(D^2).
+\tag{WC.22}
+\]
+
+Equations (WC.21)--(WC.22) prove (WC.3)--(WC.4).
+
+## 5. Current endpoint constants
+
+The certified `g=0.002123` Section-171 endpoint is
+
+\[
+t_{23}=C_{146}+0.0017327,
+\qquad C_{146}={4\over9}(\pi+s),
+\]
+
+so
+
+\[
+t_{23}=1.82124623797944\ldots .
+\]
+
+At `delta=kappa=0`, the current flat-center floor is
+
+\[
+\boxed{
+{V_{flat}\over D}
+\ge0.495225672369096\ldots-o(1).
+}
+\tag{WC.23}
+\]
+
+The unloaded-center floor is
+
+\[
+\boxed{
+{|U|\over D}
+\ge0.0370770378742350\ldots-o(1).
+}
+\tag{WC.24}
+\]
+
+so (WC.3) becomes
+
+\[
+\boxed{
+{|E_{weak}|\over D}
+\ge0.0185385189371175\ldots-o(1).
+}
+\tag{WC.25}
+\]
+
+with total normalized KKT weight `o(D^2)`.
+
+Even after discarding the nonnegative `delta,kappa` bonuses, the unloaded floor is
+positive throughout
+
+\[
+\boxed{
+t< {2\pi+3s+3g/2\over5}
+=1.82866164555429\ldots .}
+\tag{WC.26}
+\]
+
+Consequently, excluding a linear weak-contact family of the form (WC.3)--(WC.4) would
+by itself raise the proof-only Type-II `q-k` floor from `1.8212462...` to at least
+`1.8286616...` on the small-residual branch.
+
+## 6. Frontier effect
+
+The low-`t`, small-residual flat-pentagon endpoint is now reduced to one stress
+phenomenon rather than a hidden-contact/weak-contact dichotomy:
+
+```text
+>= 0.0185385 D distinct exact positive contacts
+with total normalized KKT weight o(D^2).
+```
+
+The degree-four hidden near-pairs still exist and remain useful geometric information,
+but they are no longer required to state the unavoidable degeneration.
+
+This does not yet contradict relative-interior KKT positivity: a finite positive stress
+can assign arbitrarily small weights to a linear contact family. The next closing
+lemma must use where these weak contacts sit in the pentagon/train network, or show
+that simultaneously weakening them produces a contact-preserving mixed flex or a
+source-preserving diameter descent.
+
+No exact new unit contact, unit equilateral triangle, or strict same-cardinality
+sub-`D` source is asserted here.
+
+## 7. Scope audit
+
+- The scalar constant `g=0.002123` is the current strongest certified proof-only
+  minimax endpoint and inherits its audit lifecycle.
+- The loaded singleton payment is unchanged and finite.
+- Degree-four estimate (WC.18) uses only unloaded KKT equilibrium and the already-proved
+  angular gaps of a flat degree-four center.
+- The global weight sum uses the canonical relative-interior full-support
+  normalization `sum alpha_e=D^2`.
+- Contact-isolated source points remain in the full source and do not enter the flat
+  center count.
+- The count in (WC.21) is occurrence-safe: one undirected contact edge has only two
+  endpoints.
+
+C-II and Level I remain open.

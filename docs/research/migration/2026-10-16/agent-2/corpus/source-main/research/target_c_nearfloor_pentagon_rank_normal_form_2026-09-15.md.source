@@ -1,0 +1,547 @@
+# Target C-II — direct-energy near-floor pentagon/rank normal form
+
+**Date:** 2026-09-15<br>
+**Repository base:** current `main` through the hostile-audited direct dominant/complement energy theorem<br>
+**Status:** proof-only full-core Type-II strengthening; theorem-state authority unchanged<br>
+**Scope:** fully force-visible no-container/full-core Type-II branch<br>
+**LEVEL I STATUS:** `STILL OPEN`
+
+The direct dominant/complement outer-energy theorem now proves
+
+\[
+\boxed{\liminf {q-k\over D}\ge1.83236.}
+\]
+
+Its exact scalar relaxation has root `1.8323676277438298975...`.  More importantly for
+closure, its contradiction margin is uniformly decreasing in the outer-detour variable.
+This gives a stability theorem just above the scalar floor rather than only another
+excluded endpoint.
+
+For every full-core Type-II survivor with
+
+\[
+\boxed{t:={q-k\over D}\le1.8325,}
+\]
+
+the unused network slack is less than `0.00040920`.  The low-`t` face ledger identifies
+that same slack with the available excess face degree.  Consequently
+
+\[
+\boxed{
+{Q-f\over D}<0.00040920+o(1),
+\qquad
+{k\over D}<0.00163679+o(1),
+}
+\tag{NF.1}
+\]
+
+\[
+\boxed{
+{p_5\over D}>0.4962786-o(1),
+}
+\tag{NF.2}
+\]
+
+where `p_5` is the number of bounded pentagonal contact faces, and
+
+\[
+\boxed{
+{\operatorname{rank}C_{\rm face}\over D}
+>0.9917388-o(1).
+}
+\tag{NF.3}
+
+An independent use of the audited complement-capacity theorem, extended over this
+slightly wider range, still forces at least
+
+\[
+\boxed{0.4081989D-o(D)}
+\tag{NF.4}
+
+retained complement outer-to-outer stopped trains.  Every one is two-sidedly braced by
+actual diameter edges by the audited Section-157 theorem.
+
+Finally the `g=0.0050` all-train correlation and the current `t>=1.83236` floor give
+
+\[
+\boxed{
+{\rho_{rec}+\sigma_R\over D}
+\ge1.84236-o(1),
+}
+\tag{NF.5}
+
+so every survivor has either at least `0.46059D-o(D)` singleton stopped trains or a
+rhombic Mantel deficit exceeding `0.4916615D^2-o(D^2)`.
+
+This is not C-II closure.  It replaces the low-`t` scalar endpoint by a concrete global
+compatibility problem: an almost pure pentagon sea with almost full exceptional-face
+closure rank must coexist with a linear family of diameter-braced outer-to-outer train
+cuts and one of two large train-defect mechanisms.
+
+---
+
+## 1. Direct-energy margin and the network simplex
+
+On a convergent full-core Type-II subsequence write
+
+\[
+t={q-k\over D},
+\qquad
+\kappa={k\over D},
+\qquad
+\delta={b-P_F\over D}={d_{out}\over D}.
+\]
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+C_0=2\sqrt{\Delta_2}+0.0050,
+\]
+
+and
+
+\[
+R(t)={9t\over2}-2\pi-C_0.
+\]
+
+The hostile-audited train theorem and Section 171 give
+
+\[
+\boxed{
+2\delta+{\kappa\over2}\le R(t).
+}
+\tag{NF.6}
+
+Let
+
+\[
+\delta_{max}(t)={R(t)\over2}.
+\]
+
+The direct dominant/complement theorem defines
+
+\[
+G(t,\delta,\kappa)
+=\min_K\left[
+F(K-\delta)+J(\pi-K-N_*)
+\right]-\delta,
+\tag{NF.7}
+\]
+
+where
+
+\[
+F(z)=z-6\sin(z/6),
+\qquad
+J(p)=2p-6\sin(p/3),
+\]
+
+and `N_*` is the complement-train population upper bound from that theorem.  Every
+survivor satisfies
+
+\[
+G(t,\delta,\kappa)\le0.
+\tag{NF.8}
+\]
+
+The hostile audit proves throughout the present interval that
+
+\[
+{\partial G\over\partial\kappa}>0
+\tag{NF.9}
+\]
+
+and
+
+\[
+{\partial G\over\partial\delta}<-0.76.
+\tag{NF.10}
+\]
+
+The companion verifier rechecks the stronger coarse upper bound
+`-0.7713...` for (NF.10).
+
+At `kappa=0`, `delta=delta_max(t)` let the minimized boundary margin be `G_0(t)`.  The
+direct theorem proves `G_0` is strictly decreasing in `t`.  At the top of the present
+band the verifier gives
+
+\[
+\boxed{
+G_0(1.8325)
+=-0.0003109891582858596\ldots .
+}
+\tag{NF.11}
+
+For an actual survivor, (NF.9) implies
+
+\[
+G(t,\delta,0)\le G(t,\delta,\kappa)\le0.
+\]
+
+Integrating (NF.10) from `delta` to `delta_max(t)` gives
+
+\[
+G(t,\delta,0)
+>
+G_0(t)+0.76[\delta_{max}(t)-\delta].
+\]
+
+Since `G_0(t)>=G_0(1.8325)` for `t<=1.8325`, every survivor obeys
+
+\[
+\boxed{
+\delta_{max}(t)-\delta
+<0.000409196260902447\ldots .
+}
+\tag{NF.12}
+
+This is the basic near-floor stability estimate.
+
+The network simplex (NF.6) is equivalently
+
+\[
+\delta+{\kappa\over4}\le\delta_{max}(t),
+\]
+
+so
+
+\[
+\boxed{
+\kappa<0.00163678504360979\ldots .
+}
+\tag{NF.13}
+
+---
+
+## 2. Exceptional degree is exactly paid by unused network slack
+
+The low-`t` face ledger gives
+
+\[
+{Q\over D}=2t-\pi-\delta+o(1)
+\tag{NF.14}
+\]
+
+and
+
+\[
+C={t\over2}+2{f\over D}-{\kappa\over2}\ge C_0,
+\]
+
+hence
+
+\[
+{f\over D}
+\ge {C_0\over2}-{t\over4}+{\kappa\over4}-o(1).
+\tag{NF.15}
+\]
+
+Subtracting (NF.15) from (NF.14),
+
+\[
+{Q-f\over D}
+\le
+{9t\over4}-\pi-{C_0\over2}-\delta-{\kappa\over4}+o(1).
+\]
+
+But
+
+\[
+{9t\over4}-\pi-{C_0\over2}
+={R(t)\over2}
+=\delta_{max}(t),
+\]
+
+so
+
+\[
+\boxed{
+{Q-f\over D}
+\le
+\delta_{max}(t)-\delta-{\kappa\over4}+o(1).
+}
+\tag{NF.16}
+
+Thus the exceptional-degree slack is literally a subquantity of the unused network
+slack.  Equations (NF.12) and (NF.16) prove
+
+\[
+\boxed{
+{Q-f\over D}<0.000409196260902447+o(1).
+}
+\tag{NF.17}
+
+Since
+
+\[
+Q-f=\sum_{F\text{ exceptional}}(\deg F-5),
+\]
+
+the number `f_{>=6}` of exceptional faces of degree at least six satisfies
+
+\[
+\boxed{
+{f_{\ge6}\over D}<0.000409196260902447+o(1).
+}
+\tag{NF.18}
+
+---
+
+## 3. More than `0.4962786D` actual pentagons
+
+For `t<=1.8325`, (NF.15) and `kappa>=0` give
+
+\[
+{f\over D}
+\ge
+{C_0\over2}-{1.8325\over4}-o(1)
+=0.4966878068639573\ldots-o(1).
+\tag{NF.19}
+
+Every exceptional face is either a pentagon or has degree at least six, so
+
+\[
+p_5=f-f_{\ge6}.
+\]
+
+Using (NF.18)--(NF.19),
+
+\[
+\boxed{
+{p_5\over D}
+>0.4962786106030549\ldots-o(1).
+}
+\tag{NF.20}
+
+At most `0.0824%` of the guaranteed exceptional-face population can have degree at
+least six.  Equivalently, more than `99.9176%` of that population is forced to be
+pentagonal throughout the band.
+
+---
+
+## 4. The face-closure matrix has almost full row rank
+
+Canonical notation has
+
+\[
+k=d_H+s_Z,
+\qquad d_H,s_Z\ge0,
+\]
+
+so (NF.13) gives
+
+\[
+{s_Z\over D}
+<0.00163678504360979\ldots .
+\tag{NF.21}
+
+The exact exceptional-face closure-corank identity is
+
+\[
+2f-\operatorname{rank}C_{\rm face}
+=\sigma_C
+\le s_Z.
+\tag{NF.22}
+
+Combining (NF.19), (NF.21), and (NF.22),
+
+\[
+\boxed{
+{\operatorname{rank}C_{\rm face}\over D}
+>0.9917388286843049\ldots-o(1).
+}
+\tag{NF.23}
+
+This is exact row rank.  It does not supply a quantitative smallest-singular-value
+bound for the almost-degenerate pentagon blocks.
+
+---
+
+## 5. A universal complement outer-to-outer train population still survives
+
+The direct tradeoff optimizes the dominant/complement split, so its minimizing
+`p` cannot itself be quoted as a universal complement-train lower bound.  Instead use
+the independently audited complement-capacity theorem.
+
+For actual complement retained pair mass it gives
+
+\[
+p_c
+\ge
+\pi-Q_\Phi(\delta)
+-U-{t+\kappa\over2}+{4\Delta_2\over U},
+\tag{NF.24}
+\]
+
+where `Q_Phi=Phi^{-1}` for the joint-route function `Phi`.  On the present band:
+
+- `p_c` increases with `kappa`;
+- `p_c` decreases with `delta`; and
+- on `kappa=0`, `delta=delta_max(t)`, it decreases with `t`.
+
+The only range extension needed beyond the older certificate is
+
+\[
+Q_\Phi(\delta)<1.81.
+\]
+
+The companion verifier checks
+
+\[
+\Phi'(1.81)<0.044,
+\qquad
+{1\over\Phi'(1.81)}>22.7,
+\]
+
+while the complement train-count term changes with `delta` at rate less than `4`.
+Thus the derivative of (NF.24) with respect to `delta` is still below `-18.7`, proving
+the same monotonicity with large slack.
+
+At the worst point `t=1.8325`, `kappa=0`, `delta=delta_max`, the certificate gives
+
+\[
+\boxed{
+p_c>0.4081989620519120\ldots .}
+\tag{NF.25}
+
+Retained weight on one train is at most one, hence
+
+\[
+\boxed{
+L_{OO}^{comp}>0.4081989D-o(D).
+}
+\tag{NF.26}
+
+Every train counted here is an actual outer-to-outer stopped train outside the dominant
+atomic windows and is crossed by actual diameter edges with both transverse signs.
+
+---
+
+## 6. The correlated stopped-train split strengthens again
+
+Let
+
+\[
+\rho_{rec}:=b+4f+Q-B_4=2S,
+\qquad
+\sigma_R:=B_4-4\sqrt{R_4}.
+\]
+
+The exact train identities give
+
+\[
+\rho_{rec}+\sigma_R=2T-4\sqrt{R_4}.
+\tag{NF.27}
+
+The hostile-audited `g=0.0050` theorem gives
+
+\[
+{T-q/2\over D}
+\ge2\sqrt{\Delta_2}+0.0050-o(1),
+\]
+
+and rhombic saturation gives
+
+\[
+{\sqrt{R_4}\over D}\to\sqrt{\Delta_2}.
+\]
+
+Therefore
+
+\[
+\boxed{
+{\rho_{rec}+\sigma_R-q\over D}
+\ge0.0100-o(1).
+}
+\tag{NF.28}
+
+Current main gives `t>=1.83236-o(1)` and `q/D=t+kappa`, hence
+
+\[
+\boxed{
+{\rho_{rec}+\sigma_R\over D}
+\ge1.84236-o(1).
+}
+\tag{NF.29}
+
+At least one of the following holds:
+
+\[
+\boxed{S\ge0.46059D-o(D)}
+\tag{NF.30}
+\]
+
+or
+
+\[
+\boxed{\sigma_R\ge0.92118D-o(D).}
+\tag{NF.31}
+\]
+
+In the second branch, the exact rationalization
+
+\[
+M_R={T_R^2\over4}-R_4
+={\sigma_R\over8}
+\left(4\sqrt{R_4}+{\sigma_R\over2}\right)
+\]
+
+yields
+
+\[
+\boxed{
+{M_R\over D^2}
+>0.4916615427-o(1).
+}
+\tag{NF.32}
+
+The exact post-endpoint surplus identity also gives
+
+\[
+\boxed{
+\liminf\mu_D
+\ge
+{2\pi+2\sqrt{\Delta_2}\over5}
++{1.84236\over10}
+=1.8217981841815002\ldots .
+}
+\tag{NF.33}
+
+No known universal upper bound on `mu_D` contradicts this lower bound.
+
+---
+
+## 7. Frontier effect
+
+A survivor in the narrow but nonempty band
+
+\[
+1.83236\le t\le1.8325
+\]
+
+must realize all of the following simultaneously:
+
+```text
+>= 0.4962786 D actual pentagonal bounded contact faces
+<  0.0004092 D higher-degree exceptional faces
+<  0.0016368 D mixed-rigidity defect k
+>= 0.9917388 D exceptional-face closure rank
+>= 0.4081989 D complement outer-to-outer stopped trains
++ two-sided actual-diameter bracing on every such train
++ either >= 0.46059 D singleton trains
+  or rhombic Mantel deficit > 0.4916615 D^2.
+```
+
+The remaining closure target is now highly specific.  One must prove that this
+near-pentagonal, almost full-closure-rank contact complex cannot simultaneously host
+the required globally braced train cuts and correlated singleton/rhombic defect.  A
+local pentagon area or angle gap is not available because the flat triangular-lattice
+pentagon regression remains valid.
+
+No exact unit equilateral triangle or source-preserving strict sub-`D` competitor is
+claimed here.
+
+**Disposition:** proof-only near-floor structural strengthening. C-II and Level I
+remain open.

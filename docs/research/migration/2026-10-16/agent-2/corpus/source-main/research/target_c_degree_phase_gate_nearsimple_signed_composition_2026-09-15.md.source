@@ -1,0 +1,367 @@
+# Target C-II — near-simple signed composition of the degree/phase-gate theorem
+
+**Date:** 2026-09-15  
+**Branch theorem:** `research/target_c_global_straight_degree_phase_gate_2026-09-15.md`  
+**Additional proved inputs:** `f4229fb4` / `64535791` (near-simple outer walk) and `2764fb64` / `6db7e252` (signed penetration injectivity and hostile audit)  
+**Status:** proved proof-only composition; theorem-state authority unchanged  
+**LEVEL I STATUS:** `STILL OPEN`
+
+Two results landed after the degree/phase-gate theorem was started. They remove most
+of its remaining topological loss and strengthen its transverse-edge conclusion.
+
+1. The low-detour outer walk is almost simple: at the current endpoint the total
+   repetition surplus of the outer facial walk is at most
+   `0.0459365399111 D+o(D)`.
+2. Every extra contact at a straight occurrence has a signed inward component, and
+   the near-disk geometry prevents one physical contact from being used inward at both
+   endpoints.
+
+Composed with the `15`-degree degree-collapse theorem, these facts give
+
+\[
+\boxed{
+V_{simp,15}\ge1.10837515220613\,D-o(D)
+}
+\]
+
+distinct simple-outer unloaded degree-three/four straight vertices, and at least
+
+\[
+\boxed{
+E_{all,15}\ge1.15431169211717\,D-o(D)
+}
+\]
+ndistinct physical contacts with signed inward component greater than `1/sqrt(2)`.
+The second bound uses **all** extra contacts, not one representative per straight
+vertex.
+
+---
+
+## 1. Inputs at the current low-`t` endpoint
+
+Set
+
+\[
+\beta={\pi\over12}.
+\]
+
+The degree/phase-gate theorem proves
+
+\[
+\boxed{
+S_{15}/D
+\ge1.1543116921171727469\ldots-o(1),
+}
+\tag{CP.1}
+\]
+
+where `S_15` counts distinct physical vertices supporting a `15`-degree-straight
+internal distinguished-route occurrence. Every such vertex is unloaded and has contact
+degree exactly three or four.
+
+The near-simple outer-walk theorem proves at the same endpoint
+
+\[
+\boxed{
+{b-V_{out}\over D}
+\le0.0459365399110338116\ldots+o(1),
+}
+\tag{CP.2}
+\]
+
+where `b` is outer-walk occurrence length and `V_out` is the number of distinct
+physical outer-face vertices.
+
+For the occurrence multiplicities `m_x>=1` of physical outer vertices,
+
+\[
+b-V_{out}=\sum_x(m_x-1).
+\tag{CP.3}
+\]
+
+Thus (CP.2) is an exact budget for all repeated physical outer vertices, regardless of
+whether their repeated occurrences are straight.
+
+---
+
+## 2. The repeated-outer branch is small
+
+Let `A_15` be the number of physical vertices counted by `S_15` whose straight sector
+is not their only outer-face incidence. Every such vertex has `m_x>=2` and contributes
+at least one to the sum in (CP.3). Therefore
+
+\[
+\boxed{A_{15}\le b-V_{out}.}
+\tag{CP.4}
+\]
+
+Combining (CP.1)--(CP.2), the number `V_simp,15=S_15-A_15` of simple-outer straight
+vertices satisfies
+
+\[
+\boxed{
+{V_{simp,15}\over D}
+\ge
+1.1083751522061389353\ldots-o(1).
+}
+\tag{CP.5}
+\]
+
+Every one of these vertices has the bounded-face local classification from the
+phase-gate theorem:
+
+- degree three: exceptional-face incidence, mixed two-rhombus transmission gate, or
+  double-obtuse two-rhombus gate;
+- degree four: exceptional-face incidence or three-rhombus acute fan.
+
+The previously explicit articulation escape is therefore quantitatively minor at the
+current endpoint: it can absorb at most about `3.98%` of the `15`-degree straight
+vertex population.
+
+---
+
+## 3. Signed inward direction for every extra contact
+
+Use the orientation convention of the signed penetration theorem. For a straight
+occurrence on `W_i`, let `n_i` be the loaded-hull side normal pointing into the convex
+force hull.
+
+The signed local argument applies to **every** extra contact at the straight vertex,
+not just to a chosen system-of-distinct-representatives edge. At `beta=pi/12`, every
+extra contact `xw` obeys
+
+\[
+\boxed{
+(w-x)\cdot n_i
+>\sin(\pi/4)
+={1\over\sqrt2}.
+}
+\tag{CP.6}
+\]
+
+At a cubic straight vertex there is exactly one such extra incidence; at a quartic
+straight vertex there are exactly two.
+
+Let `V_3,V_4` be the degree-three and degree-four straight-vertex counts. Then
+
+\[
+V_3+V_4=S_{15}.
+\tag{CP.7}
+\]
+
+The total number of extra incidences is
+
+\[
+\boxed{I_{all}=V_3+2V_4=S_{15}+V_4.}
+\tag{CP.8}
+\]
+
+---
+
+## 4. All extra incidences are globally edge-injective
+
+We adapt the already hostile-audited signed-injectivity argument, with its stronger
+`15`-degree threshold.
+
+Suppose one physical unit contact `xy` were an extra edge at straight occurrences at
+both endpoints. Let the associated loaded-hull inward normals be `n_i,n_j`, and put
+
+\[
+e=y-x,
+\qquad |e|=1.
+\]
+
+Equation (CP.6) at `x` gives
+
+\[
+e\cdot n_i>{1\over\sqrt2},
+\]
+
+while at `y` the selected direction is `-e`, so
+
+\[
+e\cdot n_j<-{1\over\sqrt2}.
+\]
+
+Hence `n_i` lies within angle `<pi/4` of `e` and `n_j` lies within angle `<pi/4` of
+`-e`. Therefore
+
+\[
+\boxed{\angle(n_i,n_j)>\pi/2.}
+\tag{CP.9}
+\]
+
+Let `M_i,M_j` be the midpoints of the associated loaded-hull sides. Type-II near-disk
+geometry makes their radial directions `o(1)`-aligned with the side normals and their
+radii `D/2+o(D)`. Thus (CP.9) yields
+
+\[
+\boxed{|M_i-M_j|>{D\over\sqrt2}-o(D).}
+\tag{CP.10}
+\]
+
+For the route detours `d_i,d_j`, the same route-midpoint estimate used in the signed
+penetration theorem gives
+
+\[
+|M_i-M_j|
+\le s_i+s_j+1+{d_i+d_j\over2},
+\tag{CP.11}
+\]
+
+where the largest loaded-hull side satisfies `max s_r=o(D)`. Therefore
+
+\[
+\boxed{d_i+d_j>\sqrt2D-o(D).}
+\tag{CP.12}
+\]
+
+This is impossible because
+
+\[
+d_i+d_j\le d_{out}\le0.002883975D+o(D).
+\]
+
+So no physical edge can appear as an extra contact incidence at two straight
+endpoints. Distinct extra incidences at one endpoint are already distinct physical
+edges. Therefore the incidence-to-edge map is globally injective:
+
+\[
+\boxed{E_{all,15}=I_{all}=V_3+2V_4=S_{15}+V_4.}
+\tag{CP.13}
+\]
+
+In particular
+
+\[
+\boxed{
+{E_{all,15}\over D}
+\ge1.1543116921171727469\ldots-o(1),
+}
+\tag{CP.14}
+\]
+
+and every counted edge has signed inward component greater than `1/sqrt(2)` relative
+to its associated loaded-hull side.
+
+The exact degree/edge identity is
+
+\[
+\boxed{E_{all,15}+V_3=2S_{15}.}
+\tag{CP.15}
+\]
+
+Thus, for example,
+
+\[
+\boxed{
+\begin{array}{ll}
+\text{either}&V_3/D\ge0.57715584605858637\ldots-o(1),\\[1mm]
+\text{or}&E_{all,15}/D\ge1.73146753817575912\ldots-o(1).
+\end{array}
+}
+\tag{CP.16}
+\]
+
+The second branch is a very large population of distinct `>45`-degree signed inward
+penetration contacts.
+
+---
+
+## 5. Strengthened phase-gate normal form
+
+Retain the phase-gate theorem's notation:
+
+- `X` = simple-outer straight vertices incident to a bounded exceptional face;
+- `O` = cubic simple-outer double-obtuse gates;
+- `P` = simple-outer all-rhombic transmission gates;
+- `Delta_train` = total strict-rhombus angular defect;
+- `f,Q` = bounded exceptional-face count and degree-above-four excess.
+
+The local incidence and defect charges are
+
+\[
+X\le4f+Q,
+\tag{CP.17}
+\]
+
+\[
+O<{24\over\pi}\Delta_{train}.
+\tag{CP.18}
+\]
+
+Since the repeated-outer population has already been removed in (CP.5),
+
+\[
+\boxed{
+P
+\ge
+V_{simp,15}-(4f+Q)-{24\over\pi}\Delta_{train}.
+}
+\tag{CP.19}
+\]
+
+At the current endpoint,
+
+\[
+\boxed{
+{P\over D}
+\ge
+1.1083751522061389353\ldots
+-{4f+Q\over D}
+-{24\over\pi}{\Delta_{train}\over D}
+-o(1).
+}
+\tag{CP.20}
+\]
+
+After the canonical Section-68 phase-circle cut, at most
+`12 Delta_train/pi` additional gate vertices can be hit by a deleted rhombus relation.
+Therefore the fully retained transmission-gate count satisfies
+
+\[
+\boxed{
+{P_{ret}\over D}
+\ge
+1.1083751522061389353\ldots
+-{4f+Q\over D}
+-{36\over\pi}{\Delta_{train}\over D}
+-o(1).
+}
+\tag{CP.21}
+\]
+
+This is the first composition in the current stack that simultaneously has
+
+1. a branch-independent `>1.1D` simple physical boundary-vertex floor;
+2. exact local degree `3/4` classification;
+3. globally distinct strongly signed inward extra contacts; and
+4. an explicit payment formula into exceptional-face incidence, angular defect, or
+   retained train-phase transmission gates.
+
+---
+
+## 6. Remaining closure target
+
+C-II is still open. The remaining statement is now an occupancy theorem, not a local
+geometry theorem.
+
+If `(4f+Q)` pays most of (CP.21), then a linear fraction of the near-simple outer
+boundary is incident to exceptional faces. The low-`t` topology theorem says those
+faces are overwhelmingly pentagonal and already carry linear closure-rank / stopped-
+train obligations. The missing step is to show that the same pentagon network cannot
+also absorb the signed straight penetrations at the required incidence density.
+
+If the angular-defect term pays most of (CP.21), then the global punctured-packing
+bound must be near its boundary-order ceiling. That is a quantitatively rigid branch
+which should be coupled to the near-isodiametric hull rather than treated as free
+`O(D)` slack.
+
+If neither currency pays, (CP.21) leaves a linear family of retained phase-transmission
+gates. Those gates lie in the exact real phase-potential network after the Section-68
+cut. A closing theorem can target stopped-train occupancy or a simultaneous coherent
+shear.
+
+No individual KKT coefficient floor or individual rhombus-defect floor is used.
+
+**LEVEL I STATUS: STILL OPEN. C-II REMAINS OPEN.**

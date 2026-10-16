@@ -1,0 +1,133 @@
+<!-- theorem-state: {"artifact_id":"ART-C9043A0DC2AE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C overnight closure run: final handoff
+
+Date: 2026-10-07. **Paused at the user's explicit request to wrap up,
+commit and push. Target C-II and Level I remain OPEN.**
+
+## Repository and authority
+
+- Owned branch: `research/sol/target-c-overnight-closure-20261007`.
+- Worker-1 base: `bf288c82e8a62466d5580025c94e750a177e63e2`.
+- Initial main/state: `dcc21aa879b61662318bceb9aeb174792e074eb0`, audit.71.
+- Authority through merge `9204dc14`: main
+  `e63281db62bde8b41402efb6be00b72c82c145a0`, audit.81.
+- Final fetch and wrap-up reconciliation: main
+  `5cfc5b34`, audit.95. Its canonical changes are incorporated in the
+  final authority merge; C-II and Level I remain open.
+- Worker 2 was read at immutable
+  `f4a362727779f6afc0f01738015112c04fdb73d5`, never merged wholesale.
+- Completed research through `da2dea41` and the authority merge was already
+  pushed before the wrap-up request. Checkpoint `172fa262` preserves the
+  finite radial-lifting certificate, this handoff and the run ledger; the
+  final merge updates this handoff to audit.95.
+
+The complete checkpoint history and dependency chains are in
+[`research/target_c_overnight_closure_run_2026_10_07.md`](../../research/target_c_overnight_closure_run_2026_10_07.md).
+Neither stopped predecessor branch was rewritten or force-pushed. Preserve
+their unique unmerged work. No discovery result was self-promoted.
+
+## Canonical progress now available
+
+The manifest and independent audits control these scopes:
+
+1. For every fixed M>=4 and fixed strictly decreasing symmetric profile,
+   sufficiently small positive curvature excludes the complete specified
+   six-direction wall class from a canonical triangle-free source. The
+   one-deficit packet excludes every arbitrary old population z<=N-1,
+   where N=3M^2-3M+1; the maximum z=N cloud is an exact sorting packet
+   containing a unit triangle. No lattice-minus-vacancy assumption is used.
+2. For the arithmetic profile, the deficit exclusion and Oler cap hold
+   jointly for all M>=4 and `0<theta<=1/(100M^3)`. The canonical maximum
+   classification still has only a fixed-M onset.
+3. For general C2 six-wall families approaching the fixed regular chart,
+   maximum population forces matching ordered first angular profiles under
+   the exact audit.81 hypotheses. A mismatch caps population at N-1;
+   that alone does not supply a packet for arbitrary wall data.
+
+4. Audit.82 promotes the effective low-slack unit-wall chart and its
+   arithmetic-wall uniform localization. It proves no finite triangle
+   conclusion or arbitrary-container extraction.
+5. Audit.83 promotes face-coupled quarter-fold integration, stress currency
+   under the complete source endpoint hypotheses, source compatibility
+   and convex-face transition classification. It also preserves the exact
+   collision and inactive-diameter regressions. No beneficial nonaffine
+   fully feasible state is proved.
+
+The final main also includes audits.84--95 on scoped cap capacity,
+transversals, wall shields, physical-face depth, attachments and regressions.
+Read their exact manifest scopes and the audit.95 Target C route before
+reuse. None supplies terminal closure. These promotions do not promote
+this run's coupled arbitrary-container transfer or polynomial maximum
+classification.
+
+## Strongest additional findings awaiting independent audit
+
+**Proved candidates, not canonical:**
+
+- [Uniform polynomial maximum classification](target_c_uniform_polynomial_maximum_wall_classification_2026-10-07.md),
+  commit `da2dea41`: a universal c_*>0 gives exact sorting classification
+  for all M>=4 and `theta<=c_*M^-40`. Together with the canonical deficit
+  result this excludes the whole arithmetic wall class in a joint growing-M
+  interval. No numerical c_* or sharp exponent is claimed. The proof uses
+  quantitative chart localization, active-row reconstruction, positive
+  stress and scale-correct isolation. Reaudit its proof-only dependencies.
+- [Coupled arbitrary-container Delaunay transfer](target_c_coupled_delaunay_transfer_for_arbitrary_convex_containers_2026-10-07.md):
+  a single saturated auxiliary packing controls completion, boundary and
+  exceptional-triangle/vertex costs by slack plus perimeter. In the
+  canonical O(D)-slack/perimeter regime it gives an O(D) exceptional
+  skeleton. This retains the quadratic inactive population but does not
+  supply replacement capacity or pay the boundary cost.
+- [Final radial-lifting checkpoint](target_c_sorting_radial_lifting_finite_stress_checkpoint_2026-10-07.md):
+  33 listed exact packets have positive pinned stresses from H=rad^2.
+  The certificate covers 302,076 packet pairs and 2,481 equilibria. Its
+  all-M/all-permutation extension and angular-rate inverse are exploratory,
+  unfinished leads, not consequences of the finite computation.
+
+**Exact regressions:**
+
+- [Diffuse one-deficit strain](target_c_one_deficit_diffuse_strain_nonglobal_regression_2026-10-07.md)
+  gives triangle-free one-Oler-unit-slack rhombic grids with diffuse strain,
+  no discrete vacancy and, for M>=7, no exceptional local triangles.
+  An explicit smaller-diameter competitor proves them nonglobal. Thus a
+  defect-count bound cannot be turned into a vacancy theorem by itself.
+- Quarter-fold hexagon states can decrease weighted diameter currency yet
+  collide. Rhombic-grid folds can contract old actual diameters while
+  promoting an inactive pair to the same diameter with the same count.
+  Both invalidate partial endpoint ledgers; neither is a global disproof.
+
+Worker-2 exterior conclusions were reconciled conceptually with the newer
+audits, not imported as unqualified premises. The exterior-completion
+obstruction needed by the coupled transfer was independently rederived
+with explicit provenance. Static exterior-only refill still supplies no
+extra capacity in the relevant guarded cap regime.
+
+## Exact surviving quantified obligations
+
+1. **Arbitrary macroscopic inactive container:** turn the actual source
+   geometry and its quadratic inactive population into a finite complete
+   replacement. An O(D) skeleton estimate alone cannot pay O(D) completion,
+   boundary or metric loss. Seek a direct packet paying this cost, or an
+   extraction/deletion theorem producing a canonically closed wall class.
+2. **Paired exterior caps:** prove a coupled exact-contact packet meeting
+   the required joint cardinality/contact ledger, or release retained
+   walls/core and refill the interior. The four-loaded-tip threshold remains
+   a Worker-2 candidate requiring the exact current hypotheses. Naive
+   low-angle strict area refill is blocked. A whole-source strict-sub-D
+   competitor is a separate alternative.
+3. **Full core:** construct an actual nonaffine face-coupled finite move
+   passing every retained and inserted lower pair, every actual diameter,
+   inactive upper exceptions, unary rhombus diagonal and crossing state.
+   Quarter-fold sign compatibility may force only constant/affine states;
+   nonbinary finite face angles remain a different attack.
+4. **Wider explicit-wall transfer:** strengthen the joint maximum onset
+   toward the M^-3 arithmetic window, or handle matched first profiles with
+   differing higher coefficients. The finite radial lift suggests a wider
+   isolation proof, but requires a universal analytic argument and a proved
+   propagation graph before it can be load-bearing.
+
+Every route must retain contact-isolated source points and finish with
+contact loss at D, fewer actual diameters at equal contacts, a strict-sub-D
+same-cardinality source, or an actual unit triangle. None of the remaining
+claims establishes Target C-II closure or an unbounded globally optimal
+triangle-free family. Resume only on a new user instruction, after fetching
+and comparing the then-current authority.

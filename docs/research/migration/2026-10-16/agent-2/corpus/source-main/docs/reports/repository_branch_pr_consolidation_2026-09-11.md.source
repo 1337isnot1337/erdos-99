@@ -1,0 +1,259 @@
+<!-- theorem-state: {"artifact_id":"ART-B5AA37E8B873","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Repository branch and pull-request consolidation
+
+**Date:** 2026-09-11  
+**Classification:** repository maintenance and provenance audit  
+**Theorem effect:** none by itself  
+**Baseline main:** `c7a8615`
+
+This manifest records the branch and pull-request state immediately before the
+repository-wide consolidation requested on 2026-09-11. It is an audit record, not a
+route map and not a theorem source.
+
+## Input state
+
+- 117 remote topic branches existed in addition to `main`.
+- 99 topic branches were not ancestors of `origin/main`.
+- Those branches contained 636 commits outside the ancestry of `origin/main`.
+- 53 pull requests were open.
+- The working tree was clean before consolidation.
+
+## Resolution policy
+
+1. Keep the `c7a8615` theorem hierarchy and route maps as the starting authority.
+2. Join all independent topic tips into one merge ancestry so no branch commit is lost.
+3. Import branch-added reports and audits as historical, report-level material. Their
+   presence on `main` does not promote their claims.
+4. Import reproducibility scripts and document their scope in `research/README.md`.
+5. Prefer an explicit later correction or audit when several branches contain different
+   blobs at one path.
+6. Keep `tmp-noop.txt` and the one-line `docs/audits/STACKED_PR_NOTE.md` temporary
+   marker out of the final tree. Their commits remain in the merge ancestry, so their
+   provenance is not lost. The substantive audit referenced by the marker is retained.
+7. Preserve the live Level I status and the Target C C-II gate unless the authoritative
+   route map is separately changed under the promotion procedure.
+
+## Content resolution
+
+The branch deltas contained 524 added paths relative to their respective merge bases.
+Sixty-three were already present on `main`. Of the 461 paths absent from `main`,
+459 substantive paths were retained and two temporary/no-op files were omitted.
+
+Eight paths had more than one branch-tip blob:
+
+- The three Target B phase-stability reports use the later promoted versions already on
+  `main`.
+- `target_c_cyclic_d1_p1_endpoint_regular_cell_2026-09-09.md` uses correction
+  `34bfd8d`, which removes the singleton-block overclaim.
+- `target_c_extreme_stress_circuit_cover_2026-09-09.md` uses upgrade `1194f74`.
+- `target_c_extreme_stress_sparsification_2026-09-09.md` uses the repaired version
+  already on `main`, not the earlier placeholder.
+- Target C modules 53 and 54 use the later promoted versions already on `main`.
+
+PRs #139 and #141 relied on a false inference from consecutive intersecting diameter
+edges to an Euler trail. The star-run counterexample in their reviews is binding. The
+withdrawal and audit history is retained; the claimed path-based phase closures are not
+promoted.
+
+## Remote topic branch snapshot
+
+| Branch | Tip before consolidation | State before consolidation |
+| --- | --- | --- |
+| `audit/cyclic-d2-path-inference-2026-09-10-copy` | `106ca73dec1e` | integrated-by-consolidation |
+| `audit/cyclic-d2-path-inference-2026-09-10` | `cb10e90be6b5` | integrated-by-consolidation |
+| `audit/fs-matching-provenance-2026-09-10` | `431aeccae635` | integrated-by-consolidation |
+| `integrate-target-c-research-2026-09-11` | `c7a86157fabb` | already-on-main |
+| `research/2026-09-09-zf-boundary-surplus` | `df47273e270c` | integrated-by-consolidation |
+| `research/2026-09-10-c2-annular-matching-exclusion` | `9f60dd5367f1` | integrated-by-consolidation |
+| `research/2026-09-10-c2-capacity-closure` | `f23930df2c42` | integrated-by-consolidation |
+| `research/2026-09-10-c2-full-source-capacity` | `c3119f36c025` | integrated-by-consolidation |
+| `research/2026-09-10-fsjc-endpoint-exclusion` | `c3119f36c025` | integrated-by-consolidation |
+| `research/2026-09-10-midpoint-gap-currency-089327` | `94be661ee50b` | integrated-by-consolidation |
+| `research/2026-09-10-rs-symmetric-area-floor` | `a529a8fc4d0f` | integrated-by-consolidation |
+| `research/2026-09-10-symmetric-support-floor` | `9e7c39b5528c` | integrated-by-consolidation |
+| `research/c-ii-cyclic-gap-2026-09-10` | `b7c649d2f38a` | integrated-by-consolidation |
+| `research/c-ii-fsjc-endpoint-exclusion-2026-09-10` | `23f84516992b` | integrated-by-consolidation |
+| `research/c-ii-full-source-2026-09-10` | `c83525d983d9` | integrated-by-consolidation |
+| `research/c-ii-full-source-closure-2026-09-10` | `9abaa93b89d4` | integrated-by-consolidation |
+| `research/c-ii-global-capacity-2026-09-10` | `33d49626a6b3` | integrated-by-consolidation |
+| `research/c2-circuit-attachment-20260910` | `328f992ef041` | integrated-by-consolidation |
+| `research/c2-e5981-20260910` | `fa0813039e6f` | integrated-by-consolidation |
+| `research/c2-fsjc-nonattainment-2026-09-10` | `f21c90b880f6` | integrated-by-consolidation |
+| `research/c2-full-source-2026-09-10` | `4a38d58aa635` | integrated-by-consolidation |
+| `research/c2-general-mu05947-20260910` | `fa824c13f570` | integrated-by-consolidation |
+| `research/c2-pinned-attachment-bound-2026-09-10` | `e36c52b8c170` | integrated-by-consolidation |
+| `research/c2-renorm-paired-pocket-20260910` | `7a811e8620e9` | integrated-by-consolidation |
+| `research/c99-c2-dpc-20260910-sol` | `89eabf99b5c8` | integrated-by-consolidation |
+| `research/c99-c2-fullsource-20260910-sol` | `1ea7a3c5970d` | already-on-main |
+| `research/cyclic-d1-p1-algebraic-degree-2026-09-10` | `7c798aaf64b1` | integrated-by-consolidation |
+| `research/cyclic-d1-p1-arithmetic-2026-09-10` | `6f11a10147be` | integrated-by-consolidation |
+| `research/cyclic-d1-p1-core-path-2026-09-10` | `f0d37e6e0f96` | integrated-by-consolidation |
+| `research/cyclic-d1-s1-path-exclusion-2026-09-09` | `1f108bb298f0` | integrated-by-consolidation |
+| `research/cyclic-d1-s1-subset-product-2026-09-10` | `fab583178c24` | integrated-by-consolidation |
+| `research/cyclic-d2-bodybar-2026-09-09` | `600935fec568` | integrated-by-consolidation |
+| `research/cyclic-d2-completion-paths-2026-09-09` | `b0c745d5abe7` | integrated-by-consolidation |
+| `research/cyclic-d2-p2-twin-rectangles-2026-09-09` | `2230b2c07abe` | integrated-by-consolidation |
+| `research/cyclic-d2-two-body-circuit-2026-09-09` | `f1bfd5de5db2` | integrated-by-consolidation |
+| `research/cyclic-internal-cloud-2026-09-09` | `4c66a6549b85` | integrated-by-consolidation |
+| `research/cyclic-reinhardt-equality-2026-09-09` | `343b07350c8b` | integrated-by-consolidation |
+| `research/cyclic-run-word-audit-2026-09-09` | `22411f5bb8d5` | integrated-by-consolidation |
+| `research/cyclic-stress-polytope-2026-09-09` | `c782f599dee6` | integrated-by-consolidation |
+| `research/disjoint-diameter-gap-2026-09-09` | `e7e85b85c903` | integrated-by-consolidation |
+| `research/forest-diameter-double-gap-20260911` | `fe5c4517609c` | integrated-by-consolidation |
+| `research/fs-perimeter-area-tradeoff-20260910` | `0f3ca40084f6` | integrated-by-consolidation |
+| `research/fs-perimeter-cavity-20260910` | `e7db5af08741` | integrated-by-consolidation |
+| `research/fullcore-interface-perimeter-2026-09-09` | `91fe5151791d` | integrated-by-consolidation |
+| `research/integrator-ambient-force-shell-2026-09-09` | `638c923286a8` | already-on-main |
+| `research/outer-pocket-attachment-absorption-2026-09-09` | `6ed9d78ae146` | already-on-main |
+| `research/outer-pocket-oler-2026-09-09` | `e555cad22322` | already-on-main |
+| `research/post-uf-attachment-fill-2026-09-09` | `e615d09ebe14` | integrated-by-consolidation |
+| `research/post-zf-currency-coupling-2026-09-09` | `42510637a4a9` | integrated-by-consolidation |
+| `research/rd-endpoint-singletons-20260910` | `1adc420e9227` | already-on-main |
+| `research/response-defect-extreme-reduction-2026-09-10` | `978aab67948f` | integrated-by-consolidation |
+| `research/rsr-dd-cavity-20260910` | `02c505ee4b87` | integrated-by-consolidation |
+| `research/sol-c99-circuit-components-20260911` | `053e1e1b8564` | already-on-main |
+| `research/sol-c99-cyclic-all-surplus-20260911` | `6be9fa2f620f` | integrated-by-consolidation |
+| `research/target-b-positive-density-dual-grid-2026-09-05` | `ebe1adf746bf` | integrated-by-consolidation |
+| `research/target-c-annular-force-population-floor-2026-09-11` | `e45bdf9ae068` | already-on-main |
+| `research/target-c-annular-matching-exclusion-2026-09-10` | `810a9efe287c` | integrated-by-consolidation |
+| `research/target-c-boundary-defect-matching-2026-09-09` | `fe86748f878c` | integrated-by-consolidation |
+| `research/target-c-c97-adjacent-cut-transition-2026-09-05` | `0f65a4686c53` | integrated-by-consolidation |
+| `research/target-c-c97-caterpillar-fan-capacity-2026-09-04` | `d41a603c94df` | integrated-by-consolidation |
+| `research/target-c-c97-common-cut-metric-2026-09-05` | `b97e0bb53698` | integrated-by-consolidation |
+| `research/target-c-c97-level-lift-2026-09-05` | `3f458d49e8dd` | integrated-by-consolidation |
+| `research/target-c-c97-staircase-equality-2026-09-04` | `5d1fbe878c4f` | integrated-by-consolidation |
+| `research/target-c-circuit-fsdb-2026-09-10` | `42c2ba6682d3` | already-on-main |
+| `research/target-c-common-bridge-transfer-2026-09-10` | `aa71aa721591` | already-on-main |
+| `research/target-c-d2-transversality-2026-09-10` | `8cb2ad9e72ba` | integrated-by-consolidation |
+| `research/target-c-db-stability-upgrade-2026-09-09` | `a26267247f29` | integrated-by-consolidation |
+| `research/target-c-external-completion-2026-09-09` | `ae6ad64b7180` | integrated-by-consolidation |
+| `research/target-c-external-rattler-neardisk-2026-09-09` | `2327ac595734` | integrated-by-consolidation |
+| `research/target-c-extreme-stress-sparsification-2026-09-09` | `c99d64280c4b` | integrated-by-consolidation |
+| `research/target-c-favard-symmetric-area-gap-2026-09-10` | `583d759f1af0` | integrated-by-consolidation |
+| `research/target-c-force-hull-population-saturation-2026-09-11` | `159b8e42d534` | already-on-main |
+| `research/target-c-fs-maxperim-disk-gap-2026-09-10` | `335c1197dfef` | integrated-by-consolidation |
+| `research/target-c-fs-symmetric-area-2026-09-10` | `5b63a5b6b009` | integrated-by-consolidation |
+| `research/target-c-fsdb-jc-surplus-2026-09-10` | `28a3dcf84267` | integrated-by-consolidation |
+| `research/target-c-full-force-hull-coupling-2026-09-11` | `3d89277f8191` | already-on-main |
+| `research/target-c-full-source-closure-2026-09-10` | `cc4699bb2cd0` | integrated-by-consolidation |
+| `research/target-c-gap-threshold-upgrade-2026-09-09` | `8c95241139f7` | integrated-by-consolidation |
+| `research/target-c-grounded-chain-repair-2026-09-11` | `d53d3fa12fa4` | already-on-main |
+| `research/target-c-high-branching-boundary-2026-09-09` | `560516cea1fe` | integrated-by-consolidation |
+| `research/target-c-loaded-boundary-capacity-2026-09-09` | `771a7e517ca0` | integrated-by-consolidation |
+| `research/target-c-local-defect-rhombus-transport-2026-09-11` | `0b8c146fb890` | integrated-by-consolidation |
+| `research/target-c-mixed-three-connectivity-2026-09-09` | `06a9d16674f7` | integrated-by-consolidation |
+| `research/target-c-outer-pocket-oler-2026-09-09` | `50375dbddb1c` | integrated-by-consolidation |
+| `research/target-c-p1-arithmetic-2026-09-10` | `8e7cef8a8b4c` | integrated-by-consolidation |
+| `research/target-c-p1-residue-degree-budget-2026-09-10` | `5584acd4c6c1` | integrated-by-consolidation |
+| `research/target-c-p1-residue-localization-2026-09-10` | `12a6c2b5fd3c` | integrated-by-consolidation |
+| `research/target-c-p1-residue-saturation-2026-09-10` | `5b74b6d30556` | integrated-by-consolidation |
+| `research/target-c-pocket-detour-area-2026-09-09` | `be05e8bdd6ad` | integrated-by-consolidation |
+| `research/target-c-post-pi-closure-2026-09-09` | `460a46057a4c` | integrated-by-consolidation |
+| `research/target-c-s1-reciprocal-closure-2026-09-10` | `86bab61aa839` | integrated-by-consolidation |
+| `research/target-c-sharp-annular-ledger-2026-09-11` | `08d9873f92e4` | already-on-main |
+| `research/target-c-sharp-pocket-functional-2026-09-09` | `6168fc570687` | integrated-by-consolidation |
+| `research/target-c-sz0-explicit-0597-2026-09-10` | `dbc469489270` | integrated-by-consolidation |
+| `research/target-c-sz0-renormalized-surplus-2026-09-10` | `8505121983fc` | integrated-by-consolidation |
+| `research/target-c-two-region-saturation-2026-09-11` | `a3bc50b3f2f7` | already-on-main |
+| `research/target-c-woodall-diameter-topology-2026-09-10` | `44a0eaa8e45f` | integrated-by-consolidation |
+| `research/target-c-zm-face-mass-2026-09-09` | `200355a0ad47` | integrated-by-consolidation |
+| `research/tmp-do-not-use-2` | `1adc420e9227` | already-on-main |
+| `research/tmp-do-not-use` | `159b338101f6` | integrated-by-consolidation |
+| `research/wegner-global-boundary-2026-09-09` | `3e780ce211c8` | integrated-by-consolidation |
+| `research/zd-clean-train-shape-2026-09-09` | `f5f4d8e241a0` | integrated-by-consolidation |
+| `research/zf-boundary-surplus-collapse-2026-09-09` | `145777721143` | integrated-by-consolidation |
+| `research/zf-defect-budget-reconcile-2026-09-09` | `0e612373aadb` | integrated-by-consolidation |
+| `research/zs-strict-terminal-cuts-2026-09-09` | `0bedc26b4fc4` | integrated-by-consolidation |
+| `sol/2026-09-09-antipodal-force-area` | `7d13911cca7a` | integrated-by-consolidation |
+| `sol/2026-09-09-bridge-hinge-interval` | `19f5b7d3a688` | integrated-by-consolidation |
+| `sol/2026-09-09-deep-harmonic-capture` | `28ed90522019` | integrated-by-consolidation |
+| `sol/2026-09-09-density-sensitive-cavity` | `e91e97f17cca` | integrated-by-consolidation |
+| `sol/2026-09-09-e43-scalar-stability` | `4208f5a15d8d` | integrated-by-consolidation |
+| `sol/2026-09-09-explicit-anti-reuleaux` | `488fb37bf3ce` | integrated-by-consolidation |
+| `sol/2026-09-09-nearzero-physical-carrier` | `098e34d6bfac` | integrated-by-consolidation |
+| `sol/2026-09-09-optimize-groemer-surplus` | `c1a0c943ba71` | integrated-by-consolidation |
+| `sol/2026-09-09-weak-transverse-train` | `e94f318cd5fe` | integrated-by-consolidation |
+| `sol/2026-09-09-zr-kernel-consequences` | `aefb5d99a3ad` | integrated-by-consolidation |
+| `sol/2026-09-11-forest-double-gap-defect-currency` | `c0e36d39b0b4` | already-on-main |
+| `tmp-do-not-use` | `e555cad22322` | already-on-main |
+
+## Open pull-request snapshot
+
+| PR | Base | Head | State | Title |
+| --- | --- | --- | --- | --- |
+| #102 | `main` | `research/target-c-c97-caterpillar-fan-capacity-2026-09-04` | draft | Target A/C: tighten sector Hall and chain-face bounds |
+| #103 | `main` | `research/target-b-positive-density-dual-grid-2026-09-05` | draft | Research: grid penetration, BFS stability, and explicit phase interpolation |
+| #104 | `main` | `research/zs-strict-terminal-cuts-2026-09-09` | ready | Add ZS strict terminal cut domination report |
+| #108 | `main` | `sol/2026-09-09-zr-kernel-consequences` | ready | Target C: derive ZR kernel rigidity and bridge localization |
+| #111 | `sol/2026-09-09-zr-kernel-consequences` | `sol/2026-09-09-deep-harmonic-capture` | ready | Target C: bridge-dominant near-zero phase to rhombic degeneration |
+| #112 | `main` | `research/zd-clean-train-shape-2026-09-09` | ready | Add clean-train shape and core-population bounds |
+| #115 | `main` | `research/target-c-external-rattler-neardisk-2026-09-09` | ready | Add near-isodiametric force-hull stability theorem |
+| #118 | `main` | `research/post-zf-currency-coupling-2026-09-09` | draft | Reduce the post-ZF cyclic endpoint to exact shell/topology and interior descent |
+| #119 | `main` | `research/disjoint-diameter-gap-2026-09-09` | ready | Double disjoint-diameter gaps and collapse small outer-walk phase |
+| #122 | `research/post-zf-currency-coupling-2026-09-09` | `research/cyclic-reinhardt-equality-2026-09-09` | draft | Add unique cyclotomic and curvature refinements to cyclic Reinhardt endpoint |
+| #123 | `main` | `research/target-c-high-branching-boundary-2026-09-09` | ready | Add extreme-stress circuit and zero-surplus Laman structure |
+| #124 | `sol/2026-09-09-deep-harmonic-capture` | `sol/2026-09-09-weak-transverse-train` | ready | Target C: weak rhombic degeneration to train flex and exact outer shears |
+| #125 | `research/post-zf-currency-coupling-2026-09-09` | `research/cyclic-internal-cloud-2026-09-09` | draft | Bound cyclic Reinhardt diameter branching by a cubic corner deficit |
+| #126 | `sol/2026-09-09-deep-harmonic-capture` | `sol/2026-09-09-bridge-hinge-interval` | ready | Target C: bridge-hinge interval rank and local diameter peeling |
+| #127 | `research/post-zf-currency-coupling-2026-09-09` | `research/cyclic-stress-polytope-2026-09-09` | draft | Classify the exact KKT stress polygon of the cyclic Reinhardt endpoint |
+| #128 | `main` | `research/post-uf-attachment-fill-2026-09-09` | ready | Couple post-ZF residual ledger to attachment-cell fill |
+| #130 | `main` | `sol/2026-09-09-density-sensitive-cavity` | ready | Target C: sharp Hemmi surplus floor and diameter-direction limit obstruction |
+| #131 | `main` | `research/wegner-global-boundary-2026-09-09` | ready | Apply Wegner to global diameter boundary defect |
+| #132 | `main` | `sol/2026-09-09-explicit-anti-reuleaux` | ready | Target C: explicit anti-Reuleaux gap and constrained PI quadrilateral |
+| #133 | `sol/2026-09-09-density-sensitive-cavity` | `sol/2026-09-09-e43-scalar-stability` | ready | Target C: boundary-vertex stability and response-currency coupling |
+| #134 | `research/post-uf-attachment-fill-2026-09-09` | `research/fullcore-interface-perimeter-2026-09-09` | ready | Extend two-unit interface defect to every full-core near-circle survivor |
+| #139 | `research/post-zf-currency-coupling-2026-09-09` | `research/cyclic-d2-p2-twin-rectangles-2026-09-09` | draft | Exclude cyclic dH=2 P2 by twin-rectangle circle geometry |
+| #140 | `sol/2026-09-09-e43-scalar-stability` | `sol/2026-09-09-nearzero-physical-carrier` | ready | Target C: exclude slope one and quantify the near-zero carrier |
+| #141 | `research/post-zf-currency-coupling-2026-09-09` | `research/cyclic-d2-completion-paths-2026-09-09` | draft | Exclude the entire cyclic dH=2 zero-surplus phase |
+| #145 | `sol/2026-09-09-e43-scalar-stability` | `sol/2026-09-09-antipodal-force-area` | ready | Target C: antipodal force-hull geometry raises generic surplus to 0.5937285 |
+| #147 | `research/post-zf-currency-coupling-2026-09-09` | `research/cyclic-run-word-audit-2026-09-09` | draft | Audit cyclic path reductions and derive exact P1 star-run equation |
+| #148 | `main` | `research/response-defect-extreme-reduction-2026-09-10` | ready | Target C: reduce near-zero response defect to extreme KKT circuits |
+| #149 | `research/post-zf-currency-coupling-2026-09-09` | `research/cyclic-d1-p1-arithmetic-2026-09-10` | draft | Exclude an infinite family of cyclic dH=1 P1 endpoints |
+| #150 | `main` | `research/target-c-p1-arithmetic-2026-09-10` | ready | Exclude infinite cyclic P1 families arithmetically |
+| #151 | `research/cyclic-d2-completion-paths-2026-09-09` | `audit/cyclic-d2-path-inference-2026-09-10` | ready | Audit and block the cyclic dH=2 path inference |
+| #152 | `research/target-c-p1-arithmetic-2026-09-10` | `research/target-c-p1-residue-localization-2026-09-10` | draft | Eliminate the cyclic dH=1 P1 endpoint by 2-adic ramification |
+| #153 | `main` | `research/target-c-d2-transversality-2026-09-10` | ready | Target C: P1 arithmetic transversality and factor obstruction |
+| #156 | `research/post-zf-currency-coupling-2026-09-09` | `research/target-c-s1-reciprocal-closure-2026-09-10` | draft | Reduce cyclic S1 to an exact reciprocal-square Littlewood system |
+| #157 | `research/post-zf-currency-coupling-2026-09-09` | `research/cyclic-d1-s1-subset-product-2026-09-10` | ready | Reduce S1 algebraically and exhibit a full-KKT PSD shell regression |
+| #160 | `main` | `research/2026-09-10-c2-capacity-closure` | draft | Target C: record full-source perimeter saturation |
+| #161 | `main` | `research/target-c-full-source-closure-2026-09-10` | draft | Target C: combine full-source geometry with post-ZF diameter support |
+| #164 | `main` | `research/c2-full-source-2026-09-10` | draft | Target C: compress attachment-cell perimeter |
+| #165 | `main` | `research/c-ii-fsjc-endpoint-exclusion-2026-09-10` | ready | Target C: exclude the FSJC near-equality endpoint |
+| #166 | `main` | `research/c2-fsjc-nonattainment-2026-09-10` | draft | Target C: exclude the FSJC equality class |
+| #169 | `main` | `research/c2-pinned-attachment-bound-2026-09-10` | draft | Target C: pinned surplus and zero-contact tiling |
+| #170 | `main` | `research/2026-09-10-symmetric-support-floor` | draft | Target C: raise surplus floor to 0.593361 via central support |
+| #172 | `main` | `research/fs-perimeter-cavity-20260910` | ready | Target C: explicit perimeter-stability cavity floor |
+| #173 | `main` | `research/c99-c2-dpc-20260910-sol` | draft | Target C: discrete pocket capacity raises C-II surplus floor |
+| #174 | `main` | `research/c-ii-cyclic-gap-2026-09-10` | ready | Target C: full-source cyclic capacity and diameter-capped pocket theorems |
+| #176 | `main` | `research/2026-09-10-rs-symmetric-area-floor` | ready | Target C: raise post-ZF surplus floor via symmetric force-hull area |
+| #177 | `main` | `research/fs-perimeter-area-tradeoff-20260910` | ready | Target C: quantitative FS perimeter-area tradeoff |
+| #178 | `main` | `research/c-ii-full-source-2026-09-10` | draft | Target C: full-source C-II structural continuation |
+| #181 | `main` | `research/c2-circuit-attachment-20260910` | draft | Audit RSR equality dependency in Target C cavity bound |
+| #182 | `main` | `research/rsr-dd-cavity-20260910` | ready | Target C: RSR/DD and boundary-sharing stability raise generic floor above 0.59834 |
+| #185 | `main` | `research/c2-e5981-20260910` | draft | Raise Target C s_Z=0 surplus floor to 0.5981 |
+| #186 | `main` | `research/c2-general-mu05947-20260910` | draft | Target C: all-phase renormalized surplus and outer-shell phase split |
+| #188 | `main` | `research/c2-renorm-paired-pocket-20260910` | draft | Target C: raise all-phase renormalized surplus above 0.7811 |
+| #191 | `main` | `research/sol-c99-cyclic-all-surplus-20260911` | ready | Target C: extend cyclic atomic transport to all mixed surplus |
+
+## Completion verification
+
+- Integration commit: `53bfe0162b656f6f57e7943bf12dbbd643127809`.
+- The commit has the prior `main` plus 90 independent topic tips as its 91 parents.
+- All 99 previously unmerged remote refs and all 636 outside-main commits are ancestors
+  of the integration commit.
+- The integration commit was pushed and `HEAD` matched `origin/main`.
+- Of the 53 open pull requests in the snapshot, GitHub marked 35 merged from the new
+  ancestry. The 18 stacked pull requests were closed with comments pointing to the
+  integration commit. No pull requests remain open.
+- All 117 remote topic branches were deleted only after their tips were verified as
+  ancestors of `origin/main`. The only remaining remote branch is `main`.
+- Eight local topic branches were deleted after the same ancestry check. The only
+  remaining local branch is `main`.
+- The remote safety tag `archive/pre-consolidation-2026-09-11` retains the original
+  `c7a8615` baseline.
+- Verification passed: `git diff --check`, 655 path-like relative Markdown links, 65
+  unit tests, compilation of all research scripts, and all 14 imported scripts. The two
+  scripts requiring third-party packages were tested with isolated temporary
+  dependencies, which were then removed.
+- The authoritative status remains `LEVEL I STATUS: STILL OPEN`; this maintenance merge
+  made no theorem promotion.

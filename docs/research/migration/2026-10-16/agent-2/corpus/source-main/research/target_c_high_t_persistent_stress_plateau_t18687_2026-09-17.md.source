@@ -1,0 +1,415 @@
+# Target C-II — the high-`t` growing cusp chain has a persistent full-span KKT stress plateau
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening  
+**Scope:** any unbounded canonical full-core/no-macroscopic-container Type-II survivor sequence with `t=(q-k)/D<=1.8687`  
+**Dependencies:** growing high-`t` cusp chain; one-sided hub interval support; Section-157 cut resultants; linear whole-window defect budget; many-uniform-cusps/resultant-plateau theorem  
+**Certificate:** `research/verify_target_c_high_t_persistent_stress_plateau_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The growing-chain theorem produces `r_D->infinity`, with `r_D<=D^(1/2)`, consecutive O--O cuts on one side of the unique diameter-routing hub. The previous resultant-plateau theorem shows that their normalized Section-157 resultants collapse into one point while remaining pairwise distinct.
+
+The one-sided interval theorem identifies what carries that plateau. After orienting the chain toward the hub, the sets of actual diameter bars crossing the cuts are nested. The bars which start inside the selected chain have total normalized KKT multiplier `o(1)`. Consequently every row resultant is, up to `o(1)`, carried by one **persistent full-span diameter set** crossing every selected row.
+
+This produces an exact two-parameter stress fork. If `p_D` is the KKT mass of the persistent set and `a_D=A_0/D` is the normalized magnitude of the first cut resultant, then
+
+\[
+0<a_D\le p_D\le1
+\]
+
+and, exactly,
+
+\[
+\boxed{
+p_D-a_D
+={1\over2}\sum_{h\in P_D}\beta_h\|v_h-u_0\|^2.
+}
+\]
+
+Thus the gap between persistent mass and resultant magnitude is precisely a directional-dispersion currency. In the equality branch `p_D-a_D->0`, essentially all persistent KKT mass becomes directionally coherent. In the strict branch, a positive amount of directional variance survives.
+
+---
+
+## 1. Orient the one-sided chain so diameter supports only start
+
+Let
+
+\[
+\tau_0,\tau_1,\ldots,\tau_r,
+\qquad r=r_D\to\infty,
+\qquad r_D\le D^{1/2},
+\tag{PS.1}
+\]
+
+be the growing high-`t` chain. Every selected interface lies strictly on one side of the unique diameter-routing hub.
+
+For actual diameter bar `h`, write its rooted cut incidence as
+
+\[
+\varepsilon_{hj}\in\{-1,0,1\}.
+\]
+
+The interval-support theorem says the nonzero incidences of `h` form one interval and have one constant sign. The one-sided hub theorem says that on one side of the hub every internal switch is an interval start; on the other side every switch is an interval end.
+
+If necessary reverse the indexing of the selected chain. We may therefore assume that, as `j` increases toward the hub, active supports only grow. Put
+
+\[
+H_j:=\{h:\varepsilon_{hj}\ne0\}.
+\tag{PS.2}
+\]
+
+Then
+
+\[
+\boxed{
+H_0\subset H_1\subset\cdots\subset H_r,
+\qquad
+H_{j+1}=H_j\sqcup H_{sw,j}.
+}
+\tag{PS.3}
+\]
+
+The union is disjoint because a diameter interval has only one start. In particular
+
+\[
+\boxed{
+P_D:=\bigcap_{j=0}^r H_j=H_0
+}
+\tag{PS.4}
+\]
+
+is exactly the set of actual diameter bars crossing **every** selected row. Call it the persistent or full-span support.
+
+---
+
+## 2. The active KKT mass is a monotone plateau
+
+Normalize the positive diameter KKT multipliers by
+
+\[
+\sum_h\beta_h=1.
+\tag{PS.5}
+\]
+
+Define
+
+\[
+p_D:=\sum_{h\in P_D}\beta_h,
+\qquad
+W_j:=\sum_{h\in H_j}\beta_h,
+\qquad
+B_i:=\sum_{h\in H_{sw,i}}\beta_h.
+\tag{PS.6}
+\]
+
+Because (PS.3) is a disjoint nested decomposition,
+
+\[
+\boxed{
+W_j=p_D+\sum_{i=0}^{j-1}B_i.
+}
+\tag{PS.7}
+\]
+
+The sharpened whole-window theorem gives, with
+
+\[
+C=1{,}109{,}000,
+\]
+
+\[
+\sum_{i=0}^{r-1}B_i<{Cr\over D}.
+\tag{PS.8}
+\]
+
+Hence, uniformly over all selected rows,
+
+\[
+\boxed{
+0\le W_j-p_D<{Cr_D\over D}
+\le {C\over\sqrt D}
+\longrightarrow0.
+}
+\tag{PS.9}
+\]
+
+Thus all variation of active diameter KKT mass across the growing cusp chain is carried by an asymptotically vanishing total multiplier.
+
+This is stronger than a small average switch mass. The complete set of fresh diameter bars which distinguishes all `r_D` successive cusp layers has total KKT multiplier `o(1)`.
+
+---
+
+## 3. Every normalized cut resultant is the persistent first moment plus `o(1)`
+
+For `h in P_D`, the nonzero incidence sign is the same on every selected cut. Define the signed unit diameter direction
+
+\[
+v_h:={\varepsilon_{h0}r_h\over D},
+\qquad \|v_h\|=1.
+\tag{PS.10}
+\]
+
+For a bar beginning at interface `i`, use its constant nonzero incidence sign after that start to define the analogous unit direction `v_h`.
+
+The exact Section-157 cut resultant is
+
+\[
+F_j=A_j u_j
+=\sum_h\beta_h\varepsilon_{hj}r_h.
+\tag{PS.11}
+\]
+
+Define the persistent first moment
+
+\[
+V_D:=\sum_{h\in P_D}\beta_hv_h.
+\tag{PS.12}
+\]
+
+Using (PS.3), divide (PS.11) by `D` to obtain the exact decomposition
+
+\[
+\boxed{
+{F_j\over D}
+=V_D+
+\sum_{i=0}^{j-1}
+\sum_{h\in H_{sw,i}}\beta_hv_h.
+}
+\tag{PS.13}
+\]
+
+Therefore
+
+\[
+\boxed{
+\max_{0\le j\le r}
+\left\|{F_j\over D}-V_D\right\|
+\le\sum_iB_i
+<{Cr_D\over D}
+\longrightarrow0.
+}
+\tag{PS.14}
+\]
+
+So the collapsing normalized resultant path is not merely small-total-variation: it has a canonical asymptotic carrier, the full-span persistent diameter stress.
+
+At `j=0` there are no started-in-chain correction terms, so
+
+\[
+\boxed{
+V_D={F_0\over D}={A_0\over D}u_0.
+}
+\tag{PS.15}
+\]
+
+Put
+
+\[
+a_D:={A_0\over D}=\|V_D\|>0.
+\tag{PS.16}
+\]
+
+By the triangle inequality and (PS.12),
+
+\[
+\boxed{
+0<a_D\le p_D\le1.
+}
+\tag{PS.17}
+\]
+
+Equation (PS.14) also gives, without any further phase estimate,
+
+\[
+\max_j\left|{A_j\over D}-a_D\right|
+\longrightarrow0.
+\tag{PS.18}
+\]
+
+---
+
+## 4. Exact persistent-stress variance identity
+
+Since every `v_h` and `u_0` is a unit vector,
+
+\[
+\begin{aligned}
+\sum_{h\in P_D}\beta_h\|v_h-u_0\|^2
+&=2p_D-2u_0\cdot\sum_{h\in P_D}\beta_hv_h\\
+&=2p_D-2u_0\cdot(a_Du_0)\\
+&=2(p_D-a_D).
+\end{aligned}
+\]
+
+Thus
+
+\[
+\boxed{
+p_D-a_D
+={1\over2}\sum_{h\in P_D}\beta_h\|v_h-u_0\|^2.
+}
+\tag{PS.19}
+\]
+
+This identity is exact at every finite source.
+
+For any fixed `theta in (0,pi]`, let `P_D(theta)` be the persistent bars whose signed direction makes ordinary angle at least `theta` with `u_0`. Since
+
+\[
+\|v_h-u_0\|^2
+=4\sin^2\!\left({\angle(v_h,u_0)\over2}\right),
+\]
+
+(PS.19) gives the quantitative concentration bound
+
+\[
+\boxed{
+\sum_{h\in P_D(\theta)}\beta_h
+\le
+{p_D-a_D\over2\sin^2(\theta/2)}.
+}
+\tag{PS.20}
+\]
+
+No lower bound on an individual KKT multiplier is used.
+
+---
+
+## 5. The asymptotic stress fork
+
+Pass to a further subsequence so
+
+\[
+p_D\to p,
+\qquad
+a_D\to a,
+\qquad
+u_0\to u,
+\tag{PS.21}
+\]
+
+where compactness and (PS.17) give
+
+\[
+\boxed{0\le a\le p\le1.}
+\tag{PS.22}
+\]
+
+Then (PS.14) implies uniformly over all `r_D+1` selected rows
+
+\[
+{F_j\over D}\to au,
+\qquad
+{A_j\over D}\to a.
+\tag{PS.23}
+\]
+
+The persistent variance converges exactly to
+
+\[
+\boxed{
+\sum_{h\in P_D}\beta_h\|v_h-u_0\|^2
+\longrightarrow2(p-a).
+}
+\tag{PS.24}
+\]
+
+This splits the resultant plateau into concrete stress regimes.
+
+### PS0 — vanishing resultant
+
+If `a=0`, then every normalized cut resultant vanishes. If also `p=0`, the full-span stress itself disappears. If `p>0`, a positive persistent KKT mass survives but cancels directionally: (PS.24) tends to `2p`.
+
+### PS1 — coherent positive persistent plateau
+
+If
+
+\[
+0<a=p,
+\tag{PS.25}
+\]
+
+then persistent mass is asymptotically equality-saturating in the triangle inequality. For every fixed `theta>0`, (PS.20) gives
+
+\[
+\boxed{
+\sum_{h\in P_D(\theta)}\beta_h\longrightarrow0.
+}
+\tag{PS.26}
+\]
+
+Thus asymptotically all persistent KKT mass lies in an arbitrarily narrow signed cone around the common resultant direction. At the same time `p=a>0`, so a positive fraction of the globally normalized diameter stress crosses **every** row of an unbounded cusp chain.
+
+### PS2 — dispersed positive persistent plateau
+
+If
+
+\[
+0<a<p,
+\tag{PS.27}
+\]
+
+then a strictly positive directional-dispersion currency remains:
+
+\[
+\boxed{
+{1\over2}\sum_{h\in P_D}\beta_h\|v_h-u_0\|^2
+\longrightarrow p-a>0.
+}
+\tag{PS.28}
+\]
+
+Thus a positive-resultant survivor cannot evade structure by an unspecified mixture of persistent and switching stress. The switching stress is `o(1)`; the persistent stress has positive mass and is forced into either asymptotic directional coherence or a quantitatively positive dispersion budget.
+
+---
+
+## 6. Interaction with the many-uniform-cusp theorem
+
+The companion theorem gives more than `r_D/2` interfaces with absolute, depth-independent defect bounds and exact nonzero local reactions. Their reaction supports are pairwise disjoint. Equation (PS.8) says that **all** of those fresh supports, together with the remaining switching supports in the chain, have total normalized KKT multiplier `o(1)`.
+
+Consequently the high-`t` survivor has the simultaneous form
+
+```text
+r_D -> infinity
++
+> r_D/2 uniformly finite local cusps
++
+pairwise disjoint fresh reaction supports
++
+total KKT multiplier on every fresh switching support together = o(1)
++
+one persistent full-span diameter set carries the normalized row-resultant plateau
++
+0 <= a <= p <= 1
++
+p-a = exact persistent directional-dispersion currency.
+```
+
+In particular, in every positive-resultant branch `a>0`, the persistent full-span bars carry at least `a-o(1)` KKT mass, while the unbounded collection of fresh bars required to keep all contiguous slab reactions nonzero carries only `o(1)` mass in total.
+
+This is a stress/rank separation rather than a contradiction: infinitesimal rigidity can depend on constraints with arbitrarily small positive multipliers. No coefficient floor is available, so one must not discard the fresh switching rows merely because their total stress tends to zero.
+
+---
+
+## 7. What remains
+
+The live high-`t` closure problem is now narrower.
+
+- In **PS0**, one must exploit a persistent positive-mass cancellation when `p>0`, or show that `p` also vanishes and then use the fact that all row cut resultants are `o(D)` despite the linear transverse ladder.
+- In **PS1**, a positive amount of full-span diameter stress is forced into one asymptotically common signed direction while the chain contains linearly many uniformly finite cusps. The natural next target is to combine this with convex diameter-thrackle order and quantitative parallel-diameter uniqueness.
+- In **PS2**, there is a fixed positive persistent angular-variance budget. The natural next target is to charge that variance against the same global angular/endpoint currencies which produced the high-`t` rectangle.
+
+None of these steps is supplied here.
+
+---
+
+## 8. Scope audit
+
+- The nesting is obtained only after orienting the selected one-sided chain toward the hub. Reversing the original side is harmless.
+- `P_D` means diameter bars crossing every **selected** row, not every train cut in the whole source.
+- The theorem does not assert that one persistent diameter bar has a coefficient bounded below. A positive persistent total mass may be spread among many bars.
+- Directional coherence in PS1 is a KKT-mass statement, not a count statement.
+- Small total switching multiplier does not make the switching constraints geometrically redundant.
+- No exact unit triangle, strict sub-`D` competitor, or C-II closure is claimed.
+
+**Disposition:** proved that the growing high-`t` cusp chain is asymptotically stress-carried by a persistent full-span diameter set, with an exact mass-versus-directional-dispersion identity. C-II and Level I remain open.

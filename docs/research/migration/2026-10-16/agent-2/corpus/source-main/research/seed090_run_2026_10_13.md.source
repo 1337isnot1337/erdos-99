@@ -1,0 +1,53 @@
+# Seed 90: independent finite-contraction attack
+
+Historical run ledger from PR #972 at `1c11b028541570cdd786fc1a8d1dfa337ca99a96`.
+The reconciled report records the current overlap correction and integration status.
+
+- Seed: **90**, generated exactly once with `secrets.randbelow(100)+1`.
+- Assigned category: **Independent proof strategy**.
+- Base: `ab6dd3336f9f8d440f2bada76edb32153391cddc`.
+- State version: `2026-10-10.audit.234`.
+- Branch: `research/seed-090-rhombus-contraction`.
+- Scope: Level I; no Target A/B/C theorem is imported as an unproved premise.
+- Dependencies: problem definition; elementary planar circle intersection,
+  convex combinations, and lattice fundamental-cell counting. KKT normalization
+  is compared with `docs/theory/01-local-structure.md`, Theorem 4.1.
+- Current launch prompt:
+  `docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md`.
+- Overlap check: open PRs 954--960 already cover affine, radial, factorized,
+  reflected-scale, matching, palette, attainment, and population mechanisms.
+  Their unpromoted mathematics is not used as a premise here.
+
+## Initial closing obligation
+
+Proposed lemma: every sufficiently large triangle-free global minimizer has a
+same-label planar unit-separated placement that is nonexpansive on every pair
+and strictly shortens every actual diameter pair.
+
+`proposed lemma -> strict sub-D(n) same-cardinality competitor -> Level I`.
+
+The unproved bridge was the simultaneous finite endpoint, not an infinitesimal
+motion. The finite rhombus theorem below obstructs this transformation whenever
+one old diameter pair is carried by an edge-connected unit-rhombus complex.
+
+## Disposition
+
+The general endpoint lemma is **not proved**. A stronger version based only on
+triangle-freeness, optimal leading population, and normalized PSD KKT stress is
+**rejected** by the explicit dense frame family. Its members are nonglobal.
+The finite locking theorem, the full-source contact-preserving frame bow,
+and exact regressions are preserved in
+`docs/reports/seed090_finite_rhombus_contraction_2026-10-13.md`.
+Level I and the canonical theorem frontier remain open and unchanged.
+
+## Preserved review and validation
+
+- Proof/certificate commit: `97de41cb5d5cc427081d6b5f30e22051e50f6fbf`.
+- Review: https://github.com/1337isnot1337/e-99/pull/972; no promotion.
+- Exact verifier: CPython 3.14.7, all three dense fixtures and scope controls
+  pass; full source cardinalities 305, 1471, 4519.
+- State and PR checkers, relative links, and staged whitespace pass locally.
+- Hosted run `38513960331` on the proof commit has zero executed steps;
+  its annotation records account payment/spending-limit startup failure.
+- The branch remains active for the open PR. Its initial local alias was
+  renamed, so no obsolete seed-90 branch was retained.

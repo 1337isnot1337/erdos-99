@@ -1,0 +1,28 @@
+# RETRACTED — former `t<=1.855` low-energy dual-path claim
+
+**Date:** 2026-09-15  
+**Status:** **RETRACTED / DO NOT CITE AS A THEOREM**  
+**Replacement:** `research/target_c_opposite_branch_dual_path_t18593_2026-09-15.md`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The original version of this note selected dominant O--O trains with two-terminal directional energy `e_tau<=0.9` and then treated their two terminal occurrences as lying near the two **opposite** ideal phase normals.
+
+That branch-orientation step was not proved at the `0.9` threshold.  The audited endpoint-energy identity controls the deviations `alpha,beta`, but an O--O train can a priori place both terminal positions on the same oriented normal branch.  The existing cross-phase theorem explicitly performs a separate Section-157 bracing argument to exclude that regression only at a sufficiently small energy scale.
+
+Therefore the former implication
+
+```text
+e_tau <= 0.9
+=> two fixed antipodal terminal arcs
+=> complement-dual path
+```
+
+was unsupported.  All downstream path, hub, and adjacent-strip conclusions in the former version of this file are withdrawn.
+
+The numerical retained-pair and energy bookkeeping that motivated the extraction is not itself the problem.  The corrected theorem
+
+`target_c_opposite_branch_dual_path_t18593_2026-09-15.md`
+
+adds the missing optimized same-branch exclusion.  It uses `lambda=0.5025` and proves, by an exact comparison of the same-branch chord upper bound with the Section-157 bracing lower bound, that the selected terminals really do lie on opposite branches.  That corrected theorem reaches the stronger endpoint `t<=1.8593`.
+
+**Disposition:** retracted and superseded by the corrected opposite-branch theorem.  Historical commits remain in Git history for auditability.

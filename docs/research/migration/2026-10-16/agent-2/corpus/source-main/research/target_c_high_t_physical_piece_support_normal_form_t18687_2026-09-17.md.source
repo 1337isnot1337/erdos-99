@@ -1,0 +1,286 @@
+# Target C-II — physical hubward pieces sharpen the support normal form
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** any positive-density one-bar obstruction family on one side of the common high-`t` routing hub, with application to the corrected exact-antipodal/strong-TB1 fork through `t=(q-k)/D<=1.8687`  
+**Dependencies:** common diameter-routing hub; one-sided interval support; convex diameter-thrackle order; two host-side layer arcs; one-turn decomposition `Q=Q^uparrow union T_m union Q^downarrow`; unconditional one-bar blocker fork  
+**Certificate:** `research/verify_target_c_high_t_physical_piece_support_normal_form_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The preceding one-bar support normal form used unimodality and lost factors `1/2,1/2,1/2`, leaving a uniform density factor `1/8`. There is a simpler physical decomposition which is stronger.
+
+After fixing one birth host side, every hubward partner endpoint lies in exactly one of three boundary pieces:
+
+\[
+Q^\uparrow,
+\qquad T_m,
+\qquad Q^\downarrow.
+\]
+
+Pigeonhole one piece directly. On either host piece the path-region labels are monotone, so the support-end tags are automatically monotone. On the terminal piece every tag equals `m`.
+
+Thus the arbitrary one-death alternative can be sharpened: a nonterminal death plateau is already a fixed host-to-host rail. The only genuinely non-host physical alternative is concentration on the far terminal boundary piece.
+
+---
+
+## Theorem PP — physical-piece support normal form
+
+Let `Z_D` be a family of nonhub interfaces on one fixed side of the common routing hub, with one selected actual switching diameter bar `h_i in X_i` per interface and
+
+\[
+|Z_D|>zD-o(D),
+\qquad z>0.
+\tag{PP.1}
+
+Assume for notation that the interfaces are pre-hub. Then one of the following three alternatives contains more than
+
+\[
+\boxed{{z\over6}D-o(D)}
+\tag{PP.2}
+
+selected bars.
+
+### (A) Host-to-host staircase
+
+All birth endpoints lie on one fixed pre-hub host arc and all partner endpoints lie on one fixed hubward host arc. In interface order
+
+\[
+i_1<i_2<\cdots<i_M<k,
+\qquad
+b_1\le b_2\le\cdots\le b_M,
+\tag{PP.3}
+\]
+
+with `b_s>=k`. Hence
+
+\[
+I_s=\{i_s+1,\ldots,b_s\}
+\tag{PP.4}
+\]
+
+is a proper hub-crossing support staircase.
+
+### (B) Host-to-host nested rail
+
+The same fixed-host conclusion holds, but
+
+\[
+b_1\ge b_2\ge\cdots\ge b_M\ge k,
+\tag{PP.5}
+\]
+
+so
+
+\[
+\boxed{
+I_1\supsetneq I_2\supsetneq\cdots\supsetneq I_M.
+}
+\tag{PP.6}
+
+### (C) Far-terminal nested rail
+
+All birth endpoints lie on one fixed pre-hub host arc and all partner endpoints lie on the far terminal boundary piece `T_m`. Therefore
+
+\[
+\boxed{b_1=b_2=\cdots=b_M=m}
+\tag{PP.7}
+
+and again
+
+\[
+I_1\supsetneq I_2\supsetneq\cdots\supsetneq I_M.
+\tag{PP.8}
+
+Thus the only physical alternative to a linear fixed-host rail is a linear family whose hubward endpoints all lie on the far terminal piece and whose supports all persist to the terminal path region.
+
+---
+
+## 1. Fix one birth host side
+
+Every selected pre-hub switch starts at its tagged interface. Its birth endpoint lies in the corresponding middle layer `R_i`, and the rectangle layer meets the outer boundary in two host-side subarcs `C_i^+` and `C_i^-`.
+
+Color each selected bar by its birth side. One class has size
+
+\[
+>{z\over2}D-o(D).
+\tag{PP.9}
+
+Fix it. Birth endpoints are distinct and the subarcs `C_i^sigma` occur monotonically along one physical host arc as the interface tag changes.
+
+Every selected support contains the common hub cut, so every partner endpoint lies on the complementary hubward shore
+
+\[
+Q=Q^\uparrow\cup T_m\cup Q^\downarrow.
+\tag{PP.10}
+
+---
+
+## 2. Fix one hubward physical piece
+
+Partition the fixed-birth-side family according to whether its partner endpoint lies in `Q^uparrow`, `T_m`, or `Q^downarrow`. One class has size
+
+\[
+\boxed{>{z\over6}D-o(D).}
+\tag{PP.11}
+
+Partner collisions are allowed. If two partners are distinct, the selected diameter bars are vertex-disjoint and must cross, so convex chord order makes the partner map weakly order-preserving. If partners coincide, record a tie. Thus partner boundary position is monotone in birth boundary position.
+
+Since birth boundary position itself is monotone in interface index up to one reversal, the selected partner positions are monotone in interface index up to a reversal.
+
+---
+
+## 3. A host piece forces monotone support ends
+
+On `Q^uparrow`, path-region labels are weakly increasing from `R_k` to `R_m`. On `Q^downarrow`, they are weakly decreasing from `R_m` to `R_k`.
+
+Therefore, if the selected physical piece is either host arc, the support-end tags
+
+\[
+b_1,b_2,\ldots,b_M
+\tag{PP.12}
+
+are monotone in increasing interface order. Depending on the two harmless orientation reversals, they are either nondecreasing or nonincreasing.
+
+The nondecreasing case is (A). The nonincreasing case is (B), because increasing starts plus nonincreasing ends imply strict support nesting.
+
+No unimodal subsequence extraction is needed.
+
+---
+
+## 4. The terminal piece forces one common terminal support end
+
+Every point of `T_m` lies in the far terminal path region `R_m`. Hence if the selected partner class lies in `T_m`, every selected support end is exactly
+
+\[
+b_s=m.
+\tag{PP.13}
+
+Increasing birth indices then give the strict nesting (PP.8).
+
+This sharpens the earlier death-plateau language. If a constant death tag satisfies `b_*<m`, its partner endpoints cannot lie in `T_m`, whose label is `m`. They therefore lie on a hubward host arc and are already part of a host-to-host rail. Only the terminal tag `m` can support a genuinely non-host physical plateau.
+
+The theorem does **not** assert a bounded number of source vertices on `T_m`; a linear terminal-piece family is not yet excluded.
+
+---
+
+## 5. Endpoint-disjoint extraction
+
+Birth endpoints are distinct. The only collisions are among partners. Using
+
+\[
+\Delta(H)\le(4\,3^{1/8}+o(1))D^{3/4},
+\tag{PP.14}
+\]
+
+greedy selection of at most one retained bar per partner vertex gives, in whichever branch realizes (PP.2),
+
+\[
+\boxed{
+>
+\left({z\over24\,3^{1/8}}-o(1)\right)D^{1/4}
+}
+\tag{PP.15}
+
+endpoint-disjoint bars. They are therefore pairwise-crossing diameter chords.
+
+---
+
+## 6. Unconditional current high-`t` application
+
+The corrected exact-antipodal/strong-TB1 fork supplies one mechanism of density
+
+\[
+z=s_0={7c_0\over16}
+={791\over320{,}000{,}000},
+\qquad
+c_0={113\over20{,}000{,}000}.
+\tag{PP.16}
+
+Choose one actual switching bar per interface from that mechanism: one member of the exact force pair in the exact-antipodal case, or the chosen strong blocker in the strong-TB1 case.
+
+Theorem PP gives one physical support normal form with density
+
+\[
+\boxed{
+>{s_0\over6}D-o(D)
+={791\over1{,}920{,}000{,}000}D-o(D)
+=(4.11979166667\times10^{-7})D-o(D).
+}
+\tag{PP.17}
+
+This improves the previous uniform `s_0/8` support-normal-form density.
+
+After partner-degree thinning, the endpoint-disjoint coefficient is
+
+\[
+\boxed{
+{s_0\over24\,3^{1/8}}
+\approx8.97790708869\times10^{-8}.
+}
+\tag{PP.18}
+
+If the selected mechanism is strong-TB1, every retained bar keeps the fixed order-`D` first-derivative margin. If it is exact-antipodal, every retained birth interface keeps its second force-pair bar and exact positive two-ray reaction certificate.
+
+---
+
+## 7. Stronger no-fixed-margin-TB1 application
+
+On the parameterized deep exact-force branch, the linear nested rail already has one fixed birth side and size
+
+\[
+>\lambda D-o(D),
+\qquad
+\lambda=c_0-6\rho-\eta-2\delta.
+\tag{PP.19}
+
+The initial birth-side factor `1/2` is therefore unnecessary. Partition only by the three hubward physical pieces. One obtains either a host-to-host nested rail or a far-terminal nested rail of size
+
+\[
+\boxed{>{\lambda\over3}D-o(D).}
+\tag{PP.20}
+
+For the ninety-percent choice `lambda=0.9c_0`, this is
+
+\[
+\boxed{1.695\times10^{-6}D-o(D).}
+\tag{PP.21}
+
+The endpoint-disjoint coefficient is
+
+\[
+\boxed{
+{\lambda\over12\,3^{1/8}}
+\approx3.69376748792\times10^{-7}.
+}
+\tag{PP.22}
+
+As the fixed parameter losses tend to zero, the linear physical-piece density approaches
+
+\[
+{c_0\over3}=1.88333333333\times10^{-6}.
+\tag{PP.23}
+
+---
+
+## 8. Frontier effect
+
+The remaining global topology is narrower than the earlier host/death formulation suggested.
+
+A positive-density final blocker population cannot require an arbitrary post-hub death interface as a separate case. After a fixed birth-side extraction, the physical hubward endpoint set itself yields only
+
+```text
+fixed host -> fixed hubward host
+    with monotone support ends
+    (staircase or nested),
+
+or
+
+fixed host -> far terminal boundary piece T_m
+    with every support end equal to m.
+```
+
+The next non-host target is therefore specifically the far terminal piece, not an arbitrary interior separator. The host branches should be attacked with two-arc endpoint order, near-central diameter geometry, and the common inverse-`D` train grid. The terminal branch should be attacked with terminal-region/source-boundary complexity and the exact resultant/terminal ledgers available at the end of the laminar path.
+
+No C-II or Level-I closure is claimed.
+
+**Disposition:** replaced the `1/8` generic support trichotomy by a `1/6` physical-piece normal form and localized the genuinely non-host plateau to the far terminal boundary piece. C-II and Level I remain open.

@@ -1,0 +1,246 @@
+# Hostile audit — signed cycle-intersection exclusion of collapsed support six
+
+**Date:** 2026-09-19  
+**Audited source:** `research/target_c_support6_collapsed_signed_intersection_exclusion_2026-09-19.md`  
+**Certificate:** `research/verify_target_c_support6_collapsed_signed_intersection_exclusion_2026_09_19.cpp`  
+**Verdict:** PASS at the stated scope  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+## 1. Claim under audit
+
+The source claims that the remaining degree-pure collapsed support-six one-anchor block cannot occur globally. The load-bearing new statement is the signed integer cycle-intersection equation
+
+\[
+\sum_{e\in C,f\in D}
+\epsilon_C(e)\epsilon_D(f)
+\operatorname{sign}\det(u_e,u_f)z_{e,f}
++
+\sum_v\iota_v(C,D)=0
+\tag{SI.1}
+\]
+
+for every pair of edge-disjoint oriented simple relation cycles `C,D`, followed by a complete exact finite search over the audited 42 rotation-cell symmetry representatives.
+
+The audit attacks the topology, sign conventions, finite completeness, and downstream support accounting separately.
+
+---
+
+## 2. Plane algebraic intersection: PASS
+
+The curves `gamma_C` are compact oriented immersed closed curves in the physical plane. Edge-disjointness prevents `C,D` from sharing a complete train. At a common exceptional face each cycle uses two relation edges and the two cycles share none, so the four train-end midpoints are distinct.
+
+After generic perturbation, algebraic intersection is defined. Since
+
+\[
+H_1(\mathbb R^2)=0,
+\]
+
+every compact oriented 1-cycle is null-homologous and has zero algebraic intersection with every closed 1-cycle. Self-intersections of either individual curve do not change this conclusion.
+
+The earlier MI.1 proof already audited the exhaustive location list for intersections between two such cycle curves: strict-rhombus train crossings and interior exceptional-face chord crossings. The signed lift does not introduce a new intersection class.
+
+Verdict: the left side of (SI.1) must sum to zero for every actual drawing.
+
+---
+
+## 3. Train-crossing sign: PASS
+
+The previous forced-crossing-rotation theorem proved for canonical train orientations that
+
+\[
+\operatorname{sign}\det(t_e,t_f)
+=
+\operatorname{sign}\det(u_e,u_f).
+\]
+
+Reversing the traversal direction of one cycle reverses exactly one tangent and hence exactly one factor `epsilon`. Therefore the contribution of a train crossing to `gamma_C . gamma_D` is
+
+\[
+\epsilon_C(e)\epsilon_D(f)
+\operatorname{sign}\det(u_e,u_f).
+\]
+
+The certificate's convention is checked directly against the exact angle windows:
+
+- stored sign `0` imposes `1 < x_e-x_f < 2`, hence `alpha_e>alpha_f` and `sign det(u_e,u_f)=-1`;
+- stored sign `1` imposes `1 < x_f-x_e < 2`, hence `sign det(u_e,u_f)=+1`.
+
+The relation-edge orientation bit convention also matches the audited cell generator: bit zero means canonical orientation from the lower-numbered endpoint to the higher-numbered endpoint; bit one reverses it. Multiplying the cycle's lower-to-higher traversal sign by this canonical-orientation sign gives exactly `epsilon_C(e)`.
+
+Verdict: no sign reversal is missing in the rhombus term.
+
+---
+
+## 4. Exceptional-face chord sign: PASS
+
+The rotation-cell construction stores `(A_1,A_2,B_1,B_2)` in the physical counterclockwise relation-side order after the anchor side. For positive-anchor faces this follows from
+
+\[
+0,\alpha_{A_1},\alpha_{A_2},\pi+\alpha_{B_1},\pi+\alpha_{B_2};
+\]
+
+for negative-anchor faces the normalizing rotation by `pi` preserves orientation and yields the same convention.
+
+For oriented chords `a -> b` and `c -> d` in a convex face, the certificate returns `+1` exactly when `c` lies on the counterclockwise arc from `a` to `b` and `d` does not, `-1` for the reverse case, and zero when the endpoint pairs do not alternate. A direct planar control test on the octahedral graph with a known genus-zero embedding was run independently: for every edge-disjoint cycle pair the sum of the local signed chord intersections was exactly zero when no train crossings were present (`63` simple cycles; zero failing pairs).
+
+The verifier also asserts for every tested cycle pair and every common face that
+
+\[
+|\iota_v|\bmod2=\eta_v.
+\]
+
+Hence reducing the signed local term modulo two reproduces the already-audited MI.1 face term.
+
+Verdict: the face term is correctly signed and orientation-aware.
+
+---
+
+## 5. SI.1 really lifts MI.1: PASS
+
+Every nonzero train-crossing coefficient in (SI.1) is `+1` modulo two regardless of its sign. The previous section gives `iota_v = eta_v (mod 2)`. Therefore (SI.1) reduces exactly to MI.1.
+
+This matters for the finite search: beginning from the MI.1 affine space cannot discard an actual signed solution. Every actual signed solution automatically lies in that affine space.
+
+Verdict: the parity prefilter is logically safe.
+
+---
+
+## 6. Crossing-angle completeness: PASS
+
+For upper-half-plane representatives, two projective train directions can cross in a strict unit rhombus only when
+
+\[
+{\pi\over3}<\angle_{proj}(e,f)\le{\pi\over2},
+\]
+
+which is equivalent to
+
+\[
+1<|x_e-x_f|<2.
+\]
+
+For every selected crossing pair the verifier enumerates both oriented windows and imposes all selected windows in one common difference-constraint system. Thus pairwise-compatible but jointly-incompatible sign choices are rejected.
+
+Unselected pairs receive no noncrossing angle restriction. This is a relaxation in the safe direction: it can create spurious candidates but cannot remove an actual drawing.
+
+Verdict: the metric filter is complete for exclusion.
+
+---
+
+## 7. Triangle-free filter: PASS
+
+The audited complete-train theorem makes the strict-rhombus crossing graph simple and triangle-free. The twelve internal relation trains are complete trains of the same stopped-train complex. Therefore every actual internal crossing state passes the verifier's triangle-free test.
+
+The filter does not assume planarity of the abstract relation graph and does not forbid two relation trains sharing an exceptional endpoint from crossing later in a rhombus.
+
+Verdict: no actual collapsed block is lost here.
+
+---
+
+## 8. Symmetry quotient: PASS
+
+The prior exact rotation-cell theorem proved that every collapsed block lies in one of 388 labelled cells and that sign-preserving face relabelings plus reflection reduce them conservatively to 42 orbits.
+
+For SI.1:
+
+- a sign-preserving relabeling permutes all indices and equations;
+- reflection reverses physical orientation, so every oriented train-crossing sign and every face-chord intersection sign changes sign. Each SI.1 equation is multiplied by `-1` and remains equivalent to zero.
+
+Therefore testing one representative per existing orbit remains complete for the signed theorem.
+
+Verdict: no new orbit refinement is required.
+
+---
+
+## 9. Certificate reproducibility: PASS
+
+The verifier was built with
+
+```text
+g++ -O2 -std=c++17 -pthread -Wall -Wextra -pedantic
+```
+
+with no warnings and reproduced the same exact census as the optimized build.
+
+It asserts:
+
+```text
+cells = 42
+affine_total = 6029312
+free-dimension range = 14..19
+jointly angle-feasible triangle-free states = 360088
+signed survivors = 0
+```
+
+It also asserts the full weight-by-weight MI.1, triangle-free, and joint-angle counts. In particular it reproduces the earlier audited counts at weights `7,8,9` and continues the search through every nonempty affine weight. Triangle-free states occur through weight 26; joint-angle-feasible states occur through weight 25; none satisfy SI.1.
+
+The certificate uses no floating-point arithmetic.
+
+Verdict: the finite exclusion is deterministic and independently regression-locked.
+
+---
+
+## 10. Nonlinear closure is not a hidden dependency: PASS
+
+The certificate does **not** impose the six nonlinear equilateral-pentagon closure equations. That omission is safe because it enlarges the candidate set. The previously certified exact local closure roots in 35 rotation-cell orbits therefore do not threaten the theorem; they are simply among locally feasible states which fail global signed intersection.
+
+This also means the theorem is stronger than an exclusion of the known closure roots: it excludes every globally realizable train crossing state throughout all 388 rational rotation cells, whether or not the local closure variety is present there.
+
+Verdict: no numerical/local-closure assumption carries the proof.
+
+---
+
+## 11. Downstream support accounting: PASS
+
+Prior audited work established:
+
+1. support five is impossible;
+2. every noncollapsed degree-pure support-six component is impossible;
+3. every support-six component with degree excess can be charged injectively to at least one unit of `x_U`.
+
+The present theorem supplies the missing collapsed degree-pure exclusion, so `c_6=0`. The prior component count
+
+\[
+c_*\le {n_1+c_6+x_U\over7}
+\]
+
+therefore becomes
+
+\[
+c_*\le {n_1+x_U\over7}.
+\]
+
+Combining with the existing `2n_0+n_2` projection term gives
+
+\[
+\sigma_C\le2n_0+n_2+{n_1\over7}+{x_U\over7}.
+\]
+
+The already-audited coefficient comparison then gives
+
+\[
+\sigma_C\le {Q\over7}+{26\over7}E_U.
+\]
+
+No support-seven exclusion is being claimed.
+
+Verdict: the corank consequence has the stated scope.
+
+---
+
+## 12. What is not proved
+
+This result does **not** prove C-II. It does not exclude:
+
+- support-six one-anchor components with positive degree excess, except through the existing `x_U` charge;
+- support-seven or larger one-anchor dual components;
+- the remaining positive-locking configurations of the actual diameter graph;
+- the macroscopic-container branch of Target C.
+
+It also does not promote any theorem-state artifact.
+
+The earlier crossing floors `X_K>=7` and `X_K>=10` remain logically true but are now vacuous for actual degree-pure collapsed support-six blocks because such blocks do not exist.
+
+## Verdict
+
+**PASS.** The signed intersection equation is the correct integer lift of MI.1, its local sign conventions match the audited train orientation and counterclockwise face rotation conventions, the 42-orbit quotient remains valid, and the exact exhaustive certificate finds no signed survivor. The degree-pure support-six branch is closed. C-II remains open.

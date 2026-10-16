@@ -1,0 +1,429 @@
+# Target C-II — two-leaf outer energy excludes `t<=1.843645`
+
+**Date:** 2026-09-15  
+**Status:** proof-only full-core Type-II strengthening  
+**Scope:** full-core/no-macroscopic-container Type-II branch  
+**Dependencies:** scope-safe matched atomic gap `g=0.007707`; hostile-audited residual stability/shared retention/complement incidence; `t<=1.844` phasewise retained-outer theorem; hostile-audited correlated center/leaf capacity; repaired cross-phase O--O endpoint-energy theorem  
+**Certificate:** `research/verify_target_c_two_leaf_outer_energy_exclusion_t1843645.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The merged theorem excludes `t=(q-k)/D<=1.84364`.  Re-optimizing the same two-leaf architecture with the current scope-safe atomic constant
+
+\[
+C_{707}=2\sqrt{\Delta_2}+0.007707,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+\]
+
+shows that the argument still has rigorous room at
+
+\[
+\boxed{T=1.843645.}
+\]
+
+The safe rounded constants used below are
+
+\[
+H=0.00036,
+\qquad
+W_0=1.912693,
+\qquad
+E_0=0.9068995,
+\]
+
+\[
+U_0=0.530,
+\qquad
+Z_0=2.21939,
+\qquad
+A_0=0.7035,
+\]
+
+and the final good O--O pair weight in each leaf is larger than `0.1365D-o(D)`.
+The exact certificate leaves more than `5.4e-4 D` in the final outer-energy contradiction.
+
+Therefore, at the stated proof-only scope,
+
+\[
+\boxed{
+\liminf_{D\to\infty}{q-k\over D}\ge1.843645.
+}
+\tag{E645.1}
+\]
+
+No C-II or Level-I closure is claimed.
+
+---
+
+## 1. Residual stability is in scope and forces `h<0.00036`
+
+Write
+
+\[
+t={q-k\over D},
+\qquad
+x={\kappa\over2},
+\qquad
+\delta={d_{out}\over D},
+\]
+
+and
+
+\[
+h=U_{net}-C_{707}.
+\]
+
+The residual-stability theorem is stated for `U_net<=2.013`.  The already-proved `t<=1.844` phase theorem gives retained mass above `0.616D` in each exact dominant phase.  Hence total retained dominant mass is above `1.848D`, and the three-well bathtub inequality gives
+
+\[
+\delta\ge F(1.848)-o(1),
+\qquad
+F(z)=z-6\sin(z/6).
+\]
+
+The exact certificate checks `F(1.848)>0.029` and therefore, at `t<=T`,
+
+\[
+U_{net}
+\le {9t\over2}-2\pi-2\delta
+<1.956<2.013.
+\]
+
+Thus the audited residual estimate applies:
+
+\[
+R:=U_{net}-M\le1.05h,
+\tag{E645.2}
+\]
+
+where `M` is the dominant exact-orbit mass.
+
+The exact envelope is
+
+\[
+2\delta+x+h
+=R_t:={9t\over2}-2\pi-C_{707}.
+\tag{E645.3}
+\]
+
+The survivor capacity is increasing in `t` and decreasing in `x,h`; the inherited derivative bounds remain
+
+\[
+Q_x<-2.7,
+\qquad
+Q_h<-2.5.
+\tag{E645.4}
+\]
+
+At the adverse point `t=T`, `x=0`, `h=H=0.00036`, the exact verifier proves
+
+\[
+F\!\left(
+\pi-{T\over2}-1.05H
+-{1.05^2H^2\over2(1-(R_T-H)/2)}
+\right)
+-{R_T-H\over2}
+>3.99\times10^{-6}.
+\tag{E645.5}
+\]
+
+Hence every survivor with `t<=T` must satisfy
+
+\[
+\boxed{0\le h<0.00036-o(1).}
+\tag{E645.6}
+\]
+
+Consequently
+
+\[
+M<C_{707}+0.00036<1.912693+o(1),
+\tag{E645.7}
+\]
+
+and, since all residual exact orbits together carry at most `R^2/4` crossing mass,
+
+\[
+\boxed{E_{dom}>0.9068995-o(1).}
+\tag{E645.8}
+\]
+
+The exact outward slacks in (E645.7)--(E645.8) are respectively above `3.86e-7` and `1.46e-7`.
+
+---
+
+## 2. Both leaf phase masses are below `0.530D`
+
+Write the dominant exact-orbit phase masses as
+
+\[
+C\ge U\ge V,
+\qquad
+C+U+V=M.
+\]
+
+Assume `U>=U_0=0.530`.  Replace the total mass and crossing target adversely by
+
+\[
+W_0=1.912693,
+\qquad
+E_0=0.9068995.
+\]
+
+Generic center capacity excludes `C<=U_0` and, with the slightly shifted high-center cutoff
+
+\[
+C\ge1.0442,
+\]
+
+also excludes the high-center tail.
+
+For
+
+\[
+C\le W_0-2U_0=0.852693,
+\]
+
+the hostile-audited strong aggregate phase-star capacity applies.  At the endpoint its exact deficit from `E_0` is greater than `0.00697`.
+
+On the remaining interval
+
+\[
+0.852693<C<1.0442,
+\]
+
+the strong physical `1/10` center/leaf pair theorem is valid for both leaves.  Its worst excess ratio remains below the branch threshold `sqrt(20/29)` by more than `0.0389`.
+
+Fixing `W=W_0` and `U=U_0` is adverse for the correlated capacity.  Put
+
+\[
+V=W_0-C-U_0
+\]
+
+and
+
+\[
+\begin{aligned}
+G(C)=&\ C(U_0+V)\\
+&-{1\over10}\left(1-{V\over C}\right)(C+U_0-K)^2\\
+&-{1\over10}\left(1-{U_0\over C}\right)(C+V-K)^2,
+\qquad K={2\over\sqrt3}.
+\end{aligned}
+\tag{E645.9}
+\]
+
+The inherited derivative identity gives `G''<-2`.  Using the tangent point `C=0.931447`, exact outward arithmetic gives
+
+\[
+\max G(C)<E_0-1.21\times10^{-5}.
+\tag{E645.10}
+\]
+
+This contradicts (E645.8).  Therefore
+
+\[
+\boxed{U,V<0.530-o(1).}
+\tag{E645.11}
+\]
+
+---
+
+## 3. Retained dominant outer mass exceeds `2.21939D`
+
+Let `z` be the retained dominant outer-occurrence mass, `p` the retained complement O--O pair mass, and `e_c` the selected complement terminal energy.  The audited shared-retention system gives
+
+\[
+z+p\ge\pi-{t\over2}-x-1.05h-o(1),
+\tag{E645.12}
+\]
+
+\[
+p(1-\delta)-{e_c\over2}
+\le{1.05^2h^2\over2}+o(1),
+\tag{E645.13}
+\]
+
+and
+
+\[
+F(z)+e_c\le\delta+o(1).
+\tag{E645.14}
+\]
+
+Assume `z<=Z_0=2.21939`.  Capped retention is increasing in `z`, so replace `z` by `Z_0`.  On the energy boundary `delta=F(Z_0)`, (E645.3) gives
+
+\[
+x+h=h_*:=R_T-2F(Z_0).
+\]
+
+The exact enclosure gives
+
+\[
+0<h_*<0.000352301< H.
+\tag{E645.15}
+\]
+
+On this boundary the capped-retention excess increases with `h`, so the adverse point is `h=h_*`, `x=0`.  Exact outward arithmetic gives
+
+\[
+Z_0
++{1.05^2h_*^2\over2(1-F(Z_0))}
+-\pi+{T\over2}+1.05h_*
+<-1.01\times10^{-5}.
+\tag{E645.16}
+\]
+
+The `delta<F(Z_0)` side is no better by the same negative `Q_x,Q_h` derivatives.  Thus
+
+\[
+\boxed{z>2.21939-o(1).}
+\tag{E645.17}
+\]
+
+---
+
+## 4. Every exact phase retains more than `0.7035D`
+
+For one phase retained mass `s`, write
+
+\[
+f(s)=s-2\sin(s/2).
+\]
+
+The phasewise one-well bathtub theorem gives
+
+\[
+\delta\ge f(z_C)+f(z_U)+f(z_V)-o(1).
+\tag{E645.18}
+\]
+
+Also, from (E645.3) and `x,h>=0`,
+
+\[
+\delta\le {R_T\over2}+o(1).
+\tag{E645.19}
+\]
+
+Suppose one phase has retained mass at most
+
+\[
+A_0=0.7035<Z_0/3.
+\]
+
+For fixed total mass at least `Z_0`, strict convexity makes the cheapest other two masses equal, so
+
+\[
+f(z_C)+f(z_U)+f(z_V)
+\ge
+f(A_0)+2f\left({Z_0-A_0\over2}\right)-o(1).
+\]
+
+The exact certificate proves this lower bound exceeds `R_T/2` by more than
+
+\[
+1.05\times10^{-6}.
+\]
+
+Therefore
+
+\[
+\boxed{z_C,z_U,z_V>0.7035-o(1).}
+\tag{E645.20}
+\]
+
+---
+
+## 5. Two good leaf O--O families force the final energy contradiction
+
+For either leaf phase `i`, retained terminal weights satisfy
+
+\[
+z_i\le M_i+P_i+o(1),
+\]
+
+where `M_i` is the phase train mass and `P_i` the retained O--O pair weight.  Combining (E645.11) and (E645.20),
+
+\[
+\boxed{P_U,P_V>0.1735-o(1).}
+\tag{E645.21}
+\]
+
+Call a leaf O--O train bad if it crosses at most half of the center-phase trains.  The hostile-audited center/leaf correlation bounds total bad retained pair weight across both leaves by the quadratic whose safe test value is
+
+\[
+B=0.037.
+\]
+
+With `W_0,E_0,U_0` above, the corresponding discriminant is
+
+\[
+-0.001643515004<0.
+\tag{E645.22}
+\]
+
+so total bad weight is below `0.037D`.  Even if all of it is charged to one leaf, each leaf retains good O--O weight
+
+\[
+\boxed{G_U,G_V>0.1365-o(1).}
+\tag{E645.23}
+\]
+
+Every good train crosses more than half of the same center family.  Hence any good `U`-train and good `V`-train share a center neighbor.  The stopped-train crossing graph is triangle-free, so the two leaf trains cannot cross.
+
+The scope-repaired cross-phase endpoint theorem now applies to every good cross-product pair:
+
+\[
+e_\tau+e_\sigma\ge2-\sqrt3-o(1).
+\tag{E645.24}
+\]
+
+Summing the weighted complete product yields
+
+\[
+E_U+E_V
+\ge(2-\sqrt3)(0.1365)-o(1).
+\tag{E645.25}
+\]
+
+The center selected-edge population is disjoint and, by (E645.20), contributes at least `f(0.7035)D-o(D)` additional outer energy.  Therefore
+
+\[
+\delta
+\ge
+(2-\sqrt3)(0.1365)+f(0.7035)-o(1).
+\tag{E645.26}
+\]
+
+The exact certificate proves
+
+\[
+(2-\sqrt3)(0.1365)+f(0.7035)
+>{R_T\over2}+5.43\times10^{-4}.
+\tag{E645.27}
+\]
+
+This contradicts (E645.19).  Hence no scoped full-core Type-II survivor has `t<=1.843645`, proving (E645.1).
+
+---
+
+## 6. Numerical ceiling and next obligation
+
+A non-load-bearing continuous optimization of this exact architecture puts its limiting endpoint near
+
+\[
+t\approx1.84365114.
+\]
+
+The present theorem deliberately stops at `1.843645`; the remaining margin is large enough for exact outward rounding, while attempting `1.843651` would leave only a few `10^{-5}` in the final relaxed energy ledger.
+
+This shows the two-leaf scalar architecture is nearly exhausted.  Further useful progress should come from the newly merged adjacent-cut / multishear finite-cusp structure rather than another decimal push.  In particular, the live `t<=1.844` branch now supplies adjacent phase-close O--O cuts whose opposite multishear has only a bounded switching set of `O(D)` first-derivative diameter rows.  The current audit correctly warns that KKT positivity forbids a nonzero first-order feasible direction, so the next theorem must use the finite switching set combinatorially or build a nonlocal same-cardinality replacement.
+
+Run
+
+```sh
+python3 research/verify_target_c_two_leaf_outer_energy_exclusion_t1843645.py
+```
+
+for the exact rational/Machin/Taylor certificate.
+
+**Disposition:** proved proof-only full-core Type-II strengthening. C-II and Level I remain open.

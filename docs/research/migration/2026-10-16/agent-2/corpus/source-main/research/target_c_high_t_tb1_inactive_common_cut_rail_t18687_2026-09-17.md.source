@@ -1,0 +1,334 @@
+# Target C-II — the superthin inactive TB1 braid has a common cut and an ordered interval rail
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** the SUPERTHIN THRACKLE side of the one-sign strong-TB1 exact-swap branch through `t=(q-k)/D<=1.8687`  
+**Dependencies:** superdiameter inactive-thrackle theorem; phase-free O--O path-region coordinates; exact selected-cut support interval of an arbitrary source pair; partner-rainbow order on complementary boundary shores  
+**Certificate:** `research/verify_target_c_high_t_tb1_inactive_common_cut_rail_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The superthin exact-swap alternative now contains an `Omega(D^(1/4))` vertex-disjoint matching of inactive chords which are longer than `sqrt(D^2-1)` and therefore cross pairwise. The physical layer tags carried by those chords can be organized further.
+
+The key observation is topological and does not use diameter activity:
+
+> If two pairwise-crossing hull chords are written in the phase-free O--O path-region coordinates, their selected-cut support intervals must intersect.
+
+Otherwise one selected O--O crosscut separates both endpoints of the first chord from both endpoints of the second chord. The four hull endpoints then occupy two complementary boundary arcs and cannot alternate, so the straight chords cannot cross.
+
+Because support sets are intervals on a linearly ordered cut path, pairwise intersection implies total intersection. Thus **every chord in the superthin crossing matching crosses one common selected cut**.
+
+Once that common cut is available, the existing complementary-shore crossing-order lemma applies verbatim. After fixing which side contains the tagged endpoint and which physical host contains it, the distinct layer tags order the birth endpoints on one host. Pairwise crossing orders all partner endpoints on the opposite shore. The partner region word has one turn, so a constant-fraction subfamily has monotone support ends.
+
+Consequently the inactive superthin branch contains an unbounded ordered rail of inactive almost-diameters whose selected-cut supports are either a proper staircase or strictly nested. This recovers not only pairwise crossing but also the common-cut/support-order architecture of the active blocker rails.
+
+No inactive chord is promoted to an actual diameter edge, switching edge, or KKT-loaded edge.
+
+---
+
+## 1. Arbitrary source pairs have exact interval support on the selected path
+
+Write the selected O--O path in complement-dual coordinates
+
+\[
+R_0-\tau_1-R_1-\tau_2-\cdots-\tau_m-R_m.
+\tag{IC.1}
+\]
+
+For any source pair `xy` with
+
+\[
+x\in R_a,
+\qquad
+y\in R_b,
+\qquad a<b,
+\]
+
+its selected-cut separation support is exactly
+
+\[
+\boxed{
+I(xy)=\{a+1,a+2,\ldots,b\}.}
+\tag{IC.2}
+
+This statement is purely about which selected cut bipartitions separate the two endpoints. It does not require `xy` to be a unit contact or an actual diameter.
+
+An exact-swap witness tagged by physical layer `R_i` has exactly one endpoint in `R_i`; otherwise translating `R_i` would leave its relative vector unchanged. Hence its two endpoint region labels are distinct and (IC.2) is nonempty.
+
+---
+
+## 2. Crossing hull chords have intersecting support intervals
+
+Let `e=xy` and `f=uv` be two vertex-disjoint hull chords from the superthin matching. They cross properly by the superdiameter-thrackle theorem.
+
+Suppose for contradiction that their selected-cut supports are disjoint. Since both supports are integer intervals, after exchanging `e,f` if necessary there is an index `k` such that both endpoints of `e` lie on the `R_0` side of `tau_k` and both endpoints of `f` lie on the `R_m` side.
+
+The O--O crosscut `tau_k` joins two points of the outer boundary and separates the topological source disk into two sides. On the outer boundary, its endpoints cut the convex-hull cycle into two complementary arcs:
+
+\[
+P_k,
+\qquad Q_k.
+\tag{IC.3}
+
+Every hull vertex on the `R_0` side lies on one of these arcs, say `P_k`, and every hull vertex on the `R_m` side lies on `Q_k`. Thus both endpoints of `e` belong to `P_k`, while both endpoints of `f` belong to `Q_k`.
+
+Two straight chords of a convex polygon cross properly if and only if their four endpoints alternate in cyclic order. Two endpoints contained in `P_k` followed by two endpoints contained in the complementary arc `Q_k` do not alternate. Therefore `e` and `f` cannot cross, contradiction.
+
+Hence
+
+\[
+\boxed{
+I(e)\cap I(f)\ne\varnothing
+}
+\tag{IC.4}
+
+for every two edges of the vertex-disjoint superthin crossing matching.
+
+---
+
+## 3. Interval Helly gives one common selected cut
+
+Finite intervals in a linear order have Helly number two. Explicitly, write
+
+\[
+I(e)=[\ell_e,r_e]\cap\mathbb Z.
+\]
+
+Pairwise intersection implies
+
+\[
+\max_e\ell_e\le\min_e r_e.
+\tag{IC.5}
+
+Choose any integer
+
+\[
+k\in
+[\max_e\ell_e,\min_e r_e].
+\tag{IC.6}
+
+Then
+
+\[
+\boxed{k\in I(e)\quad\text{for every selected inactive chord }e.}
+\tag{IC.7}
+
+Equivalently, every chord joins the two complementary hull shores `P_k,Q_k` of the same selected cut `tau_k`.
+
+This is an exact source-level statement. The common cut is obtained from pairwise crossing and path support alone; it is not the active-diameter routing hub and need not coincide with it.
+
+---
+
+## 4. Pairwise crossing gives one common partner order
+
+Let the matching size be `M`. Every edge has one endpoint on `P_k` and one on `Q_k`. Order the `P_k` endpoints in ambient cyclic order:
+
+\[
+p_1,p_2,\ldots,p_M.
+\tag{IC.8}
+
+Write `q_s in Q_k` for the partner of `p_s`.
+
+Because all endpoints are distinct and every two selected chords cross, the complementary-shore order lemma gives
+
+\[
+\boxed{
+q_1,q_2,\ldots,q_M
+\text{ in the same ambient cyclic order on }Q_k.}
+\tag{IC.9}
+
+Thus the inactive superthin matching has exactly the same two-shore rainbow order used for the active diameter rails.
+
+---
+
+## 5. Fix the tagged shore and one physical birth host
+
+Every exact-swap witness retains one distinct physical layer tag `i`, meaning one endpoint lies in `R_i`. Since the common cut separates its two endpoints, the tagged endpoint lies either on `P_k` or on `Q_k`.
+
+Retain the larger class. After reversing the path notation if necessary, assume at least `M/2` tagged endpoints lie on `P_k`.
+
+Within a path region `R_i`, a hull endpoint lies on one of the two physical host-side boundary subarcs. Retain the larger host color. At least
+
+\[
+\boxed{M/4}
+\tag{IC.10}
+
+edges remain with their tagged endpoints on one fixed physical host.
+
+Their tags are distinct. Along that host, the layer subarcs occur in path-interface order or its reverse. Orient the indexing so the surviving tags satisfy
+
+\[
+i_1<i_2<\cdots<i_{M_1},
+\qquad
+M_1\ge M/4,
+\tag{IC.11}
+
+and the corresponding tagged endpoints occur in this same hull order.
+
+By (IC.9), the partner endpoints occur in one fixed hull order on `Q_k` as well.
+
+---
+
+## 6. The partner-region word has one turn
+
+Assume the retained tagged endpoints are on the `R_0` side of `tau_k`; the other orientation is symmetric. Then every partner lies on the hubward/far shore `Q_k`.
+
+Along `Q_k`, the path-region labels have the standard one-turn form
+
+\[
+R_k,R_{k+1},\ldots,R_m,
+\quad T_m,\quad
+R_m,R_{m-1},\ldots,R_k,
+\tag{IC.12}
+
+with weak repetitions allowed inside a region and with the terminal boundary piece `T_m` carrying the constant label `R_m`.
+
+Because the selected partner endpoints occur in one boundary order by (IC.9), their region indices
+
+\[
+j_1,j_2,\ldots,j_{M_1}
+\tag{IC.13}
+
+form a weakly unimodal sequence, after the harmless global reversal of the `Q_k` order if necessary.
+
+A weakly unimodal sequence is the union of one weakly monotone prefix and one weakly monotone suffix overlapping at the extremal plateau. Therefore one monotone piece has size at least `M_1/2`.
+
+Retain such a piece. Its size satisfies
+
+\[
+\boxed{M_2\ge M/8.}
+\tag{IC.14}
+
+---
+
+## 7. Staircase or nested inactive support rail
+
+For the retained family, the tagged endpoint lies in `R_{i_s}` and the partner lies in `R_{j_s}`, with
+
+\[
+i_s<k\le j_s.
+\tag{IC.15}
+
+Therefore the exact selected-cut support is
+
+\[
+I_s=\{i_s+1,\ldots,j_s\}.
+\tag{IC.16}
+
+The birth indices increase strictly by (IC.11).
+
+If the monotone partner run has
+
+\[
+j_1\le j_2\le\cdots,
+\]
+
+then both support endpoints advance:
+
+\[
+\boxed{
+\text{STAIRCASE: }
+ i_1<i_2<\cdots,
+ \qquad j_1\le j_2\le\cdots,
+ \qquad k\in I_s\ \forall s.}
+\tag{IC.17}
+
+If instead
+
+\[
+j_1\ge j_2\ge\cdots,
+\]
+
+then
+
+\[
+\boxed{
+I_1\supsetneq I_2\supsetneq\cdots,}
+\tag{IC.18}
+
+because the left endpoints advance strictly while the right endpoints retreat weakly. This is the NESTED alternative.
+
+Thus the inactive superthin braid contains a growing common-cut staircase or nested rail of exact selected-cut incidence.
+
+The word `support` here means endpoint separation by the selected path cuts. It does **not** mean that these inactive pairs belong to the actual diameter support or a KKT switching set.
+
+---
+
+## 8. Quantitative extraction from the TB1 THIN branch
+
+The superdiameter theorem gives, in the THIN alternative, a vertex-disjoint pairwise-crossing matching of size
+
+\[
+M>
+\left(
+{s_0\over256\,3^{1/8}}-o(1)
+\right)D^{1/4},
+\tag{IC.19}
+
+where
+
+\[
+s_0={791\over320{,}000{,}000}.
+\]
+
+Sections 5--7 lose only the factors
+
+\[
+{1\over2}
+\quad\text{(tagged common-cut shore)},
+\qquad
+{1\over2}
+\quad\text{(physical birth host)},
+\qquad
+{1\over2}
+\quad\text{(one monotone partner run)}.
+\]
+
+Therefore one ordered inactive rail has size
+
+\[
+\boxed{
+>
+\left(
+{s_0\over2048\,3^{1/8}}-o(1)
+\right)D^{1/4}.}
+\tag{IC.20}
+
+Numerically,
+
+\[
+\boxed{
+{s_0\over2048\,3^{1/8}}
+=1.05209848696\ldots\times10^{-9}.}
+\tag{IC.21}
+
+Every retained chord simultaneously satisfies
+
+\[
+\sqrt{D^2-1}<|e|<D,
+\tag{IC.22}
+
+has both endpoints on the convex hull, has midpoint in the common `O(D^{3/4})` central ball, and retains a distinct exact-swap layer tag.
+
+---
+
+## 9. Frontier effect
+
+The SUPERTHIN branch is no longer merely a matching of unusually long inactive pairs. It now has the same combinatorial skeleton that organizes the active high-`t` diameter rails:
+
+```text
+one common selected O-O cut;
+two complementary convex-hull shores;
+pairwise-crossing vertex-disjoint chords;
+one common partner order;
+one fixed physical tagged-endpoint host;
+distinct ordered physical layer tags;
+and a growing exact selected-cut support family that is
+    either a proper staircase
+    or strictly nested.
+```
+
+The missing distinction from the active rail is metric/KKT activity, not endpoint order or cut incidence. This materially narrows the layer-tag problem left by the contact-swap audit.
+
+The next target is to fuse this inactive common-cut rail with the low-defect common train ladder. In particular, the nested branch should admit the same host/terminal one-turn analysis as the active rail, while the staircase branch should be tested against the common circumcenter flanks. A contradiction would close the SUPERTHIN side of the one-sign TB1 branch; the competing SIGNED inactive branch remains separate.
+
+**Disposition:** converted the superthin inactive TB1 crossing braid into a common-cut ordered staircase/nested interval rail using only hull crossing order and phase-free path coordinates. C-II and Level I remain open.

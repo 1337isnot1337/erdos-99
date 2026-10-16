@@ -1,0 +1,210 @@
+<!-- theorem-state: {"artifact_id":"ART-1D3B5875C1D9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: exact vacancy pinning and the scope of one-deficit classification
+
+Date: 2026-10-07. Base `bf288c82e8a62466d5580025c94e750a177e63e2`;
+main `dcc21aa879b61662318bceb9aeb174792e074eb0`; state
+`2026-10-06.audit.71`. Classification: **proved candidate awaiting independent
+audit** for Sections 1--4; **conditional** for the curved-wall application.
+C-II and Level I remain open. No promotion is attempted.
+
+The implication under attack is
+
+`arbitrary one-deficit limiting cloud -> vacancy chart or another usable defect
+-> finite triangle / full-source exchange -> canonical contradiction`.
+
+This report does not supply the first arrow. It proves that *every* vacancy
+chart has a zero static infinitesimal cone and gives an O(theta) reduction
+for all such charts. It also proves that unrestricted flat-window vacancy
+classification, for all window sizes, is equivalent to a strong-solidity
+statement. Equality in Oler must not be substituted for this missing theorem.
+
+## 1. Objects and explicit positive equilibrium
+
+Let u=(1,0), v=(1/2,sqrt(3)/2), Lambda=Zu+Zv, and
+
+`H_M={iu+jv: max(|i|,|j|,|i+j|)<=M}`.
+
+Write B_M for its 6M boundary lattice sites, P=H_M minus B_M, and
+N=|P|=3M^2-3M+1. Fix M>=2 and *any* h in P. The moving chart is
+P minus {h}; all B_M sites are pinned. This is an auxiliary target chart,
+not an assertion about an arbitrary old source. Include every surviving
+unit-neighbour edge with a moving endpoint.
+
+Give each edge weight one, and add one to each unit edge of the hexagon
+of the six neighbours of h. Edges with both endpoints pinned may be
+omitted. Every included weight is at least one.
+
+**Lemma 1.** These weights equilibrate every moving vertex.
+
+For p not adjacent to h, its six neighbour gradients sum to zero, and
+no incident weight changes. At a neighbour p=h+e, deletion of edge ph
+changes its old zero resultant by -e. The two neighbour-ring gradients
+at p sum to e: their endpoints are the preceding and succeeding unit
+directions around h. The added weights therefore restore zero. Every
+neighbour of every interior lattice site lies in H_M, including when h
+is one row from a side or an inner radial corner. This is an exact
+integer vector identity in axial coordinates.
+
+Consequently a first-order lower-feasible field with pinned boundary
+has zero variation on *every* surviving unit edge: its nonnegative row
+values have positive weighted sum zero. There is no unsupported
+extension of the canonical ZR/ZF theorem to isolates.
+
+## 2. Pinned bar rank and the zero cone
+
+**Lemma 2.** The surviving unit-edge matrix has full moving-column rank,
+2(N-1). Hence the static lower-feasibility cone is {0}.
+
+Triangulate the full hexagonal window into elementary lattice triangles.
+Deleting h and its incident triangles removes its regular unit-neighbour
+hexagon. The surviving triangles have connected edge-adjacency. Indeed,
+if h has radius at most M-2, this removes an interior hexagonal hole.
+If h has radius M-1, that hole meets the outer boundary in either one
+unit edge or two adjacent unit edges, a single connected arc; it cannot
+join opposite outer sides for M>=2. The remaining polygonal region has
+connected interior. Its elementary triangulation therefore has connected
+dual graph. At least one surviving triangle has a full boundary edge.
+Every remaining interior vertex belongs to a surviving triangle (at most
+two of its six incident triangles meet h).
+
+A zero bar-variation field on one nondegenerate triangle is an infinitesimal
+Euclidean rigid motion. Edge-adjacent triangles have the same rigid motion,
+since they agree at two distinct common vertices. Dual connectivity makes
+the field one rigid motion on all surviving triangles. The fixed endpoints
+of a surviving outer boundary edge kill that motion. Thus every moving
+velocity is zero. Combine this with Lemma 1 to obtain the zero strut cone.
+
+This proof includes off-axis and boundary-row vacancies; it is not limited
+to the central vacancy used in Worker 1 checkpoint 15.
+
+## 3. Finite local isolation and perturbed-wall rate reduction
+
+Let R be the fixed finite unit-edge row matrix, with rows
+`(p-q) dot (delta_p-delta_q)` in moving coordinates; pinned displacements
+are zero. Lemma 1 gives a vector lambda>0 with R^T lambda=0, and Lemma 2
+gives full column rank.
+
+For a feasible finite displacement delta with the static pins,
+
+`(R delta)_e >= -|delta_p-delta_q|^2/2 >= -c ||delta||^2`.
+
+The positive weighted sum of these linear row values is zero. Thus each
+row value is also bounded above by c' ||delta||^2. A left inverse for R
+gives `||delta|| <= c'' ||delta||^2`. All sufficiently small feasible
+displacements are therefore zero. This is local isolation, not an
+unrestricted rearrangement theorem.
+
+Now replace the pinned boundary by q(theta)=q(0)+O(theta), including the
+specified curved unit wall, and suppose the moving placements converge
+after relabeling to this vacancy chart. The same old unit inequalities give
+
+`R delta >= -c(theta+||delta||^2)`.
+
+Multiply by the same *static* positive stress and use its zero moving
+resultant to get the matching upper row bounds. Full rank then yields
+
+`||delta|| <= c'(theta+||delta||^2)`.
+
+Since delta tends to zero, absorb the quadratic term. Hence
+
+`||delta||=O(theta)`.
+
+Every such sequence admits a subsequential bounded first velocity, and
+that velocity satisfies the complete inhomogeneous first-row system with
+the prescribed wall velocity. This rules out a hidden larger-than-theta
+scale for *all vacancy charts*. It does not classify that bounded polytope,
+force finite equality contacts, or identify arbitrary one-deficit clouds
+with a vacancy chart. Constants depend on fixed M and h; no uniform
+curvature onset in M is asserted.
+
+## 4. Exact equivalence for the stronger proposed flat classification
+
+Define FV as follows: for every M>=2, every unit-separated set X of N-1
+points strictly inside conv(H_M), also unit-separated from B_M, is P with
+one lattice site omitted. Define SS as follows: every packing obtained by
+replacing a finite set of centers in Lambda minus one site by the same
+number of centers is congruent to Lambda minus one site.
+
+**Proposition 3.** FV and SS are equivalent (for unlabeled center sets).
+
+*SS implies FV.* Append all lattice sites outside the open hexagonal
+window to X. This is a packing. To check the only new pairs, let x in X
+and y be an exterior lattice site, and let xy first cross a unit boundary
+segment ab at z=(1-t)a+tb. The weighted-square identity and clearance
+from a,b give
+
+`|x-z|^2 >= 1-t(1-t) >= 3/4`,
+`|y-z|^2 >= 1-t(1-t) >= 3/4`.
+
+Because z is on xy, |x-y|>=sqrt(3). A boundary-vertex exit instead gives
+|x-y|>=2. Boundary sites themselves were separately guarded. Thus the
+appended infinite packing is a finite same-cardinality rearrangement of
+Lambda with one interior site removed. SS says it is congruent to that
+punctured lattice. Agreement with Lambda outside a bounded set forces
+its underlying congruent lattice to be Lambda: a large intact lattice
+patch fixes the unit directions and the translation coset. Hence X is
+the required lattice-vacancy set.
+
+*FV implies SS.* Enclose all changed old centers, all inserted centers,
+and the original omitted site strictly inside a sufficiently large H_M.
+Its boundary and exterior lattice sites are unchanged. Finite cardinality
+conservation gives exactly N-1 centers in that window. FV identifies
+these centers as a single lattice vacancy. The resulting whole packing
+is Lambda minus a site, congruent by a lattice translation to the original.
+
+This is a theorem-scope diagnostic, not a disproof of the weaker
+triangle-forcing wall claim. FV is much stronger than the needed endpoint.
+A nonlattice one-deficit cloud might still contain a unit triangle or allow
+a contact-loss exchange. Those weaker alternatives should be attacked.
+
+## 5. Primary-source check and limits
+
+A. Bezdek, K. Bezdek and R. Connelly, *Finite and Uniform Stability of
+Sphere Packings*, Discrete Comput. Geom. 20 (1998), 111--130, Theorem
+2.8.1 and Remark 2.8.1, printed page 125, prove uniform stability of the
+triangular disk packing with one disk removed and explicitly distinguish
+it from strong solidity. The remark records the Euclidean strong-solidity
+case as open **in that paper**. No assertion of its present literature
+status, and no global solidity theorem, is imported.
+
+Primary authors' copy: https://pi.math.cornell.edu/~connelly/pdf/10.1007_PL00009374.pdf .
+The exact normalized FV/SS equivalence above is proved here independently;
+the citation explains why local stability must not silently be used as FV.
+Centers in that paper have separation 2r; here r=1/2. The current curved
+wall moves, unlike the fixed exterior in SS.
+
+## 6. Exact computation and failed release search
+
+`research/verify_target_c_flat_one_vacancy_pinning_2026_10_07.py` checks the
+integer equilibrium formula and an exact triangle-propagation pinned-rank
+certificate for *every* interior vacancy, M=2,...,10: 999 vacancies and
+178002 moving-vertex equilibria. Every propagation step uses a triangle
+with axial determinant +1 or -1. Saved output is
+`research/target_c_flat_one_vacancy_pinning_certificate_2026_10_07.json`.
+The all-M proof is Sections 1--3, not extrapolation from these checks.
+
+Exploratory C2 searches at M=3,4,5,6 for the inherited boundary-row
+vacancy/root chart found no positive reconstructed second margin. These
+are nonexhaustive floating searches, not impossibility certificates; no
+universal packet nonexistence is claimed. Search failure does not remove
+the contact-budget, moving-wall, remote-packet or arbitrary-cloud routes.
+
+## 7. Frontier effect and next exact theorem
+
+Canonical dependencies for a future exchange are audit.64's
+C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT and audit.63's
+C-ONE-VERTEX-CONVEX-WALL-SHIELD. Neither constructs a packet. Audit.71's
+selected stress bounds remain at their exact full-chart scopes.
+
+Worker-1 checkpoint 15 remains unreviewed; its central-vacancy finite
+sorting classification is not used as a premise here. The new static
+pinning/rate lemmas have independent proofs and concern auxiliary charts.
+No old source coordinate, contact isolate, actual diameter, or source
+cardinality is changed by this report.
+
+Next exact obligation: obtain a finite triangle or a full-source winning
+exchange for the bounded first-row systems of *noncentral* vacancy charts,
+or establish a weaker arbitrary-cloud defect theorem that bypasses FV.
+General limiting clouds, arbitrary macroscopic-container transfer, paired
+exterior-cap replacement and full-core face-coupled finite moves all remain
+open. Preserve this candidate; do not self-promote it.

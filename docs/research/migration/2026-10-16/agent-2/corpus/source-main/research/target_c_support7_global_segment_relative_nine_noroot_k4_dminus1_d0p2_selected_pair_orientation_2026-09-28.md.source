@@ -1,0 +1,62 @@
+# Target C: selected-pair orientation certificate for nine-no-root k=4, D=-1, d_root=0, p=2
+
+Date: 2026-09-28
+
+Status: exact orientation-aware certificate for the two support representatives left by the recorded support-level selected-pair narrowing. This makes the orientation stage auditable. It does not by itself certify the preceding 121458-orbit support narrowing, whose exact verifier source was not persisted, and it does not address the two-singleton profile.
+
+Companion verifier:
+
+`research/verify_target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_selected_pair_orientation_2026_09_28.py`
+
+## Exact oriented reduction
+
+For a fixed oriented family of nine no-root four-cycles, let W_b be the rowspace of the two exact quotient-coordinate rows at touched block b when that block is empty. A selected pair spans the full local two-dimensional quotient, so it contributes no equation on the nine external coefficients. Complete blocks likewise contribute no external coefficient equation.
+
+Hence for any actual selected-pair state, the global parity-check rowspace W is a rank-four span of a subset of the W_b. The verifier enumerates every rank-four span obtainable from the touched empty-block spaces. This is an over-approximation because it also permits generators from blocks that could not simultaneously be empty.
+
+Let P=ker(W), so dim(P)=5. The required generalized-weight profile is
+
+(d1,d2,d3,d4,d5)(P) >= (2,4,5,7,8).
+
+The companion parity-check lemma proves this is equivalent to: every column of a 4 by 9 matrix for W is nonzero, every three columns have rank at least two, and every six columns have rank at least three. The verifier evaluates these conditions over Q and then independently recomputes all five generalized weights from the defining formula dim P[S]=|S|-rank(W|_S) for every surviving W.
+
+## Structural relaxation
+
+For a weight-admissible W, define V(W) to be every touched block b with W_b contained in W. Every actual empty block lies in V(W). If the selected pair is untouched, set C*=T\V(W). If it is on touched block s, set C*=T\(V(W) union {s}).
+
+In either case C* is a subset of the actual touched-complete family. Since d_root=0, every subset of the actual complete family must have independent triangle rows. Therefore dependence of H(C*) is already a valid obstruction. The verifier also checks the usual face-local capacity condition rank H(T)-rank H(C*)>=4, although no candidate reaches it: every final placement fails complete-row independence first.
+
+## Representatives and exact census
+
+The recorded support narrowing leaves only these two selected-pair support multisets, using zero-based labels:
+
+- representative 6:
+  [0,1,2,3]^3, [0,1,2,4], [0,1,3,4], [0,1,4,5], [0,2,3,4], [0,2,4,5], [1,2,3,4];
+- representative 13:
+  [0,1,2,3]^3, [0,1,2,4]^3, [0,1,3,4], [0,2,3,4], [1,2,3,4].
+
+The exact rational run gives:
+
+representative 6:
+- 729 orientation assignments;
+- 53,455 distinct rank-four candidate parity-check spaces;
+- 9 spaces satisfying the generalized-weight criterion;
+- all 9 have exact generalized weights (2,4,5,7,9);
+- 135 touched selected-pair placements plus 9 untouched placements;
+- all 144 final placements have dependent virtual complete-row families;
+- 0 structural survivors.
+
+representative 13:
+- 27 orientation assignments;
+- 1,006 distinct rank-four candidate parity-check spaces;
+- 0 spaces satisfying the generalized-weight criterion.
+
+Thus the two support representatives have zero selected-pair orientation survivors.
+
+All coefficient-space and triangle-row rank calculations in this verifier use Python Fraction arithmetic. No finite-field rank decision is used.
+
+## Remaining dependency
+
+This certificate upgrades the earlier orientation evidence to a persisted, fail-closed exact verifier. The selected-pair profile becomes fully repository-audited once the preceding support-level narrowing to representatives 6 and 13 is itself reimplemented or otherwise certified in-repository.
+
+The open finite branch after that is the two-singleton profile. The recorded support narrowing leaves thirteen support representatives; earlier non-persisted orientation work eliminated representatives 5, 12, and 13, leaving ten. Those eliminations still need an auditable verifier before they should be used as theorem-level closure.

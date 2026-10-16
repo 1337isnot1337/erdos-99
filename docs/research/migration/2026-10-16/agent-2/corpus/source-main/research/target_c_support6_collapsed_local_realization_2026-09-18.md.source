@@ -1,0 +1,278 @@
+# Target C-II — the collapsed support-six endpoint is locally realizable and regular
+
+**Date:** 2026-09-18  
+**Status:** regression / proved finite local realization; theorem-state authority unchanged  
+**Scope:** the degree-pure support-six one-anchor branch with `y_1=...=y_6 != 0`  
+**Depends on:** the support-six dichotomy `R=K_6\setminus M`; the one-anchor train-angle closure model; strict unit-contact pentagon separation  
+**Certificate:** `research/verify_target_c_support6_collapsed_local_realization_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The support-six reciprocal analysis leaves a collapsed branch in which all six non-ground dual vectors coincide. In that branch all six outside-anchor train directions are projectively parallel, and their oriented unit sides split `3+3`. A natural next attempt was to exclude this branch directly from the six physical pentagon closure equations and the local source-separation inequalities.
+
+That attempt cannot work. There is an exact, certified local realization of the collapsed support-six system satisfying all of those local conditions, and the realization is regular: after two internal train angles are chosen freely, the other ten are smooth functions of them. Thus the collapsed mechanism is not an isolated singular numerical artifact.
+
+This is a regression against a purely local exclusion, not an existence theorem for a global source configuration. The certificate does not construct a globally embedded stopped-train complex or a global minimum-diameter source.
+
+---
+
+## 1. The collapsed octahedral closure system
+
+Relabel the six one-anchor faces by `0,...,5`. Take the missing perfect matching
+
+\[
+M=\{03,14,25\},
+\]
+
+so the twelve internal relation trains are the edges of
+
+\[
+R=K_6\setminus M.
+\]
+
+Let the six outside-anchor oriented side vectors be
+
+\[
+a_i=s_i e_1,
+\qquad
+(s_0,s_1,s_2,s_3,s_4,s_5)=(+1,+1,+1,-1,-1,-1).
+\tag{1.1}
+\]
+
+For each internal edge `ij` with `i<j`, choose an angle `theta_ij` and put
+
+\[
+u_{ij}=(\cos\theta_{ij},\sin\theta_{ij}).
+\]
+
+The occurrence at face `i` is `u_ij`, while the occurrence at face `j` is `-u_ij`. The six face-closure vectors are therefore
+
+\[
+\Phi_i
+=
+ s_i e_1
+ +\sum_{j>i,\ ij\in R}u_{ij}
+ -\sum_{j<i,\ ji\in R}u_{ji}.
+\tag{1.2}
+\]
+
+Every internal train cancels in the global sum, and the anchor signs cancel by (1.1), so
+
+\[
+\sum_{i=0}^5\Phi_i=0.
+\tag{1.3}
+\]
+
+Consequently it is enough to solve the ten scalar equations
+
+\[
+\Phi_0=\cdots=\Phi_4=0;
+\tag{1.4}
+\]
+
+then `Phi_5=0` follows exactly.
+
+---
+
+## 2. Certified regular solution
+
+Fix two internal angles at the exact rational decimals
+
+\[
+\theta_{01}=-0.69671336,
+\qquad
+\theta_{02}=1.75049398.
+\tag{2.1}
+\]
+
+For the remaining ten angles use the following rational-decimal center `x_0`:
+
+\[
+\begin{array}{c|r}
+04& 2.731156095605589\\
+05&-2.3067260211240153\\
+12&-0.9986998192961997\\
+13&-2.2337034767798927\\
+15& 1.730504059203213\\
+23& 1.682595595587784\\
+24&-2.1244160181617695\\
+34& 2.044414508054986\\
+35&-0.7537438854643705\\
+45& 2.6878789475216607
+\end{array}
+\tag{2.2}
+\]
+
+Let
+
+\[
+F:\mathbb R^{10}\to\mathbb R^{10}
+\]
+
+be the scalar closure map in (1.4), with (2.1) fixed, and let `J=DF`. The verifier stores an exact rational matrix `C` obtained by decimal rationalization of a numerical inverse of `J(x_0)`. It then proves all analytic bounds with exact `Fraction` arithmetic. Sine and cosine are enclosed by Taylor polynomials with Lagrange remainders; `pi` is enclosed from Machin's formula.
+
+On the sup-norm box
+
+\[
+B=\{x:\|x-x_0\|_\infty\le r\},
+\qquad
+r=10^{-10},
+\]
+
+the exact certificate gives the safe numerical summaries
+
+\[
+Y:=\|CF(x_0)\|_\infty<3.503\times10^{-16},
+\tag{2.3}
+\]
+
+\[
+Z_0:=\|I-CJ(x_0)\|_\infty<1.509\times10^{-34},
+\qquad
+\|C\|_\infty<10.53.
+\tag{2.4}
+\]
+
+Each scalar closure row contains at most four variable train angles, and every derivative of `sin` or `cos` has magnitude at most one. Hence throughout `B`,
+
+\[
+\|J(x)-J(x_0)\|_\infty\le4r.
+\]
+
+Therefore
+
+\[
+\|I-CJ(x)\|_\infty
+\le
+Z:=Z_0+4\|C\|_\infty r
+<4.212\times10^{-9}<1.
+\tag{2.5}
+\]
+
+For the Newton-like map
+
+\[
+T(x)=x-CF(x),
+\]
+
+(2.3)--(2.5) give
+
+\[
+\|T(x)-x_0\|_\infty
+\le Y+Zr
+<3.51\times10^{-16}
+<r.
+\tag{2.6}
+\]
+
+Thus `T` maps `B` strictly into itself and is a contraction there. Banach's fixed-point theorem gives a unique `x_* in B` with `F(x_*)=0`. Equation (1.3) then gives all six face closures.
+
+Moreover `CJ(x_*)` is invertible by (2.5), hence so is the `10x10` derivative with respect to the ten angles in (2.2). The implicit-function theorem therefore makes `theta_01` and `theta_02` genuine local free coordinates:
+
+\[
+\boxed{\text{the collapsed local closure solution set has a two-dimensional smooth branch with all six anchor angles fixed.}}
+\tag{2.7}
+\]
+
+This regularity statement is stronger than the existence of one numerical root.
+
+---
+
+## 3. Every certified face is a strict contact pentagon
+
+For each face, place its anchor vector and four incident internal train vectors in increasing oriented-angle order. The same exact interval certificate, valid on the whole root box, proves
+
+\[
+\min\{\text{one-turn gaps}\}>0.4537137,
+\tag{3.1}
+\]
+
+\[
+\max\{\text{one-turn gaps}\}<2.044415
+<\frac{2\pi}{3},
+\tag{3.2}
+\]
+
+and
+
+\[
+\max\{\text{two-consecutive-turn sums}\}<3.098316<\pi.
+\tag{3.3}
+\]
+
+Positive turns summing to `2pi` make each ordered five-vector closure a strict convex equilateral pentagon. For two consecutive unit sides with exterior turn `delta`, the intervening diagonal has length
+
+\[
+2\cos(\delta/2).
+\]
+
+By (3.2) this is strictly greater than one. Every diagonal of a pentagon is of this form, so no extra unit chord is created. Equation (3.3) also rules out any projectively parallel side pair.
+
+Thus the certified block satisfies the same local source-derived conditions used throughout the support-five/support-six reciprocal analysis:
+
+- exact unit-vector face closure;
+- strict convexity;
+- no unit contact chord inside a face;
+- no projectively parallel side pair;
+- every exterior turn strictly below `2pi/3`;
+- every two consecutive exterior turns summing to strictly less than `pi`.
+
+The cyclic side orders are robust on the whole certified box.
+
+---
+
+## 4. The natural side pairing is topologically consistent
+
+Pair the two occurrences of each of the twelve internal train sides by translation and leave the six anchor sides unpaired. Using the certified cyclic side orders, the quotient has
+
+\[
+V=8,
+\qquad E=18,
+\qquad F=6,
+\]
+
+and exactly two boundary components. They contain the anchor faces
+
+\[
+\{0,2,5\},
+\qquad
+\{1,3,4\}.
+\]
+
+Hence
+
+\[
+\chi=8-18+6=-4
+=2-2g-2,
+\]
+
+so
+
+\[
+\boxed{g=2.}
+\tag{4.1}
+\]
+
+This is an auxiliary force/side-pairing surface, not the physical planar source. Its role here is negative: even the obvious translation-gluing consistency does not produce an Euler obstruction to the collapsed block.
+
+---
+
+## 5. What this rules out and what remains
+
+The collapsed support-six branch cannot be eliminated using only the abstract octahedral relation graph, six parallel anchors with a `3+3` orientation split, the six local unit-pentagon closures, strict source separation, or the existing local turn-gap/no-parallel-side lemmas. Those conditions admit a robust exact solution.
+
+This does **not** prove that a collapsed support-six component occurs in a canonical source. The certificate does not establish:
+
+- a global planar embedding of all stopped train corridors and rhombi;
+- compatibility with the actual activated/outer complex beyond keeping the six anchor train angles fixed;
+- a source-point embedding realizing the entire contact graph;
+- compatibility with the actual diameter bars and KKT locking system;
+- global minimum-diameter optimality.
+
+Accordingly the support-six frontier splits cleanly:
+
+1. the noncollapsed branch is still the sixteen finite reciprocal `H5` metric cases (six uniform and ten simple-wall orbits);
+2. the collapsed branch is locally feasible and must be attacked with a genuinely global train/source constraint, or bypassed by a flex-versus-diameter-locking argument.
+
+No theorem-state file is changed.
+
+**Disposition:** certified a regular exact local realization of the collapsed support-six endpoint, with a two-parameter anchor-fixed closure family and all strict local contact-pentagon inequalities. This rejects a purely local collapsed-branch exclusion. C-II remains open.

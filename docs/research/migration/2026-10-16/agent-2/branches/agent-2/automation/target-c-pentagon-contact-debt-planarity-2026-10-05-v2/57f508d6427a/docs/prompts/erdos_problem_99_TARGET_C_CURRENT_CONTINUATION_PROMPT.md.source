@@ -1,0 +1,134 @@
+# Erdős Problem #99 — current Target C continuation
+
+**State:** `2026-10-05.audit.59`
+**LEVEL I STATUS: STILL OPEN.**  
+**C-I: CLOSED.**  
+**C-II: OPEN.**
+
+## Bootstrap
+
+Read, in order:
+
+1. `docs/STATE.md`;
+2. `docs/problem/statement.md`;
+3. `docs/targets/target-c/CURRENT.md`;
+4. `docs/targets/target-c/README.md`;
+5. `docs/targets/target-c/105-121-promotion-audit-2026-09-12.md`;
+6. `docs/targets/target-c/122-123-promotion-audit-2026-09-12.md`;
+7. the canonical modules/reports explicitly named by `docs/state/theorem-state.yaml`;
+8. this prompt last.
+
+Do not infer theorem authority from a merge, date, filename, or section number.
+
+## Mission
+
+Close C-II for every sufficiently large triangle-free global minimizer in the canonical normal form, or produce a valid Level I disproof. Do not spend the run re-proving audited extraction/density machinery or optimizing another carrier decimal unless it creates a new implication to global closure.
+
+## Binding normalization
+
+Use the contact-minimal, then diameter-pair-minimal representative and retain every source point, including contact-isolated points.
+
+The §57 ZR/ZF theorem is only on the nonisolated positive-contact core `V`:
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\qquad
+\operatorname{rank}R_{C\cup H}[V]=2v-3.
+\]
+
+Do not extend this affine-kernel theorem to contact-isolated coordinates. Full-source geometry comes from the separate canonical full-source modules.
+
+## Canonical input to treat as solved
+
+Audit.59 is controlling.
+
+Retain the complete audit.52--58 stack.
+
+Audit.59 adds the adaptive strict-safe saturation theorem.
+
+For any finite deletion set \(R\) and any region
+\[
+S\subset\operatorname{int}K
+\]
+with
+\[
+|y-a|>1
+\quad
+(y\in S,\ a\in A\setminus R),
+\]
+one has
+\[
+\boxed{
+E_C(R)=\varnothing
+\Longrightarrow
+\operatorname{area}S\le a_0|R|,
+}
+\]
+and
+\[
+\boxed{
+E_C(R)\ne\varnothing
+\Longrightarrow
+\operatorname{area}S\le a_0(|R|-1),
+\qquad a_0=\sqrt3/2.
+}
+\]
+
+For a single contact-active deleted vertex \(v\),
+\[
+\operatorname{int}K
+\subseteq
+\bigcup_{a\ne v}\overline B(a,1).
+\]
+
+Therefore deleting contact-active guards cannot create net **strict-safe area credit**, even if the deletion set and region are chosen adaptively.
+
+Do not attempt:
+\[
+\text{delete wall contacts}
++\text{recover collar area}
++\text{average a lattice of spacing }>1
+\]
+as a closure route. It is canonically blocked.
+
+This does not forbid explicit discrete packets or non-strict packings with exact unit contacts.
+
+## Exact next split
+
+### Full-core branch
+
+Audit.58 reduces suitable finite motions to explicit lower blockers or uncovered anchors. Audit.59 now forces their repair to be genuinely discrete or variational.
+
+Highest-value routes:
+
+1. construct an explicit finite blocker-repair packet with all pairwise/new-old distances checked;
+2. exploit exact unit-contact structure rather than strict-safe area to replace deleted wall/anchor points;
+3. combine audit.58's distinct blocker matching with audit.53 loaded returns or audit.56 residual-cage coordinates to build a collective non-repacking motion;
+4. certify an actual finite packet for audit.54 refill rather than deriving packet count from mean area;
+5. prove that failure of every such repair forces an exact unit equilateral triangle.
+
+A result that only increases strict-safe area after deleting contact-active points cannot close the branch.
+
+### Macroscopic inactive-container branch
+
+Same restriction: strict-safe area averaging cannot pay a positive diameter-cover cost after adaptive wall deletion. The remaining capacity must be discrete/exact-contact capacity or come from a different source-level exchange.
+
+## Binding dead routes
+
+Do not use without a new proof:
+
+- incident-diameter sequence `=>` Euler trail/path;
+- FB4 force-bulk localization;
+- incompatible-cut C53 pentagon objection;
+- RSR disk-equality uniqueness;
+- Eppstein near-equality `=>` near quadrangulation;
+- five-host measure saturation `=>` all hosts occupied;
+- inward OP pocket `subset` exterior Reuleaux minor cap;
+- deletion of contact-isolated source points;
+- full-source extension of the §57 affine-kernel theorem;
+- `r/(6C_T)` as the sharp limit of the Section-90 bin method;
+- `G_loc=o(D^2) => G_loc/d=o(1)` in Section 121.
+
+## Research standard
+
+Before promoting a new lemma, write its exact dependency chain to either an exact unit triangle, a source-preserving strict sub-`D` competitor, or the Level I conclusion. A computation may certify finite arithmetic or a regression; it does not supply global optimality.

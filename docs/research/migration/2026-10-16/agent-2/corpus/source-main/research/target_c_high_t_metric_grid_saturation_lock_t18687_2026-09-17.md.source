@@ -1,0 +1,410 @@
+# Target C-II — the high-`t` train rectangle has macroscopic metric span, and the full rectangle admits a denser saturation lock
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch with `t=(q-k)/D<=1.8687`  
+**Dependencies:** canonical Theorem 10.6 exact train-track bounds; high-`t` complete rectangle; high-`t` phase collapse; phase-free path-region saturation; diameter-path Helly hub and one-sided switching; same-host diameter exclusion; full opposite-or-terminal nesting theorem; C67 diameter-degree bound  
+**Certificate:** `research/verify_target_c_high_t_metric_grid_span_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current saturation-grid theorem locks a linear family of actual diameter bars to a common inverse-`D` train grid at the level of exact selected-cut incidence. Its stated limitation is that selected-cut incidence is topological. This note adds a metric fact that is already implicit in canonical train geometry: distinct rhombi met along one train are separated by a fixed amount in the train's monotone coordinate.
+
+Consequently the common grid is not an arbitrarily compressed pseudoline diagram. Its crossing centers have macroscopic physical span. On the already phase-collapsed synchronized grid, one common row-normal coordinate has span more than `0.06780D-o(D)` on every retained row, and one common column-normal coordinate has span more than `2.4248e-6 D-o(D)` across the synchronized row block on every retained column.
+
+There is also a useful cardinality improvement that does not spend the phase-collapse factor. Applying the same hub-median synchronization directly to the earlier full complete rectangle `A_* x B_*` gives
+
+\[
+|E_*|,|A_1^*|>5.65\times10^{-6}D-o(D),
+\qquad
+|B_*|>0.3134D-o(D),
+\]
+
+with complete exact support incidence `E_* x A_1^*` and complete strict-rhombus incidence `A_1^* x B_*`. Every retained row has a common dominant-phase transverse span more than `0.27141D-o(D)` across `B_*`. Fixing a birth host gives a nested grid-spanning diameter rail of density `2.825e-6`, and fixing one physical destination leaves density `1.4125e-6`.
+
+The phase-collapsed scaffold remains the one with inverse-`D` angle control. The full-rectangle scaffold is larger and metrically wider. Neither result alone proves C-II, but the synchronized architecture can no longer be treated as merely topological or potentially microscopically compressed.
+
+---
+
+## 1. Exact metric separation of crossing-rhombus centers on one train
+
+Let `tau` be a train track in a finite strict unit-rhombus complex. Let `u` be a unit vector parallel to its track edges. Orient the train centerline so that
+
+\[
+h_u(x):=\det(u,x)
+\]
+
+strictly increases, as in canonical Theorem 10.6.
+
+Each centerline segment crosses one unit rhombus from the midpoint of one track edge to the midpoint of the opposite track edge. If its displacement is `v`, then `|v|=1`, and Theorem 10.6 gives
+
+\[
+{\pi\over3}<\angle(u,v)<{2\pi\over3}.
+\]
+
+Therefore
+
+\[
+\boxed{
+\Delta h_u=\det(u,v)>{\sqrt3\over2}.
+}
+\tag{MG.1}
+\]
+
+Suppose `tau` crosses distinct train tracks `sigma_1,...,sigma_M`. Let
+
+\[
+z_1,\ldots,z_M
+\]
+
+be the centers of the corresponding crossing rhombi, listed in their order along the oriented centerline of `tau`.
+
+### Lemma MG.1 — crossing-center separation
+
+For every `1<=r<s<=M`,
+
+\[
+\boxed{
+h_u(z_s)-h_u(z_r)>{\sqrt3\over2}(s-r).}
+\tag{MG.2}
+\]
+
+In particular
+
+\[
+\boxed{
+h_u(z_M)-h_u(z_1)>{\sqrt3\over2}(M-1).}
+\tag{MG.3}
+\]
+
+### Proof
+
+Index the rhombi traversed by `tau` in centerline order. The center of the `j`th rhombus lies halfway along the `j`th centerline segment. If two selected crossing rhombi are consecutive traversed rhombi, the center-to-center subpath consists of the second half of the first centerline segment and the first half of the next one. By (MG.1), its `h_u` increment is strictly greater than
+
+\[
+{1\over2}{\sqrt3\over2}+{1\over2}{\sqrt3\over2}
+={\sqrt3\over2}.
+\]
+
+If unselected rhombi occur between them, every complete intervening centerline segment adds another amount greater than `sqrt(3)/2`. Thus consecutive selected crossing centers are separated in `h_u` by more than `sqrt(3)/2`. Summing gives (MG.2)--(MG.3). `square`
+
+No phase-purity, diameter, KKT, or boundary hypothesis is used. This is a finite exact consequence of the strict rhombus angle bound.
+
+---
+
+## 2. Metric span of the full high-`t` complete rectangle
+
+The high-`t` complete-rectangle theorem supplies train families
+
+\[
+A_*\times B_*
+\]
+
+with
+
+\[
+|A_*|>0.0000226D-o(D),
+\qquad
+|B_*|>0.3134D-o(D),
+\tag{MG.4}
+\]
+
+such that every cross-pair meets in one strict rhombus and both shores are internally noncrossing. The rows `A_*` lie in one shrinking projective phase window.
+
+Apply Lemma MG.1 to one row `a in A_*`. It crosses every column in `B_*`, so, with `u_a` its track-edge direction,
+
+\[
+\operatorname{span}_{h_{u_a}}\{z_{ab}:b\in B_*\}
+>{\sqrt3\over2}(|B_*|-1).
+\]
+
+Hence uniformly in the row,
+
+\[
+\boxed{
+\operatorname{span}_{h_{u_a}}\{z_{ab}:b\in B_*\}
+>(0.2714123-o(1))D.
+}
+\tag{MG.5}
+\]
+
+Because all row projective phases lie in one `o(1)` window, choose consistently oriented unit representatives `u_a` and one limiting representative `u_*` with
+
+\[
+\max_{a\in A_*}\angle(u_a,u_*)=o(1).
+\]
+
+All crossing centers lie in the source hull, whose diameter is `D`. Therefore replacing `h_{u_a}` by the one common coordinate `h_{u_*}` changes any crossing-center difference by only `o(D)`. Thus
+
+\[
+\boxed{
+\operatorname{span}_{h_{u_*}}\{z_{ab}:b\in B_*\}
+>(0.2714123-o(1))D
+\quad(a\in A_*).
+}
+\tag{MG.6}
+\]
+
+Every row of the full rectangle therefore traverses a common physical transverse width bounded below by a fixed fraction of the source diameter.
+
+Similarly, for an individual column `b in B_*`, with its own track-edge direction `v_b`, Lemma MG.1 gives
+
+\[
+\boxed{
+\operatorname{span}_{h_{v_b}}\{z_{ab}:a\in A_*\}
+>(1.9572\times10^{-5}-o(1))D.
+}
+\tag{MG.7}
+\]
+
+The columns are not asserted here to lie in one shrinking phase window, so (MG.7) is an adapted-coordinate statement for each column separately.
+
+---
+
+## 3. The existing phase-collapsed synchronized scaffold has two common metric span directions
+
+The phase-collapse theorem gives subfamilies
+
+\[
+A_0\subset A_* ,
+\qquad B_0\subset B_*,
+\]
+
+with
+
+\[
+|A_0|>0.0000112D-o(D),
+\qquad
+|B_0|>0.0783D-o(D),
+\tag{MG.8}
+\]
+
+and both projective phase spreads `O(1/D)`. Moreover every `A_0 x B_0` crossing has common order and
+
+\[
+{\pi\over3}<\theta_{ab}
+<{\pi\over3}+{7.7\times10^6\over D}+o(D^{-1}).
+\tag{MG.9}
+\]
+
+For each row, Lemma MG.1 gives
+
+\[
+\operatorname{span}_{h_{u_a}}\{z_{ab}:b\in B_0\}
+>{\sqrt3\over2}(|B_0|-1),
+\]
+
+hence
+
+\[
+\boxed{
+\operatorname{span}_{h_{u_a}}\{z_{ab}:b\in B_0\}
+>(0.0678097-o(1))D.
+}
+\tag{MG.10}
+\]
+
+Now the row phase spread is `O(1/D)`, not merely `o(1)`. Choose one common oriented row direction `u_0`. Since any two crossing centers are at distance at most `D`, changing from `u_a` to `u_0` changes their `h`-difference by only `O(1)`. Therefore
+
+\[
+\boxed{
+\operatorname{span}_{h_{u_0}}\{z_{ab}:b\in B_0\}
+>(0.0678097-o(1))D
+\quad(a\in A_0).
+}
+\tag{MG.11}
+\]
+
+The same argument applies to the column shore because its phase spread is also `O(1/D)`. On the whole `A_0` row set, every column has common-coordinate span
+
+\[
+\boxed{
+>(9.6994\times10^{-6}-o(1))D.
+}
+\tag{MG.12}
+\]
+
+More importantly for the existing saturation-grid lock, its synchronized row subfamily `A_1 subset A_0` satisfies
+
+\[
+|A_1|>2.8\times10^{-6}D-o(D).
+\]
+
+Thus every `b in B_0` has, across the exact same `A_1` rows spanned by every synchronized diameter in `E_0`, common column-normal crossing-center span
+
+\[
+\boxed{
+>(2.4248\times10^{-6}-o(1))D.
+}
+\tag{MG.13}
+\]
+
+Combining (MG.11), (MG.13), and the prior saturation-grid theorem, the same synchronized object now has all of the following simultaneously:
+
+```text
+|E_0| > 2.8e-6 D - o(D) actual diameter bars;
+|A_1| > 2.8e-6 D - o(D) phase-collapsed rows;
+|B_0| > 0.0783 D - o(D) phase-collapsed columns;
+E_0 x A_1 complete in exact selected-cut support incidence;
+A_1 x B_0 complete in strict-rhombus incidence and common crossing order;
+all A_1 x B_0 angles = pi/3 + O(1/D);
+every A_1 row has common row-normal B_0 crossing span > 0.0678097 D - o(D);
+every B_0 column has common column-normal A_1 crossing span > 2.4248e-6 D - o(D).
+```
+
+So this scaffold is an inverse-`D` near-triangular grid with a macroscopic Euclidean footprint in two nonparallel common coordinates. The earlier qualification that `E_0 x A_1` itself is topological remains important: this theorem does **not** say that each diameter chord meets a row inside the `A_1 x B_0` grid patch.
+
+---
+
+## 4. Synchronizing region saturation before phase-collapse gives a larger exact incidence rectangle
+
+The previous saturation-grid lock paid the phase-collapse thinning before choosing the hub side and median row block. That thinning is necessary for (MG.9), but not for exact support incidence.
+
+Work instead with the full consecutive path block `A_*` from the complete-rectangle theorem. Remove the at most two selected cuts incident with the common diameter-routing hub region. One strict side of the hub contains
+
+\[
+>{|A_*|\over2}-O(1)
+\]
+
+rows. Reverse the path if necessary so this is a pre-hub side, and retain its hubward half. Call the resulting consecutive row block `A_1^*`. Then
+
+\[
+\boxed{
+|A_1^*|>{0.0000226\over4}D-o(D)
+=5.65\times10^{-6}D-o(D).
+}
+\tag{MG.14}
+\]
+
+If its first selected-path index is `j_0` and `L=|A_1^*|`, the same median-index argument as in the saturation-grid theorem gives at least `L` internal pre-hub regions `R_i` with `i<j_0`. Region saturation supplies an actual switching diameter `e_i` born in each such region. One-sided switching sends its other endpoint to the hubward side, so its exact selected-cut support contains every row in `A_1^*`.
+
+Choosing `L` of these distinct bars gives a family `E_*` with
+
+\[
+\boxed{
+|E_*|>5.65\times10^{-6}D-o(D)
+}
+\tag{MG.15}
+\]
+
+and
+
+\[
+\boxed{
+E_*\times A_1^*
+\text{ is complete in exact selected-cut support incidence.}
+}
+\tag{MG.16}
+\]
+
+Because `A_1^* subset A_*`, every row in `A_1^*` crosses every column in the unchanged full transverse shore `B_*`. Therefore
+
+\[
+\boxed{
+A_1^*\times B_*
+\text{ is complete in strict-rhombus incidence,}
+}
+\tag{MG.17}
+\]
+
+with
+
+\[
+\boxed{|B_*|>0.3134D-o(D).}
+\tag{MG.18}
+\]
+
+The exact incidence product has coefficient
+
+\[
+(5.65\times10^{-6})(0.3134)
+=1.77071\times10^{-6},
+\]
+
+so (MG.17) contains more than
+
+\[
+(1.77071\times10^{-6}-o(1))D^2
+\]
+
+distinct synchronized strict-rhombus crossings.
+
+Every row in `A_1^*` retains the full metric span (MG.6):
+
+\[
+\boxed{
+\operatorname{span}_{h_{u_*}}\{z_{ab}:b\in B_*\}
+>(0.2714123-o(1))D.
+}
+\tag{MG.19}
+\]
+
+Every column `b in B_*`, in its adapted train coordinate, has across the consecutive `A_1^*` block
+
+\[
+\boxed{
+\operatorname{span}_{h_{v_b}}\{z_{ab}:a\in A_1^*\}
+>(4.8930\times10^{-6}-o(1))D.
+}
+\tag{MG.20}
+\]
+
+This is a larger unconditional support/grid synchronization than the phase-collapsed one. It deliberately does not claim inverse-`D` angle width on `A_1^* x B_*`.
+
+---
+
+## 5. Nested diameter rails inside the larger synchronized scaffold
+
+The birth endpoints of `E_*` lie in distinct pre-hub path regions. Split them between the two physical birth host arcs. One class `E_*^{host}` has
+
+\[
+\boxed{
+|E_*^{host}|>2.825\times10^{-6}D-o(D).
+}
+\tag{MG.21}
+\]
+
+Every one of these diameter bars still spans every row of `A_1^*`. Same-host diameter exclusion and the fixed-birth-host support-order theorem give a strictly nested support rail, with every partner on the opposite host or on `T_m`.
+
+Fixing one of those two physical destinations leaves
+
+\[
+\boxed{
+>1.4125\times10^{-6}D-o(D)
+}
+\tag{MG.22}
+\]
+
+strictly nested diameter bars. All of them continue to span the same `5.65e-6D` row block, whose every row crosses the same `0.3134D` transverse train family across the metric width (MG.19).
+
+Using the canonical diameter-degree bound
+
+\[
+\Delta(H_D)\le(4\,3^{1/8}+o(1))D^{3/4},
+\]
+
+partner-collision thinning gives endpoint-disjoint, hence pairwise-crossing, synchronized diameter subfamilies with coefficients
+
+\[
+1.23125\times10^{-6},
+\qquad
+6.15627\times10^{-7},
+\qquad
+3.07813\times10^{-7}
+\]
+
+in front of `D^(1/4)` for `E_*`, the fixed-birth-host nested rail, and the fixed-destination nested rail respectively.
+
+These endpoint-disjoint extractions are optional. The linear weak-thrackle rails in (MG.21)--(MG.22) retain much more cardinality and should be used whenever partner collisions are harmless.
+
+---
+
+## 6. What this proves and what it still does not prove
+
+Two previous apparent losses are now separated cleanly.
+
+1. **Metric compression is not available.** A complete strict-rhombus train grid with linear shores has linear physical crossing-center span because each train step advances by more than `sqrt(3)/2` in its exact monotone coordinate. In the phase-collapsed grid those train-adapted coordinates can be replaced by two common coordinates with only `O(1)` error.
+2. **Phase-collapse is not needed for support synchronization.** Using the full rectangle first gives a `5.65e-6D x 0.3134D` exact support/grid lock and a `2.825e-6D` nested synchronized rail. Phase-collapse is needed only when the `pi/3+O(1/D)` angle information is used.
+
+The remaining gap is narrower but real. Exact selected-cut incidence says a diameter chord crosses each row crosscut topologically. The theorem above does not force that straight chord to meet the row inside the macroscopic `B`-grid patch, and it does not produce a quantitative lower bound on the KKT multiplier of a synchronized diameter bar. A closing argument must add one of those missing bridges or derive a contradiction directly from the ordered boundary endpoints plus the now-metric train scaffold.
+
+**Disposition:** converted the synchronized high-`t` train grid from a purely combinatorial rectangle into a quantitatively macroscopic metric scaffold, and doubled the synchronized row/diameter density while quadrupling the available transverse shore by delaying phase-collapse. C-II and Level I remain open.

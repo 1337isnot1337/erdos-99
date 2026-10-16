@@ -1,0 +1,163 @@
+# Hostile audit — Type-I exterior-cap exchange and deep-matching extension
+
+**Date:** 2026-09-12  
+**Reviewed:** `research/target_c_typeI_container_exchange_unification_2026-09-12.md`  
+**Disposition:** **PASS at proof-only scope.**  
+**Theorem authority:** unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The source theorem extends the internal inactive-chamber exchange/matching normal form
+to the macroscopic exterior cap from canonical Section 80. The extension is not a
+formal relabeling: exterior-cap slack uses a different local Oler point set, and the
+cap did not previously have a separately stated inradius theorem. Both points were
+rechecked below.
+
+## 1. Isolate-only slack conversion is correct
+
+Canonical Section 80 defines, for one exterior cap,
+
+\[
+\sigma_C^{ext}
+={A_C\over a_0}+{P_C\over2}-1-z_C\ge0.
+\]
+
+The `-1` occurs because the cap Oler set includes its two closing-chord endpoints in
+addition to the `z_C` exterior source points. Canonical Section 81, by contrast, defines
+for an arbitrary specified isolate set
+
+\[
+\sigma_C
+={A_C\over a_0}+{P_C\over2}+1-z_C.
+\]
+
+Hence exactly
+
+\[
+\sigma_C=\sigma_C^{ext}+2.
+\]
+
+Section 80 proves the sum of the nonnegative `sigma_i^ext` is `O(D)`, so every
+individual cap has `sigma_C^ext=O(D)`. Therefore `sigma_C=O(D)` with no hidden
+quadratic loss.
+
+**Verdict:** PASS.
+
+## 2. The selected exterior cap really has the needed source partition
+
+Canonical Section 80 defines the exterior caps as convex pieces whose interiors are
+disjoint and whose union is `K\setminus F` up to closing chords. The assigned count is
+
+\[
+z_i=|A\cap(K_i\setminus F)|.
+\]
+
+The selected macroscopic cap has `z_i=Omega(D^2)`, and Section 80 explicitly records
+that these exterior points are contact-isolated in the canonical representative.
+
+A positive-core source lies in `F`; an internal-chamber isolate lies in `F`; and a
+source assigned to another exterior cap lies outside the selected cap's open interior
+because cap interiors are disjoint. Points on a closing chord or shared boundary are
+outside the open interior as well. Thus every source point not assigned to `Z_C` lies
+outside `int(C)`.
+
+For `x in C_{-w}` and any such source point `a`, the segment `[x,a]` exits `C` through
+`partial C`; hence
+
+\[
+|x-a|\ge dist(x,partial C)>w.
+\]
+
+This is the exact protection needed in the exchange and pair-closing arguments.
+
+**Verdict:** PASS.
+
+## 3. Linear inradius follows from area/perimeter alone
+
+The source theorem claims no external hull-stability result. For a convex body `C`,
+inner-parallel coarea gives, for `0<t<r(C)`,
+
+\[
+A(C)-A(C_{-t})
+=\int_0^tP(C_{-s})\,ds
+\le tP(C).
+\]
+
+As `t` tends to the inradius, the terminal inner parallel set has zero two-dimensional
+area. Therefore
+
+\[
+A(C)\le r(C)P(C),
+\qquad
+r(C)\ge A(C)/P(C).
+\]
+
+With `A(C)>=alpha D^2` and `P(C)<=P_0D`, this yields `r(C)>=alpha D/P_0`. The same
+coarea formula gives `A(C\setminus C_{-w})<=wP(C)=O_w(D)` for fixed `w`.
+
+**Verdict:** PASS.
+
+## 4. Exchange cardinality and diameter checks
+
+For the strict exchange, deleting one nonisolated core vertex and `|W|` cap isolates,
+then inserting `|W|+1` new cap points, preserves total cardinality exactly. Every new
+point lies in the old full source hull `K`, so the new diameter is at most `D`; global
+minimality forces equality if the replacement is unit-separated.
+
+For the loaded equality case, `C_{-1} subset int(C) subset int(K)`. The audited
+interior lemma gives `|x-y|<D` whenever one endpoint is a new interior point. Hence the
+new points create no diameter pair. Deleting a loaded vertex removes at least one old
+diameter pair. Equality of contact counts therefore contradicts the secondary
+normalization exactly as in the internal chamber.
+
+**Verdict:** PASS.
+
+## 5. Section 81 is genuinely container-agnostic
+
+Canonical Theorem 81.1 begins with an arbitrary convex body containing a specified
+contact-isolated set `Z`; the proof scales the unmatched set and applies finite Oler.
+It does not use that the convex body is a face of the force hull or an internal
+chamber. Thus the exterior-cap application needs only `A=Omega(D^2)` and
+`sigma=O(D)`, both already verified.
+
+The boundary-strip refinement from Section 87 likewise uses only convexity, perimeter
+`O(D)`, and the matching lower bound. Re-running it for the cap is legitimate.
+
+**Verdict:** PASS.
+
+## 6. Pair-closing safety
+
+For fixed `w>1`, both endpoints of a selected pair lie in the convex body `C_{-w}`;
+their segment stays there. The displacement required to reduce a `1+K_w/D` pair to
+unit distance is at most `K_w/D=o(1)`. For large `D`, every unassigned source remains
+strictly farther than one throughout because its distance is at least
+`w-K_w/D>1`.
+
+All moved positions remain in `K`, so no pair can exceed the old global diameter.
+Therefore a first unit-distance blocker, if it precedes the chosen mate, must be another
+assigned cap isolate.
+
+**Verdict:** PASS.
+
+## 7. Explicit non-implications
+
+The theorem does **not** prove any of the following:
+
+- that a first-created isolate contact becomes force-positive after KKT reoptimization;
+- that independent pair-closing motions can be executed simultaneously;
+- that the near-contact graph contains an exact unit triangle;
+- that `O(D)` Oler slack yields a uniform positive nearest-neighbor gap;
+- that a bounded-size `k -> k+1` move exists; or
+- that the Type-I branch is eliminated.
+
+The scaled near-triangular packing regression remains compatible with all proved
+statements. The missing theorem is still a collective finite repacking or another
+source-preserving global contradiction.
+
+## Final disposition
+
+**PASS:** the macroscopic exterior cap has the same strict/loaded finite-exchange
+obstructions, inverse-diameter near matching, deep matching, and isolate-only first
+blockers as the internal macroscopic chamber. The two Type-I container geometries are
+therefore unified at this structural level.
+
+**C-II remains open.**

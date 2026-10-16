@@ -1,0 +1,116 @@
+# Target C: close seven-no-root `D=-1,k=5,d=1,p=4`
+
+Date: 2026-09-21
+
+Status: exact closure of the seven-no-root arithmetic branch
+
+`D=-1, k=5, d=1, p=4`.
+
+Companion verifier:
+
+`research/verify_target_c_support7_global_segment_relative_seven_noroot_k5_dminus1_d1p4_2026_09_21.py`
+
+## Inputs
+
+Let `A` be a hypothetical seven-no-root state in this branch. The coefficient-constraint space `P <= Q^7` has rank two. The previously certified all-depth deletion bound for `D=-1` gives generalized weights
+
+`d_1(P) >= 2`, `d_2(P) >= 4`.
+
+Every one-coordinate deletion preserves `rank(P)=2`. A two-coordinate deletion can lower it by at most one.
+
+The six-row containment theorem from the closed `k=4` layer will also be used. If a six-row rank-two state has every one-coordinate projection of rank two, let `C` be its virtual canonical complete-block set, let
+
+`d_v = |C| - rank H(C)`,
+
+and let `q` be the number of virtual-canonical complete blocks replaced by incomplete states in an actual realization. Then
+
+`d_v >= 1`, `q <= p`,
+
+and
+
+`D >= 6 + p + 3 d_v - 3 q`.
+
+The existing six-row verifier exhausts all synchronized `d_v=1` coefficient planes through the exact 86 five-row `d=1` parents.
+
+## Rank-drop pairs form a matching of size at most two
+
+Call a coordinate pair `J={i,j}` a rank-drop pair when puncturing `P` on `J` lowers its rank from two to one. This is equivalent to the existence of a nonzero vector of `P` supported inside `J`.
+
+Because `d_1(P)>=2`, such a vector has support exactly the two coordinates of `J`.
+
+Two rank-drop pairs cannot share a coordinate. If `{a,b}` and `{a,c}` were both rank-drop pairs, choose nonzero words `u,v in P` supported on those pairs. They are independent, so they span `P`; hence the full support of `P` is contained in `{a,b,c}`. This contradicts `d_2(P)>=4`.
+
+There also cannot be three disjoint rank-drop pairs. Words supported on the first two disjoint pairs are independent and span the two-dimensional `P`, so every word of `P` is supported on the union of those four coordinates. No nonzero word can then be supported on a third disjoint pair.
+
+Therefore the rank-drop pairs form a matching of size at most two. They involve at most four of the seven coordinates. Choose a coordinate `i` incident to no rank-drop pair.
+
+## An unmatched deletion gives a fully synchronized six-row shadow
+
+Delete coordinate `i`. Since one-coordinate punctures preserve rank two, the resulting six-row coefficient space still has rank two. For every remaining coordinate `j`, the pair `{i,j}` is not a rank-drop pair, so deleting `j` as well still leaves rank two.
+
+Thus this six-row shadow is exactly in the synchronized rank-two regime of the six-row containment theorem.
+
+The exact deletion identity gives its defect as
+
+`D_6 = D_7 + 2 = 1`.
+
+Its incomplete-root cost is still `p=4`. Applying the six-row bound gives
+
+`1 >= 6 + 4 + 3 d_v - 3 q`,
+
+with `d_v>=1` and `q<=4`. The unique possibility is
+
+`d_v=1`, `q=4`.
+
+Since total incomplete-root cost is four and four canonical-complete blocks are replaced, all four replacements must be singleton blocks. In particular, the synchronized six-row virtual canonical state must have at least four canonical-complete blocks that admit a compatible singleton constraint.
+
+## Exact six-row capacity obstruction
+
+The earlier six-row `k=4` verifier found exactly 31 synchronized rank-two coefficient planes with virtual canonical deficiency one. Its published singleton-capacity count imposed a support-multiplicity-at-least-two filter because that was enough for the six-row negative-defect application.
+
+For the present seven-row argument that support filter is not assumed. The new verifier repeats the exact 8,600-extension cover and counts every canonical-complete block admitting any compatible singleton.
+
+The exact census is
+
+```text
+unfiltered compatible singleton blocks   d_v=1 six-row states
+0                                               1
+2                                               6
+3                                              24
+-------------------------------------------------
+total                                          31
+```
+
+The maximum is three. Capacity four never occurs.
+
+As a cross-check, every one of the 84 compatible singleton blocks appearing across those 31 states is in fact touched by exactly three of the six no-root cycles, so removing the old support filter does not change the census.
+
+The underlying extension counts reproduce the previously certified six-row census:
+
+```text
+five-row d=1 parents                         86
+parent extensions                         8,600
+rank-two P6 candidates                    16,781
+all six coordinate projections rank two   4,684
+virtual canonical d_v=1 states                31
+```
+
+Complete-block ranks use the established prime `2^127-1` and the same Hadamard certificate as the six-row verifier. Coefficient-space construction and projection are exact rational row-space operations.
+
+Therefore the required four singleton blocks cannot exist. Hence
+
+`D=-1, k=5, d=1, p=4`
+
+is impossible.
+
+## Remaining seven-no-root `k=5` cases
+
+After this closure, the only seven-no-root `k=5` arithmetic cases still open are
+
+`D=-2, d=0, p=6`
+
+and
+
+`D=-1, d=0, p=7`.
+
+The next useful attack should again exploit synchronized six-row shadows. For `D=-2`, every pair puncture preserves coefficient rank, so every six-row deletion is fully synchronized. At `p=6`, the six-row containment inequality restricts a defect-zero shadow to only the equality bands `(d_v,q)=(1,5),(1,6),(2,6)`. Those are now the smallest remaining exact finite classes.

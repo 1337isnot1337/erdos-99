@@ -1,0 +1,311 @@
+# Target C-II — angular-sector multiplicity sharpens the long-side contact floor
+
+**Date:** 2026-09-15  
+**Status:** proof-only strengthening; theorem-state authority unchanged  
+**Scope:** no-container full-core Type-II branch  
+**Dependencies:** long-side straight-event dichotomy, loaded-route bridge suppression, audited `g=0.0021` low-`t` squeeze  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The current long-side bridge-suppression theorem loses a factor five when converting
+near-straight outer-face occurrences to branching physical vertices.  That loss is not
+necessary.  A `beta`-straight occurrence occupies a genuine outer-face angular sector
+of width strictly larger than
+
+\[
+\pi-2\beta.
+\]
+
+For `beta<=pi/6`, three such sectors cannot fit around one physical vertex.  Therefore
+a branching vertex supports at most two `beta`-straight outer-face occurrences, not
+five.
+
+After the existing edge-deduplication and bridge suppression, the factor `10` in the
+transverse-contact theorem improves to `4`:
+
+\[
+\boxed{
+\liminf {4E_\perp(\beta)\over D}
+\ge
+\liminf {L_{>2}\over D}
+-\delta\left(1+{2\over1-\cos\beta}\right),
+\qquad 0<\beta\le{\pi\over6}.
+}
+\tag{SM.1}
+\]
+
+At the audited `g=0.0021` low-`t` floor, taking `beta=pi/6` gives
+
+\[
+\boxed{
+{E_\perp(\pi/6)\over D}
+\ge0.0977831787370802\ldots-o(1),
+}
+\tag{SM.2}
+
+with every selected edge having transverse component strictly larger than `1/2`
+relative to its associated long loaded-hull side direction.
+
+This more than doubles the previous audited `0.0391D` floor without changing any
+geometric premise.
+
+## 1. Outer-face occurrences are angular sectors
+
+Fix a physical contact vertex `x`.  In the straight-line plane embedding, every
+occurrence of `x` on the outer-face boundary walk corresponds to one angular sector
+between two consecutive incident contact rays in the cyclic rotation at `x`.
+Distinct outer-face occurrences use distinct sectors: the face permutation assigns
+one face occurrence to each such corner of the rotation system.
+
+The angular widths of all sectors at `x` sum exactly to
+
+\[
+2\pi.
+\tag{SM.3}
+\]
+
+This remains true when `x` is an articulation vertex and the outer face visits it more
+than once.  Repeated boundary occurrences are precisely repeated visits through
+different sectors; no simple-boundary assumption is used.
+
+## 2. A straight occurrence consumes more than `pi-2 beta` of angle
+
+Consider a `beta`-straight internal occurrence on one distinguished route `W_i`, with
+predecessor `a`, vertex `x`, successor `b`, and loaded-side unit direction `u_i`.
+
+By definition, the oriented route edge into `x` and the oriented route edge out of `x`
+make angles of absolute value strictly below `beta` with `u_i`.  Hence the contact ray
+from `x` to `a` lies within `beta` of `-u_i`, while the ray from `x` to `b` lies within
+`beta` of `+u_i`.
+
+Therefore the smaller angular separation of the two rays is strictly larger than
+
+\[
+\pi-2\beta.
+\tag{SM.4}
+\]
+
+The complementary separation is at least `pi`, hence is also larger than
+`pi-2 beta`.  The outer-face sector used by this occurrence is one of these two
+separations, so its angular width is strictly larger than
+
+\[
+\boxed{\pi-2\beta.}
+\tag{SM.5}
+
+If
+
+\[
+0<\beta\le{\pi\over6},
+\]
+
+then every such sector has width strictly larger than `2pi/3`.  By (SM.3), a physical
+vertex can support at most two `beta`-straight outer-face occurrences.
+
+This is the only new geometric observation in the note.
+
+## 3. Improved finite event tradeoff
+
+Retain the notation of the long-side straight-event theorem:
+
+- `S_beta` is the occurrence-counted number of `beta`-straight internal events on the
+  long-side routes;
+- `V_2(beta)` is the number of distinct degree-two physical vertices supporting such
+  events;
+- `B_beta` is the number of distinct degree-at-least-three physical vertices supporting
+  such events;
+- `E_perp(beta)` is the number of distinct selected transverse extra contacts, one
+  chosen at each branching physical vertex and deduplicated as undirected edges.
+
+The directional-energy estimate is unchanged:
+
+\[
+\boxed{
+S_\beta
+\ge
+L_{>2}-{2d_{out}\over1-\cos\beta}.
+}
+\tag{SM.6}
+
+A degree-two physical vertex supports at most two outer-face occurrences, so its
+contribution remains at most `2V_2(beta)`.
+
+By Section 2, a branching physical vertex also supports at most two `beta`-straight
+occurrences.  Thus branching events contribute at most
+
+\[
+2B_\beta.
+\tag{SM.7}
+\]
+
+One selected undirected extra contact edge can be selected at at most its two
+endpoints, hence
+
+\[
+B_\beta\le2E_\perp(\beta).
+\tag{SM.8}
+
+Combining (SM.6)--(SM.8) gives the finite strengthened event inequality
+
+\[
+\boxed{
+2V_2(\beta)+4E_\perp(\beta)
+\ge
+L_{>2}-{2d_{out}\over1-\cos\beta},
+\qquad 0<\beta\le{\pi\over6}.
+}
+\tag{SM.9}
+
+The previous theorem had coefficient `10` in front of `E_perp`.
+
+Every edge counted by `E_perp(beta)` retains the existing geometric conclusion
+
+\[
+{|(w-x)\cdot Ju_i|}>\sin(\pi/3-\beta).
+\tag{SM.10}
+
+## 4. Insert the audited bridge suppression
+
+The loaded internal-route theorem and bridge-subtracted isoperimetry give, along every
+convergent full-core Type-II subsequence,
+
+\[
+\boxed{
+\limsup {2V_2(\beta)\over D}\le\delta,
+\qquad
+\delta:=\lim {d_{out}\over D}.
+}
+\tag{SM.11}
+
+Divide (SM.9) by `D`, pass to liminf/limsup, and use (SM.11).  This gives
+
+\[
+\boxed{
+\liminf {4E_\perp(\beta)\over D}
+\ge
+\liminf {L_{>2}\over D}
+-\delta\left(1+{2\over1-\cos\beta}\right).
+}
+\tag{SM.12}
+
+This is (SM.1).
+
+## 5. Audited `g=0.0021` endpoint
+
+Use
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+C_0=2\sqrt{\Delta_2}+0.0021,
+\]
+
+and the current audited proof-only floor
+
+\[
+t_{21}={4\over9}\left(\pi+\sqrt{\Delta_2}\right)+0.0017279.
+\]
+
+The propagated scalar quantities are
+
+\[
+R(t_{21})=0.00567555,
+\qquad
+\delta\le0.002837775,
+\tag{SM.13}
+\]
+
+and, on the rounded long-side branch,
+
+\[
+\boxed{
+{L_{>2}\over D}
+\ge
+F_{21}-o(1),
+\qquad
+F_{21}=0.4363333718701161781\ldots .
+}
+\tag{SM.14}
+
+Take
+
+\[
+\beta={\pi\over6}.
+\]
+
+Then
+
+\[
+1-\cos\beta=1-{\sqrt3\over2},
+\qquad
+\sin(\pi/3-\beta)={1\over2}.
+\]
+
+Equation (SM.12) yields
+
+\[
+\begin{aligned}
+\liminf {E_\perp(\pi/6)\over D}
+&\ge {1\over4}
+\left[
+F_{21}
+-0.002837775
+\left(1+{2\over1-\sqrt3/2}\right)
+\right]\\
+&=0.0977831787370802\ldots .
+\end{aligned}
+\tag{SM.15}
+
+This proves (SM.2).
+
+The corresponding transverse-flux floor is strictly larger than
+
+\[
+0.0488915893685401\ldots D-o(D),
+\]
+
+because every selected edge has transverse component greater than `1/2`.
+
+## 6. Optional flux-oriented angle
+
+For applications that use the product of edge count and transverse component rather
+than raw count, one may choose any fixed `beta<pi/6` in (SM.12).  For example
+
+\[
+\beta={7\pi\over60}=21^\circ
+\]
+
+gives, at the same endpoint,
+
+\[
+{E_\perp(7\pi/60)\over D}
+>0.0870-o(1),
+\]
+
+while every edge has transverse component greater than
+
+\[
+\sin(13\pi/60)=0.6293\ldots .
+\]
+
+The resulting product exceeds `0.0547D-o(D)`.  The exact theorem remains (SM.12); no
+numerical optimizer is used as a proof premise.
+
+## 7. Scope audit
+
+- The improvement concerns multiplicity of **outer-face occurrences at one physical
+  vertex**.  It does not identify repeated physical vertices or discard articulation
+  multiplicity.
+- Distinct outer-face occurrences correspond to distinct rotation sectors even at a
+  cutvertex.
+- Strict `< beta` in the straight-event definition makes the sector width strict in
+  (SM.5), so `beta=pi/6` still permits at most two events.
+- Edge deduplication still loses a factor two because one physical extra contact can be
+  selected at both endpoints; no unsupported injectivity is claimed.
+- Bridge suppression is imported exactly in its audited asymptotic form.
+- All selected objects are actual unit-contact edges; no KKT coefficient floor is used.
+- The numerical endpoint uses the independently audited `g=0.0021`, not the newer
+  provisional `0.002123` value.
+- No exact unit equilateral triangle or strict same-cardinality sub-`D` competitor is
+  produced.
+
+**Disposition:** proof-only strengthening.  C-II and Level I remain open.
