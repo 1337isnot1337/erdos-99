@@ -7,7 +7,7 @@
 
 ## Authoritative continuation snapshot
 
-- Checkout: `/home/cinna/math`; `git rev-parse HEAD` is
+- Checkout: `[local filesystem path omitted]`; `git rev-parse HEAD` is
   `ef941ab2b44aa393bdc461926769247b45754202`.
 - The working tree is intentionally dirty: the state/promotion edits and the
   untracked dated research artifacts listed below are preserved; unrelated local
