@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-FB44E1E56FF6","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_marked_grid_corrugation_strict_competitor_2026-09-30.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=0a29f72004a28fc95314deb5d18eeb4deb12111f; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
 

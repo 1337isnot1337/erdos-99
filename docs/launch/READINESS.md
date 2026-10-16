@@ -1,5 +1,18 @@
 # Frozen publication candidate: verification and release evidence
 
+## Expanded Target C migration and exact-commit receipt
+
+The five-shard migration adds 813 frozen source-main Target C reports and four
+support files beyond the older publication candidate described below. Its full
+path-level scientific and rights reconciliation is in
+[the migration report](../research/migration/2026-10-16/scientific-reconciliation.md).
+The earlier Gate 2 receipt does not cover this expanded tree. Run the full
+[Gate 2 procedure](GATE_2_VERIFICATION.md) against the exact final destination
+`main` commit and retain its detached receipt; do not infer a current PASS from
+any receipt naming an earlier SHA. Keep the separate visibility decision and
+private repository setting unchanged.
+
+
 The scientific source freeze is reconciled through
 `eb51394f371aee958b0d9332f80faf75ae694b9e`, with inherited baseline
 `5dcbdc3dfa1f9be370602cc54d50e68eabb88f56`. Publication state

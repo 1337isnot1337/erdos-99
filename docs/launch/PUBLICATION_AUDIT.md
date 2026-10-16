@@ -1,5 +1,18 @@
 # Publication audit and blocker ledger
 
+## Expanded Target C corpus: exact-commit verification scope
+
+The audit narrative below records the earlier 810-entry publication candidate.
+The separate five-shard migration now adds 813 source-main Target C reports and
+four support files, with explicit scientific disposition and additive first-party
+rights/provenance records in the [current migration reconciliation](../research/migration/2026-10-16/scientific-reconciliation.md).
+Those additions do not change the pinned 810-entry inclusion manifest or the
+canonical theorem ledger. Prior Gate 2 results remain historical for their exact
+SHAs; any release claim for the expanded tree must cite the detached full Gate 2
+receipt for the exact final destination `main` commit. The repository remains
+private until a separate owner decision.
+
+
 **Release decision: HOLD pending final technical verification and explicit visibility approval.**
 Both repositories remain private. The owner's subsequently recorded rights authorization and
 Git-email consent are now documented under [Gate 1 rights review](../publication/rights-review.md).

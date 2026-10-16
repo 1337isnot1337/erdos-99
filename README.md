@@ -14,7 +14,7 @@ This repository publishes a curated snapshot of the current theorem ledger, its 
 | --- | --- | --- |
 | A: source capacity and Schur response | Canonical through Section 177. The locked branch has an exact tube/right-deficiency reduction. The global source-specific surplus remains open. | [A](docs/targets/target-a/README.md) |
 | B: rhombic shell stability | Phase cuts, coherent crossing bounds and scoped dense-grid/interpolation tools are established. Global multi-grain payment and topology/boundary coupling remain open. | [B](docs/targets/target-b/README.md) |
-| **C**: KKT force geometry and rigidity | **C-I CLOSED; C-II OPEN.** Core rigidity and force/contact reductions do not yet supply a same-cardinality finite full-source move or restoration. | [C](docs/targets/target-c/README.md), [C-II frontier](docs/targets/target-c/CURRENT.md), [candidate registry](docs/targets/target-c/candidate-registry.json), [recent source-main research track](docs/research/tracks/target-c-diameter-capacity-cyclic-candidates-2026-10-16.md) |
+| **C**: KKT force geometry and rigidity | **C-I CLOSED; C-II OPEN.** Core rigidity and force/contact reductions do not yet supply a same-cardinality finite full-source move or restoration. | [C](docs/targets/target-c/README.md), [C-II frontier](docs/targets/target-c/CURRENT.md), [candidate registry](docs/targets/target-c/candidate-registry.json), [all 813 frozen source-main report dispositions](docs/research/tracks/target-c-frozen-813-source-main-corpus-2026-10-16.md), [cyclic/diameter-capacity research track](docs/research/tracks/target-c-diameter-capacity-cyclic-candidates-2026-10-16.md) |
 
 The missing A inequality is
 

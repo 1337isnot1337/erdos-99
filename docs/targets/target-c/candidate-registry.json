@@ -10740,6 +10740,237 @@
         "third_party_material": "No third-party paper text or PDF copied; report 244 cites external work by bibliography/link.",
         "visibility": "Destination remains private."
       }
+    },
+    {
+      "candidate_id": "TARGET-C-DOMINANT-PENTAGON-THROUGH-SPLICE-20261016",
+      "title": "Through-splicing yields a quadratic train-crossing deficit in the full-core Type-II branch",
+      "status": "unreviewed",
+      "source_lifecycle": "Proof-only source branch candidate with a historical source hostile audit; destination exact-head independent audit has not occurred.",
+      "target_scope": [
+        "Target C-II fully force-visible no-container/full-core Type-II train-measure branch"
+      ],
+      "claim": {
+        "statement": "Under the report’s strict-convex bounded-face, stopped-train, no-return/no-loop, atomic pi/3 phase, and exact endpoint-ledger hypotheses, through-splicing at every all-dominant pentagon preserves monotone pseudosegments and yields a quadratic Mantel deficit. The report derives K >= 8 Delta_2/U - 2U + t - kappa - sqrt(U^2/2 - 2 Delta_2), where Delta_2=pi/(2 sqrt(3)), U=9t/2-2pi-2delta-kappa/2, and K is the dominant-orbit outer-terminal occurrence density.",
+        "hypotheses": [
+          "Fully force-visible no-container/full-core Type-II train-measure branch.",
+          "Every selected bounded face is a strictly convex pentagon in the frozen dominant-orbit windows.",
+          "The finite stopped-train, no-bounded-return, no-bounded-loop, atomic phase support, and exceptional-face endpoint-ledger inputs hold."
+        ],
+        "not_claimed": [
+          "a global source extraction of this branch",
+          "a physical contact or feasible source motion from the topological splice",
+          "a finite endpoint, C-II closure, or Level I closure",
+          "a stronger t floor until the K constraint is combined with the current direct dominant/complement energy functional"
+        ]
+      },
+      "artifacts": [
+        {
+          "path": "research/target_c_dominant_pentagon_through_splicing_2026-09-15.md",
+          "role": "proof-only structural report",
+          "destination_sha256": "b567c562312438782fbde9cc62788fc843eccf331c09c2fbe3a9f31b27603b16",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+          "source_git_blob_sha": "f19cf184fddc2015d7b20c3d497a8cd4fec2601d",
+          "source_sha256": "b567c562312438782fbde9cc62788fc843eccf331c09c2fbe3a9f31b27603b16"
+        },
+        {
+          "path": "research/verify_target_c_dominant_pentagon_through_splicing.py",
+          "role": "six-pattern exact/Decimal verifier",
+          "destination_sha256": "41e8a654c5b7db0452087f578ed0aafba93216200feea74bd73dae88cc4f78c9",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+          "source_git_blob_sha": "49891bb5b6687080ce0e08f2cb52a9153fb21213",
+          "source_sha256": "41e8a654c5b7db0452087f578ed0aafba93216200feea74bd73dae88cc4f78c9"
+        },
+        {
+          "path": "docs/audits/target_c_dominant_pentagon_through_splicing_hostile_audit_2026-09-15.md",
+          "role": "historical source audit; provenance only",
+          "destination_sha256": "95de9b4e3e2f2e402565af1f88ec3390db4dccd8d62eecb03a59d91139ec08a2"
+        }
+      ],
+      "dependencies": {
+        "reported_inputs": [
+          "bounded-face convexity C51",
+          "finite stopped-train geometry",
+          "no bounded train return or singleton loop",
+          "atomic pi/3 train-phase support",
+          "exact exceptional-face endpoint ledgers"
+        ],
+        "description": "These scopes are taken from the report header. The source audit’s PASS label does not constitute destination exact-head review."
+      },
+      "obstructions_and_limits": [
+        "The splice is only a topological/counting device and adds no contact.",
+        "The verifier checks six closure patterns and displayed numerical calculations, not the geometric extraction.",
+        "The numerical floor is weaker than later current-main floors; the K constraint still needs the stated scalar combination."
+      ],
+      "validation": {
+        "status": "finite exact/Decimal verifier passed locally; no global source theorem audit claimed",
+        "scope": "Six exact closure patterns, connector/contraction calculations, and displayed 80-digit Decimal scale value."
+      },
+      "next_proof_obligations": [
+        "Combine the new K constraint with the current direct dominant/complement energy functional and verify all monotonicity directions.",
+        "Extract the fully force-visible full-core Type-II hypotheses from every relevant canonical minimizer or eliminate the complementary cases.",
+        "Derive a valid same-cardinality finite endpoint or contradiction."
+      ]
+    },
+    {
+      "candidate_id": "TARGET-C-OPEN-CELL-PHASE-FLUX-20261016",
+      "title": "Exact two-cut flux identity for open-cell phase changes",
+      "status": "unreviewed",
+      "source_lifecycle": "Unindexed source-main proof-only candidate; first-party support note imported with no destination audit or theorem promotion.",
+      "target_scope": [
+        "Target C-II open-cell and exact-phase branches"
+      ],
+      "claim": {
+        "statement": "For each distinct-phase pair p<q and its two-cut slab S, the report derives the exact finite identity F_out(S)-F_in(S)=(A_p+A_q) sin((theta_q-theta_p)/2), then classifies the old-diameter sign obstruction and contiguous source/sink ideal implications under the stated inactive-near-pair and non-grazing hypotheses.",
+        "hypotheses": [
+          "The finite source, phase variables, KKT weights, and two-cut subset-reflection work identity satisfy the report’s definitions.",
+          "The old-diameter sign classification uses the stated non-grazing theorem.",
+          "The condensation implication additionally assumes the pair’s inverse-D inactive near-activity witness has been excluded."
+        ],
+        "not_claimed": [
+          "one common conserved weighted network across different phase pairs",
+          "strong connectivity from nonconstant phase",
+          "a bound proportional to the magnitude of the wrong-way flow",
+          "the full opposite-shore/four-host geometry",
+          "global-minimizer extraction or a finite endpoint"
+        ]
+      },
+      "artifacts": [
+        {
+          "path": "research/target_c_open_cell_phase_flux_2026-10-03.md",
+          "role": "analytic proof-only support note",
+          "destination_sha256": "82bcf72417a4e622cc72a2b52f7d4ae30b169a8970343d2a8ed7a9713f21ad1a",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+          "source_git_blob_sha": "82411a0aad446f1f59461b4d45e061a5e9f87404",
+          "source_sha256": "82bcf72417a4e622cc72a2b52f7d4ae30b169a8970343d2a8ed7a9713f21ad1a"
+        }
+      ],
+      "dependencies": {
+        "canonical_or_existing_inputs": [
+          "two-cut subset-reflection work identity",
+          "the existing non-grazing old-diameter theorem",
+          "the existing endpoint argument"
+        ],
+        "description": "The note states a finite conditional identity and no independent computation or verifier."
+      },
+      "obstructions_and_limits": [
+        "Pair-dependent coefficients change with the midpoint direction, so fluxes cannot be summed as one common weighted network.",
+        "Interleaved/noninterval SCC structure and phase-compatible interval ideals remain.",
+        "The opposite shore and four-host geometry are not charged."
+      ],
+      "validation": {
+        "status": "analytic proof text only; no verifier or computational result claimed",
+        "scope": "Exact finite identities and deductions within the stated hypotheses."
+      },
+      "next_proof_obligations": [
+        "Rule out or charge surviving interleaved SCC structure.",
+        "Combine the pairwise flux with complete opposite-shore/four-host geometry.",
+        "Produce a source-wide finite endpoint."
+      ]
+    },
+    {
+      "candidate_id": "TARGET-C-STAR-RAY-EXACT-PHASE-CIRCULATION-20261016",
+      "title": "Bracing-star ray orders exact-phase gap circulation",
+      "status": "unreviewed",
+      "source_lifecycle": "Source-main artifact is unreviewed; imported proof-only candidate; no destination mathematical audit or theorem promotion is claimed.",
+      "target_scope": [
+        "Target C-II exact-phase shore",
+        "Global source extraction and finite endpoint are open"
+      ],
+      "claim": {
+        "statement": "Under the report’s explicit exact-phase nested-cut, convex diameter-thrackle, full-span bracing-star, and source-geometry hypotheses, a ray in the bracing star supplies the two-arc order without requiring an actual diameter parallel to the train direction. The conditional argument derives paired intervals, positive axial bundle resultants, and ordered cut-contact masses.",
+        "hypotheses": [
+          "The finite source and exact-phase cuts satisfy every condition in report sections 1–2.",
+          "The actual diameter endpoints and convex-thrackle order satisfy the stated star and train assumptions.",
+          "The conditional C-II application also requires the report’s October 1 train-cut and source-extraction inputs."
+        ],
+        "not_claimed": [
+          "full source KKT for every global minimizer",
+          "the nonconstant-phase shore",
+          "completion of all transverse-shore constraints",
+          "a feasible same-cardinality competitor",
+          "global optimality or C-II/Level I closure"
+        ]
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_star_ray_staircase_reactions_2026-10-01.md",
+          "role": "full proof-only report",
+          "destination_sha256": "6a7dfa1047d6c701c4755967dff6a54059c4b2f2d31db4faa74ff72fcae9852f",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+          "source_git_blob_sha": "3f23ca272fc1caa52bbbd49714032cc3edf6c457",
+          "source_sha256": "6a7dfa1047d6c701c4755967dff6a54059c4b2f2d31db4faa74ff72fcae9852f",
+          "source_artifact_id": "ART-E598A709E228"
+        },
+        {
+          "path": "research/verify_target_c_star_ray_staircase_2026_10_01.py",
+          "role": "exact finite regressions",
+          "destination_sha256": "dde704701069cadb12c770002614007dd4588be9c67108c59b8f36fff40bba87",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+          "source_git_blob_sha": "894e1c8f0bcc50f40aa414d31868b9a25e135df2",
+          "source_sha256": "dde704701069cadb12c770002614007dd4588be9c67108c59b8f36fff40bba87"
+        }
+      ],
+      "dependencies": {
+        "canonical_artifacts": [
+          "docs/targets/target-c/56-ci-restored-frontier.md",
+          "docs/targets/target-c/57-zr-zf-rigidity-audit.md",
+          "docs/targets/target-c/58-full-source-geometry-audit.md"
+        ],
+        "unreviewed_candidate_artifacts": [
+          "docs/reports/target_c_local_witness_cell_2026-10-01.md",
+          "docs/reports/target_c_complete_grid_rank_switching_2026-10-01.md",
+          "docs/reports/target_c_complete_grid_joint_switch_budget_2026-10-01_r2.md",
+          "docs/reports/target_c_exact_phase_gap_graph_connectivity_2026-10-01.md"
+        ],
+        "description": "The report rederives its circulation identity; no source audit or unreviewed dependency is substituted for destination canonical state."
+      },
+      "obstructions_and_limits": [
+        "The finite verifier does not encode full-source KKT, complete actual train cuts, or global optimality.",
+        "The report itself leaves the full transverse shore and the last source-compatible competitor implication unresolved."
+      ],
+      "validation": {
+        "status": "exact finite verifier passed locally; analytic report remains unreviewed",
+        "scope": "21 source-pair distances in the seven-point regression; finite graph classification through m=5; 820 crosscut pair vectors; release/grid counterexamples. The script explicitly reports that full source KKT and global optimality are not encoded."
+      },
+      "next_proof_obligations": [
+        "Derive the exact-phase train-cut and bracing-star hypotheses from every relevant canonical source branch.",
+        "Control the complete transverse shore and every lower/upper pair constraint.",
+        "Produce a same-cardinality strict-D competitor or exact triangle contradiction."
+      ]
     }
-  ]
+  ],
+  "source_main_corpus": {
+    "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "source_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+    "destination_frozen_baseline": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+    "report_count": 813,
+    "index_ranges": {
+      "shard_1": [
+        0,
+        162
+      ],
+      "shard_2": [
+        163,
+        325
+      ],
+      "shard_3": [
+        326,
+        488
+      ],
+      "shard_4": [
+        489,
+        650
+      ],
+      "shard_5": [
+        651,
+        812
+      ]
+    },
+    "lifecycle": "Every frozen source-main report is marked unreviewed in the source artifact index; destination entries remain noncanonical. This data pointer does not promote any theorem.",
+    "disposition_ledger": "docs/research/migration/2026-10-16/frozen-target-c-813-dispositions.jsonl",
+    "frontier": "docs/research/tracks/target-c-frozen-813-source-main-corpus-2026-10-16.md",
+    "rights_addendum": "docs/research/migration/2026-10-16/ledger/coordinator-first-party-rights-addendum.jsonl",
+    "authority": "docs/state/theorem-state.yaml",
+    "integrity_verifier": "tools/verify_frozen_target_c_813_migration.py"
+  }
 }

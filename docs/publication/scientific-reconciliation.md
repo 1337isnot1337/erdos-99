@@ -1,5 +1,30 @@
 # Frozen scientific reconciliation and editorial audit
 
+## 2026-10-16 expanded research-corpus reconciliation
+
+The historical publication freeze below still applies to its named 810-record
+inclusion set and exact source scope. The private destination has since integrated
+all five shards of the separate frozen Target C corpus: 813/813 source-main report
+paths absent at destination baseline `358af8253f85ab7b9cdbf976ce186ee8426718e4`
+now have explicit path-level source identity, destination identity, scientific
+treatment, provenance, and rights records. The [current migration reconciliation](../research/migration/2026-10-16/scientific-reconciliation.md)
+and [final 813-path ledger](../research/migration/2026-10-16/frozen-target-c-813-dispositions.jsonl)
+are authoritative for that expanded corpus. They record 812 reports as
+unreviewed noncanonical research and one exact historical report preserved in
+the archive as superseded by its stronger unreviewed `_r2` successor. Four
+cross-shard support files are accounted for separately. The additive rights
+ledger covers the new first-party material; it does not change or enlarge the
+owner-attested 810-entry inclusion manifest, and it does not assert a source-root
+license or third-party rights.
+
+No migrated claim was promoted into `theorem-state.yaml`. Target C-II and Level I
+remain open, the inverse-phase correction remains at its destination scope, and
+the withdrawn global `K'/D` chart and `q=O(D^(4/5))` rate remain withdrawn. This
+repository remains private. Earlier Gate 2 receipts apply only to their exact
+recorded commits; full publication verification for the expanded tree must be
+read from the detached receipt naming the exact final destination `main` SHA.
+
+
 The scientific release takes the inherited claim/proof snapshot at
 `5dcbdc3dfa1f9be370602cc54d50e68eabb88f56`, reconciles private main through
 `eb51394f371aee958b0d9332f80faf75ae694b9e`, and retains the exact selected

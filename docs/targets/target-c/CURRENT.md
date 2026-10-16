@@ -424,3 +424,16 @@ The frozen source-main shard 2 batch (indexes 211–238) is preserved as unrevie
 ## Endpoint-gap, dominant-diameter, and surplus candidates (source shard 2, indexes 239–266)
 
 The source-main reports preserve exact disjoint-diameter angle gaps, conditional dominant-diameter force/train bounds, post-ZF scalar refinements, EFAQ fixed-angle constraints, and the corrected endpoint outer-walk route. They remain unreviewed and do not extract all hypotheses from global minimizers or construct the required full-source endpoint. Report 262’s correction is retained. See the [full research track](../../research/tracks/target-c-endpoint-gap-surplus-2026-10-16.md), [candidate registry](candidate-registry.json), and [verifiers](../../research/README.md).
+
+## Complete frozen source-main report corpus
+
+All 813 Target C report paths absent from the frozen destination baseline are
+now retained with explicit source/destination hashes, scientific scope,
+dependencies, relations, validation limits, and next obligations in the
+[813-path disposition ledger](../../research/migration/2026-10-16/frozen-target-c-813-dispositions.jsonl).
+The [unified corpus frontier](../../research/tracks/target-c-frozen-813-source-main-corpus-2026-10-16.md)
+maps the five alphabetical shards to their current research programs, highlights
+conditional results and regressions, and states the exact finite endpoint still
+needed. Every imported report remains noncanonical; `theorem-state.yaml` is the
+authority for accepted claims. The withdrawn global inverse-phase `K'/D` chart
+and `q=O(D^(4/5))` rate remain withdrawn.

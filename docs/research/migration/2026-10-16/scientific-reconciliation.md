@@ -1,8 +1,14 @@
 # Scientific reconciliation: source-main Target C batch 1
 
-**Status: INCOMPLETE.** This report reconciles the first preserved source-main
-batch with the destination's mathematical authority. It is not a proof audit of
-each imported report and it does not close Target C or any part of Level I.
+**Historical status:** The first batch reconciliation below is a point-in-time record and is superseded for the frozen 813-report corpus by this coordinator addendum. This report does not claim a proof audit of each imported report and it does not close Target C or any part of Level I.
+
+## Coordinator reconciliation of the frozen 813-report set (2026-10-16)
+
+The five lexicographic shards now cover every path from the source Target C artifact index that was absent from destination baseline `358af8253f85ab7b9cdbf976ce186ee8426718e`. The frozen source is `42f0296d1aca068c809f74cee5dcdb4ebdb27c73` (tree `e061f039eac44c286a00eacdcaa9a4cbbb877891`); the destination main tree was independently checked at pre-coordinator commit `0ac22c4709f00afdbc5a84d0eb30810e953d2305` before shared-ledger updates. The sorted 813 paths are represented once each in the [frozen index](shards/frozen-813-index.jsonl), and every row has exact source blob/SHA-256, actual destination path/hash/mode, pre-coordinator hash evidence, shard worker references, and explicit final treatment in the [final disposition ledger](frozen-target-c-813-dispositions.jsonl). The coordinator verifier checked 813/813 source identities, destination files, modes, worker references, pre-coordinator records, and additive rights rows. The currently recorded treatments are 812 unreviewed noncanonical research reports plus one exact historical report retained in the archive as superseded by a stronger unreviewed `_r2` successor. No source path is missing; one report's archive relocation and one CS6/K6 claim-level subsumption are explicitly reconciled.
+
+The [Target C corpus frontier](../../tracks/target-c-frozen-813-source-main-corpus-2026-10-16.md) navigates five research-program shards, leading conditional results, finite checks, counterexamples, and each route's remaining obligations. The four imported cross-shard support files have separate source hashes, exact destinations, rights rows, and focused verifier results in the [coordinator receipt](receipts/coordinator-cross-shard-support-imports.json). The central candidate registry and current frontier now link the strongest noncanonical results while preserving the corrected scope of `C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION`.
+
+This migration imports and preserves claims and evidence; it does not promote them. The destination `theorem-state.yaml` is byte-identical to the frozen destination baseline. Target C-II and Level I remain open, and the withdrawn global `K'/D` Lipschitz chart and unsupported `q=O(D^(4/5))` rate remain withdrawn. Four new first-party rights/provenance rows cover support files, and 813 report rows are accounted additively without changing the pinned 810-entry inclusion manifest. No third-party paper/PDF collection or extracted paper text was copied. The repository remains private. The previous Gate 2 PASS at `60c2576b4893a7e9001d2c8bfbe5cfb64c1c969f` is historical only; complete publication verification is tied to the exact expanded final main SHA and its detached receipt.
 
 ## Frozen comparison
 

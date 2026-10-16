@@ -262,3 +262,27 @@ Reproduce the finite q=13 shell construction and its independent numerical KKT-s
 - `PYTHONPATH=research python3 research/verify_s1_q13_kkt_endpoints.py`
 
 These scripts are exact-source duplicates already present in the destination baseline. The checks construct a strict S1 shell with 13 contacts, 12 diameter pairs, positive full-support equilibrium stress, and rank-10 scalar stress matrix; the endpoint check also finds two PSD KKT-segment endpoints. This refutes the shell-only contradiction implication. It is finite numerical regression evidence, not interval certification of global optimality and not a counterexample to Erdős #99. See the [full report](../docs/reports/target_c_cyclic_s1_q13_shell_regression_2026-09-10.md) and the [cyclic/Reinhardt research track](../docs/research/tracks/target-c-cyclic-reinhardt-corpus-2026-10-16.md).
+
+## Additional frozen source-main Target C dependencies
+
+The star-ray exact-phase and through-splicing checks were imported from frozen
+source main `42f0296d1aca068c809f74cee5dcdb4ebdb27c73` because reports and audits
+depend on these first-party support files. Reproduce them from the repository
+root:
+
+- `python3 research/verify_target_c_star_ray_staircase_2026_10_01.py` checks
+  finite source pairs, axial resultants, small antitone graphs, release barriers,
+  and grid regressions. It does not encode full source KKT, complete actual
+  train cuts, or global optimality.
+- `python3 research/verify_target_c_dominant_pentagon_through_splicing.py`
+  checks the six exact closure patterns and the displayed connector and
+  numerical calculations. It does not certify the geometric extraction or a
+  globally optimal source.
+
+The [open-cell phase-flux report](target_c_open_cell_phase_flux_2026-10-03.md)
+is an analytic proof-only note and has no computation. The [through-splicing
+report](target_c_dominant_pentagon_through_splicing_2026-09-15.md) and its
+source audit remain unreviewed in destination theorem-state despite the source
+audit's proof-scope PASS. The [unified frozen-corpus frontier](../docs/research/tracks/target-c-frozen-813-source-main-corpus-2026-10-16.md)
+and [813-path disposition ledger](../docs/research/migration/2026-10-16/frozen-target-c-813-dispositions.jsonl)
+record each result's scope, dependencies, status, and remaining implication.
