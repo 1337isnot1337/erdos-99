@@ -238,3 +238,18 @@ finite checks with the commands in the
 The [per-file migration ledger](../docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl)
 records exact frozen identities, transformations, duplicates and the excluded
 operational recovery file.
+
+## Frozen source-main Target C backfill: exact support checks
+
+These reports and tools are retained as first-party, noncanonical research from frozen source main `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. Run from the repository root:
+
+- `PYTHONPATH=research python3 research/verify_aligned_swap_horn_obstructions.py` — finite joint-only, axial-bracket, and strict-competitor regressions.
+- `python3 research/verify_antipode_transition.py` — exact finite support, transition, and direction examples.
+- `python3 research/verify_diameter_star_contiguity.py` — finite direction-contiguity audits; the all-configuration theorem is in its linked report.
+- `python3 research/verify_target_c_antitone_interval_scc_2026_10_03.py` — finite complete antitone relations through seven vertices and exact parallel-contact releases.
+- `python3 research/verify_target_c_two_halfdisk_scalar_regression.py` — exact historical scalar witness, not the full current core system.
+- `python3 research/verify_target_c_central_face_two_geodesic_corridor.py` — exact all-pairs contact graph for the stated finite corridor sizes.
+- `python3 research/verify_convex_shared_witness_outer_occurrences.py` — exact small source path and fixed-anchor contraction regression.
+- `python3 research/verify_target_c_collinear_punctures_2026_10_02.py` — exact finite stress, rigidity, seam, crossing, and competitor checks.
+
+A passing script supports only the finite checks it performs. Analytic claims remain unreviewed unless theorem-state explicitly says otherwise; none of these commands establishes global-minimizer extraction, a same-cardinality strict-diameter endpoint, C-II closure, or Level I closure. Provenance, exact hashes, rights accounting, and full proof obligations are in the [migration ledger](../docs/research/migration/2026-10-16/README.md) and [candidate registry](../docs/targets/target-c/candidate-registry.json).

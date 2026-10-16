@@ -7693,6 +7693,621 @@
         "third_party_material": "No third-party paper text or PDF collection is included in this batch.",
         "visibility": "Destination remains private; no theorem promotion or public release."
       }
+    },
+    {
+      "candidate_id": "TARGET-C-ANTITONE-INTERVAL-SCC-RELEASE-SOURCE-MAIN-20261003",
+      "title": "Antitone interval SCCs and exact contact release",
+      "status": "unreviewed",
+      "source_lifecycle": "Frozen source-main artifact is unreviewed; theorem-state remains authoritative.",
+      "target_scope": [
+        "Target C-II research frontier"
+      ],
+      "source_claim_ids": [],
+      "claim": {
+        "statement": "For a finite directed relation on ordered vertices satisfying (a→b),(c→d), a<c implies b>=d, every minimum-span source or sink SCC is an interval; hence a non-strong relation has a proper interval source or sink SCC. Under the report’s same-source full-span open-cell, actual-hull crosscut, monotone physical-layer, and two-extreme-diameter hypotheses, the physical diameter relation is antitone. Its finite parallel-cut lemma releases a proper isolated subset with parallel crossing unit contacts by translation, preserving diameter pairs while opening crossing contacts.",
+        "hypotheses": [
+          "The graph theorem is unconditional for finite antitone relations.",
+          "The geometric lift requires the explicitly listed physical crosscut, source-layer, open-cell, and actual-diameter hypotheses.",
+          "The source-release conclusion requires a finite unit-separated triangle-free source, a proper nonempty subset with no crossing actual diameter, and at least one set of parallel crossing unit contacts."
+        ],
+        "not_claimed": [
+          "The physical hypotheses are not established for every current C-II survivor or every large global minimizer.",
+          "No C-II or Level I closure follows; application to the complete O-O branch depends on unpromoted cut/co-embedding reductions.",
+          "Finite verification is corroboration only, not the universal graph or geometric proof."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Imported noncanonical research; no canonical theorem is modified or promoted.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_antitone_interval_scc_release_2026-10-03.md",
+          "role": "full analytic candidate and conditional geometric/source-release proof",
+          "source_git_blob_sha": "af11d4ee168779c8ef679a09babbd809c4fde271",
+          "source_sha256": "5b6fad63d10aa5953f036c58357b10fcc2783da0b8f9df733f3665fce6e9372d",
+          "destination_sha256": "5b6fad63d10aa5953f036c58357b10fcc2783da0b8f9df733f3665fce6e9372d",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "research/verify_target_c_antitone_interval_scc_2026_10_03.py",
+          "role": "exact finite relation and release verifier",
+          "source_git_blob_sha": "940405f7d93ea9a80a8cf50b8a020475c2a1343a",
+          "source_sha256": "18bf8d5734897358c6c55382cfb2a17e3afe18cac0fa63ea2e153cee87b8f344",
+          "destination_sha256": "18bf8d5734897358c6c55382cfb2a17e3afe18cac0fa63ea2e153cee87b8f344",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report and source-main dependency edge ledger."
+      },
+      "obstructions_and_limits": [
+        "The physical hypotheses are not established for every current C-II survivor or every large global minimizer.",
+        "No C-II or Level I closure follows; application to the complete O-O branch depends on unpromoted cut/co-embedding reductions.",
+        "Finite verification is corroboration only, not the universal graph or geometric proof."
+      ],
+      "validation": {
+        "command": "python3 research/verify_target_c_antitone_interval_scc_2026_10_03.py",
+        "result": "PASS; exhaustive finite relation checks through n=7 and exact finite release openings as recorded by the verifier.",
+        "boundary": "Finite enumeration does not prove the universal graph theorem or establish source-specific geometric hypotheses."
+      },
+      "next_proof_obligations": [
+        "Derive the required actual full-span crosscuts and monotone physical layers for every sufficiently large surviving branch, preserving contact isolates and the complete source.",
+        "Show a proper isolated interval has only parallel crossing unit contacts in the actual source, or prove a stronger source-preserving release theorem.",
+        "Connect the release to a strict contact-minimality or diameter-minimality contradiction without assuming the geometric lift."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "destination_batch": "coordinator-target-c-support-imports-2026-10-16"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research/project-agent material.",
+        "third_party_material": "No third-party paper, PDF, or extracted paper text is bundled.",
+        "visibility": "Destination remains private; no theorem promotion."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-CENTRAL-FACE-TWO-GEODESIC-CORRIDOR-REGRESSION-20260914",
+      "title": "Two long contact geodesics can bound a fixed-width empty central corridor",
+      "status": "unreviewed regression",
+      "source_lifecycle": "Frozen source-main artifact is unreviewed; theorem-state remains authoritative.",
+      "target_scope": [
+        "Target C-II research frontier"
+      ],
+      "source_claim_ids": [],
+      "claim": {
+        "statement": "For each integer m>=2, an exact unit-separated planar source has two opposite chains of m unit contacts, an empty convex corridor of width 9/10, and no unintended unit contacts; its contact cycle bounds a convex face of degree 2m+4 while area and diameter grow linearly. Thus two long near-geodesic sides of one empty face do not alone force a unit triangle or fixed linear area loss.",
+        "hypotheses": [
+          "The explicit Q(sqrt(147/212)) construction and connector geometry in the report.",
+          "Finite feasible packing family; no global optimality hypothesis."
+        ],
+        "not_claimed": [
+          "The family is not claimed globally optimal or compatible with complete actual-diameter/KKT constraints of a C-II minimizer.",
+          "It blocks a local inference only; population, actual diameter graph, source-cardinality exchange, and strict-diameter competitor routes remain."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Imported noncanonical research; no canonical theorem is modified or promoted.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_central_face_two_geodesic_corridor_regression_2026-09-14.md",
+          "role": "full analytic finite construction and local-inference regression",
+          "source_git_blob_sha": "df876cfbe10a203107db9a212e98b1a9e7735602",
+          "source_sha256": "d8b31f95f560e23db62d79b6d408d34d37ce8cf98b72b7f2309fc52f29b39a78",
+          "destination_sha256": "d8b31f95f560e23db62d79b6d408d34d37ce8cf98b72b7f2309fc52f29b39a78",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "research/verify_target_c_central_face_two_geodesic_corridor.py",
+          "role": "exact all-pairs contact-graph verifier",
+          "source_git_blob_sha": "4f68d2d4e3072f1fadd368daff60ca5af4026164",
+          "source_sha256": "1d08ebb14c11319788b8527718cf9d780c56378603ce09b74b59df48f79ddf20",
+          "destination_sha256": "1d08ebb14c11319788b8527718cf9d780c56378603ce09b74b59df48f79ddf20",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report and source-main dependency edge ledger."
+      },
+      "obstructions_and_limits": [
+        "The family is not claimed globally optimal or compatible with complete actual-diameter/KKT constraints of a C-II minimizer.",
+        "It blocks a local inference only; population, actual diameter graph, source-cardinality exchange, and strict-diameter competitor routes remain."
+      ],
+      "validation": {
+        "command": "python3 research/verify_target_c_central_face_two_geodesic_corridor.py",
+        "result": "PASS; exact contact graph for m=2,3,4,8,16,32.",
+        "boundary": "Finite replay supports the construction; the analytic all-m proof is in the unreviewed report and no global-minimizer claim is established."
+      },
+      "next_proof_obligations": [
+        "Any closure must add global population/capacity input, the actual diameter graph, a source-preserving cardinality exchange, or a strict-diameter competitor.",
+        "Keep local empty-face geometry separate from globally minimizing source hypotheses."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "destination_batch": "coordinator-target-c-support-imports-2026-10-16"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research/project-agent material.",
+        "third_party_material": "No third-party paper, PDF, or extracted paper text is bundled.",
+        "visibility": "Destination remains private; no theorem promotion."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-TWO-HALFDISK-SCALAR-REGRESSION-20260912",
+      "title": "Exact rational witness survives the listed historical half-disk scalar ledgers",
+      "status": "unreviewed regression",
+      "source_lifecycle": "Frozen source-main artifact is unreviewed; theorem-state remains authoritative.",
+      "target_scope": [
+        "Target C-II research frontier"
+      ],
+      "source_claim_ids": [],
+      "claim": {
+        "statement": "The exact tuple (t,kappa,S,G,mu,m,e,u,Q,f,T)=(21/10,0,14/5,3/10,31/10,1,11/10,1/10,1,9/10,39/10) satisfies the report’s identities and listed September 12 normalized Type-II scalar inequalities, including T>=1+pi/2 and corrected perimeter/remainder and stopped-train comparisons. Those inequalities alone give no algebraic contradiction.",
+        "hypotheses": [
+          "Only the historical scalar system enumerated in the report is tested; values are exact rationals and irrational comparisons use certified rational bounds."
+        ],
+        "not_claimed": [
+          "Not a geometric half-disk source, global minimizer, or witness for every later current-main inequality. S=14/5 exceeds the later shape-detour cap S<=1+pi/2+o(1).",
+          "Does not weaken or refute the perimeter-rigidity theorem."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Imported noncanonical research; no canonical theorem is modified or promoted.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "research/target_c_two_halfdisk_scalar_regression_2026-09-12.md",
+          "role": "full arithmetic regression and exact scope boundary",
+          "source_git_blob_sha": "e8bca3100ac867d7f95e6646cd28e7d42018eb59",
+          "source_sha256": "ae5cba9e1ad288dd3cb9d360ff8816a0128d511b610b539e3b4a7a0918a92347",
+          "destination_sha256": "ae5cba9e1ad288dd3cb9d360ff8816a0128d511b610b539e3b4a7a0918a92347",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "research/verify_target_c_two_halfdisk_scalar_regression.py",
+          "role": "corrected rational verifier",
+          "source_git_blob_sha": "4c3a93f4838b218223fe27d87f45bfb3066b47d0",
+          "source_sha256": "43bb8a6e3e90ca7b131d16cfff7a348bf54ddcd6c9de910d626430267274a0de",
+          "destination_sha256": "43bb8a6e3e90ca7b131d16cfff7a348bf54ddcd6c9de910d626430267274a0de",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report and source-main dependency edge ledger."
+      },
+      "obstructions_and_limits": [
+        "Not a geometric half-disk source, global minimizer, or witness for every later current-main inequality. S=14/5 exceeds the later shape-detour cap S<=1+pi/2+o(1).",
+        "Does not weaken or refute the perimeter-rigidity theorem."
+      ],
+      "validation": {
+        "command": "python3 research/verify_target_c_two_halfdisk_scalar_regression.py",
+        "result": "PASS; exact rational identities and directed rational bounds; no floating-point arithmetic.",
+        "boundary": "Checks the listed historical scalar system only."
+      },
+      "next_proof_obligations": [
+        "Add a new correlation, geometric constraint, or source-wide inequality that excludes this tuple before using the historical scalar route as a contradiction.",
+        "Do not treat this tuple as compatible with the complete current core system."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "destination_batch": "coordinator-target-c-support-imports-2026-10-16"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research/project-agent material.",
+        "third_party_material": "No third-party paper, PDF, or extracted paper text is bundled.",
+        "visibility": "Destination remains private; no theorem promotion."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-ANTIPODE-TRANSITION-OCCUPANCY-20260930",
+      "title": "Antipode transitions and diameter-hull direction occupancy",
+      "status": "unreviewed",
+      "source_lifecycle": "Frozen source-main artifact is unreviewed; theorem-state remains authoritative.",
+      "target_scope": [
+        "Target C-II research frontier"
+      ],
+      "source_claim_ids": [],
+      "claim": {
+        "statement": "For the report’s finite planar source with non-star full diameter graph and exact V-cover candidate, each covered hull side of length s has unique opposite support at width sqrt(D^2-s^2/4). Consecutive covered sides with partners v,w satisfy psi=asin(s/(2D))+asin(t/(2D))+2 asin(|v-w|/(2D)); this yields direction-interval occupancy and, with canonical Section 61, a two-end global-train charge.",
+        "hypotheses": [
+          "Finite planar diameter-D source; full loaded diameter graph non-star.",
+          "Occupancy uses the report’s V-cover count and all uncovered-side terms.",
+          "The train-end inequality uses canonical Section 61 and applies to original global trains, not arbitrary local occurrences."
+        ],
+        "not_claimed": [
+          "Turn identity alone gives no winding contradiction. It does not extract a global train family, prove d_H=o(D), close C-II, or construct a source move.",
+          "Do not replace actual hull sides or full-source endpoints with a near-disk proxy."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Imported noncanonical research; no canonical theorem is modified or promoted.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_antipode_transition_phase_occupancy_2026-09-30.md",
+          "role": "analytic support, transition, occupancy, and global-train charge",
+          "source_git_blob_sha": "8d27a7f9ca7d25f72b7b67715703c8cf2810e135",
+          "source_sha256": "3e161ff91fd60b967bd56d95e57bfc2905e5c1603ab8988edd43c9395079e7be",
+          "destination_sha256": "3e161ff91fd60b967bd56d95e57bfc2905e5c1603ab8988edd43c9395079e7be",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "research/verify_antipode_transition.py",
+          "role": "exact rational finite verifier",
+          "source_git_blob_sha": "fc33b5033ee62a4b4e731002111a52baaa48b9f4",
+          "source_sha256": "2e14ed201198e48f1a8cd17d05dba46899acae3a799c6c85f8782f868328a53f",
+          "destination_sha256": "2e14ed201198e48f1a8cd17d05dba46899acae3a799c6c85f8782f868328a53f",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report and source-main dependency edge ledger."
+      },
+      "obstructions_and_limits": [
+        "Turn identity alone gives no winding contradiction. It does not extract a global train family, prove d_H=o(D), close C-II, or construct a source move.",
+        "Do not replace actual hull sides or full-source endpoints with a near-disk proxy."
+      ],
+      "validation": {
+        "command": "python3 research/verify_antipode_transition.py",
+        "result": "PASS; exact finite transition checks as recorded by verifier.",
+        "boundary": "Finite examples do not verify the universal proof or establish source-specific C-II hypotheses."
+      },
+      "next_proof_obligations": [
+        "Transfer the original-train end charge to the actual train family in each C-II branch while retaining all source labels and V-cover omissions.",
+        "Combine with independent global source-capacity or strict-diameter endpoint."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "destination_batch": "coordinator-target-c-support-imports-2026-10-16"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research/project-agent material.",
+        "third_party_material": "No third-party paper, PDF, or extracted paper text is bundled.",
+        "visibility": "Destination remains private; no theorem promotion."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-ALIGNED-VARYING-AMPLITUDE-SWAPS-20261001",
+      "title": "Full-source dispatch and Horn structure for aligned varying-amplitude swaps",
+      "status": "unreviewed",
+      "source_lifecycle": "Frozen source-main artifact is unreviewed; theorem-state remains authoritative.",
+      "target_scope": [
+        "Target C-II research frontier"
+      ],
+      "source_claim_ids": [],
+      "claim": {
+        "statement": "The report proves abstract finite-source results for coherent one-sign swap families: distinct moving sets cannot share an old diameter, every nonempty subfamily shortens an old diameter, at most 2d_H variables need be frozen to dispatch remaining upper constraints, and the residual lower-distance assignment system has an exact Horn description. Axial brackets eliminate genuine pair-conflict clauses in the stated scope; the report identifies disjoint phase intervals as the precise two-hit obstruction.",
+        "hypotheses": [
+          "Use the report’s finite source, coherent one-sign direction cell, disjoint swap sets, and stated diameter/upper-bound hypotheses.",
+          "TB1/O-O branch applications require their separately stated extraction/activity hypotheses."
+        ],
+        "not_claimed": [
+          "The report does not prove d_H=o(D), that a usable family survives the 2d_H dispatch, or forced-zero release for every C-II branch.",
+          "Finite verifier regressions do not establish the analytic theorems or global minimizer conclusion."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Imported noncanonical research; no canonical theorem is modified or promoted.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_aligned_swap_horn_and_axial_bracket_2026-10-01.md",
+          "role": "full abstract proofs, conditional specializations, and obstruction boundary",
+          "source_git_blob_sha": "35395092b6805170b525305235ba25b24a37c290",
+          "source_sha256": "07baf78d30f53f598005964590d5b0c85227f22de20d69b2f02190a9f29b2462",
+          "destination_sha256": "07baf78d30f53f598005964590d5b0c85227f22de20d69b2f02190a9f29b2462",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "research/verify_aligned_swap_horn_obstructions.py",
+          "role": "exact rational joint-only, bracket, and finite-regression verifier",
+          "source_git_blob_sha": "975835b34427bfae8b48d128f2bc53a074c48f78",
+          "source_sha256": "ac45eb6d643c705b7920b77c214393189aafa8089f795ed0c6018676f64c2e53",
+          "destination_sha256": "ac45eb6d643c705b7920b77c214393189aafa8089f795ed0c6018676f64c2e53",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report and source-main dependency edge ledger."
+      },
+      "obstructions_and_limits": [
+        "The report does not prove d_H=o(D), that a usable family survives the 2d_H dispatch, or forced-zero release for every C-II branch.",
+        "Finite verifier regressions do not establish the analytic theorems or global minimizer conclusion."
+      ],
+      "validation": {
+        "command": "PYTHONPATH=research python3 research/verify_aligned_swap_horn_obstructions.py",
+        "result": "PASS; exact verifier checks rational joint-only and two-hit regressions and strict finite competitor.",
+        "boundary": "Finite examples only; no global source extraction or minimizer conclusion."
+      },
+      "next_proof_obligations": [
+        "Extract a source-derived nonempty swap family surviving full-source upper dispatch for every sufficiently large relevant minimizer.",
+        "Prove a forced-zero site or an unbracketed release satisfying all old/new lower and upper constraints; the quotient-potential shortcut is blocked by the report’s regressions."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "destination_batch": "coordinator-target-c-support-imports-2026-10-16"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research/project-agent material.",
+        "third_party_material": "No third-party paper, PDF, or extracted paper text is bundled.",
+        "visibility": "Destination remains private; no theorem promotion."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-SIX-MATCHING-KALMANSON-K6-SUBSUMES-CS6-20260831",
+      "title": "Convex six-terminal Kalmanson response claim and retained centrally symmetric predecessor",
+      "status": "unreviewed stronger-successor relation; both proof reports remain unreviewed",
+      "source_lifecycle": "Frozen source-main artifact index marks both reports unreviewed. This scope comparison records claim-level subsumption only; no independent proof audit or theorem promotion is implied.",
+      "target_scope": [
+        "Target C C-I selected-stress response subcase"
+      ],
+      "source_claim_ids": [],
+      "claim": {
+        "statement": "Both reports claim aW_03+uW_14+vW_25<=3 for the same positive normalized matching H_s={03,14,25}, connected circular-planar positive-conductance response, and C11 affine identity. K6 states the inequality for every nondegenerate strictly convex six-terminal geometry in cyclic order; CS6 imposes central symmetry. By their stated hypotheses and conclusion, K6 claim-level subsumes CS6 as a restricted geometry case.",
+        "hypotheses": [
+          "Six cyclic terminals with strict convexity (K6) or centrally symmetric convexity (CS6).",
+          "Positive normalized weights on H_s={03,14,25}; connected circular-planar positive-conductance response; C11 identity Lambda P_B=L_Hs P_B."
+        ],
+        "not_claimed": [
+          "Neither proof is accepted or independently audited by this entry.",
+          "Strictness, the rho=1 star equality mode, direction-dependent support selection, larger supports, finite same-diameter release, and C-I closure remain open."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Both reports are unreviewed. K6 is a broader unpromoted claim, not a canonical theorem.",
+        "replacement_status": "CS6 retained as historical development and provenance; no theorem-state or artifact lifecycle promotion."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_centrally_symmetric_six_matching_2026-08-31.md",
+          "role": "full centrally symmetric response report; historical restricted-scope predecessor",
+          "source_git_blob_sha": "f1bb491dd7d062aed91ddeb77c5614bdd3579c31",
+          "source_sha256": "a191efc9b63ced53956940aa62fe56ab92112c3ef7c5214804a97c54d170f11b",
+          "destination_sha256": "a191efc9b63ced53956940aa62fe56ab92112c3ef7c5214804a97c54d170f11b",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_convex_six_matching_kalmanson_2026-08-31.md",
+          "role": "full convex six-terminal response report; broader unreviewed claim",
+          "source_git_blob_sha": "0f51b8537acc48521a97137a25fb5e5f28c5f507",
+          "source_sha256": "a08c23258df8119a064af168b169500f138a7d50cd8fb32401165e1b6996852c",
+          "destination_sha256": "a08c23258df8119a064af168b169500f138a7d50cd8fb32401165e1b6996852c",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C11 affine response identity",
+          "C30 three-edge response alternative"
+        ],
+        "candidate_relations": [
+          "CS6 is a restricted-geometry claim-level case of K6"
+        ],
+        "description": "K6 removes central symmetry from terminal geometry while preserving the positive-network, C11, matching, weights, inequality, and conditional C30 conclusion."
+      },
+      "obstructions_and_limits": [
+        "A circular-planar star realizes rho_s=1; the common Kalmanson conclusion does not imply strict positivity.",
+        "The six-endpoint result does not solve support selection or the equality mode."
+      ],
+      "validation": {
+        "status": "statement-level comparison only; proof correctness not independently audited",
+        "scope": "The reports were compared for hypotheses, constants, conclusion, and proof scope; both artifact-index entries remain unreviewed."
+      },
+      "next_proof_obligations": [
+        "Address rho_s=1 using actual unit-contact geometry or full-support information.",
+        "Solve direction-dependent second-order support selection and connect to a same-diameter release or C-I closure."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "destination_batch": "coordinator-target-c-support-imports-2026-10-16"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research/project-agent material.",
+        "third_party_material": "External literature remains cited/linked as in the source reports; no third-party text or PDF was copied.",
+        "visibility": "Destination remains private; theorem-state unchanged."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-CONVEX-SHARED-WITNESS-OUTER-OCCURRENCES-20261002",
+      "title": "Shared-witness convex arcs, canonical multiplicity charge, and fixed-rest contraction regression",
+      "status": "unreviewed",
+      "source_lifecycle": "Frozen source-main report and exact verifier are unreviewed in the destination; canonical inputs cited by the report retain their existing theorem-state status.",
+      "target_scope": [
+        "Target C-II full-source swap and outer-occurrence route"
+      ],
+      "source_claim_ids": [],
+      "claim": {
+        "statement": "Under the report’s contact-minimal then diameter-pair-minimal triangle-free global-source normalization, full positive active support, local trapping, and canonical Section 67/85 identities, each shared-witness U component is a strictly convex phase-ordered arc with distinct owners and sum of owner phase widths at most W. The exact occurrence-counted source charge is 2|U|<=x_B+l_B+2i_B+2z, hence N_1>=k'- (x_B+l_B)/2-i_B-z. A separate exact twelve-point regression disproves contracting such a path while fixing the rest and preserving all contacts, even with both ends strictly trapped.",
+        "hypotheses": [
+          "The source-population charge uses the report’s stated canonical global source, full actual support, positive stress, local trapping, connected core, and occurrence-counted outer currency.",
+          "The near-disk internal-loaded-vertex estimate additionally assumes D^-1 conv(B) converges to the radius-1/2 disk and W=O(D^-1).",
+          "The fixed-rest obstruction is an explicit finite feasible framework, not a global minimizer."
+        ],
+        "not_claimed": [
+          "No bound Q_global=o(D), x_B=o(D), sublinear U-component count, or globally disjoint phase intervals follows.",
+          "The finite regression is not a canonical source or global minimizer and does not rule out moving the anchored branches.",
+          "No C-II or Level I closure or source-wide contraction is proved."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [
+          "C-LOCAL-TRAPPING",
+          "C-OUTER-TRAIN-LENGTH-CURRENCY",
+          "C-RHOMBUS-POPULATION-TRANSPORT"
+        ],
+        "comparison_scope": "These are stated proof inputs in the report; the new source consequences are unreviewed and do not alter the canonical scopes or statuses.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_convex_shared_witness_outer_occurrences_2026-10-02.md",
+          "role": "full source consequence, multiplicity charge, conditional near-disk result, and failed-closure boundary",
+          "source_git_blob_sha": "add73099d88cb8f3c9beae50fa1bfde90dc27617",
+          "source_sha256": "a7bd7e0437f9b67a7ba8505411f9a604ca48a1ffefd608adb450d4978bae8f84",
+          "destination_sha256": "a7bd7e0437f9b67a7ba8505411f9a604ca48a1ffefd608adb450d4978bae8f84",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "research/verify_convex_shared_witness_outer_occurrences.py",
+          "role": "exact finite path and fixed-anchor regression verifier",
+          "source_git_blob_sha": "ee8fe4bc59afe66acf472657c3f7fe3114120162",
+          "source_sha256": "66124a1ad4bf4196c8f3e60bc3552be6df9b79ece0d93aa2cfc7a5d924ca9453",
+          "destination_sha256": "66124a1ad4bf4196c8f3e60bc3552be6df9b79ece0d93aa2cfc7a5d924ca9453",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-LOCAL-TRAPPING",
+          "C-RHOMBUS-POPULATION-TRANSPORT",
+          "C-OUTER-TRAIN-LENGTH-CURRENCY"
+        ],
+        "candidate_relations": [],
+        "description": "The report inspects but does not promote source-main/open-PR swap and loaded-pair inputs. Exact dependency paths and lifecycle are in the migration dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "Loaded path endpoints, internal loaded vertices, and moving exterior isolates remain in the exact residue.",
+        "Different U components may have overlapping phase windows, so their width budgets cannot be summed without a new source-compatibility theorem.",
+        "The twelve-point obstruction rejects only fixed-rest/contact-preserving path contraction; opening anchors or moving branches remains possible."
+      ],
+      "validation": {
+        "command": "python3 research/verify_convex_shared_witness_outer_occurrences.py",
+        "result": "PASS; 91 source pairs and local binary states; path/phase, exact balances, private diameters, and fixed-anchor two-site regression.",
+        "boundary": "The checker is finite evidence; it does not establish source extraction, near-disk hypotheses, or C-II closure."
+      },
+      "next_proof_obligations": [
+        "Bound the exact residue x_B+l_B+2i_B+2z for a source-derived family without suppressing loaded occurrences.",
+        "Prove cross-component phase compatibility or provide a direct global source-capacity estimate.",
+        "Replace the rejected fixed-rest contraction by a branch-moving or discrete cardinality-restoring source motion."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "destination_batch": "coordinator-target-c-support-imports-2026-10-16"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party report and verifier.",
+        "third_party_material": "No third-party paper or PDF is included.",
+        "visibility": "Destination remains private; no theorem promotion."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-COLLINEAR-PUNCTURE-DIAMETER-CROSSFLOW-20261002",
+      "title": "Collinear source seams, sharp local diameter-incidence budget, and signed crossflow",
+      "status": "unreviewed",
+      "source_lifecycle": "Frozen source-main report and exact verifier are unreviewed in the destination; canonical source hypotheses cited by the report retain their existing theorem-state status.",
+      "target_scope": [
+        "Target C-II full-source rigidity and contact-island route"
+      ],
+      "source_claim_ids": [],
+      "claim": {
+        "statement": "Under the report’s finite mixed-rigid positive-stress framework assumptions, deleting any source subset S of at least two vertices lying on a line leaves the mixed contact/diameter graph connected. Hence if C-S has r contact components, at least r-1 actual diameter bars join distinct components. For any nonempty connected contact island W with s>=2 distinct contact attachments S, the exact bound is δ_K<=2s+h_W-e_SS-3, where h_W counts all actual diameters incident to W. For an admissible line cut, the signed quadratic identity gives -sum_{crossing actual diameters} beta_ij y_i y_j=f^TΩf>=lambda_+||(I-Pi)f||^2>0, forcing an opposite-side actual diameter with positive stress.",
+        "hypotheses": [
+          "The principal-kernel, seam, and signed-cut results require the report’s full positive stress, ΩP=0, affine kernel, mixed-rigidity rank, and source geometry assumptions.",
+          "The signed cut additionally requires the exact line-seam and off-line conditions stated in Theorem CP.3.",
+          "The report’s curved-separator construction is an explicit nonglobal regression even though it satisfies the specified finite stress/rigidity checks."
+        ],
+        "not_claimed": [
+          "No uniform lower bound on lambda_+ or on total crossing stress is established.",
+          "The theorems do not extract a collinear seam or island in every C-II global minimizer and do not produce a source motion or strict-diameter competitor.",
+          "The curved-separator example is explicitly nonglobal; it is not a Level I counterexample."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [
+          "C-MIXED-CORE-FINITE-RIGIDITY",
+          "C-MIXED-CORE-ONE-ROW-REDUNDANCY",
+          "C-ZRF"
+        ],
+        "comparison_scope": "The report uses the stated rigidity and positive-stress conditions; its all-cardinality seam consequences remain unreviewed.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_collinear_punctures_and_diameter_crossflow_2026-10-02.md",
+          "role": "full seam connectivity, local incidence budget, signed crossing law, and nonglobal regression",
+          "source_git_blob_sha": "a9ad86a3df5774476e5e586bda0b026260c0be97",
+          "source_sha256": "a27aed6d2ee643e51c2e66b0a821853a38855479a45d9b257df686380fb629b8",
+          "destination_sha256": "a27aed6d2ee643e51c2e66b0a821853a38855479a45d9b257df686380fb629b8",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "research/verify_target_c_collinear_punctures_2026_10_02.py",
+          "role": "exact finite source/stress/rigidity/crossflow verifier",
+          "source_git_blob_sha": "5a6e8a7980f6eb78c692b476dad1d3d2f7e9e053",
+          "source_sha256": "2334ea5f9207e2b67c7f2eecee30c1e68c049cb91520229f655b67ae264c4e1d",
+          "destination_sha256": "2334ea5f9207e2b67c7f2eecee30c1e68c049cb91520229f655b67ae264c4e1d",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-MIXED-CORE-FINITE-RIGIDITY",
+          "C-ZRF"
+        ],
+        "candidate_relations": [],
+        "description": "The report states exact matrix/rigidity assumptions and retains a finite regression; it does not infer source-wide extraction from those hypotheses."
+      },
+      "obstructions_and_limits": [
+        "The lambda_+ lower bound may degenerate with D, so the signed charge is not a uniform multiplier floor.",
+        "A contact-isolated population is not controlled by the local contact-island estimate.",
+        "Cross-component diameter flow is an incidence statement, not a C-II endpoint."
+      ],
+      "validation": {
+        "command": "python3 research/verify_target_c_collinear_punctures_2026_10_02.py",
+        "result": "PASS; exact checks for 15 source distances, full stress PSD/affine kernel, mixed rank 9, 63 principal-kernel restrictions, 21 collinear punctures, 24 contact-island budgets, 99 sharpness counts, 186 cut identities, curved separator, and all-k competitor arithmetic.",
+        "boundary": "Finite verifier cases do not establish the universal analytic inequalities or minimizer extraction."
+      },
+      "next_proof_obligations": [
+        "Extract a genuine physical seam/contact island from an arbitrary sufficiently large C-II survivor while retaining contact isolates.",
+        "Combine diameter incidence and geometric capacity with a source-compatible cardinality restoration or actual strict-diameter endpoint.",
+        "If a quantitative stress conclusion is needed, prove a uniform spectral gap or an alternate non-spectral lower bound."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "destination_batch": "coordinator-target-c-support-imports-2026-10-16"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party report and verifier.",
+        "third_party_material": "No third-party paper or PDF is included.",
+        "visibility": "Destination remains private; no theorem promotion."
+      }
     }
   ]
 }

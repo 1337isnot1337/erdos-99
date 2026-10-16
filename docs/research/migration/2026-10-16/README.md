@@ -439,3 +439,9 @@ The integration artifact index has 578 records, the candidate registry has
 80 entries, and the task catalogue has 22 tasks. Canonical theorem state and
 repository visibility were unchanged. This branch
 batch is not the complete source migration or Gate 2 verification.
+
+## Coordinator integration status — 2026-10-16
+
+PR #40 (shard-1 indexes 0–162) is merged at destination main `dfac17ac8f3e7d77eef1a1f95713980a0fa0fbda` after 163/163 exact source-blob and SHA-256 checks. Its central artifact ledger is populated. The coordinator branch adds nine exact first-party support assets, eight candidate-registry entries, a frontier update, and a separate rights/provenance addendum; see [scientific reconciliation](scientific-reconciliation.md) and the [incremental receipt](receipts/coordinator-support-imports-2026-10-16.json).
+
+This is a partial integration checkpoint. The receipt records the five unresolved cross-shard report links, so neither the full 813-path disposition nor complete publication verification is claimed here. Source and destination remain frozen to the stated source commit and destination baseline for shard assignment; destination main advances only through reviewed migrations. The repository remains private.
