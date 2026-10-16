@@ -132,3 +132,13 @@ canonical. It documents current evidence, exact structural completeness and
 the concrete remaining release gates. Update the audit with the final SHA
 and results; do not reuse this candidate's conclusions after unreviewed edits.
 
+
+## Follow-up: current-source PR #1005 reconciliation
+
+A later independent source comparison identified the post-selection additions in `e-99` through `eb51394f371aee958b0d9332f80faf75ae694b9e`. The only substantive whole-source mathematical content newly relevant to the current public frontier consists of two noncanonical reports and their two exact SymPy verifiers. These four files are now included with **byte-identical** Git blobs, SHA256 provenance, noncanonical labels, and visible mathematical limits. The original historical campaign diary and administrative reconciliation audit are not transferred; CI-only and maintenance source changes were already addressed separately.
+
+The inclusion manifest now describes **808** source-derived files: 804 prior entries plus four post-baseline whole-source additions. The inclusion/exclusion partition over the original source snapshot is unchanged; the later files have their own pinned source commit and are not misrepresented as part of the original source tree. The theorem-state version remains `2026-10-10.audit.234`; Level I/A/B/C-II remain **OPEN**, C-I **CLOSED**.
+
+Both newly imported verifiers passed an independently executed Python/SymPy replay in an isolated audit workspace (499 odd-rim incidence cases, 122 exact cyclotomic pairs, the -72 nonplanarity fixture, formal three-phase pairing and two laminate controls). These certify **only** their stated finite/formal claims, not global optimality or a closure theorem.
+
+**The release decision remains HOLD.** The complete final-candidate audit, 808 separate source rights dispositions, historic email authorization/clean-root decision, complete applicable 94-certificate sweep, and fresh-clone outsider A/B/C sessions are not waived by this addition. Current public visibility is still private; do not treat this file as permission to publish an unchecked commit.

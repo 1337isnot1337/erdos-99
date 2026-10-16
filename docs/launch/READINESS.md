@@ -21,3 +21,12 @@ Exact certificate propositions, arithmetic implementations, parameter expression
 ## Remaining gates at this candidate checkpoint
 
 Independent fresh-clone A/B/C research sessions, final rights/provenance/privacy/history audit, exact release commit and visibility/anonymous-access verification are pending. The repository remains private at this checkpoint. Hosted Actions execution is not established; the source account has experienced restrictions. No paid usage or spending limit was changed.
+
+## Independent whole-source alternatives: supplemental replay
+
+After the original 94-certificate receipt, the post-baseline private PR #1005 mathematical reports and verifiers were selected for public inclusion as **unreviewed** (not registered canonical certificates). Their original Git blobs were byte-identically transferred, and both checkers were executed independently on Python 3.12 with SymPy in a separate audit workspace:
+
+- `python research/verify_global_joint_phase_compatibility.py`: 9 dual-basis pairings, 3 cross-phase pairings, positive stress-only laminate, rotated-frame compatible laminate, and exact boundary-work identity — **PASS**.
+- `python research/verify_global_separable_distortion_obstruction.py`: 499 odd-rim marginal checks, 122 exact cyclotomic all-pair Möbius identities, and Cayley–Menger nonplanarity determinant -72 — **PASS**.
+
+These are independent computational replays of limited claims, not human proof reviews or tests of source-global optimality. The original comprehensive 94-certificate and public checker results were recorded on the earlier candidate; **the final integrated release commit has not yet been fully reverified**. Rights/history publication gates remain open.

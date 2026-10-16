@@ -13,3 +13,16 @@ All observed source PRs were submitted through the owner's account. Git author i
 Links to excluded administrative ledgers are redirected here. They concerned campaign/branch status, historical check commands or promotion transactions. The dedicated mathematical proof, exact regression and scoped audit sources remain in the corpus. The old 20,157-line monolith was linked solely as historical navigation; its current mathematical sections are retained in canonical route/shared modules. A short conditional boundary/face endpoint and its nonglobal obstruction remain from an older ledger because they are mathematically useful.
 
 The [exclusion inventory](exclusion.json) records exact source blobs and reasons. A file outside the current closure is not thereby declared mathematically false or obsolete. A newly found load-bearing premise must be investigated and supplied before claiming a complete dependent result.
+
+## Post-baseline current-source mathematical reconciliation
+
+After the initial source pin `5dcbdc3d`, source main advanced through `eb51394f371aee958b0d9332f80faf75ae694b9e`. The research-preservation PR #1005 added two substantive, noncanonical **whole-source mathematical reports** and their two exact SymPy checkers. All four are now tracked as separate, byte-identical source imports in `inclusion.json` with the newer exact source SHA and individual Git blobs and SHA256 hashes:
+
+- `docs/reports/global_joint_stress_strain_phase_mechanism_2026-10-12.md`
+- `docs/reports/global_separable_distortion_obstruction_2026-10-12.md`
+- `research/verify_global_joint_phase_compatibility.py`
+- `research/verify_global_separable_distortion_obstruction.py`
+
+The old campaign log, administrative reconciliation notes, private CI maintenance history, and source preservation records remain private or outside the current mathematical corpus. The initial source-commit inclusion/exclusion census is still pinned to its original baseline; these four **post-baseline additions** are explicitly marked with their own later source commit. They are not promoted into the canonical theorem state.
+
+A publication rights review is still required for every retained source file. This reconciliation neither establishes author consent nor constitutes independent proof review.

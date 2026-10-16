@@ -94,3 +94,12 @@ Head `3d94a44ed245ad636685d7a3919acdf9ebd53753`; **unreviewed**.
 - [target_b_seed084_near_disk_seamed_grain_regression_2026-10-13.md](../../docs/reports/target_b_seed084_near_disk_seamed_grain_regression_2026-10-13.md)
 - [certificate.json](../../research/seed084/certificate.json)
 - [verify_seamed_grains.py](../../research/seed084/verify_seamed_grains.py)
+
+## Source PR 1005 — Direct whole-source global mechanisms and obstructions (noncanonical)
+
+**Source integration:** `1337isnot1337/e-99` at `eb51394f371aee958b0d9332f80faf75ae694b9e`, merged preservation PR #1005. These are *unreviewed* mathematical candidates and exact finite regressions, not current canonical results or a proof of Level I. The historical campaign log is not distributed.
+
+- [Joint global stress/strain mechanism](../reports/global_joint_stress_strain_phase_mechanism_2026-10-12.md) proves a **formal fixed-reference-frame** phase incompatibility under precise compatible field hypotheses, and supplies stress-only and independently rotated laminate counterexamples to stronger statements. The missing step is to extract the required frame-compatible bounded stress/strain fields from **actual global minimizers**, control seam and boundary work and contact isolates, and force a genuine same-cardinality diameter improvement. [Exact symbolic checker](../../research/verify_global_joint_phase_compatibility.py).
+- [Separable-distance and Möbius obstruction](../reports/global_separable_distortion_obstruction_2026-10-12.md) records a formal incidence-marginal obstruction, classification of planar separable changes as Möbius/anti-Möbius, dense **nonglobal** triangle-free examples and a certified nonplanar formal improvement. The marginal obstruction and classification overlap earlier private vertex-factor research, but the linked report is a self-contained independent presentation with additional explicit constructions; no novelty or canonical promotion is claimed. [Exact symbolic checker](../../research/verify_global_separable_distortion_obstruction.py).
+
+Both verifiers were independently executed with Python 3.12 and SymPy during release preparation; results are finite/formal only. A full scientific peer review and original-source rights clearance are still pending. Avoid claiming global-minimizer consequences from formal field compatibility or dense nonglobal counterexamples.

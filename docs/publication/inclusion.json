@@ -12404,6 +12404,41 @@
       ]
     },
     {
+      "source_path": "docs/reports/global_joint_stress_strain_phase_mechanism_2026-10-12.md",
+      "public_path": "docs/reports/global_joint_stress_strain_phase_mechanism_2026-10-12.md",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "8936bfc997d7dd816b505d12e867fdf49256c64f",
+      "source_mode": "100644",
+      "source_sha256": "ae5ede4071475cb9d957b4326dccc5ffcbc2d3297c66e340e3d0b3111d06638b",
+      "public_sha256": "ae5ede4071475cb9d957b4326dccc5ffcbc2d3297c66e340e3d0b3111d06638b",
+      "role": "unreviewed active proposal",
+      "theorem_ids": [],
+      "dependencies": [
+        "research/verify_global_joint_phase_compatibility.py"
+      ],
+      "incoming": [
+        {
+          "source": "private-e99-pr-1005",
+          "kind": "current noncanonical whole-source research"
+        }
+      ],
+      "inclusion_reason": [
+        "Current whole-source formal/regression research; complete exact supporting verifier",
+        "No canonical promotion or Level I closure"
+      ],
+      "review_status": "unreviewed proposal; not an accepted premise",
+      "publication_clearance": "pending provenance/content review",
+      "attribution": "Source project authorship retained, with AI assistance and limitations stated",
+      "reproduction_requirements": "Read formal arguments; independently execute python3 research/verify_global_joint_phase_compatibility.py with SymPy",
+      "editorial_change": "byte-identical",
+      "downstream_frontier_obligations": [
+        "Whole-source global proof bridge remains open"
+      ],
+      "navigation_dependencies": [
+        "research/verify_global_joint_phase_compatibility.py"
+      ]
+    },
+    {
       "source_path": "docs/reports/global_level_i_attainment_and_one_contact_2026-10-11.md",
       "public_path": "docs/reports/global_level_i_attainment_and_one_contact_2026-10-11.md",
       "source_commit": "d5afc236a7b1de9567dcb6dda65d957ed91c726b",
@@ -12433,6 +12468,41 @@
       "downstream_frontier_obligations": [],
       "navigation_dependencies": [
         "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md"
+      ]
+    },
+    {
+      "source_path": "docs/reports/global_separable_distortion_obstruction_2026-10-12.md",
+      "public_path": "docs/reports/global_separable_distortion_obstruction_2026-10-12.md",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "0010924a77aa84485e16cd49109a27cea33e41f2",
+      "source_mode": "100644",
+      "source_sha256": "de71af209c8ea4753862de88d0a9029ab4d209dc4ce439096547ad8aad56a439",
+      "public_sha256": "de71af209c8ea4753862de88d0a9029ab4d209dc4ce439096547ad8aad56a439",
+      "role": "unreviewed active proposal",
+      "theorem_ids": [],
+      "dependencies": [
+        "research/verify_global_separable_distortion_obstruction.py"
+      ],
+      "incoming": [
+        {
+          "source": "private-e99-pr-1005",
+          "kind": "current noncanonical whole-source research"
+        }
+      ],
+      "inclusion_reason": [
+        "Current whole-source formal/regression research; complete exact supporting verifier",
+        "No canonical promotion or Level I closure"
+      ],
+      "review_status": "unreviewed proposal; not an accepted premise",
+      "publication_clearance": "pending provenance/content review",
+      "attribution": "Source project authorship retained, with AI assistance and limitations stated",
+      "reproduction_requirements": "Read formal arguments; independently execute python3 research/verify_global_separable_distortion_obstruction.py with SymPy",
+      "editorial_change": "byte-identical",
+      "downstream_frontier_obligations": [
+        "Whole-source global proof bridge remains open"
+      ],
+      "navigation_dependencies": [
+        "research/verify_global_separable_distortion_obstruction.py"
       ]
     },
     {
@@ -29218,6 +29288,37 @@
       "navigation_dependencies": []
     },
     {
+      "source_path": "research/verify_global_joint_phase_compatibility.py",
+      "public_path": "research/verify_global_joint_phase_compatibility.py",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "086386d8085d0bfc339956aa38c379c147238d6d",
+      "source_mode": "100644",
+      "source_sha256": "d796a3fc40b218e373f919539e982e5a664eaf696ba26094b29cc44e18969b28",
+      "public_sha256": "d796a3fc40b218e373f919539e982e5a664eaf696ba26094b29cc44e18969b28",
+      "role": "computation",
+      "theorem_ids": [],
+      "dependencies": [],
+      "incoming": [
+        {
+          "source": "private-e99-pr-1005",
+          "kind": "current noncanonical whole-source research"
+        }
+      ],
+      "inclusion_reason": [
+        "Current whole-source formal/regression research; complete exact supporting verifier",
+        "No canonical promotion or Level I closure"
+      ],
+      "review_status": "unreviewed proposal; not an accepted premise",
+      "publication_clearance": "pending provenance/content review",
+      "attribution": "Source project authorship retained, with AI assistance and limitations stated",
+      "reproduction_requirements": "Execute directly in pinned mathematical Python environment; exact symbolic checks, not all-size proof",
+      "editorial_change": "byte-identical",
+      "downstream_frontier_obligations": [
+        "Whole-source global proof bridge remains open"
+      ],
+      "navigation_dependencies": []
+    },
+    {
       "source_path": "research/verify_global_one_contact_2026_10_11.py",
       "public_path": "research/verify_global_one_contact_2026_10_11.py",
       "source_commit": "d5afc236a7b1de9567dcb6dda65d957ed91c726b",
@@ -29243,6 +29344,37 @@
       "reproduction_requirements": "execute supplied verifier with public prerequisites",
       "editorial_change": "byte-identical",
       "downstream_frontier_obligations": [],
+      "navigation_dependencies": []
+    },
+    {
+      "source_path": "research/verify_global_separable_distortion_obstruction.py",
+      "public_path": "research/verify_global_separable_distortion_obstruction.py",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "ad42bb54ddeb920dfbf0c1b0d01ad726b74d73f2",
+      "source_mode": "100644",
+      "source_sha256": "f15d813f9a079442685610b6dc17d0726ba887cc57ce9d9c7d1cec2f1287694e",
+      "public_sha256": "f15d813f9a079442685610b6dc17d0726ba887cc57ce9d9c7d1cec2f1287694e",
+      "role": "computation",
+      "theorem_ids": [],
+      "dependencies": [],
+      "incoming": [
+        {
+          "source": "private-e99-pr-1005",
+          "kind": "current noncanonical whole-source research"
+        }
+      ],
+      "inclusion_reason": [
+        "Current whole-source formal/regression research; complete exact supporting verifier",
+        "No canonical promotion or Level I closure"
+      ],
+      "review_status": "unreviewed proposal; not an accepted premise",
+      "publication_clearance": "pending provenance/content review",
+      "attribution": "Source project authorship retained, with AI assistance and limitations stated",
+      "reproduction_requirements": "Execute directly in pinned mathematical Python environment; exact symbolic checks, not all-size proof",
+      "editorial_change": "byte-identical",
+      "downstream_frontier_obligations": [
+        "Whole-source global proof bridge remains open"
+      ],
       "navigation_dependencies": []
     },
     {
@@ -34899,102 +35031,102 @@
       "rights": "bibliographic link; bundled/derived copy excluded"
     },
     "papers/related/erdos-1995-favourite-problems.pdf": {
-      "citation": "Paul Erd\u0151s, \u201cSome of my Favourite Problems in Number Theory, Combinatorics, and Geometry,\u201d *Resenhas IME-USP* 2(2) (1995), 165\u2013186.",
+      "citation": "Paul Erdős, “Some of my Favourite Problems in Number Theory, Combinatorics, and Geometry,” *Resenhas IME-USP* 2(2) (1995), 165–186.",
       "url": "https://revistas.usp.br/resenhasimeusp/en/article/view/74798",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/daroczy-kiss-2005-minimal-diameter-nine-disks.pdf": {
-      "citation": "E. Dar\u00f3czy-Kiss, \u201cA New Bound for the Minimal Diameter of Nine Coplanar Congruent Disks,\u201d *Annales Univ. Sci. Budapest., Sect. Comp.* 25 (2005), 25\u201335.",
+      "citation": "E. Daróczy-Kiss, “A New Bound for the Minimal Diameter of Nine Coplanar Congruent Disks,” *Annales Univ. Sci. Budapest., Sect. Comp.* 25 (2005), 25–35.",
       "url": "https://ac.inf.elte.hu/Vol_025_2005/doi/025_25.pdf",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/kaminski-medvedev-milanic-2008-plane-width.pdf": {
-      "citation": "M. Kami\u0144ski, P. Medvedev, and M. Milani\u010d, \u201cThe Plane-Width of Graphs,\u201d",
+      "citation": "M. Kamiński, P. Medvedev, and M. Milanič, “The Plane-Width of Graphs,”",
       "url": "https://arxiv.org/abs/0812.4346",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/oler-1961-finite-packing-problem.pdf": {
-      "citation": "Norman Oler, \u201cA Finite Packing Problem,\u201d *Canadian Mathematical Bulletin* 4 (1961), 153\u2013155.",
+      "citation": "Norman Oler, “A Finite Packing Problem,” *Canadian Mathematical Bulletin* 4 (1961), 153–155.",
       "url": "https://geodesic.mathdoc.fr/articles/10.4153/CMB-1961-018-7/",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/folkman-graham-1969-packing-inequality.pdf": {
-      "citation": "J. H. Folkman and R. L. Graham, \u201cA Packing Inequality for Compact Convex Subsets of the Plane,\u201d *Canadian Mathematical Bulletin* 12 (1969), 745\u2013752.",
+      "citation": "J. H. Folkman and R. L. Graham, “A Packing Inequality for Compact Convex Subsets of the Plane,” *Canadian Mathematical Bulletin* 12 (1969), 745–752.",
       "url": "https://geodesic.mathdoc.fr/articles/10.4153/CMB-1969-096-7/",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/graham-witsenhausen-zassenhaus-1972-tightest-packings-minkowski.pdf": {
-      "citation": "R. L. Graham, H. S. Witsenhausen, and H. J. Zassenhaus, \u201cOn Tightest Packings in the Minkowski Plane,\u201d *Pacific Journal of Mathematics* 41 (1972), 699\u2013715.",
+      "citation": "R. L. Graham, H. S. Witsenhausen, and H. J. Zassenhaus, “On Tightest Packings in the Minkowski Plane,” *Pacific Journal of Mathematics* 41 (1972), 699–715.",
       "url": "https://msp.org/pjm/1972/41-3/pjm-v41-n3-p10-s.pdf",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/oler-1961-inequality-geometry-of-numbers.pdf": {
-      "citation": "N. Oler, \u201cAn Inequality in the Geometry of Numbers,\u201d *Acta Mathematica* 105 (1961), 19\u201348.",
+      "citation": "N. Oler, “An Inequality in the Geometry of Numbers,” *Acta Mathematica* 105 (1961), 19–48.",
       "url": "https://doi.org/10.1007/BF02559533",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/vincze-1950-geometrical-extremum-problem.pdf": {
-      "citation": "Stephen Vincze, \u201cOn a Geometrical Extremum Problem,\u201d *Acta Scientiarum Mathematicarum (Szeged)* 12A (1950), 136\u2013142.",
+      "citation": "Stephen Vincze, “On a Geometrical Extremum Problem,” *Acta Scientiarum Mathematicarum (Szeged)* 12A (1950), 136–142.",
       "url": "https://acta.bibl.u-szeged.hu/13598/",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/boroczky-schnell-1998-asymptotic-shape-finite-packings.pdf": {
-      "citation": "K\u00e1roly B\u00f6r\u00f6czky Jr. and Uwe Schnell, \u201cAsymptotic Shape of Finite Packings,\u201d *Canadian Journal of Mathematics* 50 (1998), 16\u201328.",
+      "citation": "Károly Böröczky Jr. and Uwe Schnell, “Asymptotic Shape of Finite Packings,” *Canadian Journal of Mathematics* 50 (1998), 16–28.",
       "url": "https://geodesic.mathdoc.fr/articles/10.4153/CJM-1998-002-5/",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/wegner-1986-finite-circle-packings.pdf": {
-      "citation": "Gerd Wegner, \u201c\u00dcber endliche Kreispackungen in der Ebene,\u201d *Studia Scientiarum Mathematicarum Hungarica* 21 (1986), 1\u201328.",
+      "citation": "Gerd Wegner, “Über endliche Kreispackungen in der Ebene,” *Studia Scientiarum Mathematicarum Hungarica* 21 (1986), 1–28.",
       "url": "https://real-j.mtak.hu/5463/1/StudScientMath_21.pdf",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/boroczky-ruzsa-2007-wegner-inequality.pdf": {
-      "citation": "K\u00e1roly J. B\u00f6r\u00f6czky and Imre Z. Ruzsa, \u201cNote on an Inequality of Wegner,\u201d *Discrete & Computational Geometry* 37 (2007), 245\u2013249.",
+      "citation": "Károly J. Böröczky and Imre Z. Ruzsa, “Note on an Inequality of Wegner,” *Discrete & Computational Geometry* 37 (2007), 245–249.",
       "url": "https://dblp.org/rec/journals/dcg/BoroczkyR07",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/schurmann-2000-parametric-density-finite-circle-packings.pdf": {
-      "citation": "Achill Sch\u00fcrmann, \u201cOn Parametric Density of Finite Circle Packings,\u201d *Beitr\u00e4ge zur Algebra und Geometrie* 41 (2000), 329\u2013334.",
+      "citation": "Achill Schürmann, “On Parametric Density of Finite Circle Packings,” *Beiträge zur Algebra und Geometrie* 41 (2000), 329–334.",
       "url": "https://www.maths.tcd.ie/EMIS/journals/BAG/vol.41/no.2/3.html",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/erdenebaatar-ninjbat-2021-smallest-convex-k-gon.pdf": {
-      "citation": "Orgil-Erdene Erdenebaatar and Uuganbaatar Ninjbat, \u201cThe Smallest Convex `k`-gon Containing `n` Congruent Disks,\u201d *Elemente der Mathematik* 77 (2022), 122\u2013137.",
+      "citation": "Orgil-Erdene Erdenebaatar and Uuganbaatar Ninjbat, “The Smallest Convex `k`-gon Containing `n` Congruent Disks,” *Elemente der Mathematik* 77 (2022), 122–137.",
       "url": "https://ems.press/journals/em/articles/1121827",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/fejes-toth-kuperberg-kuperberg-1998-highly-saturated-packings.pdf": {
-      "citation": "G\u00e1bor Fejes T\u00f3th, Greg Kuperberg, and W\u0142odzimierz Kuperberg, \u201cHighly Saturated Packings and Reduced Coverings,\u201d *Monatshefte f\u00fcr Mathematik* 125 (1998), 127\u2013145.",
+      "citation": "Gábor Fejes Tóth, Greg Kuperberg, and Włodzimierz Kuperberg, “Highly Saturated Packings and Reduced Coverings,” *Monatshefte für Mathematik* 125 (1998), 127–145.",
       "url": "https://arxiv.org/abs/math/9511225",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/kuperberg-kuperberg-kuperberg-2004-gap-defects.pdf": {
-      "citation": "Greg Kuperberg, Krystyna Kuperberg, and W\u0142odzimierz Kuperberg, \u201cLattice Packings with Gap Defects Are Not Completely Saturated,\u201d *Beitr\u00e4ge zur Algebra und Geometrie* 45 (2004), 267\u2013273.",
+      "citation": "Greg Kuperberg, Krystyna Kuperberg, and Włodzimierz Kuperberg, “Lattice Packings with Gap Defects Are Not Completely Saturated,” *Beiträge zur Algebra und Geometrie* 45 (2004), 267–273.",
       "url": "https://arxiv.org/abs/math/0303366",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/bondarenko-hardin-saff-2012-mesh-ratios.pdf": {
-      "citation": "A. V. Bondarenko, D. P. Hardin, and E. B. Saff, \u201cMesh Ratios for Best-Packing and Limits of Minimal Energy Configurations,\u201d",
+      "citation": "A. V. Bondarenko, D. P. Hardin, and E. B. Saff, “Mesh Ratios for Best-Packing and Limits of Minimal Energy Configurations,”",
       "url": "https://arxiv.org/abs/1212.6211",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/gensane-2009-generation-optimal-packings.pdf": {
-      "citation": "Thierry Gensane, \u201cGeneration of Optimal Packings from Optimal Packings,\u201d *Electronic Journal of Combinatorics* 16(1) (2009), R24.",
+      "citation": "Thierry Gensane, “Generation of Optimal Packings from Optimal Packings,” *Electronic Journal of Combinatorics* 16(1) (2009), R24.",
       "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v16i1r24",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/graham-lubachevsky-1995-dense-equilateral-triangle-packings.pdf": {
-      "citation": "R. L. Graham and B. D. Lubachevsky, \u201cDense Packings of Equal Disks in an Equilateral Triangle: From 22 to 34 and Beyond,\u201d *Electronic Journal of Combinatorics* 2(1) (1995), A1.",
+      "citation": "R. L. Graham and B. D. Lubachevsky, “Dense Packings of Equal Disks in an Equilateral Triangle: From 22 to 34 and Beyond,” *Electronic Journal of Combinatorics* 2(1) (1995), A1.",
       "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v2i1a1",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/henk-wills-2021-packings-sausages-catastrophes.pdf": {
-      "citation": "Martin Henk and J\u00f6rg M. Wills, \u201cPackings, Sausages and Catastrophes,\u201d *Beitr\u00e4ge zur Algebra und Geometrie* 62 (2021), 265\u2013280.",
+      "citation": "Martin Henk and Jörg M. Wills, “Packings, Sausages and Catastrophes,” *Beiträge zur Algebra und Geometrie* 62 (2021), 265–280.",
       "url": "https://link.springer.com/article/10.1007/s13366-020-00502-x",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/boroczky-ruzsa-2007-note-on-wegner.pdf": {
-      "citation": "K\u00e1roly J. B\u00f6r\u00f6czky and Imre Z. Ruzsa, \u201cNote on an Inequality of Wegner,\u201d *Discrete & Computational Geometry* 37 (2007), 245\u2013249.",
+      "citation": "Károly J. Böröczky and Imre Z. Ruzsa, “Note on an Inequality of Wegner,” *Discrete & Computational Geometry* 37 (2007), 245–249.",
       "url": "https://dblp.org/rec/journals/dcg/BoroczkyR07",
       "rights": "external bibliographic link only; no redistribution authorization"
     }
@@ -35117,7 +35249,19 @@
       "call": "path.read_bytes()"
     }
   ],
-  "latest_source_main": "aa9b45669ce7200a99f6ec4c58e1e3c23a57387f",
+  "latest_source_main": "eb51394f371aee958b0d9332f80faf75ae694b9e",
   "closure_method": "manifest claims + canonical modules + complete task premises; local links, literal proof references, AST local imports/fixture paths; exact frozen private blob citations recovered; targeted mathematical incoming-edge review",
-  "limits": "Mechanical closure does not prove every implicit mathematical dependency; claim scopes and original proofs remain authoritative. Runtime reads are separately reviewed. Public tasks require only retained sources."
+  "limits": "Mechanical closure does not prove every implicit mathematical dependency; claim scopes and original proofs remain authoritative. Runtime reads are separately reviewed. Public tasks require only retained sources.",
+  "current_source_delta": {
+    "baseline": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+    "reviewed_source_main": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "selected_current_noncanonical_paths": [
+      "docs/reports/global_joint_stress_strain_phase_mechanism_2026-10-12.md",
+      "docs/reports/global_separable_distortion_obstruction_2026-10-12.md",
+      "research/verify_global_joint_phase_compatibility.py",
+      "research/verify_global_separable_distortion_obstruction.py"
+    ],
+    "selection_rationale": "PR #1005 preserved two useful, independently reproducible whole-source formal/obstruction reports; the historical run diary, administrative reconciliation record, and CI-only artifacts are not mathematical frontier inclusions.",
+    "status": "noncanonical; rights review remains pending"
+  }
 }
