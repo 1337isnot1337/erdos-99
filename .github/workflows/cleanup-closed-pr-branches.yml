@@ -1,0 +1,125 @@
+name: cleanup-closed-pr-head-branches
+
+# This workflow never checks out or executes code from a PR.
+# Closed includes both merged PRs and PRs closed without merging.
+on:
+  pull_request_target:
+    types: [closed]
+  # One-time reconciliation when the workflow first lands on main.
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/cleanup-closed-pr-branches.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: read
+
+concurrency:
+  group: cleanup-closed-pr-head-branches
+  cancel-in-progress: false
+
+jobs:
+  prune:
+    if: github.repository == '1337isnot1337/erdos-99'
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Delete safe closed PR head branches
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          GH_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          python3 - <<'PY'
+          import json
+          import os
+          from urllib.error import HTTPError
+          from urllib.parse import quote
+          from urllib.request import Request, urlopen
+
+          repo = os.environ["GH_REPO"]
+          default = os.environ["GH_DEFAULT_BRANCH"]
+          token = os.environ["GH_TOKEN"]
+          headers = {
+              "Authorization": f"Bearer {token}",
+              "Accept": "application/vnd.github+json",
+              "X-GitHub-Api-Version": "2022-11-28",
+          }
+
+          def api(path, method="GET"):
+              url = f"https://api.github.com/repos/{repo}/{path}"
+              request = Request(url, headers=headers, method=method)
+              with urlopen(request, timeout=20) as response:
+                  body = response.read()
+              return json.loads(body) if body else None
+
+          def pages(path):
+              page = 1
+              while True:
+                  suffix = "&" if "?" in path else "?"
+                  batch = api(f"{path}{suffix}per_page=100&page={page}")
+                  if not isinstance(batch, list):
+                      raise RuntimeError("Expected a paginated GitHub list")
+                  yield from batch
+                  if len(batch) < 100:
+                      break
+                  page += 1
+
+          # Closed PRs are the sole authority for removal eligibility.
+          closed_heads = {}
+          for pr in pages("pulls?state=closed"):
+              head = pr.get("head") or {}
+              head_repo = (head.get("repo") or {}).get("full_name")
+              if head_repo != repo:
+                  continue
+              ref, sha = head.get("ref"), head.get("sha")
+              if ref and sha:
+                  closed_heads.setdefault(ref, set()).add(sha)
+
+          # Protect branches still used as an open PR's head or base.
+          in_use = {default}
+          for pr in pages("pulls?state=open"):
+              base = pr.get("base") or {}
+              if base.get("ref"):
+                  in_use.add(base["ref"])
+              head = pr.get("head") or {}
+              if (head.get("repo") or {}).get("full_name") == repo:
+                  if head.get("ref"):
+                      in_use.add(head["ref"])
+
+          deleted = 0
+          for branch in pages("branches"):
+              name = branch.get("name")
+              if not name or name in in_use or branch.get("protected"):
+                  continue
+              sha = (branch.get("commit") or {}).get("sha")
+              if not sha or sha not in closed_heads.get(name, set()):
+                  continue
+
+              # Do not remove a reused or advanced branch after PR closure.
+              branch_path = "branches/" + quote(name, safe="")
+              try:
+                  current = api(branch_path)
+              except HTTPError as error:
+                  if error.code == 404:
+                      continue
+                  raise
+              current_sha = ((current or {}).get("commit") or {}).get("sha")
+              if current_sha != sha or current.get("protected"):
+                  continue
+
+              ref_path = "git/refs/heads/" + quote(name, safe="/")
+              try:
+                  api(ref_path, method="DELETE")
+              except HTTPError as error:
+                  if error.code == 404:
+                      continue
+                  raise
+              deleted += 1
+              print(f"Deleted closed-PR branch: {name}")
+
+          print(f"Deleted {deleted} branches. Unassociated, protected, "
+                "changed, default and open-PR branches were preserved.")
+          PY
