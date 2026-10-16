@@ -1,0 +1,95 @@
+{
+  "frozen_destination_baseline": {
+    "main_commit": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+    "main_tree": "66e596e4da875bab2bbdf4bacac51d17eeb2b466",
+    "repository": "https://github.com/1337isnot1337/erdos-99"
+  },
+  "frozen_source": {
+    "artifact_index_git_blob": "1eedefc916a982926b16b05cb6af9470c014b3e0",
+    "artifact_index_path": "docs/state/artifact-index.jsonl",
+    "artifact_index_sha256": "d912e77635d3838bf0e304a74cfd60e77318cd0d9996d1bec97c3da0992be67e",
+    "main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "main_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+    "repository": "https://github.com/1337isnot1337/e-99"
+  },
+  "outside_index_batch": {
+    "destination_branch": "research/source-main-g0050-boundary-stack-20261016",
+    "destination_commit": "0c84b9a",
+    "destination_pr": 34,
+    "name": "source-main-g0050-atomic-gap-2026-10-16",
+    "note": "Coordinator-preserved work is supplementary and outside these 813 indexed docs/reports paths.",
+    "overlap_with_frozen_813": 0,
+    "source_main_paths": 10
+  },
+  "schema_version": "erdos99-frozen-target-c-report-shards/v1",
+  "selection_rule": "unique source artifact-index rows where target=target-c and indexed path is absent from the frozen destination baseline tree; sorted lexicographically by path",
+  "shard_ranges_are_zero_based_and_inclusive": true,
+  "shards": [
+    {
+      "count": 163,
+      "first_path": "docs/reports/target_c_2connected_strict_kalmanson_affine_kernel_2026-09-05.md",
+      "indexes_inclusive": [
+        0,
+        162
+      ],
+      "last_path": "docs/reports/target_c_cyclic_interior_diameter_descent_2026-09-09.md",
+      "ledger_path": "docs/research/migration/2026-10-16/shards/shard-1.jsonl",
+      "ledger_sha256": "bf5c3d145fa5e63ac9b346311206f93730a4d55f844c0262d16c82bed84267e8",
+      "shard": 1,
+      "worker_import_count": 163
+    },
+    {
+      "count": 163,
+      "first_path": "docs/reports/target_c_cyclic_isostatic_body_bar_reduction_2026-09-09.md",
+      "indexes_inclusive": [
+        163,
+        325
+      ],
+      "last_path": "docs/reports/target_c_fixed_star_common_witness_pairs_2026-10-01.md",
+      "ledger_path": "docs/research/migration/2026-10-16/shards/shard-2.jsonl",
+      "ledger_sha256": "6f5c6f084d0b285c90026f4edf79e0aa2766f729020f87b8cc39e556f24127b6",
+      "shard": 2,
+      "worker_import_count": 163
+    },
+    {
+      "count": 163,
+      "first_path": "docs/reports/target_c_fixed_star_stress_light_cusps_2026-10-01.md",
+      "indexes_inclusive": [
+        326,
+        488
+      ],
+      "last_path": "docs/reports/target_c_neardisk_reciprocal_perimeter_2026-09-09.md",
+      "ledger_path": "docs/research/migration/2026-10-16/shards/shard-3.jsonl",
+      "ledger_sha256": "904e474ab5a885c2f2f01239ff4f3122a620d49b91a39fc28604b32cde2464b8",
+      "shard": 3,
+      "worker_import_count": 163
+    },
+    {
+      "count": 162,
+      "first_path": "docs/reports/target_c_nearzero_diameter_geodesic_strip_2026-09-09.md",
+      "indexes_inclusive": [
+        489,
+        650
+      ],
+      "last_path": "docs/reports/target_c_singleton_star_response_stress_2026-09-09.md",
+      "ledger_path": "docs/research/migration/2026-10-16/shards/shard-4.jsonl",
+      "ledger_sha256": "f3cb5b66c363c7689d2acdd05483990ba447c4d377db6b127f10b02f3aa8170c",
+      "shard": 4,
+      "worker_import_count": 162
+    },
+    {
+      "count": 162,
+      "first_path": "docs/reports/target_c_six_endpoint_kalmanson_closure_2026-08-31.md",
+      "indexes_inclusive": [
+        651,
+        812
+      ],
+      "last_path": "docs/reports/target_c_zs_strict_terminal_cut_domination_2026-09-09.md",
+      "ledger_path": "docs/research/migration/2026-10-16/shards/shard-5.jsonl",
+      "ledger_sha256": "abbb7d29fb893e5d7b48c2eff7655984fd0bf18b34119dc2605f2a5ce469112a",
+      "shard": 5,
+      "worker_import_count": 162
+    }
+  ],
+  "total_missing_paths": 813
+}
