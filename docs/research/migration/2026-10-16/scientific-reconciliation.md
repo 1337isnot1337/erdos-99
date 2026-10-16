@@ -327,3 +327,75 @@ cover this navigation addition. The source report says computation was
 not used and provides no finite verifier for its asymptotic claims; the
 canonical certificate replay validates only already registered destination
 premises. The destination remains private and Gate 2 is not claimed.
+
+
+## Sixth batch — frozen source PR #948 and retained-copy privacy reconciliation
+
+The source baseline remains `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`
+(tree `e061f039eac44c286a00eacdcaa9a4cbbb877891`). Source PR #948 is open
+at head `b7376d13b81e542055c5c904bf81bdaf1beb7b9e` (tree
+`4d2357368d1a2fa71b318741bf263e9aad342f8a`), with merge base
+`d999528cfaafd811a4a19bcfacd00f217c2fc375` (tree
+`4eff9ef7cd946225c5810ba23c1f0012a2c77355`). The destination batch starts
+from `a10c36842bcd60442f87345ef45e62112faa8c63` (tree
+`b631245c34871a3508089b90ec184235a726777a`).
+
+The frozen PR diff has 23 paths: seven mathematical reports, seven verifiers,
+seven JSON outputs, the generated source artifact index, and `research/README.md`.
+All seven reports were already present at the same destination paths. Exact
+line comparison found that each proof body differed only in the publication
+transformation from a direct source-PR URL to an internal provenance link,
+except for the two historical hosted-CI paragraphs described below. The seven
+verifier scripts and seven JSON outputs are exact Git-blob duplicates of the
+frozen PR head. They were therefore recorded as duplicates or already fully
+represented; none was blindly overwritten. The source artifact-index update
+was replaced by the destination-generated index. The source README was not
+copied wholesale; its PR-948 mathematical summaries and verifier limits are
+preserved in the focused [quarter-fold/bent-array research track](../../tracks/target-c-quarter-folds-bent-arrays.md).
+
+The final PR head also retains two proof-scope clarifications from its history.
+Commit `62ad4278120750dba98b13e468e5698e81fe1153` adds the loaded-port
+three-contact sign pattern, states that simultaneous feasibility is not shown,
+and records that isolate coordinates stay fixed in the reduced rank argument.
+Commit `ff83fd52` replaces the earlier weak-dual connectivity explanation with
+a curve-through-bounded-faces proof for a 2-connected plane graph. Both
+clarifications are already present in the destination report copies. The
+source head history was checked; no separate historical report revision with
+a distinct retained theorem or counterexample was found.
+
+The research track and seven new registry records describe: (1) convex-face
+and eight-face quarter-fold restrictions; (2) deep-face persistence and
+isolate-deficit transport; (3) rigid-cycle persistence and the conditional
+positive pinned-stress certificate; (4) exclusion of nonconstant large faces
+at a feasible full-source quarter-fold; (5) the four-unit rhombic dual-defect
+identity and complete-array pair involution; (6) the actual diameter-forest
+theorem for complete bent arrays; and (7) linear external boundary attachment
+for macroscopic complete arrays. The registry links each claim to its report,
+verifier, fixture, canonical inputs, scope limits, and next obligation. All
+seven remain **unreviewed**; theorem-state is unchanged. The essential global
+bridge remains extraction of the actual complete macroscopic array or a
+source-realized full-source endpoint with every lower/upper pair and isolate
+retained. Neither branch closes C-II or Level I.
+
+Each of the seven destination scripts was rerun against its already-present
+source-identical file and exited zero. The exact finite scope is listed in the
+track. These checks validate their declared finite arithmetic only; they do not
+certify globality, universal compactness, endpoint existence, or asymptotic
+claims by enumeration.
+
+A release-safety sweep removed historical account-specific hosted-CI billing
+explanations from the two PR-948 reports that contained them and from two
+already-retained first-party reports, one source-main file and one report at
+the frozen PR-952 head. The mathematical claims and local-check outcomes were
+retained. Source blobs and SHA-256 hashes remain in the inclusion manifest and
+per-file ledgers; only the public-copy hashes changed. PR #952 remains queued
+for its full 16-path comparison; its affected report row is explicitly marked
+as retained and release-redacted pending that review. The source-main
+seed090 row likewise records the existing copy and keeps its cross-target
+mathematical reconciliation queued. The authorized inclusion set remains
+810 entries.
+
+No canonical dependency, theorem status, registered certificate, or repository
+visibility changed. The source remains frozen at its recorded main SHA; all 21
+source PR head SHAs still match the recorded open-PR inventory. The destination
+remains private. Publication Gate 2 is not claimed and Gate 3 was not requested.

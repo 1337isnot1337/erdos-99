@@ -77,3 +77,8 @@ C-II obligation is to extract a suitable source configuration and pay the
 population deficit by changing guards, using outside capacity, or constructing
 a nonlocal same-cardinality replacement. None of these imported candidates
 changes the canonical endpoint or theorem-state.
+
+
+## Quarter-fold endpoints and complete bent arrays
+
+Source PR #948 narrows two conditional routes. Under a full-source feasible exact-graph quarter-fold, the unreviewed candidates force constant signs on large faces and give persistence/occupancy restrictions for rigid faces. A separate complete-array route derives an actual diameter-forest classification and a linear external boundary-attachment theorem for macroscopic arrays. The math reports, exact finite verifiers, and their limits are linked in the [quarter-fold/bent-array track](tracks/target-c-quarter-folds-bent-arrays.md) and [candidate registry](../targets/target-c/candidate-registry.json). The needed source extraction or full-source feasible endpoint remains unproved; no C-II or Level I status changes.

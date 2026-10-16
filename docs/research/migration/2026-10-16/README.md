@@ -1,6 +1,6 @@
 # Erdős #99 source research migration
 
-**Overall migration status: INCOMPLETE.** Exact source and destination baselines are frozen under the baseline directory. Source-main audit batch 1 merged as PR #19; the PR #1008 population-reserve candidate merged as PR #20; the PR #951 vacancy-release batch merged as destination PR #21 at `53527e354fd545325744f828c93278bcf6437bd4` (tree `399b0e3407cd36721dd2361bd4cc9aa3ccfcd61a`); and the PR #947 audit batch merged as destination PR #22 at `73bbc4ae4bf65ce6a02fcc2c4bde33b31124e742` (tree `54713dc034018b862dc0aa69c85a921540dd5a2e`). The source PR #950 integration batch is based on that exact destination tree. The 826 still-missing source-main reports, bulk research tree, most open-PR additions, and historical PR work remain queued.
+**Overall migration status: INCOMPLETE.** Exact source and destination baselines are frozen under the baseline directory. Source-main audit batch 1 merged as PR #19; the PR #1008 population-reserve candidate merged as PR #20; the PR #951 vacancy-release batch merged as destination PR #21 at `53527e354fd545325744f828c93278bcf6437bd4` (tree `399b0e3407cd36721dd2361bd4cc9aa3ccfcd61a`); and the PR #947 audit batch merged as destination PR #22 at `73bbc4ae4bf65ce6a02fcc2c4bde33b31124e742` (tree `54713dc034018b862dc0aa69c85a921540dd5a2e`). Source PR #950 merged as destination PR #23 at `a10c36842bcd60442f87345ef45e62112faa8c63` (tree `b631245c34871a3508089b90ec184235a726777a`). The current PR #948 reconciliation batch is based on that exact destination tree. The 826 still-missing source-main reports, bulk research tree, most open-PR additions, and historical PR work remain queued.
 
 ## Open source PR batch — #1008 population reserve
 
@@ -97,6 +97,37 @@ not validate its new analytic claims. The current Target C prompt was already
 in the owner-authorized inclusion set; its public SHA-256 is refreshed for this
 navigation addition, with the 810-entry membership unchanged.
 
+## Source PR #948 — quarter-fold endpoints and complete bent arrays
+
+Source main is frozen at `42f0296d1aca068c809f74cee5dcdb4ebdb27c73` (tree
+`e061f039eac44c286a00eacdcaa9a4cbbb877891`). Source PR #948 is open and
+non-draft at `b7376d13b81e542055c5c904bf81bdaf1beb7b9e` (tree
+`4d2357368d1a2fa71b318741bf263e9aad342f8a`), with merge base
+`d999528cfaafd811a4a19bcfacd00f217c2fc375` (tree
+`4eff9ef7cd946225c5810ba23c1f0012a2c77355`). The destination batch starts at
+`a10c36842bcd60442f87345ef45e62112faa8c63` (tree
+`b631245c34871a3508089b90ec184235a726777a`).
+
+The PR changes 23 paths. Content reconciliation found all seven proof reports,
+all seven exact verifiers, and all seven JSON fixtures already present in the
+destination. The report math matches the pinned source exactly after the
+existing source-PR link adaptation; two historical account-billing notes were
+removed for release safety, with the original source blob and SHA-256 retained.
+The scripts and fixtures are byte-identical. The source artifact-index change
+is not copied; the destination index is rebuilt. The source README’s research
+summary is adapted into the [quarter-fold/bent-array track](../../tracks/target-c-quarter-folds-bent-arrays.md)
+rather than replacing the curated destination catalog.
+
+Seven candidate-registry entries now connect the proofs, exact finite
+verifiers, fixtures, canonical dependencies, limits, and next proof
+obligations. All claims remain unreviewed. The seven finite verifiers reran
+with exit status zero; their finite outputs do not certify the universal
+analytic arguments or an endpoint. The source README itself was not copied as
+a whole. The [per-file ledger](ledger/source-pr-files.jsonl) records all 23
+source paths, plus the release-safety transformations for retained reports
+from source main and PR #952. The [scientific reconciliation](scientific-reconciliation.md)
+records the full content comparison and authority boundary.
+
 ## Frozen repositories
 
 - Source main: `42f0296d1aca068c809f74cee5dcdb4ebdb27c73` (tree `e061f039eac44c286a00eacdcaa9a4cbbb877891`).
@@ -115,6 +146,6 @@ The source Target C artifact index has 1,287 rows: 83 missing audits and two lin
 
 The 2,707 source-main C research files, 157 route documents, and shared candidates are inventoried in [`ledger/source-main-files.jsonl`](ledger/source-main-files.jsonl). Of the research files, 2,536 other files are queued, 152 are exact destination duplicates, and two of 19 linked dependencies are integrated here; the remaining 17 linked dependencies and all other route files retain explicit queued or duplicate dispositions.
 
-The pinned source inventory contains 21 open PR heads. PRs #947 and #951 are reconciled as destination batches, and PR #950 is the current content-level integration batch. PRs #948, #952, and #955–#960 remain queued for separate comparison.
+The pinned source inventory contains 21 open PR heads. PRs #947, #948, #950, and #951 are reconciled as destination batches. PR #952 has one already-included report release-redacted; its remaining 15 changed paths and complete content comparison remain queued. PRs #955–#960 remain queued for separate comparison.
 
 Source lifecycle labels are provenance only. The destination theorem-state remains authoritative. No theorem is promoted by this import. Historical versions are visibly distinguished, including the earlier inverse-phase audit that asserts a global `K'/D`-Lipschitz chart and `q=O(D^(4/5))`; those inferences were withdrawn and must not be used as premises.

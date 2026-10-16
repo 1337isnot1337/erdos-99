@@ -18,6 +18,8 @@ A surviving outer-to-bounded or bounded-to-bounded train/face system needs a fin
 
 Quarter-fold results restrict nonconstant endpoint-feasible eight-faces to the $2,2,2,2$ pattern and control the transformed hull and conditional isolate population. The area infimum is exactly $2\sqrt3$, so no uniform excess may be inserted. Population transfer under preserved contact graph/face embedding does not construct an endpoint, track all labels, bound outside capacity or establish diameter feasibility. Consult the exact entries and independent audits before combining these hypotheses.
 
+Source PR #948 preserves seven additional unreviewed proofs on feasible quarter-fold endpoints, deep-face/rigid-cycle persistence, the rhombic four-unit defect, and complete bent arrays. The exact complete-array route yields an actual diameter forest and a conditional linear external-boundary attachment theorem; neither extracts that array from a general C-II survivor. The [quarter-fold/bent-array research track](../../research/tracks/target-c-quarter-folds-bent-arrays.md) gives all seven proofs, verifiers, candidate records, and remaining bridges. The claims remain unreviewed; C-II stays open.
+
 ## Macroscopic-container restoration
 
 A macroscopic inactive container needs an arbitrary-container full-source packet/capacity theorem or a moved-core strict-diameter construction with cardinality restoration. Strict fixed-wall capacity barriers and occupied-cap internal-wall results rule out specified local surplus arguments. They do not prohibit every movable-wall or cross-cell architecture.

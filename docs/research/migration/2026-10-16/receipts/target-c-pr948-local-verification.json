@@ -1,0 +1,83 @@
+{
+  "schema_version": "erdos-99-local-migration-verification/v1",
+  "recorded_at_utc": "2026-10-16T09:35:47Z",
+  "verification_subject": {
+    "destination_repository": "https://github.com/1337isnot1337/erdos-99",
+    "destination_pr": 24,
+    "branch": "research/target-c-pr948-candidate-frontier-20261016",
+    "payload_commit": "bd8ec7b33f21d45cab97fa0e332bf58b97eb1570",
+    "payload_tree": "64e2b73778324ba6e5960bef9e46382123366b08",
+    "base_main_commit": "a10c36842bcd60442f87345ef45e62112faa8c63",
+    "base_main_tree": "b631245c34871a3508089b90ec184235a726777a"
+  },
+  "frozen_source": {
+    "repository": "https://github.com/1337isnot1337/e-99",
+    "main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "main_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+    "pull_request": 948,
+    "pull_request_head": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+    "pull_request_tree": "4d2357368d1a2fa71b318741bf263e9aad342f8a",
+    "pull_request_base": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "merge_base": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+    "merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+    "changed_source_paths": 23,
+    "ledger_rows": 23,
+    "ledger": "docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl",
+    "ledger_result": "PASS; frozen diff path set matches all 23 rows; source Git blobs and SHA-256 plus destination Git blobs and SHA-256 verified",
+    "candidate_registry_records": 7,
+    "candidate_registry_artifact_references": 21,
+    "candidate_registry_hashes_and_scope": "PASS; all report, verifier, and fixture hashes match the ledger; records remain unreviewed",
+    "source_pr_state_at_freeze": "OPEN at pinned head",
+    "intermediate_history_review": "PASS; loaded-port sign and fixed-isolate scope clarification in 62ad4278120750dba98b13e468e5698e81fe1153 and weak-dual connectivity proof correction in ff83fd52 are present in final report copies"
+  },
+  "research_integration": {
+    "all_seven_source_reports_already_represented": true,
+    "all_fourteen_verifier_and_fixture_files_exact_duplicates": true,
+    "source_index": "Regenerated destination index; 540 artifacts",
+    "source_readme": "Mathematical summaries and verifier limits mapped into docs/research/tracks/target-c-quarter-folds-bent-arrays.md",
+    "claims": [
+      "Convex-face and eight-face quarter-fold restrictions",
+      "Deep-face persistence and isolate-deficit transport",
+      "Rigid-cycle persistence and conditional pinned-stress certificates",
+      "Exclusion of nonconstant large faces at a feasible full-source quarter-fold",
+      "Four-unit rhombic dual-defect identity and complete-array pair involution",
+      "Actual diameter-forest theorem for complete bent arrays",
+      "Linear external boundary attachment for macroscopic complete arrays"
+    ],
+    "validation_scope": "Seven finite verifiers exited zero; checks establish only each program's declared finite scope, not universal analytic claims or global optimality.",
+    "source_status_promotions_adopted": false,
+    "theorem_state_changed": false,
+    "target_c_status": "C-II and Level I remain OPEN"
+  },
+  "commands": [
+    {"command": "python3 tools/check_theorem_state.py", "result": "PASS"},
+    {"command": "python3 tools/build_artifact_index.py", "result": "PASS; 540 artifacts"},
+    {"command": "python3 tools/check_public.py", "result": "PASS; zero errors; mathematical_proof=false; 94 certificates, 451 claims, 845 edges, 810 retained source files, 20 tasks"},
+    {"command": "python3 -m tools.test_public_proof_graph", "result": "PASS; 3 tests"},
+    {"command": "python3 tools/run_theorem_certificates.py", "result": "PASS on payload commit bd8ec7b33f21d45cab97fa0e332bf58b97eb1570; all 94 selected of 94 unique certificates; zero failures"},
+    {"command": "Seven PR948 verifier scripts named by docs/research/tracks/target-c-quarter-folds-bent-arrays.md", "result": "PASS; each process exited zero on its retained finite fixture"},
+    {"command": "Frozen source PR path, Git blob, SHA-256, destination blob, and SHA-256 audit; candidate registry dependency and artifact audit", "result": "PASS; all 23 changed paths accounted for; seven candidate records and 21 artifact references verified"},
+    {"command": "git diff --check", "result": "PASS"},
+    {"command": "Scoped privacy scan of retained reports and new track", "result": "PASS; no account-specific CI billing text, local infrastructure paths, or credential patterns found"}
+  ],
+  "hosted_actions": {
+    "destination_pr": 24,
+    "observed_head": "bd8ec7b33f21d45cab97fa0e332bf58b97eb1570",
+    "run_id": "38881513025",
+    "url": "https://github.com/1337isnot1337/erdos-99/actions/runs/38881513025",
+    "workflow": "public-research-integrity",
+    "jobs": {"plan": "SKIPPED", "replay": "SKIPPED"},
+    "steps_executed": false,
+    "reason": "Both jobs completed skipped with empty step lists; no hosted CI pass is claimed."
+  },
+  "theorem_and_release_status": {
+    "theorem_state": "2026-10-15.publication.2; unchanged",
+    "registered_certificate_set_changed": false,
+    "publication_inclusion_membership_changed": false,
+    "publication_inclusion_retained_source_files": 810,
+    "publication_hashes_updated_for_release_safe_report_copy_changes": true,
+    "repository_visibility": "private",
+    "gate_2": "NOT RUN; source research migration is incomplete",
+    "gate_3": "NOT REQUESTED; repository remains private"
+  }
+}

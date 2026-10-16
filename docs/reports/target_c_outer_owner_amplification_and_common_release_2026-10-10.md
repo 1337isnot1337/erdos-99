@@ -459,10 +459,8 @@ all 22 theorem-state/PR/route checker unit tests, Ruff check/format, and the
 full branch whitespace check passed locally. Generated artifact metadata
 registers this report as unreviewed. No canonical theorem dependency or state
 version was changed; the registered canonical certificate suite was not
-rerun for this candidate-only change. GitHub run 38095690774 had no executed
-steps: its annotation says the job did not start because account payments
-failed or the spending limit needs increasing. This external CI failure is
-not a mathematical audit result. Main remained at the recorded SHA/state and
+rerun for this candidate-only change. The historical hosted run executed zero steps; local results above are
+reported separately. Main remained at the recorded SHA/state and
 PR #947 remained open, so no pending claims from it were imported.
 
 ## 7. Candidate IM: stress-imbalanced owners have a concentrated loaded port

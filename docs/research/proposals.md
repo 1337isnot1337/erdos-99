@@ -71,6 +71,8 @@ Head `b7376d13b81e542055c5c904bf81bdaf1beb7b9e`; **unreviewed**.
 - [verify_target_c_rhombic_dual_defect_2026_10_10.py](../../research/verify_target_c_rhombic_dual_defect_2026_10_10.py)
 - [verify_target_c_rigid_cycle_pinned_stress_2026_10_10.py](../../research/verify_target_c_rigid_cycle_pinned_stress_2026_10_10.py)
 
+The seven reports and their exact verifiers were already present in the destination. Content comparison found identical mathematical bodies after the existing internal-provenance-link transformation; all fourteen verifier and fixture files are byte-identical to the frozen source. The [quarter-fold and bent-array track](tracks/target-c-quarter-folds-bent-arrays.md) adds the candidate-by-candidate hypotheses, finite-check scopes, and exact next obligations. Seven machine-readable unreviewed records are in the [candidate registry](../targets/target-c/candidate-registry.json); every source path has a disposition in the migration ledger.
+
 ## Source proposal 950 — train returns, shared grids, and rigidity-forced linkage
 
 Source head `cbf066bb7489115559bcda34f9f810a1d78826ce`; **unreviewed**.

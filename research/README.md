@@ -108,3 +108,8 @@ independent attachment-to-grid linkage. The two linkage endpoint sets may be
 disjoint; no stress-weighted payment or finite competitor follows. The prior
 source proof revision's endpoint-cut defect and its repair are recorded
 explicitly. Nothing is promoted in destination theorem-state.
+
+
+## Source PR #948 — quarter-fold and complete bent-array routes
+
+The seven mathematical reports, their seven exact finite verifiers, and seven JSON outputs were already present in the destination. The [focused research track](../docs/research/tracks/target-c-quarter-folds-bent-arrays.md) reconciles the proof scopes, finite-evidence limits, and missing endpoint/extraction bridges. All seven claims remain unreviewed and outside theorem-state. See the [candidate registry](../docs/targets/target-c/candidate-registry.json) and [per-file migration ledger](../docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl).
