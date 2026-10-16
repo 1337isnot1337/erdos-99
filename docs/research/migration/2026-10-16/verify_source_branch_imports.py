@@ -27,6 +27,54 @@ def blob(repo: Path, ref: str, path: str) -> str | None:
     return result.stdout.strip() if result.returncode == 0 else None
 
 
+def verify_active_baseline(source: Path, destination: Path, errors: list[str]) -> None:
+    base = Path(__file__).resolve().parent / "baseline"
+    pin_path = base / "active-run-baseline-2026-10-16.json"
+    try:
+        pin = json.loads(pin_path.read_text())
+    except (OSError, json.JSONDecodeError) as exc:
+        errors.append(f"cannot read active run baseline: {exc}")
+        return
+    for label, repo, manifest_base in (
+        ("source", source, base),
+        ("destination", destination, base),
+    ):
+        record = pin.get("repositories", {}).get(label, {})
+        sha = record.get("main_sha", "")
+        try:
+            if git(repo, "rev-parse", f"{sha}^{{tree}}") != record.get("main_tree"):
+                errors.append(f"active {label} main tree does not match run baseline")
+            actual = git(repo, "ls-tree", "-r", "--name-only", sha) + "\n"
+        except subprocess.CalledProcessError:
+            errors.append(f"active {label} main commit is unavailable")
+            continue
+        manifest_path = manifest_base / record.get("main_manifest_path", "")
+        try:
+            manifest = manifest_path.read_text()
+        except OSError:
+            errors.append(f"active {label} tracked-file manifest is missing")
+            continue
+        if hashlib.sha256(manifest.encode()).hexdigest() != record.get("main_manifest_sha256"):
+            errors.append(f"active {label} tracked-file manifest hash differs from baseline")
+        if len(manifest.splitlines()) != record.get("main_tracked_paths"):
+            errors.append(f"active {label} tracked-file manifest count differs from baseline")
+        if manifest != actual:
+            errors.append(f"active {label} tracked-file manifest differs from the frozen main tree")
+        prs = record.get("open_prs", {})
+        pr_path = manifest_base / prs.get("inventory_path", "")
+        try:
+            pr_data = pr_path.read_bytes()
+            pr_document = json.loads(pr_data)
+        except (OSError, json.JSONDecodeError):
+            errors.append(f"active {label} open-PR snapshot is unreadable")
+            continue
+        if hashlib.sha256(pr_data).hexdigest() != prs.get("inventory_sha256"):
+            errors.append(f"active {label} open-PR snapshot hash differs from baseline")
+        pr_rows = pr_document.get("open_prs", []) if isinstance(pr_document, dict) else pr_document
+        if len(pr_rows) != prs.get("count"):
+            errors.append(f"active {label} open-PR count differs from baseline")
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--source-repo", type=Path, required=True)
@@ -45,6 +93,7 @@ def main(argv: list[str] | None = None) -> int:
     destination = args.destination.resolve()
     ledger = args.ledger.resolve()
     errors: list[str] = []
+    verify_active_baseline(source, destination, errors)
     try:
         rows = [json.loads(line) for line in ledger.read_text().splitlines() if line]
     except (OSError, json.JSONDecodeError) as exc:
@@ -236,7 +285,7 @@ def main(argv: list[str] | None = None) -> int:
         f"{counts.get('exact_duplicate', 0)} exact duplicates, "
         f"{counts.get('integrated_as_active_noncanonical_research', 0)} byte-exact imports, "
         f"{len(files) - counts.get('exact_duplicate', 0) - counts.get('integrated_as_active_noncanonical_research', 0)} metadata/navigation treatments; "
-        "source and destination blob/SHA-256 identities verified"
+        "source and destination blob/SHA-256 identities verified; active main manifests and open-PR snapshots match the frozen baseline"
     )
     return 0
 

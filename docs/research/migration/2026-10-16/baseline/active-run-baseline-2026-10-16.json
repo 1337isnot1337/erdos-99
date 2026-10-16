@@ -1,5 +1,5 @@
 {
-  "captured_at_utc": "2026-10-16T15:12:24+00:00",
+  "captured_at_utc": "2026-10-16T15:19:01+00:00",
   "historical_baseline_note": "baseline.json and destination-tracked-files.txt retain a prior corpus snapshot whose destination SHA differs from this active migration base. They are preserved as historical records; this active-run baseline pins current main refs.",
   "repositories": {
     "destination": {
@@ -13,7 +13,8 @@
       "open_prs": {
         "count": 0,
         "inventory_path": "destination-open-prs-observed-2026-10-16.json",
-        "inventory_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+        "inventory_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+        "last_confirmed_at_utc": "2026-10-16T15:19:01+00:00"
       },
       "repository": "https://github.com/1337isnot1337/erdos-99",
       "visibility": "PRIVATE",
@@ -32,7 +33,8 @@
         "count": 21,
         "heads_match_at_capture": true,
         "inventory_path": "source-open-prs-observed-2026-10-16.json",
-        "inventory_sha256": "90f88718aeae38a12a6b2c6e6cbc1e8ffa28853efeea4aecaf3316a2152a8e17"
+        "inventory_sha256": "dcdbd79757d3b447077b09d57707905415354762bc0030fe224a3490c7ee4edc",
+        "last_confirmed_at_utc": "2026-10-16T15:19:01+00:00"
       },
       "relevant_source_only_branch": {
         "branch": "research/sol/target-c-level1-gpt61-2026-10-04",

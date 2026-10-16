@@ -1,6 +1,6 @@
 {
-  "captured_at_utc": "2026-10-16T06:33:19.744390+00:00",
-  "note": "Supplemental live open-PR observation; does not move the frozen source-main migration baseline.",
+  "captured_at_utc": "2026-10-16T15:19:01+00:00",
+  "note": "Fresh live open-PR observation; exact head OIDs were rechecked at active-run-baseline capture and matched this inventory. It does not move the frozen source-main migration baseline.",
   "observed_source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
   "open_prs": [
     {
