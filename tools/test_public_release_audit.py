@@ -7,6 +7,7 @@ from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from tools.audit_public_release import audit
 
@@ -53,6 +54,7 @@ class ReleaseAuditFixtures(unittest.TestCase):
         """Write the real owner-record schema for a one-file synthetic manifest."""
         manifest_path = "docs/publication/inclusion.json"
         blob = self.git("hash-object", manifest_path).stdout.decode("ascii").strip()
+        self.approved_manifest_blob = blob
         manifest = json.loads((self.root / manifest_path).read_text())
         entries = manifest["entries"]
         attestation = {
@@ -83,11 +85,18 @@ class ReleaseAuditFixtures(unittest.TestCase):
         self.write("docs/publication/owner-rights-authorization.json",
                    json.dumps(attestation, indent=2) + "\n")
 
+    def audit_authorized(self):
+        # Fixtures are intentionally tiny; simulate the fixed manifest SHA in this
+        # test only. Production keeps the immutable 810-entry Git blob hard-pinned.
+        with patch("tools.audit_public_release.OWNER_APPROVED_MANIFEST_BLOB",
+                   self.approved_manifest_blob):
+            return audit(self.root)
+
     def test_manifest_pinned_owner_authorization_clears_pending_source_rights(self):
         self.set_owner_attestation()
         self.git("add", "-A")
         self.git("commit", "-qm", "record original-source owner grant")
-        result = audit(self.root)
+        result = self.audit_authorized()
         self.assertEqual(result["status"], "STRUCTURAL_PRECHECK_PASSED", result["blockers"])
         self.assertEqual(result["counts"].get("owner_attested_pending_source_records"), 1)
         self.assertEqual(result["counts"].get("pending_rights_reviews", 0), 0)
@@ -102,7 +111,7 @@ class ReleaseAuditFixtures(unittest.TestCase):
         self.write(path, json.dumps(changed))
         self.git("add", "-A")
         self.git("commit", "-qm", "mutate manifest after authorization")
-        kinds = {v["kind"] for v in audit(self.root)["blockers"]}
+        kinds = {v["kind"] for v in self.audit_authorized()["blockers"]}
         self.assertIn("unverified-owner-rights-record", kinds)
         self.assertIn("rights-clearance-pending", kinds)
 
@@ -110,7 +119,7 @@ class ReleaseAuditFixtures(unittest.TestCase):
         self.set_owner_attestation(exceptions=["reports/current.md"])
         self.git("add", "-A")
         self.git("commit", "-qm", "declare unlicensed external exception")
-        kinds = {v["kind"] for v in audit(self.root)["blockers"]}
+        kinds = {v["kind"] for v in self.audit_authorized()["blockers"]}
         self.assertIn("unverified-owner-rights-record", kinds)
         self.assertIn("rights-clearance-pending", kinds)
 
@@ -119,13 +128,13 @@ class ReleaseAuditFixtures(unittest.TestCase):
         self.git("config", "user.email", "cinnajdavis@gmail.com")
         self.git("add", "-A")
         self.git("commit", "-qm", "owner-provided rights and email permission")
-        result = audit(self.root)
+        result = self.audit_authorized()
         self.assertEqual(result["status"], "STRUCTURAL_PRECHECK_PASSED", result["blockers"])
         self.assertGreater(result["counts"].get("owner_authorized_git_email_occurrences", 0), 0)
 
         self.git("config", "user.email", "independent-person@example.org")
         self.git("commit", "--allow-empty", "-qm", "other contributor is not covered")
-        kinds = {v["kind"] for v in audit(self.root)["blockers"]}
+        kinds = {v["kind"] for v in self.audit_authorized()["blockers"]}
         self.assertIn("personal-git-email", kinds)
 
     def test_auth_record_cannot_expand_email_consent_unilaterally(self):
@@ -133,7 +142,7 @@ class ReleaseAuditFixtures(unittest.TestCase):
         self.git("config", "user.email", "independent-person@example.org")
         self.git("add", "-A")
         self.git("commit", "-qm", "unsupported author email")
-        kinds = {v["kind"] for v in audit(self.root)["blockers"]}
+        kinds = {v["kind"] for v in self.audit_authorized()["blockers"]}
         self.assertIn("personal-git-email", kinds)
 
     def test_owner_rights_attestation_never_waives_secrets(self):
@@ -141,8 +150,27 @@ class ReleaseAuditFixtures(unittest.TestCase):
         self.write("reports/token.txt", "ghp_" + "A" * 36)
         self.git("add", "-A")
         self.git("commit", "-qm", "unsafe synthetic credential")
-        kinds = {v["kind"] for v in audit(self.root)["blockers"]}
+        kinds = {v["kind"] for v in self.audit_authorized()["blockers"]}
         self.assertIn("historical-credential-indicator", kinds)
+
+    def test_retargeting_both_manifest_and_record_cannot_expand_scope(self):
+        self.set_owner_attestation()
+        self.git("add", "-A")
+        self.git("commit", "-qm", "record narrowly scoped grant")
+        path = "docs/publication/inclusion.json"
+        changed = json.loads((self.root / path).read_text())
+        changed["post_authorization_change"] = "new contents"
+        self.write(path, json.dumps(changed))
+        record_path = "docs/publication/owner-rights-authorization.json"
+        record = json.loads((self.root / record_path).read_text())
+        record["source_manifest"]["git_blob_sha"] = self.git(
+            "hash-object", path).stdout.decode("ascii").strip()
+        self.write(record_path, json.dumps(record))
+        self.git("add", "-A")
+        self.git("commit", "-qm", "try to broaden grant to a different manifest")
+        kinds = {v["kind"] for v in self.audit_authorized()["blockers"]}
+        self.assertIn("unverified-owner-rights-record", kinds)
+        self.assertIn("rights-clearance-pending", kinds)
 
     def test_pending_rights_are_blockers(self):
         result = audit(self.root)
