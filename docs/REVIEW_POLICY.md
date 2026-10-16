@@ -9,9 +9,10 @@ make a theorem canonical.
 **Permanent project policy: mathematical research, proof auditing, and canonical
 promotion are performed exclusively by autonomous AI agents. No human mathematical
 reviewer, referee, expert panel, or human mathematical approval is required or requested.**
-One independent agent audit is required for consequential promotion; they are identified as *agent reviews*,
-never misrepresented as human peer review. Review independence, mathematical validity,
-and explicit theorem-state promotion remain mandatory.
+One independently operated AI-agent mathematical audit is required for consequential
+promotion. Record it explicitly as an *agent review*, not as human peer review.
+Review independence, mathematical validity, and explicit theorem-state promotion
+remain mandatory.
 
 ## Review the claim at the right level
 
