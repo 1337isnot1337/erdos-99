@@ -1,6 +1,6 @@
 # Generated theorem dependency graph
 
-State version: `2026-10-15.publication.1`.
+State version: `2026-10-15.publication.2`.
 
 This file is generated from `docs/state/theorem-state.yaml`. Edges are lifecycle dependencies, not a replacement for the proofs.
 

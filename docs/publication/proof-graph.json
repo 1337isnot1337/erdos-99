@@ -1,5 +1,5 @@
 {
-  "state_version": "2026-10-15.publication.1",
+  "state_version": "2026-10-15.publication.2",
   "claims": [
     {
       "id": "TB-DENSE-GRID",
@@ -6472,7 +6472,7 @@
       "track": "target-c",
       "status": "audited-working",
       "formal_statement_source": "docs/audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md",
-      "statement": "the repaired diagonal-cutoff and radius-D^(3/4) patch argument gives q=o(D), contradicting h>=ceil(D) and h<=q under both global premises; this sequence-only exclusion is agent-audited working mathematics, awaiting independent human review before canonical reuse. The earlier global K'/D-Lipschitz chart and q=O(D^(4/5)) claims are withdrawn; no global phase/tail extraction, finite motion, strict-D competitor, C-II closure, or Level-I consequence follows",
+      "statement": "the repaired diagonal-cutoff and radius-D^(3/4) patch argument gives q=o(D), contradicting h>=ceil(D) and h<=q under both global premises; this sequence-only exclusion is agent-audited working mathematics, awaiting the independent AI-agent mathematical audit before canonical reuse. The earlier global K'/D-Lipschitz chart and q=O(D^(4/5)) claims are withdrawn; no global phase/tail extraction, finite motion, strict-D competitor, C-II closure, or Level-I consequence follows",
       "assumptions": "unbounded canonical post-ZF C-II sequences in the contact-minimal then actual-diameter-pair-minimal triangle-free normal form; full source retained including all contact isolates; all actual contacts covered by one D-dependent unit triangular inverse-phase frame with fixed K/D error; tail T_M of actual hull-augmented contact-face path lengths satisfies lim_M limsup_D T_M/D=0",
       "immediate_theorem_prerequisites": [
         "C-RHOMBUS-POP",

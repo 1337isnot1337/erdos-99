@@ -15,9 +15,16 @@ The release retains the baseline science at `5dcbdc3dfa1f9be370602cc54d50e68eabb
 and explicitly reconciles source main through `eb51394f`. Subsequent private
 research is outside this freeze and must not indefinitely delay this release.
 
+During final replay, source main advanced to `42f0296d` and destination PR #8
+advanced main to `2bccea3`. This governance-only delta adopts the owner's single
+independent AI-agent mathematical audit policy. Its Python change is a comment
+only, with identical ASTs. The scientific freeze and all claim lifecycles stay
+unchanged. Publication revision `.2` corrects pending-review descriptions and
+source-derived public hashes; historical receipts retain their original SHA.
+
 The integrated corpus has **810 retained source records**, **451 claim IDs**,
 **845 declared edges**, **94 registered certificates** and **20 task cards**.
-Publication state is `2026-10-15.publication.1`: **371 canonical** and
+Publication state is `2026-10-15.publication.2`: **371 canonical** and
 **4 audited-working** claims. The [scientific review](../publication/scientific-reconciliation.md)
 pins all 30 changed source paths, all 20 observed private proposal heads and all
 74 previously edited imports. Its JSON records the exact comparison identities.
@@ -28,7 +35,7 @@ paths. Retained public hashes are independently checkable without the archive.
 
 - Withdrew Audit.202's unsupported global Lipschitz chart and `O(D^(4/5))`
   endpoint bound. The repaired sequence-only exclusion is **audited-working**,
-  with unchanged full-source/common-frame/face-tail hypotheses and human review
+  with unchanged full-source/common-frame/face-tail hypotheses and independent AI-agent review
   pending. There were no declared downstream dependents. No theorem was promoted.
 - Restored four recovery attributions, corrected a sampled-field computation
   overstatement, supplied two missing source records and repaired four recorded
@@ -72,7 +79,7 @@ paths. Retained public hashes are independently checkable without the archive.
 | Local clean-root privacy preparation | RESOLVED | Exporter plus all-object/tree/fsck controls; final detached export receipt |
 | Existing staging history and retained GitHub PR objects | OWNER DECISION REQUIRED | Unused clean remote or authorized staging rename/new-remote migration; keep existing repository private |
 | Hosted fork canary | BLOCKED | Account billing restriction; observed jobs executed zero steps; both rollout variables stay unset |
-| Human review before canonical reuse of repaired sequence proof | NONBLOCKING | Audited-working label remains; publishing scoped working research requires no theorem promotion |
+| Independent AI-agent audit before canonical reuse of repaired sequence proof | NONBLOCKING | Audited-working label remains; publishing scoped working research requires no theorem promotion |
 | Final visibility and anonymous-access verification | OWNER DECISION REQUIRED | Separate explicit approval only after rights and remote/privacy decisions |
 
 The [rights review](../publication/rights-review.md) reduces rights/privacy to two

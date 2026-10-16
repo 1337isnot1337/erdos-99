@@ -2,7 +2,7 @@
 
 This file is generated from `docs/state/theorem-state.yaml`. Do not edit it by hand.
 
-- State version: `2026-10-15.publication.1`
+- State version: `2026-10-15.publication.2`
 - State date: `2026-10-15`
 - Level I: **OPEN**
 

@@ -8,7 +8,7 @@
 > The [Audit.236 repair](target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md)
 > obtains the sequence-only `q=o(D)` contradiction by a diagonal cutoff and local
 > patches. Its current [manifest disposition](../state/theorem-state.yaml) is
-> **audited-working, agent-audited**, awaiting independent human review. The
+> **audited-working, agent-audited**, awaiting the independent AI-agent mathematical audit. The
 > original proof remains below for attribution and an inspectable correction;
 > its historical PASS/promote language is superseded by this notice.
 

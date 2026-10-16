@@ -3,7 +3,7 @@
   "catalogue_revision": "public-frontier.3",
   "reviewed_on": "2026-10-15",
   "reviewed_base_commit": "96f6ad8ac24426526e655574fdcda338fc8ba5e1",
-  "reviewed_state_version": "2026-10-15.publication.1",
+  "reviewed_state_version": "2026-10-15.publication.2",
   "problem_status": "open",
   "purpose": "Bounded candidate tasks derived from the canonical E99 frontier; not a theorem ledger, novelty index, or work reservation service.",
   "authority": [

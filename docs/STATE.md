@@ -1,14 +1,14 @@
 # Authoritative theorem state
 
 <!-- BEGIN GENERATED: theorem-state-snapshot -->
-**Generated state snapshot (`2026-10-15.publication.1`):** Level I **OPEN**; Target A **OPEN** through Section 177; Target B **OPEN**; Target C **C-I CLOSED / C-II OPEN**.
+**Generated state snapshot (`2026-10-15.publication.2`):** Level I **OPEN**; Target A **OPEN** through Section 177; Target B **OPEN**; Target C **C-I CLOSED / C-II OPEN**.
 
 Machine-derived tables: [`state/STATUS.generated.md`](state/STATUS.generated.md) and [`state/THEOREM_GRAPH.generated.md`](state/THEOREM_GRAPH.generated.md).
 <!-- END GENERATED: theorem-state-snapshot -->
 
 **LEVEL I STATUS: STILL OPEN. Target A OPEN; Target B OPEN. C-I CLOSED; C-II OPEN.**
 
-The [manifest](state/theorem-state.yaml) controls lifecycle. The source snapshot is `5dcbdc3dfa1f9be370602cc54d50e68eabb88f56`; the inherited source version is `2026-10-10.audit.234`. Publication state `2026-10-15.publication.1` withdraws one unsupported canonical intermediate inference as described below. Numbering does not override exact manifest entries.
+The [manifest](state/theorem-state.yaml) controls lifecycle. The source snapshot is `5dcbdc3dfa1f9be370602cc54d50e68eabb88f56`; the inherited source version is `2026-10-10.audit.234`. Publication state `2026-10-15.publication.2` withdraws one unsupported canonical intermediate inference as described below. Numbering does not override exact manifest entries.
 
 ## Target A
 

@@ -1,4 +1,4 @@
-state_version: "2026-10-15.publication.1"
+state_version: "2026-10-15.publication.2"
 state_date: "2026-10-15"
 cleanup_baseline: "34085ac264eb5241985de7b453bf7d612a25fa4d"
 level_i_status: open
@@ -4977,7 +4977,7 @@ targets:
           the repaired diagonal-cutoff and radius-D^(3/4) patch argument gives
           q=o(D), contradicting h>=ceil(D) and h<=q under both global premises;
           this sequence-only exclusion is agent-audited working mathematics,
-          awaiting independent human review before canonical reuse. The earlier
+          awaiting the independent AI-agent mathematical audit before canonical reuse. The earlier
           global K'/D-Lipschitz chart and q=O(D^(4/5)) claims are withdrawn;
           no global phase/tail extraction, finite motion, strict-D competitor,
           C-II closure, or Level-I consequence follows
