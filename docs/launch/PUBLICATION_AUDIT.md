@@ -97,8 +97,9 @@ paths. Retained public hashes are independently checkable without the archive.
 
 The [current rights review](../publication/rights-review.md) and owner attestation
 record source expression consent for all 810 imported files. Historical pending
-flags remain in the source-identity manifest; release tooling must reconcile the
-separate attestation explicitly rather than silently waive the audit. Rights for
+flags remain in the source-identity manifest; the release auditor now explicitly
+checks the separate owner attestation against the exact manifest Git blob,
+while retaining fail-closed behavior for changes or exceptions. Rights for
 any actually copied third-party prose or code cannot be granted by the owner.
 Load-bearing proofs have been preserved rather than removed to make a scanner pass.
 
@@ -134,8 +135,7 @@ visibility decision. A clean-root local artifact is preparation, not publication
 or proof that old GitHub objects were erased.
 
 This audit and tooling used substantial AI assistance. Gate 1 owner-scope rights
-and the identified personal-email consent are recorded. Next run the complete
-Gate 2 verifier on the actual current final commit, reconcile the still-historical
-manifest rights flags with the owner attestation, and address concrete security
-findings if any. Keep the existing repository private until the owner separately
+and the identified personal-email consent are recorded. The rights scanner now verifies the exact-manifest owner declaration and named
+email consent with strict regression tests. Next run the complete Gate 2 verifier
+on the actual final commit and address concrete security findings if any. Keep the existing repository private until the owner separately
 approves Gate 3 visibility.
