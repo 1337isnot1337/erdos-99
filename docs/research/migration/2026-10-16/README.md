@@ -1,6 +1,6 @@
 # Erdős #99 source research migration
 
-**Overall migration status: INCOMPLETE.** Exact source and destination baselines are frozen under the baseline directory. Source-main audit batch 1 merged as PR #19; PR #1008 merged as destination PR #20; PR #951 merged as destination PR #21; PR #947 merged as destination PR #22; PR #950 merged as destination PR #23; and source PR #948 merged as destination PR #24 at `621f7c7dcd5b12c949f83951d1d1521e09bbbe17` (tree `978550c0ab3248aee7ac41d9e8b5438a53c5687a`). The current PR #952 batch starts from that exact tree. Its frozen source diff has 17 paths: five reports, six finite outputs, four verifiers, a generated index, and a research README. The 826 still-missing source-main reports, bulk research tree, most open-PR additions, and historical PR work remain queued.
+**Overall migration status: INCOMPLETE.** Exact source and destination baselines are frozen under the baseline directory. Source-main audit batch 1 merged as PR #19; PR #1008 merged as destination PR #20; PR #951 merged as destination PR #21; PR #947 merged as destination PR #22; PR #950 merged as destination PR #23; source PR #948 merged as destination PR #24 at `621f7c7dcd5b12c949f83951d1d1521e09bbbe17` (tree `978550c0ab3248aee7ac41d9e8b5438a53c5687a`); and source PR #952 merged as destination PR #25 at `d369420f85ed94b73ebfeb09eaace7ada1a526a8` (tree `538dbfa15e98bf7ba56a978fa05f91b07adf416c`). The current PR #955 batch starts from the #25 tree and uses frozen source head `d5afc236a7b1de9567dcb6dda65d957ed91c726b`. Its eight source-main-to-head paths comprise six mathematical/evidence files, a generated index, and a research README; the six mathematical/evidence files were already present in the destination. The 826 source-main reports missing at the frozen baseline, bulk research tree, other open-PR additions, and historical PR work remain queued.
 
 ## Open source PR batch — #1008 population reserve
 
@@ -136,6 +136,50 @@ records the full content comparison and authority boundary.
 - PR #20 merged as 495351ba7d127deb48f3666623615ff6ea19c39e (tree db11ffa20d29d91548868edd0784d8321c91cfa1); the PR #951 batch is based on this exact tree.
 - PR #21 merged as 53527e354fd545325744f828c93278bcf6437bd4 (tree 399b0e3407cd36721dd2361bd4cc9aa3ccfcd61a); the PR #947 batch was based on this exact tree.
 - PR #22 merged as 73bbc4ae4bf65ce6a02fcc2c4bde33b31124e742 (tree 54713dc034018b862dc0aa69c85a921540dd5a2e); the PR #950 batch is based on this exact tree.
+- PR #23 merged as a10c36842bcd60442f87345ef45e62112faa8c63 (tree b631245c34871a3508089b90ec184235a726777a).
+- PR #24 merged as 621f7c7dcd5b12c949f83951d1d1521e09bbbe17 (tree 978550c0ab3248aee7ac41d9e8b5438a53c5687a).
+- PR #25 merged as d369420f85ed94b73ebfeb09eaace7ada1a526a8 (tree 538dbfa15e98bf7ba56a978fa05f91b07adf416c); the PR #955 batch starts from this exact tree.
+
+## Current batch — source PR #955 global Level I research
+
+The frozen source is main `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`, draft
+PR #955 head `d5afc236a7b1de9567dcb6dda65d957ed91c726b`, tree
+`5233d9c8b7774e29609ffaa68cc8dd346c4afa1c`, merge base
+`8c6f37127fbf119fe7ae3745babd1130a6628a09`. Each of the eight source-main-to-
+head paths has a per-file row in [`ledger/source-pr-files.jsonl`](ledger/source-pr-files.jsonl).
+The two analytic reports, source audit, result JSON, and two verifier programs
+were already in the destination. The one-contact report now cites its publisher
+DOI instead of local paths to a third-party paper and extraction. The source AI
+audit is labeled as provenance rather than a destination exact-head promotion
+review. The source README's #955 content is adapted into the
+[focused global route](../../tracks/global-level-i-attainment-annular-matching.md);
+the source artifact index is locally rebuilt.
+
+At the destination base, the only other live open PR was destination PR #16,
+head `bb274e5001df8aa123cd11849d3b3aee84da577d`, titled “Remove private source
+URL from schema identifier.” It is outside this research batch and remains
+separate. It also edits the inclusion manifest; refresh its exact-head status
+after integration. The [Gate 2 instructions](../../../launch/GATE_2_VERIFICATION.md)
+record that its imported-file hash change requires separate attestation
+reconciliation before a release-ready claim.
+
+The route records two separate unreviewed candidates. The one-contact
+approximation makes equality of the triangle-free and unrestricted diameter
+infima exact at each fixed cardinality, so the remaining Level I question on
+this route is eventual nonattainment. The annular matching theorem gives an
+exact deletion formula and matching-cover bound for a specified comparison
+packet. Its finite triangle-free competitors are explicitly nonglobal. The
+missing bridge is a source-specific packet with `M_D(X) >= n` for every large
+triangle-free global minimizer. The [candidate registry](../../../targets/target-c/candidate-registry.json)
+connects both claims to proof files, finite controls, canonical dependencies,
+regressions, provenance, and next obligations. A 52-graph proof certificate
+was generated and retained as the [exact graph certificate](../../../../research/certificates/global_annular_matching_proofs_2026_10_16.json).
+
+Source-main provenance revalidation also found and corrected two stale public
+hashes for audit ledgers later updated by source PR #947. The frozen source-main
+blobs remain identified; their later PR #947 successors and destination hashes
+are now explicit. Commands, exact check results, and source/publication status
+will be recorded in the batch receipt after this verification pass.
 
 Before preparing this batch, the live source main and open-PR list were refreshed.
 Main remained at the frozen SHA above; all 21 open PR numbers and head SHAs still
@@ -146,6 +190,6 @@ The source Target C artifact index has 1,287 rows: 83 missing audits and two lin
 
 The 2,707 source-main C research files, 157 route documents, and shared candidates are inventoried in [`ledger/source-main-files.jsonl`](ledger/source-main-files.jsonl). Of the research files, 2,536 other files are queued, 152 are exact destination duplicates, and two of 19 linked dependencies are integrated here; the remaining 17 linked dependencies and all other route files retain explicit queued or duplicate dispositions.
 
-The pinned source inventory contains 21 open PR heads. PRs #947, #948, #950, and #951 are reconciled as destination batches. PR #952 has one already-included report release-redacted; its remaining 15 changed paths and complete content comparison remain queued. PRs #955–#960 remain queued for separate comparison.
+The pinned source inventory contains 21 open PR heads. PRs #947, #948, #950, #951, and #952 are reconciled as destination batches (#952 merged as destination PR #25). Source PR #955 is in the current integration batch from its frozen head; its eight source-main-to-head paths have explicit per-file dispositions. Source PRs #956–#960 remain queued for separate comparison.
 
 Source lifecycle labels are provenance only. The destination theorem-state remains authoritative. No theorem is promoted by this import. Historical versions are visibly distinguished, including the earlier inverse-phase audit that asserts a global `K'/D`-Lipschitz chart and `q=O(D^(4/5))`; those inferences were withdrawn and must not be used as premises.

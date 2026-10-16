@@ -62,6 +62,18 @@ or a source-specific strict-diameter replacement. The exact finite verifier is
 not a proof of the analytic all-radius argument or global optimality; see the
 [candidate registry](../targets/target-c/candidate-registry.json).
 
+Source PR #955 adds a distinct global route: its one-contact approximation
+proves equality of the unrestricted and triangle-free diameter infima at every
+fixed cardinality, making eventual nonattainment the exact remaining Level I
+question along that route. Its annular conflict graph gives exact finite
+deletion currency and a matching-cover bound for a specified comparison
+packet. The source-specific bound `M_D(X) >= n` for every sufficiently large
+triangle-free global minimizer is still missing; the saved full-packet
+competitors are nonglobal. See the [global attainment and annular matching
+track](tracks/global-level-i-attainment-annular-matching.md) and the
+[candidate registry](../targets/target-c/candidate-registry.json). These are
+unreviewed research claims and do not change the theorem-state.
+
 ## Target C-II: vacancy-release candidates and exact restoration limits
 
 The pinned source PR #951 material is now linked from the

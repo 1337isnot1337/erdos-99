@@ -153,6 +153,22 @@ owner-respecting loaded ports for every upper-relevant point and isolate,
 followed by a nonzero solution of the exact lower/upper closure. All five
 records remain unreviewed; theorem-state and C-II status are unchanged.
 
+## Global Level I attainment and annular matching (cross-target route)
+
+The [source PR #955 research track](../../research/tracks/global-level-i-attainment-annular-matching.md)
+connects a whole-source one-contact approximation with an independent global
+annular matching route. The approximation proves that the triangle-free and
+unrestricted diameter infima agree at each fixed cardinality; eventual
+nonattainment, not a positive uniform diameter gap, is the remaining Level I
+question along that route. The annular theorem gives an exact conflict-cover
+formula and matching bound for a specified comparison packet. Its finite
+triangle-free competitors are nonglobal regressions. Target C still needs a
+source-specific packet with `M_D(X) >= n` for every sufficiently large
+triangle-free global minimizer, or another valid global contradiction. The
+reports, verifiers, audit provenance, source hashes, and limitations are in the
+[track](../../research/tracks/global-level-i-attainment-annular-matching.md)
+and [candidate registry](candidate-registry.json); no claim is promoted.
+
 ## Begin a bounded contribution
 
 For any finite endpoint, keep the source cardinality and every pairwise lower

@@ -157,6 +157,18 @@ five candidate packages discoverable from the active frontier.
 
 Head `d5afc236a7b1de9567dcb6dda65d957ed91c726b`; **unreviewed**.
 
+The [focused global route](tracks/global-level-i-attainment-annular-matching.md)
+connects both full reports, finite evidence, source AI audit, source hashes,
+and remaining proof obligations. Its one-contact approximation proves equality
+of the unrestricted and triangle-free diameter infima at every fixed
+cardinality, so Level I reduces to eventual nonattainment of the triangle-free
+infimum. Its separate annular conflict-graph theorem gives exact finite
+deletion currency and matching-cover bounds. Neither result establishes
+nonattainment or the missing source-specific `M_D(X) >= n` bound for every
+large triangle-free global minimizer. The saved triangle-free packets are
+explicitly nonglobal regressions. Both machine-readable claims remain
+unreviewed and outside theorem-state.
+
 - [pr955_autonomous_proof_audit_2026-10-15.md](../../docs/audits/pr955_autonomous_proof_audit_2026-10-15.md)
 - [global_annular_matching_competitor_2026-10-11.md](../../docs/reports/global_annular_matching_competitor_2026-10-11.md)
 - [global_level_i_attainment_and_one_contact_2026-10-11.md](../../docs/reports/global_level_i_attainment_and_one_contact_2026-10-11.md)

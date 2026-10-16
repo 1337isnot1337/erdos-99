@@ -3259,6 +3259,209 @@
         "source_merge_base": "d999528cfaafd811a4a19bcfacd00f217c2fc375"
       },
       "rights_and_release": "Owner-authorized first-party research. Exact source provenance is in the migration ledger; source and destination report text match except for the recorded hosted-CI operational redaction. No third-party papers or PDFs copied."
+    },
+    {
+      "candidate_id": "GLOBAL-LEVEL-I-ONE-CONTACT-PR955",
+      "title": "Triangle-free infimum equality and one-contact approximation",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed global proof candidate from frozen open source PR #955; destination theorem-state remains authoritative.",
+      "target_scope": [
+        "Level I: every sufficiently large global minimizer",
+        "Global diameter attainment and triangle-free comparison"
+      ],
+      "claim": {
+        "statement": "For every n >= 2, the infimum diameter among unit-separated triangle-free n-point planar sets equals D(n). More specifically, from every finite unit-separated n-point set with minimum distance one and an actual contact, for every epsilon > 0 there is a labeled unit-separated set with exactly one unit-contact edge and diameter at most D + epsilon. Thus a positive uniform diameter gap above D(n) is impossible at fixed n; Level I at n is equivalent to nonattainment of the triangle-free infimum.",
+        "hypotheses": [
+          "Finite planar n-point set, n >= 2, all pair distances at least one, with minimum pair distance exactly one.",
+          "For the approximation proposition, choose any epsilon > 0.",
+          "The n=8 finite global-minimizer family additionally uses the cited Bezdek-Fodor theorem on D(8) and minimizing hulls."
+        ],
+        "not_claimed": [
+          "Nonattainment of the triangle-free infimum for any unbounded set of n.",
+          "A positive pointwise gap for every triangle-free configuration; only the impossibility of a positive uniform gap is proved.",
+          "Level I or C-II closure.",
+          "A result for sources with multiple contacts from the unique-contact descent proposition.",
+          "An unbounded-cardinality counterexample from the n=8 family."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed; canonical=false in source artifact index",
+      "artifacts": [
+        {
+          "path": "docs/reports/global_level_i_attainment_and_one_contact_2026-10-11.md",
+          "role": "full analytic proof candidate, finite global regressions, and exact remaining Level I implication",
+          "source_git_blob_sha": "c7e2cfcd5d7fd2ba66f5b15d6e03e2d7f6230526",
+          "source_sha256": "c33e767661429e52d527374ea57609c3490ab1f70df32f4d06b4fd68ea859702",
+          "destination_sha256": "944b5b3e155586f0edc78e22eeb9bdfb3f954e4e7cbfbd51afa2f2768c125d58",
+          "source_artifact_id": "ART-8664DD3819F2",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_global_one_contact_2026_10_11.py",
+          "role": "exact finite validation and malformed-input controls",
+          "source_git_blob_sha": "fd77f73193e8aa9b46f973cf361070e58a31be8c",
+          "source_sha256": "6c221e1893ac6fa0bbaeac651099f22182d97c46554fa41460a8823e4959025f",
+          "destination_sha256": "6c221e1893ac6fa0bbaeac651099f22182d97c46554fa41460a8823e4959025f",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md",
+          "role": "source AI substantive proof audit and mathematical corrections; not a destination promotion audit",
+          "source_git_blob_sha": "75cc95b37b229431829fdc89812428187ce965a9",
+          "source_sha256": "9c3d77ea0deff04abc3f4b2275857110f17314181264f43fdd8d71744033b368",
+          "destination_sha256": "69a42884e36eacc29fc987dd004bc2570bcc174402aad2ced478b1bf03f8e63f",
+          "source_artifact_id": "ART-BBD3B40A9B41",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [
+          "GLOBAL-LEVEL-I-ANNULAR-MATCHING-PR955"
+        ],
+        "canonical_claims": [],
+        "description": "The main one-contact construction uses only planar convexity and metric inequalities. The n=8 regression has the report-cited Bezdek-Fodor primary theorem as a literature premise. A weaker positive-stress-component route is explicitly subsumed by canonical Section 64.3 and is not needed for this candidate."
+      },
+      "obstructions_and_limits": [
+        "The equality of infima leaves eventual nonattainment unproved; strict pointwise inequalities do not imply a positive infimum gap.",
+        "The one-contact strict descent does not extend to multiple-contact sources.",
+        "Square, regular-pentagon, and n=8 global-optimum families block broader connected-contact inferences; the n=8 family is finite."
+      ],
+      "validation": "PASS: python3 research/verify_global_one_contact_2026_10_11.py; 16 rational whole-source transformations/descents, four exact equilateral checks, all ten regular-pentagon pairs in Q(sqrt(5)), and parameter/contact/planar-label/unique-contact malformed-input guards.",
+      "next_proof_obligations": [
+        "Prove that for every sufficiently large n the triangle-free diameter infimum is not attained, or construct a triangle-free global minimizer for arbitrarily large n.",
+        "Any extension from unique contact to larger contact graphs must retain a complete lower-pair argument; the current finite regressions rule out contact-connectivity alone."
+      ],
+      "provenance": {
+        "source_repository": "1337isnot1337/e-99",
+        "source_pr": 955,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/955",
+        "source_main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head": "d5afc236a7b1de9567dcb6dda65d957ed91c726b",
+        "source_head_tree": "5233d9c8b7774e29609ffaa68cc8dd346c4afa1c",
+        "source_merge_base": "8c6f37127fbf119fe7ae3745babd1130a6628a09"
+      },
+      "rights_and_release": "Owner-authorized first-party project material. The local third-party PDF and extracted-text paths were replaced with a citation to the publisher DOI; no third-party paper or extracted text was copied. Per-file source and destination hashes and the transformation are in the migration ledger."
+    },
+    {
+      "candidate_id": "GLOBAL-LEVEL-I-ANNULAR-MATCHING-PR955",
+      "title": "Annular conflict-graph deletion bounds and global comparison packets",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed global proof candidate from frozen open source PR #955; finite evidence is computational and does not promote the analytic claim.",
+      "target_scope": [
+        "Level I global strict-diameter comparison",
+        "Target C cross-target population/capacity route"
+      ],
+      "claim": {
+        "statement": "For a finite unit-separated X contained in B(o,S), S = D/2 + delta < D/sqrt(2), and the graph G_D with all pairs at distance >= D as edges, the maximum size of a strict-sub-D subset is M_D(X)=|X|-tau(G_D(X)). If V_ann is the full band D-S <= |x-o| <= S and alpha=2 arccos(D/(2S)), then deleting at most floor(alpha |V_ann|/pi) vertices makes G_D bipartite and nu(G_D) <= tau(G_D) <= nu(G_D)+floor(alpha |V_ann|/pi). For D-S>1/2 and delta=c D^(-1/3), the deletion error is at most floor(8 sqrt(c) D^(1/3)+16 c^(3/2)).",
+        "hypotheses": [
+          "Finite unit-separated packet X in the specified disk, with D > 0, delta > 0, and S=D/2+delta < D/sqrt(2).",
+          "Conflict edges include every pair with distance >= D, including ties.",
+          "The explicit annular population estimate assumes D-S>1/2.",
+          "The improved O_c(1) error for translated triangular-lattice packets additionally uses the stated translation-uniform O(r^(2/3)) circle-count premise from canonical Audit 245."
+        ],
+        "not_claimed": [
+          "A source-specific admissible packet X with M_D(X) >= n for every sufficiently large triangle-free global minimizer.",
+          "An improved universal asymptotic reserve coefficient from the matching-cover inequality.",
+          "Global optimality of any finite comparison packet or exact value D(n) for the displayed finite sizes.",
+          "A better translation-uniform discrepancy exponent than the canonical input.",
+          "Level I or C-II closure."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed; canonical=false in source artifact index",
+      "artifacts": [
+        {
+          "path": "docs/reports/global_annular_matching_competitor_2026-10-11.md",
+          "role": "full analytic matching-cover proof, exact comparison-packet analysis, regressions, and global bridge",
+          "source_git_blob_sha": "04e89371e9489a28e2fee7ebe32e61a71350477d",
+          "source_sha256": "c564b3577562e3aeec1bf4ea2e7a800e4014fad6d5ebe7a2844daad6a3d61e5c",
+          "destination_sha256": "c564b3577562e3aeec1bf4ea2e7a800e4014fad6d5ebe7a2844daad6a3d61e5c",
+          "source_artifact_id": "ART-654AA3F0DE12",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/global_annular_matching_2026_10_11.json",
+          "role": "saved exact graph, packet, and deformation evidence",
+          "source_git_blob_sha": "aed1c2dc2971cedcaf4348d7167820908682132f",
+          "source_sha256": "b7ea9aa0e49a390575b8576c0b4eb9e931967a68174408b18d8ffb93687d4c08",
+          "destination_sha256": "b7ea9aa0e49a390575b8576c0b4eb9e931967a68174408b18d8ffb93687d4c08",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/certificates/global_annular_matching_proofs_2026_10_16.json",
+          "role": "committed exact emitted graph-cover proofs for all 48 disk packets, three full-column packets, and the odd-cycle case (52 graph fixtures)",
+          "destination_git_blob_sha": "2ea64618f3d46b42a2be70847e4cf2a6a34ed918",
+          "destination_sha256": "8fc15a005e26116edbfe4f7040d8ef5a9d571e0e033c1beef8b790ae630b295b",
+          "generated_from": {
+            "path": "research/verify_global_annular_matching_2026_10_11.py",
+            "git_blob_sha": "6505aa01547a038432c1ca14b472ddce301fa42d",
+            "sha256": "4cf5b2a2c6caf787ce92a892dabb694d9ffce13ab621e724820759635cc8fb8b"
+          },
+          "generation_command": "python3 research/verify_global_annular_matching_2026_10_11.py --certificate-json research/certificates/global_annular_matching_proofs_2026_10_16.json",
+          "fixture_count": 52,
+          "kernel_controls": {
+            "graphs": 1024,
+            "mutations": 4
+          }
+        },
+        {
+          "path": "research/verify_global_annular_matching_2026_10_11.py",
+          "role": "exact graph and rational-metric verifier",
+          "source_git_blob_sha": "6505aa01547a038432c1ca14b472ddce301fa42d",
+          "source_sha256": "4cf5b2a2c6caf787ce92a892dabb694d9ffce13ab621e724820759635cc8fb8b",
+          "destination_sha256": "4cf5b2a2c6caf787ce92a892dabb694d9ffce13ab621e724820759635cc8fb8b",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md",
+          "role": "source AI substantive proof audit and finite validation review; not a destination promotion audit",
+          "source_git_blob_sha": "75cc95b37b229431829fdc89812428187ce965a9",
+          "source_sha256": "9c3d77ea0deff04abc3f4b2275857110f17314181264f43fdd8d71744033b368",
+          "destination_sha256": "69a42884e36eacc29fc987dd004bc2570bcc174402aad2ced478b1bf03f8e63f",
+          "source_artifact_id": "ART-BBD3B40A9B41",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [
+          "GLOBAL-LEVEL-I-ONE-CONTACT-PR955"
+        ],
+        "canonical_claims": [
+          "C-TRIANGULAR-LATTICE-STRICT-D-COMPETITOR-RESERVE"
+        ],
+        "description": "The general conflict-graph theorem is a finite geometric/matching argument. Only the optional O_c(1) lattice-packet refinement uses the canonical translation-uniform circle-count result. The central missing global source-specific population/payment bound is not supplied by this candidate."
+      },
+      "obstructions_and_limits": [
+        "The general matching-cover error is order D^(1/3), and the report gives a sharp-order odd-cycle regression.",
+        "Edge-count deletion can overpay by Theta(D^(2/3)); the two-row and full-disk regressions do not prove a better universal constant.",
+        "All displayed strict-sub-D triangle-free packets are explicitly nonglobal relative to their undeformed sources.",
+        "A density ceiling, lattice approximation, or finite packet is not the required global source extraction."
+      ],
+      "validation": "PASS: python3 research/verify_global_annular_matching_2026_10_11.py; 48 disk packet cases, four complete-bipartite regressions, three full-column packets, and circular sharpness cases q=27,125,343. Aggregate output equals research/global_annular_matching_2026_10_11.json. The --certificate-json replay emitted 52 exact graph proofs and kernel controls for 1,024 five-label graphs plus four mutations; it proves no global optimality or Level I statement.",
+      "next_proof_obligations": [
+        "For every sufficiently large triangle-free global minimizer, produce an admissible comparison packet X satisfying M_D(X) >= n, with every source label and lower/upper constraint represented, or prove eventual nonattainment by another route.",
+        "If claiming a better universal reserve, prove a new bound on translation-averaged matching cost rather than relying on edge counts or the two-column regression."
+      ],
+      "provenance": {
+        "source_repository": "1337isnot1337/e-99",
+        "source_pr": 955,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/955",
+        "source_main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head": "d5afc236a7b1de9567dcb6dda65d957ed91c726b",
+        "source_head_tree": "5233d9c8b7774e29609ffaa68cc8dd346c4afa1c",
+        "source_merge_base": "8c6f37127fbf119fe7ae3745babd1130a6628a09"
+      },
+      "rights_and_release": "Owner-authorized first-party project material. No third-party papers or PDFs were copied. The linked Audit 245 is an existing canonical dependency only for the optional lattice refinement; the arbitrary-cloud result remains separately scoped. Full source and destination hashes are recorded in the migration ledger."
     }
   ]
 }
