@@ -181,7 +181,7 @@ def audit(public, source, ref='HEAD', identities=None):
             'permission_evidence': [
                 {'path':'NOTICE', 'meaning':'Conditional project Apache offer and attribution, not proof of upstream ownership'},
                 {'path':'CONTRIBUTING.md', 'meaning':'Prospective inbound Apache contribution terms; not retroactive consent from archive contributors'},
-                {'path':'docs/publication/provenance.md', 'meaning':'Records claimed owner Apache authorization; underlying third-party rights/alias identity still require confirmation'},
+                {'path':'docs/publication/provenance.md', 'meaning':'Records intended Apache terms; actual ownership, contributor grants and alias control still require confirmation'},
             ],
             'limits': ['This report grants no license and changes no inclusion clearance.',
                        'Opaque identity IDs describe observed Git author labels, not distinct people, ownership or consent; exact name mapping remains private.',

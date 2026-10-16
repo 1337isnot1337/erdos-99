@@ -1,154 +1,110 @@
-# Independent publication audit — current mathematical E99 corpus
+# Publication audit and blocker ledger
 
-**Candidate reviewed:** `1337isnot1337/erdos-99` commit
-`b5984940a2258b8e2f58ba54ef6abe3141ab9a12` (2026-10-15).
-**Pinned private scientific source:** `1337isnot1337/e-99` commit
-`5dcbdc3dfa1f9be370602cc54d50e68eabb88f56`.
-**Private source observed afterward:** `eb51394f371aee958b0d9332f80faf75ae694b9e`.
+**Release decision: HOLD.** Both repositories remain private. The publication
+engineering and scientific corrections below do not establish historical source
+permissions or authorize exposing the staging history. Level I/A/B/C-II remain
+open; C-I remains closed within its inherited scope.
 
-**Release decision: HOLD.** The substantial current corpus is staged and
-its *declared* proof/task/source dependency graph is structurally consistent.
-This is not yet a defensible assertion that all source rights, privacy,
-historical metadata and final public-hosted behavior are cleared. Do not
-flip the repository to public solely on the basis of this document.
+## Exact scientific freeze
 
-## What the staged repository actually contains
+The starting destination was `7492a6adcc5ba673f53396a0867ff07a0fe2f655`.
+Concurrent destination PRs #4, #5 and #6 were inspected and integrated before the
+closure work; main reached `6beb3cf10603a1dc963feaecd1a41f4580e13f70`.
+The source started at `eb51394f371aee958b0d9332f80faf75ae694b9e`.
+The release retains the baseline science at `5dcbdc3dfa1f9be370602cc54d50e68eabb88f56`
+and explicitly reconciles source main through `eb51394f`. Subsequent private
+research is outside this freeze and must not indefinitely delay this release.
 
-- 889 committed file blobs at the pinned candidate.
-- 804 source-derived retained files in the inclusion manifest: 734 from the
-  pinned source main and 70 from ten explicitly pinned research-PR heads.
-  The latter comprise 58 live, noncanonical proposals and 12 frozen
-  supporting proof/verifier dependencies; **none is promoted by inclusion**.
-- 3,959 source paths explicitly excluded. The 734 selected mainline files
-  plus 3,959 excluded files account for all 4,693 blobs at the exact pinned
-  source main. No mainline source path is lost from that inventory.
-- 451 distinct claim IDs, including 372 canonical, 3 audited-working,
-  62 regressions, 5 superseded and 9 rejected; 845 declared theorem edges.
-- 94 registered finite certificate scripts/entries and 19 substantive
-  research-task cards. Every referenced explicit claim prerequisite, named
-  proof, audit, registered certificate and task-source path checked in this
-  audit exists in the frozen candidate. The retained current Target C
-  canonical module list is complete relative to the pinned source manifest.
-- No `papers/` or `extracted/` directories, PDF/image/archive binaries,
-  symlinks or submodules are present in the pinned committed public tree.
-- Inclusion-manifest declared file-dependency edges all resolve and
-  `unresolved_dependencies` is an empty array.
+The integrated corpus has **810 retained source records**, **451 claim IDs**,
+**845 declared edges**, **94 registered certificates** and **20 task cards**.
+Publication state is `2026-10-15.publication.1`: **371 canonical** and
+**4 audited-working** claims. The [scientific review](../publication/scientific-reconciliation.md)
+pins all 30 changed source paths, all 20 observed private proposal heads and all
+74 previously edited imports. Its JSON records the exact comparison identities.
+The source/exclusion auditor checks 4,793 versioned records and 3,977 excluded
+paths. Retained public hashes are independently checkable without the archive.
 
-**Scope warning:** Structural reachability is not a proof of mathematical
-validity, adequate implicit proof dependencies, safe program behavior, or
-copyright ownership. The canonical theorem remains open at Level I.
-A/B/C-II are open; C-I is closed.
+## Repairs that change the publication decision
 
-## Independent checks and evidence
+- Withdrew Audit.202's unsupported global Lipschitz chart and `O(D^(4/5))`
+  endpoint bound. The repaired sequence-only exclusion is **audited-working**,
+  with unchanged full-source/common-frame/face-tail hypotheses and human review
+  pending. There were no declared downstream dependents. No theorem was promoted.
+- Restored four recovery attributions, corrected a sampled-field computation
+  overstatement, supplied two missing source records and repaired four recorded
+  executable source modes. Replaced the unsupported assertion of completed
+  licensing authorization with an accurate pending disposition.
+- Corrected the C-II finite endpoint: at diameter D it must stay triangle-free
+  and decrease the lexicographic pair (unit contacts, actual diameter pairs).
+  Unchanged contacts with fewer diameter pairs suffice; a new unit triangle
+  invalidates the equality-D argument. A strict sub-D competitor is a separate
+  route. All source labels, isolates and previously inactive upper pairs remain.
+- Repaired task prerequisite/evidence discovery, including implicit A section
+  dependencies, shared B Oler/topology definitions and the exact C exchange
+  premise. Registered checks and supporting scripts have distinct scope labels.
+  Removed dangling claims that an unavailable optional virtual-area certificate
+  could be used as a B premise; clarified C's retained standalone successor audit.
+- Added whole-tree CI path preflight before metadata parsing, committed-object
+  scanning, dirty-candidate rejection and tag/contributor-trailer checks. Retained
+  the concurrent all-history path scan and batched historical content scanning.
+- Prepared a tested clean-root exporter: identical tree, one parentless synthetic
+  commit among all objects, no old refs, no alternate store, no remote, strict
+  Git integrity checks. Newly derived private author labels use opaque IDs in
+  public rights evidence; their exact map remains outside the repository.
+- Corrected Natalie Tedeschi's bibliographic attribution and replaced the broken
+  article PDF link with the publisher's current issue PDF, pages 3–12.
 
-1. Compared the pinned source and public Git trees and traced inclusion and
-   exclusion inventories as above.
-2. Parsed the full published machine proof graph and research task catalogue;
-   checked 451 unique claim IDs and 845 graph prerequisites against published
-   paths; confirmed no missing explicit theorem, proof, audit, or task path.
-3. Examined substantive source-to-public editorial size changes. Of the 804
-   imported files, 74 have different recorded source and public SHA256 hashes.
-   The largest deliberate condensation is `docs/STATE.md` (a state-navigation
-   replacement; the detailed theorem manifest and proof modules are retained).
-   The `docs/reports/campaign_ledger_2026-09-09.md` extract retains the
-   conditional scalar theorem, nonglobal obstruction and adversarial regression
-   sections while omitting historical branch/campaign and repo-status sections.
-   This is a structural/content inspection, **not** a full mathematical
-   equivalence certification of all 74 edited sources.
-4. Independently fetched and SHA256-checked 12 edited proof/audit files against
-   their recorded public checksums: 12/12 matched.
-5. Independently sampled the README, live A/B/C route maps, source provenance,
-   readiness notes, contributor instructions and a major proof manuscript for
-   common token patterns, private-source URLs, selected worktree paths and
-   email strings: no matches in that sample. The build worker reports a
-   separate zero-finding Gitleaks scan and 94/94 local certificate replays.
-   Those larger scans and replay results were **not independently rerun**
-   by this review.
-6. Reviewed the entire reachable list of 12 publication-staging commits;
-   four commits have author email metadata using a personal email domain.
-   Exact email values are deliberately omitted from this document.
-7. Added `tools/audit_public_release.py` and six synthetic regression tests.
-   The tool can check **every committed file's** manifest SHA256, restricted
-   artifact paths, common credential markers, imported rights-clearance
-   dispositions, and author/committer emails when executed against an
-   actual local clone. Its test fixtures pass independently under Python 3.12.
-   A full local run against the live 889-file candidate has not yet been
-   independently executed.
+## Blocker ledger
 
-## Release-blocking decisions
+| Item | State | Evidence or precise remaining action |
+| --- | --- | --- |
+| Source-delta relevance and 74-file editorial review | RESOLVED | Scientific review and per-path dispositions; no automatic private-PR merge |
+| Known unsupported canonical intermediate claim | RESOLVED | Scoped demotion and withdrawn chart/rate; no new canonical proof claim |
+| Source identities, modes and public-byte checks | RESOLVED | 810 imports; standalone/optional-source verifier and corruption controls |
+| Outsider-discovered prerequisite and endpoint defects | RESOLVED | Public context tool, explicit prerequisite supplement, corrected B/C reading paths |
+| Rights grouping and contribution-history evidence | RESOLVED | Grouped generator covers every retained tracked file at its stated candidate |
+| Original-work rights, alias control and exceptions | OWNER DECISION REQUIRED | Exact final inventory digest plus the first grouped sign-off in rights-review |
+| Local clean-root privacy preparation | RESOLVED | Exporter plus all-object/tree/fsck controls; final detached export receipt |
+| Existing staging history and retained GitHub PR objects | OWNER DECISION REQUIRED | Unused clean remote or authorized staging rename/new-remote migration; keep existing repository private |
+| Hosted fork canary | BLOCKED | Account billing restriction; observed jobs executed zero steps; both rollout variables stay unset |
+| Human review before canonical reuse of repaired sequence proof | NONBLOCKING | Audited-working label remains; publishing scoped working research requires no theorem promotion |
+| Final visibility and anonymous-access verification | OWNER DECISION REQUIRED | Separate explicit approval only after rights and remote/privacy decisions |
 
-**1. Rights and attribution.** All 804 source-derived manifest entries still
-say `publication_clearance: pending provenance/content review`. The owner
-selected Apache-2.0 for original E99 works, but that selection cannot assign
-third-party rights. Obtain a clear owner confirmation that the retained
-original works can be distributed under Apache-2.0, identify any contributor
-or third-party exceptions, and record exact disposition and notices. Do not
-stamp all entries approved based only on a successful automated scan.
+The [rights review](../publication/rights-review.md) reduces rights/privacy to two
+specific factual decisions. All 810 inclusion records remain pending; neither
+hash verification, license selection nor account identity establishes consent.
+Load-bearing proofs have been preserved rather than removed to make a scanner pass.
 
-**2. Reachable commit metadata.** Four staging commits expose personal-domain
-author emails in any future public Git history. Obtain explicit authorization
-from the affected author(s) or rebuild the still-private destination as a
-clean-root snapshot using author-approved public/noreply metadata. A `.mailmap`
-file does not remove emails from existing Git objects. Do not expose the current
-history by changing visibility without resolving this decision.
+## Executable evidence and outsider limit
 
-**3. New source delta since selection.** The source advanced 24 new file blobs
-after `5dcbdc3d`, including two noncanonical global mathematical reports and
-their exact verifiers introduced in private PR #1005, plus CI and preservation
-artifacts. The public corpus must evaluate those **by mathematical relevance**:
-import scoped new research if useful, or explicitly exclude it with rationale.
-No canonical state change was observed in the source transition; this does not
-make every new noncanonical report irrelevant.
+The [readiness record](READINESS.md) defines the immutable final-candidate gate
+and detached receipt. A final receipt must identify the actual commit and tree,
+not merely reuse an earlier green run. The gate executes the complete registry,
+corpus/tool tests, theorem/generated-view consistency, full content/history audit,
+manifest checks, secret scans and workflow lint. Its executable outcome is separate
+from rights/history clearance: an audit exit of one is expected while those
+owner decisions remain open. Passing finite checks proves no global theorem.
 
-**4. Final executable and outsider gate.** Rerun the full public corpus
-integrity checker, full applicable certificate suite, publication scanner and
-three independent fresh-clone A/B/C frontier task sessions against the
-**final** release SHA. Hosted Tier 0 remains subject to an actual public-fork
-runner canary and cost/namespace review; do not treat a skipped job as green.
-The independent mathematical proof-review requirements are separate.
+The [initial outsider exercises](../research/onboarding-evaluation-2026-10-15.md)
+used three isolated route clones by one public-only auditor. Separate public-only
+B and C-II reviewers then reconstructed their routes and reproduced exact evidence,
+identifying the additional repaired deficiencies above. None is human mathematical
+peer review or an independent audit of every inherited proof. Final repeat results
+are recorded against the frozen candidate alongside its detached release manifest.
 
-## Hosted CI control correction
+## Hosted and content-security limits
 
-The staged public workflow had an unconditional plan-job predicate for any
-non-draft PR despite earlier owner instructions to leave hosted rollout off.
-The accompanying audit change restores the explicit
-`vars.E99_PUBLIC_CI == 'true'` opt-in gate. The Tier 1 replay gate remains
-`vars.E99_PUBLIC_PACKAGE_REPLAY == 'true'`. Verify the merged workflow before
-allowing public traffic. Do not alter billing or enable paid usage.
+The [CI review](../ci/RELEASE_REVIEW.md) records trust boundaries and actual API
+observations. Skipped jobs are unverified. No billing setting, paid runner or
+rollout variable was enabled. Local replay remains available to outsiders.
 
-## Release checklist for the owner
+Tree/history scans do not certify every possible secret or grant source rights.
+External bibliography requests include publisher denials, unavailable records and
+transient failures; retained proofs and finite reproduction must stand alone.
+The private destination's anonymous URL correctly remains inaccessible before a
+visibility decision. A clean-root local artifact is preparation, not publication
+or proof that old GitHub objects were erased.
 
-- [ ] Approve the exact candidate's contributor/source Apache-2.0 rights and notices, or isolate uncleared files without breaking load-bearing proofs.
-- [ ] Authorize the visible personal-domain Git commit emails or rebuild/sanitize clean-root history.
-- [ ] Decide inclusion of post-baseline noncanonical current-source reports with explicit status labels.
-- [ ] Execute the complete local release audit, corpus checker, applicable 94-certificate verification, and at least one A/B/C independent onboarding session each on the final frozen release candidate.
-- [ ] Independently inspect the resulting security report and document unresolved exceptions.
-- [ ] Confirm any hosted CI/cost settings without requiring blocked checks.
-- [ ] Change visibility only after the release gate passes, then verify anonymous clone and task onboarding.
-
-This review does **not** declare the mathematical problem solved, copyright
-ownership established, the repo safe for publication, or a new source theorem
-canonical. It documents current evidence, exact structural completeness and
-the concrete remaining release gates. Update the audit with the final SHA
-and results; do not reuse this candidate's conclusions after unreviewed edits.
-
-
-## Follow-up: current-source PR #1005 reconciliation
-
-A later independent source comparison identified the post-selection additions in `e-99` through `eb51394f371aee958b0d9332f80faf75ae694b9e`. The only substantive whole-source mathematical content newly relevant to the current public frontier consists of two noncanonical reports and their two exact SymPy verifiers. These four files are now included with **byte-identical** Git blobs, SHA256 provenance, noncanonical labels, and visible mathematical limits. The original historical campaign diary and administrative reconciliation audit are not transferred; CI-only and maintenance source changes were already addressed separately.
-
-The inclusion manifest now describes **808** source-derived files: 804 prior entries plus four post-baseline whole-source additions. The inclusion/exclusion partition over the original source snapshot is unchanged; the later files have their own pinned source commit and are not misrepresented as part of the original source tree. The theorem-state version remains `2026-10-10.audit.234`; Level I/A/B/C-II remain **OPEN**, C-I **CLOSED**.
-
-Both newly imported verifiers passed an independently executed Python/SymPy replay in an isolated audit workspace (499 odd-rim incidence cases, 122 exact cyclotomic pairs, the -72 nonplanarity fixture, formal three-phase pairing and two laminate controls). These certify **only** their stated finite/formal claims, not global optimality or a closure theorem.
-
-**The release decision remains HOLD.** The complete final-candidate audit, 808 separate source rights dispositions, historic email authorization/clean-root decision, complete applicable 94-certificate sweep, and fresh-clone outsider A/B/C sessions are not waived by this addition. Current public visibility is still private; do not treat this file as permission to publish an unchecked commit.
-
-## Independent historical-object security hardening
-
-A release red-team exercise found a concrete false-negative in the original local audit: a synthetic credential or restricted PDF **committed and subsequently deleted** was undetected because only the current HEAD tree was inspected. A synthetic unsafe side branch and a secret embedded in a historical Git commit message were similarly outside the scanner's original coverage.
-
-The revised `tools/audit_public_release.py` audits **every commit tree reachable through Git refs**, including deleted/renamed historical paths, all historical-only blob contents within an explicit 8 MB per-blob scan bound, and reachable commit messages. It rejects historical restricted archives or credential markers, historical uninspectable blobs and incomplete object enumeration. It does not echo matched secret values. HEAD-tree, manifest/hash, rights and author-email validation are retained.
-
-All **10 synthetic security/inventory regression tests** passed independently (the original six plus the four new historical-visibility cases) in Python 3.12. This result validates the scanner on those fixtures; it is **not** evidence that the entire final E99 history has been cleared. A full run against the actual final Git clone, including all refs, is still required. This scan cannot establish authorship rights, independent mathematical review, or protection against every possible secret format.
-
-**Publication decision remains HOLD:** imported rights provenance and existing personal-domain Git author metadata need explicit clearance or clean-root rebuilding. The source mathematical corpus and public CI switches are unchanged by this security patch.
+This audit and tooling used substantial AI assistance. The owner's next decision
+should use the exact final detached rights inventory and clean-root SHA, followed
+by an explicitly authorized fresh-remote migration and final visibility review.
