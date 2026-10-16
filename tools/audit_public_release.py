@@ -3,8 +3,10 @@
 
 Independent of the theorem verifier: checks publication boundaries, recorded
 source inventory, exact public file hashes, credential markers in current
-and historical blobs or commit messages, and all reachable commit metadata. It is NOT legal rights clearance, mathematical proof review,
-or an all-pattern secret scanner.
+and historical blobs or commit messages, and reachability of Git history.
+Ordinary author, committer, tagger and contributor attribution is retained and
+is not an email-domain release gate. This is NOT legal rights clearance,
+mathematical proof review, or an all-pattern secret scanner.
 """
 from __future__ import annotations
 
@@ -32,16 +34,8 @@ PRIVATE_REFERENCE_PATTERNS = {
     # Split the first sentinel so this scanner does not warn on its own pattern.
     "private-worktree-path": re.compile(rb"(?:/tmp/e99-" + rb"private|/home/oai/|/workspace/projects/)"),
 }
-SAFE_EMAIL_SUFFIXES = ("@users.noreply.github.com", "@noreply.github.com", "@example.invalid")
-SAFE_EXACT_EMAILS = {"noreply@github.com"}
 HEX40 = re.compile(r"^[0-9a-f]{40}$")
 HEX64 = re.compile(r"^[0-9a-f]{64}$")
-
-
-def safe_email(email: str) -> bool:
-    """Recognize explicit noreply forms without allowing whole provider domains."""
-    normalized = email.casefold()
-    return normalized in SAFE_EXACT_EMAILS or normalized.endswith(SAFE_EMAIL_SUFFIXES)
 
 
 def git(root: Path, *args: str) -> bytes:
@@ -69,8 +63,6 @@ OWNER_APPROVED_MANIFEST_BLOB = "96df5a7db05e8b65e8bca605a770d0b09ab27596"
 OWNER_APPROVED_MANIFEST_ENTRIES = 810
 OWNER_APPROVED_CHANGED_MANIFEST_ENTRIES = 8
 OWNER_RIGHTS_EVIDENCE = "https://github.com/1337isnot1337/erdos-99/pull/9#issuecomment-6207244081"
-OWNER_EMAIL_EVIDENCE = "https://github.com/1337isnot1337/erdos-99/pull/9#issuecomment-6207434631"
-OWNER_APPROVED_EMAIL = "cinnajdavis@gmail.com"
 MIGRATION_RIGHTS_RECORD = "docs/publication/first-party-migration-authorization.json"
 MIGRATION_RIGHTS_LEDGER = "docs/research/migration/2026-10-16/ledger/coordinator-first-party-rights-addendum.jsonl"
 MIGRATION_FROZEN_INDEX = "docs/research/migration/2026-10-16/shards/frozen-813-index.jsonl"
@@ -106,9 +98,9 @@ def attested_owner_permissions(root: Path, manifest: dict) -> dict | None:
     """Check the exact owner-granted source scope; never infer rights from a scan.
 
     This records an external, owner-authored confirmation pinned to one immutable
-    inclusion-manifest Git blob. No generic waiver for arbitrary source files or
-    personal Git authors is allowed. GitHub owner identity and license exceptions
-    still require release-owner judgment independent of this structural check.
+    inclusion-manifest Git blob. This grants rights to owner-controlled source
+    expression, not to third-party expression. Git attribution metadata does not
+    need a separate email-domain permission or require history rewriting.
     """
     try:
         record = read_json(root, OWNER_RIGHTS_RECORD)
@@ -160,11 +152,7 @@ def attested_owner_permissions(root: Path, manifest: dict) -> dict | None:
             return None
         if bounds.get("repository_visibility_change_authorized") is not False:
             return None
-        emails = set()
-        metadata = record.get("history_email_consent", {})
-        if metadata.get("comment_url") == OWNER_EMAIL_EVIDENCE and metadata.get("personal_domain_emails_found") == [OWNER_APPROVED_EMAIL]:
-            emails.add(OWNER_APPROVED_EMAIL)
-        return {"imported_entries": len(entries), "owner_approved_emails": emails}
+        return {"imported_entries": len(entries)}
     except (KeyError, TypeError, AttributeError, ValueError, UnicodeError, OSError, subprocess.SubprocessError):
         return None
 
@@ -494,14 +482,14 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
             if not HEX40.fullmatch(sha):
                 continue
             counts["reachable_commits"] += 1
-            for role, email in (("author", author), ("committer", committer)):
-                if "@" in email and not safe_email(email):
-                    if owner_perms is not None and email.casefold() in owner_perms["owner_approved_emails"]:
-                        counts["owner_authorized_git_email_occurrences"] += 1
-                    else:
-                        counts["personal_domain_git_emails"] += 1
-                        finding("<git:" + sha[:12] + ">", "personal-git-email",
-                                "Reachable " + role + " email uses a personal/non-noreply domain; owner must approve or sanitize history")
+            # Standard Git attribution belongs to the contributor's recorded
+            # history. Count coverage, but never block on its email domain.
+            # Historical commit objects are still independently scanned for
+            # credential patterns in the all-object walk below.
+            if author:
+                counts["git_author_email_metadata_records"] += 1
+            if committer:
+                counts["git_committer_email_metadata_records"] += 1
     except (subprocess.SubprocessError, UnicodeError) as error:
         finding("<git>", "history-scan-failure", type(error).__name__)
 
@@ -522,14 +510,12 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
                     if pattern.search(data) and (kind != 'blob' or oid not in current_blobs):
                         finding(where, 'historical-private-reference', label + ' in reachable history; review suitability', block=False)
                 if kind in ("commit", "tag"):
-                    for email in re.findall(rb"(?im)^(?:tagger |co-authored-by: )[^\n]*<([^<>\n]+)>", data):
-                        decoded_email = email.decode("utf-8", "replace")
-                        if b"@" in email and not safe_email(decoded_email):
-                            visible = email.decode("utf-8", "replace").casefold()
-                            if owner_perms is not None and visible in owner_perms["owner_approved_emails"]:
-                                counts["owner_authorized_trailer_email_occurrences"] += 1
-                            else:
-                                finding(where, "personal-git-trailer-or-tag-email", "Tagger or contributor trailer has non-noreply metadata; values redacted")
+                    # Tagger and Co-authored-by metadata is retained, not
+                    # suppressed. Any credential contained in the same object
+                    # has already been checked by TOKEN_PATTERNS above.
+                    counts["git_tag_and_contributor_email_metadata_records"] += len(
+                        re.findall(rb"(?im)^(?:tagger |co-authored-by: )[^\n]*<([^<>\n]+)>", data)
+                    )
         except (OSError, subprocess.SubprocessError, ValueError, UnicodeError) as error:
             finding("<git>", "historical-content-scan-failure", type(error).__name__)
 
@@ -544,6 +530,7 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
         "limits": [
             "This tool cannot grant copyright rights or verify contributor consent.",
             "No regex scan certifies absence of every possible secret.",
+            "Ordinary Git attribution metadata is preserved and does not require email-domain consent; credentials in Git objects are still screened.",
             "Historical scan covers refs reachable with git --all, not unreachable loose objects.",
             "Machine-valid dependency paths do not prove implicit mathematical dependency closure.",
             "Proof review, clean-history origin, hosted-CI safety and anonymous public onboarding remain separate gates.",

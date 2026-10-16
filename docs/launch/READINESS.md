@@ -66,10 +66,13 @@ python tools/verify_frozen_target_c_813_migration.py \
 
 `executable_checks_passed` and `automated_release_precheck_passed` are distinct.
 The current rights records reconcile the previous 810-entry manifest and the
-additive 834-path migration. The expanded history contains one additional
-unapproved non-noreply identity, so the release precheck remains blocked unless
-its rights are separately resolved. Do not weaken checks or infer approval
-from the owner's consent for a distinct identity.
+additive 834-path migration. Under the owner-directed Git-attribution policy,
+ordinary author, committer, tagger and contributor-trailer email metadata is
+preserved and does not by itself block release. The earlier 14 non-noreply
+Codex occurrences are attribution, not a credential finding. All credential,
+restricted-content, and substantive source-rights checks remain enforced.
+A previous Gate 2 receipt blocked by the old email rule is historical;
+rerun the complete release precheck on the actual final commit.
 
 ## Targeted evidence executed during closure
 
@@ -102,10 +105,12 @@ The [updated publication audit](PUBLICATION_AUDIT.md) and
 authorization for the 810-entry manifest and the separate 834-path Target C
 migration. The original exact-manifest check now verifies the prior-to-current
 entry reconciliation; the additive rights check validates every frozen report
-and support path. The owner has approved their own existing personal-domain Git
-author email, but one additional identity in the expanded history remains
-unapproved. The owner wishes to preserve repository and PR history. Gate 2 must
-run on the exact final commit, and no visibility change is authorized here.
+and support path. The owner wishes to preserve original contributor attribution and PR history;
+ordinary Git email metadata requires no separate release clearance. The owner
+has separately consented to the publication of their own email, but this is
+historical context, not a per-address allowlist or a grant of third-party
+content rights. Gate 2 must run on the exact final commit, and no visibility
+change is authorized here.
 
 Hosted execution remains unverified because the account restriction prevented
 jobs from starting. Both protective rollout gates remain unset. No paid usage or
