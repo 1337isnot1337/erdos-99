@@ -12,4 +12,4 @@ Proof or exact code/inputs, arithmetic, parameter bounds, commands and actual ou
 
 ## Review and provenance
 
-Exact head for review, agent versus human review, contributor credit, AI assistance and rights/source notices. Intentional contributions are offered under Apache-2.0 as described in CONTRIBUTING.md.
+Exact proposed head; for canonical promotion, link the **single independent AI-agent mathematical audit** (full proof reconstruction and adversarial bridge/regression review), its agent/model when known, evidence, verdict and limitations. The project owner may operate the reviewer agent. No second agent or human mathematical review is required. Include contributor/source credit, AI role and rights/source notices. Intentional contributions are offered under Apache-2.0 as described in CONTRIBUTING.md.
