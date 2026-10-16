@@ -1,94 +1,139 @@
 {
-  "schema_version": "erdos-99-local-migration-verification/v1",
-  "recorded_at_utc": "2026-10-16 (payload receipt; exact subject will be bound after commit)",
-  "verification_subject": {
-    "destination_repository": "https://github.com/1337isnot1337/erdos-99",
-    "batch": "frozen source-only Target C capacity/refill branch",
-    "branch": "research/source-main-exact-phase-packet-fork-20261016",
-    "payload_commit": "PENDING_BEFORE_PUSH",
-    "payload_tree": "PENDING_BEFORE_PUSH",
-    "base_main_commit": "4ce4fed103532ad42919896d025df1a6d4b72405",
-    "base_main_tree": "84318253c282e851aa1bbbad1dfd2dbba389ba16",
-    "receipt_note": "Pre-push receipt draft; payload fields must be set to the exact committed integration tree before publication."
-  },
-  "frozen_source": {
-    "repository": "https://github.com/1337isnot1337/e-99",
-    "main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
-    "main_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
-    "relevant_branch": "research/sol/target-c-level1-gpt61-2026-10-04",
-    "branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
-    "branch_tree": "198c83065add8175a921b4e9c55169e4690010a3",
-    "branch_merge_base": "0351e2c529e01750f7aceb87f8f6f0cb9c21dea7",
-    "branch_delta": "19 paths: 8 reports, 8 verifiers, 3 generated/navigation files",
-    "branch_ledger": "docs/research/migration/2026-10-16/ledger/source-branch-files.jsonl"
-  },
   "commands": [
     {
       "command": "python3 research/verify_target_c_boundary_vacancy_funded_collective_refill_2026_10_05.py",
-      "result": "PASS; 65,754 sequential checks, 9,802 guarded source-pair checks, two funding labels retained, exterior shield and unchanged diameter verified. No global optimum or growing-frame uniform tolerance."
+      "result": "PASS; 65,754 sequential checks and 9,802 complete guarded source-pair checks; retained funding labels, strict final interior, exterior shield, and unchanged maximum diameter. No global optimum or growing-frame uniform tolerance."
     },
     {
       "command": "python3 research/verify_target_c_multishear_traffic_domination_2026_10_05.py",
-      "result": "PASS; 134 exact nonnegative principal minors, full support/equilibrium/kernel identities, finite lower-pair checks and 480 full-source upper/lower quadratics. No common maximum-diameter descent."
+      "result": "PASS; 134 exact nonnegative principal minors, stress support/equilibrium/kernel identities, and 480 complete-source upper/lower quadratic checks. No common maximum-diameter descent."
     },
     {
       "command": "python3 research/verify_target_c_one_boundary_pin_oblique_refill_2026_10_05.py",
-      "result": "PASS; 1,042 two-stage pair checks, 11,774 guarded source pairs, 82 contacts removed, one funding label, triangular pinned stress checks. No global optimum."
+      "result": "PASS; 1,042 two-stage pair checks and 11,774 guarded source pairs; 82 contacts removed and one boundary funding label. No global optimum."
     },
     {
       "command": "python3 research/verify_target_c_one_vacancy_collective_strictification_2026_10_05.py",
-      "result": "PASS; 1,915 exact full-source-pair checks in four patches; all labels and wall fixed; exact Q(sqrt(3)) motion checks. No global optimum or uniform angle window."
+      "result": "PASS; 1,915 exact full-source pair checks in four patches; every label and the wall fixed; exact Q(sqrt(3)) motion checks. No global optimum."
     },
     {
       "command": "python3 research/verify_target_c_triangular_two_pin_capacity_2026_10_05.py",
-      "result": "PASS; 716 exact unit triangles, 228 admissible triangles after pin deletion, checked 3-by-n covers and the 4-by-4 six-triangle star. Analytic arbitrary-point bound remains in report."
+      "result": "PASS; 716 exact unit triangles, 228 admissible after pin deletion, checked 3-by-n covers, and the 4-by-4 six-triangle star. Analytic arbitrary-point bound remains in the report."
     },
     {
       "command": "python3 research/verify_target_c_two_side_polynomial_refill_2026_10_05.py",
-      "result": "PASS; 3,694 local pairs, 30,440 guarded source pairs, 119 labels moved, polynomial gap/tolerance and unchanged maximum diameter. Actual wall and deficit remain hypotheses."
+      "result": "PASS; 3,694 local pairs and 30,440 guarded source pairs; all 119 interior labels moved; polynomial gap/tolerance and full maximum diameter checked. Actual wall/deficit remain hypotheses."
     },
     {
       "command": "python3 research/verify_target_c_unit_pentagon_capacity_2026_10_05.py",
-      "result": "PASS; exact radial identity, Oler 1/9 margin, chord endpoints, ten lower pairs and four hull edges in the sharp packet. Universal analytic proof remains unreviewed."
+      "result": "PASS; exact radial identity, Oler 1/9 margin, chord endpoints, ten lower pairs, and four hull edges in the sharp packet. Analytic proof remains unreviewed."
     },
     {
       "command": "python3 research/verify_target_c_vacancy_funded_unit_wall_activation_2026_10_05.py",
-      "result": "PASS; 7,016 sequential checks, 15,244 guarded source-pair checks, six replacements, exterior shield >=sqrt(3), triangular vacancy regression. No actual-source vacancy inferred."
+      "result": "PASS; 7,016 sequential checks and 15,244 guarded source pairs; six replacements, exterior shield at least sqrt(3), and triangular vacancy regression. No actual-source vacancy inferred."
+    },
+    {
+      "command": "python3 research/verify_target_c_laminar_multitrain_interval_shear.py",
+      "result": "PASS; exact interval-shear rotation and second-variation regression."
+    },
+    {
+      "command": "python3 docs/research/migration/2026-10-16/verify_source_branch_imports.py --source-repo /home/cinna/math/e-99 --destination /home/cinna/erdos-99-pr960",
+      "result": "PASS; frozen branch manifest and all active main/PR baselines match; 19 branch paths, 19 source-main comparisons, 4,304 branch tracked paths, 10 exact duplicates, 6 byte-exact imports, and 3 metadata/navigation treatments; blob/SHA-256 identities verified."
     },
     {
       "command": "python3 tools/build_artifact_index.py --write",
-      "result": "PASS; 578 report/artifact records; zero metadata headers rewritten."
+      "result": "PASS; 578 artifact records; zero metadata headers rewritten."
     },
     {
       "command": "python3 tools/check_theorem_state.py",
-      "result": "PASS; destination theorem-state unchanged."
-    },
-    {
-      "command": "python3 scripts/choose_research_task.py --task target-c-capacity-collective-refill --json",
-      "result": "PASS; suggestions-only; catalogue revision public-frontier.5; offline overlap snapshot dated 2026-10-15 explicitly reported."
-    },
-    {
-      "command": "PYTHONPATH=tools python3 -m unittest tools.test_task_context",
-      "result": "PENDING final integration-tree run."
+      "result": "PASS; canonical theorem-state manifest unchanged."
     },
     {
       "command": "python3 tools/check_public.py",
-      "result": "PENDING after receipt and migration docs are finalized."
+      "result": "PASS; zero errors; 94 certificates, 451 claims, 845 dependency edges, 810 retained source files, 22 tasks; mathematical_proof=false."
+    },
+    {
+      "command": "python3 tools/check_active_route_summaries.py",
+      "result": "PASS."
+    },
+    {
+      "command": "task_context for target-c-capacity-collective-refill and target-c-threshold-packet-cross-shore",
+      "result": "PASS; no warnings; each task resolves its current track and prerequisites."
+    },
+    {
+      "command": "python3 scripts/choose_research_task.py --task target-c-capacity-collective-refill --json",
+      "result": "PASS; suggestions only (not reserved), catalogue public-frontier.5; overlap data is the explicitly dated 2026-10-15 offline snapshot."
+    },
+    {
+      "command": "changed-document local link audit using tools/public_links.py",
+      "result": "PASS; 330 local links resolved across 36 changed Markdown files."
+    },
+    {
+      "command": "git diff --check 4ce4fed103532ad42919896d025df1a6d4b72405 HEAD -- . :(exclude)docs/archive/source-e99-main-42f0296d/docs/targets/target-c/train-closure-bracing-audited.md.source",
+      "result": "PASS on all non-archived changes. The excluded historical source file is retained byte-identically and has two original trailing-space lines."
+    },
+    {
+      "command": "python3 -m unittest discover -s tests -p test_*.py",
+      "result": "PASS; 8 tests."
+    },
+    {
+      "command": "PYTHONPATH=tools python3 -m unittest tools.test_task_context",
+      "result": "PASS; 6 tests."
+    },
+    {
+      "command": "PYTHONPATH=tools python3 -m unittest tools.test_public_proof_graph tools.test_public_rights tools.test_public_release_audit tools.test_verify_publication_candidate tools.test_clean_public_snapshot tools.test_verify_publication_sources",
+      "result": "PASS; 55 tests."
     },
     {
       "command": "python3 tools/run_theorem_certificates.py",
-      "result": "PASS; 94 selected of 94 unique registered certificates on the staged research tree."
+      "result": "PASS; 94 selected of 94 unique registered certificates."
+    },
+    {
+      "command": "python3 docs/research/migration/2026-10-16/verify_migration_provenance.py --source-repo /home/cinna/math/e-99 --destination /home/cinna/erdos-99-pr960",
+      "result": "PASS; 1,446 source artifacts, 1,287 Target C artifacts, 2,913 source files, 100 dependency records, 389 dependency edges, 0 errors. This checker reports historical destination state anchor 60c2576; the active 4ce4fed base and manifests are separately checked by verify_source_branch_imports.py."
+    },
+    {
+      "command": "python3 tools/verify_publication_sources.py --source-repo /home/cinna/math/e-99",
+      "result": "PASS; 810 retained files, 3,977 excluded files, 4,793 provenance records, 0 errors; provenance only, not rights or proof review."
+    },
+    {
+      "command": "/home/cinna/.cache/e99-pr959-tools/gitleaks detect --source /home/cinna/erdos-99-pr960 --no-git --no-banner --redact",
+      "result": "PASS; scanned 31.27 MB; no leaks found."
     }
   ],
-  "release_gates": {
-    "gate_2": "NOT CLAIMED; corpus migration remains incomplete and the final release verification has not run on a final main SHA.",
-    "gate_3": "NOT AUTHORIZED; destination repository must remain private."
+  "frozen_source": {
+    "branch_delta": "19 paths: 8 reports, 8 verifiers, 3 generated/navigation files",
+    "branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+    "branch_ledger": "docs/research/migration/2026-10-16/ledger/source-branch-files.jsonl",
+    "branch_merge_base": "0351e2c529e01750f7aceb87f8f6f0cb9c21dea7",
+    "branch_tree": "198c83065add8175a921b4e9c55169e4690010a3",
+    "main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "main_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+    "relevant_branch": "research/sol/target-c-level1-gpt61-2026-10-04",
+    "repository": "https://github.com/1337isnot1337/e-99"
   },
-  "hosted_ci": "No destination PR has been created at receipt-draft time; hosted status will be queried after PR creation. No hosted CI success is inferred.",
+  "hosted_ci": "At this receipt capture no destination PR for this batch existed, so hosted CI had not run. Query the final PR head separately; no hosted result is inferred here.",
   "limitations": [
-    "All eight mathematical reports remain unreviewed in destination lifecycle.",
-    "Finite verifiers do not audit the analytic arguments or establish a canonical global source.",
-    "Complete source-main and relevant PR migration remains incomplete.",
-    "This focused receipt is not a Gate 2 or Gate 3 result."
-  ]
+    "The complete frozen source-main Target C tree and all relevant PR heads are not yet integrated.",
+    "All newly imported mathematical candidates remain unreviewed and noncanonical in destination lifecycle.",
+    "Finite verifiers and selected registered certificates do not audit analytic arguments or establish global source extraction.",
+    "The corrected inverse-phase scope remains authoritative; no invalid global K-prime/D chart or unsupported q=O(D^(4/5)) rate is reinstated.",
+    "This focused local receipt is not Gate 2 or Gate 3."
+  ],
+  "recorded_at_utc": "2026-10-16T15:24:32+00:00",
+  "release_gates": {
+    "gate_2": "NOT CLAIMED. The source corpus/PR migration remains incomplete; the complete publication gate has not been run against a final integrated main SHA. check_public integrity passing is not Gate 2.",
+    "gate_3": "NOT AUTHORIZED. The repository must remain private."
+  },
+  "schema_version": "erdos-99-local-migration-verification/v1",
+  "verification_subject": {
+    "base_main_commit": "4ce4fed103532ad42919896d025df1a6d4b72405",
+    "base_main_tree": "84318253c282e851aa1bbbad1dfd2dbba389ba16",
+    "batch": "source-only Target C capacity/refill branch plus source-main exact-phase packet batch",
+    "branch": "research/source-main-exact-phase-packet-fork-20261016",
+    "destination_repository": "https://github.com/1337isnot1337/erdos-99",
+    "payload_commit": "0f0e23636152a1c78d938218f113f05ae3b130c1",
+    "payload_tree": "653b5f4aff37677c51d0c6beaf850053983eb4ce",
+    "receipt_note": "All listed local checks were run on the committed payload tree. This receipt is a separate documentation-only follow-up; its new commit receives a final lightweight integrity rerun. This focused batch does not complete the corpus migration or satisfy Gate 2."
+  }
 }
