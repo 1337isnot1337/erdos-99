@@ -28,5 +28,13 @@
     "shared_navigation_changed": false,
     "other_shards_changed": false
   },
-  "integration": "all findings remain unreviewed and noncanonical; coordinator owns merge and integration-wide validation"
+  "integration": "all findings remain unreviewed and noncanonical; coordinator owns merge and integration-wide validation",
+  "pull_request": {
+    "number": 63,
+    "url": "https://github.com/1337isnot1337/erdos-99/pull/63",
+    "state_at_receipt": "open",
+    "branch": "migration/target-c-shard-03-batch-465-488-w3-20261016",
+    "initial_content_commit": "3944449dc8a1d805ccd88214760b56c3a992b1a0",
+    "merge_state_at_receipt": "CLEAN"
+  }
 }
