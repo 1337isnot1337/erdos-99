@@ -1,0 +1,39 @@
+{
+  "batch": "441-464",
+  "shard": 3,
+  "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "destination_baseline": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+  "assigned_indexes": [
+    441,
+    464
+  ],
+  "report_count": 24,
+  "first_path": "docs/reports/target_c_mantel_phase_pair_endpoint_2026-09-14.md",
+  "last_path": "docs/reports/target_c_mu4_train_pairing_endpoint_exclusion_2026-09-12.md",
+  "evidence": {
+    "new_first_party_verifiers_imported": 5,
+    "verifiers_run": 5,
+    "passed": 5,
+    "details": "Exact commands and bounded outputs are in evidence-441-464.jsonl."
+  },
+  "rights_privacy": "First-party source reports and finite verifiers only. No root LICENSE file was identified at the frozen source commit. External research remains attributed/linked; no third-party PDF, image, independent proof text, or long quotation was copied. Screen found no email, credential-like string, embedded image, long blockquote, or owner-local path.",
+  "verification": {
+    "source_blob_sha256_and_destination_blob_sha256": "recorded per report/evidence artifact",
+    "body_preservation": "all 24 report bodies match the frozen source after documented theorem-state/provenance transformation; two files also drop one redundant trailing blank line for clean diff checks",
+    "finite_verifiers": "5/5 passed; each finite scope limitation remains explicit",
+    "git_diff_check": "passed",
+    "theorem_manifest_or_generated_index_changed": false,
+    "publication_manifest_changed": false,
+    "shared_navigation_changed": false,
+    "other_shards_changed": false
+  },
+  "integration": "all findings remain unreviewed and noncanonical; coordinator owns merge and integration-wide validation",
+  "pull_request": {
+    "number": 60,
+    "url": "https://github.com/1337isnot1337/erdos-99/pull/60",
+    "state_at_receipt": "open",
+    "branch": "migration/target-c-shard-03-batch-441-464-w3-20261016",
+    "initial_content_commit": "690d899490e3bbeab3cb9740ca2adbd1adf4b145",
+    "merge_state_at_receipt": "CLEAN"
+  }
+}
