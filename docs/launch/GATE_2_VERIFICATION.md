@@ -58,9 +58,13 @@ they do not establish global optimality, the analytic proofs, or Level I.
 
 ## Historical Gitleaks finding and receipt semantics
 
-The unchanged Gitleaks history scan detects one reviewed synthetic fixture:
+The Gitleaks history scan uses `--all --full-history -m`, including merge
+resolution diffs. Ordinary Git patch logs omit merge diffs and can miss content
+introduced only in a merge and deleted later. The full scan detects two pinned
+occurrences of one reviewed synthetic fixture:
 
 - Commit: `08784c2440aa2f6f4252adc30f7ce33cd59cf976`.
+- Merge retaining the identical blob: `75fad69da5002e28d0ccc770841cd264ad1ba6cb`.
 - File/range: `tools/test_local_ci.py`, lines 386–390.
 - Rule: `private-key`.
 - Git blob: `5cab1430e37d5255bd3fe5e7e58937e1c14a0518`.
@@ -72,12 +76,13 @@ inside negative-test string literals, with no closing delimiter or encoded key
 payload. The current fixture was already repaired to construct its test strings.
 Rewriting the owner's retained Git history is unnecessary for this false positive.
 
-The receipt retains the raw scanner **exit 1**, JSON finding and complete log.
+The receipt retains the raw scanner **exit 1**, JSON findings and complete log.
 The verifier records a separate `finding_review` and `verification_passed` result
-only when the report contains exactly this one finding, with the exact pinned
-commit/path/rule/range/fingerprint, and the complete historical blob SHA256
-matches. It reads committed Git bytes with replacement objects disabled.
-There is no scanner suppression or general path/rule exclusion. An additional
+only when every finding matches one of these two pinned occurrences, with the
+exact commit/path/rule/range/fingerprint and complete historical blob SHA256.
+Duplicate reports of one occurrence are rejected. It reads committed Git bytes
+with replacement objects disabled.
+There is no scanner suppression or general path/rule exclusion. An unreviewed
 finding, changed identity, missing/malformed report, unavailable/different Git
 object, or scanner invocation error remains a failure. The raw exit code is
 never changed to zero. Receipt consumers must distinguish reviewed findings
@@ -86,7 +91,9 @@ from a zero-finding scanner result.
 Real-Git regressions exercise exact review, additional and changed findings,
 malformed/missing reports, a mismatching blob hash, missing objects and uncommitted
 worktree substitutions. Existing tests continue to check hidden index changes,
-symlinks and all executable bits.
+symlinks and all executable bits. Additional real-Git controls demonstrate that
+the scan includes deleted merge-only content and reject a pinned alias whose
+committed bytes differ from the reviewed blob.
 
 ## Separate publication decisions
 

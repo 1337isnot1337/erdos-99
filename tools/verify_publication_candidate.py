@@ -31,30 +31,47 @@ REVIEWED_HISTORY_FIXTURE = {
     'Fingerprint': '08784c2440aa2f6f4252adc30f7ce33cd59cf976:tools/test_local_ci.py:private-key:386',
 }
 REVIEWED_HISTORY_BLOB_SHA256 = '509b6ed834755b0ae83cd48bcef34cc6a5016d5e375d24f64e92eb4f3f856f92'
+# This merge retained exactly the same reviewed blob. No arbitrary commit may
+# borrow its disposition, even when a scanner reports similar-looking text.
+REVIEWED_HISTORY_ALIASES = ('75fad69da5002e28d0ccc770841cd264ad1ba6cb',)
+GITLEAKS_HISTORY_LOG_OPTIONS = '--all --full-history -m'
 
 
 def review_history_gitleaks(root: Path, report: Path) -> dict | None:
     """Recognize only the exact reviewed, payload-free historical test fixture.
 
-    Missing/malformed reports, extra matches, changed identities and unavailable
+    Missing/malformed reports, unreviewed matches, changed identities and unavailable
     or different Git objects all fail closed. No worktree/index bytes are used.
     """
     try:
         findings = json.loads(report.read_text())
-        if not isinstance(findings, list) or len(findings) != 1:
+        if not isinstance(findings, list) or not findings:
             return None
-        match = findings[0]
-        if not isinstance(match, dict) or any(match.get(k) != v for k, v in REVIEWED_HISTORY_FIXTURE.items()):
-            return None
-        data = subprocess.check_output([
-            'git', '--no-replace-objects', '-C', str(root), 'show',
-            REVIEWED_HISTORY_FIXTURE['Commit'] + ':' + REVIEWED_HISTORY_FIXTURE['File'],
-        ], stderr=subprocess.PIPE)
-        if hashlib.sha256(data).hexdigest() != REVIEWED_HISTORY_BLOB_SHA256:
-            return None
+        allowed = {REVIEWED_HISTORY_FIXTURE['Commit'], *REVIEWED_HISTORY_ALIASES}
+        reviewed = []; seen = set()
+        for match in findings:
+            if not isinstance(match, dict) or not isinstance(match.get('Commit'), str) or match['Commit'] not in allowed:
+                return None
+            commit = match['Commit']
+            if commit in seen:
+                return None
+            seen.add(commit)
+            expected = {**REVIEWED_HISTORY_FIXTURE, 'Commit': commit,
+                        'Fingerprint': f'{commit}:{REVIEWED_HISTORY_FIXTURE["File"]}:{REVIEWED_HISTORY_FIXTURE["RuleID"]}:{REVIEWED_HISTORY_FIXTURE["StartLine"]}'}
+            if any(match.get(k) != v for k, v in expected.items()):
+                return None
+            data = subprocess.check_output([
+                'git', '--no-replace-objects', '-C', str(root), 'show',
+                commit + ':' + expected['File'],
+            ], stderr=subprocess.PIPE)
+            if hashlib.sha256(data).hexdigest() != REVIEWED_HISTORY_BLOB_SHA256:
+                return None
+            reviewed.append(expected)
         return {
             'disposition': 'reviewed-false-positive',
-            'finding': REVIEWED_HISTORY_FIXTURE,
+            'finding': reviewed[0],
+            'findings': reviewed,
+            'finding_count': len(reviewed),
             'committed_blob_sha256': REVIEWED_HISTORY_BLOB_SHA256,
             'reason': 'Two PEM opening delimiters in negative-test strings; no closing delimiter or encoded private-key payload. Exact historical blob independently inspected.',
             'raw_scanner_result_preserved': True,
@@ -150,7 +167,7 @@ def main():
         receipt['commands'].append(record)
         (output / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
         print(f'{name}: exit={proc.returncode}, seconds={record["seconds"]}' +
-              ('; exact historical fixture reviewed as false positive' if 'finding_review' in record else ''), flush=True)
+              ('; exact historical fixture findings reviewed as false positives' if 'finding_review' in record else ''), flush=True)
 
     python = sys.executable
     run('environment', [python, '-m', 'pip', 'check'])
@@ -170,7 +187,7 @@ def main():
         run('gitleaks-tree', [executable, 'dir', '--no-banner', '--redact', '--report-format', 'json',
                               '--report-path', str(output / 'gitleaks-tree.json'), '.'])
         run('gitleaks-history', [executable, 'git', '--no-banner', '--redact', '--report-format', 'json',
-                                 '--report-path', str(output / 'gitleaks-history.json'), '--log-opts=--all', '.'],
+                                 '--report-path', str(output / 'gitleaks-history.json'), '--log-opts=' + GITLEAKS_HISTORY_LOG_OPTIONS, '.'],
             history_report=output / 'gitleaks-history.json')
     if args.actionlint:
         run('actionlint', [str(args.actionlint.resolve())])
