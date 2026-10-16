@@ -1,9 +1,22 @@
 # Publication audit and blocker ledger
 
-**Release decision: HOLD.** Both repositories remain private. The publication
-engineering and scientific corrections below do not establish historical source
-permissions or authorize exposing the staging history. Level I/A/B/C-II remain
-open; C-I remains closed within its inherited scope.
+**Release decision: HOLD pending final technical verification and explicit visibility approval.**
+Both repositories remain private. The owner's subsequently recorded rights authorization and
+Git-email consent are now documented under [Gate 1 rights review](../publication/rights-review.md).
+This is not authorization to publish or a fresh current-commit security receipt.
+Level I/A/B/C-II remain open; C-I remains closed within its inherited scope.
+
+**2026-10-15 Gate 1 follow-up:** The owner authorized all 810 imported AI-agent project files
+under the already selected Apache-2.0 terms. A GitHub-object cross-check found 810/810
+pinned source blob/mode identities across 12 source commits, 810/810 destination
+paths present, 726 unchanged blobs and 84 recorded publication edits. A focused
+external-expression review identified no concrete unlicensed imported paper/code
+exception; third-party citations remain credited and separately owned prose cannot
+be relicensed by this authorization. The owner also authorized disclosure of their
+own Git email address; a live walk of 47 commits from 22 refs observed no other
+personal-domain email. The mandatory clean-root migration recommendation therefore
+no longer applies **solely to this email metadata**. The prior release receipts
+remain pinned to older commits.
 
 ## Exact scientific freeze
 
@@ -75,16 +88,18 @@ paths. Retained public hashes are independently checkable without the archive.
 | Source identities, modes and public-byte checks | RESOLVED | 810 imports; standalone/optional-source verifier and corruption controls |
 | Outsider-discovered prerequisite and endpoint defects | RESOLVED | Public context tool, explicit prerequisite supplement, corrected B/C reading paths |
 | Rights grouping and contribution-history evidence | RESOLVED | Grouped generator covers every retained tracked file at its stated candidate |
-| Original-work rights, alias control and exceptions | OWNER DECISION REQUIRED | Exact final inventory digest plus the first grouped sign-off in rights-review |
+| Imported owner-directed expression, 810 records | OWNER AUTHORIZATION RECORDED | Owner grant on PR #9 tied to exact 810-entry manifest blob `f5218507`; source pins all matched; see current rights review |
 | Local clean-root privacy preparation | RESOLVED | Exporter plus all-object/tree/fsck controls; final detached export receipt |
-| Existing staging history and retained GitHub PR objects | OWNER DECISION REQUIRED | Unused clean remote or authorized staging rename/new-remote migration; keep existing repository private |
+| Identified personal-domain Git author metadata | OWNER-AUTHORIZED | Owner consent covers their address; 47 reachable commits across 22 refs contain no other personal-domain email. No clean migration required for this issue alone; Gate 2 still scans history/contents |
 | Hosted fork canary | BLOCKED | Account billing restriction; observed jobs executed zero steps; both rollout variables stay unset |
 | Independent AI-agent audit before canonical reuse of repaired sequence proof | NONBLOCKING | Audited-working label remains; publishing scoped working research requires no theorem promotion |
-| Final visibility and anonymous-access verification | OWNER DECISION REQUIRED | Separate explicit approval only after rights and remote/privacy decisions |
+| Final visibility and anonymous-access verification | OWNER DECISION REQUIRED | Separate explicit approval only after Gate 2 current-commit security/technical verification |
 
-The [rights review](../publication/rights-review.md) reduces rights/privacy to two
-specific factual decisions. All 810 inclusion records remain pending; neither
-hash verification, license selection nor account identity establishes consent.
+The [current rights review](../publication/rights-review.md) and owner attestation
+record source expression consent for all 810 imported files. Historical pending
+flags remain in the source-identity manifest; release tooling must reconcile the
+separate attestation explicitly rather than silently waive the audit. Rights for
+any actually copied third-party prose or code cannot be granted by the owner.
 Load-bearing proofs have been preserved rather than removed to make a scanner pass.
 
 ## Executable evidence and outsider limit
@@ -93,9 +108,10 @@ The [readiness record](READINESS.md) defines the immutable final-candidate gate
 and detached receipt. A final receipt must identify the actual commit and tree,
 not merely reuse an earlier green run. The gate executes the complete registry,
 corpus/tool tests, theorem/generated-view consistency, full content/history audit,
-manifest checks, secret scans and workflow lint. Its executable outcome is separate
-from rights/history clearance: an audit exit of one is expected while those
-owner decisions remain open. Passing finite checks proves no global theorem.
+manifest checks, secret scans and workflow lint. Its executable outcome is separate from rights/privacy and explicit public
+visibility approval. An audit exit of one may still occur until tools explicitly
+reconcile recorded owner authorizations, and any independently detected issue
+must still be investigated. Passing finite checks proves no global theorem.
 
 The [initial outsider exercises](../research/onboarding-evaluation-2026-10-15.md)
 used three isolated route clones by one public-only auditor. Separate public-only
@@ -117,6 +133,9 @@ The private destination's anonymous URL correctly remains inaccessible before a
 visibility decision. A clean-root local artifact is preparation, not publication
 or proof that old GitHub objects were erased.
 
-This audit and tooling used substantial AI assistance. The owner's next decision
-should use the exact final detached rights inventory and clean-root SHA, followed
-by an explicitly authorized fresh-remote migration and final visibility review.
+This audit and tooling used substantial AI assistance. Gate 1 owner-scope rights
+and the identified personal-email consent are recorded. Next run the complete
+Gate 2 verifier on the actual current final commit, reconcile the still-historical
+manifest rights flags with the owner attestation, and address concrete security
+findings if any. Keep the existing repository private until the owner separately
+approves Gate 3 visibility.
