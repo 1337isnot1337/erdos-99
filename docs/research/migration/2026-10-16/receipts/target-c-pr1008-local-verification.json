@@ -38,11 +38,11 @@
       "result": "PASS; 94 selected of 94 unique certificates; zero failures"
     },
     {
-      "command": "python3 research/verify_population_reserve_twelve_arc_2026_10_15.py --extended --output /tmp/population-reserve-twelve-arc.json",
+      "command": "python3 research/verify_population_reserve_twelve_arc_2026_10_15.py --extended --output <temporary certificate output>",
       "result": "PASS; five exact finite cases; exact constant and sign checks; 150 lattice rotation identities; two collision negative controls rejected"
     },
     {
-      "command": "cmp /tmp/population-reserve-destination-replay.json research/population_reserve_twelve_arc_2026_10_15.json",
+      "command": "cmp <temporary replay output> research/population_reserve_twelve_arc_2026_10_15.json",
       "result": "PASS; generated JSON matches source fixture byte for byte; fixture SHA-256 c41fb5e75f4b44a4f317a1703d791fac14043a3605e770304014cac6874a0f36"
     },
     {
@@ -74,5 +74,9 @@
     "repository_visibility": "private",
     "gate_2": "NOT RUN; source research migration remains incomplete and this is not the final release tree",
     "gate_3": "NOT REQUESTED; visibility remains private"
+  },
+  "release_redactions": {
+    "reason": "Local checkout and temporary-output paths were replaced with reproducible placeholders; verification results and hashes are unchanged.",
+    "fields_changed": 2
   }
 }

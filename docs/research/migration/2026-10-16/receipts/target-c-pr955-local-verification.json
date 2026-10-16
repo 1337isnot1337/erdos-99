@@ -11,7 +11,7 @@
   },
   "runtime": {
     "python": "CPython 3.14.7",
-    "environment": "/private/e99-final-verification/venv"
+    "environment": "isolated verification environment (CPython 3.14.7)"
   },
   "frozen_source": {
     "repository": "https://github.com/1337isnot1337/e-99",
@@ -44,11 +44,11 @@
       "result": "PASS; 16 exact whole-source transformations and descents, four equilateral checks, all ten pentagon pairs, guards passed"
     },
     {
-      "command": "python3 research/verify_global_annular_matching_2026_10_11.py --certificate-json /tmp/pr955-annular-proofs-exact-314.json",
+      "command": "python3 research/verify_global_annular_matching_2026_10_11.py --certificate-json <temporary certificate output>",
       "result": "PASS; 48 packet cases, all exact graph controls; generated 52 graph proofs; output matches committed certificate byte for byte; certificate SHA-256 8fc15a005e26116edbfe4f7040d8ef5a9d571e0e033c1beef8b790ae630b295b"
     },
     {
-      "command": "cmp /tmp/pr955-annular-proofs-exact-314.json research/certificates/global_annular_matching_proofs_2026_10_16.json",
+      "command": "cmp <temporary certificate output> research/certificates/global_annular_matching_proofs_2026_10_16.json",
       "result": "PASS; byte-identical"
     },
     {
@@ -60,11 +60,11 @@
       "result": "PASS; 50 tests in 3.506 seconds"
     },
     {
-      "command": "python3 tools/verify_publication_sources.py --source-repo /home/cinna/math/e-99",
+      "command": "python3 tools/verify_publication_sources.py --source-repo <frozen e-99 checkout>",
       "result": "PASS; 4,793 source records; 810 retained public hashes checked; 3,977 excluded files"
     },
     {
-      "command": "python3 docs/research/migration/2026-10-16/verify_migration_provenance.py --source-repo /home/cinna/math/e-99 --destination /home/cinna/erdos-99-pr955",
+      "command": "python3 docs/research/migration/2026-10-16/verify_migration_provenance.py --source-repo <frozen e-99 checkout> --destination <destination checkout>",
       "result": "PASS; 1,446 source artifact records; 490 public artifact hashes; 1,287 Target C artifacts; 2,912 source-file records; 232 public source hashes; 100 linked dependencies / 73 hashes; 384 evidence edges; zero unresolved or rights-blocked dependencies"
     },
     {
@@ -120,5 +120,9 @@
     "The two mathematical candidates remain unreviewed and noncanonical; exact finite verifiers do not prove their universal analytic claims.",
     "This is a local batch receipt, not the complete publication Gate 2 receipt. Final Gate 2 must run against the final main SHA after all integration batches.",
     "The destination PR workflow completed with plan and replay jobs skipped and zero steps because E99_PUBLIC_CI is unset; local verification is the only verification claimed for this batch."
-  ]
+  ],
+  "release_redactions": {
+    "reason": "Local checkout and temporary-output paths were replaced with reproducible placeholders; verification results and hashes are unchanged.",
+    "fields_changed": 5
+  }
 }
