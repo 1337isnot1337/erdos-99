@@ -419,3 +419,8 @@ The frozen source-main cyclic report batch is preserved and individually indexed
 ## Cyclic, post-ZF quantitative, and diameter-support candidates (source shard 2)
 
 The frozen source-main shard 2 batch (indexes 211–238) is preserved as unreviewed research. It adds conditional D2/P2 cyclic-stress results, an exact D6 affine-window comparison, improved post-ZF scalar floors (including the 0.465351845396… density-sensitive PI/JC floor, 0.4702 Dirichlet/PI feedback, and 0.831687… Dido bound), diameter-first joint blockers, ball-hull capacity estimates, and the loaded-chord atlas. The exact deep-isolate/octagon-flip regression blocks a local repair argument based on diameter slack alone. None extracts its hypotheses from all global minimizers or supplies the finite endpoint required for C-II. See the [full candidate track](../../research/tracks/target-c-diameter-capacity-cyclic-candidates-2026-10-16.md), [registry](candidate-registry.json), and [exact verifiers](../../research/README.md).
+
+
+## Endpoint-gap, dominant-diameter, and surplus candidates (source shard 2, indexes 239–266)
+
+The source-main reports preserve exact disjoint-diameter angle gaps, conditional dominant-diameter force/train bounds, post-ZF scalar refinements, EFAQ fixed-angle constraints, and the corrected endpoint outer-walk route. They remain unreviewed and do not extract all hypotheses from global minimizers or construct the required full-source endpoint. Report 262’s correction is retained. See the [full research track](../../research/tracks/target-c-endpoint-gap-surplus-2026-10-16.md), [candidate registry](candidate-registry.json), and [verifiers](../../research/README.md).

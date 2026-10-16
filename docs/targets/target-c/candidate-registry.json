@@ -10134,6 +10134,612 @@
         "third_party_material": "No third-party PDF collections or extracted paper text copied; references remain citations/links.",
         "visibility": "Destination remains private."
       }
+    },
+    {
+      "candidate_id": "TARGET-C-DISCRETE-POCKET-FLOOR-07739-20260910",
+      "title": "Discrete pocket capacity and post-ZF floor 0.773954",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "The linked source-main entries are unreviewed/noncanonical; all report-internal “proved” or “audited” labels are historical source labels, not destination audit status.",
+      "target_scope": [
+        "Target C post-ZF discrete pocket route"
+      ],
+      "claim": {
+        "statement": "The source report claims a one-pocket discrete Green-function area bound for an outer pocket whose boundary contains an old unit-contact chain and missing force-hull chord, and derives the post-ZF surplus floor 0.773954 in its stated branch.",
+        "hypotheses": [
+          "One OP outer pocket with ell>=2 old unit edges and chord length s; global floor also assumes the report’s post-ZF geometric/capacity chain."
+        ],
+        "not_claimed": [
+          "No source extraction from every global minimizer; no Level-I contradiction."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Noncanonical conditional research; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_discrete_pocket_hybrid_surplus_07739_2026-09-10.md",
+          "role": "full source report",
+          "source_git_blob_sha": "912bb9b7d893c2f42c4982f82d45cb111584994b",
+          "source_sha256": "1f2fce3a1bb1ea499930e4892a8e35da4cc48e421bf77214ad9aaede417f65fe",
+          "destination_sha256": "1f2fce3a1bb1ea499930e4892a8e35da4cc48e421bf77214ad9aaede417f65fe",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See the full reports, shard-2 dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "No source extraction from every global minimizer; no Level-I contradiction."
+      ],
+      "next_proof_obligations": [
+        "Audit the global envelope hypotheses and eliminate the residual branch or produce a strict full-source competitor."
+      ],
+      "validation": {
+        "status": "source identity verified; claim remains unreviewed",
+        "scope": "Exact frozen-source bytes and destination bytes compared; verifier results are finite checks only.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 coordinator reconciliation of source-main shard 2 indexes 239–266; source report batch merged in destination PR #51.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-agent-generated material; exact source/destination hashes retained.",
+        "third_party_material": "No third-party paper text or PDF copied; report 244 cites external work by bibliography/link.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-DISJOINT-DIAMETER-GAP-OUTERWALK-20260909",
+      "title": "Disjoint diameter angle gap and outer-walk collapse",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "The linked source-main entries are unreviewed/noncanonical; all report-internal “proved” or “audited” labels are historical source labels, not destination audit status.",
+      "target_scope": [
+        "Target C actual-diameter graph geometry"
+      ],
+      "claim": {
+        "statement": "For a finite unit-separated planar set of diameter D>1, two vertex-disjoint actual diameter edges have acute supporting-line angle at least 4 asin(1/(2D)); the related reports classify equality limits and derive an outer-walk collapse in their endpoint branch.",
+        "hypotheses": [
+          "Finite unit-separated planar set of diameter D>1 for the basic bound; the equality/outer-walk conclusions use the extra complete-diameter-graph cyclic-order hypotheses in the linked reports."
+        ],
+        "not_claimed": [
+          "No global minimizer extraction, full diameter graph classification, or strict source endpoint."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Noncanonical conditional research; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_disjoint_diameter_angle_2026-09-09.md",
+          "role": "full source report",
+          "source_git_blob_sha": "2a29253f2d016fab8610c2c97cda5c7feb629b55",
+          "source_sha256": "f5a191f70d1fd7ce5123f0bc7dd03c481cbbb8d413e72037044ca44707150b27",
+          "destination_sha256": "f5a191f70d1fd7ce5123f0bc7dd03c481cbbb8d413e72037044ca44707150b27",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_disjoint_diameter_gap_outerwalk_collapse_2026-09-09.md",
+          "role": "full source report",
+          "source_git_blob_sha": "d482a8f620e2f7595ee7b58fe6e8f12bc11d965a",
+          "source_sha256": "fa329592905ddaef304ac6163a56cc86c274b486bee8def6aceeb045c5cf396f",
+          "destination_sha256": "fa329592905ddaef304ac6163a56cc86c274b486bee8def6aceeb045c5cf396f",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_disjoint_gap_equality_classification_2026-09-09.md",
+          "role": "full source report",
+          "source_git_blob_sha": "58427b1ce601b3a68a89b27ffaf6725976d847e4",
+          "source_sha256": "121442ea19b7fcc29c88a719aa8612265d6dc56322b61edb62a40b1344ced43a",
+          "destination_sha256": "121442ea19b7fcc29c88a719aa8612265d6dc56322b61edb62a40b1344ced43a",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_disjoint_gap_followup_notes_2026-09-09.md",
+          "role": "full source report",
+          "source_git_blob_sha": "9ff3c280ad865f2cbd217c153cabff92eb06703c",
+          "source_sha256": "1d1b82569c28df154fc1f340021036f65e55c3cae882e8ed804fab9856eb3cab",
+          "destination_sha256": "1d1b82569c28df154fc1f340021036f65e55c3cae882e8ed804fab9856eb3cab",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See the full reports, shard-2 dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "No global minimizer extraction, full diameter graph classification, or strict source endpoint."
+      ],
+      "next_proof_obligations": [
+        "Transfer the equality structure to every relevant global minimizer and connect it to an all-source capacity or replacement argument."
+      ],
+      "validation": {
+        "status": "source identity verified; claim remains unreviewed",
+        "scope": "Exact frozen-source bytes and destination bytes compared; verifier results are finite checks only.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 coordinator reconciliation of source-main shard 2 indexes 239–266; source report batch merged in destination PR #51.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-agent-generated material; exact source/destination hashes retained.",
+        "third_party_material": "No third-party paper text or PDF copied; report 244 cites external work by bibliography/link.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-DIAMETER-DOMINANT-EDGE-FORCE-TRAIN-20260905",
+      "title": "Dominant diameter force, contact-flow, and separator trains",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "The linked source-main entries are unreviewed/noncanonical; all report-internal “proved” or “audited” labels are historical source labels, not destination audit status.",
+      "target_scope": [
+        "Target C KKT stress and diameter-contact route"
+      ],
+      "claim": {
+        "statement": "In the reports’ full-force-visible stress branch, a dominant diameter edge with weight beta>1/2 yields a contact-cut capacity bound D(2beta-1), transverse contact-energy control, a near-geodesic contact path, and pointwise alignment/variation estimates for the separator train stack; effective conductance also bounds contact distance.",
+        "hypotheses": [
+          "Full-force-visible normalized KKT stress and an active diameter edge with beta>1/2 for the dominant-edge results; each path/separator lemma retains its own report hypotheses."
+        ],
+        "not_claimed": [
+          "No proof that every sufficiently large global minimizer has such a dominant edge; the flow estimates do not themselves yield a feasible finite endpoint."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Noncanonical conditional research; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_dominant_diameter_geodesic_flow_2026-09-05.md",
+          "role": "full source report",
+          "source_git_blob_sha": "1f96dc391a48093b7fc08432aad253c44ee5980c",
+          "source_sha256": "2952ec5868681449ee6c6b70b9b87d29aadfce54791e60b6cae7ead60ee66824",
+          "destination_sha256": "2952ec5868681449ee6c6b70b9b87d29aadfce54791e60b6cae7ead60ee66824",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_dominant_edge_contact_direction_energy_2026-09-05.md",
+          "role": "full source report",
+          "source_git_blob_sha": "8797f47f76cb73fe33d13960861dd6d0b1f9b23e",
+          "source_sha256": "8509662d5118bede298e02fcf3fd1b9addbb7b6b1542a6fe111d5991c8496651",
+          "destination_sha256": "8509662d5118bede298e02fcf3fd1b9addbb7b6b1542a6fe111d5991c8496651",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_dominant_edge_near_geodesic_path_2026-09-05.md",
+          "role": "full source report",
+          "source_git_blob_sha": "5529238afcc3558f31f530d416e233c65f37e40b",
+          "source_sha256": "9698be32382322296f941c5a50478e72e105b8ad3e0537fc1a4d6027a05fb964",
+          "destination_sha256": "9698be32382322296f941c5a50478e72e105b8ad3e0537fc1a4d6027a05fb964",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_dominant_leaf_partial_cube_stability_2026-09-04.md",
+          "role": "full source report",
+          "source_git_blob_sha": "473f5fd0d24c4b372273f935c8711f10e0fae5b5",
+          "source_sha256": "c67118d6083f7a654d7f387a196aa9c57f22918b505c0e3ad3137240a559ab06",
+          "destination_sha256": "c67118d6083f7a654d7f387a196aa9c57f22918b505c0e3ad3137240a559ab06",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_dominant_leaf_partial_cube_stability_2026-09-05.md",
+          "role": "full source report",
+          "source_git_blob_sha": "ca1bc44e6148498df40a8a87ba13d6fc70926034",
+          "source_sha256": "bee6c738d3b607ea524a86df829f1ad972e6a0125750a8a60c5bade04bf82f3f",
+          "destination_sha256": "bee6c738d3b607ea524a86df829f1ad972e6a0125750a8a60c5bade04bf82f3f",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_dominant_leaf_uniform_train_alignment_2026-09-04.md",
+          "role": "full source report",
+          "source_git_blob_sha": "372f0a7543bc4faeb1cc7a1f8f73e464c87fac3d",
+          "source_sha256": "d0495394ae4b86d7a529063ec9d058cb26402d61c3ea3aab37270faa1d6726fa",
+          "destination_sha256": "d0495394ae4b86d7a529063ec9d058cb26402d61c3ea3aab37270faa1d6726fa",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_dominant_leaf_uniform_train_alignment_2026-09-05.md",
+          "role": "full source report",
+          "source_git_blob_sha": "597826c6710e82d88e0c9cd269a94db754e507b4",
+          "source_sha256": "d77b1e67ff5be52e6a933a34ca1a585fd6b055e91d1fc035fd505970604a4ca7",
+          "destination_sha256": "d77b1e67ff5be52e6a933a34ca1a585fd6b055e91d1fc035fd505970604a4ca7",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_dominant_separator_bounded_variation_2026-09-05.md",
+          "role": "full source report",
+          "source_git_blob_sha": "ad824ce6328e734f1b3b781aacf83238dff371bb",
+          "source_sha256": "9f5cb4049d17eb28f96ad22b97724661c74e7ea511c54e2ef3eaa295dcb43ba2",
+          "destination_sha256": "9f5cb4049d17eb28f96ad22b97724661c74e7ea511c54e2ef3eaa295dcb43ba2",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_effective_conductance_contact_distance_2026-09-05.md",
+          "role": "full source report",
+          "source_git_blob_sha": "25278bfbd5bccd440f88b743bf0cd53000e0a9a8",
+          "source_sha256": "921e3c96fb654ea1fbafb62bf54bb1b609797f43f70c57c74ac3135ba302b653",
+          "destination_sha256": "921e3c96fb654ea1fbafb62bf54bb1b609797f43f70c57c74ac3135ba302b653",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See the full reports, shard-2 dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "No proof that every sufficiently large global minimizer has such a dominant edge; the flow estimates do not themselves yield a feasible finite endpoint."
+      ],
+      "next_proof_obligations": [
+        "Prove global extraction of the dominant edge and close the remaining separator/contact defects.",
+        "Construct a full-source competitor satisfying all lower and upper pair constraints."
+      ],
+      "validation": {
+        "status": "source identity verified; claim remains unreviewed",
+        "scope": "Exact frozen-source bytes and destination bytes compared; verifier results are finite checks only.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 coordinator reconciliation of source-main shard 2 indexes 239–266; source report batch merged in destination PR #51.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-agent-generated material; exact source/destination hashes retained.",
+        "third_party_material": "No third-party paper text or PDF copied; report 244 cites external work by bibliography/link.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-DISK-REVERSE-ISOPERIMETRIC-FLOOR-059348-20260910",
+      "title": "Disk reverse-isoperimetric post-ZF floor 0.593483",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "The linked source-main entries are unreviewed/noncanonical; all report-internal “proved” or “audited” labels are historical source labels, not destination audit status.",
+      "target_scope": [
+        "Target C post-ZF disk-envelope route"
+      ],
+      "claim": {
+        "statement": "The report uses a cited reverse-isoperimetric theorem for convex subsets of a disk, inverts the perimeter envelope, and claims the post-ZF surplus floor 0.593483 under its stated assumptions.",
+        "hypotheses": [
+          "The report’s convex-subset-of-a-disk envelope and post-ZF force-hull hypotheses."
+        ],
+        "not_claimed": [
+          "The citation is not copied as a paper/PDF; the conditional envelope is not a universal source theorem or global contradiction."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Noncanonical conditional research; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_disk_reverse_isoperimetric_floor_059348_2026-09-10.md",
+          "role": "full source report",
+          "source_git_blob_sha": "3c1fd3014b7ab460325bbc91e9079b6959e69d3d",
+          "source_sha256": "2210f1babb455f9b5ec137fddd45024beedd34f3b84edd454d1327363ff8d240",
+          "destination_sha256": "2210f1babb455f9b5ec137fddd45024beedd34f3b84edd454d1327363ff8d240",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See the full reports, shard-2 dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "The citation is not copied as a paper/PDF; the conditional envelope is not a universal source theorem or global contradiction."
+      ],
+      "next_proof_obligations": [
+        "Prove the disk/envelope hypotheses for the full source or combine the floor with an independent branch exclusion."
+      ],
+      "validation": {
+        "status": "source identity verified; claim remains unreviewed",
+        "scope": "Exact frozen-source bytes and destination bytes compared; verifier results are finite checks only.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 coordinator reconciliation of source-main shard 2 indexes 239–266; source report batch merged in destination PR #51.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-agent-generated material; exact source/destination hashes retained.",
+        "third_party_material": "No third-party paper text or PDF copied; report 244 cites external work by bibliography/link.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-EFAQ-EXPLICIT-TRIPLE-GAP-20260909",
+      "title": "Explicit anti-Reuleaux constraint for fixed-angle quadrilaterals",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "The linked source-main entries are unreviewed/noncanonical; all report-internal “proved” or “audited” labels are historical source labels, not destination audit status.",
+      "target_scope": [
+        "Target C fixed-angle PI quadrilateral route"
+      ],
+      "claim": {
+        "statement": "For the report’s unit-diagonal convex quadrilateral and fixed-angle hypotheses, an explicit triple gap yields a sharp quadrilateral constraint; the E43 formulation forces one opposite side pair to be at most 24/25.",
+        "hypotheses": [
+          "Convex quadrilateral of diameter at most one with both diagonals unit and projective angle in the stated range; explicit triple-gap assumption."
+        ],
+        "not_claimed": [
+          "No proof that a source-derived quadrilateral satisfies the triple-gap condition; no global C-II endpoint."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Noncanonical conditional research; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_e43_constrained_fixed_angle_quadrilateral_2026-09-09.md",
+          "role": "full source report",
+          "source_git_blob_sha": "32d2409f79e2fa6c7096f0d51a671f91c10ffcb0",
+          "source_sha256": "00ed04ea77c5ce201596f389031836070387ab6fe9d514c162310139c088a921",
+          "destination_sha256": "00ed04ea77c5ce201596f389031836070387ab6fe9d514c162310139c088a921",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "research/target_c_efaq_uniform_cap.py",
+          "role": "Exact rational 1,000-bin cap checker",
+          "source_git_blob_sha": "8d104b6eb1043fde0e013e05ce63316000a533de",
+          "source_sha256": "f4167db024c7336fcc457343f4fb8d7f1f874a3c0321527430ca9a986a59ad30",
+          "destination_sha256": "f4167db024c7336fcc457343f4fb8d7f1f874a3c0321527430ca9a986a59ad30",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See the full reports, shard-2 dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "No proof that a source-derived quadrilateral satisfies the triple-gap condition; no global C-II endpoint."
+      ],
+      "next_proof_obligations": [
+        "Derive the required quadrilateral hypotheses from global minimizer geometry and use the exact cap in a complete branch closure."
+      ],
+      "validation": {
+        "status": "source identity verified; claim remains unreviewed",
+        "scope": "Exact frozen-source bytes and destination bytes compared; verifier results are finite checks only.",
+        "result": "PASS: 1,000 rational bins; exact maximum upper bound 3.009480763847760179 < 3.01 with positive rational margin 519236152239821/10^18."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 coordinator reconciliation of source-main shard 2 indexes 239–266; source report batch merged in destination PR #51.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-agent-generated material; exact source/destination hashes retained.",
+        "third_party_material": "No third-party paper text or PDF copied; report 244 cites external work by bibliography/link.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-ENS-ESN-SATURATION-NESTING-20260909",
+      "title": "ENS saturation and uniform strict disk-nesting improvement",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "The linked source-main entries are unreviewed/noncanonical; all report-internal “proved” or “audited” labels are historical source labels, not destination audit status.",
+      "target_scope": [
+        "Target C post-ZF scalar saturation route"
+      ],
+      "claim": {
+        "statement": "The source reports give an independent ENS saturation proof and claim a uniform eta_E>0 improvement beyond its scalar threshold for sufficiently large post-ZF survivors, using E43 quadrilateral stability and attachment-disk boundary nesting.",
+        "hypotheses": [
+          "The post-ZF and E43 quadrilateral stability hypotheses stated in the reports; the report uses “audited” internally, but no destination audit has occurred."
+        ],
+        "not_claimed": [
+          "No canonical promotion; source claim is conditional on its post-ZF/geometry chain. A later source route is described as numerically stronger, but scope and proof identity must be compared before any subsumption claim."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Noncanonical conditional research; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_e43_nested_stability_surplus_2026-09-09.md",
+          "role": "full source report",
+          "source_git_blob_sha": "f63231ad169ff1b54d4f35a7174aa207bbfc7baf",
+          "source_sha256": "657ca7dd80ba6dec31875388db578f7d2ee724916bc1c060a6811172a03bbcc4",
+          "destination_sha256": "657ca7dd80ba6dec31875388db578f7d2ee724916bc1c060a6811172a03bbcc4",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_ens_saturation_disk_nesting_2026-09-09.md",
+          "role": "full source report",
+          "source_git_blob_sha": "9554feb17c4fc06aba094404ae40fd39f0cf6773",
+          "source_sha256": "9bc430bb6382b50877601f65bfdaedd62fe6e1176d68e28d40c3d2c7bfa8e857",
+          "destination_sha256": "9bc430bb6382b50877601f65bfdaedd62fe6e1176d68e28d40c3d2c7bfa8e857",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See the full reports, shard-2 dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "No canonical promotion; source claim is conditional on its post-ZF/geometry chain. A later source route is described as numerically stronger, but scope and proof identity must be compared before any subsumption claim."
+      ],
+      "next_proof_obligations": [
+        "Reconcile exact hypotheses and constants with the later BAS/AAS routes.",
+        "Prove the source geometry and attachment nesting for every relevant global minimizer."
+      ],
+      "validation": {
+        "status": "source identity verified; claim remains unreviewed",
+        "scope": "Exact frozen-source bytes and destination bytes compared; verifier results are finite checks only.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 coordinator reconciliation of source-main shard 2 indexes 239–266; source report batch merged in destination PR #51.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-agent-generated material; exact source/destination hashes retained.",
+        "third_party_material": "No third-party paper text or PDF copied; report 244 cites external work by bibliography/link.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-ENDPOINT-CORRIDOR-OUTERWALK-20260912",
+      "title": "Endpoint corridor, force hull, and route-excess branch package",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "The linked source-main entries are unreviewed/noncanonical; all report-internal “proved” or “audited” labels are historical source labels, not destination audit status.",
+      "target_scope": [
+        "Target C-II endpoint and outer-walk route"
+      ],
+      "claim": {
+        "statement": "The reports preserve a sequence of conditional C-II endpoint reductions: bridge/rhombus alternatives, Ferrers-wall exclusion of the C89 endpoint, endpoint-aware diameter-direction gaps, O-O/inactive-interface trichotomy, outer-walk and route-excess normal forms, repeated-swap witness collapse, and train-end balance. Report 262 retains its corrected outer-walk audit.",
+        "hypotheses": [
+          "Every lemma retains its report-specific C-II endpoint, branch, cyclic-order, or contact-graph hypotheses."
+        ],
+        "not_claimed": [
+          "No source-wide endpoint is supplied for all global minimizers; no theorem status is promoted."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Noncanonical conditional research; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_endpoint_corridor_bridge_rhombus_dichotomy_2026-09-12.md",
+          "role": "full source report",
+          "source_git_blob_sha": "b5b7b5354c36b1b084c624e11f4bba9280a3e85e",
+          "source_sha256": "68144b4fa5e85ae1cff7838918d2473ef0d8386c22935a17c88d97e6f542fd20",
+          "destination_sha256": "68144b4fa5e85ae1cff7838918d2473ef0d8386c22935a17c88d97e6f542fd20",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_endpoint_face_angle_lemma_2026-10-01.md",
+          "role": "full source report",
+          "source_git_blob_sha": "ef23cd932a1ca06e581ff10de8019dccec132035",
+          "source_sha256": "ed5fad2a9512ee74ca2fbf84e3e9f5e3d92ed999a77f3ea52b0ee914ade8b7e1",
+          "destination_sha256": "ed5fad2a9512ee74ca2fbf84e3e9f5e3d92ed999a77f3ea52b0ee914ade8b7e1",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_endpoint_ferrers_exclusion_2026-09-01.md",
+          "role": "full source report",
+          "source_git_blob_sha": "53fcd3f6266548bfff0bc8f7b196cdabd96c5f48",
+          "source_sha256": "6121819cf54c3da52271c9ac45cf0cdbe339f1b43727c7ef095e9e39b30cb491",
+          "destination_sha256": "6121819cf54c3da52271c9ac45cf0cdbe339f1b43727c7ef095e9e39b30cb491",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_endpoint_gap_and_cyclic_force_hull_2026-09-11.md",
+          "role": "full source report",
+          "source_git_blob_sha": "6568c43cc7f2315d6554305d3a03dfb6c08d5e00",
+          "source_sha256": "e0e789f082d9d5ac961c463007743971c86311f058d31dca0b02357c2c14bedb",
+          "destination_sha256": "e0e789f082d9d5ac961c463007743971c86311f058d31dca0b02357c2c14bedb",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_endpoint_oo_interface_trichotomy_2026-10-01.md",
+          "role": "full source report",
+          "source_git_blob_sha": "6e4d68d97c3a8afaff494cc33016b012791ce00e",
+          "source_sha256": "8ebafe1218004c9e131b35dbddae131b40f525cbaa43ca5da7ae6c1ad5737fe6",
+          "destination_sha256": "8ebafe1218004c9e131b35dbddae131b40f525cbaa43ca5da7ae6c1ad5737fe6",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_endpoint_outer_walk_geodesic_collapse_mu4_2026-09-12.md",
+          "role": "full source report",
+          "source_git_blob_sha": "df4a7d129b67d21d015853440174634ffa55fcbf",
+          "source_sha256": "623da2e2037a1ba8e5d9d7add588de71950673d0dbe7af450bca24c824f9e6da",
+          "destination_sha256": "623da2e2037a1ba8e5d9d7add588de71950673d0dbe7af450bca24c824f9e6da",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_endpoint_outer_walk_stability_2026-09-12.md",
+          "role": "full source report",
+          "source_git_blob_sha": "0f8424d9e23d6b45a2d02366ed6299b505744b13",
+          "source_sha256": "807ec9bcf838b9aaa5bc1ac7b0fde215af307fc0a67552aebfc2d86de305d386",
+          "destination_sha256": "807ec9bcf838b9aaa5bc1ac7b0fde215af307fc0a67552aebfc2d86de305d386",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_endpoint_repeated_swap_witness_collapse_2026-10-01.md",
+          "role": "full source report",
+          "source_git_blob_sha": "340a9745b8e6eb63ec56e0ec6190adfab769e58b",
+          "source_sha256": "9e669569a3476343a927e2dd9881ace22ad6664dc444e4fc1c3a5e332c541fd4",
+          "destination_sha256": "9e669569a3476343a927e2dd9881ace22ad6664dc444e4fc1c3a5e332c541fd4",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_endpoint_route_excess_split_2026-09-12.md",
+          "role": "full source report",
+          "source_git_blob_sha": "7382dedc039e06565cdf840a9de39aa51c1ad1f6",
+          "source_sha256": "501a00cd4e4a00c2808dec432c6346d2c4cba4d77e0d39cd7e4e1c42bc1c7357",
+          "destination_sha256": "501a00cd4e4a00c2808dec432c6346d2c4cba4d77e0d39cd7e4e1c42bc1c7357",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_endpoint_train_end_balance_2026-09-12.md",
+          "role": "full source report",
+          "source_git_blob_sha": "3a06404fd5ef517cb739cba899fb832533abff3c",
+          "source_sha256": "e54e640bf21e0453a71891c07b499059f47bb46f95d1957394b238a3b56039c3",
+          "destination_sha256": "e54e640bf21e0453a71891c07b499059f47bb46f95d1957394b238a3b56039c3",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See the full reports, shard-2 dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "No source-wide endpoint is supplied for all global minimizers; no theorem status is promoted."
+      ],
+      "next_proof_obligations": [
+        "Identify the exact surviving branch after each conditional split.",
+        "Prove a common full-source finite endpoint with every isolate and every lower/upper pair checked."
+      ],
+      "validation": {
+        "status": "source identity verified; claim remains unreviewed",
+        "scope": "Exact frozen-source bytes and destination bytes compared; verifier results are finite checks only.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 coordinator reconciliation of source-main shard 2 indexes 239–266; source report batch merged in destination PR #51.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-agent-generated material; exact source/destination hashes retained.",
+        "third_party_material": "No third-party paper text or PDF copied; report 244 cites external work by bibliography/link.",
+        "visibility": "Destination remains private."
+      }
     }
   ]
 }

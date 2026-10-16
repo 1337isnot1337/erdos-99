@@ -1,0 +1,88 @@
+{
+  "record_type": "source-main-shard-batch-integration-receipt",
+  "status": "partial_checkpoint_not_release_verification",
+  "date": "2026-10-16",
+  "source": {
+    "repository": "1337isnot1337/e-99",
+    "commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891"
+  },
+  "destination": {
+    "repository": "1337isnot1337/erdos-99",
+    "frozen_baseline": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+    "merged_main": "7612c1cc35443cebbd2eeaec2a32391854ab6373",
+    "merged_tree": "a7631bef09f96bf7a3f5b4a31635955b33f9d252",
+    "merged_pr": 51,
+    "coordinator_pr": 69
+  },
+  "scope": {
+    "shard": 2,
+    "worklist_indexes": [
+      239,
+      266
+    ],
+    "reports": 28,
+    "report_source_blob_sha256_and_destination_bytes_exact": 28,
+    "support_verifiers": 2,
+    "support_source_sha256_and_destination_bytes_exact": 2,
+    "report_links_resolved": 4,
+    "candidate_registry_entries_added": 7,
+    "candidate_registry_indexes_covered": 28,
+    "canonical_theorem_state_changed": false
+  },
+  "verifiers": [
+    {
+      "command": "python3 research/target_c_efaq_uniform_cap.py",
+      "result": "PASS",
+      "scope": "1000 rational bins; exact maximum bound and positive rational margin."
+    },
+    {
+      "command": "python3 research/diameter_endpoint_gap_audit.py",
+      "result": "PASS",
+      "scope": "1950 exact ordered K4 checks plus listed finite geometry screens; no global-optimality certificate."
+    }
+  ],
+  "checks": [
+    {
+      "command": "Frozen source Git blob/SHA and destination byte comparison for 28 reports plus two verifiers",
+      "result": "PASS",
+      "details": "All byte-identical, no transformations."
+    },
+    {
+      "command": "Report-local dependencies checked against merged PR #51 tree",
+      "result": "PASS",
+      "count": 4
+    },
+    {
+      "command": "python3 tools/build_artifact_index.py --write --write-headers",
+      "result": "PASS",
+      "output": "artifact-index: wrote 845 records; updated 0 metadata headers"
+    },
+    {
+      "command": "python3 tools/check_theorem_state.py",
+      "result": "PASS",
+      "output": "theorem-state: OK"
+    },
+    {
+      "command": "python3 docs/research/migration/2026-10-16/verify_migration_provenance.py --source-repo /home/cinna/math/e-99 --destination /home/cinna/e99-integration",
+      "result": "PENDING_AFTER_CENTRAL_UPDATE"
+    },
+    {
+      "command": "python3 tools/check_public.py",
+      "result": "PENDING_CROSS_SHARD_LINKS"
+    }
+  ],
+  "rights_and_provenance": {
+    "new_first_party_rows": 30,
+    "authorization": "Owner-authorized first-party research; this additive rights ledger explicitly covers paths outside the reviewed 810-entry inclusion set.",
+    "third_party": "No third-party paper or PDF copied; external citations retained.",
+    "visibility": "private",
+    "visibility_changed": false
+  },
+  "release_verification": {
+    "gate_2": "NOT_RUN_ON_FINAL_TREE",
+    "hosted_ci": "NOT_CLAIMED",
+    "final_tree_receipt_required": true
+  },
+  "authority_note": "All reports remain unreviewed noncanonical research. Exact finite checks do not certify global optimality. Theorem-state remains authoritative; this receipt does not establish complete 813-path coverage or publication readiness."
+}
