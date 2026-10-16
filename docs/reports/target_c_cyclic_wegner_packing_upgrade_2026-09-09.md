@@ -53,7 +53,7 @@ this gives the finite consequence
 \frac\pi4D^2
 -\frac q2
 -\frac{\sqrt3}{2}
-+rac{2-\sqrt3}{4}
++\frac{2-\sqrt3}{4}
 \left(
 \sqrt{2\pi\sqrt3\,D^2-3}-3
 \right).}
@@ -63,7 +63,7 @@ this gives the finite consequence
 Since RE gives
 
 \[
-q=\pi D-rac\pi{24D}+O(D^{-3})
+q=\pi D-\frac\pi{24D}+O(D^{-3})
 \]
 
 exactly through the Reinhardt relation, the disk-area deficit satisfies
@@ -172,7 +172,7 @@ Therefore
 \[
 \frac{\sqrt3}{2}(n-1)
 >
-\frac\pi4D^2-rac{\sqrt3}{2}.
+\frac\pi4D^2-\frac{\sqrt3}{2}.
 \tag{2.1}
 \]
 
@@ -200,7 +200,7 @@ and hence
 \[
 q
 =
-\pi D-rac\pi{24D}+O(D^{-3}).
+\pi D-\frac\pi{24D}+O(D^{-3}).
 \tag{2.3}
 \]
 
@@ -341,7 +341,7 @@ The best packing endpoint is now:
 \operatorname{area}(F)
 \ge
 \frac{\sqrt3}{2}(n-1)-\frac q2
-+rac{2-\sqrt3}{4}
++\frac{2-\sqrt3}{4}
 \left\lceil\sqrt{12n-3}-3\right\rceil,
 \]
 

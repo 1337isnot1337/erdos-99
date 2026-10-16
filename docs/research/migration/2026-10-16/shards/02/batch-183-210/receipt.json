@@ -41,7 +41,7 @@
   "first_path": "docs/reports/target_c_cyclic_p1_three_times_power_two_exclusion_2026-09-10.md",
   "last_path": "docs/reports/target_c_cyclic_wegner_packing_upgrade_2026-09-09.md",
   "source_lifecycle": "all source index entries unreviewed and noncanonical",
-  "source_copy_verification": "All 28 source blobs and SHA-256 values checked; 22 reports are byte-identical and 6 reports have only the documented exact form-feed-to-LaTeX repair (13 replacements total). Original source and repaired destination hashes are recorded in shard-2-reconciliation.jsonl for indexes 184, 187, 188, 191, 193, and 198.",
+  "source_copy_verification": "All 28 frozen source blobs and SHA-256 values checked; 21 reports are byte-identical and 7 reports have only the documented exact form-feed-to-LaTeX repair (18 replacements total). Original source and repaired destination hashes are recorded in shard-2-reconciliation.jsonl for indexes 184, 187, 188, 191, 193, 198, and 210.",
   "destination_duplicate_review": "267 frozen destination report bodies read and compared per imported report; no body is excluded by filename similarity",
   "supporting_code_imports": [],
   "math_status": "no claim is promoted; proof review remains outstanding",
@@ -51,16 +51,16 @@
     "198": "Exact q=13 S1 local regression survives closure with positive KKT stress and maximal-rank PSD, but is not a global optimum. Its verifier already exists in the frozen destination and is not modified. Section 8 also reports an optional SLSQP local-diameter optimizer result; no supporting SLSQP source script was found in the frozen source or destination, so that optional numerical output is not reproduced. The existing shell and KKT endpoint scripts validate only their stated q=13 shell/stress checks and do not establish the SLSQP result or global optimality.",
     "205": "Correction: withdraws identifying selected positive d_H=1 diameter support with H-e/a circuit. Retains full-tree corner-cut geometry and reciprocal parallelogram. Distinct from index 163, whose rank theorem concerns the full geometric row set C_q ∪ (H-e).",
     "209": "Unreviewed universal cyclic A⊆F claim. Binding correction target_c_force_bulk_and_correction_audit_2026-09-08.md rejects general C-II FB4 localization, not by itself this narrower cyclic statement. Preserve unreviewed and do not promote/use as a general premise absent a separate cyclic proof.",
-    "210": "Wegner packing upgrade depends on index 190 force-bulk. Its source claim is conditional on that premise and supplies no stability conclusion; the general force-bulk correction is target_c_force_bulk_and_correction_audit_2026-09-08.md, whose counterexample scope does not alone settle the narrower cyclic claim."
+    "210": "Wegner packing upgrade depends on index 190 force-bulk. Its source claim is conditional on that premise and supplies no stability conclusion; the general force-bulk correction is target_c_force_bulk_and_correction_audit_2026-09-08.md, whose counterexample scope does not alone settle the narrower cyclic claim. The complete report received five exact source-control repairs of b\"\\\\x0crac\" to b\"\\\\\\\\frac\"; the repaired destination hash and original source hash are in shard-2-reconciliation.jsonl index 210. The claimed Wegner bounds remain conditional on unreviewed force-bulk/geometry inputs and provide no quantitative stability gap."
   },
   "verification_results": {
-    "import_integrity": "PASS 28/28 frozen source blob and SHA-256 identities verified; 22/28 exact byte copies and 6/28 exact documented transformations; 13 total b\"\\\\x0crac\" to b\"\\\\\\\\frac\" replacements; destination SHA-256 recorded in the shard reconciliation ledger.",
+    "import_integrity": "PASS 28/28 frozen source blob and SHA-256 identities verified; 21/28 exact byte copies and 7/28 exact documented transformations; 18 total b\"\\\\x0crac\" to b\"\\\\\\\\frac\" replacements; destination SHA-256 recorded in the shard reconciliation ledger.",
     "baseline_corpus_review": "267 report bodies read; zero exact normalized matches; batch maximum 4-token-shingle Jaccard 0.0273884",
-    "git_diff_cached_check": "PASS before verification note was staged; rerun on final staged tree",
+    "git_diff_cached_check": "PASS after all report and receipt edits were staged",
     "relevant_regression": {
-      "command": "/tmp/e99-target-c-shard02-venv/bin/python research/target_c_s1_q13_shell_regression.py",
-      "result": "PASS exit 0 with positive stress, inactive slack, equilibrium residual 1.414e-15",
-      "runtime": "Python 3.14.7; not registered Python 3.12 replay"
+      "command": "/tmp/erdos-e99-verification-venv/bin/python research/target_c_s1_q13_shell_regression.py",
+      "result": "PASS exit 0; q=13/m=11, 13 contacts, 12 diameter pairs, positive minimum stress 0.052831185547, minimum inactive diameter slack 0.072420120481, equilibrium residual 1.435e-15, expected three numerical zero modes; finite local regression only",
+      "runtime": "Python 3.14.7; this environment is not the registered Python 3.12 replay"
     },
     "public_scanner": {
       "command": "python3 tools/check_public.py",
