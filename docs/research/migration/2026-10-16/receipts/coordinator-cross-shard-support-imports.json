@@ -81,10 +81,11 @@
       "scope": "updated coordinator integration worktree, after Target C frontier and migration navigation changes"
     },
     {
-      "command": "python3 tools/verify_frozen_target_c_813_migration.py --source-repo /home/cinna/math/e-99 --destination /home/cinna/e99-integration",
+      "command": "python3 tools/verify_frozen_target_c_813_migration.py --source-repo <frozen-source-clone> --destination <destination-checkout>",
       "result": "PASS",
       "output": "813/813 frozen paths, source blob and SHA identities, destination content/modes, pre-coordinator identities, rights rows, and worker references; 4 cross-shard support files; no errors",
-      "scope": "frozen 2026-10-16 source and assignment baseline; this is an integrity/provenance check, not mathematical proof audit or Gate 2"
+      "scope": "frozen 2026-10-16 source and assignment baseline; this is an integrity/provenance check, not mathematical proof audit or Gate 2",
+      "execution_environment": "Executed against isolated local clones; local filesystem paths are intentionally omitted from this repository receipt."
     }
   ],
   "authority_note": "Focused coordinator checks cover content identity, transformation evidence, provenance, lifecycle, links, and finite verifier outputs. They do not audit the analytic claims or constitute Gate 2. Destination theorem-state remains authoritative; C-II and Level I remain open."
