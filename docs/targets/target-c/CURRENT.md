@@ -139,6 +139,20 @@ moved-guard or outside-capacity payment, or a nonlocal discrete replacement
 that passes every source-pair bound. Do not infer C-II or Level I closure from
 the exact finite fixtures or conditional descent statements.
 
+## Owner release, loaded anchors, and inclusive floor closure
+
+Source PR #952's five full reports, six saved finite outputs, and four verifier
+programs are linked in the [owner-release and loaded-anchor track](../../research/tracks/target-c-owner-release-loaded-anchor.md)
+and the [candidate registry](candidate-registry.json). The package gives exact
+full-source implication and floor-closure criteria for a supplied owner family,
+strict stress gain under acute owner motions, owner-local loaded-anchor boxes,
+and unequal-height motion with independently transported isolates. Its finite
+owner-sink example is nonglobal; it does not extract a nonzero feasible family
+from a canonical minimizer. The missing bridge is source extraction with
+owner-respecting loaded ports for every upper-relevant point and isolate,
+followed by a nonzero solution of the exact lower/upper closure. All five
+records remain unreviewed; theorem-state and C-II status are unchanged.
+
 ## Begin a bounded contribution
 
 For any finite endpoint, keep the source cardinality and every pairwise lower

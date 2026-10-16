@@ -71,3 +71,7 @@ One 30–60 minute proof sublemma, exact finite model, independent replay or pre
 ## Complete bent-array evidence
 
 Source PR #948 gives an unreviewed linear external-boundary attachment result for actual complete bent arrays with both dimensions proportional to D, plus a quadratic outside-isolate burden and a full-diameter-forest classification. The [quarter-fold/bent-array track](../docs/research/tracks/target-c-quarter-folds-bent-arrays.md) records the exact hypotheses. The remaining task is extraction from a general canonical survivor or a different source-level endpoint; the conditional array results do not establish either.
+
+## Related loaded-port evidence
+
+The [owner-release and loaded-anchor track](../docs/research/tracks/target-c-owner-release-loaded-anchor.md) gives a global near-disk proximity bound for loaded hull vertices and a separate owner-local coverage hypothesis. Proximity alone does not locate a loaded crossing diameter in the same moving owner. Preserve that ownership gap when deriving container-capacity or upper-safety bounds.

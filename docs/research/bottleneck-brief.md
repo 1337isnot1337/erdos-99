@@ -82,3 +82,14 @@ changes the canonical endpoint or theorem-state.
 ## Quarter-fold endpoints and complete bent arrays
 
 Source PR #948 narrows two conditional routes. Under a full-source feasible exact-graph quarter-fold, the unreviewed candidates force constant signs on large faces and give persistence/occupancy restrictions for rigid faces. A separate complete-array route derives an actual diameter-forest classification and a linear external boundary-attachment theorem for macroscopic arrays. The math reports, exact finite verifiers, and their limits are linked in the [quarter-fold/bent-array track](tracks/target-c-quarter-folds-bent-arrays.md) and [candidate registry](../targets/target-c/candidate-registry.json). The needed source extraction or full-source feasible endpoint remains unproved; no C-II or Level I status changes.
+
+## Owner release and loaded-anchor closure
+
+The frozen source PR #952 package gives full-source floor and implication
+criteria for supplied owner families, conditional stress gain, and loaded-port
+upper boxes. The [focused track](tracks/target-c-owner-release-loaded-anchor.md)
+keeps the endpoint hypotheses and finite regressions separate. Its exact missing
+step is extraction of owner-respecting loaded ports for every upper-relevant
+label and isolate, followed by a nonzero solution of the complete lower/upper
+closure. The global near-disk proximity bound does not supply the needed owner
+incidence. All five candidate records remain unreviewed.

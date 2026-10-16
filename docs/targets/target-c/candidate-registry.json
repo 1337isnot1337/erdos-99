@@ -2831,6 +2831,434 @@
         "source_merge_base": "d999528cfaafd811a4a19bcfacd00f217c2fc375"
       },
       "rights_and_release": "Owner-authorized first-party research already present in the destination. Source hashes are retained in the migration ledger. Report math is unchanged apart from the recorded internal provenance link and removal of historical operational billing text in two files; no third-party paper text or PDF was copied."
+    },
+    {
+      "candidate_id": "TARGET-C-PR952-INCLUSIVE-FLOOR-LOCKED-RELEASE",
+      "title": "Inclusive floor closure and locked-contact release",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed candidate in frozen open source PR #952; the destination theorem-state remains authoritative.",
+      "target_scope": [
+        "Target C-II finite source release"
+      ],
+      "claim": {
+        "statement": "For a supplied owner family in the stated full-source domain, lexicographic shortest paths and finite zero closure produce the unique maximal feasible active support under strict pair constraints. The weak-upper version detects every contact-loss endpoint in its class; under the locked-contact canonical hypotheses, any surviving proper core group yields a strict lexicographic contradiction, including equal-positive-floor motion.",
+        "hypotheses": [
+          "Actual pair costs for every source label, with all isolates assigned variables.",
+          "The disjoint-group, fixed-core-label, and no-contact-between-moving-groups assumptions in the report.",
+          "For the locked-contact branch, the stated canonical KKT and strict inactive core-pair hypotheses."
+        ],
+        "not_claimed": [
+          "No canonical owner family or surviving support is extracted.",
+          "An all-weak path whose cost equals a positive floor does not force its group to zero.",
+          "No universal endpoint or C-II/Level I closure."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed; canonical=false in the source artifact index",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_inclusive_floor_closure_and_locked_contact_release_2026-10-10.md",
+          "role": "full analytic candidate report",
+          "source_git_blob_sha": "9a0612972754579ddc9c554c0e8b4657bec518cc",
+          "source_sha256": "25dcc76277cc3382b7334d2c2d748850dcd04a3ddbdc694d4f6729c6fd2ca218",
+          "destination_sha256": "25dcc76277cc3382b7334d2c2d748850dcd04a3ddbdc694d4f6729c6fd2ca218",
+          "source_artifact_id": "ART-D33DAE46A3ED",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_target_c_inclusive_floor_release_2026_10_10.py",
+          "role": "finite floor-closure verifier",
+          "source_git_blob_sha": "2d3987a6a88690f624d60439211cc4419df1cbbb",
+          "source_sha256": "9cfd38a998de0b6fc420674943b98c05ef0a371fa21ee9f9352b4ea02c3608fc",
+          "destination_sha256": "9cfd38a998de0b6fc420674943b98c05ef0a371fa21ee9f9352b4ea02c3608fc",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/certificates/target_c_inclusive_floor_release_2026_10_10.jsonl",
+          "role": "saved finite output",
+          "source_git_blob_sha": "2e673eda7c053c01e9ba76a7cec68245a457d654",
+          "source_sha256": "6a18eeaf4616c86e15dd6811103481637cc7a470f9fdc83cfda66fae391e0c18",
+          "destination_sha256": "6a18eeaf4616c86e15dd6811103481637cc7a470f9fdc83cfda66fae391e0c18",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [
+          "C-ZRF",
+          "C-FULL-SOURCE-ISOLATE-NORMALIZATION",
+          "C-FINITE-CONTACT-ISOMETRY-DIAMETER-GAIN"
+        ],
+        "description": "These canonical premises do not supply the report-specific owner family or full-source endpoint. Candidate conclusions remain conditional on the linked report hypotheses."
+      },
+      "obstructions_and_limits": [
+        "A weak equal-cost path alone cannot certify elimination.",
+        "The finite examples do not establish source-wide owner extraction or canonical optimality."
+      ],
+      "validation": "python3 research/verify_target_c_inclusive_floor_release_2026_10_10.py --graphs 80 --seed 1001001 --diameters 20 30 50; PASS on finite graph and nonglobal source fixtures, including 620 independently eliminated supports and 180 full pair-state checks. The analytic theorem is not certified by enumeration.",
+      "next_proof_obligations": [
+        "Extract, in every sufficiently large canonical survivor, a full-source owner family whose inclusive closure retains a core group, or prove a source-specific collapse certificate."
+      ],
+      "provenance": {
+        "source_repository": "1337isnot1337/e-99",
+        "source_pr": 952,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/952",
+        "source_main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head": "3536c0b6f6c2a929d9c96fffbdcfc480735fea3",
+        "source_head_tree": "a6503b1817dbd885f9378ca42677d811fe363c84",
+        "source_merge_base": "d999528cfaafd811a4a19bcfacd00f217c2fc375"
+      },
+      "rights_and_release": "Owner-authorized first-party research. Exact source provenance is in the migration ledger; source and destination report text match except for the recorded hosted-CI operational redaction. No third-party papers or PDFs copied."
+    },
+    {
+      "candidate_id": "TARGET-C-PR952-LOADED-ANCHOR-UPPER-BOX",
+      "title": "Loaded-anchor boxes, full-core proximity, and low-defect owner capacity",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed candidate in frozen open source PR #952; the destination theorem-state remains authoritative.",
+      "target_scope": [
+        "Target C-II loaded-port coverage and full-core branch"
+      ],
+      "claim": {
+        "statement": "Under same-owner loaded-port coverage of every upper-relevant label, including isolates, the supplied-family common-ray box is upper-safe after its stated deletions. In the canonical full-core near-disk branch every near-diameter source label has a globally nearby loaded hull vertex within D(2 eta + sqrt(2 eta)) + rho. Separately, for a supplied subfamily-stable Type-II O-O family satisfying Audit.106 hypotheses and AS coverage, LDE proves r <= 2 floor(F_D(Phi)) + 147(x_B+m_B), with no 2 d_H term.",
+        "hypotheses": [
+          "For the upper box, use the report’s acute direction window, scale bounds, and R+rho <= D/10; every upper-relevant label, including assigned isolates, lies within R of an actual loaded crossing-diameter endpoint in the same owner.",
+          "For global proximity, the full-core near-disk inner-hull hypothesis holds and rho < (1/2-eta)D.",
+          "For LDE, supply the report’s subfamily-stable Type-II owner family with Audit.106 contact, unary-rhombus, small-cloud, isolate-assignment, and outer lower-witness localization hypotheses, together with AS coverage R=o(D), w=o(1), rho=o(D), max_i delta_i<=rho."
+        ],
+        "not_claimed": [
+          "The global near-disk estimate does not transfer its loaded point to the correct moving owner or give owner-crossing diameter incidence.",
+          "LDE does not extract the owner family or establish low boundary defect for every canonical survivor.",
+          "No lower-closure survival, universal endpoint, or C-II/Level I closure."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed; canonical=false in the source artifact index",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_loaded_anchor_parallel_upper_box_2026-10-10.md",
+          "role": "full analytic candidate report",
+          "source_git_blob_sha": "1bb40d9722498b2b51a10dd1fdbc48fd9585657c",
+          "source_sha256": "8209ff78aef0f9a88157d47d2260ec8965fc4c496c08d415ade348ae8f1e3c0a",
+          "destination_sha256": "8209ff78aef0f9a88157d47d2260ec8965fc4c496c08d415ade348ae8f1e3c0a",
+          "source_artifact_id": "ART-894D4E050EB2",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_target_c_loaded_anchor_upper_box_2026_10_10.py",
+          "role": "finite loaded-anchor verifier",
+          "source_git_blob_sha": "ddba90163e93952876ac1d710bcf7c66b4eb2a0e",
+          "source_sha256": "e344779df3f4bac62d2c8b37b786986f18300b1bf8326d4f49626296d1e16d4d",
+          "destination_sha256": "e344779df3f4bac62d2c8b37b786986f18300b1bf8326d4f49626296d1e16d4d",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/certificates/target_c_loaded_anchor_upper_box_2026_10_10.jsonl",
+          "role": "saved finite output",
+          "source_git_blob_sha": "7cac99aae6572b46e901cf36de499f0a9215bf06",
+          "source_sha256": "a81a9de0b052779ea2023a57e877c5fa3288d0fa5966fb01ba4ca37eacfe3fb8",
+          "destination_sha256": "a81a9de0b052779ea2023a57e877c5fa3288d0fa5966fb01ba4ca37eacfe3fb8",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [
+          "C-FULLCORE-NEAR-DISK",
+          "C-LOADED-HULL",
+          "C-CII-ACTUAL-DIAMETER-NORMAL-ATOMLESS"
+        ],
+        "description": "These canonical premises do not supply the report-specific owner family or full-source endpoint. Candidate conclusions remain conditional on the linked report hypotheses."
+      },
+      "obstructions_and_limits": [
+        "A far upper-relevant label can make the larger common move violate an inactive upper pair even when a parent reflection is safe.",
+        "The exact local coverage and LDE owner-family premises are not derived for canonical owners.",
+        "The 147(x_B+m_B) capacity term remains; no d_H term is removed without the report’s additional AS hypotheses."
+      ],
+      "validation": "python3 research/verify_target_c_loaded_anchor_upper_box_2026_10_10.py --diameters 300 500 1000; PASS and byte-identical output on nine nonglobal fixtures and 744 full pair-state instances. The analytic phase-energy, LDE inequality, owner extraction, and lower-closure survival are not certified by enumeration.",
+      "next_proof_obligations": [
+        "Establish the owner-respecting loaded-port coverage and Audit.106 family hypotheses in every relevant canonical branch, then prove the inclusive lower closure retains a core owner; otherwise give a source-specific obstruction or capacity payment."
+      ],
+      "provenance": {
+        "source_repository": "1337isnot1337/e-99",
+        "source_pr": 952,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/952",
+        "source_main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head": "3536c0b6f6c2a929d9c96fffbdcfc480735fea3",
+        "source_head_tree": "a6503b1817dbd885f9378ca42677d811fe363c84",
+        "source_merge_base": "d999528cfaafd811a4a19bcfacd00f217c2fc375"
+      },
+      "rights_and_release": "Owner-authorized first-party research. Exact source provenance is in the migration ledger; source and destination report text match except for the recorded hosted-CI operational redaction. No third-party papers or PDFs copied."
+    },
+    {
+      "candidate_id": "TARGET-C-PR952-OWNER-COMMON-RELEASE-IMPLICATION",
+      "title": "Upper-safe owner amplitude and integrated common release",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed candidate in frozen open source PR #952; the destination theorem-state remains authoritative.",
+      "target_scope": [
+        "Target C-II source-realized owner release"
+      ],
+      "claim": {
+        "statement": "For supplied owner families satisfying the report’s exact hypotheses, the amplitude box AB and common-translation system CT/UCC provide full-source upper-safe move domains and reduce lower/upper binary feasibility to directed implications and forced-zero unary clauses. Under canonical contact-minimality, a nonzero maximal assignment would yield contact loss. The IM stress-imbalance estimate supplies a quantitative actual-loaded-port projection bound in its acute-window class.",
+        "hypotheses": [
+          "The owner directions, scale bounds, normal-window count, and exact source-pair tests in AB/CT/UCC.",
+          "Every old lower and actual-diameter upper pair is entered into the finite system.",
+          "For IM, the report’s positive contact stress and owner cut hypotheses."
+        ],
+        "not_claimed": [
+          "No actual owner family with a unary-free sink SCC is extracted from a canonical minimizer.",
+          "The nonglobal sink fixture is a regression against the listed reduced hypotheses only; it is not a canonical counterexample.",
+          "No theorem promotion or universal finite endpoint."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed; canonical=false in the source artifact index",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_outer_owner_amplification_and_common_release_2026-10-10.md",
+          "role": "full analytic candidate report",
+          "source_git_blob_sha": "0f3a2127aeffe3cfaf56a1193d96a0afc198ad31",
+          "source_sha256": "9d3bc1c881aa3cb05148b6c8b2054db36fa8e93f00c8a0acf0069c358c06ba19",
+          "destination_sha256": "8c7fd0295ab13dbb533d2ed00d426070e9a70fa4cc2bd7659936ec430613540d",
+          "source_artifact_id": "ART-125DECAFF3AF",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_target_c_source_realized_owner_sink_2026_10_10.py",
+          "role": "finite owner-sink/amplitude/common-implication verifier",
+          "source_git_blob_sha": "21de0d3ed504468f923620744d7391d0b74e50cb",
+          "source_sha256": "df2cd04d208b0370cb85b3c15a2cef308b11be2a942058c724473456ad85da25",
+          "destination_sha256": "df2cd04d208b0370cb85b3c15a2cef308b11be2a942058c724473456ad85da25",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/certificates/target_c_owner_amplitude_release_2026_10_10.jsonl",
+          "role": "owner-amplitude finite output",
+          "source_git_blob_sha": "07836d98cd9de4680e716ad47600fdf68a220ffb",
+          "source_sha256": "af7b444cecfeb35a8f1229286b9ba43e3604a3bd13cf7fcaf4afc77699268c52",
+          "destination_sha256": "af7b444cecfeb35a8f1229286b9ba43e3604a3bd13cf7fcaf4afc77699268c52",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/certificates/target_c_common_release_implication_2026_10_10.jsonl",
+          "role": "common-implication finite output",
+          "source_git_blob_sha": "70c102b6fe28e8e02675628146991d90d02d8a8f",
+          "source_sha256": "1627c1eda0c61088187b04d6cae71a012993428b36162b19cfb3fa83e2446b66",
+          "destination_sha256": "1627c1eda0c61088187b04d6cae71a012993428b36162b19cfb3fa83e2446b66",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [
+          "C-DISJOINT-SWAP-2SAT",
+          "C-NEAR-UNIT-CONFLICT-GEOMETRY",
+          "C-OO-LOWER-BLOCKER-LOCALIZATION",
+          "C-FINITE-CONTACT-ISOMETRY-DIAMETER-GAIN"
+        ],
+        "description": "These canonical premises do not supply the report-specific owner family or full-source endpoint. Candidate conclusions remain conditional on the linked report hypotheses."
+      },
+      "obstructions_and_limits": [
+        "The exact common-release system can be zero-only; the report gives a connected nonglobal source realizing this failure.",
+        "A source-free Horn graph or normal atomlessness alone does not establish the source geometry or a nonzero model."
+      ],
+      "validation": "python3 research/verify_target_c_source_realized_owner_sink_2026_10_10.py --heights 30 31 100 --symbolic-limit --amplitude-repair --common-implication-system; PASS on exact finite nonglobal fixtures. Separate saved outputs cover the amplitude and common-implication modes; no canonical extraction is checked.",
+      "next_proof_obligations": [
+        "Prove source extraction plus unary avoidance for a stable canonical O-O owner family with fixed isolate dispatch, or produce its exact canonical obstruction."
+      ],
+      "provenance": {
+        "source_repository": "1337isnot1337/e-99",
+        "source_pr": 952,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/952",
+        "source_main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head": "3536c0b6f6c2a929d9c96fffbdcfc480735fea3",
+        "source_head_tree": "a6503b1817dbd885f9378ca42677d811fe363c84",
+        "source_merge_base": "d999528cfaafd811a4a19bcfacd00f217c2fc375"
+      },
+      "rights_and_release": "Owner-authorized first-party research. Exact source provenance is in the migration ledger; source and destination report text match except for the recorded hosted-CI operational redaction. No third-party papers or PDFs copied."
+    },
+    {
+      "candidate_id": "TARGET-C-PR952-COMPONENT-ANCHOR-STRESS-GAIN",
+      "title": "Component ports, strict stress gain, and upper-safe mixed refinement",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed candidate in frozen open source PR #952; the destination theorem-state remains authoritative.",
+      "target_scope": [
+        "Target C-II contact-preserving owner motion"
+      ],
+      "claim": {
+        "statement": "Under exact contact-preserving translation hypotheses, every contact component of a proper moving core subset and its complement has a crossing actual-diameter edge with positive multiplier. Under canonical relative-interior KKT stress and pairwise acute owner directions, every nonzero binary selection preserving contacts has positive weighted old-diameter gain. A supplied subfamily-stable actual owner system admits mixed-component refinement that preserves contacts, weakly shortens actual diameters, keeps inactive upper pairs strict, and passes unary tests after its stated 2 d_H deletion.",
+        "hypotheses": [
+          "Connected canonical contact core with the relative-interior KKT stress identities stated in the report.",
+          "For strict gain, every old contact is preserved in every binary selection and owner translation vectors have pairwise positive dot products.",
+          "For mixed-component refinement, supply the report’s subfamily-stable disjoint O-O owners, parent singleton upper tests, isolate-anchor assignments, and unary hypotheses."
+        ],
+        "not_claimed": [
+          "Positive weighted gain does not show that every diameter edge shortens or that every inactive upper pair passes without the separate refinement hypotheses.",
+          "No canonical owner family or nonzero lower-feasible selection is extracted.",
+          "The finite zero-only owner-sink construction is explicitly nonglobal and lacks positive full-contact KKT equilibrium."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed; canonical=false in the source artifact index",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_owner_component_anchoring_and_source_realized_sink_2026-10-10.md",
+          "role": "full analytic candidate report",
+          "source_git_blob_sha": "54a97e49d1d303641ab20f771a69239f45998afc",
+          "source_sha256": "a8e3e9a42129eef055bbc6b494322fefaa749b2f373ea76631fe5d3fb7620eff",
+          "destination_sha256": "a8e3e9a42129eef055bbc6b494322fefaa749b2f373ea76631fe5d3fb7620eff",
+          "source_artifact_id": "ART-E5AE020CD36C",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_target_c_source_realized_owner_sink_2026_10_10.py",
+          "role": "shared exact source/owner-sink verifier",
+          "source_git_blob_sha": "21de0d3ed504468f923620744d7391d0b74e50cb",
+          "source_sha256": "df2cd04d208b0370cb85b3c15a2cef308b11be2a942058c724473456ad85da25",
+          "destination_sha256": "df2cd04d208b0370cb85b3c15a2cef308b11be2a942058c724473456ad85da25",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/certificates/target_c_source_realized_owner_sink_2026_10_10.jsonl",
+          "role": "saved source-realized sink output",
+          "source_git_blob_sha": "83bdaf5cbf124cd2cc34c716ed9306220bd6a5ca",
+          "source_sha256": "c14bcafb77c02e6ac64d0cbd76d1ed095ee041f186344273307b4b72848f3198",
+          "destination_sha256": "c14bcafb77c02e6ac64d0cbd76d1ed095ee041f186344273307b4b72848f3198",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [
+          "C-ZRF",
+          "C-DISJOINT-SWAP-2SAT",
+          "C-FINITE-CONTACT-ISOMETRY-DIAMETER-GAIN"
+        ],
+        "description": "These canonical premises do not supply the report-specific owner family or full-source endpoint. Candidate conclusions remain conditional on the linked report hypotheses."
+      },
+      "obstructions_and_limits": [
+        "Mixed-component refinement requires its supplied parent system and bounded deletion.",
+        "The nonglobal regression blocks deriving Horn feasibility from the reduced geometry alone; it is not a canonical counterexample.",
+        "No canonical owner-family extraction or full-source endpoint follows."
+      ],
+      "validation": "python3 research/verify_target_c_source_realized_owner_sink_2026_10_10.py --heights 30 31 100 --symbolic-limit; PASS on all lower/upper pairs for four nonglobal owner states and the explicit refined endpoint.",
+      "next_proof_obligations": [
+        "Extract a canonical subfamily-stable O-O owner system with more than 2 d_H usable owners and prove its exact full-source lower formula has a nonzero feasible model, or establish a different source-compatible replacement."
+      ],
+      "provenance": {
+        "source_repository": "1337isnot1337/e-99",
+        "source_pr": 952,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/952",
+        "source_main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head": "3536c0b6f6c2a929d9c96fffbdcfc480735fea3",
+        "source_head_tree": "a6503b1817dbd885f9378ca42677d811fe363c84",
+        "source_merge_base": "d999528cfaafd811a4a19bcfacd00f217c2fc375"
+      },
+      "rights_and_release": "Owner-authorized first-party research. Exact source provenance is in the migration ledger; source and destination report text match except for the recorded hosted-CI operational redaction. No third-party papers or PDFs copied."
+    },
+    {
+      "candidate_id": "TARGET-C-PR952-UNEQUAL-HEIGHT-ISOLATE-TRANSPORT",
+      "title": "Unequal-height release and free isolate transport",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed candidate in frozen open source PR #952; the destination theorem-state remains authoritative.",
+      "target_scope": [
+        "Target C-II finite floor closure with isolates"
+      ],
+      "claim": {
+        "statement": "For supplied disjoint core owner groups with no contacts between moving groups, the report’s actual-pair cost graph and shortest-path floor closure construct unequal core heights, while isolates may move independently. The strict-floor theorem yields a full-source contact-loss endpoint when its active contact-bearing group survives.",
+        "hypotheses": [
+          "The exact group, contact, and source-pair hypotheses in the report.",
+          "Every original lower and upper pair is included; isolates are retained as variables.",
+          "For the endpoint conclusion, at least one contact-bearing owner survives the floor closure."
+        ],
+        "not_claimed": [
+          "The finite common-height obstruction does not exclude unequal heights or isolate transport.",
+          "Rational enclosure failure is not an exact algebraic infeasibility certificate.",
+          "No canonical extraction, nonempty support, or C-II/Level I closure."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed; canonical=false in the source artifact index",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_parallel_release_floor_closure_and_isolate_transport_2026-10-10.md",
+          "role": "full analytic candidate report",
+          "source_git_blob_sha": "bd166e390d33923f828b704231e7fe53572c9265",
+          "source_sha256": "5a30ef0e3c15b781a79251c1bb9414b8ff6eb9229cb60c3ef6d0b25124beff4f",
+          "destination_sha256": "5a30ef0e3c15b781a79251c1bb9414b8ff6eb9229cb60c3ef6d0b25124beff4f",
+          "source_artifact_id": "ART-982CE41762F7",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_target_c_unequal_height_release_2026_10_10.py",
+          "role": "finite unequal-height and isolate-transport verifier",
+          "source_git_blob_sha": "6ef4cb3f5ea7644b467411c09394e3fb6b379532",
+          "source_sha256": "7e96eaa6884dac9640358065430d426060dddfafca5a087a14ec831d3fb68a42",
+          "destination_sha256": "7e96eaa6884dac9640358065430d426060dddfafca5a087a14ec831d3fb68a42",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/certificates/target_c_unequal_height_release_2026_10_10.jsonl",
+          "role": "saved finite output",
+          "source_git_blob_sha": "b9ab168021b2ea6592777748bc633bc449c4a57a",
+          "source_sha256": "2f996f5307f5b237e78074464113d880f7683c9a816601f4874db8f5d81b8f7c",
+          "destination_sha256": "2f996f5307f5b237e78074464113d880f7683c9a816601f4874db8f5d81b8f7c",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [
+          "C-FULL-SOURCE-ISOLATE-NORMALIZATION",
+          "C-LONG-PAIR-ISOLATE-DISPATCH",
+          "C-FINITE-CONTACT-ISOMETRY-DIAMETER-GAIN"
+        ],
+        "description": "These canonical premises do not supply the report-specific owner family or full-source endpoint. Candidate conclusions remain conditional on the linked report hypotheses."
+      },
+      "obstructions_and_limits": [
+        "The exact source costs must prevent collapse of every contact-bearing group.",
+        "Finite nonglobal sources do not certify canonical optimality or source extraction."
+      ],
+      "validation": "python3 research/verify_target_c_unequal_height_release_2026_10_10.py --heights 30 31 100 --symbolic-limit; PASS on finite nonglobal sources, all checked source pairs, unequal heights, and independent isolate transport.",
+      "next_proof_obligations": [
+        "Extract a canonical source family whose exact full-source cost graph cannot collapse every contact-bearing owner to zero, or prove a source-specific collapse certificate."
+      ],
+      "provenance": {
+        "source_repository": "1337isnot1337/e-99",
+        "source_pr": 952,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/952",
+        "source_main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head": "3536c0b6f6c2a929d9c96fffbdcfc480735fea3",
+        "source_head_tree": "a6503b1817dbd885f9378ca42677d811fe363c84",
+        "source_merge_base": "d999528cfaafd811a4a19bcfacd00f217c2fc375"
+      },
+      "rights_and_release": "Owner-authorized first-party research. Exact source provenance is in the migration ledger; source and destination report text match except for the recorded hosted-CI operational redaction. No third-party papers or PDFs copied."
     }
   ]
 }
