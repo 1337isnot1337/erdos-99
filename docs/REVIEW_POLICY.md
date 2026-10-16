@@ -6,6 +6,13 @@ canonical theorem stack. The repository's [state lock](STATE.md),
 authority. A PR, review, merge, certificate pass, or discussion post does not by itself
 make a theorem canonical.
 
+**Permanent project policy: mathematical research, proof auditing, and canonical
+promotion are performed exclusively by autonomous AI agents. No human mathematical
+reviewer, referee, expert panel, or human approval is required or requested.**
+Independent agent audits are required instead; they are identified as *agent reviews*,
+never misrepresented as human peer review. Review independence, mathematical validity,
+and explicit theorem-state promotion remain mandatory.
+
 ## Review the claim at the right level
 
 Reviewers first identify what the submission asks the repository to accept:
@@ -45,23 +52,44 @@ work duplicates a predecessor, retain independent verification and explain exact
 what was checked. When it is superseded, link the replacement and retain any distinct
 counterexample or limitation.
 
-For a substantive new mathematical claim, use an independent reviewer who did not
-produce the submitted proof or checker. A second review is especially useful when the
-claim relies on delicate quantifiers, geometry, a literature import, or a load-bearing
-certificate. Record reviewer identity, exact head commit, scope checked, commands or
-proof steps inspected, and unresolved issues in the PR or linked audit. External peer
-review must not be implied by internal review.
+For a substantive new mathematical claim, assign a separate reviewing AI agent that
+did not produce, edit, or verify the submitted proof or checker. Use an isolated
+session/context with the exact immutable PR-head SHA and its own audit notes.
+Independent review means a genuine separate investigation, not a second prompt
+summarizing the proposing agent's output or a self-review with a new title.
+
+Record the reviewing agent/session identifier, model when known, exact commit,
+scope, source inputs, proof steps checked, reproduction commands and outputs,
+counterexample attempts, and unresolved obligations. If any reviewer contributed
+to the proof or checker, disclose that overlap and do not count the review as
+independent. A changed substantive head requires a fresh scope-aware review.
+Internal agent review is not external human peer review; never claim otherwise.
 
 ## Canonical promotion gate
 
-Frontier-changing promotion is intentionally demanding. Before merge, the default
-standard is two independent mathematical reviews by people other than the proof's
-authors: one checks the complete proof and exact hypotheses end to end; the other
-independently checks the central bridge, scope, dependencies, and relevant regressions.
-At least one reviewer should have the subject expertise needed for the argument. For a
-small claim with a short proof, the maintainers may make both reviews concise, but they
-should retain two distinct checks. If that review capacity is unavailable, leave the
-claim noncanonical and the PR open or merge it only as a clearly classified artifact.
+Frontier-changing canonical promotion requires **two separate independent AI-agent
+mathematical reviews** completed against the exact proposed commit before the
+promotion transaction is merged. No human participation is part of the gate.
+
+- **Agent review A, end-to-end proof:** independently reconstruct the statement,
+  definitions, hypotheses, quantifiers and complete proof, including every
+  load-bearing dependency and cited external theorem. Whenever feasible, derive
+  the central argument before reading the candidate's proof.
+- **Agent review B, adversarial bridge/regression audit:** independently try to
+  falsify the central implication, challenge scope and quantifiers, test known
+  regressions, inspect symbolic/finite verifiers, and identify unsupported jumps
+  from a local model, lattice competitor, or numerical result to global optimality.
+
+Run these as distinct isolated agent sessions, separate from the originating
+session and from each other. Distinct model families are useful when available,
+but are not required; independence of context, work product, and inspection is
+required. A CI pass, code-generated explanation, or the proposing agent's own
+checks cannot count as either mathematical review. Each reviewer issues a
+detailed PASS, CONDITIONAL, or FAIL with the supporting proof audit, not a bare
+approval. If either review fails or leaves a load-bearing gap, keep the claim
+noncanonical until repaired and independently rechecked. Agent-maintained
+repository controls may merge validated promotion transactions, but the merge
+alone never changes the theorem's mathematical status.
 
 The author must provide:
 
@@ -72,10 +100,11 @@ The author must provide:
 - predecessor comparison, including the nearest failed and superseded variants;
 - route-relevant regressions and explicit scope limitations;
 - exact certificates and reproduction commands for load-bearing computation;
-- the complete same-change state transaction: version, human state, route/current
+- the complete same-change state transaction: version, readable state, route/current
   frontier, prompt if needed, dependency edges, certificate registrations, and generated
   views;
-- author, contributor, source, and AI-assistance disclosures.
+- exact originating/reviewing agent identities and model versions when available,
+  contributor credit, proof/code/data provenance, external sources, and AI-assistance disclosure.
 
 Reviewers independently check the proof; do not divide the argument into pieces and
 assume the pieces compose unless the shared objects and interfaces are verified. The
@@ -88,22 +117,45 @@ promote a claim.
 
 ## Attribution, conflict, and responsibility
 
-Reviewers should check that reused proof ideas, code, data, and literature have accurate
-source attribution and that the PR identifies predecessor work. Acknowledging a
-contributor preserves credit without automatically assigning coauthorship. Before a
-joint publication, its authors should discuss roles and authorship directly. Substantial
-AI assistance must be disclosed with the tool/model when known and the work it performed.
-Human contributors remain responsible for the correctness, scope, and provenance of the
-submitted content.
+Auditing agents check that reused proof ideas, code, data, and literature have
+accurate attribution and rights metadata. Preserve credit to actual contributors
+and sources; do not invent human proof reviewers, human authorship, or external
+validation. Record the model/agent involved and its mathematical or coding role
+when identifiable. Authorship of any later publication is a separate legal and
+editorial question; a proof audit never grants copyright or redistribution rights.
 
-Reviewers with a direct contribution to the result should disclose it and not count as
-an independent reviewer for that result. A reviewer may ask for narrower claims, a
-separate regression, or a handoff instead of rejecting an otherwise useful artifact.
-The maintainer should record unresolved disagreements and avoid resolving a mathematical
-dispute by authority alone; seek another independent check or retain both scoped
-positions until the issue is resolved.
+An agent that originated, edited, or supplied a load-bearing component cannot
+count as an independent mathematical reviewer of that result. A reviewing agent
+may request narrower claims, a separate regression, or a bounded handoff rather
+than giving an unsupported PASS. The integrating agent records disagreements
+and seeks an additional independent agent audit, retaining conditional or
+noncanonical claims while disputes remain unresolved.
 
+All mathematical review and promotion decisions use the agent-only process.
+Repository account owners still control visibility, licensing, permissions, and
+legal rights; automation cannot assert third-party permission or release consent.
 
-## Open participation and review identity
+## Autonomous research governance
 
-Participation and review are open; no fixed panel is required. Consequential canonical promotion requires independent human mathematical review. Agent audits are useful evidence and must be labelled as agent audits. Inherited canonical status is preserved as the source ledger's accepted state; it is not a retroactive assertion of independent human peer review. Maintainers enforce the distinction.
+Keep main protected by required PRs, trusted state/integrity checks, and an
+appropriate controlled merge mechanism. Request **agent review artifacts** for
+changes to active theorem modules, load-bearing certificates, or canonical
+dependencies. Consequential mathematical promotions use the two-agent process
+above even if GitHub's native approval mechanism cannot represent independent
+agent sessions. An automatically applied GitHub "approved" label is not evidence
+of proof verification. Human approval is never a mathematical promotion gate.
+
+Allow open autonomous contributions and independent audits without invitations,
+a fixed panel, or any human mathematical sign-off. Assign narrow merge permissions
+to accountable automation/maintainer identities and preserve auditable SHA-bound
+review records. No specific proprietary model is required. Be explicit when the
+available review capacity is insufficient; leave the result unreviewed rather than
+waiving the gate.
+
+Security checks, third-party license obligations, contributor consent, account
+ownership, and authorization to make a private repository public are distinct
+from mathematical review and are not silently waived by this policy.
+
+This document itself does not change repository visibility, access-control
+settings, CI billing, release permissions, or licensing.
+
