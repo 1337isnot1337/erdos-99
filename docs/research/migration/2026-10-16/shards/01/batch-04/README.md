@@ -7,3 +7,7 @@ The review ledger does not promote any claim. Source files remain `canonical: fa
 Run `python verify_reconciliation.py --source /path/to/e-99 --destination /path/to/erdos-99` for exact blob/SHA-256 verification. Run `python compare_frozen_corpus.py --source-repo /path/to/e-99 --destination-repo /path/to/erdos-99` to reproduce the pinned full-tree five-word overlap candidates.
 
 The unique support files for index 101 are preserved under `../support/research/`. Index 95 uses a verifier included in batch PR #43, pending that PR merge. Index 110 retains two unresolved cross-shard report references, listed in `dependencies.jsonl`; the annular Voronoi report it also cites is already present on current main.
+
+Index 98’s verifier and its exact binary-contact 2-SAT helper are also preserved under `../support/research/` and included in `support.jsonl`; both use only the Python standard library.
+
+The report’s sole verifier link is relocated from the absent source-root path to the preserved shard-support script; that path transformation is byte-logged and verified.
