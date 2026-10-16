@@ -3840,6 +3840,284 @@
         "visibility": "destination remains private; this import does not change repository visibility",
         "destination_claim_status": "unreviewed; canonical theorem-state unchanged"
       }
+    },
+    {
+      "candidate_id": "GLOBAL-JOINT-DIAMETER-COVER-EXCHANGE-PR957",
+      "title": "Exact supplied-packet joint diameter-cover/matching theorem",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed candidate/regression in frozen open source PR #957; theorem-state remains authoritative.",
+      "target_scope": [
+        "Level I whole-source strict-diameter comparison",
+        "Target C cross-route evidence"
+      ],
+      "claim": {
+        "statement": "For unit-separated A of n labels and a unit-separated B of m labels with diam(B)<D=diam(A), let H be the complete actual-diameter graph on A and let G contain every cross pair at distance <1 or >=D. For each vertex cover T of H, let nu_T be the maximum matching in G restricted to (A minus T) union B. The largest unit-separated strict-D subset of the labelled union A union B has size exactly n+m-min_T(|T|+nu_T). Hence a global minimizer obeys |T|+nu_T>=m+1 for every supplied B and every T.",
+        "hypotheses": [
+          "The theorem applies to any finite unit-separated planar source and supplied unit-separated shorter-diameter packet.",
+          "Upper cross conflicts include equality at D; coincident source/packet labels are lower conflicts.",
+          "Every actual-diameter pair and all source labels, including isolates, are retained."
+        ],
+        "not_claimed": [
+          "No successful packet is constructed for every large triangle-free global minimizer.",
+          "No Level I closure, canonical theorem promotion, or C-II endpoint follows."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No canonical theorem is used as an unpromoted premise; the report depends only on the problem definition and its proved finite graph identity.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_joint_diameter_cover_exchange_2026-10-12.md",
+          "role": "full analytic theorem and geometric regressions",
+          "source_git_blob_sha": "0b944f6d45f769cf5d3a3789d640119d3ca227f5",
+          "source_sha256": "b804a22586186c7162cbff4f028b0b2ec3185e0353f9eb47dcd7d77e57a7e8cd",
+          "destination_sha256": "b804a22586186c7162cbff4f028b0b2ec3185e0353f9eb47dcd7d77e57a7e8cd",
+          "source_artifact_id": "ART-A339F24C029F",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_global_joint_exchange_2026_10_12.py",
+          "role": "exact graph/geometric verifier",
+          "source_git_blob_sha": "ed249690a327e1090e9720a0e33ec05bce50ce25",
+          "source_sha256": "86b4f68c0510a7b3d2fea81456728751c3946daf7adcc6ae85a4af13d86f98a8",
+          "destination_sha256": "86b4f68c0510a7b3d2fea81456728751c3946daf7adcc6ae85a4af13d86f98a8",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/pr957_autonomous_proof_audit_2026-10-15.md",
+          "role": "source proof audit provenance",
+          "source_git_blob_sha": "a366b97aafc87f7d1bae96cecb32febde7c54e9f",
+          "source_sha256": "6e3a8ee2a61951a1c08b491ddb6ab19acd0a0343c759d5a26865f2a979be3b5d",
+          "destination_sha256": "76690fa8d2616ef6a5104b77ee9d1c1785a2aafb93355bab4dc3fbece7db72b4",
+          "source_artifact_id": "ART-1D6333BF17AD",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [],
+        "description": "The exact identity is proved for a supplied packet. The unresolved issue is the universal existence of B and T with joint cost at most |B|, not the matching or cover identity."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "global minimizer quantifier",
+          "result": "Every supplied packet must fail the exact cost threshold; no packet-existence theorem is proved."
+        },
+        {
+          "scope": "complete conflict graph",
+          "result": "Only lower conflicts are planar; upper conflicts can create K_(4,3), so full conflict graph planarization is invalid."
+        }
+      ],
+      "validation": {
+        "command": "python3 research/verify_global_joint_exchange_2026_10_12.py",
+        "result": "PASS; rational graph identity, exhaustive mixed subsets, four geometric controls, and four graph-certificate fault controls.",
+        "boundary": "Finite exact checks do not establish packet existence for arbitrary global minimizers or promote the analytic proof."
+      },
+      "next_proof_obligations": [
+        "Prove that every sufficiently large triangle-free global minimizer admits B and T with nu_T<=|B|-|T|.",
+        "Preserve the source quantifier, all diameter pairs, upper cross conflicts, coincidences, and contact isolates.",
+        "Obtain an independent destination exact-head AI-agent audit before any consequential theorem promotion."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 957,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/957",
+        "source_pr_draft": true,
+        "source_head_sha": "a11e16998094ab3d7afd9fd07eff8b55909ec406",
+        "source_head_tree": "77ce8dd135c2b4233f121bd448621d362841da06",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base": "d6f953100d62a84de72e991642041fdd026e82ba",
+        "source_merge_base_tree": "3d6ac96556b891d7b17ea7c13ae9364e0c5082f0"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent-generated material",
+        "third_party_material": "Schurmann is linked/cited only; no paper, PDF, or extracted text copied",
+        "visibility": "destination repository remains private",
+        "destination_claim_status": "unreviewed; theorem-state unchanged"
+      }
+    },
+    {
+      "candidate_id": "GLOBAL-DENSE-STAR-MINCOVER-REGRESSION-PR957",
+      "title": "All-k dense regression against minimum-cover-first search",
+      "status": "unreviewed regression",
+      "source_lifecycle": "Unreviewed candidate/regression in frozen open source PR #957; theorem-state remains authoritative.",
+      "target_scope": [
+        "Level I whole-source strict-diameter comparison",
+        "Target C cross-route evidence"
+      ],
+      "claim": {
+        "statement": "For every integer k>=4 the report constructs a rational triangle-free source A_k with D=k^2 and |A_k|=pi D^2/(2 sqrt(3))+O(D), plus a packet B_k of size |A_k|-1. The source has exactly one unit contact and |A_k|-2 contact isolates; its complete cross-conflict graph is a matching. The unique minimum-cardinality diameter cover has exchange profit -1, but a k-label inclusion-minimal cover has profit 0 and produces a same-cardinality competitor of diameter D-1/8.",
+        "hypotheses": [
+          "All source, packet, and cross-pair inequalities in the report’s rational construction.",
+          "The source is explicitly nonglobal; the competitor is part of the regression proof."
+        ],
+        "not_claimed": [
+          "No global minimizer or Level I counterexample is constructed.",
+          "The regression rejects only a minimum-cover-first shortcut; all-k population is analytic with O(D) error, not an exact optimum."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No canonical theorem is used as an unpromoted premise; the report depends only on the problem definition and its proved finite graph identity.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_joint_diameter_cover_exchange_2026-10-12.md",
+          "role": "all-k analytic regression and complete construction",
+          "source_git_blob_sha": "0b944f6d45f769cf5d3a3789d640119d3ca227f5",
+          "source_sha256": "b804a22586186c7162cbff4f028b0b2ec3185e0353f9eb47dcd7d77e57a7e8cd",
+          "destination_sha256": "b804a22586186c7162cbff4f028b0b2ec3185e0353f9eb47dcd7d77e57a7e8cd",
+          "source_artifact_id": "ART-A339F24C029F",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_global_exchange_star_family_2026_10_12.py",
+          "role": "exact k=4,5 finite pair-ledger verifier",
+          "source_git_blob_sha": "395b1654709c2fedabefec616e02d2f414714684",
+          "source_sha256": "32f5e0568723005f61f32bed97a3cecf2e1e585c4194da2bfd9976abeb50785f",
+          "destination_sha256": "32f5e0568723005f61f32bed97a3cecf2e1e585c4194da2bfd9976abeb50785f",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [
+          "GLOBAL-JOINT-DIAMETER-COVER-EXCHANGE-PR957"
+        ],
+        "canonical_claims": [],
+        "description": "This regression is part of the same joint objective but is a separate reusable negative control; it prevents replacing the joint minimization by minimum cover cardinality."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "globality",
+          "result": "Every constructed source is strictly nonglobal; the packet explicitly reduces diameter by 1/8 at fixed cardinality."
+        },
+        {
+          "scope": "finite replay",
+          "result": "The scripts check k=4,5 only; the all-k family and population estimate are analytic."
+        }
+      ],
+      "validation": {
+        "command": "python3 research/verify_global_exchange_star_family_2026_10_12.py",
+        "result": "PASS; exact rational full pair ledgers at k=4,5, including all 55 and 254 contact isolates.",
+        "boundary": "Finite exact checks do not establish packet existence for arbitrary global minimizers or promote the analytic proof."
+      },
+      "next_proof_obligations": [
+        "Keep the minimum-cover-first counterexample in future exchange searches and test every cover/matching cost jointly.",
+        "Do not use dense nonglobal sources as evidence against Level I."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 957,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/957",
+        "source_pr_draft": true,
+        "source_head_sha": "a11e16998094ab3d7afd9fd07eff8b55909ec406",
+        "source_head_tree": "77ce8dd135c2b4233f121bd448621d362841da06",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base": "d6f953100d62a84de72e991642041fdd026e82ba",
+        "source_merge_base_tree": "3d6ac96556b891d7b17ea7c13ae9364e0c5082f0"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent-generated material",
+        "third_party_material": "Schurmann is linked/cited only; no paper, PDF, or extracted text copied",
+        "visibility": "destination repository remains private",
+        "destination_claim_status": "unreviewed; theorem-state unchanged"
+      }
+    },
+    {
+      "candidate_id": "GLOBAL-FREE-REGION-WEAK-CAGE-PR957",
+      "title": "Four-label weak-cage obstruction to uniform free-region propagation",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed candidate/regression in frozen open source PR #957; theorem-state remains authoritative.",
+      "target_scope": [
+        "Level I whole-source strict-diameter comparison",
+        "Target C cross-route evidence"
+      ],
+      "claim": {
+        "statement": "For rational t>0, a center with three unit neighbors u=(1,0), v=(-(1-t^2)/(1+t^2),2t/(1+t^2)), w=(0,-1) is triangle-free and has a positive surrounding relation a*u+v+b*w=0. For any prescribed R>0, choosing t<1/(4R) places all four labels outside the radius-R ball centered at (Rt,R), while the center lies only R*(sqrt(1+t^2)-1) outside its boundary. The affine line through u,v misses the center by t/sqrt(1+t^2).",
+        "hypotheses": [
+          "Rational 0<t<min(1,1/(4R)); use the exact identities and inequalities in the historical run note.",
+          "This is a local geometric obstruction only; source globality is not assumed."
+        ],
+        "not_claimed": [
+          "No global minimizer, source-hull free-ball extraction, or counterexample to Level I.",
+          "No uniform affine-span/free-region radius can be inferred from triangle-freeness alone."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No canonical theorem is used as an unpromoted premise; the report depends only on the problem definition and its proved finite graph identity.",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "research/global_exchange_run_2026_10_12.md",
+          "role": "historical route ledger and analytic weak-cage regression",
+          "source_git_blob_sha": "296cd5af7a9466bb8425727a2fd9dcc7ca41097f",
+          "source_sha256": "7b67078cb7bfc81931257134dc3a0f22fb5ea0b2944d5c5f93e2f3dd4804deee",
+          "destination_sha256": "001b81d3be7bd23a0c10976c873459bd7c0545563846f418ad1c92a8f98e609c",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/pr957_autonomous_proof_audit_2026-10-15.md",
+          "role": "source audit reconstruction",
+          "source_git_blob_sha": "a366b97aafc87f7d1bae96cecb32febde7c54e9f",
+          "source_sha256": "6e3a8ee2a61951a1c08b491ddb6ab19acd0a0343c759d5a26865f2a979be3b5d",
+          "destination_sha256": "76690fa8d2616ef6a5104b77ee9d1c1785a2aafb93355bab4dc3fbece7db72b4",
+          "source_artifact_id": "ART-1D6333BF17AD",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [],
+        "description": "The destination already retains a distinct dense two-copy Schurmann-near-miss; this bounded four-label cage adds an explicit arbitrary-radius placement and does not subsume that family."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "free-region mechanism",
+          "result": "Schurmann’s propagation theorem requires uniform geometry hypotheses not supplied by triangle-freeness; the cage blocks dropping them."
+        },
+        {
+          "scope": "globality",
+          "result": "The four-label configuration is a nonglobal local regression and cannot be promoted to a source theorem."
+        }
+      ],
+      "validation": {
+        "command": "No standalone executable verifier is present; the source proof audit reconstructs the exact four-point identities. The two executable verifiers cover the joint packet theorem and dense-star construction.",
+        "result": "Analytic finite configuration and source-agent audit only; no global source claim or independent destination review.",
+        "boundary": "Finite exact checks do not establish packet existence for arbitrary global minimizers or promote the analytic proof."
+      },
+      "next_proof_obligations": [
+        "Any free-region proof must derive its uniform geometry controls from global optimality or use a collective full-source move.",
+        "Retain the dense two-copy regression as a different, complementary obstruction."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 957,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/957",
+        "source_pr_draft": true,
+        "source_head_sha": "a11e16998094ab3d7afd9fd07eff8b55909ec406",
+        "source_head_tree": "77ce8dd135c2b4233f121bd448621d362841da06",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base": "d6f953100d62a84de72e991642041fdd026e82ba",
+        "source_merge_base_tree": "3d6ac96556b891d7b17ea7c13ae9364e0c5082f0"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent-generated material",
+        "third_party_material": "Schurmann is linked/cited only; no paper, PDF, or extracted text copied",
+        "visibility": "destination repository remains private",
+        "destination_claim_status": "unreviewed; theorem-state unchanged"
+      }
     }
   ]
 }

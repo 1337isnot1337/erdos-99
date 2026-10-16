@@ -30,6 +30,20 @@ track](tracks/global-population-lattice-interface-pr956.md) and [four
 candidate records](../targets/target-c/candidate-registry.json).
 
 
+## Exact whole-source joint cover/matching cost
+
+Source PR #957 proves the exact maximum strict-`D` mixed-subset identity for a
+supplied shorter-diameter packet and the complete source diameter graph. The
+right optimization is over every diameter vertex cover together with the
+maximum matching of *all* lower and upper cross conflicts; minimum-size covers
+or lower blockers alone can miss a same-cardinality competitor. A triangle-free
+global minimizer must have joint cost at least `m+1` for every supplied packet
+of size `m`. The precise missing theorem is packet existence with cost at most
+`m` for every sufficiently large triangle-free global minimizer. Its all-`k`
+dense-star and four-label free-region regressions are nonglobal and preserve
+important limits. See the [joint exchange track](tracks/global-joint-diameter-cover-exchange-pr957.md).
+
+
 ## Train-return quantiles and rigidity-forced grid linkages
 
 Source PR #950 adds an unreviewed proof candidate over the canonical quadratic

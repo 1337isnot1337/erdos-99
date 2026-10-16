@@ -74,6 +74,24 @@ not imply global optimality. See the [full track](../../research/tracks/global-p
 [reports and verifiers](../../research/proposals.md), and [candidate registry](candidate-registry.json).
 
 
+## Whole-source joint diameter-cover exchange
+
+Source PR #957 preserves an **unreviewed** exact theorem for a supplied unit-
+separated packet `B` of diameter below the source diameter `D`: if `H` is the
+complete actual-diameter graph and `G` contains every lower (`<1`) and upper
+(`>=D`) cross conflict, then the largest feasible strict-`D` subset of `A union
+B` has size `n+m-min_T(|T|+nu_T)`, where `T` ranges over vertex covers of `H`
+and `nu_T` is the maximum matching in `G` after deleting `T`. Thus global
+minimality forces `|T|+nu_T >= m+1` for every supplied packet and cover. The
+missing theorem is to construct a packet and cover with `nu_T<=m-|T|` for every
+sufficiently large triangle-free global minimizer. The all-`k` dense-star
+regression blocks minimum-cover-first search, and a distinct four-label cage
+blocks deriving uniform free-region geometry from triangle-freeness alone.
+These examples are nonglobal; no Level I status changes. See the [full
+track](../../research/tracks/global-joint-diameter-cover-exchange-pr957.md),
+[registry](candidate-registry.json), and [exact verifiers](../../research/README.md).
+
+
 ## Midpoint localization, leaf anchors, and supplied-chart exclusions
 
 The pinned source PR #947 audits are preserved in the [candidate registry](candidate-registry.json)

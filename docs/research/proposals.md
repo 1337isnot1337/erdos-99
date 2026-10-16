@@ -218,3 +218,20 @@ Frozen source head `bbc549f36ac964fd7eee211782eb2c979d12af32`; all four analytic
 - The stress-ring report gives an exact triangle-free, locally isolated, positive-stress family with asymptotically optimal leading density, then proves it nonglobal by a same-cardinality competitor at diameter `< D-4`. It blocks fixed density-loss arguments from those local hypotheses alone.
 
 The [four verifiers](../research/tracks/global-population-lattice-interface-pr956.md#5-reading-and-verification-order) check finite/formal cases only. They do not certify the analytic proofs or promote any claim. The source audit remains provenance rather than the destination's independent exact-head AI review. Per-file source hashes and treatments are in the [migration ledger](migration/2026-10-16/ledger/source-pr-files.jsonl).
+
+## Source PR #957 — exact joint diameter-cover exchange
+
+The [full-source report](tracks/global-joint-diameter-cover-exchange-pr957.md)
+proves an exact supplied-packet identity: maximum unit-separated strict-`D`
+subset size is `n+m-min_T(|T|+nu_T)`, where `T` covers every actual source
+diameter pair and `nu_T` is a maximum matching of the complete lower/upper
+cross-conflict graph. The minimum-cover-first shortcut is rejected by a
+three-label example and an all-`k` dense nonglobal family; a separate square
+control shows a supplied packet need not succeed. A `K_(4,3)` upper-conflict
+example blocks planarizing the complete graph. The accompanying run note also
+records diverse failed mechanisms and a four-label cage defeating uniform
+free-region propagation from triangle-freeness alone. All records are
+noncanonical; the exact missing bridge is to find a successful packet and
+cover for every sufficiently large triangle-free global minimizer. See the
+two [exact finite verifiers](../research/README.md) and [per-file migration
+ledger](migration/2026-10-16/ledger/source-pr-files.jsonl).
