@@ -205,6 +205,90 @@
       ],
       "description": "Physical hull-end capacity, canonical C33 overlap, and exact C42 pinned-stress face-slack identity.",
       "unresolved_bridge": "linear outer-walk/high-t source payment and geometric sign information"
+    },
+    {
+      "id": "pinned-attachment-and-response-currency",
+      "indices": [
+        543,
+        545,
+        547,
+        567,
+        568
+      ],
+      "description": "Component pinned-stress slack, planar attachment incidence, quotient-circuit pivots and PSD response terminal structure.",
+      "unresolved_bridge": "stress/circuit geometry to aggregate response mass, or exact endpoint source exclusion"
+    },
+    {
+      "id": "train-cut-and-prefix-geometry",
+      "indices": [
+        544,
+        561,
+        562,
+        569
+      ],
+      "description": "Pivot-localized train load, corrected prefix-fiber split budgets, exact lattice-path prefix normal form and a pure-disk Mantel endpoint closure.",
+      "unresolved_bridge": "geometric capacity/globalization beyond the stated cut, prefix and pure-disk hypotheses"
+    },
+    {
+      "id": "post-zf-population-and-boundary-currency",
+      "indices": [
+        546,
+        548,
+        549,
+        550,
+        551,
+        553,
+        554,
+        556,
+        559
+      ],
+      "description": "Population-versus-defect laws, post-ZF currency coupling, primitive boundary classifications, cyclic stress endpoint and missing-side equilibrium.",
+      "unresolved_bridge": "quadratic isolate populations, linear defect compatibility, and cyclic/high-surplus endpoint closure"
+    },
+    {
+      "id": "near-matching-and-zero-transfer",
+      "indices": [
+        557,
+        558,
+        560
+      ],
+      "description": "Near-matching train-end bounds, perfect-matching branch exclusion and the additional zero-transfer pinned-ledger coupling.",
+      "unresolved_bridge": "the canonical linear bound closes matching but not surviving full-source defect branches"
+    },
+    {
+      "id": "profile-b-puncture-regressions",
+      "indices": [
+        563
+      ],
+      "description": "Exact rational quotient models limiting abstract capacity-nine puncture arguments.",
+      "unresolved_bridge": "actual source compatibility; separate finite source cover noted by the source report"
+    },
+    {
+      "id": "projective-direction-area-and-width",
+      "indices": [
+        552,
+        555,
+        564
+      ],
+      "description": "Post-ZF force-hull area floors, Kemperman projective-circle spread and a minimum-width consequence.",
+      "unresolved_bridge": "area/width floors remain below isodiametric capacity and do not eliminate cavities"
+    },
+    {
+      "id": "inactive-chamber-and-source-hull-geometry",
+      "indices": [
+        565,
+        566
+      ],
+      "description": "Protected lattice exchange threshold and full-source supporting-side theorem with exact length-two regression.",
+      "unresolved_bridge": "chamber boundary conflict, localized exterior population and whole-source replacement"
+    },
+    {
+      "id": "pure-disk-mantel-endpoint",
+      "indices": [
+        569
+      ],
+      "description": "Conditional full-core Mantel-floor endpoint contradiction under a simply connected proper-train disk.",
+      "unresolved_bridge": "holes/interfaces and canonical full-core disk globalization"
     }
   ]
 }

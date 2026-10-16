@@ -9,3 +9,5 @@ Imported report bodies preserve their source mathematics and remain `unreviewed`
 Release handling is recorded per row. The first batch preserves one missing exact finite verifier under `evidence/research/` and rewrites only its report link. The separate source report `target_c_exact_phase_support_caps_2026-10-01.md` is owned by frozen missing-list index 287 and is recorded as a cross-shard dependency, not imported by this shard. No third-party paper is included. Validation command records use portable placeholders for local source, destination, and interpreter paths; frozen commits, blob hashes, and verifier scopes remain pinned.
 
 Batch 02 (indexes 516–542) imports 27 full reports and four verifier scripts relocated under `evidence/research/`; report references point to those shard-local copies. Reports remain unreviewed and noncanonical.
+
+Batch 03 (indexes 543–569) imports 27 full reports and three supporting scripts (including one transitive verifier helper) under shard evidence. The projective-circle area report retains only the external theorem citation; no paper is copied. All report lifecycle labels remain unreviewed and noncanonical.
