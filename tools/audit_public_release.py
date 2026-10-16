@@ -32,8 +32,15 @@ PRIVATE_REFERENCE_PATTERNS = {
     "private-worktree-path": re.compile(rb"(?:/tmp/e99-private|/home/oai/|/workspace/projects/)"),
 }
 SAFE_EMAIL_SUFFIXES = ("@users.noreply.github.com", "@noreply.github.com", "@example.invalid")
+SAFE_EXACT_EMAILS = {"noreply@github.com"}
 HEX40 = re.compile(r"^[0-9a-f]{40}$")
 HEX64 = re.compile(r"^[0-9a-f]{64}$")
+
+
+def safe_email(email: str) -> bool:
+    """Recognize explicit noreply forms without allowing whole provider domains."""
+    normalized = email.casefold()
+    return normalized in SAFE_EXACT_EMAILS or normalized.endswith(SAFE_EMAIL_SUFFIXES)
 
 
 def git(root: Path, *args: str) -> bytes:
@@ -326,7 +333,7 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
                 continue
             counts["reachable_commits"] += 1
             for role, email in (("author", author), ("committer", committer)):
-                if "@" in email and not email.lower().endswith(SAFE_EMAIL_SUFFIXES):
+                if "@" in email and not safe_email(email):
                     if owner_perms is not None and email.casefold() in owner_perms["owner_approved_emails"]:
                         counts["owner_authorized_git_email_occurrences"] += 1
                     else:
@@ -354,7 +361,8 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
                         finding(where, 'historical-private-reference', label + ' in reachable history; review suitability', block=False)
                 if kind in ("commit", "tag"):
                     for email in re.findall(rb"(?im)^(?:tagger |co-authored-by: )[^\n]*<([^<>\n]+)>", data):
-                        if b"@" in email and not email.decode("utf-8", "replace").lower().endswith(SAFE_EMAIL_SUFFIXES):
+                        decoded_email = email.decode("utf-8", "replace")
+                        if b"@" in email and not safe_email(decoded_email):
                             visible = email.decode("utf-8", "replace").casefold()
                             if owner_perms is not None and visible in owner_perms["owner_approved_emails"]:
                                 counts["owner_authorized_trailer_email_occurrences"] += 1

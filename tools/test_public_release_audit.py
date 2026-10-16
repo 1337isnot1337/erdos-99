@@ -202,6 +202,20 @@ class ReleaseAuditFixtures(unittest.TestCase):
         result = audit(self.root)
         self.assertIn("personal-git-email", {v["kind"] for v in result["blockers"]})
 
+    def test_github_web_merge_noreply_email_is_safe_but_other_github_emails_are_not(self):
+        self.set_inventory("approved")
+        self.git("add", "-A")
+        self.git("commit", "-qm", "approved fixture")
+        self.git("-c", "user.email=noreply@github.com", "commit", "--allow-empty", "-qm", "GitHub web merge")
+        self.git("-c", "user.email=noreply@github.com", "tag", "-a", "v-github-web-merge", "-m", "GitHub tag")
+        safe = audit(self.root)
+        self.assertEqual(safe["status"], "STRUCTURAL_PRECHECK_PASSED", safe["blockers"])
+        self.assertEqual(safe["counts"].get("personal_domain_git_emails", 0), 0)
+
+        self.git("-c", "user.email=person@github.com", "commit", "--allow-empty", "-qm", "unapproved GitHub-domain author")
+        blocked = audit(self.root)
+        self.assertIn("personal-git-email", {v["kind"] for v in blocked["blockers"]})
+
     def test_secret_indicator_is_redacted(self):
         self.set_inventory("approved")
         content = "ghp_" + "A" * 36
