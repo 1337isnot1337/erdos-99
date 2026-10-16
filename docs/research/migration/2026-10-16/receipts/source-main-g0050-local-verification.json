@@ -1,0 +1,208 @@
+{
+  "commands": [
+    {
+      "command": "/tmp/e99-g0050-verify-copy/bin/python -B -m unittest discover -s tools -p \"test_*.py\" -q",
+      "result": "PASS; 132 tests; CPython 3.14.6; run on payload code before README-only correction"
+    },
+    {
+      "command": "repository corpus unittest suite",
+      "result": "PASS; 8 tests in 57.102s; CPython 3.14.6"
+    },
+    {
+      "command": "python tools/check_theorem_state.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python tools/check_active_route_summaries.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python tools/check_public.py",
+      "result": "PASS; zero errors; integrity passed; mathematical_proof=false; 94 certificates, 451 claims, 845 edges, 810 retained source files, 23 tasks"
+    },
+    {
+      "command": "python tools/build_artifact_index.py --write --write-headers; python tools/build_artifact_index.py",
+      "result": "PASS; wrote 578 records, 0 headers changed; check OK"
+    },
+    {
+      "command": "4 imported G0050 verifier scripts",
+      "result": "PASS; 15,000-interval 0.0050 minimax check; exact 0.0050 Section-171 propagation; 16,600-interval 0.0071 check with lower margin 0.00036645727946036413; Machin pi enclosure with positive safety margins"
+    },
+    {
+      "command": "python docs/research/migration/2026-10-16/verify_migration_provenance.py --source-repo /home/cinna/math/e-99 --destination /home/cinna/erdos-99-pr960",
+      "result": "PASS; 1,446 source artifact records, 1,287 Target C artifact paths, 2,913 source file records, 389 dependency edges, zero unresolved/rights-blocked dependencies"
+    },
+    {
+      "command": "python tools/verify_publication_sources.py --source-repo /home/cinna/math/e-99",
+      "result": "PASS; 810 retained files and public hashes checked, 3,977 excluded files, 4,793 source records verified; byte provenance only"
+    },
+    {
+      "command": "python tools/run_theorem_certificates.py",
+      "result": "PASS; full selection 94/94 unique registered certificates; CPython 3.14.6 with requirements-verification-linux-x86_64.lock; run started on payload commit and completed after README-only follow-up"
+    },
+    {
+      "command": "gitleaks 8.30.1 detect --source /home/cinna/erdos-99-pr960 --no-git --no-banner --redact",
+      "result": "PASS; zero findings on approximately 32.02 MB; README-only follow-up was subsequently added"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    },
+    {
+      "command": "uv python install 3.14.7",
+      "result": "NOT AVAILABLE; uv reported no download for cpython-3.14.7-linux-x86_64-gnu; no exact 3.14.7 Gate 2 claim"
+    },
+    {
+      "command": "Independent Git-object and destination-byte hash replay for all 10 ledgered paths",
+      "result": "PASS; each source blob OID, source SHA-256, destination bytes, and recorded public SHA-256 matched exactly"
+    }
+  ],
+  "environment": {
+    "dependency_lock": "tools/requirements-verification-linux-x86_64.lock",
+    "environment_note": "The copied interpreter was installed into an isolated venv because the host sandbox could not execute its original symlink chain. Gate instructions require 3.14.7; `uv python install 3.14.7` returned no download for this platform.",
+    "python": "CPython 3.14.6"
+  },
+  "frozen_source": {
+    "live_inventory_refresh": "Live inventory refreshed before destination pushes; all 21 head SHAs matched the frozen inventory; source main remained exactly the frozen commit.",
+    "main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "main_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+    "open_pr_inventory": "baseline/source-open-prs-before-g0050-2026-10-16.json",
+    "open_prs": 21,
+    "repository": "https://github.com/1337isnot1337/e-99"
+  },
+  "hosted_actions": {
+    "head": "0c84b9a1655b45d223bd08bf15703224ba8f8bf3",
+    "jobs": {
+      "plan": "SKIPPED",
+      "replay": "SKIPPED"
+    },
+    "pr": 34,
+    "reason": "E99_PUBLIC_CI repository variable is unset. No hosted CI success claimed.",
+    "run_id": 38929617588,
+    "steps_executed": false,
+    "workflow": "public-research-integrity"
+  },
+  "integrated_material": {
+    "all_transformations": "none",
+    "files": [
+      {
+        "destination_path": "research/audit_target_c_iterative_minimax_gap_0050_2026-09-14.md",
+        "destination_sha256": "b16aeb1095cbb90bb7df17223821eedaffc53703b232ac4046bceefd2c08ec45",
+        "disposition": "integrated_as_historical_superseded_research",
+        "source_blob": "2fe96a4aecf626583678ef6bd57feebf684c585a",
+        "source_path": "research/audit_target_c_iterative_minimax_gap_0050_2026-09-14.md",
+        "source_sha256": "b16aeb1095cbb90bb7df17223821eedaffc53703b232ac4046bceefd2c08ec45"
+      },
+      {
+        "destination_path": "research/target_c_branch_aware_iterative_pruning_atomic_gap_0071_2026-09-15.md",
+        "destination_sha256": "efe39d4523271be966ad4264959f8fa04474df6832d9bcd9fcc5513151b47ba6",
+        "disposition": "integrated_as_active_noncanonical_research",
+        "source_blob": "316c1706e57a8db311b72cfbb825412df7c7f44e",
+        "source_path": "research/target_c_branch_aware_iterative_pruning_atomic_gap_0071_2026-09-15.md",
+        "source_sha256": "efe39d4523271be966ad4264959f8fa04474df6832d9bcd9fcc5513151b47ba6"
+      },
+      {
+        "destination_path": "research/target_c_branch_aware_iterative_pruning_atomic_gap_0071_hostile_audit_2026-09-15.md",
+        "destination_sha256": "0ecc90b876a568aa8ee9b57ad700fab712237083a8a072af4d19c3f91a480ba9",
+        "disposition": "integrated_as_historical_audit_evidence",
+        "source_blob": "d999b975fad51d636081d13e095100b9e20b7e32",
+        "source_path": "research/target_c_branch_aware_iterative_pruning_atomic_gap_0071_hostile_audit_2026-09-15.md",
+        "source_sha256": "0ecc90b876a568aa8ee9b57ad700fab712237083a8a072af4d19c3f91a480ba9"
+      },
+      {
+        "destination_path": "research/target_c_iterative_minimax_phase_star_atomic_gap_0050_2026-09-14.md",
+        "destination_sha256": "55114bc38cc15a8b531eec230a477f81012065c3478e0e1047ee7b46887857d2",
+        "disposition": "integrated_as_historical_superseded_research",
+        "source_blob": "451e4333806c50a9176e03a55c6c12ca78efa121",
+        "source_path": "research/target_c_iterative_minimax_phase_star_atomic_gap_0050_2026-09-14.md",
+        "source_sha256": "55114bc38cc15a8b531eec230a477f81012065c3478e0e1047ee7b46887857d2"
+      },
+      {
+        "destination_path": "research/target_c_iterative_pruning_conditional_pair_payment_2026-09-14.md",
+        "destination_sha256": "7ea4590a3e0d543b7bc4b10879208f189b45a4a40b94095c96b1af9a8097af8b",
+        "disposition": "integrated_as_active_noncanonical_research",
+        "source_blob": "6336e18061fb094ea09c516dfbe8f4c790f054f8",
+        "source_path": "research/target_c_iterative_pruning_conditional_pair_payment_2026-09-14.md",
+        "source_sha256": "7ea4590a3e0d543b7bc4b10879208f189b45a4a40b94095c96b1af9a8097af8b"
+      },
+      {
+        "destination_path": "research/target_c_split_budget_pair_payment_2026-09-14.md",
+        "destination_sha256": "4dd6d3e289a4fefd65d04f0c068498abdd66eaf2407e4379f3c24d0a9761a98c",
+        "disposition": "integrated_as_historical_superseded_research",
+        "source_blob": "b36fde4538584de2593edd326bc9079f5447b4c7",
+        "source_path": "research/target_c_split_budget_pair_payment_2026-09-14.md",
+        "source_sha256": "4dd6d3e289a4fefd65d04f0c068498abdd66eaf2407e4379f3c24d0a9761a98c"
+      },
+      {
+        "destination_path": "research/verify_target_c_branch_aware_atomic_gap_0071.py",
+        "destination_sha256": "79ef18464e8d271af7b16b17310ada1d78526d3cfdb6f34ced58f6e52e94466c",
+        "disposition": "integrated_as_supporting_computational_evidence",
+        "source_blob": "8d12659457e9d003599d03614fba16d9e3be368c",
+        "source_path": "research/verify_target_c_branch_aware_atomic_gap_0071.py",
+        "source_sha256": "79ef18464e8d271af7b16b17310ada1d78526d3cfdb6f34ced58f6e52e94466c"
+      },
+      {
+        "destination_path": "research/verify_target_c_branch_aware_atomic_gap_0071_pi_enclosure.py",
+        "destination_sha256": "f16635e93ffb5dc33d227eee6a44f6d721f6a503627fb43ec31bdf9c895f9009",
+        "disposition": "integrated_as_supporting_computational_evidence",
+        "source_blob": "c229fa7bc7dcb1bf001f3d75f347ddf350fbf7de",
+        "source_path": "research/verify_target_c_branch_aware_atomic_gap_0071_pi_enclosure.py",
+        "source_sha256": "f16635e93ffb5dc33d227eee6a44f6d721f6a503627fb43ec31bdf9c895f9009"
+      },
+      {
+        "destination_path": "research/verify_target_c_g0050_global_propagation.py",
+        "destination_sha256": "253bff11afbab747417286835bfd07c6e4ac7ee5c7bbbc8bd3383e5f3804d905",
+        "disposition": "integrated_as_supporting_computational_evidence",
+        "source_blob": "180dafdc447279b150be0940c3d84b04e5baed76",
+        "source_path": "research/verify_target_c_g0050_global_propagation.py",
+        "source_sha256": "253bff11afbab747417286835bfd07c6e4ac7ee5c7bbbc8bd3383e5f3804d905"
+      },
+      {
+        "destination_path": "research/verify_target_c_iterative_minimax_atomic_gap_0050.py",
+        "destination_sha256": "950db9c17b6174cb9aed68a12f1d486602e3a1438f9ed9a50f1d25d2f5a6d002",
+        "disposition": "integrated_as_supporting_computational_evidence",
+        "source_blob": "a70e16189debb8e26dedc2630cc644d3c9b932e3",
+        "source_path": "research/verify_target_c_iterative_minimax_atomic_gap_0050.py",
+        "source_sha256": "950db9c17b6174cb9aed68a12f1d486602e3a1438f9ed9a50f1d25d2f5a6d002"
+      }
+    ],
+    "path_hashes": "PASS; independently read source Git blobs at frozen main and matched every destination byte and ledger SHA-256",
+    "report_and_audit_count": 6,
+    "source_path_count": 10,
+    "source_status_promotions_adopted": false,
+    "verifier_count": 4
+  },
+  "mathematical_scope": {
+    "0.0050 Section-171 consequence": "retained as distinct; no 0.0071 propagation claimed",
+    "C_II_and_Level_I": "OPEN; no closure claimed",
+    "computational_verifiers": "finite certificate checks only; no analytic proof or global source extraction established",
+    "distinct_candidates": 3,
+    "hierarchy": [
+      "split-budget pair payment: rho >= (a+b-K)_+^2/18, historical predecessor",
+      "iterative-pruning pair payment: rho >= min{g_*^2/10,2m_*^2/29}, conditional unreviewed candidate",
+      "branch-aware matched train/rhombic gap 0.0071 at proof-only full-core Type-II scope; supersedes 0.0050 only at stated matched-gap scopes"
+    ],
+    "inverse_phase": "withdrawal/correction retained; no global K'/D chart or q=O(D^(4/5)) rate reinstated",
+    "theorem_state": "unchanged; no theorem-state files modified"
+  },
+  "merge_readiness": "All scoped content, path hashes, tests, mathematical verifiers, and full registered certificates pass locally; exact release Gate 2 remains pending for final integrated main.",
+  "recorded_at_utc": "2026-10-16T16:12:35Z",
+  "release_and_rights_status": {
+    "canonical_authority": "destination theorem-state remains authoritative",
+    "gate_2": "NOT RUN; this batch receipt is local-only and not the final expanded-tree receipt",
+    "gate_3": "not requested; repository remains private",
+    "repository_visibility": "private",
+    "third_party_material": "No third-party PDFs or extracted source text added in this batch"
+  },
+  "schema_version": "erdos-99-local-migration-verification/v1",
+  "verification_subject": {
+    "base_main_commit": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+    "base_main_tree": "66e596e4da875bab2bbdf4bacac51d17eeb2b466",
+    "branch": "research/source-main-g0050-boundary-stack-20261016",
+    "destination_pr": 34,
+    "destination_repository": "https://github.com/1337isnot1337/erdos-99",
+    "payload_commit": "0c84b9a1655b45d223bd08bf15703224ba8f8bf3",
+    "payload_tree": "c7da90efa369d750245d659644550ffeb1569d7b",
+    "receipt_commit_note": "This receipt is a follow-on PR commit; payload subject is the exact commit/tree above. The only commit after the initial test and full-certificate run changed the migration README; report, verifier, theorem-state, registry, and code bytes were unchanged."
+  }
+}
