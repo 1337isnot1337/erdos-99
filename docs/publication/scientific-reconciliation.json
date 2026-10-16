@@ -2290,14 +2290,14 @@
       "one global K-prime/D-Lipschitz chart",
       "q=O(D^(4/5)) endpoint rate"
     ],
-    "retained": "Agent-audited corrected q=o(D) sequence exclusion under both unchanged global premises, awaiting independent human review before canonical reuse.",
+    "retained": "Agent-audited corrected q=o(D) sequence exclusion under both unchanged global premises, awaiting the independent AI-agent mathematical audit before canonical reuse.",
     "canonical_dependents_at_review_base": []
   },
   "limits": [
     "Diff fidelity is not independent validation of every inherited mathematical proof.",
     "Proposal dispositions are publication relevance decisions, not rejection of the excluded mathematics.",
     "Exact source bytes and review records do not grant redistribution rights.",
-    "Independent human review remains required before consequential canonical promotion."
+    "Current policy requires one independent AI-agent mathematical audit before consequential canonical promotion; this update promotes no claim."
   ],
   "omitted_manifest_records_restored": [
     {
@@ -2321,5 +2321,27 @@
     "public_path": "docs/reports/target_c_nested_hexagon_packet_stress_energy_obligation_2026-10-06.md",
     "source_proposal_number": 947,
     "finding": "225 chosen polynomial-field samples were described as arbitrary-field checks. Clarify finite sample scope; all-field/every-M statements rely on analytic ring/radial proof, not enumeration. No analytic claim or verifier byte changed."
+  },
+  "post_freeze_governance_review": {
+    "source_main": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "destination_main": "2bccea305a50f179428829acb03a85af16b4fc2a",
+    "scientific_freeze_unchanged": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "destination_paths": [
+      ".github/PULL_REQUEST_TEMPLATE.md",
+      ".github/copilot-instructions.md",
+      "AGENTS.md",
+      "CONTRIBUTING.md",
+      "README.md",
+      "autoresearch.md",
+      "docs/COORDINATION.md",
+      "docs/RESEARCH_WORKFLOW.md",
+      "docs/REVIEW_POLICY.md",
+      "docs/STATE.md",
+      "docs/audits/README.md",
+      "docs/ci/PUBLIC_LOCALIZED_CI.md",
+      "docs/reports/README.md",
+      "tools/localized_ci/plan.py"
+    ],
+    "disposition": "Adopt already-merged owner-operated single independent AI-agent audit policy. No proof, claim lifecycle or certificate code changes. The sole Python delta changes a comment only; ASTs match. Correct pending-review descriptions and publication hashes; rights and visibility gates remain unchanged."
   }
 }

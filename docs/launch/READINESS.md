@@ -3,7 +3,7 @@
 The scientific source freeze is reconciled through
 `eb51394f371aee958b0d9332f80faf75ae694b9e`, with inherited baseline
 `5dcbdc3dfa1f9be370602cc54d50e68eabb88f56`. Publication state
-`2026-10-15.publication.1` withdraws one unsupported canonical inference without
+`2026-10-15.publication.2` withdraws one unsupported canonical inference without
 promoting its proposed repair. The corpus has 451 claim IDs, 845 edges, 94
 registered certificates, 810 source records and 20 task cards. Level I/A/B/C-II
 remain open; C-I is closed in its stated scope.

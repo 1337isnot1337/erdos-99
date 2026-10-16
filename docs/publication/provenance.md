@@ -41,7 +41,7 @@ One consequential source inconsistency was repaired: the corpus had imported the
 Audit.236 proof correction while still declaring Audit.202's unsupported global
 chart and endpoint rate canonical. Publication state `2026-10-15.publication.1`
 withdraws those intermediate assertions and demotes the sequence-only repaired
-exclusion to audited-working pending independent human review. No theorem is
+exclusion to audited-working pending the independent AI-agent mathematical audit. No theorem is
 promoted and no Level I or target endpoint is closed. Four omitted recovery
 attributions are restored; unreviewed proposal documents now explain that their
 historical PASS/promote language does not override the manifest.

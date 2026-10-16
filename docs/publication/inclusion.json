@@ -8,7 +8,7 @@
       "source_blob": "4b7105bc04427555d6af371836930b1bf019895b",
       "source_mode": "100644",
       "source_sha256": "af4eb91514393973e26ce3865010e2194416fd743089188723a871803ad00dcf",
-      "public_sha256": "ccd1f53c50658a4b6485159e36e8c702041807faeec0dd830f9d78ba6ddbbce2",
+      "public_sha256": "cc87f152a8ae178bfb1c69c7c577c427080d4e6ce4583c010d09f470eb6cd559",
       "role": "infrastructure",
       "theorem_ids": [],
       "dependencies": [],
@@ -74,7 +74,7 @@
       "source_blob": "5c6a8541c8f579ccfda95c8a92422cbc13856983",
       "source_mode": "100644",
       "source_sha256": "6d648ebaad9c35ec80a3823da3fbee80eb9ed2ccf3881a535ecccaa0593709bd",
-      "public_sha256": "84ecdff97ec1c27381acbdf2ba1c8286c66f7a7ee5b09975ce5bf5f53818c5f9",
+      "public_sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
       "role": "infrastructure",
       "theorem_ids": [],
       "dependencies": [],
@@ -4213,7 +4213,7 @@
       "source_blob": "ec8c2e728c1f11caf63d0cd321778fe9be0064b4",
       "source_mode": "100644",
       "source_sha256": "43b24d8d259bc968458d5a44e775c73a7c3c4baa957f72c49fc6450c5a954761",
-      "public_sha256": "7e3a94bfc59864bcee1d091a674b2cd1ffc7833f3001d6052c50163a947ab512",
+      "public_sha256": "158394e6106e12d46cb1a404e24cfabf3df629849b2956004c2bc0a1beabed78",
       "role": "historical audit with withdrawn global chart and endpoint rate",
       "theorem_ids": [],
       "dependencies": [],
@@ -4273,7 +4273,7 @@
       "inclusion_reason": [
         "corrected audited-working sequence proof; no canonical promotion"
       ],
-      "review_status": "agent-audited working sequence exclusion; independent human review pending; no canonical chart or endpoint rate",
+      "review_status": "agent-audited working sequence exclusion; independent AI-agent mathematical audit pending; no canonical chart or endpoint rate",
       "publication_clearance": "pending provenance/content review",
       "attribution": "source project attribution retained",
       "reproduction_requirements": "inspect complete analytic sequence proof and retained canonical prerequisites; no computational verifier is claimed",
@@ -20890,7 +20890,7 @@
       "source_blob": "6b90bfe55ceb85ca479e95436bb77264226d35e0",
       "source_mode": "100644",
       "source_sha256": "8062f9db48739d2a9ad452e1551b640af8f9a307e1588c14652e142783255bee",
-      "public_sha256": "9339196ee0be58fe323b00fe7e29a7d3e8b9412d0dcac6bd83bbce1e690b5e92",
+      "public_sha256": "66b7fdd1a548a1c975ce70d7f0ad3c492eca3eb091602ccb1970ac497f925e3c",
       "role": "infrastructure",
       "theorem_ids": [],
       "dependencies": [],
@@ -20928,7 +20928,7 @@
       "source_blob": "a47f76cdf20e5aed3a2cb8558e27790e69527cb1",
       "source_mode": "100644",
       "source_sha256": "8d25ac207602a22ec955b87f1805a50f8ddbeba31d8209f5c877b8d67fe00cb4",
-      "public_sha256": "5a7a18a9db5ef3e760194c5e0cf23f10e76a3a453bdb9e8c241ff3d72ef8d2eb",
+      "public_sha256": "8c72c67e3e3d81484deae9d9a543e27b2dd487141044c903aa811bbe095ef0a5",
       "role": "infrastructure",
       "theorem_ids": [],
       "dependencies": [],
@@ -20999,7 +20999,7 @@
       "source_blob": "b727d4444b6d4d19fcf36cf8759233242d1d7ee4",
       "source_mode": "100644",
       "source_sha256": "a8b571cacc2c77623a991f50114a70141d59bcde9685f916db8153599e58b2b6",
-      "public_sha256": "0df3fa8387b9860ff9b72a8ed203e195722b3edb0bbaeb67611586d629d302ed",
+      "public_sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
       "role": "infrastructure",
       "theorem_ids": [],
       "dependencies": [],
@@ -35336,5 +35336,6 @@
     "publication_state": "2026-10-15.publication.1",
     "reconciliation": "docs/publication/scientific-reconciliation.json",
     "scope": "Four post-baseline sources retained; all 30 changed source paths and 20 open proposals explicitly disposed. Audit202 unsupported intermediates withdrawn; corrected sequence proof audited-working only. Two already retained byte-identical operational checkers gain previously omitted source records."
-  }
+  },
+  "latest_observed_source_main": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
 }

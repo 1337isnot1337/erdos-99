@@ -37,7 +37,7 @@ patch is within `epsilon_D -> 0` of one translated lattice. The canonical
 local curved-boundary capacity theorem sums over `O(D/r)` patches to give
 `q=O(D*epsilon_D + D^(5/6) + D^(1/4))=o(D)`, contradicting
 `q>=h>=ceil(D)`. This was independently reconstructed by publication agents.
-Independent human review is still required before canonical reuse.
+The current review policy requires one independent AI-agent mathematical audit before canonical reuse; no canonical promotion is made here.
 A second source PR #947 clarification repairs an overstatement in the nested-hexagon
 report: the checker tests 225 chosen polynomial fields over `M=3,...,12`, rather
 than every arbitrary field. Its historical JSON key is explicitly identified as

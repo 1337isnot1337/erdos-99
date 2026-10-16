@@ -2,6 +2,10 @@
 
 **LEVEL I STATUS: STILL OPEN. C-I CLOSED; C-II OPEN.** Read [state](../../STATE.md) and [C-II frontier](CURRENT.md). All source points remain present, including contact isolates. The core-only ZR/ZF theorem cannot be extended to their coordinates.
 
+Publication revision `2026-10-15.publication.2` aligns the pending sequence-proof
+audit with the current single independent AI-agent review policy. It changes no
+mathematical endpoint, claim lifecycle, proof hypothesis or certificate.
+
 ## Canonical reading order
 
 - [01-force-hull-and-shear](01-force-hull-and-shear.md)
