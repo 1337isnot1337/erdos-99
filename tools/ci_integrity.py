@@ -45,6 +45,20 @@ def safe_file(root: Path, relative: str) -> Path:
 
 def validate(root: Path, base: str) -> list[str]:
     errors = []
+    # Check the whole contributed tree before parsing any metadata. In particular,
+    # a symlinked theorem manifest must not be read by downstream YAML checkers.
+    try:
+        for record in git(root, 'ls-tree', '-rz', '--full-tree', 'HEAD').split(b'\0'):
+            if not record:
+                continue
+            metadata, raw_path = record.split(b'\t', 1)
+            mode, kind, _ = metadata.decode().split()
+            rel = raw_path.decode('utf-8', 'surrogateescape')
+            if kind != 'blob' or mode not in ('100644', '100755'):
+                raise Invalid('nonregular committed input: ' + rel)
+            safe_file(root, rel)
+    except (Invalid, OSError, ValueError, subprocess.SubprocessError) as exc:
+        return ['unsafe candidate tree: ' + str(exc)]
     for rel in REQUIRED:
         try:
             safe_file(root, rel)
@@ -101,6 +115,11 @@ def main() -> int:
     args = parser.parse_args()
     root = args.root.resolve()
     failures = validate(root, args.base_ref)
+    if failures:
+        for error in failures:
+            print('integrity: ' + error)
+        print('integrity: candidate rejected before theorem metadata parsing')
+        return 1
     from check_public import validate as public_validate
     from check_theorem_state_pr import Checker as StateChecker
     class TrustedChecker(StateChecker):
