@@ -18,9 +18,10 @@ from `e-99` commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73` against destinatio
 base `60c2576b4893a7e9001d2c8bfbe5cfb64c1c969f`. Its first reviewable batch
 imports 83 missing source-main audits and two linked reports needed by the
 low-response audit link and cyclic fan-flip audit/report chain as noncanonical
-research, and archives 38 conflicting source versions; the
-other 826 missing Target C reports remain queued. The source ledger verifies
-338 exact duplicates. The full link audit records 100 dependencies (31 missing,
+research, and archives 38 conflicting source versions. Initially, 826 missing
+Target C reports remained queued. Later focused batches integrated four further
+source-main reports; 822 remain queued as of the harmonic-cell/face-floor batch
+below. The source ledger verifies 338 exact duplicates. The full link audit records 100 dependencies (31 missing,
 11 modified, and 58 exact copies); this batch resolves four missing dependency
 records, preserves the 11 changed source versions (some overlap the 38 artifact
 conflict snapshots), and verifies 84 of 384 evidence edges. The other report
@@ -37,6 +38,44 @@ manifest. The earlier inverse-phase inference remains withdrawn as described
 above. This addendum is not the final-candidate Gate 2 receipt, does not complete
 scientific reconciliation of the queued research tree or source PRs, and does
 not authorize a visibility change. The repository remains private.
+
+## Source-main harmonic-cell and face-floor preservation batch
+
+The next source-main batch is based on the same frozen source-main commit
+`42f0296d1aca068c809f74cee5dcdb4ebdb27c73` (tree
+`e061f039eac44c286a00eacdcaa9a4cbbb877891`) and destination main
+`fece4452122c7b8ebaf4fac2c4b2544a2f436c43` (tree
+`3285f4c084934ec8831676530bb20e8196058936`). It preserves four full source-main
+reports, three exact source verifiers, and one historical Target B report from
+source-only commit `12f6833725f281ce39a6d04ebcb45630b3a6768f`, which is not an
+ancestor of frozen source main. The Target B report is cross-target historical
+research and is not a premise of the canonical Target C floor. Existing exact
+destination copies of three independent audits and two finite verifiers are
+recorded as duplicates rather than recopied.
+
+The canonical theorem-state remains unchanged. The full-core Type-II
+terminal-cancellation report is preserved as proof lineage for the already
+canonical `C-TYPEII-ATOMIC-SEPARATE-FACE-FLOOR`: only its face-by-face conclusion
+and exact dependencies are canonical; the report's high-face and external
+branches remain open. The uniform-cell report supports the already canonical
+uniform harmonic-cell and actual-diameter access claims. The face-tail report
+preserves the argument behind the canonical port-multiplicity claim. The
+full-cell report is unreviewed and noncanonical: its endpoint-inclusive cut
+repair and finite overlap-aware composition are recorded, but the required
+linear margin `|A_I| < (kappa_I + gamma/5)D` (or a direct common-label linkage
+bound) is absent. No source move, all-pairs constraint check, or strict-diameter
+competitor is constructed, so this does not close C-II or Target C.
+
+Finite checks passed for the imported full-cell, face-tail and uniform-cell
+verifiers, as well as the already-present terminal-cancellation and Target B
+verifiers. These checks establish only their exact finite scopes. No theorem
+promotion, publication-inclusion edit, Gate 2 receipt, Gate 3 approval, or
+visibility change is part of this batch. Exact path/blob/SHA dispositions,
+source transformations and queue counts are in the
+[migration ledger](../research/migration/2026-10-16/ledger/source-main-artifacts.jsonl),
+[research-file ledger](../research/migration/2026-10-16/ledger/source-main-files.jsonl),
+[dependency ledger](../research/migration/2026-10-16/ledger/source-main-dependencies.jsonl),
+and [Target C frontier](../targets/target-c/CURRENT.md).
 
 ## A consequential proof correction
 

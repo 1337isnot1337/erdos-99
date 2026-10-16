@@ -1955,6 +1955,27 @@
           "source_artifact_id": "ART-047AD4339705",
           "source_claim_ids": [],
           "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/reports/target_c_full_cell_common_grid_preservation_2026-10-15.md",
+          "role": "source-main follow-up report: full-cell routing, endpoint-inclusive cuts, and overlap-aware composition",
+          "source_git_blob_sha": "af21aaba77db12bc287d78030a088b8c9a827658",
+          "source_sha256": "efe5b9af5ad6eb788bcf206bcf436f5d60f13a7fa6297de083b01a6eef054a4e",
+          "destination_sha256": "07036803e35a5cf4848d32b6e868edcc30ea883e60349f2f2eaf90ff4e7c3c5f",
+          "source_artifact_id": "ART-0A94B7094943",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {},
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+          "source_lifecycle": "unreviewed source-main candidate; not independently audited on this exact destination report"
+        },
+        {
+          "path": "research/verify_full_cell_linkage_composition_2026_10_15.py",
+          "role": "exact finite graph/linkage composition checker",
+          "source_git_blob_sha": "6eb6269417c43ec09ccad66237b895ef21f23ed0",
+          "source_sha256": "6e2a5a1e84cd43da6f87b86e3e7749b3e6a4b8f66f3edbb573d908fbb13d079b",
+          "destination_sha256": "6e2a5a1e84cd43da6f87b86e3e7749b3e6a4b8f66f3edbb573d908fbb13d079b",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+          "source_lifecycle": "finite verification only; no asymptotic or global-optimality certification"
         }
       ],
       "dependencies": {
@@ -1970,8 +1991,8 @@
         "A linear cut lower bound still cannot compose path families with disjoint attachment-label sets."
       ],
       "validation": {
-        "status": "preserved; destination independent mathematical audit not performed",
-        "scope": "Source-side proof repair and audit are preserved; destination independent audit not performed."
+        "status": "PR #950 source candidate remains unreviewed; source-main finite composition checker replayed successfully, but no exact-head destination mathematical audit was performed.",
+        "scope": "40,000 path-family assignments across all 64 four-label graphs; 16,384 independent path-packing/cut comparisons; seven-label sharp contact fixture. These checks do not certify the analytic cell hypotheses, universal asymptotics, source optimality, or a finite move."
       },
       "next_proof_obligations": [
         "Keep the componentwise correction in every reuse of the Menger argument."
@@ -1994,6 +2015,12 @@
         "first_party_status": "Owner-authorized first-party research and project-agent work.",
         "third_party_material": "The contextual preprint is linked by DOI only; no third-party paper text or PDF was copied.",
         "visibility": "Destination remains private; publication-inclusion set unchanged."
+      },
+      "source_main_follow_up": {
+        "report": "docs/reports/target_c_full_cell_common_grid_preservation_2026-10-15.md",
+        "relation": "same PR #950 linkage program; this is a source-main follow-up variant, not a separate destination theorem",
+        "additional_lemma": "For disjoint intermediary label set A of size N and vertex-disjoint P-to-A and A-to-T families of sizes r and s, lambda(P,T) >= max(0, ceil((r+s-N)/2)); P and T may overlap.",
+        "exact_application_gap": "No source theorem supplies |A_I| < (kappa_I + gamma/5)D with linear margin or an equivalent common-label/direct-linkage bound."
       }
     },
     {
@@ -5971,6 +5998,166 @@
         "boundary": "Finite controls are independent of the conditional analytic fork and do not establish C-II or global optimality."
       },
       "active_task": "tasks/target-c-factorized-planar-escape.md"
+    },
+    {
+      "candidate_id": "TARGET-C-PR950-TWO-FAMILY-LINKAGE-COMPOSITION",
+      "title": "Overlap-aware composition of two linkage families through an attachment set",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed source-main mathematical lemma; imported as a distinct graph-composition result, with no theorem-state promotion.",
+      "target_scope": [
+        "Target C-II linkage composition",
+        "finite graph lemma reusable across source-replacement routes"
+      ],
+      "claim": {
+        "statement": "Let A be a finite vertex set of size N, disjoint from P and T; P and T may overlap. If there are r vertex-disjoint P-to-A paths and s vertex-disjoint A-to-T paths, then the maximum P-to-T vertex linkage satisfies lambda(P,T) >= max(0, ceil((r+s-N)/2)).",
+        "hypotheses": [
+          "Both given path families are individually vertex-disjoint, including their endpoints.",
+          "The same intermediary set A is used by both families; the two families need not be mutually disjoint.",
+          "P and T may overlap; zero-length P-intersection-T paths are counted."
+        ],
+        "not_claimed": [
+          "The inequality is vacuous when r+s<=N.",
+          "It does not prove the required linear attachment-count margin for the Target C application.",
+          "It supplies no face payment, compatible motion, cardinality restoration, or strict-diameter competitor."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "This finite graph inequality is not a theorem-state claim. It composes linkage families only when the same attachment label set is controlled; canonical Type-II access results do not provide the missing linear margin."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_full_cell_common_grid_preservation_2026-10-15.md",
+          "role": "full proof report, Section 4",
+          "source_git_blob_sha": "af21aaba77db12bc287d78030a088b8c9a827658",
+          "source_sha256": "efe5b9af5ad6eb788bcf206bcf436f5d60f13a7fa6297de083b01a6eef054a4e",
+          "destination_sha256": "07036803e35a5cf4848d32b6e868edcc30ea883e60349f2f2eaf90ff4e7c3c5f",
+          "source_artifact_id": "ART-0A94B7094943",
+          "source_claim_ids": []
+        },
+        {
+          "path": "research/verify_full_cell_linkage_composition_2026_10_15.py",
+          "role": "exact finite graph and sharp-fixture checker",
+          "source_git_blob_sha": "6eb6269417c43ec09ccad66237b895ef21f23ed0",
+          "source_sha256": "6e2a5a1e84cd43da6f87b86e3e7749b3e6a4b8f66f3edbb573d908fbb13d079b",
+          "destination_sha256": "6e2a5a1e84cd43da6f87b86e3e7749b3e6a4b8f66f3edbb573d908fbb13d079b",
+          "source_claim_ids": []
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-FIXED-PORT-CONTACT-ROUTE-BOUND",
+          "C-AUGMENTED-CELL-DEFECT-BUDGET",
+          "C-UNIFORM-HARMONIC-CELL-AREA",
+          "C-TYPEII-LOCAL-COHERENT-GRID-ACCESS",
+          "C-TYPEII-FACE-TAIL-PORT-MULTIPLICITY",
+          "C-ZRF"
+        ],
+        "candidate_relations": [
+          "TARGET-C-PR950-ENDPOINT-INCLUSIVE-CUT-REPAIR",
+          "TARGET-C-PR950-ATTACHMENT-GRID-LINKAGE"
+        ],
+        "description": "The report derives the cut lower bound and then the finite two-family composition inequality; the C-II use still needs a linear bound on the common attachment label set."
+      },
+      "obstructions_and_limits": [
+        "The two path families can use disjoint subsets of A, making r+s-N nonpositive.",
+        "Separate linear path counts do not imply endpoint overlap."
+      ],
+      "validation": {
+        "status": "Exact finite checker PASS; no destination independent mathematical audit of the universal analytic argument.",
+        "scope": "40,000 assignments on all 64 four-label graphs, 23,616 overlapping-terminal cases, 10,400 positive-excess cases, 16,384 independent packing/cut comparisons, and a seven-label sharp contact fixture; all reported fixtures are finite and nonglobal."
+      },
+      "next_proof_obligations": [
+        "Prove a linear-margin bound r+s>|A_I| for a canonical Type-II source, or establish direct common-label linkage.",
+        "Only then combine with a source-realized move that checks every lower and upper pair constraint and retains all source labels."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+        "source_report_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_report_artifact_id": "ART-0A94B7094943",
+        "source_destination_relation": "Source-main follow-up to the PR #950 linkage program; not a source PR head and not a theorem-state transition.",
+        "destination_base_main": "fece4452122c7b8ebaf4fac2c4b2544a2f436c43"
+      },
+      "active_task": "tasks/target-c-face-coupled-move.md"
+    },
+    {
+      "candidate_id": "TARGET-B-TERMINAL-CANCELLATION-HISTORICAL-20261008",
+      "title": "Historical Target B terminal-cancellation boundary-graph candidate",
+      "status": "unreviewed",
+      "source_lifecycle": "Source-only historical candidate recovered from a source commit outside frozen source-main ancestry; not promoted in destination theorem-state.",
+      "target_scope": [
+        "Target B jammed rhombic branch",
+        "Target C cross-target research provenance"
+      ],
+      "claim": {
+        "statement": "For a canonical Target B sequence with physical train count T, hull-vertex count q, T=Theta(D), q/T->y, and projective direction limit whose atomic mass is s, the candidate proves s<=1-y (improving the canonical separate-end estimate s<=1-y/2). With A=sqrt(2*pi/sqrt(3)), it derives liminf(T/D), liminf(q/D), liminf((T-q)/D) >= A and limsup(q/T)<=pi/(pi+A).",
+        "hypotheses": [
+          "The exact jammed pure strict-unit-rhombic disk scope of Target B Section 39.",
+          "The physical train and atom-selection hypotheses stated in the report; all source labels retained."
+        ],
+        "not_claimed": [
+          "The blocker/coforest rank bound below A D is not proved.",
+          "The stressed equality-kernel exclusion is not proved.",
+          "No strict competitor, C-II conclusion, or Level I closure follows."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "The canonical Target C face-floor theorem does not prove this Target B candidate. The source Target C terminal report links this historical report, but it is not used as a premise in the destination canonical C theorem."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_b_terminal_cancellation_boundary_graph_2026-10-08.md",
+          "role": "full historical cross-target proof candidate",
+          "source_git_blob_sha": "8d213b3308b731cc8a6bf506941c707d5e28ab26",
+          "source_sha256": "a5cf613c1971edce7d22400e16055666825ef1510471ee5b10f4025c12aef8ad",
+          "destination_sha256": "3d6100ce507c742209bb60db6728156e49b4250a5626f26b682d75460a9cbae8",
+          "source_commit": "12f6833725f281ce39a6d04ebcb45630b3a6768f",
+          "source_artifact_id": "ART-446B566C87F6"
+        },
+        {
+          "path": "research/verify_target_b_terminal_cancellation_2026_10_08.py",
+          "role": "exact destination duplicate finite checker",
+          "source_git_blob_sha": "1ef11a78e98ccdbed45830dd8f8416c46e3fe371",
+          "source_sha256": "50160bb3c3d68185a401a6fbeed3d39f5b80aa16d74af43efafd814714300e88",
+          "destination_sha256": "50160bb3c3d68185a401a6fbeed3d39f5b80aa16d74af43efafd814714300e88",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "canonical_documents": [
+          "docs/targets/target-b/01-jammed-rhombic-branch.md",
+          "docs/theory/01-local-structure.md"
+        ],
+        "description": "Uses Target B Sections 36, 39, 40 and 42 and Theorem 10.6 at their recorded scopes. Its finite checker is exact but only tests finite nonglobal fixtures."
+      },
+      "obstructions_and_limits": [
+        "The required blocker-rank estimate and exclusion of the stressed equality kernel are absent.",
+        "This unreviewed cross-target candidate is not a premise for the Target C face-floor theorem."
+      ],
+      "validation": {
+        "status": "Exact finite verifier PASS; no destination asymptotic mathematical audit or promotion.",
+        "scope": "12 nonglobal disk fixtures, 11,427 source-pair checks, 124 physical-terminal-pair checks, 1,002 boundary-graph selections, and 3,277 component-cancellation identities."
+      },
+      "next_proof_obligations": [
+        "Derive a blocker/coforest rank upper bound below A D in the exact global sequence.",
+        "Exclude a nonzero equality kernel in the stressed active-bar subspace."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_commit": "12f6833725f281ce39a6d04ebcb45630b3a6768f",
+        "source_tree": "98b35f9b17a0ea1f2e392976ba84b776f72a8559",
+        "source_main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_main_contains_commit": false,
+        "source_main_contains_path": false,
+        "associated_pull_request": "No GitHub pull request was returned for the report-introducing commit in the frozen source PR inventory or commit-to-PR query.",
+        "source_report_parent_commit": "0fb2de96b9315d71e2e466a1a087507837d47468",
+        "destination_base_main": "fece4452122c7b8ebaf4fac2c4b2544a2f436c43"
+      }
     }
   ]
 }
