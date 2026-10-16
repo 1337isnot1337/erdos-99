@@ -3826,3 +3826,76 @@ Register `C-TRIANGULAR-LATTICE-STRICT-D-COMPETITOR-RESERVE` as canonical. Record
 ### Validation and frontier
 
 The theorem-state transaction increments to `2026-10-10.audit.234`, registers the competitor dependency of Audit.199's all-minimizer reserve, updates the canonical regression list and Target C summaries, and regenerates theorem views and artifact metadata. The full registered certificate suite passed all 94 unique certificates; no certificate or source code changed afterward. Final theorem-state, route-summary, and `git diff --check` validations pass after the exact `D>=2` scope wording was recorded. No source move, C-II closure, or Level I conclusion follows.
+
+## Source PR #947 audit-cycle supplement — pinned historical record
+
+The following audit-cycle records are transcribed from source PR #947 head `1afb7e64d47c5619d872d32759b0e01f1526fd5a`. Their “PASS/promote” language records the source proposal’s disposition, not a destination theorem audit or status change. The destination claim status and remaining proof obligations are listed in `docs/targets/target-c/candidate-registry.json`; the destination theorem-state manifest remains authoritative.
+
+
+## Audit cycle 246 — mean diameter-midpoint tails and near-diameter localization
+
+### Frozen candidate and authority
+
+- Audit base: origin/main=ab6dd3336f9f8d440f2bada76edb32153391cddc, state 2026-10-10.audit.234.
+- Frozen source: origin/research/level-i-fused-review-20261009 at 6132201c1d3056ca68a222217094acb819f5b4d7.
+- Candidate artifact: Sections 17.1-17.3 of docs/reports/target_c_global_inverse_phase_face_tail_exclusion_2026-10-09.md, SHA-256 2a2c12e3b63e9b0295e1106eda89b68449ed1b37a14d114a8e24d6e5f7e73bcd.
+- Independent audit: docs/audits/target_c_diameter_midpoint_mean_tail_independent_audit_2026-10-10.md.
+
+| Field | Audit record |
+| --- | --- |
+| Exact claims | Uniform partner-choice midpoint tail O(D^2/s^2) for s>=4*3^(1/4)*sqrt(D), first moment O(D^(3/2)), second moment O(D^2 log D); transfer to all actual C-II diameter-edge midpoints by an endpoint injection; explicit O(D^(2/3)+sD^(1/3)) endpoint tangential and O(sqrt(D)+s) midpoint-normal localization for every source pair of length at least D-s. |
+| Dependencies | C-FS-DIAMETER-MIDPOINT-D2-3 for full-source support energy, derivative, and uniform midpoint bounds; C-WOODALL only for the actual-edge injection. |
+| Independent reconstruction | The support-function curvature measure gives h''>=-D and its area identity gives integral (h')^2<=C_E D. Each positive or negative high-derivative component consumes at least a^3/(8D) energy and their total angular length is O(E/a^2). A direct convex-normal window count for selected endpoints with midpoint radius at most 3a yields O(D^2/a^2) endpoints in each derivative band. Dyadic summation gives the tail; integrating it gives both moments. Near-diameter support deficits sum to at most D-d<=s; tilting the support direction by D^(-1/3) gives the stated tangent bound, and the support interval gives the midpoint-normal bound. |
+| Hostile scope | Strict support is against the full source, so contact isolates remain. Partner choices are arbitrary and not stress weighted. The C-II edge transfer uses every edge of the full actual diameter graph and the exact canonical Woodall components. The near-diameter theorem makes no count claim. The separate loaded-leaf boundary-distance consequence (17.7) is not included. |
+| Verifier boundary | No finite verifier encodes the support energy or analytic counting proof; none is claimed. |
+| Verdict | PASS — promote C-DIAMETER-MIDPOINT-MEAN-TAIL, C-CII-DIAMETER-EDGE-MIDPOINT-MOMENTS, and C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND. |
+| Frontier effect | None. The estimates give no stress-weighted bound, source motion, capacity, strict-D competitor, or C-II closure. |
+| Promotion transaction | Added as Audit.246 to the existing audit branch for review with the state.235 transaction; protected CI remains subject to the open PR #947 required check. |
+
+Discovery-worker protection: the frozen research branch was read only; no discovery branch or worktree was modified.
+
+## Audit cycle 247 — sharpened positive-leaf anchor boundary estimate
+
+### Frozen candidate and authority
+
+- Audit base: origin/main=ab6dd3336f9f8d440f2bada76edb32153391cddc, state 2026-10-10.audit.234.
+- Frozen source: origin/research/level-i-fused-review-20261009 at 6132201c1d3056ca68a222217094acb819f5b4d7.
+- Candidate artifact: Section 17.3 of docs/reports/target_c_global_inverse_phase_face_tail_exclusion_2026-10-09.md, SHA-256 2a2c12e3b63e9b0295e1106eda89b68449ed1b37a14d114a8e24d6e5f7e73bcd.
+- Independent audit: docs/audits/target_c_positive_leaf_anchor_sharpening_independent_audit_2026-10-10.md.
+
+| Field | Audit record |
+| --- | --- |
+| Exact claim | Under the exact canonical positive-leaf hypotheses, the sole unit-neighbor anchor a satisfies dist(a,partial K_D)=O(D^(-2/3)), where K_D is the intersection of all source-centered radius-(D-1) disks. This sharpens the existing O(D^(-1/2)) bound. |
+| Dependencies | C-FS-GEOM; C-FS-DIAMETER-MIDPOINT-D2-3; and C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND, audited jointly in Audit.246. |
+| Independent reconstruction | Audit.246's s=2 near-pair bound puts every pair direction at p within O(D^(-1/3)) of the radial direction; s=0 does the same for all actual diameter normals at p. Positive KKT equilibrium puts the unique contact normal in their cone, so its dot product with every near-pair normal is 1-O(D^(-2/3)). Squared-distance expansion gives |a-x|<=D-1+O(D^(-2/3)) for every source point. Contract a toward an actual diameter midpoint inside K_D; the contraction moves it by O(D^(-2/3)). The positive KKT normal supports the radius-D ball intersection, placing a outside K_D, so the segment proves the boundary-distance bound. |
+| Hostile scope | The radial-direction estimates use the full-source circumcenter; the inner-ball contraction uses a diameter midpoint, and these centers need not coincide. All source points, including contact isolates, remain in every disk. Shorter pairs use the triangle inequality. No multiplier lower bound, pair-count estimate, packet, or source motion is inferred. |
+| Verifier boundary | No finite verifier encodes this analytic direction and contraction argument. |
+| Verdict | PASS — strengthen the existing C-POSITIVE-LEAF-ANCHOR-INNER-BALL-BOUNDARY claim in place; no duplicate theorem ID. The bounded-variation leaf-port count remains valid with its existing exponent. |
+| Frontier effect | None; the local chart count and C-II finite-move/payment obligation are unchanged. |
+| Promotion transaction | Added as Audit.247 to the same dependency-ordered state.235 promotion transaction; protected PR #947 state-consistency remains required. |
+
+Discovery-worker protection: audited only the immutable research snapshot; no discovery branch or worktree was modified.
+
+## Audit cycle 248 — fused sign classes and residual-closure tail screening
+
+- Canonical base: `origin/main=ab6dd3336f9f8d440f2bada76edb32153391cddc`, state `2026-10-10.audit.234`.
+- Frozen fused source: `origin/research/level-i-fused-review-20261009=6132201c1d3056ca68a222217094acb819f5b4d7`; frozen residual source: `origin/research/target-c-residual-closure-20261005=ed535f5a3a45e3921d91a29c38a0cb37f1d27921`.
+- Independent disposition artifact: `docs/audits/target_c_fused_sign_classes_and_residual_tail_screening_2026-10-10.md`.
+
+| Candidate | Independent reconstruction and hostile scope | Verdict / disposition |
+|---|---|---|
+| Fused quarter-fold report, Section 6: local sign classes and the `Q` defect charge. | The five-to-seven-face equalities follow from canonical `C-QUARTER-FOLD-MINIMUM-FACE-SIZE`; the source-realized two-hop equalities are canonical `C-QUARTER-FOLD-SOURCE-COMPATIBILITY`. Equality propagates only along the defined graph. If connected, its train signs are all equal; a nonconstant eligible face has degree at least eight and spends at least four in `Q`. The sign constraints leave isolate and disconnected-component placement unspecified. | PASS — already subsumed for the exact sign constraints and defect charge. No duplicate ID. Do not treat the “no nonaffine stress currency” wording as a full-source motion theorem. |
+| PR #722 outer-isolate report, Section 6: Type-II owner-family count. | With `A=x_B+m_B`, the collar estimate is `N<=48A` (strict for `A>0`, and `N=0` at `A=0`). Endpoint accounting gives `k<=2m_B+3x_B+3N<=147A` (strict for `A>0`, and `k=0` at `A=0`); the fixed upper-exception set adds at most `2d_H`. This is already within canonical Audit.114's exact Type-II family bound. Only supplied, subfamily-stable singleton proposals are counted. | PASS — already canonical as `C-OO-ORIGINAL-FAMILY-OWNER-CAPACITY`. No duplicate theorem or state change. |
+| PR #722 remaining synthesis: broad multishear/family extraction and actual O–O source move. | The frozen reports either explicitly require a supplied family and its safety hypotheses or name extraction/source-motion as missing. No exact quantified extraction or feasible full-source endpoint is proved. The generic-isolate Section 4 fan-reflection clause is already covered by Audit.102. | No new theorem claim to promote. Keep extraction and source-motion as open discovery obligations. |
+
+No theorem-state version change or route/prompt update is warranted. This cycle reconciles the older “unaudited tail” wording: the residual reports retain unproved route synthesis, but the frozen snapshots add no standalone theorem claim beyond the scopes already canonical. C-II and Level I remain open; the discovery branches were only read.
+
+## Audit cycle 249 — second referee of midpoint-tail band counting
+
+- Audit base: `origin/main=ab6dd3336f9f8d440f2bada76edb32153391cddc`, state `2026-10-10.audit.234`.
+- Frozen source: `origin/research/level-i-fused-review-20261009=6132201c1d3056ca68a222217094acb819f5b4d7`; Sections 17.1–17.3 retain SHA-256 `2a2c12e3b63e9b0295e1106eda89b68449ed1b37a14d114a8e24d6e5f7e73bcd`.
+- Second-referee artifact: `docs/audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md`.
+- **Verdict:** PASS — corroborate Audit.246's midpoint-tail, actual-diameter-edge transfer, and near-diameter localization. No counterexample or scope error found.
+- **Proof clarification:** the dyadic derivative-band count should specify angular windows of width `a/(2D)` (at most `1/2` since `a<D` for `D>=216`). The normal-window estimate gives `O(a+1)` selected endpoints per window; total windows are `O(D Lambda/a+N_c)`, where `Lambda<=4E/a^2` and `N_c<=8DE/a^3`. Thus `N_band=O(DE/a^2+(a+1)DE/a^3)=O(D^2/a^2)`. This supplies the explicit missing subdivision scale behind (17.4); it does not change the theorem statement or dependencies.
+- The edge-midpoint result still uses an injective endpoint assignment from the full canonical Woodall graph. The near-diameter estimate remains unweighted and makes no pair-count claim. All source labels, including contact isolates, are retained. No finite verifier encodes the analytic proof.
+- **Disposition:** update the Audit.246 proof prose only; no theorem-state bump, dependency change, route/prompt change, or frontier effect. The .235 promotion remains on PR #947 and is not yet canonical on main.

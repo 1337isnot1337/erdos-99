@@ -725,6 +725,932 @@
         "third_party_material": "no PDFs or extracted third-party text copied; bibliographic links are retained in reports",
         "visibility": "destination remains private; publication-inclusion set unchanged"
       }
+    },
+    {
+      "candidate_id": "TARGET-C-DIAMETER-MIDPOINT-MEAN-TAIL-PR947",
+      "title": "Uniform midpoint tails and moments for diameter partners",
+      "status": "unreviewed",
+      "source_lifecycle": "Source PR proposes canonical Audit.246 claims; destination theorem state contains none of these IDs.",
+      "target_scope": [
+        "Target C-II",
+        "full-source geometry"
+      ],
+      "claim": {
+        "statement": "For every noncollinear global minimum-diameter unit-separated source with D>=216, choose one actual diameter partner independently for each actual diameter endpoint. With m_p the chosen midpoint and o a circumcenter of the full-source hull, uniformly over partner choices: #{p: |m_p-o|>=s} <= C D^2/s^2 for s>=4*3^(1/4)*sqrt(D); sum_p |m_p-o|=O(D^(3/2)); sum_p |m_p-o|^2=O(D^2 log D).",
+        "hypotheses": [
+          "global minimum-diameter source, D>=216",
+          "one actual diameter partner selected for every actual diameter endpoint",
+          "full-source hull circumcenter; all source points including contact isolates retained"
+        ],
+        "not_claimed": [
+          "stress-weighted midpoint control",
+          "a count of almost-diameter pairs",
+          "finite source motion or strict-D competitor",
+          "Target C or Level I closure"
+        ]
+      },
+      "source_claim_ids": [
+        "C-DIAMETER-MIDPOINT-MEAN-TAIL"
+      ],
+      "source_proposed_status": "canonical in source PR #947; not adopted",
+      "artifacts": [
+        {
+          "path": "docs/audits/target_c_diameter_midpoint_mean_tail_independent_audit_2026-10-10.md",
+          "role": "proof report",
+          "source_git_blob_sha": "16fcb7a8c1e8552f152709fa24fcdb37542061eb",
+          "source_sha256": "e4bf989843db0d85a6594d4129eed8cc2c59ec3605442d1ba722c2a219c3c4cf",
+          "destination_sha256": "a815cfd48e4f208a1891b853726897069909704fa0f359dad9f828c12668d797",
+          "source_artifact_id": "ART-42DB85DAAB5F",
+          "source_claim_ids": [
+            "C-CII-DIAMETER-EDGE-MIDPOINT-MOMENTS",
+            "C-DIAMETER-MIDPOINT-MEAN-TAIL",
+            "C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND"
+          ],
+          "source_pr_claim_statuses": {
+            "C-CII-DIAMETER-EDGE-MIDPOINT-MOMENTS": "canonical",
+            "C-DIAMETER-MIDPOINT-MEAN-TAIL": "canonical",
+            "C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND": "canonical"
+          }
+        },
+        {
+          "path": "docs/audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md",
+          "role": "source second-referee audit record",
+          "source_git_blob_sha": "ae888872f83e4d3520ffe41acaef4f71cc7db600",
+          "source_sha256": "1a9ab31c0fa492cc56b4c625b279654a69005ad2d531a02da553b707da2a3d52",
+          "destination_sha256": "1a9ab31c0fa492cc56b4c625b279654a69005ad2d531a02da553b707da2a3d52",
+          "source_artifact_id": "ART-443896D300E0",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/target_c_integration_audit_ledger_2026-10-06.md",
+          "role": "source integration-audit ledger",
+          "source_git_blob_sha": "2bbf39028c2c8ad4b0202dd3891237665e90ecef",
+          "source_sha256": "c66d6e058f7f26b991d4ef1e2d2bc4315cfcf6a8703aa208cd6cec37ab485cb4",
+          "destination_sha256": "419094328bcdc323235da0c475836528201f60811409fc5665e581b5e933a17f",
+          "source_artifact_id": "ART-EEF46B36595C",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "role": "source referee-run ledger",
+          "source_git_blob_sha": "59224819f8e5df1ffba6f2d32194ddebc2fb31f4",
+          "source_sha256": "99a04e0c2505d7eb01d0a05388fd4fb92be78addfd4f8240a62ce78508c7768c",
+          "destination_sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+          "source_artifact_id": "ART-7B97D27268B3",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-FS-DIAMETER-MIDPOINT-D2-3"
+        ],
+        "candidate_relations": [],
+        "description": "Audit.246 is an analytic source proof; Audit cycle 249 records a source second-referee correction to the angular band width. Both remain noncanonical in this destination."
+      },
+      "obstructions_and_limits": [
+        "The moments localize possible endpoint partners but do not supply a source-compatible finite competitor."
+      ],
+      "validation": {
+        "status": "preserved; destination mathematical audit not performed",
+        "scope": "The reports present an analytic all-source proof and a source second-referee record; there is no finite verifier for these universal inequalities. Source PR PASS/promote language is historical evidence and does not alter destination status."
+      },
+      "next_proof_obligations": [
+        "Prove that localized endpoints determine a chart, source patch, or pair-feasible move while retaining every source label."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 947,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/947",
+        "source_pr_draft": false,
+        "source_head_sha": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+        "source_head_tree": "48b678c0d2695002595dc8aa9eaa6d1ac909e31b",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+        "source_merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+        "source_theorem_state": "2026-10-10.audit.234 on source main; source PR head proposes .235/.237 promotion transaction",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "53527e354fd545325744f828c93278bcf6437bd4"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent work",
+        "third_party_material": "No third-party PDFs or extracted text copied.",
+        "visibility": "Destination remains private; publication-inclusion set unchanged."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-CII-DIAMETER-EDGE-MIDPOINT-MOMENTS-PR947",
+      "title": "Midpoint tail and moments on the actual C-II diameter graph",
+      "status": "unreviewed",
+      "source_lifecycle": "Source PR proposes a canonical C-II transfer; destination theorem state contains no such ID.",
+      "target_scope": [
+        "Target C-II",
+        "full-source geometry"
+      ],
+      "claim": {
+        "statement": "For a canonical C-II source, the same tail and first/second midpoint moment bounds hold over every edge of the full actual diameter graph, using each actual edge midpoint. The proof injects actual diameter edges into distinct endpoints using the stated Woodall topology.",
+        "hypotheses": [
+          "canonical contact-minimal then diameter-pair-minimal C-II source",
+          "full actual diameter graph and all its edges",
+          "all source points retained",
+          "the midpoint bounds of TARGET-C-DIAMETER-MIDPOINT-MEAN-TAIL-PR947"
+        ],
+        "not_claimed": [
+          "stress weighting on diameter edges",
+          "pair count by diameter deficit",
+          "source extraction or finite motion",
+          "C-II closure"
+        ]
+      },
+      "source_claim_ids": [
+        "C-CII-DIAMETER-EDGE-MIDPOINT-MOMENTS"
+      ],
+      "source_proposed_status": "canonical in source PR #947; not adopted",
+      "artifacts": [
+        {
+          "path": "docs/audits/target_c_diameter_midpoint_mean_tail_independent_audit_2026-10-10.md",
+          "role": "proof report",
+          "source_git_blob_sha": "16fcb7a8c1e8552f152709fa24fcdb37542061eb",
+          "source_sha256": "e4bf989843db0d85a6594d4129eed8cc2c59ec3605442d1ba722c2a219c3c4cf",
+          "destination_sha256": "a815cfd48e4f208a1891b853726897069909704fa0f359dad9f828c12668d797",
+          "source_artifact_id": "ART-42DB85DAAB5F",
+          "source_claim_ids": [
+            "C-CII-DIAMETER-EDGE-MIDPOINT-MOMENTS",
+            "C-DIAMETER-MIDPOINT-MEAN-TAIL",
+            "C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND"
+          ],
+          "source_pr_claim_statuses": {
+            "C-CII-DIAMETER-EDGE-MIDPOINT-MOMENTS": "canonical",
+            "C-DIAMETER-MIDPOINT-MEAN-TAIL": "canonical",
+            "C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND": "canonical"
+          }
+        },
+        {
+          "path": "docs/audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md",
+          "role": "source second-referee audit record",
+          "source_git_blob_sha": "ae888872f83e4d3520ffe41acaef4f71cc7db600",
+          "source_sha256": "1a9ab31c0fa492cc56b4c625b279654a69005ad2d531a02da553b707da2a3d52",
+          "destination_sha256": "1a9ab31c0fa492cc56b4c625b279654a69005ad2d531a02da553b707da2a3d52",
+          "source_artifact_id": "ART-443896D300E0",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "role": "source referee-run ledger",
+          "source_git_blob_sha": "59224819f8e5df1ffba6f2d32194ddebc2fb31f4",
+          "source_sha256": "99a04e0c2505d7eb01d0a05388fd4fb92be78addfd4f8240a62ce78508c7768c",
+          "destination_sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+          "source_artifact_id": "ART-7B97D27268B3",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-WOODALL"
+        ],
+        "candidate_relations": [
+          "TARGET-C-DIAMETER-MIDPOINT-MEAN-TAIL-PR947"
+        ],
+        "description": "Woodall topology only transfers the endpoint bounds to actual edges; it does not add pair multiplicity or stress weights."
+      },
+      "obstructions_and_limits": [
+        "The statement yields no full-source endpoint or population payment."
+      ],
+      "validation": {
+        "status": "preserved; destination mathematical audit not performed",
+        "scope": "Analytic transfer in the source report; no finite verifier and no destination mathematical audit. Source PR PASS/promote language is historical evidence and does not alter destination status."
+      },
+      "next_proof_obligations": [
+        "Connect actual diameter-edge localization to source-extracted charts or a strict competitor."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 947,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/947",
+        "source_pr_draft": false,
+        "source_head_sha": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+        "source_head_tree": "48b678c0d2695002595dc8aa9eaa6d1ac909e31b",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+        "source_merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+        "source_theorem_state": "2026-10-10.audit.234 on source main; source PR head proposes .235/.237 promotion transaction",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "53527e354fd545325744f828c93278bcf6437bd4"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent work",
+        "third_party_material": "No third-party PDFs or extracted text copied.",
+        "visibility": "Destination remains private; publication-inclusion set unchanged."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND-PR947",
+      "title": "Near-diameter pair endpoint and midpoint localization",
+      "status": "unreviewed",
+      "source_lifecycle": "Source PR proposes a canonical all-source localization claim; not adopted.",
+      "target_scope": [
+        "Target C-II",
+        "full-source geometry"
+      ],
+      "claim": {
+        "statement": "For any distinct source pair p,x with d=|p-x|>=D-s, put nu=(p-x)/d, eta=3^(1/4)*sqrt(D), and m=(p+x)/2. The report bounds both endpoint tangential coordinates by 13*D^(2/3)+2*s*D^(1/3), and |(m-o) dot nu| by 2*eta+s/2. Bounded-deficit pairs therefore have midpoint distance O_s(D^(2/3)) from the full-source circumcenter o.",
+        "hypotheses": [
+          "noncollinear global minimum-diameter unit-separated source",
+          "D>=216",
+          "distinct source pair with deficit at most s",
+          "full-source circumcenter"
+        ],
+        "not_claimed": [
+          "a count of near-diameter pairs",
+          "stress weights",
+          "source motion or endpoint extraction",
+          "C-II closure"
+        ]
+      },
+      "source_claim_ids": [
+        "C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND"
+      ],
+      "source_proposed_status": "canonical in source PR #947; not adopted",
+      "artifacts": [
+        {
+          "path": "docs/audits/target_c_diameter_midpoint_mean_tail_independent_audit_2026-10-10.md",
+          "role": "proof report",
+          "source_git_blob_sha": "16fcb7a8c1e8552f152709fa24fcdb37542061eb",
+          "source_sha256": "e4bf989843db0d85a6594d4129eed8cc2c59ec3605442d1ba722c2a219c3c4cf",
+          "destination_sha256": "a815cfd48e4f208a1891b853726897069909704fa0f359dad9f828c12668d797",
+          "source_artifact_id": "ART-42DB85DAAB5F",
+          "source_claim_ids": [
+            "C-CII-DIAMETER-EDGE-MIDPOINT-MOMENTS",
+            "C-DIAMETER-MIDPOINT-MEAN-TAIL",
+            "C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND"
+          ],
+          "source_pr_claim_statuses": {
+            "C-CII-DIAMETER-EDGE-MIDPOINT-MOMENTS": "canonical",
+            "C-DIAMETER-MIDPOINT-MEAN-TAIL": "canonical",
+            "C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND": "canonical"
+          }
+        },
+        {
+          "path": "docs/audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md",
+          "role": "source second-referee audit record",
+          "source_git_blob_sha": "ae888872f83e4d3520ffe41acaef4f71cc7db600",
+          "source_sha256": "1a9ab31c0fa492cc56b4c625b279654a69005ad2d531a02da553b707da2a3d52",
+          "destination_sha256": "1a9ab31c0fa492cc56b4c625b279654a69005ad2d531a02da553b707da2a3d52",
+          "source_artifact_id": "ART-443896D300E0",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-FS-DIAMETER-MIDPOINT-D2-3"
+        ],
+        "candidate_relations": [
+          "TARGET-C-DIAMETER-MIDPOINT-MEAN-TAIL-PR947"
+        ],
+        "description": "The independent audit states this without any pair-count conclusion."
+      },
+      "obstructions_and_limits": [
+        "Near-diameter localization does not control how many such pairs occur."
+      ],
+      "validation": {
+        "status": "preserved; destination mathematical audit not performed",
+        "scope": "Analytic report and source second-referee record; no finite verifier for the all-source inequalities. Source PR PASS/promote language is historical evidence and does not alter destination status."
+      },
+      "next_proof_obligations": [
+        "Find a source-level counting or replacement argument that uses this localization without assuming an unproved global atlas."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 947,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/947",
+        "source_pr_draft": false,
+        "source_head_sha": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+        "source_head_tree": "48b678c0d2695002595dc8aa9eaa6d1ac909e31b",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+        "source_merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+        "source_theorem_state": "2026-10-10.audit.234 on source main; source PR head proposes .235/.237 promotion transaction",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "53527e354fd545325744f828c93278bcf6437bd4"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent work",
+        "third_party_material": "No third-party PDFs or extracted text copied.",
+        "visibility": "Destination remains private; publication-inclusion set unchanged."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-POSITIVE-LEAF-ANCHOR-D23-PR947",
+      "title": "Positive-leaf anchor boundary-distance sharpening",
+      "status": "unreviewed strengthening candidate; destination keeps the weaker canonical bound",
+      "source_lifecycle": "Source PR proposes strengthening the existing canonical claim from O(D^(-1/2)) to O(D^(-2/3)); destination statement remains unchanged.",
+      "target_scope": [
+        "Target C-II",
+        "full-source geometry"
+      ],
+      "claim": {
+        "statement": "Under the exact existing positive-leaf hypotheses, the unique unit-neighbor anchor a obeys dist(a, boundary K_D)=O(D^(-2/3)), where K_D is the intersection of all source-centered radius-(D-1) disks.",
+        "hypotheses": [
+          "noncollinear global minimum-diameter source, D tending to infinity",
+          "p an actual diameter endpoint with exactly one actual unit neighbor a",
+          "contact pa has positive coefficient in some normalized full-source KKT stress",
+          "all source points including contact isolates retained in K_D",
+          "midpoint and near-diameter localization candidates in this registry"
+        ],
+        "not_claimed": [
+          "interior vacancy or packet",
+          "source motion or local capacity",
+          "a sharper port-count exponent",
+          "C-II or Level I closure"
+        ]
+      },
+      "source_claim_ids": [
+        "C-POSITIVE-LEAF-ANCHOR-INNER-BALL-BOUNDARY"
+      ],
+      "source_proposed_status": "canonical strengthening in source PR #947; not adopted",
+      "artifacts": [
+        {
+          "path": "docs/audits/target_c_positive_leaf_anchor_sharpening_independent_audit_2026-10-10.md",
+          "role": "proof report",
+          "source_git_blob_sha": "9668230200c9c2cac9a87d515bd31449bf487a35",
+          "source_sha256": "f7df6238d32925d18a2a593f25ff631ef29d8fcd16e3767235f8e3c21dd51cf8",
+          "destination_sha256": "c46e90b1975345be2704b4df3085d63f5b84b15402ae6f9214a49faa3e3f32f7",
+          "source_artifact_id": "ART-B416A414FB53",
+          "source_claim_ids": [
+            "C-POSITIVE-LEAF-ANCHOR-INNER-BALL-BOUNDARY"
+          ],
+          "source_pr_claim_statuses": {
+            "C-POSITIVE-LEAF-ANCHOR-INNER-BALL-BOUNDARY": "canonical"
+          }
+        },
+        {
+          "path": "docs/audits/target_c_positive_leaf_anchor_second_referee_2026-10-10.md",
+          "role": "source second-referee audit record",
+          "source_git_blob_sha": "c3ea728a827f276474fb846823f2e8219d705487",
+          "source_sha256": "08a363adb26216a9d5893891bae50d597b309341d7b146c97311a3b7b7102257",
+          "destination_sha256": "08a363adb26216a9d5893891bae50d597b309341d7b146c97311a3b7b7102257",
+          "source_artifact_id": "ART-31F8080C75A6",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "role": "source referee-run ledger",
+          "source_git_blob_sha": "59224819f8e5df1ffba6f2d32194ddebc2fb31f4",
+          "source_sha256": "99a04e0c2505d7eb01d0a05388fd4fb92be78addfd4f8240a62ce78508c7768c",
+          "destination_sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+          "source_artifact_id": "ART-7B97D27268B3",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-FS-GEOM",
+          "C-FS-DIAMETER-MIDPOINT-D2-3"
+        ],
+        "candidate_relations": [
+          "TARGET-C-NEAR-DIAMETER-PAIR-MIDPOINT-BOUND-PR947"
+        ],
+        "description": "The destination retains the earlier canonical O(D^(-1/2)) conclusion. The source PR proposes the sharper exponent only after the midpoint candidates."
+      },
+      "obstructions_and_limits": [
+        "This is boundary localization only; it produces no vacancy, packet, or actual movement."
+      ],
+      "validation": {
+        "status": "preserved; destination mathematical audit not performed",
+        "scope": "Analytic proof plus source second-referee record; no finite verifier encodes the direction-cone and inner-ball contraction argument. Source PR PASS/promote language is historical evidence and does not alter destination status."
+      },
+      "next_proof_obligations": [
+        "Audit the analytic strengthening at an exact destination head and connect the boundary-localized anchor to a source-realized move."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 947,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/947",
+        "source_pr_draft": false,
+        "source_head_sha": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+        "source_head_tree": "48b678c0d2695002595dc8aa9eaa6d1ac909e31b",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+        "source_merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+        "source_theorem_state": "2026-10-10.audit.234 on source main; source PR head proposes .235/.237 promotion transaction",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "53527e354fd545325744f828c93278bcf6437bd4"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent work",
+        "third_party_material": "No third-party PDFs or extracted text copied.",
+        "visibility": "Destination remains private; publication-inclusion set unchanged."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-SLOW-CHART-CONTACT-PORT-COVER-EXCLUSION-PR947",
+      "title": "Combined leaf and double-port exclusion under a supplied slow-chart atlas",
+      "status": "unreviewed",
+      "source_lifecycle": "Source PR proposes a canonical C-II exclusion conditional on a supplied bounded atlas; not adopted.",
+      "target_scope": [
+        "Target C-II",
+        "full-source geometry"
+      ],
+      "claim": {
+        "statement": "For an unbounded canonical post-ZF triangle-free C-II sequence with C=C_*, H=H_*, D tending to infinity, and at most fixed J supplied unit-rhombic charts whose displacement is K/D-Lipschitz, at most O_{J,K}(D^(4/5)) loaded endpoints are covered as either (i) a positive-stress contact leaf with its sole actual unit neighbor in one chart, or (ii) an actual diameter endpoint with two distinct actual unit neighbors in one chart. Since q>=h>=ceil(D), at least D-O_{J,K}(D^(4/5)) loaded endpoints remain outside these two classes.",
+        "hypotheses": [
+          "unbounded canonical contact-minimal then diameter-pair-minimal post-ZF triangle-free C-II sequence",
+          "C=C_* and H=H_*",
+          "supplied fixed number J of unit-rhombic charts with basis angles in [pi/3,2pi/3] and K/D displacement Lipschitz bound",
+          "full source and all contact isolates retained"
+        ],
+        "not_claimed": [
+          "chart extraction from a source",
+          "coverage of every loaded endpoint",
+          "source motion or strict-D competitor",
+          "C-II or Level I closure"
+        ]
+      },
+      "source_claim_ids": [
+        "C-CII-SLOW-CHART-CONTACT-PORT-COVER-EXCLUSION"
+      ],
+      "source_proposed_status": "canonical in source PR #947; not adopted",
+      "artifacts": [
+        {
+          "path": "docs/audits/target_c_slow_chart_contact_port_cover_independent_audit_2026-10-10.md",
+          "role": "proof report",
+          "source_git_blob_sha": "246844015df1544acc8732ff8f6c47005583f935",
+          "source_sha256": "8a63e14ea5787f2a120c46d0a48c2f6f42064372baf23d37fb62f0e86b675f73",
+          "destination_sha256": "4f40354d0af913209245992c18e88680ccf65973d68265ef085c32d4329a9391",
+          "source_artifact_id": "ART-1E42CFFD6E98",
+          "source_claim_ids": [
+            "C-CII-SLOW-CHART-CONTACT-PORT-COVER-EXCLUSION"
+          ],
+          "source_pr_claim_statuses": {
+            "C-CII-SLOW-CHART-CONTACT-PORT-COVER-EXCLUSION": "canonical"
+          }
+        },
+        {
+          "path": "docs/audits/target_c_positive_leaf_anchor_sharpening_independent_audit_2026-10-10.md",
+          "role": "dependent source audit report",
+          "source_git_blob_sha": "9668230200c9c2cac9a87d515bd31449bf487a35",
+          "source_sha256": "f7df6238d32925d18a2a593f25ff631ef29d8fcd16e3767235f8e3c21dd51cf8",
+          "destination_sha256": "c46e90b1975345be2704b4df3085d63f5b84b15402ae6f9214a49faa3e3f32f7",
+          "source_artifact_id": "ART-B416A414FB53",
+          "source_claim_ids": [
+            "C-POSITIVE-LEAF-ANCHOR-INNER-BALL-BOUNDARY"
+          ],
+          "source_pr_claim_statuses": {
+            "C-POSITIVE-LEAF-ANCHOR-INNER-BALL-BOUNDARY": "canonical"
+          }
+        },
+        {
+          "path": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "role": "source referee-run ledger",
+          "source_git_blob_sha": "59224819f8e5df1ffba6f2d32194ddebc2fb31f4",
+          "source_sha256": "99a04e0c2505d7eb01d0a05388fd4fb92be78addfd4f8240a62ce78508c7768c",
+          "destination_sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+          "source_artifact_id": "ART-7B97D27268B3",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-SLOW-CHART-NEAR-BOUNDARY-COUNT",
+          "C-SLOW-CHART-DOUBLE-PORT-COUNT",
+          "C-ZRF",
+          "C-WOODALL"
+        ],
+        "candidate_relations": [
+          "TARGET-C-POSITIVE-LEAF-ANCHOR-D23-PR947"
+        ],
+        "description": "The corrected inverse-phase candidate in this registry gives q=o(D) only under its own global phase/tail hypotheses and does not construct these K/D charts."
+      },
+      "obstructions_and_limits": [
+        "The linearly many uncovered endpoints have not been converted into a finite full-source endpoint."
+      ],
+      "validation": {
+        "status": "preserved; destination mathematical audit not performed",
+        "scope": "Analytic source proof; no finite verifier, atlas-extraction proof, or destination mathematical audit. Source PR PASS/promote language is historical evidence and does not alter destination status."
+      },
+      "next_proof_obligations": [
+        "Either extract the stated atlas from every relevant source, or use the uncovered endpoint population to force a full-source finite competitor."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 947,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/947",
+        "source_pr_draft": false,
+        "source_head_sha": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+        "source_head_tree": "48b678c0d2695002595dc8aa9eaa6d1ac909e31b",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+        "source_merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+        "source_theorem_state": "2026-10-10.audit.234 on source main; source PR head proposes .235/.237 promotion transaction",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "53527e354fd545325744f828c93278bcf6437bd4"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent work",
+        "third_party_material": "No third-party PDFs or extracted text copied.",
+        "visibility": "Destination remains private; publication-inclusion set unchanged."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-NEAR-TRIANGULAR-ONE-PIN-CAPACITY-PLATEAU-PR947",
+      "title": "Near-triangular fixed-wall one-pin capacity plateau",
+      "status": "unreviewed",
+      "source_lifecycle": "Source PR proposes a finite canonical capacity theorem for each fixed frame; not adopted.",
+      "target_scope": [
+        "Target C-II",
+        "full-source geometry"
+      ],
+      "claim": {
+        "statement": "For each fixed m,n>=3, some nonexplicit epsilon_(m,n)>0 makes both weak and strict capacity exactly (m-1)(n-1) in the open fixed parallelogram when pi/3<phi<pi/3+epsilon_(m,n), after deleting boundary label p_(1,0) and keeping all other boundary labels fixed.",
+        "hypotheses": [
+          "fixed integers m,n>=3",
+          "fixed oblique parallelogram and boundary pins",
+          "only additional points inside its open interior counted",
+          "angle lies in the frame-dependent interval above"
+        ],
+        "not_claimed": [
+          "uniform epsilon for growing frames",
+          "exterior-site bound or changed-wall capacity",
+          "source-wall extraction",
+          "global minimizer or C-II endpoint"
+        ]
+      },
+      "source_claim_ids": [
+        "C-NEAR-TRIANGULAR-ONE-PIN-CAPACITY-PLATEAU"
+      ],
+      "source_proposed_status": "canonical in source PR #947; not adopted",
+      "artifacts": [
+        {
+          "path": "docs/audits/target_c_one_pin_restoration_gap_capacity_plateau_independent_audit_2026-10-10.md",
+          "role": "proof report",
+          "source_git_blob_sha": "0325be2261b6eb1c1e9528feeb7883f8401ce0f8",
+          "source_sha256": "91c0dc1b86aaf7b2941943dce132e258a3364709f6b00a67575d465bbe8189c4",
+          "destination_sha256": "ce709b3988db6bae2b1deb5aacc0d5ed755e86bf7781e77e167e6203b0702f7c",
+          "source_artifact_id": "ART-996A15A014C9",
+          "source_claim_ids": [
+            "C-NEAR-TRIANGULAR-ONE-PIN-CAPACITY-PLATEAU",
+            "C-TRIANGULAR-ONE-PIN-RESTORATION-DISPLACEMENT-GAP-REGRESSION"
+          ],
+          "source_pr_claim_statuses": {
+            "C-NEAR-TRIANGULAR-ONE-PIN-CAPACITY-PLATEAU": "canonical",
+            "C-TRIANGULAR-ONE-PIN-RESTORATION-DISPLACEMENT-GAP-REGRESSION": "regression"
+          }
+        },
+        {
+          "path": "docs/audits/target_c_integration_audit_ledger_2026-10-06.md",
+          "role": "source integration-audit ledger",
+          "source_git_blob_sha": "2bbf39028c2c8ad4b0202dd3891237665e90ecef",
+          "source_sha256": "c66d6e058f7f26b991d4ef1e2d2bc4315cfcf6a8703aa208cd6cec37ab485cb4",
+          "destination_sha256": "419094328bcdc323235da0c475836528201f60811409fc5665e581b5e933a17f",
+          "source_artifact_id": "ART-EEF46B36595C",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-OBLIQUE-ONE-PIN-STRICT-REFILL"
+        ],
+        "candidate_relations": [],
+        "description": "The source report uses a pre-existing exact verifier for a different result; that checker does not encode this universal compactness/capacity claim."
+      },
+      "obstructions_and_limits": [
+        "The exact capacity is one fixed-wall obstruction; it does not rule out moved walls or outside capacity."
+      ],
+      "validation": {
+        "status": "preserved; destination mathematical audit not performed",
+        "scope": "Analytic finite-frame proof, not a finite verifier. The source second-referee audit is retained but not independently repeated in the destination. Source PR PASS/promote language is historical evidence and does not alter destination status."
+      },
+      "next_proof_obligations": [
+        "Avoid a fixed-wall local refill route in this near-triangular range; seek a moved-wall or outside-capacity payment."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 947,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/947",
+        "source_pr_draft": false,
+        "source_head_sha": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+        "source_head_tree": "48b678c0d2695002595dc8aa9eaa6d1ac909e31b",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+        "source_merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+        "source_theorem_state": "2026-10-10.audit.234 on source main; source PR head proposes .235/.237 promotion transaction",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "53527e354fd545325744f828c93278bcf6437bd4"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent work",
+        "third_party_material": "No third-party PDFs or extracted text copied.",
+        "visibility": "Destination remains private; publication-inclusion set unchanged."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-TRIANGULAR-ONE-PIN-RESTORATION-DISPLACEMENT-GAP-PR947",
+      "title": "Restored-pin displacement gap regression",
+      "status": "unreviewed regression",
+      "source_lifecycle": "Source PR records a regression, not a canonical theorem: every feasible placement is reference or displaced by at least sqrt(3)/(4(m+n+1)).",
+      "target_scope": [
+        "Target C-II",
+        "full-source geometry"
+      ],
+      "claim": {
+        "statement": "Let L=m+n and restore the deleted boundary label p_(1,0) as movable along with the interior labels while every other boundary label remains fixed in the closed reference parallelogram. If all pair distances remain at least one, then the maximum movable-label displacement rho is zero or rho>=a/(2(L+1))>=sqrt(3)/(4(L+1)); every continuous feasible path from the reference grid is constant, though distant alternatives are not excluded.",
+        "hypotheses": [
+          "m,n>=3; pi/3<=phi<=pi/2",
+          "all boundary labels except p_(1,0) fixed",
+          "restored pin and every interior label stay in the closed reference parallelogram",
+          "all pairwise distances at least one"
+        ],
+        "not_claimed": [
+          "no distant feasible alternative",
+          "global minimizer",
+          "full-source stress",
+          "C-II or Level I closure"
+        ]
+      },
+      "source_claim_ids": [
+        "C-TRIANGULAR-ONE-PIN-RESTORATION-DISPLACEMENT-GAP-REGRESSION"
+      ],
+      "source_proposed_status": "regression in source PR #947; destination records as an unreviewed obstruction",
+      "artifacts": [
+        {
+          "path": "docs/audits/target_c_one_pin_restoration_gap_capacity_plateau_independent_audit_2026-10-10.md",
+          "role": "proof report",
+          "source_git_blob_sha": "0325be2261b6eb1c1e9528feeb7883f8401ce0f8",
+          "source_sha256": "91c0dc1b86aaf7b2941943dce132e258a3364709f6b00a67575d465bbe8189c4",
+          "destination_sha256": "ce709b3988db6bae2b1deb5aacc0d5ed755e86bf7781e77e167e6203b0702f7c",
+          "source_artifact_id": "ART-996A15A014C9",
+          "source_claim_ids": [
+            "C-NEAR-TRIANGULAR-ONE-PIN-CAPACITY-PLATEAU",
+            "C-TRIANGULAR-ONE-PIN-RESTORATION-DISPLACEMENT-GAP-REGRESSION"
+          ],
+          "source_pr_claim_statuses": {
+            "C-NEAR-TRIANGULAR-ONE-PIN-CAPACITY-PLATEAU": "canonical",
+            "C-TRIANGULAR-ONE-PIN-RESTORATION-DISPLACEMENT-GAP-REGRESSION": "regression"
+          }
+        },
+        {
+          "path": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "role": "source referee-run ledger",
+          "source_git_blob_sha": "59224819f8e5df1ffba6f2d32194ddebc2fb31f4",
+          "source_sha256": "99a04e0c2505d7eb01d0a05388fd4fb92be78addfd4f8240a62ce78508c7768c",
+          "destination_sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+          "source_artifact_id": "ART-7B97D27268B3",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-OBLIQUE-ONE-PIN-STRICT-REFILL"
+        ],
+        "candidate_relations": [],
+        "description": "This concerns a fixed artificial parallelogram and a continuously moving restored pin; it is distinct from the capacity plateau."
+      },
+      "obstructions_and_limits": [
+        "The theorem only blocks continuous local restoration; it does not classify distant feasible placements or changed walls."
+      ],
+      "validation": {
+        "status": "preserved; destination mathematical audit not performed",
+        "scope": "Analytic regression proof; no finite verifier encodes the displacement or compactness arguments. Source PR PASS/promote language is historical evidence and does not alter destination status."
+      },
+      "next_proof_obligations": [
+        "Retain as a negative control for continuous local refill; test changed-wall and nonlocal discrete routes separately."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 947,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/947",
+        "source_pr_draft": false,
+        "source_head_sha": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+        "source_head_tree": "48b678c0d2695002595dc8aa9eaa6d1ac909e31b",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+        "source_merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+        "source_theorem_state": "2026-10-10.audit.234 on source main; source PR head proposes .235/.237 promotion transaction",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "53527e354fd545325744f828c93278bcf6437bd4"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent work",
+        "third_party_material": "No third-party PDFs or extracted text copied.",
+        "visibility": "Destination remains private; publication-inclusion set unchanged."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-INVERSE-PHASE-FACE-TAIL-CORRECTION-PR947",
+      "title": "Corrected sequence-level inverse-phase face-tail exclusion",
+      "status": "audited-working in destination; source PR canonical promotion not adopted",
+      "source_lifecycle": "Source PR proposes canonical status for the corrected result. Destination retains audited-working pending the required independent AI-agent exact-head audit.",
+      "target_scope": [
+        "Target C-II",
+        "full-source geometry"
+      ],
+      "claim": {
+        "statement": "Under the original unbounded canonical post-ZF C-II sequence, one D-dependent inverse-phase frame with fixed K/D error, and the stated global vanishing face-tail hypothesis, the diagonal-cutoff and radius-D^(3/4) patch argument proves only q=o(D), contradicting h>=ceil(D) and h<=q.",
+        "hypotheses": [
+          "both global phase and tail hypotheses from C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION",
+          "all source labels including contact isolates retained",
+          "the full-source actual-contact routing estimate with its additive tail error handled by the diagonal cutoff"
+        ],
+        "not_claimed": [
+          "a global Kprime/D-Lipschitz chart",
+          "q=O(D^(4/5))",
+          "extraction of the phase/tail premises",
+          "finite motion or strict-D competitor",
+          "C-II or Level I closure"
+        ]
+      },
+      "source_claim_ids": [
+        "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION"
+      ],
+      "source_proposed_status": "canonical in source PR #947; destination status remains audited-working",
+      "artifacts": [
+        {
+          "path": "docs/audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md",
+          "role": "proof report",
+          "source_git_blob_sha": "7667e5fa85f180aa5c971477d3f73798a1995c98",
+          "source_sha256": "831884c7a986c683345cec980fafabf52fa30569cda43f6f47396f75e535553c",
+          "destination_sha256": "9ed749f51f560af597875fc9fb7c2647395ce47a970583a9e3349df6f8e2bb38",
+          "source_artifact_id": "ART-886FE82FF93C",
+          "source_claim_ids": [
+            "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION"
+          ],
+          "source_pr_claim_statuses": {
+            "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION": "canonical"
+          }
+        },
+        {
+          "path": "docs/audits/target_c_global_inverse_phase_face_tail_exclusion_independent_audit_2026-10-09.md",
+          "role": "proof report",
+          "source_git_blob_sha": "2cbe5d29048b9a0736e37a088240a6ace23911d5",
+          "source_sha256": "10e13b99118240ce5773944f4cbf2e38e470bff76293454841bbd0147d0104da",
+          "destination_sha256": "158394e6106e12d46cb1a404e24cfabf3df629849b2956004c2bc0a1beabed78",
+          "source_artifact_id": "ART-6ECD86C6A2BC",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "role": "source referee-run ledger",
+          "source_git_blob_sha": "59224819f8e5df1ffba6f2d32194ddebc2fb31f4",
+          "source_sha256": "99a04e0c2505d7eb01d0a05388fd4fb92be78addfd4f8240a62ce78508c7768c",
+          "destination_sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+          "source_artifact_id": "ART-7B97D27268B3",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-RHOMBUS-POP",
+          "C-CURVED-BOUNDARY-LATTICE-LOCAL-CAPACITY",
+          "C-ZRF",
+          "C-WOODALL"
+        ],
+        "candidate_relations": [],
+        "description": "Audit.202 is a withdrawn proof route; Audit.236 repairs the sequence-level conclusion only. Preserve the current destination audited-working status."
+      },
+      "obstructions_and_limits": [
+        "Neither global premise is extracted from an arbitrary canonical source. The false global Lipschitz and D^(4/5) inferences remain withdrawn."
+      ],
+      "validation": {
+        "status": "preserved; destination mathematical audit not performed",
+        "scope": "Corrected proof retained and source run notes preserved; no finite verifier. No destination independent AI-agent mathematical audit has been performed in this batch. Source PR PASS/promote language is historical evidence and does not alter destination status."
+      },
+      "next_proof_obligations": [
+        "Complete the required independent AI-agent exact-head mathematical audit before canonical reuse; separately prove extraction of both global premises or a source-specific competitor."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 947,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/947",
+        "source_pr_draft": false,
+        "source_head_sha": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+        "source_head_tree": "48b678c0d2695002595dc8aa9eaa6d1ac909e31b",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+        "source_merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+        "source_theorem_state": "2026-10-10.audit.234 on source main; source PR head proposes .235/.237 promotion transaction",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "53527e354fd545325744f828c93278bcf6437bd4"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent work",
+        "third_party_material": "No third-party PDFs or extracted text copied.",
+        "visibility": "Destination remains private; publication-inclusion set unchanged."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-PR947-AUDIT-248-255-256-NONCLAIM-SCREEN",
+      "title": "Source route screen: fused signs, residual tail, shell folds, and Oler separators",
+      "status": "no new theorem claim; content-level obstruction and duplicate screen",
+      "source_lifecycle": "Source audit cycles 248, 255, and 256 screen claims as already canonical/subsumed or leave synthesis open.",
+      "target_scope": [
+        "Target C-II",
+        "full-source geometry"
+      ],
+      "claim": {
+        "statement": "Audit cycle 248 finds fused quarter-fold sign equalities and Q charge already implied by canonical quarter-fold claims, and the PR #722 Type-II owner-family count already contained in Audit.114; cycles 255-256 identify shell-fold, finite radial-stress, and Oler-separator reports already represented at their scoped canonical IDs. No new theorem ID or source-move bridge follows.",
+        "hypotheses": [
+          "the exact canonical report scopes named in the source audit ledgers"
+        ],
+        "not_claimed": [
+          "full-source motion from sign constraints",
+          "generic Type-II family extraction",
+          "source-level owner extraction",
+          "finite competitor or Level I closure"
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "no promotion proposed for this screen",
+      "artifacts": [
+        {
+          "path": "docs/audits/target_c_fused_sign_classes_and_residual_tail_screening_2026-10-10.md",
+          "role": "exactly duplicated audit screen",
+          "source_git_blob_sha": "5b69171eb9f3f9816262bb54d3a850da1ccabd9e",
+          "source_sha256": "4caea380df1a8c409596b5b42f21727f7851a5dd1c3f656e432e55a36425c0dc",
+          "destination_sha256": "4caea380df1a8c409596b5b42f21727f7851a5dd1c3f656e432e55a36425c0dc",
+          "source_artifact_id": "ART-53B2C78707E5",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/target_c_integration_audit_ledger_2026-10-06.md",
+          "role": "source integration-audit ledger",
+          "source_git_blob_sha": "2bbf39028c2c8ad4b0202dd3891237665e90ecef",
+          "source_sha256": "c66d6e058f7f26b991d4ef1e2d2bc4315cfcf6a8703aa208cd6cec37ab485cb4",
+          "destination_sha256": "419094328bcdc323235da0c475836528201f60811409fc5665e581b5e933a17f",
+          "source_artifact_id": "ART-EEF46B36595C",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "role": "source referee-run ledger",
+          "source_git_blob_sha": "59224819f8e5df1ffba6f2d32194ddebc2fb31f4",
+          "source_sha256": "99a04e0c2505d7eb01d0a05388fd4fb92be78addfd4f8240a62ce78508c7768c",
+          "destination_sha256": "a113dd7604cad043df72e0fe29cfc8487b808acc6ce0dd86ea1d9d09859f7e7e",
+          "source_artifact_id": "ART-7B97D27268B3",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-QUARTER-FOLD-MINIMUM-FACE-SIZE",
+          "C-QUARTER-FOLD-SOURCE-COMPATIBILITY",
+          "C-OO-ORIGINAL-FAMILY-OWNER-CAPACITY",
+          "C-ODD-SHELL-CLEARANCE-FOLD-ENDPOINT",
+          "C-ODD-SHELL-COLLAR-TRANSPORT-ENDPOINT",
+          "C-FINITE-SORTING-PACKET-RADIAL-LIFTING-STRESS",
+          "C-CORE-UNLOADED-SEPARATOR-AREA-BOUND",
+          "C-LONG-TRAIN-SEPARATOR-INEQUALITY",
+          "C-QUADRATIC-CORE-DISJOINT-TRAIN-RETURNS"
+        ],
+        "candidate_relations": [],
+        "description": "These source audit dispositions are retained as historical scope checks, not new proof claims; the two-isolate shell-fold item is a regression, not a canonical dependency.",
+        "related_noncanonical_claims": [
+          "C-ODD-SHELL-TWO-ISOLATE-FOLD-REGRESSION"
+        ]
+      },
+      "obstructions_and_limits": [
+        "Broad route synthesis remains open where the source reports say no family extraction or source motion was proved."
+      ],
+      "validation": {
+        "status": "preserved; destination mathematical audit not performed",
+        "scope": "The fused sign-screen report is byte-identical to the retained destination copy; the detailed cycle records are appended with a source-only status warning. Source PR PASS/promote language is historical evidence and does not alter destination status."
+      },
+      "next_proof_obligations": [
+        "Do not rerun these exact duplicate screens without a materially different mechanism or a changed hypothesis."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 947,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/947",
+        "source_pr_draft": false,
+        "source_head_sha": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+        "source_head_tree": "48b678c0d2695002595dc8aa9eaa6d1ac909e31b",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+        "source_merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+        "source_theorem_state": "2026-10-10.audit.234 on source main; source PR head proposes .235/.237 promotion transaction",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "53527e354fd545325744f828c93278bcf6437bd4"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent work",
+        "third_party_material": "No third-party PDFs or extracted text copied.",
+        "visibility": "Destination remains private; publication-inclusion set unchanged."
+      }
     }
   ]
 }

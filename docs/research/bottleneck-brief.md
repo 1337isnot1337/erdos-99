@@ -12,6 +12,27 @@ These are research priorities, not theorem-success probabilities. Re-deriving an
 
 The [20 task cards](../../tasks/README.md) include direct route bridges, independent audits, finite computations, shared geometric/analytic dependencies and alternative approaches. Their weights are retained from the source to diversify attention. Proposed adjacent results are [noncanonical snapshots](proposals.md), never new accepted premises. [Family status](research-family-status.md) states which restricted shortcuts are blocked and which changed hypotheses would justify revisiting them.
 
+## Midpoint localization and the atlas gap (noncanonical)
+
+Source PR #947 preserves strong global midpoint-tail and near-diameter
+localization candidates; its positive-leaf audit proposes changing the
+destination's canonical boundary-distance rate from (O(D^{-1/2})) to
+(O(D^{-2/3})). A separate candidate bounds leaf and double-port endpoints
+inside a **supplied** bounded (K/D)-error chart family by
+(O_{J,K}(D^{4/5})), leaving linearly many loaded endpoints uncovered. The
+charts are not extracted from arbitrary canonical sources, and the midpoint
+bounds supply no near-diameter pair count or finite source move. See the
+[midpoint/anchor/atlas track](tracks/target-c-midpoint-anchor-atlas.md),
+[candidate registry](../targets/target-c/candidate-registry.json), and
+[source audit ledgers](../audits/target_c_referee_run_ledger_2026-10-10.md).
+
+The corrected inverse-phase candidate remains audited-working and yields only
+(q=o(D)) under its original global phase and face-tail hypotheses. It does
+not produce a global (K'/D)-Lipschitz chart or (q=O(D^{4/5})); both older
+inferences remain withdrawn. The exact next bridge is to extract the supplied
+atlas or convert the uncovered endpoint population into a full-source finite
+competitor.
+
 ## Additional direct Level I mechanisms (noncanonical)
 
 Recent current-source work includes a [formal joint stress/strain phase mechanism](../reports/global_joint_stress_strain_phase_mechanism_2026-10-12.md) and a [separable-distance/Möbius obstruction](../reports/global_separable_distortion_obstruction_2026-10-12.md). Both are explicitly **unreviewed**, with exact finite checkers and essential limitations. A shared material frame, uniform field bounds, all seams/boundary work, **all source labels**, and a strict whole-source planar competitor remain unproved in the joint field route. The Möbius family does not exhaust permissible planar replacement constructions. See [noncanonical proposal status](proposals.md); neither alters Level I or A/B/C canonical endpoints.

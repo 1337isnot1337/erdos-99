@@ -49,6 +49,38 @@ large triangle-free global minimizer has \(g_A\le cD+o(D)\) for some fixed
 The report also gives a nonglobal triangle-free high-reserve regression, which
 blocks dropping global optimality from that proposed upper-bound route.
 
+## Midpoint localization, leaf anchors, and supplied-chart exclusions
+
+The pinned source PR #947 audits are preserved in the [candidate registry](candidate-registry.json)
+and [midpoint/anchor research track](../../research/tracks/target-c-midpoint-anchor-atlas.md).
+Their source proofs were already retained under `docs/audits`; destination lifecycle
+guards keep the proposed theorem changes unpromoted.
+
+- Audit.246 gives partner-uniform midpoint tails and moments for all full-source
+  diameter endpoints, transfers them to actual C-II diameter edges through
+  Woodall's injection, and localizes bounded-deficit pairs. It gives no count of
+  near-diameter pairs or source move.
+- Audit.247 proposes improving the canonical positive-leaf anchor distance from
+  (O(D^{-1/2})) to (O(D^{-2/3})). Its proof depends on the midpoint bounds and
+  preserves every source label. The destination keeps the existing weaker
+  canonical bound pending review.
+- Audit.254 bounds leaf and double-port endpoints covered by a **supplied**
+  bounded family of (K/D)-Lipschitz rhombic charts by (O_{J,K}(D^{4/5})).
+  It leaves linearly many loaded endpoints uncovered and proves no atlas
+  extraction. Audit.236 supplies only (q=o(D)) under its separate phase/tail
+  hypotheses; it does not establish the chart assumption or restore the
+  withdrawn global (K'/D) and (q=O(D^{4/5})) inferences.
+- Audit.253 fixes the weak and strict capacity at ((m-1)(n-1)) for each fixed
+  near-triangular one-pin wall. Its companion displacement gap blocks
+  continuous local restoration in that artificial wall model, while leaving
+  distant and changed-wall replacements open. Audit cycles 248, 255, and 256
+  record subsumption/duplicate screens rather than new source-move claims.
+
+The missing bridge is still source extraction plus a feasible finite endpoint
+that retains every label and every lower/upper pair constraint. See the
+[source-audit evidence ledger](../../audits/target_c_referee_run_ledger_2026-10-10.md)
+and the [full track record](../../research/tracks/target-c-midpoint-anchor-atlas.md).
+
 ## One-vacancy release and restoration barriers
 
 Source PR #951 preserves a connected family of **unreviewed** C-II candidates and
