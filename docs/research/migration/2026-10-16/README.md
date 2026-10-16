@@ -1,6 +1,6 @@
 # Erdős #99 source research migration
 
-**Overall migration status: INCOMPLETE.** Exact initial source and destination baselines are frozen under [`baseline/`](baseline/). Source-main audit batch 1 merged as PR #19 at destination `806f150c4b47b1b831163fc89c78f2b1c87318a2`; the open-PR #1008 candidate batch is based on that main commit. The 828 still-missing source-main reports, bulk `research/` tree, most open-PR additions, and historical PR work remain queued.
+**Overall migration status: INCOMPLETE.** Exact source and destination baselines are frozen under the baseline directory. Source-main audit batch 1 merged as PR #19; the PR #1008 population-reserve candidate merged as PR #20 at 495351ba7d127deb48f3666623615ff6ea19c39e. The PR #951 vacancy-release batch is based on that commit. The 826 still-missing source-main reports, bulk research tree, most open-PR additions, and historical PR work remain queued.
 
 ## Open source PR batch — #1008 population reserve
 
@@ -22,11 +22,35 @@ the pinned PR head. The source tree's `research/README.md` section is retained a
 adapted destination navigation, and its generated artifact-index change is
 replaced by a destination index rebuild.
 
+## Open source PR batch — #951 vacancy release and restoration research
+
+The pinned source head 0023585a98d8f5f23df64174a091c143710ba78a
+(PR merge base d999528cfaafd811a4a19bcfacd00f217c2fc375) contributes seven
+first-party proof reports, five exact verifier scripts, and five JSON fixtures.
+All 17 mathematical/evidence files are copied byte-for-byte. The changed source
+research README is represented by focused destination navigation, and the
+generated source artifact-index change is replaced by rebuilding the
+destination index. All 19 changed source paths have explicit source Git blob,
+SHA-256, target, lifecycle, dependency, treatment, and destination hash records
+in [the PR file ledger](ledger/source-pr-files.jsonl).
+
+The substantive route combines one-vacancy full-chart and side-pin release
+candidates, an effective fixed-wall packet and wall-span stress identity, exact
+rhombic hop and strip-capacity results, a unilateral local-rigidity barrier,
+and an arbitrarily near-coherent pinning regression. These conditional results
+and counterexamples remain **unreviewed**. The exact remaining obligation is
+source extraction plus cardinality restoration through changed guards, outside
+capacity, or a nonlocal discrete replacement; no C-II or Level I conclusion is
+promoted. The [candidate registry](../../../targets/target-c/candidate-registry.json)
+records each claim, canonical dependencies, paired verifier/fixture, obstruction,
+validation limit, and next proof obligation.
+
 ## Frozen repositories
 
 - Source main: `42f0296d1aca068c809f74cee5dcdb4ebdb27c73` (tree `e061f039eac44c286a00eacdcaa9a4cbbb877891`).
 - Frozen destination baseline main: `60c2576b4893a7e9001d2c8bfbe5cfb64c1c969f` (tree `f4d73c1080b3b4a1b7757f5fd96109b6cd4b5c76`).
-- Current destination main after PR #19: `806f150c4b47b1b831163fc89c78f2b1c87318a2` (tree `2969aff9998da3146dda5eab0a0df593f24dc506`); the current PR #1008 batch is based on this exact tree.
+- Destination main before the PR #1008 batch: 806f150c4b47b1b831163fc89c78f2b1c87318a2 (tree 2969aff9998da3146dda5eab0a0df593f24dc506).
+- PR #20 merged as 495351ba7d127deb48f3666623615ff6ea19c39e (tree db11ffa20d29d91548868edd0784d8321c91cfa1); the PR #951 batch is based on this exact tree.
 
 Before preparing this batch, the live source main and open-PR list were refreshed.
 Main remained at the frozen SHA above; all 21 open PR numbers and head SHAs still

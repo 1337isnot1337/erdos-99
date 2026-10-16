@@ -141,3 +141,74 @@ report's source-era request for human review does not override the destination's
 current independent AI-agent exact-commit review policy. The theorem-state,
 publication inclusion set, canonical certificate registry, and target status
 were not changed.
+
+## Third batch — pinned source PR #951
+
+The source open-PR snapshot was refreshed before this batch. The source main
+remained 42f0296d1aca068c809f74cee5dcdb4ebdb27c73, the 21 open PR identities
+and heads were unchanged, and PR #951 remained at
+0023585a98d8f5f23df64174a091c143710ba78a. Its recorded branch merge base is
+d999528cfaafd811a4a19bcfacd00f217c2fc375; the five destination evidence
+verifiers and seven reports are all absent at their destination paths before
+this batch.
+
+The imported candidate family preserves seven distinct mathematical
+contributions: (1) exact rhombic vacancy-hop and two-site-capacity results;
+(2) exact fixed-strip weak and strict restoration capacities; (3) a
+near-coherent fixed-boundary pinning regression; (4) a one-vacancy full-chart
+release with full-source pair checks; (5) one-vacancy side-pin release; (6) an
+effective discrete packet and wall-span stress identity; and (7) a conditional
+unilateral local-rigidity barrier. Reports are first-party source bytes and
+every source lifecycle label is unreviewed; there is no canonical promotion.
+The seven report artifact IDs, fifteen evidence files, and two handled metadata
+files are separately listed in the PR ledger.
+
+The main positive conclusions are conditional reduced-source results. Under
+actual chart, patch, and stress-transversal hypotheses, one literal vacancy
+can release a chart, row, or side pins while retaining every other source
+label and respecting the reported lower and upper constraints. The results
+leave one label missing and do not extract their hypotheses from every
+canonical source. The exact coherent-strip capacity is one below restoration
+with its wall fixed. The local rigidity candidate rules out continuous local
+refill under full-support stress and mixed-core rigidity; the
+near-coherent regression rules out a continuous fixed-boundary strictification
+based only on arbitrarily small train-angle variation. These findings narrow
+the route but do not prohibit changed-wall or nonlocal discrete replacements.
+
+Five source verifiers and fixtures are preserved. Their finite checks include
+exact rational / Q(sqrt(15)) arithmetic, whole-segment quadratic minima,
+source and upper-pair checks, multiple rhombic angles, near-coherent pinned
+equilibria, and negative route controls. The scripts do not prove the
+all-parameter analytic theorems, canonical source extraction, global
+optimality, universal stress-transversal, or restoration. Each command and
+post-import output comparison is recorded in the committed PR #951 verification
+receipt. The candidate registry maps each theorem/obstruction to evidence,
+canonical dependencies, scope, and next proof obligation.
+
+No theorem-state, target status, 94-entry canonical certificate registry, or
+publication-inclusion entry changes in this batch.
+
+
+
+The #951 local replay completed in an isolated temporary directory. All five
+source verifiers exited successfully, and each generated JSON fixture was
+byte-identical to its imported source fixture. The rhombic replay checked 224
+source pairs, 5,000 strip source pairs, 4,512 endpoints, 2,120 strict inserted
+pairs, 5,000 weighted-cap identities, and 906 exact disk samples. The
+near-coherent replay checked 40,128 source pairs, 1,808 weighted edges, 768
+equilibria, and 4,608 anchored rows. The full-chart replay checked 20,168
+source pairs, 74,464 segment pairs, 18,616 endpoints, and 17,232 strict chart
+pairs. The side-pin replay checked 6,844 source pairs, 12,474 endpoints, 6,751
+strict endpoints, 87,318 path-sample pairs, and 490 strict-descent pairs. The
+effective-packet replay also passed and its regenerated fixture matched exactly.
+Fixture hashes and commands are in the [PR #951 local verification receipt](receipts/target-c-pr951-local-verification.json).
+
+The full destination canonical runner then passed all 94 of 94 registered
+certificates with zero failures. On this batch tree, `check_theorem_state.py`
+passed; `build_artifact_index.py` reported 538 artifacts; and `check_public.py`
+reported zero errors, 94 certificates, 451 claims, 845 dependency edges, 810
+retained source files, and 20 tasks (`mathematical_proof=false`). These checks
+validate the destination integrity and finite computation, not the analytic
+claims in the seven unreviewed reports. The theorem-state remains
+`2026-10-15.publication.2`; no canonical status, publication inclusion, or
+repository visibility was changed.

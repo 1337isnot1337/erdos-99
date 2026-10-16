@@ -49,6 +49,38 @@ large triangle-free global minimizer has \(g_A\le cD+o(D)\) for some fixed
 The report also gives a nonglobal triangle-free high-reserve regression, which
 blocks dropping global optimality from that proposed upper-bound route.
 
+## One-vacancy release and restoration barriers
+
+Source PR #951 preserves a connected family of **unreviewed** C-II candidates and
+regressions. The [full reports](../../research/proposals.md) and
+[machine-readable candidate registry](candidate-registry.json) link seven
+arguments and five exact verifier/fixture pairs. Together they expose both a
+positive reduced-source route and its missing cardinality payment:
+
+- An exact rhombic vacancy hop has a proved candidate threshold
+  \(\cos\theta\le1/4\); the report also proves exact two-site weak capacity
+  throughout \(0\le\cos\theta<1/2\). The coherent strip theorem gives weak
+  capacity \(k\) and strict capacity \(k-1\), even with overlapping hop cells.
+- A literal vacancy can release a complete oblique chart or a coherent row
+  with selected side pins while preserving every full-source lower and upper
+  constraint. Under the stated all-stress-transversal hypothesis this gives a
+  strict reduced-source diameter descent.
+- Effective fixed-wall packets give explicit phase tolerances and a source
+  stress identity forcing a wall-span contraction. A separate unilateral
+  rigidity candidate bars continuous local restoration under full-support
+  positive stress and mixed-core rigidity.
+- The nearby-chart extension is blocked: arbitrarily small train-angle
+  variation can pin a complete grid after a vacancy when its boundary is held
+  fixed. Fixed-wall strip capacity, the three-label guard regression, and
+  covered-hull examples block the current local refill arguments.
+
+These results do not extract the required chart, strip, vacancy path, or
+stress-transversal from every canonical source. They leave a one-label deficit
+and do not construct the required same-cardinality endpoint. Progress needs a
+moved-guard or outside-capacity payment, or a nonlocal discrete replacement
+that passes every source-pair bound. Do not infer C-II or Level I closure from
+the exact finite fixtures or conditional descent statements.
+
 ## Begin a bounded contribution
 
 For any finite endpoint, keep the source cardinality and every pairwise lower

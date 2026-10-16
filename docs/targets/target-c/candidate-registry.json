@@ -107,6 +107,624 @@
         "third_party_material": "bibliographic citations and short factual summaries only; no PDF collection or protected extracted text copied",
         "visibility": "destination repository remains private; no publication inclusion or visibility change"
       }
+    },
+    {
+      "candidate_id": "TARGET-C-RHOMBIC-VACANCY-HOP-CAPACITY-PR951",
+      "title": "Rhombic vacancy hop and two-site capacity",
+      "status": "unreviewed",
+      "source_lifecycle": "unreviewed; proved candidate plus exact finite regression",
+      "target_scope": [
+        "Target C-II"
+      ],
+      "claim": {
+        "statement": "For an exact eight-label rhombic patch with 0<=cos(theta)<1/2, the report proves a unique two-site weak capacity; for cos(theta)<=1/4 it gives a source-compatible one-vacancy hop path with the stated exterior shield and no diameter increase, retaining all exterior labels.",
+        "hypotheses": [
+          "exact rhombic patch and six guards",
+          "for the hop, cos(theta)<=1/4",
+          "one supplied path in the eligible source-patch graph"
+        ],
+        "not_claimed": [
+          "canonical source extraction",
+          "stress-transversal preservation across a nonsingleton stress polytope",
+          "cardinality restoration",
+          "global optimality",
+          "C-II or Level I closure"
+        ]
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_rhombic_vacancy_hop_and_two_site_capacity_slot07_2026-10-10.md",
+          "role": "proof report",
+          "source_git_blob_sha": "21307104469c70a6d051ce86aa72738683e67ba3",
+          "source_sha256": "ef7ce6545acbd5ddf10de7a9c85f09bd6719b3d2263d4f3092834337a219dc8d",
+          "destination_sha256": "ef7ce6545acbd5ddf10de7a9c85f09bd6719b3d2263d4f3092834337a219dc8d",
+          "source_artifact_id": "ART-BEA253558A03"
+        },
+        {
+          "path": "research/verify_target_c_rhombic_vacancy_hop_slot07_2026_10_10.py",
+          "role": "finite verifier",
+          "source_git_blob_sha": "1f487e0e10d5fb640bf36f5349ccff68127f2b2c",
+          "source_sha256": "25a97d27739ea8ae999eab7e09788dd5be14b30603f5aa078fe970ece25728bb",
+          "destination_sha256": "25a97d27739ea8ae999eab7e09788dd5be14b30603f5aa078fe970ece25728bb"
+        },
+        {
+          "path": "research/target_c_rhombic_vacancy_hop_slot07_certificate_2026_10_10.json",
+          "role": "finite JSON fixture",
+          "source_git_blob_sha": "4e96da9202b2b0a49a496b9dcb3d265d8089aae3",
+          "source_sha256": "15aa5bbcfd3eb47dd1d9262c0f77789614f7211b05c416b5d3f72cbadcd36c98",
+          "destination_sha256": "15aa5bbcfd3eb47dd1d9262c0f77789614f7211b05c416b5d3f72cbadcd36c98"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [
+          "TARGET-C-COHERENT-STRIP-RESTORATION-CAPACITY-PR951"
+        ],
+        "description": "Source PR context only; no imported candidate is a canonical premise."
+      },
+      "obstructions_and_limits": [
+        "The hop endpoint retains a one-label deficit. The finite square fixtures have smaller competitors and are explicitly nonglobal."
+      ],
+      "validation": {
+        "status": "finite verifier replay passed; report claim remains unreviewed",
+        "scope": "224 source pairs; 5,000 strip source pairs; 4,512 endpoint pairs; 2,120 strict inserted pairs; 5,000 weighted cap identities; 906 exact clear-cap disk samples",
+        "command": "python3 research/verify_target_c_rhombic_vacancy_hop_slot07_2026_10_10.py",
+        "fixture_path": "research/target_c_rhombic_vacancy_hop_slot07_certificate_2026_10_10.json",
+        "fixture_sha256": "15aa5bbcfd3eb47dd1d9262c0f77789614f7211b05c416b5d3f72cbadcd36c98",
+        "fixture_comparison": "regenerated output is byte-identical to imported source fixture",
+        "limits": "Finite replay does not audit the analytic proof, canonical source extraction, global optimality, or Target C closure."
+      },
+      "next_proof_obligations": [
+        "Extract an eligible path from every relevant canonical source and track all normalized stresses and upper pairs.",
+        "Pay the remaining vacancy by a separate full-source refill or another admissible same-cardinality endpoint."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 951,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/951",
+        "source_pr_draft": false,
+        "source_head_sha": "0023585a98d8f5f23df64174a091c143710ba78a",
+        "source_head_tree": "c2b173233320394fdc1ec5b9a29b0a838c2eca2e",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+        "source_merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+        "source_theorem_state": "2026-10-10.audit.234",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "495351ba7d127deb48f3666623615ff6ea19c39e"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent work",
+        "third_party_material": "no PDFs or extracted third-party text copied; bibliographic links are retained in reports",
+        "visibility": "destination remains private; publication-inclusion set unchanged"
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-COHERENT-STRIP-RESTORATION-CAPACITY-PR951",
+      "title": "Exact coherent-strip restoration capacity",
+      "status": "unreviewed",
+      "source_lifecycle": "unreviewed; proved candidate with finite packets",
+      "target_scope": [
+        "Target C-II"
+      ],
+      "claim": {
+        "statement": "For every k>=2 and strict rhombic angle 0<=c<1/2, the report claims the largest unit-separated weak filling of the fixed-guard strip has k labels while strict capacity is exactly k-1, including overlapping simultaneous hop cells.",
+        "hypotheses": [
+          "fixed coherent strip geometry and wall guards",
+          "arbitrary exterior source labels remain fixed"
+        ],
+        "not_claimed": [
+          "same-cardinality fixed-wall refill",
+          "a moved-wall or outside-capacity payment",
+          "global prohibition of all replacement architectures"
+        ]
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_coherent_strip_exact_restoration_capacity_slot07_2026-10-10.md",
+          "role": "proof report",
+          "source_git_blob_sha": "4f2760b719148c1b3c7872eca1b4b05097ca75ec",
+          "source_sha256": "2af4a903a40411961bd2baf9afd107ca8e0d7ba47ed7ca118c15c80fa6116524",
+          "destination_sha256": "2af4a903a40411961bd2baf9afd107ca8e0d7ba47ed7ca118c15c80fa6116524",
+          "source_artifact_id": "ART-CD03CC52BC3E"
+        },
+        {
+          "path": "research/verify_target_c_rhombic_vacancy_hop_slot07_2026_10_10.py",
+          "role": "finite verifier",
+          "source_git_blob_sha": "1f487e0e10d5fb640bf36f5349ccff68127f2b2c",
+          "source_sha256": "25a97d27739ea8ae999eab7e09788dd5be14b30603f5aa078fe970ece25728bb",
+          "destination_sha256": "25a97d27739ea8ae999eab7e09788dd5be14b30603f5aa078fe970ece25728bb"
+        },
+        {
+          "path": "research/target_c_rhombic_vacancy_hop_slot07_certificate_2026_10_10.json",
+          "role": "finite JSON fixture",
+          "source_git_blob_sha": "4e96da9202b2b0a49a496b9dcb3d265d8089aae3",
+          "source_sha256": "15aa5bbcfd3eb47dd1d9262c0f77789614f7211b05c416b5d3f72cbadcd36c98",
+          "destination_sha256": "15aa5bbcfd3eb47dd1d9262c0f77789614f7211b05c416b5d3f72cbadcd36c98"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [
+          "TARGET-C-RHOMBIC-VACANCY-HOP-CAPACITY-PR951"
+        ],
+        "description": "Source PR context only; no imported candidate is a canonical premise."
+      },
+      "obstructions_and_limits": [
+        "Exact capacity blocks the fixed-wall restoration arrow under its hypotheses; the positive packet has a one-label population deficit."
+      ],
+      "validation": {
+        "status": "finite verifier replay passed; report claim remains unreviewed",
+        "scope": "32 exact one-vacancy strip packets, capacity identities, and 5,000 strip source-pair checks",
+        "command": "python3 research/verify_target_c_rhombic_vacancy_hop_slot07_2026_10_10.py",
+        "fixture_path": "research/target_c_rhombic_vacancy_hop_slot07_certificate_2026_10_10.json",
+        "fixture_sha256": "15aa5bbcfd3eb47dd1d9262c0f77789614f7211b05c416b5d3f72cbadcd36c98",
+        "fixture_comparison": "regenerated output is byte-identical to imported source fixture",
+        "limits": "Finite replay does not audit the analytic proof, canonical source extraction, global optimality, or Target C closure."
+      },
+      "next_proof_obligations": [
+        "Change or pay for guards, use proved outside capacity, or construct a nonlocal discrete replacement satisfying every source lower/upper pair."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 951,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/951",
+        "source_pr_draft": false,
+        "source_head_sha": "0023585a98d8f5f23df64174a091c143710ba78a",
+        "source_head_tree": "c2b173233320394fdc1ec5b9a29b0a838c2eca2e",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+        "source_merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+        "source_theorem_state": "2026-10-10.audit.234",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "495351ba7d127deb48f3666623615ff6ea19c39e"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent work",
+        "third_party_material": "no PDFs or extracted third-party text copied; bibliographic links are retained in reports",
+        "visibility": "destination remains private; publication-inclusion set unchanged"
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-NEAR-COHERENT-PINNING-REGRESSION-PR951",
+      "title": "Arbitrarily near-coherent fixed-wall pinning regression",
+      "status": "unreviewed",
+      "source_lifecycle": "unreviewed; regression proved candidate",
+      "target_scope": [
+        "Target C-II"
+      ],
+      "claim": {
+        "statement": "For every m,n>=3, arbitrarily small variation of the first two train directions can produce an embedded unit-separated rhombic grid whose retained interior is positively pinned after one vacancy with the complete old boundary fixed; this refutes continuous fixed-boundary strictification based only on near-coherence.",
+        "hypotheses": [
+          "complete near-coherent rhombic grid",
+          "one interior vacancy",
+          "complete old boundary fixed"
+        ],
+        "not_claimed": [
+          "canonical global minimizer",
+          "full-source normalized KKT stress",
+          "moving-wall replacement",
+          "disconnected finite replacement",
+          "all vacancy positions"
+        ]
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_near_coherent_one_vacancy_pinning_regression_slot07_2026-10-10.md",
+          "role": "proof report",
+          "source_git_blob_sha": "ac08eb5e699cd9fe7e2a408f320d409e99ae62f2",
+          "source_sha256": "56891e8f8e3af9a64b02d10ee3b7e7387f8d3238008851304a8b8646f5b46c53",
+          "destination_sha256": "56891e8f8e3af9a64b02d10ee3b7e7387f8d3238008851304a8b8646f5b46c53",
+          "source_artifact_id": "ART-C18D2BBA98D5"
+        },
+        {
+          "path": "research/verify_target_c_near_coherent_one_vacancy_pinning_slot07_2026_10_10.py",
+          "role": "finite verifier",
+          "source_git_blob_sha": "8290d755bd746f0c8d1d023bedc2bd40c7cb5549",
+          "source_sha256": "ba8718e7e823f3e0524f963560a56c138949f5006f661ae9e7ff86b30a76510e",
+          "destination_sha256": "ba8718e7e823f3e0524f963560a56c138949f5006f661ae9e7ff86b30a76510e"
+        },
+        {
+          "path": "research/target_c_near_coherent_one_vacancy_pinning_slot07_certificate_2026_10_10.json",
+          "role": "finite JSON fixture",
+          "source_git_blob_sha": "5777da8e7768a7afd51f358c88f3188bd5a1df01",
+          "source_sha256": "84873e31b57302edf88087f955fa98b93c09e5d028065f8527ded3bce292bbcd",
+          "destination_sha256": "84873e31b57302edf88087f955fa98b93c09e5d028065f8527ded3bce292bbcd"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [
+          "TARGET-C-ONE-VACANCY-FULL-CHART-RELEASE-PR951",
+          "TARGET-C-EFFECTIVE-FIXED-WALL-PACKET-SPAN-PR951"
+        ],
+        "description": "Source PR context only; no imported candidate is a canonical premise."
+      },
+      "obstructions_and_limits": [
+        "The pinning result blocks only the near-coherent fixed-boundary extension; exact coherent Audit 195 and moving-wall/discrete routes are not contradicted."
+      ],
+      "validation": {
+        "status": "finite verifier replay passed; report claim remains unreviewed",
+        "scope": "48 fixtures; 40,128 source pairs; 1,808 weighted moving edges; 768 moving equilibria; 4,608 anchored-chain rows",
+        "command": "python3 research/verify_target_c_near_coherent_one_vacancy_pinning_slot07_2026_10_10.py",
+        "fixture_path": "research/target_c_near_coherent_one_vacancy_pinning_slot07_certificate_2026_10_10.json",
+        "fixture_sha256": "84873e31b57302edf88087f955fa98b93c09e5d028065f8527ded3bce292bbcd",
+        "fixture_comparison": "regenerated output is byte-identical to imported source fixture",
+        "limits": "Finite replay does not audit the analytic proof, canonical source extraction, global optimality, or Target C closure."
+      },
+      "next_proof_obligations": [
+        "Do not replace exact source hypotheses by approximate chart language without a new stability theorem.",
+        "Pursue moving guards, nonlocal replacements, or stronger extracted geometric hypotheses."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 951,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/951",
+        "source_pr_draft": false,
+        "source_head_sha": "0023585a98d8f5f23df64174a091c143710ba78a",
+        "source_head_tree": "c2b173233320394fdc1ec5b9a29b0a838c2eca2e",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+        "source_merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+        "source_theorem_state": "2026-10-10.audit.234",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "495351ba7d127deb48f3666623615ff6ea19c39e"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent work",
+        "third_party_material": "no PDFs or extracted third-party text copied; bibliographic links are retained in reports",
+        "visibility": "destination remains private; publication-inclusion set unchanged"
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-ONE-VACANCY-FULL-CHART-RELEASE-PR951",
+      "title": "One-vacancy full-chart release",
+      "status": "unreviewed",
+      "source_lifecycle": "unreviewed; proved candidate; conditional stress-transversal corollary",
+      "target_scope": [
+        "Target C-II"
+      ],
+      "claim": {
+        "statement": "For an actual complete oblique rectangular chart with one literal interior deletion, the report constructs a finite motion releasing every other chart label while arbitrary exterior labels stay fixed and all full-source lower and upper pairs remain feasible; under an all-normalized-stresses transversal hypothesis, the reduced source has strict diameter descent.",
+        "hypotheses": [
+          "actual complete oblique rectangular chart in the source",
+          "one interior literal vacancy",
+          "for strict descent, released chart labels meet every normalized source stress"
+        ],
+        "not_claimed": [
+          "extraction of the chart from every canonical C-II source",
+          "the all-stress-transversal hypothesis in general",
+          "restoration of the deleted label",
+          "same-cardinality contradiction or Level I closure"
+        ]
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_one_vacancy_full_chart_release_slot07_2026-10-10.md",
+          "role": "proof report",
+          "source_git_blob_sha": "5791e6aec0ce56868308e3200e9874285b3ffb52",
+          "source_sha256": "61ab182a0460cfe47d0b52e6a65bfbc65c2fdd59890e354024307ebab510793c",
+          "destination_sha256": "61ab182a0460cfe47d0b52e6a65bfbc65c2fdd59890e354024307ebab510793c",
+          "source_artifact_id": "ART-A1E11F79CF6E"
+        },
+        {
+          "path": "research/verify_target_c_one_vacancy_full_chart_release_slot07_2026_10_10.py",
+          "role": "finite verifier",
+          "source_git_blob_sha": "adcf92690f684491149d662ebbd142f05d17fbc9",
+          "source_sha256": "057777207ee2099e34f1c9b8c9e169913d9d2ebd85227c009ebe2536d674aa09",
+          "destination_sha256": "057777207ee2099e34f1c9b8c9e169913d9d2ebd85227c009ebe2536d674aa09"
+        },
+        {
+          "path": "research/target_c_one_vacancy_full_chart_release_slot07_certificate_2026_10_10.json",
+          "role": "finite JSON fixture",
+          "source_git_blob_sha": "0fc60b74809da931906f7e848d36a123845c6cbc",
+          "source_sha256": "9853efb8f946b943515d041d24c80e8c8dbf3ca4626cfe6d10b914d0e9407891",
+          "destination_sha256": "9853efb8f946b943515d041d24c80e8c8dbf3ca4626cfe6d10b914d0e9407891"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-OBLIQUE-ONE-VACANCY-STRICTIFICATION",
+          "C-NONCONTACT-WALL-WEAK-SHIELD",
+          "C-NONCONTACT-WALL-STRICT-SHIELD",
+          "C-FINITE-KKT-STRICT-MOTION-ALTERNATIVE"
+        ],
+        "candidate_relations": [
+          "TARGET-C-EFFECTIVE-FIXED-WALL-PACKET-SPAN-PR951",
+          "TARGET-C-ONE-VACANCY-SIDE-PIN-RELEASE-PR951"
+        ],
+        "description": "Source PR context only; no imported candidate is a canonical premise."
+      },
+      "obstructions_and_limits": [
+        "The exact endpoint has one fewer label. A selected strict endpoint can have its open unit disks cover the old chart hull, preventing a fixed-packet insertion there. The near-coherent regression forbids using small angle error alone as a substitute for exact hypotheses."
+      ],
+      "validation": {
+        "status": "finite verifier replay passed; report claim remains unreviewed",
+        "scope": "72 fixtures; 20,168 source pairs; 74,464 segment pairs; 18,616 endpoint pairs; 17,232 strict chart pairs",
+        "command": "python3 research/verify_target_c_one_vacancy_full_chart_release_slot07_2026_10_10.py",
+        "fixture_path": "research/target_c_one_vacancy_full_chart_release_slot07_certificate_2026_10_10.json",
+        "fixture_sha256": "9853efb8f946b943515d041d24c80e8c8dbf3ca4626cfe6d10b914d0e9407891",
+        "fixture_comparison": "regenerated output is byte-identical to imported source fixture",
+        "limits": "Finite replay does not audit the analytic proof, canonical source extraction, global optimality, or Target C closure."
+      },
+      "next_proof_obligations": [
+        "Extract a chart and stress-transversal from the canonical source with all isolates retained.",
+        "Restore the missing label outside the covered hull or change the packet/guards, checking every lower and upper pair.",
+        "Establish a source-wide contradiction only after a valid same-cardinality or strict sub-D endpoint."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 951,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/951",
+        "source_pr_draft": false,
+        "source_head_sha": "0023585a98d8f5f23df64174a091c143710ba78a",
+        "source_head_tree": "c2b173233320394fdc1ec5b9a29b0a838c2eca2e",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+        "source_merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+        "source_theorem_state": "2026-10-10.audit.234",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "495351ba7d127deb48f3666623615ff6ea19c39e"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent work",
+        "third_party_material": "no PDFs or extracted third-party text copied; bibliographic links are retained in reports",
+        "visibility": "destination remains private; publication-inclusion set unchanged"
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-ONE-VACANCY-SIDE-PIN-RELEASE-PR951",
+      "title": "One-vacancy row and side-pin release",
+      "status": "unreviewed",
+      "source_lifecycle": "unreviewed; proved candidate; conditional stress-transversal corollary",
+      "target_scope": [
+        "Target C-II"
+      ],
+      "claim": {
+        "statement": "For an actual coherent one-row strip with one literal end vacancy, the report proves a continuous finite motion releasing the retained interior row and selected side pins, with every exterior source label and isolate fixed and every full-source lower/upper pair checked; an all-stress-transversal hypothesis yields reduced-source strict descent.",
+        "hypotheses": [
+          "actual coherent strip and designated end vacancy",
+          "selected pin set satisfies the report geometric hypotheses",
+          "for stress descent, released set kills every normalized stress"
+        ],
+        "not_claimed": [
+          "canonical strip/transversal extraction",
+          "restoration of the final deleted label",
+          "global optimality",
+          "C-II closure"
+        ]
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_one_vacancy_side_pin_restoration_slot07_2026-10-10.md",
+          "role": "proof report",
+          "source_git_blob_sha": "83d3c626d90726f3b4d585016de61abc22863f10",
+          "source_sha256": "81fd50d508489c9454379be11eeb01e7efd4ffdb01ec7c1921a4150e929e755f",
+          "destination_sha256": "81fd50d508489c9454379be11eeb01e7efd4ffdb01ec7c1921a4150e929e755f",
+          "source_artifact_id": "ART-2755DC266ACB"
+        },
+        {
+          "path": "research/verify_target_c_one_vacancy_side_pin_release_slot07_2026_10_10.py",
+          "role": "finite verifier",
+          "source_git_blob_sha": "472664e29281a304efbdf1f90893389aabf5575d",
+          "source_sha256": "e070ad02b282ec2d200fd852957dd3f192b1fbea6cf82d51de8eb0feeadc0539",
+          "destination_sha256": "e070ad02b282ec2d200fd852957dd3f192b1fbea6cf82d51de8eb0feeadc0539"
+        },
+        {
+          "path": "research/target_c_one_vacancy_side_pin_release_slot07_certificate_2026_10_10.json",
+          "role": "finite JSON fixture",
+          "source_git_blob_sha": "aacd03cb921a38d96c9b5c7c1925b7b50156a264",
+          "source_sha256": "c663a5d37f8fa325a54e92f95d5ce0684d294509d94edd3e2b0689aa41fa2bce",
+          "destination_sha256": "c663a5d37f8fa325a54e92f95d5ce0684d294509d94edd3e2b0689aa41fa2bce"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-OBLIQUE-ONE-VACANCY-STRICTIFICATION",
+          "C-NONCONTACT-WALL-STRICT-SHIELD"
+        ],
+        "candidate_relations": [
+          "TARGET-C-COHERENT-STRIP-RESTORATION-CAPACITY-PR951"
+        ],
+        "description": "Source PR context only; no imported candidate is a canonical premise."
+      },
+      "obstructions_and_limits": [
+        "The three-label, five-guard cell has strict capacity exactly two; the released source still has a one-label deficit."
+      ],
+      "validation": {
+        "status": "finite verifier replay passed; report claim remains unreviewed",
+        "scope": "68 fixtures; 6,844 source pairs; 12,474 endpoint pairs; 6,751 strict endpoints; 87,318 sampled path pairs; 490 strict descent pairs",
+        "command": "python3 research/verify_target_c_one_vacancy_side_pin_release_slot07_2026_10_10.py",
+        "fixture_path": "research/target_c_one_vacancy_side_pin_release_slot07_certificate_2026_10_10.json",
+        "fixture_sha256": "c663a5d37f8fa325a54e92f95d5ce0684d294509d94edd3e2b0689aa41fa2bce",
+        "fixture_comparison": "regenerated output is byte-identical to imported source fixture",
+        "limits": "Finite replay does not audit the analytic proof, canonical source extraction, global optimality, or Target C closure."
+      },
+      "next_proof_obligations": [
+        "Prove the source-realized capacity payment for the remaining vacancy or use a distinct nonlocal same-cardinality endpoint."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 951,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/951",
+        "source_pr_draft": false,
+        "source_head_sha": "0023585a98d8f5f23df64174a091c143710ba78a",
+        "source_head_tree": "c2b173233320394fdc1ec5b9a29b0a838c2eca2e",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+        "source_merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+        "source_theorem_state": "2026-10-10.audit.234",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "495351ba7d127deb48f3666623615ff6ea19c39e"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent work",
+        "third_party_material": "no PDFs or extracted third-party text copied; bibliographic links are retained in reports",
+        "visibility": "destination remains private; publication-inclusion set unchanged"
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-EFFECTIVE-FIXED-WALL-PACKET-SPAN-PR951",
+      "title": "Effective discrete packet and wall-span payment",
+      "status": "unreviewed",
+      "source_lifecycle": "unreviewed; proved candidate plus finite regression",
+      "target_scope": [
+        "Target C-II"
+      ],
+      "claim": {
+        "statement": "Under the report’s actual-wall coordinate tolerance h^2/(10^8 L^3), and under linear tolerance h/(10^4 L) when every actual basis-grid edge is a contact, a one-vacancy discrete packet gives full-source lower/upper feasibility; an exact original-source stress identity forces contraction of a row/column wall span during retained strict diameter descent.",
+        "hypotheses": [
+          "actual labeled chart within the stated phase tolerance",
+          "actual simple unit boundary",
+          "for the linear tolerance, all actual basis-grid edges are unit contacts",
+          "for descent, source stress hypotheses of the report"
+        ],
+        "not_claimed": [
+          "canonical chart extraction",
+          "stress-transversal extraction",
+          "same-cardinality refill",
+          "using an already-spare bay as new restoration payment"
+        ]
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_effective_fixed_wall_packet_and_span_payment_slot07_2026-10-10.md",
+          "role": "proof report",
+          "source_git_blob_sha": "10fdd79a2470f22faf5558e906407b60bfde626c",
+          "source_sha256": "dc562b728b3a574730e0a71eaebd996dbebc85eb2bc01f9f2ce375c771a01b90",
+          "destination_sha256": "dc562b728b3a574730e0a71eaebd996dbebc85eb2bc01f9f2ce375c771a01b90",
+          "source_artifact_id": "ART-4944383024AA"
+        },
+        {
+          "path": "research/verify_target_c_effective_fixed_wall_packet_slot07_2026_10_10.py",
+          "role": "finite verifier",
+          "source_git_blob_sha": "c5069d752b03e09c09f8fb40bb17d3f375ac8300",
+          "source_sha256": "6ef1a39a3f5d10f0ffa1314fa8ff25aa2d42251372e859c9cbe3150686b710fc",
+          "destination_sha256": "6ef1a39a3f5d10f0ffa1314fa8ff25aa2d42251372e859c9cbe3150686b710fc"
+        },
+        {
+          "path": "research/target_c_effective_fixed_wall_packet_slot07_certificate_2026_10_10.json",
+          "role": "finite JSON fixture",
+          "source_git_blob_sha": "fbcc3f345271b1b4493fd39370a5978822b05db9",
+          "source_sha256": "c6992738d019b57def56cb19e6b137f17486e95e7ac54737fb37f405f6cedd19",
+          "destination_sha256": "c6992738d019b57def56cb19e6b137f17486e95e7ac54737fb37f405f6cedd19"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-OBLIQUE-ONE-VACANCY-STRICTIFICATION",
+          "C-NONCONTACT-WALL-STRICT-SHIELD",
+          "C-FINITE-KKT-STRICT-MOTION-ALTERNATIVE"
+        ],
+        "candidate_relations": [
+          "TARGET-C-NEAR-COHERENT-PINNING-REGRESSION-PR951"
+        ],
+        "description": "Source PR context only; no imported candidate is a canonical premise."
+      },
+      "obstructions_and_limits": [
+        "The report gives near-coherent pinning regressions and a finite bay that was already spare; it does not yield new canonical restoration payment."
+      ],
+      "validation": {
+        "status": "finite verifier replay passed; report claim remains unreviewed",
+        "scope": "effective fixed-wall packet verifier passed; fixture regenerated byte-for-byte; full finite count detail retained in verifier output",
+        "command": "python3 research/verify_target_c_effective_fixed_wall_packet_slot07_2026_10_10.py",
+        "fixture_path": "research/target_c_effective_fixed_wall_packet_slot07_certificate_2026_10_10.json",
+        "fixture_sha256": "c6992738d019b57def56cb19e6b137f17486e95e7ac54737fb37f405f6cedd19",
+        "fixture_comparison": "regenerated output is byte-identical to imported source fixture",
+        "limits": "Finite replay does not audit the analytic proof, canonical source extraction, global optimality, or Target C closure."
+      },
+      "next_proof_obligations": [
+        "Extract the actual unit wall and candidate packet from a canonical source.",
+        "Prove a nonlocal or changed-wall restoration with full-source capacity and pair ledgers."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 951,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/951",
+        "source_pr_draft": false,
+        "source_head_sha": "0023585a98d8f5f23df64174a091c143710ba78a",
+        "source_head_tree": "c2b173233320394fdc1ec5b9a29b0a838c2eca2e",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+        "source_merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+        "source_theorem_state": "2026-10-10.audit.234",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "495351ba7d127deb48f3666623615ff6ea19c39e"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent work",
+        "third_party_material": "no PDFs or extracted third-party text copied; bibliographic links are retained in reports",
+        "visibility": "destination remains private; publication-inclusion set unchanged"
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-UNILATERAL-LOCAL-RIGIDITY-GAP-PR951",
+      "title": "Unilateral local-rigidity gap for stress-transversal deletion",
+      "status": "unreviewed",
+      "source_lifecycle": "unreviewed; proved candidate",
+      "target_scope": [
+        "Target C-II"
+      ],
+      "claim": {
+        "statement": "Under the report’s full-support positive KKT stress and mixed-core infinitesimal rigidity hypotheses, every noncongruent core placement satisfying the recorded old-contact lower and old-diameter upper inequalities stays a positive source-dependent distance from the canonical core; hence a continuous local restoration cannot cross the barrier.",
+        "hypotheses": [
+          "canonical contact-minimal then diameter-pair-minimal triangle-free global minimizer in the relevant branch",
+          "D>=9",
+          "full-support positive KKT stress",
+          "mixed-core infinitesimal rigidity"
+        ],
+        "not_claimed": [
+          "a global endpoint",
+          "nonlocal core relocation or discrete replacement",
+          "C-II or Level I closure"
+        ]
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_core_unilateral_local_rigidity_gap_slot07_2026-10-10.md",
+          "role": "proof report",
+          "source_git_blob_sha": "f408b6d829df24a182fe8d8736aeaf3c0327fe88",
+          "source_sha256": "807b5ca23e786a96c43ba5ae5a1fc643e05afc1af80f038b99a201924fb6d2ef",
+          "destination_sha256": "807b5ca23e786a96c43ba5ae5a1fc643e05afc1af80f038b99a201924fb6d2ef",
+          "source_artifact_id": "ART-D96B18829DF6"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-MIXED-CORE-FINITE-RIGIDITY",
+          "C-FINITE-KKT-STRICT-MOTION-ALTERNATIVE"
+        ],
+        "candidate_relations": [],
+        "description": "Source PR context only; no imported candidate is a canonical premise."
+      },
+      "obstructions_and_limits": [
+        "The barrier applies to continuous local restoration under its stated core hypotheses; it does not rule out nonlocal discrete relocation."
+      ],
+      "validation": {
+        "status": "analytic report preserved; no standalone verifier or independent mathematical audit claimed",
+        "scope": "Local-rigidity candidate proof remains unreviewed under the stated full-support stress and mixed-core rigidity hypotheses."
+      },
+      "next_proof_obligations": [
+        "Construct a same-cardinality full-source discrete replacement that moves the core beyond the source-dependent epsilon_A barrier while retaining every source label and all lower/upper constraints."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 951,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/951",
+        "source_pr_draft": false,
+        "source_head_sha": "0023585a98d8f5f23df64174a091c143710ba78a",
+        "source_head_tree": "c2b173233320394fdc1ec5b9a29b0a838c2eca2e",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+        "source_merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+        "source_theorem_state": "2026-10-10.audit.234",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "495351ba7d127deb48f3666623615ff6ea19c39e"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent work",
+        "third_party_material": "no PDFs or extracted third-party text copied; bibliographic links are retained in reports",
+        "visibility": "destination remains private; publication-inclusion set unchanged"
+      }
     }
   ]
 }

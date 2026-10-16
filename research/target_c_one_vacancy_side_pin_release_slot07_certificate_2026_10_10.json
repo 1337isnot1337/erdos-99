@@ -1,0 +1,2349 @@
+{
+  "arithmetic": "Q(sqrt(15)); exact rational and algebraic signs",
+  "counts": {
+    "source_pairs": 6844,
+    "endpoint_pairs": 12474,
+    "strict_endpoint_pairs": 6751,
+    "path_sample_pairs": 87318,
+    "inward_unit_neighbor_checks": 252,
+    "retained_isolate_checks": 32,
+    "loaded_pin_sources": 16,
+    "positive_stress_sources": 2,
+    "certified_strict_descent_pairs": 490
+  },
+  "fixtures": [
+    {
+      "angle_fixture": "square",
+      "k": 2,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "one_top_pin",
+      "old_population": 17,
+      "new_population": 16,
+      "literal_deletions": 1,
+      "released_labels": 2,
+      "epsilon": "1/262144",
+      "tau": "1/536870912",
+      "old_diameter_squared": {
+        "a": "61/2",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "61/2",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 3,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "square",
+      "k": 2,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "all_side_pins",
+      "old_population": 17,
+      "new_population": 16,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/262144",
+      "tau": "1/536870912",
+      "old_diameter_squared": {
+        "a": "61/2",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "61/2",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 8,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "square",
+      "k": 2,
+      "exterior": "loaded_top_pin",
+      "released_pins": "one_top_pin",
+      "old_population": 9,
+      "new_population": 8,
+      "literal_deletions": 1,
+      "released_labels": 2,
+      "epsilon": "1/262144",
+      "tau": "1/536870912",
+      "old_diameter_squared": {
+        "a": "40437",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "46620686880492138528777/1152921504606846976",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 1,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "square",
+      "k": 2,
+      "exterior": "loaded_top_pin",
+      "released_pins": "all_side_pins",
+      "old_population": 9,
+      "new_population": 8,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/262144",
+      "tau": "1/536870912",
+      "old_diameter_squared": {
+        "a": "40437",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "291379293001457200005201/7205759403792793600",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 0,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "square",
+      "k": 2,
+      "exterior": "positive_boundary_stress",
+      "released_pins": "one_top_pin",
+      "old_population": 12,
+      "new_population": 11,
+      "literal_deletions": 1,
+      "released_labels": 2,
+      "epsilon": "1/262144",
+      "tau": "1/536870912",
+      "old_diameter_squared": {
+        "a": "13",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "13",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 2,
+      "stress_certificate": {
+        "normalized_stress_unique_by_row_nullity_one": true,
+        "beta_each": "1/2",
+        "horizontal_alpha": "3/2",
+        "vertical_alpha": "1",
+        "survives_literal_interior_deletion": true,
+        "released_set_hits_stress": true,
+        "positive_core_vertices": 10,
+        "selected_row_count": 12,
+        "canonical_required_rank": 17,
+        "nonglobal_competitor_diameter_squared": 12,
+        "endpoint_active_row_rank": 10,
+        "strict_step": "1/2305843009213693952",
+        "velocity": [
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "6",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-2",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-1",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-1",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-1",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-3",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "5",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "19/3",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "7",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-2",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          }
+        ],
+        "strict_diameter_squared": {
+          "a": "311039351013670314238738265022677385761/23926103924128485712268527085046202368",
+          "b": "0",
+          "field": "sqrt(15)"
+        }
+      }
+    },
+    {
+      "angle_fixture": "square",
+      "k": 2,
+      "exterior": "positive_boundary_stress",
+      "released_pins": "all_side_pins",
+      "old_population": 12,
+      "new_population": 11,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/262144",
+      "tau": "1/536870912",
+      "old_diameter_squared": {
+        "a": "13",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "13",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 4,
+      "stress_certificate": {
+        "normalized_stress_unique_by_row_nullity_one": true,
+        "beta_each": "1/2",
+        "horizontal_alpha": "3/2",
+        "vertical_alpha": "1",
+        "survives_literal_interior_deletion": true,
+        "released_set_hits_stress": true,
+        "positive_core_vertices": 10,
+        "selected_row_count": 12,
+        "canonical_required_rank": 17,
+        "nonglobal_competitor_diameter_squared": 12,
+        "endpoint_active_row_rank": 6,
+        "strict_step": "1/1152921504606846976",
+        "velocity": [
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-1",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-1",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "5/3",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-2",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "5/3",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-2",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          }
+        ],
+        "strict_diameter_squared": {
+          "a": "155519675506835157108992838969877069885/11963051962064242856134263542523101184",
+          "b": "0",
+          "field": "sqrt(15)"
+        }
+      }
+    },
+    {
+      "angle_fixture": "square",
+      "k": 5,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "one_top_pin",
+      "old_population": 32,
+      "new_population": 31,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/524288",
+      "tau": "1/1073741824",
+      "old_diameter_squared": {
+        "a": "40",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "40",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 3,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "square",
+      "k": 5,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "all_side_pins",
+      "old_population": 32,
+      "new_population": 31,
+      "literal_deletions": 1,
+      "released_labels": 14,
+      "epsilon": "1/524288",
+      "tau": "1/1073741824",
+      "old_diameter_squared": {
+        "a": "40",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "40",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 14,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "square",
+      "k": 5,
+      "exterior": "loaded_top_pin",
+      "released_pins": "one_top_pin",
+      "old_population": 18,
+      "new_population": 17,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/524288",
+      "tau": "1/1073741824",
+      "old_diameter_squared": {
+        "a": "251226",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "1158575431658983617724425/4611686018427387904",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 1,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "square",
+      "k": 5,
+      "exterior": "loaded_top_pin",
+      "released_pins": "all_side_pins",
+      "old_population": 18,
+      "new_population": 17,
+      "literal_deletions": 1,
+      "released_labels": 14,
+      "epsilon": "1/524288",
+      "tau": "1/1073741824",
+      "old_diameter_squared": {
+        "a": "251226",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "35046906807630997915435449/139503502057428484096",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 0,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "square",
+      "k": 5,
+      "exterior": "positive_boundary_stress",
+      "released_pins": "one_top_pin",
+      "old_population": 21,
+      "new_population": 20,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/524288",
+      "tau": "1/1073741824",
+      "old_diameter_squared": {
+        "a": "40",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "40",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 2,
+      "stress_certificate": {
+        "normalized_stress_unique_by_row_nullity_one": true,
+        "beta_each": "1/2",
+        "horizontal_alpha": "3",
+        "vertical_alpha": "1",
+        "survives_literal_interior_deletion": true,
+        "released_set_hits_stress": true,
+        "positive_core_vertices": 16,
+        "selected_row_count": 18,
+        "canonical_required_rank": 29,
+        "nonglobal_competitor_diameter_squared": 32,
+        "endpoint_active_row_rank": 16,
+        "strict_step": "1/9223372036854775808",
+        "velocity": [
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "39/2",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-5",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-4",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-3",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-2",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-1",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-1",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-1",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-2",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-3",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-4",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-6",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "37/2",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "23/3",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "41/2",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-2",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          }
+        ],
+        "strict_diameter_squared": {
+          "a": "122501652091537846846150775888783012286325/3062541302288446171170371466885913903104",
+          "b": "0",
+          "field": "sqrt(15)"
+        }
+      }
+    },
+    {
+      "angle_fixture": "square",
+      "k": 5,
+      "exterior": "positive_boundary_stress",
+      "released_pins": "all_side_pins",
+      "old_population": 21,
+      "new_population": 20,
+      "literal_deletions": 1,
+      "released_labels": 14,
+      "epsilon": "1/524288",
+      "tau": "1/1073741824",
+      "old_diameter_squared": {
+        "a": "40",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "40",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 4,
+      "stress_certificate": {
+        "normalized_stress_unique_by_row_nullity_one": true,
+        "beta_each": "1/2",
+        "horizontal_alpha": "3",
+        "vertical_alpha": "1",
+        "survives_literal_interior_deletion": true,
+        "released_set_hits_stress": true,
+        "positive_core_vertices": 16,
+        "selected_row_count": 18,
+        "canonical_required_rank": 29,
+        "nonglobal_competitor_diameter_squared": 32,
+        "endpoint_active_row_rank": 6,
+        "strict_step": "1/2305843009213693952",
+        "velocity": [
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-1",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-1",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "5/6",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-2",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "5/6",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "-2",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          },
+          {
+            "a": "0",
+            "b": "0",
+            "field": "sqrt(15)"
+          }
+        ],
+        "strict_diameter_squared": {
+          "a": "7656353255721115427759907970551398793385/191408831393027885698148216680369618944",
+          "b": "0",
+          "field": "sqrt(15)"
+        }
+      }
+    },
+    {
+      "angle_fixture": "wide_13_85",
+      "k": 2,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "one_top_pin",
+      "old_population": 17,
+      "new_population": 16,
+      "literal_deletions": 1,
+      "released_labels": 2,
+      "epsilon": "1/524288",
+      "tau": "1/1073741824",
+      "old_diameter_squared": {
+        "a": "439541/14450",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "439541/14450",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 3,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_13_85",
+      "k": 2,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "all_side_pins",
+      "old_population": 17,
+      "new_population": 16,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/524288",
+      "tau": "1/1073741824",
+      "old_diameter_squared": {
+        "a": "439541/14450",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "439541/14450",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 8,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_13_85",
+      "k": 2,
+      "exterior": "loaded_top_pin",
+      "released_pins": "one_top_pin",
+      "old_population": 9,
+      "new_population": 8,
+      "literal_deletions": 1,
+      "released_labels": 2,
+      "epsilon": "1/524288",
+      "tau": "1/1073741824",
+      "old_diameter_squared": {
+        "a": "3436589/85",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "932262908362425465045037/23058430092136939520",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 1,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_13_85",
+      "k": 2,
+      "exterior": "loaded_top_pin",
+      "released_pins": "all_side_pins",
+      "old_population": 9,
+      "new_population": 8,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/524288",
+      "tau": "1/1073741824",
+      "old_diameter_squared": {
+        "a": "3436589/85",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "19810586802646509716243809/489991639457909964800",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 0,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_13_85",
+      "k": 5,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "one_top_pin",
+      "old_population": 32,
+      "new_population": 31,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/1048576",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "3712/85",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "3712/85",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 3,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_13_85",
+      "k": 5,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "all_side_pins",
+      "old_population": 32,
+      "new_population": 31,
+      "literal_deletions": 1,
+      "released_labels": 14,
+      "epsilon": "1/1048576",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "3712/85",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "3712/85",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 14,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_13_85",
+      "k": 5,
+      "exterior": "loaded_top_pin",
+      "released_pins": "one_top_pin",
+      "old_population": 18,
+      "new_population": 17,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/1048576",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "4270564/17",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "393890005790889406613160701/1567973246265311887360",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 1,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_13_85",
+      "k": 5,
+      "exterior": "loaded_top_pin",
+      "released_pins": "all_side_pins",
+      "old_population": 18,
+      "new_population": 17,
+      "literal_deletions": 1,
+      "released_labels": 14,
+      "epsilon": "1/1048576",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "4270564/17",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "11915172675165351154125148781/47431190699525684592640",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 0,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_11_61",
+      "k": 2,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "one_top_pin",
+      "old_population": 17,
+      "new_population": 16,
+      "literal_deletions": 1,
+      "released_labels": 2,
+      "epsilon": "1/524288",
+      "tau": "1/1073741824",
+      "old_diameter_squared": {
+        "a": "225889/7442",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "225889/7442",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 3,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_11_61",
+      "k": 2,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "all_side_pins",
+      "old_population": 17,
+      "new_population": 16,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/524288",
+      "tau": "1/1073741824",
+      "old_diameter_squared": {
+        "a": "225889/7442",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "225889/7442",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 8,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_11_61",
+      "k": 2,
+      "exterior": "loaded_top_pin",
+      "released_pins": "one_top_pin",
+      "old_population": 9,
+      "new_population": 8,
+      "literal_deletions": 1,
+      "released_labels": 2,
+      "epsilon": "1/524288",
+      "tau": "1/1073741824",
+      "old_diameter_squared": {
+        "a": "2466125/61",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "11372994182036273097605669/281312847124070662144",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 1,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_11_61",
+      "k": 2,
+      "exterior": "loaded_top_pin",
+      "released_pins": "all_side_pins",
+      "old_population": 9,
+      "new_population": 8,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/524288",
+      "tau": "1/1073741824",
+      "old_diameter_squared": {
+        "a": "2466125/61",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "71081213637529245738603341/1758205294525441638400",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 0,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_11_61",
+      "k": 5,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "one_top_pin",
+      "old_population": 32,
+      "new_population": 31,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/1048576",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "2704/61",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "2704/61",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 3,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_11_61",
+      "k": 5,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "all_side_pins",
+      "old_population": 32,
+      "new_population": 31,
+      "literal_deletions": 1,
+      "released_labels": 14,
+      "epsilon": "1/1048576",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "2704/61",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "2704/61",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 14,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_11_61",
+      "k": 5,
+      "exterior": "loaded_top_pin",
+      "released_pins": "one_top_pin",
+      "old_population": 18,
+      "new_population": 17,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/1048576",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "15323456/61",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "282667871155961545764110885/1125251388496282648576",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 1,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_11_61",
+      "k": 5,
+      "exterior": "loaded_top_pin",
+      "released_pins": "all_side_pins",
+      "old_population": 18,
+      "new_population": 17,
+      "literal_deletions": 1,
+      "released_labels": 14,
+      "epsilon": "1/1048576",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "15323456/61",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "8550703102461339676436359445/34038854502012550119424",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 0,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_9_41",
+      "k": 2,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "one_top_pin",
+      "old_population": 17,
+      "new_population": 16,
+      "literal_deletions": 1,
+      "released_labels": 2,
+      "epsilon": "1/524288",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "101645/3362",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "101645/3362",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 3,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_9_41",
+      "k": 2,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "all_side_pins",
+      "old_population": 17,
+      "new_population": 16,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/524288",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "101645/3362",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "101645/3362",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 8,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_9_41",
+      "k": 2,
+      "exterior": "loaded_top_pin",
+      "released_pins": "one_top_pin",
+      "old_population": 9,
+      "new_population": 8,
+      "literal_deletions": 1,
+      "released_labels": 2,
+      "epsilon": "1/524288",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "1657409/41",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "30573799648250531051209073/756316507022091616256",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 1,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_9_41",
+      "k": 2,
+      "exterior": "loaded_top_pin",
+      "released_pins": "all_side_pins",
+      "old_population": 9,
+      "new_population": 8,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/524288",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "1657409/41",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "191086247801300390091164921/4726978168888072601600",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 0,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_9_41",
+      "k": 5,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "one_top_pin",
+      "old_population": 32,
+      "new_population": 31,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/1048576",
+      "tau": "1/4294967296",
+      "old_diameter_squared": {
+        "a": "1856/41",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "1856/41",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 3,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_9_41",
+      "k": 5,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "all_side_pins",
+      "old_population": 32,
+      "new_population": 31,
+      "literal_deletions": 1,
+      "released_labels": 14,
+      "epsilon": "1/1048576",
+      "tau": "1/4294967296",
+      "old_diameter_squared": {
+        "a": "1856/41",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "1856/41",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 14,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_9_41",
+      "k": 5,
+      "exterior": "loaded_top_pin",
+      "released_pins": "one_top_pin",
+      "old_population": 18,
+      "new_population": 17,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/1048576",
+      "tau": "1/4294967296",
+      "old_diameter_squared": {
+        "a": "10298996/41",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "759931773711574885480792433/3025266028088366465024",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 1,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "wide_9_41",
+      "k": 5,
+      "exterior": "loaded_top_pin",
+      "released_pins": "all_side_pins",
+      "old_population": 18,
+      "new_population": 17,
+      "literal_deletions": 1,
+      "released_labels": 14,
+      "epsilon": "1/1048576",
+      "tau": "1/4294967296",
+      "old_diameter_squared": {
+        "a": "10298996/41",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "22987936154766406641596253857/91514297349673085566976",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 0,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "critical",
+      "k": 2,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "one_top_pin",
+      "old_population": 17,
+      "new_population": 16,
+      "literal_deletions": 1,
+      "released_labels": 2,
+      "epsilon": "1/1048576",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "265/16",
+        "b": "7/2",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "265/16",
+        "b": "7/2",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 3,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "critical",
+      "k": 2,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "all_side_pins",
+      "old_population": 17,
+      "new_population": 16,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/1048576",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "265/16",
+        "b": "7/2",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "265/16",
+        "b": "7/2",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 8,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "critical",
+      "k": 2,
+      "exterior": "loaded_top_pin",
+      "released_pins": "one_top_pin",
+      "old_population": 9,
+      "new_population": 8,
+      "literal_deletions": 1,
+      "released_labels": 2,
+      "epsilon": "1/1048576",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "40034",
+        "b": "100",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "738496952241734228639753/18446744073709551616",
+        "b": "858993459197/8589934592",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 1,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "critical",
+      "k": 2,
+      "exterior": "loaded_top_pin",
+      "released_pins": "all_side_pins",
+      "old_population": 9,
+      "new_population": 8,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/1048576",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "40034",
+        "b": "100",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "4615605951504396478054481/115292150460684697600",
+        "b": "2147483647991/21474836480",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 0,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "critical",
+      "k": 5,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "one_top_pin",
+      "old_population": 32,
+      "new_population": 31,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/2097152",
+      "tau": "1/4294967296",
+      "old_diameter_squared": {
+        "a": "46",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "46",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 3,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "critical",
+      "k": 5,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "all_side_pins",
+      "old_population": 32,
+      "new_population": 31,
+      "literal_deletions": 1,
+      "released_labels": 14,
+      "epsilon": "1/2097152",
+      "tau": "1/4294967296",
+      "old_diameter_squared": {
+        "a": "46",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "46",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 14,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "critical",
+      "k": 5,
+      "exterior": "loaded_top_pin",
+      "released_pins": "one_top_pin",
+      "old_population": 18,
+      "new_population": 17,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/2097152",
+      "tau": "1/4294967296",
+      "old_diameter_squared": {
+        "a": "500437/2",
+        "b": "250",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "18462866528004203960336393/73786976294838206464",
+        "b": "4294967295997/17179869184",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 1,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "critical",
+      "k": 5,
+      "exterior": "loaded_top_pin",
+      "released_pins": "all_side_pins",
+      "old_population": 18,
+      "new_population": 17,
+      "literal_deletions": 1,
+      "released_labels": 14,
+      "epsilon": "1/2097152",
+      "tau": "1/4294967296",
+      "old_diameter_squared": {
+        "a": "500437/2",
+        "b": "250",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "558501712471914568919024057/2232056032918855745536",
+        "b": "23622320127979/94489280512",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 0,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_7_25",
+      "k": 2,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "one_top_pin",
+      "old_population": 17,
+      "new_population": 16,
+      "literal_deletions": 1,
+      "released_labels": 2,
+      "epsilon": "1/1048576",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "37481/1250",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "37481/1250",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 3,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_7_25",
+      "k": 2,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "all_side_pins",
+      "old_population": 17,
+      "new_population": 16,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/1048576",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "37481/1250",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "37481/1250",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 8,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_7_25",
+      "k": 2,
+      "exterior": "loaded_top_pin",
+      "released_pins": "one_top_pin",
+      "old_population": 9,
+      "new_population": 8,
+      "literal_deletions": 1,
+      "released_labels": 2,
+      "epsilon": "1/1048576",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "1010441/25",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "18639346528453685550252257/461168601842738790400",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 1,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_7_25",
+      "k": 2,
+      "exterior": "loaded_top_pin",
+      "released_pins": "all_side_pins",
+      "old_population": 9,
+      "new_population": 8,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/1048576",
+      "tau": "1/2147483648",
+      "old_diameter_squared": {
+        "a": "1010441/25",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "23299183160534740064272789/576460752303423488000",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 0,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_7_25",
+      "k": 5,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "one_top_pin",
+      "old_population": 32,
+      "new_population": 31,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/2097152",
+      "tau": "1/8589934592",
+      "old_diameter_squared": {
+        "a": "1168/25",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "1168/25",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 3,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_7_25",
+      "k": 5,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "all_side_pins",
+      "old_population": 32,
+      "new_population": 31,
+      "literal_deletions": 1,
+      "released_labels": 14,
+      "epsilon": "1/2097152",
+      "tau": "1/8589934592",
+      "old_diameter_squared": {
+        "a": "1168/25",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "1168/25",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 14,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_7_25",
+      "k": 5,
+      "exterior": "loaded_top_pin",
+      "released_pins": "one_top_pin",
+      "old_population": 18,
+      "new_population": 17,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/2097152",
+      "tau": "1/8589934592",
+      "old_diameter_squared": {
+        "a": "1255888/5",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "1853363561698144344703238369/7378697629483820646400",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 1,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_7_25",
+      "k": 5,
+      "exterior": "loaded_top_pin",
+      "released_pins": "all_side_pins",
+      "old_population": 18,
+      "new_population": 17,
+      "literal_deletions": 1,
+      "released_labels": 14,
+      "epsilon": "1/2097152",
+      "tau": "1/8589934592",
+      "old_diameter_squared": {
+        "a": "1255888/5",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "56064247741358215973530774289/223205603291885574553600",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 0,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_5_13",
+      "k": 2,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "one_top_pin",
+      "old_population": 17,
+      "new_population": 16,
+      "literal_deletions": 1,
+      "released_labels": 2,
+      "epsilon": "1/4194304",
+      "tau": "1/8589934592",
+      "old_diameter_squared": {
+        "a": "9925/338",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "9925/338",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 3,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_5_13",
+      "k": 2,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "all_side_pins",
+      "old_population": 17,
+      "new_population": 16,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/4194304",
+      "tau": "1/8589934592",
+      "old_diameter_squared": {
+        "a": "9925/338",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "9925/338",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 8,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_5_13",
+      "k": 2,
+      "exterior": "loaded_top_pin",
+      "released_pins": "one_top_pin",
+      "old_population": 9,
+      "new_population": 8,
+      "literal_deletions": 1,
+      "released_labels": 2,
+      "epsilon": "1/4194304",
+      "tau": "1/8589934592",
+      "old_diameter_squared": {
+        "a": "525221/13",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "155017877905935627639062645/3836922767331586736128",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 1,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_5_13",
+      "k": 2,
+      "exterior": "loaded_top_pin",
+      "released_pins": "all_side_pins",
+      "old_population": 9,
+      "new_population": 8,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/4194304",
+      "tau": "1/8589934592",
+      "old_diameter_squared": {
+        "a": "525221/13",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "968861736911761119106827293/23980767295822417100800",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 0,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_5_13",
+      "k": 5,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "one_top_pin",
+      "old_population": 32,
+      "new_population": 31,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/8388608",
+      "tau": "1/17179869184",
+      "old_diameter_squared": {
+        "a": "640/13",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "640/13",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 3,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_5_13",
+      "k": 5,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "all_side_pins",
+      "old_population": 32,
+      "new_population": 31,
+      "literal_deletions": 1,
+      "released_labels": 14,
+      "epsilon": "1/8388608",
+      "tau": "1/17179869184",
+      "old_diameter_squared": {
+        "a": "640/13",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "640/13",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 14,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_5_13",
+      "k": 5,
+      "exterior": "loaded_top_pin",
+      "released_pins": "one_top_pin",
+      "old_population": 18,
+      "new_population": 17,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/8388608",
+      "tau": "1/17179869184",
+      "old_diameter_squared": {
+        "a": "3264788/13",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "3854381356217413310785519733/15347691069326346944512",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 1,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_5_13",
+      "k": 5,
+      "exterior": "loaded_top_pin",
+      "released_pins": "all_side_pins",
+      "old_population": 18,
+      "new_population": 17,
+      "literal_deletions": 1,
+      "released_labels": 14,
+      "epsilon": "1/8388608",
+      "tau": "1/17179869184",
+      "old_diameter_squared": {
+        "a": "3264788/13",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "116595036025565676995757479525/464267654847121995071488",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 0,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_8_17",
+      "k": 2,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "one_top_pin",
+      "old_population": 17,
+      "new_population": 16,
+      "literal_deletions": 1,
+      "released_labels": 2,
+      "epsilon": "1/67108864",
+      "tau": "1/137438953472",
+      "old_diameter_squared": {
+        "a": "16565/578",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "16565/578",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 3,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_8_17",
+      "k": 2,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "all_side_pins",
+      "old_population": 17,
+      "new_population": 16,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/67108864",
+      "tau": "1/137438953472",
+      "old_diameter_squared": {
+        "a": "16565/578",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "16565/578",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 8,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_8_17",
+      "k": 2,
+      "exterior": "loaded_top_pin",
+      "released_pins": "one_top_pin",
+      "old_population": 9,
+      "new_population": 8,
+      "literal_deletions": 1,
+      "released_labels": 2,
+      "epsilon": "1/67108864",
+      "tau": "1/137438953472",
+      "old_diameter_squared": {
+        "a": "686533/17",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "51872966857337505951596413081/1284483683340543498125312",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 1,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_8_17",
+      "k": 2,
+      "exterior": "loaded_top_pin",
+      "released_pins": "all_side_pins",
+      "old_population": 9,
+      "new_population": 8,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/67108864",
+      "tau": "1/137438953472",
+      "old_diameter_squared": {
+        "a": "686533/17",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "324206042858352371887085978977/8028023020878396863283200",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 0,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_8_17",
+      "k": 5,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "one_top_pin",
+      "old_population": 32,
+      "new_population": 31,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/134217728",
+      "tau": "1/274877906944",
+      "old_diameter_squared": {
+        "a": "872/17",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "872/17",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 3,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_8_17",
+      "k": 5,
+      "exterior": "off_lattice_contacts_and_isolate",
+      "released_pins": "all_side_pins",
+      "old_population": 32,
+      "new_population": 31,
+      "literal_deletions": 1,
+      "released_labels": 14,
+      "epsilon": "1/134217728",
+      "tau": "1/274877906944",
+      "old_diameter_squared": {
+        "a": "872/17",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "872/17",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 14,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_8_17",
+      "k": 5,
+      "exterior": "loaded_top_pin",
+      "released_pins": "one_top_pin",
+      "old_population": 18,
+      "new_population": 17,
+      "literal_deletions": 1,
+      "released_labels": 5,
+      "epsilon": "1/134217728",
+      "tau": "1/274877906944",
+      "old_diameter_squared": {
+        "a": "4268602/17",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "1290105792864633244077751533721/5137934733362173992501248",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 1,
+      "stress_certificate": null
+    },
+    {
+      "angle_fixture": "blocked_8_17",
+      "k": 5,
+      "exterior": "loaded_top_pin",
+      "released_pins": "all_side_pins",
+      "old_population": 18,
+      "new_population": 17,
+      "literal_deletions": 1,
+      "released_labels": 14,
+      "epsilon": "1/134217728",
+      "tau": "1/274877906944",
+      "old_diameter_squared": {
+        "a": "4268602/17",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "endpoint_diameter_squared": {
+        "a": "39025700234154923915399598710089/155422525684205763273162752",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "inward_unit_neighbors_checked": 0,
+      "stress_certificate": null
+    }
+  ],
+  "limits": "Finite sources, endpoints and stage samples only. Whole-path feasibility and universal inward-normal/source-stress implications are proved analytically in the report. No global minimizer, stress-transversal extraction or final-label restoration is certified."
+}

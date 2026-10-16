@@ -40,3 +40,38 @@ optimality. The candidate registry records its exact claim, source hashes,
 validation, canonical comparators, and missing Target C implication. This
 script is noncanonical evidence and is intentionally not added to the registered
 theorem-certificate set.
+
+## Source PR #951 — slot 07 vacancy release and restoration barriers
+
+All seven proof reports are linked from
+[the noncanonical proposal index](../docs/research/proposals.md) and
+[Target C candidate registry](../docs/targets/target-c/candidate-registry.json).
+They remain unreviewed and none is in the registered theorem-certificate set.
+
+Run the five exact verifiers from the repository root:
+
+- python3 research/verify_target_c_rhombic_vacancy_hop_slot07_2026_10_10.py
+- python3 research/verify_target_c_effective_fixed_wall_packet_slot07_2026_10_10.py
+- python3 research/verify_target_c_near_coherent_one_vacancy_pinning_slot07_2026_10_10.py
+- python3 research/verify_target_c_one_vacancy_full_chart_release_slot07_2026_10_10.py
+- python3 research/verify_target_c_one_vacancy_side_pin_release_slot07_2026_10_10.py
+
+The rhombic checker verifies the source patch, algebraic hop threshold fixtures,
+whole-strip one-vacancy packets, and exact two-site capacity identities. Its
+report proves the all-angle threshold and exterior shield analytically; the
+fixtures do not prove canonical patch extraction or refill.
+
+The effective packet checker covers actual perturbed walls, discrete packet
+endpoints, diameter-star stress identities, and a finite already-spare refill
+bay. The near-coherent checker proves finite pinned-equilibrium and anchored
+rank regressions; these are not canonical normalized KKT stresses. The
+full-chart and side-pin checkers inspect whole linear-segment minima or
+additional actual-source fixtures. Their reports give analytic whole-path and
+inward-normal arguments, but no canonical extraction, universal
+stress-transversal, or last-label restoration. The unilateral local-rigidity
+report is an analytic candidate without a separate verifier.
+
+The exact fixed-wall capacity is one label below restoration. A near-coherent
+fixed-boundary extension is false, and local continuous refill is blocked under
+the listed stress/rank hypotheses. These are scoped route obstructions, not a
+proof that every moved-wall or nonlocal discrete replacement fails.
