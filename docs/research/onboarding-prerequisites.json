@@ -69,6 +69,9 @@
     ],
     "docs/targets/target-b/01-jammed-rhombic-branch.md": [
       "docs/theory/03-oler-shell.md"
+    ],
+    "docs/targets/target-a/01-forest-and-kinematics.md": [
+      "docs/theory/03-oler-shell.md"
     ]
   },
   "tasks": {

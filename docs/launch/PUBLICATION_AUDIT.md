@@ -47,6 +47,11 @@ paths. Retained public hashes are independently checkable without the archive.
 - Added whole-tree CI path preflight before metadata parsing, committed-object
   scanning, dirty-candidate rejection and tag/contributor-trailer checks. Retained
   the concurrent all-history path scan and batched historical content scanning.
+- Added the public JSON proof graph to the retained theorem-view generator and
+  consistency gate; it had retained the withdrawn canonical claim and old rate.
+  Reconciled its lifecycle metadata and A's finite-Oler prerequisite. Final receipt
+  checks now reject index-hidden changes and compare actual tracked bytes/modes
+  with the pinned tree before and after execution.
 - Prepared a tested clean-root exporter: identical tree, one parentless synthetic
   commit among all objects, no old refs, no alternate store, no remote, strict
   Git integrity checks. Newly derived private author labels use opaque IDs in

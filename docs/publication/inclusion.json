@@ -2598,7 +2598,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [
         "target-c-macroscopic-container-capacity"
       ],
@@ -4214,20 +4214,10 @@
       "source_mode": "100644",
       "source_sha256": "43b24d8d259bc968458d5a44e775c73a7c3c4baa957f72c49fc6450c5a954761",
       "public_sha256": "7e3a94bfc59864bcee1d091a674b2cd1ffc7833f3001d6052c50163a947ab512",
-      "role": "proof/audit",
-      "theorem_ids": [
-        "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION"
-      ],
+      "role": "historical audit with withdrawn global chart and endpoint rate",
+      "theorem_ids": [],
       "dependencies": [],
       "incoming": [
-        {
-          "source": "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION",
-          "kind": "claim audit"
-        },
-        {
-          "source": "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION",
-          "kind": "claim report"
-        },
         {
           "source": "docs/STATE.md",
           "kind": "proof or navigation reference"
@@ -4242,16 +4232,14 @@
         }
       ],
       "inclusion_reason": [
-        "claim audit",
-        "claim report",
         "literal proof or input reference",
         "proof or navigation reference"
       ],
-      "review_status": "source text preserved; scientific lifecycle remains in theorem-state",
+      "review_status": "superseded for this claim by Audit.236; no global chart or endpoint rate accepted",
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": []
     },
@@ -4263,22 +4251,32 @@
       "source_mode": "100644",
       "source_sha256": "831884c7a986c683345cec980fafabf52fa30569cda43f6f47396f75e535553c",
       "public_sha256": "9ed749f51f560af597875fc9fb7c2647395ce47a970583a9e3349df6f8e2bb38",
-      "role": "unreviewed active proposal",
-      "theorem_ids": [],
+      "role": "audited-working corrected analytic sequence proof",
+      "theorem_ids": [
+        "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION"
+      ],
       "dependencies": [],
       "incoming": [
         {
           "source": "source-proposal-947",
           "kind": "active noncanonical research"
+        },
+        {
+          "source": "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION",
+          "kind": "claim report"
+        },
+        {
+          "source": "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION",
+          "kind": "claim audit"
         }
       ],
       "inclusion_reason": [
-        "directly informs current frontier; no promotion"
+        "corrected audited-working sequence proof; no canonical promotion"
       ],
-      "review_status": "unreviewed proposal; not an accepted premise",
+      "review_status": "agent-audited working sequence exclusion; independent human review pending; no canonical chart or endpoint rate",
       "publication_clearance": "pending provenance/content review",
       "attribution": "source project attribution retained",
-      "reproduction_requirements": "execute supplied verifier with public prerequisites",
+      "reproduction_requirements": "inspect complete analytic sequence proof and retained canonical prerequisites; no computational verifier is claimed",
       "editorial_change": "publication navigation/metadata edit or explicitly retained mathematical section extract; source blob recorded",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": []
@@ -11898,7 +11896,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [
         "target-c-face-coupled-move",
         "target-c-typeii-stress-mass-access",
@@ -13194,7 +13192,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [
         "target-b-multigrain-transfer",
         "audit-target-b-gpi-scope",
@@ -13331,7 +13329,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [
         "target-b-multigrain-transfer",
         "audit-target-b-gpi-scope",
@@ -16829,8 +16827,8 @@
       "source_blob": "db301bc73f41c836529a4d437bc4bc262ac598cc",
       "source_mode": "100644",
       "source_sha256": "2a2c12e3b63e9b0295e1106eda89b68449ed1b37a14d114a8e24d6e5f7e73bcd",
-      "public_sha256": "2a2c12e3b63e9b0295e1106eda89b68449ed1b37a14d114a8e24d6e5f7e73bcd",
-      "role": "frozen load-bearing proof dependency",
+      "public_sha256": "5061a85a1810c8626123837d7901b3aa7ef1d1db3216a207ca67aaedcb18eb43",
+      "role": "frozen section-specific proof source; whole-file lifecycle unreviewed",
       "theorem_ids": [],
       "dependencies": [],
       "incoming": [
@@ -16842,11 +16840,11 @@
       "inclusion_reason": [
         "frozen report/verifier explicitly cited by retained audit"
       ],
-      "review_status": "status controlled by manifest, original proof text retained",
+      "review_status": "only exact separately audited sections inherit their manifest scopes; Audit.236 controls the audited-working sequence exclusion",
       "publication_clearance": "pending provenance/content review",
       "attribution": "original project attribution retained",
       "reproduction_requirements": "inspect exact source and fixture closure",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": []
     },
@@ -18167,7 +18165,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": []
     },
@@ -20919,7 +20917,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": []
     },
@@ -20957,7 +20955,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": []
     },
@@ -34891,7 +34889,7 @@
       "source_blob": "89b65d25f9d36fd3b883694837ac9855a19caf55",
       "source_mode": "100644",
       "source_sha256": "464fa3fd3b5180b2703565c113bdd4628112132dde5cd1025106d08184abae19",
-      "public_sha256": "464fa3fd3b5180b2703565c113bdd4628112132dde5cd1025106d08184abae19",
+      "public_sha256": "061fa5af68182a1e4d86c3e574cf4987c61c874399976a9a474f6ca289c62231",
       "role": "infrastructure",
       "theorem_ids": [],
       "dependencies": [],
@@ -34913,7 +34911,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": [
         "docs/STATE.md",

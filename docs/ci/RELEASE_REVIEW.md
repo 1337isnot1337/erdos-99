@@ -65,6 +65,12 @@ This replays the complete certificate registry, corpus/tool tests, theorem state
 public integrity, full release audit, tree/history secret scans and workflow lint.
 The detached receipt records the immutable candidate SHA/tree, environment,
 commands, exit codes, timing and logs, and checks that the candidate stayed clean.
+Before and after execution it checks every tracked raw blob and executable mode
+against the pinned Git tree, independently of index stat/filter heuristics, and
+rejects assume-unchanged/skip-worktree flags and nonregular paths. Python children
+use a fresh external bytecode cache with inherited path/home/startup overrides
+removed. This remains trusted local execution, not a hostile-code sandbox or a
+claim of a hermetic environment.
 Rights/history blockers are reported separately from executable check failures.
 An exit code of one with a passing executable suite and pending rights is an
 expected release **HOLD**, not grounds to weaken the audit. The tool never grants

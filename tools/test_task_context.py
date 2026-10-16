@@ -102,6 +102,7 @@ class PublicRouteRegressions(unittest.TestCase):
                 self.assertIn(command, result["supporting_evidence_commands"])
                 self.assertNotIn(command, result["certificate_commands"])
         a = context("target-a-locked-sector-surplus", ROOT)
+        self.assertIn("docs/theory/03-oler-shell.md", a["transitive_file_prerequisites"])
         self.assertIn("docs/targets/target-a/03-source-response.md", a["transitive_file_prerequisites"])
         self.assertIn("docs/targets/target-a/26-tube-shield-sector-balance.md", a["transitive_file_prerequisites"])
         b = context('target-b-multigrain-transfer', ROOT)

@@ -182,6 +182,16 @@ macroscopic-container obligation.
 
 ## A valid public contribution
 
+**Integrated-candidate correction to the initial C-II exercise:** at diameter D,
+the endpoint must remain triangle-free and strictly decrease the lexicographic
+pair (unit contacts, actual diameter pairs). Preserving contacts and reducing
+actual diameter pairs is a valid secondary branch; contact loss accompanied by a
+new unit triangle is insufficient. A same-cardinality strict sub-D competitor is
+a separate route. The shorter initial wording above omitted these conditions;
+the active task/frontier and final repeat use the complete endpoint. The final
+A prerequisite list also includes the finite Oler/topology module used by its
+plateau and fixed-container arguments. Counts above remain historical.
+
 Fetch current main, record its SHA/state/priority, preserve other work and create
 an isolated branch. Query the selected task with `--live-overlap`; inspect matching
 public PRs/issues and Discussions when available. Empty search results are scoped
