@@ -57,6 +57,7 @@ def read_json(root: Path, path: str):
 
 
 OWNER_RIGHTS_RECORD = "docs/publication/owner-rights-authorization.json"
+OWNER_APPROVED_MANIFEST_BLOB = "f521850703b01b204399613d640a0b99ca895080"
 OWNER_RIGHTS_EVIDENCE = "https://github.com/1337isnot1337/erdos-99/pull/9#issuecomment-6207244081"
 OWNER_EMAIL_EVIDENCE = "https://github.com/1337isnot1337/erdos-99/pull/9#issuecomment-6207434631"
 OWNER_APPROVED_EMAIL = "cinnajdavis@gmail.com"
@@ -80,7 +81,7 @@ def attested_owner_permissions(root: Path, manifest: dict) -> dict | None:
         bounds = record["release_boundaries"]
         if record.get("schema_version") != 1 or record.get("repository") != "1337isnot1337/erdos-99":
             return None
-        if not HEX40.fullmatch(blob) or m.get("path") != "docs/publication/inclusion.json" or m.get("git_blob_sha") != blob:
+        if not HEX40.fullmatch(blob) or m.get("path") != "docs/publication/inclusion.json" or m.get("git_blob_sha") != OWNER_APPROVED_MANIFEST_BLOB or blob != OWNER_APPROVED_MANIFEST_BLOB:
             return None
         if not entries or m.get("retained_source_records") != len(entries) or m.get("source_pins") != len({e["source_commit"] for e in entries}):
             return None
