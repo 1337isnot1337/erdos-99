@@ -33,9 +33,11 @@ may additionally pass `--source-repo /private/source-clone`; public users never
 need that clone. This optional audit checks all 4,793 versioned source records.
 
 `executable_checks_passed` and `automated_release_precheck_passed` are distinct.
-The release scanner returns one while factual rights/history questions are open.
-The receipt never grants permissions: `release_cleared` remains false. Do not
-weaken a check to turn the owner's HOLD into a green automated result.
+Earlier release receipts returned one because source rights and personal Git-email
+consent were not yet recorded. Both owner decisions are now documented under Gate 1.
+The receipt still cannot grant permissions, and its historical outcome is unchanged.
+Do not weaken checks to turn a HOLD into a green result; rerun and explicitly
+reconcile the attestation at the actual final commit.
 
 ## Targeted evidence executed during closure
 
@@ -63,12 +65,18 @@ candidate scope; they are not a substitute for the final run.
 
 ## Remaining decisions
 
-The [publication audit](PUBLICATION_AUDIT.md) and
-[rights review](../publication/rights-review.md) identify the remaining factual
-rights grant and clean-remote migration choices. All included source rights remain
-pending. The existing staging repository retains historical metadata and must
-stay private; the clean-root artifact contains the same final tree with no old
-commit objects and no remote. No visibility change is authorized by this receipt.
+The [updated publication audit](PUBLICATION_AUDIT.md) and
+[current rights review](../publication/rights-review.md) record the owner's
+project-controlled rights authorization for all 810 included source records,
+with the grant pinned to the exact manifest Git blob. The owner has also approved
+publication of their own existing personal-domain Git author email. As a result,
+a clean-root migration is no longer required **solely for this identified email**.
+The clean-root export remains available as a separate privacy option; the owner
+wishes to preserve the current repository and PR history. The older candidate's
+rights/HOLD receipt remains historical. The new Gate 2 release verifier must
+reconcile this owner's documented grant rather than silently disregard the
+manifest's historical pending labels, and must address any actual independent
+third-party or security finding. No visibility change is authorized here.
 
 Hosted execution remains unverified because the account restriction prevented
 jobs from starting. Both protective rollout gates remain unset. No paid usage or
