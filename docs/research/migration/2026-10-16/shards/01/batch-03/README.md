@@ -7,3 +7,4 @@ Index 85 exactly matches the frozen archived `.source` artifact. The `_r2` repor
 Index 87's unsupported `e_BB/D -> pi` convergence statements are changed to the established `liminf e_BB/D >= pi`, following the adjacent source correction. Form-feed-corrupted `\\frac` strings are repaired, and local verifier links are moved to this shard's support directory. The per-report transformation records state each exact change.
 
 Run `python verify_provenance.py --source /path/to/e-99 --destination /path/to/erdos-99` for the source hashes, transformed report hashes, duplicate/successor, and support checks. Run `python compare_frozen_corpus.py --source-repo /path/to/e-99 --destination-repo /path/to/erdos-99` to reproduce the frozen full-tree comparison candidates.
+Index 83 has four missing first-party report links (frozen indexes 224, 710, 751, and 752); each path, source hash, shard owner, and live-main absence at `2bdecc7` is recorded in `dependencies.jsonl`.
