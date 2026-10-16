@@ -1,0 +1,1022 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "5ecbbe44406d6ea67fd18498b71a2011f3bc0339", "source_branch_refs": ["refs/heads/research/level-i-closure-20261007"], "source_commit": "26023ad2acc40aafe3cb831fdc0bcb3bd7ca97ae", "source_lifecycle": "not indexed", "source_path": "research/level_i_closure_run_2026_10_07.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c8a62758869d598e39e947606c86ed36fc1e7997ecefb0c77ca51d534ff88729"} -->
+
+> **Historical branch snapshot; destination authority remains current.** This unique branch version is superseded or absent from current Agent 3 branch heads; preserved as history, not selected as current branch content.
+
+# Level I closure run, 2026-10-07
+
+Objective: settle the exact universal statement in `docs/problem/statement.md`,
+or its negation. The objective remains active; a finite lemma is not completion.
+
+Current base commit: `b1b0a9a05f787a675973c36c6120530777c9040c`.
+Current state version: `2026-10-08.audit.149`.
+Initial base: `a0b2e33d15aaab006bf54bab54122ecf3d7209cd` (Audit.127).
+Worktree: `/tmp/e99-level-i-closure-20261007`.
+Branch: `research/level-i-closure-20261007`.
+Targets: C-II, both canonical branches; Target B pure-disk rank obstruction.
+
+The original checkout at `/home/user/math/e-99` was left intact, including its
+untracked Target A report. Current main was fetched before this worktree was made.
+The state files still say Level I open and C-I closed / C-II open.
+
+## Authority and selected inputs
+
+Inspected `docs/STATE.md`, the theorem manifest, exact problem statement, Target C
+route map and current frontier. Inspected the named route modules at their
+statement/scope level; this is not a fresh audit of their proofs. The load-bearing
+inputs for the present bridge were read in detail:
+
+- `docs/targets/target-c/56-ci-restored-frontier.md`;
+- `docs/targets/target-c/57-zr-zf-rigidity-audit.md`;
+- `docs/targets/target-c/58-full-source-geometry-audit.md`;
+- `docs/audits/target_c_contact_isometry_energy_independent_audit_2026-10-08.md`;
+- `docs/audits/target_c_inactive_diameter_cubic_budget_independent_audit_2026-10-08.md`;
+- `docs/audits/target_c_generic_isolate_anchor_avoidance_independent_audit_2026-10-07.md`.
+
+Read the current Target C prompt after these inputs. No mathematical statement
+from an unpromoted report is used as a premise. External fetches of the GitHub
+web page and Erdős-problem page returned 404 and 403 respectively; these are
+access results, not evidence of source absence. Git fetch and authenticated PR
+listing succeeded.
+
+## Exact bridge under investigation
+
+```text
+open isolate-involving upper equalities by an explicit finite contraction
+  -> Audit.120's mandatory replacements must occur entirely inside the core
+  -> a noncongruent full-source contact-isometry with no new core diameter
+     pair contradicts the canonical diameter-pair minimum
+  -> C-II closes if such an endpoint is supplied for every large canonical source
+  -> Level I follows through the already closed C-I gate
+```
+
+This does not drop isolates: the contraction retains every isolate, checks every
+isolate-involving lower pair, and moves no core point. Full-source extension of
+the proposed core endpoint is still required.
+
+The second deduction applies Audit.126 at the *actual new global minimizer*,
+after isolate normalization. It does not transport arbitrary inactive pairs
+back to the source without a displacement bound. A zero-width limit of that
+audit gives an actual-diameter cubic moment and disperses a linear replacement
+bank into a matching of order at least square root of D, regardless of move size.
+
+## Current artifact and limit
+
+Proof draft:
+`docs/reports/target_c_isolate_normalization_core_diameter_replacement_2026-10-07.md`.
+Classification: proved candidate awaiting independent audit/promotion;
+registry lifecycle remains unreviewed and noncanonical.
+
+The exact remaining task is to construct the specified noncongruent,
+same-cardinality full-source endpoint while preserving the exact contact graph
+and creating no new core diameter pair. Neither isolate normalization nor a
+cubic degree budget constructs that endpoint. Both the face-coupled full-core
+branch and the macroscopic-container branch remain in scope.
+
+Validation completed: the new rational verifier passed 84 all-pair checks and
+two hypothesis-failure fixtures; the existing Audit.126 finite certificate
+passed. Artifact index/headers were regenerated, changing only the new
+report header and one index record. The theorem-state checker and whitespace
+check passed. No theorem lifecycle or route status was promoted.
+
+## Small-packet bridge, continuation
+
+The branch was rebased onto main's Audit.128 after comparing its state changes.
+That update adds a local long-pocket regression and changes no premise of the
+isolate-normalization argument. Current canonical state remains Level I open.
+
+The next candidate chain is:
+
+```text
+finite inward translation plus internal dilation of small separated packets
+  -> weak upper bounds become strict while every new contact opens
+  -> contact-minimality excludes equal-cardinality replacement of old contacts
+  -> C-II would close if every large canonical source supplies such packets
+```
+
+Load-bearing additional input: universal full-source circumradius FS.1,
+including for an initial replacement containing triangles. The finite motion
+itself uses no global-optimality premise. This relaxes the strict-upper-slack
+hypothesis of Audit.112 only for packets having no unit anchors to the retained
+source or to other packets and sufficiently small containing disks. It supplies
+no packet existence, arbitrary-container capacity, or source-specific release.
+
+The packet proof and its two rational fixtures are recorded in
+`docs/reports/target_c_small_separated_packet_upper_release_2026-10-07.md`.
+The verifier passed 168 all-pair checks at three certified positive times and
+two failures outside its hypotheses. Artifact metadata was regenerated; the
+state and whitespace checks passed. The result is unreviewed and noncanonical.
+
+The conditional packet-refinement program does not supply a universal
+replacement. The next route investigates a global argument. The objective and
+exact quantifiers are unchanged.
+
+## Global diameter-direction comparison
+
+The new route replaces absolute positional lattice transport with relative
+short-chord arithmetic. For an additive grid with unit increments in two narrow
+direction windows, a short physical chord has bounded integer index difference;
+its direction approaches one of finitely many lattice-vector directions even
+when accumulated positional error stays bounded away from zero.
+
+```text
+uniformly conditioned additive charts on the actual loaded endpoints
+  -> relative short-chord directions concentrate in finite normal intervals
+  -> convex normal cones plus diameter-direction separation give h=o(D)
+  -> contradict canonical h>=ceil(D)
+```
+
+This attacks a global diameter count rather than constructing a finite packet.
+The new proof must establish its arithmetic conclusion without using absolute
+position error. The remaining source bridge must cover actual loaded endpoints,
+including endpoints near exceptional faces, small boundary grains, and the
+macroscopic-container branch. Bulk phase coherence alone is not that bridge.
+
+The relative-chord proof is recorded in
+`docs/reports/target_c_relative_chord_diameter_direction_exclusion_2026-10-07.md`.
+It yields a finite diameter-edge count and a growing-chart exclusion under
+J=o(D), total perimeter O(D), and sum of angular error widths o(1). It allows
+accumulated positional errors that do not tend to zero. The exact bent-grid
+checker passed 3,640 boundary pairs, including 624 short chords, at M=8,12,16.
+No full-source chart coverage is established and no lifecycle is promoted.
+
+Main advanced to Audit.129 during this continuation. Its exact atomic-track
+boundary-cost audit was read and its state changes compared. It excludes one
+low-t, small-boundary-excess Type-II subcase and leaves both C-II branches open.
+It changes no input used in the relative-chord proof. The proof is not silently
+extended from a bulk chart to all actual loaded endpoints.
+
+Final validation for this checkpoint: rebased onto
+462456b7b34140ea2c88aec71ffe3e1d5a0a6e6d (Audit.129), rebuilt artifact metadata
+with no header changes, and passed the theorem-state checker and whitespace
+check. All six relative proof links in the direction report resolve. The
+research remains noncanonical; Level I remains open and the goal remains active.
+
+## Terminal cancellation in the Target B boundary graph
+
+The relative-chart approach still lacks actual loaded-boundary coverage.
+The next investigation bootstrapped Target B from its current route map,
+Sections 24–26, 36, 39–45, and the named phase-cut and dense-grid dependency
+audits. The whole-problem prompt was read after the bootstrap. The
+boundary-backtracking audit was inspected as audited-working rather than
+imported as a canonical premise. The new proof uses Theorem 10.6's actual
+physical train terminals and the canonical Section-39 crossing-measure,
+circular-hull, and pinned-rigidity conclusions.
+
+The new candidate pairs terminal ends in a graph whose vertices are actual
+hull chains. Almost all trains outside the limiting atomic direction mass
+have endpoint distance o(D). A bounded component of short such trains
+cancels their terminal vectors exactly; its remaining atomic vectors force
+its hull normal into a countable set. The limiting circular surface measure
+is atomless, so the number of small components is o(D). The graph then gives
+non-atomic train count >= q-o(D), improving s <= 1-y/2 to s <= 1-y.
+
+Consequently the same canonical pure-disk source has
+T-q >= sqrt(2*pi/sqrt(3))*D-o(D), with coefficient approximately 1.904626,
+and T/D >= 3.809251, q/D >= 1.904626,
+limsup q/T <= 0.622564. These are candidate necessary conditions, not a
+global contradiction. The backward-flip/coforest rank and stressed equality
+kernel are still unresolved. General topology and all C-II branches remain
+open; no source outside the pure-disk scope is silently included.
+
+Proof:
+`docs/reports/target_b_terminal_cancellation_boundary_graph_2026-10-08.md`.
+The exact verifier passed 11,427 source lower-pair checks and 3,277 component
+cancellation checks in 1,002 boundary graphs of 12 nonglobal rhombic disks.
+It does not prove the analytic limit argument or global optimality.
+Classification: proved candidate awaiting independent audit/promotion;
+the artifact registry remains unreviewed and noncanonical.
+
+Main advanced to Audit.133 at 6049e3f751b9e5efd472d2d36b670f228c1e8997
+during final verification. The state/route changes were compared. The
+canonical Audit.131 one-ended train theorem was read to check possible
+overlap: it counts actual unit loaded-hull sides in the positive core,
+whereas the present argument pairs whole hull chains in the Target B
+full contact disk. Neither source graph is silently substituted for the
+other. Target B and Theory 01 inputs are unchanged; the new candidate
+does not rely on any newly promoted C result.
+
+Initial artifact validation: the new verifier and Python compilation
+passed, three report links resolve, artifact
+metadata was regenerated, and the theorem-state/whitespace checks passed.
+
+Rebased all four local research commits onto Audit.133. No canonical
+input changed in the terminal-cancellation proof, and no theorem
+lifecycle was promoted.
+
+## Interior terminal vertex and Type-II face floor
+
+The cancellation proof extends to the complete contact complex after
+mapping all bounded nonquadrilateral facial terminal occurrences to
+one auxiliary graph vertex. The component containing that vertex costs
+one in the component count, however many actual inner faces it joins.
+Every other small component retains paired cancellation exactly.
+No physical source point or face is identified or moved.
+
+Additional canonical inputs on Audit.133: Section 63's distinguished
+outer occurrences, Section 67's connected core and face geometry,
+Audit.129's fixed-limit atomic track mass, and Audit.131's exact
+complete-train count including singleton contacts. The new report
+reconstructs the graph argument at this all-topology scope.
+
+The new candidate chain is:
+
+    atomic complete-train mass <= (2f-k)/D
+      -> 2f-k >= 2*sqrt(pi/(2*sqrt(3)))*D-o(D)
+      -> 4(q-k)-k-2z >= (2*pi+2*sqrt(pi/(2*sqrt(3))))*D-o(D)
+      -> (q-k)/D >= 2.0469527302-o(1)
+      -> the entire Type-II (q-k)/D <= 1.860 branch is empty.
+
+It also gives f/D >= sqrt(pi/(2*sqrt(3)))-o(1). The high-(q-k)/D
+Type-II branch and the macroscopic-container branch remain open.
+The source retains every contact isolate through the imported canonical
+premises. Neither graph counting nor the face floor supplies a motion,
+a uniform face-width bound, or a full Level I contradiction.
+
+Proof:
+`docs/reports/target_c_typeii_terminal_cancellation_face_floor_2026-10-08.md`.
+The exact interior-terminal verifier passed 7,252 all-source lower
+pair checks and 620 component identities in 354 auxiliary graphs of
+eight nonglobal fixtures. These include holes, 52 interior terminal
+occurrences, four singleton contacts, and eight repeated bridge
+occurrences. The infinite marked-measure argument is analytic and is
+not certified by the finite checks.
+
+The separate possibility of graph-preserving diameter normalization
+followed by C-I/ZF to exclude pure Target B disks was investigated.
+No separate normalization theorem or pure-B closure is claimed here;
+the source-level consequence recorded in this run is the Type-II
+face floor and low-(q-k)/D exclusion above.
+
+Classification: proved candidate awaiting independent audit/promotion;
+the registry remains unreviewed and noncanonical. No canonical route
+status is changed.
+
+Final validation of the face-floor draft: exact verifier, Python
+compilation, artifact regeneration, theorem-state check, ten combined
+relative report links, and whitespace check passed. A final fetch found
+Audit.134 at eafdaf917455322a67e1a07c071f836ba688ae53. Its state changes
+add fixed-port route bounds and a single high-degree tail budget; the
+inputs of this proof are unchanged. No new route theorem is imported
+into the cancellation proof.
+
+Rebased the five local research commits onto Audit.134. Regenerated
+artifact metadata and passed the theorem-state and whitespace checks
+against that base. Both new claims remain unreviewed and noncanonical;
+the Level I goal remains active.
+
+## Separate-face boundary components
+
+On Audit.134, keep one recipient vertex per exceptional face instead of
+merging all inner terminals. The same physical midpoint bound and
+atomic marked-measure proof show only that boundary-reaching components
+number o(D). Interior-only components can be linear and are retained
+in the incidence ledger.
+
+Let f_boundary be the number of exceptional faces in boundary-reaching
+components and N_interior the number of non-atomic trains in the other
+components. Exact graph incidence gives
+
+    3*f_boundary >= f+2*k-2*c_boundary
+    3*(atomic_train_count+N_interior) <= 5*(f-k+c_boundary).
+
+Consequently the candidate chain is
+
+    c_boundary=o(D), atomic mass >= 2*s_2
+      -> (f-k)/D >= (6/5)*s_2-o(1)
+      -> [2(q-k)-k-z]/D >= pi+(6/5)*s_2-o(1)
+      -> (q-k)/D >= pi/2+(3/5)*s_2-o(1)
+      -> the whole positive one-cell collar range is empty.
+
+The new constant is 2.1421840109, strictly above 2*pi/3.
+The exact verifier checks another 354 separate-face graphs and 886
+component cancellations. It does not certify the analytic limiting
+argument or source optimality.
+
+The Audit.52 canonical full-core depletion floor applies to
+mu=(q-k+m)/D-o(1). Despite sharing FC3's numerical constant, it
+does not imply a floor on t=(q-k)/D when m is linear. This live
+comparison corrects the stale unpromoted-status note for that theorem.
+
+Classification: proved candidate awaiting independent audit/promotion,
+registry unreviewed and canonical=false. High-t Type II and the
+macroscopic-container branch remain open. The next obligation is a
+global geometric or motion argument; linear face count alone is
+compatible with the available boundary-order area budget.
+
+Rebased the six local research commits onto c2856c7b. Audit.135 is a
+subsumption/closeout audit and leaves the theorem-state version at
+Audit.134. It does not change this proof's dependencies. The remaining
+step cannot be supplied by counting each exceptional face as a fixed
+extra area loss: strict unit pentagons approach the sharp Oler face
+bound while their missing unit diagonals stay strict before the limit.
+Likewise the terminal recipient graph is not a source contact route.
+Neither replacement capacity nor a full-source motion is inferred
+from the graph count.
+
+Refinement validation passed: exact finite verifier, Python compilation,
+eight local proof links, artifact metadata regeneration, theorem-state
+check, and whitespace check. The canonical theorem state is unchanged;
+the full Level I objective remains active.
+
+## Finite reciprocal cut bank and literal contact returns
+
+Run base c2856c7b, theorem state Audit.134. Canonical new inputs:
+C-RECIPROCAL-TRAIN-GRAPH, C-AUGMENTED-TRAIN-RANK, and Theory 01
+Theorems 10.6/10.8. The exact quantity attacked is the distinct train
+bank reaching an outer chain through the complementary train system.
+
+For any chosen complete train family A, let N be its complement and
+I the bounded-face recipients in N components missing the outer walk.
+Reciprocal sparsity gives E(I)<=2|I|-sigma; terminal counting gives
+the cut X(I)>=Q(I)+2sigma. Hence at least |A|/3 distinct A trains
+have an end in a boundary-reaching N component.
+
+Matched unit-edge endpoints along each N train form a literal contact
+rail of d_tau edges. Adding the actual facial walks and old outer walk
+lifts every counted return into the source contact graph.
+The common carrier has at most sum_N d_tau+2T edges.
+
+Selecting A by d_tau>=L avoids all weak direction-measure assumptions.
+Mantel gives bank_count>=(2/3)*sqrt([R4-L*T]_+).
+For every quadratic-core sequence, fixed epsilon gives a linear bank
+of macroscopic long trains with actual loaded returns in a carrier of
+epsilon*D^2+O(D) edges. In Type II its bank coefficient approaches
+0.6348752045. Taking epsilon to zero slowly gives an o(D^2) carrier
+and diverging train lengths, without a uniform macroscopic length floor.
+
+Classification: proved candidate awaiting independent audit/promotion;
+registry unreviewed and canonical=false. This finite source extraction
+stops at literal contact returns: routes can overlap, and neither
+shared-path payment nor a feasible full-source motion is proved.
+The subquadratic-core container branch also remains.
+
+Proof: docs/reports/target_c_train_cut_hull_bank_2026-10-08.md.
+Exact verifier: research/verify_target_c_train_cut_hull_bank_2026_10_08.py.
+It passed 13,259 lower pairs, 164 physical train rails, 506 selections,
+4,714 bank-end returns and 8,906 unit steps. The reciprocal antecedent
+passed 459 selections and failed 47 nonglobal selections; these
+failures are recorded rather than misclassified as canonical sources.
+
+Rebased the seven local research commits onto Audit.137 at 0ce9dc0a.
+Compared STATE, the manifest, and the C route. Audits.136--137 add
+conditional near-port and deep/far grid-return results. Their explicit
+same-cell cap/grain extraction and payment hypotheses are not supplied
+by this train bank and are not imported into its proof. The bank's
+canonical inputs are unchanged. Level I and both remaining C-II
+branches remain open.
+
+Bank validation passed: exact finite verifier, Python compilation,
+nine local proof links, artifact metadata regeneration, theorem-state
+check, and whitespace check. No canonical claim or route status changed.
+
+The bank report now also proves an endpoint-specific separator bound.
+For a chosen family of a long train rails of at least L edges, a
+separator of k source vertices meets at most 5k rails. Pinned mixed
+rigidity and positive unloaded equilibrium bound the vertex population
+behind the cut by 16*k^2/pi^2+8*k/pi. Hence
+
+    (a-5*k)_+*(L+1) <= 80*k^2/pi^2+40*k/pi.
+
+For the quadratic-core long bank, this forces a linear minimum cut and
+therefore a linear family of vertex-disjoint actual contact returns
+from specified bank terminals to distinct actual loaded endpoints.
+Unlike the conditional near-port/cap packages, this primitive needs
+no cap extraction. It still supplies no outside-grid population gain.
+
+The checker runs 27 minimum-cut tests and 113 explicit disjoint contact
+returns. Its pinned-count antecedent passes three and fails 24 nonglobal
+tests; no positive-stress or loaded-root certification is inferred.
+The disjoint paths use the full contact graph and may leave the small
+complementary-rail carrier. Combining disjointness with the edge budget,
+or proving independently paid lengths or a full-source motion, remains
+the next obligation. Level I and the subquadratic-core container branch
+remain open.
+
+Final separator refinement validation passed: the exact checker, Python
+compilation, ten local proof links, artifact metadata regeneration,
+theorem-state consistency and whitespace. Both bank results remain
+unreviewed and noncanonical. A linear disjoint-return fraction is
+asserted only for fixed epsilon; it is not uniform as the small-carrier
+parameter tends to zero.
+
+## Train-rich shared-carrier regression
+
+Run base 09d1665e, canonical inputs compared on Audit.137 at 0ce9dc0a.
+The proposed implication under test was a small shared physical carrier
+plus positive pinned rigidity implying many disjoint returns within the
+same small edge budget. This implication is false for artificial pins.
+
+An exact rational two-grain family has 2*m*(m-1) strict unit rhombi,
+only O(m) summed rhombus area excess, strictly positive equilibrium at
+every free point, and an explicit full-rank pinned contact minor.
+The complementary singleton trains and facial walks give a carrier
+with 8*m edges. For m/3+O(1) central long-train terminals its disjoint
+return capacity is two, while the full graph has one independent
+return per chosen terminal, requiring Omega(m^2) total unit steps.
+
+Every source is explicitly nonglobal: a square-grid crop of the same
+cardinality has strictly smaller diameter. The specified 6*m pins
+are not the actual loaded set; the tested fixtures have only two
+actual diameter endpoints. The family also lacks canonical global
+roundness. This regression does not refute canonical loaded-return
+bounds or the candidate bank/long-terminal separator theorem.
+
+Classification: regression awaiting independent audit, registry
+unreviewed and canonical=false. No theorem-state promotion.
+Proof: docs/reports/target_c_shared_carrier_disjoint_return_regression_2026-10-08.md.
+Verifier: research/verify_target_c_shared_carrier_disjoint_return_2026_10_08.py.
+The verifier checks all source pairs, physical train owners and crossings,
+positive equilibrium, the pinned minor, both physical vertex-flow problems,
+actual diameter endpoints, and a whole-source strict competitor.
+
+The remaining global bridge must use actual diameter loads and global
+optimality to pay independently for the return packet or realize a
+full-source finite move. Neither the small carrier nor pinned rank
+alone supplies it. The full Level I objective remains active.
+
+Fresh main advanced to 023917ac, Audit.139. Compared STATE, the manifest,
+the C frontier and both new independent audits. Audit.138 supplies a
+scoped support hub but rejects its unproved branch/tube extensions.
+Audit.139 supplies an actual exterior-cap separator and strict reduced
+source motions, still requiring a same-cardinality refill. Neither
+changes the candidate bank inputs or the nonglobal regression's scope.
+The bank's c_K<=k justification now uses positive unloaded equilibrium
+directly, so it makes no contact-connectivity inference from mixed rank.
+
+Regression validation passed: exact source-pair/train/stress/minor/flow
+certificate, Python compilation, two local proof links, artifact
+regeneration, theorem-state consistency and whitespace.
+
+Rebased all eight coherent local research commits onto 023917ac,
+Audit.139, preserving the original checkout and its user changes.
+The new artifacts remain unreviewed and noncanonical.
+
+## Actual-loaded cap extraction from a quadratic harmonic grain
+
+Run base 4ed65618; canonical base 023917ac, Audit.139. Chosen target:
+C-II quadratic-core source geometry. Exact bridge attacked: supply
+the cap/grain/port package assumed by Audits.136--137, then count
+distinct return vertices outside a whole cropped region.
+Canonical proof inputs: Sections 69, 73, 78 and 83, harmonic trapping,
+actual loaded-hull order, and Audit.133's loaded-return theorem.
+
+Section 78 supplies a quadratic coherent grain in one unloaded component
+and its attachment cell. Among three attachments, some two are
+nonconsecutive on the full loaded hull; their chord defines proper
+force-hull caps. One side contains at least half the grain area.
+Only O(D) rhombi meet the chord, so after omitting them, the perimeter
+bound and isoperimetry give a quadratic coherent component in that cap.
+The highest actual attachment has height at least grain_area/D.
+This supplies a package for a cap and port selected by this construction,
+not for a cap/port prescribed independently.
+
+Trimming the cap away from its boundary and highest attachment yields
+a complete deep/far grid. Canonical loaded-return paths, truncated at
+their last visit to the entire cropped region, give Omega(D^2)
+distinct internal source vertices outside that region. The whole-cell
+variant places these vertices in a specified cell boundary strip.
+No prescribed-cap hypothesis is needed for this selected packet on a
+quadratic-core subsequence. Type-II near-port conclusions still use
+their Type-II premise; uniform defect tails remain unproved.
+
+Classification: proved candidate awaiting independent audit/promotion;
+registry unreviewed and canonical=false. The new bridge does not pay
+the packet against global phase/population currency or construct a
+finite source move. The subquadratic-core container branch and the
+full Level I objective remain open.
+
+Proof: docs/reports/target_c_quadratic_core_cap_extraction_deep_returns_2026-10-08.md.
+Certificate: research/verify_target_c_cap_crop_return_suffix_2026_10_08.py.
+The exact checker passed 829,032 full-source pairs, 1,856 rhombi,
+210 chord-crossing faces, 823 cap faces and 36 vertex-disjoint
+contact returns, with 80 distinct internal vertices in each of the
+two suffix checks. The fixtures have artificial pins and only two
+actual diameter endpoints; no source stress/optimality is certified.
+
+The candidate also proves a Type-II uniform near-port corollary.
+For every fixed rho in (0,1), every actual attachment of the selected
+macroscopic cell has a same-component coherent complete grid within
+rho*D, with linear shore constants uniform over those attachments.
+The global o(D^2) missing-area bound applies to every moving
+homothetic crop; cell disjointness supplies the actual same-component
+comparison. No uniform constant as rho tends to zero or multi-port
+route payment is inferred.
+
+Fresh main advanced to 419ab570, Audit.142. Compared STATE and the
+manifest: the added fixed exterior-wall capacity, weak-guard ledger
+and rhombus-completion regression do not alter the cap/grid/return
+inputs used here. No new static wall or edge-completion packet is
+imported into the candidate.
+
+Rebased all nine coherent local research commits onto 419ab570,
+Audit.142. The original checkout remains untouched. Candidate
+geometry, source population and all full Level I quantifiers are
+unchanged.
+
+Next exact investigation: use Type-II convex-face collapse and the
+local fixed-port route bound to control how many actual loaded
+attachments can share one long near-port face-tail obstruction.
+The global degree tail is paid once; a new geometric multiplicity
+bound would be needed before using the uniform near-port grids for
+short-route extraction. This is an unproved route, not a premise.
+
+Post-rebase validation: theorem-state checker passed against current
+origin/main at Audit.142; artifact regeneration registered 1,313
+records with no header changes. The new exact checker passed, Python
+compilation and git diff --check passed, and all eight local proof
+links resolved. These checks certify repository consistency and the
+stated finite fixture arithmetic, not the Level I implication.
+
+## Type-II face-tail multiplicity and many accessible ports
+
+Run base 99368bc1; canonical base 419ab570, Audit.142. Target:
+C-II Type-II fixed-port obstruction. Exact bridge attacked: replace
+the global-tail-only route estimate by a source-geometric bound on
+how many actual attachment incidences can share each large face.
+Dependencies: Sections 69, 73, 78, 80, 83 and 123; canonical
+Audits.133--134. No conditional report is imported as a premise.
+
+The summed non-rhombic augmented-face area is o(D^2), since every
+unloaded-only rhombus retains all its internal edges in the augmented
+graph. Each convex large face is within sqrt(2 area) of one line.
+The nearly circular loaded hull then gives at most
+(12 sqrt(rho)+o(1))D ports within rho D of any such face. Swapping
+the port/face sums bounds aggregate local tails by that multiplicity
+times the single global tail bank, which is at most 3 pi D.
+
+For any fixed lambda and eta, a sufficiently small fixed rho makes
+fewer than eta D actual attachment incidences fail short access
+(length <lambda D) to every same-component vertex within rho D.
+In the canonical macroscopic cell, uniformly extracted near-port
+grids and the linear actual-attachment population yield linearly
+many short-access port/grid packages. Paths and grids may overlap.
+A fixed-vertex convex triangle construction also selects a proper
+loaded-chord cap for every attachment of that cell, with uniformly
+quadratic mass and linear attachment height.
+
+Classification: proved candidate awaiting independent audit/promotion;
+registry unreviewed, canonical=false. A worst prescribed attachment,
+independent route payment, compatible finite motion and the
+macroscopic inactive-container branch remain unresolved.
+
+Proof: docs/reports/target_c_typeii_face_tail_port_multiplicity_2026-10-08.md.
+Exact checker: research/verify_target_c_face_tail_port_multiplicity_2026_10_08.py.
+PASS: 42,784 source pairs; 96 flatness vertices; 15,680 port/body/radius
+tests; 21 weighted identities; 84 threshold counts; 480 strip cases;
+448 prescribed-port triangles. Fixture endpoints are actual diameter
+endpoints, but the circle sources are isolate-only and nonglobal;
+auxiliary bodies are not certified augmented source faces.
+
+The new implication ends at many accessible actual packets.
+No full-source cardinality-preserving competitor is constructed.
+The Level I objective remains active and unsolved.
+
+Fresh main advanced to ca26397a, Audit.143. Compared STATE and the
+manifest before import: the new partial-wall interior-chord/isolate
+regression does not change any grain, cell, face, route or separator
+dependency. Rebased all nine preceding local research commits onto
+that main; the original user checkout remains intact. The new port
+multiplicity argument uses no wall shielding or refill premise.
+
+Validation at Audit.143: exact geometric checker passed; Python
+compilation and git diff --check passed; all nine local proof links
+resolved; artifact generation registered 1,315 records and one new
+unreviewed/noncanonical header. The theorem-state checker passed
+against origin/main. No canonical promotion or frontier change was
+made by this candidate commit.
+
+## Uniform harmonic cells and full diameter-incidence coupling
+
+Run base d63e3665; canonical base ca26397a, Audit.143. Previous goal
+turn classification: progress, because its proved-candidate geometric
+multiplicity and cap packages changed the next source-coupling question.
+Full Level I success has not been substituted by those finite results.
+
+The initial finite-move investigation confirmed that short contact
+paths alone do not give a feasible local deformation: mixed rigidity
+and positive equilibrium already obstruct nontrivial first-order
+contact/diameter-feasible motions. No deformation was inferred.
+
+New bridge: actual full-source diameter normals, unloaded degree and
+the canonical pinned ledger force every actual harmonic cell to have
+uniformly macroscopic diameter, attachment population and area.
+An attachment with an unloaded unit neighbor forbids an angle <=30
+degrees by doubling the cone's unit-circle angles. Nearby actual
+diameter normals would force such an acute cell vertex if its diameter
+were submacroscopic. A long thin cell would have only o(D) attachments
+near at most two circle intersections, contradicting t>=delta+3.
+Therefore the number of unloaded components is uniformly bounded.
+This part holds in both C-II branches; it allows no unloaded component
+and does not bound the source isolate population.
+
+In Type II every cell then has uniform quadratic grain/grid mass.
+Cell tiling makes the union of actual attachments approximate the
+circle. A loaded-only vertex cannot have just one loaded contact,
+because its positive diameter force is radial and that contact is
+nearly tangent. Loaded-only chains therefore reach attachments in
+uniform o(D) contact length. Diameter-direction spacing upgrades the
+face-tail bank to degree-weighted incidence: all but eta D actual
+diameter edges, for fixed eta and lambda, have both endpoints coupled
+by <lambda D contact paths to uniform nearby actual complete grids.
+This counts high-degree hubs, not just port vertices.
+
+Classification: proved candidate awaiting independent audit/promotion;
+registry unreviewed, canonical=false. No KKT-weight coverage, independent
+path payment, compatible motion or exact refill packet is proved.
+The macroscopic inactive-container and full-source finite replacement
+obligations remain; Level I is open and the goal remains active.
+
+Proof: docs/reports/target_c_uniform_harmonic_cells_global_diameter_access_2026-10-08.md.
+Checker: research/verify_target_c_uniform_cells_diameter_access_2026_10_08.py.
+PASS: 21 positive pinned stars; 126 star source pairs; 45,643 circle/fan
+source pairs; 13,384 diameter-direction pairs; 11,792 port/body/radius
+tests; 24 weighted identities; three high-degree hub witnesses;
+six impossible-cell diagnostics. Fixtures are nonglobal and do not
+certify canonical source stress or the asymptotic source theorem.
+
+Fresh main advanced to 350c8ed6, Audit.145. Compared STATE and the
+manifest before import: Audit.144 is a scoped finite radial-lifting
+stress audit, and Audit.145 is a strict-turn path nonsurrounding
+criterion. Neither changes the diameter-geometry, harmonic-cell,
+graining or fixed-port route premises used here. Rebased all ten
+preceding local research commits, preserving both overlapping
+research-index additions. The original checkout remains intact.
+
+Validation at Audit.145: the exact checker and Python compilation
+passed before the documentation-only rebase; all eleven local proof
+links resolved. Artifact generation wrote 1,319 records and one new
+unreviewed/noncanonical header. The theorem-state checker passed
+against origin/main, and git diff --check passed. The new candidate
+does not change the canonical frontier or theorem lifecycle.
+
+Next-bridge check: global short grid access does not establish the
+relative-chord report's exact additive charts on loaded endpoints.
+The off-grid contact routes need not inherit either grid increment
+sequence; their geometric error is a small fraction of D, not an
+exact coordinate identity. The exceptional diameter-edge count also
+does not bound exceptional KKT mass. No finite competitor or stress
+variation is inferred from either substitution. The goal stays active.
+
+## Collective shallow-wall finite release and the larger-turn test
+
+Run base 7d83184b; canonical base 350c8ed6, Audit.145. Fresh fetch
+confirmed the same main. The previous goal turn was progress: it
+preserved the uniform-cell proof and changed the next finite-move
+question. The full Level I objective remains unchanged and active.
+
+Read the current authority and prompt, the weak-guard ledger,
+one-omitted-guard capacity, strict-turn nonsurrounding, finite sorting
+stress and exterior-cap separator audits at their exact scopes.
+The new proof uses the actual convex hull-augmented cell and the
+existing contact/diameter endpoint. No unreviewed input is assumed.
+
+The finite-move chain is: a same-cardinality weak packet with every
+internal path vertex guarded and strict tip clearance, behind a
+unit path with turn below 120 degrees, admits one common translation
+opening all wall contacts, followed by a small dilation opening every
+internal contact. Every full-source lower and upper pair is retained.
+This works even when the initial packet contains triangles; the
+final packet has no contacts. It contradicts the canonical source
+if an old contact or diameter pair was deleted. Packet existence and
+the required cardinality are not proved, so this is not closure.
+
+The local contact angles lie in one global interval of width
+T+60 degrees, giving opening rate at least cos((T+60)/2)>0.
+No internal guard is omitted. Weak contacts provide no extra static
+capacity in this scope: the packet can be moved into the strict region.
+This is distinct from Audit.140's one-omitted-guard barrier and does
+not reopen that rejected one-extra-site route.
+
+A larger-turn rational test has a 529-site triangle-free packet behind
+a convex unit wall with turn 2 acos(16/65)<pi. All actual contact sites
+are internal wall vertices and both path tips are strictly clear.
+Every individual site has at most one wall contact, but the aggregate
+three wall-contact vectors positively balance. No nonzero common
+translation is possible, and a positive pinned equilibrium blocks
+any supported first-order contact opening. The packet lacks full
+pinned rank and is nonglobal. An exact small rotation followed by
+translation and dilation opens every packet contact. Thus the test
+blocks the collective-translation inference, not nonlinear release.
+
+Proof: docs/reports/target_c_collective_shallow_wall_packet_release_2026-10-08.md.
+Checker: research/verify_target_c_collective_shallow_wall_release_2026_10_08.py.
+PASS: 601,188 initial source pairs and 601,188 finite endpoint pairs;
+529 exact positive packet equilibria on 531 supported rows; complete
+triangle-free census in the larger-turn example; initial actual unit
+triangle and retained outside isolate in the ten-site shallow example.
+All packet-involving lower and upper endpoint pairs are strict.
+Both examples keep the old wall diameter and are explicitly nonglobal.
+
+Classification: proved candidate awaiting independent audit/promotion,
+plus scoped regression; registry unreviewed, canonical=false.
+No full-source strict-D competitor or canonical refill packet exists
+in this output. Both C-II branches and Level I remain open.
+
+Validation completed on the Audit.145 base: both exact finite
+fixtures and Python compilation passed; all four local proof links
+resolved; artifact generation wrote 1,320 records and one new header.
+The theorem-state checker and staged whitespace check passed.
+A final fetch advanced main to 2010296d, state Audit.147. Its added
+Audit.148/149 supplied-crosscut bandwidth and capsule-packing claims
+do not change any wall-release premise. The STATE and manifest diff
+was inspected before rebasing this candidate.
+
+All twelve local research commits were rebased onto 2010296d,
+Audit.147. Both overlapping research-index entries were preserved.
+The new finite verifier and its imported exact-arithmetic helper
+were unchanged by this documentation-only rebase. Original user
+checkout and untracked Target A report remain untouched.
+
+Validation after the Audit.147 rebase: artifact generation wrote
+1,322 records with no further header changes; the theorem-state
+checker passed against origin/main and git diff --check passed.
+The finite geometric checks were not repeated because their code,
+helper and fixtures did not change. No canonical claim was promoted.
+
+## Accessible stress faces and the high-defect alternative
+
+Run base 9029db9a; canonical base 2010296d, Audit.147. Fresh fetch
+confirmed the same main. The previous goal turn was progress: it
+proved the scoped collective shallow-wall release and certified the
+larger-turn regression. The full Level I objective remains active.
+
+Reviewed the current authority, exact problem, route and prompt,
+canonical all-stress PSD, extreme circuits and finite KKT alternative.
+The new bridge avoids the unjustified inference from an exceptional
+edge count to an exceptional KKT mass bound.
+
+For any supplied actual loaded set W, intersect the zero-reaction
+faces of the normalized source stress polytope. If the intersection
+is empty, finite Helly selects U inside W with |U|<=s_Z+1 meeting
+every normalized diameter support. Canonical Audit.87 then supplies
+a strict contact-opening, diameter-shortening finite motion of the
+reduced full source, retaining all contact isolates. No uniform KKT
+weight gap is needed. This controls where the deletion occurs; it
+does not pay for or construct a refill packet.
+
+If the exceptional face is nonempty and has at most b_0<=D available
+diameter edges, every one of its extreme circuits satisfies
+sigma_*>=D cos((b_0-1)asin(1/(2D)))-(b_0+1)/2.
+Thus b_0=o(D) forces sigma_*>=(1-o(1))D. This is a selected
+bar-flex deficiency, not a full-source feasible motion. Canonical
+low-degeneracy transfer cannot discard this alternative.
+
+Conditional on the preceding unreviewed Type-II diameter-access
+candidate, W can have b_0<=eta D for arbitrary fixed eta>0. The
+finite stress-face result itself does not depend on that candidate.
+Neither alternative supplies the remaining closure arrow: a refill
+after accessible deletion or a whole-source high-defect contradiction.
+No area/refill count was inferred from the boundary-order allowance.
+
+An exact seven-site hexagon/center fixture reconstructs all source
+pairs and the complete tetrahedral stress polytope. All extreme
+matrices are PSD; every relative-interior mixture has precisely the
+three affine kernel modes. Yet one extreme stress avoids a tagged
+loaded set, and positive mixtures can place mass arbitrarily near
+one on the untagged diameter pair. The fixture contains unit
+triangles and has no claimed global-optimality certificate. It
+refutes generic PSD/rank mass inheritance, not the canonical source.
+
+Proof: docs/reports/target_c_accessible_stress_transversal_or_degenerate_face_2026-10-08.md.
+Checker: research/verify_target_c_accessible_stress_faces_2026_10_08.py.
+PASS: all 21 source pairs; 12 actual unit contacts; three actual
+diameter pairs; six unit triangles; exact mixed rank eleven;
+four exact stress vertices with PSD ranks 1,1,1,3; four positive
+relative-interior rank-four mixtures; 656 tagged-subset checks
+including 253 empty exceptional faces; ten rational defect bounds.
+Abstract simplex/cube fixtures are not planar sources.
+
+Classification: proved candidate awaiting independent audit/promotion,
+conditional grid specialization and scoped regression; registry
+unreviewed, canonical=false. C-II and Level I remain open.
+
+Validation on the Audit.147 base: the exact checker and Python
+compilation passed; all three local proof links resolved. Artifact
+generation wrote 1,323 records and one new unreviewed header.
+The theorem-state checker passed against the fixed run base.
+A concurrent final fetch advanced main to d32a55f2, Audit.148;
+the checker against the moving origin/main correctly required a
+rebase. STATE and manifest were compared before importing that
+update. Audit.150 adds supplied-cap unloaded strip transversals;
+it does not change the finite loaded Helly or extreme-circuit
+premises. Its cut and cap hypotheses are not inferred here.
+
+All thirteen local research commits were rebased onto d32a55f2,
+Audit.148 without conflicts. The exact checker, helper and fixtures
+were unchanged by this documentation-only rebase. No finite checks
+were repeated; the state and generated metadata checks were rerun
+against the new fixed main.
+
+## Exceptional diameter-star face and one unloaded exception
+
+Run base 5f8ece96; canonical base d32a55f2, Audit.148. Fresh fetch
+confirmed unchanged main. The previous goal turn was progress:
+the accessible stress-face alternative was proved, checked and
+committed. The Level I objective remains active.
+
+Reviewed the current authority, problem and prompt; canonical
+complete-grid extraction, phase collapse, hole-stable order and
+harmonic-cell localization; and the preceding stress-face proof.
+Grid access alone supplies no positive contact coefficient for
+every stress, so no support-coverage inference was made.
+The new literature-audit branch was inspected only for its stated
+scope; it supplies no unconditional closure or imported premise.
+
+The new geometric theorem uses the actual full source. A normalized
+stress whose positive diameter support is a star cannot use two
+edges in a triangle-free source. The extreme leaf reactions force
+straight unit contact chains along the two hull sides back to the
+hub. Their first unit neighbors are at distance at most one:
+strict inequality violates separation, equality makes a unit
+triangle. A one-edge stress exists exactly for an actual integer
+diameter with its complete straight unit chain, and is unique.
+
+Hence if the preceding candidate's exceptional edge set E_0 lies
+in one actual diameter star, its zero-reaction face P_0 is empty or
+one exact chain stress. The star antecedent is not extracted from
+a general source. In the singleton case, any internal chain point
+r is actually unloaded and has positive contact reaction in that
+stress. Intersect the source polytope with its zero-contact face;
+this proper face has dimension at most s_Z-1 or is empty.
+Helly then gives a stress-killing deletion of at most s_Z+1
+labels, all in W except possibly r. The finite reduced-source
+descent follows from Audit.87, retaining every contact isolate.
+No extra deletion cost is added, but no label is restored.
+
+Proof: docs/reports/target_c_exceptional_diameter_star_face_2026-10-08.md.
+Checker: research/verify_target_c_exceptional_star_face_2026_10_08.py.
+The finite sources include integer chains with retained isolates,
+the sharp 60-degree unit-triangle obstruction, and triangle-free
+three-arm Y examples with positive diameter-cycle stress. The
+Y examples have the exact affine scalar kernel but deficient
+mixed rigidity; the star theorem cannot extend to arbitrary
+connected diameter supports. Explicit smaller square-grid
+competitors certify nonglobality for every valid fixture.
+
+Classification: proved candidate awaiting independent audit/promotion,
+with conditional located-transversal application and scoped
+regressions; registry unreviewed, canonical=false. Source extraction
+of the star and full-source cardinality restoration remain open.
+Neither canonical C-II branch nor Level I is closed.
+
+The subsequent canonical-dependency check produced a stronger
+general bridge in the same lineage. Contact-face regularity gives
+rank R_C=e, so contact coefficients are uniquely determined by
+diameter coefficients. Consequently an exceptional face supported
+on b_0 actual diameter edges has affine dimension at most b_0-1.
+Audit.111 makes the loaded-only part of that face empty whenever
+W is nonempty: a loaded-only stress would cover every actual
+loaded vertex, whereas the face avoids W.
+
+Choose a minimal unloaded-reaction face cover of the exceptional
+face. Its k witnesses give k independent affine functions on the
+full polytope whenever their common zero face is nonempty, so that
+face has dimension at most s_Z-k. Helly selects at most s_Z-k+1
+additional loaded labels in W. Therefore the total deletion bound
+stays s_Z+1, with at most b_0 unloaded exceptions. This applies
+even to the high-defect exceptional face; no selected bar flex
+is extended and no KKT mass floor is inferred.
+
+Conditional on the preceding Type-II access candidate,
+b_0<=eta D gives at most eta D unloaded exceptions. A diagonal
+parameter choice gives o(D) exceptions and short o(D) contact
+routes along a survivor sequence, without retaining a fixed
+positive grid-shore constant. The deletion is still not a refill;
+routes/grids can overlap and the total deletion can be linear.
+The macroscopic-container route is not covered by the grid premise.
+
+Proof: docs/reports/target_c_almost_accessible_transversal_face_codimension_2026-10-08.md.
+Shared checker: research/verify_target_c_exceptional_star_face_2026_10_08.py.
+PASS: all 1,381 source pairs and all 1,381 explicit competitor
+pairs on seven nonglobal fixtures; complete actual contact,
+diameter and triangle censuses; exact contact-row independence,
+equilibrium, PSD and mixed rigidity ranks. The checker also
+passes 28 simplex and 21 cube/simplex-join codimension cases,
+plus 15 empty-remainder cases including affine dimension zero.
+Those abstract polytopes are not source models. The universal
+two-stage theorem is analytic, not inferred from enumeration.
+
+The general theorem and the star specialization are proved
+candidates awaiting independent audit/promotion. The grid
+application is conditional on its unreviewed access premise.
+No canonical lifecycle or Level I status changes.
+
+The full positive source stress also makes P_0 proper when W
+is nonempty, giving |Y_0|<=min(b_0,s_Z). In particular s_Z=0
+needs no unloaded exception. This does not change the total
+deletion or the unresolved refill requirement.
+
+Validation on the Audit.148 base: the final exact checker and
+Python compilation passed, all eleven local proof links resolved,
+and artifact generation wrote 1,327 records with two new unreviewed
+headers. The theorem-state checker passed against the fixed run
+base, and staged whitespace validation passed.
+
+Final fetch advanced main to b1b0a9a0, Audit.149. STATE and manifest
+were compared before import. Its Audit.152 centered-fan blocker
+path theorem does not change contact-row independence, loaded-only
+cycle coverage, stress-polytope dimension or finite descent.
+No per-leaf blocker path is imported as disjointness or refill.
+
+All fourteen local research commits were rebased onto b1b0a9a0,
+Audit.149 without conflicts. The new verifier and both imported
+exact-arithmetic helpers were unchanged. No geometric tests were
+repeated after this documentation-only rebase. Artifact generation
+and theorem-state validation were rerun against the new fixed main;
+staged whitespace checks passed. The original user checkout and
+untracked Target A report remain untouched.
+
+## Post-descent weak wall refill and capacity activation
+
+Run base c26d2f06; canonical base b1b0a9a0, Audit.149.
+The previous goal turn was progress: it proved and committed the
+two-stage located stress-deletion theorem. Fresh fetch confirmed
+unchanged main. The full Level I objective remains active.
+
+Chosen target: the actual post-deletion cardinality-restoration
+gate, not another stress-support count. The candidate chain is
+an actual strict reduced-source descent followed by certified weak
+wall-packet capacity, then a same-cardinality strict-D competitor.
+The existence of that capacity is the theorem under attack.
+
+Load-bearing inputs read: current STATE and theorem manifest,
+exact source quantifiers and Target C frontier; Audit.87's finite
+KKT strict-motion alternative; Audit.88's source-vertex wall
+shield; Audit.90's first-order restoration regression; canonical
+finite Oler packing in the shared theory. The current route prompt
+was read last. The new rooted-crosscut audit branch was inspected
+for scope only and contributes no premise or capacity inference.
+
+Result: the new closed-guard shield gives an exact post-descent
+replacement theorem. A packet may have unit triangles; disjoint simple
+source-vertex walls with sides at most sqrt(3) shield weakly guarded
+packets. Every inserted point lies in the smaller retained hull.
+The cardinality condition pays all old interiors and all deleted labels.
+Simple moving walls of side length below two cannot be crossed by a
+unit-separated nonwall label, under the explicit continuous-wall premise.
+
+The proposed implication from strict contact opening to extra capacity
+is rejected by an analytic unbounded nonglobal family. Near-triangular
+M-by-M grids with phase defect <=1/(50M^3), a retained isolate and a
+deleted remote isolate admit a strict reduced-source diameter decrease.
+For every 0<t<=1/(10M^2), their actual expanded 4M-side wall has exact
+weak capacity (M-1)^2, one short of restoring the deleted label.
+Oler's integer upper bound has excess at most 129/400<1. The unique
+original diameter joins the two isolates, so there is no normalized
+KKT stress; this does not refute a canonical-source refill theorem.
+
+The exact checker passed M=4,6,8,12: 19,564 original pairs, 19,236
+retained endpoint pairs, 19,564 same-cardinality competitor pairs,
+580 actual old contacts, 120 wall sides and 8,120 strict wall guards.
+Every old unit contact opens; every source is triangle-free and
+explicitly nonglobal; the retained isolate remains in every endpoint
+check. Python compilation passed. The analytic wall and all-M claims
+remain proved candidates awaiting independent audit; metadata remains
+unreviewed and noncanonical.
+
+The next required bridge is actual capacity activation after a finite
+source motion, or another same-cardinality strict competitor. A small
+positive diameter decrease and o(1) phase error do not supply it.
+
+All five local report links resolved. Artifact generation wrote 1,329
+records with one new unreviewed header; theorem-state validation against
+the fixed Audit.149 base passed, as did staged whitespace validation.
+Fresh fetch advanced main to 50ee4761, state Audit.151. STATE and
+theorem manifest were compared before import. The assigned-mark
+interval and singleton-terminal claims do not change weak shielding,
+Oler's finite bound, the source quantifiers or the capacity obstruction.
+All fifteen local commits rebased without conflicts. The geometric
+checker and its exact helper were unchanged, so geometric tests were
+not repeated. Generated metadata and state consistency are checked
+again on the fixed new main.
+
+Post-rebase artifact generation wrote 1,331 records with no header
+changes, and theorem-state validation against fixed 50ee4761 passed.
+The final staged whitespace check passed.
+
+## Endpoint-assignment follow-up, still exploratory
+
+Candidate chain: gated endpoint assignment -> no marked diameter pair
+internal to a nonhub branch -> actual contact-preserving region motion
+with all upper/lower tests -> strict competitor. The physical-assignment
+and feasible-motion arrows remain unproved, so this is exploratory.
+
+There is a short abstract repair of Audit.138's endpoint ambiguity.
+Root its dual tree at a common support hub r. For each connected
+incident-region set R(p), let g(p) be its unique vertex nearest r.
+If r lies in the subtree spanning R(p) union R(q), then it lies on
+the path g(p)--g(q). Otherwise both gates lie in the same component
+of T minus r. Connectedness and gate minimality force both entire
+incident-region sets into that component, contradicting the support
+hub. Thus the gated assignment has no full pair internal to a nonhub
+branch. Classification: proved topological candidate awaiting audit;
+this is not an unrestricted physical-source branch exclusion.
+
+The single-region assignment in an actual owner motion is induced by
+the source's translations. It cannot be replaced by gates merely to
+make the diameter graph convenient. At a cut endpoint, admissibility
+of the chosen translation still requires every old contact and full
+source pair. Even midpoint cuts whose ends avoid all vertex marks
+must be extracted as actual proper disjoint cuts and integrated with
+the finite train constraints. The new topology alone does not close
+that motion arrow. No source-level claim or state promotion is made.

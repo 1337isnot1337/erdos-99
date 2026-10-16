@@ -1,0 +1,142 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "0ac4aad69ebadfa88b73d7db02318d131000b424", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/audits/target_b_explicit_balanced_phase_gap_audit_2026-09-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "443117c018996a9beb016f30d6b8cb73b5ecb55115b0c9f0e8895047b7069c83"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.
+
+# Audit — Target B explicit balanced coherent phase gap
+
+**Date:** 2026-09-05  
+**Candidate:** `docs/reports/target_b_explicit_balanced_phase_gap_2026-09-05.md`  
+**Verdict:** PASS under the stated dense-core/coherence hypotheses.  
+**Global LEVEL I status:** STILL OPEN.
+
+## 1. Explicit tripartite stability
+
+For equal phase classes of size `m`, triangle-freeness gives
+
+`D_3=2m^3-mE<=epsilon m^3`.
+
+If one phase pair already has at most `4sqrt(epsilon)m^2` nonedges, the desired pair is found.
+
+Otherwise the slice-bad argument leaves more than `2sqrt(epsilon)m^2` good-good nonedges. Averaging gives one absent good pair with pair defect at most `sqrt(epsilon)m/2`, hence a common-neighbor set
+
+`|C_*| >= (1-sqrt(epsilon)/2)m`.
+
+For `epsilon<=10^(-7)`, this is certainly at least `m/2`. The product bound
+
+`|A_1||B_1||C_*|<=epsilon m^3`
+
+therefore gives
+
+`min(|A_1|,|B_1|)<=sqrt(2epsilon)m`.
+
+The missing-edge count for the resulting dense phase pair is at most
+
+`[sqrt(2)+1/2+1]sqrt(epsilon)m^2`
+
+`<3sqrt(epsilon)m^2`
+
+and hence below the advertised `4sqrt(epsilon)m^2`.
+
+PASS.
+
+## 2. Dual-tree grid extraction
+
+Let
+
+`mu<=4sqrt(epsilon)`
+
+be the missing density of the selected phase pair. The corrected dual-tree theorem gives a complete grid after deleting normalized train population at most
+
+`L<=3sqrt(mu)+mu+o(1)`.
+
+Since
+
+`sqrt(mu)<=2epsilon^(1/4)`,
+
+this yields
+
+`L<=6epsilon^(1/4)+4sqrt(epsilon)+o(1)`.
+
+PASS.
+
+## 3. Diameter losses are charged twice
+
+Relative to the full equal-size phase pair, the retained vector sums lose norm at most `L`. Omitted trains from those same two phase classes can independently separate the chosen diagonal and contribute adversarially with total norm at most another `L`.
+
+The third phase is not deleted or assumed favorable: its entire signed contribution of magnitude at most `m+o(m)` is included in the exact trimmed-grid constrained minimum `F(1,1)=3`.
+
+Thus
+
+`D/m>=sqrt(3)-2L-o(1)`
+
+and
+
+`D^2/m^2>=3-4sqrt(3)L-o(1)`.
+
+PASS.
+
+## 4. External-train error
+
+After a further fixed-fraction central trim of the complete grid, the penetration-depth lemma forces every genuinely external train separating the selected diagonal to cross `Omega(m)` retained grid tracks. The `o(m^2)` external crossing-mass hypothesis therefore leaves only `o(m)` such diagonal contributors.
+
+The auxiliary trim fraction is sent to zero after the asymptotic limit and does not change the displayed constant.
+
+PASS.
+
+## 5. Numerical threshold
+
+For
+
+`epsilon_0=10^(-7)`,
+
+`epsilon_0^(1/4)=0.0177827941...`,
+
+`sqrt(epsilon_0)=0.0003162278...`,
+
+and
+
+`L_0=6epsilon_0^(1/4)+4sqrt(epsilon_0)`
+
+`=0.1079616757...`.
+
+Hence
+
+`4sqrt(3)L_0=0.7479804301...`.
+
+The full balanced margin is
+
+`3-2c=3-4sqrt(3)/pi`
+
+`=0.7946844183...`.
+
+The remaining normalized squared-diameter margin is
+
+`0.0467039882...>0`.
+
+PASS.
+
+## 6. Global comparison
+
+If the coherent component carries all but `o(m^2)` rhombi, then
+
+`R/m^2=2-epsilon+o(1)`
+
+and the pure-disk Euler identity gives
+
+`n/m^2=2-epsilon+o(1)`.
+
+The strict triangular-lattice comparison gives
+
+`D^2/m^2<c(2-epsilon)+o(1)<=2c+o(1)`,
+
+contradicting the grid lower bound for `epsilon<=10^(-7)`.
+
+PASS.
+
+## 7. Conclusion
+
+The balanced coherent phase deficit satisfies
+
+`liminf (2m^2-E)/m^2 >=10^(-7)`.
+
+This remains a local phase theorem. The nearly tied but nonexact class-size interpolation and the global summation of local deficits remain open.

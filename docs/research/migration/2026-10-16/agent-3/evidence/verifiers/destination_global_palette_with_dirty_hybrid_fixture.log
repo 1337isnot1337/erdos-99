@@ -1,0 +1,8 @@
+PASS Boolean propagation/branching and UNSAT proof replay: 4100 cases against independent enumeration, including all 4096 binary-relation systems
+PASS core palette endpoint: 43 labels, 903 pairs, 13 search nodes
+PASS core endpoint min squared distance > 1.01; squared diameter < 185 < old D^2
+PASS corrupted pruning and incomplete branch cover rejected
+PASS full-source palette UNSAT: 175 labels, 2039 constrained label pairs, 4 exhaustive search nodes
+PASS independent full-source winner: all 15225 pairs > 1, D^2 < 183.2352
+PASS full-source JSON UNSAT proof replay without search
+SCOPE: certified failure of one finite palette on a nonglobal source; Level I remains open

@@ -1,0 +1,149 @@
+<!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "7864fae4b6509fcf6347adb21f7ed0274e4a2f8d", "source_branch_refs": ["refs/heads/research/level-i-closure-20261007"], "source_commit": "8d524f86d10df71b39e332d03f059e98a1aed4e7", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_c_shell_fold_collar_transport_2026-10-08.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "4d8ed2332f2d08e5ede2a13d2b412944a5dcd7216cef56a15d9f04499e6a2707"} -->
+
+> **Imported unreviewed branch research.** Source branch status is historical only; no destination claim is promoted.
+
+# Target C: a full-source finite fold with transported collar isolates
+
+Date: 2026-10-08. Start: `99064d1c`; fixed main `e0343614`;
+state `2026-10-08.audit.158` (through Audit.162).
+Classification: **proved candidate awaiting independent audit**.
+Registry unreviewed; canonical=false. C-II and Level I remain open.
+
+The chain is
+
+`regular unit odd shell with the Audit.65 collar cloud and a deep cloud
+-> two-wave wall fold plus inward collar transport
+-> full-source equal-cardinality strict diameter endpoint`.
+
+This produces a finite source move for that explicit family. No
+arbitrary C-II source is proved to have this form.
+
+## 1. Source and operation
+
+Let q>=65 be odd, alpha=pi/q, R=1/(2 sin alpha), and
+D=2R cos(alpha/2). Use the
+[canonical Audit.65](../audits/target_c_odd_shell_barrier_payment_independent_audit_2026-10-06.md)
+wall and collar:
+
+- regular unit wall vertices v_j;
+- a paired midpoint isolate on each side (0,1),(2,3),...,(q-3,q-2),
+  of radius T=R cos(alpha)-sqrt((1+delta)^2-1/4);
+- one isolate at radius R-1-delta on the last wall-vertex ray;
+- delta=1/(100R^2).
+
+One may omit any collar points. Add any unit-separated cloud
+X inside the open radius R-3 disk, keeping every cloud label.
+
+Apply the [two-wave finite wall fold](target_c_two_wave_shell_fold_two_isolate_obstruction_2026-10-08.md).
+Its moving wall radii are R-1/R and R-3/R+1/R^3.
+Exactly two adjacent wall vertices stay fixed. Move every retained
+collar isolate inward by 4/R along its original radial ray.
+Keep X fixed.
+
+This is an endpoint operation. A feasible continuous path is not
+asserted. Cardinality is unchanged and no source point is discarded.
+
+## 2. All lower constraints
+
+Audit.65 supplies the original separation and strict contact
+isolation. The wall fold preserves all q unit sides and its old
+noncontacts, by the polynomial identities and nonadjacent-pair
+bound in the preceding candidate.
+
+Write h=R-T for a paired collar point and u=1-cos alpha.
+Since alpha<1/20 and delta<1/10000,
+
+```
+4/5<h<9/10,  u=1/[4R^2(1+cos alpha)]<1/(4R^2).
+```
+
+The upper h bound follows from
+R(1-cos alpha)=tan(alpha/2)/2<1/40 and
+sqrt((1+delta)^2-1/4)<7/8.
+The last unmatched collar point has depth 1+delta<11/10.
+Thus every transported collar radius exceeds R-3/2.
+
+For a paired collar point the smallest wall angular difference
+is alpha, and every new wall radius is at least w=R-3/R.
+Its transported radius is T'=T-4/R, with w>T'. Squared
+distance is increasing in wall radius above w and in angular
+difference in [0,pi]. Therefore its distance to any new wall
+point is at least the distance for radii w,T' and angle alpha.
+Compared with its old nearest-wall squared distance (1+delta)^2,
+this lower bound increases by
+
+```
+2h/R+1/R^2
+-2u[(4R+3T)/R-12/R^2]
+>8/(5R)-5/(2R^2)>0.
+```
+
+Every paired-collar/wall distance remains strictly above one.
+For the unmatched collar point the radial gap alone is at least
+1+delta+1/R>1.
+
+The smallest angular separation of distinct collar rays is
+3alpha. With all new radii above R-3/2, their mutual distance is
+at least 2(R-3/2)sin(3alpha/2). The elementary Taylor bounds
+give sin(3alpha/2)>(7/5)sin alpha for alpha<1/20. Consequently
+
+```
+2(R-3/2)sin(3alpha/2)
+>(7/5)(1-3/(2R))>1.
+```
+
+No new collar/collar contact or collision appears.
+
+Each deep point has norm below R-3. Its radial separation from
+a transported collar point exceeds 3/2, and from a new wall
+point exceeds 3-3/R>1. Cloud/cloud distances are unchanged.
+These cover every full-source lower pair, including all isolates.
+
+## 3. All upper constraints and a quantitative strict endpoint
+
+Set L=2R-1/R=R(1+a), where a=1-1/R^2.
+The preceding fold gives every new wall/wall distance at most L:
+every pair except the fixed adjacent pair has a wall radius at
+most aR; the fixed pair has length one.
+
+Every paired collar radius is less than R-4/5-4/R; the unmatched
+one is smaller still. Any new wall/collar distance is therefore
+less than 2R-4/5-4/R<L. Every collar/collar distance is less
+than twice this radial bound, also below L. A deep point has
+norm below R-3, so all pairs involving deep points are below
+2R-3<L or smaller radial-sum bounds.
+
+Finally
+
+```
+L=2R cos(2alpha)<2R cos(alpha/2)=D.
+```
+
+The full source endpoint has diameter at most L<D. It keeps
+every original unit wall contact and every deep-cloud contact;
+all other lower pairs stay strict. If the deep cloud has no
+unit contacts, both source and endpoint have exactly the wall
+cycle and are triangle-free.
+
+This is a direct finite source-preserving exclusion of the
+regular wall/collar/deep-cloud family. Audit.65 already excluded
+that family by an independent lattice packet. The new statement
+is the explicit common endpoint, not a new globality conclusion.
+
+## 4. Verification and limits
+
+[The exact checker](../../research/verify_target_c_shell_fold_collar_transport_2026_10_08.py)
+uses the directed intervals and contact polynomial identities
+of the preceding checker. For q=65,101,201, it certifies every
+old and new wall/collar pair, the old actual diameter-star
+classification, and the strict bound below L for every new
+wall/collar pair. It constructs a strict deep lattice cloud
+and checks radial bounds. Every cloud/cloud pair follows from
+its positive integral lattice norm; every cloud/wall or
+cloud/collar pair follows from the checked radial bounds.
+
+The operation uses the prescribed separated radial collar
+and deep empty annulus. It supplies no motion for an arbitrary
+contact-isolated cloud, no arbitrary regular-wall extraction,
+and no treatment of a full-core rhombic polycrystal.
+There is no Level I closure.

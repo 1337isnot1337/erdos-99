@@ -1,0 +1,78 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "a831f7c2f8da30e385e4c7725ee294807459e86e", "source_branch_refs": ["refs/heads/research/level-i-closure-20261007"], "source_commit": "3457d175bafad554b71c442a3a3667b077025dcf", "source_lifecycle": "not indexed", "source_path": "research/level_i_closure_run_2026_10_07.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "6a2309d89cfc12f655c3558b6fc0aed4b2fb8566bc31a1757613219fda055f00"} -->
+
+> **Historical branch snapshot; destination authority remains current.** This unique branch version is superseded or absent from current Agent 3 branch heads; preserved as history, not selected as current branch content.
+
+# Level I closure run, 2026-10-07
+
+Objective: settle the exact universal statement in `docs/problem/statement.md`,
+or its negation. The objective remains active; a finite lemma is not completion.
+
+Base commit: `a0b2e33d15aaab006bf54bab54122ecf3d7209cd`.
+State version: `2026-10-08.audit.127`.
+Worktree: `/tmp/e99-level-i-closure-20261007`.
+Branch: `research/level-i-closure-20261007`.
+Target: C-II, both canonical branches.
+
+The original checkout at `/home/user/math/e-99` was left intact, including its
+untracked Target A report. Current main was fetched before this worktree was made.
+The state files still say Level I open and C-I closed / C-II open.
+
+## Authority and selected inputs
+
+Inspected `docs/STATE.md`, the theorem manifest, exact problem statement, Target C
+route map and current frontier. Inspected the named route modules at their
+statement/scope level; this is not a fresh audit of their proofs. The load-bearing
+inputs for the present bridge were read in detail:
+
+- `docs/targets/target-c/56-ci-restored-frontier.md`;
+- `docs/targets/target-c/57-zr-zf-rigidity-audit.md`;
+- `docs/targets/target-c/58-full-source-geometry-audit.md`;
+- `docs/audits/target_c_contact_isometry_energy_independent_audit_2026-10-08.md`;
+- `docs/audits/target_c_inactive_diameter_cubic_budget_independent_audit_2026-10-08.md`;
+- `docs/audits/target_c_generic_isolate_anchor_avoidance_independent_audit_2026-10-07.md`.
+
+Read the current Target C prompt after these inputs. No mathematical statement
+from an unpromoted report is used as a premise. External fetches of the GitHub
+web page and Erdős-problem page returned 404 and 403 respectively; these are
+access results, not evidence of source absence. Git fetch and authenticated PR
+listing succeeded.
+
+## Exact bridge under investigation
+
+```text
+open isolate-involving upper equalities by an explicit finite contraction
+  -> Audit.120's mandatory replacements must occur entirely inside the core
+  -> a noncongruent full-source contact-isometry with no new core diameter
+     pair contradicts the canonical diameter-pair minimum
+  -> C-II closes if such an endpoint is supplied for every large canonical source
+  -> Level I follows through the already closed C-I gate
+```
+
+This does not drop isolates: the contraction retains every isolate, checks every
+isolate-involving lower pair, and moves no core point. Full-source extension of
+the proposed core endpoint is still required.
+
+The second deduction applies Audit.126 at the *actual new global minimizer*,
+after isolate normalization. It does not transport arbitrary inactive pairs
+back to the source without a displacement bound. A zero-width limit of that
+audit gives an actual-diameter cubic moment and disperses a linear replacement
+bank into a matching of order at least square root of D, regardless of move size.
+
+## Current artifact and limit
+
+Proof draft:
+`docs/reports/target_c_isolate_normalization_core_diameter_replacement_2026-10-07.md`.
+Classification: proved candidate awaiting independent audit/promotion;
+registry lifecycle remains unreviewed and noncanonical.
+
+The exact remaining task is to construct the specified noncongruent,
+same-cardinality full-source endpoint while preserving the exact contact graph
+and creating no new core diameter pair. Neither isolate normalization nor a
+cubic degree budget constructs that endpoint. Both the face-coupled full-core
+branch and the macroscopic-container branch remain in scope.
+
+Validation completed: the new rational verifier passed 84 all-pair checks and
+two hypothesis-failure fixtures; the existing Audit.126 finite certificate
+passed. Artifact index/headers were regenerated, changing only the new
+report header and one index record. The theorem-state checker and whitespace
+check passed. No theorem lifecycle or route status was promoted.

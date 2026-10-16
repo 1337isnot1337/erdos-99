@@ -1,0 +1,9 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "71fd771fec9381b9734c7eec6fa0f226d7237eba", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_eight_noroot_k4_dminus1_d0p3_three_singleton_r1_local_rank_repair_2026-09-27.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2b8310ff158e657515db83f0012e9e9c0251abfbc29af6b9fcdc223b7853cebb"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: r=1 local-rank repair
+
+The existing r=1 support certificate can be repaired without the false implication that distinct containing tetrahedral supports force local rank one. For a candidate unique weight-two support M, put every actual-empty block into a virtual superset E*: repeated-support blocks require at least four incidences; nonrepeated blocks are included for incidence at least three, and also for the two-incidence case I_b=M. Put every actual singleton into a virtual superset S*: require |I_b\\M|>=2, and for repeated-support blocks require at least four incidences.
+
+For an actual state choose its three singleton blocks S. Then C*=T\\(E* union S) is a subset of the actual complete set. Since d_root=0, H(C*) is independent. Since rank H(T)-rank H(C_actual)>=4 and C* is a subset of C_actual, rank H(T)-rank H(C*)>=4. Thus any actual state survives the structural relaxation. An exact all-orbit verifier checks 27,763 size-eight S_7 support orbits, all 28 possible M, and 2,393,667 eligible singleton triples; none passes the two structural tests. Hence the r=1 branch remains closed.

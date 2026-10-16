@@ -1,0 +1,504 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "0af38740a8c63936a0f98ae46e933cb8d19acd7e", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "docs/targets/target-c/153-mantel-direction-endpoint-exclusion-audited.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "63cd58e549bdb658f461b48ec2c425fc7fcbabf444006a79ee8c851c0fe68117"} -->
+
+> **Historical source snapshot; destination authority remains current.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical. Source path: `docs/targets/target-c/153-mantel-direction-endpoint-exclusion-audited.md`. Source commit: `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`.
+
+# Target C — audited §153 exclusion of the corrected Type-II `q-k` endpoint
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working proof-only route module; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module normalizes the theorem and independent hostile audit previously carried by PR #401.
+It proves that the corrected Type-II scalar lower endpoint
+
+\[
+t_*:=\frac25\left(\pi+\sqrt{\Delta_2}\right),
+\qquad
+\Delta_2:=\frac\pi{2\sqrt3},
+\tag{153.1}
+\]
+
+cannot be attained by an unbounded Type-II C-II survivor sequence:
+
+\[
+\boxed{
+\frac{q-k}{D}\not\longrightarrow
+\frac25\left(\pi+\sqrt{\frac\pi{2\sqrt3}}\right)
+=1.6375621841815\ldots .
+}
+\tag{153.2}
+\]
+
+The proof uses only the canonical full-core Type-II ledgers through the audit.46 authority cutoff, together with elementary graph stability and convex geometry. It does not use a response theorem, a KKT coefficient floor, post-126 proof-only structure, or any extension of the Section-57 affine kernel to contact-isolated source points.
+
+The mechanism is rigid: endpoint saturation forces the strict-rhombus train graph to be asymptotically Mantel-extremal and forces the occurrence-counted outer contact walk to be asymptotically perimeter-minimizing. The first condition collapses almost all train directions to three projective axes; the second is impossible for a near-disk closed walk supported asymptotically on only those three axes.
+
+---
+
+## 153.1 Exact nonnegative slack decomposition
+
+Work in the canonical full-core Type-II branch. Let
+
+- `q` be the number of loaded force-hull vertices;
+- `k=d_H+s_Z`;
+- `b` be the occurrence-counted outer contact-face walk length;
+- `Q` be the bounded nonquadrilateral face degree excess;
+- `f` be the number of bounded nonquadrilateral contact faces;
+- `R_4` be the number of strict unit-rhombus bounded faces;
+- `B_4` be the physical boundary-edge occurrence count of the full strict-rhombus complex;
+- `F` be the force hull; and
+- `p=per(F)`.
+
+Canonical Section 63 gives
+
+\[
+b+Q=2(q-k).
+\tag{153.3}
+\]
+
+Canonical Section 85 gives
+
+\[
+q-k+2f\ge2\sqrt{R_4}.
+\tag{153.4}
+\]
+
+Also
+
+\[
+f\le Q,
+\qquad
+b\ge p.
+\tag{153.5}
+\]
+
+Put
+
+\[
+t:=q-k,
+\qquad
+r:=\sqrt{R_4}.
+\]
+
+Then the identity
+
+\[
+\boxed{
+5t-2p-2r
+=(t+2f-2r)+2(Q-f)+2(b-p)
+}
+\tag{153.6}
+\]
+
+is exact. Every term on the right is nonnegative. Therefore
+
+\[
+\boxed{5(q-k)\ge2\operatorname{per}(F)+2\sqrt{R_4}.}
+\tag{153.7}
+\]
+
+Canonical Type II gives
+
+\[
+\frac{p}{D}\to\pi,
+\qquad
+\frac{R_4}{D^2}\to\Delta_2.
+\tag{153.8}
+\]
+
+Thus (153.7) recovers the corrected endpoint floor
+
+\[
+\liminf\frac{q-k}{D}\ge t_*.
+\tag{153.9}
+\]
+
+The rejected historical value `1.9046256...` is not used.
+
+---
+
+## 153.2 Endpoint saturation kills every scalar slack
+
+Assume for contradiction that along an unbounded Type-II survivor sequence
+
+\[
+\frac{q-k}{D}\to t_*.
+\tag{153.10}
+\]
+
+By (153.6), (153.8), and the definition of `t_*`, the sum of three nonnegative terms is `o(D)`. Hence each is `o(D)`:
+
+\[
+\boxed{
+A_D:=t+2f-2r=o(D),
+\qquad
+Q-f=o(D),
+\qquad
+b-p=o(D).
+}
+\tag{153.11}
+\]
+
+In particular the outer contact walk is asymptotically geodesic relative to the force-hull perimeter.
+
+Canonical Section 85 has the boundary-incidence estimate
+
+\[
+B_4\le b+4f+Q.
+\tag{153.12}
+\]
+
+Using (153.3),
+
+\[
+b+4f+Q=2t+4f=4r+2A_D.
+\tag{153.13}
+\]
+
+The strict-rhombus train theorem gives
+
+\[
+B_4\ge4r.
+\tag{153.14}
+\]
+
+Therefore
+
+\[
+\boxed{B_4=4r+o(D).}
+\tag{153.15}
+\]
+
+Let `T` be the number of stopped strict-rhombus train tracks. Each train has exactly two physical boundary ends, so
+
+\[
+T=B_4/2=2r+o(D).
+\tag{153.16}
+\]
+
+Every strict rhombus is exactly one crossing of two trains. The canonical train-crossing graph is simple and triangle-free, hence
+
+\[
+R_4\le T^2/4.
+\]
+
+Equations (153.15)–(153.16) give
+
+\[
+\boxed{
+\frac{T^2}{4}-R_4=o(D^2).
+}
+\tag{153.17}
+\]
+
+Thus the train-crossing graph is asymptotically Mantel-extremal.
+
+---
+
+## 153.3 Elementary near-Mantel stability
+
+### Lemma 153.1
+
+Let `G_D` be triangle-free graphs with `N_D=Theta(D)` vertices and
+
+\[
+e(G_D)=N_D^2/4-o(D^2).
+\]
+
+Then there is a partition
+
+\[
+V(G_D)=X_D\sqcup Y_D
+\]
+
+such that
+
+\[
+|X_D|=N_D/2+o(D),
+\qquad
+|Y_D|=N_D/2+o(D),
+\tag{153.18}
+\]
+
+`X_D` is independent, the number of edges inside `Y_D` is `o(D^2)`, and only `o(D^2)` pairs in `X_D\times Y_D` are missing.
+
+### Proof
+
+Choose a maximum-degree vertex `v`, put `X=N(v)`, `d=|X|`, and `Y=V\setminus X`. Triangle-freeness makes `X` independent. If `e_Y` is the number of edges inside `Y` and `e_{XY}` the cross-edge count, maximality of `d` gives
+
+\[
+e_{XY}+2e_Y
+=\sum_{y\in Y}\deg y
+\le d|Y|=d(N-d).
+\]
+
+Since `e=e_{XY}+e_Y`,
+
+\[
+e+e_Y\le d(N-d)\le N^2/4.
+\]
+
+The near-extremal hypothesis yields `e_Y=o(D^2)` and
+
+\[
+d(N-d)=N^2/4-o(D^2),
+\]
+
+so `d=N/2+o(D)`. Finally
+
+\[
+d(N-d)-e_{XY}
+=[d(N-d)-e]+e_Y=o(D^2).
+\]
+
+This proves the lemma. \(\square\)
+
+Apply Lemma 153.1 to the train-crossing graph using (153.17).
+
+---
+
+## 153.4 The angular-defect budget collapses train directions to three axes
+
+Let
+
+\[
+\phi_\tau\in\mathbb R/\pi\mathbb Z
+\]
+
+be the projective direction of train `tau`. If two trains cross in a strict rhombus, their acute projective separation is
+
+\[
+\operatorname{dist}(\phi_\tau,\phi_\sigma)
+=\frac\pi3+\delta_{\tau\sigma},
+\qquad
+0<\delta_{\tau\sigma}\le\frac\pi6.
+\tag{153.19}
+\]
+
+Canonical Section 68 supplies the total angular-defect budget
+
+\[
+\boxed{
+\sum_{\tau\sigma\in E(G)}\delta_{\tau\sigma}=O(D).
+}
+\tag{153.20}
+\]
+
+Take
+
+\[
+\eta_D=D^{-1/3}.
+\]
+
+From Lemma 153.1, the missing `X`–`Y` pairs are `o(D^2)`. A two-threshold averaging argument gives an anchor `x_0\in X` having simultaneously
+
+- only `o(D)` nonneighbors in `Y`; and
+- total incident angular defect `O(1)`.
+
+For the first property, if the missing-pair count is `\mu_DD^2` with `\mu_D\to0`, all but `O(\sqrt{\mu_D}D)=o(D)` vertices of `X` miss only `O(\sqrt{\mu_D}D)=o(D)` partners. For the second, (153.20) leaves a fixed positive fraction of `X` with bounded incident defect. The two good sets intersect for large `D`.
+
+Therefore all but `o(D)` members of `Y` joined to `x_0` have defect at most `eta_D`, so their directions lie in shrinking neighborhoods of
+
+\[
+\phi_{x_0}+\pi/3,
+\qquad
+\phi_{x_0}-\pi/3.
+\tag{153.21}
+\]
+
+One of these two clusters contains `Omega(D)` members; call it `Y_*`, centered at `beta_D`.
+
+A pair in `X\times Y_*` is bad if it is missing or if its crossing defect exceeds `eta_D`. Missing pairs contribute `o(D^2)`, while (153.20) gives at most
+
+\[
+O(D/\eta_D)=O(D^{4/3})=o(D^2)
+\]
+
+large-defect crossings. Hence all but `o(D)` members of `X` have a good partner in `Y_*`, which puts their directions within `o(1)` of one of the two projective directions at distance `pi/3` from `beta_D`.
+
+Consequently
+
+\[
+\boxed{
+\text{all but }o(D)\text{ trains have projective direction }o(1)
+\text{ from three axes separated by }\pi/3.
+}
+\tag{153.22}
+\]
+
+No phase labels or external graph-stability theorem are used.
+
+---
+
+## 153.5 Boundary saturation transfers the three-axis collapse to the outer walk
+
+Define
+
+\[
+U_D:=b+4f+Q-B_4\ge0.
+\tag{153.23}
+\]
+
+Equations (153.13) and (153.14) imply
+
+\[
+0\le U_D\le2A_D=o(D).
+\tag{153.24}
+\]
+
+The Section-85 boundary classification is occurrence-counted: `b+4f+Q` is exactly the number of eligible face-side occurrences on the old outer face and bounded nonquadrilateral faces, while `B_4` is exactly the number of those occurrences whose opposite side is a strict rhombus. Thus `U_D` is the exact unused occurrence count, not merely a coarse numerical difference.
+
+Hence all but `o(D)` outer-walk edge occurrences border a strict rhombus. Every such occurrence is a terminal boundary edge of one stopped train. Since each train has exactly two physical boundary ends, the `o(D)` direction-outlier trains from (153.22) account for only `o(D)` outer occurrences. Therefore
+
+\[
+\boxed{
+\text{all but }o(D)\text{ unit-edge occurrences of the outer contact walk lie within }o(1)
+\text{ of the same three projective axes.}
+}
+\tag{153.25}
+\]
+
+Bridge and articulation repetitions are harmless because `b` and the boundary classification retain occurrence multiplicity.
+
+---
+
+## 153.6 Projection variation forbids a three-axis near-geodesic walk around a disk
+
+Write the occurrence-counted closed outer walk as
+
+\[
+p_0,p_1,\ldots,p_b=p_0,
+\qquad
+|p_{j+1}-p_j|=1.
+\]
+
+All loaded force-hull vertices occur on this walk in cyclic order, and all walk vertices lie in the positive core inside `F`, so
+
+\[
+\operatorname{conv}\{p_0,\ldots,p_{b-1}\}=F.
+\tag{153.26}
+\]
+
+For
+
+\[
+n_\theta=(\cos\theta,\sin\theta)
+\]
+
+define
+
+\[
+V_D(\theta)
+:=\sum_{j=0}^{b-1}
+\left|(p_{j+1}-p_j)\cdot n_\theta\right|.
+\tag{153.27}
+\]
+
+Let `w_F(theta)` be the width of `F` in direction `n_theta`. A closed real-valued walk that visits both the minimum and maximum support values has total variation at least twice their separation, even with repeated vertices. Thus
+
+\[
+\boxed{V_D(\theta)\ge2w_F(\theta).}
+\tag{153.28}
+\]
+
+Each unit edge satisfies
+
+\[
+\int_0^\pi|\cos(\theta-\phi)|\,d\theta=2,
+\]
+
+so
+
+\[
+\int_0^\pi V_D(\theta)\,d\theta=2b.
+\tag{153.29}
+\]
+
+Cauchy's perimeter formula gives
+
+\[
+\int_0^\pi w_F(\theta)\,d\theta=p.
+\tag{153.30}
+\]
+
+Therefore
+
+\[
+\int_0^\pi\left(V_D(\theta)-2w_F(\theta)\right)d\theta
+=2(b-p)=o(D).
+\tag{153.31}
+\]
+
+The integrand is nonnegative. Canonical Type-II near-disk convergence gives uniformly
+
+\[
+\frac{w_F(\theta)}D\to1.
+\tag{153.32}
+\]
+
+Hence
+
+\[
+\boxed{V_D/D\to2\quad\text{in }L^1([0,\pi]).}
+\tag{153.33}
+\]
+
+By (153.25), after subsequence extraction the three axis centers converge to
+
+\[
+\alpha,
+\quad
+\alpha+\pi/3,
+\quad
+\alpha+2\pi/3,
+\]
+
+and their edge-count ratios converge to `c_0,c_1,c_2>=0`. Absolute cosine is 1-Lipschitz; the exceptional-edge count is `o(D)`; and `b=O(D)`. Therefore the same normalized projection variation converges **uniformly** to
+
+\[
+\boxed{
+g(\theta)=\sum_{i=0}^2c_i\left|\cos\left(\theta-\alpha-i\pi/3\right)\right|.}
+\tag{153.34}
+\]
+
+The uniform limit (153.34) and the `L^1` limit (153.33) force `g=2` almost everywhere, hence everywhere by continuity.
+
+This is impossible. Away from the finitely many cosine-zero cusp angles, all signs are fixed, so on every remaining open interval
+
+\[
+g(\theta)=A\cos\theta+B\sin\theta.
+\tag{153.35}
+\]
+
+Such a function cannot equal the positive constant `2` on an open interval: differentiating forces `A=B=0`, after which `g=0` there. Contradiction.
+
+This proves (153.2).
+
+---
+
+## 153.7 Scope of the gap conclusion
+
+The theorem proves **endpoint unattainability** for the Type-II asymptotic class. A qualitative separation from `t_*` follows in the sequence/diagonal sense: a family of Type-II survivor sequences whose limiting `(q-k)/D` values decreased to `t_*` could be diagonalized into the forbidden endpoint behavior while preserving the canonical Type-II vanishing normalized container parameters.
+
+What is **not** proved is a finite explicit inequality of the form
+
+\[
+q-k\ge(t_*+\varepsilon_0)D-C
+\]
+
+for every individual Type-II configuration, nor is any numerical `epsilon_0` certified.
+
+---
+
+## 153.8 Frontier effect
+
+The corrected scalar Type-II loaded-hull endpoint is structurally impossible. Any surviving Type-II sequence must remain separated from it in the asymptotic sense or pay additional topology/outer-walk/face currency.
+
+This does not close C-II:
+
+- the macroscopic inactive-container branch remains open;
+- Type-II sequences away from this endpoint remain open;
+- no exact unit equilateral triangle is forced; and
+- no same-cardinality strict sub-`D` competitor is constructed.
+
+**Disposition:** audited-working proof-only theorem. C-II and Level I remain open.

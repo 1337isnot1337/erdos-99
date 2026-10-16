@@ -1,0 +1,482 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "f122477af937a7704a6c13fa7e24ed7147279996", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_lossless_interface_and_train_split_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "30b11be5fbba9261736b85c77cdd3e2f8a16f9c007d798dccb7fa69800f25bf1"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Erdos Problem #99 - lossless interface amplification and train-defect split
+
+**Date:** 2026-09-14
+**Repository base:** `046784db`
+**State version:** `2026-09-14.audit.51`
+**Run type:** closing-proof reduction / exact composition of proof-only Type-II ledgers
+**Target:** Target C-II, canonical full-core Type-II branch
+**Claim class:** proved candidate awaiting independent audit
+**External literature:** no new import
+**Computation:** dependency-free arithmetic/bookkeeping regression only
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+This note composes the proof-only AG42 all-train gap with the proof-only Section-171
+`q-k` floor without passing through the coarse Section-85 inequality `H >= 3J/5`.
+The exact stopped-train identities preserve more of the correlation.
+
+Write
+
+\[
+\Delta_2={\pi\over2\sqrt3},\qquad
+C_*:=2\sqrt{\Delta_2}+0.00042,
+\]
+
+and
+
+\[
+t_*:={4\over9}(\pi+\sqrt{\Delta_2})+0.0013751
+=1.820888637979444\ldots .
+\]
+
+The two proof-only inputs are
+
+\[
+{T-q/2\over D}\ge C_*-o(1),
+\tag{LI.1}
+\]
+
+and
+
+\[
+{q-k\over D}\ge t_*-o(1).
+\tag{LI.2}
+\]
+
+The main new consequences are
+
+\[
+\boxed{
+\liminf {H_D\over D}
+\ge 1.494785917107288\ldots,
+}
+\tag{LI.3}
+\]
+
+and
+
+\[
+\boxed{
+\liminf {\rho_{rec}+\sigma_R\over D}
+\ge1.821728637979444\ldots .
+}
+\tag{LI.4}
+\]
+
+The first strengthens the chamber/population package in the current q-k bootstrap.
+The second turns the correlated train defect into a much sharper singleton-versus-
+rhombic-Mantel dichotomy. Neither result constructs a strict sub-`D` source or forces
+an exact unit triangle.
+
+## 1. Exact identities retained
+
+Put
+
+\[
+U:=q-k.
+\]
+
+The all-stopped-train ledger gives exactly
+
+\[
+T=q+2f-k=U+2f.
+\tag{LI.5}
+\]
+
+The outer-face handshake gives
+
+\[
+b+Q=2U.
+\tag{LI.6}
+\]
+
+Define the two interface currencies
+
+\[
+J_D:=(b-P_F)+(Q+4f),
+\]
+
+and
+
+\[
+H_D:=(b-P_F)+(Q+2f).
+\]
+
+Using (LI.5)-(LI.6), both have exact train forms:
+
+\[
+\boxed{J_D=2T-P_F,}
+\tag{LI.7}
+\]
+
+\[
+\boxed{H_D=T+U-P_F.}
+\tag{LI.8}
+\]
+
+The q-k bootstrap used (LI.7) but bounded `H_D` afterward by `3J_D/5`.
+Equation (LI.8) is stronger once the independent lower bound on `U` is retained.
+
+## 2. Lossless H floor
+
+From (LI.1),
+
+\[
+T\ge {q\over2}+C_*D-o(D).
+\]
+
+Since `q=U+k>=U`, this yields
+
+\[
+T\ge {U\over2}+C_*D-o(D).
+\tag{LI.9}
+\]
+
+Insert (LI.9) into (LI.8). In the full-core Type-II branch,
+`P_F/D->pi`, so (LI.2) gives
+
+\[
+\boxed{
+\liminf {H_D\over D}
+\ge h_*:={3\over2}t_*+C_*-\pi
+=1.494785917107288\ldots .
+}
+\tag{LI.10}
+\]
+
+For comparison, the route through `H>=3J/5` gives only
+`1.493632327107288...`. Thus the exact train form recovers
+
+\[
+0.001153590000000\ldots D
+\]
+
+of first-order chamber/interface currency.
+
+The existing exact `J_D` argument remains
+
+\[
+\boxed{
+\liminf {J_D\over D}
+\ge j_*:=t_*+2C_*-\pi
+=2.489387211845481\ldots .
+}
+\tag{LI.11}
+\]
+
+## 3. Stronger chamber and population package
+
+Canonical Section 85 gives
+
+\[
+m-R_4={P_F+H_D\over2}+1,
+\tag{LI.12}
+\]
+
+and
+
+\[
+A_{ch}-a_0Z_{ch}\ge c_0H_D,
+\qquad
+a_0={\sqrt3\over2},\quad c_0={\sqrt3\over4}.
+\tag{LI.13}
+\]
+
+Therefore
+
+\[
+\boxed{
+\liminf {m-R_4\over D}
+\ge {\pi\over2}+{h_*\over2}
+=2.318189285348541\ldots,
+}
+\tag{LI.14}
+\]
+
+and
+
+\[
+\boxed{
+\liminf {A_{ch}-a_0Z_{ch}\over D}
+\ge c_0h_*
+=0.647261288717066\ldots .
+}
+\tag{LI.15}
+\]
+
+The q-k bootstrap already proves
+
+\[
+\liminf {P_{ch}\over D}\ge j_*,
+\tag{LI.16}
+\]
+
+and
+
+\[
+\liminf {s_{ch}\over D}\ge
+f_*:=\sqrt{\Delta_2}-{\pi\over4}+0.00021
+=0.167124643466509\ldots .
+\tag{LI.17}
+\]
+
+Using the exact chamber Oler-slack formula
+
+\[
+\Sigma_{ch}
+={A_{ch}-a_0Z_{ch}\over a_0}+{P_{ch}\over2}+s_{ch},
+\]
+
+and `c_0/a_0=1/2`, we get
+
+\[
+\boxed{
+\liminf {\Sigma_{ch}\over D}
+\ge {h_*+j_*\over2}+f_*
+=2.159211207942894\ldots .
+}
+\tag{LI.18}
+\]
+
+This remains a local chamber-slack sum. It cannot be compared directly with the
+single full-source Oler slack because internal chamber perimeter appears in
+`P_ch/2`.
+
+The full-source Oler upper bound
+
+\[
+n\le\Delta_2D^2+{\pi\over2}D+1
+\]
+
+and `m<=n` turn (LI.14) into
+
+\[
+\boxed{
+\liminf {\Delta_2D^2-R_4\over D}
+\ge {h_*\over2}
+=0.747392958553644\ldots .
+}
+\tag{LI.19}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+\liminf {\pi D^2/4-a_0R_4\over D}
+\ge c_0h_*
+=0.647261288717066\ldots .
+}
+\tag{LI.20}
+\]
+
+## 4. The AG42 phase gap itself improves
+
+Audited-working Section 142 uses
+
+\[
+T-q=2f-k.
+\tag{LI.21}
+\]
+
+From (LI.1), `q<=P_F`, and `P_F/D->pi`,
+
+\[
+T-q
+=\left(T-{q\over2}\right)-{q\over2}
+\ge\left(C_*-{\pi\over2}-o(1)\right)D.
+\]
+
+Hence the proof-only AG42 refinement gives
+
+\[
+\boxed{
+\liminf {2f-k\over D}
+\ge
+2\sqrt{\Delta_2}-{\pi\over2}+0.00042
+=0.334249286933018\ldots .
+}
+\tag{LI.22}
+\]
+
+This is exactly `0.00042` above the audited-working Section-142 constant.
+Consequently the Section-152 triangular-tooth defect estimate improves to
+
+\[
+\boxed{
+\liminf {q-T_{\triangle}\over D}
+\ge0.167124643466509\ldots
+}
+\tag{LI.23}
+\]
+
+and, along a subsequence with `k/D->kappa`, to
+
+\[
+\boxed{
+\liminf {q-T_{\triangle}\over D}
+\ge0.167124643466509\ldots+{5\over2}\kappa.
+}
+\tag{LI.24}
+\]
+
+The Section-143 bounded-degree-face count also sharpens. For `K=22`,
+
+\[
+\boxed{
+\liminf {f_{\le22}\over D}
+\ge
+{1\over2}\left(
+2\sqrt{\Delta_2}-{\pi\over2}+0.00042
+\right)-{\pi\over19}
+=0.001777661698625\ldots .
+}
+\tag{LI.25}
+\]
+
+The threshold degree remains 22; degree 21 is still not forced with a positive
+linear coefficient by this argument.
+
+## 5. Strong train-defect dichotomy from the q-k floor
+
+Let `T_R` be the non-singleton rhombic-train count and `S=T-T_R` the singleton
+train count. The exact identities from the correlated train-surplus note are
+
+\[
+\rho_{rec}=2S,
+\qquad
+\sigma_R=2T_R-4\sqrt{R_4},
+\]
+
+and therefore
+
+\[
+\boxed{
+\rho_{rec}+\sigma_R=2T-4\sqrt{R_4}.
+}
+\tag{LI.26}
+\]
+
+Apply (LI.1):
+
+\[
+2T\ge q+2C_*D-o(D).
+\]
+
+Since `q>=U`, (LI.2) holds, and
+`\sqrt{R_4}/D->\sqrt{\Delta_2}`, we obtain
+
+\[
+\boxed{
+\liminf {\rho_{rec}+\sigma_R\over D}
+\ge t_*+0.00084
+=1.821728637979444\ldots .
+}
+\tag{LI.27}
+\]
+
+Thus
+
+\[
+\boxed{
+\liminf {\max\{\rho_{rec},\sigma_R\}\over D}
+\ge0.910864318989722\ldots .
+}
+\tag{LI.28}
+\]
+
+This yields a clean asymptotic dichotomy after passing to a subsequence:
+
+1. **singleton branch:**
+   \[
+   \liminf {S\over D}
+   \ge0.455432159494861\ldots;
+   \tag{LI.29}
+   \]
+2. **rhombic-slack branch:**
+   \[
+   \liminf {\sigma_R\over D}
+   \ge0.910864318989722\ldots .
+   \tag{LI.30}
+   \]
+
+In the second branch, with
+
+\[
+M_R={T_R^2\over4}-R_4
+={\sigma_R(4\sqrt{R_4}+\sigma_R/2)\over8},
+\]
+
+we get the explicit quadratic crossing-deficit floor
+
+\[
+\boxed{
+\liminf {M_R\over D^2}
+\ge0.485568491120203\ldots .
+}
+\tag{LI.31}
+\]
+
+This is conditional on the rhombic-slack side of the dichotomy. It is not a
+universal Mantel-deficit floor of that size because the singleton branch may instead
+carry the train defect.
+
+## 6. What this changes and what it does not
+
+The combined proof-only full-core survivor must now pay simultaneously through:
+
+```text
+H_D/D >= 1.4947859171...,
+(m-R_4)/D >= 2.3181892853...,
+(A_ch-a_0 Z_ch)/D >= 0.6472612887...,
+Sigma_ch/D >= 2.1592112079...,
+(Delta_2 D^2-R_4)/D >= 0.7473929586...,
+(2f-k)/D >= 0.3342492869...,
+f_{<=22}/D >= 0.0017776617...,
+rho_rec/D >= 0.9108643189... or sigma_R/D >= 0.9108643189...
+(after subsequence selection).
+```
+
+The new branch split is qualitatively more useful than another small carrier-decimal
+improvement. A closure can now target either a linear population of singleton contact
+edges that belong to no strict rhombus, or a rhombic train graph missing at least
+`0.4855D^2` crossings from its Mantel envelope.
+
+Neither condition currently implies a source-preserving diameter decrease. The
+macroscopic inactive-container branch is untouched. Therefore C-II and Level I remain
+open.
+
+## 7. Dependency chain and next target
+
+The exact chain established here is
+
+```text
+AG42 + Section-171 q-k floor
+  -> lossless H_D and total-train endpoint floors
+  -> stronger chamber/rhombus-count deficits
+  -> strong singleton-vs-rhombic-Mantel dichotomy.
+```
+
+The missing implication is still source-level:
+
+```text
+large singleton population OR large rhombic Mantel deficit
+  -> exact unit triangle OR same-cardinality strict sub-D source.
+```
+
+The most concrete next attacks are:
+
+- **singleton branch:** localize the `S=Omega(D)` singleton contact edges in the
+  endpoint-face multigraph and prove that their required transport consumes more
+  outer/exceptional boundary or Oler currency than the full-core source can supply;
+- **rhombic-slack branch:** convert the `Omega(D^2)` missing train crossings into an
+  angular/area defect with a coefficient incompatible with the near-isodiametric
+  force hull, rather than merely recording the graph deficit.
+
+All source points, including contact-isolated points, remain present throughout.

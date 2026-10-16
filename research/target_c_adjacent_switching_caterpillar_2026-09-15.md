@@ -1,0 +1,227 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "48e051057547865926c3045f40d9ab6f2e598461", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_adjacent_switching_caterpillar_2026-09-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "f2a7ef1ab460260cf7aa6358be5955d9f677d03e3f00bf2aa8ccca6e50b52799"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — the adjacent switching diameter graph is a caterpillar forest
+
+**Date:** 2026-09-15  
+**Status:** proof-only source-level structural strengthening  
+**Scope:** any two consecutive nested O--O cuts on a complement-dual backbone; in particular the audited adjacent finite-cusp pair  
+**Dependencies:** exact laminar interval support for actual diameter rows; the standard straight-line diameter-thrackle property  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The adjacent finite-cusp reduction treats the diameter rows whose interval incidence
+changes between two consecutive cuts as a bounded exceptional set.  Those rows have
+considerably more structure than an arbitrary finite set.
+
+Choose coherent nested shores for two consecutive cuts,
+
+\[
+S_i\subset S_{i+1},
+\]
+
+and put
+
+\[
+L:=S_{i+1}\setminus S_i.
+\]
+
+For an oriented actual diameter edge `h=x_hy_h`, the cut-incidence sign is
+
+\[
+\varepsilon_{hj}=1_{S_j}(y_h)-1_{S_j}(x_h).
+\]
+
+Therefore
+
+\[
+\boxed{
+\varepsilon_{h,i+1}-\varepsilon_{hi}
+=1_L(y_h)-1_L(x_h).
+}
+\tag{SCF.1}
+
+Hence a diameter row switches between the adjacent cuts if and only if its two
+endpoints lie on opposite sides of the vertex layer `L`:
+
+\[
+\boxed{
+H_{sw}=\delta_H(L).
+}
+\tag{SCF.2}
+
+Here `H` is the full actual diameter graph and `delta_H(L)` denotes the graph cut.
+In particular `H_sw` is bipartite, with parts `L` and `V(H)\setminus L`.
+
+The full actual diameter graph is a straight-line thrackle: every two diameter
+segments meet, at a common endpoint or at an interior crossing.  Any subgraph inherits
+that property.  Combining bipartiteness with the elementary geometry of straight-line
+thrackles gives the following.
+
+## Theorem SCF
+
+For every adjacent nested O--O cut pair,
+
+\[
+\boxed{H_{sw}\text{ is a forest, and every nontrivial component is a caterpillar.}}
+\tag{SCF.3}
+
+Equivalently, after deleting the leaves from each switching component, what remains is
+a (possibly empty or single-vertex) path.
+
+Applied to the Pareto-refined adjacent pair, the entire large-first-derivative cusp set
+has fewer than `1800+o(1)` edges and is a disjoint union of caterpillars.
+
+---
+
+## 1. Switching rows are exactly the layer cut
+
+Subtract the two cut-incidence signs:
+
+\[
+\begin{aligned}
+\varepsilon_{h,i+1}-\varepsilon_{hi}
+&=[1_{S_{i+1}}(y_h)-1_{S_i}(y_h)]\\
+&\quad-[1_{S_{i+1}}(x_h)-1_{S_i}(x_h)]\\
+&=1_L(y_h)-1_L(x_h).
+\end{aligned}
+\]
+
+The right side is nonzero exactly when one endpoint belongs to `L` and the other does
+not.  This proves (SCF.1)--(SCF.2).  No geometric approximation or asymptotic limit is
+used here.
+
+---
+
+## 2. A straight-line thrackle has no even cycle
+
+We include the standard elementary proof because it is exactly the property required
+here.
+
+Suppose a straight-line thrackle contained an even cycle
+
+\[
+v_1v_2\cdots v_{2k}v_1.
+\]
+
+Fix the cycle edge
+
+\[
+e=v_1v_2
+\]
+
+and let `ell` be its supporting line.  Every cycle edge
+
+\[
+v_jv_{j+1},
+\qquad 3\le j\le2k-1,
+\]
+
+is nonadjacent to `e`, so it must cross the segment `e`.  Consequently its two
+endpoints lie in opposite open half-planes bounded by `ell`.  Thus the vertices
+
+\[
+v_3,v_4,\ldots,v_{2k}
+\]
+
+alternate sides of `ell`.  Because the number of transitions from `v_3` to `v_{2k}`
+is
+
+\[
+2k-3,
+\]
+
+which is odd, `v_3` and `v_{2k}` lie on opposite sides of `ell`.
+
+But the two cycle edges
+
+\[
+v_2v_3
+\qquad\text{and}\qquad
+v_{2k}v_1
+\]
+
+are nonadjacent and therefore must meet.  Two segments issuing from the opposite
+endpoints `v_2,v_1` of `e` can cross only if their other endpoints `v_3,v_{2k}` lie in
+the same open half-plane bounded by `ell` (degenerate collinearity would not give the
+required unique interior meeting).  This contradicts the preceding paragraph.
+
+Therefore a straight-line thrackle contains no even cycle.
+
+Since `H_sw` is bipartite, every cycle in `H_sw` would be even.  Hence `H_sw` is a
+forest.
+
+---
+
+## 3. Every switching tree is a caterpillar
+
+We also give the short straight-line argument rather than cite a classification
+theorem.
+
+Consider three distinct edges
+
+\[
+vw_1,\quad vw_2,\quad vw_3
+\]
+
+incident to one vertex `v` in a straight-line thrackle.  Among the three supporting
+lines, one, say the line through `vw_1`, separates the two rays `vw_2` and `vw_3` into
+opposite open half-planes.
+
+Then `w_1` must be a leaf of the thrackle subgraph generated by these edges and any
+other incident edges at `w_1`.  Indeed, if there were another edge `w_1z`, that segment
+would have to meet both nonadjacent edges `vw_2` and `vw_3`.  Starting from a point on
+the separating line, a straight segment not contained in that line lies entirely in
+one of its two closed half-planes after leaving `w_1`; it cannot meet segments lying in
+both opposite open half-planes.  A segment contained in the separating line cannot do
+so either.  Contradiction.
+
+Now let `T` be one tree component of `H_sw`.  If a vertex `v` of `T` had three
+neighbors that were all non-leaves of `T`, apply the preceding argument to the three
+corresponding incident edges.  It would force one of those three neighbors to be a
+leaf, a contradiction.
+
+Thus every vertex of `T` is adjacent to at most two non-leaf vertices.  Equivalently,
+the subgraph induced by the non-leaves has maximum degree at most two.  Because `T` is
+a tree, that induced subgraph is a path (or is empty or a single vertex).  Therefore
+`T` is a caterpillar.
+
+This proves (SCF.3).
+
+---
+
+## 4. Consequence for the live finite cusp
+
+For the Pareto-refined pair from
+`target_c_adjacent_cut_pareto_refinement_2026-09-15.md`, the exact opposite two-cut
+multishear has fewer than
+
+\[
+1800+o(1)
+\]
+
+actual diameter rows with the natural `O(D)` first-derivative scale.  By (SCF.2), those
+rows are precisely the edges of one layer cut of the full diameter graph, and by
+(SCF.3) they form a caterpillar forest.
+
+So the remaining finite active obstruction has the normal form
+
+```text
+<1800 switching diameter edges
++ bipartite layer-cut support
++ acyclic
++ every connected component is a caterpillar
++ total switching beta mass = O(1/D)
++ exact opposite two-cut multishear
+```
+
+This does not produce a local descent.  The full-support KKT cusp obstruction remains
+binding.  It does, however, rule out arbitrary finite switching graphs and removes all
+cycle-based blocker patterns from the downstream interface classification.
+
+A useful next target is to exploit the caterpillar spine/leaf order together with the
+cyclic order of diameter endpoints and the two cut-resultant equations.  The remaining
+exceptional active set is now both finite and one-dimensional in graph structure.
+
+**Disposition:** proved proof-only structural refinement of the adjacent finite-cusp
+normal form. C-II and Level I remain open.

@@ -1,0 +1,453 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "4a7d719b193c84929596d6949c826bfcb4ab976e", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/cage_or_cophased_lattice_shadow_2026-08-30.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "eea65be7a640e1e005d8df9f1bc2343d621f494e4ef85c08ccd38df9407a0678"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.
+
+# Erdős Problem #99 — cage-or-co-phased lattice-shadow reduction
+
+**Date:** 2026-08-30
+**Repository state:** `research/bhs-scale-activation-regression-2026-08-30`
+**Run type:** closing reduction / theorem synthesis
+**Target:** A
+**Active prompt:** `docs/prompts/erdos_problem_99_1.7.2_FINAL_CONTINUATION_PROMPT.md`
+**External web search:** not used
+**Computation:** not used
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+This report records two exact consequences of the existing source-capacity and first-transition theorems. The first is a new prescribed-phase triangular-lattice shadow theorem at zero source-hull slack. The second iterates the existing capacity flag and locked-triangle alternative to give an exhaustive cage-or-zero-slack branch reduction.
+
+Neither theorem proves the Target A Schur inequality. Their value is that the previously vague “plateau optimality” discriminator becomes a concrete common-lattice object.
+
+## 1. Starting endpoint
+
+The authoritative Target A endpoint remains
+
+\[
+\boxed{\dim\ker S\ge \Delta_\Lambda-d_{\rm int}},
+\]
+
+equivalently
+
+\[
+\boxed{
+\operatorname{rank}S
+\le d_{\rm int}+|C^\partial|-\Delta_\Lambda.
+}
+\]
+
+The previous two reports on this branch show that near-extremal scalar geometry, bounded perimeter deficit, almost-full activation rank, and same-hull unit-covering saturation still do not force any Schur nullity. The surviving distinction is the exact finite-exchange structure of a genuine global optimum.
+
+The canonical source module already supplies the necessary ingredients:
+
+- Theorem 119.2: exact same-source Hall budget;
+- Theorem 122.1: matching against a fixed-container capacity endpoint;
+- Theorem 124.1: the capacity exchange flag;
+- Theorem 138.1 and Corollary 138.2: triangle-breaking or a universally locked transition triangle;
+- Section 79: exact 3/4-neighbor triangular-lattice monomer/dimer classification and disjoint-cell geometry;
+- the finite Oler inequality and Cauchy perimeter bound.
+
+The new point is to combine these inputs in a way that produces a triangular-lattice phase chosen in advance rather than an arbitrary capacity endpoint.
+
+## 2. Prescribed-phase lattice shadow at zero hull slack
+
+Normalize the unit triangular lattice by
+
+\[
+\Lambda=\mathbb Ze_1+\mathbb Ze_2,
+\qquad
+e_1=(1,0),
+\qquad
+e_2=\left(\frac12,\frac{\sqrt3}{2}\right),
+\]
+
+and put
+
+\[
+a_0=\frac{\sqrt3}{2},
+\qquad
+r_\Lambda=\frac1{\sqrt3}.
+\]
+
+Here \(a_0\) is the area of a Voronoi cell and \(r_\Lambda\) is the covering radius. Rotations and translations of \(\Lambda\) have the same constants.
+
+> **Theorem 155 candidate (prescribed-phase lattice shadow).**  Let \(H\subset\mathbb R^2\) be a compact convex body with area \(A_H\), perimeter \(P_H\), and diameter \(D\). Let
+> \[
+> B\subset H,
+> \qquad |B|=M=\alpha_1(H),
+> \]
+> be a capacity-maximizing unit-separated set. Fix **any** rotated and translated unit triangular lattice \(\Lambda'\), and put
+> \[
+> Y=\Lambda'\cap H.
+> \]
+> Then:
+>
+> 1. the strict conflict graph on \(Y\sqcup B\), with \(y\sim b\iff |y-b|<1\), has a matching saturating every vertex of \(Y\);
+> 2. for every lattice phase,
+>    \[
+>    \boxed{
+>    |Y|\ge \frac{A_H-r_\Lambda P_H}{a_0};
+>    }
+>    \tag{155.1}
+>    \]
+> 3. consequently
+>    \[
+>    \boxed{
+>    0\le M-|Y|
+>    \le \frac76P_H+1
+>    \le \frac{7\pi}{6}D+1.
+>    }
+>    \tag{155.2}
+>    \]
+>
+> Therefore for every prescribed triangular-lattice phase there is a subset
+> \(B'\subseteq B\) and a bijection
+> \[
+> \mu:Y\longrightarrow B'
+> \]
+> satisfying
+> \[
+> \boxed{|y-\mu(y)|<1\qquad(y\in Y),}
+> \tag{155.3}
+> \]
+> while at most \((7/6)P_H+1=O(D)\) points of \(B\) are unmatched.
+
+### Proof
+
+Let \(Q\subseteq Y\). If its strict conflict neighborhood in \(B\) satisfied
+
+\[
+|N_B(Q)|<|Q|,
+\]
+
+then
+
+\[
+(B\setminus N_B(Q))\cup Q
+\]
+
+would be a unit-separated subset of \(H\) with cardinality
+
+\[
+M-|N_B(Q)|+|Q|>M=\alpha_1(H),
+\]
+
+a contradiction. Hence every \(Q\subseteq Y\) satisfies Hall's inequality
+
+\[
+|N_B(Q)|\ge|Q|.
+\]
+
+Hall's theorem gives a matching saturating \(Y\). This proves item 1 and (155.3).
+
+For item 2, let
+
+\[
+H_{-r}:=\{x\in H:\operatorname{dist}(x,\partial H)\ge r\}.
+\]
+
+Every point of the plane is within \(r_\Lambda\) of a lattice site of \(\Lambda'\). If \(x\in H_{-r_\Lambda}\) and \(y\) is a nearest lattice site, then
+
+\[
+|x-y|\le r_\Lambda
+\]
+
+and the closed radius-\(r_\Lambda\) disk about \(x\) lies in \(H\), so \(y\in H\). Therefore
+
+\[
+H_{-r_\Lambda}
+\subseteq
+\bigcup_{y\in Y}V_y,
+\]
+
+where \(V_y\) is the full triangular-lattice Voronoi cell centered at \(y\). The cells have disjoint interiors and area \(a_0\), hence
+
+\[
+\operatorname{area}(H_{-r_\Lambda})\le a_0|Y|.
+\tag{155.4}
+\]
+
+For a convex body, the inner parallel sets have nonincreasing perimeter. The coarea formula therefore gives
+
+\[
+A_H-\operatorname{area}(H_{-r})
+=\int_0^r P(H_{-t})\,dt
+\le rP_H,
+\]
+
+with the same inequality remaining true after the inner body becomes empty. At \(r=r_\Lambda\),
+
+\[
+\operatorname{area}(H_{-r_\Lambda})
+\ge A_H-r_\Lambda P_H.
+\tag{155.5}
+\]
+
+Combining (155.4) and (155.5) proves (155.1).
+
+Finally Oler's finite packing inequality applied to the maximum packing \(B\) gives
+
+\[
+M\le\frac{A_H}{a_0}+\frac{P_H}{2}+1.
+\tag{155.6}
+\]
+
+Subtract (155.1):
+
+\[
+\begin{aligned}
+M-|Y|
+&\le
+\frac{P_H}{2}+1+rac{r_\Lambda}{a_0}P_H\\
+&=\left(\frac12+\frac23\right)P_H+1\\
+&=\frac76P_H+1.
+\end{aligned}
+\]
+
+Cauchy's perimeter-diameter inequality \(P_H\le\pi D\) gives the last bound in (155.2). \(\square\)
+
+### Why this is stronger than the existing capacity shadow
+
+Canonical Theorem 126.1 maps every source point to an **arbitrary capacity endpoint** within distance less than one. Theorem 155 goes in the complementary direction: it allows the triangular-lattice phase to be specified in advance, including the phase used by the independent Target A scaffold, and matches all but only boundary-order many source points to actual triangular-lattice sites.
+
+The loss of \(O(D)\) source points is unavoidable from this argument because a fixed lattice phase can miss a boundary-order number of sites even when the hull has near-optimal bulk density.
+
+## 3. Co-phased source monomer/dimer structure
+
+The preceding theorem becomes more geometric for a generic phase.
+
+Call a lattice phase generic for \(B\) if no point of \(B\) lies on the lattice and no source-lattice distance is exactly one. The exceptional translations form a measure-zero set.
+
+Let
+
+\[
+B_{\partial}
+=\{b\in B:\operatorname{dist}(b,\partial H)\le1\}.
+\]
+
+The standard boundary-tube argument gives
+
+\[
+\boxed{|B_\partial|\le \frac{12P_H}{\pi}+9\le12D+9.}
+\tag{155.7}
+\]
+
+> **Corollary 155.2 (co-phased deep monomer/dimer complex).**  Under the hypotheses of Theorem 155, assume the lattice phase is generic. For every
+> \[
+> b\in B\setminus B_\partial,
+> \]
+> its strict neighborhood in \(Y\) is its complete neighborhood in the infinite triangular lattice and therefore has size exactly three or four. Its convex hull is respectively one elementary lattice triangle or one unit lozenge, the point \(b\) lies in the interior of that cell, and distinct source-cell interiors are disjoint.
+>
+> Moreover every lattice site in \(Y\) has at least one source conflict, and all but at most
+> \[
+> \boxed{4|B_\partial|\le48D+36}
+> \tag{155.8}
+> \]
+> sites of \(Y\) belong to the neighborhood of at least one deep source cell.
+
+### Proof
+
+If \(b\notin B_\partial\), every lattice site at distance below one from \(b\) lies in \(H\), so the neighborhood in \(Y\) equals the full infinite-lattice neighborhood. The exact 3/4-neighbor classification and the elementary-triangle/lozenge cell description are Theorem 79.1. The proof of Theorem 79.2 applies verbatim: \(b\) lies in the cell interior, and two source cells cannot overlap in an elementary-triangle interior because two points in the corresponding open Reuleaux triangle are strictly less than one apart.
+
+Every \(y\in Y\) has a source neighbor because the matching in Theorem 155 saturates \(Y\). If a lattice site has no deep source neighbor, all its source neighbors lie in \(B_\partial\). A generic source point has at most four strict neighbors in the full triangular lattice, so the number of such lattice sites is at most \(4|B_\partial|\). Apply (155.7). \(\square\)
+
+Thus a zero-slack source has, in **every generic prescribed triangular-lattice phase**, a bulk monomer/dimer cell complex with only boundary-order source and lattice exceptions. This is the same local cell alphabet as the independent scaffold, but now derived on the source side from exact hull capacity.
+
+## 4. Cage-or-zero-slack terminalization
+
+The source-capacity flag and the fixed-container locked-triangle theorem can be iterated.
+
+> **Theorem 156 candidate (finite cage-or-capacity terminalization).**  Let
+> \[
+> A\subset H=\operatorname{conv}A
+> \]
+> be a triangle-free global minimizer with
+> \[
+> |A|=N,
+> \qquad
+> \operatorname{diam}A=D,
+> \]
+> and put
+> \[
+> M=\alpha_1(H).
+> \]
+> Then at least one of the following holds.
+>
+> 1. **Locked-transition branch.** There is a unit-separated global optimum
+>    \[
+>    P\subset H,
+>    \qquad N<|P|\le M,
+>    \qquad \operatorname{diam}P=D,
+>    \]
+>    containing a unit equilateral triangle \(T_*\) whose three sides satisfy
+>    \[
+>    a_{ij}(v)=0
+>    \qquad(ij\in E(T_*),\ v\in\mathcal C_H(P)).
+>    \tag{156.1}
+>    \]
+>    Thus \(T_*\) is universally first-order locked by the actual fixed-container feasible cone.
+>
+> 2. **Zero-slack triangle-free branch.** There is a triangle-free global optimum
+>    \[
+>    B_*\subset H,
+>    \qquad |B_*|=M=\alpha_1(H),
+>    \qquad \operatorname{diam}B_*=D.
+>    \tag{156.2}
+>    \]
+>    In particular its exact source-hull slack is zero. Therefore Theorem 155 and Corollary 155.2 apply to \(B_*\) for every prescribed, respectively every generic, triangular-lattice phase.
+
+### Proof
+
+Start from any triangle-free global optimum \(B_0\subset H\) of diameter \(D\), initially \(B_0=A\). Given \(B_s\), enlarge it inside \(H\) to a maximum-cardinality triangle-free superset \(C_s\). Because \(B_s\subseteq C_s\subseteq H\) and \(B_s\) already contains a diameter pair of length \(D\),
+
+\[
+\operatorname{diam}C_s=D.
+\]
+
+If \(q_s=|C_s|\), monotonicity gives
+
+\[
+D(q_s)=D,
+\]
+
+so \(C_s\) is a triangle-free global optimum. If \(q_s=M\), alternative 2 holds.
+
+Assume \(q_s<M\). Choose a capacity endpoint \(X_s\subset H\) with \(|X_s|=M\), form the strict conflict transversal matroid between \(C_s\) and \(X_s\), and build the adjacent-cardinality exchange flag of Theorem 124.1. Every flag member \(P_i\subset H\) is a global optimum of diameter \(D\), with cardinality \(q_s+i\).
+
+If every flag member is triangle-free, the terminal member has cardinality \(M\) and alternative 2 holds.
+
+Otherwise let \(P_j\) be the first triangle-producing flag member. Corollary 138.2 gives exactly two possibilities. If the transition contains a universally locked triangle, alternative 1 holds. Otherwise a fixed-container perturbation gives a triangle-free global optimum
+
+\[
+B_{s+1}\subset H
+\]
+
+of the same cardinality
+
+\[
+|B_{s+1}|=q_s+j>q_s.
+\]
+
+Restart the construction from \(B_{s+1}\). Every successful escape strictly increases the triangle-free global-optimum cardinality in the fixed container \(H\), while no cardinality can exceed \(M\). Hence after at most \(M-N\) such restarts, the process either encounters a locked transition triangle or reaches a triangle-free \(M\)-point packing in \(H\). These are alternatives 1 and 2. \(\square\)
+
+### Exact scope
+
+The theorem does **not** preserve the original contact-minimal core, strict-rattler labels, or old scaffold across restarts. Every escape may require a complete Target A rebuild. That is consistent with the canonical warnings.
+
+The conclusion is nevertheless exhaustive inside the genuine source hull: failure of the locked-cage branch forces a triangle-free fixed-hull capacity endpoint with zero same-hull slack.
+
+## 5. Combined branch reduction
+
+Theorems 155–156 give the following exact Target A alternative.
+
+> **Corollary 156.1 (cage-or-co-phased lattice shadow).** Starting from any triangle-free global minimizer, either:
+>
+> - a globally derived capacity transition produces a universally first-order locked unit triangle; or
+> - after finitely many fixed-hull rebuilds there is a triangle-free capacity-maximizing global optimum whose bulk, in any chosen generic triangular-lattice phase, is represented by disjoint source monomer/dimer cells with only \(O(D)\) source and lattice exceptions.
+
+For the second branch the lattice phase may be chosen to be the same phase used in the independently constructed Target A scaffold. The safe-collar construction admits a positive-measure set of lattice translations, while the source-degeneracy translations excluded in Corollary 155.2 have measure zero. Hence one may choose a scaffold-admissible translate that is simultaneously generic for the zero-slack source.
+
+This gives an actual common combinatorial alphabet on both sides:
+
+\[
+\boxed{
+\text{source deep cells: elementary triangles / lozenges}
+\qquad
+\text{scaffold cells: elementary triangles / lozenges}.
+}
+\tag{156.3}
+\]
+
+What remains missing is no longer the existence of a common lattice phase. It is an exact theorem transporting the source-side cell complex into the scaffold Schur response or using their incompatibility to construct a strict smaller-diameter competitor.
+
+## 6. Exact target implication
+
+The old broad alternatives were:
+
+1. locked-cage to Schur transport;
+2. capacity-shadow transport;
+3. exterior-compatible finite replacement.
+
+Theorem 156 reduces the first two to an exhaustive pair. Theorem 155 sharpens the second route from an arbitrary capacity shadow to a prescribed triangular-lattice phase with only boundary-order loss.
+
+A successful closing theorem can therefore be stated more concretely.
+
+> **Co-phased source/scaffold transport target.** In the zero-slack branch of Theorem 156, choose the same generic triangular-lattice phase for the source shadow and the Target A scaffold. Use the two co-phased monomer/dimer complexes, together with global minimum-diameter optimality and the exact plateau/scaffold parameters, to force
+> \[
+> \boxed{
+> \dim\ker S\ge\Delta_\Lambda-d_{\rm int}
+> }
+> \]
+> or construct an \(N\)-point unit-separated configuration of diameter strictly below \(D\).
+
+The local monomer and dimer regressions remain binding: a proof must use the global coupling, not merely the fact that both sides use the same two cell motifs.
+
+## 7. Regression audit
+
+| Regression / warning | Passed? | Reason |
+| --- | --- | --- |
+| Section 152 activation/monomer regression | yes | Theorem 155 requires exact zero hull slack; Section 152 deliberately lacks fixed-hull capacity maximality. |
+| Near-extremal saturated regression in this PR | yes | Unit-covering saturation is weaker than \(M=\alpha_1(H)\); the new theorem uses full Hall saturation against every finite lattice subset. |
+| Local monomer phase | yes | Corollary 155.2 allows monomer bulk; it does not claim local monomer cells force nullity. |
+| Local dimer phase | yes | Same. |
+| Two-leaf cage | yes | It inhabits the locked branch; Theorem 156 does not try to perturb a universally locked transition. |
+| Full-rank planar response examples | yes | The theorem creates source-side co-phasing but does not infer Schur rank from planarity alone. |
+| Plateau slack warning | yes | The zero-slack endpoint is obtained only after the finite rebuild process reaches actual hull capacity. No zero slack is assigned to the original source. |
+
+## 8. Promotion recommendation
+
+**Hold as report pending independent audit.**
+
+Theorem 155 is elementary but new relative to the canonical modules. Theorem 156 is an iterative synthesis of already trusted Theorem 124.1 and Corollary 138.2. If both survive audit, they should be promoted as a post-Section-152 Target A addendum and the active continuation prompt should replace the generic “capacity-shadow transport” item by the co-phased source/scaffold transport target.
+
+## 9. Highest-value next lemma
+
+The next run should not revisit saturation or arbitrary capacity shadows. It should attack the co-phased dual-complex transport problem.
+
+The concrete data now available in the zero-slack branch are:
+
+1. a generic triangular lattice \(\Lambda_v\) chosen simultaneously for source and scaffold;
+2. all but \(O(D)\) source points lying in exact monomer/dimer cells of \(\Lambda_v\);
+3. all but \(O(D)\) source-relevant lattice sites incident to those deep cells;
+4. the scaffold's exact monomer/dimer radial graph and Schur response on the same lattice phase;
+5. global source optimality and zero same-hull capacity slack.
+
+The missing theorem should show that these five facts cannot coexist with positive Target A gap
+
+\[
+g=\Delta_\Lambda-d_{\rm sc}>0.
+\]
+
+## 10. Compact handoff
+
+```text
+LEVEL I STATUS: STILL OPEN.
+
+New theorem 155 candidate:
+If B is a capacity-maximizing unit-separated set in a convex hull H, then for EVERY
+prescribed triangular-lattice phase Y=Lambda_v intersect H, the strict conflict graph
+Y--B has a matching saturating Y. A Voronoi covering argument plus Oler gives
+
+    |B|-|Y| <= (7/6) per(H)+1 <= 7*pi*D/6+1.
+
+For a generic phase, every source point deeper than 1 from the hull boundary has
+exactly a monomer or dimer lattice cell, with disjoint cell interiors. Only <=12D+9
+source points are boundary exceptions, and at most 48D+36 lattice sites lack a deep
+source-cell neighbor.
+
+New theorem 156 candidate:
+Iterate the capacity exchange flag and Corollary 138.2. Starting from any triangle-free
+global minimizer in its hull H, either one encounters a globally derived universally
+locked first-transition triangle, or after finitely many rebuilds one reaches a
+triangle-free packing of full hull capacity alpha_1(H), hence zero same-hull slack.
+
+Combined reduction:
+Either locked-cage-to-Schur transport, or a zero-slack source admitting a co-phased
+monomer/dimer decomposition on the SAME generic triangular-lattice phase as the
+independent scaffold, with only O(D) exceptions.
+
+Highest-value next lemma:
+Use the two co-phased source/scaffold monomer-dimer complexes plus global optimality to
+force the exact Schur kernel bound or a strict sub-D replacement.
+```

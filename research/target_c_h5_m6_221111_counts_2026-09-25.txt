@@ -1,0 +1,11 @@
+A 1234-1235 validS=315 rank3=30222 gw=22788 inc0=22788 maxnorm2=98
+A 1234-1236 validS=57 rank3=2232 gw=1344 inc0=1344 maxnorm2=84
+A 1234-1245 validS=315 rank3=38016 gw=28180 inc0=28180 maxnorm2=86
+A 1236-1245 validS=97 rank3=2036 gw=1202 inc0=1202 maxnorm2=86
+A 1245-1345 validS=405 rank3=31192 gw=23396 inc0=23396 maxnorm2=70
+B 1234-1235 validS=320 rank3=27648 gw=16704 inc0=16704 maxnorm2=98
+B 1234-1267 validS=0 support_filter=closed
+B 1234-1345 validS=320 rank3=27648 gw=16704 inc0=16704 maxnorm2=66
+B 1267-1345 validS=0 support_filter=closed
+B 1345-2345 validS=320 rank3=27648 gw=16704 inc0=16704 maxnorm2=40
+prime=2^127-1 lucas_lehmer=pass hadamard_bound=(prime^2>98^15)=true

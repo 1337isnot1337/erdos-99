@@ -1,0 +1,149 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "4d0803841bf41f9b8983d0b949400e1d3ab90e6b", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/hull_train_preservation_reconciliation_2026-10-15.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d2c631217a06c1e9c4e4e449eb8d086411726d41766082298176f79e08830cfd"} -->
+
+> **Historical source snapshot; destination authority remains current.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical. Source path: `docs/reports/hull_train_preservation_reconciliation_2026-10-15.md`. Source commit: `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`.
+
+# Hull-train preservation and source reconciliation
+
+Date: 2026-10-15. Baseline main: `fba84b3fbd145fd1d05290200f86b49b3522c969`.
+Classification: noncanonical preservation record and finite regression evidence.
+Theorem state remains `2026-10-10.audit.234`; C-II and Level I remain open.
+This Codex-assisted reconciliation is not independent human mathematical review.
+
+## Exact sources and surviving evidence
+
+| Source | History and disposition | Retained mathematical evidence |
+| --- | --- | --- |
+| `research/sol-positive-rigid-face-tail-20261004`, `9b228cb753519ae9c3357b255742010dc78f4c4d` | One unique commit; all report sections compared. Superseded by an audit that pins the exact original report and checker hashes. | [Audit 123](../audits/target_c_positive_pinned_face_tail_independent_audit_2026-10-08.md) reconstructs the all-even-size rational family, all pair classes, extreme pins, positive equilibrium, both pinned rigidity statements, exact diameter pairs, linear area, tail limit two, and explicit nonglobal competitors. Its [exact checker](../../research/verify_target_c_positive_pinned_face_tail_2026_10_04.py) remains unchanged. |
+| `research/sol-hull-train-nonatomic-20261004`, `52aab147b3dfaea1247b67647c603e2653dbeb5b` | Three unique commits: initial good-end count, finite angular depletion, optimized error/all-unit refinement. The final report retains those developments. The analytic conclusions are subsumed; the distinct twelve-packet checker was absent and is restored. | [Audit 135](../audits/target_c_good_hull_train_depletion_subsumption_audit_2026-10-08.md) pins both original hashes, derives the candidate finite bound from the stronger two-window estimate, and derives its Type-II consequences from Audit 52. The restored [checker](../../research/verify_target_c_good_hull_train_depletion_2026_10_04.py) preserves its independent oblique-grid and rational-arithmetic evidence. |
+| `research/sol-collar-pentagon-rank-20261004`, `70e2f6a95adcc5bac1ade91da9ea26ffdfe78cfd` | Four unique commits, including one merge. The final report and exact checker already survive on main. The absent run note states the initial unproved capacity proposal and then redirects to its failed-capacity regression and corrected endpoint theorem. | The [all-unit-hull report](target_c_all_unit_hull_end_currency_2026-10-04.md) retains the fifteen-point flower rejecting generic two-end pentagon capacity, exact occurrence currency, atomic proof, stronger finite two-window bound and predecessor comparison. Its [checker](../../research/verify_target_c_all_unit_hull_end_currency_2026_10_04.py) is retained. |
+| `research/sol-c2-deep-port-route-20261004`, `a2ccd6161519c7d27482a7c6e751cd44e595e1b6` | Three unique commits, including a merge. The first report is extended by the final face-tail and exact-regression version; no intermediate mathematical claim was removed. All final sections are mapped below. | [Audit 134](../audits/target_c_fixed_port_route_bound_independent_audit_2026-10-08.md) and [Audit 175](../audits/target_c_near_port_conditional_promotion_audit_2026-10-08.md) pin the exact source report/checker and preserve its analytic claims at explicit conditional scopes. Its absent [finite checker](../../research/verify_target_c_deep_port_defect_routes_2026_10_04.py) is restored. |
+| `research/target-c-port-route-audit-20261004`, `0e49b450cc4819cc2f4f205303cbb9a09b45d269` | Three unique commits: arbitrary separator capacity, sharper minimum-separator/face consequences, and deep complete-grid extension. Weaker intermediate constants are implied by the final result. | [Audit 133](../audits/target_c_rhombus_bulk_separator_independent_audit_2026-10-08.md) preserves the universal finite theorems and pinned regression; [Audit 137](../audits/target_c_deep_far_cap_grid_independent_audit_2026-10-08.md) preserves the conditional grid extension. The absent [grounded-grid checker](../../research/verify_target_c_bulk_separator_2026_10_04.py) is restored, and the remaining conditional chord fork is recorded below. |
+
+For the first source, the additional grounded scalar Laplacian observation follows
+because each free vertex has a positive pin edge. Its local left nullity is two:
+there are `2m+2` contact rows and pinned rank `2m`. These are direct consequences
+of the reconstructed construction, not missing independent source hypotheses.
+The audit's full-source rectangle is now stated with constant height `99/25`;
+that constant, together with width `X_L+54/25`, justifies linear hull area.
+
+## Distinct restored finite regression
+
+The restored checker comes from the exact `52aab147...` source blob with SHA-256
+`dcab21786fc2798ab5715c353d182cdd9863685a1d8cb26531732ff9d4ff55b3`.
+The only code addition rejects optimized Python, which would disable its assertions.
+It checks `j=1,...,6` for both unit square and rational oblique grids with basis
+`(1,0),(5/13,12/13)`: twelve complete source packets. Every pair, actual contact,
+diameter, strict hull side, stopped train, crossing and endpoint multiplicity is
+checked with rational arithmetic. It also bounds the displayed scalar constants
+using alternating-series Machin bounds and rational square-root brackets.
+
+For `j>=2`, each strict parallelogram hull side has length `j`, although its
+subdivision contains unit boundary contacts. Such contact occurrences cannot be
+counted as actual unit sides of the strict convex hull. For `j=1`, the square
+attains two double-ended trains and refutes a finite depletion bound that omits
+the crossing-removal error. Oblique packets have explicit same-cardinality square
+competitors of smaller diameter. The checker asserts neither canonical source
+hypotheses nor global optimality, disk convergence or an infinite depletion theorem.
+
+```sh
+python3 research/verify_target_c_good_hull_train_depletion_2026_10_04.py
+python3 research/verify_target_c_positive_pinned_face_tail_2026_10_04.py
+python3 research/verify_target_c_all_unit_hull_end_currency_2026_10_04.py
+```
+
+Source reports, intermediate commits and pre-cleanup refs remain recoverable in the
+private history snapshots. The [source ledger](../maintenance/issue-986-preservation.json)
+records the branch dispositions. Recoverability and this comparison supply no
+redistribution clearance or new theorem promotion.
+
+## Deep-port route source: complete successor comparison
+
+Source sections 1–4 give the augmented-cell topology, actual-contact boundary
+route with factor `4/sqrt(3)`, local attachment cost and exact single global
+face-defect payment. Audit 134 reconstructs these arguments and the bounded-face
+capsule count yielding `K_M R+B_M+5T_M`. The specified initial contact edge is
+preserved by starting that route at its unloaded neighbor and appending the
+edge; this adds only the stated constant.
+
+Section 5's fixed-radius cap grid is covered by Audit 175, with its cap package
+as an explicit antecedent. Homothety keeps the crop in the same cell; global
+Type-II deficit controls that moving crop; boundary trimming and isoperimetry
+give a quadratic coherent piece with linear grid shores. Harmonic-cell interior
+disjointness identifies its actual unloaded component. The fixed radius is
+chosen before taking the large-diameter limit. Audit 175's global tail theorem
+also strengthens the source's conditional short-route/linear-tail alternative
+to every Type-II attachment. It does not prove that tails vanish or that a cap
+can be extracted from an arbitrary source.
+
+Section 6's rational rhombus refutes boundary stretch two; Audit 134 retains
+the exact example and corrected factor. Its zero-defect oblique grid and
+section 6.1's thin convex polygon are already covered by the recorded route
+regression and the stronger Audit 123 pinned-face family. Section 6.2's
+comparison with the monotone-route source supplies no additional theorem or
+closure: defect currency still needs bounded multiplicity and an actual finite
+source endpoint. Section 7 correctly separates the finite fixtures from all
+unbounded assertions. No source isolate is omitted or assigned core rigidity.
+
+The restored checker has original SHA-256
+`21367e572ced2b7967731ed817763717d21f7472778dd8f3f04709d217d861cc`.
+Its sole addition rejects optimized Python. It checks 14 exact harmonic-fixture
+augmented faces, 111 rational rhombi and 13,320 boundary pairs, 17,736 lattice
+source pairs and 3,164 thin-face pairs. These independent finite fixtures were
+absent from main and are useful evidence even though their analytic conclusions
+already have successors. They supply no global-optimality certificate.
+
+```sh
+python3 research/verify_target_c_deep_port_defect_routes_2026_10_04.py
+```
+
+## Rhombus-bulk separator source: complete successor comparison
+
+Sections 1–4 and 6 of source `0e49b450...` are covered by Audit 133: actual
+unloaded separator components have full pinned rank and a positive row
+dependence, so `t_j>=delta_j+3`; graph diameter bounds their rhombus area.
+Minimum-separator essentiality saves one boundary contact at each unloaded
+cut vertex. Unit-capacity vertex splitting includes both terminal sets and
+yields distinct-endpoint Menger paths. The convex-face version counts only
+supporting face edges in each remaining component. These arguments neither
+move a source nor extend core rigidity to contact isolates.
+
+Section 5's cap trim and complete-grid version are preserved by Audit 137
+under the explicit co-located convex cap, coherent grain, linear perimeter
+and deep attachment premises. Boundary-tube and height-slab estimates retain
+quadratic area and linear perimeter; the cropped coherent component supplies
+an actual complete grid. Returned paths have linear minimum length and
+quadratic distinct internal population after trimming their initial bulk
+visits. The source does not prove that an arbitrary canonical source supplies
+the cap package.
+
+The source's additional same-host/chord fork remains a conditional candidate,
+outside Audit 137's promoted scope. Its exact argument is: every return stays
+in the loaded force hull `F` until its first loaded endpoint. Under the stated
+proper-host-arc hypothesis, the chord line through the two distinct extreme
+vertices `q_0,q_1` intersects `F` exactly in `[q_0,q_1]`. If at least half of
+the returns end off that host arc, their heights pass from `eta>h` to
+`eta<=0`. The first passage is an actual unit contact meeting the closed
+chord segment, with a source endpoint within distance one of it. Disjoint
+return vertices give distinct contacts and endpoint labels. A passage may
+occur at a vertex; proper transverse crossing is not claimed. Otherwise at
+least half of the distinct loaded endpoints are on the host arc. This gives
+no diameter edge, route payment or source replacement.
+
+Section 7's square/near-triangular oblique grids are explicitly pinned,
+nonglobal regressions. Audit 133 preserves their square-root return order;
+the source's lattice displacement estimate proves its all-size separation
+claim. The guaranteed connector coefficient is too small to exhaust source
+population; it is a lower floor, never an upper bound on actual connectors.
+Section 8 supplies no additional mathematical premise.
+
+The restored checker has original SHA-256
+`26349d267cb3e2a1bed4979cb732d5d6e98772768179bc8331b019bb088803c7`.
+Its sole addition rejects optimized Python. It uses exact rational rank and
+equilibrium checks, all-pair grid geometry, 2,517 small removed-vertex subsets
+and four integral vertex-flow instances. Its grounded pins are not the actual
+loaded set. It does not certify general analytic source theorems, the cap
+trim or global optimality.
+
+```sh
+python3 research/verify_target_c_bulk_separator_2026_10_04.py
+```

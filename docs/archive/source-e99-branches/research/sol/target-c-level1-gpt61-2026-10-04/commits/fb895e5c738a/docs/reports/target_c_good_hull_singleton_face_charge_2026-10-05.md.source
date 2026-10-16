@@ -1,0 +1,340 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "8f5af3e481f341b59b4ef7b7813ceb1d8b7bb156", "source_branch_refs": ["refs/heads/research/sol/target-c-level1-gpt61-2026-10-04"], "source_commit": "fb895e5c738ac8cb5c10dc418c57aad075bf7725", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_c_good_hull_singleton_face_charge_2026-10-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "988127658dd16bec790ca80d8c35ff89d3db982a7c90b022a273ac8766ba7bb1"} -->
+
+> **Historical branch snapshot; destination authority remains current.** Pinned destination or source main has different content at this path; the current main version remains and branch history is archived.
+
+# Target C-II: good-hull singleton face charge
+
+**Date:** 2026-10-05  
+**Base main:** \`b9bf98d807134d6400a9eb2762e1a8145862d66e\`  
+**Status:** proof-only full-core Type-II strengthening; theorem-state authority unchanged.  
+**LEVEL I STATUS:** STILL OPEN. C-II REMAINS OPEN.
+
+## Result
+
+Let \(G_D\) be the current-main family of complete stopped trains with at least
+one good unit loaded-hull end, and let \(S_G\) count the singleton trains in
+\(G_D\). Use
+
+\[
+x_B=b-q,\qquad m_B=\#\{\hbox{nonunit loaded-hull sides}\},
+\]
+\[
+P_5=\#\{\hbox{bounded pentagonal contact faces}\},\qquad
+X:=Q-f=\sum_{\deg F\ge6}(\deg F-5).
+\]
+
+Then in the full-core Type-II loaded-chord branch,
+
+\[
+\boxed{S_G\le x_B+m_B+2P_5+4X+3.}
+\tag{GH.1}
+\]
+
+This is a finite face/outer-occurrence charge. It uses no asymptotic depletion
+argument.
+
+Combining (GH.1) with the exact current-main hull-depletion identity removes
+the singleton population from the load-bearing frontier. Put
+
+\[
+E_F:=P_F-q,\qquad G_F:=b-P_F,\qquad
+\sigma_R:=2T_R-4\sqrt{R_4},
+\]
+let \(S_0=S-S_G\) be the singleton trains left after deleting \(G_D\), let
+\(d_D\le2\) be the two-good-end correction, and put
+\(R_{\rm bulk}=R_4-R_G\). Then
+
+\[
+\boxed{
+13E_F+11G_F+8P_5+14X+2\sigma_R+5d_D+12
+\ge
+2P_F-8\sqrt{R_4}+10\sqrt{R_{\rm bulk}}+S_0+5k.
+}
+\tag{GH.2}
+\]
+
+Current main gives \(P_F/D\to\pi\),
+\(R_4/D^2\to\Delta_2=\pi/(2\sqrt3)\), and
+\(R_G=o(D^2)\). With
+\(s=\sqrt{\Delta_2}\), (GH.2) yields
+
+\[
+\boxed{
+13E_F+11G_F+8P_5+14X+2\sigma_R
+\ge [2(\pi+s)-o(1)]D+S_0+5k.
+}
+\tag{GH.3}
+\]
+
+Hence
+
+\[
+\boxed{
+\max\{E_F,G_F,P_5,X,\sigma_R\}
+\ge
+\left({\pi+s\over24}-o(1)\right)D.
+}
+\tag{GH.4}
+\]
+
+The coefficient is about \(0.1706\). No computation or verifier output is a
+proof premise.
+
+## Dependencies and scope
+
+The finite charge uses only:
+
+1. canonical full-core loaded-chord localization: every loaded-loaded unit
+   contact is a consecutive side of the actual loaded force hull;
+2. the current-main exact hull-side occurrence audit:
+   every unit loaded-hull side is a good distinguished outer interval and the
+   total terminal-occurrence capacity of bad outer intervals is
+   \[
+   B_{\rm bad}=x_B+m_B;
+   \]
+3. canonical stopped-train geometry: every bounded quadrilateral contact face
+   is a strict unit rhombus, and a singleton train edge belongs to no strict
+   rhombus.
+
+The composition also uses the independently audited current-main hull-depletion
+theorem and the exact synthesis identity
+
+\[
+5m_B+4S+2\sigma_R+5d_D
+=
+2b-8\sqrt{R_4}+5M_D+5k+2X.
+\tag{2.1}
+\]
+
+The argument is scoped to the full-core branch, where the strict-rhombus
+population is nonzero for sufficiently large sources. It does not assert the
+face sublemma for a degenerate all-shell contact cycle.
+
+## 1. Bridge good-hull singletons
+
+Fix a good-hull singleton train with physical edge \(e=uv\). Its endpoints
+are consecutive loaded force-hull vertices, and one terminal incidence is the
+good exterior hull occurrence.
+
+If \(e\) is a bridge, its other terminal incidence is also on the outer face.
+For \(q\ge3\), that second occurrence cannot also be good: the same unordered
+physical edge cannot represent two distinct one-edge intervals between
+consecutive loaded hull vertices. Therefore the second occurrence lies in a
+bad outer interval.
+
+Different singleton trains have distinct terminal occurrences. Thus, if
+\(S_G^{\rm br}\) counts bridge good-hull singletons,
+
+\[
+\boxed{S_G^{\rm br}\le x_B+m_B.}
+\tag{3.1}
+\]
+
+The \(m_B\) term is real. A hull path with one missing closing hull contact is
+the finite regression: its good singleton bridges use the exact bad-interval
+capacity \(x_B+m_B\), while \(x_B\) alone is smaller.
+
+## 2. Nonbridge good-hull singletons
+
+If \(e\) is not a bridge, its exterior incidence is the unbounded face and its
+other incidence is one bounded face \(F\). That face is not quadrilateral,
+because every bounded quadrilateral is a strict rhombus and then \(e\) would
+not be singleton. Triangle-freeness excludes degree three. Hence
+\(\deg F\ge5\).
+
+Assign \(e\) to this unique bounded exceptional face. For such a face of
+degree \(d\), let \(r(F)\) be the number of its boundary edges that are unit
+loaded-hull sides.
+
+In the full-core branch,
+
+\[
+\boxed{r(F)\le d-2.}
+\tag{4.1}
+\]
+
+If \(r(F)=d-1\), deleting the one non-hull edge leaves a path of loaded-hull
+sides, so the remaining edge joins two loaded vertices. It is a unit contact.
+The loaded-chord theorem makes it a consecutive loaded-hull side as well,
+contradicting \(r(F)=d-1\).
+
+If \(r(F)=d\), the whole facial cycle is the loaded-hull cycle. As a face of
+the contact plane graph it leaves no strict rhombus in its interior, the shell
+degeneration excluded in the present full-core branch.
+
+For \(d\ge6\),
+
+\[
+d-2\le4(d-5),
+\]
+
+so all degree-at-least-six exceptional faces absorb at most
+
+\[
+\boxed{\sum_{\deg F\ge6}r(F)\le4X.}
+\tag{4.2}
+\]
+
+## 3. Pentagon sharpening
+
+For a pentagon, (4.1) gives \(r(F)\le3\). If \(r(F)=3\), those three hull
+sides must be consecutive around the face.
+
+Indeed, suppose they form \(c\ge2\) maximal hull-side chains. Every gap
+between two chains is a contact path with loaded endpoints. A one-edge gap
+would be a loaded-loaded unit contact and, by loaded-chord localization,
+another hull side, contradicting maximality. Each gap therefore has at least
+two non-hull edges. But a pentagon with three hull edges has only two non-hull
+edges total. Thus \(c=1\).
+
+Let \(e_1,e_2,e_3\) be the three consecutive oriented unit hull-side vectors,
+and let \(\Theta\) be the total exterior hull turn across their two internal
+vertices. The other two unit edges of the pentagon join the same endpoints, so
+
+\[
+|e_1+e_2+e_3|\le2.
+\tag{5.1}
+\]
+
+If \(\Theta\le\pi\), projection onto the bisector of the first and third side
+directions gives
+
+\[
+|e_1+e_2+e_3|\ge3\cos(\Theta/2).
+\]
+
+If \(\Theta>\pi\), the next conclusion is automatic. Therefore
+
+\[
+\boxed{\Theta\ge2\arccos(2/3)>\pi/2.}
+\tag{5.2}
+\]
+
+Distinct \(r(F)=3\) pentagons use edge-disjoint three-edge hull chains, hence
+their two internal hull-turn terms are disjoint. The total convex-hull turn is
+\(2\pi\). Thus there are at most three such pentagons, and
+
+\[
+\boxed{\sum_{\deg F=5}r(F)\le2P_5+3.}
+\tag{5.3}
+\]
+
+Here \(2\arccos(2/3)>\pi/2\) follows exactly from
+\(2/3<1/\sqrt2\).
+
+Combining (3.1), (4.2), and (5.3) proves (GH.1).
+
+## 4. Eliminate singleton trains from the depletion frontier
+
+Let \(S_0\) be the singleton trains among the \(M_D\) trains remaining after
+deleting \(G_D\). A singleton is an isolated vertex of the strict-rhombus
+train-crossing graph, so deleting all \(S_0\) removes no
+\(R_{\rm bulk}\) crossing edge. Mantel gives
+
+\[
+M_D-S_0\ge2\sqrt{R_{\rm bulk}}.
+\tag{6.1}
+\]
+
+Also \(S=S_G+S_0\). Insert these in (2.1):
+
+\[
+5m_B+4S_G+2\sigma_R+5d_D
+\ge
+2b-8\sqrt{R_4}+10\sqrt{R_{\rm bulk}}+S_0+5k+2X.
+\tag{6.2}
+\]
+
+By (GH.1), the left side is at most
+
+\[
+9m_B+4x_B+8P_5+16X+2\sigma_R+5d_D+12.
+\]
+
+Therefore
+
+\[
+9m_B+4x_B+8P_5+14X+2\sigma_R+5d_D+12
+\ge
+2b-8\sqrt{R_4}+10\sqrt{R_{\rm bulk}}+S_0+5k.
+\tag{6.3}
+\]
+
+The exact hull-side ledger gives \(x_B=m_B+u_B\) with \(u_B\ge0\), hence
+\(m_B\le x_B\). Also
+
+\[
+x_B=b-q=(b-P_F)+(P_F-q)=G_F+E_F.
+\tag{6.4}
+\]
+
+Unit separation gives \(E_F\ge0\), while polygonal outer-route length gives
+\(G_F\ge0\). Use \(m_B\le x_B\) and \(b=P_F+G_F\) in (6.3), then subtract
+\(2G_F\). This is exactly (GH.2).
+
+Dividing by \(D\) with the current-main full-core limits proves (GH.3).
+All five left-side currencies are nonnegative, and their coefficients sum to
+
+\[
+13+11+8+14+2=48.
+\]
+
+This proves (GH.4), with the stronger form
+
+\[
+\max\{E_F,G_F,P_5,X,\sigma_R\}
+\ge
+\left({\pi+s\over24}-o(1)\right)D+{S_0+5k\over48}.
+\tag{6.5}
+\]
+
+If \(E_F,G_F,X,\sigma_R=o(D)\), then (GH.3) also gives
+
+\[
+\boxed{
+P_5\ge{\pi+s\over4}D+{S_0+5k\over8}-o(D).
+}
+\tag{6.6}
+\]
+
+Thus a low-metric-defect, low-high-degree, low-train-slack survivor cannot
+hide its defect in good-hull singleton trains; it must contain a linear
+population of actual pentagonal contact faces.
+
+## 5. Regression checks and remaining obligation
+
+Three stronger-looking statements are not used.
+
+* \(S_G^{\rm br}\le x_B\) is false in the hull-path regression; the exact
+  \(x_B+m_B\) capacity is needed.
+* A pentagon need not have at most two loaded-hull sides. Three consecutive
+  hull sides are possible locally; the proof only shows that this event costs
+  more than \(\pi/2\) of global hull turning, so it occurs at most three times.
+* The \(r(F)\le d-2\) argument is not exported to the no-rhombus shell
+  degeneration. The current full-core branch has quadratic strict-rhombus
+  population.
+
+No source point is deleted, no contact isolate is identified with a contact-core
+vertex, and no infinitesimal motion is treated as a finite deformation.
+
+The full-core higher-surplus branch is now forced to pay linearly in at least
+one of
+
+\[
+P_F-q,\qquad b-P_F,\qquad P_5,\qquad Q-f,\qquad\sigma_R.
+\]
+
+The remaining Target C step is to spend one of these physical currencies
+against the actual Woodall diameter graph, construct a same-cardinality
+strict-\(D\) source, or force an exact unit equilateral triangle. The
+macroscopic-container branch is unchanged. C-II and Level I remain open.
+
+## Preservation status and provenance (2026-10-05)
+
+Recovered from `automation/target-c-good-hull-singleton-face-charge-2026-10-05-v2`
+at source tip `a4d7b9bb024d8ef703182f89d820abbaafb5179c`. The source report
+was based on main `b9bf98d807134d6400a9eb2762e1a8145862d66e`, before the later
+Target C `audit.52` promotion transaction. Its claims remain unreviewed and
+noncanonical; the current route and canonical hypotheses must be used before
+relying on them. No standalone verifier accompanies this report. It does not
+close C-II or produce a global diameter competitor.

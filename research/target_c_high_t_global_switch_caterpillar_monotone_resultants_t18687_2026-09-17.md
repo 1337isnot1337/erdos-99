@@ -1,0 +1,279 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "b144b1f986472070c7515155d5f7debfb3249fb3", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_global_switch_caterpillar_monotone_resultants_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d7d632507fadaddc51286e664a3093e027b0a99bc94d7d1a8d8cf81045257476"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — a one-sided high-`t` switch chain lies in one ordered diameter caterpillar and has a common monotone resultant coordinate
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening  
+**Scope:** any fixed or growing consecutive high-`t` row chain lying strictly on one side of the common diameter-routing hub, through `t=(q-k)/D<=1.8687`  
+**Dependencies:** exact laminar interval support; common diameter-routing hub; proper O--O train crosscuts; convex geometric-thrackle property of the complete actual-diameter graph; convex-position separation lemma; exact Section-157 cut resultants  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The high-`t` fixed- and growing-chain theorems already show that switching supports at different interfaces are disjoint. What was still left geometrically open was how the fresh diameter bars from many interfaces can meet or cross each other.
+
+On one side of the common hub there is a stronger global statement: **every switching diameter edge in the entire chain crosses the same hubward boundary train**. Therefore the whole switch union, not merely each individual interface, is a subgraph of one train-cut diameter graph. It is consequently one ordered bipartite straight-line thrackle, hence a caterpillar forest.
+
+The same common train cut gives one convex-hull separation functional that has the same strict sign on every oriented switching diameter vector in the chain. Applied to the exact KKT cut-resultant increments, this supplies a single strictly monotone scalar coordinate for the complete resultant path.
+
+Thus the growing injective resultant plateau is not allowed to oscillate arbitrarily inside its shrinking ball: after orienting the chain toward the hub, it is a strictly one-dimensional-ordered polygonal path, and all of its local reaction generators live inside one ordered diameter caterpillar.
+
+---
+
+## 1. Setup and orientation
+
+Let
+
+\[
+\tau_0,\tau_1,\ldots,\tau_r
+\tag{GM.1}
+\]
+
+be consecutive selected O--O rows from either the fixed-chain theorem or the growing-chain diagonal. Assume first that the chain lies on the pre-hub side. In the complement-dual path coordinates, every actual diameter interval is
+
+\[
+I_h=\{a_h+1,\ldots,b_h\}
+\]
+
+and the common hub has index `k` with
+
+\[
+a_h\le k\le b_h
+\qquad(h\in H).
+\tag{GM.2}
+\]
+
+All selected interfaces lie before the hub. Hence every switch is a unique interval **start**. Write `X_i` for the switching set at interface `i`, and put
+
+\[
+X:=\bigsqcup_{i=0}^{r-1}X_i.
+\tag{GM.3}
+\]
+
+The union is disjoint because an interval has one start.
+
+Let `tau_r` denote the selected boundary row nearest the hub. The post-hub case is identical after reversing the chain order; then the hubward boundary is `tau_0` and switches are unique interval ends.
+
+---
+
+## 2. Every switching diameter crosses the same hubward train cut
+
+Take `h in X_i`. Since `h` starts at interface `i`,
+
+\[
+a_h=i.
+\tag{GM.4}
+\]
+
+The hub condition (GM.2) gives
+
+\[
+b_h\ge k.
+\tag{GM.5}
+\]
+
+Because the selected chain lies strictly before the hub,
+
+\[
+i<r<k.
+\tag{GM.6}
+\]
+
+Therefore the selected hubward cut `tau_r` belongs to the support interval `I_h`. Equivalently, the two endpoints of every edge in `X` lie on opposite shores of `tau_r`:
+
+\[
+\boxed{
+X\subseteq H_{\tau_r},
+}
+\tag{GM.7}
+\]
+
+where `H_{tau_r}` denotes the complete actual-diameter subgraph crossing that train cut.
+
+This is stronger than pairwise disjoint switching support. Every fresh bar created anywhere in the one-sided chain belongs to one **common** train-cut diameter graph.
+
+On the post-hub side the same proof uses interval ends and the hubward boundary `tau_0`.
+
+---
+
+## 3. The full switch union is an ordered caterpillar forest
+
+A proper O--O train crosscut separates the closed outer-face disk into two shores. Its two boundary endpoints divide the convex-hull cyclic order into two complementary intervals. Every endpoint of an actual diameter edge is an extreme source vertex, so every edge of `H_{tau_r}` joins one hull interval to the complementary hull interval.
+
+Hence `H_{tau_r}` is bipartite. The complete actual-diameter graph is a straight-line convex geometric thrackle, and every subgraph inherits that property. A bipartite straight-line thrackle has no cycle and every nontrivial tree component is a caterpillar. Therefore
+
+\[
+\boxed{
+X\text{ is a forest and every nontrivial component of }X\text{ is a caterpillar.}
+}
+\tag{GM.8}
+
+Moreover the two shore endpoint sets lie in complementary cyclic intervals. The standard ordered-thrackle train-cut theorem therefore applies globally to `X`: for any two independent switch edges, the endpoint order on one shore determines the reversed compatible endpoint order on the other shore.
+
+In particular all one/two-bar reaction-generator sets selected on the chain are subedges of one ordered caterpillar forest. The formerly open possibility
+
+```text
+fresh bar(s) at every interface
++ arbitrary mutual meeting/crossing geometry
+```
+
+is replaced by
+
+```text
+fresh bar(s) at every interface
++ one common train-cut bipartition
++ one ordered convex-thrackle caterpillar forest.
+```
+
+This conclusion applies equally to the fixed `r` chain and to the growing `r_D` chain.
+
+---
+
+## 4. One separation functional works for the entire switch union
+
+Let the two hull intervals cut by the hubward train be `P_-` and `P_+`, with all pre-hub chain-side switching endpoints in `P_-` and all hub-side switching endpoints in `P_+`.
+
+The convex-position separation lemma gives a linear functional `phi` and a constant `c` such that
+
+\[
+\phi(x)>c\quad(x\in P_-),
+\qquad
+\phi(y)<c\quad(y\in P_+).
+\tag{GM.9}
+\]
+
+Orient every switching diameter vector from its hub-side endpoint toward its chain-side endpoint:
+
+\[
+n_h:=x_h-y_h,
+\qquad
+x_h\in P_-,\ y_h\in P_+.
+\tag{GM.10}
+\]
+
+Then the same functional satisfies
+
+\[
+\boxed{
+\phi(n_h)>0
+\qquad(h\in X).
+}
+\tag{GM.11}
+\]
+
+The key point is that `phi` depends only on the single hubward train cut. It does **not** depend on the interface `i` or on a chosen slab `[p,q]`.
+
+This upgrades the slab-by-slab reaction nondegeneracy proof, where a separating functional could be chosen separately for each slab, to a simultaneous one-sided statement on the entire chain.
+
+---
+
+## 5. Exact KKT resultant increments all lie in one open half-plane
+
+For row `tau_j`, retain the exact Section-157 resultant
+
+\[
+F_j=A_ju_j.
+\tag{GM.12}
+\]
+
+Orient the indices away from the chain side and toward the hub so that the adjacent slab reaction is
+
+\[
+G_i=F_i-F_{i+1}.
+\tag{GM.13}
+\]
+
+The exact cut-resultant telescoping identity gives
+
+\[
+G_i
+=\sum_{h\in X_i}\beta_h n_h.
+\tag{GM.14}
+\]
+
+Canonical C65 gives
+
+\[
+\beta_h>0
+\qquad(h\in H).
+\tag{GM.15}
+\]
+
+Using (GM.11),
+
+\[
+\boxed{
+\phi(G_i)
+=\sum_{h\in X_i}\beta_h\phi(n_h)>0
+\qquad(0\le i<r).
+}
+\tag{GM.16}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+\phi(F_0)>\phi(F_1)>\cdots>\phi(F_r).
+}
+\tag{GM.17}
+\]
+
+For every contiguous slab `p<q`, summing (GM.16) gives
+
+\[
+\boxed{
+\phi(F_p-F_q)>0.
+}
+\tag{GM.18}
+\]
+
+Thus all oriented resultant chords point into the same open half-plane.
+
+The post-hub case gives the same statement after reversing the chain order toward the hub.
+
+---
+
+## 6. The resultant plateau is a strictly monotone simple polygonal path
+
+The growing-chain theorem supplies `r_D->infinity` and pairwise distinct resultants whose normalized diameter tends to zero. Equations (GM.16)--(GM.18) add a missing global order.
+
+Join consecutive resultants by straight segments. Along every segment `F_iF_{i+1}`, the scalar coordinate `phi` changes strictly in one direction. The `phi`-intervals of two nonadjacent segments are disjoint except possibly at a common consecutive endpoint. Hence the polygonal resultant path is simple and strictly `phi`-monotone.
+
+Therefore the high-`t` growing survivor contains
+
+\[
+\boxed{
+\text{an arbitrarily long strictly ordered resultant path compressed into an }o(D)\text{ ball after division by }D.
+}
+\tag{GM.19}
+\]
+
+This does not provide a quantitative lower spacing between consecutive resultants; the increments may be arbitrarily small. It does remove vector oscillation/backtracking as an escape from the resultant-plateau normal form.
+
+---
+
+## 7. Interaction with the exact-antipodal / strong-TB1 fork
+
+On the linear good shore, every exact-antipodal switching pair and every chosen strong-TB1 bar belongs to the common train-cut caterpillar `X`.
+
+- In the exact-antipodal branch, the two opposite-transverse switching rows at each selected interface are two edges of this same ordered caterpillar.
+- In the strong-TB1 branch, the distinct robust one-bar blockers are distinct edges of the same ordered caterpillar.
+- Reaction generators from different interfaces are edge-disjoint but can meet only in the ways permitted by a caterpillar component and the complementary-shore endpoint order.
+
+Thus the final positive-density fork is no longer a family of unrelated local blockers. It is a positive-density tagged subfamily of one ordered convex-hull caterpillar.
+
+The remaining global closing target is correspondingly narrower: classify how the interface tags can occur along the spine/leaves of this common caterpillar while simultaneously satisfying either the exact-antipodal opposite-transverse pairs or the fixed-angle strong-TB1 inequalities and the common near-triangular transverse ladder.
+
+---
+
+## 8. Scope audit
+
+- The theorem proves monotonicity only for one linear functional `phi`; it does not claim that the vectors `F_j` themselves are collinear or that their magnitudes `A_j` are monotone.
+- No uniform lower bound on `phi(n_h)`, `phi(G_i)`, or any individual KKT multiplier is obtained.
+- The common caterpillar conclusion uses that the complete selected chain lies strictly on one side of the hub. The single hub interface is excluded.
+- `X` is a subgraph of the complete diameter graph crossing the hubward selected train. Persistent diameter edges crossing that train need not belong to `X`.
+- The theorem does not yet bound the length or maximum degree of a caterpillar component.
+- No C-II or Level-I closure is claimed.
+
+**Disposition:** proved proof-only global one-sided switch geometry and common half-plane monotonicity of all high-`t` KKT resultant increments. C-II and Level I remain open.

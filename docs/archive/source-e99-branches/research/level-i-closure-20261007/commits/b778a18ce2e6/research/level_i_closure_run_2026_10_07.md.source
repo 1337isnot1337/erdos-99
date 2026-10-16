@@ -1,0 +1,111 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "dc83e43f8cde1f17b4a4ed821f7955a18790a506", "source_branch_refs": ["refs/heads/research/level-i-closure-20261007"], "source_commit": "b778a18ce2e6e7a4ef5113f71bf5cf5ca55352db", "source_lifecycle": "not indexed", "source_path": "research/level_i_closure_run_2026_10_07.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "8326a66512d7381b83993b958066babc40f2112b5557030c24279570a546656e"} -->
+
+> **Historical branch snapshot; destination authority remains current.** This unique branch version is superseded or absent from current Agent 3 branch heads; preserved as history, not selected as current branch content.
+
+# Level I closure run, 2026-10-07
+
+Objective: settle the exact universal statement in `docs/problem/statement.md`,
+or its negation. The objective remains active; a finite lemma is not completion.
+
+Base commit: `a0b2e33d15aaab006bf54bab54122ecf3d7209cd`.
+State version: `2026-10-08.audit.127`.
+Worktree: `/tmp/e99-level-i-closure-20261007`.
+Branch: `research/level-i-closure-20261007`.
+Target: C-II, both canonical branches.
+
+The original checkout at `/home/user/math/e-99` was left intact, including its
+untracked Target A report. Current main was fetched before this worktree was made.
+The state files still say Level I open and C-I closed / C-II open.
+
+## Authority and selected inputs
+
+Inspected `docs/STATE.md`, the theorem manifest, exact problem statement, Target C
+route map and current frontier. Inspected the named route modules at their
+statement/scope level; this is not a fresh audit of their proofs. The load-bearing
+inputs for the present bridge were read in detail:
+
+- `docs/targets/target-c/56-ci-restored-frontier.md`;
+- `docs/targets/target-c/57-zr-zf-rigidity-audit.md`;
+- `docs/targets/target-c/58-full-source-geometry-audit.md`;
+- `docs/audits/target_c_contact_isometry_energy_independent_audit_2026-10-08.md`;
+- `docs/audits/target_c_inactive_diameter_cubic_budget_independent_audit_2026-10-08.md`;
+- `docs/audits/target_c_generic_isolate_anchor_avoidance_independent_audit_2026-10-07.md`.
+
+Read the current Target C prompt after these inputs. No mathematical statement
+from an unpromoted report is used as a premise. External fetches of the GitHub
+web page and Erdős-problem page returned 404 and 403 respectively; these are
+access results, not evidence of source absence. Git fetch and authenticated PR
+listing succeeded.
+
+## Exact bridge under investigation
+
+```text
+open isolate-involving upper equalities by an explicit finite contraction
+  -> Audit.120's mandatory replacements must occur entirely inside the core
+  -> a noncongruent full-source contact-isometry with no new core diameter
+     pair contradicts the canonical diameter-pair minimum
+  -> C-II closes if such an endpoint is supplied for every large canonical source
+  -> Level I follows through the already closed C-I gate
+```
+
+This does not drop isolates: the contraction retains every isolate, checks every
+isolate-involving lower pair, and moves no core point. Full-source extension of
+the proposed core endpoint is still required.
+
+The second deduction applies Audit.126 at the *actual new global minimizer*,
+after isolate normalization. It does not transport arbitrary inactive pairs
+back to the source without a displacement bound. A zero-width limit of that
+audit gives an actual-diameter cubic moment and disperses a linear replacement
+bank into a matching of order at least square root of D, regardless of move size.
+
+## Current artifact and limit
+
+Proof draft:
+`docs/reports/target_c_isolate_normalization_core_diameter_replacement_2026-10-07.md`.
+Classification: proved candidate awaiting independent audit/promotion;
+registry lifecycle remains unreviewed and noncanonical.
+
+The exact remaining task is to construct the specified noncongruent,
+same-cardinality full-source endpoint while preserving the exact contact graph
+and creating no new core diameter pair. Neither isolate normalization nor a
+cubic degree budget constructs that endpoint. Both the face-coupled full-core
+branch and the macroscopic-container branch remain in scope.
+
+Validation completed: the new rational verifier passed 84 all-pair checks and
+two hypothesis-failure fixtures; the existing Audit.126 finite certificate
+passed. Artifact index/headers were regenerated, changing only the new
+report header and one index record. The theorem-state checker and whitespace
+check passed. No theorem lifecycle or route status was promoted.
+
+## Small-packet bridge, continuation
+
+The branch was rebased onto main's Audit.128 after comparing its state changes.
+That update adds a local long-pocket regression and changes no premise of the
+isolate-normalization argument. Current canonical state remains Level I open.
+
+The next candidate chain is:
+
+```text
+finite inward translation plus internal dilation of small separated packets
+  -> weak upper bounds become strict while every new contact opens
+  -> contact-minimality excludes equal-cardinality replacement of old contacts
+  -> C-II would close if every large canonical source supplies such packets
+```
+
+Load-bearing additional input: universal full-source circumradius FS.1,
+including for an initial replacement containing triangles. The finite motion
+itself uses no global-optimality premise. This relaxes the strict-upper-slack
+hypothesis of Audit.112 only for packets having no unit anchors to the retained
+source or to other packets and sufficiently small containing disks. It supplies
+no packet existence, arbitrary-container capacity, or source-specific release.
+
+The packet proof and its two rational fixtures are recorded in
+`docs/reports/target_c_small_separated_packet_upper_release_2026-10-07.md`.
+The verifier passed 168 all-pair checks at three certified positive times and
+two failures outside its hypotheses. Artifact metadata was regenerated; the
+state and whitespace checks passed. The result is unreviewed and noncanonical.
+
+User steering: stop relying on further conditional packet refinements as the
+main route; investigate a new global argument. The user reports an unpublished
+internal solution but supplied no proof or premise to import. The current
+mathematical objective and exact quantifiers are unchanged.

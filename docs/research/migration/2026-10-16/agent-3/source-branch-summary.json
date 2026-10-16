@@ -1,0 +1,51 @@
+{
+  "agent_3_commit_count": 49,
+  "agent_3_dirty_path_count": 5,
+  "agent_3_nonpr_branch_refs": [
+    "refs/heads/automation/e99-target-c-closure-worker",
+    "refs/heads/automation/target-c-edgewise-pentagon-opening-barrier-2026-10-05",
+    "refs/heads/automation/target-c-pentagon-contact-debt-planarity-2026-10-05",
+    "refs/heads/automation/target-c-short-unit-wall-zero-capacity-2026-10-05-v2",
+    "refs/heads/research/level-i-closure-20261007",
+    "refs/heads/research/sol/global-e99-20261011",
+    "refs/heads/research/sol/target-c-level1-gpt61-2026-10-04"
+  ],
+  "agent_3_residual_pr_named_branch_refs": [
+    "refs/heads/swarm/sol/diameter-stress-gap-20261002"
+  ],
+  "ahead_branch_head_dispositions": {
+    "assigned_nonpr_branch": 7,
+    "assigned_nonpr_branch_residual": 1,
+    "assigned_to_other_agent": 17,
+    "exclude_pr_branch_accounted_separately": 86
+  },
+  "ahead_branch_head_version_count": 111,
+  "ahead_branch_head_versions_by_origin": {
+    "live_remote": 42,
+    "local": 69
+  },
+  "all_unique_commit_count_across_source_heads": 478,
+  "branch_owner_counts_including_pr_refs": {
+    "1": 31,
+    "2": 40,
+    "3": 40
+  },
+  "commit_dispositions": {
+    "accounted_by_source_pr": 370,
+    "assigned_to_agent_3": 49,
+    "deduplicated_to_agent_1": 17,
+    "deduplicated_to_agent_2": 42
+  },
+  "commit_rows_including_pr_accounting": 478,
+  "dirty_path_dispositions": {
+    "assigned_dirty_snapshot_agent_3": 4,
+    "assigned_to_other_agent": 24,
+    "unresolved_inaccessible_or_ref_unmapped": 4
+  },
+  "frozen_dirty_worktree_path_count": 32,
+  "live_remote_source_branch_head_count": 45,
+  "local_source_branch_head_count": 107,
+  "source_main": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "union_source_branch_refname_count": 138,
+  "unique_commit_count_after_deduplicating_source_prs": 108
+}

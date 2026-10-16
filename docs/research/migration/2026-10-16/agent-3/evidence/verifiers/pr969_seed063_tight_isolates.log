@@ -1,0 +1,9 @@
+M=4: n=15, |Z|=10, Schur rank=5, beta=0, coarse deficiency=0, surviving direct paths=2
+M=5: n=21, |Z|=15, Schur rank=6, beta=0, coarse deficiency=0, surviving direct paths=3
+M=8: n=45, |Z|=36, Schur rank=9, beta=0, coarse deficiency=0, surviving direct paths=6
+M=15: n=136, |Z|=120, Schur rank=16, beta=0, coarse deficiency=0, surviving direct paths=13
+M=33: n=595, |Z|=561, Schur rank=34, beta=0, coarse deficiency=0, surviving direct paths=31
+competitor M=33: retains 595 labels from 621; full-packet diameter squared=991 < 1089
+competitor M=40: retains 861 labels from 896; full-packet diameter squared=1477 < 1600
+PASS: 187200 source pairs, 1140415 packet pairs, 42 exchange pairs; 1023 nonempty right subsets; global three-point and two hypothesis controls
+Scope: exact finite certificates; general proofs are in the report. No Level I or large-source global-optimality claim.

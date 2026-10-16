@@ -1,0 +1,14 @@
+{
+  "agent3_owned_dirty_path_count": 5,
+  "disposition_counts": {
+    "assigned_to_other_agent": 24,
+    "exclude_shared_navigation_save_diff": 1,
+    "preserve_historical_dirty_snapshot": 2,
+    "preserve_new_first_party_certificate_fixture": 1,
+    "unresolved_agent3_dirty_snapshot": 1,
+    "unresolved_inaccessible_or_ref_unmapped": 3
+  },
+  "frozen_dirty_path_count": 32,
+  "materialized_bytes": 25615,
+  "materialized_file_count": 3
+}

@@ -1,0 +1,59 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "4ca533f13472d002fee5d9a0c8dba7aa621a73bc", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_two_halfdisk_perimeter_rigidity_hostile_audit_2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "9bdb9516bf1f3ecf244e493827c52fd228c2daf338f205cbf5e7bf4a06c5101d"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Hostile audit — Target C two-half-disk perimeter rigidity
+
+**Date:** 2026-09-12  
+**Reviewed source:** `target_c_two_halfdisk_perimeter_rigidity_2026-09-12.md`  
+**Verdict:** PASS for the stated proof-only scope.  
+**LEVEL I STATUS:** STILL OPEN. C-II REMAINS OPEN.
+
+## 1. Area convergence is enough for the perimeter step
+
+For one selected group, the rhombi are bounded in the corresponding half-disk and
+their interiors are disjoint. Thus their union has the displayed total area. Since
+the half-disk has exactly the same leading area, containment gives `L^1` convergence
+of the normalized indicator functions to the half-disk indicator. The finite
+perimeter lower-semicontinuity theorem applies to arbitrary finite-perimeter sets and
+does not require connectedness or a uniform boundary regularity estimate.
+
+The half-disk perimeter is the sum of its diameter segment (`D`) and semicircle
+(`pi D/2`), so the normalized lower bound is `1+pi/2`.
+
+## 2. Occurrence-counted boundary is not underestimated
+
+The reduced perimeter of a finite union of closed unit rhombi is the total length of
+its unshared edge segments. Shared full edges are internal and cancel. Boundary
+pinches, holes, and disconnected components do not reduce the perimeter. The
+transport quantity `P_i` counts the same physical unit-edge occurrences, with any
+extra incidence multiplicity retained. Therefore `P_i >= Per(E_i)` is the safe
+direction used in the proof.
+
+No assertion is made that the boundary is a single simple polygon or that its edge
+order converges to the semicircle.
+
+## 3. Global edge-label comparison
+
+The only global comparison is `P_1+P_2 <= P_R`. A cross-group shared full edge would
+be the only way a selected-group boundary occurrence could fail to be a physical
+boundary occurrence of the full rhombus union. If the edge has an unloaded endpoint,
+the two incident faces share the unloaded component label. If both endpoints are
+loaded, the Type-II `c_B=0` theorem makes the edge a force-hull side, which cannot have
+bounded strict-rhombus faces on both sides. Common vertices and non-rhombus contacts
+are not silently treated as edge sharing.
+
+## 4. Ledger arithmetic and limits
+
+The canonical global boundary charge is `P_R <= b+4f+Q`, and Type-II gives
+`b+Q=2(q-k)`. Substituting the perimeter lower bound yields
+
+`2(q-k)+4f >= (2+pi-o(1))D`,
+
+which is `T/D >= 1+pi/2-o(1)` because `T=q+2f-k`.
+
+The exact verifier passes. The result is not a closure: no upper bound on the same
+currencies, no strict source-preserving deformation, and no exact triangle is
+deduced.
+
+**Classification:** proved candidate awaiting promotion; hostile audit PASS.

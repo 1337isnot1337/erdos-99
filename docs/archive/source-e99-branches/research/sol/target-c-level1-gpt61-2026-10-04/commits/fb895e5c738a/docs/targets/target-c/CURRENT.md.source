@@ -1,0 +1,221 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3fb7ed3ddab630eb8e4e23d87dcd56889807bae1", "source_branch_refs": ["refs/heads/research/sol/target-c-level1-gpt61-2026-10-04"], "source_commit": "fb895e5c738ac8cb5c10dc418c57aad075bf7725", "source_lifecycle": "not indexed", "source_path": "docs/targets/target-c/CURRENT.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "a315b2910339af5fd33d57ac361e5655e75e4be6620da224468557af07c5a08a"} -->
+
+> **Historical branch snapshot; destination authority remains current.** Pinned destination or source main has different content at this path; the current main version remains and branch history is archived.
+
+# Target C — current C-II frontier
+
+<!-- BEGIN GENERATED: target-c-ledger -->
+**Generated ledger snapshot (`2026-10-05.audit.53`):** C-I **CLOSED**; C-II **OPEN**.
+
+Canonical IDs: `C-ZTA`, `C-ZRF`, `C-FS-GEOM`, `C-FSD`, `C-DB-DENSITY`, `C-FS-STABILITY`, `C-MATCHING-EXCLUSION`, `C-LINEAR-NONMATCH`, `C-ATTACH-CURRENCY`, `C-LOADED-HULL`, `C-EXTREME-TRANSFER`, `C-PRIMITIVE-SPLIT`, `C-FOREST-DOUBLE-GAP`, `C-RHOMBUS-POP`, `C-PUNCTURED-PHASE`, `C-COHERENT-GRAINS`, `C-FOREST-ENDPOINT-GEOM`, `C-EXTREME-ATTACH-GEOM`, `C-PRIMITIVE-SHELL-LF`, `C-PSEUDO-GRID`, `C-GRID-PHASE-COLLAPSE`, `C-COMP-DEATOMIZATION`, `C-HOLE-GRID-DIAMETER`, `C-INACTIVE-CHAMBER`, `C-INACTIVE-HULL-STABILITY`, `C-INACTIVE-NEAR-MATCHING`, `C-INACTIVE-DEEP-MATCHING`, `C-INACTIVE-DICHOTOMY`, `C-FULLCORE-NEAR-DISK`, `C-HARMONIC-CARRIER-QUAD`, `C-HARMONIC-CELL-TILING`, `C-HARMONIC-WRAPPING`, `C-TYPEII-INTERFACE-COLLAPSE`, `C-TRAIN-INTERFACE-CURRENCY`, `C-HARMONIC-TRAIN-BUDGET`, `C-DENSE-PHASE-CORE`, `C-EXPLICIT-ORDERED-GRID`, `C-WRAP-PERIMETER`, `C-WRAP-FULL-GAP`, `C-WRAP-THREE-GAP`, `C-WRAP-OUTER-WALK-GAP`, `C-WRAP-CAUCHY`, `C-WRAP-MIXED-CAUCHY`, `C-WRAP-ANGULAR-MEASURE`, `C-WRAP-COMPLEMENT-CHORD`, `C-PHASE-CORRIDOR-ENDPOINT-EXCLUSION`, `C-UNIQUE-WRAP-CAP-DEFICIT`, `C-WRAP-QUANT-PHASE-GAP`, `C-ROUTE-EXCESS-OPT`, `C-STRONG-PHASE-SHORES`, `C-WRAP-AREA-RIGIDITY`, `C-AREA-BOOSTED-PHASE-GAP`, `C-PHASE-SHORE-BASELINE`, `C-LOCAL-TRAIN-COUNT-GAP`, `C-JOINT-PHASE-SHORES`, `C-AGGREGATE-PROJECTION-GAP`, `C-EXTENDED-STABILITY-GAP`, `C-STABILITY-ENVELOPE`, `C-INTEGRATED-TOOTH-LEAKAGE`, `C-ZERO-HOST-SIGNED-RETURN`, `C-SIGNED-RETURN-TRANSPORT`, `C-CORRELATED-SLACK-RETURN`, `C-ANALYTIC-SLACK-ENVELOPE`, `C-ANISOTROPIC-TWO-ARC-RETURN`, `C-LOCAL-RETURN-OLER-BRIDGE`, `C-AGGREGATE-TWO-ARC-DETOUR`, `C-AUGMENTED-CELL-DEFECT-BUDGET`, `C-FULLCORE-DIAMETER-BUDGET-FLOOR`, `C-FULLCORE-MU-ONE-CELL`, `C-FULLCORE-LOADED-CHORD`, `C-FULLCORE-TRAIN-SURPLUS-FLOOR`, `C-FULLCORE-FLOOR-ENDPOINT-EXCLUSION`, `C-OBLIQUE-LATTICE-COMPETITOR`, `C-HARMONIC-GRID-LOCAL`, `C-WOODALL`, `C-COMMON-BLOCK`, `C-MU-09604`, `C-RSR-DD`, `C-PD`, `C-CYCLIC-STRUCTURAL`, `C-P1-PRX`, `C-S1-RSQ`, `C-FULLCORE-HULL-DEPLETION-FLOOR`, `C-AUGMENTED-TRAIN-RANK`, `C-FULLCORE-RESIDUAL-FLOOR`, `C-CONTACT-FACE-REGULARITY`, `C-RECIPROCAL-TRAIN-GRAPH`, `C-OUTER-TRAIN-DETERMINATION`, `C-GLOBAL-FACE-RETURN-QUOTAS`, `C-JOINT-BULK-FACE-SEPARATOR`, `C-TERMINAL-PHYSICAL-FRUSTRATION`, `C-LOADED-FLAT-PENTAGON-DEPLETION`.
+Regression IDs: `C-S1-Q13`.
+Rejected/overridden IDs: `C-PATH-EULER`, `C-FB4`, `C53-BAD-PENTAGON`, `RSR-EQUALITY-UNIQUE`, `C-FIVE-ARC-NEAR-QUAD`, `C-FIVE-HOST-OCCUPANCY`, `C-CYCLIC-CAP-DETOUR`, `C-CYCLIC-099554`, `C-ZRF-FULL-SOURCE`.
+<!-- END GENERATED: target-c-ledger -->
+
+**State date:** 2026-10-05
+**LEVEL I STATUS: STILL OPEN.**  
+**C-I: CLOSED.**  
+**C-II: OPEN.**
+
+Read `../../STATE.md` first. This file is the compact live Target C frontier. Historical handoffs and unpromoted research files do not override it.
+
+Promotion audits:
+
+- [`105-121-promotion-audit-2026-09-12.md`](105-121-promotion-audit-2026-09-12.md)
+- [`122-123-promotion-audit-2026-09-12.md`](122-123-promotion-audit-2026-09-12.md)
+- [`October structural promotion audit`](../../audits/target_c_october_structural_promotion_audit_2026-10-05.md)
+- [`Reciprocal/return promotion audit`](../../audits/target_c_returns_reciprocal_promotion_audit_2026-10-05.md)
+
+## Normal form and ZR/ZF scope
+
+Use a contact-minimal, then diameter-pair-minimal triangle-free global minimizer and retain every source point, including contact-isolated points. Let `V` be the nonisolated positive-contact core and `v=|V|`.
+
+The canonical §57 theorem is
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\qquad
+\operatorname{rank}R_{C\cup H}[V]=2v-3,
+\]
+
+so `e+h>=2v-2` and `h>=delta>=ceil(D)` in the core ledger. This is not a full-source affine-kernel theorem. Contact-isolated coordinates add zero stress rows/columns and independent kernel directions. `C-ZRF-FULL-SOURCE` is rejected.
+
+## Canonical state through audit.53
+
+Audit.53 controls theorem authority.
+
+The audit.52 full-core structural stack remains canonical:
+\[
+\mu_D\ge\mu_{\rm hull}+\varepsilon_*,
+\qquad
+R_F\ge(\kappa_{\rm fr}-o(1))D,
+\qquad
+\sigma_C=0,
+\]
+where
+\[
+\mu_{\rm hull}
+=
+\frac{\pi+\sqrt{\pi/(2\sqrt3)}}2
+=
+2.046952730226875\ldots.
+\]
+
+The Sections 122--123 global detour/payment package also remains canonical:
+\[
+\liminf {1\over D}\sum_r(L_r+P_{{\rm exc},r}-2d_r)
+\ge {\pi\over2}(2-\sqrt3),
+\qquad
+\sum_rP_{{\rm exc},r}\le10(e_{BB}-k).
+\]
+
+Audit.53 adds six further canonical theorems.
+
+1. **Positive reciprocal train graph.** Canonical \`C-RECIPROCAL-TRAIN-GRAPH\` integrates positive contact equilibrium to actual reciprocal coordinates on bounded augmented faces. Every internal stopped train with two bounded endpoints is a positive straight reciprocal segment. The bounded-endpoint train graph is simple and, componentwise,
+   \[
+   \boxed{e(U_i)\le2|U_i|-3}
+   \]
+   for every nontrivial induced connected component \(U_i\). This strictly sharpens the earlier \((2,2)\)-subset bound.
+
+2. **Outer-train determination.** Canonical \`C-OUTER-TRAIN-DETERMINATION\` proves that old-outer-ended train rates determine every contact flex modulo translations. Since \(\sigma_C=0\),
+   \[
+   \boxed{|\mathcal O|\ge q-k.}
+   \]
+
+3. **Global exceptional-face return quotas.** Canonical \`C-GLOBAL-FACE-RETURN-QUOTAS\` gives, for any selected bounded exceptional-face family and a minimum endpoint-inclusive physical-contact separator \(S\),
+   \[
+   \boxed{Q_{\mathcal F}\le2|S|-4.}
+   \]
+   Moreover all face demands
+   \[
+   r_f=
+   \max\left\{
+   0,\left\lfloor\frac{m_f-4}{2}\right\rfloor-\ell_f
+   \right\}
+   \]
+   can be realized simultaneously by globally vertex-disjoint actual contact paths from distinct unloaded face-boundary vertices to distinct loaded endpoints.
+
+4. **Joint bulk/face separator capacity.** Canonical \`C-JOINT-BULK-FACE-SEPARATOR\` gives
+   \[
+   \boxed{
+   2\sqrt{\pi a_0(R-5k_I)_+}+Q_{\mathcal F}
+   \le4k-4,
+   \qquad a_0=\frac{\sqrt3}{2}.
+   }
+   \]
+   If retained bulk is nonempty the finite right side improves to \(4k-6\). In a Type-II unloaded-rhombus bulk \(R=(\Delta_2-o(1))D^2\),
+   \[
+   \boxed{
+   p_D\ge\frac{\pi}{4}D+\frac14Q_{\mathcal F_D}-o(D).
+   }
+   \]
+   A face-defect family whose boundaries lie in a radius-\(r\) disk also satisfies
+   \[
+   \boxed{Q_{\mathcal F}\le(32+4\pi)r+18.}
+   \]
+   Thus a linear exceptional-face tail cannot be hidden in one submacroscopic cluster or in sublinearly many clusters with sublinear total radius.
+
+5. **Terminal short-pocket physical frustration.** In the explicit branch
+   \[
+   q/D\to\pi,\qquad u_B/D\to0,
+   \]
+   canonical \`C-TERMINAL-PHYSICAL-FRUSTRATION\` gives
+   \[
+   \boxed{R_{\mathcal O}=o(D^2)}
+   \]
+   for all outer-ended trains, and forces a universal nonexplicit
+   \[
+   \boxed{\liminf R_{\rm phys}/D\ge\kappa_{\rm phys}>0}
+   \]
+   on original physical contact faces. A linear subfamily can be chosen with pairwise boundary-vertex-disjoint physical direction-frustrated unit walls. With \(\sigma_C=0\),
+   \[
+   2f\ge2sD+\max\{0,k-m_B\}+S_U-o(D),
+   \qquad
+   s=\sqrt{\pi/(2\sqrt3)}.
+   \]
+
+6. **Loaded flat-pentagon second depletion.** In the explicit branch
+   \[
+   x_B=b-q=o(D),
+   \]
+   canonical \`C-LOADED-FLAT-PENTAGON-DEPLETION\` gives distinct physical near-flat pentagons
+   \[
+   g_D\ge q-e_{BI}-6(Q-f)-o(D)
+   \]
+   whose incident train family is second-depletable, and forces
+   \[
+   \boxed{
+   e_{BI}+6(Q-f)
+   \ge
+   sD+2k+\frac{S_U}{2}-o(D).
+   }
+   \]
+
+The promoted return paths are path-count/endpoint currency, not route-length currency. The reciprocal realization is a force-space object, not a source deformation. The physical residual bank is not spare capacity or hidden-contact activation.
+
+## Exact remaining split
+
+### 1. Macroscopic-container branch
+
+One actual internal inactive chamber or exterior cap has \(\Omega(D^2)\) population/area with only \(O(D)\) perimeter/slack. Canonical hull stability and deep isolate matching remain available. Contact creation alone does not transfer positive KKT force.
+
+A closure must force an exact unit triangle, alter or replace the old diameter-carrying core, or construct a same-cardinality strict sub-\(D\) source.
+
+### 2. Full-core branch
+
+Every sufficiently large survivor has the audit.52 baseline
+\[
+\mu_D\ge\mu_{\rm hull}+\varepsilon_*,
+\qquad
+R_F\ge(\kappa_{\rm fr}-o(1))D,
+\qquad
+\sigma_C=0,
+\]
+and now also the audit.53 global train/return structure:
+\[
+e(U_i)\le2|U_i|-3,\qquad
+|\mathcal O|\ge q-k,
+\]
+together with global face-defect return quotas and joint bulk/face separator capacity.
+
+The terminal geometry now has a sharper case split. Along any subsequence approaching the disk-perimeter endpoint \(q/D\to\pi\):
+
+- if \(u_B=o(D)\), all outer trains are second-depletable and a linear physical wall-residual bank is forced;
+- if additionally \(x_B=o(D)\), then the loaded-flat-pentagon penalty
+  \[
+  e_{BI}+6(Q-f)\ge sD+2k+\frac{S_U}{2}-o(D)
+  \]
+  must be paid;
+- therefore a survivor avoiding these conclusions must carry a linear pocket-path excess \(u_B=\Omega(D)\), or stay a linear distance from \(q/D=\pi\), or pay the displayed loaded-attachment/high-degree-face penalty.
+
+The exact live bridge remains **active-diameter feasibility**. The strongest currently available ingredients are now simultaneous:
+
+- a smooth exact contact manifold;
+- a positive reciprocal \((2,3)\)-sparse internal train graph;
+- at least \(q-k\) outer-ended trains;
+- globally disjoint actual loaded-return paths indexed by exceptional-face defect;
+- a joint \(\pi D/4+Q/4\) bulk/face endpoint bank;
+- a linear physical direction-frustrated wall bank in the terminal short-pocket branch;
+- the Sections 122--123 detour/payment currency.
+
+A closing theorem must turn these into a finite source motion/replacement that respects every lower constraint and strictly reduces the **maximum** active diameter, or force an exact unit equilateral triangle. A weighted mean decrease, positive residual, or many return paths alone is insufficient.
+
+Further carrier-decimal optimization and further subdivision of already-second-depletable terminal trains are secondary.
+
+## Binding rejected routes
+
+Do not use without a new proof:
+
+- incident-diameter sequence `=>` Euler trail/path;
+- FB4 force-bulk localization;
+- incompatible-cut C53 pentagon objection;
+- RSR disk-equality uniqueness;
+- Eppstein near-equality `=>` near quadrangulation;
+- five-host occupancy from angular-measure saturation;
+- inward OP pocket `subset` exterior Reuleaux minor cap;
+- deletion of contact-isolated source points;
+- full-source extension of the §57 affine-kernel theorem;
+- `r/(6C_T)` as the sharp Section-90 bin-method limit;
+- the withdrawn §121 normalization `G_loc=o(D^2) => G_loc/d=o(1)`.
+
+The PR #191 `0.995540...` theorem remains rejected. The finite S1 `q=13` object remains a regression, not a global-minimizer theorem.

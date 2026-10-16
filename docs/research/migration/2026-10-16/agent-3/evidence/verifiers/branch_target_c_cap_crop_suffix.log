@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "m": 16,
+      "source_pairs": 41616,
+      "rhombi": 256,
+      "chord_crossing_faces": 46,
+      "cap_rhombi": 105,
+      "complete_grid_crossings": 4,
+      "disjoint_contact_returns": 8,
+      "cell_strip_distinct_internal_vertices": 8,
+      "outside_cap_crop_distinct_internal_vertices": 8,
+      "actual_loaded_endpoints": 2,
+      "artificial_boundary_terminals": 64
+    },
+    {
+      "m": 24,
+      "source_pairs": 195000,
+      "rhombi": 576,
+      "chord_crossing_faces": 70,
+      "cap_rhombi": 253,
+      "complete_grid_crossings": 9,
+      "disjoint_contact_returns": 12,
+      "cell_strip_distinct_internal_vertices": 24,
+      "outside_cap_crop_distinct_internal_vertices": 24,
+      "actual_loaded_endpoints": 2,
+      "artificial_boundary_terminals": 96
+    },
+    {
+      "m": 32,
+      "source_pairs": 592416,
+      "rhombi": 1024,
+      "chord_crossing_faces": 94,
+      "cap_rhombi": 465,
+      "complete_grid_crossings": 16,
+      "disjoint_contact_returns": 16,
+      "cell_strip_distinct_internal_vertices": 48,
+      "outside_cap_crop_distinct_internal_vertices": 48,
+      "actual_loaded_endpoints": 2,
+      "artificial_boundary_terminals": 128
+    }
+  ],
+  "scope": "nonglobal artificial-pin geometry/flow fixtures; no KKT or Level I certification"
+}

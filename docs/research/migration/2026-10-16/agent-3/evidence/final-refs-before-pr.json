@@ -1,0 +1,23 @@
+{
+  "checked_at_utc": "2026-10-16T22:40:44.980230+00:00",
+  "destination_main_sha": "c6e0394b3152d21075328bf4f26e6c070229bf13",
+  "destination_open_prs_before_agent3_pr": [
+    {
+      "baseRefName": "main",
+      "headRefName": "migration/agent-2-complete-corpus-20261016",
+      "headRefOid": "894330fac4df715a551537b5df0ea80f36819a3e",
+      "number": 73,
+      "title": "Preserve Agent 2 E-99 migration shard",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/73"
+    },
+    {
+      "baseRefName": "main",
+      "headRefName": "migration/agent-1-complete-corpus-20261016",
+      "headRefOid": "075d6d99fdc7b9ebd972e335b1f6c040e0bf5dad",
+      "number": 72,
+      "title": "Preserve Agent 1 E-99 research migration shard",
+      "url": "https://github.com/1337isnot1337/erdos-99/pull/72"
+    }
+  ],
+  "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+}

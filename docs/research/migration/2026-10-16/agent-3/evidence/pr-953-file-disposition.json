@@ -1,0 +1,40 @@
+{
+  "base_sha": "ab6dd3336f9f8d440f2bada76edb32153391cddc",
+  "files": [
+    {
+      "additions": 692,
+      "bytes": 29817,
+      "changes": null,
+      "deletions": 0,
+      "destination_blob_same_path": null,
+      "destination_identical_blob_paths": [],
+      "destination_same_path_relation": "absent",
+      "path": "docs/reports/target_a_slot05_one_arm_source_sector_rank_cap_2026-10-10.md",
+      "sha256": "af9a6a671e5d7cd97a8884dc6d711fe415752821baa39f2d5894dd3965e8291c",
+      "source_blob": "3ac4fe9047a0e9471837782d37257e9beb58cfc8",
+      "source_head": "7be6a6b746e9cf6ea18145248b652c7a0f206dc4",
+      "source_mode": "100644",
+      "status": "added_or_modified_at_head"
+    },
+    {
+      "additions": 1,
+      "bytes": 427593,
+      "changes": null,
+      "deletions": 0,
+      "destination_blob_same_path": "97ed5ce70e9f90c6448884c73efcfcfafd958404",
+      "destination_identical_blob_paths": [],
+      "destination_same_path_relation": "different",
+      "path": "docs/state/artifact-index.jsonl",
+      "sha256": "596d25ce1afba2a5161646be150af5451ec34aad8249e0ac785808c7dd22885a",
+      "source_blob": "85046687968c766d85b4d748b7877110af3773fb",
+      "source_head": "7be6a6b746e9cf6ea18145248b652c7a0f206dc4",
+      "source_mode": "100644",
+      "status": "added_or_modified_at_head"
+    }
+  ],
+  "head_ref": "research/sol61-slot05-20261010",
+  "head_sha": "7be6a6b746e9cf6ea18145248b652c7a0f206dc4",
+  "number": 953,
+  "title": "Target A: derive source-arm fan rank cap",
+  "url": "https://github.com/1337isnot1337/e-99/pull/953"
+}

@@ -1,0 +1,140 @@
+#!/usr/bin/env python3
+"""Exact outward certificate for the coupled paired-remainder O-O path through t<=1.8687."""
+from fractions import Fraction as Q
+from math import factorial, isqrt
+
+
+def atan_inv_bounds(q,n):
+    s=Q(0)
+    for k in range(n):
+        term=Q(1,(2*k+1)*q**(2*k+1))
+        s += term if k%2==0 else -term
+    nxt=Q(1,(2*n+1)*q**(2*n+1))
+    return (s,s+nxt) if n%2==0 else (s-nxt,s)
+
+
+def sqrt_bounds(lo,hi,scale):
+    a=isqrt((lo.numerator*scale*scale)//lo.denominator)
+    b=isqrt((hi.numerator*scale*scale)//hi.denominator)
+    return Q(a,scale),Q(b+1,scale)
+
+
+def sin_bounds(x,n=30):
+    s=Q(0)
+    for k in range(n):
+        term=x**(2*k+1)/factorial(2*k+1)
+        s += term if k%2==0 else -term
+    nxt=x**(2*n+1)/factorial(2*n+1)
+    return (s,s+nxt) if n%2==0 else (s-nxt,s)
+
+
+def F_bounds(z):
+    slo,shi=sin_bounds(z/6)
+    return z-6*shi,z-6*slo
+
+
+a5l,a5h=atan_inv_bounds(5,110)
+a239l,a239h=atan_inv_bounds(239,35)
+pil,pih=16*a5l-4*a239h,16*a5h-4*a239l
+SCALE=10**120
+n3=isqrt(3*SCALE*SCALE)
+s3l,s3h=Q(n3,SCALE),Q(n3+1,SCALE)
+Dl,Dh=pil/(2*s3h),pih/(2*s3l)
+sDl,sDh=sqrt_bounds(Dl,Dh,SCALE)
+C76lo=2*sDl+Q(19,2500)
+
+T=Q(18687,10000)
+U0lo=Q(9,2)*T-2*pih
+U0hi=Q(9,2)*T-2*pil
+dmax=(U0hi-C76lo)/2
+assert dmax<Q(107,1000)
+assert U0hi<Q(2126,1000)
+assert 5*U0hi*U0hi<32*Dl
+
+# Minimum-detour feasibility point z0,d0.
+z0=Q(20477,10000) # 2.0477
+d0lo,d0hi=F_bounds(z0)
+# H(z)=G(F(z),z) monotonicity on [0,z0].  Along H, 1-F(z)>0.96.
+rmax=Q(21,20)
+omd=Q(24,25)
+assert 1-d0hi>omd
+assert 1+rmax*rmax<4*omd*omd
+Gd_lower=-6*(1+rmax)/(2*omd*omd)
+assert Gd_lower>-Q(67,10)
+assert z0*z0/72<Q(3,50)
+Gz_lower=1-Q(3,50)/(2*omd)
+assert Gz_lower>Q(24,25)
+assert Q(24,25)-Q(67,10)*Q(3,50)>0
+Ulo=U0lo-2*d0hi
+Uhi=U0hi-2*d0lo
+xlo=8*Dl-Uhi*Uhi
+xhi=8*Dh-Ulo*Ulo
+assert xlo>0
+rootlo,_=sqrt_bounds(xlo,xhi,SCALE)
+mlo=(Ulo+rootlo)/2
+rhi=Uhi-mlo
+p_hi=rhi*rhi/(2*(1-d0hi))
+S_lo=pil-Uhi-T/2+mlo
+H_hi=z0+p_hi-S_lo
+assert H_hi<0
+
+# Coupling slope.  From the exact G_delta identity,
+# G_delta <= 1/[2(1-delta)^2]-2 throughout the full box.
+c=Q(34,25) # 1.36
+Gd_upper=Q(1,2)/(1-dmax)**2-2
+assert Gd_upper < -c
+
+# Adaptive physical threshold lambda(delta)=a-delta.
+a=Q(5857,10000)
+# a < 2-sqrt(2), so lambda(delta) stays below the exact same-branch root.
+assert 2-a>0 and (2-a)*(2-a)>2
+lmin=a-dmax
+assert lmin>Q(4787,10000)
+
+# Monotonicity of the coupled paired-remainder lower bound.
+# Under z>=z0+c(delta-d0), the residual floor uses
+# P=z-U0+2delta and r=z-2P.  r is maximal at delta=d0.
+rbound=Q(2047,1000)
+fpbound=rbound*rbound/72
+assert fpbound<Q(59,1000)
+# With A=delta-F(r), feasibility gives 0<=A<=delta<.107.
+derivative_lower=(
+    c+2
+    -(1+(c+4)*Q(59,1000))/Q(4787,10000)
+    -Q(107,1000)/Q(4787,10000)**2
+)
+assert derivative_lower>Q(14,100)
+
+# Evaluate the adverse point delta=d0, z=z0 with outward arithmetic.
+Plo=z0-U0hi+2*d0lo
+assert Plo>0
+rlo=2*U0lo-z0-4*d0hi
+assert rlo>0
+Frlo,_=F_bounds(rlo)
+Ahi=d0hi-Frlo
+lamlo=a-d0hi
+assert lamlo>0
+Llo=Plo-Ahi/lamlo
+assert Llo>Q(6,10000)
+phase=Llo/3
+assert phase>Q(2,10000)
+avg=2*Q(355,113)/Q(2,10000)
+assert avg<31416
+
+print('PASS coupled paired-remainder path through t<=1.8687')
+print('U0 upper =',float(U0hi))
+print('delta max =',float(dmax))
+print('H(2.0477) outward upper =',float(H_hi))
+print('d0 lower =',float(d0lo))
+print('d0 upper =',float(d0hi))
+print('G_delta upper =',float(Gd_upper))
+print('lambda minimum =',float(lmin))
+print('coupled-low derivative floor =',float(derivative_lower))
+print('pair floor at d0 =',float(Plo))
+print('residual mass lower =',float(rlo))
+print('residual bathtub lower =',float(Frlo))
+print('pair-energy allowance upper =',float(Ahi))
+print('lambda(d0) lower =',float(lamlo))
+print('low-energy pair floor =',float(Llo))
+print('one-phase path floor =',float(phase))
+print('switch average using .0002 =',float(avg))
