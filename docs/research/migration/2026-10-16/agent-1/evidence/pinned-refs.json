@@ -1,0 +1,16 @@
+{
+  "agent1_destination_branch_absent_before_push": true,
+  "current_destination_main_remote_sha": "c6e0394b3152d21075328bf4f26e6c070229bf13",
+  "current_ref_verification": "remote main refs matched supplied pinned SHAs before construction",
+  "current_source_main_remote_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "destination_main": "c6e0394b3152d21075328bf4f26e6c070229bf13",
+  "destination_repository": "1337isnot1337/erdos-99",
+  "final_ref_verification_time_utc": "2026-10-16T22:28:00Z",
+  "frozen_target_c_disposition_manifest": "docs/research/migration/2026-10-16/frozen-target-c-813-dispositions.jsonl",
+  "frozen_target_c_manifest_sha256": "c2594b6caa8f9db1b56c274bfa55065119b7a961cbaf0eaf545938edabc3ee57",
+  "source_main": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "source_pr_737_current_head_sha": "73fa41814eb1cdac50ba1eab135461868437edf0",
+  "source_pr_737_head": "73fa41814eb1cdac50ba1eab135461868437edf0",
+  "source_pr_737_state": "OPEN",
+  "source_repository": "1337isnot1337/e-99"
+}

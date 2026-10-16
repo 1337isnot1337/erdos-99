@@ -1,0 +1,55 @@
+# Target C — multi-body shunt-collapse frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_multibody_shunt_collapse_2026-08-31.md](../../reports/target_c_multibody_shunt_collapse_2026-08-31.md).
+
+## C61 — distinct null-body hinges collapse by response saturation
+
+Fix a strong-framework flex and merge extreme stresses of the C54 null face that induce the same rigid motion. Distinct motion classes meet pairwise in one actual source vertex.
+
+Suppose three distinct classes `A,B,C` attach to `A` at two different hinges `x=x_AB` and `y=x_AC`. The positive contact networks of `B` and `C` connect `x` to `y` through their mutual hinge, so after Kron reduction they add a strict conductance `g>0` between `x` and `y` in the electrical network of `A`.
+
+Average the three extreme null stresses. The average remains in the null face and has nonconstant selected diameter angular rates, so C56 forces it into the exact zero-transfer phase
+
+`Q^T L^+ Q=B^(-1)`.
+
+For each diameter dipole `q_h` of `A`, its full averaged-network current energy is therefore exactly `3/beta_h^A`. Universal response contraction says the isolated scaled body `A` has energy at most that amount, while adding the strict `x-y` shunt can only lower it. Equality is forced throughout.
+
+Sherman-Morrison equality then gives
+
+`q_xy^T L_A^+ q_h=0`
+
+for every positive diameter edge of `A`. Applying this row to the affine equilibrium identity
+
+`L_A P_A=Q_A B_A Q_A^T P_A`
+
+gives `p_x-p_y=0`, contradicting distinct source vertices.
+
+Hence any three distinct motion classes share the same hinge. It follows that every number of distinct null-body motion classes forms one bouquet around a single source vertex.
+
+## C61.2 — the entire covered bouquet integrates
+
+After subtracting one reference rigid motion, each class has velocity
+
+`v(p)=delta_a J(p-x)`
+
+about the common source hinge. Use the finite motion
+
+`p(t)=x+R_(t delta_a)(p-x)`.
+
+Every cross-class distance reduces exactly to the two-body C59 formula with relative angle `t(delta_a-delta_b)`. Thus stationary unit contacts lengthen, stationary diameter pairs shorten, strict rows stay strict, inactive rows retain slack, and internal class distances remain fixed.
+
+If every vertex incident to a strong active constraint lies in the null-body union, vertices outside the union are incident only to weak rows and can follow their original relative-interior first-order motion. This produces a same-diameter finite release of every weak row and contradicts contact minimality.
+
+## Exact remaining C-I obstruction
+
+All response-topology and body-hinge alternatives are now closed inside the second-order null face. The only surviving issue is support coverage:
+
+> some vertex incident to a strong active constraint belongs to no positive contact component of any extreme stress in the exposed null face.
+
+C6 guarantees only that the maximal strong support is the union of supports of the full KKT polytope; the null face can in principle be proper.
+
+## Next target
+
+Prove null-face strong-vertex support saturation, or turn a permanently omitted strong edge into the C9 tangential-separator certificate and exclude it.

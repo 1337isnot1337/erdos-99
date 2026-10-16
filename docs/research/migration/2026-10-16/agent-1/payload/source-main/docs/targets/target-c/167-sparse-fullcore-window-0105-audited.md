@@ -1,0 +1,358 @@
+# Target C — audited §167 sparse full-core exclusion through `sigma=0.0105`
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working proof-only full-core route theorem; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The hostile-audited sparse/directional signed-return route previously excluded the Section-118 full-core slack window `sigma<=0.0088`. Section 167 verifies the inherited geometry at a larger endpoint and extends the safe exclusion to
+
+\[
+\boxed{0\le\sigma\le s_0:=0.0105.}
+\tag{167.1}
+\]
+
+The exact scalar envelope of the same mechanism is near `0.01065455286`; that number is not promoted. The geometry-audited theorem endpoint is `0.0105`.
+
+Use
+
+\[
+\sigma(\theta)=3\theta-2\pi-\sin(\theta/2)-2\sin\theta,
+\quad
+\lambda(\theta)=\sin(\theta/2),
+\quad
+U(\theta)=3\theta-2\pi.
+\]
+
+At `sigma(theta_0)=0.0105`,
+
+\[
+\theta_0=2.705140624515636\ldots,
+\]
+
+\[
+U_0=1.832236566367321\ldots,
+\qquad
+\lambda_0=0.976283049720324\ldots,
+\]
+
+and
+
+\[
+\phi_0=2\pi-2\theta_0=0.872904058148315\ldots .
+\tag{167.2}
+\]
+
+The independent arithmetic recomputation agrees with these values and with the final rounded contradiction margin below.
+
+---
+
+## 167.1 Largest-gap transfer remains valid
+
+Use the Section-118 decomposition
+
+\[
+x+y+z+w=\sigma,
+\qquad x,y,z,w\ge0.
+\]
+
+Write the largest complement gap as `g_1=theta-delta`, put `phi=2pi-2theta`, and use
+
+\[
+h_\theta(t)
+=f(\theta-t)+f(\phi+t)-f(\theta)-f(\phi),
+\qquad f(u)=\sin(u/2).
+\]
+
+The earlier hostile geometric audit proves on the full rectangle
+
+\[
+\theta\ge\theta_8,
+\qquad0\le t\le0.1
+\]
+
+that `partial_t h_theta(t)` is increasing in `theta`, decreasing in `t`, and has minimum
+
+\[
+\partial_t h_{\theta_8}(0.1)=0.3084268\ldots>0.30.
+\]
+
+It also proves that the coarse branch `delta>=0.1` costs more than `0.0326`. Since
+
+\[
+w\le\sigma\le0.0105<0.0326,
+\]
+
+that branch is still impossible and integration gives
+
+\[
+\boxed{\delta\le{10\over3}w.}
+\tag{167.3}
+\]
+
+Thus no old `0.0088` smallness assumption is hidden in the transfer step.
+
+---
+
+## 167.2 Tail, fourth-gap, and tangent-lift geometry remain strict
+
+Write
+
+\[
+g_2=\phi+x_2,
+\qquad
+g_3=\phi+x_3,
+\qquad
+\tau=\sum_{j\ge4}g_j.
+\]
+
+The exact complement-measure identity gives
+
+\[
+x_2+x_3+\tau=\delta+x.
+\]
+
+Hence
+
+\[
+0\le x_2,x_3,\tau
+\le x+{10\over3}w
+\le {10\over3}\sigma
+\le0.035.
+\tag{167.4}
+\]
+
+At the endpoint `phi_0>0.8729`, so the possible tail perturbation is less than `0.041` of the residual principal-gap scale. The Section-104 fourth-gap and adjacent-span ordering remains in the same strict branch.
+
+The projective tangent lift is also unambiguous:
+
+\[
+|S|+\tau
+\le U(\theta)+{10\over3}\sigma
+\le U_0+0.035
+=1.8672365663\ldots<\pi.
+\tag{167.5}
+\]
+
+As a separate coarse check, the Section-113 corridor-separation margin remains
+
+\[
+{\theta_8\over2}-{\pi\over3}-{73\over6}(0.0105)
+=0.1765064636\ldots>0.
+\tag{167.6}
+\]
+
+---
+
+## 167.3 Conservative carrier area floor
+
+Let
+
+\[
+G(t)={t-\sin t\over8}.
+\]
+
+The exact Section-107 support-area identity, together with (167.3)–(167.4), gives the same conservative lower bound
+
+\[
+A_*
+\ge
+{\pi\over4}
+-G(\theta_0)
+-2G\left(\phi_8+{10s_0\over3}\right)
+-G\left({10s_0\over3}\right).
+\]
+
+Direct evaluation is
+
+\[
+\boxed{A_*>0.469742134546628\ldots>0.4697.}
+\tag{167.7}
+\]
+
+All gap arguments entering `G` remain below `pi`, so no branch change occurs.
+
+---
+
+## 167.4 Tooth inverse and correlated-product maximum
+
+Let
+
+\[
+F(q)=\sin q+\sqrt3(1-\cos q)-q
+\]
+
+and define `Q(y)` by
+
+\[
+F(Q(y))=y/2.
+\]
+
+At `s_0=0.0105`,
+
+\[
+\boxed{Q(s_0)=0.0784749319620981\ldots<0.0785<\pi/3.}
+\tag{167.8}
+\]
+
+Thus the inverse remains on the same monotone branch. Since
+
+\[
+F'(q)=\cos q+\sqrt3\sin q-1\le\sqrt3q,
+\]
+
+\[
+Q'(y)={1\over2F'(Q(y))}
+>{1\over2\sqrt3(0.0785)}>3.677.
+\tag{167.9}
+\]
+
+The sparse split's directional product can be bounded, after filling unused slack with `w`, by `2CB`, where
+
+\[
+C=U_0-x-y+2z,
+\]
+
+\[
+B=Q(y)+{10s_0\over3}
+-{7x\over3}-{7y\over3}-{10z\over3}.
+\]
+
+On the whole simplex `x,y,z>=0`, `x+y+z<=s_0`,
+
+\[
+B<0.1135,
+\qquad C>1.8217.
+\]
+
+Therefore
+
+\[
+\partial_x(CB)=-B-{7C\over3}<0,
+\]
+
+\[
+\partial_z(CB)=2B-{10C\over3}<0.
+\]
+
+Any maximum has `x=z=0`. Along that edge,
+
+\[
+P(y)=(U_0-y)\left(Q(y)+{10s_0\over3}-{7y\over3}\right).
+\]
+
+Using (167.9),
+
+\[
+P'(y)
+>-0.1135+1.8217\left(3.677-{7\over3}\right)
+>2.3,
+\]
+
+so `P` is increasing and the maximum is at `y=s_0`. Hence
+
+\[
+\boxed{CB\le0.1620888870\ldots<0.1622.}
+\tag{167.10}
+\]
+
+This is an analytic simplex maximum, not a sampled optimization.
+
+---
+
+## 167.5 Strict signed-return contradiction
+
+The hostile-audited sparse return inequality has necessary form
+
+\[
+\lambda z\ge(2-\sqrt3)[J]_+.
+\tag{167.11}
+\]
+
+Subtract `lambda z/(2-sqrt3)` from the return bracket. The largest resulting slack coefficient is
+
+\[
+10+{1\over2-\sqrt3}
+=13.7320508\ldots<13.733.
+\]
+
+Using the outward-rounded bounds
+
+\[
+\lambda<0.977,
+\qquad
+A_*>0.4697,
+\qquad
+CB<0.1622,
+\qquad
+\sigma\le0.0105,
+\]
+
+one obtains uniformly on the whole enlarged simplex
+
+\[
+\begin{aligned}
+J-{\lambda z\over2-\sqrt3}
+&>0.4697
+-0.977(13.733)(0.0105)
+-2(0.1622)\\
+&=0.0044200195\ldots>0.
+\end{aligned}
+\tag{167.12}
+\]
+
+Thus
+
+\[
+J>{\lambda z\over2-\sqrt3}\ge0,
+\]
+
+and (167.11) would imply `lambda z>lambda z`, impossible.
+
+Therefore:
+
+### Theorem 167.A — sparse full-core window exclusion
+
+Under the hostile-audited Section-117 signed-return theorem and audited sparse/directional decomposition, no Type-II full-core survivor exists with
+
+\[
+\boxed{0\le\sigma\le0.0105.}
+\tag{167.13}
+\]
+
+---
+
+## 167.6 Exact scope and frontier
+
+An exact evaluation of the same scalar envelope first reaches zero near
+
+\[
+0.01065455286\ldots,
+\]
+
+but no theorem is claimed at that value. The safe endpoint is `0.0105`; further optimization of the same scalar expression can gain only about `1.55e-4` in `sigma`.
+
+The surviving proof-only full-core branch therefore has
+
+\[
+\sigma>0.0105,
+\]
+
+corresponding in the Section-101 parametrization to wrapping-carrier diameter ratio
+
+\[
+\lambda>0.9762830497\ldots .
+\]
+
+The independent arithmetic verifier on the source branch recomputes `theta_0`, `A_*`, `Q(s_0)`, the correlated-product maximum, and the rounded residual. The hostile audit additionally checked:
+
+- the `delta>=0.1` coarse branch remains excluded;
+- fourth-gap and adjacent-span order retain large strict margins;
+- the tangent lift remains below `pi`;
+- the tooth inverse stays below `pi/3`;
+- no interior correlated-product maximum exists;
+- no contact-isolated coordinate enters a core affine-kernel theorem;
+- no source point is deleted.
+
+This theorem does not address the Type-I inactive-container branch and does not close C-II. A substantive full-core continuation should exploit the geometry of a carrier already beyond `0.976283D` rather than chase the last `0.0001546` of this scalar envelope.
+
+**Disposition:** audited-working proof-only strengthening. C-II and Level I remain open.

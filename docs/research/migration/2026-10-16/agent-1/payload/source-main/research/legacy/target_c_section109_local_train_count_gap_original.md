@@ -1,0 +1,513 @@
+# Target C — Section 109: exact local train count enlarges the phase/corridor gap
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** proof-only research candidate pending independent hostile audit/promotion.
+
+Sections 106--108 still feed the phase extraction the coarse bound `T_D<=6D` on the
+number of local train segments in the wrapping carrier.  Near the Section-101 endpoint,
+the exact Section-82/89 outer-face ledger is much stronger: the same scalar slack that
+controls route excess also forces
+
+\[
+{T_D\over D}\le U(\theta)+2\sigma(\theta)+o(1)<1.83,
+\]
+
+throughout the window used below.  Combining this with proof-only Section 107's
+`R_D>=0.472D^2` rhombus mass gives much larger inverse-phase shores and raises the
+explicit carrier coefficient to
+
+\[
+\boxed{0.9760449300231616\ldots .}
+\]
+
+No theorem-state mutation is proposed here.
+
+---
+
+## 109.1 Scalar window
+
+Retain
+
+\[
+\sigma(\theta)
+:=3\theta-2\pi-\sin(\theta/2)-2\sin\theta,
+\qquad
+U(\theta):=3\theta-2\pi.
+\tag{109.1}
+\]
+
+Let `theta_8` be the canonical Section-101 root `sigma(theta_8)=0`, with
+
+\[
+\theta_8=2.7029080296483676832\ldots,
+\qquad
+\mu_8=0.9760407652670519821\ldots .
+\tag{109.2}
+\]
+
+Let `theta_13` solve
+
+\[
+\boxed{\sigma(\theta_{13})=1.8\times10^{-4}.}
+\tag{109.3}
+\]
+
+The regression certificate gives
+
+\[
+\boxed{
+\theta_{13}=2.7029463124571330\ldots,
+\qquad
+\mu_{13}:=\sin(\theta_{13}/2)
+=0.9760449300231616\ldots .
+}
+\tag{109.4}
+\]
+
+Hence
+
+\[
+\boxed{
+\mu_{13}-\mu_8
+=4.1647561096\ldots\times10^{-6}>0.
+}
+\tag{109.5}
+\]
+
+Assume for contradiction that every positive-area macroscopic harmonic-cell limit in a
+full-core Type-II countersequence has normalized diameter at most `mu_13`.  Canonical
+Section 103 gives a unique wrapping carrier.  Canonical Section 101 places its angular
+diameter in `[theta_8,theta_13]`, so
+
+\[
+0\le\sigma:=\sigma(\theta)\le1.8\times10^{-4}<10^{-3}.
+\tag{109.6}
+\]
+
+Proof-only Section 107 therefore applies and, after local rhombic saturation, supplies
+for all sufficiently large members
+
+\[
+\boxed{R_D\ge0.472D^2.}
+\tag{109.7}
+\]
+
+Its gap-stability estimates also give
+
+\[
+0\le\delta\le{10\over3}\sigma,
+\qquad
+0\le x_2,x_3,\tau\le{13\over3}\sigma,
+\tag{109.8}
+\]
+
+and the principal-corridor projective directions obey
+
+\[
+\boxed{
+\left|
+\operatorname{dist}_{RP^1}(q_i,q_j)-{\pi\over3}
+\right|
+>
+{\theta_8\over2}-{\pi\over3}-{73\over6}\sigma.
+}
+\tag{109.9}
+\]
+
+At the maximal slack, the right side is
+
+\[
+\boxed{0.3020664636\ldots .}
+\tag{109.10}
+\]
+
+## 109.2 Exact outer ledger gives `T_D<1.83D`
+
+Use the local Section-82/89 notation for the wrapping harmonic carrier:
+
+- `a_D` is the number of loaded attachments;
+- `L_D` is the occurrence-counted outer-face walk length;
+- `Q_D` is the bounded-face degree excess;
+- `s_D>=0` is the local pinned-contact surplus;
+- `c_D>=0` is the number of loaded-loaded contacts;
+- `P_{R,D}` is the physical boundary-edge occurrence count of the strict-rhombus
+  complex; and
+- `T_D` is its number of local train segments.
+
+Canonical Sections 82 and 89 give
+
+\[
+L_D+Q_D=4a_D-6-2s_D-2c_D,
+\tag{109.11}
+\]
+
+\[
+P_{R,D}\le L_D+5Q_D,
+\qquad
+2T_D=P_{R,D}.
+\tag{109.12}
+\]
+
+Therefore
+
+\[
+\begin{aligned}
+2T_D
+&\le L_D+5Q_D\\
+&=(L_D+Q_D)+4Q_D\\
+&=4a_D-6-2s_D-2c_D+4Q_D,
+\end{aligned}
+\]
+
+hence
+
+\[
+\boxed{
+T_D\le2a_D-3-s_D-c_D+2Q_D
+\le2a_D+2Q_D.
+}
+\tag{109.13}
+\]
+
+The finite Section-101 route proof can retain the favorable local currency.  Exhausting
+the positive complement gaps only after the large-`D` limit gives
+
+\[
+C
+\le
+2\alpha-\limsup_D{2s_D+c_D+Q_D\over D},
+\tag{109.14}
+\]
+
+where `a_D/D->alpha` and `C=sum_j sin(g_j/2)`.  Since the Section-101 scalar chain has
+
+\[
+C\le2\alpha\le|S|\le U,
+\qquad
+2\alpha-C\le\sigma,
+\tag{109.15}
+\]
+
+we obtain
+
+\[
+\boxed{{Q_D\over D}\le\sigma+o(1).}
+\tag{109.16}
+\]
+
+Also `2alpha<=U`.  Dividing (109.13) by `D` therefore yields
+
+\[
+\boxed{
+{T_D\over D}
+\le U(\theta)+2\sigma+o(1).
+}
+\tag{109.17}
+\]
+
+At `theta<=theta_13` and `sigma<=1.8e-4`,
+
+\[
+U(\theta)+2\sigma
+\le1.826013631\ldots<1.83.
+\tag{109.18}
+\]
+
+Thus, after increasing the large-`D` threshold,
+
+\[
+\boxed{T_D\le1.83D.}
+\tag{109.19}
+\]
+
+This is the new input.  It replaces the `6D` train bound used in Sections 104--108.
+
+## 109.3 Rerun the Section-90 phase extraction
+
+Canonical Section 68 gives
+
+\[
+\sum_R\delta_R<5.317D.
+\tag{109.20}
+\]
+
+The phase-circle cut deletes only `O(D)` crossing rhombi.  From (109.7), for all
+sufficiently large `D` at least
+
+\[
+0.471D^2
+\tag{109.21}
+\]
+
+crossings remain.
+
+Call a retained crossing good when
+
+\[
+\delta_R\le{K\over D},
+\qquad K:=5000.
+\tag{109.22}
+\]
+
+At most
+
+\[
+{5.317\over5000}D^2
+=0.0010634D^2
+\tag{109.23}
+\]
+
+retained crossings are nongood.  Hence at least
+
+\[
+\boxed{0.4699366D^2}
+\tag{109.24}
+\]
+
+good crossings remain.  One of the three unordered phase-label pairs supports at
+least one third of them.
+
+Randomly shift reduced-phase bins of width
+
+\[
+W:={100K\over D}={500000\over D}.
+\tag{109.25}
+\]
+
+A good crossing is cut by a bin boundary with probability at most `1/100`, so one
+shift retains at least
+
+\[
+\boxed{
+{99\over100}{0.4699366\over3}D^2
+=0.155079078D^2
+}
+\tag{109.26}
+\]
+
+good crossings inside common bins.
+
+For bin `j`, let `a_j,b_j` be the two fixed-label shore sizes.  By (109.19),
+
+\[
+\sum_j a_j\le1.83D,
+\qquad
+\sum_j b_j\le1.83D.
+\tag{109.27}
+\]
+
+Suppose every occupied bin had `a_j<0.04D` or `b_j<0.04D`.  Bins small on the first
+shore would carry at most
+
+\[
+0.04D\sum_jb_j\le0.0732D^2
+\]
+
+crossings, and among the remaining bins those small on the second shore would carry at
+most another `0.0732D^2`.  Thus all internal-bin crossings would total at most
+
+\[
+0.1464D^2,
+\]
+
+contradicting (109.26).  Therefore one bin contains two distinct-label families
+`A_D,B_D` with
+
+\[
+\boxed{|A_D|,|B_D|\ge0.04D.}
+\tag{109.28}
+\]
+
+The bin width tends to zero.  Their limiting projective terminal-edge directions
+`u_A,u_B` therefore satisfy
+
+\[
+\boxed{
+\operatorname{dist}_{RP^1}(u_A,u_B)=\pi/3.
+}
+\tag{109.29}
+\]
+
+Every full local train segment has two distinct physical boundary-end occurrences, so
+each phase family supplies at least
+
+\[
+\boxed{E_0D,\qquad E_0:=0.08}
+\tag{109.30}
+\]
+
+physical boundary-end edges.
+
+## 109.4 Leakage remains below `0.02549D`
+
+The Section-104 technical leakage theorem is scale-free once the complement-gap
+stability bounds hold.  Section 107 proves those bounds throughout `sigma<=10^-3`, so
+we may use
+
+\[
+L(\sigma,h)
+:=w(h)+\left({1\over h}+{169\over6}\right)\sigma,
+\tag{109.31}
+\]
+
+\[
+w(h):={\pi\over3}-\arccos((1+h)/2).
+\tag{109.32}
+\]
+
+Take
+
+\[
+\boxed{h:=0.0176.}
+\tag{109.33}
+\]
+
+At `sigma=1.8e-4`,
+
+\[
+w(h)=0.0101915247762\ldots,
+\]
+
+and
+
+\[
+\boxed{
+L(1.8\times10^{-4},0.0176)
+=0.0254887975034\ldots .
+}
+\tag{109.34}
+\]
+
+Hence each phase family leaves more than
+
+\[
+0.0545112D
+\]
+
+endpoints on the union of the three principal corridors.  One principal corridor
+therefore carries more than
+
+\[
+0.0181704D
+\]
+
+of that family.  Fix the round safe value
+
+\[
+\boxed{\rho:=0.018.}
+\tag{109.35}
+\]
+
+## 109.5 Exact cosine alignment gives the contradiction
+
+As in Sections 105--108, exhausting all positive complement gaps after the scale limit
+gives
+
+\[
+\sum_j\ell_j\le2\alpha,
+\]
+
+so
+
+\[
+\boxed{
+\sum_j(\ell_j-\sin(g_j/2))
+\le2\alpha-C
+\le\sigma.
+}
+\tag{109.36}
+\]
+
+In particular the path excess of every principal corridor is at most `sigma D+o(D)`.
+If one such corridor of chord direction `q` carries at least `rho D` terminal edges of
+a phase family of limiting direction `u`, put
+
+\[
+\Delta:=\operatorname{dist}_{RP^1}(u,q).
+\]
+
+The route projection identity gives
+
+\[
+\boxed{\rho(1-\cos\Delta)\le\sigma.}
+\tag{109.37}
+\]
+
+At the maximal slack and `rho=0.018`,
+
+\[
+{\sigma\over\rho}=0.01,
+\]
+
+so
+
+\[
+\boxed{
+\Delta\le\arccos(0.99)
+=0.1415394733244\ldots .
+}
+\tag{109.38}
+\]
+
+The two phase families cannot select the same principal corridor, since their limiting
+directions are exactly `pi/3` apart.  Thus they select two distinct principal
+corridors, forcing
+
+\[
+\left|
+\operatorname{dist}_{RP^1}(q_i,q_j)-{\pi\over3}
+\right|
+<2\Delta
+=0.2830789466489\ldots .
+\tag{109.39}
+\]
+
+But (109.10) gives the incompatible lower bound
+
+\[
+>0.3020664636\ldots .
+\]
+
+The contradiction margin is therefore greater than
+
+\[
+\boxed{0.01898\text{ radians}.}
+\tag{109.40}
+\]
+
+## 109.6 Carrier consequence
+
+No full-core Type-II countersequence can have all positive-area macroscopic harmonic
+cells of normalized diameter at most `mu_13`.  The usual finite-macroscopic-cell
+transfer yields an actual locally rhombus-saturated harmonic carrier `P_*` of quadratic
+area with
+
+\[
+\boxed{
+\operatorname{diam}(P_*)
+\ge(0.9760449300231616\ldots-o(1))D.
+}
+\tag{109.41}
+\]
+
+This is a quantitative carrier improvement, not a closure of C-II or Level I.
+
+## 109.7 Dependency audit
+
+- Canonical Sections 82, 89, 100, 101, and 103 provide the exact face/train ledger,
+  attachment-density ceiling, scalar chain, and unique wrapping carrier.
+- Proof-only Section 107 supplies the `R_D>=0.472D^2` near-endpoint rhombus mass and
+  gap-stability estimates on `sigma<=10^-3`.
+- The independently audited Section-104 technical companion supplies the finite
+  micro-route/base/tangent-window leakage formula; its hypotheses are satisfied by the
+  Section-107 stability estimates.
+- The sharpened `T_D<1.83D` estimate is proved directly in Section 109 and is not
+  imported from Sections 106--108.
+- The train projective phase is the direction of its fixed transverse/terminal contact
+  edges, so the projection comparison has no hidden quarter-turn.
+- Hole boundaries and bridges are occurrence-counted exactly by `P_R`, `L`, and the
+  Section-89 train decomposition.
+- No source point is deleted; contact-isolated sources remain untouched.
+
+**Theorem state:** unchanged.  Independent hostile audit is required before promotion.

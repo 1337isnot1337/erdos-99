@@ -1,0 +1,94 @@
+{
+  "results": [
+    {
+      "command": "timeout 60s python3 -B verify_target_c_capped_wall_actual_diameter_escape_2026_10_06.py",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "script": "verify_target_c_capped_wall_actual_diameter_escape_2026_10_06.py",
+      "stderr_sha256": null,
+      "stdout_sha256": "63646030a29923f2f1c45751dbc5860868e2fafd650873fa8a89de883b853137",
+      "wall_seconds": 3.725
+    },
+    {
+      "command": "timeout 60s python3 -B verify_target_c_collective_wall_guard_scope_2026_10_06.py",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "script": "verify_target_c_collective_wall_guard_scope_2026_10_06.py",
+      "stderr_sha256": null,
+      "stdout_sha256": "7a9f7a7ef5b7ee8a7ad19a9155852d6a29883632961b2b4736ef5a5380beafeb",
+      "wall_seconds": 0.164
+    },
+    {
+      "command": "timeout 60s python3 -B verify_target_c_curved_wall_exact_capacity_2026_10_06.py",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "script": "verify_target_c_curved_wall_exact_capacity_2026_10_06.py",
+      "stderr_sha256": null,
+      "stdout_sha256": "68720f2a34f3bbccb05bc8aa11aea88b63c519c5395d386eb56dbcbb4a95e24f",
+      "wall_seconds": 9.49
+    },
+    {
+      "command": "timeout 60s python3 -B verify_target_c_curved_wall_isolate_motion_2026_10_06.py",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "script": "verify_target_c_curved_wall_isolate_motion_2026_10_06.py",
+      "stderr_sha256": null,
+      "stdout_sha256": "3cf233d3748fa6e27a294327977831b0e63b2a18827b82e1ae1129a386dfc9d7",
+      "wall_seconds": 3.02
+    },
+    {
+      "command": "timeout 60s python3 -B verify_target_c_nested_hexagon_packet_stress_2026_10_06.py",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "script": "verify_target_c_nested_hexagon_packet_stress_2026_10_06.py",
+      "stderr_sha256": null,
+      "stdout_sha256": "76ec364674118529313097e79a3c992a7bc0a9284e430e9825a193387ccbd60f",
+      "wall_seconds": 1.174
+    },
+    {
+      "command": "timeout 60s python3 -B verify_target_c_odd_shell_single_vertex_barriers_2026_10_06.py",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "script": "verify_target_c_odd_shell_single_vertex_barriers_2026_10_06.py",
+      "stderr_sha256": null,
+      "stdout_sha256": "3519e83ba6fe660c315ba04f3c12a3a3f59c822e84353cf87f440e6036981962",
+      "wall_seconds": 1.11
+    },
+    {
+      "command": "timeout 60s python3 -B verify_target_c_sorted_rate_packets_2026_10_06.py",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "script": "verify_target_c_sorted_rate_packets_2026_10_06.py",
+      "stderr_sha256": null,
+      "stdout_sha256": "92f40fd0347aa5c0023bf5966c35e13945da3608dd0c5ebfccf3556a40971109",
+      "wall_seconds": 3.137
+    },
+    {
+      "command": "timeout 60s python3 -B verify_target_c_three_direction_corner_barrier_2026_10_06.py",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "script": "verify_target_c_three_direction_corner_barrier_2026_10_06.py",
+      "stderr_sha256": null,
+      "stdout_sha256": "2c411e463da749939ff7b744f0b5481e4dc5c9191b3e18b13637bc86c2c6284d",
+      "wall_seconds": 0.84
+    },
+    {
+      "command": "timeout 60s python3 -B verify_target_c_uneven_wall_exact_packet_2026_10_06.py",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "script": "verify_target_c_uneven_wall_exact_packet_2026_10_06.py",
+      "stderr_sha256": null,
+      "stdout_sha256": "b20615d12fd2b97ed148d1c3dff5a49dad8b3a9daad48128f8a0996476bfcbb4",
+      "wall_seconds": 55.602
+    },
+    {
+      "certificate_sha256": "63714936174af0e6a0ebfde8ed6b6187209ca2764de55a5c8d1b23db9863d4b5",
+      "command": "timeout 60s python3 -B verify_target_c_hub_owner_systems_2026_10_06.py --output /tmp/hub-owner-systems-reproduced.json",
+      "exit_code": 0,
+      "outcome": "PASS",
+      "script": "verify_target_c_hub_owner_systems_2026_10_06.py",
+      "stdout_sha256": "4f5dd173999ba0b7360b4b7afb21b88f05d80c96f803bdbe9dae9d51d8536c7b"
+    }
+  ],
+  "scope": "six PR #737 verifier scripts in an isolated temporary directory; pinned destination helpers; no repository mutation or network access"
+}

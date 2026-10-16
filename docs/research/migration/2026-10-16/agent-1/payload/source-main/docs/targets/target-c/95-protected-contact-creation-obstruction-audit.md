@@ -1,0 +1,209 @@
+# Target C — protected contact-creation obstruction audit
+
+**Date:** 2026-09-12
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module supersedes the duplicate-numbered proof-only file
+`91-protected-contact-creation-obstruction-audit.md`.  The earlier extracted module
+also reintroduced an overbroad fixed-core statement that had already been corrected in
+the closure-run report.  The finite protected-motion theorem below keeps the valid
+content and states the general obstruction with the necessary initial-location
+hypothesis.
+
+---
+
+# 95. Protected isolate contact creation preserves the old KKT polytope
+
+Let `A` be a finite unit-separated planar source of diameter `D` with triangle-free
+contact graph, and put `K=conv(A)`.  Let `C subset K` be a positive-area compact convex
+chamber whose interior contains no nonisolated contact vertex of the original source.
+For `w>1`, write
+
+\[
+C_{-w}:=\{x\in C:\operatorname{dist}(x,\partial C)\ge w\}.
+\]
+
+Fix `0<epsilon<=1/4`.  Suppose
+
+\[
+(x_i,y_i),\qquad i=1,\ldots,M,
+\]
+
+are vertex-disjoint pairs of actual contact-isolated source points satisfying
+
+\[
+x_i,y_i\in C_{-w},
+\qquad
+1<|x_i-y_i|\le1+\epsilon.
+\tag{95.1}
+\]
+
+## 95.1 A separated linear subfamily
+
+Orient each pair and call `x_i` the moving center.  A radius-3 disk contains at most
+49 unit-separated centers: the open radius-`1/2` disks about them are disjoint and lie
+in the concentric radius-`7/2` disk.  Greedy thinning therefore gives an index set `J`
+with
+
+\[
+|J|\ge\lceil M/49\rceil,
+\qquad
+|x_i-x_j|>3\quad(i\ne j\in J).
+\tag{95.2}
+\]
+
+## 95.2 Simultaneous first-contact motion is feasible
+
+For each `i in J`, hold every other source point fixed and move `x_i` on the segment
+toward `y_i`.  Since `x_i` is initially contact-isolated, a nonzero initial interval
+is feasible.  By displacement at most
+
+\[
+|x_i-y_i|-1\le\epsilon
+\]
+
+the mate reaches distance one, so there is a first contact after some displacement
+
+\[
+0<t_i\le\epsilon.
+\tag{95.3}
+\]
+
+Run all selected stopped motions on the common parameter `s in [0,1]`, moving center
+`i` through displacement `s t_i`.  Convexity of the inner parallel body keeps every
+moving point in `C_{-w}`.  Moving/fixed distances stay at least one by the definition
+of first-contact time.  For two moving centers,
+
+\[
+|x_i(s)-x_j(s)|>3-2\epsilon\ge5/2>1.
+\tag{95.4}
+\]
+
+Hence the simultaneous motion is unit-separated throughout.
+
+## 95.3 Hull and diameter are unchanged
+
+Every moved center starts and remains in `C_{-w} subset int(K)`.  No extreme vertex of
+`K` moves, so the convex hull remains exactly `K` and the diameter remains exactly
+`D`.  An interior point of a positive-area diameter-`D` convex body cannot be an
+endpoint of a distance-`D` pair with another point of the body, so the moved points
+create no diameter row.
+
+Only originally contact-isolated vertices move, hence every old contact remains
+unchanged.
+
+## 95.4 New contacts form isolated zero-stress components
+
+Every original nonisolated contact vertex lies on or outside `partial C`, while each
+moving point remains more than unit distance from `partial C`.  Thus no new contact
+reaches the old contact core.  Any fixed point newly touched by a moving center was
+originally contact-isolated; being within unit distance of a point in `C_{-w}`, it lies
+in `int(C)` and is nondiametral.
+
+A fixed point cannot be touched by two selected moving centers: otherwise the original
+centers would be at distance at most `2+2epsilon<3`, contradicting (95.2).  Moving
+centers never touch each other.  Therefore the newly created contact graph is a
+disjoint union of nonempty stars on formerly isolated vertices, disjoint from the old
+contact core.  In particular the terminal contact graph remains triangle-free.
+
+Consider one new contact component `S`.  It has no external contact to the old core
+and no diameter edge.  Let `alpha_e>=0` be its contact multipliers in any normalized
+nonnegative equilibrium stress of the terminal source.  Dot the equilibrium equation
+at each `v in S` with `p_v` and sum over `S`.  For an internal contact `e=uv`, the two
+endpoint contributions sum to
+
+\[
+\alpha_e(p_u-p_v)\cdot p_u
++
+\alpha_e(p_v-p_u)\cdot p_v
+=
+\alpha_e|p_u-p_v|^2
+=
+\alpha_e.
+\]
+
+There are no external terms, so
+
+\[
+\sum_{e\subset S}\alpha_e=0.
+\tag{95.5}
+\]
+
+Nonnegativity forces every new multiplier to vanish.  Restriction to the unchanged old
+rows and zero-extension in the opposite direction are inverse maps, hence
+
+\[
+\boxed{\mathcal K_{terminal}=\mathcal K_{old}\times\{0\}_{new\ contacts}.}
+\tag{95.6}
+\]
+
+## 95.5 Correct general fixed-core obstruction
+
+The star structure is unnecessary for the KKT conclusion, but the fixed-hull statement
+requires a hypothesis that the former duplicate-numbered module omitted.
+
+Suppose an arbitrary subset of originally contact-isolated points **whose original
+positions already lie in `C_{-w}`** is moved to other positions in `C_{-w}`, every
+other source point is fixed, and the terminal source is unit-separated.  Then the
+source hull, diameter pairs, old contact core, and normalized KKT polytope are
+unchanged.
+
+The initial-location condition is necessary.  Without it, an originally isolated point
+could be an extreme point of the source hull or an endpoint of an active diameter pair;
+moving that point inward could change the hull or the active diameter set.
+
+With the condition, both old and new positions of every moved point lie in `int(K)`.
+All old extreme vertices and diameter endpoints remain fixed.  Every new contact
+component consists only of formerly isolated vertices, lies in `int(C)`, and has no
+diameter edge.  The contact-only virial identity (95.5) again forces every new contact
+multiplier to zero.  The new components need not be stars or triangle-free for this
+general zero-stress conclusion.
+
+Thus a finite deformation confined to already-protected isolates, while the old core
+and old diameter endpoints stay fixed, cannot by itself create positive KKT support or
+strictly reduce the global diameter.
+
+## 95.6 Canonical Type-I consequence
+
+Canonical `C-INACTIVE-DEEP-MATCHING` supplies, for any fixed depth `w>1`, a linear
+family
+
+\[
+M\ge c_wD
+\]
+
+of vertex-disjoint actual isolate pairs with
+
+\[
+1<|x_i-y_i|\le1+K_w/D
+\]
+
+whose endpoints already lie in `C_{-w}`.  Taking `epsilon=K_w/D` above produces a
+same-cardinality, same-diameter, triangle-free global minimizer with at least
+
+\[
+{c_w\over49}D-O(1)
+\]
+
+new contact-star components while the normalized KKT polytope is exactly unchanged.
+
+Therefore the route
+
+```text
+many deep inverse-diameter isolate pairs
+ -> many simultaneous feasible new contacts
+ -> positive new KKT support / force visibility
+```
+
+is invalid.  A Type-I closure must move or replace part of the diameter-carrying old
+core, or otherwise produce a same-cardinality source of diameter strictly below `D`.
+
+## 95.7 Regression certificate and disposition
+
+`research/verify_target_c_protected_contact_creation.py` checks exact finite examples
+in `Q(sqrt(3))`, including a different-first-blocker example.  The certificate is a
+finite regression; the theorem above supplies the general argument.
+
+**Status:** proof-only candidate pending lifecycle promotion.  This Section 95
+supersedes the former duplicate-numbered protected-contact Section 91.  The independent
+ordered-grid Section 91 retains that number.

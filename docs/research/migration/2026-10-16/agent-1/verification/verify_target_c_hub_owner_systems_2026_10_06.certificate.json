@@ -1,0 +1,903 @@
+{
+  "classification": "exact abstract regressions and finite identities",
+  "horn_pinned_checks": 110887,
+  "tree_bank_checks": 14182,
+  "recurrence_sharp_cases": [
+    {
+      "edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "labels": [
+        0,
+        1
+      ],
+      "rho": 0,
+      "bad_bank": 0
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "labels": [
+        0,
+        1,
+        1
+      ],
+      "rho": 1,
+      "bad_bank": 1
+    },
+    {
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "labels": [
+        0,
+        1,
+        1
+      ],
+      "rho": 1,
+      "bad_bank": 1
+    }
+  ],
+  "binary_packets_checked": 72,
+  "minimum_loaded_binary_sink_trains": 4,
+  "loaded_binary_survivors": [
+    {
+      "trains": 4,
+      "tree_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "region_labels": [
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "loaded_regions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "loaded_word": [
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "physical_sides": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "roles": [
+        "12",
+        "21",
+        "conflict"
+      ],
+      "loaded_runs": [
+        2,
+        2
+      ],
+      "rho": 2,
+      "m_B": 3,
+      "x_B": 3,
+      "u_B": 0,
+      "loaded_witnesses_require_long_pockets": false,
+      "diameter_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "return_demands": 0,
+      "omitted": [
+        "source realization",
+        "positive vertex KKT",
+        "actual finite translations",
+        "active upper truth tables",
+        "prescribed beneficial pins",
+        "bulk return endpoints",
+        "global optimality"
+      ]
+    },
+    {
+      "trains": 4,
+      "tree_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "region_labels": [
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "loaded_regions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "loaded_word": [
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "physical_sides": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "roles": [
+        "12",
+        "conflict",
+        "21"
+      ],
+      "loaded_runs": [
+        2,
+        2
+      ],
+      "rho": 2,
+      "m_B": 3,
+      "x_B": 3,
+      "u_B": 0,
+      "loaded_witnesses_require_long_pockets": false,
+      "diameter_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "return_demands": 0,
+      "omitted": [
+        "source realization",
+        "positive vertex KKT",
+        "actual finite translations",
+        "active upper truth tables",
+        "prescribed beneficial pins",
+        "bulk return endpoints",
+        "global optimality"
+      ]
+    },
+    {
+      "trains": 4,
+      "tree_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "region_labels": [
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "loaded_regions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "loaded_word": [
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "physical_sides": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "roles": [
+        "21",
+        "12",
+        "conflict"
+      ],
+      "loaded_runs": [
+        2,
+        2
+      ],
+      "rho": 2,
+      "m_B": 3,
+      "x_B": 3,
+      "u_B": 0,
+      "loaded_witnesses_require_long_pockets": false,
+      "diameter_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "return_demands": 0,
+      "omitted": [
+        "source realization",
+        "positive vertex KKT",
+        "actual finite translations",
+        "active upper truth tables",
+        "prescribed beneficial pins",
+        "bulk return endpoints",
+        "global optimality"
+      ]
+    },
+    {
+      "trains": 4,
+      "tree_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "region_labels": [
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "loaded_regions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "loaded_word": [
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "physical_sides": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "roles": [
+        "21",
+        "conflict",
+        "12"
+      ],
+      "loaded_runs": [
+        2,
+        2
+      ],
+      "rho": 2,
+      "m_B": 3,
+      "x_B": 3,
+      "u_B": 0,
+      "loaded_witnesses_require_long_pockets": false,
+      "diameter_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "return_demands": 0,
+      "omitted": [
+        "source realization",
+        "positive vertex KKT",
+        "actual finite translations",
+        "active upper truth tables",
+        "prescribed beneficial pins",
+        "bulk return endpoints",
+        "global optimality"
+      ]
+    }
+  ],
+  "unary_survivor": {
+    "trains": 1,
+    "tree_edges": [
+      [
+        0,
+        1
+      ]
+    ],
+    "region_labels": [
+      0,
+      1
+    ],
+    "rhombus_root": 1,
+    "pin": 1,
+    "fully_good_trains": 1,
+    "bad_terminal_bank": 0,
+    "inactive_upper_exceptions": 0,
+    "source_realization": "not asserted"
+  },
+  "strengthened_packets_checked": 72,
+  "strengthened_minimum_trains": 4,
+  "strengthened_loaded_survivors": [
+    {
+      "trains": 4,
+      "tree_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "region_labels": [
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "loaded_regions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "loaded_word": [
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "physical_sides": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "roles": [
+        "12",
+        "21",
+        "conflict"
+      ],
+      "loaded_runs": [
+        2,
+        2
+      ],
+      "rho": 2,
+      "m_B": 3,
+      "x_B": 6,
+      "u_B": 3,
+      "loaded_witnesses_require_long_pockets": true,
+      "diameter_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "return_demands": 0,
+      "omitted": [
+        "source realization",
+        "positive vertex KKT",
+        "actual finite translations",
+        "active upper truth tables",
+        "prescribed beneficial pins",
+        "bulk return endpoints",
+        "global optimality"
+      ]
+    },
+    {
+      "trains": 4,
+      "tree_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "region_labels": [
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "loaded_regions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "loaded_word": [
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "physical_sides": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "roles": [
+        "12",
+        "conflict",
+        "21"
+      ],
+      "loaded_runs": [
+        2,
+        2
+      ],
+      "rho": 2,
+      "m_B": 3,
+      "x_B": 6,
+      "u_B": 3,
+      "loaded_witnesses_require_long_pockets": true,
+      "diameter_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "return_demands": 0,
+      "omitted": [
+        "source realization",
+        "positive vertex KKT",
+        "actual finite translations",
+        "active upper truth tables",
+        "prescribed beneficial pins",
+        "bulk return endpoints",
+        "global optimality"
+      ]
+    },
+    {
+      "trains": 4,
+      "tree_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "region_labels": [
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "loaded_regions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "loaded_word": [
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "physical_sides": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "roles": [
+        "21",
+        "12",
+        "conflict"
+      ],
+      "loaded_runs": [
+        2,
+        2
+      ],
+      "rho": 2,
+      "m_B": 3,
+      "x_B": 6,
+      "u_B": 3,
+      "loaded_witnesses_require_long_pockets": true,
+      "diameter_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "return_demands": 0,
+      "omitted": [
+        "source realization",
+        "positive vertex KKT",
+        "actual finite translations",
+        "active upper truth tables",
+        "prescribed beneficial pins",
+        "bulk return endpoints",
+        "global optimality"
+      ]
+    },
+    {
+      "trains": 4,
+      "tree_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "region_labels": [
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "loaded_regions": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "loaded_word": [
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "physical_sides": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "roles": [
+        "21",
+        "conflict",
+        "12"
+      ],
+      "loaded_runs": [
+        2,
+        2
+      ],
+      "rho": 2,
+      "m_B": 3,
+      "x_B": 6,
+      "u_B": 3,
+      "loaded_witnesses_require_long_pockets": true,
+      "diameter_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "return_demands": 0,
+      "omitted": [
+        "source realization",
+        "positive vertex KKT",
+        "actual finite translations",
+        "active upper truth tables",
+        "prescribed beneficial pins",
+        "bulk return endpoints",
+        "global optimality"
+      ]
+    }
+  ],
+  "first_packet_geometric_failure": "u_B=0 makes all nonunit hull intervals two-edge paths; their common unit neighbor forbids two moving owners in a projective window narrower than pi/3"
+}

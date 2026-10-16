@@ -1,0 +1,48 @@
+{"parents":["0351c2c3aecd34c0427d0ad081afae563468d401"],"source_commit":"b84a95f0a0082f8fb555258bf4981684404f0210","subject":"Target C: charge acute Horn sink obstructions"}
+{"parents":["b84a95f0a0082f8fb555258bf4981684404f0210"],"source_commit":"ecf4f8c5567cd15d294c2c1f71041356c187f673","subject":"Target C notation correction"}
+{"parents":["ecf4f8c5567cd15d294c2c1f71041356c187f673"],"source_commit":"8b72502c641d07e5b8fb3b4ef27040e20cc967f0","subject":"Target C: charge loaded sink obstructions to owner runs"}
+{"parents":["8b72502c641d07e5b8fb3b4ef27040e20cc967f0"],"source_commit":"09847739d57efabaf7fe72b4c27c72ea7944d639","subject":"Target C: expand loaded owner-run payment proof"}
+{"parents":["09847739d57efabaf7fe72b4c27c72ea7944d639"],"source_commit":"7baa2a36997122ad4da2743bfe90e32fc2ca547b","subject":"Target C: correct sink witness selection"}
+{"parents":["7baa2a36997122ad4da2743bfe90e32fc2ca547b","583203ac1dc1d7bc49f0ca0574d75e85f9de2ee1"],"source_commit":"c1ed32f74dc274c31a045d0ceece3b7c1f225036","subject":"Merge current main into Target C closure worker"}
+{"parents":["c1ed32f74dc274c31a045d0ceece3b7c1f225036"],"source_commit":"0cc3e2ca7d1df2f7b83471246ebbdb84d8f5ca42","subject":"Target C: charge unloaded sink witnesses to outer excess"}
+{"parents":["0cc3e2ca7d1df2f7b83471246ebbdb84d8f5ca42"],"source_commit":"18c01e26e53e1ba2fef9f105fe44b2e47186cd8b","subject":"Target C: force double recurrence in loaded sink"}
+{"parents":["18c01e26e53e1ba2fef9f105fe44b2e47186cd8b"],"source_commit":"51ca0f899bf836da456072ae0afed67d761d6522","subject":"Target C: fix double-recurrence note formatting"}
+{"parents":["51ca0f899bf836da456072ae0afed67d761d6522"],"source_commit":"88be3dc89aac5c05429e8b296c3fc036a399a5a0","subject":"Target C: pay loaded sink recurrence by O-O terminals"}
+{"parents":["88be3dc89aac5c05429e8b296c3fc036a399a5a0"],"source_commit":"48e9e414a19f2d3f7a7e6d17e00a2f777281d5ec","subject":"Target C: fix O-O terminal run budget scope and notation"}
+{"parents":["48e9e414a19f2d3f7a7e6d17e00a2f777281d5ec"],"source_commit":"1c5c8733697795f8362d83fb4305fd5939e1920d","subject":"Target C: bound complete implication basins by O-O terminals"}
+{"parents":["1c5c8733697795f8362d83fb4305fd5939e1920d"],"source_commit":"57e9e69d598b73bf1b34b7ffbfe4cfc75c220a43","subject":"Target C: restore implication-basin proof notation"}
+{"parents":["57e9e69d598b73bf1b34b7ffbfe4cfc75c220a43"],"source_commit":"5fd501f9f7102149ca32b97dbeff607f0373a8d5","subject":"Target C: scope implication path certificates to residual lower formula"}
+{"parents":["5fd501f9f7102149ca32b97dbeff607f0373a8d5"],"source_commit":"49ad202cde9608fc0e208666620eebba7a0691bf","subject":"Target C: fix implication-basin witness charge"}
+{"parents":["49ad202cde9608fc0e208666620eebba7a0691bf"],"source_commit":"0581b97615b9c3231b9ec0532056d3b8c3de39d7","subject":"Target C: pay unary rhombus roots by O-O trains"}
+{"parents":["0581b97615b9c3231b9ec0532056d3b8c3de39d7"],"source_commit":"4c3446874ec06a8064dcc885723fc193404b7c5f","subject":"Target C: correct notation"}
+{"parents":["4c3446874ec06a8064dcc885723fc193404b7c5f"],"source_commit":"2c0c9e2bb72bdc124840a2dbacbc2f26cc0b039e","subject":"Target C: bound narrow-shore owners by O-O regions"}
+{"parents":["2c0c9e2bb72bdc124840a2dbacbc2f26cc0b039e"],"source_commit":"886ddfc3e71667d16e53f810a09e2a060e38ce0b","subject":"Target C: derive narrow-window O-O laminarity"}
+{"parents":["886ddfc3e71667d16e53f810a09e2a060e38ce0b"],"source_commit":"f2af753a365e9d13e1ef29ce082e8fb0b8f49258","subject":"Target C: bound near-unit clauses in the O-O dual tree"}
+{"parents":["f2af753a365e9d13e1ef29ce082e8fb0b8f49258"],"source_commit":"f4ad212ffd9bd0ae2300a6dc1a71da7f4d10f286","subject":"Target C: correct dual-tree displacement bound"}
+{"parents":["f4ad212ffd9bd0ae2300a6dc1a71da7f4d10f286"],"source_commit":"cca65eace119c9425044256e5f0191f0c84479a6","subject":"Target C: bound B-hull clauses across dual-tree hub"}
+{"parents":["cca65eace119c9425044256e5f0191f0c84479a6"],"source_commit":"dd233056ee367b4b297dd04d3b154cfa7ea8c58b","subject":"Target C: pay singleton O-O dual-tree range"}
+{"parents":["dd233056ee367b4b297dd04d3b154cfa7ea8c58b"],"source_commit":"7c41287726f1c34a282f13c0da613bde15154ccb","subject":"Fix notation"}
+{"parents":["7c41287726f1c34a282f13c0da613bde15154ccb"],"source_commit":"7710f718d25a86c412a9e1e66a6f2c8d440784ca","subject":"Target C: pay hub-owner recurrence by the exact O-O terminal bank"}
+{"parents":["7710f718d25a86c412a9e1e66a6f2c8d440784ca"],"source_commit":"639cff05133c358d945ea6c693789826ef4b43f9","subject":"Target C: deplete terminal O-O trains using actual shore equilibrium"}
+{"parents":["639cff05133c358d945ea6c693789826ef4b43f9"],"source_commit":"102b9b951c8827aa432555c20adbdb163e3fc680","subject":"Target C: separate independent owner models from crossing train motions"}
+{"parents":["102b9b951c8827aa432555c20adbdb163e3fc680"],"source_commit":"258bd91a0c653c4aa15c66afb25e9951ed3e223b","subject":"Target C: certify strict refill after one convex wall vertex deletion"}
+{"parents":["258bd91a0c653c4aa15c66afb25e9951ed3e223b"],"source_commit":"51853ce9752c065663fd407289c6d46adc767f69","subject":"Target C: check coupled train closure and every finite source pair"}
+{"parents":["51853ce9752c065663fd407289c6d46adc767f69"],"source_commit":"1b09620bfb5788e1d8732076f6f7538dec137e89","subject":"Target C: release capped wall packets using their actual global diameter"}
+{"parents":["1b09620bfb5788e1d8732076f6f7538dec137e89"],"source_commit":"5c1b72f88b173d053d8f6d49bf360220924f6105","subject":"Target C: pay odd-shell wall barriers and certify a whole-source escape"}
+{"parents":["5c1b72f88b173d053d8f6d49bf360220924f6105"],"source_commit":"ece938d957c42f6719276e0a2b4dc51d25dc22ea","subject":"Record live exterior-cap dependency scope and unfinished closure obligations"}
+{"parents":["ece938d957c42f6719276e0a2b4dc51d25dc22ea","ae6697b649d5516cfe36cc855a89948940f9ce14"],"source_commit":"3579666ca80b876de975198ecb3c7a84a619ea29","subject":"Merge audit.63 authority and retain scoped research frontiers"}
+{"parents":["3579666ca80b876de975198ecb3c7a84a619ea29"],"source_commit":"e6d04c4d58f3c104d82714375fe4e886ea864c11","subject":"Prove collective wall shielding and certify finite global capacity obstruction"}
+{"parents":["e6d04c4d58f3c104d82714375fe4e886ea864c11","35f5843ab9f5d11327d0f4cc803ed00707806ae7"],"source_commit":"e5962a1017e292d8a4f860007c3f56eddf530800","subject":"Merge audit.65 finite exchange and regular-shell authority"}
+{"parents":["e5962a1017e292d8a4f860007c3f56eddf530800"],"source_commit":"1ca17812adc0b8741a423d0a19fae61d3fa2332a","subject":"Certify curved-wall finite release retaining quadratic isolate clouds"}
+{"parents":["1ca17812adc0b8741a423d0a19fae61d3fa2332a"],"source_commit":"91b61011eb3db25f5d603492f78d124cad9eed65","subject":"Exclude all interior populations in certified near-triangular curved walls"}
+{"parents":["91b61011eb3db25f5d603492f78d124cad9eed65"],"source_commit":"d7395e799fa26505c5b9da06a16d9043d101ce5b","subject":"Certify uneven convex wall packets with Green-safe middle banks"}
+{"parents":["d7395e799fa26505c5b9da06a16d9043d101ce5b"],"source_commit":"2e489dc3dabfa015cf58a0fd0c48f2b404bd07e5","subject":"Certify three-direction corner obstruction to smooth affine packets"}
+{"parents":["2e489dc3dabfa015cf58a0fd0c48f2b404bd07e5","a2811924d18778e8220c42904c9a5a92b58ffd78"],"source_commit":"7afe2035d7b28e3b54f75f9270e937bbd1e02a9b","subject":"Merge audit.66 collective wall shield and finite capacity authority"}
+{"parents":["7afe2035d7b28e3b54f75f9270e937bbd1e02a9b"],"source_commit":"d9404c4974b4f0c699a49c49a0450c9752e83182","subject":"Derive nested packet stress demands and preserve nonaffine discovery"}
+{"parents":["d9404c4974b4f0c699a49c49a0450c9752e83182","147158251175c6bcb76690a3cb7a7f3d9091050e"],"source_commit":"cd5496c18778ecb6ca7a5db5f75f2f91009c10e4","subject":"Merge audit.69 authority and correct physical blocker scope"}
+{"parents":["cd5496c18778ecb6ca7a5db5f75f2f91009c10e4"],"source_commit":"6ee89d204688df2de70594e08ad6b12edeb9145a","subject":"Certify nonaffine vacancy packets and spend interior count deficits"}
+{"parents":["6ee89d204688df2de70594e08ad6b12edeb9145a","d65fec2adf136af5337ed177b37d83ac64869640"],"source_commit":"315987d08d3ed5f41a93415caceb323780c821ea","subject":"Merge independently audited smooth affine corner regression"}
+{"parents":["315987d08d3ed5f41a93415caceb323780c821ea"],"source_commit":"0d3b0182c064f73d2a6a64452ee01d140f1b1475","subject":"Classify sorted-rate equality packets and exclude highest wall population"}
+{"parents":["0d3b0182c064f73d2a6a64452ee01d140f1b1475","dcc21aa879b61662318bceb9aeb174792e074eb0"],"source_commit":"c7aad83506a3eeac927f3957f36ac893126783c2","subject":"Merge audit.71 energy-demand authority and correct sampled-field label"}
+{"parents":["c7aad83506a3eeac927f3957f36ac893126783c2"],"source_commit":"bf288c82e8a62466d5580025c94e750a177e63e2","subject":"Preserve Target C run handoff and uncertified final release lead"}
+{"parents":["bf288c82e8a62466d5580025c94e750a177e63e2","d999528cfaafd811a4a19bcfacd00f217c2fc375"],"source_commit":"73fa41814eb1cdac50ba1eab135461868437edf0","subject":"Merge current main and repair mechanical integration conflicts for PR #737"}
