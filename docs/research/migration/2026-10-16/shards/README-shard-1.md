@@ -35,7 +35,10 @@ the frozen source but absent from the frozen destination baseline. They include
 other Target C reports and verifier scripts, so they are recorded as unresolved
 cross-shard references rather than copied outside this shard. The exact list,
 source/destination presence flags, and report-by-report references are in the
-JSONL ledger. The central integration owner must resolve references that are
+JSONL ledger. A targeted CommonMark scan finds 25 local Markdown links; nine
+unique targets were absent from the frozen destination baseline, all present in
+frozen source. One target is another report in this same shard; the remaining
+eight are cross-shard reports or verifier dependencies, recorded individually. The central integration owner must resolve references that are
 load-bearing for an active proof or verifier, and can retain the others as
 historical citations.
 
