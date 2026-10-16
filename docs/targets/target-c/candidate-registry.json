@@ -4911,6 +4911,383 @@
         "visibility": "Destination repository remains private.",
         "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged."
       }
+    },
+    {
+      "candidate_id": "GLOBAL-REFLECTED-SCALE-PARITY-DECISION-PR959",
+      "title": "Exact signed-parity criterion for supplied reflected-scale parameters",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed proved candidate or exact regression in frozen open source PR #959; destination theorem-state remains authoritative.",
+      "source_proposed_status": "The source report labels the analytic statement a proved candidate awaiting promotion; destination lifecycle remains unreviewed.",
+      "target_scope": [
+        "Level I whole-source strict-diameter comparison",
+        "Target C cross-route endpoint research"
+      ],
+      "claim": {
+        "statement": "For a finite unit-separated planar source, fixed unit normal, offset, and positive squared scales A,B, let s_ij and o_ij be the same-sign and opposite-sign squared distances. A full-label endpoint with all squared distances in [1,D^2) exists if and only if no pair has o_ij<1 or s_ij>=D^2 and the graph containing an opposite-sign constraint whenever s_ij<1 and an equal-sign constraint whenever o_ij>=D^2 is parity-consistent. A pair may impose both constraints.",
+        "hypotheses": "Finite source and supplied line, offset, scales, and diameter; all labels participate in every pair constraint.",
+        "not_claimed": "Does not find parameters for a global minimizer; does not prove global optimality or a uniform endpoint theorem; O(n^2) counts arithmetic operations, not bit complexity."
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "A distinct exact decision theorem for supplied parameters. It changes no canonical theorem or C-II claim. The finite endpoint and infinite nonglobal family are indexed separately. ",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_reflected_scale_competitors_2026-10-12.md",
+          "role": "full analytical report and exact fixed-parameter decision theorem",
+          "source_git_blob_sha": "b79f3b73f000e81e3e879bd1f6aaaf046d452ad0",
+          "source_sha256": "72726b52bbb5edefc83de3e820ecb6bad7bd28b448d2bef2801d62d4301f0b3f",
+          "destination_sha256": "63f9abd9de3a50d6d52a5ca37354ef6e461425250fea379bd928fe6a6e7dff35",
+          "destination_transformed": true,
+          "source_artifact_id": "ART-F3C61ADE5F89",
+          "source_claim_ids": []
+        },
+        {
+          "path": "research/verify_global_reflected_scale_2026_10_12.py",
+          "role": "exact rational finite verifier and exhaustive sign-oracle regression",
+          "source_git_blob_sha": "ec4ac22ec9bf0d9964ec8c90d9e352961a9e7c7a",
+          "source_sha256": "caef9c87b7773aa1089ec845d30b35fb09bd70bde5f0264a128b51fc7f531403",
+          "destination_sha256": "caef9c87b7773aa1089ec845d30b35fb09bd70bde5f0264a128b51fc7f531403",
+          "destination_transformed": false,
+          "source_artifact_id": null,
+          "source_claim_ids": []
+        },
+        {
+          "path": "docs/audits/pr959_autonomous_proof_audit_2026-10-15.md",
+          "role": "source AI audit provenance",
+          "source_git_blob_sha": "5e7d573e0a2d6c806d4165eea8a08ef414f1fc72",
+          "source_sha256": "a0dab854fe2700638a4f5987f96349f0d5133ec49d48e72f9773d6ef8b3e9316",
+          "destination_sha256": "30ce4ddc5721a402f0b98080c48d7c0ae5cecbf4b0e27393300983ec60ad34f1",
+          "destination_transformed": true,
+          "source_artifact_id": "ART-9E0CA31F6AA4",
+          "source_claim_ids": []
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "description": "Elementary Euclidean distance identities and signed-graph parity propagation; no canonical theorem dependency."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "parameter extraction",
+          "result": "No line or scales are extracted for arbitrary sufficiently large global minimizers."
+        },
+        {
+          "scope": "finite certificates",
+          "result": "Finite successful fixtures are nonglobal and do not prove a global-minimizer route."
+        }
+      ],
+      "validation": {
+        "command": "python3 research/verify_global_reflected_scale_2026_10_12.py",
+        "result": "PASS: 400 rational decision cases matched exhaustive sign enumeration (97 feasible, 89 lower-forbidden, 124 upper-forbidden, 90 parity-inconsistent; 54 cases had parallel forcing); omitted-label and invalid-bit controls rejected; 157-label full-source certificate and moment identity passed.",
+        "boundary": "The checker verifies finite decision cases and certificates only; the necessary-and-sufficient theorem is proved analytically in the report."
+      },
+      "next_proof_obligations": [
+        "Extract parameters from every sufficiently large triangle-free global minimizer and prove all lower and upper constraints simultaneously, including isolates.",
+        "Obtain the required independent exact-head AI-agent mathematical audit before any consequential theorem promotion."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 959,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/959",
+        "source_pr_draft": true,
+        "source_head_sha": "e25041f236d268a7e815dacd346180989690ed71",
+        "source_head_tree": "a0b268d8b050e0350c8ae2ffb38c139fc6570dab",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base": "a43c69dac7e7b0627dec2900e12c60fd4608d519",
+        "destination_theorem_state": "2026-10-15.publication.2; unchanged by import"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and project-agent material.",
+        "third_party_material": "Canonical Oler is linked through the destination theorem record; the cited author-hosted isodiametric paper is referenced by link only. No third-party PDF or protected data is copied.",
+        "visibility": "Destination repository remains private.",
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged."
+      }
+    },
+    {
+      "candidate_id": "GLOBAL-REFLECTED-SCALE-NONGLOBAL-COMPETITORS-PR959",
+      "title": "Infinite reflected-scale competitor family and 157-label certificate",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed proved candidate or exact regression in frozen open source PR #959; destination theorem-state remains authoritative.",
+      "source_proposed_status": "The source report labels the analytic statement a proved candidate awaiting promotion; destination lifecycle remains unreviewed.",
+      "target_scope": [
+        "Level I whole-source comparison",
+        "Target C cross-route regressions"
+      ],
+      "claim": {
+        "statement": "For every integer K>=1 and M>=20(K+1), the specified square-grid rectangle, reflected assignment, and two positive scales give a full-source strictly unit-separated competitor of smaller diameter. A separate exact 157-label source has a full-source endpoint with all 12,246 pairs checked and two contact isolates retained.",
+        "hypotheses": "The infinite family uses the exact rectangular integer grid and prescribed normal, scales, and sign rule from the report. The finite certificate uses its specified 31 by 5 grid plus two isolates.",
+        "not_claimed": "These explicit sources are nonglobal; the family is an obstruction escape from the affine/stress comparison, not a global-minimizer sequence or a Level I counterexample."
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Finite constructions add exact regression evidence for the endpoint route but do not strengthen canonical claims. The boundary-supported PSD stress is not full-source mixed rigidity. ",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_reflected_scale_competitors_2026-10-12.md",
+          "role": "full analytical report, infinite family proof, and exact 157-label certificate",
+          "source_git_blob_sha": "b79f3b73f000e81e3e879bd1f6aaaf046d452ad0",
+          "source_sha256": "72726b52bbb5edefc83de3e820ecb6bad7bd28b448d2bef2801d62d4301f0b3f",
+          "destination_sha256": "63f9abd9de3a50d6d52a5ca37354ef6e461425250fea379bd928fe6a6e7dff35",
+          "destination_transformed": true,
+          "source_artifact_id": "ART-F3C61ADE5F89",
+          "source_claim_ids": []
+        },
+        {
+          "path": "research/verify_global_reflected_scale_2026_10_12.py",
+          "role": "exact finite pair verifier with rectangle-family fixtures",
+          "source_git_blob_sha": "ec4ac22ec9bf0d9964ec8c90d9e352961a9e7c7a",
+          "source_sha256": "caef9c87b7773aa1089ec845d30b35fb09bd70bde5f0264a128b51fc7f531403",
+          "destination_sha256": "caef9c87b7773aa1089ec845d30b35fb09bd70bde5f0264a128b51fc7f531403",
+          "destination_transformed": false,
+          "source_artifact_id": null,
+          "source_claim_ids": []
+        },
+        {
+          "path": "research/global_capacity_run_2026_10_12.md",
+          "role": "historical global-route notes and failed-search record",
+          "source_git_blob_sha": "51a6e1b99728edae0b6c075d5fa16ecf243d2350",
+          "source_sha256": "cc40aa6acd6410ef970b82d1873f4ae296fb22bddf66628c15901770bdb4eb58",
+          "destination_sha256": "a0dbb4a97ade7cb254e20ee39c650d9f3ac60058a112ae6a0741731531265077",
+          "destination_transformed": true,
+          "source_artifact_id": null,
+          "source_claim_ids": []
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "description": "Elementary lattice geometry and exact rational/algebraic identities."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "globality",
+          "result": "The explicit finite and infinite sources are nonglobal for diameter."
+        },
+        {
+          "scope": "stress",
+          "result": "The normalized equilibrium and PSD stress use boundary support; zero rows at interior labels do not imply full-source rigidity."
+        }
+      ],
+      "validation": {
+        "command": "python3 research/verify_global_reflected_scale_2026_10_12.py",
+        "result": "PASS: 157 labels, 12,246 pairs, two contact isolates; squared diameter 916 -> 865065744/1008005 with exact gain 58266836/1008005. Family fixtures checked 29,403 and 182,710 pairs.",
+        "boundary": "Finite checker certifies these sources only; analytical report proves the stated infinite nonglobal family."
+      },
+      "next_proof_obligations": [
+        "Use global-minimizer geometry to produce a source-dependent endpoint; do not generalize from these nonglobal examples.",
+        "Keep every label, lower pair constraint, and upper diameter pair in any successor."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 959,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/959",
+        "source_pr_draft": true,
+        "source_head_sha": "e25041f236d268a7e815dacd346180989690ed71",
+        "source_head_tree": "a0b268d8b050e0350c8ae2ffb38c139fc6570dab",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base": "a43c69dac7e7b0627dec2900e12c60fd4608d519",
+        "destination_theorem_state": "2026-10-15.publication.2; unchanged by import"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and project-agent material.",
+        "third_party_material": "Canonical Oler is linked through the destination theorem record; the cited author-hosted isodiametric paper is referenced by link only. No third-party PDF or protected data is copied.",
+        "visibility": "Destination repository remains private.",
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged."
+      }
+    },
+    {
+      "candidate_id": "GLOBAL-REFLECTION-MOMENT-SCALE-OBSTRUCTION-PR959",
+      "title": "Leading-density moment obstruction to macroscopic one-step scales",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed proved candidate or exact regression in frozen open source PR #959; destination theorem-state remains authoritative.",
+      "source_proposed_status": "The source report labels the asymptotic statement a proved candidate awaiting promotion; destination lifecycle remains unreviewed.",
+      "target_scope": [
+        "Level I global-minimizer endpoint route",
+        "Target C cross-route source-wide obstruction"
+      ],
+      "claim": {
+        "statement": "For any sequence of finite unit-separated planar sources with D->infinity and n/D^2->pi/(2 sqrt(3)), if a one-step reflected-scale endpoint retains every label, remains unit-separated, and has diameter at most (1+o(1))D, then both positive squared scales converge to 1.",
+        "hypotheses": "Arbitrary lines, offsets, and independent sign choices; the endpoint is an actual planar full-source placement with all lower constraints satisfied and stated diameter bound.",
+        "not_claimed": "No convergence rate, strict lower-order diameter improvement, endpoint existence, nonattainment, or triangle conclusion follows. The result also applies to nonglobal sources with the same leading density."
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "A separate asymptotic restriction on the reflected-scale route. It does not replace or strengthen a canonical theorem claim. ",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_reflection_moment_obstruction_2026-10-12.md",
+          "role": "full analytical moment and empirical-disk-limit proof",
+          "source_git_blob_sha": "05011e2dac6d38e364ddd3b6c3e9bc2bd40802ce",
+          "source_sha256": "a321487765f4536642182bb2d2255ab3580b69a174209670a053d95d88866932",
+          "destination_sha256": "4e3e129da1129a659fae627fb7467beb557ca2f5ef4b45563e1666f84d0c7454",
+          "destination_transformed": true,
+          "source_artifact_id": "ART-0EE8A3655412",
+          "source_claim_ids": []
+        },
+        {
+          "path": "research/verify_global_reflected_scale_2026_10_12.py",
+          "role": "exact finite moment-identity checks",
+          "source_git_blob_sha": "ec4ac22ec9bf0d9964ec8c90d9e352961a9e7c7a",
+          "source_sha256": "caef9c87b7773aa1089ec845d30b35fb09bd70bde5f0264a128b51fc7f531403",
+          "destination_sha256": "caef9c87b7773aa1089ec845d30b35fb09bd70bde5f0264a128b51fc7f531403",
+          "destination_transformed": false,
+          "source_artifact_id": null,
+          "source_claim_ids": []
+        },
+        {
+          "path": "docs/audits/pr959_autonomous_proof_audit_2026-10-15.md",
+          "role": "source AI audit provenance",
+          "source_git_blob_sha": "5e7d573e0a2d6c806d4165eea8a08ef414f1fc72",
+          "source_sha256": "a0dab854fe2700638a4f5987f96349f0d5133ec49d48e72f9773d6ef8b3e9316",
+          "destination_sha256": "30ce4ddc5721a402f0b98080c48d7c0ae5cecbf4b0e27393300983ec60ad34f1",
+          "destination_transformed": true,
+          "source_artifact_id": "ART-9E0CA31F6AA4",
+          "source_claim_ids": []
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "description": "The empirical disk limit uses canonical Oler Lemma 21.1 and the isodiametric equality case, cited in the report to an author-hosted paper. No external paper text is bundled.",
+        "canonical_theorems": [
+          "docs/theory/03-oler-shell.md#21.1"
+        ]
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "one-step scaling",
+          "result": "Macroscopic anisotropic scales are excluded for feasible endpoints at the stated density and diameter; near-identity scales and arbitrary nonlocal signs remain open."
+        },
+        {
+          "scope": "finite odd moments",
+          "result": "The exact finite identity retains offset and odd-moment terms; no rate follows from the disk limit."
+        }
+      ],
+      "validation": {
+        "command": "python3 research/verify_global_reflected_scale_2026_10_12.py",
+        "result": "PASS: exact finite moment identity checked on symmetric and asymmetric nonzero-offset fixtures.",
+        "boundary": "The script checks the finite identity; it does not prove the asymptotic empirical disk argument or a convergence rate."
+      },
+      "next_proof_obligations": [
+        "Audit the Oler-to-empirical-measure argument and both bounded/unbounded offset cases independently at the exact destination head before promotion.",
+        "Investigate whether source-specific second-order moment and pair constraints can yield strict improvement with A,B tending to one."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 959,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/959",
+        "source_pr_draft": true,
+        "source_head_sha": "e25041f236d268a7e815dacd346180989690ed71",
+        "source_head_tree": "a0b268d8b050e0350c8ae2ffb38c139fc6570dab",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base": "a43c69dac7e7b0627dec2900e12c60fd4608d519",
+        "destination_theorem_state": "2026-10-15.publication.2; unchanged by import"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and project-agent material.",
+        "third_party_material": "Canonical Oler is linked through the destination theorem record; the cited author-hosted isodiametric paper is referenced by link only. No third-party PDF or protected data is copied.",
+        "visibility": "Destination repository remains private.",
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged."
+      }
+    },
+    {
+      "candidate_id": "GLOBAL-STEINER-CAPACITY-LOSS-PR959",
+      "title": "Exact regressions against general Steiner capacity preservation",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed proved candidate or exact regression in frozen open source PR #959; destination theorem-state remains authoritative.",
+      "source_proposed_status": "Exact mathematical regressions in an unreviewed source report; imported as unreviewed research.",
+      "target_scope": [
+        "Level I global capacity/diameter route",
+        "Target C cross-route capacity obstruction"
+      ],
+      "claim": {
+        "statement": "There exists a four-label triangle-free global diameter minimizer K with N(K)=4 and N(SK)=3. Separately, for every integer m>=20, the report constructs a triangle-free rhombus source with exact fixed-container capacity (m+1)^2 and proves N(SK_m) <= (m+1)^2 - m/10 + 2/3; these large sources are nonglobal for diameter.",
+        "hypotheses": "The first source is the specified rotated unit square. The unbounded family uses the specified rhombus lattice and canonical Oler capacity bounds.",
+        "not_claimed": "Does not refute an eventual capacity theorem restricted to sufficiently large global diameter minimizers; fixed-container optimality is not global diameter optimality."
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Exact counterexamples invalidate the general implication N(SK)>=N(K), and capacity preservation from triangle-freeness, fixed-container optimality, or leading area density alone. No canonical theorem is changed. ",
+        "replacement_status": "none"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_steiner_capacity_loss_2026-10-12.md",
+          "role": "full analytical report with exact four-point and unbounded-family capacity regressions",
+          "source_git_blob_sha": "6d138eaab1af27ab2ddc1b345157aa3414cbd06d",
+          "source_sha256": "0fc1a59379e8fde3b38100a88c534fce659325b7f06ace4accd237229e6c3410",
+          "destination_sha256": "80e31ee8ee8c6d7434148a8ec5d2fe7439a31495a07a19b9c79724690a5a3213",
+          "destination_transformed": true,
+          "source_artifact_id": "ART-E46DE5394D85",
+          "source_claim_ids": []
+        },
+        {
+          "path": "research/verify_global_steiner_capacity_loss_2026_10_12.py",
+          "role": "exact rational geometry and finite Oler-bound verifier",
+          "source_git_blob_sha": "625143ca011a7e5ffee00089bddb264a6af3e0e0",
+          "source_sha256": "2a923987db26e2ccf1991b4cca455fe386f53c618a1119504af9b67102984806",
+          "destination_sha256": "2a923987db26e2ccf1991b4cca455fe386f53c618a1119504af9b67102984806",
+          "destination_transformed": false,
+          "source_artifact_id": null,
+          "source_claim_ids": []
+        },
+        {
+          "path": "docs/audits/pr959_autonomous_proof_audit_2026-10-15.md",
+          "role": "source AI audit provenance",
+          "source_git_blob_sha": "5e7d573e0a2d6c806d4165eea8a08ef414f1fc72",
+          "source_sha256": "a0dab854fe2700638a4f5987f96349f0d5133ec49d48e72f9773d6ef8b3e9316",
+          "destination_sha256": "30ce4ddc5721a402f0b98080c48d7c0ae5cecbf4b0e27393300983ec60ad34f1",
+          "destination_transformed": true,
+          "source_artifact_id": "ART-9E0CA31F6AA4",
+          "source_claim_ids": []
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "Oler Lemma 21.1"
+        ],
+        "description": "The unbounded family uses canonical Oler Lemma 21.1; the four-point global diameter floor and symmetrized section geometry are proved elementarily."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "large global sources",
+          "result": "The unbounded examples are nonglobal for diameter; global-minimizer-specific geometric hypotheses may still support a different theorem."
+        },
+        {
+          "scope": "capacity bridge",
+          "result": "Steiner diameter reduction alone does not yield a same-cardinality packing in the new container."
+        }
+      ],
+      "validation": {
+        "command": "python3 research/verify_global_steiner_capacity_loss_2026_10_12.py",
+        "result": "PASS: square diameter squared 2 -> 49/25 with capacity 4 -> 3; at m=20,40,100 original capacities 441,1681,10201 and symmetrized upper capacities 439,1677,10191; all 97,020 m=20 pairs and 840 contacts checked.",
+        "boundary": "The exact checker covers finite cases. Analytical arguments prove the family inequalities; no global large-minimizer conclusion is established."
+      },
+      "next_proof_obligations": [
+        "Develop a full-label repacking theorem using geometric information specific to large global minimizers.",
+        "Audit the Oler applications and the fixed-container versus global-diameter distinction independently before any consequential promotion."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 959,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/959",
+        "source_pr_draft": true,
+        "source_head_sha": "e25041f236d268a7e815dacd346180989690ed71",
+        "source_head_tree": "a0b268d8b050e0350c8ae2ffb38c139fc6570dab",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base": "a43c69dac7e7b0627dec2900e12c60fd4608d519",
+        "destination_theorem_state": "2026-10-15.publication.2; unchanged by import"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and project-agent material.",
+        "third_party_material": "Canonical Oler is linked through the destination theorem record; the cited author-hosted isodiametric paper is referenced by link only. No third-party PDF or protected data is copied.",
+        "visibility": "Destination repository remains private.",
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged."
+      }
     }
   ]
 }

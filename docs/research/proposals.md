@@ -266,3 +266,30 @@ actual planar full-label endpoint meeting every lower/upper pair constraint
 for every sufficiently large triangle-free global minimizer, or an unbounded
 family with independently proved global optimality. Exact per-path source and
 destination treatment is in the [migration ledger](migration/2026-10-16/ledger/source-pr-files.jsonl).
+
+## Source PR #959 — reflected-scale decisions and Steiner capacity loss
+
+The [reflected-scale report](../reports/global_reflected_scale_competitors_2026-10-12.md)
+proves a necessary-and-sufficient signed-parity test for a supplied line and
+two positive scales, checking both sign constraints on each source pair. Its
+157-label exact competitor retains two contact isolates and checks all 12,246
+pairs; the source is nonglobal. The accompanying leading-density moment
+obstruction proves that both squared scales of any feasible one-step endpoint
+with diameter at most `(1+o(1))D` tend to one. It leaves near-identity
+second-order improvement open.
+
+The [Steiner-capacity report](../reports/global_steiner_capacity_loss_2026-10-12.md)
+gives a four-label triangle-free global minimizer with exact capacity loss
+`4 -> 3`, plus an unbounded triangle-free fixed-container-optimal family with
+linear capacity loss after symmetrization. The large family is nonglobal for
+diameter. Thus the report blocks a general `N(SK)>=N(K)` step but does not
+exclude an eventual theorem using global-minimizer geometry.
+
+The exact verifiers are listed in the [research command index](../../research/README.md)
+and detailed proof scopes and next obligations are in the
+[focused track](tracks/global-reflected-scale-capacity-pr959.md). All claims
+remain noncanonical and unreviewed. The open bridge is to extract a feasible
+near-identity endpoint from every sufficiently large triangle-free global
+minimizer, meeting every lower and upper pair constraint, or prove a global
+source-specific full-label repacking theorem. See the
+[per-file migration ledger](migration/2026-10-16/ledger/source-pr-files.jsonl).

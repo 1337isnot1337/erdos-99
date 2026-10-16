@@ -266,3 +266,30 @@ the [palette endpoint report](../../reports/global_palette_endpoints_and_full_so
 the [focused track](../../research/tracks/global-planar-endpoint-palette-pr958.md),
 and its [candidate registry](candidate-registry.json). All claims remain
 noncanonical; the theorem-state is unchanged.
+
+## Cross-route reflected-scale and capacity tests
+
+Source PR #959 preserves an **unreviewed** full-source decision theorem for a
+supplied line and two positive scales: feasibility is equivalent to the
+absence of individually forbidden pairs and parity consistency of all
+lower/upper sign constraints. It also gives a strict 157-label nonglobal
+competitor, including two contact isolates. At leading optimal density, a
+separate moment theorem forces both scales of any feasible one-step endpoint
+of diameter at most `(1+o(1))D` to tend to one. This gives no rate or strict
+lower-order improvement.
+
+The same batch records exact counterexamples to general Steiner-capacity
+preservation: a four-label triangle-free global minimizer loses capacity
+`4 -> 3`, and a separate unbounded triangle-free fixed-container-optimal
+family loses linearly many sites after symmetrization but is nonglobal for
+diameter. These do not settle the eventual global-minimizer question.
+
+The exact next obligation remains a full-label strict-sub-`D` competitor for
+every sufficiently large triangle-free global minimizer. On the reflected
+route, parameters and signs must be extracted near the identity while meeting
+every lower and upper pair bound, including isolates. On a container route,
+the required repacking theorem must use global-source information beyond
+triangle-freeness or leading density. Read the [focused track](../../research/tracks/global-reflected-scale-capacity-pr959.md),
+[reports and exact verifiers](../../research/proposals.md), and
+[candidate registry](candidate-registry.json). No theorem-state or C-II status
+changes.
