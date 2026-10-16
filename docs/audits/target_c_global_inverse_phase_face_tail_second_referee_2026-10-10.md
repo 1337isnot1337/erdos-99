@@ -1,5 +1,13 @@
-<!-- theorem-state: {"artifact_id":"ART-886FE82FF93C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+<!-- theorem-state: {"artifact_id":"ART-886FE82FF93C","canonical":false,"claim_ids":["C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION"],"claim_statuses":{"C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION":"audited-working"},"index":"docs/state/artifact-index.jsonl","status":"audited-working","target":"target-c"} -->
 # Target C Audit.236 — second referee and repair of the inverse-phase face-tail exclusion
+
+> **Publication lifecycle:** the repaired sequence exclusion is audited-working
+> on the basis of agent audits. Independent human mathematical review is still
+> required before canonical reuse. This imports the correction without adopting
+> the other promotions proposed in source PR #947. Global chart/rate assertions
+> from Audit.202 are withdrawn; all source labels and both global hypotheses
+> remain required.
+
 
 Date: 2026-10-10. Audit base: `origin/main=ab6dd3336f9f8d440f2bada76edb32153391cddc`, state `2026-10-10.audit.234`.
 

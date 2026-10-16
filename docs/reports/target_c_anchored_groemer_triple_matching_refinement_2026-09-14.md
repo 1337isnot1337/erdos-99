@@ -247,3 +247,8 @@ diameter.
 C-II and Level I remain open.
 
 ---
+
+
+**Recovery provenance:** copied from `research/c2-closure-sol-20260914-r7` at exact
+tip `1541dac85e9ddf6450bb3cd7b14f5ce76e119420` during the 2026-10-04 Slot 2
+branch audit. This recovered claim remains unreviewed and noncanonical.

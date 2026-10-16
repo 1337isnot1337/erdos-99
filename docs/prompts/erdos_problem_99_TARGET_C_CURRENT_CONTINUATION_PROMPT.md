@@ -341,3 +341,10 @@ Do not use without a new proof:
 ## Research standard
 
 Before promoting a new lemma, write its exact dependency chain to either an exact unit triangle, a source-preserving strict sub-`D` competitor, or the Level I conclusion. A computation may certify finite arithmetic or a regression; it does not supply global optimality.
+
+
+Publication correction: `C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION` is now
+**audited-working**. Audit.202's global chart and `O(D^(4/5))` endpoint rate are
+withdrawn. Use the [Audit.236 sequence-only correction](../audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md)
+only as agent-audited working mathematics pending independent human review;
+keep both common-frame and face-tail premises explicit.

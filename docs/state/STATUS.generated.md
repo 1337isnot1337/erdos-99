@@ -2,8 +2,8 @@
 
 This file is generated from `docs/state/theorem-state.yaml`. Do not edit it by hand.
 
-- State version: `2026-10-10.audit.234`
-- State date: `2026-10-10`
+- State version: `2026-10-15.publication.1`
+- State date: `2026-10-15`
 - Level I: **OPEN**
 
 ## Targets
@@ -379,7 +379,6 @@ This file is generated from `docs/state/theorem-state.yaml`. Do not edit it by h
 | `C-NEAR-TRIANGULAR-CHART-DOUBLE-PORT-LOCALIZATION` | target-c | canonical | — | `docs/audits/target_c_near_triangular_chart_double_port_localization_independent_audit_2026-10-09.md` |
 | `C-CII-SLOW-CHART-DOUBLE-PORT-COVER-EXCLUSION` | target-c | canonical | `C-SLOW-CHART-DOUBLE-PORT-COUNT`, `C-ZRF`, `C-WOODALL` | `docs/audits/target_c_slow_chart_double_port_count_independent_audit_2026-10-09.md` |
 | `C-TYPEII-SINGLE-CELL-INVERSE-PHASE-EXCLUSION` | target-c | canonical | `C-UNIFORM-HARMONIC-CELL-AREA`, `C-TYPEII-FACE-TAIL-PORT-MULTIPLICITY` | `docs/audits/target_c_typeii_single_cell_inverse_phase_exclusion_independent_audit_2026-10-09.md` |
-| `C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION` | target-c | canonical | `C-RHOMBUS-POP`, `C-SLOW-LATTICE-DIAMETER-ENDPOINT-BOUND`, `C-ZRF`, `C-WOODALL` | `docs/audits/target_c_global_inverse_phase_face_tail_exclusion_independent_audit_2026-10-09.md` |
 | `C-ALL-BRANCH-HULL-TRAIN-DEPLETION` | target-c | canonical | `C-FS-GEOM`, `C-LINEAR-NONMATCH`, `C-LOADED-HULL`, `C-RHOMBUS-POP`, `C-PUNCTURED-PHASE`, `C-COHERENT-GRAINS`, `C-TRAIN-INTERFACE-CURRENCY`, `C-NEARBY-DIAMETER-ENDPOINTS-FULL-HULL-SIDE`, `C-HARMONIC-COMPONENT-SQRT-COUNT`, `C-FS-DIAMETER-MIDPOINT-D2-3` | `docs/audits/target_c_all_branch_hull_train_depletion_independent_audit_2026-10-09.md` |
 | `C-HULL-TRAIN-FACE-END-NORMAL` | target-c | canonical | `C-FS-DIAMETER-MIDPOINT-D2-3`, `C-LINEAR-NONMATCH`, `C-LOADED-HULL`, `C-NEARBY-DIAMETER-ENDPOINTS-FULL-HULL-SIDE`, `C-RHOMBUS-POP` | `docs/audits/target_c_hull_face_end_pentagon_budget_independent_audit_2026-10-09.md` |
 | `C-ALL-BRANCH-HULL-FACE-END-BUDGET` | target-c | canonical | `C-SHORT-UNIT-POLYGON-DIRECTION-WINDOW`, `C-HULL-TRAIN-FACE-END-NORMAL`, `C-ALL-BRANCH-HULL-TRAIN-DEPLETION`, `C-LINEAR-NONMATCH`, `C-LOADED-HULL`, `C-RHOMBUS-POP` | `docs/audits/target_c_hull_face_end_pentagon_budget_independent_audit_2026-10-09.md` |
@@ -396,6 +395,7 @@ This file is generated from `docs/state/theorem-state.yaml`. Do not edit it by h
 | `C-BOUNDED-VARIATION-CHART-PORT-SCARCITY` | target-c | canonical | `C-ACTUAL-DIAMETER-ENDPOINT-STRIP-BOUND`, `C-NEAR-UNIT-ATLAS-PORT-SCARCITY`, `C-FS-GEOM`, `C-LOADED-HULL` | `docs/audits/target_c_bounded_variation_chart_port_scarcity_independent_audit_2026-10-09.md` |
 | `C-CII-ACTUAL-DIAMETER-NORMAL-ATOMLESS` | target-c | canonical | `C-FS-GEOM`, `C-ZRF`, `C-WOODALL`, `C-LOADED-HULL` | `docs/audits/target_c_actual_normal_separate_face_independent_audit_2026-10-09.md` |
 | `C-ALL-BRANCH-SEPARATE-FACE-FLOOR` | target-c | canonical | `C-CII-ACTUAL-DIAMETER-NORMAL-ATOMLESS`, `C-FS-GEOM`, `C-ZRF`, `C-WOODALL`, `C-LOADED-HULL`, `C-TRAIN-INTERFACE-CURRENCY`, `C-LINEAR-NONMATCH`, `C-RHOMBUS-POP`, `C-PUNCTURED-PHASE` | `docs/audits/target_c_actual_normal_separate_face_independent_audit_2026-10-09.md` |
+| `C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION` | target-c | audited-working | `C-RHOMBUS-POP`, `C-CURVED-BOUNDARY-LATTICE-LOCAL-CAPACITY`, `C-ZRF`, `C-WOODALL` | `docs/audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md` |
 | `C-TYPEII-CAP-LOCAL-HARMONIC-GRID` | target-c | audited-working | `C-FULLCORE-NEAR-DISK`, `C-COHERENT-GRAINS`, `C-ATTACH-CURRENCY`, `C-PSEUDO-GRID`, `C-HOLE-GRID-DIAMETER` | `docs/audits/target_c_cap_local_harmonic_grid_independent_audit_2026-10-08.md` |
 | `C-TYPEII-CAP-DEEP-SAME-HOST-ATTACHMENT` | target-c | audited-working | `C-TYPEII-CAP-LOCAL-HARMONIC-GRID`, `C-FULLCORE-NEAR-DISK`, `C-LOADED-HULL`, `C-ATTACH-CURRENCY`, `C-HARMONIC-CELL-TILING` | `docs/audits/target_c_deep_same_host_attachment_independent_audit_2026-10-08.md` |
 | `C-DEEP-FAR-COMPLETE-GRID-LOADED-RETURNS` | target-c | audited-working | `C-PSEUDO-GRID`, `C-RHOMBUS-BULK-LOADED-RETURN-BOUND` | `docs/audits/target_c_deep_far_cap_grid_independent_audit_2026-10-08.md` |

@@ -1,14 +1,14 @@
 # Authoritative theorem state
 
 <!-- BEGIN GENERATED: theorem-state-snapshot -->
-**Generated state snapshot (`2026-10-10.audit.234`):** Level I **OPEN**; Target A **OPEN** through Section 177; Target B **OPEN**; Target C **C-I CLOSED / C-II OPEN**.
+**Generated state snapshot (`2026-10-15.publication.1`):** Level I **OPEN**; Target A **OPEN** through Section 177; Target B **OPEN**; Target C **C-I CLOSED / C-II OPEN**.
 
 Machine-derived tables: [`state/STATUS.generated.md`](state/STATUS.generated.md) and [`state/THEOREM_GRAPH.generated.md`](state/THEOREM_GRAPH.generated.md).
 <!-- END GENERATED: theorem-state-snapshot -->
 
 **LEVEL I STATUS: STILL OPEN. Target A OPEN; Target B OPEN. C-I CLOSED; C-II OPEN.**
 
-The [manifest](state/theorem-state.yaml) controls lifecycle. The source snapshot is `5dcbdc3dfa1f9be370602cc54d50e68eabb88f56`; the source's version label remains `2026-10-10.audit.234`. Some registered later reductions have higher audit numbers; neither their numbers nor this date label override the exact manifest entries.
+The [manifest](state/theorem-state.yaml) controls lifecycle. The source snapshot is `5dcbdc3dfa1f9be370602cc54d50e68eabb88f56`; the inherited source version is `2026-10-10.audit.234`. Publication state `2026-10-15.publication.1` withdraws one unsupported canonical intermediate inference as described below. Numbering does not override exact manifest entries.
 
 ## Target A
 
@@ -30,6 +30,14 @@ DT1–DT4, TG1–TG3, PDG, PC1/PC3, MCP1/fixed-lambda MCP2 and GPI have their st
 $$\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},\quad\operatorname{rank}R_{C\cup H}[V]=2v-3,$$
 $$e+h\ge2v-2,\qquad h\ge\delta\ge\lceil D\rceil.$$
 The full-source extension is rejected. Core rigidity gives no isolate population bound.
+
+**Publication correction:** `C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION` is now
+**audited-working**, with the [Audit.236 corrected sequence proof](audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md).
+Audit.202 did not establish its global Lipschitz chart or `O(D^(4/5))` endpoint
+rate; both are withdrawn. The corrected `q=o(D)` exclusion under the same two
+unextracted global hypotheses has agent audit only and awaits independent human
+review before canonical reuse. No declared theorem depends on this ID at the
+frozen base. Other canonical lifecycles and Level I/A/B/C-I/C-II status are unchanged.
 
 The full-core branch still needs a source-realized face-coupled finite move or discrete replacement passing every lower/upper source-pair constraint and unary rhombus test, yielding strict contact loss at $D$ or a same-cardinality strict sub-$D$ competitor. The macroscopic-container branch still needs arbitrary-container capacity/restoration or a moved-core strict-diameter closure. Local folds, supplied-set deletion and population counts do not supply these endpoints. [Full C-II frontier](targets/target-c/CURRENT.md).
 

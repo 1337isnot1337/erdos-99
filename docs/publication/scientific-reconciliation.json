@@ -1,0 +1,2325 @@
+{
+  "schema_version": 1,
+  "source_scientific_baseline": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+  "source_main_reviewed_through": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+  "destination_review_base": "afa7f7ec8b93b39efb921f4f47d132e4219b5df8",
+  "initial_editorial_comparison_base": "7492a6adcc5ba673f53396a0867ff07a0fe2f655",
+  "freeze_policy": "These exact source and proposal revisions define this scientific release; later private research is not an automatic publication prerequisite.",
+  "source_main_delta": [
+    {
+      "source_path": ".github/workflows/theorem-state.yml",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "f7a5289c532e6fcd220de0c3d2859acb650f03b1",
+      "source_mode": "100644",
+      "source_sha256": "4dd539f8420fa31b6f9084669ae05ee77e96348673ccbabf453719d0361f3803",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "docs/audits/global_collective_source_reconciliation_2026-10-15.md",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "f17cb9f5844f5e8619636dc5adeb43fc10e00ee2",
+      "source_mode": "100644",
+      "source_sha256": "ed08808ea15b2c3239d0b99ddfe1150f290bafa8455ebe0556536cbc1ddc8536",
+      "disposition": "exclude",
+      "reason": "Proof-audit preservation ledger reviewed; its unique two complete reports and exact verifiers are retained, while branch cleanup/activity evidence is private administration."
+    },
+    {
+      "source_path": "docs/ci/ADVERSARIAL_TESTS.md",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "7e0c4d9ff10215b1563411977da70bcb87b82066",
+      "source_mode": "100644",
+      "source_sha256": "86a95a270036c27f5f8a69db4ebddaea5aa4377e00a6c43a2125c39e5ab40e67",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "docs/ci/BENCHMARKS.md",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "539cfd4b4d9edcb23b63da69b6ccf9e9374f06df",
+      "source_mode": "100644",
+      "source_sha256": "20207f19fdba69baa2acdf7fcbcc3c8a99b42255be00f1f6b8f58dc072681f0c",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "docs/ci/IMPORT_SHADOWING_AUDIT.md",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "c231d1329f92ffedfd42e157651e53b681e34bc5",
+      "source_mode": "100644",
+      "source_sha256": "840a6313685c22c9c3dc8883ce20cec2565509bdc8f54a907c0ad93538487ed4",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "docs/ci/LOCALIZED_CI.md",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "e19dd435ddcb0ddca43992717496005a0c2ec25a",
+      "source_mode": "100644",
+      "source_sha256": "818c12c9b228641d36898a0fa87e4fc438eee5149d6010248f7f7d217a057643",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "docs/ci/benchmark-results.json",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "c863246a2b0dfa547a502e3ae95847bb9a50f376",
+      "source_mode": "100644",
+      "source_sha256": "232f10603e4e65ee73c0b30a059ba9b5ef1eafa2336d498b9636ce271f2d9e31",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "docs/maintenance/issue-986-preservation.json",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "bffe21a452ea85a867fe4adf3981548faaf63e30",
+      "source_mode": "100644",
+      "source_sha256": "49b41cc007ad55cb0b246203139506c55d265fdde7b8c1b0ddf3dfe764e3468b",
+      "disposition": "exclude",
+      "reason": "Recovery/activity inventory, with no additional proof premise; retained mathematical preservation sources already have exact inclusion records."
+    },
+    {
+      "source_path": "docs/reports/global_joint_stress_strain_phase_mechanism_2026-10-12.md",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "8936bfc997d7dd816b505d12e867fdf49256c64f",
+      "source_mode": "100644",
+      "source_sha256": "ae5ede4071475cb9d957b4326dccc5ffcbc2d3297c66e340e3d0b3111d06638b",
+      "disposition": "retain supporting result",
+      "reason": "Byte-identical substantive noncanonical report/verifier imported in destination PR #4; formal/finite scope only."
+    },
+    {
+      "source_path": "docs/reports/global_separable_distortion_obstruction_2026-10-12.md",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "0010924a77aa84485e16cd49109a27cea33e41f2",
+      "source_mode": "100644",
+      "source_sha256": "de71af209c8ea4753862de88d0a9029ab4d209dc4ce439096547ad8aad56a439",
+      "disposition": "retain supporting result",
+      "reason": "Byte-identical substantive noncanonical report/verifier imported in destination PR #4; formal/finite scope only."
+    },
+    {
+      "source_path": "docs/state/artifact-index.jsonl",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "1eedefc916a982926b16b05cb6af9470c014b3e0",
+      "source_mode": "100644",
+      "source_sha256": "d912e77635d3838bf0e304a74cfd60e77318cd0d9996d1bec97c3da0992be67e",
+      "disposition": "exclude",
+      "reason": "Private generated index contains excluded artifacts. Public index is regenerated from retained source and current publication lifecycle."
+    },
+    {
+      "source_path": "research-packages/ci-protocol-example/README.md",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "e4ad13a193f2941aaa63f7d92f1176f00f1f0d82",
+      "source_mode": "100644",
+      "source_sha256": "b7f4a359065c45e3bfbae288fd8a3f0e1b2d4bce1174cb248cffe4ca4200e85a",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "research-packages/ci-protocol-example/SOURCES.json",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "fd220893db9575347812e0967023feabc70d7946",
+      "source_mode": "100644",
+      "source_sha256": "b008ba0bfb583b0cee84c6fbcf17616a01f7a6f8f87fa17cfed365f5051fae7d",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "research-packages/ci-protocol-example/TASK.json",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "d65ba9c844307402d31a05f13628b482b437887b",
+      "source_mode": "100644",
+      "source_sha256": "c4c7d516d582874df8382eb4476556ddd62464b502be46fd5d642f23b39082e4",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "research-packages/ci-protocol-example/VERIFY.json",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "07efc0f59e498e1786de9bba148bf130cac60199",
+      "source_mode": "100644",
+      "source_sha256": "d1dd969b508d89d9129677c19aeb5cff129ddab5f65e1972a00b8e192baf5737",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "research-packages/ci-protocol-example/verify.py",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "75e08a8eb62705edfea6b8ad839dfc76b7cff59c",
+      "source_mode": "100644",
+      "source_sha256": "e017552cba266e14973413b6360c3fa3bbaa437a41fb6fdbc116beccf81f7a8f",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "research/README.md",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "20c95bbcdfd5e7611502116fdbcd29e52c67a5c2",
+      "source_mode": "100644",
+      "source_sha256": "215bfd7d25b61f361ffc99f905b19b3809e1702089e643e381b252367ec9d657",
+      "disposition": "exclude",
+      "reason": "Private campaign catalogue is replaced by public research navigation, tasks, and proposal catalogue; new substantive report/verifier links are retained directly."
+    },
+    {
+      "source_path": "research/global_collective_run_2026-10-12.md",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "dc6449a5b5d653a0a79349e09e6f2050f40d553d",
+      "source_mode": "100644",
+      "source_sha256": "24961b6f03d2fbb803ddad539770362cc2916520ba0f5b18b3e6cdaef1abb7a1",
+      "disposition": "exclude",
+      "reason": "Campaign/run diary; unique formal and separable mathematics is preserved in the two standalone reports and exact checkers."
+    },
+    {
+      "source_path": "research/verify_global_joint_phase_compatibility.py",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "086386d8085d0bfc339956aa38c379c147238d6d",
+      "source_mode": "100644",
+      "source_sha256": "d796a3fc40b218e373f919539e982e5a664eaf696ba26094b29cc44e18969b28",
+      "disposition": "retain supporting result",
+      "reason": "Byte-identical substantive noncanonical report/verifier imported in destination PR #4; formal/finite scope only."
+    },
+    {
+      "source_path": "research/verify_global_separable_distortion_obstruction.py",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "ad42bb54ddeb920dfbf0c1b0d01ad726b74d73f2",
+      "source_mode": "100644",
+      "source_sha256": "f15d813f9a079442685610b6dc17d0726ba887cc57ce9d9c7d1cec2f1287694e",
+      "disposition": "retain supporting result",
+      "reason": "Byte-identical substantive noncanonical report/verifier imported in destination PR #4; formal/finite scope only."
+    },
+    {
+      "source_path": "tools/benchmark_local_ci.py",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "458e885d97b9979b174708052b5d9beb9e2c7ac9",
+      "source_mode": "100644",
+      "source_sha256": "fccbe0bfb96c523c6a2f5e8c0c713f06dc9a7ace8954ab0a77a31ea1df4025bd",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "tools/ci_integrity.py",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "8812d301bca680052dfaa63a3b256e3b87a42ded",
+      "source_mode": "100644",
+      "source_sha256": "420df0dc05d6f7714fdaf03b5af528f2b0d046467a670f324bfb537c588f22b2",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "tools/local_ci.py",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "0801648bb487588257b1366f3b33a6e97190e677",
+      "source_mode": "100644",
+      "source_sha256": "4445359cfbbd9b052dd107b6b80bf032193c07a7bb89a7e314a126cd544815a1",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "tools/localized_ci/__init__.py",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "1b3da0417f8ccecea69c98f99516e39b885d9237",
+      "source_mode": "100644",
+      "source_sha256": "71c665bfe3b4bd7c309f997c2ef0983d84825e23ef0fe54af8f5df60b2ca2dd4",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "tools/localized_ci/packages.py",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "82f6a80c3adb7fcb65efa8732e1d0db61a0c4f51",
+      "source_mode": "100644",
+      "source_sha256": "10e36e2d43a27edb7d786bf1d8dff539ed63776a27adcfca14fcfa4f005a565e",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "tools/localized_ci/plan.py",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "884b3e2f76d1aa48ddca429dd3b200996943da29",
+      "source_mode": "100644",
+      "source_sha256": "5c93559adbedae8bfb8c4e92dfa28bf6c602dbbccdaea4fdfbadbd23b04c993a",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "tools/localized_ci/replay.py",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "5848a3fd61f679aa619b0d7fc69480287f2ebbfb",
+      "source_mode": "100644",
+      "source_sha256": "444e56ad2f4615a94157f29d3323c5c4a634940f87546e3163b749f9452f1523",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "tools/test_local_ci.py",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "c613e6d61df45ce818cf3f3d21218e48947d0fa4",
+      "source_mode": "100644",
+      "source_sha256": "0a54855e41dede9c9a4ace2923f8a1eff2f8c4aec29f7ce00822b17341a23f8a",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "tools/test_prelaunch_workflows.py",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "ad2b05daaf3d027e868a6e8f116dca39f7034163",
+      "source_mode": "100644",
+      "source_sha256": "a9d383c62ee69d2611913658bfb045fd62df2a0107c8d35365e106a12eeb094f",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    },
+    {
+      "source_path": "tools/test_verification_wheels.py",
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "5a4788e555abe2eb610c1f586944eced998a2f8f",
+      "source_mode": "100644",
+      "source_sha256": "8b9c7a19042a2a2b8b2179689e021430e748c2a716fcc58256690b88d5669ca4",
+      "disposition": "exclude",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    }
+  ],
+  "open_source_proposals": [
+    {
+      "source_proposal_number": 1007,
+      "source_head": "2a6dcb2dffe803a967d3766068ded434f0560185",
+      "title": "Complete original14 periodic-extension preservation and activity disposition",
+      "disposition": "exclude optional addition",
+      "reason": "Private recovery/activity disposition only. Its periodic extension remains conditional in PR956 and is not a prerequisite of the frozen public corpus.",
+      "files": [
+        {
+          "source_path": "docs/maintenance/issue-986-dirty-worktree-dispositions.json",
+          "source_blob": "6d18cdaeeee62a3a5e54dcf94274ac46aedc87ee",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/maintenance/original14-periodic-extension-preservation-2026-10-15.md",
+          "source_blob": "a5f229e9bb168d197374e98d4b9392d75be3d5ad",
+          "disposition": "excluded optional research/administration"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 970,
+      "source_head": "3d94a44ed245ad636685d7a3919acdf9ebd53753",
+      "title": "Target B: near-disk seamed grains refute scalar-only virtual payment",
+      "disposition": "retain supporting results",
+      "reason": "Substantive reports, verifiers and necessary fixtures already retained at this exact head; private campaign README/state/generated changes are intentionally excluded, and all proposed claims remain unreviewed.",
+      "files": [
+        {
+          "source_path": "docs/reports/target_b_seed084_near_disk_seamed_grain_regression_2026-10-13.md",
+          "source_blob": "d68b1ec98480743e1efcb5de1324c2e7f57c4e15",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "56d62904e7a40bc680fa023c916171db851c9add",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/README.md",
+          "source_blob": "23ce5260185896277100bbfc80523b219da52fb8",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/seed084/certificate.json",
+          "source_blob": "7d0d111b69ece7e5d6f91827c10c79280854754b",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/seed084/run-lock.md",
+          "source_blob": "a51e8cedbf56ea118a0de5180b4e6a8f1b298ad9",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/seed084/verify_seamed_grains.py",
+          "source_blob": "4025847e55d847932b133ce57cf0983aeb3ad97a",
+          "disposition": "retained exact source version"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 969,
+      "source_head": "b3983cdc7f4ca32ad8083eade92952d451c60848",
+      "title": "Target A seed 63: tight-isolate reduction and fully locked neutral fan",
+      "disposition": "retain supporting results",
+      "reason": "Substantive reports, verifiers and necessary fixtures already retained at this exact head; private campaign README/state/generated changes are intentionally excluded, and all proposed claims remain unreviewed.",
+      "files": [
+        {
+          "source_path": "docs/reports/target_a_seed063_tight_isolates_and_locked_fan_regression_2026-10-13.md",
+          "source_blob": "df0f3bcfebc7b84f710e7d0a9d7b4866178eac43",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "594b1bc3d22fa06273973096f2923e1be0864c1d",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/README.md",
+          "source_blob": "7fcf22d3c6dba8c9faeb3b6ad7fc71133e978d40",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_target_a_seed063_tight_isolates.py",
+          "source_blob": "d52c1bdabba9f166864db05eec1f8f13b1fed9ba",
+          "disposition": "retained exact source version"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 967,
+      "source_head": "3a80b4bd2d75a439835ab26a863521816a0f39d1",
+      "title": "Finite diameter improvement requires linear local growth in rhombus meshes",
+      "disposition": "exclude optional addition",
+      "reason": "Unreviewed nonglobal rhombus-mesh endpoint/nonexpansion obstruction. Useful additional research, but not a required premise; current finite-rhombus regressions already support bounded public tasks. Defer independent scientific/rights review.",
+      "files": [
+        {
+          "source_path": "docs/reports/global_nonexpanding_rhombus_mesh_obstruction_2026-10-13.md",
+          "source_blob": "58b9ebcd96253241332b445086ff6c224c6ba77b",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "17ccd09ed77d686f5f0d2cbe270136daf46a59a1",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/README.md",
+          "source_blob": "68199ce24f5c1e23ad3cdd718d9ff6785ae84a48",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/check_seed054_cartesian_certificate.py",
+          "source_blob": "7fb1fca10d04e42fc32fac7eb90b2115760443e9",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/seed054_rhombus_mesh_certificate.json",
+          "source_blob": "977870a0baa83e20093800587f7e21c52b40b384",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/seed054_run.md",
+          "source_blob": "78469d47b960e144ee592ac73ba6ff22b657c1ad",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_seed054_rhombus_mesh.py",
+          "source_blob": "22feb050c1745501d1d3482c138f4ce76c530663",
+          "disposition": "excluded optional research/administration"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 966,
+      "source_head": "88b473899edc5f63c50aa6f90bf9a4d63112a66d",
+      "title": "Target A: coembedded locked hulls with full Schur rank (seed 66)",
+      "disposition": "retain supporting results",
+      "reason": "Substantive reports, verifiers and necessary fixtures already retained at this exact head; private campaign README/state/generated changes are intentionally excluded, and all proposed claims remain unreviewed.",
+      "files": [
+        {
+          "source_path": "docs/reports/target_a_seed066_coembedded_locked_fullrank_2026-10-13.md",
+          "source_blob": "6913676149bb32c1c128aeba40231e6cf3995dd9",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "20d5b867d2faebe4add8a584f0b37ae38afede10",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/README.md",
+          "source_blob": "723af63d3f4002162010fb8589eec66deb30d2e6",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_a_seed066_locked_fullrank_certificate.json",
+          "source_blob": "284451fb2280b8e358e84b277536bb7b781574b4",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/verify_target_a_seed066_locked_fullrank.py",
+          "source_blob": "4bfd04586257b699555c7816250da585a5f1933a",
+          "disposition": "retained exact source version"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 960,
+      "source_head": "c75e519426e3a88839567411fe3381160f3aa3cb",
+      "title": "Global transformation barriers and dense source regressions",
+      "disposition": "exclude optional addition",
+      "reason": "Unreviewed factorized/Mobius, planarity and radius regressions; source proposal records an autonomous audit and the retained noncanonical scope. Core separable and rotated-field obstructions are already retained from source PR1005. Additional method variants are optional research, not a release prerequisite.",
+      "files": [
+        {
+          "source_path": "docs/audits/pr960_autonomous_proof_audit_2026-10-15.md",
+          "source_blob": "104ab665a79d1b9a6848228c987740207f95bdd2",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/global_dense_factorized_barrier_2026-10-12.md",
+          "source_blob": "09e748b3a55c6085301fd9ca841c862f9436e074",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/global_factorized_distance_barrier_2026-10-12.md",
+          "source_blob": "bae41f27449a5e43d7967cbc1f9227c7ec1e32bf",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/global_planarity_and_radius_barriers_2026-10-12.md",
+          "source_blob": "fd202c2c52e7f917eb98491f28d0c79e2a552633",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "0f9a0000e6dfbb68f527fde6ac126f43dea8bb11",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/README.md",
+          "source_blob": "8ed245be5e6a776859bd4f406ad42f8e1a447e3e",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/global_factorized_graph_alternative.py",
+          "source_blob": "3286557c5e6600761327e640e548da0935191983",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_dense_factorized_barrier.py",
+          "source_blob": "2533c1f03a26d4a2edbeb0c2d9205c12e6e23b0c",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_factorized_distance_barrier.py",
+          "source_blob": "e41f7c414ac530afbfc5885ed31291d3f95085f9",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_factorized_graph_alternative.py",
+          "source_blob": "8e49ea574afe0e8ee727079a33a852495aa2d304",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_planarity_and_radius_barriers.py",
+          "source_blob": "cc6235685106e48e385a0d34669720015a1654b9",
+          "disposition": "excluded optional research/administration"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 959,
+      "source_head": "e25041f236d268a7e815dacd346180989690ed71",
+      "title": "Global competitor tests and exact capacity regressions",
+      "disposition": "exclude optional addition",
+      "reason": "Unreviewed reflected-scale and Steiner capacity-loss candidates/regressions with an autonomous audit; no required public task or accepted claim depends on these alternative competitor methods. Defer as optional supporting research.",
+      "files": [
+        {
+          "source_path": "docs/audits/pr959_autonomous_proof_audit_2026-10-15.md",
+          "source_blob": "5e7d573e0a2d6c806d4165eea8a08ef414f1fc72",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/global_reflected_scale_competitors_2026-10-12.md",
+          "source_blob": "b79f3b73f000e81e3e879bd1f6aaaf046d452ad0",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/global_reflection_moment_obstruction_2026-10-12.md",
+          "source_blob": "05011e2dac6d38e364ddd3b6c3e9bc2bd40802ce",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/global_steiner_capacity_loss_2026-10-12.md",
+          "source_blob": "6d138eaab1af27ab2ddc1b345157aa3414cbd06d",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "7511843a875d8a4fd60a2cf895a2ecc6d1577296",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/README.md",
+          "source_blob": "b47d8d7b6eefb30c68b70d9d3644b53ca5f5e6b5",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/global_capacity_run_2026_10_12.md",
+          "source_blob": "51a6e1b99728edae0b6c075d5fa16ecf243d2350",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_reflected_scale_2026_10_12.py",
+          "source_blob": "ec4ac22ec9bf0d9964ec8c90d9e352961a9e7c7a",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_steiner_capacity_loss_2026_10_12.py",
+          "source_blob": "625143ca011a7e5ffee00089bddb264a6af3e0e0",
+          "disposition": "excluded optional research/administration"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 958,
+      "source_head": "0a72556e786024c9313c7d6287e26c20c1e9b9b8",
+      "title": "Global endpoint certificates and complete-source obstruction checks",
+      "disposition": "exclude optional addition",
+      "reason": "Unreviewed palette/colouring endpoints and planar-rank obstruction. Fixture provenance introduces an additional external-data rights question; not in current proof/task closure. Exclude fixtures and associated optional method rather than imply clearance.",
+      "files": [
+        {
+          "source_path": "docs/audits/pr958_autonomous_proof_audit_2026-10-15.md",
+          "source_blob": "a27e7e6120d369c86fe69e2dcee345b2cf41138f",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/global_colouring_lift_and_planar_rank_barrier_2026-10-12.md",
+          "source_blob": "6e2a1d248af683691541676a0ac7daac82664f5e",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/global_palette_endpoints_and_full_source_exhaustion_2026-10-12.md",
+          "source_blob": "d01574fc612e1cd1baa796e03dfdd8c63825e770",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "65427822249f180c7629b8906ba5d620d28fdb29",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/README.md",
+          "source_blob": "424b805baae1704d148204396e36502e63f7ee75",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/exact_trig_intervals_2026_10_12.py",
+          "source_blob": "d5d05ffd6a37976279f43f4b12bb00070630f60d",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/fixtures/global_palette_translation_2026_10_12/cci132.txt",
+          "source_blob": "eb22940d1de93c1c37df6661a3f8eba266820e12",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/fixtures/global_palette_translation_2026_10_12/cci175.txt",
+          "source_blob": "237816830b00e8f17f023946b792aea21f0d4fa4",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/fixtures/global_palette_translation_2026_10_12/provenance.json",
+          "source_blob": "77e40f7a9486063340b18e872852e16cb549b999",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_colouring_lift_rank_2026_10_12.py",
+          "source_blob": "38ea395e90ab79fbee9e6dd67277b76702a009ce",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_palette_transversal_2026_10_12.py",
+          "source_blob": "b1545956ed6dc8b470d84269521d958a990150ab",
+          "disposition": "excluded optional research/administration"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 957,
+      "source_head": "a11e16998094ab3d7afd9fd07eff8b55909ec406",
+      "title": "Full-source joint diameter-cover exchange and dense regressions",
+      "disposition": "exclude optional addition",
+      "reason": "Unreviewed joint diameter-cover exchange and star regressions. No global source extraction/endpoint theorem is supplied and no retained theorem depends on them; optional research outside frozen closure.",
+      "files": [
+        {
+          "source_path": "docs/audits/pr957_autonomous_proof_audit_2026-10-15.md",
+          "source_blob": "a366b97aafc87f7d1bae96cecb32febde7c54e9f",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/global_joint_diameter_cover_exchange_2026-10-12.md",
+          "source_blob": "0b944f6d45f769cf5d3a3789d640119d3ca227f5",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "f2fc837ff570e66648249e87ae78ac4f116c8a0a",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/README.md",
+          "source_blob": "0df015d2664c13bdf8e6deff688df98a570227a6",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/global_exchange_run_2026_10_12.md",
+          "source_blob": "296cd5af7a9466bb8425727a2fd9dcc7ca41097f",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_exchange_star_family_2026_10_12.py",
+          "source_blob": "395b1654709c2fedabefec616e02d2f414714684",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_joint_exchange_2026_10_12.py",
+          "source_blob": "ed249690a327e1090e9720a0e33ec05bce50ce25",
+          "disposition": "excluded optional research/administration"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 956,
+      "source_head": "bbc549f36ac964fd7eee211782eb2c979d12af32",
+      "title": "Add global population reserve and finite-interface payment candidates",
+      "disposition": "exclude optional addition",
+      "reason": "Conditional linear-reserve/lattice-defect/interface-payment reports; latest periodic extension is an additional conditional package. No required public task premise depends on these unpromoted results; freeze existing canonical reserve and explicit open interface-payment endpoint.",
+      "files": [
+        {
+          "source_path": "docs/audits/pr956_autonomous_proof_audit_2026-10-15.md",
+          "source_blob": "7618a3637766b82017091ae205a45b4f03e31767",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/global_boundary_zigzag_linear_reserve_2026-10-11.md",
+          "source_blob": "5466a7454b469077c0f8532aaff93884680014e0",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/global_lattice_defect_from_linear_reserve_2026-10-11.md",
+          "source_blob": "6b5b423fba0384d856a336c9c8154d1333808a8d",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/global_straight_interface_payment_2026-10-11.md",
+          "source_blob": "1141ee011873d02a35ab526f880ab79d0f19c5ad",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/global_stress_density_regression_2026-10-11.md",
+          "source_blob": "c6af026b41b208c3000a7c6ddbd81afc61ec2542",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "dd3f53b21ad4ea18b5d5b391faf0a2d25cd31bf1",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/README.md",
+          "source_blob": "ef0b0c024cdc9b2cd3233e5c7fee8e99669dd7ab",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_boundary_zigzag_2026_10_11.py",
+          "source_blob": "530f3c7a0047ba599ceccc1ee8f40e60a4c723d8",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_lattice_population_bound_2026_10_11.py",
+          "source_blob": "e16495df8e7e5cbeea4241a141bd7709e5fe10dc",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_straight_interface_payment_2026_10_11.py",
+          "source_blob": "b6cc728fde70394f01eb918e9c8f81cf61344f45",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_stress_density_regression_2026_10_11.py",
+          "source_blob": "d99dc0931e3866ead2edc38077d2c66a1177de87",
+          "disposition": "excluded optional research/administration"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 955,
+      "source_head": "d5afc236a7b1de9567dcb6dda65d957ed91c726b",
+      "title": "Global Level I research: attainment and matching competitors",
+      "disposition": "retain supporting results",
+      "reason": "Substantive reports, verifiers and necessary fixtures already retained at this exact head; private campaign README/state/generated changes are intentionally excluded, and all proposed claims remain unreviewed.",
+      "files": [
+        {
+          "source_path": "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md",
+          "source_blob": "75cc95b37b229431829fdc89812428187ce965a9",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/reports/global_annular_matching_competitor_2026-10-11.md",
+          "source_blob": "04e89371e9489a28e2fee7ebe32e61a71350477d",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/reports/global_level_i_attainment_and_one_contact_2026-10-11.md",
+          "source_blob": "c7e2cfcd5d7fd2ba66f5b15d6e03e2d7f6230526",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "c0c8eab46c4e29b5cb45970dbb7f177167577bfc",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/README.md",
+          "source_blob": "9a0110da2b43a10eba0c90e3df7aea1a7d366831",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/global_annular_matching_2026_10_11.json",
+          "source_blob": "aed1c2dc2971cedcaf4348d7167820908682132f",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/verify_global_annular_matching_2026_10_11.py",
+          "source_blob": "6505aa01547a038432c1ca14b472ddce301fa42d",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/verify_global_one_contact_2026_10_11.py",
+          "source_blob": "fd77f73193e8aa9b46f973cf361070e58a31be8c",
+          "disposition": "retained exact source version"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 954,
+      "source_head": "2cd3bdc12ae5ccbec918c75fbdaf904115c623f4",
+      "title": "Research: global attainment, source reassignment, and near-triangle bounds",
+      "disposition": "exclude optional addition",
+      "reason": "Unreviewed source reassignment, attainment and near-triangle candidates; includes external packing fixtures requiring separate provenance/rights review. Existing retained PR955 covers a standalone attainment/matching lead. Defer optional alternatives.",
+      "files": [
+        {
+          "source_path": "docs/reports/global_attainment_and_parallel_contact_density_2026-10-11.md",
+          "source_blob": "01d56189edbf13b49d793efc302b790e6cc74aa4",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/global_parallel_contact_strict_competitor_2026-10-11.md",
+          "source_blob": "d39562435da2dd07924bf536fd49130868ab30a1",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/global_radial_reassignment_and_dense_local_trap_2026-10-11.md",
+          "source_blob": "794d0205ef8ee90dc0ad57363d44a16e51539196",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/global_source_near_triangle_population_2026-10-11.md",
+          "source_blob": "32ddcbad6f3de7e24dffac8c03ea8cf2f75fd7a7",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "68806a4d92b5e33e2311c57f1d60d2634f7de8b4",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/README.md",
+          "source_blob": "f8e04a4ad3cc06e3f04403203f5418fb48c8691d",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/exact_trig_intervals_2026_10_11.py",
+          "source_blob": "615a3a694c6267ff9388b57d157025f4d363a576",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/fixtures/global_odd_shell_reassignment_2026_10_11/cci132.txt",
+          "source_blob": "eb22940d1de93c1c37df6661a3f8eba266820e12",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/fixtures/global_odd_shell_reassignment_2026_10_11/cci175.txt",
+          "source_blob": "237816830b00e8f17f023946b792aea21f0d4fa4",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/fixtures/global_odd_shell_reassignment_2026_10_11/provenance.json",
+          "source_blob": "3f46a0d005b3d160d9b359ab9b40f67e7a4337a3",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_parallel_contact_competitor_2026_10_11.py",
+          "source_blob": "8f0091af3eda2a646a9681f5224495e45990a8f4",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_parallel_contact_density_2026_10_11.py",
+          "source_blob": "13940b9054fc6b2d05598ae3e21e3e092c6932f0",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_radial_reassignment_barrier_2026_10_11.py",
+          "source_blob": "18986e5f90cbfe6569dc50ec9e83baabc6ce0940",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_global_source_near_triangle_budget_2026_10_11.py",
+          "source_blob": "ab64ca2640320e28d6be3e27d0c9435f547d5c14",
+          "disposition": "excluded optional research/administration"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 953,
+      "source_head": "7be6a6b746e9cf6ea18145248b652c7a0f206dc4",
+      "title": "Target A: derive source-arm fan rank cap",
+      "disposition": "exclude optional addition",
+      "reason": "Unreviewed one-arm source-sector rank-cap proposal. Existing A task endpoints remain open and seed63/66 regressions are retained; this proposed source bridge cannot become a canonical prerequisite by publication import.",
+      "files": [
+        {
+          "source_path": "docs/reports/target_a_slot05_one_arm_source_sector_rank_cap_2026-10-10.md",
+          "source_blob": "3ac4fe9047a0e9471837782d37257e9beb58cfc8",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "85046687968c766d85b4d748b7877110af3773fb",
+          "disposition": "excluded optional research/administration"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 952,
+      "source_head": "3536c0b6f6c2a929d9c96fffbdcfc480735fea3b",
+      "title": "Slot 01: local loaded-anchor upper boxes and inclusive source releases",
+      "disposition": "retain supporting results",
+      "reason": "Substantive reports, verifiers and necessary fixtures already retained at this exact head; private campaign README/state/generated changes are intentionally excluded, and all proposed claims remain unreviewed.",
+      "files": [
+        {
+          "source_path": "docs/reports/target_c_inclusive_floor_closure_and_locked_contact_release_2026-10-10.md",
+          "source_blob": "9a0612972754579ddc9c554c0e8b4657bec518cc",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/reports/target_c_loaded_anchor_parallel_upper_box_2026-10-10.md",
+          "source_blob": "1bb40d9722498b2b51a10dd1fdbc48fd9585657c",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/reports/target_c_outer_owner_amplification_and_common_release_2026-10-10.md",
+          "source_blob": "0f3a2127aeffe3cfaf56a1193d96a0afc198ad31",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/reports/target_c_owner_component_anchoring_and_source_realized_sink_2026-10-10.md",
+          "source_blob": "54a97e49d1d303641ab20f771a69239f45998afc",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/reports/target_c_parallel_release_floor_closure_and_isolate_transport_2026-10-10.md",
+          "source_blob": "bd166e390d33923f828b704231e7fe53572c9265",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "88a2f7eff63c7763e702a530ade7cc557e121ffa",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/README.md",
+          "source_blob": "9c64db454db28d41d978a682b0d7a4a3ac8fcbe3",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/certificates/target_c_common_release_implication_2026_10_10.jsonl",
+          "source_blob": "70c102b6fe28e8e02675628146991d90d02d8a8f",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/certificates/target_c_inclusive_floor_release_2026_10_10.jsonl",
+          "source_blob": "2e673eda7c053c01e9ba76a7cec68245a457d654",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/certificates/target_c_loaded_anchor_upper_box_2026_10_10.jsonl",
+          "source_blob": "7cac99aae6572b46e901cf36de499f0a9215bf06",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/certificates/target_c_owner_amplitude_release_2026_10_10.jsonl",
+          "source_blob": "07836d98cd9de4680e716ad47600fdf68a220ffb",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/certificates/target_c_source_realized_owner_sink_2026_10_10.jsonl",
+          "source_blob": "83bdaf5cbf124cd2cc34c716ed9306220bd6a5ca",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/certificates/target_c_unequal_height_release_2026_10_10.jsonl",
+          "source_blob": "b9ab168021b2ea6592777748bc633bc449c4a57a",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/verify_target_c_inclusive_floor_release_2026_10_10.py",
+          "source_blob": "2d3987a6a88690f624d60439211cc4419df1cbbb",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/verify_target_c_loaded_anchor_upper_box_2026_10_10.py",
+          "source_blob": "ddba90163e93952876ac1d710bcf7c66b4eb2a0e",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/verify_target_c_source_realized_owner_sink_2026_10_10.py",
+          "source_blob": "21de0d3ed504468f923620744d7391d0b74e50cb",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/verify_target_c_unequal_height_release_2026_10_10.py",
+          "source_blob": "6ef4cb3f5ea7644b467411c09394e3fb6b379532",
+          "disposition": "retained exact source version"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 951,
+      "source_head": "0023585a98d8f5f23df64174a091c143710ba78a",
+      "title": "Target C: one-vacancy wall release and exact restoration barriers",
+      "disposition": "exclude optional addition",
+      "reason": "Unreviewed finite wall-release/restoration candidates; no arbitrary-source wall extraction or global closure. Existing canonical scoped refill/capacity results and retained source-realized endpoint proposals supply the frozen prerequisites.",
+      "files": [
+        {
+          "source_path": "docs/reports/target_c_coherent_strip_exact_restoration_capacity_slot07_2026-10-10.md",
+          "source_blob": "4f2760b719148c1b3c7872eca1b4b05097ca75ec",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_core_unilateral_local_rigidity_gap_slot07_2026-10-10.md",
+          "source_blob": "f408b6d829df24a182fe8d8736aeaf3c0327fe88",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_effective_fixed_wall_packet_and_span_payment_slot07_2026-10-10.md",
+          "source_blob": "10fdd79a2470f22faf5558e906407b60bfde626c",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_near_coherent_one_vacancy_pinning_regression_slot07_2026-10-10.md",
+          "source_blob": "ac08eb5e699cd9fe7e2a408f320d409e99ae62f2",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_one_vacancy_full_chart_release_slot07_2026-10-10.md",
+          "source_blob": "5791e6aec0ce56868308e3200e9874285b3ffb52",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_one_vacancy_side_pin_restoration_slot07_2026-10-10.md",
+          "source_blob": "83d3c626d90726f3b4d585016de61abc22863f10",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_rhombic_vacancy_hop_and_two_site_capacity_slot07_2026-10-10.md",
+          "source_blob": "21307104469c70a6d051ce86aa72738683e67ba3",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "3a4d9fd86b07ce141b8c65366e988d91054bd027",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/README.md",
+          "source_blob": "d597dfdbeae9b64e27faec639aa695a91b7aa567",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_effective_fixed_wall_packet_slot07_certificate_2026_10_10.json",
+          "source_blob": "fbcc3f345271b1b4493fd39370a5978822b05db9",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_near_coherent_one_vacancy_pinning_slot07_certificate_2026_10_10.json",
+          "source_blob": "5777da8e7768a7afd51f358c88f3188bd5a1df01",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_one_vacancy_full_chart_release_slot07_certificate_2026_10_10.json",
+          "source_blob": "0fc60b74809da931906f7e848d36a123845c6cbc",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_one_vacancy_side_pin_release_slot07_certificate_2026_10_10.json",
+          "source_blob": "aacd03cb921a38d96c9b5c7c1925b7b50156a264",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_rhombic_vacancy_hop_slot07_certificate_2026_10_10.json",
+          "source_blob": "4e96da9202b2b0a49a496b9dcb3d265d8089aae3",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_target_c_effective_fixed_wall_packet_slot07_2026_10_10.py",
+          "source_blob": "c5069d752b03e09c09f8fb40bb17d3f375ac8300",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_target_c_near_coherent_one_vacancy_pinning_slot07_2026_10_10.py",
+          "source_blob": "8290d755bd746f0c8d1d023bedc2bd40c7cb5549",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_target_c_one_vacancy_full_chart_release_slot07_2026_10_10.py",
+          "source_blob": "adcf92690f684491149d662ebbd142f05d17fbc9",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_target_c_one_vacancy_side_pin_release_slot07_2026_10_10.py",
+          "source_blob": "472664e29281a304efbdf1f90893389aabf5575d",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_target_c_rhombic_vacancy_hop_slot07_2026_10_10.py",
+          "source_blob": "1f487e0e10d5fb640bf36f5349ccff68127f2b2c",
+          "disposition": "excluded optional research/administration"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 950,
+      "source_head": "cbf066bb7489115559bcda34f9f810a1d78826ce",
+      "title": "Target C: rigidity-forced attachment-to-grid linkage",
+      "disposition": "exclude optional addition",
+      "reason": "Unreviewed attachment-to-grid linkage and audit. Current scope remains a bounded workstream; no retained established claim depends on the proposed extraction.",
+      "files": [
+        {
+          "source_path": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+          "source_blob": "30b09e5df5cbd61dbdcb406fca91abfb64a3e1d5",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "source_blob": "90e2cd3b0adeb49a26608c42d76682e630a3a3c0",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "316777f7f1cf6464094addb51f18896de79ca907",
+          "disposition": "excluded optional research/administration"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 949,
+      "source_head": "603ae507f40b4615c1b98a2183927d9f3be6d466",
+      "title": "Target B: exclude atomic Mantel equality at train-ratio floor",
+      "disposition": "exclude optional addition",
+      "reason": "Unreviewed atomic-Mantel and zero-deficit aggregate improvements plus nonglobal connected regression; general multi-grain transfer remains open. Frozen Target B prerequsites use existing canonical inequality and retained seamed-grain regression.",
+      "files": [
+        {
+          "source_path": "docs/audits/pr949_autonomous_proof_audit_2026-10-15.md",
+          "source_blob": "20817e69e01ce1f77e87d19f4632b0cbf3bdce7f",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_b_atomic_mantel_equality_gap_2026-10-10.md",
+          "source_blob": "b7ea04a36481503d5b365a2b1e3dfced403689be",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "90b83e75ef353184d8a588ebe83bba6dacc74953",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/README.md",
+          "source_blob": "9af86c185ff56430d5f8bb8327942276c9b3db39",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_target_b_connected_notch_regression_2026_10_15.py",
+          "source_blob": "2cff20af0b4964e453286815ec30ed7f11e9fab3",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_target_b_zero_deficit_aggregate_arithmetic_2026_10_10.py",
+          "source_blob": "4ab6752bfcb426abf7911b6949a9c98df32e46bd",
+          "disposition": "excluded optional research/administration"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 948,
+      "source_head": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+      "title": "Target C: restrict finite folds and exclude complete bent cores",
+      "disposition": "retain supporting results",
+      "reason": "Substantive reports, verifiers and necessary fixtures already retained at this exact head; private campaign README/state/generated changes are intentionally excluded, and all proposed claims remain unreviewed.",
+      "files": [
+        {
+          "source_path": "docs/reports/target_c_complete_array_diameter_forest_slot02_2026-10-11.md",
+          "source_blob": "a348b142da30c26ca39ca58fd7aac24a315676d2",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/reports/target_c_deep_face_persistence_and_isolate_transport_slot02_2026-10-10.md",
+          "source_blob": "df4ad5883f50ca4bcb1314f52eaa7d07fdbdd249",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/reports/target_c_large_array_boundary_attachment_slot02_2026-10-11.md",
+          "source_blob": "73070fde10984f8d43942ce77e1a718970b99164",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/reports/target_c_nonconstant_face_quarter_fold_exclusion_slot02_2026-10-10.md",
+          "source_blob": "1f229bc6fd13c83fd7bdceaec7561bde401db4c7",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/reports/target_c_quarter_fold_face_obstructions_slot02_2026-10-10.md",
+          "source_blob": "d69ecf5b66d9d266dcf307e785be431651cc9db0",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/reports/target_c_rhombic_quarter_fold_dual_defect_slot02_2026-10-10.md",
+          "source_blob": "ac671d5eca9e688235ab6a200603a1ca811763be",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/reports/target_c_rigid_cycle_pinned_stress_and_arc_stars_slot02_2026-10-10.md",
+          "source_blob": "dc26880861c0909397ab568042aba21ae6ee482b",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "9e463ec67097eef237309a970fc87baf7c8fcb46",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/README.md",
+          "source_blob": "cb385d051f6e68b4e28a96f0e16646af8e9657ba",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_complete_array_diameter_forest_certificate_2026_10_11.json",
+          "source_blob": "87c918d9992391129ccedc4c9395ce806279b634",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/target_c_deep_face_transport_certificate_2026_10_10.json",
+          "source_blob": "fc73737489758899e2fad30e562ca0600e3965a6",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/target_c_large_array_boundary_attachment_certificate_2026_10_11.json",
+          "source_blob": "d96411c4fd2e1fb4f4f82bccf19caad42130f6f9",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/target_c_nonconstant_face_quarter_fold_exclusion_certificate_2026_10_10.json",
+          "source_blob": "8b3eac9480dabde07d53df119cab2821d8b3d8e0",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/target_c_quarter_fold_face_obstructions_certificate_2026_10_10.json",
+          "source_blob": "fad23c6de526520582ca54f079138ef1ade31e87",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/target_c_rhombic_dual_defect_certificate_2026_10_10.json",
+          "source_blob": "053ba2afc573e55779d52a23a0f277d8ed3b5f10",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/target_c_rigid_cycle_pinned_stress_certificate_2026_10_10.json",
+          "source_blob": "bb7cb24dabfadbd85f2a8769332b9aa7c0bd14d5",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/verify_target_c_complete_array_diameter_forest_2026_10_11.py",
+          "source_blob": "f7043a73d65be34040b171f9d411da4555f2511e",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/verify_target_c_deep_face_transport_2026_10_10.py",
+          "source_blob": "ae279ea2469e2f2fb5c13c503ea9607a62c4450c",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/verify_target_c_large_array_boundary_attachment_2026_10_11.py",
+          "source_blob": "90070980268e3f1a7bc86e2f0ca0f24716f15c58",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/verify_target_c_nonconstant_face_quarter_fold_exclusion_2026_10_10.py",
+          "source_blob": "f77a7801ba8b29e79b17350ce816722cce66f1bc",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/verify_target_c_quarter_fold_face_obstructions_2026_10_10.py",
+          "source_blob": "55a505dda56672c174372f71a725de5471e93589",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/verify_target_c_rhombic_dual_defect_2026_10_10.py",
+          "source_blob": "1b4afa414e724def41b7d1bb7ff50abb5b4f2a2f",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "research/verify_target_c_rigid_cycle_pinned_stress_2026_10_10.py",
+          "source_blob": "363b8f56126c1e747da252e25565d7bf00ebb14d",
+          "disposition": "retained exact source version"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 947,
+      "source_head": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+      "title": "Record Target C second-referee audits and repair inverse-phase proof",
+      "disposition": "retain supporting results and apply proof withdrawal",
+      "reason": "Eight complete proposal audits retained, with promotions withheld. Import actual proof correction as audited-working only: withdraw unsupported Audit202 global chart/rate, retain the agent-audited Audit236 sequence proof under original hypotheses; no other promotion adopted.",
+      "files": [
+        {
+          "source_path": "docs/STATE.md",
+          "source_blob": "0e7e70c21f6e67003cb10f26cb960f6880a3fa87",
+          "disposition": "retained frozen main version; proposal change not imported"
+        },
+        {
+          "source_path": "docs/audits/target_c_bounded_variation_contact_port_counts_independent_audit_2026-10-09.md",
+          "source_blob": "ca6e6776a9e447fc31c123a3278fd900332306c7",
+          "disposition": "retained frozen main version; proposal change not imported"
+        },
+        {
+          "source_path": "docs/audits/target_c_diameter_midpoint_mean_tail_independent_audit_2026-10-10.md",
+          "source_blob": "16fcb7a8c1e8552f152709fa24fcdb37542061eb",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/audits/target_c_fused_sign_classes_and_residual_tail_screening_2026-10-10.md",
+          "source_blob": "5b69171eb9f3f9816262bb54d3a850da1ccabd9e",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/audits/target_c_global_inverse_phase_face_tail_exclusion_independent_audit_2026-10-09.md",
+          "source_blob": "2cbe5d29048b9a0736e37a088240a6ace23911d5",
+          "disposition": "retained frozen main version; proposal change not imported"
+        },
+        {
+          "source_path": "docs/audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md",
+          "source_blob": "7667e5fa85f180aa5c971477d3f73798a1995c98",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/audits/target_c_integration_audit_ledger_2026-10-06.md",
+          "source_blob": "2bbf39028c2c8ad4b0202dd3891237665e90ecef",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/audits/target_c_midpoint_mean_tail_second_referee_2026-10-10.md",
+          "source_blob": "ae888872f83e4d3520ffe41acaef4f71cc7db600",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/audits/target_c_one_pin_restoration_gap_capacity_plateau_independent_audit_2026-10-10.md",
+          "source_blob": "0325be2261b6eb1c1e9528feeb7883f8401ce0f8",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/audits/target_c_positive_leaf_anchor_second_referee_2026-10-10.md",
+          "source_blob": "c3ea728a827f276474fb846823f2e8219d705487",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/audits/target_c_positive_leaf_anchor_sharpening_independent_audit_2026-10-10.md",
+          "source_blob": "9668230200c9c2cac9a87d515bd31449bf487a35",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/audits/target_c_referee_run_ledger_2026-10-10.md",
+          "source_blob": "59224819f8e5df1ffba6f2d32194ddebc2fb31f4",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/audits/target_c_slow_chart_contact_port_cover_independent_audit_2026-10-10.md",
+          "source_blob": "246844015df1544acc8732ff8f6c47005583f935",
+          "disposition": "retained exact source version"
+        },
+        {
+          "source_path": "docs/reports/target_c_nested_hexagon_packet_stress_energy_obligation_2026-10-06.md",
+          "source_blob": "c2338abe1f5b6b432d80c10bdcbd68e7e8977f5e",
+          "disposition": "retained frozen main version; proposal change not imported"
+        },
+        {
+          "source_path": "docs/state/STATUS.generated.md",
+          "source_blob": "8b9c0c3d033126d98be4c5b9744f964f761d1292",
+          "disposition": "retained frozen main version; proposal change not imported"
+        },
+        {
+          "source_path": "docs/state/THEOREM_GRAPH.generated.md",
+          "source_blob": "3717526ef7c26905064fd123ca599f186f784e38",
+          "disposition": "retained frozen main version; proposal change not imported"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "14e8647bc606f2c3daf88836d6be7b9aca0209d0",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/state/theorem-state.yaml",
+          "source_blob": "c7bc88d70f694dade3771b6e1f55cd770a0e4ddf",
+          "disposition": "retained frozen main version; proposal change not imported"
+        },
+        {
+          "source_path": "docs/targets/target-c/CURRENT.md",
+          "source_blob": "0b1eded62bd5d610770128be06935d3ac268fc99",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/targets/target-c/README.md",
+          "source_blob": "490baf2173482009721faf99782d70b949ec9a31",
+          "disposition": "excluded optional research/administration"
+        }
+      ]
+    },
+    {
+      "source_proposal_number": 737,
+      "source_head": "73fa41814eb1cdac50ba1eab135461868437edf0",
+      "title": "Target C: owner and wall-packet research handoff",
+      "disposition": "exclude optional addition",
+      "reason": "Historical wall/owner research collection. Shared nested-hexagon report/checkers retain frozen accepted main versions; later branch edits remain unreviewed and do not override current canonical scopes. Remaining wall candidates are optional, with no required source extraction proof.",
+      "files": [
+        {
+          "source_path": "docs/reports/target_c_binary_owner_laminarity_and_crossing_scope_2026-10-06.md",
+          "source_blob": "3e691ea111b6ecdb248ecd3ef018f6165a616302",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_capped_wall_actual_diameter_escape_2026-10-06.md",
+          "source_blob": "e019013be36f59e21c46fb8edb28ae11825854b0",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_closure_run_handoff_2026-10-07.md",
+          "source_blob": "180ba87678c6026f8ca04ee85b0e2da463bb640e",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_collective_wall_deletion_and_global_capacity_regression_2026-10-06.md",
+          "source_blob": "0fe1daf34640673cb9f4582f1b50fc30b66b4a75",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_common_angle_train_closure_and_full_endpoint_2026-10-06.md",
+          "source_blob": "fdad9f22b57acceb7b63cadde489f7684254f4c2",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_curved_unit_wall_isolate_preserving_inward_release_2026-10-06.md",
+          "source_blob": "7cbd8da32a2b13a23a9cfb0b8a8b0ab5b3ddc586",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_hub_owner_terminal_capacity_audit_2026-10-06.md",
+          "source_blob": "07cf54e848154623ad236970a21e7c575362395f",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_near_triangular_curved_wall_exact_capacity_exchange_2026-10-06.md",
+          "source_blob": "6a43925c80655bf1ca8f2c28da683a7538ba8c0a",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_nested_hexagon_packet_stress_energy_obligation_2026-10-06.md",
+          "source_blob": "a561418a42cfa5dae51bd97100c0a2455af0b4e2",
+          "disposition": "retained frozen main version; proposal change not imported"
+        },
+        {
+          "source_path": "docs/reports/target_c_odd_shell_single_vertex_barrier_payment_2026-10-06.md",
+          "source_blob": "fae306b1d531fb3143072fb6d7e0a50b73fc31d1",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_one_vertex_convex_wall_shield_2026-10-06.md",
+          "source_blob": "18e6bd8e5dc93e0ec4749cebdd82fa9920c6e2a7",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_terminal_oo_depletion_and_short_pocket_clauses_2026-10-06.md",
+          "source_blob": "a88b9949a20c716f61c1400b6d895e95bfca93ce",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_three_direction_wall_packet_corner_barrier_2026-10-06.md",
+          "source_blob": "6b24f7fe44dd5ccbf7b4ef75b2a49f45149ef4b1",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/reports/target_c_uneven_convex_wall_bending_and_exact_packet_2026-10-06.md",
+          "source_blob": "7dbcd806ecfa78dc48d776ff55e3c2b929f491b3",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "docs/state/artifact-index.jsonl",
+          "source_blob": "0cad9f8e38f78e509380a39e53519174ca7de10a",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "papers/related/README.md",
+          "source_blob": "4a214782d3cae1054468c1590e5e9b63b950026a",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "papers/related/SHA256SUMS",
+          "source_blob": "f67cdffad1f0f61301cdd9ea6f5431130cb451b2",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/README.md",
+          "source_blob": "0d52559f90d9553d514eeba606d5cc99d7c0afa3",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/discover_target_c_one_deficit_root_release_2026_10_07.py",
+          "source_blob": "8548618dfc20120386765ce217bb2c74dd81a61b",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/discover_target_c_three_direction_nonaffine_packets_2026_10_06.py",
+          "source_blob": "7e8a78d76ebd98620142e057293dd9d64d74d86b",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_acute_horn_sink_obstruction_2026-10-05.md",
+          "source_blob": "d20e220e3739d6ed6d475324d7d7b912b69fa419",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_collective_wall_guard_scope_certificate_2026_10_06.json",
+          "source_blob": "507020b624fc8072d5fd92670ee7562cbdcfc7ad",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_curved_wall_exact_capacity_certificate_2026_10_06.json",
+          "source_blob": "9010ecf70f433dd83d3c881714933a80e9d0dbee",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_curved_wall_isolate_motion_certificate_2026_10_06.json",
+          "source_blob": "99e89d3f7cb9126f182c35dc07232815d8536d00",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_dual_tree_hub_boundary_capacity_2026-10-06.md",
+          "source_blob": "2498064b6a07fb3175dd8d0d2f0aba512e48520e",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_hub_owner_systems_certificate_2026_10_06.json",
+          "source_blob": "81f37fa42b695cba8f393f7fb6d346b8c95eede1",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_implication_basin_terminal_budget_2026-10-05.md",
+          "source_blob": "c4a3449b9ccd6902bd32f5287f89c9c38637030b",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_loaded_sink_double_recurrence_2026-10-05.md",
+          "source_blob": "ccdd4505a329221510cb22adc0e0386799145e55",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_loaded_sink_owner_run_payment_2026-10-05.md",
+          "source_blob": "bc55ffb1b1e073f7d543690a30a196b4c5f18fe4",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_nested_hexagon_packet_stress_certificate_2026_10_06.json",
+          "source_blob": "814cd61da38fc726fa7f7a3b6e70830a4c58637e",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_noncrossing_owner_region_budget_2026-10-06.md",
+          "source_blob": "174b78f8a530d7df495ae7ae7441d6479a57da9f",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_one_deficit_root_release_discovery_2026_10_07.jsonl",
+          "source_blob": "38bd1a7f972448b01428a7cb80dc452de296f8a6",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_outer_train_run_budget_for_loaded_sinks_2026-10-05.md",
+          "source_blob": "ab59daec84c1060cdbd8b2016703666317d7ec1b",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_owner_hub_closure_run_2026_10_06.md",
+          "source_blob": "6b6da0bdfa02cdc6b691aa85b99f13fe444bf6a4",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_singleton_oo_dual_tree_bandwidth_2026-10-06.md",
+          "source_blob": "fbbd10dc376e371b7a7202f3bc249934fdaa4d81",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_three_direction_corner_barrier_certificate_2026_10_06.json",
+          "source_blob": "32a1d8648056ebb3ce5b6fcea3dd71d24b94e826",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_three_direction_nonaffine_discovery_results_2026_10_06.jsonl",
+          "source_blob": "8ec8c285fdfcd892ae7168ca1cd22e93ee1023a1",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_unary_rhombus_terminal_payment_2026-10-05.md",
+          "source_blob": "a37f9def5a5b3e4497f01529e161d17f3e7bad04",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_uneven_wall_exact_packet_certificate_2026_10_06.json",
+          "source_blob": "6b1cbe806180f9642783ceb79544a469fd5730fe",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/target_c_unloaded_sink_outer_occurrence_payment_2026-10-05.md",
+          "source_blob": "6fe7d67c9c93632f7a9d420727d39dd5e0322b47",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_target_c_collective_wall_guard_scope_2026_10_06.py",
+          "source_blob": "614e6097621203537578d2715cb4c5d8753d7aad",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_target_c_curved_wall_exact_capacity_2026_10_06.py",
+          "source_blob": "3a67eff0b1387de464fcef541de83e1b0902cd23",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_target_c_curved_wall_isolate_motion_2026_10_06.py",
+          "source_blob": "a4bd2c352bb5802ae766f7a343c3118e0613af4e",
+          "disposition": "excluded optional research/administration"
+        },
+        {
+          "source_path": "research/verify_target_c_nested_hexagon_packet_stress_2026_10_06.py",
+          "source_blob": "48c9fbd0ebe8238235cd26aa722e61bb26a8a6ba",
+          "disposition": "retained frozen main version; proposal change not imported"
+        },
+        {
+          "source_path": "research/verify_target_c_sorted_rate_packets_2026_10_06.py",
+          "source_blob": "6518c07f3eecd5d1aaa7d76f7023762e9a93e6e5",
+          "disposition": "retained frozen main version; proposal change not imported"
+        },
+        {
+          "source_path": "research/verify_target_c_uneven_wall_exact_packet_2026_10_06.py",
+          "source_blob": "f40a0e089a34739528dd7be097531cddff190bb6",
+          "disposition": "excluded optional research/administration"
+        }
+      ]
+    }
+  ],
+  "editorial_fidelity": [
+    {
+      "public_path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "4b7105bc04427555d6af371836930b1bf019895b",
+      "source_sha256": "af4eb91514393973e26ce3865010e2194416fd743089188723a871803ad00dcf",
+      "baseline_public_sha256": "ccd1f53c50658a4b6485159e36e8c702041807faeec0dd830f9d78ba6ddbbce2",
+      "review_class": "entrypoint condensation",
+      "finding": "Compared complete removed/added blocks: exact global/Schur/shell/core endpoints and isolate/diameter warnings retained or linked in authoritative full modules. Condensation is navigation, not proof equivalence."
+    },
+    {
+      "public_path": "docs/STATE.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "5c6a8541c8f579ccfda95c8a92422cbc13856983",
+      "source_sha256": "6d648ebaad9c35ec80a3823da3fbee80eb9ed2ccf3881a535ecccaa0593709bd",
+      "baseline_public_sha256": "c65b43a92c97293d66473200dd6b4c792f7cb8283ce588518eb0ea359f54b755",
+      "review_class": "entrypoint condensation",
+      "finding": "Compared complete removed/added blocks: exact global/Schur/shell/core endpoints and isolate/diameter warnings retained or linked in authoritative full modules. Condensation is navigation, not proof equivalence."
+    },
+    {
+      "public_path": "docs/audits/target_c_collective_wall_capacity_independent_audit_2026-10-06.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "16c0701bf90120cf23d3512b5644b5a083f5f07d",
+      "source_sha256": "d2af657d6dd3cc38e85ea30d20a7b2515ce6ba3f8b141353280123481b1ac6e4",
+      "baseline_public_sha256": "4b1c479561506b2cbc7cea6cd5fbecd35b00823284cda302cac8b7af84ab9eb4",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/audits/target_c_diameter_midpoint_mean_tail_independent_audit_2026-10-10.md",
+      "source_commit": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+      "source_blob": "16fcb7a8c1e8552f152709fa24fcdb37542061eb",
+      "source_sha256": "e4bf989843db0d85a6594d4129eed8cc2c59ec3605442d1ba722c2a219c3c4cf",
+      "baseline_public_sha256": "b52e27283e260c8af8f73921dd84c2dcb6a148c790ca3dc7573277e16a94e146",
+      "review_class": "lifecycle header",
+      "finding": "Metadata recomputed against accepted main manifest rather than unmerged source-PR proposed promotions. Full proof body unchanged. Explicit proposal notice added; Audit.236 has separate scoped audited-working correction."
+    },
+    {
+      "public_path": "docs/audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md",
+      "source_commit": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+      "source_blob": "7667e5fa85f180aa5c971477d3f73798a1995c98",
+      "source_sha256": "831884c7a986c683345cec980fafabf52fa30569cda43f6f47396f75e535553c",
+      "baseline_public_sha256": "fec85041c6fd765ecdcee0f0ef0d0b8dd90a22b5f19af913bc87e79918b3bf57",
+      "review_class": "lifecycle header",
+      "finding": "Metadata recomputed against accepted main manifest rather than unmerged source-PR proposed promotions. Full proof body unchanged. Explicit proposal notice added; Audit.236 has separate scoped audited-working correction."
+    },
+    {
+      "public_path": "docs/audits/target_c_harmonic_component_sqrt_count_independent_audit_2026-10-09.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "a762f96ca5ffb76a89da07b12d5a63dc37676cec",
+      "source_sha256": "80320d8cf42cdc96d3b7db2edf39fcd794628ac26225ef798a3449aab85c8d36",
+      "baseline_public_sha256": "ed53a2cf185d4e9d990eea48ee7494821827952f4eaa55c8cdd585b0bfbeea4d",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/audits/target_c_oler_sharp_separator_independent_audit_2026-10-10.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "64ef45884a51846f8d2b06233c7375c263aa7352",
+      "source_sha256": "f26262dfcbe2217e1f1c25e0d7b950290897ecc8caa5d7ff3be0a3af919a4b0c",
+      "baseline_public_sha256": "c3432f43913f46dd06a5187b7b47b0c297a7d5ee265a73e8548bd327b152eea9",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/audits/target_c_one_pin_restoration_gap_capacity_plateau_independent_audit_2026-10-10.md",
+      "source_commit": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+      "source_blob": "0325be2261b6eb1c1e9528feeb7883f8401ce0f8",
+      "source_sha256": "91c0dc1b86aaf7b2941943dce132e258a3364709f6b00a67575d465bbe8189c4",
+      "baseline_public_sha256": "24ac80f5a2f1ae6995565c6a75b691ebd33e4a2b8a9e3e7a5c6ad50561890467",
+      "review_class": "lifecycle header",
+      "finding": "Metadata recomputed against accepted main manifest rather than unmerged source-PR proposed promotions. Full proof body unchanged. Explicit proposal notice added; Audit.236 has separate scoped audited-working correction."
+    },
+    {
+      "public_path": "docs/audits/target_c_one_vacancy_oblique_grid_strictification_independent_audit_2026-10-09.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "9c35b97cceaff96f2446692a0218fb7dc1cf66e0",
+      "source_sha256": "6d7d87ddce79f7270117f86723fa59e296cf5f93297614c8c7ca3e725611c947",
+      "baseline_public_sha256": "d8a3495ddc33a61365c8099140b4881097134ad7117c9a57c77495bd98c4a6cc",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/audits/target_c_overlap_aware_owner_capacity_independent_audit_2026-10-08.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "6be7409c53ff26b16d328f9f27f4bb8407557236",
+      "source_sha256": "8b4cb817ce7b6f49e8fa959a130464234b9cd9ed1a1409fa54f49484bd1cc868",
+      "baseline_public_sha256": "5ef20be7acb2d2e657cbfc12f22f415d4505094b5ce3578da5a07a1c7f629c2a",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "docs/audits/target_c_population_excess_sharp_coefficient_independent_audit_2026-10-10.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "b0e1b6a3f1855d16e27a78e26b1dcd1e399b8400",
+      "source_sha256": "a2a494a84085eabc6ad8b76f9a27dc374256e4a9f0b75bd6479e64176e014655",
+      "baseline_public_sha256": "e795de8e2d3f65592921cf39a2c4462da9e4269e7beb24a2c8d014c745836a41",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "docs/audits/target_c_population_excess_two_thirds_independent_audit_2026-10-09.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "467029252d222901641e67480bce329a3a20095e",
+      "source_sha256": "1f4e99a937202d5fa805c2686cda49b75dfcc59ea26d59aa458d8d0acf92cb2a",
+      "baseline_public_sha256": "ba943494a1b8bf7e26b1ab36df093be51d41cbfa7bd737524c595337d5b5fa02",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/audits/target_c_positive_leaf_anchor_sharpening_independent_audit_2026-10-10.md",
+      "source_commit": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+      "source_blob": "9668230200c9c2cac9a87d515bd31449bf487a35",
+      "source_sha256": "f7df6238d32925d18a2a593f25ff631ef29d8fcd16e3767235f8e3c21dd51cf8",
+      "baseline_public_sha256": "f2567d3efd9bfb7205b92c7af597f03577aa168ef5716f9275e5144b7175faaa",
+      "review_class": "lifecycle header",
+      "finding": "Metadata recomputed against accepted main manifest rather than unmerged source-PR proposed promotions. Full proof body unchanged. Explicit proposal notice added; Audit.236 has separate scoped audited-working correction."
+    },
+    {
+      "public_path": "docs/audits/target_c_relative_chord_diameter_direction_independent_audit_2026-10-09.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "f8e803d91987e3fcbd00890f13fb0e9e076ab8ee",
+      "source_sha256": "5e142b3f06b473c8cc5b47adf68f3dba20b621f8b418c92fb9fa7fd2722a1ab1",
+      "baseline_public_sha256": "b8b00551e589ea5a78192d05db4bbeb62ea682b2c06fd5861df03fd39399e065",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/audits/target_c_section103_unique_wrapping_cap_deficit_hostile_audit_2026-09-12.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "b4e744249c2bf61a58b32cbc72438461b9ad3bcc",
+      "source_sha256": "6807436df965e5632d284c7d8431623e779e10e895feb130e848b78c2d128472",
+      "baseline_public_sha256": "880bae6dcb7154653247db2d94b2f4aaf3bf9ddf67f64f038dbdc546a34bab31",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "docs/audits/target_c_section104_quantitative_phase_gap_hostile_audit_2026-09-12.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "e9dbbdcf3900452793475a363662195f34ecda34",
+      "source_sha256": "fe8a55e53d359d5f1e95bc4557c9ae6ab89d40a7295434850d8c5a4f800d1fa9",
+      "baseline_public_sha256": "ea2272661d3facc5b5d4f51855503450bd587c2c0e63e359f4efac190fad02c2",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "docs/audits/target_c_slow_chart_contact_port_cover_independent_audit_2026-10-10.md",
+      "source_commit": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+      "source_blob": "246844015df1544acc8732ff8f6c47005583f935",
+      "source_sha256": "8a63e14ea5787f2a120c46d0a48c2f6f42064372baf23d37fb62f0e86b675f73",
+      "baseline_public_sha256": "277a9df0902cb8b7399c2eb929923832242240a16fda7b6be0e026c5db2cd69e",
+      "review_class": "lifecycle header",
+      "finding": "Metadata recomputed against accepted main manifest rather than unmerged source-PR proposed promotions. Full proof body unchanged. Explicit proposal notice added; Audit.236 has separate scoped audited-working correction."
+    },
+    {
+      "public_path": "docs/audits/target_c_small_packet_upper_release_independent_audit_2026-10-09.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "be379ec7feb21a598ea5a15aa3e2277f7658a804",
+      "source_sha256": "e1e1cbe2320dbba8dc2b7326fc783b59964440012e281e48e74523fcdc111556",
+      "baseline_public_sha256": "659aa2e0dd9ac9b1cc5fe6d3645f51d563c6d1a5514fdbb1ce6e060a60b44a0c",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/audits/target_c_train_cut_traffic_independent_audit_2026-10-09.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "edf10ac44034d62fb0f4cd6be0193371d556264d",
+      "source_sha256": "4912a25aef271639ab3ec739d691c30b2a316cd78a9ca85b4874c8537e05e7d2",
+      "baseline_public_sha256": "adbfa5d6bc062b6e9baff0753c94dfc8d0baa3f3132393d57d9e33a2a707c62b",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/audits/target_c_two_boundary_hole_strict_capacity_independent_audit_2026-10-09.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "c9b5300526020a8bce95339c92300b9174891ca6",
+      "source_sha256": "797b12a9fae77df1885fb03f259ca06c1b3b00099e3aa07ac1054feb7f012eb7",
+      "baseline_public_sha256": "473a7388fd87f7656e6687989b8e5dccb9071c363c40bf8127351a84ae29e676",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/audits/target_c_two_boundary_hole_triangular_refill_independent_audit_2026-10-09.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "30831c2887d611a0a70333522219d9bbf20d4d23",
+      "source_sha256": "211101eb9c9e8b3fe4102cfd458a9c8093edce1f40b460ada00122a8665d2754",
+      "baseline_public_sha256": "e45bdb4c3ab1c545c9d292a27083fb265d82a6f58a6b15b04219a0bf7c0ca6b8",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/audits/target_c_typeii_near_port_grid_independent_audit_2026-10-08.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "96679b01aad17dfd6ce9c591963394c55bcd3eb0",
+      "source_sha256": "78701de5cf60c2fbf8641f685661a209e3d2ce317a3df5f642f7ea1a1b8715c4",
+      "baseline_public_sha256": "fadcc0c94b45b218f5b033e40aa74f107c8f41e83da19458e15ba69e4a2b5426",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/literature_review.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "3ac423eba2f0e01d65db402fa24ecf7982e62d70",
+      "source_sha256": "c1869e26e4c32fd8ad673470ab5745b328332ab7c0ce52d5b6360a25773ab4e8",
+      "baseline_public_sha256": "068d4c291c0db8bf36f3404c5f4b1b1d45fc643f1d45956c2820bfdc657b9ae2",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/campaign_ledger_2026-09-09.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "7acd3a957b4760e39437a9b90ad752adfc4de26c",
+      "source_sha256": "9e5c4053d08d8b63a07c37351ddcfed9aba6e2ef1bd5b3806d512af43cbb770e",
+      "baseline_public_sha256": "bb9ac524ebe59b0915b105111f4e716858dac84c64523fa7d51fc089bee06416",
+      "review_class": "section extract",
+      "finding": "Sections 4-7 preserved verbatim (conditional global integer inequality, Euler derivation, nonglobal odd shells, topology/isolate caveats and regression table). Removed branch comparisons and administrative sections are not proof premises of the retained conditional endpoint."
+    },
+    {
+      "public_path": "docs/reports/campaign_zero_transfer_defect_review_2026-09-09.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "4dcfe7b294637197d5459988721135e136dc839e",
+      "source_sha256": "279d5755c99c3a5f377e3ecfbffc0fe20746f118c38b2a3d1bf4ccea5e79df4e",
+      "baseline_public_sha256": "754c86a81b6572358aaa071c4bcc0c31572fd173c25610060107a56da4c980ee",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/erdos_problem_99_1.6.0.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "d721b850561c3a696573932f089f25641fca8a2f",
+      "source_sha256": "ad19b3ca1e41830ab20b5e4740b98fbf9843ce2af69f081521e0da2f296d0f15",
+      "baseline_public_sha256": "ff4b2e7de3c6789323ae823b5be08d168439dedc52ade7febbbe2cf4ee48c765",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/seed090_finite_rhombus_contraction_2026-10-13.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "45bc8776a85b625ffff78f83b6d3fbe3d19b1ad8",
+      "source_sha256": "24730c94c9fee7a1152230d870163faf6b53fba4b1a74f6577a177ce8bd7e650",
+      "baseline_public_sha256": "234ccbd23cf9c7dd0fed549fffb92300cb6fff5ae7771ef15798e056f9dde2d9",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/seed090_shared_edge_overlap_audit_2026-10-14.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "fa85521a88adbb57568a797aadea5bbd2980e929",
+      "source_sha256": "7f3f11394c12086922b89d0c9c339e2fee2eac8f371cd3ff502ce296af7b08e2",
+      "baseline_public_sha256": "5b3a468e82e4b3f91ee1c63c795c227593b61af5d3750a8d63ff44a9e65faaa7",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/target_c_all_degree_groemer_face_stability_2026-09-14.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "14eb5efc8a081893c1b3c6209f5b6fa457e630a9",
+      "source_sha256": "bc2c2355ebb1f8f29fd8ec90974bbc554cc67df2b22fef8560587731bb752503",
+      "baseline_public_sha256": "ffc7f9cc3c003d97a38185ec83495930f29a553427e48e5a2fa38c6662c5047a",
+      "review_class": "removed attribution",
+      "finding": "Four source recovery attributions were removed despite intact mathematical text and unreviewed header. Restored their exact branch/tip and lifecycle credit in this change."
+    },
+    {
+      "public_path": "docs/reports/target_c_anchored_groemer_triple_matching_refinement_2026-09-14.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "183cf100ef0a2ecc9f8e9d3475bc2bff3c236284",
+      "source_sha256": "a6ada35843dd6f9fefdb3808bfe2c448e1c7674a72c21a847a5926f487a1efa0",
+      "baseline_public_sha256": "0ad8dd9f520c27aac8d2a544368a0a83fe4a0aaccd2d889fd0da784de91b3265",
+      "review_class": "removed attribution",
+      "finding": "Four source recovery attributions were removed despite intact mathematical text and unreviewed header. Restored their exact branch/tip and lifecycle credit in this change."
+    },
+    {
+      "public_path": "docs/reports/target_c_attachment_perimeter_three_gap_endpoint_repair_2026-09-11.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "0098b4c3497549a79893e4d6a883bc1ecfd29279",
+      "source_sha256": "c80d009aff9a9cbf04498c04091f16e9201869883991b37b9fc551bfd46a5170",
+      "baseline_public_sha256": "7a59c68deabb73f398fc0fbc8c230cacb1d9c1fe25c51f8fd77db8aa6ad6c518",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "docs/reports/target_c_augmented_train_phase_rank_small_residual_exclusion_2026-10-05.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "7cb2498abdf2316796965b0f25e1934d534dbf75",
+      "source_sha256": "f45aa3fd02deae90a9dc7b7627b9b69f2cdc273476b3495a8a374f3fdc57ae86",
+      "baseline_public_sha256": "ab5aa7d3660838ada63d56e8106e7d589e338809017bcb8c8efeced1e3781ae0",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/target_c_complete_array_diameter_forest_slot02_2026-10-11.md",
+      "source_commit": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+      "source_blob": "a348b142da30c26ca39ca58fd7aac24a315676d2",
+      "source_sha256": "1aef23d22124681e543e5b9ee4faf51c42bcbeef211d711d9bd0939030fba3df",
+      "baseline_public_sha256": "2050d7aa775b47ac0ebe01cbd2994b8848661b28c31876718621af10b7eda259",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/target_c_cyclic_d1_s1_q13_kkt_psd_regression_2026-09-10.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "dcfb9f5cbee870e204ed8e8f221623f993551114",
+      "source_sha256": "342f7b70c77a39b8328a8f60f6317eb784cb6f35a2b561eec28f8246a8b6505c",
+      "baseline_public_sha256": "a1313b6c1169966d126958c4565d5e4c8a620f43ed05e25f57ee8f8caf56b22b",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "docs/reports/target_c_cyclic_shell_d1_p1_s1_dependency_audit_2026-09-11.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "161f522974a19fbde6d56d9b468589b22d69b34c",
+      "source_sha256": "1b308c21e431289aad0defad7135d989e14f520e6059c6f6a3a59f75d1eb1199",
+      "baseline_public_sha256": "ca2289ce7e0699b63b2ec821b8a0c5ddb56b4711178453af6a3da9ca93a08157",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "docs/reports/target_c_deep_face_persistence_and_isolate_transport_slot02_2026-10-10.md",
+      "source_commit": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+      "source_blob": "df4ad5883f50ca4bcb1314f52eaa7d07fdbdd249",
+      "source_sha256": "7adc1eed48d7c80436de80ea3e7b354d361d155a791df2c4969c5bb20395db71",
+      "baseline_public_sha256": "c246be6344a6bc857244acecc35be071dd10fb1d171af4c1827467de79def58f",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/target_c_force_bulk_and_correction_audit_2026-09-08.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "c9bf1e53d8b6d68a6e01d7b05505fe0c86619b30",
+      "source_sha256": "eac1e6de7a12a34457c552c78be763eb6d9e401a831bd7c5adfe2288a86029e1",
+      "baseline_public_sha256": "bc16a918f1dbf230660486b808294024b8bf886969401e4ea0756e3abe8adc9e",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/target_c_full_source_post_zf_diameter_dispersion_2026-09-10.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "ad8bae227f96026c457f2d78321ca728f481d8c9",
+      "source_sha256": "d4b13062c5e99bd6c3b3a97d30ea8406a1e5e417762dcc93308367c1d349a19b",
+      "baseline_public_sha256": "57284db5fd2e578c1788dc7caa85ec2e678f37760f07722aeb909853841927ab",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "docs/reports/target_c_fullcore_hull_train_depletion_floor_2026-10-04.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "a050bbdf0ad4c963cd77799a30c07868013b8c27",
+      "source_sha256": "ca41557d3c5f2af62b09673c2d6beb32ec32b9fe5cce6b0e7a968ac2c3ae2a25",
+      "baseline_public_sha256": "608c950615ff8abd49a72be3c72e89c9019ecc3e834921280add7d31c825433b",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/target_c_groemer_pair_matching_refinement_2026-09-14.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "7f58a3a01da35b12e337307da0f1e4d0fda0fdb1",
+      "source_sha256": "b2b42fc3c912fe3e593f30ac19031c87cd343ec06c73a981f513962f13e1c499",
+      "baseline_public_sha256": "3e4eceb0d0c5889b34ca60c84f27c7d0c4ca6c6001b4d7f0530192bec608f861",
+      "review_class": "removed attribution",
+      "finding": "Four source recovery attributions were removed despite intact mathematical text and unreviewed header. Restored their exact branch/tip and lifecycle credit in this change."
+    },
+    {
+      "public_path": "docs/reports/target_c_inactive_diameter_cubic_moment_2026-10-04.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "75192858382b1b4ccee5d845c9791b1994d917ec",
+      "source_sha256": "5749d947845579dbf6702974765fab09878122321206765dc93d27099ad9a4a5",
+      "baseline_public_sha256": "013ea08980a06e05c77ea99cf98f15479d750dba429091e0bed7cfac3f00d172",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/target_c_large_array_boundary_attachment_slot02_2026-10-11.md",
+      "source_commit": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+      "source_blob": "73070fde10984f8d43942ce77e1a718970b99164",
+      "source_sha256": "c091322e150383de1954b60453061df751821dc3962e6e80e9cf311f949e8e75",
+      "baseline_public_sha256": "f2225a9ceebddb2b3318ed948bb94d247f2a61c9e73db80d7ce3567093e037c6",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/target_c_low_t_flat_center_amplification_2026-09-14.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "2ff0b744506e6d34938a878c9cbf6d1bf6507ec1",
+      "source_sha256": "13ba9736fe3a4d51d456429504babd9b4ebfdd72574c5a77e633627b8cae3fd4",
+      "baseline_public_sha256": "1f8b78595e1f0e32078224ece64743931a974488f73d4030d195051b052c00c8",
+      "review_class": "removed attribution",
+      "finding": "Four source recovery attributions were removed despite intact mathematical text and unreviewed header. Restored their exact branch/tip and lifecycle credit in this change."
+    },
+    {
+      "public_path": "docs/reports/target_c_near_diameter_path_unloaded_core_2026-09-09.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "7181fa97a87138c6e4acb17ca62e5d5e5799995f",
+      "source_sha256": "3102f57510f68a805914bbdd8e323cb93ce1a1d7d3f34939d53b225472d6a261",
+      "baseline_public_sha256": "cc03dc8b609ffab59227ada06562658eb9c7c4993b6eede2203da7dc821be609",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/target_c_nonconstant_face_quarter_fold_exclusion_slot02_2026-10-10.md",
+      "source_commit": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+      "source_blob": "1f229bc6fd13c83fd7bdceaec7561bde401db4c7",
+      "source_sha256": "4dae671fc9c861e4dd940bca0f89212afd57bd4380047254e93d07189454341e",
+      "baseline_public_sha256": "1f7077efec74ff8372dc3ded578a1cd578f4beae1647e4e33d1dbcb99153711e",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/target_c_pentagon_activation_and_contact_debt_preservation_2026-10-15.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "e7a83d68699d5f1abe84123a257dd7d49f8f743d",
+      "source_sha256": "8d3d29fd3b3f6ea542065675e2e371b22ffb68ccf094e5418e5693f517b1a095",
+      "baseline_public_sha256": "fd875ab6a3f146c7314b780fa62cd607eb41b204fb4174c96b44384b14422472",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/target_c_phase_frustration_fixed_wall_activation_regression_2026-10-05.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "df10bdbca4720d4f2b80d51d6d9517f84189ae77",
+      "source_sha256": "ba48feba9b5f961edc8b168197d14e8ffddb6453679eecb2a2797c65b5ce915f",
+      "baseline_public_sha256": "eb69036df1200192f7ace6694a1fcc16599c023127e8f914911ca81fbb028a0b",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/target_c_pocket_degree_dirichlet_cavity_2026-09-10.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "3784c46e84fbcba60d13b2d046b016fc1d99d951",
+      "source_sha256": "69327ebe82f75b228c90aaedbc569ee1657601b36cb689469c35fcfd3976faa9",
+      "baseline_public_sha256": "ebd287e5fd65a75db7bf50052326a397eb1473f9811bf2cbb15a6365f8a61151",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "docs/reports/target_c_pr182_full_dependency_audit_2026-09-11.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "ec544a69e0ef2de4ba9a2b08722f3047c04ffe7d",
+      "source_sha256": "be4317daab4b583237576fed7c9c45d632486bfd4798a3bd6091e948bfdcc98c",
+      "baseline_public_sha256": "8b6218335bbf0f371760a841642a47fe866b5cd2901c90757d573aa269604ab6",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "docs/reports/target_c_pr188_full_dependency_audit_2026-09-11.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "34d153c02126276b012e19b5dc93ad9b37c5b8e2",
+      "source_sha256": "4d9cfacee3054205e91afe7a9b44dd3e5fee76cfa93619274319119b92bf566a",
+      "baseline_public_sha256": "30d2cff2638ac7446fcc3df2d24764338ce25b257ccbc034ec9c16d62cd6c3ec",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "docs/reports/target_c_pr191_dependency_audit_2026-09-11.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "dc77693938d946d923ed61a06c4576753d29f9d7",
+      "source_sha256": "fa52203d16a7e36c4a0a0738f09ab9260c5efd2061d74a33ad35ed6b81eddb7d",
+      "baseline_public_sha256": "ce4a328d2a6b1f63904fb3554ab37c0c7353ce58f149f7c9e49442f67c62b747",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "docs/reports/target_c_quarter_fold_face_obstructions_slot02_2026-10-10.md",
+      "source_commit": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+      "source_blob": "d69ecf5b66d9d266dcf307e785be431651cc9db0",
+      "source_sha256": "7e40311e66f4aaf609274eb6ca24b4ac455836e32ff650765abc37189a5f6a52",
+      "baseline_public_sha256": "33c94cb0b3d9fa835229d3dc2763e1510dc507135975e8b85cba356f2c468f26",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/target_c_rhombic_quarter_fold_dual_defect_slot02_2026-10-10.md",
+      "source_commit": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+      "source_blob": "ac671d5eca9e688235ab6a200603a1ca811763be",
+      "source_sha256": "d958f1632a74c6698da0488584ce6203049f810ae95e761ec81b423923137a12",
+      "baseline_public_sha256": "12d3a2460d900a016be9944cbd6a3a3b842e6d33e6b09e0ae9c06c7602ebf9b8",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/target_c_rigid_cycle_pinned_stress_and_arc_stars_slot02_2026-10-10.md",
+      "source_commit": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+      "source_blob": "dc26880861c0909397ab568042aba21ae6ee482b",
+      "source_sha256": "d5f387b796e29d43062e90c85a50150b2c07171845324f8bcfbfbd97385a78c2",
+      "baseline_public_sha256": "a3c36980e3710fc84b318a90a987aaf98940a6384a7e6681cfc60d3b6e4be783",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/reports/target_c_zero_transfer_additive_promotion_2026-09-11.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "acfa594b677206595e733064f566aff84d55f1b1",
+      "source_sha256": "0ebfc82bdb6dee2008a06a7599c602a35320bf9731667cf2cf72e10a09066835",
+      "baseline_public_sha256": "0c6fca62ad2a0a0448fdeafc138d23940d18606beccac794bae5bb7c7e84547c",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "docs/state/theorem-state.schema.json",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "1b8b99528f7c0cf8a60325255354f823bcc990d2",
+      "source_sha256": "6d055fe9dadf43a8ee7a2ec845143afa68d7c330130670842e40ee04298a0b66",
+      "baseline_public_sha256": "4a066985b57e7cf17b4b8ae0d3f673e0f4bedf2778118efd34774a6837e48a77",
+      "review_class": "schema navigation",
+      "finding": "Parsed JSON comparison: formatting plus removal of promoted_catalog_snapshot from required Target C navigation fields; theorem entry/status schema retained."
+    },
+    {
+      "public_path": "docs/state/theorem-state.yaml",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "b727d4444b6d4d19fcf36cf8759233242d1d7ee4",
+      "source_sha256": "a8b571cacc2c77623a991f50114a70141d59bcde9685f916db8153599e58b2b6",
+      "baseline_public_sha256": "1d8781229ca493447d82f0981095f90dbe98b880fc393e0c198805bcfc58b893",
+      "review_class": "manifest navigation",
+      "finding": "Only docs/archive policy root, excluded promoted-catalogue pointer and historical prompt compatibility paths removed at baseline; claim records, scopes, lifecycles and edges matched source. Separate publication correction explicitly changes one claim below."
+    },
+    {
+      "public_path": "docs/targets/README.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "24a815fe8bddf2594dc671d62a1f699ecf32addb",
+      "source_sha256": "a270c359ba2ba4d74bfc06f096751cf9dc0c8902c329bad2daf8095b5ea577bf",
+      "baseline_public_sha256": "c05f204a705613356ec4e0cc61979121eb16f07ffb4f80d8dc63a856bdc9df2a",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "docs/targets/target-b/120-boundary-backtracking-audit.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "07b44873db83303f1f3308cf48cd81a982c44cdc",
+      "source_sha256": "fa15595512f790d2a39fb81b3c49323b3c87d96f7764687794b0552ad1372f85",
+      "baseline_public_sha256": "6b5515ed9aad992703cac1b539092487fe74d57fdaa0c58938300c1ac02e47a9",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "docs/targets/target-b/README.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "d34fd1e6dea4f893fe3e90b27885d7f9bc17f985",
+      "source_sha256": "2c0042154c17d706bd9cc1f371f61b93ecf273f8368ec37ef93826a3db5c67ca",
+      "baseline_public_sha256": "d6995d5264fabe8a01146a55589b9bfe38f48c7fcd48a43ae437578f1215eae7",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "docs/targets/target-c/122-123-promotion-audit-2026-09-12.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "1c34729acbff46b502c2bd661d50f047a61599cd",
+      "source_sha256": "2a8886031d3ba334c720bd44befb7e784c1681139a5b4b21d741ce640fa6322e",
+      "baseline_public_sha256": "a299a0ffc4b706287cd36da27029472a8f68dddf0d6f42f96409fcf47c5a3d60",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "docs/targets/target-c/156-157-face-closure-and-outer-train-bracing-audited.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "e4fe880a4306413c4b77ac7873e0419122a9a70f",
+      "source_sha256": "e9ba5c9e972a6de9575bdb4819594a6653ece36356cf2ba5536b2a03ec45c21c",
+      "baseline_public_sha256": "f0a73278aff137b744cc30e7d31aac5809c947d0baeda451c6f4b2ae096f962f",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "docs/theory/02-nonlinear-and-regressions.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "ca3feb7ef92d91d92c00ac1adfb3ba82ac2aa061",
+      "source_sha256": "e73cd59f7167a1dca3c04172cc351c552fbab05e681de50914522b219aeb8faa",
+      "baseline_public_sha256": "c50fefa23c286ba4e85b27371217764655e84674e84751ab30b51ec5688cdce0",
+      "review_class": "citation and navigation",
+      "finding": "Inspected every changed line: bibliography/private-reference destinations or administrative ledger labels changed; no mathematical formula, hypothesis, argument or conclusion changed in the baseline diff."
+    },
+    {
+      "public_path": "research/target_c_atomic_mantel_gap_finite_diagonal_2026-09-12.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "8ddc0daf2a09318872831b7ec5b87eb71cf8faa1",
+      "source_sha256": "041941e1bbb289b5cb60eebece7452641fdc5ad0e0a358f6e0757ffba50a7c0b",
+      "baseline_public_sha256": "b0d5825d4435c8bd5b73e03f70710f5d12eef0d58e2c740bce11363031ba0e4c",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "research/target_c_atomic_mantel_gap_finite_diagonal_hostile_audit_2026-09-12.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "e72e91667a5d41cd48394cf56b6e4bbb1904992e",
+      "source_sha256": "60600d40d6b9ebd6c6b12b9371cfeca24d0d140b96010f6fe17bdf0efed57612",
+      "baseline_public_sha256": "084824ff2079597017ac9afdaf8a7dcfa1eeba14f83c17dfa7ad7deaee9e4bb0",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "research/target_c_atomic_mantel_uniform_gap_regression_2026-09-12.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "6707ff8c37350e923304e9288ef7af6d84e4d6e7",
+      "source_sha256": "63404e69e64dd7e81f54ca358da62691b32e08633ebee65eee0d807abf60a1f7",
+      "baseline_public_sha256": "731157d93597e3e8697413c9b69725d835942ed81c150729f3202137b30397c3",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "research/target_c_level1_run_live_synthesis_2026-10-04.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "6ee4aa7de96276a439baa69c73f42a7c6a83cf7c",
+      "source_sha256": "dad5804a0f0984b9cac7f7ea89577e9f8c080897ce9dc80e5033d0dd4b4976f1",
+      "baseline_public_sha256": "626802e7caffadbde6365a7ce407acf870c053c307b30ed9fc465c6a5cefc124",
+      "review_class": "title and provenance rewrite",
+      "finding": "Only title/date/base/branch opening replaced; every mathematical body paragraph and explicit conditional frontier remains. Original source identity is pinned in inclusion."
+    },
+    {
+      "public_path": "research/target_c_section110_local_train_count_gap.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "3177c49afa69b611c0a1a67731925c65e86d1d56",
+      "source_sha256": "8bdf903ed404ad518579e225b9d75736f5190b889d7b63c8c5a2aa297d728b4a",
+      "baseline_public_sha256": "0e14405ec9f94ddcde89484230d58f057b360cf4d5bb033b1dfb30aaa4cc7a20",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "research/target_c_section111_joint_shore_gap.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "9f8aecb7f8b0245807bf3f13ed25959b1eff17ed",
+      "source_sha256": "72bf86c48512d8b41015c81a2e67e3eae0901bd7d3c36c4c2baabb7153111053",
+      "baseline_public_sha256": "0e01dd96da311251153293d2c474673c66cd51c01ecd1d3ad9901ed1150b3185",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "research/target_c_section112_aggregate_projection_gap.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "95e2cfbfc4ddd64073129b9e130d63fde9a087ad",
+      "source_sha256": "75b8ac29d6c5cc595fcca9d879d5765448e78641bd2fedf87fe86da4a419dc6f",
+      "baseline_public_sha256": "52b64f2efe76917b122eac2b308b77626a30de3b2d5a0d60f3903a6f136e64ba",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "research/target_c_section113_extended_stability_gap.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "6c7a302ff91962ec3f765066724e53b20888920d",
+      "source_sha256": "decaa4e4958da46a6fc99eebee2c5f270006468f2fff310125fdd9caa2e35099",
+      "baseline_public_sha256": "8bdb7fedfab73ae5cda2ffd3bda7ed10ffc9e89ef31d9e496774293220342161",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "research/target_c_zero_detour_three_axis_pentagon_regression_2026-09-12.md",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "811e8319504626066e743eef1af7e7107d9940f4",
+      "source_sha256": "93a2098bd84d52b49a19145a5f142f96b4f0e27ec33704a518b8e4bfda862610",
+      "baseline_public_sha256": "9493c25bc5b6914dfc252dc20cc2cc56cf9e7008fc9a02e9476afa7f23d2e477",
+      "review_class": "whitespace",
+      "finding": "Only end-of-file whitespace/newline changed; mathematical text unchanged."
+    },
+    {
+      "public_path": "scripts/choose_research_task.py",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "88c1804cc999ea1d4864797c6f2cf78e69bdf142",
+      "source_sha256": "02c8573b01d112d90ffd39dbb9aac7d5510815c59c5339a8fc88853532690872",
+      "baseline_public_sha256": "c6d981f4323412965caa6c6420a3eea5dd50aebcd21c7e16f4a321942fc8b56e",
+      "review_class": "operational adaptation",
+      "finding": "Card-count range replaced by nonempty array validation; task content and mathematical scopes unchanged."
+    },
+    {
+      "public_path": "scripts/research_coordination.py",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "4f53ceb37208b9a0de4907dbbb1b924e048c5326",
+      "source_sha256": "7497f759b6e1130b912cde6c72f335d4f2553d7e456eb6f531c156150593b9f5",
+      "baseline_public_sha256": "db1ca64245f530d043ccf41fd07a1bbb0200ce2e4dfcc9a28569d76262832f8f",
+      "review_class": "operational adaptation",
+      "finding": "Destination repository identity and paginated Discussions handling added; no scientific content changed."
+    }
+  ],
+  "consequential_correction": {
+    "claim_id": "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION",
+    "old_status": "canonical",
+    "new_status": "audited-working",
+    "withdrawn": [
+      "one global K-prime/D-Lipschitz chart",
+      "q=O(D^(4/5)) endpoint rate"
+    ],
+    "retained": "Agent-audited corrected q=o(D) sequence exclusion under both unchanged global premises, awaiting independent human review before canonical reuse.",
+    "canonical_dependents_at_review_base": []
+  },
+  "limits": [
+    "Diff fidelity is not independent validation of every inherited mathematical proof.",
+    "Proposal dispositions are publication relevance decisions, not rejection of the excluded mathematics.",
+    "Exact source bytes and review records do not grant redistribution rights.",
+    "Independent human review remains required before consequential canonical promotion."
+  ],
+  "omitted_manifest_records_restored": [
+    {
+      "source_path": "tools/check_active_route_summaries.py",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "c7963a0f63e6debaae14caad2d0fe887d6832f01",
+      "source_mode": "100644",
+      "source_sha256": "168248c40e547b4fa3b933fe70a1eee703097693fb4b02d63d90574e43e076a6",
+      "public_sha256": "168248c40e547b4fa3b933fe70a1eee703097693fb4b02d63d90574e43e076a6"
+    },
+    {
+      "source_path": "tools/check_theorem_state_pr.py",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "a788b22adb3fbf61d9b98f646401ff027331eec5",
+      "source_mode": "100644",
+      "source_sha256": "cdc53ecae1e88fa325170b4e5cffcfd31d1c6da63dc55b802fb6649fb4674648",
+      "public_sha256": "cdc53ecae1e88fa325170b4e5cffcfd31d1c6da63dc55b802fb6649fb4674648"
+    }
+  ],
+  "finite_evidence_clarification": {
+    "public_path": "docs/reports/target_c_nested_hexagon_packet_stress_energy_obligation_2026-10-06.md",
+    "source_proposal_number": 947,
+    "finding": "225 chosen polynomial-field samples were described as arbitrary-field checks. Clarify finite sample scope; all-field/every-M statements rely on analytic ring/radial proof, not enumeration. No analytic claim or verifier byte changed."
+  }
+}

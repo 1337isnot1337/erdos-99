@@ -1,6 +1,12 @@
 <!-- theorem-state: {"artifact_id":"ART-1E42CFFD6E98","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C Audit.254 — slow-chart contact-port cover exclusion
 
+> **Publication lifecycle:** this is an unreviewed proposal from source PR #947.
+> Its historical PASS/promote language requests a change; the current publication
+> manifest does not grant the proposed promotion or stronger scope. Use the exact
+> current manifest entry for any inherited canonical premise.
+
+
 Date: 2026-10-10\
 Audit base: `origin/main=ab6dd3336f9f8d440f2bada76edb32153391cddc`, state `2026-10-10.audit.234`\
 Promotion branch base: `8124999e3c57dee01137168ebc6902f8f43e863b`, proposed state `2026-10-10.audit.236`\

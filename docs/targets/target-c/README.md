@@ -372,3 +372,15 @@ This source index supplements the module reading order. Use the theorem graph fo
 - [target_c_section119_analytic_slack_envelope](../../../research/target_c_section119_analytic_slack_envelope.md)
 - [target_c_section120_anisotropic_two_arc_return](../../../research/target_c_section120_anisotropic_two_arc_return.md)
 - [target_c_section121_local_return_oler_bridge](../../../research/target_c_section121_local_return_oler_bridge.md)
+
+
+## Publication proof correction
+
+`C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION` is **audited-working**, not a
+canonical premise. [Audit.236](../../audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md)
+repairs a gap in historical Audit.202: the additive face-tail routing error
+cannot yield its global `K'/D`-Lipschitz chart or `q=O(D^(4/5))` claim. Those
+intermediate assertions are withdrawn. The corrected diagonal-cutoff argument
+gives only `q=o(D)` under both original global hypotheses. It has agent audit
+and still needs independent human review before canonical reuse. This correction
+extracts no global phase/tail premise, finite move, or source competitor.

@@ -1,5 +1,17 @@
-<!-- theorem-state: {"artifact_id":"ART-6ECD86C6A2BC","canonical":true,"claim_ids":["C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION"],"claim_statuses":{"C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
+<!-- theorem-state: {"artifact_id":"ART-6ECD86C6A2BC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 # Target C Audit.202 — global inverse-phase and vanishing face-tail exclusion
+
+> **Publication correction (2026-10-15): historical proof with a withdrawn
+> intermediate inference.** The fixed-cutoff route estimate below has the additive
+> error `2K*T_M(D)/D`. It does not establish a global `K'/D`-Lipschitz chart or
+> the claimed `q=O(D^(4/5))` rate. Those assertions must not be used as premises.
+> The [Audit.236 repair](target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md)
+> obtains the sequence-only `q=o(D)` contradiction by a diagonal cutoff and local
+> patches. Its current [manifest disposition](../state/theorem-state.yaml) is
+> **audited-working, agent-audited**, awaiting independent human review. The
+> original proof remains below for attribution and an inspectable correction;
+> its historical PASS/promote language is superseded by this notice.
+
 
 Date: 2026-10-09. Audit base: `origin/main=3fee7c922dc5e6c1ec766ef8898c13105c8dd0de`, state `2026-10-09.audit.195`.
 
