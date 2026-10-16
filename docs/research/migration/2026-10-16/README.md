@@ -351,3 +351,5 @@ All five relevant exact verifiers pass on their stated finite scopes. See the
 and current [Target C frontier](../../../targets/target-c/CURRENT.md). The
 theorem-state and inclusion set remain unchanged; the repository remains
 private. This focused batch is not a full migration or Gate 2 verification.
+Its exact payload commit and local outcomes are in the
+[source-main Type-II verification receipt](receipts/target-c-source-main-typeii-harmonic-verification.json).

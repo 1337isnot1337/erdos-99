@@ -128,4 +128,5 @@ python3 research/verify_target_b_terminal_cancellation_2026_10_08.py
 The source and destination hashes, transformations, historical source commit,
 duplicates, and check results are recorded in the [migration ledger](../migration/2026-10-16/ledger/source-main-artifacts.jsonl),
 [file ledger](../migration/2026-10-16/ledger/source-main-files.jsonl),
-[dependency ledger](../migration/2026-10-16/ledger/source-main-dependencies.jsonl).
+[dependency ledger](../migration/2026-10-16/ledger/source-main-dependencies.jsonl),
+and [local verification receipt](../migration/2026-10-16/receipts/target-c-source-main-typeii-harmonic-verification.json).

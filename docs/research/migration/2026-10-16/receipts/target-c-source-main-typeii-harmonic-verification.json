@@ -1,0 +1,174 @@
+{
+  "schema_version": "erdos-99-local-migration-verification/v1",
+  "recorded_at_utc": "2026-10-16 13:49:28 UTC",
+  "verification_subject": {
+    "destination_repository": "https://github.com/1337isnot1337/erdos-99",
+    "batch": "frozen source-main harmonic-cell, Type-II face-floor, full-cell linkage, and historical Target B preservation",
+    "branch": "research/source-main-typeii-harmonic-face-floor-20261016",
+    "payload_commit": "68ab74d16e9a21907833c6ea1c940dc81727bf06",
+    "payload_tree": "4c7775382d6480b694c1211bc9ea0e78159ac548",
+    "base_main_commit": "fece4452122c7b8ebaf4fac2c4b2544a2f436c43",
+    "base_main_tree": "3285f4c084934ec8831676530bb20e8196058936",
+    "receipt_commit_note": "This receipt and its navigation links are a follow-on documentation commit. The payload verification subject is the exact payload commit above."
+  },
+  "frozen_source": {
+    "repository": "https://github.com/1337isnot1337/e-99",
+    "main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "main_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+    "source_pr_scope": "This batch imports frozen source main; it does not alter or use a moving PR head. The source PR inventory and exact frozen heads remain in baseline/source-open-prs.json and baseline/source-pr-files.jsonl.",
+    "source_only_historical_commit": {
+      "commit": "12f6833725f281ce39a6d04ebcb45630b3a6768f",
+      "tree": "98b35f9b17a0ea1f2e392976ba84b776f72a8559",
+      "ancestor_of_frozen_main": false,
+      "associated_pull_request": "No associated PR was found in the frozen open-PR inventory or commit-to-PR query."
+    }
+  },
+  "integrated_material": {
+    "source_main_reports": [
+      {
+        "path": "docs/reports/target_c_full_cell_common_grid_preservation_2026-10-15.md",
+        "source_blob": "af21aaba77db12bc287d78030a088b8c9a827658",
+        "source_sha256": "efe5b9af5ad6eb788bcf206bcf436f5d60f13a7fa6297de083b01a6eef054a4e",
+        "destination_sha256": "07036803e35a5cf4848d32b6e868edcc30ea883e60349f2f2eaf90ff4e7c3c5f",
+        "disposition": "transformed, unreviewed, noncanonical candidate"
+      },
+      {
+        "path": "docs/reports/target_c_uniform_harmonic_cells_global_diameter_access_2026-10-08.md",
+        "source_blob": "50bf366fc333f432f86fac644ceabff935a637c5",
+        "source_sha256": "d9386f9dc3f4114d4cc34fd3b0c0ecbeb313084ad753abcf2905ee999a4d53d2",
+        "destination_sha256": "cc59000e5334e54036401db71f4546245faad1b1e6350eba493d02ca15f0025e",
+        "disposition": "transformed proof lineage mapped to existing canonical scoped claims"
+      },
+      {
+        "path": "docs/reports/target_c_typeii_face_tail_port_multiplicity_2026-10-08.md",
+        "source_blob": "94b1d23a9684d93f69c0e3b7fae6680832c8c6a3",
+        "source_sha256": "e55a7f7fe9a440a7801d8c0d0cb4221a4d76993805c5609c912567832f8ca164",
+        "destination_sha256": "1b5b6d6345c976c6662b6612a704779b28dee702e604ef1b597d88b1cf6ef335",
+        "disposition": "transformed proof lineage mapped to existing canonical scoped claims"
+      },
+      {
+        "path": "docs/reports/target_c_typeii_terminal_cancellation_face_floor_2026-10-08.md",
+        "source_blob": "ef4af9dbc9c56c8d57e80bc29c098ded2b28fa3d",
+        "source_sha256": "44504166b3f11e978f972cfbd5bbf237247a92eac1f5d1299406045719dd6b19",
+        "destination_sha256": "577dd853f756401e267688d3d9bc9992f74c55ef66cd87fecf9752b163c9c160",
+        "disposition": "transformed proof lineage mapped to the existing canonical face-floor claim"
+      }
+    ],
+    "source_only_historical_report": {
+      "path": "docs/reports/target_b_terminal_cancellation_boundary_graph_2026-10-08.md",
+      "source_blob": "8d213b3308b731cc8a6bf506941c707d5e28ab26",
+      "source_sha256": "a5cf613c1971edce7d22400e16055666825ef1510471ee5b10f4025c12aef8ad",
+      "destination_sha256": "3d6100ce507c742209bb60db6728156e49b4250a5626f26b682d75460a9cbae8",
+      "disposition": "historical unreviewed cross-target candidate; not a Target C premise"
+    },
+    "new_exact_verifiers": [
+      "research/verify_full_cell_linkage_composition_2026_10_15.py",
+      "research/verify_target_c_face_tail_port_multiplicity_2026_10_08.py",
+      "research/verify_target_c_uniform_cells_diameter_access_2026_10_08.py"
+    ],
+    "already_present_exact_duplicates": {
+      "independent_audits": 3,
+      "finite_verifiers": 2
+    },
+    "source_ledger": "docs/research/migration/2026-10-16/ledger/source-main-artifacts.jsonl",
+    "source_file_ledger": "docs/research/migration/2026-10-16/ledger/source-main-files.jsonl",
+    "dependency_ledger": "docs/research/migration/2026-10-16/ledger/source-main-dependencies.jsonl"
+  },
+  "migration_coverage_at_batch": {
+    "source_artifact_records": 1446,
+    "target_c_artifact_records": 1287,
+    "target_c_report_records_still_queued": 822,
+    "target_c_exact_duplicate_records": 338,
+    "target_c_historical_source_versions": 38,
+    "integrated_source_main_audits": 83,
+    "research_file_records": 2913,
+    "target_c_research_files_still_queued": 2551,
+    "linked_dependency_records": 100,
+    "dependency_edges": 384,
+    "dependency_edges_integrated": 116,
+    "source_link_rewrites_verified": 1
+  },
+  "mathematical_authority": {
+    "theorem_state": "unchanged; 2026-10-15.publication.2 remains authoritative",
+    "canonical_claims_referenced": [
+      "C-UNIFORM-HARMONIC-CELL-AREA",
+      "C-TYPEII-LOCAL-COHERENT-GRID-ACCESS",
+      "C-TYPEII-ACTUAL-DIAMETER-GRID-ACCESS",
+      "C-TYPEII-FACE-TAIL-PORT-MULTIPLICITY",
+      "C-TYPEII-ATTACHMENT-COHERENT-PROPER-CAP",
+      "C-TYPEII-ATOMIC-SEPARATE-FACE-FLOOR"
+    ],
+    "promotions": [],
+    "unreviewed_full_cell_candidate": "The endpoint-inclusive separator repair and finite composition bound lambda(P,T) >= max(0, ceil((r+s-N)/2)) do not supply |A_I| < (kappa_I + gamma/5)D or direct common-label linkage. No source-realized move, all-pairs constraint proof, strict-diameter competitor, or C-II closure is established.",
+    "historical_target_b_candidate": "The atomic train direction estimate s <= 1-y and stated conditional A-bounds lack the blocker-rank estimate and equality-kernel exclusion; no Target B status changes and this is not a premise of the canonical Target C face floor.",
+    "withdrawn_inverse_phase_correction": "The Audit.236 correction and demotion of the unsupported global K'/D chart and q=O(D^(4/5)) inference remain untouched."
+  },
+  "commands": [
+    {
+      "command": "python3 research/verify_full_cell_linkage_composition_2026_10_15.py",
+      "result": "PASS; 40,000 linkage triples, 23,616 overlapping-terminal cases, 10,400 positive-excess cases, 16,384 independent path-packing/cut comparisons, and seven-label sharp contact fixture. Finite graph/contact scope only."
+    },
+    {
+      "command": "python3 research/verify_target_c_face_tail_port_multiplicity_2026_10_08.py",
+      "result": "PASS; exact finite geometry/counting fixtures at 64, 128, and 256 actual-diameter ports; no global-optimality certificate."
+    },
+    {
+      "command": "python3 research/verify_target_c_uniform_cells_diameter_access_2026_10_08.py",
+      "result": "PASS; pinned stars, diameter fans, circles, direction separation, and weighted-incidence finite controls; no uniform asymptotic cell or finite-motion certification."
+    },
+    {
+      "command": "python3 research/verify_target_c_terminal_cancellation_interior_2026_10_08.py",
+      "result": "PASS; 8 nonglobal fixtures, 7,252 source-pair checks, 108 physical terminal checks, and 886 separate-face cancellation checks."
+    },
+    {
+      "command": "python3 research/verify_target_b_terminal_cancellation_2026_10_08.py",
+      "result": "PASS; 12 nonglobal fixtures, 11,427 source-pair checks, 124 terminal-pair checks, 1,002 boundary-graph selections, and 3,277 component identities."
+    },
+    {
+      "command": "python3 tools/build_artifact_index.py",
+      "result": "PASS; 565 artifact records."
+    },
+    {
+      "command": "python3 tools/check_theorem_state.py",
+      "result": "PASS; no theorem-state transition or canonical claim changes."
+    },
+    {
+      "command": "python3 tools/check_public.py",
+      "result": "PASS; zero integrity errors; 94 certificates, 451 claims, 845 edges, 810 retained source files, and 20 tasks."
+    },
+    {
+      "command": "PYTHONPATH=tools python3 -m unittest tools.test_public_proof_graph tools.test_public_rights tools.test_public_release_audit tools.test_verify_publication_candidate tools.test_clean_public_snapshot tools.test_verify_publication_sources",
+      "result": "PASS; 55 tests on CPython 3.12.3."
+    },
+    {
+      "command": "python3 tools/run_theorem_certificates.py",
+      "result": "PASS; 94 selected of 94 unique registered certificates."
+    },
+    {
+      "command": "python3 docs/research/migration/2026-10-16/verify_migration_provenance.py --source-repo <frozen-e-99-checkout> --destination <erdos-99-checkout>",
+      "result": "PASS; 1,446 artifact records, 496 public artifact hashes, 1,287 Target C artifacts, 2,913 source-file records, 235 public source hashes, 100 dependency records, 74 linked dependency hashes, and 384 dependency edges; zero errors."
+    },
+    {
+      "command": "python3 tools/verify_publication_sources.py --source-repo <frozen-e-99-checkout>",
+      "result": "PASS; 810 retained entries, 3,977 exclusions, and 4,793 retained/excluded source records verified; this is byte provenance, not a rights grant or proof audit."
+    },
+    {
+      "command": "<pinned-gitleaks> dir --no-banner --redact --report-format json --report-path <external-report> .",
+      "result": "PASS; Gitleaks 8.30.1 scanned about 30.3 MB; no leaks found."
+    },
+    {
+      "command": "git diff --cached --check",
+      "result": "PASS; no whitespace errors."
+    }
+  ],
+  "release_gates": {
+    "gate_2": "NOT CLAIMED; this is a focused research batch, not complete final-tree publication verification. The 810-entry inclusion manifest and rights audit are not changed here.",
+    "gate_3": "NOT AUTHORIZED by this task; destination visibility remains PRIVATE."
+  },
+  "hosted_ci": "At payload verification time no destination PR had been created; query the eventual PR head for actual hosted status. No hosted success is inferred here.",
+  "limitations": [
+    "All imported mathematical claims remain at the lifecycle stated above.",
+    "The complete source-main research and open-PR corpus migration is INCOMPLETE.",
+    "This receipt verifies the named local commands only; it is not a full Gate 2 release receipt."
+  ]
+}

@@ -76,6 +76,8 @@ source transformations and queue counts are in the
 [research-file ledger](../research/migration/2026-10-16/ledger/source-main-files.jsonl),
 [dependency ledger](../research/migration/2026-10-16/ledger/source-main-dependencies.jsonl),
 and [Target C frontier](../targets/target-c/CURRENT.md).
+The exact local replay record is the
+[source-main Type-II verification receipt](../research/migration/2026-10-16/receipts/target-c-source-main-typeii-harmonic-verification.json).
 
 ## A consequential proof correction
 
