@@ -17,9 +17,19 @@ This repository publishes a curated snapshot of the current theorem ledger, its 
 | C: KKT force geometry and rigidity | **C-I CLOSED; C-II OPEN.** Core rigidity and force/contact reductions do not yet supply a same-cardinality finite full-source move or restoration. | [C](docs/targets/target-c/README.md), [C-II](docs/targets/target-c/CURRENT.md) |
 
 The missing A inequality is
-$$\operatorname{rank}S\le d_{\rm int}+|C^\partial|-\Delta_\Lambda,$$
-equivalently $d_{\rm sc}\ge\Delta_\Lambda$. The sufficient B inequality is
-$$G+E\ge {\sqrt3\over4}B+{\sqrt3\over2}(t+\chi-1).$$
+
+$$
+\mathrm{rank}\,S \le d_{\mathrm{int}} + |C^{\partial}| - \Delta_{\Lambda}.
+$$
+
+Equivalently, $d_{\mathrm{sc}}\ge\Delta_{\Lambda}$.
+
+The sufficient B inequality is
+
+$$
+G+E \ge \frac{\sqrt{3}}{4}B + \frac{\sqrt{3}}{2}(t+\chi-1).
+$$
+
 Their definitions, hypotheses and proofs of the reductions are in the linked modules. In C-II, retain **every source label**, including contact isolates. Infinitesimal motions, abstract graph exchanges and fixed-wall packets require the missing geometric realization and full pair-constraint checks.
 
 ## Contribute one useful result
