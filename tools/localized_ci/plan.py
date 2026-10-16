@@ -260,7 +260,7 @@ def make_plan(root: Path, base=None, head='HEAD', event=None):
                     result['reasons'].append(f'{d}: domain-sensitive verifier structure changed')
                 if previous['inputs'] - pkg['inputs'] or previous['dependencies'] - pkg['dependencies']:
                     result['reasons'].append(f'{d}: dependency declarations removed')
-                # Scope and verifier contract changes require human mathematical review.
+                # Scope and verifier contract changes require an independent AI-agent impact audit.
                 for key in ('scope', 'classification'):
                     if previous['task'][key] != pkg['task'][key]:
                         result['reasons'].append(f'{d}: task {key} changed')
