@@ -151,7 +151,7 @@ O'(w)>3/25.
 The exceptional-face derivative is
 
 \[
-\frac{d}{dz}\frac{z^2}{4\pi}=rac z{2\pi}
+\frac{d}{dz}\frac{z^2}{4\pi}=\frac z{2\pi}
 <\frac1{12}
 \tag{2.4}
 \]
@@ -161,7 +161,7 @@ by (2.1) and `pi>3`. Therefore
 \[
 \frac{\partial C}{\partial z}
 =-O'(w)+\frac z{2\pi}
-<-rac3{25}+rac1{12}<0.
+<-\frac3{25}+\frac1{12}<0.
 \tag{2.5}
 \]
 
@@ -249,7 +249,7 @@ hence
 On `I`, `2^{1/3}>5/4` and `cos(y/2)>3/5`, so `B>A>3/4`. Thus
 
 \[
-H_C'(y)>rac3{4\sqrt2}>rac12.
+H_C'(y)>\frac3{4\sqrt2}>\frac12.
 \tag{3.4}
 \]
 
@@ -322,7 +322,7 @@ of `R=2/3` into the left side of (4.2) gives
 
 \[
 Q_R(17/10,2/3)
-<-rac{23036123}{220500000}<0.
+<-\frac{23036123}{220500000}<0.
 \tag{4.6}
 \]
 
@@ -357,7 +357,7 @@ H_C(17/10)
 \frac1{\sqrt6}(6/5)^{3/2}(61/100)
 =
 \frac{183}{250\sqrt5}
->rac{183}{560}.
+>\frac{183}{560}.
 \tag{4.10}
 \]
 

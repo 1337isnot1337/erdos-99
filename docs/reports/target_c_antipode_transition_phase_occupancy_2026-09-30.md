@@ -143,7 +143,7 @@ theorem for local ends.
 The geometric identities use only coordinates and source diameter. Occupancy
 also uses this run's exact V-cover candidate. The global end charge is
 canonical Section 61. The finite integer/Fraction audit
-`research/verify_antipode_transition.py` checks unique opposite support,
+`docs/research/migration/2026-10-16/shards/01/support/research/verify_antipode_transition.py` checks unique opposite support,
 radius-vector order, and turning bounds by sign-aware rational squaring.
 It certifies examples, not universality or global optimality; its rational
 examples contain no odd diameter cycle.

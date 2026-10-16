@@ -1,0 +1,53 @@
+<!-- theorem-state: {"artifact_id":"ART-A2254270982A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C Profile B puncture-dimension limitation (exact regression)
+
+**Date:** 2026-10-04<br>
+**Classification:** regression in an abstract rational quotient model; not a realizable source or global-minimizer counterexample.<br>
+**Level I / C-II:** remain open.
+
+## Provenance and current scope
+
+This note preserves only the exact puncture-fan regression from the post-close tip of
+`astra-c2-rank-lift-20260921-a` (`aba30a83631d67f2dae9585e0836de0318d8af33`), originally
+PR [#565](https://github.com/1337isnot1337/e-99/pull/565), whose closed-PR head was
+`346a0bb91d6372c3e4ca64e1aabb11e281b0ccf6`. The branch's capacity-eight seed consequence
+is superseded for actual Profile B states by the direct nine-orbit source-state cover
+merged in PR [#574](https://github.com/1337isnot1337/e-99/pull/574). The abstract example
+below remains a useful obstruction to deriving that source conclusion from the weaker
+puncture-dimension conditions alone.
+
+## Exact model
+
+Let `V=Q^9`, `W=span(e_0,...,e_5)`, and use the basis
+`B={e_0,...,e_8}`. Define the eight columns
+
+```text
+ell=(e0,e1,e2,e3,e2+e3,e4,e5,e4+e5).
+```
+
+The map `Q^8 -> W` with these columns has rank six and kernel
+
+```text
+P=span{(0,0,-1,-1,1,0,0,0),
+       (0,0, 0, 0,0,-1,-1,1)}.
+```
+
+Exactly coordinates 0 and 1 are three-clean. For either coordinate, the seven retained
+label counts are `(7,7,7,8,7,7,8)`, totaling 51. Every clean-pair quotient has dimension
+seven, every clean-triple quotient has dimension six, and the surviving images of the
+nine basis vectors span each quotient. Yet neither clean-pair fan has a capacity-nine
+child: all seven retained counts are at most eight.
+
+A second exact model with `b=0` reaches total 57 and has counts `(8,8,8,8,8,8,9)`.
+Together these examples show that the stated abstract dimensions and incidence counts,
+without the additional actual-source compatibility, do not force a capacity-nine conclusion.
+
+The verifier [research/verify_target_c_profile_b_puncture_fan_capacity_2026_09_22.py](../research/migration/2026-10-16/shards/04/evidence/research/verify_target_c_profile_b_puncture_fan_capacity_2026_09_22.py)
+uses exact rational row reduction to check both models, the clean coordinates, kernel,
+quotient ranks, spanning, and counts. It does not test geometric realizability, the full
+Profile B source hypotheses, or global optimality.
+
+## Lifecycle
+
+This is preserved as a regression only. It does not contradict PR #574's direct finite
+cover of realizable nine-singleton source states, and it does not change theorem state.

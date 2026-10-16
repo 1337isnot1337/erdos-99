@@ -9,7 +9,7 @@
 **Starting status:** canonical full-core central-face reduction; aggregate detour/payment closure open
 **Active prompt:** docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md
 **External literature search:** not used for the result
-**Computation:** used: research/verify_target_c_central_face_two_geodesic_corridor.py
+**Computation:** used: docs/research/migration/2026-10-16/shards/01/support/research/verify_target_c_central_face_two_geodesic_corridor.py
 
 ## LEVEL I STATUS
 
@@ -433,7 +433,7 @@ None. Every geometric statement is proved directly from the coordinates.
 
 The companion command is
 
-    python3 research/verify_target_c_central_face_two_geodesic_corridor.py
+    python3 docs/research/migration/2026-10-16/shards/01/support/research/verify_target_c_central_face_two_geodesic_corridor.py
 
 It represents all coordinates as exact affine expressions in
 \(r=\sqrt{147/212}\) and checks every squared pair distance as an exact element of

@@ -1,0 +1,632 @@
+{
+  "schema_version": "target-c-migration-topic-map/v1",
+  "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "destination_baseline": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+  "assignment_zero_based": [
+    489,
+    650
+  ],
+  "complete": false,
+  "topics": [
+    {
+      "id": "nearzero-response-carrier",
+      "indices": [
+        489,
+        490,
+        491,
+        492,
+        493,
+        494
+      ],
+      "unresolved_bridge": "global phase extraction, contact-disk/face structure, or source-realized endpoint"
+    },
+    {
+      "id": "negative-transfer-shores",
+      "indices": [
+        495,
+        496,
+        497
+      ],
+      "unresolved_bridge": "bounded or paid response split plus a response-to-contact separator/global source implication"
+    },
+    {
+      "id": "convex-perimeter-area",
+      "indices": [
+        498,
+        503,
+        504
+      ],
+      "unresolved_bridge": "exact affine source realization from arbitrary canonical C-II sources"
+    },
+    {
+      "id": "joint-defect-coupling",
+      "indices": [
+        499,
+        500
+      ],
+      "unresolved_bridge": "exclude both linear-defect/high-surplus and macroscopic-cavity alternatives"
+    },
+    {
+      "id": "contact-geodesic-rhombic-branch",
+      "indices": [
+        501
+      ],
+      "unresolved_bridge": "uniformize the strict contact-distance excess or convert it to a global contradiction"
+    },
+    {
+      "id": "density-regressions",
+      "indices": [
+        502,
+        505
+      ],
+      "unresolved_bridge": "global-minimality-specific restrictions or source-preserving competitor"
+    },
+    {
+      "id": "oblique-lattice-competitors",
+      "indices": [
+        503,
+        504,
+        505
+      ],
+      "unresolved_bridge": "extract a one-lattice model or give a source-preserving descent"
+    },
+    {
+      "id": "diameter-cycle-regressions",
+      "indices": [
+        506,
+        507,
+        508
+      ],
+      "unresolved_bridge": "handle the low-surplus forest/high-surplus branches and bridge geometric shells to actual contact faces"
+    },
+    {
+      "id": "exact-shell-regressions",
+      "indices": [
+        508
+      ],
+      "unresolved_bridge": "genuine transverse unit-contact cutsets and source faces"
+    },
+    {
+      "id": "oler-gluing-and-chambers",
+      "indices": [
+        509
+      ],
+      "unresolved_bridge": "use slack correction to force an endpoint or contradiction"
+    },
+    {
+      "id": "force-hull-dimension",
+      "indices": [
+        510
+      ],
+      "unresolved_bridge": "already covered by destination canonical C-I route at stated scope"
+    },
+    {
+      "id": "outer-train-phase-structure",
+      "indices": [
+        511,
+        512
+      ],
+      "unresolved_bridge": "extract required quadratic O-O mass and convert structure to a source-realized contradiction"
+    },
+    {
+      "id": "finite-phase-motions",
+      "indices": [
+        513,
+        514
+      ],
+      "unresolved_bridge": "exclude both finite-motion alternatives or check a whole-source endpoint"
+    },
+    {
+      "id": "quantitative-phase-gaps",
+      "indices": [
+        515
+      ],
+      "unresolved_bridge": "qualitative global bridge and full canonical hypotheses remain"
+    },
+    {
+      "id": "ordered-interval-band-regressions",
+      "indices": [
+        516
+      ],
+      "description": "Abstract dense interval-band obstruction to graph-only complete-block extraction.",
+      "unresolved_bridge": "metric unit-rhombus/source realization or boundary currency"
+    },
+    {
+      "id": "oriented-carrier-defect",
+      "indices": [
+        517
+      ],
+      "description": "Antipodal normal-measure defect, support-function inverse, rooted conditional composition and flat-carrier rectangle limit.",
+      "unresolved_bridge": "positive linear defects and global multi-grain/source branches"
+    },
+    {
+      "id": "outer-pocket-currency-and-capacity",
+      "indices": [
+        518,
+        519,
+        520,
+        521,
+        522,
+        523,
+        524,
+        525,
+        540
+      ],
+      "description": "Pocket count, exact currency identities, detour-area inequalities, Oler absorption, and post-ZF cavity/PI coupling.",
+      "unresolved_bridge": "thin pockets, high-surplus/source populations and external hull points"
+    },
+    {
+      "id": "p1-cyclic-phase-arithmetic",
+      "indices": [
+        526,
+        527,
+        528,
+        529
+      ],
+      "description": "Cyclotomic, rational-root, power-of-two and trace-field reductions for the cyclic primitive P1 branch.",
+      "unresolved_bridge": "general noncyclotomic factor-degree lower bound"
+    },
+    {
+      "id": "paired-gap-pocket-capacity",
+      "indices": [
+        530,
+        531,
+        532,
+        533,
+        534
+      ],
+      "description": "Paired cyclic gap cubic capacity, layer saturation and distinct lens/pocket surplus floors.",
+      "unresolved_bridge": "surviving paired-pocket equality forms and unpromoted global source-comparison chain"
+    },
+    {
+      "id": "outer-shell-and-star-phase-structure",
+      "indices": [
+        535,
+        536
+      ],
+      "description": "Parametric inactive-shell threshold and inverse-diameter-bin diameter-star multiplicity.",
+      "unresolved_bridge": "inactive shell and high-defect branches; all-train extraction"
+    },
+    {
+      "id": "phase-window-endpoint-and-motion",
+      "indices": [
+        537,
+        538
+      ],
+      "description": "Conditional three-window train endpoint inequality and rhombus-blocked phase-swap omission currency.",
+      "unresolved_bridge": "global window globalization, cross-part omissions, two-sign response or inactive blockers"
+    },
+    {
+      "id": "hull-end-and-pinned-stress-ledgers",
+      "indices": [
+        539,
+        541,
+        542
+      ],
+      "description": "Physical hull-end capacity, canonical C33 overlap, and exact C42 pinned-stress face-slack identity.",
+      "unresolved_bridge": "linear outer-walk/high-t source payment and geometric sign information"
+    },
+    {
+      "id": "pinned-attachment-and-response-currency",
+      "indices": [
+        543,
+        545,
+        547,
+        567,
+        568
+      ],
+      "description": "Component pinned-stress slack, planar attachment incidence, quotient-circuit pivots and PSD response terminal structure.",
+      "unresolved_bridge": "stress/circuit geometry to aggregate response mass, or exact endpoint source exclusion"
+    },
+    {
+      "id": "train-cut-and-prefix-geometry",
+      "indices": [
+        544,
+        561,
+        562,
+        569
+      ],
+      "description": "Pivot-localized train load, corrected prefix-fiber split budgets, exact lattice-path prefix normal form and a pure-disk Mantel endpoint closure.",
+      "unresolved_bridge": "geometric capacity/globalization beyond the stated cut, prefix and pure-disk hypotheses"
+    },
+    {
+      "id": "post-zf-population-and-boundary-currency",
+      "indices": [
+        546,
+        548,
+        549,
+        550,
+        551,
+        553,
+        554,
+        556,
+        559
+      ],
+      "description": "Population-versus-defect laws, post-ZF currency coupling, primitive boundary classifications, cyclic stress endpoint and missing-side equilibrium.",
+      "unresolved_bridge": "quadratic isolate populations, linear defect compatibility, and cyclic/high-surplus endpoint closure"
+    },
+    {
+      "id": "near-matching-and-zero-transfer",
+      "indices": [
+        557,
+        558,
+        560
+      ],
+      "description": "Near-matching train-end bounds, perfect-matching branch exclusion and the additional zero-transfer pinned-ledger coupling.",
+      "unresolved_bridge": "the canonical linear bound closes matching but not surviving full-source defect branches"
+    },
+    {
+      "id": "profile-b-puncture-regressions",
+      "indices": [
+        563
+      ],
+      "description": "Exact rational quotient models limiting abstract capacity-nine puncture arguments.",
+      "unresolved_bridge": "actual source compatibility; separate finite source cover noted by the source report"
+    },
+    {
+      "id": "projective-direction-area-and-width",
+      "indices": [
+        552,
+        555,
+        564
+      ],
+      "description": "Post-ZF force-hull area floors, Kemperman projective-circle spread and a minimum-width consequence.",
+      "unresolved_bridge": "area/width floors remain below isodiametric capacity and do not eliminate cavities"
+    },
+    {
+      "id": "inactive-chamber-and-source-hull-geometry",
+      "indices": [
+        565,
+        566
+      ],
+      "description": "Protected lattice exchange threshold and full-source supporting-side theorem with exact length-two regression.",
+      "unresolved_bridge": "chamber boundary conflict, localized exterior population and whole-source replacement"
+    },
+    {
+      "id": "pure-disk-mantel-endpoint",
+      "indices": [
+        569
+      ],
+      "description": "Conditional full-core Mantel-floor endpoint contradiction under a simply connected proper-train disk.",
+      "unresolved_bridge": "holes/interfaces and canonical full-core disk globalization"
+    },
+    {
+      "id": "pure-rhombic-endpoint-exclusions",
+      "description": "Exact pure-rhombic train-count contradiction under disk topology and bounded-isolate hypotheses.",
+      "indices": [
+        570
+      ],
+      "unresolved_bridge": "extract the exact simply connected pure rhombic disk and O(D) isolate bound from general C-II"
+    },
+    {
+      "id": "post-zf-variational-floors",
+      "description": "Exact post-ZF scalar optimization, endpoint equality obstructions, and nonexplicit gaps.",
+      "indices": [
+        571,
+        572,
+        573,
+        580,
+        586,
+        587,
+        588,
+        593,
+        594,
+        595,
+        596
+      ],
+      "unresolved_bridge": "convert remaining all-phase scalar lower bounds into a source-realized strict-D competitor or global contradiction"
+    },
+    {
+      "id": "quadrangulation-core-capacity-and-stability",
+      "description": "Force-visible rhombic capacity, quantitative train-phase stability, and near-circle component/support bounds.",
+      "indices": [
+        574,
+        575,
+        577,
+        579,
+        584
+      ],
+      "unresolved_bridge": "control omitted isolates, extract the conditional branch, and close the macroscopic cavity or train endpoint"
+    },
+    {
+      "id": "quadratic-population-and-response-regressions",
+      "description": "Quadratic-density component concentration and exact negative response regressions.",
+      "indices": [
+        575,
+        576,
+        591,
+        592
+      ],
+      "unresolved_bridge": "derive global-minimality constraints linking these local stress/response models to a diameter-scale population"
+    },
+    {
+      "id": "train-phase-endpoint-stability",
+      "description": "Weighted-Mantel slack and quantitative V-cover structure near train/wrapping endpoints.",
+      "indices": [
+        577,
+        578
+      ],
+      "unresolved_bridge": "extract and globalize the pure chain-face or rooted-wrapping hypotheses without reviving withdrawn inverse-phase inferences"
+    },
+    {
+      "id": "quantitative-near-endpoint-support",
+      "description": "Sublinear diameter carrier rates and near-endpoint loaded-hull V-covers.",
+      "indices": [
+        578,
+        579
+      ],
+      "unresolved_bridge": "improve sublinear carrier counts to linear/global response mass or establish the branch hypotheses from C-II"
+    },
+    {
+      "id": "radial-transport-and-stress",
+      "description": "Radial coarea, pointwise outward flux, and winner-take-all branching constraints.",
+      "indices": [
+        580,
+        581,
+        582,
+        583
+      ],
+      "unresolved_bridge": "charge low-weight transverse contacts and turn radial transport into a full-source contradiction"
+    },
+    {
+      "id": "rattler-localization-and-endpoints",
+      "description": "Rattler defect-face localization, first-contact absorption, and exact RD endpoint equality/exclusion.",
+      "indices": [
+        584,
+        585,
+        586,
+        587,
+        588
+      ],
+      "unresolved_bridge": "control outer-face/large-defect cavities and retain positive KKT visibility under same-D motions"
+    },
+    {
+      "id": "finite-source-motions",
+      "description": "Same-cardinality, same-diameter finite first-contact absorption of isolated points.",
+      "indices": [
+        585
+      ],
+      "unresolved_bridge": "show newly created contacts can be made compatible with the force-visible/contact-minimal normalization"
+    },
+    {
+      "id": "reaction-free-block-capacity",
+      "description": "Pinned-rigidity capacity for reaction-free bridge blocks and its canonical successor.",
+      "indices": [
+        589
+      ],
+      "unresolved_bridge": "use the bridge-degree budget to exclude all reaction-free mass in a global minimizer"
+    },
+    {
+      "id": "regular-shell-stress-and-transfer",
+      "description": "Exact regular-shell stress polytopes and strict-negative cycle response models.",
+      "indices": [
+        576,
+        590,
+        591,
+        592
+      ],
+      "unresolved_bridge": "extend regular-shell/regression facts to general source geometry with global population/minimality controls"
+    },
+    {
+      "id": "renormalized-pocket-endpoints",
+      "description": "RP/RL/SC exact scalar floors and equality-case endpoint obstructions.",
+      "indices": [
+        571,
+        573,
+        580,
+        593,
+        594,
+        595,
+        596
+      ],
+      "unresolved_bridge": "obtain explicit stability away from scalar endpoints and compare the remaining all-phase geometry"
+    },
+    {
+      "id": "square-grid-residual-regression",
+      "description": "Exact local square-grid counterexample ruling out a local harmonic attachment-span shortcut.",
+      "indices": [
+        599
+      ],
+      "unresolved_bridge": "add genuinely global near-disk, rhombic-density, diameter/KKT, or source-minimality controls"
+    },
+    {
+      "id": "response-defect-and-component-currency",
+      "description": "Response trace, component diameter defect, pinned-contact currency, and loaded-component incidence.",
+      "indices": [
+        600,
+        601,
+        603,
+        605
+      ],
+      "unresolved_bridge": "quantify the trace defect or turn the strict trace/currency bounds into a source-wide contradiction"
+    },
+    {
+      "id": "extreme-circuit-and-kernel-structure",
+      "description": "Response-defect minimization on KKT circuits and Robinson equality-kernel localization.",
+      "indices": [
+        602,
+        604,
+        609,
+        610
+      ],
+      "unresolved_bridge": "exclude the affine-balanced three-edge mode or the isolated two-edge electrical hinge"
+    },
+    {
+      "id": "global-diameter-geometry",
+      "description": "Exact global-minimizer exclusion of a diametral equilateral triple.",
+      "indices": [
+        606
+      ],
+      "unresolved_bridge": "upgrade strict force-perimeter inequality to a uniform asymptotic gap"
+    },
+    {
+      "id": "rhombic-train-and-diagonal-capacity",
+      "description": "Train-track pseudoline geometry and weight-free short-diagonal slack capacity.",
+      "indices": [
+        607,
+        608
+      ],
+      "unresolved_bridge": "control linear face defects and inactive rattlers; extract dense rhombic bulk globally"
+    },
+    {
+      "id": "rooted-wrapping-phase-gap",
+      "description": "Rooted diameter-direction re-entry costs, repaired endpoint dispersion, and nested exact phase-gap windows.",
+      "indices": [
+        611,
+        612,
+        613,
+        614,
+        615,
+        616
+      ],
+      "unresolved_bridge": "resolve wrapping diameters above the largest proved window plus the two-half-disk and inactive-container branches"
+    },
+    {
+      "id": "symmetric-area-floors-and-equality-audits",
+      "description": "RSR symmetric-area floor, endpoint repairs, positive mixed-defect surcharge, and literature dependency audits.",
+      "indices": [
+        617,
+        618,
+        619,
+        620,
+        623
+      ],
+      "unresolved_bridge": "obtain an upper tradeoff below the surviving all-post-ZF surplus floor; do not infer RSR disk uniqueness"
+    },
+    {
+      "id": "post-zf-variational-floors",
+      "description": "Paired-pocket, side-cost, symmetric-area and Dirichlet-detour floors with exact endpoint exclusions.",
+      "indices": [
+        597,
+        598,
+        617,
+        619,
+        620,
+        621,
+        622,
+        623
+      ],
+      "unresolved_bridge": "exclude all remaining high-surplus survivors by a compatible upper bound or strict-D competitor"
+    },
+    {
+      "id": "renormalized-pocket-endpoints",
+      "description": "All-phase renormalized paired-pocket and projective side-cost scalar endpoint sequence.",
+      "indices": [
+        597,
+        598
+      ],
+      "unresolved_bridge": "quantify stability away from exact endpoints and join the floors to source geometry"
+    },
+    {
+      "id": "sa_jc_hemmi_post_zf_floors",
+      "description": "Support-area/JC and Hemmi/PI post-ZF scalar floors with endpoint compactness arguments; later stronger shard04 floors dominate numeric thresholds.",
+      "indices": [
+        624,
+        625,
+        640,
+        641
+      ],
+      "unresolved_bridge": "the stronger post-ZF floors still need an upper tradeoff, strict-D competitor, or source-level global contradiction"
+    },
+    {
+      "id": "safe_window_and_scalar_compatibility",
+      "description": "Proof-only safe-window multi-grain exclusion contrasted with exact abstract scalar-ledger compatibility regressions.",
+      "indices": [
+        626,
+        627,
+        628
+      ],
+      "unresolved_bridge": "promote carrier extraction and add embedded/source-preserving geometry; scalar-only package admits witnesses arbitrarily near its floor"
+    },
+    {
+      "id": "second_order_contact_mechanics",
+      "description": "Weighted angular variance and velocity-specific second-order KKT support/acceleration duality.",
+      "indices": [
+        629,
+        630
+      ],
+      "unresolved_bridge": "C62 jet stitching is resolved by C63 for C-I; weighted variance reverse inequality remains unproved and cannot be made unweighted without a separate theorem"
+    },
+    {
+      "id": "secondary_train_geometry_and_return",
+      "description": "Cap-sensitive train load/span, caterpillar diameter cuts, and signed oriented return/area transport.",
+      "indices": [
+        631,
+        632,
+        644
+      ],
+      "unresolved_bridge": "connect cap span, ordered train cuts and physical endpoint geometry; retain antipodal-host and bad-end hypotheses"
+    },
+    {
+      "id": "section146_outer_geodesic_endpoint",
+      "description": "Near-endpoint face-rank stability and conditional outer-geodesic endpoint exclusion.",
+      "indices": [
+        633,
+        634
+      ],
+      "unresolved_bridge": "linear outer detour away from the endpoint and the inactive-container branch remain"
+    },
+    {
+      "id": "quadrangulation_semicircle_interface",
+      "description": "Canonical C42 quadrangulation defect proof record and a semicircle equality-regime loaded-interface defect lower bound.",
+      "indices": [
+        635,
+        636
+      ],
+      "unresolved_bridge": "charge the forced linear loaded-interface excess against available one-slot boundary contacts"
+    },
+    {
+      "id": "full_core_shape_detour_carrier",
+      "description": "Shape-detour moment forces one nearly diameter-scale locally rhombus-saturated harmonic attachment cell in full-core Type II.",
+      "indices": [
+        637
+      ],
+      "unresolved_bridge": "turn the macroscopic near-global cell into an area/response contradiction or source-preserving strict-D competitor"
+    },
+    {
+      "id": "annular_source_population",
+      "description": "Sharp GWZ annular packing ledger and quadratic population consequence for source points inside the force hull.",
+      "indices": [
+        638,
+        639
+      ],
+      "unresolved_bridge": "translate population/area capacity into positive response support, an equilateral triangle, or a same-cardinality smaller-diameter source"
+    },
+    {
+      "id": "shell_and_inactive_activation",
+      "description": "Sequential pocket contact capacity, additive simultaneous-contact area charge, and finite inactive-isolate activation cube.",
+      "indices": [
+        642,
+        645,
+        646
+      ],
+      "unresolved_bridge": "show independent activations forced at one time or derive strict source-preserving diameter decrease; created isolate stars may be universally zero-stressed"
+    },
+    {
+      "id": "response_dichotomy_and_singleton_stress",
+      "description": "C44 short-response/macro-component dichotomy and singleton-star response-stress evacuation.",
+      "indices": [
+        643,
+        650
+      ],
+      "unresolved_bridge": "exclude both response branches and control stress on the remaining nonsingleton components"
+    },
+    {
+      "id": "single_gap_stationary_diameters",
+      "description": "Finite bitonic-boundary theorem localizing all empty-support stationary diameter chords to one gap.",
+      "indices": [
+        647
+      ],
+      "unresolved_bridge": "promote the actual boundary-order theorem and construct a whole-source exchange that checks every inactive pair"
+    },
+    {
+      "id": "single_port_response_mesh",
+      "description": "Single-port Schur-complement and Herfindahl response defect forcing one-leaf concentration in C71-B.",
+      "indices": [
+        648,
+        649
+      ],
+      "unresolved_bridge": "exclude multi-port C71-A or strengthen asymptotic one-leaf concentration to the exact finite chain contradiction"
+    }
+  ]
+}

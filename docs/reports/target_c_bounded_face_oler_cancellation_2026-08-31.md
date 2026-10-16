@@ -236,7 +236,7 @@ Then C52.7 gives the sharper exact form
  m+Z_{def}
 \le
 \frac{2}{\sqrt3}(\operatorname{area}(F)-H)
-+rac B2+1.}
++\frac B2+1.}
 \tag{C52.14}
 \]
 

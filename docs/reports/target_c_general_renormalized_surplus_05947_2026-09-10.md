@@ -1,0 +1,1453 @@
+<!-- migration-source: path=docs/reports/target_c_general_renormalized_surplus_05947_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=23a0cb69f76ffd6bf0379f1459082bbcffa2987f; lifecycle=unreviewed; canonical=false -->
+> **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
+
+# Erdős Problem #99 — general post-ZF renormalized surplus and explicit `0.5947` floor
+
+**Date:** 2026-09-10  
+**Repository base:** `1adc420e9227476135d6891b61f1a75193aa90ab`  
+**Run type:** new C-II branch reduction / exact algebra / quantitative certified exclusion  
+**Target:** Target C, all post-ZF survivors; no `s_Z=0` assumption  
+**Depends on:** ZF/ZE/ZT, ZK, PC, JC, GU/ZG, FSDB, RSJ, DD  
+**External input:** none beyond already imported dependencies  
+**Computation:** exact rational certificate for the final `0.5947` constant
+
+## LEVEL I STATUS
+
+`STILL OPEN`.
+
+The main structural result of this report is that the exact surplus renormalization
+previously used only in the Laman-circuit phase extends to the **entire** post-ZF
+branch.
+
+Put
+
+\[
+k:=d_H+s_Z,
+\qquad
+\boxed{
+\mu_D:=\frac{e_{BB}+2s_C-3k}{D}.
+}
+\tag{GR.1}
+\]
+
+Then every unbounded post-ZF survivor sequence satisfies
+
+\[
+\boxed{
+\liminf_{D\to\infty}\mu_D>0.5947.
+}
+\tag{GR.2}
+\]
+
+Equivalently, there are absolute constants `epsilon_G>0` and `D_0<infinity` such
+that every sufficiently large post-ZF survivor satisfies
+
+\[
+\boxed{
+\frac{e_{BB}+2s_C}{D}
+\ge
+0.5947+\epsilon_G
++3\frac{d_H+s_Z}{D}.
+}
+\tag{GR.3}
+\]
+
+This removes the previous quantitative branch split between `s_Z=0` and `s_Z>0`:
+**each unit of mixed-stress surplus `s_Z` costs three units of pinned/contact
+currency, with the same coefficient as a diameter-component defect.**
+
+The exact ZK identity rewrites the renormalized numerator as
+
+\[
+\boxed{
+e_{BB}+2s_C-3(d_H+s_Z)
+=
+\sum_r\delta_r+R_I+s_B-6.
+}
+\tag{GR.4}
+\]
+
+Hence GR.2 is also the full-source structural lower bound
+
+\[
+\boxed{
+\sum_r\delta_r+R_I+s_B
+>(0.5947+o(1))D
+}
+\tag{GR.5}
+\]
+
+for **all** post-ZF survivors, not only mixed circuits.
+
+The proof has two parts.  First, exact PC/JC bookkeeping gives a new joint cavity
+bound in which `3s_Z` is retained inside the same renormalized radius as in ZK.
+Second, the existing FSDB/RSJ area lower bounds and DD detour estimate exclude
+`mu<=0.5947` by a 465-cell exact rational certificate.
+
+This is not Level I closure: no matching upper bound on the three exact slacks in
+GR.5 is known.
+
+---
+
+## 1. Exact implication to the C-II endpoint
+
+The prior `s_Z=0` report SZ used
+
+\[
+\nu_D=\frac{e_{BB}+2s_C-3d_H}{D}
+\]
+
+because its pocket calculation was written after setting `s_Z=0`.
+The general ZK identity already suggested that the correct all-phase quantity should
+charge the full mixed defect
+
+\[
+k=d_H+s_Z.
+\]
+
+The new implication is
+
+```text
+ZK exact component ledger
+  -> attachment-cell area uses e_BB+2s_C-3(d_H+s_Z),
+
+PC + JC exact pocket ledger
+  -> E_out+Q uses the same renormalized numerator,
+     plus at most one half of the actual force-hull perimeter,
+
+FSDB + RSR symmetric area floor
+  -> generalized RSJ feasibility inequality,
+
+DD + exact detour identities
+  -> no limit with mu<=0.5947,
+
+therefore
+  e_BB+2s_C >= (0.5947+epsilon_G)D+3(d_H+s_Z)
+  for every sufficiently large post-ZF survivor.
+```
+
+The sign and coefficient are exact.  No step assumes `s_Z=0`.
+
+---
+
+## 2. ZK already retains the full mixed defect
+
+ZK proves for every post-ZF source
+
+\[
+\boxed{
+\sum_r\delta_r+R_I+s_B+3(d_H+s_Z)
+=6+e_{BB}+2s_C.
+}
+\tag{2.1}
+\]
+
+Therefore
+
+\[
+L_G:=6+e_{BB}+2s_C-3(d_H+s_Z)
+=\sum_r\delta_r+R_I+s_B
+\ge0.
+\tag{2.2}
+\]
+
+In particular
+
+\[
+\mu_D\ge-\frac6D.
+\tag{2.3}
+\]
+
+GU/ZK's attachment-cell estimate is
+
+\[
+\sum_r\operatorname{area}(P_r)
+\le
+\frac\pi4L_G^2+\pi L_G+\pi^2D.
+\tag{2.4}
+\]
+
+Thus on any unbounded convergent subsequence with `mu_D->mu`, necessarily
+`mu>=0` and
+
+\[
+\boxed{
+\limsup\frac{\sum_r\operatorname{area}(P_r)}{D^2}
+\le\frac\pi4\mu^2.
+}
+\tag{2.5}
+\]
+
+This part of the `s_Z=0` renormalization never needed the circuit hypothesis.
+
+---
+
+## 3. New exact general pocket identity
+
+Retain the exact PC/JC variables:
+
+- `P_F=per(F)`;
+- `a` = number of missing force-hull side contacts, equivalently outer pockets;
+- `c_B` = loaded-loaded unit contacts that are not force-hull sides;
+- `Q` = total bounded exceptional-face degree excess;
+- `b` = outer contact-face walk length;
+- `E_out=sum_P(L_P-3)` = Euclidean outer-pocket perimeter excess.
+
+JC.3 gives
+
+\[
+E_{out}=x_B+P_F-q-a.
+\tag{3.1}
+\]
+
+PC.1 gives
+
+\[
+q=x_B+Q+2(d_H+s_Z).
+\tag{3.2}
+\]
+
+Subtract (3.2) from (3.1) and add `Q`:
+
+\[
+\boxed{
+E_{out}+Q=P_F-a-2(d_H+s_Z).
+}
+\tag{3.3}
+\]
+
+PC also gives
+
+\[
+e_{BB}=q-a+c_B,
+\]
+
+so
+
+\[
+a=q+c_B-e_{BB}.
+\tag{3.4}
+\]
+
+Finally `q=h+d_H`.  Insert (3.4) into (3.3):
+
+### Theorem GR.1 — exact all-phase joint-pocket identity
+
+\[
+\boxed{
+E_{out}+Q
+=e_{BB}-c_B+P_F-h-3d_H-2s_Z.
+}
+\tag{GR.6}
+\]
+
+This specializes exactly to SZ's circuit-phase formula when `s_Z=0`.
+
+There is a stronger form that exposes every relaxation used below.  ZE/ZT gives
+
+\[
+b+Q=2h-2s_Z.
+\tag{3.5}
+\]
+
+Set
+
+\[
+r_{out}:=b-P_F\ge0.
+\tag{3.6}
+\]
+
+Then (3.5) is
+
+\[
+2h=P_F+r_{out}+Q+2s_Z.
+\tag{3.7}
+\]
+
+Using the numerator
+
+\[
+M_G:=e_{BB}+2s_C-3d_H-3s_Z,
+\tag{3.8}
+\]
+
+rewrite GR.6 as
+
+\[
+\begin{aligned}
+E_{out}+Q
+&=M_G-2s_C-c_B+s_Z+P_F-h\\
+&=M_G+\frac{P_F}{2}
+-\left(
+2s_C+c_B+\frac Q2+\frac{r_{out}}2
+\right).
+\end{aligned}
+\tag{3.9}
+\]
+
+Hence the exact inequality
+
+\[
+\boxed{
+E_{out}+Q
+\le
+M_G+\frac{P_F}{2}.
+}
+\tag{GR.7}
+\]
+
+The loss in GR.7 is not hidden.  It is precisely
+
+\[
+2s_C+c_B+\frac Q2+\frac{b-P_F}{2}\ge0.
+\tag{3.10}
+\]
+
+This is the decisive algebraic extension beyond SZ.  The extra `s_Z` in GR.6 is
+absorbed by the exact outer-walk defect (3.5), leaving the full coefficient `3s_Z`
+inside `M_G`.
+
+---
+
+## 4. Generalized RSJ feasibility theorem
+
+JC's joint convex-area estimate gives
+
+\[
+H_{out}+A_{exc}
+\le
+\frac{(E_{out}+Q)^2}{4\pi}+o(D^2).
+\tag{4.1}
+\]
+
+ZG gives
+
+\[
+G
+\le H_{out}+A_{exc}+O(D),
+\qquad
+G:=\operatorname{area}F-\sum_r\operatorname{area}(P_r).
+\tag{4.2}
+\]
+
+Pass to a convergent subsequence and write
+
+\[
+\mu=\lim\mu_D,
+\qquad
+y=\lim\frac hD,
+\qquad
+p=\lim\frac{P_F}{D}.
+\tag{4.3}
+\]
+
+By GR.7,
+
+\[
+\boxed{
+\limsup\frac{E_{out}+Q}{D}
+\le\mu+\frac p2.
+}
+\tag{4.4}
+\]
+
+Therefore (2.5), (4.1), and (4.2) imply
+
+\[
+\limsup\frac{\operatorname{area}F}{D^2}
+\le
+\frac\pi4\mu^2
++
+\frac{(\mu+p/2)^2}{4\pi}.
+\tag{4.5}
+\]
+
+The FSDB and central-symmetral RSR lower bounds are valid before any `s_Z=0`
+restriction.  Define
+
+\[
+\Phi(y):=\frac{y+\sin y}{4},
+\qquad
+\Psi(p):=c_R\left(\frac p2-1\right)^2,
+\qquad
+c_R:=\frac\pi{(\pi-2)^2},
+\tag{4.6}
+\]
+
+and
+
+\[
+A_*(y,p):=\max\{\Phi(y),\Psi(p)\}.
+\tag{4.7}
+\]
+
+Then
+
+\[
+\liminf\frac{\operatorname{area}F}{D^2}
+\ge A_*(y,p).
+\tag{4.8}
+\]
+
+Combining (4.5)–(4.8) gives the new all-phase necessary inequality
+
+### Theorem GR.2 — generalized renormalized RSJ inequality
+
+\[
+\boxed{
+A_*(y,p)-\frac\pi4\mu^2
+\le
+\frac{(\mu+p/2)^2}{4\pi}.
+}
+\tag{GR.8}
+\]
+
+The geometric domain includes
+
+\[
+2\rho\le y\le p\le\pi,
+\qquad
+p\le2y.
+\tag{4.9}
+\]
+
+The last inequality follows directly from
+
+\[
+P_F\le b=2h-Q-2s_Z.
+\tag{4.10}
+\]
+
+Notice what changed relative to the `s_Z=0` RSJ/SZ formula.  The cavity variable is
+now `p/2`, not `p-y`.  This is exactly the cost of allowing `s_Z>0`; it is still small
+enough to retain a strong positive universal floor on `mu`.
+
+---
+
+## 5. Exact minimization of GR.8
+
+For `A>0,m>=0`, let `R(A,m)` be the least nonnegative `u` satisfying
+
+\[
+A
+\le
+\frac\pi4u^2+
+\frac{(u+m)^2}{4\pi}.
+\tag{5.1}
+\]
+
+Equivalently `u=R(A,m)` is the nonnegative root of
+
+\[
+Q(u;A,m)
+:=(\pi^2+1)u^2+2mu+m^2-4\pi A=0.
+\tag{5.2}
+\]
+
+RSJ already audits the monotonicities
+
+\[
+\frac{\partial R}{\partial A}>0,
+\qquad
+\frac{\partial R}{\partial m}<0.
+\tag{5.3}
+\]
+
+Let `y_R` be RSJ's unique crossover
+
+\[
+\Phi(y_R)=\Psi(2y_R),
+\qquad
+\frac32<y_R<\frac\pi2,
+\tag{5.4}
+\]
+
+and define
+
+\[
+\lambda_R:=R(\Phi(y_R),y_R)
+=0.592140543606288\ldots .
+\tag{5.5}
+\]
+
+We now minimize the new threshold
+
+\[
+R(A_*(y,p),p/2)
+\tag{5.6}
+\]
+
+over the relaxed domain (4.9).
+
+### 5.1 `2rho<=y<=y_R`
+
+For this range, `p<=2y<=p_e(y)`, where
+
+\[
+p_e(y):=2+2\sqrt{\frac{\Phi(y)}{c_R}}
+\tag{5.7}
+\]
+
+is the unique perimeter satisfying `Psi(p_e)=Phi(y)`.  Since every actual force hull
+has `p>2`, `Psi` is increasing on the relevant perimeter range.  Therefore
+
+\[
+A_*(y,p)=\Phi(y).
+\]
+
+By (5.3), increasing `p` lowers the threshold, so the best allowed perimeter is
+`p=2y`.  Hence the fixed-`y` minimum is exactly
+
+\[
+r_-(y):=R(\Phi(y),y).
+\tag{5.8}
+\]
+
+This is the same function audited in RSJ Section 4.1, where
+
+\[
+r_-'(y)<0.
+\tag{5.9}
+\]
+
+Thus this half of the domain is minimized uniquely at `y=y_R`, with value
+`lambda_R`.
+
+### 5.2 `y>=y_R`
+
+Now `p_e(y)<=2y`.  If `p<=p_e(y)`, then `A_*=Phi(y)` and (5.3) again shows the
+threshold decreases as `p` increases, so this side is minimized at `p=p_e(y)`.
+
+If `p>=p_e(y)`, then `A_*=Psi(p)` and the threshold `u(p)` solves
+
+\[
+(\pi^2+1)u^2
++pu+
+\frac{p^2}{4}
+-\pi c_R(p-2)^2
+=0.
+\tag{5.10}
+\]
+
+Implicit differentiation gives `u'(p)>0` exactly when
+
+\[
+2\pi c_R(p-2)>u+\frac p2.
+\tag{5.11}
+\]
+
+On this branch
+
+\[
+p\ge p_e(y)\ge p_e(y_R)=2y_R>3.
+\]
+
+Also `c_R>2`, `pi>3`, `p<=pi<4`, and the threshold root is `<1` because
+`A_*<=pi/4` while the right side of (5.1) at `u=1` is strictly larger than `pi/4`.
+Therefore
+
+\[
+2\pi c_R(p-2)>12>3>u+p/2,
+\]
+
+proving (5.11).  Thus the `p>=p_e` side is also minimized uniquely at `p=p_e(y)`.
+
+It remains to vary `y`.  Put
+
+\[
+s(y):=\sqrt{\frac{\Phi(y)}{c_R}},
+\qquad
+\frac{p_e(y)}2=1+s(y).
+\tag{5.12}
+\]
+
+At the fixed-`y` minimum the root satisfies
+
+\[
+(\pi^2+1)u^2
++2(1+s)u
++(1+s)^2
+-4\pi c_Rs^2
+=0.
+\tag{5.13}
+\]
+
+Differentiate with respect to `s`.  The partial derivative of the left side with
+respect to `s` is
+
+\[
+2u+2(1+s)-8\pi c_Rs.
+\tag{5.14}
+\]
+
+For `y>=y_R`, (5.4) and `p_e(y_R)=2y_R` give
+
+\[
+s\ge s(y_R)=y_R-1>\frac12.
+\]
+
+Also `1+s=p_e/2<=pi/2<2` and `u<1`.  Hence
+
+\[
+2u+2(1+s)-8\pi c_Rs
+<2+4-8(3)(2)(1/2)<0.
+\tag{5.15}
+\]
+
+The partial derivative of (5.13) with respect to `u` is positive, so
+
+\[
+\frac{du}{ds}>0.
+\tag{5.16}
+\]
+
+Finally `Phi` is strictly increasing on `[2rho,pi)`, hence so is `s(y)`.  The
+fixed-`y` threshold is therefore strictly increasing for `y>=y_R`.
+
+### Theorem GR.3 — global all-phase minimum
+
+Combining Sections 5.1–5.2,
+
+\[
+\boxed{
+\mu\ge\lambda_R
+}
+\tag{GR.9}
+\]
+
+for every post-ZF survivor limit, and equality in the relaxed parameter problem is
+possible only at
+
+\[
+\boxed{(y,p)=(y_R,2y_R).}
+\tag{5.17}
+\]
+
+Thus even before the quantitative DD step, the full `3(d_H+s_Z)` renormalization has
+the same base constant as the former `s_Z=0` theorem.
+
+---
+
+## 6. The generalized endpoint is impossible
+
+The endpoint exclusion is internal to C-II and does not use any equality
+classification for the Rogalski–Saint Raymond theorem.
+
+Assume for contradiction
+
+\[
+\mu_D\to\lambda_R.
+\tag{6.1}
+\]
+
+By the strict minimization above,
+
+\[
+y_D\to y_R,
+\qquad
+p_D\to2y_R.
+\tag{6.2}
+\]
+
+Return to the exact remainder in (3.9).  Define
+
+\[
+R_D:=
+2s_C+c_B+\frac Q2+\frac{b-P_F}{2}
+\ge0.
+\tag{6.3}
+\]
+
+Then
+
+\[
+E_{out}+Q
+=M_G+\frac{P_F}{2}-R_D.
+\tag{6.4}
+\]
+
+If `R_D/D` had a positive subsequential limit, the cavity variable in GR.8 would be
+strictly smaller than `p_R/2=y_R` by a fixed amount.  By the strict monotonicity
+`partial R/partial m<0`, the limiting threshold would then be strictly larger than
+`lambda_R`, contradicting (6.1).  Therefore
+
+\[
+\boxed{
+R_D=o(D).
+}
+\tag{6.5}
+\]
+
+Every term in (6.3) is nonnegative, so
+
+\[
+\boxed{
+s_C=o(D),\quad c_B=o(D),\quad Q=o(D),
+\quad b-P_F=o(D).
+}
+\tag{6.6}
+\]
+
+DD now gives
+
+\[
+H_{out}
+\le
+\frac1{\sqrt6}(x_B+a)^{3/2}\sqrt{b-P_F}.
+\tag{6.7}
+\]
+
+The PC identities and `q=O(D)` give `x_B+a=O(D)`, so (6.6) implies
+
+\[
+H_{out}=o(D^2).
+\tag{6.8}
+\]
+
+The exceptional-face estimate gives
+
+\[
+A_{exc}\le\frac{Q^2+O(D)}{4\pi}=o(D^2).
+\tag{6.9}
+\]
+
+Hence ZG forces
+
+\[
+G=o(D^2).
+\tag{6.10}
+\]
+
+But at the unique parameter endpoint the FSDB lower bound and the attachment estimate
+(2.5) give
+
+\[
+\liminf\frac GD^2
+\ge
+\Phi(y_R)-\frac\pi4\lambda_R^2.
+\tag{6.11}
+\]
+
+By the defining threshold equation at `m=y_R`,
+
+\[
+\Phi(y_R)-\frac\pi4\lambda_R^2
+=
+\frac{(\lambda_R+y_R)^2}{4\pi}>0.
+\tag{6.12}
+\]
+
+This contradicts (6.10).  Therefore the endpoint is impossible.
+
+A diagonal-sequence argument yields some nonexplicit absolute `epsilon_0>0` with
+
+\[
+\mu_D\ge\lambda_R+\epsilon_0
+\]
+
+for every sufficiently large post-ZF survivor.  Section 7 makes a stronger part of
+that gap explicit.
+
+---
+
+## 7. Exact `0.5947` exclusion
+
+Put
+
+\[
+u_0:=\frac{5947}{10000}.
+\tag{7.1}
+\]
+
+Suppose an unbounded survivor subsequence has
+
+\[
+\mu_D\to\mu\le u_0.
+\tag{7.2}
+\]
+
+We derive a contradiction using only rational barriers plus the already proved
+monotonicity in Section 5.
+
+### 7.1 Rational constants
+
+Use the E597 barriers
+
+\[
+\frac{6283}{2000}<\pi<\frac{3927}{1250}<\frac{22}{7},
+\qquad
+\rho>\frac{739}{1000},
+\tag{7.3}
+\]
+
+so
+
+\[
+\frac1{4\pi}<\frac{500}{6283}.
+\tag{7.4}
+\]
+
+Also
+
+\[
+\boxed{\frac1{\sqrt6}<\frac{1633}{4000}}
+\tag{7.5}
+\]
+
+because
+
+\[
+6\left(\frac{1633}{4000}\right)^2-1
+=\frac{67}{8000000}>0.
+\]
+
+For rational `x<pi/2` in the range below define
+
+\[
+\underline\Phi(x)
+:=
+\frac14\left[
+x+1-rac12\left(\frac{11}{7}-x\right)^2
+\right].
+\tag{7.6}
+\]
+
+Since `pi/2<11/7` and `cos z>=1-z^2/2`,
+
+\[
+\Phi(x)>\underline\Phi(x).
+\tag{7.7}
+\]
+
+Define also
+
+\[
+\overline J_u(m)
+:=
+\frac{3927}{5000}u^2
++
+\frac{500}{6283}(u+m)^2,
+\tag{7.8}
+\]
+
+so
+
+\[
+J_u(m):=rac\pi4u^2+rac{(u+m)^2}{4\pi}
+<\overline J_u(m).
+\tag{7.9}
+\]
+
+### 7.2 RSJ localizes `y<1.5245`
+
+Let
+
+\[
+y_0:=\frac{3049}{2000}=1.5245.
+\tag{7.10}
+\]
+
+At the fixed-`y` optimum in the upper branch,
+
+\[
+\frac{p_e(y_0)}2
+=1+\sqrt{\frac{\Phi(y_0)}{c_R}}.
+\tag{7.11}
+\]
+
+The function `x/(x-2)^2` decreases for `x>2`; hence
+
+\[
+c_R>
+\frac{3927/1250}{(3927/1250-2)^2}.
+\tag{7.12}
+\]
+
+For an upper bound on `Phi(y_0)`, use
+
+\[
+z_0:=\frac{6283}{4000}-y_0>0.
+\]
+
+Since the actual `z=pi/2-y_0` is larger than `z_0` and cosine decreases here,
+
+\[
+\sin y_0=\cos z
+\le\cos z_0
+\le1-\frac{z_0^2}{2}+rac{z_0^4}{24}.
+\tag{7.13}
+\]
+
+Exact rational comparison then gives
+
+\[
+\frac{\Phi(y_0)}{c_R}
+<\left(\frac{2558}{5000}\right)^2.
+\tag{7.14}
+\]
+
+Therefore
+
+\[
+\frac{p_e(y_0)}2<1.5116.
+\tag{7.15}
+\]
+
+This also gives `p_e(y_0)<3.0232<2y_0=3.049`, so `y_0>y_R` by the unique crossover.
+
+Now exact rational arithmetic gives
+
+\[
+\underline\Phi(y_0)
+-
+\overline J_{u_0}(1.5116)
+=
+\boxed{
+\frac{441700615443}{19241687500000000}>0.
+}
+\tag{7.16}
+\]
+
+Thus even the optimal fixed-`y_0` perimeter requires `mu>u_0`.  By Section 5.2 the
+optimal threshold is strictly increasing for `y>=y_R`, so every state satisfying
+(7.2) has
+
+\[
+\boxed{2\rho\le y<1.5245.}
+\tag{7.17}
+\]
+
+In particular the E597 bound on `rho` gives
+
+\[
+1.478<y<1.5245.
+\tag{7.18}
+\]
+
+### 7.3 Localize the actual-perimeter detour
+
+Set
+
+\[
+\delta:=2y-p\ge0.
+\tag{7.19}
+\]
+
+Then `p/2=y-delta/2`, and GR.8 implies the weaker necessary inequality
+
+\[
+\boxed{
+\Phi(y)\le J_{u_0}(y-\delta/2).
+}
+\tag{7.20}
+\]
+
+For a rational candidate `d`, define
+
+\[
+F_d(y):=J_{u_0}(y-d/2)-\Phi(y).
+\tag{7.21}
+\]
+
+On
+
+\[
+1.478\le y\le1.5245,
+\qquad
+0\le d\le0.026,
+\]
+
+we have `cos y<0.1` and `1/(2pi)>7/44`.  Therefore
+
+\[
+\begin{aligned}
+F_d'(y)
+&=\frac{u_0+y-d/2}{2\pi}-\frac{1+\cos y}{4}\\
+&>
+\left(
+\frac{5947}{10000}
++
+\frac{739}{500}
+-
+\frac{13}{1000}
+\right)\frac7{44}
+-
+\frac{11}{40}\\
+&=
+\boxed{\frac{23179}{440000}>0.}
+\end{aligned}
+\tag{7.22}
+\]
+
+Partition `[1.478,1.5245]` into 465 adjacent intervals of width `10^-4`:
+
+\[
+I_j=[L_j,U_j].
+\tag{7.23}
+\]
+
+For each cell choose `d_j` to be the first multiple of `10^-5` satisfying
+
+\[
+\overline J_{u_0}(U_j-d_j/2)
+<\underline\Phi(U_j).
+\tag{7.24}
+\]
+
+The exact certificate checks `d_j<=0.02567<0.026` for every cell.  By (7.22),
+(7.24) implies
+
+\[
+\boxed{y\in I_j\Longrightarrow\delta<d_j.}
+\tag{7.25}
+\]
+
+The weakest localization cell is
+
+\[
+[1.5012,1.5013],
+\qquad d_j=0.01605,
+\]
+
+where the exact margin in (7.24) is
+
+\[
+\boxed{
+\frac{127118647}{76966750000000000}>0.
+}
+\tag{7.26}
+\]
+
+### 7.4 DD contradicts the force-gap lower bound on every cell
+
+The exact post-ZF identities give
+
+\[
+b-P_F=2h-Q-2s_Z-P_F\ge0.
+\tag{7.27}
+\]
+
+Hence
+
+\[
+Q+2s_Z\le2h-P_F=\delta_DD,
+\]
+
+so in particular
+
+\[
+\frac QD\le\delta_D,
+\qquad
+\frac{b-P_F}{D}\le\delta_D.
+\tag{7.28}
+\]
+
+DD.15 has
+
+\[
+x_B+a
+=2h-Q-2s_Z-e_{BB}+c_B.
+\]
+
+Since `0<=c_B<=e_BB`,
+
+\[
+\boxed{x_B+a\le2h.}
+\tag{7.29}
+\]
+
+Therefore, on a limit with parameters `(y,delta)`, DD and the exceptional-face
+isoperimetric estimate give
+
+\[
+\boxed{
+\limsup\frac{H_{out}+A_{exc}}{D^2}
+\le
+\frac1{\sqrt6}(2y)^{3/2}\sqrt\delta
++
+\frac{\delta^2}{4\pi}.
+}
+\tag{7.30}
+\]
+
+On the other hand, FSDB and (2.5) give
+
+\[
+\boxed{
+\liminf\frac GD^2
+\ge
+\Phi(y)-\frac\pi4u_0^2.
+}
+\tag{7.31}
+\]
+
+Fix one cell `I_j`.  Choose the least rational `s_j` with denominator `10^6` such
+that
+
+\[
+s_j^2\ge2U_jd_j.
+\tag{7.32}
+\]
+
+Then the right side of (7.30) is strictly below
+
+\[
+C_j:=
+\frac{1633}{4000}(2U_j)s_j
++
+\frac{500}{6283}d_j^2.
+\tag{7.33}
+\]
+
+The left side of (7.31) is strictly above
+
+\[
+B_j:=
+\underline\Phi(L_j)
+-
+\frac{3927}{5000}u_0^2.
+\tag{7.34}
+\]
+
+The exact certificate verifies
+
+\[
+\boxed{B_j>C_j}
+\tag{7.35}
+\]
+
+for all 465 cells.
+
+The smallest capacity margin occurs on the final cell
+
+\[
+[1.5244,1.5245],
+\]
+
+where
+
+\[
+d_j=0.02567,
+\qquad
+s_j=0.279764,
+\]
+
+and
+
+\[
+\boxed{
+B_j-C_j
+=
+\frac{1466294867848439}{307867000000000000}
+>0.
+}
+\tag{7.36}
+\]
+
+Thus every possible cell satisfies
+
+\[
+\liminf G/D^2
+>
+\limsup(H_{out}+A_{exc})/D^2,
+\]
+
+contradicting ZG.  No sequence satisfying (7.2) exists.  This proves GR.2.
+
+---
+
+## 8. Uniform finite statement
+
+If GR.3 were false, then for every integer `j` there would be a post-ZF survivor with
+
+\[
+D_j\ge j,
+\qquad
+\mu_{D_j}<0.5947+\frac1j.
+\]
+
+The normalized parameters have compact subsequences.  By (2.3), every subsequential
+limit of `mu_D` is nonnegative; after passing further it is at most `0.5947`, which
+Section 7 excludes.  Therefore absolute `epsilon_G>0,D_0<infinity` exist, proving
+GR.3. `square`
+
+---
+
+## 9. Reproducible exact certificate
+
+Run
+
+```bash
+python3 research/target_c_general_mu05947_certificate.py
+```
+
+The script uses `fractions.Fraction` and integer square roots only.  It checks the
+rational `y_0` barrier, the uniform derivative sign, every detour barrier, every square
+root upper bound, and all 465 cavity-capacity inequalities.
+
+Its weakest certified values are
+
+```text
+ymax RSJ margin:
+    441700615443/19241687500000000
+
+uniform F_d derivative lower bound:
+    23179/440000
+
+weakest localization margin:
+    127118647/76966750000000000
+
+weakest cavity-capacity margin:
+    1466294867848439/307867000000000000
+```
+
+No floating-point number participates in an assertion.
+
+The script encodes the scalar consequences of the named theorem inputs.  It does not
+prove KKT/global optimality, ZK, PC/JC, FSDB, DD, or ZG.  Those are mathematical
+dependencies of this report rather than computational assumptions disguised as a
+certificate.
+
+---
+
+## 10. Adversarial audit
+
+### 10.1 Was `s_Z=0` used anywhere implicitly?
+
+No.  The two places where the circuit proof formerly used `s_Z=0` are replaced by
+exact all-phase identities:
+
+1. ZK retains `3(d_H+s_Z)` in the attachment budget;
+2. GR.6/GR.7 retain the same coefficient in the joint pocket budget.
+
+The outer-walk identity `b+Q=2h-2s_Z` is used with its full `-2s_Z` term.
+
+### 10.2 Is the coefficient three on `s_Z` genuine or a normalization artifact?
+
+It is exact in ZK and exact in `M_G`.  Equation (3.9) shows why the pocket side can
+carry the same coefficient: the apparent `+s_Z` remainder is cancelled by half of the
+`-2s_Z` outer-walk defect.  No asymptotic estimate creates the coefficient.
+
+### 10.3 Could `M_G` be negative and invalidate the radius/cavity monotonicity?
+
+Finite `M_G` can be as low as `-6`, but ZK gives `M_G+6>=0`.  Along any unbounded
+sequence `mu_D>=-6/D`, so every limiting `mu` is nonnegative.  All monotonicity steps
+in Sections 5 and 7 are made after passing to such a limit.
+
+### 10.4 Does GR.7 square a potentially negative upper bound?
+
+No.  `E_out+Q>=0` and GR.7 is an exact upper bound, so on any actual source its right
+side is automatically nonnegative.  The limiting expression `mu+p/2` is therefore
+nonnegative as well.
+
+### 10.5 Is `c_B<=e_BB` valid?
+
+Yes by definition: `c_B` counts a subset of the loaded-loaded contacts, namely those
+that are not force-hull side contacts.
+
+### 10.6 Are the DD detour inequalities valid with positive `s_Z`?
+
+Yes.  DD.15 itself contains the full `-2s_Z` term.  Equations (7.28)–(7.29) weaken its
+exact arguments in the safe direction.  No circuit topology is used.
+
+### 10.7 Is the generalized RSJ minimization really global?
+
+Yes on the relaxed domain `2rho<=y<=p<=pi, p<=2y`.  For `y<=y_R` it is the already
+audited RSJ lower branch.  For `y>=y_R`, both sides of the crossover are minimized at
+`p_e(y)`; the new derivative (5.14) then proves strict increase with `y`.  Relaxing
+away the stronger FSDB perimeter lower bound can only decrease the inferred threshold,
+so it is safe.
+
+### 10.8 Does the proof use the disputed RSR equality classification?
+
+No.  Only the RSR **inequality** enters `Psi(p)`.  Endpoint exclusion uses the exact
+PC remainder plus DD.  The equality body need not be classified.
+
+### 10.9 Contact-isolated source points
+
+They remain present in the selected source.  FSDB obtains the common center/radius
+control through the full-source FS theorem before transporting it to the positive
+force hull.  GR never deletes isolates or assumes they are few.  The graph variables
+are those of the nonisolated positive contact core exactly as in ZF/ZK.
+
+### 10.10 Odd-shell regression
+
+The odd shell has `s_Z=2`, so unlike SZ/E5981 it lies inside the formal scope of GR.
+It does **not** contradict GR: its pinned/contact currency is large, and GR does not
+infer a diameter matching, small response trace, or generic operator bound.  Dense
+isolated fillings still lack the source global-optimality/lexicographic certificate
+used to enter the full post-ZF theorem chain.
+
+### 10.11 Woodall regression families
+
+GR is compatible with both topology branches imported on current main:
+
+- cyclic Woodall support has `d_H=0` but may have `s_Z>0`;
+- caterpillar forest support has `d_H` equal to its component count.
+
+GR charges either mixed surplus or forest component count with coefficient three.  It
+does not falsely force one topology.
+
+### 10.12 Quantifier coverage
+
+GR.3 covers every sufficiently large **post-ZF lexicographically selected
+triangle-free global source**, independent of the value of `s_Z`.  It is not itself an
+exclusion of that source class because it supplies a lower bound, not a contradictory
+upper bound.
+
+---
+
+## 11. Claim classification
+
+| Claim | Classification | Reason |
+| --- | --- | --- |
+| GR.1 exact pocket identity | proved | direct PC + JC + ZE/ZT algebra |
+| GR.7 joint perimeter bound | proved | exact nonnegative remainder (3.9) |
+| GR.2 generalized RSJ inequality | proved | ZK/GU + GR.7/JC/ZG + FSDB/RSR |
+| GR.3 relaxed minimum `mu>=lambda_R` | proved | complete fixed-`y`, fixed-`p` calculus |
+| endpoint `mu=lambda_R` impossible | proved | exact remainder stability + DD |
+| explicit `mu>0.5947` | proved | 465-cell exact rational certificate |
+| uniform gap above `0.5947` | proved | diagonal compactness |
+| contradictory upper bound on GR.5 | not proved | remaining Level I gap |
+| Level I | still open | C-II survivors with larger exact slack budget remain |
+
+---
+
+## 12. Exact effect on the frontier
+
+Before this report the sharp renormalized theorem was branch-specific:
+
+```text
+s_Z=0:
+    (e_BB+2s_C-3d_H)/D > 0.5981      [new parallel certificate]
+
+s_Z>0:
+    no corresponding coefficient-three renormalized floor.
+```
+
+GR changes the full branch to
+
+\[
+\boxed{
+\frac{e_{BB}+2s_C-3(d_H+s_Z)}D>0.5947+o(1)
+}
+\tag{12.1}
+\]
+
+without assuming `s_Z=0`.
+
+The s_Z=0 certificate remains stronger numerically (`0.5981`) and should be retained
+as a specialization.  GR is stronger structurally because it covers the previously
+uncontrolled positive mixed-surplus phase.
+
+The cleanest source-side form is GR.5:
+
+\[
+\sum_r\delta_r+R_I+s_B>(0.5947+o(1))D.
+\]
+
+All three terms are concrete nonnegative graph/packing slacks:
+
+- `sum delta_r`: total unloaded-component contact-graph diameter;
+- `R_I`: total deficit from Eppstein edge saturation inside those components;
+- `s_B`: unused loaded contact-degree capacity.
+
+Any C-II closure through this route now needs an **upper tradeoff on these three
+actual slacks**, not a new treatment of `s_Z>0` from scratch.
+
+---
+
+## 13. Precise unresolved implication
+
+A sufficient full C-II theorem is
+
+\[
+\boxed{
+\sum_r\delta_r+R_I+s_B
+\le(0.5947+o(1))D.
+}
+\tag{13.1}
+\]
+
+Indeed (13.1) contradicts GR.5 for large `D`.
+
+The strongest current structural input for such an upper bound is now the combination
+of:
+
+1. C36–C38 noncrossing attachment incidence;
+2. C46 cross-cell diameter export;
+3. the `s_Z=0` local Laman-circuit inequality when the mixed surplus actually
+   vanishes;
+4. Woodall's exact diameter topology: connected odd-unicyclic-with-leaves when
+   `d_H=0`, caterpillar forest with exactly `d_H` components when `d_H>0`;
+5. GR.3 itself, which makes large `d_H+s_Z` expensive in the ordinary pinned/contact
+   currency.
+
+A theorem merely improving the decimal `0.5947` without controlling the opposite
+side of (13.1) is not a credible Level I endgame.
+
+---
+
+## 14. Promotion recommendation
+
+**Promote after independent audit.**
+
+The exact algebra GR.1/GR.7 and the qualitative all-phase renormalized theorem GR.3
+are stronger structural results than the previous circuit-only formulation and should
+be candidates for the active Target C map.  The explicit `0.5947` certificate should
+remain report-level unless the project wants a fixed numerical convenience constant in
+the canonical module.
+
+Retain E597/E5981 as sharper `s_Z=0` specializations.  Do not remove Woodall's topology
+split; GR is complementary to it.
+
+---
+
+## 15. Compact handoff
+
+```text
+LEVEL I STATUS: STILL OPEN.
+
+New all-phase renormalization:
+    mu=(e_BB+2s_C-3(d_H+s_Z))/D.
+
+ZK gives exactly
+    e_BB+2s_C-3(d_H+s_Z)
+      = sum_r delta_r + R_I + s_B - 6.
+
+New exact pocket algebra:
+    E_out+Q
+      = e_BB-c_B+P_F-h-3d_H-2s_Z
+      = D*mu + P_F/2
+        - [2s_C+c_B+Q/2+(b-P_F)/2].
+Hence
+    E_out+Q <= D*mu+P_F/2.
+
+Therefore every post-ZF limit satisfies
+    max{Phi(y),Psi(p)} - pi*mu^2/4
+      <= (mu+p/2)^2/(4pi),
+with y=h/D, p=P_F/D, p<=2y.
+
+The relaxed threshold has the same unique minimum as RSJ:
+    (y,p)=(y_R,2y_R),
+    mu>=lambda_R=0.5921405436....
+The endpoint is impossible by the exact remainder + DD.
+
+A 465-cell exact rational certificate strengthens this uniformly to
+    mu>=0.5947+epsilon_G
+for all sufficiently large post-ZF survivors, with no s_Z=0 assumption.
+
+Certificate:
+    research/target_c_general_mu05947_certificate.py
+Weakest exact capacity margin:
+    1466294867848439/307867000000000000 > 0.
+
+Structural consequence:
+    sum_r delta_r+R_I+s_B>(0.5947+o(1))D
+for every post-ZF survivor.
+
+Remaining full C-II target:
+prove an upper tradeoff <=0.5947D+o(D) for that exact three-slack sum, using
+noncrossing attachments + Woodall diameter topology + mixed rigidity/circuit
+sparsity, or construct a strict sub-D competitor.
+```

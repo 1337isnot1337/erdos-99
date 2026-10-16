@@ -1,0 +1,92 @@
+{
+  "batch": "326-348",
+  "shard": 3,
+  "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "destination_baseline": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+  "worklist_membership": "target-c source artifact-index.jsonl records whose original path is absent from the frozen destination tree, sorted lexicographically",
+  "assigned_indexes": [
+    326,
+    348
+  ],
+  "report_count": 23,
+  "first_path": "docs/reports/target_c_fixed_star_stress_light_cusps_2026-10-01.md",
+  "last_path": "docs/reports/target_c_fs_perimeter_stability_cavity_floor_2026-09-10.md",
+  "rights_privacy": "Source project license and publication owner-rights authorization were checked. This shard is outside the authorization manifest's listed 810 artifacts; report expression is first-party source-repository material. No third-party PDF was copied; the one external citation URL remains a citation only. Owner-local filesystem paths were redacted where found. No credentials, email addresses, or long block quotations were detected in this batch.",
+  "verification": {
+    "source_blob_sha256_and_destination_blob_sha256": "checked for every report",
+    "body_preservation": "checked: source body after generated theorem-state header removal matches the imported report after recorded privacy redactions and the five explicitly hashed form-feed-to-\\frac repairs",
+    "finite_verifiers": "none referenced by this batch",
+    "global_artifact_index_or_manifest_changed": false,
+    "theorem_state_changed": false,
+    "shared_navigation_changed": false,
+    "other_shards_changed": false,
+    "latex_repairs": {
+      "count": 5,
+      "mapping": "0c 72 61 63 -> 5c 66 72 61 63",
+      "entries": [
+        {
+          "worklist_index": 328,
+          "path": "docs/reports/target_c_force_hull_missing_arc_budget_2026-09-10.md",
+          "source_bytes_hex": "0c 72 61 63",
+          "destination_bytes_hex": "5c 66 72 61 63",
+          "occurrences": 1,
+          "source_sequence_sha256": "a2301c5e324c54d86c67401bd47f6a9c0b83c16c03482addeb16094cbb8153ea",
+          "destination_sequence_sha256": "442601e9beef681ba609e53592b88b618ccd7a1866c30adb51d20d2b442df880",
+          "source_artifact_sha256": "9721627757d97a2a5e5e1d34ffb68ab07ed2b3afe6028a1a4a822e9827f2734d",
+          "destination_artifact_sha256": "40a5ecb519bd7a1340ac274522a5366a14a041e1b80bf6287f267c523c5282fc",
+          "destination_git_blob": "fc69bcae0f1a66f4b4d5289c39bfd762bdf633ff"
+        },
+        {
+          "worklist_index": 342,
+          "path": "docs/reports/target_c_fs_cyclic_area_perimeter_2026-09-10.md",
+          "source_bytes_hex": "0c 72 61 63",
+          "destination_bytes_hex": "5c 66 72 61 63",
+          "occurrences": 1,
+          "source_sequence_sha256": "a2301c5e324c54d86c67401bd47f6a9c0b83c16c03482addeb16094cbb8153ea",
+          "destination_sequence_sha256": "442601e9beef681ba609e53592b88b618ccd7a1866c30adb51d20d2b442df880",
+          "source_artifact_sha256": "ee1474f3fe75d908fa3d30d0d892b4faff34b39ed9646177fea7ac661d4e377c",
+          "destination_artifact_sha256": "f5151ee501969ae6c882b0bfa661709ea64c64faac6a9477d7696745809be17c",
+          "destination_git_blob": "20af738937a7274c529c37ab63a2e8b8805193a8"
+        },
+        {
+          "worklist_index": 344,
+          "path": "docs/reports/target_c_fs_matching_gap_exact_audit_2026-09-10.md",
+          "source_bytes_hex": "0c 72 61 63",
+          "destination_bytes_hex": "5c 66 72 61 63",
+          "occurrences": 1,
+          "source_sequence_sha256": "a2301c5e324c54d86c67401bd47f6a9c0b83c16c03482addeb16094cbb8153ea",
+          "destination_sequence_sha256": "442601e9beef681ba609e53592b88b618ccd7a1866c30adb51d20d2b442df880",
+          "source_artifact_sha256": "13bc6e64aff15d49f347bd4f606747ceba073504eea3bc5089dca0feffe1500f",
+          "destination_artifact_sha256": "f5f6a162c86cd27c31a0837e960534f021a68576ebee9b9050512a992bd7b42c",
+          "destination_git_blob": "eb334de129a28e7ce8455dd3e29494c25a94c2f1"
+        },
+        {
+          "worklist_index": 346,
+          "path": "docs/reports/target_c_fs_max_perimeter_disk_and_fsjc_gap_2026-09-10.md",
+          "source_bytes_hex": "0c 72 61 63",
+          "destination_bytes_hex": "5c 66 72 61 63",
+          "occurrences": 1,
+          "source_sequence_sha256": "a2301c5e324c54d86c67401bd47f6a9c0b83c16c03482addeb16094cbb8153ea",
+          "destination_sequence_sha256": "442601e9beef681ba609e53592b88b618ccd7a1866c30adb51d20d2b442df880",
+          "source_artifact_sha256": "4541e602d17347beda856ee213c16d5df1b1024dfc9f7fd80118353fb851b29e",
+          "destination_artifact_sha256": "a5ba1a199a3016a21511a80ab0c18c07dfad089cb60ad769d6da9e1a43a6b14f",
+          "destination_git_blob": "b0db7e3cc10f81050a3b6ac488299ed75a137318"
+        },
+        {
+          "worklist_index": 347,
+          "path": "docs/reports/target_c_fs_perimeter_area_diameter_hull_2026-09-10.md",
+          "source_bytes_hex": "0c 72 61 63",
+          "destination_bytes_hex": "5c 66 72 61 63",
+          "occurrences": 1,
+          "source_sequence_sha256": "a2301c5e324c54d86c67401bd47f6a9c0b83c16c03482addeb16094cbb8153ea",
+          "destination_sequence_sha256": "442601e9beef681ba609e53592b88b618ccd7a1866c30adb51d20d2b442df880",
+          "source_artifact_sha256": "e3ae73da93deed7269a6337eb4a4370a41fb6e22b80fe3f1dee024032fc5d888",
+          "destination_artifact_sha256": "e70fc97cc41c73f0681a7f59d404018372451896cc69bccbbbe6ec96000411a1",
+          "destination_git_blob": "1cc1217b227c70dedbc737ca4ffc59a8dd333e2a"
+        }
+      ],
+      "source_artifact_hashes_unchanged": true
+    }
+  },
+  "integration": "unreviewed and noncanonical; coordinator owns merge and integration-wide validation"
+}

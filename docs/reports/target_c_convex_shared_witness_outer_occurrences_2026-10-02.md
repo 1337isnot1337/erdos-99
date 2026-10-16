@@ -368,7 +368,7 @@ subclass conclusion.
 
 ## 8. Certificate scope
 
-The [companion exact verifier](../../research/verify_convex_shared_witness_outer_occurrences.py)
+The [companion exact verifier](../research/migration/2026-10-16/shards/01/support/research/verify_convex_shared_witness_outer_occurrences.py)
 checks a strictly convex two-edge shared-witness path with three ordered
 unit-chord moves. Its internal vertex has three exact
 unit contacts and a positive local contact balance. The two exterior inactive

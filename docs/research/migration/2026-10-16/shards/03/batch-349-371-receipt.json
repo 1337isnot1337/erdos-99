@@ -1,0 +1,29 @@
+{
+  "batch": "349-371",
+  "shard": 3,
+  "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "destination_baseline": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+  "assigned_indexes": [349, 371],
+  "report_count": 23,
+  "first_path": "docs/reports/target_c_fs_quantitative_perimeter_area_tradeoff_2026-09-10.md",
+  "last_path": "docs/reports/target_c_fullcore_group_perimeter_interface_defect_2026-09-09.md",
+  "evidence": {
+    "report_referenced_unique_python_artifacts": 15,
+    "new_first_party_scripts_imported": 9,
+    "frozen_baseline_exact_duplicates_not_recopied": 6,
+    "new_script_verifiers_run": 9,
+    "new_script_verifiers_passed": 9,
+    "results": "See evidence-349-371.jsonl; exact commands and proof-scope output summaries are recorded per script."
+  },
+  "rights_privacy": "Reports and scripts were checked against the source project license and publication authorization manifest. One source-repository GitHub citation is retained as a link only; no third-party PDF or other independent literature payload was imported. No long block quotation, images, email, credential-like material, or embedded binary was detected. Imported scripts were scanned for local paths and file/process/network side effects; none were found.",
+  "verification": {
+    "source_blob_sha256_and_destination_blob_sha256": "recorded per report and evidence artifact",
+    "body_preservation": "all 23 report bodies matched frozen source after listed transformations",
+    "finite_verifiers": "9/9 passed; detailed outcomes in evidence ledger",
+    "theorem_manifest_or_generated_index_changed": false,
+    "publication_manifest_changed": false,
+    "shared_navigation_changed": false,
+    "other_shards_changed": false
+  },
+  "integration": "all findings remain unreviewed and noncanonical; coordinator owns merge and integration-wide validation"
+}

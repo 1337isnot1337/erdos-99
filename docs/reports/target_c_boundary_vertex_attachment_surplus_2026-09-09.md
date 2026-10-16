@@ -369,7 +369,7 @@ BAS.1 upgrades the gap lower bound on either branch to
 \boxed{
 \frac G{D^2}
 \ge
-A(p)-\frac\pi4\lambda^2+rac1{2500}-o(1),
+A(p)-\frac\pi4\lambda^2+\frac1{2500}-o(1),
 }
 \tag{BAS.6}
 \]
