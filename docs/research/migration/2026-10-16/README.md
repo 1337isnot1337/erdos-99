@@ -311,3 +311,14 @@ vertex-factor reports remain noncanonical. The destination theorem-state is
 unchanged and the repository remains private. Local results and receipts are
 recorded under `receipts/target-c-pr960-local-verification.json`; this focused
 batch is not the full source migration or Gate 2 verification.
+
+The pinned CPython 3.14.7 candidate verifier ran against payload commit
+`cc0e388404c5e168ef89025121e10e74b4ff19fe` and its 560-entry artifact index.
+All 132 tool tests, 8 corpus tests, 94 registered certificates, public/source
+integrity, theorem-state, current-tree Gitleaks, actionlint, and whitespace
+checks passed; the candidate commit and tree remained unchanged during the run.
+The release audit returned `BLOCKED` on existing owner-rights evidence for the
+810-entry inclusion set and 88 reachable personal-domain Git metadata
+occurrences. The audit findings and historical PEM-delimiter false-positive
+review are recorded in the local verification receipt. Gate 2 is not claimed,
+no hosted PR jobs have run, and Gate 3 remains separate.

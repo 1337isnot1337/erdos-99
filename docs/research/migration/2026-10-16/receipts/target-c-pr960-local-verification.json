@@ -1,0 +1,142 @@
+{
+  "schema_version": "erdos-99-local-migration-verification/v1",
+  "recorded_at_utc": "2026-10-16 12:57:36 UTC",
+  "verification_subject": {
+    "destination_repository": "https://github.com/1337isnot1337/erdos-99",
+    "batch": "source PR #960 plus merged source PR #995 support",
+    "branch": "research/global-pr960-transformation-barriers-20261016",
+    "payload_commit": "cc0e388404c5e168ef89025121e10e74b4ff19fe",
+    "payload_tree": "8477fae10983f71f30973d2f1f9bdb74d67a1240",
+    "base_main_commit": "aa0a8196e88a840ef3ad2dc63626c9e76d91ebf9",
+    "base_main_tree": "7f51665b258dd19760a2bcf4bfe0dd8d090917b4",
+    "receipt_commit_note": "This receipt is a follow-on documentation commit. The exact full candidate verifier ran on payload_commit before this receipt was added; it did not verify a later final-main tree."
+  },
+  "frozen_source": {
+    "repository": "https://github.com/1337isnot1337/e-99",
+    "main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "main_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+    "open_pull_requests": [
+      {
+        "number": 960,
+        "state_at_freeze": "open draft",
+        "head": "c75e519426e3a88839567411fe3381160f3aa3cb",
+        "head_tree": "65f7e6e67cbead52038792617df9de48208d99d7",
+        "merge_base": "a43c69dac7e7b0627dec2900e12c60fd4608d519",
+        "source_paths": 11,
+        "result": "PASS; 5 exact copies, 6 transformed or regenerated, 0 blocked"
+      }
+    ],
+    "merged_pull_requests": [
+      {
+        "number": 995,
+        "merged_commit": "8db48831a8212dfac1e24a1d26e7f9d53a67335b",
+        "tree": "b73c1114989079472aeeb883fee7ac9d28f8af57",
+        "source_paths": 7,
+        "result": "PASS; 2 exact copies including one verified duplicate, 4 transformed or regenerated, 1 operational preservation record excluded from the mathematical corpus with an explicit blocker"
+      }
+    ],
+    "ledger": "docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl",
+    "source_main_ledger_result": "PASS; 1,446 source artifact records and 2,912 tracked file records retain frozen source identities and explicit disposition. This batch additionally integrates two source-main reports with transformed copies."
+  },
+  "runtime_and_tools": {
+    "python": "CPython 3.14.7, Linux x86_64",
+    "dependencies": "Installed from the repository hash-locked verification requirements; pip check passed.",
+    "gitleaks": {
+      "version": "8.30.1",
+      "verification": "Official release archive checksum validated before execution."
+    },
+    "actionlint": {
+      "version": "1.7.7",
+      "verification": "Official release checksum validated before execution."
+    },
+    "candidate_receipt": "The full machine receipt and per-step logs were written outside the repository. Only their exact outcomes and blockers are summarized here; the private local source-checkout path is not committed."
+  },
+  "commands": [
+    {
+      "command": "python3 tools/build_artifact_index.py --write --write-headers; python3 tools/build_artifact_index.py",
+      "result": "PASS; artifact index rebuilt and verified at 560 records, with zero metadata-header updates."
+    },
+    {
+      "command": "python3 tools/check_theorem_state.py",
+      "result": "PASS; canonical theorem state remained unchanged."
+    },
+    {
+      "command": "python3 tools/check_public.py",
+      "result": "PASS; zero integrity errors; mathematical_proof=false; 94 certificates, 451 claims, 845 edges, 810 retained source files, 20 tasks."
+    },
+    {
+      "command": "PYTHONPATH=tools python3 -m unittest tools.test_public_proof_graph tools.test_public_rights tools.test_public_release_audit tools.test_verify_publication_candidate tools.test_clean_public_snapshot tools.test_verify_publication_sources",
+      "result": "PASS; 55 tests on system CPython 3.12.3."
+    },
+    {
+      "command": "python3 tools/run_theorem_certificates.py",
+      "result": "PASS; all 94 selected of 94 unique registered certificates."
+    },
+    {
+      "command": "python3 docs/research/migration/2026-10-16/verify_source_pr_imports.py --pr 960; python3 docs/research/migration/2026-10-16/verify_source_pr_imports.py --pr 995",
+      "result": "PASS; PR #960: 11 paths, 5 exact, 6 transformed or regenerated, 0 blocked. PR #995: 7 paths, 2 exact, 4 transformed or regenerated, 1 documented operational exclusion."
+    },
+    {
+      "command": "python3 tools/verify_publication_sources.py --source-repo <frozen-e-99-checkout>",
+      "result": "PASS; 4,793 source records verified, 810 retained, 3,977 excluded, no errors; provenance check only, not a rights grant or proof audit."
+    },
+    {
+      "command": "python3 docs/research/migration/2026-10-16/verify_migration_provenance.py --source-repo <frozen-e-99-checkout> --destination <erdos-99-checkout>",
+      "result": "PASS; 1,446 source artifacts, 492 public artifact hashes, 1,287 Target C artifacts, 2,912 source files, 232 public source hashes, 100 dependency records, 73 dependency hashes, 384 edges, 0 unresolved or rights-blocked source-main dependencies."
+    },
+    {
+      "command": "python3 research/verify_global_factorized_distance_barrier.py; python3 research/verify_global_factorized_graph_alternative.py; python3 research/verify_global_dense_factorized_barrier.py; python3 research/verify_global_planarity_and_radius_barriers.py; python3 research/verify_global_vertex_factor_relocation_2026_10_12.py",
+      "result": "PASS; exact rational/pair checks, abstract graph enumeration and corrupted-certificate negatives, dense families through M=128, planarity/radius examples, and the vertex-factor exact all-pairs checks completed. Their outputs document finite constructions or obstructions and do not establish global minimizer optimality or close Level I."
+    },
+    {
+      "command": "<hash-locked-CPython-3.14.7-venv>/bin/python tools/verify_publication_candidate.py --root <candidate-checkout> --output <external-receipt-dir> --gitleaks <pinned-gitleaks> --actionlint <pinned-actionlint> --source-repo <frozen-e-99-checkout>",
+      "result": "Executable stages PASS on payload commit cc0e388404c5e168ef89025121e10e74b4ff19fe: environment, public integrity, source provenance, theorem state, 132 tool tests, 8 corpus tests, all 94 certificates, current-tree Gitleaks, actionlint, and whitespace. Candidate commit/tree stayed unchanged. The overall automated release precheck did not pass because its release-clearance audit is blocked as detailed below."
+    },
+    {
+      "command": "gitleaks git --no-banner --log-opts='aa0a8196e88a840ef3ad2dc63626c9e76d91ebf9..cc0e388404c5e168ef89025121e10e74b4ff19fe' <erdos-99-checkout>",
+      "result": "PASS; committed payload range scanned with no leaks."
+    }
+  ],
+  "release_audit": {
+    "status": "BLOCKED",
+    "blocker_count": 90,
+    "blockers_by_type": {
+      "personal_git_email": 88,
+      "rights_clearance_pending": 1,
+      "unverified_owner_rights_record": 1
+    },
+    "details": [
+      "The audit reports 810 entries awaiting a committed owner-rights evidence match for the exact inclusion manifest. The user-authorized inclusion set remains unchanged; no authorization evidence was fabricated or widened by this batch.",
+      "The audit flags 88 personal-domain author/committer metadata occurrences in reachable existing history. The repository publication audit documents the owner's public GitHub email as intentionally authorized; this migration did not rewrite history or change email metadata.",
+      "The destination remains private. These results do not pass publication Gate 2 and do not authorize Gate 3 visibility changes."
+    ]
+  },
+  "gitleaks_history": {
+    "raw_exit_code": 1,
+    "verifier_disposition": "reviewed-false-positive",
+    "finding_count": 2,
+    "finding": "Historical negative-test strings contain PEM opening delimiters but no closing delimiter or encoded private-key payload; the exact committed blob was inspected and the raw scanner finding preserved.",
+    "current_tree_scan": "PASS; no leaks found."
+  },
+  "theorem_and_release_status": {
+    "theorem_state_changed": false,
+    "target_c_canonical_status_changed": false,
+    "registered_certificate_set_changed": false,
+    "publication_inclusion_membership_changed": false,
+    "retained_inclusion_count": 810,
+    "candidate_registry_entries_added": 8,
+    "canonical_claims_promoted": 0,
+    "destination_private": true,
+    "automated_release_precheck_passed": false,
+    "gate_2_pass_claimed": false,
+    "gate_3_visibility_approval": false,
+    "migration_status": "INCOMPLETE; source-main report batches and other relevant source history remain queued."
+  },
+  "limitations": [
+    "The full candidate verifier ran on the payload commit before this receipt was added; its result is not a final-main verification receipt and must be regenerated on final main after all integrations.",
+    "Imported proof proposals and source audits remain noncanonical. No theorem-state claim was promoted.",
+    "The six imported items with transformed or regenerated treatment preserve original source blob/SHA-256 identities in the migration ledger; transformations address destination path, lifecycle, provenance, and portability conventions.",
+    "The complete frozen source-main corpus contains 826 Target C report records still queued for substantive report-batch processing at this checkpoint, in addition to other cross-target and history reconciliation work.",
+    "No destination hosted PR checks have run yet. No hosted CI, Gate 2, or Gate 3 success is claimed."
+  ]
+}
