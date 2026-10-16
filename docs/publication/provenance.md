@@ -6,7 +6,7 @@ The scientific snapshot was selected at `5dcbdc3dfa1f9be370602cc54d50e68eabb88f5
 
 The source's inherited state-version label remains `2026-10-10.audit.234`, despite later numbered entries. This snapshot preserves inherited claim statements, scopes, statuses and edges except the explicit publication proof withdrawal recorded below. The public manifest removes historical-prompt and catalog navigation only; its schema is adjusted for that absent archival field. Detailed mathematical source text is retained, with bibliographic/private-link rewrites, generated metadata and explicitly recorded editorial extracts. New summaries are navigation, never replacement proofs.
 
-All observed source PRs were submitted through the owner's account. Git author identities include the owner and project automation aliases; identities alone do not establish mathematical authorship or third-party rights. The root Apache-2.0 license records the destination's intended license. The retained source-specific grant or authorization evidence must still be confirmed; author identities and an automated scan do not themselves clear redistribution. External mathematical results retain their named attribution and bibliography. No external paper, page image or extracted paper text is redistributed. Source-specific rights review and credential/history scan results are in the [publication audit](../launch/PUBLICATION_AUDIT.md).
+All observed source PRs were submitted through the owner's account. Git author identities include the owner and project automation aliases; identities alone do not establish mathematical authorship or third-party rights. The root Apache-2.0 license records the destination's intended license. The owner subsequently supplied explicit permission for all 810 retained project-derived source files (recorded in [owner-rights-authorization.json](owner-rights-authorization.json)), keyed to the exact inclusion-manifest Git blob. This owner declaration, not Git author labels or an automated scan, supplies permission for owner-controlled project expression; any substantial separately owned code/prose still requires an applicable license, consent, or replacement. External mathematical results retain their named attribution and bibliography. No external paper, page image or extracted paper text is redistributed. Source-specific rights review and credential/history scan results are in the [publication audit](../launch/PUBLICATION_AUDIT.md).
 
 ## Historical navigation
 
@@ -25,7 +25,7 @@ After the initial source pin `5dcbdc3d`, source main advanced through `eb51394f3
 
 The old campaign log, administrative reconciliation notes, private CI maintenance history, and source preservation records remain private or outside the current mathematical corpus. The initial source-commit inclusion/exclusion census is still pinned to its original baseline; these four **post-baseline additions** are explicitly marked with their own later source commit. They are not promoted into the canonical theorem state.
 
-A publication rights review is still required for every retained source file. This reconciliation neither establishes author consent nor constitutes independent proof review.
+The subsequent owner rights declaration covers the full 810-entry inclusion manifest, including these four additions. Exact source provenance remains independently checked. This scientific reconciliation itself did not grant rights and does not constitute mathematical proof review.
 
 
 ## Scientific freeze and editorial fidelity
