@@ -52,7 +52,34 @@ def allowed_relative(raw: object) -> bool:
 
 
 def read_json(root: Path, path: str):
-    return json.loads((root / path).read_text(encoding="utf-8"))
+    # Final-candidate evidence must describe Git objects, never substituted worktree bytes.
+    return json.loads(git(root, "show", "HEAD:" + path))
+
+
+def reachable_objects(root: Path):
+    """Read each reachable object once, including non-default and fetched PR refs."""
+    records = git(root, "rev-list", "--objects", "--all").splitlines()
+    names = {}
+    for record in records:
+        oid, _, name = record.partition(b" ")
+        names[oid.decode("ascii")] = name.decode("utf-8", "surrogateescape")
+    # cat-file batch avoids thousands of subprocesses and does not execute repo code.
+    proc = subprocess.run(
+        ["git", "--no-replace-objects", "-C", str(root), "cat-file", "--batch"],
+        input=b"".join(oid.encode() + b"\n" for oid in names),
+        capture_output=True, check=True, timeout=120,
+    )
+    offset = 0
+    for expected, name in names.items():
+        end = proc.stdout.index(b"\n", offset)
+        oid, kind, length = proc.stdout[offset:end].split()
+        size = int(length)
+        start = end + 1
+        data = proc.stdout[start:start + size]
+        if oid.decode() != expected or len(data) != size or proc.stdout[start + size:start + size + 1] != b"\n":
+            raise ValueError("invalid Git batch response")
+        offset = start + size + 1
+        yield expected, kind.decode(), name, data
 
 
 def audit(root: Path, *, scan_content: bool = True) -> dict:
@@ -61,11 +88,18 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
     warnings: list[dict] = []
     seen_paths: set[str] = set()
     counts = Counter()
+    candidate = tree = None
 
     def finding(where: str, kind: str, detail: str, *, block: bool = True):
         (blockers if block else warnings).append({"path": where, "kind": kind, "detail": detail})
 
     try:
+        candidate = git(root, "rev-parse", "HEAD").decode().strip()
+        tree = git(root, "rev-parse", "HEAD^{tree}").decode().strip()
+        dirty = git(root, "status", "--porcelain", "--untracked-files=normal").splitlines()
+        counts["dirty_worktree_records"] = len(dirty)
+        if dirty:
+            finding("<worktree>", "dirty-candidate", "Commit or remove pending changes before recording final-candidate evidence")
         raw = git(root, "ls-tree", "-r", "-z", "HEAD")
         entries = []
         for rec in raw.split(b"\x00"):
@@ -80,7 +114,7 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
         finding("<git>", "unavailable-committed-tree", type(exc).__name__)
         entries = []
 
-    for path, mode, typ, _ in entries:
+    for path, mode, typ, blob in entries:
         seen_paths.add(path)
         if not allowed_relative(path):
             finding(path, "unsafe-path", "Noncanonical repository path")
@@ -98,8 +132,8 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
         if not scan_content:
             continue
         try:
-            data = target.read_bytes()
-        except OSError as exc:
+            data = git(root, "cat-file", "blob", blob)
+        except (OSError, subprocess.SubprocessError) as exc:
             finding(path, "unreadable", type(exc).__name__)
             continue
         counts["content_bytes"] += len(data)
@@ -120,7 +154,7 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
             raise ValueError("inclusion manifest requires entries array")
         if not isinstance(exc, list):
             raise ValueError("exclusion manifest requires an array")
-    except (OSError, ValueError, UnicodeError) as error:
+    except (OSError, ValueError, UnicodeError, subprocess.SubprocessError) as error:
         finding("docs/publication/", "invalid-inventory", type(error).__name__)
         inc = None
 
@@ -152,7 +186,7 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
                 finding(dest, "missing-import", "Retained source absent from committed tree")
                 continue
             if scan_content:
-                actual = hashlib.sha256((root / dest).read_bytes()).hexdigest()
+                actual = hashlib.sha256(git(root, "show", "HEAD:" + dest)).hexdigest()
                 if actual != rec.get("public_sha256"):
                     finding(dest, "hash-mismatch", "Published bytes differ from recorded SHA256")
             if rec.get("publication_clearance", "").startswith("pending"):
@@ -202,8 +236,31 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
     except (subprocess.SubprocessError, UnicodeError) as error:
         finding("<git>", "history-scan-failure", type(error).__name__)
 
+    if scan_content:
+        try:
+            for oid, kind, name, data in reachable_objects(root):
+                if kind not in ("blob", "commit", "tag"):
+                    continue
+                counts["reachable_" + kind + "_objects_scanned"] += 1
+                # Object ids identify findings without reproducing sensitive paths or values.
+                where = "<git-object:" + oid + ">"
+                for label, pattern in TOKEN_PATTERNS.items():
+                    if pattern.search(data):
+                        finding(where, "historical-credential-indicator", label + " matched; inspect privately")
+                if kind == "blob" and (name.startswith(RESTRICTED_PREFIXES) or name.lower().endswith(RESTRICTED_EXTENSIONS)):
+                    finding(where, "historical-restricted-artifact", "Restricted artifact remains reachable in Git history")
+                if kind in ("commit", "tag"):
+                    for email in re.findall(rb"(?im)^(?:tagger |co-authored-by: )[^\n]*<([^<>\n]+)>", data):
+                        if b"@" in email and not email.decode("utf-8", "replace").lower().endswith(SAFE_EMAIL_SUFFIXES):
+                            finding(where, "personal-git-trailer-or-tag-email", "Tagger or contributor trailer has non-noreply metadata; values redacted")
+        except (OSError, subprocess.SubprocessError, ValueError, UnicodeError) as error:
+            finding("<git>", "historical-content-scan-failure", type(error).__name__)
+
     return {
-        "status": "BLOCKED" if blockers else "STRUCTURAL_PRECHECK_PASSED",
+        "status": "BLOCKED" if blockers else ("STRUCTURAL_PRECHECK_PASSED" if scan_content else "CONTENT_SCAN_SKIPPED"),
+        "candidate_commit": candidate,
+        "candidate_tree": tree,
+        "full_content_scan": scan_content,
         "counts": dict(sorted(counts.items())),
         "blockers": blockers,
         "warnings": warnings,

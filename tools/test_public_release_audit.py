@@ -98,6 +98,52 @@ class ReleaseAuditFixtures(unittest.TestCase):
         result = audit(self.root)
         self.assertIn("restricted-redistribution", {v["kind"] for v in result["blockers"]})
 
+    def test_uncommitted_approval_cannot_clear_candidate(self):
+        self.set_inventory("approved")
+        result = audit(self.root)
+        kinds = {v["kind"] for v in result["blockers"]}
+        self.assertIn("dirty-candidate", kinds)
+        self.assertIn("rights-clearance-pending", kinds)
+
+    def test_removed_secret_still_blocks_history(self):
+        secret = "ghp_" + "B" * 36
+        self.write("removed.txt", secret)
+        self.git("add", "-A")
+        self.git("commit", "-qm", "past token")
+        self.git("rm", "removed.txt")
+        self.git("commit", "-qm", "remove token")
+        result = audit(self.root)
+        self.assertIn("historical-credential-indicator", {v["kind"] for v in result["blockers"]})
+        self.assertNotIn(secret, json.dumps(result))
+
+    def test_nondefault_ref_is_scanned(self):
+        self.git("checkout", "-qb", "retained-pr")
+        self.write("ref-only.txt", "sk-" + "X" * 30)
+        self.git("add", "-A")
+        self.git("commit", "-qm", "ref-only token")
+        self.git("checkout", "-")
+        result = audit(self.root)
+        self.assertIn("historical-credential-indicator", {v["kind"] for v in result["blockers"]})
+
+    def test_annotated_tag_metadata_is_scanned_without_printing_email(self):
+        email = "tag-fixture@personaldomain.example"
+        self.git("-c", "user.email=" + email, "tag", "-a", "v-fixture", "-m", "tag")
+        result = audit(self.root)
+        self.assertIn("personal-git-trailer-or-tag-email", {v["kind"] for v in result["blockers"]})
+        self.assertNotIn(email, json.dumps(result))
+
+    def test_uncommitted_substitution_cannot_hide_committed_secret(self):
+        secret = "ghp_" + "C" * 36
+        self.write("committed.txt", secret)
+        self.git("add", "-A")
+        self.git("commit", "-qm", "token")
+        self.write("committed.txt", "apparently clean replacement")
+        result = audit(self.root)
+        kinds = {v["kind"] for v in result["blockers"]}
+        self.assertIn("credential-indicator", kinds)
+        self.assertIn("dirty-candidate", kinds)
+        self.assertNotIn(secret, json.dumps(result))
+
 
 if __name__ == "__main__":
     unittest.main()
