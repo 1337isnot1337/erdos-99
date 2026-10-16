@@ -17,3 +17,11 @@ results are linked through the [capacity and refill track](tracks/target-c-capac
 It connects exact vacancy motions, one- and two-pin source replacements,
 triangular and pentagon capacity obstructions, and multishear mean-energy
 control to the remaining wall-extraction and full-source diameter obligations.
+
+The strongest imported full-core Type-II matched train-measure candidate is
+the branch-aware `0.0071` gap. The [iterative-pruning/atomic-gap track](tracks/target-c-iterative-pruning-atomic-gap.md)
+preserves the split-budget predecessor, the conditional pair payment, the
+superseded `0.0050` result and its separate Section-171 certificate, and the
+stronger result's exact proof/audit chain. Its linked task is to propagate the
+new input through downstream energy and rhombic-incidence bounds without
+claiming that the older `0.0050` endpoint has transferred.

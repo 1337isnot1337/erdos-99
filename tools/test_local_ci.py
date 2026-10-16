@@ -207,20 +207,20 @@ class Repository(unittest.TestCase):
         self.commit(); self.full()
 
     def test_undeclared_package_shadowing_standard_library_requires_review(self):
-        self.write('math/__init__.py', 'def sqrt(value):\n    return 99\n')
-        self.package('alpha', code='import math\nassert math.sqrt(4) == 2\n')
+        self.write('fractions/__init__.py', 'value = 99\n')
+        self.package('alpha', code='import fractions\nassert fractions.value == 99\n')
         self.base = self.commit()
         self.write('research-packages/alpha/README.md', 'Unchanged finite claim\n')
         self.commit()
         p = self.full()
-        self.assertTrue(any('unresolved import math' in r for r in p['reasons']))
+        self.assertTrue(any('unresolved import fractions' in r for r in p['reasons']))
         with self.assertRaises(Invalid):
             replay(self.root, p, self.output)
 
     def test_declared_package_shadowing_standard_library_is_replayed(self):
-        self.write('math/__init__.py', 'def sqrt(value):\n    return 99\n')
-        self.package('alpha', ('math/__init__.py',),
-                     code='import math\nassert math.sqrt(4) == 99\n')
+        self.write('fractions/__init__.py', 'value = 99\n')
+        self.package('alpha', ('fractions/__init__.py',),
+                     code='import fractions\nassert fractions.value == 99\n')
         self.base = self.commit()
         self.write('research-packages/alpha/README.md', 'Local package claim\n')
         self.commit()

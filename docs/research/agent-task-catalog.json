@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "catalogue_revision": "public-frontier.5",
+  "catalogue_revision": "public-frontier.6",
   "reviewed_on": "2026-10-16",
-  "reviewed_base_commit": "4ce4fed103532ad42919896d025df1a6d4b72405",
+  "reviewed_base_commit": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
   "reviewed_state_version": "2026-10-15.publication.2",
   "problem_status": "open",
   "purpose": "Bounded candidate tasks derived from the canonical E99 frontier; not a theorem ledger, novelty index, or work reservation service.",
@@ -66,7 +66,7 @@
       "description": "Exploratory routes that avoid the main A/B/C proof machinery while naming a global endpoint."
     }
   ],
-  "open_pr_snapshot_date": "2026-10-15",
+  "open_pr_snapshot_date": "2026-10-16",
   "open_pr_snapshot": [],
   "tasks": [
     {
@@ -1844,6 +1844,125 @@
         {
           "path": "docs/research/migration/2026-10-16/ledger/source-branch-files.jsonl",
           "role": "all source branch paths and exact treatment"
+        }
+      ]
+    },
+    {
+      "id": "target-c-branch-aware-atomic-gap",
+      "track": "target-c",
+      "selection_weight": 4,
+      "frontier_relation": "current-frontier",
+      "question": "Can the unreviewed 0.0071 full-core Type-II matched train-measure gap be propagated through Section 171, outer energy, complement-rhombus incidence, and low-t structure with every exact branch hypothesis retained?",
+      "assumptions": [
+        "Use destination theorem-state as the only canonical lifecycle authority.",
+        "The 0.0071 train/rhombic gap is an unreviewed proof candidate; source hostile-audit PASS is provenance only.",
+        "The 0.0050 Section-171 output has not been propagated to 0.0071.",
+        "Retain the full-core Type-II scope, strict-rhombus transfer hypotheses, contact isolates, and every lower/upper pair condition in any finite endpoint."
+      ],
+      "canonical_dependencies": [
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "claim": "Canonical C-II hypotheses and lifecycle authority."
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "claim": "Current C-II branch and full-source endpoint obligations."
+        },
+        {
+          "path": "docs/targets/target-c/76-hole-stable-complete-grid-order-diameter-audit.md",
+          "claim": "Complete phase-pure grid order and source-hull projection.",
+          "claim_id": "C-HOLE-GRID-DIAMETER"
+        },
+        {
+          "path": "docs/targets/target-c/73-pseudosegment-grid-extraction-audit.md",
+          "claim": "Actual train/pseudogrid extraction.",
+          "claim_id": "C-PSEUDO-GRID"
+        },
+        {
+          "path": "docs/targets/target-c/80-global-isolate-concentration-fullcore-disk-audit.md",
+          "claim": "Full-core Type-II branch and source retention.",
+          "claim_id": "C-FULLCORE-NEAR-DISK"
+        },
+        {
+          "path": "docs/targets/target-c/68-punctured-packing-phase-audit.md",
+          "claim": "Canonical phase law and phase cut.",
+          "claim_id": "C-PUNCTURED-PHASE"
+        },
+        {
+          "path": "docs/targets/target-c/85-train-boundary-interface-currency-audit.md",
+          "claim": "Train boundary and interface accounting.",
+          "claim_id": "C-TRAIN-INTERFACE-CURRENCY"
+        }
+      ],
+      "previous_obstructions": [
+        {
+          "path": "docs/research/tracks/target-c-iterative-pruning-atomic-gap.md",
+          "claim": "Complete pair-payment lineage, proof-only gap scope, exact verifier boundaries, and unfulfilled propagation tasks."
+        },
+        {
+          "path": "research/target_c_branch_aware_iterative_pruning_atomic_gap_0071_2026-09-15.md",
+          "claim": "The strongest imported matched gap and its specific stated next downstream branches."
+        },
+        {
+          "path": "research/target_c_iterative_minimax_phase_star_atomic_gap_0050_2026-09-14.md",
+          "claim": "Separate 0.0050 Section-171 output that cannot be silently inherited by 0.0071."
+        },
+        {
+          "path": "research/verify_target_c_g0050_global_propagation.py",
+          "claim": "Exact verifier whose checked result is restricted to the 0.0050 input."
+        }
+      ],
+      "starting_experiment": "Write the downstream Section-171 endpoint as an explicit function of the matched gap parameter. Substitute 0.0071 only after rederiving every domain, monotonicity direction, and outward interval endpoint; then compare the result against existing outer-energy and complement-rhombus-incidence thresholds.",
+      "expected_evidence": [
+        "A proof or outward-rational certificate for each 0.0071 propagation step, with exact hypotheses and negative controls.",
+        "A dependency-by-dependency statement of which outer-energy, complement-incidence, low-t, and macroscopic-container branches remain open.",
+        "If no improvement follows, an exact obstruction or a rigorous explanation of which coefficient/hypothesis prevents it."
+      ],
+      "stopping_condition": "Stop if the 0.0050 endpoint is carried over without a new derivation, if a finite interval checker is treated as analytic proof, if the macroscopic-container branch is ignored, or if any source label or lower/upper pair constraint is dropped.",
+      "methods": [
+        "exact algebraic substitution with symbolic branch partition",
+        "Fraction or rational outward interval verification",
+        "independent endpoint-function reconstruction",
+        "cross-check against source reports and canonical theorem-state"
+      ],
+      "overlap_terms": [
+        "iterative pruning",
+        "atomic gap 0.0071",
+        "Section 171",
+        "rhombic incidence",
+        "outer energy",
+        "low-t full-core branch",
+        "C-II",
+        "strict diameter endpoint"
+      ],
+      "source_proposal_numbers": [],
+      "potential_open_overlap_prs": [],
+      "priority": "direct frontier",
+      "audited_working_premises": [],
+      "level_i_relation": "Only strengthens proof-only full-core Type-II quantitative bounds unless it supplies a source-wide contradiction or a valid finite endpoint. It does not close the separate macroscopic-container or Level I branches by itself.",
+      "falsification_strategy": "Reconstruct the candidate endpoint with exact rational intervals and test all boundary cases of the new branch domain; compare against the original 0.0050 output and require every claimed improvement to be strictly certified.",
+      "session_scope": "One exact 0.0071 propagation, one rigorous obstruction, or a precise source-wide handoff; refresh destination main and open PRs before continuation.",
+      "remaining_if_successful": "Repeat through the remaining outer-energy and complement-incidence chains, then prove the exact residual full-source finite endpoint or preserve a rigorous obstruction; treat macroscopic containers separately.",
+      "does_not_prove": "No matched train-measure inequality, asymptotic scalar propagation, or interval certificate alone proves a canonical source-wide contradiction, finite strict competitor, C-II closure, or Level I.",
+      "reproduction": [
+        "python3 research/verify_target_c_iterative_minimax_atomic_gap_0050.py",
+        "python3 research/verify_target_c_g0050_global_propagation.py",
+        "python3 research/verify_target_c_branch_aware_atomic_gap_0071.py",
+        "python3 research/verify_target_c_branch_aware_atomic_gap_0071_pi_enclosure.py",
+        "python3 tools/task_context.py target-c-branch-aware-atomic-gap"
+      ],
+      "research_references": [
+        {
+          "path": "docs/research/tracks/target-c-iterative-pruning-atomic-gap.md",
+          "role": "Full proof lineage and next proof obligations."
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "role": "Lifecycle-labelled pair, 0.0050, and 0.0071 candidate records."
+        },
+        {
+          "path": "docs/research/migration/2026-10-16/ledger/source-main-files.jsonl",
+          "role": "Exact source commit/blob/hash and per-file import disposition."
         }
       ]
     }

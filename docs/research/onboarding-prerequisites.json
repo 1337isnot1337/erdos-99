@@ -1,7 +1,7 @@
 {
   "status": "public navigation supplement; no mathematical lifecycle changes",
   "source_commit": "afa7f7ec8b93b39efb921f4f47d132e4219b5df8",
-  "scope": "Explicit section-to-file bridges found during the A/B/C-II outsider evaluation. The theorem manifest remains authoritative; this is not a proof-completeness certificate. Added exact-phase packet, multishear, audit and verifier prerequisites for the new threshold-packet task and related C-II tasks.",
+  "scope": "Explicit section-to-file bridges found during the A/B/C-II outsider evaluation. The theorem manifest remains authoritative; this is not a proof-completeness certificate. Added exact-phase packet, multishear, audit and verifier prerequisites for the new threshold-packet task and related C-II tasks. Added the branch-aware 0.0071 atomic-gap task and its source reports/verifiers as explicit C-II reading prerequisites.",
   "file_dependencies": {
     "docs/targets/target-a/02-scaffold-and-hall.md": [
       "docs/targets/target-a/01-forest-and-kinematics.md",
@@ -467,6 +467,55 @@
         "docs/reports/target_c_triangular_two_pin_strict_capacity_2026-10-05.md",
         "docs/reports/target_c_unit_pentagon_perimeter_capacity_2026-10-05.md",
         "docs/reports/target_c_multishear_traffic_domination_2026-10-05.md"
+      ]
+    },
+    "target-c-branch-aware-atomic-gap": {
+      "reading_order": [
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "sections": "Iterative-pruning atomic gap",
+          "role": "Current strongest unpromoted matched gap and exact lifecycle/propagation boundary."
+        },
+        {
+          "path": "docs/research/tracks/target-c-iterative-pruning-atomic-gap.md",
+          "sections": "Proof chain; What has and has not propagated",
+          "role": "Full mathematical lineage and next obligations."
+        },
+        {
+          "path": "research/target_c_iterative_pruning_conditional_pair_payment_2026-09-14.md",
+          "sections": "1-6",
+          "role": "Conditional pair-payment proof and exact branch split."
+        },
+        {
+          "path": "research/target_c_branch_aware_iterative_pruning_atomic_gap_0071_2026-09-15.md",
+          "sections": "1-8",
+          "role": "Strongest matched gap candidate and source proof scope."
+        },
+        {
+          "path": "research/verify_target_c_branch_aware_atomic_gap_0071.py",
+          "sections": "whole script",
+          "role": "Exact outward certificate implementation and domain."
+        },
+        {
+          "path": "research/verify_target_c_branch_aware_atomic_gap_0071_pi_enclosure.py",
+          "sections": "whole script",
+          "role": "Machin enclosure of pi used by the interval certificate."
+        },
+        {
+          "path": "research/target_c_iterative_minimax_phase_star_atomic_gap_0050_2026-09-14.md",
+          "sections": "1, 5, 7",
+          "role": "Older matched gap and distinct 0.0050 Section-171 propagation."
+        },
+        {
+          "path": "research/verify_target_c_g0050_global_propagation.py",
+          "sections": "whole script",
+          "role": "Certificate scope restricted to the 0.0050 downstream input."
+        }
+      ],
+      "supporting_obstructions": [
+        "research/target_c_branch_aware_iterative_pruning_atomic_gap_0071_hostile_audit_2026-09-15.md",
+        "research/audit_target_c_iterative_minimax_gap_0050_2026-09-14.md",
+        "research/target_c_split_budget_pair_payment_2026-09-14.md"
       ]
     }
   }
