@@ -1,142 +1,142 @@
-# Rights and clean-history release gate
+# Source rights and publication provenance — Gate 1
 
-The Apache-2.0 selection is already recorded. The remaining rights question is
-whether the project can grant that license for the retained source expression.
-No automated result in this review grants permission or changes a pending
-inclusion disposition.
+**Gate 1 project-controlled rights: owner authorization received and recorded.**
+This is a scoped copyright/provenance decision, not a technical-release receipt,
+a legal warranty that every sentence is original, or authorization to make the
+repository public. **Publication remains HOLD** pending Gate 2 (verification of
+the actual release commit) and Gate 3 (explicit visibility approval).
 
-[The grouped inventory](rights-inventory.json) binds each reviewed retained file
-to its public SHA256, source commit/blob/SHA256 where available, opaque Git
-contributor identity IDs, path history, and one shared provenance group. It covers its
-exact `public_candidate`, not later edits. The original review of `afa7f7e`
-checked all 808 source inclusion hashes across 12 source pins; no mismatch was
-found. Publication-created replacements and CI adaptations are inventoried too.
-Two tools, `tools/check_active_route_summaries.py` and
-`tools/check_theorem_state_pr.py`, were found byte-identical to the pinned source;
-their missing inclusion records have now been supplied, increasing retained source
-records to 810. The earlier inventory preserves the discovery at its exact review
-commit. Same-path evidence for other public replacements is a derivation lead,
-not an assumption that they are original. Recreate the inventory against the final candidate before accepting sign-off:
+The controlling machine-readable owner declaration is
+[`owner-rights-authorization.json`](owner-rights-authorization.json),
+which pins the **exact Git blob** of
+[`inclusion.json`](inclusion.json) (`f521850703b01b204399613d640a0b99ca895080`).
+The owner provided a blanket grant for all **810 included files** developed
+through the owner's AI agents. That statement is retained as an
+[owner-authored GitHub record](https://github.com/1337isnot1337/erdos-99/pull/9#issuecomment-6207244081):
+"all of those 810 are all work i have done with my AI agents. i authorize anything done with them."
+The project already chose Apache-2.0 for expression within its rights. No
+individual permission from the AI tools is a required release gate.
 
-```sh
-python tools/audit_public_rights.py --source /path/to/private-source-clone --ref RELEASE_SHA --output /private/e99-final-rights.json --private-identities /private/e99-author-map.json
-```
+## Exact evidence and disposition
 
-This source-only release-engineering audit is optional for a reader of the public
-corpus. Mathematical reproduction uses the retained public corpus and never needs
-that private clone. An exit code of zero means the evidence hashes/path history
-were checked; the printed `OWNER DECISION REQUIRED` remains a release hold.
+At reviewed commit `1d0345edf011961be67425b3a5d2f6be8e0a29f7`
+(tree `5306421c024728fb2892ba17ee62a9b0c1760d00`),
+the manifest contains 810 distinct imported records from **12 source pins**.
+An independent GitHub-object cross-check compared each manifest source
+path, blob SHA and mode against its exact recorded source commit:
 
-## What was established
+| Item | Observed |
+| --- | ---: |
+| Imported entries present in publication tree | 810 / 810 |
+| Entries with matching pinned source path, blob and mode | 810 / 810 |
+| Source entries byte-identical to publication Git blob | 726 |
+| Publication-modified entries (source and publication blobs differ) | 84 |
+| Known original-versus-public executable mode corrections | 4 |
+| Current tracked regular files (including publication-only files) | 918 |
+| Restricted paper PDFs or other forbidden binary archive formats present | 0 |
 
-- The included source files have exact checked identities; the inventory groups
-  repetitive permission questions. Author labels observed in private Git history
-  are represented only by opaque IDs in public artifacts. The optional external
-  private map retains the name-to-ID correspondence and keeps IDs stable when
-  regenerated. These labels are attribution evidence, not proof that they
-  represent separate people or that an account owner holds all rights. Existing
-  deliberately credited mathematical authors remain credited in the corpus.
-- The pinned private source has contributor instructions but no root `LICENSE`
-  or `NOTICE`. Its existing contribution policy does not supply an inbound
-  Apache grant for all past contributions. The new public `CONTRIBUTING.md`
-  defines prospective submission terms; it does not retroactively clear the
-  private archive.
-- `NOTICE` and `provenance.md` record the owner's Apache selection and retain
-  mathematical attribution. The construction scripts repeat that selection;
-  they do not contain independent contributor permission receipts.
-- Literature baseline/review documents, the older composite proof manuscript,
-  and the Woodall import contain attributed mathematical statements and project
-  exposition of external results. They need expression/quotation judgment distinct
-  from ownership of project proofs. Inspection found citations and mathematical
-  restatements; it did not establish permissions for substantial copied prose.
-  Keep load-bearing statements and author credit while resolving any exception.
-- Eight localized-CI paths have a concrete additional derivation lead in the
-  `NOTICE`-named source proposal `d54097cb`; the inventory records full source
-  commit/blob/hash for each. Their adaptation preserves project provenance;
-  an attribution sentence alone does not prove that every upstream code fragment
-  was owner-controlled.
-- `NOTICE` identifies CrocSwap/integer-mult-bounds as workflow inspiration. Its
-  [public license](https://github.com/CrocSwap/integer-mult-bounds/blob/d359705715f45a25d46c593a542e8d071c47160a/LICENSE)
-  was independently fetched and identified as Apache-2.0. This establishes the
-  upstream license offer (blob `261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64`,
-  SHA256 `c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4`), not a claim that arbitrary E99 files originated there.
-  No integer-multiplication mathematics was imported by this work.
-- There are no imported paper/extraction files in the audited candidate. This
-  avoids redistributing the source archive's bundled papers; citations do not
-  assign the external authors' rights to E99.
+The 84 differences are **not** evidence that original authorship changed:
+the manifest explicitly records publication edits, source identities, and
+resulting public hashes. The four mode changes were documented during
+release preparation. The earlier release engineer's local candidate
+verified all 810 source/public SHA256 records and 4,793 versioned source
+records; the current GitHub cross-check verifies source blob identities
+but is **not** a replacement for Gate 2's current-commit content-hash
+and immutable-checkout replay.
 
-## Smallest owner sign-off
+The earlier committed
+[`rights-inventory.json`](rights-inventory.json) is a **historical**
+808-source-entry, 902-total-file inventory from
+`b734ed1a7b095ed9791159f53170fa7182d3c7fa`.
+It must not be mistaken for the final 810-entry inventory.
+The detached release agent reported a later 810-entry/917-file inventory
+with 43 groups at `30af2cca`; it is not available inside this repository.
+The current 918-file tree includes subsequent publication changes.
+Owner authorization therefore binds to the *exact 810-entry inclusion
+manifest*, independent of a stale supplemental grouping report. Rebuild
+the all-file rights inventory if a subsequent release task needs current
+per-file Git history, without manufacturing an alias map.
 
-Apply these questions once to the exact final inventory digest, listing only
-exceptions by path/group. Do not require 808 repetitive signatures.
+**Disposition:** owner-controlled original project expression in these 810
+imported records is authorized for publication and redistribution under
+the project's existing Apache-2.0 selection. Preserve all credited
+contributors, cited mathematicians, licenses and source-specific notices.
+This disposition relies on the owner's factual representation about
+their project and agents; commit author strings by themselves neither
+prove ownership nor identify independent rights holders.
 
-1. **Rights confirmation.** Confirm that the retained project-authored material,
-   including publication adaptations, is original work you may distribute under
-   the already selected Apache-2.0 terms. Using the external private identity map, confirm whether the observed
-   contributor and worker/bot identities are your controlled authoring aliases. For any independent
-   contributor, employer-owned work, third-party code or substantial quoted prose,
-   identify the affected paths and provide the actual permission/license evidence,
-   or identify material to replace/exclude while preserving proof dependencies and
-   credit. The current manifest remains pending until that factual confirmation
-   and exception review is recorded.
-2. **Clean destination choice.** Authorize an unused remote for the prepared
-   clean-root snapshot, keeping the staging repository private; if the final
-   repository must retain the current name, separately authorize the private
-   staging rename/new-remote migration. This avoids disclosing inherited Git
-   author/committer metadata. No personal email authorization is needed for
-   discarded staging history. Final visibility authorization remains a separate
-   decision after all release gates pass.
+## Specific external-expression review
 
-The first answer can clear a grouped original-work disposition only if it supplies
-credible ownership/alias facts and identifies exceptions. The second answer does
-not clear rights or authorize making any repository public.
+Five publications-related paths were examined as distinct from
+project-origin reports:
 
-## History exposure and implemented remedy
+- `docs/literature_review.md`
+- `docs/problem/literature_baseline.md`
+- `docs/problem/literature_archit_das_stress_rhombic_audit_2026-10-08.md`
+- `docs/reports/erdos_problem_99_1.6.0.md`
+- `docs/reports/target_c_woodall_diameter_topology_2026-09-10.md`
 
-[The redacted history receipt](rights-history-evidence.json) enumerates the
-advertised branches, tags and GitHub pull-request head refs in an isolated mirror.
-It found 9 unique historical commits with personal-domain metadata in both author
-and committer fields: 18 role findings. Email values are intentionally omitted.
-This expands the earlier four-staging-commit finding. The mirror's exact observed
-refs, heads and timestamp are recorded in the receipt; later safe commits do not
-remove earlier objects. Unadvertised retained GitHub objects cannot be proven
-absent by a Git ref listing.
+They contain bibliographic references, analysis, theorem restatements
+and project arguments. **No third-party paper PDF/extraction is retained.**
+The Woodall document attributes the imported graph-classification theorem
+to Woodall and the Collins–Roberts account. The large older composite
+report contains links and self-contained research exposition; this audit
+does not assert a line-by-line similarity comparison against every
+cited paper. Facts and equations can be restated with proper attribution;
+third-party original prose, figures, or code would need a compatible
+license, permission, or replacement if substantial copying is found.
 
-The implemented `tools/prepare_clean_public_snapshot.py` creates a **local**
-repository with the identical immutable candidate tree, one parentless synthetic
-snapshot commit, no remote, no alternate store, and no inherited commit/tag
-objects. It copies committed blobs without checkout filters, checks executable
-modes/tree identity, counts all objects rather than reachable commits alone, and
-runs strict Git integrity checking. It never rewrites the private source or
-staging repository. Its synthetic attribution labels an automated export; credit
-for mathematics remains in the corpus and `NOTICE`.
+The eight localized-CI paths inventoried in
+`tools/audit_public_rights.py` were inspected. Their stated
+adaptation source is the owner-operated `e-99` proposal
+`d54097cb96b1c5fcbb6eca57843b53e7b8a6dd2e`.
+The `NOTICE` separately attributes workflow inspiration to
+[CrocSwap/integer-mult-bounds](https://github.com/CrocSwap/integer-mult-bounds),
+whose upstream license was checked as Apache-2.0 in the earlier audit.
+That reference does not establish direct source-code copying; this
+inspection found no concrete conflicting third-party license claim.
 
-```sh
-python tools/prepare_clean_public_snapshot.py --source /path/to/public-candidate --ref RELEASE_SHA --destination /private/e99-clean-root
-```
+**Exception ledger:** no specific non-owner material requiring separate
+redistribution permission has been identified in the focused review.
+This is not a guarantee that automated or manual review can find every
+possible copyright overlap. If one is identified, determine the
+relevant source license or replace/exclude the expression while retaining
+mathematical dependencies.
 
-Run the full final content/security/rights gate against the resulting clean-root
-SHA as well. The tree is identical, while a fresh commit identity is expected.
-The exporter is preparation, not permission or a publication operation.
+## Existing Git-history privacy decision
 
-Force-pushing a new root to the current staging repository would leave the
-privacy question unresolved because PR refs and retained GitHub objects can
-survive branch replacement. A `.mailmap` changes display; it cannot sanitize
-stored commit objects. The current staging destination remains private-only
-unless affected authors explicitly authorize its metadata or GitHub confirms
-complete removal. An unused remote is the prepared conservative path.
+The owner accepts publication of their own `cinnajdavis@gmail.com`
+Git author/committer email, as
+[recorded on PR #9](https://github.com/1337isnot1337/erdos-99/pull/9#issuecomment-6207434631).
+A separate live review traversed all **47 Git commits reachable through
+22 advertised refs** and observed no other personal-domain email,
+only that address and standard GitHub `noreply` variants.
+This authorizes the identified Git metadata and removes the
+*email-only* reason for mandatory clean-root migration.
+It does **not** promise that GitHub retains no unadvertised objects,
+nor waive actual credential or non-email privacy findings.
+The owner wishes to keep the current `1337isnot1337/erdos-99`
+repository and its pull-request history.
 
-## Blocker ledger
+## Remaining technical and approval boundaries
 
-| Item | State | Evidence or remaining action |
-| --- | --- | --- |
-| Exact retained source hashes and contribution grouping | RESOLVED for recorded candidate | Inventory; regeneration command above |
-| Pending archive contributor/third-party permissions | OWNER DECISION REQUIRED | First grouped sign-off; inclusion entries remain pending |
-| Clean-root export implementation | RESOLVED | Four isolation/preservation regression tests; exact tree and all-object verification |
-| Current staging Git/PR-history metadata exposure | OWNER DECISION REQUIRED | Redacted receipt; unused-remote migration or explicit affected-author consent |
-| Detecting every possible copied expression/secret | NONBLOCKING as an impossible universal certification | Retain concrete content/security scans and investigate actual findings; never call a scanner legal clearance |
-| Visibility | OWNER DECISION REQUIRED | Final explicit authorization only after rights/privacy and technical gates |
+1. **Gate 1 owner declaration:** recorded and scoped to all 810 imported
+   source records; no known third-party redistribution exception found.
+   The root license cannot relicense any independently owned text.
+2. **Gate 2 technical receipt:** required on the actual final `main`
+   commit. The older full 94-certificate/109-tool/8-corpus receipts
+   belong to their pinned earlier trees. The manifest currently retains
+   historical `publication_clearance: pending ...` annotations;
+   the Gate 2 release tool must consume this separate, Git-blob-pinned
+   attestation or perform an equally explicit, reviewed reconciliation.
+   **Do not silently waive the validator or change mathematical metadata.**
+3. **Hosted CI:** account infrastructure has not executed a canary;
+   disclose this limitation. Local verification can establish its
+   own separate tested scope.
+4. **Gate 3 visibility:** only a separate explicit owner instruction
+   can make the repository public. This declaration alone is not it.
 
-No mathematical status, source quantifier, proof dependency or theorem claim is
-promoted by these release-engineering changes. Substantial AI assistance was used
-for this audit and tooling. Independent human mathematical review remains distinct.
+Historical scanner findings and stale 808-file "OWNER DECISION REQUIRED"
+entries are evidence of *earlier* audits, not proof the present owner
+has withheld permission. New evidence must still be checked at its own
+commit and tree; no license statement proves theorem validity.
