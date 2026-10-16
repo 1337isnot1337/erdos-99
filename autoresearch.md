@@ -1,5 +1,11 @@
 # One independently reviewable contribution
 
+All mathematics, proof auditing and canonical promotion are performed by AI
+agents only. A consequential canonical promotion requires one independent agent
+audit (full proof plus adversarial bridge/regression checks) on the exact SHA.
+The project owner may operate the independent reviewer on others' submissions.
+No human mathematical referee or second reviewer is required.
+
 Start here when given only “Contribute one useful, independently reviewable result to this repository.” Default to a 30–60 minute session. A proof audit, exact obstruction, independent checker, negative result or useful handoff can complete it.
 
 ## Refresh at every checkpoint
