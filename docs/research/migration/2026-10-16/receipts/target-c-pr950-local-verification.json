@@ -1,0 +1,100 @@
+{
+  "schema_version": "erdos-99-local-migration-verification/v1",
+  "recorded_at_utc": "2026-10-16T09:07:59Z",
+  "verification_subject": {
+    "destination_repository": "https://github.com/1337isnot1337/erdos-99",
+    "destination_pr": 23,
+    "branch": "research/target-c-pr950-rigidity-grid-20261016",
+    "commit": "747efb527ced182b3f7dcf0feeabe3ec3f86e1b3",
+    "tree": "409aec44b4001cfcba1cc1957c35187229fbce72",
+    "base_main_commit": "73bbc4ae4bf65ce6a02fcc2c4bde33b31124e742",
+    "base_main_tree": "54713dc034018b862dc0aa69c85a921540dd5a2e"
+  },
+  "frozen_source": {
+    "repository": "https://github.com/1337isnot1337/e-99",
+    "main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "main_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+    "pull_request": 950,
+    "pull_request_head": "cbf066bb7489115559bcda34f9f810a1d78826ce",
+    "pull_request_base": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "merge_base": "9327a3a13f0641f2a8c1897aec0c088be016743a",
+    "merge_base_tree": "2f01e4c1abe49de6fc24bef28e750adebc5b56bc",
+    "changed_source_paths": 3,
+    "ledger_rows_including_superseded_prior_revision": 4,
+    "ledger": "docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl",
+    "ledger_result": "PASS; all four rows verified against source Git blobs and SHA-256; destination SHA-256 values match the recorded treatment",
+    "source_pr_state_at_verification": "OPEN at the pinned head",
+    "frozen_open_source_pr_inventory": "21 PR numbers and head SHAs match the migration baseline"
+  },
+  "research_integration": {
+    "candidate_registry_records": 7,
+    "candidate_registry_artifact_references": 14,
+    "candidate_registry_hashes": "PASS; every source Git blob/SHA-256 and destination SHA-256 reference verified",
+    "typed_dependencies": "PASS; all canonical theorem-state IDs and candidate relations resolve",
+    "historical_revision": "The source report revision at 6433d1db49a1363bfa65008eb78f6b15d6ef4ed7 is recorded as superseded; its endpoint-excluding Menger cut argument is not retained as active proof.",
+    "source_status_promotions_adopted": false,
+    "claim_scope": "The imported length-quantile, common-grid-access, unloaded-rigidity, endpoint-inclusive cut-repair, and attachment-grid-linkage claims remain unreviewed. The Pell route-length example remains a nonglobal regression. No finite full-source competitor or C-II/Level I closure is claimed."
+  },
+  "commands": [
+    {
+      "command": "python3 tools/check_theorem_state.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python3 tools/build_artifact_index.py",
+      "result": "PASS; 540 artifacts"
+    },
+    {
+      "command": "python3 tools/check_public.py",
+      "result": "PASS; zero errors; integrity passed; mathematical_proof=false; 94 certificates, 451 claims, 845 edges, 810 retained source files, 20 tasks"
+    },
+    {
+      "command": "python3 -m tools.test_public_proof_graph",
+      "result": "PASS; 3 tests"
+    },
+    {
+      "command": "python3 tools/run_theorem_certificates.py",
+      "result": "PASS on the payload tree; all 94 selected of 94 unique certificates; zero failures"
+    },
+    {
+      "command": "python3 -c JSON/JSONL parsing for candidate registry, inclusion manifest, and source PR ledger",
+      "result": "PASS"
+    },
+    {
+      "command": "Targeted PR950 registry dependency and artifact-hash audit",
+      "result": "PASS; seven registry records, fourteen artifact references, all dependencies resolve"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    },
+    {
+      "command": "Scoped privacy scan of imported report, audit, and track for local paths, billing, and infrastructure details",
+      "result": "PASS; zero matches"
+    }
+  ],
+  "hosted_actions": {
+    "destination_pr": 23,
+    "observed_head": "747efb527ced182b3f7dcf0feeabe3ec3f86e1b3",
+    "run_id": "38878345605",
+    "workflow": "public-research-integrity",
+    "jobs": {
+      "plan": "SKIPPED",
+      "replay": "SKIPPED"
+    },
+    "steps_executed": false,
+    "reason": "The workflow condition requires vars.E99_PUBLIC_CI == 'true'; both jobs completed skipped with empty step lists.",
+    "success_claimed": false
+  },
+  "theorem_and_release_status": {
+    "theorem_state": "2026-10-15.publication.2; unchanged",
+    "target_c_status": "C-II remains OPEN; unchanged",
+    "registered_certificate_set_changed": false,
+    "publication_inclusion_membership_changed": false,
+    "publication_inclusion_retained_source_files": 810,
+    "existing_prompt_public_sha256_refreshed": true,
+    "repository_visibility": "private",
+    "gate_2": "NOT RUN; full source corpus migration remains incomplete",
+    "gate_3": "NOT REQUESTED; destination remains private"
+  }
+}
