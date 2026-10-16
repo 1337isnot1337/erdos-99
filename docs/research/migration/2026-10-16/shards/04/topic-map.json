@@ -1,0 +1,127 @@
+{
+  "schema_version": "target-c-migration-topic-map/v1",
+  "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "destination_baseline": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+  "assignment_zero_based": [
+    489,
+    650
+  ],
+  "complete": false,
+  "topics": [
+    {
+      "id": "nearzero-response-carrier",
+      "indices": [
+        489,
+        490,
+        491,
+        492,
+        493,
+        494
+      ],
+      "unresolved_bridge": "global phase extraction, contact-disk/face structure, or source-realized endpoint"
+    },
+    {
+      "id": "negative-transfer-shores",
+      "indices": [
+        495,
+        496,
+        497
+      ],
+      "unresolved_bridge": "bounded or paid response split plus a response-to-contact separator/global source implication"
+    },
+    {
+      "id": "convex-perimeter-area",
+      "indices": [
+        498,
+        503,
+        504
+      ],
+      "unresolved_bridge": "exact affine source realization from arbitrary canonical C-II sources"
+    },
+    {
+      "id": "joint-defect-coupling",
+      "indices": [
+        499,
+        500
+      ],
+      "unresolved_bridge": "exclude both linear-defect/high-surplus and macroscopic-cavity alternatives"
+    },
+    {
+      "id": "contact-geodesic-rhombic-branch",
+      "indices": [
+        501
+      ],
+      "unresolved_bridge": "uniformize the strict contact-distance excess or convert it to a global contradiction"
+    },
+    {
+      "id": "density-regressions",
+      "indices": [
+        502,
+        505
+      ],
+      "unresolved_bridge": "global-minimality-specific restrictions or source-preserving competitor"
+    },
+    {
+      "id": "oblique-lattice-competitors",
+      "indices": [
+        503,
+        504,
+        505
+      ],
+      "unresolved_bridge": "extract a one-lattice model or give a source-preserving descent"
+    },
+    {
+      "id": "diameter-cycle-regressions",
+      "indices": [
+        506,
+        507,
+        508
+      ],
+      "unresolved_bridge": "handle the low-surplus forest/high-surplus branches and bridge geometric shells to actual contact faces"
+    },
+    {
+      "id": "exact-shell-regressions",
+      "indices": [
+        508
+      ],
+      "unresolved_bridge": "genuine transverse unit-contact cutsets and source faces"
+    },
+    {
+      "id": "oler-gluing-and-chambers",
+      "indices": [
+        509
+      ],
+      "unresolved_bridge": "use slack correction to force an endpoint or contradiction"
+    },
+    {
+      "id": "force-hull-dimension",
+      "indices": [
+        510
+      ],
+      "unresolved_bridge": "already covered by destination canonical C-I route at stated scope"
+    },
+    {
+      "id": "outer-train-phase-structure",
+      "indices": [
+        511,
+        512
+      ],
+      "unresolved_bridge": "extract required quadratic O-O mass and convert structure to a source-realized contradiction"
+    },
+    {
+      "id": "finite-phase-motions",
+      "indices": [
+        513,
+        514
+      ],
+      "unresolved_bridge": "exclude both finite-motion alternatives or check a whole-source endpoint"
+    },
+    {
+      "id": "quantitative-phase-gaps",
+      "indices": [
+        515
+      ],
+      "unresolved_bridge": "qualitative global bridge and full canonical hypotheses remain"
+    }
+  ]
+}
