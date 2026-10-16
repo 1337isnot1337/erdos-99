@@ -75,3 +75,24 @@ The exact fixed-wall capacity is one label below restoration. A near-coherent
 fixed-boundary extension is false, and local continuous refill is blocked under
 the listed stress/rank hypotheses. These are scoped route obstructions, not a
 proof that every moved-wall or nonlocal discrete replacement fails.
+
+## Source PR #947 — midpoint, anchor, and slow-chart audits
+
+The [research track](../docs/research/tracks/target-c-midpoint-anchor-atlas.md)
+and [candidate registry](../docs/targets/target-c/candidate-registry.json)
+connect the source reports and second-referee records. Audit.246 claims
+partner-uniform midpoint tails and moments and bounded-deficit pair
+localization; Audit.247 proposes a positive-leaf boundary-distance improvement
+from the destination's canonical (O(D^{-1/2})) to (O(D^{-2/3})); Audit.254
+bounds two supplied-chart endpoint classes but assumes a bounded (K/D)-error
+atlas. All three remain unreviewed in this repository and no finite verifier
+encodes their analytic claims.
+
+The source PR also records an exact near-triangular fixed-wall capacity
+plateau, a continuous restored-pin displacement gap, and duplicate/subsumption
+screens for selected quarter-fold, Type-II, shell-fold, radial-stress, and Oler
+claims. Audit.236 retains only the corrected sequence-level (q=o(D))
+conclusion under both original global premises; its source PR canonicalization
+request is not adopted. The older global (K'/D) chart and (q=O(D^{4/5}))
+inferences remain withdrawn. Source referee “PASS” entries are retained as
+provenance and do not change destination theorem status.

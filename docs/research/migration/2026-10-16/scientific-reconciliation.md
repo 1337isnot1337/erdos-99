@@ -212,3 +212,60 @@ validate the destination integrity and finite computation, not the analytic
 claims in the seven unreviewed reports. The theorem-state remains
 `2026-10-15.publication.2`; no canonical status, publication inclusion, or
 repository visibility was changed.
+
+
+## Fourth batch — pinned source PR #947
+
+The source snapshot still has main `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`.
+PR #947 remains open and frozen at head
+`1afb7e64d47c5619d872d32759b0e01f1526fd5a` (tree
+`48b678c0d2695002595dc8aa9eaa6d1ac909e31b`), merge base
+`d999528cfaafd811a4a19bcfacd00f217c2fc375`. Destination PR #21 merged as
+`53527e354fd545325744f828c93278bcf6437bd4` with tree
+`399b0e3407cd36721dd2361bd4cc9aa3ccfcd61a`; this batch is based on that tree.
+All 20 changed source paths have exact source and destination blob/SHA records
+in the PR file ledger.
+
+The mathematical audit bodies in this PR were already present in the
+publication destination from the source-main batch. Their destination copies
+retain explicit unreviewed lifecycle banners where source PR #947 changed
+frontmatter to `canonical`. The fused-sign/residual-tail screen is byte-identical.
+The source PR's six-line historical Audit.202 summary is subsumed by the
+complete destination historical proof record, which preserves the original
+text beneath a prominent withdrawal notice. The destination does not restore
+its global `K'/D`-Lipschitz-chart inference or `q=O(D^(4/5))` rate.
+
+The source PR adds 68 lines to the integration audit ledger and 209 lines of
+referee-run provenance beyond the source-main destination copies. Those records
+are appended beneath explicit warnings that source “PASS/promote” findings are
+not destination mathematical audits or theorem-state transactions. Three
+nonmathematical source workflow-status sentences were generalized to state
+only that the required checks did not execute workflow steps; the original
+source file hash is retained in the ledger. Generated
+source state (`docs/STATE.md`, theorem-state, status/graph views, and artifact
+index) is recorded by hash but not copied over destination authority; the
+candidate registry and this reconciliation record every status proposal and
+its disposition.
+
+The candidate registry adds seven unreviewed candidate/regression records,
+one audited-working inverse-phase correction record, and one nonclaim/duplicate-
+screen record. The source PR proposed five new canonical IDs, canonical status
+for the corrected inverse-phase result, a stronger positive-leaf bound from
+`O(D^-1/2)` to `O(D^-2/3)`, and a fixed-wall displacement regression. Destination
+status remains unchanged: the inverse-phase result is audited-working with
+`q=o(D)` only under both stated global premises; the positive-leaf claim keeps
+its existing canonical `O(D^-1/2)` bound; all other proposed claims remain
+unreviewed. The midpoint moments do not count near-diameter pairs. The
+slow-chart result assumes a supplied bounded atlas and gives no extraction or
+finite competitor. The near-triangular one-pin capacity is frame-dependent and
+counts only the fixed interior wall.
+
+The source second-referee records for midpoint tails, positive-leaf anchoring,
+and the corrected inverse-phase proof are preserved as source evidence. No
+finite verifier was supplied for the new universal audit claims, and those
+source referee conclusions were not independently re-performed in this batch.
+The destination's full canonical certificate suite and integrity checks are
+run on the batch tree; they check existing canonical assets and links, not the
+analytic claims in the unreviewed source reports. No theorem-state, registered
+certificate, publication-inclusion entry, or repository visibility change is
+made.

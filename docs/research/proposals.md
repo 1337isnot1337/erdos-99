@@ -33,6 +33,18 @@ Head `1afb7e64d47c5619d872d32759b0e01f1526fd5a`; **unreviewed**.
 - [target_c_positive_leaf_anchor_sharpening_independent_audit_2026-10-10.md](../../docs/audits/target_c_positive_leaf_anchor_sharpening_independent_audit_2026-10-10.md)
 - [target_c_slow_chart_contact_port_cover_independent_audit_2026-10-10.md](../../docs/audits/target_c_slow_chart_contact_port_cover_independent_audit_2026-10-10.md)
 
+The source PR proposes five new canonical IDs, a canonical status change for
+the corrected inverse-phase claim, a sharper (O(D^{-2/3})) positive-leaf
+bound, and one fixed-wall displacement regression. The destination adopts
+none of those source statuses. See the [midpoint/anchor/atlas research track](tracks/target-c-midpoint-anchor-atlas.md)
+and [machine-readable candidate registry](../targets/target-c/candidate-registry.json)
+for exact scopes, existing canonical comparators, obstructions, and next proof
+obligations. Audit.236 remains **audited-working** in the destination and proves
+only the sequence-level (q=o(D)) conclusion under its original global
+hypotheses. The historical Audit.202 global chart and (q=O(D^{4/5})) claims
+remain withdrawn. Source “PASS/promote” text in the imported audit-run ledgers
+is provenance, not a destination mathematical audit or promotion.
+
 ## Source proposal 948 — Target C: restrict finite folds and exclude complete bent cores
 
 Head `b7376d13b81e542055c5c904bf81bdaf1beb7b9e`; **unreviewed**.
