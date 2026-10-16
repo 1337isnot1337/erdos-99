@@ -149,8 +149,9 @@ was not found or because the paper is more peripheral than the curated collectio
   Mathematicae* 95 (2020), 35–65, [DOI](https://doi.org/10.1007/s00010-020-00753-y).
   This is a modern exact finite-container result, but it does not target the
   unconstrained minimum-diameter problem.
-- Matthew Tedeschi, “On Packing Thirteen Points in an Equilateral Triangle,”
-  *American Journal of Undergraduate Research* 18(2) (2021), [PDF](https://ajuronline.org/uploads/Volume_18_2/AJUR_Vol_18_2_Sept_2021p3.pdf),
+- Natalie Tedeschi, “On Packing Thirteen Points in an Equilateral Triangle,”
+  *American Journal of Undergraduate Research* 18(2) (2021), pp. 3–12,
+  [publisher issue PDF](https://www.ajuronline.org/uploads/Volume_18_2/AJUR_Vol_18_Issue_2_Sept_2021_Full.pdf#page=4),
   [DOI](https://doi.org/10.33697/ajur.2021.042). This is a readable pedagogical
   treatment of the finite-triangle analogue.
 - “Kernelization for Spreading Points,” *ESA 2023*, [arXiv](https://arxiv.org/abs/2308.07099),
