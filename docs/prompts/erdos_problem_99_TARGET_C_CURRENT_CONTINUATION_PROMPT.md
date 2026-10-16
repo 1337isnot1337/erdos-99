@@ -257,7 +257,14 @@ Along q/D -> pi with u_B=o(D), loaded-hull caps, exterior extreme isolates, shor
 
 In the Type-II near-disk branch, Audits.105--106 together give `k<=147(x_B+a)` for the exact disjoint-owner singleton family. Therefore `x_B+a=o(D)` excludes a linear surviving family, but neither that low-defect hypothesis nor the O--O proposal family is currently guaranteed. Audit.114 promotes the original-family deletion bound by `2d_H` under its fixed subfamily-stability and isolate-dispatch hypotheses; it supplies no proposal-family extraction.
 
-Exact next obligation: produce a source-realized finite move or discrete replacement from the remaining outer-to-bounded or bounded-to-bounded train and face system that yields strict contact loss at diameter D or a strict sub-D competitor.
+Exact next obligation: produce a source-realized same-cardinality finite move or
+discrete replacement from the remaining outer-to-bounded or bounded-to-bounded
+train and face system. It must either remain triangle-free at diameter D with
+lexicographically fewer unit contacts/actual diameter pairs, or have strict
+sub-D diameter. Audit.64 requires triangle-freeness for the equality-D branch;
+strict contact loss that creates a unit triangle does not contradict that
+minimality. With unchanged contacts, strict loss of actual diameter pairs is
+also sufficient, provided every previously inactive upper pair is checked.
 
 Audit.111 widens `C-LOADED-ONLY-STRESS-CYCLE-OBSTRUCTION` to every finite unit-separated source with `D>=6`, a two-dimensional actual loaded hull, and a normalized nonnegative equilibrium stress. Its proof uses the universal loaded-near-unit threshold, not only the full-core near-disk branch. The occupied-cap chord threshold now shows that any occupied loaded-hull cap on the canonical C-II source has a nonunit base, so the loaded-only stress face is empty there. Existing `C-UNLOADED-KKT-STRESS-TRANSVERSAL` then deletes at most `s_Z+1` unloaded core labels and gives a strict motion of the reduced source, with contact isolates retained. This is a cardinality-losing descent, not a packet or refill. The preselected-loaded-endpoint refinement remains in its narrower full-core loaded-chord scope. The exact weighted-work regression still shows that the deleted unloaded contacts cannot all open along that same reduced descent. Use these results as finite-move diagnostics; any proposed restoration must check every full-source lower and upper constraint.
 
@@ -341,3 +348,10 @@ Do not use without a new proof:
 ## Research standard
 
 Before promoting a new lemma, write its exact dependency chain to either an exact unit triangle, a source-preserving strict sub-`D` competitor, or the Level I conclusion. A computation may certify finite arithmetic or a regression; it does not supply global optimality.
+
+
+Publication correction: `C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION` is now
+**audited-working**. Audit.202's global chart and `O(D^(4/5))` endpoint rate are
+withdrawn. Use the [Audit.236 sequence-only correction](../audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md)
+only as agent-audited working mathematics pending independent human review;
+keep both common-frame and face-tail premises explicit.

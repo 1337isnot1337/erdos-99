@@ -1,0 +1,204 @@
+{
+  "status": "OWNER DECISION REQUIRED",
+  "observed_at_utc": "2026-10-16T01:57:09.952046+00:00",
+  "default_branch_sha": "afa7f7ec8b93b39efb921f4f47d132e4219b5df8",
+  "refs": [
+    {
+      "ref": "refs/heads/audit/current-corpus-publication-20261015",
+      "sha": "083e1697719d698b03c0476ecc365e466429c13f"
+    },
+    {
+      "ref": "refs/heads/ci/public-localized-verification-20261015",
+      "sha": "08784c2440aa2f6f4252adc30f7ce33cd59cf976"
+    },
+    {
+      "ref": "refs/heads/ci/repair-public-import-shadowing-20261015",
+      "sha": "9516559c956e2ceba5d213e6721b1e02c29a853a"
+    },
+    {
+      "ref": "refs/heads/main",
+      "sha": "afa7f7ec8b93b39efb921f4f47d132e4219b5df8"
+    },
+    {
+      "ref": "refs/heads/research/current-global-frontier-20261015",
+      "sha": "d0d92014bd4a4915943abf99d5bcf5ed8df74b94"
+    },
+    {
+      "ref": "refs/heads/research/current-global-source-delta-20261015",
+      "sha": "052b653a04ce2900089966633260624d8006b24f"
+    },
+    {
+      "ref": "refs/heads/research/global-source-extraction-task-20261015",
+      "sha": "afa7f7ec8b93b39efb921f4f47d132e4219b5df8"
+    },
+    {
+      "ref": "refs/pull/1/head",
+      "sha": "08784c2440aa2f6f4252adc30f7ce33cd59cf976"
+    },
+    {
+      "ref": "refs/pull/2/head",
+      "sha": "9516559c956e2ceba5d213e6721b1e02c29a853a"
+    },
+    {
+      "ref": "refs/pull/3/head",
+      "sha": "083e1697719d698b03c0476ecc365e466429c13f"
+    },
+    {
+      "ref": "refs/pull/4/head",
+      "sha": "052b653a04ce2900089966633260624d8006b24f"
+    }
+  ],
+  "counts": {
+    "refs": 11,
+    "branches": 7,
+    "pr_heads": 4,
+    "tags": 0,
+    "reachable_unique_commits": 17,
+    "commits_with_personal_metadata": 9,
+    "personal_email_role_occurrences": 18
+  },
+  "findings": [
+    {
+      "commit": "afa7f7ec8b93b39efb921f4f47d132e4219b5df8",
+      "roles": [
+        "author",
+        "committer"
+      ],
+      "reachable_from": [
+        "refs/heads/main",
+        "refs/heads/research/global-source-extraction-task-20261015"
+      ]
+    },
+    {
+      "commit": "d0d92014bd4a4915943abf99d5bcf5ed8df74b94",
+      "roles": [
+        "author",
+        "committer"
+      ],
+      "reachable_from": [
+        "refs/heads/research/current-global-frontier-20261015"
+      ]
+    },
+    {
+      "commit": "052b653a04ce2900089966633260624d8006b24f",
+      "roles": [
+        "author",
+        "committer"
+      ],
+      "reachable_from": [
+        "refs/heads/main",
+        "refs/heads/research/current-global-source-delta-20261015",
+        "refs/heads/research/global-source-extraction-task-20261015",
+        "refs/pull/4/head"
+      ]
+    },
+    {
+      "commit": "7492a6adcc5ba673f53396a0867ff07a0fe2f655",
+      "roles": [
+        "author",
+        "committer"
+      ],
+      "reachable_from": [
+        "refs/heads/main",
+        "refs/heads/research/current-global-frontier-20261015",
+        "refs/heads/research/current-global-source-delta-20261015",
+        "refs/heads/research/global-source-extraction-task-20261015",
+        "refs/pull/4/head"
+      ]
+    },
+    {
+      "commit": "083e1697719d698b03c0476ecc365e466429c13f",
+      "roles": [
+        "author",
+        "committer"
+      ],
+      "reachable_from": [
+        "refs/heads/audit/current-corpus-publication-20261015",
+        "refs/heads/main",
+        "refs/heads/research/current-global-frontier-20261015",
+        "refs/heads/research/current-global-source-delta-20261015",
+        "refs/heads/research/global-source-extraction-task-20261015",
+        "refs/pull/3/head",
+        "refs/pull/4/head"
+      ]
+    },
+    {
+      "commit": "213d179c0ce0e982613885423ab223d832cafdb6",
+      "roles": [
+        "author",
+        "committer"
+      ],
+      "reachable_from": [
+        "refs/heads/audit/current-corpus-publication-20261015",
+        "refs/heads/main",
+        "refs/heads/research/current-global-frontier-20261015",
+        "refs/heads/research/current-global-source-delta-20261015",
+        "refs/heads/research/global-source-extraction-task-20261015",
+        "refs/pull/3/head",
+        "refs/pull/4/head"
+      ]
+    },
+    {
+      "commit": "9516559c956e2ceba5d213e6721b1e02c29a853a",
+      "roles": [
+        "author",
+        "committer"
+      ],
+      "reachable_from": [
+        "refs/heads/audit/current-corpus-publication-20261015",
+        "refs/heads/ci/repair-public-import-shadowing-20261015",
+        "refs/heads/main",
+        "refs/heads/research/current-global-frontier-20261015",
+        "refs/heads/research/current-global-source-delta-20261015",
+        "refs/heads/research/global-source-extraction-task-20261015",
+        "refs/pull/2/head",
+        "refs/pull/3/head",
+        "refs/pull/4/head"
+      ]
+    },
+    {
+      "commit": "75fad69da5002e28d0ccc770841cd264ad1ba6cb",
+      "roles": [
+        "author",
+        "committer"
+      ],
+      "reachable_from": [
+        "refs/heads/audit/current-corpus-publication-20261015",
+        "refs/heads/ci/repair-public-import-shadowing-20261015",
+        "refs/heads/main",
+        "refs/heads/research/current-global-frontier-20261015",
+        "refs/heads/research/current-global-source-delta-20261015",
+        "refs/heads/research/global-source-extraction-task-20261015",
+        "refs/pull/2/head",
+        "refs/pull/3/head",
+        "refs/pull/4/head"
+      ]
+    },
+    {
+      "commit": "08784c2440aa2f6f4252adc30f7ce33cd59cf976",
+      "roles": [
+        "author",
+        "committer"
+      ],
+      "reachable_from": [
+        "refs/heads/audit/current-corpus-publication-20261015",
+        "refs/heads/ci/public-localized-verification-20261015",
+        "refs/heads/ci/repair-public-import-shadowing-20261015",
+        "refs/heads/main",
+        "refs/heads/research/current-global-frontier-20261015",
+        "refs/heads/research/current-global-source-delta-20261015",
+        "refs/heads/research/global-source-extraction-task-20261015",
+        "refs/pull/1/head",
+        "refs/pull/2/head",
+        "refs/pull/3/head",
+        "refs/pull/4/head"
+      ]
+    }
+  ],
+  "limits": [
+    "Email values are deliberately omitted.",
+    "Remote mirror enumerates advertised refs including GitHub pull refs; unreachable retained GitHub objects cannot be enumerated through Git.",
+    "New root in existing remote does not remove PR refs or establish deletion of retained objects.",
+    "Existing staging destination must stay private without affected-author approval or confirmed GitHub history removal."
+  ]
+}

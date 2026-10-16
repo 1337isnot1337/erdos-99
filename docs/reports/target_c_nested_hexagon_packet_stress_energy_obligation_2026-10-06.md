@@ -154,11 +154,14 @@ minimum coefficient. This does not exhaust the first-order polytope,
 prove the zero-row classification, establish a quadratic maximum, or
 rule out finite/higher-order packets. No floating result is load-bearing.
 
-The exact verifier certifies the selected stress support, equilibrium,
-first-variation cancellation and second-coefficient cancellation for
-finite lattice packets: 16,365 moving-site equilibrium checks and 225
-arbitrary-field cancellation checks. The every-`M` statement follows from the analytic
-ring/radial identities, not numerical enumeration.
+The source verifier runs `M=3,...,12`: it checks the selected stress supports
+and moving-site equilibrium in those ten packets (16,365 checks), and checks
+the first- and second-coefficient identities on 225 chosen polynomial-field
+samples. Its JSON key `arbitrary_field_cancellation_checks` overstates those
+samples; they are not an arbitrary-field test. The all-field cancellation and
+every-`M` statement follow from the analytic ring/radial identities, not finite
+enumeration. This scope clarification follows source PR #947; the canonical
+analytic claim and the exact verifier bytes are unchanged.
 
 ## 5. Strengthened next obligation
 

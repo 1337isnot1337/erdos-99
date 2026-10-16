@@ -1,0 +1,113 @@
+"""Regressions for outsider prerequisite/evidence discovery and scope labels."""
+from pathlib import Path
+import json
+import tempfile
+import unittest
+
+import yaml
+
+from tools.task_context import ROOT, context
+
+
+class TaskContextFixtures(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.write("docs/start.md", "Start.\n")
+        self.write("docs/implicit.md", "Implicit section prerequisite.\n")
+        self.write("docs/dependency.md", "Dependent claim proof.\n")
+        for name in ("registered", "supporting"):
+            self.write(f"research/{name}.py", 'if __name__ == "__main__":\n    raise RuntimeError("never execute discovery")\n')
+        self.write("research/helper.py", "def helper():\n    return 1\n")
+        self.dump("docs/research/agent-task-catalog.json", {"tasks": [{
+            "id": "example", "question": "Fixture?",
+            "canonical_dependencies": [{"path": "docs/start.md"}],
+            "previous_obstructions": [],
+        }]})
+        self.dump("docs/publication/inclusion.json", {"entries": [{
+            "public_path": "docs/start.md", "dependencies": ["research/supporting.py", "research/helper.py"],
+        }]})
+        self.dump("docs/research/onboarding-prerequisites.json", {
+            "file_dependencies": {"docs/start.md": ["docs/implicit.md"]}, "tasks": {},
+        })
+        self.write("docs/state/theorem-state.yaml", yaml.safe_dump({"targets": {"target-c": {
+            "current_canonical_entries": [{"id": "ROOT", "status": "canonical", "report": "docs/implicit.md", "depends_on": ["DEP"]}],
+            "regressions": [{"id": "DEP", "status": "regression", "report": "docs/dependency.md", "certificates": ["research/registered.py"]}],
+        }}}))
+        self.dump("research/certificates.json", {"certificates": [{
+            "path": "research/registered.py", "command": "python research/registered.py",
+            "claims": ["DEP"], "proof_sources": ["docs/dependency.md"], "scope": ["finite fixture"],
+        }]})
+
+    def write(self, path, text):
+        dest = self.root / path
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(text)
+
+    def dump(self, path, data):
+        self.write(path, json.dumps(data))
+
+    def test_implicit_and_claim_dependencies_reach_evidence_without_execution(self):
+        before = (self.root / "docs/state/theorem-state.yaml").read_bytes()
+        result = context("example", self.root)
+        self.assertIn("docs/implicit.md", result["transitive_file_prerequisites"])
+        self.assertIn("docs/dependency.md", result["transitive_file_prerequisites"])
+        self.assertEqual(result["certificate_commands"], ["python research/registered.py"])
+        self.assertEqual(result["supporting_evidence_commands"], ["python research/supporting.py"])
+        self.assertEqual(result["supporting_helpers"], ["research/helper.py"])
+        self.assertEqual({r["id"]: r["status"] for r in result["reachable_claims"]},
+                         {"ROOT": "canonical", "DEP": "regression"})
+        self.assertEqual(before, (self.root / "docs/state/theorem-state.yaml").read_bytes())
+
+    def test_registry_proof_source_is_discovered_without_attached_certificate(self):
+        self.write("docs/state/theorem-state.yaml", "targets: {}\n")
+        self.dump("research/certificates.json", {"certificates": [{
+            "path": "research/registered.py", "command": "python research/registered.py",
+            "proof_sources": ["docs/implicit.md"],
+        }]})
+        self.assertEqual(context("example", self.root)["certificate_commands"], ["python research/registered.py"])
+
+    def test_unknown_task_is_an_explicit_error(self):
+        with self.assertRaisesRegex(ValueError, "unknown task"):
+            context("missing", self.root)
+
+    def test_audited_working_premise_is_reachable_without_promotion(self):
+        catalogue = json.loads((self.root / 'docs/research/agent-task-catalog.json').read_text())
+        catalogue['tasks'][0]['audited_working_premises'] = [{'path': 'docs/working.md'}]
+        self.dump('docs/research/agent-task-catalog.json', catalogue)
+        self.write('docs/working.md', 'Scoped working premise, not canonical.\n')
+        self.assertIn('docs/working.md', context('example', self.root)['transitive_file_prerequisites'])
+
+    def test_missing_and_outside_prerequisites_fail(self):
+        for path in ("docs/missing.md", "../private.md", "/tmp/private.md"):
+            with self.subTest(path=path):
+                self.dump("docs/research/onboarding-prerequisites.json", {
+                    "file_dependencies": {"docs/start.md": [path]},
+                })
+                with self.assertRaises(ValueError):
+                    context("example", self.root)
+
+
+class PublicRouteRegressions(unittest.TestCase):
+    def test_three_audited_routes_have_scoped_evidence(self):
+        expected = {
+            "target-a-locked-sector-surplus": "python research/tube_shield_cut_audit.py",
+            "target-b-multigrain-transfer": "python research/phase_cut_certificate.py",
+            "target-c-face-coupled-move": "python research/verify_target_c_quarter_fold_face_obstructions_2026_10_10.py",
+        }
+        for task, command in expected.items():
+            with self.subTest(task=task):
+                result = context(task, ROOT)
+                self.assertIn(command, result["supporting_evidence_commands"])
+                self.assertNotIn(command, result["certificate_commands"])
+        a = context("target-a-locked-sector-surplus", ROOT)
+        self.assertIn("docs/theory/03-oler-shell.md", a["transitive_file_prerequisites"])
+        self.assertIn("docs/targets/target-a/03-source-response.md", a["transitive_file_prerequisites"])
+        self.assertIn("docs/targets/target-a/26-tube-shield-sector-balance.md", a["transitive_file_prerequisites"])
+        b = context('target-b-multigrain-transfer', ROOT)
+        self.assertIn('docs/theory/03-oler-shell.md', b['transitive_file_prerequisites'])
+
+
+if __name__ == "__main__":
+    unittest.main()

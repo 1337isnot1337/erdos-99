@@ -179,7 +179,14 @@
     "source_blob": "bff2104e5894b0ab008e2a6285a4955434721379",
     "source_mode": "100644",
     "reason": "navigation/administration replaced by public entrypoints",
-    "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
+    "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found",
+    "later_source_review": {
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "f7a5289c532e6fcd220de0c3d2859acb650f03b1",
+      "source_mode": "100644",
+      "source_sha256": "4dd539f8420fa31b6f9084669ae05ee77e96348673ccbabf453719d0361f3803",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    }
   },
   {
     "source_path": ".gitignore",
@@ -273,6 +280,13 @@
     "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
   },
   {
+    "source_path": "docs/archive/erdos_problem_99_1.7.0-full.md",
+    "source_blob": "80afd51a1b073b9fc690659813cbc95f17243c5e",
+    "source_mode": "100644",
+    "reason": "superseded monolith; current canonical section modules retained; link was archive navigation only",
+    "review": "explicit incoming-edge content inspection; complete current mathematical derivations remain"
+  },
+  {
     "source_path": "docs/archive/erdos_problem_99_complete_working_report.md",
     "source_blob": "effce8a31b95a7b05bdf981dcd63ecc353d1dd6d",
     "source_mode": "100644",
@@ -313,6 +327,14 @@
     "source_mode": "100644",
     "reason": "not in current claim/task/proof/executable closure",
     "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
+  },
+  {
+    "source_path": "docs/audits/global_collective_source_reconciliation_2026-10-15.md",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "f17cb9f5844f5e8619636dc5adeb43fc10e00ee2",
+    "source_mode": "100644",
+    "source_sha256": "ed08808ea15b2c3239d0b99ddfe1150f290bafa8455ebe0556536cbc1ddc8536",
+    "reason": "Proof-audit preservation ledger reviewed; its unique two complete reports and exact verifiers are retained, while branch cleanup/activity evidence is private administration."
   },
   {
     "source_path": "docs/audits/mathematical_audit_2026-08-30.md",
@@ -663,6 +685,13 @@
     "source_mode": "100644",
     "reason": "not in current claim/task/proof/executable closure",
     "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
+  },
+  {
+    "source_path": "docs/audits/target_c_integration_audit_ledger_2026-10-06.md",
+    "source_blob": "d3cee4754a67746fd5e613dd92a35dbec04139d1",
+    "source_mode": "100644",
+    "reason": "administrative promotion cycles and PR transaction log; only incoming citation concerns local validation, not a mathematical premise",
+    "review": "explicit incoming-edge content inspection; complete current mathematical derivations remain"
   },
   {
     "source_path": "docs/audits/target_c_isolate_paid_aggregate_detour_independent_audit_2026-09-14.md",
@@ -1057,6 +1086,46 @@
     "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
   },
   {
+    "source_path": "docs/ci/ADVERSARIAL_TESTS.md",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "7e0c4d9ff10215b1563411977da70bcb87b82066",
+    "source_mode": "100644",
+    "source_sha256": "86a95a270036c27f5f8a69db4ebddaea5aa4377e00a6c43a2125c39e5ab40e67",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+  },
+  {
+    "source_path": "docs/ci/BENCHMARKS.md",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "539cfd4b4d9edcb23b63da69b6ccf9e9374f06df",
+    "source_mode": "100644",
+    "source_sha256": "20207f19fdba69baa2acdf7fcbcc3c8a99b42255be00f1f6b8f58dc072681f0c",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+  },
+  {
+    "source_path": "docs/ci/IMPORT_SHADOWING_AUDIT.md",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "c231d1329f92ffedfd42e157651e53b681e34bc5",
+    "source_mode": "100644",
+    "source_sha256": "840a6313685c22c9c3dc8883ce20cec2565509bdc8f54a907c0ad93538487ed4",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+  },
+  {
+    "source_path": "docs/ci/LOCALIZED_CI.md",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "e19dd435ddcb0ddca43992717496005a0c2ec25a",
+    "source_mode": "100644",
+    "source_sha256": "818c12c9b228641d36898a0fa87e4fc438eee5149d6010248f7f7d217a057643",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+  },
+  {
+    "source_path": "docs/ci/benchmark-results.json",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "c863246a2b0dfa547a502e3ae95847bb9a50f376",
+    "source_mode": "100644",
+    "source_sha256": "232f10603e4e65ee73c0b30a059ba9b5ef1eafa2336d498b9636ce271f2d9e31",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+  },
+  {
     "source_path": "docs/launch/BASELINE.md",
     "source_blob": "7f27e6f1fd78943dbb0b5c778839a28bd082e8e7",
     "source_mode": "100644",
@@ -1159,7 +1228,14 @@
     "source_blob": "ec0ddf39924eca531b3fb6b88bbb23480e15205e",
     "source_mode": "100644",
     "reason": "not in current claim/task/proof/executable closure",
-    "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
+    "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found",
+    "later_source_review": {
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "bffe21a452ea85a867fe4adf3981548faaf63e30",
+      "source_mode": "100644",
+      "source_sha256": "49b41cc007ad55cb0b246203139506c55d265fdde7b8c1b0ddf3dfe764e3468b",
+      "reason": "Recovery/activity inventory, with no additional proof premise; retained mathematical preservation sources already have exact inclusion records."
+    }
   },
   {
     "source_path": "docs/prompts/PROMPTING_GUIDE.md",
@@ -1328,6 +1404,20 @@
     "source_mode": "100644",
     "reason": "not in current claim/task/proof/executable closure",
     "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
+  },
+  {
+    "source_path": "docs/reports/campaign_ledger_2026-09-08.md",
+    "source_blob": "d437f6be8954685ffcec98fd9d5ea59dfee7ce97",
+    "source_mode": "100644",
+    "reason": "historical branch/status ledger; exact force-bulk regression is retained in its full dedicated report",
+    "review": "explicit incoming-edge content inspection; complete current mathematical derivations remain"
+  },
+  {
+    "source_path": "docs/reports/campaign_review_2026-09-09.md",
+    "source_blob": "40c363d0b87c02cfb52646bda98d6de9d5f450c3",
+    "source_mode": "100644",
+    "reason": "historical campaign handoff; scoped proof audit and actual mathematical reports retained",
+    "review": "explicit incoming-edge content inspection; complete current mathematical derivations remain"
   },
   {
     "source_path": "docs/reports/campaign_zf_boundary_surplus_collapse_2026-09-09.md",
@@ -1587,6 +1677,13 @@
     "source_mode": "100644",
     "reason": "not in current claim/task/proof/executable closure",
     "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
+  },
+  {
+    "source_path": "docs/reports/repository_state_review_2026-09-09.md",
+    "source_blob": "0fd9177b53fbc62e73f298ed42e25bfefb3fb421",
+    "source_mode": "100644",
+    "reason": "historical state/check command report; current state and exact mathematical audits retained",
+    "review": "explicit incoming-edge content inspection; complete current mathematical derivations remain"
   },
   {
     "source_path": "docs/reports/repository_theorem_state_cleanup_2026-09-11.md",
@@ -7760,7 +7857,14 @@
     "source_blob": "ce77ba9234c4e057da8b509df783931a0b14b4cf",
     "source_mode": "100644",
     "reason": "navigation/administration replaced by public entrypoints",
-    "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
+    "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found",
+    "later_source_review": {
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "1eedefc916a982926b16b05cb6af9470c014b3e0",
+      "source_mode": "100644",
+      "source_sha256": "d912e77635d3838bf0e304a74cfd60e77318cd0d9996d1bec97c3da0992be67e",
+      "reason": "Private generated index contains excluded artifacts. Public index is regenerated from retained source and current publication lifecycle."
+    }
   },
   {
     "source_path": "docs/targets/target-c/05-attachment-cell-frontier.md",
@@ -8883,6 +8987,46 @@
     "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
   },
   {
+    "source_path": "research-packages/ci-protocol-example/README.md",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "e4ad13a193f2941aaa63f7d92f1176f00f1f0d82",
+    "source_mode": "100644",
+    "source_sha256": "b7f4a359065c45e3bfbae288fd8a3f0e1b2d4bce1174cb248cffe4ca4200e85a",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+  },
+  {
+    "source_path": "research-packages/ci-protocol-example/SOURCES.json",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "fd220893db9575347812e0967023feabc70d7946",
+    "source_mode": "100644",
+    "source_sha256": "b008ba0bfb583b0cee84c6fbcf17616a01f7a6f8f87fa17cfed365f5051fae7d",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+  },
+  {
+    "source_path": "research-packages/ci-protocol-example/TASK.json",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "d65ba9c844307402d31a05f13628b482b437887b",
+    "source_mode": "100644",
+    "source_sha256": "c4c7d516d582874df8382eb4476556ddd62464b502be46fd5d642f23b39082e4",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+  },
+  {
+    "source_path": "research-packages/ci-protocol-example/VERIFY.json",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "07efc0f59e498e1786de9bba148bf130cac60199",
+    "source_mode": "100644",
+    "source_sha256": "d1dd969b508d89d9129677c19aeb5cff129ddab5f65e1972a00b8e192baf5737",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+  },
+  {
+    "source_path": "research-packages/ci-protocol-example/verify.py",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "75e08a8eb62705edfea6b8ad839dfc76b7cff59c",
+    "source_mode": "100644",
+    "source_sha256": "e017552cba266e14973413b6360c3fa3bbaa437a41fb6fdbc116beccf81f7a8f",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+  },
+  {
     "source_path": "research/INDEPENDENT_AUDIT_LEDGER_2026-10-08.md",
     "source_blob": "b92ea95f3cd4b026265b3820c666a6a4076c6230",
     "source_mode": "100644",
@@ -8894,7 +9038,14 @@
     "source_blob": "65692b374cdfc653ec0d92a956370548830e6896",
     "source_mode": "100644",
     "reason": "navigation/administration replaced by public entrypoints",
-    "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
+    "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found",
+    "later_source_review": {
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "20c95bbcdfd5e7611502116fdbcd29e52c67a5c2",
+      "source_mode": "100644",
+      "source_sha256": "215bfd7d25b61f361ffc99f905b19b3809e1702089e643e381b252367ec9d657",
+      "reason": "Private campaign catalogue is replaced by public research navigation, tasks, and proposal catalogue; new substantive report/verifier links are retained directly."
+    }
   },
   {
     "source_path": "research/TARGET_C_POST123_NAMESPACE_2026-09-12.md",
@@ -9028,6 +9179,14 @@
     "source_mode": "100644",
     "reason": "not in current claim/task/proof/executable closure",
     "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
+  },
+  {
+    "source_path": "research/global_collective_run_2026-10-12.md",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "dc6449a5b5d653a0a79349e09e6f2050f40d553d",
+    "source_mode": "100644",
+    "source_sha256": "24961b6f03d2fbb803ddad539770362cc2916520ba0f5b18b3e6cdaef1abb7a1",
+    "reason": "Campaign/run diary; unique formal and separable mathematics is preserved in the two standalone reports and exact checkers."
   },
   {
     "source_path": "research/hall_phase_scan.py",
@@ -27468,15 +27627,16 @@
     "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
   },
   {
-    "source_path": "tools/branch_lifecycle.py",
-    "source_blob": "72f163e53c86e50a28e9f629dfb010f75fb5b218",
+    "source_path": "tools/benchmark_local_ci.py",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "458e885d97b9979b174708052b5d9beb9e2c7ac9",
     "source_mode": "100644",
-    "reason": "navigation/administration replaced by public entrypoints",
-    "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
+    "source_sha256": "fccbe0bfb96c523c6a2f5e8c0c713f06dc9a7ace8954ab0a77a31ea1df4025bd",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
   },
   {
-    "source_path": "tools/check_active_route_summaries.py",
-    "source_blob": "c7963a0f63e6debaae14caad2d0fe887d6832f01",
+    "source_path": "tools/branch_lifecycle.py",
+    "source_blob": "72f163e53c86e50a28e9f629dfb010f75fb5b218",
     "source_mode": "100644",
     "reason": "navigation/administration replaced by public entrypoints",
     "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
@@ -27510,11 +27670,52 @@
     "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
   },
   {
-    "source_path": "tools/check_theorem_state_pr.py",
-    "source_blob": "a788b22adb3fbf61d9b98f646401ff027331eec5",
+    "source_path": "tools/ci_integrity.py",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "8812d301bca680052dfaa63a3b256e3b87a42ded",
     "source_mode": "100644",
-    "reason": "navigation/administration replaced by public entrypoints",
-    "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
+    "source_sha256": "420df0dc05d6f7714fdaf03b5af528f2b0d046467a670f324bfb537c588f22b2",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+  },
+  {
+    "source_path": "tools/local_ci.py",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "0801648bb487588257b1366f3b33a6e97190e677",
+    "source_mode": "100644",
+    "source_sha256": "4445359cfbbd9b052dd107b6b80bf032193c07a7bb89a7e314a126cd544815a1",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+  },
+  {
+    "source_path": "tools/localized_ci/__init__.py",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "1b3da0417f8ccecea69c98f99516e39b885d9237",
+    "source_mode": "100644",
+    "source_sha256": "71c665bfe3b4bd7c309f997c2ef0983d84825e23ef0fe54af8f5df60b2ca2dd4",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+  },
+  {
+    "source_path": "tools/localized_ci/packages.py",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "82f6a80c3adb7fcb65efa8732e1d0db61a0c4f51",
+    "source_mode": "100644",
+    "source_sha256": "10e36e2d43a27edb7d786bf1d8dff539ed63776a27adcfca14fcfa4f005a565e",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+  },
+  {
+    "source_path": "tools/localized_ci/plan.py",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "884b3e2f76d1aa48ddca429dd3b200996943da29",
+    "source_mode": "100644",
+    "source_sha256": "5c93559adbedae8bfb8c4e92dfa28bf6c602dbbccdaea4fdfbadbd23b04c993a",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+  },
+  {
+    "source_path": "tools/localized_ci/replay.py",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "5848a3fd61f679aa619b0d7fc69480287f2ebbfb",
+    "source_mode": "100644",
+    "source_sha256": "444e56ad2f4615a94157f29d3323c5c4a634940f87546e3163b749f9452f1523",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
   },
   {
     "source_path": "tools/publication_inventory.py",
@@ -27587,11 +27788,26 @@
     "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
   },
   {
+    "source_path": "tools/test_local_ci.py",
+    "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "source_blob": "c613e6d61df45ce818cf3f3d21218e48947d0fa4",
+    "source_mode": "100644",
+    "source_sha256": "0a54855e41dede9c9a4ace2923f8a1eff2f8c4aec29f7ce00822b17341a23f8a",
+    "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+  },
+  {
     "source_path": "tools/test_prelaunch_workflows.py",
     "source_blob": "a3943efa485907821ee293297741f4ac69033d4b",
     "source_mode": "100644",
     "reason": "navigation/administration replaced by public entrypoints",
-    "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
+    "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found",
+    "later_source_review": {
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "ad2b05daaf3d027e868a6e8f116dca39f7034163",
+      "source_mode": "100644",
+      "source_sha256": "a9d383c62ee69d2611913658bfb045fd62df2a0107c8d35365e106a12eeb094f",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    }
   },
   {
     "source_path": "tools/test_publication_inventory.py",
@@ -27647,7 +27863,14 @@
     "source_blob": "094458a6453343f292b6b09e10303a36a6692d53",
     "source_mode": "100644",
     "reason": "navigation/administration replaced by public entrypoints",
-    "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
+    "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found",
+    "later_source_review": {
+      "source_commit": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+      "source_blob": "5a4788e555abe2eb610c1f586944eced998a2f8f",
+      "source_mode": "100644",
+      "source_sha256": "8b9c7a19042a2a2b8b2179689e021430e748c2a716fcc58256690b88d5669ca4",
+      "reason": "Private localized-CI planner/replay, fixtures, tests or benchmarks; publication uses a separately reviewed bounded standalone workflow and no private CI package is a mathematical dependency."
+    }
   },
   {
     "source_path": "tools/test_verify_research_baseline.py",
@@ -27676,40 +27899,5 @@
     "source_mode": "100644",
     "reason": "navigation/administration replaced by public entrypoints",
     "review": "not asserted mathematically obsolete; re-evaluate if a specific missing premise is found"
-  },
-  {
-    "source_path": "docs/archive/erdos_problem_99_1.7.0-full.md",
-    "source_blob": "80afd51a1b073b9fc690659813cbc95f17243c5e",
-    "source_mode": "100644",
-    "reason": "superseded monolith; current canonical section modules retained; link was archive navigation only",
-    "review": "explicit incoming-edge content inspection; complete current mathematical derivations remain"
-  },
-  {
-    "source_path": "docs/reports/campaign_ledger_2026-09-08.md",
-    "source_blob": "d437f6be8954685ffcec98fd9d5ea59dfee7ce97",
-    "source_mode": "100644",
-    "reason": "historical branch/status ledger; exact force-bulk regression is retained in its full dedicated report",
-    "review": "explicit incoming-edge content inspection; complete current mathematical derivations remain"
-  },
-  {
-    "source_path": "docs/reports/campaign_review_2026-09-09.md",
-    "source_blob": "40c363d0b87c02cfb52646bda98d6de9d5f450c3",
-    "source_mode": "100644",
-    "reason": "historical campaign handoff; scoped proof audit and actual mathematical reports retained",
-    "review": "explicit incoming-edge content inspection; complete current mathematical derivations remain"
-  },
-  {
-    "source_path": "docs/reports/repository_state_review_2026-09-09.md",
-    "source_blob": "0fd9177b53fbc62e73f298ed42e25bfefb3fb421",
-    "source_mode": "100644",
-    "reason": "historical state/check command report; current state and exact mathematical audits retained",
-    "review": "explicit incoming-edge content inspection; complete current mathematical derivations remain"
-  },
-  {
-    "source_path": "docs/audits/target_c_integration_audit_ledger_2026-10-06.md",
-    "source_blob": "d3cee4754a67746fd5e613dd92a35dbec04139d1",
-    "source_mode": "100644",
-    "reason": "administrative promotion cycles and PR transaction log; only incoming citation concerns local validation, not a mathematical premise",
-    "review": "explicit incoming-edge content inspection; complete current mathematical derivations remain"
   }
 ]

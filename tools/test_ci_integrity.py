@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -53,6 +54,26 @@ class PublicIntegrityTests(unittest.TestCase):
         (self.root/"untrusted.py").write_text('raise SystemExit("executed attacker code")\n')
         self.commit()
         self.assertEqual(validate(self.root,self.base),[])
+
+    def test_symlinked_manifest_rejected_before_parsing(self):
+        (self.root / 'docs/state').mkdir(parents=True)
+        outside = self.root.parent / ('outside-' + self.root.name + '.yaml')
+        outside.write_text('a private non-metadata file\n')
+        self.addCleanup(outside.unlink)
+        (self.root / 'docs/state/theorem-state.yaml').symlink_to(outside)
+        self.commit()
+        process = subprocess.run(
+            [sys.executable, str(Path(__file__).with_name('ci_integrity.py')),
+             '--root', str(self.root), '--base-ref', self.base], capture_output=True, text=True)
+        self.assertEqual(process.returncode, 1)
+        self.assertIn('rejected before theorem metadata parsing', process.stdout)
+        self.assertNotIn('Traceback', process.stderr)
+        self.assertNotIn('a private non-metadata file', process.stdout + process.stderr)
+
+    def test_unchanged_symlink_also_rejected(self):
+        (self.root / 'docs').symlink_to(self.root.parent)
+        self.base = self.commit()
+        self.assertTrue(any('nonregular' in e for e in validate(self.root, self.base)))
 
 
 if __name__=="__main__":

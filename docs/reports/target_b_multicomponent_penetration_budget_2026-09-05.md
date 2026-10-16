@@ -136,11 +136,18 @@ This failure is informative: the remaining global step must use more than positi
 
 1. a component/grid whose two coherent shore populations sum above the `2D/sqrt(3)` phase-cancellation threshold;
 2. many smaller grids whose geometric diameter costs combine more strongly than the factor-two crossing reuse in MCP1;
-3. a direct use of GPS1's local Theorem-51 deficit/virtual-area certificate to improve the grid extraction beyond the density-only `rho^2` scale.
+3. a new quantitative coupling of the local Theorem-51 crossing deficit to virtual noncrossing determinant mass, improving grid extraction beyond the density-only `rho^2` scale.
 
 ## 5. Interface with the current virtual-area dichotomy
 
-The local virtual-area certificate says that pruning a linear train population forces either large terminal support depth or internal virtual noncrossing determinant mass. MCP2 uses exactly the complementary physical currency: deleted train crossings that allow arbitrary external cancellation.
+**Publication scope note:** the historical GPS1/virtual-area lead is not retained
+in this corpus and is not a premise of MCP1 or MCP2. No general certificate
+allowing arbitrary component pruning is supplied here. The retained
+[route Sections 26.4–26.5 and 51](../targets/target-b/01-jammed-rhombic-branch.md)
+define zonotope/missing-pair area and the cyclic-order deficit. A new argument
+would have to connect those quantities to support depth and internal virtual
+noncrossing determinant mass. MCP2 supplies the complementary physical currency:
+deleted train crossings that allow arbitrary external cancellation.
 
 Thus the current Target B endpoint can be phrased without ambiguity:
 

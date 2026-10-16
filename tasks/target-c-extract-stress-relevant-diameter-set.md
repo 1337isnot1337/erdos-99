@@ -58,7 +58,7 @@ The task-context command lists certificate commands for the direct and transitiv
 
 ## Remaining lemma and limitations
 
-Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with strict contact loss at D or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.
+Construct a canonical full-source same-cardinality finite endpoint preserving every lower and actual-diameter upper pair bound and all applicable face constraints, with a triangle-free endpoint at D with lexicographically fewer contacts/actual-diameter pairs or strict sub-D diameter; separately close any untouched macroscopic-container restoration branch.
 
 No finite model, one-grain result, local packing, infinitesimal flex or supplied-set calculation proves Level I, global source realization, uniform onset, or the unencoded remainder of its route.
 

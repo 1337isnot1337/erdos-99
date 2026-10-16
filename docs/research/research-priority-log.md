@@ -1,5 +1,15 @@
 # Scientific priority decisions
 
+## public-frontier.3 — 2026-10-15
+
+The existing twenty task cards are reconciled with `2026-10-15.publication.1`.
+Audit.202's unsupported intermediate inference has been withdrawn; the repaired
+sequence exclusion is audited-working. No card acquires a new canonical premise.
+Independent outsider checks added the shared Oler/topology definitions to B's
+explicit prerequisite navigation and clarified C's standalone successor audit.
+Track weights and mathematical endpoints remain unchanged. This is an agent
+review of task applicability, not human proof review.
+
 ## public-frontier.2 — 2026-10-15
 
 Evidence: subsequent private source PR #1005 integrated two independently reproducible, **noncanonical** global alternatives after the pinned canonical corpus: a separable/Möbius distance obstruction and a fixed-common-frame joint stress/strain incompatibility with a rotated-laminate counterexample. Their two exact verifiers passed independent Python 3.12 / SymPy 1.14.0 local runs. Neither proves source extraction, global optimality or Level I.

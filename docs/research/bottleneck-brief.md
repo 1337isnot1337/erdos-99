@@ -1,6 +1,6 @@
 # Current bottleneck
 
-**Level I OPEN; A OPEN; B OPEN; C-I CLOSED; C-II OPEN.** Source snapshot `5dcbdc3dfa1f9be370602cc54d50e68eabb88f56`, inherited theorem-state `2026-10-10.audit.234`. [Priority revision](priority-state.json): `public-frontier.2`.
+**Level I OPEN; A OPEN; B OPEN; C-I CLOSED; C-II OPEN.** Source snapshot `5dcbdc3dfa1f9be370602cc54d50e68eabb88f56`, inherited theorem-state `2026-10-10.audit.234`, publication state `2026-10-15.publication.1`. [Priority revision](priority-state.json): `public-frontier.3`.
 
 | Route | Strongest accepted working position | Exact missing obligation | First useful bounded step |
 | --- | --- | --- | --- |

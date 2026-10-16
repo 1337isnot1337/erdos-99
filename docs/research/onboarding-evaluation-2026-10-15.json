@@ -1,0 +1,252 @@
+{
+  "catalogue_tasks_at_start": 19,
+  "classification": "agent onboarding audit and exact finite evidence; no theorem promotion or human review",
+  "environment": {
+    "assertions_enabled": true,
+    "lock": "tools/requirements-verification-linux-x86_64.lock",
+    "machine": "x86_64",
+    "platform": "Linux",
+    "python": "3.14.7"
+  },
+  "evaluated_public_commit": "afa7f7ec8b93b39efb921f4f47d132e4219b5df8",
+  "initial_failure": {
+    "cause": "No theorem dependency traversal, no registry proof-source lookup, no separate reachable supporting evidence, and omitted implicit A section/file edges.",
+    "certificate_commands_in_each": [],
+    "task_context_file_counts": {
+      "A": 4,
+      "B": 15,
+      "C-II": 16
+    }
+  },
+  "limits": [
+    "The entire inherited proof chain was not independently mathematically audited.",
+    "File/claim reachability does not certify proof completeness.",
+    "Exact finite replays supply no unencoded geometric realization, global minimizer, uniform onset or canonical promotion.",
+    "Integrated-candidate repeat is required because public main advanced during the evaluation."
+  ],
+  "new_two_grain_evidence": {
+    "arithmetic": "integer incidence; determinant areas in units sqrt(3)/2",
+    "checks": [
+      "MCP1 factor-two budget",
+      "MCP2 deleted-edge multiplicity at most two",
+      "retained/deleted/virtual pair partition"
+    ],
+    "cross_grain_virtual_mass_omitted_by_grain_internal_ledgers": {
+      "cross_grain_virtual_pairs": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "determinant_area_units": 2
+    },
+    "does_not_establish": "Geometric realization, PC penetration lower bounds, GPI additivity, topology correction, shell stability or Level I.",
+    "domain": "two fixed disjoint one-edge grids, one pruned train, six optional distinct-direction pairs and all eligible penetration assignments; two parallel pairs always absent",
+    "naive_single_charge_counterexample": {
+      "R": 3,
+      "deleted_interface_edges": [
+        [
+          0,
+          3
+        ]
+      ],
+      "grid_crossings": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "penetration_sets": [
+        [
+          [
+            0,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ]
+        ]
+      ],
+      "physical_crossings": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "sum_deleted_endpoint_incidences": 2,
+      "sum_grid_plus_penetration": 4
+    },
+    "states": 2025,
+    "status": "finite model passed"
+  },
+  "priority_revision": "public-frontier.1",
+  "repair_code_sha256": {
+    "docs/research/onboarding-prerequisites.json": "02af1863d6f28628ac4ada307981a3fd7b7c4e8253336a6399f3f42c882ab5a6",
+    "research/onboarding_two_grain_audit.py": "ddad086f6930aaac4a694a42e58719dd7694dda5c3d850fade48d64fca8aa573",
+    "tools/task_context.py": "cd11b61edb9c805cc0db3390f68e32b2f7ba43f129d6beb0d561f2019a2f6e32",
+    "tools/test_task_context.py": "cb42394ccec95cbae7c495a2e2a75fac23314a17374282d0da9a95ae22847767"
+  },
+  "route_sessions": [
+    {
+      "clone_session": {
+        "checkout_commit": "afa7f7ec8b93b39efb921f4f47d132e4219b5df8",
+        "independent_remote_clone": true,
+        "isolated_venv": true
+      },
+      "evidence": [
+        {
+          "command": ".venv/bin/python research/tube_shield_cut_audit.py",
+          "exit_code": 0,
+          "stderr": "",
+          "stdout": "PASS: 17104 exact graph/tube/shield cases; 15056 strictly improved lower bounds.\nNo geometry or global-optimality claim is tested.\n",
+          "stdout_sha256": "0332da41cc0ba617fd9cf69dc9ab967009e7d01cbfa4539c7ba69956d78a8adc"
+        }
+      ],
+      "repaired_context_counts": {
+        "certificate_commands": 0,
+        "reachable_claims": 0,
+        "supporting_evidence_commands": 5,
+        "supporting_helpers": 0,
+        "transitive_file_prerequisites": 43
+      },
+      "route": "A",
+      "task": "target-a-locked-sector-surplus"
+    },
+    {
+      "clone_session": {
+        "checkout_commit": "afa7f7ec8b93b39efb921f4f47d132e4219b5df8",
+        "independent_remote_clone": true,
+        "isolated_venv": true
+      },
+      "evidence": [
+        {
+          "command": ".venv/bin/python research/phase_cut_certificate.py",
+          "exit_code": 0,
+          "stderr": "",
+          "stdout": "30-direction model: edges=135, minimum cut=35, mean=75/2\nC5 blow-up s=1: optimum=1; 1 smaller deletions excluded\nC5 blow-up s=2: optimum=4; 1351 smaller deletions excluded\nbalanced m=2: all 4096 graphs checked; 9 equality graphs; EC verified\nsliding intervals N=12, k=6: edges=57, max biclique product=12\n",
+          "stdout_sha256": "8df287bf638a524bdbdc6df4a6e10d97cc94b6050c83eaf57ece9082f590fbe4"
+        }
+      ],
+      "repaired_context_counts": {
+        "certificate_commands": 0,
+        "reachable_claims": 1,
+        "supporting_evidence_commands": 2,
+        "supporting_helpers": 0,
+        "transitive_file_prerequisites": 16
+      },
+      "route": "B",
+      "task": "target-b-multigrain-transfer"
+    },
+    {
+      "clone_session": {
+        "checkout_commit": "afa7f7ec8b93b39efb921f4f47d132e4219b5df8",
+        "independent_remote_clone": true,
+        "isolated_venv": true
+      },
+      "evidence": [
+        {
+          "command": ".venv/bin/python research/verify_seed090_rhombus_contraction.py",
+          "dense_source_receipts": [
+            {
+              "comparison_diameter_squared_bound": 900,
+              "comparison_labels": 823,
+              "full_source_pairs": 46360,
+              "m": 24,
+              "old_diameter_squared": 1152,
+              "retained_contact_isolates": 121,
+              "source_labels": 305
+            },
+            {
+              "comparison_diameter_squared_bound": 2916,
+              "comparison_labels": 2653,
+              "full_source_pairs": 1081185,
+              "m": 40,
+              "old_diameter_squared": 3200,
+              "retained_contact_isolates": 1159,
+              "source_labels": 1471
+            },
+            {
+              "comparison_diameter_squared_bound": 7744,
+              "comparison_labels": 7015,
+              "full_source_pairs": 10208421,
+              "m": 64,
+              "old_diameter_squared": 8192,
+              "retained_contact_isolates": 4015,
+              "source_labels": 4519
+            }
+          ],
+          "exit_code": 0,
+          "last_line": "PASS: exact finite certificates; no Level I or canonical-source conclusion",
+          "stderr": "",
+          "stdout_sha256": "17aa8b5211f23afd04ac94fa4572274230d1feb117089ceb3a2d70677fda092b"
+        },
+        {
+          "command": ".venv/bin/python research/verify_target_c_quarter_fold_face_obstructions_2026_10_10.py",
+          "exit_code": 0,
+          "stderr": "",
+          "stdout_sha256": "0ebf7367629a7555ce379b77f11af81b63d9e973eb0b84fd9a5eaee0512a3857",
+          "summary": {
+            "arithmetic": "Q(sqrt(15)), exact sign comparisons",
+            "fixed_center_lower_collisions": [
+              1,
+              3,
+              5,
+              7
+            ],
+            "full_pair_checks": [
+              120,
+              56,
+              420
+            ],
+            "scope": "finite regressions; no global optimality or universal endpoint existence"
+          }
+        },
+        {
+          "command": ".venv/bin/python research/verify_target_c_triangular_two_pin_capacity_2026_10_05.py",
+          "exit_code": 0,
+          "stderr": "",
+          "stdout": "PASS: 716 exact elementary unit triangles\nPASS: 228 admissible triangles after deleting two adjacent wall pins\nPASS: m=3 cover has exactly K triangles for every checked n\nPASS: 4-by-4 has ten admissible triangles and one exact six-triangle unit-disk star\nSCOPE: arbitrary-point upper bounds use convexity/angular arguments in the report, not finite sampling\n",
+          "stdout_sha256": "51ffcd74de2e667fbcc619b1dc936cd525fd10e33670af92e3ede5f9e8124592"
+        }
+      ],
+      "repaired_context_counts": {
+        "certificate_commands": 43,
+        "reachable_claims": 169,
+        "supporting_evidence_commands": 23,
+        "supporting_helpers": 2,
+        "transitive_file_prerequisites": 360
+      },
+      "route": "C-II",
+      "task": "target-c-face-coupled-move"
+    }
+  ],
+  "source_policy": "Three new public remote clones; no private research or remembered project premise; one auditor across three route evaluations.",
+  "state_version": "2026-10-10.audit.234"
+}

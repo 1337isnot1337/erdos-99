@@ -74,7 +74,7 @@
       "source_blob": "5c6a8541c8f579ccfda95c8a92422cbc13856983",
       "source_mode": "100644",
       "source_sha256": "6d648ebaad9c35ec80a3823da3fbee80eb9ed2ccf3881a535ecccaa0593709bd",
-      "public_sha256": "c65b43a92c97293d66473200dd6b4c792f7cb8283ce588518eb0ea359f54b755",
+      "public_sha256": "84ecdff97ec1c27381acbdf2ba1c8286c66f7a7ee5b09975ce5bf5f53818c5f9",
       "role": "infrastructure",
       "theorem_ids": [],
       "dependencies": [],
@@ -2291,7 +2291,7 @@
       "source_blob": "16fcb7a8c1e8552f152709fa24fcdb37542061eb",
       "source_mode": "100644",
       "source_sha256": "e4bf989843db0d85a6594d4129eed8cc2c59ec3605442d1ba722c2a219c3c4cf",
-      "public_sha256": "b52e27283e260c8af8f73921dd84c2dcb6a148c790ca3dc7573277e16a94e146",
+      "public_sha256": "a815cfd48e4f208a1891b853726897069909704fa0f359dad9f828c12668d797",
       "role": "unreviewed active proposal",
       "theorem_ids": [],
       "dependencies": [],
@@ -2553,7 +2553,7 @@
       "source_blob": "772c393c960f2939c3652904bc564191b1c9cdbb",
       "source_mode": "100644",
       "source_sha256": "e847381b7c00329330f4f72dfc3efeaf98b3268b2b50a7b2ee4d46bf67080277",
-      "public_sha256": "e847381b7c00329330f4f72dfc3efeaf98b3268b2b50a7b2ee4d46bf67080277",
+      "public_sha256": "7f16f0745a5cc5b41ec6e7b099f6adc802cd559bb0dc8229e296652e29782a30",
       "role": "proof/audit",
       "theorem_ids": [
         "C-EXTERIOR-CAP-MOVED-CORE-REFILL-NONGLOBAL-REGRESSION"
@@ -2598,7 +2598,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [
         "target-c-macroscopic-container-capacity"
       ],
@@ -4213,21 +4213,11 @@
       "source_blob": "ec8c2e728c1f11caf63d0cd321778fe9be0064b4",
       "source_mode": "100644",
       "source_sha256": "43b24d8d259bc968458d5a44e775c73a7c3c4baa957f72c49fc6450c5a954761",
-      "public_sha256": "43b24d8d259bc968458d5a44e775c73a7c3c4baa957f72c49fc6450c5a954761",
-      "role": "proof/audit",
-      "theorem_ids": [
-        "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION"
-      ],
+      "public_sha256": "7e3a94bfc59864bcee1d091a674b2cd1ffc7833f3001d6052c50163a947ab512",
+      "role": "historical audit with withdrawn global chart and endpoint rate",
+      "theorem_ids": [],
       "dependencies": [],
       "incoming": [
-        {
-          "source": "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION",
-          "kind": "claim audit"
-        },
-        {
-          "source": "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION",
-          "kind": "claim report"
-        },
         {
           "source": "docs/STATE.md",
           "kind": "proof or navigation reference"
@@ -4242,16 +4232,14 @@
         }
       ],
       "inclusion_reason": [
-        "claim audit",
-        "claim report",
         "literal proof or input reference",
         "proof or navigation reference"
       ],
-      "review_status": "source text preserved; scientific lifecycle remains in theorem-state",
+      "review_status": "superseded for this claim by Audit.236; no global chart or endpoint rate accepted",
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": []
     },
@@ -4262,23 +4250,33 @@
       "source_blob": "7667e5fa85f180aa5c971477d3f73798a1995c98",
       "source_mode": "100644",
       "source_sha256": "831884c7a986c683345cec980fafabf52fa30569cda43f6f47396f75e535553c",
-      "public_sha256": "fec85041c6fd765ecdcee0f0ef0d0b8dd90a22b5f19af913bc87e79918b3bf57",
-      "role": "unreviewed active proposal",
-      "theorem_ids": [],
+      "public_sha256": "9ed749f51f560af597875fc9fb7c2647395ce47a970583a9e3349df6f8e2bb38",
+      "role": "audited-working corrected analytic sequence proof",
+      "theorem_ids": [
+        "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION"
+      ],
       "dependencies": [],
       "incoming": [
         {
           "source": "source-proposal-947",
           "kind": "active noncanonical research"
+        },
+        {
+          "source": "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION",
+          "kind": "claim report"
+        },
+        {
+          "source": "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION",
+          "kind": "claim audit"
         }
       ],
       "inclusion_reason": [
-        "directly informs current frontier; no promotion"
+        "corrected audited-working sequence proof; no canonical promotion"
       ],
-      "review_status": "unreviewed proposal; not an accepted premise",
+      "review_status": "agent-audited working sequence exclusion; independent human review pending; no canonical chart or endpoint rate",
       "publication_clearance": "pending provenance/content review",
       "attribution": "source project attribution retained",
-      "reproduction_requirements": "execute supplied verifier with public prerequisites",
+      "reproduction_requirements": "inspect complete analytic sequence proof and retained canonical prerequisites; no computational verifier is claimed",
       "editorial_change": "publication navigation/metadata edit or explicitly retained mathematical section extract; source blob recorded",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": []
@@ -7102,7 +7100,7 @@
       "source_blob": "0325be2261b6eb1c1e9528feeb7883f8401ce0f8",
       "source_mode": "100644",
       "source_sha256": "91c0dc1b86aaf7b2941943dce132e258a3364709f6b00a67575d465bbe8189c4",
-      "public_sha256": "24ac80f5a2f1ae6995565c6a75b691ebd33e4a2b8a9e3e7a5c6ad50561890467",
+      "public_sha256": "ce709b3988db6bae2b1deb5aacc0d5ed755e86bf7781e77e167e6203b0702f7c",
       "role": "unreviewed active proposal",
       "theorem_ids": [],
       "dependencies": [],
@@ -7963,7 +7961,7 @@
       "source_blob": "9668230200c9c2cac9a87d515bd31449bf487a35",
       "source_mode": "100644",
       "source_sha256": "f7df6238d32925d18a2a593f25ff631ef29d8fcd16e3767235f8e3c21dd51cf8",
-      "public_sha256": "f2567d3efd9bfb7205b92c7af597f03577aa168ef5716f9275e5144b7175faaa",
+      "public_sha256": "c46e90b1975345be2704b4df3085d63f5b84b15402ae6f9214a49faa3e3f32f7",
       "role": "unreviewed active proposal",
       "theorem_ids": [],
       "dependencies": [],
@@ -9681,7 +9679,7 @@
       "source_blob": "246844015df1544acc8732ff8f6c47005583f935",
       "source_mode": "100644",
       "source_sha256": "8a63e14ea5787f2a120c46d0a48c2f6f42064372baf23d37fb62f0e86b675f73",
-      "public_sha256": "277a9df0902cb8b7399c2eb929923832242240a16fda7b6be0e026c5db2cd69e",
+      "public_sha256": "4f40354d0af913209245992c18e88680ccf65973d68265ef085c32d4329a9391",
       "role": "unreviewed active proposal",
       "theorem_ids": [],
       "dependencies": [],
@@ -11344,7 +11342,7 @@
       "source_blob": "3ac423eba2f0e01d65db402fa24ecf7982e62d70",
       "source_mode": "100644",
       "source_sha256": "c1869e26e4c32fd8ad673470ab5745b328332ab7c0ce52d5b6360a25773ab4e8",
-      "public_sha256": "068d4c291c0db8bf36f3404c5f4b1b1d45fc643f1d45956c2820bfdc657b9ae2",
+      "public_sha256": "9c4492912a5b2cc73da752fb580e9008c3a7f79733db6440fe5fd60ec97e1973",
       "role": "infrastructure",
       "theorem_ids": [],
       "dependencies": [],
@@ -11781,7 +11779,7 @@
       "source_blob": "d7a5738db70c83aba37653a6de92cd81ac702774",
       "source_mode": "100644",
       "source_sha256": "30f842b1520592cde9bf84ee7bf9945b419143934b4dbe100408a168e15a55e5",
-      "public_sha256": "30f842b1520592cde9bf84ee7bf9945b419143934b4dbe100408a168e15a55e5",
+      "public_sha256": "55eadf29a8a6b0e2d95c7139a54f61c3db3d09c6c122ad39df6a277a8ff94cec",
       "role": "infrastructure",
       "theorem_ids": [],
       "dependencies": [],
@@ -11898,7 +11896,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [
         "target-c-face-coupled-move",
         "target-c-typeii-stress-mass-access",
@@ -13177,7 +13175,7 @@
       "source_blob": "340f1bbd03cc959895c917a89c8ea2766ae0eaee",
       "source_mode": "100644",
       "source_sha256": "974b4066bc5452fdef00950158f6075b739be2416cc5063ae8b94ac2ad6d2fdf",
-      "public_sha256": "974b4066bc5452fdef00950158f6075b739be2416cc5063ae8b94ac2ad6d2fdf",
+      "public_sha256": "d855c448a3daa7d09962a0e4089aeaf3d50eca15c5ea2dadc10eb6c9bd8ae843",
       "role": "proof/audit",
       "theorem_ids": [],
       "dependencies": [],
@@ -13194,7 +13192,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [
         "target-b-multigrain-transfer",
         "audit-target-b-gpi-scope",
@@ -13314,7 +13312,7 @@
       "source_blob": "e53a136e9c84949a72ef52092d3e9dcf305fa65a",
       "source_mode": "100644",
       "source_sha256": "ca51534b5d0cf234e80d760f251a4f04ce65e47c78a5697e92fb9161ae14f68b",
-      "public_sha256": "ca51534b5d0cf234e80d760f251a4f04ce65e47c78a5697e92fb9161ae14f68b",
+      "public_sha256": "085e09f7cd4f2c77199179f64d98a496aab95f8b2f4f48f0c90fee5b41ad99a8",
       "role": "proof/audit",
       "theorem_ids": [],
       "dependencies": [],
@@ -13331,7 +13329,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [
         "target-b-multigrain-transfer",
         "audit-target-b-gpi-scope",
@@ -13570,7 +13568,7 @@
       "source_blob": "14eb5efc8a081893c1b3c6209f5b6fa457e630a9",
       "source_mode": "100644",
       "source_sha256": "bc2c2355ebb1f8f29fd8ec90974bbc554cc67df2b22fef8560587731bb752503",
-      "public_sha256": "ffc7f9cc3c003d97a38185ec83495930f29a553427e48e5a2fa38c6662c5047a",
+      "public_sha256": "2f5e5d9c1ca68e89d98c5ca3af4ce72a42b545265db5465e872aab59b0d06f2b",
       "role": "proof/audit",
       "theorem_ids": [],
       "dependencies": [
@@ -13805,7 +13803,7 @@
       "source_blob": "183cf100ef0a2ecc9f8e9d3475bc2bff3c236284",
       "source_mode": "100644",
       "source_sha256": "a6ada35843dd6f9fefdb3808bfe2c448e1c7674a72c21a847a5926f487a1efa0",
-      "public_sha256": "0ad8dd9f520c27aac8d2a544368a0a83fe4a0aaccd2d889fd0da784de91b3265",
+      "public_sha256": "c704cd2e9e7fd7b71a33040ea37b3bf7b90e07b286c7727ee673fb785ee2a85b",
       "role": "proof/audit",
       "theorem_ids": [],
       "dependencies": [],
@@ -16829,8 +16827,8 @@
       "source_blob": "db301bc73f41c836529a4d437bc4bc262ac598cc",
       "source_mode": "100644",
       "source_sha256": "2a2c12e3b63e9b0295e1106eda89b68449ed1b37a14d114a8e24d6e5f7e73bcd",
-      "public_sha256": "2a2c12e3b63e9b0295e1106eda89b68449ed1b37a14d114a8e24d6e5f7e73bcd",
-      "role": "frozen load-bearing proof dependency",
+      "public_sha256": "5061a85a1810c8626123837d7901b3aa7ef1d1db3216a207ca67aaedcb18eb43",
+      "role": "frozen section-specific proof source; whole-file lifecycle unreviewed",
       "theorem_ids": [],
       "dependencies": [],
       "incoming": [
@@ -16842,11 +16840,11 @@
       "inclusion_reason": [
         "frozen report/verifier explicitly cited by retained audit"
       ],
-      "review_status": "status controlled by manifest, original proof text retained",
+      "review_status": "only exact separately audited sections inherit their manifest scopes; Audit.236 controls the audited-working sequence exclusion",
       "publication_clearance": "pending provenance/content review",
       "attribution": "original project attribution retained",
       "reproduction_requirements": "inspect exact source and fixture closure",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": []
     },
@@ -16944,7 +16942,7 @@
       "source_blob": "7f58a3a01da35b12e337307da0f1e4d0fda0fdb1",
       "source_mode": "100644",
       "source_sha256": "b2b42fc3c912fe3e593f30ac19031c87cd343ec06c73a981f513962f13e1c499",
-      "public_sha256": "3e4eceb0d0c5889b34ca60c84f27c7d0c4ca6c6001b4d7f0530192bec608f861",
+      "public_sha256": "4ba8188ab9cc00c8da01ac70e424119679f9d93392bd2d17d68430f4351a1b9a",
       "role": "proof/audit",
       "theorem_ids": [],
       "dependencies": [
@@ -17697,7 +17695,7 @@
       "source_blob": "2ff0b744506e6d34938a878c9cbf6d1bf6507ec1",
       "source_mode": "100644",
       "source_sha256": "13ba9736fe3a4d51d456429504babd9b4ebfdd72574c5a77e633627b8cae3fd4",
-      "public_sha256": "1f8b78595e1f0e32078224ece64743931a974488f73d4030d195051b052c00c8",
+      "public_sha256": "3011d1939d6dcb7793504bd0d87e8c287095a0333bfc29a757082600a654c4a1",
       "role": "proof/audit",
       "theorem_ids": [],
       "dependencies": [],
@@ -18141,7 +18139,7 @@
       "source_blob": "c38c2dcdf27bdbc98ddd75beb93410064d601465",
       "source_mode": "100644",
       "source_sha256": "c4468a5b51584be7156ed61acd73e31c14b9e07cf36eb1d66ab75b5da15f3ed9",
-      "public_sha256": "c4468a5b51584be7156ed61acd73e31c14b9e07cf36eb1d66ab75b5da15f3ed9",
+      "public_sha256": "a918d2251b8ed9af98b8ff17c70b83e3c1c3e3675be067ccfac7d15054124e52",
       "role": "proof/audit",
       "theorem_ids": [],
       "dependencies": [],
@@ -18167,7 +18165,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": []
     },
@@ -20892,7 +20890,7 @@
       "source_blob": "6b90bfe55ceb85ca479e95436bb77264226d35e0",
       "source_mode": "100644",
       "source_sha256": "8062f9db48739d2a9ad452e1551b640af8f9a307e1588c14652e142783255bee",
-      "public_sha256": "8062f9db48739d2a9ad452e1551b640af8f9a307e1588c14652e142783255bee",
+      "public_sha256": "9339196ee0be58fe323b00fe7e29a7d3e8b9412d0dcac6bd83bbce1e690b5e92",
       "role": "infrastructure",
       "theorem_ids": [],
       "dependencies": [],
@@ -20919,7 +20917,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": []
     },
@@ -20930,7 +20928,7 @@
       "source_blob": "a47f76cdf20e5aed3a2cb8558e27790e69527cb1",
       "source_mode": "100644",
       "source_sha256": "8d25ac207602a22ec955b87f1805a50f8ddbeba31d8209f5c877b8d67fe00cb4",
-      "public_sha256": "8d25ac207602a22ec955b87f1805a50f8ddbeba31d8209f5c877b8d67fe00cb4",
+      "public_sha256": "5a7a18a9db5ef3e760194c5e0cf23f10e76a3a453bdb9e8c241ff3d72ef8d2eb",
       "role": "infrastructure",
       "theorem_ids": [],
       "dependencies": [],
@@ -20957,7 +20955,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": []
     },
@@ -21001,7 +20999,7 @@
       "source_blob": "b727d4444b6d4d19fcf36cf8759233242d1d7ee4",
       "source_mode": "100644",
       "source_sha256": "a8b571cacc2c77623a991f50114a70141d59bcde9685f916db8153599e58b2b6",
-      "public_sha256": "1d8781229ca493447d82f0981095f90dbe98b880fc393e0c198805bcfc58b893",
+      "public_sha256": "0df3fa8387b9860ff9b72a8ed203e195722b3edb0bbaeb67611586d629d302ed",
       "role": "infrastructure",
       "theorem_ids": [],
       "dependencies": [],
@@ -22672,7 +22670,7 @@
       "source_blob": "d34fd1e6dea4f893fe3e90b27885d7f9bc17f985",
       "source_mode": "100644",
       "source_sha256": "2c0042154c17d706bd9cc1f371f61b93ecf273f8368ec37ef93826a3db5c67ca",
-      "public_sha256": "d6995d5264fabe8a01146a55589b9bfe38f48c7fcd48a43ae437578f1215eae7",
+      "public_sha256": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
       "role": "foundation",
       "theorem_ids": [],
       "dependencies": [],
@@ -31709,7 +31707,7 @@
       "public_path": "research/verify_target_c_inclusive_floor_release_2026_10_10.py",
       "source_commit": "3536c0b6f6c2a929d9c96fffbdcfc480735fea3b",
       "source_blob": "2d3987a6a88690f624d60439211cc4419df1cbbb",
-      "source_mode": "100644",
+      "source_mode": "100755",
       "source_sha256": "9cfd38a998de0b6fc420674943b98c05ef0a371fa21ee9f9352b4ea02c3608fc",
       "public_sha256": "9cfd38a998de0b6fc420674943b98c05ef0a371fa21ee9f9352b4ea02c3608fc",
       "role": "unreviewed active proposal",
@@ -31734,7 +31732,8 @@
       "downstream_frontier_obligations": [],
       "navigation_dependencies": [
         "research/verify_target_c_source_realized_owner_sink_2026_10_10.py"
-      ]
+      ],
+      "source_mode_note": "Source is executable; curated public mode is 100644 and reproduction uses explicit Python."
     },
     {
       "source_path": "research/verify_target_c_integrated_envelope_115.py",
@@ -31978,7 +31977,7 @@
       "public_path": "research/verify_target_c_loaded_anchor_upper_box_2026_10_10.py",
       "source_commit": "3536c0b6f6c2a929d9c96fffbdcfc480735fea3b",
       "source_blob": "ddba90163e93952876ac1d710bcf7c66b4eb2a0e",
-      "source_mode": "100644",
+      "source_mode": "100755",
       "source_sha256": "e344779df3f4bac62d2c8b37b786986f18300b1bf8326d4f49626296d1e16d4d",
       "public_sha256": "e344779df3f4bac62d2c8b37b786986f18300b1bf8326d4f49626296d1e16d4d",
       "role": "unreviewed active proposal",
@@ -32003,7 +32002,8 @@
       "downstream_frontier_obligations": [],
       "navigation_dependencies": [
         "research/verify_target_c_source_realized_owner_sink_2026_10_10.py"
-      ]
+      ],
+      "source_mode_note": "Source is executable; curated public mode is 100644 and reproduction uses explicit Python."
     },
     {
       "source_path": "research/verify_target_c_loaded_flat_pentagon_second_depletion_2026_10_05.py",
@@ -33762,7 +33762,7 @@
       "public_path": "research/verify_target_c_source_realized_owner_sink_2026_10_10.py",
       "source_commit": "3536c0b6f6c2a929d9c96fffbdcfc480735fea3b",
       "source_blob": "21de0d3ed504468f923620744d7391d0b74e50cb",
-      "source_mode": "100644",
+      "source_mode": "100755",
       "source_sha256": "df2cd04d208b0370cb85b3c15a2cef308b11be2a942058c724473456ad85da25",
       "public_sha256": "df2cd04d208b0370cb85b3c15a2cef308b11be2a942058c724473456ad85da25",
       "role": "unreviewed active proposal",
@@ -33783,7 +33783,8 @@
       "reproduction_requirements": "execute supplied verifier with public prerequisites",
       "editorial_change": "byte-identical",
       "downstream_frontier_obligations": [],
-      "navigation_dependencies": []
+      "navigation_dependencies": [],
+      "source_mode_note": "Source is executable; curated public mode is 100644 and reproduction uses explicit Python."
     },
     {
       "source_path": "research/verify_target_c_stability_envelope_114.py",
@@ -34277,7 +34278,7 @@
       "public_path": "research/verify_target_c_unequal_height_release_2026_10_10.py",
       "source_commit": "3536c0b6f6c2a929d9c96fffbdcfc480735fea3b",
       "source_blob": "6ef4cb3f5ea7644b467411c09394e3fb6b379532",
-      "source_mode": "100644",
+      "source_mode": "100755",
       "source_sha256": "7e96eaa6884dac9640358065430d426060dddfafca5a087a14ec831d3fb68a42",
       "public_sha256": "7e96eaa6884dac9640358065430d426060dddfafca5a087a14ec831d3fb68a42",
       "role": "unreviewed active proposal",
@@ -34302,7 +34303,8 @@
       "downstream_frontier_obligations": [],
       "navigation_dependencies": [
         "research/verify_target_c_source_realized_owner_sink_2026_10_10.py"
-      ]
+      ],
+      "source_mode_note": "Source is executable; curated public mode is 100644 and reproduction uses explicit Python."
     },
     {
       "source_path": "research/verify_target_c_uneven_wall_packet_audit_2026_10_06.py",
@@ -34765,6 +34767,41 @@
       ]
     },
     {
+      "source_path": "tools/check_active_route_summaries.py",
+      "public_path": "tools/check_active_route_summaries.py",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "c7963a0f63e6debaae14caad2d0fe887d6832f01",
+      "source_mode": "100644",
+      "source_sha256": "168248c40e547b4fa3b933fe70a1eee703097693fb4b02d63d90574e43e076a6",
+      "public_sha256": "168248c40e547b4fa3b933fe70a1eee703097693fb4b02d63d90574e43e076a6",
+      "role": "infrastructure",
+      "theorem_ids": [],
+      "dependencies": [
+        "docs/state/theorem-state.yaml",
+        "docs/STATE.md",
+        "docs/targets/target-c/CURRENT.md",
+        "docs/targets/target-c/README.md",
+        "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md",
+        "README.md"
+      ],
+      "incoming": [
+        {
+          "source": "tools/check_public.py",
+          "kind": "public integrity gate"
+        }
+      ],
+      "inclusion_reason": [
+        "retained operational checker; omitted source provenance repaired after independent byte comparison"
+      ],
+      "review_status": "source bytes and commit/path/mode/blob/hash verified; no mathematical promotion",
+      "publication_clearance": "pending provenance/content review",
+      "attribution": "source attribution retained; see NOTICE",
+      "reproduction_requirements": "Python verification environment as documented",
+      "editorial_change": "byte-identical",
+      "downstream_frontier_obligations": [],
+      "navigation_dependencies": []
+    },
+    {
       "source_path": "tools/check_theorem_state.py",
       "public_path": "tools/check_theorem_state.py",
       "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
@@ -34816,13 +34853,43 @@
       ]
     },
     {
+      "source_path": "tools/check_theorem_state_pr.py",
+      "public_path": "tools/check_theorem_state_pr.py",
+      "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
+      "source_blob": "a788b22adb3fbf61d9b98f646401ff027331eec5",
+      "source_mode": "100644",
+      "source_sha256": "cdc53ecae1e88fa325170b4e5cffcfd31d1c6da63dc55b802fb6649fb4674648",
+      "public_sha256": "cdc53ecae1e88fa325170b4e5cffcfd31d1c6da63dc55b802fb6649fb4674648",
+      "role": "infrastructure",
+      "theorem_ids": [],
+      "dependencies": [
+        "tools/check_theorem_state.py"
+      ],
+      "incoming": [
+        {
+          "source": "tools/check_public.py",
+          "kind": "public integrity gate"
+        }
+      ],
+      "inclusion_reason": [
+        "retained operational checker; omitted source provenance repaired after independent byte comparison"
+      ],
+      "review_status": "source bytes and commit/path/mode/blob/hash verified; no mathematical promotion",
+      "publication_clearance": "pending provenance/content review",
+      "attribution": "source attribution retained; see NOTICE",
+      "reproduction_requirements": "Python verification environment as documented",
+      "editorial_change": "byte-identical",
+      "downstream_frontier_obligations": [],
+      "navigation_dependencies": []
+    },
+    {
       "source_path": "tools/generate_theorem_state_views.py",
       "public_path": "tools/generate_theorem_state_views.py",
       "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
       "source_blob": "89b65d25f9d36fd3b883694837ac9855a19caf55",
       "source_mode": "100644",
       "source_sha256": "464fa3fd3b5180b2703565c113bdd4628112132dde5cd1025106d08184abae19",
-      "public_sha256": "464fa3fd3b5180b2703565c113bdd4628112132dde5cd1025106d08184abae19",
+      "public_sha256": "061fa5af68182a1e4d86c3e574cf4987c61c874399976a9a474f6ca289c62231",
       "role": "infrastructure",
       "theorem_ids": [],
       "dependencies": [],
@@ -34844,7 +34911,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": [
         "docs/STATE.md",
@@ -35031,102 +35098,102 @@
       "rights": "bibliographic link; bundled/derived copy excluded"
     },
     "papers/related/erdos-1995-favourite-problems.pdf": {
-      "citation": "Paul Erdős, “Some of my Favourite Problems in Number Theory, Combinatorics, and Geometry,” *Resenhas IME-USP* 2(2) (1995), 165–186.",
+      "citation": "Paul Erd\u0151s, \u201cSome of my Favourite Problems in Number Theory, Combinatorics, and Geometry,\u201d *Resenhas IME-USP* 2(2) (1995), 165\u2013186.",
       "url": "https://revistas.usp.br/resenhasimeusp/en/article/view/74798",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/daroczy-kiss-2005-minimal-diameter-nine-disks.pdf": {
-      "citation": "E. Daróczy-Kiss, “A New Bound for the Minimal Diameter of Nine Coplanar Congruent Disks,” *Annales Univ. Sci. Budapest., Sect. Comp.* 25 (2005), 25–35.",
+      "citation": "E. Dar\u00f3czy-Kiss, \u201cA New Bound for the Minimal Diameter of Nine Coplanar Congruent Disks,\u201d *Annales Univ. Sci. Budapest., Sect. Comp.* 25 (2005), 25\u201335.",
       "url": "https://ac.inf.elte.hu/Vol_025_2005/doi/025_25.pdf",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/kaminski-medvedev-milanic-2008-plane-width.pdf": {
-      "citation": "M. Kamiński, P. Medvedev, and M. Milanič, “The Plane-Width of Graphs,”",
+      "citation": "M. Kami\u0144ski, P. Medvedev, and M. Milani\u010d, \u201cThe Plane-Width of Graphs,\u201d",
       "url": "https://arxiv.org/abs/0812.4346",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/oler-1961-finite-packing-problem.pdf": {
-      "citation": "Norman Oler, “A Finite Packing Problem,” *Canadian Mathematical Bulletin* 4 (1961), 153–155.",
+      "citation": "Norman Oler, \u201cA Finite Packing Problem,\u201d *Canadian Mathematical Bulletin* 4 (1961), 153\u2013155.",
       "url": "https://geodesic.mathdoc.fr/articles/10.4153/CMB-1961-018-7/",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/folkman-graham-1969-packing-inequality.pdf": {
-      "citation": "J. H. Folkman and R. L. Graham, “A Packing Inequality for Compact Convex Subsets of the Plane,” *Canadian Mathematical Bulletin* 12 (1969), 745–752.",
+      "citation": "J. H. Folkman and R. L. Graham, \u201cA Packing Inequality for Compact Convex Subsets of the Plane,\u201d *Canadian Mathematical Bulletin* 12 (1969), 745\u2013752.",
       "url": "https://geodesic.mathdoc.fr/articles/10.4153/CMB-1969-096-7/",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/graham-witsenhausen-zassenhaus-1972-tightest-packings-minkowski.pdf": {
-      "citation": "R. L. Graham, H. S. Witsenhausen, and H. J. Zassenhaus, “On Tightest Packings in the Minkowski Plane,” *Pacific Journal of Mathematics* 41 (1972), 699–715.",
+      "citation": "R. L. Graham, H. S. Witsenhausen, and H. J. Zassenhaus, \u201cOn Tightest Packings in the Minkowski Plane,\u201d *Pacific Journal of Mathematics* 41 (1972), 699\u2013715.",
       "url": "https://msp.org/pjm/1972/41-3/pjm-v41-n3-p10-s.pdf",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/oler-1961-inequality-geometry-of-numbers.pdf": {
-      "citation": "N. Oler, “An Inequality in the Geometry of Numbers,” *Acta Mathematica* 105 (1961), 19–48.",
+      "citation": "N. Oler, \u201cAn Inequality in the Geometry of Numbers,\u201d *Acta Mathematica* 105 (1961), 19\u201348.",
       "url": "https://doi.org/10.1007/BF02559533",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/vincze-1950-geometrical-extremum-problem.pdf": {
-      "citation": "Stephen Vincze, “On a Geometrical Extremum Problem,” *Acta Scientiarum Mathematicarum (Szeged)* 12A (1950), 136–142.",
+      "citation": "Stephen Vincze, \u201cOn a Geometrical Extremum Problem,\u201d *Acta Scientiarum Mathematicarum (Szeged)* 12A (1950), 136\u2013142.",
       "url": "https://acta.bibl.u-szeged.hu/13598/",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/boroczky-schnell-1998-asymptotic-shape-finite-packings.pdf": {
-      "citation": "Károly Böröczky Jr. and Uwe Schnell, “Asymptotic Shape of Finite Packings,” *Canadian Journal of Mathematics* 50 (1998), 16–28.",
+      "citation": "K\u00e1roly B\u00f6r\u00f6czky Jr. and Uwe Schnell, \u201cAsymptotic Shape of Finite Packings,\u201d *Canadian Journal of Mathematics* 50 (1998), 16\u201328.",
       "url": "https://geodesic.mathdoc.fr/articles/10.4153/CJM-1998-002-5/",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/wegner-1986-finite-circle-packings.pdf": {
-      "citation": "Gerd Wegner, “Über endliche Kreispackungen in der Ebene,” *Studia Scientiarum Mathematicarum Hungarica* 21 (1986), 1–28.",
+      "citation": "Gerd Wegner, \u201c\u00dcber endliche Kreispackungen in der Ebene,\u201d *Studia Scientiarum Mathematicarum Hungarica* 21 (1986), 1\u201328.",
       "url": "https://real-j.mtak.hu/5463/1/StudScientMath_21.pdf",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/boroczky-ruzsa-2007-wegner-inequality.pdf": {
-      "citation": "Károly J. Böröczky and Imre Z. Ruzsa, “Note on an Inequality of Wegner,” *Discrete & Computational Geometry* 37 (2007), 245–249.",
+      "citation": "K\u00e1roly J. B\u00f6r\u00f6czky and Imre Z. Ruzsa, \u201cNote on an Inequality of Wegner,\u201d *Discrete & Computational Geometry* 37 (2007), 245\u2013249.",
       "url": "https://dblp.org/rec/journals/dcg/BoroczkyR07",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/schurmann-2000-parametric-density-finite-circle-packings.pdf": {
-      "citation": "Achill Schürmann, “On Parametric Density of Finite Circle Packings,” *Beiträge zur Algebra und Geometrie* 41 (2000), 329–334.",
+      "citation": "Achill Sch\u00fcrmann, \u201cOn Parametric Density of Finite Circle Packings,\u201d *Beitr\u00e4ge zur Algebra und Geometrie* 41 (2000), 329\u2013334.",
       "url": "https://www.maths.tcd.ie/EMIS/journals/BAG/vol.41/no.2/3.html",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/erdenebaatar-ninjbat-2021-smallest-convex-k-gon.pdf": {
-      "citation": "Orgil-Erdene Erdenebaatar and Uuganbaatar Ninjbat, “The Smallest Convex `k`-gon Containing `n` Congruent Disks,” *Elemente der Mathematik* 77 (2022), 122–137.",
+      "citation": "Orgil-Erdene Erdenebaatar and Uuganbaatar Ninjbat, \u201cThe Smallest Convex `k`-gon Containing `n` Congruent Disks,\u201d *Elemente der Mathematik* 77 (2022), 122\u2013137.",
       "url": "https://ems.press/journals/em/articles/1121827",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/fejes-toth-kuperberg-kuperberg-1998-highly-saturated-packings.pdf": {
-      "citation": "Gábor Fejes Tóth, Greg Kuperberg, and Włodzimierz Kuperberg, “Highly Saturated Packings and Reduced Coverings,” *Monatshefte für Mathematik* 125 (1998), 127–145.",
+      "citation": "G\u00e1bor Fejes T\u00f3th, Greg Kuperberg, and W\u0142odzimierz Kuperberg, \u201cHighly Saturated Packings and Reduced Coverings,\u201d *Monatshefte f\u00fcr Mathematik* 125 (1998), 127\u2013145.",
       "url": "https://arxiv.org/abs/math/9511225",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/kuperberg-kuperberg-kuperberg-2004-gap-defects.pdf": {
-      "citation": "Greg Kuperberg, Krystyna Kuperberg, and Włodzimierz Kuperberg, “Lattice Packings with Gap Defects Are Not Completely Saturated,” *Beiträge zur Algebra und Geometrie* 45 (2004), 267–273.",
+      "citation": "Greg Kuperberg, Krystyna Kuperberg, and W\u0142odzimierz Kuperberg, \u201cLattice Packings with Gap Defects Are Not Completely Saturated,\u201d *Beitr\u00e4ge zur Algebra und Geometrie* 45 (2004), 267\u2013273.",
       "url": "https://arxiv.org/abs/math/0303366",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/bondarenko-hardin-saff-2012-mesh-ratios.pdf": {
-      "citation": "A. V. Bondarenko, D. P. Hardin, and E. B. Saff, “Mesh Ratios for Best-Packing and Limits of Minimal Energy Configurations,”",
+      "citation": "A. V. Bondarenko, D. P. Hardin, and E. B. Saff, \u201cMesh Ratios for Best-Packing and Limits of Minimal Energy Configurations,\u201d",
       "url": "https://arxiv.org/abs/1212.6211",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/gensane-2009-generation-optimal-packings.pdf": {
-      "citation": "Thierry Gensane, “Generation of Optimal Packings from Optimal Packings,” *Electronic Journal of Combinatorics* 16(1) (2009), R24.",
+      "citation": "Thierry Gensane, \u201cGeneration of Optimal Packings from Optimal Packings,\u201d *Electronic Journal of Combinatorics* 16(1) (2009), R24.",
       "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v16i1r24",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/graham-lubachevsky-1995-dense-equilateral-triangle-packings.pdf": {
-      "citation": "R. L. Graham and B. D. Lubachevsky, “Dense Packings of Equal Disks in an Equilateral Triangle: From 22 to 34 and Beyond,” *Electronic Journal of Combinatorics* 2(1) (1995), A1.",
+      "citation": "R. L. Graham and B. D. Lubachevsky, \u201cDense Packings of Equal Disks in an Equilateral Triangle: From 22 to 34 and Beyond,\u201d *Electronic Journal of Combinatorics* 2(1) (1995), A1.",
       "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v2i1a1",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/henk-wills-2021-packings-sausages-catastrophes.pdf": {
-      "citation": "Martin Henk and Jörg M. Wills, “Packings, Sausages and Catastrophes,” *Beiträge zur Algebra und Geometrie* 62 (2021), 265–280.",
+      "citation": "Martin Henk and J\u00f6rg M. Wills, \u201cPackings, Sausages and Catastrophes,\u201d *Beitr\u00e4ge zur Algebra und Geometrie* 62 (2021), 265\u2013280.",
       "url": "https://link.springer.com/article/10.1007/s13366-020-00502-x",
       "rights": "external bibliographic link only; no redistribution authorization"
     },
     "papers/related/boroczky-ruzsa-2007-note-on-wegner.pdf": {
-      "citation": "Károly J. Böröczky and Imre Z. Ruzsa, “Note on an Inequality of Wegner,” *Discrete & Computational Geometry* 37 (2007), 245–249.",
+      "citation": "K\u00e1roly J. B\u00f6r\u00f6czky and Imre Z. Ruzsa, \u201cNote on an Inequality of Wegner,\u201d *Discrete & Computational Geometry* 37 (2007), 245\u2013249.",
       "url": "https://dblp.org/rec/journals/dcg/BoroczkyR07",
       "rights": "external bibliographic link only; no redistribution authorization"
     }
@@ -35263,5 +35330,11 @@
     ],
     "selection_rationale": "PR #1005 preserved two useful, independently reproducible whole-source formal/obstruction reports; the historical run diary, administrative reconciliation record, and CI-only artifacts are not mathematical frontier inclusions.",
     "status": "noncanonical; rights review remains pending"
+  },
+  "scientific_freeze": {
+    "source_main": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+    "publication_state": "2026-10-15.publication.1",
+    "reconciliation": "docs/publication/scientific-reconciliation.json",
+    "scope": "Four post-baseline sources retained; all 30 changed source paths and 20 open proposals explicitly disposed. Audit202 unsupported intermediates withdrawn; corrected sequence proof audited-working only. Two already retained byte-identical operational checkers gain previously omitted source records."
   }
 }

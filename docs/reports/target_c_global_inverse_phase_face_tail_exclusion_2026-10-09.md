@@ -9,6 +9,13 @@ Sections 12.4--14 use the same mathematical inputs after comparing and importing
 Classification: **proved candidate awaiting independent audit and promotion**.
 Artifact lifecycle: **unreviewed**. No canonical state is changed.
 
+Publication reading note: only exact separately audited sections inherit their
+manifest scopes. Audit.202's later global Lipschitz chart and `O(D^(4/5))`
+inference from a vanishing face tail are withdrawn; use the
+[Audit.236 sequence proof](../audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md)
+for the audited-working exclusion. The fixed-face-cutoff rate in Section 6 below
+has stronger hypotheses and is not the withdrawn variable-tail inference.
+
 ## 1. Implication to the endpoint
 
 ```text

@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 from typing import Any, Iterable
@@ -17,6 +18,7 @@ STATE_BEGIN = "<!-- BEGIN GENERATED: theorem-state-snapshot -->"
 STATE_END = "<!-- END GENERATED: theorem-state-snapshot -->"
 C_BEGIN = "<!-- BEGIN GENERATED: target-c-ledger -->"
 C_END = "<!-- END GENERATED: target-c-ledger -->"
+PUBLIC_PROOF_GRAPH = "docs/publication/proof-graph.json"
 BUCKETS = ("current_canonical_entries", "audited_working", "regressions", "rejected_or_overridden")
 
 
@@ -157,6 +159,29 @@ def replace_or_insert(text: str, begin: str, end: str, block: str) -> str:
     return "".join(lines[:insert_at]) + "\n" + block + "\n\n" + "".join(lines[insert_at:])
 
 
+def publication_proof_graph(root: Path, state: dict[str, Any]) -> str:
+    """Keep the public machine view aligned with claim lifecycle and file edges."""
+    inclusion = json.loads((root / "docs/publication/inclusion.json").read_text(encoding="utf-8"))
+    claims = []
+    for target, _, claim in entries(state):
+        claims.append({
+            "id": claim["id"], "track": target, "status": claim["status"],
+            "formal_statement_source": claim.get("report"),
+            "statement": claim.get("conclusion", claim.get("reason", "Read exact source statement")),
+            "assumptions": claim.get("scope", "Exact definitions and hypotheses in named proof module"),
+            "immediate_theorem_prerequisites": claim.get("depends_on", []),
+            "proof": claim.get("report"), "independent_audit": claim.get("audit"),
+            "certificates": claim.get("certificates", []),
+            "review_identity": "inherited internal audit unless explicitly recorded otherwise; no human review inferred",
+            "limitations": claim.get("scope", claim.get("reason", "No scope beyond the exact proved statement")),
+        })
+    file_edges = sorted({(row["public_path"], dependency)
+                         for row in inclusion["entries"]
+                         for dependency in row.get("dependencies", [])})
+    return json.dumps({"state_version": state["state_version"], "claims": claims,
+                       "file_edges": file_edges}, indent=2) + "\n"
+
+
 def expected_files(root: Path, state: dict[str, Any]) -> dict[str, str]:
     status_path = state["generated_views"]["status_summary"]
     graph_path = state["generated_views"]["theorem_graph"]
@@ -165,6 +190,7 @@ def expected_files(root: Path, state: dict[str, Any]) -> dict[str, str]:
     return {
         status_path: status_summary(state),
         graph_path: theorem_graph(state),
+        PUBLIC_PROOF_GRAPH: publication_proof_graph(root, state),
         STATE_DOC: replace_or_insert(state_text, STATE_BEGIN, STATE_END, state_block(state)),
         TARGET_C_DOC: replace_or_insert(c_text, C_BEGIN, C_END, target_c_block(state)),
     }

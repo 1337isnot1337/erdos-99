@@ -14,4 +14,11 @@ Run `python tools/check_public.py`, relevant checks and the task's reproduction.
 
 New claims default to unreviewed. Distinguish canonical, audited-working, conditional, exact finite evidence, agent audit, human review, regression, rejected and superseded claims. Consequential promotion requires independent human mathematical review and a same-change update to the manifest, state, route/frontier, dependencies, certificate registrations and generated views. See `docs/REVIEW_POLICY.md`.
 
+For the C-II finite endpoint, a same-cardinality unit-separated strict sub-D
+competitor contradicts global minimality. At diameter D the endpoint must remain
+triangle-free and strictly improve the lexicographic pair (unit contacts, actual
+diameter pairs). Contact loss with a new unit triangle is insufficient; unchanged
+contacts with fewer actual diameter pairs is a valid secondary contradiction.
+Check all previously inactive upper pairs to exclude replacement diameter pairs.
+
 Preserve mathematical credit and disclose AI assistance. Contribute only material you can license under Apache-2.0; cite external papers rather than copying PDFs or substantial text. Never use an unstated private repository dependency. The published corpus and task prerequisites must stand alone.

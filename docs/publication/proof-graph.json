@@ -1,5 +1,5 @@
 {
-  "state_version": "2026-10-10.audit.234",
+  "state_version": "2026-10-15.publication.1",
   "claims": [
     {
       "id": "TB-DENSE-GRID",
@@ -6166,25 +6166,6 @@
       "limitations": "unbounded canonical post-ZF Target C-II Type-II sequences in the contact-minimal then actual-diameter-pair-minimal triangle-free global-source normal form, D tending to infinity; one nonempty unloaded positive-contact component I and its distinct actual loaded attachments; all contact-isolated source points remain in the full source"
     },
     {
-      "id": "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION",
-      "track": "target-c",
-      "status": "canonical",
-      "formal_statement_source": "docs/audits/target_c_global_inverse_phase_face_tail_exclusion_independent_audit_2026-10-09.md",
-      "statement": "zero holonomy and the explicit actual-contact route bound integrate the frame to one K'/D-Lipschitz lattice chart on all loaded endpoints; C-SLOW-LATTICE-DIAMETER-ENDPOINT-BOUND then gives q=O(D^(4/5))=o(D), contradicting h>=ceil(D) from C-ZRF and h<=q from C-WOODALL. Thus no unbounded canonical sequence satisfies both premises. No global phase or vanishing-tail extraction, motion, strict-D competitor, C-II closure, or Level-I consequence follows",
-      "assumptions": "unbounded canonical post-ZF C-II sequences in the contact-minimal then actual-diameter-pair-minimal triangle-free normal form; full source retained including all contact isolates; all actual contacts covered by one D-dependent unit triangular inverse-phase frame with fixed K/D error; tail T_M of actual hull-augmented contact-face path lengths satisfies lim_M limsup_D T_M/D=0",
-      "immediate_theorem_prerequisites": [
-        "C-RHOMBUS-POP",
-        "C-SLOW-LATTICE-DIAMETER-ENDPOINT-BOUND",
-        "C-ZRF",
-        "C-WOODALL"
-      ],
-      "proof": "docs/audits/target_c_global_inverse_phase_face_tail_exclusion_independent_audit_2026-10-09.md",
-      "independent_audit": "docs/audits/target_c_global_inverse_phase_face_tail_exclusion_independent_audit_2026-10-09.md",
-      "certificates": [],
-      "review_identity": "inherited internal audit unless explicitly recorded otherwise; no human review inferred",
-      "limitations": "unbounded canonical post-ZF C-II sequences in the contact-minimal then actual-diameter-pair-minimal triangle-free normal form; full source retained including all contact isolates; all actual contacts covered by one D-dependent unit triangular inverse-phase frame with fixed K/D error; tail T_M of actual hull-augmented contact-face path lengths satisfies lim_M limsup_D T_M/D=0"
-    },
-    {
       "id": "C-ALL-BRANCH-HULL-TRAIN-DEPLETION",
       "track": "target-c",
       "status": "canonical",
@@ -6485,6 +6466,25 @@
       "certificates": [],
       "review_identity": "inherited internal audit unless explicitly recorded otherwise; no human review inferred",
       "limitations": "every unbounded canonical post-ZF C-II sequence in either exhaustive global branch with D tending to infinity, all source points retained, and stopped trains including singleton contacts"
+    },
+    {
+      "id": "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION",
+      "track": "target-c",
+      "status": "audited-working",
+      "formal_statement_source": "docs/audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md",
+      "statement": "the repaired diagonal-cutoff and radius-D^(3/4) patch argument gives q=o(D), contradicting h>=ceil(D) and h<=q under both global premises; this sequence-only exclusion is agent-audited working mathematics, awaiting independent human review before canonical reuse. The earlier global K'/D-Lipschitz chart and q=O(D^(4/5)) claims are withdrawn; no global phase/tail extraction, finite motion, strict-D competitor, C-II closure, or Level-I consequence follows",
+      "assumptions": "unbounded canonical post-ZF C-II sequences in the contact-minimal then actual-diameter-pair-minimal triangle-free normal form; full source retained including all contact isolates; all actual contacts covered by one D-dependent unit triangular inverse-phase frame with fixed K/D error; tail T_M of actual hull-augmented contact-face path lengths satisfies lim_M limsup_D T_M/D=0",
+      "immediate_theorem_prerequisites": [
+        "C-RHOMBUS-POP",
+        "C-CURVED-BOUNDARY-LATTICE-LOCAL-CAPACITY",
+        "C-ZRF",
+        "C-WOODALL"
+      ],
+      "proof": "docs/audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md",
+      "independent_audit": "docs/audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md",
+      "certificates": [],
+      "review_identity": "inherited internal audit unless explicitly recorded otherwise; no human review inferred",
+      "limitations": "unbounded canonical post-ZF C-II sequences in the contact-minimal then actual-diameter-pair-minimal triangle-free normal form; full source retained including all contact isolates; all actual contacts covered by one D-dependent unit triangular inverse-phase frame with fixed K/D error; tail T_M of actual hull-augmented contact-face path lengths satisfies lim_M limsup_D T_M/D=0"
     },
     {
       "id": "C-TYPEII-CAP-LOCAL-HARMONIC-GRID",
@@ -8514,8 +8514,16 @@
       "docs/theory/03-oler-shell.md"
     ],
     [
+      "docs/reports/global_joint_stress_strain_phase_mechanism_2026-10-12.md",
+      "research/verify_global_joint_phase_compatibility.py"
+    ],
+    [
       "docs/reports/global_level_i_attainment_and_one_contact_2026-10-11.md",
       "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md"
+    ],
+    [
+      "docs/reports/global_separable_distortion_obstruction_2026-10-12.md",
+      "research/verify_global_separable_distortion_obstruction.py"
     ],
     [
       "docs/reports/integrator_ambient_force_geometry_2026-09-09.md",
@@ -10938,6 +10946,30 @@
       "scripts/research_coordination.py"
     ],
     [
+      "tools/check_active_route_summaries.py",
+      "README.md"
+    ],
+    [
+      "tools/check_active_route_summaries.py",
+      "docs/STATE.md"
+    ],
+    [
+      "tools/check_active_route_summaries.py",
+      "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md"
+    ],
+    [
+      "tools/check_active_route_summaries.py",
+      "docs/state/theorem-state.yaml"
+    ],
+    [
+      "tools/check_active_route_summaries.py",
+      "docs/targets/target-c/CURRENT.md"
+    ],
+    [
+      "tools/check_active_route_summaries.py",
+      "docs/targets/target-c/README.md"
+    ],
+    [
       "tools/check_theorem_state.py",
       "tools/build_artifact_index.py"
     ],
@@ -10948,6 +10980,10 @@
     [
       "tools/check_theorem_state.py",
       "tools/run_theorem_certificates.py"
+    ],
+    [
+      "tools/check_theorem_state_pr.py",
+      "tools/check_theorem_state.py"
     ]
   ]
 }

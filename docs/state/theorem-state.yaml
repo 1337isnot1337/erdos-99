@@ -1,5 +1,5 @@
-state_version: "2026-10-10.audit.234"
-state_date: "2026-10-10"
+state_version: "2026-10-15.publication.1"
+state_date: "2026-10-15"
 cleanup_baseline: "34085ac264eb5241985de7b453bf7d612a25fa4d"
 level_i_status: open
 
@@ -4608,32 +4608,6 @@ targets:
         depends_on:
           - "C-UNIFORM-HARMONIC-CELL-AREA"
           - "C-TYPEII-FACE-TAIL-PORT-MULTIPLICITY"
-      - id: "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION"
-        report: "docs/audits/target_c_global_inverse_phase_face_tail_exclusion_independent_audit_2026-10-09.md"
-        audit: "docs/audits/target_c_global_inverse_phase_face_tail_exclusion_independent_audit_2026-10-09.md"
-        status: canonical
-        promotion_origin: "2026-10-09 independent audit.202"
-        scope: >-
-          unbounded canonical post-ZF C-II sequences in the contact-minimal then
-          actual-diameter-pair-minimal triangle-free normal form; full source retained
-          including all contact isolates; all actual contacts covered by one D-dependent unit
-          triangular inverse-phase frame with fixed K/D error; tail T_M of actual
-          hull-augmented contact-face path lengths satisfies
-          lim_M limsup_D T_M/D=0
-        conclusion: >-
-          zero holonomy and the explicit actual-contact route bound integrate the
-          frame to one K'/D-Lipschitz lattice chart on all loaded endpoints;
-          C-SLOW-LATTICE-DIAMETER-ENDPOINT-BOUND then gives q=O(D^(4/5))=o(D),
-          contradicting h>=ceil(D) from C-ZRF and h<=q from C-WOODALL. Thus no
-          unbounded canonical sequence satisfies both premises. No global phase or
-          vanishing-tail extraction, motion, strict-D competitor, C-II closure, or
-          Level-I consequence follows
-        certificates: []
-        depends_on:
-          - "C-RHOMBUS-POP"
-          - "C-SLOW-LATTICE-DIAMETER-ENDPOINT-BOUND"
-          - "C-ZRF"
-          - "C-WOODALL"
       - id: "C-ALL-BRANCH-HULL-TRAIN-DEPLETION"
         report: "docs/audits/target_c_all_branch_hull_train_depletion_independent_audit_2026-10-09.md"
         audit: "docs/audits/target_c_midpoint_and_quantitative_hull_train_independent_audit_2026-10-09.md"
@@ -4987,6 +4961,36 @@ targets:
           - "C-RHOMBUS-POP"
           - "C-PUNCTURED-PHASE"
     audited_working:
+      - id: "C-GLOBAL-INVERSE-PHASE-FACE-TAIL-EXCLUSION"
+        report: "docs/audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md"
+        audit: "docs/audits/target_c_global_inverse_phase_face_tail_second_referee_2026-10-10.md"
+        status: audited-working
+        promotion_origin: "Audit.202 canonical proof withdrawn; publication agent audit of Audit.236, 2026-10-15"
+        scope: >-
+          unbounded canonical post-ZF C-II sequences in the contact-minimal then
+          actual-diameter-pair-minimal triangle-free normal form; full source retained
+          including all contact isolates; all actual contacts covered by one D-dependent unit
+          triangular inverse-phase frame with fixed K/D error; tail T_M of actual
+          hull-augmented contact-face path lengths satisfies
+          lim_M limsup_D T_M/D=0
+        conclusion: >-
+          the repaired diagonal-cutoff and radius-D^(3/4) patch argument gives
+          q=o(D), contradicting h>=ceil(D) and h<=q under both global premises;
+          this sequence-only exclusion is agent-audited working mathematics,
+          awaiting independent human review before canonical reuse. The earlier
+          global K'/D-Lipschitz chart and q=O(D^(4/5)) claims are withdrawn;
+          no global phase/tail extraction, finite motion, strict-D competitor,
+          C-II closure, or Level-I consequence follows
+        note: >-
+          Audit.202's actual-contact routing bound contains additive 2K*T_M(D)/D
+          error, which cannot be absorbed into K'|p-q|/D for nearby endpoints.
+          No declared theorem depends on this ID at the frozen publication base.
+        certificates: []
+        depends_on:
+          - "C-RHOMBUS-POP"
+          - "C-CURVED-BOUNDARY-LATTICE-LOCAL-CAPACITY"
+          - "C-ZRF"
+          - "C-WOODALL"
       - id: "C-TYPEII-CAP-LOCAL-HARMONIC-GRID"
         report: "docs/audits/target_c_cap_local_harmonic_grid_independent_audit_2026-10-08.md"
         audit: "docs/audits/target_c_cap_local_harmonic_grid_independent_audit_2026-10-08.md"

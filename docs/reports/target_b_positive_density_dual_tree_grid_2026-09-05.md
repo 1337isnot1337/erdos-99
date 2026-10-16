@@ -185,7 +185,7 @@ The companion theorem PC1 removes the old requirement that all trains outside th
 
 `R >= |A'||B'| + depth*(uncancelled grid diagonal excess)`.
 
-Thus the current bottleneck is quantitative rather than qualitative: determine whether the PDG grid dimensions forced by the Section-50/GPS1 component bounds are already large enough for PC1 to exceed the global rhombus budget `Delta_2 D^2`, or whether several grids must be charged simultaneously.
+Thus the current bottleneck is quantitative rather than qualitative: determine whether the PDG grid dimensions forced by the retained Section-50 component bounds are already large enough for PC1 to exceed the global rhombus budget `Delta_2 D^2`, or whether several grids must be charged simultaneously. Historical GPS1 material is excluded from this corpus and is not used as an additional premise of PDG.
 
 ## 8. Why this does not yet close Target B
 

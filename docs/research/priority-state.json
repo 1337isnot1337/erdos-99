@@ -1,7 +1,7 @@
 {
-  "priority_revision": "public-frontier.2",
-  "catalogue_revision": "public-frontier.2",
-  "state_version": "2026-10-10.audit.234",
+  "priority_revision": "public-frontier.3",
+  "catalogue_revision": "public-frontier.3",
+  "state_version": "2026-10-15.publication.1",
   "source_commit": "5dcbdc3dfa1f9be370602cc54d50e68eabb88f56",
   "weights": [
     {
