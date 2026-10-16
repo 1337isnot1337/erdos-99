@@ -1,0 +1,92 @@
+{
+  "record_type": "focused-cross-shard-support-import-receipt",
+  "status": "focused_import_complete_not_final_release_verification",
+  "source_main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "source_main_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+  "destination_precoordinator_merge_commit": "0ac22c4709f00afdbc5a84d0eb30810e953d2305",
+  "scope": "Restore missing first-party report/verifier dependencies for the frozen Target C corpus; retain the historical campaign-ledger exclusion through a release-safe link correction.",
+  "imports": [
+    {
+      "source_path": "research/verify_target_c_star_ray_staircase_2026_10_01.py",
+      "destination_path": "research/verify_target_c_star_ray_staircase_2026_10_01.py",
+      "source_git_blob_sha1": "894e1c8f0bcc50f40aa414d31868b9a25e135df2",
+      "source_sha256": "dde704701069cadb12c770002614007dd4588be9c67108c59b8f36fff40bba87",
+      "destination_sha256": "dde704701069cadb12c770002614007dd4588be9c67108c59b8f36fff40bba87",
+      "source_mode": "100644",
+      "destination_mode": "100644",
+      "identity": "byte-identical"
+    },
+    {
+      "source_path": "research/target_c_open_cell_phase_flux_2026-10-03.md",
+      "destination_path": "research/target_c_open_cell_phase_flux_2026-10-03.md",
+      "source_git_blob_sha1": "82411a0aad446f1f59461b4d45e061a5e9f87404",
+      "source_sha256": "82bcf72417a4e622cc72a2b52f7d4ae30b169a8970343d2a8ed7a9713f21ad1a",
+      "destination_sha256": "82bcf72417a4e622cc72a2b52f7d4ae30b169a8970343d2a8ed7a9713f21ad1a",
+      "source_mode": "100644",
+      "destination_mode": "100644",
+      "identity": "byte-identical"
+    },
+    {
+      "source_path": "research/target_c_dominant_pentagon_through_splicing_2026-09-15.md",
+      "destination_path": "research/target_c_dominant_pentagon_through_splicing_2026-09-15.md",
+      "source_git_blob_sha1": "f19cf184fddc2015d7b20c3d497a8cd4fec2601d",
+      "source_sha256": "b567c562312438782fbde9cc62788fc843eccf331c09c2fbe3a9f31b27603b16",
+      "destination_sha256": "b567c562312438782fbde9cc62788fc843eccf331c09c2fbe3a9f31b27603b16",
+      "source_mode": "100644",
+      "destination_mode": "100644",
+      "identity": "byte-identical"
+    },
+    {
+      "source_path": "research/verify_target_c_dominant_pentagon_through_splicing.py",
+      "destination_path": "research/verify_target_c_dominant_pentagon_through_splicing.py",
+      "source_git_blob_sha1": "49891bb5b6687080ce0e08f2cb52a9153fb21213",
+      "source_sha256": "41e8a654c5b7db0452087f578ed0aafba93216200feea74bd73dae88cc4f78c9",
+      "destination_sha256": "41e8a654c5b7db0452087f578ed0aafba93216200feea74bd73dae88cc4f78c9",
+      "source_mode": "100644",
+      "destination_mode": "100644",
+      "identity": "byte-identical"
+    }
+  ],
+  "report_link_transformation": {
+    "path": "docs/reports/target_c_nearchain_interior_and_vertex_defects_2026-09-09.md",
+    "before_sha256": "7278e3b72ad7613fcd671a2db788501713f1144c508fe3452724a7599e0b1de5",
+    "current_sha256": "48fda9ae747025b1bb96489d826d1d46739db121ad9d2c9d1fa7d030d037cf73",
+    "details": "Replaced the link to the excluded historical branch/status ledger with the current Target C frontier, scientific reconciliation and dedicated force-bulk audit. The underlying campaign ledger remains excluded; no omitted source text was copied."
+  },
+  "checks": [
+    {
+      "command": "python3 research/verify_target_c_star_ray_staircase_2026_10_01.py",
+      "result": "PASS",
+      "scope": "finite source, graph, axial-resultant and release regressions only"
+    },
+    {
+      "command": "python3 research/verify_target_c_dominant_pentagon_through_splicing.py",
+      "result": "PASS",
+      "scope": "six exact closure patterns and displayed Decimal calculations only"
+    },
+    {
+      "command": "python3 tools/check_theorem_state.py",
+      "result": "PASS",
+      "output": "theorem-state: OK"
+    },
+    {
+      "command": "python3 tools/build_artifact_index.py --write --write-headers",
+      "result": "PASS",
+      "output": "artifact-index: wrote 1391 records; updated 0 metadata headers"
+    },
+    {
+      "command": "python3 tools/check_public.py",
+      "result": "PASS",
+      "output": "zero public integrity/link errors; certificates 94, claims 451, edges 845, retained source files 810, tasks 23; mathematical_proof=false",
+      "scope": "updated coordinator integration worktree, after Target C frontier and migration navigation changes"
+    },
+    {
+      "command": "python3 tools/verify_frozen_target_c_813_migration.py --source-repo <frozen-source-clone> --destination <destination-checkout>",
+      "result": "PASS",
+      "output": "813/813 frozen paths, source blob and SHA identities, destination content/modes, pre-coordinator identities, rights rows, and worker references; 4 cross-shard support files; no errors",
+      "scope": "frozen 2026-10-16 source and assignment baseline; this is an integrity/provenance check, not mathematical proof audit or Gate 2",
+      "execution_environment": "Executed against isolated local clones; local filesystem paths are intentionally omitted from this repository receipt."
+    }
+  ],
+  "authority_note": "Focused coordinator checks cover content identity, transformation evidence, provenance, lifecycle, links, and finite verifier outputs. They do not audit the analytic claims or constitute Gate 2. Destination theorem-state remains authoritative; C-II and Level I remain open."
+}

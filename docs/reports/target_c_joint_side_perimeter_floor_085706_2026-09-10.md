@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-209A4321A2B8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_joint_side_perimeter_floor_085706_2026-09-10.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=6e3f48bbc5d7674158899a80a9a40cafc434accd; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
 

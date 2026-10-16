@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-20E8B3C5C18D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_gap_bundle_geometry_regression_2026-10-01.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=d43e02c466413b4bfe243cf03b2cd62731381cce; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
 

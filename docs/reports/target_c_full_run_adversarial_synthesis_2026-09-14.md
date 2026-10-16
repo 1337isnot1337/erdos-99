@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-E645A7A5FA8D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_full_run_adversarial_synthesis_2026-09-14.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=ed75d93619e1ca5c25d7d5ec97976075c0c0e6c9; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
 

@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-B2BA15925A69","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_near_isodiametric_force_hull_stability_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=0ee925f9c8f3e771ed73c597410340dc8971b4a4; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
 

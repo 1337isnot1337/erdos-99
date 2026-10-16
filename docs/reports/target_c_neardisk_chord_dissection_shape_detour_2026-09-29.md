@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-68135CFE7C0C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_neardisk_chord_dissection_shape_detour_2026-09-29.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=aa17984fda7e8a1fc5accf8744f0976fa68c98fb; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
 

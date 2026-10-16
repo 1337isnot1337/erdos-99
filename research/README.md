@@ -238,3 +238,51 @@ finite checks with the commands in the
 The [per-file migration ledger](../docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl)
 records exact frozen identities, transformations, duplicates and the excluded
 operational recovery file.
+
+## Frozen source-main Target C backfill: exact support checks
+
+These reports and tools are retained as first-party, noncanonical research from frozen source main `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. Run from the repository root:
+
+- `PYTHONPATH=research python3 research/verify_aligned_swap_horn_obstructions.py` — finite joint-only, axial-bracket, and strict-competitor regressions.
+- `python3 research/verify_antipode_transition.py` — exact finite support, transition, and direction examples.
+- `python3 research/verify_diameter_star_contiguity.py` — finite direction-contiguity audits; the all-configuration theorem is in its linked report.
+- `python3 research/verify_target_c_antitone_interval_scc_2026_10_03.py` — finite complete antitone relations through seven vertices and exact parallel-contact releases.
+- `python3 research/verify_target_c_two_halfdisk_scalar_regression.py` — exact historical scalar witness, not the full current core system.
+- `python3 research/verify_target_c_central_face_two_geodesic_corridor.py` — exact all-pairs contact graph for the stated finite corridor sizes.
+- `python3 research/verify_convex_shared_witness_outer_occurrences.py` — exact small source path and fixed-anchor contraction regression.
+- `python3 research/verify_target_c_collinear_punctures_2026_10_02.py` — exact finite stress, rigidity, seam, crossing, and competitor checks.
+
+A passing script supports only the finite checks it performs. Analytic claims remain unreviewed unless theorem-state explicitly says otherwise; none of these commands establishes global-minimizer extraction, a same-cardinality strict-diameter endpoint, C-II closure, or Level I closure. Provenance, exact hashes, rights accounting, and full proof obligations are in the [migration ledger](../docs/research/migration/2026-10-16/README.md) and [candidate registry](../docs/targets/target-c/candidate-registry.json).
+
+## Cyclic q=13 S1 shell regression
+
+Reproduce the finite q=13 shell construction and its independent numerical KKT-segment endpoint check from the repository root:
+
+- `python3 research/target_c_s1_q13_shell_regression.py`
+- `PYTHONPATH=research python3 research/verify_s1_q13_kkt_endpoints.py`
+
+These scripts are exact-source duplicates already present in the destination baseline. The checks construct a strict S1 shell with 13 contacts, 12 diameter pairs, positive full-support equilibrium stress, and rank-10 scalar stress matrix; the endpoint check also finds two PSD KKT-segment endpoints. This refutes the shell-only contradiction implication. It is finite numerical regression evidence, not interval certification of global optimality and not a counterexample to Erdős #99. See the [full report](../docs/reports/target_c_cyclic_s1_q13_shell_regression_2026-09-10.md) and the [cyclic/Reinhardt research track](../docs/research/tracks/target-c-cyclic-reinhardt-corpus-2026-10-16.md).
+
+## Additional frozen source-main Target C dependencies
+
+The star-ray exact-phase and through-splicing checks were imported from frozen
+source main `42f0296d1aca068c809f74cee5dcdb4ebdb27c73` because reports and audits
+depend on these first-party support files. Reproduce them from the repository
+root:
+
+- `python3 research/verify_target_c_star_ray_staircase_2026_10_01.py` checks
+  finite source pairs, axial resultants, small antitone graphs, release barriers,
+  and grid regressions. It does not encode full source KKT, complete actual
+  train cuts, or global optimality.
+- `python3 research/verify_target_c_dominant_pentagon_through_splicing.py`
+  checks the six exact closure patterns and the displayed connector and
+  numerical calculations. It does not certify the geometric extraction or a
+  globally optimal source.
+
+The [open-cell phase-flux report](target_c_open_cell_phase_flux_2026-10-03.md)
+is an analytic proof-only note and has no computation. The [through-splicing
+report](target_c_dominant_pentagon_through_splicing_2026-09-15.md) and its
+source audit remain unreviewed in destination theorem-state despite the source
+audit's proof-scope PASS. The [unified frozen-corpus frontier](../docs/research/tracks/target-c-frozen-813-source-main-corpus-2026-10-16.md)
+and [813-path disposition ledger](../docs/research/migration/2026-10-16/frozen-target-c-813-dispositions.jsonl)
+record each result's scope, dependencies, status, and remaining implication.

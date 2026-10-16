@@ -1,0 +1,121 @@
+{
+  "record_type": "incremental-migration-verification-receipt",
+  "status": "partial_checkpoint_not_release_verification",
+  "date": "2026-10-16",
+  "frozen_source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "frozen_source_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+  "destination_base_main": "dfac17ac8f3e7d77eef1a1f95713980a0fa0fbda",
+  "destination_base_tree": "d89a2ecfcd3d7e7ace6cd0458210244acd39e7a7",
+  "scope": {
+    "merged_pr": 40,
+    "shard_1_frozen_indexes": [
+      0,
+      162
+    ],
+    "report_rows_checked": 163,
+    "report_rows_source_blob_and_sha256_exact": 163,
+    "additional_first_party_support_files": 9,
+    "imported_support_verifiers_passed": 8,
+    "candidate_registry_entries_added": 8,
+    "canonical_theorem_state_changed": false
+  },
+  "checks": [
+    {
+      "command": "git diff --check",
+      "result": "PASS",
+      "scope": "coordinator integration working tree"
+    },
+    {
+      "command": "python3 tools/check_theorem_state.py",
+      "result": "PASS",
+      "output": "theorem-state: OK"
+    },
+    {
+      "command": "python3 tools/build_artifact_index.py --write --write-headers",
+      "result": "PASS",
+      "output": "artifact-index: wrote 761 records; updated 0 metadata headers"
+    },
+    {
+      "command": "python3 docs/research/migration/2026-10-16/verify_migration_provenance.py --source-repo <frozen-source-clone> --destination <destination-checkout>",
+      "result": "PASS",
+      "scope_counts": {
+        "source_artifact_records": 1446,
+        "public_artifact_hashes_checked": 669,
+        "target_c_artifacts": 1287,
+        "source_file_records": 2917,
+        "public_source_hashes_checked": 260,
+        "linked_dependency_records": 106,
+        "linked_dependency_hashes_checked": 85,
+        "dependency_edges": 400,
+        "unresolved_dependencies": 0
+      },
+      "output_note": "The script reports its historical pinned comparison baseline as 60c2576b4893a7e9001d2c8bfbe5cfb64c1c969f; the live working tree was based on dfac17ac8f3e7d77eef1a1f95713980a0fa0fbda. This is source identity and retained-byte provenance only, not full release verification."
+    },
+    {
+      "command": "python3 tools/check_public.py",
+      "result": "PENDING_CROSS_SHARD_LINKS",
+      "unresolved_links": [
+        "docs/reports/target_c_complete_grid_collar_and_stress_shell... -> frozen Target C index 752 target_c_weak_pivot_axial_pressure...",
+        "docs/reports/target_c_complete_grid_collar_and_stress_shell... -> frozen Target C index 224 target_c_diameter_ball_hull_lattice_discrepancy...",
+        "docs/reports/target_c_complete_grid_collar_and_stress_shell... -> frozen Target C index 710 target_c_threshold_rail_deep_attachment...",
+        "docs/reports/target_c_complete_grid_collar_and_stress_shell... -> frozen Target C index 751 target_c_weak_packet_correction_mass...",
+        "docs/reports/target_c_connected_phase_core_collapse... -> frozen Target C index 537 target_c_phase_component_endpoint_closure..."
+      ]
+    },
+    {
+      "command": "python3 -m json.tool docs/targets/target-c/candidate-registry.json",
+      "result": "PASS"
+    }
+  ],
+  "release_verification": {
+    "gate_2": "NOT_RUN_ON_FINAL_TREE",
+    "hosted_ci": "NOT_CLAIMED",
+    "repository_visibility": "private",
+    "visibility_changed": false,
+    "final_tree_receipt_required": true
+  },
+  "authority_note": "This checkpoint does not establish mathematical acceptance, full 813-path disposition, or release readiness. The theorem-state manifest remains authoritative; imported claims are not promoted.",
+  "verifier_runs": [
+    {
+      "command": "PYTHONPATH=research python3 research/verify_aligned_swap_horn_obstructions.py",
+      "result": "PASS",
+      "scope": "exact finite swap/bracket regressions; no global closure"
+    },
+    {
+      "command": "python3 research/verify_antipode_transition.py",
+      "result": "PASS",
+      "scope": "4017 grid subsets and finite transition regressions; no universal proof inferred"
+    },
+    {
+      "command": "python3 research/verify_diameter_star_contiguity.py",
+      "result": "PASS",
+      "scope": "4017 grid subsets; finite regression audit only"
+    },
+    {
+      "command": "python3 research/verify_target_c_antitone_interval_scc_2026_10_03.py",
+      "result": "PASS",
+      "scope": "487208 labeled relations through n=7 and 30 contact openings; finite corroboration only"
+    },
+    {
+      "command": "python3 research/verify_target_c_two_halfdisk_scalar_regression.py",
+      "result": "PASS",
+      "scope": "exact scalar regression fixture"
+    },
+    {
+      "command": "python3 research/verify_target_c_central_face_two_geodesic_corridor.py",
+      "result": "PASS",
+      "scope": "exact finite contact complexes m=2,3,4,8,16,32; no global optimality"
+    },
+    {
+      "command": "python3 research/verify_convex_shared_witness_outer_occurrences.py",
+      "result": "PASS",
+      "scope": "finite source-pair and local-state regression audit"
+    },
+    {
+      "command": "python3 research/verify_target_c_collinear_punctures_2026_10_02.py",
+      "result": "PASS",
+      "scope": "exact stress, kernel, incidence, cut, and competitor arithmetic fixtures"
+    }
+  ],
+  "execution_environment": "Executed against isolated local clones; private local filesystem paths are intentionally omitted from this repository receipt."
+}

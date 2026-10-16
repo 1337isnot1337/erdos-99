@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-1005F2079C1B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_nearchain_interior_and_vertex_defects_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=698daa3829458359e6a5f49d9d89b1b959a63e65; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
 
@@ -330,8 +331,7 @@ interiority, which must not be suppressed in using Theorem 1.
 
 ## 7. Branch ledger update and exact remaining theorem
 
-The [previous full campaign ledger](campaign_ledger_2026-09-08.md) remains in
-force for A, B, C-I, other C-II phases, and the global-optimality disproof gate.
+The historical [campaign ledger was excluded from the release corpus](../research/migration/2026-10-16/scientific-reconciliation.md) because it is a branch/status record; the current route is tracked in the [Target C frontier](../targets/target-c/CURRENT.md), and its exact force-bulk regression remains in the [dedicated audit](target_c_force_bulk_and_correction_audit_2026-09-08.md).
 This continuation changes only the following conditional branches:
 
 | Branch / hypotheses | Canonical input and target quantity | Attempted closure and status | Regression / next exact attack |

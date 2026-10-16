@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-85E01791693F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_harmonic_cap_endpoint_turning_2026-09-25.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=92eb23cbca3cc4c4820b448c99afca30067b2dfa; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
 

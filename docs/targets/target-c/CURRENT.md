@@ -399,3 +399,41 @@ dependencies, analytic scopes, exact verifiers, and next substitution task are
 in the [iterative-pruning/atomic-gap track](../../research/tracks/target-c-iterative-pruning-atomic-gap.md)
 and [task card](../../../tasks/target-c-branch-aware-atomic-gap.md). C-II and
 Level I remain open.
+## Imported finite routes and binding regressions
+
+These source-main reports are retained as noncanonical research. Their exact claims, source hashes, linked evidence, and next obligations are recorded in the migration ledger and candidate registry. No report here changes the theorem-state manifest.
+
+- **Antitone interval release:** the unconditional finite graph theorem locates a proper interval source/sink SCC in a non-strong antitone relation. Its physical crosscut lift and parallel-contact translation are conditional on the report’s same-source geometry. Read the [full proof](../../reports/target_c_antitone_interval_scc_release_2026-10-03.md), [exact finite verifier](../../../research/verify_target_c_antitone_interval_scc_2026_10_03.py), and [candidate record](candidate-registry.json). The missing bridge is to derive crosscuts, monotone layers, and parallel crossing contacts for every relevant global-minimizer branch.
+- **Central-face corridor regression:** an exact family with two long unit chains and fixed corridor width rules out deriving a unit triangle or fixed linear area loss from those local face features alone. It is not a global minimizer. See the [construction](../../reports/target_c_central_face_two_geodesic_corridor_regression_2026-09-14.md), [exact verifier](../../../research/verify_target_c_central_face_two_geodesic_corridor.py), and [candidate record](candidate-registry.json). A closure route must add population, actual-diameter, cardinality-restoration, or strict-diameter information.
+- **Historical half-disk scalar system:** the exact rational witness satisfies the explicitly listed September 12 ledgers, including the then-new perimeter floor. It violates the later shape-detour cap and is not evidence compatible with the full current core system. See the [arithmetic regression](../../../research/target_c_two_halfdisk_scalar_regression_2026-09-12.md), [corrected verifier](../../../research/verify_target_c_two_halfdisk_scalar_regression.py), and [candidate record](candidate-registry.json).
+- **Aligned swaps and antipode transitions:** the [aligned varying-amplitude report](../../reports/target_c_aligned_swap_horn_and_axial_bracket_2026-10-01.md) supplies exact full-source dispatch/Horn lemmas and a precise release obligation; the [antipode report](../../reports/target_c_antipode_transition_phase_occupancy_2026-09-30.md) supplies an exact turn identity and two-end train occupancy charge. Their paired exact verifiers are in [`research/`](../../../research/README.md). These are proof inputs and regressions, not closure endpoints.
+- **Six-terminal Kalmanson development:** the centrally symmetric report is preserved byte-for-byte, while its response inequality is statement-level subsumed by the broader unreviewed convex six-terminal K6 report under the same positive-network, matching, weight, and C11 assumptions. Both remain unreviewed; equality and support-selection remain open. See the [CS6 report](../../reports/target_c_centrally_symmetric_six_matching_2026-08-31.md), [K6 report](../../reports/target_c_convex_six_matching_kalmanson_2026-08-31.md), and [comparison record](candidate-registry.json).
+- **Shared-witness outer occurrences:** under the report’s exact canonical source inputs, the occurrence-counted charge retains loaded endpoints, internal loaded vertices, and moving isolates; distinct components’ phase windows may overlap, and a twelve-point regression rejects fixed-rest path contraction. See the [full report](../../reports/target_c_convex_shared_witness_outer_occurrences_2026-10-02.md), [verifier](../../../research/verify_convex_shared_witness_outer_occurrences.py), and registry entry.
+- **Collinear seam and contact-island crossflow:** under explicit mixed-rigidity and positive-stress hypotheses, deleting any collinear set of at least two source labels leaves the mixed graph connected; a sharp local diameter-incidence budget and signed crossing-stress law follow. The spectral factor has no uniform lower bound, and no source extraction or endpoint is proved. See the [full report](../../reports/target_c_collinear_punctures_and_diameter_crossflow_2026-10-02.md), [verifier](../../../research/verify_target_c_collinear_punctures_2026_10_02.py), and registry entry.
+
+## Cyclic and Reinhardt endpoint corpus
+
+The frozen source-main cyclic report batch is preserved and individually indexed in the [cyclic/Reinhardt research track](../../research/tracks/target-c-cyclic-reinhardt-corpus-2026-10-16.md) and [candidate registry](candidate-registry.json). It includes exact `d_H=0` stress/Reinhardt consequences, `d_H=1,2` tree and capacity branches, arithmetic endpoint restrictions, and the q=13 S1 shell regression. All imported reports remain unreviewed and noncanonical. The common missing step is proving the cyclic branch reduction for every sufficiently large global minimizer, then deriving a valid strict-diameter competitor or finite contradiction. The q=13 data show that shell closure plus positive full-support KKT stress and maximal-rank PSD alone cannot supply that contradiction. The destination theorem-state and inverse-phase withdrawal remain authoritative.
+
+
+## Cyclic, post-ZF quantitative, and diameter-support candidates (source shard 2)
+
+The frozen source-main shard 2 batch (indexes 211–238) is preserved as unreviewed research. It adds conditional D2/P2 cyclic-stress results, an exact D6 affine-window comparison, improved post-ZF scalar floors (including the 0.465351845396… density-sensitive PI/JC floor, 0.4702 Dirichlet/PI feedback, and 0.831687… Dido bound), diameter-first joint blockers, ball-hull capacity estimates, and the loaded-chord atlas. The exact deep-isolate/octagon-flip regression blocks a local repair argument based on diameter slack alone. None extracts its hypotheses from all global minimizers or supplies the finite endpoint required for C-II. See the [full candidate track](../../research/tracks/target-c-diameter-capacity-cyclic-candidates-2026-10-16.md), [registry](candidate-registry.json), and [exact verifiers](../../research/README.md).
+
+
+## Endpoint-gap, dominant-diameter, and surplus candidates (source shard 2, indexes 239–266)
+
+The source-main reports preserve exact disjoint-diameter angle gaps, conditional dominant-diameter force/train bounds, post-ZF scalar refinements, EFAQ fixed-angle constraints, and the corrected endpoint outer-walk route. They remain unreviewed and do not extract all hypotheses from global minimizers or construct the required full-source endpoint. Report 262’s correction is retained. See the [full research track](../../research/tracks/target-c-endpoint-gap-surplus-2026-10-16.md), [candidate registry](candidate-registry.json), and [verifiers](../../research/README.md).
+
+## Complete frozen source-main report corpus
+
+All 813 Target C report paths absent from the frozen destination baseline are
+now retained with explicit source/destination hashes, scientific scope,
+dependencies, relations, validation limits, and next obligations in the
+[813-path disposition ledger](../../research/migration/2026-10-16/frozen-target-c-813-dispositions.jsonl).
+The [unified corpus frontier](../../research/tracks/target-c-frozen-813-source-main-corpus-2026-10-16.md)
+maps the five alphabetical shards to their current research programs, highlights
+conditional results and regressions, and states the exact finite endpoint still
+needed. Every imported report remains noncanonical; `theorem-state.yaml` is the
+authority for accepted claims. The withdrawn global inverse-phase `K'/D` chart
+and `q=O(D^(4/5))` rate remain withdrawn.

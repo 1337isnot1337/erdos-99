@@ -1,0 +1,138 @@
+{
+  "record_type": "source-main-shard-batch-integration-receipt",
+  "status": "partial_checkpoint_not_release_verification",
+  "date": "2026-10-16",
+  "source": {
+    "repository": "1337isnot1337/e-99",
+    "commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891"
+  },
+  "destination": {
+    "repository": "1337isnot1337/erdos-99",
+    "frozen_baseline": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+    "merged_main": "e1f8ba75b4e9a04c613dcdd3c8fabd6c51e8efd6",
+    "merged_tree": "ead8dc54249b1571b218c0a049a1d765620b9e12",
+    "source_batch_pr": 48,
+    "coordinator_pr": 69
+  },
+  "scope": {
+    "shard": 2,
+    "worklist_indexes": [
+      211,
+      238
+    ],
+    "reports": 28,
+    "report_source_blob_sha256_matches": 28,
+    "report_destination_byte_matches": 28,
+    "support_verifiers": 4,
+    "verifier_source_blob_sha256_matches": 4,
+    "verifier_destination_byte_matches": 4,
+    "source_relative_links_resolved": 13,
+    "candidate_registry_entries_added": 16,
+    "candidate_registry_worklist_paths_covered": 28,
+    "canonical_theorem_state_changed": false
+  },
+  "verifiers": [
+    {
+      "path": "research/verify_target_c_deep_isolate_octagon_flip_2026_10_02.py",
+      "result": "PASS",
+      "scope": "7 exact 13-point sources and 3 exact Q(sqrt(3)) degree-five stars; no global-optimality certificate"
+    },
+    {
+      "path": "research/verify_target_c_ball_hull_lattice_2026_10_02.py",
+      "result": "PASS",
+      "scope": "360 rational source pairs, 720 support margins, 5947 thin-parabola pairs and additional exact checks; no global-optimum certificate"
+    },
+    {
+      "path": "research/verify_diameter_first_joint_depth_2026_10_02.py",
+      "result": "PASS",
+      "scope": "7260 exact depth/interpolation states, 12 sharpness packets, and 125 protected axial states"
+    },
+    {
+      "path": "research/verify_target_c_annular_atlas_2026_09_26.py",
+      "result": "PASS",
+      "scope": "3822 exact separation/diameter pairs and additional finite atlas checks; no global or Level-I certificate"
+    }
+  ],
+  "checks": [
+    {
+      "command": "git object + SHA-256 compare against frozen source for 28 reports and four verifiers",
+      "result": "PASS",
+      "details": "All source and destination bytes identical; no transformations."
+    },
+    {
+      "command": "All 13 source-relative Markdown dependencies from reports 211–238 checked at destination e1f8ba75",
+      "result": "PASS",
+      "details": "All referenced paths exist in merged main."
+    },
+    {
+      "command": "python3 tools/build_artifact_index.py --write --write-headers",
+      "result": "PASS",
+      "output": "artifact-index: wrote 817 records; updated 0 metadata headers"
+    },
+    {
+      "command": "python3 tools/check_theorem_state.py",
+      "result": "PASS",
+      "output": "theorem-state: OK"
+    },
+    {
+      "command": "python3 -m json.tool docs/targets/target-c/candidate-registry.json",
+      "result": "PASS"
+    },
+    {
+      "command": "python3 docs/research/migration/2026-10-16/verify_migration_provenance.py --source-repo <frozen-source-clone> --destination <destination-checkout>",
+      "result": "PASS",
+      "scope": "1446 artifact rows; 725 public artifact hashes; 2975 research-file rows; 293 public file hashes; 111 linked-dependency rows; 91 public dependency hashes; 418 edges; zero unresolved/rights-blocked dependencies. Historical script comparison baseline is 60c2576; this is source identity/retained-byte provenance, not final release verification."
+    },
+    {
+      "command": "python3 tools/check_public.py",
+      "result": "PENDING_CROSS_SHARD_LINKS",
+      "errors": 4,
+      "unresolved_links": [
+        "docs/reports/target_c_complete_grid_collar_and_stress_shell_2026-10-02.md -> docs/reports/target_c_weak_pivot_axial_pressure_2026-10-02.md",
+        "docs/reports/target_c_complete_grid_collar_and_stress_shell_2026-10-02.md -> docs/reports/target_c_threshold_rail_deep_attachment_2026-10-02.md",
+        "docs/reports/target_c_complete_grid_collar_and_stress_shell_2026-10-02.md -> docs/reports/target_c_weak_packet_correction_mass_2026-10-02.md",
+        "docs/reports/target_c_connected_phase_core_collapse_2026-09-12.md -> docs/reports/target_c_phase_component_endpoint_closure_2026-09-12.md"
+      ],
+      "note": "Pending reports assigned to frozen shard 5 indexes 710, 751, 752 and shard 4 index 537."
+    },
+    {
+      "command": "python3 research/verify_target_c_deep_isolate_octagon_flip_2026_10_02.py",
+      "result": "PASS",
+      "scope": "Exact finite local repair regressions only; no global certificate."
+    },
+    {
+      "command": "python3 research/verify_target_c_ball_hull_lattice_2026_10_02.py",
+      "result": "PASS",
+      "scope": "Exact rational support charts, finite lattice and port checks; no full-core/global certificate."
+    },
+    {
+      "command": "python3 research/verify_diameter_first_joint_depth_2026_10_02.py",
+      "result": "PASS",
+      "scope": "Exact finite depth/interpolation and protected axial states only."
+    },
+    {
+      "command": "python3 research/verify_target_c_annular_atlas_2026_09_26.py",
+      "result": "PASS",
+      "scope": "Exact finite separation/diameter, normal-sector and atlas checks only."
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    }
+  ],
+  "rights_and_provenance": {
+    "first_party_support_verifiers_added": 4,
+    "safety_scan": "No credentials, owner-local paths, or private infrastructure references found in the four verifier files.",
+    "third_party_papers_or_extractions_copied": false,
+    "visibility": "private",
+    "visibility_changed": false
+  },
+  "release_verification": {
+    "gate_2": "NOT_RUN_ON_FINAL_TREE",
+    "hosted_ci": "NOT_CLAIMED",
+    "final_tree_receipt_required": true
+  },
+  "authority_note": "All reports remain unreviewed noncanonical research. Verifier passes are finite computational evidence only. Destination theorem-state is unchanged and authoritative; this receipt does not establish full 813-path coverage or publication readiness.",
+  "execution_environment": "Executed against isolated local clones; private local filesystem paths are intentionally omitted from this repository receipt."
+}

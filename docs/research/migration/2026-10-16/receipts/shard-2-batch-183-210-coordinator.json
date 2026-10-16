@@ -1,0 +1,63 @@
+{
+  "record_type": "incremental-migration-verification-receipt",
+  "status": "partial_shard_reconciliation_not_release_verification",
+  "date": "2026-10-16",
+  "frozen_source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "frozen_source_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+  "destination_assignment_baseline": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+  "destination_baseline_tree": "66e596e4da875bab2bbdf4bacac51d17eeb2b466",
+  "imported_pr": 45,
+  "imported_pr_head": "4cf3dc7d3cc303192f7eb352c0524e69e829172e",
+  "destination_merge_commit": "2bdecc7fe333ff1c0c2ac5c0b206f457a932a3a5",
+  "destination_tree": "e18c9e63f660db374d73229845c44eaa18b856b8",
+  "scope": {
+    "shard": 2,
+    "frozen_indexes": [
+      183,
+      210
+    ],
+    "report_count": 28,
+    "byte_identical": 21,
+    "documented_tex_repairs": 7,
+    "repaired_form_feed_sequences": 18,
+    "report_lifecycle": "unreviewed/noncanonical",
+    "q13_support_scripts_exact_duplicates": 2,
+    "q13_verifiers_rerun": 2,
+    "canonical_claims_promoted": 0
+  },
+  "source_file_transform": "For the seven listed files only, replace exactly each 0x0c+'rac' byte sequence with the LaTeX bytes \\frac. All other source bytes are unchanged. Exact per-file mapping appears in shard-2-reconciliation.jsonl and the batch dispositions.",
+  "checks": [
+    {
+      "command": "Independent frozen source/destination audit from the exact PR45 head",
+      "result": "PASS: 28/28 source Git blob and SHA-256 identities; destination bytes equal source or the precisely recorded replacement; all 28 absent at the frozen destination baseline."
+    },
+    {
+      "command": "python3 research/target_c_s1_q13_shell_regression.py",
+      "result": "PASS: q=13, 13 contacts, 12 diameter pairs, positive stress, scalar stress has affine three-dimensional kernel; numerical finite regression only."
+    },
+    {
+      "command": "PYTHONPATH=research python3 research/verify_s1_q13_kkt_endpoints.py",
+      "result": "PASS: both KKT segment endpoints have one zero diameter edge and positive first nonzero PSD eigenvalue; numerical finite regression only."
+    },
+    {
+      "command": "python3 tools/build_artifact_index.py --write --write-headers",
+      "result": "PASS: 789 records; 0 metadata header changes."
+    },
+    {
+      "command": "python3 tools/check_theorem_state.py",
+      "result": "PASS: theorem-state: OK."
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS."
+    }
+  ],
+  "release_verification": {
+    "gate_2": "NOT_RUN_ON_FINAL_TREE",
+    "hosted_ci": "NOT_CLAIMED",
+    "repository_visibility": "private",
+    "visibility_changed": false,
+    "final_tree_receipt_required": true
+  },
+  "authority_note": "Report preservation, provenance checks, and finite regression outputs are not independent mathematical proof audits. No canonical theorem, Target A/B, C-II, or Level I state changed. The withdrawn inverse-phase inference remains withdrawn."
+}

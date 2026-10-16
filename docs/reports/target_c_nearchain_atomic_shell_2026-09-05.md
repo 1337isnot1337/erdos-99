@@ -1,3 +1,4 @@
+<!-- theorem-state: {"artifact_id":"ART-058CA41B6772","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
 <!-- migration-source: path=docs/reports/target_c_nearchain_atomic_shell_2026-09-05.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=a1aed5e75ec52664001100df06e77ed218d81391; lifecycle=unreviewed; canonical=false -->
 > **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
 
