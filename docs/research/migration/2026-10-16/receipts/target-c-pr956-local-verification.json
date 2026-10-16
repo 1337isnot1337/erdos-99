@@ -1,6 +1,6 @@
 {
   "schema_version": "erdos-99-local-migration-verification/v1",
-  "recorded_at_utc": "2026-10-16T11:20:03Z",
+  "recorded_at_utc": "2026-10-16T11:22:40Z",
   "verification_subject": {
     "destination_repository": "https://github.com/1337isnot1337/erdos-99",
     "branch": "research/global-pr956-lattice-density-20261016",
@@ -87,13 +87,31 @@
     },
     {
       "command": "python3 tools/run_theorem_certificates.py",
-      "result": "IN PROGRESS at this receipt snapshot; no result claimed yet"
+      "result": "PASS; 94 selected of 94 unique registered certificates; process exit 0 on CPython 3.12.3"
     }
   ],
   "hosted_actions": {
-    "destination_pr": null,
+    "destination_pr": 27,
+    "workflow": "public-research-integrity",
+    "run_id": 38893292903,
+    "run_url": "https://github.com/1337isnot1337/erdos-99/actions/runs/38893292903",
+    "head_sha": "1d361a8b382e314335f2595df00473f2758f7d68",
+    "status": "completed",
+    "conclusion": "skipped",
+    "jobs": [
+      {
+        "name": "plan",
+        "conclusion": "skipped",
+        "steps": 0
+      },
+      {
+        "name": "replay",
+        "conclusion": "skipped",
+        "steps": 0
+      }
+    ],
     "success_claimed": false,
-    "note": "No destination PR had been created at this verification snapshot."
+    "note": "Both owner-gated jobs were skipped with zero steps because E99_PUBLIC_CI is unset; no hosted verification success is claimed."
   },
   "theorem_and_release_status": {
     "theorem_state_changed": false,
@@ -115,6 +133,6 @@
     "The straight-interface theorem does not supply source extraction, sublinear junction cost, disjoint area allocation, or an all-label decomposition.",
     "The stress-ring examples are strictly nonglobal and only refute local-data-only density-loss implications.",
     "Full publication Gate 2 is not claimed; final Gate 2 must be rerun against the completed final main SHA.",
-    "The hosted destination workflow is owner-gated and has not been run from a destination PR at this snapshot."
+    "The PR #27 public-research-integrity run completed with plan and replay skipped and zero steps because the owner-gated E99_PUBLIC_CI variable is unset; all claimed verification is local."
   ]
 }
