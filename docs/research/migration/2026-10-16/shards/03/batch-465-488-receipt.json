@@ -26,7 +26,10 @@
     "theorem_manifest_or_generated_index_changed": false,
     "publication_manifest_changed": false,
     "shared_navigation_changed": false,
-    "other_shards_changed": false
+    "other_shards_changed": false,
+    "source_identity_audit": "24/24 frozen source Git blobs and SHA-256 values independently matched; 24/24 destination Git blobs/SHA-256 values matched the row ledger; all 24 paths were absent from baseline tree 66e596e4da875bab2bbdf4bacac51d17eeb2b466; report bodies equal source after only the recorded header/provenance conversion.",
+    "control_bytes": "4 form-feed bytes across indexes 481 and 486 preserved at the recorded destination positions; no repair.",
+    "cross_shard_links": "Exact path/hash/status edges recorded; no references found to shard-4 index 537 or shard-5 index 710."
   },
   "integration": "all findings remain unreviewed and noncanonical; coordinator owns merge and integration-wide validation",
   "pull_request": {
@@ -36,5 +39,25 @@
     "branch": "migration/target-c-shard-03-batch-465-488-w3-20261016",
     "initial_content_commit": "3944449dc8a1d805ccd88214760b56c3a992b1a0",
     "merge_state_at_receipt": "CLEAN"
+  },
+  "cross_shard_dependency_audit": {
+    "report_indexes_with_external_path_references": [
+      466,
+      467,
+      470,
+      472,
+      475
+    ],
+    "details": "Exact source blobs, SHA-256, assigned shard/index where applicable, frozen-baseline identity, and current PR status are recorded in batch-465-488.jsonl for each path-backed edge. Index 472 cites shard-1 index 4 as prior art and explicitly not a proof dependency. Index 475 links an absent source-only campaign ledger; its Target-A page and local regression verifier are byte-identical to baseline. Index 466 uses the exact verifier from still-open PR #41.",
+    "checked_for_missing_links": [
+      "docs/reports/target_c_phase_component_endpoint_closure_2026-09-12.md (shard 4, frozen index 537)",
+      "docs/reports/target_c_threshold_rail_deep_attachment_2026-10-02.md (shard 5, frozen index 710)"
+    ],
+    "missing_link_result": "Neither path nor its basename is referenced by any of the 24 frozen source report bodies at commit 42f0296d1aca068c809f74cee5dcdb4ebdb27c73."
+  },
+  "raw_control_byte_audit": {
+    "source_report_count_with_non_whitespace_control_bytes": 2,
+    "total_preserved_control_bytes": 4,
+    "details": "Index 481 preserves one 0x0c form-feed at source line 124 byte column 19. Index 486 preserves three 0x0c form-feeds at source lines 259, 413, and 531. No byte repairs were made."
   }
 }
