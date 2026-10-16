@@ -575,3 +575,70 @@ it changes no mathematical claim or theorem-state.
 The source AI audit reconstructs the boundary and lattice proofs, checks the exact pair ledgers and literature scopes, reviews the infinite interface and finite-window hypotheses, and scrutinizes the ring stress and nonglobal comparison. Its private-receipt wording was rewritten to refer only to the source PR audit; its source claim that human review is required was corrected to the destination policy: a separate independent AI-agent exact-head review is required before consequential promotion. No mathematical claim was altered by that policy edit. Third-party papers are cited or linked, not copied. The destination artifact index was regenerated from retained destination content rather than replaced by the source index. The source README became a focused catalogue entry, not a wholesale overwrite.
 
 The candidates remain outside theorem-state; no Level I, A/B, C-I, or C-II status changed. The four scripts validate finite/formal checks only and do not prove the universal analytic statements. Exact command results and environment are in the PR #956 verification receipt.
+
+## Source PR #957 — joint diameter-cover exchange
+
+**Frozen source main:** `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`.
+**Frozen open draft head:** `a11e16998094ab3d7afd9fd07eff8b55909ec406`
+(tree `77ce8dd135c2b4233f121bd448621d362841da06`). **PR branch merge base:**
+`d6f953100d62a84de72e991642041fdd026e82ba`. The source PR had seven actual
+branch-delta paths; their original blobs, treatment, rights/safety handling,
+and destination hashes are recorded individually in `ledger/source-pr-files.jsonl`.
+The separate source-main-to-head manifest includes stale snapshot differences
+because source main advanced 24 commits beyond the branch base. Those differences
+are not applied as PR changes.
+
+### Mathematical content and lifecycle
+
+For any unit-separated source `A` of diameter `D` and any unit-separated packet
+`B` with diameter below `D`, the report defines the actual source diameter graph
+`H` and complete lower/upper cross-conflict graph `G` (`<1` or `>=D`). For a
+vertex cover `T` of `H`, let `nu_T` be the maximum matching between `B` and
+`A minus T`. Its theorem proves that the maximum cardinality of a unit-separated
+strict-`D` subset of the labelled union is exactly
+`n+m-min_T(|T|+nu_T)`. Hence a global minimizer must obey
+`|T|+nu_T >= m+1` for every supplied packet and cover, retaining every isolate.
+The exact missing Level I theorem is existence of a unit-separated shorter
+packet and actual-diameter cover with joint cost at most `m` for every
+sufficiently large triangle-free global minimizer. No such packet existence is
+proved, and the theorem-state remains unchanged.
+
+Four small rational controls show that minimum-cardinality diameter covers
+alone can fail, a smaller packet can still augment the source, a supplied
+packet can fail even for the global square, and upper cross conflicts can form
+`K_(4,3)`. Only the lower-conflict graph is planar. The all-`k` dense-star
+construction has one unit contact, `n-2` contact isolates, triangular leading
+population, a matching cross-conflict graph, and a same-cardinality competitor
+at diameter `D-1/8`; it is explicitly nonglobal. Its role is to reject a
+minimum-cover-first search, not to challenge Level I.
+
+The run note preserves other explored mechanisms and their limits. Its rational
+four-label cage is a separate local regression: for arbitrary prescribed `R`,
+a triangle-free positive surrounding relation can coexist with a free radius-`R`
+ball whose boundary is arbitrarily close to a contact-bearing center. It
+prevents deriving a uniform local free-region propagation radius from
+triangle-freeness alone. The four-label source is nonglobal. The destination's
+existing two-copy similarity obstruction is related but distinct: the former
+is a bounded local cage with an explicit arbitrary-radius placement, while the
+latter is a dense ring with no uniform affine-span gap.
+
+### Stale branch differences and release edits
+
+The frozen branch's source-main-to-head name-status also shows older versions of
+`target_c_atomic_orbit_sharp_detour_independent_audit_2026-10-08.md`,
+`target_c_half_depth_fan_forest_independent_audit_2026-10-08.md`, and
+`research/target_c_g0050_physical_boundary_propagation_2026-09-14.md`. None has a
+commit in the actual `d6f9531..a11e169` PR range. The destination retains the
+frozen source-main audit versions; the latest source-main G0050 file remains
+separately queued in `source-main-artifacts.jsonl` and must be imported from the
+frozen main version, not replaced with the stale branch snapshot.
+
+The source AI audit was release-edited to distinguish provenance from the
+destination's independent exact-head AI review. The run note's local worktree
+and account-specific hosted-CI explanation were removed; it now records only
+that hosted steps did not execute. The external Schurmann paper remains a
+bibliographic citation/link only. The source index was not copied over the
+destination catalogue, the destination index was regenerated, and the source
+README was adapted. No claims were promoted; Level I, A/B, C-I, and C-II status
+remain unchanged. The exact local verifier and repository check results are in
+[`receipts/target-c-pr957-local-verification.json`](receipts/target-c-pr957-local-verification.json).

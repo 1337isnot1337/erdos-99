@@ -138,3 +138,21 @@ The [four-report track](../docs/research/tracks/global-population-lattice-interf
 - `python3 research/verify_global_stress_density_regression_2026_10_11.py`
 
 The first three verifiers do not establish their universal analytic arguments; the lattice defect and periodic-motif consequences also depend on the unreviewed boundary reserve. The periodic finite-subset bound assumes `1 <= q <= D/16` and requires separation of the entire infinite packing, including cross-coset pairs. The fourth report is a nonglobal regression, not a global-minimizer counterexample. The source audit is preserved as provenance and does not satisfy the destination's independent exact-head review policy. The [per-file ledger](../docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl) records exact source hashes and README/index transformations.
+
+## Source PR #957 — exact joint diameter-cover exchange
+
+The [joint-exchange track](../docs/research/tracks/global-joint-diameter-cover-exchange-pr957.md)
+records the exact full-source matching identity, four geometric controls, the
+all-`k` dense-star regression, the distinct free-region cage, provenance, and
+the precise packet-existence obligation. Reproduce the finite/formal checks
+from the repository root:
+
+- `python3 research/verify_global_joint_exchange_2026_10_12.py`
+- `python3 research/verify_global_exchange_star_family_2026_10_12.py`
+
+These are exact rational finite checks. The supplied-packet theorem and
+all-`k` population statement are proved analytically in the report; neither
+verifier proves existence of a successful packet for every large global
+minimizer. Source local paths and account-specific CI details were removed
+from the historical run note and source audit; their source hashes and edits
+are retained in the [per-file migration ledger](../docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl).
