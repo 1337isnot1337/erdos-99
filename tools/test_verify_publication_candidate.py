@@ -51,6 +51,13 @@ class CommittedCandidateTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             verify_committed_worktree(self.root, self.candidate)
 
+    def test_group_execute_bit_cannot_hide_behind_nonexecutable_owner(self):
+        self.git('config', 'core.filemode', 'false')
+        self.file.chmod(0o654)
+        self.assertEqual(self.git('status', '--porcelain'), '')
+        with self.assertRaises(ValueError):
+            verify_committed_worktree(self.root, self.candidate)
+
     def test_symlink_substitution_is_rejected(self):
         self.file.unlink()
         self.file.symlink_to('/dev/null')
