@@ -1,0 +1,143 @@
+{
+  "schema_version": "erdos-99-local-migration-verification/v1",
+  "recorded_at_utc": "2026-10-16 12:14:33 UTC",
+  "verification_subject": {
+    "destination_repository": "https://github.com/1337isnot1337/erdos-99",
+    "pull_request": 30,
+    "branch": "research/global-pr959-reflected-capacity-20261016",
+    "commit": "90deab1943b5c11877fb01587e24b1a1b976ff80",
+    "tree": "9a43c06b0c47938d4f3fa04c667c1bf4f58a7d68",
+    "base_main_commit": "b6423914251eb482a8c674bb922c7b3598b4f0cb",
+    "base_main_tree": "1597f4abfdef567ee8c1d14535c35ea4cd7dd843"
+  },
+  "runtime": {
+    "system_python": "CPython 3.12.3",
+    "research_verifiers": "CPython 3.12.3",
+    "research_dependencies": "Standard library only; exact rational arithmetic",
+    "runtime_note": "The two newly imported mathematical verifiers use fractions.Fraction and no third-party packages. The registered repository certificate suite and 55 repository tests ran under system CPython 3.12.3."
+  },
+  "frozen_source": {
+    "repository": "https://github.com/1337isnot1337/e-99",
+    "main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "main_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+    "pull_request": 959,
+    "pull_request_state_at_freeze": "open draft",
+    "pull_request_head": "e25041f236d268a7e815dacd346180989690ed71",
+    "pull_request_head_tree": "a0b268d8b050e0350c8ae2ffb38c139fc6570dab",
+    "pull_request_merge_base": "a43c69dac7e7b0627dec2900e12c60fd4608d519",
+    "pull_request_merge_base_tree": "ac68adbd4facb5887cd3394438cf6670f074bb4e",
+    "changed_source_paths": 9,
+    "ledger": "docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl",
+    "ledger_result": "PASS; all nine source paths have frozen blob/SHA-256, lifecycle, dependencies, destination relation, transformation, and explicit disposition. Two exact copies, seven transformed or regenerated mappings, zero blocked paths."
+  },
+  "tool_provenance": {
+    "name": "Gitleaks",
+    "version": "8.30.1",
+    "official_release": "https://github.com/gitleaks/gitleaks/releases/tag/v8.30.1",
+    "archive_sha256": "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb",
+    "upstream_checksum_validation": "PASS; the downloaded linux_x64 archive matched the official release checksum file."
+  },
+  "commands": [
+    {
+      "command": "python3 tools/build_artifact_index.py --write --write-headers",
+      "result": "PASS; wrote 554 records and updated zero metadata headers."
+    },
+    {
+      "command": "python3 tools/build_artifact_index.py",
+      "result": "PASS; artifact-index OK (554 artifacts)."
+    },
+    {
+      "command": "python3 tools/check_theorem_state.py",
+      "result": "PASS."
+    },
+    {
+      "command": "python3 tools/check_public.py",
+      "result": "PASS; zero integrity errors; mathematical_proof=false; 94 certificates, 451 claims, 845 edges, 810 retained source files, 20 tasks."
+    },
+    {
+      "command": "python3 research/verify_global_reflected_scale_2026_10_12.py",
+      "result": "PASS; 400 rational decision cases matched exhaustive sign enumeration; omitted-label and invalid-bit controls rejected; 157 labels, 12,246 pairs, and two contact isolates verified; strict squared-diameter gain 58266836/1008005; moment identities and 29,403/182,710-pair family fixtures verified."
+    },
+    {
+      "command": "python3 research/verify_global_steiner_capacity_loss_2026_10_12.py",
+      "result": "PASS; exact four-point capacity 4 -> 3; m=20,40,100 capacities checked; all 97,020 m=20 pairs and 840 contacts verified."
+    },
+    {
+      "command": "python3 tools/run_theorem_certificates.py",
+      "result": "PASS; 94 selected of 94 unique registered certificates."
+    },
+    {
+      "command": "PYTHONPATH=tools python3 -m unittest tools.test_public_proof_graph tools.test_public_rights tools.test_public_release_audit tools.test_verify_publication_candidate tools.test_clean_public_snapshot tools.test_verify_publication_sources",
+      "result": "PASS; 55 tests."
+    },
+    {
+      "command": "python3 docs/research/migration/2026-10-16/verify_source_pr_imports.py --source-repo <frozen-e-99-checkout> --destination <erdos-99-checkout> --pr 959",
+      "result": "PASS; 9 source paths checked, 2 exact copies, 7 transformed or regenerated, 0 blocked."
+    },
+    {
+      "command": "python3 tools/verify_publication_sources.py --source-repo <frozen-e-99-checkout>",
+      "result": "PASS; 4,793 source records verified, 810 retained, 3,977 excluded, 810 public hashes checked; provenance only, no rights or proof claim."
+    },
+    {
+      "command": "python3 docs/research/migration/2026-10-16/verify_migration_provenance.py --source-repo <frozen-e-99-checkout> --destination <erdos-99-checkout>",
+      "result": "PASS; 1,446 source artifacts, 490 public artifact hashes, 1,287 Target C artifacts, 2,912 source files, 232 public source hashes, 100 dependency records, 73 dependency hashes, 384 edges, 0 unresolved or rights-blocked source-main dependencies."
+    },
+    {
+      "command": "gitleaks git --no-banner --log-opts='b6423914251eb482a8c674bb922c7b3598b4f0cb..90deab1943b5c11877fb01587e24b1a1b976ff80' <erdos-99-checkout>",
+      "result": "PASS; 1 commit scanned, 130,711 bytes, no leaks found."
+    },
+    {
+      "command": "git diff --cached --check",
+      "result": "PASS."
+    },
+    {
+      "command": "gitleaks git --staged --no-banner --report-format=json <erdos-99-checkout>",
+      "result": "PASS; the staged receipt contents were scanned and no leaks were found."
+    }
+  ],
+  "hosted_actions": {
+    "destination_pr": 30,
+    "workflow": "public-research-integrity",
+    "run_id": 38899032333,
+    "run_url": "https://github.com/1337isnot1337/erdos-99/actions/runs/38899032333",
+    "head_sha": "90deab1943b5c11877fb01587e24b1a1b976ff80",
+    "status": "completed",
+    "conclusion": "skipped",
+    "jobs": [
+      {
+        "name": "plan",
+        "conclusion": "skipped",
+        "steps": 0
+      },
+      {
+        "name": "replay",
+        "conclusion": "skipped",
+        "steps": 0
+      }
+    ],
+    "success_claimed": false,
+    "note": "Both owner-gated jobs were skipped with zero steps because E99_PUBLIC_CI is unset; no hosted verification pass is claimed."
+  },
+  "theorem_and_release_status": {
+    "theorem_state_changed": false,
+    "target_c_status_changed": false,
+    "registered_certificate_set_changed": false,
+    "publication_inclusion_membership_changed": false,
+    "retained_inclusion_count": 810,
+    "canonical_claims_promoted": 0,
+    "candidate_registry_entries_added": 4,
+    "migration_status": "INCOMPLETE; source-main corpus and other relevant open-PR batches remain",
+    "destination_private": true,
+    "gate_2_pass_claimed": false,
+    "gate_3_visibility_approval": false
+  },
+  "limitations": [
+    "Imported analytic claims remain unreviewed and outside theorem-state. The source AI audit is provenance, not the destination independent exact-head mathematical audit required before consequential promotion.",
+    "The fixed-parameter signed-parity theorem does not extract parameters for global minimizers. Its finite certificates are nonglobal.",
+    "The leading-density moment obstruction forces scales to one but gives no rate or strict lower-order improvement.",
+    "The exact Steiner regressions block general capacity preservation but do not settle the eventual large-global-minimizer case.",
+    "Source PR #960, the large source-main Target C corpus, and other historical/open-PR additions remain queued. This batch is not the full migration.",
+    "Actionlint and full Gate 2 publication verification are not claimed; no workflow files changed in this batch, the complete research migration remains incomplete, and the repository-pinned exact release environment was not run.",
+    "Both hosted PR jobs skipped with zero steps. No hosted CI, Gate 2, or Gate 3 success is claimed."
+  ]
+}
