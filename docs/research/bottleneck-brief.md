@@ -15,3 +15,15 @@ The [20 task cards](../../tasks/README.md) include direct route bridges, indepen
 ## Additional direct Level I mechanisms (noncanonical)
 
 Recent current-source work includes a [formal joint stress/strain phase mechanism](../reports/global_joint_stress_strain_phase_mechanism_2026-10-12.md) and a [separable-distance/Möbius obstruction](../reports/global_separable_distortion_obstruction_2026-10-12.md). Both are explicitly **unreviewed**, with exact finite checkers and essential limitations. A shared material frame, uniform field bounds, all seams/boundary work, **all source labels**, and a strict whole-source planar competitor remain unproved in the joint field route. The Möbius family does not exhaust permissible planar replacement constructions. See [noncanonical proposal status](proposals.md); neither alters Level I or A/B/C canonical endpoints.
+
+A stronger quantitative reserve is preserved as an **unreviewed candidate** in
+[source proposal #1008](../reports/population_reserve_independent_reconstruction_2026-10-15.md):
+for every global minimizer with \(D>16384\),
+\(g_A\ge\gamma D-\sqrt D/(4\sqrt2)-60\), and \(g_A\ge D/600\) for
+\(D\ge10^6\). It improves the order of the canonical population lower bounds
+if correct, but does not assume triangle-freeness and does not close the
+conjecture. Its precise Target C bridge is a uniform upper reserve bound
+\(g_A\le cD+o(D)\), \(c<\gamma\), for large triangle-free global minimizers,
+or a source-specific strict-diameter replacement. The exact finite verifier is
+not a proof of the analytic all-radius argument or global optimality; see the
+[candidate registry](../targets/target-c/candidate-registry.json).

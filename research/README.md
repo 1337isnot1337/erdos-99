@@ -26,3 +26,17 @@ python3 research/verify_global_joint_phase_compatibility.py
 ```
 
 The first checks finite odd-rim incidence and Möbius identities, including a nonplanarity fixture. The second checks formal stress/strain identities and both fixed-frame and rotated-laminate tests. Neither establishes global optimality, source-field extraction, or the Level I conjecture.
+
+## Source PR #1008 population-reserve candidate
+
+The [unreviewed report](../docs/reports/population_reserve_independent_reconstruction_2026-10-15.md)
+gives a twelve-arc boundary construction and its all-real-radius averaging
+proof. Its exact-constant and finite-geometry checker is
+`python3 research/verify_population_reserve_twelve_arc_2026_10_15.py --extended
+--output /tmp/population-reserve-twelve-arc.json`; the committed fixture is
+`research/population_reserve_twelve_arc_2026_10_15.json`. The checker does not
+certify the analytic averaging theorem, literature priority, or global
+optimality. The candidate registry records its exact claim, source hashes,
+validation, canonical comparators, and missing Target C implication. This
+script is noncanonical evidence and is intentionally not added to the registered
+theorem-certificate set.

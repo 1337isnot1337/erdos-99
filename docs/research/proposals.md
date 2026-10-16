@@ -2,6 +2,24 @@
 
 These are exact-head snapshots of selected adjacent proposals. They do not change the accepted state. All new claims remain unreviewed even where a source filename says audit. Public prerequisites must be checked against the current corpus; a private proposal URL is not a proof dependency. The source proposal number is provenance, not a public destination PR number. Other open proposals may contain relevant work; the full selection inventory records their disposition.
 
+## Source proposal 1008 — independent population-reserve reconstruction
+
+Head `ad1bda373a5cbd8c666040f64b4f6ecd83223e31`; **unreviewed candidate**.
+
+- [Full proof and scientific assessment](../reports/population_reserve_independent_reconstruction_2026-10-15.md)
+- [Exact finite verifier](../../research/verify_population_reserve_twelve_arc_2026_10_15.py)
+- [Finite replay output](../../research/population_reserve_twelve_arc_2026_10_15.json)
+- [Machine-readable candidate registry](../targets/target-c/candidate-registry.json)
+
+The analytic candidate gives a linear-order population reserve for every global
+minimizer, stronger asymptotically than the existing \(D^{2/3}\) lower bounds.
+It is not in the theorem-state manifest and does not imply the Target C
+triangle conclusion. The current missing bridge and finite nonglobal
+counterexample are recorded in the report and registry. Source PR #956, cited
+as prior boundary work in the report, remains queued for its own content-level
+migration; it is context rather than a proof dependency of the twelve-arc
+argument.
+
 ## Source proposal 947 — Record Target C second-referee audits and repair inverse-phase proof
 
 Head `1afb7e64d47c5619d872d32759b0e01f1526fd5a`; **unreviewed**.

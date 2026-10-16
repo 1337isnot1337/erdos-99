@@ -106,3 +106,38 @@ research content; it does not establish that every source mathematical claim is
 correct, that every older proof avoids the withdrawn inference, or that the
 research-corpus migration is complete. The authoritative promotion and release
 gates remain unchanged.
+
+## Second batch — source PR #1008
+
+The source PR inventory was refreshed against the frozen snapshot before this
+batch: all 21 open PR numbers and exact head SHAs still match. The selected
+source is draft PR #1008 at `ad1bda373a5cbd8c666040f64b4f6ecd83223e31`,
+based on `eb51394f371aee958b0d9332f80faf75ae694b9e`; its recorded diff contains
+five paths. Its report and two exact evidence files are integrated. The changed
+research README is represented by a destination navigation entry; the source
+artifact-index edit is regenerated from the imported report's metadata. Every
+path has an explicit disposition and source hash in the open-PR file ledger.
+
+The new report claims, still as **unreviewed**, that every global minimizer with
+\(D>16384\) has
+\[
+g_A\ge\gamma D-\frac{\sqrt D}{4\sqrt2}-60,
+\qquad \gamma=0.001939936045\ldots,
+\]
+and gives \(g_A\ge D/600\) for \(D\ge10^6\). The report states that this
+asymptotically improves the canonical \(D^{2/3}\) reserve, but it does not
+supersede any manifest claim. Its finite counterexample shows that triangle-free
+packings with high reserve need not be global minimizers; this blocks removing
+the global-optimality hypothesis from the proposed Target C upper-reserve
+bridge. It does not supply that bridge or a C-II endpoint. The full scope,
+canonical comparisons, proof dependencies, obstruction, and next obligations
+are machine-readable in [the candidate registry](../../../targets/target-c/candidate-registry.json).
+
+The exact verifier replay passed five finite geometry cases, all constant and
+sign checks, 150 rotation identities, and two rejected collision controls. Its
+output JSON matches the source fixture byte for byte. The code does not verify
+the analytic average over all radii or global-minimizer optimality. The imported
+report's source-era request for human review does not override the destination's
+current independent AI-agent exact-commit review policy. The theorem-state,
+publication inclusion set, canonical certificate registry, and target status
+were not changed.
