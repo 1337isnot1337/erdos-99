@@ -2,6 +2,22 @@
 
 ## Catalogue supplement — 2026-10-16; priority revision remains public-frontier.3
 
+The frozen source-main atomic-gap stack adds the direct C-II task
+`target-c-branch-aware-atomic-gap`. It links the conditional iterative-pruning
+pair payment, the historical `0.0050` matched bound and its separate
+Section-171 propagation, and the stronger unreviewed `0.0071` matched bound.
+The task requires a fresh exact derivation before propagating `0.0071`; the
+`0.0050` downstream certificate is not relabeled. Track weights and existing
+tasks are unchanged. The task catalogue revision is `public-frontier.6`,
+reviewed against destination base `358af8253f85ab7b9cdbf976ce186ee8426718e4`.
+
+This is a navigation update for noncanonical source-main evidence, not a
+mathematical priority or theorem-state change. The open-PR overlap snapshot is
+dated 2026-10-16 and records the destination's zero-open-PR state immediately
+before this integration PR was opened.
+
+## Catalogue supplement — 2026-10-16; priority revision remains public-frontier.3
+
 The frozen source-only Target C branch adds the bounded
 `target-c-capacity-collective-refill` task and connects its fixed-frame refill
 proofs, exact capacity obstructions, and multishear energy candidate. This

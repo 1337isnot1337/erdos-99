@@ -10,7 +10,7 @@
 
 These are research priorities, not theorem-success probabilities. Re-deriving an existing scoped bound is useful only as a genuinely independent audit or verifier. Locked stress does not imply global nullity; one-grain deficit does not imply shell stability; infinitesimal or bit feasibility does not imply finite full-source motion.
 
-The [22 task cards](../../tasks/README.md) include direct route bridges, independent audits, finite computations, shared geometric/analytic dependencies and alternative approaches. Their weights are retained from the source to diversify attention. Proposed adjacent results are [noncanonical snapshots](proposals.md), never new accepted premises. [Family status](research-family-status.md) states which restricted shortcuts are blocked and which changed hypotheses would justify revisiting them.
+The [23 task cards](../../tasks/README.md) include direct route bridges, independent audits, finite computations, shared geometric/analytic dependencies and alternative approaches. Their weights are retained from the source to diversify attention. Proposed adjacent results are [noncanonical snapshots](proposals.md), never new accepted premises. [Family status](research-family-status.md) states which restricted shortcuts are blocked and which changed hypotheses would justify revisiting them.
 
 ## Global population reserve, lattice extraction, and paid interfaces
 

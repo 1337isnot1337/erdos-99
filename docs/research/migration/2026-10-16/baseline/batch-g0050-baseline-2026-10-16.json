@@ -1,0 +1,39 @@
+{
+  "batch": "source-main iterative-pruning atomic-gap hierarchy",
+  "captured_at_utc": "2026-10-16T15:34:17+00:00",
+  "destination": {
+    "integration_branch": "research/source-main-g0050-boundary-stack-20261016",
+    "main_sha": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+    "main_tree": "66e596e4da875bab2bbdf4bacac51d17eeb2b466",
+    "manifest": "destination-main-before-g0050-358af825-tracked-files.txt",
+    "manifest_sha256": "8762ff5cd995b3284b05fb38bd214b5168212e258d3a081a3f10d78e1bf18914",
+    "open_prs": {
+      "count": 0,
+      "inventory": "destination-open-prs-before-g0050-2026-10-16.json",
+      "inventory_sha256": "5f3bbb42f202ee94f91d13b938a6107a42767bdb761a5f309f02c0ea2580219c"
+    },
+    "repo": "https://github.com/1337isnot1337/erdos-99",
+    "tracked_paths": 1267
+  },
+  "previous_batch": {
+    "hosted_checks": "research integrity jobs skipped by repository vars; post-merge branch-prune job did not start because GitHub account billing/spending-limit restriction",
+    "merge_sha": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
+    "merge_tree": "66e596e4da875bab2bbdf4bacac51d17eeb2b466",
+    "pr": 33
+  },
+  "schema_version": "e99-migration-batch-baseline/v1",
+  "source": {
+    "main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "main_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+    "manifest": "source-tracked-files.txt",
+    "manifest_sha256": "b67fa02da34461b03ddcddf64cc175cb7cc4bbcf78eb52425f71fc446a32b26b",
+    "open_prs": {
+      "count": 21,
+      "heads_match_frozen_initial_inventory": true,
+      "inventory": "source-open-prs-before-g0050-2026-10-16.json",
+      "inventory_sha256": "322452ce6f7bb74179686895f78580b21052232f1f0c6a68120de565d5814d74"
+    },
+    "repo": "https://github.com/1337isnot1337/e-99",
+    "tracked_paths": 4717
+  }
+}

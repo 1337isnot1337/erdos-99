@@ -795,3 +795,81 @@ destination theorem-state, corrected inverse-phase demotion, and C-II/Level I
 status remain unchanged. No third-party paper text, credentials, or private
 infrastructure references were imported. Destination visibility remains
 private.
+
+## Source-main iterative-pruning and atomic-gap batch
+
+This focused batch starts from destination main
+`358af8253f85ab7b9cdbf976ce186ee8426718e4` (tree
+`66e596e4da875bab2bbdf4bacac51d17eeb2b466`) and frozen source main
+`42f0296d1aca068c809f74cee5dcdb4ebdb27c73` (tree
+`e061f039eac44c286a00eacdcaa9a4cbbb877891`). The source main and its 21 open
+PR heads were refreshed before the batch and matched their frozen identities.
+The batch manifest records the exact tracked-path lists and PR observations.
+This is a content import from source main, not the adoption of a source PR
+status.
+
+### Mathematical hierarchy
+
+The imported proof chain has three distinct levels:
+
+1. The split-budget report corrects a double charge by separating inversion
+   missing mass from residual missing mass and proves
+   `rho >= (a+b-K)_+^2/18` for its exact two-atom scope. This is retained as a
+   substantive historical proof contribution; it is weaker than its successor
+   and is not presented as the current bound.
+2. The iterative-pruning report deletes high residual-missing-degree trains
+   across both shores. Charging every missing edge only when the first
+   endpoint is deleted gives
+   `rho >= min{g_*^2/10, 2m_*^2/29}`, and yields the `1/10` branch when
+   `g_*/m_* <= sqrt(20/29)`. This is an unreviewed proof candidate in the
+   destination.
+3. The branch-aware minimax report uses both branches over the dominant
+   three-phase domain. At proof-only full-core Type-II train-measure scope it
+   gives `(T-q/2)/D >= 2 sqrt(Delta_2)+0.0071`,
+   `T_R/D >= 2 sqrt(Delta_2)+0.0071`, and
+   `sigma_R/D >= 0.0142`, where `Delta_2=pi/(2sqrt(3))`. It supersedes the
+   imported `0.0050` matched bound at these precise scopes. Its outward
+   interval verifier certifies a margin greater than `0.000366`; a separate
+   Machin enclosure supports the exact pi use.
+
+The source `0.0050` report and its hostile audit are also retained. Its
+separate Section-171 calculation gives
+`(q-k)/D >= 4/9(pi+sqrt(Delta_2))+0.0023374-o(1)` at the `0.0050` input.
+That downstream consequence remains distinct: the `0.0071` report does not
+recompute it. The corresponding exact propagation checker passes only for the
+recorded `0.0050` endpoint. The task is to derive the new downstream function
+and intervals from `0.0071`, then carry the stronger input through outer-energy
+and complement-rhombus-incidence chains. Do not transfer the old numerical
+output by implication.
+
+The six imported reports/audits and four verifiers are byte-identical to
+source-main blobs. Their original source path, commit, blob OID, SHA-256,
+destination SHA, lifecycle, mathematical relation, and dependencies are
+recorded per file in
+[`ledger/source-main-files.jsonl`](ledger/source-main-files.jsonl). The
+[atomic-gap research track](../../tracks/target-c-iterative-pruning-atomic-gap.md),
+[candidate registry](../../../targets/target-c/candidate-registry.json), and
+[new task](../../../../tasks/target-c-branch-aware-atomic-gap.md) connect the
+proof lineage to its exact next obligation.
+
+The imported statements rely on the destination's existing canonical
+full-core Type-II branch, phase law, train/interface accounting, pseudogrid,
+and hole-stable source-hull projection; the registry names those claim IDs.
+Neither the pair lemma nor the matched gap extracts the required atom families
+from every global minimizer. No source-wide strict-diameter competitor or exact
+unit triangle is supplied. The destination theorem-state, C-II status,
+Level I status, and the inverse-phase withdrawal are unchanged. This batch
+does not restore the withdrawn global `K'/D` chart or `q=O(D^(4/5))` rate.
+
+The four local checks currently pass on the migration branch:
+
+```text
+python3 research/verify_target_c_iterative_minimax_atomic_gap_0050.py       PASS, 15,000 intervals
+python3 research/verify_target_c_g0050_global_propagation.py                PASS, exact Section-171 interval checks
+python3 research/verify_target_c_branch_aware_atomic_gap_0071.py             PASS, 16,600 intervals
+python3 research/verify_target_c_branch_aware_atomic_gap_0071_pi_enclosure.py PASS, positive Machin safety margins
+```
+
+These checks validate the declared finite certificates, not the analytic
+proofs, destination independent review, global source extraction, or C-II
+closure. The batch and the overall research migration remain incomplete.
