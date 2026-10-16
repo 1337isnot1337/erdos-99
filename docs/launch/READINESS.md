@@ -3,8 +3,9 @@
 ## Expanded Target C migration and exact-commit receipt
 
 The five-shard migration adds 813 frozen source-main Target C reports and four
-support files beyond the older publication candidate described below. Its full
-path-level scientific and rights reconciliation is in
+newly imported cross-shard support files beyond the older publication candidate.
+Its additive rights record accounts for those reports and 21 total support
+files. The full path-level scientific and rights reconciliation is in
 [the migration report](../research/migration/2026-10-16/scientific-reconciliation.md).
 The earlier Gate 2 receipt does not cover this expanded tree. Run the full
 [Gate 2 procedure](GATE_2_VERIFICATION.md) against the exact final destination
@@ -21,10 +22,10 @@ promoting its proposed repair. The corpus has 451 claim IDs, 845 edges, 94
 registered certificates, 810 source records and 20 task cards. Level I/A/B/C-II
 remain open; C-I is closed in its stated scope.
 
-Those counts describe the frozen 2026-10-15 publication candidate. The ongoing
-private research migration adds two focused task cards; its current tree has 22
-tasks and is outside this older receipt. Rebuild the final publication receipt
-against the final migration commit before any Gate 2 claim.
+Those counts describe the frozen 2026-10-15 publication candidate. The expanded
+migration tree has 23 task cards according to the current public-integrity check.
+Rebuild the final publication receipt against the final migration commit before
+any Gate 2 claim.
 
 ## Final receipt contract
 
@@ -53,13 +54,22 @@ registered certificate suite, full publication content/history audit, Gitleaks
 on tree and history, workflow lint and clean-state checks. Local release engineers
 may additionally pass `--source-repo /private/source-clone`; public users never
 need that clone. This optional audit checks all 4,793 versioned source records.
+The full publication auditor also runs the destination-only frozen Target C
+integrity verifier. The source-backed form independently checks all 813 frozen
+source blobs and 21 support-file blobs and replays recorded transformations:
+
+```sh
+python tools/verify_frozen_target_c_813_migration.py --destination .
+python tools/verify_frozen_target_c_813_migration.py \
+  --source-repo /private/source-clone --destination .
+```
 
 `executable_checks_passed` and `automated_release_precheck_passed` are distinct.
-Earlier release receipts returned one because source rights and personal Git-email
-consent were not yet recorded. Both owner decisions are now documented under Gate 1.
-The receipt still cannot grant permissions, and its historical outcome is unchanged.
-Do not weaken checks to turn a HOLD into a green result; rerun and explicitly
-reconcile the attestation at the actual final commit.
+The current rights records reconcile the previous 810-entry manifest and the
+additive 834-path migration. The expanded history contains one additional
+unapproved non-noreply identity, so the release precheck remains blocked unless
+its rights are separately resolved. Do not weaken checks or infer approval
+from the owner's consent for a distinct identity.
 
 ## Targeted evidence executed during closure
 
@@ -89,16 +99,13 @@ candidate scope; they are not a substitute for the final run.
 
 The [updated publication audit](PUBLICATION_AUDIT.md) and
 [current rights review](../publication/rights-review.md) record the owner's
-project-controlled rights authorization for all 810 included source records,
-with the grant pinned to the exact manifest Git blob. The owner has also approved
-publication of their own existing personal-domain Git author email. As a result,
-a clean-root migration is no longer required **solely for this identified email**.
-The clean-root export remains available as a separate privacy option; the owner
-wishes to preserve the current repository and PR history. The older candidate's
-rights/HOLD receipt remains historical. The release auditor now reconciles the owner's recorded grant through an
-exact-manifest Git-blob check rather than silently discarding the historical
-pending labels. Gate 2 must still execute and verify the full release suite and
-address any independent third-party or security finding. No visibility change is authorized here.
+authorization for the 810-entry manifest and the separate 834-path Target C
+migration. The original exact-manifest check now verifies the prior-to-current
+entry reconciliation; the additive rights check validates every frozen report
+and support path. The owner has approved their own existing personal-domain Git
+author email, but one additional identity in the expanded history remains
+unapproved. The owner wishes to preserve repository and PR history. Gate 2 must
+run on the exact final commit, and no visibility change is authorized here.
 
 Hosted execution remains unverified because the account restriction prevented
 jobs from starting. Both protective rollout gates remain unset. No paid usage or

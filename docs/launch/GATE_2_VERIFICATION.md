@@ -31,7 +31,11 @@ That is an environment failure, never a passing or skipped certificate.
 The optional `--source-repo /private/source-clone` additionally verifies 4,793
 versioned source records. Ordinary public reproduction needs no private source
 archive. Source/public hashes and all 94 registered certificate commands are
-available in the publication corpus.
+available in the publication corpus. The full auditor runs the destination-only
+`tools/verify_frozen_target_c_813_migration.py` check against the frozen report
+index, disposition ledger, support-file list and additive rights records. A
+source-backed replay of the 813 reports and 21 supporting files is available
+with the same `--source-repo` argument documented in `READINESS.md`.
 
 For a scan including GitHub PR heads as well as clone-visible branches, fetch
 them before running the same verifier:
@@ -97,10 +101,14 @@ committed bytes differ from the reviewed blob.
 
 ## Separate publication decisions
 
-The release auditor checks the original exact-manifest owner attestation and
-the narrowly authorized Git email. Source-rights reconciliation remains Gate 1;
-visibility authorization and eventual anonymous access remain Gate 3. A scan
-does not establish legal ownership or clearance of independently owned prose.
+The release auditor checks the original exact-manifest owner attestation, the
+prior-to-current manifest reconciliation, the additive 834-path first-party
+migration authorization and the narrowly authorized Git email. The expanded
+history currently has one additional unapproved non-noreply identity (14
+author/committer occurrences); the owner's authorization does not clear it. Source-rights
+reconciliation remains Gate 1; visibility authorization and eventual anonymous
+access remain Gate 3. A scan does not establish legal ownership or clearance of
+independently owned prose.
 
 The schema's existing source-repository URL is a local schema identifier, not a
 credential or a runtime network/private-archive dependency. Scanner regex
