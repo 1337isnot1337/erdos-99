@@ -90,7 +90,9 @@ jobs:
                       in_use.add(head["ref"])
 
           deleted = 0
-          for branch in pages("branches"):
+          # Snapshot the paginated list before deleting any refs.
+          # Otherwise deletions shift later pages and skip eligible heads.
+          for branch in list(pages("branches")):
               name = branch.get("name")
               if not name or name in in_use or branch.get("protected"):
                   continue
