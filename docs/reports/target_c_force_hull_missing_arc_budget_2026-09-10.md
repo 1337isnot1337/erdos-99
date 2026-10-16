@@ -299,7 +299,7 @@ Both derivatives are negative, and
 \frac{A'(x)}{P'(x)}
 =
 \frac{1-\cos x}{4(1-\cos(x/2))}
-=rac{1+\cos(x/2)}2
+=\frac{1+\cos(x/2)}2
 =\cos^2(x/4).
 \]
 

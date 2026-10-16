@@ -436,7 +436,7 @@ Hence
 \[
 \liminf G_D
 \ge
-\frac\pi4-rac\pi4\lambda_*^2.
+\frac\pi4-\frac\pi4\lambda_*^2.
 \tag{4.3}
 \]
 

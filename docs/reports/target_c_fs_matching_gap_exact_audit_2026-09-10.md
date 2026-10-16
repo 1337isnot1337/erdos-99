@@ -173,7 +173,7 @@ Therefore
 Finally,
 
 \[
-\frac{154451}{250000}>rac{121}{196},
+\frac{154451}{250000}>\frac{121}{196},
 \]
 
 because

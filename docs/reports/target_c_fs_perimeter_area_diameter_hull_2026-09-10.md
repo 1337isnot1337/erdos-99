@@ -456,7 +456,7 @@ Using (6.1), `a>=1/2`, and monotonicity of each positive factor in the second te
 \[
 \Omega'(p)
 \ge
-\frac38+rac{\pi\sqrt3}{24}
+\frac38+\frac{\pi\sqrt3}{24}
 >\frac{7}{12}
 >\frac12.
 \tag{6.6}

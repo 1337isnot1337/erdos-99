@@ -226,7 +226,7 @@ of that circle, and Corollary CAP.2 gives
 \[
 \operatorname{area}Q_\infty
 \ge
-\operatorname{per}Q_\infty-rac{3\pi}{4}.
+\operatorname{per}Q_\infty-\frac{3\pi}{4}.
 \tag{2.8}
 \]
 
