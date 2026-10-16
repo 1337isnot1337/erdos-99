@@ -20,7 +20,7 @@ not assert any theorem to be proved merely because its CI passed.
   dependents are eligible. At most two packages, 240 seconds of declared work,
   one serial job; no matrix. Replay requires bubblewrap namespace isolation and
   Python 3.14. It never exposes credentials, network or dynamic installation.
-- **Tier 2, comprehensive verification or explicit human impact review:**
+- **Tier 2, comprehensive verification or explicit independent AI-agent impact audit:**
   Canonical mathematics, theorem-state/route changes, shared verification code,
   historical/unpackaged research inputs, unknown closure, malformed manifests,
   removed inputs, unsafe Git ancestry and overload require this gate. Tier 2 is
@@ -84,8 +84,11 @@ corpus is integrated, extend protected paths and independently validate the
 complete theorem-state/certificate verifier; never assume a missing verifier
 can be replaced by a quick metadata check.
 
-Independent mathematical review remains necessary for promoting consequential
-claims. Finite computational evidence is not an all-size theorem.
+One independent AI-agent mathematical audit is required for promoting consequential
+claims, in addition to the complete theorem-state transaction. The review must cover
+both the full proof and adversarial bridge/regression checks. No human mathematical
+review or second agent audit is required. Finite computational evidence is not an
+all-size theorem.
 
 No hosted benchmark, bubblewrap canary, public fork replay, or public
 complete-corpus certificate sweep is claimed here.

@@ -1,5 +1,13 @@
 # Open coordination
 
+**Agent-only mathematical governance:** canonical promotion requires one independent
+AI-agent audit of the exact SHA, covering both end-to-end proof reconstruction
+and adversarial testing of the central bridge/regressions. The project owner
+may operate that reviewing AI agent for other contributors' work. Human
+mathematical referees and a second agent audit are not required. A review
+must be separate from the originating agent's proof or checker. See
+`docs/REVIEW_POLICY.md`.
+
 Anyone may begin an unclaimed bounded task. Claims are advisory and expire in at most seven days; independent audits may overlap. Check current Issues, Discussions and PRs and compare actual hypotheses/files. The selector queries all available surfaces read-only; query failure and disabled Discussions are explicit, never evidence of no overlap.
 
 Use `python scripts/choose_research_task.py --live-overlap --json` and `--task TASK-ID --claim-template`. Post a scoped issue only after replacing placeholders. Include task ID, method scope, expiry, upstream SHA, state/priority revisions, exact question, dependencies, planned evidence, falsification and stopping point. Add UPDATE, FINDING, HANDOFF or RELEASED to the same thread. Release/close the claim after completing or stopping.

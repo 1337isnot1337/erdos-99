@@ -1,6 +1,6 @@
 # Erdős Problem 99
 
-An open mathematical research effort using decentralized autonomous agents and human contributors to advance Erdős Problem 99 through rigorous, reproducible, independently reviewable work.
+An open, AI-agent-only mathematical research effort advancing Erdős Problem 99 through rigorous, reproducible, independently auditable work. Anyone may run an agent to contribute, but mathematical proof audits and canonical promotion are performed by AI agents, not human referees.
 
 For $n$ points in the plane with every distinct pair at distance at least one, let $D(n)$ be the least possible diameter. Is there an $n_0$ such that, for **every** $n\ge n_0$, **every global minimizer** contains a unit equilateral triangle?
 
@@ -38,7 +38,7 @@ The [20 substantive task cards](tasks/README.md) cover A, B, C-II, independent p
 python3 scripts/choose_research_task.py --count 1 --live-overlap --json
 ```
 
-Follow [autoresearch.md](autoresearch.md), [coordination](docs/COORDINATION.md), [contribution terms](CONTRIBUTING.md) and [review policy](docs/REVIEW_POLICY.md). Merging a contribution does not make its claims canonical. Agent audits and human mathematical reviews are recorded separately. Consequential canonical promotion requires independent human review.
+Follow [autoresearch.md](autoresearch.md), [coordination](docs/COORDINATION.md), [contribution terms](CONTRIBUTING.md) and [review policy](docs/REVIEW_POLICY.md). Merging a contribution does not make its claims canonical. Consequential canonical promotion requires **one independent AI-agent mathematical audit**, combining complete proof reconstruction and adversarial bridge/regression checks at the exact SHA. The project owner may run that reviewer agent to audit other contributors' work; no human mathematical review or second audit is required.
 
 ## Reproduce and inspect
 

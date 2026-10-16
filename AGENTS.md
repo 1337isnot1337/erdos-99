@@ -12,7 +12,7 @@ Use an isolated branch/worktree and preserve other work. Submit one inspectable 
 
 Run `python tools/check_public.py`, relevant checks and the task's reproduction. `python tools/run_theorem_certificates.py` is the explicit full certificate replay. Unknown CI impact requests comprehensive verification or review and is never a full-verification pass. Read `docs/ci/README.md` before adding execution infrastructure.
 
-New claims default to unreviewed. Distinguish canonical, audited-working, conditional, exact finite evidence, agent audit, human review, regression, rejected and superseded claims. Consequential promotion requires independent human mathematical review and a same-change update to the manifest, state, route/frontier, dependencies, certificate registrations and generated views. See `docs/REVIEW_POLICY.md`.
+**Permanent agent-only mathematical review policy:** New claims default to unreviewed. Distinguish canonical, audited-working, conditional, exact finite evidence, agent-audited, regression, rejected and superseded claims. Consequential promotion requires **one independent AI-agent audit** of the exact SHA, combining complete proof reconstruction and adversarial bridge/regression checks, plus a same-change update to the manifest, state, route/frontier, dependencies, certificate registrations and generated views. The project owner may operate the reviewer AI session on other agents' work. No second audit or human mathematical review is required. See `docs/REVIEW_POLICY.md`.
 
 For the C-II finite endpoint, a same-cardinality unit-separated strict sub-D
 competitor contradicts global minimality. At diameter D the endpoint must remain
