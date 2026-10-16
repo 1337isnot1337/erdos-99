@@ -113,3 +113,17 @@ explicitly. Nothing is promoted in destination theorem-state.
 ## Source PR #948 — quarter-fold and complete bent-array routes
 
 The seven mathematical reports, their seven exact finite verifiers, and seven JSON outputs were already present in the destination. The [focused research track](../docs/research/tracks/target-c-quarter-folds-bent-arrays.md) reconciles the proof scopes, finite-evidence limits, and missing endpoint/extraction bridges. All seven claims remain unreviewed and outside theorem-state. See the [candidate registry](../docs/targets/target-c/candidate-registry.json) and [per-file migration ledger](../docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl).
+
+## Source PR #952 — owner release, loaded anchors, and inclusive floors
+
+The five reports, six finite outputs, and four verifier scripts were already
+present in the destination. The [focused track](../docs/research/tracks/target-c-owner-release-loaded-anchor.md)
+maps their conditional results and exact remaining bridge; the
+[candidate registry](../docs/targets/target-c/candidate-registry.json) links
+each proof to its finite evidence, canonical dependencies, and limitations.
+The finite owner-sink and common-release cases are explicitly nonglobal. The
+global gap is extraction of a canonical owner family with owner-respecting
+loaded ports for every upper-relevant label and isolate, followed by a nonzero
+solution of the exact full-source lower/upper closure. All five candidates
+remain unreviewed and outside theorem-state. The [migration ledger](../docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl)
+records all 17 source PR paths, including the rebuilt index and adapted README.

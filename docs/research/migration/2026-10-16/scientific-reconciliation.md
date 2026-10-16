@@ -388,9 +388,8 @@ explanations from the two PR-948 reports that contained them and from two
 already-retained first-party reports, one source-main file and one report at
 the frozen PR-952 head. The mathematical claims and local-check outcomes were
 retained. Source blobs and SHA-256 hashes remain in the inclusion manifest and
-per-file ledgers; only the public-copy hashes changed. PR #952 remains queued
-for its full 16-path comparison; its affected report row is explicitly marked
-as retained and release-redacted pending that review. The source-main
+per-file ledgers; only the public-copy hashes changed. PR #952 is fully
+reconciled in the seventh batch below. The source-main
 seed090 row likewise records the existing copy and keeps its cross-target
 mathematical reconciliation queued. The authorized inclusion set remains
 810 entries.
@@ -399,3 +398,92 @@ No canonical dependency, theorem status, registered certificate, or repository
 visibility changed. The source remains frozen at its recorded main SHA; all 21
 source PR head SHAs still match the recorded open-PR inventory. The destination
 remains private. Publication Gate 2 is not claimed and Gate 3 was not requested.
+
+
+## Seventh batch — frozen source PR #952 owner-release and loaded-anchor research
+
+The frozen source main remains `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`
+(tree `e061f039eac44c286a00eacdcaa9a4cbbb877891`). Source PR #952 was open at
+head `3536c0b6f6c2a929d9c96fffbdcfc480735fea3` (tree
+`a6503b1817dbd885f9378ca42677d811fe363c84`), with merge base
+`d999528cfaafd811a4a19bcfacd00f217c2fc375` (tree
+`4eff9ef7cd946225c5810ba23c1f0012a2c77355`). The destination batch starts
+from `621f7c7dcd5b12c949f83951d1d1521e09bbbe17` (tree
+`978550c0ab3248aee7ac41d9e8b5438a53c5687a`).
+
+The exact source diff contains 17 paths: five first-party proof reports, six
+saved JSONL finite outputs, four Python verifiers, the generated source
+artifact-index update, and `research/README.md`. The per-file ledger has one
+row for every path, with the frozen source commit, Git blob, SHA-256, destination
+path, destination blob/hash, role, lifecycle, and disposition. Four full reports,
+all six outputs, and all four verifiers were already byte-identical in the
+destination. The fifth report,
+`target_c_outer_owner_amplification_and_common_release_2026-10-10.md`,
+was already retained with its mathematical content unchanged; only two lines
+describing an account-specific hosted-CI billing annotation were replaced by a
+neutral statement that the historical run executed no steps. Its original
+source blob/hash remain recorded. The source artifact index was not copied;
+the destination index was regenerated. Its source README was adapted into the
+new focused [owner-release and loaded-anchor research track](../../tracks/target-c-owner-release-loaded-anchor.md).
+
+The PR's successive final-report additions are preserved at the frozen head.
+They develop five distinct candidate packages, all still **unreviewed**:
+
+1. Component anchoring proves a crossing actual-diameter port for each
+   contact component under exact contact-preserving owner translation. Under
+   canonical relative-interior stress and acute owner directions, every
+   nonzero contact-preserving binary selection has positive weighted old-
+   diameter gain. Mixed-component refinement is upper-safe after its stated
+   deletion bound. An exact connected nonglobal source has a zero-only reduced
+   lower formula, so the reduced hypotheses do not imply feasibility.
+2. Strict floor closure constructs unequal-height endpoints from exact
+   full-source costs, and allows isolates independent variables. The finite
+   common-height obstruction does not rule out unequal-height/isolate motion.
+3. Inclusive floor closure adds weak equality at contact-opening floors while
+   preserving strict pair constraints. Its lexicographic closure returns the
+   unique maximal feasible support; the contact-loss version is complete in
+   its class, and the locked-contact branch gives a canonical contradiction
+   for a surviving proper core group even at its positive floor. An equal-cost
+   all-weak path cannot force elimination.
+4. The loaded-anchor box gives upper safety under same-owner coverage of every
+   upper-relevant label, including assigned isolates. The full-core near-disk
+   corollary gives a loaded hull vertex within
+   `D(2 eta + sqrt(2 eta)) + rho` of a near-diameter label, but does not supply
+   same-owner or crossing-diameter incidence. A native-direction box and an
+   Audit.106-conditional owner-count inequality are also preserved in the
+   report.
+5. Amplitude/common-release candidates build exact implication systems that
+   include actual upper pairs, with stress imbalance controlling a loaded-port
+   projection. A nonzero maximal assignment would give contact loss, but the
+   report's source-extraction plus unary-avoidance theorem is still missing.
+
+The intermediate PR history was checked for changes to these scopes. Commit
+`a7a6dfda` supersedes the earlier CT-only next theorem with UCC, which includes
+actual upper-pair clauses; `c998f842` adds the stress-imbalance bound and updates
+the source-extraction obligation. Commit `8053f34b` adds the native-direction
+box and LDE family bound, expanding the finite loaded-anchor count from 324 to
+744 pair states. Commit `a223a304` adds mixed-component refinement to the
+component report, while `2dea92b9` adds signed clipping to unequal-height
+transport. The final reports and candidate registry use these later scopes;
+the earlier CT-only obligation and 324-state count are not presented as current.
+
+The focused track, five new registry entries, research proposal index, root
+`research/README.md`, Target C `CURRENT.md`, bottleneck brief, and three live
+task cards now point to the exact reports, verifiers, outputs, canonical
+dependencies, limits, and next obligations. There are 36 candidate-registry
+records total after this batch; all five PR #952 records remain unreviewed and
+the canonical theorem-state, C-II status, and registered certificate set are
+unchanged.
+
+The reproduced finite checks pass on their stated scopes: the inclusive-floor
+run enumerates 620 supports and 180 geometric pair states; loaded-anchor runs
+cover 744 pair states in nine nonglobal fixtures; source-realized owner-sink,
+amplitude, and common-implication modes verify their 194,684 and 250,308 pair
+instance families and exact limiting slacks; unequal-height release checks
+225,680 pair states. All six verifier outputs reproduce their retained JSONL
+fixtures byte-for-byte. These are not proof of canonical extraction, universal
+claims, or global optimality. The single exact missing bridge remains a
+canonical owner family with owner-respecting loaded ports for every
+upper-relevant point and isolate, followed by nonzero support in the exact
+full-source lower/upper closure (or a source-specific obstruction/payment).
+No full-source endpoint for every canonical minimizer follows from PR #952.

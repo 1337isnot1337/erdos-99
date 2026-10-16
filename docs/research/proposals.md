@@ -129,6 +129,14 @@ the machine-readable candidate registry.
 
 Head `3536c0b6f6c2a929d9c96fffbdcfc480735fea3b`; **unreviewed**.
 
+The [focused research track](tracks/target-c-owner-release-loaded-anchor.md)
+states the conditional claims, exact finite scopes, and missing source
+extraction bridges. The [candidate registry](../targets/target-c/candidate-registry.json)
+links each report to its finite verifier/output, canonical dependencies,
+obstructions, and next proof obligation. The files were already retained in the
+destination; this migration reconciles their exact provenance and makes the
+five candidate packages discoverable from the active frontier.
+
 - [target_c_inclusive_floor_closure_and_locked_contact_release_2026-10-10.md](../../docs/reports/target_c_inclusive_floor_closure_and_locked_contact_release_2026-10-10.md)
 - [target_c_loaded_anchor_parallel_upper_box_2026-10-10.md](../../docs/reports/target_c_loaded_anchor_parallel_upper_box_2026-10-10.md)
 - [target_c_outer_owner_amplification_and_common_release_2026-10-10.md](../../docs/reports/target_c_outer_owner_amplification_and_common_release_2026-10-10.md)

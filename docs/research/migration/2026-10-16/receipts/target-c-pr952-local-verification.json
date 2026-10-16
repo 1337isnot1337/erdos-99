@@ -1,0 +1,79 @@
+{
+  "schema_version": "erdos-99-local-migration-verification/v1",
+  "recorded_at_utc": "2026-10-16T09:58:12Z",
+  "verification_subject": {
+    "destination_repository": "https://github.com/1337isnot1337/erdos-99",
+    "destination_pr": 25,
+    "branch": "research/target-c-pr952-owner-release-20261016",
+    "payload_commit": "40528f0def78eb6063ad42a0001f63586bd8bc1b",
+    "payload_tree": "736ce00f4816dac30bfbb1a8d6b93acc7323c260",
+    "base_main_commit": "621f7c7dcd5b12c949f83951d1d1521e09bbbe17",
+    "base_main_tree": "978550c0ab3248aee7ac41d9e8b5438a53c5687a"
+  },
+  "frozen_source": {
+    "repository": "https://github.com/1337isnot1337/e-99",
+    "main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "main_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+    "pull_request": 952,
+    "pull_request_head": "3536c0b6f6c2a929d9c96fffbdcfc480735fea3",
+    "pull_request_tree": "a6503b1817dbd885f9378ca42677d811fe363c84",
+    "pull_request_base": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "merge_base": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+    "merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+    "changed_source_paths": 17,
+    "ledger_rows": 17,
+    "ledger": "docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl",
+    "ledger_result": "PASS; frozen diff matches all 17 rows; source and destination Git blobs and SHA-256 values verify",
+    "source_pr_state_at_freeze": "OPEN, draft, at pinned head",
+    "source_history": "Final UCC includes actual upper-pair clauses; the loaded-anchor result adds native-direction boxes and LDE family bound; mixed-component refinement and signed clipping are retained; earlier CT-only and 324-state wording are identified as superseded.",
+    "candidate_registry_records": 5,
+    "candidate_registry_artifact_references": 16,
+    "candidate_registry_hashes_and_dependencies": "PASS; all report/verifier/fixture hashes match the ledger and all canonical dependency IDs resolve"
+  },
+  "research_integration": {
+    "mathematical_reports_newly_copied": 0,
+    "reports_already_retained": 5,
+    "exact_verifier_and_fixture_copies": 10,
+    "release_redacted_reports": 1,
+    "navigation_adapted": true,
+    "destination_index_regenerated": true,
+    "claims": [
+      "Component anchoring, strict weighted diameter gain, mixed-component refinement, and a nonglobal zero-only lower-system regression",
+      "Strict unequal-height floor closure and independent isolate transport",
+      "Inclusive-floor closure, contact-loss completeness, and locked-contact lexicographic release",
+      "Owner-local loaded-anchor upper boxes, full-core near-disk proximity, and conditional Type-II low-defect owner capacity",
+      "Amplitude/common-release implication systems including actual upper-pair clauses and stress-imbalance port bounds"
+    ],
+    "all_five_candidate_records": "unreviewed; theorem-state unchanged",
+    "target_c_status": "C-II and Level I remain OPEN"
+  },
+  "commands": [
+    {"command": "python3 tools/check_theorem_state.py", "result": "PASS"},
+    {"command": "python3 tools/build_artifact_index.py", "result": "PASS; 540 artifacts"},
+    {"command": "python3 tools/check_public.py", "result": "PASS; zero errors; mathematical_proof=false; 94 certificates, 451 claims, 845 edges, 810 retained source files, 20 tasks"},
+    {"command": "python3 -m tools.test_public_proof_graph", "result": "PASS; 3 tests"},
+    {"command": "python3 -m tools.test_public_rights", "result": "PASS; 4 tests"},
+    {"command": "Six PR952 verifier invocations across four programs", "result": "PASS; 744 loaded-anchor pair states, 620 inclusive supports and 180 geometric pair states, 194684 amplitude pair instances, 250308 common-release pair instances, 225680 unequal-height pair instances; all six outputs match their JSONL fixtures byte-for-byte"},
+    {"command": "python3 tools/run_theorem_certificates.py", "result": "PASS on payload commit 40528f0def78eb6063ad42a0001f63586bd8bc1b; all 94 selected of 94 unique certificates; zero failures"},
+    {"command": "Frozen PR path/hash audit, registry dependency audit, and git diff --check", "result": "PASS"}
+  ],
+  "hosted_actions": {
+    "destination_pr": 25,
+    "observed_head": "40528f0def78eb6063ad42a0001f63586bd8bc1b",
+    "run_id": "38884045294",
+    "url": "https://github.com/1337isnot1337/erdos-99/actions/runs/38884045294",
+    "workflow": "public-research-integrity",
+    "jobs": {"replay": "SKIPPED"},
+    "steps_executed": false,
+    "success_claimed": false
+  },
+  "theorem_and_release_status": {
+    "theorem_state": "2026-10-15.publication.2; unchanged",
+    "registered_certificate_set_changed": false,
+    "publication_inclusion_membership_changed": false,
+    "publication_inclusion_retained_source_files": 810,
+    "repository_visibility": "private",
+    "gate_2": "NOT RUN; full source migration remains incomplete",
+    "gate_3": "NOT REQUESTED; repository remains private"
+  }
+}

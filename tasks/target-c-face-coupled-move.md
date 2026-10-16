@@ -83,3 +83,7 @@ No finite model, one-grain result, local packing, infinitesimal flex or supplied
 Run `python scripts/choose_research_task.py --task target-c-face-coupled-move --live-overlap --json` and inspect matching public work. [Proposal snapshots](../docs/research/proposals.md) record adjacent source proposals without assuming they are accepted or live public claims.
 
 One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.
+
+## Related full-source owner-release candidates
+
+Before building a new implication graph, read the [owner-release and loaded-anchor track](../docs/research/tracks/target-c-owner-release-loaded-anchor.md). It records exact strict/equal-floor closure, unequal-height isolate transport, the loaded-anchor upper box, and the current source-extraction obligation. Those theorems solve only their supplied owner classes; they do not supply the canonical family or a nonzero feasible assignment.

@@ -68,3 +68,7 @@ No finite model, one-grain result, local packing, infinitesimal flex or supplied
 Run `python scripts/choose_research_task.py --task target-c-typeii-stress-mass-access --live-overlap --json` and inspect matching public work. [Proposal snapshots](../docs/research/proposals.md) record adjacent source proposals without assuming they are accepted or live public claims.
 
 One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.
+
+## Related owner-release candidates
+
+The [owner-release and loaded-anchor track](../docs/research/tracks/target-c-owner-release-loaded-anchor.md) records the `IM` stress-imbalance port bound and loaded-anchor capacity hypotheses. They apply only to a supplied owner family; the source must still produce owner-respecting loaded ports for every upper-relevant label and isolate before the exact lower/upper closure can yield a finite endpoint.

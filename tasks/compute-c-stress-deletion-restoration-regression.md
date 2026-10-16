@@ -67,3 +67,7 @@ One 30–60 minute proof sublemma, exact finite model, independent replay or pre
 
 
 Source PR #948 also records deep-face isolate transport and rigid-cycle persistence candidates. Use the [quarter-fold/bent-array track](../docs/research/tracks/target-c-quarter-folds-bent-arrays.md) to keep their full-endpoint hypotheses separate from supplied-set deletion and restoration regressions.
+
+## Related owner-sink and closure evidence
+
+Read the [owner-release and loaded-anchor track](../docs/research/tracks/target-c-owner-release-loaded-anchor.md) before repeating finite owner-deletion, Horn, or restoration screens. It links the exact owner-sink, amplitude/common-release, unequal-height, inclusive-floor, and loaded-anchor verifiers, while separating their nonglobal fixtures from canonical extraction and upper-pair feasibility.
