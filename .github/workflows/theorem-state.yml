@@ -15,7 +15,7 @@ concurrency:
 # No push/schedule/dispatch trigger, paid runner, broad matrix, or full research replay.
 jobs:
   plan:
-    if: github.event.pull_request.draft == false
+    if: vars.E99_PUBLIC_CI == 'true' && github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     timeout-minutes: 3
     outputs:

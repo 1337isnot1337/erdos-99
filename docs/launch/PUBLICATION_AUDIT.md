@@ -1,5 +1,134 @@
-# Candidate publication audit
+# Independent publication audit — current mathematical E99 corpus
 
-Owner authorization selects Apache-2.0 and the new public destination. This does not license uncleared third-party work. Full private Git history, papers, extracted pages/text, credentials and administrative preservation records are excluded. Exact source blobs and public hashes are in the inclusion manifest; exclusion inventory covers inspected source paths.
+**Candidate reviewed:** `1337isnot1337/erdos-99` commit
+`b5984940a2258b8e2f58ba54ef6abe3141ab9a12` (2026-10-15).
+**Pinned private scientific source:** `1337isnot1337/e-99` commit
+`5dcbdc3dfa1f9be370602cc54d50e68eabb88f56`.
+**Private source observed afterward:** `eb51394f371aee958b0d9332f80faf75ae694b9e`.
 
-Final rights, attribution, privacy/security and reachable-history review is pending. This candidate must remain private until concrete blockers are resolved. Mathematical dependencies must not be omitted to pass a rights gate.
+**Release decision: HOLD.** The substantial current corpus is staged and
+its *declared* proof/task/source dependency graph is structurally consistent.
+This is not yet a defensible assertion that all source rights, privacy,
+historical metadata and final public-hosted behavior are cleared. Do not
+flip the repository to public solely on the basis of this document.
+
+## What the staged repository actually contains
+
+- 889 committed file blobs at the pinned candidate.
+- 804 source-derived retained files in the inclusion manifest: 734 from the
+  pinned source main and 70 from ten explicitly pinned research-PR heads.
+  The latter comprise 58 live, noncanonical proposals and 12 frozen
+  supporting proof/verifier dependencies; **none is promoted by inclusion**.
+- 3,959 source paths explicitly excluded. The 734 selected mainline files
+  plus 3,959 excluded files account for all 4,693 blobs at the exact pinned
+  source main. No mainline source path is lost from that inventory.
+- 451 distinct claim IDs, including 372 canonical, 3 audited-working,
+  62 regressions, 5 superseded and 9 rejected; 845 declared theorem edges.
+- 94 registered finite certificate scripts/entries and 19 substantive
+  research-task cards. Every referenced explicit claim prerequisite, named
+  proof, audit, registered certificate and task-source path checked in this
+  audit exists in the frozen candidate. The retained current Target C
+  canonical module list is complete relative to the pinned source manifest.
+- No `papers/` or `extracted/` directories, PDF/image/archive binaries,
+  symlinks or submodules are present in the pinned committed public tree.
+- Inclusion-manifest declared file-dependency edges all resolve and
+  `unresolved_dependencies` is an empty array.
+
+**Scope warning:** Structural reachability is not a proof of mathematical
+validity, adequate implicit proof dependencies, safe program behavior, or
+copyright ownership. The canonical theorem remains open at Level I.
+A/B/C-II are open; C-I is closed.
+
+## Independent checks and evidence
+
+1. Compared the pinned source and public Git trees and traced inclusion and
+   exclusion inventories as above.
+2. Parsed the full published machine proof graph and research task catalogue;
+   checked 451 unique claim IDs and 845 graph prerequisites against published
+   paths; confirmed no missing explicit theorem, proof, audit, or task path.
+3. Examined substantive source-to-public editorial size changes. Of the 804
+   imported files, 74 have different recorded source and public SHA256 hashes.
+   The largest deliberate condensation is `docs/STATE.md` (a state-navigation
+   replacement; the detailed theorem manifest and proof modules are retained).
+   The `docs/reports/campaign_ledger_2026-09-09.md` extract retains the
+   conditional scalar theorem, nonglobal obstruction and adversarial regression
+   sections while omitting historical branch/campaign and repo-status sections.
+   This is a structural/content inspection, **not** a full mathematical
+   equivalence certification of all 74 edited sources.
+4. Independently fetched and SHA256-checked 12 edited proof/audit files against
+   their recorded public checksums: 12/12 matched.
+5. Independently sampled the README, live A/B/C route maps, source provenance,
+   readiness notes, contributor instructions and a major proof manuscript for
+   common token patterns, private-source URLs, selected worktree paths and
+   email strings: no matches in that sample. The build worker reports a
+   separate zero-finding Gitleaks scan and 94/94 local certificate replays.
+   Those larger scans and replay results were **not independently rerun**
+   by this review.
+6. Reviewed the entire reachable list of 12 publication-staging commits;
+   four commits have author email metadata using a personal email domain.
+   Exact email values are deliberately omitted from this document.
+7. Added `tools/audit_public_release.py` and six synthetic regression tests.
+   The tool can check **every committed file's** manifest SHA256, restricted
+   artifact paths, common credential markers, imported rights-clearance
+   dispositions, and author/committer emails when executed against an
+   actual local clone. Its test fixtures pass independently under Python 3.12.
+   A full local run against the live 889-file candidate has not yet been
+   independently executed.
+
+## Release-blocking decisions
+
+**1. Rights and attribution.** All 804 source-derived manifest entries still
+say `publication_clearance: pending provenance/content review`. The owner
+selected Apache-2.0 for original E99 works, but that selection cannot assign
+third-party rights. Obtain a clear owner confirmation that the retained
+original works can be distributed under Apache-2.0, identify any contributor
+or third-party exceptions, and record exact disposition and notices. Do not
+stamp all entries approved based only on a successful automated scan.
+
+**2. Reachable commit metadata.** Four staging commits expose personal-domain
+author emails in any future public Git history. Obtain explicit authorization
+from the affected author(s) or rebuild the still-private destination as a
+clean-root snapshot using author-approved public/noreply metadata. A `.mailmap`
+file does not remove emails from existing Git objects. Do not expose the current
+history by changing visibility without resolving this decision.
+
+**3. New source delta since selection.** The source advanced 24 new file blobs
+after `5dcbdc3d`, including two noncanonical global mathematical reports and
+their exact verifiers introduced in private PR #1005, plus CI and preservation
+artifacts. The public corpus must evaluate those **by mathematical relevance**:
+import scoped new research if useful, or explicitly exclude it with rationale.
+No canonical state change was observed in the source transition; this does not
+make every new noncanonical report irrelevant.
+
+**4. Final executable and outsider gate.** Rerun the full public corpus
+integrity checker, full applicable certificate suite, publication scanner and
+three independent fresh-clone A/B/C frontier task sessions against the
+**final** release SHA. Hosted Tier 0 remains subject to an actual public-fork
+runner canary and cost/namespace review; do not treat a skipped job as green.
+The independent mathematical proof-review requirements are separate.
+
+## Hosted CI control correction
+
+The staged public workflow had an unconditional plan-job predicate for any
+non-draft PR despite earlier owner instructions to leave hosted rollout off.
+The accompanying audit change restores the explicit
+`vars.E99_PUBLIC_CI == 'true'` opt-in gate. The Tier 1 replay gate remains
+`vars.E99_PUBLIC_PACKAGE_REPLAY == 'true'`. Verify the merged workflow before
+allowing public traffic. Do not alter billing or enable paid usage.
+
+## Release checklist for the owner
+
+- [ ] Approve the exact candidate's contributor/source Apache-2.0 rights and notices, or isolate uncleared files without breaking load-bearing proofs.
+- [ ] Authorize the visible personal-domain Git commit emails or rebuild/sanitize clean-root history.
+- [ ] Decide inclusion of post-baseline noncanonical current-source reports with explicit status labels.
+- [ ] Execute the complete local release audit, corpus checker, applicable 94-certificate verification, and at least one A/B/C independent onboarding session each on the final frozen release candidate.
+- [ ] Independently inspect the resulting security report and document unresolved exceptions.
+- [ ] Confirm any hosted CI/cost settings without requiring blocked checks.
+- [ ] Change visibility only after the release gate passes, then verify anonymous clone and task onboarding.
+
+This review does **not** declare the mathematical problem solved, copyright
+ownership established, the repo safe for publication, or a new source theorem
+canonical. It documents current evidence, exact structural completeness and
+the concrete remaining release gates. Update the audit with the final SHA
+and results; do not reuse this candidate's conclusions after unreviewed edits.
+
