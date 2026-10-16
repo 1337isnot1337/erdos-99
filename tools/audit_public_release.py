@@ -56,6 +56,51 @@ def read_json(root: Path, path: str):
     return json.loads(git(root, "show", "HEAD:" + path))
 
 
+OWNER_RIGHTS_RECORD = "docs/publication/owner-rights-authorization.json"
+OWNER_RIGHTS_EVIDENCE = "https://github.com/1337isnot1337/erdos-99/pull/9#issuecomment-6207244081"
+OWNER_EMAIL_EVIDENCE = "https://github.com/1337isnot1337/erdos-99/pull/9#issuecomment-6207434631"
+OWNER_APPROVED_EMAIL = "cinnajdavis@gmail.com"
+
+
+def attested_owner_permissions(root: Path, manifest: dict) -> dict | None:
+    """Check the exact owner-granted source scope; never infer rights from a scan.
+
+    This records an external, owner-authored confirmation pinned to one immutable
+    inclusion-manifest Git blob. No generic waiver for arbitrary source files or
+    personal Git authors is allowed. GitHub owner identity and license exceptions
+    still require release-owner judgment independent of this structural check.
+    """
+    try:
+        record = read_json(root, OWNER_RIGHTS_RECORD)
+        blob = git(root, "rev-parse", "HEAD:docs/publication/inclusion.json").decode("ascii").strip()
+        entries = manifest["entries"]
+        m = record["source_manifest"]
+        owner = record["owner_declaration"]
+        external = record["external_expression_review"]
+        bounds = record["release_boundaries"]
+        if record.get("schema_version") != 1 or record.get("repository") != "1337isnot1337/erdos-99":
+            return None
+        if not HEX40.fullmatch(blob) or m.get("path") != "docs/publication/inclusion.json" or m.get("git_blob_sha") != blob:
+            return None
+        if not entries or m.get("retained_source_records") != len(entries) or m.get("source_pins") != len({e["source_commit"] for e in entries}):
+            return None
+        if owner.get("evidence_url") != OWNER_RIGHTS_EVIDENCE or owner.get("disposition") != "OWNER AUTHORIZED FOR PROJECT-CONTROLLED SOURCE EXPRESSION":
+            return None
+        if not owner.get("license_terms", "").startswith("Apache-2.0"):
+            return None
+        if external.get("confirmed_uncleared_redistributed_third_party_exceptions") != []:
+            return None
+        if bounds.get("repository_visibility_change_authorized") is not False:
+            return None
+        emails = set()
+        metadata = record.get("history_email_consent", {})
+        if metadata.get("comment_url") == OWNER_EMAIL_EVIDENCE and metadata.get("personal_domain_emails_found") == [OWNER_APPROVED_EMAIL]:
+            emails.add(OWNER_APPROVED_EMAIL)
+        return {"imported_entries": len(entries), "owner_approved_emails": emails}
+    except (KeyError, TypeError, AttributeError, ValueError, UnicodeError, OSError, subprocess.SubprocessError):
+        return None
+
+
 def reachable_objects(root: Path):
     """Read each reachable object once, including non-default and fetched PR refs."""
     records = git(root, "rev-list", "--objects", "--all").splitlines()
@@ -158,6 +203,13 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
         finding("docs/publication/", "invalid-inventory", type(error).__name__)
         inc = None
 
+    owner_perms = attested_owner_permissions(root, inc) if inc is not None else None
+    if owner_perms is not None:
+        counts["owner_attested_source_rights"] = owner_perms["imported_entries"]
+    elif OWNER_RIGHTS_RECORD in seen_paths:
+        finding(OWNER_RIGHTS_RECORD, "unverified-owner-rights-record",
+                "Owner attestation must match the exact committed inclusion manifest and permission evidence")
+
     if inc is not None:
         included = set()
         source_paths = set()
@@ -190,7 +242,10 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
                 if actual != rec.get("public_sha256"):
                     finding(dest, "hash-mismatch", "Published bytes differ from recorded SHA256")
             if rec.get("publication_clearance", "").startswith("pending"):
-                counts["pending_rights_reviews"] += 1
+                if owner_perms is not None:
+                    counts["owner_attested_pending_source_records"] += 1
+                else:
+                    counts["pending_rights_reviews"] += 1
             elif rec.get("publication_clearance") not in ("approved", "cleared"):
                 counts["unknown_rights_reviews"] += 1
             for dep in rec.get("dependencies", []):
@@ -271,9 +326,12 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
             counts["reachable_commits"] += 1
             for role, email in (("author", author), ("committer", committer)):
                 if "@" in email and not email.lower().endswith(SAFE_EMAIL_SUFFIXES):
-                    counts["personal_domain_git_emails"] += 1
-                    finding("<git:" + sha[:12] + ">", "personal-git-email",
-                            "Reachable " + role + " email uses a personal/non-noreply domain; owner must approve or sanitize history")
+                    if owner_perms is not None and email.casefold() in owner_perms["owner_approved_emails"]:
+                        counts["owner_authorized_git_email_occurrences"] += 1
+                    else:
+                        counts["personal_domain_git_emails"] += 1
+                        finding("<git:" + sha[:12] + ">", "personal-git-email",
+                                "Reachable " + role + " email uses a personal/non-noreply domain; owner must approve or sanitize history")
     except (subprocess.SubprocessError, UnicodeError) as error:
         finding("<git>", "history-scan-failure", type(error).__name__)
 
@@ -296,7 +354,11 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
                 if kind in ("commit", "tag"):
                     for email in re.findall(rb"(?im)^(?:tagger |co-authored-by: )[^\n]*<([^<>\n]+)>", data):
                         if b"@" in email and not email.decode("utf-8", "replace").lower().endswith(SAFE_EMAIL_SUFFIXES):
-                            finding(where, "personal-git-trailer-or-tag-email", "Tagger or contributor trailer has non-noreply metadata; values redacted")
+                            visible = email.decode("utf-8", "replace").casefold()
+                            if owner_perms is not None and visible in owner_perms["owner_approved_emails"]:
+                                counts["owner_authorized_trailer_email_occurrences"] += 1
+                            else:
+                                finding(where, "personal-git-trailer-or-tag-email", "Tagger or contributor trailer has non-noreply metadata; values redacted")
         except (OSError, subprocess.SubprocessError, ValueError, UnicodeError) as error:
             finding("<git>", "historical-content-scan-failure", type(error).__name__)
 
