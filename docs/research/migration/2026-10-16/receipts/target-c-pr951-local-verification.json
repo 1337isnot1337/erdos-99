@@ -1,6 +1,6 @@
 {
   "schema_version": "erdos-99-local-migration-verification/v1",
-  "recorded_at_utc": "2026-10-16T08:02:47Z",
+  "recorded_at_utc": "2026-10-16T08:04:30Z",
   "verification_subject": {
     "destination_repository": "https://github.com/1337isnot1337/erdos-99",
     "branch": "research/target-c-pr951-vacancy-release-20261016",
@@ -69,10 +69,17 @@
     }
   ],
   "hosted_actions": {
-    "destination_pr": null,
-    "observed_head": null,
+    "destination_pr": 21,
+    "observed_head": "1c649586da78d4bce164da725038cb29e9b47cba",
+    "run_id": "38871193335",
     "workflow": "public-research-integrity",
-    "status": "not yet observed; no hosted success claimed"
+    "jobs": {
+      "plan": "SKIPPED",
+      "replay": "SKIPPED"
+    },
+    "steps_executed": false,
+    "reason": "Workflow job condition requires vars.E99_PUBLIC_CI == true; both jobs completed skipped with empty step lists.",
+    "success_claimed": false
   },
   "theorem_and_release_status": {
     "theorem_state": "2026-10-15.publication.2; unchanged",
