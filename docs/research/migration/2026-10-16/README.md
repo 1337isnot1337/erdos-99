@@ -178,8 +178,7 @@ was generated and retained as the [exact graph certificate](../../../../research
 Source-main provenance revalidation also found and corrected two stale public
 hashes for audit ledgers later updated by source PR #947. The frozen source-main
 blobs remain identified; their later PR #947 successors and destination hashes
-are now explicit. Commands, exact check results, and source/publication status
-will be recorded in the batch receipt after this verification pass.
+are now explicit. Commands, exact check results, and source/publication status are recorded in the [PR #955 local verification receipt](receipts/target-c-pr955-local-verification.json). This is not the full publication Gate 2 receipt.
 
 Before preparing this batch, the live source main and open-PR list were refreshed.
 Main remained at the frozen SHA above; all 21 open PR numbers and head SHAs still
