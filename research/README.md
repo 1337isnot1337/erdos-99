@@ -187,3 +187,22 @@ python3 research/verify_global_palette_transversal_2026_10_12.py \
 
 The verifier checks both SHA-256 values before reading the data. The core-only replay independently verifies the 43-gon success. The source audit reports exhaustive failure of that same palette on one 175-label nonglobal source. Neither result addresses arbitrary palettes or Level I. The [full track](../docs/research/tracks/global-planar-endpoint-palette-pr958.md)
 records the exact limits, external-input rights status, and missing global step.
+
+## Source PR #959 — reflected scales and Steiner capacity
+
+Run the two exact finite checkers from the repository root:
+
+```sh
+python3 research/verify_global_reflected_scale_2026_10_12.py
+python3 research/verify_global_steiner_capacity_loss_2026_10_12.py
+```
+
+The first checks the supplied-parameter parity solver, explicit rectangle
+fixtures, a 157-label endpoint with two isolates, and exact moment identities.
+The second checks the four-label Steiner regression, 97,020 source pairs at
+`m=20`, 840 contacts, and finite Oler capacity bounds at `m=20,40,100`.
+Analytical all-family proofs remain in the reports; neither script proves
+global-minimizer extraction or Level I closure. The [focused track](../docs/research/tracks/global-reflected-scale-capacity-pr959.md)
+connects the claims, limitations, and next obligations. The source AI audit is
+retained as provenance, not as the destination's independent exact-head
+mathematical audit. No claim or certificate is canonically promoted.

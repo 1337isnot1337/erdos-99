@@ -161,3 +161,23 @@ unbounded global-minimizer family. See the
 [full track](tracks/global-planar-endpoint-palette-pr958.md), reports, exact
 verifiers and file-level dispositions in the
 [migration reconciliation](migration/2026-10-16/scientific-reconciliation.md).
+
+## Reflected scales, moment limits, and Steiner capacity
+
+Source PR #959 supplies an exact parity criterion for a full-label endpoint
+when the reflection line and scales are fixed, plus nonglobal exact
+competitors. For any leading-density source sequence, a feasible one-step
+endpoint with diameter at most `(1+o(1))D` must have both squared scales tend
+to one. This rules out macroscopic anisotropic scales as the bridge; it gives
+no second-order rate or strict improvement. A separate exact capacity audit
+shows Steiner symmetrization can reduce `N(K)` even for a four-label global
+minimizer, and can lose linearly many labels on a different unbounded
+triangle-free family that is nonglobal. It blocks capacity preservation from
+triangle-freeness or leading density alone.
+
+The missing step is source-derived near-identity signs and parameters meeting
+all lower and upper pair constraints for every sufficiently large global
+minimizer, or a full-label repacking argument using stronger global-source
+geometry. See the [track](tracks/global-reflected-scale-capacity-pr959.md),
+[candidate registry](../targets/target-c/candidate-registry.json), and
+[scientific reconciliation](migration/2026-10-16/scientific-reconciliation.md).
