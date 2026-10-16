@@ -9,7 +9,7 @@
 **Starting status:** canonical Sections 122–123 frontier
 **Active prompt:** docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md
 **External literature search:** used in the surrounding run; no theorem imported here
-**Computation:** used (research/verify_target_c_coembedded_protected_cover.py)
+**Computation:** used (docs/research/migration/2026-10-16/shards/01/support/research/verify_target_c_coembedded_protected_cover.py)
 
 ## LEVEL I STATUS
 
@@ -303,7 +303,7 @@ The proof is complete.
 - C-AGGREGATE-TWO-ARC-DETOUR, canonical, docs/targets/target-c/122-aggregate-two-arc-detour-audit.md. Its scope is the canonical full-core representative; no part is silently applied to this regression.
 - C-AUGMENTED-CELL-DEFECT-BUDGET, canonical, docs/targets/target-c/123-augmented-cell-defect-budget-audit.md. Its payment is for the canonical loaded harmonic-cell source and is not asserted for this shell/interior source.
 - C-FULLCORE-DIAMETER-BUDGET-FLOOR, canonical, docs/reports/target_c_fullcore_diameter_budget_floor_2026-09-14.md, independently audited in docs/audits/target_c_fullcore_diameter_budget_floor_independent_audit_2026-09-14.md. It removes only the full-core subunit-\(\mu_D\) regime and is not used to assert anything about this Type-I-style fixed-container regression.
-- research/verify_target_c_coembedded_protected_cover.py uses exact integer and Fraction arithmetic for all displayed finite checks. The continuous cover is supplied by the geometric proof above, not by floating-point sampling.
+- docs/research/migration/2026-10-16/shards/01/support/research/verify_target_c_coembedded_protected_cover.py uses exact integer and Fraction arithmetic for all displayed finite checks. The continuous cover is supplied by the geometric proof above, not by floating-point sampling.
 
 ## 3. Exact frontier effect
 
@@ -385,8 +385,8 @@ contains a unit equilateral triangle. No external result is used in the proof ab
 
 The command
 
-    python3 -m py_compile research/verify_target_c_coembedded_protected_cover.py
-    python3 research/verify_target_c_coembedded_protected_cover.py
+    python3 -m py_compile docs/research/migration/2026-10-16/shards/01/support/research/verify_target_c_coembedded_protected_cover.py
+    python3 docs/research/migration/2026-10-16/shards/01/support/research/verify_target_c_coembedded_protected_cover.py
 
 uses exact integer arithmetic for axial norms, quadratic lattice distances, shell edge
 enumeration, and cardinalities, with Fraction arithmetic for \(h_R\), support
@@ -434,7 +434,7 @@ route-map, prompt, or canonical dependency edits are required.
 4. Binding dead routes: one-anchor retraction, density-only/vanishing-shear bounds,
    square-grid local detour bounds, scalar ledger compatibility, and one-point protected exchange.
 5. Files to read next: docs/targets/target-c/CURRENT.md,
-   docs/targets/target-c/87-deep-near-unit-isolate-matching-audit-2026-09-12.md,
+   docs/targets/target-c/87-deep-near-unit-isolate-matching-audit.md,
    docs/targets/target-c/122-aggregate-two-arc-detour-audit.md,
    docs/targets/target-c/123-augmented-cell-defect-budget-audit.md, and the
    concurrent report docs/reports/target_c_exterior_cap_hull_and_cover_2026-09-14.md.
