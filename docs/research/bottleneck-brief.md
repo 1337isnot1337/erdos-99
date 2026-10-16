@@ -1,6 +1,6 @@
 # Current bottleneck
 
-**Level I OPEN; A OPEN; B OPEN; C-I CLOSED; C-II OPEN.** Source snapshot `5dcbdc3dfa1f9be370602cc54d50e68eabb88f56`, inherited theorem-state `2026-10-10.audit.234`. [Priority revision](priority-state.json): `public-frontier.1`.
+**Level I OPEN; A OPEN; B OPEN; C-I CLOSED; C-II OPEN.** Source snapshot `5dcbdc3dfa1f9be370602cc54d50e68eabb88f56`, inherited theorem-state `2026-10-10.audit.234`. [Priority revision](priority-state.json): `public-frontier.2`.
 
 | Route | Strongest accepted working position | Exact missing obligation | First useful bounded step |
 | --- | --- | --- | --- |
@@ -10,7 +10,7 @@
 
 These are research priorities, not theorem-success probabilities. Re-deriving an existing scoped bound is useful only as a genuinely independent audit or verifier. Locked stress does not imply global nullity; one-grain deficit does not imply shell stability; infinitesimal or bit feasibility does not imply finite full-source motion.
 
-The [19 task cards](../../tasks/README.md) include direct route bridges, independent audits, finite computations, shared geometric/analytic dependencies and alternative approaches. Their weights are retained from the source to diversify attention. Proposed adjacent results are [noncanonical snapshots](proposals.md), never new accepted premises. [Family status](research-family-status.md) states which restricted shortcuts are blocked and which changed hypotheses would justify revisiting them.
+The [20 task cards](../../tasks/README.md) include direct route bridges, independent audits, finite computations, shared geometric/analytic dependencies and alternative approaches. Their weights are retained from the source to diversify attention. Proposed adjacent results are [noncanonical snapshots](proposals.md), never new accepted premises. [Family status](research-family-status.md) states which restricted shortcuts are blocked and which changed hypotheses would justify revisiting them.
 
 ## Additional direct Level I mechanisms (noncanonical)
 
