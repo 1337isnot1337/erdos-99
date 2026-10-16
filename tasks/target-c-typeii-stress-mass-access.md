@@ -29,6 +29,8 @@ Advances only the stated route obligation; global closure still requires all can
 - [docs/targets/target-c/CURRENT.md](../docs/targets/target-c/CURRENT.md): Audit 173 supplies grids/routes but no exceptional stress-mass control, compatible motion, or refill
 - [AGENTS.md](../AGENTS.md): do not infer Schur or source-specific nullity from planarity or generic rank alone
 
+Source PR #950 adds an **unreviewed** route candidate: positive-length returns from long-train roots have an `O(D)` length quantile; a positive Type-II subfamily reaches one common coherent grid; and a separate rigidity/Menger linkage runs from loaded attachments to that grid. It does **not** control positive KKT mass on exceptional ports: the report's stress identity yields no uniform price on selected paths. The return and attachment-to-grid families may have disjoint endpoint labels. See the [full track](../docs/research/tracks/target-c-train-returns-rigidity-grid.md) before repeating either route; the next obligation is endpoint overlap or direct flow, then a feasible full-source competitor.
+
 ## Approach and first bounded experiment
 
 For a fixed normalized stress, write the mass of actual diameter edges by route class (grid-accessible, face-tail, exceptional). Test the strongest bound derivable from the canonical inequalities without assuming a uniform stress gap, then identify which class must be charged by the finite move.

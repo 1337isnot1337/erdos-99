@@ -1,6 +1,6 @@
 # Erdős #99 source research migration
 
-**Overall migration status: INCOMPLETE.** Exact source and destination baselines are frozen under the baseline directory. Source-main audit batch 1 merged as PR #19; the PR #1008 population-reserve candidate merged as PR #20; the PR #951 vacancy-release batch merged as destination PR #21 at `53527e354fd545325744f828c93278bcf6437bd4` (tree `399b0e3407cd36721dd2361bd4cc9aa3ccfcd61a`). The active PR #947 integration batch is based on that exact tree. The 826 still-missing source-main reports, bulk research tree, most open-PR additions, and historical PR work remain queued.
+**Overall migration status: INCOMPLETE.** Exact source and destination baselines are frozen under the baseline directory. Source-main audit batch 1 merged as PR #19; the PR #1008 population-reserve candidate merged as PR #20; the PR #951 vacancy-release batch merged as destination PR #21 at `53527e354fd545325744f828c93278bcf6437bd4` (tree `399b0e3407cd36721dd2361bd4cc9aa3ccfcd61a`); and the PR #947 audit batch merged as destination PR #22 at `73bbc4ae4bf65ce6a02fcc2c4bde33b31124e742` (tree `54713dc034018b862dc0aa69c85a921540dd5a2e`). The source PR #950 integration batch is based on that exact destination tree. The 826 still-missing source-main reports, bulk research tree, most open-PR additions, and historical PR work remain queued.
 
 ## Open source PR batch — #1008 population reserve
 
@@ -66,13 +66,45 @@ withdrawal of the global `K'/D` chart and `q=O(D^(4/5))` claims. The source's
 second-referee “PASS” entries are historical source records, not destination
 mathematical audits. No new finite verifier is supplied by this PR.
 
+## Source PR #950 — train returns, common grids, and rigidity linkage
+
+The pinned current source main is `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`
+(tree `e061f039eac44c286a00eacdcaa9a4cbbb877891`). Source PR #950 is open and
+frozen at head `cbf066bb7489115559bcda34f9f810a1d78826ce` (tree
+`80dd0d6db99d9aa6698ee6500c91a3f670c63aae`); its source merge base is
+`9327a3a13f0641f2a8c1897aec0c088be016743a` (tree
+`2f01e4c1abe49de6fc24bef28e750adebc5b56bc`). The destination batch is based
+on main `73bbc4ae4bf65ce6a02fcc2c4bde33b31124e742` (tree
+`54713dc034018b862dc0aa69c85a921540dd5a2e`). The PR changes two first-party
+mathematical documents plus the source artifact index; the prior source report
+revision at `6433d1db49a1363bfa65008eb78f6b15d6ef4ed7` is separately recorded
+as superseded provenance because its Menger argument excluded endpoint cuts.
+
+The 597-line report claims positive-length, vertex-disjoint return paths with
+an `O(D)` length quantile; a common source-realized Type-II grid accessible
+from a positive-density subfamily; a rigidity-brace inequality; and a separate
+linear attachment-to-grid linkage. The corrected endpoint-inclusive cut proof
+is audited in the 62-line source review. All these new claims remain
+**unreviewed** in the destination. The two linkage families may end at disjoint
+attachment-label sets, positive stress support gives no uniform route price,
+and no source-compatible finite competitor follows. The [train-return and
+rigidity-grid track](../../tracks/target-c-train-returns-rigidity-grid.md),
+[candidate registry](../../../targets/target-c/candidate-registry.json), and
+[per-file provenance ledger](ledger/source-pr-files.jsonl) preserve the exact
+proof scope, correction history, dependencies, and next obligation. The report
+uses no computation or finite verifier; the canonical certificate suite does
+not validate its new analytic claims. The current Target C prompt was already
+in the owner-authorized inclusion set; its public SHA-256 is refreshed for this
+navigation addition, with the 810-entry membership unchanged.
+
 ## Frozen repositories
 
 - Source main: `42f0296d1aca068c809f74cee5dcdb4ebdb27c73` (tree `e061f039eac44c286a00eacdcaa9a4cbbb877891`).
 - Frozen destination baseline main: `60c2576b4893a7e9001d2c8bfbe5cfb64c1c969f` (tree `f4d73c1080b3b4a1b7757f5fd96109b6cd4b5c76`).
 - Destination main before the PR #1008 batch: 806f150c4b47b1b831163fc89c78f2b1c87318a2 (tree 2969aff9998da3146dda5eab0a0df593f24dc506).
 - PR #20 merged as 495351ba7d127deb48f3666623615ff6ea19c39e (tree db11ffa20d29d91548868edd0784d8321c91cfa1); the PR #951 batch is based on this exact tree.
-- PR #21 merged as 53527e354fd545325744f828c93278bcf6437bd4 (tree 399b0e3407cd36721dd2361bd4cc9aa3ccfcd61a); the PR #947 batch is based on this exact tree.
+- PR #21 merged as 53527e354fd545325744f828c93278bcf6437bd4 (tree 399b0e3407cd36721dd2361bd4cc9aa3ccfcd61a); the PR #947 batch was based on this exact tree.
+- PR #22 merged as 73bbc4ae4bf65ce6a02fcc2c4bde33b31124e742 (tree 54713dc034018b862dc0aa69c85a921540dd5a2e); the PR #950 batch is based on this exact tree.
 
 Before preparing this batch, the live source main and open-PR list were refreshed.
 Main remained at the frozen SHA above; all 21 open PR numbers and head SHAs still
@@ -83,6 +115,6 @@ The source Target C artifact index has 1,287 rows: 83 missing audits and two lin
 
 The 2,707 source-main C research files, 157 route documents, and shared candidates are inventoried in [`ledger/source-main-files.jsonl`](ledger/source-main-files.jsonl). Of the research files, 2,536 other files are queued, 152 are exact destination duplicates, and two of 19 linked dependencies are integrated here; the remaining 17 linked dependencies and all other route files retain explicit queued or duplicate dispositions.
 
-The pinned source inventory contains 21 open PR heads. PRs #947 and #951 are reconciled as destination batches; #948, #950, #952, and #955–#960 still require separate content-level comparisons.
+The pinned source inventory contains 21 open PR heads. PRs #947 and #951 are reconciled as destination batches, and PR #950 is the current content-level integration batch. PRs #948, #952, and #955–#960 remain queued for separate comparison.
 
 Source lifecycle labels are provenance only. The destination theorem-state remains authoritative. No theorem is promoted by this import. Historical versions are visibly distinguished, including the earlier inverse-phase audit that asserts a global `K'/D`-Lipschitz chart and `q=O(D^(4/5))`; those inferences were withdrawn and must not be used as premises.

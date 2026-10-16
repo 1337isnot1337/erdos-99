@@ -12,6 +12,19 @@ These are research priorities, not theorem-success probabilities. Re-deriving an
 
 The [20 task cards](../../tasks/README.md) include direct route bridges, independent audits, finite computations, shared geometric/analytic dependencies and alternative approaches. Their weights are retained from the source to diversify attention. Proposed adjacent results are [noncanonical snapshots](proposals.md), never new accepted premises. [Family status](research-family-status.md) states which restricted shortcuts are blocked and which changed hypotheses would justify revisiting them.
 
+## Train-return quantiles and rigidity-forced grid linkages
+
+Source PR #950 adds an unreviewed proof candidate over the canonical quadratic
+C-II core. It improves the route data to positive-length, vertex-disjoint
+returns with an `O(D)` length quantile and a common Type-II source grid. The
+rigidity brace and corrected endpoint-inclusive cuts independently give a
+linear attachment-to-grid linkage. These two linkages need not use a common
+attachment label, and the report supplies no stress-mass payment or finite
+competitor. The exact endpoint-overlap obligation and source correction are in
+the [research track](tracks/target-c-train-returns-rigidity-grid.md),
+[candidate registry](../targets/target-c/candidate-registry.json), and
+[source proof audit](../audits/pr950_autonomous_proof_audit_2026-10-15.md).
+
 ## Midpoint localization and the atlas gap (noncanonical)
 
 Source PR #947 preserves strong global midpoint-tail and near-diameter

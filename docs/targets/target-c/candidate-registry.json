@@ -1651,6 +1651,603 @@
         "third_party_material": "No third-party PDFs or extracted text copied.",
         "visibility": "Destination remains private; publication-inclusion set unchanged."
       }
+    },
+    {
+      "candidate_id": "TARGET-C-PR950-TRAIN-RETURN-LENGTH-QUANTILE",
+      "title": "Positive-length long-train return paths with O(D) length quantiles",
+      "status": "unreviewed",
+      "source_lifecycle": "Source PR #950 report and audit remain unreviewed in the destination; source review language is provenance only.",
+      "target_scope": [
+        "Target C-II",
+        "quadratic-core branch"
+      ],
+      "claim": {
+        "statement": "For a canonical unbounded C-II quadratic-core sequence with D->infinity and R_4/D^2->r>0, fix epsilon in (0,r), put a_*=(2/3)sqrt(r-epsilon), ell=epsilon/(3pi), beta=40/(pi sqrt(3)), and kappa=(sqrt(25 ell^2+4 beta a_* ell)-5 ell)/(2 beta). After removing O(D^(2/3)) hull-ended trains, there are (kappa-o(1))D pairwise vertex-disjoint nontrivial actual-contact paths from distinct selected unloaded train terminals to distinct loaded vertices. For every fixed theta in (0,1), at least (theta*kappa-o(1))D paths have at most pi D/(2 sqrt(3)(1-theta)kappa)+o(D) contact edges.",
+        "hypotheses": [
+          "Canonical quadratic-core C-II sequence in the exact scope of C-QUADRATIC-CORE-DISJOINT-TRAIN-RETURNS, with R_4/D^2->r>0.",
+          "All source labels remain in the population count; selected endpoints are actual unit-contact endpoints and paths lie in the full positive-contact graph."
+        ],
+        "not_claimed": [
+          "No route-length bound for every individual train.",
+          "No face/interface payment, finite motion, diameter shortening, or branch closure."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed in the source artifact index; no source or destination theorem-state promotion",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "role": "full proof report",
+          "source_git_blob_sha": "90e2cd3b0adeb49a26608c42d76682e630a3a3c0",
+          "source_sha256": "1e74bc5bcbbdc41b1be381fdbcf9eedfd9ed853b5a9e73df44835bf8bd034596",
+          "destination_sha256": "4ba5214ff20a2548c7e04d01e821f85ea941ffce40dd1ee1d7673c905892941f",
+          "source_artifact_id": "ART-EFDC9677E3A7",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+          "role": "source proof audit and endpoint-cut correction",
+          "source_git_blob_sha": "30b09e5df5cbd61dbdcb406fca91abfb64a3e1d5",
+          "source_sha256": "e93ba8c89d98b56b74e6b0f5c96c1b1dd8e28f8d14c8c11b537008ce61221603",
+          "destination_sha256": "8ea063ae82c8d4149fee0d21ab6f2eb0d53a6702c62c162a5dd5cfd08a56bb70",
+          "source_artifact_id": "ART-047AD4339705",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-QUADRATIC-CORE-TRAIN-BANK",
+          "C-QUADRATIC-CORE-DISJOINT-TRAIN-RETURNS",
+          "C-ALL-BRANCH-HULL-TRAIN-DEPLETION",
+          "C-LOADED-NEAR-UNIT-ADJACENCY",
+          "C-UNIFORM-HARMONIC-CELL-AREA",
+          "C-CORE-UNLOADED-SEPARATOR-AREA-BOUND",
+          "C-LONG-TRAIN-SEPARATOR-INEQUALITY"
+        ],
+        "candidate_relations": [],
+        "description": "Combines canonical Audits 179, 180, 206, and 235 with loaded-near-unit adjacency and full-source Oler counting. The zero-length-terminal case is removed by deleting only O(D^(2/3)) auxiliary trains, not source points."
+      },
+      "obstructions_and_limits": [
+        "The O(D) quantile is a counting consequence, not a movement or payment theorem.",
+        "Contact isolates remain in the full-source Oler population."
+      ],
+      "validation": {
+        "status": "preserved; destination independent mathematical audit not performed",
+        "scope": "The source report gives an analytic all-source derivation; no finite verifier encodes its asymptotic assertions. The destination leaves it unreviewed."
+      },
+      "next_proof_obligations": [
+        "Use each canonical input only under its recorded hypotheses.",
+        "Find endpoint overlap or direct flow to the separate attachment-to-grid family."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 950,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/950",
+        "source_pr_draft": false,
+        "source_head_sha": "cbf066bb7489115559bcda34f9f810a1d78826ce",
+        "source_head_tree": "80dd0d6db99d9aa6698ee6500c91a3f670c63aae",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "9327a3a13f0641f2a8c1897aec0c088be016743a",
+        "source_merge_base_tree": "2f01e4c1abe49de6fc24bef28e750adebc5b56bc",
+        "source_theorem_state": "2026-10-10.audit.234 on the frozen source main; the PR adds no theorem-state transition.",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "73bbc4ae4bf65ce6a02fcc2c4bde33b31124e742"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and project-agent work.",
+        "third_party_material": "The contextual preprint is linked by DOI only; no third-party paper text or PDF was copied.",
+        "visibility": "Destination remains private; publication-inclusion set unchanged."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-PR950-TYPEII-COMMON-GRID-ACCESS",
+      "title": "Common source-realized coherent grid for a positive return subfamily",
+      "status": "unreviewed",
+      "source_lifecycle": "Source PR #950 report and audit remain unreviewed in the destination; source review language is provenance only.",
+      "target_scope": [
+        "Target C-II",
+        "quadratic-core branch"
+      ],
+      "claim": {
+        "statement": "In the Type-II branch of the same quadratic-core sequence, component concentration and face-tail access yield a positive-density subfamily of distinct return attachments whose actual contact routes of length <lambda D reach every vertex of one common coherent grid. The grid lies within the permitted face-tail radius of every selected attachment. Root-to-grid concatenations have length O(D) but need not be mutually vertex-disjoint.",
+        "hypotheses": [
+          "Type-II quadratic-core sequence under the report hypotheses and fixed epsilon, lambda, phase tolerance, and face-tail radius.",
+          "Use actual unloaded cells, the o(D^2) cell deficit, fixed-phase coherent-grain cuts, and finite pseudogrid extraction inside the common crop."
+        ],
+        "not_claimed": [
+          "No arbitrary-source atlas extraction beyond canonical Type-II hypotheses.",
+          "No disjointness or bounded congestion for attachment-to-grid continuations.",
+          "No finite competitor."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed in the source artifact index; no source or destination theorem-state promotion",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "role": "full proof report",
+          "source_git_blob_sha": "90e2cd3b0adeb49a26608c42d76682e630a3a3c0",
+          "source_sha256": "1e74bc5bcbbdc41b1be381fdbcf9eedfd9ed853b5a9e73df44835bf8bd034596",
+          "destination_sha256": "4ba5214ff20a2548c7e04d01e821f85ea941ffce40dd1ee1d7673c905892941f",
+          "source_artifact_id": "ART-EFDC9677E3A7",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+          "role": "source proof audit and endpoint-cut correction",
+          "source_git_blob_sha": "30b09e5df5cbd61dbdcb406fca91abfb64a3e1d5",
+          "source_sha256": "e93ba8c89d98b56b74e6b0f5c96c1b1dd8e28f8d14c8c11b537008ce61221603",
+          "destination_sha256": "8ea063ae82c8d4149fee0d21ab6f2eb0d53a6702c62c162a5dd5cfd08a56bb70",
+          "source_artifact_id": "ART-047AD4339705",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-QUADRATIC-CORE-DISJOINT-TRAIN-RETURNS",
+          "C-UNIFORM-HARMONIC-CELL-AREA",
+          "C-TYPEII-FACE-TAIL-PORT-MULTIPLICITY",
+          "C-TYPEII-LOCAL-COHERENT-GRID-ACCESS",
+          "C-HARMONIC-CELL-TILING",
+          "C-COHERENT-GRAINS",
+          "C-PSEUDO-GRID"
+        ],
+        "candidate_relations": [
+          "TARGET-C-PR950-TRAIN-RETURN-LENGTH-QUANTILE"
+        ],
+        "description": "Uses component concentration, the Type-II face-tail port theorem, a common convex cell crop, and finite coherent pseudogrid extraction; local tracks stop at the crop boundary."
+      },
+      "obstructions_and_limits": [
+        "The root-to-grid continuations may overlap. The separate attachment-to-grid Menger family is not shown to use the same attachment labels."
+      ],
+      "validation": {
+        "status": "preserved; destination independent mathematical audit not performed",
+        "scope": "Analytic candidate preserved from the source report; no finite verifier or destination independent audit is supplied."
+      },
+      "next_proof_obligations": [
+        "Prove linear endpoint overlap with the attachment-to-grid linkage or a direct source-wide flow theorem."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 950,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/950",
+        "source_pr_draft": false,
+        "source_head_sha": "cbf066bb7489115559bcda34f9f810a1d78826ce",
+        "source_head_tree": "80dd0d6db99d9aa6698ee6500c91a3f670c63aae",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "9327a3a13f0641f2a8c1897aec0c088be016743a",
+        "source_merge_base_tree": "2f01e4c1abe49de6fc24bef28e750adebc5b56bc",
+        "source_theorem_state": "2026-10-10.audit.234 on the frozen source main; the PR adds no theorem-state transition.",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "73bbc4ae4bf65ce6a02fcc2c4bde33b31124e742"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and project-agent work.",
+        "third_party_material": "The contextual preprint is linked by DOI only; no third-party paper text or PDF was copied.",
+        "visibility": "Destination remains private; publication-inclusion set unchanged."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-PR950-UNLOADED-RIGIDITY-BRACE",
+      "title": "Boundary-contact brace for connected unloaded core sets",
+      "status": "unreviewed",
+      "source_lifecycle": "Source PR #950 report and audit remain unreviewed in the destination; source review language is provenance only.",
+      "target_scope": [
+        "Target C-II",
+        "quadratic-core branch"
+      ],
+      "claim": {
+        "statement": "For every connected set X of unloaded vertices in the canonical positive-contact core, the induced unit-contact graph has |delta_C(X)|>=diam(X)+2. The proof combines triangle-free planar block counting with canonical mixed rigidity on the nonisolated core.",
+        "hypotheses": [
+          "X is connected in the actual unit-contact graph and consists only of unloaded core vertices.",
+          "C-ZRF applies on the nonisolated positive-contact core; no contact isolate is assigned a core coordinate."
+        ],
+        "not_claimed": [
+          "No rigidity conclusion for contact isolates.",
+          "No arbitrary separator bound without the endpoint-inclusive component argument.",
+          "No finite motion or payment."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed in the source artifact index; no source or destination theorem-state promotion",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "role": "full proof report",
+          "source_git_blob_sha": "90e2cd3b0adeb49a26608c42d76682e630a3a3c0",
+          "source_sha256": "1e74bc5bcbbdc41b1be381fdbcf9eedfd9ed853b5a9e73df44835bf8bd034596",
+          "destination_sha256": "4ba5214ff20a2548c7e04d01e821f85ea941ffce40dd1ee1d7673c905892941f",
+          "source_artifact_id": "ART-EFDC9677E3A7",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+          "role": "source proof audit and endpoint-cut correction",
+          "source_git_blob_sha": "30b09e5df5cbd61dbdcb406fca91abfb64a3e1d5",
+          "source_sha256": "e93ba8c89d98b56b74e6b0f5c96c1b1dd8e28f8d14c8c11b537008ce61221603",
+          "destination_sha256": "8ea063ae82c8d4149fee0d21ab6f2eb0d53a6702c62c162a5dd5cfd08a56bb70",
+          "source_artifact_id": "ART-047AD4339705",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-ZRF"
+        ],
+        "candidate_relations": [],
+        "description": "The block-cut-tree identity and triangle-free planar block bounds give 2|X|-e_X>=diam(X)+2; a smaller boundary cut would leave a nonzero flex supported on X and contradict C-ZRF after extension by zero."
+      },
+      "obstructions_and_limits": [
+        "The source audit checks bridge blocks, the one-vertex case, the block perimeter bound, and loaded diameter anchors."
+      ],
+      "validation": {
+        "status": "preserved; destination independent mathematical audit not performed",
+        "scope": "Finite graph argument preserved; no finite verifier is supplied. The result remains unreviewed in the destination."
+      },
+      "next_proof_obligations": [
+        "Use only for unloaded connected core sets with the exact canonical rigidity hypotheses."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 950,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/950",
+        "source_pr_draft": false,
+        "source_head_sha": "cbf066bb7489115559bcda34f9f810a1d78826ce",
+        "source_head_tree": "80dd0d6db99d9aa6698ee6500c91a3f670c63aae",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "9327a3a13f0641f2a8c1897aec0c088be016743a",
+        "source_merge_base_tree": "2f01e4c1abe49de6fc24bef28e750adebc5b56bc",
+        "source_theorem_state": "2026-10-10.audit.234 on the frozen source main; the PR adds no theorem-state transition.",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "73bbc4ae4bf65ce6a02fcc2c4bde33b31124e742"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and project-agent work.",
+        "third_party_material": "The contextual preprint is linked by DOI only; no third-party paper text or PDF was copied.",
+        "visibility": "Destination remains private; publication-inclusion set unchanged."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-PR950-ENDPOINT-INCLUSIVE-CUT-REPAIR",
+      "title": "Endpoint-inclusive separator repair for the grid linkage",
+      "status": "unreviewed",
+      "source_lifecycle": "Source PR #950 report and audit remain unreviewed in the destination; source review language is provenance only.",
+      "target_scope": [
+        "Target C-II",
+        "quadratic-core branch"
+      ],
+      "claim": {
+        "statement": "For the corrected source proof, every vertex separator S between loaded attachments and the common grid, including cuts meeting either terminal set or splitting the grid, obeys diam(X_D)<=5|S|. The proof charges each remaining component meeting the grid and follows a simple quotient path.",
+        "hypotheses": [
+          "The attachment set and contact graph are the ones in the source report inside a single unloaded component.",
+          "The componentwise unloaded-set brace applies and the grid contact subgraph is connected."
+        ],
+        "not_claimed": [
+          "The earlier source revision restricted cuts away from both terminal sets and is not a valid distinct-endpoint Menger proof.",
+          "This repair does not give overlap with the train-return endpoint set."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed in the source artifact index; no source or destination theorem-state promotion",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "role": "full proof report",
+          "source_git_blob_sha": "90e2cd3b0adeb49a26608c42d76682e630a3a3c0",
+          "source_sha256": "1e74bc5bcbbdc41b1be381fdbcf9eedfd9ed853b5a9e73df44835bf8bd034596",
+          "destination_sha256": "4ba5214ff20a2548c7e04d01e821f85ea941ffce40dd1ee1d7673c905892941f",
+          "source_artifact_id": "ART-EFDC9677E3A7",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+          "role": "source proof audit and endpoint-cut correction",
+          "source_git_blob_sha": "30b09e5df5cbd61dbdcb406fca91abfb64a3e1d5",
+          "source_sha256": "e93ba8c89d98b56b74e6b0f5c96c1b1dd8e28f8d14c8c11b537008ce61221603",
+          "destination_sha256": "8ea063ae82c8d4149fee0d21ab6f2eb0d53a6702c62c162a5dd5cfd08a56bb70",
+          "source_artifact_id": "ART-047AD4339705",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-ZRF"
+        ],
+        "candidate_relations": [
+          "TARGET-C-PR950-UNLOADED-RIGIDITY-BRACE"
+        ],
+        "description": "The source audit identifies two gaps in the prior version: endpoint-inclusive Menger permits cuts through terminals, and deleting vertices can split the grid. The corrected proof sums brace budgets over each remaining component and controls a simple quotient path."
+      },
+      "obstructions_and_limits": [
+        "A linear cut lower bound still cannot compose path families with disjoint attachment-label sets."
+      ],
+      "validation": {
+        "status": "preserved; destination independent mathematical audit not performed",
+        "scope": "Source-side proof repair and audit are preserved; destination independent audit not performed."
+      },
+      "next_proof_obligations": [
+        "Keep the componentwise correction in every reuse of the Menger argument."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 950,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/950",
+        "source_pr_draft": false,
+        "source_head_sha": "cbf066bb7489115559bcda34f9f810a1d78826ce",
+        "source_head_tree": "80dd0d6db99d9aa6698ee6500c91a3f670c63aae",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "9327a3a13f0641f2a8c1897aec0c088be016743a",
+        "source_merge_base_tree": "2f01e4c1abe49de6fc24bef28e750adebc5b56bc",
+        "source_theorem_state": "2026-10-10.audit.234 on the frozen source main; the PR adds no theorem-state transition.",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "73bbc4ae4bf65ce6a02fcc2c4bde33b31124e742"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and project-agent work.",
+        "third_party_material": "The contextual preprint is linked by DOI only; no third-party paper text or PDF was copied.",
+        "visibility": "Destination remains private; publication-inclusion set unchanged."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-PR950-ATTACHMENT-GRID-LINKAGE",
+      "title": "Linear vertex-disjoint loaded-attachment-to-grid paths",
+      "status": "unreviewed",
+      "source_lifecycle": "Source PR #950 report and audit remain unreviewed in the destination; source review language is provenance only.",
+      "target_scope": [
+        "Target C-II",
+        "quadratic-core branch"
+      ],
+      "claim": {
+        "statement": "If the common grid has Euclidean diameter at least gamma D, the corrected brace/cut proof and vertex Menger yield at least (gamma/5-o(1))D pairwise vertex-disjoint actual-contact paths from distinct loaded attachments of one unloaded component to distinct grid vertices; full-source Oler gives an O(D) length quantile.",
+        "hypotheses": [
+          "The common Type-II grid and connected contact subgraph in TARGET-C-PR950-TYPEII-COMMON-GRID-ACCESS.",
+          "The unloaded-core brace and endpoint-inclusive cut repair apply.",
+          "Every source label, including isolates, remains in the full-source Oler count."
+        ],
+        "not_claimed": [
+          "The attachment set need not overlap the train-return endpoints.",
+          "No disjoint train-root-to-grid linkage, route-charge payment, finite competitor, or C-II closure follows."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed in the source artifact index; no source or destination theorem-state promotion",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "role": "full proof report",
+          "source_git_blob_sha": "90e2cd3b0adeb49a26608c42d76682e630a3a3c0",
+          "source_sha256": "1e74bc5bcbbdc41b1be381fdbcf9eedfd9ed853b5a9e73df44835bf8bd034596",
+          "destination_sha256": "4ba5214ff20a2548c7e04d01e821f85ea941ffce40dd1ee1d7673c905892941f",
+          "source_artifact_id": "ART-EFDC9677E3A7",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+          "role": "source proof audit and endpoint-cut correction",
+          "source_git_blob_sha": "30b09e5df5cbd61dbdcb406fca91abfb64a3e1d5",
+          "source_sha256": "e93ba8c89d98b56b74e6b0f5c96c1b1dd8e28f8d14c8c11b537008ce61221603",
+          "destination_sha256": "8ea063ae82c8d4149fee0d21ab6f2eb0d53a6702c62c162a5dd5cfd08a56bb70",
+          "source_artifact_id": "ART-047AD4339705",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-ZRF",
+          "C-TYPEII-FACE-TAIL-PORT-MULTIPLICITY",
+          "C-HARMONIC-CELL-TILING",
+          "C-COHERENT-GRAINS",
+          "C-PSEUDO-GRID"
+        ],
+        "candidate_relations": [
+          "TARGET-C-PR950-TYPEII-COMMON-GRID-ACCESS",
+          "TARGET-C-PR950-UNLOADED-RIGIDITY-BRACE",
+          "TARGET-C-PR950-ENDPOINT-INCLUSIVE-CUT-REPAIR"
+        ],
+        "description": "The grid shore crossings give quadratic rhombus area and linear Euclidean diameter; every endpoint-inclusive separator has size at least one fifth the grid diameter."
+      },
+      "obstructions_and_limits": [
+        "Prove positive-density overlap of attachment labels or an equivalent gammoid-rank/direct-flow inequality.",
+        "Then construct a same-cardinality competitor checking all lower and old/new upper pairs, trains, grids, and isolates."
+      ],
+      "validation": {
+        "status": "preserved; destination independent mathematical audit not performed",
+        "scope": "Analytic Menger and Oler deduction preserved; no finite verifier or destination independent audit validates the asymptotic candidate."
+      },
+      "next_proof_obligations": [
+        "Do not infer overlap from the two separate linear path counts."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 950,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/950",
+        "source_pr_draft": false,
+        "source_head_sha": "cbf066bb7489115559bcda34f9f810a1d78826ce",
+        "source_head_tree": "80dd0d6db99d9aa6698ee6500c91a3f670c63aae",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "9327a3a13f0641f2a8c1897aec0c088be016743a",
+        "source_merge_base_tree": "2f01e4c1abe49de6fc24bef28e750adebc5b56bc",
+        "source_theorem_state": "2026-10-10.audit.234 on the frozen source main; the PR adds no theorem-state transition.",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "73bbc4ae4bf65ce6a02fcc2c4bde33b31124e742"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and project-agent work.",
+        "third_party_material": "The contextual preprint is linked by DOI only; no third-party paper text or PDF was copied.",
+        "visibility": "Destination remains private; publication-inclusion set unchanged."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-PR950-PELL-ROUTE-LENGTH-REGRESSION",
+      "title": "Exact oblique Pell-grid route-length sharpness regression",
+      "status": "unreviewed regression",
+      "source_lifecycle": "Source PR #950 report and audit remain unreviewed in the destination; source review language is provenance only.",
+      "target_scope": [
+        "Target C-II",
+        "quadratic-core branch"
+      ],
+      "claim": {
+        "statement": "The exact Pell family of oblique unit vectors generates a unit-separated parallelogram grid whose rectangular contact rows are vertex-disjoint and have length a positive constant times diameter, with the ratio tending to 1/sqrt(3) along the Pell sequence.",
+        "hypotheses": [
+          "Use the report-defined Pell recurrence and vectors; no global optimality hypothesis is asserted."
+        ],
+        "not_claimed": [
+          "The family is nonglobal and its row endpoints are not loaded diameter endpoints.",
+          "It only rules out a geometry-only sublinear route bound from separation, triangle-freeness, and diameter."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed in the source artifact index; no source or destination theorem-state promotion",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "role": "full proof report",
+          "source_git_blob_sha": "90e2cd3b0adeb49a26608c42d76682e630a3a3c0",
+          "source_sha256": "1e74bc5bcbbdc41b1be381fdbcf9eedfd9ed853b5a9e73df44835bf8bd034596",
+          "destination_sha256": "4ba5214ff20a2548c7e04d01e821f85ea941ffce40dd1ee1d7673c905892941f",
+          "source_artifact_id": "ART-EFDC9677E3A7",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+          "role": "source proof audit and endpoint-cut correction",
+          "source_git_blob_sha": "30b09e5df5cbd61dbdcb406fca91abfb64a3e1d5",
+          "source_sha256": "e93ba8c89d98b56b74e6b0f5c96c1b1dd8e28f8d14c8c11b537008ce61221603",
+          "destination_sha256": "8ea063ae82c8d4149fee0d21ab6f2eb0d53a6702c62c162a5dd5cfd08a56bb70",
+          "source_artifact_id": "ART-047AD4339705",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "Exact analytic obstruction to an overstrong generic route-length inference; it is not a counterexample to a canonical global-minimizer claim."
+      },
+      "obstructions_and_limits": [
+        "Do not use it to reject source-specific bounds that exploit canonical optimality or loaded-hull structure."
+      ],
+      "validation": {
+        "status": "preserved; destination independent mathematical audit not performed",
+        "scope": "Exact analytic family is stated in the report; no script is supplied or needed for the elementary Pell identities."
+      },
+      "next_proof_obligations": [
+        "Any sublinear route theorem needs additional canonical source or loaded-hull input."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 950,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/950",
+        "source_pr_draft": false,
+        "source_head_sha": "cbf066bb7489115559bcda34f9f810a1d78826ce",
+        "source_head_tree": "80dd0d6db99d9aa6698ee6500c91a3f670c63aae",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "9327a3a13f0641f2a8c1897aec0c088be016743a",
+        "source_merge_base_tree": "2f01e4c1abe49de6fc24bef28e750adebc5b56bc",
+        "source_theorem_state": "2026-10-10.audit.234 on the frozen source main; the PR adds no theorem-state transition.",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "73bbc4ae4bf65ce6a02fcc2c4bde33b31124e742"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and project-agent work.",
+        "third_party_material": "The contextual preprint is linked by DOI only; no third-party paper text or PDF was copied.",
+        "visibility": "Destination remains private; publication-inclusion set unchanged."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-PR950-MARKED-RAIL-NONADVANCING-SCREEN",
+      "title": "Marked-rail separator calculation is weaker than Audit 133",
+      "status": "no new claim; nonadvancing comparison screen",
+      "source_lifecycle": "Source PR #950 report and audit remain unreviewed in the destination; source review language is provenance only.",
+      "target_scope": [
+        "Target C-II",
+        "quadratic-core branch"
+      ],
+      "claim": {
+        "statement": "The report derives a marked-rail separator compatibility inequality but proves its return density is strictly below canonical Audit 133 because pi^2<10.",
+        "hypotheses": [
+          "Use the Audit 189 deep-cap grid and Audit 235 separator hypotheses exactly as stated in the report."
+        ],
+        "not_claimed": [
+          "No new canonical capacity or branch exclusion.",
+          "Do not repeat this route as an improvement without a changed hypothesis or stronger inequality."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed in the source artifact index; no source or destination theorem-state promotion",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_train_return_length_budget_worker03_2026-10-10.md",
+          "role": "full proof report",
+          "source_git_blob_sha": "90e2cd3b0adeb49a26608c42d76682e630a3a3c0",
+          "source_sha256": "1e74bc5bcbbdc41b1be381fdbcf9eedfd9ed853b5a9e73df44835bf8bd034596",
+          "destination_sha256": "4ba5214ff20a2548c7e04d01e821f85ea941ffce40dd1ee1d7673c905892941f",
+          "source_artifact_id": "ART-EFDC9677E3A7",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "docs/audits/pr950_autonomous_proof_audit_2026-10-15.md",
+          "role": "source proof audit and endpoint-cut correction",
+          "source_git_blob_sha": "30b09e5df5cbd61dbdcb406fca91abfb64a3e1d5",
+          "source_sha256": "e93ba8c89d98b56b74e6b0f5c96c1b1dd8e28f8d14c8c11b537008ce61221603",
+          "destination_sha256": "8ea063ae82c8d4149fee0d21ab6f2eb0d53a6702c62c162a5dd5cfd08a56bb70",
+          "source_artifact_id": "ART-047AD4339705",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-QUADRATIC-CORE-LOADED-CHORD-CAP-EXTRACTION",
+          "C-QUADRATIC-CORE-DEEP-CAP-GRID-RETURNS",
+          "C-PSEUDO-GRID",
+          "C-CORE-UNLOADED-SEPARATOR-AREA-BOUND",
+          "C-RHOMBUS-BULK-LOADED-RETURN-BOUND"
+        ],
+        "candidate_relations": [],
+        "description": "The source report compares the limiting separator root with the strictly larger Audit 133 return density."
+      },
+      "obstructions_and_limits": [
+        "The source report classifies this route as redundant/nonadvancing."
+      ],
+      "validation": {
+        "status": "preserved; destination independent mathematical audit not performed",
+        "scope": "Preserved as a negative result and scope screen; no theorem candidate or verifier."
+      },
+      "next_proof_obligations": [
+        "Revisit only if a changed hypothesis yields a stronger comparison."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 950,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/950",
+        "source_pr_draft": false,
+        "source_head_sha": "cbf066bb7489115559bcda34f9f810a1d78826ce",
+        "source_head_tree": "80dd0d6db99d9aa6698ee6500c91a3f670c63aae",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "9327a3a13f0641f2a8c1897aec0c088be016743a",
+        "source_merge_base_tree": "2f01e4c1abe49de6fc24bef28e750adebc5b56bc",
+        "source_theorem_state": "2026-10-10.audit.234 on the frozen source main; the PR adds no theorem-state transition.",
+        "destination_state": "2026-10-15.publication.2; unchanged",
+        "destination_main_base": "73bbc4ae4bf65ce6a02fcc2c4bde33b31124e742"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and project-agent work.",
+        "third_party_material": "The contextual preprint is linked by DOI only; no third-party paper text or PDF was copied.",
+        "visibility": "Destination remains private; publication-inclusion set unchanged."
+      }
     }
   ]
 }

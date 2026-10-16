@@ -140,3 +140,6 @@ The next useful proof obligations are:
 Machine-readable claims, proposed source statuses, dependencies, current
 destination statuses, source hashes, and exact next obligations are in the
 [Target C candidate registry](../../targets/target-c/candidate-registry.json).
+
+
+For the separate train-return and rigidity-forced attachment/grid linkage route, see the [source PR #950 track](target-c-train-returns-rigidity-grid.md); its two endpoint families may be disjoint and it supplies no finite competitor.

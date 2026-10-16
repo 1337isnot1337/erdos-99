@@ -58,6 +58,19 @@ Audit.179 promotes a cut-to-hull bank for any selected family of complete physic
 
 Audit.180 adds `C-CORE-UNLOADED-SEPARATOR-AREA-BOUND`, `C-LONG-TRAIN-SEPARATOR-INEQUALITY`, and `C-QUADRATIC-CORE-DISJOINT-TRAIN-RETURNS`. Under canonical mixed rigidity and positive unloaded equilibrium, a positive quadratic strict-rhombus bulk gives linearly many vertex-disjoint actual-contact paths from long bank terminals to distinct loaded vertices, without cap extraction. They lie in the full positive-contact graph, need not stay in the smaller Audit.179 carrier, and have no individual length or face/interface payment bound. This adds no finite motion or strict-diameter competitor.
 
+Source PR #950 preserves an **unreviewed** candidate built on these inputs:
+positive-length train-return paths have an `O(D)` length quantile; in Type II,
+a positive subfamily reaches one common source-realized coherent grid; and a
+separate rigidity-brace/Menger argument gives a linear vertex-disjoint
+attachment-to-grid linkage. Its corrected cut proof handles separators that
+meet the terminal sets or split the grid. The two linkage families may have
+no common attachment labels; positive stress support gives no uniform price,
+and neither a route payment nor a finite competitor follows. Before continuing
+this route, read [the train-return/rigidity-grid track](../research/tracks/target-c-train-returns-rigidity-grid.md),
+its [full proof report](../reports/target_c_train_return_length_budget_worker03_2026-10-10.md),
+and [source proof audit](../audits/pr950_autonomous_proof_audit_2026-10-15.md).
+Keep the new result unreviewed and preserve all source labels and pair bounds.
+
 Audit.189 adds `C-QUADRATIC-CORE-LOADED-CHORD-CAP-EXTRACTION`, `C-QUADRATIC-CORE-DEEP-CAP-GRID-RETURNS`, and `C-QUADRATIC-CORE-CELL-BOUNDARY-STRIP-POPULATION`. On a quadratic-core subsequence it selects a proper loaded-chord cap from the same harmonic cell as the coherent grain, then gets a deep physical grid, linearly many disjoint actual-contact returns, and quadratic source population outside the full crop. This supplies the cap/grain/port extraction needed by Audit.133 on that branch; prescribed caps and the other C-II branch remain outside its scope. The whole-cell variant also gives quadratic population in a cell boundary strip. These counts do not give capacity, path-length currency, a source move, or a strict-D competitor, so the exact finite-move/payment obligation is unchanged. The report's Type-II uniform near-port grid subsection is already subsumed by Audit.173.
 
 Audit.190 adds the relative-chord alternative to Audit.91's positional-error direction bound. Exact additive physical charts with uniformly conditioned basis and small increment error constrain every short chord's direction even when accumulated position error is large. The canonical C-II count then excludes a chart cover if the unused loaded endpoints and chart count are `o(D)`, total chart-hull perimeter is `O(D)`, and total angular width is `o(1)`. No such full-source chart cover is known; do not infer it from a coherent grain or bulk area. The source report's arbitrary-source count is narrowed to canonical C-II scope. The finite-move/payment obligation and C-II status are unchanged.
