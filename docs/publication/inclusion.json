@@ -198,7 +198,7 @@
       "source_blob": "75cc95b37b229431829fdc89812428187ce965a9",
       "source_mode": "100644",
       "source_sha256": "9c3d77ea0deff04abc3f4b2275857110f17314181264f43fdd8d71744033b368",
-      "public_sha256": "9c3d77ea0deff04abc3f4b2275857110f17314181264f43fdd8d71744033b368",
+      "public_sha256": "69a42884e36eacc29fc987dd004bc2570bcc174402aad2ced478b1bf03f8e63f",
       "role": "unreviewed active proposal",
       "theorem_ids": [],
       "dependencies": [
@@ -218,7 +218,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source project attribution retained",
       "reproduction_requirements": "execute supplied verifier with public prerequisites",
-      "editorial_change": "byte-identical",
+      "editorial_change": "Clarified that the source AI audit is provenance and does not satisfy the destination exact-head promotion review policy; no proof text or result was altered.",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": [
         "docs/reports/global_annular_matching_competitor_2026-10-11.md",
@@ -12443,7 +12443,7 @@
       "source_blob": "c7e2cfcd5d7fd2ba66f5b15d6e03e2d7f6230526",
       "source_mode": "100644",
       "source_sha256": "c33e767661429e52d527374ea57609c3490ab1f70df32f4d06b4fd68ea859702",
-      "public_sha256": "c33e767661429e52d527374ea57609c3490ab1f70df32f4d06b4fd68ea859702",
+      "public_sha256": "944b5b3e155586f0edc78e22eeb9bdfb3f954e4e7cbfbd51afa2f2768c125d58",
       "role": "unreviewed active proposal",
       "theorem_ids": [],
       "dependencies": [
@@ -12462,7 +12462,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source project attribution retained",
       "reproduction_requirements": "execute supplied verifier with public prerequisites",
-      "editorial_change": "byte-identical",
+      "editorial_change": "Replaced local third-party PDF and extracted-text filesystem paths with the publisher DOI citation; no third-party paper or extracted text was included.",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": [
         "docs/audits/pr955_autonomous_proof_audit_2026-10-15.md"

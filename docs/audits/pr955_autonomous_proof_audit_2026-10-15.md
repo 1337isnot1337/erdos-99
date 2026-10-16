@@ -4,8 +4,10 @@
 **Initial head:** `bfe1424f4b8308c72f438394a7f511188d6e778a`.
 **Integration base:** `8c6f37127fbf119fe7ae3745babd1130a6628a09`.
 **Authority:** `2026-10-10.audit.234`; Level I/C-II remain open.
-**Status:** AI substantive audit and repairs; independent human mathematical
-review remains required. This record promotes no claim.
+**Status:** Source AI substantive audit and repairs; it is preserved as
+provenance and does not satisfy the destination's exact-head promotion review
+policy in [REVIEW_POLICY.md](../REVIEW_POLICY.md). This record promotes no
+claim.
 
 Both complete reports (381 and 396 original lines), both Python files (129
 and 414 lines), the complete saved JSON result and the README/index changes

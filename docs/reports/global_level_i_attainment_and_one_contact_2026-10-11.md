@@ -286,10 +286,7 @@ quantifier; it is a finite family, not an unbounded-cardinality disproof.
 The primary-source premise here is Bezdek--Fodor, Theorem 1.1, printed
 page 106: D(8)=1/(2 sin(pi/14)), and every minimizing hull is a regular
 unit heptagon. The authors explicitly leave the eighth point nonunique.
-The original paper was inspected, at
-`papers/primary/1-s2.0-S0097316598928898-main.pdf`, with the theorem also
-read in `extracted/text/1-s2.0-S0097316598928898-main.txt`, lines 93--101.
-[Publisher DOI](https://doi.org/10.1006/jcta.1998.2889).
+The bibliographic record is available from the [publisher DOI](https://doi.org/10.1006/jcta.1998.2889); no third-party paper or extracted text is bundled with this research report.
 No equality statement beyond that theorem is imported.
 
 Here is an exact reconstruction of a particular full-source family.

@@ -487,3 +487,71 @@ canonical owner family with owner-respecting loaded ports for every
 upper-relevant point and isolate, followed by nonzero support in the exact
 full-source lower/upper closure (or a source-specific obstruction/payment).
 No full-source endpoint for every canonical minimizer follows from PR #952.
+
+## Source PR #955 — global attainment and annular matching
+
+The source baseline is main
+`42f0296d1aca068c809f74cee5dcdb4ebdb27c73`; the frozen open draft PR head is
+`d5afc236a7b1de9567dcb6dda65d957ed91c726b`, tree
+`5233d9c8b7774e29609ffaa68cc8dd346c4afa1c`, with merge base
+`8c6f37127fbf119fe7ae3745babd1130a6628a09`. The PR's eight source-main-to-head
+paths each have a row in the path ledger. Six mathematical/evidence files were
+already present byte-identically in the destination; the one-contact report
+was adapted only to remove local paths to a third-party paper and text
+extraction, replacing them with the publisher DOI. The first-party proof text,
+theorem scope, and primary-source attribution remain. The generated source
+artifact index was rebuilt from destination state, and the changed source
+README's PR #955 content was adapted into a focused destination track.
+
+The one-contact proposition applies to each finite cardinality: starting with
+any unit-separated source having an actual unit contact, a midpoint dilation
+after moving the contact endpoints inward produces exactly one unit contact
+and diameter at most `D + epsilon`, retaining all labels. Thus the triangle-
+free and unrestricted diameter infima are equal for every `n >= 2`; Level I
+at a given `n` is exactly nonattainment of the triangle-free infimum. It proves
+neither eventual nonattainment nor a pointwise strict gap. The unique-contact
+descent has no multiple-contact extension. Square, regular-pentagon, and
+`n=8` global-optimum families remain finite regressions against broader
+connectivity claims, not an unbounded counterexample. A weaker
+stress-component route is expressly subsumed by canonical Section 64.3.
+
+The separate annular result studies a specified full comparison packet `X`,
+including every pair at distance at least `D`. Its exact strict-sub-`D`
+retention size is `M_D(X)=|X|-tau(G_D(X))`; an angular deletion makes the
+conflict graph bipartite and yields the stated matching-cover error. For
+arbitrary clouds at `delta=c D^(-1/3)` the error is at most
+`floor(8 sqrt(c) D^(1/3)+16 c^(3/2))`. The optional `O_c(1)` lattice result
+uses the existing translation-uniform circle-count theorem and no stronger
+discrepancy estimate. Full finite triangle-free packets and the
+complete-bipartite saving examples are explicit **nonglobal** regressions;
+they do not improve a universal reserve constant.
+
+The destination reran the one-contact verifier and the annular verifier. The
+annular run's aggregate JSON matches the frozen saved fixture exactly. Its
+`--certificate-json` mode also generated and committed a separate 398,846-byte
+certificate with 52 exact graph proofs (48 disk packets, three full-column
+packets, and the odd-cycle case), plus kernel controls over 1,024 five-label
+graphs and four mutations. The verifier script, saved aggregate fixture, and
+generated certificate are linked from the track and candidate registry.
+
+The exact remaining global bridge is a source-specific admissible packet with
+`M_D(X) >= n` for every sufficiently large triangle-free global minimizer, or
+another proof of eventual nonattainment. Lattice closeness and finite packets
+do not supply it. The [focused track](../../tracks/global-level-i-attainment-annular-matching.md),
+[machine-readable candidate records](../../../targets/target-c/candidate-registry.json),
+and navigation in the active Target C frontier record both routes as
+unreviewed. The source AI audit is retained as provenance; it is not a
+destination promotion audit. No canonical theorem, Level I status, or C-II
+status changed.
+
+### Revalidated successor hashes for two source-main audit ledgers
+
+The full source-provenance verifier found two stale public hashes in the
+source-main artifact ledger: `target_c_integration_audit_ledger_2026-10-06.md`
+and `target_c_referee_run_ledger_2026-10-10.md`. Both paths contain the later
+source PR #947 audit-ledger successors, with their status guard and, for the
+referee ledger, the documented workflow-status wording edits. The source-main
+rows now point to those exact destination hashes and reference the frozen
+PR #947 source heads and per-file records; their original source-main blobs
+and hashes remain unchanged in the ledger. This reconciles provenance only;
+it changes no mathematical claim or theorem-state.
