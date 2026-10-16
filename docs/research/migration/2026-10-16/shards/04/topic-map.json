@@ -516,6 +516,117 @@
         598
       ],
       "unresolved_bridge": "quantify stability away from exact endpoints and join the floors to source geometry"
+    },
+    {
+      "id": "sa_jc_hemmi_post_zf_floors",
+      "description": "Support-area/JC and Hemmi/PI post-ZF scalar floors with endpoint compactness arguments; later stronger shard04 floors dominate numeric thresholds.",
+      "indices": [
+        624,
+        625,
+        640,
+        641
+      ],
+      "unresolved_bridge": "the stronger post-ZF floors still need an upper tradeoff, strict-D competitor, or source-level global contradiction"
+    },
+    {
+      "id": "safe_window_and_scalar_compatibility",
+      "description": "Proof-only safe-window multi-grain exclusion contrasted with exact abstract scalar-ledger compatibility regressions.",
+      "indices": [
+        626,
+        627,
+        628
+      ],
+      "unresolved_bridge": "promote carrier extraction and add embedded/source-preserving geometry; scalar-only package admits witnesses arbitrarily near its floor"
+    },
+    {
+      "id": "second_order_contact_mechanics",
+      "description": "Weighted angular variance and velocity-specific second-order KKT support/acceleration duality.",
+      "indices": [
+        629,
+        630
+      ],
+      "unresolved_bridge": "C62 jet stitching is resolved by C63 for C-I; weighted variance reverse inequality remains unproved and cannot be made unweighted without a separate theorem"
+    },
+    {
+      "id": "secondary_train_geometry_and_return",
+      "description": "Cap-sensitive train load/span, caterpillar diameter cuts, and signed oriented return/area transport.",
+      "indices": [
+        631,
+        632,
+        644
+      ],
+      "unresolved_bridge": "connect cap span, ordered train cuts and physical endpoint geometry; retain antipodal-host and bad-end hypotheses"
+    },
+    {
+      "id": "section146_outer_geodesic_endpoint",
+      "description": "Near-endpoint face-rank stability and conditional outer-geodesic endpoint exclusion.",
+      "indices": [
+        633,
+        634
+      ],
+      "unresolved_bridge": "linear outer detour away from the endpoint and the inactive-container branch remain"
+    },
+    {
+      "id": "quadrangulation_semicircle_interface",
+      "description": "Canonical C42 quadrangulation defect proof record and a semicircle equality-regime loaded-interface defect lower bound.",
+      "indices": [
+        635,
+        636
+      ],
+      "unresolved_bridge": "charge the forced linear loaded-interface excess against available one-slot boundary contacts"
+    },
+    {
+      "id": "full_core_shape_detour_carrier",
+      "description": "Shape-detour moment forces one nearly diameter-scale locally rhombus-saturated harmonic attachment cell in full-core Type II.",
+      "indices": [
+        637
+      ],
+      "unresolved_bridge": "turn the macroscopic near-global cell into an area/response contradiction or source-preserving strict-D competitor"
+    },
+    {
+      "id": "annular_source_population",
+      "description": "Sharp GWZ annular packing ledger and quadratic population consequence for source points inside the force hull.",
+      "indices": [
+        638,
+        639
+      ],
+      "unresolved_bridge": "translate population/area capacity into positive response support, an equilateral triangle, or a same-cardinality smaller-diameter source"
+    },
+    {
+      "id": "shell_and_inactive_activation",
+      "description": "Sequential pocket contact capacity, additive simultaneous-contact area charge, and finite inactive-isolate activation cube.",
+      "indices": [
+        642,
+        645,
+        646
+      ],
+      "unresolved_bridge": "show independent activations forced at one time or derive strict source-preserving diameter decrease; created isolate stars may be universally zero-stressed"
+    },
+    {
+      "id": "response_dichotomy_and_singleton_stress",
+      "description": "C44 short-response/macro-component dichotomy and singleton-star response-stress evacuation.",
+      "indices": [
+        643,
+        650
+      ],
+      "unresolved_bridge": "exclude both response branches and control stress on the remaining nonsingleton components"
+    },
+    {
+      "id": "single_gap_stationary_diameters",
+      "description": "Finite bitonic-boundary theorem localizing all empty-support stationary diameter chords to one gap.",
+      "indices": [
+        647
+      ],
+      "unresolved_bridge": "promote the actual boundary-order theorem and construct a whole-source exchange that checks every inactive pair"
+    },
+    {
+      "id": "single_port_response_mesh",
+      "description": "Single-port Schur-complement and Herfindahl response defect forcing one-leaf concentration in C71-B.",
+      "indices": [
+        648,
+        649
+      ],
+      "unresolved_bridge": "exclude multi-port C71-A or strengthen asymptotic one-leaf concentration to the exact finite chain contradiction"
     }
   ]
 }
