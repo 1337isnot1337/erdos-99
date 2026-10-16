@@ -99,6 +99,63 @@ class ReleaseAuditFixtures(unittest.TestCase):
         self.assertIn("restricted-redistribution", {v["kind"] for v in result["blockers"]})
 
 
+
+    def test_deleted_historical_token_is_still_a_blocker(self):
+        self.set_inventory("approved")
+        self.git("add", "-A")
+        self.git("commit", "-qm", "approved fixture")
+        token = "ghp_" + "A" * 36
+        self.write("reports/temporary.txt", token)
+        self.git("add", "-A")
+        self.git("commit", "-qm", "temporary synthetic credential")
+        (self.root / "reports/temporary.txt").unlink()
+        self.git("add", "-A")
+        self.git("commit", "-qm", "delete synthetic credential")
+        result = audit(self.root)
+        self.assertIn("historical-credential-indicator",
+                      {x["kind"] for x in result["blockers"]})
+        self.assertNotIn(token, json.dumps(result))
+
+    def test_deleted_historical_pdf_is_still_a_blocker(self):
+        self.set_inventory("approved")
+        self.git("add", "-A")
+        self.git("commit", "-qm", "approved fixture")
+        self.write("papers/temp.pdf", "a third-party PDF placeholder")
+        self.git("add", "-A")
+        self.git("commit", "-qm", "temporarily import paper")
+        (self.root / "papers/temp.pdf").unlink()
+        self.git("add", "-A")
+        self.git("commit", "-qm", "delete paper")
+        result = audit(self.root)
+        self.assertIn("historical-restricted-redistribution",
+                      {x["kind"] for x in result["blockers"]})
+
+    def test_secret_on_other_branch_is_still_a_blocker(self):
+        self.set_inventory("approved")
+        self.git("add", "-A")
+        self.git("commit", "-qm", "approved fixture")
+        self.git("checkout", "-qb", "unsafe-branch")
+        self.write("reports/side-branch.txt", "ghp_" + "A" * 36)
+        self.git("add", "-A")
+        self.git("commit", "-qm", "side branch synthetic credential")
+        self.git("checkout", "-q", "-")
+        result = audit(self.root)
+        self.assertIn("historical-credential-indicator",
+                      {x["kind"] for x in result["blockers"]})
+
+    def test_commit_message_secret_is_still_a_blocker(self):
+        self.set_inventory("approved")
+        self.git("add", "-A")
+        self.git("commit", "-qm", "approved fixture")
+        token = "ghp_" + "A" * 36
+        self.git("commit", "--allow-empty", "-qm", "temporary " + token)
+        self.git("commit", "--allow-empty", "-qm", "safe current commit")
+        result = audit(self.root)
+        self.assertIn("historical-credential-indicator",
+                      {x["kind"] for x in result["blockers"]})
+        self.assertNotIn(token, json.dumps(result))
+
+
 if __name__ == "__main__":
     unittest.main()
 

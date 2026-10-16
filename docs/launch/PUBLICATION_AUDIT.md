@@ -142,3 +142,13 @@ The inclusion manifest now describes **808** source-derived files: 804 prior ent
 Both newly imported verifiers passed an independently executed Python/SymPy replay in an isolated audit workspace (499 odd-rim incidence cases, 122 exact cyclotomic pairs, the -72 nonplanarity fixture, formal three-phase pairing and two laminate controls). These certify **only** their stated finite/formal claims, not global optimality or a closure theorem.
 
 **The release decision remains HOLD.** The complete final-candidate audit, 808 separate source rights dispositions, historic email authorization/clean-root decision, complete applicable 94-certificate sweep, and fresh-clone outsider A/B/C sessions are not waived by this addition. Current public visibility is still private; do not treat this file as permission to publish an unchecked commit.
+
+## Independent historical-object security hardening
+
+A release red-team exercise found a concrete false-negative in the original local audit: a synthetic credential or restricted PDF **committed and subsequently deleted** was undetected because only the current HEAD tree was inspected. A synthetic unsafe side branch and a secret embedded in a historical Git commit message were similarly outside the scanner's original coverage.
+
+The revised `tools/audit_public_release.py` audits **every commit tree reachable through Git refs**, including deleted/renamed historical paths, all historical-only blob contents within an explicit 8 MB per-blob scan bound, and reachable commit messages. It rejects historical restricted archives or credential markers, historical uninspectable blobs and incomplete object enumeration. It does not echo matched secret values. HEAD-tree, manifest/hash, rights and author-email validation are retained.
+
+All **10 synthetic security/inventory regression tests** passed independently (the original six plus the four new historical-visibility cases) in Python 3.12. This result validates the scanner on those fixtures; it is **not** evidence that the entire final E99 history has been cleared. A full run against the actual final Git clone, including all refs, is still required. This scan cannot establish authorship rights, independent mathematical review, or protection against every possible secret format.
+
+**Publication decision remains HOLD:** imported rights provenance and existing personal-domain Git author metadata need explicit clearance or clean-root rebuilding. The source mathematical corpus and public CI switches are unchanged by this security patch.
