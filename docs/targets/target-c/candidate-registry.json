@@ -1,7 +1,7 @@
 {
   "schema_version": "erdos-99-target-c-candidate-registry/v1",
   "updated": "2026-10-16",
-  "authority_note": "This registry indexes noncanonical research candidates and evidence. docs/state/theorem-state.yaml remains authoritative; registry entries do not promote, demote, or supersede theorem claims.",
+  "authority_note": "The theorem-state manifest remains authoritative. All registry entries are noncanonical unless independently stated; source imports preserve lifecycle and do not promote claims.",
   "entries": [
     {
       "candidate_id": "POPRESERVE-TWELVE-ARC-PR1008",
@@ -5288,6 +5288,689 @@
         "visibility": "Destination repository remains private.",
         "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged."
       }
+    },
+    {
+      "candidate_id": "GLOBAL-FACTOR-BALANCE-OBSTRUCTION",
+      "title": "Balanced-incidence obstruction to separable distance changes",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed, noncanonical research; destination theorem-state remains authoritative.",
+      "source_proposed_status": "Retained as a source research candidate or exact regression; no destination promotion is inferred.",
+      "claim": {
+        "statement": "For a finite unit-separated source of diameter D, if probability weights on actual contacts and actual diameter pairs have equal incidence at every label, then every positive vertex-factor squared-distance array q_ij′=q_ij s_i s_j has maximum/minimum ratio at least D^2. This is equivalent to intersection of the contact and diameter edge-incidence convex hulls.",
+        "hypotheses": "All source labels and all unordered source pairs are retained; the weights are nonnegative and sum to one in each active family.",
+        "not_claimed": "The converse separation only gives formal factors and not a Euclidean or planar placement. The result does not establish a balanced certificate on every global minimizer."
+      },
+      "target_scope": [
+        "Level I whole-source replacement",
+        "Target C cross-route research"
+      ],
+      "artifacts": [
+        {
+          "path": "docs/reports/global_separable_distortion_obstruction_2026-10-12.md",
+          "role": "stronger existing formal-array theorem",
+          "source_artifact_id": "ART-089B3ADFC540",
+          "source_claim_ids": [],
+          "destination_sha256": "de71af209c8ea4753862de88d0a9029ab4d209dc4ce439096547ad8aad56a439",
+          "destination_transformed": false
+        },
+        {
+          "path": "docs/reports/global_factorized_distance_barrier_2026-10-12.md",
+          "role": "direct realized-distance formulation",
+          "source_artifact_id": "ART-2DFEAD12DFB0",
+          "source_claim_ids": [],
+          "source_git_blob_sha": "bae41f27449a5e43d7967cbc1f9227c7ec1e32bf",
+          "source_sha256": "208b75df3f0c0d044d3bd471044c1b517c9eecca9829ec7c8849bf5b8235b852",
+          "destination_sha256": "bd5e04fc103c1d172af746c44595c7c9efeec68918ba30d7f71f4d00339e54e2",
+          "destination_transformed": true
+        },
+        {
+          "path": "docs/reports/global_vertex_factor_relocation_2026-10-12.md",
+          "role": "planar realization classification and factor obstruction",
+          "source_artifact_id": "ART-4CA365892A3F",
+          "source_claim_ids": [],
+          "source_git_blob_sha": "547c168a20c701c01efcf055e4a8eded7c8d1428",
+          "source_sha256": "9db560b8fce876c7cad4e338d7a6c73ebc1af593fff48041576f3d985e8abf51",
+          "destination_sha256": "a6d34bcadceef3087ebd91529fc987e8b7053ad295d4f7a1f68ad3393cddae57",
+          "destination_transformed": true
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [
+          "The PR #960 realized logarithmic statement is a special case of the existing destination formal-array theorem.",
+          "The PR #995 planar Möbius classification identifies the full realized planar class."
+        ],
+        "description": "Formal convex-separation theorem is in the existing destination report; PR #960 and #995 contribute direct realized formulations and supporting examples."
+      },
+      "obstructions_and_limits": [
+        {
+          "result": "The factorized class is not a complete search family: an exact seven-label planar inversion improves a finite nonglobal source, while separate balanced sources block the class.",
+          "scope": "finite methods / global source extraction"
+        }
+      ],
+      "next_proof_obligations": [
+        "Use global-minimizer information to exclude the balanced certificate, or construct a full-pair planar replacement outside the factorized class.",
+        "See tasks/target-c-factorized-planar-escape.md for the source-wide all-label, planar endpoint obligation and accepted completion boundary."
+      ],
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No canonical theorem is changed or promoted. Finite evidence supports only its stated configurations.",
+        "replacement_status": "none"
+      },
+      "provenance": {
+        "destination_report": "docs/reports/global_separable_distortion_obstruction_2026-10-12.md",
+        "supporting_source_prs": [
+          {
+            "source_pr": 960,
+            "head": "c75e519426e3a88839567411fe3381160f3aa3cb"
+          },
+          {
+            "source_pr": 995,
+            "head": "8db48831a8212dfac1e24a1d26e7f9d53a67335b"
+          }
+        ]
+      },
+      "rights_and_release": {
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged.",
+        "first_party_status": "Owner-authorized first-party research and project-agent material.",
+        "third_party_material": "External literature is linked by citation only; no third-party PDF or protected data is copied.",
+        "visibility": "Destination repository remains private."
+      },
+      "validation": {
+        "command": "python3 research/verify_global_separable_distortion_obstruction.py; python3 research/verify_global_factorized_distance_barrier.py",
+        "result": "Both passed. Existing checker: formal improved squared ratio 6 < 9 and Cayley–Menger determinant -72. PR #960 checker: 98 regular-rim incidence/product checks and five exact rational inversion fixtures.",
+        "boundary": "The checkers verify finite identities only; the analytic convex/logarithmic proofs are in the reports."
+      },
+      "active_task": "tasks/target-c-factorized-planar-escape.md"
+    },
+    {
+      "candidate_id": "GLOBAL-FACTOR-GRAPH-ALTERNATIVE-PR960",
+      "title": "Directed cycle or half-integral separation for factorized distance arrays",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed, noncanonical research; destination theorem-state remains authoritative.",
+      "source_proposed_status": "Retained as a source research candidate or exact regression; no destination promotion is inferred.",
+      "claim": {
+        "statement": "For every finite source, the two-state graph on (label, sign) states has either an alternating directed cycle that yields normalized balanced contact/diameter incidences, or is acyclic and yields half-integers z_i with z_i+z_j>=1 on every contact and z_i+z_j<=-1 on every diameter pair. In the acyclic case a sufficiently small exponential perturbation gives a strict all-pair lower/upper endpoint in the abstract distance array.",
+        "hypotheses": "The active contact and diameter pairs are computed from one finite source; the inactive pair margins are strict at the original source and all labels participate in the finite margin argument.",
+        "not_claimed": "The acyclic endpoint need not be a metric or a Euclidean distance array and has no asserted planar realization. It gives no global-minimizer extraction."
+      },
+      "target_scope": [
+        "Level I factorized-map route",
+        "Target C cross-route endpoint research"
+      ],
+      "artifacts": [
+        {
+          "path": "docs/reports/global_factorized_distance_barrier_2026-10-12.md",
+          "role": "full analytic graph alternative",
+          "source_artifact_id": "ART-2DFEAD12DFB0",
+          "source_claim_ids": [],
+          "source_git_blob_sha": "bae41f27449a5e43d7967cbc1f9227c7ec1e32bf",
+          "source_sha256": "208b75df3f0c0d044d3bd471044c1b517c9eecca9829ec7c8849bf5b8235b852",
+          "destination_sha256": "bd5e04fc103c1d172af746c44595c7c9efeec68918ba30d7f71f4d00339e54e2",
+          "destination_transformed": true
+        },
+        {
+          "path": "research/global_factorized_graph_alternative.py",
+          "role": "exact graph witness and half-integral potential routine",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_git_blob_sha": "3286557c5e6600761327e640e548da0935191983",
+          "source_sha256": "0a7962ef2adf6ed8c656f999aa5d8a4f6e9abfad312a9263dc91571d092483ea",
+          "destination_sha256": "0a7962ef2adf6ed8c656f999aa5d8a4f6e9abfad312a9263dc91571d092483ea",
+          "destination_transformed": false
+        },
+        {
+          "path": "research/verify_global_factorized_graph_alternative.py",
+          "role": "finite graph census and corruption controls",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_git_blob_sha": "8e49ea574afe0e8ee727079a33a852495aa2d304",
+          "source_sha256": "39cb42efc7b519c2e2454a40c82fbc1c46f4f9b92334eadf63e1dca9670aaf42",
+          "destination_sha256": "39cb42efc7b519c2e2454a40c82fbc1c46f4f9b92334eadf63e1dca9670aaf42",
+          "destination_transformed": false
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "description": "Elementary directed graph construction; no canonical theorem dependency."
+      },
+      "obstructions_and_limits": [
+        {
+          "result": "Graph improvement in the abstract complete pair array does not imply any Euclidean realization; the regular pentagon-center control raises centered Gram rank from 2 to 3.",
+          "scope": "planar realization"
+        }
+      ],
+      "next_proof_obligations": [
+        "When the graph is acyclic for a global source, find a planar realization or another full-pair planar construction preserving all lower and upper constraints.",
+        "See tasks/target-c-factorized-planar-escape.md for the source-wide all-label, planar endpoint obligation and accepted completion boundary."
+      ],
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No canonical theorem is changed or promoted. Finite evidence supports only its stated configurations.",
+        "replacement_status": "none"
+      },
+      "provenance": {
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head_sha": "c75e519426e3a88839567411fe3381160f3aa3cb",
+        "source_head_tree": "65f7e6e67cbead52038792617df9de48208d99d7",
+        "source_merge_base": "a43c69dac7e7b0627dec2900e12c60fd4608d519",
+        "source_pr": 960,
+        "source_pr_draft": true,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/960",
+        "source_repository": "https://github.com/1337isnot1337/e-99"
+      },
+      "rights_and_release": {
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged.",
+        "first_party_status": "Owner-authorized first-party research and project-agent material.",
+        "third_party_material": "External literature is linked by citation only; no third-party PDF or protected data is copied.",
+        "visibility": "Destination repository remains private."
+      },
+      "validation": {
+        "command": "python3 research/verify_global_factorized_graph_alternative.py",
+        "result": "PASS: 43,286 abstract improvements and 14,330 factorized barriers through five labels; four corrupted certificates rejected; all 15 abstract endpoint pairs checked on the pentagon-center realization control.",
+        "boundary": "Exhaustive finite graph census and exact fixture checks do not prove a global source theorem or planarity."
+      },
+      "active_task": "tasks/target-c-factorized-planar-escape.md"
+    },
+    {
+      "candidate_id": "GLOBAL-SHARP-RESERVE-FACTOR-NONGLOBAL-FAMILY-PR960",
+      "title": "Sharp population reserve does not make factorized stability imply globality",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed, noncanonical research; destination theorem-state remains authoritative.",
+      "source_proposed_status": "Retained as a source research candidate or exact regression; no destination promotion is inferred.",
+      "claim": {
+        "statement": "For every fixed theta in (131/208,2/3), there are unbounded-D planar triangle-free sources with exactly two actual unit-contact edges, two crossing actual diameter edges, and all other labels retained as contact isolates, such that n_D-1-pi D^2/(2 sqrt(3)) >= kappa_0 D^(2/3)-C D^theta. Balanced incidences block every positive endpoint-factor map, yet a small horizontal contraction is a strict same-cardinality diameter competitor.",
+        "hypotheses": "The population construction uses the finite lattice comparison in canonical Audit.243 at its registered scope; constants may depend on theta. The examples have the reported actual contact and diameter graphs.",
+        "not_claimed": "The examples are nonglobal and fail the KKT tensor identity. They do not refute an all-global-minimizer reserve or imply a Target C closure."
+      },
+      "target_scope": [
+        "Level I population/factorized route",
+        "Target C global-source geometry"
+      ],
+      "artifacts": [
+        {
+          "path": "docs/reports/global_dense_factorized_barrier_2026-10-12.md",
+          "role": "full analytic unbounded construction and strict competitor",
+          "source_artifact_id": "ART-616855D04589",
+          "source_claim_ids": [],
+          "source_git_blob_sha": "09e748b3a55c6085301fd9ca841c862f9436e074",
+          "source_sha256": "480cc3efcfb4075d8eaa5f6077dbf6a872267b3d0a6b0a2f7fabafc9dc483113",
+          "destination_sha256": "cea8009b28aeedeacad8e9731a8cae6964524e778382c404d6c55e95d38fa65f",
+          "destination_transformed": true
+        },
+        {
+          "path": "research/verify_global_dense_factorized_barrier.py",
+          "role": "four exact large finite source certificates and pair checks",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_git_blob_sha": "2533c1f03a26d4a2edbeb0c2d9205c12e6e23b0c",
+          "source_sha256": "13d7f02769418ab8a339e637dc3ef1d7f1c5bd60d267ff59570d84ea3e687fc9",
+          "destination_sha256": "13d7f02769418ab8a339e637dc3ef1d7f1c5bd60d267ff59570d84ea3e687fc9",
+          "destination_transformed": false
+        },
+        {
+          "path": "docs/audits/pr960_autonomous_proof_audit_2026-10-15.md",
+          "role": "source audit provenance",
+          "source_artifact_id": "ART-1AA0645355FC",
+          "source_claim_ids": [],
+          "source_git_blob_sha": "104ab665a79d1b9a6848228c987740207f95bdd2",
+          "source_sha256": "8e9c5dbd2902a2333fc24ed9d0d42a7d989ab908093a2104aa16e9b9c7e480c3",
+          "destination_sha256": "4f58ca2acb7c57ad468470e7f936202830e34401262ec4d590207b4449c13fb3",
+          "destination_transformed": true
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [
+          "C-GLOBAL-POPULATION-EXCESS-ASYMPTOTIC-COEFFICIENT"
+        ],
+        "description": "The analytic population lower bound imports canonical Audit.243 at its exact stated finite-lattice scope; no other theorem is promoted."
+      },
+      "obstructions_and_limits": [
+        {
+          "result": "All four displayed sources admit an explicit strict same-cardinality contraction and fail the KKT identity.",
+          "scope": "nonglobal finite sources and analytic unbounded family"
+        }
+      ],
+      "next_proof_obligations": [
+        "Derive a further globality-specific structural fact that forces either an exact triangle or a planar competitor outside the factorized class. The sharp reserve and leading density alone are insufficient.",
+        "See tasks/target-c-factorized-planar-escape.md for the source-wide all-label, planar endpoint obligation and accepted completion boundary."
+      ],
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No canonical theorem is changed or promoted. Finite evidence supports only its stated configurations.",
+        "replacement_status": "none"
+      },
+      "provenance": {
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head_sha": "c75e519426e3a88839567411fe3381160f3aa3cb",
+        "source_head_tree": "65f7e6e67cbead52038792617df9de48208d99d7",
+        "source_merge_base": "a43c69dac7e7b0627dec2900e12c60fd4608d519",
+        "source_pr": 960,
+        "source_pr_draft": true,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/960",
+        "source_repository": "https://github.com/1337isnot1337/e-99"
+      },
+      "rights_and_release": {
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged.",
+        "first_party_status": "Owner-authorized first-party research and project-agent material.",
+        "third_party_material": "External literature is linked by citation only; no third-party PDF or protected data is copied.",
+        "visibility": "Destination repository remains private."
+      },
+      "validation": {
+        "command": "python3 research/verify_global_dense_factorized_barrier.py",
+        "result": "PASS for M=32,64,96,128 with 938, 3,734, 8,378, and 14,885 source labels. The M=32 replay directly crosschecked 435,711 packet pairs; the largest source checked 110,774,170 source pairs.",
+        "boundary": "Exact finite source certificates support the analytic construction; the population family proof is analytic and the examples are nonglobal."
+      },
+      "active_task": "tasks/target-c-factorized-planar-escape.md"
+    },
+    {
+      "candidate_id": "GLOBAL-PLANAR-RADIUS-OBSTRUCTION-PR960",
+      "title": "Rank truncation and enclosing-radius bounds limit planar replacement methods",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed, noncanonical research; destination theorem-state remains authoritative.",
+      "source_proposed_status": "Retained as a source research candidate or exact regression; no destination promotion is inferred.",
+      "claim": {
+        "statement": "For the uniform squared-distance interpolation of any finite unit-separated planar source, the centered Gram matrix has rank n-1 for every positive interpolation parameter, so it is not planar for n>=4. Rank-two truncation for 0<t<1 retains the original coordinate span and yields an affine image. A bounded-correction endpoint with radius at most alpha R+tau cannot be unit-separated when the source already minimizes enclosing radius and 2 tau < (1-alpha)D. A six-point hexagon nevertheless has an exact same-radius pentagon-plus-center competitor of diameter sqrt((5+sqrt(5))/2)<2.",
+        "hypotheses": "The rank result concerns the complete squared-distance interpolation; the radius bound assumes the stated enclosing-radius extremality and correction inequality.",
+        "not_claimed": "The rank result overlaps PR #958. The radius hypothesis is not shown for large global diameter minimizers, and the six-point replacement is finite."
+      },
+      "target_scope": [
+        "Level I planar replacement route",
+        "Target C cross-route geometry"
+      ],
+      "artifacts": [
+        {
+          "path": "docs/reports/global_planarity_and_radius_barriers_2026-10-12.md",
+          "role": "full rank/radius analysis and six-point replacement",
+          "source_artifact_id": "ART-4193B848EBB4",
+          "source_claim_ids": [],
+          "source_git_blob_sha": "fd202c2c52e7f917eb98491f28d0c79e2a552633",
+          "source_sha256": "84b3228028d48fc27461f90149c7eb16e9b8f519d3681b2199ca3c0de1ba21e0",
+          "destination_sha256": "02ba72cab64b73b6611a77c6d04af24c51ee3b345b58636e9d4b1acf61491593",
+          "destination_transformed": true
+        },
+        {
+          "path": "research/verify_global_planarity_and_radius_barriers.py",
+          "role": "exact Gram rank and pairwise endpoint checks",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_git_blob_sha": "cc6235685106e48e385a0d34669720015a1654b9",
+          "source_sha256": "40f9a65f24d6041322a8f94ff105e7ea2f73fb24f2ebc51433ba949453de491c",
+          "destination_sha256": "40f9a65f24d6041322a8f94ff105e7ea2f73fb24f2ebc51433ba949453de491c",
+          "destination_transformed": false
+        },
+        {
+          "path": "docs/reports/global_colouring_lift_and_planar_rank_barrier_2026-10-12.md",
+          "role": "PR #958 duplicate rank result",
+          "source_artifact_id": "ART-4DE55BC9FA0D",
+          "source_claim_ids": [],
+          "destination_sha256": "ab1fc0f0d2cdd3b1f72b801a7b873d56f5db6bed68bfd231f29d88b5945538bc",
+          "destination_transformed": false
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [
+          "GLOBAL-SQUARED-DISTANCE-INTERPOLATION-PR958"
+        ],
+        "description": "The rank-n-1 statement is already registered for PR #958; this record covers the additional truncation, radius, and hexagon results."
+      },
+      "obstructions_and_limits": [
+        {
+          "result": "Uniform squared-distance contraction has no planar realization for n>=4; closest rank-two truncation is affine. The six-point example preserves radius and lowers diameter.",
+          "scope": "specific planar mechanisms and six-point fixture"
+        }
+      ],
+      "next_proof_obligations": [
+        "Find a nonlinear planar full-pair replacement for arbitrary large triangle-free global minimizers, or prove the necessary radius extremality from global diameter optimality.",
+        "See tasks/target-c-factorized-planar-escape.md for the source-wide all-label, planar endpoint obligation and accepted completion boundary."
+      ],
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No canonical theorem is changed or promoted. Finite evidence supports only its stated configurations.",
+        "replacement_status": "none"
+      },
+      "provenance": {
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head_sha": "c75e519426e3a88839567411fe3381160f3aa3cb",
+        "source_head_tree": "65f7e6e67cbead52038792617df9de48208d99d7",
+        "source_merge_base": "a43c69dac7e7b0627dec2900e12c60fd4608d519",
+        "source_pr": 960,
+        "source_pr_draft": true,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/960",
+        "source_repository": "https://github.com/1337isnot1337/e-99"
+      },
+      "rights_and_release": {
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged.",
+        "first_party_status": "Owner-authorized first-party research and project-agent material.",
+        "third_party_material": "External literature is linked by citation only; no third-party PDF or protected data is copied.",
+        "visibility": "Destination repository remains private."
+      },
+      "validation": {
+        "command": "python3 research/verify_global_planarity_and_radius_barriers.py",
+        "result": "PASS: square rank 3 and hexagon rank 5 at three rational parameters; all old and endpoint pairs checked; both contact graphs triangle-free; endpoint diameter strictly below 2.",
+        "boundary": "Finite fixtures do not show enclosing-radius extremality or a global-minimizer result."
+      },
+      "active_task": "tasks/target-c-factorized-planar-escape.md"
+    },
+    {
+      "candidate_id": "GLOBAL-VERTEX-FACTOR-POLE-TEST-PR995",
+      "title": "Quartic all-pair feasibility test for realized Möbius distance maps",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed, noncanonical research; destination theorem-state remains authoritative.",
+      "source_proposed_status": "Retained as a source research candidate or exact regression; no destination promotion is inferred.",
+      "claim": {
+        "statement": "For a finite planar source, after factoring out similarities and reflection, every non-affine planar vertex-factor map is inversion about a pole x not equal to a source point. Let R_ij(x)=d_ij^2/(|p_i-x|^2 |p_j-x|^2), m(x)=min R_ij(x), and M(x)=max R_ij(x). A strict-sub-D normalized image in this realized class exists exactly when some admissible x satisfies M(x)<D^2 m(x), equivalently every unordered pair of pairs satisfies the corresponding strict quartic inequality.",
+        "hypotheses": "All labels, inactive pairs, and contact isolates are included. Exact decision for a numeric instance requires exact real-closed-field input such as algebraic coordinates.",
+        "not_claimed": "This decides only the realized Möbius/anti-Möbius vertex-factor class; it does not decide unrestricted repacking or produce a global source pole."
+      },
+      "target_scope": [
+        "Level I full-source transformation route",
+        "Target C finite obstruction/regression evidence"
+      ],
+      "artifacts": [
+        {
+          "path": "docs/reports/global_vertex_factor_relocation_2026-10-12.md",
+          "role": "complete planar classification and quartic pole criterion",
+          "source_artifact_id": "ART-4CA365892A3F",
+          "source_claim_ids": [],
+          "source_git_blob_sha": "547c168a20c701c01efcf055e4a8eded7c8d1428",
+          "source_sha256": "9db560b8fce876c7cad4e338d7a6c73ebc1af593fff48041576f3d985e8abf51",
+          "destination_sha256": "a6d34bcadceef3087ebd91529fc987e8b7053ad295d4f7a1f68ad3393cddae57",
+          "destination_transformed": true
+        },
+        {
+          "path": "research/verify_global_vertex_factor_relocation_2026_10_12.py",
+          "role": "exact pole/distance and finite regression checker",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_git_blob_sha": "176668f98f3bbbf30fd45cb397c0851c09f8cf72",
+          "source_sha256": "a64d10801d44edd41e869b04964663624381c7a1ccd0ce93416d551251635e3c",
+          "destination_sha256": "a64d10801d44edd41e869b04964663624381c7a1ccd0ce93416d551251635e3c",
+          "destination_transformed": false
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [
+          "GLOBAL-FACTOR-BALANCE-OBSTRUCTION"
+        ],
+        "description": "The Möbius classification overlaps the prior formal-array report; the quartic pole feasibility test is the distinct addition."
+      },
+      "obstructions_and_limits": [
+        {
+          "result": "Balanced active incidence blocks this entire realized factor class for the covered sources; no pole-feasibility conclusion for arbitrary global minimizers is proved.",
+          "scope": "global source extraction"
+        }
+      ],
+      "next_proof_obligations": [
+        "Use canonical global-minimizer structure to prove an admissible pole with the strict quartic inequalities, or construct a planar competitor outside this class while checking all pairs.",
+        "See tasks/target-c-factorized-planar-escape.md for the source-wide all-label, planar endpoint obligation and accepted completion boundary."
+      ],
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No canonical theorem is changed or promoted. Finite evidence supports only its stated configurations.",
+        "replacement_status": "none"
+      },
+      "provenance": {
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head_sha": "8db48831a8212dfac1e24a1d26e7f9d53a67335b",
+        "source_head_tree": "b73c1114989079472aeeb883fee7ac9d28f8af57",
+        "source_merge_base": "8ba00e900439a15ccd009f935f3e232f93e7480f",
+        "source_pr": 995,
+        "source_pr_draft": false,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/995",
+        "source_repository": "https://github.com/1337isnot1337/e-99"
+      },
+      "rights_and_release": {
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged.",
+        "first_party_status": "Owner-authorized first-party research and project-agent material.",
+        "third_party_material": "External literature is linked by citation only; no third-party PDF or protected data is copied.",
+        "visibility": "Destination repository remains private."
+      },
+      "validation": {
+        "command": "python3 research/verify_global_vertex_factor_relocation_2026_10_12.py",
+        "result": "PASS with exact rational arithmetic: certificate negative controls, 9-label 36-pair nonmetric array, 4-label 3D metric/nonplanar fixture, 6-label Möbius cross-ratios, and 7-label all-21-pair inversion with D^2 16 -> 202/13.",
+        "boundary": "The pole inequalities are proved analytically; this finite checker verifies fixtures and identities, not arbitrary real-coordinate decision or global optimality."
+      },
+      "active_task": "tasks/target-c-factorized-planar-escape.md"
+    },
+    {
+      "candidate_id": "GLOBAL-VERTEX-FACTOR-REALIZABILITY-REGRESSIONS-PR995",
+      "title": "Exact metric and planar-realizability failures for abstract factor arrays",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed, noncanonical research; destination theorem-state remains authoritative.",
+      "source_proposed_status": "Retained as a source research candidate or exact regression; no destination promotion is inferred.",
+      "claim": {
+        "statement": "A nine-label square-grid vertex-factor array can preserve all 12 contacts and have every squared pair in [1,40000/6561] below the original D^2=8 while violating a triangle inequality by 38/81. A separate four-label factor array is a genuine three-dimensional metric with all distances at least one and a strict diameter reduction, but no planar realization because its unit cycle would be a rhombus and its diagonal squares sum to less than four.",
+        "hypotheses": "The constructions and vertex factors are exactly those in the full #995 report; every pair is checked.",
+        "not_claimed": "These examples reject two relaxations and do not establish an infinite family, a global minimizer, or Level I closure."
+      },
+      "target_scope": [
+        "Level I factorized-distance route",
+        "Target C full-pair realization constraints"
+      ],
+      "artifacts": [
+        {
+          "path": "docs/reports/global_vertex_factor_relocation_2026-10-12.md",
+          "role": "exact 9-label nonmetric and 4-label three-dimensional/nonplanar examples",
+          "source_artifact_id": "ART-4CA365892A3F",
+          "source_claim_ids": [],
+          "source_git_blob_sha": "547c168a20c701c01efcf055e4a8eded7c8d1428",
+          "source_sha256": "9db560b8fce876c7cad4e338d7a6c73ebc1af593fff48041576f3d985e8abf51",
+          "destination_sha256": "a6d34bcadceef3087ebd91529fc987e8b7053ad295d4f7a1f68ad3393cddae57",
+          "destination_transformed": true
+        },
+        {
+          "path": "research/verify_global_vertex_factor_relocation_2026_10_12.py",
+          "role": "all-pair exact rational replay",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_git_blob_sha": "176668f98f3bbbf30fd45cb397c0851c09f8cf72",
+          "source_sha256": "a64d10801d44edd41e869b04964663624381c7a1ccd0ce93416d551251635e3c",
+          "destination_sha256": "a64d10801d44edd41e869b04964663624381c7a1ccd0ce93416d551251635e3c",
+          "destination_transformed": false
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "description": "Exact counterexamples to metric and planar realizability shortcuts."
+      },
+      "obstructions_and_limits": [
+        {
+          "result": "The nine-label array is not a metric; the separate four-label array is metric but not planar.",
+          "scope": "finite factorized arrays"
+        }
+      ],
+      "next_proof_obligations": [
+        "Any proposed factor-array relaxation must prove metricity and planar realizability for the full array, including inactive pairs, before it can serve as a Euclidean competitor.",
+        "See tasks/target-c-factorized-planar-escape.md for the source-wide all-label, planar endpoint obligation and accepted completion boundary."
+      ],
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No canonical theorem is changed or promoted. Finite evidence supports only its stated configurations.",
+        "replacement_status": "none"
+      },
+      "provenance": {
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head_sha": "8db48831a8212dfac1e24a1d26e7f9d53a67335b",
+        "source_head_tree": "b73c1114989079472aeeb883fee7ac9d28f8af57",
+        "source_merge_base": "8ba00e900439a15ccd009f935f3e232f93e7480f",
+        "source_pr": 995,
+        "source_pr_draft": false,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/995",
+        "source_repository": "https://github.com/1337isnot1337/e-99"
+      },
+      "rights_and_release": {
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged.",
+        "first_party_status": "Owner-authorized first-party research and project-agent material.",
+        "third_party_material": "External literature is linked by citation only; no third-party PDF or protected data is copied.",
+        "visibility": "Destination repository remains private."
+      },
+      "validation": {
+        "command": "python3 research/verify_global_vertex_factor_relocation_2026_10_12.py",
+        "result": "PASS: exact rational triangle inequality excess 38/81 on 36 pairs; four-label 3D realization positive with explicit planar diagonal defect.",
+        "boundary": "Finite counterexamples only."
+      },
+      "active_task": "tasks/target-c-factorized-planar-escape.md"
+    },
+    {
+      "candidate_id": "GLOBAL-SEVEN-POINT-INVERSION-COMPETITOR-PR995",
+      "title": "Seven-label inversion escapes affine resistance with two contact isolates",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed, noncanonical research; destination theorem-state remains authoritative.",
+      "source_proposed_status": "Retained as a source research candidate or exact regression; no destination promotion is inferred.",
+      "claim": {
+        "statement": "A seven-label unit-separated rod source with four unit contacts and two contact isolates has D^2=16. Inverting about (0,10) and scaling by sqrt(104*101) retains all seven labels, makes the minimum squared separation exactly one, checks all 21 pairs, and gives maximum squared distance 202/13<16.",
+        "hypotheses": "The exact source coordinates and inversion are those in the report; both additional labels are strict contact isolates.",
+        "not_claimed": "This finite source is nonglobal and does not imply eventual behavior for global minimizers."
+      },
+      "target_scope": [
+        "Level I finite nonlinear replacement route",
+        "Target C contact-isolate handling"
+      ],
+      "artifacts": [
+        {
+          "path": "docs/reports/global_vertex_factor_relocation_2026-10-12.md",
+          "role": "full exact inversion construction and all-pair argument",
+          "source_artifact_id": "ART-4CA365892A3F",
+          "source_claim_ids": [],
+          "source_git_blob_sha": "547c168a20c701c01efcf055e4a8eded7c8d1428",
+          "source_sha256": "9db560b8fce876c7cad4e338d7a6c73ebc1af593fff48041576f3d985e8abf51",
+          "destination_sha256": "a6d34bcadceef3087ebd91529fc987e8b7053ad295d4f7a1f68ad3393cddae57",
+          "destination_transformed": true
+        },
+        {
+          "path": "research/verify_global_vertex_factor_relocation_2026_10_12.py",
+          "role": "exact rational inversion checker",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_git_blob_sha": "176668f98f3bbbf30fd45cb397c0851c09f8cf72",
+          "source_sha256": "a64d10801d44edd41e869b04964663624381c7a1ccd0ce93416d551251635e3c",
+          "destination_sha256": "a64d10801d44edd41e869b04964663624381c7a1ccd0ce93416d551251635e3c",
+          "destination_transformed": false
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "description": "Exact rational source and distance identities; no canonical theorem dependency."
+      },
+      "obstructions_and_limits": [
+        {
+          "result": "A finite nonlinear map beats affine resistance while preserving every label.",
+          "scope": "one seven-label nonglobal source"
+        }
+      ],
+      "next_proof_obligations": [
+        "Determine whether globality plus canonical source geometry can supply a strict pole-feasible inversion or requires a genuinely different planar replacement.",
+        "See tasks/target-c-factorized-planar-escape.md for the source-wide all-label, planar endpoint obligation and accepted completion boundary."
+      ],
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No canonical theorem is changed or promoted. Finite evidence supports only its stated configurations.",
+        "replacement_status": "none"
+      },
+      "provenance": {
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head_sha": "8db48831a8212dfac1e24a1d26e7f9d53a67335b",
+        "source_head_tree": "b73c1114989079472aeeb883fee7ac9d28f8af57",
+        "source_merge_base": "8ba00e900439a15ccd009f935f3e232f93e7480f",
+        "source_pr": 995,
+        "source_pr_draft": false,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/995",
+        "source_repository": "https://github.com/1337isnot1337/e-99"
+      },
+      "rights_and_release": {
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged.",
+        "first_party_status": "Owner-authorized first-party research and project-agent material.",
+        "third_party_material": "External literature is linked by citation only; no third-party PDF or protected data is copied.",
+        "visibility": "Destination repository remains private."
+      },
+      "validation": {
+        "command": "python3 research/verify_global_vertex_factor_relocation_2026_10_12.py",
+        "result": "PASS: 7 labels, 2 isolates, 21 pairs; D^2 16 -> 202/13; squared-diameter gain 6/13.",
+        "boundary": "Finite source and competitor only; source global optimality is not claimed."
+      },
+      "active_task": "tasks/target-c-factorized-planar-escape.md"
+    },
+    {
+      "candidate_id": "TARGET-C-HULL-TRAIN-CHORD-FORK-PR995",
+      "title": "Conditional first-passage or host-arc alternative for loaded returns",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed, noncanonical research; destination theorem-state remains authoritative.",
+      "source_proposed_status": "Retained as a source research candidate or exact regression; no destination promotion is inferred.",
+      "claim": {
+        "statement": "Under the stated proper-host-arc hypothesis for a loaded force hull F, if at least half of the distinct returns end off the host arc, a first height passage gives an actual unit contact meeting the closed chord segment with a source endpoint within distance one; otherwise at least half of the distinct loaded endpoints lie on the host arc.",
+        "hypotheses": "The return path stays in F until its first loaded endpoint; the two host extremes are distinct and their chord intersects F exactly in the closed host segment; the height threshold is eta>h to eta<=0.",
+        "not_claimed": "This conditional fork yields no diameter edge, bounded route payment, full-source competitor, or extraction theorem for arbitrary canonical sources."
+      },
+      "target_scope": [
+        "Target C hull/train and loaded-attachment route",
+        "C-II conditional source-extraction research"
+      ],
+      "artifacts": [
+        {
+          "path": "docs/reports/hull_train_preservation_reconciliation_2026-10-15.md",
+          "role": "cross-target historical reconciliation and exact conditional fork",
+          "source_artifact_id": "ART-663DA438CB5E",
+          "source_claim_ids": [],
+          "source_git_blob_sha": "4d0803841bf41f9b8983d0b949400e1d3ab90e6b",
+          "source_sha256": "d2c631217a06c1e9c4e4e449eb8d086411726d41766082298176f79e08830cfd",
+          "destination_sha256": "01c77e5b8b510b4d62db8432db89f30a643f98283eab42507cf7cafe2e663a40",
+          "destination_transformed": true
+        },
+        {
+          "path": "research/verify_target_c_bulk_separator_2026_10_04.py",
+          "role": "related exact bulk-separator regression checker",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_git_blob_sha": "5b9ae79b6752cfc7c3ab78107c88e4ebfb60218d",
+          "source_sha256": "5a906da78f58cfba0c05b235bbac0a53686da6e143c66eb3e0f81094921f6d53",
+          "destination_sha256": "5a906da78f58cfba0c05b235bbac0a53686da6e143c66eb3e0f81094921f6d53",
+          "destination_transformed": false
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "description": "The report cross-references existing audits and checkers; no dedicated checker proves the conditional analytic fork."
+      },
+      "obstructions_and_limits": [
+        {
+          "result": "The fork separates first-passage contacts from host-arc endpoint concentration; neither branch pays a diameter or population cost.",
+          "scope": "conditional loaded-hull configuration"
+        }
+      ],
+      "next_proof_obligations": [
+        "Prove the fork hypotheses from canonical Target C source structure and derive the missing diameter/payment or same-cardinality endpoint conclusion.",
+        "See tasks/target-c-factorized-planar-escape.md for the source-wide all-label, planar endpoint obligation and accepted completion boundary."
+      ],
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "No canonical theorem is changed or promoted. Finite evidence supports only its stated configurations.",
+        "replacement_status": "none"
+      },
+      "provenance": {
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head_sha": "8db48831a8212dfac1e24a1d26e7f9d53a67335b",
+        "source_head_tree": "b73c1114989079472aeeb883fee7ac9d28f8af57",
+        "source_merge_base": "8ba00e900439a15ccd009f935f3e232f93e7480f",
+        "source_pr": 995,
+        "source_pr_draft": false,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/995",
+        "source_repository": "https://github.com/1337isnot1337/e-99"
+      },
+      "rights_and_release": {
+        "destination_claim_status": "Noncanonical and unreviewed; theorem-state unchanged.",
+        "first_party_status": "Owner-authorized first-party research and project-agent material.",
+        "third_party_material": "External literature is linked by citation only; no third-party PDF or protected data is copied.",
+        "visibility": "Destination repository remains private."
+      },
+      "validation": {
+        "command": "See docs/reports/hull_train_preservation_reconciliation_2026-10-15.md; run the related hull/train checkers in the focused track.",
+        "result": "Related finite checkers passed: 12 full-source packets for hull-train, 14 harmonic faces and 111 rhombi for deep-port, and exact pinned-grid checks. The conditional fork itself has no dedicated computational replay.",
+        "boundary": "Finite controls are independent of the conditional analytic fork and do not establish C-II or global optimality."
+      },
+      "active_task": "tasks/target-c-factorized-planar-escape.md"
     }
   ]
 }

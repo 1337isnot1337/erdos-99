@@ -293,3 +293,33 @@ triangle-freeness or leading density. Read the [focused track](../../research/tr
 [reports and exact verifiers](../../research/proposals.md), and
 [candidate registry](candidate-registry.json). No theorem-state or C-II status
 changes.
+
+
+## Factorized maps, replacement geometry, and population regressions
+
+The unreviewed #960/#995 research adds an exact balanced-incidence obstruction
+to positive vertex-factor distance maps, a cycle/DAG alternative for abstract
+full-pair arrays, and an unbounded triangle-free family satisfying the sharp
+`D^(2/3)` population reserve while remaining nonglobal. The squared-distance
+rank obstruction repeats PR #958; the new material explains the affine limit
+of rank-two truncation, an enclosing-radius barrier, and a six-point equal-radius
+strict competitor. Merged PR #995 adds a quartic all-pairs pole-feasibility test,
+exact metric/nonplanar controls, and a seven-label inversion competitor with
+two isolates. These are method limits and finite regressions, not a global
+minimizer obstruction. The hull/train reconciliation contains one conditional
+chord fork with no diameter payment.
+
+The balanced-factor statement and Möbius classification are already covered by
+the stronger formal-array report; they are linked rather than counted twice.
+The next global obligation remains a same-cardinality planar competitor with
+every pair in `[1,D)` for each sufficiently large triangle-free global
+minimizer, or a unit triangle. In particular, a DAG's abstract endpoint must be
+realized in the plane, and any escape from vertex factors must preserve all
+lower and upper constraints, including isolates. Read the
+[focused factorization/planarity track](../../research/tracks/global-factorized-distance-planarity-pr960.md),
+its [candidate registry](candidate-registry.json), and the exact commands in
+[research/README](../../research/README.md). The theorem-state and C-II status
+are unchanged.
+
+The source-wide follow-up is tracked in
+[target-c-factorized-planar-escape](../../../tasks/target-c-factorized-planar-escape.md).

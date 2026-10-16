@@ -122,6 +122,18 @@ This review does not merge the private proposals or certify excluded proofs.
 | 949 | Defer unreviewed atomic-Mantel/zero-deficit improvements. The general multi-grain transfer remains open and the stronger seamed-grain regression is already retained. |
 | 1007 | Exclude recovery/activity bookkeeping. Its conditional periodic successor remains optional in PR #956. |
 
+Separately, the factorized/planarity content of open source PR #960 and relevant
+mathematical support from merged source PR #995 are retained in the private
+research corpus as noncanonical evidence. The destination ledger records every
+path and hash. The source #960 balanced-factor and rank results are linked to
+stronger/already-retained claims; distinct sharp-reserve, graph-alternative,
+radius, pole-feasibility and finite-regression results remain available for
+research. The merged #995 operational recovery file is excluded from the corpus.
+This does not expand the owner-authorized 810-entry publication inclusion set,
+promote a claim, or authorize a visibility change. See the [research
+reconciliation](../research/migration/2026-10-16/scientific-reconciliation.md).
+
+
 ## Independent comparison of the 74 editorial changes
 
 Every source blob was loaded from its recorded immutable commit and compared

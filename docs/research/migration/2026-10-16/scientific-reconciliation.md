@@ -662,7 +662,7 @@ parameter \(t=1-\lambda\). These are the same mathematical claim, so this
 candidate is not counted as a distinct result from PR #960. PR #960 further
 analyzes why rank-two truncation preserves the original affine image and gives
 separate enclosing-radius and finite replacement results; those additions
-remain in the queued PR #960 batch. PR #958's triangle-free contact-colour
+are now preserved in the focused PR #960 track below. PR #958's triangle-free contact-colour
 lift, exact flattening condition, all-pair endpoint quadratics, and palette
 regressions are distinct and remain fully recorded here.
 
@@ -686,4 +686,23 @@ The Steiner report gives two distinct capacity regressions. The four-label rotat
 
 The historical source audit is preserved as first-party AI-audit provenance, with its claim that human review is required corrected to the destination policy: it is not the independent exact-head AI-agent audit required before consequential promotion. The run note retains the negative exploratory search only as historical, inconclusive evidence; account-specific hosted-CI details were removed, and no unexecuted CI is reported as passing. Two exact verifier files are byte-identical to source. No external PDFs, protected tables, private paths, or theorem-state changes are included.
 
-The focused navigation is in [the PR #959 research track](../../tracks/global-reflected-scale-capacity-pr959.md), with machine-readable candidate claims in the [registry](../../../targets/target-c/candidate-registry.json). The next bridge is source-derived near-identity signs and scales satisfying every lower and upper pair constraint for all sufficiently large triangle-free global minimizers, or a full-label capacity/repacking result that uses their global geometry. No Level I or C-II closure is claimed. This is a separate route from the PR #958 colour/palette method and the queued PR #960 rank/radius analysis; shared endpoint goals do not establish redundancy.
+The focused navigation is in [the PR #959 research track](../../tracks/global-reflected-scale-capacity-pr959.md), with machine-readable candidate claims in the [registry](../../../targets/target-c/candidate-registry.json). The next bridge is source-derived near-identity signs and scales satisfying every lower and upper pair constraint for all sufficiently large triangle-free global minimizers, or a full-label capacity/repacking result that uses their global geometry. No Level I or C-II closure is claimed. This is a separate route from the PR #958 colour/palette method and the PR #960 rank/radius analysis below; shared endpoint goals do not establish redundancy.
+
+
+## Source PR #960 — factorized maps, sharp-reserve regression, and planar barriers
+
+**Frozen source state:** main `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`; open draft head `c75e519426e3a88839567411fe3381160f3aa3cb`, tree `65f7e6e67cbead52038792617df9de48208d99d7`; merge base `a43c69dac7e7b0627dec2900e12c60fd4608d519`. All 11 PR paths have exact source and destination identities in the [per-file ledger](ledger/source-pr-files.jsonl).
+
+The three complete reports and four executable verifiers, graph helper and source AI audit are retained. The source audit is provenance only; its references to a private closeout receipt were removed, and its review language now matches the destination independent exact-head AI-agent audit policy. The source README was adapted and the destination artifact index regenerated.
+
+The balanced-incidence logarithmic obstruction is a realized special case of the stronger formal-array convex-hull theorem already present in `global_separable_distortion_obstruction_2026-10-12.md`; it is preserved as a direct full-source metric treatment and not counted as a new independent obstruction. PR #958 already has the same squared-distance interpolation rank-`n-1` result. PR #960 adds the rank-two truncation/affine limit, enclosing-radius obstruction and six-point equal-radius replacement.
+
+Distinct additions are the constructive directed-cycle/DAG alternative (the acyclic case yields only an abstract full-pair array); an unbounded triangle-free nonglobal family meeting the sharp `D^(2/3)` population reserve while blocked by every vertex-factor map; and complete exact fixtures for graph separation, dense factorized stability, radius and diameter replacement. The sharp-reserve family fails the KKT identity and has a strict same-label horizontal contraction, so it is not a counterexample to global-minimizer results.
+
+The [focused track](../../tracks/global-factorized-distance-planarity-pr960.md) links all reports and candidate entries. The missing step remains a source-derived planar strict-`D` endpoint with every lower and upper pair bound for every sufficiently large triangle-free global minimizer, or a unit triangle. No canonical claim or theorem-state is changed.
+
+## Merged source PR #995 — vertex-factor pole test and hull/train reconciliation
+
+The vertex-factor report and exact checker are preserved as noncanonical support. Its general Möbius/anti-Möbius classification and balanced-incidence obstruction overlap the existing stronger formal-array result and PR #960. Its distinct all-pair pole test gives strict-sub-`D` feasibility exactly when an inversion pole satisfies `M(x) < D^2 m(x)`, equivalently a finite family of strict quartic inequalities covering inactive pairs. It also retains a nine-label nonmetric factor array, a four-label three-dimensional metric with no planar realization, and an exact seven-label inversion competitor with two contact isolates and squared diameter `202/13 < 16`. These fixtures establish neither a large family nor globality.
+
+The merged hull/train report maps five older Target C research programs and preserves a conditional same-host/chord fork with no diameter edge, route payment, or endpoint. The related bulk-separator checker is an exact duplicate of an existing file. The operational recovery record is excluded because it contains private preservation operations; no mathematical proof input is lost. The [PR #960/#995 track](../../tracks/global-factorized-distance-planarity-pr960.md) gives exact proof limits, next obligations, dependencies and commands. Source and destination per-file treatment is recorded in the [ledger](ledger/source-pr-files.jsonl).
