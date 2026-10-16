@@ -112,5 +112,18 @@
       "research/seed084/certificate.json",
       "research/seed084/verify_seamed_grains.py"
     ]
+  },
+  {
+    "source_proposal_number": 1005,
+    "source_head": "1d2980f41b6871bba12d27c24f957f010ec4bcfa",
+    "title": "Preserve global whole-source formal phase compatibility and separable deformation obstructions",
+    "status": "unreviewed proposal; not canonical",
+    "public_files": [
+      "docs/reports/global_joint_stress_strain_phase_mechanism_2026-10-12.md",
+      "docs/reports/global_separable_distortion_obstruction_2026-10-12.md",
+      "research/verify_global_joint_phase_compatibility.py",
+      "research/verify_global_separable_distortion_obstruction.py"
+    ],
+    "scope": "Formal continuum matrix-field theorem and explicit non-global geometric/planarity regressions; no extraction from arbitrary global minimizers or Level I closure"
   }
 ]

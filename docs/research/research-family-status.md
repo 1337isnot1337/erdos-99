@@ -11,5 +11,7 @@
 | C fixed-wall strict packet surplus | blocked in recorded wall/cell scopes | Current exact capacity obstructions | Movable walls, cross-cell coupling or changed guard hypotheses |
 | C supplied-W stress deletion | conditional | A supplied loaded set is not source extraction | Stress-relevant W and cardinality restoration |
 | Shared alternative global geometry | active exploration | No complete new global mechanism admitted | Exact inequality using global optimality and all pair constraints |
+| Whole-source separable/Möbius deformation | noncanonical exact-method obstruction | Source PR #1005 identifies equal-marginal blocks; explicit dense examples are nonglobal | Find nonseparable **planar** full-source replacements with actual strict diameter gain |
+| Joint stress/strain phase purity | unreviewed fixed-frame formal candidate; rotated-frame obstruction | Stress-only compatibility and rotated joint laminates defeat insufficient hypotheses | Extract compatible global fields with bounded boundary/seam costs, all source labels, and a strict competitor |
 
 These are scoped family states, not universal impossibility claims. Read the [full claims and audits](../state/THEOREM_GRAPH.generated.md), [obstructions](obstructions.md), and [tasks](../../tasks/README.md). An agent may contribute one useful sublemma; expanding a family into repeated searches should first record the changed hypothesis, complete endpoint ledger and reason it can affect the route.
