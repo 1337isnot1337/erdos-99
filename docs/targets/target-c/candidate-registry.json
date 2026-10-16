@@ -8973,6 +8973,1167 @@
         "repository_visibility": "private",
         "authority_note": "Canonical theorem-state remains authoritative."
       }
+    },
+    {
+      "candidate_id": "TARGET-C-DIAMETER-DIRECTION-MEASURE-20260909",
+      "title": "Limit measure of separated exact diameter directions",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "All linked source-main artifact-index rows are unreviewed/noncanonical. This registry record preserves scope and evidence; it is not an independent proof audit or theorem promotion.",
+      "target_scope": [
+        "Target C diameter-direction compactness route"
+      ],
+      "claim": {
+        "statement": "The source report claims lower semicontinuity for separated exact diameter directions in a Hausdorff limit of unit-diameter convex bodies: a positive limiting separation-density yields a projective-direction measure supported on the limit body’s exact diameter directions.",
+        "hypotheses": [
+          "Compact convex bodies K_j of diameter 1 converging in Hausdorff distance.",
+          "Finite exact diameter-direction sets with separation delta_j tending to zero and liminf |S_j| delta_j >= c>0."
+        ],
+        "not_claimed": [
+          "A positive-measure conclusion without the separation-density assumption.",
+          "A source minimizer count or strict competitor."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Research-only implication; the destination theorem-state manifest remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_diameter_direction_measure_limit_2026-09-09.md",
+          "role": "full source report",
+          "source_git_blob_sha": "f08075740f4043afb1c406aa5b20641bb51654a2",
+          "source_sha256": "f4b0fd540c28a2a18e1652018547a5e251da773a4fd1a0c3a7e78507bd8f3806",
+          "destination_sha256": "f4b0fd540c28a2a18e1652018547a5e251da773a4fd1a0c3a7e78507bd8f3806",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report text and the central source-main dependency ledger; source-relative links and exact verifier edges are recorded there."
+      },
+      "obstructions_and_limits": [
+        "The result is a compactness statement and does not supply the source-specific direction density."
+      ],
+      "next_proof_obligations": [
+        "Derive the required separated direction density from the actual diameter graph of global minimizers."
+      ],
+      "validation": {
+        "status": "source identity verified; mathematical claim unreviewed",
+        "scope": "Source blob/SHA-256 and destination bytes verified at the migration batch. Verifier outcomes are finite computational checks only.",
+        "result": "No independent mathematical proof audit has been performed for this candidate."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 coordinator reconciliation of source-main shard 2 indexes 211–238; source report batch merged in destination PR #48.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-generated project material; source and destination hashes are recorded.",
+        "third_party_material": "No third-party PDF collection or extracted paper text is copied; bibliographic references remain citations/links.",
+        "visibility": "Destination repository remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-D2-P2-CYCLIC-STRESS-20260910",
+      "title": "Cyclic weighted transfer and D2/P2 stress structure",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "Linked source-main artifact-index rows are unreviewed/noncanonical; this entry is not an independent proof audit or theorem promotion.",
+      "target_scope": [
+        "Target C cyclic and D2/P2 branches"
+      ],
+      "claim": {
+        "statement": "The cyclic reports derive a weighted-cycle transfer identity, isolate the primitive-sixth-root trace case in the D2/P2 equation, force equal stresses on four P2 shell-transition contacts, and claim a universal positive staircase KKT stress for nontrivial staircase bodies.",
+        "hypotheses": [
+          "Cyclic weighted contact network for the transfer identity; the specific D2/P2 and nontrivial-staircase hypotheses for branch results."
+        ],
+        "not_claimed": [
+          "No extraction of this branch from every global minimizer; no finite strict competitor or C-II closure."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Research-only candidate; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_cyclic_weighted_cycle_transfer_2026-09-09.md",
+          "role": "full source report",
+          "source_git_blob_sha": "0922e6ed465f1a327b930760d0e76eed85b665d4",
+          "source_sha256": "14dd5b9e30b8cfb171e3b309bbc2cdf0919209a733d8c0de503c9f17303a9281",
+          "destination_sha256": "14dd5b9e30b8cfb171e3b309bbc2cdf0919209a733d8c0de503c9f17303a9281",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_d2_p2_cyclotomic_trace_collapse_2026-09-10.md",
+          "role": "full source report",
+          "source_git_blob_sha": "d65bd75a1ee57771d74d2c065e9aa1add14ddf0f",
+          "source_sha256": "5762011acc9c653601328ef954c8a93f005fe361466c885bbd53cb43207d3285",
+          "destination_sha256": "5762011acc9c653601328ef954c8a93f005fe361466c885bbd53cb43207d3285",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_d2_p2_transition_stress_equalization_2026-09-10.md",
+          "role": "full source report",
+          "source_git_blob_sha": "803be69b057116dfe8ac2e97b97dac412cef823d",
+          "source_sha256": "94daea09fe77f26fbfb36f47c638b620b0bbfe369a7b0911addd5fd3396f4b13",
+          "destination_sha256": "94daea09fe77f26fbfb36f47c638b620b0bbfe369a7b0911addd5fd3396f4b13",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_d2_p2_universal_staircase_stress_2026-09-10.md",
+          "role": "full source report",
+          "source_git_blob_sha": "f0fa6068ebfb936be51599e5f505fce1b349a3fd",
+          "source_sha256": "b680719f151ef630de5f1acea8347aecf3f6cb1eae6e760184bbd8abe3fe9c90",
+          "destination_sha256": "b680719f151ef630de5f1acea8347aecf3f6cb1eae6e760184bbd8abe3fe9c90",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report text, batch dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "No extraction of this branch from every global minimizer; no finite strict competitor or C-II closure."
+      ],
+      "next_proof_obligations": [
+        "Prove branch extraction or join the stress constraints to a source-wide feasible displacement.",
+        "Construct a same-cardinality endpoint checking all lower and upper pair constraints."
+      ],
+      "validation": {
+        "status": "source identity verified; mathematical claim unreviewed",
+        "scope": "Exact source blob/SHA and destination bytes checked; verifier results are only the finite checks stated.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 reconciliation of source-main shard 2 indexes 211–238; source batch merged as destination PR #48.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-generated project material; exact hashes retained.",
+        "third_party_material": "No third-party PDF collections or extracted paper text copied; references remain citations/links.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-D6-AFFINE-WINDOW-COMPARISON-20260914",
+      "title": "Sixfold affine-window comparison and orbit-defect stability",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "Linked source-main artifact-index rows are unreviewed/noncanonical; this entry is not an independent proof audit or theorem promotion.",
+      "target_scope": [
+        "Target C affine-window route"
+      ],
+      "claim": {
+        "statement": "For a finite non-equilateral affine source with D6-invariant index difference set, the exact report claims an equilateralized same-cardinality source with squared diameter factor (4-2c)/3. A companion inequality gives D_c^2 >= ((4-2c)/3)D_e^2 - K_c E(2D_e+E) under an affine-lattice and orbit-defect hypothesis.",
+        "hypotheses": [
+          "Finite D6-invariant difference set for the exact result; orbit-defect and quadratic-form bounds for the stability result."
+        ],
+        "not_claimed": [
+          "No affine model extraction from arbitrary minimizers; no global contradiction without those hypotheses."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Research-only candidate; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_d6_approximate_orbit_stability_2026-09-14.md",
+          "role": "full source report",
+          "source_git_blob_sha": "0aa47310500a837b930c990341c80f7efea06582",
+          "source_sha256": "71cee4bcafee38cffb1bfdb50edc8df7a7faccbadb23f9790e6ebbfc591a7f83",
+          "destination_sha256": "71cee4bcafee38cffb1bfdb50edc8df7a7faccbadb23f9790e6ebbfc591a7f83",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_d6_symmetric_affine_window_comparison_2026-09-14.md",
+          "role": "full source report",
+          "source_git_blob_sha": "90c0473f1a9b347ee95d996cc81f16f162a2b61e",
+          "source_sha256": "095f555118a87d1b30ef8a8224d05dabd7a7d3cc5b299c9ff7b583a3ad34b656",
+          "destination_sha256": "095f555118a87d1b30ef8a8224d05dabd7a7d3cc5b299c9ff7b583a3ad34b656",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report text, batch dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "No affine model extraction from arbitrary minimizers; no global contradiction without those hypotheses."
+      ],
+      "next_proof_obligations": [
+        "Prove global source extraction into the finite affine-window class with controlled defects.",
+        "Retain all labels and pair constraints in any source-wide comparison."
+      ],
+      "validation": {
+        "status": "source identity verified; mathematical claim unreviewed",
+        "scope": "Exact source blob/SHA and destination bytes checked; verifier results are only the finite checks stated.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 reconciliation of source-main shard 2 indexes 211–238; source batch merged as destination PR #48.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-generated project material; exact hashes retained.",
+        "third_party_material": "No third-party PDF collections or extracted paper text copied; references remain citations/links.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-DB-NM-BRANCH-CONSTANT-20260909",
+      "title": "Sharp DB+NM diameter-branching constant",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "Linked source-main artifact-index rows are unreviewed/noncanonical; this entry is not an independent proof audit or theorem promotion.",
+      "target_scope": [
+        "Target C research frontier"
+      ],
+      "claim": {
+        "statement": "For every unbounded post-ZF survivor sequence under its DB and NM hypotheses, the report claims liminf (2h-q)/D >= c_*, where c_* is the positive solution of c=cos(3c/2), numerically 0.6099043189….",
+        "hypotheses": [
+          "Unbounded post-ZF survivor sequence satisfying the report’s DB and NM hypotheses."
+        ],
+        "not_claimed": [
+          "No contradiction, source motion, or endpoint follows from the scalar bound alone."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Research-only candidate; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_db_nm_branching_constant_2026-09-09.md",
+          "role": "full source report",
+          "source_git_blob_sha": "de87197c5102948242bac9a7c5cae279d561991c",
+          "source_sha256": "2075bd72ed96222b96abbe5c72a081e66e74b5a7e2d985ad0418d24291e2d592",
+          "destination_sha256": "2075bd72ed96222b96abbe5c72a081e66e74b5a7e2d985ad0418d24291e2d592",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report text, batch dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "No contradiction, source motion, or endpoint follows from the scalar bound alone."
+      ],
+      "next_proof_obligations": [
+        "Combine with an incompatible global capacity or replacement bound under the same hypotheses."
+      ],
+      "validation": {
+        "status": "source identity verified; mathematical claim unreviewed",
+        "scope": "Exact source blob/SHA and destination bytes checked; verifier results are only the finite checks stated.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 reconciliation of source-main shard 2 indexes 211–238; source batch merged as destination PR #48.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-generated project material; exact hashes retained.",
+        "third_party_material": "No third-party PDF collections or extracted paper text copied; references remain citations/links.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-DCJC-ONE-GAP-MOMENT-20260910",
+      "title": "One-gap moment exclusion of the DCJC endpoint",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "Linked source-main artifact-index rows are unreviewed/noncanonical; this entry is not an independent proof audit or theorem promotion.",
+      "target_scope": [
+        "Target C research frontier"
+      ],
+      "claim": {
+        "statement": "The report claims perimeter equality forces one projective gap, at most two macroscopic finite hull sides, and vanishing residual small-side cubic chord moment at its DCJC endpoint.",
+        "hypotheses": [
+          "The report’s DCJC endpoint and limiting-sequence assumptions."
+        ],
+        "not_claimed": [
+          "No universal source classification, finite move, or C-II closure."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Research-only candidate; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_dcjc_endpoint_one_gap_moment_exclusion_2026-09-10.md",
+          "role": "full source report",
+          "source_git_blob_sha": "a8c0fbef753a692afbadc71a31280bab9163323b",
+          "source_sha256": "4f1ca5b81ed644abdd432bb2a73d6ce69049199358a488efeeff5c01289c14f6",
+          "destination_sha256": "4f1ca5b81ed644abdd432bb2a73d6ce69049199358a488efeeff5c01289c14f6",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report text, batch dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "No universal source classification, finite move, or C-II closure."
+      ],
+      "next_proof_obligations": [
+        "Show the endpoint hypotheses arise for all relevant global minimizers or exclude the other branches."
+      ],
+      "validation": {
+        "status": "source identity verified; mathematical claim unreviewed",
+        "scope": "Exact source blob/SHA and destination bytes checked; verifier results are only the finite checks stated.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 reconciliation of source-main shard 2 indexes 211–238; source batch merged as destination PR #48.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-generated project material; exact hashes retained.",
+        "third_party_material": "No third-party PDF collections or extracted paper text copied; references remain citations/links.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-DEEP-ISOLATE-OCTAGON-FLIP-REGRESSION-20261002",
+      "title": "Deep isolate does not yield a strict local octagon-flip repair",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "Linked source-main artifact-index rows are unreviewed/noncanonical; this entry is not an independent proof audit or theorem promotion.",
+      "target_scope": [
+        "Target C finite regression"
+      ],
+      "claim": {
+        "statement": "The exact finite regression shows that deep diameter slack alone does not supply the proposed strict isolate repair under the stated local octagon-flip conditions.",
+        "hypotheses": [
+          "The report’s 13-point sources and specified octagon-flip move."
+        ],
+        "not_claimed": [
+          "Fixtures are not global minimizers and do not disprove the conjecture; no global KKT closure."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Research-only candidate; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_deep_isolate_octagon_flip_regression_2026-10-02.md",
+          "role": "full source report",
+          "source_git_blob_sha": "efeef201d53dff53f1b6607f4239d49cace4aa66",
+          "source_sha256": "4b4054db14e3525247f47e1fab42e80f9185872c3bb60f72530990547cdbce82",
+          "destination_sha256": "4b4054db14e3525247f47e1fab42e80f9185872c3bb60f72530990547cdbce82",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "research/verify_target_c_deep_isolate_octagon_flip_2026_10_02.py",
+          "role": "Exact finite octagon-flip verifier",
+          "source_git_blob_sha": "f27facb8a135606a0ef2069bf998a6a992062457",
+          "source_sha256": "2ced791130f1a4a8ee9329158e9ca05ea983fb6706e42b2172e5580c0a60feb2",
+          "destination_sha256": "2ced791130f1a4a8ee9329158e9ca05ea983fb6706e42b2172e5580c0a60feb2",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report text, batch dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "Fixtures are not global minimizers and do not disprove the conjecture; no global KKT closure."
+      ],
+      "next_proof_obligations": [
+        "Any revived local repair must change a stated hypothesis and pass the exact regression."
+      ],
+      "validation": {
+        "status": "source identity verified; mathematical claim unreviewed",
+        "scope": "Exact source blob/SHA and destination bytes checked; verifier results are only the finite checks stated.",
+        "result": "PASS: seven exact 13-point sources and three Q(sqrt(3)) degree-five stars; no global-optimality certificate."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 reconciliation of source-main shard 2 indexes 211–238; source batch merged as destination PR #48.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-generated project material; exact hashes retained.",
+        "third_party_material": "No third-party PDF collections or extracted paper text copied; references remain citations/links.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-SQUAREGRAPH-RHOMBIC-BULK-20260909",
+      "title": "Squaregraph trains and degree-four rhombic bulk",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "Linked source-main artifact-index rows are unreviewed/noncanonical; this entry is not an independent proof audit or theorem promotion.",
+      "target_scope": [
+        "Target C research frontier"
+      ],
+      "claim": {
+        "statement": "The reports claim a stopped-train inequality T >= 2 sqrt(n+f)-2 and, for the C-II contact core, sum_v(4-deg(v))=h+Q+4 with h+Q<=4q-4, bounding vertices outside the strict-rhombus degree-four bulk.",
+        "hypotheses": [
+          "Planar contact-complex and C-II core hypotheses stated in the reports."
+        ],
+        "not_claimed": [
+          "Near-squaregraph and internally defective cap-minimal full-core branches remain; no universal endpoint."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Research-only candidate; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_defect_squaregraph_train_inequality_2026-09-09.md",
+          "role": "full source report",
+          "source_git_blob_sha": "bad10beec3a42d771826188e3431ceb60c791440",
+          "source_sha256": "d2be8170874b5bc3842d0ce3fb7090c49668ddf3c413ef616f8a446bc9af1962",
+          "destination_sha256": "d2be8170874b5bc3842d0ce3fb7090c49668ddf3c413ef616f8a446bc9af1962",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_degree_four_rhombic_bulk_2026-08-31.md",
+          "role": "full source report",
+          "source_git_blob_sha": "e6b8e08dfc0dfe7e6b56e77d58be99d2ecb18f66",
+          "source_sha256": "7042ee05bee24fa84a8e3c617d377713519bfa97f1a4b102e778b2c61a03cfd7",
+          "destination_sha256": "7042ee05bee24fa84a8e3c617d377713519bfa97f1a4b102e778b2c61a03cfd7",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report text, batch dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "Near-squaregraph and internally defective cap-minimal full-core branches remain; no universal endpoint."
+      ],
+      "next_proof_obligations": [
+        "Close the full-core branches and turn the carrier/bulk bound into a strict global comparison."
+      ],
+      "validation": {
+        "status": "source identity verified; mathematical claim unreviewed",
+        "scope": "Exact source blob/SHA and destination bytes checked; verifier results are only the finite checks stated.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 reconciliation of source-main shard 2 indexes 211–238; source batch merged as destination PR #48.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-generated project material; exact hashes retained.",
+        "third_party_material": "No third-party PDF collections or extracted paper text copied; references remain citations/links.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-POSTZF-POCKET-DETOUR-FLOOR-0465-20260909",
+      "title": "Pocket-detour pinned/contact floor",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "Linked source-main artifact-index rows are unreviewed/noncanonical; this entry is not an independent proof audit or theorem promotion.",
+      "target_scope": [
+        "Target C research frontier"
+      ],
+      "claim": {
+        "statement": "The report claims lambda=(e_BB+2s_C)/D >= 0.465 asymptotically from its JC, PI/GU, detour, and exceptional-face inequalities.",
+        "hypotheses": [
+          "The report’s post-ZF branch and stated JC, PI/GU, pocket-detour and exceptional-face budgets."
+        ],
+        "not_claimed": [
+          "Not an optimal constant or a universal contradiction."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Research-only candidate; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_detour_explicit_surplus_0465_2026-09-09.md",
+          "role": "full source report",
+          "source_git_blob_sha": "72f2f7b68cfe0f0031b82625ed089c68b5a8fe43",
+          "source_sha256": "dc80e0590301dfdb71ba1a8895df7e6de9044c6550844fd45a77eb01a6da8bbb",
+          "destination_sha256": "dc80e0590301dfdb71ba1a8895df7e6de9044c6550844fd45a77eb01a6da8bbb",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report text, batch dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "Not an optimal constant or a universal contradiction."
+      ],
+      "next_proof_obligations": [
+        "Resolve the remaining near-equality branch or derive a strict source-wide competitor."
+      ],
+      "validation": {
+        "status": "source identity verified; mathematical claim unreviewed",
+        "scope": "Exact source blob/SHA and destination bytes checked; verifier results are only the finite checks stated.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 reconciliation of source-main shard 2 indexes 211–238; source batch merged as destination PR #48.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-generated project material; exact hashes retained.",
+        "third_party_material": "No third-party PDF collections or extracted paper text copied; references remain citations/links.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-DENSITY-SENSITIVE-PI-JC-FLOOR-20260909",
+      "title": "Density-sensitive PI/JC surplus floor",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "Linked source-main artifact-index rows are unreviewed/noncanonical; this entry is not an independent proof audit or theorem promotion.",
+      "target_scope": [
+        "Target C research frontier"
+      ],
+      "claim": {
+        "statement": "Related density-sensitive PI/JC and pocket-detour reports claim liminf (e_BB+2s_C)/D >= 0.465351845396014…, improving the cited Groemer value 0.464792250394….",
+        "hypotheses": [
+          "Unbounded post-ZF survivors under the reports’ PI, JC, density, and pocket hypotheses."
+        ],
+        "not_claimed": [
+          "The h/D-dependent near-equality configuration remains; no C-II closure."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Research-only candidate; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_density_sensitive_pi_jc_surplus_2026-09-09.md",
+          "role": "full source report",
+          "source_git_blob_sha": "25ab80cc3ed43c4a143faa103433d3d4e8aad86e",
+          "source_sha256": "02bbf2851c904142d16cf8b1b7c6f4687f15d9e29571491a243966dd98a6ceaf",
+          "destination_sha256": "02bbf2851c904142d16cf8b1b7c6f4687f15d9e29571491a243966dd98a6ceaf",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_diameter_sensitive_pi_surplus_floor_2026-09-09.md",
+          "role": "full source report",
+          "source_git_blob_sha": "e1def6db271d47456380d938c7fc25dfe9ebfc11",
+          "source_sha256": "ef18d996174421db2c207390dd76b8dcfdcc60a00a44ce2a8943b396bdbf34ab",
+          "destination_sha256": "ef18d996174421db2c207390dd76b8dcfdcc60a00a44ce2a8943b396bdbf34ab",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report text, batch dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "The h/D-dependent near-equality configuration remains; no C-II closure."
+      ],
+      "next_proof_obligations": [
+        "Resolve simultaneous PI, JC cavity-capacity, and loaded-attachment near-equality or produce a strict competitor."
+      ],
+      "validation": {
+        "status": "source identity verified; mathematical claim unreviewed",
+        "scope": "Exact source blob/SHA and destination bytes checked; verifier results are only the finite checks stated.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 reconciliation of source-main shard 2 indexes 211–238; source batch merged as destination PR #48.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-generated project material; exact hashes retained.",
+        "third_party_material": "No third-party PDF collections or extracted paper text copied; references remain citations/links.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-DIAMETER-CAPPED-POCKET-FLOOR-0634-20260910",
+      "title": "Diameter-capped pocket floor 0.6340575990…",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "Linked source-main artifact-index rows are unreviewed/noncanonical; this entry is not an independent proof audit or theorem promotion.",
+      "target_scope": [
+        "Target C research frontier"
+      ],
+      "claim": {
+        "statement": "The report claims a 0.6340575990… asymptotic post-ZF floor from joint defect capacity, exact capped-moment optimization, and a monotone detour crossover.",
+        "hypotheses": [
+          "The report’s post-ZF branch, diameter-cap and force-hull/pocket hypotheses."
+        ],
+        "not_claimed": [
+          "The DC equality geometry remains unaudited; no universal contradiction."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Research-only candidate; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_diameter_cap_joint_floor_0634057_2026-09-10.md",
+          "role": "full source report",
+          "source_git_blob_sha": "aa3b1cd5e6fc2d59e91c0342826a604b076adbd2",
+          "source_sha256": "11cd2239e953163ebccb3cc89c38b91843d8ed31d18efa006603f72c80810480",
+          "destination_sha256": "11cd2239e953163ebccb3cc89c38b91843d8ed31d18efa006603f72c80810480",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_diameter_capped_outer_pocket_moment_2026-09-10.md",
+          "role": "full source report",
+          "source_git_blob_sha": "244024a0fb8dbf22fb8885a10a9e31c29e142926",
+          "source_sha256": "49b291abf45de19411a669912d4d7f1bceeec3ea9240581fee218b0a9039295b",
+          "destination_sha256": "49b291abf45de19411a669912d4d7f1bceeec3ea9240581fee218b0a9039295b",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report text, batch dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "The DC equality geometry remains unaudited; no universal contradiction."
+      ],
+      "next_proof_obligations": [
+        "Audit the equality geometry and connect it to a source-wide contradiction."
+      ],
+      "validation": {
+        "status": "source identity verified; mathematical claim unreviewed",
+        "scope": "Exact source blob/SHA and destination bytes checked; verifier results are only the finite checks stated.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 reconciliation of source-main shard 2 indexes 211–238; source batch merged as destination PR #48.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-generated project material; exact hashes retained.",
+        "third_party_material": "No third-party PDF collections or extracted paper text copied; references remain citations/links.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-BALL-HULL-LATTICE-20261002",
+      "title": "Ball-hull lattice discrepancy and support charts",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "Linked source-main artifact-index rows are unreviewed/noncanonical; this entry is not an independent proof audit or theorem promotion.",
+      "target_scope": [
+        "Target C research frontier"
+      ],
+      "claim": {
+        "statement": "The report gives logarithm-free support-chart and thin-lattice capacity estimates for its ball-hull source-pair class and leaves the full-core branch open.",
+        "hypotheses": [
+          "The ball-hull and exact support-chart hypotheses stated in the report."
+        ],
+        "not_claimed": [
+          "No model extraction for every global minimizer; no full-core or global-optimum certificate."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Research-only candidate; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_diameter_ball_hull_lattice_discrepancy_2026-10-02.md",
+          "role": "full source report",
+          "source_git_blob_sha": "8a22c85afbfe4d2a50c7749e0b24dd7067c6609e",
+          "source_sha256": "9804deb271da2e2bac95bea94be069666ad3641ae463a5c500b7952bf71f415e",
+          "destination_sha256": "9804deb271da2e2bac95bea94be069666ad3641ae463a5c500b7952bf71f415e",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "research/verify_target_c_ball_hull_lattice_2026_10_02.py",
+          "role": "Exact rational support-chart verifier",
+          "source_git_blob_sha": "b8a1243081307e3ec36d7128924165d6c9a11ece",
+          "source_sha256": "b4098181100a53b5090853dad263e27a08836b7b9d0102795275f5c971c9e136",
+          "destination_sha256": "b4098181100a53b5090853dad263e27a08836b7b9d0102795275f5c971c9e136",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report text, batch dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "No model extraction for every global minimizer; no full-core or global-optimum certificate."
+      ],
+      "next_proof_obligations": [
+        "Prove global source extraction and resolve the full-core branch."
+      ],
+      "validation": {
+        "status": "source identity verified; mathematical claim unreviewed",
+        "scope": "Exact source blob/SHA and destination bytes checked; verifier results are only the finite checks stated.",
+        "result": "PASS: 360 rational source pairs, 720 support margins, 5,947 thin-parabola pairs and additional exact checks; no global-optimum certificate."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 reconciliation of source-main shard 2 indexes 211–238; source batch merged as destination PR #48.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-generated project material; exact hashes retained.",
+        "third_party_material": "No third-party PDF collections or extracted paper text copied; references remain citations/links.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-DIAMETER-CLASS-STRESS-CONTRACTION-20260831",
+      "title": "Positive diameter stress and contracted contact rigidity",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "Linked source-main artifact-index rows are unreviewed/noncanonical; this entry is not an independent proof audit or theorem promotion.",
+      "target_scope": [
+        "Target C research frontier"
+      ],
+      "claim": {
+        "statement": "The reports claim positive reaction at full-diameter endpoints, zero resultant for each diameter component, and translation kernel/rank 2k-2 for the diameter-contracted contact map of a contact-minimal C-II source.",
+        "hypotheses": [
+          "The specific diameter-stress and contact-minimal C-II hypotheses."
+        ],
+        "not_claimed": [
+          "A macroscopic lower bound on diameter connectivity remains; no universal endpoint."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Research-only candidate; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_diameter_class_stress_2026-08-31.md",
+          "role": "full source report",
+          "source_git_blob_sha": "1fa150c4554329f059d61c97ec2dc46392bbc480",
+          "source_sha256": "55d066e2a0ff25b357c298e44aae53f072df9d1e8288cd85295faf8d26cbcaa3",
+          "destination_sha256": "55d066e2a0ff25b357c298e44aae53f072df9d1e8288cd85295faf8d26cbcaa3",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_diameter_component_reciprocal_2026-08-31.md",
+          "role": "full source report",
+          "source_git_blob_sha": "210b35aab8a5ddefe028fcc835dab604fddaa7a4",
+          "source_sha256": "be1853b0c0ea541e74bd3b6e90cb5e547fdb41d1856764bdd213a3d7e29a2ffe",
+          "destination_sha256": "be1853b0c0ea541e74bd3b6e90cb5e547fdb41d1856764bdd213a3d7e29a2ffe",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_diameter_contraction_rigidity_2026-08-31.md",
+          "role": "full source report",
+          "source_git_blob_sha": "e7861f3e9670642722d4583492ad0939c4792a08",
+          "source_sha256": "90903fdfd2791896c0c1a0be9f8bf8236a4693a5d7db90256df86cdd434ea16d",
+          "destination_sha256": "90903fdfd2791896c0c1a0be9f8bf8236a4693a5d7db90256df86cdd434ea16d",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report text, batch dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "A macroscopic lower bound on diameter connectivity remains; no universal endpoint."
+      ],
+      "next_proof_obligations": [
+        "Establish required diameter connectivity and integrate response constraints into an all-source feasible motion."
+      ],
+      "validation": {
+        "status": "source identity verified; mathematical claim unreviewed",
+        "scope": "Exact source blob/SHA and destination bytes checked; verifier results are only the finite checks stated.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 reconciliation of source-main shard 2 indexes 211–238; source batch merged as destination PR #48.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-generated project material; exact hashes retained.",
+        "third_party_material": "No third-party PDF collections or extracted paper text copied; references remain citations/links.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-DIAMETER-GIRTH-SPINE-THRACKLE-20260909",
+      "title": "Diameter cycle, spine, and thrackle structure",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "Linked source-main artifact-index rows are unreviewed/noncanonical; this entry is not an independent proof audit or theorem promotion.",
+      "target_scope": [
+        "Target C research frontier"
+      ],
+      "claim": {
+        "statement": "The reports give conditional Reuleaux trapping/girth, Woodall spine order, and maximal convex-thrackle completion with deleted odd-cycle edges and pendant diameter leaves.",
+        "hypotheses": [
+          "The listed diameter-cycle, loaded-terminal, Woodall-forest and branch hypotheses."
+        ],
+        "not_claimed": [
+          "Conditional graph structure does not yield a cardinality-preserving geometric competitor."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Research-only candidate; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_diameter_cycle_girth_2026-08-31.md",
+          "role": "full source report",
+          "source_git_blob_sha": "165bd7ad308d6219c0db43d8f0d082ec8efbf0ad",
+          "source_sha256": "a6850436c566ad1b7aee87e36a02eebb791fefeae8fc4c7af1d0c32170a92052",
+          "destination_sha256": "a6850436c566ad1b7aee87e36a02eebb791fefeae8fc4c7af1d0c32170a92052",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_diameter_spine_fan_chain_decomposition_2026-10-01.md",
+          "role": "full source report",
+          "source_git_blob_sha": "4f644bfd76a682a80e6bf4e249f098b2151ed68c",
+          "source_sha256": "88087a2e05705717d1e2afc3b907378b6704cf1a2a16025a2dc30133226ccf62",
+          "destination_sha256": "88087a2e05705717d1e2afc3b907378b6704cf1a2a16025a2dc30133226ccf62",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "docs/reports/target_c_diameter_thrackle_cycle_leaf_completion_2026-09-09.md",
+          "role": "full source report",
+          "source_git_blob_sha": "55b2fff9160220254502d154190f12106b12450a",
+          "source_sha256": "5a086c6c35786c0c79b0b063c6b3a94e0e22ccf1dca23d1e5278db12d1ae99b4",
+          "destination_sha256": "5a086c6c35786c0c79b0b063c6b3a94e0e22ccf1dca23d1e5278db12d1ae99b4",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report text, batch dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "Conditional graph structure does not yield a cardinality-preserving geometric competitor."
+      ],
+      "next_proof_obligations": [
+        "Connect graph structure to source-wide capacity loss or an exact finite strict-D competitor."
+      ],
+      "validation": {
+        "status": "source identity verified; mathematical claim unreviewed",
+        "scope": "Exact source blob/SHA and destination bytes checked; verifier results are only the finite checks stated.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 reconciliation of source-main shard 2 indexes 211–238; source batch merged as destination PR #48.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-generated project material; exact hashes retained.",
+        "third_party_material": "No third-party PDF collections or extracted paper text copied; references remain citations/links.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-DIAMETER-FIRST-JOINT-DEPTH-20261002",
+      "title": "Diameter-first rigidity transfer and quadratic blockers",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "Linked source-main artifact-index rows are unreviewed/noncanonical; this entry is not an independent proof audit or theorem promotion.",
+      "target_scope": [
+        "Target C research frontier"
+      ],
+      "claim": {
+        "statement": "Under its triangle-free global-minimizer hypothesis, lexicographic tie-break and D>=9, the report claims a connected nonisolated core containing every actual diameter endpoint and quadratic blockers for relative response.",
+        "hypotheses": [
+          "Triangle-free global minimizer; first minimize actual diameter-pair count, then unit-contact count; D>=9."
+        ],
+        "not_claimed": [
+          "No isolate deletion; finite verifier does not certify global minimality or endpoint."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Research-only candidate; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_diameter_first_transfer_and_joint_depth_2026-10-02.md",
+          "role": "full source report",
+          "source_git_blob_sha": "2f9a12cb1c30280e20cd651655bceb1ce4a79b7b",
+          "source_sha256": "7fdf408ae3b2aacd59f4e5306176b2d9894d534e926e181af82775d22b4c19f9",
+          "destination_sha256": "7fdf408ae3b2aacd59f4e5306176b2d9894d534e926e181af82775d22b4c19f9",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "research/verify_diameter_first_joint_depth_2026_10_02.py",
+          "role": "Exact finite depth/interpolation verifier",
+          "source_git_blob_sha": "98ac93159e3345f969a36a726874d64a6b9bc00c",
+          "source_sha256": "9edc834609d5bb838f8087cabd043e365e28bec153df05adc6acab4c56c3b602",
+          "destination_sha256": "9edc834609d5bb838f8087cabd043e365e28bec153df05adc6acab4c56c3b602",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report text, batch dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "No isolate deletion; finite verifier does not certify global minimality or endpoint."
+      ],
+      "next_proof_obligations": [
+        "Check every lower/upper pair in a full-source transfer and prove strict endpoint progress."
+      ],
+      "validation": {
+        "status": "source identity verified; mathematical claim unreviewed",
+        "scope": "Exact source blob/SHA and destination bytes checked; verifier results are only the finite checks stated.",
+        "result": "PASS: 7,260 exact states, 12 sharpness packets and 125 protected axial states; finite evidence only."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 reconciliation of source-main shard 2 indexes 211–238; source batch merged as destination PR #48.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-generated project material; exact hashes retained.",
+        "third_party_material": "No third-party PDF collections or extracted paper text copied; references remain citations/links.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-DIAMETER-SUPPORT-ATLAS-20260926",
+      "title": "Loaded-chord exclusion and diameter-support atlas",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "Linked source-main artifact-index rows are unreviewed/noncanonical; this entry is not an independent proof audit or theorem promotion.",
+      "target_scope": [
+        "Target C research frontier"
+      ],
+      "claim": {
+        "statement": "For a finite unit-separated planar set of diameter D>=2, a unit pair among endpoints of actual diameter pairs must be consecutive on the convex hull of those endpoints; the report also extends its loaded-hull ledger to its macroscopic-container branch.",
+        "hypotheses": [
+          "The chord lemma assumes a finite unit-separated planar set, D>=2, and a unit pair among actual diameter endpoints."
+        ],
+        "not_claimed": [
+          "This geometric lemma needs no global optimality but gives no source motion or C-II closure."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Research-only candidate; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_diameter_support_atlas_obstruction_2026-09-26.md",
+          "role": "full source report",
+          "source_git_blob_sha": "6301d95b1155fc2983608eb026144b409e0cdc9a",
+          "source_sha256": "897e2b4ab1b47b63889c1b2f1c7bcbb1b4cc004ab857bf79d4f3e6bbbdedf6a6",
+          "destination_sha256": "897e2b4ab1b47b63889c1b2f1c7bcbb1b4cc004ab857bf79d4f3e6bbbdedf6a6",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        },
+        {
+          "path": "research/verify_target_c_annular_atlas_2026_09_26.py",
+          "role": "Exact finite annular atlas verifier",
+          "source_git_blob_sha": "249261c7419c8aca1ab196d8ed9ba73c0417d590",
+          "source_sha256": "d4c73e5eb3c44955dfbabf2f269342e135780897820f2157a0f1872a2bfbccdd",
+          "destination_sha256": "d4c73e5eb3c44955dfbabf2f269342e135780897820f2157a0f1872a2bfbccdd",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report text, batch dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "This geometric lemma needs no global optimality but gives no source motion or C-II closure."
+      ],
+      "next_proof_obligations": [
+        "Use loaded-hull restrictions in a source-wide capacity or strict-diameter argument."
+      ],
+      "validation": {
+        "status": "source identity verified; mathematical claim unreviewed",
+        "scope": "Exact source blob/SHA and destination bytes checked; verifier results are only the finite checks stated.",
+        "result": "PASS: 3,822 exact separation/diameter pairs and additional atlas checks; no global or Level-I certificate."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 reconciliation of source-main shard 2 indexes 211–238; source batch merged as destination PR #48.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-generated project material; exact hashes retained.",
+        "third_party_material": "No third-party PDF collections or extracted paper text copied; references remain citations/links.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-DIRICHLET-PI-FEEDBACK-FLOOR-04702-20260909",
+      "title": "Dirichlet pocket functional with PI feedback",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "Linked source-main artifact-index rows are unreviewed/noncanonical; this entry is not an independent proof audit or theorem promotion.",
+      "target_scope": [
+        "Target C research frontier"
+      ],
+      "claim": {
+        "statement": "The report claims liminf (e_BB+2s_C)/D >= 0.4702 for its post-ZF branch using a PF/ED two-step bootstrap, PI feedback and diameter-capped moment estimate.",
+        "hypotheses": [
+          "The report’s PI/ED/PF bootstrap and post-ZF hypotheses."
+        ],
+        "not_claimed": [
+          "No optimal scalar floor or contradiction for all global minimizers."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Research-only candidate; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_dirichlet_pi_feedback_surplus_04702_2026-09-09.md",
+          "role": "full source report",
+          "source_git_blob_sha": "4cd282cbf06f51608b889709fe9aaa859fb0441c",
+          "source_sha256": "2d45b04e49b6b9279893e22e46f2c841afe7e77733ebe3f80e29a0ee77da8c72",
+          "destination_sha256": "2d45b04e49b6b9279893e22e46f2c841afe7e77733ebe3f80e29a0ee77da8c72",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report text, batch dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "No optimal scalar floor or contradiction for all global minimizers."
+      ],
+      "next_proof_obligations": [
+        "Resolve near-equality geometry or combine with an independent global mechanism."
+      ],
+      "validation": {
+        "status": "source identity verified; mathematical claim unreviewed",
+        "scope": "Exact source blob/SHA and destination bytes checked; verifier results are only the finite checks stated.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 reconciliation of source-main shard 2 indexes 211–238; source batch merged as destination PR #48.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-generated project material; exact hashes retained.",
+        "third_party_material": "No third-party PDF collections or extracted paper text copied; references remain citations/links.",
+        "visibility": "Destination remains private."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-DIDO-POCKET-FLOOR-08316-20260910",
+      "title": "Sharp Dido pocket envelope and post-ZF floor",
+      "status": "unreviewed source-main candidate",
+      "source_lifecycle": "Linked source-main artifact-index rows are unreviewed/noncanonical; this entry is not an independent proof audit or theorem promotion.",
+      "target_scope": [
+        "Target C research frontier"
+      ],
+      "claim": {
+        "statement": "The report claims the fixed-chord arc-area maximum is attained by a circular arc and, under its global envelope assumptions, derives the post-ZF floor 0.831687041775533….",
+        "hypotheses": [
+          "Fixed chord/arc length for the Dido inequality; FSDB/GU and post-ZF hypotheses for the floor."
+        ],
+        "not_claimed": [
+          "The analytic chain is unaudited; no universal source extraction or Level I closure."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Research-only candidate; destination theorem-state remains authoritative.",
+        "replacement_status": "No canonical claim is replaced or promoted."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_dido_pocket_surplus_08316_2026-09-10.md",
+          "role": "full source report",
+          "source_git_blob_sha": "08ee4937f80325c807db6a34ea23601e985ee530",
+          "source_sha256": "2152876cd7c11567067c9174bd2e85e6375e1122732834459bc9330aff927657",
+          "destination_sha256": "2152876cd7c11567067c9174bd2e85e6375e1122732834459bc9330aff927657",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [],
+        "description": "See report text, batch dispositions, and central source-main dependency ledger."
+      },
+      "obstructions_and_limits": [
+        "The analytic chain is unaudited; no universal source extraction or Level I closure."
+      ],
+      "next_proof_obligations": [
+        "Audit the dependency chain and close source geometry/equality."
+      ],
+      "validation": {
+        "status": "source identity verified; mathematical claim unreviewed",
+        "scope": "Exact source blob/SHA and destination bytes checked; verifier results are only the finite checks stated.",
+        "result": "No independent mathematical proof audit has been performed."
+      },
+      "provenance": {
+        "destination_batch": "Destination PR #69 reconciliation of source-main shard 2 indexes 211–238; source batch merged as destination PR #48.",
+        "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_pr": null,
+        "source_repository": "1337isnot1337/e-99"
+      },
+      "source_claim_ids": [],
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party research and AI-generated project material; exact hashes retained.",
+        "third_party_material": "No third-party PDF collections or extracted paper text copied; references remain citations/links.",
+        "visibility": "Destination remains private."
+      }
     }
   ]
 }

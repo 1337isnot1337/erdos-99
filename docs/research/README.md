@@ -25,3 +25,5 @@ superseded `0.0050` result and its separate Section-171 certificate, and the
 stronger result's exact proof/audit chain. Its linked task is to propagate the
 new input through downstream energy and rhombic-incidence bounds without
 claiming that the older `0.0050` endpoint has transferred.
+
+- [Target C shard 2 cyclic, capacity, and diameter candidate track](tracks/target-c-diameter-capacity-cyclic-candidates-2026-10-16.md) — unreviewed source reports 211–238, exact verifier evidence, and remaining bridges.
