@@ -1,6 +1,6 @@
 {
   "schema_version": "erdos-99-local-migration-verification/v1",
-  "recorded_at_utc": "2026-10-16T11:27:08Z",
+  "recorded_at_utc": "2026-10-16T11:28:27Z",
   "verification_subject": {
     "destination_repository": "https://github.com/1337isnot1337/erdos-99",
     "branch": "research/global-pr957-joint-exchange-20261016",
@@ -82,9 +82,27 @@
     }
   ],
   "hosted_actions": {
-    "destination_pr": null,
+    "destination_pr": 28,
+    "workflow": "public-research-integrity",
+    "run_id": 38893974673,
+    "run_url": "https://github.com/1337isnot1337/erdos-99/actions/runs/38893974673",
+    "head_sha": "00c90d867db128da8a02ddffa688f12486c0446f",
+    "status": "completed",
+    "conclusion": "skipped",
+    "jobs": [
+      {
+        "name": "plan",
+        "conclusion": "skipped",
+        "steps": 0
+      },
+      {
+        "name": "replay",
+        "conclusion": "skipped",
+        "steps": 0
+      }
+    ],
     "success_claimed": false,
-    "note": "No destination PR had been created at this verification snapshot."
+    "note": "Both owner-gated jobs were skipped with zero steps because E99_PUBLIC_CI is unset; no hosted verification success is claimed."
   },
   "theorem_and_release_status": {
     "theorem_state_changed": false,
@@ -104,6 +122,7 @@
     "The dense-star construction is a strictly nonglobal regression against minimum-cover-first search, not a global-minimizer counterexample.",
     "The weak-cage source is a finite nonglobal local regression and does not prove or disprove Level I closure.",
     "The destination retains the source-main versions of stale PR branch files; no stale branch snapshot was copied over them.",
-    "The complete source-main and remaining open-PR corpus is still pending, and no Gate 2 or Gate 3 release result is claimed."
+    "The complete source-main and remaining open-PR corpus is still pending, and no Gate 2 or Gate 3 release result is claimed.",
+    "Destination PR #28 workflow jobs skipped with zero steps because E99_PUBLIC_CI is unset; all verification claimed here is local."
   ]
 }
