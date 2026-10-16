@@ -1,7 +1,7 @@
 {
   "status": "public navigation supplement; no mathematical lifecycle changes",
   "source_commit": "afa7f7ec8b93b39efb921f4f47d132e4219b5df8",
-  "scope": "Explicit section-to-file bridges found during the A/B/C-II outsider evaluation. The theorem manifest remains authoritative; this is not a proof-completeness certificate.",
+  "scope": "Explicit section-to-file bridges found during the A/B/C-II outsider evaluation. The theorem manifest remains authoritative; this is not a proof-completeness certificate. Added exact-phase packet, multishear, audit and verifier prerequisites for the new threshold-packet task and related C-II tasks.",
   "file_dependencies": {
     "docs/targets/target-a/02-scaffold-and-hall.md": [
       "docs/targets/target-a/01-forest-and-kinematics.md",
@@ -72,6 +72,28 @@
     ],
     "docs/targets/target-a/01-forest-and-kinematics.md": [
       "docs/theory/03-oler-shell.md"
+    ],
+    "docs/research/tracks/target-c-exact-phase-packet-fork.md": [
+      "docs/reports/target_c_complete_grid_joint_switch_budget_2026-10-01_r2.md",
+      "docs/reports/target_c_exact_phase_threshold_cross_shore_escape_2026-10-02.md",
+      "docs/reports/target_c_exact_phase_threshold_cross_shore_packet_resultants_2026-10-02.md",
+      "docs/reports/target_c_exact_phase_threshold_edgewise_flux_packets_2026-10-02.md",
+      "docs/reports/target_c_exact_phase_threshold_edgewise_kkt_balance_2026-10-02.md",
+      "docs/reports/target_c_exact_phase_threshold_nested_span_flag_2026-10-02.md",
+      "docs/reports/target_c_exact_phase_threshold_strict_packet_resultants_2026-10-02.md",
+      "docs/reports/target_c_exact_phase_threshold_transverse_nested_matching_2026-10-02.md",
+      "docs/reports/target_c_threshold_transverse_fullspan_hostile_audit_2026-10-01.md",
+      "docs/reports/target_c_positive_prefix_thrackle_collapse_2026-09-01.md",
+      "docs/reports/target_c_exact_phase_threshold_paired_staircase_2026-10-01.md",
+      "docs/reports/target_c_exact_phase_threshold_transverse_rail_saturation_2026-10-01.md",
+      "research/target_c_global_outer_train_exact_multishear_2026-09-15.md",
+      "research/target_c_global_outer_train_exact_multishear_hostile_audit_2026-09-15.md",
+      "research/target_c_laminar_multitrain_interval_shear_2026-09-15.md",
+      "research/target_c_laminar_multitrain_interval_shear_hostile_audit_2026-09-15.md",
+      "research/target_c_interval_shear_kkt_curvature_identity_2026-09-15.md",
+      "research/verify_target_c_laminar_multitrain_interval_shear.py",
+      "docs/archive/source-e99-main-42f0296d/docs/reports/target_c_complete_grid_joint_switch_budget_2026-10-01.md.source",
+      "docs/archive/source-e99-main-42f0296d/docs/targets/target-c/train-closure-bracing-audited.md.source"
     ]
   },
   "tasks": {
@@ -212,11 +234,239 @@
           "path": "docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md",
           "sections": "all canonical inputs and proof",
           "role": "Type-II collar exclusion; no finite endpoint."
+        },
+        {
+          "path": "docs/research/tracks/target-c-exact-phase-packet-fork.md",
+          "role": "Current research-track map: two phase branches, dependencies, obstructions, and exact gap.",
+          "sections": "full track"
+        },
+        {
+          "path": "docs/reports/target_c_complete_grid_joint_switch_budget_2026-10-01_r2.md",
+          "role": "Complete-grid branch; per-edge joint switch bound and bounded-cusp consequence.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_cross_shore_escape_2026-10-02.md",
+          "role": "Conditional nonexact-shore shear; selected diameter family only.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_cross_shore_packet_resultants_2026-10-02.md",
+          "role": "Common internal packet load and unresolved boundary/layer correction.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_edgewise_flux_packets_2026-10-02.md",
+          "role": "Edgewise packet multiplicity and internal-versus-boundary fork.",
+          "sections": "full proof or verifier scope"
         }
       ],
       "supporting_obstructions": [
         "docs/reports/target_c_quarter_fold_face_obstructions_slot02_2026-10-10.md",
         "docs/audits/target_c_two_boundary_hole_strict_capacity_independent_audit_2026-10-09.md"
+      ]
+    },
+    "target-c-threshold-packet-cross-shore": {
+      "reading_order": [
+        {
+          "path": "docs/research/tracks/target-c-exact-phase-packet-fork.md",
+          "role": "Current research-track map: two phase branches, dependencies, obstructions, and exact gap.",
+          "sections": "full track"
+        },
+        {
+          "path": "docs/reports/target_c_complete_grid_joint_switch_budget_2026-10-01_r2.md",
+          "role": "Complete-grid branch; per-edge joint switch bound and bounded-cusp consequence.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_cross_shore_escape_2026-10-02.md",
+          "role": "Conditional nonexact-shore shear; selected diameter family only.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_cross_shore_packet_resultants_2026-10-02.md",
+          "role": "Common internal packet load and unresolved boundary/layer correction.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_edgewise_flux_packets_2026-10-02.md",
+          "role": "Edgewise packet multiplicity and internal-versus-boundary fork.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_edgewise_kkt_balance_2026-10-02.md",
+          "role": "Transverse KKT balance within support types.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_nested_span_flag_2026-10-02.md",
+          "role": "Combinatorial nested span flag; no source-geometric conclusion.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_strict_packet_resultants_2026-10-02.md",
+          "role": "Positive packet resultants without a uniform lower bound.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_transverse_nested_matching_2026-10-02.md",
+          "role": "Nested Omega(D^(1/4)) actual-diameter matching.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "docs/reports/target_c_threshold_transverse_fullspan_hostile_audit_2026-10-01.md",
+          "role": "Source audit provenance; destination state remains unreviewed.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "docs/reports/target_c_positive_prefix_thrackle_collapse_2026-09-01.md",
+          "role": "Earlier proof candidate and paired-staircase survivor.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_paired_staircase_2026-10-01.md",
+          "role": "Exact threshold staircase prerequisite.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_transverse_rail_saturation_2026-10-01.md",
+          "role": "Transverse rail saturation prerequisite.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "research/target_c_global_outer_train_exact_multishear_2026-09-15.md",
+          "role": "Proof-only O-O finite multishear prerequisite.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "research/target_c_global_outer_train_exact_multishear_hostile_audit_2026-09-15.md",
+          "role": "Source audit limited to proof-only O-O scope.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "research/target_c_laminar_multitrain_interval_shear_2026-09-15.md",
+          "role": "Exact destination duplicate; laminar finite-shear theorem.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "research/target_c_laminar_multitrain_interval_shear_hostile_audit_2026-09-15.md",
+          "role": "Source audit at proof-only dual-path O-O scope.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "research/target_c_interval_shear_kkt_curvature_identity_2026-09-15.md",
+          "role": "Corrected laminar KKT formula; no sign conclusion.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "research/verify_target_c_laminar_multitrain_interval_shear.py",
+          "role": "Exact finite verifier for the laminar shear scope only.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "docs/archive/source-e99-main-42f0296d/docs/reports/target_c_complete_grid_joint_switch_budget_2026-10-01.md.source",
+          "role": "Historical superseded r1 source bytes.",
+          "sections": "full proof or verifier scope"
+        },
+        {
+          "path": "docs/archive/source-e99-main-42f0296d/docs/targets/target-c/train-closure-bracing-audited.md.source",
+          "role": "Historical source route snapshot; no destination authority.",
+          "sections": "full proof or verifier scope"
+        }
+      ],
+      "supporting_obstructions": [
+        "docs/reports/target_c_exact_phase_threshold_cross_shore_packet_resultants_2026-10-02.md",
+        "docs/reports/target_c_exact_phase_threshold_strict_packet_resultants_2026-10-02.md",
+        "docs/reports/target_c_exact_phase_threshold_cross_shore_escape_2026-10-02.md"
+      ]
+    },
+    "target-c-capacity-collective-refill": {
+      "reading_order": [
+        {
+          "path": "docs/research/tracks/target-c-capacity-collective-refill.md",
+          "role": "Full route map, branch provenance, hypotheses, obstructions, and next source-wide proof obligation."
+        },
+        {
+          "path": "docs/targets/target-c/CURRENT.md",
+          "role": "Current canonical C-II frontier and destination lifecycle authority."
+        },
+        {
+          "path": "docs/state/theorem-state.yaml",
+          "role": "Canonical claim and target status; remains authoritative."
+        },
+        {
+          "path": "docs/targets/target-c/candidate-registry.json",
+          "role": "Machine-readable candidate claims, exact verifier records, and dependencies."
+        },
+        {
+          "path": "docs/reports/target_c_one_vacancy_collective_strictification_2026-10-05.md",
+          "role": "One-vacancy strictification and K-1 strict capacity."
+        },
+        {
+          "path": "docs/reports/target_c_vacancy_funded_unit_wall_activation_2026-10-05.md",
+          "role": "Conditional actual-wall contact-minimality activation and triangular two-vacancy capacity."
+        },
+        {
+          "path": "docs/reports/target_c_boundary_vacancy_funded_collective_refill_2026-10-05.md",
+          "role": "Two-boundary-pin refill with exact exterior shielding."
+        },
+        {
+          "path": "docs/reports/target_c_one_boundary_pin_oblique_refill_2026-10-05.md",
+          "role": "One-pin oblique refill and angle-dependent gap."
+        },
+        {
+          "path": "docs/reports/target_c_two_side_polynomial_collective_refill_2026-10-05.md",
+          "role": "Two-side refill with polynomial wall tolerance."
+        },
+        {
+          "path": "docs/reports/target_c_triangular_two_pin_strict_capacity_2026-10-05.md",
+          "role": "Triangular exact-capacity obstruction to K+1."
+        },
+        {
+          "path": "docs/reports/target_c_unit_pentagon_perimeter_capacity_2026-10-05.md",
+          "role": "Universal convex-pentagon deletion deficit."
+        },
+        {
+          "path": "docs/reports/target_c_multishear_traffic_domination_2026-10-05.md",
+          "role": "Finite weighted mean-energy domination and exact kernel."
+        },
+        {
+          "path": "research/verify_target_c_boundary_vacancy_funded_collective_refill_2026_10_05.py",
+          "role": "Exact finite verifier; not an independent analytic audit or global-optimality certificate."
+        },
+        {
+          "path": "research/verify_target_c_multishear_traffic_domination_2026_10_05.py",
+          "role": "Exact finite verifier; not an independent analytic audit or global-optimality certificate."
+        },
+        {
+          "path": "research/verify_target_c_one_boundary_pin_oblique_refill_2026_10_05.py",
+          "role": "Exact finite verifier; not an independent analytic audit or global-optimality certificate."
+        },
+        {
+          "path": "research/verify_target_c_one_vacancy_collective_strictification_2026_10_05.py",
+          "role": "Exact finite verifier; not an independent analytic audit or global-optimality certificate."
+        },
+        {
+          "path": "research/verify_target_c_triangular_two_pin_capacity_2026_10_05.py",
+          "role": "Exact finite verifier; not an independent analytic audit or global-optimality certificate."
+        },
+        {
+          "path": "research/verify_target_c_two_side_polynomial_refill_2026_10_05.py",
+          "role": "Exact finite verifier; not an independent analytic audit or global-optimality certificate."
+        },
+        {
+          "path": "research/verify_target_c_unit_pentagon_capacity_2026_10_05.py",
+          "role": "Exact finite verifier; not an independent analytic audit or global-optimality certificate."
+        },
+        {
+          "path": "research/verify_target_c_vacancy_funded_unit_wall_activation_2026_10_05.py",
+          "role": "Exact finite verifier; not an independent analytic audit or global-optimality certificate."
+        }
+      ],
+      "supporting_obstructions": [
+        "docs/reports/target_c_triangular_two_pin_strict_capacity_2026-10-05.md",
+        "docs/reports/target_c_unit_pentagon_perimeter_capacity_2026-10-05.md",
+        "docs/reports/target_c_multishear_traffic_domination_2026-10-05.md"
       ]
     }
   }

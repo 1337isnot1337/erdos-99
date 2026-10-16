@@ -1,0 +1,50 @@
+{
+  "captured_at_utc": "2026-10-16T15:12:24+00:00",
+  "historical_baseline_note": "baseline.json and destination-tracked-files.txt retain a prior corpus snapshot whose destination SHA differs from this active migration base. They are preserved as historical records; this active-run baseline pins current main refs.",
+  "repositories": {
+    "destination": {
+      "integration_base_sha": "4ce4fed103532ad42919896d025df1a6d4b72405",
+      "integration_branch": "research/source-main-exact-phase-packet-fork-20261016",
+      "main_manifest_path": "destination-main-at-start-4ce4fed1-tracked-files.txt",
+      "main_manifest_sha256": "dbd443b5c557cf3ff5dc1189f81ee523531f995f1e212811fa23b1b4bd5e25fc",
+      "main_sha": "4ce4fed103532ad42919896d025df1a6d4b72405",
+      "main_tracked_paths": 1231,
+      "main_tree": "84318253c282e851aa1bbbad1dfd2dbba389ba16",
+      "open_prs": {
+        "count": 0,
+        "inventory_path": "destination-open-prs-observed-2026-10-16.json",
+        "inventory_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      "repository": "https://github.com/1337isnot1337/erdos-99",
+      "visibility": "PRIVATE",
+      "worktree_at_capture": "contains only authorized migration edits; see git status at review"
+    },
+    "source": {
+      "checkout_branch": "research/sol/target-c-level1-gpt61-2026-10-04",
+      "checkout_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+      "checkout_worktree": "clean",
+      "main_manifest_path": "source-tracked-files.txt",
+      "main_manifest_sha256": "b67fa02da34461b03ddcddf64cc175cb7cc4bbcf78eb52425f71fc446a32b26b",
+      "main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+      "main_tracked_paths": 4717,
+      "main_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+      "open_prs": {
+        "count": 21,
+        "heads_match_at_capture": true,
+        "inventory_path": "source-open-prs-observed-2026-10-16.json",
+        "inventory_sha256": "90f88718aeae38a12a6b2c6e6cbc1e8ffa28853efeea4aecaf3316a2152a8e17"
+      },
+      "relevant_source_only_branch": {
+        "branch": "research/sol/target-c-level1-gpt61-2026-10-04",
+        "head_sha": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+        "manifest_path": "source-branch-9875cd6a-tracked-files.txt",
+        "manifest_sha256": "9add279f30fe523e5f378712b4dc9428f04c1900d9447d49c297e9e277ee3abc",
+        "merge_base": "0351e2c529e01750f7aceb87f8f6f0cb9c21dea7",
+        "tracked_paths": 4304,
+        "tree": "198c83065add8175a921b4e9c55169e4690010a3"
+      },
+      "repository": "https://github.com/1337isnot1337/e-99"
+    }
+  },
+  "schema_version": "e99-active-migration-run-baseline/v1"
+}

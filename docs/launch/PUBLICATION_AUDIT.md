@@ -36,13 +36,19 @@ unchanged. Publication revision `.2` corrects pending-review descriptions and
 source-derived public hashes; historical receipts retain their original SHA.
 
 The integrated corpus has **810 retained source records**, **451 claim IDs**,
-**845 declared edges**, **94 registered certificates** and **20 task cards**.
+**845 declared edges**, **94 registered certificates** and **20 task cards** in
+the frozen candidate. The ongoing private migration has 22 current task cards
+and is outside the older receipt.
 Publication state is `2026-10-15.publication.2`: **371 canonical** and
 **4 audited-working** claims. The [scientific review](../publication/scientific-reconciliation.md)
 pins all 30 changed source paths, all 20 observed private proposal heads and all
 74 previously edited imports. Its JSON records the exact comparison identities.
 The source/exclusion auditor checks 4,793 versioned records and 3,977 excluded
 paths. Retained public hashes are independently checkable without the archive.
+These counts describe the frozen publication candidate. The current private
+research-migration branch adds one focused task card (21 current tasks); that
+branch still requires fresh final-tree verification and is not covered by this
+historical audit.
 
 ## Repairs that change the publication decision
 

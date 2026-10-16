@@ -5,3 +5,15 @@
 Maintainers update these after reviewing relevant evidence, with exact source references and accepted/proposed status. PR activity alone is not a scientific decision. Returning agents compare revisions before continuing. Contributors may propose a priority change in a focused PR; no autonomous governance machinery or fixed research committee is required.
 
 The [public outsider A/B/C-II evaluation](onboarding-evaluation-2026-10-15.md) records actual fresh-clone navigation, scoped finite replays, prerequisite-discovery failures and repairs, and a bounded contribution recipe. Its [section-to-file supplement](onboarding-prerequisites.json) supports `tools/task_context.py`; it does not change theorem lifecycle or certify proof completeness.
+
+The October source-main threshold-staircase, KKT-packet, cross-shore escape,
+complete-grid switch, and exact multishear materials are linked through the
+[exact-phase packet and cross-shore track](tracks/target-c-exact-phase-packet-fork.md).
+That track marks the source lifecycle and audit boundaries, distinguishes the
+two threshold forks, and records the missing whole-source endpoint.
+
+The frozen source-only Target C branch's vacancy and collective-refill
+results are linked through the [capacity and refill track](tracks/target-c-capacity-collective-refill.md).
+It connects exact vacancy motions, one- and two-pin source replacements,
+triangular and pentagon capacity obstructions, and multishear mean-energy
+control to the remaining wall-extraction and full-source diameter obligations.

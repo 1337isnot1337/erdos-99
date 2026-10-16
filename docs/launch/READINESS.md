@@ -8,6 +8,11 @@ promoting its proposed repair. The corpus has 451 claim IDs, 845 edges, 94
 registered certificates, 810 source records and 20 task cards. Level I/A/B/C-II
 remain open; C-I is closed in its stated scope.
 
+Those counts describe the frozen 2026-10-15 publication candidate. The ongoing
+private research migration adds two focused task cards; its current tree has 22
+tasks and is outside this older receipt. Rebuild the final publication receipt
+against the final migration commit before any Gate 2 claim.
+
 ## Final receipt contract
 
 See [Gate 2 reproduction and scanner review](GATE_2_VERIFICATION.md) for the

@@ -44,6 +44,14 @@ Source PR #950 supplies unreviewed path structure but no endpoint. Its linear tr
 
 Source PR #948 adds conditional quarter-fold restrictions on convex, deep, rigid, and large faces. They constrain an existing full-source exact-graph endpoint; they do not establish one. The [quarter-fold/bent-array track](../docs/research/tracks/target-c-quarter-folds-bent-arrays.md) records the seven claims and the required full-source endpoint checks.
 
+The separate October threshold-staircase route now has edgewise KKT packets, a
+common opposite-shore load, and a conditional two-cut shear. Its exact
+limitations and distinction from the complete-grid branch are in the
+[exact-phase packet and cross-shore track](../docs/research/tracks/target-c-exact-phase-packet-fork.md).
+Packet positivity has no uniform stress gap, and the shear shortens only a
+selected linear family of diameter rows; use it as route evidence, not as a
+finite endpoint.
+
 ## Approach and first bounded experiment
 
 Write one candidate move with explicit train endpoints, owner labels, deleted labels, and restored labels. Encode the lower and upper squared-distance constraints for every source pair, including isolates, and solve the smallest nontrivial face-coupled case exactly before seeking a uniform theorem.
