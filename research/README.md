@@ -10,7 +10,7 @@ python3 -m venv .venv
 
 The locked wheel set targets CPython 3.14 / Linux x86_64. Portable version pins are in `tools/requirements-verification.lock`. Full replay is explicit Tier 2. Individual scripts retain exact rational, symbolic, interval or numerical diagnostic arithmetic and parameter bounds. Read each source/output and its linked proof before relying on it; the registry does not turn a diagnostic into an exact theorem.
 
-Locally reproducible, independently reimplemented, and mathematically reviewed are separate properties. An inherited agent audit is not human review. The [verification record](../docs/launch/READINESS.md) reports actual commands/outcomes. A finite certificate proves only its encoded proposition and supplies no missing source-realization/global-optimality implication.
+Locally reproducible, independently reimplemented, and mathematically reviewed are separate properties. A source or inherited AI audit is provenance, not a separate destination exact-head review for consequential theorem promotion. The [verification record](../docs/launch/READINESS.md) reports actual commands/outcomes. A finite certificate proves only its encoded proposition and supplies no missing source-realization/global-optimality implication.
 
 Use `python tools/task_context.py TASK-ID` to list the chosen task's transitive certificate prerequisites. New evidence packages include exact inputs, arithmetic, bounds, environment, commands, inspectable output, negative controls and explicit limitations. New proposal scripts outside the canonical registry remain unreviewed.
 
@@ -156,3 +156,34 @@ verifier proves existence of a successful packet for every large global
 minimizer. Source local paths and account-specific CI details were removed
 from the historical run note and source audit; their source hashes and edits
 are retained in the [per-file migration ledger](../docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl).
+
+## Source PR #958 — colour lifts, planar rank barriers, and palette endpoints
+
+Run the full-source colour-lift and rank fixtures with:
+
+```sh
+python3 research/verify_global_colouring_lift_rank_2026_10_12.py
+```
+
+This checks contact-preserving descent in at most four dimensions, the exact
+rank obstruction to the uniform distance interpolation, the affine-colour
+flattening criterion, supplied planar endpoints, and rejection of an infeasible
+diameter-only contraction. It does not extract a planar competitor from a
+general triangle-free global minimizer.
+
+The palette checker tests a separate finite independent-transversal method. Its
+two Packomania coordinate tables are external inputs and are not bundled because
+the migration did not establish redistribution permission. If an agent is
+authorized to use them, obtain `cci132.txt` and `cci175.txt` from the URLs and
+expected hashes in [`provenance.json`](fixtures/global_palette_translation_2026_10_12/provenance.json),
+then run:
+
+```sh
+python3 research/verify_global_palette_transversal_2026_10_12.py --core-only
+
+python3 research/verify_global_palette_transversal_2026_10_12.py \
+  --fixture-dir <local-authorized-data-directory>
+```
+
+The verifier checks both SHA-256 values before reading the data. The core-only replay independently verifies the 43-gon success. The source audit reports exhaustive failure of that same palette on one 175-label nonglobal source. Neither result addresses arbitrary palettes or Level I. The [full track](../docs/research/tracks/global-planar-endpoint-palette-pr958.md)
+records the exact limits, external-input rights status, and missing global step.

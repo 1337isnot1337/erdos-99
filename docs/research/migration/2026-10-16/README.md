@@ -1,6 +1,6 @@
 # Erdős #99 source research migration
 
-**Overall migration status: INCOMPLETE.** Exact source and destination baselines are frozen under the baseline directory. Source-main audit batch 1 merged as PR #19; PR #1008 merged as destination PR #20; PR #951 merged as destination PR #21; PR #947 merged as destination PR #22; PR #950 merged as destination PR #23; source PR #948 merged as destination PR #24 at `621f7c7dcd5b12c949f83951d1d1521e09bbbe17` (tree `978550c0ab3248aee7ac41d9e8b5438a53c5687a`); source PR #952 merged as destination PR #25 at `d369420f85ed94b73ebfeb09eaace7ada1a526a8` (tree `538dbfa15e98bf7ba56a978fa05f91b07adf416c`); source PR #955 merged as destination PR [#26](https://github.com/1337isnot1337/erdos-99/pull/26) at `1c5830ee3219a83c3aac43abbc571ffa6870b239` (tree `04f93f2c057b1a1ccc20f17c12b0f59ee2a469af`); and source PR #956 merged as destination PR [#27](https://github.com/1337isnot1337/erdos-99/pull/27) at `a88a5e20e77169417c2385d9228dccd937a927b8` (tree `08bdde5888ec23c81c604ad3b79211bec44f1aa7`). Destination PR #16 was also merged as `e89d508c97af781d7957768f778d6bdd26535f2c` to remove a private source URL from the public schema identifier. Source PR #957 is the current focused integration batch; #958–#960 remain queued for separate content reconciliation. The 826 source-main reports missing at the frozen baseline, bulk research tree, other open-PR additions, and historical PR work remain queued.
+**Overall migration status: INCOMPLETE.** Exact source and destination baselines are frozen under the baseline directory. Source-main audit batch 1 merged as PR #19; PR #1008 merged as destination PR #20; PR #951 merged as destination PR #21; PR #947 merged as destination PR #22; PR #950 merged as destination PR #23; source PR #948 merged as destination PR #24 at `621f7c7dcd5b12c949f83951d1d1521e09bbbe17` (tree `978550c0ab3248aee7ac41d9e8b5438a53c5687a`); source PR #952 merged as destination PR #25 at `d369420f85ed94b73ebfeb09eaace7ada1a526a8` (tree `538dbfa15e98bf7ba56a978fa05f91b07adf416c`); source PR #955 merged as destination PR [#26](https://github.com/1337isnot1337/erdos-99/pull/26) at `1c5830ee3219a83c3aac43abbc571ffa6870b239` (tree `04f93f2c057b1a1ccc20f17c12b0f59ee2a469af`); and source PR #956 merged as destination PR [#27](https://github.com/1337isnot1337/erdos-99/pull/27) at `a88a5e20e77169417c2385d9228dccd937a927b8` (tree `08bdde5888ec23c81c604ad3b79211bec44f1aa7`). Destination PR #16 was also merged as `e89d508c97af781d7957768f778d6bdd26535f2c` to remove a private source URL from the public schema identifier. Source PR #957 merged as destination PR #28 at 14d5367b90af822f43c99c201f1dcf8e95bf80da (tree 53d3040394dcb38e5cdc5cfb2e3ca9eac565f098); source PR #958 is the current focused integration batch in destination PR [#29](https://github.com/1337isnot1337/erdos-99/pull/29) from its frozen head; source PRs #959 and #960 remain queued. The 826 source-main reports missing at the frozen baseline, bulk research tree, other open-PR additions, and historical PR work remain queued.
 
 ## Open source PR batch — #1008 population reserve
 
@@ -235,6 +235,30 @@ The source Target C artifact index has 1,287 rows: 83 missing audits and two lin
 
 The 2,707 source-main C research files, 157 route documents, and shared candidates are inventoried in [`ledger/source-main-files.jsonl`](ledger/source-main-files.jsonl). Of the research files, 2,536 other files are queued, 152 are exact destination duplicates, and two of 19 linked dependencies are integrated here; the remaining 17 linked dependencies and all other route files retain explicit queued or duplicate dispositions.
 
-The pinned source inventory contains 21 open PR heads. PRs #947, #948, #950, #951, #952, #955, and #956 are reconciled as destination batches (#956 merged as destination PR #27). Source PR #957 is the current focused integration batch from its frozen head; its seven changed paths have explicit per-file dispositions. Source PRs #958–#960 remain queued for separate comparison.
+The pinned source inventory contains 21 open PR heads. PRs #947, #948, #950, #951, #952, #955, #956, and #957 are reconciled as destination batches (#957 merged as destination PR #28). Source PR #958 is the current focused integration batch in destination PR [#29](https://github.com/1337isnot1337/erdos-99/pull/29) from its frozen head; its 11 changed paths have explicit per-file dispositions. Source PRs #959–#960 remain queued for separate comparison.
 
 Source lifecycle labels are provenance only. The destination theorem-state remains authoritative. No theorem is promoted by this import. Historical versions are visibly distinguished, including the earlier inverse-phase audit that asserts a global `K'/D`-Lipschitz chart and `q=O(D^(4/5))`; those inferences were withdrawn and must not be used as premises.
+
+## Current integration batch — source PR #958
+
+Frozen source main remains 42f0296d1aca068c809f74cee5dcdb4ebdb27c73. The frozen
+open draft head is 0a72556e786024c9313c7d6287e26c20c1e9b9b8, tree
+7b37e2fc5af3bb2e0471a690195a21f9d9fd0d2c, with merge base
+d6f953100d62a84de72e991642041fdd026e82ba. All 11 changed paths have individual
+dispositions in the [source PR file ledger](ledger/source-pr-files.jsonl).
+
+The batch preserves two complete mathematical reports, one source AI audit as
+provenance, two exact verifiers, a directed interval helper, and external-input
+provenance. The destination Target C frontier, bottleneck brief, proposal index,
+candidate registry and scientific reconciliation now link the work. The
+self-contained 43-gon palette control replays locally; 132/175 table-dependent
+checks remain source-reported until redistribution permission is resolved.
+Packomania coordinate tables are not copied. The exact missing global step is
+an all-label planar endpoint satisfying every lower and upper pair constraint
+for every sufficiently large triangle-free global minimizer, or an unbounded
+globally optimal triangle-free family.
+
+Run the colour-lift verifier and the palette verifier with --core-only using
+the commands in research/README.md. The destination theorem-state, canonical
+claim lifecycle, certificate set, and publication inclusion membership remain
+unchanged. The exact local outcomes are in the [PR #958 verification receipt](receipts/target-c-pr958-local-verification.json). This batch is not the full migration or Gate 2 release verification.
