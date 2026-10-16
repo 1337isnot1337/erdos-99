@@ -66,3 +66,8 @@ No finite model, one-grain result, local packing, infinitesimal flex or supplied
 Run `python scripts/choose_research_task.py --task target-c-macroscopic-container-capacity --live-overlap --json` and inspect matching public work. [Proposal snapshots](../docs/research/proposals.md) record adjacent source proposals without assuming they are accepted or live public claims.
 
 One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.
+
+
+## Complete bent-array evidence
+
+Source PR #948 gives an unreviewed linear external-boundary attachment result for actual complete bent arrays with both dimensions proportional to D, plus a quadratic outside-isolate burden and a full-diameter-forest classification. The [quarter-fold/bent-array track](../docs/research/tracks/target-c-quarter-folds-bent-arrays.md) records the exact hypotheses. The remaining task is extraction from a general canonical survivor or a different source-level endpoint; the conditional array results do not establish either.

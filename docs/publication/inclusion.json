@@ -11779,7 +11779,7 @@
       "source_blob": "d7a5738db70c83aba37653a6de92cd81ac702774",
       "source_mode": "100644",
       "source_sha256": "30f842b1520592cde9bf84ee7bf9945b419143934b4dbe100408a168e15a55e5",
-      "public_sha256": "d4fcc352d346ddb49960c2685a13175f865b98d8accea9afec2c48111128c92f",
+      "public_sha256": "b367f28f9caa567c8b44655bd03947f2cf6948d1503a7aed72b2828f1597af13",
       "role": "infrastructure",
       "theorem_ids": [],
       "dependencies": [],
@@ -11896,7 +11896,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "publication navigation/metadata or scoped correction; original source blob and SHA256 retained",
+      "editorial_change": "Source PR #950 and #948 navigation additions; original source blob and SHA-256 retained.",
       "downstream_frontier_obligations": [
         "target-c-face-coupled-move",
         "target-c-typeii-stress-mass-access",
@@ -12804,7 +12804,7 @@
       "source_blob": "45bc8776a85b625ffff78f83b6d3fbe3d19b1ad8",
       "source_mode": "100644",
       "source_sha256": "24730c94c9fee7a1152230d870163faf6b53fba4b1a74f6577a177ce8bd7e650",
-      "public_sha256": "234ccbd23cf9c7dd0fed549fffb92300cb6fff5ae7771ef15798e056f9dde2d9",
+      "public_sha256": "8732268645682e69753a3b82315d50394871d45291a688f162e6df3f3478bd37",
       "role": "proof/audit",
       "theorem_ids": [],
       "dependencies": [
@@ -12830,7 +12830,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "publication navigation/metadata edit or explicitly retained mathematical section extract; source blob recorded",
+      "editorial_change": "Preserved source hash; retained existing snapshot/lifecycle edits and removed historical account payment and spending-limit detail.",
       "downstream_frontier_obligations": [
         "target-c-face-coupled-move"
       ],
@@ -15110,7 +15110,7 @@
       "source_blob": "df4ad5883f50ca4bcb1314f52eaa7d07fdbdd249",
       "source_mode": "100644",
       "source_sha256": "7adc1eed48d7c80436de80ea3e7b354d361d155a791df2c4969c5bb20395db71",
-      "public_sha256": "c246be6344a6bc857244acecc35be071dd10fb1d171af4c1827467de79def58f",
+      "public_sha256": "7c1927a90124a376017a62a784d51851b478a9dd17efacb76505722d85bf3e37",
       "role": "unreviewed active proposal",
       "theorem_ids": [],
       "dependencies": [
@@ -15136,7 +15136,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source project attribution retained",
       "reproduction_requirements": "execute supplied verifier with public prerequisites",
-      "editorial_change": "publication navigation/metadata edit or explicitly retained mathematical section extract; source blob recorded",
+      "editorial_change": "Preserved source hash; replaced source PR URL with internal provenance and removed historical account-specific CI billing detail.",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": [
         "docs/audits/target_c_face_coupled_quarter_fold_independent_audit_2026-10-07.md",
@@ -18555,7 +18555,7 @@
       "source_blob": "0f3a2127aeffe3cfaf56a1193d96a0afc198ad31",
       "source_mode": "100644",
       "source_sha256": "9d3bc1c881aa3cb05148b6c8b2054db36fa8e93f00c8a0acf0069c358c06ba19",
-      "public_sha256": "9d3bc1c881aa3cb05148b6c8b2054db36fa8e93f00c8a0acf0069c358c06ba19",
+      "public_sha256": "8c7fd0295ab13dbb533d2ed00d426070e9a70fa4cc2bd7659936ec430613540d",
       "role": "unreviewed active proposal",
       "theorem_ids": [],
       "dependencies": [],
@@ -18572,7 +18572,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source project attribution retained",
       "reproduction_requirements": "execute supplied verifier with public prerequisites",
-      "editorial_change": "byte-identical",
+      "editorial_change": "Preserved source hash; removed historical account-specific CI billing detail.",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": []
     },
@@ -19381,7 +19381,7 @@
       "source_blob": "d69ecf5b66d9d266dcf307e785be431651cc9db0",
       "source_mode": "100644",
       "source_sha256": "7e40311e66f4aaf609274eb6ca24b4ac455836e32ff650765abc37189a5f6a52",
-      "public_sha256": "33c94cb0b3d9fa835229d3dc2763e1510dc507135975e8b85cba356f2c468f26",
+      "public_sha256": "e441995708568951a3dd5eafcd162bf398669a46eaab99c91f142efc46e18f2f",
       "role": "unreviewed active proposal",
       "theorem_ids": [],
       "dependencies": [
@@ -19403,7 +19403,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source project attribution retained",
       "reproduction_requirements": "execute supplied verifier with public prerequisites",
-      "editorial_change": "publication navigation/metadata edit or explicitly retained mathematical section extract; source blob recorded",
+      "editorial_change": "Preserved source hash; replaced source PR URL with internal provenance and removed historical account payment and spending-limit detail.",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": [
         "docs/audits/target_c_face_coupled_quarter_fold_independent_audit_2026-10-07.md",

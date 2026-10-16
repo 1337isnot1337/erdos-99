@@ -64,3 +64,6 @@ No finite model, one-grain result, local packing, infinitesimal flex or supplied
 Run `python scripts/choose_research_task.py --task compute-c-stress-deletion-restoration-regression --live-overlap --json` and inspect matching public work. [Proposal snapshots](../docs/research/proposals.md) record adjacent source proposals without assuming they are accepted or live public claims.
 
 One 30–60 minute proof sublemma, exact finite model, independent replay or precise handoff; recheck upstream before continuation.
+
+
+Source PR #948 also records deep-face isolate transport and rigid-cycle persistence candidates. Use the [quarter-fold/bent-array track](../docs/research/tracks/target-c-quarter-folds-bent-arrays.md) to keep their full-endpoint hypotheses separate from supplied-set deletion and restoration regressions.

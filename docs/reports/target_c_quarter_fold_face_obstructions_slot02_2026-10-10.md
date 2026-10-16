@@ -368,10 +368,8 @@ relative report link resolves. Main was refreshed and remained at the recorded
 SHA. No independent mathematical referee has audited these new proofs.
 
 The focused submission is [PR #948](../publication/provenance.md#source-records).
-GitHub Actions run `38092321381` executed zero job steps: its failure annotation
-says the job was not started because recent account payments failed or a spending
-limit must be increased. This is an external CI limitation; the local checks
-above did execute. The complete registered certificate suite was not rerun:
+No hosted job steps executed for this historical run; only the local checks
+above are reported as executed. The complete registered certificate suite was not rerun:
 no canonical dependency, theorem-state authority, or certificate registration
 was changed, and the relevant Audit.83 finite regression was rerun separately.
 

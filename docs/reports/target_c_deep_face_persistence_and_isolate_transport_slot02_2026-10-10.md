@@ -441,9 +441,10 @@ Saved output:
 Executed in the isolated worktree: the saved certificate reproduces byte-for-byte,
 all relative report links resolve, the artifact index is regenerated, the
 theorem-state PR transaction check passes, and `git diff --check` passes.
-The earlier 22 tooling tests are unchanged. Hosted CI remains subject to the
-previously verified account billing/spending-limit startup failure; no independent
-mathematical audit or full registered-certificate rerun is claimed.
+The earlier 22 tooling tests are unchanged. Hosted CI did not execute steps for
+this historical run; the local checks above are the only verification reported
+here. No independent mathematical audit or full registered-certificate rerun
+is claimed.
 
 The analytic proofs are not replaced by these finite checks. No independent
 mathematical referee has audited them.

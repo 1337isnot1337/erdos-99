@@ -2248,6 +2248,589 @@
         "third_party_material": "The contextual preprint is linked by DOI only; no third-party paper text or PDF was copied.",
         "visibility": "Destination remains private; publication-inclusion set unchanged."
       }
+    },
+    {
+      "candidate_id": "TARGET-C-PR948-QUARTER-FOLD-FACE-OBSTRUCTIONS",
+      "title": "Quarter-fold face obstructions and exact short-arc reductions",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed proved candidate in frozen open source PR #948; destination theorem-state remains authoritative.",
+      "target_scope": [
+        "Target C-II finite-fold and complete bent-array routes"
+      ],
+      "claim": {
+        "statement": "For a contact-minimal triangle-free source, the stated actual faces are convex; under convex old and folded face boundaries the quarter-fold arcs are straight; the report excludes its specified occupied or bowed eight-face endpoints for full-source exact-graph placements.",
+        "hypotheses": [
+          "Canonical source and contact-minimality hypotheses stated in the report.",
+          "A same-cardinality full-source unit-separated endpoint preserves the exact contact graph and has diameter at most D."
+        ],
+        "not_claimed": [
+          "No feasible nonaffine endpoint is constructed.",
+          "Larger faces, isolates, and inactive upper pairs remain live.",
+          "No C-II or Level I closure."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed; canonical=false in the source artifact index",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_quarter_fold_face_obstructions_slot02_2026-10-10.md",
+          "role": "full proof report",
+          "source_git_blob_sha": "d69ecf5b66d9d266dcf307e785be431651cc9db0",
+          "source_sha256": "7e40311e66f4aaf609274eb6ca24b4ac455836e32ff650765abc37189a5f6a52",
+          "destination_sha256": "e441995708568951a3dd5eafcd162bf398669a46eaab99c91f142efc46e18f2f",
+          "source_artifact_id": "ART-498E42B6834E",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_target_c_quarter_fold_face_obstructions_2026_10_10.py",
+          "role": "exact finite verifier",
+          "source_git_blob_sha": "55a505dda56672c174372f71a725de5471e93589",
+          "source_sha256": "ced2ae1bb3ee3834f0a36d5869d25c7aedc0e447df2c8bb17013cf1d4a0a7d89",
+          "destination_sha256": "ced2ae1bb3ee3834f0a36d5869d25c7aedc0e447df2c8bb17013cf1d4a0a7d89",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/target_c_quarter_fold_face_obstructions_certificate_2026_10_10.json",
+          "role": "finite check output",
+          "source_git_blob_sha": "fad23c6de526520582ca54f079138ef1ade31e87",
+          "source_sha256": "0ebf7367629a7555ce379b77f11af81b63d9e973eb0b84fd9a5eaee0512a3857",
+          "destination_sha256": "0ebf7367629a7555ce379b77f11af81b63d9e973eb0b84fd9a5eaee0512a3857",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [
+          "C-QUARTER-FOLD-CONVEX-FACE-CLASSIFICATION",
+          "C-QUARTER-FOLD-MINIMUM-FACE-SIZE",
+          "C-QUARTER-FOLD-TRANSFORMED-EIGHT-FACE-HULL-COVER"
+        ],
+        "description": "Uses the listed canonical claims and the exact hypotheses stated in the linked report. Candidate relations connect conditional route lemmas and do not supply endpoint existence."
+      },
+      "obstructions_and_limits": [
+        "No feasible nonaffine endpoint is constructed.",
+        "Larger faces, isolates, and inactive upper pairs remain live.",
+        "No C-II or Level I closure."
+      ],
+      "validation": "Verifier exit 0; exact rational/algebraic cycle, contact-move, fixed-isolate, and degree 8–18 arc-count checks; the universal arguments remain analytic.",
+      "next_proof_obligations": [
+        "Construct an integrated nonaffine field and full-source endpoint checking every lower and upper pair, or prove a different finite competitor."
+      ],
+      "provenance": {
+        "source_repository": "1337isnot1337/e-99",
+        "source_pr": 948,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/948",
+        "source_main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+        "source_head_tree": "4d2357368d1a2fa71b318741bf263e9aad342f8a",
+        "source_merge_base": "d999528cfaafd811a4a19bcfacd00f217c2fc375"
+      },
+      "rights_and_release": "Owner-authorized first-party research already present in the destination. Source hashes are retained in the migration ledger. Report math is unchanged apart from the recorded internal provenance link and removal of historical operational billing text in two files; no third-party paper text or PDF was copied."
+    },
+    {
+      "candidate_id": "TARGET-C-PR948-DEEP-FACE-PERSISTENCE",
+      "title": "Deep-face persistence and isolate-deficit transport",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed proved candidate in frozen open source PR #948; destination theorem-state remains authoritative.",
+      "target_scope": [
+        "Target C-II finite-fold and complete bent-array routes"
+      ],
+      "claim": {
+        "statement": "Under full-source exact-graph quarter-fold hypotheses, deep faces persist and the report derives an isolate-deficit replacement bound from loaded intrusion and strict face geometry.",
+        "hypotheses": [
+          "Contact-minimal triangle-free source, with every label retained.",
+          "Full-source feasible endpoint preserves exact contacts and the report-specific face embedding."
+        ],
+        "not_claimed": [
+          "No global outside-capacity bound.",
+          "No endpoint from a lower-feasible core alone.",
+          "No Level I closure."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed; canonical=false in the source artifact index",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_deep_face_persistence_and_isolate_transport_slot02_2026-10-10.md",
+          "role": "full proof report",
+          "source_git_blob_sha": "df4ad5883f50ca4bcb1314f52eaa7d07fdbdd249",
+          "source_sha256": "7adc1eed48d7c80436de80ea3e7b354d361d155a791df2c4969c5bb20395db71",
+          "destination_sha256": "7c1927a90124a376017a62a784d51851b478a9dd17efacb76505722d85bf3e37",
+          "source_artifact_id": "ART-1C2B1B422853",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_target_c_deep_face_transport_2026_10_10.py",
+          "role": "exact finite verifier",
+          "source_git_blob_sha": "ae279ea2469e2f2fb5c13c503ea9607a62c4450c",
+          "source_sha256": "53cfc3d7ec915b5a5b903580f64b936473b5c86c1f223b8f0d23cef1a097cc7c",
+          "destination_sha256": "53cfc3d7ec915b5a5b903580f64b936473b5c86c1f223b8f0d23cef1a097cc7c",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/target_c_deep_face_transport_certificate_2026_10_10.json",
+          "role": "finite check output",
+          "source_git_blob_sha": "fc73737489758899e2fad30e562ca0600e3965a6",
+          "source_sha256": "51aee524684833326c94c5a4457d8ddc7afb4784759a4ec7761a6a03f2047ad7",
+          "destination_sha256": "51aee524684833326c94c5a4457d8ddc7afb4784759a4ec7761a6a03f2047ad7",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [
+          "TARGET-C-PR948-QUARTER-FOLD-FACE-OBSTRUCTIONS"
+        ],
+        "canonical_claims": [
+          "C-QUARTER-FOLD-CONVEX-FACE-CLASSIFICATION",
+          "C-QUARTER-FOLD-MINIMUM-FACE-SIZE",
+          "C-FULL-SOURCE-ISOLATE-NORMALIZATION",
+          "C-RHOMBUS-POP",
+          "C-SHORT-WALL-ZERO-CAPACITY",
+          "C-UNIT-WALL-PACKET-POPULATION-BOUND"
+        ],
+        "description": "Uses the listed canonical claims and the exact hypotheses stated in the linked report. Candidate relations connect conditional route lemmas and do not supply endpoint existence."
+      },
+      "obstructions_and_limits": [
+        "No global outside-capacity bound.",
+        "No endpoint from a lower-feasible core alone.",
+        "No Level I closure."
+      ],
+      "validation": "Verifier exit 0; exact rational finite transport, loaded-leaf, contact-release, capacity constants for face degrees 5–32, and local ray checks; globality and full support are omitted from fixtures.",
+      "next_proof_obligations": [
+        "Bound or realize the outside population for the rigid-face bank, or construct a source-realized endpoint with every isolate and pair constraint."
+      ],
+      "provenance": {
+        "source_repository": "1337isnot1337/e-99",
+        "source_pr": 948,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/948",
+        "source_main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+        "source_head_tree": "4d2357368d1a2fa71b318741bf263e9aad342f8a",
+        "source_merge_base": "d999528cfaafd811a4a19bcfacd00f217c2fc375"
+      },
+      "rights_and_release": "Owner-authorized first-party research already present in the destination. Source hashes are retained in the migration ledger. Report math is unchanged apart from the recorded internal provenance link and removal of historical operational billing text in two files; no third-party paper text or PDF was copied."
+    },
+    {
+      "candidate_id": "TARGET-C-PR948-RIGID-CYCLE-PINNED-STRESS",
+      "title": "Rigid-cycle persistence from endpoint stress",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed proved candidate in frozen open source PR #948; destination theorem-state remains authoritative.",
+      "target_scope": [
+        "Target C-II finite-fold and complete bent-array routes"
+      ],
+      "claim": {
+        "statement": "A positive pinned-net identity gives conditional persistence of interiors under a pointwise rigid contact cycle; the report adds isolate-intrusion capacity and a conditional old-stress boundary certificate.",
+        "hypotheses": [
+          "A simple old unit-contact cycle is carried by one isometry.",
+          "Full-source conclusion also assumes same cardinality, unit separation, diameter at most D, and the exact contact graph."
+        ],
+        "not_claimed": [
+          "No globally feasible endpoint is constructed.",
+          "No universal source extraction, site reserve theorem, or Level I closure."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed; canonical=false in the source artifact index",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_rigid_cycle_pinned_stress_and_arc_stars_slot02_2026-10-10.md",
+          "role": "full proof report",
+          "source_git_blob_sha": "dc26880861c0909397ab568042aba21ae6ee482b",
+          "source_sha256": "d5f387b796e29d43062e90c85a50150b2c07171845324f8bcfbfbd97385a78c2",
+          "destination_sha256": "a3c36980e3710fc84b318a90a987aaf98940a6384a7e6681cfc60d3b6e4be783",
+          "source_artifact_id": "ART-7EEA3CB6898C",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_target_c_rigid_cycle_pinned_stress_2026_10_10.py",
+          "role": "exact finite verifier",
+          "source_git_blob_sha": "363b8f56126c1e747da252e25565d7bf00ebb14d",
+          "source_sha256": "c6e8793f9a06cd0d3c337c537ca04dc4d75173a92eb98c16329f2a374d212302",
+          "destination_sha256": "c6e8793f9a06cd0d3c337c537ca04dc4d75173a92eb98c16329f2a374d212302",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/target_c_rigid_cycle_pinned_stress_certificate_2026_10_10.json",
+          "role": "finite check output",
+          "source_git_blob_sha": "bb7cb24dabfadbd85f2a8769332b9aa7c0bd14d5",
+          "source_sha256": "6d620fe5baa1a27fccdd34dffddb16cd33e984faeaa44d1cd58d18f5842b41cf",
+          "destination_sha256": "6d620fe5baa1a27fccdd34dffddb16cd33e984faeaa44d1cd58d18f5842b41cf",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [
+          "TARGET-C-PR948-DEEP-FACE-PERSISTENCE"
+        ],
+        "canonical_claims": [
+          "C-MIXED-CORE-FINITE-RIGIDITY"
+        ],
+        "description": "Uses the listed canonical claims and the exact hypotheses stated in the linked report. Candidate relations connect conditional route lemmas and do not supply endpoint existence."
+      },
+      "obstructions_and_limits": [
+        "No globally feasible endpoint is constructed.",
+        "No universal source extraction, site reserve theorem, or Level I closure."
+      ],
+      "validation": "Verifier exit 0; rational 16-site/120-pair/24-contact pinned grid, four positive equilibria, determinant 192, and exhaustive local degree-three/four sign patterns; globality and full diameter stress are omitted.",
+      "next_proof_obligations": [
+        "Construct the endpoint under the stated conditions or prove a source-wide intrusion contradiction without assuming its existence."
+      ],
+      "provenance": {
+        "source_repository": "1337isnot1337/e-99",
+        "source_pr": 948,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/948",
+        "source_main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+        "source_head_tree": "4d2357368d1a2fa71b318741bf263e9aad342f8a",
+        "source_merge_base": "d999528cfaafd811a4a19bcfacd00f217c2fc375"
+      },
+      "rights_and_release": "Owner-authorized first-party research already present in the destination. Source hashes are retained in the migration ledger. Report math is unchanged apart from the recorded internal provenance link and removal of historical operational billing text in two files; no third-party paper text or PDF was copied."
+    },
+    {
+      "candidate_id": "TARGET-C-PR948-NONCONSTANT-LARGE-FACE-EXCLUSION",
+      "title": "Nonconstant large-face exclusion at a full quarter-fold",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed proved candidate in frozen open source PR #948; destination theorem-state remains authoritative.",
+      "target_scope": [
+        "Target C-II finite-fold and complete bent-array routes"
+      ],
+      "claim": {
+        "statement": "Under the report hypotheses, a full-source feasible exact-contact-graph quarter-fold has constant signs on every old simple bounded face of degree at least five.",
+        "hypotheses": [
+          "Canonical triangle-free C-II contact-minimal and diameter-pair-minimal source with D at least 9.",
+          "Same-cardinality full-source endpoint is feasible and preserves the exact contact graph."
+        ],
+        "not_claimed": [
+          "No endpoint existence or finite competitor follows.",
+          "No Level I closure."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed; canonical=false in the source artifact index",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_nonconstant_face_quarter_fold_exclusion_slot02_2026-10-10.md",
+          "role": "full proof report",
+          "source_git_blob_sha": "1f229bc6fd13c83fd7bdceaec7561bde401db4c7",
+          "source_sha256": "4dae671fc9c861e4dd940bca0f89212afd57bd4380047254e93d07189454341e",
+          "destination_sha256": "1f7077efec74ff8372dc3ded578a1cd578f4beae1647e4e33d1dbcb99153711e",
+          "source_artifact_id": "ART-73F983B2C2DC",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_target_c_nonconstant_face_quarter_fold_exclusion_2026_10_10.py",
+          "role": "exact finite verifier",
+          "source_git_blob_sha": "f77a7801ba8b29e79b17350ce816722cce66f1bc",
+          "source_sha256": "8c880b9198c6e0e9e76940d670fe85bdac7e69fe059d841d98abe16c3eb9f540",
+          "destination_sha256": "8c880b9198c6e0e9e76940d670fe85bdac7e69fe059d841d98abe16c3eb9f540",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/target_c_nonconstant_face_quarter_fold_exclusion_certificate_2026_10_10.json",
+          "role": "finite check output",
+          "source_git_blob_sha": "8b3eac9480dabde07d53df119cab2821d8b3d8e0",
+          "source_sha256": "928250a96e15c69408f8e41b5634851c2ed4479faaf26d13c44354aa473978dc",
+          "destination_sha256": "928250a96e15c69408f8e41b5634851c2ed4479faaf26d13c44354aa473978dc",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [
+          "TARGET-C-PR948-QUARTER-FOLD-FACE-OBSTRUCTIONS",
+          "TARGET-C-PR948-RIGID-CYCLE-PINNED-STRESS"
+        ],
+        "canonical_claims": [
+          "C-QUARTER-FOLD-CONVEX-FACE-CLASSIFICATION",
+          "C-QUARTER-FOLD-MINIMUM-FACE-SIZE",
+          "C-QUARTER-FOLD-TRANSFORMED-EIGHT-FACE-HULL-COVER",
+          "C-MIXED-CORE-FINITE-RIGIDITY"
+        ],
+        "description": "Uses the listed canonical claims and the exact hypotheses stated in the linked report. Candidate relations connect conditional route lemmas and do not supply endpoint existence."
+      },
+      "obstructions_and_limits": [
+        "No endpoint existence or finite competitor follows.",
+        "No Level I closure."
+      ],
+      "validation": "Verifier exit 0; all 256 four-arc vectors, seven strict packing inequalities, and a six-point chord counterexample are finite checks; universal pin-rank and source arguments are analytic.",
+      "next_proof_obligations": [
+        "Close endpoint existence or build a full-source competitor with every isolate and every lower/upper constraint retained."
+      ],
+      "provenance": {
+        "source_repository": "1337isnot1337/e-99",
+        "source_pr": 948,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/948",
+        "source_main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+        "source_head_tree": "4d2357368d1a2fa71b318741bf263e9aad342f8a",
+        "source_merge_base": "d999528cfaafd811a4a19bcfacd00f217c2fc375"
+      },
+      "rights_and_release": "Owner-authorized first-party research already present in the destination. Source hashes are retained in the migration ledger. Report math is unchanged apart from the recorded internal provenance link and removal of historical operational billing text in two files; no third-party paper text or PDF was copied."
+    },
+    {
+      "candidate_id": "TARGET-C-PR948-RHOMBIC-DUAL-DEFECT",
+      "title": "Four-unit rhombic quarter-fold dual-defect budget",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed proved candidate in frozen open source PR #948; destination theorem-state remains authoritative.",
+      "target_scope": [
+        "Target C-II finite-fold and complete bent-array routes"
+      ],
+      "claim": {
+        "statement": "A full feasible reversing quarter-fold on a 2-connected quadrilateral core obeys 2s_Z+d_H(P)+d_H(Q)+(h_Q-h_P)=4 after isolate normalization; coherent two-vector cases are excluded. On a supplied complete bent array, the integrated fold preserves core pair distances and forces a quadratic outside-isolate burden.",
+        "hypotheses": [
+          "Full-source endpoint, 2-connectivity, and justified isolate normalization for the defect identity.",
+          "Actual complete array and all outside labels retained for the pair-involution result."
+        ],
+        "not_claimed": [
+          "No endpoint construction.",
+          "No complete-array extraction from incomplete domains.",
+          "No all-isolate transport, capacity bound, or C-II closure."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed; canonical=false in the source artifact index",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_rhombic_quarter_fold_dual_defect_slot02_2026-10-10.md",
+          "role": "full proof report",
+          "source_git_blob_sha": "ac671d5eca9e688235ab6a200603a1ca811763be",
+          "source_sha256": "d958f1632a74c6698da0488584ce6203049f810ae95e761ec81b423923137a12",
+          "destination_sha256": "12d3a2460d900a016be9944cbd6a3a3b842e6d33e6b09e0ae9c06c7602ebf9b8",
+          "source_artifact_id": "ART-92FC5BCFE3F0",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_target_c_rhombic_dual_defect_2026_10_10.py",
+          "role": "exact finite verifier",
+          "source_git_blob_sha": "1b4afa414e724def41b7d1bb7ff50abb5b4f2a2f",
+          "source_sha256": "b1d730c76ef742790b02edeac1eba2b97e970c1a08b5051fd904cca7d2b91c97",
+          "destination_sha256": "b1d730c76ef742790b02edeac1eba2b97e970c1a08b5051fd904cca7d2b91c97",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/target_c_rhombic_dual_defect_certificate_2026_10_10.json",
+          "role": "finite check output",
+          "source_git_blob_sha": "053ba2afc573e55779d52a23a0f277d8ed3b5f10",
+          "source_sha256": "bfeb24150a1201570dba953c1c1a457e3ec61d0ee0b5b7e89b6cb98bd5c15009",
+          "destination_sha256": "bfeb24150a1201570dba953c1c1a457e3ec61d0ee0b5b7e89b6cb98bd5c15009",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [
+          "C-FULL-SOURCE-ISOLATE-NORMALIZATION",
+          "C-RHOMBUS-POP"
+        ],
+        "description": "Uses the listed canonical claims and the exact hypotheses stated in the linked report. Candidate relations connect conditional route lemmas and do not supply endpoint existence."
+      },
+      "obstructions_and_limits": [
+        "No endpoint construction.",
+        "No complete-array extraction from incomplete domains.",
+        "No all-isolate transport, capacity bound, or C-II closure."
+      ],
+      "validation": "Verifier exit 0; 22 defect classes, exact circle counts through 4096, finite Gram identities, and complete pair ledgers for 9- and 33-point grids; the infinite estimates are analytic.",
+      "next_proof_obligations": [
+        "Resolve incoherent quadrilateral cases and extract or replace the complete-array premise while retaining all source constraints."
+      ],
+      "provenance": {
+        "source_repository": "1337isnot1337/e-99",
+        "source_pr": 948,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/948",
+        "source_main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+        "source_head_tree": "4d2357368d1a2fa71b318741bf263e9aad342f8a",
+        "source_merge_base": "d999528cfaafd811a4a19bcfacd00f217c2fc375"
+      },
+      "rights_and_release": "Owner-authorized first-party research already present in the destination. Source hashes are retained in the migration ledger. Report math is unchanged apart from the recorded internal provenance link and removal of historical operational billing text in two files; no third-party paper text or PDF was copied."
+    },
+    {
+      "candidate_id": "TARGET-C-PR948-COMPLETE-ARRAY-DIAMETER-FOREST",
+      "title": "Actual diameter forest for complete bent rhombic arrays",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed proved candidate in frozen open source PR #948; destination theorem-state remains authoritative.",
+      "target_scope": [
+        "Target C-II finite-fold and complete bent-array routes"
+      ],
+      "claim": {
+        "statement": "The full actual diameter graph of a complete bent strict-rhombic array has no odd cycle and hence is a caterpillar forest. For a whole canonical core with D at least 9, only (s_Z,d_H)=(0,2) or (1,1) remain.",
+        "hypotheses": [
+          "Every index pair is an actual label; every cell is a consistent strict triangle-free rhombus.",
+          "The whole-core consequence assumes the report’s canonical source hypotheses and retains all isolates."
+        ],
+        "not_claimed": [
+          "No extraction from a general quadrilateral survivor.",
+          "No outside-isolate transport, finite competitor, or Level I closure."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed; canonical=false in the source artifact index",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_complete_array_diameter_forest_slot02_2026-10-11.md",
+          "role": "full proof report",
+          "source_git_blob_sha": "a348b142da30c26ca39ca58fd7aac24a315676d2",
+          "source_sha256": "1aef23d22124681e543e5b9ee4faf51c42bcbeef211d711d9bd0939030fba3df",
+          "destination_sha256": "2050d7aa775b47ac0ebe01cbd2994b8848661b28c31876718621af10b7eda259",
+          "source_artifact_id": "ART-3C9F1FD6D089",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_target_c_complete_array_diameter_forest_2026_10_11.py",
+          "role": "exact finite verifier",
+          "source_git_blob_sha": "f7043a73d65be34040b171f9d411da4555f2511e",
+          "source_sha256": "cfd237cc3b09bfa96cddfa95d6685edd3350675cd4779423996ee63fcea9283e",
+          "destination_sha256": "cfd237cc3b09bfa96cddfa95d6685edd3350675cd4779423996ee63fcea9283e",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/target_c_complete_array_diameter_forest_certificate_2026_10_11.json",
+          "role": "finite check output",
+          "source_git_blob_sha": "87c918d9992391129ccedc4c9395ce806279b634",
+          "source_sha256": "43d3542d64ff2f52f4c3e70e7b3968078b8beeaec4604ff5709988b68a6587f9",
+          "destination_sha256": "43d3542d64ff2f52f4c3e70e7b3968078b8beeaec4604ff5709988b68a6587f9",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [
+          "C-WOODALL",
+          "C-RHOMBUS-POP",
+          "C-ZRF"
+        ],
+        "description": "Uses the listed canonical claims and the exact hypotheses stated in the linked report. Candidate relations connect conditional route lemmas and do not supply endpoint existence."
+      },
+      "obstructions_and_limits": [
+        "No extraction from a general quadrilateral survivor.",
+        "No outside-isolate transport, finite competitor, or Level I closure."
+      ],
+      "validation": "Verifier exit 0; exact path identities, finite monotone diameter paths, strict window constants, 81 rational complete-array fixtures with all pair bounds, and an additive-only odd-diameter guardrail.",
+      "next_proof_obligations": [
+        "Extract this actual complete array from every remaining canonical survivor or close the complementary source geometry by another finite endpoint."
+      ],
+      "provenance": {
+        "source_repository": "1337isnot1337/e-99",
+        "source_pr": 948,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/948",
+        "source_main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+        "source_head_tree": "4d2357368d1a2fa71b318741bf263e9aad342f8a",
+        "source_merge_base": "d999528cfaafd811a4a19bcfacd00f217c2fc375"
+      },
+      "rights_and_release": "Owner-authorized first-party research already present in the destination. Source hashes are retained in the migration ledger. Report math is unchanged apart from the recorded internal provenance link and removal of historical operational billing text in two files; no third-party paper text or PDF was copied."
+    },
+    {
+      "candidate_id": "TARGET-C-PR948-LARGE-ARRAY-BOUNDARY-ATTACHMENT",
+      "title": "Linear external boundary attachment for macroscopic bent arrays",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed proved candidate in frozen open source PR #948; destination theorem-state remains authoritative.",
+      "target_scope": [
+        "Target C-II finite-fold and complete bent-array routes"
+      ],
+      "claim": {
+        "statement": "For each fixed delta>0, a complete bent unit-rhombic array with both dimensions at least delta D inside a contact-minimal triangle-free global source has at least epsilon_delta D distinct noncorner boundary vertices with external contacts for sufficiently large D; constants and onset are existential.",
+        "hypotheses": [
+          "Actual complete array with both dimensions macroscopic relative to D.",
+          "Canonical global, contact-minimal, triangle-free source hypotheses of the report."
+        ],
+        "not_claimed": [
+          "No explicit constants or onset.",
+          "No extraction from an incomplete core.",
+          "No endpoint or Level I closure."
+        ]
+      },
+      "source_claim_ids": [],
+      "source_proposed_status": "unreviewed; canonical=false in the source artifact index",
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_large_array_boundary_attachment_slot02_2026-10-11.md",
+          "role": "full proof report",
+          "source_git_blob_sha": "73070fde10984f8d43942ce77e1a718970b99164",
+          "source_sha256": "c091322e150383de1954b60453061df751821dc3962e6e80e9cf311f949e8e75",
+          "destination_sha256": "f2225a9ceebddb2b3318ed948bb94d247f2a61c9e73db80d7ce3567093e037c6",
+          "source_artifact_id": "ART-85AD449A16C4",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_target_c_large_array_boundary_attachment_2026_10_11.py",
+          "role": "exact finite verifier",
+          "source_git_blob_sha": "90070980268e3f1a7bc86e2f0ca0f24716f15c58",
+          "source_sha256": "3cd1d82fd3d693166b89bd2d3ef08e522d3face7aaa9704ffc297cd5756421a9",
+          "destination_sha256": "3cd1d82fd3d693166b89bd2d3ef08e522d3face7aaa9704ffc297cd5756421a9",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/target_c_large_array_boundary_attachment_certificate_2026_10_11.json",
+          "role": "finite check output",
+          "source_git_blob_sha": "d96411c4fd2e1fb4f4f82bccf19caad42130f6f9",
+          "source_sha256": "40cbdce45f7c718d6623c97fd31643b52850d2d550d080441dd2cb393596e49d",
+          "destination_sha256": "40cbdce45f7c718d6623c97fd31643b52850d2d550d080441dd2cb393596e49d",
+          "source_artifact_id": null,
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [
+          "C-FS-GEOM",
+          "C-RHOMBUS-POP",
+          "C-ZRF"
+        ],
+        "description": "Uses the listed canonical claims and the exact hypotheses stated in the linked report. Candidate relations connect conditional route lemmas and do not supply endpoint existence."
+      },
+      "obstructions_and_limits": [
+        "No explicit constants or onset.",
+        "No extraction from an incomplete core.",
+        "No endpoint or Level I closure."
+      ],
+      "validation": "Verifier exit 0; exact lens identities, 420 circle-chord identities, 625 star cases, 486 determinants, 2916 lower pairs on 81 fixtures, and the stated aspect constant; compactness remains analytic.",
+      "next_proof_obligations": [
+        "Extract a complete macroscopic array from a canonical survivor or prove a different source-level endpoint in the complementary regime."
+      ],
+      "provenance": {
+        "source_repository": "1337isnot1337/e-99",
+        "source_pr": 948,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/948",
+        "source_main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_head": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+        "source_head_tree": "4d2357368d1a2fa71b318741bf263e9aad342f8a",
+        "source_merge_base": "d999528cfaafd811a4a19bcfacd00f217c2fc375"
+      },
+      "rights_and_release": "Owner-authorized first-party research already present in the destination. Source hashes are retained in the migration ledger. Report math is unchanged apart from the recorded internal provenance link and removal of historical operational billing text in two files; no third-party paper text or PDF was copied."
     }
   ]
 }

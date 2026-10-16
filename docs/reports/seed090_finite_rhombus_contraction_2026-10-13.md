@@ -422,11 +422,9 @@ independent comparison packets have 823, 2653, and 7015 labels, respectively.
 The theorem-state checker, PR-state checker against the frozen base,
 relative-link check, and staged whitespace check pass locally.
 
-[Hosted run 38513960331](../publication/provenance.md#source-records)
-at proof commit `97de41cb` executed **zero steps**. Its check annotation says
-the job did not start because recent account payments failed or the spending
-limit needs increasing. This is unavailable hosted CI, not a passing run and
-not an executed theorem-state validation failure.
+The linked historical hosted run at proof commit `97de41cb` executed **zero
+steps**. This is unavailable hosted CI, not a passing run and not an executed
+theorem-state validation failure.
 
 The three mechanisms considered were: a finite nonexpansive global
 rearrangement (obstructed by Theorem 1); contact-preserving train bending
