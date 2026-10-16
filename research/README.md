@@ -13,3 +13,16 @@ The locked wheel set targets CPython 3.14 / Linux x86_64. Portable version pins 
 Locally reproducible, independently reimplemented, and mathematically reviewed are separate properties. An inherited agent audit is not human review. The [verification record](../docs/launch/READINESS.md) reports actual commands/outcomes. A finite certificate proves only its encoded proposition and supplies no missing source-realization/global-optimality implication.
 
 Use `python tools/task_context.py TASK-ID` to list the chosen task's transitive certificate prerequisites. New evidence packages include exact inputs, arithmetic, bounds, environment, commands, inspectable output, negative controls and explicit limitations. New proposal scripts outside the canonical registry remain unreviewed.
+
+## Additional noncanonical whole-source verifiers
+
+Two source-identical formal/global-obstruction reports postdate the pinned canonical corpus and are available through [current research proposals](../docs/research/proposals.md). They do **not** add to the 94 registered theorem certificates and must not be treated as canonical premises.
+
+With SymPy 1.14.0 from the pinned verification environment, run:
+
+```sh
+python3 research/verify_global_separable_distortion_obstruction.py
+python3 research/verify_global_joint_phase_compatibility.py
+```
+
+The first checks finite odd-rim incidence and Möbius identities, including a nonplanarity fixture. The second checks formal stress/strain identities and both fixed-frame and rotated-laminate tests. Neither establishes global optimality, source-field extraction, or the Level I conjecture.

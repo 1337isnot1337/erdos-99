@@ -105,26 +105,6 @@ class ReleaseAuditFixtures(unittest.TestCase):
         self.assertIn("dirty-candidate", kinds)
         self.assertIn("rights-clearance-pending", kinds)
 
-    def test_removed_secret_still_blocks_history(self):
-        secret = "ghp_" + "B" * 36
-        self.write("removed.txt", secret)
-        self.git("add", "-A")
-        self.git("commit", "-qm", "past token")
-        self.git("rm", "removed.txt")
-        self.git("commit", "-qm", "remove token")
-        result = audit(self.root)
-        self.assertIn("historical-credential-indicator", {v["kind"] for v in result["blockers"]})
-        self.assertNotIn(secret, json.dumps(result))
-
-    def test_nondefault_ref_is_scanned(self):
-        self.git("checkout", "-qb", "retained-pr")
-        self.write("ref-only.txt", "sk-" + "X" * 30)
-        self.git("add", "-A")
-        self.git("commit", "-qm", "ref-only token")
-        self.git("checkout", "-")
-        result = audit(self.root)
-        self.assertIn("historical-credential-indicator", {v["kind"] for v in result["blockers"]})
-
     def test_annotated_tag_metadata_is_scanned_without_printing_email(self):
         email = "tag-fixture@personaldomain.example"
         self.git("-c", "user.email=" + email, "tag", "-a", "v-fixture", "-m", "tag")
@@ -143,6 +123,63 @@ class ReleaseAuditFixtures(unittest.TestCase):
         self.assertIn("credential-indicator", kinds)
         self.assertIn("dirty-candidate", kinds)
         self.assertNotIn(secret, json.dumps(result))
+
+
+
+    def test_deleted_historical_token_is_still_a_blocker(self):
+        self.set_inventory("approved")
+        self.git("add", "-A")
+        self.git("commit", "-qm", "approved fixture")
+        token = "ghp_" + "A" * 36
+        self.write("reports/temporary.txt", token)
+        self.git("add", "-A")
+        self.git("commit", "-qm", "temporary synthetic credential")
+        (self.root / "reports/temporary.txt").unlink()
+        self.git("add", "-A")
+        self.git("commit", "-qm", "delete synthetic credential")
+        result = audit(self.root)
+        self.assertIn("historical-credential-indicator",
+                      {x["kind"] for x in result["blockers"]})
+        self.assertNotIn(token, json.dumps(result))
+
+    def test_deleted_historical_pdf_is_still_a_blocker(self):
+        self.set_inventory("approved")
+        self.git("add", "-A")
+        self.git("commit", "-qm", "approved fixture")
+        self.write("papers/temp.pdf", "a third-party PDF placeholder")
+        self.git("add", "-A")
+        self.git("commit", "-qm", "temporarily import paper")
+        (self.root / "papers/temp.pdf").unlink()
+        self.git("add", "-A")
+        self.git("commit", "-qm", "delete paper")
+        result = audit(self.root)
+        self.assertIn("historical-restricted-redistribution",
+                      {x["kind"] for x in result["blockers"]})
+
+    def test_secret_on_other_branch_is_still_a_blocker(self):
+        self.set_inventory("approved")
+        self.git("add", "-A")
+        self.git("commit", "-qm", "approved fixture")
+        self.git("checkout", "-qb", "unsafe-branch")
+        self.write("reports/side-branch.txt", "ghp_" + "A" * 36)
+        self.git("add", "-A")
+        self.git("commit", "-qm", "side branch synthetic credential")
+        self.git("checkout", "-q", "-")
+        result = audit(self.root)
+        self.assertIn("historical-credential-indicator",
+                      {x["kind"] for x in result["blockers"]})
+
+    def test_commit_message_secret_is_still_a_blocker(self):
+        self.set_inventory("approved")
+        self.git("add", "-A")
+        self.git("commit", "-qm", "approved fixture")
+        token = "ghp_" + "A" * 36
+        self.git("commit", "--allow-empty", "-qm", "temporary " + token)
+        self.git("commit", "--allow-empty", "-qm", "safe current commit")
+        result = audit(self.root)
+        self.assertIn("historical-credential-indicator",
+                      {x["kind"] for x in result["blockers"]})
+        self.assertNotIn(token, json.dumps(result))
 
 
 if __name__ == "__main__":

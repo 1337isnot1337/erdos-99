@@ -1,5 +1,13 @@
 # Scientific priority decisions
 
+## public-frontier.2 — 2026-10-15
+
+Evidence: subsequent private source PR #1005 integrated two independently reproducible, **noncanonical** global alternatives after the pinned canonical corpus: a separable/Möbius distance obstruction and a fixed-common-frame joint stress/strain incompatibility with a rotated-laminate counterexample. Their two exact verifiers passed independent Python 3.12 / SymPy 1.14.0 local runs. Neither proves source extraction, global optimality or Level I.
+
+Decision: retain both reports byte-for-byte with explicit source hashes, add their exact verifiers outside the 94 canonical registrations, and add one bounded whole-source bridge task. Keep all accepted theorem status and all eight track-level weights unchanged. Record distinct field-level and source-level limitations; do not import the historical run diary.
+
+Next priority change requires a rigorous source-realized lemma, new counterexample, or independently verified quantitative impact, not just a merged proposal or a larger PR count.
+
 ## public-frontier.1 — 2026-10-15
 
 Prior state: the staging beta offered attainment, a square benchmark and a small lattice enumeration. Those are insufficient to expose the existing E99 frontier.

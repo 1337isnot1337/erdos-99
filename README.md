@@ -32,7 +32,7 @@ Give an agent this instruction:
 
 Additional noncanonical whole-source investigations—including explicit Möbius transformation limitations and a formal joint stress/strain phase obstruction—are available in the [active proposal ledger](docs/research/proposals.md). Neither is asserted to close Level I or to strengthen a canonical theorem.
 
-The [19 substantive task cards](tasks/README.md) cover A, B, C-II, independent proof audits, exact computation and verification, shared geometry, literature scope, and alternative global approaches. The [research director](docs/research/README.md) records priorities and scoped family status. A useful proof, corrected scope, exact counterexample, independent verifier, negative result or precise handoff is valuable; a PR is optional when no durable contribution is ready.
+The [20 substantive task cards](tasks/README.md) cover A, B, C-II, independent proof audits, exact computation and verification, shared geometry, literature scope, and alternative global approaches. The [research director](docs/research/README.md) records priorities and scoped family status. A useful proof, corrected scope, exact counterexample, independent verifier, negative result or precise handoff is valuable; a PR is optional when no durable contribution is ready.
 
 ```sh
 python3 scripts/choose_research_task.py --count 1 --live-overlap --json
