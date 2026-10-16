@@ -1,11 +1,32 @@
 # Erdős #99 source research migration
 
-**Overall migration status: INCOMPLETE.** The exact source and destination baselines are frozen under [`baseline/`](baseline/). This first reviewable batch integrates source-main Target C audits with their direct evidence and preserves the conflicting historical source versions. The 828 missing source reports, bulk `research/` tree, and source PR candidates remain queued for later batches.
+**Overall migration status: INCOMPLETE.** Exact initial source and destination baselines are frozen under [`baseline/`](baseline/). Source-main audit batch 1 merged as PR #19 at destination `806f150c4b47b1b831163fc89c78f2b1c87318a2`; the open-PR #1008 candidate batch is based on that main commit. The 828 still-missing source-main reports, bulk `research/` tree, most open-PR additions, and historical PR work remain queued.
+
+## Open source PR batch — #1008 population reserve
+
+The pinned draft head `ad1bda373a5cbd8c666040f64b4f6ecd83223e31` is now
+preserved as a separate, noncanonical research candidate. It adds one
+mathematical report, one exact verifier, and its finite JSON fixture. The report
+strengthens the global population-reserve lower bound from order \(D^{2/3}\)
+to an explicit linear-order candidate for every global minimizer. It remains
+unreviewed and does not prove the Target C conclusion; the precise upper-reserve
+or strict-competitor bridge is in the candidate registry. PR #956 is a relevant
+comparison cited by the report and remains queued as a distinct source head.
+
+The five path-level PR #1008 dispositions, source Git blobs and SHA-256 hashes
+are in [`ledger/source-pr-files.jsonl`](ledger/source-pr-files.jsonl). The local command outcomes and hosted-CI limitation are preserved in [`receipts/target-c-pr1008-local-verification.json`](receipts/target-c-pr1008-local-verification.json). The report
+was transformed only to remove references to third-party PDFs absent from this
+destination and to clarify the destination's review policy; its source and
+public hashes are recorded. The verifier and JSON fixture are byte-identical to
+the pinned PR head. The source tree's `research/README.md` section is retained as
+adapted destination navigation, and its generated artifact-index change is
+replaced by a destination index rebuild.
 
 ## Frozen repositories
 
 - Source main: `42f0296d1aca068c809f74cee5dcdb4ebdb27c73` (tree `e061f039eac44c286a00eacdcaa9a4cbbb877891`).
-- Destination main: `60c2576b4893a7e9001d2c8bfbe5cfb64c1c969f` (tree `f4d73c1080b3b4a1b7757f5fd96109b6cd4b5c76`).
+- Frozen destination baseline main: `60c2576b4893a7e9001d2c8bfbe5cfb64c1c969f` (tree `f4d73c1080b3b4a1b7757f5fd96109b6cd4b5c76`).
+- Current destination main after PR #19: `806f150c4b47b1b831163fc89c78f2b1c87318a2` (tree `2969aff9998da3146dda5eab0a0df593f24dc506`); the current PR #1008 batch is based on this exact tree.
 
 Before preparing this batch, the live source main and open-PR list were refreshed.
 Main remained at the frozen SHA above; all 21 open PR numbers and head SHAs still

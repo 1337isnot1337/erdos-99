@@ -1,0 +1,112 @@
+{
+  "schema_version": "erdos-99-target-c-candidate-registry/v1",
+  "updated": "2026-10-16",
+  "authority_note": "This registry indexes noncanonical research candidates and evidence. docs/state/theorem-state.yaml remains authoritative; registry entries do not promote, demote, or supersede theorem claims.",
+  "entries": [
+    {
+      "candidate_id": "POPRESERVE-TWELVE-ARC-PR1008",
+      "title": "Twelve-arc linear population-reserve candidate",
+      "status": "unreviewed",
+      "source_lifecycle": "unreviewed candidate in a draft source PR; imported claim not audited for destination promotion",
+      "target_scope": [
+        "Level I quantitative comparison",
+        "Target C cross-target population/capacity context"
+      ],
+      "claim": {
+        "statement": "For every finite planar unit-separated n-point global diameter minimizer with D>16384, g_A=n-1-pi*D^2/(2*sqrt(3)) >= gamma*D-sqrt(D)/(4*sqrt(2))-60, where gamma=3*(576*b-65)/(114695*a) and a=sqrt(3)/2, b=sqrt(3)-98/65. In particular g_A>=D/600 for D>=10^6.",
+        "hypotheses": [
+          "global diameter minimizer",
+          "finite planar unit-separated n-point set",
+          "D>16384 for the asymptotic formula; D>=10^6 for the convenient effective bound"
+        ],
+        "not_claimed": [
+          "triangle-free assumption or triangle conclusion",
+          "source-lattice identification",
+          "C-II finite endpoint",
+          "Level I closure",
+          "optimality of gamma",
+          "canonical acceptance"
+        ]
+      },
+      "relation_to_canonical": {
+        "stronger_than_if_correct": [
+          "C-GLOBAL-POPULATION-EXCESS-SQRT-RESERVE",
+          "C-GLOBAL-POPULATION-EXCESS-TWO-THIRDS-RESERVE",
+          "C-GLOBAL-POPULATION-EXCESS-ASYMPTOTIC-COEFFICIENT"
+        ],
+        "comparison_scope": "The new candidate has a linear-order lower bound with an explicit negative square-root error and onset; for sufficiently large D it dominates the canonical D^(2/3) lower bounds. Their existing scopes and theorem-state status are unchanged.",
+        "replacement_status": "none; the source claim is not registered as a theorem and does not supersede canonical entries"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/population_reserve_independent_reconstruction_2026-10-15.md",
+          "role": "full analytic proof, independent reconstruction, literature comparison, nonglobal obstruction, and next-bridge statement",
+          "source_sha256": "ab25b59f63556860b4014c8dc49c4bf800471851333a6820d4c93fc4bb5041fb",
+          "destination_transformed": true,
+          "source_artifact_id": "ART-A79C6F204DD7",
+          "destination_sha256": "280ad14b9ab8e265903cdbb55970934b6cde112e9fda511c9d361fa261b322eb"
+        },
+        {
+          "path": "research/verify_population_reserve_twelve_arc_2026_10_15.py",
+          "role": "exact constants and finite geometry verifier",
+          "source_sha256": "bc3da909fac877d7d08c9ef55d3d0d5df286af3062e92218b4bc213d2e21b8e6",
+          "destination_transformed": false
+        },
+        {
+          "path": "research/population_reserve_twelve_arc_2026_10_15.json",
+          "role": "committed finite replay fixture",
+          "source_sha256": "c41fb5e75f4b44a4f317a1703d791fac14043a3605e770304014cac6874a0f36",
+          "destination_transformed": false
+        }
+      ],
+      "dependencies": {
+        "analytic_proof": "contained in the report; the linear reserve uses the explicit twelve-arc boundary construction and translation averaging",
+        "registered_theorem_dependencies": [],
+        "related_but_not_a_dependency": [
+          {
+            "source_pr": 956,
+            "head_sha": "bbc549f36ac964fd7eee211782eb2c979d12af32",
+            "status": "queued for separate migration; cited as prior boundary-reserve work and comparison"
+          }
+        ],
+        "external_sources": "The report cites and summarizes third-party literature. Bibliographic links/identifiers are retained; no PDFs or extracted third-party text are bundled. The linear-bound proof does not rely on Huxley’s discrepancy estimate; that estimate is used only in the report’s separate reconstruction of the earlier D^(2/3) result."
+      },
+      "validation": {
+        "command": "python3 research/verify_population_reserve_twelve_arc_2026_10_15.py --extended --output /tmp/population-reserve-twelve-arc.json",
+        "result": "PASS; five finite radii/phase cases; exact constant and sign checks; 150 lattice rotation identities; two collision negative controls rejected; generated JSON byte-identical to source fixture",
+        "boundary": "Finite checker does not prove the analytic all-radius averaging argument, literature priority, or global optimality."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "nonglobal finite packings",
+          "result": "The report constructs dense triangle-free feasible sources with high reserve; this blocks dropping global optimality from the proposed upper-reserve route, but does not refute the candidate theorem or the conjecture."
+        },
+        {
+          "scope": "Target C",
+          "result": "No source-specific upper reserve bound or strict-diameter competitor is supplied; triangle-free global minimizers are not excluded."
+        }
+      ],
+      "next_proof_obligations": [
+        "An independent AI-agent mathematical audit of the exact destination commit, reconstructing the analytic averaging proof and adversarially checking the global-minimizer reduction, before any consequential promotion.",
+        "For a Target C application, prove that every sufficiently large triangle-free global minimizer has g_A<=cD+o(D) for a fixed c<gamma, or construct an admissible source-specific same-cardinality strict-diameter competitor.",
+        "Import and compare the pinned PR #956 boundary-reserve source material and the other related global-replacement heads; do not treat the PR #1008 citation as a proof dependency."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 1008,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/1008",
+        "source_pr_draft": true,
+        "source_head_sha": "ad1bda373a5cbd8c666040f64b4f6ecd83223e31",
+        "source_head_tree": "9198021630ce68a30ca19787e14f4b73685f18f3",
+        "source_base_sha": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+        "source_base_tree": "8c9e8868acbef9a1b50860e0a34f00edba13bbf8",
+        "destination_theorem_state": "2026-10-15.publication.2; unchanged by import"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authored or project-agent-generated research material, authorized for repository migration",
+        "third_party_material": "bibliographic citations and short factual summaries only; no PDF collection or protected extracted text copied",
+        "visibility": "destination repository remains private; no publication inclusion or visibility change"
+      }
+    }
+  ]
+}

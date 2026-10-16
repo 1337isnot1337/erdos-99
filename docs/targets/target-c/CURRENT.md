@@ -28,6 +28,27 @@ Supplied-$W$ stress deletion requires a source-extracted stress-relevant loaded 
 
 The canonical finite hull-side train inequality is $5(q-k)+x_B+m_B\ge3P_F-2$. It uses harmonic trapping for core containment and has no near-disk assumption. The fixed-$M$ local sorting theorem at the central vacancy assumes convergence to the punctured arithmetic six-wall chart, has no uniform onset in $M$ and gives no arbitrary one-deficit extraction. The inherited population-reserve and circumradius/lattice competitors retain their exact scopes; triangle-free-only density does not exclude triangle-free global minimizers.
 
+## Cross-target population reserve candidate
+
+Source PR #1008 contributes an **unreviewed** all-minimizer lower bound
+\(g_A\ge\gamma D-\sqrt D/(4\sqrt2)-60\), with
+\(\gamma=0.001939936045\ldots\), for \(D>16384\); it gives the explicit
+\(g_A\ge D/600\) for \(D\ge10^6\). The [full source report](../../reports/population_reserve_independent_reconstruction_2026-10-15.md),
+[exact finite verifier](../../../research/verify_population_reserve_twelve_arc_2026_10_15.py),
+[fixture output](../../../research/population_reserve_twelve_arc_2026_10_15.json),
+and [candidate registry](candidate-registry.json) retain its
+proof, provenance, validation boundary, and open obligations. This improves the
+asymptotic order of the canonical \(D^{2/3}\) population-reserve claims if the
+candidate proof is correct; it has not replaced them in theorem-state.
+
+The bound applies to every global minimizer, without a triangle-free or
+contact-minimality hypothesis. It supplies no C-II finite endpoint and no
+triangle conclusion. The Target C use remains conditional on proving that every
+large triangle-free global minimizer has \(g_A\le cD+o(D)\) for some fixed
+\(c<\gamma\), or on constructing a source-specific strict-diameter competitor.
+The report also gives a nonglobal triangle-free high-reserve regression, which
+blocks dropping global optimality from that proposed upper-bound route.
+
 ## Begin a bounded contribution
 
 For any finite endpoint, keep the source cardinality and every pairwise lower

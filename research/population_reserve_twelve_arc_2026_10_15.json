@@ -1,0 +1,112 @@
+{
+  "scope": "exact constants and finite packet geometry; analytic theorem in report",
+  "constants": {
+    "gamma_interval": [
+      "72312813523735079698092481218142058804734283/37275875000000000000000000000000000000000000000",
+      "2582600482990538560646160043505073528742677/1331281250000000000000000000000000000000000000"
+    ],
+    "gamma_decimal_illustration": 0.0019399360450622575,
+    "constant_error_upper_illustration": 55.3840455459992,
+    "sign_controls": 169,
+    "rotation_identities": 150
+  },
+  "headline_ties": [
+    {
+      "D": 8,
+      "input": 61,
+      "edges": 3,
+      "distance_D_ties": 3,
+      "kept": 58,
+      "maximum_squared_diameter": 57
+    },
+    {
+      "D": 16,
+      "input": 241,
+      "edges": 3,
+      "distance_D_ties": 3,
+      "kept": 238,
+      "maximum_squared_diameter": 252
+    },
+    {
+      "D": 32,
+      "input": 955,
+      "edges": 45,
+      "distance_D_ties": 9,
+      "kept": 938,
+      "maximum_squared_diameter": 1021
+    }
+  ],
+  "cases": [
+    {
+      "R": 8192,
+      "translation_basis": [
+        "0",
+        "0"
+      ],
+      "packets": 0,
+      "deleted": 0,
+      "inserted": 0,
+      "net_gain": 0,
+      "retained_neighbor_checks": 0,
+      "new_neighbor_checks": 0,
+      "new_unit_equalities": 0
+    },
+    {
+      "R": 16385,
+      "translation_basis": [
+        "1/3",
+        "1/5"
+      ],
+      "packets": 18,
+      "deleted": 502,
+      "inserted": 548,
+      "net_gain": 46,
+      "retained_neighbor_checks": 301,
+      "new_neighbor_checks": 761,
+      "new_unit_equalities": 530
+    },
+    {
+      "R": 65540,
+      "translation_basis": [
+        "0",
+        "0"
+      ],
+      "packets": 108,
+      "deleted": 3420,
+      "inserted": 3780,
+      "net_gain": 360,
+      "retained_neighbor_checks": 2352,
+      "new_neighbor_checks": 5196,
+      "new_unit_equalities": 3672
+    },
+    {
+      "R": 65540,
+      "translation_basis": [
+        "1/7",
+        "2/5"
+      ],
+      "packets": 98,
+      "deleted": 2533,
+      "inserted": 2762,
+      "net_gain": 229,
+      "retained_neighbor_checks": 1727,
+      "new_neighbor_checks": 3775,
+      "new_unit_equalities": 2664
+    },
+    {
+      "R": 500000,
+      "translation_basis": [
+        "2/7",
+        "3/11"
+      ],
+      "packets": 828,
+      "deleted": 22205,
+      "inserted": 24284,
+      "net_gain": 2079,
+      "retained_neighbor_checks": 15279,
+      "new_neighbor_checks": 33237,
+      "new_unit_equalities": 23456
+    }
+  ],
+  "rejected_negative_controls": 2
+}
