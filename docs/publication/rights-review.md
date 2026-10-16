@@ -125,11 +125,12 @@ repository and its pull-request history.
    The root license cannot relicense any independently owned text.
 2. **Gate 2 technical receipt:** required on the actual final `main`
    commit. The older full 94-certificate/109-tool/8-corpus receipts
-   belong to their pinned earlier trees. The manifest currently retains
-   historical `publication_clearance: pending ...` annotations;
-   the Gate 2 release tool must consume this separate, Git-blob-pinned
-   attestation or perform an equally explicit, reviewed reconciliation.
-   **Do not silently waive the validator or change mathematical metadata.**
+   belong to their pinned earlier trees. The manifest retains historical `publication_clearance: pending ...`
+   annotations. The release auditor now **explicitly checks the separate
+   Git-blob-pinned owner attestation**, preserving default failure for a changed
+   manifest, unapproved email, or declared external-rights exception.
+   Gate 2 must rerun the complete release suite at the final commit; this
+   scoped authorization never changes mathematical metadata.
 3. **Hosted CI:** account infrastructure has not executed a canary;
    disclose this limitation. Local verification can establish its
    own separate tested scope.
