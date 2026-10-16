@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "record_type": "owner-sourced-research-rights-attestation",
+  "repository": "1337isnot1337/erdos-99",
+  "recorded_date": "2026-10-15",
+  "source_manifest": {
+    "path": "docs/publication/inclusion.json",
+    "git_blob_sha": "f521850703b01b204399613d640a0b99ca895080",
+    "retained_source_records": 810,
+    "source_pins": 12
+  },
+  "owner_declaration": {
+    "quote": "all of those 810 are all work i have done with my AI agents. i authorize anything done with them.",
+    "evidence_url": "https://github.com/1337isnot1337/erdos-99/pull/9#issuecomment-6207244081",
+    "scope": "Owner-directed original project material in all 810 included e-99 source-derived records, including the owner's AI-agent-authored research, code, audits, reports and publication adaptations.",
+    "license_terms": "Apache-2.0 for material within the owner's rights; existing credit and external source licenses are preserved.",
+    "disposition": "OWNER AUTHORIZED FOR PROJECT-CONTROLLED SOURCE EXPRESSION"
+  },
+  "provenance_verification": {
+    "observed_repo_commit": "1d0345edf011961be67425b3a5d2f6be8e0a29f7",
+    "observed_repo_tree": "5306421c024728fb2892ba17ee62a9b0c1760d00",
+    "checked_source_pins": 12,
+    "checked_source_paths": 810,
+    "source_blob_and_mode_matches": 810,
+    "retained_paths_present": 810,
+    "original_source_blob_identical_to_public_blob": 726,
+    "publication_edits_or_corrections": 84,
+    "known_public_executable_mode_differences_from_source": 4,
+    "source_hashes_were_previously_checked_at_release_checkpoint": true,
+    "technique": "GitHub Git tree/blob metadata matched against inclusion.json; records public-byte SHA256 verification previously executed at release checkpoint, not rerun as part of this owner attestation."
+  },
+  "external_expression_review": {
+    "scope": "Focused rights screening of the five literature/older-composite documents classified as external-mathematics exposition, and eight source-proposed localized-CI adaptations, plus the tracked-file list and NOTICE.",
+    "inspected_literature_paths": [
+      "docs/literature_review.md",
+      "docs/problem/literature_baseline.md",
+      "docs/problem/literature_archit_das_stress_rhombic_audit_2026-10-08.md",
+      "docs/reports/erdos_problem_99_1.6.0.md",
+      "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md"
+    ],
+    "inspected_ci_paths": [
+      "tools/ci_integrity.py",
+      "tools/local_ci.py",
+      "tools/test_local_ci.py",
+      "tools/localized_ci/__init__.py",
+      "tools/localized_ci/packages.py",
+      "tools/localized_ci/plan.py",
+      "tools/localized_ci/replay.py",
+      "tools/requirements-integrity-linux-x86_64.lock"
+    ],
+    "cited_external_research_reproduced_as_pdf": false,
+    "confirmed_uncleared_redistributed_third_party_exceptions": [],
+    "conclusion": "No concrete rights exception established in the focused inspection. External mathematical results remain cited, not relicensed. This is not a comprehensive originality or verbatim-overlap certification.",
+    "upstream_inspiration": "CrocSwap/integer-mult-bounds is credited as workflow inspiration (published under Apache-2.0); no direct copied expression is established by this declaration."
+  },
+  "history_email_consent": {
+    "comment_url": "https://github.com/1337isnot1337/erdos-99/pull/9#issuecomment-6207434631",
+    "observed_reachable_commits": 47,
+    "observed_refs": 22,
+    "personal_domain_emails_found": [
+      "cinnajdavis@gmail.com"
+    ],
+    "other_observed_emails": "GitHub-generated noreply addresses",
+    "owner_accepts_existing_history": true
+  },
+  "release_boundaries": {
+    "gate1_owner_controlled_rights": "ATTESTED; FOCUSED EXCEPTION REVIEW FOUND NONE",
+    "gate2_current_commit_technical_verification": "SEPARATE; NOT AUTHORIZED BY THIS FILE",
+    "gate3_change_to_public": "SEPARATE; NOT AUTHORIZED BY THIS FILE",
+    "repository_visibility_change_authorized": false,
+    "mathematical_promotion_authorized": false
+  },
+  "limitations": [
+    "The retired committed rights-inventory.json is an older 808-file/902-total snapshot, not the exact final candidate; this attestation is bound directly to the present 810-entry inclusion Git blob.",
+    "Not every line of all 810 files was independently compared with third-party publications; any subsequently identified substantial borrowed expression still requires separate permission, license compliance or replacement.",
+    "Source identity pins and file modes are provenance evidence, not legal ownership proofs; owner declaration supplies project-control authorization.",
+    "This artifact does not waive independent secret scans, host CI restrictions, theorem-review policy, or final visibility approval."
+  ]
+}
