@@ -194,7 +194,7 @@ x=\frac{51}{1000},
 one has the exact strict inequality
 
 \[
-1-6x+x^2-rac35(1+x)^3
+1-6x+x^2-\frac35(1+x)^3
 =\frac{198047}{5000000000}>0.
 \tag{2.3}
 \]

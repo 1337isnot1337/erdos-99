@@ -37,7 +37,7 @@ Then
 \boxed{
 \operatorname{area}(P)
 <
-\frac\pi4r^2-rac1{2500}.
+\frac\pi4r^2-\frac1{2500}.
 }
 \tag{BVP.1}
 \]

@@ -420,7 +420,7 @@ p-y>y-1/25>34/25.
 By JC equality,
 
 \[
-S=rac{(\lambda+p-y)^2}{4\pi}
+S=\frac{(\lambda+p-y)^2}{4\pi}
 >
 \left(\frac{979}{500}\right)^2\frac7{88}
 >\frac3{10}.
@@ -440,11 +440,11 @@ Discard the final positive term in (4.6).  Using (4.8)--(4.11),
 \begin{aligned}
 F_y
 &>
-1-rac7{25}\frac{13}{4}
+1-\frac7{25}\frac{13}{4}
 -
 \frac{3(3/8)(7/25)}{2(7/5)^3}\\
 &=
-1-rac{91}{100}-\frac{45}{784}\\
+1-\frac{91}{100}-\frac{45}{784}\\
 &=\boxed{\frac{639}{19600}>0.}
 \end{aligned}
 \tag{4.12}
