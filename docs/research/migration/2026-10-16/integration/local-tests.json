@@ -1,0 +1,22 @@
+{
+  "scope": "Local tooling regression tests and one recovered research module; not full project verification",
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "git": "git version 2.47.3",
+  "results": [
+    {"command": "python3 -m unittest discover -s tools -p 'test_migration*.py' -v", "tests": 22, "exit_code": 0},
+    {"command": "python3 -O -m unittest discover -s tools -p 'test_migration*.py' -v", "tests": 22, "exit_code": 0},
+    {"command": "python3 -m unittest discover -s research -p 'test_homothetic_capacity.py' -v", "tests": 4, "exit_code": 0}
+  ],
+  "tested_git_blobs": {
+    "tools/check_migration_union.py": "978d2ff219fd2a6181224b9204eedf96766a4bb8",
+    "tools/repair_migration_union.py": "3f4ccc2d5d5e298811b0bf9705c397fb3467871e",
+    "tools/test_migration_union.py": "acf1403b18d203516e32cfcf98aa14f56122e89e",
+    "tools/test_migration_repair.py": "d6e5d54c6b02e5bad984a10c20fbcc9a212978fd",
+    "research/homothetic_capacity.py": "2e109d930cf34a47a6775ec07b67c2049090b2be",
+    "research/test_homothetic_capacity.py": "7cd8c6098a30146b8c623c067bc496da46a1f1e0"
+  },
+  "full_corpus_audit_executed": false,
+  "bulk_source_recovery_executed": false,
+  "gate2_executed": false,
+  "deprecation_ready": false
+}
