@@ -209,7 +209,7 @@ Equivalently the isodiametric disk-area deficit obeys
 0\le
 \frac\pi4D^2-\operatorname{area}(R)
 <
-\frac{\pi\sqrt3}{4}D+rac{\sqrt3}{2}.}
+\frac{\pi\sqrt3}{4}D+\frac{\sqrt3}{2}.}
 \tag{3.5}
 \]
 
@@ -299,7 +299,7 @@ Combine (4.5) with the strict upper bound (3.5):
 \[
 \frac{\pi^3D^2}{48\nu^2}
 <
-\frac{\pi\sqrt3}{4}D+rac{\sqrt3}{2}.
+\frac{\pi\sqrt3}{4}D+\frac{\sqrt3}{2}.
 \]
 
 Rearranging gives

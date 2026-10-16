@@ -41,20 +41,20 @@
   "first_path": "docs/reports/target_c_cyclic_p1_three_times_power_two_exclusion_2026-09-10.md",
   "last_path": "docs/reports/target_c_cyclic_wegner_packing_upgrade_2026-09-09.md",
   "source_lifecycle": "all source index entries unreviewed and noncanonical",
-  "source_copy_verification": "byte-for-byte import from frozen source commit; per-file SHA-256/Git blob recorded",
+  "source_copy_verification": "All 28 source blobs and SHA-256 values checked; 22 reports are byte-identical and 6 reports have only the documented exact form-feed-to-LaTeX repair (13 replacements total). Original source and repaired destination hashes are recorded in shard-2-reconciliation.jsonl for indexes 184, 187, 188, 191, 193, and 198.",
   "destination_duplicate_review": "267 frozen destination report bodies read and compared per imported report; no body is excluded by filename similarity",
   "supporting_code_imports": [],
   "math_status": "no claim is promoted; proof review remains outstanding",
   "verification_pending": "No batch-local verification pending; coordinator-owned artifact-index synchronization remains outstanding.",
   "manual_review_notes": {
     "190": "Unreviewed cyclic d_H=0 A⊆F force-bulk claim. Binding correction target_c_force_bulk_and_correction_audit_2026-09-08.md rejects the general C-II FB4 localization via the exact heptagon-plus-center witness and corrects isolate bookkeeping; it does not itself audit this narrower cyclic theorem. Preserve with scope warning; do not use as a general premise without a separate cyclic proof.",
-    "198": "Exact q=13 S1 local regression survives closure with positive KKT stress and maximal-rank PSD, but is not a global optimum. Its verifier already exists in the frozen destination and is not modified.",
+    "198": "Exact q=13 S1 local regression survives closure with positive KKT stress and maximal-rank PSD, but is not a global optimum. Its verifier already exists in the frozen destination and is not modified. Section 8 also reports an optional SLSQP local-diameter optimizer result; no supporting SLSQP source script was found in the frozen source or destination, so that optional numerical output is not reproduced. The existing shell and KKT endpoint scripts validate only their stated q=13 shell/stress checks and do not establish the SLSQP result or global optimality.",
     "205": "Correction: withdraws identifying selected positive d_H=1 diameter support with H-e/a circuit. Retains full-tree corner-cut geometry and reciprocal parallelogram. Distinct from index 163, whose rank theorem concerns the full geometric row set C_q ∪ (H-e).",
     "209": "Unreviewed universal cyclic A⊆F claim. Binding correction target_c_force_bulk_and_correction_audit_2026-09-08.md rejects general C-II FB4 localization, not by itself this narrower cyclic statement. Preserve unreviewed and do not promote/use as a general premise absent a separate cyclic proof.",
     "210": "Wegner packing upgrade depends on index 190 force-bulk. Its source claim is conditional on that premise and supplies no stability conclusion; the general force-bulk correction is target_c_force_bulk_and_correction_audit_2026-09-08.md, whose counterexample scope does not alone settle the narrower cyclic claim."
   },
   "verification_results": {
-    "import_integrity": "PASS 28/28 source blob and working-tree byte comparisons; SHA-256 matches ledger",
+    "import_integrity": "PASS 28/28 frozen source blob and SHA-256 identities verified; 22/28 exact byte copies and 6/28 exact documented transformations; 13 total b\"\\\\x0crac\" to b\"\\\\\\\\frac\" replacements; destination SHA-256 recorded in the shard reconciliation ledger.",
     "baseline_corpus_review": "267 report bodies read; zero exact normalized matches; batch maximum 4-token-shingle Jaccard 0.0273884",
     "git_diff_cached_check": "PASS before verification note was staged; rerun on final staged tree",
     "relevant_regression": {

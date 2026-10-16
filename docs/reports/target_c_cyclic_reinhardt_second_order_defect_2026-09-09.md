@@ -240,7 +240,7 @@ The difference body has at most `2q` sides and perimeter `2q`. Therefore
 \[
 \operatorname{area}(F-F)
 \le
-U(q):=rac{q}{2\tan(\pi/(2q))}.
+U(q):=\frac{q}{2\tan(\pi/(2q))}.
 \tag{3.1}
 \]
 

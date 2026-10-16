@@ -416,7 +416,7 @@ Subtract this from total beta mass one and use PS.7:
 \[
 \begin{aligned}
 \sum_{i=0}^{r-1}\beta_i
-&=1-rac1{D^2}\sum_i(\ell_i-1)\sigma_i\\
+&=1-\frac1{D^2}\sum_i(\ell_i-1)\sigma_i\\
 &=\frac1{D^2}\sum_i\sigma_i.
 \end{aligned}
 \]

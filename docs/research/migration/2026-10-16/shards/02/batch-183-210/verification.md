@@ -4,7 +4,7 @@ Frozen selection: source commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`; dest
 
 ## Import integrity
 
-- Source blob and imported worktree bytes compared for all 28 reports: **PASS 28/28**. SHA-256 values match `dispositions.jsonl`.
+- Frozen source blob identity and SHA-256 checked for all 28 reports: **PASS 28/28**. Twenty-two destination reports are byte-identical; six reports (indexes 184, 187, 188, 191, 193, 198) contain only 13 exact `b\x0crac` → `b\\frac` repairs of source form-feed corruption in LaTeX. The shard reconciliation ledger records original source hashes, repaired destination hashes, and the transformation per report.
 - Frozen destination same-path absence is recorded per report. The full-baseline scan read all 267 destination report bodies and found no exact normalized body match; the highest 4-token-shingle Jaccard in this batch was 0.0273884.
 - `git diff --cached --check`: **PASS** before this receipt update; rerun after staging the final metadata below.
 

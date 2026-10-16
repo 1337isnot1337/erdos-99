@@ -144,7 +144,7 @@ D^2\left[
 \sin((h-1)\delta_D)
 \right]
 =
-\pi D^2-rac\pi6+O(D^{-1}).}
+\pi D^2-\frac\pi6+O(D^{-1}).}
 \tag{2.2}
 
 On the other hand, (1.4) and `q=pi D-t_D` give
@@ -154,9 +154,9 @@ On the other hand, (1.4) and `q=pi D-t_D` give
 \operatorname{area}(F-F)
 &\le
 \frac{(\pi D-t_D)^2}{\pi}
--rac\pi{12}+O(D^{-2})\\
+-\frac\pi{12}+O(D^{-2})\\
 &=
-\pi D^2-2Dt_D-rac\pi{12}+O(D^{-2}),
+\pi D^2-2Dt_D-\frac\pi{12}+O(D^{-2}),
 \end{aligned}
 \tag{2.3}
 
@@ -282,7 +282,7 @@ h=q-d_H
 \[
 \delta_D
 =
-\frac1D+rac1{24D^3}+O(D^{-5}),
+\frac1D+\frac1{24D^3}+O(D^{-5}),
 \]
 
 and RP.1:
@@ -302,7 +302,7 @@ h\delta_D
 \left(\pi D-d_H-\frac\pi{24D}+O(D^{-2})\right)
 \left(\frac1D+\frac1{24D^3}+O(D^{-5})\right)\\
 &=
-\pi-rac{d_H}{D}+O(D^{-3}).
+\pi-\frac{d_H}{D}+O(D^{-3}).
 \end{aligned}
 \]
 
@@ -493,7 +493,7 @@ The cyclic branch is now at the discrete extremal scale:
 \[
 q
 =
-\pi D-rac\pi{24D}+O(D^{-2}).
+\pi D-\frac\pi{24D}+O(D^{-2}).
 \]
 
 The best next target is a **Reinhardt stability with diameter-thrackle labels**:

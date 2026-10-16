@@ -129,7 +129,7 @@ and
 
 \[
 \boxed{
-D_*=rac1{2\sin(\delta_*/2)}
+D_*=\frac1{2\sin(\delta_*/2)}
 =4.1520639086997635\ldots.
 }
 \tag{2.6}

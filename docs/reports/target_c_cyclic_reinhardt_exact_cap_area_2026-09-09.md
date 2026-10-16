@@ -156,7 +156,7 @@ and
 
 \[
 1-\frac{\sin x\cos x}{x}
-=\frac{2}{3}x^2-\frac{2}{15}x^4+rac{4}{315}x^6+O(x^8).
+=\frac{2}{3}x^2-\frac{2}{15}x^4+\frac{4}{315}x^6+O(x^8).
 \]
 
 Multiplying in CA.2 yields
@@ -211,7 +211,7 @@ C_q
 \left(
 \frac\pi q-\sin\frac\pi q
 \right)
-=rac\pi{12}+O(q^{-2}).
+=\frac\pi{12}+O(q^{-2}).
 \]
 
 Combining with the exact Wegner lower bound WG.1 gives the finite necessary inequality
