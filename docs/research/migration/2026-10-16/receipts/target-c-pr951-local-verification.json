@@ -1,0 +1,88 @@
+{
+  "schema_version": "erdos-99-local-migration-verification/v1",
+  "recorded_at_utc": "2026-10-16T08:02:47Z",
+  "verification_subject": {
+    "destination_repository": "https://github.com/1337isnot1337/erdos-99",
+    "branch": "research/target-c-pr951-vacancy-release-20261016",
+    "commit": "3cfbc37616950285022784c1eb30c7aec50014fb",
+    "tree": "314fd501e6aa365a937dedef112fee1d381805be",
+    "base_main_commit": "495351ba7d127deb48f3666623615ff6ea19c39e",
+    "base_main_tree": "db11ffa20d29d91548868edd0784d8321c91cfa1"
+  },
+  "frozen_source": {
+    "repository": "https://github.com/1337isnot1337/e-99",
+    "main_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "main_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+    "pull_request": 951,
+    "pull_request_head": "0023585a98d8f5f23df64174a091c143710ba78a",
+    "pull_request_base": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "merge_base": "d999528cfaafd811a4a19bcfacd00f217c2fc375",
+    "merge_base_tree": "4eff9ef7cd946225c5810ba23c1f0012a2c77355",
+    "changed_source_paths": 19,
+    "ledger": "docs/research/migration/2026-10-16/ledger/source-pr-files.jsonl",
+    "ledger_result": "PASS; all 19 frozen source Git blobs and SHA-256 digests verified; all 19 destination Git blob and SHA-256 digests match the committed ledger"
+  },
+  "commands": [
+    {
+      "command": "python3 tools/check_theorem_state.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python3 tools/build_artifact_index.py",
+      "result": "PASS; 538 artifacts"
+    },
+    {
+      "command": "python3 tools/check_public.py",
+      "result": "PASS; zero errors; integrity passed; mathematical_proof=false; 94 certificates, 451 claims, 845 edges, 810 retained source files, 20 tasks"
+    },
+    {
+      "command": "python3 tools/run_theorem_certificates.py",
+      "result": "PASS on the exact payload commit; all 94 selected of 94 unique certificates; zero failures"
+    },
+    {
+      "command": "python3 research/verify_target_c_rhombic_vacancy_hop_slot07_2026_10_10.py",
+      "result": "PASS; 224 source pairs; 5,000 strip pairs; 4,512 endpoint pairs; 2,120 strict inserted pairs; 5,000 weighted cap identities; 906 exact clear-cap disk samples; regenerated fixture byte-identical; SHA-256 15aa5bbcfd3eb47dd1d9262c0f77789614f7211b05c416b5d3f72cbadcd36c98"
+    },
+    {
+      "command": "python3 research/verify_target_c_effective_fixed_wall_packet_slot07_2026_10_10.py",
+      "result": "PASS; regenerated fixture byte-identical; SHA-256 c6992738d019b57def56cb19e6b137f17486e95e7ac54737fb37f405f6cedd19"
+    },
+    {
+      "command": "python3 research/verify_target_c_near_coherent_one_vacancy_pinning_slot07_2026_10_10.py",
+      "result": "PASS; 48 fixtures; 40,128 source pairs; 1,808 weighted moving edges; 768 moving equilibria; 4,608 anchored rows; regenerated fixture byte-identical; SHA-256 84873e31b57302edf88087f955fa98b93c09e5d028065f8527ded3bce292bbcd"
+    },
+    {
+      "command": "python3 research/verify_target_c_one_vacancy_full_chart_release_slot07_2026_10_10.py",
+      "result": "PASS; 72 fixtures; 20,168 source pairs; 74,464 segment pairs; 18,616 endpoints; 17,232 strict chart pairs; regenerated fixture byte-identical; SHA-256 9853efb8f946b943515d041d24c80e8c8dbf3ca4626cfe6d10b914d0e9407891"
+    },
+    {
+      "command": "python3 research/verify_target_c_one_vacancy_side_pin_release_slot07_2026_10_10.py",
+      "result": "PASS; 68 fixtures; 6,844 source pairs; 12,474 endpoints; 6,751 strict endpoints; 87,318 sampled path pairs; 490 strict descent pairs; regenerated fixture byte-identical; SHA-256 c663a5d37f8fa325a54e92f95d5ce0684d294509d94edd3e2b0689aa41fa2bce"
+    },
+    {
+      "command": "python3 -m json.tool docs/targets/target-c/candidate-registry.json",
+      "result": "PASS"
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS"
+    }
+  ],
+  "hosted_actions": {
+    "destination_pr": null,
+    "observed_head": null,
+    "workflow": "public-research-integrity",
+    "status": "not yet observed; no hosted success claimed"
+  },
+  "theorem_and_release_status": {
+    "theorem_state": "2026-10-15.publication.2; unchanged",
+    "target_c_status": "C-II remains OPEN; unchanged",
+    "registered_certificate_set_changed": false,
+    "publication_inclusion_changed": false,
+    "publication_inclusion_retained_source_files": 810,
+    "repository_visibility": "private",
+    "gate_2": "NOT RUN; full source corpus migration remains incomplete; this is not a release candidate",
+    "gate_3": "NOT REQUESTED; destination remains private",
+    "claim_scope": "Imported reports remain unreviewed; computational replays are finite evidence only."
+  }
+}
