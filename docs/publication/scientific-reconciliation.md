@@ -10,6 +10,34 @@ merge of destination PR #4. Further private research is outside this freeze.
 This is a publication relevance and fidelity review, with agent mathematical
 auditing of the corrections below. It is not independent human peer review.
 
+## 2026-10-16 research-corpus preservation addendum
+
+The original publication freeze above remains pinned to its recorded source
+scope. A separate, private migration now preserves source-main Target C research
+from `e-99` commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73` against destination
+base `60c2576b4893a7e9001d2c8bfbe5cfb64c1c969f`. Its first reviewable batch
+imports 83 missing source-main audits and two linked reports needed by the
+low-response audit link and cyclic fan-flip audit/report chain as noncanonical
+research, and archives 38 conflicting source versions; the
+other 826 missing Target C reports remain queued. The source ledger verifies
+338 exact duplicates. The full link audit records 100 dependencies (31 missing,
+11 modified, and 58 exact copies); this batch resolves four missing dependency
+records, preserves the 11 changed source versions (some overlap the 38 artifact
+conflict snapshots), and verifies 84 of 384 evidence edges. The other report
+dependencies, 300 edges, and all 18 link corrections are queued with their
+report batches. Complete
+source-row dispositions and byte provenance are in the
+[migration ledger](../research/migration/2026-10-16/ledger/source-main-artifacts.jsonl)
+and its [scientific reconciliation](../research/migration/2026-10-16/scientific-reconciliation.md).
+
+This preservation batch does not alter the theorem-state, the prior 810-entry
+publication inclusion set, or any claim lifecycle. Source labels such as
+`canonical` remain historical provenance and do not supersede the destination
+manifest. The earlier inverse-phase inference remains withdrawn as described
+above. This addendum is not the final-candidate Gate 2 receipt, does not complete
+scientific reconciliation of the queued research tree or source PRs, and does
+not authorize a visibility change. The repository remains private.
+
 ## A consequential proof correction
 
 The corpus already contained the Audit.236 repair from unmerged source PR #947,

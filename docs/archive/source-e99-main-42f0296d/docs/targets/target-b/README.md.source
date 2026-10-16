@@ -1,0 +1,104 @@
+> **Historical source dependency, not current theorem authority.** Frozen at `42f0296d1aca068c809f74cee5dcdb4ebdb27c73` from `docs/targets/target-b/README.md`.
+
+# Target B — jammed shell-stability route
+
+Target B is the first-order-jammed branch. The shared theory forces an almost-rhombic
+contact complex, after which the remaining issue is a quantitative boundary/shell
+stability statement.
+
+## Route module
+
+- [01 — Jammed almost-rhombic branch](01-jammed-rhombic-branch.md): perimeter and
+  width saturation, train-angle identities, phase energy, backward-train mechanisms,
+  fixed-angle and affine-lattice exclusion, and the exact Target B frontier
+  (Sections 24–56).
+
+## Promoted audited addenda
+
+- [Phase cuts and coherent crossing families](../../reports/target_b_phase_cut_and_biclique_2026-09-05.md)
+  proves **PC**, **PW**, **CR**, **PS**, **IS**, **TS**, and **NE**, records the
+  **SI** interval-biclique regression, and corrects the
+  Section 52 equality wording
+  (**EC**). PC deletes at most `floor(3 Delta / pi)` crossing relations, hence
+  only `O(D)`, to obtain an exact real acyclic phase potential on the full train
+  graph. The dense components of Section 50 are themselves acyclic for large `D`.
+  CR proves `D >= (a+b) cos(pi/6+2 epsilon)-2` for a complete coherent crossing
+  family in a pure disk, without an additive-block hypothesis. PS consequently
+  excludes the core-sized coherent phase-star endpoint, even when its smaller
+  class has vanishing relative size. IS extracts a large complete crossing family
+  from a nearly complete coherent pair using its ordered intervals. TS proves
+  balanced tripartite stability. Together they give NE: a uniform exclusion of
+  coherent, core-sized, near-extremal three-class train graphs. These statements
+  supersede the corresponding feedback-set, long-cycle, additive-realization, and
+  coherent near-equality gaps in Sections 49–56. PC4 gives a global phase-class
+  reduction after only `O(D)` omitted crossings: PW forces a linear-size phase
+  window whenever retained crossing density is quadratic. A survivor is then
+  phase-imbalanced at quadratic scale or has a quadratic deficit from every phase
+  split. NE eliminates the former when its coherent core hypotheses hold; the
+  latter is the remaining phase-density obstruction. The addendum also proves
+  **HA**, the edge-aligned-hole estimate
+  `G_holes >= (sqrt(3)/4) B_holes - (sqrt(3)/2) h`, matching the Euler
+  correction for `h` holes.
+
+- [Independent dense-grid / penetration / interpolation audit](../../reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md)
+  promotes the corrected downstream tools under their exact scopes. **DT1–DT4**
+  replace the false global linear-stack claim by the complement-dual tree and its
+  almost-spanning backbone extraction. **TG1–TG3** give deep-grid penetration and
+  exclude complete coherent phase stars carrying the quadratic core. **PDG** turns
+  crossing density `rho` into a complete rectangle with shores at least
+  `rho^2 M/128` and `rho b/4-O(1)`. **PC1/PC3** charge arbitrary diagonal
+  cancellation by physical grid crossings and deleted-interface crossings.
+  **MCP1/MCP2** aggregate these charges with multiplicity at most two; the additive
+  MCP2 form is read with fixed Section-50 `lambda`, which gives only
+  `O_lambda(1)` retained components and hence a summed `o(D^2)` coherence error.
+  Finally **GPI** proves, for one dominant coherent component with
+  `M>=b>=a`, `t=b/M>=tau>0`, and local Theorem-51 deficit `Delta`,
+  `liminf Delta >= 4e-17 tau^2`. This is a local dominant-component theorem, not a
+  multi-grain globalization.
+
+## Audited-working advance: exact boundary backtracking
+
+- [Section 120 boundary-backtracking hostile audit](120-boundary-backtracking-audit.md)
+  certifies the old proposed equation (37.7) in the simply connected pure
+  strict-rhombic disk. For either outer-boundary arc `Gamma` joining an active
+  diameter pair, train crosscut orientation supplies one injectively charged
+  terminal edge for every separating train. If `P_0` and `P_-` are the tangent and
+  backward separating trains and `S_-` is the total backward signed weight, then
+  `|Gamma|-D >= |P_0|+|P_-|+S_-/D`. Hence
+  `S_- <= D(|Gamma|-D)/2` and `|P_0|+|P_-| <= |Gamma|-D`. The same theorem bounds
+  all positive quadratic curvature of one active diameter bar by its boundary
+  detour. It does **not** prove a universal quartic-blocker rank bound or the
+  component-quotiented blocker/coforest inequality, so Target B remains open.
+
+## Exact remaining endpoint
+
+A sufficient closure is the joint outer-shell stability inequality
+`Oler surplus >= (sqrt(3)/4) P`, equivalently
+`G+E >= (sqrt(3)/4) B + (sqrt(3)/2)(t+chi-1)` with the canonical topology
+corrections. The strict global-minimizer allowance is the reverse inequality
+(Section 36). The current record does not prove this closure.
+
+The phase-star and coherent near-extremal core subcases are excluded by PS/NE, and
+the dense-grid/penetration/GPI tools are now independently certified. The live
+pure-disk obstruction is global rather than local class-size interpolation:
+several linearly sized coherent grains may share the quadratic crossing mass, while
+PDG's density-only grid can remain below the `2D/sqrt(3)` PC3 cancellation threshold.
+A closure must couple retained physical crossings, deleted/interface crossings, and
+virtual noncrossing determinant mass across all macroscopic grains, or turn the
+phase potential into an actual strict smaller-diameter competitor while controlling
+active diameter constraints. No such global inequality or competitor theorem is
+proved. The general topology correction and flexible branch remain necessary.
+Target B stays separate from Target A because plain shell/area bookkeeping does not
+control source-capacity deficit.
+
+## Cross-references
+
+The promoted [shared integrator module](../../theory/04-ambient-force-and-cap-transport.md)
+uses global packing/roundness inputs, valid before any jammed classification,
+to constrain C force hulls. It also gives an exact Oler decomposition on actual
+exterior caps. This common invariant does not transfer B train topology into C
+or close the shell inequality above.
+
+The v1.7 section sequence contains shorter Target B frontier summaries in the Target A
+scaffold module (Sections 76, 82–87, 92–96, and 107–108). The full Target B development
+is collected in the route module linked above.

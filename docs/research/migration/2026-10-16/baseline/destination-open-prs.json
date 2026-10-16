@@ -1,0 +1,15 @@
+[
+  {
+    "baseRefName": "main",
+    "headRefName": "fix/remove-private-schema-id-reference-20261016",
+    "headRefOid": "bb274e5001df8aa123cd11849d3b3aee84da577d",
+    "isDraft": false,
+    "mergeStateStatus": "CLEAN",
+    "number": 16,
+    "reviewDecision": "",
+    "title": "Remove private source URL from schema identifier",
+    "updatedAt": "2026-10-16T04:55:47Z",
+    "url": "https://github.com/1337isnot1337/erdos-99/pull/16",
+    "base_main_sha": "60c2576b4893a7e9001d2c8bfbe5cfb64c1c969f"
+  }
+]

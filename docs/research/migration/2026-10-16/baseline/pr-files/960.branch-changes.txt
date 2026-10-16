@@ -1,0 +1,11 @@
+A	docs/audits/pr960_autonomous_proof_audit_2026-10-15.md
+A	docs/reports/global_dense_factorized_barrier_2026-10-12.md
+A	docs/reports/global_factorized_distance_barrier_2026-10-12.md
+A	docs/reports/global_planarity_and_radius_barriers_2026-10-12.md
+M	docs/state/artifact-index.jsonl
+M	research/README.md
+A	research/global_factorized_graph_alternative.py
+A	research/verify_global_dense_factorized_barrier.py
+A	research/verify_global_factorized_distance_barrier.py
+A	research/verify_global_factorized_graph_alternative.py
+A	research/verify_global_planarity_and_radius_barriers.py

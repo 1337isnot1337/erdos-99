@@ -1,0 +1,80 @@
+[
+  {
+    "source_path": "docs/state/theorem-state.yaml",
+    "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "source_blob": "b727d4444b6d4d19fcf36cf8759233242d1d7ee4",
+    "source_sha256": "a8b571cacc2c77623a991f50114a70141d59bcde9685f916db8153599e58b2b6",
+    "snapshot_path": "docs/research/migration/2026-10-16/baseline/source-main-snapshot/docs/state/theorem-state.yaml",
+    "snapshot_sha256": "a8b571cacc2c77623a991f50114a70141d59bcde9685f916db8153599e58b2b6",
+    "transformation": "none"
+  },
+  {
+    "source_path": "docs/state/artifact-index.jsonl",
+    "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "source_blob": "1eedefc916a982926b16b05cb6af9470c014b3e0",
+    "source_sha256": "d912e77635d3838bf0e304a74cfd60e77318cd0d9996d1bec97c3da0992be67e",
+    "snapshot_path": "docs/research/migration/2026-10-16/baseline/source-main-snapshot/docs/state/artifact-index.jsonl",
+    "snapshot_sha256": "d912e77635d3838bf0e304a74cfd60e77318cd0d9996d1bec97c3da0992be67e",
+    "transformation": "none"
+  },
+  {
+    "source_path": "docs/targets/target-c/CURRENT.md",
+    "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "source_blob": "da1672c9525f644a96cc8372fbdfc19ac2881373",
+    "source_sha256": "8a5c80555cc31a85543dcb3906032ddb6b6e4f820e5b782b57befcc38c68af00",
+    "snapshot_path": "docs/research/migration/2026-10-16/baseline/source-main-snapshot/docs/targets/target-c/CURRENT.md.source",
+    "snapshot_sha256": "8a5c80555cc31a85543dcb3906032ddb6b6e4f820e5b782b57befcc38c68af00",
+    "transformation": "none",
+    "snapshot_filename_treatment": "non-Markdown extension keeps frozen provenance text outside active navigation; bytes unchanged"
+  },
+  {
+    "source_path": "docs/targets/target-c/README.md",
+    "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "source_blob": "6acc0bd97f0a3bf41008c2f0a5f6b2fdc328f403",
+    "source_sha256": "aceb9a5829ed8a87433945223e4a742a5c037d8ebba701940e2aba9959416f47",
+    "snapshot_path": "docs/research/migration/2026-10-16/baseline/source-main-snapshot/docs/targets/target-c/README.md.source",
+    "snapshot_sha256": "aceb9a5829ed8a87433945223e4a742a5c037d8ebba701940e2aba9959416f47",
+    "transformation": "none",
+    "snapshot_filename_treatment": "non-Markdown extension keeps frozen provenance text outside active navigation; bytes unchanged"
+  },
+  {
+    "source_path": "research/README.md",
+    "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "source_blob": "20c95bbcdfd5e7611502116fdbcd29e52c67a5c2",
+    "source_sha256": "215bfd7d25b61f361ffc99f905b19b3809e1702089e643e381b252367ec9d657",
+    "snapshot_path": "docs/research/migration/2026-10-16/baseline/source-main-snapshot/research/README.md.source",
+    "snapshot_sha256": "215bfd7d25b61f361ffc99f905b19b3809e1702089e643e381b252367ec9d657",
+    "transformation": "none",
+    "snapshot_filename_treatment": "non-Markdown extension keeps frozen provenance text outside active navigation; bytes unchanged"
+  },
+  {
+    "source_path": "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md",
+    "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "source_blob": "d7a5738db70c83aba37653a6de92cd81ac702774",
+    "source_sha256": "30f842b1520592cde9bf84ee7bf9945b419143934b4dbe100408a168e15a55e5",
+    "snapshot_path": "docs/research/migration/2026-10-16/baseline/source-main-snapshot/docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md.source",
+    "snapshot_sha256": "30f842b1520592cde9bf84ee7bf9945b419143934b4dbe100408a168e15a55e5",
+    "transformation": "none",
+    "snapshot_filename_treatment": "non-Markdown extension keeps frozen provenance text outside active navigation; bytes unchanged"
+  },
+  {
+    "source_path": "docs/canonical/README.md",
+    "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "source_blob": "a473ae26cb2aed4899cd35fa400749cef04333c7",
+    "source_sha256": "0f2743c08d93f76f7446c05d2b3d6f33e5e5ad96199572c69787b613e701414e",
+    "snapshot_path": "docs/research/migration/2026-10-16/baseline/source-main-snapshot/docs/canonical/README.md.source",
+    "snapshot_sha256": "0f2743c08d93f76f7446c05d2b3d6f33e5e5ad96199572c69787b613e701414e",
+    "transformation": "none",
+    "snapshot_filename_treatment": "non-Markdown extension keeps frozen provenance text outside active navigation; bytes unchanged"
+  },
+  {
+    "source_path": "docs/canonical/erdos_problem_99_1.7.0.md",
+    "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "source_blob": "2593344ae75ccf01679f0bf95e43a233cdbf8bfc",
+    "source_sha256": "d777b4ec7797b77cc276ce43a7ba343bae0f9e7e71aec180fbd6c3feaac36106",
+    "snapshot_path": "docs/research/migration/2026-10-16/baseline/source-main-snapshot/docs/canonical/erdos_problem_99_1.7.0.md.source",
+    "snapshot_sha256": "d777b4ec7797b77cc276ce43a7ba343bae0f9e7e71aec180fbd6c3feaac36106",
+    "transformation": "none",
+    "snapshot_filename_treatment": "non-Markdown extension keeps frozen provenance text outside active navigation; bytes unchanged"
+  }
+]

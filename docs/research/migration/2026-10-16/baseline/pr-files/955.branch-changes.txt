@@ -1,0 +1,8 @@
+A	docs/audits/pr955_autonomous_proof_audit_2026-10-15.md
+A	docs/reports/global_annular_matching_competitor_2026-10-11.md
+A	docs/reports/global_level_i_attainment_and_one_contact_2026-10-11.md
+M	docs/state/artifact-index.jsonl
+M	research/README.md
+A	research/global_annular_matching_2026_10_11.json
+A	research/verify_global_annular_matching_2026_10_11.py
+A	research/verify_global_one_contact_2026_10_11.py

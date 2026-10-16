@@ -1,0 +1,11 @@
+A	docs/audits/pr958_autonomous_proof_audit_2026-10-15.md
+A	docs/reports/global_colouring_lift_and_planar_rank_barrier_2026-10-12.md
+A	docs/reports/global_palette_endpoints_and_full_source_exhaustion_2026-10-12.md
+M	docs/state/artifact-index.jsonl
+M	research/README.md
+A	research/exact_trig_intervals_2026_10_12.py
+A	research/fixtures/global_palette_translation_2026_10_12/cci132.txt
+A	research/fixtures/global_palette_translation_2026_10_12/cci175.txt
+A	research/fixtures/global_palette_translation_2026_10_12/provenance.json
+A	research/verify_global_colouring_lift_rank_2026_10_12.py
+A	research/verify_global_palette_transversal_2026_10_12.py

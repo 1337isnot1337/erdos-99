@@ -1,0 +1,15 @@
+M	.github/PULL_REQUEST_TEMPLATE.md
+M	.github/copilot-instructions.md
+M	AGENTS.md
+M	CONTRIBUTING.md
+M	README.md
+M	autoresearch.md
+M	docs/COORDINATION.md
+M	docs/RESEARCH_WORKFLOW.md
+M	docs/REVIEW_POLICY.md
+M	docs/ci/LOCALIZED_CI.md
+M	docs/launch/PUBLICATION_AUDIT.md
+M	docs/launch/RELEASE_PREPARATION.md
+M	docs/maintenance/issue-986-dirty-worktree-dispositions.json
+A	docs/maintenance/original14-periodic-extension-preservation-2026-10-15.md
+M	tools/localized_ci/plan.py

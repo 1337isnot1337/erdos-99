@@ -1,0 +1,206 @@
+{
+  "captured_at_utc": "2026-10-16T05:30:33.947714+00:00",
+  "source": {
+    "repo": "https://github.com/1337isnot1337/e-99",
+    "main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+    "main_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+    "tracked_file_count": 4717,
+    "tracked_manifest_path": "source-tracked-files.txt",
+    "tracked_manifest_sha256": "b67fa02da34461b03ddcddf64cc175cb7cc4bbcf78eb52425f71fc446a32b26b",
+    "head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+    "branch": "research/sol/target-c-level1-gpt61-2026-10-04",
+    "working_tree_porcelain": "",
+    "theorem_state": {
+      "version": null,
+      "sha256": "a8b571cacc2c77623a991f50114a70141d59bcde9685f916db8153599e58b2b6",
+      "git_blob_sha": "b727d4444b6d4d19fcf36cf8759233242d1d7ee4",
+      "target_c_counts": {
+        "canonical_modules": 57,
+        "current_canonical_entries": 371,
+        "audited_working": 3,
+        "regressions": 62,
+        "rejected_or_overridden": 14
+      }
+    },
+    "artifact_index": {
+      "rows": 1446,
+      "counts_by_target": {
+        "shared": 89,
+        "target-a": 21,
+        "target-b": 49,
+        "target-c": 1287
+      },
+      "sha256": "d912e77635d3838bf0e304a74cfd60e77318cd0d9996d1bec97c3da0992be67e",
+      "git_blob_sha": "1eedefc916a982926b16b05cb6af9470c014b3e0"
+    },
+    "required_document_hashes": [
+      {
+        "path": "docs/state/theorem-state.yaml",
+        "git_blob_sha": "b727d4444b6d4d19fcf36cf8759233242d1d7ee4",
+        "sha256": "a8b571cacc2c77623a991f50114a70141d59bcde9685f916db8153599e58b2b6",
+        "bytes": 452051
+      },
+      {
+        "path": "docs/state/artifact-index.jsonl",
+        "git_blob_sha": "1eedefc916a982926b16b05cb6af9470c014b3e0",
+        "sha256": "d912e77635d3838bf0e304a74cfd60e77318cd0d9996d1bec97c3da0992be67e",
+        "bytes": 436443
+      },
+      {
+        "path": "docs/targets/target-c/CURRENT.md",
+        "git_blob_sha": "da1672c9525f644a96cc8372fbdfc19ac2881373",
+        "sha256": "8a5c80555cc31a85543dcb3906032ddb6b6e4f820e5b782b57befcc38c68af00",
+        "bytes": 123536
+      },
+      {
+        "path": "docs/launch/READINESS.md",
+        "git_blob_sha": "e1701f0bc628ce47342e5a774a3d514def8019ac",
+        "sha256": "e08e6a98f78ea447db1e552fdffaeb8b448d12c5c18f6c96a4b5b45ead94e763",
+        "bytes": 22055
+      },
+      {
+        "path": "docs/launch/PUBLICATION_AUDIT.md",
+        "git_blob_sha": "25bcc5ecb3354d1ebd69f5afe44dd58788a2c9b6",
+        "sha256": "224953a1229c16bc13b5691da03c8c76df0dd630923871d0bcf64f279d9c16a5",
+        "bytes": 13135
+      }
+    ],
+    "initial_checkout_before_fetch": {
+      "branch": "research/sol/target-c-level1-gpt61-2026-10-04",
+      "head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+      "working_tree_porcelain": ""
+    },
+    "frozen_scope": {
+      "tracked_source_main_files": 4717,
+      "target_c_artifact_records": 1287,
+      "shared_artifact_records": 89,
+      "target_c_research_tree_files": 2707,
+      "target_c_route_document_files": 157,
+      "closed_pr_inventory_rows": 983
+    }
+  },
+  "destination": {
+    "repo": "https://github.com/1337isnot1337/erdos-99",
+    "main_sha": "60c2576b4893a7e9001d2c8bfbe5cfb64c1c969f",
+    "main_tree": "f4d73c1080b3b4a1b7757f5fd96109b6cd4b5c76",
+    "tracked_file_count": 921,
+    "tracked_manifest_path": "destination-tracked-files.txt",
+    "tracked_manifest_sha256": "163dccfba55de23c181aec177df23008dfe4854b765fd2dcc11b31039a2231eb",
+    "head": "60c2576b4893a7e9001d2c8bfbe5cfb64c1c969f",
+    "branch": "research/target-c-corpus-migration-20261016",
+    "working_tree_porcelain": "?? docs/research/migration/\n",
+    "theorem_state": {
+      "version": null,
+      "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+      "git_blob_sha": "1218b98ff735b7fe64a572accb5603bedc85ce6a",
+      "target_c_counts": {
+        "canonical_modules": 57,
+        "current_canonical_entries": 370,
+        "audited_working": 4,
+        "regressions": 62,
+        "rejected_or_overridden": 14
+      }
+    },
+    "artifact_index": {
+      "rows": 443,
+      "counts_by_target": {
+        "shared": 27,
+        "target-c": 403,
+        "target-a": 3,
+        "target-b": 10
+      },
+      "sha256": "d6f4abd2ca61e6a1c5c3ca8cf455eaf2ea1fdff33c2202eab28d5cd77bebd8c1",
+      "git_blob_sha": "3c44961ddb05c58a65ac88573cc677f5fe6f2bbd"
+    },
+    "required_document_hashes": [
+      {
+        "path": "docs/state/theorem-state.yaml",
+        "git_blob_sha": "1218b98ff735b7fe64a572accb5603bedc85ce6a",
+        "sha256": "41eeed2f667183caed5d02bae07426e44020b9a6786d79a118086e198bca3802",
+        "bytes": 452116
+      },
+      {
+        "path": "docs/state/artifact-index.jsonl",
+        "git_blob_sha": "3c44961ddb05c58a65ac88573cc677f5fe6f2bbd",
+        "sha256": "d6f4abd2ca61e6a1c5c3ca8cf455eaf2ea1fdff33c2202eab28d5cd77bebd8c1",
+        "bytes": 178682
+      },
+      {
+        "path": "docs/targets/target-c/CURRENT.md",
+        "git_blob_sha": "7a6f55d682df0b7e10ebcf662c855af063c9c772",
+        "sha256": "fe87f8dc3888944cb6821102cb5abc184f9cf1cbfb345ff67d27f312c589b762",
+        "bytes": 21573
+      },
+      {
+        "path": "docs/publication/scientific-reconciliation.md",
+        "git_blob_sha": "706f1b88502960a0dee0b93366b8b8f9798f3453",
+        "sha256": "3febd76a07358d2115470d394707713764ead3f028a5eabb81312ff10bfcb9c2",
+        "bytes": 11923
+      },
+      {
+        "path": "docs/publication/inclusion.json",
+        "git_blob_sha": "f521850703b01b204399613d640a0b99ca895080",
+        "sha256": "e6afa387fe768a20f35a06c826f5c87cba41993819574e8bcc0579ac084300a6",
+        "bytes": 1532612
+      },
+      {
+        "path": "docs/launch/READINESS.md",
+        "git_blob_sha": "187578fe94bbbc3b270b82754011b7e0a21a18f6",
+        "sha256": "e865619d643ecd3db34bde43d39e506db4ffa254f6e7cbe8fa897faee94ecf60",
+        "bytes": 5463
+      },
+      {
+        "path": "docs/launch/PUBLICATION_AUDIT.md",
+        "git_blob_sha": "c1c10e76377d856801cfd5bf0bd360c0ae45c729",
+        "sha256": "e517036cd9c20c8b1b970911ff7e6a88b93a701f1b1392fce14c2311aacc62d8",
+        "bytes": 10472
+      }
+    ],
+    "initial_checkout_before_fetch": {
+      "branch": "main",
+      "head": "34c12ffd5ac4c9cc019e7cac2a337d38e3cd2dc5",
+      "working_tree_porcelain": "clean"
+    },
+    "origin_main_at_capture": {
+      "head": "60c2576b4893a7e9001d2c8bfbe5cfb64c1c969f",
+      "tree": "f4d73c1080b3b4a1b7757f5fd96109b6cd4b5c76"
+    }
+  },
+  "source_open_pr_count": 21,
+  "destination_open_pr_count": 1,
+  "source_pr_heads": {
+    "1008": "ad1bda373a5cbd8c666040f64b4f6ecd83223e31",
+    "1007": "2a6dcb2dffe803a967d3766068ded434f0560185",
+    "970": "3d94a44ed245ad636685d7a3919acdf9ebd53753",
+    "969": "b3983cdc7f4ca32ad8083eade92952d451c60848",
+    "967": "3a80b4bd2d75a439835ab26a863521816a0f39d1",
+    "966": "88b473899edc5f63c50aa6f90bf9a4d63112a66d",
+    "960": "c75e519426e3a88839567411fe3381160f3aa3cb",
+    "959": "e25041f236d268a7e815dacd346180989690ed71",
+    "958": "0a72556e786024c9313c7d6287e26c20c1e9b9b8",
+    "957": "a11e16998094ab3d7afd9fd07eff8b55909ec406",
+    "956": "bbc549f36ac964fd7eee211782eb2c979d12af32",
+    "955": "d5afc236a7b1de9567dcb6dda65d957ed91c726b",
+    "954": "2cd3bdc12ae5ccbec918c75fbdaf904115c623f4",
+    "953": "7be6a6b746e9cf6ea18145248b652c7a0f206dc4",
+    "952": "3536c0b6f6c2a929d9c96fffbdcfc480735fea3b",
+    "951": "0023585a98d8f5f23df64174a091c143710ba78a",
+    "950": "cbf066bb7489115559bcda34f9f810a1d78826ce",
+    "949": "603ae507f40b4615c1b98a2183927d9f3be6d466",
+    "948": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+    "947": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+    "737": "73fa41814eb1cdac50ba1eab135461868437edf0"
+  },
+  "destination_pr_heads": {
+    "16": "bb274e5001df8aa123cd11849d3b3aee84da577d"
+  },
+  "capture_note": "Exact main SHAs and PR head SHAs are frozen. Later upstream commits are outside this migration baseline.",
+  "source_history_commits": [
+    {
+      "commit": "12f6833725f281ce39a6d04ebcb45630b3a6768f",
+      "tree": "98b35f9b17a0ea1f2e392976ba84b776f72a8559",
+      "branch_at_capture": "origin/research/level-i-closure-20261007",
+      "reason": "frozen source-history head containing target_b_terminal_cancellation_boundary_graph_2026-10-08.md and its verifier, required by a source-main Target C terminal-cancellation report; commit pinned rather than treated as current source main"
+    }
+  ]
+}

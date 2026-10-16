@@ -1,0 +1,5 @@
+A	docs/reports/population_reserve_independent_reconstruction_2026-10-15.md
+M	docs/state/artifact-index.jsonl
+M	research/README.md
+A	research/population_reserve_twelve_arc_2026_10_15.json
+A	research/verify_population_reserve_twelve_arc_2026_10_15.py

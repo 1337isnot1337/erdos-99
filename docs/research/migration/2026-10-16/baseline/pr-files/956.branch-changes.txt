@@ -1,0 +1,11 @@
+A	docs/audits/pr956_autonomous_proof_audit_2026-10-15.md
+A	docs/reports/global_boundary_zigzag_linear_reserve_2026-10-11.md
+A	docs/reports/global_lattice_defect_from_linear_reserve_2026-10-11.md
+A	docs/reports/global_straight_interface_payment_2026-10-11.md
+A	docs/reports/global_stress_density_regression_2026-10-11.md
+M	docs/state/artifact-index.jsonl
+M	research/README.md
+A	research/verify_global_boundary_zigzag_2026_10_11.py
+A	research/verify_global_lattice_population_bound_2026_10_11.py
+A	research/verify_global_straight_interface_payment_2026_10_11.py
+A	research/verify_global_stress_density_regression_2026_10_11.py

@@ -1,0 +1,11 @@
+{
+  "number": 960,
+  "title": "Global transformation barriers and dense source regressions",
+  "head_sha": "c75e519426e3a88839567411fe3381160f3aa3cb",
+  "head_tree": "65f7e6e67cbead52038792617df9de48208d99d7",
+  "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "merge_base_sha": "a43c69dac7e7b0627dec2900e12c60fd4608d519",
+  "changed_file_count": 11,
+  "shortstat": "11 files changed, 1559 insertions(+)",
+  "url": "https://github.com/1337isnot1337/e-99/pull/960"
+}

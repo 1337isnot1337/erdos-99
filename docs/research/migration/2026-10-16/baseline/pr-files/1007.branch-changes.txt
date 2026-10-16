@@ -1,0 +1,2 @@
+M	docs/maintenance/issue-986-dirty-worktree-dispositions.json
+A	docs/maintenance/original14-periodic-extension-preservation-2026-10-15.md

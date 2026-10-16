@@ -1,0 +1,11 @@
+{
+  "number": 956,
+  "title": "Add global population reserve and finite-interface payment candidates",
+  "head_sha": "bbc549f36ac964fd7eee211782eb2c979d12af32",
+  "head_tree": "3d8550adf520dcacd17876d6ddf1970a6c9e857e",
+  "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "merge_base_sha": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+  "changed_file_count": 11,
+  "shortstat": "11 files changed, 2847 insertions(+)",
+  "url": "https://github.com/1337isnot1337/e-99/pull/956"
+}
