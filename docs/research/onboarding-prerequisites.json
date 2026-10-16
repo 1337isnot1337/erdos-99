@@ -1,0 +1,116 @@
+{
+  "status": "public navigation supplement; no mathematical lifecycle changes",
+  "source_commit": "afa7f7ec8b93b39efb921f4f47d132e4219b5df8",
+  "scope": "Explicit section-to-file bridges found during the A/B/C-II outsider evaluation. The theorem manifest remains authoritative; this is not a proof-completeness certificate.",
+  "file_dependencies": {
+    "docs/targets/target-a/02-scaffold-and-hall.md": [
+      "docs/targets/target-a/01-forest-and-kinematics.md",
+      "docs/theory/01-local-structure.md",
+      "docs/theory/02-nonlinear-and-regressions.md"
+    ],
+    "docs/targets/target-a/03-source-response.md": [
+      "docs/targets/target-a/02-scaffold-and-hall.md"
+    ],
+    "docs/targets/target-a/11-activation-coloops-and-locked-boundary.md": [
+      "docs/targets/target-a/03-source-response.md",
+      "docs/targets/target-a/07-activation-stress-invariance.md",
+      "docs/targets/target-a/08-prescribed-phase-alignment.md",
+      "docs/targets/target-a/09-activation-fixed-hull-flat.md",
+      "docs/targets/target-a/09-activation-orthant.md",
+      "docs/targets/target-a/10-source-backbone-hall-obstruction.md"
+    ],
+    "docs/targets/target-a/15-two-shadow-planarity.md": [
+      "docs/targets/target-a/06-activation-monomer-regression.md",
+      "docs/targets/target-a/07-activation-stress-invariance.md",
+      "docs/targets/target-a/08-prescribed-phase-alignment.md",
+      "docs/targets/target-a/09-activation-fixed-hull-flat.md",
+      "docs/targets/target-a/09-activation-orthant.md",
+      "docs/targets/target-a/10-source-backbone-hall-obstruction.md",
+      "docs/targets/target-a/10-quantitative-kuperberg-rate.md",
+      "docs/targets/target-a/11-activation-coloops-and-locked-boundary.md",
+      "docs/targets/target-a/12-toeout-kuperberg-improvement.md",
+      "docs/targets/target-a/13-five-block-local-optimality.md",
+      "docs/targets/target-a/14-sharp-symmetric-five-block.md"
+    ],
+    "docs/targets/target-a/16-common-neighbor-lift.md": [
+      "docs/targets/target-a/08-prescribed-phase-alignment.md",
+      "docs/targets/target-a/15-two-shadow-planarity.md"
+    ],
+    "docs/targets/target-a/17-plateau-response-lift.md": [
+      "docs/targets/target-a/06-activation-monomer-regression.md",
+      "docs/targets/target-a/08-prescribed-phase-alignment.md"
+    ],
+    "docs/targets/target-a/20-zero-slack-normalization.md": [
+      "docs/targets/target-a/18-common-neighbor-sdr-regression.md",
+      "docs/targets/target-a/19-source-response-crossings.md"
+    ],
+    "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md": [
+      "docs/targets/target-a/02-scaffold-and-hall.md",
+      "docs/targets/target-a/03-source-response.md",
+      "docs/targets/target-a/11-activation-coloops-and-locked-boundary.md",
+      "docs/targets/target-a/16-common-neighbor-lift.md",
+      "docs/targets/target-a/17-plateau-response-lift.md",
+      "docs/targets/target-a/20-zero-slack-normalization.md",
+      "docs/targets/target-a/21-response-lock-or-descent.md",
+      "docs/targets/target-a/22-contact-crosscut-separator.md",
+      "docs/targets/target-a/23-locked-crosscut-existence.md",
+      "docs/targets/target-a/24-three-channel-locked-stress.md",
+      "docs/targets/target-a/25-contact-shield-sector-hall.md",
+      "docs/targets/target-a/26-tube-shield-sector-balance.md",
+      "docs/reports/target_a_tube_only_cut_2026-09-08.md"
+    ],
+    "docs/targets/target-a/29-lens-source-gate-refinements.md": [
+      "docs/targets/target-a/15-two-shadow-planarity.md",
+      "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+      "docs/targets/target-a/28-zero-slack-boundary-order-source-frontier.md"
+    ],
+    "docs/reports/target_c_quarter_fold_face_obstructions_slot02_2026-10-10.md": [
+      "research/verify_target_c_quarter_fold_face_obstructions_2026_10_10.py"
+    ]
+  },
+  "tasks": {
+    "target-a-locked-sector-surplus": {
+      "reading_order": [
+        {"path": "docs/targets/target-a/02-scaffold-and-hall.md", "sections": "97, 99, 102, 109", "role": "Fixed-basis contraction, terminalization and exact Schur definitions; follow their earlier hypotheses."},
+        {"path": "docs/targets/target-a/03-source-response.md", "sections": "113-114, 119-124, 138", "role": "Alternating linkage, source-capacity/collar identities and triangle-breaking alternative."},
+        {"path": "docs/targets/target-a/08-prescribed-phase-alignment.md", "sections": "154-155", "role": "Source Hall shadow and the very-super-boundary hypothesis actually used by Section 165."},
+        {"path": "docs/targets/target-a/11-activation-coloops-and-locked-boundary.md", "sections": "159", "role": "Locked stress and hull reaction."},
+        {"path": "docs/targets/target-a/16-common-neighbor-lift.md", "sections": "164", "role": "Lattice neighbor lemma."},
+        {"path": "docs/targets/target-a/17-plateau-response-lift.md", "sections": "165", "role": "Plateau-wide response and source lift."},
+        {"path": "docs/targets/target-a/20-zero-slack-normalization.md", "sections": "168", "role": "Actual-source locked/zero-slack alternative."},
+        {"path": "docs/targets/target-a/21-response-lock-or-descent.md", "sections": "169", "role": "Lock on the actual response optimum."},
+        {"path": "docs/targets/target-a/23-locked-crosscut-existence.md", "sections": "171", "role": "Stress-generated crosscut."},
+        {"path": "docs/targets/target-a/24-three-channel-locked-stress.md", "sections": "172", "role": "Three-channel fan."},
+        {"path": "docs/targets/target-a/25-contact-shield-sector-hall.md", "sections": "173", "role": "Sector Hall graph, including overlapping sinks."},
+        {"path": "docs/targets/target-a/26-tube-shield-sector-balance.md", "sections": "174", "role": "Basis-closed unit tube and disjoint exterior sink sectors."},
+        {"path": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md", "sections": "175", "role": "Tube-only charge, right-deficiency cancellation and exact remaining surplus."},
+        {"path": "docs/targets/target-a/29-lens-source-gate-refinements.md", "sections": "177", "role": "Separate lens/basis penalty and straight-crosscut alternatives; zero-slack refinements also require 163 and 176."}
+      ]
+    },
+    "target-b-multigrain-transfer": {
+      "reading_order": [
+        {"path": "docs/targets/target-b/01-jammed-rhombic-branch.md", "sections": "24-56, especially 36, 50-51", "role": "Shell quantities, topology, fixed-lambda pruning, phase deficit; follow the shared local-structure hypotheses."},
+        {"path": "docs/reports/target_b_phase_cut_and_biclique_2026-09-05.md", "sections": "PC, PW, CR, PS, IS, TS, NE, HA", "role": "Corrected phase graph and hole scope; finite phase checker is supporting evidence."},
+        {"path": "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md", "sections": "2-8 and all seven named source reports", "role": "DT/TG/PDG/PC/MCP/GPI complete chain; preserve fixed lambda and the dominant-component hypothesis."}
+      ],
+      "supporting_obstructions": [
+        "research/onboarding_two_grain_audit.py"
+      ]
+    },
+    "target-c-face-coupled-move": {
+      "reading_order": [
+        {"path": "docs/targets/target-c/56-ci-restored-frontier.md", "sections": "full module", "role": "C-I restoration and lexicographic source normalization."},
+        {"path": "docs/targets/target-c/57-zr-zf-rigidity-audit.md", "sections": "full module", "role": "Core-only stress kernel and rigidity; isolates remain outside this theorem."},
+        {"path": "docs/targets/target-c/58-full-source-geometry-audit.md", "sections": "full module", "role": "Separate geometry for every source label."},
+        {"path": "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md", "sections": "full module", "role": "Inherited promotion/dependency boundary."},
+        {"path": "docs/targets/target-c/122-123-promotion-audit-2026-09-12.md", "sections": "full module", "role": "Occurrence-counted face and train currency."},
+        {"path": "docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md", "sections": "all canonical inputs and proof", "role": "Supplied loaded set deletion; no set extraction or cardinality restoration."},
+        {"path": "docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md", "sections": "all canonical inputs and proof", "role": "Type-II collar exclusion; no finite endpoint."}
+      ],
+      "supporting_obstructions": [
+        "docs/reports/target_c_quarter_fold_face_obstructions_slot02_2026-10-10.md",
+        "docs/audits/target_c_two_boundary_hole_strict_capacity_independent_audit_2026-10-09.md"
+      ]
+    }
+  }
+}
