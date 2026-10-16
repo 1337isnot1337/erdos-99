@@ -331,7 +331,7 @@ rows without another source-payment theorem.
 Run:
 
 ```sh
-python3 research/verify_target_c_antitone_interval_scc_2026_10_03.py
+python3 docs/research/migration/2026-10-16/shards/01/support/research/verify_target_c_antitone_interval_scc_2026_10_03.py
 ```
 
 The standard-library verifier exhausts **all 487,208 labeled loopless

@@ -197,9 +197,9 @@ New mathematical reports:
 
 Computation and index:
 
-- `research/verify_diameter_star_contiguity.py`
-- `research/verify_target_c_two_halfdisk_scalar_regression.py`
-- `research/target_c_two_halfdisk_scalar_regression_2026-09-12.md`
+- `docs/research/migration/2026-10-16/shards/01/support/research/verify_diameter_star_contiguity.py`
+- `docs/research/migration/2026-10-16/shards/01/support/research/verify_target_c_two_halfdisk_scalar_regression.py`
+- `docs/research/migration/2026-10-16/shards/01/support/research/target_c_two_halfdisk_scalar_regression_2026-09-12.md`
 - `research/README.md`
 - `docs/state/artifact-index.jsonl`
 

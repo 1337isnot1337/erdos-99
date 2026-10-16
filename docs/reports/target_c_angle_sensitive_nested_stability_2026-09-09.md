@@ -154,7 +154,7 @@ A(F)/D^2
 B(p,\phi):=
 A_0(\phi)
 \left[
-1+rac{(p-P_4(\phi))_+^2}{16\pi^2}
+1+\frac{(p-P_4(\phi))_+^2}{16\pi^2}
 \right].
 }
 \tag{ANS.6}
@@ -352,7 +352,7 @@ A_{ANS}(p)
 :=
 \frac12\sin\frac p2
 \left[
-1+rac{(p-P_4(p/2))_+^2}{16\pi^2}
+1+\frac{(p-P_4(p/2))_+^2}{16\pi^2}
 \right].
 }
 \tag{ANS.10}

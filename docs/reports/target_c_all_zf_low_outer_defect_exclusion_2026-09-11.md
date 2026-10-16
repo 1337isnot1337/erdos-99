@@ -201,4 +201,3 @@ along with the independent post-ZF surplus constraints on
 `e_{BB}+2s_C` and `x_B+Q+2s_Z`. No current theorem gives an upper bound on the
 linear area capacity supplied by this defect, nor a global admissible reduction
 that removes `s_Z>0`. Consequently (A.1) is not a Level-I settlement.
-

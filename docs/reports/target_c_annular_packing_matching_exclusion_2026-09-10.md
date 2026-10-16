@@ -52,7 +52,7 @@ A_{FS}>\frac13+\frac{\sqrt3}{8},
 and
 
 \[
-\frac{2}{3\sqrt3}+\frac14-rac{\pi^2}{16}>0.
+\frac{2}{3\sqrt3}+\frac14-\frac{\pi^2}{16}>0.
 \]
 
 Level I remains open because nonmatching diameter graphs still survive.
