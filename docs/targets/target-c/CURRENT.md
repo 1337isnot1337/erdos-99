@@ -323,3 +323,17 @@ are unchanged.
 
 The source-wide follow-up is tracked in
 [target-c-factorized-planar-escape](../../../tasks/target-c-factorized-planar-escape.md).
+
+## Preserved harmonic-cell and terminal-cancellation proof sources
+
+The full source reports and finite checkers for the canonical Audit.173 grid,
+face-tail, and proper-cap results, and Audit.174's separate-face floor, are now
+retained in the [harmonic-cell/face-floor research track](../../research/tracks/target-c-harmonic-cell-face-floor-source-bridge.md).
+Their existing canonical claim records remain authoritative. The same track
+marks the 2026-10-15 full-cell/common-grid composition variant as unreviewed
+and identifies the exact missing attachment-label overlap needed before the
+PR #950 path families can feed a finite move. It also retains a linked,
+historical Target B terminal-cancellation candidate without using it as a
+Target C premise. C-II stays OPEN; the Type-II high-face-excess and
+macroscopic-container branches and the full-source strict-competitor endpoint
+remain unresolved.
