@@ -3,7 +3,10 @@
   "shard": 3,
   "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
   "destination_baseline": "358af8253f85ab7b9cdbf976ce186ee8426718e4",
-  "assigned_indexes": [372, 394],
+  "assigned_indexes": [
+    372,
+    394
+  ],
   "report_count": 23,
   "first_path": "docs/reports/target_c_fullcore_high_surplus_endpoint_side_gap_2026-09-14.md",
   "last_path": "docs/reports/target_c_global_sublinear_diameter_star_2026-09-09.md",
@@ -21,7 +24,20 @@
     "theorem_manifest_or_generated_index_changed": false,
     "publication_manifest_changed": false,
     "shared_navigation_changed": false,
-    "other_shards_changed": false
+    "other_shards_changed": false,
+    "cross_shard_mathematical_scope_review": {
+      "worklist_index": 391,
+      "related_shard": 2,
+      "related_worklist_index": 275,
+      "related_source_path": "docs/reports/target_c_exact_diameter_star_contiguity_2026-09-30.md",
+      "related_source_git_blob": "98f491a3001a2447bb60544b4bd1fbca8268a70e",
+      "related_source_sha256": "5014deda8388b7236a260f3a963aaf030b20db9e7fbaf65835b7490a7a16e252",
+      "related_destination_pr": 52,
+      "related_destination_head": "a2a59b240b223625f4f553947610514c34cd0fc6",
+      "related_destination_blob_sha256_match_source": true,
+      "finding": "exact finite all-configurations theorem subsumes shared incident-direction contiguity and non-star identities; #391 retains canonical C-II q-bound/component-block deductions and derivation context; neither artifact is promoted and both full reports are retained",
+      "theorem_state_changed": false
+    }
   },
   "integration": "all imported results remain unreviewed and noncanonical; coordinator owns merge and integration-wide validation"
 }
