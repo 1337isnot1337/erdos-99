@@ -337,3 +337,45 @@ historical Target B terminal-cancellation candidate without using it as a
 Target C premise. C-II stays OPEN; the Type-II high-face-excess and
 macroscopic-container branches and the full-source strict-competitor endpoint
 remain unresolved.
+
+## Exact-phase packet and cross-shore research fork
+
+The frozen source-main packet reports, the complete-grid joint-switch proof, the
+full-span hostile audit, and the exact outer-train shear prerequisites are
+navigable in the [exact-phase packet and cross-shore track](../../research/tracks/target-c-exact-phase-packet-fork.md)
+and its [candidate registry](candidate-registry.json). The threshold branch
+now records a nested gap-tree span flag, edgewise KKT-balanced packets,
+strict-but-not-uniform packet resultants, a common internal load in every
+opposite-shore cut, a conditional two-cut escape, and an
+`Omega(D^(1/4))` nested transverse matching. On the complete-grid branch,
+the separate r2 proof gives a per-edge joint switch bound and a linear family
+of bounded switching cusps. All these imported claims remain unreviewed
+research; source audit `PASS` labels do not confer destination audit status.
+
+The exact obstruction remains the same: packet counts do not produce a uniform
+stress payment, boundary/layer rows may supply the opposite-shore correction,
+and the two-cut shear does not improve every actual diameter pair. The exact
+phase alternative still needs to handle split-star and inactive interfaces.
+No source-realized finite endpoint or C-II closure follows. Any endpoint must
+retain all labels and satisfy every lower and upper pair constraint; at
+diameter `D` it must remain triangle-free and strictly improve the
+contact/actual-diameter-pair lexicographic objective. The full scope, proof
+dependencies, failed inferences, and next obligations are in the linked track.
+
+## Vacancy and collective refill capacity
+
+The [vacancy, wall-capacity, and collective-refill track](../../research/tracks/target-c-capacity-collective-refill.md)
+preserves eight connected proof candidates and their exact checks from the
+frozen source branch. The route includes one- and two-pin refill margins,
+actual unit-wall contact-minimality, exact triangular capacity barriers,
+universal convex-pentagon deletion bounds, and the multishear mean-energy
+identity. The source-run synthesis is reconciled into that track; the old
+source-side lifecycle narrative is not used as destination authority.
+
+These fixed-frame and stress-certificate results do not extract a suitable
+wall, vacancy, deficit, or common feasible motion from every canonical source.
+The one-pin threshold excludes the triangular endpoint, pentagon interiors
+cannot pay every deletion in a disjoint wall bank, and multishear mean loss
+does not control the maximum diameter. Every candidate remains unreviewed;
+the exact next source-wide obligation is listed in the linked track and the
+[candidate registry](candidate-registry.json). C-II and Level I remain open.

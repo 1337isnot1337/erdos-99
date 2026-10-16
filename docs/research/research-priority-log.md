@@ -1,5 +1,27 @@
 # Scientific priority decisions
 
+## Catalogue supplement — 2026-10-16; priority revision remains public-frontier.3
+
+The frozen source-only Target C branch adds the bounded
+`target-c-capacity-collective-refill` task and connects its fixed-frame refill
+proofs, exact capacity obstructions, and multishear energy candidate. This
+adds navigation for noncanonical evidence without changing task weights,
+canonical premises, or theorem-state. The catalogue revision is now
+`public-frontier.5`; the open-PR overlap snapshot remains dated 2026-10-15 and
+is not represented as a fresh query.
+
+## Catalogue supplement — 2026-10-16; priority revision remains public-frontier.3
+
+The private source-main migration added the direct C-II task
+`target-c-threshold-packet-cross-shore` and connected it, the existing
+face-coupled task, and the Type-II stress-mass task to the exact-phase packet
+track and their proof prerequisites. This adds navigation for a distinct
+noncanonical source-main route; it does not alter existing task weights,
+canonical premises, theorem-state, or the eight track-level priority weights.
+The task catalogue revision is `public-frontier.4` to record this content
+change. The catalogue's open-PR snapshot remains dated 2026-10-15 and is not
+represented as a fresh live overlap query.
+
 ## public-frontier.3 — 2026-10-15
 
 The existing twenty task cards are reconciled with `2026-10-15.publication.1`.

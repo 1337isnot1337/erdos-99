@@ -1,6 +1,8 @@
 # Erdős #99 source research migration
 
-**Overall migration status: INCOMPLETE.** Exact source and destination baselines are frozen under the baseline directory. Source-main audit batch 1 merged as PR #19; PR #1008 merged as destination PR #20; PR #951 merged as destination PR #21; PR #947 merged as destination PR #22; PR #950 merged as destination PR #23; source PR #948 merged as destination PR #24 at `621f7c7dcd5b12c949f83951d1d1521e09bbbe17` (tree `978550c0ab3248aee7ac41d9e8b5438a53c5687a`); source PR #952 merged as destination PR #25 at `d369420f85ed94b73ebfeb09eaace7ada1a526a8` (tree `538dbfa15e98bf7ba56a978fa05f91b07adf416c`); source PR #955 merged as destination PR [#26](https://github.com/1337isnot1337/erdos-99/pull/26) at `1c5830ee3219a83c3aac43abbc571ffa6870b239` (tree `04f93f2c057b1a1ccc20f17c12b0f59ee2a469af`); and source PR #956 merged as destination PR [#27](https://github.com/1337isnot1337/erdos-99/pull/27) at `a88a5e20e77169417c2385d9228dccd937a927b8` (tree `08bdde5888ec23c81c604ad3b79211bec44f1aa7`). Destination PR #16 was also merged as `e89d508c97af781d7957768f778d6bdd26535f2c` to remove a private source URL from the public schema identifier. Source PR #957 merged as destination PR #28 at 14d5367b90af822f43c99c201f1dcf8e95bf80da (tree 53d3040394dcb38e5cdc5cfb2e3ca9eac565f098); source PR #958 merged as destination PR [#29](https://github.com/1337isnot1337/erdos-99/pull/29) at `b6423914251eb482a8c674bb922c7b3598b4f0cb` (tree `1597f4abfdef567ee8c1d14535c35ea4cd7dd843`); source PR #959 was merged as destination PR #30 at `aa0a8196e88a840ef3ad2dc63626c9e76d91ebf9`; source PR #960 and merged PR #995 support merged as destination PR [#31](https://github.com/1337isnot1337/erdos-99/pull/31) at `fece4452122c7b8ebaf4fac2c4b2544a2f436c43` (tree `3285f4c084934ec8831676530bb20e8196058936`). The current source-main batch integrates four more Target C reports from the frozen baseline; 822 report records remain queued, along with the bulk research tree, other open-PR additions, and historical work.
+**Overall migration status: INCOMPLETE.** Exact source and destination baselines are frozen under the baseline directory. Source-main audit batch 1 merged as PR #19; PR #1008 merged as destination PR #20; PR #951 merged as destination PR #21; PR #947 merged as destination PR #22; PR #950 merged as destination PR #23; source PR #948 merged as destination PR #24 at `621f7c7dcd5b12c949f83951d1d1521e09bbbe17` (tree `978550c0ab3248aee7ac41d9e8b5438a53c5687a`); source PR #952 merged as destination PR #25 at `d369420f85ed94b73ebfeb09eaace7ada1a526a8` (tree `538dbfa15e98bf7ba56a978fa05f91b07adf416c`); source PR #955 merged as destination PR [#26](https://github.com/1337isnot1337/erdos-99/pull/26) at `1c5830ee3219a83c3aac43abbc571ffa6870b239` (tree `04f93f2c057b1a1ccc20f17c12b0f59ee2a469af`); and source PR #956 merged as destination PR [#27](https://github.com/1337isnot1337/erdos-99/pull/27) at `a88a5e20e77169417c2385d9228dccd937a927b8` (tree `08bdde5888ec23c81c604ad3b79211bec44f1aa7`). Destination PR #16 was also merged as `e89d508c97af781d7957768f778d6bdd26535f2c` to remove a private source URL from the public schema identifier. Source PR #957 merged as destination PR #28 at 14d5367b90af822f43c99c201f1dcf8e95bf80da (tree 53d3040394dcb38e5cdc5cfb2e3ca9eac565f098); source PR #958 merged as destination PR [#29](https://github.com/1337isnot1337/erdos-99/pull/29) at `b6423914251eb482a8c674bb922c7b3598b4f0cb` (tree `1597f4abfdef567ee8c1d14535c35ea4cd7dd843`); source PR #959 was merged as destination PR #30 at `aa0a8196e88a840ef3ad2dc63626c9e76d91ebf9`; source PR #960 and merged PR #995 support merged as destination PR [#31](https://github.com/1337isnot1337/erdos-99/pull/31) at `fece4452122c7b8ebaf4fac2c4b2544a2f436c43` (tree `3285f4c084934ec8831676530bb20e8196058936`). The harmonic-cell/face-floor batch merged as destination PR [#32](https://github.com/1337isnot1337/erdos-99/pull/32) at `4ce4fed103532ad42919896d025df1a6d4b72405` (tree `84318253c282e851aa1bbbad1dfd2dbba389ba16`). The current exact-phase batch imports ten more source-main Target C reports and five supporting research files; 811 Target C report records remain queued, alongside the bulk research tree, other open-PR additions, and historical work.
+
+The active comparison base for this run is recorded separately in the [current run baseline](baseline/active-run-baseline-2026-10-16.json): source main `42f0296d1aca068c809f74cee5dcdb4ebdb27c73` (tree `e061f039eac44c286a00eacdcaa9a4cbbb877891`) and destination main `4ce4fed103532ad42919896d025df1a6d4b72405` (tree `84318253c282e851aa1bbbad1dfd2dbba389ba16`). The old `baseline.json` records a different destination snapshot and is historical, not the base for this batch. The frozen source branch comparison covers all 4,304 tracked branch paths. Against source main it records 11 branch-only, 67 modified, and 424 source-main-only paths; 21 relevant Target C research/navigation paths differ. Of these, 16 older mathematical versions are exact copies of the current source-main/destination text, two frontier pages are superseded by the current destination view, one G0050 report remains queued at its current source-main revision, and two source navigation/synthesis files are represented through curated destination tracks. See the [full branch manifest](baseline/source-branch-9875cd6a-tracked-files.txt) and [per-path dispositions](ledger/source-branch-files.jsonl).
 
 ## Open source PR batch — #1008 population reserve
 
@@ -231,9 +233,9 @@ Main remained at the frozen SHA above; all 21 open PR numbers and head SHAs stil
 match the frozen inventory. The timestamped supplemental API response is retained
 at [`baseline/source-open-prs-observed-2026-10-16.json`](baseline/source-open-prs-observed-2026-10-16.json).
 
-The source Target C artifact index has 1,287 rows. The initial audit batch integrated 83 missing audits and two linked reports; the #960/#995 batch added two source-main reports; the current batch integrates four more. The ledger now has 822 queued Target C report records, 338 verified exact duplicates, 38 historical source versions, 83 integrated audits, and explicit per-file status for every indexed item. The direct dependency audit still has 100 records (31 initially missing, 11 modified, and 58 exact destination copies); 26 linked dependencies remain queued after the current Target B historical report was recovered. Of 384 evidence edges, 116 are integrated and 268 remain queued. One of 18 source-link corrections is now verified in its reconstructed report. Full source hashes, lifecycle labels, target/state metadata, claim mappings, and destination mappings are in [`ledger/source-main-artifacts.jsonl`](ledger/source-main-artifacts.jsonl). The independently understandable scientific reconciliation, including canonical status and exact proof gaps, is in [`scientific-reconciliation.md`](scientific-reconciliation.md).
+The source Target C artifact index has 1,287 rows. The initial audit batch integrated 83 missing audits and two linked reports; the #960/#995 batch added two shared-scope source reports outside the Target C count; PR #32 added four Target C reports; and the current batch adds ten active noncanonical reports plus one archived superseded r1 version. The ledger now has 811 queued Target C report records, 338 verified exact duplicates, 39 historical/superseded source versions, 83 integrated audits, and explicit per-file status for every indexed item. The direct dependency audit still has 100 records; 24 are missing and queued. Of 389 evidence edges, 130 now target integrated material and 259 remain queued. Six of 23 recorded source-link rewrites are applied or verified; 17 await their parent report batches. Full source hashes, lifecycle labels, target/state metadata, claim mappings, and destination mappings are in [`ledger/source-main-artifacts.jsonl`](ledger/source-main-artifacts.jsonl). The independently understandable scientific reconciliation, including canonical status and exact proof gaps, is in [`scientific-reconciliation.md`](scientific-reconciliation.md).
 
-The research-file ledger now has 2,913 rows: 2,708 Target C research files, 159 route-history files, and 46 shared cross-target files. Within the Target C set, 2,551 research files remain queued, 152 are exact destination duplicates, two linked reports are integrated, and three source verifiers are now present (two imported exact copies and one newly inventoried exact source file). Historical route and shared dependencies retain explicit queued, duplicate, or integrated dispositions in [`ledger/source-main-files.jsonl`](ledger/source-main-files.jsonl).
+The research-file ledger has 2,913 rows: 2,708 Target C research files, 159 route-history files, and 46 shared cross-target files. Within the Target C set, 2,546 research files remain queued, 152 are exact destination duplicates, two linked reports and four supporting research files are integrated, and four source verifiers are present. One historical Target C route snapshot is now archived byte-identically with its source-main authority warning in the archive README. Historical route and shared dependencies retain explicit queued, duplicate, or integrated dispositions in [`ledger/source-main-files.jsonl`](ledger/source-main-files.jsonl).
 
 The pinned source inventory contains 21 open PR heads. PRs #947, #948, #950, #951, #952, #955, #956, and #957 are reconciled as destination batches (#957 merged as destination PR #28). Source PR #958 is the current focused integration batch in destination PR [#29](https://github.com/1337isnot1337/erdos-99/pull/29) from its frozen head; its 11 changed paths have explicit per-file dispositions. Source PRs #959–#960 remain queued for separate comparison.
 
@@ -353,3 +355,76 @@ theorem-state and inclusion set remain unchanged; the repository remains
 private. This focused batch is not a full migration or Gate 2 verification.
 Its exact payload commit and local outcomes are in the
 [source-main Type-II verification receipt](receipts/target-c-source-main-typeii-harmonic-verification.json).
+
+## Current source-main batch — exact-phase packets and cross-shore fork
+
+This batch starts from destination main `4ce4fed103532ad42919896d025df1a6d4b72405`
+(tree `84318253c282e851aa1bbbad1dfd2dbba389ba16`) and uses the frozen source
+main `42f0296d1aca068c809f74cee5dcdb4ebdb27c73` (tree
+`e061f039eac44c286a00eacdcaa9a4cbbb877891`). It preserves ten full source-main
+Target C reports: the complete-grid joint-switch r2 proof; the nested span
+flag; edgewise KKT balance and flux packets; strict packet resultants; the
+cross-shore packet load and conditional escape; the nested transverse matching;
+the source full-span hostile audit; and the positive-prefix thrackle proof
+candidate. The older r1 joint-switch report is archived byte-identically and
+explicitly superseded in navigation by r2.
+
+Five supporting source files are also integrated: the exact O-O multishear
+proof, its source hostile audit, the corrected laminar KKT-curvature identity,
+the laminar multishear audit, and its exact verifier. The verifier checks only
+the stated finite laminar shear theorem. The packet and joint-switch reports
+are proof-only and have no computation. Source-side audit `PASS` wording is
+provenance, not a destination exact-head review.
+
+The [exact-phase packet and cross-shore track](../../tracks/target-c-exact-phase-packet-fork.md)
+maps the mathematical results, their non-subsumed relationships, dependencies,
+and exact remaining obligations. Five path-only dependencies in the
+cross-shore report now resolve to local links, including the archived
+historical train-closure snapshot. The [machine-readable candidate registry](../../../targets/target-c/candidate-registry.json)
+has five new entries, and a dedicated
+[threshold-packet task card](../../../../tasks/target-c-threshold-packet-cross-shore.md)
+is linked from the task catalogue. Canonical theorem state, the corrected
+inverse-phase scope, and the prior inclusion set are unchanged.
+
+The selected closed-PR comparison is recorded in
+[`ledger/source-closed-pr-files.jsonl`](ledger/source-closed-pr-files.jsonl).
+It identifies the PR #607 hostile audit and the #607 rail-saturation deletion
+that did not survive into frozen source main, as well as the queued #603/#605/
+#606 threshold attachments and PR #613 rail-deep-attachment pair. The #603
+branch is closed unmerged; its source-main files are the relevant import
+baseline. The bulk Target C research tree and the remaining open-PR and closed-
+PR work are still queued.
+
+## Frozen source-only branch — vacancy capacity, collective refill, and multishear
+
+The separate source branch `research/sol/target-c-level1-gpt61-2026-10-04`
+was frozen at `9875cd6a77939bb6347353fc798ab8f9ab03ec3e` (tree
+`198c83065add8175a921b4e9c55169e4690010a3`), merge base
+`0351e2c529e01750f7aceb87f8f6f0cb9c21dea7` with frozen source main. Its full
+19-path delta has a per-file record in
+[`ledger/source-branch-files.jsonl`](ledger/source-branch-files.jsonl).
+Eight proof reports and eight exact verifiers were reconciled: five reports
+and five verifiers were already byte-identical in the destination; three
+reports and three missing verifiers were imported byte-for-byte. The branch
+artifact index was rebuilt against the destination tree, and its research
+README and synthesis were mapped into the dedicated track and curated
+navigation.
+
+The results cover one-vacancy strictification, actual unit-wall activation,
+two-boundary-pin replacement, a one-pin oblique margin, two-side polynomial
+refill, triangular two-pin capacity obstructions, universal convex-pentagon
+deletion capacity, and exact multishear traffic domination. They remain
+unreviewed and noncanonical. The exact capacity limits rule out overstrong
+individual-wall and `K+1` refill implications; the energy identity controls a
+weighted mean, not the maximum diameter. No canonical source-wide wall or
+vacancy extraction follows.
+
+The [capacity and refill track](../../tracks/target-c-capacity-collective-refill.md)
+and [candidate registry](../../../targets/target-c/candidate-registry.json)
+connect every report to its assumptions, verifier scope, obstructions, and
+next obligation. All eight finite verifiers passed; exact command outcomes
+are in the [source-branch verification receipt](receipts/source-branch-capacity-refill.json).
+The integration artifact index has 578 records, the candidate registry has
+80 entries, and the task catalogue has 22 tasks. Canonical theorem state and
+repository visibility were unchanged. This branch
+batch is not the complete source migration or Gate 2 verification.

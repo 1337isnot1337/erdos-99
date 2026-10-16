@@ -17,6 +17,7 @@ Can the unweighted Type-II route from actual diameter edges to coherent grids be
 - [docs/state/theorem-state.yaml](../docs/state/theorem-state.yaml): C-TYPEII-ATOMIC-SEPARATE-FACE-FLOOR
 - [docs/targets/target-c/CURRENT.md](../docs/targets/target-c/CURRENT.md): actual diameter grid access is unweighted and supplies no stress-mass or motion conclusion
 - [harmonic-cell/face-floor source bridge](../docs/research/tracks/target-c-harmonic-cell-face-floor-source-bridge.md): full source proofs, exact checker boundaries, and the separate attachment-label overlap obligation
+- [exact-phase packet and cross-shore track](../docs/research/tracks/target-c-exact-phase-packet-fork.md): adjacent threshold-staircase packet results; these have different hypotheses and do not bound the canonical Type-II exceptional stress mass
 
 Read the named statements and their complete proofs; this card does not weaken their hypotheses. Audited-working premises: none silently admitted; consult the exact claim lifecycle if importing an additional result.
 

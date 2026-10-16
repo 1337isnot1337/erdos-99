@@ -6158,6 +6158,1181 @@
         "source_report_parent_commit": "0fb2de96b9315d71e2e466a1a087507837d47468",
         "destination_base_main": "fece4452122c7b8ebaf4fac2c4b2544a2f436c43"
       }
+    },
+    {
+      "candidate_id": "EXACT-PHASE-JOINT-SWITCH-BUDGET-20261001",
+      "title": "Complete-grid joint switch budget",
+      "status": "unreviewed",
+      "source_lifecycle": "unreviewed source-main proof candidate; destination theorem-state unchanged",
+      "target_scope": [
+        "Target C-II threshold exact-phase branch"
+      ],
+      "claim": {
+        "statement": "For the fixed-star complete outer-to-outer rectangle with the stated pairwise-disjoint crosscut shores and one crossing per opposite-shore pair, every actual diameter edge satisfies t_A(h)+t_B(h)<=2. The report derives at most 2h switch rows and a linear family of bounded switching cusps under its quantitative hypotheses.",
+        "hypotheses": [
+          "The fixed-star complete outer-to-outer rectangle and both retained shores satisfy the report’s exact proper-crosscut and crossing hypotheses.",
+          "Only the stated actual diameter edges and complete-grid interfaces are counted."
+        ],
+        "not_claimed": [
+          "No source-realized strict competitor or C-II closure.",
+          "The split-star O-O branch and inactive-interface branch remain open.",
+          "The older r1 version is superseded by r2 and is retained only as source history."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "This is a distinct complete-grid switch bound. It is not subsumed by the threshold packet counts or by the canonical Type-II face floor.",
+        "replacement_status": "none; imported claims do not replace or strengthen a canonical theorem-state entry"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_complete_grid_joint_switch_budget_2026-10-01_r2.md",
+          "source_path": "docs/reports/target_c_complete_grid_joint_switch_budget_2026-10-01_r2.md",
+          "role": "full proof candidate; active version",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+          "source_git_blob_sha": "0e778ad043e25119cde0f8d984054c4b54c8ece9",
+          "source_sha256": "893bf2f4c2fb80675f47af4ba4d6fb5100c22e2f665124757b8af56f90a710cf",
+          "destination_sha256": "893bf2f4c2fb80675f47af4ba4d6fb5100c22e2f665124757b8af56f90a710cf",
+          "destination_transformed": false,
+          "source_artifact_id": "ART-A127DFA538FD"
+        }
+      ],
+      "dependencies": {
+        "canonical_documents": [
+          "docs/state/theorem-state.yaml",
+          "docs/targets/target-c/CURRENT.md"
+        ],
+        "proof_dependencies": [
+          "docs/reports/target_c_exact_phase_threshold_paired_staircase_2026-10-01.md",
+          "docs/reports/target_c_exact_phase_threshold_transverse_rail_saturation_2026-10-01.md"
+        ],
+        "description": "Read each full report at its stated hypotheses. Source lifecycle, source audit labels, and finite verification do not promote these claims."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "endpoint",
+          "result": "Bounded switch counts and cusp counts do not satisfy all source lower and upper pair constraints or identify a finite competitor."
+        }
+      ],
+      "next_proof_obligations": [
+        "Couple the ordered cusp family to corner-localized switch rows and the opposite complete train shore.",
+        "Handle the split-star and inactive-interface branches under the canonical source hypotheses."
+      ],
+      "validation": {
+        "status": {
+          "scope": "proof only; no verifier or computation is included. Destination lifecycle is unreviewed."
+        },
+        "command": "No standalone verifier or computational certificate is included for this proof claim.",
+        "scope": "Read and assess the complete proof at the exact hypotheses stated in the linked report.",
+        "boundary": "Destination lifecycle remains unreviewed. A source-side audit or finite prerequisite verifier does not establish the analytic claim or global source realization."
+      },
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+        "destination_base_main": "4ce4fed103532ad42919896d025df1a6d4b72405",
+        "related_source_pr_heads": "See exact per-path records for PRs #603, #605, #606, #607, and #613 in docs/research/migration/2026-10-16/ledger/source-closed-pr-files.jsonl; no extra PR identity is asserted for a report unless recorded there.",
+        "destination_status": "unreviewed; no claim promoted"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party and project-agent-generated research",
+        "third_party_material": "No third-party paper or extracted protected text copied in this package.",
+        "visibility": "destination remains private; publication inclusion and visibility unchanged"
+      }
+    },
+    {
+      "candidate_id": "EXACT-PHASE-EDGEWISE-KKT-PACKETS-20261002",
+      "title": "Edgewise-balanced threshold KKT packets",
+      "status": "unreviewed",
+      "source_lifecycle": "unreviewed source-main proof candidate; destination theorem-state unchanged",
+      "target_scope": [
+        "Target C-II threshold exact-phase branch"
+      ],
+      "claim": {
+        "statement": "Within the exact threshold-staircase support classes, transverse KKT multipliers balance edgewise. The staircase yields linearly many bounded-multiplicity packets; the internal alternative has packets spanning the entire opposite shore, while the other alternative concentrates linearly many bounded packets on an extreme layer.",
+        "hypotheses": [
+          "The threshold staircase and retained-shore assumptions of the two reports hold.",
+          "KKT stress is the stated positive relative-interior stress; no uniform coefficient lower bound is assumed."
+        ],
+        "not_claimed": [
+          "Packet counts do not produce a uniform stress-mass lower bound.",
+          "No source-geometric exact-phase conclusion or finite endpoint follows."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "These are new packetwise KKT and support-order details. The destination cubic-budget report has a separate support-count conclusion and does not supply these edgewise balance identities.",
+        "replacement_status": "none; imported claims do not replace or strengthen a canonical theorem-state entry"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_edgewise_kkt_balance_2026-10-02.md",
+          "source_path": "docs/reports/target_c_exact_phase_threshold_edgewise_kkt_balance_2026-10-02.md",
+          "role": "edgewise transverse-balance proof",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+          "source_git_blob_sha": "bd5b2a757b5db3877c8233db7d5d5123577a9b15",
+          "source_sha256": "71208b1e14d84c69afee63335d12c15c02f690ff2f97fa7e518c5162f519cfbf",
+          "destination_sha256": "71208b1e14d84c69afee63335d12c15c02f690ff2f97fa7e518c5162f519cfbf",
+          "destination_transformed": false,
+          "source_artifact_id": "ART-C1E0FE63F482"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_edgewise_flux_packets_2026-10-02.md",
+          "source_path": "docs/reports/target_c_exact_phase_threshold_edgewise_flux_packets_2026-10-02.md",
+          "role": "packet multiplicity and internal-versus-boundary fork",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+          "source_git_blob_sha": "33320ddd96a8549b981f7a89d0d3cc0d9f9a8306",
+          "source_sha256": "d71238a6a82b780e358ce59614cdb89a397828495c75d6387f3f9452864a1f22",
+          "destination_sha256": "d71238a6a82b780e358ce59614cdb89a397828495c75d6387f3f9452864a1f22",
+          "destination_transformed": false,
+          "source_artifact_id": "ART-9F3360394E18"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_strict_packet_resultants_2026-10-02.md",
+          "source_path": "docs/reports/target_c_exact_phase_threshold_strict_packet_resultants_2026-10-02.md",
+          "role": "positive longitudinal resultants and one-peak cuts",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+          "source_git_blob_sha": "4490b13f7cda0d225c5656da307dc325e7196404",
+          "source_sha256": "204f16bb5b540a2aab2e34f5a3303ac99f21e993edc412a60d17aeb4166a055b",
+          "destination_sha256": "204f16bb5b540a2aab2e34f5a3303ac99f21e993edc412a60d17aeb4166a055b",
+          "destination_transformed": false,
+          "source_artifact_id": "ART-074CF0B1E689"
+        }
+      ],
+      "dependencies": {
+        "canonical_documents": [
+          "docs/state/theorem-state.yaml",
+          "docs/targets/target-c/CURRENT.md"
+        ],
+        "proof_dependencies": [
+          "docs/reports/target_c_exact_phase_threshold_paired_staircase_2026-10-01.md",
+          "docs/reports/target_c_exact_phase_threshold_transverse_rail_saturation_2026-10-01.md",
+          "docs/reports/target_c_threshold_transverse_fullspan_hostile_audit_2026-10-01.md"
+        ],
+        "description": "Read each full report at its stated hypotheses. Source lifecycle, source audit labels, and finite verification do not promote these claims."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "stress weights",
+          "result": "Each selected packet has a positive longitudinal resultant, but no uniform positive lower bound on an individual packet follows."
+        },
+        {
+          "scope": "source geometry",
+          "result": "The combinatorial gap-tree quotient does not itself identify intervals with the source embedding."
+        }
+      ],
+      "next_proof_obligations": [
+        "Prove an aggregate positive lower bound for enough packet resultants, or rule out boundary/layer correction rows in the opposite-shore equations.",
+        "Check the full-span claim against exact destination hypotheses before any promotion."
+      ],
+      "validation": {
+        "status": {
+          "scope": "proof only; all three reports state that no computation or verifier is used. Source-side audit labels do not change destination status."
+        },
+        "command": "No standalone verifier or computational certificate is included for this proof claim.",
+        "scope": "Read and assess the complete proof at the exact hypotheses stated in the linked report.",
+        "boundary": "Destination lifecycle remains unreviewed. A source-side audit or finite prerequisite verifier does not establish the analytic claim or global source realization."
+      },
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+        "destination_base_main": "4ce4fed103532ad42919896d025df1a6d4b72405",
+        "related_source_pr_heads": "See exact per-path records for PRs #603, #605, #606, #607, and #613 in docs/research/migration/2026-10-16/ledger/source-closed-pr-files.jsonl; no extra PR identity is asserted for a report unless recorded there.",
+        "destination_status": "unreviewed; no claim promoted"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party and project-agent-generated research",
+        "third_party_material": "No third-party paper or extracted protected text copied in this package.",
+        "visibility": "destination remains private; publication inclusion and visibility unchanged"
+      }
+    },
+    {
+      "candidate_id": "EXACT-PHASE-CROSS-SHORE-LOAD-ESCAPE-20261002",
+      "title": "Cross-shore packet load and conditional two-cut escape",
+      "status": "unreviewed",
+      "source_lifecycle": "unreviewed source-main proof candidate; destination theorem-state unchanged",
+      "target_scope": [
+        "Target C-II threshold exact-phase branch"
+      ],
+      "claim": {
+        "statement": "For an internal-heavy threshold staircase, a common internal packet load appears in every opposite-shore cut resultant. If the opposite shore is not exact phase, a two-coordinate finite multishear preserves contacts and unit separation for small amplitude while shortening a linear family of internal diameter rows.",
+        "hypotheses": [
+          "The threshold staircase, packet decomposition, and exact multishear hypotheses in the linked reports hold.",
+          "The escape applies only to the report’s selected internal diameter family and nonexact opposite-shore phase."
+        ],
+        "not_claimed": [
+          "The shear need not shorten every actual diameter pair and is not a global contradiction.",
+          "No uniform packet-resultant lower bound or exclusion of boundary/layer correction rows is proved.",
+          "The exact-phase alternative remains open."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "This conditional branch is not subsumed by the complete-grid switch budget: it treats failure of exact phase on one shore and tracks a common KKT packet load.",
+        "replacement_status": "none; imported claims do not replace or strengthen a canonical theorem-state entry"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_cross_shore_packet_resultants_2026-10-02.md",
+          "source_path": "docs/reports/target_c_exact_phase_threshold_cross_shore_packet_resultants_2026-10-02.md",
+          "role": "common internal load and opposite-shore cut decomposition",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+          "source_git_blob_sha": "3ce0934a23941bc6bc692e9bffa15a850915cef2",
+          "source_sha256": "ea206df909c07c2dcaf72c91f836e7f3ac6dd6c743ddd79f44449d57c55b50c1",
+          "destination_sha256": "ea206df909c07c2dcaf72c91f836e7f3ac6dd6c743ddd79f44449d57c55b50c1",
+          "destination_transformed": false,
+          "source_artifact_id": "ART-438E91F5408A"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_cross_shore_escape_2026-10-02.md",
+          "source_path": "docs/reports/target_c_exact_phase_threshold_cross_shore_escape_2026-10-02.md",
+          "role": "conditional two-cut finite shear",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+          "source_git_blob_sha": "b37e4b2796d0b2ee6db6ae88025d3882e4067877",
+          "source_sha256": "a6323652f9201b8f03dfc13e1005584d315676276d37e5d7ff83f2634ba39ede",
+          "destination_sha256": "cc0601f888662d1d38acb527823d0cf25661e1e71ebc41e5f165caeb059e331e",
+          "destination_transformed": true,
+          "source_artifact_id": "ART-E7CABC15F7F7"
+        }
+      ],
+      "dependencies": {
+        "canonical_documents": [
+          "docs/state/theorem-state.yaml",
+          "docs/targets/target-c/CURRENT.md"
+        ],
+        "proof_dependencies": [
+          "docs/reports/target_c_exact_phase_threshold_paired_staircase_2026-10-01.md",
+          "docs/reports/target_c_exact_phase_threshold_transverse_rail_saturation_2026-10-01.md",
+          "research/target_c_global_outer_train_exact_multishear_2026-09-15.md",
+          "research/target_c_interval_shear_kkt_curvature_identity_2026-09-15.md"
+        ],
+        "description": "Read each full report at its stated hypotheses. Source lifecycle, source audit labels, and finite verification do not promote these claims."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "diameter objective",
+          "result": "Shortening a linear family of active diameter rows does not guarantee a smaller diameter or fewer total actual-diameter pairs."
+        },
+        {
+          "scope": "full-source constraints",
+          "result": "The report does not certify all-pairs feasibility of a global endpoint."
+        }
+      ],
+      "next_proof_obligations": [
+        "Show that boundary/layer rows cannot realize the opposite-shore correction, or derive a quantitative aggregate packet payment.",
+        "For any proposed endpoint, check every old and inactive actual-diameter upper pair, not only the selected internal rows."
+      ],
+      "validation": {
+        "status": {
+          "scope": "proof only; neither report contains a computational verifier. Destination status is unreviewed."
+        },
+        "command": "No standalone verifier or computational certificate is included for this proof claim.",
+        "scope": "Read and assess the complete proof at the exact hypotheses stated in the linked report.",
+        "boundary": "Destination lifecycle remains unreviewed. A source-side audit or finite prerequisite verifier does not establish the analytic claim or global source realization."
+      },
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+        "destination_base_main": "4ce4fed103532ad42919896d025df1a6d4b72405",
+        "related_source_pr_heads": "See exact per-path records for PRs #603, #605, #606, #607, and #613 in docs/research/migration/2026-10-16/ledger/source-closed-pr-files.jsonl; no extra PR identity is asserted for a report unless recorded there.",
+        "destination_status": "unreviewed; no claim promoted"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party and project-agent-generated research",
+        "third_party_material": "No third-party paper or extracted protected text copied in this package.",
+        "visibility": "destination remains private; publication inclusion and visibility unchanged"
+      }
+    },
+    {
+      "candidate_id": "EXACT-PHASE-NESTED-TRANSVERSE-MATCHING-20261002",
+      "title": "Nested span flag and transverse matching",
+      "status": "unreviewed",
+      "source_lifecycle": "unreviewed source-main proof candidate; destination theorem-state unchanged",
+      "target_scope": [
+        "Target C-II threshold exact-phase branch"
+      ],
+      "claim": {
+        "statement": "The simple gap-tree intervals form an exact nested span flag of lengths 1 through m. Under the stated threshold-staircase hypotheses, the report also yields an Omega(D^(1/4)) pairwise-crossing matching of actual diameter edges with one common A-cut and either full B-support or nested terminal B-support.",
+        "hypotheses": [
+          "The exact simple gap-tree and threshold staircase hypotheses in the reports hold.",
+          "The matching counts actual diameter edges and the report’s common-cut/support conditions."
+        ],
+        "not_claimed": [
+          "The nested combinatorics do not establish a source-geometric realization or motion.",
+          "The matching alone does not close the opposite-shore KKT equations or produce a finite competitor."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "This adds matching structure and nested order, not a replacement for the distinct support-count result already in the destination.",
+        "replacement_status": "none; imported claims do not replace or strengthen a canonical theorem-state entry"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_nested_span_flag_2026-10-02.md",
+          "source_path": "docs/reports/target_c_exact_phase_threshold_nested_span_flag_2026-10-02.md",
+          "role": "nested interval structure",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+          "source_git_blob_sha": "85b2a8662294b99d0facd14855ace1709308b34d",
+          "source_sha256": "6cc69041e80928e5bfcf6e752d9579268793167b9a7189565c9721ef52015e5e",
+          "destination_sha256": "6cc69041e80928e5bfcf6e752d9579268793167b9a7189565c9721ef52015e5e",
+          "destination_transformed": false,
+          "source_artifact_id": "ART-5A449FE55F8F"
+        },
+        {
+          "path": "docs/reports/target_c_exact_phase_threshold_transverse_nested_matching_2026-10-02.md",
+          "source_path": "docs/reports/target_c_exact_phase_threshold_transverse_nested_matching_2026-10-02.md",
+          "role": "actual-diameter matching and support fork",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+          "source_git_blob_sha": "da62bcaa45b5136fdd4364a00b8e03e9c2ccc350",
+          "source_sha256": "c038220804e831fe26cf7f5a2660356759ad0193c675fde6b591a8f94ba19def",
+          "destination_sha256": "c038220804e831fe26cf7f5a2660356759ad0193c675fde6b591a8f94ba19def",
+          "destination_transformed": false,
+          "source_artifact_id": "ART-EB26D7005982"
+        },
+        {
+          "path": "docs/reports/target_c_threshold_transverse_fullspan_hostile_audit_2026-10-01.md",
+          "source_path": "docs/reports/target_c_threshold_transverse_fullspan_hostile_audit_2026-10-01.md",
+          "role": "source hostile audit; destination lifecycle remains unreviewed",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+          "source_git_blob_sha": "2951fe426dffd0da3a8a05c05103bdec6561a614",
+          "source_sha256": "1627e787570bb967ce64cedacc706c52ea70a0f563a4d1bffde6da28de6c9f25",
+          "destination_sha256": "1627e787570bb967ce64cedacc706c52ea70a0f563a4d1bffde6da28de6c9f25",
+          "destination_transformed": false,
+          "source_artifact_id": "ART-F12EEDA44B96"
+        }
+      ],
+      "dependencies": {
+        "canonical_documents": [
+          "docs/state/theorem-state.yaml",
+          "docs/targets/target-c/CURRENT.md"
+        ],
+        "proof_dependencies": [
+          "docs/reports/target_c_exact_phase_threshold_paired_staircase_2026-10-01.md",
+          "docs/reports/target_c_exact_phase_threshold_transverse_rail_saturation_2026-10-01.md",
+          "docs/reports/target_c_global_diameter_star_cubic_budget_2026-10-02.md"
+        ],
+        "description": "Read each full report at its stated hypotheses. Source lifecycle, source audit labels, and finite verification do not promote these claims."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "comparison",
+          "result": "The separate destination cubic-budget report yields linear full-B rows or Omega(sqrt(D)) boundary carriers; it does not yield this matching or nested order."
+        },
+        {
+          "scope": "source audit",
+          "result": "The full-span report’s source-side audit classification and PASS language are provenance only; the destination copy remains unreviewed."
+        }
+      ],
+      "next_proof_obligations": [
+        "Couple the matching or nested terminal order to exact opposite-shore KKT equations, a complete strict-rhombus grid, or a full-source contact-preserving move.",
+        "Resolve the source-host coherence claim on the exact destination head before any promotion."
+      ],
+      "validation": {
+        "status": {
+          "scope": "proof only; no numerical or verifier evidence is claimed. The source audit is not an independent destination audit."
+        },
+        "command": "No standalone verifier or computational certificate is included for this proof claim.",
+        "scope": "Read and assess the complete proof at the exact hypotheses stated in the linked report.",
+        "boundary": "Destination lifecycle remains unreviewed. A source-side audit or finite prerequisite verifier does not establish the analytic claim or global source realization."
+      },
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+        "destination_base_main": "4ce4fed103532ad42919896d025df1a6d4b72405",
+        "related_source_pr_heads": "See exact per-path records for PRs #603, #605, #606, #607, and #613 in docs/research/migration/2026-10-16/ledger/source-closed-pr-files.jsonl; no extra PR identity is asserted for a report unless recorded there.",
+        "destination_status": "unreviewed; no claim promoted"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party and project-agent-generated research",
+        "third_party_material": "No third-party paper or extracted protected text copied in this package.",
+        "visibility": "destination remains private; publication inclusion and visibility unchanged"
+      }
+    },
+    {
+      "candidate_id": "C87-POSITIVE-PREFIX-THRACKLE-20260901",
+      "title": "Positive prefix-thrackle collapse",
+      "status": "unreviewed",
+      "source_lifecycle": "unreviewed source-main proof candidate; destination theorem-state unchanged",
+      "target_scope": [
+        "Target C-II threshold exact-phase branch"
+      ],
+      "claim": {
+        "statement": "The source proof candidate reduces a positive chain-face survivor to a connected simple prefix tree with at most D simple intervals, all crossing one common chain train, with both arc orientations represented on every tree edge and at least 2D+1 active diameter incidences.",
+        "hypotheses": [
+          "The source report’s positive prefix circulation and active chain-face hypotheses hold.",
+          "The argument is an unreviewed analytic proof candidate with no computational verifier."
+        ],
+        "not_claimed": [
+          "No source-geometric exclusion of the paired staircase survivor.",
+          "No C-II endpoint or Level I consequence."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Preserved as a distinct earlier proof route; it is neither an exact duplicate nor subsumed by the newer transverse matching.",
+        "replacement_status": "none; imported claims do not replace or strengthen a canonical theorem-state entry"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_positive_prefix_thrackle_collapse_2026-09-01.md",
+          "source_path": "docs/reports/target_c_positive_prefix_thrackle_collapse_2026-09-01.md",
+          "role": "full proof candidate and historical route context",
+          "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+          "source_git_blob_sha": "1293dcc5d9b2c1fcb69cff585fa3cb3d3fd71656",
+          "source_sha256": "b6f34b9294914e5e5a9a42f806f8f1d1f69bf83ea0c94429aa8ccf26c9ae62ff",
+          "destination_sha256": "b6f34b9294914e5e5a9a42f806f8f1d1f69bf83ea0c94429aa8ccf26c9ae62ff",
+          "destination_transformed": false,
+          "source_artifact_id": "ART-F896532565E4"
+        }
+      ],
+      "dependencies": {
+        "canonical_documents": [
+          "docs/state/theorem-state.yaml",
+          "docs/targets/target-c/CURRENT.md"
+        ],
+        "proof_dependencies": [
+          "docs/reports/target_c_exact_phase_threshold_paired_staircase_2026-10-01.md",
+          "docs/reports/target_c_exact_phase_threshold_transverse_rail_saturation_2026-10-01.md",
+          "docs/state/theorem-state.yaml"
+        ],
+        "description": "Read each full report at its stated hypotheses. Source lifecycle, source audit labels, and finite verification do not promote these claims."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "global closure",
+          "result": "A chain-face incidence and radial-positivity conclusion alone is not a global contradiction or source-realized competitor."
+        }
+      ],
+      "next_proof_obligations": [
+        "Use the common train cut, hull-arc unit separation, C82 exposed-hull bounds, or a direct classification of the actual diameter graph to exclude the paired survivor."
+      ],
+      "validation": {
+        "status": {
+          "scope": "proof only; the report states no computation or verifier is used. Destination lifecycle is unreviewed."
+        },
+        "command": "No standalone verifier or computational certificate is included for this proof claim.",
+        "scope": "Read and assess the complete proof at the exact hypotheses stated in the linked report.",
+        "boundary": "Destination lifecycle remains unreviewed. A source-side audit or finite prerequisite verifier does not establish the analytic claim or global source realization."
+      },
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+        "destination_base_main": "4ce4fed103532ad42919896d025df1a6d4b72405",
+        "related_source_pr_heads": "See exact per-path records for PRs #603, #605, #606, #607, and #613 in docs/research/migration/2026-10-16/ledger/source-closed-pr-files.jsonl; no extra PR identity is asserted for a report unless recorded there.",
+        "destination_status": "unreviewed; no claim promoted"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party and project-agent-generated research",
+        "third_party_material": "No third-party paper or extracted protected text copied in this package.",
+        "visibility": "destination remains private; publication inclusion and visibility unchanged"
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-ONE-VACANCY-STRICT-REFILL-20261005",
+      "title": "One-vacancy collective strictification and capacity gap",
+      "status": "unreviewed",
+      "source_lifecycle": "Source-branch proof candidate; retained unreviewed and noncanonical under destination theorem-state authority.",
+      "target_scope": [
+        "Target C-II capacity/refill route",
+        "Level I context only; no closure asserted"
+      ],
+      "claim": {
+        "statement": "For the stated strict oblique rectangular unit-grid frame with one interior vacancy, an exact two-stage motion keeps every wall and remaining source label fixed and strictly separates all remaining interior points. This realizes strict capacity K-1 from an N-1 point starting packet.",
+        "hypotheses": [
+          "Exact strict oblique rectangular unit-grid wall and one interior vacancy",
+          "The stated finite frame and fixed-wall constraints"
+        ],
+        "not_claimed": [
+          "An N-point source with a hidden deletion",
+          "A source-wide vacancy extraction theorem",
+          "Global diameter optimality, C-II closure, or Level I closure"
+        ]
+      },
+      "relation_to_canonical": {
+        "stronger_than_if_correct": [],
+        "comparison_scope": "A source-branch candidate connected to exact fixed-frame or finite-stress hypotheses; its full global source-extraction gap is stated below.",
+        "replacement_status": "none; no canonical theorem or existing candidate is replaced."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_one_vacancy_collective_strictification_2026-10-05.md",
+          "role": "proof report",
+          "source_commit": "0526296a0b02ae33644da38c6883dccdac7b61f6",
+          "source_git_blob_sha": "1a13260b1c0a93cb8aace99c719d3a5fb11b2abb",
+          "source_sha256": "f0257acc588d5e3d2b437bf4df73d8ebda768c5d733d7489934feba475e54a69",
+          "destination_sha256": "f0257acc588d5e3d2b437bf4df73d8ebda768c5d733d7489934feba475e54a69",
+          "source_branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "byte_identical": true,
+          "source_artifact_id": "ART-C32C5C6B486E"
+        },
+        {
+          "path": "research/verify_target_c_one_vacancy_collective_strictification_2026_10_05.py",
+          "role": "exact finite verifier",
+          "source_commit": "564ad3edb9579658c52ce11cea32831e0540cbb8",
+          "source_git_blob_sha": "7205c5b37b824286c3cc816037ae277f84f1889d",
+          "source_sha256": "a7dde4b19c70f31266d3e17c781d2523238e25d4e1abc04b251d8d5c7ec1249a",
+          "destination_sha256": "a7dde4b19c70f31266d3e17c781d2523238e25d4e1abc04b251d8d5c7ec1249a",
+          "source_branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "byte_identical": true
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [
+          "TARGET-C-VACANCY-FUNDED-ACTUAL-UNIT-WALL-20261005",
+          "TARGET-C-BOUNDARY-VACANCY-COLLECTIVE-REFILL-20261005"
+        ],
+        "description": "The proof report contains its analytic argument and exact hypotheses. Linked candidates provide adjacent capacity or refill results but are not silently substituted for source extraction."
+      },
+      "validation": {
+        "status": "Finite verifier replay passed; analytic candidate remains unreviewed.",
+        "command": "python3 research/verify_target_c_one_vacancy_collective_strictification_2026_10_05.py",
+        "result": "PASS: 1,915 exact full-source-pair checks in four strictified patches; 46 interior points strictly separated; all labels retained and wall fixed; both motion stages checked in Q(sqrt(3)). Finite checks do not prove global optimality or a uniform angle window.",
+        "boundary": "The verifier checks the finite exact identities, packets, and full-pair conditions named in the result. It does not independently audit the analytic proof, global optimality, arbitrary canonical-source extraction, or C-II/Level I closure."
+      },
+      "obstructions_and_limits": [
+        "The positive motion is a container-capacity result; it does not exhibit a canonical global minimizer.",
+        "A source-compatible vacancy and control of the external interface and all diameter upper pairs remain necessary."
+      ],
+      "next_proof_obligations": [
+        "Extract the exact vacancy patch from a canonical source while retaining every source label and all active upper-pair constraints.",
+        "Pay the one-label deficit with an admissible same-cardinality endpoint."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_branch": "research/sol/target-c-level1-gpt61-2026-10-04",
+        "source_head_sha": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+        "source_head_tree": "198c83065add8175a921b4e9c55169e4690010a3",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "0351e2c529e01750f7aceb87f8f6f0cb9c21dea7",
+        "source_theorem_state": "2026-10-05.audit.54 as recorded by the source reports",
+        "destination_theorem_state": "unchanged; destination manifest remains authoritative"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party or project-agent research.",
+        "third_party_material": "No third-party paper text or PDF collections are included.",
+        "visibility": "Destination visibility unchanged; private at migration time; no canonical lifecycle promotion."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-ACTUAL-UNIT-WALL-VACANCY-ACTIVATION-20261005",
+      "title": "Vacancy-funded actual unit-wall activation",
+      "status": "unreviewed",
+      "source_lifecycle": "Source-branch proof candidate; retained unreviewed and noncanonical under destination theorem-state authority.",
+      "target_scope": [
+        "Target C-II capacity/refill route",
+        "Level I context only; no closure asserted"
+      ],
+      "claim": {
+        "statement": "Under the report’s exact strict-oblique actual unit-wall hypotheses in a canonical C-II source, contact minimality forces at least K enclosed labels; the one-vacancy strictification therefore excludes an enclosed population below the stated capacity. Its triangular two-vacancy limit gives K-2 strict interior capacity under a fixed-frame wall tolerance.",
+        "hypotheses": [
+          "A qualifying actual strict-oblique unit cycle enclosing the stated grid frame",
+          "Canonical C-II source contact-minimality and the exact label accounting in the report"
+        ],
+        "not_claimed": [
+          "Existence or extraction of such a complete actual wall in every source",
+          "A general source-wide vacancy or population bound",
+          "A global strict-diameter competitor or C-II/Level I closure"
+        ]
+      },
+      "relation_to_canonical": {
+        "stronger_than_if_correct": [],
+        "comparison_scope": "A source-branch candidate connected to exact fixed-frame or finite-stress hypotheses; its full global source-extraction gap is stated below.",
+        "replacement_status": "none; no canonical theorem or existing candidate is replaced."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_vacancy_funded_unit_wall_activation_2026-10-05.md",
+          "role": "proof report",
+          "source_commit": "564ad3edb9579658c52ce11cea32831e0540cbb8",
+          "source_git_blob_sha": "e4e35de5945de287a65c14b608e682b6131c34bb",
+          "source_sha256": "372a10ce01e1aa8c5a70b39c215b070164eaf851383739d0d0129acd0b1d753b",
+          "destination_sha256": "372a10ce01e1aa8c5a70b39c215b070164eaf851383739d0d0129acd0b1d753b",
+          "source_branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "byte_identical": true,
+          "source_artifact_id": "ART-E101C71471F3"
+        },
+        {
+          "path": "research/verify_target_c_vacancy_funded_unit_wall_activation_2026_10_05.py",
+          "role": "exact finite verifier",
+          "source_commit": "b779f5d74a136a28fc2926be83f87bd48f4e82e0",
+          "source_git_blob_sha": "68fe17f9efbbdadbb66494d058c298e0b44349b1",
+          "source_sha256": "53660a5a8d61c512065d1b188a3e6259a03cc4cf59f3510090c2c3d10b282746",
+          "destination_sha256": "53660a5a8d61c512065d1b188a3e6259a03cc4cf59f3510090c2c3d10b282746",
+          "source_branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "byte_identical": true
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [
+          "TARGET-C-ONE-VACANCY-STRICT-REFILL-20261005",
+          "TARGET-C-BOUNDARY-VACANCY-COLLECTIVE-REFILL-20261005"
+        ],
+        "description": "The proof report contains its analytic argument and exact hypotheses. Linked candidates provide adjacent capacity or refill results but are not silently substituted for source extraction."
+      },
+      "validation": {
+        "status": "Finite verifier replay passed; analytic candidate remains unreviewed.",
+        "command": "python3 research/verify_target_c_vacancy_funded_unit_wall_activation_2026_10_05.py",
+        "result": "PASS: 7,016 exact sequential-move pair checks; 15,244 complete old/new source-pair checks in six guarded replacements; external shielding >= sqrt(3); fixed-frame oblique perturbations and triangular zero-motion regression checked. No actual-source vacancy is inferred.",
+        "boundary": "The verifier checks the finite exact identities, packets, and full-pair conditions named in the result. It does not independently audit the analytic proof, global optimality, arbitrary canonical-source extraction, or C-II/Level I closure."
+      },
+      "obstructions_and_limits": [
+        "Finite source packets verify only the listed guarded examples.",
+        "The source-wide missing step is extraction of a deficient actual cycle and its integer population ledger."
+      ],
+      "next_proof_obligations": [
+        "Prove actual-wall extraction in every surviving full-core or macroscopic-container branch.",
+        "Derive the exact integer deficiency and check every outside-source lower and upper pair."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_branch": "research/sol/target-c-level1-gpt61-2026-10-04",
+        "source_head_sha": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+        "source_head_tree": "198c83065add8175a921b4e9c55169e4690010a3",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "0351e2c529e01750f7aceb87f8f6f0cb9c21dea7",
+        "source_theorem_state": "2026-10-05.audit.54 as recorded by the source reports",
+        "destination_theorem_state": "unchanged; destination manifest remains authoritative"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party or project-agent research.",
+        "third_party_material": "No third-party paper text or PDF collections are included.",
+        "visibility": "Destination visibility unchanged; private at migration time; no canonical lifecycle promotion."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-BOUNDARY-VACANCY-COLLECTIVE-REFILL-20261005",
+      "title": "Two-boundary-pin collective refill",
+      "status": "unreviewed",
+      "source_lifecycle": "Source-branch proof candidate; retained unreviewed and noncanonical under destination theorem-state authority.",
+      "target_scope": [
+        "Target C-II capacity/refill route",
+        "Level I context only; no closure asserted"
+      ],
+      "claim": {
+        "statement": "For the report’s sufficiently close triangular rectangular unit-cycle frames, deleting two adjacent actual wall labels opens a boundary window through which all K reference interior positions can be released with exact exterior shielding. The two deleted labels fund the two extra interior slots under the stated source replacement hypotheses.",
+        "hypotheses": [
+          "Fixed triangular frame with the report’s near-wall tolerance",
+          "Two adjacent actual side-wall labels are removed and all K reference interior positions are used",
+          "Complete guarded source replacement hypotheses"
+        ],
+        "not_claimed": [
+          "A tolerance uniform in growing frames",
+          "Global optimality of the finite packets",
+          "Existence of a qualifying deficient actual wall in all canonical sources"
+        ]
+      },
+      "relation_to_canonical": {
+        "stronger_than_if_correct": [],
+        "comparison_scope": "A source-branch candidate connected to exact fixed-frame or finite-stress hypotheses; its full global source-extraction gap is stated below.",
+        "replacement_status": "none; no canonical theorem or existing candidate is replaced."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_boundary_vacancy_funded_collective_refill_2026-10-05.md",
+          "role": "proof report",
+          "source_commit": "b779f5d74a136a28fc2926be83f87bd48f4e82e0",
+          "source_git_blob_sha": "abadee039343b7836190c50b7f443e12d033eba9",
+          "source_sha256": "a765e63ecf244e068558168c746b4253aa174e03ecccd678d4e4754f36182ea7",
+          "destination_sha256": "a765e63ecf244e068558168c746b4253aa174e03ecccd678d4e4754f36182ea7",
+          "source_branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "byte_identical": true,
+          "source_artifact_id": "ART-8A4840B492E3"
+        },
+        {
+          "path": "research/verify_target_c_boundary_vacancy_funded_collective_refill_2026_10_05.py",
+          "role": "exact finite verifier",
+          "source_commit": "b779f5d74a136a28fc2926be83f87bd48f4e82e0",
+          "source_git_blob_sha": "3f5709a5efda26a90ce403945c12482efc5b4205",
+          "source_sha256": "df10fbcb19ebd1132407723dc901e58cdc20877c5fb4bc95e01e36af876e7c11",
+          "destination_sha256": "df10fbcb19ebd1132407723dc901e58cdc20877c5fb4bc95e01e36af876e7c11",
+          "source_branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "byte_identical": true
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [
+          "TARGET-C-ONE-VACANCY-STRICT-REFILL-20261005",
+          "TARGET-C-ACTUAL-UNIT-WALL-VACANCY-ACTIVATION-20261005"
+        ],
+        "description": "The proof report contains its analytic argument and exact hypotheses. Linked candidates provide adjacent capacity or refill results but are not silently substituted for source extraction."
+      },
+      "validation": {
+        "status": "Finite verifier replay passed; analytic candidate remains unreviewed.",
+        "command": "python3 research/verify_target_c_boundary_vacancy_funded_collective_refill_2026_10_05.py",
+        "result": "PASS: 65,754 sequential pair checks; 382 strict final interior pairs; 9,802 complete guarded source-pair checks; both funding labels retained; all exterior labels fixed; maximum diameter unchanged; exact shield lower bound sqrt(261)/10 > 151/100. No packet is globally certified.",
+        "boundary": "The verifier checks the finite exact identities, packets, and full-pair conditions named in the result. It does not independently audit the analytic proof, global optimality, arbitrary canonical-source extraction, or C-II/Level I closure."
+      },
+      "obstructions_and_limits": [
+        "The exact relaxed shield uses original reference positions; final points need not avoid deleted wall coordinates.",
+        "Finite packets do not infer a global minimizer."
+      ],
+      "next_proof_obligations": [
+        "Extract a near-triangular actual wall with the needed two-label deficit from a canonical source.",
+        "Check source-wide population, every lower pair, actual and inactive upper pairs, and the final objective."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_branch": "research/sol/target-c-level1-gpt61-2026-10-04",
+        "source_head_sha": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+        "source_head_tree": "198c83065add8175a921b4e9c55169e4690010a3",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "0351e2c529e01750f7aceb87f8f6f0cb9c21dea7",
+        "source_theorem_state": "2026-10-05.audit.54 as recorded by the source reports",
+        "destination_theorem_state": "unchanged; destination manifest remains authoritative"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party or project-agent research.",
+        "third_party_material": "No third-party paper text or PDF collections are included.",
+        "visibility": "Destination visibility unchanged; private at migration time; no canonical lifecycle promotion."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-ONE-PIN-OBLIQUE-REFILL-20261005",
+      "title": "One-pin robust oblique refill and triangular lock",
+      "status": "unreviewed",
+      "source_lifecycle": "Source-branch proof candidate; retained unreviewed and noncanonical under destination theorem-state authority.",
+      "target_scope": [
+        "Target C-II capacity/refill route",
+        "Level I context only; no closure asserted"
+      ],
+      "claim": {
+        "statement": "For m,n>=3 and 60°<phi<=90°, the exact oblique-grid construction deletes only wall label (1,0) and strictly refills all K=(m-1)(n-1) interior labels. With delta=1-2cos(phi) and L=m+n, the stated squared-distance floor is delta^4/(25000000000000 L^20), with actual-wall tolerance floor/[4(L+1)]. At phi=60°, the separate one-pin endpoint has only the stated discrete displacement gap.",
+        "hypotheses": [
+          "Exact grid frame and the angle range 60°<phi<=90°",
+          "One specified boundary label deleted and all retained source labels accounted for",
+          "Actual wall within the explicit frame-dependent tolerance for the source implication"
+        ],
+        "not_claimed": [
+          "The triangular endpoint as a continuous refill",
+          "A tolerance uniform as frame size grows",
+          "Canonical actual-wall extraction or global optimality"
+        ]
+      },
+      "relation_to_canonical": {
+        "stronger_than_if_correct": [],
+        "comparison_scope": "A source-branch candidate connected to exact fixed-frame or finite-stress hypotheses; its full global source-extraction gap is stated below.",
+        "replacement_status": "none; no canonical theorem or existing candidate is replaced."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_one_boundary_pin_oblique_refill_2026-10-05.md",
+          "role": "proof report",
+          "source_commit": "03fda747581d828d072d0754b57349def02b4ae1",
+          "source_git_blob_sha": "c4ccc9223b938b6095a768968dd68b6f5c8a78fd",
+          "source_sha256": "e6b5cbafce8acfb2744b189c992e56768fe7bff2b37215fd92a9a3515f79727b",
+          "destination_sha256": "e6b5cbafce8acfb2744b189c992e56768fe7bff2b37215fd92a9a3515f79727b",
+          "source_branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "byte_identical": true,
+          "source_artifact_id": "ART-E4FDB3C26CA5"
+        },
+        {
+          "path": "research/verify_target_c_one_boundary_pin_oblique_refill_2026_10_05.py",
+          "role": "exact finite verifier",
+          "source_commit": "03fda747581d828d072d0754b57349def02b4ae1",
+          "source_git_blob_sha": "6d8b7dbf694d041c4f1bc80be0ec5b07ef49864f",
+          "source_sha256": "ed32673b81d8764905003f6486a5228fc8d4caa516c9b2bf4818bff1b261e9b0",
+          "destination_sha256": "ed32673b81d8764905003f6486a5228fc8d4caa516c9b2bf4818bff1b261e9b0",
+          "source_branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "byte_identical": true
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [
+          "TARGET-C-TWO-SIDE-POLYNOMIAL-REFILL-20261005",
+          "TARGET-C-TRIANGULAR-TWO-PIN-CAPACITY-20261005"
+        ],
+        "description": "The proof report contains its analytic argument and exact hypotheses. Linked candidates provide adjacent capacity or refill results but are not silently substituted for source extraction."
+      },
+      "validation": {
+        "status": "Finite verifier replay passed; analytic candidate remains unreviewed.",
+        "command": "python3 research/verify_target_c_one_boundary_pin_oblique_refill_2026_10_05.py",
+        "result": "PASS: 1,042 two-stage pair checks with analytic gap floor; 11,774 complete guarded source pairs; 82 contacts removed; 32 interior labels; exactly one funding wall label per refill; 75 pinned vertices and 279 positive stress edges. No global optimum is computed.",
+        "boundary": "The verifier checks the finite exact identities, packets, and full-pair conditions named in the result. It does not independently audit the analytic proof, global optimality, arbitrary canonical-source extraction, or C-II/Level I closure."
+      },
+      "obstructions_and_limits": [
+        "The angle-dependent gap degenerates at phi=60°; the endpoint is a pinned regression.",
+        "R_F>=kappa D alone does not supply a captured frame or its tolerance."
+      ],
+      "next_proof_obligations": [
+        "Connect the exact wall and one deleted label to the canonical source population ledger.",
+        "Show the captured residual exceeds the report’s angular-area and wall-error allowance."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_branch": "research/sol/target-c-level1-gpt61-2026-10-04",
+        "source_head_sha": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+        "source_head_tree": "198c83065add8175a921b4e9c55169e4690010a3",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "0351e2c529e01750f7aceb87f8f6f0cb9c21dea7",
+        "source_theorem_state": "2026-10-05.audit.54 as recorded by the source reports",
+        "destination_theorem_state": "unchanged; destination manifest remains authoritative"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party or project-agent research.",
+        "third_party_material": "No third-party paper text or PDF collections are included.",
+        "visibility": "Destination visibility unchanged; private at migration time; no canonical lifecycle promotion."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-TWO-SIDE-POLYNOMIAL-REFILL-20261005",
+      "title": "Simultaneous two-side refill with polynomial wall tolerance",
+      "status": "unreviewed",
+      "source_lifecycle": "Source-branch proof candidate; retained unreviewed and noncanonical under destination theorem-state authority.",
+      "target_scope": [
+        "Target C-II capacity/refill route",
+        "Level I context only; no closure asserted"
+      ],
+      "claim": {
+        "statement": "For m,n>=4 and 60°<=phi<=90°, opening the lower and left sides of an oblique unit-grid wall deletes J=m+n-1 labels and permits a simultaneous strict motion of all K=(m-1)(n-1) interior positions with squared gap 3/[250000(m+n)^14] and wall tolerance gap/[4(m+n+1)]. The source implication requires a qualifying actual wall and at least J population deficit.",
+        "hypotheses": [
+          "Exact oblique rectangular grid frame and angle range 60°<=phi<=90°",
+          "All removed wall labels and all K interior labels are included",
+          "Actual wall satisfies the explicit size-dependent tolerance and population deficit"
+        ],
+        "not_claimed": [
+          "A source theorem extracting such a wall or deficit from every canonical minimizer",
+          "Global optimality of guarded packets",
+          "Macroscopic-container or C-II closure"
+        ]
+      },
+      "relation_to_canonical": {
+        "stronger_than_if_correct": [],
+        "comparison_scope": "A source-branch candidate connected to exact fixed-frame or finite-stress hypotheses; its full global source-extraction gap is stated below.",
+        "replacement_status": "none; no canonical theorem or existing candidate is replaced."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_two_side_polynomial_collective_refill_2026-10-05.md",
+          "role": "proof report",
+          "source_commit": "5194688a0c9bf221fb827db40d4d209037a6763a",
+          "source_git_blob_sha": "81803fcb003c993ee569bc56b12b1d2bffb05bc3",
+          "source_sha256": "f6b75c01c629bbb4aa33a825f50ff991061f0b20622743af45a8174f03c81b25",
+          "destination_sha256": "f6b75c01c629bbb4aa33a825f50ff991061f0b20622743af45a8174f03c81b25",
+          "source_branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "byte_identical": true,
+          "source_artifact_id": "ART-3EE36CEB5BDF"
+        },
+        {
+          "path": "research/verify_target_c_two_side_polynomial_refill_2026_10_05.py",
+          "role": "exact finite verifier",
+          "source_commit": "5194688a0c9bf221fb827db40d4d209037a6763a",
+          "source_git_blob_sha": "3660a38102bcb0843cd61b17fbb62f3b332e3c1e",
+          "source_sha256": "741eab5d14f3d147e4a5a6ad517422311d5fb37b471f7cb43a38c87f833396ec",
+          "destination_sha256": "741eab5d14f3d147e4a5a6ad517422311d5fb37b471f7cb43a38c87f833396ec",
+          "source_branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "byte_identical": true
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [
+          "TARGET-C-ONE-PIN-OBLIQUE-REFILL-20261005",
+          "TARGET-C-BOUNDARY-VACANCY-COLLECTIVE-REFILL-20261005"
+        ],
+        "description": "The proof report contains its analytic argument and exact hypotheses. Linked candidates provide adjacent capacity or refill results but are not silently substituted for source extraction."
+      },
+      "validation": {
+        "status": "Finite verifier replay passed; analytic candidate remains unreviewed.",
+        "command": "python3 research/verify_target_c_two_side_polynomial_refill_2026_10_05.py",
+        "result": "PASS: 3,694 exact local-pair checks and uniform floor; 30,440 complete guarded source pairs; 119 interior labels moved; triangular, strict-oblique and square frames including nearby actual walls; stated polynomial gap/tolerance and unchanged maximum diameter checked. Actual wall and linear deficit remain hypotheses.",
+        "boundary": "The verifier checks the finite exact identities, packets, and full-pair conditions named in the result. It does not independently audit the analytic proof, global optimality, arbitrary canonical-source extraction, or C-II/Level I closure."
+      },
+      "obstructions_and_limits": [
+        "The generic linear residual ledger does not imply the displayed threshold.",
+        "No uniform tolerance in growing frame size is claimed."
+      ],
+      "next_proof_obligations": [
+        "Prove a source-wide interface and deficit extraction theorem at a scale meeting the explicit tolerance.",
+        "Check every full-source lower and upper pair after replacement."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_branch": "research/sol/target-c-level1-gpt61-2026-10-04",
+        "source_head_sha": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+        "source_head_tree": "198c83065add8175a921b4e9c55169e4690010a3",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "0351e2c529e01750f7aceb87f8f6f0cb9c21dea7",
+        "source_theorem_state": "2026-10-05.audit.54 as recorded by the source reports",
+        "destination_theorem_state": "unchanged; destination manifest remains authoritative"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party or project-agent research.",
+        "third_party_material": "No third-party paper text or PDF collections are included.",
+        "visibility": "Destination visibility unchanged; private at migration time; no canonical lifecycle promotion."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-TRIANGULAR-TWO-PIN-CAPACITY-20261005",
+      "title": "Triangular two-pin strict-capacity obstruction",
+      "status": "unreviewed",
+      "source_lifecycle": "Source-branch proof candidate; retained unreviewed and noncanonical under destination theorem-state authority.",
+      "target_scope": [
+        "Target C-II capacity/refill route",
+        "Level I context only; no closure asserted"
+      ],
+      "claim": {
+        "statement": "The report proves exact strict capacity K after the stated two-pin deletion for every triangular 3-by-n frame and the triangular 4-by-4 square, using an elementary unit-triangle cover and a six-point unit-disk obstruction. Thus the K-site construction cannot be universally upgraded to K+1 in these frames.",
+        "hypotheses": [
+          "Triangular fixed frames specified in the report",
+          "Two adjacent pins are the deleted wall labels"
+        ],
+        "not_claimed": [
+          "A bound for both side lengths tending to infinity",
+          "A global source or diameter-minimizer example",
+          "A general C-II branch elimination"
+        ]
+      },
+      "relation_to_canonical": {
+        "stronger_than_if_correct": [],
+        "comparison_scope": "A source-branch candidate connected to exact fixed-frame or finite-stress hypotheses; its full global source-extraction gap is stated below.",
+        "replacement_status": "none; no canonical theorem or existing candidate is replaced."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_triangular_two_pin_strict_capacity_2026-10-05.md",
+          "role": "proof report",
+          "source_commit": "d3dfbc4901219e462fade79e7f842f8317153316",
+          "source_git_blob_sha": "cf70cf340a697a48073ed86acf0fca00a04355bc",
+          "source_sha256": "ac83868db308eefa21e107a2fb733c0803aa0c8dd849ae302e6a3d26d1642085",
+          "destination_sha256": "ac83868db308eefa21e107a2fb733c0803aa0c8dd849ae302e6a3d26d1642085",
+          "source_branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "byte_identical": true,
+          "source_artifact_id": "ART-ACD3826933F8"
+        },
+        {
+          "path": "research/verify_target_c_triangular_two_pin_capacity_2026_10_05.py",
+          "role": "exact finite verifier",
+          "source_commit": "d3dfbc4901219e462fade79e7f842f8317153316",
+          "source_git_blob_sha": "91d83b84389aa8a61e56c9d71ed83e1848e7b593",
+          "source_sha256": "a9797a7b9e0c95bb56fef8d3111ec75737692f6bbf976ac007f079a690a76749",
+          "destination_sha256": "a9797a7b9e0c95bb56fef8d3111ec75737692f6bbf976ac007f079a690a76749",
+          "source_branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "byte_identical": true
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [
+          "TARGET-C-BOUNDARY-VACANCY-COLLECTIVE-REFILL-20261005",
+          "TARGET-C-TWO-SIDE-POLYNOMIAL-REFILL-20261005"
+        ],
+        "description": "The proof report contains its analytic argument and exact hypotheses. Linked candidates provide adjacent capacity or refill results but are not silently substituted for source extraction."
+      },
+      "validation": {
+        "status": "Finite verifier replay passed; analytic candidate remains unreviewed.",
+        "command": "python3 research/verify_target_c_triangular_two_pin_capacity_2026_10_05.py",
+        "result": "PASS: 716 exact elementary unit triangles; 228 admissible triangles after two-pin deletion; all finite checked 3-by-n covers and the 4-by-4 six-triangle unit-disk star certified. Arbitrary-point upper bounds rely on the report proof, not finite sampling.",
+        "boundary": "The verifier checks the finite exact identities, packets, and full-pair conditions named in the result. It does not independently audit the analytic proof, global optimality, arbitrary canonical-source extraction, or C-II/Level I closure."
+      },
+      "obstructions_and_limits": [
+        "The certificates check the explicit covers; the analytic arbitrary-target upper bounds are proved in the report.",
+        "These pinned frames contain unit triangles and have no global-D certificate."
+      ],
+      "next_proof_obligations": [
+        "Test any proposed universal two-pin surplus implication against the proved triangular obstructions.",
+        "If seeking a larger-frame theorem, prove it with both dimensions unbounded and retain the exact pin accounting."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_branch": "research/sol/target-c-level1-gpt61-2026-10-04",
+        "source_head_sha": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+        "source_head_tree": "198c83065add8175a921b4e9c55169e4690010a3",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "0351e2c529e01750f7aceb87f8f6f0cb9c21dea7",
+        "source_theorem_state": "2026-10-05.audit.54 as recorded by the source reports",
+        "destination_theorem_state": "unchanged; destination manifest remains authoritative"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party or project-agent research.",
+        "third_party_material": "No third-party paper text or PDF collections are included.",
+        "visibility": "Destination visibility unchanged; private at migration time; no canonical lifecycle promotion."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-UNIT-PENTAGON-UNIVERSAL-CAPACITY-20261005",
+      "title": "Universal convex unit-pentagon capacity and deletion deficit",
+      "status": "unreviewed",
+      "source_lifecycle": "Source-branch proof candidate; retained unreviewed and noncanonical under destination theorem-state authority.",
+      "target_scope": [
+        "Target C-II capacity/refill route",
+        "Level I context only; no closure asserted"
+      ],
+      "claim": {
+        "statement": "Every strictly convex pentagon with five unit sides and mutually unit-separated vertices has no other unit-separated point in its closed container. If d>=1 wall vertices are deleted while 5-d are retained, at most d-1 strict interior replacement points fit; for vertex-disjoint activated walls the sum of individual interior capacity is at most total deletions minus the number of walls.",
+        "hypotheses": [
+          "Strictly convex simple pentagon with unit sides",
+          "Mutually unit-separated wall vertices",
+          "For the additive bank statement, source-vertex-disjoint activated walls and actual deletion accounting"
+        ],
+        "not_claimed": [
+          "Refill capacity in a larger union or after releasing wall constraints",
+          "Arbitrary overlapping-wall accounting",
+          "A source-wide pentagon extraction theorem or global optimum"
+        ]
+      },
+      "relation_to_canonical": {
+        "stronger_than_if_correct": [],
+        "comparison_scope": "A source-branch candidate connected to exact fixed-frame or finite-stress hypotheses; its full global source-extraction gap is stated below.",
+        "replacement_status": "none; no canonical theorem or existing candidate is replaced."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_unit_pentagon_perimeter_capacity_2026-10-05.md",
+          "role": "proof report",
+          "source_commit": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "source_git_blob_sha": "05eea69fb728c961858c893dfbc20b0e1f4eef34",
+          "source_sha256": "6ece09aac79da36dee38b049531de339ce8a2ec2e41e9dc773221be330d3c674",
+          "destination_sha256": "6ece09aac79da36dee38b049531de339ce8a2ec2e41e9dc773221be330d3c674",
+          "source_branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "byte_identical": true,
+          "source_artifact_id": "ART-C43C839B73BA"
+        },
+        {
+          "path": "research/verify_target_c_unit_pentagon_capacity_2026_10_05.py",
+          "role": "exact finite verifier",
+          "source_commit": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "source_git_blob_sha": "25ef5548ded2e47b53607ca7020173216a2d5fa4",
+          "source_sha256": "a2ef74562d19cd2a4579e579db83413a786840c3d5bbd411493e3d04e9e2e952",
+          "destination_sha256": "a2ef74562d19cd2a4579e579db83413a786840c3d5bbd411493e3d04e9e2e952",
+          "source_branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "byte_identical": true
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [
+          "TARGET-C-TRIANGULAR-TWO-PIN-CAPACITY-20261005",
+          "TARGET-C-BOUNDARY-VACANCY-COLLECTIVE-REFILL-20261005"
+        ],
+        "description": "The proof report contains its analytic argument and exact hypotheses. Linked candidates provide adjacent capacity or refill results but are not silently substituted for source extraction."
+      },
+      "validation": {
+        "status": "Finite verifier replay passed; analytic candidate remains unreviewed.",
+        "command": "python3 research/verify_target_c_unit_pentagon_capacity_2026_10_05.py",
+        "result": "PASS: exact radial identity, Oler 1/9 triangle margin, chord endpoints, all ten lower pairs and four hull edges in the sharp quadrilateral-hull packet. Analytic universal perimeter and deletion argument remains unreviewed.",
+        "boundary": "The verifier checks the finite exact identities, packets, and full-pair conditions named in the result. It does not independently audit the analytic proof, global optimality, arbitrary canonical-source extraction, or C-II/Level I closure."
+      },
+      "obstructions_and_limits": [
+        "The theorem rules out individual-pentagon interiors as sufficient deletion currency; it does not rule out a collective motion outside those interiors.",
+        "Finite verifier checks support listed identities and sharp finite packets; it does not audit the universal analytic proof."
+      ],
+      "next_proof_obligations": [
+        "Use this as a negative control for individual-wall refill proposals.",
+        "Construct a collective region or release wall constraints while retaining all source distances and actual diameter bounds."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_branch": "research/sol/target-c-level1-gpt61-2026-10-04",
+        "source_head_sha": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+        "source_head_tree": "198c83065add8175a921b4e9c55169e4690010a3",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "0351e2c529e01750f7aceb87f8f6f0cb9c21dea7",
+        "source_theorem_state": "2026-10-05.audit.54 as recorded by the source reports",
+        "destination_theorem_state": "unchanged; destination manifest remains authoritative"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party or project-agent research.",
+        "third_party_material": "No third-party paper text or PDF collections are included.",
+        "visibility": "Destination visibility unchanged; private at migration time; no canonical lifecycle promotion."
+      }
+    },
+    {
+      "candidate_id": "TARGET-C-MULTISHEAR-TRAFFIC-DOMINATION-20261005",
+      "title": "Exact traffic domination and equality modes in finite multishear",
+      "status": "unreviewed",
+      "source_lifecycle": "Source-branch proof candidate; retained unreviewed and noncanonical under destination theorem-state authority.",
+      "target_scope": [
+        "Target C-II capacity/refill route",
+        "Level I context only; no closure asserted"
+      ],
+      "claim": {
+        "statement": "For the stated canonical PSD stress and actual noncrossing outer-train cutsets, the report proves W=diag(A)-B=R^T Omega R positive semidefinite, with kernel dimension 2-rank(span of unselected contact directions). Finite multishear therefore has nonincreasing weighted actual-diameter-square sum, strictly decreasing when the unselected directions span two dimensions.",
+        "hypotheses": [
+          "The particular canonical normalized PSD stress specified in the report",
+          "Actual source cutsets and connected nonisolated positive-contact core as stated",
+          "Finite multishear parameters and the report’s full pairwise lower/upper feasibility cells"
+        ],
+        "not_claimed": [
+          "PSD for arbitrary KKT stresses",
+          "A common feasible radius for all cuts",
+          "A decrease of the maximum actual diameter",
+          "A source-wide strict competitor or C-II/Level I closure"
+        ]
+      },
+      "relation_to_canonical": {
+        "stronger_than_if_correct": [],
+        "comparison_scope": "A source-branch candidate connected to exact fixed-frame or finite-stress hypotheses; its full global source-extraction gap is stated below.",
+        "replacement_status": "none; no canonical theorem or existing candidate is replaced."
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/target_c_multishear_traffic_domination_2026-10-05.md",
+          "role": "proof report",
+          "source_commit": "993c29912ca772b0f1d4118da8f47ff6c52d3a71",
+          "source_git_blob_sha": "91f2c2689ea53d83141578ea59df23fc023bfbbe",
+          "source_sha256": "450d2712b3f24bb25e842502636d61e61f93d56111b92e820f6973c9ad066644",
+          "destination_sha256": "450d2712b3f24bb25e842502636d61e61f93d56111b92e820f6973c9ad066644",
+          "source_branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "byte_identical": true,
+          "source_artifact_id": "ART-9D20AE47BD77"
+        },
+        {
+          "path": "research/verify_target_c_multishear_traffic_domination_2026_10_05.py",
+          "role": "exact finite verifier",
+          "source_commit": "993c29912ca772b0f1d4118da8f47ff6c52d3a71",
+          "source_git_blob_sha": "fea6473e6a2c7b1c207596adbb77e34d27ecea9d",
+          "source_sha256": "2260ca9e5fbf0b0cdc655f35afa9b2eb209fa840243eedff6c41bc0bd5226c11",
+          "destination_sha256": "2260ca9e5fbf0b0cdc655f35afa9b2eb209fa840243eedff6c41bc0bd5226c11",
+          "source_branch_head": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+          "byte_identical": true
+        }
+      ],
+      "dependencies": {
+        "canonical_claims": [],
+        "candidate_relations": [
+          "TARGET-C-ONE-PIN-OBLIQUE-REFILL-20261005",
+          "TARGET-C-UNIT-PENTAGON-UNIVERSAL-CAPACITY-20261005"
+        ],
+        "description": "The proof report contains its analytic argument and exact hypotheses. Linked candidates provide adjacent capacity or refill results but are not silently substituted for source extraction."
+      },
+      "validation": {
+        "status": "Finite verifier replay passed; analytic candidate remains unreviewed.",
+        "command": "python3 research/verify_target_c_multishear_traffic_domination_2026_10_05.py",
+        "result": "PASS: 134 exact nonnegative principal minors; full contact support, actual diameters, normalized equilibrium and affine kernels; finite contact preservation and all lower pairs; 480 complete-source upper/lower quadratic checks including inactive pairs and inadmissible large angles. No common maximum-diameter descent is certified.",
+        "boundary": "The verifier checks the finite exact identities, packets, and full-pair conditions named in the result. It does not independently audit the analytic proof, global optimality, arbitrary canonical-source extraction, or C-II/Level I closure."
+      },
+      "obstructions_and_limits": [
+        "Mean weighted energy does not remove the maximum-diameter cusp or all noncontact angular barriers.",
+        "Finite packets are regressions and do not establish existence of a global canonical source satisfying a desired shear cell."
+      ],
+      "next_proof_obligations": [
+        "Prove a common upper contraction inside every full lower-feasibility cell or identify an exact counterexample.",
+        "Check inactive upper pairs, contact isolates, and every source label in any proposed endpoint."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_branch": "research/sol/target-c-level1-gpt61-2026-10-04",
+        "source_head_sha": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+        "source_head_tree": "198c83065add8175a921b4e9c55169e4690010a3",
+        "source_base_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_merge_base_sha": "0351e2c529e01750f7aceb87f8f6f0cb9c21dea7",
+        "source_theorem_state": "2026-10-05.audit.54 as recorded by the source reports",
+        "destination_theorem_state": "unchanged; destination manifest remains authoritative"
+      },
+      "rights_and_release": {
+        "first_party_status": "Owner-authorized first-party or project-agent research.",
+        "third_party_material": "No third-party paper text or PDF collections are included.",
+        "visibility": "Destination visibility unchanged; private at migration time; no canonical lifecycle promotion."
+      }
     }
   ]
 }

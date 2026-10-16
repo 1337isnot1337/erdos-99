@@ -79,6 +79,48 @@ and [Target C frontier](../targets/target-c/CURRENT.md).
 The exact local replay record is the
 [source-main Type-II verification receipt](../research/migration/2026-10-16/receipts/target-c-source-main-typeii-harmonic-verification.json).
 
+## Source-main exact-phase packet preservation batch
+
+This focused preservation batch is based on the frozen source-main commit
+`42f0296d1aca068c809f74cee5dcdb4ebdb27c73` (tree
+`e061f039eac44c286a00eacdcaa9a4cbbb877891`) and destination main
+`4ce4fed103532ad42919896d025df1a6d4b72405` (tree
+`84318253c282e851aa1bbbad1dfd2dbba389ba16`). Ten source-main Target C reports
+are retained as unreviewed, noncanonical proof candidates or audit provenance.
+The source r1 complete-grid switch report is retained byte-identically in the
+archive and mapped as historical/superseded by the fuller r2 proof. Five
+supporting source files are retained, including the exact laminar multishear
+verifier and the source audit of its proof-only O-O scope. Source audit labels
+and `PASS` language are not destination independent review.
+
+The mathematical content adds a complete-grid bound
+`t_A(h)+t_B(h)<=2`, edgewise-balanced KKT packet families, strictly positive
+but not uniformly bounded packet resultants, a common internal load in
+opposite-shore cut equations, a conditional two-cut shear that shortens only a
+selected linear family of diameter rows, and an
+`Omega(D^(1/4))` nested transverse matching. These conclusions are distinct
+from the canonical Type-II grid-access and face-floor claims. The packet
+reports leave boundary/layer correction rows possible; the exact-phase branch
+still has split-star and inactive-interface cases. No report constructs a
+source-realized finite endpoint or closes C-II.
+
+All five path dependencies in the conditional escape report now link to
+verified destination paths, including the archived historical train-closure
+snapshot. The [focused route track](../research/tracks/target-c-exact-phase-packet-fork.md)
+and five new [candidate-registry entries](../targets/target-c/candidate-registry.json)
+preserve the hypotheses, proof dependencies, obstructions, exact next lemmas,
+and provenance. The candidate registry and task catalogue now expose a direct
+threshold-packet research task. Related closed source PR paths #603, #605,
+#606, #607, and #613 are individually inventoried in
+[`source-closed-pr-files.jsonl`](../research/migration/2026-10-16/ledger/source-closed-pr-files.jsonl);
+the remaining threshold attachments are explicitly queued there.
+
+This batch does not modify the destination theorem-state, claim lifecycle,
+publication inclusion, or visibility. The exact laminar verifier is a scoped
+finite check; the threshold packet and joint-switch reports contain no
+computational verifier. The migration remains incomplete, Gate 2 is not
+claimed, Gate 3 remains separate, and the repository remains private.
+
 ## A consequential proof correction
 
 The corpus already contained the Audit.236 repair from unmerged source PR #947,
@@ -242,3 +284,25 @@ the final publication audit; these targeted checks are not a replacement.
 
 Diff fidelity does not independently establish every inherited proof. The byte
 checker grants no rights, and agent reviews do not establish human peer review.
+
+## Ongoing private migration: source-only capacity/refill branch
+
+The Target C source branch `research/sol/target-c-level1-gpt61-2026-10-04`
+was frozen at `9875cd6a77939bb6347353fc798ab8f9ab03ec3e` and reconciled
+against the source-main and destination baselines recorded in the migration
+ledger. Three absent full reports and three exact verifiers were imported;
+five report/verifier pairs were already byte-identical in the destination.
+The branch adds distinct unreviewed claims on one-pin and two-side refill,
+universal pentagon capacity, and exact finite multishear traffic domination.
+No same-topic item was marked redundant without checking its hypotheses,
+conclusion, and exact content.
+
+The destination candidate registry and [focused track](../research/tracks/target-c-capacity-collective-refill.md)
+record every claim, verifier, source hash, and next obligation. The source
+synthesis and README were reconciled into the destination's curated route map;
+the generated source index was rebuilt. All eight finite verifiers pass on
+their listed scopes, but none constitutes an independent analytic audit or a
+global-optimality proof. The canonical theorem-state, corrected
+inverse-phase demotion, C-II/Level I status, inclusion set, and repository
+visibility remain unchanged. This focused batch is not a complete migration
+or Gate 2 publication receipt.

@@ -1,0 +1,18 @@
+{
+  "schema_version": "e99-source-branch-manifest/v1",
+  "repository": "1337isnot1337/e-99",
+  "branch": "research/sol/target-c-level1-gpt61-2026-10-04",
+  "head_sha": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+  "head_tree": "198c83065add8175a921b4e9c55169e4690010a3",
+  "tracked_paths": 4304,
+  "tracked_paths_sha256": "9add279f30fe523e5f378712b4dc9428f04c1900d9447d49c297e9e277ee3abc",
+  "manifest_path": "docs/research/migration/2026-10-16/baseline/source-branch-9875cd6a-tracked-files.txt",
+  "frozen_source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "source_main_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+  "merge_base_sha": "0351e2c529e01750f7aceb87f8f6f0cb9c21dea7",
+  "source_main_vs_branch_path_status_counts": {
+    "D": 424,
+    "M": 67,
+    "A": 11
+  }
+}

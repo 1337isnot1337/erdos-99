@@ -1,0 +1,409 @@
+# Target C — audited train-closure rank, host anchoring, and two-sided bracing §§151–152
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working proof-only route module; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module consolidates the exact structural content formerly spread across the
+face-closure / train-bracing research branches. All rigidity matrices below are on the
+connected nonisolated positive-contact core. Contact-isolated source points remain in
+the full source and are never inserted into the core affine kernel.
+
+No response-conductance theorem, KKT coefficient floor, or carrier decimal is used.
+
+---
+
+# §151 — exceptional-face closure corank and stopping-host expansion
+
+Let `G=(V,C)` be the connected nonisolated positive-contact core, with
+
+\[
+v=|V|,\qquad e=|C|.
+\]
+
+Let `H` be the full actual diameter graph after the C65 normalization, `h=|H|`, and
+
+\[
+s_Z=e+h-(2v-2)\ge0.
+\]
+
+Let `R` be the number of bounded strict-rhombus faces, `f` the number of bounded
+nonquadrilateral faces, and `T` the number of complete stopped trains. The audited
+stopped-train decomposition gives
+
+\[
+T=e-2R=h-s_Z+2f.
+\tag{151.1}
+\]
+
+## 151.1 Train angular rates and the face-closure matrix
+
+For an oriented unit contact edge `ij`, write `r_{ij}=p_j-p_i`. Any contact
+infinitesimal flex satisfies
+
+\[
+u_j-u_i=\omega_{ij}Jr_{ij}
+\]
+
+for a unique scalar `omega_{ij}`. On a strict rhombus, differentiating boundary closure
+forces equal angular rates on opposite sides, so the rate is constant along each
+complete train. Write it `omega_tau`.
+
+Conversely, assign one scalar to each train and prescribe
+
+\[
+\dot r_e=\omega_{\tau(e)}Jr_e.
+\]
+
+Strict-rhombus faces close automatically. For each bounded nonquadrilateral face `F`,
+with its occurrence-counted oriented boundary, impose
+
+\[
+\sum_{e\in\partial F}\omega_{\tau(e)}Jr_e=0.
+\tag{151.2}
+\]
+
+The two scalar coordinates of these `f` vector equations define
+
+\[
+C_{face}:\mathbb R^T\to\mathbb R^{2f}.
+\]
+
+Bounded face boundaries span the real cycle space of a connected plane graph even with
+outer-face bridges or articulation vertices. Hence the prescribed edge derivatives
+integrate path-independently exactly when (151.2) holds. Therefore, modulo translations,
+
+\[
+\ker R_C/\mathrm{Trans}\cong\ker C_{face}.
+\tag{151.3}
+\]
+
+The all-ones train-rate vector is global infinitesimal rotation.
+
+## 151.2 Exact corank/self-stress identity
+
+Put
+
+\[
+\sigma_C:=\dim\ker R_C^T.
+\]
+
+From (151.3),
+
+\[
+\dim\ker R_C=T-\operatorname{rank}C_{face}+2.
+\]
+
+Thus
+
+\[
+\sigma_C
+=e-\operatorname{rank}R_C
+=e-2v+T-\operatorname{rank}C_{face}+2.
+\]
+
+Euler gives
+
+\[
+v-e+(R+f+1)=2,
+\]
+
+and `T=e-2R`; substituting yields the exact identity
+
+\[
+\boxed{
+2f-\operatorname{rank}C_{face}=\sigma_C.
+}
+\tag{151.4}
+\]
+
+Canonical mixed rigidity has rank `2v-3`, so the mixed contact+diameter stress space has
+dimension `s_Z+1`. Every pure contact stress embeds in it by zero diameter coordinates.
+The normalized KKT stress has nonzero diameter part, so it supplies one mixed stress
+outside the pure-contact subspace. Hence
+
+\[
+\boxed{
+0\le\sigma_C\le s_Z,
+\qquad
+2f-s_Z\le\operatorname{rank}C_{face}\le2f.
+}
+\tag{151.5}
+\]
+
+In particular, `s_Z=0` forces full row rank.
+
+## 151.3 Hall expansion for every defect-face set
+
+For any set `S` of bounded nonquadrilateral faces, let `C_S` be the `2|S|` rows of
+`C_face` belonging to those faces, and let `N(S)` be the set of complete trains having
+a noncancelling terminal occurrence on at least one face of `S`.
+
+Any row dependence of `C_S` extends by zero to a row dependence of `C_face`, so
+
+\[
+2|S|-\operatorname{rank}C_S\le\sigma_C.
+\]
+
+Since `C_S` is supported on at most `|N(S)|` columns,
+
+\[
+\boxed{
+|N(S)|\ge2|S|-\sigma_C\ge2|S|-s_Z.
+}
+\tag{151.6}
+\]
+
+This is a finite local expansion theorem; it is not merely the global train count.
+
+## 151.4 Outer-to-outer train capacity
+
+Let `L_{OO}` be the number of complete trains whose two terminal occurrences lie on the
+outer face. These are zero columns of `C_face`. Conversely, the audited no-bounded-return
+theorem excludes a nontrivial train returning to one bounded face, and bounded singleton
+loops are excluded by the endpoint geometry; thus a train with a bounded endpoint has
+a nonzero bounded-face column.
+
+Therefore
+
+\[
+\operatorname{rank}C_{face}\le T-L_{OO}.
+\]
+
+Using (151.1), (151.4), and `sigma_C<=s_Z`,
+
+\[
+\boxed{L_{OO}\le h.}
+\tag{151.7}
+\]
+
+If `f>0`, the coordinate subspace supported only on the `L_{OO}` zero columns does not
+contain the all-trains rotation vector. It therefore gives `L_{OO}` independent
+non-Euclidean contact flexes. Mixed rigidity maps these injectively into the `h`
+diameter first-variation coordinates, while KKT stationarity places the image in the
+codimension-one hyperplane perpendicular to the positive diameter multiplier vector.
+Hence
+
+\[
+\boxed{f>0\Longrightarrow L_{OO}\le h-1.}
+\tag{151.8}
+\]
+
+For `f=0`, rotation lies in the outer-train coordinate subspace and only (151.7) is
+valid.
+
+## 151.5 Grounded stopping-host direction network
+
+Collapse each complete stopped train to its two stopping-face terminal occurrences,
+with the outer face grounded. For a train joining distinct bounded hosts `F,G`, choose a
+coherent projective train direction `u_tau`. The two endpoint contributions have
+opposite physical boundary orientations, so after orienting the host edge its column
+has blocks
+
+\[
++Ju_\tau\text{ at }F,
+\qquad
+-Ju_\tau\text{ at }G.
+\]
+
+A bounded-to-outer train has one bounded block. Thus a row-dual vector
+`(y_F)_{F}` lies in `ker C_face^T` exactly when
+
+\[
+(y_F-y_G)\cdot Ju_\tau=0
+\tag{151.9}
+\]
+
+for every bounded-bounded host train, and
+
+\[
+y_F\cdot Ju_\tau=0
+\tag{151.10}
+\]
+
+for every bounded-to-outer train.
+
+Delete the outer host and let `K_1,...,K_c` be the connected bounded-host components.
+For component `K_j`, let `U_j` be the projective directions of its outer incident
+trains and put
+
+\[
+r_j:=\dim\operatorname{span}\{Ju:u\in U_j\}\in\{0,1,2\}.
+\]
+
+Assigning a constant vector to all face variables in one component gives a transpose-
+kernel subspace of dimension `2-r_j`. Distinct components have disjoint row support.
+Therefore
+
+\[
+\boxed{
+\sum_{j=1}^c(2-r_j)
+\le\dim\ker C_{face}^T
+=\sigma_C
+\le s_Z.
+}
+\tag{151.11}
+\]
+
+Consequences:
+
+- an unanchored bounded-host component costs two units of `s_Z`;
+- a component whose outer trains are all projectively parallel costs one unit; and
+- if `s_Z=0`, every bounded-host component has outer anchors in at least two distinct
+  projective directions.
+
+This is exact. It does **not** turn asymptotic corridor phase purity into exact rank
+loss: a small transverse anchor population can retain full rank.
+
+**§151 hostile-audit disposition:** PASS. The exact corank identity, Hall expansion,
+outer-train capacity, and host-anchor deficiency all follow on the core without deleting
+contact isolates or assuming pure contact stress vanishes.
+
+---
+
+# §152 — response-free two-sided diameter bracing of outer trains
+
+Let `tau` be a complete stopped train whose two terminal occurrences lie on the actual
+outer face. The audited train primitive supplies a Jordan shore split
+
+\[
+V=S\sqcup T
+\]
+
+whose contact cut is exactly the train edge set. Choose the unit train vector `u` so
+every cut contact oriented from `T` to `S` has vector `u`.
+
+## 152.1 A projective diameter direction is unique
+
+If two diameter pairs in any finite planar set of diameter `D` are parallel, orient
+them in the same direction:
+
+\[
+b-a=Du,
+\qquad d-c=Du.
+\]
+
+Put `v=c-a`. Diameter boundedness gives
+
+\[
+|Du-v|\le D,
+\qquad |Du+v|\le D.
+\]
+
+Squaring and adding yields
+
+\[
+2D^2+2|v|^2\le2D^2,
+\]
+
+so `v=0`. Thus the two unordered diameter pairs are identical.
+
+## 152.2 KKT cut resultant
+
+Let the relative-interior KKT contact weights be `alpha_e>0` and actual diameter weights
+`beta_h>0`, and put
+
+\[
+A_\tau:=\sum_{e\in E(\tau)}\alpha_e>0.
+\]
+
+Sum equilibrium over the vertices of `S`. Internal forces cancel, leaving
+
+\[
+\boxed{
+A_\tau u
+=
+\sum_{\substack{h=xy\in H\\x\in T,\ y\in S}}
+\beta_h(p_y-p_x).
+}
+\tag{152.1}
+\]
+
+At least one actual diameter edge crosses the cut. If `r_h=p_y-p_x`, dot with `Ju`:
+
+\[
+\boxed{
+\sum_{h\pitchfork\tau}\beta_h(r_h\cdot Ju)=0.
+}
+\tag{152.2}
+\]
+
+## 152.3 Both transverse signs are mandatory
+
+Suppose the numbers `r_h\cdot Ju` do not contain both positive and negative values.
+Positivity of every `beta_h` and (152.2) then force
+
+\[
+r_h\cdot Ju=0
+\]
+
+for every crossing diameter. Hence all crossing diameters are parallel to `u`, and the
+projective uniqueness lemma leaves one unordered pair. Equation (152.1) forces its
+oriented vector to be `Du`.
+
+Use the exact finite one-train shear: keep shore `T` fixed and translate the full-source
+shore `S` by
+
+\[
+\Delta_\theta=R_\theta u-u.
+\]
+
+All old contacts are preserved exactly. The unique crossing diameter changes from
+`Du` to `Du+Delta_theta`, whose squared length is
+
+\[
+\begin{aligned}
+|Du+\Delta_\theta|^2
+&=D^2+2D(\cos\theta-1)+2(1-\cos\theta)\\
+&=D^2-2(D-1)(1-\cos\theta)
+<D^2
+\end{aligned}
+\tag{152.3}
+\]
+
+for sufficiently small nonzero `theta` and `D>1`.
+
+Every same-shore diameter is unchanged. Every old strict noncontact remains longer than
+one and every old nondiameter pair remains shorter than `D` for sufficiently small
+`theta` by finite slack. Thus the full source remains unit-separated and has diameter
+at most `D`, with the same cardinality and all old contacts.
+
+If a same-shore diameter remains, the result is another global diameter minimizer with
+strictly fewer actual diameter pairs and unchanged contact set, contradicting the
+lexicographic normalization. If none remains, the global diameter has strictly
+decreased, contradicting minimality.
+
+Therefore every outer-to-outer train has two crossing actual diameter pairs
+`h_+,h_-` with
+
+\[
+\boxed{
+r_{h_+}\cdot Ju>0,
+\qquad
+r_{h_-}\cdot Ju<0.
+}
+\tag{152.4}
+\]
+
+In particular, each outer train is crossed by at least two distinct actual diameter
+edges. This is a signed geometric strengthening of the capacity bounds (151.7)–(151.8).
+
+The theorem uses no response conductance or weighted second-curvature argument.
+
+**§152 hostile-audit disposition:** PASS. The shore shear is a full-source finite
+competitor; contact isolates are moved with their geometric shore rather than deleted.
+
+---
+
+# Remaining obstruction
+
+The module does not close C-II. One diameter edge may cross many train cuts, and a
+bounded stopping-host direction network can satisfy the Hall expansion. The live
+full-core problem is to combine §§151–152 with phase/corridor geometry or exact metric
+train coordinates strongly enough to force an excess of independent closure motions,
+an outer-train capacity violation, or a simultaneous diameter descent.
+
+The macroscopic inactive-container branch remains separate and open.
+
+**Overall verdict:** PASS at audited-working proof-only scope. Canonical theorem-state
+authority is unchanged; C-II and Level I remain open.

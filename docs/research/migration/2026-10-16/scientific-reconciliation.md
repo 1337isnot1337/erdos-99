@@ -674,6 +674,61 @@ The finite source controls are deliberately bounded. A unit regular 43-gon has a
 
 The precise remaining global step is a planar, full-label endpoint of diameter strictly below D that respects every lower pair bound for every sufficiently large triangle-free global minimizer, or an independently established unbounded family of such global minimizers. A four-dimensional descent, one finite palette, a successful rim replacement, or finite exhaustive failure for one palette does not supply that statement.
 
+## Source-main exact-phase packet and cross-shore batch
+
+The next focused integration uses the same frozen source-main commit
+`42f0296d1aca068c809f74cee5dcdb4ebdb27c73` (tree
+`e061f039eac44c286a00eacdcaa9a4cbbb877891`) and destination base
+`4ce4fed103532ad42919896d025df1a6d4b72405` (tree
+`84318253c282e851aa1bbbad1dfd2dbba389ba16`). It brings ten source-main Target
+C reports into the destination and archives one older r1 report as an exact
+historical source copy. Five supporting research files are integrated; the
+laminar multishear proof itself was already an exact destination duplicate.
+Source blobs, byte hashes, source lifecycle, link transformations, and
+destinations are in the [artifact ledger](ledger/source-main-artifacts.jsonl),
+[research-file ledger](ledger/source-main-files.jsonl),
+[dependency ledger](ledger/source-main-dependencies.jsonl), and
+[closed-PR file ledger](ledger/source-closed-pr-files.jsonl).
+
+Mathematically, the r2 complete-grid report gives the stated joint switch
+inequality and bounded-cusp consequence under its exact crosscut hypotheses.
+The threshold packet reports separately establish edgewise transverse KKT
+balance, many bounded support packets, strictly positive but not uniformly
+bounded packet resultants, and an internal load shared across the opposite
+shore's cut equations. The conditional two-cut shear shortens a linear
+selected family when the opposite shore is not exact phase; this does not
+control every actual diameter pair. The nested matching report gives
+`Omega(D^(1/4))` pairwise-crossing actual-diameter edges with one common cut and
+full or nested terminal opposite-shore support. These are distinct candidate
+strengthenings and are not treated as redundant with the destination's cubic
+support budget or canonical Type-II floor.
+
+The exact remaining proof gap is quantitative and global: packet positivity
+does not bound aggregate load away from zero, boundary and layer rows may pay
+the opposite-shore correction, and the two-cut move does not produce a full
+source endpoint. The exact-phase branch still leaves split-star and
+inactive-interface cases. The imported full-span hostile audit's source
+classification is preserved as provenance only; the destination artifact
+state remains unreviewed. The old r1 joint-switch report is visibly superseded
+by r2, and the historical train-closure route snapshot is archived without
+retaining its source-side lifecycle as destination authority.
+
+The exact laminar multishear verifier is run locally for its own finite scope.
+The packet, r2, full-span-audit, and positive-prefix reports contain no
+computational verifier. The route track and candidate registry record this
+boundary and the missing whole-source endpoint. No canonical claim, C-II or
+Level I status, inverse-phase correction, inclusion entry, or repository
+visibility changes in this batch.
+
+The selected closed-PR comparison records ten exact changed paths from source
+PRs #603, #605, #606, #607, and #613. PR #603 is closed unmerged and its
+current source-main versions remain the import baseline. The #605/#606 source
+main reports and the #613 rail-deep-attachment report/verifier are queued for
+the next focused source-main batches. PR #607's rail-saturation deletion did
+not survive on source main; source main and destination retain the exact same
+bytes. The source #613 generated artifact-index change is not copied; the
+destination index is regenerated from its own artifact headers and manifest.
+
 ## Source PR #959 — reflected-scale criteria, moment obstruction, and capacity loss
 
 **Frozen source state:** main `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`; open draft PR #959 head `e25041f236d268a7e815dacd346180989690ed71`, tree `a0b268d8b050e0350c8ae2ffb38c139fc6570dab`; merge base `a43c69dac7e7b0627dec2900e12c60fd4608d519`. The exact PR delta has nine paths. Each path has source blob SHA, byte count, SHA-256, lifecycle, dependencies, treatment, and destination mapping in `ledger/source-pr-files.jsonl`.
@@ -706,3 +761,37 @@ The [focused track](../../tracks/global-factorized-distance-planarity-pr960.md) 
 The vertex-factor report and exact checker are preserved as noncanonical support. Its general Möbius/anti-Möbius classification and balanced-incidence obstruction overlap the existing stronger formal-array result and PR #960. Its distinct all-pair pole test gives strict-sub-`D` feasibility exactly when an inversion pole satisfies `M(x) < D^2 m(x)`, equivalently a finite family of strict quartic inequalities covering inactive pairs. It also retains a nine-label nonmetric factor array, a four-label three-dimensional metric with no planar realization, and an exact seven-label inversion competitor with two contact isolates and squared diameter `202/13 < 16`. These fixtures establish neither a large family nor globality.
 
 The merged hull/train report maps five older Target C research programs and preserves a conditional same-host/chord fork with no diameter edge, route payment, or endpoint. The related bulk-separator checker is an exact duplicate of an existing file. The operational recovery record is excluded because it contains private preservation operations; no mathematical proof input is lost. The [PR #960/#995 track](../../tracks/global-factorized-distance-planarity-pr960.md) gives exact proof limits, next obligations, dependencies and commands. Source and destination per-file treatment is recorded in the [ledger](ledger/source-pr-files.jsonl).
+
+## Source-only branch `research/sol/target-c-level1-gpt61-2026-10-04`
+
+Frozen at head `9875cd6a77939bb6347353fc798ab8f9ab03ec3e` and tree
+`198c83065add8175a921b4e9c55169e4690010a3`, this branch is not one of the
+open PR heads. Its branch-specific delta is measured from merge base
+`0351e2c529e01750f7aceb87f8f6f0cb9c21dea7` and comprises 19 paths. The
+[`source-branch-files.jsonl`](ledger/source-branch-files.jsonl) records each
+path's source commit, Git blob and SHA-256, source lifecycle, destination
+relation, transformation, and rights treatment.
+
+Five proof reports and five verifier scripts were exact destination
+duplicates. The one-vacancy, actual unit-wall, boundary-vacancy, and triangular
+two-pin proofs were retained as existing full reports; their identical
+verifiers remain attached. The multishear report was also already present, but
+its missing exact verifier is imported here. Three distinct full reports—one
+boundary pin, two-side polynomial refill, and universal convex-pentagon
+capacity—and their three exact verifiers are imported byte-for-byte. No
+candidate is classified as redundant merely because it studies refill or
+capacity: their angle ranges, deleted labels, polynomial margins, frame sizes,
+and conclusions differ. Their exact individual scopes are in the [capacity
+track](../../tracks/target-c-capacity-collective-refill.md) and registry.
+
+The branch's synthesis addenda and reproduction summaries are preserved
+through that track, the eight candidate records, and task prerequisites. Its
+generated index was not copied; the destination index was rebuilt from its
+own retained report headers. A source-only lifecycle narrative and one
+nonmathematical conversation-specific closing line were omitted. All eight
+verifiers pass with the recorded finite counts; none independently audits the
+analytic statements, global optimality, or canonical source extraction. The
+destination theorem-state, corrected inverse-phase demotion, and C-II/Level I
+status remain unchanged. No third-party paper text, credentials, or private
+infrastructure references were imported. Destination visibility remains
+private.

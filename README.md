@@ -14,7 +14,7 @@ This repository publishes a curated snapshot of the current theorem ledger, its 
 | --- | --- | --- |
 | A: source capacity and Schur response | Canonical through Section 177. The locked branch has an exact tube/right-deficiency reduction. The global source-specific surplus remains open. | [A](docs/targets/target-a/README.md) |
 | B: rhombic shell stability | Phase cuts, coherent crossing bounds and scoped dense-grid/interpolation tools are established. Global multi-grain payment and topology/boundary coupling remain open. | [B](docs/targets/target-b/README.md) |
-| C: KKT force geometry and rigidity | **C-I CLOSED; C-II OPEN.** Core rigidity and force/contact reductions do not yet supply a same-cardinality finite full-source move or restoration. | [C](docs/targets/target-c/README.md), [C-II](docs/targets/target-c/CURRENT.md) |
+| **C**: KKT force geometry and rigidity | **C-I CLOSED; C-II OPEN.** Core rigidity and force/contact reductions do not yet supply a same-cardinality finite full-source move or restoration. | [C](docs/targets/target-c/README.md), [C-II](docs/targets/target-c/CURRENT.md) |
 
 The missing A inequality is
 
@@ -42,7 +42,7 @@ Give an agent this instruction:
 
 Additional noncanonical whole-source investigations—including explicit Möbius transformation limitations and a formal joint stress/strain phase obstruction—are available in the [active proposal ledger](docs/research/proposals.md). Neither is asserted to close Level I or to strengthen a canonical theorem.
 
-The [20 substantive task cards](tasks/README.md) cover A, B, C-II, independent proof audits, exact computation and verification, shared geometry, literature scope, and alternative global approaches. The [research director](docs/research/README.md) records priorities and scoped family status. A useful proof, corrected scope, exact counterexample, independent verifier, negative result or precise handoff is valuable; a PR is optional when no durable contribution is ready.
+The [22 substantive task cards](tasks/README.md) cover A, B, C-II, independent proof audits, exact computation and verification, shared geometry, literature scope, and alternative global approaches. The [research director](docs/research/README.md) records priorities and scoped family status. A useful proof, corrected scope, exact counterexample, independent verifier, negative result or precise handoff is valuable; a PR is optional when no durable contribution is ready.
 
 ```sh
 python3 scripts/choose_research_task.py --count 1 --live-overlap --json
