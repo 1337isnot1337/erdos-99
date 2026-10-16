@@ -30,7 +30,7 @@ claimed here where that comparison has not been established.
 
 ## Cross-shard references
 
-The reports mention 61 distinct local source paths. Of these, 34 are present in
+The reports mention 61 distinct local source paths. Of these, 33 are present in
 the frozen source but absent from the frozen destination baseline. They include
 other Target C reports and verifier scripts, so they are recorded as unresolved
 cross-shard references rather than copied outside this shard. The exact list,
