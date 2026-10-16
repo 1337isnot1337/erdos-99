@@ -1,10 +1,13 @@
 """Real Git controls for index-hidden changes in final-candidate receipts."""
+import hashlib
+import json
 from pathlib import Path
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
 
-from tools.verify_publication_candidate import verify_committed_worktree
+from tools.verify_publication_candidate import review_history_gitleaks, verify_committed_worktree
 
 
 class CommittedCandidateTests(unittest.TestCase):
@@ -63,6 +66,62 @@ class CommittedCandidateTests(unittest.TestCase):
         self.file.symlink_to('/dev/null')
         with self.assertRaises(ValueError):
             verify_committed_worktree(self.root, self.candidate)
+
+
+class HistoricalScannerReviewTests(unittest.TestCase):
+    # Reuse real Git setup without rerunning the inherited immutability tests.
+    git = CommittedCandidateTests.git
+
+    def setUp(self):
+        CommittedCandidateTests.setUp(self)
+        self.report = Path(self.tmp.name) / 'scanner.json'
+        self.match = {'Commit': self.candidate, 'File': 'certificate.py',
+                      'RuleID': 'private-key', 'StartLine': 1, 'EndLine': 1,
+                      'Fingerprint': self.candidate + ':certificate.py:private-key:1'}
+        digest = hashlib.sha256(self.file.read_bytes()).hexdigest()
+        for name, value in [('REVIEWED_HISTORY_FIXTURE', self.match),
+                            ('REVIEWED_HISTORY_BLOB_SHA256', digest)]:
+            context = patch('tools.verify_publication_candidate.' + name, value)
+            context.start()
+            self.addCleanup(context.stop)
+        self.report.write_text(json.dumps([self.match]))
+
+    def test_exact_review_retains_raw_finding_identity(self):
+        result = review_history_gitleaks(self.root, self.report)
+        self.assertEqual(result['disposition'], 'reviewed-false-positive')
+        self.assertEqual(result['finding'], self.match)
+        self.assertTrue(result['raw_scanner_result_preserved'])
+
+    def test_added_finding_is_not_covered(self):
+        self.report.write_text(json.dumps([self.match, self.match]))
+        self.assertIsNone(review_history_gitleaks(self.root, self.report))
+
+    def test_changed_finding_identity_is_not_covered(self):
+        for key in self.match:
+            with self.subTest(key=key):
+                changed = {**self.match, key: 'different'}
+                self.report.write_text(json.dumps([changed]))
+                self.assertIsNone(review_history_gitleaks(self.root, self.report))
+
+    def test_missing_malformed_or_empty_report_is_not_covered(self):
+        for contents in ['', 'null', '{}', '[]', '[null]']:
+            with self.subTest(contents=contents):
+                self.report.write_text(contents)
+                self.assertIsNone(review_history_gitleaks(self.root, self.report))
+        self.report.unlink()
+        self.assertIsNone(review_history_gitleaks(self.root, self.report))
+
+    def test_committed_blob_digest_must_match(self):
+        with patch('tools.verify_publication_candidate.REVIEWED_HISTORY_BLOB_SHA256', '0' * 64):
+            self.assertIsNone(review_history_gitleaks(self.root, self.report))
+
+    def test_worktree_substitution_does_not_change_reviewed_git_object(self):
+        self.file.write_text('A different uncommitted fixture\n')
+        self.assertIsNotNone(review_history_gitleaks(self.root, self.report))
+
+    def test_missing_git_object_is_not_covered(self):
+        self.git('init', '-q', str(self.root / 'empty'))
+        self.assertIsNone(review_history_gitleaks(self.root / 'empty', self.report))
 
 
 if __name__ == '__main__':

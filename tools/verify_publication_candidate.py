@@ -20,6 +20,49 @@ import sys
 import time
 
 
+# A reviewed scanner match, not a Gitleaks allowlist. The unmodified scanner
+# still runs over all reachable history and its raw report/exit are retained.
+REVIEWED_HISTORY_FIXTURE = {
+    'Commit': '08784c2440aa2f6f4252adc30f7ce33cd59cf976',
+    'File': 'tools/test_local_ci.py',
+    'RuleID': 'private-key',
+    'StartLine': 386,
+    'EndLine': 390,
+    'Fingerprint': '08784c2440aa2f6f4252adc30f7ce33cd59cf976:tools/test_local_ci.py:private-key:386',
+}
+REVIEWED_HISTORY_BLOB_SHA256 = '509b6ed834755b0ae83cd48bcef34cc6a5016d5e375d24f64e92eb4f3f856f92'
+
+
+def review_history_gitleaks(root: Path, report: Path) -> dict | None:
+    """Recognize only the exact reviewed, payload-free historical test fixture.
+
+    Missing/malformed reports, extra matches, changed identities and unavailable
+    or different Git objects all fail closed. No worktree/index bytes are used.
+    """
+    try:
+        findings = json.loads(report.read_text())
+        if not isinstance(findings, list) or len(findings) != 1:
+            return None
+        match = findings[0]
+        if not isinstance(match, dict) or any(match.get(k) != v for k, v in REVIEWED_HISTORY_FIXTURE.items()):
+            return None
+        data = subprocess.check_output([
+            'git', '--no-replace-objects', '-C', str(root), 'show',
+            REVIEWED_HISTORY_FIXTURE['Commit'] + ':' + REVIEWED_HISTORY_FIXTURE['File'],
+        ], stderr=subprocess.PIPE)
+        if hashlib.sha256(data).hexdigest() != REVIEWED_HISTORY_BLOB_SHA256:
+            return None
+        return {
+            'disposition': 'reviewed-false-positive',
+            'finding': REVIEWED_HISTORY_FIXTURE,
+            'committed_blob_sha256': REVIEWED_HISTORY_BLOB_SHA256,
+            'reason': 'Two PEM opening delimiters in negative-test strings; no closing delimiter or encoded private-key payload. Exact historical blob independently inspected.',
+            'raw_scanner_result_preserved': True,
+        }
+    except (OSError, ValueError, subprocess.SubprocessError):
+        return None
+
+
 def verify_committed_worktree(root: Path, candidate: str) -> int:
     """Check raw bytes/modes without trusting index flags or checkout filters."""
     def git(*argv):
@@ -88,7 +131,7 @@ def main():
     child_env['PYTHONPYCACHEPREFIX'] = str(output / 'pycache')
     receipt['python_import_controls'] = 'Inherited Python path/home/startup overrides removed; fresh external bytecode cache'
 
-    def run(name, argv, *, clearance=False):
+    def run(name, argv, *, clearance=False, history_report=None):
         started = time.monotonic()
         with (output / (name + '.log')).open('wb') as log:
             proc = subprocess.run(argv, cwd=root, stdout=log, stderr=subprocess.STDOUT,
@@ -96,9 +139,18 @@ def main():
         record = {'name': name, 'argv': argv, 'exit_code': proc.returncode,
                   'seconds': round(time.monotonic() - started, 3),
                   'log': name + '.log', 'clearance_gate': clearance}
+        record['verification_passed'] = proc.returncode == 0
+        # Exit 1 denotes detected findings. Invocation failures and every other
+        # finding remain failures; never change or discard the raw exit code.
+        if proc.returncode == 1 and history_report is not None:
+            review = review_history_gitleaks(root, history_report)
+            if review is not None:
+                record['finding_review'] = review
+                record['verification_passed'] = True
         receipt['commands'].append(record)
         (output / 'receipt.json').write_text(json.dumps(receipt, indent=2) + '\n')
-        print(f'{name}: exit={proc.returncode}, seconds={record["seconds"]}', flush=True)
+        print(f'{name}: exit={proc.returncode}, seconds={record["seconds"]}' +
+              ('; exact historical fixture reviewed as false positive' if 'finding_review' in record else ''), flush=True)
 
     python = sys.executable
     run('environment', [python, '-m', 'pip', 'check'])
@@ -118,7 +170,8 @@ def main():
         run('gitleaks-tree', [executable, 'dir', '--no-banner', '--redact', '--report-format', 'json',
                               '--report-path', str(output / 'gitleaks-tree.json'), '.'])
         run('gitleaks-history', [executable, 'git', '--no-banner', '--redact', '--report-format', 'json',
-                                 '--report-path', str(output / 'gitleaks-history.json'), '--log-opts=--all', '.'])
+                                 '--report-path', str(output / 'gitleaks-history.json'), '--log-opts=--all', '.'],
+            history_report=output / 'gitleaks-history.json')
     if args.actionlint:
         run('actionlint', [str(args.actionlint.resolve())])
     run('whitespace', ['git', 'diff', '--check'])
@@ -131,9 +184,9 @@ def main():
                                       git('rev-parse', 'HEAD^{tree}') == tree and
                                       not git('status', '--porcelain', '--untracked-files=normal'))
     receipt['executable_checks_passed'] = (receipt['candidate_unchanged'] and
-        all(r['exit_code'] == 0 for r in receipt['commands'] if not r['clearance_gate']))
+        all(r['verification_passed'] for r in receipt['commands'] if not r['clearance_gate']))
     receipt['automated_release_precheck_passed'] = (receipt['executable_checks_passed'] and
-        all(r['exit_code'] == 0 for r in receipt['commands']) and args.gitleaks is not None)
+        all(r['verification_passed'] for r in receipt['commands']) and args.gitleaks is not None)
     # Even a scanner-clean tree still needs separate factual permissions and visibility approval.
     receipt['limits'] = ['No automated run grants source rights or contributor consent.',
                          'Hosted CI and anonymous public access are not exercised.',
