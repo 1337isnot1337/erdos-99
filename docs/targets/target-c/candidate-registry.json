@@ -3462,6 +3462,384 @@
         "source_merge_base": "8c6f37127fbf119fe7ae3745babd1130a6628a09"
       },
       "rights_and_release": "Owner-authorized first-party project material. No third-party papers or PDFs were copied. The linked Audit 245 is an existing canonical dependency only for the optional lattice refinement; the arbitrary-cloud result remains separately scoped. Full source and destination hashes are recorded in the migration ledger."
+    },
+    {
+      "candidate_id": "GLOBAL-POPULATION-BOUNDARY-ZIGZAG-PR956",
+      "title": "Boundary-zigzag global linear population reserve",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed candidate in frozen open source PR #956; destination theorem-state remains authoritative.",
+      "target_scope": [
+        "Level I global population comparison",
+        "Target C cross-target population/capacity context"
+      ],
+      "claim": {
+        "statement": "For every R>=640000, each translate of the unit triangular lattice cropped to a closed radius-R disk admits a unit-separated replacement gaining at least R/160000 points. Consequently every global minimum-diameter n-point unit-separated set with D>1280000 satisfies g_A=n-1-pi D^2/(2 sqrt(3)) >= D/320000.",
+        "hypotheses": [
+          "Exact row replacement, guarded simultaneous row packets, and translation averaging as proved in the full report.",
+          "Global minimality is used only after constructing an independent strict-smaller-diameter competitor; every original source label is retained in the cardinality comparison."
+        ],
+        "not_claimed": [
+          "No triangle conclusion, no source-lattice identification, no finite C-II competitor, and no Level I closure.",
+          "No canonical promotion."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [],
+        "comparison_scope": "Independent proof architecture. Its D/320000 reserve and D>1280000 onset are weaker than PR #1008’s D/600 bound at D>=10^6; it is not an improvement and does not depend on that proof. Both remain unreviewed.",
+        "replacement_status": "none; no theorem-state claim is promoted or superseded by this import"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_boundary_zigzag_linear_reserve_2026-10-11.md",
+          "role": "full analytic proof / regression report",
+          "source_git_blob_sha": "5466a7454b469077c0f8532aaff93884680014e0",
+          "source_sha256": "5613444ab0f885161ffb81f31ef52f14d9c9a2c7a7fdfc6e7d43734cb4770e5d",
+          "destination_sha256": "5613444ab0f885161ffb81f31ef52f14d9c9a2c7a7fdfc6e7d43734cb4770e5d",
+          "source_artifact_id": "ART-8A94C71ECC92",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_global_boundary_zigzag_2026_10_11.py",
+          "role": "finite verifier; see report for universal scope",
+          "source_git_blob_sha": "530f3c7a0047ba599ceccc1ee8f40e60a4c723d8",
+          "source_sha256": "7742036006a6c2ffda5932a628092550d3b05e85d1f1320adddf71e23befc821",
+          "destination_sha256": "7742036006a6c2ffda5932a628092550d3b05e85d1f1320adddf71e23befc821",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [
+          "POPRESERVE-TWELVE-ARC-PR1008"
+        ],
+        "canonical_claims": [],
+        "description": "Listed canonical claims provide comparison or context only; candidate statements remain at the source report scope. Candidate-to-candidate relation details and conditional dependencies are stated explicitly."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "Target C / Level I",
+          "result": "The reserve is a lower bound. No source-specific upper reserve, triangle forcing, or admissible C-II endpoint is supplied."
+        }
+      ],
+      "validation": {
+        "command": "python3 research/verify_global_boundary_zigzag_2026_10_11.py",
+        "result": "PASS; exact finite packet and pair-ledger controls; the all-radius row construction remains analytic proof.",
+        "boundary": "Finite/formal verifier checks do not independently prove the universal analytic argument, global optimality, or the Target C source-extraction bridge."
+      },
+      "next_proof_obligations": [
+        "Prove a source-specific upper bound below a valid linear reserve for every sufficiently large triangle-free global minimizer, or close Level I by another global mechanism.",
+        "Obtain an independent destination exact-head AI-agent mathematical audit before any consequential promotion."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 956,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/956",
+        "source_pr_draft": true,
+        "source_head_sha": "bbc549f36ac964fd7eee211782eb2c979d12af32",
+        "source_head_tree": "3d8550adf520dcacd17876d6ddf1970a6c9e857e",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_base_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+        "source_merge_base": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+        "source_merge_base_tree": "8c9e8868acbef9a1b50860e0a34f00edba13bbf8"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent-generated material",
+        "third_party_material": "bibliographic citations and links only; no protected papers/PDFs/extractions copied",
+        "visibility": "destination remains private; this import does not change repository visibility",
+        "destination_claim_status": "unreviewed; canonical theorem-state unchanged"
+      }
+    },
+    {
+      "candidate_id": "GLOBAL-LATTICE-DEFECT-PERIODIC-PR956",
+      "title": "Uniform lattice population bound and conditional periodic-motif obstruction",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed candidate in frozen open source PR #956; destination theorem-state remains authoritative.",
+      "target_scope": [
+        "Level I global population comparison",
+        "Target C cross-target population/capacity context"
+      ],
+      "claim": {
+        "statement": "For a finite subset S of any translated unit-separated rank-two lattice with actual diameter at most D>=1, |S|<=a D^2+86 D^(4/5)+1, a=pi/(2 sqrt(3)). Conditional on the PR #956 boundary reserve, for rho=10^-7 every sufficiently large global minimizer has at least D/640000 labels farther than rho from every translated unit-separated lattice. For a globally unit-separated periodic packing with 1<=q<=D/16 sites per cell, |S|<=a D^2+114 q^(6/5)D^(4/5)+q; combined with that reserve, for D>1280000 this forces q>=D^(1/6)/(36800000^(5/6)).",
+        "hypotheses": [
+          "Finite source subset has actual pairwise diameter at most D; the containing lattice is unit-separated.",
+          "Defect consequence is conditional on the unreviewed boundary reserve.",
+          "Periodic result assumes the entire infinite union of all cosets is unit-separated, including every cross-coset pair.",
+          "The periodic finite-subset inequality is asserted for 1<=q<=D/16; its separate lower bound on q handles q>D/16 directly.",
+          "The minimizer defect and periodic motif consequences use the boundary reserve for D>1280000."
+        ],
+        "not_claimed": [
+          "No lattice/periodic/grain extraction from every triangle-free global minimizer.",
+          "No Level I closure or bounded-motif contradiction for unrestricted sources.",
+          "The 39-lattice example is a nonglobal finite-union regression, not a canonical counterexample."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [
+          "C-TRIANGULAR-LATTICE-STRICT-D-COMPETITOR-RESERVE"
+        ],
+        "comparison_scope": "Conditional downstream consequences of the PR #956 reserve. Canonical finite Oler and the strict translated-lattice comparison are used at their registered scope; their use does not promote the reserve or identify source geometry.",
+        "replacement_status": "none; no theorem-state claim is promoted or superseded by this import"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_lattice_defect_from_linear_reserve_2026-10-11.md",
+          "role": "full analytic proof / regression report",
+          "source_git_blob_sha": "6b5b423fba0384d856a336c9c8154d1333808a8d",
+          "source_sha256": "0dcbb08f7c68c544e47b2636bc6789ec17026f5692f3368cd961433813ba30b1",
+          "destination_sha256": "0dcbb08f7c68c544e47b2636bc6789ec17026f5692f3368cd961433813ba30b1",
+          "source_artifact_id": "ART-9EC4573C677B",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_global_lattice_population_bound_2026_10_11.py",
+          "role": "finite verifier; see report for universal scope",
+          "source_git_blob_sha": "e16495df8e7e5cbeea4241a141bd7709e5fe10dc",
+          "source_sha256": "c17b5608c62885190e5fd2bd9b2479808272cbc7ca65189a7c99a3d15826c4fa",
+          "destination_sha256": "c17b5608c62885190e5fd2bd9b2479808272cbc7ca65189a7c99a3d15826c4fa",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [
+          "GLOBAL-POPULATION-BOUNDARY-ZIGZAG-PR956"
+        ],
+        "canonical_claims": [
+          "C-TRIANGULAR-LATTICE-STRICT-D-COMPETITOR-RESERVE"
+        ],
+        "description": "Listed canonical claims provide comparison or context only; candidate statements remain at the source report scope. Candidate-to-candidate relation details and conditional dependencies are stated explicitly."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "finite union of lattice descriptions",
+          "result": "Exact 39-lattice triangle-free nonglobal regression blocks treating a finite union as one lattice or adding populations without validated cross-grain separation."
+        },
+        {
+          "scope": "periodic packing",
+          "result": "The whole infinite packing must be separated, including cross-coset distances; finite crop separation is insufficient."
+        }
+      ],
+      "validation": {
+        "command": "python3 research/verify_global_lattice_population_bound_2026_10_11.py",
+        "result": "PASS; exact finite arithmetic and 39-lattice regression; analytic all-D and infinite-packing claims remain in the report.",
+        "boundary": "Finite/formal verifier checks do not independently prove the universal analytic argument, global optimality, or the Target C source-extraction bridge."
+      },
+      "next_proof_obligations": [
+        "Extract a single unit-separated lattice or a fully separated periodic packing from every relevant global source, or derive a paid nonoverlapping grain decomposition with all labels.",
+        "For a Target C contradiction, combine an extracted structure with the reserve and a source-specific upper bound or finite competitor."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 956,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/956",
+        "source_pr_draft": true,
+        "source_head_sha": "bbc549f36ac964fd7eee211782eb2c979d12af32",
+        "source_head_tree": "3d8550adf520dcacd17876d6ddf1970a6c9e857e",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_base_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+        "source_merge_base": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+        "source_merge_base_tree": "8c9e8868acbef9a1b50860e0a34f00edba13bbf8"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent-generated material",
+        "third_party_material": "bibliographic citations and links only; no protected papers/PDFs/extractions copied",
+        "visibility": "destination remains private; this import does not change repository visibility",
+        "destination_claim_status": "unreviewed; canonical theorem-state unchanged"
+      }
+    },
+    {
+      "candidate_id": "GLOBAL-STRAIGHT-INTERFACE-PAYMENT-PR956",
+      "title": "Exact boundary-row payment for straight lattice interfaces",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed candidate in frozen open source PR #956; destination theorem-state remains authoritative.",
+      "target_scope": [
+        "Level I global population comparison",
+        "Target C cross-target population/capacity context"
+      ],
+      "claim": {
+        "statement": "For two complete unit-separated rank-two lattice half-planes with parallel front rows and every cross-pair separated by at least one, the stated row-count hypotheses imply 2g>=a0(1/s_A+1/s_B)-N(V_A-a0)/s_A-M(V_B-a0)/s_B. If V_A=V_B=a0=sqrt(3)/2, then g>=(h_A+h_B)/2. A finite-window version carries an explicit endpoint cost.",
+        "hypotheses": [
+          "Both lattices have the report’s displayed parallel-front basis form and minimal vector length at least one.",
+          "Every cross-pair of the two complete infinite half-planes is unit-separated.",
+          "Positive integers N,M satisfy Nh_A>=1 and Mh_B>=1; finite windows require their stated endpoint allowance."
+        ],
+        "not_claimed": [
+          "No extraction of complete half-planes from canonical coherent grains.",
+          "No o(D) junction/outer cost, area-disjointness/global summation, or all-label/isolate decomposition.",
+          "No Level I closure."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [
+          "C-COHERENT-GRAINS"
+        ],
+        "comparison_scope": "Canonical coherent grains supply phase-coherent regions and an O(D) interface budget only; they do not establish this report’s complete-half-plane or o(D) junction hypotheses. The boundary reserve is relevant only to the proposed global contradiction route, not to the seam inequality itself.",
+        "replacement_status": "none; no theorem-state claim is promoted or superseded by this import"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_straight_interface_payment_2026-10-11.md",
+          "role": "full analytic proof / regression report",
+          "source_git_blob_sha": "1141ee011873d02a35ab526f880ab79d0f19c5ad",
+          "source_sha256": "25354623c3559f78e5d8be5369a9c0f55cebd2c8c7efcb1bdd5ad79193430832",
+          "destination_sha256": "25354623c3559f78e5d8be5369a9c0f55cebd2c8c7efcb1bdd5ad79193430832",
+          "source_artifact_id": "ART-2C7494B3907E",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_global_straight_interface_payment_2026_10_11.py",
+          "role": "finite verifier; see report for universal scope",
+          "source_git_blob_sha": "b6cc728fde70394f01eb918e9c8f81cf61344f45",
+          "source_sha256": "ac1c044aa097734acfa21cc66012ed46d7523d62285fb147a9cea44cfca84e5a",
+          "destination_sha256": "ac1c044aa097734acfa21cc66012ed46d7523d62285fb147a9cea44cfca84e5a",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [
+          "GLOBAL-POPULATION-BOUNDARY-ZIGZAG-PR956",
+          "GLOBAL-LATTICE-DEFECT-PERIODIC-PR956"
+        ],
+        "canonical_claims": [
+          "C-COHERENT-GRAINS"
+        ],
+        "description": "Listed canonical claims provide comparison or context only; candidate statements remain at the source report scope. Candidate-to-candidate relation details and conditional dependencies are stated explicitly."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "source realization",
+          "result": "Current canonical grain theorem does not supply complete infinite half-planes or the report’s all-cross-pair separation."
+        },
+        {
+          "scope": "assembly",
+          "result": "Finite endpoint, junction, outer boundary, disjoint area, and isolate costs remain to be paid before summing interfaces."
+        }
+      ],
+      "validation": {
+        "command": "python3 research/verify_global_straight_interface_payment_2026_10_11.py",
+        "result": "PASS; exact representative seam/payment and negative-window controls; infinite pair/density theorem remains analytic.",
+        "boundary": "Finite/formal verifier checks do not independently prove the universal analytic argument, global optimality, or the Target C source-extraction bridge."
+      },
+      "next_proof_obligations": [
+        "Derive the complete-interface geometry from actual canonical source regions with exact cross-pair checks.",
+        "Prove summable endpoint/junction/outer bounds and disjoint payment while allocating every source label and isolate."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 956,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/956",
+        "source_pr_draft": true,
+        "source_head_sha": "bbc549f36ac964fd7eee211782eb2c979d12af32",
+        "source_head_tree": "3d8550adf520dcacd17876d6ddf1970a6c9e857e",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_base_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+        "source_merge_base": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+        "source_merge_base_tree": "8c9e8868acbef9a1b50860e0a34f00edba13bbf8"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent-generated material",
+        "third_party_material": "bibliographic citations and links only; no protected papers/PDFs/extractions copied",
+        "visibility": "destination remains private; this import does not change repository visibility",
+        "destination_claim_status": "unreviewed; canonical theorem-state unchanged"
+      }
+    },
+    {
+      "candidate_id": "GLOBAL-STRESS-DENSITY-REGRESSION-PR956",
+      "title": "Odd-ring stress and rigidity do not force a density loss",
+      "status": "unreviewed",
+      "source_lifecycle": "Unreviewed candidate in frozen open source PR #956; destination theorem-state remains authoritative.",
+      "target_scope": [
+        "Level I global population comparison",
+        "Target C cross-target population/capacity context"
+      ],
+      "claim": {
+        "statement": "For every odd q>=5 the regular contact ring has positive contact and diameter equilibrium weights, exact mixed rigidity rank 2q-3, and local isolation among same-label feasible configurations of diameter at most D modulo Euclidean motions. Adding strictly separated interior contact isolates gives triangle-free sources with n_q/D^2 tending to pi/(2 sqrt(3)); a same-cardinality competitor has diameter <D-4, so the examples are strictly nonglobal.",
+        "hypotheses": [
+          "The analytic ring formulas and spectral/rank statements in the report; the isolate disk construction is for all sufficiently large odd q.",
+          "Strict nonglobality uses the canonical translated-triangular-lattice comparison at its registered scope."
+        ],
+        "not_claimed": [
+          "No global minimizer or counterexample to Level I is constructed.",
+          "Only the listed local support/stress/rigidity/hull/density hypotheses are shown insufficient for a fixed positive density-loss claim.",
+          "No full-source stress-kernel claim for isolates."
+        ]
+      },
+      "relation_to_canonical": {
+        "canonical_claims": [
+          "C-TRIANGULAR-LATTICE-STRICT-D-COMPETITOR-RESERVE"
+        ],
+        "comparison_scope": "This is an exact nonglobal regression against local-to-global inference. Its competitor explicitly shows why the source does not contradict the canonical global-minimizer problem.",
+        "replacement_status": "none; no theorem-state claim is promoted or superseded by this import"
+      },
+      "artifacts": [
+        {
+          "path": "docs/reports/global_stress_density_regression_2026-10-11.md",
+          "role": "full analytic proof / regression report",
+          "source_git_blob_sha": "c6af026b41b208c3000a7c6ddbd81afc61ec2542",
+          "source_sha256": "bab8d3997c8fab67928557a0b95929a9688c929d044931bd3a15b1bd18709a14",
+          "destination_sha256": "bab8d3997c8fab67928557a0b95929a9688c929d044931bd3a15b1bd18709a14",
+          "source_artifact_id": "ART-98AB06F9B50D",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        },
+        {
+          "path": "research/verify_global_stress_density_regression_2026_10_11.py",
+          "role": "finite verifier; see report for universal scope",
+          "source_git_blob_sha": "d99dc0931e3866ead2edc38077d2c66a1177de87",
+          "source_sha256": "76f2d64616a2d52f509eec404f5ded82c34f31861ebd5375a802ff6975f92f02",
+          "destination_sha256": "76f2d64616a2d52f509eec404f5ded82c34f31861ebd5375a802ff6975f92f02",
+          "source_claim_ids": [],
+          "source_pr_claim_statuses": {}
+        }
+      ],
+      "dependencies": {
+        "candidate_relations": [],
+        "canonical_claims": [
+          "C-TRIANGULAR-LATTICE-STRICT-D-COMPETITOR-RESERVE"
+        ],
+        "description": "Listed canonical claims provide comparison or context only; candidate statements remain at the source report scope. Candidate-to-candidate relation details and conditional dependencies are stated explicitly."
+      },
+      "obstructions_and_limits": [
+        {
+          "scope": "globality",
+          "result": "Same-cardinality competitor has diameter <D-4; the constructed rings with isolates are strictly nonglobal."
+        },
+        {
+          "scope": "stress",
+          "result": "Full-source zero rows correspond to contact isolates; no affine-kernel assertion is made for the full source."
+        }
+      ],
+      "validation": {
+        "command": "python3 research/verify_global_stress_density_regression_2026_10_11.py",
+        "result": "PASS; finite rational/algebraic instances and strict nonglobal controls; universal ring analysis is stated in the report.",
+        "boundary": "Finite/formal verifier checks do not independently prove the universal analytic argument, global optimality, or the Target C source-extraction bridge."
+      },
+      "next_proof_obligations": [
+        "Any use of local stress/rigidity for a global theorem must add a genuinely global consequence, resolve the boundary-order population term, or construct a full-source competitor.",
+        "Keep the ring as a regression control for future density arguments."
+      ],
+      "provenance": {
+        "source_repository": "https://github.com/1337isnot1337/e-99",
+        "source_pr": 956,
+        "source_pr_url": "https://github.com/1337isnot1337/e-99/pull/956",
+        "source_pr_draft": true,
+        "source_head_sha": "bbc549f36ac964fd7eee211782eb2c979d12af32",
+        "source_head_tree": "3d8550adf520dcacd17876d6ddf1970a6c9e857e",
+        "source_base_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+        "source_base_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+        "source_merge_base": "eb51394f371aee958b0d9332f80faf75ae694b9e",
+        "source_merge_base_tree": "8c9e8868acbef9a1b50860e0a34f00edba13bbf8"
+      },
+      "rights_and_release": {
+        "first_party_status": "owner-authorized first-party research and project-agent-generated material",
+        "third_party_material": "bibliographic citations and links only; no protected papers/PDFs/extractions copied",
+        "visibility": "destination remains private; this import does not change repository visibility",
+        "destination_claim_status": "unreviewed; canonical theorem-state unchanged"
+      }
     }
   ]
 }

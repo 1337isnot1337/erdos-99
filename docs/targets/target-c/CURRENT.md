@@ -51,6 +51,29 @@ large triangle-free global minimizer has \(g_A\le cD+o(D)\) for some fixed
 The report also gives a nonglobal triangle-free high-reserve regression, which
 blocks dropping global optimality from that proposed upper-bound route.
 
+## Global population reserve, lattice defect, and straight-interface payments
+
+Source PR #956 adds an independent, **unreviewed** boundary-zigzag proof of
+`g_A >= D/320000` for every global minimizer with `D > 1280000`. It is a
+strict-diameter whole-packing comparison and does not identify a minimizer
+with a lattice or close Level I. The reserve is weaker in constant and later
+in threshold than the separate unreviewed PR #1008 candidate's `D/600` bound
+for `D >= 10^6`; both proof architectures remain available and neither is
+canonical.
+
+Conditional on the PR #956 reserve, its uniform lattice count forces at least
+`D/640000` full-source labels farther than `10^-7` from every unit-separated
+lattice, and its cross-coset periodic-packing estimate, for `1 <= q <= D/16`,
+rules out a bounded periodic motif for unbounded minimizers (the bound is stated for `D > 1280000`). It does not extract a lattice or
+periodic packing from triangle-free sources. The straight-interface theorem
+pays exact boundary credits for complete parallel lattice half-planes, but
+canonical coherent grains do not supply its full-plane geometry or `o(D)`
+junction budget. Its odd-ring regression shows that positive local stress,
+mixed rigidity, local diameter minimality, and near-optimal density still do
+not imply global optimality. See the [full track](../../research/tracks/global-population-lattice-interface-pr956.md),
+[reports and verifiers](../../research/proposals.md), and [candidate registry](candidate-registry.json).
+
+
 ## Midpoint localization, leaf anchors, and supplied-chart exclusions
 
 The pinned source PR #947 audits are preserved in the [candidate registry](candidate-registry.json)

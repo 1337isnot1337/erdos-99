@@ -128,6 +128,16 @@ source paths, plus the release-safety transformations for retained reports
 from source main and PR #952. The [scientific reconciliation](scientific-reconciliation.md)
 records the full content comparison and authority boundary.
 
+
+
+## Source PR #956 — global population and interface batch
+
+Frozen source main is `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`; source PR #956 was an open draft at head `bbc549f36ac964fd7eee211782eb2c979d12af32` (tree `3d8550adf520dcacd17876d6ddf1970a6c9e857e`), merge base `eb51394f371aee958b0d9332f80faf75ae694b9e` (tree `8c9e8868acbef9a1b50860e0a34f00edba13bbf8`). All eleven changed paths are individually reconciled in the [PR file ledger](ledger/source-pr-files.jsonl).
+
+Four new full reports and four exact verifiers preserve (1) the boundary-zigzag `D/320000` population candidate, (2) a uniform lattice count and conditional full-source/periodic defect results, (3) exact payment for complete parallel lattice interfaces, and (4) a nonglobal odd-ring regression against local-only density arguments. The substantive claims remain unreviewed. The source AI proof audit is retained with a policy clarification; it does not satisfy destination exact-head review. The original source index was not copied over the destination catalogue: its generated rows were rebuilt while retaining the destination's prior entries. The source research README was adapted into the existing destination catalogue.
+
+The exact mathematical scopes, relation to the stronger PR #1008 reserve, 39-lattice and odd-ring obstructions, candidate status, and next obligations are in the [focused track](../../tracks/global-population-lattice-interface-pr956.md) and [independent scientific reconciliation](scientific-reconciliation.md). All four verifier commands are recorded in the root [research reproduction index](../../../../research/README.md); their results are in the batch receipt. Canonical theorem-state and the registered certificate set are unchanged.
+
 ## Frozen repositories
 
 - Source main: `42f0296d1aca068c809f74cee5dcdb4ebdb27c73` (tree `e061f039eac44c286a00eacdcaa9a4cbbb877891`).
