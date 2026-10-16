@@ -30,3 +30,7 @@ After the original 94-certificate receipt, the post-baseline private PR #1005 ma
 - `python research/verify_global_separable_distortion_obstruction.py`: 499 odd-rim marginal checks, 122 exact cyclotomic all-pair Möbius identities, and Cayley–Menger nonplanarity determinant -72 — **PASS**.
 
 These are independent computational replays of limited claims, not human proof reviews or tests of source-global optimality. The original comprehensive 94-certificate and public checker results were recorded on the earlier candidate; **the final integrated release commit has not yet been fully reverified**. Rights/history publication gates remain open.
+
+## Independent release-security regression expansion
+
+The earlier publication scanner inspected only the current Git tree. An independent synthetic reproduction demonstrated that a prior reachable deleted credential and restricted paper were missed, even when HEAD appeared clean. The revised scanner now traverses every reachable revision and historic blob (with a fail-closed size limit) and inspects commit messages and other branch refs. All **10** publication-audit fixture tests passed independently on Python 3.12, including deleted-secret, deleted-PDF, alternate-branch-secret and commit-message-secret cases. No actual private/public corpus full-history scanner execution is claimed until the final checkout is available. This improvement does not waive rights, personal author-email consent, full mathematical verification, or fresh outsider A/B/C research sessions.

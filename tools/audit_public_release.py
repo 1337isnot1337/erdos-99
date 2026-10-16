@@ -2,8 +2,8 @@
 """Fail-closed release audit for a curated E99 repository.
 
 Independent of the theorem verifier: checks publication boundaries, recorded
-source inventory, exact public file hashes, known credential markers and reachable
-commit metadata. It is NOT legal rights clearance, mathematical proof review,
+source inventory, exact public file hashes, credential markers in current
+and historical blobs or commit messages, and all reachable commit metadata. It is NOT legal rights clearance, mathematical proof review,
 or an all-pattern secret scanner.
 """
 from __future__ import annotations
@@ -185,6 +185,86 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
             finding("docs/publication/inclusion.json", "rights-clearance-pending",
                     f'{counts["pending_rights_reviews"]} pending and {counts["unknown_rights_reviews"]} unknown source rights; project license does not clear them')
 
+    # HEAD-only scans are insufficient for publication. Git exposes deleted
+    # files in ancestor commits and files reachable through other branch refs.
+    # Walk every reachable tree; inspect historical-only blob bytes as well.
+    try:
+        history_revs = git(root, "rev-list", "--all").decode("ascii").splitlines()
+        current_blobs = {oid for _, _, kind, oid in entries if kind == "blob"}
+        current_entries = set(entries)
+        historic_seen = set()
+        historic_blobs = {}
+        counts["reachable_history_commits_scanned"] = len(history_revs)
+        for rev in history_revs:
+            if not HEX40.fullmatch(rev):
+                raise ValueError("invalid commit SHA in reachable revision list")
+            for item in git(root, "ls-tree", "-r", "-z", rev).split(b"\x00"):
+                if not item:
+                    continue
+                meta, name = item.split(b"\t", 1)
+                mode, kind, oid = meta.decode("ascii").split()
+                rel = name.decode("utf-8", "surrogateescape")
+                entry = (rel, mode, kind, oid)
+                if entry in current_entries or entry in historic_seen:
+                    continue
+                historic_seen.add(entry)
+                where = "<history:" + rev[:12] + ">/" + rel
+                if not allowed_relative(rel):
+                    finding(where, "historical-unsafe-path", "Historic path is noncanonical")
+                if kind != "blob" or mode not in ("100644", "100755"):
+                    finding(where, "historical-special-object",
+                            "Historical Git object was not a regular file")
+                if rel.startswith(RESTRICTED_PREFIXES) or rel.lower().endswith(RESTRICTED_EXTENSIONS):
+                    finding(where, "historical-restricted-redistribution",
+                            "A previously committed restricted source remains reachable")
+                if kind == "blob" and oid not in current_blobs:
+                    historic_blobs.setdefault(oid, (rev, rel))
+        counts["historic_distinct_paths_or_versions"] = len(historic_seen)
+        counts["historical_only_blobs"] = len(historic_blobs)
+        if scan_content:
+            for oid, (rev, rel) in historic_blobs.items():
+                if not HEX40.fullmatch(oid):
+                    raise ValueError("invalid reachable historical blob SHA")
+                where = "<history:" + rev[:12] + ">/" + rel
+                size = int(git(root, "cat-file", "-s", oid).decode("ascii").strip())
+                if size > 8_000_000:
+                    finding(where, "historical-oversized-blob",
+                            "Historic content too large for bounded audit; inspect separately")
+                    continue
+                data = git(root, "cat-file", "blob", oid)
+                if len(data) != size:
+                    raise ValueError("historical blob read did not match recorded size")
+                counts["historic_content_bytes"] += len(data)
+                for label, pattern in TOKEN_PATTERNS.items():
+                    if pattern.search(data):
+                        finding(where, "historical-credential-indicator",
+                                label + " matched in reachable history; value redacted")
+                for label, pattern in PRIVATE_REFERENCE_PATTERNS.items():
+                    if pattern.search(data):
+                        finding(where, "historical-private-reference",
+                                label + " in reachable history; review suitability", block=False)
+            # Commit messages are public Git data too, independent of file trees.
+            raw_messages = git(root, "log", "--all", "--format=%H%x00%B%x00")
+            parts = raw_messages.split(b"\x00")
+            for n in range(0, len(parts) - 1, 2):
+                commit_sha = parts[n].decode("ascii").strip()
+                if not HEX40.fullmatch(commit_sha):
+                    raise ValueError("invalid commit-message SHA")
+                body = parts[n + 1]
+                for label, pattern in TOKEN_PATTERNS.items():
+                    if pattern.search(body):
+                        finding("<git:" + commit_sha[:12] + ":message>",
+                                "historical-credential-indicator",
+                                label + " in commit message; value redacted")
+                for label, pattern in PRIVATE_REFERENCE_PATTERNS.items():
+                    if pattern.search(body):
+                        finding("<git:" + commit_sha[:12] + ":message>",
+                                "historical-private-reference",
+                                label + " in commit message; review suitability", block=False)
+    except (OSError, ValueError, UnicodeError, subprocess.SubprocessError):
+        finding("<git-history>", "history-blob-audit-incomplete",
+                "Unable to inspect all reachable historical paths, blobs and commit messages")
+
     try:
         log = git(root, "log", "--all", "--format=%H%x00%ae%x00%ce%x00").decode("utf-8")
         fields = log.split("\x00")
@@ -210,6 +290,7 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
         "limits": [
             "This tool cannot grant copyright rights or verify contributor consent.",
             "No regex scan certifies absence of every possible secret.",
+            "Historical scan covers refs reachable with git --all, not unreachable loose objects.",
             "Machine-valid dependency paths do not prove implicit mathematical dependency closure.",
             "Proof review, clean-history origin, hosted-CI safety and anonymous public onboarding remain separate gates.",
         ],
