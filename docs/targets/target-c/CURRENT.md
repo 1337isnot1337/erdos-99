@@ -379,3 +379,23 @@ cannot pay every deletion in a disjoint wall bank, and multishear mean loss
 does not control the maximum diameter. Every candidate remains unreviewed;
 the exact next source-wide obligation is listed in the linked track and the
 [candidate registry](candidate-registry.json). C-II and Level I remain open.
+
+## Iterative-pruning atomic gap
+
+The strongest imported unpromoted matched train-measure bound on frozen source
+main is the branch-aware `0.0071` full-core Type-II candidate. It gives
+`(T-q/2)/D >= 2 sqrt(Delta_2)+0.0071-o(1)`,
+`T_R/D >= 2 sqrt(Delta_2)+0.0071-o(1)`, and
+`sigma_R/D >= 0.0142-o(1)`. The earlier `0.0050` matched bound is superseded
+at exactly these scopes. Both source hostile audits report PASS at proof-only
+scope, while destination lifecycle remains unreviewed and theorem-state is
+unchanged.
+
+Do not transfer the separate `0.0050` Section-171 output to `0.0071`: the
+stronger input has not been propagated through Section 171, outer energy,
+complement-rhombus incidence, or low-`t` structure. The `0.0050` propagation
+certificate remains attached only to its original input. The precise
+dependencies, analytic scopes, exact verifiers, and next substitution task are
+in the [iterative-pruning/atomic-gap track](../../research/tracks/target-c-iterative-pruning-atomic-gap.md)
+and [task card](../../../tasks/target-c-branch-aware-atomic-gap.md). C-II and
+Level I remain open.
