@@ -9,12 +9,11 @@ The active comparison base for the preceding report batch is recorded separately
 The already-started G0050 import is preserved on branch
 `research/source-main-g0050-boundary-stack-20261016`, based on destination main
 `358af8253f85ab7b9cdbf976ce186ee8426718e4`. It carries ten byte-identical
-source-main Target C paths: six reports/audits and four verifiers. All ten
-remain among the original 813 frozen missing paths and will be marked
-coordinator-preintegrated at their lexicographic indexes in the shard ledger.
-The shard workers therefore have 803 paths left to import, while all 813
-retain explicit dispositions. The mathematical lineage, scope, and remaining
-proof obligations are in the [scientific reconciliation](scientific-reconciliation.md).
+source-main Target C research paths: six reports/audits and four verifiers.
+None overlaps the user's 813 missing `docs/reports/` paths, so those five
+worker shards remain complete and mutually disjoint. The G0050 batch is an
+additional supporting-research dependency. Its mathematical lineage, scope,
+and remaining proof obligations are in the [scientific reconciliation](scientific-reconciliation.md).
 
 ## Open source PR batch — #1008 population reserve
 
