@@ -59,6 +59,37 @@ Head `b7376d13b81e542055c5c904bf81bdaf1beb7b9e`; **unreviewed**.
 - [verify_target_c_rhombic_dual_defect_2026_10_10.py](../../research/verify_target_c_rhombic_dual_defect_2026_10_10.py)
 - [verify_target_c_rigid_cycle_pinned_stress_2026_10_10.py](../../research/verify_target_c_rigid_cycle_pinned_stress_2026_10_10.py)
 
+## Source proposal 951 — one-vacancy release, capacity, and restoration barriers
+
+Head 0023585a98d8f5f23df64174a091c143710ba78a; source PR was open and
+non-draft in the frozen inventory. All seven reports remain **unreviewed**.
+
+Reports:
+
+- [Exact restoration capacity of a coherent rhombic strip](../reports/target_c_coherent_strip_exact_restoration_capacity_slot07_2026-10-10.md)
+- [Unilateral local-rigidity gap for stress transversals](../reports/target_c_core_unilateral_local_rigidity_gap_slot07_2026-10-10.md)
+- [Effective fixed-wall packet and span payment](../reports/target_c_effective_fixed_wall_packet_and_span_payment_slot07_2026-10-10.md)
+- [Near-coherent one-vacancy pinning regression](../reports/target_c_near_coherent_one_vacancy_pinning_regression_slot07_2026-10-10.md)
+- [One-vacancy full-chart release](../reports/target_c_one_vacancy_full_chart_release_slot07_2026-10-10.md)
+- [One-vacancy side-pin release](../reports/target_c_one_vacancy_side_pin_restoration_slot07_2026-10-10.md)
+- [Rhombic vacancy hop and two-site capacity](../reports/target_c_rhombic_vacancy_hop_and_two_site_capacity_slot07_2026-10-10.md)
+
+Finite evidence consists of five exact-arithmetic checkers and their five
+committed JSON fixtures:
+
+- [Rhombic/strip verifier](../../research/verify_target_c_rhombic_vacancy_hop_slot07_2026_10_10.py)
+- [Effective fixed-wall verifier](../../research/verify_target_c_effective_fixed_wall_packet_slot07_2026_10_10.py)
+- [Near-coherent pinning verifier](../../research/verify_target_c_near_coherent_one_vacancy_pinning_slot07_2026_10_10.py)
+- [Full-chart release verifier](../../research/verify_target_c_one_vacancy_full_chart_release_slot07_2026_10_10.py)
+- [Side-pin release verifier](../../research/verify_target_c_one_vacancy_side_pin_release_slot07_2026_10_10.py)
+
+The reports separate conditional reduced-source descent from restoration.
+Fixed-wall capacity and local-rigidity results block specific refill arguments;
+the near-coherent regression blocks replacing exact coherence by an arbitrarily
+close chart. None extracts its hypotheses from all canonical C-II sources or
+restores the deleted label. The full route and next obligations are indexed in
+the machine-readable candidate registry.
+
 ## Source proposal 952 — Slot 01: local loaded-anchor upper boxes and inclusive source releases
 
 Head `3536c0b6f6c2a929d9c96fffbdcfc480735fea3b`; **unreviewed**.

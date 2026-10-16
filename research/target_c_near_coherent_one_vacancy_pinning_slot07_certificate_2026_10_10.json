@@ -1,0 +1,2366 @@
+{
+  "arithmetic": "exact rational and Q(sqrt(15))",
+  "counts": {
+    "source_pairs": 40128,
+    "weighted_moving_edges": 1808,
+    "moving_equilibria": 768,
+    "anchored_chain_rows": 4608,
+    "full_rank_small_fixtures": 16,
+    "smaller_competitor_pairs": 40128
+  },
+  "fixtures": [
+    {
+      "angle": "square",
+      "m": 3,
+      "n": 3,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 3,
+      "moving_rows": 8,
+      "alpha": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "6003998/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "250/27017991",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "18024020008002/1000002000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 18
+    },
+    {
+      "angle": "square",
+      "m": 4,
+      "n": 5,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 11,
+      "moving_rows": 27,
+      "alpha": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "22017988/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "250/544945203",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "41036054020013/1000002000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 41
+    },
+    {
+      "angle": "square",
+      "m": 8,
+      "n": 6,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 34,
+      "moving_rows": 78,
+      "alpha": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "68061952/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "125/4049686144",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "100056152040052/1000002000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 100
+    },
+    {
+      "angle": "square",
+      "m": 3,
+      "n": 3,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 3,
+      "moving_rows": 8,
+      "alpha": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "600039998/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "2500/2700179991",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "180024002000080002/10000000200000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 18
+    },
+    {
+      "angle": "square",
+      "m": 4,
+      "n": 5,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 11,
+      "moving_rows": 27,
+      "alpha": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "2200179988/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "2500/54454454703",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "410036005400200013/10000000200000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 41
+    },
+    {
+      "angle": "square",
+      "m": 8,
+      "n": 6,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 34,
+      "moving_rows": 78,
+      "alpha": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "6800619952/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "625/202318443572",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "1000056015200400052/10000000200000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 100
+    },
+    {
+      "angle": "wide_13_85",
+      "m": 3,
+      "n": 3,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 3,
+      "moving_rows": 8,
+      "alpha": {
+        "a": "42500/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "20993479/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "126058958/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "42500/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "1750/189088437",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "1766017752672196/85000170000085",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 18
+    },
+    {
+      "angle": "wide_13_85",
+      "m": 4,
+      "n": 5,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 11,
+      "moving_rows": 27,
+      "alpha": {
+        "a": "42500/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "20993479/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "4576948/207921",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "42500/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "1750/3813741921",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "4008029059681261/85000170000085",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 41
+    },
+    {
+      "angle": "wide_13_85",
+      "m": 8,
+      "n": 6,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 34,
+      "moving_rows": 78,
+      "alpha": {
+        "a": "42500/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "20993479/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "476313164/7000007",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "42500/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "125/4048661894",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "573689328668532/5000010000005",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 100
+    },
+    {
+      "angle": "wide_13_85",
+      "m": 3,
+      "n": 3,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 3,
+      "moving_rows": 8,
+      "alpha": {
+        "a": "25000/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "123525587/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "741211174/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "25000/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "17500/18900884937",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "61045038668535364/2941176529411765",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 18
+    },
+    {
+      "angle": "wide_13_85",
+      "m": 4,
+      "n": 5,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 11,
+      "moving_rows": 27,
+      "alpha": {
+        "a": "25000/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "123525587/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "2717807044/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "25000/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "17500/381172437921",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "138591780296943949/2941176529411765",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 41
+    },
+    {
+      "angle": "wide_13_85",
+      "m": 8,
+      "n": 6,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 34,
+      "moving_rows": 78,
+      "alpha": {
+        "a": "25000/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "123525587/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "2800184392/41176471",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "25000/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "625/202313322322",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "19842195289727988/173010384083045",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 100
+    },
+    {
+      "angle": "obtuse_13_85",
+      "m": 3,
+      "n": 3,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 3,
+      "moving_rows": 8,
+      "alpha": {
+        "a": "42500/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "21006479/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "42036986/7000007",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "42500/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "1750/189166437",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "1761985751328196/85000170000085",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 18
+    },
+    {
+      "angle": "obtuse_13_85",
+      "m": 4,
+      "n": 5,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 11,
+      "moving_rows": 27,
+      "alpha": {
+        "a": "42500/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "21006479/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "462492748/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "42500/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "1750/3815565171",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "4001981056321261/85000170000085",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 41
+    },
+    {
+      "angle": "obtuse_13_85",
+      "m": 8,
+      "n": 6,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 34,
+      "moving_rows": 78,
+      "alpha": {
+        "a": "42500/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "21006479/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "1429693492/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "42500/21000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "375/12152394682",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "573135916508532/5000010000005",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 100
+    },
+    {
+      "angle": "obtuse_13_85",
+      "m": 3,
+      "n": 3,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 3,
+      "moving_rows": 8,
+      "alpha": {
+        "a": "25000/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "2100064979/2100000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "4200369986/700000007",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "25000/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "17500/18901664937",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "17637984175193280196/850000017000000085",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 18
+    },
+    {
+      "angle": "obtuse_13_85",
+      "m": 4,
+      "n": 5,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 11,
+      "moving_rows": 27,
+      "alpha": {
+        "a": "25000/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "2100064979/2100000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "2717937044/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "25000/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "17500/381190670421",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "40046976505783201261/850000017000000085",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 41
+    },
+    {
+      "angle": "obtuse_13_85",
+      "m": 8,
+      "n": 6,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 34,
+      "moving_rows": 78,
+      "alpha": {
+        "a": "25000/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "2100064979/2100000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "142816943992/2100000021",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "25000/123529413",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "1875/606972011966",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "97475297458366405044/850000017000000085",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 100
+    },
+    {
+      "angle": "critical",
+      "m": 3,
+      "n": 3,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 3,
+      "moving_rows": 8,
+      "alpha": {
+        "a": "0",
+        "b": "1600/3000003",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "999999/1000001",
+        "b": "-400/3000003",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "5999998/1000001",
+        "b": "1600/3000003",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "0",
+        "b": "1600/3000003",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "749999750/80999936400009",
+        "b": "-200000/242999809200027",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "45000042000005/2000004000002",
+        "b": "6000002000/1000002000001",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 18
+    },
+    {
+      "angle": "critical",
+      "m": 4,
+      "n": 5,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 11,
+      "moving_rows": 27,
+      "alpha": {
+        "a": "0",
+        "b": "1600/3000003",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "999999/1000001",
+        "b": "-400/3000003",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "21999988/1000001",
+        "b": "7600/3000003",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "0",
+        "b": "1600/3000003",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "1374999250/2994746137350891",
+        "b": "-475000/8984238412052673",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "51000063000016/1000002000001",
+        "b": "9000005000/1000002000001",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 41
+    },
+    {
+      "angle": "critical",
+      "m": 8,
+      "n": 6,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 34,
+      "moving_rows": 78,
+      "alpha": {
+        "a": "0",
+        "b": "1600/3000003",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "999999/1000001",
+        "b": "-400/3000003",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "67999952/1000001",
+        "b": "8800/1000001",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "0",
+        "b": "1600/3000003",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "531249625/17195471404308568",
+        "b": "-34375/8597735702154284",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "124000184000064/1000002000001",
+        "b": "14000010000/1000002000001",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 100
+    },
+    {
+      "angle": "critical",
+      "m": 3,
+      "n": 3,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 3,
+      "moving_rows": 8,
+      "alpha": {
+        "a": "0",
+        "b": "16000/300000003",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "99999999/100000001",
+        "b": "-4000/300000003",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "599999998/100000001",
+        "b": "16000/300000003",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "0",
+        "b": "16000/300000003",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "749999997500/809999993640000009",
+        "b": "-20000000/2429999980920000027",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "450000004200000005/20000000400000002",
+        "b": "6000000020000/10000000200000001",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 18
+    },
+    {
+      "angle": "critical",
+      "m": 4,
+      "n": 5,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 11,
+      "moving_rows": 27,
+      "alpha": {
+        "a": "0",
+        "b": "16000/300000003",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "99999999/100000001",
+        "b": "-4000/300000003",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "129411764/5882353",
+        "b": "76000/300000003",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "0",
+        "b": "16000/300000003",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "1374999992500/29947499613735000891",
+        "b": "-47500000/89842498841205002673",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "510000006300000016/10000000200000001",
+        "b": "9000000050000/10000000200000001",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 41
+    },
+    {
+      "angle": "critical",
+      "m": 8,
+      "n": 6,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 34,
+      "moving_rows": 78,
+      "alpha": {
+        "a": "0",
+        "b": "16000/300000003",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "99999999/100000001",
+        "b": "-4000/300000003",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "6799999952/100000001",
+        "b": "88000/100000001",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "0",
+        "b": "16000/300000003",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "265624998125/85977498570215004284",
+        "b": "-859375/21494374642553751071",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "1240000018400000064/10000000200000001",
+        "b": "14000000100000/10000000200000001",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 100
+    },
+    {
+      "angle": "obtuse_critical",
+      "m": 3,
+      "n": 3,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 3,
+      "moving_rows": 8,
+      "alpha": {
+        "a": "0",
+        "b": "1600/3000003",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "999999/1000001",
+        "b": "400/3000003",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "5999998/1000001",
+        "b": "1600/1000001",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "0",
+        "b": "1600/3000003",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "749999750/80999859600009",
+        "b": "-200000/80999859600009",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "45000042000005/2000004000002",
+        "b": "-6000002000/1000002000001",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 18
+    },
+    {
+      "angle": "obtuse_critical",
+      "m": 4,
+      "n": 5,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 11,
+      "moving_rows": 27,
+      "alpha": {
+        "a": "0",
+        "b": "1600/3000003",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "999999/1000001",
+        "b": "400/3000003",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "21999988/1000001",
+        "b": "21200/3000003",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "0",
+        "b": "1600/3000003",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "1374999250/2994742098150891",
+        "b": "-1325000/8984226294452673",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "51000063000016/1000002000001",
+        "b": "-9000005000/1000002000001",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 41
+    },
+    {
+      "angle": "obtuse_critical",
+      "m": 8,
+      "n": 6,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 34,
+      "moving_rows": 78,
+      "alpha": {
+        "a": "0",
+        "b": "1600/3000003",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "999999/1000001",
+        "b": "400/3000003",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "67999952/1000001",
+        "b": "72800/3000003",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "0",
+        "b": "1600/3000003",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "1593748875/51586328628125704",
+        "b": "-40625/3684737759151836",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "124000184000064/1000002000001",
+        "b": "-14000010000/1000002000001",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 100
+    },
+    {
+      "angle": "obtuse_critical",
+      "m": 3,
+      "n": 3,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 3,
+      "moving_rows": 8,
+      "alpha": {
+        "a": "0",
+        "b": "16000/300000003",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "99999999/100000001",
+        "b": "4000/300000003",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "599999998/100000001",
+        "b": "16000/100000001",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "0",
+        "b": "16000/300000003",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "749999997500/809999985960000009",
+        "b": "-20000000/809999985960000009",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "450000004200000005/20000000400000002",
+        "b": "-6000000020000/10000000200000001",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 18
+    },
+    {
+      "angle": "obtuse_critical",
+      "m": 4,
+      "n": 5,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 11,
+      "moving_rows": 27,
+      "alpha": {
+        "a": "0",
+        "b": "16000/300000003",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "99999999/100000001",
+        "b": "4000/300000003",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "129411764/5882353",
+        "b": "212000/300000003",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "0",
+        "b": "16000/300000003",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "1374999992500/29947499209815000891",
+        "b": "-132500000/89842497629445002673",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "510000006300000016/10000000200000001",
+        "b": "-9000000050000/10000000200000001",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 41
+    },
+    {
+      "angle": "obtuse_critical",
+      "m": 8,
+      "n": 6,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 34,
+      "moving_rows": 78,
+      "alpha": {
+        "a": "0",
+        "b": "16000/300000003",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "99999999/100000001",
+        "b": "4000/300000003",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "6799999952/100000001",
+        "b": "728000/300000003",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "0",
+        "b": "16000/300000003",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "796874994375/257932491431405012852",
+        "b": "-1015625/9211874693978750459",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "1240000018400000064/10000000200000001",
+        "b": "-14000000100000/10000000200000001",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 100
+    },
+    {
+      "angle": "blocked_8_17",
+      "m": 3,
+      "n": 3,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 3,
+      "moving_rows": 8,
+      "alpha": {
+        "a": "6800/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "2996797/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "18000794/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "6800/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "250/27001191",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "450360372120050/17000034000017",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 18
+    },
+    {
+      "angle": "blocked_8_17",
+      "m": 4,
+      "n": 5,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 11,
+      "moving_rows": 27,
+      "alpha": {
+        "a": "6800/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "2996797/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "66006764/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "6800/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "250/544555803",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "1017541206300317/17000034000017",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 41
+    },
+    {
+      "angle": "blocked_8_17",
+      "m": 8,
+      "n": 6,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 34,
+      "moving_rows": 78,
+      "alpha": {
+        "a": "6800/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "2996797/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "68008352/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "6800/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "125/4046496944",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "145226094623604/1000002000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 100
+    },
+    {
+      "angle": "blocked_8_17",
+      "m": 3,
+      "n": 3,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 3,
+      "moving_rows": 8,
+      "alpha": {
+        "a": "4000/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "299967997/300000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "1800007994/300000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "4000/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "2500/2700011991",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "4500360037201200050/170000003400000017",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 18
+    },
+    {
+      "angle": "blocked_8_17",
+      "m": 4,
+      "n": 5,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 11,
+      "moving_rows": 27,
+      "alpha": {
+        "a": "4000/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "299967997/300000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "388239292/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "4000/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "2500/54450560703",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "10170540120603000317/170000003400000017",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 41
+    },
+    {
+      "angle": "blocked_8_17",
+      "m": 8,
+      "n": 6,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 34,
+      "moving_rows": 78,
+      "alpha": {
+        "a": "4000/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "299967997/300000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "6800083952/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "4000/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "625/202302497572",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "24680840360806001268/170000003400000017",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 100
+    },
+    {
+      "angle": "obtuse_8_17",
+      "m": 3,
+      "n": 3,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 3,
+      "moving_rows": 8,
+      "alpha": {
+        "a": "6800/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "3003197/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "6008798/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "6800/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "250/27039591",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "449640371880050/17000034000017",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 18
+    },
+    {
+      "angle": "obtuse_8_17",
+      "m": 4,
+      "n": 5,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 11,
+      "moving_rows": 27,
+      "alpha": {
+        "a": "6800/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "3003197/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "66115564/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "6800/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "250/545453403",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "1016461205700317/17000034000017",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 41
+    },
+    {
+      "angle": "obtuse_8_17",
+      "m": 8,
+      "n": 6,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 34,
+      "moving_rows": 78,
+      "alpha": {
+        "a": "6800/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "3003197/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "204396256/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "6800/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "375/12161577232",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "145127271023604/1000002000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 100
+    },
+    {
+      "angle": "obtuse_8_17",
+      "m": 3,
+      "n": 3,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 3,
+      "moving_rows": 8,
+      "alpha": {
+        "a": "4000/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "17648941/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "35299294/5882353",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "4000/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "2500/2700395991",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "15569688710030450/588235305882353",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 18
+    },
+    {
+      "angle": "obtuse_8_17",
+      "m": 4,
+      "n": 5,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 11,
+      "moving_rows": 27,
+      "alpha": {
+        "a": "4000/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "17648941/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "388303292/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "4000/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "2500/54459536703",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "35188443323865053/588235305882353",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 41
+    },
+    {
+      "angle": "obtuse_8_17",
+      "m": 8,
+      "n": 6,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 34,
+      "moving_rows": 78,
+      "alpha": {
+        "a": "4000/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "17648941/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "1200233168/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "4000/17647059",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "1875/607017924716",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "85395018549460212/588235305882353",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 100
+    },
+    {
+      "angle": "blocked_5_13",
+      "m": 3,
+      "n": 3,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 3,
+      "moving_rows": 8,
+      "alpha": {
+        "a": "6500/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "2997497/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "6000998/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "6500/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "250/27004491",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "324288280096036/13000026000013",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 18
+    },
+    {
+      "angle": "blocked_5_13",
+      "m": 4,
+      "n": 5,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 11,
+      "moving_rows": 27,
+      "alpha": {
+        "a": "6500/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "2997497/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "66015964/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "6500/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "250/544631703",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "733432882240229/13000026000013",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 41
+    },
+    {
+      "angle": "blocked_5_13",
+      "m": 8,
+      "n": 6,
+      "rational_rotation_parameter": "1/1000",
+      "cos_epsilon": {
+        "a": "999999/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "2000/1000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 34,
+      "moving_rows": 78,
+      "alpha": {
+        "a": "6500/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "2997497/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "204056356/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "6500/3000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "375/12141353182",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "136974970498532/1000002000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 100
+    },
+    {
+      "angle": "blocked_5_13",
+      "m": 3,
+      "n": 3,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 3,
+      "moving_rows": 8,
+      "alpha": {
+        "a": "65000/300000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "299974997/300000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "600009998/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "65000/300000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "2500/2700044991",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "3240288028000960036/130000002600000013",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 18
+    },
+    {
+      "angle": "blocked_5_13",
+      "m": 4,
+      "n": 5,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 11,
+      "moving_rows": 27,
+      "alpha": {
+        "a": "65000/300000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "299974997/300000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "6600159964/300000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "65000/300000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "2500/54451319703",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "563879391400184633/10000000200000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 41
+    },
+    {
+      "angle": "blocked_5_13",
+      "m": 8,
+      "n": 6,
+      "rational_rotation_parameter": "1/10000",
+      "cos_epsilon": {
+        "a": "99999999/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "sin_epsilon": {
+        "a": "20000/100000001",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "moving_labels": 34,
+      "moving_rows": 78,
+      "alpha": {
+        "a": "65000/300000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "gamma": {
+        "a": "299974997/300000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "total_weight": {
+        "a": "20400564856/300000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "minimum_weight": {
+        "a": "65000/300000003",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "finite_isolation_radius": {
+        "a": "1875/606916804466",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "old_diameter_squared": {
+        "a": "17800672261604800916/130000002600000013",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "competitor_diameter_squared": 100
+    }
+  ],
+  "limits": "Pinned unit-edge equilibrium, anchored rank, and finite sources only. Not full-source normalized KKT stresses or canonical minimizers; moving walls and disconnected endpoints are not excluded."
+}

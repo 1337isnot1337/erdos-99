@@ -27,3 +27,19 @@ conjecture. Its precise Target C bridge is a uniform upper reserve bound
 or a source-specific strict-diameter replacement. The exact finite verifier is
 not a proof of the analytic all-radius argument or global optimality; see the
 [candidate registry](../targets/target-c/candidate-registry.json).
+
+## Target C-II: vacancy-release candidates and exact restoration limits
+
+The pinned source PR #951 material is now linked from the
+[Target C frontier](../targets/target-c/CURRENT.md) and
+[candidate registry](../targets/target-c/candidate-registry.json). A vacancy can
+give a full-source strict reduced endpoint under an actual chart or
+stress-transversal hypothesis, but the supplied endpoints have one fewer label.
+The exact coherent-strip capacity is one short of restoration with the fixed
+wall; a separate local-rigidity gap bars continuous restoration under its
+stress/rank hypotheses. Near-coherent fixed-boundary strictification is
+refuted by arbitrarily small train-angle variation. The exact remaining
+C-II obligation is to extract a suitable source configuration and pay the
+population deficit by changing guards, using outside capacity, or constructing
+a nonlocal same-cardinality replacement. None of these imported candidates
+changes the canonical endpoint or theorem-state.

@@ -1,0 +1,648 @@
+{
+  "arithmetic": "Q(sqrt(15)); no floating point",
+  "fixtures": [
+    {
+      "fixture": "square",
+      "c": {
+        "a": "0",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "s": {
+        "a": "1",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "source_pairs": 28,
+      "contacts": 9,
+      "diameter_squared": "9",
+      "unit_triangles": 0,
+      "mixed_rank": 9,
+      "required_canonical_rank": 13,
+      "interior_contact_degrees": [
+        4,
+        4
+      ],
+      "interior_diameter_endpoints": false,
+      "cover_radius_squared": {
+        "a": "1/2",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "hop": true,
+      "strict_capacity_one_site": true,
+      "capacity_identities": true,
+      "path_sample_guard_checks": 42
+    },
+    {
+      "fixture": "wide_13_85",
+      "c": {
+        "a": "13/85",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "s": {
+        "a": "84/85",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "source_pairs": 28,
+      "contacts": 9,
+      "diameter_squared": "9",
+      "unit_triangles": 0,
+      "mixed_rank": 9,
+      "required_canonical_rank": 13,
+      "interior_contact_degrees": [
+        4,
+        4
+      ],
+      "interior_diameter_endpoints": false,
+      "cover_radius_squared": {
+        "a": "49/85",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "hop": true,
+      "strict_capacity_one_site": true,
+      "capacity_identities": true,
+      "path_sample_guard_checks": 42
+    },
+    {
+      "fixture": "wide_11_61",
+      "c": {
+        "a": "11/61",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "s": {
+        "a": "60/61",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "source_pairs": 28,
+      "contacts": 9,
+      "diameter_squared": "9",
+      "unit_triangles": 0,
+      "mixed_rank": 9,
+      "required_canonical_rank": 13,
+      "interior_contact_degrees": [
+        4,
+        4
+      ],
+      "interior_diameter_endpoints": false,
+      "cover_radius_squared": {
+        "a": "36/61",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "hop": true,
+      "strict_capacity_one_site": true,
+      "capacity_identities": true,
+      "path_sample_guard_checks": 42
+    },
+    {
+      "fixture": "wide_9_41",
+      "c": {
+        "a": "9/41",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "s": {
+        "a": "40/41",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "source_pairs": 28,
+      "contacts": 9,
+      "diameter_squared": "9",
+      "unit_triangles": 0,
+      "mixed_rank": 9,
+      "required_canonical_rank": 13,
+      "interior_contact_degrees": [
+        4,
+        4
+      ],
+      "interior_diameter_endpoints": false,
+      "cover_radius_squared": {
+        "a": "25/41",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "hop": true,
+      "strict_capacity_one_site": true,
+      "capacity_identities": true,
+      "path_sample_guard_checks": 42
+    },
+    {
+      "fixture": "critical",
+      "c": {
+        "a": "1/4",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "s": {
+        "a": "0",
+        "b": "1/4",
+        "field": "sqrt(15)"
+      },
+      "source_pairs": 28,
+      "contacts": 9,
+      "diameter_squared": "9",
+      "unit_triangles": 0,
+      "mixed_rank": 9,
+      "required_canonical_rank": 13,
+      "interior_contact_degrees": [
+        4,
+        4
+      ],
+      "interior_diameter_endpoints": false,
+      "cover_radius_squared": {
+        "a": "5/8",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "hop": true,
+      "strict_capacity_one_site": true,
+      "capacity_identities": true,
+      "path_sample_guard_checks": 42
+    },
+    {
+      "fixture": "blocked_7_25",
+      "c": {
+        "a": "7/25",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "s": {
+        "a": "24/25",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "source_pairs": 28,
+      "contacts": 9,
+      "diameter_squared": "9",
+      "unit_triangles": 0,
+      "mixed_rank": 9,
+      "required_canonical_rank": 13,
+      "interior_contact_degrees": [
+        4,
+        4
+      ],
+      "interior_diameter_endpoints": false,
+      "cover_radius_squared": {
+        "a": "16/25",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "hop": false,
+      "strict_capacity_one_site": true,
+      "capacity_identities": true,
+      "bisector_guard_upper_squared": {
+        "a": "97/100",
+        "b": "0",
+        "field": "sqrt(15)"
+      }
+    },
+    {
+      "fixture": "blocked_5_13",
+      "c": {
+        "a": "5/13",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "s": {
+        "a": "12/13",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "source_pairs": 28,
+      "contacts": 9,
+      "diameter_squared": "9",
+      "unit_triangles": 0,
+      "mixed_rank": 9,
+      "required_canonical_rank": 13,
+      "interior_contact_degrees": [
+        4,
+        4
+      ],
+      "interior_diameter_endpoints": false,
+      "cover_radius_squared": {
+        "a": "9/13",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "hop": false,
+      "strict_capacity_one_site": true,
+      "capacity_identities": true,
+      "bisector_guard_upper_squared": {
+        "a": "45/52",
+        "b": "0",
+        "field": "sqrt(15)"
+      }
+    },
+    {
+      "fixture": "blocked_8_17",
+      "c": {
+        "a": "8/17",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "s": {
+        "a": "15/17",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "source_pairs": 28,
+      "contacts": 9,
+      "diameter_squared": "9",
+      "unit_triangles": 0,
+      "mixed_rank": 9,
+      "required_canonical_rank": 13,
+      "interior_contact_degrees": [
+        4,
+        4
+      ],
+      "interior_diameter_endpoints": false,
+      "cover_radius_squared": {
+        "a": "25/34",
+        "b": "0",
+        "field": "sqrt(15)"
+      },
+      "hop": false,
+      "strict_capacity_one_site": true,
+      "capacity_identities": true,
+      "bisector_guard_upper_squared": {
+        "a": "53/68",
+        "b": "0",
+        "field": "sqrt(15)"
+      }
+    }
+  ],
+  "source_pair_checks": 224,
+  "path_sample_guard_checks": 210,
+  "triangulation_triangles": 8,
+  "triangulation_area_coefficient": 4,
+  "capacity_polynomial_identities": true,
+  "critical_extra_equality_excluded": true,
+  "nonglobal_square_competitor_diameter_squared": 8,
+  "strip_source_pair_checks": 5000,
+  "strip_endpoint_pair_checks": 4512,
+  "strip_strict_inserted_pair_checks": 2120,
+  "strip_fixtures": [
+    {
+      "fixture": "square",
+      "k": 2,
+      "old_population": 8,
+      "endpoint_population": 7,
+      "old_contacts": 9,
+      "diameter_squared": 9,
+      "epsilon": "1/32768",
+      "strict_packet_sites": 1,
+      "grid_competitor_diameter_squared": 8
+    },
+    {
+      "fixture": "square",
+      "k": 3,
+      "old_population": 11,
+      "endpoint_population": 10,
+      "old_contacts": 14,
+      "diameter_squared": 16,
+      "epsilon": "1/32768",
+      "strict_packet_sites": 2,
+      "grid_competitor_diameter_squared": 13
+    },
+    {
+      "fixture": "square",
+      "k": 5,
+      "old_population": 17,
+      "endpoint_population": 16,
+      "old_contacts": 24,
+      "diameter_squared": 36,
+      "epsilon": "1/32768",
+      "strict_packet_sites": 4,
+      "grid_competitor_diameter_squared": 25
+    },
+    {
+      "fixture": "square",
+      "k": 9,
+      "old_population": 29,
+      "endpoint_population": 28,
+      "old_contacts": 44,
+      "diameter_squared": 100,
+      "epsilon": "1/32768",
+      "strict_packet_sites": 8,
+      "grid_competitor_diameter_squared": 41
+    },
+    {
+      "fixture": "wide_13_85",
+      "k": 2,
+      "old_population": 8,
+      "endpoint_population": 7,
+      "old_contacts": 9,
+      "diameter_squared": 9,
+      "epsilon": "1/65536",
+      "strict_packet_sites": 1,
+      "grid_competitor_diameter_squared": 8
+    },
+    {
+      "fixture": "wide_13_85",
+      "k": 3,
+      "old_population": 11,
+      "endpoint_population": 10,
+      "old_contacts": 14,
+      "diameter_squared": 16,
+      "epsilon": "1/65536",
+      "strict_packet_sites": 2,
+      "grid_competitor_diameter_squared": 13
+    },
+    {
+      "fixture": "wide_13_85",
+      "k": 5,
+      "old_population": 17,
+      "endpoint_population": 16,
+      "old_contacts": 24,
+      "diameter_squared": 36,
+      "epsilon": "1/65536",
+      "strict_packet_sites": 4,
+      "grid_competitor_diameter_squared": 25
+    },
+    {
+      "fixture": "wide_13_85",
+      "k": 9,
+      "old_population": 29,
+      "endpoint_population": 28,
+      "old_contacts": 44,
+      "diameter_squared": 100,
+      "epsilon": "1/65536",
+      "strict_packet_sites": 8,
+      "grid_competitor_diameter_squared": 41
+    },
+    {
+      "fixture": "wide_11_61",
+      "k": 2,
+      "old_population": 8,
+      "endpoint_population": 7,
+      "old_contacts": 9,
+      "diameter_squared": 9,
+      "epsilon": "1/65536",
+      "strict_packet_sites": 1,
+      "grid_competitor_diameter_squared": 8
+    },
+    {
+      "fixture": "wide_11_61",
+      "k": 3,
+      "old_population": 11,
+      "endpoint_population": 10,
+      "old_contacts": 14,
+      "diameter_squared": 16,
+      "epsilon": "1/65536",
+      "strict_packet_sites": 2,
+      "grid_competitor_diameter_squared": 13
+    },
+    {
+      "fixture": "wide_11_61",
+      "k": 5,
+      "old_population": 17,
+      "endpoint_population": 16,
+      "old_contacts": 24,
+      "diameter_squared": 36,
+      "epsilon": "1/65536",
+      "strict_packet_sites": 4,
+      "grid_competitor_diameter_squared": 25
+    },
+    {
+      "fixture": "wide_11_61",
+      "k": 9,
+      "old_population": 29,
+      "endpoint_population": 28,
+      "old_contacts": 44,
+      "diameter_squared": 100,
+      "epsilon": "1/65536",
+      "strict_packet_sites": 8,
+      "grid_competitor_diameter_squared": 41
+    },
+    {
+      "fixture": "wide_9_41",
+      "k": 2,
+      "old_population": 8,
+      "endpoint_population": 7,
+      "old_contacts": 9,
+      "diameter_squared": 9,
+      "epsilon": "1/65536",
+      "strict_packet_sites": 1,
+      "grid_competitor_diameter_squared": 8
+    },
+    {
+      "fixture": "wide_9_41",
+      "k": 3,
+      "old_population": 11,
+      "endpoint_population": 10,
+      "old_contacts": 14,
+      "diameter_squared": 16,
+      "epsilon": "1/65536",
+      "strict_packet_sites": 2,
+      "grid_competitor_diameter_squared": 13
+    },
+    {
+      "fixture": "wide_9_41",
+      "k": 5,
+      "old_population": 17,
+      "endpoint_population": 16,
+      "old_contacts": 24,
+      "diameter_squared": 36,
+      "epsilon": "1/65536",
+      "strict_packet_sites": 4,
+      "grid_competitor_diameter_squared": 25
+    },
+    {
+      "fixture": "wide_9_41",
+      "k": 9,
+      "old_population": 29,
+      "endpoint_population": 28,
+      "old_contacts": 44,
+      "diameter_squared": 100,
+      "epsilon": "1/65536",
+      "strict_packet_sites": 8,
+      "grid_competitor_diameter_squared": 41
+    },
+    {
+      "fixture": "critical",
+      "k": 2,
+      "old_population": 8,
+      "endpoint_population": 7,
+      "old_contacts": 9,
+      "diameter_squared": 9,
+      "epsilon": "1/131072",
+      "strict_packet_sites": 1,
+      "grid_competitor_diameter_squared": 8
+    },
+    {
+      "fixture": "critical",
+      "k": 3,
+      "old_population": 11,
+      "endpoint_population": 10,
+      "old_contacts": 14,
+      "diameter_squared": 16,
+      "epsilon": "1/131072",
+      "strict_packet_sites": 2,
+      "grid_competitor_diameter_squared": 13
+    },
+    {
+      "fixture": "critical",
+      "k": 5,
+      "old_population": 17,
+      "endpoint_population": 16,
+      "old_contacts": 24,
+      "diameter_squared": 36,
+      "epsilon": "1/131072",
+      "strict_packet_sites": 4,
+      "grid_competitor_diameter_squared": 25
+    },
+    {
+      "fixture": "critical",
+      "k": 9,
+      "old_population": 29,
+      "endpoint_population": 28,
+      "old_contacts": 44,
+      "diameter_squared": 100,
+      "epsilon": "1/131072",
+      "strict_packet_sites": 8,
+      "grid_competitor_diameter_squared": 41
+    },
+    {
+      "fixture": "blocked_7_25",
+      "k": 2,
+      "old_population": 8,
+      "endpoint_population": 7,
+      "old_contacts": 9,
+      "diameter_squared": 9,
+      "epsilon": "1/131072",
+      "strict_packet_sites": 1,
+      "grid_competitor_diameter_squared": 8
+    },
+    {
+      "fixture": "blocked_7_25",
+      "k": 3,
+      "old_population": 11,
+      "endpoint_population": 10,
+      "old_contacts": 14,
+      "diameter_squared": 16,
+      "epsilon": "1/131072",
+      "strict_packet_sites": 2,
+      "grid_competitor_diameter_squared": 13
+    },
+    {
+      "fixture": "blocked_7_25",
+      "k": 5,
+      "old_population": 17,
+      "endpoint_population": 16,
+      "old_contacts": 24,
+      "diameter_squared": 36,
+      "epsilon": "1/131072",
+      "strict_packet_sites": 4,
+      "grid_competitor_diameter_squared": 25
+    },
+    {
+      "fixture": "blocked_7_25",
+      "k": 9,
+      "old_population": 29,
+      "endpoint_population": 28,
+      "old_contacts": 44,
+      "diameter_squared": 100,
+      "epsilon": "1/131072",
+      "strict_packet_sites": 8,
+      "grid_competitor_diameter_squared": 41
+    },
+    {
+      "fixture": "blocked_5_13",
+      "k": 2,
+      "old_population": 8,
+      "endpoint_population": 7,
+      "old_contacts": 9,
+      "diameter_squared": 9,
+      "epsilon": "1/524288",
+      "strict_packet_sites": 1,
+      "grid_competitor_diameter_squared": 8
+    },
+    {
+      "fixture": "blocked_5_13",
+      "k": 3,
+      "old_population": 11,
+      "endpoint_population": 10,
+      "old_contacts": 14,
+      "diameter_squared": 16,
+      "epsilon": "1/524288",
+      "strict_packet_sites": 2,
+      "grid_competitor_diameter_squared": 13
+    },
+    {
+      "fixture": "blocked_5_13",
+      "k": 5,
+      "old_population": 17,
+      "endpoint_population": 16,
+      "old_contacts": 24,
+      "diameter_squared": 36,
+      "epsilon": "1/524288",
+      "strict_packet_sites": 4,
+      "grid_competitor_diameter_squared": 25
+    },
+    {
+      "fixture": "blocked_5_13",
+      "k": 9,
+      "old_population": 29,
+      "endpoint_population": 28,
+      "old_contacts": 44,
+      "diameter_squared": 100,
+      "epsilon": "1/524288",
+      "strict_packet_sites": 8,
+      "grid_competitor_diameter_squared": 41
+    },
+    {
+      "fixture": "blocked_8_17",
+      "k": 2,
+      "old_population": 8,
+      "endpoint_population": 7,
+      "old_contacts": 9,
+      "diameter_squared": 9,
+      "epsilon": "1/8388608",
+      "strict_packet_sites": 1,
+      "grid_competitor_diameter_squared": 8
+    },
+    {
+      "fixture": "blocked_8_17",
+      "k": 3,
+      "old_population": 11,
+      "endpoint_population": 10,
+      "old_contacts": 14,
+      "diameter_squared": 16,
+      "epsilon": "1/8388608",
+      "strict_packet_sites": 2,
+      "grid_competitor_diameter_squared": 13
+    },
+    {
+      "fixture": "blocked_8_17",
+      "k": 5,
+      "old_population": 17,
+      "endpoint_population": 16,
+      "old_contacts": 24,
+      "diameter_squared": 36,
+      "epsilon": "1/8388608",
+      "strict_packet_sites": 4,
+      "grid_competitor_diameter_squared": 25
+    },
+    {
+      "fixture": "blocked_8_17",
+      "k": 9,
+      "old_population": 29,
+      "endpoint_population": 28,
+      "old_contacts": 44,
+      "diameter_squared": 100,
+      "epsilon": "1/8388608",
+      "strict_packet_sites": 8,
+      "grid_competitor_diameter_squared": 41
+    }
+  ],
+  "cap_weighted_identity_checks": 5000,
+  "cap_clear_disk_checks": 906,
+  "limits": "Finite fixtures and identities only. Universal path, shield, capacity and threshold proofs are analytic in the report. No canonical patch extraction, refill, or global optimality."
+}
