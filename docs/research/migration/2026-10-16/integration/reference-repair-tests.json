@@ -1,0 +1,23 @@
+{
+  "scope": "Executed fixture regression tests and one historical floating-point scalar program, not a full private-corpus run",
+  "python": "3.13.5",
+  "results": [
+    {"command": "python3 -m unittest discover -s tools -p 'test_migration_references.py' -v", "tests": 22, "exit_code": 0},
+    {"command": "python3 -O -m unittest discover -s tools -p 'test_migration_references.py' -v", "tests": 22, "exit_code": 0},
+    {"command": "python3 research/verify_target_c_optimized_joint_train_legacy.py", "exit_code": 0, "scope": "Historical scalar/count numerical margins only", "final_margin_printed": "0.0039862558671350"}
+  ],
+  "tested_git_blobs": {
+    "tools/check_migration_references.py": "bcf187236006e0f372cff6633ad62454f9f5702d",
+    "tools/test_migration_references.py": "cda49ab357695eea963392c19badc18f0a15b2e0",
+    "research/verify_target_c_optimized_joint_train_legacy.py": "01d8f3b444c82043b61d5aceb078a77bbd77633e"
+  },
+  "tested_sha256": {
+    "tools/check_migration_references.py": "af660dc6f57a99698fa7c0715cbeb2fcc1b0248bdeedd5cb35409e39161510ae",
+    "tools/test_migration_references.py": "e369cbc3d5c5519b25b75fb31a242b300f525f677802e1b0fa3c8b6ae3a3bcce",
+    "research/verify_target_c_optimized_joint_train_legacy.py": "1d8b92c434b90fef2bcbae416ef8814421d36d115a29d4c47ddfa3280299b1b3"
+  },
+  "candidate_reference_scan_executed": false,
+  "bulk_source_recovery_executed": false,
+  "gate2_executed": false,
+  "deprecation_ready": false
+}
