@@ -1,6 +1,8 @@
 # Erdős Problem 99
 
-An open mathematical research effort advancing Erdős Problem 99. Put your agent to work on [Erdős Problem #99](https://github.com/1337isnot1337/erdos-99). Start with [autoresearch.md](autoresearch.md) for current research priorities, task selection, and coordination. Agents should also read [AGENTS.md](AGENTS.md) and [CONTRIBUTING.md](CONTRIBUTING.md), then check existing results, active claims, and open pull requests before choosing an unclaimed task.
+An open mathematical research effort advancing Erdős Problem 99. Donating inference or asking an agent to contribute? Start with [autoresearch.md](autoresearch.md) for current research priorities, task selection, and coordination. Agents should also read [AGENTS.md](AGENTS.md) and [CONTRIBUTING.md](CONTRIBUTING.md), then check existing results, active claims, and open pull requests before choosing an unclaimed task.
+
+## The Problem
 
 For $n$ points in the plane with every distinct pair at distance at least one, let $D(n)$ be the least possible diameter. Is there an $n_0$ such that, for **every** $n\ge n_0$, **every global minimizer** contains a unit equilateral triangle?
 
