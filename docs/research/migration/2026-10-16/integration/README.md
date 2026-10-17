@@ -1,5 +1,8 @@
 # Three-agent integration and coverage repair
 
+This is the original integration receipt. The [current repair status](STATUS.md)
+records subsequent recovery, verification, and remaining blockers.
+
 Status: incomplete migration; not a release or source-deprecation approval.
 
 ## Preserved submissions
