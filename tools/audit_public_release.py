@@ -94,31 +94,101 @@ MIGRATION_SUPPORT_PATHS = {
 }
 
 
+def inclusion_manifest_lineage(root: Path, manifest: dict, current_blob: str):
+    """Bind one editorial generator update to the unchanged approved source scope.
+
+    The owner grant remains attached to OWNER_APPROVED_MANIFEST_BLOB. A later
+    manifest may update only the existing artifact generator's published hash
+    and editorial description; its source identities and rights do not change.
+    Every comparison uses committed Git bytes, including the current generator.
+    """
+    if not isinstance(manifest, dict) or not HEX40.fullmatch(current_blob):
+        return None
+    approved_bytes = git(root, "cat-file", "blob", OWNER_APPROVED_MANIFEST_BLOB)
+    current_bytes = git(root, "cat-file", "blob", current_blob)
+    for expected, data in ((OWNER_APPROVED_MANIFEST_BLOB, approved_bytes),
+                           (current_blob, current_bytes)):
+        header = b"blob " + str(len(data)).encode("ascii") + b"\0"
+        if hashlib.sha1(header + data).hexdigest() != expected:
+            return None
+    approved = json.loads(approved_bytes)
+    if not isinstance(approved, dict) or json.loads(current_bytes) != manifest:
+        return None
+    approved_entries, current_entries = approved.get("entries"), manifest.get("entries")
+    if (not isinstance(approved_entries, list) or not isinstance(current_entries, list)
+            or len(approved_entries) != OWNER_APPROVED_MANIFEST_ENTRIES
+            or len(current_entries) != OWNER_APPROVED_MANIFEST_ENTRIES
+            or any(not isinstance(row, dict) for row in approved_entries + current_entries)):
+        return None
+    lineage = {
+        "owner_attested_manifest_git_blob_sha": OWNER_APPROVED_MANIFEST_BLOB,
+        "current_manifest_git_blob_sha": current_blob,
+        "source_scope_unchanged": True,
+        "editorial_update": False,
+        "owner_grant_extended": False,
+    }
+    if current_blob == OWNER_APPROVED_MANIFEST_BLOB:
+        return approved, lineage
+    if ({key: value for key, value in approved.items() if key != "entries"}
+            != {key: value for key, value in manifest.items() if key != "entries"}):
+        return None
+    allowed_path = "tools/build_artifact_index.py"
+    allowed_fields = {"public_sha256", "editorial_change"}
+    changed = []
+    for old, new in zip(approved_entries, current_entries):
+        if old == new:
+            continue
+        if old.get("public_path") != allowed_path:
+            return None
+        if ({key: value for key, value in old.items() if key not in allowed_fields}
+                != {key: value for key, value in new.items() if key not in allowed_fields}):
+            return None
+        description, digest = new.get("editorial_change"), new.get("public_sha256")
+        if (not isinstance(description, str) or not description.strip()
+                or not isinstance(digest, str) or not HEX64.fullmatch(digest)):
+            return None
+        generator = git(root, "show", "HEAD:" + allowed_path)
+        if hashlib.sha256(generator).hexdigest() != digest:
+            return None
+        changed.append(allowed_path)
+    if changed != [allowed_path]:
+        return None
+    lineage.update(editorial_update=True, updated_public_path=allowed_path,
+                   current_public_sha256=hashlib.sha256(generator).hexdigest())
+    return approved, lineage
+
+
 def attested_owner_permissions(root: Path, manifest: dict) -> dict | None:
     """Check the exact owner-granted source scope; never infer rights from a scan.
 
     This records an external, owner-authored confirmation pinned to one immutable
-    inclusion-manifest Git blob. This grants rights to owner-controlled source
-    expression, not to third-party expression. Git attribution metadata does not
-    need a separate email-domain permission or require history rewriting.
+    inclusion-manifest Git blob. One narrowly checked editorial generator update
+    may retain that same source scope; it does not extend the owner grant.
+    This grants rights to owner-controlled source expression, not to third-party
+    expression. Git attribution metadata does not need a separate email-domain
+    permission or require history rewriting.
     """
     try:
         record = read_json(root, OWNER_RIGHTS_RECORD)
         blob = git(root, "rev-parse", "HEAD:docs/publication/inclusion.json").decode("ascii").strip()
-        entries = manifest["entries"]
+        checked = inclusion_manifest_lineage(root, manifest, blob)
+        if checked is None:
+            return None
+        approved_manifest, lineage = checked
+        entries = approved_manifest["entries"]
         m = record["source_manifest"]
         owner = record["owner_declaration"]
         external = record["external_expression_review"]
         bounds = record["release_boundaries"]
         if record.get("schema_version") != 1 or record.get("repository") != "1337isnot1337/erdos-99":
             return None
-        if not HEX40.fullmatch(blob) or m.get("path") != "docs/publication/inclusion.json" or m.get("git_blob_sha") != OWNER_APPROVED_MANIFEST_BLOB or blob != OWNER_APPROVED_MANIFEST_BLOB:
+        if m.get("path") != "docs/publication/inclusion.json" or m.get("git_blob_sha") != OWNER_APPROVED_MANIFEST_BLOB:
             return None
         if not entries or m.get("retained_source_records") != len(entries) or m.get("source_pins") != len({e["source_commit"] for e in entries}):
             return None
         reconciliation = record["current_manifest_reconciliation"]
         prior_blob = reconciliation["prior_owner_attested_manifest_git_blob_sha"]
-        if not HEX40.fullmatch(prior_blob) or reconciliation.get("current_manifest_git_blob_sha") != blob:
+        if not HEX40.fullmatch(prior_blob) or reconciliation.get("current_manifest_git_blob_sha") != OWNER_APPROVED_MANIFEST_BLOB:
             return None
         prior_manifest = json.loads(git(root, "cat-file", "blob", prior_blob))
         prior_entries = prior_manifest["entries"]
@@ -152,7 +222,7 @@ def attested_owner_permissions(root: Path, manifest: dict) -> dict | None:
             return None
         if bounds.get("repository_visibility_change_authorized") is not False:
             return None
-        return {"imported_entries": len(entries)}
+        return {"imported_entries": len(entries), "manifest_lineage": lineage}
     except (KeyError, TypeError, AttributeError, ValueError, UnicodeError, OSError, subprocess.SubprocessError):
         return None
 
@@ -525,6 +595,7 @@ def audit(root: Path, *, scan_content: bool = True) -> dict:
         "candidate_tree": tree,
         "full_content_scan": scan_content,
         "counts": dict(sorted(counts.items())),
+        "owner_rights_manifest_lineage": owner_perms.get("manifest_lineage") if owner_perms is not None else None,
         "blockers": blockers,
         "warnings": warnings,
         "limits": [
