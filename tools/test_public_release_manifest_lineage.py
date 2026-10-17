@@ -11,6 +11,7 @@ import unittest
 from unittest.mock import patch
 
 from tools import audit_public_release as release
+from tools import verify_frozen_target_c_813_migration as frozen
 
 
 class ManifestLineageTests(unittest.TestCase):
@@ -59,6 +60,7 @@ class ManifestLineageTests(unittest.TestCase):
         }
         self.write_json(release.OWNER_RIGHTS_RECORD, self.owner_record)
         self.commit("record approved source scope")
+        self.approved_commit = self.git("rev-parse", "HEAD").decode().strip()
         self.owner_record_bytes = (self.root / release.OWNER_RIGHTS_RECORD).read_bytes()
 
     def git(self, *args):
@@ -95,6 +97,46 @@ class ManifestLineageTests(unittest.TestCase):
                 patch.object(release, "OWNER_APPROVED_MANIFEST_ENTRIES", 2), \
                 patch.object(release, "OWNER_APPROVED_CHANGED_MANIFEST_ENTRIES", 0):
             return release.attested_owner_permissions(self.root, manifest)
+
+    def frozen_lineage(self, baseline=None):
+        with patch.object(release, "OWNER_APPROVED_MANIFEST_BLOB", self.approved_blob), \
+                patch.object(release, "OWNER_APPROVED_MANIFEST_ENTRIES", 2), \
+                patch.object(frozen, "DESTINATION_BASELINE", baseline or self.approved_commit):
+            return frozen.verified_inclusion_lineage(self.root)
+
+    def test_frozen_verifier_accepts_original_and_exact_editorial_lineage(self):
+        self.assertFalse(self.frozen_lineage()["editorial_update"])
+        self.install(self.changed_manifest())
+        result = self.frozen_lineage()
+        self.assertTrue(result["editorial_update"])
+        self.assertFalse(result["owner_grant_extended"])
+
+    def test_frozen_verifier_rejects_unrelated_baseline(self):
+        self.install(self.changed_manifest())
+        current = self.git("rev-parse", "HEAD").decode().strip()
+        self.assertIsNone(self.frozen_lineage(current))
+
+    def test_frozen_verifier_rejects_uncommitted_manifest_substitution(self):
+        self.install(self.changed_manifest())
+        self.write_json(self.manifest_path, self.approved)
+        self.assertIsNone(self.frozen_lineage())
+
+    def test_frozen_verifier_rejects_source_and_rights_mutations(self):
+        for field, value in (("source_blob", "4" * 40), ("publication_clearance", "cleared")):
+            with self.subTest(field=field):
+                changed = self.changed_manifest()
+                changed["entries"][0][field] = value
+                self.install(changed)
+                self.assertIsNone(self.frozen_lineage())
+
+    def test_frozen_git_adapter_ignores_replacement_objects(self):
+        self.install(self.changed_manifest())
+        original = self.git("rev-parse", "HEAD:" + self.generator_path).decode().strip()
+        replacement = self.git("rev-parse", self.approved_commit + ":" + self.generator_path).decode().strip()
+        self.git("replace", original, replacement)
+        self.assertEqual(frozen.git(self.root, "show", "HEAD:" + self.generator_path), self.new_generator)
+        self.assertTrue(frozen.source_blob_exists(self.root, "HEAD", self.generator_path))
+        self.assertTrue(self.frozen_lineage()["editorial_update"])
 
     def test_original_approved_manifest_remains_accepted(self):
         result = self.permissions()

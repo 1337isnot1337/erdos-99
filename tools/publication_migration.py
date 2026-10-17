@@ -20,7 +20,8 @@ SOURCE = "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
 STATUS_DOCUMENTS = frozenset({"docs/launch/READINESS.md", "docs/launch/PUBLICATION_AUDIT.md"})
 SUPPORT_CHANGES = frozenset({"tools/check_public.py", "tools/build_artifact_index.py",
                              "docs/state/artifact-index.jsonl", "tools/verify_publication_candidate.py",
-                             "docs/publication/inclusion.json", "tools/audit_public_release.py"}) | STATUS_DOCUMENTS
+                             "docs/publication/inclusion.json", "tools/audit_public_release.py",
+                             "tools/verify_frozen_target_c_813_migration.py"}) | STATUS_DOCUMENTS
 HISTORICAL_ROOTS = (
     "docs/archive/source-e99-branches/",
     ROOT + "agent-1/payload/",

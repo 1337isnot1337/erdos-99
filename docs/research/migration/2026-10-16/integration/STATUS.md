@@ -45,8 +45,11 @@ deprecation; the source repository and historical working copies remain intact.
 
 ## Verification and integration contract
 
-The six original engineering transformations retain their exact baseline
-archives. Two release-status documents additionally prepend current status
+The six original engineering transformations and the frozen-corpus verifier
+lineage correction retain their exact baseline archives. The latter applies
+the existing committed-object owner-manifest check after the recorded generator
+hash correction; source identities and rights fields remain unchanged.
+Two release-status documents additionally prepend current status
 while preserving their entire historical text and exact original copies.
 The policy permits only those two named document additions and rejects any
 historical-text or mode change. Security scanning and rights checks apply.

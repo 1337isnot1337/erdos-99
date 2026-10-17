@@ -136,6 +136,23 @@
         "bytes": 14370
       },
       "reason": "Prepend current migration completion and bounded historical-worktree status; preserve the complete baseline document, exact original archive, source rights, and all historical receipts."
+    },
+    {
+      "path": "tools/verify_frozen_target_c_813_migration.py",
+      "preserved_original": "docs/research/migration/2026-10-16/integration/baseline-originals/tools/verify_frozen_target_c_813_migration.py.source",
+      "before": {
+        "mode": "100644",
+        "git_blob_sha1": "d3d5d8f745e29a36a9aa23133342f93df9096cab",
+        "sha256": "0f56f86fbb43984f3b15c9178af47cde9d625eda7d806f2d695e6b654c4b26f7",
+        "bytes": 20947
+      },
+      "after": {
+        "mode": "100644",
+        "git_blob_sha1": "76aed04e7996f7b0123cf91c60c67ee43a4669df",
+        "sha256": "fbc85985750d29162512a6b6c9786a5ed2ca03eeb326fbd17404dbe0e9cef1fa",
+        "bytes": 22210
+      },
+      "reason": "Bind frozen-corpus inclusion validation to the existing exact committed owner-manifest lineage after the recorded artifact-generator hash correction; preserve all source/rights fields and disable Git replacement objects."
     }
   ],
   "captured_commit": "f282d53169df4d507117893bfdcc99f663855923",
