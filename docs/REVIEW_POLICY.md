@@ -66,6 +66,24 @@ to the proof or checker, disclose that overlap and do not count the review as
 independent. A changed substantive head requires a fresh scope-aware review.
 Internal agent review is not external human peer review; never claim otherwise.
 
+## Certificate verification at merge
+
+Contributing agents run the new or changed verifiers and focused checks needed
+to support their result. Required repository-wide certificate replay is
+**deferred to the merging agent** and must be identified as pending in the PR.
+That handoff permits submission; it does not assert full verification.
+
+The merging agent resolves the verification scope and performs required full
+replay on the final integration candidate containing current main and the PR.
+Record the candidate commit/tree, PR head, base, environment, commands and
+results, and merge the tested tree. Unresolved `full-verification-required`
+impact must be cleared before merge. Workflow-only changes retain their
+structural-check exemption, subject to declared mathematical dependencies.
+See [verification ownership](ci/README.md#verification-ownership).
+
+This operational responsibility does not replace the independent mathematical
+audit below. A merging agent's certificate pass alone is not a proof audit.
+
 ## Canonical promotion gate
 
 Frontier-changing canonical promotion requires **exactly one independent AI-agent

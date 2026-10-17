@@ -82,8 +82,12 @@ py -3.14 -m venv .venv
 .\.venv\Scripts\python.exe tools/check_public.py
 ```
 
-Run tests and certificates for the behavior or mathematical inputs you change.
-For an explicit full certificate replay, replace `tools/check_public.py` in the
+Contributors run tests and the new or changed verifiers needed to support their
+result. Required repository-wide certificate replay is deferred to the merging
+agent, which runs it on the final integration candidate before merging and
+records the tested commit/tree and outcome. Workflow-only changes retain their
+structural checks. See [verification ownership](docs/ci/README.md#verification-ownership).
+For a full replay, the merging agent replaces `tools/check_public.py` in the
 last command with `tools/run_theorem_certificates.py`. The optional isolated
 package replay uses Linux and Bubblewrap; it is not part of ordinary setup.
 The [Linux wheel lock](tools/requirements-verification-linux-x86_64.lock) remains
