@@ -1,0 +1,90 @@
+# Hostile audit — adjacent-turn lower bound and `P1` `H(3,3)` exclusion
+
+**Date:** 2026-09-19  
+**Audited note:** `target_c_support6_pentagon_adjacent_lower_h5_p1_exclusion_2026-09-19.md`  
+**Certificate:** `verify_target_c_support6_pentagon_adjacent_lower_h5_p1_exclusion_2026_09_19.py`  
+**Disposition:** PASS with the scope limits below. C-II remains open.
+
+## 1. The reflection normalization does not change the claimed adjacent sum
+
+The local proof assumes `delta_0+delta_1=s<=2pi/3`, writes the first three side directions as `0,a,s`, and reflects if necessary to arrange `a<=s/2`.
+
+This is legitimate. Reflection followed by restoring counterclockwise side order replaces the five-vector sequence
+
+`(u_0,u_1,u_2,u_3,u_4)`
+
+by
+
+`(u_2',u_1',u_0',u_4',u_3')`.
+
+The first two new gaps are the original `delta_1,delta_0`, so their sum is still `s`. The final new gap is the original `delta_2` rather than `delta_4`, but the strict one-turn bound `<2pi/3` holds at every index. Thus the later contradiction with the final gap is invariant under this normalization.
+
+## 2. The direction and cosine ranges in the local lemma are valid
+
+Under `0<a<=s/2<=pi/3`,
+
+`exp(-is/2) S = 2 cos(s/2) + exp(i(a-s/2))`
+
+has positive real part and nonpositive imaginary part. Hence the argument `phi` of `S` satisfies `0<phi<=s/2<=pi/3`.
+
+Strict convexity gives `0<delta_3<pi`, so `t=delta_3/2` lies in `(0,pi/2)`. Because `u_3+u_4=-S`, the pair sum has magnitude `2 cos t` and direction equal to its angular bisector, namely `phi+pi` modulo `2pi`. In the ordered configuration this is the actual bisector between `u_3` and `u_4`, so the last gap is exactly
+
+`delta_4 = pi-phi-t`.
+
+The factorization
+
+`R^2-(S_x+sqrt(3)S_y) = 8 cos((a+pi/3)/2) cos((s+pi/3)/2) cos((s-a)/2)`
+
+was re-expanded independently. Every factor is nonnegative for `0<a<=s/2` and `s<=2pi/3`. Since
+
+`S_x+sqrt(3)S_y = 2R cos(pi/3-phi)`,
+
+we obtain `cos t >= cos(pi/3-phi)`. Both angles lie in `[0,pi/2)`, so cosine is injectively decreasing there and
+
+`t<=pi/3-phi`.
+
+Therefore `delta_4>=2pi/3`, contradicting the strict one-turn bound. Equality at `s=2pi/3` does not escape: the conclusion is still a non-strict lower bound on `delta_4`, while the source bound is strict.
+
+No unproved assumption about reciprocal coordinates, cone signatures, or numerical compactness enters this local lemma.
+
+## 3. The lemma is not claimed for arbitrary equilateral pentagons without the one-turn hypothesis
+
+The proof uses the existing physical-source theorem `delta_i<2pi/3` at the final contradiction. The companion note correctly states the result for the current strict convex equilateral **force pentagons with that source-separation bound**. It should not be silently promoted to an unrestricted theorem about every equilateral pentagon.
+
+Within the current support-six application the hypothesis is already available at every physical force pentagon.
+
+## 4. The `P1` cone bookkeeping is exact
+
+The standalone verifier reconstructs the `P1` translation-surface corner classes directly from the seven force cycles and translation side pairings. It reproduces
+
+`(16,12,4),(3,2,1),(3,2,1),(3,3,0),(11,11,0)`.
+
+For the candidate signature `(4,1,1,1,4)`, it independently finds
+
+`C3 = {(1,1),(3,3),(5,2)}`
+
+and
+
+`C4 = {(1,2),(2,1),(2,2),(2,3),(3,2),(4,1),(4,2),(5,1),(5,3),(6,2),(6,3)}`
+
+in `(face,gap)` notation. The cone formula `sum delta=(N-2m)pi` therefore gives the exact targets `pi` and `3pi` used in the proof.
+
+The contradiction uses only strict inequalities already proved for physical pentagons:
+
+- old upper two-turn bounds on `(delta_20,delta_24)` and `(delta_50,delta_54)`;
+- new lower two-turn bounds on `(delta_11,delta_12)`, `(delta_32,delta_33)`, `(delta_41,delta_42)`, and `(delta_62,delta_63)`;
+- the exact `C3` equation.
+
+The resulting `C4` lower bound is exactly
+
+`(1/3)+1+(2/3)+1+(2/3) = 11/3`
+
+in units of `pi`. Since `11/3>3`, there is no endpoint/equality loophole.
+
+## 5. Scope of the exclusion
+
+This removes only the `P1` cone signature `(4,4,1,1,1)`, equivalently the Abelian-differential stratum `H(3,3)`. It does **not** eliminate the `P1` sign/order orbit itself because its other signature `(5,3,1,1,1)`, i.e. `H(4,2)`, remains.
+
+It also does not affect `P2`, the two `P3` signatures, or the collapsed support-six branch. A linear feasibility check with the new adjacent lower bounds leaves those four noncollapsed signatures feasible at the level of turn-gap/cone equations, so claiming more from this lemma alone would be unsupported.
+
+**Audit disposition:** the new adjacent-turn lower lemma and the `P1 H(3,3)` cone contradiction are supportable as stated. The theorem-state authority remains unchanged.

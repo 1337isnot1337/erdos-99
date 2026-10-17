@@ -1,0 +1,85 @@
+# Hostile audit — five-currency/atomic-capacity bridge
+
+**Date:** 2026-09-12  
+**Reviewed:** `target_c_five_currency_atomic_tradeoff_2026-09-12.md`  
+**Disposition:** PASS at proof-only scalar scope; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+## 1. Five-currency normalization
+
+The finite conservation identity is
+
+\[
+2(q-k)+2=\sum_rd_r+G_D+Q+u_B+k.
+\]
+
+Along a subsequence with normalized limits this gives
+
+\[
+Q+u_B=2t-s-g-\kappa.
+\]
+
+Since `u_B>=0`,
+
+\[
+Q\le2t-s-g-\kappa.
+\]
+
+The additive `2/D` disappears only after division by `D`; no finite equality is
+claimed in the note. **PASS.**
+
+## 2. Outer-detour normalization
+
+The occurrence-counted outer ledger is `b+Q=2(q-k)`.  With
+`b/D->pi+delta` and `per(F)/D->pi`, this gives
+
+\[
+Q=2t-\pi-\delta.
+\]
+
+This `Q` is the global bounded-face degree excess, not the local aggregate
+`Q_r`; the bridge never identifies them. **PASS.**
+
+## 3. Endpoint-capacity composition
+
+The audited-working atomic theorem supplies
+
+\[
+Q+4f\ge R_N(\delta).
+\]
+
+Triangle-free face degree gives `f<=Q`, so `Q+4f<=5Q`.  Combining this
+with either upper bound for `Q` gives
+
+\[
+t\ge{\pi+\delta\over2}+{R_N(\delta)\over10},
+\qquad
+t\ge{s+g+\kappa\over2}+{R_N(\delta)\over10}.
+\]
+
+Taking the maximum proves (FC.8).  The direction is correct: an upper bound on
+`Q` is substituted into an independently forced lower bound on `Q+4f`.
+**PASS.**
+
+## 4. Scope and regression
+
+- `G_D` is the exact nonnegative component remainder; no unproved sign for a
+  hull-side correction is used.
+- `s` is the total harmonic diameter moment and `g` is a global remainder;
+  the note does not claim a lower bound for either one outside an independently
+  audited carrier theorem.
+- The local/global face occurrence issue is untouched; only global `Q,f` enter
+  the atomic theorem.
+- Contact-isolated source points remain outside the core ledger and are not
+  deleted.
+- The script checks the high-density scalar witness with
+  `t=13/5`, `s=3`, `g=1/2`, `Q=f=7/10`, `u_B=1`.  Its normalized outer detour
+  is approximately `1.3584`, for which the order-7 Fejer lower term is zero.
+  Thus the bridge is not a scalar-only C-II closure.
+- At the Section-118 frontier, `s+g=3.0896...<pi`; the remainder-aware
+  maximum is therefore not activated at `delta>=0`.  The note does not claim
+  otherwise.
+
+**Final verdict:** PASS as an exact proof-only scalar coupling.  The remaining
+large-detour branch still requires a source-preserving descent, an exact unit
+triangle, or a new geometric capacity theorem. C-II remains open.

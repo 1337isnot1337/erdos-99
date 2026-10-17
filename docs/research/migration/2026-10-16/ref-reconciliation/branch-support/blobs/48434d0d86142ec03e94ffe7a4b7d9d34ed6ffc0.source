@@ -1,0 +1,245 @@
+<!-- theorem-state: {"artifact_id":"ART-011400819300","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: two-wave odd-shell fold and a two-isolate obstruction
+
+Date: 2026-10-08. Research start:
+`c981b6f818764765bcb99917a9d858599c425471`.
+Fixed main: `e0343614eac964a57273b564d0b1bd673f821f3e`.
+State: `2026-10-08.audit.158` (through independent Audit.162).
+Classification: **proved candidate awaiting independent audit**, with an
+explicit **regression** against universal fold compatibility.
+Registry status: unreviewed; canonical=false. C-II and Level I remain open.
+
+The attempted chain was
+
+`contact-preserving finite shell fold -> all actual upper constraints
+strict -> full-source equal-cardinality strict diameter competitor`.
+
+The first two implications hold for the regular shell. The last
+requires the lower constraints involving every interior source point.
+Two strict contact isolates can obstruct every cyclic version of the
+fold. No universal source endpoint is obtained.
+
+## 1. A finite endpoint with only two fixed adjacent vertices
+
+Let q=2m+1 be odd, q>=21, alpha=pi/q, and
+R=1/(2 sin alpha). Let v_j=R(exp(2ij alpha)) denote the vertices of the
+regular unit q-gon, interpreted as planar vectors. Its diameter is
+D=2R cos(alpha/2). Set
+
+```
+t=sin(alpha)^2=1/(4R^2), c=cos(2alpha)=1-2t,
+a=2c-1=1-4t=1-1/R^2,
+b=2ac-1=1-12t+16t^2=1-3/R^2+1/R^4.
+```
+
+First reflect each even-indexed vertex 0,2,...,2m-2 across the
+line through its two original contact neighbors. These vertices are
+pairwise nonadjacent; each reflected point is a v_j. Then reflect
+the odd-indexed vertices 1,3,...,2m-3 across the lines through their
+two already-reflected neighbors. These points become b v_j.
+Leave v_{2m-1},v_{2m} fixed. Every stage is an explicitly defined
+finite reflection. No claim is made that the intervening linear
+paths are feasible.
+
+The endpoint consists of factors a on the m even vertices, b on the
+m-1 indicated odd vertices, and 1 on the two remaining vertices.
+All original contacts remain exactly unit, since
+
+```
+a^2+1-2ac=4t,
+a^2+b^2-2abc=4t,
+2(1-c)=4t.
+```
+
+These are polynomial identities, not interval conclusions about equality.
+
+For q>=21, alpha<1/6, t<1/36, and b>2/3; also a>b>0.
+Any nonadjacent old pair has length at least 2 cos alpha>3/2.
+For positive radial factors lambda_i,lambda_j>=b,
+
+```
+|lambda_i v_i-lambda_j v_j|^2
+=R^2[(lambda_i-lambda_j)^2
+     +2 lambda_i lambda_j(1-cos(theta_i-theta_j))]
+>=b^2 |v_i-v_j|^2.
+```
+
+Thus every new nonadjacent pair is strictly longer than one.
+The endpoint has exactly the original q-cycle of contacts and is
+triangle-free.
+
+Every pair except the fixed adjacent pair has at least one factor
+at most a, and its length is at most
+
+```
+R(1+a)=2R cos(2alpha)<2R cos(alpha/2)=D.
+```
+
+The fixed pair has length one<D. Hence the endpoint strictly shortens
+every actual diameter and has full diameter strictly below D.
+
+This does not contradict the canonical shell stress or mixed
+rigidity: it is a finite jump to another configuration, rather
+than a feasible local path from the stressed shell.
+
+## 2. The precise sufficient interior clearance
+
+Let the full source consist of this wall and any unit-separated
+cloud X strictly inside its convex hull. Suppose additionally that
+
+```
+|x-v_j|>1+3/R  for every x in X and every j.
+```
+
+Retain every cloud point at its original position during the fold.
+The wall displacement is 1/R on the first wave and
+3/R-1/R^3<3/R on the second, so all wall-cloud lower constraints remain
+strictly above one. Cloud-cloud pairs retain their separation.
+
+For upper constraints, every moving wall point has norm at most aR,
+and every interior cloud point has norm strictly below R. Their
+distances are at most R(1+a)<D. The fixed-wall/cloud and cloud/cloud
+pairs retain their old strict upper slack: a strict interior point
+of the wall polygon cannot be an endpoint of a diameter pair.
+The endpoint is therefore a full-source equal-cardinality strict
+diameter competitor.
+
+The added clearance is a hypothesis. Canonical contact isolation
+provides only distance strictly above one, with no bound of 3/R.
+This result cannot be applied to arbitrary C-II sources.
+
+## 3. Two contact isolates obstruct every rotated fold
+
+For odd q>=65, R>10. Write delta=1/(100R^2), and put one paired
+midpoint blocker on each of the two wall sides (0,1) and (2,3),
+at radius
+
+```
+T=R cos(alpha)-sqrt((1+delta)^2-1/4).
+```
+
+Use the midpoint ray of each indicated side. This is the paired
+placement from
+[canonical Audit.65](../audits/target_c_odd_shell_barrier_payment_independent_audit_2026-10-06.md),
+using only two of its collar points. Both blockers are strictly
+inside the polygon. Each is at distance exactly 1+delta from
+its two wall endpoints, and farther from all other wall points.
+Both radii exceed R-2. Their angular separation is 4alpha, so
+their mutual distance is
+
+```
+2T sin(2alpha)>2(1-2/R)cos(alpha)>1.
+```
+
+They are genuine contact isolates. Their radial depth h=R-T is
+greater than sqrt(3)/2>4/5.
+
+If a wall endpoint of either selected side moves inward radially
+by d, its new squared distance from that side's blocker changes by
+
+```
+-2d(R-T cos(alpha))+d^2.
+```
+
+Each moved vertex in this fold has 1/R<=d<3/R. Therefore the
+decrease in squared distance exceeds
+
+```
+d(8/5-3/R)>13/(10R).
+```
+
+The old excess above one is 2delta+delta^2<3/(100R^2), smaller than
+this decrease. Every moved endpoint of a selected side collides
+with its blocker.
+
+Each cyclicly rotated fold fixes only two consecutive vertices.
+It cannot fix all four endpoints of the two disjoint selected
+sides. At least one endpoint of a selected side moves, so every
+one of the q rotated folds has a certified collision.
+
+These obstructions coexist with all strict diameter upper
+constraints at every proposed endpoint. They concern the actual
+full source and survive adding a deep cloud. Counting the number
+of distinct folds does not produce an injective blocker payment:
+the supports of these folds overlap over almost the entire shell.
+
+This does not contradict Audit.65's (q+1)/2 payment for obstructing
+q individual one-vertex proposals. The present motions move q-2
+vertices each; two blockers can cover all of these large supports.
+
+The [collar-transport candidate](target_c_shell_fold_collar_transport_2026-10-08.md)
+moves this prescribed collar as well and supplies a finite endpoint for
+the regular-wall/deep-fill family. The obstruction here fixes the cloud;
+it does not rule out that larger source move.
+
+## 4. Quadratic deep fill and certified nonglobality
+
+Add any unit-separated cloud inside the open disk of radius R-3.
+Its separation from the wall exceeds three and from the blockers
+exceeds one. This disk is strictly inside the wall polygon.
+The old actual diameter pairs remain exactly the q wall-star
+pairs, and the only contacts remain the wall cycle if the
+deep cloud has internal distances strictly above one.
+
+These are nonglobal configurations, even with quadratic cloud
+population. This follows for any unit-separated deep cloud,
+without assuming a specific lattice phase.
+
+Let a_0=sqrt(3)/2. Oler's bound in the radius R-3 disk gives
+
+```
+z<=pi(R-3)^2/a_0+pi(R-3)+1.
+```
+
+Also q<2pi R. A comparison triangular lattice in a disk of radius
+D/2 has limiting translation-average count
+
+```
+M=pi(D/2)^2/a_0
+ =pi R^2/a_0-pi/[8a_0(1+cos(alpha))].
+```
+
+For n=q+2+z,
+
+```
+M-n>
+(6pi/a_0-3pi)R-9pi/a_0+3pi-3
+-pi/[8a_0(1+cos(alpha))]
+>3pi R-(61/4)pi-3>0.
+```
+
+Here 1/2<a_0<1, cos alpha>0, R>10, and pi>3 suffice
+for the conservative last bound. By continuity choose lattice
+spacing strictly above one and disk radius strictly below D/2
+while keeping translation-average count greater than n.
+Translation averaging then supplies at least n sites; taking n
+of them gives a whole-source strict diameter competitor.
+
+Consequently neither two blockers nor a quadratic deep population
+makes these sources global minimizers. The family is a compatibility
+regression, not a Level I disproof.
+
+## 5. Computation and disposition
+
+[The checker](../../research/verify_target_c_two_wave_shell_fold_2026_10_08.py)
+proves the four contact/reflection polynomial identities exactly.
+Using the directed integer interval arithmetic of the canonical
+Audit.65 verifier, it checks q=65,101,201: old and new shell
+noncontact pairs; all new shell upper pairs; the exact old
+diameter-star classification; strict old blocker-wall distances;
+and blocker collisions for every cyclic cut.
+
+It also constructs quadratic strict triangular-lattice clouds in
+the radius R-3 disk and certifies their radial separation.
+For spacing ell=1+q^-2, all indices with
+|i|,|j|<=floor((R-3)/(2ell)) have squared lattice norm at most
+3(R-3)^2/4, so these clouds have quadratic population.
+All cloud pairs are certified by the positive integral lattice
+norm, rather than by a subset of pair samples. The universal
+finite-fold and obstruction claims use the analytic arguments
+above; the finite cases are additional checks.
+
+The source scope is a regular wall. No arbitrary canonical
+wall, 3/R cloud clearance, compatible cloud rearrangement, or
+global maximum-population classification has been extracted.
+The C-II replacement step remains open.

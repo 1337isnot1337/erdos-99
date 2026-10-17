@@ -1,0 +1,18 @@
+{
+  "changed_artifact_count": 18,
+  "dispositions": {
+    "exact_destination_duplicate": 5,
+    "exclude_shared_research_navigation_change": 3,
+    "exclude_source_claim_registry_change": 4,
+    "preserve_new_first_party_mathematical_artifact": 6
+  },
+  "materialized_bytes": 75622,
+  "materialized_file_count": 6,
+  "pr_numbers": [
+    953,
+    966,
+    967,
+    969
+  ],
+  "shared_metadata_diff_sha256": "040d1a8b425b2a38071be16f6aa8bbc5b53d4351b68a537ab77606684509d4a5"
+}

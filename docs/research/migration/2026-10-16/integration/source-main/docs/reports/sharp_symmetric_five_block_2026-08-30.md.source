@@ -1,0 +1,147 @@
+<!-- theorem-state: {"artifact_id":"ART-B25AC4877710","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Erdős Problem #99 — sharp symmetric five-block coefficient
+
+**Date:** 2026-08-30  
+**Run type:** closing-proof / local architecture optimization  
+**Target:** A, finite-gap route  
+**Canonical dependencies:** Sections 160–161  
+**External literature:** none
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+Section 161 proves that arbitrary local translations of the fixed five Kuperberg blocks
+have gain only `O(d^4)`, but explicitly leaves the leading coefficient open. This run
+closes that coefficient problem for the entire reflection-symmetric translation class.
+
+## New theorem
+
+In the paper normalization, let a feasible reflection-symmetric endpoint translate the
+five blocks by
+
+\[
+B_1=(-a,-b),\quad B_2=(-c,-e),\quad B_3=(0,v),\quad
+B_4=(c,-e),\quad B_5=(a,-b),
+\]
+
+with all variables tending to zero as the initial aligned gap `d->0` and with `v>=0`.
+Then
+
+\[
+\boxed{
+\limsup_{d\downarrow0}\frac{v}{d^4}\le\frac{\sqrt3}{9}.
+}
+\]
+
+The Section 160 toe-out analytic branch has
+
+\[
+v=\frac{\sqrt3}{9}d^4-\frac29d^5+O(d^6),
+\]
+
+so the coefficient is sharp. Equality forces the leading translation profile
+
+\[
+\frac bd\to1,\qquad
+\frac a{d^2}\to\frac14,\qquad
+\frac c{d^2}\to\frac12,\qquad
+\frac e{d^2}\to\frac{\sqrt3}{6}.
+\]
+
+Thus the Section 160 toe-out direction is not merely one good symmetric motion: its
+leading profile is forced by asymptotic optimality.
+
+## Proof audit
+
+The proof uses only seven necessary margin inequalities from Section 160's complete
+nearest-neighbor enumeration:
+
+\[
+\begin{aligned}
+M_1&=a^2-2a+b^2+2\sqrt3b,\\
+M_2&=a^2-4a+b^2,\\
+M_3&=a^2-2a+b^2-2bd-2\sqrt3b+d^2+2\sqrt3d,\\
+M_5&=(a-c)^2+(b-e)^2+4(a-c),\\
+M_7&=c^2+4c+(e+v)^2,\\
+M_{10}&=c^2+2c+(e+v)^2-2\sqrt3(e+v),\\
+M_{14}&=c^2-2c+e^2+2\sqrt3e.
+\end{aligned}
+\]
+
+All are nonnegative at a feasible endpoint.
+
+First, normalize by the largest translation scale. If that scale were asymptotically
+larger than `d`, the linear tangent inequalities would force successively
+`a=c=b=e=v=0`, contradicting the normalization. Hence every variable is `O(d)`.
+Dividing by `d` then gives
+
+\[
+a/d,c/d,e/d,v/d\to0,\qquad 0\le\liminf b/d\le\limsup b/d\le1.
+\]
+
+Next add `M_10+M_14`. The linear `c,e` terms cancel exactly:
+
+\[
+2\sqrt3v\le2c^2+2e^2+2ev+v^2.
+\]
+
+Thus `v=O(c^2+e^2)`. A second largest-scale contradiction, now against `d^2`, shows
+`a,c,e=O(d^2)`, hence `v=O(d^4)`.
+
+Along a subsequence realizing the limsup set
+
+\[
+B=\lim b/d,\quad A=\lim a/d^2,\quad C=\lim c/d^2,
+\quad E=\lim e/d^2,\quad V=\lim v/d^4.
+\]
+
+Scaled feasibility gives
+
+\[
+0\le B\le1,
+\qquad A\le B^2/4,
+\qquad 0\le C\le A+B^2/4\le B^2/2,
+\qquad E=C/\sqrt3.
+\]
+
+The summed middle inequalities at order `d^4` give
+
+\[
+\sqrt3V\le C^2+E^2=\frac43C^2.
+\]
+
+Therefore
+
+\[
+V\le\frac{4}{3\sqrt3}C^2
+\le\frac{\sqrt3}{9}B^4
+\le\frac{\sqrt3}{9}.
+\]
+
+Every step must be equality when the upper bound is attained, giving the leading
+profile displayed above.
+
+## What this changes
+
+Together, Sections 160–162 exhaust coefficient tuning of the natural symmetric rigid
+five-block model. Section 160 gives the explicit best branch, Section 161 proves the
+fixed-block quartic exponent barrier even without symmetry, and Section 162 proves the
+Section 160 leading coefficient is already optimal under symmetry.
+
+Future finite-gap work should not spend effort on another symmetric five-translation
+optimization. A better support exponent requires a different block/contact architecture,
+rotations or internal deformation, a nonlocal mechanism, or constructive use of the
+exterior source/scaffold geometry. The competing direct route remains source-to-Schur
+transport.
+
+## Exact remaining endpoint
+
+Target A still requires
+
+\[
+\dim\ker S\ge\Delta_\Lambda-d_{\rm int}
+\]
+
+or an actual `N`-point unit-separated competitor of diameter strictly below `D(N)`.
+The new theorem is a rigorous architecture-optimality result, not that final closure.

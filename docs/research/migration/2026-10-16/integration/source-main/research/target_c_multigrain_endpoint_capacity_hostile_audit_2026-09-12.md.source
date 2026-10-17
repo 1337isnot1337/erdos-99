@@ -1,0 +1,54 @@
+# Hostile audit: multi-grain Section-118 endpoint capacity
+
+Date: 2026-09-12
+
+Reviewed: `target_c_multigrain_endpoint_capacity_2026-09-12.md`.
+
+Disposition: PASS as a proof-only candidate at the inherited Section-118 safe-window
+scope. Theorem-state authority is unchanged; C-II remains open.
+
+## Checks
+
+The selected carrier crossings use one fixed unordered pair of the three exact phase
+labels. The resulting train graph is therefore bipartite and simple; applying Mantel
+componentwise is valid. The graph is not assumed connected, and no Euler trail or
+incident-diameter path is inferred.
+
+The high-angle deletion count is
+
+```
+5.317 D / (10000/D) = 0.0005317 D^2,
+```
+
+and minimum-degree pruning deletes at most
+`10^-5D * 1.8488D = 0.000018488D^2` crossings. With the inherited carrier floor
+`0.4703752868D^2`, the retained floor is `0.4698250992D^2`, safely above the outward
+rounded `0.4697D^2` used in the scalar contradiction.
+
+For a retained component, graph distance three separates closed neighborhoods. The
+minimum-degree bound and the global train ceiling give an absolute phase-component
+diameter. Since each retained edge has phase increment at most `10000/D`, the phase
+diameter tends to zero. Applying the inherited one-collapsed-interval bad-capacity
+bound separately to the at most three projective labels is conservative, including
+when different components have overlapping phase intervals.
+
+Writing `x_i=n_i/D`, `K_0=3B_bad`, and
+`S=sum_i(x_i-K_0)_+`, componentwise Mantel gives
+
+```
+4 sum_i e_i <= K_0 C_0 + K_0 S + S^2,
+```
+
+where `C_0=1.8488`. The retained edge floor forces `S>0.9499`; the route endpoint
+budget forces `2S<=1.8693`, leaving a strict margin greater than `0.0305`.
+
+The companion script checks only these finite scalar inequalities. It does not prove
+the inherited carrier, bad-capacity, or signed-return inputs, and it does not imply a
+global-minimum-diameter statement.
+
+## Exact surviving obstruction
+
+This closes only the disconnected/multi-grain gap inside the proof-only
+Section-118 window `sigma<=0.0088`. It leaves full-core slack above that window and
+the macroscopic inactive-container branch. Any promotion would require the normal
+state transaction and a separate audit of those dependencies.

@@ -1,0 +1,202 @@
+# Target C: seven-no-root `D=-1,k=3,d=0,p=1` closure
+
+Date: 2026-09-20
+
+Status: exact finite closure of the seven-no-root
+
+`D=-1, k=3, d=0, p=1`
+
+rank-density branch. This note also corrects the scope of the earlier direct six-shadow audit: its touch-count filters cover only the subcase in which the unique singleton remains touched after every pair deletion. The closure below includes singleton touch sizes one and two as well.
+
+Companion verifier:
+
+`research/verify_target_c_support7_global_segment_relative_seven_noroot_k3_dminus1_corrected_2026_09_20.py`
+
+## 1. Input from the deletion theorems
+
+Let `B` be a hypothetical seven-no-root counterexample in this branch. The established one-row and depth-two synchronization results give a rank-four coefficient-constraint space
+
+`P_7 <= Q^7`
+
+such that deleting any one or any two of the seven external coordinates preserves rank four.
+
+Equivalently,
+
+`min support(P_7) >= 3`.
+
+Every two-row deletion therefore has
+
+`D=3, k=1`.
+
+The total root-row parameters remain `d=0,p=1` under deletion because the root-row set itself is fixed. The unique incomplete root row may, however, become *untouched*. This distinction matters: total `p=1` does not imply touched incomplete cost `p_t=1` in every deletion shadow.
+
+The earlier direct verifier imposed touch count at least three and therefore did not by itself certify the low-touch subcases.
+
+## 2. Why one touched five-row shadow always exists
+
+First, the singleton root row cannot be untouched by all seven no-root cycles. If it were globally untouched, it would impose no external coefficient constraint and contribute no relative `T` relation. Removing that inert root row would lower `|A|` by one without changing `delta`, producing a seven-no-root state with
+
+`D=-2, k=3, d=0, p=0`,
+
+which is already closed by the committed `D=-2,k=3` theorem.
+
+Thus the singleton is touched by at least one of the seven no-root cycles.
+
+Now choose two no-root rows to delete while keeping the singleton touched.
+
+- If the singleton touch support has size at most five, at least two no-root rows do not touch it; delete two such rows.
+- If the touch support has size six or seven, deleting any two rows leaves at least four or five touching rows respectively.
+
+Hence every hypothetical seven-row state has at least one five-row pair-deletion shadow in which the singleton remains touched.
+
+That shadow has exactly
+
+`D=3, k=1, d=0, p=1`
+
+with a touched singleton. It is enough to enumerate these exact five-row boundary shadows and add the two deleted no-root rows back in all possible ways. No lower bound on the singleton touch count is needed during either extension.
+
+## 3. Exact five-row boundary
+
+For each of the 20,451 `S_7` orbit representatives of five no-root cycles, the verifier uses the committed exact-rational coefficient-space enumeration to construct every canonical rank-four `p=1,d=0` state with a specified touched singleton.
+
+For such a five-row state the coefficient nullspace has dimension one. The verifier constructs the unique external relation lift in the 15-dimensional `T` space, adjoins the complete-block relation rows, and computes the exact defect.
+
+The full canonical `d=0` census is
+
+```text
+canonical d=0 states                 639,484
+D=3 boundary states                    1,030
+D=6 states                            638,454
+```
+
+The maximum squared norm of any relation row in the exact rerank is 84.
+
+All 1,030 `D=3` states are retained as extension parents.
+
+## 4. Corrected six-row extension
+
+Each of the 1,030 exact five-row parents is extended by every possible sixth no-root cycle. The extension search requires:
+
+- rank-four coefficient space;
+- projection back to the exact parent coefficient space;
+- rank four after every single-coordinate deletion;
+- canonical coefficient generation with the same singleton block and singleton state;
+- complete-block deficiency zero.
+
+There is deliberately no singleton-touch filter.
+
+The exact computation gives
+
+```text
+five-row D=3 parents                    1,030
+raw six-row extensions                103,000
+raw coefficient candidates                817
+normalized six-row states                 705
+distinct six-cycle sets                   267
+```
+
+The raw singleton-touch census is
+
+```text
+touch 1      106
+touch 2       78
+touch 3      430
+touch 4      191
+touch 5        9
+touch 6        3
+```
+
+The touch-one and touch-two states are precisely the cases omitted by the old direct audit. They are retained here.
+
+The maximum intermediate coefficient-space count was 43 and the maximum number of eligible local blocks was 13.
+
+## 5. Corrected seven-row extension
+
+The 705 normalized six-row states are then extended by every possible seventh no-root cycle, again with no touch-count rejection.
+
+The exact computation gives
+
+```text
+six-row parents                              705
+raw extensions                            69,795
+single-deletion synchronized candidates      908
+duplicate paths                               86
+unique seven-row candidates                  822
+```
+
+The singleton-touch census among the 822 unique candidates is
+
+```text
+touch 1        7
+touch 3      388
+touch 4      405
+touch 6       16
+touch 7        6
+```
+
+Thus low-touch seven-row candidates really do occur. This confirms that the old `touch >= 3` rejection was not logically harmless as a coverage argument and needed to be removed.
+
+For each of the 822 candidates the verifier computes the coefficient-space rank after all 21 pair punctures. Every candidate has minimum pair-projection rank exactly three rather than the required four:
+
+```text
+minimum pair-projection rank 3      822
+minimum pair-projection rank 4        0
+```
+
+The number of bad coordinate pairs per candidate has census
+
+```text
+1 bad pair       24
+2 bad pairs      33
+4 bad pairs     406
+6 bad pairs     354
+7 bad pairs       5
+```
+
+Therefore
+
+`depth-two survivors = 0`.
+
+No final seven-row `T`-space rerank is needed: every coefficient candidate already contradicts the proved pair-puncturing synchronization condition.
+
+## 6. Exactness and coverage
+
+The coefficient-space operations in the corrected extension stages are the exact rational row-space operations inherited from the committed seven-no-root `D=-2` verifier.
+
+The five-row `T` rerank uses the established prime `2^127-1`. Complete-block relation rows have squared norm at most 12 and the largest exact external relation row encountered has squared norm 84. The verifier checks Lucas-Lehmer primality and
+
+`(2^127-1)^2 > 84^15`.
+
+Hadamard therefore guarantees that the modular rank decisions agree with rational rank.
+
+Coverage does not assume that every pair-deletion shadow keeps the singleton touched. It uses only the existence of one touched five-row shadow, proved in Section 2. Starting from that shadow, the two deleted rows are restored exhaustively. The six- and seven-row searches allow touch sizes one and two and impose only necessary coefficient-space, deficiency, and projection conditions. Hence every hypothetical branch counterexample maps into the enumerated candidate set.
+
+The final candidate set is empty after the necessary 21 pair-puncture tests. Therefore
+
+> No seven-no-root state with `D=-1,k=3,d=0,p=1` exists.
+
+This closes the entire `D=-1,k=3` arithmetic boundary case.
+
+## 7. Relation to the earlier direct verifier
+
+`research/verify_target_c_support7_global_segment_relative_seven_noroot_k3_dminus1_direct_2026_09_20.py`
+
+remains useful as an independent audit of the `touch >= 3` subcase, but its explicit touch-count filters should not be cited as a proof of the full branch. The corrected verifier in this note is the branch-level closure certificate.
+
+The earlier depth-two theorem itself remains valid. If a pair deletion in the rejected `s=1` alternative made the singleton untouched, stripping that inert row would turn the five-no-root `D=0` shadow into a five-no-root state of defect `-1`, contradicting the already established complete five-no-root density theorem. If the singleton remains touched, the committed `k=2,p=1` slack theorem rules out the same `D=0` alternative.
+
+## 8. Remaining seven-no-root cases
+
+This result does not close the entire seven-no-root layer. The original arithmetic reduction has 30 boundary tuples. The already closed cases now include
+
+- `D=-2,k=3,d=0,p=0`;
+- both `D=-2,k=4` cases `(d,p)=(0,3),(1,0)`;
+- `D=-1,k=3,d=0,p=1`.
+
+The next work should use the same deletion-depth and generalized-weight machinery on the `k>=4` and `k>=5` arithmetic boundary cases rather than restart a blind 4.55-million-orbit scan.
+
+The direct C-II endpoint remains unchanged at
+
+`3874 = 3076 C7 + 798 (C3 disjoint-union C4)`.
+
+No theorem-state authority file is changed by this branch closure.

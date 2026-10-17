@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+"""Exact constant regressions for the high-t common-grid force-cell composition."""
+
+from fractions import Fraction as Q
+
+c = Q(113, 5_000_000)
+c0 = c / 4
+rho0 = c / 48
+delta0 = c / 64
+
+robust_density = c0 / 2
+robust_branch_density = robust_density / 2
+deep_two_sided_density = c / 32
+
+H = Q(4_436_000, 1)
+bplus_density = Q(1567, 10_000)
+row_cost_constant = H / bplus_density
+lambda_constant = Q(1_502_000, 1)
+q_constant = 2 * lambda_constant
+common_grid_constant = row_cost_constant + q_constant
+
+assert c0 == Q(113, 20_000_000)
+assert rho0 == Q(113, 240_000_000)
+assert delta0 == Q(113, 320_000_000)
+assert robust_density == Q(113, 40_000_000)
+assert robust_branch_density == Q(113, 80_000_000)
+assert deep_two_sided_density == Q(113, 160_000_000)
+
+assert row_cost_constant < Q(28_400_000, 1)
+assert q_constant == Q(3_004_000, 1)
+assert common_grid_constant < Q(31_400_000, 1)
+
+# B0 retains at least half of B+; 0.0783 is a safe rounded floor.
+assert bplus_density / 2 > Q(783, 10_000)
+
+# The deep two-sided deletion is exactly half of the c/16 deep-cell density.
+assert c / 16 - c / 32 == deep_two_sided_density
+
+print("PASS: high-t deep force cells share one common inverse-D train grid")
+print("rho0 =", float(rho0))
+print("delta0 =", float(delta0))
+print("robust density =", float(robust_density))
+print("one robust branch density =", float(robust_branch_density))
+print("deep two-sided density =", float(deep_two_sided_density))
+print("H/0.1567 =", float(row_cost_constant))
+print("common row-column defect coefficient =", float(common_grid_constant))

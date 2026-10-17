@@ -1,0 +1,274 @@
+# Target C-II — optimized adjacent backbone reduces the switching caterpillar forest to at most `542` edges
+
+**Date:** 2026-09-15  
+**Status:** proof-only source-level structural strengthening  
+**Scope:** full-core Type-II branch with `t=(q-k)/D<=1.844`  
+**Dependencies:** audited `0.7404D` smallest-leaf weighted center fan; corrected complement-dual path construction; global strict-rhombus angular-defect budget; matched atomic/Section-171 diameter-edge density bound; adjacent Pareto and switching-caterpillar refinements  
+**Certificate:** `research/verify_target_c_adjacent_optimized_path_543.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The original adjacent-cut theorem chose
+
+\[
+\lambda=0.677,
+\qquad r=0.488
+\]
+
+to keep the three averaged constants balanced.  That is not the right objective once
+the remaining obstruction has been reduced to a finite switching diameter graph.
+For blocker classification the useful quantity is the length of the selected good-leaf
+backbone, because a longer path decreases the guaranteed number of switch rows on one
+boundary.
+
+Re-optimizing only this step, while keeping the same audited fan inputs and all later
+interval/KKT arguments unchanged, nearly doubles the backbone density.  Combined with
+the improved full diameter-edge count, the finite cusp shrinks from the original
+`<21200` rows to at most `542` switching rows.
+
+## Theorem OP543
+
+Every sufficiently large survivor in the stated `t<=1.844` branch has consecutive
+smallest-leaf O--O cuts `tau_i,tau_{i+1}` for which
+
+\[
+\boxed{N_i\le542,}
+\tag{OP.1}
+
+while simultaneously
+
+\[
+B_i=O(D^{-1}),
+\qquad
+ d_{\mathbb{RP}^1}(u_i,u_{i+1})=O(D^{-1}).
+\tag{OP.2}
+
+Moreover the switching diameter graph is the layer cut
+
+\[
+\delta_H(S_{i+1}\setminus S_i)
+\]
+
+and hence is a caterpillar forest.  Thus the remaining large-first-order active cusp
+contains at most `542` diameter edges.
+
+---
+
+## 1. Re-optimize the good-leaf path rather than the balanced constant
+
+Use exactly the parent fan inputs
+
+\[
+{\sum_\tau w_\tau d_\tau\over\sum_\tau w_\tau}
+>0.7404-o(1),
+\]
+
+\[
+{1\over D}\sum_\tau w_\tau>0.0848-o(1),
+\]
+
+and
+
+\[
+N_C<1.063D+o(D).
+\]
+
+Take the rational good-leaf threshold
+
+\[
+\boxed{\lambda=0.6404.}
+\tag{OP.3}
+\]
+
+Weighted thresholding gives distinct good-leaf density at least
+
+\[
+\begin{aligned}
+g
+&={ (0.7404-0.6404)(0.0848)\over1.063-0.6404}\\
+&=0.0200662565\ldots .
+\end{aligned}
+\tag{OP.4}
+
+Now choose the upper center block fraction `r` by requiring the lower-phase neighbor
+reserve to be the fixed positive value
+
+\[
+\boxed{d_{low}=10^{-4}.}
+\tag{OP.5}
+\]
+
+Thus
+
+\[
+r={0.6404-0.0001\over1.063}
+={6403\over10630}
+=0.6023518344\ldots .
+\tag{OP.6}
+\]
+
+There is no requirement that `r<1/2`; the parent proof uses only the sizes of the top
+block and its complement.  Every good leaf has at least
+
+\[
+\begin{aligned}
+d_{top}
+&=\lambda-(1-r)(1.063)\\
+&=0.2177
+\end{aligned}
+\tag{OP.7}
+
+neighbors in the top block.  Double counting therefore gives one center train crossing
+a simple complement-dual path of more than
+
+\[
+\boxed{
+pD-o(D),
+\qquad
+p={d_{top}g\over r(1.063)}
+=0.00682246453482\ldots .
+}
+\tag{OP.8}
+
+This is about `1.914` times the old path-density constant
+`0.00356417991995...`.
+
+The lower-phase reserve is deliberately small but fixed.  Consequently the same global
+angular-defect argument still gives
+
+\[
+\sum_jq_j
+\le {C_{phase}\over10^{-4}}+o(1),
+\tag{OP.9}
+\]
+
+which is a larger constant but remains `O(1)` and therefore preserves inverse-`D`
+phase averaging on a linear path.
+
+---
+
+## 2. Use the current diameter-edge density, not `pi D`
+
+The matched atomic/Section-171 ledger plus the uniform retained-mass theorem gives, as
+proved in `target_c_adjacent_switch_count_1039_2026-09-15.md`,
+
+\[
+{h_H\over D}<1.851259926+o(1),
+\tag{OP.10}
+\]
+
+where `h_H` is the total number of actual diameter edges.
+
+Each interval row starts and stops at most twice along the selected path, so
+
+\[
+\boxed{
+\sum_iN_i
+<3.702519852D+o(D).
+}
+\tag{OP.11}
+
+Divide by the optimized path density (OP.8):
+
+\[
+{3.702519852\over p}
+=542.69536\ldots .
+\tag{OP.12}
+
+Thus the integer threshold `543` lies strictly above the count-only average.
+
+---
+
+## 3. Put all three properties on the same boundary
+
+The switching KKT mass budget is unchanged:
+
+\[
+\sum_iDB_i\le2D.
+\tag{OP.13}
+\]
+
+The optimized path has phase budget
+
+\[
+\sum_iD(q_i+q_{i+1})
+\le {2C_{phase}\over10^{-4}}D+o(D).
+\tag{OP.14}
+\]
+
+Use the general Pareto union bound with
+
+\[
+n=543,
+\qquad a=b=10^{14}.
+\tag{OP.15}
+\]
+
+The exact certificate gives bad-boundary densities
+
+\[
+0.00681863692688\ldots,
+\]
+
+\[
+2\times10^{-14},
+\]
+
+and
+
+\[
+1.0633465\times10^{-9},
+\]
+
+whose sum is below
+
+\[
+p=0.00682246453482\ldots
+\]
+
+by more than
+
+\[
+3.8\times10^{-6}.
+\]
+
+Hence one boundary satisfies simultaneously
+
+\[
+N_i<543+o(1),
+\qquad
+DB_i<10^{14}+o(1),
+\qquad
+D(q_i+q_{i+1})<10^{14}+o(1).
+\tag{OP.16}
+
+For sufficiently large sources, integrality gives `N_i<=542`, while the latter two
+bounds still imply precisely the asymptotic scales in (OP.2).
+
+---
+
+## 4. Updated finite-cusp normal form
+
+Combine (OP.1)--(OP.2) with the adjacent switching-caterpillar theorem.  The exact
+opposite two-cut multishear now has
+
+```text
+at most 542 large-first-order actual diameter rows
++ those rows form a bipartite caterpillar forest
++ they are exactly one vertex-layer cut of the full diameter thrackle
++ total switching KKT multiplier = O(1/D)
++ adjacent leaf directions differ by O(1/D)
++ all non-switching spanning rows cancel to o(1) at amplitude xi/D
+```
+
+The full-support KKT cusp still blocks a purely local old-contact descent.  The gain is
+that the finite interface classification has become much smaller without changing the
+geometric branch or introducing a new unproved input.
+
+The rational choice above is close to count-optimal for this fan-threshold architecture:
+letting `d_low` tend to zero numerically only moves the count average from
+`542.695...` to about `542.53`.  Thus forcing at most `541` rows would require either a
+stronger fan/path-density theorem or a smaller global diameter-edge budget, not further
+rounding of these two thresholds.
+
+**Disposition:** proved proof-only optimized-backbone strengthening of the adjacent
+finite-cusp normal form. C-II and Level I remain open.

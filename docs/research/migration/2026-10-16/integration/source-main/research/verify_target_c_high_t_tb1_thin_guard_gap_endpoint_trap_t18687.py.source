@@ -1,0 +1,44 @@
+from itertools import product
+from math import log
+
+
+def incidence(a, b):
+    lo, hi = sorted((a, b))
+    return tuple(range(lo + 1, hi + 1))
+
+
+# In one fixed orientation class, one nonempty incidence interval determines
+# both endpoint gap ranks exactly.
+for m in range(1, 9):
+    pairs = list(product(range(m + 1), repeat=2))
+    for orient in (0, 1):
+        cls = [
+            p
+            for p in pairs
+            if (p[0] <= p[1] if orient == 0 else p[0] > p[1])
+        ]
+        for p in cls:
+            for q in cls:
+                I = incidence(*p)
+                if I and incidence(*q) == I:
+                    assert p == q
+
+
+# In a pairwise-crossing rank sequence alpha is nondecreasing and beta is
+# nonincreasing. If two entries both have empty incidence, equality alpha=beta
+# forces the common gap rank to be the same.
+for m in range(1, 8):
+    for a1 in range(m + 1):
+        for a2 in range(a1, m + 1):
+            for b1 in range(m + 1):
+                for b2 in range(b1 + 1):
+                    if not incidence(a1, b1) and not incidence(a2, b2):
+                        assert a1 == b1 and a2 == b2
+                        assert a1 == a2
+
+
+coeff = 1 / (24 * log(5))
+assert 0.0258 < coeff < 0.0260
+
+print("PASS: THIN guard-gap endpoint-trap regressions")
+print("endpoint-window population coefficient =", coeff)

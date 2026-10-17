@@ -1,0 +1,61 @@
+{
+  "additional_frozen_originals_preserved": 203,
+  "audited_payload_commit": "bad80df13634295c43353a7fd2cc6f61d2192881",
+  "baseline_commit": "c6e0394b3152d21075328bf4f26e6c070229bf13",
+  "coverage_counts": {
+    "exact_preserved": 4654,
+    "reference_not_redistributed": 63
+  },
+  "deprecation_ready": false,
+  "destination_baseline_paths_unchanged": 2297,
+  "exact_source_archives_added": 1282,
+  "frozen_entries_validated": 813,
+  "integrity_errors": [],
+  "ledger_path": "docs/research/migration/2026-10-16/integration/source-main-complete-dispositions.jsonl",
+  "ledger_sha256": "03917940f24e738ba637d22c4414fc60cf12f754a43ed05b82060d633ea7b4b5",
+  "limits": [
+    "This receipt covers the pinned source main tree, not every historical ref or inaccessible worktree.",
+    "The existing accepted destination baseline and all 813 frozen destination identities are unchanged.",
+    "Historical originals do not supersede corrected canonical destination documents.",
+    "The replay preserves original layout and bytes for 4653 non-reference paths; files remain non-executable.",
+    "One preexisting exact source checksum manifest under papers/related is retained; no excluded reference bytes were newly copied.",
+    "The audited payload commit predates this evidence-only commit; rerun the checker after integration."
+  ],
+  "mathematical_proof": false,
+  "official_recovery_plan_entries": 1079,
+  "original_mode_to_archive_mode_counts": [
+    {
+      "destination_mode": "100644",
+      "paths": 4627,
+      "source_mode": "100644"
+    },
+    {
+      "destination_mode": "100644",
+      "paths": 22,
+      "source_mode": "100755"
+    },
+    {
+      "destination_mode": "100755",
+      "paths": 5,
+      "source_mode": "100755"
+    }
+  ],
+  "public_check_on_isolated_payload_branch": {
+    "candidate_commit": "bad80df13634295c43353a7fd2cc6f61d2192881",
+    "command": "python tools/check_public.py",
+    "errors": 15352,
+    "exit_code": 1,
+    "python": "verified dependency runtime",
+    "scope": "Pre-existing migration link, header, and helper-import integration errors remain for the reference/release workers."
+  },
+  "release_verified": false,
+  "replay_original_paths_and_bytes_independently_checked": 4653,
+  "schema_version": 1,
+  "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "source_main_preservation_passed": true,
+  "source_paths": 4717,
+  "source_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+  "status": "PASS_SOURCE_MAIN_ONLY",
+  "tool_fix_commit": "fe3609fe41c867eccb97b8a8978a8b01b3c68fbd",
+  "unresolved_source_paths": 0
+}

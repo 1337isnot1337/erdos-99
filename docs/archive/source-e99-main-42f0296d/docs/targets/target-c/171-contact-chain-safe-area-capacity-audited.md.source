@@ -1,0 +1,427 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "b3df9cdbfe504c5d1c33a90479fbe69db8f1d763", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "docs/targets/target-c/171-contact-chain-safe-area-capacity-audited.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b8a87295ea6ecf4e2418fc28407c864654c589b973d11d0dbb10328a66b6382d"} -->
+
+> **Historical source snapshot; destination authority remains current.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical. Source path: `docs/targets/target-c/171-contact-chain-safe-area-capacity-audited.md`. Source commit: `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`.
+
+# Target C — audited §171 contact-chain safe area and constructive Type-I capacity
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working proof-only Type-I route theorem; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module normalizes the contact-wall, exterior mixed-wall, and contact-chain
+safe-area results previously carried in `research/`. It sharpens §165: the replacement
+packing need not lie in the full depth-one inner parallel body. Actual unit-contact
+boundary edges are exact geometric shields, so along those walls it suffices to stay
+one unit from the **boundary source vertices**.
+
+The universal one-edge constant is
+
+\[
+\boxed{
+c_*={\pi\over6}+{\sqrt3\over4},
+\qquad
+g_*:=1-c_*>0,
+}
+\tag{171.1}
+\]
+
+and
+
+\[
+h_*:={\pi\over2}-c_*={\pi\over3}-{\sqrt3\over4}.
+\tag{171.2}
+\]
+
+The theorem gives explicit finite residual thresholds which, if met by one macroscopic
+Type-I container, realize enough protected unit-packing slots to delete a vertex cover
+of the complete actual diameter graph and force strict diameter descent.
+
+---
+
+## 171.1 Exact one-edge forbidden-area increment
+
+Let `p=(0,0)`, `q=(1,0)`, and `H={y>=0}`. For the unit disks `B_p,B_q`,
+
+\[
+\boxed{
+\operatorname{area}((B_q\cap H)\setminus B_p)
+=c_*.
+}
+\tag{171.3}
+\]
+
+Indeed a half unit disk has area `pi/2`, while the overlap lens of two unit disks with
+centers one unit apart has full area
+
+\[
+{2\pi\over3}-{\sqrt3\over2}.
+\]
+
+The edge line bisects that lens, so the new one-sided area is
+
+\[
+{\pi\over2}-\left({\pi\over3}-{\sqrt3\over4}\right)
+={\pi\over6}+{\sqrt3\over4}.
+\]
+
+Now let
+
+\[
+W=(p_0,p_1,\ldots,p_\ell)
+\]
+
+be any unit-contact path on the boundary of a convex polygon `C`. Put
+
+\[
+U_W=C\cap\bigcup_{i=0}^{\ell}\overline B(p_i,1).
+\]
+
+Convexity puts `C` in the interior half-plane of each preceding boundary edge. The
+first disk contributes at most `pi/2`; for `i>=1`, the part of the `i`th disk not
+already covered by all earlier disks is contained in the one-sided part not covered by
+`B(p_{i-1},1)`, hence costs at most `c_*`. Therefore
+
+\[
+\boxed{
+\operatorname{area}(U_W)
+\le {\pi\over2}+\ell c_*.
+}
+\tag{171.4}
+\]
+
+No small-turn or nonconsecutive-disjointness hypothesis is used; extra disk overlap only
+improves the bound.
+
+---
+
+## 171.2 Unit contact edges are exact crossing shields
+
+The geometric input is the following two-endpoint barrier.
+
+Let `|p-q|=1`, `|x-p|,|x-q|>=1`, and `|x-y|<1`. If the open segment `xy` properly
+crosses `pq`, then
+
+\[
+\boxed{|y-p|<1,
+\qquad |y-q|<1.}
+\tag{171.5}
+\]
+
+If `r` is the crossing point,
+
+\[
+|x-p|+|y-q|
+\le |x-r|+|r-p|+|y-r|+|r-q|
+=|x-y|+|p-q|<2,
+\]
+
+so `|y-q|<1`; interchange `p,q` for the other inequality.
+
+### Internal face shield
+
+Let `C` be a convex bounded contact face with cyclic boundary vertices
+`p_1,...,p_m`, every boundary edge a unit contact. If `y in int(C)` satisfies
+
+\[
+|y-p_i|\ge1
+\qquad(1\le i\le m),
+\tag{171.6}
+\]
+
+then for **every** old source point `x outside int(C)`,
+
+\[
+\boxed{|x-y|\ge1.}
+\tag{171.7}
+\]
+
+Otherwise the segment from `y` to `x` first exits through either a boundary vertex or
+the interior of one unit boundary edge. A vertex crossing contradicts source
+unit-separation plus (171.6); an edge-interior crossing contradicts (171.5).
+
+Thus a simultaneous replacement set inside `C` needs only pairwise unit separation and
+distance at least one from the boundary source vertices.
+
+### Exterior mixed-wall shield
+
+Let an exterior cap have boundary
+
+\[
+\partial C=[u,v]\cup W,
+\qquad
+W=(u=p_0,p_1,\ldots,p_\ell=v),
+\tag{171.8}
+\]
+
+where `[u,v]` is the artificial force-hull closing chord and `W` is the complementary
+unit-contact path. Define
+
+\[
+S_{mix}(C)=\{y\in int(C):
+\operatorname{dist}(y,[u,v])\ge1,
+\ |y-p_i|\ge1\ \forall i\}.
+\tag{171.9}
+\]
+
+If `y in S_mix(C)` and `x` is any old source point outside `int(C)`, then
+
+\[
+\boxed{|x-y|\ge1.}
+\tag{171.10}
+\]
+
+The first boundary crossing of a hypothetical segment of length `<1` is either on the
+closing chord, contradicting the chord-distance guard, or on the actual contact path,
+where (171.5) or the vertex guard applies.
+
+Hence either Type-I geometry admits a replacement region protected against **all**
+retained old source points, without eroding actual unit-contact walls by a full unit
+collar.
+
+---
+
+## 171.3 Safe-area lower bounds
+
+### Internal exceptional face
+
+For a convex internal contact face with `m` boundary unit edges, define
+
+\[
+S_\partial(C)=\{y\in int(C): |y-p_i|\ge1\ \forall i\}.
+\]
+
+Open the boundary cycle into a path through all `m` vertices and use (171.4) on its
+`m-1` unit edges. The union of boundary-vertex forbidden disks inside `C` has area at
+most
+
+\[
+{\pi\over2}+(m-1)c_*=mc_*+h_*.
+\]
+
+Therefore
+
+\[
+\boxed{
+\operatorname{area}S_\partial(C)
+\ge A_C-mc_*-h_*.
+}
+\tag{171.11}
+\]
+
+Equivalently,
+
+\[
+\operatorname{area}S_\partial(C)
+\ge A_C-m+g_*m-h_*.
+\tag{171.12}
+\]
+
+### Exterior cap
+
+Let the closing chord have length `s=|u-v|` and let the contact path contain `ell`
+unit edges. The one-sided unit neighborhood of the chord has area `s+pi/2`; inside
+`C` it already covers the endpoint-disk constraints at `u,v`. Add only the
+`ell-1` internal path-vertex disks. By (171.3) each adds at most `c_*`, so
+
+\[
+\boxed{
+\operatorname{area}S_{mix}(C)
+\ge A_C-s-\ell c_*-h_*.
+}
+\tag{171.13}
+\]
+
+Since `per(C)=s+ell`,
+
+\[
+\operatorname{area}S_{mix}(C)
+\ge A_C-\operatorname{per}(C)+g_*\ell-h_*.
+\tag{171.14}
+\]
+
+The gain `g_* ell` is the exact universal linear area recovered by replacing a full
+contact-side collar with endpoint guards.
+
+---
+
+## 171.4 Constructive lattice realization
+
+Let `Lambda` be the unit triangular lattice with covolume
+
+\[
+a_0={\sqrt3\over2}.
+\]
+
+Translation averaging gives, for every bounded measurable safe region `S`,
+
+\[
+\boxed{
+\max_t |(\Lambda+t)\cap S|
+\ge\left\lfloor{\operatorname{area}S\over a_0}\right\rfloor.
+}
+\tag{171.15}
+\]
+
+The selected lattice points are pairwise unit-separated; the shields above give unit
+separation from every retained old source point. This is an actual replacement packing,
+not a density heuristic or reverse Oler step.
+
+Let `H` be the **complete actual diameter graph** and `tau(H)` its minimum vertex-cover
+number. Deleting a cover `U`, deleting the assigned chamber isolates, and inserting
+`z_C+|U|` safe lattice points gives the same strict-diameter contradiction as §165.
+Thus enough safe-region capacity closes the corresponding Type-I branch directly.
+
+---
+
+## 171.5 Internal residual threshold
+
+For an internal contact face define the exact boundary residual
+
+\[
+\boxed{
+r_\partial
+={A_C\over a_0}-{m\over2}+1-z_C.
+}
+\tag{171.16}
+\]
+
+If `sigma_C=A_C/a_0+m/2+1-z_C` is the isolate-only chamber Oler slack, then
+
+\[
+\boxed{r_\partial=\sigma_C-m\ge0.}
+\tag{171.17}
+\]
+
+The inequality follows by applying finite Oler to the full unit-separated face set
+consisting of all `m` boundary vertices plus the `z_C` assigned isolates. Thus the
+prescribed unit boundary itself consumes exactly `m` units of the coarse chamber slack.
+
+Put
+
+\[
+\kappa_*={\pi\over3\sqrt3},
+\qquad
+C_*={1\over2}+{2\pi\over3\sqrt3}.
+\tag{171.18}
+\]
+
+Since
+
+\[
+{c_*\over a_0}={1\over2}+\kappa_*,
+\qquad
+{h_*\over a_0}=2\kappa_*-{1\over2},
+\]
+
+(171.11) and lattice averaging give
+
+\[
+\boxed{
+M_\partial(C)-z_C
+\ge
+\left\lfloor r_\partial-\kappa_*m-C_*\right\rfloor.
+}
+\tag{171.19}
+\]
+
+Hence the internal Type-I branch is eliminated whenever
+
+\[
+\boxed{
+r_\partial
+\ge\tau(H)+\kappa_*m+C_*.
+}
+\tag{171.20}
+\]
+
+This is a finite constructive sufficient condition.
+
+---
+
+## 171.6 Exterior residual threshold
+
+For an exterior cap let `k_C=ell+1` be its augmented graph-boundary vertex count and
+put
+
+\[
+\sigma_C={A_C\over a_0}+{s+\ell\over2}+1-z_C,
+\qquad
+r_C:=\sigma_C-k_C.
+\tag{171.21}
+\]
+
+Then
+
+\[
+{A_C\over a_0}=z_C+r_C+{\ell\over2}-{s\over2}.
+\tag{171.22}
+\]
+
+Set
+
+\[
+\lambda_*={2\over\sqrt3}+{1\over2}.
+\tag{171.23}
+\]
+
+Using (171.13) and lattice averaging,
+
+\[
+\boxed{
+M_{mix}(C)-z_C
+\ge
+\left\lfloor
+r_C-\kappa_*\ell-\lambda_*s-{h_*\over a_0}
+\right\rfloor.
+}
+\tag{171.24}
+\]
+
+Therefore the exterior Type-I branch is eliminated whenever
+
+\[
+\boxed{
+r_C
+\ge
+\tau(H)+\kappa_*\ell+\lambda_*s+{h_*\over a_0}.
+}
+\tag{171.25}
+\]
+
+The artificial closing chord is more expensive than a unit-contact side because it has
+no unit-edge crossing shield.
+
+---
+
+## 171.7 Frontier
+
+The companion residual-conservation identity writes the sum of chamber residuals as one
+punctured force-hull residual. Section §171 does **not** yet force a selected macroscopic
+container above (171.20) or (171.25); that is now the exact remaining Type-I capacity
+problem.
+
+The improvement over §165 is nevertheless concrete:
+
+- the geometric protection region is strictly larger than `C_{-1}`;
+- the gain along each contact-wall edge is the exact positive constant `g_*`;
+- Oler slack is converted to realized unit-packing slots by translation averaging;
+- the remaining deficit is an explicit linear residual inequality, not a qualitative
+  “collective exchange” obligation.
+
+## Scope audit
+
+- The contact-wall shield uses only convexity, source unit separation, and actual unit
+  contact boundary edges.
+- The exterior theorem guards exactly the artificial chord geometrically and the actual
+  contact path by endpoint disks.
+- Every deleted source point is replaced; the direct competitor need not be
+  triangle-free.
+- The diameter cover is taken in the complete actual diameter graph, not a selected
+  positive KKT support.
+- Floors are retained; the closure thresholds are finite.
+- No Oler upper bound is reversed into a capacity lower bound: realization comes from
+  triangular-lattice translation averaging.
+- No contact isolate enters the positive-core affine kernel.
+
+**Independent audit disposition:** PASS at audited-working proof-only scope. C-II and
+Level I remain open.

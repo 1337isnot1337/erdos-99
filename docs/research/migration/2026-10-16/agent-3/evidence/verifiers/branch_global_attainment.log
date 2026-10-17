@@ -1,0 +1,2 @@
+PASS: 6 exact three-point cases; 6 one-contact grid fixtures; 1641 pairs checked
+Scope: finite approximation regressions; no global optimality or Level I closure

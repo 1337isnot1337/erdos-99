@@ -1,0 +1,183 @@
+# Target C-II — AG42 refinement of the §171 orbit/detour endpoint
+
+**Date:** 2026-09-14
+**Repository base:** `5ff91a6acd3c0447be127606805e4f2cf911eadd`
+**State version:** `2026-09-14.audit.51`
+**Status:** proved candidate awaiting independent audit; theorem-state authority unchanged
+**Dependencies:** audited-working §171 and proof-only AG42 (`eta_grid=0.00042`)
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The audited §171 orbit/detour theorem used the audited §168 constant
+
+\[
+g=0.0004
+\]
+
+and obtained the safe all-Type-II floor
+
+\[
+\liminf {q-k\over D}\ge C_{146}+0.00137
+=1.8208835379\ldots,
+\qquad
+C_{146}={4\over9}(\pi+\sqrt{\Delta_2}).
+\]
+
+The AG42 refinement proves, at proof-only scope pending independent audit,
+
+\[
+C:={T-q/2\over D}\ge2\sqrt{\Delta_2}+0.00042-o(1).
+\]
+
+Nothing else in §171 depends on the decimal `0.0004`.  Substituting the sharpened
+value and rerunning the audited one-variable endpoint argument gives the safe floor
+
+\[
+\boxed{
+\liminf {q-k\over D}
+\ge C_{146}+0.0013751
+>1.82088863795.
+}
+\tag{OD42.1}
+\]
+
+This improves the previous explicit all-Type-II floor by `0.0000051`.  It is a real
+quantitative strengthening but does not approach the separate `1.8585`
+endpoint/common-cap threshold.
+
+## 1. Reuse of the audited §171 scalar reduction
+
+Audited §171 shows that any Type-II subsequential limit with
+
+\[
+t=\lim{q-k\over D},
+\qquad
+\delta=\lim{b-\operatorname{per}(F)\over D}\ge0
+\]
+
+must satisfy
+
+\[
+F_t(\delta):=
+10t-5\pi-5\delta
++\bigl(81(\pi+\delta)^2\delta\bigr)^{1/3}
+-{8\Delta_2\over {9t\over2}-2\pi-2\delta}
+\ge0.
+\tag{OD42.2}
+\]
+
+Moreover, if the train gap is `g`, its feasible detour interval is
+
+\[
+0\le\delta\le
+{ {9\over2}(t-C_{146})-g\over2}.
+\tag{OD42.3}
+\]
+
+The derivative in `t` is positive throughout the domain, so for a proposed endpoint
+`t_0` it is enough to show that `F_{t_0}` is increasing on its feasible detour interval
+and negative at the right endpoint.
+
+## 2. Safe endpoint with `g=0.00042`
+
+Set
+
+\[
+g=0.00042,
+\qquad
+\varepsilon_0=0.0013751,
+\qquad
+t_0=C_{146}+\varepsilon_0.
+\]
+
+Then (OD42.3) gives the exact endpoint
+
+\[
+\delta_0
+={ {9\over2}\varepsilon_0-g\over2}
+=0.002883975.
+\tag{OD42.4}
+\]
+
+The accompanying exact-rational certificate uses outward enclosures for `pi`,
+`sqrt(3)`, and `sqrt(Delta_2)`.  It proves
+
+\[
+1.8208886379510192<t_0<1.8208886379954636,
+\tag{OD42.5}
+\]
+
+and at `delta_0` bounds the three terms of (OD42.2) by
+
+\[
+10t_0-5\pi-5\delta_0<2.486503237006,
+\]
+
+\[
+\bigl(81(\pi+\delta_0)^2\delta_0\bigr)^{1/3}<1.321878,
+\]
+
+\[
+{8\Delta_2\over2\sqrt{\Delta_2}+g}>3.808411412392.
+\]
+
+Therefore
+
+\[
+F_{t_0}(\delta_0)<-3.0\times10^{-5}.
+\tag{OD42.6}
+\]
+
+The same certificate gives a uniform lower bound
+
+\[
+\partial_\delta F_{t_0}(\delta)>142
+\qquad(0<\delta\le\delta_0).
+\tag{OD42.7}
+\]
+
+Thus `F_{t_0}` is increasing on the full feasible interval and its maximum is still
+negative.  Since `F_t` is increasing in `t`, no feasible Type-II limit can have
+`t<=t_0`.  This proves (OD42.1), conditional only on the AG42 proof-only refinement.
+
+## 3. Numerical limit of this unchanged envelope
+
+A high-precision regression of the same endpoint equation puts its first zero at
+
+\[
+\varepsilon_*=0.00137519051783617\ldots,
+\qquad
+C_{146}+\varepsilon_*=1.82088872849728\ldots .
+\tag{OD42.8}
+\]
+
+The safe value `0.0013751` stays below that zero.  More decimal tuning would buy less
+than `9.1e-8` in the epsilon parameter and is not a useful research direction.
+
+## 4. Frontier effect
+
+This refinement is global over the same Type-II scope as audited §171.  It is not the
+old Section-118 endpoint/common-cap theorem, whose aggregate-detour argument already
+excludes `t<=1.8585` on a narrower profile.  Therefore:
+
+- it slightly raises the unconditional proof-only Type-II scalar floor;
+- it does not close the high-`t` full-core region;
+- it does not constrain the macroscopic-container branch;
+- it supplies no source-preserving strict diameter decrease and no exact unit triangle.
+
+The relevant next step is structural, not decimal: constrain the remaining high-surplus
+realization of loaded-hull detour / exceptional-face perimeter, or prove that it admits
+a same-cardinality strict sub-`D` competitor.
+
+## 5. Reproducibility
+
+Run
+
+```bash
+python3 research/verify_target_c_orbit_detour_gap_00042.py
+```
+
+The script uses `fractions.Fraction` for the sign certificate, including the cubic
+upper bound and the uniform derivative lower bound.

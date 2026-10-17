@@ -1,0 +1,370 @@
+# Target C-II — `g=0.0076` forces a live linear dominant double-outer family through `t<=1.860`
+
+**Date:** 2026-09-15  
+**Status:** proof-only structural consequence  
+**Scope:** full-core Type-II branch with the corrected `g=0.0076` matched atomic floor  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The earlier dominant double-outer theorem forced more than `0.3025D` dominant-orbit O--O trains only in the window `t<=1.843`.  The scalar floor has since moved above that window, making the old statement vacuous for current survivors.
+
+Using the corrected matched atomic floor
+
+\[
+C_{76}=2\sqrt{\Delta_2}+0.0076,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+\]
+
+the same bootstrap remains effective on the much wider live window
+
+\[
+\boxed{t={q-k\over D}\le1.860.}
+\]
+
+After freezing shrinking windows around the dominant exact `pi/3` train orbit, let `H_D` be the number of dominant-window complete stopped trains whose two terminal face incidences are both selected outer occurrences in the joint-retention construction.  Then
+
+\[
+\boxed{
+\liminf {H_D\over D}>0.0740.}
+\tag{D76.1}
+
+Thus every current survivor in
+
+\[
+1.84332\lesssim t\le1.860
+\]
+
+contains a linear family of complete trains from one exact three-phase orbit that run from the selected outer walk back to the selected outer walk.
+
+---
+
+## 1. Inputs
+
+Write
+
+\[
+t={q-k\over D},
+\qquad
+\kappa={k\over D},
+\qquad
+\delta={d_{out}\over D},
+\]
+
+\[
+U={9t\over2}-2\pi-2\delta-\kappa/2.
+\tag{D76.2}
+
+The corrected matched atomic theorem gives
+
+\[
+\boxed{U\ge C_{76}-o(1).}
+\tag{D76.3}
+
+Put
+
+\[
+m_2(U)={U+\sqrt{8\Delta_2-U^2}\over2},
+\qquad
+r(U)=U-m_2(U).
+\tag{D76.4}
+
+The hostile-audited shared-retention and complement-rhombus-incidence stack gives retained dominant outer-occurrence mass `z` and retained complement O--O pair mass `p` with
+
+\[
+\boxed{
+z+p\ge
+S(t,\delta,\kappa)-o(1),}
+\tag{D76.5}
+
+\[
+S(t,\delta,\kappa)
+=\pi-U-{t+\kappa\over2}+m_2(U),
+\tag{D76.6}
+
+and
+
+\[
+\boxed{
+p\le
+{\delta-F(z)+r(U)^2\over2(1-\delta)}+o(1),}
+\tag{D76.7}
+
+where
+
+\[
+F(z)=z-6\sin(z/6).
+\tag{D76.8}
+
+The retained dominant selected edges themselves are disjoint outer-edge occurrences, so
+
+\[
+\boxed{
+\delta\ge F(z)-o(1).}
+\tag{D76.9}
+
+No feasible-triangle derivative estimate from the scalar-floor theorem is needed below.  In particular, the `delta<0.05` bound used there is not an input to this structural bootstrap.
+
+---
+
+## 2. Uniform envelopes through `t<=1.860`
+
+Fix
+
+\[
+T_0=1.860.
+\]
+
+Since `delta,kappa>=0`,
+
+\[
+U\le U_{max}:={9T_0\over2}-2\pi.
+\tag{D76.10}
+
+Together with (D76.3),
+
+\[
+\delta\le
+\delta_{max}:={U_{max}-C_{76}\over2}+o(1).
+\tag{D76.11}
+
+The exact certificate gives
+
+\[
+\delta_{max}<0.0873<1.
+\tag{D76.12}
+
+Thus the denominator in (D76.7) remains uniformly positive throughout this wider window.
+
+For `U>=C_{76}>2sqrt(Delta_2)`,
+
+\[
+m_2'(U)<0,
+\qquad
+r'(U)=1-m_2'(U)>0.
+\tag{D76.13}
+
+Substituting (D76.2) into (D76.6) gives
+
+\[
+S=3\pi-5t+2\delta+m_2(U).
+\tag{D76.14}
+
+Hence
+
+\[
+S_t=-5+{9\over2}m_2'(U)<0,
+\]
+
+\[
+S_\delta=2-2m_2'(U)>0,
+\]
+
+\[
+S_\kappa=-{1\over2}m_2'(U)>0.
+\tag{D76.15}
+
+These signs are the only monotonicity inputs required by the bootstrap.
+
+---
+
+## 3. Bootstrap map
+
+Suppose a survivor is known to satisfy
+
+\[
+z\ge z_j-o(1).
+\tag{D76.16}
+
+By (D76.9),
+
+\[
+\delta\ge d_j-o(1),
+\qquad
+d_j:=F(z_j).
+\tag{D76.17}
+
+Therefore
+
+\[
+U\le U_j+o(1),
+\qquad
+U_j:=U_{max}-2d_j,
+\tag{D76.18}
+
+and because `r` is increasing,
+
+\[
+r(U)\le r(U_j)+o(1).
+\tag{D76.19}
+
+The signs in (D76.15) show that, under
+
+\[
+t\le T_0,
+\qquad
+\delta\ge d_j,
+\qquad
+\kappa\ge0,
+\]
+
+the shared retained-mass lower bound is minimized at
+
+\[
+t=T_0,
+\qquad
+\delta=d_j,
+\qquad
+\kappa=0.
+\]
+
+Thus
+
+\[
+S\ge S_j-o(1),
+\]
+
+\[
+S_j:=
+\pi-U_j-{T_0\over2}+m_2(U_j).
+\tag{D76.20}
+
+For the complement upper bound (D76.7), use simultaneously
+
+\[
+\delta\le\delta_{max},
+\qquad
+F(z)\ge d_j,
+\qquad
+r(U)\le r(U_j).
+\]
+
+This gives
+
+\[
+p\le P_j+o(1),
+\]
+
+\[
+P_j:=
+{\delta_{max}-d_j+r(U_j)^2
+\over2(1-\delta_{max})}.
+\tag{D76.21}
+
+Combining with (D76.5),
+
+\[
+\boxed{
+z\ge S_j-P_j-o(1).}
+\tag{D76.22}
+
+This map uses only the symbolic inequalities (D76.3)--(D76.9), not the narrow numerical range of the scalar-floor certificate.
+
+---
+
+## 4. Six exact rounds
+
+The exact rational verifier
+
+`research/verify_target_c_dominant_double_outer_trains_g0076_t1860_2026-09-15.py`
+
+uses Machin bounds for `pi`, integer-square-root enclosures, and alternating-series bounds for `sin`.  It proves the rounded-down implications
+
+\[
+0\Longrightarrow z>1.9517-o(1),
+\tag{D76.23}
+
+\[
+1.9517\Longrightarrow z>2.0576-o(1),
+\tag{D76.24}
+
+\[
+2.0576\Longrightarrow z>2.0748-o(1),
+\tag{D76.25}
+
+\[
+2.0748\Longrightarrow z>2.0777-o(1),
+\tag{D76.26}
+
+\[
+2.0777\Longrightarrow z>2.0782-o(1),
+\tag{D76.27}
+
+\[
+2.0782\Longrightarrow z>2.0783-o(1).
+\tag{D76.28}
+
+The smallest exact margin in these six rounded implications is more than `1.5e-5`.
+
+Therefore
+
+\[
+\boxed{z>2.0783-o(1).}
+\tag{D76.29}
+
+Equation (D76.9) then gives
+
+\[
+\delta\ge F(2.0783)-o(1),
+\]
+
+and the exact certificate obtains
+
+\[
+F(2.0783)>0.04131095.
+\tag{D76.30}
+
+Substituting this into (D76.2), with `t<=1.860` and `kappa>=0`, gives
+
+\[
+\boxed{U<2.004193+o(1).}
+\tag{D76.31}
+
+---
+
+## 5. Convert retained occurrences to complete double-outer trains
+
+Let `M_D` be the number of complete stopped trains in the frozen dominant windows and let `H_D` count those with two selected outer terminal occurrences.
+
+Every complete stopped train has exactly two terminal face incidences.  A train outside `H_D` contributes at most one selected outer terminal occurrence; a train in `H_D` contributes at most two.  Joint-retention weights are at most one per occurrence.  Therefore
+
+\[
+z_DD\le M_D+H_D.
+\tag{D76.32}
+
+After taking the source limit and then shrinking the phase windows, the dominant-window train mass is at most the total atomic train mass `A`.  The exposed-hull chain gives
+
+\[
+M:=\limsup {M_D\over D}
+\le A
+\le {T-q/2\over D}
+\le U.
+\tag{D76.33}
+
+Combining (D76.29), (D76.31), and (D76.32)--(D76.33),
+
+\[
+\liminf {H_D\over D}
+\ge2.0783-2.004193
+>0.0740.
+\]
+
+This proves (D76.1).
+
+---
+
+## 6. Frontier effect
+
+The dominant O--O structure is now nonvacuous on a substantial current interval:
+
+```text
+current scalar floor:  t >= 1.84332
+this theorem:           if t <= 1.860,
+                        >0.0740 D trains in one exact pi/3 orbit
+                        have both selected terminals on the outer walk.
+```
+
+Near the lower end the true bootstrap constant is much larger; at `t=1.850` the same map numerically gives about `0.212D`, but that stronger pointwise constant is not needed here.
+
+The next geometric problem is concrete.  One must place a linear family of same-orbit O--O trains, split among at most three exact projective directions, around the cyclic order of a near-round loaded hull while simultaneously maintaining the near-saturated strict-rhombus crossing graph and the actual diameter-bracing structure.  A useful next theorem should constrain this cyclic endpoint order or show that one phase subfamily forces incompatible crossings, a unit equilateral triangle, or a source-preserving shear.
+
+No Level-I closure is claimed.  C-II remains open.

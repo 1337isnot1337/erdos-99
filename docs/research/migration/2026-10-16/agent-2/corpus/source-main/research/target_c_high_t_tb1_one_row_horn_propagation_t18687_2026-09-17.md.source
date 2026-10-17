@@ -1,0 +1,431 @@
+# Target C-II — one-row LOWER rigidity removes the final Horn duplication loss
+
+**Date:** 2026-09-17  
+**Status:** proof-only propagation of the one-row near-unit theorem through the sharp all-residue Horn branch; no canonical promotion claimed  
+**Scope:** one-sign strong-TB1 exact swaps through `t=(q-k)/D<=1.8687`  
+**Dependencies:** sharp all-residue Horn budget; one-row LOWER classification; repeated-UPPER boundedness; global angular-defect budget; high-`t` crossing-neighbor floor; complete-train count  
+**Certificate:** `research/verify_target_c_high_t_tb1_one_row_horn_propagation_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The sharp all-residue Horn theorem already removed the multiplicity-two loss for UPPER blockers. Its only remaining asymmetric loss was LOWER cross-residue repetition. The one-row classification now proves that such repetition is impossible for all sufficiently large `D`.
+
+Therefore both metric classes are asymptotically deduplicated when the residue-class Horn outputs are merged.
+
+Let
+
+\[
+s_0={791\over320{,}000{,}000}.
+\]
+
+The source-wide blocker budget sharpens from the weighted inequality
+
+\[
+2N_L+N_U>
+\left({s_0\over8}-o(1)\right)D
+\]
+
+to the unweighted inequality
+
+\[
+\boxed{
+N_L+N_U>
+\left({s_0\over8}-o(1)\right)D.
+}
+\tag{OP.1}
+\]
+
+Consequently one metric type has density at least
+
+\[
+\boxed{
+\delta_{\rm one}:={s_0\over16}
+={791\over5{,}120{,}000{,}000}
+=1.544921875\times10^{-7}.
+}
+\tag{OP.2}
+\]
+
+This is a factor `3/2` above the preceding equal-density floor `s0/24`.
+
+If UPPER wins, the flexible-scale localization coefficient improves to
+
+\[
+\boxed{
+c_{\rm one}
+={\delta_{\rm one}\over6A_*}
+={113\sqrt3\over20{,}480{,}000{,}000}
+=9.55672564723\ldots\times10^{-9},
+}
+\tag{OP.3}
+\]
+
+where
+
+\[
+A_*={14\over3\sqrt3}.
+\]
+
+If LOWER wins, the global four-row ladder theorem collapses to a one-row theorem with support overlap only two. There are more than
+
+\[
+\boxed{
+\left({s_0\over32}-o(1)\right)D
+=(7.724609375\times10^{-8}-o(1))D
+}
+\tag{OP.4}
+\]
+
+good one-row blockers, and one fixed complete train belongs to the phase-pure column family of more than
+
+\[
+\boxed{
+(1.62442692166\ldots\times10^{-8}-o(1))D
+}
+\tag{OP.5}
+\]
+
+of those rows. A pairwise-distinct-row fixed-train subfamily still has density more than
+
+\[
+\boxed{
+(8.12213460832\ldots\times10^{-9}-o(1))D.
+}
+\tag{OP.6}
+\]
+
+Every LOWER blocker in this family is the opposite diagonal of one strict unit rhombus on its unique selected support row.
+
+---
+
+## 1. Reuse the current classwise sharp Horn output
+
+Let `P_D` be the retained one-sign exact-swap coordinate population after deleting the source-wide `O(1)` genuine-UPPER binary exceptions. The sharp all-residue theorem gives
+
+\[
+|P_D|>
+\left({s_0\over2}-o(1)\right)D.
+\tag{OP.7}
+\]
+
+Its residue-class analysis already proves that every valid class `P_r`, of size `p_r`, can be labeled so that it supplies
+
+\[
+\boxed{
+\begin{array}{ll}
+L:&p_r/4-O(1)\text{ distinct LOWER blockers},\\[1ex]
+U:&p_r/4-O(1)\text{ distinct UPPER blockers}.
+\end{array}
+}
+\tag{OP.8}
+\]
+
+The U label absorbs both permanent UPPER blockers and implication-forest pairs. No part of the classwise Horn proof is changed here.
+
+Write
+
+\[
+P_L:=\sum_{r:L}p_r,
+\qquad
+P_U:=\sum_{r:U}p_r,
+\qquad
+P_L+P_U=|P_D|.
+\tag{OP.9}
+\]
+
+---
+
+## 2. LOWER now merges without a multiplicity loss
+
+Previously the same near-unit source pair could, in principle, be selected as a singleton LOWER witness at both physical endpoint layers, which can lie in different residue systems. This forced the conservative bound
+
+\[
+N_L\ge {P_L\over8}-O(1).
+\]
+
+The one-row theorem removes this possibility. If a source pair were a LOWER exact-swap witness at two distinct one-sign strong-TB1 interfaces, then the exact double-witness theorem would align it to the common row phase by `O(D^{-1})`, while the one-row classification would make it a strict-rhombus diagonal at a fixed projective angle greater than `pi/6` from that same phase. This is impossible for all sufficiently large `D`.
+
+Hence classwise LOWER blocker sets are source-pair disjoint across different residue systems. Equation (OP.8) therefore gives
+
+\[
+\boxed{
+N_L\ge {P_L\over4}-O(1).
+}
+\tag{OP.10}
+\]
+
+The classwise owner coordinates are already distinct, and the coordinate classes themselves are disjoint. Since no LOWER source pair is deleted by cross-class deduplication, the global LOWER family carries an injective owner map.
+
+---
+
+## 3. UPPER was already asymptotically deduplicated
+
+The exact repeated-UPPER theorem places every pair reused at two one-sign interfaces in a row-parallel `D-O(D^{-2})` shell. The source-wide packing theorem bounds the number of such pairs by `O(1)`.
+
+Thus the sharp all-residue theorem already gives
+
+\[
+\boxed{
+N_U\ge {P_U\over4}-O(1),
+}
+\tag{OP.11}
+\]
+
+with an injective owner coordinate on the retained global UPPER family.
+
+---
+
+## 4. The unweighted source-wide blocker budget
+
+Adding (OP.10)--(OP.11) and using (OP.9),
+
+\[
+N_L+N_U
+\ge {|P_D|\over4}-O(1).
+\tag{OP.12}
+\]
+
+Equation (OP.7) yields
+
+\[
+\boxed{
+N_L+N_U>
+\left({s_0\over8}-o(1)\right)D,
+}
+\]
+
+which is (OP.1).
+
+At least one summand is at least half the total, so
+
+\[
+\boxed{
+\max\{N_L,N_U\}>
+\left({s_0\over16}-o(1)\right)D.
+}
+\tag{OP.13}
+\]
+
+This proves (OP.2).
+
+The sum form (OP.1) is stronger than the equal-density corollary and should be retained downstream. Any independent upper bound on one metric class transfers its full saving to the other class without a coefficient two on LOWER.
+
+---
+
+## 5. UPPER localization coefficient
+
+Assume UPPER is the metric winner in (OP.13). The existing flexible-scale localization proof uses only
+
+- a linear family of distinct UPPER blockers;
+- injective owner coordinates;
+- exact selected-cut interval support;
+- the path-specific row-count cap;
+- the global angular-defect and terminal-variation budgets.
+
+All these properties survive the present sharpening. Hence its input density is now
+
+\[
+\delta_{\rm one}={s_0\over16}.
+\]
+
+With
+
+\[
+A_*={14\over3\sqrt3},
+\]
+
+the final SIGNED/THIN same-type coefficient is
+
+\[
+{\delta_{\rm one}\over6A_*}
+={s_0\over16}{\sqrt3\over28}
+={113\sqrt3\over20{,}480{,}000{,}000},
+\]
+
+which is (OP.3).
+
+Therefore at every diverging sublinear localization scale `L_D`, GLOBAL UPPER yields either
+
+\[
+(c_{\rm one}-o(1))L_D
+\]
+
+same-type blockers on one low-defect selected row, or that many same-type blockers in one `2L_D+O(1)` low-cost path window, with the existing dense common train scaffold unchanged.
+
+---
+
+## 6. GLOBAL LOWER becomes a bounded-overlap one-row ladder family
+
+Assume instead that LOWER wins (OP.13). Let `E_D^L` be the distinct LOWER blocker family, with its injective owner map. Then
+
+\[
+|E_D^L|>
+\left({\delta_{\rm one}}-o(1)\right)D.
+\tag{OP.14}
+\]
+
+The one-row classification gives every blocker exact support
+
+\[
+I(e)=\{k(e)\}
+\tag{OP.15}
+\]
+
+for one selected row `tau_{k(e)}`.
+
+Fix `tau_k`. A depth-one blocker supported on `tau_k` has endpoint layers `R_{k-1},R_k`; its owner is one of those two layers. Since owner coordinates are injective, at most one blocker can have owner `k-1` and at most one can have owner `k`. Therefore
+
+\[
+\boxed{
+\#\{e:k(e)=k\}\le2.
+}
+\tag{OP.16}
+\]
+
+This replaces the four-row support-overlap bound eight by the sharp bound two.
+
+---
+
+## 7. Global defect averaging gives `s0/32` good one-row gadgets
+
+Let `F_k` be the full angular-defect cost over complete trains crossing selected row `tau_k`. The canonical budget is
+
+\[
+\sum_kF_k=O(D).
+\tag{OP.17}
+\]
+
+For a one-row blocker define simply
+
+\[
+C(e):=F_{k(e)}.
+\tag{OP.18}
+\]
+
+By (OP.16), each `F_k` is charged at most twice, so
+
+\[
+\sum_{e\in E_D^L}C(e)=O(D).
+\tag{OP.19}
+\]
+
+Together with (OP.14), the mean cost is bounded by a source-independent constant. Choose a fixed `H_0` above twice that asymptotic mean. At least half of the blockers have `C(e)<=H_0`. Hence
+
+\[
+\boxed{
+N_D^{good}>
+\left({\delta_{\rm one}\over2}-o(1)\right)D
+=
+\left({s_0\over32}-o(1)\right)D,
+}
+\tag{OP.20}
+\]
+
+which is (OP.4).
+
+No terminal-variation cost is needed: the entire support is one row.
+
+---
+
+## 8. Each good blocker row retains the dense phase-pure column scaffold
+
+Every selected high-`t` row satisfies
+
+\[
+|\Gamma_k|>(0.6536-o(1))D.
+\tag{OP.21}
+\]
+
+For a good blocker row, the total angular defect over all columns is at most `H_0`. Delete columns whose individual defect exceeds `100H_0/D`. Markov deletes at most `0.01D` columns. The surviving family `P(e)` satisfies
+
+\[
+\boxed{|P(e)|>(0.6436-o(1))D}
+\tag{OP.22}
+\]
+
+and every retained crossing obeys
+
+\[
+\boxed{0<\delta_{k(e),b}\le {100H_0\over D}.}
+\tag{OP.23}
+\]
+
+Thus every good LOWER blocker is now a one-row near-equilateral gadget: the blocker itself is one strict-rhombus diagonal on the row, and the same row carries a linear inverse-`D` phase-pure transverse family with the standard circumcenter flanks.
+
+---
+
+## 9. One fixed train threads a linear one-row family
+
+The source-wide complete-train count is
+
+\[
+T_D<(T_*+o(1))D,
+\qquad
+T_*={6121\over2000}.
+\tag{OP.24}
+\]
+
+Count incidences `(e,b)` with `e` good and `b in P(e)`. Equations (OP.20), (OP.22) give more than
+
+\[
+\left({s_0\over32}\,0.6436-o(1)\right)D^2
+\]
+
+incidences. Averaging over (OP.24), one complete train `b_*` belongs to at least
+
+\[
+\left(
+{s_0\over32}{0.6436\over T_*}-o(1)
+\right)D
+\tag{OP.25}
+\]
+
+of the one-row gadgets. The exact coefficient is
+
+\[
+\boxed{
+{1{,}272{,}719\over78{,}348{,}800{,}000{,}000}
+=1.62442692166\ldots\times10^{-8}.
+}
+\tag{OP.26}
+\]
+
+By (OP.16), one selected row occurs in at most two of these gadgets. Choosing the larger of two row-disjoint color classes leaves more than
+
+\[
+\boxed{
+{1{,}272{,}719\over156{,}697{,}600{,}000{,}000}
+=8.12213460832\ldots\times10^{-9}
+}
+\tag{OP.27}
+\]
+
+times `D`, up to `o(D)`, with one fixed train and pairwise distinct support rows. This proves (OP.5)--(OP.6).
+
+---
+
+## 10. Frontier effect
+
+The current Horn seam is now
+
+```text
+N_LOWER + N_UPPER > (s0/8-o(1)) D.
+
+If UPPER wins:
+    > (s0/16-o(1))D distinct injectively owned near-diameter blockers;
+    flexible-scale SIGNED/THIN coefficient = 9.55672564723...e-9.
+
+If LOWER wins:
+    > (s0/16-o(1))D distinct near-unit blockers;
+    every blocker has support depth exactly 1;
+    every blocker is a diagonal of one unique strict unit rhombus;
+    support-row overlap <= 2;
+    > (s0/32-o(1))D good phase-pure one-row gadgets;
+    one fixed train threads > 1.62442692166...e-8 D gadgets;
+    distinct-row fixed-train subfamily > 8.12213460832...e-9 D.
+```
+
+The remaining LOWER task is no longer a finite multi-row traversal problem. It is a one-face exact-swap problem repeated linearly across distinct rows: combine the exact contact-swap vector at the owner layer with the fact that its blocker is the near-unit diagonal of the unique strict rhombus on the separating row. The opposite endpoint layer does **not** admit the same LOWER obstruction, by the repeated-witness exclusion. Extracting a quantitative asymmetry from those two singleton states is the next direct LOWER target.
+
+The UPPER seam remains the SIGNED/THIN metric-order closure inside the dense common train scaffold.
+
+**Disposition:** removed the final LOWER multiplicity loss from all-residue Horn aggregation, strengthened the source-wide blocker budget to `N_L+N_U>(s0/8-o(1))D`, raised the equal-density floor to `s0/16`, and synchronized the LOWER winner to a linear family of one-row rhombus-diagonal gadgets threaded by one complete train. C-II and Level I remain open.

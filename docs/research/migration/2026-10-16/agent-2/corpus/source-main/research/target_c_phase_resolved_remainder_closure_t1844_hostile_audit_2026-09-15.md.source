@@ -1,0 +1,273 @@
+# Hostile audit — phase-resolved paired-remainder exclusion through `t<=1.844`
+
+**Date:** 2026-09-15
+**Reviewed:** `research/target_c_phase_resolved_remainder_closure_t1844_2026-09-15.md`
+**Certificate:** `research/verify_target_c_phase_resolved_remainder_closure_t1844.py`
+**Disposition:** **PASS at the stated full-core/no-container `t<=1.844` scope.**
+**LEVEL I STATUS:** **STILL OPEN. GLOBAL C-II STATUS REQUIRES THE CANONICAL BRANCH LEDGER.**
+
+This audit targets the only genuinely new ingredient relative to the hostile-audited `t<=1.84370` proof: retaining the actual phase occurrence masses instead of replacing both leaf phases by one common lower bound. It also rechecks the endpoint constants because the final margin is only about `4.57e-6`.
+
+## 1. The inherited scalar chain remains in scope at `T=1.844`
+
+The exact verifier re-runs the inherited chain rather than importing rounded conclusions:
+
+- residual-stability scope: `U_net<1.956656<2.013`;
+- residual localization: `h<0.002242-o(1)` with margin `>5.27e-7`;
+- dominant orbit mass: `W<1.914575-o(1)`;
+- dominant crossing mass: `E_dom>0.90689828-o(1)`;
+- retained dominant outer mass: `z>2.217236-o(1)`;
+- every exact phase: `z_i>0.6472-o(1)`;
+- both leaf train masses: `U,V<0.59102-o(1)`;
+- total bad retained O--O pair weight across the leaves: `<0.05285D+o(D)`.
+
+The repaired physical center/leaf branch is scope-checked before the adverse replacements. The relevant ratio is `<0.739<sqrt(20/29)`, so the old circularity regression is not reintroduced.
+
+The exact margins are small but positive. In particular the phase floor has margin `1.84e-7` and the leaf-capacity tangent has margin `5.80e-7`. These are certified by rational arithmetic plus outward Taylor enclosures, not binary floating-point comparisons.
+
+**Verdict:** PASS.
+
+## 2. Good pair weight is valid phase by phase
+
+For one leaf phase `i`, let `z_iD` be its retained outer-occurrence mass, `M_iD` its train mass, `P_iD` its retained O--O pair weight, and `b_iD` its bad pair weight.
+
+The inherited terminal-count inequality is
+
+\[
+z_i\le M_i+P_i+o(1).
+\]
+
+Since `M_i<U_0+o(1)` and `b_U+b_V<B+o(1)`, the good pair weight satisfies
+
+\[
+P_i-b_i
+\ge z_i-U_0-b_i-o(1)
+\ge z_i-(U_0+B)-o(1).
+\]
+
+Thus with
+
+\[
+S:=U_0+B=0.64387,
+\]
+
+each leaf really has good pair weight at least
+
+\[
+[z_i-S]_+-o(1).
+\]
+
+Charging the whole bad total `B` to either leaf is adverse and therefore safe. No assumption that the bad weights split evenly is used.
+
+**Verdict:** PASS.
+
+## 3. The paired terminal submeasure and the remainders do not overlap
+
+Order the leaf occurrence masses so `z_U<=z_V`. When `z_U=S+g>S`, both leaves contain good O--O pair weight at least `g`. Trim each good family to pair weight exactly `g`.
+
+A retained O--O pair of weight `w` contributes retained terminal occurrence mass `2w`. Therefore the selected pair family occupies terminal occurrence mass exactly `2g` in each leaf. The cross-leaf endpoint theorem charges energy only on those selected terminal occurrences.
+
+Remove that terminal submeasure from each leaf retained-occurrence measure. The remaining measures are nonnegative submeasures of the original phase measures, so the one-well density domination survives unchanged. Their energies can therefore be bounded below by the same one-well function
+
+\[
+f(s)=s-2\sin(s/2).
+\]
+
+Hence the cross-pair energy and the two remainder bathtub energies are disjoint charges. There is no double counting.
+
+For the smaller leaf the remainder mass is exactly
+
+\[
+S+g-2g=S-g.
+\]
+
+The fact that such a trim is physically possible also forces `2g<=z_U`; independently, the current bounds give `z_U<=2U_0<2S`, hence `g=z_U-S<S`.
+
+**Verdict:** PASS.
+
+## 4. The no-pair branch is minimized at `z_U=S`
+
+If `z_U<=S`, use only the three one-well costs. Since `f` is increasing, a minimum under total retained mass at least `Z` occurs at total `Z`. For fixed `z_U=x`, convexity makes the center and other leaf equal, giving
+
+\[
+H_0(x)=f(x)+2f((Z-x)/2).
+\]
+
+Because `S<Z/3` and `f'` is increasing,
+
+\[
+H_0'(x)=f'(x)-f'((Z-x)/2)<0
+\qquad(0\le x\le S).
+\]
+
+Thus the no-pair minimum is attained at `x=S`. This is exactly the value of the paired formula at `g=0`.
+
+**Verdict:** PASS.
+
+## 5. The medium-pair branch reduces exactly to one variable
+
+Let `0<g<=G_max:=Z-3S` and write
+
+\[
+z_U=S+g.
+\]
+
+After removing pair-terminal mass `2g`, the smaller-leaf remainder is `S-g`. Let the larger-leaf remainder be `r_V`; leaf ordering gives
+
+\[
+r_V\ge S-g.
+\]
+
+Writing the center mass as `z_C`, total retained mass at least `Z` gives
+
+\[
+z_C+r_V\ge Z-S-3g.
+\]
+
+For fixed `g`, monotonicity puts the total at equality and convexity equalizes `z_C,r_V`, provided the equalized value respects the lower bound on `r_V`. The equalized value is
+
+\[
+R(g)={Z-S-3g\over2}.
+\]
+
+The admissibility condition
+
+\[
+R(g)\ge S-g
+\]
+
+is equivalent exactly to
+
+\[
+g\le Z-3S=G_max.
+\]
+
+Therefore the relaxed minimum is exactly
+
+\[
+\mathcal E(g)
+=2f(R(g))+f(S-g)+(2-\sqrt3)g.
+\]
+
+This is a valid lower bound for the actual configuration; it does not assume the actual total retained mass equals `Z`.
+
+**Verdict:** PASS.
+
+## 6. Configurations with more common pair weight are separately covered
+
+For `g>=G_max`, forcing total mass down to `Z` would violate the larger-leaf remainder lower bound, so the proof correctly changes arguments instead of extrapolating the medium-pair formula.
+
+The center energy is nonnegative and both leaf remainders have mass at least `S-g`, hence
+
+\[
+E\ge\mathcal H(g):=2f(S-g)+(2-\sqrt3)g.
+\]
+
+On the physical interval `G_max<=g<=S`,
+
+\[
+\mathcal H'(g)
+=(2-\sqrt3)-2f'(S-g).
+\]
+
+This derivative is smallest at `g=G_max`. The exact verifier gives
+
+\[
+\mathcal H'(G_max)>0.2359
+\]
+
+and
+
+\[
+\mathcal H(G_max)-\delta_{max}>0.0291.
+\]
+
+Thus the high-pair branch is not close to the obstruction.
+
+**Verdict:** PASS.
+
+## 7. Strong convexity certifies the close medium-pair minimum
+
+For
+
+\[
+R(g)={Z-S-3g\over2},\qquad Q(g)=S-g,
+\]
+
+one has
+
+\[
+\mathcal E'(g)
+=(2-\sqrt3)-3f'(R(g))-f'(Q(g))
+\]
+
+and
+
+\[
+\mathcal E''(g)
+={9\over4}\sin(R(g)/2)+{1\over2}\sin(Q(g)/2).
+\]
+
+Both arguments decrease with `g`, so the minimum curvature occurs at `g=G_max`, where both equal `4S-Z`. The exact certificate proves
+
+\[
+\mathcal E''>0.4899>0.48.
+\]
+
+At the rational test point
+
+\[
+g_0=0.0124
+\]
+
+the outward derivative bound is
+
+\[
+|\mathcal E'(g_0)|<8.46\times10^{-6}.
+\]
+
+Strong convexity therefore gives
+
+\[
+\min\mathcal E
+\ge \mathcal E(g_0)-{\mathcal E'(g_0)^2\over2m}
+>0.0512456120031.
+\]
+
+The exact detour ceiling is below
+
+\[
+0.0512410395463,
+\]
+
+leaving margin
+
+\[
+>4.57\times10^{-6}.
+\]
+
+The sign survives the full outward-rational/Taylor calculation.
+
+**Verdict:** PASS.
+
+## 8. What this does and does not close
+
+The theorem proves that the full-core/no-macroscopic-container Type-II branch has no survivor with
+
+\[
+t=(q-k)/D\le1.844.
+\]
+
+This is stronger than the previous `1.84370` result and reaches the endpoint used by the current phase-localization stack.
+
+It does **not**, by itself, prove that every remaining C-II survivor satisfies `t<=1.844`. Several current research files explicitly study dominant O--O populations for `t` values above `1.844` (for example up to roughly `1.85--1.86`). Therefore global C-II closure must not be inferred solely from this endpoint exclusion.
+
+The immediate canonical consequence is a new proof-only lower floor
+
+\[
+\boxed{\liminf (q-k)/D>1.844}
+\]
+
+within the stated full-core/no-container Type-II scope. The next closing step must either exclude the higher-`t` full-core region or combine this floor with an independent upper bound/branch theorem.
+
+**Final verdict:** PASS. The phase-resolved paired-remainder theorem is a genuine new full-core Type-II strengthening, but not yet a complete C-II proof.

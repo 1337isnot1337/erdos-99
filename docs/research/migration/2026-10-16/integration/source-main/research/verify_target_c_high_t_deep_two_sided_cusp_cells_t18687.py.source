@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+"""Regression checks for deep two-sided exact-phase cusp cells."""
+
+from fractions import Fraction
+from math import pi, sin
+
+c = Fraction(113, 5_000_000)
+delta0 = c / 64
+rho0 = c / 48
+
+assert delta0 == Fraction(113, 320_000_000)
+assert rho0 == Fraction(113, 240_000_000)
+assert 2 * delta0 == c / 32
+assert c / 16 - 2 * delta0 == c / 32
+assert c / 32 == Fraction(113, 160_000_000)
+
+# Packing deletion: from c/16 deep centers, deleting at most 2 delta0 D
+# axis-near centers retains c/32 D at leading order.
+base = c / 16
+axis_near_cap = 2 * delta0
+retained = base - axis_near_cap
+assert retained == c / 32
+assert retained > 0
+
+# If a ray has projective distance >= delta0 from the reaction axis,
+# its transverse sine is >= sin(delta0), regardless of which ordinary
+# representative in (0, pi) is used.
+delta = float(delta0)
+for p in (delta, 0.1, pi / 2, pi - 0.1, pi - delta):
+    proj = min(p, pi - p)
+    if proj + 1e-18 >= delta:
+        assert sin(p) + 1e-15 >= sin(delta)
+
+# Exact two-ray force coefficients are bounded below relative to |G|/D
+# when both rays have the two-sided margin.
+for p, q in [
+    (2 * delta, 3 * delta),
+    (0.1, 0.2),
+    (0.4, 1.1),
+    (1.2, 1.0),
+    (pi - 0.6, 0.3),
+]:
+    assert p > 0 and q > 0 and p + q < pi
+    if min(p, pi - p) >= delta and min(q, pi - q) >= delta:
+        lm = sin(q) / sin(p + q)
+        lp = sin(p) / sin(p + q)
+        assert lm + 1e-12 >= sin(delta)
+        assert lp + 1e-12 >= sin(delta)
+
+# Squared-length derivative for vector D*d and transverse velocity s*Jv:
+# |ell| = 2 D |s| |d dot Jv| >= 2 D |s| sin(delta0).
+for D in (10.0, 1e6, 1e12):
+    for s in (0.01, 1.0, 7.5):
+        lower = 2 * D * abs(s) * sin(delta)
+        assert lower > 0
+        # Exact equality at the boundary margin is a valid extremal sample.
+        exact = 2 * D * abs(s) * sin(delta)
+        assert abs(exact - lower) <= 1e-18 * max(1.0, exact)
+
+print("PASS: deep two-sided exact-phase cusp-cell regressions")
+print(f"delta0={float(delta0):.12g}")
+print(f"retained_density_c_over_32={float(retained):.12g}")
+print(f"normalized_two_sided_cusp_margin={2*sin(delta):.12g}")

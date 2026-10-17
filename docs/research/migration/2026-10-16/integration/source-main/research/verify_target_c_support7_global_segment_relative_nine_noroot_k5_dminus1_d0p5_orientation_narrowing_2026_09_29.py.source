@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+raise SystemExit(
+    "WITHDRAWN: this verifier incorrectly tested local empty coefficient "
+    "spaces inside P^perp. Current-main conventions require E_b <= P. "
+    "See the S1 closure note and verifier for the corrected direction."
+)

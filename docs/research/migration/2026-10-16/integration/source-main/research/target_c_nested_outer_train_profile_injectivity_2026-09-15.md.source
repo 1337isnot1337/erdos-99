@@ -1,0 +1,189 @@
+# Target C-II — nested outer-train diameter profiles are injective
+
+**Date:** 2026-09-15  
+**Status:** proof-only rigidity/reuse theorem  
+**Scope:** canonical full-core C-II representative; applied below to the `t<=1.844` small-leaf rectangle  
+**Dependencies:** canonical core mixed rigidity `rank R_{C union H}=2v-3`; exact O--O train shore/shear primitive; relative-interior full-support KKT stress; repaired small-leaf Pareto rectangle  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The live rectangle route leaves one explicit obstruction: the same actual diameter edge can cross many ordered outer-to-outer leaf cuts. The support cannot, however, remain unchanged across two distinct nested O--O train cuts. Mixed rigidity rules that out.
+
+Let `tau_1,...,tau_m` be distinct outer-to-outer complete stopped trains whose Jordan shore cuts are nested. Choose one end region as root and orient the shore splits so that
+
+\[
+S_1\subset S_2\subset\cdots\subset S_m.
+\tag{PI.1}
+\]
+
+For each `i`, let
+
+\[
+P_i:=\{h\in H: h\text{ has one endpoint in }S_i\text{ and one outside }S_i\}
+\tag{PI.2}
+\]
+
+be the set of actual diameter edges crossing the train cut. Then
+
+\[
+\boxed{P_i\ne P_j\qquad(i\ne j).}
+\tag{PI.3}
+\]
+
+Consequently, if `H_*` is the union of all diameter profiles on the chain,
+
+\[
+\boxed{|H_*|\ge \left\lceil{m-1\over2}\right\rceil.}
+\tag{PI.4}
+\]
+
+More locally, every strip `S_{i+1}\setminus S_i` contains an endpoint of an actual diameter edge whose profile starts or ends there.
+
+## 1. Diameter support is interval-valued on a nested chain
+
+Fix an actual diameter edge `h=xy`. Because the shores in (PI.1) are nested, the set
+
+\[
+I_h:=\{i:h\in P_i\}
+\]
+
+is a possibly empty consecutive interval of indices. Moreover, if `h` crosses two cuts `i<j`, the same endpoint of `h` lies in `S_i` and `S_j`. Thus orienting `r_h` from the complementary shore into the root-oriented shore gives one fixed vector throughout `I_h`.
+
+Hence the profile `P_i` can change between `i` and `i+1` only when at least one diameter interval starts or ends at that strip. Each actual diameter edge has at most two such interval endpoints. This is purely the tree/path order of nested cuts; it does not assume that the train centerlines are straight.
+
+## 2. Equal profiles force equal oriented train directions
+
+Assume for contradiction that two distinct nested cuts have the same profile,
+
+\[
+P_i=P_j=:P.
+\tag{PI.5}
+\]
+
+For train `tau_i`, choose its unit cut-contact vector `u_i` by orienting every cut contact from the complementary shore into `S_i`. Let
+
+\[
+A_i:=\sum_{e\in E(\tau_i)}\alpha_e>0
+\]
+
+be its positive KKT contact mass. The exact shore resultant is
+
+\[
+A_i u_i=\sum_{h\in P_i}\beta_h r_h.
+\tag{PI.6}
+\]
+
+Because the shores are nested and the profiles in (PI.5) agree, every `r_h` has the same orientation in the two equations. Therefore
+
+\[
+A_i u_i=\sum_{h\in P}\beta_h r_h=A_j u_j.
+\tag{PI.7}
+\]
+
+Both `A_i,A_j` are positive and `u_i,u_j` are unit vectors. Thus
+
+\[
+\boxed{A_i=A_j,\qquad u_i=u_j=:u.}
+\tag{PI.8}
+\]
+
+This step uses the full positive KKT vector resultant, not only two-sided sign bracing.
+
+## 3. Equal profile and direction give identical diameter response columns
+
+Differentiate the exact finite one-train shear at angle zero. For `tau_i` this gives a contact infinitesimal flex `w_i` which is zero on the complementary shore and has velocity `Ju_i` on `S_i`. Its train angular-rate vector is exactly the coordinate basis vector `e_i`: contacts of `tau_i` have angular rate one and every other contact has rate zero.
+
+For a diameter edge `h=xy`, its active rigidity row applied to `w_i` is zero if `h notin P_i`. If `h in P_i` and `r_h` is oriented into `S_i`, it is
+
+\[
+r_h\cdot Ju_i
+\tag{PI.9}
+\]
+
+(up to the common harmless normalization of the diameter row).
+
+Equations (PI.5), (PI.8), and the consistent nested orientation therefore give
+
+\[
+R_H w_i=R_H w_j.
+\tag{PI.10}
+\]
+
+Both are contact flexes, so `R_C(w_i-w_j)=0`. Together with (PI.10),
+
+\[
+\boxed{R_{C\cup H}(w_i-w_j)=0.}
+\tag{PI.11}
+\]
+
+on the nonisolated positive-contact core.
+
+Canonical ZR/ZF mixed rigidity gives
+
+\[
+\operatorname{rank}R_{C\cup H}=2v-3,
+\]
+
+so its right kernel consists only of the three Euclidean infinitesimal motions. But the train-rate vector of `w_i-w_j` is
+
+\[
+e_i-e_j.
+\tag{PI.12}
+\]
+
+Translations have zero train-rate vector, while a global infinitesimal rotation has a constant train-rate vector. The vector `e_i-e_j` is neither zero nor constant. Therefore `w_i-w_j` is non-Euclidean, contradicting (PI.11). This proves (PI.3). No lower bound on an individual KKT coefficient is used.
+
+## 4. Every adjacent strip has a diameter endpoint event
+
+Since `P_i ne P_{i+1}` for every adjacent pair, at least one actual diameter interval starts or ends between those cuts. Equivalently, at least one diameter edge has an endpoint in the source-vertex strip
+
+\[
+S_{i+1}\setminus S_i.
+\tag{PI.13}
+\]
+
+Indeed, if an edge crosses exactly one of the two nested cuts, one of its endpoints lies in their set difference.
+
+There are `m-1` adjacent strips. Each diameter edge can start once and end once on the chain, so it can account for at most two of these strip events. Hence `2|H_*|>=m-1`, proving (PI.4).
+
+This is the desired finite reuse bound. A diameter chord may still brace a long interval of leaf cuts, but a chain of distinct O--O train cuts cannot be supported by one unchanged proper diameter profile.
+
+## 5. Quantitative consequence for the audited small-leaf rectangle
+
+The hostile-audited Pareto theorem gives, at `t<=1.844`, a **consecutive nested** smallest-leaf block with the safe balanced choice
+
+\[
+m>0.00779D-o(D)
+\tag{PI.14}
+\]
+
+and more than `0.00779D-o(D)` common center trains crossing every leaf cut. Applying (PI.4) gives
+
+\[
+\boxed{|H_*|>0.003895D-o(D)>0.00389D-o(D).}
+\tag{PI.15}
+\]
+
+Thus the same live survivor contains
+
+```text
+>0.00779 D nested smallest-leaf O-O cuts,
+>0.00779 D center trains crossing all of them,
+>0.00389 D distinct actual diameter edges bracing their union,
+and a diameter-endpoint event in every adjacent leaf strip.
+```
+
+The exact arithmetic for the safe decimals is checked by `research/verify_target_c_nested_outer_train_profile_injectivity.py`.
+
+The later inverse-`D` phase-collapse theorem can be intersected with this structure, but it is not needed for the injectivity proof itself.
+
+## 6. Scope and remaining obstruction
+
+- The result uses the canonical mixed-rigidity rank only on the nonisolated contact core. Contact-isolated source points are not inserted into that matrix.
+- The finite O--O shear is used only through its audited derivative and exact train-rate coordinate.
+- Nestedness comes from one dual-tree backbone path. No false global stack of all same-phase trains is assumed.
+- The theorem counts distinct **diameter edges**, not distinct diameter endpoints; one edge may create two strip events.
+- It does not bound how long one diameter interval may persist, and the constant `0.00389` alone is far too small to close C-II by a raw diameter-edge count.
+
+The new frontier is narrower: combine the forced diameter endpoint in every leaf strip with the common center grid and inverse-`D` phase width. Any closing argument must now explain how a near-triangular ordered grid can place actual diameter endpoints in every one of linearly many consecutive strips without either paying a macroscopic interface cost or admitting a source-preserving multi-train shear.
+
+**Disposition:** proved proof-only diameter-profile injectivity and linear distinct-bracer floor; C-II and Level I remain open.

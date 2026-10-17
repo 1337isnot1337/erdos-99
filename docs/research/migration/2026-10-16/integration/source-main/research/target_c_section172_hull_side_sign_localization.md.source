@@ -1,0 +1,157 @@
+# Target C — Section 172: exact sign localization for the long-hull-side correction
+
+**Date:** 2026-09-12
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+**Status:** proof-only research candidate; theorem-state authority unchanged.
+**Dependencies:** audited-working §§151 and 160, plus the Type-II loaded-hull side theorem.
+
+The five-currency identity leaves the correction
+
+\[
+\chi_D:=q+m-\operatorname{per}(F)
+\]
+
+uncontrolled in sign.  The exact component remainder from §160 fixes its meaning:
+
+\[
+\boxed{\chi_D=\sum_r d_r+G_D+k-\operatorname{per}(F)-2.}
+\tag{172.1}
+\]
+
+Here `d_r=diam(P_r)`, `G_D=R_I+s_B+\sum_r(\delta_r+2-d_r)\ge0`, and
+`k=d_H+s_Z`.  Consequently, on every Type-II subsequence,
+
+\[
+\boxed{
+\frac{\chi_D}{D}
+\ge
+\frac{1}{D}\sum_r d_r+\frac{G_D}{D}+\frac{k}{D}-\pi-o(1).
+}
+\tag{172.2}
+\]
+
+The negative-`\chi_D` branch is therefore a low total harmonic-diameter/remainder
+profile, not an independent hull-side phenomenon.  Since the exact outer-walk identity
+is
+
+\[
+\frac{b-\operatorname{per}(F)}{D}
+=\frac{u_B+\chi_D}{D}\ge0,
+\tag{172.3}
+\]
+
+any subsequence with `\chi_D\le-\varepsilon D` has
+
+\[
+\boxed{u_B\ge\varepsilon D.}
+\tag{172.4}
+\]
+
+This is the precise transfer from a long-side deficit to the occurrence-counted
+outer-walk surplus.
+
+## 172.1 Finite identity
+
+The audited §160 definition is
+
+\[
+G_D=2+q+m-k-\sum_r d_r.
+\tag{172.5}
+\]
+
+Rearranging gives
+
+\[
+q+m=\sum_r d_r+G_D+k-2.
+\tag{172.6}
+\]
+
+Subtracting `\operatorname{per}(F)` proves (172.1).  No asymptotic limit or sign
+assumption is used.  The outer-walk ledger `b=q+m+u_B` then gives
+
+\[
+b-\operatorname{per}(F)=u_B+\chi_D,
+\]
+
+which proves (172.3)--(172.4), because an outer contact walk joining consecutive hull
+vertices is no shorter than the corresponding chordal hull side sum.
+
+## 172.2 Same-carrier quantitative lower bound
+
+Suppose one harmonic carrier has strict-rhombus area at least
+
+\[
+A_{4,r}^{\rm int}\ge(A-o(1))D^2
+\]
+
+and normalized cell diameter `d_r/D\to\lambda`.  The audited §160 internal-face
+isoperimetric estimate gives
+
+\[
+\frac{G_D}{D}
+\ge[\sqrt{\pi A}-\lambda]_+-o(1).
+\tag{172.7}
+\]
+
+Thus, on that same-carrier subsequence,
+
+\[
+\boxed{
+\liminf\frac{\chi_D}{D}
+\ge
+S+[\sqrt{\pi A}-\lambda]_++\kappa-\pi,
+}
+\tag{172.8}
+\]
+
+whenever `\sum_r d_r/D\ge S-o(1)` and `k/D\to\kappa`.  The carrier and remainder
+terms must refer to the same subsequence; no independent optimization is made.
+
+At the audited Section-130/118 common-cap endpoint, the proof-only profile is
+
+\[
+S_*=2.798596312209462\ldots,
+\quad
+A_*=0.4703752868004241\ldots,
+\quad
+\lambda_*=0.9762439137425688\ldots .
+\]
+
+The §160 bound contributes
+
+\[
+\sqrt{\pi A_*}-\lambda_*
+=0.239374260456223\ldots,
+\]
+
+so (172.8) yields the conditional endpoint estimate
+
+\[
+\boxed{
+\frac{\chi_D}{D}
+\ge-0.103622080924108\ldots+\frac{k}{D}-o(1).
+}
+\tag{172.9}
+\]
+
+In particular, if the endpoint branch also has `k=o(D)`, the negative correction is
+bounded below by `-0.103623D+o(D)`.  A more negative long-side correction is impossible
+there; by (172.4), it would require a correspondingly linear outer-walk surplus.
+
+## 172.3 Scope and surviving obstruction
+
+- Equation (172.1) is an exact finite Type-II identity under the audited §160 and
+  loaded-hull side hypotheses.
+- Equation (172.8) is conditional on a same-carrier quadratic area profile and the
+  corresponding §160 isoperimetric bound.
+- Contact-isolated source points remain outside all core diameter/rigidity statements.
+- No claim is made that `\chi_D\ge0`, that `u_B=o(D)`, or that the endpoint profile is
+  globally attainable.
+
+The result sharpens the live closure target: any attempt to evade the favorable
+five-currency correction through long nonunit hull sides must pay in one of two visible
+places—at most the quantified harmonic/remainder deficit, or a linear outer-walk
+surplus. A source-preserving diameter decrease, exact unit triangle, or independent
+upper bound on that surplus is still missing. C-II remains open.
+
+**Classification:** proved candidate awaiting promotion; proof-only.

@@ -1,0 +1,269 @@
+<!-- theorem-state: {"artifact_id":"ART-FC9650B41FCC","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Erdős Problem #99 — edge-grain phase-cut interface
+
+**Date:** 2026-09-25<br>
+**Repository commit:** `f5f68718da7d742128fb7b297854161550d2cce8`<br>
+**State version:** `2026-09-14.audit.51`<br>
+**Run type:** proof and regression audit<br>
+**Target:** B, pure strict-rhombic disk<br>
+**Starting status:** Target B open; phase-cut PC canonical; the relative-isoperimetric grain candidate in PR #564 unreviewed<br>
+**Active prompt:** `docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md`<br>
+**External literature search:** not used<br>
+**Computation:** not used
+
+## LEVEL I STATUS
+
+**STILL OPEN.**
+
+## 1. Starting endpoint and implication chain
+
+The sufficient Target B closure is
+\[
+G+E\ge {\sqrt3\over4}B+{\sqrt3\over2}(t+\chi-1).
+\]
+For a pure rhombic disk, a global minimizer has the strict reverse inequality
+`G+E < (sqrt(3)/4) B`. The canonical phase-circle cut PC deletes a set `F` of
+rhombi with `|F| <= (2+sqrt(3)) E` and makes the retained train crossing graph
+phase coherent on each component.
+
+The intended chain was
+
+```text
+edge-grain separator theorem
+ -> source phase-grain area concentration at a sharper interface cost
+ -> global multi-grain shell/diameter contradiction
+ -> Target B and Level I closure.
+```
+
+The first arrow is proved below. The second is not: `G+E<c_0B` permits an
+interface budget of order `D`, and the present relative-isoperimetric lower bound
+on that budget is too small to contradict it.
+
+## 2. Two-face interface theorem
+
+**Classification:** proved candidate awaiting independent audit; noncanonical.
+
+Let `U` be a finite, edge-to-edge union of unit rhombi, let `K=conv(U)`, and
+delete any set `F` of rhombus faces. Partition the retained faces into **edge
+grains**: two faces are in the same grain when a chain of retained faces joins
+them across full shared edges. Let `S` be any union of edge grains and let `A`
+be its area. Put
+\[
+Q_U={\cal H}^1(\partial U\cap\operatorname{int}K),
+\qquad f=|F|,
+\qquad V=|K|.
+\]
+Then there is a union `W` of `S` with either all or none of the deleted faces,
+with `A'=|W|` satisfying `A<=A'<=A+f`, such that
+\[
+\boxed{\ {cal H}^1(\partial W\cap\operatorname{int}K)
+       \le Q_U+2f.\ }
+\tag{1}
+\]
+Consequently the exact finite inequality
+\[
+\boxed{\ \sqrt{\pi A}+\sqrt{\pi(V-A)}
+ \le {\operatorname{per}(K)\over2}+Q_U+2f+\sqrt{\pi f}.\ }
+\tag{2}
+\]
+holds. No connectivity of `W` or its complement is assumed. The statement does
+not require `F` to come from PC, so it applies in particular to a PC cut.
+
+### Proof
+
+Color each retained edge grain red if it belongs to `S`, and blue otherwise.
+No edge joins a red retained face directly to a blue retained face, by the
+definition of edge grain. Let `r` and `b` be the numbers of unit edges from
+deleted faces to red and blue retained faces, respectively. Each deleted
+rhombus has four sides, so `r+b<=4f`; edges between two deleted faces and
+edges on the outer boundary contribute to neither count.
+
+Color every deleted face red. The resulting red-blue interior interface has
+length exactly `b`. Color every deleted face blue instead; the interface has
+length exactly `r`. Choose the smaller option. Its interface is at most
+`(r+b)/2<=2f`. The boundary of the chosen red union `W` inside `K` consists
+of this interface plus portions of the original boundary of `U` inside `K`.
+The latter have total length at most `Q_U`, proving (1). Every deleted unit
+rhombus has area at most one, hence `A<=A'<=A+f`.
+
+For any finite-perimeter `W subset K`, the perimeter identity and the planar
+isoperimetric inequality give
+\[
+\sqrt{\pi A'}+\sqrt{\pi(V-A')}
+ \le {\operatorname{per}(K)\over2}
+       +{\cal H}^1(\partial W\cap\operatorname{int}K).
+\]
+If `A'=A`, this and (1) already imply (2). Otherwise
+`0<=A'-A<=f`, so `sqrt(A)<=sqrt(A')` and
+`sqrt(V-A)<=sqrt(V-A')+sqrt(f)`. Adding these inequalities proves (2).
+All perimeter identities are unaffected by vertex-only contacts, which have
+zero one-dimensional measure.  QED.
+
+### Near-disk consequence
+
+Assume a sequence of such complexes has diameter `D->infinity`,
+`V=pi D^2/4+O(D)`, `per(K)=pi D+O(1)`, `f=O(D)`, and retained area
+`V-O(D)`. If its largest edge grain has area at most `(1-eta)V` for fixed
+`0<eta<=1/2`, then
+\[
+\boxed{\ {Q_U+2f\over D}\ge
+ {\pi\over2}\left(\sqrt{\eta/4}+\sqrt{1-\eta/4}-1\right)-o(1).\ }
+\tag{3}
+\]
+Indeed, select a union of edge grains with area between `eta V/4` and `V/2`:
+take the complement of a largest grain if it has area at least `V/2`; take
+that grain if its area lies between `eta V/4` and `V/2`; otherwise add grains
+greedily until reaching `eta V/4`. The retained-area hypothesis makes each
+choice possible for large `D`. Substitute this union into (2). Since
+`sqrt(f)=O(sqrt D)=o(D)`, divide by `D` and use that
+`sqrt(x)+sqrt(1-x)-1` increases on `[0,1/2]`.
+
+Each edge grain belongs to one connected component of the retained train
+crossing graph: rhombi sharing an edge share a train, so their crossing edges
+share a train-graph vertex. Thus if `(Q_U+2f)/D->0`, (3) forces one actual
+retained train component to contain `V-o(D^2)` area. Under the canonical PC
+cut, `E=o(D)` and `Q_U=o(D)` suffice for this conclusion because
+`f<=(2+sqrt(3))E=o(D)` and the pure-disk shell window gives `G=O(D)`.
+
+**Canonical-scope audit.** The displayed small-`Q_U` premise is impossible
+for a sufficiently large pure-rhombic-disk global-minimizer survivor. In the
+canonical Target B Section 39, `B=2T` and
+\[
+ \liminf B/D\ge5.0790016366\ldots.
+\]
+The perimeter of boundary edges of `U` lying on `partial K` is at most
+`P=per(K)<=pi D`; all other unit boundary edges contribute to `Q_U`.
+Consequently
+\[
+ \boxed{\liminf Q_U/D\ge5.0790016366\ldots-\pi
+       =1.9374089830\ldots.}
+\tag{4}
+\]
+Thus the `Q_U=o(D)` corollary in the unreviewed PR #564 candidate, and the
+matching conditional corollary above, cannot be invoked on the canonical
+pure-disk survivor. This does not invalidate the finite relative-isoperimetric
+theorem. It identifies a missing source-level bridge: the unavoidable inward
+boundary length must be paid or canceled, not assumed sublinear.
+
+### Sharpness of the interface coefficient
+
+Take the plus-shaped union of five unit squares: a central square and its
+four edge neighbors. Delete the center, and let `S` consist of the north and
+south arms. The four arms are four distinct edge grains. Assigning the center
+to either color leaves exactly two red-blue unit edges. Hence the coefficient
+`2f` in (1) cannot be reduced for arbitrary deleted-face sets, even for a
+simply connected strict unit-rhombus disk. This is a face-interface example;
+it is not claimed to be a PC cut or a global minimizer.
+
+## 3. Vertex-contact regression and scope
+
+Euclidean connected components of the **closed** retained-face union need not
+be phase grains. In a `2 x 2` unit-square grid, delete the northwest and
+southeast squares. The remaining northeast and southwest squares meet at the
+central vertex, so their closed union is Euclidean connected. Their crossing
+graph has two disjoint edges, one for each square, and thus two train
+components. This exact finite example invalidates the general inference
+`Euclidean connected retained-face component => one train component`.
+
+PR #564's relative-isoperimetric inequality for Euclidean components is not
+disproved by this example; its transfer from a largest Euclidean component to
+a largest **phase** grain needs the edge-grain correction. The present theorem
+supplies that correction and sharpens its interface coefficient at the same
+time. No assertion is made that the diagonal deletion in this example is a
+canonical PC cut; the new theorem holds for every cut, including PC cuts.
+
+This proof concerns only the physical rhombic complex. It does not identify
+the complex with all source points, control contact-isolated source points,
+handle exceptional faces or multiple complexes, or give a strict sub-`D`
+source competitor.
+
+### A shallow two-rhombus pocket cannot pay `Q_U` locally
+
+There is no positive universal constant `a` such that every triangle-free
+strict unit-rhombus disk satisfies `G+E>=a Q_U`. For `epsilon>0` small, set
+\[
+ v=(1,0),\quad
+ u=(\cos(\pi/3+\epsilon),\sin(\pi/3+\epsilon)),\quad
+ w=-(\cos(\pi/3+2\epsilon),\sin(\pi/3+2\epsilon)).
+\]
+Join the unit rhombi with vertex lists `(0,v,v+u,u)` and
+`(0,v,v+w,w)` along their common edge `[0,v]`. Their acute angles are
+`pi/3+epsilon` and `pi/3+2epsilon`. The six vertices are unit-separated
+for all sufficiently small positive `epsilon`: at `epsilon=0`, the only
+non-edge unit pairs are the two short diagonals `(v,u)` and `(0,v+w)`;
+their lengths become
+`sqrt(2-2cos(pi/3+epsilon))>1` and
+`sqrt(2-2cos(pi/3+2epsilon))>1`. All other non-edge distances are strictly
+greater than one at zero and remain so by continuity. For completeness, the
+eight non-edge pairs and their limiting distances as `epsilon -> 0+` are
+
+| Pair | Limiting distance |
+| --- | ---: |
+| `(0,v+u)`, `(v,w)` | `sqrt(3)` |
+| `(0,v+w)`, `(v,u)` | `1`, strictly increasing above `1` for `epsilon>0` |
+| `(u,w)`, `(v+u,v+w)` | `2` |
+| `(u,v+w)` | `sqrt(3)` |
+| `(v+u,w)` | `sqrt(7)` |
+
+The seven rhombus-edge pairs remain exactly unit length. Thus the unit-contact
+graph is two 4-cycles sharing one edge and has no unit triangle.
+
+The outer boundary runs through `0,u,v+u,v,v+w,w`. At `v` it makes a
+concave turn of `epsilon`, while the other turn created at `0` is convex.
+The convex hull replaces the two unit edges incident to `v` by their chord.
+Hence `Q_U=2` and the pocket area is
+\[
+ G=\tfrac12|\det(u,w)|=\tfrac12\sin\epsilon.
+\]
+The angular surplus is
+\[
+ E=\sin(\pi/3+\epsilon)+\sin(\pi/3+2\epsilon)-\sqrt3
+   =O(\epsilon).
+\]
+Consequently `(G+E)/Q_U ->0`. This is an exact feasible finite regression,
+not a global minimizer or a near-disk sequence. It kills a **local** pocket
+payment rule; a source-specific global inequality may still use active
+diameter constraints or the full boundary order.
+
+## 4. Frontier effect and remaining lemma
+
+The finite multi-grain concentration threshold improves from `Q_U+4|F|` in
+the unreviewed PR #564 candidate to `Q_U+2|F|` at the `D` scale, with the
+grain defined so that concentration transfers to a retained train component.
+Equation (4) shows that this refinement alone does not narrow the canonical
+pure-disk survivor: `Q_U` is necessarily linear and already exceeds the
+small-interface premise. In fact the largest possible leading excess on the
+left of the relative-isoperimetric inequality, after subtracting `P/2`, is
+`(pi/2)(sqrt(2)-1)D=0.650645...D`, attained at a half-area split. The
+canonical lower bound `Q_U>=1.937408...D-o(D)` is almost three times that
+maximum. Thus this relative-isoperimetric inequality is numerically vacuous
+for **every** area split in the canonical pure-disk regime, regardless of
+whether `4|F|` or `2|F|` is used. The canonical Target B endpoint and Level I
+status do not change.
+
+The exact next multi-grain proposition is: for every fixed `eta>0`, exclude a
+sequence of triangle-free jammed pure-rhombic-disk global minimizers with
+`G+E<c_0B` and every retained train component occupying at most
+`(1-eta)R` rhombi. Equation (3) shows that such a sequence must have
+`Q_U+2|F|>=c(eta)D-o(D)`, but (4) makes that bound automatic with a larger
+constant. A closing proof must couple the **unavoidable** inward boundary
+length to `G+E>=c_0B` or a same-cardinality strict sub-`D` competitor;
+the two-rhombus regression shows that this cannot be a universal local
+payment by `G+E` per inward boundary edge.
+
+## 5. Claim audit
+
+| Claim | Status | Dependencies | Reason |
+| --- | --- | --- | --- |
+| Two-face interface and (2) | proved candidate awaiting independent audit | elementary face counting and isoperimetry | Complete finite proof above |
+| Near-disk edge-grain concentration | conditional | the near-disk estimates and PC under their pure-disk scopes | Does not handle `Q_U+2f=Theta(D)` |
+| Euclidean component implies phase grain | regression | `2 x 2` square data above | Vertex-only meeting joins closed sets, not train graphs |
+| `Q_U=o(D)` in a canonical pure-disk survivor | regression | Target B Section 39 and `P<=pi D` | Contradicts (4) |
+| Universal local `G+E>=a Q_U`, `a>0` | regression | Two-rhombus coordinates above | `Q_U=2` while `G+E->0` |
+| Target B closure | open | canonical Target B route map | Linear interface cost remains affordable |
+
+No literature or computation is imported. No theorem-state promotion is
+recommended before independent audit and incorporation with the open PR #564
+work. The next reader should compare the edge-grain definition with the
+phase-cut components in the promoted PC addendum and with the precise
+relative-isoperimetric statement in PR #564.

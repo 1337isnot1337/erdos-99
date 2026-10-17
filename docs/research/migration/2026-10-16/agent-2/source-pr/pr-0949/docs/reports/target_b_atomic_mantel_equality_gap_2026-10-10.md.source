@@ -1,0 +1,949 @@
+<!-- theorem-state: {"artifact_id":"ART-E54B31931AB9","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Erdős Problem #99 — Target B atomic Mantel equality gap
+
+**Date:** 2026-10-10
+**Repository commit:** `ab6dd3336f9f8d440f2bada76edb32153391cddc`
+**State version:** `2026-10-10.audit.234`
+**Run type:** extremal equality analysis
+**Target:** B, pure rhombic disk branch
+**Starting status:** canonical Section 39 lower bound; multi-grain shell transfer open
+**Active prompt:** `docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md`
+**External literature search:** not used
+**Computation:** exact rational aggregate/constant checks and finite rational notch geometry
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+## 1. Starting canonical endpoint
+
+For a triangle-free pure-rhombic-disk global minimizer, Section 39 of
+`docs/targets/target-b/01-jammed-rhombic-branch.md` proves
+
+\[
+\liminf T/D\ge x_0:=\frac{8}{3\sqrt c},
+\qquad c=\frac{2\sqrt3}{\pi}.
+\]
+
+Its proof uses the phase-atomic crossing bound
+\(R/T^2\le s^2/4+o(1)\), exposed-hull restriction
+\(s\le1-y/2\), and pinned-rank bound \(y=q/T\ge1/2+o(1)\).
+The route map leaves the multi-grain shell inequality open:
+
+\[
+G+E\ge \frac{\sqrt3}{4}B+\frac{\sqrt3}{2}(t+\chi-1).
+\]
+
+The new implication investigated here is
+
+```text
+asymptotic saturation of the atomic Mantel bound
+ -> Mantel stability gives two balanced shores
+ -> the 60-degree direction relation forces a coherent center-leaf grid
+ -> its diameter lower bound contradicts Mantel saturation.
+```
+
+## 2. Strongest genuinely new result
+
+**Classification:** proved candidate awaiting independent audit; unreviewed and
+noncanonical.
+
+### Statement
+
+Let \(A_j\) be any sequence of triangle-free global minimizers in the pure
+simply connected strict-rhombic-disk branch with \(D_j\to\infty\), and pass
+to a subsequence on which \(x_j=T_j/D_j\to x\in(0,\infty)\) and the
+normalized train-direction measures converge. If \(s\) is the atomic mass of
+the limiting direction measure, then
+
+\[
+\limsup_j\frac{R_j}{T_j^2}<\frac{s^2}{4}.
+\]
+
+Thus no asymptotic pure-disk survivor saturates Section 39's atomic Mantel
+bound. In particular, the canonical train-ratio lower endpoint is not
+attainable: there is no such sequence with \(T_j/D_j\to
+x_0=8/(3\sqrt c)\). In fact, the quantitative extraction below gives the
+explicit bound: for every sequence of survivors with \(D_j\to\infty\),
+\[
+\liminf_{j\to\infty}\frac{T_j}{D_j}
+\ge (1+10^{-10})x_0.
+\]
+
+The statement concerns only this jammed pure-disk branch. It does not include
+exceptional faces, holes, multiple rhombic components, or flexible survivors.
+
+### Proof
+
+Suppose the claimed strict inequality fails. Since Section 39 gives
+\(\limsup R_j/T_j^2\le s^2/4\), pass to a further subsequence on which
+\(x_j=T_j/D_j\to x\in(0,\infty)\), the direction measures retain the same
+weak limit, the crossing measures converge, and
+\(R_j/T_j^2\to s^2/4\). Section 39 gives
+
+\[
+\frac{R_j}{D_j^2}\longrightarrow \frac1c,
+\qquad \limsup\frac{R_j}{T_j^2}\le\frac{s^2}{4}.
+\]
+
+By saturation and \(x_j\to x\),
+
+\[
+\frac{s^2}{4}
+=\lim_j\frac{R_j}{T_j^2}
+=\frac{1}{cx^2},
+\qquad s=\frac{2}{\sqrt c\,x}>0.
+\]
+
+This is asymptotic equality in Mantel's bound on the atomic train population.
+Here are the stability details needed below.
+
+#### A qualitative Mantel stability lemma
+
+If triangle-free graphs \(G_k\) on \(N_k\to\infty\) vertices satisfy
+\(e(G_k)/N_k^2\to1/4\), then they admit partitions
+\(X_k\sqcup Y_k=V(G_k)\) for which
+
+\[
+|X_k|,|Y_k|=N_k/2+o(N_k),\quad
+e(X_k)+e(Y_k)=o(N_k^2),\quad
+|X_k||Y_k|-e(X_k,Y_k)=o(N_k^2).
+\tag{2.2}
+\]
+
+For completeness, choose a maximum-degree vertex and let \(X=N(v)\),
+\(Y=V\setminus X\), and \(d=|X|\). The set \(X\) is independent. A
+neighbor of \(v\) has all its neighbors in \(Y\), while every vertex of
+\(Y\) has degree at most \(d\). Since
+
+\[
+e(G)=\sum_{w\in Y}d(w)-e(Y)\le d|Y|=d(N-d)\le N^2/4,
+\]
+and near equality forces \(d=N/2+o(N)\). For every edge \(uv\) in a
+triangle-free graph, the neighborhoods of \(u,v\) are disjoint. Summing
+\(d(u)+d(v)\le N\) over edges yields
+
+\[
+\sum_w d(w)^2\le Ne.
+\]
+
+Together with \(e=N^2/4+o(N^2)\), this gives
+\(\sum_w(d(w)-2e/N)^2=o(N^3)\), and hence
+\(\sum_{w\in Y}d(w)=|Y|N/2+o(N^2)=d|Y|+o(N^2)\).
+If \(m=d|Y|-e(X,Y)\) is the number of missing cross pairs, then
+
+\[
+e(G)=d|Y|-m+e(Y),\qquad
+\sum_{w\in Y}d(w)=d|Y|-m+2e(Y).
+\]
+
+The left sides and \(d|Y|\) are all \(N^2/4+o(N^2)\), so subtraction
+gives \(e(Y)=o(N^2)\), then \(m=o(N^2)\). This proves (2.2).
+
+There is a sharper way to localize the equality case. On projective directions
+define
+\[
+\phi\sim\psi\quad\Longleftrightarrow\quad
+\psi-\phi\in\{0,\pi/3,-\pi/3\}\pmod\pi.
+\]
+Every equivalence class \(O\) consists of three directions. Let
+\(m_O=\sum_{\phi\in O}\mu\{\phi\}\), so \(\sum_Om_O=s\). Section 39.1
+places all positive limiting crossing mass on pairs of atoms belonging to
+the same class. For a finite collection of classes, retain only trains whose
+directions lie in those classes' shrinking atomic neighborhoods. Crossings
+between different classes contribute zero limiting mass. The induced train
+graph inside class \(O\) is triangle-free, so Mantel bounds its limiting
+crossing mass by \(m_O^2/4\). Taking finite collections that exhaust the
+classes gives
+\[
+r:=\lim_j R_j/T_j^2\le\frac14\sum_Om_O^2\le\frac{s^2}{4}.
+\tag{2.1}
+\]
+If \(x=\lim T_j/D_j<\infty\), then \(r=1/(cx^2)\), and
+Section 39 gives \(s\le3/4\). Writing \(M=\max_Om_O\), the same
+inequality yields the structural bound
+\[
+M\ge\frac{4r}{s}\ge\frac{16}{3cx^2}.
+\tag{2.1a}
+\]
+Thus every finite-ratio survivor sequence has one three-direction phase orbit
+carrying a positive fraction of all trains. More precisely, if
+\(\eta_O=4r_O/m_O^2\) is the fraction of the Mantel maximum attained in
+orbit \(O\), then
+\[
+\sup_O\eta_O\ge\frac{4r}{s^2}
+\ge\frac{x_0^2}{x^2},
+\qquad x_0=\frac{8}{3\sqrt c}.
+\tag{2.1b}
+\]
+The same inequality also gives a concentration statistic for the whole
+atomic population:
+\[
+\sum_O\left(\frac{m_O}{s}\right)^2\ge\frac{x_0^2}{x^2},
+\qquad
+\left[\sum_O(m_O/s)^2\right]^{-1}\le\left(\frac{x}{x_0}\right)^2.
+\tag{2.1c}
+\]
+The second expression is the inverse-Simpson effective number of phase
+orbits. A stronger core-capture bound follows from the largest orbit
+\(O_\star\), of mass \(M\) and crossing mass \(r_\star\). Since all
+other orbits together contribute at most \((s-M)^2/4\), and
+\(M\ge s_0/z^2\), where \(s_0=3/4\), one has
+\[
+\frac{r_\star}{r}
+\ge 1-(z-z^{-1})^2,
+\qquad z=\frac{x}{x_0},
+\tag{2.1d}
+\]
+Indeed, \(0\le s-M\le s_0-M\le s_0(1-z^{-2})\), so
+\[
+r-r_\star\le\frac{(s-M)^2}{4}
+\le\frac{s_0^2}{4}(1-z^{-2})^2,
+\qquad r=\frac{s_0^2}{4z^2}.
+\]
+Dividing gives (2.1d). Thus for \(1\le z<\varphi\),
+where \(\varphi=(1+\sqrt5)/2\), one orbit captures a positive explicit
+fraction of all quadratic crossings. Since \(M\le s_0\), its relative Mantel density also obeys
+\[
+\frac{4r_\star}{M^2}
+\ge\frac{r_\star}{s_0^2/4}
+\ge z^{-2}\bigl[1-(z-z^{-1})^2\bigr].
+\tag{2.1e}
+\]
+Away from the endpoint the largest orbit need not be nearly
+Mantel-extremal. At the endpoint, equality throughout forces a unique orbit
+to carry all atomic mass and its graph to attain the Mantel maximum. In
+particular, saturation forces all atomic mass into one class \(O_\star\).
+More quantitatively, if \(\delta=s^2/4-r\), then the largest class satisfies
+\[
+s-m_{O_\star}\le \frac{4\delta}{s}.
+\tag{2.2}
+\]
+Indeed, \(\sum_Om_O^2\ge4r\) by (2.1), while
+\(\sum_Om_O^2\le s\max_Om_O\). If \(r_O\) is the limiting crossing mass
+inside the dominant class, then
+\[
+0\le m_{O_\star}^2/4-r_{O_\star}
+\le m_{O_\star}^2/4-r+(s-m_{O_\star})^2/4
+=\delta-\frac{m_{O_\star}(s-m_{O_\star})}{2}\le\delta,
+\]
+because all other classes together contribute at most
+\((s-m_{O_\star})^2/4\).
+
+Under the assumed equality \(r=s^2/4\), choose shrinking neighborhoods of
+the at most three atoms in \(O_\star\). A diagonal subsequence captures
+their full train mass and crossing mass, producing induced triangle-free
+graphs with
+
+\[
+N_j/T_j\to s,\qquad e_j/T_j^2\to s^2/4,
+\]
+so \(e_j/N_j^2\to1/4\). By (2.2), their train labels split into two shores
+\(X_j,Y_j\), each of size \((s/2+o(1))T_j\), with only \(o(T_j^2)\)
+missing cross pairs.
+
+Pass to weak limits of the direction measures on the two shores. Denote their
+atomic supports by \(S_X,S_Y\); both shore measures have mass \(s/2\). For
+every \(\phi\in S_X\) and \(\psi\in S_Y\), the corresponding train groups
+have positive linear size and all but \(o(T_j^2)\) of their cross pairs are
+actual crossings. Their direction difference must be exactly \(\pm\pi/3\)
+projectively: a fixed positive angular defect on \(\Theta(T_j^2)\) crossing
+pairs would contradict the canonical total defect budget \(\sum_e\delta_e=O(D_j)
+=O(T_j)\). Thus every cross pair in \(S_X\times S_Y\) lies in the
+projective 60-degree relation.
+
+For any projective direction \(\phi\), the only directions at projective
+distance \(\pi/3\) are \(\phi+\pi/3\) and \(\phi-\pi/3\) modulo \(\pi\).
+The two-neighbor sets of distinct directions have intersection size at most
+one. Therefore either one shore has a single direction, or the other does.
+Call its direction the center. Its mass is \(s/2\), and the opposite shore is
+supported on at most two neighboring directions with total mass \(s/2\). At
+least one neighboring direction, called a leaf, has mass at least \(s/4\).
+
+The center and leaf train families consequently have sizes
+
+\[
+M_j=(s/2+o(1))T_j,
+\qquad b_j\ge(s/4-o(1))T_j,
+\]
+and their mutual crossing density tends to one. Within each family, directions
+lie in arbitrarily small intervals, so its trains are pairwise noncrossing.
+The canonical interval-crossing extraction theorem IS gives complete crossing
+subfamilies of sizes \((s/2-o(1))T_j\) and at least
+\((s/4-o(1))T_j\). Their directions are \(o(1)\)-coherent and separated by
+\(\pi/3+o(1)\).
+
+The canonical pure-disk coherent-biclique estimate CR therefore gives
+
+\[
+\frac{D_j}{T_j}\ge\frac{\sqrt3}{2}
+\left(\frac{s}{2}+\frac{s}{4}\right)-o(1)
+=\frac{3\sqrt3 s}{8}-o(1)
+=\frac{3\sqrt3}{4\sqrt c}\frac1x-o(1).
+\tag{2.3}
+\]
+
+On the assumed sequence, however, \(D_j/T_j\to1/x\). These bounds are
+incompatible because
+
+\[
+\frac{3\sqrt3}{4\sqrt c}>1
+\quad\Longleftrightarrow\quad
+27\pi>32\sqrt3,
+\]
+which follows already from \(\pi>3\) and \(\sqrt3<2\). This contradiction
+proves that asymptotic Mantel saturation is impossible.
+
+For the train-ratio endpoint, Section 39 also gives \(s\le1-y/2\le3/4\)
+with \(y=q/T\ge1/2+o(1)\). A sequence with \(x_j\to x_0\) would have
+\(R_j/T_j^2\to9/64\), forcing equality throughout
+\(9/64\le s^2/4\le9/64\), which is the excluded Mantel saturation. Hence
+no such sequence exists. If there were no positive uniform gap above \(x_0\),
+one could choose a sequence with \(D_j\to\infty\) and \(T_j/D_j\to x_0\).
+This yields the qualitative gap.
+
+### Quantitative endpoint gap
+
+The same argument gives a small explicit improvement of the Section-39 ratio.
+For every sequence of pure-disk survivors with \(D_j\to\infty\),
+\[
+\liminf_{j\to\infty}\frac{T_j}{D_j}
+\ge (1+10^{-10})x_0,
+\qquad x_0=\frac{8}{3\sqrt c}.
+\tag{2.4}
+\]
+If a sequence violated this, its ratios would have a subsequential limit in
+\([x_0,(1+10^{-10})x_0]\), which the argument below excludes.
+
+Suppose to the contrary that a sequence has
+\(x=T/D=z x_0\) in the limit with \(1\le z\le1+u\), where
+\(u=10^{-10}\). Pass further so \(q/T\) and the crossing masses of all
+atomic direction orbits converge. Section 39 gives \(s\le s_0=3/4\). Then
+\[
+r:=\lim R/T^2=\frac{s_0^2}{4z^2},\qquad s\le s_0.
+\]
+For the three-direction orbit classes \(O\) of the atomic support, let
+\(m_O\) be their train-mass limits and \(r_O\) their crossing-mass limits.
+The orbit Mantel inequality (2.1) gives
+\[
+r\le\frac14\sum_Om_O^2,\qquad
+M:=\max_Om_O\ge\frac{4r}{s}\ge\frac{s_0}{z^2}.
+\]
+Choose a dominant orbit \(O_\star\), with crossing mass \(r_\star\), and
+retain trains in shrinking neighborhoods of its at most three atoms. The
+radii can tend to zero slowly so the selected population is \((M+o(1))T\)
+and its crossing mass is \((r_\star+o(1))T^2\). The other orbits together
+contribute at most \((s-M)^2/4\). Hence
+\[
+0\le \frac{M^2}{4}-r_\star
+\le \frac{M^2}{4}-r+\frac{(s-M)^2}{4}
+=\frac{s^2}{4}-r-\frac{M(s-M)}2
+\le \frac{s_0^2}{4}-r.
+\]
+Thus its induced triangle-free crossing graph, on \(N=(M+o(1))T\)
+vertices, has normalized Mantel deficit
+\[
+\gamma:=\frac14-\frac{r_\star}{M^2}
+\le\frac{z^4-z^2}{4}
+\le3u=3\cdot10^{-10}.
+\tag{2.5}
+\]
+
+We need a quantitative form of Mantel stability. For a triangle-free graph on
+\(N\) vertices with \(e\ge(1/4-\gamma)N^2\), choose a maximum-degree vertex,
+let \(X\) be its neighborhood, \(Y=V\setminus X\), and \(d=|X|\). Mantel's
+bound \(e\le d(N-d)\) gives
+\[
+\bigl|d-N/2\bigr|\le\sqrt\gamma\,N.
+\]
+If \(d_v\) are the graph degrees, then disjointness of the neighborhoods of
+the endpoints of every edge yields
+\[
+\sum_vd_v^2\le Ne,\qquad
+\sum_v(d_v-2e/N)^2\le\gamma N^3.
+\]
+Writing \(S_Y=\sum_{v\in Y}d_v\), Cauchy gives
+\[
+S_Y\le |Y|N/2+\sqrt\gamma N^2
+\le N^2/4+\tfrac32\sqrt\gamma N^2.
+\]
+Since \(e(Y)=S_Y-e\), this gives \(e(Y)\le2\sqrt\gamma N^2\)
+(for \(\gamma\le1/4\)). The number \(m\) of missing cross pairs satisfies
+\[
+m=d|Y|-e(X,Y)=d|Y|+e(Y)-e\le3\sqrt\gamma N^2.
+\tag{2.6}
+\]
+Thus \(X,Y\) are balanced to within \(\sqrt\gamma N\), and at most
+\(3\sqrt\gamma N^2\) cross pairs are absent.
+
+The dominant orbit has at most three direction classes. Let \(x_i,y_i\)
+be the limiting fractions of its three direction classes in \(X,Y\).
+Trains from the same direction class cannot cross once the direction
+neighborhoods are sufficiently small, so (2.6) gives
+\(x_i y_i\le3\sqrt\gamma\). Set
+\(\tau=\sqrt3\,\gamma^{1/4}\), and place class \(i\) in \(I_X\) if
+\(x_i>\tau\), and in \(I_Y\) if \(y_i>\tau\). These sets are disjoint.
+Both are nonempty because each shore has mass \(1/2+O(\sqrt\gamma)\) and
+there are only three classes. Since two disjoint nonempty subsets of a
+three-element set cannot both have size two, one shore has exactly one
+assigned direction class. Call that class the center. It has mass
+\[
+c_{\rm ctr}\ge\frac12-\sqrt\gamma-3\tau,
+\]
+and on the opposite shore at least one of at most two assigned classes has
+mass
+\[
+\ell\ge\frac14-\frac12\sqrt\gamma-\frac32\tau.
+\]
+From (2.5), \(\sqrt\gamma<2\cdot10^{-5}\) and
+\(\gamma^{1/4}<0.0042\); using \(\sqrt3<7/4\) gives
+\(c_{\rm ctr}>0.477\) and \(\ell>0.238\). Here
+\(c_{\rm ctr}\) is the center's train fraction; the geometric constant
+remains \(c=2\sqrt3/\pi\).
+
+At most \(3\sqrt\gamma N^2\) pairs are missing between the center and leaf
+families. Their missing fraction is therefore
+\[
+\epsilon\le\frac{3\sqrt\gamma}{c_{\rm ctr}\ell}<0.0006.
+\]
+They are internally noncrossing because each is concentrated in one
+direction class. Apply canonical IS to the actual crossing graph. It yields
+complete crossing subfamilies of sizes at least
+\((1-\epsilon-2\sqrt\epsilon)c_{\rm ctr}N-o(T)\) and
+\((1-\sqrt\epsilon)\ell N-o(T)\). Since \(\sqrt\epsilon<0.025\),
+both retained fractions exceed \(0.94\). Their combined size exceeds
+\[
+0.94(c_{\rm ctr}+\ell)N-o(T)>0.94(0.715)(0.74)T-o(T)>0.49T-o(T),
+\]
+where \(N/T\to M\ge s_0/z^2>0.74\); the last inequality follows from
+\((1+10^{-10})^2<75/74\).
+
+The coherent-biclique theorem CR then gives
+\[
+\liminf\frac DT\ge \frac{\sqrt3}{2}(0.49)>0.421,
+\]
+using \(\sqrt3/2>0.86\).
+But \(x\ge x_0\), and
+\(1/x_0=3\sqrt c/8<0.4125\): indeed
+\(c=2\sqrt3/\pi<7/6<1.1^2\), using \(\sqrt3<7/4\) and \(\pi>3\).
+This contradiction excludes every limiting ratio
+\(x\in[x_0,(1+10^{-10})x_0]\), proving (2.4).
+
+### Zero-deficit multi-grain remainder bound
+
+An attempted finite-threshold extension of GPI is not valid as written: the
+near-balance estimate in GPI §3 uses Lemma GPI.1, whose proof invokes the
+global-core upper bound. It cannot be imported into a multi-grain setting.
+The following limit statement avoids that circularity by separating the
+imbalanced and balanced limits.
+
+Let a pure-disk survivor sequence contain train sets
+\(H_j=A_j\sqcup B_j\sqcup C_j\) consisting exactly of three coherent phase
+classes, with sizes \(M_j=|A_j|\ge b_j=|B_j|\ge a_j=|C_j|\),
+\(M_j\to\infty\), \(b_j/M_j\ge\tau>0\), and induced crossing counts
+\(E_j\). Assume the full train-crossing graph is triangle-free, as in
+Target B §39.1. Put
+\[
+\Delta_j=\frac{M_j(a_j+b_j)-E_j}{M_j^2},
+\qquad
+\rho_j=\frac{R_j-E_j}{M_j^2},
+\]
+where \(R_j\) is the total source rhombus count. Assume no transversal
+triangle, phase directions \(o(1)\)-coherent, and only \(o(M_j^2)\) mixed
+crossings have one train in \(H_j\) and the other outside \(H_j\). This is
+the external-separator crossing control used by the local GPI grid proof;
+it does not bound crossings entirely outside \(H_j\). Also assume the total
+train count \(T_j=O(M_j)\). Then
+\[
+\Delta_j\longrightarrow0
+\quad\Longrightarrow\quad
+\liminf_j\rho_j\ge\kappa:=2-\frac{4c}{3}>0.529,
+\qquad c=\frac{2\sqrt3}{\pi}.
+\tag{2.7}
+\]
+
+To prove this, if \(\liminf\rho_j\) is finite, pass to a subsequence along
+which \(\rho_j\) approaches its liminf and \(s_j=a_j/M_j\to s\),
+\(t_j=b_j/M_j\to t\). (An infinite liminf is trivial.) Then
+\(0\le s\le t\le1\) and \(t\ge\tau\). Write \(x_j=M_jb_j-e_{AB,j}\),
+where \(e_{AB,j}\) counts crossings between the largest and second phase
+classes, and \(y_j=M_ja_j-e_{AC,j}\), where \(e_{AC,j}\) counts crossings
+between the largest and smallest phase classes. With \(z_j=e_{BC,j}\),
+the triangle-free transversal count gives
+\[
+\Delta_jM_j^2=x_j+y_j-z_j,
+\qquad M_jz_j\le a_jx_j+b_jy_j,
+\]
+and hence
+\[
+\Delta_jM_j^2\ge(1-s_j)x_j+(1-t_j)y_j\ge(1-s_j)x_j,
+\]
+where all counts are nonnegative. If \(s<1\), it follows that
+\(x_j/(M_jb_j)\to0\). The corrected dual-tree extraction and the local
+trimmed-grid estimate in GPI §2 therefore give
+\[
+\liminf_j\frac{D_j^2}{M_j^2}\ge F(s,t),
+\]
+where
+\[
+F(s,t)=\begin{cases}
+1+t+t^2-s(1-t)+s^2,&s<(1-t)/2,\\
+3(1+t)^2/4,&s\ge(1-t)/2.
+\end{cases}
+\]
+This local estimate uses only the local grid geometry. To see the outside
+term explicitly, let the mixed-edge count be \(\epsilon_jM_j^2\), with
+\(\epsilon_j\to0\), and choose a central-trim fraction \(\eta_j\to0\) such
+that \(\epsilon_j/\eta_j\to0\) (for example,
+\(\eta_j=\sqrt{\epsilon_j}+M_j^{-1/2}\)). The trim removes \(o(M_j)\)
+tracks. By TG1, each outside train separating the retained diagonal uses
+\(\Omega(\eta_jM_j)\) distinct mixed crossings, so there are only
+\(O((\epsilon_j/\eta_j)M_j)=o(M_j)\) such separator trains. Their total
+vector contribution is \(o(M_j)\); \(T_j=O(M_j)\) controls the coherent
+direction errors. Thus the estimate does not use global-core coverage. The
+audited GPI calculation gives
+\(F(s,t)-c(s+t)\ge\gamma_0\).
+For the remainder ratio we can use the sharper elementary bound
+\[
+F(s,t)\ge\frac{3(1+t)^2}{4},
+\qquad
+\frac{F(s,t)}c-(s+t)
+\ge h(t):=\frac{3(1+t)^2}{4c}-2t.
+\]
+In the first branch of \(F\), its derivative in \(s\) is
+\(2s-(1-t)<0\), so \(F\) is at least its value at the branch boundary,
+which is the second-branch value. The convex quadratic \(h\) has its minimum
+at \(t=4c/3-1\in[0,1]\), since \(3/4<c<3/2\), with value
+\(2-4c/3=\kappa\).
+
+If \(s=1\), then \(t=1\). In this balanced limit, random restriction and the
+balanced tripartite stability lemma in GPI §§4–5 produce a complete coherent
+grid with \(o(M_j)\) deleted trains. Hence
+\(\liminf D_j^2/M_j^2\ge F(1,1)=3\), again using only the local component
+hypotheses. In both cases the pure-disk identity \(n_j-1=R_j+T_j\),
+\(T_j=O(M_j)\), and the lattice competitor imply
+\[
+\frac{D_j^2}{M_j^2}
+\le c(s_j+t_j-\Delta_j+\rho_j)+o(1).
+\]
+Combining the local lower bound with this upper bound yields
+\(\liminf\rho_j\ge F(s,t)/c-(s+t)\ge\kappa\) when \(s<1\); the
+balanced case gives \(3/c-2=h(1)\ge\kappa\). The elementary bounds
+\(\sqrt3<1.7321\) and \(\pi>3.1415\) give \(c<1.103\), hence
+\(\kappa>0.529\).
+
+As \(E_j/M_j^2\le s_j+t_j\le2\), the component accounts for at most
+\[
+\frac{E_j}{R_j}
+=\frac{E_j/M_j^2}{E_j/M_j^2+\rho_j}
+\le\frac{2}{2+\kappa}+o(1)<0.791
+\]
+of the source rhombi. This is a concrete external-rhombus payment for a
+component whose local class-size deficit vanishes. It does not control
+components with a fixed positive deficit and it has not been summed over the
+Section-50 decomposition, so the multi-grain shell inequality remains open.
+
+There is also a population consequence. The component contains
+\(v_j=M_j+a_j+b_j\) trains, with \(v_j/M_j\to v=1+s+t\). Mixed crossings
+from \(H_j\) to the outside are \(o(M_j^2)\), while the outside train graph
+is triangle-free. If \(U_j=T_j-v_j\), Mantel therefore gives
+\[
+\rho_j\le\frac14\left(\frac{U_j}{M_j}\right)^2+o(1).
+\]
+Moreover, \(g(s,t):=F(s,t)/c-(s+t)\ge h(t)\). The bound \(c<1.103\)
+implies \(3/(4c)>0.679\):
+\[
+h(t)-\frac{49}{625}(1+2t)^2
+>\frac{3003-4778t+1827t^2}{5000}
+\ge\frac{52}{5000}>0,
+\]
+where this quadratic decreases on \([0,1]\). Since \(v\le1+2t\), it follows
+that \(2\sqrt{g(s,t)}>\frac{14}{25}v\). Combining the lower and upper
+bounds on \(\rho_j\) gives \(\liminf U_j/M_j>\frac{14}{25}v\), and hence
+\[
+\limsup_j\frac{v_j}{T_j}\le\frac{25}{39}.
+\]
+Thus any coherent component with vanishing local phase deficit leaves at
+least \(14/39\) of the source trains outside it. This excludes a single
+near-extremal component from carrying almost all train population, but still
+allows several such grains.
+
+The same split gives a finite-window, weaker payment without using GPI's
+global-core balancing lemma. Under the same hypotheses, if
+\[
+\limsup_j\Delta_j<5\cdot10^{-13}\tau^2,
+\]
+then
+\[
+\liminf_j\rho_j\ge0.09.
+\tag{2.8}
+\]
+For the proof, take a subsequence realizing \(\liminf\rho_j\) and pass
+further so that \(s_j\to s\). Put
+\(\sigma=5\cdot10^{-8}\tau\). If \(s\le1-\sigma\), then eventually
+\(1-s_j\ge\sigma/2=2.5\cdot10^{-8}\tau\). The transversal inequality
+gives the missing density \(\mu_j=x_j/(M_jb_j)\le2\cdot10^{-5}\). In (2.3) of GPI,
+the loss is at most
+\[
+4\sqrt3(3\sqrt{2\cdot10^{-5}}+2\cdot10^{-5})<0.094.
+\]
+Since \(F-c(s+t)\ge\gamma_0>0.198\), the local lower bound is
+\(D_j^2/M_j^2\ge c(s_j+t_j)+0.104-o(1)\). Comparing with the same
+pure-disk lattice upper bound proves \(\liminf\rho_j>0.09\).
+
+If \(s>1-\sigma\), random restriction to three classes of size \(a_j\)
+gives balanced graph deficit
+\(\epsilon_{\rm bal}\le(t_j-s_j+\Delta_j)/t_j\), whose limsup is at most
+\((\sigma+5\cdot10^{-13}\tau^2)/\tau<5.1\cdot10^{-8}\). The balanced GPI
+grid estimate has
+\(L_{\rm grid}\le6\epsilon_{\rm bal}^{1/4}+4\sqrt{\epsilon_{\rm bal}}<0.092\),
+and the trains deleted by the restriction contribute
+\(L_{\rm del}=2(1-s_j)/s_j<1.1\cdot10^{-7}\). Equation (5.6) of GPI
+therefore gives \(D_j^2/a_j^2>2.36\), hence
+\(D_j^2/M_j^2>2.35\). The global lattice upper bound and \(s_j+t_j\le2\)
+then imply \(\liminf\rho_j>2.35/1.103-2>0.12\). These two cases prove
+(2.8). The fixed-threshold conclusion is only \(0.09M_j^2\); the sharper
+\(\kappa M_j^2\) payment and \(25/39\) train cap require
+\(\Delta_j\to0\).
+
+At the Section-39 atomic Mantel equality point, the orbit argument above
+forces one 60-degree orbit to carry \((3/4+o(1))T_j\) trains and
+\((9/64+o(1))T_j^2\) crossings. Mantel stability splits that orbit into two
+shores of size \((3/8+o(1))T_j\). The exact 60-degree support relation puts
+one shore in a single direction and the other in at most two neighboring
+directions. Taking these as the three phase classes gives
+\(\Delta_j\to0\), \(b_j/M_j\ge1/2-o(1)\), \(T_j=O(M_j)\), and only
+\(o(T_j^2)\) mixed crossings between the orbit and its complement. The new \(25/39\) cap
+then contradicts the orbit's \(3/4\) train share. This independently
+re-excludes the Section-39 equality endpoint using GPI's local diagonal
+geometry and Mantel on the exterior train graph.
+
+### Conditional aggregation of vanishing-deficit grains
+
+Suppose a pure-disk sequence has a bounded number of pairwise disjoint
+three-phase sets \(H_{i,j}\) as above, with train counts
+\(v_{i,j}=M_{i,j}+a_{i,j}+b_{i,j}\), ratios
+\(q_{i,j}=a_{i,j}/M_{i,j}+b_{i,j}/M_{i,j}\), and induced rhombus counts
+\(E_{i,j}\). Assume every positive-train-share component satisfies the
+zero-deficit hypotheses and \(\Delta_{i,j}\to0\), and that all but
+\(o(T_j^2)\) source rhombi are internal to these components. Then
+\[
+\limsup_j\frac{R_j}{T_j^2}\le\frac{821}{6084},
+\qquad
+\liminf_j\frac{T_j}{D_j}\ge\sqrt{\frac{6084}{821c}}
+=\frac{117}{4\sqrt{821}}x_0>1.02x_0.
+\tag{2.9}
+\]
+Indeed, write \(x_{i,j}=v_{i,j}/T_j\). The zero-deficit population bound
+gives \(\limsup x_{i,j}\le25/39\) for every positive-share component, while
+\(\sum_i x_{i,j}\le1\). Convexity then yields
+\(\limsup\sum_i x_{i,j}^2\le(25/39)^2+(14/39)^2=821/1521\). Since
+\(E_{i,j}/M_{i,j}^2=q_{i,j}-\Delta_{i,j}\) and
+\(v_{i,j}/M_{i,j}=1+q_{i,j}\),
+\[
+\frac{E_{i,j}}{T_j^2}
+=\frac{q_{i,j}-\Delta_{i,j}}{(1+q_{i,j})^2}x_{i,j}^2
+\le\frac14x_{i,j}^2,
+\]
+using \(q/(1+q)^2\le1/4\). The coverage hypothesis gives the first
+bound in (2.9). Finally \(n_j-1=R_j+T_j\) and the triangular-lattice
+competitor imply \(D_j^2\le cR_j+o(T_j^2)\), giving the train-ratio
+bound. This rules out the near-Section-39 regime only when the quadratic
+rhombus mass is carried by finitely many vanishing-deficit grains. A
+positive-deficit grain or an uncovered quadratic rhombus population is not
+controlled by (2.9).
+
+### Scope and limitations
+
+This argument rules out asymptotic equality in the atomic Mantel bound and
+quantifies a small gap above the Section-39 train-count endpoint. It does not
+prove the shell-surplus inequality, construct a diameter-decreasing motion, or
+eliminate the higher train-count multi-grain regime. Contact-isolated points do not occur in the pure-disk branch addressed here.
+
+### Three mechanisms considered
+
+1. **Atomic Mantel equality and coherent-grid geometry — proved above.** This
+   has a direct chain to a strict improvement of the Section-39 extremal ratio.
+2. **Fractional local-to-global grid accounting.** A componentwise diameter
+   lower bound can be normalized by its crossing-mass fraction, but taking the
+   maximum over several components does not add their diameter costs. An area
+   or common-container coupling is still needed; no such inequality is claimed.
+3. **Finite train-angle relaxation.** The canonical phase-potential relaxation
+   has an exact Farkas obstruction involving positive active-diameter multipliers.
+   No new estimate here excludes that multiplier certificate or integrates a
+   finite motion, so this route remains exploratory.
+
+## 3. Exact frontier effect
+
+The candidate removes the equality case from the canonical lower bound
+\(T/D\ge2.5395008183\ldots+o(1)\) in the pure-disk branch and proves the
+explicit factor \(1+10^{-10}\) improvement. More generally, a finite limiting
+ratio \(x\) forces one atomic 60-degree orbit to contain at least
+\(16/(3cx^2)\) of all trains; for \(x/x_0=z<\varphi\), the largest orbit
+captures at least \(1-(z-z^{-1})^2\) of all quadratic rhombus crossings
+whenever this lower bound is positive. These are noncanonical source-structure
+bounds. The additional zero-deficit statement (2.7) requires at least
+\(\kappa M_j^2>0.529M_j^2\) rhombi outside the component and caps its train
+population at \(25/39\) of the total. The finite-window statement (2.8)
+gives a weaker \(0.09M_j^2\) payment when
+\(\limsup\Delta_j<5\cdot10^{-13}\tau^2\). Under the additional
+all-rhombi-covered hypothesis, (2.9) first raises the conditional train-ratio
+bound to \((117/(4\sqrt{821}))x_0>1.02x_0\). The class-size split below
+sharpens this to \(T/D>1.0304x_0\). These results do not control components
+with larger fixed deficit and do not close the multi-grain shell-stability
+problem or change canonical state.
+
+### Sharper covered-grain aggregate from a class-size split
+
+This is a **proved conditional candidate awaiting independent audit**. Keep
+the all-covered, bounded-component hypotheses of (2.9): every positive-share
+component is a coherent three-phase set with local deficit `Delta_i -> 0`,
+and all but `o(T^2)` source rhombi are induced inside the selected components.
+Write
+
+```text
+s_i=a_i/M_i,  t_i=b_i/M_i,  q_i=s_i+t_i,
+v_i=M_i+a_i+b_i,  u_i=v_i/T.
+```
+
+The old uniform estimate used only `u_i<=25/39` and
+`q_i/(1+q_i)^2<=1/4`, giving `R/T^2<=821/6084`. We can do better by
+charging small-`q` grains with the sharper local remainder bound, while
+charging large-`q` grains with their smaller rhombus coefficient.
+
+For any component with a positive limiting `q_i`, the zero-deficit theorem
+(2.7) gives
+
+```text
+rho_i := (R-E_i)/M_i^2 >= kappa-o(1),
+kappa=2-4c/3 > 0.529,
+```
+
+where `E_i` is its induced rhombus count and `R-E_i` counts the remaining
+source rhombi. The mixed crossings with the component are `o(M_i^2)` by the
+covered-component hypotheses. The exterior train graph is triangle-free,
+so Mantel gives
+
+```text
+rho_i M_i^2 <= (T-v_i)^2/4+o(M_i^2),
+u_i <= (1+q_i)/(1+q_i+2 sqrt(kappa))+o(1).
+```
+
+If `q_i -> 0`, then `E_i/T^2=o(1)` directly and that component contributes
+no limiting quadratic rhombus mass. Thus the displayed remainder estimate
+may be applied first with a fixed positive lower cutoff on `q_i`, then the
+cutoff may tend to zero.
+
+The previously proved population estimate (2.7) also gives `u_i<=p+o(1)`
+for `p=25/39`. Split the positive-`q` components at `Q=11/8`. For
+`q_i<=Q`, since `1+q_i<=19/8` and `sqrt(kappa)>0.727`,
+
+```text
+u_i <= L+o(1),  L=19/(19+16*0.727)=2375/3829 < 0.621.
+```
+
+For `q_i>Q`, the function `w(q)=q/(1+q)^2` is decreasing, and
+
+```text
+w(q_i) <= w(Q)=88/361.
+```
+
+Since `E_i/M_i^2=q_i-Delta_i`, the component contribution satisfies
+
+```text
+E_i/T^2 <= w(q_i) u_i^2.
+```
+
+Let `x` be the total train share of the `q<=Q` components. The share of the
+other components is at most `1-x`. For `a>1/2`, the maximum sum of squares
+of nonnegative shares with total `z<=1` and each share at most `a` is
+
+```text
+S(a,z)=z^2                         if z<=a,
+S(a,z)=a^2+(z-a)^2                 if a<z<=1.
+```
+
+Consequently the normalized rhombus count is at most
+
+```text
+C(x) = (1/4) S(L,x) + (88/361) S(25/39,1-x) + o(1).
+```
+
+This function is piecewise convex, with breakpoints `x=L` and `x=14/39`.
+Its maximum is at one of `x=0,1,L,14/39`; direct rational evaluation using
+`L=2375/3829` gives the largest value `72689/549081 < 0.1324`. Therefore
+
+```text
+limsup R/T^2 <= 0.1324,
+liminf T/D >= 1/sqrt(1.103*0.1324) > 2.6167,
+liminf (T/D)/x0 >= 3/(8 sqrt(0.1324)) > 1.0304.
+```
+
+These are separate consequences. The intermediate decimal `2.6167` is
+slightly smaller than `1.0304 x0`; the ratio comparison follows directly
+from `x0=8/(3 sqrt(c))`, where the geometric constant cancels. The exact
+arithmetic checker verifies both valid bounds and rejects the former
+decimal chain using rational enclosures.
+
+This improves the conditional train-ratio consequence of (2.9) by a
+class-size-sensitive aggregate estimate. It still does not control grains
+with a fixed positive phase deficit, does not prove a same-cardinality motion,
+and does not close the shell inequality.
+
+**Withdrawn subargument.** A preceding draft combined two phase classes on one
+shore of a proposed CR biclique. Their limiting directions can be separated
+by exactly `pi/3`; CR requires each family to lie in an interval of length
+strictly less than `pi/3`. The stated `5/6` biclique extraction therefore did
+not follow. The aggregate above uses only the established local GPI remainder
+and population bounds and does not depend on that CR claim.
+
+## 4. Exact remaining lemma
+
+For a pure rhombic disk whose train ratio stays above
+\(x_0+\varepsilon\), prove the canonical shell inequality
+
+\[
+G+E\ge\frac{\sqrt3}{4}B
+\]
+for every sufficiently large triangle-free global minimizer, or construct a
+source-preserving strict smaller-diameter competitor. The present argument
+provides no control of the boundary-order surplus in this regime.
+
+## 5. Claim audit table
+
+| Claim | Status | Dependencies | Reason |
+| --- | --- | --- | --- |
+| Section-39 atomic crossing and exposed-hull bounds | canonical | Target B Sections 39.1–39.4 | Used at their stated pure-disk global-minimizer scope |
+| Orbit-refined Mantel and core-capture bounds | proved candidate | 60-degree support relation plus Mantel on each orbit | Detailed mass and crossing decomposition in Section 2 |
+| Mantel stability lemma (2.2) | proved candidate | Elementary proof included above | No external source required |
+| Complete-grid extraction from an almost-complete crossing pair | canonical | Promoted phase-cut addendum, IS | Requires proper crosscuts and internally noncrossing families; verified here |
+| Coherent biclique diameter lower bound | canonical | Promoted phase-cut addendum, CR | Pure simply connected disk and coherent directions; verified here |
+| Proposed `5/6` CR shore union | withdrawn | CR angular-family hypothesis | Two phase classes can be separated by exactly `pi/3`, so their union need not fit a family interval of length strictly less than `pi/3` |
+| Explicit factor \(1+10^{-10}\) gap above Section-39 ratio | unreviewed candidate | Orbit concentration, quantitative Mantel stability, IS, and CR | Constants and compactness proof above; awaiting independent audit |
+| Zero-deficit component/remainder and train-population bounds (2.7) | proved candidate awaiting audit | Canonical GPI local grid proof, exterior Mantel, and pure-disk lattice upper bound | Handles vanishing phase deficit without importing GPI's global-core balancing lemma |
+| Finite-window component remainder bound (2.8) | proved candidate awaiting audit | Unique-max grid estimate or balanced restriction, split at (1-a/M=5\cdot10^{-8}\tau) | Corrected finite threshold derived without the global-core balancing lemma |
+| Aggregation of finitely many covered zero-deficit grains (2.9) | proved conditional candidate | Component population cap, internal rhombus coverage, and triangular-lattice competitor | Gives a strict train-ratio gap only in the all-low-deficit branch |
+| Sharper covered-grain class-size aggregate | proved conditional candidate awaiting audit | Zero-deficit remainder bound, Mantel outside trains, finite convex allocation | Improves the conditional train-ratio floor to more than 2.6167; the earlier CR shore-union subargument was withdrawn |
+| Target B shell-stability inequality | open | Route map | No new proof is claimed |
+
+## 6. Adversarial geometric regression
+
+The virtual determinant mass from Target B §26.4 cannot be bounded by
+`G+E+O(B)` for arbitrary triangle-free rhombic disks, even when the contact
+complex is connected and simply connected. This is a **regression to a
+static geometric shortcut only**; the example is far from globally diameter
+minimizing.
+
+For (m\ge4), set \(\theta_m=\pi/3+m^{-3}\), and let \(u,v\) be unit
+vectors at angle \(\theta_m\). In lattice coordinates, take the cells
+
+```text
+0 <= j < m:  0 <= i < m  or  m+2 <= i < 2m+2,
+j = m:      0 <= i < 2m+2.
+```
+
+This is two \(m\times m\) rhombus blocks separated by a two-column notch and
+joined by a single top row. The union is a simply connected rhombic disk, with
+
+```text
+R=2m^2+2m+2,  B=8m+6,  T=B/2=4m+3,
+n=R+T+1=2m^2+6m+6.
+```
+
+The source is the vertex set of this cell complex. Every nonzero lattice
+vector \(pu+qv\) other than \(\pm u,\pm v\) has length strictly greater
+than one: for opposite signs,
+\(|pu+qv|^2=(|p|-|q|)^2+2|pq|(1-\cos\theta_m)>1\), with the
+equal-magnitude case using \(2-2\cos\theta_m>1\). The unit-contact graph is
+therefore bipartite in the lattice parity \(i+j\), so the source contains no
+unit equilateral triangle.
+
+The hull is the full parallelogram with lattice-coordinate side counts
+`2m+2` and `m+1`. Hence
+
+```text
+G = 2m sin(theta_m),
+E = R (sin(theta_m)-sqrt(3)/2)=O(1/m),
+G+E=Theta(m),  c0 B=Theta(m),
+(G+E)/(c0 B) -> 1/2.
+```
+
+Yet the `m` lower-left `u` trains and `m` lower-right `v` trains do not cross,
+and the reverse pair of families also does not cross. Their virtual
+determinant mass is
+
+```text
+M_inter >= 2m^2 sin(theta_m)=Theta(m^2).
+```
+
+Thus no fixed positive multiple of all inter-grain virtual determinant mass
+can be paid by `G+E+O(B)` without a global-optimality or diameter-saturation
+hypothesis. Indeed
+
+```text
+D_m^2=(5+4 cos(theta_m))(m+1)^2,
+D_m^2/[c(n-1)] -> 7/(2c)>3,
+```
+
+so the translated triangular-lattice competitor has much smaller diameter for
+the same cardinality. The construction gives no counterexample to the
+global-minimizer shell theorem.
+
+## 7. Regression checks
+
+| Regression/correction | Result | Exact hypothesis or failure |
+| --- | --- | --- |
+| Static virtual-determinant payment by `G+E+O(B)` | regression | Connected two-grain oblique-lattice disk: `M_inter=Theta(m^2)` while `G+E+B=Theta(m)`; it is not globally optimal |
+| A non-atomic train population may remain linear | handled | It is excluded from positive quadratic crossing mass by Section 39.1; the proof retains it in the total (T) and uses only (T=O(D)) |
+| Dense graph alone does not give a biclique | handled | The extraction uses promoted geometric interval theorem IS, not generic graph density |
+| A coherent local block need not carry the global core | handled at this equality case | Equality in the global atomic Mantel bound forces the selected atomic subgraph to carry (R-o(D^2)) crossings |
+| Local or feasible configurations do not imply global optimality | respected | The result assumes global minimizers throughout and gives no Level I conclusion outside the pure-disk branch |
+| Section 39 support depth cannot be counted as independent Oler surplus | not used | No support-depth-to-Oler conversion appears in the proof |
+| GPI near-balance estimate used without global-core coverage | rejected and corrected | GPI Lemma GPI.1 is proved by contradiction using the global-core upper bound; statements (2.7)–(2.8) instead split by class balance |
+
+## 8. Literature imports
+
+None. The graph stability statement is proved in the report. The geometric inputs
+are canonical repository theorems CR and IS.
+
+## 9. Computation
+
+`python3 research/verify_target_b_zero_deficit_aggregate_arithmetic_2026_10_10.py`
+reproduces the four exact allocation values and certifies their maximum is
+`72689/549081 < 0.1324`. It also verifies the absolute and relative train-ratio
+consequences separately, and rejects the former false decimal chain using
+rational Machin enclosures of pi. The script assumes the analytic share caps;
+it does not verify their geometric premises. The separate constant comparison used
+for the atomic Mantel endpoint is exact and follows from
+\(27\pi>81>64>32\sqrt3\).
+
+`python3 research/verify_target_b_connected_notch_regression_2026_10_15.py`
+checks the analogous rational basis `(1,0),(5/13,12/13)` for `m=4,5,8`.
+It examines every source pair and actual contact, the cell boundary and train
+counts, the two missing opposite-block crossing families, the diameter and
+hull gap, and a same-cardinality square-grid competitor. A one-column-notch
+mutation is rejected because it has additional actual unit contacts. These
+finite fixtures do not certify the transcendental sequence `theta_m`, its
+asymptotic estimates, or global optimality. Both checkers refuse optimized
+Python because their exact checks require assertions.
+
+## 10. Corrections / supersessions
+
+The initially drafted finite-threshold claim \(\rho\ge0.674\) was withdrawn:
+its use of the GPI near-balance estimate was circular outside the core-carrying
+scope. Statements (2.7)–(2.8) use an explicit imbalanced/balanced split and
+do not import that estimate. These candidates sharpen the equality-case
+conclusion of Section 39 but do not supersede any canonical inequality.
+
+The autonomous PR #949 audit on 2026-10-15 corrected the false intermediate
+comparison `2.6167 > 1.0304 x0`, separated the two valid bounds, renamed a
+local center-class mass that shadowed `c`, and synchronized the finite-window
+table with the proof's split at `5e-8 tau`. See the
+[substantive audit](../audits/pr949_autonomous_proof_audit_2026-10-15.md).
+
+## 11. Promotion recommendation
+
+**Unreviewed.** Submit for independent mathematical audit. If the proof passes,
+promote only the atomic orbit bound, explicit train-ratio gap, and conditional
+covered-grain aggregate through the appropriate Target B state transaction;
+do not change Level I status or claim shell-stability closure.

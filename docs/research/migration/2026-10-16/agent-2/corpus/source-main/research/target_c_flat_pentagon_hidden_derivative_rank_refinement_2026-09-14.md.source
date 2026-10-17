@@ -1,0 +1,114 @@
+# Target C-II - refined flat-pentagon hidden-derivative rank
+
+**Date:** 2026-09-14
+**Base theorem:** `target_c_flat_pentagon_hidden_derivative_rank_2026-09-14.md`
+**Dependencies:** certified minimax gap `g=0.002123`; low-t pentagon sea
+**Claim class:** proof-only rank refinement; theorem-state authority unchanged
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The base hidden-derivative theorem proves, for a sufficiently flat selected pentagon
+family `P` of size `p`,
+
+\[
+\operatorname{rank}(H_P|_{\ker C_{face}})
+\ge {7p\over3}-2f+\sigma_C,
+\tag{RR.1}
+\]
+
+where `f` is the number of bounded exceptional faces and `sigma_C>=0` is the closure
+corank.  Its numerical insertion paid `2f` by the coarse inequality `f<=Q`.  On the
+same `R_F=o(D)` branch there is a sharper payment.
+
+Let `p_5` be the total pentagon count and `X=Q-f`.  Fix the sufficiently small
+flatness neighborhood needed for the nonzero local minor in the base theorem.  Residual
+conservation deletes only `o(D)` pentagons, so
+
+\[
+p_5-p=o(D).
+\]
+
+Every nonpentagonal exceptional face contributes at least one unit to
+
+\[
+X=\sum_{d\ge6}(d-5)n_d,
+\]
+
+hence `N_{>=6}<=X`.  Therefore
+
+\[
+\boxed{f-p=N_{\ge6}+(p_5-p)\le X+o(D).}
+\tag{RR.2}
+\]
+
+Substituting (RR.2) in (RR.1) gives the stronger source-level rank bound
+
+\[
+\boxed{
+\operatorname{rank}(H_P|_{\ker C_{face}})
+\ge {p\over3}-2X+\sigma_C-o(D).
+}
+\tag{RR.3}
+\]
+
+Now put `s=sqrt(Delta_2)`, `g=0.002123`, and `C_0=2s+g`.  The certified low-`t`
+ledgers give
+
+\[
+{p\over D}\ge
+\pi+C_0-{5t\over2}+\delta+{\kappa\over2}-o(1),
+\]
+
+and
+
+\[
+{X\over D}\le
+{9t\over4}-\pi-{C_0\over2}-\delta-{\kappa\over4}+o(1).
+\]
+
+Thus
+
+\[
+\boxed{
+\liminf {1\over D}\operatorname{rank}(H_P|_{\ker C_{face}})
+\ge
+{7\pi\over3}+{4C_0\over3}-{16t\over3}
++{7\delta\over3}+{2\kappa\over3}.
+}
+\tag{RR.4}
+\]
+
+At the certified Section-171 endpoint
+
+\[
+t_{23}={4\over9}(\pi+s)+0.0017327,
+\]
+
+dropping the nonnegative bonuses yields
+
+\[
+\boxed{
+\liminf {1\over D}\operatorname{rank}(H_P|_{\ker C_{face}})
+\ge0.159401074123032\ldots .
+}
+\tag{RR.5}
+\]
+
+The earlier `f<=Q` payment, updated to the same `g,t_{23}`, gives only
+`0.153726924123032...`; (RR.2) gains exactly `2X=0.00567415` at the endpoint.
+
+The scalar part of (RR.4) stays positive until
+
+\[
+\boxed{
+t<{7\pi+4C_0\over16}
+=1.851133939377513\ldots .}
+\tag{RR.6}
+\]
+
+This rank counts independent first-order radial coordinates of actual inactive hidden
+leaf chords after every ordinary bounded-face contact-closure equation is imposed.  It
+does not provide a common shortening sign or diameter-feasible flex.  C-II remains
+open.

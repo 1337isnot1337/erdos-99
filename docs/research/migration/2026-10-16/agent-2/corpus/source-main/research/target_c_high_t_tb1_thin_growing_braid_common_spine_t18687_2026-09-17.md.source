@@ -1,0 +1,396 @@
+# Target C-II — THIN obstruction forces a growing crossing braid through one common train spine
+
+**Date:** 2026-09-17  
+**Status:** proof-only continuation of the THIN common-spine ladder; no canonical promotion claimed  
+**Scope:** THIN side of the 15-spaced one-sign strong-TB1 Horn upper family through `t=(q-k)/D<=1.8687`  
+**Dependencies:** THIN rich-cut phase synchronization; THIN partner-star bandwidth; superdiameter geometric-thrackle theorem; global complete-train count  
+**Certificate:** `research/verify_target_c_high_t_tb1_thin_growing_braid_common_spine_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The preceding common-spine theorem double-counted `(row, blocker, train)` triples and produced one THIN almost-diameter chord and one complete train through linearly many common phase-pure rows. The same incidence system contains a stronger structure.
+
+On each low-defect rich row there are linearly many THIN blockers. Their owner coordinates are distinct and fifteen-spaced. The partner-star theorem therefore gives maximum vertex degree only `O(D^(3/4))` inside that row, while the blocker population is `Theta(D)`. Hence, for every fixed `r`, asymptotically almost every `r`-tuple of row blockers is vertex-disjoint. Counting
+
+\[
+(\text{row},\ r\text{-edge blocker matching},\ \text{good transverse train})
+\]
+
+then forces one fixed train and one fixed `r`-edge THIN matching through linearly many of the same rows. Because every THIN edge is longer than `sqrt(D^2-1)`, the matching edges cross pairwise properly.
+
+More strongly, a diagonal choice `r=r_D->infinity` can be made slowly enough that the same conclusion holds with a growing pairwise-crossing THIN braid and `D^(1-o(1))` common rows.
+
+This upgrades the current THIN normal form from
+
+```text
+one almost-diameter + one train + Theta(D) common rows
+```
+
+to
+
+```text
+an unbounded pairwise-crossing almost-diameter braid
++ one complete train
++ D^(1-o(1)) common selected rows
++ one inverse-D row phase
++ rowwise linear THIN richness and dense near-equilateral columns.
+```
+
+No inactive THIN chord is promoted to an actual diameter or KKT-loaded edge.
+
+---
+
+## 1. Rich low-defect rows and notation
+
+Retain the notation of the THIN common-spine theorem. Let `T_D` be the owned THIN blocker family and put
+
+\[
+N:=|T_D|.
+\]
+
+With
+
+\[
+\gamma={791\over9{,}600{,}000{,}000},
+\qquad
+p_0={1609\over2500}=0.6436,
+\qquad
+T_*={6121\over2000}=3.0605,
+\tag{GB.1}
+\]
+
+we have
+
+\[
+\boxed{N>\left({\gamma\over16}-o(1)\right)D.}
+\tag{GB.2}
+\]
+
+There is a low-defect rich-row family `R_D` satisfying
+
+\[
+\boxed{|R_D|>\left({3\over2}-o(1)\right)N.}
+\tag{GB.3}
+\]
+
+For every `a in R_D`, let
+
+- `B_a subset T_D` be the THIN blockers whose exact selected-cut support contains `a`;
+- `P_a` be the purified complete-train family on `a`.
+
+The previous theorem gives uniformly
+
+\[
+\boxed{|B_a|>\left({1\over5}-o(1)\right)N,}
+\tag{GB.4}
+\]
+
+\[
+\boxed{|P_a|>(p_0-o(1))D,}
+\tag{GB.5}
+\]
+
+and for every `b in P_a`,
+
+\[
+0<\theta(a,b)-{\pi\over3}\le {C_0\over D}
+\tag{GB.6}
+\]
+
+for one source-independent constant `C_0`.
+
+The audited complete-train count is
+
+\[
+\boxed{T_{\rm all}\le(T_*+o(1))D.}
+\tag{GB.7}
+\]
+
+---
+
+## 2. The blocker graph on one rich row has sublinear maximum degree
+
+Fix `a in R_D` and regard `B_a` as a graph on source vertices.
+
+Every blocker in `B_a` crosses the selected cut `a`. Its assigned owner endpoint and its partner endpoint therefore lie on opposite shores of `a`. The owner coordinates are globally distinct and belong to the fifteen-spaced retained coordinate set.
+
+Fix a source vertex `q`.
+
+- `q` can be the owner endpoint of at most one blocker: a source vertex lies in one path region/layer, while no owner coordinate is reused.
+- For blockers where `q` is the partner endpoint, all owners lie on the opposite shore of `a`, have distinct fifteen-spaced owner tags, and share the same THIN partner `q`.
+
+The THIN partner-star bandwidth theorem therefore applies to the second class and gives
+
+\[
+\deg_{B_a}(q)
+\le
+1+\left({16\,3^{1/8}\over15}+o(1)\right)D^{3/4}.
+\tag{GB.8}
+\]
+
+Thus, uniformly over `a in R_D`,
+
+\[
+\boxed{\Delta(B_a)=O(D^{3/4})=o(N).}
+\tag{GB.9}
+\]
+
+The last equality uses `N=Theta(D)` from (GB.2) together with the injective owner assignment and the `O(D)` selected-path/train bound.
+
+This is the only extra ingredient needed to replace one blocker by an arbitrary fixed matching.
+
+---
+
+## 3. Almost all fixed-size blocker tuples are matchings
+
+Let a finite graph have `E` edges and maximum degree `Delta`. The number `M_r` of unordered `r`-edge matchings obeys
+
+\[
+\boxed{
+M_r\ge {1\over r!}
+\prod_{j=0}^{r-1}(E-2j\Delta)_+.
+}
+\tag{GB.10}
+\]
+
+Indeed, after `j` pairwise vertex-disjoint edges have been selected, at most `2j Delta` edges meet one of their `2j` endpoints. Choose the next edge outside that union and divide ordered selections by `r!`.
+
+Apply (GB.10) to `B_a`. For every fixed positive integer `r`, (GB.4) and (GB.9) give
+
+\[
+\boxed{
+M_r(a)>
+\left({1\over r!5^r}-o(1)\right)N^r
+}
+\tag{GB.11}
+\]
+
+uniformly over `a in R_D`.
+
+Every edge in any such matching is THIN, hence has length
+
+\[
+|e|>D-{1\over4D}>\sqrt{D^2-1}.
+\tag{GB.12}
+\]
+
+The superdiameter-thrackle theorem says that two vertex-disjoint edges satisfying (GB.12) cross properly. Consequently every matching counted by (GB.11) is automatically a pairwise-properly-crossing straight-line braid of hull chords.
+
+---
+
+## 4. Fixed-`r` braid/train double count
+
+Fix `r>=1`. Count triples
+
+\[
+(a,F,b)
+\tag{GB.13}
+\]
+
+where
+
+- `a in R_D`;
+- `F` is an `r`-edge matching in `B_a`;
+- `b in P_a`.
+
+By (GB.3), (GB.5), and (GB.11),
+
+\[
+\#\{(a,F,b)\}
+>
+\left(
+{3p_0\over2\,5^r r!}-o(1)
+\right)N^{r+1}D.
+\tag{GB.14}
+\]
+
+There are at most
+
+\[
+{N\choose r}\le {N^r\over r!}
+\tag{GB.15}
+\]
+
+possible blocker `r`-sets and at most `(T_*+o(1))D` complete trains. Pigeonhole therefore gives one fixed pair
+
+\[
+(F_*,b_*)
+\tag{GB.16}
+\]
+
+with `F_*` an `r`-edge vertex-disjoint THIN matching, which occurs on more than
+
+\[
+\boxed{
+\left(
+{3p_0\over2T_*5^r}-o(1)
+\right)N
+}
+\tag{GB.17}
+\]
+
+rows.
+
+For every such row `a`:
+
+- every chord `e in F_*` crosses `a`, because `e in B_a`;
+- `b_*` crosses `a` in a purified strict rhombus, because `b_* in P_a`;
+- the `r` THIN chords cross pairwise properly;
+- the full row still has the original blocker richness (GB.4) and purified train density (GB.5).
+
+Relative to the fixed train direction `[v_*]` of `b_*`, there are only two projective phase signs for rows satisfying (GB.6). Retain the larger sign class. Then one row family `A_D(r)` satisfies
+
+\[
+\boxed{
+|A_D(r)|>
+\left(
+{3p_0\over4T_*5^r}-o(1)
+\right)N.
+}
+\tag{GB.18}
+\]
+
+All rows in `A_D(r)` share one projective phase to `O(D^-1)`.
+
+Using (GB.2),
+
+\[
+\boxed{
+|A_D(r)|>
+\left(
+{3p_0\gamma\over64T_*5^r}-o(1)
+\right)D.
+}
+\tag{GB.19}
+\]
+
+For `r=1`, this is exactly the preceding common-spine coefficient. For `r=2`, the coefficient is
+
+\[
+\boxed{
+{1{,}272{,}719\over39{,}174{,}400{,}000{,}000{,}000}
+=3.248853843326254\ldots\times10^{-11}.
+}
+\tag{GB.20}
+\]
+
+Thus already at fixed `r=2` there are two vertex-disjoint, properly crossing THIN almost-diameters and one complete train traversing a linear common phase-pure row stack.
+
+---
+
+## 5. The fixed braid has a common consecutive selected-cut block
+
+Every blocker has an exact selected-cut support interval. Since every row in `A_D(r)` belongs to the support interval of every `e in F_*`, each such interval contains both
+
+\[
+a_-:=\min A_D(r),
+\qquad
+a_+:=\max A_D(r).
+\]
+
+Therefore the whole consecutive block
+
+\[
+\boxed{
+\{a_-,a_-+1,\ldots,a_+\}
+}
+\tag{GB.21}
+\]
+
+lies in the support of every chord in `F_*`. Its length is at least `|A_D(r)|`.
+
+Hence the braid chords do not merely share the sparse phase-pure rows produced by the double count. They have a common exact support interval of linear length for fixed `r`.
+
+The train `b_*` is asserted to cross every row in `A_D(r)` only; no interval claim is made for the set of selected rows crossed by `b_*`.
+
+---
+
+## 6. A growing braid with `D^(1-o(1))` common rows
+
+The fixed-`r` theorem can be diagonalized.
+
+Let `epsilon_D->0` dominate all asymptotic errors in (GB.2)--(GB.7), and write
+
+\[
+\Delta_D:=\max_{a\in R_D}\Delta(B_a)=O(D^{3/4}).
+\]
+
+Because `N=Theta(D)`, choose integers `r_D->infinity` so slowly that
+
+\[
+r_D\epsilon_D\to0,
+\qquad
+{r_D^2\Delta_D\over N}\to0,
+\qquad
+{r_D\over\log D}\to0.
+\tag{GB.22}
+\]
+
+Such a choice always exists. Then the greedy product (GB.10) gives uniformly
+
+\[
+M_{r_D}(a)
+\ge
+{(1-o(1))\over r_D!}
+\left({N\over5}\right)^{r_D}.
+\tag{GB.23}
+\]
+
+Repeating the count from Section 4 yields one matching `F_D`, one complete train `b_D`, and after one phase split one common row family `A_D` with
+
+\[
+\boxed{|F_D|=r_D\to\infty}
+\tag{GB.24}
+\]
+
+and
+
+\[
+|A_D|
+>
+\left({3p_0\over4T_*}-o(1)\right)
+{N\over5^{r_D}}.
+\tag{GB.25}
+\]
+
+Since `N=Theta(D)` and `r_D=o(log D)`,
+
+\[
+5^{r_D}=D^{o(1)},
+\]
+
+so
+
+\[
+\boxed{|A_D|=D^{1-o(1)}.}
+\tag{GB.26}
+\]
+
+Every chord in `F_D` is vertex-disjoint from every other chord in `F_D` and therefore all pairs cross properly by the superdiameter-thrackle theorem. Every chord and the same train `b_D` traverse every row in `A_D`; every row in `A_D` has one common inverse-`D` phase, remains crossed by `Theta(D)` THIN blockers, and retains `(0.6436-o(1))D` purified transverse trains.
+
+As in Section 5, all braid chords contain one common consecutive selected-cut support block of length at least `D^(1-o(1))`.
+
+---
+
+## 7. Frontier effect
+
+The THIN branch can no longer be viewed as one exceptional almost-diameter threaded through a dense train scaffold. It contains, after a slow diagonal extraction,
+
+```text
+r_D -> infinity vertex-disjoint THIN hull chords;
+every two braid chords cross properly;
+one complete stopped train b_D;
+D^(1-o(1)) common selected O--O rows;
+every braid chord crosses every common row;
+b_D crosses every common row in a pi/3+O(1/D) rhombus;
+all common rows share one projective phase to O(1/D);
+every common row remains linearly blocker-rich and has >0.6436D purified columns;
+and all braid chords share one consecutive selected-cut support block of D^(1-o(1)) length.
+```
+
+This removes the possibility that the one-chord common-spine theorem was caused by a single high-codegree exceptional blocker. The relative-position seam is now collective: a growing straight-line crossing braid and one actual complete train must coexist through a near-linear-height phase-pure ladder.
+
+The next closing target is to exploit the cyclic order of the `2r_D` hull endpoints. Pairwise proper crossing forces the standard two-shore rainbow order, while all `r_D` support intervals contain the same `D^(1-o(1))` consecutive row block. One should compare that rainbow order with the fixed train `b_D` and with the rowwise circumcenter flanks. A contradiction here would eliminate the THIN Horn upper branch.
+
+No such final contradiction is claimed.
+
+**Disposition:** upgraded the THIN common-spine ladder from one fixed almost-diameter to an unbounded pairwise-crossing THIN braid sharing one complete train and a `D^(1-o(1))` common phase-pure row family. C-II and Level I remain open.

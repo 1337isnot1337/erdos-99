@@ -1,0 +1,28 @@
+# RETRACTED — former correlated `t<=1.860` dual-path claim
+
+**Date:** 2026-09-15  
+**Status:** **RETRACTED / DO NOT CITE AS A THEOREM**  
+**Replacement:** `research/target_c_opposite_branch_dual_path_t18593_2026-09-15.md`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The original version of this note correctly identified an important correlation:
+
+\[
+P_{low}(\lambda)
+\ge z-U_{max}+
+\left(2-{1\over\lambda}\right)\delta+\kappa/2-o(1).
+\]
+
+That algebra remains valid and useful.  The error came later: the note used `lambda=0.9` and assumed that low terminal energy alone put the two O--O terminal occurrences on opposite oriented normal branches.  The audited endpoint-energy theorem does not justify that branch choice at this threshold.
+
+Without the opposite-branch conclusion, the claimed pair of disjoint antipodal terminal arcs is unavailable, so the complement-dual path, common-hub, and finite-strip conclusions in the former version are withdrawn.
+
+The corrected theorem
+
+`target_c_opposite_branch_dual_path_t18593_2026-09-15.md`
+
+retains the correlated energy identity but adds the missing geometric inequality.  With `lambda=0.5025`, the worst same-branch terminal chord is strictly shorter than the Section-157 O--O bracing lower bound through `t<=1.8593`, forcing the terminals onto opposite branches before the two-arc topology is invoked.
+
+The correlated identity itself is not retracted; only the unsupported path application at `lambda=0.9` and endpoint `1.860` is.
+
+**Disposition:** topological theorem retracted; correlated bookkeeping retained as a valid lemma and reused in the corrected theorem.

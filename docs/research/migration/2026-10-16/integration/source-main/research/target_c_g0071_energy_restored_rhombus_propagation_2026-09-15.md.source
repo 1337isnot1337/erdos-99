@@ -1,0 +1,384 @@
+# Target C-II — propagate the branch-aware `g=0.0071` gap through restored rhombus energy
+
+**Date:** 2026-09-15  
+**Repository base:** `639c480` (`g=0.0071` theorem and exact certificate on current main)  
+**Status:** proof-only quantitative propagation; theorem-state authority unchanged  
+**Scope:** fully force-visible no-container/full-core Type-II branch  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The hostile-audited complement O–O rhombus-incidence theorem and its restored-energy
+refinement are symbolic in the matched atomic lower bound
+
+\[
+C_0\le C:={T-q/2\over D}.
+\]
+
+The new branch-aware iterative-pruning theorem raises that input from
+
+\[
+C_{50}=2\sqrt{\Delta_2}+0.0050
+\]
+
+to
+
+\[
+\boxed{C_{71}=2\sqrt{\Delta_2}+0.0071},
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\tag{GP.1}
+\]
+
+No geometric part of the rhombus-incidence proof changes.  Substituting (GP.1) into
+the already-audited scalar stack raises the safe low-`t` floor from `1.84283` to
+
+\[
+\boxed{
+\liminf {q-k\over D}\ge1.84323.
+}
+\tag{GP.2}
+\]
+
+The new scalar crossing is
+
+\[
+1.84323535293446\ldots .
+\tag{GP.3}
+\]
+
+Only the round value `1.84323` is claimed.
+
+---
+
+## 1. Symbolic inputs from the audited rhombus-incidence stack
+
+Pass to a convergent Type-II subsequence and write
+
+\[
+t={q-k\over D},
+\qquad
+\kappa={k\over D},
+\qquad
+\delta={d_{out}\over D}.
+\]
+
+The Section-171/network envelope is
+
+\[
+C\le U:={9t\over2}-2\pi-2\delta-\frac\kappa2.
+\tag{GP.4}
+\]
+
+Together with (GP.1),
+
+\[
+\boxed{
+2\delta+{\kappa\over2}
+\le R_{71}(t):={9t\over2}-2\pi-C_{71}.
+}
+\tag{GP.5}
+\]
+
+The two-bin dominant-orbit theorem is also symbolic in `U`.  Put
+
+\[
+m_2(U):={U+\sqrt{8\Delta_2-U^2}\over2},
+\qquad
+r(U):=U-m_2(U).
+\tag{GP.6}
+\]
+
+Then the complement complete-train density is bounded by
+
+\[
+U+{t+\kappa\over2}-m_2(U),
+\]
+
+and the hostile-audited shared-retention theorem supplies retained dominant outer
+occurrence mass `z` and retained complement O–O pair mass `p` with
+
+\[
+\boxed{
+z+p\ge
+S(t,\delta,\kappa)
+:=\pi-{t+\kappa\over2}-r(U)-o(1).
+}
+\tag{GP.7}
+
+The retained dominant occurrences consume directional energy at least
+
+\[
+F(z)D-o(D),
+\qquad
+F(z):=z-6\sin(z/6).
+\tag{GP.8}
+
+Finally, the hostile-audited complement-rhombus incidence theorem gives
+
+\[
+p(1-\delta)-{e_c\over2}
+\le {r(U)^2\over2}+o(1),
+\tag{GP.9}
+\]
+
+where `e_c D` is the exact terminal directional energy carried by the retained
+complement pairs.  Since dominant and complement terminal occurrences are disjoint,
+
+\[
+e_c\le\delta-F(z)+o(1).
+\tag{GP.10}
+
+Equations (GP.7)--(GP.10) are exactly the restored-energy stack already audited on the
+`g=0.0050` input.  The only replacement here is (GP.1).
+
+---
+
+## 2. Eliminate the complement population
+
+From (GP.9)--(GP.10),
+
+\[
+p\le
+{\delta-F(z)+r(U)^2\over2(1-\delta)}+o(1).
+\tag{GP.11}
+
+Combining with (GP.7), every survivor must satisfy
+
+\[
+G(z;t,\delta,\kappa)
+:=z+{\delta-F(z)+r(U)^2\over2(1-\delta)}
+\ge S(t,\delta,\kappa)-o(1).
+\tag{GP.12}
+
+On the interval used below, `delta<0.05` and `0<=z<=pi`, so
+
+\[
+G_z
+=1-{F'(z)\over2(1-\delta)}
+>0.929.
+\tag{GP.13}
+
+Thus `G` is strictly increasing.  Let `Z_*(t,delta,kappa)` be the unique threshold
+solving
+
+\[
+G(Z_*;t,\delta,\kappa)=S(t,\delta,\kappa).
+\tag{GP.14}
+
+Every survivor obeys
+
+\[
+\boxed{
+\delta\ge F(Z_*).
+}
+\tag{GP.15}
+
+---
+
+## 3. The full feasible triangle still reduces to its network boundary
+
+The exact certificate covers
+
+\[
+1.84283\le t\le1.84324
+\]
+
+and gives, over the complete feasible region (GP.5),
+
+\[
+C_{71}\le U<2.012,
+\qquad
+0\le\delta<0.050,
+\tag{GP.16}
+\]
+
+\[
+0<r(U)<0.111,
+\qquad
+-0.062<m_2'(U)<0.
+\tag{GP.17}
+\]
+
+Put
+
+\[
+r'(U)=1-m_2'(U).
+\]
+
+Then
+
+\[
+1<r'(U)<1.062.
+\tag{GP.18}
+\]
+
+### Topology direction
+
+At fixed `t,delta`, `U_kappa=-1/2`.  Since
+
+\[
+S_\kappa={r'-1\over2}=-{m_2'(U)\over2}>0
+\]
+
+and
+
+\[
+G_U={r r'\over1-\delta}>0,
+\]
+
+differentiating (GP.14) gives
+
+\[
+G_z Z_{*,\kappa}=S_\kappa+{G_U\over2}>0.
+\]
+
+Therefore `Z_*`, hence `F(Z_*)-delta`, increases with `kappa`.  The weakest point has
+
+\[
+\boxed{\kappa=0.}
+\tag{GP.19}
+
+### Detour direction
+
+At fixed `t,kappa`, `U_delta=-2` and
+
+\[
+S_\delta=2r'<2.124.
+\]
+
+The partial derivative of `G` with respect to `delta` at fixed `z,U` is positive, so
+omitting it gives an upper bound for `Z_{*,delta}`.  The certificate bounds
+
+\[
+G_U<0.125,
+\qquad
+G_z>0.929.
+\]
+
+Consequently
+
+\[
+Z_{*,\delta}
+< {2(1.062)+2(0.125)\over0.929}
+<2.56.
+\tag{GP.20}
+
+For `0<=Z_*<=pi`,
+
+\[
+F'(Z_*)\le1-{\sqrt3\over2}<0.134.
+\]
+
+Hence
+
+\[
+{d\over d\delta}[F(Z_*)-\delta]
+<2.56(0.134)-1
+<-0.65.
+\tag{GP.21}
+
+Thus maximal detour is the weakest point.  Combining with (GP.19) and (GP.5),
+
+\[
+\boxed{
+\kappa=0,
+\qquad
+\delta={R_{71}(t)\over2},
+\qquad
+U=C_{71}.
+}
+\tag{GP.22}
+
+---
+
+## 4. Boundary scalar
+
+Put
+
+\[
+C_0:=C_{71},
+\qquad
+M_0:=m_2(C_0),
+\qquad
+r_0:=C_0-M_0.
+\]
+
+Numerically for orientation,
+
+\[
+C_0=1.9117256137279146\ldots,
+\qquad
+r_0=0.0071132831811389\ldots .
+\tag{GP.23}
+
+At (GP.22),
+
+\[
+\delta_0(t)
+={1\over2}\left({9t\over2}-2\pi-C_0\right),
+\qquad
+S_0(t)=\pi-{t\over2}-r_0.
+\tag{GP.24}
+
+Let `Z_0(t)` be the unique solution of
+
+\[
+Z_0+{\delta_0-F(Z_0)+r_0^2\over2(1-\delta_0)}
+=S_0(t).
+\tag{GP.25}
+
+A survivor requires
+
+\[
+H_0(t):=F(Z_0(t))-\delta_0(t)\le0.
+\tag{GP.26}
+
+The monotonicity argument of Section 3 makes `H_0` strictly decreasing.  The independent
+high-precision Decimal certificate gives
+
+\[
+H_0(1.84323)
+=1.2672491576\times10^{-5}>0,
+\]
+
+\[
+H_0(1.84324)
+=-1.1001428615\times10^{-5}<0,
+\]
+
+and the root bracket
+
+\[
+1.84323535293446<t_*<1.84323535293447.
+\tag{GP.27}
+
+Therefore every survivor in the stated proof-only scope satisfies
+
+\[
+\boxed{
+\liminf_{D\to\infty}{q-k\over D}\ge1.84323.
+}
+\tag{GP.28}
+
+---
+
+## 5. Frontier effect
+
+The gain from `g=0.0071` is not another local geometry theorem.  It strengthens the
+matched all-train and strict-rhombus phase gap, which tightens the global network
+budget before the outer-train incidence argument is applied.  The energy-restored
+rhombus theorem then converts that `0.0021` increase in matched atomic gap into an
+additional
+
+\[
+1.84323535\ldots-1.84283805\ldots
+=0.00039729\ldots
+\]
+
+in the normalized `q-k` floor.
+
+At this endpoint the complement escape remains negligible.  The next useful target is
+still the dominant exact three-phase orbit itself: phase-by-phase outer terminal
+routing, dominant-rhombus corridor geometry, or a simultaneous train-shear/diameter
+thrackle contradiction.
+
+No theorem-state promotion is requested.  C-II remains open.

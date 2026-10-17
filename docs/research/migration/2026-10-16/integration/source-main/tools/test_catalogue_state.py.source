@@ -1,0 +1,28 @@
+import unittest
+from tools.check_catalogue_state import check_roles
+
+
+class CatalogueStateTests(unittest.TestCase):
+    def fixture(self, status="canonical", role="canonical_dependencies"):
+        task = {"id": "task", "canonical_dependencies": [], "previous_obstructions": []}
+        task[role].append({"claim_id": "CLAIM"})
+        state = {"targets": {"c": {"current_canonical_entries": [{"id": "CLAIM", "status": status}]}}}
+        return {"tasks": [task]}, state
+
+    def test_canonical_dependency_is_accepted(self):
+        self.assertEqual(check_roles(*self.fixture()), [])
+
+    def test_regression_cannot_be_called_canonical(self):
+        self.assertIn("as canonical", check_roles(*self.fixture("regression"))[0])
+
+    def test_binding_regression_has_an_explicit_obstruction_role(self):
+        self.assertEqual(check_roles(*self.fixture("regression", "previous_obstructions")), [])
+
+    def test_unknown_claim_is_rejected(self):
+        catalogue, state = self.fixture()
+        catalogue["tasks"][0]["canonical_dependencies"][0]["claim_id"] = "UNKNOWN"
+        self.assertIn("unknown claim", check_roles(catalogue, state)[0])
+
+
+if __name__ == "__main__":
+    unittest.main()

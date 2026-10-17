@@ -1,0 +1,22 @@
+# Hostile audit — common-outer collapsed anchor-length variation
+
+**Audited source:** `research/target_c_support6_collapsed_outer_length_variation_2026-09-18.md`  
+**Verdict:** PASS at scoped conditional level  
+**Theorem-state authority:** unchanged
+
+The collapsed branch supplies six parallel anchor directions with a `3+3` orientation
+split. Under the stated common-outer and simple-sector hypotheses, consecutive anchor
+corridors bound consecutive dual source regions. Traversing the two train corridors
+from one region to the other gives the signed displacement
+`(ell_i-ell_{i+1})e_1`; equal lengths therefore identify distinct source points or
+create duplicate contact edges.
+
+The cyclic sign word has at least two sign changes because both signs occur. Each sign
+change costs at least one in integer length difference, giving total variation at least
+two. More precisely, if `T` is the cyclic transition count, the variation is at least
+`T`; the exact small-vector verifier finds minima `2` and `6` for `T=2` and `T=6`.
+No asymptotic or floating-point step is involved.
+
+The audit does not promote the common-outer or simple-sector hypotheses. Multiple
+activated hosts, repeated outer sectors, or nontrivial corridor interactions remain
+outside scope. The result is a source-separation payment, not a C-II closure.

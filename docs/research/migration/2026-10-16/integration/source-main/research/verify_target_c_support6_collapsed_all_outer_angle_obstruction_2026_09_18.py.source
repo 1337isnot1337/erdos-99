@@ -1,0 +1,102 @@
+#!/usr/bin/env python3
+"""Exact common-host angle obstruction for the certified collapsed chamber.
+
+For every cyclic order of six collapsed pentagon hosts, an alternating pair of
+internal endpoint chords must cross.  The recorded local angle box proves that at
+least one such pair has projective angle gap < pi/3.  Strict train crossings require
+projective gap > pi/3.  All values used in the decision are rational intervals.
+"""
+from fractions import Fraction as Q
+from itertools import combinations, permutations
+from math import factorial
+
+EDGES = (
+    (0, 1), (0, 2), (0, 4), (0, 5), (1, 2), (1, 3),
+    (1, 5), (2, 3), (2, 4), (3, 4), (3, 5), (4, 5),
+)
+CENTERS = tuple(Q(s) for s in (
+    '-0.69671336', '1.75049398', '2.731156095605589',
+    '-2.3067260211240153', '-0.9986998192961997',
+    '-2.2337034767798927', '1.730504059203213',
+    '1.682595595587784', '-2.1244160181617695',
+    '2.044414508054986', '-0.7537438854643705',
+    '2.6878789475216607'))
+RADIUS = Q(1, 10**10)
+ANGLES = dict(zip(EDGES, CENTERS))
+VARIABLE = {(0, 4), (0, 5), (1, 2), (1, 3), (1, 5),
+            (2, 3), (2, 4), (3, 4), (3, 5), (4, 5)}
+
+
+def atan_inv_interval(n, terms):
+    x = Q(1, n)
+    s = Q(0)
+    for k in range(terms):
+        s += (-1 if k & 1 else 1) * x ** (2 * k + 1) / (2 * k + 1)
+    nxt = (-1 if terms & 1 else 1) * x ** (2 * terms + 1) / (2 * terms + 1)
+    return min(s, s + nxt), max(s, s + nxt)
+
+
+a5 = atan_inv_interval(5, 40)
+a239 = atan_inv_interval(239, 12)
+PI = (16 * a5[0] - 4 * a239[1], 16 * a5[1] - 4 * a239[0])
+
+
+def edge_interval(e):
+    r = RADIUS if e in VARIABLE else Q(0)
+    return ANGLES[e] - r, ANGLES[e] + r
+
+
+def difference_interval(e, f, k):
+    elo, ehi = edge_interval(e)
+    flo, fhi = edge_interval(f)
+    # [theta_e-theta_f-k*pi] with the correct endpoint for k's sign.
+    if k >= 0:
+        return elo - fhi - k * PI[1], ehi - flo - k * PI[0]
+    return elo - fhi - k * PI[0], ehi - flo - k * PI[1]
+
+
+def projective_gap_upper(e, f):
+    center = ANGLES[e] - ANGLES[f]
+    best = None
+    for k in range(-3, 4):
+        lo, hi = difference_interval(e, f, k)
+        upper = max(abs(lo), abs(hi))
+        candidate = (upper, k, abs(center - k * (PI[0] + PI[1]) / 2))
+        if best is None or candidate < best:
+            best = candidate
+    return best[0], best[1]
+
+
+def alternates(e, f, order):
+    if set(e) & set(f):
+        return False
+    pos = {v: i for i, v in enumerate(order)}
+    i, j = sorted((pos[v] for v in e))
+    k, ell = sorted((pos[v] for v in f))
+    return (i < k < j) != (i < ell < j)
+
+
+orders = list(permutations(range(6)))
+assert len(orders) == factorial(6) == 720
+witnesses = []
+for order in orders:
+    found = None
+    for e, f in combinations(EDGES, 2):
+        if not alternates(e, f, order):
+            continue
+        upper, k = projective_gap_upper(e, f)
+        if upper < PI[0] / 3:
+            found = (e, f, upper, k)
+            break
+    assert found is not None, order
+    witnesses.append(found)
+
+max_witness_upper = max(w[2] for w in witnesses)
+assert max_witness_upper < PI[0] / 3
+
+print('orders_checked', len(orders))
+print('max_witness_projective_gap_upper', float(max_witness_upper))
+print('pi_over_3_lower', float(PI[0] / 3))
+print('strict_margin', float(PI[0] / 3 - max_witness_upper))
+print('PASS: every common-host cyclic order has an angle-ineligible alternating pair')
+print('PASS: certified collapsed chamber cannot attach all six parallel hosts to one outer face')

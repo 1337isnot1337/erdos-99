@@ -1,0 +1,94 @@
+from math import cos, sin, pi, sqrt
+from random import Random
+
+# Regression checks for the genuine binary shell-alignment theorem.
+# The theorem itself is analytic; these checks stress the projection scales,
+# the same-oriented degree bound, and the upper superdiameter threshold.
+
+Q = 5.0
+C0 = 2.0
+rng = Random(202609171210)
+
+
+def sq(v):
+    return v[0] * v[0] + v[1] * v[1]
+
+
+def add(a, b):
+    return (a[0] + b[0], a[1] + b[1])
+
+
+def norm(v):
+    return sqrt(sq(v))
+
+
+lower_count = 0
+upper_count = 0
+
+for D in (100.0, 300.0, 1000.0):
+    for _ in range(250_000):
+        qi = max(1e-12, rng.random() * Q / D)
+        qj = max(1e-12, rng.random() * Q / D)
+
+        ai = rng.uniform(-C0 / (2 * D), C0 / (2 * D))
+        aj = rng.uniform(-C0 / (2 * D), C0 / (2 * D))
+        wi = (cos(ai), sin(ai))
+        wj = (cos(aj), sin(aj))
+        wstar = (1.0, 0.0)
+
+        assert norm((wi[0] - wstar[0], wi[1] - wstar[1])) <= C0 / D + 1e-12
+        assert norm((wj[0] - wstar[0], wj[1] - wstar[1])) <= C0 / D + 1e-12
+
+        di = (-qi * wi[0], -qi * wi[1])
+        dj = (qj * wj[0], qj * wj[1])
+
+        for regime in (0, 1):
+            if regime == 0:
+                ell = 1.0 + rng.random() * Q * Q / D**2
+            else:
+                ell = D - rng.random() * Q * Q / D**2
+
+            theta = rng.random() * 2 * pi
+            r = (ell * cos(theta), ell * sin(theta))
+
+            f00 = sq(r)
+            f10 = sq(add(r, di))
+            f01 = sq(add(r, dj))
+            f11 = sq(add(add(r, di), dj))
+
+            # Genuine lower binary synergy: both singletons remain strictly
+            # above 1 but the joint state reaches/breaches 1.  The theorem
+            # predicts |r.w_*| = O(1/D).
+            if regime == 0 and f00 > 1 and f10 > 1 and f01 > 1 and f11 <= 1:
+                lower_count += 1
+                assert D * abs(r[0]) < 100.0
+
+            # Genuine upper binary synergy: both singletons stay below D but
+            # the joint state reaches/breaches D.  The theorem predicts
+            # |r.w_*| = O(1).
+            if regime == 1 and f00 < D * D and f10 < D * D and f01 < D * D and f11 >= D * D:
+                upper_count += 1
+                assert abs(r[0]) < 100.0
+
+
+# Same-oriented row-cone near-unit edges from a common vertex become mutually
+# closer than one, forcing at most one neighbor per oriented cone.
+L = 10.0
+A = 20.0
+for D in (1000.0, 10_000.0):
+    max_same_cone_neighbor_distance = (
+        A / D**2 + (1 + A / D**2) * 2 * sin(L / D)
+    )
+    assert max_same_cone_neighbor_distance < 1.0
+
+
+# Any fixed D-K/D^2 upper shell is eventually above the sharp
+# sqrt(D^2-1) superdiameter threshold.
+K = 100.0
+for D in (1000.0, 10_000.0, 100_000.0):
+    assert D - K / D**2 > sqrt(D * D - 1)
+
+
+print("PASS: genuine TB1 binary synergy alignment regressions")
+print("genuine lower samples =", lower_count)
+print("genuine upper samples =", upper_count)

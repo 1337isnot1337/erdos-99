@@ -1,0 +1,11 @@
+# Target C h5 m5 nullity-four transfer closure
+
+Date: 2026-09-25
+
+The unique m=5 support orbit with full touched triangle-boundary nullity four is {1234,1235,1245,1345,2345}. In any h=5 source state, choose three singleton coefficient rows forming a basis B of the rank-three coefficient space P, and promote the other two singleton blocks to complete. P is unchanged. If H is the old complete-root span and H' the promoted span, each old-versus-promoted external relation row differs modulo H' only by complete-root relations at the two promoted blocks. Hence r_old <= r_prom + 2.
+
+For the 110 basis triples B that do not share a common edge, the dimension-correct current-main p=3 five-support certificate gives r_prom=0. For the ten common-edge triples, an executed exact scan over all 43 S5 cycle-set orbits and all 3^3 directions gave 11,610 candidates, 10,182 rank-three states, 170 states satisfying generalized weights at least (3,4,6), and external increment census {0:16,1:154}. Maximum relation-row squared norm was 36 and the Hadamard bound (2^127-1)^2 > 36^15 holds.
+
+Thus r_old <=2 or <=3, while the D=-2,d_root=0,p=5 source branch requires external increment exactly five. The unique m=5 nullity-four support orbit is impossible. The h=5,m=5 residual is therefore exactly the 107 support orbits of full touched nullity five.
+
+The corrected eight-coordinate-nullspace p=3 verifier is used here; the older four-coordinate wrapper is not.

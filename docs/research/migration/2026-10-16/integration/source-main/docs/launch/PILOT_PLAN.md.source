@@ -1,0 +1,188 @@
+# E99 research swarm pilot plan
+
+**Status: prepared, not launched.** This document proposes a bounded evaluation of
+research coordination and verification. No pilot sessions or outside submissions
+were started for this plan.
+
+Prepared against `main` commit
+`ab6dd3336f9f8d440f2bada76edb32153391cddc`, state version
+`2026-10-10.audit.234`. These values are a preparation snapshot, not a permanent
+release pin. Refresh both from fetched `origin/main` before any pilot session.
+
+## Purpose and scope
+
+Evaluate whether 10–20 isolated agent sessions can produce reviewable, reproducible
+E99 research with useful overlap control and a manageable independent-review load.
+The pilot is a process evaluation. It is not a public launch, a claim that the
+research archive is ready for unrestricted publication, or an attempt to solve E99
+within a fixed time window.
+
+Use 12 sessions in three waves of four. Each session receives one bounded task from
+the E99 task catalogue once that catalogue is merged. The catalogue and selection
+instructions are expected from the Agent 6 deliverable; if it is not available, do
+not invent a task or call an endpoint unexplored. Use the current authority files to
+write a task card with the same fields first. The overlap and review process should
+follow the Agent 7 governance deliverable when available; until then use the
+existing contribution and promotion policies.
+
+## Entry gates
+
+Before starting a wave, the pilot owner should:
+
+1. Fetch `origin/main`; record its exact SHA and `docs/state/theorem-state.yaml`
+   `state_version`. Read `docs/STATE.md`, `AGENTS.md`, and the active route map and
+   prompt for every selected task.
+2. Install the declared verifier dependencies and run the same baseline checks as
+   CI. From the repository root:
+
+   ```sh
+   python3 -m pip install --disable-pip-version-check -r tools/requirements-theorem-state.txt
+   python3 -m unittest tools/test_check_theorem_state.py tools/test_check_theorem_state_pr.py tools/test_check_active_route_summaries.py tools/test_run_theorem_certificates.py
+   python3 tools/check_theorem_state.py
+   python3 tools/check_active_route_summaries.py
+   python3 tools/check_theorem_state_pr.py
+   python3 tools/run_theorem_certificates.py
+   git diff --check
+   ```
+
+   Record environment and any pre-existing failures before assigning work.
+3. Review open PRs and active task claims for exact-question overlap. Normalize the
+   proposed statement, hypotheses, source configuration, and intended conclusion;
+   similar keywords alone do not establish duplicate work.
+4. Confirm each task has a bounded question, canonical dependencies, relevant prior
+   obstructions, a feasible first check, expected evidence, and a stopping condition.
+5. Confirm each session has an isolated checkout and a dedicated branch. Do not share
+   credentials, use privileged workflow tokens, or let agents edit canonical state.
+
+Do not begin if the authoritative state changed after task preparation. Re-read the
+affected route, compare the dependency graph, and either update the card or retire it.
+
+## Allocation across 12 sessions
+
+Assign three sessions to each principal route and three cross-cutting sessions:
+
+| Sessions | Assignment mix | Intent |
+| --- | --- | --- |
+| 1–3 | Target A, Target B, Target C-II | One distinct current obligation per route, selected from the live catalogue. |
+| 4 | Independent audit or exact computation/regression | Cross-check a scoped claim or falsify a finite statement. |
+| 5–7 | Target A, Target B, Target C-II | Separate task cards with nonoverlapping claims or dependencies. |
+| 8 | Different-approach or literature task | Assess a method against the exact global quantifiers. |
+| 9–11 | Target A, Target B, Target C-II | Further route coverage; prioritize routes with fewer active claims. |
+| 12 | Independent audit or exact computation/regression | Replicate one earlier task or produce a bounded negative result. |
+
+Run three waves. Wave 1 uses sessions 1–4, Wave 2 uses 5–8, and Wave 3 uses 9–12.
+After each wave, update the open-task and overlap record before assigning the next
+wave. Reserve one cross-cutting task in each wave so the pilot does not collapse into
+one route's local terminology. One of the 12 assignments may be an intentional
+independent replication of an earlier task; mark that pair as planned replication,
+not accidental duplication.
+
+Within each wave, weight selection toward routes and task types with fewer active
+claims. Do not give a task higher weight because its hoped-for conclusion would
+advance the frontier. A useful exact counterexample, corrected scope, reproducible
+negative result, or partial proof audit counts as a successful research outcome.
+
+## Session contract and evidence package
+
+Every session begins from its recorded base SHA and state version and checks open
+PRs before work. Its handoff should include:
+
+- task-card identifier and exact question;
+- base SHA, state version, branch, and changed-file list;
+- precise assumptions and canonical theorem IDs used;
+- prior obstruction or regression checked;
+- proof or computation, including exact arithmetic and reproducible commands where
+  computation is material;
+- result status: proved candidate awaiting promotion, unreviewed candidate,
+  audited-working, conditional, regression, or rejected;
+- what the evidence does not establish, including any missing global-minimizer,
+  unbounded-cardinality, source-coembedding, or finite-motion implication;
+- overlap found, files another task depends on, and an explicit stopping condition.
+
+Exploratory work may be submitted as a report or focused PR without changing the
+theorem manifest. An agent must not edit `docs/state/theorem-state.yaml`, generated
+theorem views, or active route summaries to declare its own result canonical. A
+maintainer review and the repository's promotion transaction are required for any
+frontier change.
+
+## CI and concurrent-work expectations
+
+Run the always-on state and tooling checks for every PR. The change-aware certificate
+runner skips unrelated certificates only when the theorem manifest, active routes,
+canonical proof sources, verification tooling, workflows, and canonical certificates
+are untouched. A change to those load-bearing inputs must run the full registered
+certificate suite. A failed base diff must fail closed to the full suite. The push to
+`main` also runs every registered certificate. The historical Target C workflows
+remain scoped, separately named verifier workflows and are not substitutes for the
+theorem-state check. A passing certificate replay confirms its registered executable
+check on the recorded inputs; it does not independently validate the associated
+analytic proof.
+
+Reviewers should compare exact statements and dependencies, keep concurrent branches
+separate, and preserve failed or superseded attempts. Merge order must not make a
+merged, newer, or larger-numbered report canonical by implication. Do not run this
+pilot through `pull_request_target` or any workflow that gives untrusted PR code
+write-capable credentials.
+
+## Measures
+
+Record outcomes by task, wave, route, and reviewer. Do not rank contributors from raw
+counts.
+
+| Measure | Counting rule |
+| --- | --- |
+| Substantive findings | Proof candidates with a complete stated scope, independently checked exact regressions, or useful negative results with reproducible evidence. Summaries alone do not count. |
+| Duplicate effort | Unplanned task pairs that attack the same exact statement under materially identical hypotheses. Track planned replications separately. |
+| Independent verification | Findings checked by someone other than the submitting session, with a recorded disposition and any scope correction. |
+| Maintainer review burden | Active reviewer time per handoff, separated into mathematical review, computational replay, and repository integration. |
+| Reproducibility | Fraction of computational packages that run from a clean checkout with the recorded commands and pinned inputs. Mathematical proof checking is recorded separately. |
+| Invalid or overstated submissions | Handoffs whose proof, computation, dependencies, quantifiers, or status claim fails review. Preserve the reason and resulting correction. |
+| Useful negative results | Exact counterexamples, failed hypotheses, or bounded no-go results that prevent repetition or narrow a route. Record the scope and how another task can reuse them. |
+
+Proposed continuation gates for the 12-session pilot are: at least 9 complete
+handoffs; at least 4 independently useful findings; at least 75% of submitted
+computational packages reproducible; no more than 3 unplanned duplicate task pairs;
+no unresolved credential or workflow-safety incident; and a median review burden of
+no more than 2 reviewer-hours per handoff. Report the numerator, denominator, and
+unreviewed remainder for every measure. These are proposed operating thresholds,
+not observed results or a promise that agent research will be mathematically valid.
+
+Pause new assignments if a task relies on a stale state, a security issue is
+unresolved, exact-question overlap is causing repeated work, or the review backlog
+exceeds the available independent reviewers. Resume only after the task catalogue,
+overlap map, or review capacity has been corrected.
+
+## Pilot closeout
+
+After Wave 3, publish an internal pilot report that records the base and final state
+versions, session and task counts, all seven measures, representative accepted and
+rejected handoffs, review dispositions, CI time and failures, and specific process
+changes proposed. Keep every mathematical result at its reviewed lifecycle status.
+Do not infer public-release readiness or theorem progress from the pilot metrics.
+
+## Not evaluated here
+
+This plan does not launch sessions, verify the repository for public release, select
+a license, change repository visibility, grant collaborator access, or claim that
+CI has completed a swarm-scale load test. Those require separate owner decisions and
+evidence.
+
+## Design references
+
+The process design draws on the weighted task portfolio, bounded task card, explicit
+overlap check, stopping criteria, reproducible handoff, and preserved credit in
+[CrocSwap's autonomous research guide](https://github.com/CrocSwap/integer-mult-bounds/blob/main/autoresearch.md),
+[contribution and independent-review guide](https://github.com/CrocSwap/integer-mult-bounds/blob/main/CONTRIBUTING.md),
+and [contributor record](https://github.com/CrocSwap/integer-mult-bounds/blob/main/CONTRIBUTORS.md).
+The E99 authority files and lifecycle categories continue to govern every
+mathematical claim and promotion decision.
+
+## Integrated coordination and verification
+
+Use the [issue-based claim workflow](../COORDINATION.md) and selector `--live-overlap`
+before allocating a session. A seeded suggestion is not a claim. Discussions are
+currently disabled and no setting change is required. Use the [local full-verification
+command](CI.md) while hosted checks are quota-blocked. The [release dependency plan](RELEASE_PREPARATION.md)
+is required before offering a curated task bundle. This integration has not launched
+any session or measured outside-contributor throughput; the numerical pilot targets
+above remain proposed acceptance criteria.

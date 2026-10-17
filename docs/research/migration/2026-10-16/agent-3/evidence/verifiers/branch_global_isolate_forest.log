@@ -1,0 +1,3 @@
+PASS: four exact square-wall fixtures; 39 activations; 78690 full-source pair checks
+PASS: contact/diameter ledgers, finite paths, zero-stress forests, PSD/rank, rigidity increments, strict nonglobality, generic first-hit guard
+Scope: global normalization proof is analytic; fixtures do not settle Level I

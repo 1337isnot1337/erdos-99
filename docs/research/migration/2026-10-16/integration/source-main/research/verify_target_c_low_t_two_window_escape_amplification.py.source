@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+"""Arithmetic and exact-ledger regression for low-t two-window escape amplification."""
+import math
+import random
+
+Delta = math.pi / (2 * math.sqrt(3))
+s = math.sqrt(Delta)
+cstar = 2 * s + 0.00042
+C146 = (4 / 9) * (math.pi + s)
+t42 = C146 + 0.0013751
+
+
+def g2(t):
+    return cstar / 2 + math.pi / 2 - 5 * t / 4
+
+
+assert abs(g2(t42) - 0.247208336184549) < 2e-15
+assert abs(g2(1.8585) - 0.200194133658854) < 2e-15
+threshold = (2 / 5) * (cstar + math.pi)
+assert abs(threshold - 2.018655306927083) < 2e-15
+
+# Exact identity LT.2. Choose finite ledger values satisfying
+# b+Q=2(q-k), T=q-k+2f, and split b=P_F+(b-P_F).
+rng = random.Random(20260914)
+for _ in range(20000):
+    k = rng.uniform(0, 50)
+    q = k + rng.uniform(1, 100)
+    f = rng.uniform(0, 100)
+    b = rng.uniform(0, 2 * (q - k))
+    Q = 2 * (q - k) - b
+    PF = rng.uniform(0, b)
+    T = q - k + 2 * f
+    C = T - q / 2
+    rhs = C + PF + (b - PF) + k / 2 - 2.5 * (q - k)
+    target = 2 * f - Q
+    assert abs(rhs - target) < 1e-10 * (1 + abs(target))
+
+print("PASS low-t two-window amplification")
+print(f"c_star={cstar:.15f}")
+print(f"t42={t42:.15f}")
+print(f"g2(t42)={g2(t42):.15f}")
+print(f"g2(1.8585)={g2(1.8585):.15f}")
+print(f"positive_threshold={threshold:.15f}")

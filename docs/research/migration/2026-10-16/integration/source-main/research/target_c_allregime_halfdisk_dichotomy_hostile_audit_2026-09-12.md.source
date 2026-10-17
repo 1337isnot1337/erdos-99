@@ -1,0 +1,183 @@
+# Hostile audit — all-regime wrapping / two-half-disk dichotomy
+
+**Date:** 2026-09-12  
+**Reviewed:** `research/target_c_allregime_halfdisk_dichotomy_2026-09-12.md`  
+**Disposition:** **PASS at proof-only Type-II scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+## 1. Dependency and scope check
+
+The candidate needs only the current Type-II cell-tiling facts:
+
+1. normalized force hulls converge to `B_{1/2}`;
+2. harmonic attachment cells have pairwise disjoint interiors;
+3. their total area is `(pi/4-o(1))D^2`;
+4. `sum sqrt(area(P_r))=O(D)`;
+5. the total local non-rhombic area deficit is `o(D^2)`.
+
+These are available from the canonical Sections 80/83 chain.  No old `x_B=o(D)`
+theorem, cap-minimal equality, common diameter cap, or Section-101 endpoint is used.
+The historical report `target_c_fullcore_two_semicircle_groups_2026-09-09.md` therefore
+is not a premise.
+
+**Verdict:** dependency reduction is legitimate.
+
+## 2. Closed-semicircle classification at diameter one
+
+For a positive-area limit `Q=conv(S)` with `S` on the radius-`1/2` circle, if
+`0 notin int(Q)`, the separating/supporting-line theorem gives a line through the
+origin with `Q` in one closed half-plane.  Hence `S` lies in one closed semicircle and
+has a minimal support arc of length `alpha<=pi`.
+
+This correctly extends the Section-88 cap language to possible normalized diameter-one
+limits.  No claim is made that such a support lies in an **open** semicircle.
+
+If instead `0 in int(Q)`, the candidate stops and records the center-wrapping branch.
+Thus the dichotomy is exhaustive even when `diam(Q)=1`.
+
+**Verdict:** PASS.
+
+## 3. Endpoint laminarity
+
+For two closed-cap supports of lengths at most `pi`, partial overlap without containment
+makes their four extreme endpoints alternate on the circle.  Their base chords cross
+properly.  Each chord is a supporting edge of the corresponding positive-area convex
+cell, with the cell on the circular-cap side.  Near the proper chord crossing the two
+supported inward half-neighborhoods overlap, contradicting interior disjointness.
+
+The `alpha=pi` endpoint introduces two special possibilities:
+
+- complementary semicircles: arc interiors are disjoint and are allowed;
+- equal semicircles: both cells would use the same diameter as a supporting edge on the
+  same side, so their inward neighborhoods overlap along the relative interior of the
+  diameter.  Distinct positive-area cells therefore cannot have equal minimal
+  semicircle supports.
+
+Thus inclusion-maximal retained support arcs have pairwise disjoint interiors and
+
+\[
+\sum_i alpha_i<=2pi.
+\]
+
+**Verdict:** PASS.  The equal-arc exclusion is necessary and is now explicit in the
+candidate.
+
+## 4. Cutoff tail and long-support cells
+
+A possible failure mode is a discarded cell of tiny area but nearly semicircular
+support.  The candidate does not assume such a cell has a small support arc.  Instead,
+for fixed `eta`, it applies the laminar/cap argument only to cells with area at least
+`eta D^2`; all omitted cells are paid by
+
+\[
+\sum_{area(P_r)<eta D^2} area(P_r)
+\le
+\sqrt{eta}D\sum_r\sqrt{area(P_r)}
+=O(\sqrt{eta})D^2.
+\]
+
+Hence long support in the discarded family does not invalidate the retained cap-area
+upper bound.
+
+**Verdict:** PASS.
+
+## 5. Equality classification
+
+For inclusion-maximal retained arcs,
+
+\[
+G(alpha)={alpha-\sin alpha\over8},
+\qquad
+\sum alpha_i<=2pi.
+\]
+
+Retained area saturation gives
+
+\[
+{pi\over4}-O(\sqrt{eta})
+\le\sum_iG(alpha_i)
+={1\over8}\sum_i alpha_i-{1\over8}\sum_i\sin alpha_i
+\le{pi\over4}.
+\]
+
+Both nonnegative deficits therefore vanish with the cutoff:
+
+\[
+2pi-\sum_i alpha_i=O(\sqrt{eta}),
+\qquad
+\sum_i\sin alpha_i=O(\sqrt{eta}).
+\]
+
+Fix `epsilon in (0,pi/3)`.
+
+- Intermediate arcs `epsilon<=alpha<=pi-epsilon` are excluded for small cutoff by the
+  positive `sin epsilon` cost.
+- Small arcs have total cap area at most `pi epsilon^2/24` because
+  `alpha-sin alpha<=alpha^3/6`.
+- At most two arcs exceed `pi-epsilon` by the `2pi` angular budget.
+
+The retained area tends to `pi/4`, while one semicircle contributes at most `pi/8`.
+Therefore exactly two long arcs are necessary; each tends to `pi`.  Disjoint interiors
+force complementary limiting semicircles.
+
+**Verdict:** PASS.
+
+## 6. Order of limits and existence of actual defining cells
+
+The source no longer claims that a fixed positive cutoff produces exact semicircles.
+It chooses `eta_j->0`, then chooses a sufficiently late finite source for each `eta_j`.
+The two long maximal retained arcs at stage `j` belong to actual harmonic cells.  A
+circle compactness subsequence makes their support spans tend to complementary
+semicircles.
+
+The extreme attachment chord of a span `alpha_j` has normalized length
+
+\[
+\sin(alpha_j/2)+o(1)\to1.
+\]
+
+Thus the two selected **actual finite-source cell sequences** satisfy `d_i/D->1`.
+Harmonic trapping `d_i<=delta_i+2` gives `delta_i/D->1` as well.
+
+This is a valid finite diagonal, not an unsupported passage from a countable limiting
+family to one exact maximal cell.
+
+**Verdict:** PASS.
+
+## 7. Rhombus-area transfer
+
+The global cell deficit
+
+\[
+\sum_r(area(P_r)-A_{4,r})=o(D^2)
+\]
+
+has nonnegative summands.  Each dominant cap group has cell area
+`(pi/8-o(1))D^2`; restricting the nonnegative global deficit to that group preserves an
+`o(D^2)` upper bound.  Hence each group has strict-rhombus area
+`(pi/8-o(1))D^2`.
+
+No assertion is made that the single diameter-scale defining cell contains all that
+area.
+
+**Verdict:** PASS.
+
+## 8. Quantifiers and source retention
+
+- The theorem is subsequential, as required for excluding an asymptotic Type-II
+  countersequence: every Type-II subsequence has a further subsequence in one of the
+  two alternatives.
+- Contact-isolated source points are neither removed nor inserted into a core rigidity
+  theorem.
+- No competitor is claimed.
+- No exact triangle is inferred from a limiting semicircle.
+- A center-wrapping diameter-one limit is left as a separate near-global carrier case;
+  it is not incorrectly fed into a `<1` wrapping theorem.
+
+## Final verdict
+
+**PASS at proof-only Type-II scope.**  The theorem gives a genuine all-regime structural
+reduction: arbitrary harmonic-cell geometry is replaced by a positive-area
+center-wrapping carrier or two complementary rhombic half-disk groups with two actual
+diameter-scale defining components.  Neither branch is yet closed, so C-II remains
+open.

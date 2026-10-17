@@ -1,0 +1,196 @@
+#!/usr/bin/env python3
+"""Check active research-entrypoint summaries against the theorem manifest."""
+
+from __future__ import annotations
+
+import argparse
+import re
+import sys
+from pathlib import Path
+from urllib.parse import unquote, urlsplit
+
+import yaml
+
+MANIFEST = "docs/state/theorem-state.yaml"
+ACTIVE_ENTRYPOINTS = (
+    "README.md",
+    "AGENTS.md",
+    "docs/README.md",
+    "docs/prompts/README.md",
+    ".github/copilot-instructions.md",
+    "docs/prompts/erdos_problem_99_TARGET_A_CURRENT_CONTINUATION_PROMPT.md",
+    "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md",
+    "docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md",
+)
+TARGET_A_SECTION_CLAIMS = {
+    "README.md": re.compile(
+        r"canonical\s+(?:development|chain)(?:\s+now)?\s+runs through Section\s+(\d+)\b",
+        re.I,
+    ),
+    "AGENTS.md": re.compile(r"The canonical chain runs through Section\s+(\d+)\b"),
+    "docs/README.md": re.compile(
+        r"The canonical chain now runs through \*\*Section\s+(\d+)\*\*"
+    ),
+    "docs/prompts/README.md": re.compile(
+        r"It follows the canonical chain through Section\s+(\d+)\b"
+    ),
+    ".github/copilot-instructions.md": re.compile(
+        r"Target A currently runs through Section\s+(\d+)\b"
+    ),
+    "docs/prompts/erdos_problem_99_TARGET_A_CURRENT_CONTINUATION_PROMPT.md": re.compile(
+        r"canonical Target A chain through Section\s+(\d+)\b"
+    ),
+    "docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md": re.compile(
+        r"Canonical development now runs through Section\s+(\d+)\b"
+    ),
+}
+PROMPT_STATE_RE = re.compile(r"^\*\*State:\*\*\s*`([^`]+)`", re.M)
+MARKDOWN_LINK_RE = re.compile(r"(?<!!)\[[^\]]*\]\(([^)]+)\)")
+C_STATUS_RE = {
+    "c_i": re.compile(r"\bC-I\b[^\n]{0,12}\b(CLOSED|OPEN)\b", re.I),
+    "c_ii": re.compile(r"\bC-II\b[^\n]{0,12}\b(CLOSED|OPEN)\b", re.I),
+}
+C_STATUS_SURFACES = (
+    "README.md",
+    "AGENTS.md",
+    "docs/README.md",
+    "docs/prompts/README.md",
+    ".github/copilot-instructions.md",
+    "docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md",
+)
+CII_GATE_TERMS = {
+    "AGENTS.md": ("source-realized face-coupled finite move", "macroscopic-container"),
+    "docs/README.md": ("source-realized face-coupled finite move", "macroscopic-container"),
+    "docs/prompts/README.md": ("source-realized face-coupled finite move", "macroscopic-container"),
+    ".github/copilot-instructions.md": ("face-coupled finite-move", "macroscopic-container"),
+    "docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md": (
+        "source-realized face-coupled finite move",
+        "macroscopic-container",
+    ),
+}
+
+
+def load_manifest(root: Path) -> dict:
+    data = yaml.safe_load((root / MANIFEST).read_text(encoding="utf-8"))
+    if not isinstance(data, dict):
+        raise ValueError(f"{MANIFEST} must contain a mapping")
+    return data
+
+
+def markdown_link_targets(relative: str, text: str) -> list[tuple[str, str]]:
+    """Return local Markdown link targets as repository-relative paths."""
+    targets: list[tuple[str, str]] = []
+    for raw in MARKDOWN_LINK_RE.findall(text):
+        target = raw.strip().split(maxsplit=1)[0].strip("<>")
+        parsed = urlsplit(target)
+        if parsed.scheme or parsed.netloc or not parsed.path:
+            continue
+        link_path = unquote(parsed.path)
+        candidate = (
+            Path(link_path.lstrip("/"))
+            if link_path.startswith("/")
+            else Path(relative).parent / link_path
+        )
+        targets.append((target, candidate.as_posix()))
+    return targets
+
+
+def run_checks(root: Path) -> list[str]:
+    errors: list[str] = []
+    try:
+        manifest = load_manifest(root)
+    except (OSError, ValueError, yaml.YAMLError) as exc:
+        return [f"cannot load {MANIFEST}: {exc}"]
+
+    texts: dict[str, str] = {}
+    for relative in ACTIVE_ENTRYPOINTS:
+        try:
+            texts[relative] = (root / relative).read_text(encoding="utf-8")
+        except OSError as exc:
+            errors.append(f"cannot read active entrypoint {relative}: {exc}")
+    if errors:
+        return errors
+
+    target_a = manifest.get("targets", {}).get("target-a", {})
+    expected_section = (
+        target_a.get("canonical_sections_through") if isinstance(target_a, dict) else None
+    )
+    if not isinstance(expected_section, int):
+        errors.append("manifest does not declare Target A canonical_sections_through")
+    else:
+        for relative, pattern in TARGET_A_SECTION_CLAIMS.items():
+            match = pattern.search(texts[relative])
+            if not match:
+                errors.append(f"{relative} is missing its current Target A section claim")
+            elif int(match.group(1)) != expected_section:
+                errors.append(
+                    f"{relative} gives Target A through Section {match.group(1)}, "
+                    f"but the manifest gives Section {expected_section}"
+                )
+
+    state_version = manifest.get("state_version")
+    if isinstance(state_version, str) and state_version:
+        for relative in (
+            "docs/prompts/erdos_problem_99_TARGET_A_CURRENT_CONTINUATION_PROMPT.md",
+            "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md",
+            "docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md",
+        ):
+            match = PROMPT_STATE_RE.search(texts[relative])
+            if match and match.group(1) != state_version:
+                errors.append(
+                    f"{relative} gives state {match.group(1)}, but the manifest gives {state_version}"
+                )
+
+    target_c = manifest.get("targets", {}).get("target-c", {})
+    if isinstance(target_c, dict):
+        for key, pattern in C_STATUS_RE.items():
+            expected = target_c.get(key)
+            if expected not in {"open", "closed"}:
+                continue
+            for relative in C_STATUS_SURFACES:
+                match = pattern.search(texts[relative])
+                if not match:
+                    errors.append(f"{relative} is missing the current Target C {key} status")
+                elif match.group(1).lower() != expected:
+                    errors.append(
+                        f"{relative} gives Target C {key} {match.group(1).lower()}, "
+                        f"but the manifest gives {expected}"
+                    )
+
+    for relative, required_terms in CII_GATE_TERMS.items():
+        normalized = " ".join(texts[relative].lower().split())
+        for term in required_terms:
+            if term not in normalized:
+                errors.append(f"{relative} omits the current C-II obligation marker {term!r}")
+
+    resolved_root = root.resolve()
+    for relative, text in texts.items():
+        for target, repo_relative in markdown_link_targets(relative, text):
+            path = (resolved_root / repo_relative).resolve()
+            try:
+                path.relative_to(resolved_root)
+            except ValueError:
+                errors.append(f"{relative} has an internal link outside the repository: {target}")
+                continue
+            if not path.exists():
+                errors.append(f"{relative} has a broken internal link: {target}")
+
+    return errors
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
+    args = parser.parse_args(argv)
+    errors = run_checks(args.root.resolve())
+    if errors:
+        for error in errors:
+            print(f"research-entrypoints: {error}", file=sys.stderr)
+        print(f"research-entrypoints: FAILED ({len(errors)} errors)", file=sys.stderr)
+        return 1
+    print("research-entrypoints: OK")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

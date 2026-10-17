@@ -1,0 +1,57 @@
+# Target C — C92 quantitative Ferrers-stability frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_quantitative_ferrers_stability_2026-09-01.md](../../reports/target_c_quantitative_ferrers_stability_2026-09-01.md).
+
+C91's qualitative endpoint exclusion is quantitatively stable. Every asymptotic
+canonical pure-rhombic C80 chain-face survivor satisfies
+
+`liminf T/D >= 2+Delta_2+10^(-4)`
+
+with `Delta_2=pi/(2sqrt(3))`.
+
+The proof takes a subsequential value
+
+`x=T/D=2+Delta_2+delta<3`
+
+and uses C87's `q/D>=2` plus Target B's exposed-hull atomic bound. If `a` is the
+chain-direction atomic mass, `t` the atomic mass outside its projective 60-degree
+three-point orbit, and `e=a-1/x`, then the exact heavy-Mantel capacity slack is
+
+`kappa=delta/x^2`.
+
+It forces
+
+`e <= delta/[x(3-x)]`,
+
+`t <= 4delta/[x(6-x)]`,
+
+and also bounds the internal chain-orbit loss from residual-residual crossings.
+Consequently all leading crossings not joining the exact D C80 chain trains to the
+two residual atoms in their phase orbit have normalized D^2 mass at most
+
+`N <= 2[(x-2)/(3-x)]delta + 4delta^2/(6-x)^2`.
+
+The remaining chain-orbit residual trains split into the same four phase/side walls as
+C91. If a row crosses at most half the chain trains, it consumes half a unit of the
+small missing-incidence budget. Removing those rows leaves four Ferrers walls. The
+C91 parallelogram capacity then gives the stable master inequality
+
+`Delta_2 <= 4F((Delta_2+delta)/4)+delta+2N`,
+
+where
+
+`F(lambda)=integral_0^lambda sqrt(1-t^2)dt`.
+
+For `delta<=10^(-4)`, one has `(x-2)/(3-x)<11` and `6-x>3`. Also `F'<=1` and
+
+`Delta_2-4F(Delta_2/4) >= Delta_2^3/96 > 0.00759375`.
+
+The master inequality would bound this same gap by less than `0.00460001`, a
+contradiction.
+
+Thus the pure chain-face branch pays an explicit extra `10^(-4)D` train population
+above C89's extremal shell constant. The next target is to convert this certified
+linear surplus, C88's quadratic secondary-train separator budget, and C90's
+macroscopic train-cut caterpillar into `G+E>=c0B` or a direct strict packing loss.

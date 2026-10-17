@@ -1,0 +1,335 @@
+# Target C-II — the complete small-leaf rectangle has common order and inverse-`D` phase width
+
+**Date:** 2026-09-15  
+**Status:** proof-only structural strengthening  
+**Scope:** full-core Type-II branch with `t=(q-k)/D<=1.844`  
+**Dependencies:** corrected dual-tree small-leaf rectangle; canonical train displacement cones; canonical global strict-rhombus angular-defect budget  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The corrected rectangle theorem supplies complete train families
+
+\[
+L_*\times C_*,
+\qquad
+|L_*|>0.003D-o(D),
+\qquad
+|C_*|>0.35D-o(D),
+\]
+
+where `L_*` lies in the smallest leaf phase of one dominant exact `pi/3` orbit and
+`C_*` lies in the center phase, every leaf train is outer-to-outer, each family is
+internally noncrossing, and every cross-pair meets in one strict rhombus.
+
+This note adds two geometric facts.
+
+1. The complete rectangle has one common crossing order along every selected train,
+   despite holes and despite the dual-tree origin of the leaf family.
+2. After deleting at most half of each shore, every remaining crossing angle is
+   uniformly
+
+\[
+\boxed{
+{\pi\over3}<\theta\le {\pi\over3}+{25320\over D}+o(D^{-1}).
+}
+\]
+
+The retained subrectangle still has shores
+
+\[
+\boxed{|L_0|>0.0015D-o(D),\qquad |C_0|>0.175D-o(D).}
+\]
+
+Thus the live `1.843577...<=t<=1.844` band contains an actual common-order
+near-triangular train grid, not merely a bipartite crossing graph.
+
+---
+
+## 1. Uniform orientation of every leaf-center crossing
+
+Let the limiting center phase be `phi` and the limiting smallest-leaf phase be
+`phi+pi/3` projectively.  Freeze shrinking disjoint windows around those two atoms.
+For all sufficiently large members of the sequence, choose real representatives
+
+\[
+\alpha_c\quad(c\in C_*),
+\qquad
+\beta_\ell\quad(\ell\in L_*)
+\]
+
+so that
+
+\[
+{\pi\over3}<\beta_\ell-\alpha_c<{2\pi\over3}
+\tag{PC.1}
+\]
+
+for every crossing pair.  The lower inequality is the strict unit-rhombus
+triangle-free angle condition; the upper inequality follows from the shrinking phase
+windows around an exact `pi/3` orbit.
+
+Write
+
+\[
+\delta_{c\ell}:=eta_\ell-\alpha_c-{\pi\over3}>0.
+\tag{PC.2}
+\]
+
+Because the two families have fixed distinct phase labels, every cross-pair uses the
+same orientation.  No physical-grain or disk-boundary hypothesis is needed for this
+statement: it is a direct property of the two frozen exact-orbit windows and their
+actual crossing rhombi.
+
+---
+
+## 2. Common projection and common crossing order
+
+Canonical train geometry orients a train of unit-edge direction `u` so that every
+centerline displacement lies in the strict cone
+
+\[
+(\arg u+\pi/3,\arg u+2\pi/3).
+\]
+
+Orient the center family canonically and the leaf family in the reverse canonical
+orientation, exactly as in canonical Section 76.  Put
+
+\[
+\alpha_+=\max_{c\in C_*}\alpha_c,
+\qquad
+\beta_-=\min_{\ell\in L_*}\beta_\ell,
+\qquad
+\psi={\alpha_++\beta_-\over2}.
+\]
+
+By (PC.1), all selected centerline elementary displacements have positive projection
+onto the unit vector `e` of argument `psi`.  Thus every selected train is strictly
+`X=e\cdot p` monotone.
+
+At every center-leaf crossing, the determinant sign is the same.  In `(X,Y)`
+coordinates, with `Y=(Je)\cdot p`, every train is a graph and every crossing has the
+same signed graph crossing: one family passes from below to above the other.
+
+The signed monotone-grid order lemma proved in canonical Section 76 therefore applies
+verbatim.  We obtain:
+
+\[
+\boxed{
+\text{all center trains meet the selected leaf trains in one common order,}
+}
+\tag{PC.3}
+\]
+
+and symmetrically
+
+\[
+\boxed{
+\text{all leaf trains meet the selected center trains in one common order.}
+}
+\tag{PC.4}
+\]
+
+This conclusion is independent of the dual-tree backbone used to extract `L_*`.
+The backbone supplies the complete rectangle; the phase geometry upgrades it to a
+true ordered pseudoline grid.
+
+---
+
+## 3. The whole rectangle spends only `O(D)` angular defect
+
+The global strict-rhombus angular-defect theorem gives
+
+\[
+\sum_R\delta_R<C_{phase}D,
+\qquad
+C_{phase}={\pi^2\sqrt3(2+\sqrt3)\over12}.
+\tag{PC.5}
+\]
+
+Every pair in `C_* x L_*` is a distinct strict rhombus and contributes exactly
+`delta_{c ell}`.  Therefore
+
+\[
+S:=\sum_{c\in C_*}\sum_{\ell\in L_*}\delta_{c\ell}
+<C_{phase}D.
+\tag{PC.6}
+\]
+
+Let
+
+\[
+a=|L_*|,
+\qquad b=|C_*|,
+\qquad\lambda={S\over ab}.
+\]
+
+Using the safe rectangle sizes,
+
+\[
+ab>(0.003)(0.35)D^2-o(D^2),
+\]
+
+so
+
+\[
+\boxed{
+\lambda<{C_{phase}\over0.00105D}+o(D^{-1}).
+}
+\tag{PC.7}
+
+The complete-product orientation gives more than an average statement.  Set
+
+\[
+\alpha^+=\max_c\alpha_c,
+\qquad
+\beta^-=\min_\ell\beta_\ell,
+\]
+
+and write
+
+\[
+r_c=\alpha^+-\alpha_c\ge0,
+\qquad
+q_\ell=\beta_\ell-\beta^-\ge0,
+\]
+
+\[
+g=\beta^- -\alpha^+-{\pi\over3}>0.
+\]
+
+Then exactly
+
+\[
+\delta_{c\ell}=g+r_c+q_\ell.
+\tag{PC.8}
+\]
+
+Consequently
+
+\[
+g\le\lambda,
+\qquad
+{1\over b}\sum_cr_c\le\lambda,
+\qquad
+{1\over a}\sum_\ell q_\ell\le\lambda.
+\tag{PC.9}
+
+---
+
+## 4. Half-shore trimming gives uniform inverse-`D` phase width
+
+By Markov, retain subfamilies
+
+\[
+C_0\subset C_*,
+\qquad L_0\subset L_*
+\]
+
+with
+
+\[
+|C_0|\ge b/2,
+\qquad |L_0|\ge a/2
+\tag{PC.10}
+\]
+
+such that
+
+\[
+r_c\le2\lambda\quad(c\in C_0),
+\qquad
+q_\ell\le2\lambda\quad(\ell\in L_0).
+\tag{PC.11}
+\]
+
+Equation (PC.8) now gives, for every retained crossing,
+
+\[
+0<\delta_{c\ell}\le5\lambda
+<{5C_{phase}\over0.00105D}+o(D^{-1}).
+\tag{PC.12}
+\]
+
+The companion exact rational certificate uses
+
+\[
+\pi<{355\over113},
+\qquad
+\sqrt3<{17321\over10000}
+\]
+
+and verifies
+
+\[
+{5C_{phase}\over0.00105}<25320.
+\]
+
+Hence
+
+\[
+\boxed{
+0<\delta_{c\ell}<{25320\over D}+o(D^{-1})
+\qquad(c\in C_0,\ell\in L_0).
+}
+\tag{PC.13}
+\]
+
+Also
+
+\[
+\boxed{
+|L_0|>0.0015D-o(D),
+\qquad
+|C_0|>0.175D-o(D).
+}
+\tag{PC.14}
+\]
+
+The same inequalities show each retained family has internal phase spread
+`O(1/D)`, because its `r_c` or `q_ell` values lie in an interval of length at most
+`2lambda`.
+
+---
+
+## 5. Why this changes the live structural object
+
+The previous rectangle theorem gave a complete crossing relation but, by itself, did
+not provide one common crossing order or an inverse-diameter angular chart.  The
+current object is stronger:
+
+```text
+>0.0015 D outer-to-outer smallest-leaf trains
+x
+>0.175 D center trains
+complete mutual strict-rhombus crossing
++ one common crossing order on both shores
++ every grid angle = pi/3 + O(1/D)
++ Section-157 two-sided actual-diameter bracing on every leaf cut.
+```
+
+This is close to a finite oblique-lattice rectangle, but it is **not** an exact affine
+lattice.  The selected train directions may vary by `O(1/D)`, and the rest of the
+source and the interfaces remain present.  Therefore the restricted
+`C-OBLIQUE-LATTICE-COMPETITOR` theorem cannot be invoked directly.
+
+The next useful target is an interface-stable chart theorem: convert the common-order
+`O(1/D)` phase spread into an `O(1)` additive-coordinate error across this rectangle,
+then compare neighboring Section-157 cut resultants or construct a local
+source-preserving shear that keeps the surrounding source feasible.
+
+---
+
+## 6. Scope audit
+
+- The dual-tree correction remains binding.  No statement that all same-phase O--O
+  trains globally form one linear stack is used.
+- Common order is proved only for the extracted complete rectangle, using the signed
+  monotone-grid argument.
+- The global `O(D)` defect budget is spent only on actual rectangle rhombi, so no
+  injectivity or face-identification assumption is hidden.
+- The `25320/D` constant is deliberately coarse; its only purpose is a certified
+  inverse-diameter scale.
+- No exact triangle, diameter contradiction, or same-cardinality strict competitor is
+  claimed.
+
+**Disposition:** proved proof-only common-order/inverse-`D` refinement of the corrected
+small-leaf rectangle. C-II and Level I remain open.

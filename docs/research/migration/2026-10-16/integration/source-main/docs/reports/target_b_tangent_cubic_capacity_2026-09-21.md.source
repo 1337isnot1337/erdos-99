@@ -1,0 +1,975 @@
+<!-- theorem-state: {"artifact_id":"ART-8DED787DC7B2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Erdős Problem #99 — sharp tangent capacity and exact three-bar flattening
+
+**Date:** 2026-09-21–22  
+**Starting commit:** `84d937ca93decb710b829fc610d46e0d89684988`  
+**State version:** `2026-09-14.audit.51`  
+**Route:** Target B, pure-disk higher-order train obstruction  
+**Claim classification:** proved candidates awaiting promotion; the generated
+artifact lifecycle remains unreviewed. No independent promotion audit is claimed.  
+**Active prompt:** Target B route map, read after the authority/dependency bootstrap.  
+**Literature imports:** none.  
+**Level I / Target B status:** unchanged, open.
+
+## 1. Exact new statements and their scope
+
+The [Section-120 companion](../../research/target_b_section120_nonpositive_capacity.md)
+explicitly leaves open a universal factor-two capacity bound for linear spaces of
+tangent quartic blockers. Its proved factor two covers only the paired construction
+in canonical Target B §43.1. This report closes that algebraic gap and then derives
+a finite diameter-descent criterion. Sections 5.2–5.3 then use curved train paths
+and actual source gradients to remove the entire two-persistent-bar higher-order
+blocking case, going beyond the initial abstract cubic analysis.
+Sections 5.4–5.6 extend this to any number of affinely independent rotation
+levels, then eliminate the entire fully supported **three**-persistent-bar
+higher-order case by an exact phase-group gradient balance.
+
+The implications are:
+
+```text
+cubic polarization
+  -> rank of an actual relative-tangent map <= floor(tangent support / 2)
+  -> per-bar and joint quotient capacity, with exact boundary-detour payment;
+
+two persistent equality bars with nonzero cubic moments
+  -> joint relative-tangent rank <= half their total active support;
+violation of this bound, or coprime nonzero cubic moments
+  -> a common strict cubic descent direction
+  -> an actual same-cardinality, unit-separated configuration of diameter < D;
+
+actual source gradients + second-order train correction
+  -> two persistent bars have opposing nonzero gradients
+  -> both are exactly constant on every backward-kernel train line
+  -> a diameter-pair-minimal source has only those two active bars;
+
+three persistent bars, with a positive balance on all three
+  -> strict stress-weight transfer + phase-group gradient balance
+  -> all three bars are exactly constant on the backward-kernel slice.
+```
+
+The initial joint bound includes correlated two-bar obstructions, not only coprime
+ones; the later source-specific theorem eliminates that higher-order obstruction
+altogether when there are only two persistent bars and `D>1`.
+The first supplies the previously missing universal *linear-space*
+capacity; it does not bound the dimension of an arbitrary nonlinear cubic zero
+set. Neither result removes the full backward-rank case, general correlated
+multi-bar cubic obstructions, or exceptional-face topology.
+
+Only canonical [Target B §§37,40–43](../targets/target-b/01-jammed-rhombic-branch.md)
+and [shared Theorem 10.6](../theory/01-local-structure.md) are needed for the
+geometric applications. The Section-120 boundary charge is reproduced below,
+so its audited-working lifecycle is not silently upgraded. No Target C
+stress-rigidity premise is used. The apparently useful ZRF/pure-disk composition
+was checked and is already subsumed by the September 11 pure-rhombic exclusion;
+it is not a new claim here.
+
+## 2. Cubic rank and the even-support equality theorem
+
+**Theorem TC.** Let `W` be a real linear subspace of `R^m`, and let every
+`c_i` be a nonzero real number. If
+
+\[
+\sum_{i=1}^m c_i w_i^3=0\qquad(w\in W),
+\]
+
+and exactly `s` coordinate functionals are nonzero on `W`, then
+
+\[
+\boxed{\dim W\le\lfloor s/2\rfloor.}
+\tag{TC1}
+\]
+
+If `s=2d` and `dim W=d`, put `z_i=c_i^{1/3}w_i` using real cube roots
+and discard the identically zero coordinates. After a coordinate permutation,
+
+\[
+\boxed{W_z=\{(x_1,-x_1,\ldots,x_d,-x_d):x\in\mathbb R^d\}.}
+\tag{TC2}
+\]
+
+**Proof.** Diagonal rescaling reduces to `c_i=1`. Delete inactive coordinates.
+Choose `a in W` outside the finite union of the coordinate kernels; all `a_i`
+are nonzero. Polarizing the cubic identity gives
+
+\[
+\sum_i a_i u_i v_i=0\qquad(u,v\in W).
+\tag{TC3}
+\]
+
+The nondegenerate diagonal bilinear form `diag(a)` has signature `(p,q)`,
+where `p+q=s`. A totally isotropic subspace has dimension at most `min(p,q)`:
+its projection to either definite coordinate subspace is injective. This proves
+TC1, including spaces with inactive coordinates.
+
+For equality `s=2d`, both signatures must be `d`. Split coordinates according
+to the sign of `a`. Both coordinate projections are isomorphisms on `W`,
+so `W={(x,Ax):x in R^d}` for an invertible real matrix `A`. Its polynomial
+identity is
+
+\[
+\sum_i x_i^3+\sum_j(Ax)_j^3=0.
+\]
+
+Taking Hessians and then determinants yields
+
+\[
+\prod_i x_i=(-1)^d\det(A)^2\prod_j(Ax)_j.
+\tag{TC4}
+\]
+
+Unique factorization into real linear forms forces the rows of `A` to be
+nonzero multiples of distinct coordinate functionals. Substitution into the
+cubic identity forces each multiplier to have cube `-1`, hence to equal `-1`.
+This proves TC2, also when `d=1`; `d=0` is vacuous. No generic-position or
+generic-rank hypothesis about the geometric source was used. ∎
+
+## 3. The actual tangent map, rather than ambient motion dimension
+
+Fix an active diameter bar `h`, of length `D`, in a finite pure strict-unit-rhombus
+disk. Let `X` be a real linear space of train velocities such that the bar is
+first-order neutral and every non-tangent separating train rotates at the common
+bar velocity `s_h(v)`. These are precisely the §43 equality hypotheses. For the
+`m_h` tangent separating trains define the linear map
+
+\[
+A_h:X\longrightarrow\mathbb R^{m_h},\qquad
+(A_hv)_\tau=v_\tau-s_h(v).
+\tag{TC5}
+\]
+
+Write their oriented contributions as `sigma_tau J e_h`, where
+`sigma_tau in {+1,-1}` and `e_h=r_h/D`. No sign-coherence assertion is needed.
+For `w=A_hv` put `S_j(w)=sum sigma_tau w_tau^j`. First-order neutrality is
+`S_1=0`. In a frame rotating at `s_h(v)`, the exact bar vector is
+
+\[
+r_h(t)=\left(D-\sum_\tau\sigma_\tau\sin(tw_\tau)\right)e_h
+ +\sum_\tau\sigma_\tau[\cos(tw_\tau)-1]Je_h.
+\tag{TC6}
+\]
+
+Thus
+
+\[
+|r_h(t)|^2-D^2={D\over3}S_3(w)t^3+{S_2(w)^2\over4}t^4+O(t^5).
+\tag{TC7}
+\]
+
+**Corollary TB.** If this individual bar is nondecreasing for both signs of
+sufficiently small `t` along every line with velocity in `X`, then `S_3`
+vanishes identically on `A_hX`. Consequently, with `s_h^{act}` the number of
+nonzero coordinate functionals of `A_h`,
+
+\[
+\boxed{\operatorname{rank}A_h\le\lfloor s_h^{act}/2\rfloor
+\le\lfloor m_h/2\rfloor.}
+\tag{TC8}
+\]
+
+The same conclusion holds if only cubic vanishing on `X` is assumed. It is
+the rank of the *relative tangent image* that is bounded. Directions in
+`ker A_h`, including motions of trains invisible to this bar, must not be
+counted as blocked directions.
+
+For `m_h=2d` and rank `d`, TC2 says the signed deviations
+`z_tau=sigma_tau w_tau` pair exactly as `x_j,-x_j`. All odd signed moments
+then vanish, and TC6 becomes the exact identity
+
+\[
+|r_h(t)|^2-D^2=
+\left[\sum_{j=1}^d(\sigma_{i_j}+\sigma_{k_j})
+                  (\cos(tx_j)-1)\right]^2.
+\tag{TC9}
+\]
+
+If the fourth-order coefficient is required to be strictly positive for every
+nonzero image vector, its quadratic moment is definite. In the equality case
+TC9 this happens exactly when all pairs have the same sign and both members
+of each pair have that sign. Thus a maximal uniformly quartic family on even
+support forces a common orientation on its active tangent coordinates. This
+is a *conclusion at equality*, not a geometric assumption for arbitrary trains.
+
+For common orientation, cubic vanishing is also sufficient for a uniform local
+quartic barrier. If `rho=||w||_2` and
+`|t|rho<=min(1,1/D)`, Taylor's inequalities give
+
+\[
+\left|\sum\sin(tw_\tau)\right|\le {|t|^5\rho^5\over120},
+\qquad
+\sum(1-\cos(tw_\tau))\ge {11\over24}t^2\rho^2.
+\]
+
+Inserting these in TC6 proves the explicit finite bound
+
+\[
+\boxed{|r_h(t)|^2-D^2\ge {1\over8}t^4\rho^4.}
+\tag{TC10}
+\]
+
+Indeed `121/576-1/60=557/2880>1/8`. This estimate is uniform over the image
+unit sphere; no direction-dependent remainder is being used as a uniform one.
+
+## 4. Boundary payment and simultaneous quotient capacity
+
+Let `Gamma` be either outer-boundary arc between the endpoints of `h`, with
+unit-edge length `L_h`. Every separating train charges exactly one terminal
+edge occurrence on this arc, with its oriented displacement `a_tau`. Distinct
+trains charge distinct occurrences. With `q=r_h/D`,
+
+\[
+L_h-D=\sum_{e\in\Gamma}(1-q\cdot e).
+\]
+
+All summands are nonnegative; each tangent terminal contributes one. Hence
+`m_h<=L_h-D`, and TC8 gives the universal linear-space replacement for the
+paired-only Section-120 statement:
+
+\[
+\boxed{\operatorname{rank}A_h\le
+ \left\lfloor{m_h\over2}\right\rfloor
+ \le\left\lfloor{L_h-D\over2}\right\rfloor.}
+\tag{TC11}
+\]
+
+On the shorter arc, `L_h<=T`, so the last bound is `floor((T-D)/2)`.
+The proof uses proper train crosscuts of a disk. It does not pass through
+holes or exceptional faces without an additional theorem.
+
+For a family `J` of equality bars whose cubics all vanish on one common
+linear space `X`, rank subadditivity gives
+
+\[
+\boxed{\dim X-\dim\bigcap_{h\in J}\ker A_h
+ \le\sum_{h\in J}\left\lfloor{s_h^{act}\over2}\right\rfloor.}
+\tag{TC12}
+\]
+
+If `J` contains all active diameter bars, a velocity in the intersection
+rotates every separating contribution at its own bar's common speed.
+Therefore TC6 preserves every active diameter **exactly** along the train-angle
+line. All contact lengths also stay exactly one; all inactive pair inequalities
+retain their finite strict slack for sufficiently small time. After quotienting
+common rotation, a nonzero such velocity gives a noncongruent same-diameter
+family. This is not a strict diameter improvement. TC12 controls a common
+quotient; it does not replace the joint map by a sum of independent capacities.
+
+## 5. Cubic descent eliminates a further actual source case
+
+Use canonical §42 notation, in the rotation quotient:
+
+\[
+K=\ker\mathcal B\subseteq\mathcal L.
+\]
+
+Every active bar's quadratic form is nonpositive on `K`. Define its
+**persistent equality set**
+
+\[
+J=\{h:H_h|_K\equiv0\}.
+\]
+
+For each `h in J`, the positive terms of the signed-variance formula vanish
+on all of `K`, while negative incidences already vanish by `K=ker B`.
+Thus TC5–TC7 apply throughout `K`. Write the homogeneous cubic
+`F_h(v)=S_3(A_hv)`.
+
+**Theorem CD.** If there is `v in K` with `F_h(v)<0` for every `h in J`,
+then the source admits a same-cardinality feasible configuration with diameter
+strictly below `D`.
+
+**Proof.** The strict cubic inequalities define an open subset of `K`. For each
+`h notin J`, the zero set of its nonpositive quadratic form is a proper linear
+subspace. Avoid their finite union inside that open subset. At the resulting
+velocity, every bar outside `J` decreases at quadratic order and every bar in
+`J` decreases at cubic order for small positive time. The finite set of bars
+therefore all decrease simultaneously along the exact train-angle path.
+Every unit contact is preserved. Every other lower and upper pair inequality
+has positive initial slack and remains feasible for sufficiently small time.
+The maximum of the finitely many pair distances is then strictly below `D`. ∎
+
+In a local diameter minimum with `K!=0`, the set `J` is nonempty by the same
+finite-union argument at quadratic order. If `J={h}`, CD forces `F_h=0`
+identically (a nonzero odd cubic takes a negative value), hence TC8 applies
+without an additional cubic-flat hypothesis.
+
+**Two-bar consequence.** If `J={h_1,h_2}` and both cubics are nonzero and
+relatively prime over the real polynomial ring on `K`, CD supplies a strict
+diameter improvement. Thus a two-bar survivor with nonzero cubics must share
+a real odd-degree factor.
+
+Here is the algebraic proof, including the real-root issue. If no point makes
+both cubics negative, oddness also forbids both being positive. Hence
+`F_1 F_2<=0` everywhere. Factor `F_1` over the reals. Since its degree is
+odd, it has an irreducible odd-degree factor `f` of odd multiplicity. Such
+a factor has a smooth real zero where it changes sign: choose a direction in
+which its leading homogeneous part is nonzero, and a generic parallel line.
+The resulting univariate polynomial has odd degree and, by squarefreeness in
+characteristic zero, simple roots for generic lines. It has a real simple root.
+If `f` divided neither the other factors nor `F_2`, their nonzero resultants
+allow the same generic line to avoid all their zeros at roots of `f`. Near
+that real root, the product would change sign, a contradiction. Therefore
+`f` divides `F_2` as well. The possible shared odd degrees for cubics are one
+and three. In particular, if `F_1` is irreducible, then necessarily
+`F_2=-c F_1` for some `c>0`.
+
+This is an exact necessary algebraic correlation in the *actual* source's
+neutral space. Abstract disjoint train supports do not establish coprimality
+after restriction to `K`; the source-specific restriction must be computed or
+proved. If one cubic is identically zero, this two-nonzero-cubic consequence
+does not apply.
+
+### 5.1. A joint capacity bound for two correlated bars
+
+**Theorem JC.** Suppose the source is a local diameter minimum, `K!=0`,
+`J={h_1,h_2}`, and both restricted cubic moments `F_i` are nonzero. Let `m_i`
+be the number of nonzero coordinate functionals of `A_i:K -> R^{m_i}` after
+discarding inactive tangent coordinates. Then
+
+\[
+\boxed{\operatorname{rank}(A_1,A_2)
+ \le \left\lfloor{m_1+m_2\over2}\right\rfloor.}
+\tag{JC1}
+\]
+
+The right side improves by one if both `m_i` are even. It also improves by
+one when `m_1+m_2` is even and the cubics are proportional. Thus even-total
+saturation requires both supports odd and the cubics nonproportional.
+Violation of these bounds implies an actual finite strict diameter decrease,
+by CD. This is a joint quotient rank, not a bound on all of `K`.
+
+**Proof.** CD and oddness give `F_1 F_2<=0` on `K`. Two nonzero real homogeneous
+cubics with this property have one of the following forms:
+
+1. `F_2=-c F_1` for a constant `c>0`; or
+2. `F_1=ell Q_1`, `F_2=-ell Q_2`, where `ell` is a nonzero linear form and
+   both `Q_i` are nonzero positive-semidefinite quadratic forms.
+
+To justify this classification, the odd-factor argument above gives a common
+real factor of degree one or three. A degree-three irreducible factor forces
+case 1. Otherwise divide out a common linear factor `ell`, obtaining quadratics
+whose product is everywhere nonpositive (by continuity also on `ell=0`).
+If either quadratic is indefinite, it changes sign at every smooth point of
+its real null cone, forcing the other to vanish on that cone. An indefinite
+quadratic determines its quadratic vanishing ideal in degree two: after
+Sylvester diagonalization, evaluations on positive/negative coordinate pairs,
+then on two coordinates of the same sign paired with one of the opposite sign,
+force proportional coefficients and zero cross terms; adjoining radical
+coordinates forces their coefficients to vanish too. Equivalently, in rank two
+its two distinct real linear factors must both divide the other quadratic.
+Thus the quadratics are negative scalar multiples, giving case 1. If neither
+is indefinite, they have opposite signs and may be written as in case 2 after
+possibly replacing `ell` by `-ell`.
+
+In case 1, concatenate the two tangent images. The polynomial
+`F_1+c^{-1}F_2` is a diagonal cubic with every coefficient nonzero and vanishes
+on the joint image. TC proves JC1. If the total support is even and equality
+holds, TC2 pairs the cube-root-rescaled coordinates. Within each bar the
+rescaling has the form `z_i=beta_h sigma_i w_i` with `beta_h>0`; hence its
+first-moment identity is `sum z_i=0`. An independent pair `(x_j,-x_j)` cannot
+straddle the two bars, since it would contribute a nonzero coefficient of
+`x_j` to each bar's first moment. Every pair therefore lies within one bar.
+Each individual cubic is then identically zero, a contradiction. This gives
+the improvement by one in the proportional even-total case.
+
+In case 2, `ell` factors through each `A_i`. Indeed, if `k in ker A_i` but
+`ell(k)!=0`, translating a vector with `F_i(v)!=0` by a multiple of `k` to
+the hyperplane `ell=0` would preserve `F_i` but also make it zero. Thus `ell`
+is in both row spaces. Restriction to `ker ell` makes both cubics identically
+zero. TC therefore yields
+
+\[
+\operatorname{rank}A_i\le \lfloor m_i/2\rfloor+1.
+\tag{JC2}
+\]
+
+For **even** `m_i=2d`, this improves to `rank A_i<=d`. Suppose instead that
+`rank A_i=d+1`. The image of `ker ell` has dimension `d`; TC forces its full
+`2d`-coordinate support, and TC2 writes its signed coordinates as
+`(x_1,-x_1,...,x_d,-x_d)`. Choose one extra image vector
+`a=(a_1,b_1,...,a_d,b_d)`. Its first moment gives
+`sum_j(a_j+b_j)=0`. On this `(d+1)`-dimensional image, the cubic is
+
+\[
+\begin{aligned}
+F(x,t)={}&3t\sum_j(a_j+b_j)x_j^2
+ +3t^2\sum_j(a_j^2-b_j^2)x_j
+ +t^3\sum_j(a_j^3+b_j^3).
+\end{aligned}
+\tag{JC3}
+\]
+
+The induced `ell` is a nonzero multiple of `t`. The quotient `F/ell` is
+semidefinite: pull it back by a linear right inverse of `A_i` to use the
+semidefinite cofactor on `K`. Consequently its restriction at `t=0` is
+semidefinite. All the numbers `a_j+b_j` must have the same weak sign, while
+their sum is zero. They all vanish. But then `a` was already in the paired
+wall, a contradiction.
+
+We have proved `rank A_i<=m_i/2` for even `m_i`, and
+`rank A_i<=(m_i+1)/2` for odd `m_i`. Since both row spaces contain the nonzero
+form `ell`,
+
+\[
+\operatorname{rank}(A_1,A_2)
+ \le\operatorname{rank}A_1+\operatorname{rank}A_2-1.
+\tag{JC4}
+\]
+
+Combining the parity cases proves JC1, with a one-unit improvement when both
+supports are even. Together with case 1, this proves all the statements. ∎
+
+In particular, using the disk boundary charge `m_i<=L_i-D`, a source violating
+`rank(A_1,A_2)<=floor((L_1+L_2-2D)/2)` cannot be locally minimizing under the
+stated two-bar hypotheses. This conclusion uses the actual restricted maps;
+two individually large ranks do not imply a large joint rank.
+
+### 5.2. Curved train paths and the persistent-gradient stress cone
+
+In this subsection and the next, write `g_h` for the full train-angle gradient
+of `f_h=|r_h|^2-D^2` at the source, **twice** the gradient in canonical §41.
+Write `Hhat_h=2H_h` for its full Hessian. These factors do not change any
+kernel, sign, or normalized gradient balance. The gradient annihilates common
+rotation, so balancing gradients in the rotation
+quotient is equivalent to balancing their full coordinate vectors. Define
+
+\[
+\mathcal P=\{\mu\ge0:\ \sum_{h\in J}\mu_h=1,
+                  \ \sum_{h\in J}\mu_h g_h=0\}.
+\tag{CG1}
+\]
+
+**Theorem CG.** For a local diameter minimum with `K!=0`, `P` is nonempty
+(the generic-velocity specialization of canonical §42.4).
+Let its finitely many vertices be `mu^(1),...,mu^(q)`. If there is `v in K`
+such that
+
+\[
+\sum_{h\in J}\mu_h^{(j)}F_h(v)<0\qquad(1\le j\le q),
+\tag{CG2}
+\]
+
+then there is an actual finite strict diameter descent. Consequently, if `P`
+is a singleton `{mu}`, the weighted cubic vanishes identically on `K`:
+
+\[
+\boxed{\sum_{h\in J}\mu_h F_h\equiv0.}
+\tag{CG3}
+\]
+
+**Proof.** Choose `v in K` avoiding the proper quadratic kernels of all bars
+outside `J`. If `P` is empty, the strict linear alternative supplies `a` with
+`g_h a<0` for every `h in J`. The exact train path
+`theta(t)=theta(0)+tv+epsilon t^2 a` decreases these bars at second order.
+Choose fixed `epsilon>0` small enough that the strictly negative quadratic
+coefficients of bars outside `J` remain negative. This is a finite descent.
+
+For CG2 choose `v` in its open set, again avoiding those quadratic kernels.
+The strict linear alternative now supplies `b` such that
+
+\[
+g_h b+{D\over3}F_h(v)<0\qquad(h\in J).
+\]
+
+Indeed the obstructions are exactly the nonnegative gradient balances, and
+checking their normalized polytope is equivalent to checking all its vertices.
+Along `theta(t)=theta(0)+tv+t^3 b`, every persistent bar decreases at cubic
+order, while every other active bar still decreases at quadratic order.
+Contacts remain exactly unit and inactive inequalities retain their slack.
+If `P` is a singleton, any nonzero weighted cubic takes a negative value by
+oddness, contradicting local optimality. This proves CG3. ∎
+
+For a singleton `P` positive on a set `I`, TC applies to the joint image of
+the maps `A_h`, `h in I`, using coefficients `mu_h sigma_tau`. If that support
+has even total size and at least one individual cubic is nonzero, its capacity
+improves from half the total support to half minus one: the first-moment argument
+in the proportional case of JC applies to any number of labeled bars. Thus CG3
+supplies a source-specific cubic balance beyond the two-bar setting. Uniqueness
+of `P` is a hypothesis, not a consequence of arbitrary local optimality.
+
+### 5.3. Two persistent bars cannot supply any higher-order blocker
+
+**Theorem PF.** In the same pure-disk setting, suppose `D>1`, the source is a
+local diameter minimum, and `K!=0`. Then `|J|>=2`. If `J={h_1,h_2}`, both
+gradients are nonzero and are opposite positive multiples. Moreover, along
+**every** straight train-angle path with velocity `v in K`, both persistent
+diameter lengths remain **exactly** `D` for all sufficiently small times.
+In particular their tangent cubics vanish, and neither a cubic cusp nor a
+quartic tangent obstruction can persist in this two-bar case.
+
+There is a nonzero velocity in `K` along which every other active diameter
+bar strictly decreases for sufficiently small nonzero time. Thus, if the source
+is also diameter-pair-minimal among triangle-free configurations of that same
+cardinality and diameter, then `J` is the whole active diameter set. Such a
+source with at least three active diameter pairs must have `|J|>=3`.
+
+**Proof: zero-gradient cases.** In full train coordinates,
+
+\[
+(g_h)_\tau=2r_h\cdot J(d_{h\tau}u_\tau).
+\tag{PF1}
+\]
+
+If `g_h=0`, every separating contribution is parallel to `r_h`. Write them
+as `+e_h` or `-e_h`, with respective counts `P_h,N_h`. Then
+`D=P_h-N_h>1`, so `P_h>=2`. Rotating two positive contributions at speeds
+`+1,-1`, leaving all others fixed, gives a direction `a` with
+`Hhat_h[a,a]=-4D<0`. This is a genuine negative quadratic direction.
+
+For `h in J` with zero gradient, its separating contributions all rotate at
+one common speed along any `v in K`, by the persistent equality conditions.
+Consequently along `theta(0)+tv+epsilon t^2 a`, its squared length change
+is `epsilon^2 t^4 Hhat_h[a,a]/2+O(t^6)`: the common rotation factors out exactly.
+
+If `J` consists of this one bar, use the negative direction just found. If
+`J` has a second bar with nonzero gradient, choose `a` in the open negative
+quadratic cone of the first with `g_2 a<0`. Such a choice exists because a
+nonzero linear functional cannot vanish on an open set, and changing `a` to
+`-a` preserves its negative quadratic value. If both gradients are zero,
+their separating train sets are disjoint: a shared train would be parallel
+to both diameter directions, which is impossible for distinct diameter bars.
+Choose negative quadratic directions independently on the two disjoint sets.
+In every case choose generic `v in K` and then sufficiently small `epsilon`
+to retain negative quadratic coefficients on all bars outside `J`. This gives
+a finite strict descent, contradicting local optimality.
+
+Here we used the elementary fact that two distinct diameter bars cannot be
+parallel. Orient parallel bars to have the same displacement `r`, of length
+`D`, and let `w!=0` be the displacement between their starting endpoints.
+The two cross distances have vectors `r+w` and `r-w`; at least one squared
+length is at least `D^2+|w|^2>D^2`, a contradiction.
+
+Thus for `|J|<=2` all gradients in `J` must be nonzero. Theorem CG rules out
+`|J|=1`, and when `|J|=2` forces `g_1=-c g_2` with `c>0`.
+
+**Proof: exact flattening.** We now specialize the established tangent transfer
+in canonical §42.5, and control every equality bar rather than only a selected
+stress support. Consider a train tangent to `h_1`. Its component
+in `g_1` is nonzero, so its component in `g_2` is also nonzero. It therefore
+separates `h_2`. It is not tangent to `h_2`, since distinct diameter directions
+are not parallel. Persistent equality for `h_2` forces this train's velocity
+to be `s_2(v)`. Every tangent train of `h_1` therefore has the same relative
+velocity `delta=s_2(v)-s_1(v)`. First-order neutrality of `h_1` gives
+
+\[
+\delta\sum_{\tau\text{ tangent to }h_1}\sigma_\tau=0.
+\tag{PF2}
+\]
+
+In TC6 the sine sum is now `sin(t delta) sum sigma_tau` and the cosine
+increment is `(cos(t delta)-1) sum sigma_tau`. Both vanish identically: either
+`delta=0` or the signed sum is zero. Hence `h_1` keeps its length exactly.
+Interchanging the two bars gives the same conclusion for `h_2`. No sign
+coherence or finite-order truncation is used.
+
+Choose `v!=0` outside the quadratic kernels for bars outside `J`. These bars
+strictly decrease, while the two persistent ones stay exactly at `D`. Contacts
+stay exactly unit, and all noncontacts stay strictly above one for small time;
+thus a triangle-free source remains triangle-free. No new diameter pair appears
+because every initially inactive upper inequality has strict slack. If any bar
+outside `J` existed, this would contradict diameter-pair minimality. ∎
+
+This is an exclusion of the *two-persistent-bar higher-order obstruction*, not
+an exclusion of all configurations with only two active diameter pairs. A
+same-diameter family is not a strict improvement. The full backward-rank case,
+three or more persistent bars, and non-disk topology remain outside PF.
+
+### 5.4. More bars: a bounded integer relation is necessary for nonflatness
+
+**Theorem AP.** Suppose a gradient balance in `P` is strictly positive on
+**every** persistent bar. Group the rotation functionals `s_h in K*` into
+distinct classes `s_1,...,s_m`. If these `m` functionals are affinely independent
+(the differences from any one have rank `m-1`), every persistent bar is exactly
+constant along every backward-kernel train line. In particular this holds when
+there are at most two distinct rotation functionals, regardless of the number
+of persistent bars.
+
+More precisely, any persistent bar that is not identically constant on a
+neighborhood of zero in the train-angle slice `theta(0)+K` supplies an integer
+vector `c!=0` satisfying
+
+\[
+\boxed{\sum_{j=1}^m c_j=0,\qquad
+ \sum_{j=1}^m c_j s_j=0,\qquad
+ \|c\|_1\le2m_h\le2(L_h-D).}
+\tag{AP1}
+\]
+
+The last inequality uses the disk boundary charge from §4. Thus even a real
+affine dependence is insufficient without a bounded **integer** dependence.
+This is a source-specific finite obstruction, not a generic-rank assertion.
+
+**Proof.** Fix a tangent train of a persistent bar `h`. The positive gradient
+balance forces another persistent bar `k` with a nonzero component on that
+train. Nonparallel diameter directions make the train nontangent to `k`, and
+persistent equality gives `v_tau=s_k(v)` on all of `K`. If more than one bar
+can be chosen, all their functionals coincide on `K`, since they equal the
+same coordinate functional `v_tau`. Thus the destination rotation class of
+each tangent train is well-defined, independent of `v`.
+
+Suppose `h` belongs to class `i`. Let `N_hj` be the signed number of its
+tangent trains assigned to class `j`. First-order neutrality is the identity
+
+\[
+\sum_{j\ne i}N_{hj}(s_j-s_i)=0\quad\text{on }K.
+\tag{AP2}
+\]
+
+If all these off-diagonal signed counts vanish, each destination class cancels
+its sine sum and cosine increment separately in TC6. The bar is exactly
+constant on the entire small slice. Otherwise take
+`c_j=N_hj` for `j!=i`, and `c_i=-sum_{j!=i}N_hj`. This is a nonzero integer
+affine relation, with `||c||_1<=2 sum_{j!=i}|N_hj|<=2m_h`. This proves AP1
+and the affine-independence consequence. ∎
+
+For a diameter-pair-minimal source in AP's exact-flat case, the same generic
+velocity argument as PF forces every active bar to be persistent. The statement
+requires positivity on **all** persistent bars: a balance on a proper subset
+does not control unsupported equality bars, exactly the canonical §43.2 warning.
+No globally invisible train is removed, and no motion is continued to a possible
+triangle wall.
+
+The first possible affine-relation obstruction already occurs at three levels.
+For formal rotation levels `(0,x,2x)`, the vector `(1,-2,1)` has zero total and
+zero first moment. Viewed from the middle level, the two moving contributions
+have deviations `(-x,x)` with common orientation and give the exact positive
+quartic expression `4(cos(tx)-1)^2`. This is an algebraic obstruction model, not
+a realized source or a global minimizer. It shows why AP must retain the
+integer-dependence case rather than declaring every potential network flat.
+
+### 5.5. Three fully supported bars have at most one quartic coordinate
+
+**Theorem TQ.** Suppose `J` consists of exactly three bars and `P` contains a
+balance strictly positive on all three. At a local diameter minimum, either
+all three bars are exactly constant on `theta(0)+K`, or, after relabeling:
+
+- exactly one bar, `h_0`, is nonflat;
+- `P` is a singleton with `mu_0<mu_-` and `mu_0<mu_+`;
+- the rotation functionals satisfy `s_0=(s_-+s_+)/2`;
+- for the nonzero linear functional `delta=(s_+-s_-)/2` and a nonzero integer
+  signed count `a`, the exact response is
+
+\[
+\boxed{|r_0(t)|^2-D^2=4a^2(\cos(t\delta(v))-1)^2,\qquad
+ |r_-(t)|=|r_+(t)|=D.}
+\tag{TQ1}
+\]
+
+Thus the entire three-bar higher-order obstruction factors through **one**
+relative-rotation coordinate, independently of the number of tangent trains.
+The theorem is a necessary normal form, not a proof that this form is realized
+by a source or that a curved correction removes it.
+
+**Proof.** By AP, a nonflat case has three distinct rotation functionals with
+affine rank one. First note that any tangent train of `h` separates precisely
+one of the other two supported bars. It separates at least one by gradient
+balance. If it separated both, they would both be nontangent and their rotation
+functionals would equal its train-coordinate functional on `K`, contradicting
+their distinctness.
+
+If that other bar is `k`, the train coordinate of the gradient balance gives
+`mu_h |(g_h)_tau|=mu_k |(g_k)_tau|`. A tangent contribution has
+`|(g_h)_tau|=2D`, while the nontangent contribution of `k` has magnitude
+strictly less than `2D`. Hence
+
+\[
+\boxed{h\longrightarrow k\quad\Longrightarrow\quad\mu_h<\mu_k.}
+\tag{TQ2}
+\]
+
+Every nonflat bar has nonzero signed transfer counts to **both** other bars:
+a sole nonzero count would contradict AP2 and distinctness of the functionals.
+It therefore has smaller weight than both. There can be at most one such bar;
+call it `h_0`. All other bars have zero off-diagonal signed counts and are
+exactly flat. (Equivalently, a nonminimum bar has at most one possible transfer
+destination, and AP2 forces that destination's signed count to vanish.)
+
+The balance polytope is now a singleton. To see this without assuming stress
+uniqueness, `h_0` has a tangent train transferring to each of the other bars.
+The corresponding gradient-coordinate columns have respectively nonzero entries
+on `(h_0,h_-)` and `(h_0,h_+)`, with the third entry zero. They are independent,
+so the three-gradient matrix has rank at least two; the positive balance makes
+its rank exactly two and its nonnegative kernel a unique ray.
+
+CG3 therefore forces `F_0=0`, since the other two cubics vanish. Set
+`u=s_--s_0` and `w=s_+-s_0`, and let the two nonzero integer signed counts be
+`a,b`. Their first and third moment identities are
+
+\[
+au+bw=0,\qquad au^3+bw^3=0.
+\tag{TQ3}
+\]
+
+The three rotation functionals are distinct, so `u,w,u-w` are nonzero linear
+forms. Eliminating `b w=-a u` in the cubic identity gives
+`a u(u-w)(u+w)=0` in the real polynomial ring on `K`. Thus `u+w=0`, and then
+`a=b`. This is the midpoint identity. Substitution into TC6 cancels the sine
+terms and leaves `2a(cos(t delta)-1)Je_0`, proving TQ1. ∎
+
+The source-specific strict weight ordering TQ2 is what collapses the apparent
+many-train quartic capacity here. It uses three distinct rotation classes and
+does not extend to a train whose other supported incidences lie on several bars
+with the **same** rotation functional: their combined weight can pay for that
+train. Nor does TQ control a persistent bar omitted by every positive balance.
+
+### 5.6. Phase-group balance eliminates the last three-bar quartic
+
+**Theorem PG (exact phase-group balance).** Under AP's full-support hypothesis,
+form a matrix `B` with one row per persistent bar and one column per distinct
+rotation class. For a bar `h` in class `i`, put
+
+\[
+B_{hj}=N_{hj}\ (j\ne i),\qquad
+B_{hi}=-\sum_{j\ne i}N_{hj}.
+\]
+
+For every positive gradient balance `mu` on the persistent set,
+
+\[
+\boxed{B\mathbf1=0,\qquad B s=0,\qquad \mu^{\mathsf T}B=0.}
+\tag{PG1}
+\]
+
+Here `B s=0` is an identity in `K*`, and the last equation is an exact signed
+flow balance, not a generic-rank inference.
+
+**Proof.** The first two equations are AP2. For each class `j`, let `z^(j)` be
+the full train-angle velocity which is one on coordinates whose restriction
+to `K` equals `s_j`, and zero on all other coordinates. This is an allowed
+train-angle test vector; it is **not** asserted to belong to `K`.
+
+Every train visible to a persistent bar belongs to one of these classes:
+nontangent incidences have speed `s_h`, and tangent incidences transfer by AP.
+Trains invisible to all persistent bars have zero gradient components. For
+`j!=i`, the total separating contribution of class `j` to bar `h` is
+`N_hj J e_h`. Therefore
+
+\[
+g_h\cdot z^{(j)}=-2D N_{hj}\quad(j\ne i),\qquad
+g_h\cdot z^{(i)}=2D\sum_{j\ne i}N_{hj}.
+\tag{PG2}
+\]
+
+The second equality follows either by summing the contributions or from common
+rotation invariance. Pairing the full gradient balance with each `z^(j)` proves
+`mu^T B=0`. The test vectors need not produce a diameter-preserving motion;
+only the exact first-order gradient identity is used. ∎
+
+**Theorem TF (three-bar flattening).** If `|J|<=3` and there is a gradient
+balance positive on **all** persistent bars, every persistent diameter is exactly
+constant on a neighborhood of zero in `theta(0)+K`. If also `K!=0`, a
+diameter-pair-minimal source in this case has no active bar outside `J`.
+
+**Proof.** With at most two distinct rotation classes, use AP. Otherwise there
+are exactly three bars with distinct rotation functionals. The strict transfer
+ordering TQ2 applies. A bar that is not a strict minimum of the three weights
+has at most one strictly heavier destination. AP2 then forces its off-diagonal
+signed counts to be zero, because the functionals are distinct. Thus `B` has at
+most one nonzero row, belonging to the unique possible strict minimum weight.
+But `mu^T B=0` and all weights are positive, so that row is zero too. Every
+destination class therefore cancels exactly in TC6, proving flatness. The final
+diameter-pair-minimal consequence follows by choosing a generic velocity as in
+PF. ∎
+
+This proves that TQ's sole quartic normal form is **not realizable under the full
+source hypotheses**: its formal response survives moment identities but violates
+the phase-group gradient balance. The formal algebraic example is not rejected;
+its proposed use as a fully supported three-bar source obstruction is rejected.
+The direct proof of TF needs neither cubic optimization nor sign coherence.
+
+With four or more distinct bars the strict weight ordering still holds when
+all rotation functionals are distinct, and PG1 remains exact, but it no longer
+forces a one-row support. When several bars share a rotation functional, even
+the strict individual-weight ordering must be replaced by a combined-recipient
+weight bound. These are genuine remaining network cases, not excluded here.
+
+### 5.7. Four bars with distinct rotation functionals also flatten
+
+**Theorem FF.** Suppose `|J|=4`, there is a gradient balance positive on every
+persistent bar, and all four rotation functionals are distinct. Then every
+persistent bar is exactly flat on `theta(0)+K`. Thus among fully supported
+four-bar higher-order cases, the only unexcluded rotation-class multiplicity
+pattern is `(2,1,1)`; one or two classes are already flat by AP.
+
+**Proof.** Order the weights `mu_1<=mu_2<=mu_3<=mu_4`. Distinct rotation
+functionals mean a tangent train of a supported bar can separate only one other
+supported bar, so TQ2 still applies: a nonzero `N_ij` requires `mu_i<mu_j`.
+The last two rows of `B` have at most one possible destination each and hence
+vanish by `B s=0`. If the second row vanishes as well, `mu^T B=0` kills the
+first row and we are done.
+
+Otherwise `N_23` and `N_24` are both nonzero. The phase-group balance gives
+
+\[
+N_{13}=-{\mu_2\over\mu_1}N_{23},\quad
+N_{14}=-{\mu_2\over\mu_1}N_{24},\quad
+N_{12}={\mu_2\over\mu_1}(N_{23}+N_{24}).
+\tag{FF1}
+\]
+
+The last quantity is nonzero: otherwise the second row of `B s=0` would give
+`N_23(s_3-s_4)=0`, impossible. We therefore have all five transfers
+`1->2`, `1->3`, `1->4`, `2->3`, and `2->4`.
+
+This five-edge pattern is geometrically impossible. Put `v_i=mu_i e_i` for
+the weighted unit diameter directions. For a tangent transfer `i->j`, its
+gradient coordinate has just these two supported incidences. The exact scalar
+balance therefore implies
+
+\[
+\boxed{|v_i\cdot v_j|=|v_i|^2.}
+\tag{FF2}
+\]
+
+For completeness, orient the two bars so that `v_1=(a,0)` and `v_2=(a,b)`;
+this is possible by `1->2`, and `a>0`, `b!=0` since distinct diameter bars
+are not parallel. A common higher recipient `v_k` of both can be oriented
+as `(a,y)`. Its second projection equation is
+
+\[
+|a^2+by|=a^2+b^2.
+\]
+
+The only possibilities are `y=b` and `y=-b-2a^2/b`. The former equals `v_2`
+and cannot be a strictly higher recipient. The latter gives only **one**
+unoriented diameter direction. There cannot be two distinct bars `3,4` with
+that direction. This contradicts the five transfers, so `B=0`. TC6 now proves
+exact flatness. ∎
+
+FF uses the actual two-dimensional diameter directions, in addition to the
+integer phase matrix. Neither a formal signed-flow example nor an arbitrary
+upper-triangular matrix can supply the prohibited five-edge source pattern.
+The `(2,1,1)` case has multiple possible recipients in its double class and
+does not satisfy the two-incidence argument; it remains open here.
+
+**Arithmetic continuation.** The separate
+[five-bar candidate](target_b_five_bar_arithmetic_flattening_2026-09-22.md)
+extends distinct-functional flattening through five bars. It exhausts the 1024
+forward transfer supports and excludes the six remaining patterns using exact
+integer-count rationality and two certified rank-zero elliptic curves. Unlike
+the present elementary proofs, that continuation imports explicitly sourced
+standard rational 2-isogeny descent and good-reduction torsion injection.
+
+## 6. Sharpness and an odd-support regression
+
+The paired spaces in TC2 attain the capacity for even support. For odd support,
+append one zero coordinate to obtain `floor(m/2)` as well. However, maximal
+odd-support spaces need not be paired, even if every coordinate is active.
+
+Put `r=sqrt(5)` and define five linear forms `w_i=a_i x+b_i y` by
+
+\[
+a=(1,(r-1)/4,-(r+1)/4,-(r+1)/4,(r-1)/4),
+\qquad b=(0,1,(r-1)/2,-(r-1)/2,-1).
+\]
+
+Exactly,
+
+\[
+\sum_iw_i=\sum_iw_i^3=0,
+\qquad \sum_iw_i^2={5\over2}x^2+(5-r)y^2>0\quad((x,y)\ne0).
+\tag{TC13}
+\]
+
+Every pair of coefficient vectors `(a_i,b_i)` is nonproportional. This is a
+rank-two cubic-flat space with five active coordinates, attaining `floor(5/2)`
+without a paired coordinate representation. It rejects an extension of TC2
+to odd support. It is an algebraic tangent model, not a geometric packing or
+a global minimizer.
+
+Mixed signs must also be retained. Even when signed cubic moments vanish,
+the signed second moment can be indefinite or zero. TC8 remains valid; the
+strict quartic conclusion TC10 requires common orientation. No universal
+geometric sign-coherence theorem is imported from historical reports.
+
+There is a second exact regression against replacing *individual-bar*
+nondecrease in TB by nondecrease of the maximum over bars. Use formal tangent
+vectors `w=(x,y,-x-y)` for one bar and `-w` on a separate three-coordinate
+support for the other. The two image ranks are two, exceeding `floor(3/2)`,
+and their cubic forms are `-3xy(x+y)` and `+3xy(x+y)`. Write
+`A=sum sin(tw_i)` and `B=sum(cos(tw_i)-1)`. The maximum of the two squared
+bar changes is exactly
+
+\[
+\max\{(D-A)^2+B^2-D^2,(D+A)^2+B^2-D^2\}
+=2D|A|+A^2+B^2\ge0.
+\tag{TC14}
+\]
+
+Thus a cubic cusp can block every direction without either individual cubic
+vanishing. The two cubics share factors, exactly as the two-bar consequence
+requires. TC14 is an algebraic model, not a realization by diameter chords
+in a packing. It prevents an invalid promotion from TC8 to a universal
+local-minimum rank bound.
+
+## 7. Verification, classification, and residual obligation
+
+Run
+
+```text
+python3 research/verify_target_b_tangent_cubic_capacity_2026_09_21.py
+python3 tools/check_theorem_state.py
+git diff --check
+```
+
+The verifier checks the arbitrary-sign expansion through order six, paired
+sharpness for dimensions one through six, TC13 over `Q(sqrt(5))`, and finite
+integer graph charts for the even-support classification. It exhausts 625
+two-dimensional charts and 19683 three-dimensional charts, obtaining respectively
+2 and 6 survivors, all paired. It also verifies JC3 through four paired
+coordinates, a semidefinite-cofactor example at even-support capacity, and every
+two-bar assignment of up to eight paired coordinates. These bounded checks are independent sanity
+checks, not a substitute for TC's proof over all real subspaces. The curved
+zero-gradient descent, exact flatness identities, cubic corrector, three-level
+regression, and TQ midpoint elimination / strict weight ordering are also checked.
+SymPy exact
+arithmetic is used; neither floating-point evidence nor a global-optimality
+certificate is involved.
+
+All new theorem claims TC, TB, TC11–TC12, CD, JC, CG, PF, AP, TQ, PG, TF, and FF are **proved candidates
+awaiting promotion**. TC13 is an exact **regression** against odd-support
+pairing rigidity, and TC14 is a **regression** against applying an individual-bar
+capacity to a joint cubic cusp. The generated report header remains **unreviewed**, consistent
+with the absence of an independent promotion audit. No canonical state or prompt
+is changed.
+
+The three-level model in §5.4 is a **regression** against unconditional flattening
+of dependent rotation potentials. It checks the response shape later forced by
+TQ, but does not establish that any source realizes that shape. Selection of a
+diameter-pair-minimal source in PF/AP is conditional on that selected source
+having the stated pure-disk contact complex; no purity-preserving selection
+theorem is claimed.
+
+The square and canonical paired quartic example are retained by the sharpness
+cases. Regular-shell regressions lack the pure-rhombic train-coordinate
+hypotheses. The five-sector and vanishing-shear examples are not excluded merely
+by density, positive stress, or small angular defect. All statements concern the
+same source throughout; no source points are deleted. The finite descent in CD
+preserves every contact simultaneously and handles every inactive pair by its
+actual positive slack.
+
+The joint theorem JC bounds abstract correlated two-bar obstructions by half
+their total active support, with parity improvements. The stronger source-specific
+theorem PF then shows that at a local minimum with `D>1`, two persistent bars
+cannot actually supply any cubic or quartic obstruction: both are exactly flat.
+Its new ingredient is the zero-gradient descent plus the all-equality-bar
+specialization of the canonical tangent transfer; the transfer itself and the
+secondary-cusp separation step were already canonical.
+
+The new remaining algebraic obstruction is precise: on the actual backward-kernel
+space, persistent equality bars must either have zero cubics subject to TC's sharp
+rank budget, or have cubic forms with no common strict negative direction. With
+two persistent bars and `D>1`, PF eliminates all higher-order blocking and leaves
+an exact same-diameter family. For three or more bars, CG reduces cubic survival
+to the actual persistent-gradient stress polytope, but does not close it. With
+full support on the persistent bars, AP further requires a bounded integer affine
+relation among the actual rotation functionals for any nonflat bar. TF eliminates
+the entire fully supported three-bar higher-order case: the intermediate midpoint
+quartic fails PG's exact source-gradient balance. The remaining higher-order
+network cases therefore require at least four persistent bars, or failure of
+full support on the three-bar set. FF further excludes four distinct rotation
+classes on four bars; the four-bar pattern `(2,1,1)` is not excluded. Target B
+still requires excluding the surviving
+same-diameter flat families and multi-bar
+obstructions together with the full backward-rank case, and then treating the
+topology corrections. No claim
+closes Target A, Target B, C-II, or Level I; C-I stays closed.

@@ -1,0 +1,43 @@
+# Local package import shadowing repair
+
+Classification: engineering audit and regression repair. No mathematical promotion.
+
+The independent review of PR1003 at
+`d54097cb96b1c5fcbb6eca57843b53e7b8a6dd2e` found that the import audit considered
+`math.py` but omitted `math/__init__.py` when deciding whether the standard
+library's `math` was shadowed. A package could omit that local initializer from
+its input list. The isolated filesystem would then supply standard-library
+behavior even though the full repository had a different local implementation.
+
+The reproduced counterexample has `math.sqrt` return `99` locally, while the
+declared script asserts `math.sqrt(4)==2`. A package-README-only change was
+classified as targeted replay and passed using the isolated standard library.
+This did not set `full_verified`, but silently changed import resolution and
+failed the declared-input contract.
+
+The repair checks both module files and regular-package initializers in the
+repository and entry-script search roots. An undeclared local candidate requires
+review. A declared initializer is materialized and replayed with its actual
+behavior. Two executable regressions cover both outcomes, including refusing
+the original undeclared case before replay. The existing conservative handling
+of other Python capabilities remains explicit in the protocol.
+
+## Exact verification evidence
+
+The repair was first committed as
+`6d1171fee7359c62f9d6f8fa8a5d89983088b1df`, directly above the reviewed PR head.
+The locked Python 3.14.7 environment passed 77 focused checks, then all 14 full
+verification stages: 195 tooling tests, 18 repository tests, 65 research tests,
+and all 94 registered certificates. The full run took 467.121 seconds with
+`origin/main` pinned to `5dcbdc3dfa1f9be370602cc54d50e68eabb88f56`.
+
+During that verification, PR1003 was merged independently at
+`aa9b45669ce7200a99f6ec4c58e1e3c23a57387f`. The identical four-file repair was
+therefore replayed onto that integrated base for a separate maintenance PR.
+The full log certifies its named tested head; final integrated-source and
+private-export verification remain separate closeout requirements.
+
+Both hosted rollout variables were freshly observed absent through the
+repository API. This repair changes neither workflow activation nor repository
+settings. Local scoped replay and complete repository verification remain
+distinct results, and neither constitutes independent human mathematical review.

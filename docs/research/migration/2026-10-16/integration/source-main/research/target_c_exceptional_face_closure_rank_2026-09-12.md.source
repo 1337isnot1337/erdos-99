@@ -1,0 +1,532 @@
+# Target C — exceptional-face closure corank and Hall expansion
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** proof-only research theorem; theorem authority unchanged.  
+**Base:** `cb7f17077452cf7c445bbd64f099b8967a5b57fb`.  
+**Dependencies:** canonical core-only ZR/ZF mixed infinitesimal rigidity and the full-force-visible C65 normalization; audited-working stopped-train decomposition §142; audited-working no-bounded-return theorem §132 only for the zero-column interpretation below.
+
+This note extracts an exact finite invariant from the complete stopped-train system.
+It does not use a response-conductance estimate, a KKT coefficient floor, or a carrier
+constant.
+
+Let `C_face` be the linear closure matrix obtained by assigning one infinitesimal
+angular rate to every complete stopped train and imposing vector closure around every
+bounded nonquadrilateral face. Then
+
+\[
+\boxed{
+2f-\operatorname{rank}C_{\rm face}
+=\dim\ker R_C^T
+=:\sigma_C.
+}
+\tag{1}
+\]
+
+Thus the row corank of the exceptional-face closure system is **exactly** the pure
+contact self-stress dimension. Since the full mixed active matrix has left nullity
+`s_Z+1` and the normalized KKT stress has nonzero diameter part,
+
+\[
+\boxed{
+0\le\sigma_C\le s_Z,
+\qquad
+\operatorname{rank}C_{\rm face}\ge2f-s_Z.
+}
+\tag{2}
+\]
+
+More locally, for every set `S` of bounded nonquadrilateral faces, if `N(S)` is the set
+of complete trains having an endpoint occurrence on a face in `S`, then
+
+\[
+\boxed{
+|N(S)|\ge2|S|-\sigma_C\ge2|S|-s_Z.
+}
+\tag{3}
+\]
+
+This is a Hall-type expansion theorem for the actual stopped-train endpoint network.
+It converts the linear defect-face population from §§142--143 into a rigidity
+obligation: except for at most `s_Z` global scalar dependencies, bounded defect faces
+must supply two independent train-closure constraints each.
+
+The result does not by itself close Type II because a bounded-degree direction network
+can satisfy (3). The remaining closing step must use the geometric directions or the
+outer/diameter bracing, not endpoint incidence alone.
+
+---
+
+## 1. Setup
+
+Work only on the connected nonisolated positive-contact core
+
+\[
+G=(V,C),
+\qquad v=|V|,
+\qquad e=|C|.
+\]
+
+All contact-isolated source points remain in the full source. No coordinate of a
+contact-isolated point is inserted into any rigidity matrix below.
+
+Let `H` be the full actual diameter graph after the C65 lexicographic normalization,
+with `h=|H|`. Canonical ZR/ZF gives
+
+\[
+\operatorname{rank}R_{C\cup H}=2v-3.
+\tag{1.1}
+\]
+
+Write
+
+\[
+s_Z=e+h-(2v-2)\ge0.
+\tag{1.2}
+\]
+
+Let `R` be the number of bounded strict-rhombus faces and `f` the number of bounded
+nonquadrilateral faces. Audited-working §142 gives a decomposition of all contact
+edges into `T` complete stopped trains and
+
+\[
+T=e-2R.
+\tag{1.3}
+\]
+
+Euler for the connected plane contact core gives
+
+\[
+v-e+(R+f+1)=2,
+\]
+
+hence
+
+\[
+\boxed{e-v=R+f-1.}
+\tag{1.4}
+\]
+
+The §142/core ledger also gives
+
+\[
+\boxed{T=h-s_Z+2f.}
+\tag{1.5}
+\]
+
+---
+
+## 2. One angular rate per complete train
+
+Orient every contact edge arbitrarily. For an oriented unit contact edge `ij`, write
+
+\[
+r_{ij}=p_j-p_i.
+\]
+
+For an infinitesimal contact flex `u=(u_i)`, the contact equation is
+
+\[
+r_{ij}\cdot(u_j-u_i)=0.
+\]
+
+Therefore there is a unique scalar `omega_ij` such that
+
+\[
+u_j-u_i=\omega_{ij}Jr_{ij}.
+\tag{2.1}
+\]
+
+Consider one strict unit rhombus with cyclic oriented side vectors
+
+\[
+r_1,r_2,-r_1,-r_2.
+\]
+
+Differentiating its vector closure gives
+
+\[
+(\omega_1-\omega_3)Jr_1
++(\omega_2-\omega_4)Jr_2=0.
+\]
+
+The two rhombus directions are linearly independent, so
+
+\[
+\omega_1=\omega_3,
+\qquad
+\omega_2=\omega_4.
+\tag{2.2}
+\]
+
+Thus the angular rate propagates unchanged across opposite sides of every strict
+rhombus. It is constant on every complete stopped train. Write that scalar as
+`omega_tau`.
+
+Conversely, assign a scalar `omega_tau` to every complete train. For an oriented
+contact occurrence `e`, let `tau(e)` be its train and prescribe
+
+\[
+\dot r_e=\omega_{\tau(e)}Jr_e.
+\tag{2.3}
+\]
+
+Every strict-rhombus face closes automatically by opposite-side cancellation. The only
+remaining cycle-closure equations occur on bounded nonquadrilateral faces.
+
+---
+
+## 3. The exceptional-face closure matrix
+
+Orient the boundary of every bounded nonquadrilateral face `F` cyclically. Define the
+vector equation
+
+\[
+\boxed{
+\sum_{e\in\partial F}
+\omega_{\tau(e)}Jr_e=0.
+}
+\tag{3.1}
+\]
+
+Boundary occurrences, not merely abstract edges, are used. By the bounded-face
+simplicity theorem the boundary is a simple unit polygon, but the occurrence convention
+also makes (3.1) compatible with the global plane-graph cycle-space bookkeeping.
+
+Collect the two scalar coordinates of (3.1) for all `f` bounded nonquadrilateral
+faces. This gives
+
+\[
+C_{\rm face}:\mathbb R^T\longrightarrow\mathbb R^{2f}.
+\tag{3.2}
+\]
+
+### Lemma 3.1 — contact flexes are exactly the face-closure kernel
+
+Modulo global translations,
+
+\[
+\boxed{
+\ker R_C/\mathrm{Trans}
+\cong
+\ker C_{\rm face}.
+}
+\tag{3.3}
+\]
+
+### Proof
+
+Every contact infinitesimal flex gives train-constant angular rates by (2.2), and every
+bounded face boundary is a graph cycle, so its edge-vector derivatives sum to zero.
+This maps `ker R_C/Trans` into `ker C_face`.
+
+Conversely, take `omega in ker C_face` and prescribe every contact-edge derivative by
+(2.3). Strict-rhombus boundaries close automatically, and bounded
+nonquadrilateral-face boundaries close by (3.1). For a connected plane graph, the
+oriented bounded-face boundaries span the real cycle space, including when the graph
+has outer-face bridges or articulation vertices. Hence the prescribed derivative sums
+to zero around every graph cycle.
+
+Fix a base vertex and integrate the edge derivatives along contact paths. Cycle
+closure makes the resulting vertex velocity independent of the chosen path. Changing
+the base velocity adds one common translation, and every contact equation is satisfied
+by construction. This proves (3.3). `square`
+
+The constant train-rate vector
+
+\[
+\mathbf1=(1,\ldots,1)
+\tag{3.4}
+\]
+
+is in `ker C_face`; it represents global infinitesimal rotation modulo translation.
+
+Let
+
+\[
+r:=\operatorname{rank}C_{\rm face}.
+\]
+
+Then (3.3) gives
+
+\[
+\dim\ker R_C=T-r+2,
+\tag{3.5}
+\]
+
+where the extra two dimensions are translations.
+
+---
+
+## 4. Exact corank identity
+
+Let
+
+\[
+\sigma_C:=\dim\ker R_C^T
+\]
+
+be the pure contact self-stress dimension. From (3.5),
+
+\[
+\operatorname{rank}R_C
+=2v-(T-r+2).
+\]
+
+Therefore
+
+\[
+\begin{aligned}
+\sigma_C
+&=e-\operatorname{rank}R_C\\
+&=e-2v+T-r+2.
+\end{aligned}
+\tag{4.1}
+\]
+
+Use `T=e-2R` and Euler (1.4):
+
+\[
+\begin{aligned}
+e-2v+T+2
+&=2e-2v-2R+2\\
+&=2(e-v-R)+2\\
+&=2(f-1)+2\\
+&=2f.
+\end{aligned}
+\]
+
+Substitution into (4.1) gives the exact identity
+
+\[
+\boxed{
+\sigma_C=2f-r
+=2f-\operatorname{rank}C_{\rm face}.
+}
+\tag{4.2}
+\]
+
+This proves (1). In particular, the two scalar closure equations per exceptional face
+are globally independent exactly to the extent that the contact framework has no pure
+contact self-stress.
+
+---
+
+## 5. Mixed rigidity bounds the closure corank by `s_Z`
+
+By canonical mixed rigidity (1.1), the left nullity of the mixed active rigidity matrix
+is
+
+\[
+\begin{aligned}
+\dim\ker R_{C\cup H}^T
+&=e+h-(2v-3)\\
+&=s_Z+1.
+\end{aligned}
+\tag{5.1}
+\]
+
+Every pure contact self-stress `lambda in ker R_C^T` extends to a mixed self-stress
+`(lambda,0)` by putting zero on all diameter rows. Thus the pure-contact self-stress
+space is a subspace of the mixed left kernel.
+
+C65 supplies a normalized KKT stress whose diameter part is nonzero, indeed strictly
+positive on every actual diameter row. That mixed stress is not in the pure-contact
+subspace. Consequently
+
+\[
+\sigma_C+1\le s_Z+1,
+\]
+
+so
+
+\[
+\boxed{0\le\sigma_C\le s_Z.}
+\tag{5.2}
+\]
+
+Combining (4.2) and (5.2) yields
+
+\[
+\boxed{
+2f-s_Z
+\le
+\operatorname{rank}C_{\rm face}
+\le2f.
+}
+\tag{5.3}
+\]
+
+In particular, if `s_Z=0`, all `2f` scalar exceptional-face closure rows are linearly
+independent.
+
+No positivity floor for individual KKT coefficients is used; only the existence of one
+mixed self-stress with nonzero diameter part is needed for the strict codimension.
+
+---
+
+## 6. Hall expansion for every defect-face set
+
+Let `S` be any set of bounded nonquadrilateral faces. Let `C_S` be the submatrix of
+`C_face` consisting of the `2|S|` scalar rows belonging to those faces.
+
+Any row dependence of `C_S`, extended by zero coefficients on all other face rows, is
+a row dependence of `C_face`. Hence
+
+\[
+2|S|-\operatorname{rank}C_S
+\le
+2f-r
+=\sigma_C.
+\tag{6.1}
+\]
+
+Therefore
+
+\[
+\operatorname{rank}C_S
+\ge2|S|-\sigma_C.
+\tag{6.2}
+\]
+
+Let `N(S)` be the set of complete trains having at least one terminal contact-edge
+occurrence on a face in `S`. The rows of `C_S` are supported only on the columns
+`N(S)`, so
+
+\[
+\operatorname{rank}C_S\le|N(S)|.
+\]
+
+Thus
+
+\[
+\boxed{
+|N(S)|
+\ge2|S|-\sigma_C
+\ge2|S|-s_Z.
+}
+\tag{6.3}
+\]
+
+This is finite and applies to every subfamily, not only to all exceptional faces.
+
+For `s_Z=0`, every `m` bounded defect faces collectively touch at least `2m` distinct
+complete trains. More generally all Hall deficits, over all subsets simultaneously,
+are paid from the single global budget `sigma_C<=s_Z`.
+
+---
+
+## 7. Outer-to-outer train capacity
+
+Let `L_{OO}` be the number of complete trains whose two terminal occurrences lie on
+the outer face. Such a train contributes a zero column to `C_face`.
+
+Conversely, audited-working §132 excludes a nontrivial train returning to one bounded
+face, and the endpoint-multigraph theorem excludes a bounded singleton loop. Hence a
+train with a bounded endpoint contributes a nonzero endpoint coefficient to at least
+one bounded-face row. Therefore the zero columns of `C_face` are exactly the
+outer-to-outer trains.
+
+Since deleting `L_{OO}` zero columns leaves at most `T-L_{OO}` columns carrying the
+rank,
+
+\[
+r\le T-L_{OO}.
+\]
+
+Using (4.2) and the exact train ledger (1.5),
+
+\[
+\begin{aligned}
+L_{OO}
+&\le T-r\\
+&=h-s_Z+2f-(2f-\sigma_C)\\
+&=h-s_Z+\sigma_C\\
+&\le h.
+\end{aligned}
+\]
+
+Thus
+
+\[
+\boxed{L_{OO}\le h.}
+\tag{7.1}
+\]
+
+There is a one-unit strengthening whenever `f>0`. The coordinate subspace supported
+only on the `L_{OO}` outer-to-outer trains lies in `ker C_face`. If at least one bounded
+face exists, this subspace does not contain the all-trains rotation vector `1`.
+Therefore it gives `L_{OO}` independent non-Euclidean contact flexes. Mixed rigidity
+maps them injectively to the `h` diameter first-variation coordinates. KKT stationarity
+puts the image inside the codimension-one hyperplane perpendicular to the positive
+diameter multiplier vector `beta`. Hence
+
+\[
+\boxed{
+f>0\quad\Longrightarrow\quad L_{OO}\le h-1.
+}
+\tag{7.2}
+\]
+
+When `f=0`, the common rotation lies in the outer-train coordinate subspace and the
+correct bound is only `L_{OO}\le h`; this is consistent with the exact pure-tooth
+train-shear normal form.
+
+---
+
+## 8. Transposed direction-network interpretation
+
+The transpose of `C_face` is a grounded direction network on the endpoint multigraph.
+Associate a vector `y_F in R^2` to every bounded defect face and ground the outer face
+at zero. A left-row dependence satisfies one scalar equation per complete train.
+
+If train `tau` has bounded endpoints on faces `F,G`, its equation has the form
+
+\[
+(\varepsilon_F y_F+\varepsilon_G y_G)\cdot Ju_\tau=0,
+\tag{8.1}
+\]
+
+with incidence signs `varepsilon_F,epsilon_G in {+-1}` determined by the chosen face
+boundary orientations and the chosen projective train orientation. If the other train
+endpoint is outer, the equation is
+
+\[
+ y_F\cdot Ju_\tau=0
+\tag{8.2}
+\]
+
+after absorbing the nonzero incidence sign. The precise signs are irrelevant to the
+rank and Hall conclusions above.
+
+Equation (4.2) says the motion dimension of this grounded direction network is exactly
+`σ_C`, not an uncontrolled face-topology error. This gives a concrete next target:
+combine the phase-pure corridor directions of §133 with the Hall expansion (6.3) to
+force more than `s_Z` independent direction-network motions or an outer-train capacity
+violation.
+
+---
+
+## 9. Hostile audit and scope
+
+The following failure modes were checked explicitly.
+
+- **Contact-isolated source points:** retained in the full source and absent from the
+  core rigidity matrices; no full-source affine-kernel extension is made.
+- **Bridges/articulations:** allowed on the outer face. Bounded face boundaries span the
+  cycle space even in their presence, and the integration in Lemma 3.1 remains valid.
+- **Face occurrence signs:** retained in (3.1). The Hall proof uses only column support,
+  not a guessed unsigned incidence matrix.
+- **Pure contact self-stress:** not declared impossible. Contact minimality only makes
+  every contact strong in the union of KKT supports; boundary KKT stresses may still
+  have zero coefficients. The exact theorem therefore keeps `σ_C` and bounds it by
+  `s_Z` instead of setting it to zero.
+- **Same-face train returns:** used only to identify the zero columns in §7, not in the
+  core corank theorem (4.2)--(6.3).
+- **Theorem authority:** unchanged. The result is proof-only and depends on the
+  audited-working stopped-train decomposition.
+
+**Disposition:** exact proof-only structural theorem. It does not close C-II. The new
+full-core obligation is to violate (6.3) or (7.2) using the actual phase/corridor
+geometry, or to convert the surviving high-expansion direction network into a strict
+diameter descent.

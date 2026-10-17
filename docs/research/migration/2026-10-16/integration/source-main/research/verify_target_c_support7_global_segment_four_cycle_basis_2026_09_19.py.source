@@ -1,0 +1,150 @@
+#!/usr/bin/env python3
+"""Exact finite certificate for a canonical side+four-cycle basis of L(K8).
+
+The reciprocal segment graph is L(K8): 28 segment vertices and 168 comparison
+edges. This verifier constructs 56 triangle-side cycles and a canonical set of
+85 cross-root four-cycles. Exact modular elimination proves the 141 rows are
+independent, hence form a full cycle-space basis because L(K8) is connected and
+has cycle rank 168-28+1=141.
+
+A nonzero minor modulo a prime is a nonzero integer minor, so the modular rank
+check is an exact certificate of rational/integer independence, not a floating
+point computation.
+"""
+from itertools import combinations
+
+V = tuple(range(8))
+SEGMENTS = tuple(combinations(V, 2))
+SIDX = {e: i for i, e in enumerate(SEGMENTS)}
+
+LEDGES = []
+LIDX = {}
+for i, j in combinations(range(len(SEGMENTS)), 2):
+    if set(SEGMENTS[i]) & set(SEGMENTS[j]):
+        LIDX[(i, j)] = len(LEDGES)
+        LEDGES.append((i, j))
+
+assert len(SEGMENTS) == 28
+assert len(LEDGES) == 168
+assert len(LEDGES) - len(SEGMENTS) + 1 == 141
+
+
+def seg(a, b):
+    return SIDX[tuple(sorted((a, b)))]
+
+
+def line_cycle(segment_vertices):
+    row = [0] * len(LEDGES)
+    seq = list(segment_vertices)
+    for x, y in zip(seq, seq[1:] + seq[:1]):
+        if x < y:
+            row[LIDX[(x, y)]] += 1
+        else:
+            row[LIDX[(y, x)]] -= 1
+    return row
+
+
+def k8_cycle(vertices):
+    vs = list(vertices)
+    es = [seg(vs[i], vs[(i + 1) % len(vs)]) for i in range(len(vs))]
+    return line_cycle(es)
+
+
+def side_triangle(a, b, c):
+    return line_cycle((seg(a, b), seg(b, c), seg(a, c)))
+
+
+def star_triangle(a, b, c, d):
+    return line_cycle((seg(a, b), seg(a, c), seg(a, d)))
+
+
+def rank_mod_prime(rows, p=1_000_000_007):
+    """Exact lower bound on Q-rank; full row rank modulo p proves Q independence."""
+    a = [[x % p for x in row] for row in rows]
+    m = len(a)
+    n = len(a[0]) if m else 0
+    r = 0
+    for c in range(n):
+        pivot = next((i for i in range(r, m) if a[i][c]), None)
+        if pivot is None:
+            continue
+        a[r], a[pivot] = a[pivot], a[r]
+        inv = pow(a[r][c], p - 2, p)
+        a[r] = [(x * inv) % p for x in a[r]]
+        for i in range(m):
+            if i == r or a[i][c] == 0:
+                continue
+            q = a[i][c]
+            a[i] = [(x - q * y) % p for x, y in zip(a[i], a[r])]
+        r += 1
+        if r == m:
+            break
+    return r
+
+
+SIDE = [side_triangle(*t) for t in combinations(V, 3)]
+assert len(SIDE) == 56
+assert rank_mod_prime(SIDE) == 56
+
+# Canonical 85 cross-root four-cycles, all containing reciprocal point 0.
+# For every 1 <= a < b < c <= 7 take
+#   A(a,b,c) = 0-a-b-c-0,
+#   B(a,b,c) = 0-a-c-b-0.
+# For every 2 <= b < c <= 7 also take
+#   C(b,c)   = 0-b-1-c-0.
+FOUR_A = []
+FOUR_B = []
+FOUR_C = []
+for a, b, c in combinations(range(1, 8), 3):
+    FOUR_A.append(k8_cycle((0, a, b, c)))
+    FOUR_B.append(k8_cycle((0, a, c, b)))
+    if a == 1:
+        FOUR_C.append(k8_cycle((0, b, 1, c)))
+
+assert len(FOUR_A) == 35
+assert len(FOUR_B) == 35
+assert len(FOUR_C) == 15
+FOUR_BASIS = FOUR_A + FOUR_B + FOUR_C
+assert len(FOUR_BASIS) == 85
+
+FULL_BASIS = SIDE + FOUR_BASIS
+assert len(FULL_BASIS) == 141
+assert rank_mod_prime(FULL_BASIS) == 141
+
+# Count all 210 K8 four-cycles. Since FULL_BASIS is already a full basis of the
+# entire line-graph cycle space, all of these and every longer line-graph cycle
+# are rational linear combinations of FULL_BASIS.
+ALL4 = []
+for a, b, c, d in combinations(V, 4):
+    ALL4.extend((
+        k8_cycle((a, b, c, d)),
+        k8_cycle((a, b, d, c)),
+        k8_cycle((a, c, b, d)),
+    ))
+assert len(ALL4) == 3 * 70 == 210
+
+# Representative star-triangle reduction inside K4. Relabeling gives the same
+# identity for every one of the 280 root-star triangles:
+#
+# 2 S_0(1,2,3)
+#   = -T_012 + T_013 - T_023 - T_123
+#     + C_0123 - C_0132 - C_0213.
+S = star_triangle(0, 1, 2, 3)
+terms = (
+    (-1, side_triangle(0, 1, 2)),
+    (+1, side_triangle(0, 1, 3)),
+    (-1, side_triangle(0, 2, 3)),
+    (-1, side_triangle(1, 2, 3)),
+    (+1, k8_cycle((0, 1, 2, 3))),
+    (-1, k8_cycle((0, 1, 3, 2))),
+    (-1, k8_cycle((0, 2, 1, 3))),
+)
+rhs = [sum(coeff * row[j] for coeff, row in terms) for j in range(len(LEDGES))]
+assert rhs == [2 * x for x in S]
+
+print("PASS: canonical side+four-cycle basis of L(K8)")
+print("L(K8) vertices/edges/cycle-rank: 28 168 141")
+print("side triangles: 56 independent")
+print("canonical cross-root four-cycles: 85 = 35 + 35 + 15")
+print("combined basis rank: 141")
+print("all other cycle identities are linear consequences")

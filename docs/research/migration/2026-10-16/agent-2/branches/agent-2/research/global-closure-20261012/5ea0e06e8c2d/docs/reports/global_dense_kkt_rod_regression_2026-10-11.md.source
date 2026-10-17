@@ -1,0 +1,218 @@
+<!-- theorem-state: {"artifact_id":"ART-4EB284CE8AA2","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Dense triangle-free KKT sources with a strict nonlinear improvement
+
+**Date:** 2026-10-11  
+**Base commit:** `ab6dd3336f9f8d440f2bada76edb32153391cddc`  
+**State version:** `2026-10-10.audit.234`  
+**Target:** independent global Level I population/competitor route  
+**Classification:** proved candidate awaiting promotion; regression  
+**Level I:** STILL OPEN. None of the constructed sources is globally optimal.
+
+## 1. Exact failed bridge
+
+An intended global closure might try
+
+```text
+triangle-free + full KKT identities + finite affine optimality
+  -> population excess o(D^(2/3))
+  -> contradiction with canonical global-minimizer population reserve
+  -> Level I
+```
+
+The first implication is false. The construction below retains the full source,
+including every unstressed label, and certifies a strict nonlinear competitor.
+This report does not consult another worker's proposed solution.
+
+## 2. The unbounded regression theorem
+
+**Theorem (proved candidate awaiting promotion).** There are constants kappa>0,
+C<infinity and triangle-free unit-separated planar sources A_D for all
+sufficiently large even integers D, with n_D=|A_D|, such that:
+
+1. Their unique actual diameter pair has length D.
+2. They satisfy the normalized nonnegative KKT equilibrium, scalar, and tensor
+   identities for the entire source.
+3. No feasible affine image of A_D has diameter below D.
+4. Their population satisfies
+   `n_D >= pi D^2/(2sqrt(3)) + kappa D^(2/3) - C sqrt(D)`.
+5. A simultaneous nonlinear motion followed by a uniform contraction gives an
+   n_D-point unit-separated source of diameter strictly below D.
+
+In particular their population excess
+`g_D=n_D-1-pi D^2/(2sqrt(3))` satisfies
+`liminf g_D/D^(2/3) >= kappa > 0`. They refute a density upper bound
+`g_D=o(D^(2/3))` under the first three hypotheses, even at arbitrarily large
+cardinalities. They are not local minimum-diameter packings and do not satisfy
+the canonical C-II post-ZF hypotheses.
+
+## 3. Canonical input and its precise use
+
+The sole substantial packing input is the construction in the independently
+promoted `C-TRIANGULAR-LATTICE-STRICT-D-COMPETITOR-RESERVE`, audited in
+`docs/audits/target_c_triangle_free_lattice_competitor_reserve_independent_audit_2026-10-10.md`.
+The reconstruction there gives constants c in (0,1] and kappa>0 and, for every
+D>=2, a finite subset Y_D of a translate of the unit triangular lattice with
+
+\[
+Y_D\subset B(0,D/2+cD^{-1/3}),\quad
+\operatorname{diam}(Y_D)<D,\quad
+|Y_D|\ge\frac{\pi D^2}{2\sqrt3}+\kappa D^{2/3}.
+\]
+
+Here Y_D is used *before* its triangle-free shear. The containing-disk property
+comes from that audited construction, not from an unsupported general claim
+about all sets satisfying the population bound. No global optimality of Y_D is
+used. The second input, used for the affine obstruction, is the canonical
+tensor identity in shared theory `01-local-structure.md`, Theorem 4.1; its finite
+affine consequence is proved in the companion report
+`global_affine_obstruction_and_whole_set_reassignment_2026-10-11.md`, Section 2.
+
+## 4. Add a diametral unit rod at a subleading population cost
+
+Put R=D/2=m, where m is an integer. Choose a lattice site z with |z|<=1; the
+unit triangular lattice has covering radius less than one. Choose one unit
+lattice generator u. Add the complete unit rod
+
+\[
+L=\{z+j u:-m\le j\le m\},\qquad E_\pm=z\pm R u.
+\]
+
+Before adding it, delete every p in Y_D with
+`|p-E_+|>=D` or `|p-E_-|>=D`. At most C sqrt(D) points are deleted.
+
+**Deletion bound.** Write q=p-z, x=q dot u and y=q dot u_perp. Since
+`|p|<=R+1` and `|z|<=1`, we have |q|<=R+2. If |q-Ru|>=2R, then
+
+\[
+x\le -R+2+2/R\le -R+3 \quad(R\ge2).
+\]
+
+For R>=4 all such q therefore lie in the rectangle
+
+\[
+-R-2\le x\le -R+3,\qquad |y|\le\sqrt{10R}.
+\]
+
+The second inequality follows by subtracting (R-3)^2 from (R+2)^2.
+Disjoint radius-1/2 disks around the unit-separated points fit in the rectangle
+expanded by 1/2, giving at most
+`(24/pi)(2sqrt(10R)+1)` points. The other endpoint has the same bound.
+This is a full unit-separation count, with no lattice discrepancy assumption
+for a thin cap.
+
+Let Z_D be the surviving Y_D union L, identifying duplicate labels. All labels
+remain in the same translated triangular lattice, hence are unit-separated.
+Every surviving old point has distance strictly below D from both rod ends.
+Convexity of the norm then bounds its distance to every intermediate rod label
+strictly below D. Old-old pairs were already strictly below D. Rod-rod pairs
+have length D only for E_+ E_-. Thus Z_D has the unique actual diameter pair
+E_+ E_- and the stated population lower bound.
+
+## 5. Shear away every contact triangle while preserving the unique diameter
+
+Translate z to zero and write each source label as a u+b v, with integers a,b,
+where initially u=(1,0), v=(1/2,sqrt(3)/2). Change v to the unit vector of angle
+pi/3+eta, with eta>0 sufficiently small; keep u fixed. Cardinality is preserved.
+
+The old unit difference labels are exactly `(±1,0)`, `(0,±1)` and `(1,-1)`,
+`(-1,1)`. The last two become strictly longer than one and the first four
+remain unit. Every other old difference was strictly longer than one, and every
+old upper pair except the two rod ends was strictly below D. Finitely many
+strict margins therefore permit a positive eta preserving all those inequalities.
+The rod ends remain ±m u, exactly D apart. Call the result A_D.
+
+Its contacts change precisely one integer coordinate by one, so the coloring
+`(a+b) mod 2` is proper. Its contact graph is triangle-free. This argument is
+for each finite source; no uniform positive shear size is claimed.
+
+## 6. Full KKT and finite affine optimality
+
+Give each of the D rod contacts multiplier alpha=D and every other contact
+multiplier zero. Give the unique rod-end diameter pair beta=1.
+
+Every intermediate rod force cancels. Each endpoint's contact force equals
+the diameter force D u with the corresponding sign. Every other source label
+has zero net force. The complete-source normalizations and tensors are
+
+\[
+\sum_C\alpha=D^2,\qquad \sum_H\beta=1,\qquad
+\sum_C\alpha r r^{\mathsf T}=D^2 u u^{\mathsf T}
+=\sum_H\beta r r^{\mathsf T}.
+\]
+
+Tracing the tensor equality against M^T M gives, for any unit-separated affine
+image of squared diameter T', `D^2<=T'`. This is exact finite affine optimality,
+not merely stationarity under an infinitesimal shear.
+
+## 7. Explicit simultaneous nonlinear improvement
+
+For each integer label (a,b) choose the unique velocity w_ab satisfying
+
+\[
+u\cdot w_{ab}=b,\qquad v\cdot w_{ab}=a^2-m^2.
+\]
+
+The vectors u,v are independent, so these equations determine a planar velocity.
+Both rod ends (±m,0) have velocity zero.
+
+For a horizontal unit contact, the relative velocity has zero u projection
+and nonzero v projection `2a+1`. For a vertical unit contact, it has zero
+v projection and nonzero u projection one. Thus every old unit contact obeys
+
+\[
+|r+t\Delta w|^2=1+t^2|\Delta w|^2>1 \quad(t\ne0).
+\]
+
+All old noncontacts stay above one for sufficiently small t; every old upper
+pair except the rod-end pair stays below D. The two rod ends stay fixed.
+Consequently the entire perturbed source has diameter D and minimum separation
+s_t>1. Any scale lambda with `1/s_t<lambda<1` makes every pair remain strictly
+above one and makes the diameter lambda D strictly below D. This proves the
+strict same-cardinality improvement, and the final source is triangle-free
+because it has no unit contacts.
+
+If normalization to minimum separation exactly one is desired, scale by 1/s_t
+instead. By taking t sufficiently small, new unit contacts can only come from
+old unit contacts: each old noncontact has a fixed positive gap and s_t tends
+to one. The initial contact graph was triangle-free, so that normalization
+also cannot create a unit triangle.
+
+This motion violates the necessary second-order condition for a local
+minimum. It therefore supplies no regression against shared theory
+`02-nonlinear-and-regressions.md`, Theorem 11.1, or the canonical C-II rigidity
+and source-minimality reductions. Precisely this distinction is the point of
+the construction.
+
+## 8. Finite exact certificate
+
+`research/verify_global_dense_kkt_rod_2026_10_11.py` checks an eleven-label rational
+instance with u=(1,0), v=(8/17,15/17), rod endpoints ±2u, alpha=4 on the four
+rod contacts and beta=1 on their unique diameter. It checks every full-source
+pair, every equilibrium equation, the scalar and tensor identities, both fixed
+endpoints, all contact-opening identities, and a finite motion t=1/1000 followed
+by lambda=9999999/10000000. All arithmetic is rational.
+
+The fixture certifies the full-pair mechanism only. The asymptotic population
+bound is the analytic construction in Sections 3--5, not a consequence of
+eleven-point output or a numerical optimality calculation.
+
+## 9. Frontier effect and remaining global lemma
+
+No canonical theorem-state change or Level I conclusion follows. This rules out
+deriving an o(D^(2/3)) population-excess upper bound from triangle-freeness,
+normalized KKT identities, and affine optimality alone, even with a positive
+D^(2/3) excess. A surviving global proof must use stronger source information,
+such as the full second-order conditions and contact-minimality, or prove a
+finite whole-source competitor directly.
+
+The particular candidate population endpoint remains conditional: prove, for
+some fixed epsilon>0 and every sufficiently large triangle-free **global**
+minimizer, `g_A <= (kappa0-epsilon)D^(2/3)`, where
+`kappa0=(3pi/(5a0))(3a0/16)^(2/3)` and `a0=sqrt(3)/2`. The promoted
+`C-GLOBAL-POPULATION-EXCESS-ASYMPTOTIC-COEFFICIENT` supplies the contradictory
+lower bound `g_A >= kappa0 D^(2/3)-O(D^theta)` for a fixed theta<2/3.
+The proposed upper bound is **not proved here**, and its global-minimizer
+hypothesis cannot be replaced by the weaker hypotheses regressed above.
+
+Promotion recommendation: preserve as an unreviewed candidate/regression; obtain
+an independent proof and scope audit before changing any canonical claim.

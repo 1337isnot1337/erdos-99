@@ -1,0 +1,136 @@
+# Target C: nine-no-root k=5, D=-1, d_root=0, p=5 support narrowing
+
+Date: 2026-09-29
+
+Status: proof-level touched-support reduction followed by an executed exact finite support-level relaxation. This does **not** close the branch. It narrows the only nine-no-root k=5 arithmetic branch that does not already have an exact closure certificate to eight S_7 support-multiset orbits.
+
+Companion verifier:
+
+research/verify_target_c_support7_global_segment_relative_nine_noroot_k5_dminus1_d0p5_support_narrowing_2026_09_29.cpp
+
+It reuses the exact current-main geometry helper research/k5_d0p4_geom.hpp.
+
+Executed verifier blob: 12c72c322c61a1b2159bab6bb7ebf70409311b42.
+
+Geometry helper blob: 407b8626686fa53b4a3dfe6cc2cdf89dced47525.
+
+Those are the Git blob hashes of the exact sources compiled and executed for the census below.
+
+## 1. Branch data and h <= 22
+
+For this branch
+
+    k=5, D=-1, d_root=0, p=5,
+
+and the nine-coordinate external coefficient-constraint space P has rank four. Current main gives the generalized-weight floor
+
+    (d1,d2,d3,d4)(P) >= (3,4,6,7).
+
+Let T be the touched triangle-block family, C the touched actual-complete blocks, E the touched actual-empty blocks, and put h=|T|, e=|E|.
+
+The face-local identity for k=5 gives
+
+    rank H(T) - rank H(C) >= 5.
+
+The full triangle-row space on seven labels has rank 15. Since d_root=0, the full actual complete-root family is independent, so C is independent and
+
+    |C| = rank H(C) <= 10.
+
+The total selected incomplete-root cost is p=5. Every touched nonempty incomplete block costs at least one selected root row, so there are at most five such blocks. Therefore
+
+    e >= h - 15.
+
+Every actual-empty touched block contributes a nonzero local coefficient space contained in P. Its coordinate support is contained in the set of external cycles touching that triangle block. Since d1(P)>=3, every actual-empty block is touched by at least three of the nine no-root cycles.
+
+Nine no-root four-cycles contribute exactly 36 triangle-block incidences. Every touched nonempty block contributes at least one incidence. Hence
+
+    36 >= 3e + (h-e)
+       = h + 2e
+       >= h + 2(h-15)
+       = 3h - 30,
+
+so
+
+    h <= 22.
+
+## 2. Sound support-level relaxation
+
+The verifier enumerates multisets of nine tetrahedral supports with multiplicity at most three, modulo S_7. It forgets orientation and coefficient data whenever doing so enlarges the candidate set.
+
+For a touched triangle block b, let I_b be the set of external occurrences whose tetrahedral supports contain b. The current-main local-rank repair proves only the one-way support implication that a repeated containing tetrahedral support forces the local empty space E_b to have dimension two. It explicitly rejects the old false converse. The verifier therefore uses the following safe relaxation:
+
+- if a containing support repeats, it permits the block to be empty only as a rank-two local space, requiring |I_b|>=4 by d2>=4;
+- if no containing support repeats, it permits rank one when |I_b|>=3 and also permits rank two when |I_b|>=4.
+
+Thus every orientation-realizable empty block is represented.
+
+For two proposed local empty spaces with occurrence sets I,J, it imposes only necessary consequences of (d1,d2,d3,d4)>=(3,4,6,7):
+
+- line-line: |I intersect J|>=3 or |I union J|>=4;
+- line-plane: |I intersect J|>=3 or |I union J|>=6;
+- plane-plane: |I intersect J|>=4, or both |I intersect J|>=3 and |I union J|>=6, or |I union J|>=7.
+
+The five selected nonempty incomplete blocks are otherwise unconstrained. In particular, the verifier does not require their coefficient constraints to be compatible with P and does not require the chosen local empty spaces to glue to one common rank-four P. These omissions only enlarge the searched family.
+
+For a proposed empty set E, put R=T\E. Any actual state has an independent complete subset C of R with
+
+    |R\C| <= 5
+
+and
+
+    rank H(T) - |C| >= 5.
+
+Also |C|<=rank H(R). Therefore every actual state must satisfy
+
+    max(0, |R|-5) <= min(|R|, rank H(R), rank H(T)-5).
+
+The verifier uses only this necessary structural inequality.
+
+## 3. Exact finite census
+
+The verifier independently checks the established Burnside orbit counts for support multisets of sizes zero through nine:
+
+    1, 1, 4, 14, 61, 268, 1283, 6032, 27763, 121458.
+
+It canonical-augments through size eight and then extends to all size-nine orbits. The exact executed census is
+
+    size9_orbits 121458
+    raw_size9_extensions 966977
+    h_le_22_raw_extensions 523527
+    h_le_22_size9_orbits 70084
+    supports_with_empty_candidate 4896
+    relaxed_empty_tests 17770
+    relaxed_survivors 8
+
+The source fails closed unless all counts and the exact survivor list agree with the persisted constants.
+
+Triangle-row ranks are computed modulo 2^31-1. The verifier checks this Mersenne number by Lucas-Lehmer; every triangle row has squared Euclidean norm three and relevant rank is at most fifteen, so the existing Hadamard argument (2^31-1)^2 > 3^15 certifies all those modular ranks over Q.
+
+The eight surviving support orbits are:
+
+1. [0123]^3 [0124]^3 [0134]^3;
+2. [0123]^3 [0124]^3 [0134]^2 [0234];
+3. [0123]^3 [0124]^3 [0134]^2 [0235];
+4. [0123]^3 [0124]^3 [0135]^2 [0234];
+5. [0123]^3 [0124]^2 [0134]^2 [0234]^2;
+6. [0123]^3 [0124]^2 [0134]^2 [0234] [1234];
+7. [0123]^3 [0124]^2 [0134]^2 [0235]^2;
+8. [0123]^2 [0124]^3 [0135]^3 [0145].
+
+This is a necessary-condition list, not a list of realizations.
+
+## 4. Four-coordinate rank-two punctures are boundary shadows
+
+There is also a proof-level restriction on any remaining coefficient space P. Fix a four-coordinate deletion S and let q be the puncture rank loss. Since d3(P)>=6, q<=2. If q=2, defect transport gives
+
+    D(B\S) = -1 + 2*4 - 3*2 = 1.
+
+The punctured five-row coefficient space has rank two, hence k=3. The unstripped incomplete-root cost is still p=5. The committed sharp five-no-root k=3,p=4 theorem gives D>=3 whenever stripping untouched incomplete rows lowers the cost to at most four. Therefore every q=2 four-coordinate puncture must retain all five units of incomplete-root cost and land in the exact five-no-root k=3,p=5 boundary D=1.
+
+This does not by itself discard one of the eight support orbits, but it sharply constrains the coefficient/root assignments that a final orientation-level certificate must examine.
+
+## 5. Remaining bottleneck
+
+The full D=-1,d_root=0,p=5 branch is not closed. The remaining task is now finite and concentrated on the eight support orbits above. The next certificate should restore enough orientation/coefficient information to test whether the selected nonempty incomplete blocks plus the actual empty local spaces can generate one rank-four P with generalized weights at least (3,4,6,7) while satisfying the exact root relation-rank condition. The rank-two puncture lemma above gives an additional filter: any four-coordinate rank loss two must retain all five units of incomplete-root cost and land on the five-row D=1,p=5 boundary.
+
+A separate audited certificate for the D=-2,d_root=1,p=1 branch exists on a pushed branch but was not on authoritative main when this note was prepared.

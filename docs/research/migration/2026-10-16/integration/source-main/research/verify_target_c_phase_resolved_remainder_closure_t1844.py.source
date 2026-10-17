@@ -1,0 +1,263 @@
+#!/usr/bin/env python3
+"""Exact outward certificate for the phase-resolved paired-remainder exclusion t<=1.844.
+
+This strengthens the paired-remainder t<=1.84370 certificate by retaining the actual
+three phase occurrence masses instead of replacing both leaves by one common floor.
+The final phase allocation reduces to a one-variable strongly convex function.
+"""
+from fractions import Fraction as Q
+from math import factorial, isqrt
+
+
+def atan_inv_bounds(q, n):
+    s = Q(0)
+    for k in range(n):
+        term = Q(1, (2*k+1)*q**(2*k+1))
+        s += term if k % 2 == 0 else -term
+    nxt = Q(1, (2*n+1)*q**(2*n+1))
+    return (s, s+nxt) if n % 2 == 0 else (s-nxt, s)
+
+
+def sqrt_bounds(lo, hi, scale):
+    a = isqrt((lo.numerator*scale*scale)//lo.denominator)
+    b = isqrt((hi.numerator*scale*scale)//hi.denominator)+1
+    return Q(a,scale), Q(b,scale)
+
+
+def sin_bounds(x, n=30):
+    s = Q(0)
+    for k in range(n):
+        term = x**(2*k+1)/factorial(2*k+1)
+        s += term if k % 2 == 0 else -term
+    nxt = x**(2*n+1)/factorial(2*n+1)
+    return (s,s+nxt) if n % 2 == 0 else (s-nxt,s)
+
+
+def cos_bounds(x, n=30):
+    s = Q(0)
+    for k in range(n):
+        term = x**(2*k)/factorial(2*k)
+        s += term if k % 2 == 0 else -term
+    nxt = x**(2*n)/factorial(2*n)
+    return (s,s+nxt) if n % 2 == 0 else (s-nxt,s)
+
+
+def F_bounds(z):
+    slo,shi=sin_bounds(z/6)
+    return z-6*shi, z-6*slo
+
+
+def phase_energy_bounds(z):
+    slo,shi=sin_bounds(z/2)
+    return z-2*shi, z-2*slo
+
+
+def phase_energy_prime_bounds(z):
+    clo,chi=cos_bounds(z/2)
+    return 1-chi, 1-clo
+
+
+SCALE=10**110
+a5l,a5h=atan_inv_bounds(5,110)
+a239l,a239h=atan_inv_bounds(239,35)
+pi_lo,pi_hi=16*a5l-4*a239h,16*a5h-4*a239l
+n3=isqrt(3*SCALE*SCALE)
+sqrt3_lo,sqrt3_hi=Q(n3,SCALE),Q(n3+1,SCALE)
+K_lo,K_hi=Q(2)/sqrt3_hi,Q(2)/sqrt3_lo
+Delta_lo,Delta_hi=pi_lo/(2*sqrt3_hi),pi_hi/(2*sqrt3_lo)
+s_lo,s_hi=sqrt_bounds(Delta_lo,Delta_hi,SCALE)
+rcrit_lo,_=sqrt_bounds(Q(20,29),Q(20,29),SCALE)
+C707_lo,C707_hi=2*s_lo+Q(7707,1_000_000),2*s_hi+Q(7707,1_000_000)
+
+# Full structural endpoint.
+T=Q(461,250)               # 1.844 exactly
+c=Q(21,20)                 # residual stability factor 1.05
+H=Q(1121,500000)           # 0.002242
+Rt_lo=Q(9,2)*T-2*pi_hi-C707_hi
+Rt_hi=Q(9,2)*T-2*pi_lo-C707_lo
+
+# 0. Residual-stability scope gate.
+F1848_lo,_=F_bounds(Q(231,125))
+assert F1848_lo > Q(29,1000)
+Unet_scope_hi=Q(9,2)*T-2*pi_lo-2*F1848_lo
+assert Unet_scope_hi < Q(196,100) < Q(2013,1000)
+
+# 1. Residual slack localization h<H.
+dH_hi=(Rt_hi-H)/2
+assert 0<dH_hi<Q(52,1000)
+B_H_hi=c*c*H*H/(2*(1-dH_hi))
+A_H_lo=pi_lo-T/2-c*H-B_H_hi
+FA_H_lo,_=F_bounds(A_H_lo)
+loc_margin=FA_H_lo-dH_hi
+assert loc_margin > Q(4,10_000_000)
+
+Fprime_cap=Q(67,500)
+Qx_upper=-1/(2*Fprime_cap)+1
+Qh_upper=-1/(2*Fprime_cap)+c+c*c*Q(103,1000)/(1-Q(52,1000))
+assert Qx_upper<Q(-27,10)
+assert Qh_upper<Q(-24,10)
+
+# 2. Dominant-orbit box.
+WBAR=Q(382915,200000)      # 1.914575
+assert C707_hi+H < WBAR
+RMAX=c*H
+E0=Q(45344914,50000000)    # 0.90689828
+assert Delta_lo-RMAX*RMAX/4 > E0
+
+delta_max_hi=Rt_hi/2
+assert delta_max_hi<Q(513,10000)
+
+# 3. Retained dominant outer mass z>Z.
+Z=Q(554309,250000)         # 2.217236
+FZ_lo,FZ_hi=F_bounds(Z)
+Fprime_Z_hi=Z*Z/Q(72)
+assert 1-Fprime_Z_hi/(2*(1-delta_max_hi)) > Q(96,100)
+B_x_hi=(1+c*c*H*H-FZ_lo)/(2*(1-delta_max_hi)*(1-delta_max_hi))
+assert B_x_hi<1
+
+hstar_lo=Rt_lo-2*FZ_hi
+hstar_hi=Rt_hi-2*FZ_lo
+assert hstar_lo>0
+assert hstar_hi < H-Q(1,1_000_000)
+cap_excess_hi=(
+    Z+c*c*hstar_hi*hstar_hi/(2*(1-FZ_hi))
+    -pi_lo+T/2+c*hstar_hi
+)
+assert cap_excess_hi < Q(-6,10_000_000)
+assert delta_max_hi > FZ_hi+Q(1,1000)
+
+# 4. Each exact phase has retained occurrence mass >A.
+A=Q(809,1250)              # 0.6472
+assert A<Z/3
+OTHER=(Z-A)/2
+fA_lo,_=phase_energy_bounds(A)
+fO_lo,_=phase_energy_bounds(OTHER)
+phase_margin=fA_lo+2*fO_lo-delta_max_hi
+assert phase_margin > Q(1,10_000_000)
+
+# 5. Both leaf train masses are <U0.
+U0=Q(29551,50000)          # 0.59102
+CLOW=WBAR-2*U0
+CHI=Q(211,200)             # 1.055
+alpha=Q(1,10)
+assert CLOW>U0
+assert CLOW<WBAR/2
+assert CLOW*(WBAR-CLOW) < E0-Q(4,100)
+assert CHI>WBAR/2
+assert CHI*(WBAR-CHI) < E0-Q(4,100000)
+
+# Strong pair branch scope on the original configuration, before adverse replacement.
+ratio_hi=(WBAR-A/2-K_lo)/U0
+assert CHI<K_lo
+assert ratio_hi<Q(74,100)<rcrit_lo
+
+
+def cap(C):
+    V=WBAR-C-U0
+    AA=1-V/C
+    BB=1-U0/C
+    x=alpha*(C+U0-K_hi)**2
+    y=alpha*(C+V-K_hi)**2
+    return C*(U0+V)-AA*x-BB*y
+
+
+def cap_prime(C):
+    V=WBAR-C-U0
+    AA=1-V/C
+    BB=1-U0/C
+    eU=C+U0-K_hi
+    eV=C+V-K_hi
+    x=alpha*eU*eU
+    y=alpha*eV*eV
+    AAp=(WBAR-U0)/(C*C)
+    BBp=U0/(C*C)
+    return WBAR-2*C-AAp*x-AA*(2*alpha*eU)-BBp*y
+
+
+Dconst=(K_hi*K_hi*WBAR+4*K_hi*U0*U0-4*K_hi*U0*WBAR-U0*U0*WBAR+U0*WBAR*WBAR)
+# This is the inherited exact algebra proving cap''<-2 on the middle interval.
+assert (1+2*alpha)*CLOW**3-alpha*Dconst > CLOW**3
+c0=Q(23139,25000)          # 0.92556
+assert CLOW<c0<CHI
+f0=cap(c0); fp0=cap_prime(c0)
+cap_upper=f0+fp0*fp0/4
+leaf_cap_margin=E0-cap_upper
+assert leaf_cap_margin > Q(5,10_000_000)
+
+# 6. Total bad O-O pair weight across both leaves is <BAD.
+assert U0<WBAR/2
+assert U0*(WBAR-U0) < E0-Q(1,10)
+BAD=Q(1057,20000)          # 0.05285
+disc=(BAD-2*WBAR)**2-8*(2*E0-BAD*U0)
+assert disc<Q(-4,100000)
+
+# 7. Phase-resolved paired-remainder bathtub.
+# For actual retained phase masses z_C,z_U,z_V, each leaf has good pair weight at
+# least [z_i-U0-BAD]_+. Let S=U0+BAD and trim a common good pair submeasure.
+S=U0+BAD
+assert S==Q(64387,100000)
+assert Z>3*S
+GMAX=Z-3*S
+
+# Order the leaves so z_U<=z_V. If z_U<=S there is no forced common pair. Since
+# S<Z/3 and f is convex increasing, the worst no-pair allocation is z_U=S and
+# z_C=z_V=(Z-S)/2; this is E(0) below. If z_U=S+g with 0<g<=GMAX, remove paired
+# terminal occurrence mass 2g from each leaf. The smaller-leaf remainder is S-g.
+# For fixed g, convexity equalizes the center mass and the larger-leaf remainder,
+# producing
+#   E(g)=2 f((Z-S-3g)/2)+f(S-g)+(2-sqrt(3))g.
+g0=Q(31,2500)              # 0.0124, near the unique minimizer
+assert 0<g0<GMAX
+R0=(Z-S-3*g0)/2
+Q0=S-g0
+assert R0>0 and Q0>0
+fR_lo,_=phase_energy_bounds(R0)
+fQ_lo,_=phase_energy_bounds(Q0)
+ALT_LO=2-sqrt3_hi
+E_g0_lo=2*fR_lo+fQ_lo+ALT_LO*g0
+
+# Bound |E'(g0)| outward. E'=a-3 f'(R)-f'(Q).
+fRp_lo,fRp_hi=phase_energy_prime_bounds(R0)
+fQp_lo,fQp_hi=phase_energy_prime_bounds(Q0)
+der_lo=ALT_LO-3*fRp_hi-fQp_hi
+der_hi=(2-sqrt3_lo)-3*fRp_lo-fQp_lo
+der_abs_hi=max(-der_lo,der_hi)
+assert der_abs_hi < Q(9,1_000_000)
+
+# E'' is minimized at g=GMAX, where both remaining one-well masses equal 4S-Z.
+end_mass=4*S-Z
+assert end_mass>0
+sin_end_lo,_=sin_bounds(end_mass/2)
+m_lo=Q(11,4)*sin_end_lo
+assert m_lo>Q(48,100)
+
+# Strong convexity: min E >= E(g0)-E'(g0)^2/(2m).
+final_energy_lo=E_g0_lo-der_abs_hi*der_abs_hi/(2*m_lo)
+final_margin=final_energy_lo-delta_max_hi
+assert final_margin > Q(4,1_000_000)
+
+# If actual common good-pair weight g exceeds GMAX, total retained mass exceeds Z.
+# The center energy is nonnegative and both leaf remainders have mass at least S-g.
+# Hence H(g)=2f(S-g)+(2-sqrt(3))g. Its derivative is a-2f'(S-g), which is
+# minimized at g=GMAX on [GMAX,S]. The endpoint already has ample margin.
+fend_lo,_=phase_energy_bounds(end_mass)
+fpend_lo,fpend_hi=phase_energy_prime_bounds(end_mass)
+high_g_der_lo=ALT_LO-2*fpend_hi
+assert high_g_der_lo > Q(23,100)
+high_g_energy_lo=2*fend_lo+ALT_LO*GMAX
+high_g_margin=high_g_energy_lo-delta_max_hi
+assert high_g_margin > Q(29,1000)
+
+print('PASS: phase-resolved paired remainder excludes full-core Type-II t<=1.844')
+for name,val in [
+    ('scope_U_hi',Unet_scope_hi),('loc_margin',loc_margin),
+    ('WBAR',WBAR),('E0',E0),('delta_max_hi',delta_max_hi),
+    ('hstar_lo',hstar_lo),('hstar_hi',hstar_hi),('cap_excess_hi',cap_excess_hi),
+    ('Z',Z),('A',A),('phase_margin',phase_margin),
+    ('U0',U0),('ratio_hi',ratio_hi),('leaf_cap_margin',leaf_cap_margin),
+    ('BAD',BAD),('bad_disc',disc),('S',S),('GMAX',GMAX),
+    ('g0',g0),('R0',R0),('Q0',Q0),('der_abs_hi',der_abs_hi),
+    ('m_lo',m_lo),('final_energy_lo',final_energy_lo),('final_margin',final_margin),
+    ('high_g_der_lo',high_g_der_lo),('high_g_margin',high_g_margin),
+]:
+    print(name,'=',float(val))

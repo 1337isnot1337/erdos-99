@@ -1,0 +1,87 @@
+# Target C-II — the global two-gap secant is already in the turn simplex
+
+**Date:** 2026-09-19  
+**Status:** exact local reduction; theorem-state authority unchanged  
+**Scope:** every strict closed equilateral force pentagon  
+**Certificate:** `research/verify_target_c_pentagon_global_secant_redundancy_2026_09_19.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The sharp nonlinear two-gap closure inequality used in the orbit-129 exclusion is
+
+\[
+x_{k+2}+x_{k+3}\le M(x_k),
+\qquad
+M(x)=2\left[1-\frac1\pi\arccos\!\left(\frac12-\cos\frac{\pi x}{2}\right)\right],
+\tag{1}
+\]
+
+for `0<x<2/3`. The function `M` is strictly convex, with endpoint values
+
+\[
+M(0)=\frac23,
+\qquad
+M\!\left(\frac23\right)=1.
+\tag{2}
+\]
+
+Therefore its full-domain chord is
+
+\[
+M(x)\le \frac23+\frac x2.
+\tag{3}
+\]
+
+At first sight, (1)-(3) give a new linear necessary condition
+
+\[
+x_{k+2}+x_{k+3}\le \frac23+\frac{x_k}{2}.
+\tag{4}
+\]
+
+They do not. Equation (4) is already exactly contained in the audited pentagon turn simplex.
+
+Let
+
+\[
+q_i=x_i+x_{i+1}-x_{i+3},
+\qquad
+\sum_i x_i=2.
+\tag{5}
+\]
+
+The turn-simplex theorem gives
+
+\[
+q_i>\frac13
+\tag{6}
+\]
+
+for every cyclic `i`. Direct coefficient cancellation gives, modulo the turn-sum equality,
+
+\[
+\boxed{
+\frac23+\frac{x_k}{2}-x_{k+2}-x_{k+3}
+=
+\frac12\left(q_k-\frac13\right)
++
+\frac12\left(q_{k-1}-\frac13\right).
+}
+\tag{7}
+\]
+
+Indeed, before substituting `sum x=2`, the difference between the two sides of (7) is exactly
+
+\[
+-\frac12\left(\sum_i x_i-2\right).
+\]
+
+Thus the full-domain chord cut is the average of two adjacent strict simplex facets. It cannot remove any affine cell that already imposes the five `q_i>1/3` inequalities.
+
+This matters for the current support-seven endpoint. Any useful polyhedral approximation to the nonlinear closure inequality (1) must use a proper subinterval of `(0,2/3)`. A subinterval secant can lie strictly below the global chord and can therefore add information, as happened in the exact orbit-129 certificate. A search that simply adds (4) at every face is guaranteed to reproduce no new exclusion.
+
+The next rational-secant attack should therefore proceed in two stages:
+
+1. derive exact affine lower and upper bounds on selected turn variables inside each surviving cell;
+2. only when those bounds place `x_k` in a proper rational subinterval, add an exactly validated secant of `M` on that subinterval and search for a rational Farkas contradiction.
+
+This applies directly to the 6,308-cell generic `H6` endpoint and the remaining generic `H7b`/convex `H8` systems. It removes one tempting but provably redundant search direction. No theorem-state file is changed.

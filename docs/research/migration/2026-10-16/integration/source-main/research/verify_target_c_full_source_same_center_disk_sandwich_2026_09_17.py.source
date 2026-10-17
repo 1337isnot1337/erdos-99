@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+"""Numerical regression for the same-center full-source disk sandwich."""
+import math
+
+for D in (1e3, 1e4, 1e6, 1e10):
+    eta = 3 ** 0.25 * math.sqrt(D)
+    if D / 2 > 2 * eta:
+        inner = D / 2 - 2 * eta
+        outer = D / 2 + eta
+        assert inner > 0
+        haus = max(D / 2 - inner, outer - D / 2)
+        assert abs(haus - 2 * eta) <= 1e-10 * max(1.0, eta)
+
+        # Consequent support-normal angular width at a boundary support point.
+        ratio = inner / outer
+        assert 0 < ratio < 1
+        beta = math.acos(ratio)
+        assert beta > 0
+        assert beta * D ** 0.25 < 10
+
+print("same-center full-source disk sandwich regression: PASS")
+print("Hausdorff bound = 2*3^(1/4)*sqrt(D)")

@@ -1,0 +1,249 @@
+# Target C-II — the no-TB1 branch contains a linear-rank uniformly coercive dipole-cusp subspace
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` quantitative first-order strengthening; no canonical promotion claimed  
+**Scope:** the no-fixed-margin-TB1 side of the high-`t` branch through `t=(q-k)/D<=1.8687`  
+**Dependencies:** deep two-sided exact-phase cusp cells; antipodal dipole direct-sum theorem; exact laminar interval support  
+**Certificate:** `research/verify_target_c_high_t_linear_rank_coercive_dipole_block_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The antipodal direct-sum theorem showed qualitatively that first-order diameter cusps at different exact-antipodal interfaces cannot cancel: each elementary dipole coordinate has its own switching support. The deep two-sided extraction upgrades a positive linear family of those coordinates so that both selected diameter derivatives have a fixed transverse margin.
+
+Combining the two facts gives a uniform norm inequality. The surviving exact-antipodal branch does not merely have linear critical rank; it has a linear-dimensional subspace on which the actual-diameter derivative operator has a `D`-scale lower bound independent of the number of coordinates.
+
+Put
+
+\[
+c={113\over5{,}000{,}000},
+\qquad
+\delta_0={c\over64}={113\over320{,}000{,}000}.
+\tag{QC.1}
+\]
+
+For every fixed exact-phase depth `r`, after passing to the no-fixed-margin-TB1 branch there is a set `E_D^{coer}(r)` of exact-antipodal interfaces with
+
+\[
+\boxed{
+|E_D^{coer}(r)|>{c\over32}D-o(D)
+={113\over160{,}000{,}000}D-o(D).
+}
+\tag{QC.2}
+\]
+
+Every selected interface is the center of the deep two-sided cell from the preceding theorem.
+
+For `i in E_D^{coer}(r)`, let `d^(i)` denote the elementary antipodal dipole coordinate, and let `h_i^- ,h_i^+` be the two selected exact-force diameter bars. Their switching supports are disjoint across different interface indices. For a coefficient vector
+
+\[
+s=(s_i)_{i\in E_D^{coer}(r)}
+\tag{QC.3}
+\]
+
+form the aggregate-critical tangent
+
+\[
+c_s:=\sum_i s_i d^{(i)}.
+\tag{QC.4}
+\]
+
+Let `L_D(c_s)` be the vector of first squared-length derivatives over all actual diameter edges. Then:
+
+### Theorem QC — quantitative direct-sum coercivity
+
+For every coefficient vector `s`,
+
+\[
+\boxed{
+\max_h\bigl(L_D(c_s)_h\bigr)_+
+\ge 2D\sin\delta_0\,\|s\|_\infty,
+}
+\tag{QC.5}
+\]
+
+and simultaneously
+
+\[
+\boxed{
+\max_h\bigl(-L_D(c_s)_h\bigr)_+
+\ge 2D\sin\delta_0\,\|s\|_\infty.
+}
+\tag{QC.6}
+\]
+
+Thus every nonzero tangent in this linear-dimensional subspace has both a definitely lengthening and a definitely shortening actual diameter edge, with quantitative margin proportional to the largest dipole coordinate.
+
+The Euclidean derivative norm satisfies the stronger block estimate
+
+\[
+\boxed{
+\|L_D(c_s)\|_2
+\ge 2\sqrt2\,D\sin\delta_0\,\|s\|_2.
+}
+\tag{QC.7}
+\]
+
+Equivalently, after dividing the diameter-derivative map by `D`, its restriction to the canonical selected dipole-coordinate space has smallest singular value at least
+
+\[
+\boxed{2\sqrt2\sin\delta_0>0}
+\tag{QC.8}
+\]
+
+when the domain is measured in the canonical coefficient `ell^2` norm and the codomain in the actual-diameter derivative `ell^2` norm.
+
+No orthogonality claim is made for the underlying geometric vertex-velocity vectors; (QC.8) is a statement about the canonical dipole coefficient basis fixed by the laminar shear coordinates.
+
+---
+
+## 1. Disjoint support makes each selected coordinate visible independently
+
+For an exact-antipodal interface `i`, the elementary dipole coordinate is the adjacent-row coefficient vector
+
+\[
+d^{(i)}=e_i-e_{i+1}.
+\tag{QC.9}
+\]
+
+The antipodal direct-sum theorem proves that the first actual-diameter derivative created by `d^(i)` is supported exactly on the switching set `X_i`, and that
+
+\[
+X_i\cap X_j=\varnothing
+\qquad(i\ne j).
+\tag{QC.10}
+\]
+
+Therefore, for a general sum (QC.4), the derivative on every edge in `X_i` is exactly the derivative produced by `s_i d^(i)` alone:
+
+\[
+L_D(c_s)|_{X_i}
+=s_iL_D(d^{(i)})|_{X_i}.
+\tag{QC.11}
+\]
+
+No coefficient from another interface can alter, reduce, or cancel those entries.
+
+---
+
+## 2. The selected two-sided bars give a uniform local two-entry block
+
+At every selected center the preceding two-sided theorem gives
+
+\[
+d_\pi([d_i^-],[u_i])\ge\delta_0,
+\qquad
+d_\pi([d_i^+],[u_i])\ge\delta_0,
+\tag{QC.12}
+\]
+
+with the two selected force bars on opposite transverse sides of the row/reaction axis.
+
+For the elementary dipole coordinate, the switching relative velocity is transverse to that axis. Hence
+
+\[
+|L_D(d^{(i)})_{h_i^-}|
+\ge2D\sin\delta_0,
+\qquad
+|L_D(d^{(i)})_{h_i^+}|
+\ge2D\sin\delta_0,
+\tag{QC.13}
+\]
+
+and the two entries have opposite signs.
+
+Multiplying by `s_i` and using (QC.11) gives
+
+\[
+|L_D(c_s)_{h_i^\pm}|
+\ge2D|s_i|\sin\delta_0,
+\tag{QC.14}
+\]
+
+again with opposite signs for every `i` with `s_i!=0`.
+
+Choose an index `i_*` with
+
+\[
+|s_{i_*}|=\|s\|_\infty.
+\]
+
+One of its selected bars gives (QC.5), and the other gives (QC.6).
+
+---
+
+## 3. Euclidean coercivity is a direct sum of disjoint two-entry blocks
+
+Because all selected switching supports are pairwise disjoint, the `2|E_D^{coer}(r)|` distinguished bar entries `h_i^- ,h_i^+` are all different. Therefore
+
+\[
+\begin{aligned}
+\|L_D(c_s)\|_2^2
+&\ge\sum_i
+\left(
+|L_D(c_s)_{h_i^-}|^2
++|L_D(c_s)_{h_i^+}|^2
+\right)\\
+&\ge\sum_i2\left(2D|s_i|\sin\delta_0\right)^2\\
+&=8D^2\sin^2\delta_0\,\|s\|_2^2.
+\end{aligned}
+\tag{QC.15}
+\]
+
+Taking square roots proves (QC.7).
+
+The bound is independent of the number of selected coordinates and independent of the exact-phase depth `r`.
+
+---
+
+## 4. Growing-depth diagonal form
+
+The selected density (QC.2) is uniform in every fixed depth `r`. Apply the diagonal extraction from the deep two-sided theorem. Along a subsequence there are depths `r_D->infinity` and subspaces
+
+\[
+V_D:=\operatorname{span}\{d^{(i)}:i\in E_D^{coer}(r_D)\}
+\tag{QC.16}
+\]
+
+with
+
+\[
+\boxed{
+\dim V_D>{c\over32}D-o(D),
+}
+\tag{QC.17}
+\]
+
+such that every basis coordinate is centered arbitrarily deep inside exact phase and the normalized local KKT switching stress tends to zero.
+
+Nevertheless the normalized first-order diameter derivative operator remains uniformly coercive on `V_D`:
+
+\[
+\boxed{
+\left\|{1\over D}L_D(c_s)\right\|_2
+\ge2\sqrt2\sin\delta_0\,\|s\|_2.
+}
+\tag{QC.18}
+\]
+
+Thus the limit regime has a striking separation:
+
+```text
+KKT switching coefficients -> 0,
+normalized local reactions -> 0,
+exact-phase depth -> infinity,
+but the geometric diameter derivative map retains a fixed spectral gap
+on a linear-rank canonical dipole subspace.
+```
+
+This rules out approximate collective softening inside that subspace. The obstruction is geometric rather than a consequence of a multiplier floor.
+
+---
+
+## 5. Frontier effect
+
+The exact-antipodal branch can no longer use a large number of deep local dipoles to create even an **approximately** invisible first-order collective mode in their canonical span. Disjoint switching support already prevented exact cancellation; the two-sided angular extraction now prevents arbitrarily poor conditioning.
+
+A remaining closure mechanism must therefore leave this linear-rank dipole span, exploit nonlinear motion, or use the ordered train geometry to show that the required family of deep coercive cells itself cannot occur in a diameter minimizer.
+
+No C-II or Level-I closure is claimed.
+
+**Disposition:** proved a `Theta(D)`-dimensional canonical antipodal dipole subspace with a uniform `D`-scale two-sided cusp and an explicit normalized `ell^2` coercivity constant, even along growing-depth exact-phase plateaus with vanishing normalized KKT switching stress. C-II and Level I remain open.

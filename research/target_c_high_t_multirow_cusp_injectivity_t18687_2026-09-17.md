@@ -1,0 +1,472 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "39022a4bbdf60265862bf81af6c556b91c981bb3", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_multirow_cusp_injectivity_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "41105ab1a1f6f46cf89adb3bb962b77f4cdd9421172afbe7208ef7ba17e42775"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — generic high-`t` multirow exact kernels are first-order cusp-injective
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural/no-go theorem  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch with `t=(q-k)/D<=1.8687`  
+**Dependencies:** high-`t` fixed cusp chain; high-`t` three-row exact localization; exact laminar finite multishear; audited Section-157 cut resultants; one-sided diameter-hub interval support  
+**Certificate:** `research/verify_target_c_high_t_multirow_cusp_injectivity_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The fixed-chain theorem supplies arbitrarily long fixed blocks of consecutive high-`t` rectangle rows. The exact multishear gives many formal degrees of freedom on such a block. A natural hope is that four or more rows might provide enough kernel dimension to remove the two-interface first-order cusp found in the three-row theorem.
+
+The generic version of that hope is false.
+
+Fix any integer `r>=2` before taking `D->infinity`, and select the `r+1` consecutive rows
+
+\[
+\tau_0,\tau_1,\ldots,\tau_r
+\tag{MI.1}
+\]
+
+from the high-`t` fixed-chain theorem, all on one side of the common diameter-routing hub. Let
+
+\[
+u_j=(\cos\alpha_j,\sin\alpha_j)
+\tag{MI.2}
+\]
+
+be their coherent real shore orientations, and let
+
+\[
+F_j=M_ju_j,
+\qquad M_j>0,
+\tag{MI.3}
+\]
+
+be the positive Section-157 KKT cut resultants.
+
+Assume the generic strict-phase condition
+
+\[
+\boxed{\alpha_{i+1}\ne\alpha_i\quad(0\le i<r).}
+\tag{MI.4}
+\]
+
+The common phase window has width `o(1)`, so for large `D` this is equivalent to saying that every adjacent pair of real row vectors is nonparallel.
+
+Consider a first-order exact-full-support cancellation vector
+
+\[
+c=(c_0,\ldots,c_r)
+\]
+
+satisfying
+
+\[
+\boxed{\sum_{j=0}^r c_ju_j=0.}
+\tag{MI.5}
+\]
+
+For each interface `i`, let `X_i` be the actual diameter rows whose interval support switches there, and define the KKT-weighted interface derivative
+
+\[
+\mathcal D_i(c)
+:=\sum_{h\in X_i}\beta_h
+{d\over ds}|r_h(s)|^2\Big|_{s=0}.
+\tag{MI.6}
+\]
+
+Then the interface map
+
+\[
+\boxed{
+T:c\longmapsto
+(\mathcal D_0(c),\ldots,\mathcal D_{r-1}(c))
+}
+\tag{MI.7}
+\]
+
+has the following properties.
+
+### Theorem MI.1 — exact interface normal form
+
+Put
+
+\[
+P_i(c):=\sum_{j=0}^ic_ju_j.
+\tag{MI.8}
+\]
+
+For either side of the hub,
+
+\[
+\boxed{
+\mathcal D_i(c)
+=-2(F_{i+1}-F_i)\cdot JP_i(c).
+}
+\tag{MI.9}
+\]
+
+Moreover
+
+\[
+\boxed{
+\sum_{i=0}^{r-1}\mathcal D_i(c)=0.
+}
+\tag{MI.10}
+\]
+
+### Theorem MI.2 — generic cusp injectivity
+
+Under (MI.4),
+
+\[
+\boxed{
+T(c)=0\text{ and }\sum_jc_ju_j=0
+\quad\Longrightarrow\quad
+c=0.
+}
+\tag{MI.11}
+\]
+
+Equivalently, because the full-support kernel has dimension `r-1` and the zero-sum interface space also has dimension `r-1`,
+
+\[
+\boxed{
+T:\ker L\overset{\sim}{\longrightarrow}
+\{d\in\mathbb R^r:\sum_i d_i=0\}
+}
+\tag{MI.12}
+\]
+
+is an isomorphism, where `L(c)=sum_j c_j u_j`.
+
+Thus every nonzero exact-full-support cancellation tangent has a nonzero force-visible first-order cusp. Since its interface aggregates sum to zero, it has at least one positive and at least one negative aggregate. In particular it lengthens a positive-KKT actual diameter edge somewhere and shortens a positive-KKT actual diameter edge somewhere.
+
+So adding more generic high-`t` rows does **not** create a first-order feasible diameter-decreasing direction inside the exact full-support cancellation manifold. Any successful critical direction in this family must use an exact adjacent phase equality, a genuinely second-order mechanism, a deformation that does not cancel the persistent diameter core exactly, or a separate diameter-thrackle contradiction.
+
+---
+
+## 1. The fixed chain gives a finite moving diameter set for every fixed `r`
+
+The fixed-chain theorem gives
+
+\[
+\sum_{i=0}^{r-1}
+\bigl(N_i+L_i+D B_i+S_i+S_{i+1}\bigr)
+<1{,}109{,}000r.
+\tag{MI.13}
+\]
+
+Hence the union
+
+\[
+H_{\rm exc}:=\bigsqcup_{i=0}^{r-1}X_i
+\tag{MI.14}
+\]
+
+of all switching actual diameter rows in the block satisfies
+
+\[
+\boxed{|H_{\rm exc}|<1{,}109{,}000r}
+\tag{MI.15}
+\]
+
+and
+
+\[
+\boxed{
+\sum_{h\in H_{\rm exc}}\beta_h
+<{1{,}109{,}000r\over D}.
+}
+\tag{MI.16}
+\]
+
+The union is disjoint because the block is wholly on one side of the hub: every diameter interval has only one start, respectively only one stop, inside the block.
+
+The same theorem retains a common ordered transverse family of more than `0.0783D-o(D)` columns and gives a real row-phase diameter `O_r(D^-1)`.
+
+---
+
+## 2. The exact finite cancellation manifold has dimension `r-1`
+
+For the selected rows define
+
+\[
+G(\theta_0,\ldots,\theta_r)
+:=\sum_{j=0}^r(R_{\theta_j}u_j-u_j).
+\tag{MI.17}
+\]
+
+If the rows span the plane, then
+
+\[
+DG(0)[c]=J\sum_{j=0}^r c_ju_j
+\tag{MI.18}
+\]
+
+has rank two. The implicit-function theorem therefore makes `G^{-1}(0)` a smooth local manifold of dimension
+
+\[
+(r+1)-2=r-1.
+\tag{MI.19}
+\]
+
+Its tangent space is exactly
+
+\[
+\mathcal K
+:=\left\{c:\sum_{j=0}^r c_ju_j=0\right\}.
+\tag{MI.20}
+\]
+
+For every tangent vector `c in K` there is a local curve on this exact cancellation manifold with tangent `c`.
+
+As in the three-row theorem, one-sided interval support implies that an actual diameter edge intersects the selected block in a prefix or a suffix. Therefore every diameter row outside `H_exc` crosses either all selected cuts or none. Along `G(theta)=0` it is unchanged exactly. Thus the exact finite manifold moves only the `O(r)` switching set (MI.15), while every old unit contact remains exactly unit length.
+
+If all row directions were rank one, the shrinking coherent real phase window would force
+
+\[
+u_0=\cdots=u_r.
+\]
+
+Then
+
+\[
+u_0\cdot G(\theta)
+=\sum_j(\cos\theta_j-1)\le0
+\]
+
+with a locally isolated zero, so the nontrivial exact-cancellation manifold disappears. The present theorem concerns the rank-two branch, which is automatic under the strict-phase assumption (MI.4).
+
+---
+
+## 3. Derivation of the interface normal form
+
+Orient active diameter vectors by increasing selected-layer index, exactly as in the laminar interval-shear theorem.
+
+First suppose the hub lies beyond `tau_r`, so the positive-support active sets are nested increasingly:
+
+\[
+H_0\subseteq H_1\subseteq\cdots\subseteq H_r.
+\tag{MI.21}
+\]
+
+The fresh KKT vector at interface `i` is
+
+\[
+\sum_{h\in X_i}\beta_hr_h
+=F_{i+1}-F_i.
+\tag{MI.22}
+\]
+
+A fresh row in `X_i` crosses exactly the selected cuts `i+1,...,r`. Its first relative-displacement vector is therefore
+
+\[
+J\sum_{j=i+1}^r c_ju_j.
+\]
+
+Using the full-support kernel equation (MI.5), this is
+
+\[
+-JP_i(c).
+\tag{MI.23}
+\]
+
+Hence
+
+\[
+\mathcal D_i(c)
+=2(F_{i+1}-F_i)\cdot[-JP_i(c)],
+\]
+
+which is (MI.9).
+
+If instead the hub lies beyond `tau_0`, the active sets are nested decreasing. Then a fresh row crosses the prefix `0,...,i`, so its velocity is `JP_i(c)`, while its weighted fresh vector is `F_i-F_{i+1}`. Their product again gives (MI.9). Thus the formula is independent of the side of the hub.
+
+---
+
+## 4. Discrete integration by parts gives exact total balance
+
+Set
+
+\[
+S:=\sum_{i=0}^{r-1}(F_{i+1}-F_i)\cdot JP_i.
+\]
+
+Shift the first sum by one index:
+
+\[
+\begin{aligned}
+S
+&=F_r\cdot JP_{r-1}-F_0\cdot JP_0\\
+&\quad+
+\sum_{i=1}^{r-1}F_i\cdot J(P_{i-1}-P_i).
+\end{aligned}
+\tag{MI.24}
+\]
+
+But
+
+\[
+P_0=c_0u_0,
+\qquad
+P_i-P_{i-1}=c_iu_i,
+\qquad
+P_{r-1}=-c_ru_r
+\tag{MI.25}
+\]
+
+by (MI.5). Since `F_i=M_i u_i`, every term on the right side of (MI.24) vanishes. Therefore `S=0`. Equation (MI.9) gives (MI.10).
+
+This is the interface-resolved form of KKT first-order stationarity for an exact-full-support cancellation tangent.
+
+---
+
+## 5. Proof of generic injectivity
+
+Assume every adjacent phase gap is nonzero and suppose
+
+\[
+\mathcal D_i(c)=0
+\qquad(0\le i<r).
+\tag{MI.26}
+\]
+
+At the first interface,
+
+\[
+P_0=c_0u_0.
+\]
+
+Using (MI.9),
+
+\[
+\begin{aligned}
+0=\mathcal D_0
+&=-2c_0(F_1-F_0)\cdot Ju_0\\
+&=-2c_0M_1\sin(\alpha_1-\alpha_0).
+\end{aligned}
+\tag{MI.27}
+\]
+
+The multiplier `M_1` is positive and the sine is nonzero for sufficiently large `D`, so
+
+\[
+c_0=0.
+\tag{MI.28}
+\]
+
+Proceed inductively. If
+
+\[
+c_0=\cdots=c_{i-1}=0,
+\]
+
+then
+
+\[
+P_i=c_iu_i.
+\]
+
+Equation (MI.9) becomes
+
+\[
+\boxed{
+\mathcal D_i
+=-2c_iM_{i+1}\sin(\alpha_{i+1}-\alpha_i).
+}
+\tag{MI.29}
+\]
+
+Thus `D_i=0` forces `c_i=0`. Induction gives
+
+\[
+c_0=\cdots=c_{r-1}=0.
+\]
+
+Finally (MI.5) gives `c_r=0`. This proves (MI.11).
+
+The domain `K` has dimension `r-1`; by (MI.10), the image lies in the `(r-1)`-dimensional zero-sum interface space. Injectivity therefore proves the isomorphism (MI.12).
+
+---
+
+## 6. The first nonzero coefficient already exposes the cusp
+
+The induction proof gives a useful local diagnostic. Let
+
+\[
+k:=\min\{j:c_j\ne0\}.
+\]
+
+For any nonzero kernel vector in the strict-phase branch, `k<r`. Then
+
+\[
+P_k=c_ku_k
+\]
+
+and
+
+\[
+\boxed{
+\mathcal D_k
+=-2c_kM_{k+1}\sin(\alpha_{k+1}-\alpha_k)\ne0.
+}
+\tag{MI.30}
+\]
+
+So a nonzero exact-cancellation tangent cannot hide its first-order obstruction in a distant part of the block. The first selected row on which the tangent is active already creates a nonzero KKT-weighted switching cusp at the immediately following interface.
+
+There is a symmetric statement at the last nonzero coefficient. If
+
+\[
+\ell:=\max\{j:c_j\ne0\},
+\]
+
+then `ell>0`, and using `P_{ell-1}=-c_ell u_ell` gives
+
+\[
+\boxed{
+\mathcal D_{\ell-1}
+=2c_\ell M_{\ell-1}
+\sin(\alpha_\ell-\alpha_{\ell-1})\ne0.
+}
+\tag{MI.31}
+\]
+
+Thus any nonzero aggregate-critical tangent in a nongeneric chain must have an exact adjacent phase equality at the boundary of its first active coefficient, and also at the boundary of its last active coefficient.
+
+---
+
+## 7. Consequence for first-order diameter descent
+
+Take any nonzero tangent `c in K` in the strict-phase branch. Injectivity says that the interface vector `T(c)` is nonzero. Equation (MI.10) says its entries sum to zero. Hence there are interfaces `i,j` with
+
+\[
+\mathcal D_i(c)>0,
+\qquad
+\mathcal D_j(c)<0.
+\tag{MI.32}
+\]
+
+The KKT weights are nonnegative and are positive on the maximal force-visible support. Therefore
+
+- some positive-KKT active diameter row has positive first squared-length derivative;
+- some positive-KKT active diameter row has negative first squared-length derivative.
+
+In particular no nonzero exact-full-support cancellation tangent can be first-order nonincreasing on every force-visible active diameter edge.
+
+Another way to see the same conclusion is to suppose every positive-KKT active diameter derivative were `<=0`. Their total KKT-weighted derivative is zero by stationarity, so every positive-KKT derivative would have to vanish. Then every interface aggregate would vanish, and injectivity would force `c=0`.
+
+This is a genuine no-go theorem for the naive high-dimensional exact-kernel route. Increasing `r` increases the exact cancellation manifold dimension, but it increases the independent interface cusp coordinates at exactly the same rate.
+
+---
+
+## 8. What remains after the no-go theorem
+
+The theorem does **not** say that longer blocks are useless. It says that the simplest first-order plan is unavailable on a strict-phase chain.
+
+A surviving closing mechanism must exploit structure absent from the generic injectivity argument. The current possibilities are now narrower:
+
+1. **exact adjacent phase equality.** A nonzero aggregate-critical tangent requires at least one exact equality at the boundary of its active coefficient support. Such equality blocks have the same one-sided quadratic radial issue already identified in the three-row parallel regression;
+2. **second-order critical-cone analysis.** One may work at a phase-equality degeneracy where first-order interface aggregates vanish and use the exact interval-Gram/KKT curvature;
+3. **noncancelling persistent-core deformation.** Instead of imposing `G(theta)=0`, allow the persistent diameter core to move in a direction proved nonincreasing by its endpoint geometry;
+4. **diameter-thrackle contradiction.** Use the finite switching sets, disjoint interface supports, common hub, and linear transverse ladder to rule out the required sequence of force-visible blockers combinatorially.
+
+The important correction is that merely adding a fourth, fifth, or any fixed number of generic rows does not by itself create a first-order escape from the KKT cusp.
+
+**Disposition:** proved proof-only multirow interface normal form and generic cusp injectivity through `t<=1.8687`; the naive higher-dimensional exact-kernel first-order descent route is closed unless exact adjacent phase degeneracy occurs. C-II and Level I remain open.

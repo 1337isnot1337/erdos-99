@@ -1,0 +1,294 @@
+<!-- theorem-state: {"artifact_id":"ART-F51CAF18F039","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: the actual exterior cell admits a partial unit-wall shield
+
+**Date:** 2026-10-06. **Authority:** `ae6697b649d5516cfe36cc855a89948940f9ce14`,
+state `2026-10-06.audit.63`. **Worker:** 2, macroscopic exterior caps.
+**Classification:** proved candidate awaiting independent audit; default
+repository lifecycle unreviewed. C-II and Level I remain open.
+
+This is an exterior-specific extension of the now canonical
+`C-ONE-VERTEX-CONVEX-WALL-SHIELD`. Its originating research report is
+Worker 1's `target_c_one_vertex_convex_wall_shield_2026-10-06.md` at
+`258bd91a`; the exact promoted statement is Section 6 of audit.63,
+`target_c_owner_order_and_terminal_capacity_promotion_audit_2026-10-06.md`.
+The scope extension below is **not** part of that promotion.
+
+## 1. Why this region is different from the old cap
+
+The closing chord of an occupied actual cap is nonunit. It supplies no
+unit-wall shield. Instead augment the actual core with the **full source
+hull boundary**, and use the resulting outer-face cell containing the cap.
+Its inner boundary consists of actual unit contacts; its other boundary
+lies on the old source hull, through which a segment joining two source
+points cannot exit early. The cell includes its inside-F outer pockets.
+
+```text
+actual cap -> convex cell of G union partial(K)
+  -> actual unit inner walls + source-hull outer boundary
+  -> one-wall-vertex strict shield, with all outside isolates checked
+  -> exact local packet population |S|+1 pays one deleted core vertex
+  -> contact/diameter contradiction if such a packet exists.
+```
+
+The last packet is not supplied by area or by the shield. This report
+proves the actual container and full-source replacement criterion, then
+records the exact capacity needed. It does not reprove Worker 1's internal
+wall classification or claim a second internal-wall closure.
+
+## 2. Actual convex cells after source-hull augmentation
+
+Let G be the canonical connected positive-contact core, B all actual
+diameter endpoints, F=conv(G)=conv(B), and K=conv(A). Canonical Section
+67 supplies:
+
+- every component of G-x contains a loaded vertex other than x;
+- an unloaded core vertex has positive contact equilibrium and degree >=3;
+- all core points on partial(F) are loaded;
+- all actual diameter endpoints are extreme source-hull points.
+
+Form the plane graph Gamma by adding the polygonal boundary of K to G.
+Include every source point on partial(K) as a boundary-cycle vertex, even
+if it is collinear on a hull side. Count coincident core/boundary edges
+only once. Added boundary segments cannot cross the embedded G.
+
+**Lemma M.1.** Gamma is 2-connected, and every bounded face is a convex
+polygonal cell.
+
+**Proof.** Remove a core vertex x. Every component of G-x has a loaded
+representative other than x. The boundary cycle, or the boundary path if
+x is on it, connects all those representatives and all remaining hull
+vertices. If x is a hull isolate, G remains connected and the remaining
+boundary path connects to G at loaded vertices. Thus Gamma-x is connected
+in either case. Every bounded-face boundary is consequently a simple cycle.
+
+At a hull vertex, every interior face angle is at most pi by convexity of
+K. At any nonhull core vertex, a reflex face sector would put every
+positive contact vector in its complementary open cone of width <pi.
+Their positive equilibrium sum could not vanish; the vertex is unloaded
+because every loaded vertex is on the source hull. Hence all face angles
+are at most pi. A simple polygon with this property is convex. QED.
+
+The new cells are precisely subdivisions of the old outer contact face
+by the source-hull cycle. Original bounded contact faces are unchanged.
+Each cell Q meeting the interior of an actual exterior cap C contains
+the entire interior of C: there is no core vertex or edge outside F,
+and the cap interior is connected and inside K. Hence a macroscopic C
+provides an actual Q with
+
+\[
+ area(Q)=\Omega(D^2),\qquad |S_Q|=\Omega(D^2),            \tag{1}
+\]
+
+where S_Q is defined below and includes the cap's outer-hull isolates.
+
+Call a boundary side of Q a **wall side** if it is an actual unit edge
+of G, including a coincident source-hull edge. Every other side of Q
+lies on partial(K). Let W_Q be the vertices incident with wall sides.
+Every core boundary vertex of Q belongs to W_Q: if its two face edges
+were both pure hull edges, any actual core edge at that vertex in K's
+interior sector would intervene in that face traversal. All other source
+points in Q are contact isolates. Put
+
+\[
+ S_Q=(A\cap Q)\setminus W_Q.                             \tag{2}
+\]
+
+This includes isolates on the outer boundary, not just int(Q). They must
+be counted/deleted in a whole-cell replacement. There is no source point
+in the interior of a wall segment, by unit separation from its endpoints.
+
+The wall-side occurrences of Q belong to the old outer contact walk,
+whose length is b<=2h<=2pi D. Its hull-side arcs total at most per(K).
+Consequently per(Q)<=b+per(K)<=3pi D. We do not infer independent packet
+capacities from the old cap/pocket decomposition: every contribution
+assigned to an actual cell must be counted once, and packets in different
+cells need their full cross-distance and shared-guard checks.
+
+## 3. One unguarded actual wall vertex with an open hull boundary
+
+Choose a vertex v of Q whose two incident Q sides are actual unit wall
+sides, with neighbors a,b. Define
+
+\[
+ \mathcal W_{Q,v}=\{x\in int(Q):|x-w|>1
+                 \text{ for all }w\in W_Q\setminus\{v\}\}. \tag{3}
+\]
+
+No distance guard is imposed at an isolate vertex on the source-hull
+portion: those vertices belong to S_Q and are deleted.
+
+**Theorem M.2 (exterior partial-wall shield).** Every x in (3) is
+strictly farther than one from every original point of
+A\(S_Q union {v}). This checks the entire retained source, including
+all outside isolates.
+
+**Proof.** Retained wall vertices are checked by (3). Every other
+retained point q is outside Q and lies in K. A segment from x in int(Q)
+to q remains in int(K) before q: convexity of K and x in int(K) prove
+this even when q is on partial(K). Thus its first exit from Q before
+q cannot use a pure source-hull side.
+
+If |x-v|>1, x is strict-clear of all wall vertices. The first exit is
+a wall side or retained wall vertex. At a unit side cd and exit point
+z=(1-s)c+sd, the weighted-square identity gives
+
+\[
+ |x-z|^2>1-s(1-s)\ge3/4,\qquad
+ |q-z|^2\ge1-s(1-s)\ge3/4.
+\]
+
+Since z lies between x and q, |x-q|>sqrt(3)>1. A retained-vertex exit
+has |x-q|>2 by source separation.
+
+For |x-v|<=1, use the exact local cone argument of canonical audit.63.
+Translate v to zero, put r=|x|<=1, and let K_v be its convex cone with
+unit boundary rays a,b. Strict clearance gives x dot a,x dot b<r^2/2.
+For a q outside int(K_v), source separation |q-v|>=1 and the extremal
+boundary-ray dot product imply |x-q|>1. For a q in int(K_v) but outside
+Q, [x,q] stays in that cone's interior and cannot exit through the two
+incident wall sides or through v. It also cannot exit early through the
+source hull. Its first exit is therefore a retained unit side or retained
+wall vertex; the preceding calculation applies. QED.
+
+The reuse is precisely the promoted cone/retained-unit-exit implication.
+The new reason a closed unit polygon is unnecessary is that every old
+outside point is inside K, while the nonunit boundary lies on partial(K).
+This is not a shield for arbitrary opened walls, two deleted vertices,
+or a container with an unguarded nonunit side in the interior of K.
+
+**Nonstrict version.** Replace the >1 wall inequalities in (3) by >=1.
+Then the site is unit-clear of the entire retained source and is still
+**strictly** clear of every retained nonwall point outside Q. All possible
+new-old unit contacts are confined to the explicitly guarded wall vertices.
+
+To check the only changed argument, the unit-side exit now gives a
+distance >=sqrt(3)>1 and a retained-vertex exit a distance >=2>1. In
+the vertex-cone case one has mu<=r^2/2 rather than a strict inequality.
+For an outside-cone point q=t u, equality |x-q|=1 would require t=1,
+mu=r^2/2, and u to be an extremal outside direction. Since x is strictly
+inside the convex cone, its extremal outside directions are precisely
+the boundary unit rays a,b. Hence equality would make q a wall neighbor,
+already covered by its guard. Any distinct nonwall q is still strictly
+clear. This finite extension permits exact-contact packets; it does not
+equate nonstrict packet capacity with strict spare capacity.
+
+## 4. Exact full-source cardinality criterion
+
+**Theorem M.3.** If a finite unit-separated packet
+Y subset mathcal W_{Q,v} has |Y|>=|S_Q|+1, a canonical triangle-free
+global minimizer with this cell cannot exist.
+
+**Proof.** Delete S_Q union {v}, select exactly |S_Q|+1 sites, and
+dilate this finite packet by a sufficiently small factor >1. Its
+interiority and strict wall guards persist; all internal unit distances
+open. M.2 then checks every retained outside lower distance strictly.
+All new points lie in int(K), so every pair involving them is strictly
+shorter than D. Cardinality is unchanged. The contact graph is exactly
+the induced old graph on the retained labels and remains triangle-free;
+at least the two old wall contacts at v disappear. Diameter <D contradicts
+global optimality, and diameter =D contradicts contact minimality. QED.
+
+Thus each such actual cell satisfies the exact survivor inequality
+
+\[
+ \operatorname{Pack}_1(\mathcal W_{Q,v})\le|S_Q|,           \tag{4}
+\]
+
+where Pack_1 denotes the largest finite unit-separated packet cardinality.
+This is a source-specific non-strict packet bound in an open guarded
+region; it is not an Oler or area assertion. The exact closing threshold
+is one integer above its **full** assigned isolate population, including
+all outer-hull boundary points. An independently deleted actual-diameter
+cover can be paid by the correspondingly larger packet, as in audit.63.
+
+An occupied macroscopic cap does provide a qualifying v. If Q had no
+nonhull core edge, its simple boundary would be the whole hull cycle,
+so Q=K and all of G would lie on partial(K). Its positive contact graph
+would be a subgraph of the loaded cycle, by canonical loaded adjacency.
+The leaf/cycle equilibrium argument in earlier E.4 excludes this in the
+presence of an occupied cap. Therefore Q has a nonhull core edge. Such
+an edge has an unloaded endpoint: a loaded-loaded unit edge is a loaded
+hull side, and a source point beyond that side is excluded by audit.62's
+occupied-cap threshold. It is consequently also a source-hull side.
+At the unloaded nonhull endpoint both Q sides are core unit edges. This
+gives the claimed v. This uses E.4 only for its explicitly rederived
+leaf/cycle implication; no new canonical promotion is claimed.
+
+### Exact-contact ledger alternative
+
+Let \(\mathcal N_{Q,v}\) be the nonstrict guarded region above. Delete
+R=S_Q union {v} union T for any additional old labels T, and keep guards
+at every original wall vertex other than v, even if T deletes that vertex.
+Suppose Y subset mathcal N_{Q,v} is unit-separated and |Y|=|R|. The
+nonstrict shield checks every retained outside source point. All pairs
+involving Y are strictly below D. Let t count old contacts incident to R
+and j count new contacts involving Y; these new contacts are only packet
+contacts and retained wall anchors, so the ledger is local and exact.
+
+If R covers all old actual diameters, this is a strict-sub-D global
+competitor with no triangle-free or contact-budget restriction. Otherwise,
+if the complete new contact graph is triangle-free and either j<t, or
+j=t with an old actual diameter removed, the exact canonical contact/then
+diameter-pair minimality excludes the endpoint. No opening or dilation is
+required for this version. Every triangle through a retained wall anchor
+must be checked explicitly; an internally triangle-free packet alone
+does not check the full graph.
+
+This alternative retains exact unit contacts when they pay the ledger.
+It cannot be replaced by strict-safe area counting. Nor does it assert
+that the packet exists, or that deleting several wall guards without
+continuing to impose them is safe.
+
+## 5. Composition limits and regressions
+
+The enlargement includes the old inside-F pockets, so a packet in (3)
+can use interior sites forbidden to a cap-only exchange. The old closing
+chord is not imposed as an artificial packet boundary. Conversely,
+sites remaining entirely outside int(F) still face the finite E.6
+release barrier; merely enlarging the container supplies no capacity.
+
+The partial-wall shield does not import the <=five-side emptiness or
+physical-hexagon consequences: Q's source-hull sides are generally
+nonunit, and those closed-unit-wall angle arguments do not apply.
+Removing two wall vertices remains unprotected. The canonical square
+and retained-isolate two-deletion regression is not bypassed.
+
+Nor may a nonunit interior side be declared an unguarded hull boundary.
+For an exact regression take the source
+
+\[
+ (0,0),(1,0),(2,0),(0,1),(2,1),\quad q=(1,17/10).
+\]
+
+All source pairs are unit-separated; q is a contact isolate and the
+only contacts are the four bottom/vertical unit wall segments of the
+rectangle [0,2] x [0,1]. Delete its bottom middle vertex v=(1,0).
+The site x=(1,4/5) is strict-clear of the four remaining wall vertices
+(squared distances 41/25 and 26/25), yet |x-q|^2=81/100<1. The
+rectangle's nonunit top side is in the **interior** of the actual source
+hull because q lies above it. This violates M.2's hull-boundary hypothesis.
+For the actual cell of G union partial(K), q belongs to S_Q and its
+cardinality must be paid; it cannot be silently retained or discarded.
+The rational instance is preserved and independently checked in the
+companion separator/refill certificate.
+
+The strained near-capacity cloud and adaptive saturation remain binding:
+neither (1) nor the missing guard at v proves |S_Q|+1 sites. The core
+rhombus completion regression still blocks a generic interior-site
+inference. The cap/core separator motion of the companion report is
+not assumed compatible with keeping Q's wall fixed; a joint construction
+would have to prove its complete new lower and upper constraints.
+
+**Exact remaining packet obligation:** for at least one actual
+cap-containing cell Q and qualifying actual wall vertex v, force
+Pack_1(mathcal W_{Q,v})>=|S_Q|+1, or pay a simultaneous moved-core packet
+by its full source cardinality, or construct a nonstrict guarded packet
+with the complete ledger above. The first condition would close this
+source by M.3; none of these conditions is established here. The broader paired-cap
+nonlocal refill remains open. No universal strict spare site or cap
+elimination is claimed.
+
+**Validation:** proofs are finite and analytic, using canonical G-x
+harmonic topology, loaded adjacency, and the audit.63 cone implication.
+No new numerical script is required. All claims of this scope extension
+remain unreviewed candidates, with exact provenance preserved above.

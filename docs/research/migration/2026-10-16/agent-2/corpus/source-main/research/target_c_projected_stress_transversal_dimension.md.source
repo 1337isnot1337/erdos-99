@@ -1,0 +1,278 @@
+# Target C — exact projected stress dimension and reduced reinsertion burden
+
+**Date:** 2026-09-12  
+**Lifecycle:** proof-only bridge between audited-working §156 and the stress-transversal reinsertion theorem; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The stress-transversal reinsertion report proves that deleting at most `s_Z+1` core
+vertices kills every normalized mixed KKT stress, and remarks that the same argument
+may instead use the affine dimension of the **projected diameter-stress polytope**.
+That projected dimension was left abstract.
+
+Audited-working §156 determines it exactly.
+
+Let
+
+\[
+M=R_{C\cup H},
+\qquad
+\mathcal L:=\ker M^T
+\]
+
+be the full mixed self-stress space on the connected nonisolated positive-contact core.
+Canonical mixed rank gives
+
+\[
+\dim\mathcal L=s_Z+1.
+\tag{PD.1}
+\]
+
+Let
+
+\[
+\sigma_C:=\dim\ker R_C^T.
+\]
+
+Audited-working §156 gives
+
+\[
+\sigma_C=2f-\operatorname{rank}C_{face},
+\qquad
+0\le\sigma_C\le s_Z.
+\tag{PD.2}
+\]
+
+Write `pi_H(alpha,beta)=beta` for projection to the actual-diameter coordinates.
+
+---
+
+## 1. Exact dimension of the diameter-stress image
+
+### Theorem PD.1
+
+The linear image of the full mixed stress space in diameter coordinates has dimension
+
+\[
+\boxed{
+\dim \pi_H(\mathcal L)=s_Z+1-\sigma_C.
+}
+\tag{PD.3}
+\]
+
+The normalized projected stress polytope
+
+\[
+\mathcal P_H
+:=\left\{\beta:\exists\alpha\ge0,
+\ (\alpha,\beta)\in\mathcal L,
+\ \beta\ge0,
+\ \sum_H\beta=1\right\}
+\]
+
+has affine dimension
+
+\[
+\boxed{
+\dim\operatorname{aff}\mathcal P_H
+=s_Z-\sigma_C.
+}
+\tag{PD.4}
+\]
+
+### Proof
+
+The kernel of `pi_H` restricted to `mathcal L` consists exactly of mixed self-stresses
+with zero diameter part:
+
+\[
+\ker(\pi_H|_{\mathcal L})
+=\{(\alpha,0):R_C^T\alpha=0\}.
+\]
+
+Its dimension is `sigma_C`. Rank-nullity with (PD.1) gives (PD.3).
+
+Put
+
+\[
+W:=\pi_H(\mathcal L).
+\]
+
+The normalization functional
+
+\[
+s(\beta):=\sum_H\beta
+\]
+
+is nonzero on `W`, because the canonical relative-interior KKT stress has strictly
+positive actual-diameter coordinates and is normalized by `s(beta)=1`.
+Therefore
+
+\[
+W_1:=W\cap\{s=1\}
+\]
+
+is a nonempty affine hyperplane in `W`, of dimension
+
+\[
+\dim W-1=s_Z-\sigma_C.
+\tag{PD.5}
+\]
+
+Let
+
+\[
+\mathcal A
+:=\{(\alpha,\beta)\in\mathcal L:s(\beta)=1\}.
+\]
+
+The canonical full-support relative-interior KKT stress has every contact and diameter
+coordinate strictly positive. Hence the nonnegativity inequalities do not reduce the
+affine hull of the normalized stress polytope: its affine hull is exactly `mathcal A`.
+Linear projection commutes with affine hull, so
+
+\[
+\operatorname{aff}\mathcal P_H
+=\pi_H(\mathcal A)
+=W_1.
+\]
+
+Equation (PD.4) follows from (PD.5). `square`
+
+---
+
+## 2. Reduced stress transversal
+
+The finite face-of-a-polytope argument from the stress-transversal reinsertion theorem
+can now be run directly on `mathcal P_H`.
+
+### Corollary PD.2
+
+There is a set `J` of actual diameter edges with
+
+\[
+\boxed{
+|J|\le s_Z-\sigma_C+1
+}
+\tag{PD.6}
+\]
+
+such that no normalized mixed KKT stress vanishes on every diameter coordinate in
+`J`.
+
+Choosing one endpoint of each edge in `J` gives a core vertex set `S` with
+
+\[
+\boxed{
+|S|\le s_Z-\sigma_C+1
+}
+\tag{PD.7}
+\]
+
+whose deletion removes every normalized inherited mixed stress. Consequently the
+protected-reinsertion theorem needs packing reserve only
+
+\[
+\boxed{
+\operatorname{reserve}(W,Z)
+\ge s_Z-\sigma_C+1,
+}
+\tag{PD.8}
+\]
+
+rather than the earlier sufficient threshold `s_Z+1`.
+
+### Proof
+
+Apply the nested-face argument to the compact polytope `mathcal P_H`, whose affine
+dimension is (PD.4). At most `d+1=s_Z-sigma_C+1` coordinate-zero cuts make the
+intersection empty. If the selected diameter edges are removed by deleting one chosen
+endpoint of each, any normalized stress on the retained source would extend by zeros
+to an original normalized stress whose projected diameter vector lies in the forbidden
+coordinate face. This is impossible.
+
+The guarded-reinsertion theorem then applies verbatim with the smaller deletion set.
+`square`
+
+---
+
+## 3. Outer-train form of the same bound
+
+Let `L_OO` be the number of complete stopped trains whose two terminal occurrences lie
+on the outer face. Audited-working §156 gives
+
+\[
+\operatorname{rank}C_{face}\le T-L_{OO}
+\]
+
+and the exact train ledger
+
+\[
+T=h-s_Z+2f.
+\]
+
+Using (PD.2),
+
+\[
+\begin{aligned}
+s_Z-\sigma_C
+&=s_Z-2f+\operatorname{rank}C_{face}\\
+&\le s_Z-2f+T-L_{OO}\\
+&=h-L_{OO}.
+\end{aligned}
+\]
+
+Hence
+
+\[
+\boxed{
+\dim\operatorname{aff}\mathcal P_H
+=s_Z-\sigma_C
+\le h-L_{OO},
+}
+\tag{PD.9}
+\]
+
+and one may choose
+
+\[
+\boxed{
+|S|\le h-L_{OO}+1.
+}
+\tag{PD.10}
+\]
+
+This is a useful complement to §157: many outer-to-outer trains not only impose signed
+diameter bracing; they also reduce the number of core vertices that must be teleported
+before a strict retained-core diameter descent exists.
+
+---
+
+## 4. Exact special cases
+
+1. If `sigma_C=s_Z`, then the projected normalized diameter-stress polytope is a single
+   point and **one** selected diameter endpoint suffices to destroy all normalized
+   stresses.
+2. If `sigma_C=0`, the theorem reduces to the old `s_Z+1` bound.
+3. If `L_OO=h`, then (PD.9) forces projected dimension zero, again reducing the
+   reinsertion burden to one point.
+
+No assertion is made that any of these endpoint cases must occur in the inactive
+chamber branch.
+
+---
+
+## 5. Scope and frontier effect
+
+- The theorem is on the nonisolated positive-contact core only. Contact-isolated source
+  points remain in the full source and are not inserted into the rigidity matrix.
+- The deleted vertices are restored through guarded reinsertion before any global
+  contradiction is claimed.
+- The theorem uses the full-support relative-interior canonical KKT stress to identify
+  the affine hull; it does not assume a uniform positive multiplier floor.
+- The exact identity is linear algebra. The stress-transversal/reinsertion mechanism is
+  still proof-only and remains conditional on finding enough protected packing reserve.
+- In the macroscopic inactive-container branch the missing problem is now sharper:
+  construct only `s_Z-sigma_C+1` protected extra packing sites, or couple the chamber
+  geometry to show that this reduced burden is impossible to sustain.
+
+**Disposition:** proof-only structural bridge. C-II remains open.

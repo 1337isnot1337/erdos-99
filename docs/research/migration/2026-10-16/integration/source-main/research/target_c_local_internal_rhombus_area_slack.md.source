@@ -1,0 +1,269 @@
+# Target C — local internal-rhombus area forces component slack
+
+**Date:** 2026-09-12  
+**Status:** proof-only Type-II research theorem; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This note extracts a local theorem already implicit in the independently audited LRTQ chain, but without LRTQ's low-response hypothesis. The theorem applies to any macroscopic harmonic component in Type II. It strengthens the coefficient used in `target_c_section152_area_slack_diameter_edge_tradeoff.md`.
+
+For an unloaded positive-contact component `I_r`, write
+
+\[
+\delta_r=\operatorname{diam}_{C[I_r]} I_r,
+\qquad
+r_r\ge0
+\]
+
+for the canonical component diameter and Eppstein residual slack, and put
+
+\[
+P_r=\operatorname{conv}(A_r),
+\qquad
+d_r=\operatorname{diam}(P_r),
+\qquad
+\eta_r:=\delta_r+2-d_r\ge0.
+\]
+
+Let `A_{4,r}^{int}` be the total Euclidean area of the unloaded-only strict unit-rhombus faces of the internal graph `C[I_r]`. Put
+
+\[
+a_0:={\sqrt3\over2},
+\qquad
+C_{loc}:={4\over5}\sqrt\pi+{2\over5\sqrt{a_0}}
+=1.8477910534538295\ldots .
+\]
+
+## Theorem — local area/slack inequality
+
+Let `I_{r(D)}` be any sequence of Type-II harmonic components such that, along a subsequence,
+
+\[
+{A_{4,r}^{int}\over D^2}\to A\ge0,
+\qquad
+{d_r\over D}\to\lambda.
+\]
+
+Then
+
+\[
+\boxed{
+\liminf {r_r+\eta_r\over D}
+\ge
+\bigl[C_{loc}\sqrt A-\lambda\bigr]_+.
+}
+\tag{LAS.1}
+\]
+
+More precisely, before using nonnegativity,
+
+\[
+{r_r+\eta_r\over D}
+\ge C_{loc}\sqrt A-\lambda-o(1).
+\tag{LAS.2}
+\]
+
+No response-energy hypothesis is used.
+
+## Proof
+
+Let `G_r=C[I_r]` be the all-unloaded internal contact graph. Use the independently audited harmonic-outer-face lemma: attachment contacts and loaded-loaded contacts lie in the original outer face of `G_r`, so the bounded four-faces of `G_r` are exactly the unloaded-only strict rhombi assigned to `I_r`.
+
+Let
+
+- `k_r` be the occurrence-counted outer-face length of `G_r`, bridges counted twice;
+- `Q_r` be its bounded-face degree excess;
+- `f_r` be its bounded nonquadrilateral face count;
+- `R_r` be its bounded four-face count; and
+- `B_r` be the physical boundary-edge occurrence count of those `R_r` rhombi.
+
+The exact Eppstein component identity is
+
+\[
+\boxed{k_r+Q_r=2(\delta_r+r_r).}
+\tag{LAS.3}
+\]
+
+The finite strict-rhombus boundary theorem gives
+
+\[
+B_r\ge4\sqrt{R_r}.
+\tag{LAS.4}
+\]
+
+Every rhombus-boundary occurrence faces either the outer face or a bounded nonquadrilateral face, hence
+
+\[
+B_r\le k_r+4f_r+Q_r.
+\]
+
+Every bounded nonquadrilateral face has degree at least five, so `f_r\le Q_r`. Therefore
+
+\[
+B_r\le k_r+5Q_r.
+\tag{LAS.5}
+\]
+
+Eliminate `Q_r` with (LAS.3):
+
+\[
+4\sqrt{R_r}
+\le10(\delta_r+r_r)-4k_r,
+\]
+
+and hence
+
+\[
+\boxed{
+\delta_r+r_r
+\ge {2\over5}k_r+{2\over5}\sqrt{R_r}.
+}
+\tag{LAS.6}
+\]
+
+Let `K_r=conv(I_r)`. Every attachment vertex is at distance one from some vertex of `I_r`, while harmonic trapping gives `K_r\subset P_r`. Thus
+
+\[
+P_r\subset K_r+B(0,1).
+\]
+
+The outer-face walk of `G_r` consists of `k_r` unit contact occurrences, so
+
+\[
+\operatorname{per}(K_r)\le k_r.
+\]
+
+Cauchy's perimeter formula for parallel bodies gives
+
+\[
+\operatorname{per}(P_r)
+\le\operatorname{per}(K_r)+2\pi
+\le k_r+2\pi.
+\tag{LAS.7}
+\]
+
+Planar isoperimetry and `A_{4,r}^{int}\le area(P_r)` therefore give
+
+\[
+k_r
+\ge2\sqrt{\pi\,A_{4,r}^{int}}-2\pi.
+\tag{LAS.8}
+\]
+
+Canonical Type-II strict-rhombus area rigidity writes every strict unit rhombus as
+
+\[
+area(R)=a_0+\epsilon_R,
+\qquad \epsilon_R\ge0,
+\]
+
+with total global excess
+
+\[
+\sum_R\epsilon_R=O(D).
+\]
+
+For the selected internal rhombi this gives
+
+\[
+A_{4,r}^{int}
+=a_0R_r+O(D),
+\tag{LAS.9}
+\]
+
+uniformly for the selected component. Hence, if `A_{4,r}^{int}/D^2\to A`,
+
+\[
+{\sqrt{R_r}\over D}
+\to{\sqrt A\over\sqrt{a_0}}.
+\tag{LAS.10}
+\]
+
+Divide (LAS.6) by `D` and use (LAS.8)--(LAS.10):
+
+\[
+\liminf {\delta_r+r_r\over D}
+\ge
+\left({4\over5}\sqrt\pi+{2\over5\sqrt{a_0}}\right)\sqrt A
+=C_{loc}\sqrt A.
+\tag{LAS.11}
+\]
+
+Finally
+
+\[
+r_r+\eta_r
+=(\delta_r+r_r)+2-d_r.
+\]
+
+Divide by `D` and use `d_r/D\to\lambda` to obtain (LAS.2). Since `r_r+\eta_r\ge0`, (LAS.1) follows. `square`
+
+## Wrapping-carrier specialization
+
+On the repaired Section-118 frontier/common-cap branch, the wrapping carrier satisfies
+
+\[
+{A_{4,w}^{int}\over D^2}
+\ge A_*-o(1),
+\qquad
+A_*=0.4703752868004241\ldots,
+\]
+
+and
+
+\[
+{d_w\over D}\to\lambda_*
+=0.9762439137425688\ldots .
+\]
+
+Thus
+
+\[
+\boxed{
+\liminf {r_w+\eta_w\over D}
+\ge
+C_{loc}\sqrt{A_*}-\lambda_*
+=0.2910434605114111\ldots .
+}
+\tag{LAS.12}
+\]
+
+Because normalized §148 has
+
+\[
+G_D=\sum_r r_r+s_B+\sum_r\eta_r,
+\]
+
+all terms nonnegative, (LAS.12) implies
+
+\[
+\boxed{
+\liminf {G_D\over D}
+\ge0.2910434605114111\ldots .
+}
+\tag{LAS.13}
+\]
+
+This improves the previously recorded frontier-profile bound
+
+\[
+G_D/D\ge\sqrt{\pi A_*}-\lambda_*
+=0.239374260456223\ldots .
+\]
+
+## Summability and limitation
+
+The theorem is cellwise and the charges `r_r+\eta_r` are disjoint across distinct components because the global remainder is `G_D=\sum_r r_r+s_B+\sum_r\eta_r`. Hence (LAS.1) may be summed over any selected finite or sublinear family of components, with only the displayed `o(D)` losses.
+
+However, a principal complement-gap group need not gain a positive contribution from (LAS.1): a thin cap cell can have macroscopic diameter relative to its own area. The present theorem therefore does not automatically add all three §150 gap-group area coefficients to `G_D`. The wrapping carrier has a strictly positive area/diameter margin and is the safe immediate application.
+
+## Scope checks
+
+- Contact-isolated source points are untouched.
+- The affine-kernel theorem is not used on isolate coordinates.
+- The proof uses only the internal harmonic graph and actual physical strict rhombi.
+- Occurrence multiplicity and bridges are retained in `k_r` and `B_r`.
+- The Type-II rhombus-area excess estimate is used only to replace `R_r` by `A_{4,r}^{int}/a_0` at leading order.
+- The low-response hypothesis from LRTQ is not used: LRTQ used it only to select a near-diameter cell. Equations corresponding to its local §§5--7 apply to every selected Type-II harmonic component.
+- This theorem does not close Type II or C-II by itself.
+
+**Theorem state:** unchanged; proof-only candidate pending independent hostile audit.

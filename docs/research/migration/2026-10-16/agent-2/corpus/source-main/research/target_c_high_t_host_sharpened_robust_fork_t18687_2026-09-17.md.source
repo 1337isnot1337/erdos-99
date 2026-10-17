@@ -1,0 +1,241 @@
+# Target C-II — host geometry removes four of the six angular-density losses
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** the linear one-sided high-`t` obstruction shore through `t=(q-k)/D<=1.8687`  
+**Dependencies:** corrected unstrengthened good-interface fork; host-forced transverse-margin theorem; exact-antipodal exact force-pair theorem; common one-sided switch half-plane; C67 diameter-direction separation  
+**Certificate:** `research/verify_target_c_high_t_host_sharpened_robust_fork_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+Let
+
+\[
+c_0={113\over20{,}000{,}000}=5.65\times10^{-6}.
+\]
+
+The corrected parent fork is
+
+\[
+|E_D|+|U_D|>c_0D-o(D),
+\tag{HS.1}
+
+where `E_D` is exact-antipodal and `U_D` is non-antipodal TB1.
+
+The previous robust-angle theorem lost `4 rho D` from `U_D` to keep its chosen TB1 bars away from the two local opening-cone boundary rays. The host-forced theorem removes that loss pointwise: every switching diameter already lies at projective distance at least
+
+\[
+\gamma_*-o(1),
+\qquad
+\gamma_*:=\arcsin(0.4143)=24.47524188\ldots^\circ,
+\tag{HS.2}
+
+from the common row phase, while both local TB1 cone rays lie in the shrinking row-phase window.
+
+Thus every member of `U_D` is automatically a uniformly strong TB1 blocker.
+
+---
+
+## 1. The non-antipodal side has a fixed macroscopic first-order margin
+
+At `i in U_D`, let `a_i,b_i` be the rooted unit boundary-contact rays of the local dual cone and let `n_i` be the chosen inward switching diameter vector, `|n_i|=D`.
+
+All projective row/contact rays lie in one window `W_D` of width `o(1)`. Hence
+
+\[
+d_{\mathbb{RP}^1}([a_i],W_D)=o(1),
+\qquad
+d_{\mathbb{RP}^1}([b_i],W_D)=o(1).
+\]
+
+The host theorem gives
+
+\[
+d_{\mathbb{RP}^1}([n_i],W_D)
+\ge\gamma_*-o(1).
+\]
+
+Therefore
+
+\[
+\boxed{
+ d_{\mathbb{RP}^1}([n_i],[a_i]),
+ d_{\mathbb{RP}^1}([n_i],[b_i])
+ \ge\gamma_*-o(1).
+}
+\tag{HS.3}
+
+Use the positive-cone orientation from the TB1 theorem. If `t_i` is the ordinary angular position of `n_i` inside the local dual cone of width `theta_i`, then
+
+\[
+t_i,\theta_i-t_i\ge\gamma_*-o(1).
+\tag{HS.4}
+
+For every unit local contact-opening tangent `w`, the same elementary cone calculation as in the strong-TB1 theorem yields
+
+\[
+\boxed{
+ n_i\cdot w
+ \ge D\sin(\gamma_*-o(1))
+ =(0.4143-o(1))D.
+}
+\tag{HS.5}
+
+No C67 deletion is used. Up to the harmless finite-source angular errors,
+
+\[
+\boxed{S_D^{host}=U_D.}
+\tag{HS.6}
+
+---
+
+## 2. Only the exact-antipodal pair-gap extraction still costs density
+
+At every `i in E_D`, choose the opposite-transverse pair that positively generates the exact reaction `G_i`. Let its projective gap be `eta_i`.
+
+The existing narrow-pair capacity proof applies unchanged: it uses the common one-sided open semicircle, the shrinking row-phase window, opposite transverse signs, disjoint switching supports across interfaces, and C67 separation. Therefore for every fixed `rho>0`,
+
+\[
+\boxed{
+\#\{i\in E_D:\eta_i<\rho\}
+\le2\rho D+o(D).
+}
+\tag{HS.7}
+
+Put
+
+\[
+E_D^{force}(\rho)=\{i\in E_D:\eta_i\ge\rho\}.
+\]
+
+Combining (HS.1), (HS.6), and (HS.7) gives, for every fixed
+
+\[
+0<\rho<{c_0\over2},
+\]
+
+\[
+\boxed{
+|S_D^{host}|+|E_D^{force}(\rho)|
+>(c_0-2\rho)D-o(D).
+}
+\tag{HS.8}
+
+Hence one mechanism has population
+
+\[
+\boxed{
+>{c_0-2\rho\over2}D-o(D).
+}
+\tag{HS.9}
+
+On the TB1 side the opening margin is always `(0.4143-o(1))D`, independent of `rho`. On the exact side the two force rays have pair gap at least `rho` and each individually stays at least `gamma_*-o(1)` from the reaction/row axis.
+
+This replaces the old `(c_0-6rho)` combined population by `(c_0-2rho)` and expands the admissible range from `rho<c_0/6` to `rho<c_0/2`.
+
+---
+
+## 3. Improved deep exact-force density
+
+The deep exact-force branch is the branch on which no positive-density fixed-margin TB1 population survives. Section 1 then forces
+
+\[
+|U_D|=o(D).
+\tag{HS.10}
+
+The parent fork (HS.1) gives
+
+\[
+|E_D|>c_0D-o(D).
+\tag{HS.11}
+
+Fix a pair-gap parameter `rho>0` and a separator-neighborhood loss `eta>0`. Removing `rho`-narrow force pairs costs at most `2rho D+o(D)`. The radius-`r` separator-neighborhood deletion costs `eta D+o(D)` after choosing the local complexity threshold as in the parameterized deep-grid theorem. Bilateral birth removes only `O_rho(1)` centers. The individual transverse margin requires no deletion.
+
+Therefore, whenever
+
+\[
+c_0-2\rho-\eta>0,
+\]
+
+there are more than
+
+\[
+\boxed{
+(c_0-2\rho-\eta)D-o(D)
+}
+\tag{HS.12}
+
+deep bilateral exact-force centers with fixed pair gap `rho`, fixed individual host margin `gamma_*-o(1)`, exact positive force compression, the common inverse-`D` train grid, and any prescribed finite exact-phase depth. The usual diagonal extraction lets the depth tend to infinity with the same leading density.
+
+For the displayed choices
+
+\[
+\rho={c_0\over100},
+\qquad
+\eta={c_0\over50},
+\]
+
+this becomes
+
+\[
+\boxed{0.96c_0=5.424\times10^{-6}.}
+\tag{HS.13}
+
+The earlier two-sided family at the same nominal parameter scale had coefficient `0.90c_0=5.085e-6`.
+
+---
+
+## 4. Useful calibrated choices
+
+If a later exact-antipodal contradiction pays one power of the pair gap, the guaranteed product
+
+\[
+\rho{c_0-2\rho\over2}
+\]
+
+is maximized at
+
+\[
+\boxed{\rho={c_0\over4}.}
+\tag{HS.14}
+
+At that scale one mechanism has more than
+
+\[
+\boxed{{c_0\over4}D-o(D)=1.4125\times10^{-6}D-o(D).}
+\tag{HS.15}
+
+If a later argument pays the square of the pair gap, the corresponding product is maximized at
+
+\[
+\boxed{\rho={c_0\over3},}
+\tag{HS.16}
+
+leaving one mechanism with more than
+
+\[
+\boxed{{c_0\over6}D-o(D)=9.416666\ldots\times10^{-7}D-o(D).}
+\tag{HS.17}
+
+Again the TB1 margin remains the fixed host-geometric value, not `rho`.
+
+---
+
+## 5. Frontier effect
+
+The high-`t` local obstruction now has the quantitative form
+
+```text
+for every fixed 0 < rho < c0/2,
+
+  rho-wide exact force-carrying antipodal pairs
+  OR
+  host-forced TB1 blockers with >=(0.4143-o(1))D opening margin
+
+occupy together > (c0-2rho)D-o(D) interfaces.
+```
+
+On the branch without positive-density strong TB1, almost the whole original `c_0D` good-interface population is exact-antipodal before the `2rho` pair-gap and `eta` deep-neighborhood losses.
+
+This does not close C-II. It removes the dominant `4rho` robustness loss and makes the non-antipodal side uniformly strong at a macroscopic angle fixed by the physical host arcs.
+
+**Disposition:** host geometry upgrades every non-antipodal TB1 interface to a fixed-margin blocker, improves the robust population from `c_0-6rho` to `c_0-2rho`, and improves the deep exact-force density to `c_0-2rho-eta`.

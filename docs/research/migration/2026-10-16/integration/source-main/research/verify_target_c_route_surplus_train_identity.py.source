@@ -1,0 +1,35 @@
+"""Exact arithmetic check for the route-surplus/stopped-train composition.
+
+The finite identity is symbolic in the source note. This script checks the
+conservative numerical margin used after composing it with the audited train gap and
+the C146 endpoint floor.
+"""
+
+from fractions import Fraction as F
+
+
+def main() -> None:
+    c146_lo = F(18195, 10000)
+    four_s2_lo = F(38092, 10000)
+    pi_hi = F(31416, 10000)
+
+    # C146 + 4 sqrt(Delta_2) - pi > 2.4871 with the displayed safe enclosures.
+    margin = c146_lo + four_s2_lo - pi_hi
+    assert margin >= F(24871, 10000)
+
+    # The exact finite cancellation is represented by arbitrary rational ledgers.
+    q, m, k, u, Q, f = map(F, (17, 5, 2, 3, 5, 6))
+    e_bb = q - m
+    assert e_bb == Q + 2 * k + u
+    b = q + m + u
+    T = q + 2 * f - k
+    P_exc = 4 * f + Q
+    assert b + P_exc == 2 * T
+
+    print("route-surplus/stopped-train identity arithmetic: OK")
+    print(f"conservative_non_gap_lower_bound={float(margin):.6f}")
+    print("certified_non_gap_bound=2.4871")
+
+
+if __name__ == "__main__":
+    main()

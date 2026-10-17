@@ -1,0 +1,442 @@
+# Target C — Section 118 sharp correlated-slack hostile review
+
+**Date:** 2026-09-12  
+**Verdict:** **PASS as a proof-only theorem at the safe `sigma<=0.0088` endpoint.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This review checks
+`target_c_section118_correlated_slack_signed_return.md` and
+`target_c_section118_sharp_correlated_envelope.md` against the canonical pre-105
+ledger and the hostile-audited Section-117 signed-return theorem.
+
+The safe proof-only conclusion is
+
+\[
+\boxed{
+\operatorname{diam}(P_*)
+\ge (0.9762439137425688\ldots-o(1))D
+}
+\]
+
+for a quadratic-area locally rhombus-saturated harmonic carrier in every sufficiently
+large full-core Type-II survivor with
+
+\[
+\boxed{\sigma\le0.0088.}
+\]
+
+The scalar relaxation has a zero near
+`sigma=0.0089758762244767`, with coefficient
+`0.9762479642481726...`; that number is the boundary of the relaxed scalar inequality,
+not the theorem endpoint adopted here. The explicit `0.0088` endpoint has a large
+strict contradiction margin.
+
+No theorem-state mutation is made by this review. The canonical state remains
+`2026-09-12.audit.44`; C-II and Level I remain open.
+
+## 1. Exact correlated slack decomposition
+
+Put
+
+\[
+x=U-|S|,\qquad y=|S|-2\alpha,\qquad
+z=2\alpha-C,\qquad w=C-M.
+\]
+
+Canonical Section 101 gives the chain
+
+\[
+M\le C\le2\alpha\le |S|\le U,
+\]
+
+so every currency is nonnegative and
+
+\[
+\boxed{x+y+z+w=U-M=\sigma.}
+\]
+
+Section 118 is therefore entitled to keep the four currencies correlated rather than
+spending a fresh copy of the full `sigma` at every later estimate.
+
+## 2. Gap and tail geometry spend only `x` and `w`
+
+Write the largest complement gap as `g_1=theta-delta`, and put
+`phi=2pi-2theta`. The canonical transfer function gives
+
+\[
+h_\theta(\delta)\le w.
+\]
+
+On the whole Section-118 window its derivative on `0<=delta<=0.1` stays above `0.30`,
+while the alternative `delta>=0.1` costs more than `0.0326`. Since
+`w<=sigma<=0.0088`, that alternative is impossible, hence
+
+\[
+\boxed{\delta\le{10\over3}w.}
+\]
+
+Writing `g_2=phi+x_2`, `g_3=phi+x_3` and
+`tau=sum_{j>=4} g_j`, the exact complement-measure identity is
+
+\[
+x_2+x_3+\tau=\delta+x.
+\]
+
+Therefore
+
+\[
+\boxed{
+\tau\le x+{10\over3}w,
+\qquad
+C_{tail}\le{x\over2}+{5\over3}w.
+}
+\]
+
+The adjacent-support-span argument also spends only `w`, contributing endpoint
+capacity `20w/3`.
+
+At the endpoint, `(10/3)sigma=0.029333...`, still far below `0.1`, and the oriented
+main tangent region remains shorter than `pi`. Thus the scale-free Section-104
+finite-cover/tangent geometry is still inside its actual hypotheses.
+
+## 3. The face currency must be taken on one common subsequence
+
+Pass to one further subsequence on which
+
+\[
+Q_D/D\to q,\qquad c_D/D\to c,\qquad s_D/D\to s_0.
+\]
+
+The retained finite Section-101 face currency gives
+
+\[
+\boxed{2s_0+c+q\le z},
+\]
+
+and hence
+
+\[
+\boxed{q+c\le z.}
+\]
+
+This is a genuine joint inequality. Separate limsups of `q` and `c` could not be
+added this way; the Section-118 proof correctly uses one common subsequence.
+
+## 4. Hostile check of the refined exceptional-micro-route bound
+
+The delicate new bookkeeping claim is
+
+\[
+\boxed{\text{exceptional micro endpoint density}\le3z+6c.}
+\]
+
+Canonical Section 104 partitions the exceptional micro routes into three disjoint
+classes.
+
+1. A direct one-edge loaded-loaded micro side is one loaded-loaded contact, so its
+   normalized occurrence density is at most `c+o(1)`.
+2. Non-direct micro routes have total normalized excess at most `z+c+o(1)`. For a
+   route of length `k>=3`, the baseline excess is `k-2` and
+   `k<=3(k-2)`, so their total edge-occurrence density is at most
+   `3(z+c)+o(1)`.
+3. A length-two micro route with loaded middle vertex uses two loaded-loaded contact
+   occurrences, giving total density at most `2c+o(1)`.
+
+Adding the three classes yields exactly
+
+\[
+c+3(z+c)+2c=3z+6c.
+\]
+
+There is no missing factor of two from physical edge occurrences.
+
+The other non-tooth capacities are
+
+\[
+5q
+\]
+
+for bounded nonquadrilateral boundary and
+
+\[
+z+C_{tail}
+\]
+
+for nonprincipal macroscopic routes. Thus the complete non-tooth total is
+
+\[
+4z+5q+6c+C_{tail}.
+\]
+
+Since `q+c<=z`,
+
+\[
+5q+6c\le6(q+c)\le6z,
+\]
+
+and therefore
+
+\[
+\boxed{
+4z+5q+6c+C_{tail}\le10z+C_{tail}.
+}
+\]
+
+This is the sharp companion's claimed shared currency.
+
+## 5. Teeth spend only `y`
+
+Canonical Section 104 gives the exact base-excess budget
+
+\[
+\limsup_D{1\over D}
+\sum_{\rm micro\ bases}(|p_k-p_{k+1}|-1)
+\le{|S|\over2}-\alpha={y\over2}.
+\]
+
+For one projective endpoint-direction interval of width `epsilon`, the hostile-audited
+tangent-window theorem gives, for either leg choice,
+
+\[
+\limsup_D{N([0,X])\over D}
+\le C_{tail}+{X+\epsilon\over2}.
+\]
+
+The same quantile/bathtub argument as in Section 117 yields
+
+\[
+q_1+q_2
+\le Q_{tooth}(y)+2C_{tail}+\epsilon,
+\]
+
+where `Q_tooth(y)` is the unique nonnegative solution of
+
+\[
+\sin Q+\sqrt3(1-\cos Q)-Q={y\over2}.
+\]
+
+If both tooth legs lie in the same width-`epsilon` projective interval,
+triangle-freeness forces the near-`pi` apex branch. The base excess is at least
+`2cos(epsilon/2)-1`, so after `epsilon->0` the double-leg endpoint density costs at
+most `y`.
+
+Hence the full regular-tooth capacity is
+
+\[
+\boxed{Q_{tooth}(y)+y+2C_{tail}.}
+\]
+
+Combining this with the non-tooth estimate gives
+
+\[
+\boxed{
+B(x,y,z,w)
+\le Q_{tooth}(y)+y+{3\over2}x+10z+{35\over3}w.
+}
+\]
+
+## 6. The slack-simplex maximization is analytic
+
+Because
+
+\[
+{3\over2}<10<{35\over3}
+\]
+
+and `x+y+z+w=sigma`,
+
+\[
+B(x,y,z,w)
+\le {35\over3}\sigma
++Q_{tooth}(y)-{32\over3}y.
+\]
+
+Let
+
+\[
+F(Q)=\sin Q+\sqrt3(1-\cos Q)-Q.
+\]
+
+Then `F(Q_tooth(y))=y/2`, while
+
+\[
+F'(Q)=\cos Q+\sqrt3\sin Q-1,
+\]
+
+and
+
+\[
+F''(Q)=-\sin Q+\sqrt3\cos Q>0
+\qquad(0<Q<\pi/3).
+\]
+
+Thus `F'` is strictly increasing and the correction
+
+\[
+Q_{tooth}(y)-{32\over3}y
+\]
+
+has one global maximum, at
+
+\[
+F'(Q_0)={3\over64}.
+\]
+
+Independent high-precision recomputation gives
+
+\[
+Q_0=0.0272815201203264009\ldots,
+\]
+
+\[
+y_0=0.0012822850180674681\ldots,
+\]
+
+\[
+\kappa_0
+=Q_0-{32\over3}y_0
+=0.0136038132609400741\ldots .
+\]
+
+Therefore the global bad-direction capacity satisfies
+
+\[
+\boxed{
+B\le B_*(\sigma):={35\over3}\sigma+\kappa_0.
+}
+\]
+
+The use of the unrestricted maximum is safe even when `sigma<y_0`: restricting
+`0<=y<=sigma` can only lower the correction.
+
+## 7. Section 117 signed-return transport applies unchanged
+
+The hostile-audited Section-117 finite theorem is
+
+\[
+dE_D\ge(2-\sqrt3)A_{gg,D}
+\]
+
+with
+
+\[
+A_{gg,D}
+\ge A_{4,D}-2T_DM_{bad}(\epsilon)-{\Delta_D\over\epsilon}.
+\]
+
+Section 118 changes only the upper bound on `M_bad(epsilon)/D`. It does not alter train
+orientation, physical endpoint injectivity, the three-host constant, exact train-area
+transport, or the order of limits. Reuse of Section 117 is therefore legitimate.
+
+The Section-107 circular-segment identity gives the conservative area floor
+
+\[
+A_*(\sigma)
+={\pi\over4}
+-G(\theta)
+-2G\left(\phi_8+{10\sigma\over3}\right)
+-G\left({10\sigma\over3}\right).
+\]
+
+Canonical Sections 82 and 89 plus the retained face currency give
+
+\[
+{T_D\over D}\le C_T(\sigma)+o(1),
+\qquad
+C_T=U(\theta)+2\sigma.
+\]
+
+The selected principal-route excess is conservatively at most `sigma D+o(D)`. Hence
+every survivor in the safe window must satisfy
+
+\[
+\boxed{
+\lambda\sigma
+\ge
+(2-\sqrt3)
+\left[A_*(\sigma)-2C_T(\sigma)B_*(\sigma)\right]_+,
+}
+\]
+
+with `lambda=sin(theta/2)`.
+
+## 8. Endpoint arithmetic and monotonicity
+
+At `sigma=0.0088`, independent high-precision computation gives
+
+\[
+\theta=2.70477923521549347\ldots,
+\qquad
+\lambda=0.976243913742568741\ldots,
+\]
+
+\[
+A_*=0.470375286800424054\ldots,
+\]
+
+\[
+C_T=1.84875239846689394\ldots,
+\qquad
+B_*=0.116270479927606741\ldots .
+\]
+
+Thus
+
+\[
+A_*-2C_TB_*
+=0.040464629526304432\ldots>0.
+\]
+
+The signed-return lower bound forces normalized route excess
+
+\[
+{2-\sqrt3\over\lambda}
+\left(A_*-2C_TB_*\right)
+=0.011106307195331664\ldots,
+\]
+
+while only `0.0088` is available. The contradiction margin is therefore
+
+\[
+\boxed{0.002306307195331664\ldots>0.}
+\]
+
+On this neighborhood, increasing slack increases `theta`, `lambda`, `C_T`, and `B_*`,
+and decreases `A_*`; the available budget also increases. Hence the contradiction
+margin is decreasing. Positivity at `0.0088` closes every smaller positive slack.
+
+The supplied verifier
+`verify_target_c_correlated_slack_sharp_118.py` reproduces these constants and gives
+the relaxed scalar zero
+
+\[
+\sigma_{env}=0.008975876224476734\ldots,
+\qquad
+\mu_{env}=0.976247964248172612\ldots .
+\]
+
+That equality root is not needed for, and is not asserted as, the safe theorem endpoint.
+
+## 9. Disposition
+
+The corrected sharp Section-118 correlated-slack theorem survives hostile review.
+The valid proof-only theorem is
+
+\[
+\boxed{
+\sigma\le0.0088
+\Longrightarrow
+\operatorname{diam}(P_*)
+\ge(0.9762439137425688\ldots-o(1))D.
+}
+\]
+
+This strictly supersedes the Section-117 numerical endpoint while retaining its
+signed-return geometry as a dependency.
+
+It remains a quantitative carrier theorem. It does not prove that every Type-II
+survivor lies in the small-slack regime, does not force an exact unit equilateral
+triangle, does not construct a same-cardinality strict sub-`D` source, and does not
+address the macroscopic inactive-container branch.
+
+**Review verdict:** PASS as proof-only. **Theorem state unchanged.**

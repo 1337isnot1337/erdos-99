@@ -1,0 +1,423 @@
+# Target C-II — a linear high-`t` shore has a one-bar / exact-antipodal obstruction fork
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; corrected antipodal split  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch with `t=(q-k)/D<=1.8687`  
+**Dependencies:** high-`t` complete rectangle; rectangle orientation/phase theorem; global finite-defect/KKT/angular budget; common diameter-routing hub; common-transversal/rooted-shore sign; one/two-bar tangent theorem; non-antipodal minimal two-bar geometry; adjacent-strip reaction nondegeneracy; exact-antipodal second-order blocker theorem; canonical C67/DB.3 diameter-direction separation  
+**Certificate:** `research/verify_target_c_high_t_linear_one_bar_cusp_density_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The full high-`t` rectangle contains a linear consecutive row shore. On one side of the unique diameter-routing hub all switching sets are one-sided and pairwise support-disjoint. Spending the global defect/KKT/angular budget directly on that shore gives a linear family of uniformly bounded interfaces.
+
+There is one necessary distinction. The existing minimal two-bar localization theorem applies only when the two rooted boundary vectors are **not exactly antipodal**. In that non-antipodal branch, genuine two-bar blockers are globally sublinear by inverse-`D` diameter-direction separation. Exact-antipodal strips have a different second-order obstruction: they require switching diameters of opposite transverse sign and cannot be folded into the near-parallel two-bar packing argument.
+
+The correct conclusion is therefore a sharp fork:
+
+\[
+\boxed{
+|E_D|+|U_D|>0.00000565D-o(D),
+}
+\]
+
+where `E_D` is the exact-antipodal good-interface set and `U_D` is the non-antipodal one-bar good-interface set. The remaining non-antipodal genuine two-bar set is `o(D)`.
+
+---
+
+## 1. A linear one-sided shore of the rectangle
+
+Let
+
+\[
+A_*=(\tau_1,\ldots,\tau_m)
+\]
+
+be the consecutive row block from the high-`t` complete rectangle. The rectangle theorem gives
+
+\[
+\boxed{
+m>cD-o(D),
+\qquad
+c:=0.0000226={113\over5{,}000{,}000}.
+}
+\tag{OF.1}
+\]
+
+The common-hub theorem supplies one hub boundary `k`. Delete that boundary and the fixed `O(1)` end indices required by the adjacent-strip setup. Of the two remaining sides, choose the one containing more internal row interfaces and call its interface set `I_D`. Then
+
+\[
+\boxed{
+|I_D|>{c\over2}D-o(D)
+=0.0000113D-o(D).
+}
+\tag{OF.2}
+\]
+
+Orient this side toward the hub. The one-sided switching theorem says every actual diameter interval that switches on this side has the same start/stop orientation. Consequently one physical diameter edge can switch at at most one interface of `I_D`. Hence
+
+\[
+\boxed{
+H_{sw,i}\cap H_{sw,j}=\varnothing
+\qquad(i\ne j,\ i,j\in I_D).
+}
+\tag{OF.3}
+\]
+
+This disjointness will make direction packing global rather than interface-by-interface.
+
+---
+
+## 2. A linear number of uniformly bounded interfaces
+
+Use the joint-cusp cost
+
+\[
+J_i:=N_i+L_i+D B_i+S_i+S_{i+1}\ge0.
+\tag{OF.4}
+\]
+
+Here `N_i` is switching actual-diameter support size, `L_i` is the assigned terminal face-side count, `B_i` is switching KKT multiplier mass, and `S_j` is the row angular-defect sum against the common oriented column family `B_+`.
+
+The audited global budgets used in the fixed-chain theorem give
+
+\[
+\sum_iJ_i<KD+o(D),
+\tag{OF.5}
+\]
+
+where
+
+\[
+K=10T-2\pi+2+2C_{phase},
+\qquad
+T=1.8687,
+\]
+
+and the exact certificate proves the strict margin
+
+\[
+\boxed{K<Cc,
+\qquad
+C:=1{,}109{,}000.}
+\tag{OF.6}
+\]
+
+Call `i in I_D` **linear-good** when
+
+\[
+J_i<4C=4{,}436{,}000.
+\tag{OF.7}
+\]
+
+If `b_D` interfaces of `I_D` are bad, then
+
+\[
+4C b_D\le\sum_iJ_i<CcD+o(D),
+\]
+
+so
+
+\[
+b_D<{c\over4}D+o(D).
+\]
+
+Combining this with (OF.2), the good set `G_D` satisfies
+
+\[
+\boxed{
+|G_D|>{c\over4}D-o(D)
+=0.00000565D-o(D).
+}
+\tag{OF.8}
+\]
+
+For every `i in G_D`, nonnegativity in (OF.4) gives
+
+\[
+\boxed{
+N_i,L_i<4{,}436{,}000,
+\qquad
+B_i<{4{,}436{,}000\over D},
+\qquad
+S_i+S_{i+1}<4{,}436{,}000.
+}
+\tag{OF.9}
+\]
+
+Thus the rectangle contains a genuine `Theta(D)` family of bounded-complexity, one-sided local obstruction interfaces.
+
+---
+
+## 3. Every non-antipodal good strip has inverse-diameter opening width
+
+The rectangle orientation theorem supplies one common column family
+
+\[
+B_+,
+\qquad
+|B_+|>0.1567D-o(D),
+\tag{OF.10}
+\]
+
+and consistent real row phases `alpha_i`. As in the joint-cusp theorem,
+
+\[
+|B_+|\,|\alpha_{i+1}-\alpha_i|
+\le S_i+S_{i+1}.
+\tag{OF.11}
+\]
+
+Therefore every good interface obeys
+
+\[
+|\alpha_{i+1}-\alpha_i|
+<{4C\over0.1567D-o(D)}.
+\]
+
+The certificate checks
+
+\[
+{4C\over0.1567}<2.831\times10^7.
+\]
+
+For a non-antipodal interface, the rooted-shore sign theorem identifies the positive real phase gap with the adjacent-strip opening width
+
+\[
+\varepsilon_i
+:=\pi-\angle(a_i,b_i)>0.
+\]
+
+Hence
+
+\[
+\boxed{
+\varepsilon_i
+<{2.831\times10^7\over D}+o(D^{-1}).
+}
+\tag{OF.12}
+\]
+
+For an exact-antipodal interface `b_i=-a_i`, one has `epsilon_i=0`; that case is separated below rather than passed through the non-antipodal two-bar theorem.
+
+---
+
+## 4. Correct local partition
+
+Partition the good interfaces into three disjoint classes.
+
+### Exact-antipodal class `E_D`
+
+These are the interfaces with
+
+\[
+\boxed{b_i=-a_i.}
+\tag{OF.13}
+\]
+
+The exact layer reaction is
+
+\[
+G_i=A_i a_i+B_i^{ct}b_i,
+\tag{OF.14}
+\]
+
+where `A_i,B_i^{ct}>0` are the two boundary contact-force totals. Reaction nondegeneracy gives `G_i!=0`, so in this branch
+
+\[
+\boxed{A_i\ne B_i^{ct},
+\qquad
+G_i=(A_i-B_i^{ct})a_i\ne0.}
+\tag{OF.15}
+\]
+
+On the other hand the exact-antipodal second-order blocker theorem says that every canonical survivor contains two switching diameter edges with opposite transverse signs relative to `a_i`.
+
+Because the switching reaction is the positive sum of the switching KKT forces,
+
+\[
+|G_i|
+\le D\sum_{h\in H_{sw,i}}\beta_h
+=D B_i
+<4{,}436{,}000.
+\tag{OF.16}
+\]
+
+Thus every exact-antipodal good interface has a **nonzero but uniformly bounded axial reaction** and an opposite-transverse switching pair.
+
+### Non-antipodal one-bar class `U_D`
+
+These are the interfaces with `b_i!=-a_i` for which some single switching diameter edge is already a tangent certificate.
+
+### Non-antipodal genuine two-bar class `T_D`
+
+These are the remaining non-antipodal interfaces. By the one/two-bar tangent theorem, a minimal tangent certificate has exactly two switching actual diameter bars, and neither bar alone is a certificate.
+
+The three classes exhaust `G_D`:
+
+\[
+\boxed{G_D=E_D\sqcup U_D\sqcup T_D.}
+\tag{OF.17}
+\]
+
+---
+
+## 5. Only the non-antipodal genuine two-bar class is direction-localized
+
+Fix `i in T_D`. Rotate coordinates so
+
+\[
+a_i=(1,0),
+\qquad
+b_i=(\cos(\pi-\varepsilon_i),\sin(\pi-\varepsilon_i)).
+\]
+
+The proof of the existing minimal two-bar geometry theorem parameterizes the two blocker directions by
+
+\[
+\phi_1=s_1+{\pi\over2},
+\qquad
+\phi_2=s_2-{\pi\over2},
+\qquad
+0\le s_1\le s_2\le\varepsilon_i.
+\]
+
+After projectivizing the second direction, each actual diameter direction lies within `epsilon_i` of the projective normal to `a_i`:
+
+\[
+\boxed{
+ d_{\mathbb{RP}^1}([n_{i,j}],[a_i^\perp])
+\le\varepsilon_i,
+\qquad j=1,2.}
+\tag{OF.18}
+\]
+
+This statement is deliberately restricted to `T_D`; it is not asserted for exact-antipodal interfaces.
+
+---
+
+## 6. The rectangle phase window has room for only `o(D)` non-antipodal TB2 interfaces
+
+All rows of `A_*` come from one shrinking dominant projective phase window. Write its width as
+
+\[
+\omega_D=o(1)
+\tag{OF.19}
+\]
+
+about a projective direction `phi_D`.
+
+Equations (OF.12), (OF.18), and (OF.19) imply that every actual diameter bar selected in a `T_D` certificate has projective direction inside one common ball around `phi_D^perp` of radius
+
+\[
+R_D
+:=\omega_D+{2.831\times10^7\over D}+o(D^{-1})
+=o(1).
+\tag{OF.20}
+\]
+
+Canonical C67/DB.3 says distinct actual diameter edges have distinct projective directions separated by
+
+\[
+\delta_D=2\arcsin{1\over2D}\ge {1\over D}.
+\tag{OF.21}
+\]
+
+A projective ball of radius `R_D` is an arc of length at most `2R_D`, so it contains at most
+
+\[
+1+{2R_D\over\delta_D}
+\le1+2DR_D
+=o(D)
+\tag{OF.22}
+\]
+
+distinct actual diameter directions.
+
+Every interface in `T_D` contributes two distinct certificate bars. By (OF.3), certificate bars from different interfaces are also distinct. Therefore
+
+\[
+2|T_D|\le1+2DR_D=o(D),
+\]
+
+and hence
+
+\[
+\boxed{|T_D|=o(D).}
+\tag{OF.23}
+\]
+
+This is the valid global packing conclusion: **non-antipodal** genuine two-bar blockers cannot occur at linear density.
+
+---
+
+## 7. The linear obstruction fork
+
+Use (OF.8), (OF.17), and (OF.23):
+
+\[
+|E_D|+|U_D|
+=|G_D|-|T_D|
+>0.00000565D-o(D).
+\]
+
+Thus
+
+\[
+\boxed{
+|E_D|+|U_D|>0.00000565D-o(D).
+}
+\tag{OF.24}
+\]
+
+In particular
+
+\[
+\boxed{
+\max\{|E_D|,|U_D|\}
+>0.000002825D-o(D).
+}
+\tag{OF.25}
+\]
+
+The surviving high-`t` geometry must therefore carry a linear-density instance of at least one of two highly specific mechanisms:
+
+```text
+EA branch:
+    exact antipodal rooted boundary vectors b_i=-a_i;
+    nonzero axial reaction G_i=(A_i-B_i^ct)a_i;
+    |G_i|<4,436,000 on every good interface;
+    an opposite-transverse switching-diameter pair;
+    one-sided switching toward the same global hub.
+
+TB1 branch:
+    one switching actual diameter bar alone blocks every local tangent opening;
+    bars chosen at different interfaces are distinct;
+    all switches are one-sided toward the same global hub.
+```
+
+This is stronger than the earlier growing diagonal chain because it holds at positive linear density on the full rectangle shore.
+
+---
+
+## 8. What remains
+
+The non-antipodal two-bar branch is now globally negligible. Closure can focus on two alternatives.
+
+1. **Exact-antipodal density:** exploit a linear ordered family of exact antipodal row pairs with nonzero bounded axial reactions and opposite-transverse switching pairs. The missing step is a global order/variation theorem ruling out or exploiting so many exact axial reactions on one hub side.
+2. **One-bar density:** exploit a linear ordered family of single-bar tangent blockers together with their distinct switching positions, the convex diameter-thrackle order, and the common linear near-triangular transverse ladder.
+
+Either target is substantially more rigid than an arbitrary bounded local cusp.
+
+---
+
+## 9. Scope audit
+
+- The linear-good extraction uses the whole rectangle budget directly and does not claim that total switching KKT mass over the whole linear shore is `o(1)`.
+- Switching-support disjointness is used only after choosing one side of the common hub.
+- The inverse-diameter opening estimate (OF.12) is used for non-antipodal strips. Exact antipodality is treated separately.
+- The minimal two-bar localization theorem is **not** applied to `b_i=-a_i`; this is the correction relative to the first version of this note.
+- Exact-antipodal reaction nondegeneracy gives `A_i!=B_i^ct`, but no lower bound on `|A_i-B_i^ct|` is claimed.
+- A one-bar certificate need not point near `phi_D^perp`; no such localization is used here.
+- No individual KKT multiplier lower bound is assumed or proved.
+- No C-II or Level-I closure is claimed.
+
+**Disposition:** proved a linear family of uniformly bounded one-sided high-`t` interfaces, proved that only `o(D)` non-antipodal interfaces can remain genuine two-bar blockers, and reduced the linear-density survivor to an exact-antipodal / one-bar fork. C-II and Level I remain open.

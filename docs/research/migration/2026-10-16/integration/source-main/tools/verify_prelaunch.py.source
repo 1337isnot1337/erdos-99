@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+"""Locally runnable platform integrity; --full adds research tests/certificates."""
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--root", type=Path, default=ROOT)
+    parser.add_argument("--base-ref", help="PR transaction base revision")
+    parser.add_argument("--event-file", type=Path, help="GitHub PR/push event JSON")
+    parser.add_argument("--full", action="store_true")
+    args = parser.parse_args(argv)
+    root = args.root.resolve()
+    base = args.base_ref
+    if args.event_file and not base:
+        event = json.loads(args.event_file.read_text())
+        if "pull_request" in event:
+            base = event["pull_request"]["base"]["sha"]
+        elif event.get("before") and event["before"] != "0" * 40:
+            # Missing ancestry cannot validate a promotion transaction. The
+            # certificate planner also fails closed, but never masks this error.
+            base = event["before"]
+    commands = [
+        ["tools/check_theorem_state.py"],
+        ["tools/check_theorem_state_pr.py", *(["--base-ref", base] if base else [])],
+        ["tools/check_active_route_summaries.py"],
+        ["tools/check_research_entrypoints.py"],
+        ["tools/check_catalogue_state.py"],
+        ["tools/check_restored_evidence.py"],
+        ["-m", "unittest", "discover", "-s", "tools", "-p", "test_*.py"],
+        ["-m", "unittest", "discover", "-s", "tests", "-p", "test_*.py"],
+        ["tools/check_prelaunch_links.py"],
+        ["tools/publication_inventory.py", "--summary"],
+        ["tools/release_dependencies.py", "--check", "--summary"],
+    ]
+    if args.full:
+        commands.extend([
+            ["-m", "unittest", "discover", "-s", "research", "-p", "test_*.py"],
+            ["tools/run_theorem_certificates.py"],
+        ])
+    failures = []
+    for command in commands:
+        print("prelaunch: RUN " + " ".join(command), flush=True)
+        result = subprocess.run([sys.executable, *command], cwd=root,
+                                env={**os.environ, "PYTHONDONTWRITEBYTECODE": "1"})
+        if result.returncode:
+            failures.append((command, result.returncode))
+    whitespace = ["git", "diff", "--check", *([f"{base}...HEAD"] if base else [])]
+    if subprocess.run(whitespace, cwd=root).returncode:
+        failures.append((whitespace, 1))
+    print(f"prelaunch: {len(commands)+1-len(failures)}/{len(commands)+1} stages passed")
+    if failures:
+        for command, status in failures:
+            print(f"prelaunch: FAIL ({status}): {' '.join(command)}", file=sys.stderr)
+    return bool(failures)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

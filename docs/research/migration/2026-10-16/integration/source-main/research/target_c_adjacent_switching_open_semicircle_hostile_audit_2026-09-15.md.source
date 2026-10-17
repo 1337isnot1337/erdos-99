@@ -1,0 +1,181 @@
+# Hostile audit — open-semicircle support for adjacent switching diameter directions
+
+**Date:** 2026-09-15
+**Reviewed:** `research/target_c_adjacent_switching_open_semicircle_2026-09-15.md`
+**Disposition:** `PASS` at the stated exact structural scope.
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The candidate adds one exact geometric fact to the current adjacent-strip stack:
+orient every switching actual diameter from its endpoint outside the middle layer toward
+its endpoint inside the middle layer. The resulting unit directions all lie in one open
+semicircle. The main downstream consequence is that the positive switching KKT
+resultant cannot vanish.
+
+The vulnerable points are the support-normal sign, the use of contact-graph boundary
+arcs versus convex-hull arcs, the one-orientation case where middle endpoints may occupy
+two arcs, and the upgrade from a closed to an open semicircle. All pass.
+
+## 1. The support-normal sign is correct
+
+For a diameter pair `xm`, put
+
+\[
+d=(m-x)/D.
+\]
+
+For every source point `z`,
+
+\[
+d\cdot(z-x)\le |z-x|\le D=d\cdot(m-x).
+\]
+
+Thus `d dot z <= d dot m`; by convexity the inequality holds on the whole source hull.
+So `d` is an outward support normal at `m`. Reversing the pair gives `-d` as an outward
+support normal at `x`.
+
+There is no sign reversal here: the vector from the exterior switching endpoint into
+the middle endpoint points in an outward support-normal direction at the middle
+endpoint.
+
+**Verdict:** PASS.
+
+## 2. The outer-face order is enough to use convex-hull normal order
+
+The adjacent switching-order theorem already proves that every actual diameter endpoint
+is an extreme point of the source convex hull, and that the cyclic order inherited from
+the contact-graph outer face agrees with convex-hull cyclic order on those endpoints.
+
+Therefore an outer-face block containing all relevant diameter endpoints corresponds,
+after deleting non-extreme outer-face vertices, to one cyclic interval of extreme hull
+vertices. The proof need not identify the entire contact-graph boundary arc with a
+straight or smooth convex-hull arc.
+
+On a convex polygon the outward Gauss map is monotone in cyclic order. Along an edge it
+is constant; at a vertex its normal cone is exactly the angular interval between the
+two adjacent edge normals. Hence a cyclic interval of extreme vertices has one
+connected normal-angle sweep. Complementary cyclic intervals have complementary sweeps
+whose angular lengths sum to `2pi`, after assigning their common endpoint cones by
+one-sided convention.
+
+No switching endpoint lies at the artificial separators between the four open boundary
+blocks, so that endpoint convention cannot change membership of a switching support
+normal.
+
+**Verdict:** PASS.
+
+## 3. Mixed switch orientations give one middle arc
+
+If both left- and right-switch rows occur, the audited one-arc theorem places every
+switching middle endpoint on one common middle boundary arc `I`. Every exterior
+switching endpoint lies in the complementary cyclic hull interval `J`.
+
+Let `alpha` be the normal-turn length of `I`.
+
+- If `alpha<=pi`, every `d_h` belongs to the normal sweep of `I`, a closed semicircle.
+- If `alpha>pi`, the complementary sweep has length `2pi-alpha<pi`; every `-d_h`
+  belongs to that sweep, so every `d_h` belongs to its antipodal open semicircle.
+
+This is exact and uses no near-disk approximation.
+
+**Verdict:** PASS.
+
+## 4. One switch orientation is not a loophole
+
+If only left-switch rows occur, the middle endpoints may indeed occupy both middle
+outer-face arcs. The candidate does not incorrectly treat their union as connected.
+Instead all exterior switching endpoints lie in the single left block `E=B_L`.
+
+The complement of that cyclic interval contains every middle switching endpoint. If the
+normal sweep of `E` has length at most `pi`, all `-d_h` lie in one closed semicircle. If
+it has length greater than `pi`, its complementary normal sweep has length below `pi`
+and contains all `d_h`.
+
+The all-right case is symmetric.
+
+**Verdict:** PASS.
+
+## 5. Closed semicircle upgrades to open semicircle
+
+A finite set contained in a closed semicircle fails to fit in an open semicircle only
+when its minimal circular span is exactly `pi`, in which case the finite set contains
+both antipodal endpoints of that span.
+
+For switching directions this would give distinct edges `h_1,h_2` with
+
+\[
+d_{h_2}=-d_{h_1}.
+\]
+
+Their actual diameter segments are parallel in one projective direction. They cannot be
+the same graph edge listed twice: each switching edge has a unique orientation from its
+exterior endpoint into its middle endpoint. The audited parallel-diameter uniqueness
+lemma says two distinct parallel diameter pairs cannot occur in a finite diameter-`D`
+set.
+
+Hence the antipodal endpoint case is impossible and the switching direction set lies
+in an open semicircle.
+
+**Verdict:** PASS.
+
+## 6. The KKT resultant consequence is strictly stronger than the current two-bar Helly theorem
+
+Current main already has an independent one/two-bar tangent certificate, so the
+candidate's reduction of the generic Caratheodory witness to at most two diameter bars
+is no longer strategically new.
+
+The open-semicircle statement adds a different exact conclusion. For the canonical
+relative-interior stress,
+
+\[
+\beta_h>0
+\]
+
+on every actual switching diameter. A positive combination of vectors in one open
+semicircle cannot vanish. Therefore
+
+\[
+\sum_{h\in H_{sw}}\beta_hd_h\ne0
+\]
+
+and the strip balance forces
+
+\[
+Aa+Bb\ne0.
+\]
+
+Thus the zero-resultant branch in the current three-ray/KKT-resultant classifier is
+empty. In the antipodal boundary case `b=-a`, this also gives `A!=B`.
+
+This conclusion is not supplied by the Helly tangent certificate alone.
+
+**Verdict:** PASS and genuinely additional.
+
+## 7. Regression check
+
+The companion finite regression samples strictly convex ellipse polygons with random
+cyclic vertex positions, computes all actual diameter pairs, and checks every cyclic
+vertex interval. For every diameter edge crossing the interval cut it orients the edge
+from outside to inside and tests open-semicircle containment.
+
+The deterministic seed used by the committed script checks `278066` nonempty cut
+instances and finds no counterexample.
+
+This is only a regression; the proof is the support-normal/Gauss-map argument above.
+
+## Final assessment
+
+The theorem survives hostile review. Its main frontier effect should be stated as
+
+```text
+adjacent switching KKT resultant is always nonzero
++ no diameter-only three-ray positive circuit
++ current one/two-bar tangent classifier is compatible with a common open-semicircle
+  support geometry.
+```
+
+C-II remains open. The next useful step is to combine the nonzero resultant and the
+one-arc prefix/hub/suffix order with the remaining one/two-bar tangent certificate,
+especially in the nearly antipodal boundary-contact regime forced by adjacent
+phase-collapse.
+
+**Final verdict:** PASS.

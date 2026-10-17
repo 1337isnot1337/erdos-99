@@ -1,0 +1,623 @@
+# Target C-II — dominant atomic train orbit forces outer directional energy
+
+**Date:** 2026-09-15  
+**Repository base:** `11b96ae4d7ec5261efb4ebca3d9baf04444c48c4`  
+**Status:** proof-only low-`t` Type-II strengthening; theorem-state authority unchanged  
+**Scope:** full-core/no-container Type-II branch, using AG42 and the audited §142 train-phase stack  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The current low-`t` endpoint has two features that have so far been used separately:
+
+1. the strict-rhombus train crossing measure is almost concentrated in one
+   `pi/3` atomic orbit when the all-train scalar `C=(T-q/2)/D` is close to its
+   AG42 floor; and
+2. the loaded force hull is asymptotically round, while its occurrence-counted outer
+   contact routes have very small total directional energy
+   `d_out=b-per(F)`.
+
+These features are incompatible at the old endpoint.  A single three-direction atomic
+orbit cannot supply the required number of outer train-terminal occurrences around a
+round hull without paying a definite angular-energy cost.
+
+The resulting scalar exclusion raises the proof-only low-`t` floor from
+
+\[
+t_{42}=1.8208886379794447\ldots
+\]
+
+to the safe explicit bound
+
+\[
+\boxed{\liminf {q-k\over D}\ge 1.82428.}
+\]
+
+The scalar root of the present argument is
+
+\[
+1.8242812351707521\ldots,
+\]
+
+but only the safely certified round value `1.82428` is used as a theorem constant.
+
+---
+
+## 1. Normalized low-`t` variables
+
+Pass to a convergent full-core Type-II subsequence and write
+
+\[
+t={q-k\over D},\qquad
+\kappa={k\over D},\qquad
+\delta={d_{out}\over D}
+={b-\operatorname{per}(F)\over D}.
+\]
+
+Let
+
+\[
+\Delta_2={\pi\over2\sqrt3},\qquad
+s_2=\sqrt{\Delta_2},\qquad
+C_0=2s_2+0.00042.
+\]
+
+As in the low-`t` network theorem, put
+
+\[
+C:={T-q/2\over D}.
+\]
+
+Using `T-q=2f-k`, this is exactly the scalar already used in the §171 ledgers:
+
+\[
+C={t\over2}+2{f\over D}-{\kappa\over2}.
+\]
+
+AG42 gives
+
+\[
+\boxed{C\ge C_0.}
+\tag{OE.1}
+\]
+
+The audited §171 upper envelope gives
+
+\[
+\boxed{
+C\le U:= {9t\over2}-2\pi-2\delta-{\kappa\over2}.
+}
+\tag{OE.2}
+\]
+
+Hence `U>=C0`, equivalently
+
+\[
+2\delta+{\kappa\over2}
+\le R(t),
+\qquad
+R(t):={9t\over2}-2\pi-C_0.
+\tag{OE.3}
+\]
+
+---
+
+## 2. One atomic orbit contains almost all train mass at the endpoint
+
+Use the audited §142 train-phase notation.  Let
+
+\[
+x={T\over D},
+\qquad
+\sigma=\text{total atomic mass of the limiting projective train-phase measure},
+\]
+
+and let
+
+\[
+A:=x\sigma
+\]
+
+be the absolute atomic train mass per unit diameter.
+
+The exposed-hull inequality from §142 is
+
+\[
+{q/T}\le2(1-\sigma).
+\]
+
+Therefore
+
+\[
+\boxed{
+A=x\sigma
+\le x-{q\over2D}
+=C.
+}
+\tag{OE.4}
+\]
+
+Group the atomic train mass by the exact projective orbit
+
+\[
+\phi\mapsto\phi+{\pi\over3}\pmod\pi.
+\]
+
+Let `M_r` be the absolute train mass in orbit `r` and `E_r` its limiting
+strict-rhombus crossing mass.  Audited §§142/168 give
+
+\[
+E_r\le {M_r^2\over4},
+\qquad
+\sum_rE_r=\Delta_2,
+\qquad
+\sum_rM_r=A.
+\tag{OE.5}
+\]
+
+If
+
+\[
+M:=\max_rM_r,
+\]
+
+then
+
+\[
+4\Delta_2
+\le\sum_rM_r^2
+\le M\sum_rM_r=MA.
+\]
+
+Together with (OE.4),
+
+\[
+\boxed{
+M\ge {4\Delta_2\over A}
+\ge {4\Delta_2\over C}.
+}
+\tag{OE.6}
+\]
+
+Thus one three-direction orbit carries a macroscopically dominant set of complete
+stopped trains.
+
+---
+
+## 3. The dominant orbit must carry many outer terminal occurrences
+
+Freeze disjoint phase windows of radius `rho` around the at most three atoms of one
+orbit attaining `M`, and then take sufficiently far finite sources.  The number of
+complete trains outside those windows is at most
+
+\[
+(x-M+o_\rho(1))D.
+\]
+
+Every complete stopped train is a path and has exactly two terminal face incidences,
+so it has at most two outer-face terminal occurrences.  The occurrence-counted outer
+walk has `b` outer terminal occurrences in total.  Hence the number `K_D(rho)` of
+outer occurrences carried by trains in the dominant-orbit windows satisfies
+
+\[
+K_D(\rho)
+\ge b-2(T-MD)-o_\rho(D).
+\tag{OE.7}
+\]
+
+Type-II perimeter convergence gives
+
+\[
+{b\over D}
+={\operatorname{per}(F)\over D}+\delta
+\longrightarrow\pi+\delta.
+\]
+
+Also
+
+\[
+x=C+{q\over2D}
+=C+{t+\kappa\over2}.
+\]
+
+Therefore, after `D->infinity` and then `rho->0`, the normalized dominant-orbit outer
+occurrence count `K` obeys
+
+\[
+K
+\ge
+\pi+\delta-t-\kappa-2C+2M.
+\]
+
+Using (OE.6),
+
+\[
+\boxed{
+K
+\ge
+\pi+\delta-t-\kappa-2C+{8\Delta_2\over C}.
+}
+\tag{OE.8}
+\]
+
+The function
+
+\[
+-2C+{8\Delta_2\over C}
+\]
+
+is strictly decreasing for `C>0`.  Hence the upper bound (OE.2) gives the explicit
+weaker but source-independent estimate
+
+\[
+\boxed{
+K
+\ge
+K_*:=
+\pi+\delta-t-\kappa-2U+{8\Delta_2\over U}.
+}
+\tag{OE.9}
+\]
+
+---
+
+## 4. Round-hull transport converts orbit occurrences into detour energy
+
+For consecutive loaded hull vertices `b_i,b_{i+1}`, let
+
+\[
+s_i=|b_i-b_{i+1}|,
+\qquad
+\ell_i=|W_i|,
+\qquad
+d_i=\ell_i-s_i\ge0.
+\]
+
+The distinguished routes partition the outer walk, so
+
+\[
+\sum_i d_i=d_{out}.
+\tag{OE.10}
+\]
+
+Let `n_i` be the number of dominant-orbit-window outer edge occurrences on `W_i`.
+Then `n_i<=ell_i`.  Set
+
+\[
+m_i:=\min\{n_i,s_i\}.
+\]
+
+Since
+
+\[
+(n_i-s_i)_+\le(\ell_i-s_i)=d_i,
+\]
+
+we have
+
+\[
+\boxed{
+\sum_i m_i
+\ge K_D(\rho)-d_{out}.
+}
+\tag{OE.11}
+\]
+
+Interpret `m_i` as fractional weight, at most one per selected occurrence, retained
+from the dominant-orbit occurrences on route `i`.  Let `theta_i` be the projective
+direction of the loaded-hull side `b_i b_{i+1}` and define the normalized side measure
+
+\[
+\mu_D={1\over D}\sum_i s_i\,\delta_{\theta_i}.
+\]
+
+The retained fractional weights define a submeasure
+
+\[
+\nu_D\le\mu_D
+\]
+
+whose total mass has lower limit at least `K-delta`.
+
+The near-disk perimeter-measure convergence already used in audited §142 gives
+
+\[
+\mu_D\Rightarrow d\theta
+\]
+
+on the projective direction circle `R/pi Z`, where `dtheta` is Lebesgue measure of
+total mass `pi`.  After subsequence extraction,
+
+\[
+\nu_D\Rightarrow\nu,
+\qquad
+0\le\nu\le d\theta,
+\qquad
+\nu(\mathbb R/\pi\mathbb Z)\ge K-\delta.
+\tag{OE.12}
+\]
+
+Let `O` be the limiting three-point projective orbit and define
+
+\[
+g(\theta):=1-\cos d_{\mathbb{RP}^1}(\theta,O).
+\tag{OE.13}
+\]
+
+For an outer unit edge on route `i` whose train phase is within `rho` of `O`, its
+exact directional-energy contribution
+
+\[
+1-u_i\cdot v
+\]
+
+is at least
+
+\[
+1-|u_i\cdot v|
+\ge
+1-\cos\bigl(d_{\mathbb{RP}^1}(\theta_i,O)-\rho\bigr)_+.
+\]
+
+All route directional energies sum exactly to `d_out`.  Retaining only the fractional
+weights from (OE.11), taking `D->infinity`, and then `rho->0` gives
+
+\[
+\boxed{
+\delta\ge\int g\,d\nu.
+}
+\tag{OE.14}
+\]
+
+This is the key new transport inequality: orbit concentration in train phase must be
+paid against the uniformly rotating loaded-hull tangent measure.
+
+---
+
+## 5. Exact bathtub minimum for a three-direction orbit
+
+The three points of `O` are equally spaced by `pi/3` on a projective circle of total
+length `pi`.  For `0<=a<=pi/6`, the set of directions at distance at most `a` from
+`O` has Lebesgue measure `6a`.
+
+Among all submeasures `0<=nu<=dtheta` of prescribed mass `z`, the integral in
+(OE.14) is minimized by filling the directions closest to `O`.  Consequently, for
+`0<=z<=pi`,
+
+\[
+\boxed{
+\int g\,d\nu
+\ge F(z):=
+6\int_0^{z/6}(1-\cos u)\,du
+=z-6\sin(z/6).
+}
+\tag{OE.15}
+\]
+
+The function `F` is increasing on `[0,pi]`.  Combining (OE.12)--(OE.15) with (OE.9)
+gives the necessary condition
+
+\[
+\boxed{
+\delta
+\ge
+F\!\left(
+\pi-t-\kappa-2U+{8\Delta_2\over U}
+\right),
+}
+\tag{OE.16}
+\]
+
+whenever the displayed argument is positive.  Notice that the `+delta` in `K_*`
+exactly cancels the `delta` capacity loss in (OE.11).
+
+---
+
+## 6. The entire low-`t` feasible triangle reduces to one endpoint
+
+For fixed `t`, define
+
+\[
+k(t,\delta,\kappa)
+:=
+\pi-t-\kappa-2U+{8\Delta_2\over U},
+\qquad
+U={9t\over2}-2\pi-2\delta-{\kappa\over2}.
+\tag{OE.17}
+\]
+
+The contradiction margin is
+
+\[
+H(t,\delta,\kappa):=F(k(t,\delta,\kappa))-\delta.
+\tag{OE.18}
+\]
+
+The feasible region is
+
+\[
+\delta,\kappa\ge0,
+\qquad U\ge C_0.
+\]
+
+First,
+
+\[
+{\partial k\over\partial\kappa}
+={4\Delta_2\over U^2}>0,
+\tag{OE.19}
+\]
+
+so `H` is minimized at `kappa=0` for fixed `t,delta`.
+
+Second,
+
+\[
+{\partial k\over\partial\delta}
+=4+{16\Delta_2\over U^2}<8,
+\tag{OE.20}
+\]
+
+because `U>=C0>2sqrt(Delta2)`.  Also
+
+\[
+-2U+{8\Delta_2\over U}<0
+\]
+
+for `U>C0>2sqrt(Delta2)`, so throughout the old AG42-admissible region
+`t>=t42`,
+
+\[
+0<k<\pi-t\le\pi-t_{42}=1.3207040156\ldots .
+\]
+
+Hence
+
+\[
+F'(k)=1-\cos(k/6)
+\le0.024129,
+\]
+
+and therefore
+
+\[
+{\partial H\over\partial\delta}
+=F'(k){\partial k\over\partial\delta}-1
+<8(0.024129)-1<0.
+\tag{OE.21}
+\]
+
+Thus `H` decreases with `delta`.  With `kappa=0`, the largest feasible detour is
+
+\[
+\delta={R(t)\over2},
+\]
+
+at which `U=C0`.  Therefore the weakest point of the entire feasible triangle is
+
+\[
+\boxed{
+\kappa=0,
+\qquad
+\delta={R(t)\over2},
+\qquad
+U=C_0.
+}
+\tag{OE.22}
+
+At that point put
+
+\[
+k_0(t)
+:=\pi-t-2C_0+{8\Delta_2\over C_0}
+\tag{OE.23}
+\]
+
+and
+
+\[
+H_0(t):=F(k_0(t))-{R(t)\over2}.
+\tag{OE.24}
+\]
+
+Since
+
+\[
+H_0'(t)
+=-F'(k_0(t))-{9\over4}<0,
+\]
+
+there is at most one scalar crossing.
+
+---
+
+## 7. New explicit floor
+
+The Decimal/Taylor certificate gives
+
+\[
+H_0(1.82428)
+=0.0000028087090542793\ldots>0.
+\tag{OE.25}
+\]
+
+The scalar zero is
+
+\[
+t_*=1.8242812351707521395\ldots .
+\tag{OE.26}
+\]
+
+Therefore every convergent low-`t` Type-II subsequence with
+
+\[
+t\le1.82428
+\]
+
+violates the necessary outer-energy condition (OE.16).  Combining with the old AG42
+floor below `t42` yields:
+
+### Theorem OE.1 — dominant-orbit outer-energy exclusion
+
+Every full-core Type-II survivor sequence satisfies
+
+\[
+\boxed{
+\liminf_{D\to\infty}{q-k\over D}
+\ge1.82428.
+}
+\tag{OE.27}
+
+The theorem is deliberately stated at the round value `1.82428`, not at the numerical
+root (OE.26).
+
+---
+
+## 8. Why this is different from the current penetration count
+
+The convex-route/signed-penetration theorem proves more than `1.302D` distinct inward
+contacts but leaves open concentration in a small number of macroscopic rhombic strips.
+The present argument does not try to distribute those penetration contacts among
+trains.  Instead it acts one level earlier:
+
+```text
+quadratic rhombus crossing density
+ -> dominant three-direction atomic train orbit
+ -> dominant orbit must own many outer terminal occurrences
+ -> round force-hull tangent measure rotates uniformly
+ -> those orbit occurrences pay directional energy
+ -> total outer detour is too small at the old endpoint.
+```
+
+Thus the old endpoint is excluded even if all first-layer penetration contacts are
+absorbed by a few long strips.
+
+---
+
+## 9. Scope and remaining obstruction
+
+- The theorem is Type II/full-core only.
+- It uses the proof-only AG42 constant `0.00042`; theorem-state authority is unchanged.
+- Atomic windows are frozen after passage to one limiting train-phase measure; no
+  atomic-mass semicontinuity assertion is used.
+- The outer walk is occurrence-counted throughout.  A train has at most two outer
+  terminal occurrences even when a physical bridge contributes two occurrences.
+- The measure domination `nu<=dtheta` uses only `m_i<=s_i` and the same near-disk
+  perimeter-measure convergence already used in audited §142.
+- The projective energy bound uses `1-u_i dot v >= 1-|u_i dot v|`, so backward edge
+  orientations cannot weaken it.
+- Contact-isolated source points are retained in the full source and never enter the
+  train ledger.
+
+This does **not** close C-II.  For `t` moderately above `1.82428`, the network envelope
+allows enough outer detour to pay the dominant-orbit tangent mismatch.  The next useful
+step is to combine this new floor with the pentagon/outer-train population identities
+and the signed penetration stack, rather than optimizing the old `t42` endpoint again.
+
+## 10. Reproducibility
+
+Run
+
+```bash
+python3 research/verify_target_c_dominant_orbit_outer_energy.py
+```
+
+for the high-precision scalar and monotonicity certificate.

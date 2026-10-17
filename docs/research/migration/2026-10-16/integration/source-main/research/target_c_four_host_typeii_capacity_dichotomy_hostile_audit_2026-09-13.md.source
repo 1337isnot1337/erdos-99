@@ -1,0 +1,96 @@
+# Hostile audit — Target C exact four-host Type-II capacity dichotomy
+
+**Date:** 2026-09-13  
+**Artifact:** `target_c_four_host_typeii_capacity_dichotomy_2026-09-12.md`  
+**State lock:** `2026-09-12.audit.46`  
+**Verdict:** PASS at the stated proof-only scope; no C-II closure.
+
+## 1. Host-width equality
+
+For a host `q` in the closed unit disk, `q·u=1` forces `q=u`, and `q·u=-1`
+forces `q=-u`. Therefore width two in each of two nonparallel train directions
+does require the four hosts `+u,-u,+v,-v`. The zero host contributed by a closed
+exceptional-face route does not affect this equality.
+
+The report's geometric hypothesis is stronger than merely saying that four hosts
+are available: after removing repeated collinear attachment vertices, the only
+nonzero consecutive-attachment directions are those four directions. This distinction
+is necessary because additional hosts can leave both widths equal to two.
+
+**Verdict:** pass.
+
+## 2. Four directions imply a parallelogram
+
+A nondegenerate convex polygon whose edge directions lie in
+`{+u,-u,+v,-v}` has, after suppressing collinear intermediate vertices, one edge in
+each direction. Closure forces opposite side vectors to cancel, so the polygon is a
+parallelogram. Repeated attachment vertices on one side do not change the convex
+polygon and are harmless for the area argument.
+
+**Verdict:** pass; no unsupported simplicity assumption is needed.
+
+## 3. Near-disk parallelogram calculation
+
+The Type-II near-disk input supplies, after translating the force-hull center to the
+origin, a common radius `R_D=D/2` and `epsilon_D->0` with all attachment vertices in
+the annulus `R_D+/-epsilon_D D`. Writing the four corners as
+`c_D +/- r_D +/- s_D`, differences of squared norms give
+
+`c_D·r_D=o(D^2)`, `c_D·s_D=o(D^2)`, and `r_D·s_D=o(D^2)`.
+
+For a macroscopic area lower bound, `|r_D x s_D|=Omega(D^2)`, while `|r_D|,|s_D|=O(D)`.
+The first two scalar estimates then imply `|c_D|=o(D)` by inverting the two-dimensional
+Gram system; the determinant is bounded below by the cross product. Averaging the four
+corner squared norms gives
+
+`|r_D|^2+|s_D|^2=R_D^2+o(D^2)`.
+
+Finally `4|r_D x s_D| <= 2(|r_D|^2+|s_D|^2)` gives
+`area(P_D)<=D^2/2+o(D^2)`. The same macroscopic lower bound and `|r_D|,|s_D|=O(D)`
+give a linear inradius, so the `o(D)` center displacement places the hull origin in
+the polygon interior for all sufficiently large `D`.
+
+**Verdict:** pass. The area estimate is asymptotic and is not claimed for small cells.
+
+## 4. At most one macroscopic exact four-host cell
+
+Canonical attachment-cell disjointness gives disjoint interiors. Every exact four-host
+cell with area at least `eta D^2` contains the common force-hull center in its interior.
+Two such cells therefore contradict disjoint interiors. The argument does not require
+their boundaries to be disjoint.
+
+**Verdict:** pass.
+
+## 5. Small-cell tail and positive-area alternative
+
+The canonical cell budget
+
+`sum_r sqrt(area(P_r))=O(D)`
+
+is the relevant Section-83 consequence. For cells with area below `eta D^2`,
+
+`area(P_r) <= sqrt(eta) D sqrt(area(P_r))`,
+
+so their total area is `O(sqrt(eta)D^2)`. Since the Type-II cell areas sum to
+`(pi/4-o(1))D^2`, choose fixed `eta>0` small enough that this tail cannot fill the
+gap between `1/2` and `pi/4`. If every remaining macroscopic cell were exact four-host,
+there would be at most one of them and its area would be at most `D^2/2+o(D^2)`.
+Thus a cell of area at least `eta D^2` outside the exact four-host class exists.
+
+The coefficient hidden in the `O(sqrt(eta))` budget is finite and depends only on the
+canonical Section-83 bound, so an explicit numerical `eta` is unnecessary for this
+compactness statement.
+
+**Verdict:** pass.
+
+## 6. Scope and remaining gate
+
+This is a capacity restriction on the exact four-host regression only. It does not
+prove that the non-four-host cell has positive width defect: an additional host can
+contain the same four antipodal directions. It also does not identify the remaining
+cell with a global minimizer competitor or create a unit equilateral triangle.
+Contact-isolated source points are not deleted and no full-source affine-kernel claim
+is used.
+
+**Final classification:** audited-working proof-only bridge. The theorem state remains
+unchanged and C-II remains open.

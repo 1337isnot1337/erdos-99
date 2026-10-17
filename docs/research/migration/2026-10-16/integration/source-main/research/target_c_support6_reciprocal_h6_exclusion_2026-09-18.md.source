@@ -1,0 +1,382 @@
+# Target C-II — the degree-pure support-six reciprocal `H6` branch is impossible
+
+**Date:** 2026-09-18  
+**Status:** proof-only structural strengthening; theorem-state authority unchanged  
+**Scope:** the noncollapsed degree-pure support-six one-anchor endpoint after the convex `H7` exclusion  
+**Depends on:** `target_c_support6_reciprocal_h7_exclusion_2026-09-18.md`; closed-equilateral-pentagon two-turn inequality; local `2+3` reciprocal sign alternation; bounded-pentagon no-parallel-side theorem  
+**Certificate:** `research/verify_target_c_support6_reciprocal_h6_exclusion_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The support-six `H7` theorem leaves, on the noncollapsed branch, reciprocal hull sizes
+five and six. This note eliminates the six-vertex hull branch exactly.
+
+The new ingredient is a ground-equilibrium order lemma. Six distinct unit rays in one
+open semicircle, with three positive and three negative signs and zero signed sum, have
+only one possible sign word up to global reversal:
+
+\[
+\boxed{+--++-}.
+\]
+
+Combining that word with the already proved local `2+3` alternation rule at the five
+non-ground hull vertices leaves no rank-three order type for a convex hexagon plus one
+interior reciprocal point. The finite check is an exact oriented-matroid enumeration:
+there are 26 uniform single-element extensions of the convex-hexagon chirotope, and none
+admits a compatible perfect matching and edge signing.
+
+The only nonuniform configuration not covered by that first enumeration is the
+collinearity already allowed by the reciprocal construction: the interior point, the
+ground point, and the interior point's missing-matching mate can lie on one line. That
+case is also finite. There are 14 simple collinearity walls between the 26 uniform order
+types, and none admits a compatible signing once the necessary ground sign condition is
+imposed.
+
+Therefore
+
+\[
+\boxed{
+\text{a noncollapsed degree-pure support-six block cannot have reciprocal hull size }6.
+}
+\]
+
+Together with the previous convex-`H7` exclusion, every noncollapsed degree-pure
+support-six block is now forced into reciprocal hull size five. The separate collapsed
+branch `y_1=\cdots=y_6\ne0` remains live, so the global `n_1/6` corank coefficient is not
+yet improved.
+
+---
+
+## 1. `H6` setup
+
+Use the support-six notation from the preceding theorem. The six one-anchor pentagons
+have relation graph
+
+\[
+R=K_6\setminus M,
+\]
+
+where `M` is a perfect matching on the six non-ground reciprocal vertices. Adding the
+ground reciprocal point gives
+
+\[
+H=K_7\setminus M.
+\]
+
+Assume the noncollapsed branch, so the six non-ground reciprocal points are pairwise
+distinct.
+
+In the `H6` case label the reciprocal hull cyclically
+
+\[
+0,1,2,3,4,5,
+\]
+
+with `0` the ground point, and label the unique interior non-ground point `6`.
+The previous theorem gives:
+
+1. the ground hull angle satisfies `phi_0<2pi/3`;
+2. the six ground edges are all present and the ground equilibrium has sign split
+   exactly `3+3`;
+3. every non-ground hull vertex `1,...,5` has a `2+3` sign split on its five incident
+   reciprocal edges; and
+4. at each such vertex, for either fixed global sign color, the local degree-two class
+   occupies raw-ray positions two and four after the missing matching edge is deleted.
+
+The last statement is the local alternation theorem inherited from the source contact
+pentagon.
+
+---
+
+## 2. Ground order lemma for a `3+3` equilibrium in a semicircle
+
+Let
+
+\[
+u_j=e^{i\theta_j},\qquad
+\theta_1<\theta_2<\cdots<\theta_6,
+\qquad
+\theta_6-\theta_1<\pi,
+\]
+
+be six distinct unit vectors. Let `s_j in {+1,-1}` have three signs of each color and
+assume
+
+\[
+\sum_{j=1}^6 s_j u_j=0.
+\tag{2.1}
+\]
+
+Globally reverse signs if necessary so `s_1=+1`. Put
+
+\[
+\Delta_k=u_{k+1}-u_k,
+\qquad
+S_k=\sum_{j=1}^k s_j,
+\qquad 1\le k\le5.
+\]
+
+Since the total signed count is zero, summation by parts gives
+
+\[
+\sum_{j=1}^6 s_j u_j
+=-\sum_{k=1}^5 S_k\Delta_k.
+\tag{2.2}
+\]
+
+The chord formula
+
+\[
+\Delta_k
+=2\sin\frac{\theta_{k+1}-\theta_k}{2}
+ \exp i\left(\frac{\theta_k+\theta_{k+1}}2+\frac\pi2\right)
+\]
+
+shows
+
+\[
+\arg\Delta_1<\arg\Delta_2<\cdots<\arg\Delta_5,
+\]
+
+and all five chord arguments lie in an open interval of width less than `pi`.
+Consequently every nonzero positive combination of any consecutive collection of these
+chords has argument strictly between the extreme chord arguments.
+
+There are ten `3+3` words with first sign positive. Five have all prefix sums
+`S_1,...,S_5` nonnegative and at least one positive:
+
+```
++++---   ++-+--   ++--+-   +-++--   +-+-+-
+```
+
+For each, the right side of (2.2) is a nonzero positive combination of vectors in one
+open halfplane, so it cannot vanish.
+
+Four more words reduce to an impossible comparison of ordered chord arguments:
+
+\[
+\begin{array}{c|c|c}
+\text{word}&(S_1,\ldots,S_5)&\text{required identity}\\
+\hline
+++---+&(1,2,1,0,-1)&\Delta_5=\Delta_1+2\Delta_2+\Delta_3\\
++-+--+&(1,0,1,0,-1)&\Delta_5=\Delta_1+\Delta_3\\
++--+-+&(1,0,-1,0,-1)&\Delta_1=\Delta_3+\Delta_5\\
++---++&(1,0,-1,-2,-1)&\Delta_1=\Delta_3+2\Delta_4+\Delta_5.
+\end{array}
+\]
+
+In the first two rows the right-hand side has argument strictly below
+`arg Delta_5`; in the last two it has argument strictly above `arg Delta_1`.
+
+The only word not contradicted is
+
+\[
++--++-,
+\]
+
+whose prefix vector is `(1,0,-1,0,1)` and whose necessary chord relation is
+
+\[
+\Delta_3=\Delta_1+\Delta_5.
+\]
+
+Thus:
+
+\[
+\boxed{
+\text{any distinct-ray ground `3+3` equilibrium in an open semicircle has word }
++--++-
+\text{ or its global complement.}
+}
+\tag{2.3}
+\]
+
+Reversing the ray order changes this word into its global complement, so (2.3) is
+orientation-independent.
+
+---
+
+## 3. Exact enumeration of all uniform `H6` order types
+
+For a noncollinear `H6` configuration, only the radial order data are needed from the
+reciprocal coordinates.
+
+Fix the convex-hull chirotope on vertices `0,...,5` with positive orientation on every
+increasing hull triple. For the interior point `6`, the sorted signs
+
+\[
+\chi(i,j,6),\qquad 0\le i<j\le5,
+\]
+
+determine its cell in the arrangement of hull lines. Interior location fixes the six
+boundary signs
+
+\[
+\chi(i,i+1,6)=+1\quad(0\le i<5),
+\qquad
+\chi(0,5,6)=-1.
+\]
+
+Nine signs remain free. The verifier checks all `2^9=512` assignments against the
+rank-three Grassmann-Pluecker chirotope axiom, exhaustively over all ordered five-element
+subsets. Exactly
+
+\[
+\boxed{26}
+\]
+
+uniform single-element extensions survive, with 26 distinct interior-ray insertion
+patterns around the six hull vertices.
+
+For each of those 26 exact order types, the verifier then checks:
+
+- all 15 perfect matchings `M` on `{1,...,6}`;
+- both global complements of the ground word (2.3); and
+- all `2^5` choices of which global sign color is the local degree-two class at hull
+  vertices `1,...,5`.
+
+At a non-ground hull vertex the matching mate is deleted from the six raw rays; the
+local degree-two sign class is then required to occupy positions two and four of the
+remaining five rays. Edge signs are undirected, so the assignments from the two
+endpoints of every reciprocal edge must agree.
+
+The exact count is
+
+\[
+\boxed{0\text{ compatible signings}.}
+\tag{3.1}
+\]
+
+No metric coordinate, numerical angle, or floating-point tolerance is used.
+
+Therefore a uniform reciprocal `H6` support-six block is impossible.
+
+---
+
+## 4. The only possible `H6` collinearity
+
+It remains to remove the nonuniform case.
+
+The previous support-six theorem proves that no three non-ground reciprocal points are
+collinear. The six hull vertices are strictly convex, so three hull vertices cannot be
+collinear either. Hence any collinear triple in `H6` must contain the unique interior
+point `6` and the ground point `0`:
+
+\[
+0,6,j.
+\]
+
+If the reciprocal edge `6j` were present, then at physical pentagon `F_6` the anchor
+edge `60` and relation edge `6j` would be projectively parallel. The bounded-pentagon
+no-parallel-side theorem forbids that. Thus
+
+\[
+\boxed{6j\in M.}
+\tag{4.1}
+\]
+
+Since `6` is interior and `0,j` are hull points, `6` lies on the hull diagonal segment
+`0j`. In particular `j` cannot be the boundary neighbors `1` or `5`, so
+
+\[
+j\in\{2,3,4\}.
+\tag{4.2}
+\]
+
+At the ground point the raw unit directions for `j` and `6` coincide.
+
+They cannot have opposite reciprocal signs. If they did, those two ground-force terms
+would cancel. The remaining four distinct unit directions lie in the same open
+semicircle and would split `2+2`, forcing
+
+\[
+u_a+u_b=u_c+u_d
+\]
+
+for two disjoint pairs. But for two non-antipodal unit vectors, the sum uniquely
+determines the unordered pair: its direction is the pair's angular bisector and its
+norm is `2 cos(alpha/2)`, where `alpha<pi` is their angular separation. Hence the two
+pairs would be identical, contradicting distinctness.
+
+Therefore the coincident ground rays have the same sign. After a global sign reversal,
+both are positive. Since the ground split remains `3+3`, exactly one of the other four
+ground rays is positive.
+
+---
+
+## 5. Exact enumeration of the collinear walls
+
+A configuration with exactly the collinearity `0,6,j` can be perturbed slightly to
+either side of the line `0j` without changing any other orientation sign. Therefore it
+lies on a codimension-one wall between two uniform extensions from Section 3 which
+differ only in `chi(0,j,6)`.
+
+The exact chirotope enumeration finds
+
+\[
+\boxed{14}
+\]
+
+such walls:
+
+\[
+4\text{ for }j=2,
+\qquad
+6\text{ for }j=3,
+\qquad
+4\text{ for }j=4.
+\tag{5.1}
+\]
+
+For every wall the matching is forced to contain `j6`; the other four non-ground
+vertices have three possible pairings. The verifier checks all of them, all four choices
+of the third ground-positive ray, both global complements, and all `2^5` non-ground
+local `2+3` phases.
+
+At hull vertex `j` the ray tied with the ground direction is precisely the missing edge
+`j6`, so deleting the matching mate removes the tie before the local five-ray
+alternation rule is applied.
+
+Again the exact count is
+
+\[
+\boxed{0\text{ compatible signings}.}
+\tag{5.2}
+\]
+
+Thus the collinear `H6` branch is impossible as well.
+
+---
+
+## 6. Consequence
+
+The preceding convex-`H7` theorem reduced a noncollapsed degree-pure support-six block
+to reciprocal hull sizes five or six. Sections 2--5 eliminate six. Hence
+
+\[
+\boxed{
+\text{every noncollapsed degree-pure support-six block has reciprocal hull size }5.
+}
+\tag{6.1}
+\]
+
+The support-six endpoint now has exactly two live mechanisms:
+
+1. the noncollapsed reciprocal `H5` family, with the ground on the hull and two
+   non-ground reciprocal points interior; and
+2. the collapsed branch `y_1=\cdots=y_6\ne0`, equivalently six projectively parallel
+   outside anchors with a `3+3` oriented-anchor split.
+
+Both must be removed before the support minimum can rise from six to seven, so this note
+does not by itself strengthen the global coefficient `n_1/6`.
+
+The `H5` branch is now a finite rank-three order-type problem with two interior points.
+The collapsed branch is an exact physical octahedral-train problem. Those are the next
+support-six targets.
+
+No theorem-state file is changed.
+
+**Disposition:** proved the ground `3+3` semicircle sign-order lemma, exhaustively
+classified all uniform convex-hexagon-plus-interior order types by exact chirotope
+axioms, found no compatible reciprocal signing, then separately enumerated and excluded
+the only allowed collinear walls. The noncollapsed degree-pure support-six branch is
+therefore forced from `H5/H6` down to `H5` only. C-II remains open.

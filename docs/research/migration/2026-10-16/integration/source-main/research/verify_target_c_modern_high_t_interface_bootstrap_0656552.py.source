@@ -1,0 +1,99 @@
+#!/usr/bin/env python3
+"""Exact certificate for the modern high-t Section-85 interface bootstrap.
+
+Scope-safe inputs:
+  * liminf t=(q-k)/D >= 1.844 after the hostile-audited low-t exclusion;
+  * liminf (T-q/2)/D >= 2*sqrt(Delta_2)+0.007707;
+  * P_F/D -> pi and R_4/D^2 -> Delta_2=pi/(2sqrt(3));
+  * J_D=(b-P_F)+(Q+4f)=2T-P_F;
+  * H_D=(b-P_F)+(Q+2f) >= 3 J_D/5;
+  * A_ch-a0 Z_ch >= (sqrt(3)/4) H_D.
+
+All checks use Fraction arithmetic with adverse rational enclosures.
+"""
+from fractions import Fraction as Q
+from math import isqrt
+
+T0 = Q(461, 250)          # 1.844
+g = Q(7707, 10**6)
+
+# Rational enclosures already used by the modern high-t certificate.
+pi_lo = Q(103993, 33102)
+pi_up = Q(104348, 33215)
+s3_lo = Q(1732050807, 10**9)
+s3_up = Q(1732050808, 10**9)
+assert pi_lo < pi_up
+assert s3_lo * s3_lo < 3 < s3_up * s3_up
+
+Delta_lo = pi_lo / (2 * s3_up)
+S = 10**12
+root = isqrt((Delta_lo.numerator * S * S) // Delta_lo.denominator)
+sqrtDelta_lo = Q(root, S)
+assert sqrtDelta_lo * sqrtDelta_lo <= Delta_lo
+
+# Modern all-train lower bound C = 2 sqrt(Delta_2)+g.
+C_lo = 2 * sqrtDelta_lo + g
+
+# J_D=2T-P_F and 2T=q+2(T-q/2), while q>=q-k.
+# Thus J_D/D >= t + 2 C - pi - o(1).
+J_lo = T0 + 2 * C_lo - pi_up
+J_SAFE = Q(2527072, 10**6)
+assert J_lo > J_SAFE
+
+# Section 85: H_D>=3J_D/5.
+H_lo = Q(3, 5) * J_lo
+H_SAFE = Q(1516243, 10**6)
+assert H_lo > H_SAFE
+
+# Chamber surplus with c0=sqrt(3)/4.
+chamber_lo = (s3_lo / 4) * H_lo
+CHAMBER_SAFE = Q(656552, 10**6)
+assert chamber_lo > CHAMBER_SAFE
+assert chamber_lo - CHAMBER_SAFE > Q(6, 10**7)
+
+# Modern exceptional-face count. From
+# T-q/2=q/2+2f-k <= P_F/2+2f,
+# f/D >= sqrt(Delta_2)+g/2-pi/4-o(1).
+f_lo = sqrtDelta_lo + g / 2 - pi_up / 4
+F_SAFE = Q(170767, 10**6)
+assert f_lo > F_SAFE
+
+# P_ch>=J_D and s_ch>=f. Chamber Oler-slack sum:
+# Sigma_ch >= H/2 + J/2 + f >= 4J/5 + f.
+Sigma_lo = Q(4, 5) * J_lo + f_lo
+SIGMA_SAFE = Q(2192424, 10**6)
+assert Sigma_lo > SIGMA_SAFE
+
+# Positive-core excess: m-R4=(P_F+H_D)/2+1.
+pop_lo = (pi_lo + H_lo) / 2
+POP_SAFE = Q(2328917, 10**6)
+assert pop_lo > POP_SAFE
+
+# Full-source Oler then gives the linear absolute rhombus-count deficit
+# Delta_2 D^2-R4 >= (3/10) J_D D-o(D).
+rhombus_def_lo = Q(3, 10) * J_lo
+RHOMBUS_SAFE = Q(758121, 10**6)
+assert rhombus_def_lo > RHOMBUS_SAFE
+
+# Geometric area version a0*(3J/10) equals c0*(3J/5).
+geom_def_lo = (s3_lo / 2) * rhombus_def_lo
+assert geom_def_lo == chamber_lo
+
+print('PASS modern high-t Section-85 interface bootstrap')
+print('sqrt(Delta2) lower =', float(sqrtDelta_lo))
+print('all-train C lower =', float(C_lo))
+print('J_D/D lower =', float(J_lo))
+print('H_D/D lower =', float(H_lo))
+print('chamber surplus lower =', float(chamber_lo))
+print('exceptional-face density lower =', float(f_lo))
+print('positive-core excess lower =', float(pop_lo))
+print('chamber Oler-slack sum lower =', float(Sigma_lo))
+print('rhombus-count deficit lower =', float(rhombus_def_lo))
+print('safe rounded conclusions:')
+print('  J_D/D >= 2.527072-o(1)')
+print('  H_D/D >= 1.516243-o(1)')
+print('  (A_ch-a0 Z_ch)/D >= 0.656552-o(1)')
+print('  f/D >= 0.170767-o(1)')
+print('  (m-R4)/D >= 2.328917-o(1)')
+print('  Sigma_ch/D >= 2.192424-o(1)')
+print('  (Delta2 D^2-R4)/D >= 0.758121-o(1)')

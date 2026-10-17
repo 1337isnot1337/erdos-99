@@ -1,0 +1,265 @@
+#!/usr/bin/env python3
+"""Read-only integrity and reproducibility checks for a recorded E-99 checkout."""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import importlib.metadata
+import os
+import tempfile
+import re
+import subprocess
+import sys
+import time
+from pathlib import Path
+from typing import Any
+
+import yaml
+
+
+IDENTITY_FILES = (
+    "docs/state/theorem-state.yaml",
+    "docs/state/theorem-state.schema.json",
+    "docs/state/STATUS.generated.md",
+    "docs/state/THEOREM_GRAPH.generated.md",
+    "docs/state/artifact-index.jsonl",
+    "docs/STATE.md",
+    "docs/targets/target-a/README.md",
+    "docs/targets/target-b/README.md",
+    "docs/targets/target-c/README.md",
+    "docs/targets/target-c/CURRENT.md",
+    "docs/problem/statement.md",
+    "docs/problem/literature_baseline.md",
+    "CONTRIBUTING.md",
+    "docs/RESEARCH_WORKFLOW.md",
+    ".github/workflows/theorem-state.yml",
+    "tools/check_theorem_state.py",
+    "tools/generate_theorem_state_views.py",
+    "tools/run_theorem_certificates.py",
+    "tools/requirements-theorem-state.txt",
+)
+
+BUCKETS = (
+    "current_canonical_entries",
+    "audited_working",
+    "regressions",
+    "rejected_or_overridden",
+)
+
+CHECKS = (
+    (
+        "theorem-state checker",
+        ("tools/check_theorem_state.py",),
+    ),
+    (
+        "theorem-state CI unit tests",
+        (
+            "-m",
+            "unittest",
+            "tools/test_check_theorem_state.py",
+            "tools/test_check_theorem_state_pr.py",
+            "tools/test_check_active_route_summaries.py",
+        ),
+    ),
+    (
+        "active route summary checker",
+        ("tools/check_active_route_summaries.py",),
+    ),
+    (
+        "push-mode theorem-state PR checker",
+        ("tools/check_theorem_state_pr.py",),
+    ),
+    (
+        "research unit tests",
+        ("-m", "unittest", "discover", "-s", "research", "-p", "test_*.py"),
+    ),
+    (
+        "registered theorem certificates",
+        ("tools/run_theorem_certificates.py",),
+    ),
+    ("patch whitespace", ("git", "diff", "--check")),
+)
+
+
+class BaselineError(RuntimeError):
+    pass
+
+
+def git(root: Path, *args: str) -> str:
+    result = subprocess.run(
+        ["git", "-C", str(root), *args],
+        check=False,
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode:
+        raise BaselineError(result.stderr.strip() or f"git {' '.join(args)} failed")
+    return result.stdout.strip()
+
+
+def verify_checkout(root: Path, expected_commit: str) -> tuple[str, str]:
+    if not re.fullmatch(r"[0-9a-fA-F]{40}", expected_commit):
+        raise BaselineError("--expected-commit must be a full 40-character commit SHA")
+    if not root.is_dir():
+        raise BaselineError(f"checkout directory does not exist: {root}")
+    if Path(git(root, "rev-parse", "--show-toplevel")).resolve() != root.resolve():
+        raise BaselineError("--root must be the repository worktree root")
+    if git(root, "replace", "-l"):
+        raise BaselineError("Git replacement objects invalidate snapshot identity")
+    actual = git(root, "rev-parse", "HEAD")
+    if actual.lower() != expected_commit.lower():
+        raise BaselineError(f"HEAD is {actual}; expected {expected_commit}")
+    status = git(root, "status", "--porcelain", "--untracked-files=all")
+    if status:
+        raise BaselineError("checkout is not clean:\n" + status)
+    # status can hide assume-unchanged / skip-worktree edits. Compare every
+    # committed blob with the actual source bytes, independently of Git's index.
+    records = subprocess.check_output(["git", "-C", str(root), "ls-tree", "-rz", "HEAD"])
+    for record in records.split(b"\0"):
+        if not record:
+            continue
+        metadata, raw_path = record.split(b"\t", 1)
+        mode, kind, oid = metadata.split()
+        if kind != b"blob":
+            raise BaselineError("submodules require separate snapshot validation")
+        path = root / os.fsdecode(raw_path)
+        data = os.fsencode(os.readlink(path)) if mode == b"120000" else path.read_bytes()
+        actual_oid = hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
+        if actual_oid != oid.decode():
+            raise BaselineError("working source differs from committed blob: " + os.fsdecode(raw_path))
+    ignored = subprocess.check_output(["git", "-C", str(root), "ls-files", "--others", "--ignored", "--exclude-standard", "-z"])
+    for raw_path in ignored.split(b"\0"):
+        if raw_path and "__pycache__" not in Path(os.fsdecode(raw_path)).parts:
+            raise BaselineError("ignored input present; use a fresh isolated checkout")
+    tree = git(root, "rev-parse", "HEAD^{tree}")
+    return actual, tree
+
+
+def summarize_state(state: dict[str, Any]) -> dict[str, Any]:
+    ids: list[str] = []
+    statuses: dict[str, int] = {}
+    bucket_counts: dict[str, dict[str, int]] = {}
+    edges = 0
+    certificates: set[str] = set()
+    certificate_entries = 0
+
+    for target_name, target in state.get("targets", {}).items():
+        bucket_counts[target_name] = {}
+        for bucket in BUCKETS:
+            entries = target.get(bucket, []) or []
+            bucket_counts[target_name][bucket] = len(entries)
+            for entry in entries:
+                ids.append(str(entry["id"]))
+                status = str(entry.get("status", "<missing>"))
+                statuses[status] = statuses.get(status, 0) + 1
+                edges += len(entry.get("depends_on", []) or [])
+                paths = entry.get("certificates", []) or []
+                certificate_entries += bool(paths)
+                certificates.update(path for path in paths if isinstance(path, str))
+
+    if len(ids) != len(set(ids)):
+        raise BaselineError("duplicate theorem IDs found while summarizing the manifest")
+
+    artifact_path = state.get("artifact_policy", {}).get("index")
+    if not artifact_path:
+        raise BaselineError("manifest has no artifact index path")
+
+    return {
+        "state_version": state.get("state_version"),
+        "state_date": state.get("state_date"),
+        "level_i_status": state.get("level_i_status"),
+        "theorem_entries": len(ids),
+        "dependency_graph_nodes": len(ids),
+        "statuses": statuses,
+        "buckets": bucket_counts,
+        "dependency_edges": edges,
+        "unique_certificates": len(certificates),
+        "certificate_bearing_entries": certificate_entries,
+        "artifact_index_path": artifact_path,
+    }
+
+
+def run_check(root: Path, label: str, args: tuple[str, ...]) -> bool:
+    command = (
+        ["git", "-C", str(root), *args[1:]]
+        if args[0] == "git"
+        else [sys.executable, *args]
+    )
+    print(f"\n== {label}: {' '.join(command)} ==", flush=True)
+    started = time.monotonic()
+    with tempfile.TemporaryDirectory(prefix="e99-python-cache-") as cache:
+        result = subprocess.run(command, cwd=root, check=False, env={
+            **os.environ, "PYTHONDONTWRITEBYTECODE": "1", "PYTHONPYCACHEPREFIX": cache,
+        })
+    elapsed = time.monotonic() - started
+    verdict = "PASS" if result.returncode == 0 else f"FAIL ({result.returncode})"
+    print(f"{verdict}: {label} ({elapsed:.1f}s)", flush=True)
+    return result.returncode == 0
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--root",
+        type=Path,
+        default=Path(__file__).resolve().parents[1],
+        help="clean checkout to verify (defaults to this utility's repository)",
+    )
+    parser.add_argument(
+        "--expected-commit",
+        required=True,
+        help="full commit SHA recorded for the baseline",
+    )
+    args = parser.parse_args(argv)
+    root = args.root.resolve()
+
+    try:
+        commit, tree = verify_checkout(root, args.expected_commit)
+        manifest_path = root / "docs/state/theorem-state.yaml"
+        manifest_bytes = manifest_path.read_bytes()
+        state = yaml.safe_load(manifest_bytes)
+        if not isinstance(state, dict):
+            raise BaselineError("theorem-state manifest is not a mapping")
+        summary = summarize_state(state)
+        index_path = root / str(summary.pop("artifact_index_path"))
+        summary["artifact_index_lines"] = sum(
+            1 for _ in index_path.open(encoding="utf-8")
+        )
+    except (OSError, yaml.YAMLError, KeyError, TypeError, BaselineError) as exc:
+        print(f"baseline: ERROR: {exc}", file=sys.stderr)
+        return 2
+
+    print(f"baseline commit: {commit}")
+    print(f"Git tree: {tree}")
+    print(f"checkout: {root} (clean)")
+    print(f"Python: {sys.version.split()[0]}")
+    for package in ("PyYAML", "jsonschema", "numpy", "scipy", "sympy", "mpmath"):
+        try:
+            version = importlib.metadata.version(package)
+        except importlib.metadata.PackageNotFoundError:
+            version = "not installed"
+        print(f"{package}: {version}")
+    print(f"manifest SHA-256: {hashlib.sha256(manifest_bytes).hexdigest()}")
+    print(f"manifest summary: {summary}")
+    print("identity-file SHA-256 values:")
+    for relative in IDENTITY_FILES:
+        path = root / relative
+        try:
+            digest = hashlib.sha256(path.read_bytes()).hexdigest()
+        except OSError as exc:
+            print(f"baseline: ERROR: cannot hash {relative}: {exc}", file=sys.stderr)
+            return 2
+        print(f"  {digest}  {relative}")
+
+    checks = list(CHECKS)
+    if (root / "tools/verify_prelaunch.py").is_file():
+        checks.insert(1, ("integrated prelaunch integrity", ("tools/verify_prelaunch.py",)))
+    results = [run_check(root, label, command) for label, command in checks]
+    passed = sum(results)
+    print(f"\nbaseline checks: {passed}/{len(results)} passed")
+    return 0 if all(results) else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

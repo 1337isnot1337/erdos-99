@@ -1,0 +1,28 @@
+# Hostile audit — isolate-free terminal rhombic grid through `t<=1.8687`
+
+**Date:** 2026-09-15  
+**Reviewed:** `research/target_c_isolate_free_terminal_rhombic_grid_t18687_2026-09-15.md`  
+**Verdict:** **PASS at proof-only scope.**
+
+The candidate only composes two previously proved statements:
+
+1. every bounded contact face meeting the retained terminal-free corridor is a strict rhombus;
+2. every bounded contact face containing a contact-isolated source point has degree at least seven.
+
+The possible loopholes are boundary placement and whether an isolate must belong to a bounded face.
+
+## Boundary audit
+
+The retained run is chosen from internal ladder cells and is disjoint from the global outer-boundary sides. A source point in the open run therefore cannot lie in the unbounded face. Since it is contact-isolated, it is not a contact-graph vertex or edge point, so it lies in the interior of a unique bounded face of the embedded contact graph.
+
+## Face-degree audit
+
+The parent corridor theorem excludes bounded nonquadrilateral faces from the run. By the canonical quadrilateral theorem, every bounded quadrilateral face there is a strict unit rhombus, hence degree four.
+
+The isolate-host theorem uses strict inequalities `|z-v_i|>1`, valid because `z` has no contact edge. Its central-angle proof gives strict `theta_i<pi/3`, so even a hexagonal host is impossible; degree at least seven is exact.
+
+Thus an isolate in the retained run would force the same bounded face to have degree four and degree at least seven. This is impossible.
+
+No claim is made that the corridor has no contact-graph vertices: the rhombic grid vertices remain source points. The proved statement is exactly that there are no **contact-isolated** source points in the open corridor and hence no hidden source points in strict-rhombus interiors.
+
+**Audit disposition:** PASS. The previous caveat allowing isolates inside retained rhombi can be removed.

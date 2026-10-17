@@ -1,0 +1,384 @@
+# Target C-II — law-of-sines consistency cuts generic interior-ground H7b to 23 C7 orbits
+
+**Date:** 2026-09-19  
+**Claim class:** exact finite metric exclusion inside the generic interior-ground support-seven branch  
+**Scope:** `H7b`: `y_0=0` strictly inside a strict convex heptagon `y_1,...,y_7`, with no reciprocal collinear triple  
+**Depends on:** the audited 27-orbit generic `H7b` full-angle endpoint  
+**Certificate:** `research/verify_target_c_support7_h7b_law_of_sines_2026_09_19.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The full-angle affine reduction leaves exactly 27 generic `H7b` order/sign orbits, all of missing-graph type `C7`. This note adds the first metric compatibility layer that is not already encoded by triangle angle sums. Four of those 27 cells are impossible by law-of-sines radius consistency:
+
+\[
+\boxed{27\longrightarrow 23.}
+\]
+
+The excluded one-based orbit indices are
+
+\[
+\boxed{115,118,145,146.}
+\]
+
+The proof uses exact rational Farkas certificates for the needed affine angle inequalities. Numerical LP was used only to find sparse dual supports; the committed verifier checks all coefficient identities and right-hand sides over `fractions.Fraction`.
+
+## 1. Radius ratio on one relation edge
+
+For a present non-ground relation edge `ij`, write
+
+\[
+\rho_i=|y_i|,
+\qquad
+A_{ij}=\angle 0ij.
+\]
+
+The triangle `0ij` is nondegenerate in the generic branch. The law of sines gives
+
+\[
+\frac{\rho_j}{\rho_i}
+=
+\frac{\sin A_{ij}}{\sin A_{ji}}.
+\tag{1.1}
+\]
+
+Also
+
+\[
+A_{ij}+A_{ji}=\pi-\angle i0j<\pi.
+\tag{1.2}
+\]
+
+Hence sine preserves the ordering of the two endpoint angles inside this same triangle. Indeed,
+
+\[
+\sin A_{ij}-\sin A_{ji}
+=
+2\cos\frac{A_{ij}+A_{ji}}2
+ \sin\frac{A_{ij}-A_{ji}}2,
+\]
+
+and the cosine factor is strictly positive by (1.2). Therefore
+
+\[
+\boxed{
+A_{ij}>A_{ji}
+\iff
+\rho_j>\rho_i.
+}
+\tag{1.3}
+\]
+
+This implication does not rely on global monotonicity of sine on `(0,pi)`.
+
+More generally, multiplying (1.1) around any directed cycle gives the necessary trigonometric-Ceva identity
+
+\[
+\boxed{
+\prod_{k=0}^{m-1}
+\frac{\sin A_{v_kv_{k+1}}}
+     {\sin A_{v_{k+1}v_k}}
+=1.
+}
+\tag{1.4}
+\]
+
+For the affine certificates below, set
+
+\[
+a_{ij}=A_{ij}/\pi.
+\tag{1.5}
+\]
+
+## 2. Exact affine dual certificates
+
+The previous full-angle system uses 84 normalized angular variables, 92 affine equalities, and 112 strict affine inequalities. Write the strict inequalities as
+
+\[
+B_rz<b_r
+\]
+
+and the equalities as
+
+\[
+E_sz=d_s.
+\]
+
+For every angle inequality used below, the verifier stores nonnegative rational multipliers `alpha_r`, not all zero, and unrestricted rational multipliers `mu_s` such that
+
+\[
+L(z)
+=
+-\sum_r\alpha_r B_rz
++
+\sum_s\mu_s E_sz.
+\tag{2.1}
+\]
+
+On the affine system this gives the strict bound
+
+\[
+L(z)
+>
+-\sum_r\alpha_r b_r
++
+\sum_s\mu_s d_s.
+\tag{2.2}
+\]
+
+The strictness is important when the certified closure bound is exactly zero. The committed verifier reconstructs the 184 orbit representatives and the full affine system, then checks every identity in (2.1) exactly.
+
+## 3. Orbit 118: a three-edge radius-order cycle
+
+The exact dual certificates give, in units of `pi`,
+
+\[
+a_{25}-a_{52}>\frac29,
+\qquad
+a_{53}-a_{35}>\frac19,
+\qquad
+a_{32}-a_{23}>\frac16.
+\tag{3.1}
+\]
+
+All three relation edges are present. By (1.3),
+
+\[
+\rho_5>\rho_2,
+\qquad
+\rho_3>\rho_5,
+\qquad
+\rho_2>\rho_3,
+\]
+
+which is impossible. Thus orbit 118 is excluded.
+
+## 4. Orbit 145: a six-edge radius-order cycle
+
+The exact dual certificates give
+
+\[
+\begin{aligned}
+a_{62}-a_{26}&>0,\\
+a_{23}-a_{32}&>\frac14,\\
+a_{34}-a_{43}&>\frac{2}{15},\\
+a_{45}-a_{54}&>\frac19,\\
+a_{57}-a_{75}&>0,\\
+a_{76}-a_{67}&>\frac1{15}.
+\end{aligned}
+\tag{4.1}
+\]
+
+The two zero closure bounds in (4.1) are still strict inequalities: their exact dual identities use positive weight on strict rows of the affine system.
+
+Equation (1.3) therefore gives
+
+\[
+\rho_2>\rho_6,
+\quad
+\rho_3>\rho_2,
+\quad
+\rho_4>\rho_3,
+\quad
+\rho_5>\rho_4,
+\quad
+\rho_7>\rho_5,
+\quad
+\rho_6>\rho_7,
+\]
+
+again impossible. Thus orbit 145 is excluded.
+
+## 5. Orbit 115: a quantitative trigonometric-Ceva contradiction
+
+A pure radius-order cycle is not forced in orbit 115, but the exact affine duals give the following strict bounds:
+
+\[
+\frac59<a_{32}<\frac{47}{69}<\frac34,
+\qquad
+0<a_{23}<\frac4{21}<\frac15,
+\tag{5.1}
+\]
+
+\[
+\frac15<a_{53}<\frac13,
+\qquad
+0<a_{35}<\frac1{15},
+\tag{5.2}
+\]
+
+and
+
+\[
+\frac5{21}<a_{25}<\frac13,
+\qquad
+0<a_{52}<\frac13.
+\tag{5.3}
+\]
+
+Consider the directed relation triangle
+
+\[
+3\to2\to5\to3.
+\]
+
+From (5.1), `A_32=pi*a_32` lies strictly between `pi/2` and `3pi/4`, while `A_23=pi*a_23<pi/5`. Hence
+
+\[
+\frac{\sin(\pi a_{32})}{\sin(\pi a_{23})}
+>
+\frac{\sqrt2/2}{\sin(\pi/5)}.
+\tag{5.4}
+\]
+
+From (5.2),
+
+\[
+\frac{\sin(\pi a_{53})}{\sin(\pi a_{35})}
+>
+\frac{\sin(\pi/5)}{\sin(\pi/15)}.
+\tag{5.5}
+\]
+
+From (5.3),
+
+\[
+\frac{\sin(\pi a_{25})}{\sin(\pi a_{52})}
+>
+\frac{\sin(\pi/5)}{\sin(\pi/3)}.
+\tag{5.6}
+\]
+
+Multiplying,
+
+\[
+\prod_{(u,v)=(3,2),(2,5),(5,3)}
+\frac{\sin(\pi a_{uv})}{\sin(\pi a_{vu})}
+>
+\frac{\sqrt2\sin(\pi/5)}
+     {2\sin(\pi/15)\sin(\pi/3)}.
+\tag{5.7}
+\]
+
+The right side is strictly greater than one. To see this without decimal approximations, use
+
+\[
+\sin(\pi/5)>\frac12,
+\qquad
+\sin(\pi/15)<\sin(\pi/10),
+\qquad
+\sin(\pi/3)=\frac{\sqrt3}{2},
+\]
+
+so (5.7) is greater than
+
+\[
+\frac{2\sqrt2}{\sqrt3(\sqrt5-1)}.
+\]
+
+This exceeds one because
+
+\[
+3\sqrt5>5,
+\]
+
+whose square is `45>25`. This contradicts the exact cycle identity (1.4). Thus orbit 115 is excluded.
+
+## 6. Orbit 146: a second quantitative cycle contradiction
+
+The exact affine duals give
+
+\[
+\frac13<a_{24}<\frac59<\frac23,
+\qquad
+0<a_{42}<\frac16,
+\tag{6.1}
+\]
+
+\[
+\frac29<a_{46}<\frac13,
+\tag{6.2}
+\]
+
+and
+
+\[
+a_{62}-a_{26}>0.
+\tag{6.3}
+\]
+
+Consider the directed relation triangle
+
+\[
+2\to4\to6\to2.
+\]
+
+Since `A_24=pi*a_24` lies strictly between `pi/3` and `2pi/3`, while `A_42=pi*a_42<pi/6`,
+
+\[
+\frac{\sin(\pi a_{24})}{\sin(\pi a_{42})}>\sqrt3.
+\tag{6.4}
+\]
+
+Since `2pi/9<A_46=pi*a_46<pi/3` and `sin A_64<=1`,
+
+\[
+\frac{\sin(\pi a_{46})}{\sin A_{64}}
+>
+\sin\frac{2\pi}{9}.
+\tag{6.5}
+\]
+
+Finally, (6.3) and the same-triangle ordering lemma (1.3) give
+
+\[
+\frac{\sin(\pi a_{62})}{\sin(\pi a_{26})}>1.
+\tag{6.6}
+\]
+
+Thus the cycle product is strictly greater than
+
+\[
+\sqrt3\sin\frac{2\pi}{9}
+>
+\sqrt3\sin\frac\pi5
+>1.
+\tag{6.7}
+\]
+
+The last inequality is exact because
+
+\[
+\sin^2\frac\pi5=\frac{10-2\sqrt5}{16},
+\]
+
+and
+
+\[
+3\sin^2\frac\pi5>1
+\iff
+14>6\sqrt5,
+\]
+
+whose square is `196>180`. Equation (6.7) contradicts (1.4), so orbit 146 is excluded.
+
+## 7. New generic H7b endpoint
+
+Removing the four impossible cells from the 27-orbit full-angle endpoint leaves
+
+\[
+\boxed{23\text{ generic }H7b\ C_7\text{ orbits}.}
+\]
+
+Their one-based indices are
+
+\[
+\boxed{
+129,130,134,135,136,137,138,139,140,141,142,143,144,147,148,
+169,170,171,172,173,174,175,176.
+}
+\]
+
+This result does not claim any of these 23 cells is realizable. It also does not address reciprocal-collinearity walls, ground-on-hull `H7a`, `H6`, or the surviving `H8` branch.
+
+The next metric layer is the full set of law-of-sines cycle identities on these 23 cells, coupled to actual equilateral-pentagon vector closure. The present result shows that radius integrability can exclude affine-angle survivors even when no directed radius-order cycle exists, so quantitative sine-cycle bounds are a useful next target.
+
+No theorem-state file is changed. C-II remains open.

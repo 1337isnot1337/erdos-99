@@ -1,0 +1,42 @@
+# Hostile audit — simple-wall `H5` projection-potential exclusion
+
+**Date:** 2026-09-18  
+**Audited artifact:** `verify_target_c_support6_h5_wall_projection_potential_2026_09_18.py`  
+**Disposition:** passes finite certificate and scope audit; promotion still requires the repository review process
+
+## Audit checks
+
+1. The script imports the exact wall reduction and obtains exactly ten orbit
+   representatives. It does not replace a wall by a nearby uniform case.
+2. The wall chirotope is allowed to contain its prescribed zero triple. The
+   extension test uses the weak realizable rank-three sign condition: all-zero
+   Pluecker products are permitted, while a nonzero triple with one polarity
+   only is rejected.
+3. Every possible total projection order of the seven reciprocal points is
+   tested. A genuine generic metric projection produces exactly such an order,
+   and its point-at-infinity extension necessarily passes the same weak
+   Grassmann--Plücker tests. Hence testing all passing extensions is an
+   overapproximation, not a coordinate sampling argument.
+4. The signed constraint graph uses exactly the 18 present edges of the H5
+   matching complement. The missing matching edge is never inserted.
+5. Acyclicity is checked by an exact topological sort. If it occurred, the
+   summed full equilibrium identity would be a strict positive sum.
+6. The result uses all six non-ground face closures; the ground equation follows
+   from endpoint cancellation. It does not infer a missing closure from the
+   local chirotope enumeration.
+
+An independent full-permutation recomputation of the weak rank-three tests agrees
+with the reduced verifier for all ten representatives: the extension counts are
+`138,128,124,136,136,132,134,120,120,120`, with no reduced-test false positives.
+
+## Scope boundary
+
+This audit does not claim that the collapsed support-six local realization is a
+global source or that it is impossible. It also does not silently cover
+higher-codimension walls; those remain subject to the separate double-wall
+exclusion and whatever strata that theorem explicitly covers. No theorem-state
+file is modified by this proof-only result.
+
+**Audit result:** all ten simple-wall H5 metric cases are excluded under the
+full signed equilibrium hypotheses. The collapsed support-six branch is the
+smallest remaining support-six obstruction.

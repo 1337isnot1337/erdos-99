@@ -1,0 +1,82 @@
+# Hostile audit — paired-remainder endpoint `t<=1.86596`
+
+**Date:** 2026-09-15  
+**Reviewed:** `research/target_c_paired_remainder_path_t186596_2026-09-15.md` and its exact verifier  
+**Verdict:** **PASS at proof-only full-core Type-II scope.**  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The theorem changes only the endpoint constants of the already hostile-audited
+paired-remainder path. The audit therefore checks whether all parent inequalities stay
+inside their proved domains and whether the very small surviving path density is still
+enough for the integer switching conclusion.
+
+## 1. Outward arithmetic
+
+All load-bearing signs are exact rational assertions. The verifier re-encloses `pi`,
+`sqrt(3)`, the square root in the retained-mass function, and every sine term. It gives
+an outward negative bound for `H(z0)` and outward positive bounds for both the
+low-energy mass and opposite-branch margin. No theorem sign depends on the printed
+floating diagnostics.
+
+**Verdict:** PASS.
+
+## 2. Parent derivative box remains valid
+
+At `T=1.86596` the verifier has `delta_max<0.101`, `U0<2.116`, and
+`5 U0^2<32 Delta_2`. Its retained-mass derivative gates use the same conservative
+`rmax=1.05` and denominator floor `0.9` as the `1.865` proof.  The new `z0=2.067175`
+is smaller than the old endpoint and still obeys `z0^2/72<1/16`. Hence the certified
+positivity of `H'(z)` applies on the whole required interval and the negative endpoint
+evaluation implies `z>z0-o(1)`.
+
+**Verdict:** PASS.
+
+## 3. Pair-floor substitution and residual domain
+
+The chosen `lambda=0.48865` still lies strictly between `2-sqrt(3)` and `1/2`.
+Therefore the parent derivatives have the same signs: the paired-remainder lower
+functional increases with `P,z,kappa` and decreases with `delta,t` after the pair floor
+is inserted.  The adverse endpoint substitution is unchanged.
+
+The exact certificate checks `P0>0` and `2P0<z0`, so the substituted residual mass is
+nonnegative. It is also below `z0<pi`. Thus the three-well bathtub derivative bound
+`F'(s)<=1-sqrt(3)/2` is used inside its audited domain.
+
+**Verdict:** PASS.
+
+## 4. Physical terminal orientation
+
+The exact squared same-branch contradiction margin is positive. The parent geometric
+proof depends only on the threshold `lambda`, the detour cap, and Section-157 bracing;
+it does not require a lower bound on the number of selected trains. Since
+`lambda<1/2`, opposite host arcs are still separated by a fixed positive angular gap.
+
+**Verdict:** PASS.
+
+## 5. Small path density still gives a finite switching strip
+
+The exact low-energy pair floor is greater than `5.1e-5-o(1)` and one of at most three
+phase windows therefore carries pair weight greater than `1.7e-5-o(1)`. Pair weight
+per train is at most one, so there are more than `1.7e-5 D-o(D)` actual train
+crosscuts. Removing one hub boundary is negligible at this scale.
+
+Using `pi<355/113`,
+
+\[
+{2(355/113)\over17/10^6}=369599.1671\ldots<369600.
+\]
+
+For all sufficiently large sources the average switch count is therefore below
+`369600`; an integer switch count is at most `369599`. The theorem's rounding is
+correct.
+
+**Verdict:** PASS.
+
+## 6. What the endpoint does not provide
+
+The very small path density makes the support-count constant large. There is still no
+uniform KKT multiplier floor, no phase-gap rate, and no strict-diameter competitor.
+The numerical zero near `1.8659664136` is not theorem authority.
+
+**Final verdict:** **PASS.** The paired-remainder path/hub/one-sided-strip normal form
+is valid through `t<=1.86596` at the stated proof-only scope.

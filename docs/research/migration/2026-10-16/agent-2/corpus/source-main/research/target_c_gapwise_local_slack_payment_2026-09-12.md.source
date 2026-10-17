@@ -1,0 +1,233 @@
+# Target C — gapwise local-slack payment in the sharp wrapping window
+
+**Date:** 2026-09-12  
+**Base:** `f5d8c7997da0f3c63adf1977a45e96648773014e`, state `2026-09-12.audit.46`  
+**Status:** proof-only Type-II candidate; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This note adds one source-level inequality to the endpoint ledger.  The local
+internal-rhombus area/slack theorem is summed over each macroscopic harmonic-cell
+group, rather than applied only to the wrapping carrier.  The complement-gap theorem
+supplies an independent diameter floor for each group.  Together they give a second
+positive payment for the large principal gap.
+
+The dependency chain is
+
+```text
+Type-II gap area saturation + local area/slack
+  -> S_j+G_j >= C_loc sqrt(A_j)
+gap-spanning cell
+  -> S_j >= sin(g_j/2)
+all groups + Section 161
+  -> stronger weighted diameter/topology inequality.
+```
+
+It is still a tradeoff.  It does not produce a strict sub-`D` source or close C-II.
+
+## 1. Group inequality
+
+For a finite disjoint family of macroscopic harmonic-cell groups `J`, write
+
+\[
+ S_j:=\sum_{r\in j}d_r,
+ \qquad
+ G_j:=\sum_{r\in j}(r_r+\eta_r),
+ \qquad
+ A_j:=\sum_{r\in j}A_{4,r}^{\rm int}.
+\]
+
+Here `A_{4,r}^{int}` is the unloaded-only strict-rhombus area in component `r`,
+`d_r` is its attachment-cell diameter, and `r_r,eta_r` are the nonnegative
+Section-160 remainder terms.  Let `a_j` be a normalized area lower bound:
+
+\[
+ A_j\ge(a_j-o(1))D^2.
+\]
+
+Put
+
+\[
+ a_0=\frac{\sqrt3}{2},
+ \qquad
+ C_{\rm loc}:=\frac45\sqrt\pi+\frac{2}{5\sqrt{a_0}}
+ =1.8477910534538295\ldots .
+\]
+
+The finite local boundary argument gives, for every component,
+
+\[
+ \delta_r+r_r
+ \ge \frac25 k_r+\frac25\sqrt{R_r},
+ \qquad
+ k_r\ge2\sqrt{\pi A_{4,r}^{\rm int}}-2\pi.
+\]
+
+Summing over a group, using `c_I=O(D^{2/3})`,
+`A_{4,r}^{int}=a_0R_r+O(D)`, and
+`\sum_r\sqrt{R_r}\ge\sqrt{\sum_rR_r}`, gives
+
+\[
+ \sum_{r\in j}(\delta_r+r_r)
+ \ge C_{\rm loc}\sqrt{a_j}\,D-o(D).
+\]
+
+Since `eta_r=delta_r+2-d_r`, the group charges obey
+
+\[
+ \boxed{S_j+G_j\ge C_{\rm loc}\sqrt{a_j}\,D-o(D).}
+ \tag{GLS.1}
+\]
+
+This summation is valid for all components in the selected group: the constant
+`-4pi/5` per component is `o(D)` because the canonical number of positive-contact
+components is `O(D^{2/3})`.  No per-cell convergence rate is assumed.
+
+Suppose in addition that the same group has a gap or carrier diameter floor
+
+\[
+ S_j\ge(\lambda_j-o(1))D.
+\tag{GLS.2}
+\]
+
+The two elementary lower bounds
+
+\[
+ 3S_j+2G_j\ge3\lambda_jD-o(D),
+ \qquad
+ 3S_j+2G_j=S_j+2(S_j+G_j)
+ \ge(\lambda_j+2C_{\rm loc}\sqrt{a_j})D-o(D)
+\]
+
+therefore combine to
+
+\[
+ \boxed{
+ 3S_j+2G_j
+ \ge
+ \left[3\lambda_j
+ +2\bigl(C_{\rm loc}\sqrt{a_j}-\lambda_j\bigr)_+
+ \right]D-o(D).
+ }
+ \tag{GLS.3}
+\]
+
+The positive-part is important.  A thin small-area gap cell need not give positive
+remainder by itself; (GLS.3) uses only the diameter floor and the aggregate local
+inequality.
+
+## 2. Endpoint specialization
+
+Use the normalized Section-118 sharp-window constants from Sections 130 and 150:
+
+\[
+ \theta_*=2.704779235215494\ldots,
+ \quad
+ \phi_*=2\pi-2\theta_*=0.873626836748598\ldots,
+ \quad
+ \sigma_*=0.0088,
+\]
+
+\[
+ g_1=\theta_*-\frac{10}{3}\sigma_*
+ =2.675445901882161\ldots,
+\quad
+ \mu_*=\sin(\theta_*/2)=0.9762439137425688\ldots .
+\]
+
+Take four disjoint groups: the wrapping carrier `w` and the three principal gap
+groups.  Their conservative area floors and diameter floors are
+
+\[
+\begin{array}{c|c|c}
+ j & a_j & \lambda_j\\ \hline
+ w & 0.4703752868004241 & \mu_*\\
+ 1 & G(g_1) & \sin(g_1/2)\\
+ 2 & G(\phi_*) & \sin(\phi_*/2)\\
+ 3 & G(\phi_*) & \sin(\phi_*/2),
+\end{array}
+\]
+
+where `G(t)=(t-sin t)/8`.  The wrapping area floor is the conservative sharp
+companion value; using the separate `>0.473` floor requires the narrower Section-107
+`sigma<=10^{-3}` window and is not mixed into this calculation.
+
+For these four groups,
+
+\[
+\begin{array}{c|c|c|c}
+ j & C_{\rm loc}\sqrt{a_j} & \lambda_j
+   & (C_{\rm loc}\sqrt{a_j}-\lambda_j)_+\\ \hline
+ w & 1.267287374253980 & 0.976243913742569 & 0.291043460511411\\
+ 1 & 0.974698484607743 & 0.972961137045275 & 0.001737347562468\\
+ 2 & 0.213661953178687 & 0.423054242362162 & 0\\
+ 3 & 0.213661953178687 & 0.423054242362162 & 0.
+\end{array}
+\]
+
+The resulting diameter moment floor is
+
+\[
+ S_D/D\ge
+ \mu_*+\sin(g_1/2)+2\sin(\phi_*/2)-o(1)
+ =2.795313535512168\ldots-o(1).
+\tag{GLS.4}
+\]
+
+Apply (GLS.3) to the four groups and use nonnegativity for all omitted components:
+
+\[
+ 3S_D+2G_D
+ \ge 8.971502222684261\ldots D-o(D).
+\tag{GLS.5}
+\]
+
+The retained-remainder payment of normalized Section 161 is
+
+\[
+ 5h-2d_H-7s_Z
+ \ge3S_D+2G_D+c_*D-o(D),
+ \qquad
+ c_*:=\frac\pi4(2-\sqrt3).
+\]
+
+Consequently the new endpoint inequality is
+
+\[
+ \boxed{
+ 5h-2d_H-7s_Z
+ \ge9.181949026303494\ldots D-o(D).
+ }
+\tag{GLS.6}
+\]
+
+For comparison, applying the same endpoint moment floor with only the wrapping
+carrier's local slack gives `9.178474331178558...`; the large-gap term improves the
+coefficient by
+
+\[
+ 2(0.001737347562468\ldots)
+ =0.003474695124936\ldots .
+\]
+
+This is a genuine groupwise strengthening, but it is too small and too endpoint-local
+to close the positive-detour full-core regime.
+
+## 3. Scope and remaining obligation
+
+- The group area floors use the repaired Section-140 gap-cell saturation and the
+  Section-118 sharp-window endpoint profile.  They are not a general Type-II theorem.
+- The local aggregate step uses the audited-working local area/slack theorem, not a
+  new per-cell convergence assumption.
+- The positive part in (GLS.3) prevents an invalid claim that every gap contributes
+  positive remainder.
+- The four groups are disjoint by the gap-cell convex separation theorem; all omitted
+  cells contribute nonnegative `S_D` and `G_D`.
+- Contact-isolated source points remain outside all core rigidity matrices.
+- No strict-diameter competitor or exact unit equilateral triangle is constructed.
+
+The exact next obligation remains source-level: couple the extra large-gap payment to
+the outer-walk detour or to the actual Woodall diameter graph strongly enough to force
+a strict diameter decrease.  Type-I inactive containers are untouched.
+
+**Classification:** proved candidate awaiting independent hostile audit; theorem state
+unchanged; C-II remains open.

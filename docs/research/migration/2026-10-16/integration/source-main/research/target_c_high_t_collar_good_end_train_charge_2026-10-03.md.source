@@ -1,0 +1,68 @@
+# Target C: collar good-end train charge (corrected)
+
+Date: 2026-10-03
+Base main: fb0760ec6cf56d8f01a570a402a1985aa21a4dfe
+Status: proof-only candidate, noncanonical. C-II and Level I remain open.
+
+Let S denote the strict boundary-rhombus count from
+research/target_c_high_t_boundary_rhombus_floor_2026-10-02.md.
+Let T_boundary be the set of complete stopped trains containing at least one selected
+outer rhombus side as a terminal occurrence.
+
+Each selected outer side is a direct unit contact between consecutive force-hull
+vertices, so it is a good convex-hull train endpoint.
+
+A stopped train containing two selected collar sides has two good hull-side endpoints.
+There are at most two such trains: two distinct trains with two good hull ends have
+alternating boundary endpoint pairs, so their embedded train tracks cross; three such
+trains would form a triangle in the triangle-free train-intersection graph.
+
+If d <= 2 collar trains contain two selected incidences, then
+
+    S = 2 d + (|T_boundary| - d),
+
+hence
+
+    |T_boundary| >= S - 2.                                  (1)
+
+This improves the previous S/2 bound to S - O(1).
+
+Among the collar trains, at most two can have a second good hull-side endpoint. Thus
+at least
+
+    |T_boundary| - 2 >= S - 4
+
+other terminal incidences lie either in bad outer-walk intervals or on bounded
+exceptional faces. The exact outer-walk partition has at most 2 x_B terminal edge
+occurrences inside bad intervals. Therefore, if E_exc_boundary counts
+exceptional-face terminal incidences belonging to collar trains,
+
+    E_exc_boundary >= S - 2 x_B - 4.                        (2)
+
+The total exceptional-face train-end capacity is Q + 4 f, so
+
+    Q + 4 f >= S - 2 x_B - 4.                              (3)
+
+Using the finite collar theorem
+
+    S >= 4 per(F) - 6 t_D D - 6 nu - 9 x_B - 8,
+
+gives
+
+    Q + 4 f >= 4 per(F) - 6 t_D D - 6 nu - 11 x_B - 12.   (4)
+
+In the current Type-II square-root branch,
+nu = O(sqrt(D)), x_B = O(sqrt(D)), and per(F)/D tends to pi. Therefore
+
+    |T_boundary| >= (4 pi - 6 t_D - o(1)) D,
+    E_exc_boundary >= (4 pi - 6 t_D - o(1)) D.             (5)
+
+At t_D <= 1.860 + o(1), the coefficient is 1.4063706143...
+
+This is not a closure theorem. The exceptional-face perimeter budget can still absorb
+the incidences. The new information is a distinguished linear family of collar trains
+routed from good hull sides to exceptional faces. The next step must use cyclic order
+and train-direction labels of this incidence network to force a crossing/rank
+obstruction or a source-preserving strict diameter decrease.
+
+No numerical search, verifier execution, or CI result is used.

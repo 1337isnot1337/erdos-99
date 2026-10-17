@@ -1,0 +1,242 @@
+# Target C-II — sharpen the smallest-leaf center fan to `>0.7404D`
+
+**Date:** 2026-09-15  
+**Status:** proof-only phase-resolved structural strengthening  
+**Scope:** full-core Type-II branch with `t=(q-k)/D<=1.844`  
+**Dependencies:** `target_c_small_leaf_center_fan_073_t1844_2026-09-15.md` and its exact upstream constants  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The existing small-leaf fan theorem proves a weighted average center-crossing degree
+larger than `0.73D`. Its finite optimization has substantially more room. Keeping the
+same upstream constants and rerunning only the final two endpoint inequalities gives
+
+\[
+\boxed{
+{E(C,Q_V)\over P_VD}>0.7404D-o(D),
+}
+\tag{F7404.1}
+
+where `Q_V` is the retained weighted outer-to-outer pair family in the smallest leaf
+phase of the dominant exact `pi/3` orbit and `P_VD` is its total retained pair weight.
+Consequently some positive-weight smallest-leaf outer-to-outer train is crossed by
+
+\[
+\boxed{>0.7404D-o(D)}
+\tag{F7404.2}
+
+center-phase complete trains.
+
+This note does not change the argument or its scope. It only replaces the rounded
+threshold `L=0.73` by the rigorously certified `L=0.7404`.
+
+---
+
+## 1. Reuse the exact parent reduction
+
+The parent theorem established, uniformly for `t<=1.844`, the safe constants
+
+\[
+W_0=1.915963,
+\qquad
+E_0=0.9068958,
+\qquad
+C>0.8538,
+\qquad
+z_V>0.616.
+\tag{F7404.3}
+
+It also proved
+
+\[
+V>0.308-o(1),
+\qquad
+P_V>0.616-V-o(1),
+\tag{F7404.4}
+
+and reduced the weighted average center degree to
+
+\[
+{E(C,Q_V)\over P_VD^2}
+\ge
+R(C,V)-o(1),
+\tag{F7404.5}
+
+with
+
+\[
+R(C,V)
+=C-{C H(C)\over(2C+V-W_0)(0.616-V)},
+\qquad
+H(C)=C(W_0-C)-E_0.
+\tag{F7404.6}
+
+The feasible domain is
+
+\[
+0.8538<C<1.063,
+\qquad
+0.308<V\le {W_0-C\over2}.
+\tag{F7404.7}
+
+For fixed `C`, the `V` denominator
+
+\[
+(2C+V-W_0)(0.616-V)
+\]
+
+is concave. Hence the minimum of `R(C,V)` occurs at one of the same two endpoints:
+
+\[
+V=0.308,
+\qquad
+V={W_0-C\over2}.
+\tag{F7404.8}
+
+Nothing upstream depends on the old choice `L=0.73`.
+
+---
+
+## 2. Low-leaf endpoint at `L=0.7404`
+
+Put
+
+\[
+L={7404\over10000}=0.7404.
+\]
+
+At `V=0.308`, the condition `R(C,V)>L` is equivalent to
+
+\[
+N_{lo,L}(C)>0,
+\]
+
+where
+
+\[
+N_{lo,L}(C)
+=(C-L)(2C+0.308-W_0)(0.308)
+-C[C(W_0-C)-E_0].
+\tag{F7404.9}
+
+The exact `Fraction` certificate proves that `N_{lo,L}` is strictly convex throughout
+the feasible `C` interval. Its unique critical point lies in
+
+\[
+0.88341<C_*<0.88342,
+\]
+
+and a derivative-Lipschitz enclosure gives
+
+\[
+\boxed{
+N_{lo,L}(C)>0.00233998
+}
+\tag{F7404.10}
+
+at the minimum.
+
+---
+
+## 3. Balanced-leaf endpoint at `L=0.7404`
+
+At
+
+\[
+V={W_0-C\over2},
+\]
+
+the condition `R(C,V)>L` is equivalent to
+
+\[
+N_{hi,L}(C)>0,
+\]
+
+where
+
+\[
+N_{hi,L}(C)
+=(C-L){3C-W_0\over2}
+\left(0.616-{W_0-C\over2}\right)
+-C[C(W_0-C)-E_0].
+\tag{F7404.11}
+
+Again the exact certificate proves strict convexity. The unique critical point is
+bracketed by
+
+\[
+0.90484<C_*<0.90485,
+\]
+
+and the exact minimum enclosure is
+
+\[
+\boxed{
+N_{hi,L}(C)>4.47\times10^{-6}>0.
+}
+\tag{F7404.12}
+
+This endpoint controls the sharpening. Its margin is small compared with the old
+`0.73` certificate but remains exact and positive.
+
+Equations (F7404.10)--(F7404.12) imply
+
+\[
+R(C,V)>0.7404
+\]
+
+throughout the full parent domain, proving (F7404.1).
+
+---
+
+## 4. From weighted average to one actual train
+
+Write the retained smallest-leaf outer-to-outer family as positive weights `w_tau`
+and let `d_tauD` be the number of center-phase complete trains crossing `tau`. Then
+
+\[
+{E(C,Q_V)\over P_VD}
+={\sum_\tau w_\tau d_\tauD\over\sum_\tau w_\tau}.
+\tag{F7404.13}
+
+If every positive-weight train had `d_tau<=0.7404+o(1)`, the weighted average would
+satisfy the same upper bound, contradicting (F7404.1). Hence at least one retained
+outer-to-outer train has (F7404.2).
+
+This is the same weighted-average inference as in the audited `0.73` theorem; no
+unweighted density floor is inferred.
+
+---
+
+## 5. Exact certificate and numerical frontier
+
+Run
+
+`python3 research/verify_target_c_small_leaf_center_fan_7404_t1844_2026-09-15.py`.
+
+It uses only exact rational arithmetic for the finite optimization. The controlling
+balanced endpoint has certified polynomial margin greater than `4e-6`.
+
+Numerical minimization of the already-reduced endpoint formula places the rounded
+frontier near
+
+\[
+0.74050\ldots,
+\]
+
+but this note claims only `0.7404`. No numerical sign is load-bearing.
+
+---
+
+## 6. Downstream effect
+
+The corrected dual-tree rectangle extraction uses only three fan inputs:
+
+1. retained pair weight `P_V>0.0848-o(1)`;
+2. weighted average center degree;
+3. the center-phase size ceiling `C<1.063+o(1)`.
+
+Replacing `0.73` by `0.7404` therefore strengthens every subsequent good-leaf,
+backbone, and complete-rectangle constant without changing topology. Optimizing those
+thresholds is the next immediate propagation step.
+
+**Disposition:** exact proof-only fan strengthening. C-II and Level I remain open.

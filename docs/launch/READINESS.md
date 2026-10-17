@@ -1,3 +1,25 @@
+# Migration completion scope
+
+The [current integration status](../research/migration/2026-10-16/integration/STATUS.md)
+accounts for all 4,717 pinned source-main paths: 4,654 exact source identities
+and 63 external-reference exclusions. All 813 frozen report bindings, 1,643
+captured branch-artifact rows, and 30 known captured dirty-file identities are
+preserved. The [five-version local recovery](../research/migration/2026-10-16/ref-reconciliation/LOCAL_RECOVERY.md)
+retains exact historical bytes separately from active documents.
+
+Two historical working-copy states remain unknown at migration capture;
+earlier clean backup observations are bounded evidence. After the exact final
+main verification passes, `1337isnot1337/erdos-99` is the home for future work
+and the source receives a reversible deprecation pointer. The private source
+repository, history, PRs, branches, working copies and reference collection
+remain intact. The two unknown states remain explicit; no exhaustive historical
+preservation or source deletion is claimed. Neither repository is made public.
+Exact current Gate 2 results belong in detached receipts naming the
+tested SHA/tree, as required by [migration verification](MIGRATION_VERIFICATION.md)
+and the handoff on [PR #75](https://github.com/1337isnot1337/erdos-99/pull/75).
+Historical results below do not establish a current-commit pass. The complete
+historical readiness narrative follows unchanged.
+
 # Frozen publication candidate: verification and release evidence
 
 ## Expanded Target C migration and exact-commit receipt

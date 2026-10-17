@@ -1,0 +1,249 @@
+# Target C — two-phase singleton-train capacity
+
+**Date:** 2026-09-12  
+**Status:** proof-only conditional candidate; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The two-phase outer-walk variation theorem gives a linear population of outer
+occurrences whose directions are outside two selected bulk train directions.  This
+note keeps those occurrences in the exact stopped-train ledger.  Under an explicit
+two-phase bulk hypothesis, they remove trains from the bipartite crossing capacity of
+the quadratic rhombus population.
+
+The candidate chain is
+
+```text
+near-geodesic near-disk outer walk + two-phase quadratic bulk
+ -> off-phase outer occurrences
+ -> off-phase singleton/nonbulk trains
+ -> smaller two-phase crossing capacity
+ -> larger Q+4f and e_BB-k payment.
+```
+
+The final payment is still compatible with the current scalar endpoint region, so the
+result does not close C-II.
+
+## 1. Finite train classification
+
+Let `G` be the occurrence-counted positive-contact plane graph, with strict
+quadrilateral faces interpreted as rhombi.  Let `T` be its stopped-train count.  A
+non-singleton stopped train contains a quadrilateral edge and has one fixed projective
+direction: every edge in that train is parallel to the corresponding rhombus edges.
+Singleton trains are exactly the contact edges incident to no quadrilateral face.
+
+Fix two projective directions `[u]` and `[v]`.  Let `N_o` be the number of outer-face
+edge occurrences whose projective directions are outside `{[u],[v]}`.  Let `T_o` be
+the number of stopped trains whose projective direction is outside `{[u],[v]}`.
+
+Every outer occurrence counted by `N_o` belongs to a train counted by `T_o`.  A stopped
+train is a path and has at most two terminal outer-face occurrences, including the
+singleton bridge convention.  Therefore
+
+\[
+\boxed{N_o\le 2T_o.}
+\tag{ST.1}
+\]
+
+This is occurrence-safe.  It does not identify boundary vertices, and it includes
+singleton trains, bridges, and repeated outer-face occurrences.
+
+Now assume that all but `o(D^2)` strict-rhombus faces use the phase pair
+`{[u],[v]}`.  Let `R_{uv}` be the number of such faces and let `T_u,T_v` count all
+trains in the two selected projective directions.  Every `uv` rhombus is a crossing
+of one `u` train and one `v` train.  The stopped-train crossing graph is simple, so
+
+\[
+R_{uv}\le T_uT_v
+\le { (T-T_o)^2\over4}.
+\tag{ST.2}
+\]
+
+The second inequality uses `T_u+T_v\le T-T_o`; off-phase trains cannot be used in
+the two phase classes.  Singleton trains that happen to have phase direction only
+make this upper bound weaker, which is safe.
+
+Consequently,
+
+\[
+\boxed{
+T\ge 2\sqrt{R_{uv}}+{N_o\over2}.
+}
+\tag{ST.3}
+\]
+
+This is the exact finite capacity inequality.  It is independent of any exceptional
+face-to-boundary identification.
+
+## 2. Insert the outer variation theorem
+
+Assume along a Type-II subsequence that the occurrence-counted outer walk has
+
+\[
+\operatorname{width}_{Ju}(P_D)=D-o(D),
+\qquad
+\operatorname{width}_{Jv}(P_D)=D-o(D),
+\]
+
+and
+
+\[
+b\le \pi D+o(D).
+\tag{ST.4}
+\]
+
+Write `s=sin(theta)`, where `theta` is the angle between the two selected unit
+directions.  The finite determinant-variation inequalities give
+
+\[
+sN_u+N_o\ge2D-o(D),
+\qquad
+sN_v+N_o\ge2D-o(D).
+\]
+
+Since `b=N_u+N_v+N_o\le\pi D+o(D)`,
+
+\[
+N_o\ge {4-\pi s\over2-s}D-o(D).
+\tag{ST.5}
+\]
+
+For `s\in[\sqrt3/2,1]`, the coefficient is decreasing in `s`, so
+
+\[
+\boxed{
+N_o\ge(4-\pi)D-o(D).
+}
+\tag{ST.6}
+\]
+
+Combining (ST.3), (ST.6), and the Type-II strict-rhombus density
+
+\[
+{R_{uv}\over D^2}\longrightarrow
+\Delta_2:={\pi\over2\sqrt3}
+\]
+
+gives
+
+\[
+\boxed{
+\liminf {T\over D}
+\ge 2\sqrt{\Delta_2}+2-{\pi\over2}
+=2.3338292869\ldots .
+}
+\tag{ST.7}
+\]
+
+The exact hypothesis needed here is phase concentration of the **rhombus faces**:
+`R_{uv}/D^2\to\Delta_2`.  A statement about train-direction measures alone would
+not suffice, because one off-phase rhombus can introduce two off-phase trains.
+
+## 3. Consequence for the canonical defect currency
+
+The exact stopped-train ledger is
+
+\[
+2T=b+Q+4f.
+\tag{ST.8}
+\]
+
+Set `B_D=(Q+4f)/D`.  Along a zero-detour subsequence, `b/D\to\pi`, so (ST.7) and
+(ST.8) imply
+
+\[
+\boxed{
+\liminf B_D
+\ge
+4\sqrt{\Delta_2}+4-2\pi
+=1.5260659202\ldots .
+}
+\tag{ST.9}
+\]
+
+The exact Section-123 payment `Q+4f\le10(e_{BB}-k)` then yields the source-level
+loaded-hull consequence
+
+\[
+\boxed{
+\liminf {e_{BB}-k\over D}
+\ge
+{4\sqrt{\Delta_2}+4-2\pi\over10}
+>0.1525.
+}
+\tag{ST.10}
+\]
+
+The zero-detour specialization hides a useful tradeoff. Let
+
+\[
+x:=\limsup {b\over D}
+\]
+
+along the same subsequence, and retain `s=sin(theta)` in the determinant estimate.
+Adding the two variation inequalities gives
+
+\[
+s b+(2-s)N_o\ge4D-o(D),
+\]
+
+so
+
+\[
+{N_o\over D}
+\ge {4-sx\over2-s}-o(1).
+\tag{ST.11}
+\]
+
+The train ledger then yields
+
+\[
+{Q+4f\over D}
+\ge
+4\sqrt{\Delta_2}+{4-2x\over2-s}-o(1).
+\tag{ST.12}
+\]
+
+Since `x>=pi>2` in the near-disk regime and
+`s in [sqrt(3)/2,1]`, the right side is minimized at `s=1`. Therefore
+
+\[
+\boxed{
+{Q+4f\over D}
+\ge4\sqrt{\Delta_2}+4-2x-o(1).
+}
+\tag{ST.13}
+\]
+
+Writing `x=pi+delta` recovers (ST.9) at `delta=0` and records the exact loss
+`2 delta` from outer-walk slack. This is the same canonical defect currency as
+Section 123, but now coupled directly to the unresolved outer-detour quantity.
+
+## 4. Why this still does not close C-II
+
+The implication chain reaches an existing canonical currency, but the payment is only
+linear.  The current normalized scalar region permits, for example, a point with
+`t=(q-k)/D=2.9`, `k/D=0`, `Q/D=2.9-\pi/2`, and `f/D=0.4`; its value of
+`(Q+4f)/D` is above `1.526`, and the other promoted scalar inequalities remain
+feasible.  Thus (ST.9) does not force an exact unit triangle or a strict diameter
+decrease.
+
+The result identifies a sharper conditional target: prove that the actual Type-II
+quadratic bulk is two-phase while simultaneously forcing an upper bound on
+`e_{BB}-k`, or turn the resulting population of off-phase singleton/nonbulk trains
+into a source-preserving descent.  The note does not assume either missing bridge.
+
+## 5. Scope and classification
+
+- All source points, including contact-isolated points, remain retained.
+- The two-phase hypothesis is stated on rhombus faces, where the crossing-capacity
+  argument is valid.
+- The outer count is by physical edge occurrences, so bridges and articulation
+  repetitions are retained.
+- No identification of `N_o` with `P_exc` is made.
+- Equation (ST.13) is a necessary tradeoff, not an upper bound on `x` or on the
+  loaded/interface currency.
+- No global-minimality conclusion is drawn from the scalar witness or the conditional
+  capacity bound.
+
+**Classification:** proved candidate under explicit two-phase/near-geodesic hypotheses;
+proof-only and awaiting hostile audit. C-II remains open.

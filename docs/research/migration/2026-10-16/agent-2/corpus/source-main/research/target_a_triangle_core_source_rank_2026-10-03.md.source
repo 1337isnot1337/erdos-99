@@ -1,0 +1,156 @@
+# Target A: triangle-core tube plus zero-slack source rank cap
+
+Date: 2026-10-03
+Base main: 6c45398dcfe69e3b3bb322920a2911468dfe0573
+Status: proof-only candidate, noncanonical. Target A and Level I remain open.
+
+This is separate from the active Target B four-bar case-2 route and Worker-B's finite
+nine-no-root k=6 route. It treats the simultaneous Target A branch where the
+Section-168 zero-slack source endpoint exists and the actual response optimum has the
+Section-172 locked three-channel fan.
+
+## 1. One-sided source-shell defect
+
+If K is convex with perimeter P and X is a unit-separated subset of K, let X_w be the
+points at distance at most w from the boundary. Open radius-1/2 disks about X_w are
+disjoint and lie in (K+B_(1/2)) minus K_-(w+1/2). Steiner plus inner coarea gives
+
+    |X_w| <= 4(w+1)P/pi + 1.
+
+Since P <= pi diam(K),
+
+    |X_1| <= 8 diam(K)+1.                                  (1)
+
+For the actual response optimum X* in K*, diameter d, any response point whose
+zero-slack source partner lies outside K* is within distance below one of the boundary.
+Thus there are at most 8d+1 such response points.
+
+## 2. Contact lenses contain at most two source labels
+
+For a unit contact pq put L(pq)=B(p,1) intersect B(q,1). Any unit-separated set has
+at most two points in L(pq). Normalize p=(-1/2,0), q=(1/2,0). In the upper half-lens,
+with r=(0,sqrt(3)/2), the lens inequalities imply
+
+    |z-r|^2 < 2-sqrt(1-y^2)-sqrt(3)y <= 1.
+
+So the upper half-lens lies in a unit Reuleaux triangle and has strict diameter below
+one; the lower half is the reflected case. Hence at most one unit-separated point lies
+in each half.
+
+An off-shield strict source arm c-a meeting a contact shield Sigma cannot pass through
+a shield vertex, because that would put a distinct X* point within distance below one
+of c. It therefore properly crosses some unit contact edge pq. Section-177 crossing
+geometry puts a in L(pq). Injectivity gives
+
+    source arms crossing Sigma <= 2|E(Sigma)|.             (2)
+
+## 3. Active sink cap
+
+Take independently the Section-177.5 zero-slack matchings
+M_C:C^partial->A0 and M_O:O->A0, and let L be their common-source count. Section
+177.5A gives
+
+    L >= |C^partial|+|O|-20d-25.                           (3)
+
+Let B_C=C^partial intersect widehat W_Sigma, b=|B_C|, and retain the Section-175
+sets T_O,O_iso,C_i,O_i. Then sum_i|C_i|=|C^partial|-b.
+
+Call a common-source gate exceptional if its C endpoint is in B_C, its source lies
+outside K*, its source arm crosses Sigma, or its O endpoint lies in T_O. By (1), (2),
+and injectivity, there are at most
+
+    b+(8d+1)+2|E(Sigma)|+|T_O|                             (4)
+
+exceptional gates.
+
+Every nonexceptional gate either ends at O_iso or is sector-preserving C_i-A0-O_i.
+If its source a and a surviving response neighbor x of o were in different sectors,
+[a,x] would cross Sigma. Both lie in the open unit disk B(o,1), forcing o into T_O,
+a contradiction. Therefore
+
+    L <= b+8d+1+2|E(Sigma)|+|T_O|+|O_iso|
+         +sum_i min(|C_i|,|O_i|).                          (5)
+
+Using sum_i min <= sum_i|C_i| and
+|O|=|T_O|+|O_iso|+sum_i|O_i|, comparison with (3) yields
+
+    sum_i|O_i| <= 2|E(Sigma)|+28d+26.                      (6)
+
+Section 175.3 then gives
+
+    rank S <= |T_Sigma|+2|E(Sigma)|+28d+26.                (7)
+
+## 4. Triangle-core pointwise Voronoi tube
+
+Assume Sigma is connected and contains the boundary of a unit equilateral triangle P.
+Let V_phi be the centered Voronoi hexagon of a rotated unit triangular lattice and
+K_phi=V_phi+B_1. Then
+
+    area(V_phi)=sqrt(3)/2,
+    per(V_phi)=2sqrt(3),
+    area(K_phi)=5sqrt(3)/2+pi,
+    w_K(n)=w_V(n)+2.                                       (8)
+
+For every translation, each lattice site y with dist(y,|Sigma|)<1 has its full
+Voronoi cell in |Sigma|+K_phi, so
+
+    |T_Sigma| sqrt(3)/2 <= area(|Sigma|+K_phi).             (9)
+
+Start from the filled triangle P, which only enlarges the shield. For centrally
+symmetric K, the polygon mixed-area formula is
+
+    area(P+K)=area(P)+area(K)
+              +(1/2)sum_(triangle edges e) w_K(n_e).       (10)
+
+Order remaining contact edges so each shares an endpoint with the exposed graph.
+Adding a unit edge e increases the enclosing Minkowski area by at most w_K(n_e).
+With E=|E(Sigma)|,
+
+    area(|Sigma|+K_phi)
+    <= area(K_phi)+sqrt(3)/4+2E-3
+       +(1/2)sum_triangle w_Vphi(n_e)
+       +sum_nontriangle w_Vphi(n_e).                       (11)
+
+The regular-hexagon width is pi/3-periodic and has rotational mean
+per(V)/pi=2sqrt(3)/pi. The weighted edge count in (11) is E-3/2. Therefore one
+rotation phi_* satisfies
+
+    (1/2)sum_triangle w_Vphi*(n_e)+sum_nontriangle w_Vphi*(n_e)
+    <= (2sqrt(3)/pi)(E-3/2).                               (12)
+
+Section 154 permits a prescribed rotated and translated response lattice. After fixing
+phi_*, (9)-(12) hold for every translation, so a generic translation can be chosen.
+Dividing by sqrt(3)/2 gives
+
+    |T_Sigma| <= floor(
+        (4/sqrt(3)+4/pi)E
+        +11/2+2pi/sqrt(3)-2sqrt(3)-6/pi).                  (13)
+
+The edge coefficient is 3.582640621493666... and the additive constant is
+3.753637796227936....
+
+## 5. Locked-fan consequence
+
+For the Section-172 locked fan, E=V=:v. Combining (7) and (13),
+
+    rank S
+    <= floor((4/sqrt(3)+4/pi)v
+             +11/2+2pi/sqrt(3)-2sqrt(3)-6/pi)
+       +2v+28d+26.                                         (14)
+
+Thus the simultaneous zero-slack/locked subbranch closes whenever
+
+    |C^partial|-s
+    >= floor((4/sqrt(3)+4/pi)v
+             +11/2+2pi/sqrt(3)-2sqrt(3)-6/pi)
+       +2v+28d+26.                                         (15)
+
+The effective fan coefficient is 2+4/sqrt(3)+4/pi =
+5.582640621493666..., instead of 11 when the same source classification is paired
+with current-main's 9v pointwise tube estimate.
+
+All claims are analytic. No finite search, verifier, CI output, or heuristic is a
+premise. Target A remains open. The residual task is to prove that |C^partial|-s pays
+the right side of (15), or to replace one of the linear currencies by a strict sub-D
+competitor. The zero-slack branch with triangle-free actual response and the locked
+branch without the zero-slack source endpoint remain unresolved.

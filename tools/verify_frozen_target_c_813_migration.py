@@ -12,6 +12,11 @@ import re
 from collections import Counter
 from pathlib import Path
 
+try:
+    from tools import audit_public_release as release
+except ModuleNotFoundError:
+    import audit_public_release as release
+
 SOURCE_COMMIT = "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
 SOURCE_TREE = "e061f039eac44c286a00eacdcaa9a4cbbb877891"
 DESTINATION_BASELINE = "358af8253f85ab7b9cdbf976ce186ee8426718e4"
@@ -43,7 +48,7 @@ SUPPORT_PATHS = (
 
 
 def git(repo: Path, *args: str) -> bytes:
-    return subprocess.check_output(["git", "-C", str(repo), *args])
+    return subprocess.check_output(["git", "--no-replace-objects", "-C", str(repo), *args])
 
 
 def read_jsonl(path: Path) -> list[dict]:
@@ -60,11 +65,34 @@ def git_blob_sha(data: bytes) -> str:
 
 def source_blob_exists(repo: Path, commit: str, path: str) -> bool:
     return subprocess.run(
-        ["git", "-C", str(repo), "cat-file", "-e", f"{commit}:{path}"],
+        ["git", "--no-replace-objects", "-C", str(repo), "cat-file", "-e", f"{commit}:{path}"],
         stdout=subprocess.DEVNULL,
         stderr=subprocess.DEVNULL,
         check=False,
     ).returncode == 0
+
+
+def verified_inclusion_lineage(destination: Path) -> dict | None:
+    """Retain the exact approved scope across the one recorded generator edit.
+
+    The frozen baseline must still be the original owner-attested object.
+    Worktree bytes cannot substitute for committed evidence. The shared release
+    auditor permits only the existing generator's public hash and description;
+    all source identities, rights fields and 810 records remain unchanged.
+    """
+    path = "docs/publication/inclusion.json"
+    try:
+        baseline = git(destination, "show", f"{DESTINATION_BASELINE}:{path}")
+        if git_blob_sha(baseline) != release.OWNER_APPROVED_MANIFEST_BLOB:
+            return None
+        current_blob = git(destination, "rev-parse", "HEAD:" + path).decode("ascii").strip()
+        current = (destination / path).read_bytes()
+        if git_blob_sha(current) != current_blob:
+            return None
+        checked = release.inclusion_manifest_lineage(destination, json.loads(current), current_blob)
+        return checked[1] if checked is not None else None
+    except (OSError, ValueError, UnicodeError, subprocess.SubprocessError):
+        return None
 
 
 def main() -> int:
@@ -118,10 +146,9 @@ def main() -> int:
     current_state = (destination / "docs/state/theorem-state.yaml").read_bytes()
     if sha256(base_state) != sha256(current_state):
         errors.append("destination theorem-state differs from frozen baseline")
-    base_inclusion = git(destination, "show", f"{DESTINATION_BASELINE}:docs/publication/inclusion.json")
-    current_inclusion = (destination / "docs/publication/inclusion.json").read_bytes()
-    if sha256(base_inclusion) != sha256(current_inclusion):
-        errors.append("owner-attested inclusion manifest differs from frozen baseline")
+    inclusion_lineage = verified_inclusion_lineage(destination)
+    if inclusion_lineage is None:
+        errors.append("owner-attested inclusion manifest has invalid committed editorial lineage")
     current_page = (destination / "docs/targets/target-c/CURRENT.md").read_text(encoding="utf-8")
     if "q=O(D^(4/5))" not in current_page or "withdrawn" not in current_page.lower():
         errors.append("withdrawn inverse-phase rate/chart warning is missing from current Target C page")
@@ -351,6 +378,7 @@ def main() -> int:
         "source_main": SOURCE_COMMIT,
         "source_tree": source_tree,
         "source_clone_replay": source is not None,
+        "inclusion_manifest_lineage": inclusion_lineage,
         "destination_assignment_baseline": DESTINATION_BASELINE,
         "pre_coordinator_destination_tree": PRE_COORDINATOR_TREE,
         "counts": {"frozen_paths": len(frozen), "disposition_rows": len(ledger), **dict(counts)},

@@ -1,0 +1,86 @@
+# Continuation prompts
+
+Prompts are operational instructions, not theorem sources. Always read
+[`../STATE.md`](../STATE.md) and the selected target route map first.
+Level I remains open; prompt filenames and detail do not establish theorem status.
+
+## Current prompts
+
+### Target A
+
+[`erdos_problem_99_TARGET_A_CURRENT_CONTINUATION_PROMPT.md`](erdos_problem_99_TARGET_A_CURRENT_CONTINUATION_PROMPT.md)
+is the active Target A prompt. It follows the canonical chain through Section 177.
+Section 174's basis-closed shield charge is a historical intermediate; the preferred
+locked endpoint is Section 175's interior-tube right-deficiency inequality. Sections
+176–177 add zero-slack source and edge-lens/coarse-Hall refinements, but the required
+conversion to Schur deficiency or a strict competitor remains open. The prompt's state
+marker is checked against the current manifest.
+
+### Target C
+
+[`erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md`](erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md)
+is the active Target C prompt. C-I is closed. The prompt starts C-II after the
+strict-negative transfer theorem, Woodall diameter-topology classification, and
+universal-common-contact-bridge exclusion. C-II remains open: its current full-core
+branch needs a source-realized face-coupled finite move or discrete replacement, while
+the separate macroscopic-container branch still lacks a packet-capacity or moved-core
+strict-diameter closure. Audit.230's quarter-fold population count alone supplies
+neither endpoint.
+
+### Whole problem
+
+[`erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md`](erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md)
+is the current whole-problem launch prompt. Despite its historical model name, its
+mathematical bootstrap is model-independent: it reads the state lock first and chooses
+among the current A/B/C endpoints. Its state marker is checked against the current
+manifest, and the Target C section follows the current full-core/macroscopic-container
+split in `targets/target-c/CURRENT.md`.
+
+Run `python3 tools/check_research_entrypoints.py` before changing active route summaries;
+the focused regression tests are `python3 -m unittest tools/test_research_entrypoints.py`.
+
+## Unpromoted working prompts
+
+- [GPT-5.6 Sol xhigh full-settlement run](erdos_problem_99_SOL_XHIGH_FULL_SOLUTION_PROMPT.md)
+  is a September 10 working prompt prepared against the older `3f37ef0` checkout.
+  It prioritizes the open full-source C-II gate and permits alternate routes or a
+  global infinite-family disproof. The accompanying [state review](../reports/repository_state_and_sol_prompt_review_2026-09-10.md)
+  explains the frontier and prompt choices. It is preserved for research provenance,
+  is not the active whole-problem prompt, and does not promote the named reports.
+
+## Compatibility paths
+
+Two formerly active paths are retained so old links do not silently load stale missions:
+
+- [`erdos_problem_99_1.7.10_FINAL_CONTINUATION_PROMPT.md`](erdos_problem_99_1.7.10_FINAL_CONTINUATION_PROMPT.md)
+  now redirects to the current Target A prompt. Its original content is preserved under
+  `historical/`.
+- [`erdos_problem_99_TARGET_C_1.0_FINAL_CONTINUATION_PROMPT.md`](erdos_problem_99_TARGET_C_1.0_FINAL_CONTINUATION_PROMPT.md)
+  now redirects to the current Target C prompt. Its original content is preserved under
+  `historical/`.
+
+## Historical prompts
+
+Other versioned prompts are provenance only unless the state lock explicitly says
+otherwise. They record what the research frontier looked like at their own dates. Their
+phrases such as “current endpoint,” “next target,” or “remaining gate” are historical
+statements.
+
+Do not select a prompt by filename version, modification date, or amount of detail.
+
+## Prompt update rule
+
+Refresh the active route prompt when any of these changes:
+
+- the exact remaining endpoint;
+- a major branch is eliminated;
+- a regression invalidates a common argument;
+- a promoted theorem materially changes the required dependency set.
+
+A frontier-changing promotion must update `../STATE.md`,
+`../state/theorem-state.yaml`, the affected route map/current-frontier file, and the
+active prompt in the same change.
+
+Use [`PROMPTING_GUIDE.md`](PROMPTING_GUIDE.md) for prompt construction. Do not copy the
+entire theorem ledger into a prompt; point to the canonical files and state only the
+live endpoint, binding corrections, and output contract.

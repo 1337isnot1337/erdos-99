@@ -1,0 +1,300 @@
+# Target C — Section 122: exact regressions for uncharged host proliferation and generic detour upper bounds
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** proof-only regression / route audit.
+
+Section 121 permits a macroscopic defect-face cycle to be split into two near-geodesic
+arcs at `o(D)` route excess. That operation adds an antipodal pair of unit host
+directions to the signed-return problem. It is tempting to ignore that host
+proliferation and keep a positive per-rhombus return constant.
+
+That is false, even for an exact finite triangle-free unit-separated rhombic complex.
+The same model also shows that the Section-116 two-arc detour cannot have a generic
+`o(D)` upper bound derived only from convexity, unit separation, and rhombic structure.
+Any such upper bound must use source-specific global-minimality information.
+
+---
+
+## 122.1 A strict oblique unit lattice patch
+
+Fix
+
+\[
+{\pi\over3}<\varphi\le {\pi\over2}
+\]
+
+and unit vectors
+
+\[
+u=(1,0),
+\qquad
+v=(\cos\varphi,\sin\varphi).
+\]
+
+For positive integers `m,n`, define
+
+\[
+X_{m,n}:=
+\{iu+jv:0\le i\le m,\ 0\le j\le n\}.
+\tag{122.1}
+\]
+
+### Lemma 122.1 — exact separation and contact graph
+
+`X_{m,n}` is unit-separated. Equality `|x-y|=1` occurs exactly when the difference is
+one of
+
+\[
+\pm u,
+\qquad
+\pm v.
+\tag{122.2}
+\]
+
+Hence its unit-contact graph is the rectangular grid graph and is triangle-free.
+
+### Proof
+
+Every difference of two points has the form
+
+\[
+au+bv,
+\qquad a,b\in\mathbb Z,
+\]
+
+with `(a,b) ne (0,0)`. Put `c=cos(varphi)`, so
+
+\[
+0\le c<{1\over2}.
+\]
+
+Then
+
+\[
+|au+bv|^2=a^2+b^2+2ab c.
+\tag{122.3}
+\]
+
+If `ab>=0`, the right side is at least `a^2+b^2>=1`. Equality requires exactly one
+of `|a|,|b|` to equal one and the other to vanish.
+
+If `ab<0`, put `A=|a|`, `B=|b|`. Then
+
+\[
+|au+bv|^2
+=A^2+B^2-2ABc
+=(A-B)^2+2AB(1-c).
+\tag{122.4}
+\]
+
+If `A ne B`, the first term is at least one and the second is positive. If `A=B`,
+then
+
+\[
+|au+bv|^2=2A^2(1-c)>A^2\ge1.
+\]
+
+Thus the only unit differences are (122.2). The resulting grid graph is bipartite, so
+it contains no triangle. `square`
+
+Every bounded grid cell is therefore a strict unit rhombus of angle `varphi>pi/3`.
+There are exactly `mn` rhombi and total rhombic area
+
+\[
+\boxed{A_4=mn\sin\varphi>0.}
+\tag{122.5}
+\]
+
+---
+
+## 122.2 Four physical route hosts annihilate signed return completely
+
+Orient the four side walks of the boundary parallelogram consecutively. They are
+straight unit-edge routes with hosts
+
+\[
+Q=\{u,v,-u,-v\}.
+\tag{122.6}
+\]
+
+Each side walk has route excess zero, so the total route excess is
+
+\[
+\boxed{E=0.}
+\tag{122.7}
+\]
+
+Every complete train of the rhombic grid has its two physical terminal edge
+occurrences on the corresponding pair of opposite sides. Assign each endpoint to its
+actual side occurrence. The assignment is occurrence-injective and orientation
+matching.
+
+For a `u`-direction train,
+
+\[
+w_Q(u)
+=\max_{q\in Q}q\cdot u-
+ \min_{q\in Q}q\cdot u
+=1-(-1)=2,
+\]
+
+so
+
+\[
+2-w_Q(u)=0.
+\tag{122.8}
+\]
+
+Likewise
+
+\[
+2-w_Q(v)=0.
+\tag{122.9}
+\]
+
+These are the only two train directions. Therefore
+
+\[
+\boxed{
+\sum_\tau(2-w_Q(u_\tau))=0
+}
+\tag{122.10}
+\]
+
+while `A_4>0` by (122.5).
+
+### Corollary 122.2 — no host-count-free positive area-return theorem
+
+There is no universal constant `c>0` such that every triangle-free strict-rhombic
+complex with occurrence-injectively routed train endpoints satisfies
+
+\[
+E\ge {c\over d}A_4
+\]
+
+when the route host set may contain four unconstrained unit directions.
+
+In particular, after Section 121 splits macroscopic defect corridors, one may not keep
+Section 116's positive three-host constant while ignoring the new corridor hosts.
+Host diversity must itself be bounded or charged to a physical source currency.
+
+This regression is exact; it is not a limiting construction.
+
+---
+
+## 122.3 The same model has a linear two-arc detour
+
+The convex hull of `X_{m,n}` is the parallelogram with side lengths `m,n`. Its outer
+unit-edge walk has length
+
+\[
+L=2(m+n),
+\qquad
+P_{\rm exc}=0.
+\tag{122.11}
+\]
+
+Because `0<=cos(varphi)<1/2`, the longer diagonal is
+
+\[
+d=|mu+nv|
+=\sqrt{m^2+n^2+2mn\cos\varphi}.
+\tag{122.12}
+\]
+
+The Section-116 two-arc detour is therefore
+
+\[
+\boxed{
+L+P_{\rm exc}-2d
+=2\left(
+ m+n-\sqrt{m^2+n^2+2mn\cos\varphi}
+\right)>0.
+}
+\tag{122.13}
+\]
+
+For the square-indexed sequence `m=n=N`,
+
+\[
+d=2N\cos(\varphi/2)
+\]
+
+and
+
+\[
+\boxed{
+L-2d
+=4N\bigl(1-\cos(\varphi/2)\bigr)
+=\left({2\over\cos(\varphi/2)}-2\right)d.
+}
+\tag{122.14}
+\]
+
+The coefficient in parentheses is a fixed positive constant for every fixed
+`varphi>pi/3`. Thus the two-arc detour is genuinely `Theta(d)`.
+
+### Corollary 122.3 — generic convex geometry cannot give `o(D)` detour
+
+No theorem using only
+
+- unit separation,
+- triangle-freeness,
+- convex containment,
+- a strict-rhombic contact complex, and
+- a diameter-scale container
+
+can force
+
+\[
+L+P_{\rm exc}-2d=o(d).
+\]
+
+Any upper bound of the form required to contradict Section 116 or Section 120 must use
+an additional hypothesis absent from the oblique patch. In Target C the natural
+missing hypotheses are global diameter minimality, the loaded-diameter/KKT structure,
+near-disk full-core saturation, or the globally restricted interface ledgers.
+
+---
+
+## 122.4 Relation to the Type-II route
+
+The oblique patch is **not** asserted to be a global diameter minimizer and is not a
+Type-II survivor. Therefore it does not disprove C-II and does not contradict Sections
+116, 120, or 121.
+
+Its role is narrower and binding:
+
+1. **Route B:** splitting a face into near-geodesic arcs trades route excess for host
+   directions. Four appropriately placed physical hosts can make the signed-return
+   deficit zero across positive rhombic area. A valid all-regime theorem must charge
+   the number, span, or directional coverage of the new hosts.
+2. **Route A:** a linear outer detour is compatible with an exact triangle-free
+   rhombic packing. A conflicting upper bound cannot come from generic convexity or
+   train geometry alone.
+3. **Exactness:** the obstruction survives at finite `m,n`; there is no asymptotic
+   error to absorb.
+
+The next useful theorem should therefore be source-specific. A strong form would show
+that, in a Type-II global minimizer, every additional antipodal host pair capable of
+shadowing a macroscopic train phase consumes a quantitatively disjoint amount of
+inactive-interface or diameter-load currency. Summing that charge against the
+Section-120 aggregate area floor could then yield a contradiction.
+
+---
+
+## 122.5 Scope audit
+
+- The separation proof treats every integer difference, not only nearest grid
+  neighbors.
+- Triangle-freeness follows from the exact contact graph, not from a visual lattice
+  heuristic.
+- Physical boundary occurrences are used once each in the route assignment.
+- The four hosts are the actual chord directions of straight boundary routes, not
+  artificial support vectors.
+- No source point is deleted.
+- The construction is a regression for overstrong intermediate lemmas only; it is not
+  claimed to satisfy global minimality.
+
+**Disposition:** rigorous regression. C-II remains open.

@@ -1,0 +1,136 @@
+# Hostile audit — inactive-chamber residual conservation
+
+**Date:** 2026-09-12  
+**Audited source:** `research/target_c_inactive_chamber_residual_conservation.md`  
+**Verdict:** PASS as a proof-only exact consequence of canonical Sections 67 and 77.  
+**LEVEL I STATUS:** STILL OPEN. C-II REMAINS OPEN.
+
+## 1. Chamber boundary counts
+
+For a bounded nonquadrilateral face, the augmented boundary count is its degree. Its
+boundary vertices are original source points and every boundary edge is a unit contact.
+Thus Oler on boundary vertices plus assigned isolates gives `sigma_j>=k_j`.
+
+For an outer pocket, canonical Section 67.6 explicitly defines the graph-boundary
+count `k_P`, Euclidean perimeter `L_P`, and assigned population `z_P`, and proves
+
+\[
+ z_P\le A_P/a_0+L_P/2+1-k_P.
+\]
+
+This is exactly `sigma_P>=k_P`. The assignment convention for a source point lying on
+an added hull side is already built into canonical (67.28); the new theorem does not
+double count it.
+
+The exact total count
+
+\[
+ K_{ch}=(4f+Q)+(b+2a-q)
+\]
+
+uses canonical (67.24) and the literal exceptional-face degree sum. No simple-boundary
+replacement of the old occurrence-counted outer walk is made.
+
+## 2. Algebra audit
+
+Start from
+
+\[
+ \sum_j(\sigma_j-k_j)
+ ={A_{ch}\over a_0}+{P_{ch}\over2}+s-Z_{ch}-K_{ch}.
+\]
+
+Insert
+
+\[
+ A_{ch}=A_F-a_0R_4-E_4,
+ \quad Z_{ch}=N_F-m,
+ \quad s=f+a,
+\]
+
+\[
+ P_{ch}=4f+Q+b+2L_{add}-P_F,
+\]
+
+\[
+ K_{ch}=4f+Q+b+2a-q,
+ \quad m=R_4+f+q-k+1.
+\]
+
+After cancelling `R_4` and collecting terms, the remainder is
+
+\[
+ {A_F\over a_0}-N_F-{E_4\over a_0}
+ +2q-k-{Q+b\over2}+L_{add}-{P_F\over2}-a+1.
+\]
+
+Canonical `Q+b=2(q-k)` reduces this to
+
+\[
+ {A_F\over a_0}-N_F-{E_4\over a_0}
+ +q+L_{add}-a-{P_F\over2}+1.
+\]
+
+Canonical `P_F=q-a+L_add` then gives exactly
+
+\[
+ R_F={A_F\over a_0}+{P_F\over2}+1-N_F-{E_4\over a_0}.
+\]
+
+No asymptotic error is present.
+
+## 3. Sign audit
+
+Canonical Section 67.4 is
+
+\[
+ a_0N_F\le A_F+{a_0\over2}P_F+a_0-E_4.
+\]
+
+Dividing by `a_0` is precisely `R_F>=0`. This matches the chamber-by-chamber proof
+that every residual `sigma_j-k_j` is nonnegative.
+
+Thus the identity has two independent sign checks: local Oler and the global punctured
+force-hull Oler inequality.
+
+## 4. Capacity interpretation audit
+
+For an internal exceptional face, the contact-wall theorem gives a globally safe
+fixed-boundary replacement criterion. Oler gives only
+
+\[
+ M_\partial(C_j)-z_j\le r_j.
+\]
+
+Summing this over internal faces is valid and yields an upper bound by `R_F`.
+
+No analogous globally safe capacity statement is asserted for an outer pocket, because
+a subunit segment may cross its artificial hull chord. The residual identity includes
+outer pockets only as an accounting statement.
+
+Most importantly, the theorem never reverses
+
+\[
+ M_\partial-z\le r.
+\]
+
+`R_F` is an allowance, not a realized number of available packing slots.
+
+## 5. Source/core scope
+
+All counts use the full source population `N_F` and the canonical assignment of
+contact-isolated points to chambers. No isolate is deleted from the theorem, and no
+isolate is inserted into the Section-57 positive-core affine-kernel statement.
+
+## 6. Exact frontier effect
+
+Canonical Section 77 already gives `sum sigma_j=O(D)` and the boundary ledgers give
+`K_ch=O(D)`, so `R_F=O(D)` is not a new order estimate. The new content is the exact
+conservation law: after mandatory augmented-boundary credit is removed, every chamber
+residual sums to one source-level scalar.
+
+This blocks a common but invalid continuation in which several chamber Oler slacks are
+treated as independent repacking budgets.
+
+**Final verdict:** PASS. The result is useful bookkeeping and a structural reduction,
+not an inactive-branch closure.

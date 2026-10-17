@@ -1,0 +1,147 @@
+# Target C-II — inactive-slack scope repair for the finite-cusp reduction
+
+**Date:** 2026-09-15  
+**Reviewed:**
+- `research/target_c_adjacent_cut_finite_cusp_reduction_2026-09-15.md`
+- `research/target_c_adjacent_cut_finite_cusp_reduction_hostile_audit_2026-09-15.md`
+- exact arbitrary O--O finite multishear theorem
+
+**Disposition:** **the finite-cusp derivative reduction remains valid, but the displayed `t=xi/D` placement is not yet certified as a unit-separated feasible source uniformly in `D`.**  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The finite-cusp theorem correctly derives an exact two-cut placement and exact active-diameter formulas.  It then evaluates those formulas at
+
+\[
+t={\xi\over D}
+\]
+
+for fixed `xi`, obtaining `O(D^{-1})` squared-length changes for non-switching diameter rows and `O(1)` changes for the bounded switching set.
+
+That asymptotic algebra is correct.  A separate feasibility issue must be kept explicit:
+
+> The audited finite multishear theorem preserves all old unit contacts exactly for every parameter, but it preserves strict old noncontacts only for **sufficiently small source-dependent parameters**.
+
+No current theorem gives a lower bound on the minimum inactive unit-distance slack, and therefore no current theorem proves that the allowed neighborhood contains every fixed scale `|t|<=|xi|/D` along an arbitrary survivor sequence.
+
+Accordingly, `t=xi/D` is presently a valid **algebraic evaluation scale for the active diameter rows**, not a certified uniform finite deformation scale for the full unit-separation constraints.
+
+---
+
+## 1. What the exact multishear theorem actually proves
+
+For one finite source, let
+
+\[
+p_v(\theta)
+=p_v+\sum_{i:v\in S_i}(R_{\theta_i}u_i-u_i)
+\]
+
+be the exact multishear placement.  Every old contact remains exactly unit length.
+
+Every old noncontact `xy` starts with strict slack
+
+\[
+|p_x-p_y|-1>0.
+\]
+
+Because there are finitely many source pairs and all pair distances depend continuously on `theta`, there exists some radius
+
+\[
+\varepsilon(A)>0
+\]
+
+such that the moved source remains unit-separated whenever
+
+\[
+\|\theta\|<\varepsilon(A).
+\]
+
+This radius is allowed to depend on the finite source.  The proof gives no lower bound on `epsilon(A)` in terms of the source diameter `D`.
+
+In particular, for a survivor sequence `A_D`, the current theorem permits
+
+\[
+\varepsilon(A_D)=o(D^{-1}).
+\]
+
+Nothing in the exact-contact argument excludes that possibility.
+
+---
+
+## 2. Why active-diameter Taylor control does not repair inactive unit constraints
+
+For the triple-small adjacent pair, the exact active-diameter formula is valid for all real `t` as an algebraic identity.  Hence substituting `t=xi/D` legitimately proves the claimed orders of magnitude for those diameter rows.
+
+But an inactive pair whose initial distance is
+
+\[
+1+\eta_D,
+\qquad \eta_D>0,
+\]
+
+can change at first order under the shore translations.  If
+
+\[
+\eta_D=o(D^{-1}),
+\]
+
+a displacement of order `D^{-1}` can make that pair shorter than one even though every old contact is still exactly preserved.
+
+The source-level global-minimality argument cannot use such a placement unless unit separation of **all** pairs is certified.
+
+Thus neither
+
+- the `O(D^{-1})` active-diameter change for non-switching rows, nor
+- the bounded switching cusp set
+
+supplies the missing inactive-slack estimate.
+
+---
+
+## 3. Correct interpretation of the `t=xi/D` paragraph
+
+The safe interpretation is:
+
+1. the exact multishear defines a formal finite placement for every `t`;
+2. the active-diameter squared-length identities may be evaluated at `t=xi/D`;
+3. those evaluations reveal the natural scale separation between switching and non-switching diameter rows;
+4. **no claim is made that the placement at that fixed scale remains unit-separated.**
+
+Every sufficiently small source-dependent `t` is feasible for the lower-distance constraints, but the theorem currently supplies no uniform asymptotic lower bound on how small is sufficient.
+
+The finite-cusp theorem remains useful as an interface/normal-form theorem.  Its local first-order statements at `t=0` are fully feasible and unaffected by this repair.
+
+---
+
+## 4. What would upgrade the finite scale to a genuine competitor
+
+Any downstream argument that needs a prescribed scale such as `xi/D` must add one of the following:
+
+1. an **inactive-contact slack theorem**, for example
+   \[
+   \min_{|x-y|>1}(|x-y|-1)\gg D^{-1};
+   \]
+2. a proof that the chosen finite multishear is **nondecreasing on every inactive pair** in the relevant parameter interval;
+3. an activation argument that promotes all potentially dangerous `1+o(D^{-1})` pairs into a controlled active near-contact system; or
+4. a direct replacement construction whose unit separation is checked independently rather than by continuity from the original source.
+
+Without one of these inputs, the scale `xi/D` cannot be used as a same-cardinality feasible source deformation.
+
+---
+
+## 5. Scope preserved after repair
+
+The following parts of the merged finite-cusp stack remain valid exactly as stated:
+
+- the triple-small adjacent pair;
+- the inverse-`D` projective direction gap;
+- the bounded number of switching actual diameter rows;
+- the inverse-`D` total switching KKT multiplier;
+- the exact two-coordinate multishear formula;
+- all first derivatives at `t=0`;
+- the algebraic Taylor estimates for active diameter rows at a formal scale `t=xi/D`;
+- the local-jamming warning that no nonzero first-order diameter-feasible exact-train-shear direction exists.
+
+Only the interpretation of `t=xi/D` as a **uniformly feasible full-source motion** is disallowed without an additional inactive-slack input.
+
+**Final disposition:** scope repair required for finite-amplitude feasibility; the structural finite-cusp reduction itself remains valid. C-II and Level I remain open.

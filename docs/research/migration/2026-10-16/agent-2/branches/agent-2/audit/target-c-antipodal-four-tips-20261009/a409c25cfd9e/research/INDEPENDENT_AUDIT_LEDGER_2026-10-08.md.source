@@ -1,0 +1,78 @@
+# Independent Target C audit ledger — 2026-10-08
+
+This is the run ledger for the independent audit/integration cycle. Source tips are
+frozen audit inputs; the corresponding promotion commit is a separate canonical
+transaction. Claim status and exact statements are controlled by the cited audit and
+the theorem-state manifest.
+
+| Cycle | Source snapshot | Audited artifact and claim | Verdict | Verifier / evidence | Canonical disposition and remaining caveat |
+|---|---|---|---|---|---|
+| Audit.169 | `audit/target-c-post-descent-weak-wall-20261008` at `2b97a1f5ec577e683ee600dba1dd9c2a5af8c431` | Weak wall shield, post-descent refill endpoint, moving-wall crossing barrier; exact near-triangular capacity plateau regression. [Audit](../docs/audits/target_c_weak_wall_refill_capacity_independent_audit_2026-10-08.md) | PASS for the three scoped lemmas; REGRESSION VALID for the fixed-wall capacity claim | Exact `Q(sqrt(3))` finite checker plus independent all-parameter Oler and wall-shield arguments; protected PR #861 and post-main theorem-state workflow passed | Promoted as `C-NONCONTACT-WALL-WEAK-SHIELD`, `C-POST-DESCENT-WEAK-WALL-REFILL`, `C-UNIT-SEPARATED-MOVING-WALL-CROSSING-BARRIER`, and `C-NEAR-TRIANGULAR-WALL-CAPACITY-PLATEAU-REGRESSION`. No canonical packet or C-II move follows. |
+| Audit.170 | `audit/target-c-accessible-stress-face-20261008` at `2b99f315b79be0a6d48009fa7be91ae24b8b6dba` | Accessible stress-face dichotomy and seven-site tagged-stress-mass regression. [Audit](../docs/audits/target_c_accessible_stress_face_independent_audit_2026-10-08.md) | PASS for the finite dichotomy; REGRESSION VALID at its triangle-containing nonglobal scope | Exact finite stress/rank checker; independent Helly and finite-source reconstruction; protected PR #862 and post-main theorem-state workflow passed | Promoted as `C-ACCESSIBLE-STRESS-FACE-DICHOTOMY` and `C-SEVEN-SITE-TAGGED-STRESS-MASS-REGRESSION`. Grid access and any bound on `b_0` were conditional and not promoted; Audit.173 supplies only unweighted approximate edge access. |
+| Audit.171 | `research/level-i-closure-20261007` frozen at `12f6833725f281ce39a6d04ebcb45630b3a6768f`; candidate introduced at `099540dc282606f425fb98a8123d8308a5a81677` | Almost-accessible stress transversal. [Audit](../docs/audits/target_c_almost_accessible_transversal_independent_audit_2026-10-08.md) | PASS | Independent two-stage exposed-face/Helly reconstruction; finite checker inspected and rerun; protected PR #863 and post-main theorem-state workflow passed | Promoted as `C-ALMOST-ACCESSIBLE-STRESS-TRANSVERSAL`. Requires a supplied loaded set `W`; no `W` extraction, refill, cardinality restoration, or strict-diameter competitor. |
+| Audit.172 | Same frozen research tip `12f6833725f281ce39a6d04ebcb45630b3a6768f`; star report introduced at `099540dc282606f425fb98a8123d8308a5a81677` | Diameter-star stress-chain classification, one-unloaded-label exceptional-face refinement, two exact boundary regressions. [Audit](../docs/audits/target_c_exceptional_diameter_star_face_independent_audit_2026-10-08.md) | PASS for two canonical claims; REGRESSION VALID for two scoped regressions | Independent force-hull maximum principle and chain argument; exact `Q(sqrt(3))` source census and 64 abstract face cases; PR #864 protected and post-main run `37861146713` passed | Promoted as `C-DIAMETER-STAR-STRESS-CHAIN-CLASSIFICATION` and `C-STAR-EXCEPTIONAL-FACE-ONE-UNLOADED-TRANSVERSAL`; promoted `C-TWO-EDGE-STAR-TRIANGLE-HYPOTHESIS-REGRESSION` and `C-NONSTAR-DIAMETER-CYCLE-STRESS-REGRESSION`. No star extraction or cardinality restoration. |
+| Audit.173 | `research/level-i-closure-20261007` frozen at `12f6833725f281ce39a6d04ebcb45630b3a6768f`; cell report introduced at `a7b27218c7657dd2de63a82c53e54e5d24bf195a`; face-tail report introduced at `6d27eabfd6ec267a955ade033264296425f843cf` | Uniform harmonic cells, local Type-II grid access, unweighted actual-diameter endpoint-to-grid edge count, face-tail attachment-incidence multiplicity, and prescribed-port coherent caps. [Cell Audit](../docs/audits/target_c_uniform_harmonic_cells_global_diameter_access_independent_audit_2026-10-08.md); [face-tail/cap Audit](../docs/audits/target_c_typeii_face_tail_port_multiplicity_independent_audit_2026-10-08.md) | PASS for both-branch cell bounds; PASS WITH REPAIRED PROOF for local grids; PASS for endpoint edge access and face-tail incidence count; PASS WITH NARROWED SCOPE for caps (uniformly every cell, using the new area theorem). Candidate many-grid claim is subsumed. Selected-grain convex-hull crop is a proof gap and is not promoted. | Both frozen exact checkers inspected and rerun; first checker includes 45,643 source-pair, 13,384 direction-pair, 11,792 body/port/radius, and 24 weighted-identity checks; second has exact circle fixtures, 21 weighted identities, 480 strip cases, and prescribed-port triangle checks. Analytic implications independently reconstructed; validators are necessary but finite. | Promote five IDs: `C-UNIFORM-HARMONIC-CELL-AREA`, `C-TYPEII-LOCAL-COHERENT-GRID-ACCESS`, `C-TYPEII-ACTUAL-DIAMETER-GRID-ACCESS`, `C-TYPEII-FACE-TAIL-PORT-MULTIPLICITY`, and `C-TYPEII-ATTACHMENT-COHERENT-PROPER-CAP`. Corrected grid proof crops the cell; face-tail count does not create independent route currency; cap chord is selected after its attachment. Exceptional diameter edges are unweighted; no C-II endpoint changes. |
+| Audit.174 | `research/level-i-closure-20261007` frozen at `12f6833725f281ce39a6d04ebcb45630b3a6768f`; candidate introduced at `55efb7a23c7ed114b5de25bc2627a5120da3b5ce`, separate-face refinement at `ba6edaa8f5791bd02c9459e83ed7993f884f1ec2` | Terminal cancellation and separate-face floor. [Independent Audit](../docs/audits/target_c_typeii_terminal_cancellation_face_floor_independent_audit_2026-10-08.md) | PASS — promote maximal exact face-floor theorem | Independent atomic-direction/product-measure reconstruction, marked-measure component argument, exact separate-face incidence algebra; exact `Fraction` checker rerun (7,252 source pairs, 620 component identities, 886 separate-face checks); checker remains finite-only | Promote `C-TYPEII-ATOMIC-SEPARATE-FACE-FLOOR`. Eliminates positive one-cell collar range in full-core Type-II near-disk branch; higher-`(q-k)/D` Type-II and macroscopic-container branches remain open. No width, area, source motion, C-II closure, or Level I result. |
+
+## Prior refreshed queue snapshot (2026-10-08)
+
+After `git fetch --all --prune`, `origin/main` remained
+`a98757336129ce59a1166a5802f4d88d7fdf0cd4` (`2026-10-08.audit.168`). The
+frozen `origin/research/level-i-closure-20261007` tip remained
+`12f6833725f281ce39a6d04ebcb45630b3a6768f`, 24 commits ahead and 12 behind
+main. Audit.173's two candidate reports were frozen there; neither discovery
+branch nor tip was modified.
+
+The refreshed remote branch/PR field has 15 `origin/research/*` refs. High-activity
+refs are overnight closure `c6a75bd7` (66 ahead/149 behind), owner-order closure
+`bf288c82` (47/187), level-i-closure `12f68337` (24/12), Level-I GPT-6.1
+`9875cd6a` (27/315), residual closure `ed535f5a` (31/202), exterior-cap closure
+`f4a36272` (9/197), and fan-blocker closure `ba8197f5` (5/230). Older still-open
+research refs remain in the repository and are not presumed obsolete.
+
+Only open Target C PRs are #737 (`research/sol/target-c-owner-order-closure-20261006`,
+head `bf288c82e8a62466d5580025c94e750a177e63e2`) and #668
+(`research/sol-c2-deep-port-route-20261004`, head
+`a2ccd6161519c7d27482a7c6e751cd44e595e1b6`). PR #722 is closed, not a live
+merge candidate. The next high-priority frozen-branch audit is
+`target_c_typeii_terminal_cancellation_face_floor_2026-10-08.md`, which would
+sharpen the canonical atomic one-end train bound and eliminate an additional low-
+`(q-k)/D` Type-II range if its marked-measure and occurrence-counting arguments
+survive. Then audit the independent train-cut hull bank, deep-return/cap extraction,
+collective and small-packet releases, isolate normalization, and exact regressions;
+recheck their current dependency/status against the theorem graph before acting.
+
+## Refreshed audit snapshot (2026-10-09)
+
+After fetching `origin`, main is `587bd922311b9c0403839741119d44515aa593b2`, state
+`2026-10-08.audit.176`. The frozen exterior-cap branch remains
+`f4a362727779f6afc0f01738015112c04fdb73d5` (9 commits ahead, 212 behind); the
+overnight branch remains `c6a75bd708e553c4feb3a540e0b17f3b65e22a82` (66 ahead,
+164 behind). Owner-order is `bf288c82e8a62466d5580025c94e750a177e63e2` (47 ahead,
+202 behind), residual-closure is `ed535f5a` (31 ahead, 217 behind), and the
+Level-I GPT-6.1 branch is `9875cd6a` (27 ahead, 330 behind). Other refreshed
+Target C research refs include atomic-boundary, fan-blocker, and port-route audits;
+none was modified. PR #737 is the only currently open PR. PR #668 was closed on
+2026-10-09 without merge. No discovery branch was overwritten.
+
+The frozen overnight branch at `c6a75bd708e553c4feb3a540e0b17f3b65e22a82` was
+compared against canonical main claim by claim:
+
+| Candidate artifact | Frozen SHA-256 | Verdict | Canonical disposition |
+|---|---|---|---|
+| `target_c_uniform_one_deficit_curvature_window_2026-10-07.md` | `8bcf33a52dbae32d91942329107e895fc6aaca33e9679f58cf05a2eb2f0551f7` | PASS — already subsumed | Audit.80's exact arithmetic-window packet, Oler cap, and source exclusion cover the stated scope. |
+| `target_c_uniform_polynomial_maximum_wall_classification_2026-10-07.md` | `48b55c2bb6c888f754b8670a374a8ee531bb94a962b8b673df8bd433e83e8e29` | PASS — already subsumed | Audit.107's six-wall polynomial maximum classification and source exclusion are canonical. |
+| `target_c_one_deficit_M5_extension_and_profile_root_2026-10-07.md` | `cad8dca47fb201d25cf3bd02bd2fd24d9a105f8435bb0ed58ab4c314929bdfe6` | PASS — already subsumed | Audit.77's all-fixed-M packet and profile-root claims subsume the M=5 case; the Laurent certificate is alternate proof evidence. |
+| `target_c_common_angle_train_closure_and_full_endpoint_2026-10-06.md` | `176b0eae82355d398d6674ce0e047446e443feb6ea11d31e4f1e9f9d45df9233` | DUPLICATE for audited modules; no report-level promotion | Audit.83, Audit.95, Audit.97, Audit.98, and Audit.116 separately cover the quarter-fold integration, exact local regressions, active-diameter amplitude gap, pentagon bit collapse, and full-source pair test. Any remaining claim stays at its own manifest status. |
+| `target_c_overnight_closure_run_handoff_2026-10-07.md` | `a549662f6c05f290f808e74e6ac8d309f52c304de9fe9002da1fa095e894ccd3` | SUPERSEDED as status authority | Its main/state snapshot is historical; follow the current theorem manifest and audit each linked candidate independently. |
+
+Audit.183 is recorded in the new independent artifact
+[`target_c_macroscopic_antipodal_cap_capacity_independent_audit_2026-10-09.md`](../docs/audits/target_c_macroscopic_antipodal_cap_capacity_independent_audit_2026-10-09.md).
+On the frozen exterior-cap branch, the Audit.115 antipodal cap theorem and the
+canonical full-force-hull inradius floor give four tips separated by `gamma D`
+for a fixed-positive-area cap pair. Applying the audited Audit.85 theorem yields
+`M_1+M_2<=|S_1|+|S_2|+3`. Verdict: PASS — promote
+`C-MACROSCOPIC-ANTIPODAL-CAP-PAIR-STRICT-CAPACITY`. The frozen exact verifier
+passed 3,942 rational pair checks but does not verify this asymptotic theorem;
+the new bridge is analytic. Promotion PR and final main SHA will be recorded in
+the post-merge transaction update.

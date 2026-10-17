@@ -1,0 +1,318 @@
+# Target C-II — unit-force equilibrium forces a five- or six-vertex reciprocal hull
+
+**Date:** 2026-09-18  
+**Status:** proved candidate; theorem-state authority unchanged  
+**Scope:** the six-point unit-force reciprocal `K_6` forced by a degree-pure minimal one-anchor `K_5` dual block  
+**Depends on:** `target_c_one_anchor_k5_reciprocal_unit_force_2026-09-18.md`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The reciprocal reduction gives six points `y_0,...,y_5` in general position and signs
+`s_ij in {+1,-1}` such that at every reciprocal vertex
+
+\[
+\sum_{j\ne i}s_{ij}{y_i-y_j\over |y_i-y_j|}=0.
+\tag{0.1}
+\]
+
+The previous turn-gap note used source pentagon geometry to show that every non-ground
+reciprocal hull angle is greater than `pi/3`.  The unit-force equilibrium itself gives a
+much stronger bound, applies also at the ground point, and sharply constrains the local
+sign split.
+
+Put
+
+\[
+a:=\arccos(1/4),
+\qquad
+\beta:=\arccos(-1/4)=\pi-a,
+\qquad
+\alpha:=2\arccos(1/4)=2a.
+\tag{0.2}
+\]
+
+Numerically,
+
+\[
+\beta\approx104.477512^\circ,
+\qquad
+\alpha\approx151.044976^\circ.
+\]
+
+The exact conclusions are:
+
+1. every reciprocal hull angle is strictly greater than `beta`;
+2. a hull vertex whose incident edge signs split `1+4` has hull angle strictly greater
+   than `alpha`;
+3. the reciprocal convex hull has exactly five or six vertices;
+4. if it has five vertices, every hull vertex has a `2+3` sign split;
+5. if it has six vertices, at most one hull vertex has a `1+4` sign split.
+
+Thus the finite reciprocal target has only two order-type regimes left: a convex
+pentagon plus one interior point, with `2+3` signs at every hull vertex, or a convex
+hexagon in which at least five vertices have `2+3` signs.
+
+---
+
+## 1. A sharp three-vector resultant bound
+
+Let three unit vectors have arguments
+
+\[
+0\le x\le z<\pi.
+\]
+
+Their squared resultant is
+
+\[
+\begin{aligned}
+|1+e^{ix}+e^{iz}|^2
+&=3+2\bigl(\cos x+\cos z+\cos(z-x)\bigr)\\
+&=3+2\Bigl(\cos z+2\cos(z/2)\cos(x-z/2)\Bigr).
+\end{aligned}
+\]
+
+Because `|x-z/2|<=z/2<pi/2`,
+
+\[
+\cos(x-z/2)\ge\cos(z/2),
+\]
+
+and therefore
+
+\[
+\boxed{
+|1+e^{ix}+e^{iz}|^2\ge5+4\cos z.
+}
+\tag{1.1}
+\]
+
+If the three directions are distinct, the first inequality is strict.
+
+Consequently, if three distinct unit vectors lie in an angular interval of width at
+most `phi<pi`, then
+
+\[
+\boxed{
+|u_1+u_2+u_3|>\sqrt{5+4\cos\phi}.
+}
+\tag{1.2}
+\]
+
+The endpoint expression is sharp as an infimum: two of the three vectors may approach
+one endpoint while the third approaches the other.
+
+---
+
+## 2. Two-versus-three equilibrium forces `phi>beta`
+
+Fix a reciprocal hull vertex `y_i`.  The five geometric rays from `y_i` to the other
+five reciprocal points lie in the open hull cone of angle `phi_i<pi`.  Reversing all
+rays does not change their angular span, so (0.1) is an equality between two signed
+subsets of five unit vectors in an interval of width `phi_i`.
+
+If the incident signs split `2+3`, move one sign class to the other side.  The sum of
+the two minority vectors equals the sum of the three majority vectors.  The minority
+resultant has norm at most two, whereas (1.2) gives
+
+\[
+2
+>
+\sqrt{5+4\cos\phi_i}.
+\]
+
+Hence
+
+\[
+4>5+4\cos\phi_i,
+\qquad
+\cos\phi_i<-{1\over4},
+\]
+
+and since `0<phi_i<pi`,
+
+\[
+\boxed{
+\phi_i>\arccos(-1/4)=\beta.
+}
+\tag{2.1}
+\]
+
+The strictness is load-bearing and comes from general position: the three majority rays
+are distinct, because no three reciprocal points are collinear.
+
+---
+
+## 3. One-versus-four equilibrium forces `phi>alpha`
+
+If the incident signs split `1+4`, the four-vector resultant has norm exactly one.
+Let `n` be the unit direction along the bisector of the hull cone.  Every one of the
+four majority unit vectors has projection at least `cos(phi_i/2)` onto `n`.  Therefore
+
+\[
+1
+=
+|u_1+u_2+u_3+u_4|
+\ge
+n\cdot(u_1+u_2+u_3+u_4)
+>
+4\cos(\phi_i/2).
+\tag{3.1}
+\]
+
+The last inequality is strict because four distinct directions cannot all lie on the
+two boundary rays of the cone.  Thus
+
+\[
+\cos(\phi_i/2)<1/4,
+\]
+
+so
+
+\[
+\boxed{
+\phi_i>2\arccos(1/4)=\alpha.
+}
+\tag{3.2}
+\]
+
+An all-equal `0+5` sign split is impossible at a hull vertex: all five rays have
+strictly positive projection on the cone bisector, so their signed sum cannot vanish.
+Thus every hull vertex is of `2+3` or `1+4` type.
+
+---
+
+## 4. The reciprocal hull has five or six vertices
+
+Because `a=arccos(1/4)<pi/2`,
+
+\[
+\beta=\pi-a>{\pi\over2}.
+\tag{4.1}
+\]
+
+Every hull angle is strictly greater than `beta`.  A convex quadrilateral would
+therefore have angle sum strictly greater than
+
+\[
+4\beta>2\pi,
+\]
+
+contradicting its exact angle sum `2pi`.  Triangles are excluded a fortiori.
+
+There are only six reciprocal points, so
+
+\[
+\boxed{
+|\operatorname{vert}(\operatorname{conv}\{y_0,\ldots,y_5\})|\in\{5,6\}.
+}
+\tag{4.2}
+\]
+
+This strengthens the earlier statement that only a reciprocal triangle with three
+non-ground vertices is impossible: no reciprocal triangle or quadrilateral can occur
+at all, including those containing the ground point.
+
+---
+
+## 5. A five-vertex hull has no `1+4` sign vertex
+
+Suppose the reciprocal hull is a pentagon.  Its angle sum is `3pi`.
+
+If even one hull vertex had a `1+4` sign split, Sections 2--3 would give
+
+\[
+\sum_{v\in\partial H}\phi_v
+>
+\alpha+4\beta
+=
+2a+4(\pi-a)
+=
+4\pi-2a.
+\tag{5.1}
+\]
+
+But `a<pi/2`, so
+
+\[
+4\pi-2a>3\pi,
+\]
+
+contradicting the pentagon angle sum.  Therefore
+
+\[
+\boxed{
+\text{if the reciprocal hull has five vertices, every hull vertex has a `2+3` sign split.}
+}
+\tag{5.2}
+\]
+
+Equivalently, if `d_i` denotes the number of positive reciprocal edge signs incident to
+a hull vertex, then
+
+\[
+\boxed{d_i\in\{2,3\}\quad\text{at all five hull vertices}.}
+\tag{5.3}
+\]
+
+The sixth, interior reciprocal point is not constrained by this hull-cone argument.
+
+---
+
+## 6. A six-vertex hull has at most one `1+4` sign vertex
+
+Now suppose all six reciprocal points are hull vertices.  The angle sum is `4pi`.
+If two vertices had `1+4` sign splits, then the remaining four vertices have at least
+the `2+3` lower bound, so
+
+\[
+\sum_{v\in\partial H}\phi_v
+>
+2\alpha+4\beta
+=
+4a+4(\pi-a)
+=
+4\pi,
+\tag{6.1}
+\]
+
+again impossible.
+
+Hence
+
+\[
+\boxed{
+\text{on a convex reciprocal hexagon, at most one vertex has a `1+4` sign split.}
+}
+\tag{6.2}
+\]
+
+At least five vertices therefore satisfy `d_i in {2,3}`.
+
+---
+
+## 7. Frontier effect
+
+The minimal one-anchor `K_5` dual block no longer leaves an arbitrary six-point order
+type or arbitrary signed `K_6`.
+
+Any surviving reciprocal equilibrium must lie in one of exactly two geometric regimes:
+
+- **H5:** five reciprocal points form the convex hull and one point is interior; all
+  five hull vertices have signed degree `2` or `3`;
+- **H6:** all six reciprocal points are in convex position; at least five vertices have
+  signed degree `2` or `3`, and at most one has signed degree `1` or `4`.
+
+The proof uses only the unit-force reciprocal equilibrium and reciprocal general
+position.  It does not use the source `<120` force-gap theorem, so that theorem remains
+available as an independent filter on the five non-ground vertices.
+
+A next finite attack can therefore enumerate only H5/H6 signed order types, then impose
+the source turn-gap and translation-surface constraints.  The H5 regime also admits an
+additional metric exclusion recorded separately for the pentagram sign class.
+
+No theorem-state file is changed.
+
+**Disposition:** strengthened the reciprocal finite target from an arbitrary general-
+position six-point configuration to a five- or six-vertex convex hull, with exact local
+sign-split restrictions `2+3` everywhere on H5 and at at least five vertices on H6.
+C-II remains open.

@@ -1,0 +1,60 @@
+{
+  "schema_version": 3,
+  "status": "PASS_ACTIVE_DOCUMENT_PATHS_CONNECTOR_REBUILD",
+  "candidate_tree": "1e403500677db988c463b9980f8bce5c1f1115dd",
+  "source_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+  "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "documents_checked": 4938,
+  "unique_blobs_fetched": 4823,
+  "reference_counts": {
+    "broken_literal_link": 30902,
+    "resolved_file": 2655,
+    "resolved_directory": 83,
+    "external": 543,
+    "anchor": 106
+  },
+  "historical_mapping_counts": {
+    "exact_source_target_preserved": 1500,
+    "pinned_source_main_target_preserved": 28702,
+    "same_snapshot_preserved_target": 354,
+    "corrected_historical_filename": 103,
+    "other_historical_target_version_unverified": 35,
+    "current_destination_target": 31,
+    "current_destination_directory": 13,
+    "external_reference_not_redistributed": 156,
+    "unresolved": 1
+  },
+  "active_blocking_references": [],
+  "historical_unresolved_references": [
+    {
+      "document": "docs/research/migration/2026-10-16/agent-2/branches/agent-2/worktrees/e99-threshold-rail-curvature-20261002/docs/reports/target_c_threshold_cut_torque_transport_2026-10-02.md.source",
+      "line": 318,
+      "link": "../../research/verify_threshold_cut_torque_2026_10_02.py",
+      "target": "docs/research/migration/2026-10-16/agent-2/branches/agent-2/worktrees/e99-threshold-rail-curvature-20261002/research/verify_threshold_cut_torque_2026_10_02.py",
+      "status": "broken_literal_link",
+      "source_target": "research/verify_threshold_cut_torque_2026_10_02.py",
+      "mapping_status": "unresolved"
+    }
+  ],
+  "errors": [],
+  "generated_map_blob": "8ad7181f5272a24cd330e70fbb68aa0195f248ef",
+  "generated_map_characters": 573013,
+  "generated_rows": 1759,
+  "deprecation_ready": false,
+  "release_verified": false,
+  "mathematical_proof": false,
+  "limits": [
+    "Fresh structural rebuild used a JavaScript port through the GitHub connector after the local runtime became unavailable.",
+    "Every fetched Markdown blob was verified against its Git SHA-1; parser controls cover code, algebraic false links, nested parentheses, and reference definitions.",
+    "This is not a new execution of the reconstructed Python scanner or a final Gate 2 pass.",
+    "Archive mappings retain their stated version limits and do not change original source bytes."
+  ],
+  "retries": [
+    {
+      "blob": "9c8e682dc7f016d7d5e63424f754e9352c4738b2",
+      "reason": "Transient server disconnect",
+      "content_identity": "Git create_blob returned identical SHA-1",
+      "links_found": 0
+    }
+  ]
+}

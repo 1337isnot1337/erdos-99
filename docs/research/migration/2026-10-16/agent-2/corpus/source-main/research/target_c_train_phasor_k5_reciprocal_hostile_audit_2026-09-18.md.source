@@ -1,0 +1,273 @@
+# Hostile audit — all-orders train phasor / straight-ray rigidity and minimal-`K_5` reciprocal reduction
+
+**Date:** 2026-09-18  
+**Audited sources:**
+- `research/target_c_train_closure_all_orders_phasor_straight_ray_2026-09-18.md`
+- `research/target_c_one_anchor_k5_reciprocal_unit_force_2026-09-18.md`
+- `research/target_c_one_anchor_k5_reciprocal_turn_gap_2026-09-18.md`
+
+**Status:** internal hostile audit; theorem-state authority unchanged  
+**Verdict:** PASS at the stated proof-only scopes.  C-II remains open.
+
+The audit focused on sign conventions, hidden use of the dual-kernel hypothesis,
+finite-versus-infinitesimal integration, degeneracies in the five-face reciprocal
+construction, and the transfer of physical pentagon geometry to reciprocal angles.
+
+---
+
+## 1. The all-orders phasor identity uses no false `Jy` kernel assumption
+
+For a dual mode `y in ker C^T`, the already established train coefficient satisfies
+
+\[
+v_\tau(y)=\lambda_\tau u_\tau.
+\]
+
+If `Psi(theta)=0`, contraction with any block test vector vanishes.  Therefore both
+`y` and `Jy` may be used as test vectors even though `Jy` need not lie in `ker C^T`.
+The two contractions are exactly
+
+\[
+\sum_\tau\lambda_\tau\cos\theta_\tau=0,
+\qquad
+\sum_\tau\lambda_\tau\sin\theta_\tau=0.
+\]
+
+Thus
+
+\[
+\sum_\tau\lambda_\tau e^{i\theta_\tau}=0
+\]
+
+is exact.  No symmetry or omitted outer-face equation is required.  Outer--outer trains
+have `lambda=0` automatically.
+
+The singleton-sign corollary is also exact: after using `sum lambda=0`, one side of the
+phasor identity is a convex combination of unit complex numbers with modulus one.
+Equality in the triangle inequality forces all nonzero-support phases to coincide.
+
+**Disposition:** PASS.
+
+---
+
+## 2. The straight-ray criterion is an equivalence, not just a necessary condition
+
+For one face,
+
+\[
+\Psi_F(tx)=\sum_a S_{F,a}e^{ita}.
+\]
+
+Distinct real frequencies give an invertible Vandermonde system after differentiating
+orders `0,...,m-1` at zero.  Hence exact vanishing on an interval forces every slope
+group sum `S_{F,a}` to vanish separately.  The converse is immediate.
+
+This argument is face-local and does not invoke a genericity assumption on the speeds.
+Repeated speeds are intentionally grouped before the Vandermonde step.
+
+On a bounded contact pentagon, a proper zero-sum side subset is impossible because a
+two-side zero sum would be a forbidden parallel pair, while a three-side zero sum has
+a complementary two-side zero sum.  Therefore every exact straight ray has one common
+speed on all five train occurrences of each pentagon.
+
+**Disposition:** PASS.
+
+---
+
+## 3. Scope correction for equal-magnitude rays
+
+If `s in ker C` and every `s_tau` is `+1` or `-1`, then
+
+\[
+\Psi(ts)=\cos t\,\Psi(0)+\sin t\,Cs=0
+\]
+
+for every real `t`.  This is an exact statement about the train-angle face-closure map.
+
+For the source geometry, the existing train-angle reconstruction theorem turns a
+sufficiently small neighborhood of exact face closures into actual contact-preserving
+placements; strict noncontact slack persists only locally.  The new note should not be
+read as claiming that the physical source remains feasible for arbitrary large `t`.
+Its load-bearing conclusion is local finite integration, which is valid.
+
+The pentagon result then forces an equal-magnitude ray to have one common sign on every
+connected pentagon-train component.  This does not say that arbitrary independent
+component rotations solve superpentagon equations; the note only states that every
+actual straight ray has this coordinate normal form.
+
+**Disposition:** PASS with the stated local-realization scope.
+
+---
+
+## 4. The `6(Q-f)` support bound is only an incidence bound
+
+Let `S` be the superpentagonal bounded faces and
+
+\[
+X=Q-f=\sum_F(\deg F-5).
+\]
+
+Then `|S|<=X` and
+
+\[
+\sum_{F\in S}\deg F\le5X+X=6X.
+\]
+
+Every non-outer--outer train with no pentagonal bounded endpoint is incident to at least
+one face in `S`, so the number of such distinct trains is at most that incidence sum.
+This proves the claimed support bound.
+
+No dimension of the nonlinear zero set is inferred from `6X`; a train with two
+superpentagonal endpoints is merely double-counted in an upper bound.  In the current
+proof-only live window `X/D<0.000141+o(1)`, giving the safe support constant `0.000846`.
+
+**Disposition:** PASS.
+
+---
+
+## 5. The minimal `K_5` reciprocal construction has no hidden zero-length edge
+
+The reciprocal note is scoped to the degree-pure equality object: five one-anchor
+pentagons, relation graph `K_5`, and a nonzero dual mode on that component.  Each face
+therefore has exactly its one outside/activated anchor and its four `K_5` internal
+trains.
+
+Every dual face vector is nonzero by relation-component propagation.  If two dual
+vectors coincide while a third differs, that third face sees two parallel internal
+train directions, contradicting the no-parallel pentagon theorem.  If any two coincide,
+the only remaining possibility is that all five coincide.  Then all five anchors are
+projectively parallel; summing the five physical pentagon closure equations cancels the
+ten internal trains and leaves an odd sum of five parallel unit anchor vectors, which
+cannot vanish.  Thus all five dual vectors are distinct.
+
+The same no-parallel theorem excludes every collinear triple among the five dual points
+and the common zero point.  Therefore all fifteen reciprocal edge differences are
+nonzero and the six reciprocal points affinely span the plane.
+
+**Disposition:** PASS.
+
+---
+
+## 6. Occurrence signs give a genuine symmetric signed length on each reciprocal edge
+
+For an internal train `ij`, if its occurrence sign at `F_i` is `epsilon_ij`, then
+
+\[
+\epsilon_{ij}(y_i-y_j)=\lambda_{ij}u_{ij}.
+\]
+
+The physical oriented side at `F_i` is `epsilon_ij u_ij`, so
+
+\[
+y_i-y_j=\lambda_{ij}w_{ij}^{(i)}.
+\]
+
+At `F_j` both the reciprocal difference and the oriented side reverse, leaving the
+same scalar `lambda_ij`.  Since `w_ij` is unit,
+
+\[
+|\lambda_{ij}|=|y_i-y_j|.
+\]
+
+The same calculation applies to an anchor after setting the zero dual endpoint to
+`y_0=0`.
+
+Thus `omega_ij=1/lambda_ij` is a well-defined symmetric signed inverse-distance stress,
+not an artifact of coherent train orientation.
+
+**Disposition:** PASS.
+
+---
+
+## 7. Ground equilibrium and the tensor identity are exact
+
+The five non-ground reciprocal equilibrium equations are exactly the five physical
+pentagon closure equations.  Summing them cancels each internal train once with each
+orientation.  The five remaining anchor terms sum to zero, which is precisely the
+reciprocal equilibrium equation at `y_0` after reversing sign.
+
+For the stress matrix `Omega`, equilibrium gives
+
+\[
+\Omega\mathbf1=\Omega Y_x=\Omega Y_y=0.
+\]
+
+Affine spanning makes these three kernel vectors independent, so `rank Omega<=3`.
+No claim of equality is made.
+
+For the tensor identity, pair the endpoint contributions after taking the outer product
+of `y_i` with its equilibrium equation.  Edge `ij` contributes
+
+\[
+{(y_i-y_j)(y_i-y_j)^T\over\lambda_{ij}},
+\]
+
+so the total is zero.  Taking the trace gives
+
+\[
+\sum_{i<j}{|y_i-y_j|^2\over\lambda_{ij}}
+=\sum_{i<j}\lambda_{ij}=0,
+\]
+
+because `lambda_ij^2=|y_i-y_j|^2`.  The positive/negative length balance follows.
+
+**Disposition:** PASS.
+
+---
+
+## 8. The reciprocal 120-degree gap is source-derived and strict
+
+At a physical pentagon, two consecutive unit sides `u,v` have an across-the-vertex
+chord `u+v`.  Source separation gives `|u+v|>=1`; equality would make that chord an
+additional unit contact strictly inside the convex face, impossible because the unit
+contact graph is complete.  Hence `|u+v|>1`.
+
+If `theta` is the exterior turn,
+
+\[
+2\cos(\theta/2)>1,
+\]
+
+so `theta<2pi/3`.  The five reciprocal force vectors at each non-ground point are
+exactly these five oriented pentagon sides, hence every cyclic force-direction gap is
+strictly below 120 degrees.
+
+At a non-ground reciprocal hull vertex with interior angle `phi`, the unsigned edge
+directions occupy a cone of width `phi`; sign flips place force directions in that
+cone or its opposite.  The two complementary empty angular intervals each have width
+`pi-phi`.  Since no cyclic empty gap reaches `2pi/3`, one gets `phi>pi/3`.
+
+The only stated order-type consequence is that a triangular reciprocal hull must
+contain `y_0`; that follows because three non-ground hull angles could not all exceed
+60 degrees.
+
+**Disposition:** PASS.
+
+---
+
+## 9. What remains unproved
+
+None of these reductions closes C-II.
+
+The all-orders phasor law does not by itself integrate arbitrary singular tangent
+vectors.  The straight-ray theorem rules out a broad affine-angle mechanism on the
+pentagonal bulk but leaves genuinely curved train-angle paths.  The reciprocal theorem
+does not yet exclude the signed six-point unit-force equilibrium; it only replaces the
+minimal `K_5` relation block by a smaller metric/algebraic target with strict inherited
+angle constraints.
+
+The next concrete finite attack is therefore to classify the reciprocal `K_6` system:
+
+\[
+\sum_{j\ne i}s_{ij}{y_i-y_j\over|y_i-y_j|}=0
+\qquad(i=0,\ldots,5),
+\]
+
+with no three reciprocal points collinear and with every non-ground signed direction
+set having cyclic gaps below 120 degrees.  Proving this system impossible would remove
+the sharp five-face dual block.  A surviving exact model would instead be a useful
+regression and would identify the geometry that any stronger corank theorem has to
+handle.
+
+**Audit disposition:** PASS.  The three new notes are proof-only candidates and do not
+alter the authoritative theorem state.

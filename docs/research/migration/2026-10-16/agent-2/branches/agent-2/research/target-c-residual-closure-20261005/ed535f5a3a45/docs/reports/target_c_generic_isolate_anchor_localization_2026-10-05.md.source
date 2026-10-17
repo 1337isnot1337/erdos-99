@@ -1,0 +1,259 @@
+<!-- theorem-state: {"artifact_id":"ART-0480D93A7511","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: generic isolates and static unit-anchor localization
+
+Date: 2026-10-05. Base main: `ad8809fd96c2c0af9a6de4d965e9ab33efe092c6`.
+State: `2026-10-05.audit.59`.
+Classification: **proved candidate synthesis awaiting independent audit**;
+artifact lifecycle **unreviewed**. C-II and Level I remain open.
+
+## 1. Exact implication and purpose
+
+```
+static equal-contact-budget singleton exchange
+-> requires a genuinely new, surrounding retained unit-anchor triple
+-> canonical isolates can be chosen to avoid all such unit-circle triples
+-> static anchors must be positive-contact core vertices
+-> closure requires a core unit-circumcircle/clearance theorem,
+   or a motion that changes the anchors, or a genuinely collective packet.
+```
+
+This is an exclusion of proposed static bridges and a source normalization,
+not a packet-existence theorem. No perturbation of the core is used and
+no rigidity claim is applied to isolate coordinates.
+
+Dependencies are canonical C=C_* and H=H_* in Section 56, the endpoint
+scope in Section 57, and contact-first/diameter-pair-second normalization.
+The surrounding-anchor requirement is the independently proved candidate
+in `target_c_contact_budget_diameter_exchange_2026-10-05.md`, based on
+canonical audit.59's deleted-contact covering.
+
+## 2. Arbitrarily small generic isolate normalization
+
+Let A=V union Z be a canonical C-II source, with V its nonisolated
+positive-contact core and Z its contact isolates. All actual diameter
+endpoints lie in V: H=H_* and every positively diameter-loaded vertex
+has positive contact load. Hence every pair involving an isolate has
+strict lower and upper slack.
+
+Keeping V fixed, there is a product neighborhood of the Z coordinates
+in which every such pair remains strictly between 1 and D. The original
+core contact and diameter pairs stay fixed. Every configuration in this
+neighborhood has cardinality n, diameter D(n), exactly the same contact
+graph and exactly the same diameter graph. In particular it remains
+triangle-free, contact-minimal and diameter-pair-minimal.
+
+For three distinct old labels a,b,c define the polynomial
+
+    F(a,b,c)=|a-b|^2 |b-c|^2 |c-a|^2
+             -4 det(b-a,c-a)^2.
+
+A noncollinear triple lies on a unit circle exactly when F=0. Indeed its
+squared circumradius is the product of squared side lengths divided by
+four times the squared determinant. Collinear distinct triples have
+positive product and zero determinant, so do not give an exception.
+
+For every triple containing an isolate, F is a nonzero polynomial in
+the free isolate coordinates. Freeze the other two positions at distinct
+values and send the chosen free isolate variable to infinity. The first
+term has a positive degree-four leading coefficient |a-b|^2 while the
+squared determinant has degree at most two. This proves nonidentity;
+it does not require the large displacement to be feasible.
+
+Similarly, for every old pair containing an isolate,
+
+    G(a,b)=|a-b|^2-4
+
+is a nonzero polynomial in the free coordinates. There are only finitely
+many F and G conditions. A finite union of the zero sets of nonzero real
+polynomials has empty interior, so their complement intersects every
+open feasible isolate neighborhood. Thus one can choose arbitrarily
+small isolate perturbations for which:
+
+1. no triple containing an isolate has unit circumradius;
+2. no pair containing an isolate has distance two;
+3. all original contacts, diameters, source cardinality and normalization
+   remain unchanged.
+
+If Z is empty the statement is vacuous. On a counterexample sequence the
+perturbations can be chosen smaller than any prescribed positive
+source-dependent tolerances, for example D^(-100). No uniform lower
+slack or specific rational coordinate certificate is claimed. Core
+geometry and its physical contact faces remain fixed; no exterior
+isolate is silently discarded or forced into the force hull.
+
+## 3. Static anchor consequence
+
+Consider a source with the preceding generic isolate choice. Delete one
+contact-active vertex and attempt an interior feasible singleton
+replacement while fixing every retained point. Audit.59 and the finite
+contact-opening argument imply its retained unit neighbors strictly
+surround the new point. In particular at least three of them are
+noncollinear and lie on its unit circle.
+
+Every such neighbor is in V. If any were an isolate, select that neighbor
+and two others on the same circle: the resulting noncollinear old-source
+triple would violate the generic F condition. Thus a static singleton
+site cannot use old isolates as exact anchors. In particular the forced
+near-unit isolated blockers of a primitive all-loaded shell do not
+supply a static exact-anchor triple merely because they are close to
+unit distance from the fan leaf.
+
+For a proposed triangle-free three-anchor site, each anchor pair must
+be strictly farther than one apart; a unit anchor edge together with the
+inserted center would create a triangle. Strict surrounding means the
+three circular angular gaps are all less than pi; the absence of unit
+anchor edges makes them strictly greater than pi/3. These are genuine
+extra geometric requirements, beyond finding any three core points.
+The site must also clear every other retained source point and lie
+strictly inside the full source hull.
+
+The generic pair-distance condition additionally eliminates opposite
+unit anchor pairs involving an isolate. It is not used to rule out
+collective packets: their inserted points may be anchors, and old
+isolates may support one or two contacts in a larger moving framework.
+Nor does this result constrain a finite motion that deliberately creates
+unit-circle equalities among changed source coordinates.
+
+## 4. Old degree-three neighbors cannot be the new anchors
+
+Let p have three distinct old unit-contact neighbors a,b,c. They are
+noncollinear, since a line intersects the unit circle centered at p in
+at most two points. Their unique circumcenter is p. Therefore any point
+x satisfying
+
+    |x-a|=|x-b|=|x-c|=1
+
+must equal p. If p is loaded, p is an actual source-hull extreme vertex,
+so this center is not an interior replacement and preserves its old
+diameters. A three-anchor exchange cannot preserve those same three
+contacts and obtain a different center.
+
+In the exact degree-three fan geometry, retaining just its two fan
+neighbors would allow the reflected center p'. But the third old unit
+neighbor z has |z-b|<D for the fan carrier b whenever it is strictly
+inside the carrier fan triangle. The exact reflection identity gives
+
+    |p'-z|^2-1=-(D^2-|z-b|^2)/D^2<0.
+
+Thus the third contact becomes an overlap. This conditional identity
+explains why audit.58's degree-two scope cannot be extended by simply
+retaining the extra contact. No unpromoted extraction of a large
+population of degree-three fans is assumed.
+
+## 5. Weak capacity inside a preserved short wall
+
+The canonical short-wall proof has an exact weak-clearance corollary.
+Let C be any simple cyclic polygon with n<=6 sides of length at most
+one. If x is strictly inside it and |x-v_i|>=1 for all wall vertices,
+then n=6 and C is a regular unit hexagon centered at x.
+
+**Proof.** Set r_i=|x-v_i|>=1. For the principal oriented increment theta_i
+along each side, the cosine law and
+
+    r_i^2+r_(i+1)^2-r_i*r_(i+1)-1
+    =(r_i-r_(i+1))^2+r_i*r_(i+1)-1>=0
+
+give |theta_i|<=pi/3. The edge cannot pass through x: its length would
+then be at least r_i+r_(i+1)>=2, contrary to its length at most one.
+The simple interior winding is +/-2pi. Thus
+
+    2pi <= sum |theta_i| <= n*pi/3 <= 2pi.
+
+Every inequality is equality. There are six edges, all angle increments
+have the same sign and absolute value pi/3, and the displayed nonnegative
+expression vanishes for each adjacent pair. Therefore all radii are one
+and all edges are one. This is the asserted regular unit hexagon. QED.
+
+Inserting x in that equality case creates a unit equilateral triangle
+with each adjacent wall pair. Hence no triangle-free replacement packet
+can put even one site inside an intact retained unit wall of at most six
+edges, even if exact wall contacts are permitted. A pentagon has no weak
+site at all. A hexagon's only possible weak site forces a new triangle.
+This concerns triangles in the replacement, not a triangle in the original
+source; it cannot by itself prove Level I. A strict sub-D competitor is
+allowed to contain triangles and could still use a weak hexagon site if
+all its other constraints are certified.
+
+For static triangle-free contact-budget exchanges, an intact physical
+pentagon or hexagon therefore cannot furnish the new anchored site.
+A candidate must lie in a larger retained wall, an outer region with its
+own clearance proof, or a face whose boundary guards were explicitly
+deleted. If the deletion breaks the short wall, the winding argument
+no longer applies. In particular it is not applied to an old face whose
+boundary contains the deleted loaded vertex.
+
+## 6. Loaded anchors cannot surround a unit center at large diameter
+
+Use canonical Section 58's full-source midpoint bound: every actual
+diameter midpoint is within T=o(D) of one center. The explicit estimate
+used in canonical audit.58 gives T<D/8 for D>=10000.
+
+Suppose three actual loaded vertices v_i lie on a unit circle whose
+center is strictly inside their triangle. Choose an actual diameter
+partner a_i for each and set
+
+    m_i=(v_i+a_i)/2, n_i=(v_i-a_i)/D.
+
+All |n_i|=1 and
+
+    D(n_i-n_j)=2(v_i-v_j)-2(m_i-m_j).
+
+Since |v_i-v_j|<=2, every pair of these normals satisfies
+
+    sin(theta_ij/2)<= (2+2T)/D < 1/4+2/10000 < 1/sqrt(2).
+
+Thus their pairwise smaller angles are bounded by one alpha<pi/2.
+Lift all three angles relative to the first into [-alpha,alpha]. The
+extreme lifted difference is less than pi, so its pairwise bound forces
+that difference to be at most alpha. The three normals lie in one
+ordinary angular interval of width less than pi/2.
+
+Each n_i uniquely supports the full source hull at v_i. In fact the
+upper bound to its partner gives, for every other source point w,
+
+    n_i dot(w-v_i)<=-|w-v_i|^2/(2D)<0.
+
+Order the normals in the short interval. For the chord v_2-v_1, the
+strict support inequalities make its oriented angle lie between the
+quarter-turns of n_1 and n_2. The same applies to v_3-v_2 between the
+quarter-turns of n_2 and n_3. Their forward chord directions differ by
+less than pi/2. Therefore the triangle's interior angle at v_2 is
+strictly greater than pi/2. But a circle center is strictly inside its
+inscribed triangle only when that triangle is acute. Contradiction.
+
+Hence, for D>=10000, no triple of actual loaded vertices can lie on a
+unit circle with its center strictly inside their triangle.
+
+Combined with Section 3, every feasible interior singleton replacement
+in the generic isolate representative must have at least one retained
+**unloaded core** unit neighbor. Its unit neighbors strictly surround it,
+and every neighbor is in V by generic avoidance. If all were loaded,
+triangulate their convex polygon. Some triangle contains the unit center,
+possibly on an internal diagonal. Its circumcenter is therefore in the
+closed triangle, so the triangle is nonobtuse. But the short-normal proof
+above makes every triple of these loaded unit-circle points strictly
+obtuse. This contradiction also handles the case of antipodal neighbors;
+no unjustified choice of a strictly surrounding triple is needed.
+
+In the primitive all-loaded shell V=B there is no such anchor. After
+generic isolate normalization there is therefore no feasible interior
+singleton replacement at all for a contact-active deletion, even with
+arbitrary new contacts. This excludes a static exchange route; it does
+not contradict existence of the source or eliminate its collective
+packing/motion branch. The theorem does not forbid changed anchors,
+multiple inserted points, sites outside the old hull, or a strict sub-D
+competitor constructed differently.
+
+## 7. Disposition
+
+The static target is now a new surrounding unit-circle triple made of
+actual core vertices, with all other source clearance and triangle-free
+conditions certified, and enough removed contacts to pay its edges.
+No audit.52--59 input cited here forces that triple. Existing three
+neighbors at the deleted vertex and generic isolated near-unit blockers
+cannot supply it. Collective packet and moving-anchor routes remain
+available. No C-II branch, Level I quantifier or authoritative lifecycle
+is closed by this normalization.
+
+The proof uses finite polynomial avoidance and Euclidean circumcircle
+identities. No numerical search or verifier is needed or claimed.

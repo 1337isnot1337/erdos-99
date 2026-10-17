@@ -1,0 +1,45 @@
+{
+  "schema_version": 2,
+  "restored_from_retained_tool_history": true,
+  "original_receipt_bytes_recovered": false,
+  "candidate_commit": "673b94818a4bf1318a118692e91fd3b867ab98d3",
+  "status": "PASS_ACTIVE_DOCUMENT_PATHS",
+  "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "documents_checked": 4939,
+  "reference_counts": {
+    "resolved_file": 2660,
+    "broken_literal_link": 30902,
+    "external": 543,
+    "resolved_directory": 83,
+    "anchor": 106
+  },
+  "historical_mapping_counts": {
+    "pinned_source_main_target_preserved": 28702,
+    "same_snapshot_preserved_target": 354,
+    "current_destination_target": 31,
+    "exact_source_target_preserved": 1500,
+    "external_reference_not_redistributed": 156,
+    "current_destination_directory": 13,
+    "corrected_historical_filename": 103,
+    "other_historical_target_version_unverified": 35,
+    "unresolved": 1
+  },
+  "active_blocking_references": [],
+  "historical_unresolved_references": [
+    {
+      "source_document": "docs/reports/target_c_threshold_cut_torque_transport_2026-10-02.md",
+      "source_target": "research/verify_threshold_cut_torque_2026_10_02.py",
+      "mapping_status": "unresolved",
+      "recorded_source_sha256": "2955a0800602e81caab257d5351b764071ad79e95b9577e4a1decfd24f325375",
+      "recorded_bytes": 5459
+    }
+  ],
+  "deprecation_ready": false,
+  "release_verified": false,
+  "mathematical_proof": false,
+  "limits": [
+    "These counts were observed before environment loss at the stated local commit, which was not uploaded as an original commit.",
+    "The reconstructed scanner and the final merged tree need a fresh check.",
+    "Archive mappings do not repair original literals or establish every old branch dependency version."
+  ]
+}

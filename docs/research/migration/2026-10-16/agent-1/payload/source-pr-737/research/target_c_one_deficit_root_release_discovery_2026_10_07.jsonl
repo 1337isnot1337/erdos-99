@@ -1,0 +1,4 @@
+{"M": 4, "classification": "floating opening search; no strict-release proof", "first_margin": 1.3155100326205433e-12, "hole": [1, 2], "root_failures": [], "solver_acceptance_threshold": 1e-08, "success": true}
+{"M": 5, "classification": "floating opening search; no strict-release proof", "first_margin": 9.263301625186924e-11, "hole": [1, 3], "root_failures": [], "solver_acceptance_threshold": 1e-08, "success": true}
+{"M": 6, "classification": "floating opening search; no strict-release proof", "first_margin": 1.63989765359351e-10, "hole": [1, 4], "root_failures": [], "solver_acceptance_threshold": 1e-08, "success": true}
+{"M": 8, "classification": "floating opening search; no strict-release proof", "first_margin": 5.565119514374256e-10, "hole": [1, 6], "root_failures": [], "solver_acceptance_threshold": 1e-08, "success": true}

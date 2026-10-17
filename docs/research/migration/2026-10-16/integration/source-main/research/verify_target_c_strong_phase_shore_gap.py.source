@@ -1,0 +1,109 @@
+#!/usr/bin/env python3
+"""Regression certificate for Target C Section 106.
+
+Checks only the scalar/numerical inequalities used by the proof:
+- solve sigma(theta)=1.2e-5;
+- reproduce mu_11;
+- verify the explicit stronger Section-90 shore extraction;
+- verify the Section-104/105 leakage bound at h=0.00455;
+- verify the exact-cosine corridor-alignment contradiction margin.
+"""
+
+import math
+
+
+SIGMA_STAR = 1.2e-5
+THETA8 = 2.7029080296483676832
+MU8 = 0.9760407652670519821
+
+
+def sigma(theta: float) -> float:
+    return (
+        3.0 * theta
+        - 2.0 * math.pi
+        - math.sin(theta / 2.0)
+        - 2.0 * math.sin(theta)
+    )
+
+
+def bisect_root(lo: float, hi: float, target: float, steps: int = 160) -> float:
+    assert sigma(lo) <= target <= sigma(hi)
+    for _ in range(steps):
+        mid = (lo + hi) / 2.0
+        if sigma(mid) < target:
+            lo = mid
+        else:
+            hi = mid
+    return (lo + hi) / 2.0
+
+
+def main() -> None:
+    theta = bisect_root(THETA8, THETA8 + 0.01, SIGMA_STAR)
+    mu = math.sin(theta / 2.0)
+
+    assert abs(theta - 2.7029105818462227) < 5e-15
+    assert abs(mu - 0.9760410429297387) < 5e-15
+    assert mu - MU8 > 2.77e-7
+    assert theta - THETA8 < 3.2e-6
+
+    # Stronger Section-90 shore extraction.
+    retained_after_phase_cut = 0.179
+    phase_defect_constant = 5.317
+    K = 1000.0
+    good_crossings = retained_after_phase_cut - phase_defect_constant / K
+    one_label_pair = good_crossings / 3.0
+    internal_bin = (19.0 / 20.0) * one_label_pair
+
+    shore = 0.0045
+    train_constant = 6.0
+    small_shore_capacity = 2.0 * shore * train_constant
+
+    assert good_crossings > 0.17368
+    assert internal_bin > 0.0549996
+    assert abs(small_shore_capacity - 0.054) < 1e-15
+    assert internal_bin > small_shore_capacity
+
+    endpoint_supply = 2.0 * shore
+    assert abs(endpoint_supply - 0.009) < 1e-15
+
+    # Section-104 leakage with re-optimized base cutoff.
+    h = 0.00455
+    w_h = math.pi / 3.0 - math.acos((1.0 + h) / 2.0)
+    leakage = w_h + (1.0 / h + 169.0 / 6.0) * SIGMA_STAR
+    remaining = endpoint_supply - leakage
+    corridor_share = remaining / 3.0
+    rho = 0.00113
+
+    assert w_h < 0.002629
+    assert leakage < 0.005605
+    assert remaining > 0.003395
+    assert corridor_share > rho
+
+    # Exact projection loss versus principal-corridor angular separation.
+    delta = math.acos(1.0 - SIGMA_STAR / rho)
+    endpoint_margin = THETA8 / 2.0 - math.pi / 3.0
+    geometric_margin = endpoint_margin - (73.0 / 6.0) * SIGMA_STAR
+    contradiction_margin = geometric_margin - 2.0 * delta
+
+    assert delta < 0.145866
+    assert 2.0 * delta < 0.291732
+    assert geometric_margin > 0.3041104
+    assert contradiction_margin > 0.01237
+
+    print(f"theta_11={theta:.16f}")
+    print(f"mu_11={mu:.16f}")
+    print(f"mu_11_minus_mu_8={mu - MU8:.16e}")
+    print(f"good_crossings={good_crossings:.12f}")
+    print(f"internal_bin={internal_bin:.12f}")
+    print(f"small_shore_capacity={small_shore_capacity:.12f}")
+    print(f"endpoint_supply={endpoint_supply:.12f}")
+    print(f"w_h={w_h:.12f}")
+    print(f"leakage={leakage:.12f}")
+    print(f"corridor_share={corridor_share:.12f}")
+    print(f"delta={delta:.12f}")
+    print(f"geometric_margin={geometric_margin:.12f}")
+    print(f"contradiction_margin={contradiction_margin:.12f}")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,56 @@
+# Hostile audit — support-six H5 terminal rotation genus obstruction
+
+**Date:** 2026-09-18  
+**Audited source:** `target_c_support6_h5_terminal_rotation_genus_2026-09-18.md`  
+**Certificate:** `verify_target_c_support6_terminal_rotation_genus_2026_09_18.py`  
+**Disposition:** PASS WITH BINDING CONDITIONAL SCOPE; theorem-state authority unchanged
+
+## 1. What is certified
+
+The certificate independently reruns the existing exact H5 survivor enumeration, obtains 48 uniform and 80 simple-wall labelled candidates, reconstructs the unique cyclic order supplied by the regular five-force tournament at each of six non-ground vertices, and performs the side-pairing with integer disjoint-set arithmetic.
+
+It checks the surface Euler data directly. The uniform distribution is
+
+```text
+(V,b,g) = (6,2,3):26, (7,1,3):12, (7,3,2):6, (8,2,2):4.
+```
+
+The simple-wall distribution is
+
+```text
+(V,b,g) = (6,2,3):62, (6,4,2):4, (7,1,3):10, (7,3,2):4.
+```
+
+All 128 cases have genus at least two. The construction uses no numerical coordinates and does not assume metric realizability of any chirotope.
+
+The optional cut enumeration is also exact. If relation-side pairs are declared
+unglued, the minimum number needed to reach genus zero is 3 for 30 uniform and 44
+simple-wall cases, and 4 for the remaining 18 uniform and 36 simple-wall cases.
+This is only a sensitivity result for the cut model; it is not an asserted lower
+bound on the number of canonical stopped trains or corridors.
+
+## 2. Pairing orientation is checked
+
+Each internal edge occurs once at each endpoint. The two force vectors are opposites, so an orientation-preserving side gluing identifies the start of one occurrence with the end of the other and vice versa. The script asserts exactly twelve two-occurrence relation edges and six degree-two boundary vertices in the anchor-side graph.
+
+The boundary count includes possible multiple edges and loops through the graph component calculation; it is not inferred from a visual drawing.
+
+## 3. Binding scope restriction
+
+The genus statement is an obstruction only to the following direct-side model:
+
+```text
+six physical bounded faces
+ + twelve residual trains that are their actual shared sides
+ + no intervening corridor, extra face, or overlap.
+```
+
+The one-anchor and support-six notes use complete stopped trains and terminal occurrences. A train may include intervening rhombic structure or other global routing, and the local closure system by itself does not prove that the six terminal cells form an embedded planar subcomplex. Therefore the audit does not promote `g>=2` to an unconditional exclusion of H5.
+
+In particular, neither a nonzero terminal genus nor the auxiliary translation-surface construction proves a source-level triangle, a strict same-cardinality diameter decrease, or global C-II closure.
+
+## 4. Exact frontier effect
+
+The result removes the direct-side realization route for all noncollapsed H5 cases at once. Any attempted metric realization must be accompanied by a separately verified global train-corridor/embedding map; in the unglued-side sensitivity model, at least three relation pairs must be rerouted. This is stronger than merely repeating the sixteen sign/order orbit count, but it leaves the corridor compatibility problem open.
+
+**Audit disposition:** pass for the exact finite rotation computation and its stated conditional consequence. C-II remains open.

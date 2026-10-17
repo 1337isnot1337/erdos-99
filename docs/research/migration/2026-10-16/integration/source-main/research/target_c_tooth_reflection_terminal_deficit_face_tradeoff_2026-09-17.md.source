@@ -1,0 +1,335 @@
+# Target C-II — terminal deficit quantitatively forces a longer FREE face run
+
+**Date:** 2026-09-17  
+**Status:** proved candidate awaiting promotion; sharpens the FREE face conclusion when `pi D-q=O(sqrt(D))`  
+**Scope:** all-inactive non-anchored FREE reflection ancestry  
+**Dependencies:** block-optimized thin/thick upper-block theorem; full-source hull perimeter bound; sharp universal FREE face theorem  
+**Certificate:** `research/verify_target_c_tooth_reflection_terminal_deficit_face_tradeoff_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The block-optimized FREE theorem used the thin-edge matching only through a dichotomy:
+either that matching is large, giving a superdiameter braid, or it is small, giving a
+long lower run.  But the thin matching size is itself paid exactly by the global
+terminal deficit
+
+\[
+T_D:=\pi D-q.
+\]
+
+This gives a continuous source-wide tradeoff.  Near the terminal endpoint `q=pi D`, a
+FREE ancestry must contain a substantially longer outer-face run than the unconditional
+universal coefficient `0.868655...`.
+
+Put
+
+\[
+h_*:=\frac{\sqrt{303}}{52},
+\qquad
+k_\infty:=\frac1{2h_*}
+=1.493660973015707\ldots .
+\]
+
+Define, for `t>=0`,
+
+\[
+\boxed{
+g(t):=
+ k_\infty\left(\sqrt{t^2+\frac4{k_\infty}}-t\right).
+}
+\tag{TD.1}
+\]
+
+If along a sequence of FREE ancestries
+
+\[
+\limsup_{D\to\infty}\frac{T_D}{\sqrt D}\le t<\infty,
+\tag{TD.2}
+\]
+
+then one consecutive all-lower run in the original outer contact face has support span
+
+\[
+\boxed{
+\operatorname{span}_N(R)
+\ge (g(t)-o(1))\sqrt D.
+}
+\tag{TD.3}
+
+The function `g` is strictly decreasing.  In particular,
+
+\[
+\boxed{
+g(0)=\sqrt{\frac2{h_*}}
+=2.444308469089536\ldots,}
+\tag{TD.4}
+\]
+
+so
+
+\[
+T_D=o(\sqrt D)
+\quad\Longrightarrow\quad
+\operatorname{span}_N(R)
+\ge(2.444308469089536\ldots-o(1))\sqrt D.
+\tag{TD.5}
+\]
+
+At the old block-fork threshold
+
+\[
+c_{\rm blk}
+=\left(1+\frac{h_*}{2}\right)^{-1/2}
+=0.925539574680581\ldots,
+\]
+
+one has the exact identity
+
+\[
+\boxed{g(2c_{\rm blk})=c_{\rm blk}.}
+\tag{TD.6}
+\]
+
+Thus the previous statement that a `c_blk sqrt(D)` superbraid forces terminal deficit
+at least `2c_blk sqrt(D)` is the endpoint of the full continuous tradeoff.
+
+Combining (TD.3) with the sharp universal FREE-face theorem gives the unconditional
+terminal-sensitive bound
+
+\[
+\boxed{
+\operatorname{span}_N(R)
+\ge
+\left(
+\max\{c_{\rm univ},g(T_D/\sqrt D)\}-o(1)
+\right)\sqrt D
+}
+\tag{TD.7}
+\]
+
+whenever `T_D=O(sqrt(D))`, where
+
+\[
+c_{\rm univ}=0.868655543829230\ldots .
+\]
+
+The two coefficients cross at
+
+\[
+\boxed{
+t_*
+=\frac2{c_{\rm univ}}-h_*c_{\rm univ}
+=2.011627913893869\ldots .}
+\tag{TD.8}
+\]
+
+Hence the terminal-deficit theorem improves the universal run throughout
+
+\[
+T_D<(2.011627913893869\ldots-o(1))\sqrt D.
+\]
+
+For every fixed `Lambda>1`, (TD.3) also gives a vertex-disjoint matching on the same
+run of size
+
+\[
+\boxed{
+\left(
+\frac{\Lambda-1}{2\Lambda}g(t)-o(1)
+\right)\sqrt D
+}
+\tag{TD.9}
+\]
+
+whose old source lengths satisfy
+
+\[
+\boxed{
+1<|x-y|
+\le
+1+\left(\frac{\Lambda h_*}{g(t)}+o(1)\right)D^{-1/2}.
+}
+\tag{TD.10}
+
+For `Lambda=2` and `T_D=o(sqrt(D))`, this becomes a matching of
+
+\[
+(0.611077117272384\ldots-o(1))\sqrt D
+\]
+
+with excess at most
+
+\[
+(0.273899950493391\ldots+o(1))D^{-1/2}.
+\]
+
+---
+
+## 1. The thin matching is paid by `pi D-q`
+
+Use the block theorem's exact thin threshold
+
+\[
+\tau_D=D-\sqrt{D^2-1}.
+\]
+
+Let
+
+- `m` be the number of thick upper edges;
+- `M` be the size of a maximum vertex-disjoint matching among all thin upper edges;
+- `R` be the number of maximal lower runs.
+
+The block theorem gives
+
+\[
+\boxed{R\le m+M+1.}
+\tag{TD.11}
+\]
+
+Every selected thin edge has source length strictly greater than
+`sqrt(D^2-1)`.  The sharp superdiameter theorem makes its two endpoints exposed vertices
+of the full source hull `K`.  These endpoints are fully diameter-inactive, so they are
+disjoint from the `q` actual diameter endpoints, each of which is also an exposed full
+hull vertex.
+
+Thus `K` has at least `q+2M` vertices.  Consecutive full-hull vertices are distinct
+source points and hence at distance at least one.  Therefore
+
+\[
+q+2M
+\le |\operatorname{Vert}(K)|
+\le \operatorname{per}(K)
+\le \pi D,
+\]
+
+where the last inequality is Cauchy's perimeter-diameter theorem.  Hence the exact
+budget is
+
+\[
+\boxed{2M\le T_D.}
+\tag{TD.12}
+\]
+
+Combining (TD.11) and (TD.12),
+
+\[
+\boxed{R\le m+\frac{T_D}{2}+1.}
+\tag{TD.13}
+\]
+
+---
+
+## 2. Thick upper edges supply the numerator
+
+The block theorem already proved
+
+\[
+\boxed{
+G_{\rm low}
+\ge D+k_Dm^2-O(\sqrt D),
+}
+\tag{TD.14}
+\]
+
+where
+
+\[
+k_D\longrightarrow k_\infty=\frac1{2h_*}.
+\tag{TD.15}
+\]
+
+Since every lower support gain is positive, the longest lower run has span at least
+
+\[
+S_D
+\ge
+\frac{D+k_Dm^2-O(\sqrt D)}{m+T_D/2+1}.
+\tag{TD.16}
+\]
+
+Assume (TD.2).  If `m/sqrt(D)` stays bounded, divide (TD.16) by `sqrt(D)` and minimize
+over the subsequential limit `s>=0`:
+
+\[
+\liminf\frac{S_D}{\sqrt D}
+\ge
+\min_{s\ge0}
+\frac{1+k_\infty s^2}{s+t/2}.
+\tag{TD.17}
+\]
+
+If `m/sqrt(D)->infinity`, the right side of (TD.16) is itself
+`(k_\infty-o(1))m`, hence is `omega(sqrt(D))`; such a sequence cannot determine the
+minimum.
+
+For fixed `t`, differentiation gives the unique minimizer
+
+\[
+s_*(t)
+=\frac{\sqrt{t^2+4/k_\infty}-t}{2}.
+\tag{TD.18}
+\]
+
+At the stationary point the quotient in (TD.17) equals `2k_infty s_*`, namely `g(t)`.
+This proves (TD.3).
+
+---
+
+## 3. Constants and matching extraction
+
+Equation (TD.4) follows from `g(0)=2sqrt(k_infty)` and
+`k_infty=1/(2h_*)`.
+
+For (TD.6), put `c=c_blk`.  Its definition gives
+
+\[
+1-c^2=\frac{c^2}{4k_\infty}.
+\]
+
+This is equivalent to
+
+\[
+\frac{1+k_\infty s^2}{s+c}\ge c
+\quad(s\ge0)
+\]
+
+with equality at the block minimizer, and therefore `g(2c)=c`.
+
+To solve `g(t)=c_univ`, square the defining equation.  This gives
+
+\[
+t=\frac2c-\frac{c}{2k_\infty}
+=\frac2c-h_*c,
+\]
+
+which is (TD.8).
+
+Finally, a lower run of span `(g(t)-o(1))sqrt(D)` has at least that many edges, while
+the lower-edge activation slack on the run sums to at most `h_*+o(1)`.  Markov keeps a
+fraction `1-1/Lambda` with individual excess at most
+
+\[
+\left(\frac{\Lambda h_*}{g(t)}+o(1)\right)D^{-1/2}.
+\]
+
+Parity thinning loses at most another factor two, proving (TD.9)--(TD.10).
+
+---
+
+## 4. Frontier effect
+
+The thin-edge braid is now coupled continuously, rather than dichotomously, to a global
+canonical scalar.  A near-maximal terminal population `q=pi D-o(sqrt(D))` cannot merely
+avoid the superbraid branch: it forces a FREE outer-face run of support length
+`(sqrt(2/h_*)-o(1))sqrt(D)`, almost `2.45 sqrt(D)`.
+
+Together with the universal FREE-face theorem, the reflection obstruction is therefore
+controlled at every square-root terminal scale.  The next missing theorem is still
+source-preserving: convert one of these long fully inactive planar runs, or several
+ordered runs from different FREE modules, into unavailable outer-walk/force-hull
+currency or an actual diameter anchor.
+
+C-II remains open.  No theorem-state authority is changed.
+
+**Disposition:** converted the full-hull perimeter budget `pi D-q` into an exact cap on
+the thin upper-block matching and solved the resulting minimax problem, producing the
+continuous terminal-deficit / FREE-face-run law (TD.1)--(TD.10).

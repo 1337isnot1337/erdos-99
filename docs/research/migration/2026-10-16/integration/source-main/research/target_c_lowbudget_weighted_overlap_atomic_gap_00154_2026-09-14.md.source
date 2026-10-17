@@ -1,0 +1,479 @@
+# Erdős Problem #99 — low-budget weighted overlap raises the atomic train gap to 0.00154
+
+**Date:** 2026-09-14  
+**Target:** Target C-II, canonical full-core Type-II branch  
+**Claim class:** proof-only strengthening of WO145  
+**External input:** none beyond the existing stopped-train, finite Mantel, TL69 pair-payment, and Section-163 ordered-path stack
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+WO145 proves `eta_grid=0.00145` by charging the majority-deletion cost against the
+same-label missing budget.  In the actual low-budget regime produced by the dominant
+orbit, that charge is stronger than the sharp global WO145 inequality.
+
+If `u` is the leaf-label mass deleted from the center shore and `v` is the center-label
+mass deleted from the leaf shore, put
+
+\[
+q:=u+{v\over2}.
+\]
+
+WO145 gives `q^2 <= 9p/4`, where `p` is the same-label missing budget.  Since the full
+Mantel missing budget is already very small, this forces `q<=s/3`, where `s` is the
+trimmed mass of each Mantel shore.  In that range the majority signs imply the much
+stronger inequality
+
+\[
+\boxed{p\ge q^2.}
+\]
+
+Feeding this into the same two-leaf payment argument yields
+
+\[
+\boxed{
+ x\sigma\ge2\sqrt{\Delta_2}+0.00154,
+ \qquad
+ \Delta_2={\pi\over2\sqrt3}.
+}
+\tag{LB154.1}
+\]
+
+Hence, at the same proof-only scope,
+
+\[
+\boxed{\eta_{grid}=0.00154.}
+\tag{LB154.2}
+\]
+
+The finite inequality below has its first numerical zero near
+`0.00154671967318`, so the stated constant stays below the method ceiling with an
+exact interval margin.
+
+---
+
+## 1. Dominant-orbit setup
+
+Put
+
+\[
+s_2:=\sqrt{\Delta_2},
+\qquad
+\eta:=0.00154,
+\qquad
+\bar A:=2s_2+\eta.
+\tag{LB154.3}
+\]
+
+Assume for contradiction that the total absolute atomic train mass satisfies
+
+\[
+A:=x\sigma\le\bar A.
+\tag{LB154.4}
+\]
+
+Use the same dominant three-direction orbit and maximum-degree Mantel partition as
+audited Section 168, AG47, AG58, TL69, LA90, and WO145.  Define
+
+\[
+M_0={4s_2^2\over\bar A},
+\qquad
+R_0=\bar A-M_0,
+\tag{LB154.5}
+\]
+
+and
+
+\[
+d_0={\bar A^2\over4}-s_2^2+{R_0^2\over4}.
+\tag{LB154.6}
+\]
+
+Each Mantel shore contains dominant-orbit atomic mass at least
+
+\[
+\boxed{
+s_0={M_0\over2}-\sqrt{d_0}.
+}
+\tag{LB154.7}
+\]
+
+Trim the three atom populations on each shore until both shore totals are exactly
+`s_0`.  Write the resulting masses as
+
+\[
+x_1+x_2+x_3=s_0,
+\qquad
+y_1+y_2+y_3=s_0.
+\tag{LB154.8}
+\]
+
+Let `M` be the normalized total missing cross-shore pair mass in this trimmed system.
+The Mantel partition gives
+
+\[
+\boxed{M\le2d_0.}
+\tag{LB154.9}
+\]
+
+Same-window pairs cannot form strict-rhombus crossings, so
+
+\[
+\boxed{
+p:=x_1y_1+x_2y_2+x_3y_3\le M.
+}
+\tag{LB154.10}
+\]
+
+---
+
+## 2. Majority assignment and the low-budget variable
+
+Majority-assign each label to a shore on which it has weakly larger mass.  As in
+WO145, the exact certificate gives `s_0^2/3>2d_0`, so neither retained shore can be
+empty.
+
+After relabeling labels and possibly swapping shores, `X` contains one center label
+and `Y` contains one or two leaf labels:
+
+\[
+x_1\ge y_1,
+\qquad y_2\ge x_2,
+\qquad y_3\ge x_3.
+\tag{LB154.11}
+\]
+
+Set
+
+\[
+u:=x_2+x_3,
+\qquad v:=y_1,
+\qquad q:=u+{v\over2}.
+\tag{LB154.12}
+\]
+
+Then
+
+\[
+x_1=s_0-u,
+\qquad y_2+y_3=s_0-v.
+\tag{LB154.13}
+\]
+
+WO145 proved the global weighted-deletion inequality
+
+\[
+q^2\le{9\over4}p.
+\tag{LB154.14}
+\]
+
+Together with `p<=M<=2d_0`, this gives
+
+\[
+q\le {3\over2}\sqrt{2d_0}.
+\tag{LB154.15}
+\]
+
+The exact interval certificate verifies
+
+\[
+{3\over2}\sqrt{2d_0}
+<s_0/3.
+\tag{LB154.16}
+\]
+
+Therefore every hypothetical survivor under (LB154.4) lies in the low-budget regime
+
+\[
+\boxed{q<s_0/3.}
+\tag{LB154.17}
+\]
+
+---
+
+## 3. Low-budget lemma: the same-label product pays `q^2`
+
+### Lemma LB154.1
+
+Under (LB154.11)--(LB154.13), if
+
+\[
+q=u+v/2\le s_0/3,
+\]
+
+then
+
+\[
+\boxed{p\ge q^2.}
+\tag{LB154.18}
+\]
+
+### Proof
+
+Write
+
+\[
+e_2:=y_2-x_2\ge0,
+\qquad e_3:=y_3-x_3\ge0.
+\]
+
+Their sum is
+
+\[
+w:=e_2+e_3=s_0-u-v.
+\tag{LB154.19}
+\]
+
+The low-budget assumption gives
+
+\[
+3u+{3v\over2}\le s_0,
+\]
+
+so
+
+\[
+w=s_0-u-v\ge2u+{v\over2}\ge2u.
+\tag{LB154.20}
+\]
+
+Relabel leaves if necessary so `x_2<=x_3`.  Then, for fixed `x_2,x_3,w`, the leaf
+product is minimized by placing all excess `w` on the smaller coefficient `x_2`:
+
+\[
+\begin{aligned}
+x_2y_2+x_3y_3
+&=x_2^2+x_3^2+x_2e_2+x_3e_3\\
+&\ge x_2^2+x_3^2+x_2w.
+\end{aligned}
+\tag{LB154.21}
+\]
+
+Since `x_2+x_3=u` and `w>=2u>=2x_3`,
+
+\[
+\begin{aligned}
+x_2^2+x_3^2+x_2w-u^2
+&=x_2(w-2x_3)\ge0.
+\end{aligned}
+\]
+
+Hence
+
+\[
+\boxed{x_2y_2+x_3y_3\ge u^2.}
+\tag{LB154.22}
+\]
+
+The center product is
+
+\[
+x_1y_1=(s_0-u)v.
+\]
+
+Therefore
+
+\[
+p\ge u^2+(s_0-u)v.
+\tag{LB154.23}
+\]
+
+Subtract
+
+\[
+q^2=\left(u+{v\over2}\right)^2
+=u^2+uv+{v^2\over4}.
+\]
+
+The difference is
+
+\[
+v\left(s_0-2u-{v\over4}\right).
+\]
+
+Again `3u+3v/2<=s_0`, so
+
+\[
+s_0-2u-{v\over4}
+\ge u+{5v\over4}\ge0.
+\]
+
+Thus `p>=q^2`.  `square`
+
+The point is that a sufficiently small weighted majority deletion cannot be hidden in
+one cheap same-label pair: the large unused leaf mass forces the leaf products to pay
+quadratically.
+
+---
+
+## 4. Reinsert the two-leaf missing budget
+
+Put
+
+\[
+K:={2\over\sqrt3},
+\qquad L:=4+\sqrt2,
+\qquad B:={3s_0\over2}-K.
+\tag{LB154.24}
+\]
+
+After majority deletion the center mass is `a=s_0-u`, while the leaf masses `b,c`
+satisfy `b+c=s_0-v`.  TL69 applies separately to the two center-to-leaf pairs and
+convexity gives
+
+\[
+\boxed{
+\rho_b+\rho_c
+\ge {2\over L^2}(B-q)_+^2.
+}
+\tag{LB154.25}
+\]
+
+The same-label pairs counted by `p` and the two distinct-label pair sets counted by
+`rho_b,rho_c` are disjoint.  Thus
+
+\[
+M\ge p+\rho_b+\rho_c.
+\tag{LB154.26}
+\]
+
+Apply Lemma LB154.1:
+
+\[
+\boxed{
+M\ge q^2+{2\over L^2}(B-q)_+^2.
+}
+\tag{LB154.27}
+\]
+
+The right side is minimized over all `q>=0` at
+
+\[
+q_*={2B\over L^2+2}<B,
+\]
+
+with minimum
+
+\[
+\boxed{
+M\ge {2B^2\over L^2+2}.
+}
+\tag{LB154.28}
+\]
+
+Consequently every feasible survivor would have to satisfy
+
+\[
+\boxed{
+2d_0\ge
+{2(3s_0/2-2/\sqrt3)^2
+ \over(4+\sqrt2)^2+2}.
+}
+\tag{LB154.29}
+\]
+
+---
+
+## 5. Exact contradiction at `eta=0.00154`
+
+The exact interval certificate gives
+
+\[
+\begin{aligned}
+\bar A&=1.906165613727914\ldots,\\
+M_0&=1.903086857901024\ldots,\\
+R_0&=0.003078755826889\ldots,\\
+d_0&=0.001469524306930\ldots,\\
+s_0&=0.913209053946726\ldots,\\
+B&=0.215113042540838\ldots .
+\end{aligned}
+\tag{LB154.30}
+\]
+
+It also certifies
+
+\[
+{3\over2}\sqrt{2d_0}
+=0.0813194895531755\ldots
+< s_0/3
+=0.304403017982242\ldots,
+\tag{LB154.31}
+\]
+
+so the low-budget lemma applies uniformly.
+
+The forced missing budget is
+
+\[
+{2B^2\over(4+\sqrt2)^2+2}
+>0.00295548648111587,
+\tag{LB154.32}
+\]
+
+whereas the entire available Mantel budget is
+
+\[
+2d_0<0.00293904861386180.
+\tag{LB154.33}
+\]
+
+The outward-certified gap exceeds
+
+\[
+1.6\times10^{-5}.
+\tag{LB154.34}
+\]
+
+Contradiction.  Therefore (LB154.1) holds.
+
+A high-precision solution of equality in (LB154.29) occurs near
+
+\[
+\eta_*=0.00154671967318022\ldots .
+\tag{LB154.35}
+\]
+
+Thus `0.00154` is close to the ceiling of this low-budget refinement.
+
+---
+
+## 6. Immediate consequences and scope
+
+Every proof-only propagation depending only on the atomic train gain may now use
+`g=0.00154`.  In particular,
+
+\[
+\boxed{
+\liminf {T-q/2\over D}
+\ge2\sqrt{\Delta_2}+0.00154,
+}
+\tag{LB154.36}
+\]
+
+and the rhombic-only transfer gives
+
+\[
+\boxed{
+\liminf {\sigma_R\over D}\ge0.00308.
+}
+\tag{LB154.37}
+\]
+
+The correlated identity similarly gives
+
+\[
+\boxed{
+\liminf {\rho_{rec}+\sigma_R-q\over D}\ge0.00308.
+}
+\tag{LB154.38}
+\]
+
+Scope is unchanged from WO145: canonical full-core Type-II train-measure limits, all
+source points retained, no source deletion, no strict-diameter competitor, and no
+claim of C-II or Level-I closure.
+
+The exact interval certificate is
+`research/verify_target_c_lowbudget_weighted_overlap_atomic_gap_00154.py`.
+
+**Disposition:** proof-only LB154 candidate awaiting independent audit.  C-II remains open.

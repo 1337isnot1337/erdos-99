@@ -1,0 +1,41 @@
+# Target C — boundary-star response frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_boundary_star_response_concentration_2026-08-31.md](../../reports/target_c_boundary_star_response_concentration_2026-08-31.md).
+
+## C70 — the electrical response starizes with the mechanical diameter stress
+
+For a loaded diameter vertex `z`, write
+
+`S_z=sum_(zk in H) beta_zk`
+
+and let
+
+`X_z=sum c_bk`
+
+over response pairs `bk` not incident to `z`.
+
+Since `M=Lambda-L_H` is PSD, singleton cut domination gives
+
+`d_z>=S_z`,
+
+where `d_z=sum_k c_zk` is the response degree. The total response conductance is `1+epsilon`, hence
+
+`X_z=1+epsilon-d_z <= (1-S_z)+epsilon`.
+
+At the C66 star center,
+
+`1-S_z <= (2pi/kappa_0)D epsilon`,
+
+so
+
+`X_z <= (1+(2pi/kappa_0)D)epsilon`.
+
+Therefore `D epsilon->0` forces the total response conductance away from the same center `z` to tend to zero. Together with C68, the surviving phase is simultaneously a mechanical diameter star, a boundary electrical-response star, and an almost-radial high-stress contact carrier.
+
+Exact `X_z=0` is incompatible with the C-II terminal count and `deg_C(z)<=3`: the quotient of `C-z` by its interior components would otherwise have a connected component containing two non-`z` boundary terminals, producing a positive non-`z` response coupling.
+
+## Next target
+
+The remaining problem is quantitative stability of this boundary separator under the exact `sum_C alpha=D^2` conductance budget and unit-distance embedding. Topology alone is insufficient because low-weight boundary terminals may be arbitrarily weak; the geometry/global-optimality input must control the nearly single-diameter-edge phase.

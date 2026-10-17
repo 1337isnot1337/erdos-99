@@ -1,0 +1,11 @@
+Target C h=5,m=3 closure, 2026-09-25
+
+Branch: k=5, D=-2, d_root=0, p=5, five touched singleton blocks, m=3. Support multiplicity is (3,3,2).
+
+Exact rational root-matroid census: 10 S7 support-family orbits times 3 placements of the multiplicity-two support. For every five-singleton set with independent old complete complement, and every possible three-singleton basis satisfying the necessary generalized-weight support inequalities from (3,4,6), promote the other two singleton blocks to complete. There are 6,342 candidate pairs. Promoted touched-complete nullity is 0 in 5,121 cases and 1 in 1,221 cases; it is never above 1. Nine of the 30 support/multiplicity assignments have no candidate at all.
+
+The two promoted singleton constraints are redundant because the remaining three form a basis of P, so P is unchanged. The existing two-singleton promotion comparison gives r_old <= r_prom + 2. The promoted state is covered by the audited exact p=3,m=3 certificate, whose external increment is at most 1. Thus r_old <= 3, contradicting the required source increment 5.
+
+Therefore the entire h=5,m=3 branch is empty.
+
+New evidence this run: exact rational root-matroid census. Reused evidence: previously executed p=3,m=3 external-rank certificate. Remaining five-singleton cases: m=4 and the reduced m=5 residual.

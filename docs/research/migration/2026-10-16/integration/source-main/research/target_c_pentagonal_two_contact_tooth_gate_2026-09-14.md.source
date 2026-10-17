@@ -1,0 +1,345 @@
+# Erdos Problem #99 - pentagonal two-contact tooth gate
+
+**Date:** 2026-09-14
+**Target:** C-II, canonical full-core Type-II branch
+**Dependencies:** AG42/Section-171 exceptional-face floor; exact force-hull residual conservation; Wegner residual quantization; empty-pentagon trapezoid endpoint; triangle-free contact-degree bound
+**Claim class:** proof-only structural refinement awaiting independent audit
+**External literature:** no new import
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The empty-pentagon endpoint identifies every residual-zero isolate-free exceptional
+pentagon with the flat unit trapezoid
+
+\[
+(0,0),(1,0),(2,0),
+\left({3\over2},{\sqrt3\over2}\right),
+\left({1\over2},{\sqrt3\over2}\right).
+\]
+
+Besides the almost-straight middle chain, this model has two more useful local
+objects: at each end of the long base there is a two-edge boundary path of exact unit
+contacts whose hidden chord is also unit in the limit. Thus a cheap actual pentagon
+contains a **two-contact near-equilateral tooth**: two exact unit sides and only one
+missing side.
+
+Put
+
+\[
+X:=Q-f,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+f_*:=\sqrt{\Delta_2}-{\pi\over4}+0.00021
+=0.167124643466509\ldots .
+\tag{TT.1}
+\]
+
+For fixed `eta>0`, let `H_eta` be the maximum number of pairwise endpoint-disjoint
+hidden chords `xz`, chosen from distinct pentagonal exceptional faces, for which there
+is a common cyclic boundary neighbor `y` satisfying
+
+\[
+|x-y|=|y-z|=1,
+\qquad
+1<|x-z|<1+\eta.
+\tag{TT.2}
+\]
+
+Let `T_eta` be the maximum number of pairwise vertex-disjoint triples `(x,y,z)` of the
+same form. On every Type-II subsequence with
+
+\[
+R_F=o(D),
+\tag{TT.3}
+\]
+
+we prove the weighted gates
+
+\[
+\boxed{
+X+9H_\eta\ge(f_*-o(1))D,
+}
+\tag{TT.4}
+\]
+
+and
+
+\[
+\boxed{
+X+13T_\eta\ge(f_*-o(1))D.
+}
+\tag{TT.5}
+\]
+
+No assumption `X=o(D)` is needed for these two inequalities.
+
+Consequently, if the high-degree excess is sublinear, then for every fixed `eta>0`,
+
+\[
+\boxed{
+\liminf {H_\eta\over D}\ge {f_*\over9}
+=0.0185694048296121\ldots,
+}
+\tag{TT.6}
+\]
+
+and
+
+\[
+\boxed{
+\liminf {T_\eta\over D}\ge {f_*\over13}
+=0.0128557418051160\ldots .
+}
+\tag{TT.7}
+\]
+
+The first coefficient matches the best generic hidden-pair extraction, but its pairs
+are now much more structured: both endpoints are boundary/core vertices and they have
+a common source vertex joined to each by an exact unit contact. The second statement
+makes the entire near-equilateral triples vertex-disjoint.
+
+## 1. Good pentagons versus degree excess
+
+Let `n_d` be the number of bounded exceptional faces of degree `d>=5`, and let `p_5`
+be the pentagon count. The exact degree identity is
+
+\[
+X=Q-f=\sum_{d\ge6}(d-5)n_d.
+\tag{TT.8}
+\]
+
+If `N_{>=6}=sum_{d>=6}n_d`, then `N_{>=6}<=X`, so
+
+\[
+p_5=f-N_{\ge6}\ge f-X.
+\tag{TT.9}
+\]
+
+The AG42/Section-171 face floor gives
+
+\[
+f\ge(f_*-o(1))D.
+\tag{TT.10}
+\]
+
+Fix `eta>0`. By the empty-pentagon stability theorem, choose a geometric closeness
+threshold small enough that an isolate-free pentagon in that neighborhood has both
+leaf hidden diagonals shorter than `1+eta`. Let `tau_trap(eta)>0` be a corresponding
+residual threshold, and put
+
+\[
+\theta(\eta):=\min\left\{
+{1\over\sqrt3}-{1\over2},\tau_{trap}(\eta)
+\right\}>0.
+\tag{TT.11}
+\]
+
+If a pentagon has `r(P)<theta(eta)`, Wegner's first residual jump gives `z(P)=0`, and
+trapezoid stability places it in the required neighborhood of the flat model.
+
+All exceptional-face residuals are nonnegative and their sum is at most `R_F`. Hence,
+on (TT.3), at most
+
+\[
+{R_F\over\theta(\eta)}=o(D)
+\]
+
+pentagons fail this fixed threshold. Let `G_eta` be the number of remaining good
+pentagons. Combining this with (TT.9)--(TT.10) gives
+
+\[
+\boxed{
+X+G_\eta\ge(f_*-o(1))D.
+}
+\tag{TT.12}
+\]
+
+This is the basic weighted pentagon count. It remains informative even when `X` is
+linear.
+
+## 2. Every good pentagon contains a two-contact near-equilateral tooth
+
+Use the cyclic labels from the flat-trapezoid theorem:
+
+\[
+l,m,r,a,b,
+\]
+
+where `m` is the almost-flat middle point of the long base. In the equality model the
+two leaf triples are
+
+\[
+(m,l,b),
+\qquad
+(m,r,a).
+\tag{TT.13}
+\]
+
+Each triple uses two consecutive pentagon boundary edges. Therefore in every actual
+good pentagon those two sides remain exact unit contacts. Trapezoid stability and the
+choice of `theta(eta)` give
+
+\[
+|m-b|<1+\eta,
+\qquad
+|m-a|<1+\eta.
+\tag{TT.14}
+\]
+
+Both hidden diagonals are strictly longer than one. Indeed, if a nonconsecutive pair
+of boundary vertices of an actual exceptional contact face were at unit distance, its
+straight unit-contact chord would lie inside the convex face and split it, contrary to
+that pentagon being a face of the plane contact graph. Equivalently, either equality
+in (TT.14) at one would create the corresponding unit equilateral contact triangle.
+Thus both leaf triples satisfy (TT.2).
+
+Choose one of the two leaf teeth from every good pentagon. The second choice is not
+needed for the counting argument below.
+
+## 3. Endpoint-disjoint hidden chords: loss only 1/9
+
+From each chosen tooth retain only its hidden chord `xz`. Build a conflict graph on
+these chords, joining two when they share an endpoint.
+
+A source vertex in a triangle-free unit-contact graph has contact degree at most five.
+Consequently it belongs to at most five distinct bounded face sectors, hence to at most
+five selected pentagons. For one chosen chord `{x,z}`, at most four other chosen
+chords can use `x` and at most four can use `z`. Therefore the chord-conflict graph has
+maximum degree at most
+
+\[
+\boxed{8.}
+\tag{TT.15}
+\]
+
+A greedy independent set keeps at least `G_eta/9` chords, so
+
+\[
+9H_\eta\ge G_\eta.
+\tag{TT.16}
+\]
+
+Combining with (TT.12) proves (TT.4).
+
+The unweighted consequence is
+
+\[
+\boxed{
+\max\left\{{X\over D},{H_\eta\over D}\right\}
+\ge {f_*\over10}-o(1)
+=0.0167124643466509\ldots-o(1).
+}
+\tag{TT.17}
+\]
+
+## 4. Fully vertex-disjoint teeth: loss only 1/13
+
+Now retain all three vertices of each chosen tooth. Two selected teeth conflict when
+they share any source vertex. As above, a fixed source vertex belongs to at most five
+selected pentagons, and there is only one chosen tooth per pentagon. Each tooth has
+three vertices, so it conflicts with at most
+
+\[
+3(5-1)=12
+\tag{TT.18}
+\]
+
+other selected teeth. A greedy independent set therefore has size at least
+`G_eta/13`. Hence
+
+\[
+13T_\eta\ge G_\eta,
+\tag{TT.19}
+\]
+
+which together with (TT.12) proves (TT.5).
+
+The corresponding unweighted alternative is
+
+\[
+\boxed{
+\max\left\{{X\over D},{T_\eta\over D}\right\}
+\ge {f_*\over14}-o(1)
+=0.0119374745333220\ldots-o(1).
+}
+\tag{TT.20}
+\]
+
+## 5. Vanishing-gap diagonal
+
+The fixed-`eta` arguments above can be diagonalized without changing the first-order
+coefficients. Take `eta_j=1/j`. For each fixed `j`, the number of pentagons with
+residual at least `theta(eta_j)` is `o(D)`. Choose an increasing sequence of diameter
+thresholds so slowly that, on the interval assigned to `j`, this bad-face loss is
+still `o(D)`. This defines a scale
+
+\[
+\eta_D\to0
+\]
+
+for which
+
+\[
+X+9H_{\eta_D}\ge(f_*-o(1))D,
+\qquad
+X+13T_{\eta_D}\ge(f_*-o(1))D.
+\tag{TT.21}
+\]
+
+In particular, if `X=o(D)`, there are at least
+
+\[
+\left({f_*\over13}-o(1)\right)D
+\]
+
+pairwise vertex-disjoint actual source triples with
+
+\[
+|x-y|=|y-z|=1,
+\qquad
+1<|x-z|\le1+o(1).
+\tag{TT.22}
+\]
+
+Thus the hard small-residual, low-degree-excess branch contains a macroscopic family
+of almost unit equilateral triangles in which **two** sides are already exact active
+contacts.
+
+## 6. Relation to the other Groemer extractions
+
+This result is not a numerical replacement for the generic Groemer matching; it is a
+structural refinement of the pentagonal endpoint.
+
+- The generic hidden-pair theorem gives the same limiting `f_*/9` pair coefficient but
+  allows the pair to involve assigned isolates and supplies no common exact-contact
+  neighbor.
+- The generic anchored-triple theorem gives one exact unit side and two near-unit
+  sides. Here every extracted triple has two exact unit sides and only one near-unit
+  side.
+- The whole-pentagon trapezoid theorem retains all five vertices and therefore loses a
+  factor `1/21`. The present full-triple extraction needs only three vertices and loses
+  `1/13`.
+- The almost-flat-chain extraction uses the complementary local feature of the same
+  pentagon: its near-straight middle contact chain. The two statements should be kept
+  separate because their prospective deformation mechanisms are different.
+
+## 7. Scope and remaining gate
+
+- The theorem is conditional on `R_F=o(D)`.
+- The weighted forms (TT.4)--(TT.5) do not assume `Q-f=o(D)`.
+- Every tooth vertex is an actual source vertex on the boundary of a positive-contact
+  exceptional face; no assigned interior isolate appears in a good pentagon.
+- The hidden chord remains inactive and strictly longer than one in the actual source.
+- No KKT multiplier is assigned to the hidden chord.
+- No exact unit triangle or same-cardinality strict sub-`D` source is produced.
+
+The remaining source-level question is sharper than generic near-contact activation:
+can a globally diameter-minimizing triangle-free source contain linearly many
+vertex-disjoint triples with two positive unit contacts at angle `pi/3+o(1)` while the
+third side stays strictly above one? A successful finite-motion or equilibrium theorem
+for that three-vertex object would close this pentagonal branch.
+
+C-II and Level I remain open.

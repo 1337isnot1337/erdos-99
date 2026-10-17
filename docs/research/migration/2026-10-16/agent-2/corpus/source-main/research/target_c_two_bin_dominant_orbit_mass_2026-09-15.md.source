@@ -1,0 +1,492 @@
+# Target C-II — two-bin dominant-orbit mass sharpens shared outer energy
+
+**Date:** 2026-09-15  
+**Repository base:** `b47a3bed3ff59655497e33d34714fbfb8ba6bd66`  
+**Status:** proof-only strengthening of the audited shared dominant/complement endpoint-retention theorem  
+**Scope:** fully force-visible no-container/full-core Type-II branch  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The current shared-retention theorem controls the dominant exact `pi/3` atomic train
+orbit by
+
+\[
+M\ge {4\Delta_2\over A},
+\qquad
+A=\sum_r M_r,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+\]
+
+using
+
+\[
+4\Delta_2\le\sum_r M_r^2\le M\sum_rM_r=MA.
+\]
+
+Near the current endpoint, the dominant orbit already contains almost all atomic mass,
+so the last inequality is unnecessarily weak.  If `M=max_r M_r`, all other orbit
+masses have total `A-M`, hence
+
+\[
+\sum_{r\ne *}M_r^2\le(A-M)^2.
+\]
+
+Therefore
+
+\[
+4\Delta_2\le M^2+(A-M)^2,
+\]
+
+which gives the stronger exact lower bound
+
+\[
+\boxed{
+M\ge m_2(A):={A+\sqrt{8\Delta_2-A^2}\over2}.
+}
+\]
+
+Propagating this through the already-audited shared endpoint-retention value function
+raises the safe proof-only Type-II floor from `1.83279` to
+
+\[
+\boxed{
+\liminf {q-k\over D}\ge1.83287.
+}
+\]
+
+The new scalar crossing is approximately
+
+\[
+1.83287497466\ldots .
+\]
+
+Only the round value `1.83287` is claimed.
+
+---
+
+## 1. Atomic-orbit input
+
+Use the audited train-phase notation.  Let `M_r>=0` be the absolute atomic train mass
+in exact projective `pi/3` orbit `r`, and let `E_r` be the limiting strict-rhombus
+crossing mass of that orbit.  Then
+
+\[
+E_r\le {M_r^2\over4},
+\qquad
+\sum_rE_r=\Delta_2,
+\qquad
+A:=\sum_rM_r.
+\tag{TB.1}
+\]
+
+Let
+
+\[
+M:=\max_rM_r.
+\]
+
+Summing (TB.1),
+
+\[
+4\Delta_2\le\sum_rM_r^2.
+\tag{TB.2}
+\]
+
+The same inequality with `sum M_r^2<=A^2` gives
+
+\[
+A\ge2\sqrt{\Delta_2}.
+\tag{TB.3}
+\]
+
+---
+
+## 2. Two-bin square bound
+
+Isolate one orbit attaining `M`.  Since the residual orbit masses are nonnegative and
+sum to `A-M`,
+
+\[
+\sum_{r\ne *}M_r^2
+\le\left(\sum_{r\ne *}M_r\right)^2
+=(A-M)^2.
+\tag{TB.4}
+\]
+
+Hence
+
+\[
+4\Delta_2
+\le M^2+(A-M)^2.
+\tag{TB.5}
+\]
+
+On the low-`t` interval below, `A^2<8\Delta_2`.  The quadratic inequality (TB.5) has
+roots
+
+\[
+{A\pm\sqrt{8\Delta_2-A^2}\over2}.
+\]
+
+The previously audited crude bound
+
+\[
+M\ge{4\Delta_2\over A}
+\]
+
+satisfies
+
+\[
+{4\Delta_2\over A}>{A\over2}
+\]
+
+whenever `A^2<8Delta2`.  Thus `M` lies on the upper branch of (TB.5), proving
+
+\[
+\boxed{
+M\ge m_2(A):={A+\sqrt{8\Delta_2-A^2}\over2}.
+}
+\tag{TB.6}
+
+No new phase geometry is used; this is only the exact extremal square allocation of
+the residual atomic mass.
+
+---
+
+## 3. Replace `4 Delta2/U` in the complement-train ceiling
+
+The exposed-hull argument from the dominant-orbit theorem gives
+
+\[
+A\le C,
+\qquad
+C:={T-q/2\over D}.
+\tag{TB.7}
+\]
+
+The current matched train gap and Section-171 envelope give
+
+\[
+C_{50}\le C\le U,
+\tag{TB.8}
+\]
+
+where
+
+\[
+C_{50}:=2\sqrt{\Delta_2}+0.0050,
+\]
+
+\[
+U={9t\over2}-2\pi-2\delta-{\kappa\over2},
+\qquad
+ t={q-k\over D},
+\quad
+\delta={d_{out}\over D},
+\quad
+\kappa={k\over D}.
+\tag{TB.9}
+\]
+
+On `A>=2sqrt(Delta2)`, the function `m_2(A)` is nonincreasing because
+
+\[
+m_2'(A)
+={1\over2}
+\left(
+1-{A\over\sqrt{8\Delta_2-A^2}}
+\right)
+\le0.
+\tag{TB.10}
+\]
+
+Thus
+
+\[
+M\ge m_2(A)\ge m_2(C).
+\tag{TB.11}
+\]
+
+The complete stopped-train density is
+
+\[
+{T\over D}=C+{t+\kappa\over2}.
+\]
+
+If `N_c` is the train density outside the dominant orbit windows, then
+
+\[
+N_c
+\le C+{t+\kappa\over2}-m_2(C).
+\tag{TB.12}
+\]
+
+Since
+
+\[
+{d\over dC}[C-m_2(C)]=1-m_2'(C)>0,
+\]
+
+and `C<=U`,
+
+\[
+\boxed{
+N_c\le N_2(U):=
+U+{t+\kappa\over2}-m_2(U).
+}
+\tag{TB.13}
+
+This strictly improves the current ceiling
+
+\[
+U+{t+\kappa\over2}-{4\Delta_2\over U}.
+\]
+
+---
+
+## 4. Insert the sharper ceiling into shared endpoint retention
+
+The hostile-audited shared-retention theorem is otherwise unchanged.  Dominant-window
+outer occurrences and complement outer-to-outer terminal occurrences share one route
+capacity budget.  If `z` is retained dominant occurrence mass and `p` is retained
+complement pair mass, then
+
+\[
+\boxed{
+z+p\ge S:=\pi-N_2(U).}
+\tag{TB.14}
+
+Their disjoint actual edge-energy payments are
+
+\[
+F(z)=z-6\sin(z/6),
+\]
+
+\[
+J(p)=2p-6\sin(p/3)
+\qquad(0\le p\le1).
+\]
+
+Define the same infimal convolution
+
+\[
+\boxed{
+H(S):=
+\min_{\substack{z,p\ge0\\z+p=S}}
+\{F(z)+J(p)\}.
+}
+\tag{TB.15}
+
+On the present scalar interval its unique minimizer is interior, has `p<1`, and obeys
+
+\[
+F'(z)=J'(p).
+\tag{TB.16}
+
+Every survivor must satisfy
+
+\[
+\boxed{
+\delta\ge H\!\left(
+\pi-U-{t+\kappa\over2}+m_2(U)
+\right).
+}
+\tag{TB.17}
+
+---
+
+## 5. The full feasible triangle still reduces to one boundary point
+
+The scalar envelope gives
+
+\[
+2\delta+\kappa/2
+\le R_{50}(t):={9t\over2}-2\pi-C_{50}.
+\tag{TB.18}
+
+Put
+
+\[
+S(t,\delta,\kappa)
+=
+\pi-U-{t+\kappa\over2}+m_2(U).
+\]
+
+### Topology direction
+
+Since `partial U/partial kappa=-1/2`,
+
+\[
+{\partial S\over\partial\kappa}
+=-{m_2'(U)\over2}>0
+\tag{TB.19}
+
+through the strict low-`t` range.  Since `H` is increasing, the contradiction margin
+`H(S)-delta` is minimized at
+
+\[
+\boxed{\kappa=0.}
+\tag{TB.20}
+
+### Detour direction
+
+Since `partial U/partial delta=-2`,
+
+\[
+{\partial S\over\partial\delta}
+=2(1-m_2'(U)).
+\tag{TB.21}
+
+For `t<=1.83287`, every feasible `U` is below two.  On
+`C50<=U<2`, the certificate verifies the conservative bound
+
+\[
+m_2'(U)>-1/8,
+\]
+
+so
+
+\[
+{\partial S\over\partial\delta}<9/4.
+\tag{TB.22}
+
+The value function `H` has marginal cost no larger than the cost of assigning new
+retained mass entirely to the dominant variable.  Since `S<pi`,
+
+\[
+0\le H'(S)\le F'(\pi)=1-\frac{\sqrt3}{2}.
+\tag{TB.23}
+
+Therefore the upper Dini derivative obeys
+
+\[
+{d^+\over d\delta}[H(S)-\delta]
+< {9\over4}\left(1-\frac{\sqrt3}{2}\right)-1
+< -0.69.
+\tag{TB.24}
+
+Thus maximal detour is the weakest point.  Combining with (TB.20),
+
+\[
+\boxed{
+\kappa=0,
+\qquad
+\delta={R_{50}(t)\over2},
+\qquad
+U=C_{50}.
+}
+\tag{TB.25}
+
+---
+
+## 6. One-variable boundary problem
+
+At (TB.25), the sharper dominant mass is the fixed constant
+
+\[
+\boxed{
+M_{50}:=m_2(C_{50})
+={C_{50}+\sqrt{8\Delta_2-C_{50}^2}\over2}.
+}
+\tag{TB.26}
+
+The complement-train ceiling and required retained mass become
+
+\[
+N_0(t)=C_{50}+{t\over2}-M_{50},
+\tag{TB.27}
+\]
+
+\[
+S_0(t)=\pi-N_0(t)
+=\pi-C_{50}-{t\over2}+M_{50}.
+\tag{TB.28}
+
+Let
+
+\[
+G_0(t):=H(S_0(t))-{R_{50}(t)\over2}.
+\tag{TB.29}
+
+Since `S_0'(t)=-1/2`, `R_50'(t)/2=9/4`, and `H'>=0`,
+
+\[
+G_0'(t)<0.
+\tag{TB.30}
+
+Thus there is at most one scalar crossing.
+
+At `t=1.83287`, the independent certificate gives
+
+\[
+\begin{aligned}
+M_{50}&=1.9046190334611455\ldots,\\
+\delta_0&=0.0275520395462499\ldots,\\
+S_0&=2.2201510733230236\ldots,\\
+z_0&=1.640909064904494\ldots,\\
+p_0&=0.579242008418530\ldots,
+\end{aligned}
+\]
+
+and
+
+\[
+\boxed{
+G_0(1.83287)
+=1.12854268\times10^{-5}>0.
+}
+\tag{TB.31}
+
+The scalar zero is approximately
+
+\[
+1.83287497466\ldots .
+\tag{TB.32}
+
+Therefore:
+
+### Theorem TB.1 — two-bin dominant-orbit floor
+
+Every full-core Type-II survivor sequence in the stated proof-only scope satisfies
+
+\[
+\boxed{
+\liminf_{D\to\infty}{q-k\over D}
+\ge1.83287.
+}
+\tag{TB.33}
+
+This supersedes the current `1.83279` shared-retention floor.
+
+---
+
+## 7. Frontier effect
+
+At `U=C50`, the old and new dominant mass floors are
+
+\[
+{4\Delta_2\over C_{50}}
+=1.8996387052992785\ldots,
+\]
+
+\[
+M_{50}
+=1.9046190334611455\ldots .
+\]
+
+Thus the two-bin square bound identifies about
+
+\[
+0.00498032816D
+\]
+
+additional trains as belonging to the dominant exact orbit.  Those trains are removed
+from the complement-train ceiling and must be paid by the shared outer-energy
+allocation.
+
+No new rigidity, KKT-weight, or source-motion statement is used.  C-II remains open.
+Further progress should now use more than the total residual atomic mass: the
+`g=0.0050` minimax proof also constrains the three individual phase classes inside the
+dominant orbit, information not used by (TB.6).
+
+**Classification:** proof-only candidate pending certificate and hostile audit.

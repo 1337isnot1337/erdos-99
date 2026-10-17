@@ -1,0 +1,101 @@
+# Target C support-seven: seven-outsider barrier for the 45-cycle metric test
+
+Date: 2026-09-19
+
+Status: exact finite statement inside the generic metric-closure layer. The theorem-state authority is unchanged. C-II remains open.
+
+## Result
+
+Let `F` be the selected 45 undirected simple `K8` four-cycles used by the committed sufficient metric test. The preceding exchange verifiers rule out sufficient 44-cycle families that use at most six cycles outside `F`.
+
+The new exhaustive calculation rules out exactly seven outsiders as well. Therefore:
+
+\[
+\boxed{\text{every sufficient 44-cycle family uses at least 8 cycles outside }F.}
+\]
+
+Equivalently, any sufficient 44-cycle family must omit at least nine members of the present 45-cycle family.
+
+This is a minimization obstruction for the sufficient metric test. It does not by itself remove any of the current generic-H6 states and does not prove that 45 cycles are globally minimal.
+
+## Quotient reduction
+
+Work modulo the 56 automatic triangle-side identities. The selected 45 cycles form a basis `F` of the resulting 45-dimensional comparison space, and the fifteen ground-root metric identities occupy fifteen disjoint three-coordinate blocks. In each block the ground vector is proportional to
+
+\[
+(1,-1,-1).
+\]
+
+A hypothetical 44-cycle family with seven outsiders contains 37 members of `F`, so it omits exactly eight `F` coordinates. Let `r` be the rank of the seven outsider residuals in the quotient outside `span(F)`. The kernel of the residual map has dimension `7-r`; each kernel relation produces an `F`-coordinate row that can compensate omitted coordinates.
+
+If the eight omitted coordinates meet `t` ground blocks, their restricted ground rows are independent, so `t <= 7-r`. Since a block contains only three coordinates, eight omissions always meet at least three blocks. Hence `r <= 4` is necessary.
+
+The exhaustive rank-`<=4` seven-outsider ledger contains exactly
+
+```text
+9,382,140 cases total
+   10,020 quotient rank 3
+9,372,120 quotient rank 4
+        0 quotient rank <= 2
+```
+
+No rank-4 case compensates the omissions. Here the kernel has dimension three, so the only possible eight-coordinate block partition is
+
+```text
+3 + 3 + 2.
+```
+
+No rank-3 case compensates either. Here the kernel has dimension four, so the only possible partitions are
+
+```text
+3 + 3 + 2
+3 + 3 + 1 + 1
+3 + 2 + 2 + 1
+2 + 2 + 2 + 2.
+```
+
+All of these are checked exactly.
+
+## Exactness of the finite-field index
+
+The residual direction coordinates are integers in `{-1,0,1}`. Candidate enumeration and rank discovery use `F_251`, but this is only an indexing device.
+
+For a `5 x 5` minor, Hadamard gives
+
+\[
+|\det|\le 5^{5/2}<56<251.
+\]
+
+Thus if every `5 x 5` minor vanishes modulo 251, every such integer minor is actually zero. The same argument is stronger for `4 x 4` minors (`|det| <= 16`). Therefore the computed ranks 3 and 4 agree exactly with the rational ranks.
+
+Candidate enumeration is complete for quotient rank at most four. A rank-four seven-set lies in its own enumerated rank-four flat. A lower-rank seven-set can be extended to rank four by the ambient outsider residual directions (the residual direction system has rank greater than four); by the vector-matroid basis-extension property it is therefore contained in an enumerated rank-four flat as well. Because each projective residual class contains at most two outside cycles, every seven-set uses at least four classes, so no seven-cycle case is lost at the class-compression step.
+
+The rank-four flat table is keyed by a 64-bit deterministic hash of the reduced row echelon form. Hash injectivity is not assumed. A collision only merges two flat buckets and can therefore only add seven-sets to the candidate ledger; it cannot remove a true candidate. Every emitted seven-set is then re-ranked exactly via the determinant bound above. The packed seven-cycle key itself is collision-free (seven 8-bit cycle indices in one 64-bit word). In the committed instance, no merged-bucket artifact survives as rank greater than four.
+
+## Exact compensation tests
+
+Twice the `F`-coordinates are used, so every coefficient is integral. Cramer's rule on an exact rank-3 or rank-4 residual basis produces the outsider-kernel rows.
+
+For quotient rank four, the kernel has three rows. A `3+3+2` compensation can succeed only when those rows have zero deviation from the ground line in each selected block and the three resulting coefficient vectors are independent. The verifier checks this with integer rank and determinant tests.
+
+For quotient rank three, the kernel has four rows. For the `3+3+2` case, the verifier separates each block into a ground coefficient and deviation coordinates. Ground containment is possible only when the combined deviation columns have rank at most one. If the deviation rank is zero, the three ground-coefficient columns must have rank three. If the deviation rank is one, adjoining its generator to the three ground-coefficient columns must give a nonzero `4 x 4` determinant.
+
+For the four-block partitions, a four-dimensional ground subspace can be contained in the four-row kernel image only by equality. The verifier therefore requires zero block deviations and a nonzero exact `4 x 4` determinant of the four block coefficient vectors. It exhausts all masks for `3+3+1+1`, `3+2+2+1`, and `2+2+2+2`.
+
+There is no floating-point arithmetic in the candidate rank or compensation decision.
+
+## Verification
+
+Driver:
+
+`research/verify_target_c_support7_global_segment_45_four_cycle_seven_exchange_barrier_2026_09_19.py`
+
+Exhaustive core:
+
+`research/verify_target_c_support7_global_segment_45_four_cycle_seven_exchange_core_2026_09_19.cpp`
+
+The core reconstructs the 9,382,140-case deterministic sorted ledger and supports `--start/--stop` slices. During this research run, the full ledger was checked in bounded exact slices: all 9,372,120 rank-4 cases and all 10,020 rank-3 cases returned no compensating omission pattern. The finalized core was separately compiled and reproduced the global ledger/rank totals and a smoke-test slice.
+
+## Remaining work
+
+The next exchange layer is eight outsiders. That layer is larger: eight outsiders omit nine `F` coordinates, and quotient rank up to five can matter. This basis-minimization line is secondary to the direct closure problem. The current explicit generic-H6 endpoint is 4,276 states; the higher-leverage route remains to apply the sufficient metric constraints themselves to those states rather than continuing to optimize the 45-cycle basis indefinitely.

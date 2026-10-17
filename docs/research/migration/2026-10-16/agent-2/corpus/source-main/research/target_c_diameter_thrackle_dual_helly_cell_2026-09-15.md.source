@@ -1,0 +1,360 @@
+# Target C-II — diameter thrackle paths have a common extended complement cell
+
+**Date:** 2026-09-15  
+**Status:** proof-only exact finite structural theorem  
+**Scope:** any pairwise-noncrossing O--O train family to which the audited proper-crosscut complement-dual tree construction applies  
+**Dependencies:** audited O--O proper-crosscut/complement-dual tree topology; elementary collar extension of a disk; no KKT coefficient bound  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The live O--O backbone theorem reduces every actual diameter row to one signed interval
+of endpoint-shore incidence on a dual-tree path.  There is an additional exact
+geometric constraint: after extending the audited train disk by a collar to one large
+convex disk containing the full source, all actual straight diameter segments meet one
+common **extended complement cell** of the noncrossing train family.
+
+The reason is a composition of three finite facts.
+
+1. Straight diameter segments in the plane form a geometric thrackle: any two share an
+   endpoint or cross.
+2. Pairwise-disjoint proper crosscuts of the audited train disk extend through a collar
+   to pairwise-disjoint proper crosscuts of a large convex disk, without changing their
+   complement-dual tree.
+3. For one connected curve in that large disk, the set of complement cells whose
+   closures meet the curve is a connected subtree of the dual.
+
+Pairwise-intersecting subtrees of a tree have the Helly property.  Therefore all
+actual diameter trace subtrees contain one common dual vertex.
+
+The collar repair is load-bearing.  The audited train disk need not be convex, so an
+actual straight diameter chord can leave it.  The first draft of this theorem silently
+assumed otherwise.  The extended-disk formulation removes that gap.
+
+The theorem does **not** assert that the endpoint-shore interval of every diameter row
+contains the common vertex.  A straight diameter segment can in principle meet one
+proper train crosscut more than once, so its geometric trace subtree can be larger than
+the unique dual path between its endpoint regions.
+
+---
+
+## 1. Any two planar diameter segments intersect
+
+Let `X` be a finite planar set of diameter `D`, and let `ab` and `cd` be two distinct
+unordered diameter pairs:
+
+\[
+|a-b|=|c-d|=D.
+\]
+
+If they share an endpoint there is nothing to prove.  Suppose their four endpoints are
+distinct.
+
+Every endpoint of a diameter pair is an exposed vertex of `conv(X)`: for example, if
+`b-a=r` with `|r|=D`, then for every `x in X`,
+
+\[
+|x-b|^2\le D^2=|a-b|^2
+\]
+
+gives
+
+\[
+(x-a)\cdot r\ge {|x-a|^2\over2}.
+\]
+
+Thus `-r` is a strict outward supporting normal at `a`, and similarly for the other
+three endpoints.  Hence `a,b,c,d` are in strict convex position.
+
+Assume for contradiction that the two segments `ab` and `cd` do not meet.  In the
+cyclic order of their four endpoints they are then opposite sides of the convex
+quadrilateral.  Let `o` be the intersection of its two diagonals.  Strict triangle
+inequality gives
+
+\[
+|a-b|<|a-o|+|o-b|,
+\]
+
+\[
+|c-d|<|c-o|+|o-d|.
+\]
+
+Adding,
+
+\[
+2D
+<(|a-o|+|o-c|)+(|b-o|+|o-d|)
+=|a-c|+|b-d|.
+\]
+
+At least one diagonal therefore has length greater than `D`, contradiction.
+
+Hence
+
+\[
+\boxed{
+\text{any two actual diameter segments share an endpoint or cross.}
+}
+\tag{DH.1}
+
+No external diameter-graph theorem is used.
+
+---
+
+## 2. Extend the train disk to a convex ambient disk
+
+Let `B` be the audited closed topological train disk for a pairwise-disjoint proper
+O--O family
+
+\[
+\mathcal L=\{\tau_1,\ldots,\tau_m\}.
+\]
+
+Write `gamma_i` for the proper train centerline crosscut representing `tau_i`.
+The complement-region/crosscut dual in `B` is the audited tree `T_L`.
+
+Choose a sufficiently large closed Euclidean round disk `K` whose interior contains
+`B` and the entire finite source.  Then
+
+\[
+K\setminus\operatorname{int}B
+\]
+
+is a topological annulus.  Give it a collar coordinate
+
+\[
+\partial B\times[0,1],
+\]
+
+with `partial B x {0}` identified with `partial B` and `partial B x {1}` with
+`partial K`.  Such a collar follows directly from Jordan--Schoenflies for the two disk
+boundaries.
+
+Every proper crosscut `gamma_i` has two distinct endpoints on `partial B`.  Extend each
+endpoint along its vertical collar fiber to `partial K`.  Distinct endpoint fibers are
+disjoint, so the resulting arcs
+
+\[
+\widetilde\gamma_i
+\]
+
+are pairwise-disjoint proper crosscuts of `K`.  Inside `B` they coincide with the
+original train crosscuts.
+
+Adding the collar does not change the complement-dual combinatorics.  Each original
+complement region acquires exactly the collar sectors adjacent to its boundary
+intervals; no two original regions merge across a vertical extension fiber.  Thus the
+complement dual of
+
+\[
+K\setminus\bigcup_i\widetilde\gamma_i
+\]
+
+is canonically the same tree `T_L`.
+
+We call these enlarged complement components the **extended cells**.  Every source
+point lies in `K`, and every actual straight diameter segment lies in `K` because `K`
+is convex.
+
+---
+
+## 3. Region trace of one connected curve is a subtree
+
+For any connected compact curve `s subset K`, define
+
+\[
+\mathcal R(s)
+:=\{R\in V(T_L):\overline{\widetilde R}\cap s\ne\varnothing\},
+\tag{DH.2}
+\]
+
+where `widetilde R` is the extended cell labelled by dual vertex `R`.
+
+### Lemma DH.1 — `R(s)` is connected in `T_L`
+
+Take `R_1,R_2 in R(s)` and let
+
+\[
+R_1=Q_0,Q_1,\ldots,Q_k=R_2
+\]
+
+be their unique dual-tree path.  Fix one edge `Q_{j-1}Q_j`, represented by the proper
+crosscut `widetilde gamma_j`.  Removing that crosscut separates `K` into the two unions
+of extended cells represented by the two components of
+`T_L-Q_{j-1}Q_j`.  The cells `R_1,R_2` lie on opposite sides.
+
+Choose points of `s` in the two cell closures.  Since `s` is connected, it meets the
+separating crosscut.  At a point of intersection, both incident cell closures meet
+`s`, so both `Q_{j-1}` and `Q_j` belong to `R(s)`.
+
+Doing this for every path edge proves that all `Q_j` belong to `R(s)`.  Hence
+
+\[
+\boxed{\mathcal R(s)\text{ is a subtree of }T_L.}
+\tag{DH.3}
+
+Tangencies and overlaps cause no problem because cell closures are used.
+
+---
+
+## 4. Diameter trace subtrees are pairwise intersecting
+
+For an actual diameter pair `h`, let `s_h` be its straight Euclidean segment and put
+
+\[
+T_h:=\mathcal R(s_h).
+\]
+
+Every `s_h` lies in the convex ambient disk `K`, so Lemma DH.1 applies.
+
+Take two actual diameter pairs `h,g`.  By (DH.1), their straight segments meet at some
+point `p`.  Choose any extended cell `widetilde R` whose closure contains `p`.  Then
+
+\[
+p\in\overline{\widetilde R}\cap s_h
+\qquad\text{and}\qquad
+p\in\overline{\widetilde R}\cap s_g,
+\]
+
+so
+
+\[
+R\in T_h\cap T_g.
+\]
+
+Therefore
+
+\[
+\boxed{T_h\cap T_g\ne\varnothing\quad\text{for all diameter pairs }h,g.}
+\tag{DH.4}
+
+A shared diameter endpoint is harmless: at least one extended cell closure contains
+that boundary or interior source point.
+
+---
+
+## 5. Tree Helly gives one common diameter cell
+
+Finite connected subgraphs of a tree satisfy the Helly property: pairwise intersection
+implies total intersection.
+
+For completeness, root `T_L` arbitrarily.  For a subtree `S`, let `v(S)` be its unique
+vertex nearest the root.  Choose `S_*` with `v(S_*)` farthest from the root.  For every
+other subtree `S`, choose `x in S cap S_*`.  Both nearest-root vertices lie on the
+root-to-`x` path, and maximal depth puts `v(S_*)` between `v(S)` and `x`.  Since `S`
+is connected, it contains that entire tree segment and therefore contains `v(S_*)`.
+Thus `v(S_*)` belongs to every subtree.
+
+Apply this to `{T_h}`.  There is a dual vertex `R_*` such that
+
+\[
+R_*\in T_h
+\qquad\text{for every actual diameter pair }h.
+\]
+
+Equivalently,
+
+\[
+\boxed{
+\overline{\widetilde R_*}\cap s_h\ne\varnothing
+\quad\text{for every actual diameter segment }s_h.
+}
+\tag{DH.5}
+
+So the extended crosscut arrangement contains one cell closure pierced by all actual
+straight diameter segments.
+
+This is a cell-piercing theorem, not a common-point theorem: the diameter segments need
+not all meet at one Euclidean point.
+
+---
+
+## 6. Projection to a live backbone
+
+Let
+
+\[
+P=(Q_0,e_1,Q_1,\ldots,e_m,Q_m)
+\]
+
+be any simple path in `T_L`, for example the current `0.017104D-o(D)` live smallest-
+leaf O--O backbone.  Let `Q_*` be the unique nearest vertex of `P` to `R_*`.
+
+If one diameter segment `s_h` meets any selected extended backbone crosscut, then
+`T_h` meets `P`.  Since `T_h` is connected and contains `R_*`, the unique tree path
+from `R_*` to `T_h cap P` passes through `Q_*`; hence
+
+\[
+\boxed{Q_*\in T_h.}
+\tag{DH.6}
+
+If the two endpoints of `h` lie on opposite shores of one selected train cut, they also
+lie on opposite sides of its extended proper crosscut in `K`.  The straight segment is
+connected and therefore meets that crosscut.  Thus every diameter row with nonzero
+shore-incidence support on the backbone has an extended-cell trace containing `Q_*`.
+
+This is additional information beyond raw interval support: every active row has a
+straight geometric representative passing through the closure of one common **extended
+backbone cell label**.
+
+It still does not follow that the endpoint-region interval of that row contains
+`Q_*`; multiple crossings of one wavy proper crosscut are not excluded.
+
+---
+
+## 7. Interaction with the live interval-rank theorem
+
+The current live `t<=1.844` theorem supplies a backbone of more than
+
+\[
+0.017104D-o(D)
+\]
+
+smallest-leaf O--O cuts.  It proves:
+
+- the diameter derivative matrix on those cuts has full column rank;
+- at least `m-2` diameter rows have proper nonempty endpoint-shore intervals;
+- incidence switches occur at linearly many distinct internal strip boundaries; and
+- the KKT resultant sequence has total variation at most `2D`.
+
+The present theorem adds a different exact constraint: all active straight diameter
+chords meet the closure of one common extended-cell label `Q_*` after the canonical
+collar extension of the same train cuts.
+
+Thus the brace system is simultaneously
+
+```text
+interval-supported in endpoint-shore coordinates
++
+full-rank on >0.017104 D selected cuts
++
+straight-chord thrackle geometry
++
+one common extended dual cell pierced by every active chord.
+```
+
+The next metric obligation is to convert the common-cell piercing into a restriction
+on the directions or endpoint projection positions of the switching chords.  The
+current theorem itself does not provide such a bound.
+
+---
+
+## 8. Scope audit and explicit non-implications
+
+- The train disk need not be convex.  The collar extension to a large convex disk is
+  therefore part of the theorem, not a cosmetic reformulation.
+- The complement dual is used only for a pairwise-noncrossing proper O--O family, where
+  the tree model is already audited.
+- The collar extension preserves the dual tree but enlarges its geometric cells.  Thus
+  `DH.5` concerns an **extended cell**, not necessarily the original rhombic/contact
+  region inside the train disk.
+- Region closures are essential for tangencies and shared endpoints.
+- The theorem proves one common extended cell, not one common Euclidean point.
+- It does not assert that a diameter chord crosses a train crosscut at most once.
+- Consequently it does not assert that endpoint-shore support intervals are rooted at
+  `Q_*`.
+- No KKT multiplier lower bound, response inequality, or phase-collapse estimate is
+  used.
+- The theorem is exact and finite.  Its application to the `0.017104D` backbone inherits
+  that backbone theorem's proof-only `t<=1.844` scope.
+
+**Disposition:** proved proof-only exact diameter-thrackle / dual-Helly common extended
+cell theorem. C-II and Level I remain open.

@@ -1,0 +1,43 @@
+# Target C: five-singleton support-nullity compression for D=-2,p=5
+
+Date: 2026-09-25
+
+Status: proof-level reduction plus an executed exact finite support classification for the remaining eight-no-root k=5,D=-2,d_root=0,p=5,(s,t)=(5,0),h=5 branch. This note does not claim closure.
+
+Let F be the set of distinct four-vertex supports used by the eight no-root cycles, let m=|F|, and let T be the union of all triangular faces of supports in F. In the h=5 residual, exactly five touched root blocks are singleton blocks; call them S. Every other touched root block is complete, so C_touch=T\S.
+
+The established d_root=0 reduction says the complete-root rows on C_touch are independent. Root rows are ordinary oriented triangle-boundary rows. Hence rank H(C_touch)=|T|-5. Since H(C_touch) is a row submatrix of H(T),
+
+rank H(T) >= |T|-5,
+
+so the full touched triangle-boundary nullity satisfies
+
+nu(T):=|T|-rank H(T) <= 5.
+
+This is stronger than bounding only the span of the tetrahedron-boundary dependencies.
+
+I executed an exact S_7 orbit enumeration of support families. For each family the computation formed T, built the oriented triangle-boundary rows in the 21 edge coordinates of K_7, computed rank over Q by exact rational elimination, retained exactly nu(T)<=5, canonicalized under all 5040 vertex permutations, and extended retained representatives one support at a time. The extension is exhaustive because triangle-row nullity is monotone under adding rows.
+
+Exact retained orbit counts:
+
+m=3: 10, nullity distribution {3:10}
+m=4: 38, nullity distribution {4:35,5:3}
+m=5: 108, nullity distribution {4:1,5:107}
+m=6: 2, nullity distribution {5:2}
+m=7: 0
+m=8: 0
+
+Therefore every h=5 survivor has 3<=m<=6. The lower bound is the existing fact that one support carries only three distinct no-root four-cycles.
+
+Up to relabeling, the only six-support families are
+
+A={1234,1235,1236,1245,1345,2345},
+B={1234,1235,1245,1267,1345,2345}.
+
+Both have nu(T)=5. Each is the five tetrahedral facets of the 4-simplex on {1,2,3,4,5} plus one extra tetrahedron. In A the extra tetrahedron meets that five-set in three vertices; in B it meets it in two vertices. No seventh distinct support can be added while keeping nu(T)<=5, so eight-support families are excluded as well.
+
+The previous five-singleton reduction left only h=5. This note reduces its support geometry to m=3,4,5,6 and leaves only two S_7 support orbits at m=6.
+
+For m=6 the eight-cycle multiplicity profile is necessarily (3,1,1,1,1,1) or (2,2,1,1,1,1). The next bounded target is to enumerate those two support orbits with five singleton triangles whose deletion leaves independent complete rows, singleton directions spanning rank-three P with generalized weights at least (3,4,6), and required external rank increment five.
+
+The m=3,4,5,6 cases are not claimed empty here. The separate D=-1,(d_root,p)=(0,6) branch remains open.

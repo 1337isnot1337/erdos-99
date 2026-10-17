@@ -1,0 +1,309 @@
+# Target C-II — `t<=1.844` forces retained dominant mass `>2.217D` and at most `541` switching diameter edges
+
+**Date:** 2026-09-15  
+**Status:** proof-only source-level structural strengthening  
+**Scope:** full-core Type-II branch with `t=(q-k)/D<=1.844`  
+**Dependencies:** scope-safe matched atomic gap `g=0.007707`; residual stability/shared retention/complement incidence; existing `z>2.2069` phase theorem for the scope gate; optimized adjacent-backbone and switching-caterpillar theorems  
+**Certificate:** `research/verify_target_c_t1844_retention_2217.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The previous uniform `t<=1.844` phase theorem proved retained dominant outer-occurrence mass
+
+\[
+z>2.2069-o(1).
+\]
+
+The residual-coupled incidence inequality is strong enough at the same endpoint to
+bootstrap this to
+
+\[
+\boxed{z>2.217-o(1).}
+\tag{R217.1}
+
+This simultaneously shrinks the complete Woodall/rigidity defect and the full actual
+diameter-edge density.  On the optimized adjacent backbone, the finite switching cusp
+therefore drops from at most `542` to at most
+
+\[
+\boxed{541}
+\]
+
+actual diameter edges for all sufficiently large survivors.
+
+---
+
+## 1. Residual-stability scope remains valid
+
+Use
+
+\[
+C_{707}=2\sqrt{\Delta_2}+0.007707,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+\]
+
+and residual variables
+
+\[
+2\delta+x+h
+=R_t:={9t\over2}-2\pi-C_{707},
+\qquad
+x={\kappa\over2},
+\qquad
+\kappa={d_H+s_Z\over D}.
+\tag{R217.2}
+
+The already-proved `z>2.2069` input gives
+
+\[
+\delta>F(2.2069)-o(1),
+\qquad
+F(z)=z-6\sin(z/6).
+\]
+
+Hence at `t<=1.844`, even before the new bootstrap,
+
+\[
+U_{net}
+\le {9t\over2}-2\pi-2F(2.2069)+o(1)
+<1.916+o(1),
+\]
+
+well inside the hostile-audited residual-stability range `U_net<=2.013`.
+
+---
+
+## 2. Residual slack is below `0.00225`
+
+Put
+
+\[
+T=1.844,
+\qquad
+H=0.00225.
+\]
+
+At the adverse point `t=T`, `h=H`, `x=0`, write
+
+\[
+\delta_H={R_T-H\over2}
+\]
+
+and
+
+\[
+A_H
+=
+\pi-{T\over2}-1.05H
+-{1.05^2H^2\over2(1-\delta_H)}.
+\]
+
+The exact outward certificate proves
+
+\[
+\boxed{F(A_H)-\delta_H>3.9\times10^{-6}.}
+\tag{R217.3}
+\]
+
+The parent survivor function is still strictly decreasing in both `x` and `h` on this
+box (`Q_x<-2.7`, `Q_h<-2.5`) and increasing in `t`.  Consequently every survivor with
+`t<=T` has
+
+\[
+\boxed{0\le h<0.00225-o(1).}
+\tag{R217.4}
+
+---
+
+## 3. Capped retention at `Z=2.217` is impossible
+
+Assume
+
+\[
+z\le Z:=2.217.
+\]
+
+The hostile-audited shared-retention/complement-incidence package gives
+
+\[
+z+
+{1.05^2h^2+\delta-F(z)\over2(1-\delta)}
+\ge
+\pi-{t\over2}-x-1.05h-o(1)
+\tag{R217.5}
+\]
+
+on the energy-feasible side `F(z)<=delta`.
+
+As in the audited `1.8436` retention proof, the left side is increasing in `z`, and on
+`delta>=F(Z)` the capped survivor excess increases with `x` until the boundary
+`delta=F(Z)` is reached.  Put
+
+\[
+h_*=R_T-2F(Z).
+\]
+
+The exact enclosure gives
+
+\[
+\boxed{h_*=0.00227275640835\ldots>H.}
+\tag{R217.6}
+
+Thus for every allowed `h<=H` the energy boundary is reached at the nonnegative value
+
+\[
+x=h_*-h.
+\]
+
+On that boundary the capped excess increases with `h`, so the adverse point is `h=H`.
+The exact certificate gives
+
+\[
+\boxed{
+Z+{1.05^2H^2\over2(1-F(Z))}
+-\pi+{T\over2}+h_*+0.05H
+<-2.0\times10^{-4}.
+}
+\tag{R217.7}
+
+The complementary `delta<F(Z)` branch reduces to the same boundary using the parent
+`Q_x<0` monotonicity, exactly as in the hostile-audited predecessor.  Therefore the
+assumption `z<=Z` is impossible and (R217.1) follows.
+
+The certificate also records
+
+\[
+\boxed{F(2.217)>0.0501046613420736.}
+\tag{R217.8}
+
+---
+
+## 4. The complete topology defect is below `0.004546D`
+
+Since `h>=0`, equations (R217.2) and (R217.8) imply at `t<=T`
+
+\[
+{\kappa\over2}
+\le
+R_T-2F(2.217)+o(1).
+\]
+
+The exact certificate obtains
+
+\[
+\boxed{\kappa<0.004545513+o(1).}
+\tag{R217.9}
+
+Let `h_H` denote the number of actual diameter edges.  The exact ledger
+
+\[
+q-k=h_H-s_Z=tD,
+\qquad s_Z\le k
+\]
+
+gives
+
+\[
+{h_H\over D}
+=t+{s_Z\over D}
+\le t+\kappa.
+\]
+
+Therefore
+
+\[
+\boxed{{h_H\over D}<1.848545513+o(1).}
+\tag{R217.10}
+
+and the total adjacent interval-switch budget on any selected backbone is
+
+\[
+\boxed{
+\sum_iN_i
+\le2h_H
+<3.697091026D+o(D).
+}
+\tag{R217.11}
+
+---
+
+## 5. Optimized path plus Pareto selection gives at most `541` rows
+
+The optimized backbone theorem supplies path density
+
+\[
+p=0.00682246453482\ldots .
+\]
+
+Hence the count-only average satisfies
+
+\[
+{3.697091026\over p}
+=541.899633\ldots<542.
+\tag{R217.12}
+
+To keep the phase and switching-multiplier properties on the same boundary, apply the
+Pareto union bound with
+
+\[
+n=542,
+\qquad a=b=10^{14}.
+\]
+
+The exact certificate checks that the count-bad, multiplier-bad, and phase-bad density
+sum remains below `p` by more than `10^{-6}`.  Thus one internal boundary satisfies
+
+\[
+N_i<542,
+\]
+
+\[
+B_i=O(D^{-1}),
+\]
+
+and
+
+\[
+d_{\mathbb{RP}^1}(u_i,u_{i+1})=O(D^{-1}).
+\]
+
+Since `N_i` is integer,
+
+\[
+\boxed{N_i\le541.}
+\tag{R217.13}
+
+The switching rows are exactly one layer cut of the straight-line diameter thrackle,
+so the switching-caterpillar theorem upgrades this to
+
+\[
+\boxed{
+H_{sw}\text{ is a caterpillar forest with at most }541\text{ edges}.
+}
+\tag{R217.14}
+
+---
+
+## 6. Frontier effect
+
+The live `t<=1.844` full-core obstruction now has the source-level normal form
+
+```text
+retained dominant outer mass > 2.217D
+complete Woodall/rigidity defect k < 0.004546D
+actual diameter-edge density < 1.848546D
+one optimized adjacent O-O layer interface
++ at most 541 switching diameter edges
++ switching graph is a caterpillar forest
++ switching beta mass O(1/D)
++ leaf phase mismatch O(1/D)
++ exact opposite finite two-cut shear
+```
+
+The scalar `t` endpoint is not closed by this theorem.  The remaining obstruction is
+still the full-support max-function cusp on a finite active diameter interface.  The
+new point is that both the global topology defect and the finite interface have become
+quantitatively very small at the same uniform `1.844` endpoint.
+
+**Disposition:** proved proof-only residual/retention and finite-cusp strengthening.
+C-II and Level I remain open.

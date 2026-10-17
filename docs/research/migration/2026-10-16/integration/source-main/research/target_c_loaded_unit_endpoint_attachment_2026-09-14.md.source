@@ -1,0 +1,317 @@
+# Target C-II — loaded-unit endpoints force unloaded attachment
+
+**Date:** 2026-09-14  
+**Status:** proof-only structural theorem; theorem-state authority unchanged  
+**Scope:** canonical full-core near-disk C-II branch; low-`t` constants use the proof-only minimax atomic gap `0.0021` / §171  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The boundary-atom inequality
+
+\[
+N_2+2e_{BB}\ge3q-b
+\]
+
+still contains `e_BB`, the number of exact unit contacts between consecutive loaded
+force-hull vertices.  This note eliminates that currency into actual loaded-to-unloaded
+attachments and the already extracted double-unit-corner geometry.
+
+Let `C_11` be the number of loaded hull vertices whose two adjacent hull sides are
+both unit contacts.  Let `J_BI` be the number of distinct loaded-to-unloaded contact
+edges obtained from loaded hull vertices incident to exactly one loaded-unit hull
+side.  Let
+
+\[
+s_B=\sum_{b\in B}(3-\deg_Cb)
+\]
+
+and let `E_in` be the strongly inward loaded-to-unloaded contacts supplied by the
+double-unit-corner theorem.
+
+The exact new conclusions are
+
+\[
+\boxed{J_{BI}\ge2(e_{BB}-C_{11}),}
+\tag{UA.1}
+\]
+
+\[
+\boxed{e_{BB}\le C_{11}+{J_{BI}\over2},}
+\tag{UA.2}
+\]
+
+and therefore, using `s_B+|E_in|>=C_11-6`,
+
+\[
+\boxed{
+N_2+J_{BI}+2s_B+2|E_{in}|
+\ge3q-b-12.
+}
+\tag{UA.3}
+\]
+
+Thus the large loaded-unit boundary branch cannot remain a boundary-only currency.
+It must create loaded-to-unloaded contact attachment, loaded degree slack, or strongly
+inward attachment at linear scale.
+
+## 1. A loaded endpoint of a unit hull side cannot have contact degree one
+
+Let `AB` be a unit side of the loaded force hull `F`, and orient a unit normal `n`
+strictly into `F` from the supporting line through `AB`.
+
+Take the canonical relative-interior full-support KKT stress.  Since `A` is loaded,
+it is incident to at least one actual diameter edge `AX` with positive multiplier.
+Every actual diameter endpoint belongs to the loaded vertex set `B=Vert(F)`.
+Because `AB` is a side of the convex polygon `F`, every loaded vertex other than
+`A,B` lies strictly in the inward half-plane.  A diameter partner `X` cannot equal
+`B`, since `|A-B|=1<D` for the asymptotic branch.  Hence
+
+\[
+(X-A)\cdot n>0,
+\qquad
+(A-X)\cdot n<0.
+\tag{UA.4}
+\]
+
+All actual diameter multipliers are positive in the full-support normalization, so the
+reaction vector
+
+\[
+g_A:=\sum_{AX\in H}\beta_{AX}(A-X)
+\]
+
+satisfies
+
+\[
+\boxed{g_A\cdot n<0.}
+\tag{UA.5}
+\]
+
+KKT equilibrium at `A` is
+
+\[
+g_A=\sum_{AU\in C}\alpha_{AU}(A-U),
+\qquad \alpha_{AU}>0.
+\tag{UA.6}
+\]
+
+If `AB` were the only contact incident to `A`, the right side of (UA.6) would be
+`alpha_AB(A-B)`, tangent to the support line, and therefore would have zero dot product
+with `n`.  This contradicts (UA.5).
+
+Hence:
+
+\[
+\boxed{
+\text{every endpoint of an exact loaded-unit hull side has contact degree at least two.}
+}
+\tag{UA.7}
+\]
+
+This argument is finite.  It uses neither a multiplier lower bound nor an asymptotic
+near-circle direction estimate.
+
+## 2. A single-unit endpoint must attach to an unloaded vertex
+
+Canonical loaded-chord elimination says every loaded-loaded unit contact is a side of
+the loaded force hull.  Therefore the loaded-unit contact graph is exactly a subgraph
+of the cyclic hull-side graph.
+
+Call a loaded hull vertex **single-unit** when exactly one of its two hull sides is a
+unit contact.  Let `V_1` be the number of such vertices.
+
+Fix a single-unit vertex `A`, and let `AB` be its unique unit loaded-hull side.  By
+(UA.7), `A` has another contact.  If an additional contact joined `A` to another
+loaded vertex, loaded-chord elimination would make that contact the other hull side,
+contradicting the definition of single-unit.  Hence every additional contact at `A`
+is loaded-to-unloaded.
+
+Choose one such contact from every single-unit vertex.  The chosen edges are distinct:
+a loaded-to-unloaded edge has only one loaded endpoint, and the selected loaded
+endpoints are distinct.  Therefore
+
+\[
+\boxed{J_{BI}\ge V_1.}
+\tag{UA.8}
+\]
+
+## 3. Exact cycle handshake
+
+In the loaded-unit hull-side graph every loaded vertex has degree zero, one, or two.
+The degree-two vertices are exactly the `C_11` double-unit corners; the degree-one
+vertices are exactly the `V_1` single-unit vertices.  Handshake gives
+
+\[
+2e_{BB}=V_1+2C_{11}.
+\tag{UA.9}
+\]
+
+Thus
+
+\[
+\boxed{V_1=2(e_{BB}-C_{11}).}
+\tag{UA.10}
+\]
+
+Combining (UA.8) and (UA.10) proves (UA.1), and rearranging gives (UA.2).
+
+The count has no matching loss: every single-unit endpoint itself supplies an
+unloaded attachment.
+
+## 4. Eliminate `e_BB` from the low-`t` boundary atom ledger
+
+The exact boundary-atom theorem gives
+
+\[
+\boxed{N_2+2e_{BB}\ge3q-b.}
+\tag{UA.11}
+\]
+
+The double-unit-corner theorem gives
+
+\[
+\boxed{s_B+|E_{in}|\ge C_{11}-6.}
+\tag{UA.12}
+\]
+
+Equation (UA.2) and (UA.12) imply
+
+\[
+\begin{aligned}
+2e_{BB}
+&\le2C_{11}+J_{BI}\\
+&\le2s_B+2|E_{in}|+12+J_{BI}.
+\end{aligned}
+\tag{UA.13}
+\]
+
+Insert (UA.13) into the left side of (UA.11).  Because the replacement is an upper
+bound for the same positive currency,
+
+\[
+N_2+J_{BI}+2s_B+2|E_{in}|+12
+\ge N_2+2e_{BB}
+\ge3q-b.
+\]
+
+This proves (UA.3).
+
+Every term on the left of (UA.3) now has direct finite source meaning:
+
+- `N_2`: genuine two-edge outer teeth;
+- `J_BI`: distinct unit contacts from single-unit loaded boundary vertices to unloaded
+  core vertices;
+- `s_B`: loaded contact-degree deficit;
+- `E_in`: distinct strongly inward loaded-to-unloaded unit contacts from double-unit
+  corners.
+
+## 5. Low-`t` quantitative consequence
+
+On a convergent Type-II subsequence write
+
+\[
+t={q-k\over D},\qquad
+\kappa={k\over D},\qquad
+\delta={b-P_F\over D}.
+\]
+
+Then
+
+\[
+{3q-b\over D}
+=3t+3\kappa-\pi-\delta+o(1).
+\tag{UA.14}
+\]
+
+The current proof-only minimax/§171 squeeze is
+
+\[
+2\delta+{\kappa\over2}\le R(t),
+\qquad
+R(t)={9t\over2}-2\pi-C_0,
+\qquad
+C_0=2\sqrt{\Delta_2}+0.0021.
+\tag{UA.15}
+\]
+
+At fixed `t`, the minimum of `3 kappa-delta` occurs at
+`kappa=0`, `delta=R(t)/2`.  Therefore
+
+\[
+\boxed{
+\liminf {3q-b\over D}
+\ge 3t-\pi-{R(t)\over2}
+={3t\over4}+{C_0\over2}.
+}
+\tag{UA.16}
+\]
+
+Divide (UA.3) by `D`.  The finite constant `12` disappears, and if
+
+\[
+M_{phys}:=\max\{N_2,J_{BI},s_B,|E_{in}|\},
+\]
+
+then the weighted left side of (UA.3) is at most `6M_phys`.  Hence
+
+\[
+\boxed{
+\liminf {M_{phys}\over D}
+\ge {t\over8}+{C_0\over12}.
+}
+\tag{UA.17}
+\]
+
+At the current proof-only floor
+
+\[
+t_{21}={4\over9}\left(\pi+\sqrt{\Delta_2}\right)+0.0017279,
+\]
+
+this gives approximately
+
+\[
+\boxed{
+M_{phys}\ge0.38654898\,D-o(D).
+}
+\tag{UA.18}
+\]
+
+This is more than twice the previous three-currency floor from the double-unit-corner
+note.  The improvement comes from using every endpoint of the loaded-unit side graph,
+not only vertices where two unit sides meet.
+
+## 6. Relation to the near-diameter switch theorem
+
+The near-diameter switch theorem gives a different refinement of the same `e_BB`
+currency: a large matching of loaded-unit contacts forces either shell wedges in the
+actual diameter graph or linearly many inactive `D-O(D^{-1/4})` source pairs.
+
+The present theorem is orthogonal and finite at contact scale.  Even in the shell-wedge
+regression, every single-unit endpoint still needs an unloaded contact unless it
+continues into a double-unit boundary corner.  Therefore the regular-shell local model
+can persist only by paying either boundary continuation or core attachment.
+
+A closing theorem can now attack either side:
+
+1. use the `J_BI/E_in` population to force contact/train area or response cost; or
+2. use the near-active diameter switches to force an active-set exchange or global
+   packing loss.
+
+## 7. Scope audit
+
+- The strict normal component in (UA.5) uses that `B=Vert(F)` and that `AB` is a hull
+  side; no smoothness or near-circle approximation is used.
+- Full-support KKT positivity is used only to make at least one strict diameter normal
+  contribution survive.
+- Loaded-chord elimination is used exactly once: an extra loaded contact at a
+  single-unit endpoint would have to be the other hull side.
+- The cycle handshake (UA.9) is exact because all loaded-loaded contacts are hull
+  sides in the full-core near-disk branch.
+- `J_BI` is a set of distinct physical unit contacts, not an occurrence count.
+- Contact-isolated source points are retained and do not enter the positive-core
+  incidence count.
+- The low-`t` decimal inherits the proof-only minimax-atomic-gap lifecycle.
+- No exact unit equilateral triangle or strict same-cardinality sub-`D` competitor has
+  been produced.
+
+**Disposition:** proof-only structural theorem.  C-II and Level I remain open.

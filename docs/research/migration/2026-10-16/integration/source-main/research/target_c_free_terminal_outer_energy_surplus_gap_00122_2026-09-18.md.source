@@ -1,0 +1,254 @@
+# Target C-II — certified `0.00122` terminal FREE surplus gap
+
+**Date:** 2026-09-18  
+**Status:** proof-only numerical sharpening; theorem-state authority unchanged  
+**Scope:** full-core Type-II terminal FREE survivor sequences with `pi D-q=o(D)`  
+**Refines:** `target_c_free_terminal_outer_energy_surplus_gap_2026-09-18.md`  
+**Certificate:** `research/verify_target_c_free_terminal_outer_energy_surplus_gap_00122_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The outer-energy surplus-gap argument has enough exact margin to replace the safe
+`0.0012` constant by
+
+\[
+\boxed{\varepsilon_1=0.00122=\frac{61}{50000}.}
+\]
+
+Thus every terminal full-core Type-II FREE survivor sequence satisfies
+
+\[
+\boxed{
+\liminf \mu_D
+\ge
+\mu_*+0.00122
+=
+1.954482849540479\ldots,
+}
+\tag{R.1}
+\]
+
+where
+
+\[
+\mu_*=
+\frac\pi2+\frac25\sqrt{\frac\pi{2\sqrt3}}+\frac{0.007707}{5}
+=1.953262849540479\ldots .
+\]
+
+This uses exactly the same proof as the preceding note. Only four scalar cutoffs are
+tightened. The new value is close to the numerical ceiling of this composition
+(`~0.00122124`), so further decimal polishing of the same inequalities is not a useful
+closure route.
+
+---
+
+## 1. Stability window
+
+Assume for contradiction that along a terminal FREE subsequence
+
+\[
+\limsup\mu_D\le\mu_*+\varepsilon_1.
+\]
+
+The surplus-endpoint stability decomposition gives
+
+\[
+a\le5\varepsilon_1=0.0061,
+\qquad
+\delta\le\frac52\varepsilon_1=0.00305,
+\tag{R.2}
+\]
+
+where
+
+\[
+a=\lim\left(\frac{\tau_D}{D}-\left(\frac\pi2+g\right)\right),
+\qquad
+\delta=\lim\frac{b-\operatorname{per}(F)}D,
+\qquad g=0.007707.
+\]
+
+The all-train scalar therefore satisfies
+
+\[
+C=2s_2+g+a
+\le2s_2+g+0.0061,
+\qquad
+s_2=\sqrt{\frac\pi{2\sqrt3}}.
+\tag{R.3}
+\]
+
+As in the preceding proof, if `R` is the atomic train mass outside a dominant exact
+`pi/3` orbit, then
+
+\[
+R\le C-\frac{4\Delta_2}{C},
+\qquad
+\Delta_2=\frac\pi{2\sqrt3}.
+\]
+
+The exact certificate gives
+
+\[
+\boxed{R<0.027515.}
+\tag{R.4}
+\]
+
+---
+
+## 2. Dominant-orbit outer occurrence cutoff
+
+Use
+
+\[
+z_1:=0.8705=\frac{1741}{2000}.
+\]
+
+For the hostile-audited dominant-orbit route-energy function
+
+\[
+F(z)=z-6\sin(z/6),
+\]
+
+the alternating sine estimate gives
+
+\[
+\begin{aligned}
+F(z_1)
+&\ge
+\frac{z_1^3}{216}-\frac{z_1^5}{155520}\\
+&=0.00305067018440117\ldots\\
+&>0.00305.
+\end{aligned}
+\tag{R.5}
+\]
+
+Since the entire outer detour is at most `0.00305D`, the dominant-orbit outer
+occurrence density `K` obeys
+
+\[
+K\le\delta+z_1.
+\tag{R.6}
+\]
+
+Residual atomic trains contribute at most `2R` further outer occurrences.
+
+---
+
+## 3. Forced O--O pair mass
+
+The exact B--B/B--O/O--O endpoint transport identities from the preceding proof then
+give
+
+\[
+\ell:=\lim\frac{L_O}{D}
+\ge
+\frac\pi2-g-a-z_1-2R.
+\tag{R.7}
+\]
+
+Retaining O--O endpoint weight under loaded-hull side-length capacity loses at most
+`delta` pair mass. Hence the retained O--O pair density `p` satisfies
+
+\[
+\begin{aligned}
+p
+&\ge
+\frac\pi2-g-a-z_1-2R-\delta\\
+&>0.628409326794896\ldots,
+\end{aligned}
+\tag{R.8}
+\]
+
+and in particular
+
+\[
+\boxed{p>0.6284.}
+\tag{R.9}
+\]
+
+One of the three half-open projective sectors of width `pi/3` therefore contains
+retained pair mass at least
+
+\[
+\boxed{
+m_1=\frac{0.6284}{3}=0.209466666666666\ldots .}
+\tag{R.10}
+\]
+
+---
+
+## 4. One sector still exceeds the whole detour budget
+
+The hostile-audited same-sector noncrossing O--O energy theorem gives
+
+\[
+E(m)=2m-2\sin m.
+\]
+
+For `m_1<pi/6`, the alternating sine estimate yields
+
+\[
+\begin{aligned}
+E(m_1)
+&\ge
+\frac{m_1^3}{3}-\frac{m_1^5}{60}\\
+&=0.00305681884583903\ldots\\
+&>0.00305.
+\end{aligned}
+\tag{R.11}
+\]
+
+This selected terminal-edge energy is a sub-sum of the total outer route directional
+energy, whose normalized total is `delta<=0.00305`. Contradiction.
+
+Therefore (R.1) holds.
+
+---
+
+## 5. Saturation of this scalar composition
+
+If one replaces the rational thresholds above by the exact inverse of `F` and uses the
+exact residual expression
+
+\[
+R(C)=C-\frac{4\Delta_2}{C},
+\]
+
+the final sector-energy margin changes sign numerically near
+
+\[
+\varepsilon\approx0.00122124.
+\]
+
+That number is exploratory only. The certified theorem stops at `0.00122`, leaving an
+exact positive margin in both load-bearing Taylor inequalities.
+
+Accordingly, the next useful work is not another decimal of this endpoint gap. The
+new information should be propagated into the terminal source-level ledgers. In
+particular, canonical loaded-contact localization gives asymptotically
+
+\[
+\mu_D
+=
+\frac{q-k+m_B}{D}+o(1)
+=
+t_D+\frac{m_B}{D}+o(1),
+\]
+
+so (R.1) already forces the Pareto constraint
+
+\[
+\boxed{
+\liminf\left(t_D+\frac{m_B}{D}\right)
+\ge1.954482849540479\ldots .
+}
+\tag{R.12}
+\]
+
+Thus in the subbranch `m_B=o(D)` the terminal `t` floor itself improves by `0.00122`,
+while a survivor remaining near the old `t` floor must carry a linear population of
+nonunit force-hull sides. That is the branch split to combine next with the aggregate
+Sections 121--123 detour/payment system.
+
+No theorem-state file is changed.

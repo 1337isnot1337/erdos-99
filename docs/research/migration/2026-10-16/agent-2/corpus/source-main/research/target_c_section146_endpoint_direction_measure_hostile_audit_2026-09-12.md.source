@@ -1,0 +1,266 @@
+# Hostile audit — Section-146 endpoint direction-measure exclusion
+
+**Date:** 2026-09-12  
+**Reviewed:** `research/target_c_section146_endpoint_direction_measure_exclusion_2026-09-12.md`  
+**Disposition:** **PASS at proof-only Type-II scope.**  
+**Theorem authority:** unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The theorem excludes a Type-II sequence with
+
+\[
+(q-k)/D\to C_{146},
+\qquad
+C_{146}={4\over9}\left(\pi+\sqrt{\pi/(2\sqrt3)}\right).
+\]
+
+The proof uses equality in the audited §142 atomic/non-atomic phase split plus the
+already audited §146 endpoint stability. The fragile points are checked separately
+below.
+
+## 1. Endpoint constants and face density
+
+Put
+
+\[
+s=\sqrt{\pi/(2\sqrt3)}.
+\]
+
+At `t=(q-k)/D -> C_146`, the audited §146 stability theorem gives
+`k/D->0`, `(Q-f)/D->0`, and `(b-per(F))/D->0`.
+
+The §146 face lower bound becomes
+
+\[
+\liminf f/D\ge s-C_{146}/4,
+\]
+
+while `Q<=2(q-k)-per(F)` and `per(F)/D->pi` give
+
+\[
+\limsup f/D\le2C_{146}-\pi.
+\]
+
+Direct algebra gives
+
+\[
+s-C_{146}/4
+=2C_{146}-\pi
+={8s-\pi\over9}.
+\]
+
+Thus the claimed limit of `f/D` is exact. With `T=q+2f-k`,
+
+\[
+{T\over D}\to x={C_{146}\over2}+2s,
+\]
+
+so
+
+\[
+x-C_{146}/2=2s.
+\]
+
+**Verdict:** PASS.
+
+## 2. Equality in the §142 phase inequalities is forced
+
+Let `a` be total atomic mass in a limiting empirical train-phase measure and let
+`y=C_146/x`. Audited §142 gives
+
+\[
+2s\le xa,
+\qquad
+y\le2(1-a).
+\]
+
+The second inequality implies
+
+\[
+xa\le x-C_{146}/2=2s.
+\]
+
+Hence
+
+\[
+xa=2s,
+\qquad
+x(1-a)=C_{146}/2.
+\]
+
+There is no room for an untracked positive slack.
+
+**Verdict:** PASS.
+
+## 3. Atomic support collapses to one three-axis orbit
+
+The exact `+-pi/3` relation on the projective circle decomposes into disjoint orbits of
+three points. If one orbit carries atomic mass `m_j`, triangle-freeness bounds its
+crossing mass by `m_j^2/4`. Therefore total atomic crossing mass is at most
+
+\[
+{1\over4}\sum_jm_j^2
+\le a^2/4.
+\]
+
+At the endpoint,
+
+\[
+\Delta_2/x^2=s^2/x^2=a^2/4,
+\]
+
+so every inequality is equality. In particular
+
+\[
+\sum_jm_j^2=(\sum_jm_j)^2.
+\]
+
+For nonnegative masses this forces at most one nonzero orbit. Hence all atomic mass is
+supported on three projective axes
+
+\[
+\alpha,\quad\alpha+\pi/3,\quad\alpha+2\pi/3.
+\]
+
+The argument does **not** claim that the three atoms all have positive mass or that
+the full train graph is near-Mantel. Only the atomic subgraph is saturated.
+
+**Verdict:** PASS.
+
+## 4. Equality in hull exposure forces `q+o(D)` non-atomic outer occurrences
+
+This step was compared line-by-line with audited §142.4.
+
+For fixed `M`, only `2T/(M+1)` loaded-hull intervals are long. For shrinking
+neighborhoods of the complete three-axis atomic support, the number of short intervals
+whose train occurrences all remain in those neighborhoods is `o(D)` after the order
+`D->infinity`, neighborhood width `->0`, then `M->infinity`.
+
+Thus `q-o(D)` distinct outer occurrences lie on trains outside the shrinking atomic
+neighborhoods. The total number of such trains is
+
+\[
+(C_{146}/2+o(1))D
+\]
+
+by phase-mass equality, and each train has at most two outer occurrences. Their total
+outer capacity is therefore `C_146 D+o(D)=q+o(D)`. Both bounds match, so
+
+\[
+N_{out}^{nonatom}=q+o(D).
+\]
+
+Since `b/D->pi`, at least
+
+\[
+(\pi-C_{146})D-o(D)
+\]
+
+outer occurrences lie inside the shrinking three-axis neighborhoods.
+
+No assumption is made that every outer occurrence is the distinguished occurrence of
+a hull interval. Occurrence multiplicity is retained throughout.
+
+**Verdict:** PASS.
+
+## 5. Near-disk perimeter saturation determines the full outer direction measure
+
+Define
+
+\[
+\nu_D=D^{-1}\sum_{e\in W_{out}}\delta_{\phi_e}.
+\]
+
+For
+
+\[
+V_D(\theta)=\sum_e|\cos(\theta-\phi_e)|,
+\]
+
+the closed projected walk visits the projection extrema of `F`, because the convex
+hull of its vertices is `F`. Thus
+
+\[
+V_D(\theta)\ge2w_F(\theta).
+\]
+
+Integrating gives exactly
+
+\[
+\int_0^\pi(V_D-2w_F)
+=2(b-per(F))=o(D).
+\]
+
+The integrand is nonnegative and Type-II Hausdorff near-disk convergence gives
+`w_F(theta)/D->1` uniformly. Therefore `V_D/D->2` in `L^1`.
+
+After weakly passing `nu_D->nu`, the kernels `|cos(theta-phi)|` are uniformly
+Lipschitz in `theta` and the masses are bounded, so the convolutions converge uniformly
+to `|cos|*nu`. Hence the latter is identically two.
+
+**Verdict:** PASS.
+
+## 6. The projective cosine transform has no nontrivial null Fourier modes
+
+On the period-`pi` circle,
+
+\[
+|\cos t|
+={2\over\pi}
++{4\over\pi}
+\sum_{n\ge1}{(-1)^{n+1}\over4n^2-1}\cos(2nt).
+\]
+
+Every nonconstant Fourier coefficient is nonzero. Thus if `|cos|*nu` is constant,
+all nonzero Fourier coefficients of `nu` vanish. A finite measure on a compact circle
+is determined by its Fourier coefficients, so `nu` is constant Lebesgue measure.
+Its mass is `lim b/D=pi`, hence
+
+\[
+d\nu=d\phi.
+\]
+
+It has no atoms.
+
+**Verdict:** PASS.
+
+## 7. Shrinking-axis mass really produces an atom in the weak limit
+
+The three axes are fixed after the limiting phase measure is chosen. Let `U_D` be the
+shrinking neighborhoods from the hull-exposure diagonalization. For every fixed
+`epsilon>0`, eventually
+
+\[
+U_D\subset N_\epsilon(\mathcal A).
+\]
+
+The endpoint proof gives
+
+\[
+\nu_D(U_D)\ge\pi-C_{146}-o(1).
+\]
+
+By weak convergence and then `epsilon downarrow0`,
+
+\[
+\nu(\mathcal A)\ge\pi-C_{146}>0.
+\]
+
+This contradicts the Lebesgue conclusion. The use of shrinking sets is therefore
+legitimate; no invalid direct Portmanteau step is needed.
+
+**Verdict:** PASS.
+
+## 8. Scope and non-implications
+
+- The proof excludes only endpoint-approaching Type-II sequences.
+- It gives no explicit numerical gap above `C_146` and no finite rate.
+- It does not eliminate Type-II sequences bounded away from the endpoint.
+- It does not address the unified Type-I macroscopic-container packing obstruction.
+- All source points are retained and no affine-kernel theorem is extended to isolates.
+
+## Final disposition
+
+**PASS at proof-only scope.** The live audited-working §146 endpoint is structurally
+impossible. C-II remains open away from that endpoint and in the Type-I container
+branch.

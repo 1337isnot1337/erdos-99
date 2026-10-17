@@ -1,0 +1,168 @@
+#!/usr/bin/env python3
+"""Close the e=6, m<=5 slice of the final p=6 branch.
+
+Inputs already proved in the repository:
+  * rank(P)=3 and generalized weights (d1,d2,d3)>=(2,4,5);
+  * six touched singleton replacements, no selected pair;
+  * e touched actual-empty blocks;
+  * nu(T)<=e+1.
+
+For e=6 this gives nu(T)<=7. The verifier enumerates the m<=5
+support/multiplicity quotient, applies phase-independent necessary conditions
+for six actual-empty blocks, then checks every retained phase. Mod-2 rank is
+used only as a one-way lower bound: rank_F2(U)>3 implies rank_Q(U)>3.
+"""
+from collections import Counter
+from itertools import combinations
+from pathlib import Path
+import contextlib
+import importlib.util
+import io
+
+HERE = Path(__file__).resolve().parent
+BASE = HERE / "verify_target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d0p6_e5_mod2_closure_2026_09_26.py"
+spec = importlib.util.spec_from_file_location("p6_e6_m5_parent", BASE)
+E5 = importlib.util.module_from_spec(spec)
+with contextlib.redirect_stdout(io.StringIO()):
+    spec.loader.exec_module(E5)
+
+B = E5.B
+M = E5.M
+SUPPORTS = E5.SUPPORTS
+PERM_DATA = E5.PERM_DATA
+
+
+def support_orbits_through_m5():
+    reps = {}
+    unseen = set(combinations(range(35), 3))
+    out = []
+    while unseen:
+        ss = min(unseen)
+        orbit = {
+            tuple(sorted(smap[i] for i in ss))
+            for smap, _ in PERM_DATA
+        }
+        unseen.difference_update(orbit)
+        if B.support_nullity(ss) <= 7:
+            out.append(ss)
+    reps[3] = tuple(out)
+
+    for m in (4, 5):
+        cands = set()
+        for ss in reps[m - 1]:
+            for j in range(35):
+                if j in ss:
+                    continue
+                u = tuple(sorted(ss + (j,)))
+                if B.support_nullity(u) <= 7:
+                    cands.add(B.canonical_support(u))
+        reps[m] = tuple(sorted(cands))
+
+    got = {
+        m: (len(v), dict(sorted(Counter(B.support_nullity(s) for s in v).items())))
+        for m, v in reps.items()
+    }
+    assert got == {
+        3: (10, {3: 10}),
+        4: (38, {4: 35, 5: 3}),
+        5: (137, {4: 1, 5: 107, 6: 27, 7: 2}),
+    }, got
+    return reps
+
+
+def empty_sextuples(ss, a):
+    poss = {}
+    for b, tri in enumerate(M.R.BLOCK_LABELS):
+        idx = tuple(
+            j for j, si in enumerate(ss)
+            if set(tri).issubset(SUPPORTS[si])
+        )
+        if not idx:
+            continue
+        n = sum(a[j] for j in idx)
+        forced_two = any(a[j] >= 2 for j in idx)
+        if forced_two:
+            if n < 4:
+                continue
+            poss[b] = (idx, 2)
+        else:
+            if n < 2:
+                continue
+            poss[b] = (idx, 1)
+
+    out = []
+    for q in combinations(poss, 6):
+        ok = True
+        for x, y in combinations(q, 2):
+            if poss[x][1] == poss[y][1] == 2:
+                shared = set(poss[x][0]) & set(poss[y][0])
+                if sum(a[j] for j in shared) < 2:
+                    ok = False
+                    break
+        if ok:
+            out.append(q)
+    return tuple(out)
+
+
+def main():
+    reps = support_orbits_through_m5()
+
+    assignments = Counter()
+    kept_assignments = Counter()
+    kept_sextuples = Counter()
+    kept = []
+
+    for m in (3, 4, 5):
+        for ss in reps[m]:
+            for profile in E5.PROFILES[m]:
+                for a in B.assignment_orbits(ss, profile):
+                    profile_key = tuple(sorted(a, reverse=True))
+                    key = (m, profile_key)
+                    assignments[key] += 1
+                    qs = empty_sextuples(ss, a)
+                    if qs:
+                        kept_assignments[key] += 1
+                        kept_sextuples[key] += len(qs)
+                        kept.append((ss, a, qs))
+
+    assert dict(assignments) == {
+        (3, (3, 3, 2)): 17,
+        (4, (3, 3, 1, 1)): 135,
+        (4, (3, 2, 2, 1)): 226,
+        (4, (2, 2, 2, 2)): 38,
+        (5, (3, 2, 1, 1, 1)): 1731,
+        (5, (2, 2, 2, 1, 1)): 944,
+    }, assignments
+    assert dict(kept_assignments) == {(5, (3, 2, 1, 1, 1)): 8}, kept_assignments
+    assert dict(kept_sextuples) == {(5, (3, 2, 1, 1, 1)): 20}, kept_sextuples
+    assert len(kept) == 8
+
+    counts = Counter()
+    ranks = Counter()
+    for ss, a, qs in kept:
+        blocks = set(b for q in qs for b in q)
+        for ext in B.phase_exts(ss, a):
+            counts["phases"] += 1
+            mm = E5.masks(ext, blocks)
+            for q in qs:
+                counts["phase_sextuple_pairs"] += 1
+                r = E5.rank2(tuple(z for b in q for z in mm[b]))
+                ranks[r] += 1
+                assert r > 3, (ss, a, ext, q, r)
+
+    assert counts["phases"] == 648, counts
+    assert counts["phase_sextuple_pairs"] == 1620, counts
+    assert dict(ranks) == {5: 567, 7: 1053}, ranks
+
+    print("PASS: p=6 e=6 m<=5 closure")
+    print("m5_support_orbits", len(reps[5]))
+    print("m_le_5_support_multiplicity_orbits", sum(assignments.values()))
+    print("prefilter_assignments", len(kept))
+    print("prefilter_empty_sextuples", sum(len(q) for _, _, q in kept))
+    print("phase_configs", counts["phases"])
+    print("phase_empty_sextuple_pairs", counts["phase_sextuple_pairs"])
+    print("rank_F2_census", dict(sorted(ranks.items())))
+
+
+if __name__ == "__main__":
+    main()

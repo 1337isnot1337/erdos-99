@@ -1,0 +1,434 @@
+# Target C-II — the small-leaf O--O family has quadratic crossing incidence with the center phase
+
+**Date:** 2026-09-15  
+**Status:** proof-only phase-resolved structural theorem  
+**Scope:** full-core Type-II branch with `t<=1.844`  
+**Dependencies:** `target_c_small_leaf_phase_outer_pair_weight_t1844_2026-09-15.md`; dominant-orbit triangle-free center/leaf correlation  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The phase-resolved outer-pair theorem gives a retained O--O family of weight `>0.0848D` in the smallest leaf phase of the dominant exact `pi/3` orbit.  This note proves that the family is not an irrelevant low-degree tail: it participates in a quadratic number of actual strict-rhombus crossings with the center phase.
+
+Let the dominant orbit phase masses be
+
+\[
+C\ge U\ge V,
+\qquad
+W=C+U+V,
+\]
+
+and let `Q_V` be the retained weighted O--O subfamily in the `V` phase.  Write
+
+\[
+P_V=|Q_V|/D
+\]
+
+for its normalized retained pair weight.  Then every survivor with
+
+\[
+\boxed{t=(q-k)/D\le1.844}
+\]
+
+satisfies
+
+\[
+\boxed{
+E(C,Q_V)>0.072\,D^2-o(D^2),}
+\tag{CX.1}
+
+where `E(C,Q_V)` is the weighted number of actual strict-rhombus crossings between center-phase trains and the retained `V`-phase O--O trains.
+
+Consequently at least one `V`-phase O--O train of positive retained weight is crossed by
+
+\[
+\boxed{>0.135\,D-o(D)}
+\tag{CX.2}
+
+center-phase complete trains.
+
+This produces one concrete outer-to-outer train cut which is simultaneously:
+
+- in an exact leaf phase;
+- part of a pairwise-noncrossing linear O--O family;
+- crossed by linearly many center-phase trains; and
+- two-sidedly braced by actual diameter edges by Section 157.
+
+---
+
+## 1. Safe rounded inputs from the phase-resolved theorem
+
+The exact companion certificate for the parent theorem gives
+
+\[
+W<1.915963+o(1),
+\tag{CX.3}
+
+\[
+E_{dom}>0.9068958-o(1),
+\tag{CX.4}
+
+\[
+C>0.8538-o(1),
+\tag{CX.5}
+
+and retained outer occurrence mass in the smallest leaf phase
+
+\[
+z_V>0.616-o(1).
+\tag{CX.6}
+
+For every `V`-phase train `tau`, let `w_tau=min(a_tau,b_tau)` be its retained O--O pair weight.  Summing
+
+\[
+a_\tau+b_\tau\le1+w_\tau
+\]
+
+gives
+
+\[
+P_V\ge z_V-V-o(1).
+\tag{CX.7}
+
+Thus, before using the stronger numerical `0.0848` conclusion, retain the variable lower bound
+
+\[
+\boxed{P_V\ge0.616-V-o(1).}
+\tag{CX.8}
+
+This dependence on `V` is needed in the crossing optimization.
+
+---
+
+## 2. Missing center--leaf crossings are controlled by the orbit defect
+
+Let
+
+\[
+x=CU-e(C,U),
+\qquad
+y=CV-e(C,V)
+\]
+
+be the missing crossing masses in the two center/leaf pairs.  Put
+
+\[
+h:=C(U+V)-E_{dom}.
+\tag{CX.9}
+
+The hostile-audited triangle-free center-degree argument gives
+
+\[
+\left(1-{V\over C}\right)x
++
+\left(1-{U\over C}\right)y
+\le h.
+\tag{CX.10}
+
+Set
+
+\[
+b:=1-{U\over C}\ge0.
+\]
+
+Then
+
+\[
+\boxed{y\le CV,}
+\tag{CX.11}
+
+and whenever `b>0`,
+
+\[
+\boxed{y\le {h\over b}.}
+\tag{CX.12}
+
+The weighted O--O subfamily `Q_V` is a submeasure of the full `V`-phase train measure.  The total missing center incidences involving that submeasure are therefore at most the full missing mass `y`.  Hence
+
+\[
+E(C,Q_V)
+\ge C P_V-y-o(1).
+\]
+
+Using (CX.8),
+
+\[
+\boxed{
+{E(C,Q_V)\over D^2}
+\ge
+C(0.616-V)-\min\left\{CV,{h\over b}\right\}-o(1).}
+\tag{CX.13}
+
+It remains to minimize this expression under the safe rounded global constraints.
+
+---
+
+## 3. Push the adverse total mass and crossing defect to their safe endpoints
+
+Use
+
+\[
+W_0=1.915963,
+\qquad
+E_0=0.9068958.
+\tag{CX.14}
+
+For fixed `C,V`, write
+
+\[
+U=W-C-V,
+\qquad
+b={2C+V-W\over C},
+\]
+
+and
+
+\[
+h=C(W-C)-E_{dom}.
+\]
+
+Whenever `b>0`, the quantity
+
+\[
+{h\over b}
+=
+{C[C(W-C)-E_{dom}]\over2C+V-W}
+\]
+
+increases with `W` and decreases with `E_dom`.  Therefore the adverse choice is the largest `W` permitted by both (CX.3) and the ordering `U<=C`:
+
+\[
+W_*:=\min\{W_0,2C+V\},
+\]
+
+and the smallest crossing mass `E_0`.
+
+This reduces the proof to two finite branches.
+
+---
+
+## 4. Ordering-limited branch: `2C+V<=W_0`
+
+Here the adverse total mass reaches the ordering boundary `U=C`, so `b=0` and only the trivial missing bound `y<=CV` is used.
+
+Equation (CX.13) gives
+
+\[
+{E(C,Q_V)\over D^2}
+\ge C(0.616-2V)-o(1).
+\]
+
+The branch condition gives
+
+\[
+V\le W_0-2C
+\le1.915963-2(0.8538)
+=0.208363.
+\]
+
+Therefore
+
+\[
+C(0.616-2V)
+>0.1701>0.072.
+\tag{CX.15}
+
+This branch is far from controlling.
+
+---
+
+## 5. Full-mass branch: `2C+V>W_0`
+
+Now set `W=W_0`.  Put
+
+\[
+H(C):=C(W_0-C)-E_0.
+\]
+
+The actual configuration has `H(C)>=0`; otherwise even the generic center capacity would be below the required dominant crossing mass.
+
+For fixed `C`, let
+
+\[
+V_{max}={W_0-C\over2}
+\]
+
+from the ordering `U>=V`.
+
+The lower bound (CX.13) is
+
+\[
+J(V)
+=
+C(0.616-V)
+-
+\min\left\{
+CV,
+{H(C)C\over2C+V-W_0}
+\right\}.
+\tag{CX.16}
+
+The switch between the two missing-mass bounds is determined by
+
+\[
+V(2C+V-W_0)=H(C).
+\tag{CX.17}
+
+Before the switch, `J(V)=C(0.616-2V)` decreases with `V`.  After the switch,
+
+\[
+J(V)
+=C(0.616-V)
+-{H(C)C\over2C+V-W_0},
+\]
+
+whose second derivative is negative.  Hence on the post-switch interval it is concave and attains its minimum at an endpoint.
+
+Therefore the minimum over all `V` occurs either
+
+1. at the switch (CX.17), or
+2. at the balanced-leaf endpoint `V=V_max`.
+
+### Switch point
+
+Globally,
+
+\[
+H(C)\le {W_0^2\over4}-E_0
+<0.010833.
+\]
+
+If a switch occurred with `V>=0.255`, then using `C>0.8538`,
+
+\[
+V(2C+V-W_0)
+>0.255[2(0.8538)+0.255-1.915963]
+>0.01189,
+\]
+
+contradicting the preceding `H` ceiling.  Thus every switch has
+
+\[
+V<0.255.
+\]
+
+At the switch,
+
+\[
+J=C(0.616-2V)
+>0.8538(0.616-0.510)
+>0.0905>0.072.
+\tag{CX.18}
+
+### Balanced-leaf endpoint
+
+Set
+
+\[
+V=U={W_0-C\over2}.
+\]
+
+Then
+
+\[
+b={3C-W_0\over2C}>0
+\]
+
+and the nontrivial missing bound gives
+
+\[
+J_{bal}(C)
+= C\left(0.616-{W_0-C\over2}\right)
+-
+{2C[C(W_0-C)-E_0]\over3C-W_0}.
+\tag{CX.19}
+
+The denominator is positive for `C>=0.8538`.  To prove `J_bal(C)>0.072`, multiply by `3C-W_0` and define
+
+\[
+N(C):=[J_{bal}(C)-0.072](3C-W_0).
+\]
+
+With the exact rational rounded constants in (CX.14), `N` is the cubic
+
+\[
+\begin{aligned}
+N(C)=\frac12[&-6(0.072)C+2(0.072)W_0
++6(0.616)C^2-2(0.616)CW_0\\
+&+7C^3-8C^2W_0+4CE_0+CW_0^2].
+\end{aligned}
+\tag{CX.20}
+
+The exact verifier proves:
+
+- `N(0.8538)>0`;
+- `N''(C)>0` for every `C>=0.8538`;
+- `N'(0.8575)<0<N'(0.8576)`; and
+- on the only critical interval `[0.8575,0.8576]`, an exact derivative-Lipschitz bound gives
+  \[
+  N(C)>0.00031564.
+  \]
+
+Thus
+
+\[
+\boxed{J_{bal}(C)>0.072}
+\tag{CX.21}
+
+for every feasible `C`.
+
+Combining (CX.15), (CX.18), and (CX.21) proves (CX.1).
+
+---
+
+## 6. One leaf O--O train crosses linearly many center trains
+
+The total retained O--O pair weight in the `V` phase is at most the total `V`-phase train mass.  The parent theorem gives
+
+\[
+P_V\le V<0.5311+o(1).
+\]
+
+If every positive-weight `V`-phase O--O train were crossed by at most `dD` center trains, then the weighted crossing incidence would be at most
+
+\[
+dD\cdot P_VD
+<0.5311dD^2+o(D^2).
+\]
+
+Equation (CX.1) therefore forces one train with
+
+\[
+d>{0.072\over0.5311}>0.1355.
+\]
+
+Hence at least one retained `V`-phase O--O train is crossed by more than
+
+\[
+0.135D-o(D)
+\]
+
+center-phase complete trains, proving (CX.2).
+
+---
+
+## 7. Frontier effect
+
+The live band
+
+\[
+1.843555\lesssim t\le1.844
+\]
+
+now contains a specific train object with four simultaneous properties:
+
+```text
+one exact leaf phase;
+outer-to-outer;
+Section-157 two-sided actual-diameter bracing;
+>0.135 D strict-rhombus crossings with the exact center phase.
+```
+
+Moreover the entire leaf-phase O--O family is pairwise noncrossing and carries `>0.072D^2` weighted center-crossing incidence.
+
+This is the first current structural reduction that places a macroscopic exact-phase crossing fan on a single braced outer-to-outer train.  The next step should use the order of the `>0.135D` center crossings along that train together with the nested order of same-phase O--O cuts.  Taking differences of the Section-157 KKT cut resultants between adjacent leaf cuts is a natural route: it localizes the diameter resultant to the strip between neighboring parallel trains and may prevent the same two diameter edges from bracing a linear number of cuts.
+
+No Level-I closure is claimed.  C-II remains open.

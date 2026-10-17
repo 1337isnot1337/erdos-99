@@ -1,0 +1,166 @@
+# Target C Section 120 companion — uniform near-disk chord sampling is first-order neutral
+
+**Date:** 2026-09-12  
+**Status:** proof-only regression / route-selection barrier.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+Section 120 isolates a potentially stronger all-regime return currency by retaining the actual chord direction `q`:
+
+\[
+d(L+P_{exc}-2r)
+\ge
+\sum_R \operatorname{area}(R)
+\left[4-2(|q\cdot u_R|+|q\cdot v_R|)\right].
+\]
+
+A tempting next move is to apply the theorem to the entire Type-II near-disk positive core, choose near-diameter chords in many directions, and average them uniformly. This companion records that this route is **first-order neutral** and cannot be the missing closure by itself.
+
+## 1. Section 120 also applies to the full strict-rhombus core
+
+In the canonical Type-II full-core branch, let `F` be the convex force hull and let the full positive contact graph have strict-rhombus area `A_4`, outer-walk length `L`, and bounded-nonquadrilateral total perimeter `P_exc`.
+
+The Section-120 proof uses only the complete strict-rhombus complex, the occurrence-counted outer walk, the full bounded defect-face cycles, and the train transverse-span bound by the ambient convex-body diameter. Those hypotheses hold for the full positive core as well as for one harmonic carrier. Here
+
+\[
+d=\operatorname{diam}(F)=D.
+\]
+
+Therefore every pair of distinct extreme vertices `p_-,p_+` of `F` gives the same finite anisotropic inequality with `d=D`.
+
+## 2. Near-disk convergence supplies near-diameter chords in every fixed direction
+
+Canonical Section 80 gives, after suitable translations,
+
+\[
+D^{-1}F_D\to B_{1/2}
+\]
+
+in Hausdorff distance and
+
+\[
+{A_{4,D}\over D^2}\to{\pi\over4}.
+\]
+
+Fix a projective direction `xi`. Choose an extreme vertex `p_+(xi,D)` maximizing `xi dot x` on `F_D` and an extreme vertex `p_-(xi,D)` minimizing it. Uniqueness of the support point of the limiting disk implies, for every fixed `xi`,
+
+\[
+{p_+(xi,D)-p_-(xi,D)\over D}\to xi.
+\]
+
+Hence the corresponding chord satisfies
+
+\[
+{r(xi,D)\over D}\to1,
+\qquad
+q(xi,D)\to xi.
+\]
+
+For any fixed finite collection of directions these convergences hold simultaneously after passing far enough along the Type-II sequence.
+
+## 3. Uniform projective grids have the universal absolute-cosine moment
+
+For an integer `m>=1`, take the uniform projective grid
+
+\[
+\xi_j={j\pi\over m},
+\qquad 0\le j<m.
+\]
+
+For any unit direction `u`, define
+
+\[
+A_m(u)={1\over m}\sum_{j=0}^{m-1}|\xi_j\cdot u|.
+\]
+
+The function `|cos t|` is periodic with period `pi` and is Lipschitz. Uniform Riemann sums therefore give
+
+\[
+\sup_u\left|A_m(u)-{2\over\pi}\right|\to0
+\qquad(m\to\infty).
+\]
+
+Write this uniform error as `eta_m->0`.
+
+## 4. Averaging Section 120 gives only the disk perimeter scale
+
+Fix `m`. Apply Section 120 to the `m` extreme-vertex chord pairs above and average the resulting inequalities. Let `\bar r_{m,D}` be their mean chord length. The uniform moment bound gives
+
+\[
+D\left(L+P_{exc}-2\bar r_{m,D}\right)
+\ge
+\left(4-{8\over\pi}-4\eta_m-o_D(1)\right)A_{4,D}.
+\]
+
+First let `D->infinity` at fixed `m`. Since `\bar r_{m,D}/D->1` and `A_{4,D}/D^2->pi/4`,
+
+\[
+\liminf_D {L+P_{exc}\over D}
+\ge
+2+{\pi\over4}\left(4-{8\over\pi}-4\eta_m\right)
+=
+\pi-\pi\eta_m.
+\]
+
+Now let `m->infinity`:
+
+\[
+\boxed{
+\liminf_D {L+P_{exc}\over D}\ge\pi.
+}
+\]
+
+Thus the apparently much larger averaged local coefficient
+
+\[
+4-{8\over\pi}=1.4535209\ldots
+\]
+
+is exactly offset by the `2D` diameter-chord subtraction and the disk area `pi D^2/4`. At first order, uniform long-chord sampling recovers only the disk perimeter scale.
+
+## 5. Canonical Section 85 is already strictly stronger at first order
+
+Canonical Section 85 gives
+
+\[
+B_4\ge4\sqrt{R_4},
+\qquad
+B_4\le L+P_{exc}.
+\]
+
+In Type II,
+
+\[
+{R_4\over D^2}\to{\pi\over2\sqrt3}.
+\]
+
+Hence
+
+\[
+\liminf_D{L+P_{exc}\over D}
+\ge
+4\sqrt{{\pi\over2\sqrt3}}
+=
+\pi+0.6676585\ldots .
+\]
+
+So uniform near-disk chord averaging of Section 120 is not merely insufficient for C-II; it is weaker than an already-canonical train-interface lower bound.
+
+## 6. Binding research consequence
+
+Do **not** spend another run trying to close Type II by combining only
+
+1. near-disk availability of long chords,
+2. approximately uniform chord directions, and
+3. the averaged absolute-cosine moment `2/pi`.
+
+That combination is first-order neutral.
+
+Any useful Section-120 continuation must retain a nontrivial **correlation** between chord direction and the actual area-weighted train-direction distribution, or must extract a second-order / boundary-order gain that survives after the disk identities cancel. Equivalently, one needs more than an isotropic chord sample: the selected long chords must preferentially avoid the directions that maximize
+
+\[
+M(q)=\sum_R\operatorname{area}(R)(|q\cdot u_R|+|q\cdot v_R|),
+\]
+
+or failure of such avoidance must itself force a rigid coherent-grain geometry that can be converted into a strict source-preserving deformation or an exact unit triangle.
+
+**Theorem state:** unchanged.

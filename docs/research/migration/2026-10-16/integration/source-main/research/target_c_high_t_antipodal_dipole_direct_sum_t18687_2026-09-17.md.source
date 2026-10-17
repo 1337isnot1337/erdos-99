@@ -1,0 +1,319 @@
+# Target C-II — exact-antipodal high-`t` critical shears split into disjoint local dipoles
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening  
+**Scope:** canonical C65-normalized full-core/no-macroscopic-container Type-II branch with `t=(q-k)/D<=1.8687`  
+**Dependencies:** high-`t` one-sided fixed/growing cusp chain; critical phase-block classification; exact-antipodal two-edge blocker theorem; C65 full actual-diameter visibility  
+**Certificate:** `research/verify_target_c_high_t_antipodal_dipole_direct_sum_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The critical phase-block theorem identifies the first-order aggregate-critical multishear space by blockwise zero-sum coefficient conditions. This note diagonalizes that space completely.
+
+For each exact-antipodal interface there is one elementary adjacent-row dipole
+
+\[
+d^{(i)}:=e_i-e_{i+1}.
+\tag{AD.1}
+\]
+
+It is a full-support first-order cancellation vector, and its actual-diameter first variation is supported on **that interface's switching set and nowhere else**. Different antipodal interfaces therefore give independent critical coordinates with disjoint actual-diameter supports.
+
+Inside a maximal equal-phase block, every critical tangent is uniquely the sum of these adjacent dipoles. Consequently the whole aggregate-critical high-`t` tangent space is a direct sum of locally jammed antipodal strip modes.
+
+This removes a possible cancellation mechanism from the linear exact-antipodal branch: first-order critical motion cannot be redistributed across several antipodal interfaces to make their diameter cusps cancel. Each nonzero dipole coordinate is detected locally by its own pair of opposite-sign, positive-KKT actual diameter rows.
+
+---
+
+## 1. Equal phase is exact antipodality
+
+Use the coherent real row orientations
+
+\[
+u_j=(\cos\alpha_j,\sin\alpha_j).
+\tag{AD.2}
+\]
+
+At the interface between rows `j` and `j+1`, the two physical boundary-contact vectors in the strip convention are
+
+\[
+a_j=u_j,
+\qquad
+b_j=-u_{j+1}.
+\tag{AD.3}
+\]
+
+Hence
+
+\[
+\boxed{
+b_j=-a_j\iff u_{j+1}=u_j.}
+\tag{AD.4}
+\]
+
+So the exact-antipodal interfaces are exactly the internal edges of the maximal constant-phase blocks from the critical phase-block classification.
+
+Let
+
+\[
+E:=\{i:u_i=u_{i+1}\}
+\tag{AD.5}
+\]
+
+be the set of such interfaces in a selected one-sided row chain.
+
+---
+
+## 2. The elementary dipole is a full-support first-order cancellation
+
+For `i in E`, define `d^(i)` by (AD.1). Then
+
+\[
+\sum_j d^{(i)}_j u_j
+=u_i-u_{i+1}=0.
+\tag{AD.6}
+\]
+
+Thus `d^(i)` lies in the first-order full-support cancellation kernel.
+
+For any diameter interval `h`, let its selected-cut support be the interval `I_h`. Its first relative-displacement vector under a row-angle coefficient vector `c` is, up to the common quarter-turn and the fixed interval orientation,
+
+\[
+J\sum_{j\in I_h}c_ju_j.
+\tag{AD.7}
+\]
+
+For `c=d^(i)`, the sum in (AD.7) is zero if `I_h` contains both `i,i+1` or neither. It equals `+u_i` or `-u_i` if the interval contains exactly one of the two.
+
+Because interval support is consecutive, containing exactly one of `i,i+1` is equivalent to starting or ending at their common interface. Therefore, writing `X_i` for that interface's switching actual-diameter set,
+
+\[
+\boxed{
+\dot r_h(d^{(i)})=0
+\quad(h\notin X_i),
+}
+\tag{AD.8}
+\]
+
+while for `h in X_i`,
+
+\[
+\boxed{
+\dot r_h(d^{(i)})=\pm Ju_i.
+}
+\tag{AD.9}
+\]
+
+On one side of the common diameter-routing hub all switches have the same start/stop orientation, so the sign in (AD.9) is common across `X_i` after a consistent diameter orientation.
+
+Thus the elementary dipole has an exactly localized first-order diameter support.
+
+---
+
+## 3. Different dipoles have disjoint diameter support
+
+For a selected chain wholly on one side of the hub, every actual diameter interval can start at at most one selected interface and can end at at most one selected interface, while only starts occur on one side and only ends on the other.
+
+Hence the switching sets are pairwise disjoint:
+
+\[
+\boxed{X_i\cap X_j=\varnothing\qquad(i\ne j).}
+\tag{AD.10}
+\]
+
+Combining (AD.8)--(AD.10), the matrix of first diameter velocities for the dipole family has block-diagonal support:
+
+\[
+\boxed{
+\operatorname{supp}\dot r(d^{(i)})=X_i,
+\qquad
+X_i\cap X_j=\varnothing.
+}
+\tag{AD.11}
+\]
+
+No first-order diameter derivative created by `d^(i)` can be canceled by adding `d^(j)` with `j!=i`, because the latter is identically zero on `X_i`.
+
+---
+
+## 4. Adjacent dipoles are the canonical basis of every critical phase block
+
+Let
+
+\[
+B=[p,q]
+\tag{AD.12}
+\]
+
+be a maximal constant-phase block, so
+
+\[
+u_p=\cdots=u_q=:u_B.
+\]
+
+The critical phase-block theorem says that a coefficient vector supported on `B` is aggregate-critical exactly when
+
+\[
+\sum_{j=p}^q c_j=0.
+\tag{AD.13}
+\]
+
+Define its proper prefix sums
+
+\[
+s_i:=\sum_{j=p}^i c_j
+\qquad(p\le i<q).
+\tag{AD.14}
+\]
+
+Then the exact telescoping identity is
+
+\[
+\boxed{
+(c_p,\ldots,c_q)
+=
+\sum_{i=p}^{q-1}s_i(e_i-e_{i+1}).
+}
+\tag{AD.15}
+\]
+
+Indeed the coefficient at `p` is `s_p=c_p`; at an internal index `j` it is
+
+\[
+s_j-s_{j-1}=c_j;
+\]
+
+and at `q` it is
+
+\[
+-s_{q-1}=c_q
+\]
+
+by (AD.13).
+
+The adjacent dipoles
+
+\[
+\{e_i-e_{i+1}:p\le i<q\}
+\tag{AD.16}
+\]
+
+are linearly independent. Hence they form a basis of the `|B|-1` dimensional zero-sum block space.
+
+Summing over all maximal phase blocks gives the global direct-sum formula
+
+\[
+\boxed{
+\ker T\cap\mathcal K
+=
+\bigoplus_{i\in E}\mathbb R\,d^{(i)}.
+}
+\tag{AD.17}
+\]
+
+In particular
+
+\[
+\boxed{
+\dim(\ker T\cap\mathcal K)=|E|.
+}
+\tag{AD.18}
+\]
+
+This is the phase-block dimension formula in a canonical local basis.
+
+---
+
+## 5. Each nonzero dipole coordinate is locally jammed
+
+Fix `i in E`. By (AD.4), interface `i` is an exact-antipodal strip. The exact-antipodal blocker theorem gives two switching actual diameter edges
+
+\[
+h_i^+,h_i^-\in X_i
+\tag{AD.19}
+\]
+
+with opposite transverse signs relative to `Ju_i`.
+
+For a scalar `s_i!=0`, the dipole motion `s_i d^(i)` gives the common switching velocity `+/- s_i Ju_i`. Therefore, after relabeling,
+
+\[
+\boxed{
+\ell_{h_i^+}(s_i d^{(i)})>0>
+\ell_{h_i^-}(s_i d^{(i)}),
+}
+\tag{AD.20}
+\]
+
+where `ell_h` is the first squared-length derivative of the actual diameter edge.
+
+Canonical C65 gives
+
+\[
+\boxed{
+\beta_{h_i^+}>0,
+\qquad
+\beta_{h_i^-}>0.
+}
+\tag{AD.21}
+\]
+
+Now let a general aggregate-critical tangent be
+
+\[
+c=\sum_{i\in E}s_i d^{(i)}.
+\tag{AD.22}
+\]
+
+If `s_i!=0`, disjoint support (AD.11) implies that on `X_i` the full tangent has exactly the same diameter derivatives as `s_i d^(i)`. Hence (AD.20) survives unchanged in the sum.
+
+Therefore every nonzero coordinate in the canonical basis carries its own independent positive-stress diameter sign cusp.
+
+---
+
+## 6. Linear exact-antipodal density gives linear critical rank, not a cancellation escape
+
+The current corrected high-`t` linear blocker fork has a set `E_D` of exact-antipodal good interfaces and a set `S_D` of strong non-antipodal TB1 interfaces satisfying
+
+\[
+|E_D|+|S_D|
+>0.00000494375D-o(D).
+\tag{AD.23}
+\]
+
+If the exact-antipodal side has linear density, for example
+
+\[
+|E_D|>0.000002471875D-o(D),
+\tag{AD.24}
+\]
+
+then (AD.18) gives the same lower bound on the dimension of the aggregate-critical first-order shear space along that selected shore.
+
+But (AD.11), (AD.20), and (AD.21) show that this large dimension is a direct sum of independently jammed local dipoles. It does not create a collective first-order descent direction. Every nonzero coordinate is exposed on its own disjoint switching set.
+
+Thus the linear exact-antipodal branch is now more rigidly described as
+
+```text
+linear many exact-antipodal interfaces
+-> linear-dimensional critical tangent space
+-> canonical adjacent-dipole basis
+-> pairwise disjoint switching supports
+-> every nonzero basis coordinate has its own positive-stress opposite-sign diameter pair.
+```
+
+The strong-TB1 side remains separate and noncritical at the interface level.
+
+---
+
+## 7. Remaining obstruction
+
+This theorem does not close the exact-antipodal branch. It proves that first-order cancellation between different antipodal strips is impossible because the relevant actual diameter supports are disjoint.
+
+A closing argument must now use information beyond first-order full-support shear algebra, such as:
+
+1. the ordered convex-thrackle endpoint geometry of the linear family of disjoint antipodal switching pairs;
+2. the nonzero bounded axial strip reactions on those same interfaces;
+3. the common linear transverse ladder of the high-`t` rectangle;
+4. a second-order comparison that couples different dipoles through the persistent diameter core or global KKT curvature.
+
+**Disposition:** proved proof-only direct-sum diagonalization of the high-`t` exact-antipodal aggregate-critical tangent space. Each exact-antipodal interface contributes one local dipole coordinate with disjoint actual-diameter support and an unavoidable positive-stress sign cusp. C-II and Level I remain open.

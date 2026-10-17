@@ -1,0 +1,153 @@
+# Target C: branch-adaptive physical pentagon closure secants
+
+Date: 2026-09-19
+
+Status: exact local nonlinear-to-polyhedral consequence; theorem-state authority unchanged. C-II remains open.
+
+The current generic H6 endpoint has 4,976 cells after the one-face order-hull reduction. The immediate linear attack is to retain the full local split into ten physical gap orders times the median-low/high bit. This note strengthens that 20-branch layer before rerunning the global census.
+
+## Setup
+
+For normalized cyclic force gaps `x_i=delta_i/pi`, the established sharp two-gap closure theorem is
+
+\[
+x_{k+2}+x_{k+3}\le M(x_k),
+\]
+
+where
+
+\[
+M(x)=2\left[1-\frac1\pi\arccos\left(\frac12-\cos\frac{\pi x}{2}\right)\right].
+\]
+
+The function `M` is convex on the physical interval. Therefore if `M(a)<=U_a` and `M(b)<=U_b`, the chord through `(a,U_a)` and `(b,U_b)` is a valid rational upper bound for `M` throughout `[a,b]`.
+
+Fix the representative physical gap order
+
+\[
+x_a\le x_b\le x_c\le x_d\le x_e.
+\]
+
+The previously certified rank-threshold theorem gives the following outer intervals.
+
+On the median-low branch `x_c<=2/5`:
+
+\[
+\begin{aligned}
+0&\le x_a\le2/5,\\
+4/15&\le x_b\le2/5,\\
+1/3&\le x_c\le2/5,\\
+2/5&\le x_d\le2/3,\\
+2/5&\le x_e\le2/3.
+\end{aligned}
+\]
+
+On the median-high branch `x_c>=2/5`:
+
+\[
+\begin{aligned}
+1/15&\le x_a\le2/5,\\
+1/6&\le x_b\le2/5,\\
+2/5&\le x_c\le1/2,\\
+2/5&\le x_d\le3/5,\\
+2/5&\le x_e\le2/3.
+\end{aligned}
+\]
+
+The old order-hull reduction used only the broad exact secants
+
+\[
+M(x)\le\frac23+\frac{x}{3}\quad(0\le x\le2/5)
+\]
+
+and
+
+\[
+M(x)\le\frac12+\frac{3x}{4}\quad(2/5\le x\le2/3).
+\]
+
+Those throw away most of the branchwise interval information.
+
+## New exact endpoint certificates
+
+`verify_target_c_pentagon_branch_adaptive_secants_2026_09_19.py` repeats the rational Machin enclosure for `pi` and the alternating Taylor lower bound for cosine used by the existing all-rank secant verifier. It certifies three additional knots:
+
+\[
+\boxed{M(1/15)\le670687/10^6,}
+\]
+
+\[
+\boxed{M(4/15)\le728581/10^6,}
+\]
+
+\[
+\boxed{M(3/5)\le944043/10^6.}
+\]
+
+It also rechecks the existing rational endpoint certificates at `1/6`, `1/3`, and `1/2`, and the exact values
+
+\[
+M(0)=2/3,\qquad M(2/5)=4/5,\qquad M(2/3)=1.
+\]
+
+No floating-point value is used for acceptance.
+
+## Median-low branch
+
+For ranks `a,b,c,d,e`, respectively, convexity gives the valid upper lines
+
+\[
+\boxed{M(x_a)\le\frac23+\frac{x_a}{3},}
+\]
+
+\[
+\boxed{M(x_b)\le\frac{214257}{400000}x_b+\frac{585743}{1000000},}
+\]
+
+\[
+\boxed{M(x_c)\le\frac{115689}{200000}x_c+\frac{284311}{500000},}
+\]
+
+\[
+\boxed{M(x_d)\le\frac12+\frac{3x_d}{4},}
+\]
+
+\[
+\boxed{M(x_e)\le\frac12+\frac{3x_e}{4}.}
+\]
+
+The second-smallest and median cuts are strictly stronger than the broad low secant in the interior of their branch intervals.
+
+## Median-high branch
+
+The five valid upper lines are
+
+\[
+\boxed{M(x_a)\le\frac{387939}{1000000}x_a+\frac{1612061}{2500000},}
+\]
+
+\[
+\boxed{M(x_b)\le\frac{325671}{700000}x_b+\frac{1074329}{1750000},}
+\]
+
+\[
+\boxed{M(x_c)\le\frac{67191}{100000}x_c+\frac{132809}{250000},}
+\]
+
+\[
+\boxed{M(x_d)\le\frac{144043}{200000}x_d+\frac{255957}{500000},}
+\]
+
+\[
+\boxed{M(x_e)\le\frac12+\frac{3x_e}{4}.}
+\]
+
+Thus four of the five rank positions become strictly tighter than the broad low/high secants on the interior of their branch intervals. Only the maximum retains the old high secant.
+
+## Consequence for the finite H6 attack
+
+The correct next one-face system is stronger than the previously proposed plain median split. For each of the ten gap orders, keep two closed median branches and attach the five branch-adaptive chords above. This gives twenty local polyhedral branches per physical face.
+
+A generic H6 cell is eliminated if all twenty branches at one physical face have exact rational Farkas contradictions against the 85-variable complete-angle system. Because the branches cover the rank-threshold closures including the regular equality case, no physical pentagon is lost by the split.
+
+This theorem does not itself change the 4,976-cell census. Its purpose is to strengthen the exact branch system before the next exhaustive reduction. If one-face branching saturates, the same twenty-way local description is the appropriate node system for multi-face branch-and-bound. The fifteen complete reciprocal sine-law consistency equations remain the nonlinear layer after the affine disjunction is exhausted.

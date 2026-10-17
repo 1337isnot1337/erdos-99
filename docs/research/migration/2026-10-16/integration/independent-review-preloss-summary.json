@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "receipt_kind": "reconstructed_pre_environment_loss_review_summary",
+  "evidence_source": "Retained tool-call transcript and inter-agent messages; original scratch raw receipts became unavailable with the execution environment.",
+  "original_local_candidate_commit": "18cf92d0796abfb8fd4a2b9e5c798c0662436a56",
+  "original_local_candidate_tree": "2ec17b75a6cc943fb0909f778a8ff4f2ffd4c88c",
+  "original_patch_commit": "0a252373b2b8b29da830ed56061649f362624359",
+  "original_integrated_patch_commit": "46edcb1",
+  "reconstruction": {
+    "parent_commit": "f282d53169df4d507117893bfdcc99f663855923",
+    "method": "Apply the exact retained seven-hunk auditor patch to the unchanged original auditor and reproduce the dedicated 175-line test file from its original patch.",
+    "original_auditor_blob": "604595be0c00a75f4850001b259df3c3f5b7b76e",
+    "python_execution_after_environment_loss": false,
+    "full_candidate_reverified_after_reconstruction": false
+  },
+  "pre_loss_rights_lineage_validation": {
+    "total_real_git_tests_passed": 33,
+    "new_tests": 8,
+    "existing_tests": 25,
+    "root_independently_reviewed_patch": true,
+    "source_owner_grant_extended": false
+  },
+  "pre_loss_independent_checks": {
+    "source_main": {
+      "status": "PASS_SOURCE_MAIN_ONLY",
+      "exact_preserved": 4654,
+      "reference_not_redistributed": 63,
+      "frozen_reports_verified": 813
+    },
+    "source_replay": {
+      "files_compared_independently": 4654,
+      "mismatches": 0,
+      "checked_candidate_commit": "ade0d84d0f14979539739a5db273390eeef35e4c",
+      "method": "Raw hashlib Git blob hashes compared against the pinned source Git tree with replacement objects disabled."
+    },
+    "refs": {
+      "captured_branch_rows": 1643,
+      "preserved_exact_branch_rows": 1643,
+      "exact_historical_blobs": 249,
+      "captured_dirty_versions": 30,
+      "preserved_dirty_versions": 25,
+      "missing_dirty_versions": 5,
+      "uncaptured_worktree_markers": 2,
+      "status": "incomplete"
+    },
+    "navigation": {
+      "documents_checked": 4943,
+      "active_blockers": 0,
+      "historical_literal_breaks": 30902,
+      "historical_unresolved_references": 1,
+      "corrected_filename_mappings": 103,
+      "historical_target_versions_unverified": 35,
+      "status": "PASS_ACTIVE_DOCUMENT_PATHS"
+    },
+    "policy": {
+      "documented_baseline_transformations": 6,
+      "original_baseline_bytes_preserved": true,
+      "old_index_rows_unchanged": 1391,
+      "new_index_rows_unreviewed_noncanonical": 58,
+      "authoritative_math_state_bytes_unchanged": true,
+      "byte_pinned_historical_snapshots": 1505,
+      "provenance_metadata_alternatives": 55
+    },
+    "public_integrity": {
+      "exit_code": 0,
+      "errors": 0,
+      "claims": 451,
+      "edges": 845,
+      "certificates_registered": 94,
+      "retained_source_records": 810,
+      "tasks": 23,
+      "nonredistributed_reference_links": 7,
+      "runtime": "External locked CPython 3.14 environment"
+    },
+    "independently_replayed_regressions": {
+      "publication_policy": 12,
+      "migration_union": 25,
+      "migration_refs": 3,
+      "gitleaks_review": 11
+    }
+  },
+  "recovered_dirty_indexes": [
+    {
+      "source_path": "docs/state/artifact-index.jsonl",
+      "source_ref": "refs/heads/swarm/root/threshold-rail-curvature-20261002",
+      "bytes": 275649,
+      "sha256": "870a817cb70c3f5921591e483240197f93ed4b9b4f07bdd96702d009ebe38469"
+    },
+    {
+      "source_path": "docs/state/artifact-index.jsonl",
+      "source_ref": "refs/heads/swarm/sol/lattice-collar-charge-20261002",
+      "bytes": 275652,
+      "sha256": "72e278c005e979340549de8dfd65682176c7f6ae1f064ed6bfd5eeb3f97ee6d2"
+    }
+  ],
+  "gitleaks_review_scope": {
+    "mathematical_json_false_positives": 9,
+    "mathematical_blob_sha1": [
+      "7e465ddb9ff53fb529200531c25844555ac2d4e4",
+      "15fc4368898a5dc48c595f7ad7e051156594a5b0",
+      "92275d3ca0cd358ad03db1dd0d7e95437dc09d35"
+    ],
+    "recovered_source_fixture_blob": "c613e6d61df45ce818cf3f3d21218e48947d0fa4",
+    "recovered_source_fixture_sha256": "0a54855e41dede9c9a4ace2923f8a1eff2f8c4aec29f7ce00822b17341a23f8a",
+    "interpretation": "Exact mathematical grouping labels and two opening delimiters in negative-test literals were independently inspected. No credential payload was present in these exact matches. Raw scanner exits and reports must remain intact; unrelated findings remain failures."
+  },
+  "missing_dirty_mathematical_versions": [
+    {
+      "path": "research/verify_threshold_cut_torque_2026_10_02.py",
+      "bytes": 5459,
+      "sha256": "2955a0800602e81caab257d5351b764071ad79e95b9577e4a1decfd24f325375"
+    },
+    {
+      "path": "docs/reports/target_c_unloaded_cut_upper_curvature_2026-10-02.md",
+      "bytes": 16583,
+      "sha256": "e4dc737368a17138700740fc087ed72bf762560e0b185eba6b21be79825b879a"
+    },
+    {
+      "path": "research/verify_target_c_translation_lens_exposure_2026_10_02.py",
+      "bytes": 7774,
+      "sha256": "4d585e3b28e6cdd1bc35c009cc5839a320708f812f38efe6d136bac60ffb66b6"
+    },
+    {
+      "path": "docs/reports/target_c_embedded_grain_wall_replacement_2026-10-02.md",
+      "bytes": 29570,
+      "sha256": "03ea999dbb7e47fb0d07e30015d3d0ac2902630b13e4e245e0f636a21d8e01a1"
+    },
+    {
+      "path": "docs/reports/target_c_translated_endpoint_rail_capacity_2026-10-02.md",
+      "bytes": 19088,
+      "sha256": "d6947b1ec49343c811dffa8a499cd37aa79a9b6bcecf358af2a98dfa6d099f20"
+    }
+  ],
+  "deprecation_ready": false,
+  "release_verified": false,
+  "mathematical_proof": false,
+  "limits": [
+    "This reconstructed summary describes tests executed before environment loss on the stated local commits and trees.",
+    "No Python, certificate, namespace, or full Gate 2 replay was possible after reconstruction.",
+    "Historical navigation mappings do not establish exact old dependency versions or repair immutable literal bytes.",
+    "Five captured dirty mathematical file versions and two uncaptured worktree states remain unresolved.",
+    "A newly reconstructed checkpoint or final remote commit requires fresh exact-SHA verification."
+  ]
+}

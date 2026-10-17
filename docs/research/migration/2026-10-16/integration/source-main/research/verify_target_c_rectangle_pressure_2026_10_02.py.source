@@ -1,0 +1,143 @@
+#!/usr/bin/env python3
+"""Exact local contact-stress certificates; never a global-optimality test.
+
+Checks the separable stress law at every interior vertex of a filled rhombic
+rectangle, and an exact positive contact-stress patch with unimodal total seam
+pressure carried by the two boundary rows. Boundary forces in the second patch
+are computed, not asserted to be realizable by actual equal-length diameters.
+"""
+
+from fractions import Fraction as F
+
+
+def add(a, b):
+    return (a[0] + b[0], a[1] + b[1])
+
+
+def sub(a, b):
+    return (a[0] - b[0], a[1] - b[1])
+
+
+def mul(k, a):
+    return (k * a[0], k * a[1])
+
+
+def norm2(a):
+    return a[0] ** 2 + a[1] ** 2
+
+
+def patch(m, vs):
+    prefix = [(F(0), F(0))]
+    for v in vs:
+        assert norm2(v) == 1
+        assert -F(1, 2) < v[0] < F(1, 2) and v[1] > 0
+        prefix.append(add(prefix[-1], v))
+    points = {(i, j): add((F(i), F(0)), prefix[j])
+              for i in range(m + 1) for j in range(len(vs) + 1)}
+    contacts = set()
+    labels = list(points)
+    for a, label_a in enumerate(labels):
+        for label_b in labels[a + 1:]:
+            distance = norm2(sub(points[label_a], points[label_b]))
+            assert distance >= 1
+            if distance == 1:
+                contacts.add(frozenset((label_a, label_b)))
+    expected = {frozenset(((i, j), (i + 1, j)))
+                for i in range(m) for j in range(len(vs) + 1)}
+    expected |= {frozenset(((i, j), (i, j + 1)))
+                 for i in range(m + 1) for j in range(len(vs))}
+    assert contacts == expected
+    for a in labels:
+        adjacent = [b for b in labels if frozenset((a, b)) in contacts]
+        assert not any(frozenset((b, c)) in contacts
+                       for k, b in enumerate(adjacent) for c in adjacent[k + 1:])
+    return points
+
+
+def forces(points, horizontal, vertical):
+    result = {label: (F(0), F(0)) for label in points}
+    for (i, j), weight in horizontal.items():
+        a, b = (i, j), (i + 1, j)
+        f = mul(weight, sub(points[a], points[b]))
+        result[a] = add(result[a], f)
+        result[b] = sub(result[b], f)
+    for (i, j), weight in vertical.items():
+        a, b = (i, j), (i, j + 1)
+        f = mul(weight, sub(points[a], points[b]))
+        result[a] = add(result[a], f)
+        result[b] = sub(result[b], f)
+    return result
+
+
+def variable_phase_certificate():
+    m, n = 4, 3
+    vs = [(F(5, 13), F(12, 13)), (F(7, 25), F(24, 25)), (F(0), F(1))]
+    points = patch(m, vs)
+    q = [F(i + 2) for i in range(m + 1)]
+    prefix_q = [F(0)]
+    for i in range(1, m):
+        prefix_q.append(prefix_q[-1] + q[i])
+    vertical = {(i, j): q[i] / vs[j][1]
+                for i in range(m + 1) for j in range(n)}
+    horizontal = {(i, j): F(10) + prefix_q[i] *
+                  (vs[j - 1][0] / vs[j - 1][1] - vs[j][0] / vs[j][1])
+                  for i in range(m) for j in range(1, n)}
+    for i in range(m):
+        horizontal[i, 0] = horizontal[i, n] = F(10)
+    assert all(w > 0 for w in (*horizontal.values(), *vertical.values()))
+    f = forces(points, horizontal, vertical)
+    assert all(f[i, j] == (0, 0) for i in range(1, m) for j in range(1, n))
+    kappa = vs[0][0] / vs[0][1] - vs[-1][0] / vs[-1][1]
+    interior_pressure = [sum(horizontal[i, j] for j in range(1, n)) for i in range(m)]
+    assert all(interior_pressure[i] - interior_pressure[i - 1] == q[i] * kappa
+               for i in range(1, m))
+    print(f"variable_phase: interior_equilibrium=6; kappa={kappa}; pressures={interior_pressure}")
+
+
+def boundary_carrier_regression():
+    m, n = 3, 2
+    v = (F(5, 13), F(12, 13))
+    points = patch(m, [v] * n)
+    total_pressure = [F(4), F(6), F(2)]
+    horizontal = {(i, j): F(1) if j == 1 else (total_pressure[i] - 1) / 2
+                  for i in range(m) for j in range(n + 1)}
+    vertical = {(i, j): F(1) for i in range(m + 1) for j in range(n)}
+    assert all(w > 0 for w in (*horizontal.values(), *vertical.values()))
+    f = forces(points, horizontal, vertical)
+    assert all(f[i, 1] == (0, 0) for i in range(1, m))
+    assert [sum(horizontal[i, j] for j in range(n + 1)) for i in range(m)] == total_pressure
+    for i in range(1, m):
+        assert add(f[i, 0], f[i, n]) == (total_pressure[i - 1] - total_pressure[i], 0)
+    # Positive staircase packet: R_parallel=1, R_03=1, R_02=2, R_12=2.
+    packets = {(0, 3): F(1), (0, 2): F(2), (1, 2): F(2)}
+    assert [F(1) + sum(r for (a, b), r in packets.items() if a < i <= b)
+            for i in range(1, m + 1)] == total_pressure
+    print(f"boundary_carrier: interior_equilibrium=2; triangle_free=True; pressures={total_pressure}")
+    print("boundary_carrier: assigned boundary forces are not actual-diameter/KKT/global-optimality certificates")
+
+
+def diameter_strip_identity():
+    # The square is an actual triangle-free global-optimum regression at n=4.
+    # This routine uses only its pair distances, not an optimality premise.
+    points = [(F(0), F(0)), (F(1), F(0)), (F(1), F(1)), (F(0), F(1))]
+    diameter2 = F(2)
+    low, high = points[0], points[2]
+    width = F(1)
+    for q in points:
+        partner = next(p for p in points if norm2(sub(q, p)) == diameter2)
+        lam = q[0]
+        interpolant = add(mul(1 - lam, low), mul(lam, high))
+        variance = lam * (1 - lam) * norm2(sub(low, high))
+        lhs = (1 - lam) * norm2(sub(partner, low)) + lam * norm2(sub(partner, high))
+        assert lhs == norm2(sub(partner, interpolant)) + variance
+        assert lhs <= diameter2
+        assert norm2(sub(q, interpolant)) <= width ** 2
+        # Certified squared version of variance <= 2 D width.
+        assert variance >= 0 and variance ** 2 <= 4 * diameter2 * width ** 2
+    print("diameter_strip: exact weighted-square identity verified at 4 actual diameter endpoints")
+
+
+if __name__ == "__main__":
+    variable_phase_certificate()
+    boundary_carrier_regression()
+    diameter_strip_identity()

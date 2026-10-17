@@ -1,0 +1,314 @@
+# Hostile audit — live terminal detour pinching and raised pair-shield flex floor
+
+**Date:** 2026-09-18  
+**Audited source:** `research/target_c_free_terminal_live_detour_pinching_2026-09-18.md`  
+**Certificate:** `research/verify_target_c_free_terminal_live_detour_pinching_2026_09_18.py`  
+**Verdict:** PASS at the stated proof-only scope  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The new argument reuses the correlated reduced feasibility inequality from the certified
+`0.00704` gap theorem at the slightly larger live endpoint `epsilon=0.00710`.  The main
+risk is that a hypothesis used in the former contradiction was specific to
+`epsilon=0.00704`, or that the new face/flex constants optimize the correlated defect
+budget in the wrong direction.  Neither problem occurs.
+
+The load-bearing claims survive the following checks.
+
+---
+
+## 1. The reduced feasibility condition is unconditional in the live window
+
+The inherited inputs are
+
+\[
+a+2(r+\delta)\le5\varepsilon,
+\]
+
+\[
+R\le r_2(A_0+a),
+\qquad
+z+p\ge {\pi\over2}-R-o(1),
+\]
+
+\[
+p(1-\delta)-{e_c\over2}\le {R^2\over2}+o(1),
+\qquad
+F(z)+e_c\le\delta.
+\]
+
+No one of these requires the earlier small-complement hypothesis.  Dropping only
+`r>=0` yields
+
+\[
+a\le5\varepsilon-2\delta
+\]
+
+and hence the same residual envelope
+
+\[
+R\le\rho_\varepsilon(\delta)
+=r_2(A_0+5\varepsilon-2\delta).
+\]
+
+Eliminating `p`, `e_c`, and `R` in the weakening direction and maximizing the allowed
+`z` through `F(z)<=delta` gives the necessary condition
+
+\[
+G_\varepsilon(\delta)
+={\pi\over2}-\rho_\varepsilon(\delta)-z_\delta
+- {\rho_\varepsilon(\delta)^2\over2(1-\delta)}
+\le0.
+\]
+
+The derivation therefore remains valid after replacing `epsilon=0.00704` by
+`epsilon=0.00710`.  Only the scalar interval and numerical endpoint change.
+
+---
+
+## 2. Monotonicity survives the larger epsilon
+
+For
+
+\[
+C(\delta)=A_0+5\varepsilon-2\delta,
+\qquad
+S(\delta)=\sqrt{8\Delta_2-C(\delta)^2},
+\]
+
+we have
+
+\[
+-\rho'(\delta)=1+{C\over S},
+\]
+
+and, for `delta>0`,
+
+\[
+z_\delta'={1\over1-\cos(z_\delta/6)}.
+\]
+
+Thus
+
+\[
+G'(\delta)
+=(-\rho')\left(1+{\rho\over1-\delta}\right)
+-z_\delta'
+-{\rho^2\over2(1-\delta)^2}.
+\]
+
+The exact certificate bounds the positive derivative contribution using
+`rho<0.044` and bounds `z_delta` by `1.567` over the entire live interval
+`0<=delta<=0.01775`.  The resulting upper bound on the positive term is strictly below
+the lower bound for `z_delta'`.  The omitted final term is nonpositive.  Hence
+
+\[
+G'(\delta)<0
+\]
+
+throughout the interval.  There is no hidden sign reversal caused by increasing
+`epsilon` from `0.00704` to `0.00710`.
+
+---
+
+## 3. The `0.017609` cut is outward-certified
+
+At
+
+\[
+\delta_0=0.017609
+\]
+
+the certificate uses an upper enclosure
+
+\[
+\rho(\delta_0)<0.008006
+\]
+
+and the Taylor lower bound
+
+\[
+F(1.562745)>0.017609,
+\]
+
+so `z_{delta_0}<1.562745`.  With a Machin lower enclosure for `pi`, this gives
+
+\[
+G(\delta_0)>1.27\times10^{-5}.
+\]
+
+Every substitution weakens `G` in the direction favorable to a survivor.  Since `G`
+is decreasing, all `delta<=delta_0` have still larger positive `G` and are impossible.
+Thus
+
+\[
+\delta>0.017609
+\]
+
+is rigorous.  A numerical root near `0.01760958` is diagnostic only and carries no
+proof load.
+
+---
+
+## 4. Correlated-budget consequences have the correct extrema
+
+At `epsilon=0.00710`,
+
+\[
+5\varepsilon=0.0355.
+\]
+
+The new detour floor gives
+
+\[
+a+2r
+<0.0355-2(0.017609)
+=0.000282,
+\]
+
+so `a<0.000282` and `r<0.000141`.
+
+For
+
+\[
+{f\over D}={M_*+2a-\delta-r\over5}+o(1),
+\]
+
+the lower bound follows from the exact correlated constraint, not from independently
+maximizing `r` and `delta`.  Namely
+
+\[
+r\le {5\varepsilon-a-2\delta\over2}
+\]
+
+implies
+
+\[
+2a-\delta-r
+\ge {5\over2}a-{5\varepsilon\over2}
+\ge-\delta_{\max}.
+\]
+
+Hence
+
+\[
+{f\over D}\ge {M_*-\delta_{\max}\over5}-o(1).
+\]
+
+For the upper bound,
+
+\[
+2a\le10\varepsilon-4r-4\delta
+\]
+
+gives
+
+\[
+2a-\delta-r
+\le10\varepsilon-5\delta
+<10\varepsilon-5\delta_0.
+\]
+
+These are exactly the extrema used in the note.
+
+For pentagons, every superpentagonal face consumes at least one unit of `Q-f`, so
+`n_+<=rD+o(D)` and `P_5>=f-rD-o(D)`.  Substituting the correlated upper bound for `r`
+into
+
+\[
+{f\over D}-r
+={M_*+2a-\delta-6r\over5}+o(1)
+\]
+
+gives
+
+\[
+{P_5\over D}
+\ge {M_*+5a+5\delta-15\varepsilon\over5}-o(1),
+\]
+
+which is minimized by `a=0` and `delta=delta_0`.  The stated
+`P_5/D>0.76124204549-o(1)` is therefore in the safe direction.
+
+---
+
+## 5. Pair-shield and corank transfers are scope-compatible
+
+The stalled pair-shield theorem gives
+
+\[
+m_D\ge {b-f\over2}+E_U+p_U,
+\qquad
+E_U=a_F+{x_A\over2}+{n_0+n_2\over2}\ge0.
+\]
+
+Complete activation instead gives `m_D=(q-k)-1`, which is strictly larger in the live
+window.  Therefore it is valid to obtain a universal lower bound from `(b-f)/2` alone.
+
+Using
+
+\[
+{b\over D}=\pi+\delta+o(1)
+\]
+
+and the face ledger gives
+
+\[
+{b-f\over2D}
+={\pi\over2}-{M_*\over10}
++{3\over5}\delta+{1\over10}r-{1\over5}a+o(1).
+\]
+
+The correlated constraint implies
+
+\[
+-{a\over5}
+\ge-\varepsilon+{2\over5}(r+\delta),
+\]
+
+so
+
+\[
+{b-f\over2D}
+\ge {\pi\over2}-{M_*\over10}-\varepsilon
++\delta+{r\over2}-o(1).
+\]
+
+Taking `delta>0.017609` and `r>=0` proves the reported
+
+\[
+\liminf {m_D\over D}>1.1988388040.
+\]
+
+The existing diameter-locking theorem then transfers this exact-product dimension to
+full derivative rank, a coordinate-saturating matching, and both derivative signs in
+every coordinate.  Thus the signed incidence total exceeds `2.3976776080D-o(D)`.
+
+Finally the one-anchor theorem
+
+\[
+\sigma_C\le {f\over5}+{18\over5}E_U
+\]
+
+uses the same maximal two-anchor decomposition as the pair-shield theorem.  The new
+upper bound on `f/D` therefore legitimately sharpens its scalar base from the earlier
+`0.1558266092` to `0.15230481`; no new geometric hypothesis is introduced.
+
+---
+
+## 6. Scope and remaining gap
+
+This result does not prove C-II.  It does not show that a positive-spanning diameter
+row system of rank `1.1988D` is impossible, and it does not turn the one-anchor core
+into a diameter-decreasing finite motion.  It only removes most of the remaining scalar
+freedom.
+
+The surviving low-flex endpoint is now an almost-pure pentagonal one-anchor internal
+4-core, with the one-anchor theorem restricting its pure-contact dual modes to sparse
+five-face `K_5`-type blocks.  The unresolved step is geometric: exclude simultaneous
+positive locking of that core by the actual straight-line diameter thrackle, or pass
+through the diameter cusp by a source-preserving finite deformation.
+
+**Disposition:** PASS.  The detour cut, defect collapse, face/pentagon strip, raised
+pair-shield flex floor, diameter-locking transfer, and one-anchor corank refinement are
+supported by the stated dependencies and the exact certificate.  No theorem-state file
+is changed.

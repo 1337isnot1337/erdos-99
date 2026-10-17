@@ -1,0 +1,280 @@
+# Target C: close eight-no-root `k=6, D=-2, p=8` by functional-rank puncturing
+
+Date: 2026-09-22
+
+Status: rigorous closure of the remaining `D=-2` branch in the eight-no-root `k=6` layer. This uses the maximal replacement-functional rank proved in the immediately preceding reduction, a puncture-functoriality lemma for the canonical functional quotient, and already committed exact six- and five-row capacity/census certificates. It does not close the remaining `D=-1,p=9` side of the eight-no-root `k=6` layer, and it does not by itself close Target C-II or Erdős Problem #99.
+
+Companion arithmetic composition checker:
+
+`research/verify_target_c_support7_global_segment_relative_eight_noroot_k6_dminus2_p8_functional_puncture_2026_09_22.py`
+
+The main inputs are:
+
+- `research/target_c_support7_global_segment_relative_eight_noroot_k6_reduction_2026-09-22.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k6_functional_rank_reduction_2026-09-22.md`;
+- `research/verify_target_c_support7_global_segment_relative_seven_noroot_k5_dminus1_d1p4_2026_09_21.py`;
+- `research/verify_target_c_support7_global_segment_relative_seven_noroot_k5_dminus1_d0p7_reduction_2026_09_21.py`;
+- `research/verify_target_c_support7_global_segment_relative_five_noroot_k3_p5_sharp_2026_09_21.py`;
+- `research/verify_target_c_support7_global_segment_relative_six_noroot_k4_d2_singleton_capacity_2026_09_21.py`.
+
+## 1. Forced seven-row shadow
+
+The preceding eight-no-root `k=6` reduction has already forced the global `D=-2,p=8` branch to
+
+```text
+rank(P_8)=2,
+d_v=2,
+q=8,
+eight singleton changed blocks.
+```
+
+It also proves that the rank-two coefficient space has at least two three-clean coordinates. Fix one such coordinate `i`. Deleting `i` gives a seven-row state `X_7` with
+
+```text
+rank(P_7)=2,
+D_7=0,
+p_7=8,
+d_7=2,
+q_7>=7,
+singleton capacity >=7.
+```
+
+Because `i` is three-clean, deleting any further one or two coordinates still preserves coefficient rank two. Thus every six-row puncture of `X_7` is synchronized, and every five-row puncture obtained from it still has rank-two coefficient space.
+
+The preceding maximal-functional-rank reduction applies to `X_7`. Its canonical functional quotient has dimension
+
+```text
+(7-2)+2 = 7.
+```
+
+The defect bound
+
+```text
+D >= t + p + 3d - 3s
+```
+
+forces `s_7=7`. Therefore the actual singleton replacement functionals in `X_7` span the entire seven-dimensional canonical functional quotient.
+
+The point of this note is that full quotient span survives puncturing.
+
+## 2. Puncture functoriality of the canonical functional quotient
+
+Consider a virtual-canonical state on `t` no-root rows with coefficient-constraint space
+
+```text
+P <= Q^t,
+rank(P)=r.
+```
+
+Let `C` be its virtual-complete root-block set, with `c=|C|`, and let
+
+```text
+N = null(P),
+dim(N)=t-r.
+```
+
+Assume the established external-containment property: every canonical external relation from `N` lies in the span of the complete-block relations. Let `d` be the complete-row deficiency. The canonical relation matrix has rows indexed by
+
+```text
+C union B_N,
+```
+
+where `B_N` is a basis of `N`. Its rank is `c-d`, so the row-index functional quotient has dimension
+
+```text
+(t-r)+d.
+```
+
+Now delete a coordinate `j`, assuming the punctured coefficient space still has rank `r`. Write the punctured state with primes. Then
+
+```text
+N' = {alpha in N : alpha_j=0}
+```
+
+has codimension one in `N`. Choose a basis `B_N'` of `N'` and extend it by one vector to a basis `B_N` of `N`.
+
+The virtual-complete sets satisfy
+
+```text
+C' subset C.
+```
+
+For `alpha in N'`, the parent canonical external relation is exactly the punctured canonical external relation after the row-index coordinates outside `C' union B_N'` are removed. The only blocks requiring comment are those in `C\C'`:
+
+- if such a block becomes untouched after deleting `j`, its local demand is absent;
+- if it remains touched but becomes virtual-empty, its local quotient demand vanishes on `N'` by the definition of virtual emptiness.
+
+In either case the parent complete-state correction on `alpha` is zero, so no extra term remains when passing to the puncture.
+
+Let `M` and `M'` be the parent and punctured canonical relation matrices, regarded as matrices whose columns lie in their respective row-index spaces. Coordinate restriction
+
+```text
+rho : Q^(C union B_N) -> Q^(C' union B_N')
+```
+
+therefore satisfies
+
+```text
+rho(Col(M)) = Col(M').
+```
+
+Consequently `rho` induces a surjection of functional quotients
+
+```text
+bar(rho): Q^(C union B_N)/Col(M)
+          -> Q^(C' union B_N')/Col(M').          (2.1)
+```
+
+### Replacement functionals under puncturing
+
+Let `b in C` be changed from the virtual-complete state to a compatible incomplete state, and let `ell_b` be its replacement functional.
+
+If `b in C'`, then restriction to `C' union B_N'` gives exactly the punctured replacement functional `ell_b'`: on every `alpha in N'` the local quotient demand and the complete/incomplete coefficient comparison are unchanged.
+
+If `b notin C'`, then the block coordinate itself is removed. On every `alpha in N'` its local demand is zero in the puncture, so both the complete state and the incomplete state have zero coefficient correction. Hence all remaining nullspace coordinates of `ell_b` vanish, and
+
+```text
+bar(rho)([ell_b]) = 0.
+```
+
+Thus
+
+```text
+bar(rho)([ell_b]) = [ell_b']  if b remains virtual-complete,
+                    0         otherwise.          (2.2)
+```
+
+Equations (2.1) and (2.2) give the required descent principle:
+
+> If a collection of actual replacement functionals spans the full canonical functional quotient before a rank-preserving puncture, then the surviving replacement functionals span the full canonical functional quotient after puncturing.
+
+This statement is basis-independent; the adapted nullspace bases above only make the quotient map explicit.
+
+## 3. First descent forces every six-row deficiency to be two
+
+Delete any coordinate `j` from `X_7`. The resulting six-row coefficient plane still has rank two, and every one-coordinate puncture of it also has rank two. Let its virtual-complete deficiency be `d_6`.
+
+Because its virtual-complete set is contained in the seven-row set, row-nullity monotonicity gives
+
+```text
+d_6 <= d_7 = 2.
+```
+
+The established synchronized six-row rank-two containment theorem gives
+
+```text
+d_6 >= 1.
+```
+
+Hence `d_6` is either one or two.
+
+The puncture descent principle applies to the seven-row full-span singleton functionals. Therefore the surviving singleton replacement functionals span the entire six-row quotient, whose dimension is
+
+```text
+6-2+d_6 = 4+d_6.
+```
+
+If `d_6=1`, at least five surviving singleton replacement functionals are required. But the committed exact synchronized six-row deficiency-one census proves that every such state has compatible singleton capacity at most three:
+
+```text
+capacity census = {0:1, 2:6, 3:24}.
+```
+
+So `d_6=1` is impossible. Every six-row puncture of `X_7` must therefore satisfy
+
+```text
+d_6=2
+```
+
+and, because its quotient has dimension six, must have singleton capacity at least six.
+
+## 4. Second descent forces every five-row deficiency to be two
+
+Fix one of those six-row punctures and delete any one of its six coordinates. By three-cleanliness of the original deleted coordinate, the resulting five-row coefficient space still has rank two.
+
+Let its virtual-complete deficiency be `d_5`. The complete set only shrinks, so
+
+```text
+d_5 <= d_6 = 2.
+```
+
+The repaired five-row rank-two containment theorem gives
+
+```text
+d_5 >= 1.
+```
+
+The six-row replacement functionals already span the full six-row quotient by Section 3. Applying the puncture descent principle again, the surviving singleton functionals span the entire five-row quotient, of dimension
+
+```text
+5-2+d_5 = 3+d_5.
+```
+
+If `d_5=1`, at least four compatible singleton blocks are required. The committed exact five-row deficiency-one census has singleton capacity at most three. Therefore `d_5=1` is impossible, and every such five-row puncture has
+
+```text
+d_5=2.
+```
+
+We have proved that every hypothetical `X_7` produces, after deleting any one of its coordinates, a synchronized six-row rank-two state satisfying all of the following:
+
+1. virtual deficiency `d_6=2`;
+2. singleton capacity at least six;
+3. all six one-coordinate five-row projections have virtual deficiency `d_5=2`.
+
+## 5. The pre-existing exact audit has zero such six-row states
+
+The exact verifier
+
+`research/verify_target_c_support7_global_segment_relative_six_noroot_k4_d2_singleton_capacity_2026_09_21.py`
+
+already exhausts precisely this structural class. Its full census contains
+
+```text
+synchronized six-row d_6=2 states                  1,418
+with singleton capacity >=6                          761
+with all six projected five-row deficiencies d_5=2     0
+```
+
+The verifier works from the exact `S_7` five-row orbit cover, enumerates every realizable rank-two six-row extension, requires all six coordinate projections to retain rank two, and uses exact rational coefficient-space operations plus Hadamard-certified modular complete-row ranks.
+
+Therefore the six-row state forced by Sections 3 and 4 does not exist. This contradicts the hypothetical seven-row shadow `X_7`.
+
+Hence the global eight-row branch
+
+```text
+D=-2,
+k=6,
+d_root=0,
+p=8
+```
+
+is impossible.
+
+## 6. Consequence for the current eight-no-root `k=6` layer
+
+The earlier reduction had already closed five of the seven initial arithmetic branches and reduced the `D=-2` side to the single profile closed above. Therefore there is now no eight-no-root `k=6` counterexample with `D=-2`.
+
+The remaining eight-no-root `k=6` work is entirely on
+
+```text
+D=-1,
+d_root=0,
+p=9.
+```
+
+Before this note its surviving virtual profiles were
+
+```text
+(d_v,q,singleton_min) =
+(1,7,5), (1,8,7),
+(2,8,7), (2,9,9), (3,9,9).
+```
+
+The maximal-functional-rank theorem additionally requires these profiles to fill quotient ranks
+
+```text
+7, 7, 8, 8, 9
+```
+
+respectively. Those are now the next closure targets.

@@ -1,0 +1,53 @@
+# Target C: audit of p=6 local-rank underestimation
+
+Date: 2026-09-27
+
+A false converse was found in some support-level certificates: absence of a repeated containing tetrahedral support does **not** imply that an empty block has local rank one.
+
+This note audits three existing (k=5,D=-1,d_{\rm root}=0,p=6) verifiers and proves that this bug does not affect them:
+
+- `verify_target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d0p6_e3_m4_weight_closure_2026_09_26.py`, blob `46655cea44408cf2a7f96d25b02a77bb6a3272a9`;
+- `verify_target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d0p6_e5_mod2_closure_2026_09_26.py`, blob `7cc9df74513015f3ddcba39947ae8bdaed7110a9`;
+- `verify_target_c_p6_e6_m6_closure_2026_09_26.py`, blob `29d7b0cb4fbd96defdc4f0c08a3675125322e673`.
+
+The branch has (\dim P=3) and generalized weights
+[
+(d_1,d_2,d_3)(P)\ge(2,4,5).
+]
+
+For an actual-empty block (b), let (E_b\le P) be its local constraint space, (r_b=\dim E_b\in\{1,2\}), and (I_b) its external-coordinate support. The verifiers use the tag
+[
+\tau_b=2
+]
+when a containing tetrahedral support repeats, and (\tau_b=1) otherwise. Repetition really does force two independent local quotient directions, so
+[
+\tau_b\le r_b.
+]
+The invalid converse would be (\tau_b=1\Rightarrow r_b=1); none of the three audited prefilters needs it.
+
+Individual filters are safe. Since (E_b) is supported on (I_b),
+[
+|I_b|\ge d_{r_b}(P).
+]
+Thus a tag-two block must have (|I_b|\ge4), while a tag-one block must have (|I_b|\ge2). If a tag-one block actually has rank two, the verifier merely omits the stronger four-coordinate condition.
+
+Pair filters are also safe. If (|I_a\cap I_b|<2), then (E_a\cap E_b=0), because any nonzero vector in the intersection would be supported on fewer than (d_1(P)=2) coordinates. Hence
+[
+\dim(E_a+E_b)=r_a+r_b\ge\tau_a+\tau_b.
+]
+Therefore:
+- tagged ((1,1)) with intersection below two requires (|I_a\cup I_b|\ge d_2\ge4);
+- tagged ((2,1)) with intersection below two requires (|I_a\cup I_b|\ge d_3\ge5);
+- tagged ((2,2)) cannot have intersection below two at all: both true spaces are planes in the three-space (P), so they intersect nontrivially, and (d_1\ge2) forces the coordinate-support intersection to have size at least two.
+
+These are exactly the pairwise conditions used by the e=6,m=6 prefilter. The e=3,m=4 and e=5 prefilters use only the tagged-(2,2) condition, so they are a fortiori safe. Underestimating a true rank-two block as tag one can only weaken these tests.
+
+Finally, the tags are not used to manufacture the final local spaces. After the support prefilter, the verifiers enumerate the actual phase/orientation choices and reconstruct both quotient rows from `QCOMP` for every retained empty block. The e=3,m=4 verifier computes exact rational row spaces; the e=5 and e=6,m=6 verifiers compute mod-two rank lower bounds from the actual rows. Thus a no-repeat block that really has rank two contributes both rows in the final obstruction.
+
+Consequences:
+
+- the e=3,m=4 closure remains valid;
+- the e=5 closure remains valid, including its complete 10,623,069 retained phase/quintuple scan;
+- the e=6,m=6 closure remains valid, including its 18,711 retained phase/sextuple pairs.
+
+These three certificates can be removed from the local-rank-converse audit queue. This note does not certify any other verifier that uses tag one as an equality in a non-monotone pruning step.

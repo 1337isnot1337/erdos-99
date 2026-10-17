@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+"""Regression checks for growing contact buffers around reflection modules."""
+
+from fractions import Fraction
+import math
+
+
+C0 = 1.59653882460267
+buffer_coefficient = 1.5 * C0
+assert abs(buffer_coefficient - 2.394808236904005) < 1e-12
+
+# Maximum-degree-six contact graph ball:
+# 1 + 6(1 + 5 + ... + 5^(r-1)) = (3*5^r - 1)/2.
+for r in range(0, 10):
+    if r == 0:
+        direct = 1
+    else:
+        direct = 1 + 6 * sum(5**j for j in range(r))
+    closed = (3 * 5**r - 1) // 2
+    assert direct == closed
+
+# With r=floor((1/2)log_5 kappa), 5^r <= sqrt(kappa).
+for kappa in (5, 25, 125, 10**3, 10**6, 10**12):
+    r = math.floor(0.5 * math.log(kappa, 5))
+    assert 5**r <= math.sqrt(kappa) * (1 + 1e-12)
+
+# Polynomial tradeoff kappa=D^beta.
+beta = Fraction(1, 8)
+assert Fraction(1, 4) - beta == Fraction(1, 8)   # surviving module exponent
+assert 1 - beta / 2 == Fraction(15, 16)          # buffered union exponent
+assert Fraction(3, 4) + beta == Fraction(7, 8)   # module separation exponent
+assert beta / 2 == Fraction(1, 16)                # log_5 D buffer coefficient
+
+# More generally beta in (0,1/4) leaves all required exponents positive/sublinear.
+for num in range(1, 8):
+    beta = Fraction(num, 32)
+    if beta >= Fraction(1, 4):
+        continue
+    assert Fraction(1, 4) - beta > 0
+    assert 1 - beta / 2 < 1
+    assert Fraction(3, 4) + beta > Fraction(3, 4)
+
+print("PASS: growing reflection contact-buffer certificate")
+print(f"buffer coefficient={buffer_coefficient:.15f}")

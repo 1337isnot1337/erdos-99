@@ -1,0 +1,338 @@
+# Target C-II — near-full-shore exact-force blocks can have growing depth and vanishing normalized complexity
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` diagonal strengthening; no canonical promotion claimed  
+**Scope:** the no-positive-density-TB1 branch of the selected one-sided high-`t` shore through `t=(q-k)/D<=1.8687`  
+**Dependencies:** near-full-shore deep wide-force block theorem; coupled host-margin sharpening  
+**Certificate:** `research/verify_target_c_high_t_near_full_shore_growing_force_diagonal_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The near-full-shore force-block theorem is stated for every fixed radius and fixed parameter choice. A diagonal choice lets the radius tend to infinity while the retained center density tends to the entire one-sided-shore density
+
+\[
+{c\over2}={113\over10{,}000{,}000}=1.13\times10^{-5}.
+\]
+
+At the same time the pair angle may tend to zero slowly enough that every force diamond remains much wider than the canonical `O(D^(3/4))` midpoint error, while all normalized local switching/KKT complexity tends to zero.
+
+Put
+
+\[
+c={113\over5{,}000{,}000}.
+\]
+
+There is a survivor subsequence `D_k->infinity`, integers `r_k->infinity`, and center families `Q_k` such that
+
+\[
+\boxed{
+|Q_k|>\left({c\over2}-o(1)\right)D_k.
+}
+\tag{GD.1}
+
+For every center `i in Q_k`, the full radius-`r_k` block is exact-antipodal and all `2r_k+1` internal interfaces carry exact positive two-ray force pairs. More precisely one may arrange simultaneously:
+
+\[
+\boxed{r_k\to\infty,\qquad r_k=o(D_k),}
+\tag{GD.2}
+
+\[
+\boxed{\rho_k\to0,\qquad D_k^{1/4}\rho_k\to\infty,}
+\tag{GD.3}
+
+\[
+\boxed{{T_{r,k}\over D_k}\to0,\qquad {T_{0,k}\over D_k}\to0,}
+\tag{GD.4}
+
+and hence
+
+\[
+\boxed{
+\max_{j\in[i-r_k,i+r_k]} B_j=o(1),
+\qquad
+\max_j {|G_j|\over D_k}=o(1).
+}
+\tag{GD.5}
+
+Every internal interface has a force-pair projective gap at least `rho_k`. Its two force bars are bilateral and, using the coupled host sharpening, each satisfies
+
+\[
+\boxed{
+|d_j^\pm\cdot Jv_i|\ge c_H-o(1),
+\qquad
+c_H=0.453819885927\ldots .
+}
+\tag{GD.6}
+
+Thus every elementary exact-antipodal dipole in the growing block remains uniformly first-order jammed:
+
+\[
+\boxed{
+|\ell_{h_j^\pm}(s d^{(j)})|
+\ge(0.907639771854\ldots-o(1))D_k|s|.
+}
+\tag{GD.7}
+
+The force-diamond central radius satisfies
+
+\[
+{D_k\over2}\sin{\rho_k\over2}-L_{D_k}
+\sim {D_k\rho_k\over4},
+\tag{GD.8}
+
+and by (GD.3)
+
+\[
+\boxed{{D_k\rho_k\over L_{D_k}}\to\infty.}
+\tag{GD.9}
+
+So the force diamonds remain geometrically resolved on a scale asymptotically much larger than the midpoint uncertainty even though their normalized opening angle tends to zero.
+
+Finally all rows in the block have one exact oriented phase, all reactions point in one ordinary direction, and their magnitudes telescope:
+
+\[
+\boxed{
+\sum_{j=i-r_k}^{i+r_k}|G_j|<D_k.
+}
+\tag{GD.10}
+
+Consequently at least half of the internal interfaces satisfy
+
+\[
+\boxed{
+|G_j|<{D_k\over r_k}+o(D_k/r_k),
+}
+\tag{GD.11}
+
+while still carrying the uniformly transverse bilateral force pair (GD.6)--(GD.7).
+
+---
+
+## 1. A concrete fixed-`n` parameter schedule
+
+For integer `n>=1`, set
+
+\[
+r_n=n,
+\qquad
+m_n=2n+1,
+\tag{GD.12}
+\]
+
+\[
+\varepsilon_n={c\over10n},
+\qquad
+\eta_{0,n}=\eta_{r,n}={\varepsilon_n\over4}={c\over40n},
+\tag{GD.13}
+\]
+
+and
+
+\[
+\boxed{
+\rho_n={\varepsilon_n\over8m_n}
+={c\over80n(2n+1)}.
+}
+\tag{GD.14}
+
+Then
+
+\[
+2m_n\rho_n={\varepsilon_n\over4}={c\over40n}.
+\tag{GD.15}
+
+Choose fixed thresholds for this `n`, for example
+
+\[
+T_{0,n}=41n,
+\qquad
+T_{r,n}=41m_nn.
+\tag{GD.16}
+
+They obey
+
+\[
+{c\over T_{0,n}}<{c\over40n}=\eta_{0,n},
+\]
+
+and
+
+\[
+{m_nc\over T_{r,n}}={c\over41n}<{c\over40n}=\eta_{r,n}.
+\]
+
+The near-full-shore theorem therefore gives, for all sufficiently large `D` at this fixed `n`, center density
+
+\[
+\begin{aligned}
+\Lambda_n
+&={c\over2}-\eta_{0,n}-\eta_{r,n}-2m_n\rho_n\\
+&={c\over2}-{3c\over40n}.
+\end{aligned}
+\tag{GD.17}
+
+Hence
+
+\[
+\boxed{\Lambda_n\uparrow c/2.}
+\tag{GD.18}
+
+Every retained radius-`n` neighborhood is exact phase and `T_{r,n}`-good throughout, every internal interface has pair gap at least `rho_n`, and the center is `T_{0,n}`-good.
+
+---
+
+## 2. Diagonalize while dominating every finite-source error
+
+For each `n`, the fixed-parameter theorem holds beyond some finite source threshold `D_*(n)`. Choose a strictly increasing sequence `D_n` so large that, in addition to `D_n>=D_*(n)`, all of the following hold:
+
+\[
+{n\over D_n}< {1\over n},
+\qquad
+{T_{r,n}\over D_n}< {1\over n},
+\qquad
+{T_{0,n}\over D_n}< {1\over n},
+\tag{GD.19}
+
+\[
+D_n^{1/4}\rho_n>n,
+\tag{GD.20}
+
+and every `o(D)` or `o(1)` remainder in the fixed-`n` theorem is smaller than `D_n/n` or `1/n` respectively.
+
+Apply the fixed theorem at source `D_n` and put
+
+\[
+r_k=n,\quad \rho_k=\rho_n,\quad T_{r,k}=T_{r,n},\quad T_{0,k}=T_{0,n}.
+\]
+
+Equations (GD.2)--(GD.5) follow immediately from (GD.14), (GD.16), and (GD.19)--(GD.20). The density estimate is
+
+\[
+|Q_k|>
+\left({c\over2}-{3c\over40k}-o(1)\right)D_k,
+\]
+
+which is (GD.1).
+
+This is an ordinary diagonal extraction; no uniform-in-`r` asymptotic statement is assumed.
+
+---
+
+## 3. The pair gap shrinks, but the force diamonds remain resolved
+
+The canonical midpoint error has size
+
+\[
+L_D=O(D^{3/4}).
+\]
+
+For small `rho`,
+
+\[
+\sin(\rho/2)\sim\rho/2.
+\]
+
+The common central disk inside each force diamond has radius
+
+\[
+R_{\rm dia}(D,\rho)
+={D\over2}\sin{\rho\over2}-L_D.
+\tag{GD.21}
+
+Condition (GD.20) says
+
+\[
+D_k^{1/4}\rho_k\to\infty.
+\]
+
+Therefore
+
+\[
+D_k\rho_k\gg D_k^{3/4}\asymp L_{D_k},
+\]
+
+which proves (GD.8)--(GD.9). In particular the four endpoints of every selected pair remain distinct and the two diameter bars cross centrally for all sufficiently large `k`.
+
+The pair angle is allowed to shrink only because the host-derived distance of each individual bar from the reaction axis stays fixed at `gamma_H-o(1)`.
+
+---
+
+## 4. Normalized complexity and KKT scale vanish throughout the block
+
+At every internal interface the fixed theorem gives
+
+\[
+B_j<{T_{r,k}C\over D_k},
+\qquad
+0<|G_j|<T_{r,k}C.
+\]
+
+Since `T_{r,k}/D_k->0`, this proves (GD.5) after absorbing the fixed constant `C` into the diagonal choice in (GD.19).
+
+The exact force coefficients obey
+
+\[
+(c_H-o(1)){|G_j|\over D_k}
+\le\lambda_j^\pm
+\le {T_{r,k}C\over D_k\sin\rho_k}.
+\tag{GD.22}
+
+The diagonal may, if desired, be chosen still larger so that
+
+\[
+{T_{r,k}\over D_k\rho_k}\to0.
+\tag{GD.23}
+
+Then every selected compressed force coefficient itself tends to zero, while the geometric first-order cusp (GD.7) remains macroscopic after normalization by `D_k`.
+
+This separates the two notions cleanly: KKT mass can vanish absolutely while every local dipole direction remains uniformly jammed.
+
+---
+
+## 5. The ordered reaction stack contains many especially small steps
+
+On each exact-phase block, the near-full-shore theorem gives
+
+\[
+F_j=A_jv_i,
+\]
+
+with the `A_j` strictly monotone and
+
+\[
+\sum_{j=i-r_k}^{i+r_k}|G_j|
+=|A_{i-r_k}-A_{i+r_k+1}|<D_k.
+\]
+
+There are `m_k=2r_k+1` positive terms. Therefore at least half satisfy
+
+\[
+|G_j|<{2D_k\over m_k}
+<{D_k\over r_k}+o(D_k/r_k),
+\]
+
+proving (GD.11).
+
+Those interfaces still carry bilateral force pairs with pair gap at least `rho_k`, fixed host transverse margin `c_H-o(1)`, and the same exact row phase as the entire block.
+
+---
+
+## 6. Frontier effect
+
+On the no-strong-TB1 side, essentially the **entire one-sided shore density** can now be represented by centers of growing exact-force plateaux:
+
+```text
+(c/2-o(1))D centers;
+r_k -> infinity exact-antipodal interfaces on either side of every center;
+every internal interface carries an exact positive force pair;
+pair gap rho_k -> 0 but D^(1/4) rho_k -> infinity;
+every force ray stays >=26.989 degrees from the reaction axis;
+normalized local switching/KKT complexity -> 0;
+all reactions are collinear, nonzero, and strictly ordered;
+more than half of the reactions in each block are O(D/r_k).
+```
+
+This is stronger than a fixed-depth or fixed-density diagonal plateau. It rules out an escape in which the exact-force structure becomes sparse as the exact-phase depth grows.
+
+C-II remains open. The unresolved issue is now highly concentrated: one must show that a growing collinear reaction stack with vanishing normalized KKT scale, but uniformly transverse centrally crossing diameter force pairs at every interface, is incompatible with the exact normal order/common train geometry, or else use it to produce a strict diameter descent.
+
+**Disposition:** diagonalized the near-full-shore fixed-radius theorem to growing depth while recovering asymptotically the full one-sided-shore density and preserving geometrically resolved, uniformly transverse exact force pairs at every internal interface.

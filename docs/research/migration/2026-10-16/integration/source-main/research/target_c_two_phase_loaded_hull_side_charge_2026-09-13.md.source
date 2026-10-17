@@ -1,0 +1,98 @@
+# Target C — two-phase loaded-hull side charge
+
+**Date:** 2026-09-13  
+**Status:** proof-only conditional candidate; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The two-phase boundary charge can be strengthened using the Type-II loaded-hull
+normalization. In a globally phase-pure two-direction graph, only four loaded-hull
+sides can use the selected directions; every other loaded-hull unit side is paid by a
+nonquadrilateral face or by an outer bridge.
+
+## 1. Finite side-direction bound
+
+Let `F` be a convex polygon with all vertices extreme, and fix two projective line
+directions `[u]` and `[v]`. At most two sides of `F` have projective direction `[u]`:
+the two supporting lines parallel to that direction. A third parallel side would lie
+strictly between those supporting lines and could not contain an extreme vertex.
+The same holds for `[v]`, so at most four sides use either selected direction.
+
+## 2. Loaded-hull charge
+
+Work in the Type-II normalization `c_B=0`, where every loaded-loaded unit contact is a
+side of the loaded force hull `F`. Let `e_BB` count these contacts. Assume every
+bounded quadrilateral contact face is a strict rhombus using only `[u]` or `[v]`.
+
+Among the `e_BB` loaded-hull sides, at most four are phase-aligned. Any remaining side
+is either an outer-face bridge or a nonbridge edge with a bounded face on its other
+side. In the latter case that face cannot be a phase-pure quadrilateral, so it is a
+bounded nonquadrilateral face. Charging once per physical side gives
+
+\[
+\boxed{e_{BB}\le4+P_{exc}+B_o,}
+\tag{LH.1}
+\]
+
+where `P_exc=4f+Q` is the total degree of bounded nonquadrilateral faces and `B_o`
+counts outer bridges as physical edges. The charge is injective on nonbridge sides;
+the bridge term is counted once even though an outer bridge has two outer-walk
+occurrences.
+
+Using the canonical Section-123 payment gives
+
+\[
+e_{BB}\le4+10(e_{BB}-k)+B_o,
+\qquad k=d_H+s_Z.
+\tag{LH.2}
+\]
+
+Using `e_{BB}=Q+2k+u_B` and `P_{exc}=4f+Q` gives the equivalent form
+
+\[
+\boxed{2k+u_B\le4f+B_o+4.}
+\tag{LH.3}
+\]
+
+## 3. Composition with bridge-subtracted area
+
+In the full-core Type-II near-disk branch, the bridge-subtracted rhombus-area bound
+gives
+
+\[
+2B_o\le(b-\pi D)+P_{exc}+o(D).
+\tag{LH.4}
+\]
+
+Substituting (LH.4) into (LH.1) yields the all-detour source-level relation
+
+\[
+\boxed{
+e_{BB}
+\le4+{3\over2}P_{exc}+{1\over2}(b-\pi D)+o(D).
+}
+\tag{LH.5}
+\]
+
+Thus a two-phase full-core survivor cannot have simultaneously large loaded-loaded
+side population and both small exceptional-face perimeter and small outer detour.
+The relation is one-way: it supplies no upper bound on `e_BB`, `P_exc`, or the outer
+detour separately.
+
+The audited Type-II all-defect gap supplies a proof-only lower bound
+`e_{BB}/D >= 0.1669-o(1)` in its stated scope. Combining it with (LH.5) forces a
+linear route surplus in the two-phase branch, but the existing global
+`0.1224D-o(D)` route floor and the high-detour scalar regression show that this is
+still compatible with the current necessary region.
+
+## 4. Scope and classification
+
+- The phase-purity hypothesis is global for the bounded quadrilateral faces of the
+  graph under discussion; corridor purity alone is insufficient.
+- `c_B=0` is the canonical Type-II loaded-contact theorem. Type I is untouched.
+- Contact-isolated source points remain retained and are not put into the core stress
+  matrix.
+- No conclusion about KKT weights, global optimality of a constructed family, a strict
+  diameter decrease, or a unit equilateral triangle is made.
+
+**Classification:** proved candidate awaiting hostile audit; proof-only. C-II remains
+open.

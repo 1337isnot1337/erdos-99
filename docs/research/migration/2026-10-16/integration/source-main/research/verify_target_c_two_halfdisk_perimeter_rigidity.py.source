@@ -1,0 +1,37 @@
+"""Check constants for the proof-only two-half-disk perimeter strengthening.
+
+The script checks only the exact half-disk perimeter and the resulting normalized
+ledger constant. It does not certify the geometric half-disk alternative, perimeter
+lower semicontinuity hypotheses, global optimality, or C-II closure.
+"""
+
+from __future__ import annotations
+
+from fractions import Fraction as F
+from math import pi
+
+
+def main() -> None:
+    half_disk_perimeter = 1.0 + pi / 2.0
+    two_group_perimeter = 2.0 * half_disk_perimeter
+    assert abs(half_disk_perimeter - 2.5707963267948966) < 1.0e-15
+    assert abs(two_group_perimeter - (2.0 + pi)) < 1.0e-15
+
+    pi_lo = F(3141592653589793, 10**15)
+    pi_hi = F(3141592653589794, 10**15)
+    assert F(1) + pi_lo / 2 > F(2570796, 10**6)
+    assert F(1) + pi_hi / 2 < F(2570797, 10**6)
+
+    # Strict improvement over the previous transport constant.
+    sqrt3_lo = F(173205, 100000)
+    gamma_hi = pi_hi * (F(4) - F(2) * sqrt3_lo) / 8
+    assert F(1) + pi_lo / 2 > F(2) + gamma_hi
+
+    print(f"half_disk_perimeter_over_D={half_disk_perimeter:.15f}")
+    print(f"two_group_perimeter_over_D={two_group_perimeter:.15f}")
+    print(f"source_train_floor_over_D={half_disk_perimeter:.15f}")
+    print("two-half-disk perimeter rigidity arithmetic: OK")
+
+
+if __name__ == "__main__":
+    main()

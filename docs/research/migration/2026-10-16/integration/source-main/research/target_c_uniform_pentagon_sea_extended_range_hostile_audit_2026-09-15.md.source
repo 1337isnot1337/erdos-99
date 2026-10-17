@@ -1,0 +1,204 @@
+# Hostile audit — uniform pentagon sea beyond the old `1.8623` endpoint
+
+**Date:** 2026-09-15  
+**Reviewed:** `research/target_c_uniform_pentagon_sea_extended_range_2026-09-15.md`  
+**Disposition:** **PASS at its stated full-core train-measure scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The candidate claims that the modern pentagon-sea algebra was artificially truncated at `t<=1.8623`: the matched all-train theorem used by that algebra is uniform across the full-core Type-II train-measure branch.  This audit checks the theorem scope, the face identities, the asymptotic directions, and the widened Branch-R use.
+
+## 1. The `g=0.007707` all-train theorem is genuinely uniform in `t`
+
+The hostile audit of the modern chamber-surplus theorem explicitly checked this exact issue.  It records the scope chain
+
+```text
+g=0.007707 artifact
+ -> same scope as hostile-audited g=0.0077
+ -> same scope as hostile-audited g=0.0076
+ -> canonical full-core Type-II train-measure branch.
+```
+
+The audit further states that the proof is a uniform three-branch phase-star capacity argument and is **not** conditional on `t<=1.844`, residual localization, or any later high-`t` path theorem.
+
+Therefore
+
+\[
+\liminf {T_{train}-q/2\over D}
+\ge C_{707}
+\]
+
+is available at every fixed `t` endpoint in the full-core train-measure branch.
+
+**Verdict:** PASS.  Extending the algebra past `1.8623` introduces no scope mismatch.
+
+## 2. The face floor has the correct sign in every substitution
+
+The exact stopped-train identity is
+
+\[
+T_{train}-q=2f-k.
+\]
+
+With `t=(q-k)/D` and `kappa=k/D>=0`,
+
+\[
+{T_{train}-q/2\over D}
+={t\over2}+2{f\over D}-{\kappa\over2}.
+\]
+
+Thus at an upper endpoint `t<=X`, dropping `kappa/2` and replacing `t` by the larger `X` weakens the resulting lower bound:
+
+\[
+f/D\ge C_{707}/2-X/4-o(1).
+\]
+
+There is no reversal here.
+
+**Verdict:** PASS.
+
+## 3. The `Q` upper envelope is independent of the path program
+
+Canonical loaded-hull bookkeeping gives
+
+\[
+b+Q=2(q-k).
+\]
+
+The occurrence-counted outer contact walk contains the force-hull boundary, so
+
+\[
+b\ge\operatorname{per}(F).
+\]
+
+Full-core Type II has
+
+\[
+\operatorname{per}(F)/D\to\pi.
+\]
+
+Hence for `t<=X`,
+
+\[
+Q/D\le2X-\pi+o(1).
+\]
+
+No O--O terminal-energy or path hypothesis is involved.
+
+**Verdict:** PASS.
+
+## 4. The pentagon floor is exact degree arithmetic
+
+For bounded exceptional face counts `f_d`,
+
+\[
+f=\sum_{d\ge5}f_d,
+\qquad
+Q=\sum_{d\ge5}(d-4)f_d.
+\]
+
+Then
+
+\[
+Q-f=\sum_{d\ge6}(d-5)f_d\ge\sum_{d\ge6}f_d=f-P_5,
+\]
+
+so
+
+\[
+P_5\ge2f-Q.
+\]
+
+Inserting the adverse endpoint envelopes gives
+
+\[
+P_5/D\ge C_{707}+\pi-{5X\over2}-o(1).
+\]
+
+The right side is positive up to
+
+\[
+X<{2(C_{707}+\pi)\over5}.
+\]
+
+The exact certificate gives a lower enclosure of this threshold above `2.0215`, so the displayed `2.020` endpoint is conservative.
+
+**Verdict:** PASS.
+
+## 5. The train-touching count remains valid at the wider endpoint
+
+Every pentagon contributes five terminal face-side occurrences to the complete stopped-train decomposition.  Every complete stopped train has at most two terminal occurrences.  Therefore
+
+\[
+N_5\ge{5P_5\over2}
+\]
+
+without any phase assumption.  The merged isolate-host theorem separately proves every such pentagon has empty source interior.
+
+**Verdict:** PASS.
+
+## 6. Branch R also has uniform scope
+
+The modern train-slack floor
+
+\[
+\liminf \tau_D/D\ge0.7467921
+\]
+
+comes from the uniform all-train gap plus full-core asymptotics; its hostile audit does not impose `t<=1.8623`.
+
+The exact decomposition
+
+\[
+2\tau_D=\rho_{rec}+\sigma_R
+\]
+
+gives the global full-core split
+
+```text
+rho_rec >= tau0 D  -> singleton branch;
+rho_rec <  tau0 D  -> sigma_R > tau0 D.
+```
+
+In the second branch the rhombus/pentagon incidence inequality
+
+\[
+I_5\ge5(2f-Q)-\tau_0D-o(D)
+\]
+
+uses only global face/recipient bookkeeping.  Substituting the same adverse `f,Q` endpoint envelopes is therefore valid beyond `1.8623`.
+
+Its scalar lower envelope stays positive to
+
+\[
+X<{2(C_{707}+\pi-\tau_0/5)\over5},
+\]
+
+whose exact lower enclosure is above `1.9618`.
+
+**Verdict:** PASS.
+
+## 7. Exact arithmetic regression
+
+A Pyroam exact-`Fraction` evaluation using Machin bounds for `pi` and integer-square-root bounds for `sqrt(Delta_2)` reproduced:
+
+```text
+T=1.880: P5/D > .35392526, N5/D > .88481316, Branch-R I5/D > 1.02283423
+T=1.900: P5/D > .30392526, N5/D > .75981316, Branch-R I5/D > .77283423
+T=1.920: P5/D > .25392526, N5/D > .63481316, Branch-R I5/D > .52283423
+T=1.950: P5/D > .17892526, N5/D > .44731316, Branch-R I5/D > .14783423
+T=1.960: P5/D > .15392526, N5/D > .38481316, Branch-R I5/D > .02283423
+T=2.000: P5/D > .05392526, N5/D > .13481316
+T=2.020: P5/D > .00392526, N5/D > .00981316.
+```
+
+The candidate rounds downward throughout.
+
+**Verdict:** PASS.
+
+## 8. What this does not prove
+
+The widened pentagon sea is structural, not an exclusion.  At `t=2.02` the forced population is small, and Branch R ceases to force rhombus/pentagon incidences before the pentagon floor itself vanishes.  The O--O hub path still has its own separately certified endpoint and is not extended by this argument.
+
+The gain is scope: a large part of the previously unstructured high-`t` full-core regime now carries explicit source-empty pentagonal defects, and Branch R carries an explicit rhombic-pentagon interface through `t<=1.96`.
+
+**Final verdict:** **PASS.** The scope propagation and all displayed endpoint constants are valid. C-II remains open.

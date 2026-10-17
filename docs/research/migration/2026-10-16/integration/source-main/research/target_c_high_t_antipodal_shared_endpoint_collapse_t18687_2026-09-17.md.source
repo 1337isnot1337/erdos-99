@@ -1,0 +1,259 @@
+# Target C-II — linearly many exact-antipodal blockers cannot be diameter stars
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** the exact-antipodal side of the high-`t` obstruction fork for `t=(q-k)/D<=1.8687`  
+**Dependencies:** exact-antipodal blocker pair; shrinking high-`t` row-phase window; common-hub one-sided switching; canonical C67 projective diameter-direction separation; canonical full-source Section-155 circumradius estimate  
+**Certificate:** `research/verify_target_c_high_t_antipodal_shared_endpoint_collapse_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+At every exact-antipodal interface `i`, the current blocker theorem supplies two switching actual diameter bars
+
+\[
+h_i^+,h_i^-
+\]
+
+whose consistently inward unit directions satisfy
+
+\[
+d_i^+\cdot Ju_i>0,
+\qquad
+d_i^-\cdot Ju_i<0.
+\tag{AS.1}
+\]
+
+A priori these two bars could form a diameter star at one source vertex. This note shows that such shared-endpoint pairs are globally negligible.
+
+Let
+
+\[
+E_D^{star}:=
+\{i\in E_D:h_i^+,h_i^-\text{ share a source endpoint}\}.
+\tag{AS.2}
+\]
+
+Then
+
+\[
+\boxed{|E_D^{star}|=o(D).}
+\tag{AS.3}
+
+Therefore, if the exact-antipodal side of the high-`t` density fork is linear,
+
+\[
+|E_D|>c_1D-o(D),
+\qquad
+c_1={791\over320{,}000{,}000},
+\tag{AS.4}
+\]
+
+then
+
+\[
+\boxed{
+|E_D\setminus E_D^{star}|
+>c_1D-o(D).
+}
+\tag{AS.5}
+
+For every interface in this linear subfamily, the two opposite-transverse blocker bars are vertex-disjoint and hence cross each other geometrically. Combined with the separate blocker-matching extraction, one can retain
+
+\[
+\boxed{
+\left({c_1\over16\,3^{1/8}}-o(1)\right)D^{1/4}
+}
+\tag{AS.6}
+
+exact-antipodal interfaces whose complete two-edge blocker bundles have pairwise disjoint endpoint sets. Since the two edges inside every retained bundle are now also vertex-disjoint, **all** blocker edges in the retained family are mutually vertex-disjoint and therefore pairwise crossing actual diameter chords.
+
+This removes the diameter-star regression from the linear exact-antipodal branch. A surviving linear exact-antipodal family must be supported mainly by genuine crossing two-chord dipoles, not by pairs of bars meeting at a common endpoint.
+
+---
+
+## 1. Shared-endpoint blocker pairs are angularly narrow
+
+The full-source Section-155 estimate gives a source circumcenter `o` and
+
+\[
+R(K)<{D\over2}+\eta,
+\qquad
+\eta=3^{1/4}\sqrt D.
+\tag{AS.7}
+
+As in the source-wide diameter-degree argument, two distinct actual diameter bars sharing one endpoint have angular separation at that endpoint less than
+
+\[
+\boxed{
+\Theta_D
+:=2\arccos\left({D\over D+2\eta}\right)
+=(4\,3^{1/8}+o(1))D^{-1/4}.
+}
+\tag{AS.8}
+
+Fix `i in E_D^star`. The common-hub theorem makes the switching at this nonhub interface one-sided: every switching bar joins the middle layer to the hub side. Hence if `h_i^+` and `h_i^-` share an endpoint, that common endpoint has the same layer role for both bars. Their consistently inward orientations therefore differ from the two rays based at the common endpoint by either no reversal or one common reversal. In either case the ordinary angle between `d_i^+` and `d_i^-` is at most `Theta_D`.
+
+Write a coherent real angle `alpha_i` for `u_i` and angles `theta_i^+,theta_i^-` for these two consistently oriented diameter directions, choosing the representatives so that
+
+\[
+|\theta_i^+-\theta_i^-|<\Theta_D<\pi/2
+\]
+
+for all sufficiently large `D`.
+
+Equation (AS.1) is
+
+\[
+\sin(\theta_i^+-\alpha_i)>0,
+\qquad
+\sin(\theta_i^--\alpha_i)<0.
+\tag{AS.9}
+
+Two real arguments less than `pi/2` apart on which sine has opposite signs must straddle one zero of sine. Modulo `pi`, this says the projective row direction lies between the two projective diameter directions. Therefore
+
+\[
+\boxed{
+ d_\pi([d_i^+],[u_i])<\Theta_D,
+ \qquad
+ d_\pi([d_i^-],[u_i])<\Theta_D.
+}
+\tag{AS.10}
+
+So a shared-endpoint exact-antipodal blocker pair is forced into the shrinking angular neighborhood of its row direction.
+
+---
+
+## 2. All shared-endpoint blocker directions lie in one `o(1)` projective interval
+
+The high-`t` row family lies in one shrinking projective phase window. Let its width be
+
+\[
+\omega_D=o(1).
+\tag{AS.11}
+
+Every `u_i` belonging to the selected linear shore lies in that window. Combining (AS.8)--(AS.11), all diameter directions contributed by `E_D^star` lie in one projective interval of length at most
+
+\[
+\boxed{
+\ell_D:=\omega_D+2\Theta_D=o(1).
+}
+\tag{AS.12}
+
+Different interfaces have disjoint switching supports, and the two opposite-sign bars at one interface are distinct. Thus the `2|E_D^star|` bars are all distinct actual diameter edges.
+
+Canonical C67 gives the exact projective separation
+
+\[
+\boxed{
+\delta_D:=2\arcsin{1\over2D}
+}
+\tag{AS.13}
+
+between any two distinct actual diameter directions. Since
+
+\[
+D\delta_D\longrightarrow1,
+\tag{AS.14}
+\]
+
+an interval of length `ell_D=o(1)` contains only `o(D)` such directions. Explicitly,
+
+\[
+2|E_D^{star}|-1
+\le{\ell_D\over\delta_D},
+\]
+
+so
+
+\[
+{ |E_D^{star}|\over D}
+\le
+{\ell_D\over2D\delta_D}+{1\over2D}
+\longrightarrow0.
+\tag{AS.15}
+
+This proves (AS.3).
+
+The argument uses no KKT multiplier lower bound and no rate for `omega_D`; mere phase-window collapse is enough because C67 resolves projective directions at scale `1/D`.
+
+---
+
+## 3. Linear exact-antipodal density therefore consists of crossing pairs
+
+If (AS.4) holds, subtracting (AS.3) gives (AS.5). For every
+
+\[
+i\in E_D\setminus E_D^{star},
+\]
+
+the two blocker edges have no common endpoint. Two vertex-disjoint actual diameter edges in a planar diameter set cross. Therefore
+
+\[
+\boxed{
+h_i^+\text{ crosses }h_i^-}
+\tag{AS.16}
+
+for all but `o(D)` exact-antipodal interfaces.
+
+This is an exact geometric upgrade of the antipodal dipole picture:
+
+```text
+linear exact-antipodal branch
+-> linear number of switching interfaces
+-> two opposite-transverse actual diameter bars per interface
+-> all but o(D) of those pairs are internally vertex-disjoint
+-> hence all but o(D) are genuine crossing two-chord dipoles.
+```
+
+---
+
+## 4. Strengthened vertex-disjoint bundle extraction
+
+Use the source-wide diameter-degree bound
+
+\[
+\Delta(H)\le(4\,3^{1/8}+o(1))D^{3/4}.
+\tag{AS.17}
+
+For each interface in `E_D\setminus E_D^star`, regard its two crossing bars as one bundle with four distinct endpoints. Two bundles conflict if their endpoint sets meet. A fixed bundle has four endpoints, each incident with at most `Delta(H)` actual diameter bars, so the bundle-conflict graph has maximum degree at most
+
+\[
+4\Delta(H).
+\tag{AS.18}
+
+Greedy independent-set selection and (AS.5) give at least
+
+\[
+{c_1D-o(D)\over4\Delta(H)+1}
+=
+\left({c_1\over16\,3^{1/8}}-o(1)\right)D^{1/4}
+\tag{AS.19}
+
+bundles with pairwise disjoint endpoint sets, proving (AS.6).
+
+Inside each retained bundle the two bars are already vertex-disjoint by construction. Across distinct retained bundles all endpoints are disjoint. Hence all `2M_D` diameter bars in the selected collection form one matching in the actual diameter graph. The convex geometric-thrackle property then implies that **every two selected bars cross**.
+
+Each pair still retains its original exact-antipodal interface tag and opposite-transverse signs. The common-hub interval theorem also retains the one-sided staircase support of each bar toward the hub.
+
+---
+
+## 5. Frontier effect
+
+The exact-antipodal side can no longer hide behind repeated local diameter stars. Its linear-density realization has the stronger form
+
+```text
+> c1 D - o(D) exact-antipodal interfaces
+with genuine crossing blocker pairs
++
+Omega(D^(1/4)) interface pairs can be chosen simultaneously
+so that all 2M blocker bars are vertex-disjoint and pairwise crossing
++
+all bars have distinct one-sided switch tags in the common laminar hub chain
++
+all rows live in one shrinking phase window.
+```
+
+This still does not contradict global optimality: nearly central families of many crossing diameters are compatible with regular-shell regressions. The remaining high-value step is to combine the **pairing by interface** and opposite transverse signs with the common ordered near-triangular train rectangle. A contradiction must use those tags/order constraints, not only the existence of many crossing diameter chords.
+
+No canonical promotion or C-II closure is claimed.
+
+**Disposition:** proved that only `o(D)` exact-antipodal interfaces can realize their opposite-transverse blocker pair as a shared-endpoint diameter star; any linear exact-antipodal branch therefore contains linearly many genuine crossing two-chord dipoles and an `Omega(D^(1/4))` globally vertex-disjoint paired crossing subfamily. C-II and Level I remain open.

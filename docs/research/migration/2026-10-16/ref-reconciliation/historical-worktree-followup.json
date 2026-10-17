@@ -1,0 +1,148 @@
+[
+  {
+    "historical_worktree": "/tmp/e99-diameter-stress-gap-20261002",
+    "recorded_head": "d33db214ef05caf19bf31e21ab2fd49c50a86bc3",
+    "status": "unknown_historical_working_copy_state_at_migration_capture",
+    "earlier_backup_snapshot": {
+      "manifest_source": "/home/cinna/e99-autonomous-closeout-20261015/worktrees/homelab/136/manifest.json",
+      "manifest_sha256": "93e669470a03a08a3e61ceaad94444fec440563116042847b1d8c2ff30780558",
+      "file_mtime_utc": "2026-10-15T17:45:25.272005+00:00",
+      "status": [],
+      "stable_status": true,
+      "staged_patch_bytes": 0,
+      "unstaged_patch_bytes": 0,
+      "archive_sha256": "d27b94f040c5b2a02f25c1d96855ccd7c0ece48a4d3b886b8f3ff2a06e3c4ebf",
+      "archive_verification": [
+        {
+          "path": "research/__pycache__/verify_target_c_collinear_punctures_2026_10_02.cpython-312.pyc",
+          "bytes": 13019,
+          "sha256": "52c07bbf68c34680b1610e69401ca84bd800884cf8429664fb094a05637b65de",
+          "matches_manifest": true,
+          "ignored": true
+        }
+      ]
+    },
+    "current_residual_files": [
+      {
+        "path": "docs/reports/target_c_collinear_punctures_and_diameter_crossflow_2026-10-02.md",
+        "bytes": 20761,
+        "sha256": "a27aed6d2ee643e51c2e66b0a821853a38855479a45d9b257df686380fb629b8",
+        "exists_in_recorded_commit": true,
+        "exact_match_recorded_commit": true,
+        "ignored_bytecode": false
+      },
+      {
+        "path": "docs/state/artifact-index.jsonl",
+        "bytes": 275661,
+        "sha256": "e1e1a3a046c46b99584e5af3d29599b8099fefbe9a9bbf71d8bed46f53dcac2a",
+        "exists_in_recorded_commit": true,
+        "exact_match_recorded_commit": true,
+        "ignored_bytecode": false
+      },
+      {
+        "path": "research/README.md",
+        "bytes": 133635,
+        "sha256": "27d347f03b05ce68ff80385a08c41edce1af91e13ad19f692934b60031bcf459",
+        "exists_in_recorded_commit": true,
+        "exact_match_recorded_commit": true,
+        "ignored_bytecode": false
+      },
+      {
+        "path": "research/__pycache__/verify_target_c_collinear_punctures_2026_10_02.cpython-312.pyc",
+        "bytes": 13019,
+        "sha256": "52c07bbf68c34680b1610e69401ca84bd800884cf8429664fb094a05637b65de",
+        "exists_in_recorded_commit": false,
+        "exact_match_recorded_commit": false,
+        "ignored_bytecode": true
+      },
+      {
+        "path": "research/target_b_cross_grain_virtual_determinant_2026-10-02.md",
+        "bytes": 4318,
+        "sha256": "0a28ee29ea61a8d82c415883f77daf38939cd6db32e20c99a1064b1ed168dbaa",
+        "exists_in_recorded_commit": true,
+        "exact_match_recorded_commit": true,
+        "ignored_bytecode": false
+      },
+      {
+        "path": "research/target_c_degree2_fan_exact_face_payment_2026-10-02.md",
+        "bytes": 10446,
+        "sha256": "28f49e1ab8d065d0718ce7ff7c5c834aefd6a2fd2019dd7861ae762527cf4fa7",
+        "exists_in_recorded_commit": true,
+        "exact_match_recorded_commit": true,
+        "ignored_bytecode": false
+      },
+      {
+        "path": "research/target_c_diameter_stress_gap_run_2026-10-02.md",
+        "bytes": 2717,
+        "sha256": "dbe80d44f7a0ae614582f0a1b462d75d4cf750729461e6ab1b71c912dae66706",
+        "exists_in_recorded_commit": true,
+        "exact_match_recorded_commit": true,
+        "ignored_bytecode": false
+      },
+      {
+        "path": "research/target_c_high_t_degree3_fan_forcing_2026-10-02.md",
+        "bytes": 10943,
+        "sha256": "35600be9440487d1e8762d977ac7e0be54d4e0c7268512c5acc36b36270194fb",
+        "exists_in_recorded_commit": true,
+        "exact_match_recorded_commit": true,
+        "ignored_bytecode": false
+      },
+      {
+        "path": "research/target_c_typeI_hall_blocker_matching_2026-10-02.md",
+        "bytes": 6438,
+        "sha256": "0fde3534915db5703fe306936399789d4ffe143b6e08c31a6972be7f80113c71",
+        "exists_in_recorded_commit": true,
+        "exact_match_recorded_commit": true,
+        "ignored_bytecode": false
+      },
+      {
+        "path": "research/verify_target_c_collinear_punctures_2026_10_02.py",
+        "bytes": 7668,
+        "sha256": "2334ea5f9207e2b67c7f2eecee30c1e68c049cb91520229f655b67ae264c4e1d",
+        "exists_in_recorded_commit": true,
+        "exact_match_recorded_commit": true,
+        "ignored_bytecode": false
+      }
+    ],
+    "current_path_exists": true,
+    "current_git_marker_exists": false,
+    "conclusion": "The earlier archived snapshot recorded no tracked/untracked changes and preserved ignored bytecode. This does not establish an uncaptured later working-copy state or certify exactly how many historical files were lost.",
+    "recovery_claimed_for_unknown_files": false
+  },
+  {
+    "historical_worktree": "/tmp/e99-source-cycle-20261001",
+    "recorded_head": "9ddd9538c29244fd22183f9682b2835f54cde0c3",
+    "status": "unknown_historical_working_copy_state_at_migration_capture",
+    "earlier_backup_snapshot": {
+      "manifest_source": "/home/cinna/e99-autonomous-closeout-20261015/worktrees/homelab/152/manifest.json",
+      "manifest_sha256": "c1ff04f0a513e51c3b360214e99321815d03b011a52eb31ec97eff4ae1753dec",
+      "file_mtime_utc": "2026-10-15T17:45:25.887008+00:00",
+      "status": [],
+      "stable_status": true,
+      "staged_patch_bytes": 0,
+      "unstaged_patch_bytes": 0,
+      "archive_sha256": "ecca3e35a02ddc95f84b982858f91e47ad51a4b75e71e01f6e96b6f61e4f863c",
+      "archive_verification": [
+        {
+          "path": "research/__pycache__/verify_loaded_near_unit_hull_adjacency_2026_10_01.cpython-312.pyc",
+          "bytes": 11296,
+          "sha256": "2401f6c94bbaecef804117c76a14b6ffeb09b0d92dfaade803a6df95fd3ab9e5",
+          "matches_manifest": true,
+          "ignored": true
+        },
+        {
+          "path": "research/__pycache__/verify_ultrasmall_swap_isolate_dispatch_2026_10_01.cpython-312.pyc",
+          "bytes": 28430,
+          "sha256": "d387169fe04c19555b1af28bf483c7dd3eaaad98385122c8707dc1e4e801dd35",
+          "matches_manifest": true,
+          "ignored": true
+        }
+      ]
+    },
+    "current_residual_files": [],
+    "current_path_exists": false,
+    "current_git_marker_exists": false,
+    "conclusion": "The earlier archived snapshot recorded no tracked/untracked changes and preserved ignored bytecode. This does not establish an uncaptured later working-copy state or certify exactly how many historical files were lost.",
+    "recovery_claimed_for_unknown_files": false
+  }
+]

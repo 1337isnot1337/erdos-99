@@ -1,0 +1,128 @@
+# Target C — hostile audit of Section 126 outer-tooth exactness
+
+**Date:** 2026-09-12
+**Base theorem state:** `2026-09-12.audit.46`
+**Artifact:** `research/target_c_section126_outer_tooth_exactness.md`
+**Verdict:** **PASS at proof-only Type-II scope.**
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The audit attacks the only delicate point: whether a two-edge interval in the
+occurrence-counted global outer walk is really the same object as a bounded triangular
+face in one augmented harmonic cell.
+
+## 1. The Section-63 interval is the pocket-side interval
+
+Canonical Section 63 chooses distinguished exterior occurrences of the loaded vertices
+in cyclic force-hull order and partitions one outer-face boundary walk into intervals
+
+\[
+W_i:b_i\leadsto b_{i+1}.
+\]
+
+Canonical Section 67 adds every missing global hull side `b_i b_{i+1}`. Each such side
+lies on `partial F`, has no positive-core vertex in its open segment, and creates one
+bounded convex pocket on its inward side. Since the other side of the added edge is the
+exterior face, the boundary of that pocket minus the added edge is precisely the old
+outer-face interval between the corresponding consecutive distinguished loaded
+occurrences. Thus the pocket boundary is
+
+\[
+b_i b_{i+1}\cup W_i.
+\]
+
+This remains true with bridges and repeated articulation occurrences: those repetitions
+are part of `W_i` with multiplicity. In particular, if `ell_i=2`, the new pocket is the
+simple triangle bounded by the two old contact edges and the added hull side.
+
+## 2. The middle vertex of a two-edge Type-II tooth is unloaded
+
+Write `W_i=b_i-x-b_{i+1}` with `s_i>1`. If `x` were loaded, both unit edges would be
+loaded-loaded contacts. Audited proof-only Section 124 says every such contact is a
+global loaded-hull side. Therefore `x` would be a cyclic neighbor of both
+`b_i,b_{i+1}`, while those two vertices are themselves cyclic neighbors. A simple
+convex polygon can have this adjacency pattern only for `q=3`.
+
+Canonical Section 59 has `h/D` bounded below by `2rho-o(1)` and `q>=h`, so `q>3` for
+all sufficiently large Type-II survivors. Hence `x` is unloaded.
+
+Its two contacts put it in one unloaded component `I_r` with both endpoints in
+`A_r`. Since `b_i,b_{i+1}` are consecutive in the full cyclic set `B`, they are
+consecutive in the subset `A_r`; their chord is a side of `P_r`.
+
+The global pocket triangle contains no other positive-core vertex by definition of a
+face of `Ghat`. Therefore it is also a bounded face of the induced augmented graph
+`J_r^+`. This verifies the forward map from `ell_i=2` to an augmented triangle without
+requiring any unstated occurrence injectivity.
+
+## 3. An augmented triangle is globally exposed
+
+Proof-only Section 125 already establishes that every augmented triangular face has
+one unloaded apex `x`, two old unit contacts, and a nonunit base `ab` that is a side of
+the **global** loaded hull. The only possible concern is that the triangle could be a
+face of `J_r^+` but contain positive-core material from another component, so that it
+would not be the global pocket incident to `ab`.
+
+That cannot occur. The apex belongs to `I_r`; positivity/harmonic trapping with at
+least three noncollinear loaded attachments puts every unloaded vertex of `I_r` in
+`int(P_r)`. Hence the open triangular face lies in `int(P_r)`. If a vertex of another
+unloaded component lay in this open triangle, its harmonic cell would contain that
+vertex in its interior and would have interior intersection with `P_r`, contradicting
+canonical Section 83. A loaded vertex cannot lie there because loaded vertices are
+extreme vertices of `F`. Planarity then excludes a full-core edge crossing the open
+triangle without a vertex.
+
+Thus after the global base `ab` is added, the triangle is the global `Ghat` pocket on
+that side. Removing the added base leaves exactly the old two-edge outer interval.
+Therefore every augmented triangle gives `ell_i=2`.
+
+## 4. Injection is exact
+
+Different global hull sides are different indices `i`. Section 125 already proves that
+two distinct augmented triangular faces cannot charge the same global hull side. The
+forward and reverse constructions both preserve the base side, so they are inverse
+bijections. Hence
+
+\[
+T=\#\{i:s_i>1,\ \ell_i=2\}.
+\]
+
+## 5. The `u_B` inequality is pure exact algebra
+
+From canonical Section 63,
+
+\[
+x_B=\sum_i(\ell_i-1),
+\qquad
+u_B=x_B-m.
+\]
+
+Splitting unit/nonunit hull sides gives
+
+\[
+u_B
+=\sum_{s_i>1}(\ell_i-2)
+ +\sum_{s_i=1}(\ell_i-1).
+\]
+
+All summands are nonnegative. Every nonunit index not counted by `T` has
+`ell_i>=3`, hence contributes at least one to the first sum. Therefore
+
+\[
+0\le m-T\le u_B.
+\]
+
+No assumption that a unit hull side has `ell_i=1` is needed.
+
+## 6. Regressions and scope
+
+- A bridge excursion is allowed and only increases `ell_i`/`u_B`.
+- Several two-edge teeth may share an unloaded apex; the theorem counts hull bases, not
+  apices, so this causes no collision.
+- A tooth base may approach length two or length one; no uniform metric gap is claimed.
+- The theorem uses Type-II Section 124. It says nothing about the macroscopic-container
+  branch.
+- Contact-isolated source points remain present and irrelevant to the positive outer
+  walk.
+
+**Audit verdict:** PASS at proof-only Type-II scope. Section 126 sharpens the structural
+meaning of `u_B` but is not a C-II contradiction.

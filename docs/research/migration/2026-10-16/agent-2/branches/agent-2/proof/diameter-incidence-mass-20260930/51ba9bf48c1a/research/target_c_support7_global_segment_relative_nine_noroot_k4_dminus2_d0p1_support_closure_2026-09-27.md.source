@@ -1,0 +1,146 @@
+# Target C: close the nine-no-root k=4, D=-2, d_root=0, p=1 branch
+
+Date: 2026-09-27
+
+Status: exact support-level closure of one of the two arithmetic branches in the nine-no-root k=4 layer. This does not close the D=-1,p=2 branch, higher-k nine-no-root layers, Target C-II, or Erdos Problem #99.
+
+Companion verifier:
+
+`research/verify_target_c_support7_global_segment_relative_nine_noroot_k4_dminus2_d0p1_support_closure_2026_09_27.cpp`
+
+## Inputs from current main
+
+The committed nine-no-root reduction leaves, for k=4, exactly
+
+- D=-2, d_root=0, p=1;
+- D=-1, d_root=0, p=2.
+
+This note closes the first branch.
+
+Here the external coefficient-constraint space P has rank five. The all-depth deletion identity gives
+
+(d1,d2,d3,d4,d5)(P) >= (3,4,6,7,9).
+
+The selected incomplete-root cost p=1 is exactly one selected singleton block. It may be touched or untouched. Every other touched incomplete root block is actual-empty.
+
+The committed local-block rule gives, for an actual-empty touched triangle block b,
+
+- dim(E_b)=2 iff one containing tetrahedral support is repeated among the nine external cycles;
+- dim(E_b)=1 otherwise.
+
+The local coefficient space E_b is supported inside the set I_b of external-cycle occurrences whose tetrahedral supports contain b.
+
+Because d_root=0, every set of complete-root triangle rows is independent.
+
+## Touched-block bound
+
+Let T be the touched triangle-block set, h=|T|, C the touched complete blocks, e the touched actual-empty blocks, and t in {0,1} indicate whether the selected singleton is touched.
+
+The face-local identity places all four independent external relation lifts in H(T), independently modulo the complete-root span. Therefore
+
+rank H(T)-rank H(C) >= 4.
+
+Since rank H(T)<=15 and H(C) has rank |C|,
+
+|C|<=11.
+
+Hence
+
+e = h-|C|-t >= h-12.
+
+Every actual-empty block has at least three incidences: a rank-one local space needs support at least d1=3, while a rank-two local space needs support at least d2=4. The nine no-root cycles contribute exactly 36 cycle-block incidences. Thus
+
+36 >= 3e + (h-e) = h+2e >= 3h-24,
+
+so
+
+h<=20.
+
+This bound is already committed in the preceding nine-no-root reduction and is used to restrict the finite certificate.
+
+## Generalized-weight support filters
+
+For each touched block b, I_b denotes its occurrence set. The actual coordinate support of the corresponding local coefficient space is contained in I_b, so using I_b only enlarges the search.
+
+An actual-empty block is individually eligible only if
+
+- dim(E_b)=1 and |I_b|>=3;
+- dim(E_b)=2 and |I_b|>=4.
+
+For two local spaces supported inside occurrence sets I and J, split by the possible dimension of their intersection. The generalized weights force the following necessary conditions:
+
+- line-line: |I intersect J|>=3 or |I union J|>=4;
+- plane-line: |I intersect J|>=3 or |I union J|>=6;
+- plane-plane: |I intersect J|>=4, or both |I intersect J|>=3 and |I union J|>=6, or |I union J|>=7.
+
+The verifier enumerates every pairwise-compatible actual-empty family.
+
+The selected singleton is treated even more permissively. If touched, its coefficient line may be declared zero. If declared nonzero, it is treated as an arbitrary line supported inside its occurrence set and is required only to satisfy the same pairwise necessary conditions against the actual-empty spaces.
+
+The actual-empty spaces together with the nonzero selected singleton line generate P. Therefore their nominal dimensions must sum to at least five. Since d5(P)=9, the union of their actual coordinate supports is all nine external coordinates. The verifier checks only the larger occurrence-set union, so this is again a relaxation.
+
+If the selected singleton is untouched, all touched incomplete blocks are actual-empty and |C|<=11 gives e>=h-11. If it is touched, e>=h-12.
+
+## Complete-root independence and face-local capacity
+
+For a candidate touched incomplete set I subset T, put C=T\I. Every actual state must satisfy
+
+rank H(C)=|C|
+
+because d_root=0, and
+
+rank H(T)-rank H(C)>=4
+
+because k=4 and the four external relation lifts remain independent modulo the complete-root span.
+
+The verifier imposes exactly these two necessary rank conditions. No orientation or coefficient gluing condition is added.
+
+## Exact support enumeration
+
+Forget cycle orientations and retain only the multiset of nine tetrahedral four-supports on seven vertices. There are 35 possible supports, each with multiplicity at most three because a fixed support has only three no-root four-cycle orientations.
+
+An independent Burnside calculation gives the S7 orbit counts for support-multiset sizes zero through nine:
+
+1, 1, 4, 14, 61, 268, 1283, 6032, 27763, 121458.
+
+The verifier separately performs canonical augmentation. It reproduces the known counts through size eight, then extends every size-eight orbit representative by every legal ninth support and canonicalizes. This gives exactly 121458 size-nine orbits, matching Burnside.
+
+There are 966977 raw legal extensions before quotienting. Of these, 239349 have h<=20. After S7 quotienting, exactly
+
+33920
+
+size-nine support orbits satisfy h<=20.
+
+For each of those 33920 orbits the verifier enumerates every pairwise-compatible actual-empty family large enough to leave at most eleven complete blocks after allowing the one selected singleton. It then tests both possibilities for the selected singleton: untouched, or touched with a zero/nonzero local line. In total it reaches 1949 compatible empty-family states at the final generation/rank tests.
+
+The exact result is
+
+support_level_survivors = 0.
+
+The search is a strict superset of actual states: it forgets orientations, permits a touched selected singleton line to vanish, replaces actual supports by occurrence sets, uses only pairwise generalized-weight consequences, and does not require the nominal local spaces to glue to an actual rank-five P. Therefore zero survivors exclude every actual state in the branch.
+
+## Exactness of rank decisions
+
+All support/orbit/incidence decisions use integer combinatorics.
+
+Triangle-row ranks are computed modulo 2^31-1. The verifier runs the Lucas-Lehmer test for this Mersenne prime. Each triangle row has squared Euclidean norm 3 and the triangle-row rank is at most 15. Hadamard gives
+
+|det|^2 <= 3^15
+
+for every relevant nonzero integer minor. Since
+
+(2^31-1)^2 > 3^15,
+
+reduction modulo the prime cannot annihilate a nonzero rational minor. Hence every modular triangle-row rank in the certificate equals the corresponding rational rank.
+
+## Conclusion
+
+There is no nine-no-root state with
+
+k=4, D=-2, d_root=0, p=1.
+
+The nine-no-root k=4 frontier is reduced to the single arithmetic branch
+
+D=-1, d_root=0, p=2,
+
+with rank(P)=5, generalized weights at least (2,4,5,7,8), and h<=24.

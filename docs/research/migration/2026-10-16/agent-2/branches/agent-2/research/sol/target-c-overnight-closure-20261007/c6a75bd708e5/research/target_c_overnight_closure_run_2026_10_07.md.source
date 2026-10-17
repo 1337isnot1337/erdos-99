@@ -1,0 +1,508 @@
+# Target C continuous closure run, 2026-10-07
+
+Base: `bf288c82e8a62466d5580025c94e750a177e63e2` (Worker 1). Fetched main: `dcc21aa879b61662318bceb9aeb174792e074eb0`. State: `2026-10-06.audit.71`; C-I closed, C-II and Level I open.
+Owned successor: `research/sol/target-c-overnight-closure-20261007`.
+Worker 2 is inspected at immutable `f4a362727779f6afc0f01738015112c04fdb73d5`, never merged wholesale.
+
+## Active quantified obligation
+
+For each fixed M>=3 and sufficiently small positive wall curvature, exclude an arbitrary triangle-free old interior cloud of `N-1=3M^2-3M` sites in the six-direction curved unit-contact wall, or build an exact same-cardinality contact/diameter improvement. Then transfer to arbitrary macroscopic inactive containers, reconcile paired exterior caps, and close the independent full-core finite-move branch.
+
+## Implication chains and status
+
+1. One-deficit structural theorem -> controlled removable source guard / exact packet -> audit.64 full-source lexicographic contradiction. The arbitrary cloud is not presumed to be a lattice minus one site.
+2. A strict N-site packet clearing all retained wall vertices after one deletion -> replaces all N-1 interior labels plus that corner -> contact loss. The inherited strict packet has only N-1 sites and cannot pay this count.
+3. Exact-contact packet -> count every inserted-involving unit pair and verify triangle-freeness -> audit.64 if new contacts do not exceed removed contacts, strictly if no actual diameter is removed.
+
+Dependencies presently needed: C-ONE-VERTEX-CONVEX-WALL-SHIELD, C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT, C-NESTED-HEXAGON-STRESS-ENERGY-DEMAND; exact finite Oler inequality. Worker-1 checkpoints 14/15 are unreviewed leads. No canonical status is edited.
+
+## Initial attacks
+
+- Inspect one-point Oler slack using the finite triangulation proof rather than importing an equality conclusion.
+- Search deliberate contact-budget packets and exact positive-stress blockers.
+- Test whether the proposed all-cloud vacancy classification is stronger than known finite stability/solidity statements; if so replace it by a weaker triangle-forcing/exchange theorem.
+
+No new theorem is asserted at this initial checkpoint. The goal remains active.
+
+## Checkpoint 1: all-vacancy static pinning and classification scope
+
+Proved candidate awaiting independent audit:
+`docs/reports/target_c_one_deficit_flat_pinning_and_solidity_reduction_2026-10-07.md`.
+Weight one on all surviving unit edges plus weight one on the six-neighbour
+vacancy ring is a strictly positive pinned equilibrium for every vacancy.
+Triangular-face connectivity proves full pinned rank for every M>=2.
+Every converging curved-wall vacancy placement is O(theta) from its flat
+chart, so noncentral charts reduce to bounded first-row systems as well.
+
+The stronger all-cloud flat classification is exactly equivalent to finite
+strong solidity of the triangular packing minus one site. This equivalence
+is proved with a complete exterior-lattice shield and finite cardinality
+accounting. The primary 1998 uniform-stability theorem does not give it.
+Attack the weaker finite-triangle/exchange endpoint instead of assuming
+one-point Oler slack implies a vacancy. 999 exact vacancy charts and 178002
+moving equilibria passed; the all-M theorem is analytic.
+
+Floating C2 searches for the boundary-row root chart at M=3,4,5,6 found no
+certified strict release. This is not an exhaustive impossibility result.
+Next attacks: bounded noncentral-vacancy first-row/dual certificates; direct
+arbitrary-container replacement or moving-wall synthesis with exterior caps.
+Canonical status and terminal goal remain unchanged and active.
+
+## Checkpoint 2: strict one-deficit replacement packets
+
+The final Worker-1 opening experiment is not an impossibility result.
+Increasing the discovery curvature to t=1/50 exposes a genuinely positive
+opening for M=4,5,6,8. Every reconstructed derivative and full finite packet
+passes exact Q(sqrt(3)) checks. The opened sorting chart minus boundary-row
+vacancy plus its inward root has N sites and pays an arbitrary z=N-1 cloud
+plus one deleted wall vertex, with zero new contacts and at least two old
+wall contacts lost. All exterior isolates remain protected by the canonical
+one-deletion shield. Complete report:
+`docs/reports/target_c_one_deficit_certified_strict_root_packets_2026-10-07.md`.
+
+An exact active-row basis also supplies a positive opening at M=4,
+t=1/10000, beyond floating discovery resolution; its finite endpoint is
+separately checked. Fixed positive examples alone do not prove all-small-t
+or arbitrary-M continuation. A symbolic rational-function opening is the
+next attack; basis continuation must check every row and not trust LP
+status or a thresholded active set. C-II and the full terminal goal remain
+open and active; canonical state files remain unchanged.
+
+## Checkpoint 3: quantified one-deficit closure for M=4
+
+Proved candidate awaiting independent audit: for every sufficiently small
+positive curvature in the M=4 wall family, a strict 37-site packet pays all
+36 arbitrary old interior labels plus one actual wall vertex. It excludes
+z=N-1 without classifying the old cloud. A meromorphic basis has 92
+positive exact Laurent leading margins (orders zero through six, remainder
+orders >=9); all exact unit rows and 1654 inactive positive gaps are checked.
+The root calculation is proved for all fixed M>=3, including every wall
+support line and all limiting unit neighbours.
+
+Read `docs/reports/target_c_one_deficit_all_small_curvature_M4_2026-10-07.md`.
+The general M>=5 opening still needs a basis/construction; simply continuing
+a basis found at a larger angle can fail an exact row. Exact simplex and
+formal-series approaches are being used to discover and certify new bases.
+No inference from an uncertified LP margin or a C2 strict test is made.
+The actual remaining arbitrary-container, paired-cap and full-core endpoint
+obligations remain active; no canonical promotion or Level I claim.
+
+## Authority reconciliation: audit.74
+
+Fetched main advanced to `4b0b982451effe3e8183edfce349ce4c25f9a3bb`,
+state `2026-10-07.audit.74`. Read the three new independent audits and
+route/prompt/manifest changes, then merged authoritative main only.
+Audit.72 promotes the all-M N-1 one-corner packet and the z<=N-2 source
+exclusion; audit.73 promotes only the sorting-energy equality regression;
+audit.74 promotes only the z=N complete limiting chart, not its finite
+triangle exclusion. All new successor results remain unreviewed candidates.
+Merge conflicts were additive README/index entries and the source helper's
+optional rational-angle override. Preserve both README additions, retain
+the override (default audited output unchanged), regenerate index/views,
+and verify theorem state and active routes. No Worker-2 branch is merged.
+
+## Checkpoint 4: quantified M=5 closure and profile-flexible root
+
+Exact simplex at M=5,t=1/10000 found a positive opening after 601 pivots.
+The resulting *new* basis, not a failed larger-angle basis, has all 146
+positive Laurent leading margins (orders zero through seven, remainder
+>=19); all 3829 inactive pairs are independently checked. Therefore the
+one-deficit arbitrary old-cloud population is excluded for every
+sufficiently small positive curvature at M=5 as well as M=4. The full
+finite small-angle M=5 endpoint separately passes all new lower/upper,
+wall-guard, containment, contact and cardinality checks.
+
+The root lemma now permits any fixed strictly ordered symmetric rate
+profile, not only arithmetic spacing: every old guard and every support
+line is passed analytically after omission of its explicit target blocker.
+Read `docs/reports/target_c_one_deficit_M5_extension_and_profile_root_2026-10-07.md`.
+A standalone exact simplex discovery script is preserved and documented;
+its certificate scopes are finite derivatives/duals, never unqualified
+packet capacity. An exact M=6 search is active. Next seek an all-M
+construction/induction, then arbitrary macroscopic-container transfer.
+The z=N finite triangle branch, exterior-cap and full-core endpoint remain
+open. No canonical status is self-promoted and the goal remains active.
+
+## Checkpoint 5: all-M>=4 one-deficit wall exclusion
+
+Proved candidate awaiting independent audit:
+`docs/reports/target_c_all_M_one_deficit_sector_peeling_2026-10-07.md`.
+The exact sorted contact graph has a directed half-plane rule: removing
+either the forward ring edge or outward diagonal at an offaxis site
+forces every nonnegative stress weight there to vanish. The boundary-row
+vacancy propagates this rule through one sector. For M>=4 the axis has
+an interior seed r=2,...,M-2, which empties both its ends; then the same
+argument rotates through all sectors. Every moving-involving row vanishes.
+
+Successive half-plane elimination directly constructs strictly opening
+velocities, avoiding a floating LP or an extrapolated basis. Inactive
+pairs and containment persist at a sufficiently small finite amplitude.
+The protected root adds the Nth site, paying an *arbitrary* z=N-1 old
+cloud and one wall vertex, with zero new contacts, at least two old contacts
+lost and every exterior isolate shielded. This proves the family statement
+for every fixed M>=4 and all sufficiently small positive curvature, also
+for fixed strictly ordered symmetric rate profiles. No uniform onset in
+M is asserted. With the audited Oler bound, only z=N survives in the
+specified wall class at this scope.
+
+Exact finite half-plane enumeration for M=4,...,10 eliminates every row;
+constructive exact velocity certificates at M=4 and M=6 pass every unit
+row. M=3 has no local peeling step; that is a regression for this method,
+not a universal impossibility. The M=6 simplex search is now secondary:
+the all-M analytic peeling proof supersedes the need for another sample.
+Next attacks: independently rederive the finite maximum-population bridge;
+seek a chamber transfer not requiring an exact sorting wall; synthesize
+the direction/elimination mechanism with paired-cap retained-wall release.
+The terminal goal remains active and C-II/Level I remain open.
+
+## Checkpoint 6: full maximum-population bridge and profile extension
+
+Independently rederived the load-bearing full-chart argument at Worker-1
+tip bf288c82, rather than trusting its unreviewed finite classification.
+The limiting Oler chart has O(theta) displacement by static positive
+stress and pinning. Every first field projects to the profile permutahedron;
+one central-chain energy demand forces a rate permutation and its entire
+fiber. The energy gradient uniquely exposes that point. Normal-cone
+interior membership gives a positive first correction of the nested pinned
+stress, with exact stress continuation and a uniform-in-theta rank bound.
+The resulting isolation radius is c*theta, precisely enough to eliminate
+an o(theta) countersequence. This forces the finite sorting packet and
+its actual first-ring unit triangle.
+
+Read `docs/reports/target_c_profile_wall_maximum_population_and_complete_exclusion_2026-10-07.md`.
+The proof extends to any fixed strictly ordered symmetric profile. With
+the all-M>=4 one-deficit packet and the finite Oler count, every population
+in this fixed wall class is excluded. These remain proved candidates
+awaiting independent audit; no canonical promotion is implied.
+Exact nonarithmetic-profile checks cover 870 rate permutations, their
+prefix/extension identities, and 11 finite sorting configurations with
+full pinned ranks, complete lower pairs, containment and actual triangles.
+
+The slow exact M=6 simplex search was deliberately interrupted after 700
+pivots once constructive half-plane peeling provided both the all-M proof
+and a complete finite M=6 certificate. Its unfinished search supplies no
+impossibility claim. Main advanced to audit.75: the independent flat-pinning
+audit promotes only checkpoint-1's scoped pinning/rate result. Reconcile
+that authority at this checkpoint; the new wall exclusions remain unreviewed.
+Next attack: arbitrary actual chamber transfer with growing-M/onset control,
+then coupled exterior-cap/core release and full-core face-coupled moves.
+The terminal goal remains active.
+
+### Authority reconciliation: audit.75
+
+Merged main baadff26b3fae1107f8ed2d9d18f03f78cd4a23b after reading the
+independent audit, manifest and current route/prompt changes. The only
+conflict was additive research README documentation; both sides were
+preserved. Canonical C-ONE-VACANCY-FLAT-PINNING-RATE now covers the exact
+static vacancy pinning and O(theta) convergence rate, but not the stronger
+solidity equivalence or the new finite packets/classifications. Regenerate
+metadata/state views and verify all state/route checks before pushing.
+
+## Checkpoint 7: explicit growing-M one-deficit window and stress correction
+
+The one-deficit packet now has the joint scope M>=4 and
+0<theta<=1/(100*M^3), rather than an unspecified fixed-M onset. The
+root's support margin on its own side is an exact positive sine sum;
+all other lower/support pairs have explicit drift bounds. Its sole
+remaining unit neighbour has a controlled second derivative, giving
+strict clearance throughout this interval. Complete contact graph and
+peeling signs hold there. A convex parallel-body area bound gives
+z<=N by Oler throughout the same interval. Read
+`target_c_uniform_one_deficit_curvature_window_2026-10-07.md`.
+This excludes every one-deficit growing-M sequence in the stated window,
+without an old-cloud vacancy assumption or a uniform-amplitude claim.
+
+For descending profiles an explicit first pinned-stress correction has
+positive weak coefficients proportional to adjacent rate gaps, ring
+correction zero and radial correction (a_r-a_0)/sqrt(3). This separately
+checks the finite sorting rigidity bridge. Fourteen additional exact
+rational correction certificates independently verify both force orders,
+all weak signs and full ranks for mixed profile permutations. They do
+not establish uniform full-classification onset.
+
+The remaining wall obligation is a uniform growing-M z=N finite-triangle
+bridge or transfer to arbitrary macroscopic actual chambers. Two different
+next attacks are quantitative active-matrix/rate-polytope estimates and
+source-realized retained-wall/core movement in the paired-cap geometry.
+The complete cap/source ledger and the low-angle zero-capacity barrier
+remain binding. C-II/Level I and the continuous goal remain open.
+
+## Checkpoint 8: effective Oler chart for arbitrary low-slack unit walls
+
+Proved candidate awaiting independent audit:
+`docs/reports/target_c_effective_small_slack_unit_wall_chart_2026-10-07.md`.
+For any convex unit wall and full wall-plus-cloud area-form Oler slack
+sigma<=1/1000, saturation outside the wall gives a Delaunay triangulation
+with circumradii<=1 and no extra interior point. Each triangle has area
+at least sqrt(3)/4. An obtuse triangle and its longest-edge neighbour
+cost at least (2-sqrt(3))/4 in total excess, so every triangle is acute.
+Quantitative edge/angle bounds force all interior valences six and
+boundary valences at most three; equilateral development is a complete
+convex triangular-lattice polygon with at most six corner turns. Actual
+coordinates differ by at most 60*b*sigma from that developed chart.
+
+For the arithmetic six-wall maximum population this yields a uniform
+P_M chart and displacement <=1000*M^4*theta for every M>=4 and
+0<theta<=1/(10000*M^3). The unspecified compactness onset is removed
+in that window; uniform finite-triangle isolation is still required.
+Five exact finite sorting examples check 1446 triangle areas/circumradii,
+all acute signs, 2070 internal Delaunay conditions, full lower separation
+and the quantitative displacement bound. These samples are not the
+arbitrary-wall proof.
+
+The missing generic macroscopic hypothesis is explicit: canonical
+chambers have total Oler slack O(D), whereas this reconstruction needs
+small absolute total slack. Next derive a finite defect budget one point
+below equality, then use defect-free regions or collective motion without
+losing the exact boundary cardinality. The cap and full-core routes stay
+available and the terminal goal remains active.
+
+## Checkpoint 9: one-deficit completion, bounded defects, and diffuse-strain regression
+
+Proved candidate awaiting independent audit: an arbitrary convex unit wall
+with area-form slack at most sqrt(3)/2+1/1000 admits a saturated completion
+with at most one added site. If added, the complete low-slack chart theorem
+applies; otherwise there are at most 51 obtuse Delaunay triangles and 541
+exceptional vertices. The general bound is linear in the residual total
+area slack. This uses disjoint triangle excess, not overlapping stress
+currency. Read `target_c_one_deficit_delaunay_completion_and_defect_budget_2026-10-07.md`.
+
+A new exact unbounded regression prevents a stronger discrete-vacancy
+inference: slightly strained unit rhombic grids have precisely one Oler
+area-unit of slack, are saturated inside a macroscopic unit wall, and have
+no exceptional vertex at these thresholds for M>=7. The entire excess is
+diffuse metric strain. Their full square-grid same-cardinality competitor
+has strictly smaller diameter, so they are explicitly nonglobal and have
+contacting interiors. No contradiction to the canonical inactive source
+or Level I disproof is claimed. Complete exact old/new pair ledgers pass
+for M=3,4,7,10; the all-M proof is explicit algebra. Read the diffuse-strain
+report and its Q(sqrt(M^4-6*M^2-3)) verifier/certificate.
+
+This narrows the next transfer theorem: preserve a total metric budget
+as well as the O(D) combinatorial skeleton, and couple it to actual source
+boundary/core motion. An arbitrary-convex-container Delaunay boundary-strip
+construction and a source-realized exterior exact-saturation lemma are
+materially different next attacks. Main has independently advanced to
+audit.77, promoting the fixed-M one-deficit packet/exclusion; reconcile
+that exact scope without promoting this checkpoint or uniform claims.
+C-II/Level I and the continuous goal remain open.
+
+### Authority reconciliation: audits.76 and .77
+
+Read both independent audits and manifest/route/prompt updates at main
+d71085cd0130941642796d8717d7e9fb2949b718. They promote only the five
+frozen exact cases and the fixed-M/profile all-small one-deficit packet,
+root and full-source exclusion. The M4-only all-small claims are subsumed.
+No growing-M onset, maximum-population classification or Delaunay result
+is promoted. During merge, preserve canonical five-case strict-root files
+and save seven-case discovery extensions under explicit extended names.
+The default M4 symbolic certificate remains identical; retain the optional
+M5 extension. Save the frozen audit.77 peeling output separately from the
+newer explicit-window output. Regenerate metadata and verify state/route
+and registered certificate reproduction before pushing.
+
+## Checkpoint 10: arbitrary-container coupled Delaunay transfer and cap saturation
+
+Proved candidate awaiting independent audit:
+`target_c_coupled_delaunay_transfer_for_arbitrary_convex_containers_2026-10-07.md`.
+One plane completion of the full source supplies compatible triangulations
+for every convex chamber and cap, without a unit-wall or regular-profile
+hypothesis. Boundary-strip packing gives B<=20p/pi+25; bulk Euler accounting
+with holes/pinches gives total triangle excess Sigma<=a_0*S+28aB. The
+exceptional skeleton is at most 73B+(12/delta+450)Sigma. Thus canonical
+S,p=O(D) yield O(D) auxiliary/boundary/metric-defect cost and retain the
+quadratic old population. Six exact lattice crop examples independently
+check Euler, boundary stars, containment, completion counts, currency and
+full difference separation. They are finite corroborations, not arbitrary
+source optimality certificates.
+
+A one-site exterior saturation implication is independently rederived
+from W2 E.6 at immutable f4a362727779f6afc0f01738015112c04fdb73d5. The simpler
+supporting-normal velocity opens every new core contact; all originally
+contact-isolated labels are retained and their changing pairs checked.
+It implies every auxiliary addition in the old hull lies inside the force
+hull, so cap completion uses zero auxiliary additions. No W2 wholesale
+merge, arbitrary pinned-stress assertion or canonical promotion is made.
+
+The remaining exact bridge is source-realized motion/payment of the O(D)
+skeleton, through boundary defect propagation or cap-backed core movement
+and interior refill. Static exterior-only capacity remains forbidden.
+A second promising transfer attack is compatibility of six general wall
+curvature profiles at maximum population; full-core coupled finite train
+equations remain independently available. Continue immediately.
+
+## Checkpoint 11: maximum-population compatibility of six arbitrary wall profiles
+
+Proved candidate awaiting independent audit:
+`target_c_general_six_wall_first_profile_compatibility_2026-10-07.md`.
+For any fixed-M C2 convex unit wall tending to H_M with six separately
+strictly increasing first curvature-rate lists, an arbitrarily-small-theta
+N-point interior cloud forces all six lists identical, including their
+means. No exact sorting wall or side symmetry is assumed. Wall unit rows
+and nested positive flat stresses force common corner first rigid motion;
+normalize it away. The first radial rates lie in all six profile
+permutahedra. One exact finite central-chain inequality demands
+6||t||^2>=sum ||beta_k||^2, while each permutahedron gives the reverse
+bound individually. All six variance losses must vanish. Two distinct
+ordered profiles instead cost at least half their squared distance,
+even when their energies coincide. Thus mismatched profiles exclude the
+entire maximum-population regime for sufficiently small positive theta.
+The cloud need not be a C2 trajectory: full-chart localization, pinned
+O(theta) rate and subsequences suffice.
+
+Exact opposed-profile examples close as actual convex unit walls; one
+has unequal energies and another has equal energies but distinct lists.
+The verifier checks 48 unit edges, 552 wall lower pairs, 1056 strict
+supports, finite corner-work identities, Oler integer caps and positive
+rational variance certificates. It does not search interior clouds.
+The universal exclusion is analytic.
+
+This removes a generic mismatched-profile maximum branch beyond the
+previous prescribed wall. It does not supply a packet for z<=N-1 under
+arbitrary wall data, or classify matching first profiles with different
+higher coefficients. Two next attacks: extend the strict deficit packet
+through actual asymmetric boundary data; or use this profile invariant
+in the coupled source skeleton to drive boundary/core motion. Full-core
+nonlocal train-state equations remain a distinct terminal route. Continue.
+
+## Checkpoint 12: exact face-coupled quarter folds and full-source blocker reduction
+
+Proved candidates and regressions:
+`target_c_face_coupled_quarter_fold_currency_and_blockers_2026-10-07.md`.
+Actual train signs satisfying occurrence-counted face equations integrate
+to U, and cos(phi)P+sin(phi)U preserves every old contact exactly for all
+phi. All source pair distances have an explicit quadratic trigonometric
+formula; every isolate is retained with an explicitly chosen coordinate.
+At the quarter-turn, a nonaffine U has strict weighted old-diameter
+contraction from the canonical positive signed stress and affine kernel.
+Thus full lower/upper feasibility with strict noncontacts/nondiameters
+automatically yields fewer actual diameter pairs or strict sub-D.
+No beneficial sign state is assumed to exist.
+
+The actual two-hop blocker graph Gamma forces equal signs whenever the
+other endpoints of two incident unit edges are at distance >=sqrt(3):
+opposite signs create a lower violation or unit triangle. Degree-five
+vertices fuse all incident signs; degree-four vertices fuse opposite
+pairs. A convex terminal face with nonconstant feasible signs must have
+exactly four transitions at corners turning >pi/3, and those four actual
+source vertices must form an inscribed parallelogram. Otherwise every
+face boundary sign is equal. This is a finite coupled state restriction,
+not an independent-owner model or infinitesimal-rhombus immunity claim.
+
+Complete exact sign enumeration checks the regular hexagon (10/64 closed
+states; all eight nonconstant weighted-contraction states collide), a
+rectangular unit eight-face (36/256 closed, four fully feasible affine
+states), and rhombic grids M=2,3,4. In the grids a feasible reflection
+shortens the sole old actual diameter but promotes an inactive corner
+pair to the same diameter: the full diameter-pair count does not improve.
+These nonglobal regressions preserve lower, upper, contact, triangle and
+cardinality ledgers and prohibit using weighted means or old-H rows alone.
+
+The remaining quarter-fold theorem is exact: find a nonaffine coupled
+Gamma-compatible state and complete isolate/core endpoint satisfying all
+pairs, or classify its exhaustive blockers. When Gamma/face relations
+force constants, this mechanism is closed for that source; nonbinary
+finite face angles and skeleton-backed deletion/refill remain distinct
+attacks. Return next to uniform maximum-population wall control using
+explicit active-row reconstruction and permutahedral path stresses.
+The terminal goal is still active.
+
+## Checkpoint 13: uniform polynomial maximum-population wall classification
+
+Proved candidate awaiting independent audit:
+`target_c_uniform_polynomial_maximum_wall_classification_2026-10-07.md`.
+For a universal c_*>0, every M>=4 and 0<theta<=c_*M^-40, an arbitrary
+N-point cloud in the arithmetic sorting wall is exactly a finite sorting
+packet, hence contains an actual unit triangle. Combining the uniform
+deficit packet and Oler excludes the complete wall class in this joint
+growing-M interval. No explicit numerical c_* or sharp exponent is claimed.
+
+The new load-bearing estimates are constructive: strong-row projection
+error <=26M times row error; full active-row inverse <=500M^3 in vertex
+max norm, obtained by nested axes and sorting threshold paths. All active
+weak rows occur in an Abel-summed energy normal representation, yielding
+positive coefficients with uniform gap two. A positive pinned stress
+continues for theta<=cM^-11 with minimum theta/2 and total O(M); isolation
+radius is c theta/M^4. Effective chart localization makes the arbitrary
+first polytope approximate within polynomial error, yielding distance
+<=C M^16 theta^(3/2) from a sorting packet. The M^-40 interval makes this
+strictly smaller than the isolation radius. No C2 cloud trajectory or
+M-dependent compactness onset is used.
+
+Exact combinatorial verification covers every permutation M=2,...,8:
+46,232 permutations, 1,246,964 active weak rows and 4,166 exact subset-path
+linear identities (actual totals are recorded by the output certificate).
+It verifies normal-weight positivity and threshold coverage, not numerical
+singular values. The arbitrary-M quantitative estimates are analytic.
+The report rederives the precise proof-only dependencies needed; neither
+this checkpoint nor them is self-promoted.
+
+The specified wall's much wider theta~M^-3 or M^-1 regimes remain, as does
+extraction from arbitrary canonical chambers. Two materially different next
+attacks: sharpen the polynomial onset using rate-aware errors, or use
+actual matched/mismatched boundary data and the common Delaunay skeleton
+for a deficit packet/core release. Nonbinary face-coupled finite states
+remain an independent route. The terminal continuous goal remains active.
+
+### Authority reconciliation: audits.78--81
+
+Fetch found main e63281db62bde8b41402efb6be00b72c82c145a0, audit.81.
+Read all four independent audits, manifest scopes, route/prompt updates.
+They promote fixed-M symmetric-profile exact sorting classification and
+complete wall exclusion, active-row rank and the descending principal
+stress correction, the arithmetic one-deficit window, and general six-
+wall Oler localization/pinning/first-profile compatibility. None promotes
+the effective small-slack chart, generic coupled Delaunay transfer, finite
+quarter-fold results or the new polynomial uniform maximum classification.
+The only merge conflict was additive research README text; preserve both.
+Canonical checker files were identical to the discovery copies; the new
+independent principal-formula checker is imported through this authority
+merge. Regenerate/check state and reproduce that new exact certificate.
+The terminal goal remains active.
+
+## Checkpoint 14: finite radial-lifting stress certificate and requested wrap-up
+
+Final finite result, proved candidate awaiting independent audit only for
+the listed cases:
+`docs/reports/target_c_sorting_radial_lifting_finite_stress_checkpoint_2026-10-07.md`.
+The radial-square lifting gives positive pinned equilibrium stresses for
+33 exact arithmetic sorting packets, at t=1/(200M^2): all permutations
+for M=4 and three orders each for M=6,8,10. The exact verifier checks
+302,076 packet pairs, 8,352 gradient jumps, 5,904 positive unit rows,
+2,448 zero nonunit jumps and 2,481 moving-vertex equilibria. No floating
+solver, universal theta interval, all-M positivity, rigidity or global
+source optimality is claimed. Universal lifting and angular-rate
+propagation remain unfinished continuation leads, explicitly separated
+from the finite certificate.
+
+The user explicitly requested: "actually at this point just wrap up any
+findings of yours and commit+push". The run is therefore paused at the
+user's request; earlier statements that the goal was active describe the
+historical checkpoints. C-II and Level I remain open. No theorem-state
+promotion is made in this final checkpoint.
+
+The single continuation handoff is
+`docs/reports/target_c_overnight_closure_run_handoff_2026-10-07.md`.
+It records canonical audit.95 scopes, the strongest remaining proof-only
+results, exact regressions, branch provenance and the surviving quantified
+container, cap and full-core obligations. Commit and push the remaining
+finite artifacts and this handoff; do not restart research without a new
+user instruction.
+
+### Final authority reconciliation and pause
+
+The wrap-up fetch found main `5cfc5b34`, audit.95. Read the current state,
+manifest, route and the newly promoted scopes. Reconciled the authority
+updates into the owned branch for the final push. Audit.82 promotes
+this run's low-slack effective chart; audit.83 promotes its scoped
+quarter-fold integration, endpoint, compatibility and convex-face results.
+Later audits add scoped cap/transversal/shield/face-depth/attachment
+results and regressions. They still leave C-II and Level I open. The
+polynomial uniform maximum classification, coupled arbitrary-container
+transfer and final finite radial-lifting findings are not promoted.
+
+The only merge conflict was additive research README text; both sides
+were preserved. Metadata and state views were regenerated; theorem-state,
+active-route-summary and whitespace checks passed. The final radial-lifting
+certificate was reproduced exactly. This is authority reconciliation for the requested
+wrap-up, not resumed research. The run remains paused at the user's request.

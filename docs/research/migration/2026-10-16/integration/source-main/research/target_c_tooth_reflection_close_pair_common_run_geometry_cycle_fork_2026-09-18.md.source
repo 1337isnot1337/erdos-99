@@ -1,0 +1,237 @@
+# Target C-II — the close-normal common-run branch forces geometry or cycle rank
+
+**Date:** 2026-09-18  
+**Status:** proved candidate awaiting promotion; optimized continuation of the close-normal shared-skeleton route  
+**Scope:** small-external `COMMON-LOWER-RUNS` extracted from the close-normal heavy-reuse pair  
+**Dependencies:** close-normal shared FREE skeleton; common-run parity refinement; two-normal common-trunk cone theorem  
+**Certificate:** `research/verify_target_c_tooth_reflection_close_pair_common_run_geometry_cycle_fork_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The close-pair extraction supplies both a lower and an upper angular scale. Combining those bounds with the exact two-path cycle-rank identity allows the common-trunk threshold to be optimized for Euclidean displacement rather than for selected-edge count.
+
+Assume
+
+\[
+Z_D=o(\sqrt D)
+\]
+
+and define
+
+\[
+R_D:={D^{1/4}\over\sqrt{Z_D+1}}\to\infty.
+\tag{GC.1}
+\]
+
+Use the tuned slow scale
+
+\[
+\kappa_D=D^{1/8}(Z_D+1)^{1/4}.
+\tag{GC.2}
+\]
+
+Then
+
+\[
+m=\Theta(R_D^{1/2}),
+\qquad
+\gamma_D=\Omega(R_D^{-1/2}),
+\tag{GC.3}
+\]
+
+where `gamma_D` is the consecutive normal gap.
+
+Run heavy reuse with threshold
+
+\[
+R=\lfloor\sqrt m\rfloor.
+\]
+
+The close-pair theorem gives two modules with
+
+\[
+\boxed{
+\Omega(R_D^{-1/2})
+\le\theta:=\angle(N_i,N_j)
+\le O(R_D^{-1/4}).
+}
+\tag{GC.4}
+\]
+
+After the existing degree-six matching, activation-time thinning, orientation thinning, monotone-subsequence extraction, and lower-run-pair pigeonhole, the two fixed all-lower paths share an ordered vertex-disjoint matching of
+
+\[
+\boxed{
+q=\Omega(R_D^{3/2})
+}
+\tag{GC.5}
+
+inverse-`D` lower gates.
+
+The order/orientation parity theorem now gives the following sharpened alternatives.
+
+## 1. PARITY-MISMATCH
+
+No intersection component can contain two selected edges, so
+
+\[
+\boxed{
+\beta(P\cup Q)\ge q-1=\Omega(R_D^{3/2}).
+}
+\tag{GC.6}
+
+This is the strongest cycle-rank branch.
+
+## 2. SAME + SAME-ORDER
+
+Let
+
+\[
+a:=2\sin(\theta/2).
+\]
+
+For every threshold `s>=1`, the common-run theorem and cone theorem imply either
+
+\[
+\beta(P\cup Q)\ge q/s-1,
+\tag{GC.7}
+\]
+
+or one common trunk contains at least `s` selected matching edges and hence has endpoint bisector displacement
+
+\[
+X\cdot B>(2s-1)\sin(\theta/2)
+=as-\sin(\theta/2).
+\tag{GC.8}
+\]
+
+Choose
+
+\[
+s=\sqrt{q/a}.
+\tag{GC.9}
+\]
+
+Integer rounding changes only lower-order terms. Both branches are then on the common scale
+
+\[
+\sqrt{aq}.
+\]
+
+By (GC.4),
+
+\[
+a=\Omega(R_D^{-1/2}),
+\]
+
+and by (GC.5),
+
+\[
+\sqrt{aq}=\Omega(R_D^{1/2}).
+\]
+
+Therefore
+
+\[
+\boxed{
+\text{either }\beta(P\cup Q)=\Omega(R_D^{1/2})
+\text{ or one SAME/SAME trunk has }X\cdot B=\Omega(R_D^{1/2}).
+}
+\tag{GC.10}
+
+This improves the naive `s=sqrt(q)` same-direction geometric guarantee, because the threshold is tuned to the small bisector progress per trunk edge.
+
+## 3. OPPOSITE + REVERSE-ORDER
+
+Here the close-normal upper bound is favorable. Since
+
+\[
+\theta=O(R_D^{-1/4})=o(1),
+\]
+
+one has
+
+\[
+\cos(\theta/2)=1-o(1).
+\]
+
+Take the balanced threshold
+
+\[
+s=\sqrt q.
+\]
+
+Then either
+
+\[
+\boxed{
+\beta(P\cup Q)=\Omega(R_D^{3/4})
+}
+\tag{GC.11}
+
+or one opposite/reverse common trunk has
+
+\[
+\boxed{
+X\cdot T=\Omega(R_D^{3/4}).
+}
+\tag{GC.12}
+
+The close-normal slack theorem adds substantially more structure in the trunk case:
+
+\[
+\boxed{
+\sum_{e\subset C}(|e|-1)=o(1),
+}
+\tag{GC.13}
+
+and if `S_C` is the polygonal length of the trunk,
+
+\[
+\boxed{
+1\le{S_C\over|X_C|}
+\le\sec(\theta/2)
+=1+O(R_D^{-1/2}).
+}
+\tag{GC.14}
+
+Thus the opposite/reverse trunk is a diverging, asymptotically straight, nearly unit-spaced chain of old fully inactive outer-face source points.
+
+---
+
+## Abstract minimax used in the SAME/SAME branch
+
+Suppose a common-run fork has `q` selected matching edges and every `s`-edge common trunk would force geometric displacement at least
+
+\[
+as-O(a)
+\]
+
+for some `a>0`. The complementary cycle-rank branch is at least
+
+\[
+q/s-1.
+\]
+
+Balancing the two terms by
+
+\[
+s=\sqrt{q/a}
+\]
+
+gives
+
+\[
+\boxed{
+\max\{\text{forced trunk displacement},\text{forced cycle rank}\}
+\ge\sqrt{aq}-O(1+a).
+}
+\tag{GC.15}
+\]
+
+For SAME/SAME, `a=2sin(theta/2)`. For OPPOSITE/REVERSE one may take `a=2cos(theta/2)`, which is asymptotically two for the close pair and recovers the `sqrt(q)` scale.
+
+The result does not close C-II. It replaces the close-pair common-run survivor by explicit diverging geometric or topological quantities on every parity class. The weakest compatible case is now SAME/SAME, where either cycle rank or actual bisector displacement diverges at least as `R_D^(1/2)`.
+
+C-II remains open. No theorem-state authority is changed.
+
+**Disposition:** optimized the common-trunk threshold against two-normal cone progress and obtained a complete close-pair parity fork: `R_D^(3/2)` cycle rank under parity mismatch, `R_D^(1/2)` cycle-rank-or-bisector drift under SAME/SAME, and `R_D^(3/4)` cycle-rank-or-nearly-geodesic transverse drift under OPPOSITE/REVERSE.

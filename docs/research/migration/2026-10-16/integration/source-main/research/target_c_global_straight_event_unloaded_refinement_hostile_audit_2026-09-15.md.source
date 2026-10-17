@@ -1,0 +1,195 @@
+# Hostile audit — bridge-free global straight-event penetration
+
+**Date:** 2026-09-15  
+**Reviewed:** `research/target_c_global_straight_event_unloaded_refinement_2026-09-15.md`  
+**Disposition:** **PASS at proof-only Type-II scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The refinement makes only one conceptual change to the current global straight-event theorem: it inserts the already-proved loaded-internal-route exclusion before the occurrence-to-edge conversion. This audit checks that the scopes really coincide and that no bridge occurrence survives under another name.
+
+---
+
+## 1. The Section-63 routes are the same objects in both inputs
+
+The global straight-event theorem counts internal occurrences on the distinguished outer-face intervals
+
+\[
+W_i:b_i\leadsto b_{i+1}
+\]
+
+from canonical Section 63. The loaded-internal-route exclusion theorem was proved for exactly those intervals, using the hostile audit of Section 126 to verify the occurrence-level identification even with bridges and repeated articulation vertices.
+
+Thus its conclusion
+
+\[
+\text{every physical internal vertex of every }W_i\text{ is unloaded}
+\]
+
+applies pointwise to every occurrence counted by `S_beta` in the global theorem. There is no change of route, carrier, or selected subgraph.
+
+**Verdict:** PASS.
+
+---
+
+## 2. C26 eliminates degree two, not merely positive diameter loading
+
+C26 states that every unloaded contact vertex in the fully force-visible C-II core has full contact degree three, four, or five. Since every internal route vertex is unloaded, every straight internal occurrence has a branching physical vertex.
+
+Therefore
+
+\[
+S_2(\beta)=0
+\]
+
+exactly. The earlier argument `S_2<=2B_o` is a valid weaker fallback but is not needed after this composition.
+
+An unloaded articulation vertex is still allowed, and its outer-face walk may have several occurrences. This causes no problem: the sector theorem already caps straight occurrences at two, and the local Hall selection works occurrence-by-occurrence at one physical vertex. The argument does not claim all internal vertices are non-articulation.
+
+**Verdict:** PASS.
+
+---
+
+## 3. Selected-edge multiplicity remains exactly two
+
+At a branching physical vertex supporting two straight occurrences, current main proves a local system of distinct representatives: the two occurrences select different incident extra edges. Hence one endpoint never contributes the same physical edge twice.
+
+Across different physical vertices, an undirected contact edge can be selected only from its two endpoints. Thus
+
+\[
+2E_\perp\ge S_\beta
+\]
+
+is occurrence-safe even with repeated facial occurrences, bridges elsewhere, and articulation vertices.
+
+An outer bridge can itself be selected as an extra edge at one of its endpoints, but this does not create a loss term: it is still one physical selected contact and still has only two endpoints. The old bridge term existed only to pay degree-two events that supplied no extra edge. Those events are now absent.
+
+**Verdict:** PASS.
+
+---
+
+## 4. Normalization retains the `+delta` term correctly
+
+The exact outer-walk identity is
+
+\[
+x_B=b-q.
+\]
+
+On a Type-II convergent subsequence,
+
+\[
+{b\over D}=\pi+\delta+o(1),
+\qquad
+{q\over D}=t+\kappa,
+\]
+
+so
+
+\[
+{x_B\over D}=\pi+\delta-t-\kappa+o(1).
+\]
+
+The bad-edge deletion costs
+
+\[
+{2\delta\over c_\beta},
+\qquad c_\beta=1-\cos\beta.
+\]
+
+Since no `2B_o` term is subtracted, the `+delta` in `x_B` remains. Therefore the coefficient of `delta` inside the final brackets is
+
+\[
+{2\over c_\beta}-1,
+\]
+
+not `2/c_beta`. This is exactly (GU.8).
+
+**Verdict:** PASS.
+
+---
+
+## 5. Joint network optimization
+
+For `beta=pi/6`,
+
+\[
+A:={2\over1-\sqrt3/2}-1=7+4\sqrt3>4.
+\]
+
+The low-`t` feasible set is
+
+\[
+2\delta+\kappa/2\le R(t),
+\qquad \delta,\kappa\ge0.
+\]
+
+The penalty to maximize is `kappa+A delta`. At fixed `delta`, use the largest allowed `kappa=2R-4delta`; the penalty becomes
+
+\[
+2R+(A-4)\delta.
+\]
+
+Since `A>4`, the maximum is at
+
+\[
+\delta=R/2,
+\qquad \kappa=0.
+\]
+
+This is a single feasible endpoint and does not mix incompatible separate maxima.
+
+**Verdict:** PASS.
+
+---
+
+## 6. Arithmetic certificate
+
+At the present endpoint
+
+\[
+t=t_{42}=1.8208886379794447041\ldots,
+\qquad R=0.00576795,
+\]
+
+Pyroam Decimal arithmetic gives
+
+\[
+A=13.9282032302755091741\ldots
+\]
+
+and
+
+\[
+\boxed{
+E_\perp/D
+\ge0.64026771284965736138024\ldots-o(1).
+}
+\]
+
+The current-main bridge-paid value is
+
+\[
+0.63882572534965736138024\ldots,
+\]
+
+so the gain is exactly
+
+\[
+R/4=0.0014419875.
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 7. Non-conclusions
+
+- The selected transverse contacts need not form a matching.
+- A selected edge can be selected from both endpoints; the factor two is not removed.
+- Selected contacts may belong to strict-rhombus trains, exceptional-face boundaries, or bridges as physical edges; the theorem only removes bridge payment for missing branching contacts.
+- No individual KKT coefficient floor is proved.
+- No source-preserving diameter-decreasing motion is constructed.
+
+The result narrows the live problem to occupancy of more than `0.640D` transverse contacts in the stopped-train/exceptional-face network.
+
+**Final verdict:** PASS at proof-only scope. C-II remains open.

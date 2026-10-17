@@ -1,0 +1,125 @@
+#!/usr/bin/env python3
+"""Exact rational certificate for dominant double-outer trains through t<=1.865.
+
+Uses the corrected matched atomic floor g=0.0076.  All asserted inequalities use
+Fraction arithmetic plus outward enclosures for pi, square roots, and sin.
+"""
+
+from fractions import Fraction as Q
+from math import factorial, isqrt
+
+
+def atan_inv_bounds(q: int, n: int):
+    s = Q(0)
+    for k in range(n):
+        term = Q(1, (2 * k + 1) * q ** (2 * k + 1))
+        s += term if k % 2 == 0 else -term
+    nxt = Q(1, (2 * n + 1) * q ** (2 * n + 1))
+    return (s, s + nxt) if n % 2 == 0 else (s - nxt, s)
+
+
+def sqrt_bounds(lo: Q, hi: Q, scale: int):
+    nlo = isqrt((lo.numerator * scale * scale) // lo.denominator)
+    nhi = isqrt((hi.numerator * scale * scale) // hi.denominator)
+    return Q(nlo, scale), Q(nhi + 1, scale)
+
+
+def sin_bounds(x: Q, n: int = 20):
+    s = Q(0)
+    for k in range(n):
+        term = x ** (2 * k + 1) / factorial(2 * k + 1)
+        s += term if k % 2 == 0 else -term
+    nxt = x ** (2 * n + 1) / factorial(2 * n + 1)
+    return (s, s + nxt) if n % 2 == 0 else (s - nxt, s)
+
+
+def F_bounds(z: Q):
+    slo, shi = sin_bounds(z / 6)
+    return z - 6 * shi, z - 6 * slo
+
+
+# Exact pi and algebraic-constant enclosures.
+a5_lo, a5_hi = atan_inv_bounds(5, 80)
+a239_lo, a239_hi = atan_inv_bounds(239, 20)
+pi_lo = 16 * a5_lo - 4 * a239_hi
+pi_hi = 16 * a5_hi - 4 * a239_lo
+
+SCALE = 10**80
+n3 = isqrt(3 * SCALE * SCALE)
+sqrt3_lo = Q(n3, SCALE)
+sqrt3_hi = Q(n3 + 1, SCALE)
+Delta_lo = pi_lo / (2 * sqrt3_hi)
+Delta_hi = pi_hi / (2 * sqrt3_lo)
+s_lo, s_hi = sqrt_bounds(Delta_lo, Delta_hi, SCALE)
+
+C76_lo = 2 * s_lo + Q(19, 2500)
+C76_hi = 2 * s_hi + Q(19, 2500)
+
+T = Q(373, 200)  # 1.865
+Umax_lo = Q(9, 2) * T - 2 * pi_hi
+Umax_hi = Q(9, 2) * T - 2 * pi_lo
+delta_max_hi = (Umax_hi - C76_lo) / 2
+assert Q(0) < delta_max_hi < Q(99, 1000)
+assert delta_max_hi < 1
+
+
+def m2_bounds(Ulo: Q, Uhi: Q):
+    xlo = 8 * Delta_lo - Uhi * Uhi
+    xhi = 8 * Delta_hi - Ulo * Ulo
+    assert xlo > 0
+    rlo, rhi = sqrt_bounds(xlo, xhi, SCALE)
+    # Separate lower/upper pieces give safe outward bounds even though U and the
+    # square-root term are correlated.
+    return (Ulo + rlo) / 2, (Uhi + rhi) / 2
+
+
+def bootstrap_step(z: Q):
+    Flo, _ = F_bounds(z)
+
+    # S is minimized at t=T, kappa=0, delta=F(z).
+    Ulo = Umax_lo - 2 * Flo
+    Uhi = Umax_hi - 2 * Flo
+    mlo, _ = m2_bounds(Ulo, Uhi)
+    rhi = Uhi - mlo
+    Slo = pi_lo - Uhi - T / 2 + mlo
+
+    # Uniform complement-pair upper bound: delta<=delta_max, F(z_actual)>=Flo,
+    # and r(U)<=rhi.
+    numerator_hi = delta_max_hi - Flo + rhi * rhi
+    assert numerator_hi > 0
+    p_hi = numerator_hi / (2 * (1 - delta_max_hi))
+    return Slo - p_hi, Flo, Uhi, rhi, Slo, p_hi
+
+
+# Six rounded-down bootstrap rounds.  Each implication has a positive exact margin.
+z_levels = [
+    Q(0),
+    Q(19111, 10000),
+    Q(20144, 10000),
+    Q(20311, 10000),
+    Q(20339, 10000),
+    Q(20344, 10000),
+    Q(20345, 10000),
+]
+for i, z in enumerate(z_levels[:-1]):
+    nxt, *_ = bootstrap_step(z)
+    assert nxt > z_levels[i + 1]
+    print(
+        f"round {i}: z >= {float(z):.4f} -> {float(nxt):.15f} "
+        f"> {float(z_levels[i + 1]):.4f}; margin={float(nxt-z_levels[i+1]):.8g}"
+    )
+
+# At z>=2.0345, energy forces a much smaller U than the crude Umax.  The dominant
+# window train mass is <=A<=C<=U, so H/D>=z-U.
+z = z_levels[-1]
+Flo, _ = F_bounds(z)
+Uhi = Umax_hi - 2 * Flo
+pair_floor = z - Uhi
+assert pair_floor > Q(27, 10000)
+
+print("C76 lower =", float(C76_lo))
+print("delta_max upper =", float(delta_max_hi))
+print("F(2.0345) lower =", float(Flo))
+print("post-bootstrap U upper =", float(Uhi))
+print("dominant double-outer train floor =", float(pair_floor))
+print("PASS: >0.0027 D retained dominant O-O pair weight for t<=1.865")

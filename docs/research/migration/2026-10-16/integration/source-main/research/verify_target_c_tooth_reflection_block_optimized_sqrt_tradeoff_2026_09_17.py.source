@@ -1,0 +1,87 @@
+import math
+import random
+
+h = math.sqrt(303.0) / 52.0
+k_inf = 1.0 / (2.0 * h)
+c = 1.0 / math.sqrt(1.0 + h / 2.0)
+match2 = c / 4.0
+slack2 = 2.0 * h / c
+
+assert abs(c - 0.925539574680581) < 1e-15
+assert abs(match2 - 0.23138489367014525) < 1e-15
+assert abs(slack2 - 0.7233574738338494) < 1e-15
+assert abs(1.0 - c*c - c*c/(4.0*k_inf)) < 1e-15
+
+
+def path_counts(seq):
+    m = seq.count('K')
+    upper_blocks = 0
+    lower_runs = 0
+    prev_upper = False
+    prev_lower = False
+    for ch in seq:
+        upper = ch in ('T', 'K')
+        lower = ch == 'L'
+        if upper and not prev_upper:
+            upper_blocks += 1
+        if lower and not prev_lower:
+            lower_runs += 1
+        prev_upper = upper
+        prev_lower = lower
+
+    # Maximum matching among thin ('T') path edges: selected indices cannot be adjacent.
+    dp_not = 0
+    dp_take = -10**9
+    for ch in seq:
+        next_not = max(dp_not, dp_take)
+        next_take = dp_not + 1 if ch == 'T' else -10**9
+        dp_not, dp_take = next_not, next_take
+    M = max(dp_not, dp_take)
+    return m, upper_blocks, lower_runs, M
+
+
+rng = random.Random(20260917)
+for n in range(1, 80):
+    for _ in range(2000):
+        seq = ''.join(rng.choice('LTK') for _ in range(n))
+        m, B, R, M = path_counts(seq)
+        assert B <= m + M
+        assert R <= B + 1
+        assert R <= m + M + 1
+
+for D in (10**4, 10**6, 10**8, 10**12):
+    x = float(D)
+    tau = 1.0 / (x + math.sqrt(x*x - 1.0))
+    tbar = h + x ** (-1.0 / 3.0)
+    k = (x * tau * (1.0 - tbar/(2.0*x))) / tbar
+    cD = 1.0 / math.sqrt(1.0 + 1.0/(4.0*k))
+    assert k > 0.0
+    assert cD > 0.0
+    assert abs(1.0 - cD*cD - cD*cD/(4.0*k)) < 2e-15
+
+    rootD = math.sqrt(x)
+    for _ in range(20000):
+        m = rng.random() * 5.0 * rootD
+        lhs = x + k*m*m - cD*rootD*(m + cD*rootD)
+        rhs = k*(m - cD*rootD/(2.0*k))**2
+        scale = max(1.0, abs(lhs), abs(rhs))
+        assert abs(lhs-rhs) <= 1e-10*x + 1e-12*scale
+        assert lhs >= -1e-9*x
+
+# Finite coefficient converges to the claimed limit.
+D = 10**12
+x = float(D)
+tau = 1.0 / (x + math.sqrt(x*x - 1.0))
+tbar = h + x ** (-1.0 / 3.0)
+k = (x * tau * (1.0 - tbar/(2.0*x))) / tbar
+cD = 1.0 / math.sqrt(1.0 + 1.0/(4.0*k))
+assert abs(cD-c) < 3e-5
+
+print('PASS: block-optimized FREE square-root tradeoff')
+print(f'h_*={h:.15f}')
+print(f'k_inf={k_inf:.15f}')
+print(f'c_block={c:.15f}')
+print(f'Lambda=2 matching coefficient={match2:.15f}')
+print(f'Lambda=2 slack coefficient={slack2:.15f}')
+print(f'2*c_block={2.0*c:.15f}')
+print(f'finite c_D at D=1e12={cD:.15f}')

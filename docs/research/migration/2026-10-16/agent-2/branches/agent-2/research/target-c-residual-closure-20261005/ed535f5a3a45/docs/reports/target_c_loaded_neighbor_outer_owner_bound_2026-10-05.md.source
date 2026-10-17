@@ -1,0 +1,174 @@
+<!-- theorem-state: {"artifact_id":"ART-D1AAC005FBB8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: loaded-neighbor incidence sharpens outer-owner blocker capacity
+
+Date: 2026-10-05. Base main: `0351c2c3aecd34c0427d0ad081afae563468d401`.
+State: `2026-10-05.audit.61`.
+Classification: **proved candidate awaiting independent audit**; artifact
+lifecycle **unreviewed**. C-II and Level I remain open.
+
+## 1. Exact implication
+
+```
+actual O--O owners with certified upper and unary-rhombus safety
++ each singleton shortens an old diameter
+-> every owner needs an outer-face near-unit witness
+-> loaded incidence limits charge witnesses to nonunit hull sides,
+   unloaded outer core points and outer-face isolates
+-> k<=2m_B+3(x_B+Z_out)
+-> a linear owner family is excluded if those three banks are sublinear.
+```
+
+This supplies a conditional contradiction, not an extraction of that
+owner family or a proof that every bank is sublinear. The only source
+geometry used is canonical full-source midpoint concentration from
+Section 58 and strict support at actual diameter endpoints. The owner
+application uses canonical audit.61's actual O--O localization, including
+all its cloud, ownership, isolate-dispatch and unary-rhombus hypotheses.
+
+## 2. Every source point has at most two nearby loaded neighbors
+
+Fix any t with 1<t<sqrt(2). For every sufficiently large canonical source,
+every source vertex y has at most two distinct actual loaded vertices
+p!=y with |p-y|<=t. The threshold depends on t, not on the source or its
+isolate population.
+
+**Proof.** Otherwise take sources with D tending to infinity, a witness y,
+and three such loaded points. Translate y to the origin. Their distances
+are in [1,t] by source unit separation, and their mutual distances are
+at least one. For each choose an actual diameter normal n_i and midpoint
+m_i. Canonical |m_i-o|<=T with T=O(D^(3/4)) gives
+
+    D(n_i-n_j)=2(p_i-p_j)-2(m_i-m_j),
+    sin(theta_ij/2)<=(2t+2T)/D=o(1).
+
+All three normals thus lie in an angular interval of width alpha=o(1).
+Each normal strictly supports the old source at its loaded point:
+
+    n_i dot(w-p_i)<=-|w-p_i|^2/(2D)<0.
+
+Order the points by these normals. The chords p_2-p_1 and p_3-p_2 have
+directions between the corresponding quarter-turned normals; their
+forward directions differ by at most alpha. Passing to a subsequence
+inside the compact annulus, the three distinct limit points are collinear
+in that order, with successive separations at least one.
+
+Three unit-separated collinear points cannot all lie in the annulus
+1<=|p|<=t when t<sqrt(2). If their line is at distance h>=1 from the
+origin, its outer-disk chord has length at most 2sqrt(t^2-1)<2. If h<1,
+the allowed line points lie in two intervals, each of length
+
+    sqrt(t^2-h^2)-sqrt(1-h^2)
+    <=sqrt(t^2-1)<1.
+
+There is at most one separated point in each interval. Both cases
+contradict the three limit points. This proves the uniform asymptotic
+statement. QED.
+
+The argument includes source isolates as y and asserts no equilibrium
+at them. It does not identify every loaded neighbor with a contact.
+
+## 3. Nearby loaded-loaded pairs are consecutive hull pairs
+
+For the same fixed t<sqrt(2) and large D, any two distinct loaded vertices
+p,q with |p-q|<=t are consecutive vertices of the full source hull.
+
+Their chosen actual diameter normals are at angle theta=o(1), by the
+same midpoint identity. The hull chain between the corresponding strict
+support vertices on that short normal interval has side directions within
+theta of one common tangent. Every hull side joins distinct source points
+and has length at least one. If there were an intermediate hull vertex,
+projection onto the bisector tangent would give
+
+    |p-q|>=2cos(theta/2)=2-o(1)>t,
+
+a contradiction. Hence they are consecutive in the full hull and therefore
+also consecutive in the hull of the loaded vertices.
+
+Let m_B be the number of nonunit consecutive sides in the loaded force
+hull. Every loaded-loaded **noncontact** pair of length at most t is one
+of these m_B sides. This uses no extension of the full-core loaded-contact
+chord theorem to the container branch: it is a direct consequence of
+actual diameter support normals in the full source.
+
+## 4. Outer-owner capacity theorem
+
+Take an actual disjoint-owner finite move family satisfying the promoted
+O--O hypotheses. Reassign bounded-face isolates as in audit.61. Assume:
+
+- every old contact stays unit for every binary selection;
+- every singleton keeps old diameters at most D and old nondiameters
+  strictly below D;
+- every unary strict-rhombus diagonal remains strict for each singleton;
+- every nonzero singleton owner proposal shortens an old diameter;
+- every possible lower witness has old length at most the fixed t above.
+
+The last assumption follows, for example, from a displacement bound
+1+2s<t. Let k be the number of surviving owners. Let U_out be the distinct
+unloaded core points on the outer contact face, and Z_out the contact
+isolates in that face. Put W=U_out union Z_out.
+
+Every singleton must fail at an outer-face old noncontact pair, by
+canonical normalization and audit.61 localization. Choose one witness
+and its relatively moving endpoint for each owner. Classify these choices:
+
+1. Both endpoints are loaded. By Section 3 there are at most m_B possible
+   pairs, and a pair can witness at most its two endpoint owners. These
+   choices account for at most 2m_B owners.
+2. The moving endpoint is in W. Owners are disjoint, so such a vertex
+   belongs to only one owner. These choices account for at most |W| owners.
+3. The moving endpoint is loaded and the other endpoint is in W. By
+   Section 2 each W vertex has at most two nearby loaded vertices, each
+   belonging to at most one owner. These choices account for at most
+   2|W| owners.
+
+These cases exhaust the choices and prove
+
+    k<=2m_B+3(|U_out|+Z_out).                         (4.1)
+
+For the connected core outer walk of length b, every one of its q loaded
+vertices occurs at least once. Therefore |U_out|<=b-q=x_B, and
+
+    k<=2m_B+3(x_B+Z_out).                            (4.2)
+
+Repeated outer-walk occurrences are retained in b; they are not identified
+with distinct source vertices. An owner is charged at an actual moved
+endpoint, not merely to an occurrence or a contracted source path.
+
+Where the canonical finite-compatibility deletion of at most 2d_H owners
+applies to an original r-proposal family, with the remaining hypotheses
+verified after deletion, the same proof gives
+
+    r<=2m_B+3(x_B+Z_out)+2d_H.                       (4.3)
+
+This does not suppress upper-induced propagation: deletion and the
+remaining singleton hypotheses must be checked as in the canonical
+finite proposal theorem, rather than inferred from an arbitrary Horn
+formula.
+
+## 5. Composition and live obstruction
+
+Equation (4.2) improves the canonical conditional bound k<=b+Z_out by
+removing q from the capacity bank. In particular an actual k=Omega(D)
+family is impossible if m_B,x_B,Z_out=o(D). On scopes where the promoted
+hull-side ledger gives m_B<=x_B, the bound becomes k<=5x_B+3Z_out.
+Thus with x_B=o(D), a linear safe singleton family forces a linear
+outer-face isolate population.
+
+This does not prove that such a family is supplied in every branch.
+The physical pentagon-pair train bank is not automatically an O--O
+owner bank. Nor does Type II alone make Z_out=o(D); a linear isolate
+population remains possible. Unary rhombus failures and upper exceptions
+are not charged to m_B or W when their safety hypotheses fail. The
+macroscopic-container branch likewise needs its own actual move extraction.
+
+Hence the next obstruction in the applicable low-defect case is explicit:
+a linear outer-isolate bank, absence of enough usable O--O proposals,
+or a failed unary/upper hypothesis. No exhaustive C-II branch is closed.
+
+## 6. Validation
+
+The proof is analytic midpoint geometry, compactness in a fixed annulus
+and exact finite endpoint counting. No numerical verifier is needed or
+claimed. The sufficient-large-D quantifier is justified by the uniform
+canonical T/D bound and the contradiction subsequence, not a numerical
+threshold. Repository checks certify state/index consistency only.

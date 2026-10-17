@@ -1,0 +1,456 @@
+# Target C-II — adjacent O--O strip translation reduces all diameter blockers to a finite caterpillar forest
+
+**Date:** 2026-09-15  
+**Status:** proof-only finite/source-level structural strengthening  
+**Scope:** full-core Type-II branch with `t=(q-k)/D<=1.844`, on the adjacent pair supplied by the triple-small/Pareto backbone argument  
+**Dependencies:** audited O--O train shore cutsets; corrected complement-dual path construction; interval support of diameter rows; Pareto adjacent-boundary certificate; canonical straight-line diameter-thrackle/Woodall topology  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The exact two-cut multishear keeps all old contacts at length one and therefore leaves a bounded set of active diameter max-function cusps.  There is a simpler nonlocal motion on the same adjacent cuts: translate the entire source strip between the two nested cuts.
+
+That translation deliberately **opens** the two boundary train contact families.  In return, every source-pair distance whose endpoints are both inside or both outside the strip is unchanged exactly.  Consequently the only old diameter constraints that can move are precisely the diameter rows whose interval incidence switches between the two cuts.
+
+Combining this exact support identity with the new Pareto adjacent-boundary certificate gives a finite obstruction with fewer than `1800+o(1)` diameter edges.  Those edges form a bipartite subgraph of the straight-line diameter thrackle, so Woodall topology makes them a caterpillar forest.
+
+### Theorem ST — finite strip-translation forest
+
+Every sufficiently large survivor in the stated `t<=1.844` scope has two consecutive smallest-leaf O--O cuts
+
+\[
+\tau_i,\tau_{i+1}
+\]
+
+on one rooted complement-dual backbone for which the following hold simultaneously.
+
+Let `S_i,S_{i+1}` be their nested far shores, ordered so that
+
+\[
+S_{i+1}\subset S_i,
+\]
+
+and put
+
+\[
+R:=S_i\setminus S_{i+1}.
+\tag{ST.1}
+\]
+
+Then:
+
+1. translating every full-source point in `R` by one vector `v` changes no old contact except those belonging to `tau_i` or `tau_{i+1}`;
+2. there are arbitrarily small nonzero `v` for which **both** boundary contact families become strictly longer than one, while all other old unit contacts remain exactly one and all strict old noncontacts remain longer than one;
+3. for every oriented source pair `h=xy`,
+   \[
+   r_h(v)=r_h+\delta_hv,
+   \qquad
+   \delta_h=\mathbf1_R(y)-\mathbf1_R(x)
+   =\varepsilon_{hi}-\varepsilon_{h,i+1};
+   \tag{ST.2}
+   \]
+   hence every non-switching pair is unchanged **exactly**;
+4. the set
+   \[
+   H_R:=\{h\in H:\delta_h\ne0\}
+   \tag{ST.3}
+   \]
+   of actual diameter blockers has
+   \[
+   \boxed{|H_R|<1800+o(1);}
+   \tag{ST.4}
+   \]
+5. `H_R` is a bipartite straight-line thrackle and therefore a disjoint union of caterpillar trees; in particular it is a forest;
+6. with the positive relative-interior KKT normalization `sum_h beta_h=1`,
+   \[
+   \sum_{h\in H_R}\beta_h< {10^6\over D}+o(D^{-1}),
+   \tag{ST.5}
+   \]
+   and the exact strip resultant is
+   \[
+   \boxed{
+   \sum_{h\in H_R}\beta_h\delta_hr_h
+   =F_i-F_{i+1},
+   \qquad F_j=A_ju_j.
+   }
+   \tag{ST.6}
+   \]
+
+Thus the entire local diameter obstruction to opening two consecutive O--O train boundaries is supported on a finite caterpillar forest of fewer than about `1800` actual diameter edges.  No first-order descent is claimed; KKT stationarity still forces this finite forest to block every contact-safe infinitesimal strip translation.
+
+---
+
+## 1. Choose the Pareto adjacent boundary
+
+Use the triple-small backbone notation.  Its internal-boundary density is
+
+\[
+p={278778993\over78216868750}
+=0.0035641799\ldots .
+\tag{ST.7}
+\]
+
+For one internal boundary write
+
+- `N_i` for the number of diameter intervals whose incidence switches there;
+- `B_i=sum_h beta_h|epsilon_{h,i+1}-epsilon_{hi}|`;
+- `eta_i=d_RP1(u_i,u_{i+1})`.
+
+The audited global budgets are
+
+\[
+\sum_iN_i\le2\pi D,
+\tag{ST.8}
+\]
+
+\[
+\sum_iB_i\le2,
+\tag{ST.9}
+\]
+
+and
+
+\[
+\sum_i\eta_i
+\le {2C_{phase}\over d_{low}}+o(1),
+\tag{ST.10}
+\]
+
+where
+
+\[
+d_{low}={9891\over62500}.
+\]
+
+The companion Pareto certificate uses the thresholds
+
+\[
+N_*=1800,
+\qquad
+L_*=10^6.
+\]
+
+The normalized density of boundaries violating at least one of
+
+\[
+N_i<N_*,
+\qquad
+DB_i<L_*,
+\qquad
+D\eta_i<L_*
+\tag{ST.11}
+\]
+
+is at most
+
+\[
+{2\pi\over1800}
++{2\over10^6}
++{2C_{phase}\over d_{low}10^6}.
+\]
+
+Using the standard outward rational enclosures for `pi` and `sqrt(3)`, the exact verifier
+
+`research/verify_target_c_adjacent_cut_pareto_refinement.py`
+
+proves this is smaller than `p` by more than `4e-6`.  Hence one internal boundary satisfies all three inequalities in (ST.11).  Fix that adjacent pair for the rest of the proof.
+
+Only the first inequality is needed for the finite forest statement.  The other two are retained because they describe the same pair and may be useful in the next interface theorem.
+
+---
+
+## 2. The region between consecutive rooted shores
+
+Let the good-leaf complement dual be rooted on the side preceding the selected path.  For the selected consecutive path edges `tau_i,tau_{i+1}`, let
+
+\[
+\chi_i,\chi_{i+1}:V\to\{0,1\}
+\]
+
+be their audited full-source shore indicators, equal to one on the far shore.  Consecutiveness on one rooted tree path gives nested shores.  After swapping names if necessary,
+
+\[
+S_{i+1}\subset S_i,
+\qquad
+\mathbf1_R=\chi_i-\chi_{i+1}.
+\tag{ST.12}
+\]
+
+Here the shore indicators include contact-isolated source points according to their geometric side, exactly as in the audited finite O--O shear theorem.
+
+The stopped-train cutset property says that a unit contact has endpoints on opposite sides of cut `tau_j` if and only if that contact belongs to `tau_j`.  Therefore for every old unit contact `xy`,
+
+\[
+\mathbf1_R(y)-\mathbf1_R(x)
+\ne0
+\]
+
+only when `xy` belongs to `tau_i` or `tau_{i+1}`.
+
+So the boundary of the vertex strip `R` in the old unit-contact graph consists exactly of those two train contact families.
+
+---
+
+## 3. Translate the strip and open both train boundaries
+
+For a vector `v in R^2`, define
+
+\[
+p_x(v)=
+\begin{cases}
+p_x+v,&x\in R,\\p_x,&x\notin R.
+\end{cases}
+\tag{ST.13}
+\]
+
+Every old contact outside `tau_i union tau_{i+1}` has both endpoints with the same strip membership and is unchanged exactly.
+
+Orient every contact of `tau_i` from its endpoint outside `R` to its endpoint inside `R`; all such contact vectors equal one unit vector `a`.  Do the same for `tau_{i+1}`, obtaining a unit vector `b`.  Under (ST.13) the two boundary contact vectors become
+
+\[
+a+v,
+\qquad b+v.
+\tag{ST.14}
+\]
+
+There is always a nonzero arbitrarily small `v` that makes both lengths strictly larger than one.
+
+If `a+b ne 0`, take
+
+\[
+v=s(a+b),
+\qquad s>0.
+\]
+
+Then
+
+\[
+a\cdot v=b\cdot v=s(1+a\cdot b)>0,
+\]
+
+so
+
+\[
+|a+v|^2>1,
+\qquad
+|b+v|^2>1.
+\tag{ST.15}
+\]
+
+If `b=-a`, choose any nonzero `v perpendicular a`.  Then
+
+\[
+|a+v|^2=|b+v|^2=1+|v|^2>1.
+\tag{ST.16}
+\]
+
+Because the full source is finite, every strict old noncontact has positive unit-distance slack.  Taking `v` sufficiently small preserves all those strict lower inequalities.  Thus (ST.13) gives a finite same-cardinality unit-separated source in which both selected boundary contact families have opened and every other old contact remains exact.
+
+This step does not use the inverse-`D` phase-gap estimate.  The phase-gap bound is useful only for comparing this motion with the exact opposite shear.
+
+---
+
+## 4. Exact pair support is the switching set
+
+Fix an arbitrary orientation `h=xy` of any source pair and put
+
+\[
+r_h=p_y-p_x.
+\]
+
+Equation (ST.13) gives exactly
+
+\[
+r_h(v)
+=r_h+
+(\mathbf1_R(y)-\mathbf1_R(x))v.
+\]
+
+Using (ST.12) and the rooted cut incidences
+
+\[
+\varepsilon_{hj}=\chi_j(y)-\chi_j(x),
+\]
+
+we obtain
+
+\[
+\boxed{
+\delta_h:=\mathbf1_R(y)-\mathbf1_R(x)
+=\varepsilon_{hi}-\varepsilon_{h,i+1}.
+}
+\tag{ST.17}
+
+On the rooted laminar backbone each diameter incidence row is one signed interval, so adjacent incidence values can differ only by `0,+1,-1`.  Hence
+
+\[
+\delta_h\in\{-1,0,1\}.
+\]
+
+Most importantly,
+
+\[
+\boxed{
+\delta_h=0
+\Longleftrightarrow
+h\text{ does not switch incidence at the selected internal boundary}.
+}
+\tag{ST.18}
+
+Thus every non-switching source pair, not only every non-switching diameter pair, is unchanged exactly by the strip translation.
+
+For an actual diameter pair `h in H_R`,
+
+\[
+\boxed{
+|r_h(v)|^2
+=D^2+2\delta_h r_h\cdot v+|v|^2.
+}
+\tag{ST.19}
+
+The Pareto choice gives
+
+\[
+|H_R|=N_i<1800+o(1),
+\]
+
+proving (ST.4).
+
+---
+
+## 5. The switching diameter graph is a caterpillar forest
+
+Every edge of `H_R` has `delta_h ne0`, so exactly one endpoint lies in `R`.  Therefore the switching graph is bipartite with vertex partition
+
+\[
+R\cap V(H_R),
+\qquad
+R^c\cap V(H_R).
+\tag{ST.20}
+\]
+
+The full actual diameter graph of a planar finite set is a straight-line thrackle: any two diameter segments either share an endpoint or cross.  Every subgraph is again a straight-line thrackle.
+
+Woodall's straight-line classification, already used in the canonical Target-C diameter-topology stack, says that a connected straight-line thrackle is either
+
+- a caterpillar tree, or
+- a spiked odd cycle.
+
+A bipartite graph has no odd cycle.  Hence no connected component of `H_R` can be a spiked odd cycle.  Every nontrivial component is a caterpillar tree.
+
+Therefore
+
+\[
+\boxed{H_R\text{ is a caterpillar forest}.}
+\tag{ST.21}
+
+In particular, if `m_R=|H_R|`, the number of diameter endpoints incident to the switching set is at most `2m_R`, hence below `3600+o(1)`.
+
+This is stronger than merely saying the cusp set has bounded cardinality: its entire endpoint-incidence topology is acyclic and has a one-dimensional caterpillar core.
+
+---
+
+## 6. Exact KKT strip resultant
+
+Keep the positive relative-interior diameter multipliers normalized by
+
+\[
+\sum_{h\in H}\beta_h=1.
+\]
+
+For the rooted cuts, the audited Section-157 resultants are
+
+\[
+F_j=A_ju_j
+=\sum_h\beta_h\varepsilon_{hj}r_h.
+\tag{ST.22}
+\]
+
+Subtract the two adjacent identities and use (ST.17):
+
+\[
+\boxed{
+F_i-F_{i+1}
+=\sum_{h\in H_R}\beta_h\delta_hr_h.
+}
+\tag{ST.23}
+\]
+
+The switching multiplier mass is exactly
+
+\[
+\sum_{h\in H_R}\beta_h
+=\sum_h\beta_h|\varepsilon_{hi}-\varepsilon_{h,i+1}|
+=B_i,
+\tag{ST.24}
+\]
+
+because every switching difference has absolute value one.  The Pareto choice gives
+
+\[
+\boxed{
+B_i<{10^6\over D}+o(D^{-1}).
+}
+\tag{ST.25}
+\]
+
+and therefore the coarse resultant bound
+
+\[
+\|F_i-F_{i+1}\|<10^6+o(1).
+\]
+
+The older triple-small choice gives a much smaller absolute resultant bound, while the present Pareto choice gives the much smaller support count.  The two statements should not be conflated: they are different points on the same adjacent-boundary tradeoff.
+
+---
+
+## 7. Exact finite obstruction after opening the contacts
+
+For sufficiently small `v`, all old strict lower-distance inequalities remain safe.  Every non-switching old diameter pair remains exactly at its old length.  Therefore the only old upper-distance constraints that can prevent (ST.13) from producing a same-diameter source with strictly fewer contacts are the forest edges `H_R`.
+
+For them the exact inequalities are the finitely many quadratics
+
+\[
+2\delta_h r_h\cdot v+|v|^2\le0,
+\qquad h\in H_R.
+\tag{ST.26}
+\]
+
+If one sufficiently small contact-opening vector `v` satisfied all of (ST.26), then:
+
+- if any non-switching diameter pair exists, the new source would still have diameter `D` but would have strictly fewer unit contacts, contradicting the canonical contact-minimal normalization;
+- if no non-switching diameter pair exists and at least one inequality is strict, the diameter-pair count falls, contradicting the secondary diameter-pair normalization (or the diameter itself falls if all old diameter pairs become strict).
+
+Thus the canonical survivor must be blocked by this finite caterpillar forest for every sufficiently small vector that opens both train boundaries.
+
+At first order the blocker inequalities are
+
+\[
+\delta_h r_h\cdot v\le0.
+\tag{ST.27}
+\]
+
+Relative-interior KKT explains why such blocking is unavoidable; the theorem does **not** claim a local feasible direction.  Its new content is that all local blocking information is concentrated on fewer than `1800+o(1)` diameter edges forming a caterpillar forest, and all other source-pair distances disappear from the finite replacement problem exactly.
+
+---
+
+## 8. Frontier effect
+
+The structural frontier can now be stated without the old exact-contact-preservation restriction:
+
+```text
+one adjacent smallest-leaf strip R
++ both boundary O-O contact families can be opened simultaneously
++ every non-switching source-pair distance is unchanged exactly
++ fewer than 1800 switching actual diameter edges can move
++ those switching edges form a bipartite caterpillar forest
++ their exact KKT resultant is F_i-F_{i+1}.
+```
+
+The next valid closing theorem should attack this finite forest, not the full diameter graph.  Natural targets are:
+
+1. a leaf-pruning theorem showing that a contact-opening strip translation can be chosen to shorten every edge of a finite switching caterpillar;
+2. an endpoint-exchange move that modifies only a leaf or spine segment of the switching forest while preserving unit separation; or
+3. a classification of finite caterpillar blockers compatible with the two boundary contact directions and the exact positive KKT resultant (ST.23).
+
+A first-order train-shear descent remains impossible by the existing KKT regression.  The point of (ST.13) is that it leaves the exact old-contact manifold and turns the live obstruction into a finite forest interface problem.
+
+**Disposition:** proved proof-only adjacent-strip finite-forest reduction. C-II and Level I remain open.

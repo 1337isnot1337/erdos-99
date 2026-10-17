@@ -1,0 +1,160 @@
+# Target C: Profile B source-basis kernel incidence
+
+Date: 2026-09-22
+
+Status: rigorous structural strengthening of the remaining eight-no-root `k=6,D=-1,p=9` Profile B finite audit. This does not close Profile B by itself.
+
+Companion sanity checker:
+
+`research/verify_target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_kernel_incidence_2026_09_22.py`
+
+The input is the fixed-nine source realization already required by
+
+`research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_actual_state_realization_2026-09-22.md`.
+
+## 1. Fixed source basis and the clean puncture fan
+
+A genuine Profile B source has a nine-dimensional replacement-functional quotient `V_8` and exactly nine actual singleton replacement classes. The fixed-nine reduction proves that these classes
+
+```text
+x_1,...,x_9
+```
+
+form a basis of `V_8`.
+
+Choose the three-clean source deletion used by the global lift. Its seven-row shadow has `d_7=3`, hence quotient dimension eight, and puncture functoriality gives a surjection
+
+```text
+rho : V_8 -> V_7,
+dim ker(rho)=1.
+```
+
+Write
+
+```text
+K_0 = ker(rho).
+```
+
+For each of the seven coordinates `j` of the clean seven-row state, puncture once more. The synchronized six-row shadow has `d_{6,j}=3`, quotient dimension seven, and a surjection
+
+```text
+pi_j : V_7 -> V_{6,j},
+dim ker(pi_j)=1.
+```
+
+Let
+
+```text
+L_j = ker(pi_j)
+```
+
+and let
+
+```text
+H_j = ker(V_8 -> V_{6,j}).
+```
+
+Then `H_j` is a two-dimensional subspace of `V_8`, contains `K_0`, and `H_j/K_0=L_j`.
+
+## 2. The seven six-row kernel planes are distinct
+
+The proof is the same dependency-dual argument used in the Profile A closure, with deficiency three in place of deficiency two.
+
+For the seven-row state let `N=null(P_7)`, so `dim N=5`. If `C` is the virtual-complete block set and `R` is the canonical relation map on `Q^C direct_sum N`, external containment makes the dependency kernel `K=ker R` project onto `N`. Its kernel over `N` is the complete-row dependency space of dimension `d_7=3`. Therefore
+
+```text
+dim K = 5+3 = 8
+```
+
+and the replacement-functional quotient is canonically `V_7 ~= K^*`.
+
+After puncturing coordinate `j`, the child dependency space is a hyperplane `K_j<=K`, with
+
+```text
+projection_N(K_j)=N_j={alpha in N: alpha_j=0},
+dim K_j=4+d_{6,j}=7.
+```
+
+Under `V_7 ~= K^*`, the line `L_j` is `ann(K_j)`.
+
+If `L_j=L_k`, then `K_j=K_k`, hence `N_j=N_k`. The two coordinate functionals on `N` are nonzero because the coefficient plane retains rank two under each puncture. Equal kernels therefore make them proportional, so `P_7=N^perp` contains a nonzero word supported on `{j,k}`. That contradicts the three-clean construction, which preserves coefficient rank two after every two-coordinate puncture of the clean seven-row state.
+
+Thus
+
+> the seven lines `L_j` are pairwise distinct.
+
+Consequently the seven pullback planes `H_j` are pairwise distinct two-dimensional subspaces through the common line `K_0`.
+
+## 3. Zero-source-class incidence
+
+For any descendant quotient, call a source basis class `x_a` **zero** if its image in that quotient is zero. This is stronger and more accurate than checking whether its block remains virtual-complete: a surviving complete block can still have zero replacement-functional class modulo the descendant canonical row span.
+
+Because the `x_a` form a basis of `V_8`, source basis classes that become zero in a descendant are exactly the coordinate basis vectors lying in that descendant kernel.
+
+At seven rows, at most one source basis class is zero because `K_0` is a line.
+
+At any six-row child, at most two source basis classes are zero because `H_j` is a plane.
+
+There are two cases.
+
+### Case A: no source basis class is zero at seven rows
+
+Then `K_0` is not a coordinate basis line.
+
+Suppose two distinct six-row children `j,k` each had two zero source basis classes. Since two coordinate basis vectors are independent, their spans equal the corresponding two-dimensional kernel planes:
+
+```text
+H_j = span(x_a,x_b),
+H_k = span(x_c,x_d).
+```
+
+Both coordinate planes contain `K_0`. Two distinct coordinate two-planes have either zero intersection or a one-dimensional intersection equal to a coordinate basis line. Therefore they cannot share the non-coordinate line `K_0`. If the coordinate pairs are identical, then `H_j=H_k`, contradicting distinctness.
+
+Hence
+
+> if no source basis class is zero at seven rows, at most one of the seven six-row children can have two zero source basis classes.
+
+All other six-row children have at most one zero source basis class.
+
+### Case B: one source basis class is zero at seven rows
+
+Let it be `x_a`. Then
+
+```text
+K_0 = span(x_a).
+```
+
+Every `H_j` contains `K_0`, so `x_a` is zero in every six-row child.
+
+If child `j` has a second zero source class `x_b`, then
+
+```text
+H_j = span(x_a,x_b).
+```
+
+If another child `k` has the same second zero class `x_b`, then `H_j=H_k`, contradicting distinctness. Therefore
+
+> every six-row child contains the common zero class `x_a`, and the second zero labels, where they occur, are pairwise distinct across the seven children.
+
+## 4. Exact verifier consequence
+
+The existing fixed-nine verifier already computes the exact rational descendant quotient ranks. It can therefore determine the zero-source-class sets without any new symbolic machinery: for each chosen source basis singleton, compute its one-class extra rank in the seven-row and six-row canonical quotients. Extra rank zero means exactly that the source basis class lies in the corresponding puncture kernel.
+
+A genuine fixed-nine Profile B realization must satisfy:
+
+```text
+|Z_7| <= 1,
+|Z_{6,j}| <= 2 for every j,
+```
+
+plus the incidence rule above:
+
+```text
+Z_7 = empty  => at most one j has |Z_{6,j}|=2;
+Z_7 = {a}    => a belongs to every Z_{6,j}, and the labels in Z_{6,j}\{a}
+                are pairwise distinct over children with size two.
+```
+
+These are necessary conditions on the same fixed nine source blocks, not capacity-only conditions on unrelated compatible blocks. They can be applied before the expensive full fixed-nine fan reranking.
+
+This does not close Profile B: both incidence patterns are combinatorially possible. It removes a family of false fixed-nine candidates that satisfy only the coarse dimension bounds `|Z_7|<=1`, `|Z_{6,j}|<=2` but cannot arise from seven distinct clean-puncture kernels.

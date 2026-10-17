@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+"""Numerical regression for the exact flat-pentagon phase-star identity."""
+import math
+import random
+
+PI = math.pi
+rng = random.Random(20260914)
+
+# Verify the exact threshold identity numerically over a stable near-flat box.
+for _ in range(20000):
+    u = rng.uniform(1e-7, 0.12)
+    v = rng.uniform(1e-7, 0.12)
+    A = PI / 3 - u
+    B = PI / 3 - v
+    psi0 = A + B - PI / 3
+    assert 0 < psi0 < PI
+    x = 2 * math.cos(A)
+    y = 2 * math.cos(B)
+    c0_sq = x*x + y*y - 2*x*y*math.cos(psi0)
+    rhs = 8 * math.sin(u) * math.sin(v) * math.cos(u + v)
+    assert rhs > 0
+    assert abs((1 - c0_sq) - rhs) < 2e-13
+    assert c0_sq < 1
+
+    # Actual pentagon top edge has length one. Recover the actual included angle.
+    cos_psi = (x*x + y*y - 1) / (2*x*y)
+    assert -1 < cos_psi < 1
+    psi = math.acos(cos_psi)
+    gamma = A + B - psi
+    assert 0 < gamma < PI / 3
+
+    # Both leaf projective gaps are strictly above sixty degrees.
+    leaf_r = PI - 2*A
+    leaf_l = PI - 2*B
+    assert leaf_r > PI / 3
+    assert leaf_l > PI / 3
+
+# Boundary control: if either hidden gap is unopened (u=0 or v=0), threshold equality
+# is recovered exactly up to floating-point tolerance.
+for w in (1e-5, 1e-3, 0.02, 0.1):
+    for u, v in ((0.0, w), (w, 0.0)):
+        A = PI / 3 - u
+        B = PI / 3 - v
+        psi0 = A + B - PI / 3
+        x = 2 * math.cos(A)
+        y = 2 * math.cos(B)
+        c0_sq = x*x + y*y - 2*x*y*math.cos(psi0)
+        assert abs(c0_sq - 1) < 2e-13
+
+print('PASS flat-pentagon exact phase-star regression')
+print('identity: 1-c0^2 = 8 sin(u) sin(v) cos(u+v)')
+print('finite conclusion: minority projective gap < pi/3')

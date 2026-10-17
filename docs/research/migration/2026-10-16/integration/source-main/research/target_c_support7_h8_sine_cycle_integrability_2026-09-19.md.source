@@ -1,0 +1,157 @@
+# Target C-II — eight exact sine-cycle constraints for the convex support-seven endpoint
+
+**Date:** 2026-09-19  
+**Claim class:** exact nonlinear metric reduction  
+**Scope:** fully convex degree-pure support-seven `H8` reciprocal candidates  
+**Depends on:** audited support-seven endpoint reduction; pairwise-distinct reciprocal points; `H=K_8-L` with `L=C_7` or `C_3+C_4`; exact force-to-raw angle conversion  
+**Certificate:** `research/verify_target_c_support7_h8_sine_cycle_integrability_2026_09_19.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The surviving convex support-seven candidates have already passed a large exact *linear* angular system: face sums, reciprocal triangle-angle sums, and the known strict turn inequalities. Euclidean metric compatibility imposes another layer that those linear equations do not contain.
+
+For every relation edge `ij`, the reciprocal triangle `0ij` gives an exact law-of-sines ratio between the two radial lengths `|y_i|` and `|y_j|`. These edge ratios must integrate consistently around the relation graph. Because the support-seven relation graph has cycle rank eight, this produces eight fundamental multiplicative sine equations.
+
+---
+
+## 1. Edge ratio from one ground triangle
+
+Write
+
+\[
+\rho_i=|y_i|>0,
+\qquad i=1,\ldots,7.
+\]
+
+For a relation edge `ij`, all three edges of triangle `0ij` are present in the reciprocal graph. In the convex `H8` branch the triangle is nondegenerate. Let
+
+\[
+A_{ij}=\angle 0ij,
+\qquad
+A_{ji}=\angle 0ji.
+\]
+
+Both angles lie strictly between `0` and `pi`. The law of sines in triangle `0ij` gives
+
+\[
+\frac{\rho_j}{\sin A_{ij}}
+=
+\frac{\rho_i}{\sin A_{ji}},
+\]
+
+hence
+
+\[
+\boxed{
+\frac{\rho_j}{\rho_i}
+=
+\frac{\sin A_{ij}}{\sin A_{ji}}.
+}
+\tag{1.1}
+\]
+
+The angles `A_ij` and `A_ji` are not new variables. In the audited convex reciprocal setup each is an exact affine integer-coefficient function of the normalized force gaps, multiplied by `pi`.
+
+---
+
+## 2. Cycle integrability
+
+Orient a relation edge `ij` and define
+
+\[
+g_{ij}
+=
+\log\sin A_{ij}-\log\sin A_{ji}.
+\tag{2.1}
+\]
+
+Equation (1.1) says
+
+\[
+g_{ij}=\log\rho_j-\log\rho_i.
+\tag{2.2}
+\]
+
+Therefore `g` is an exact one-cochain on the relation graph. For every oriented relation cycle
+
+\[
+C=(v_0,v_1,\ldots,v_{m-1},v_0),
+\]
+
+we must have
+
+\[
+\boxed{
+\sum_{k=0}^{m-1}g_{v_kv_{k+1}}=0.
+}
+\tag{2.3}
+\]
+
+Equivalently, without logarithms,
+
+\[
+\boxed{
+\prod_{k=0}^{m-1}
+\sin A_{v_kv_{k+1}}
+=
+\prod_{k=0}^{m-1}
+\sin A_{v_{k+1}v_k}.
+}
+\tag{2.4}
+\]
+
+This is an exact nonlinear identity in the existing force-gap variables.
+
+Conversely, because the relation graph is connected, satisfaction of (2.3) on a cycle basis is sufficient to construct positive radial lengths up to one common scale: fix one `rho_r>0`, integrate (2.2) along a path from `r` to each vertex, and use the cycle equations for path independence. Thus (2.3) is exactly the obstruction to consistency of the radial ratios supplied by the seven-point family of ground triangles. This is a statement about radial-ratio compatibility only; it is not asserted to be sufficient for the full reciprocal realization.
+
+---
+
+## 3. There are eight fundamental equations
+
+At degree-pure support seven,
+
+\[
+|V(R)|=7,
+\qquad
+|E(R)|=14,
+\]
+
+and `R` is connected for both
+
+\[
+L=C_7
+\qquad\text{and}\qquad
+L=C_3\sqcup C_4.
+\]
+
+Hence the cycle-space dimension is
+
+\[
+\boxed{
+|E|-|V|+1=14-7+1=8.
+}
+\tag{3.1}
+\]
+
+Choose any spanning tree `T` of `R`. The eight edges in `E(R)\setminus E(T)` give eight fundamental cycles. It is enough to impose (2.4) on those eight cycles; every other cycle equation follows by cycle-space addition at the logarithmic level.
+
+The companion exact certificate constructs a deterministic spanning tree for canonical representatives of both missing-graph types, constructs all eight fundamental cycles, and verifies rank eight over the rationals.
+
+---
+
+## 4. Why this is a new layer
+
+The existing affine `H8` certificates use equations of the form
+
+\[
+F_i=2,
+\qquad
+T_{ijk}=1,
+\]
+
+plus strict linear inequalities on force gaps. Those equations control angles, but they do not force the triangle-by-triangle radial ratios (1.1) to agree after transport around a cycle of `R`.
+
+The sine-cycle equations do exactly that. For every currently surviving convex orbit, the next metric target can therefore be written as the existing strict linear angular region intersected with eight explicit equations of the form (2.4). Because each `A_ij` is already an affine function of the force gaps, no reciprocal coordinates need to be introduced to state this system.
+
+This reduction does not claim that the twelve surviving convex orbits violate the sine-cycle equations. A rigorous exclusion still requires either an analytic sign/monotonicity argument, interval certification, or another exact certificate showing that the angular feasible region cannot meet these eight nonlinear constraints.
+
+**Disposition:** every fully convex support-seven candidate must satisfy eight fundamental multiplicative sine-cycle identities. They are the exact radial-metric consistency conditions missing from the preceding linear angle certificates. The twelve convex orbits and the nonconvex `H6/H7` branches remain open.

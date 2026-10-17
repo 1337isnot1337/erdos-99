@@ -1,0 +1,260 @@
+# Erdős Problem #99 — matched `g=0.0050` internal/nonbridge boundary dichotomy
+
+**Date:** 2026-09-14  
+**Target:** C-II, canonical full-core Type-II branch  
+**Dependencies:** matched iterative-pruning gap `g=0.0050`; Section-171 `epsilon=0.0023374`; shallow-tooth internal penetration; bridge-deduplicated long-side concentration  
+**Claim class:** proof-only source-level propagation awaiting independent audit  
+**External literature:** no new import
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The previous matched-gap propagation counted approximately `0.2D` distinct physical
+contacts in either the tooth or long-side branch. Two independently hostile-audited
+finite improvements remove both factor-two losses:
+
+- a shallow two-edge tooth selects a distinct **internal unloaded-to-unloaded** contact,
+  not merely a contact distinct up to endpoints;
+- a selected outer occurrence is duplicated only by a graph bridge, and the full-core
+  bridge-isoperimetric bound pays the entire outer-bridge population by half the
+  metric detour.
+
+At the matched `g=0.0050` endpoint this gives a branch-uniform physical-edge floor
+above `0.3948D`.
+
+Write
+
+\[
+\Delta_2={\pi\over2\sqrt3},\quad
+s=\sqrt{\Delta_2},\quad
+C_{146}={4\over9}(\pi+s),
+\]
+
+\[
+g=0.0050,\qquad
+t_{50}=C_{146}+0.0023374,
+\qquad C_{50}=2s+g.
+\]
+
+The topology/detour remainder is
+
+\[
+R_{50}={9t_{50}\over2}-2\pi-C_{50}=0.00551830,
+\]
+
+so
+
+\[
+\boxed{d_{out}/D\le\delta_{50}:=0.00275915+o(1).}
+\tag{IN.1}
+\]
+
+The exact outer-walk burden yields
+
+\[
+\max\{N_2,L_{>2}\}
+\ge B_{50}D-o(D),
+\]
+
+with
+
+\[
+\boxed{B_{50}=0.4362350385367828447\ldots .}
+\tag{IN.2}
+\]
+
+---
+
+## 1. Tooth branch: edge-injective internal penetration
+
+The fixed-scale Type-II flatness theorem proves that a two-edge tooth apex has no
+loaded contact neighbor other than the two loaded endpoints of its own base.  Thus its
+mandatory third contact is internal to one unloaded positive-contact component.
+
+For every fixed
+
+\[
+0<\eta<2(1-\cos(\pi/12)),
+\]
+
+the inner endpoint of the selected contact lies more than `sqrt(3)/2` inside the
+support line of the tooth base.  A shallow tooth apex lies less than `sin(pi/12)` from
+its own nearby support line.  Type-II fixed-scale boundary flatness therefore prevents
+the inner endpoint from being another shallow tooth apex.  The selection is
+edge-injective:
+
+\[
+\boxed{
+E_{int}(\eta)
+\ge N_{sh}(\eta)
+\ge N_2-{d_{out}\over\eta}.
+}
+\tag{IN.3}
+
+Taking the exact convenient value `eta=1/15`, the matched constants give
+
+\[
+\boxed{
+{E_{int}(1/15)\over D}
+\ge B_{50}-15\delta_{50}-o(1)
+=0.3948477885367828447\ldots-o(1).
+}
+\tag{IN.4}
+
+Every counted edge has both endpoints unloaded, lies inside one positive-contact
+component, and has inward component greater than
+
+\[
+Y_{1/15}={29\sqrt3-\sqrt{59}\over60}
+=0.7091387945271472\ldots .
+\tag{IN.5}
+
+If directional flux is the objective, `eta=0.06` gives
+
+\[
+{E_{int}(0.06)\over D}
+\ge0.3902492052034495\ldots-o(1)
+\tag{IN.6}
+\]
+
+and
+
+\[
+\boxed{
+{1\over D}\sum_{e\in E_{int}(0.06)}
+\operatorname{proj}_{in}(e)
+>0.2803910036960501-o(1).
+}
+\tag{IN.7}
+
+The inner endpoint of every edge in this cohort is at absolute local depth greater
+than `sqrt(3)/2` from its tooth-base support line.
+
+---
+
+## 2. Long-side branch: bridge-deduplicated nonbridge contacts
+
+Let `B_o` be the number of graph bridges whose two sides are incident to the outer
+face.  Full-core bounded-face area saturation and bridge-subtracted isoperimetry give
+
+\[
+\boxed{B_o\le d_{out}/2+o(D).}
+\tag{IN.8}
+
+For a direction threshold `beta`, the exact outer-route energy identity removes at
+most
+
+\[
+{d_{out}\over1-\cos\beta}
+\]
+
+bad occurrences.  Discard every occurrence carried by an outer bridge.  There are at
+most `2B_o<=d_out+o(D)` such occurrences, and every remaining outer occurrence is a
+distinct physical nonbridge edge.  Hence
+
+\[
+\boxed{
+E_{tan}^{nb}(\beta)
+\ge L_{>2}
+-\left({1\over1-\cos\beta}+1\right)d_{out}
+-o(D).
+}
+\tag{IN.9}
+
+Choose the tight direction window
+
+\[
+\beta=\pi/8.
+\]
+
+Then at the matched endpoint
+
+\[
+\boxed{
+{E_{tan}^{nb}(\pi/8)\over D}
+\ge0.3972287385779480\ldots-o(1).
+}
+\tag{IN.10}
+
+Each edge is a distinct nonbridge outer-face unit contact within `22.5` degrees of the
+corresponding loaded-hull side.  Because it is not a bridge, its other side is a
+bounded face.  Therefore every selected edge is physically one of:
+
+1. a boundary/terminal edge of a strict unit-rhombus train; or
+2. a boundary incidence of a bounded nonquadrilateral exceptional face.
+
+Using the looser `beta=pi/6` window raises the count to
+
+\[
+E_{tan}^{nb}(\pi/6)/D
+\ge0.4128813125653755\ldots-o(1).
+\tag{IN.11}
+
+---
+
+## 3. Unified source-level endpoint
+
+Every matched-gap low-`t` Type-II survivor therefore obeys
+
+\[
+\boxed{
+\begin{array}{ll}
+\text{either}&
+\ge0.3948477885D-o(D)
+\text{ distinct internal unloaded-to-unloaded penetration contacts},\\[1mm]
+\text{or}&
+\ge0.3972287385D-o(D)
+\text{ distinct nonbridge outer contacts within }22.5^\circ
+\text{ of local long-side tangents}.
+\end{array}
+}
+\tag{IN.12}
+
+In particular, regardless of branch,
+
+\[
+\boxed{0.3948477885D-o(D)}
+\]
+
+distinct actual unit-contact edges lie in one of two strongly localized source
+families.  This is essentially a factor-two improvement over the first `g=0.0050`
+physical propagation.
+
+The two families now land in ledgers with no occurrence ambiguity:
+
+- tooth edges are internal edges `e_r` of unloaded components and have a fixed-depth
+  endpoint;
+- long-side edges are nonbridge outer edges and split canonically into rhombic-train
+  terminals versus exceptional-face incidences.
+
+---
+
+## 4. Remaining obstruction
+
+The scarcity problem is no longer the issue.  Both branches force roughly `0.4D`
+**distinct** physical contacts.  What is still missing is a weight-free conversion of
+one of these populations into a strict source-level descent.
+
+The next useful targets are correspondingly specific:
+
+1. component capacity: bound how many fixed-depth internal penetration edges one
+   harmonic component can absorb per unit attachment/diameter currency;
+2. phase/interface capacity: charge the nonbridge near-tangent cohort to rhombic train
+   terminals or exceptional-face boundary incidences without losing a linear factor;
+3. simultaneous deformation: extract a linear independent subfamily whose contact
+   constraints can be preserved while every active diameter derivative is made
+   nonpositive.
+
+No positive KKT-weight floor is claimed.  C-II and Level I remain open.
+
+## 5. Scope audit
+
+- The internal-penetration theorem and its hostile audit use Type-II fixed-scale
+  near-disk flatness, C26, triangle-freeness, and harmonic trapping.
+- The bridge theorem uses full-core bounded-face area saturation; it is not a local
+  harmonic-cell assertion.
+- The `g=0.0050` atomic theorem and Section-171 propagation are independently audited.
+- All displayed populations count distinct physical contact edges, not route
+  occurrences.
+- Contact-isolated source points remain in the source.

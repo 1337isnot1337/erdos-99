@@ -1,0 +1,420 @@
+<!-- theorem-state: {"artifact_id":"ART-1BF092985DB5","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C-II — finite translation lenses localize upper blockers
+
+```text
+two old crossing diameters + an actual rigid owner-packet translation
+-> opposite cross-pair upper constraints are redundant, including strictness
+-> an upper blocker needs an endpoint without crossing-diameter exposure
+-> positive contact equilibrium confines that endpoint to an actual packet
+   anchor, with an additional cut-force normal restriction
+-> still required: exclude/handle internal-diameter anchors, interface anchors,
+   isolates and lower blockers, or construct a strict full-source competitor.
+```
+
+**Date:** 2026-10-02.  
+**Continuation starting HEAD:** `1f7cef86a0a9bf00232449285fdcb4ca63767e3a`.  
+**Inspected remote main:** `9b8edd43`; no authority-file changes from the run base.  
+**State version:** `2026-09-14.audit.51`.  
+**Branch:** `swarm/sol/diameter-rotation-cells-20261002`; PR #630.  
+**Classification:** proved candidates awaiting independent audit/promotion;
+artifact lifecycle **unreviewed**. The finite packets in §7 are **regressions**.  
+**Level I / C-II:** **OPEN**. No promotion or canonical-state change.  
+**Prompt:** [current Target C continuation](../prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md).  
+**External literature:** none.  
+**Certificate:** [exact verifier](../../research/verify_target_c_translation_lens_exposure_2026_10_02.py).
+
+## 1. Scope and dependencies
+
+L.1–L.3 are finite Euclidean statements for actual source positions and actual
+old diameter bars. The packets move rigidly by translations. Rotating a packet
+internally, changing owners at the endpoint, replacing points, or applying a
+virtual carrier map is outside these statements. All source points remain.
+
+L.4–L.5 use the positive actual contact multipliers in
+[Theory 01, Theorem 4.1](../theory/01-local-structure.md), with full-support
+normalization from [Target C §56](../targets/target-c/56-ci-restored-frontier.md).
+The required harmonic equation at unloaded points is rederived below. No
+full-source affine kernel, PSD, quantitative stress floor, or isolate bound is
+assumed. Contact isolates are explicitly included as possible anchors.
+
+The application to ONE-SIGN TB1 is conditional on the unpromoted
+[exact swap](target_c_tb1_exact_swap_fork_2026-10-01.md), whose actual rigid
+slab translation preserves contacts and strictly shortens every moving old
+diameter. This report adds an upper-witness restriction; it does not reclassify
+the swap or declare that extraction canonical. It also applies to the explicit
+endpoint maps in the preceding [rotation-wall report](target_c_finite_rotation_cell_barriers_2026-10-02.md)
+whenever the remaining coordinates amount to an actual packet translation.
+
+## 2. The exact double-lens inclusion
+
+### Lemma L.1 — translating two equal old diameter vectors
+
+Suppose `r_1,r_2` are vectors of length `D`. Write
+
+\[
+s=(r_1+r_2)/2,\quad w=(r_1-r_2)/2,
+\quad s\perp w,\quad |s|^2+|w|^2=D^2.
+\]
+
+Suppose a vector `z` satisfies `|s+z|,|s-z|<=D`. Then for every `p` with
+`|p+w|,|p-w|<=D`,
+
+\[
+\boxed{|p+z|,|p-z|\le D.}                                 \tag{L.1}
+\]
+
+If `s,w` are nonzero, `z!=w,-w`, and at least one of `|p+w|,|p-w|` is
+strictly below `D`, both conclusions are strict.
+
+**Proof.** Take orthogonal coordinates `s=(a,0)`, `w=(0,b)`, `a,b>0`.
+Put `x=|z_x|`, `y=|z_y|`. The hypothesis on `z` is exactly
+
+\[
+(a+x)^2+y^2\le D^2=a^2+b^2,
+\quad\text{so }0\le y\le b.                               \tag{L.2}
+\]
+
+For `t=|p_y|`, the hypothesis on `p` implies
+
+\[
+|p_x|\le\sqrt{D^2-(t+b)^2},\qquad 0\le t\le D-b.
+\]
+
+Consequently both squared distances in (L.1) are at most
+
+\[
+F(t)=\left(\sqrt{D^2-(t+b)^2}+x\right)^2+(t+y)^2.
+\]
+
+For `0<t<D-b`,
+
+\[
+F'(t)=2(y-b)-\frac{2x(t+b)}{\sqrt{D^2-(t+b)^2}}\le0.
+\]
+
+Continuity at the ends gives `F(t)<=F(0)=(a+x)^2+y^2<=D^2`, proving
+the inclusion. If `z!=w,-w`, (L.2) ensures either `x>0` or `y<b`, so
+`F(t)<F(0)` whenever `t>0`. If `t=0`, the two old lengths are equal;
+shortening either gives `|p_x|<a`, which makes the upper bound strict.
+
+If `b=0`, the hypotheses force `z=0`, and the claim is immediate. If `a=0`,
+the two old disks touch at `p=0`, and the claim follows from `|z|<=D`;
+strictness under a shortened old bar has no instance in this case. ∎
+
+### Geometric interpretation
+
+Let `A,C` be fixed source points and `B,E` points in one translated packet,
+with old diameters `AB,CE`. Set
+
+\[
+r_1=B-A,\quad r_2=E-C,\quad z=(A+B-C-E)/2.
+\]
+
+Then the other two cross vectors are `B-C=s+z` and `E-A=s-z`. After the
+packet translation by `Delta`, replace `s` by `p=s+Delta`, leaving `w,z`
+unchanged. The source upper bounds supply (L.2). Thus preserving the two
+old diameter upper bounds automatically preserves the two opposite cross
+upper bounds. This is exact for arbitrary translation size.
+
+For four distinct actual source points, `z!=w,-w`: either equality would
+identify `A,C` or `B,E`. Distinct actual diameter segments cannot be parallel;
+alternatively the degenerate cases in the proof suffice. Therefore shortening
+just one of the two old diameters makes both opposite cross pairs strict.
+
+## 3. Actual diameter exposure at a cut
+
+Partition an actual diameter-`D` source into nonempty packets `S,T`. Translate
+all of `S` by `Delta`, leaving `T` fixed. Write `H_ST` for the old actual
+diameters crossing this partition and define
+
+\[
+E_S=\{x\in S:x\text{ is incident with }H_{ST}\},\qquad
+E_T=\{y\in T:y\text{ is incident with }H_{ST}\}.
+\]
+
+### Theorem L.2 — complete cross-upper protection on exposed endpoints
+
+If every edge of `H_ST` remains at most `D`, every pair in `E_S x E_T`
+remains at most `D`. Moreover, a *previously strict* pair `xy` in that product
+remains strictly below `D` if either endpoint has any incident edge of `H_ST`
+that strictly shortens.
+
+**Proof.** If `xy` itself was an old diameter, the first assertion is a
+hypothesis. Otherwise choose crossing diameters `xf` and `my`, with
+`f in T`, `m in S`. They are vertex-disjoint: a shared fixed endpoint would
+be `f=y`, or a shared moving endpoint `m=x`, making `xy` an old diameter.
+Apply L.1 to those two edges and their opposite cross pair `xy`.
+
+For the second assertion choose the shortening incident edge at the specified
+endpoint. L.1's strictness applies. ∎
+
+In particular, if all moving old diameters strictly shorten, **no inactive
+upper blocker or newly created diameter can join two exposed endpoints**.
+This removes those pairs from the ONE-SIGN upper-witness search. It does not
+say every actual loaded point is exposed: its old diameter may have both
+ends in one packet.
+
+The same theorem applies to any two owner packets in a simultaneous family
+of rigid translations, using their relative translation. It does not resolve
+lower pure joint conflicts or identify different packet pairs' exposures.
+
+### Corollary L.3 — exposure coverage removes the upper half of the fork
+
+Suppose
+
+\[
+\operatorname{conv}S=\operatorname{conv}E_S,\qquad
+\operatorname{conv}T=\operatorname{conv}E_T.                 \tag{L.3}
+\]
+
+If all old crossing diameters strictly shorten, every new cross distance is
+strictly below `D`; internal packet distances are unchanged.
+
+For a canonical contact-minimal, then diameter-pair-minimal triangle-free
+global source, suppose this translation also preserves every old unit contact.
+Then some previously strict lower pair must end at distance at most one.
+
+**Proof.** By L.2 every exposed cross pair is strict, including old crossing
+diameters by hypothesis. The finite exposed product has maximum `d_*<D`.
+Any two points in the packet hulls are convex combinations of those endpoints;
+the triangle inequality bounds their cross distance by `d_*`. All points are
+retained, including isolates, so this is a full-source upper bound.
+
+If every old noncontact also remains strictly greater than one, the new source
+is feasible and has exactly the old contact graph, hence remains triangle-free.
+If its diameter falls below `D`, global optimality fails. Otherwise its old
+internal diameter pairs remain and all old crossing pairs disappear, with no
+new cross diameters: secondary minimality fails. ∎
+
+The hull equalities are an actual source hypothesis, not an inference from
+gap-graph rank, loaded incidence, or a virtual chart.
+
+## 4. Positive equilibrium reduces uncovered points to physical anchors
+
+Let `B` be the set of old actual diameter endpoints, and `Z` the actual
+contact-isolated points. Suppose every old contact has a positive multiplier,
+and every point outside `B` satisfies the unloaded equilibrium equation
+
+\[
+\sum_{y:xy\in C}\alpha_{xy}(p_x-p_y)=0.                   \tag{L.4}
+\]
+
+Canonical full-support KKT supplies exactly this equation; no stress equation
+is applied to the isolate coordinates.
+
+For a packet `S`, let `A_S` be its vertices incident to a unit contact crossing
+the packet boundary, and put
+
+\[
+Q_S=(B\cap S)\cup A_S\cup(Z\cap S).
+\]
+
+### Theorem L.4 — packet hull anchors and cut-force normal restriction
+
+Every vertex of `conv(S)` belongs to `Q_S`; in particular
+`conv(S)=conv(Q_S)`. For an unloaded, nonisolated packet point define its
+old boundary contact force
+
+\[
+g_x=\sum_{y\notin S:\,xy\in C}\alpha_{xy}(p_x-p_y).
+\]
+
+Every outward support normal `n` of that point in `conv(S)` obeys
+
+\[
+\boxed{n\cdot g_x\le0.}                                  \tag{L.5}
+\]
+
+This restriction is preserved under the rigid packet translation: the packet
+normal cone and all internal difference vectors are unchanged.
+
+**Proof.** An unloaded nonisolated point with no crossing contact has all its
+neighbors in `S`. Equation (L.4) expresses it as a positive convex combination
+of those other source points, so it cannot be a vertex of `conv(S)`. A single
+neighbor would force coincident source points, also impossible. This proves
+the anchor statement, while isolates have explicitly been included.
+
+At any packet support normal `n`, each internal contact has
+`n dot (p_x-p_y)>=0`. Equation (L.4) gives
+`n dot g_x=-sum_internal alpha n dot (p_x-p_y)<=0`. Those internal vectors
+do not change under the translation, proving the last assertion. ∎
+
+### Source-level upper-witness restriction
+
+Put `U_S=Q_S\E_S`, `U_T=Q_T\E_T`. If all old crossing diameters remain at
+most `D`, any upper violation has a witnessing pair of actual packet-hull
+vertices, and at least one of its endpoints belongs to `U_S` or `U_T`.
+If all crossing diameters strictly shorten and the endpoint has no upper
+violation, every *new* diameter pair has such an uncovered anchor endpoint.
+
+For a violation, maximize the convex distance function on the two packet
+hulls, successively choosing vertices. L.2 excludes an exposed/exposed pair.
+For a new diameter in an upper-feasible endpoint, both endpoints are unique
+support points in its diameter direction: the ordinary squared-distance
+inequality makes this strict at every other source point. They are therefore
+actual packet-hull vertices and belong to `Q`; L.2 gives the restriction.
+
+The uncovered anchors consist exactly of possible:
+
+- old diameter endpoints whose incident diameters stay inside their packet;
+- unloaded actual cut-contact endpoints, subject to (L.5);
+- actual contact isolates.
+
+The last class is never deleted or bounded without another theorem.
+
+## 5. Forward upper witnesses at a single exact-phase cut
+
+Suppose all contacts across `S,T` have vector `u` from `T` into `S`.
+At an unloaded cut vertex in `S`, `g_x` is a strictly positive multiple of `u`.
+In `T` it is a strictly negative multiple. Thus (L.5) implies:
+
+- an unloaded `S` cut vertex can support an upper pair vector `r` from `T`
+  to `S` only if `r dot u<=0`;
+- an unloaded `T` cut vertex obeys the same restriction, because its outward
+  normal is `-r` and its boundary force points along `-u`.
+
+Consequently, a maximizing upper witness with `r dot u>0` has both endpoints
+in `B union Z`. If isolates are absent, both are actual loaded points. Combined
+with L.2, at least one must have an internal old diameter anchor instead of
+crossing-diameter exposure.
+
+This statement concerns the **new** pair direction, because packet normals
+are taken at the translated endpoint. It does not silently apply this
+one-vector cut argument to both boundaries of a nonconstant-phase slab;
+there one must retain the actual force sum `g_x` in (L.5).
+
+This is the first attempted repair of (L.3): positive equilibrium removes
+generic unloaded interior points and restricts unloaded interface points.
+It still leaves internal-diameter anchors and isolates, as well as backward
+upper directions. Neither full positive contact support nor a large source
+population supplies (L.3) by itself in the present proof.
+
+## 6. Exact remaining implication
+
+The new source-level fork is
+
+```text
+old contacts preserved + all moving old diameters strictly shorten
+-> lower blocker, or an upper witness with an uncovered packet anchor
+-> uncovered anchor is internal-diameter loaded / cut-contact / isolate,
+   with the cut-force normal restriction at an unloaded cut point.
+```
+
+For a single exact-phase cut, a forward upper witness further reduces to an
+internal-diameter loaded anchor or isolate. A closing theorem must now prove
+actual exposure coverage, eliminate those surviving anchor cases using the
+transverse source shore, or handle the lower blockers in a full source move.
+The uncovered anchors cannot be replaced by extra active rows. Splits outside
+the stated cut, inactive interfaces, nonconstant-phase owner interactions,
+higher-surplus full core, and macroscopic-container/exterior-cap branches
+remain open. No Level I quantifier is weakened.
+
+## 7. Regressions and exact computation
+
+### 7.1 Unit-cut geometry alone does not provide coverage
+
+The following adds an actual upper blocker to the preceding rational rotation
+packet. For large integers `N`, use
+
+\[
+t=1/(2N-1),\quad c=(1-t^2)/(1+t^2),\quad s=2t/(1+t^2),
+\quad b_\pm=(Nc,\pm Ns).
+\]
+
+Take the `N+7` source points
+
+\[
+\{ku:0\le k\le N\}\cup\{b_+,b_-,b_+-u,b_--u,z,z-u\},
+\quad u=(1,0),\quad
+z=\left(\tfrac35\rho,\tfrac45\rho\right),\quad
+\rho=N-\tfrac1{2N}.
+\]
+
+Move precisely `Nu,b_+,b_-,z`. Put
+
+\[
+q=(1+1/N)\frac{Ns}{Nc-1},\quad
+v=\left(\frac{1-q^2}{1+q^2},\frac{2q}{1+q^2}\right),
+\quad\Delta=v-u.
+\]
+
+Every old cut contact has vector `u` and ends with vector `v`. Every old
+contact is preserved; the entire endpoint is still triangle-free and unit-
+separated. All three old diameters strictly shorten. The only upper violation
+is the previously strict pair `0--z`, whose moving endpoint has no old
+diameter incidence but does have a unit contact. Thus merely retaining all
+nonisolated source points or preserving the exact unit cut is insufficient.
+
+**Eventual-family proof.** The base end cluster has the same strict limiting
+lower margins as the preceding report's packet; the changed half-angle is
+only a factor `1+1/N` larger. Every new pair involving the `z` dimer and the
+old cluster/chain has distance of order `N`, except its own preserved unit
+contact. The dimer's distances to the old right cluster have squared leading
+coefficient `4/5<1`, hence preserve the upper bound. Their distances to the
+chain have maxima at its ends; at `0`, `|z|=rho<N`, while `|z-u|` has a
+linear squared upper margin. At the other chain end the leading coefficient
+is again `4/5`. This checks old feasibility and all unchanged pairs.
+
+At the endpoint `N Delta_y->2` and `N^2 Delta_x->-2`. Therefore
+
+\[
+|z+\Delta|^2-N^2\longrightarrow-1+16/5=11/5>0.
+\]
+
+For chain points `ku`, `k>=1`, squared distances from `z+Delta` decrease
+by `2k(z+Delta)_x-k^2`; convexity and the leading endpoint margins check
+every such upper pair. The three old diameters shorten by the exact angular
+wall calculation. Thus only `0--z` violates the upper bound for sufficiently
+large `N`. All four cut contacts remain exactly unit and all other lower
+constraints keep their strict margins.
+
+This is **nonglobal**: an `N+7` point unit square grid has diameter `O(sqrt(N))`.
+It also fails full positive KKT. The unloaded point `z` has one contact,
+so its multiplier must vanish. It is not an actual complete O--O train
+extraction. The example therefore rejects the weaker finite coverage claim;
+it does not refute the positive-equilibrium anchor theorem or a canonical
+source theorem. The uncovered endpoint is explicitly retained.
+
+### 7.2 Upper feasibility does not give lower feasibility
+
+The four points `(0,0),(0,1),(4,0),(4,1)` have diameter `sqrt(17)` and two
+unit dimers. Translating the right dimer by `(-4,0)` preserves every old
+contact and strictly shortens both old diameters; all upper constraints hold.
+It creates two collisions. This rejects an unconditional strict-competitor
+claim from L.1–L.3 without the lower-pair audit.
+
+### 7.3 Certificate
+
+Run:
+
+```text
+python3 research/verify_target_c_translation_lens_exposure_2026_10_02.py
+```
+
+Exact `Fraction` arithmetic checks **105** actual four-point diameter-5
+sources against **93** rational lens endpoints: **19,530** opposite cross
+upper checks and **19,110** strictness checks when an old bar shortens.
+It does not assert lower feasibility for every sampled translation.
+
+Five uncovered-upper packets `N=16,32,64,128,256` pass **93,954** old/new
+pair checks and **20** exact preserved cut-contact checks, with precisely
+the stated sole upper violation and every old diameter shortened. The exact
+lower-collision packet is also checked. Finite checks certify those packets;
+the general lens/anchor theorems and eventual-family claims have the proofs
+above. No full positive KKT, PSD, actual linear complete shore, or global
+optimality certificate is encoded in these regressions.
+
+## 8. Classification and promotion
+
+| Claim | Classification | Scope |
+| --- | --- | --- |
+| L.1 finite lens inclusion and strictness | proved candidate awaiting promotion | exact Euclidean vectors/actual equal diameter bars |
+| L.2 crossing-endpoint protection | proved candidate awaiting promotion | actual rigid packet translations |
+| L.3 lower-only fork with exposure coverage | conditional application of proved finite result | actual hull coverage and every lower pair retained |
+| L.4 anchor/normal restriction | proved candidate awaiting promotion | positive actual contact equilibrium; isolates explicitly included |
+| §5 forward witness classification | proved candidate awaiting promotion | one-vector exact-phase cut only |
+| every unit cut has exposure coverage | rejected weaker assertion / regression | uncovered nonisolated point in §7.1 |
+| upper feasibility is a strict source competitor | rejected inference / regression | lower collisions in §7.2 |
+
+Promotion recommendation: **unreviewed**, pending independent audit. No
+canonical state, lifecycle entry, active prompt, or theorem graph is changed.

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "inputs": [
+    "research-packages/ci-protocol-example/verify.py"
+  ],
+  "environment": {
+    "python": "3.14",
+    "dependencies": []
+  },
+  "commands": [
+    {
+      "argv": [
+        "{python}",
+        "research-packages/ci-protocol-example/verify.py"
+      ],
+      "timeout_seconds": 10
+    }
+  ],
+  "domain": "all 289 ordered integer pairs in [-8,8] x [-8,8]"
+}

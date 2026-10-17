@@ -1,0 +1,434 @@
+# Target C-II — teeth versus double-unit loaded corners
+
+**Date:** 2026-09-14  
+**Status:** proof-only geometric consequence; theorem-state authority unchanged  
+**Scope:** canonical full-core near-disk Type-II branch; low-`t` constants additionally use the proof-only minimax atomic gap `0.0021` / §171  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The outer-tooth / long-side dichotomy can be strengthened to a split involving only
+actual local source geometry.  Large metric long-side mass forces compensating
+sub-two side deficit.  Small outer detour prevents that deficit from hiding on
+nonunit sides, so it must reappear as exact unit loaded-hull sides.  Counting adjacent
+pairs of those unit sides produces linearly many double-unit loaded corners.
+
+The final exact inequality is
+
+\[
+\boxed{
+N_2+C_{11}\ge 2q-P_F-3d_{out},
+}
+\tag{DC.1}
+\]
+
+where
+
+- `N_2` is the number of genuine two-edge outer teeth;
+- `C_11` is the number of loaded force-hull vertices whose two adjacent hull sides
+  both have length exactly one;
+- `q` is the number of loaded hull vertices;
+- `P_F=per(F)`; and
+- `d_out=b-P_F` is the metric outer detour.
+
+Thus the low-`t` branch must contain either a macroscopic tooth population or a
+macroscopic population of exact double-unit loaded corners.  The latter corners have
+a further local rigidity property: except at at most six high-turn corners, a
+third contact, if present, is a distinct loaded-to-unloaded unit edge with inward
+component greater than `sqrt(3)/2`; if it is absent, the corner contributes one full
+unit of loaded contact-degree slack.
+
+## 1. Positive and negative side-length excess
+
+List the `q` consecutive loaded force-hull side lengths as
+
+\[
+s_1,\ldots,s_q,\qquad s_i\ge1.
+\]
+
+Put
+
+\[
+L_{>2}:=\sum_i(s_i-2)_+,
+\qquad
+D_{<2}:=\sum_i(2-s_i)_+.
+\tag{DC.2}
+\]
+
+Since
+
+\[
+\sum_i(s_i-2)=P_F-2q,
+\]
+
+we have the exact identity
+
+\[
+\boxed{
+D_{<2}=L_{>2}+2q-P_F.
+}
+\tag{DC.3}
+\]
+
+Let
+
+\[
+U_1:=\#\{i:s_i=1\}.
+\]
+
+Then
+
+\[
+D_{<2}
+=U_1+\sum_{1<s_i<2}(2-s_i).
+\tag{DC.4}
+\]
+
+For every nonunit side with `1<s_i<2`, the distinguished outer route has integer
+length `ell_i>=2`, so
+
+\[
+2-s_i\le\ell_i-s_i.
+\]
+
+The outer routes partition the occurrence-counted old outer walk and
+
+\[
+\sum_i(\ell_i-s_i)=d_{out}.
+\]
+
+Therefore
+
+\[
+\sum_{1<s_i<2}(2-s_i)\le d_{out}.
+\tag{DC.5}
+\]
+
+Equations (DC.3)--(DC.5) give
+
+\[
+\boxed{
+U_1\ge L_{>2}+2q-P_F-d_{out}.
+}
+\tag{DC.6}
+\]
+
+This is a finite statement.  No asymptotic rounding argument is needed.
+
+## 2. Unit sides force double-unit corners
+
+Mark each of the `q` hull sides as unit or nonunit.  A loaded hull vertex fails to
+have two adjacent unit sides only if one of its two incident hull sides is nonunit.
+There are `q-U_1` nonunit sides, and each can spoil at most two vertices.  Hence
+
+\[
+\boxed{
+C_{11}\ge q-2(q-U_1)=2U_1-q.
+}
+\tag{DC.7}
+\]
+
+Combining with (DC.6),
+
+\[
+\boxed{
+C_{11}\ge2L_{>2}+3q-2P_F-2d_{out}.
+}
+\tag{DC.8}
+\]
+
+The preceding exact tooth/long-side theorem gives
+
+\[
+N_2+2L_{>2}\ge x_B-2d_{out},
+\tag{DC.9}
+\]
+
+where
+
+\[
+x_B=b-q=P_F+d_{out}-q.
+\tag{DC.10}
+\]
+
+Add (DC.8) and (DC.9).  The long-side currency cancels:
+
+\[
+\begin{aligned}
+N_2+C_{11}
+&\ge x_B-2d_{out}+3q-2P_F-2d_{out}\\
+&=2q-P_F-3d_{out}.
+\end{aligned}
+\]
+
+This proves (DC.1).
+
+The significance is that both terms on the left count finite, actual source
+configurations.  `L_{>2}` has disappeared.
+
+## 3. Low-`t` normalized form
+
+On a convergent Type-II subsequence write
+
+\[
+t={q-k\over D},\qquad
+\kappa={k\over D},\qquad
+\delta={d_{out}\over D}.
+\]
+
+Type II gives
+
+\[
+{q\over D}=t+\kappa,
+\qquad
+{P_F\over D}\to\pi.
+\]
+
+Thus (DC.1) yields
+
+\[
+\liminf {N_2+C_{11}\over D}
+\ge 2t+2\kappa-\pi-3\delta.
+\tag{DC.11}
+\]
+
+The proof-only minimax atomic-gap theorem and audited §171 low-`t` squeeze give
+
+\[
+2\delta+{\kappa\over2}\le R(t),
+\qquad
+R(t):={9t\over2}-2\pi-C_0,
+\tag{DC.12}
+\]
+
+with
+
+\[
+C_0=2\sqrt{\Delta_2}+0.0021,
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\]
+
+At fixed `t`, the minimum of `2 kappa-3 delta` under (DC.12) occurs at
+`kappa=0`, `delta=R(t)/2`.  Therefore
+
+\[
+\boxed{
+\liminf {N_2+C_{11}\over D}
+\ge G_{11}(t)
+:=2t-\pi-{3\over2}R(t).
+}
+\tag{DC.13}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+G_{11}(t)=2\pi+{3\over2}C_0-{19\over4}t.
+}
+\tag{DC.14}
+\]
+
+Consequently
+
+\[
+\boxed{
+\liminf {1\over D}\max\{N_2,C_{11}\}
+\ge {G_{11}(t)\over2}.
+}
+\tag{DC.15}
+\]
+
+At the current proof-only floor
+
+\[
+t_{21}={4\over9}\left(\pi+\sqrt{\Delta_2}\right)+0.0017279
+=1.82124143797944\ldots,
+\]
+
+one has
+
+\[
+G_{11}(t_{21})\approx0.4923768973,
+\]
+
+and therefore
+
+\[
+\boxed{
+\max\{N_2,C_{11}\}
+\ge0.2461884486\,D-o(D).
+}
+\tag{DC.16}
+\]
+
+The decimal is only an orientation value; (DC.13)--(DC.15) are the theorem.
+
+## 4. Geometry of a double-unit loaded corner
+
+Let `A,B,C` be consecutive loaded force-hull vertices with
+
+\[
+|A-B|=|B-C|=1.
+\]
+
+Let `phi in(0,pi)` be the exterior turn at `B`, so the hull interior angle is
+`pi-phi`.
+
+The total exterior turn of the convex force hull is `2pi`.  Hence at most six loaded
+hull vertices can have
+
+\[
+\phi\ge\pi/3.
+\tag{DC.17}
+\]
+
+Fix a double-unit corner with `phi<pi/3`.  Loaded contact degree is at most three.
+Since `BA` and `BC` are already contacts, `B` has contact degree either two or three.
+
+### Degree two
+
+If `deg_C(B)=2`, then `B` contributes exactly one to
+
+\[
+s_B:=\sum_{b\in B}(3-\deg_Cb).
+\tag{DC.18}
+\]
+
+### Degree three
+
+Suppose `deg_C(B)=3` and let `W` be the third contact neighbor.
+
+Canonical full-core loaded-chord elimination says every loaded-loaded unit contact is a
+loaded hull side.  Since the only hull-side neighbors of `B` are `A,C`, the third
+neighbor `W` is unloaded.
+
+All positive-core vertices lie in `F`, so the ray `BW` lies inside the hull interior
+cone between `BA` and `BC`.  Unit separation and triangle-freeness give
+
+\[
+\angle ABW>\pi/3,
+\qquad
+\angle WBC>\pi/3;
+\tag{DC.19}
+\]
+
+equality in either would make a unit equilateral triangle with `B`.
+
+Let `n_B` be the unit vector along the inward angle bisector of the hull interior cone
+at `B`.  The cone has width `pi-phi`; after deleting angular margins `pi/3` from both
+boundary rays, the possible third-contact directions lie within angular distance
+
+\[
+{\pi-\phi\over2}-{\pi\over3}
+={\pi\over6}-{\phi\over2}
+\]
+
+of `n_B`.  Therefore
+
+\[
+\boxed{
+(W-B)\cdot n_B
+>\cos\left({\pi\over6}-{\phi\over2}\right)
+\ge {\sqrt3\over2}.
+}
+\tag{DC.20}
+\]
+
+Thus a degree-three double-unit corner supplies a strongly inward, loaded-to-unloaded
+unit contact.
+
+## 5. Distinct inward-contact count
+
+Let `E_in` be the set obtained by taking the unique third contact from every
+`C_11` corner with exterior turn below `pi/3` and contact degree three.
+
+The edges are distinct.  Their loaded endpoints `B` are distinct, and loaded-chord
+elimination ensures the other endpoints are unloaded.
+
+At most six double-unit corners are excluded by (DC.17).  Every remaining degree-two
+corner contributes one to `s_B`.  Therefore
+
+\[
+\boxed{
+s_B+|E_{in}|\ge C_{11}-6.
+}
+\tag{DC.21}
+\]
+
+Combining with (DC.1) gives a fully physical three-currency burden:
+
+\[
+\boxed{
+N_2+s_B+|E_{in}|
+\ge2q-P_F-3d_{out}-6.
+}
+\tag{DC.22}
+\]
+
+Every edge counted by `E_in` has the strong inward component (DC.20).
+
+In the low-`t` regime,
+
+\[
+\boxed{
+\liminf {1\over D}\max\{N_2,s_B,|E_{in}|\}
+\ge {G_{11}(t)\over3}.
+}
+\tag{DC.23}
+\]
+
+At `t=t_21`, the right side is approximately
+
+\[
+0.1641256324.
+\tag{DC.24}
+\]
+
+So the current floor cannot hide simultaneously from all three actual structures:
+outer teeth, loaded degree deficiency, and strongly inward loaded-to-unloaded contacts.
+
+## 6. Optional conversion of the tooth currency
+
+The shallow-tooth penetration theorem gives, for every fixed
+
+\[
+0<\eta<2(1-\cos(\pi/12)),
+\]
+
+\[
+E_{pen}(\eta)
+\ge {1\over4}\left(N_2-{d_{out}\over\eta}\right).
+\tag{DC.25}
+\]
+
+Using (DC.22), this implies
+
+\[
+\boxed{
+4E_{pen}(\eta)+s_B+|E_{in}|
+\ge2q-P_F-3d_{out}-{d_{out}\over\eta}-6.
+}
+\tag{DC.26}
+\]
+
+At the current floor, `delta<=0.002837775+o(1)`.  Taking `eta=0.06` gives a positive
+linear lower bound on the maximum of the three contact/curvature currencies on the
+left.  No numerical value is needed for the theorem.
+
+## 7. Scope audit
+
+- The derivation of (DC.1) is finite and occurrence-safe.  It uses the physical hull
+  side lengths and the distinguished outer routes, not a simple-boundary assumption.
+- `C_11` counts exact unit hull sides on both sides of the corner; no near-unit side is
+  treated as a contact.
+- The third-contact direction lemma uses only convexity, unit separation,
+  triangle-freeness, the loaded degree cap, and canonical loaded-chord elimination.
+- At most six corners are discarded by the exact total-turn budget.
+- Contact-isolated source points remain in the source.  They play no role in the
+  positive-core degree statement.
+- The low-`t` constants inherit the proof-only minimax-atomic-gap lifecycle.
+- No KKT multiplier floor is used.
+- No exact unit equilateral triangle or strict same-cardinality sub-`D` source has been
+  produced.
+
+**Disposition:** proof-only structural theorem.  C-II and Level I remain open.

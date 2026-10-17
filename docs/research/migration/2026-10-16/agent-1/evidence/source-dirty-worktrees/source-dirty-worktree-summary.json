@@ -1,0 +1,14 @@
+{
+  "agent1_actual_hash_mismatches": 0,
+  "agent1_inaccessible_path_rows": 0,
+  "agent1_recoverable_snapshot_copies": 10,
+  "assigned_path_rows_by_agent": {
+    "1": 10,
+    "2": 11,
+    "3": 9
+  },
+  "frozen_snapshot_rows": 32,
+  "path_addressable_rows": 30,
+  "registered_missing_path_blockers": 2,
+  "unresolved_missing_path_blockers": 2
+}

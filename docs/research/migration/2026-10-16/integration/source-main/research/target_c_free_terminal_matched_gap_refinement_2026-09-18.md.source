@@ -1,0 +1,644 @@
+# Target C - matched all-train gap strengthens the terminal FREE package
+
+**Date:** 2026-09-18  
+**Status:** proof-only refinement; theorem-state authority unchanged  
+**Scope:** full-core Type-II terminal FREE survivor sequences with `pi D-q=o(D)`  
+**New input:** scope-safe matched all-train gap `g=0.007707`  
+**Refines:** the 2026-09-18 terminal train/face bridge, rhombus-deficit floor, and chamber-interface floor  
+**Certificate:** `research/verify_target_c_free_terminal_matched_gap_refinement_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The terminal FREE chain written earlier today used the audited-working all-defect gap
+
+\[
+{2f-k\over D}\ge
+\gamma-o(1),
+\qquad
+\gamma:=2s_2-\frac\pi2,
+\qquad
+s_2:=\sqrt{\frac\pi{2\sqrt3}}.
+\]
+
+The current research stack has a stronger scope-safe matched all-train theorem:
+
+\[
+\boxed{
+\liminf {T-q/2\over D}\ge 2s_2+g,
+\qquad g=0.007707.
+}
+\tag{MG.1}
+\]
+
+On the terminal face this improves the all-defect gap by exactly `g`. Propagating that
+small atomic gain through the exact terminal ledgers improves all three current FREE
+outputs simultaneously.
+
+The strengthened constants are:
+
+\[
+\boxed{
+ t_D+{2\over5}{Z_{ext}\over D}
+ \ge
+ 2.153262849540479\ldots-o(1),
+}
+\tag{MG.2}
+\]
+
+\[
+\boxed{
+ \Delta_2D^2-R_4
+ \ge
+ (1.247399568236749\ldots-o(1))D
+ +{4\over5}Z_{ext},
+}
+\tag{MG.3}
+\]
+
+\[
+\boxed{
+ (\Delta_2D^2-R_4)+{4\over5}(b-\operatorname{per}F)
+ \ge
+ (1.647399568236749\ldots-o(1))D,
+}
+\tag{MG.4}
+\]
+
+and, for the canonical raw inactive-chamber interface
+
+\[
+\mathcal H_D:=(b-\operatorname{per}F)+(Q+2f),
+\]
+
+\[
+\boxed{
+\liminf {\mathcal H_D\over D}
+\ge2.294799136473498\ldots .
+}
+\tag{MG.5}
+\]
+
+Hence
+
+\[
+\boxed{
+\liminf {A_{ch}-a_0Z_{ch}\over D}
+\ge0.993677174384321\ldots,
+\qquad a_0={\sqrt3\over2}.
+}
+\tag{MG.6}
+\]
+
+The classwise terminal split also strengthens to
+
+\[
+\boxed{
+\max\{Q+2f,\ b-\operatorname{per}F\}
+\ge(1.434249460295936\ldots-o(1))D,
+}
+\tag{MG.7}
+\]
+
+so one chamber class alone has Oler-weighted surplus at least
+
+\[
+\boxed{
+(0.621048233990201\ldots-o(1))D.
+}
+\tag{MG.8}
+\]
+
+No claim in this note is canonicalized. The matched `g=0.007707` theorem itself is
+proof-only, although its scope has already been hostile-audited and is used by other
+current high-`t` notes.
+
+---
+
+## 1. Terminal conversion of the matched all-train theorem
+
+Use the exact stopped-train identity
+
+\[
+T-q=2f-k.
+\tag{MG.9}
+\]
+
+Then
+
+\[
+{T-q/2\over D}
+={2f-k\over D}+{q\over2D}.
+\]
+
+Terminality gives `q/D->pi`, so (MG.1) implies
+
+\[
+\boxed{
+{2f-k\over D}
+\ge \gamma_g-o(1),
+\qquad
+\gamma_g:=\gamma+g.
+}
+\tag{MG.10}
+\]
+
+Numerically,
+
+\[
+\gamma_g=0.341536286933018\ldots .
+\tag{MG.11}
+\]
+
+This is the only new input. Everything below is an exact re-propagation through the
+already established terminal ledgers.
+
+---
+
+## 2. Strengthened FREE train/face bridge
+
+The finite FREE-to-train/face bridge is unchanged:
+
+\[
+2t_D+z_D
+\ge\pi+\phi_D+{1\over2}-o(1),
+\tag{MG.12}
+\]
+
+where
+
+\[
+t_D={q-k\over D},
+\qquad
+z_D={Z_{ext}\over D},
+\qquad
+\phi_D={Q\over D}.
+\]
+
+Since `Q>=f`, (MG.10) and terminality imply
+
+\[
+\phi_D
+\ge{\pi-t_D+\gamma_g\over2}-o(1).
+\tag{MG.13}
+\]
+
+Substitution into (MG.12) gives
+
+\[
+5t_D+2z_D
+\ge3\pi+1+\gamma_g-o(1).
+\tag{MG.14}
+\]
+
+Therefore
+
+\[
+\boxed{
+ t_D+{2\over5}z_D
+ \ge C_{FREE,g}-o(1),
+}
+\tag{MG.15}
+\]
+
+with
+
+\[
+\begin{aligned}
+C_{FREE,g}
+&={\pi\over2}+{1\over5}+{2s_2\over5}+{g\over5}\\
+&=2.153262849540479\ldots .
+\end{aligned}
+\tag{MG.16}
+\]
+
+Thus the previous constant `2.151721449540479...` increases by exactly
+
+\[
+{g\over5}=0.0015414.
+\]
+
+The exterior-population price becomes
+
+\[
+\boxed{
+ z_D\ge {3\pi+1+\gamma_g-5t_D\over2}-o(1).
+}
+\tag{MG.17}
+\]
+
+For reference,
+
+\[
+\begin{array}{c|c}
+T & t_D\le T\ \Longrightarrow\ \liminf Z_{ext}/D\\ \hline
+1.8440 & 0.773157123851198\ldots\\
+1.8600 & 0.733157123851198\ldots\\
+1.8687 & 0.711407123851198\ldots\\
+2.0000 & 0.383157123851198\ldots
+\end{array}
+\tag{MG.18}
+\]
+
+At `z_D=o(1)` the new floor is
+
+\[
+\boxed{
+\liminf t_D\ge2.153262849540479\ldots .
+}
+\tag{MG.19}
+\]
+
+At the relaxed scalar endpoint, `lambda_D=(b-per(F))` still satisfies
+
+\[
+{\lambda_D\over D}={1\over2},
+\]
+
+while
+
+\[
+{f\over D}={Q\over D}
+=0.664933045491166\ldots .
+\]
+
+---
+
+## 3. Strengthened rhombus-count deficit
+
+Let
+
+\[
+\mathcal D_4:=\Delta_2D^2-R_4,
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\]
+
+The exact full-source Oler bridge remains
+
+\[
+\mathcal D_4
+\ge(q-k)+f+Z_{ch}+Z_{ext}-{\pi\over2}D.
+\tag{MG.20}
+\]
+
+Drop `Z_ch`, use (MG.10), and normalize:
+
+\[
+{\mathcal D_4\over D}
+\ge {t_D\over2}+z_D+{\gamma_g\over2}-o(1).
+\tag{MG.21}
+\]
+
+Rewrite the right side as
+
+\[
+{1\over2}\left(t_D+{2\over5}z_D\right)
++{4\over5}z_D+{\gamma_g\over2}.
+\]
+
+Using (MG.15),
+
+\[
+\boxed{
+{\mathcal D_4\over D}
+\ge B_g+{4\over5}z_D-o(1),
+}
+\tag{MG.22}
+\]
+
+where
+
+\[
+\begin{aligned}
+B_g
+&={C_{FREE,g}+\gamma_g\over2}\\
+&={1\over10}+{6s_2\over5}+{3g\over5}\\
+&=1.247399568236749\ldots .
+\end{aligned}
+\tag{MG.23}
+\]
+
+This proves (MG.3). The previous baseline `1.242775368236749...` increases by
+`3g/5=0.0046242`.
+
+The terminal FREE metric recipient law
+
+\[
+\lambda_D+Z_{ext}\ge{D\over2}-o(D)
+\tag{MG.24}
+\]
+
+then gives
+
+\[
+\boxed{
+\mathcal D_4+{4\over5}\lambda_D
+\ge(W_g-o(1))D,
+}
+\tag{MG.25}
+\]
+
+where
+
+\[
+W_g=B_g+{2\over5}
+=1.647399568236749\ldots .
+\tag{MG.26}
+\]
+
+Consequently
+
+\[
+\boxed{
+\max\{\mathcal D_4,\lambda_D\}
+\ge(0.915221982353749\ldots-o(1))D.
+}
+\tag{MG.27}
+\]
+
+Indeed, if both were below `xD`, then the left side of (MG.25) would be below
+`(9/5)xD`.
+
+The geometric form of (MG.22), using
+
+\[
+a_0\mathcal D_4=\delta_F+A_{ch}+E_4,
+\]
+
+is
+
+\[
+\boxed{
+\delta_F+A_{ch}+E_4
+\ge(1.080279714762765\ldots-o(1))D
++{2\sqrt3\over5}Z_{ext}.
+}
+\tag{MG.28}
+\]
+
+The weighted version is
+
+\[
+\boxed{
+\delta_F+A_{ch}+E_4
++{2\sqrt3\over5}\lambda_D
+\ge(1.426689876276540\ldots-o(1))D.
+}
+\tag{MG.29}
+\]
+
+Inside the old high-`t` window the stronger exterior price and stronger baseline add
+exactly `g` to the old rhombus-deficit table. For example,
+
+\[
+t_D\le1.8687
+\Longrightarrow
+{\mathcal D_4\over D}
+\ge1.816525267317708\ldots-o(1).
+\tag{MG.30}
+\]
+
+---
+
+## 4. Strengthened terminal chamber-interface floor
+
+The exact terminal identities are
+
+\[
+Q+\lambda_D=2(q-k)-\operatorname{per}(F),
+\tag{MG.31}
+\]
+
+and, because `q<=per(F)<=pi D` on the terminal face,
+
+\[
+{\operatorname{per}(F)\over D}\to\pi.
+\tag{MG.32}
+\]
+
+Equation (MG.10) gives
+
+\[
+{f\over D}
+\ge{\pi-t_D+\gamma_g\over2}-o(1).
+\tag{MG.33}
+\]
+
+Since `Q>=f` and `lambda_D>=0`, (MG.31) implies
+
+\[
+2t_D-\pi\ge {f\over D}-o(1).
+\tag{MG.34}
+\]
+
+Combining (MG.33)--(MG.34) yields the terminal feasibility floor
+
+\[
+\boxed{
+ t_D\ge t_{0,g}-o(1),
+\qquad
+ t_{0,g}:={3\pi+\gamma_g\over5}
+ ={\pi\over2}+{2s_2\over5}+{g\over5}
+ =1.953262849540479\ldots .
+}
+\tag{MG.35}
+\]
+
+For
+
+\[
+\mathcal H_D:=\lambda_D+Q+2f
+=2(q-k)-\operatorname{per}(F)+2f,
+\]
+
+(MG.33) gives
+
+\[
+{\mathcal H_D\over D}
+\ge t_D+\gamma_g-o(1).
+\]
+
+Thus
+
+\[
+\boxed{
+\liminf {\mathcal H_D\over D}
+\ge t_{0,g}+\gamma_g
+={12s_2\over5}+{6g\over5}
+=2.294799136473498\ldots .
+}
+\tag{MG.36}
+\]
+
+Canonical Section 85 then gives
+
+\[
+\boxed{
+\liminf {A_{ch}-a_0Z_{ch}\over D}
+\ge {\sqrt3\over4}
+\left({12s_2\over5}+{6g\over5}\right)
+=0.993677174384321\ldots .
+}
+\tag{MG.37}
+\]
+
+The relaxed scalar system for this total interface floor is sharp at
+
+\[
+ t=t_{0,g},\qquad
+ {f\over D}={Q\over D}
+ ={4s_2+2g\over5},
+\qquad
+ {\lambda_D\over D}=0.
+\tag{MG.38}
+\]
+
+---
+
+## 5. Strengthened classwise split
+
+Normalize `F=f/D`, `Qbar=Q/D`, and `L=lambda_D/D`. The raw exceptional and outer
+interface classes are
+
+\[
+E:=2F+Qbar,
+\qquad L.
+\]
+
+Since `Qbar>=F`,
+
+\[
+E\ge3F.
+\tag{MG.39}
+\]
+
+From (MG.33),
+
+\[
+t_D\ge\pi+\gamma_g-2F-o(1).
+\]
+
+Using
+
+\[
+E+L={\mathcal H_D\over D}
+=2t_D-\pi+2F+o(1),
+\]
+
+we get
+
+\[
+E+L\ge4s_2+2g-2F-o(1).
+\]
+
+Therefore
+
+\[
+\max\{E,L\}
+\ge
+\max\{3F,\ 2s_2+g-F\}-o(1).
+\tag{MG.40}
+\]
+
+The right side is minimized at
+
+\[
+F={2s_2+g\over4},
+\]
+
+with value
+
+\[
+\boxed{
+{3(2s_2+g)\over4}
+={3s_2\over2}+{3g\over4}
+=1.434249460295936\ldots .
+}
+\tag{MG.41}
+\]
+
+This proves (MG.7). The separate Section-67 Oler inequalities
+
+\[
+A_{exc}-a_0Z_{def}\ge c_0(Q+2f),
+\qquad
+H_{out}-a_0Z_{in}\ge c_0\lambda_D
+\]
+
+then give (MG.8):
+
+\[
+\boxed{
+\max\{A_{exc}-a_0Z_{def},\ H_{out}-a_0Z_{in}\}
+\ge(0.621048233990201\ldots-o(1))D.
+}
+\tag{MG.42}
+\]
+
+The classwise scalar relaxation is sharp at
+
+\[
+{f\over D}={Q\over D}={2s_2+g\over4},
+\quad
+ t={\pi\over2}+s_2+{g\over2},
+\quad
+ {\lambda_D\over D}={3(2s_2+g)\over4}.
+\tag{MG.43}
+\]
+
+---
+
+## 6. What changed and what did not
+
+This refinement adds one proof-only input and changes no exact finite identity.
+Relative to the three earlier terminal notes, the safe improvements are:
+
+\[
+\begin{array}{c|c|c}
+\text{quantity} & \text{previous} & \text{matched-gap refinement}\\ \hline
+ t+(2/5)z & 2.151721449540479 & 2.153262849540479\\
+ \mathcal D_4/D\text{ baseline} & 1.242775368236749 & 1.247399568236749\\
+ (\mathcal D_4+0.8\lambda)/D & 1.642775368236749 & 1.647399568236749\\
+ \mathcal H_D/D & 2.285550736473497 & 2.294799136473498\\
+ (A_{ch}-a_0Z_{ch})/D & 0.989672499712141 & 0.993677174384321\\
+ \max(Q+2f,\lambda)/D & 1.428469210295936 & 1.434249460295936
+\end{array}
+\tag{MG.44}
+\]
+
+The authoritative theorem-state ledger is unchanged. The `g=0.007707` theorem is
+proof-only, so all improvements in this note remain proof-only as well.
+
+The matched-gap architecture is already nearly numerically exhausted: its own exact
+certificate has only a small positive margin at `g=0.007707`. More scalar optimization
+inside this same package can therefore change the terminal constants only marginally.
+The remaining work is geometric.
+
+## 7. Remaining bottleneck
+
+The terminal FREE survivor now has to pay all of the following simultaneously:
+
+\[
+\mathcal D_4
+\ge(1.2473995682\ldots-o(1))D+0.8Z_{ext},
+\]
+
+\[
+\mathcal H_D
+\ge(2.2947991364\ldots-o(1))D,
+\]
+
+and
+
+\[
+\max\{Q+2f,\ b-\operatorname{per}F\}
+\ge(1.4342494602\ldots-o(1))D.
+\]
+
+The next closing theorem must use the geometry of one of the two interface classes.
+In the exceptional-face class, the target is a transfer from `Q+2f` and the
+first-order rhombus deficit into the occurrence-counted Section-122/123 attachment-cell
+detour. In the outer class, the target is a source-preserving diameter descent or an
+upper budget for a `>=1.434D` actual outer-walk detour in the terminal near-disk hull.
+
+**Disposition:** propagated the scope-safe matched all-train gap through the complete
+terminal FREE scalar package. C-II remains open.

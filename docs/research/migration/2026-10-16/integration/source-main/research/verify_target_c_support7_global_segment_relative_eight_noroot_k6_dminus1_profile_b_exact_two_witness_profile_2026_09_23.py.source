@@ -1,0 +1,394 @@
+#!/usr/bin/env python3
+"""Exact source certificate for the final two-witness Profile B profile.
+
+This certificate proves two strict-superset exclusions for eight no-root
+sources with rank-two coefficient plane and virtual deficiency three:
+
+1. no source contains three aligned chosen blocks each touched by exactly three
+   selected source cycles;
+2. once two aligned touch-three blocks are present, no aligned touch-four
+   chosen block can be present.
+
+The first exclusion kills witness quotient rank three.  The second removes the
+aligned-touch-four complement from witness quotient rank two.  Combined with
+previous repository theorems, every genuine remaining Profile B source has
+exactly two active aligned touch-three witnesses, six inactive aligned blocks
+of touch count at most two, and one active rank-two singleton block.
+
+All coefficient-plane incidence and dependency ranks are exact over Q.  Source
+sets are reduced only by explicit S7 stabilizers of the normalized root-block
+configuration.
+"""
+
+from collections import Counter
+from functools import lru_cache
+from itertools import combinations, permutations, product
+from pathlib import Path
+import contextlib
+import importlib.util
+import io
+
+HERE = Path(__file__).resolve().parent
+BASE = HERE / "verify_target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_two_touch3_forcing_2026_09_23.py"
+spec = importlib.util.spec_from_file_location("e99_profile_b_two_touch3", BASE)
+C = importlib.util.module_from_spec(spec)
+with contextlib.redirect_stdout(io.StringIO()):
+    spec.loader.exec_module(C)
+
+G = C.G
+R = G.R
+
+
+def cycle_key(desc):
+    d = list(desc)
+    return tuple(sorted(
+        tuple(sorted((d[i], d[(i + 1) % 4])))
+        for i in range(4)
+    ))
+
+
+NO_ROOT_KEY = {e: cycle_key(R.DESC[e]) for e in R.NO_ROOT}
+KEY_TO_NO_ROOT = {key: e for e, key in NO_ROOT_KEY.items()}
+S7 = tuple(permutations(range(1, 8)))
+
+
+def block_image(label, perm):
+    mp = {i + 1: perm[i] for i in range(7)}
+    return tuple(sorted(mp[x] for x in label))
+
+
+def cycle_map_for_perm(perm):
+    mp = {i + 1: perm[i] for i in range(7)}
+    out = {}
+    for e in R.NO_ROOT:
+        key = NO_ROOT_KEY[e]
+        mapped = tuple(sorted(
+            tuple(sorted((mp[a], mp[b])))
+            for a, b in key
+        ))
+        out[e] = KEY_TO_NO_ROOT[mapped]
+    return out
+
+
+def triple_orbits():
+    remaining = set(combinations(range(35), 3))
+    out = []
+    while remaining:
+        triple = min(remaining)
+        labels = tuple(R.BLOCK_LABELS[i] for i in triple)
+        orbit = set()
+        for perm in S7:
+            mapped = tuple(sorted(
+                R.BLOCK_INDEX[block_image(label, perm)]
+                for label in labels
+            ))
+            orbit.add(mapped)
+        remaining.difference_update(orbit)
+        out.append((triple, len(orbit)))
+    return tuple(out)
+
+
+def role_orbits_touch4_two_touch3():
+    remaining = {
+        (d,) + pair
+        for d in range(35)
+        for pair in combinations(tuple(x for x in range(35) if x != d), 2)
+    }
+    out = []
+    while remaining:
+        state = min(remaining)
+        d, b, c = state
+        d_label = R.BLOCK_LABELS[d]
+        pair_labels = (R.BLOCK_LABELS[b], R.BLOCK_LABELS[c])
+        orbit = set()
+        for perm in S7:
+            dd = R.BLOCK_INDEX[block_image(d_label, perm)]
+            pair = tuple(sorted(
+                R.BLOCK_INDEX[block_image(label, perm)]
+                for label in pair_labels
+            ))
+            orbit.add((dd,) + pair)
+        remaining.difference_update(orbit)
+        out.append((state, len(orbit)))
+    return tuple(out)
+
+
+def stabilizer_maps(labels, distinguished_first=False):
+    maps = []
+    if distinguished_first:
+        fixed = labels[0]
+        pair = set(labels[1:])
+        for perm in S7:
+            if block_image(fixed, perm) != fixed:
+                continue
+            if {block_image(label, perm) for label in labels[1:]} != pair:
+                continue
+            maps.append(cycle_map_for_perm(perm))
+    else:
+        target = set(labels)
+        for perm in S7:
+            if {block_image(label, perm) for label in labels} != target:
+                continue
+            maps.append(cycle_map_for_perm(perm))
+    return tuple(maps)
+
+
+def canonical_ext(ext, maps):
+    return min(tuple(sorted(m[e] for e in ext)) for m in maps)
+
+
+def line_in_plane(line, plane):
+    assert len(line) == 1 and len(plane) == 2
+    row = list(line[0])
+    for prow in plane:
+        pivot = next(i for i, x in enumerate(prow) if x)
+        if row[pivot]:
+            q = row[pivot]
+            row = [x - q * y for x, y in zip(row, prow)]
+    return not any(row)
+
+
+def local_space_in_plane(space, plane):
+    if len(space) == 2:
+        return space == plane
+    if len(space) == 1:
+        return line_in_plane(space, plane)
+    if len(space) == 0:
+        return True
+    raise AssertionError("local empty space rank exceeds two")
+
+
+@lru_cache(maxsize=None)
+def complete_deficiency(complete):
+    rows = tuple(G.COMPLETE_T[b] for b in complete)
+    return len(complete) - len(R.rowspace_key(rows))
+
+
+def incidence_patterns_unrestricted_fast(ext):
+    touched = G.touched_blocks(ext)
+    spaces = {b: G.local_empty_space(ext, b) for b in touched}
+
+    planes = set()
+    lines = set()
+    for space in spaces.values():
+        if len(space) == 2:
+            planes.add(space)
+        elif len(space) == 1:
+            lines.add(space)
+        else:
+            raise AssertionError("touched block has zero local empty rank")
+
+    for a, b in combinations(tuple(lines), 2):
+        plane = R.rowspace_key(a + b)
+        if len(plane) == 2:
+            planes.add(plane)
+
+    patterns = set()
+    for plane in planes:
+        patterns.add(frozenset(
+            b for b, space in spaces.items()
+            if local_space_in_plane(space, plane)
+        ))
+
+    for line in lines:
+        patterns.add(frozenset(
+            b for b, space in spaces.items()
+            if len(space) == 1 and space == line
+        ))
+
+    patterns.add(frozenset())
+    return touched, patterns
+
+
+def deficiency_histogram(ext):
+    touched, patterns = incidence_patterns_unrestricted_fast(ext)
+    hist = Counter()
+    for incomplete in patterns:
+        complete = tuple(b for b in touched if b not in incomplete)
+        hist[complete_deficiency(complete)] += 1
+    return hist, len(patterns)
+
+
+def enumerate_three_touch3_sources(blocks):
+    labels = tuple(R.BLOCK_LABELS[b] for b in blocks)
+    maps = stabilizer_maps(labels)
+    source_sets = set()
+
+    for directions in product(range(3), repeat=3):
+        stars = tuple(
+            G.aligned_star(b, R.LOCAL[s])
+            for b, s in zip(blocks, directions)
+        )
+        forbidden = frozenset().union(*stars)
+
+        for omitted in product(*(tuple(star) for star in stars)):
+            touches = tuple(star - {o} for star, o in zip(stars, omitted))
+            union = frozenset().union(*touches)
+            if len(union) > 8:
+                continue
+            if any((union & stars[i]) != touches[i] for i in range(3)):
+                continue
+
+            outside = tuple(e for e in R.NO_ROOT if e not in forbidden)
+            need = 8 - len(union)
+            if need < 0 or need > 2:
+                continue
+
+            for extra in combinations(outside, need):
+                ext = tuple(sorted(union | frozenset(extra)))
+                source_sets.add(canonical_ext(ext, maps))
+
+    return source_sets
+
+
+def enumerate_two_touch3_one_touch4_sources(state):
+    d, b, c = state
+    labels = tuple(R.BLOCK_LABELS[x] for x in state)
+    maps = stabilizer_maps(labels, distinguished_first=True)
+    source_sets = set()
+
+    for sd, sb, sc in product(range(3), repeat=3):
+        star_d = G.aligned_star(d, R.LOCAL[sd])
+        star_b = G.aligned_star(b, R.LOCAL[sb])
+        star_c = G.aligned_star(c, R.LOCAL[sc])
+        forbidden = star_d | star_b | star_c
+
+        for ob in star_b:
+            touch_b = star_b - {ob}
+            for oc in star_c:
+                touch_c = star_c - {oc}
+                union = star_d | touch_b | touch_c
+                if len(union) > 8:
+                    continue
+                if union & star_d != star_d:
+                    continue
+                if union & star_b != touch_b or union & star_c != touch_c:
+                    continue
+
+                outside = tuple(e for e in R.NO_ROOT if e not in forbidden)
+                need = 8 - len(union)
+                if need < 0 or need > 2:
+                    continue
+
+                for extra in combinations(outside, need):
+                    ext = tuple(sorted(union | frozenset(extra)))
+                    source_sets.add(canonical_ext(ext, maps))
+
+    return source_sets
+
+
+def scan_sources(source_sets):
+    hist = Counter()
+    pattern_count = 0
+    for ext in source_sets:
+        local_hist, n_patterns = deficiency_histogram(ext)
+        assert local_hist.get(3, 0) == 0
+        hist.update(local_hist)
+        pattern_count += n_patterns
+    return hist, pattern_count
+
+
+def main():
+    triples = triple_orbits()
+    expected_triple_orbits = (
+        (((1, 2, 3), (1, 2, 4), (1, 2, 5)), 210),
+        (((1, 2, 3), (1, 2, 4), (1, 3, 4)), 140),
+        (((1, 2, 3), (1, 2, 4), (1, 3, 5)), 1260),
+        (((1, 2, 3), (1, 2, 4), (1, 5, 6)), 1260),
+        (((1, 2, 3), (1, 2, 4), (3, 4, 5)), 630),
+        (((1, 2, 3), (1, 2, 4), (3, 5, 6)), 1260),
+        (((1, 2, 3), (1, 2, 4), (5, 6, 7)), 210),
+        (((1, 2, 3), (1, 4, 5), (1, 6, 7)), 105),
+        (((1, 2, 3), (1, 4, 5), (2, 4, 6)), 840),
+        (((1, 2, 3), (1, 4, 5), (2, 6, 7)), 630),
+    )
+    actual_triple_orbits = tuple(
+        (tuple(R.BLOCK_LABELS[i] for i in triple), size)
+        for triple, size in triples
+    )
+    assert actual_triple_orbits == expected_triple_orbits
+    assert sum(size for _triple, size in triples) == 6545
+
+    expected_three_touch3 = (
+        (2259, 155132, Counter({4: 614, 5: 18790, 6: 94317, 7: 31518, 8: 7896, 9: 1677, 10: 287, 11: 33})),
+        (261, 19049, Counter({5: 1579, 6: 13936, 7: 3150, 8: 365, 9: 19})),
+        (1413, 100110, Counter({5: 7631, 6: 67639, 7: 20494, 8: 3820, 9: 490, 10: 36})),
+        (90, 7309, Counter({6: 6099, 7: 1120, 8: 90})),
+        (54, 3746, Counter({5: 414, 6: 1636, 7: 1303, 8: 333, 9: 55, 10: 5})),
+        (98, 7459, Counter({6: 3025, 7: 2797, 8: 1251, 9: 324, 10: 56, 11: 6})),
+        (19, 1407, Counter({6: 241, 7: 600, 8: 354, 9: 160, 10: 46, 11: 6})),
+        (0, 0, Counter()),
+        (0, 0, Counter()),
+        (0, 0, Counter()),
+    )
+
+    three_records = []
+    for orbit_index, ((blocks, _orbit_size), expected) in enumerate(zip(triples, expected_three_touch3)):
+        source_sets = enumerate_three_touch3_sources(blocks)
+        hist, pattern_count = scan_sources(source_sets)
+        record = (len(source_sets), pattern_count, hist)
+        assert record == expected, (orbit_index, record, expected)
+        three_records.append(record)
+
+    roles = role_orbits_touch4_two_touch3()
+    assert len(roles) == 17
+    assert sum(size for _state, size in roles) == 19635
+
+    expected_role_reps = (
+        ((1, 2, 3), (1, 2, 4), (1, 2, 5)),
+        ((1, 2, 3), (1, 2, 4), (1, 3, 4)),
+        ((1, 2, 3), (1, 2, 4), (1, 3, 5)),
+        ((1, 2, 3), (1, 2, 4), (1, 4, 5)),
+        ((1, 2, 3), (1, 2, 4), (1, 5, 6)),
+        ((1, 2, 3), (1, 2, 4), (3, 4, 5)),
+        ((1, 2, 3), (1, 2, 4), (3, 5, 6)),
+        ((1, 2, 3), (1, 2, 4), (4, 5, 6)),
+        ((1, 2, 3), (1, 2, 4), (5, 6, 7)),
+        ((1, 2, 3), (1, 4, 5), (1, 4, 6)),
+        ((1, 2, 3), (1, 4, 5), (1, 6, 7)),
+        ((1, 2, 3), (1, 4, 5), (2, 4, 5)),
+        ((1, 2, 3), (1, 4, 5), (2, 4, 6)),
+        ((1, 2, 3), (1, 4, 5), (2, 6, 7)),
+        ((1, 2, 3), (1, 4, 5), (4, 5, 6)),
+        ((1, 2, 3), (1, 4, 5), (4, 6, 7)),
+        ((1, 2, 3), (4, 5, 6), (4, 5, 7)),
+    )
+    actual_role_reps = tuple(tuple(R.BLOCK_LABELS[i] for i in state) for state, _size in roles)
+    assert actual_role_reps == expected_role_reps
+
+    expected_touch4 = (
+        (75, 5876, Counter({5: 371, 6: 4072, 7: 1093, 8: 262, 9: 63, 10: 13, 11: 2})),
+        (4, 341, Counter({6: 286, 7: 51, 8: 4})),
+        (9, 708, Counter({6: 590, 7: 109, 8: 9})),
+        (9, 707, Counter({6: 589, 7: 109, 8: 9})),
+    )
+
+    touch4_records = []
+    for orbit_index, (state, _orbit_size) in enumerate(roles):
+        source_sets = enumerate_two_touch3_one_touch4_sources(state)
+        if orbit_index >= len(expected_touch4):
+            assert not source_sets, (orbit_index, len(source_sets))
+            touch4_records.append((0, 0, Counter()))
+            continue
+        hist, pattern_count = scan_sources(source_sets)
+        record = (len(source_sets), pattern_count, hist)
+        assert record == expected_touch4[orbit_index], (
+            orbit_index,
+            record,
+            expected_touch4[orbit_index],
+        )
+        touch4_records.append(record)
+
+    print("PASS: exact remaining Profile B source has exactly two touch-three witnesses and no aligned touch-four chosen block")
+    print("root_block_triple_orbits", len(triples), "orbit_size_sum", sum(size for _t, size in triples))
+    print("three_touch3_source_orbit_counts", [r[0] for r in three_records])
+    print("three_touch3_pattern_counts", [r[1] for r in three_records])
+    print("three_touch3_d3_patterns", 0)
+    print("touch4_plus_two_touch3_role_orbits", len(roles), "orbit_size_sum", sum(size for _s, size in roles))
+    print("touch4_plus_two_touch3_source_orbit_counts", [r[0] for r in touch4_records])
+    print("touch4_plus_two_touch3_d3_patterns", 0)
+    print("consequence", "8 aligned = 2 active touch3 + 6 inactive touch<=2; 1 unique active rank2 singleton complement")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,46 @@
+#!/usr/bin/env python3
+"""Outward Decimal regression for the low-t outer/pentagon train gate."""
+from decimal import Decimal, getcontext
+getcontext().prec = 80
+D = Decimal
+PI = D('3.141592653589793238462643383279502884197169399375105820974944592307816406')
+SQRT3 = D(3).sqrt()
+DELTA2 = PI / (D(2) * SQRT3)
+S = DELTA2.sqrt()
+G = D('0.0009')
+CG = D(2) * S + G
+C146 = D(4) / D(9) * (PI + S)
+T9 = C146 + D('0.0014759')
+
+def Acap(t):
+    return D(9) * t / D(4) - PI - CG / D(2)
+
+def W(t):
+    return PI - D(6) * Acap(t)
+
+def R(t):
+    return D(2) * PI - D(2) * t - D(5) * Acap(t)
+
+A9 = Acap(T9)
+W9 = W(T9)
+R9 = R(T9)
+outer_equal = W9 / D(3)
+leaf_if_outer_small = (R9 - D(2) * outer_equal) / D(52)
+
+assert A9 == D('0.002870775')
+assert D('3.1243680035') < W9 < D('3.1243680037')
+assert D('1.0414560011') < outer_equal < D('1.0414560013')
+assert D('2.6268525562') < R9 < D('2.6268525565')
+assert D('0.01046039') < leaf_if_outer_small < D('0.01046040')
+assert R9 > D(2) * outer_equal
+# Exact algebraic expansions used in the note.
+assert abs(W9 - (D(7)*PI + D(3)*CG - D(27)*T9/D(2))) < D('1e-70')
+assert abs(R9 - (D(7)*PI + D(5)*CG/D(2) - D(53)*T9/D(4))) < D('1e-70')
+
+print('PASS low-t outer/pentagon train gate arithmetic')
+print('t9=', T9)
+print('X_cap=', A9)
+print('weighted_outer_floor=', W9)
+print('outer_equal_split=', outer_equal)
+print('leaf_weighted_floor=', R9)
+print('leaf_floor_if_outer_below_equal_split=', leaf_if_outer_small)

@@ -1,0 +1,71 @@
+# Target C — extreme-stress body-rigidity frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_extreme_stress_body_rigidity_2026-08-31.md](../../reports/target_c_extreme_stress_body_rigidity_2026-08-31.md).
+
+## C57 — every extreme null stress is a rigid body
+
+Let `s=(alpha,beta)` be an extreme normalized KKT stress and let a fixed-diameter critical velocity `v` satisfy
+
+`Omega_s V_x = Omega_s V_y = 0`.
+
+Every positive support edge is strong, so its relative velocity is tangential:
+
+`dv_e=kappa_e J r_e` on positive contacts,
+
+`dv_h=omega_h J r_h` on positive diameter edges.
+
+The vector kernel equation implies that
+
+`(alpha_e kappa_e, beta_h omega_h)`
+
+is another signed equilibrium stress on exactly the same support. Subtract the original stress times
+
+`c=sum_h beta_h omega_h`.
+
+The result is a signed equilibrium stress supported inside `supp(s)` whose diameter coefficients sum to zero. If it were nonzero, small positive and negative perturbations of `s` along this direction would remain normalized nonnegative KKT stresses, contradicting extremality.
+
+Therefore every positive contact and positive diameter edge has angular rate `c`. The positive contact component is connected, so after subtracting `cJp` the velocity is one translation on the entire component. An extreme null stress is an infinitesimal rigid body.
+
+## Null-face body cover
+
+C54 gives an exposed KKT face `F_0` whose every stress annihilates the full infinitesimal-flex space `L` of the maximal strong framework.
+
+Every extreme point of `F_0` is therefore a rigid body for every `v in L`.
+
+Any two extreme positive contact components intersect in at least one source vertex. Otherwise their midpoint would be a normalized KKT stress with two nontrivial positive-contact components, contradicting support connectivity.
+
+If two extreme bodies share two distinct source vertices, their rigid motions coincide and they can be merged.
+
+Thus all remaining C-I flex is relative rotation of rigid null-face bodies at one-vertex intersections.
+
+## Interaction with C56
+
+Mix two null-face extreme stresses. Their midpoint stays in the null face.
+
+If its two-dimensional transfer kernel has `min K_ef<0`, C56-G forces one common diameter angular rate on the entire midpoint support, so the two extreme bodies cannot rotate differently.
+
+Therefore any pair of null-face extreme bodies that carries different angular rates has a C56-Z midpoint:
+
+`K=B^{-1}`, `M=0`,
+
+and the union positive diameter graph is a forest.
+
+So surviving shear is now simultaneously:
+
+- a one-vertex rigid-body hinge in the primal positive contact framework; and
+- a global zero-transfer forest in the circular-planar response.
+
+## Graph-cut bridge
+
+Positive Kalmanson split weights of a connected circular-planar electrical network are exactly weights of actual displayed circular splits, computed from respecting spanning 2-groves. Hence C56-Z's one-edge/two-adjacent-edge split localization is a physical graph-cut restriction.
+
+## Next exact target
+
+Prove that a zero-transfer midpoint of two full-diameter extreme bodies meeting at one source vertex is either:
+
+1. literally a one-sum of the two positive contact networks at that hinge vertex, in which case analyze a finite relative rotation; or
+2. connected by another path, in which case derive a displayed split whose diameter-edge crossing set violates C56-Z locality.
+
+Closing that body-hinge alternative closes Gate C-I through C7.

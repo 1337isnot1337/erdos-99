@@ -1,0 +1,550 @@
+# Target C-II — terminal saturation or a fixed-aperture vanishing-mass corridor
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** the no-positive-density-TB1 near-full paired exact-force shore through `t=(q-k)/D<=1.8687`  
+**Dependencies:** near-full-shore growing exact-force diagonal; gap-free bilateral force weave; paired TT/mixed/OO destination order; full-parent non-TT aperture theorem; global one-sided reaction budget; vanishing-mass coercive-kernel theorem; dense-force-grid argument  
+**Certificate:** `research/verify_target_c_high_t_terminal_or_fixed_aperture_corridor_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The full-parent aperture theorem says that every center outside the TT prefix already has a fixed projective force-pair gap
+
+\[
+\nu-o(1),
+\qquad
+\nu:={c\over2}={113\over10{,}000{,}000}=1.13\times10^{-5},
+\qquad
+c={113\over5{,}000{,}000}.
+\tag{FC.1}
+\]
+
+The earlier vanishing-mass corridor theorem did not use this. Its corridor was selected before the paired destination order was imposed, so the guaranteed pair gap was allowed to shrink to zero.
+
+The two constructions can be synchronized. The near-full diagonal is obtained from one physical one-sided shore by deleting only `o(D)` center indices. Hence any positive-linear non-TT suffix contains arbitrarily long **consecutive physical interface blocks** consisting entirely of paired non-TT centers. Among many disjoint such blocks, the global one-sided KKT budget selects one whose total switching mass tends to zero.
+
+This gives the following dichotomy along every no-TB1 survivor subsequence after passing to a further subsequence.
+
+1. The non-TT suffix is sublinear. Then asymptotically the whole paired population is TT, and the far terminal piece satisfies
+   \[
+   \boxed{
+   \operatorname{normalspan}(T_m)
+   \ge 2\gamma_H+2\nu-o(1),
+   }
+   \tag{FC.2}
+   \]
+   where `gamma_H=arcsin(c_H)` and `c_H=0.453819885927...`.
+2. The non-TT suffix has positive linear density. Then there are consecutive blocks of lengths `m_D->infinity` on which **every interface** is a non-TT paired exact-force center with aperture at least `nu-o(1)`, while the total original switching KKT mass and the total compressed two-ray force mass both tend to zero. The same block retains a `(0.6536-o(1))D` common near-equilateral train family, the two common `0.0647027D` circumcenter flanks, and the dimension-free cancellation-kernel coercivity floor.
+
+Thus the fixed-aperture return geometry and the vanishing-mass/dense-grid geometry are no longer separate alternatives. Unless the terminal piece absorbs asymptotically the entire paired population, they occur on one and the same growing consecutive corridor.
+
+---
+
+## 1. Paired population and the `o(D)` hole set
+
+Use the near-full growing exact-force diagonal. Let `I_D` be its one-sided physical interface shore. The construction of the diagonal starts from `I_D` and deletes:
+
+- center-complexity failures;
+- centers whose prescribed exact-phase neighborhood meets a separator;
+- centers whose neighborhood meets the chosen narrow-pair exceptional set;
+- `O(r_D)` shore-end centers; and
+- at most six unilateral force-pair centers from the gap-free bilateral theorem.
+
+With the diagonal parameter schedule all four asymptotic deletion terms are `o(D)`. Therefore the paired center population `P_D` satisfies not merely a density lower bound but the stronger physical-hole statement
+
+\[
+\boxed{
+H_D:=|I_D\setminus P_D|=o(D).
+}
+\tag{FC.3}
+
+Order the paired centers toward the common hub:
+
+\[
+i_1<i_2<\cdots<i_N<k,
+\qquad
+N>(\nu-o(1))D.
+\tag{FC.4}
+\]
+
+At every paired center there are bilateral actual diameter bars
+
+\[
+h_s^A=x_s^Ay_s^A,
+\qquad
+h_s^B=x_s^By_s^B,
+\tag{FC.5}
+\]
+
+with an exact positive force representation and the host transverse margin
+
+\[
+|d_s^\sigma\cdot Jv_s|\ge c_H-o(1),
+\qquad
+c_H=0.453819885927\ldots .
+\tag{FC.6}
+\]
+
+Let `M` be the TT-prefix length and
+
+\[
+L=N-M
+\tag{FC.7}
+\]
+
+be the number of non-TT centers.
+
+The full-parent aperture theorem gives uniformly for every `s>M`
+
+\[
+\boxed{
+\eta_s
+:=d_{\mathbb{RP}^1}([d_s^A],[d_s^B])
+\ge N\delta_D-o(1)
+\ge \nu-o(1),
+}
+\tag{FC.8}
+\]
+
+where
+
+\[
+\delta_D=2\arcsin{1\over2D}\ge {1\over D}.
+\tag{FC.9}
+
+---
+
+## 2. If the non-TT suffix is sublinear, the terminal span reaches the full TT density
+
+Assume along the chosen subsequence
+
+\[
+L=o(D).
+\tag{FC.10}
+
+Then by (FC.4)
+
+\[
+M=N-L>(\nu-o(1))D.
+\tag{FC.11}
+
+The TT-prefix theorem gives
+
+\[
+\operatorname{normalspan}(T_m)
+\ge
+2\gamma_H+2(M-1)\delta_D-o(1),
+\tag{FC.12}
+
+with
+
+\[
+\gamma_H=\arcsin c_H.
+\tag{FC.13}
+
+Using (FC.9)--(FC.11),
+
+\[
+2(M-1)\delta_D
+\ge {2(M-1)\over D}
+\ge2\nu-o(1).
+\tag{FC.14}
+
+Hence
+
+\[
+\boxed{
+\operatorname{normalspan}(T_m)
+\ge2\gamma_H+2\nu-o(1).
+}
+\tag{FC.15}
+
+Numerically,
+
+\[
+2\gamma_H+2\nu
+=0.9421174460385\ldots
+=53.97935346\ldots ^\circ.
+\tag{FC.16}
+
+Type-II near-disk convergence makes radial and support-normal directions uniformly `o(1)` apart on the source hull. Therefore the same lower bound holds for the central angular diameter of `T_m cap S`, and radial projection gives
+
+\[
+\boxed{
+{\operatorname{diam}(T_m\cap S)\over D}
+\ge
+\sin(\gamma_H+\nu)-o(1)
+=
+0.45382995525\ldots-o(1).
+}
+\tag{FC.17}
+
+This is the terminal-dominant branch. It is stronger than the one-TT-cell rung bound because the almost-full TT population contributes its entire two-gap C67 density.
+
+---
+
+## 3. Positive non-TT density contains many long hole-free consecutive blocks
+
+Now assume instead that the non-TT suffix has positive linear density along a subsequence. Thus for some fixed `epsilon>0`,
+
+\[
+\boxed{L\ge\varepsilon D}
+\tag{FC.18}
+
+for all sources in the subsequence.
+
+Take the physical interface interval from the first non-TT paired center through the last paired center on the shore. Every member of `P_D` in this interval is non-TT, because TT membership is a prefix in paired-center order. The interval therefore contains at least `L` good non-TT paired indices and at most `H_D=o(D)` holes.
+
+Let `T_D` denote the neighborhood-complexity threshold appearing in the near-full diagonal, with the fixed constant `C` absorbed, so that every paired center satisfies
+
+\[
+L_i<T_D,
+\qquad
+S_i+S_{i+1}<T_D,
+\qquad
+{T_D\over D}\to0.
+\tag{FC.19}
+
+Choose an integer block length `m_D` so slowly that
+
+\[
+\boxed{
+ m_D\to\infty,
+\qquad
+{m_D(H_D+1)\over D}\to0,
+\qquad
+{m_DT_D\over D}\to0.
+}
+\tag{FC.20}
+
+Such a choice exists because both `(H_D+1)/D` and `T_D/D` tend to zero. For example one may take the integer part of
+
+\[
+\min\left\{
+\sqrt{D\over H_D+1},
+\sqrt{D\over T_D+1}
+\right\}
+\tag{FC.21}
+
+and pass to a tail on which it is at least two.
+
+The holes split the good non-TT indices into at most `H_D+1` consecutive runs. If a run has length `q`, it contains `floor(q/m_D)` disjoint consecutive `m_D`-blocks. Therefore the total number `K_D` of pairwise interface-disjoint hole-free blocks obeys
+
+\[
+\boxed{
+K_Dm_D
+\ge
+L-(H_D+1)(m_D-1).
+}
+\tag{FC.22}
+
+By (FC.18) and (FC.20),
+
+\[
+\boxed{
+K_D
+\ge(\varepsilon-o(1)){D\over m_D}
+\longrightarrow\infty.
+}
+\tag{FC.23}
+
+Every one of these blocks consists of consecutive physical interfaces, every interface is a paired non-TT center, and hence every interface is exact-antipodal and satisfies the full-parent aperture bound (FC.8).
+
+---
+
+## 4. One block has vanishing total KKT and compressed-force mass
+
+For a nonhub interface `i`, let
+
+\[
+B_i=\sum_{h\in X_i}\beta_h
+\tag{FC.24}
+
+be its switching KKT mass. On one fixed side of the common hub the switching sets are pairwise edge-disjoint, so the global reaction budget gives
+
+\[
+\sum_iB_i\le1.
+\tag{FC.25}
+
+The `K_D` blocks from Section 3 are interface-disjoint. Choose a block `J_D` minimizing total switching mass. Then
+
+\[
+\boxed{
+\mathcal B_D
+:=\sum_{i\in J_D}B_i
+\le {1\over K_D}
+=O\!\left({m_D\over D}\right)
+\longrightarrow0.
+}
+\tag{FC.26}
+
+Since
+
+\[
+|G_i|\le DB_i,
+\]
+
+we also have
+
+\[
+\boxed{
+{1\over D}\sum_{i\in J_D}|G_i|
+\le\mathcal B_D\to0.
+}
+\tag{FC.27}
+
+The block is exact phase, so the cut resultants are collinear and monotone. Equation (FC.27) says their normalized diameter tends to zero across the whole growing block.
+
+For all sufficiently large `D`, (FC.8) gives the fixed safe lower bound
+
+\[
+\eta_i\ge\rho_*:=\nu/2
+\qquad(i\in J_D).
+\tag{FC.28}
+
+Write the exact positive two-ray compression as
+
+\[
+G_i=D(\lambda_i^-d_i^-+\lambda_i^+d_i^+).
+\tag{FC.29}
+
+The sine-law estimate from the global reaction-budget theorem gives
+
+\[
+\lambda_i^-+\lambda_i^+
+\le{2B_i\over\sin\rho_*}.
+\tag{FC.30}
+
+Therefore
+
+\[
+\boxed{
+\sum_{i\in J_D}(\lambda_i^-+\lambda_i^+)
+\le{2\mathcal B_D\over\sin(\nu/2)}
+\longrightarrow0.
+}
+\tag{FC.31}
+
+The fixed coefficient in (FC.31) is finite:
+
+\[
+{2\over\sin(\nu/2)}
+=353982.30088\ldots .
+\tag{FC.32}
+
+Thus the force pairs are simultaneously fixed-aperture and asymptotically massless in both the original KKT stress and the compressed two-ray representation.
+
+---
+
+## 5. Every separator contains the same fixed macroscopic central diamond
+
+The full-parent aperture is stronger than the safe `rho_*` used only for (FC.31). Uniformly over `J_D`,
+
+\[
+\eta_i\ge\nu-o(1).
+\tag{FC.33}
+
+The central-diamond theorem therefore gives, for every interface in the block,
+
+\[
+\boxed{
+B\!\left(
+ o,
+ \left({1\over2}\sin{\nu\over2}-o(1)\right)D
+\right)
+\subset
+\operatorname{conv}\{x_i^-,y_i^-,x_i^+,y_i^+\}.
+}
+\tag{FC.34}
+
+The common radius coefficient is
+
+\[
+\boxed{
+{1\over2}\sin{\nu\over2}
+=2.82499999998\ldots\times10^{-6}.
+}
+\tag{FC.35}
+
+Equivalently, the two birth endpoints and the two partner endpoints of each pair have the fixed separation floor
+
+\[
+\boxed{
+D\sin{\nu\over2}-o(D)
+=
+(5.64999999997\ldots\times10^{-6}-o(1))D
+}
+\tag{FC.36}
+
+coming from the projective aperture alone. The stronger gap-free host rung bound `(c_H-o(1))D` remains available simultaneously.
+
+Every interface also keeps the individual host transverse margin
+
+\[
+|d_i^\pm\cdot Jv|\ge c_H-o(1),
+\tag{FC.37}
+
+so the fixed-aperture conclusion does not replace the earlier macroscopic first-order derivative bound; both hold at once.
+
+---
+
+## 6. The fixed-wide corridor inherits the full cancellation-kernel coercivity
+
+All interfaces of `J_D` are exact-antipodal. Hence its `m_D+1` rows have one common oriented phase `v`, and the full-support first-order cancellation space is
+
+\[
+\mathcal K_D
+=\left\{c\in\mathbb R^{m_D+1}:\sum_jc_j=0\right\},
+\qquad
+\dim\mathcal K_D=m_D\to\infty.
+\tag{FC.38}
+
+The switching sets at distinct interfaces are disjoint. Applying the existing direct-sum/coercive-kernel argument to this block gives, for every `c in mathcal K_D`,
+
+\[
+\boxed{
+\max_h(L_D(c)_h)_+
+\ge(c_H-o(1))D\|c\|_\infty,
+}
+\tag{FC.39}
+
+\[
+\boxed{
+\max_h(-L_D(c)_h)_+
+\ge(c_H-o(1))D\|c\|_\infty,
+}
+\tag{FC.40}
+
+and
+
+\[
+\boxed{
+\left\|D^{-1}L_D(c)\right\|_2
+\ge(\sqrt2\,c_H-o(1))\|c\|_2.
+}
+\tag{FC.41}
+
+Numerically,
+
+\[
+\sqrt2\,c_H=0.64179823755\ldots .
+\tag{FC.42}
+
+Thus fixed aperture does not soften the previous stress/coercivity separation. The derivative-active rows still have total KKT mass `o(1)`, but the normalized derivative operator has a dimension-free singular-value floor on the entire growing cancellation kernel.
+
+---
+
+## 7. The same block has an almost-full common near-equilateral train grid
+
+For a selected row `tau_j`, let `Gamma_j` be its complete-train crossing family. The audited crossing-neighbor floor gives
+
+\[
+|\Gamma_j|>(0.6536-o(1))D.
+\tag{FC.43}
+
+At every interface of `J_D`, (FC.19) gives
+
+\[
+|\Gamma_j\triangle\Gamma_{j+1}|\le L_j<T_D.
+\tag{FC.44}
+
+Therefore the common crossing family
+
+\[
+P_D^{raw}:=\bigcap_{\tau_j\text{ in }J_D}\Gamma_j
+\tag{FC.45}
+
+satisfies, by (FC.20),
+
+\[
+\boxed{
+|P_D^{raw}|>(0.6536-o(1))D.
+}
+\tag{FC.46}
+
+All rows have exactly the same oriented phase. Pick one row in the block. Its angular-defect sum is below `T_D`, so deleting the columns whose defect exceeds
+
+\[
+\sigma_D:=\sqrt{T_D/D}=o(1)
+\tag{FC.47}
+
+costs only `o(D)` columns. Exact co-phase makes the remaining defect identical on every row. Hence there is a common family `P_D` with
+
+\[
+\boxed{|P_D|>(0.6536-o(1))D}
+\tag{FC.48}
+
+such that every row-column rhombus obeys
+
+\[
+\boxed{
+0<\theta(\tau_j,b)-{\pi\over3}=o(1)
+}
+\tag{FC.49}
+
+uniformly over the growing rectangle.
+
+The exact train-step argument from the dense-force-grid theorem then supplies common initial and final column blocks `P_D^-`,`P_D^+` satisfying
+
+\[
+\boxed{
+|P_D^-|,|P_D^+|
+>
+(0.0647027254265\ldots-o(1))D,
+}
+\tag{FC.50}
+
+whose crossing centers lie below the `-0.01D` and above the `+0.01D` row-normal circumcenter levels, respectively, on **every** row of `J_D`.
+
+Thus the fixed-aperture force pairs, the vanishing stress, the coercive cancellation kernel, and the near-full dense train grid all live on one consecutive physical corridor.
+
+---
+
+## 8. Final dichotomy and frontier effect
+
+Pass to a subsequence according to whether `L/D` tends to zero or has a positive lower bound.
+
+### Terminal-dominant branch
+
+\[
+L=o(D)
+\]
+
+forces
+
+\[
+\boxed{
+\operatorname{normalspan}(T_m)
+\ge2\gamma_H+2\nu-o(1)
+}
+\]
+
+and
+
+\[
+\boxed{
+\operatorname{diam}(T_m\cap S)
+\ge(0.45382995525\ldots-o(1))D.
+}
+\]
+
+### Return-positive branch
+
+If `L>=epsilon D` along a subsequence for any fixed `epsilon>0`, there is a consecutive corridor `J_D` with `|J_D|=m_D->infinity` such that simultaneously
+
+```text
+every separator is a non-TT paired exact-force center;
+every force-pair projective aperture is >= 1.13e-5-o(1);
+every force diamond contains the same radius-(2.825e-6-o(1))D central disk;
+total switching KKT mass over the whole corridor -> 0;
+total compressed two-ray coefficient mass over the whole corridor -> 0;
+normalized resultant variation over the whole corridor -> 0;
+the full cancellation kernel has singular-value floor 0.641798...-o(1);
+all rows cross the same (0.6536-o(1))D near-60-degree columns;
+common +/-0.01D circumcenter flanks each have density 0.0647027-o(1).
+```
+
+This is strictly stronger than the previous vanishing-mass dense-force corridor, whose guaranteed pair aperture was allowed to tend to zero. The remaining return-positive obstruction is now geometric: an unbounded exact row stack with almost no switching stress carries a fixed macroscopic central diameter diamond at **every** separator inside one common dense near-equilateral grid.
+
+No contradiction is yet proved. In particular, the theorem still does not locate the intersections of the actual diameter chords with the row centerlines finely enough to compare them to the common column flanks. That localization, or an independent upper bound on `normalspan(T_m)`, remains the immediate closing seam.
+
+**Disposition:** synchronized the full-parent non-TT aperture with the near-full diagonal, global KKT budget, coercive cancellation kernel, and dense train grid. C-II and Level I remain open.

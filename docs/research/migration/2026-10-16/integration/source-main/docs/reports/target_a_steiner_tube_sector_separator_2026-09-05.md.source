@@ -1,0 +1,214 @@
+<!-- theorem-state: {"artifact_id":"ART-FDB043590DAE","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
+# Erdős Problem #99 — Target A Euclidean Steiner-tube sector separator
+
+**Date:** 2026-09-05  
+**Branch:** `research/target-c-c97-caterpillar-fan-capacity-2026-09-04`  
+**Run type:** exact Schur separator theorem; population bookkeeping corrected  
+**Target:** plateau-terminalized Target A response  
+**Status:** LEVEL I STILL OPEN
+
+## 0. Audit correction
+
+The original version correctly proved the geometric Schur-linkage bound ST3, but its
+subsequent population equivalence used `X_i=X^* cap D_i` after deleting tube sites from
+`Z`.  That omits the fact that a deleted basis site `z in Z cap T_Gamma` has a matched
+basis partner `mu_0^{-1}(z)` which is absent from the surviving matched-pair count.
+The Schur inequality itself does not use that erroneous cancellation and remains valid.
+The corrected population form below removes those matched basis partners explicitly.
+
+## 1. A short three-leaf tree in every diameter-d convex body
+
+Let `K=K^*` be the convex response hull, with `diam(K)=d`. Choose three distinct
+generic points `p_1,p_2,p_3` on `partial K`. They can be chosen so that the Euclidean
+Steiner tree `Gamma` joining them meets `X^*` nowhere and meets `partial K` only at its
+three prescribed leaves. The excluded choices form a finite union of lower-dimensional
+incidence conditions; small generic changes of the boundary points preserve the length
+bound below.
+
+Write the side lengths of the boundary triangle as `a,b,c`; all are at most `d`.
+
+### Lemma ST1 — Steiner length bound
+
+The Euclidean Steiner tree joining `p_1,p_2,p_3` has total length
+
+`L(Gamma)<=sqrt(3)d`.
+
+### Proof
+
+If all triangle angles are below `120 degrees`, the standard Fermat/Steiner formula is
+
+`L(Gamma)^2=(a^2+b^2+c^2+4sqrt(3)Area)/2`.
+
+Since `a,b,c<=d` and a triangle with all sides at most `d` has area at most
+`sqrt(3)d^2/4`,
+
+`L(Gamma)^2<=3d^2`.
+
+If one angle is at least `120 degrees`, the Steiner tree is the two sides adjacent to
+that angle. Calling those sides `b,c`, the opposite side obeys
+
+`d^2>=a^2>=b^2+c^2+bc`.
+
+Since `bc<=(b+c)^2/4`,
+
+`(b+c)^2<=d^2+(b+c)^2/4`,
+
+so `b+c<=2d/sqrt(3)<sqrt(3)d`. QED.
+
+The tree is a union of at most three straight segments and is embedded. In the
+nondegenerate three-leaf case, `K\Gamma` has three outer components
+`D_1,D_2,D_3`. The two-edge degeneracy can be handled by the same argument with the
+actual complement components.
+
+## 2. Unit-tube shielding for an arbitrary geometric tree
+
+Let
+
+`T_Gamma={y in Y_in : dist(y,Gamma)<1}`,
+
+and split
+
+`T_Z=T_Gamma cap Z`,
+
+`T_O=T_Gamma cap O`.
+
+### Lemma ST2 — every surviving response edge avoids Gamma
+
+If `xy` is a response radial edge with `y notin T_Gamma`, then its segment does not
+intersect `Gamma`.
+
+### Proof
+
+If the segment met `Gamma` at `z`, then `z` lies on `[x,y]` and
+
+`dist(y,Gamma)<=|y-z|<=|y-x|<1`,
+
+contradicting `y notin T_Gamma`. QED.
+
+Because `Gamma cap X^*=emptyset`, every path in the induced response graph using no
+right vertex of `T_Gamma` is trapped in one component `D_i`.
+
+Fix the Section-113 `Z`-perfect basis matching `mu_0:B->Z` and put
+
+`B_T=mu_0^{-1}(T_Z)`.
+
+If `z notin T_Z` and `b=mu_0^{-1}(z)`, the matching segment `bz` cannot meet `Gamma`,
+so `b,z` lie in the same sector. Restricting the matching therefore gives a bijection
+between
+
+`B_i=(B\B_T) cap D_i`
+
+and
+
+`Z_i=(Z\T_Z) cap D_i`.
+
+Hence
+
+`|B_i|=|Z_i|`.
+
+No basis-closure enlargement is required; one only has to remove the matched partners
+of the tube sites that were actually deleted.
+
+## 3. Exact Schur sector bound
+
+For each sector define the surviving terminal set
+
+`C_i^partial=C^partial cap D_i`.
+
+For a surviving exterior sink `o in O\T_O`, put it in `O_i` when it has a surviving
+response neighbor in `D_i`.
+
+A surviving right vertex cannot have neighbors in two distinct sectors. Indeed, if
+`x_i,x_j` were such neighbors, the segment `x_i x_j` meets `Gamma`; since both lie in
+the convex open disk `B(o,1)`, that intersection point also lies in `B(o,1)`, putting
+`o` in `T_Gamma`. Thus the `O_i` are pairwise disjoint.
+
+Take a maximum vertex-disjoint directed Schur linkage from `C^partial` to `O`. At most
+`|T_Gamma|` paths meet a tube right vertex. Every remaining path is sector-local and
+ends at a distinct sink in the corresponding disjoint `O_i`. Therefore:
+
+### Theorem ST3 — Steiner-tube Schur bound
+
+`rank S <= |T_Gamma| + sum_i min(|C_i^partial|,|O_i|)`.
+
+Consequently
+
+`zeta >= sum_i (|C_i^partial|-|O_i|)_+ - |T_Gamma|`.
+
+This theorem is the original report's valid core and is unchanged by the audit.
+
+## 4. Corrected population form
+
+Put
+
+`X_i^surv=(X^*\B_T) cap D_i`,
+
+`C_i^circ=C^circ cap D_i`.
+
+The geometric tree avoids `X^*`, so there are no left vertices on `Gamma`. Since
+`B_T subset B`, the surviving left population decomposes as
+
+`X_i^surv=B_i sqcup C_i^circ sqcup C_i^partial`.
+
+Together with `|B_i|=|Z_i|`, this gives
+
+### Proposition ST3P — corrected sector population identity
+
+`|C_i^partial|=|X_i^surv|-|Z_i|-|C_i^circ|`.
+
+Hence the valid population version of ST3 is
+
+`zeta >= sum_i (|X_i^surv|-|Z_i|-|O_i|-|C_i^circ|)_+ - |T_Gamma|`.
+
+The old formula with `X_i=X^* cap D_i` is retracted.
+
+## 5. Explicit pointwise tube cardinality
+
+Let one straight segment of `Gamma` have length `ell`. Every lattice site at distance
+strictly below one from it lies in the closed unit stadium around that segment. The
+stadium is convex, with
+
+`area=pi+2ell`,
+
+`perimeter=2pi+2ell`.
+
+Oler's finite packing inequality for the unit triangular lattice, with
+`a_0=sqrt(3)/2`, gives at most
+
+`(pi+2ell)/a_0 + (2pi+2ell)/2 + 1`
+
+lattice sites in the stadium. Hence
+
+`N_ell <= (1+4/sqrt(3))ell + 2pi/sqrt(3)+pi+1`.
+
+The Steiner tree has at most three segments. A union bound and Lemma ST1 therefore
+give
+
+### Corollary ST4 — universal O(d) three-sector shield
+
+`|T_Gamma|`
+
+`<= (1+4/sqrt(3))L(Gamma)`
+
+`   +3(2pi/sqrt(3)+pi+1)`
+
+`<= (4+sqrt(3))d + 3(2pi/sqrt(3)+pi+1)`.
+
+Numerically the leading coefficient is `4+sqrt(3)=5.7320508075...`.
+
+No claim of sharpness is made. The separate right-deficiency report improves the
+relevant averaged penalty by cancelling exterior tube sinks exactly.
+
+## 6. Relation to the right-deficiency theorem
+
+For the right deficiency `h=|O|-rank S`, exterior tube sinks cancel. The companion
+report `target_a_right_deficiency_geometric_tube_2026-09-05.md` therefore gives a
+strictly cleaner endpoint:
+
+`h >= Xi_Gamma-|T_Z|`.
+
+That theorem is not affected by the population correction here because it never
+expresses the terminal counts through `X_i` and `Z_i`.
+
+Thus future work should normally use the right-deficiency form unless a left-nullity
+population identity is specifically needed.

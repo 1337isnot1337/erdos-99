@@ -1,0 +1,33 @@
+# Target C-II — full rhombic 5-faces are cell-pure
+
+**Date:** 2026-09-15
+**Status:** unreviewed proof-only structural candidate
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+> **Preservation provenance (2026-10-05):** copied from `research/c2-flower-high-t-sol-20260915` at exact source tip `7de4cdc3e9aa0cac5b278c2ccc17158bd8d66bdb`. This report is an **unreviewed, noncanonical research candidate**. Its reference to Section 129 uses the source report's wording; the current state lock does not list the Section-129 localization claim as canonical, so that premise is a research dependency here, not a canonical input. PR #683 (closed unmerged) and PR #685 (open at the time of this salvage) preserve related flower-allocation claims, but neither contains this cell-purity statement or its hostile audit.
+
+Let `P` be a bounded 5-face such that each boundary side has a strict rhombus on its other side. The claim below is conditional on the Section-129 nonlocal-rhombus localization premise in the source research chain: after discarding its `o(D)` nonlocal rhombi, the remaining local realizations have the common cell labels used below. That premise is not promoted by the current state lock.
+
+## Claim
+
+The five rhombi around every remaining such 5-face have one harmonic-cell label. After the standard `o(D)` train cleanup, the five non-singleton stopped trains ending on the 5-face have that same label.
+
+## Proof
+
+Take consecutive sides `AB` and `BC`, with adjacent rhombi `R1,R2`.
+
+If `B` lies in `V minus B_D`, both rhombi contain the same vertex of one connected `V minus B_D` component, so the Section-129 local realizations have the same cell label.
+
+Now let `B` lie in `B_D`. Canonical Section 78 bounds the positive contact degree of a `B_D` vertex by three. The contacts `BA,BC` are distinct, so the extra contacts at `B` supplied by `R1,R2` must coincide, say in `BX`; otherwise the degree is at least four.
+
+The point `X` lies in `V minus B_D`. If instead `X` also lay in `B_D`, the canonical Type-II unit-chord theorem would make `BX` a side of `F_D`. Such a side cannot have bounded rhombi on both sides. Thus `R1,R2` share an edge with an endpoint in `V minus B_D`, and their cell labels agree.
+
+Applying the same argument at all five vertices gives one common label for all five rhombi.
+
+Only `o(D)` physical rhombi are nonlocal. Each has four sides, so only `o(D)` full 5-faces meet them. The standard groupwise cleanup removes only `o(D)` complete trains, each with at most two terminal occurrences, so only `o(D)` additional full 5-faces are affected. Hence all but `o(D)` full rhombic 5-faces have five terminal trains carrying one common harmonic-cell label.
+
+## Consequence
+
+If a branch supplies `F_full >= (c-o(1))D` full rhombic 5-faces, it supplies `(c-o(1))D` cell-pure five-terminal defects. Under the optimized high-t train-network split, failure of the singleton alternative gives `c=p5(T)/6`.
+
+No assertion is made that one cell contains a linear fraction of the defects.

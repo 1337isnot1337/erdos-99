@@ -1,0 +1,22 @@
+# Target C: close eight-no-root k=4 D=-1 d_root=1 p=0
+
+Date: 2026-09-26
+
+This note records an exact support-level closure of the branch k=4, D=-1, d_root=1, p=0.
+
+Inputs from current main:
+- rank(P)=4 and generalized weights at least (2,4,5,7);
+- p=0, so touched incomplete blocks are empty and their local spaces generate P;
+- the committed local empty-block rank rule;
+- every external relation lift lies in the touched triangle-row span.
+
+Let h be the number of touched triangle blocks and e the number of touched empty blocks. Root deficiency one gives at most 16 complete blocks. Every empty block has at least two external incidences, while every other touched block has at least one. Since the eight no-root cycles have 32 incidences, e>=h-16 and 32>=h+e, hence h<=24.
+
+The verifier enumerates all 27,763 S7-orbits of eight tetrahedral support multisets with multiplicity at most three. It applies the necessary pairwise generalized-weight filters for rank-one and rank-two empty spaces, requires empty-space dimension sum at least four, and requires their incidence union to cover at least seven coordinates.
+
+This leaves 32,060 candidate empty sets on the 26,580 support orbits with h<=24. Only 908 have touched-complete nullity at most one. For every one of those 908, rank H(T)-rank H(C)<4, where T is the touched block set and C the touched complete subset. But k=4 gives four independent external relation directions, all lying in H(T), so necessarily rank H(T)-rank H(C)>=4. Contradiction.
+
+Therefore the branch is empty. The eight-no-root k=4 frontier is reduced to D=-1, d_root=0, p=3.
+
+Companion verifier:
+research/verify_target_c_support7_global_segment_relative_eight_noroot_k4_dminus1_d1p0_support_closure_2026_09_26.py

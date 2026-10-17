@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+"""Floating-point regression for an unconstrained W9 metric equilibrium.
+
+The fixed coordinates solve the signed unit-force equations for the W9 edge
+signing to machine precision, but have the wrong order type: all seven points
+are not in the H5 simple-wall stratum.  This deliberately guards against the
+invalid inference that failure of a numerical solve proves metric exclusion.
+"""
+
+from importlib.util import module_from_spec, spec_from_file_location
+from pathlib import Path
+from itertools import combinations
+import numpy as np
+from scipy.spatial import ConvexHull
+
+HERE = Path(__file__).resolve().parent
+
+def det2(a, b):
+    return float(a[0] * b[1] - a[1] * b[0])
+SOURCE = HERE / "verify_target_c_support6_h5_metric_exploration_2026_09_18.py"
+spec = spec_from_file_location("explore", SOURCE)
+explore = module_from_spec(spec)
+assert spec.loader is not None
+spec.loader.exec_module(explore)
+
+# One least-squares root found for the tenth (W9) simple-wall orbit.  The
+# coordinates are rounded only for this regression, never used as a proof.
+Y = np.array([
+    (0.0, 0.0),
+    (1.0, 0.0),
+    (0.1798384553393675, 1.4339960180181621),
+    (1.3237316309512912, 0.7937460779890951),
+    (1.3291914010340180, 0.1338851121818657),
+    (1.0891168994150120, 0.2063916203662083),
+    (-1.2231069022165983, 0.7478601095002962),
+])
+
+
+def main():
+    _kind, data = explore.reps()[9]
+    _target, _chirotope, missing, edge_signs = data
+    residual = explore.residual_factory(edge_signs, missing)(Y[2:].reshape(-1))
+    # The residual factory fixes y_1=(1,0) and y_0=0.
+    assert np.linalg.norm(residual, ord=np.inf) < 2e-14
+    min_pair = min(
+        (float(np.linalg.norm(Y[i] - Y[j])), i, j)
+        for i, j in combinations(range(7), 2)
+    )
+    assert min_pair[0] > 0.2
+    assert abs(det2(Y[3] - Y[0], Y[6] - Y[0])) > 1.0
+    hull = tuple(ConvexHull(Y).vertices)
+    assert len(hull) == 6
+    print("w9_unconstrained_inf_residual", f"{np.linalg.norm(residual, ord=np.inf):.3e}")
+    print("minimum_pair_distance", f"{min_pair[0]:.12f}")
+    print("wall_036_cross", f"{det2(Y[3] - Y[0], Y[6] - Y[0]):.12f}")
+    print("convex_hull_vertex_count", len(hull))
+    print("PASS: unconstrained metric root is a regression, not an H5 realization")
+
+
+if __name__ == "__main__":
+    main()

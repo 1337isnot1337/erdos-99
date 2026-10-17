@@ -1,0 +1,299 @@
+# Target C — Section 151 candidate: internal-face isoperimetry excludes the Section-148 lower-edge endpoint
+
+**Date:** 2026-09-12  
+**Base:** hostile-audited proof-only Sections 148 and 150; canonical Sections 75, 82, 117/118 Type-II carrier area  
+**Status:** proof-only endpoint-exclusion theorem; C-II remains open
+
+The Section-150 endpoint cannot actually occur.
+
+The missing observation is elementary but strong: Eppstein's component slack has an exact planar face interpretation. If `L_r^I` is the occurrence-counted outer-face length of the internal contact graph `C[I_r]` and `Q_r^I` is its bounded-face degree excess, then
+
+\[
+\boxed{
+r_r={L_r^I+Q_r^I\over2}-\delta_r.}
+\tag{151.1}
+\]
+
+Hence
+
+\[
+L_r^I\le2(\delta_r+r_r).
+\tag{151.2}
+\]
+
+The total Euclidean area of all bounded faces of `C[I_r]` is at most
+
+\[
+{(L_r^I)^2\over4\pi}.
+\]
+
+In particular, if `A_{4,r}^{int}` denotes the total area of strict-rhombus faces whose four vertices lie in `I_r`, then
+
+\[
+\boxed{
+A_{4,r}^{int}
+\le{(\delta_r+r_r)^2\over\pi}.
+}
+\tag{151.3}
+\]
+
+Equivalently, with
+
+\[
+\eta_r:=\delta_r+2-d_r\ge0,
+\]
+
+\[
+\boxed{
+r_r+\eta_r
+\ge
+\sqrt{\pi A_{4,r}^{int}}+2-d_r.}
+\tag{151.4}
+\]
+
+Now apply this to the Section-118 endpoint wrapping carrier. The sharp hostile-reviewed Section-118 area budget gives for the same carrier
+
+\[
+{A_{4,*}\over D^2}
+\ge0.4703752868004241\ldots-o(1).
+\tag{151.5}
+\]
+
+Only `O(D)` strict rhombi of that harmonic cell can touch loaded attachment vertices, because the attachment set has `O(D)` vertices and every loaded vertex has contact degree at most three. Every unit rhombus has area at most one. Therefore
+
+\[
+\boxed{
+{A_{4,*}^{int}\over D^2}
+\ge0.4703752868004241\ldots-o(1).}
+\tag{151.6}
+\]
+
+At the safe Section-118 endpoint,
+
+\[
+{d_*\over D}	o
+\lambda_*=0.9762439137425688\ldots .
+\tag{151.7}
+\]
+
+Thus (151.4) forces
+
+\[
+\boxed{
+{r_*+\eta_*\over D}
+\ge
+\sqrt{\pi\cdot0.4703752868004241\ldots}
+-0.9762439137425688\ldots-o(1)
+}
+\tag{151.8}
+\]
+
+with numerical margin
+
+\[
+\boxed{
+{r_*+\eta_*\over D}
+\ge0.239374260456223\ldots-o(1).
+}
+\tag{151.9}
+\]
+
+But hostile-audited Section 150 says every Section-148 lower-edge countersequence has
+
+\[
+R_I=o(D),
+\qquad
+\sum_r\eta_r=o(D).
+\]
+
+Since `0<=r_*<=R_I` and `0<=eta_*<=sum eta_r`, this gives
+
+\[
+r_*+\eta_*=o(D),
+\]
+
+contradicting (151.9).
+
+Therefore:
+
+### Theorem 151.1 — the strengthened Type-II lower edge is unattainable
+
+There is no Type-II endpoint countersequence simultaneously satisfying
+
+\[
+{d_*\over D}\to0.9762439137425688\ldots,
+\qquad
+{1\over D}\sum_rd_r\to2.798596312209462\ldots,
+\]
+
+and
+
+\[
+{h\over D}\to1.721247148049524\ldots
+\]
+
+with the Section-118 endpoint carrier and Section-148 gap-moment structure.
+
+Equivalently, the Section-148 scalar lower edge has a genuine positive stability gap once internal-face geometry is retained.
+
+This does **not** yet close Type II: larger wrapping-carrier parameter regimes can lower the complement-gap diameter moment and require a new all-regime scalar optimization. But the formerly surviving lower-edge model is impossible by a direct finite planar argument.
+
+---
+
+## 151.1 Exact face formula for the Eppstein slack
+
+Fix one unloaded component `I_r`. Let
+
+- `n_r=|I_r|`;
+- `e_r` be its internal unit contacts;
+- `delta_r` its contact-graph diameter;
+- `L_r^I` the occurrence-counted outer-face walk length of the connected plane graph `C[I_r]`; and
+- `Q_r^I=sum_f(deg f-4)` over bounded nonquadrilateral faces of `C[I_r]`.
+
+Triangle-freeness implies every bounded face has degree at least four. Euler and face incidence give exactly
+
+\[
+e_r
+=2n_r-2-{L_r^I+Q_r^I\over2}.
+\tag{151.10}
+\]
+
+Canonical Section 62 defines
+
+\[
+r_r:=2n_r-\delta_r-2-e_r\ge0.
+\tag{151.11}
+\]
+
+Insert (151.10):
+
+\[
+r_r
+={L_r^I+Q_r^I\over2}-\delta_r,
+\]
+
+proving (151.1). Since `Q_r^I>=0`,
+
+\[
+L_r^I\le2(\delta_r+r_r).
+\]
+
+No stability theorem for Eppstein's induction is used; this is simply Euler applied to the actual embedded internal graph.
+
+---
+
+## 151.2 Isoperimetry for a connected plane graph with bridges
+
+Let `G` be any finite connected straight-line plane graph whose edges all have Euclidean length one, and let `L` be its occurrence-counted outer-face walk length.
+
+Take the union of the closures of all bounded faces. Its positive-area connected components meet only at graph articulation points or along zero-area sets. Let their outer boundary lengths be `p_1,...,p_s`. Every physical edge on one such outer boundary is incident to the unbounded face on its other side and contributes at least one occurrence to the outer-face walk. Bridges contribute occurrences to `L` but no positive-area boundary credit. Therefore
+
+\[
+\sum_jp_j\le L.
+\tag{151.12}
+\]
+
+Planar isoperimetry on each positive-area component gives
+
+\[
+A_j\le{p_j^2\over4\pi}.
+\]
+
+Hence
+
+\[
+\sum_jA_j
+\le{1\over4\pi}\sum_jp_j^2
+\le{1\over4\pi}\left(\sum_jp_j\right)^2
+\le{L^2\over4\pi}.
+\tag{151.13}
+\]
+
+Every bounded strict-rhombus face of `C[I_r]` lies in this bounded-face union. Combining (151.13) with (151.2) proves (151.3).
+
+---
+
+## 151.3 Loaded-touching rhombi cost only boundary order
+
+Let `A_r` be the distinct loaded attachment set of the selected harmonic component and `a_r=|A_r|`. Canonical convex-perimeter/unit-separation bounds give
+
+\[
+a_r=O(D).
+\tag{151.14}
+\]
+
+Every loaded vertex has full contact degree at most three. In a plane embedding, the number of bounded-face incidences at a loaded vertex is at most its contact degree, hence at most three. Therefore the number of strict-rhombus faces of the harmonic-cell graph incident to at least one loaded attachment is at most
+
+\[
+3a_r=O(D).
+\tag{151.15}
+\]
+
+Every unit rhombus has area at most one. Deleting all loaded-touching rhombi therefore removes only `O(D)` total rhombus area.
+
+Any remaining strict-rhombus face has all four vertices in `I_r`. Its four contact edges are internal edges, and deleting loaded vertices elsewhere cannot destroy that bounded face. Hence it is a bounded strict-rhombus face of `C[I_r]`.
+
+Thus
+
+\[
+\boxed{
+A_{4,r}^{int}
+\ge A_{4,r}-O(D).
+}
+\tag{151.16}
+\]
+
+For the Section-118 endpoint carrier, (151.5) gives (151.6).
+
+---
+
+## 151.4 Numerical separation is large
+
+At the sharp safe endpoint,
+
+\[
+A_*=0.4703752868004241\ldots,
+\qquad
+\lambda_*=0.9762439137425688\ldots .
+\]
+
+The isoperimetric graph-geodesicity threshold is
+
+\[
+\sqrt{\pi A_*}
+=1.215618174198792\ldots .
+\]
+
+Therefore the mandatory internal slack is
+
+\[
+\sqrt{\pi A_*}-\lambda_*
+=0.239374260456223\ldots .
+\]
+
+The margin is first-order and large. No delicate `10^-5` optimization is involved.
+
+---
+
+## 151.5 Scope and next frontier
+
+- All source points are retained.
+- The proof concerns the internal graph of one actual unloaded harmonic component; no contact-isolated point is inserted into it.
+- Bridges and articulation points are allowed and are handled by occurrence-counted outer length plus componentwise isoperimetry.
+- No generic squaregraph size-versus-diameter theorem is assumed.
+- The Section-118 area value is the strict-rhombus area floor for the same carrier used in the endpoint theorem.
+- The contradiction excludes the Section-148 **lower-edge endpoint**. It does not yet show an explicit universal improved `h/D` constant because away from the endpoint both the wrapping diameter moment and carrier area floor must be tracked simultaneously.
+
+The immediate all-regime target is now a two-variable scalar theorem. For a wrapping carrier with parameter `theta`, keep simultaneously
+
+1. its complement-gap diameter moment `S(theta)`;
+2. its strict-rhombus area floor `A(theta)`; and
+3. the component slack lower bound
+   \[
+   r_*+\eta_*
+   \ge\sqrt{\pi A(theta)}-\sin(theta/2).
+   \]
+
+Insert this retained positive slack into the exact Section-148 elimination rather than dropping it. If the resulting scalar lower bound on `h/D` exceeds the global feasible upper envelope for every surviving `theta`, Type II closes.
+
+**Theorem state:** unchanged; proof-only candidate pending hostile audit.

@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+"""Arithmetic/bookkeeping checks for the Target-C residual budget cap."""
+from fractions import Fraction as F
+from math import pi, sqrt
+from random import Random
+
+rng=Random(2026091501)
+for _ in range(20000):
+    # side lengths >=1; choose an arbitrary noncommon subset
+    q=rng.randrange(3,80)
+    lengths=[F(1)+F(rng.randrange(0,30),rng.randrange(1,12)) for _ in range(q)]
+    mask=[rng.randrange(2) for _ in range(q)]
+    PF=sum(lengths,F(0))
+    Lcap=sum((x-1) for x,m in zip(lengths,mask) if m)
+    assert F(0)<=Lcap<=PF-q
+
+    # normalized residual gluing algebra
+    omega=F(rng.randrange(0,100),rng.randrange(1,10))
+    sigma_ext=F(rng.randrange(0,100),rng.randrange(1,10))
+    RF=omega+Lcap-sigma_ext
+    if RF < 0:
+        continue
+    assert RF+sigma_ext == omega+Lcap
+
+    # Section-124 rearrangement
+    EL=F(rng.randrange(0,100),rng.randrange(1,10))
+    tooth_net=omega+EL
+    assert tooth_net+Lcap == RF+sigma_ext+EL
+
+A0=sqrt(3)/2
+D2=pi/(2*sqrt(3)); s=sqrt(D2)
+C146=4*(pi+s)/9
+t42=C146+0.0013751
+cap=1.5*pi-t42
+eload=2*pi*(1/A0-1)
+print('PASS: 20,000 exact-rational residual bookkeeping trials')
+print(f't42={t42:.15f}')
+print(f'residual cap={cap:.15f}')
+print(f'loaded E4/a0 cap={eload:.15f}')
+print(f'coarse shared cap={cap+eload:.15f}')

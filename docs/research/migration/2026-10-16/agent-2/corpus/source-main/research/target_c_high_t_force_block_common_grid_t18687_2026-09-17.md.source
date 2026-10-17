@@ -1,0 +1,385 @@
+# Target C-II — deep high-`t` force cells share one common inverse-`D` train grid
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch with `t=(q-k)/D<=1.8687`  
+**Dependencies:** high-`t` complete rectangle and phase collapse; linear one-bar/exact-antipodal fork; force-carrying robust fork; deep two-sided cusp cells; linear-rank coercive dipole block; disjoint deep exact-force braid  
+**Certificate:** `research/verify_target_c_high_t_force_block_common_grid_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current high-`t` frontier contains a global ordered train rectangle and, on the no-fixed-margin-TB1 side, positive linear density of arbitrarily deep quantitatively two-sided exact-force cells. These facts can be synchronized without any further thinning.
+
+Put
+
+\[
+c={113\over5{,}000{,}000},\qquad c_0={c\over4},\qquad
+\rho_0={c\over48},\qquad \delta_0={c\over64}.
+\tag{CG.1}
+\]
+
+There is one column family `B_0`, chosen once from the high-`t` complete rectangle, with
+
+\[
+\boxed{|B_0|>0.0783D-o(D).}
+\tag{CG.2}
+\]
+
+Every fixed-threshold robust blocker interface `i` has both adjacent rows crossing every `b in B_0` and
+
+\[
+\boxed{
+0<\theta(\tau_j,b)-{\pi\over3}
+<{31.4\times10^6\over D}+o(D^{-1})
+\quad(j=i,i+1).
+}
+\tag{CG.3}
+\]
+
+Its adjacent row phases satisfy
+
+\[
+\boxed{
+d_{\mathbb{RP}^1}(u_i,u_{i+1})
+<{28.4\times10^6\over D}+o(D^{-1}).
+}
+\tag{CG.4}
+\]
+
+At `rho_0` the robust union has density
+
+\[
+>{c_0\over2}D-o(D)=2.825\times10^{-6}D-o(D),
+\tag{CG.5}
+\]
+
+so either its fixed-margin TB1 side or its wide exact-force side has density at least
+
+\[
+{c_0\over4}D-o(D)=1.4125\times10^{-6}D-o(D),
+\tag{CG.6}
+\]
+
+all against the same `B_0`.
+
+More strongly, if the positive-density fixed-margin TB1 branch does not occur, then for every fixed exact-phase radius `r` there are more than
+
+\[
+\boxed{
+{c\over32}D-o(D)={113\over160{,}000{,}000}D-o(D)
+}
+\tag{CG.7}
+
+deep two-sided force centers. For every such center `i`, every row in its whole exact-phase neighborhood
+
+\[
+u_{i-r}=u_{i-r+1}=\cdots=u_{i+r+1}
+\tag{CG.8}
+\]
+
+crosses every column of the same `B_0` with the bound (CG.3). The constant `31.4e6` is independent of `r`.
+
+The center reaction also obeys the absolute bound
+
+\[
+\boxed{|G_i|<4{,}436{,}000.}
+\tag{CG.9}
+\]
+
+Along the growing-depth diagonal `r_D->infinity`, all positive-linearly-many deep-cell row axes lie in one projective interval of width
+
+\[
+<{31.4\times10^6\over D}+o(D^{-1}),
+\tag{CG.10}
+\]
+
+while `B_0` itself has projective width below
+
+\[
+{3.004\times10^6\over D}+o(D^{-1}).
+\tag{CG.11}
+\]
+
+Thus the deep cells are globally grid-locked, not merely locally co-phased.
+
+---
+
+## 1. One global `B_0`
+
+Use the oriented phase coordinates from the rectangle phase-collapse theorem. There are rows `A_*` and columns `B_+` with
+
+\[
+|B_+|>0.1567D-o(D),
+\tag{CG.12}
+\]
+
+and
+
+\[
+\delta_{ab}:=\beta_b-\alpha_a-{\pi\over3}>0.
+\tag{CG.13}
+\]
+
+The complete-product structure gives
+
+\[
+\boxed{\delta_{ab}=g+r_a+q_b,\qquad g,r_a,q_b\ge0.}
+\tag{CG.14}
+\]
+
+The global average defect satisfies
+
+\[
+\lambda_D
+={1\over|A_*||B_+|}\sum_{a,b}\delta_{ab}
+<{1.502\times10^6\over D}+o(D^{-1}).
+\tag{CG.15}
+\]
+
+Set
+
+\[
+B_0:=\{b\in B_+:q_b\le2\lambda_D\}.
+\tag{CG.16}
+\]
+
+At least half of `B_+` survives, proving (CG.2), and every `b in B_0` has
+
+\[
+q_b<{3.004\times10^6\over D}+o(D^{-1}).
+\tag{CG.17}
+\]
+
+This selection depends only on the complete rectangle, not on any later cusp center.
+
+---
+
+## 2. Every fixed-good row is close to `B_0`
+
+For a row `tau_j`, define
+
+\[
+S_j:=\sum_{b\in B_+}\delta_{jb}.
+\tag{CG.18}
+\]
+
+By (CG.14),
+
+\[
+S_j=|B_+|(g+r_j)+\sum_bq_b,
+\]
+
+so
+
+\[
+g+r_j\le {S_j\over|B_+|}.
+\tag{CG.19}
+\]
+
+A fixed-threshold good interface satisfies
+
+\[
+J_i=N_i+L_i+DB_i+S_i+S_{i+1}<H,
+\qquad H:=4{,}436{,}000.
+\tag{CG.20}
+\]
+
+Hence `S_i,S_{i+1}<H`, and (CG.12) gives
+
+\[
+{H\over|B_+|}
+<{28.4\times10^6\over D}+o(D^{-1}).
+\tag{CG.21}
+\]
+
+For `j=i,i+1` and `b in B_0`,
+
+\[
+\begin{aligned}
+\delta_{jb}
+&=g+r_j+q_b\\
+&\le {S_j\over|B_+|}+q_b\\
+&<{31.4\times10^6\over D}+o(D^{-1}),
+\end{aligned}
+\]
+
+which proves (CG.3).
+
+Also
+
+\[
+\delta_{ib}-\delta_{i+1,b}=\alpha_{i+1}-\alpha_i.
+\]
+
+Summing over `B_+` gives
+
+\[
+|B_+|\,|\alpha_{i+1}-\alpha_i|
+\le S_i+S_{i+1}<H,
+\]
+
+which proves (CG.4).
+
+The force-carrying robust families are subfamilies of these fixed-good interfaces, so (CG.3)--(CG.4) hold simultaneously for the whole robust fork. Equation (CG.5) is the robust theorem at `rho_0=c_0/12`, and (CG.6) is its two-way pigeonhole consequence.
+
+---
+
+## 3. Deep exact phase propagates the center bound with no loss
+
+Assume the fixed-margin TB1 branch does not occur. The deep two-sided theorem gives, for every fixed `r`, a family `Q_D^{two}(r)` satisfying (CG.7). Every center is a retained robust exact-force center, so its adjacent rows satisfy (CG.3).
+
+Every interface in `[i-r,i+r]` is exact-antipodal, hence all rows in (CG.8) have exactly the same oriented phase. They all belong to `A_*`, so all cross every `b in B_0`. Therefore the center bound (CG.3) holds unchanged for every row in the neighborhood:
+
+\[
+\boxed{
+0<\theta(\tau_j,b)-{\pi\over3}
+<{31.4\times10^6\over D}+o(D^{-1})
+}
+\tag{CG.22}
+\]
+
+for
+
+\[
+i-r\le j\le i+r+1,\qquad b\in B_0.
+\tag{CG.23}
+\]
+
+There is no factor of `r`. The rows are internally noncrossing, the `B_0` columns are internally noncrossing, every cross-pair meets once, and the inherited orientations have one determinant sign. The signed monotone-grid lemma therefore gives one common crossing order throughout each `(2r+2)`-by-`|B_0|` rectangle.
+
+---
+
+## 4. Global inverse-`D` phase collapse of all deep centers
+
+Fix one `b_* in B_0`. For a retained center `i`, let `alpha_i` be its exact neighborhood row phase. By (CG.22),
+
+\[
+0<\beta_{b_*}-\alpha_i-{\pi\over3}<K_D,
+\]
+
+where
+
+\[
+K_D:={H\over|B_+|}+2\lambda_D
+<{31.4\times10^6\over D}+o(D^{-1}).
+\tag{CG.24}
+\]
+
+Thus for any two retained centers `i,k`,
+
+\[
+\boxed{|\alpha_i-\alpha_k|<K_D.}
+\tag{CG.25}
+\]
+
+This proves (CG.10). Since `beta_b=beta^-+q_b` on `B_0`, (CG.17) gives (CG.11).
+
+So both train directions in the deep-cell scaffold are globally confined to inverse-`D` phase windows.
+
+---
+
+## 5. The deep force geometry survives unchanged
+
+The common-grid argument only reads the existing rectangle coordinates; it deletes no deep center. Every center therefore retains the full two-sided cell package:
+
+- bilateral birth on the two ordered host arcs;
+- a `rho_0`-wide central exact-force diamond;
+- both selected force bars at projective distance at least `delta_0` from the reaction axis;
+- opposite-sign elementary-dipole derivatives with
+  \[
+  |\ell_{h_i^\pm}(s d^{(i)})|
+  \ge2D|s|\sin\delta_0;
+  \tag{CG.26}
+  \]
+- the conditioned two-ray force representation.
+
+At the center, the fixed-good estimate also yields
+
+\[
+|G_i|\le DB_i<H,
+\]
+
+which is (CG.9).
+
+---
+
+## 6. The linear-rank coercive dipole space is grid-locked
+
+The coercive dipole theorem uses a set `E_D^{coer}(r)` of the same deep two-sided centers with
+
+\[
+|E_D^{coer}(r)|>{c\over32}D-o(D).
+\tag{CG.27}
+\]
+
+For
+
+\[
+V_D(r):=\operatorname{span}\{d^{(i)}:i\in E_D^{coer}(r)\},
+\]
+
+the normalized actual-diameter derivative map satisfies
+
+\[
+\boxed{
+\left\|{1\over D}L_D(c_s)\right\|_2
+\ge2\sqrt2\sin\delta_0\,\|s\|_2.
+}
+\tag{CG.28}
+\]
+
+Sections 3--4 apply to every basis center. Hence the `Theta(D)`-rank uniformly coercive dipole space can be based entirely at cells whose growing exact-phase neighborhoods all use the same `B_0` scaffold and whose row axes lie in one `O(D^{-1})` interval.
+
+The common grid therefore does not create an approximately invisible collective mode inside the canonical dipole span.
+
+---
+
+## 7. The disjoint deep-force braid is grid-locked too
+
+The disjoint-braid theorem thins the deep centers to `M_D(r)` with pairwise disjoint exact-phase windows and pairwise disjoint four-vertex force diamonds. For fixed `r`,
+
+\[
+|M_D(r)|>
+\left({c\over512\,3^{1/8}}-o(1)\right)D^{1/4}.
+\tag{CG.29}
+\]
+
+On a diagonal with `r_D->infinity`, `r_D=o(D^{3/4})`, the same `Omega(D^{1/4})` bound survives. Every selected force-diamond chord from one cell crosses every selected force-diamond chord from every other cell, and the bilateral birth endpoints preserve synchronized order on the two host arcs.
+
+Because this is only a thinning of the deep two-sided family, every disjoint window is still crossed by the same `B_0`, with (CG.22) holding throughout. Hence the diagonal contains
+
+```text
+Omega(D^(1/4)) pairwise window-disjoint deep cells
++ pairwise vertex-disjoint central force diamonds
++ a complete crossing braid of all selected diameter bars
++ synchronized bilateral birth order
++ one common >0.0783 D ordered transverse train family B_0
++ pi/3 + O(1/D) angle throughout every selected deep window.
+```
+
+---
+
+## 8. Frontier effect
+
+The surviving high-`t` branch has now lost another synchronization escape. It must realize either:
+
+```text
+(A) a positive-density fixed-margin TB1 population,
+    with a linear robust subpopulation against one common
+    inverse-D near-triangular column scaffold;
+
+or
+
+(B) positive linear density of arbitrarily deep exact-phase cells,
+    all row axes in one O(1/D) phase window,
+    all using the same >0.0783 D ordered column family,
+    each center carrying a bilateral central two-sided force diamond,
+    a Theta(D)-rank dipole subspace with uniform normalized coercivity,
+    and an Omega(D^(1/4)) window/vertex-disjoint complete crossing braid
+    whose every deep window uses that same column family.
+```
+
+The remaining closure problem is geometric, not a missing compactness, conditioning, disjointness, or phase-synchronization step: force the bilateral diameter endpoint/braid order, or the fixed-margin TB1 bars, to contradict the same ordered inverse-`D` train grid, or turn that incompatibility into an exact unit triangle or finite diameter descent.
+
+No such final incompatibility is proved here. C-II and Level I remain open.
+
+**Disposition:** proved a common-grid version of the robust high-`t` fork and embedded the positive-density deep two-sided force cells, their linear-rank coercive dipole space, and their disjoint complete-crossing braid into one globally phase-collapsed ordered linear-column near-triangular train scaffold. C-II and Level I remain open.

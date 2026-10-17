@@ -1,0 +1,365 @@
+# Erdos Problem #99 - weighted outer-flex floor and near-equality classification
+
+**Date:** 2026-09-14
+**Target:** C-II, canonical full-core Type-II branch
+**Dependencies:** minimax phase-star atomic gap `g=0.0021`; actual-outer/flat-pentagon endpoint gate; audited Section 156 train-angle closure coordinates; flat-pentagon three-phase stability
+**Claim class:** proof-only structural theorem awaiting independent audit
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The outer-supported private-kernel argument should be combined with the weighted endpoint gate before splitting into an outer-to-outer-rich or outer-to-flat-rich branch. Doing so gives a substantially stronger universal structured-flex floor and, more importantly, a sharp stability description of near equality.
+
+Let
+
+- `L_OO` be the number of complete trains with both terminal occurrences on the actual outer face;
+- `L_OF` count complete trains with one actual-outer terminal and one terminal on a metrically good flat pentagon;
+- `r_P` be the number of such outer-to-flat trains ending on a good pentagon `P`;
+- `G` be the number of good pentagons receiving at least one such train; and
+- `p:=sum_P(r_P-2)_+`.
+
+The exact closure-coordinate argument gives an outer-supported kernel
+
+\[
+\boxed{\dim K_{out}\ge L_{OO}+p.}
+\tag{WF.1}
+\]
+
+After quotienting global rotation, the non-Euclidean contact-flex dimension loses at most one, irrelevant at `D` scale.
+
+On an `R_F=o(D)` Type-II subsequence write
+
+\[
+t={q-k\over D}\to t,\qquad
+\delta={b-P_F\over D}\to\delta,\qquad
+\kappa={k\over D}\to\kappa.
+\]
+
+Put
+
+\[
+s=\sqrt{\Delta_2},\qquad \Delta_2={\pi\over2\sqrt3},\qquad
+g=0.0021,\qquad C_g=2s+g.
+\]
+
+The actual-outer endpoint gate and the current atomic theorem give
+
+\[
+{2L_{OO}+L_{OF}\over D}
+\ge R(t,\delta,\kappa)-o(1),
+\tag{WF.2}
+\]
+
+where
+
+\[
+R(t,\delta,\kappa)
+:=7\pi+3C_g-{27t\over2}+7\delta+{3\kappa\over2}.
+\tag{WF.3}
+\]
+
+The exact outer ledger gives
+
+\[
+{Q\over D}=q_0(t,\delta)+o(1),
+\qquad
+q_0(t,\delta):=2t-\pi-\delta,
+\tag{WF.4}
+\]
+
+and `G<=Q`.
+
+The sharp weighted consequence is
+
+\[
+\boxed{
+\liminf {\dim K_{out}\over D}
+\ge F(t,\delta,\kappa),
+}
+\tag{WF.5}
+\]
+
+with
+
+\[
+\boxed{
+F(t,\delta,\kappa)
+:={R-2q_0\over2}
+={9\pi\over2}+{3C_g\over2}-{35t\over4}
++{9\delta\over2}+{3\kappa\over4}.
+}
+\tag{WF.6}
+\]
+
+At the safe current endpoint
+
+\[
+t_{21}={4\over9}(\pi+s)+0.0017279,
+\]
+
+and after dropping the nonnegative bonuses,
+
+\[
+\boxed{F(t_{21},0,0)=1.061392779\ldots .}
+\tag{WF.7}
+\]
+
+This is almost twice the `0.56049D` floor obtained by first replacing `L_OO+L_OF` with half of `2L_OO+L_OF`.
+
+The same algebra has a useful stability statement. Let `N_{=2}` be the number of good pentagons carrying exactly two outer-to-flat trains. If along a subsequence
+
+\[
+{\dim K_{out}\over D}
+\le F(t,\delta,\kappa)+\eta+o(1),
+\tag{WF.8}
+\]
+
+then
+
+\[
+\boxed{{p\over D}\le2\eta+o(1),}
+\tag{WF.9}
+\]
+
+\[
+\boxed{{L_{OO}\over D}\ge F(t,\delta,\kappa)-\eta-o(1),}
+\tag{WF.10}
+\]
+
+and
+
+\[
+\boxed{{N_{=2}\over D}\ge q_0(t,\delta)-2\eta-o(1).}
+\tag{WF.11}
+\]
+
+The two trains belonging to different `N_{=2}` faces are automatically distinct. On the slow flatness scale, their projective axes are either `o(1)` apart or `pi/3+o(1)` apart. Pigeonholing the two types therefore gives a pairwise train-disjoint coherent hinge family of size
+
+\[
+\boxed{
+{H_{coh}\over D}
+\ge {q_0(t,\delta)\over2}-\eta-o(1).
+}
+\tag{WF.12}
+\]
+
+Thus the sharp flex floor has a rigid near-equality endpoint: either the localized flex space is larger than its scalar minimum, or essentially every exceptional-face slot is occupied by an exact two-outer-train flat pentagon while more than one full `D` of outer-to-outer train shears coexist with it.
+
+## 1. Exact private-column dimension
+
+Every outer-to-outer train is a zero column of `C_face`, giving `L_OO` independent train-angle kernel coordinates. For a good pentagon `P`, its `r_P` outer-to-flat train columns occur only in the two closure rows of `P`, so their local kernel dimension is at least `(r_P-2)_+`. Different pentagons use disjoint outer-to-flat train sets, and those sets are disjoint from outer-to-outer trains. This proves (WF.1).
+
+## 2. Weighted optimization without branch splitting
+
+Set, after normalization by `D`,
+
+\[
+x={L_{OO}\over D},\qquad y={L_{OF}\over D},\qquad \rho={p\over D},\qquad q={Q\over D}.
+\]
+
+Write
+
+\[
+y=s_2+\rho,
+\qquad
+s_2:={1\over D}\sum_P\min(r_P,2).
+\tag{WF.13}
+\]
+
+Since `G<=Q`,
+
+\[
+s_2\le {2G\over D}\le2q.
+\tag{WF.14}
+\]
+
+The endpoint gate is
+
+\[
+2x+y\ge R-o(1).
+\]
+
+Therefore
+
+\[
+\begin{aligned}
+2(x+\rho)
+&=(2x+y)+(\rho-s_2)\\
+&\ge R-2q+\rho-o(1).
+\end{aligned}
+\tag{WF.15}
+\]
+
+Dropping the nonnegative `rho/2` term proves
+
+\[
+x+\rho\ge {R-2q\over2}-o(1),
+\]
+
+which is (WF.5)--(WF.6). This is the exact scalar minimization; no case split on `L_OO` versus `L_OF` is required.
+
+Equation (WF.15) actually records more:
+
+\[
+\boxed{x+\rho\ge F+{\rho\over2}-o(1).}
+\tag{WF.16}
+\]
+
+This is the source of near-equality rigidity.
+
+## 3. Stability of the private excess
+
+Assume (WF.8). Combining it with (WF.16) gives
+
+\[
+\rho\le2\eta+o(1),
+\]
+
+which proves (WF.9).
+
+Also `y=s_2+rho<=2q+rho`. From the endpoint gate,
+
+\[
+2x\ge R-y-o(1)\ge R-2q-\rho-o(1)=2F-\rho-o(1).
+\]
+
+Hence
+
+\[
+x\ge F-\rho/2-o(1)\ge F-\eta-o(1),
+\]
+
+which proves (WF.10).
+
+## 4. Exact-two-face stability
+
+The endpoint gate and the upper bound in (WF.8) also imply a lower bound on `s_2`. Since `x+rho<=F+eta+o(1)`,
+
+\[
+x\le F+\eta-\rho+o(1).
+\]
+
+Substitute in `2x+s_2+rho>=R-o(1)` and use `2F=R-2q`:
+
+\[
+s_2\ge2q-2\eta+\rho-o(1).
+\tag{WF.17}
+\]
+
+Let `N_{>=2}` be the number of good pentagons with `r_P>=2` and `N_{>=3}` the number with `r_P>=3`. Since
+
+\[
+s_2=N_1+2N_{>=2},
+\qquad
+G=N_0+N_1+N_{>=2},
+\]
+
+we have
+
+\[
+N_{>=2}\ge s_2-G.
+\]
+
+Using `G<=qD+o(D)` and (WF.17),
+
+\[
+{N_{>=2}\over D}\ge q-2\eta+\rho-o(1).
+\tag{WF.18}
+\]
+
+Each face counted by `N_{>=3}` contributes at least one to `p`, so
+
+\[
+{N_{>=3}\over D}\le\rho.
+\]
+
+Therefore
+
+\[
+{N_{=2}\over D}
+={N_{>=2}-N_{>=3}\over D}
+\ge q-2\eta-o(1),
+\]
+
+proving (WF.11).
+
+## 5. Coherent hinge extraction
+
+Each face counted by `N_{=2}` has exactly two outer-to-flat terminal trains. Different faces use disjoint train pairs because an outer-to-flat train has only one bounded endpoint.
+
+Flat-pentagon stability places all five terminal train axes in three shrinking projective neighborhoods of the triangular-lattice phases. Thus the unique pair at each `N_{=2}` face has projective separation either `o(1)` or `pi/3+o(1)`. Split the faces into these two classes. One class has at least half the faces, proving (WF.12).
+
+No crossing between the two trains is asserted. The theorem records only their exact common bounded endpoint and asymptotic phase relation.
+
+## 6. Numerical endpoint
+
+At `t=t_21`, `delta=kappa=0`, the companion certificate gives
+
+\[
+q_0=0.500890222369096\ldots,
+\]
+
+\[
+R=3.124565998763791\ldots,
+\]
+
+\[
+F=1.061392779012799\ldots .
+\]
+
+For example, choose `eta=0.005`. Then every low-t, small-residual survivor satisfies one of:
+
+\[
+\boxed{{\dim K_{out}\over D}\ge1.0663927790\ldots-o(1),}
+\tag{WF.19}
+\]
+
+or simultaneously
+
+\[
+\boxed{{L_{OO}\over D}\ge1.0563927790\ldots-o(1),}
+\tag{WF.20}
+\]
+
+\[
+\boxed{{N_{=2}\over D}\ge0.4908902223\ldots-o(1),}
+\tag{WF.21}
+\]
+
+and
+
+\[
+\boxed{{H_{coh}\over D}\ge0.2454451111\ldots-o(1).}
+\tag{WF.22}
+\]
+
+The example `eta` is arbitrary; (WF.8)--(WF.12) are the theorem.
+
+## 7. Frontier effect
+
+This removes a large amount of combinatorial ambiguity from the outer-supported branch. The sharp low-t endpoint is not merely forced to have a large contact-flex space. Near the smallest possible such space it must have, simultaneously,
+
+```text
+~1.06 D actual outer-to-outer train shears,
+~0.50 D flat pentagons carrying exactly two outer-to-flat trains,
+~0.25 D train-disjoint coherent hinge pairs of one phase type,
+and only o(D) private excess beyond two outer trains per face.
+```
+
+A closing theorem can now target the diameter-thrackle action on this near-equality model. For an exact-two hinge, the difference of the two outer-train coordinates is the natural local mode; diameter rows that see the two associated cuts identically cancel on that mode. The missing step is a finite circular-order/metric theorem bounding the rank supplied by diameter rows that distinguish linearly many such paired cuts.
+
+This note does not assert that such a rank bound is already known and does not infer a same-diameter motion from the hinge count alone.
+
+## 8. Scope audit
+
+- The theorem is conditional on the existing low-t `R_F=o(D)` actual-outer endpoint gate.
+- `p` counts full private-column excess; no one-mode-per-face thinning is used.
+- Global rotation can reduce finite non-Euclidean dimension by at most one; all normalized statements absorb this in `o(1)`.
+- `G<=Q` is the only face-count upper bound used in the weighted optimization.
+- The exact-two conclusion is a stability statement conditional on (WF.8); it is not asserted unconditionally.
+- The coherent hinge classification uses only flat-pentagon phase stability; no actual train crossing is inferred.
+- Constants use the current independently audited `g=0.0021` theorem and safe `t_21` floor.
+- No exact unit triangle or same-cardinality strict sub-D competitor is produced.
+
+**Disposition:** new proof-only sharp weighted floor and near-equality reduction. C-II and Level I remain open.

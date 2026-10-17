@@ -1,0 +1,50 @@
+<!-- theorem-state: {"artifact_id":"ART-9FBDB7786686","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Erdős Problem #99 — first-transition scan
+
+## Purpose
+
+This finite scan tests one-point escape at the first triangle-producing member of a small triangular-lattice source-capacity flag. The floating-point enumeration is in [`research/transition_scan.py`](../../research/transition_scan.py), and [`research/exact_lattice_transition.py`](../../research/exact_lattice_transition.py) gives an exact axial-coordinate cross-check.
+
+## Correction: the relevant criterion uses a closed semicircle
+
+The earlier version of this report used the strict first-order condition that all active contact directions fit in an **open** semicircle, then treated failure as local isolation. That was too strong. If the directions fit in a **closed** semicircle, a nonzero small motion can preserve contacts whose first derivative vanishes because their squared distances open quadratically.
+
+Thus, with all other points fixed and considering only unit contacts,
+
+\[
+\boxed{
+\text{local isolation}
+\iff
+\text{the contact directions fit in no closed semicircle}.
+}
+\]
+
+For the six triangular-lattice directions, a complementary circular gap of exactly \(\pi\) is escapable, not caged. The corrected predicate is implemented in [`research/escape_cone.py`](../../research/escape_cone.py).
+
+## Corrected counts
+
+For `[0,2] x [0,2]` there are 8 capacity points and 151 triangle-free subshores. Their first bad transitions contain 191 unit triangles:
+
+| status | count |
+| --- | ---: |
+| locally isolated by unit contacts | 32 |
+| finite one-point escape in the unit-contact slice | 159 |
+
+For `[0,3] x [0,3]` there are 14 capacity points and 5,339 triangle-free subshores. Their first bad transitions contain 6,891 unit triangles:
+
+| status | count |
+| --- | ---: |
+| locally isolated by unit contacts | 352 |
+| finite one-point escape in the unit-contact slice | 6,539 |
+
+The former caged counts 112 and 3,560 included closed-semicircle boundary cases and must not be used. The corrected counts agree with the exact axial-coordinate scan.
+
+The first bad steps still occur at steps 1 through 4 in the 8-point case and steps 1 through 5 in the 14-point case. Each step in these same-lattice flags inserts one new capacity point, so the remaining isolated cases are genuine one-point unit-contact cages.
+
+## Limitation
+
+The scan omits upper diameter constraints and container facets. Therefore an `escapable` label does not certify a feasible Target A motion. A `caged` label is stronger: adding more constraints cannot create a one-point escape.
+
+The qualitative regression survives. Small exact flags contain genuinely isolated first-transition vertices, and Target A Section 139.1 gives a symbolic two-leaf family in which both leaf orders create a caged unit triangle. One-point leaf perturbation alone therefore cannot close Target A.
+
+This is a finite regression only, not a global counterexample to Erdős Problem #99.

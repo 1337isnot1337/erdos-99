@@ -1,0 +1,328 @@
+# Erdős Problem #99 — AG47 propagation through the Type-II scalar and defect ledgers
+
+**Date:** 2026-09-14
+**Repository base:** `d03ba81c`
+**Target:** Target C-II canonical full-core Type-II branch
+**Claim class:** proof-only propagation of AG47
+**External input:** none
+**Computation:** exact-rational sign certificate for the Section-171 endpoint
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The chain-cover refinement proves the proof-only atomic gap
+
+\[
+\eta_{grid}=0.00047.
+\]
+
+This note propagates that single improvement through the already-established correlated
+stopped-train, Section-171 orbit/detour, chamber-interface, and residual-budget ledgers.
+No new geometric theorem is introduced here.
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+s_2=\sqrt{\Delta_2},
+\qquad
+\rho=0.7390851332151606\ldots,
+\]
+
+where `rho=cos(rho)` is the canonical difference-body constant, and
+
+\[
+C_{146}={4\over9}(\pi+s_2).
+\]
+
+## 1. Correlated stopped-train split
+
+The exact identity
+
+\[
+\rho_{rec}+\sigma_R-q
+=2\left(T-{q\over2}-2\sqrt{R_4}\right)
+\]
+
+and AG47 give
+
+\[
+\boxed{
+\liminf {\rho_{rec}+\sigma_R-q\over D}\ge0.00094.
+}
+\tag{P47.1}
+\]
+
+Using `q/D>=2rho-o(1)`,
+
+\[
+\boxed{
+\liminf {\rho_{rec}+\sigma_R\over D}
+\ge2\rho+0.00094
+=1.479110266430321\ldots .
+}
+\tag{P47.2}
+\]
+
+Hence at least one of
+
+\[
+\boxed{
+S={\rho_{rec}\over2}
+\ge(\rho/2+0.000235-o(1))D
+=0.369777566607580\ldots D-o(D),
+}
+\tag{P47.3}
+\]
+
+or
+
+\[
+\boxed{
+\sigma_R\ge(\rho+0.00047-o(1))D
+=0.739555133215160\ldots D-o(D)
+}
+\tag{P47.4}
+\]
+
+must hold.
+
+On the rhombic branch, the exact rationalization
+
+\[
+M_R={\sigma_R\over8}
+\left(4\sqrt{R_4}+{\sigma_R\over2}\right)
+\]
+
+gives
+
+\[
+\boxed{
+\liminf {M_R\over D^2}
+\ge {\rho+0.00047\over8}
+\left(4s_2+{\rho+0.00047\over2}\right)
+=0.386327774562944\ldots .
+}
+\tag{P47.5}
+\]
+
+The exact post-endpoint scalar identity similarly improves to
+
+\[
+\boxed{
+\liminf\mu_D
+\ge\mu_{TC}+{\rho\over5}+{0.00047\over5}
+=1.785473210824532\ldots .
+}
+\tag{P47.6}
+\]
+
+The direct correlated endpoint/interface floor becomes
+
+\[
+\boxed{
+\liminf {J\over D}
+\ge2\rho+4s_2-\pi+0.00094
+=2.146768840296357\ldots .
+}
+\tag{P47.7}
+\]
+
+This is weaker than the Section-171 floor below, but is independent of the additional
+orbit/detour scalar envelope.
+
+## 2. Section-171 endpoint with `g=0.00047`
+
+Audited Section 171 reduces every Type-II subsequential limit
+
+\[
+t=\lim{q-k\over D},
+\qquad
+\delta=\lim{b-P_F\over D}\ge0
+\]
+
+to
+
+\[
+F_t(\delta)=
+10t-5\pi-5\delta
++\left(81(\pi+\delta)^2\delta\right)^{1/3}
+-{8\Delta_2\over9t/2-2\pi-2\delta}
+\ge0.
+\tag{P47.8}
+\]
+
+With train gain `g`, the feasible detour interval is
+
+\[
+0\le\delta\le
+{{9\over2}(t-C_{146})-g\over2}.
+\tag{P47.9}
+\]
+
+Set
+
+\[
+g=0.00047,
+\qquad
+\varepsilon_{47}=0.0013855,
+\qquad
+t_{47}=C_{146}+\varepsilon_{47}.
+\tag{P47.10}
+\]
+
+Then the right endpoint is
+
+\[
+\delta_{47}=0.002882375.
+\tag{P47.11}
+\]
+
+The exact-rational certificate verifies:
+
+1. `F_{t47}` is strictly increasing throughout the feasible detour interval;
+2. `F_{t47}(delta47)<0` with a positive outward-rounding margin; and
+3. Section 171's derivative in `t` is positive on the same domain.
+
+Therefore no feasible Type-II limit has `t<=t47`, and
+
+\[
+\boxed{
+\liminf {q-k\over D}
+\ge C_{146}+0.0013855
+=1.820899037979444\ldots .
+}
+\tag{P47.12}
+\]
+
+A high-precision numerical root of the unchanged envelope is
+
+\[
+C_{146}+0.00138568661018\ldots,
+\]
+
+so the stated value retains a safe margin.  As with AG42, further decimal tuning of
+this same scalar envelope is not a useful route.
+
+## 3. Stronger mandatory chamber/interface layer
+
+AG47 gives
+
+\[
+{T-q/2\over D}\ge2s_2+0.00047-o(1).
+\]
+
+Using the exact identity `J=2T-P_F` and (P47.12),
+
+\[
+\boxed{
+\liminf {J\over D}
+\ge j_{47}:=t_{47}+2(2s_2+0.00047)-\pi
+=2.489497611845481\ldots .
+}
+\tag{P47.13}
+\]
+
+The exact chamber decomposition
+
+\[
+\Sigma_{ch}=J+a+L_{add}+R_F
+\]
+therefore gives
+
+\[
+\boxed{
+\liminf {\Sigma_{ch}\over D}
+\ge2.489497611845481\ldots .
+}
+\tag{P47.14}
+\]
+
+Again, this is mandatory boundary/interface credit, not by itself repacking spare.
+
+## 4. Exact H bootstrap and rhombus deficit
+
+The exact relation
+
+\[
+H={J\over2}+(q-k)-{P_F\over2}
+\]
+
+with `P_F/D->pi` gives
+
+\[
+\boxed{
+\liminf {H\over D}
+\ge h_{47}:={j_{47}\over2}+t_{47}-{\pi\over2}
+=1.494851517107288\ldots .
+}
+\tag{P47.15}
+\]
+
+Hence
+
+\[
+\boxed{
+\liminf {A_{ch}-a_0Z_{ch}\over D}
+\ge {\sqrt3\over4}h_{47}
+=0.647289694350310\ldots,
+}
+\tag{P47.16}
+\]
+
+and
+
+\[
+\boxed{
+\liminf {\Delta_2D^2-R_4\over D}
+\ge {h_{47}\over2}
+=0.747425758553644\ldots .
+}
+\tag{P47.17}
+\]
+
+## 5. Corrected residual budget
+
+The finite corrected residual cap remains
+
+\[
+R_F+\Sigma_{ext}
+<{P_K\over2}+P_F-q-{\delta_K+E_4\over a_0}.
+\]
+
+Using `q>=q-k`, `P_K,P_F<=pi D`, and (P47.12) gives the slightly sharper explicit
+first-order ceiling
+
+\[
+\boxed{
+\limsup {R_F+\Sigma_{ext}\over D}
+\le {3\pi\over2}-t_{47}
+=2.891489942405245\ldots .
+}
+\tag{P47.18}
+\]
+
+The gain is numerically small, but it propagates in the correct direction: AG47 raises
+the mandatory interface floor while lowering the genuine residual budget ceiling.
+
+## 6. Research-state effect
+
+AG47 materially strengthens the current full-core split but still does not close C-II.
+The two hard mechanisms are now quantitatively:
+
+```text
+singleton branch:
+    at least 0.3697775666 D singleton stopped trains;
+
+rhombic branch:
+    sigma_R >= 0.7395551332 D,
+    M_R >= 0.3863277746 D^2.
+```
+
+The Section-171 scalar floor is effectively saturated relative to its current analytic
+envelope.  Further progress should attack one of those two geometric mechanisms, not
+continue tuning the scalar endpoint.
+
+**Disposition:** proof-only AG47 propagation. C-II remains open.

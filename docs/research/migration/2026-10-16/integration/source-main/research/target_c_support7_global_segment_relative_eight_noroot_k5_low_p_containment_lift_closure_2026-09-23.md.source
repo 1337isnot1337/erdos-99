@@ -1,0 +1,241 @@
+# Target C: close the eight-no-root `k=5` low-`p` branches by lifting five-row slack-two containment
+
+Date: 2026-09-23
+
+Status: rigorous proof-level closure of two of the five arithmetic branches in the eight-no-root `k=5` layer. This uses the certified five-no-root rank-three slack-two theorem. No new exhaustive computation is used. It does not close the other three `k=5` branches, Target C-II, or Erdos Problem #99, and it does not change canonical theorem-state authority.
+
+Inputs:
+
+- `research/target_c_support7_global_segment_relative_eight_noroot_k6_layer_closure_k5_two_clean_reduction_2026-09-23.md`, which reduces the `k=5` layer to five arithmetic branches and gives `rank(P)=3`;
+- `research/verify_target_c_support7_global_segment_relative_five_noroot_k2_slack_2026_09_20.py`, whose certified five-row theorem says that for a rank-three five-row coefficient space obtainable from empty-block constraints plus at most two singleton-block constraints, the virtual complete-block deficiency is at least one and every external nullspace relation lies in the virtual complete-block relation span.
+
+The preceding branch-specific note
+
+`research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus2_d1p2_sharp_singletons_2026-09-23.md`
+
+remains valid, but the new lift below makes its detailed touch/coset endpoint unnecessary for closing the `p=2` branch.
+
+## 1. Rank-three eight-row setup
+
+Let
+
+`B=R union E`, `|E|=8`,
+
+be an eight-no-root state with
+
+```text
+k(B)=5
+```
+
+and let
+
+`P <= Q^8`
+
+be its external coefficient-constraint space. Then
+
+```text
+rank(P)=3.
+```
+
+Put
+
+`N = null(P) <= Q^8`.
+
+Hence
+
+```text
+dim N = 5.
+```
+
+Assume throughout this note that the total selected incomplete-root cost satisfies
+
+```text
+p<=2.
+```
+
+An incomplete singleton block contributes at most one local coefficient-constraint line; a pair or complete state contributes none; empty blocks contribute their empty-state constraint spaces. Therefore the actual eight-row realization obtains `P` from empty-block constraints plus at most two singleton-block constraints.
+
+For a three-set `J subset E`, call `J` **good** when deleting the coordinates in `J` preserves `rank(P)=3`. Let
+
+```text
+P_J = pi_J(P),
+N_J = {alpha in N : alpha_j=0 for all j in J}.
+```
+
+For good `J`, extension by zero on `J` identifies `N_J` with `null(P_J)`, so
+
+```text
+dim N_J = 2.
+```
+
+The five-row punctured actual state still uses at most the same two singleton incomplete blocks. Consequently `P_J` is obtainable from projected empty-block constraints plus at most two projected singleton constraints, and the certified five-row slack-two theorem applies to every good `J`.
+
+## 2. Every good triple supplies deficiency and external containment
+
+Fix a good triple `J`.
+
+Let `C_J` be the virtual-canonical complete-block set of the five-row puncture. The certified five-row theorem gives
+
+```text
+d_J = |C_J| - rank H(C_J) >= 1,               (2.1)
+```
+
+and
+
+```text
+L_J(N_J) subset H(C_J),                        (2.2)
+```
+
+where `L_J` denotes the canonical external-relation map in the punctured state.
+
+Let `C` be the eight-row virtual-canonical complete-block set relative to `P`. If a block is globally virtual-empty, its empty constraint is contained in `P`, so after puncturing its projected empty constraint is contained in `P_J`. Therefore
+
+```text
+C_J subset C.                                  (2.3)
+```
+
+The containment (2.2) lifts to the eight-row relation space for every `alpha in N_J`.
+
+Indeed, take a block `b in C\C_J`. If `b` becomes untouched after deleting `J`, every deleted contribution is multiplied by an `alpha`-coordinate in `J`, hence vanishes because `alpha_J=0`. If `b` remains touched but becomes virtual-empty, its projected empty constraint is contained in `P_J`, so the punctured null vector `alpha` annihilates its local quotient demand. Thus restoring the deleted coordinates adds no demand at any block omitted from `C_J`.
+
+Hence
+
+```text
+L(alpha) in H(C)                                (2.4)
+```
+
+for every `alpha in N_J` and every good triple `J`.
+
+## 3. Coordinate-basis triples span the full nullspace
+
+Let
+
+```text
+Q = Q^8 / P.
+```
+
+Since `dim Q=5` and the eight coordinate classes span `Q`, choose five coordinates
+
+```text
+B_0={i_1,...,i_5}
+```
+
+whose classes
+
+```text
+e_{i_r}+P
+```
+
+form a basis of `Q`.
+
+Every three-subset `J subset B_0` is good. A rank loss on such a deletion would mean that `P` contains a nonzero vector supported on `J`, equivalently that the three corresponding coordinate classes in `Q` are linearly dependent. They are members of a basis, so this cannot happen.
+
+Use the perfect pairing
+
+```text
+Q x N -> Q,
+(x+P, alpha) -> alpha dot x.
+```
+
+The five coordinate classes from `B_0` give a basis of `N^*`. In the resulting dual coordinate system on `N`, for a three-subset `J subset B_0`, the space `N_J` is exactly the two-dimensional coordinate plane obtained by setting the three coordinates indexed by `J` to zero.
+
+As `J` ranges over the ten three-subsets of `B_0`, these two-dimensional planes span all of `N`: every coordinate axis lies in one of them. Therefore
+
+```text
+N = span( N_J : J subset B_0, |J|=3 ).         (3.1)
+```
+
+Combining (2.4) and (3.1), and using linearity of the canonical external-relation map,
+
+```text
+L(N) subset H(C).                               (3.2)
+```
+
+Thus the full eight-row external-containment property follows from the five-row slack-two theorem.
+
+## 4. The global virtual deficiency is at least one
+
+For any three-subset `J subset B_0`, equations (2.1) and (2.3) give a punctured complete set `C_J subset C` with deficiency at least one.
+
+The complete-block relation rows are the same root-block `T` relations before and after puncturing. Adding complete-block rows cannot reduce row nullity. Hence
+
+```text
+d = |C| - rank H(C) >= d_J >= 1.               (4.1)
+```
+
+## 5. Low-`p` global defect bound
+
+Let `q` be the number of globally virtual-complete blocks changed to incomplete states in the actual eight-row state.
+
+A globally virtual-complete block cannot be actual-empty, because its empty constraint is not contained in `P`. Every changed virtual-complete block therefore uses at least one selected incomplete-root row, so
+
+```text
+q<=p.                                           (5.1)
+```
+
+The standard virtual-canonical accounting is valid globally because of (3.2). With eight no-root rows,
+
+```text
+D(B) >= 8 + p + 3d - 3q.                        (5.2)
+```
+
+Using (4.1) and (5.1),
+
+```text
+D(B) >= 8 + p + 3 - 3p
+     = 11 - 2p.                                  (5.3)
+```
+
+Therefore every eight-no-root rank-three state with `p<=2` satisfies
+
+```text
+p=0 -> D>=11,
+p=1 -> D>=9,
+p=2 -> D>=7.
+```
+
+In particular, no such state can have negative defect.
+
+## 6. Two `k=5` arithmetic branches close
+
+The exact `k=5` arithmetic boundary is
+
+```text
+D=-2: (d_root,p)=(0,5),(1,2)
+D=-1: (d_root,p)=(0,6),(1,3),(2,0).
+```
+
+Equation (5.3) excludes both low-`p` branches:
+
+```text
+D=-2, (d_root,p)=(1,2),
+D=-1, (d_root,p)=(2,0).
+```
+
+Hence only three eight-no-root `k=5` branches remain:
+
+```text
+D=-2, (d_root,p)=(0,5),
+D=-1, (d_root,p)=(0,6),
+D=-1, (d_root,p)=(1,3).
+```
+
+This strictly improves the preceding five-branch frontier.
+
+## 7. Reusable lift principle
+
+The proof isolates a general mechanism that can be reused below `k=5`.
+
+Suppose an `n`-coordinate coefficient space `P` has quotient dimension `m`, and a certified puncture theorem gives external containment after deleting every `r`-subset of some coordinate basis of `Q^n/P`. If those punctured nullspaces have dimension `m-r` and their coordinate subspaces span the parent nullspace, then containment lifts globally, provided blocks omitted from the punctured virtual-complete set have zero demand on the punctured null vectors.
+
+Here
+
+```text
+m=5,
+r=3,
+m-r=2,
+```
+
+and all ten three-subsets of a five-coordinate quotient basis are available.
+
+No new verifier result, finite census, or unexecuted code is used as evidence in this closure.

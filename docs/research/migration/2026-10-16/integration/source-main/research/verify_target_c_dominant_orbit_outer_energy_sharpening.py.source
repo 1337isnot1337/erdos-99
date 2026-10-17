@@ -1,0 +1,146 @@
+#!/usr/bin/env python3
+"""Regression certificate for the shore-balanced joint orbit-energy floor.
+
+The companion proof combines eta_grid=0.00059, quadratic dominant-orbit
+concentration, and the already-merged joint route cost Phi.  This script checks the
+safe endpoint, root bracket, and conservative derivative envelopes.
+"""
+
+from decimal import Decimal, getcontext
+
+getcontext().prec = 100
+D = Decimal
+PI = D("3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117068")
+SQRT3 = D(3).sqrt()
+DELTA2 = PI / (D(2) * SQRT3)
+S2 = DELTA2.sqrt()
+C0 = D(2) * S2 + D("0.00059")
+T_SAFE = D("1.82439")
+
+
+def sin_decimal(x: Decimal) -> Decimal:
+    term = x
+    total = term
+    n = 1
+    sign = -1
+    while True:
+        term = term * x * x / D((2 * n) * (2 * n + 1))
+        old = total
+        total = total + term if sign > 0 else total - term
+        if total == old:
+            return total
+        sign *= -1
+        n += 1
+        assert n < 300
+
+
+def cos_decimal(x: Decimal) -> Decimal:
+    term = D(1)
+    total = term
+    n = 1
+    sign = -1
+    while True:
+        term = term * x * x / D((2 * n - 1) * (2 * n))
+        old = total
+        total = total + term if sign > 0 else total - term
+        if total == old:
+            return total
+        sign *= -1
+        n += 1
+        assert n < 300
+
+
+def L(a: Decimal) -> Decimal:
+    return ((D(1) + sin_decimal(a)) / cos_decimal(a)).ln()
+
+
+def a_from_mass(z: Decimal) -> Decimal:
+    lo = D(0)
+    hi = PI / D(6)
+    target = z / D(6)
+    for _ in range(380):
+        mid = (lo + hi) / D(2)
+        if L(mid) < target:
+            lo = mid
+        else:
+            hi = mid
+    return (lo + hi) / D(2)
+
+
+def Phi(z: Decimal) -> Decimal:
+    return z - D(6) * a_from_mass(z)
+
+
+def R(t: Decimal) -> Decimal:
+    return D("4.5") * t - D(2) * PI - C0
+
+
+S0 = (D(8) * DELTA2 - C0 * C0).sqrt()
+
+
+def K_boundary(t: Decimal) -> Decimal:
+    # kappa=0, delta=R(t)/2, U=C0
+    return PI + R(t) / D(2) - t - C0 + S0
+
+
+def H_boundary(t: Decimal) -> Decimal:
+    return Phi(K_boundary(t)) - R(t) / D(2)
+
+
+# Quadratic concentration strictly improves the generic orbit estimate at C0.
+quad_m = (C0 + S0) / D(2)
+old_m = D(4) * DELTA2 / C0
+assert quad_m > old_m + D("0.00058")
+
+# Safe endpoint and root bracket.
+safe_margin = H_boundary(T_SAFE)
+assert safe_margin > D("0.0000036")
+root_lo = D("1.82439162")
+root_hi = D("1.82439163")
+assert H_boundary(root_lo) > 0
+assert H_boundary(root_hi) < 0
+
+# The joint dual optimizer stays in its interior range.
+assert K_boundary(T_SAFE) < D(3) * D(3).ln()
+
+# Positivity of K in the excluded region: at fixed t it increases with delta and
+# kappa, so the minimum is delta=kappa=0 at the largest t.
+U_zero = D("4.5") * T_SAFE - D(2) * PI
+K_min = PI - T_SAFE - U_zero + (D(8) * DELTA2 - U_zero * U_zero).sqrt()
+assert K_min > D("1.27")
+
+# Conservative delta-monotonicity envelope.
+S_min = (D(8) * DELTA2 - U_zero * U_zero).sqrt()
+dK_ddelta_max = D(3) + D(2) * U_zero / S_min
+assert dK_ddelta_max < D("5.05")
+
+# K < pi + delta - t, with delta <=R/2, is below 1.33 over the excluded interval.
+a_133 = a_from_mass(D("1.33"))
+Phi_prime_133 = D(1) - cos_decimal(a_133)
+assert Phi_prime_133 < D("0.025")
+assert dK_ddelta_max * Phi_prime_133 < D("0.127") < D(1)
+
+# Kappa monotonicity is positive because U>S(U) in this domain.
+dK_dkappa_at_C0 = (C0 / S0 - D(1)) / D(2)
+assert dK_dkappa_at_C0 > 0
+
+# Boundary scalar is strictly decreasing: K_boundary'=5/4.
+assert D("1.25") * Phi_prime_133 < D("0.032") < D("2.25")
+
+print("Delta2 =", DELTA2)
+print("C0 =", C0)
+print("quadratic dominant mass at C0 =", quad_m)
+print("generic dominant mass at C0 =", old_m)
+print("improvement =", quad_m - old_m)
+print("t_safe =", T_SAFE)
+print("K_boundary(t_safe) =", K_boundary(T_SAFE))
+print("R(t_safe)/2 =", R(T_SAFE) / D(2))
+print("H_joint(t_safe) =", safe_margin)
+print("root bracket =", root_lo, root_hi)
+print("H(root_lo) =", H_boundary(root_lo))
+print("H(root_hi) =", H_boundary(root_hi))
+print("K_min =", K_min)
+print("dK/ddelta max =", dK_ddelta_max)
+print("Phi_prime(1.33) =", Phi_prime_133)
+print("derivative product =", dK_ddelta_max * Phi_prime_133)
+print("PASS: shore-balanced joint orbit-energy floor t >= 1.82439")

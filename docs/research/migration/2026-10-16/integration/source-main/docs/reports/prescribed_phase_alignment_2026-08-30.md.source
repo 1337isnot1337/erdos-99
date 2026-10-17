@@ -1,0 +1,53 @@
+<!-- theorem-state: {"artifact_id":"ART-566B7C31BB0B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Prescribed-phase source/scaffold alignment — audit report
+
+**Run type:** theorem promotion / Target A source-to-response audit  
+**Repository state at promotion:** v1.7.3 plus Sections 154–155  
+**Level I status:** STILL OPEN
+
+The canonical proof is in
+[`docs/targets/target-a/08-prescribed-phase-alignment.md`](../targets/target-a/08-prescribed-phase-alignment.md).
+This report records the promotion decision and scope audit.
+
+## Promoted results
+
+For the genuine source \(A\subset H\), every prescribed rotated/translated unit
+triangular lattice phase \(Y=\Lambda'\cap H\) satisfies
+\[
+\nu(Y,A)\ge |Y|-\widehat p_H,\qquad
+M-|Y|\le \frac76\operatorname{per}H+1,
+\]
+where \(M=\alpha_1(H)=N+\widehat p_H\). The proof is the exact fixed-source Hall
+inequality plus inner-parallel-body Voronoi counting and Oler's inequality; no
+zero-slack assumption is made.
+
+For an independently chosen smaller optimum \(X_m\), the compatible collar
+\(L=\operatorname{conv}(X_m)+t\mathbb B\) and the source hull \(H\) have a common
+circumcenter placement with Hausdorff distance at most
+\(3\,3^{1/4}\sqrt D\). For \(D>16\sqrt3\), if
+\[
+\rho\ge \frac{\pi D}{2}+\frac{4D}{c}
+ \left(1+3\,3^{1/4}\sqrt D\right),\qquad c=\frac{2\sqrt3}{\pi},
+\]
+then \(\operatorname{conv}(X_m)+\mathbb B\subset H\), and the exact source Hall
+bound applies simultaneously in the common placement to \(X_m\) and all inner
+scaffold lattice sites.
+
+## Audit and limitation
+
+The Bonnesen input is used only for compact convex planar bodies \(H\) and \(L\), with
+their exact perimeter/area deficit supplied by the canonical Oler-shell estimates.
+The exact external source is Daniel A. Klain, [*An Error Estimate for the
+Isoperimetric Deficit*](https://faculty.uml.edu/dklain/Klain-Isoperimetric.pdf),
+*Illinois Journal of Mathematics* 49 (2005), 981–992, Section 4, equation (6):
+\(P^2-4\pi A\ge\pi^2(R-r)^2\) for a compact convex planar set with perimeter
+\(P\), area \(A\), circumradius \(R\), and inradius \(r\). Both bodies in Section
+155 meet those hypotheses exactly.
+The conclusion is a genuine coordinate-coupling theorem in the displayed
+very-super-boundary subbranch. It does not identify the two matchings, preserve the
+strict-rattler set, produce a Schur-kernel vector, or produce a strict smaller-\(D\)
+competitor. The exact remaining lemma is the two-shadow compatibility statement in
+Section 155.
+
+The free aligned Kuperberg support estimate is not used in this promotion; in
+particular, no finite-container exterior-compatibility claim is being inferred.

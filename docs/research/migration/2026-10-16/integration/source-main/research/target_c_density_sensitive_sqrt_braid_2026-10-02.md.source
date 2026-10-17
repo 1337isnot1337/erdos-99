@@ -1,0 +1,320 @@
+# Target C: diameter-density-sensitive square-root braid
+
+**Date:** 2026-10-02\
+**Base:** current October cubic-incidence + Woodall-cover stack\
+**Status:** proof-only consequence. C-II and Level I remain open.
+
+## 1. Input
+
+Let \(H\) be the full actual diameter graph of the canonical post-ZF C-II source.
+Write
+
+\[
+h=|E(H)|,\qquad \nu=\nu(H),\qquad \tau=\tau(H).
+\]
+
+Current main supplies the cubic incidence theorem. If \(S\) is a set of \(N\)
+actual diameter vertices receiving \(J\) endpoint incidences from a chosen family
+of actual diameter edges, then
+
+\[
+(J-N)_+^3<\mathcal B_DN^2,
+\tag{1}
+\]
+
+where
+
+\[
+\frac{\mathcal B_D}{D^2}\longrightarrow 12\pi\sqrt3.
+\tag{2}
+\]
+
+The Woodall topology gives the near-König cover bound
+
+\[
+\boxed{\tau\le\nu+1.}
+\tag{3}
+\]
+
+The global square-root braid theorem used only the weak density input
+\(h/D\ge1-o(1)\). Keeping the actual diameter-edge density produces a stronger
+coefficient.
+
+## 2. Density-sensitive matching theorem
+
+### Theorem 2.1
+
+For every unbounded canonical post-ZF C-II sequence,
+
+\[
+\boxed{
+\liminf_{D\to\infty}\frac{\nu(H)}{\sqrt D}
+\ge
+\frac{
+\left(\displaystyle\liminf_{D\to\infty}\frac hD\right)^{3/2}
+}{
+\sqrt{12\pi\sqrt3}
+}.
+}
+\tag{4}
+\]
+
+More generally, on any subsequence on which
+
+\[
+\frac hD\to y>0,
+\]
+
+one has
+
+\[
+\boxed{
+\liminf\frac{\nu(H)}{\sqrt D}
+\ge
+\frac{y^{3/2}}{\sqrt{12\pi\sqrt3}}.
+}
+\tag{5}
+\]
+
+### Proof
+
+Take a minimum vertex cover \(S\) of \(H\) and put
+
+\[
+N:=|S|=\tau(H).
+\]
+
+Every diameter edge has at least one endpoint in \(S\), so its endpoint incidence
+count satisfies
+
+\[
+J:=\sum_{v\in S}d_H(v)\ge h.
+\tag{6}
+\]
+
+Fix a subsequence on which \(\nu/\sqrt D\) tends to its liminf. If that liminf is
+infinite there is nothing to prove. Otherwise
+
+\[
+\nu=O(\sqrt D).
+\]
+
+By (3),
+
+\[
+N\le\nu+1=O(\sqrt D),
+\qquad
+\frac ND\to0.
+\tag{7}
+\]
+
+Pass further so that \(h/D\to y\). Then \(y\) is at least the global
+\(\liminf h/D\). For large \(D\), \(J\ge h>N\), and (1) gives
+
+\[
+(h-N)^3
+\le
+(J-N)^3
+<
+\mathcal B_DN^2.
+\tag{8}
+\]
+
+Divide by \(D^3\):
+
+\[
+\left(\frac hD-\frac ND\right)^3
+<
+\frac{\mathcal B_D}{D^2}
+\frac{N^2}{D}.
+\tag{9}
+\]
+
+Using (2), (7), and \(h/D\to y\),
+
+\[
+y^3
+\le
+12\pi\sqrt3\,
+\liminf\frac{N^2}{D}.
+\]
+
+Thus
+
+\[
+\liminf\frac N{\sqrt D}
+\ge
+\frac{y^{3/2}}{\sqrt{12\pi\sqrt3}}.
+\]
+
+Finally \(\nu\ge N-1\) by (3), so the same asymptotic lower bound holds for
+\(\nu/\sqrt D\). QED.
+
+## 3. Near-circle low-detour specialization
+
+Now assume the low-outer-detour endpoint
+
+\[
+x_B=o(D)
+\]
+
+and remain in the square-root matching regime
+
+\[
+\nu=O(\sqrt D).
+\tag{10}
+\]
+
+The canonical near-circle theorem gives
+
+\[
+\frac qD\to\pi.
+\tag{11}
+\]
+
+Woodall gives
+
+\[
+d_H=q-h\le\nu=O(\sqrt D)=o(D),
+\tag{12}
+\]
+
+so
+
+\[
+\boxed{\frac hD\to\pi.}
+\tag{13}
+\]
+
+Insert \(y=\pi\) into Theorem 2.1:
+
+\[
+\boxed{
+\liminf\frac{\nu(H)}{\sqrt D}
+\ge
+\frac{\pi}{\sqrt{12\sqrt3}}.
+}
+\tag{14}
+\]
+
+Numerically,
+
+\[
+\frac{\pi}{\sqrt{12\sqrt3}}
+=0.689\ldots .
+\]
+
+This is much stronger than the density-one global constant
+
+\[
+\frac1{\sqrt{12\pi\sqrt3}}
+=0.123\ldots .
+\]
+
+The improvement is not a new geometric inequality; it is the same cubic incidence
+budget applied at the actual near-circle diameter-edge density.
+
+## 4. Exact braid consequence
+
+A maximum matching of size \(\nu\) consists of pairwise vertex-disjoint actual
+diameter chords. The diameter-thrackle property makes them pairwise properly crossing,
+and the exact cyclic-order lemma makes the matching one offset pairing on its
+\(2\nu\) selected hull endpoints.
+
+Therefore the near-circle square-root branch contains an exact two-shore crossing
+braid of size
+
+\[
+\boxed{
+\left(
+\frac{\pi}{\sqrt{12\sqrt3}}-o(1)
+\right)\sqrt D.
+}
+\tag{15}
+\]
+
+The current midpoint-energy theorem still puts all braid midpoints in one
+\(O(D^{2/3})\) disk.
+
+## 5. Interaction with the exact leaf-fan theorem
+
+Current main's leaf-fan / outer-walk fork gives
+
+\[
+A+x_B+3\nu\ge h,
+\tag{16}
+\]
+
+where \(A\) counts exact loaded-hull unit contacts whose two diameter-leaf endpoints
+share the same diameter carrier.
+
+Under (10)--(13),
+
+\[
+x_B=o(D),\qquad
+\nu=O(\sqrt D),\qquad
+h=\pi D-o(D),
+\]
+
+so (16) sharpens to
+
+\[
+\boxed{
+A=\pi D-o(D)
+}
+\tag{17}
+\]
+
+because trivially \(A\le q=\pi D+o(D)\).
+
+Thus almost every loaded-hull adjacency is an exact \((D,D,1)\) same-carrier fan
+contact.
+
+If \(c\) is the number of nonleaf diameter carriers supporting leaves, then
+
+\[
+c\le\nu.
+\tag{18}
+\]
+
+Consequently the average fan block contains at least
+
+\[
+\frac{A}{c}
+\ge
+\left(
+\sqrt{12\sqrt3}-o(1)
+\right)\sqrt D
+\tag{19}
+\]
+
+exact fan contacts whenever the matching is asymptotically at the minimum
+coefficient (14). Numerically the coefficient is about \(4.56\).
+
+This does not assert that every carrier has that order or that the lower bound in
+(14) is attained. It identifies the balanced hard endpoint forced by simultaneous
+near-saturation of the cubic incidence and leaf-fan budgets.
+
+## 6. What remains
+
+The low-detour square-root branch is now simultaneously:
+
+- \(h,q=\pi D-o(D)\);
+- \(\nu\ge(0.689\ldots-o(1))\sqrt D\);
+- \(D-o(D)\) diameter leaves and \(O(\sqrt D)\) nonleaf carriers;
+- \(A=\pi D-o(D)\) exact same-carrier unit hull contacts;
+- a crossing braid of the same \(0.689\sqrt D\) scale;
+- and, by the weighted-cover theorem on the companion branch, an actual contact
+  multiplier of order \(D/\nu=\Omega(\sqrt D)\).
+
+The remaining gap is not cardinality. A closing theorem has to show that an
+almost-complete loaded hull assembled from only \(O(\sqrt D)\) exact radius-\(D\)
+fan arcs cannot support the required full-core contact/attachment system without a
+unit triangle or a source-preserving diameter descent.
+
+**Disposition:** proof-only consequence. No computation, numerical search, verifier,
+or CI output is used.
+
+## Slot 2 recovery provenance — 2026-10-05
+
+Recovered from `research/weighted-cover-stress-concentration-2026-10-02` at exact source tip `ab10eeda2bc16a36daacd54be7cb2cbfdeb1fe1f`. No original PR is associated with the source branch. This report remains a proof-only, unreviewed Target C-II candidate; its stated KKT and train hypotheses are not promoted, and it does not close C-II or Level I. No verifier or computational certificate was present in the source lineage.

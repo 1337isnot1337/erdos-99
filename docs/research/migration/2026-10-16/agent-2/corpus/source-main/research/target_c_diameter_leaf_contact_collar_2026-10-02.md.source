@@ -1,0 +1,376 @@
+# Target C: a linear actual contact collar from diameter-leaf saturation
+
+**Date:** 2026-10-02\
+**Base main:** \`a5b22d70604c5da236f24587df43ac31a0d94e17\`\
+**Status:** proof-only exact reduction. C-II and Level I remain open.
+
+## 1. Setup
+
+Work with the canonical post-ZF C-II source and its relative-interior full-support
+KKT stress. Let
+
+\[
+H=(B,E_H)
+\]
+
+be the full actual diameter graph on the loaded terminal set \(B\), and write
+
+\[
+q=|B|,\qquad h=|E_H|,\qquad d_H=q-h,\qquad \nu=\nu(H).
+\]
+
+Let \(C\) be the full positive unit-contact graph. Write
+
+\[
+b
+\]
+
+for its outer-face boundary-walk length, counted with multiplicity, and
+
+\[
+x_B=b-q.
+\]
+
+Current main proves the exact defect identity
+
+\[
+\boxed{x_B+Q+2s_Z=h-d_H,}
+\tag{1}
+\]
+
+with \(Q,s_Z\ge0\), and the new Woodall leaf/core theorem gives
+
+\[
+\boxed{
+\ell_H:=|\{v\in B:\deg_H(v)=1\}|
+\ge h-2\nu-1.
+}
+\tag{2}
+\]
+
+The point of this note is to convert (2) into a statement about **actual unit
+contacts**, with no chart, stress floor, or small-\(x_B\) hypothesis.
+
+## 2. Diameter leaves that are also contact leaves cost outer-walk excess
+
+Put
+
+\[
+L_{11}:=\{v\in B:\deg_H(v)=1,\ \deg_C(v)=1\},
+\qquad
+\ell_{11}:=|L_{11}|.
+\]
+
+### Lemma 2.1
+
+For every sufficiently large canonical source,
+
+\[
+\boxed{\ell_{11}\le x_B+1.}
+\tag{3}
+\]
+
+### Proof
+
+Every loaded terminal is a strict convex-hull vertex. A vertex \(v\in L_{11}\)
+has exactly one unit-contact edge. That edge is a bridge of the connected positive
+contact component and occurs twice on the outer-face boundary walk.
+
+Two vertices of \(L_{11}\) cannot be adjacent to each other when \(D>2\). If they
+were, their common contact edge would form a connected component consisting of that
+single edge, because both endpoints have contact degree one. Canonical full-support
+connectivity gives only one nontrivial positive contact component and makes it span
+Euclidean diameter \(D\), impossible for a single unit edge.
+
+Delete every vertex of \(L_{11}\) and its incident contact edge. The deleted edges
+are distinct, and deleting pendant vertices preserves connectivity of the remaining
+nonempty contact core. The outer boundary-walk length drops by exactly
+\(2\ell_{11}\):
+
+\[
+b'=b-2\ell_{11}.
+\tag{4}
+\]
+
+Every remaining loaded vertex is still extreme after deleting other source vertices,
+so it still occurs on the outer face. Hence, with \(q'=q-\ell_{11}\),
+
+\[
+b'\ge q'-1.
+\tag{5}
+\]
+
+The harmless minus one covers the degenerate final boundary case and is enough here.
+Using (4),
+
+\[
+b-2\ell_{11}\ge q-\ell_{11}-1,
+\]
+
+so
+
+\[
+\ell_{11}\le b-q+1=x_B+1.
+\]
+
+QED.
+
+### Exact geometry at a double leaf
+
+If \(v\in L_{11}\), let \(a\) be its unique diameter partner and \(l\) its unique
+contact neighbor. Relative-interior KKT positivity gives
+
+\[
+\alpha(v-l)=\beta(v-a),
+\qquad
+\alpha,\beta>0.
+\]
+
+Since \(|v-l|=1\) and \(|v-a|=D\),
+
+\[
+\boxed{
+v-l={v-a\over D},\qquad
+\alpha=D\beta,\qquad
+|l-a|=D-1.
+}
+\tag{6}
+\]
+
+Thus the exceptional contact-leaf part of the collar consists of exact collinear
+one-unit inward locks.
+
+## 3. Count contact incidences at all diameter leaves
+
+Let
+
+\[
+L_1:=\{v\in B:\deg_H(v)=1,\ \deg_C(v)=1\},
+\]
+
+\[
+L_{\ge2}:=\{v\in B:\deg_H(v)=1,\ \deg_C(v)\ge2\}.
+\]
+
+Every loaded terminal has positive contact degree, so the diameter leaves split as
+
+\[
+\ell_H=|L_1|+|L_{\ge2}|.
+\tag{7}
+\]
+
+Let \(E_C^{\rm leaf}\) be the set of distinct unit-contact edges having at least one
+diameter-leaf endpoint.
+
+The sum of contact degrees over all diameter leaves satisfies
+
+\[
+\sum_{\deg_H(v)=1}\deg_C(v)
+\ge |L_1|+2|L_{\ge2}|
+=2\ell_H-|L_1|.
+\tag{8}
+\]
+
+One contact edge contributes to this sum at most twice. Therefore
+
+\[
+2|E_C^{\rm leaf}|
+\ge 2\ell_H-|L_1|.
+\tag{9}
+\]
+
+Use Lemma 2.1 and (2):
+
+\[
+|E_C^{\rm leaf}|
+\ge
+\ell_H-\frac{x_B+1}{2}
+\ge
+h-\frac{x_B}{2}-2\nu-\frac32.
+\tag{10}
+\]
+
+In particular the integer-safe finite form is
+
+\[
+\boxed{
+|E_C^{\rm leaf}|
+\ge
+h-\frac{x_B}{2}-2\nu-2.
+}
+\tag{11}
+\]
+
+This is already an exact bridge from diameter topology to actual unit-contact
+support.
+
+## 4. Eliminate the outer-walk variable
+
+Equation (1) and nonnegativity give
+
+\[
+x_B\le h-d_H.
+\tag{12}
+\]
+
+Insert (12) into (11):
+
+\[
+|E_C^{\rm leaf}|
+\ge
+h-\frac{h-d_H}{2}-2\nu-2
+=
+\frac{h+d_H}{2}-2\nu-2.
+\]
+
+Since \(q=h+d_H\),
+
+\[
+\boxed{
+|E_C^{\rm leaf}|
+\ge
+\frac q2-2\nu-2.
+}
+\tag{13}
+\]
+
+Canonical ZF gives \(h\ge\lceil D\rceil\), and \(q\ge h\). Consequently
+
+\[
+\boxed{
+|E_C^{\rm leaf}|
+\ge
+\frac{\lceil D\rceil}{2}-2\nu-2.
+}
+\tag{14}
+\]
+
+Thus every sublinear-matching sequence satisfies
+
+\[
+\boxed{
+\nu=o(D)
+\Longrightarrow
+|E_C^{\rm leaf}|
+\ge
+\frac D2-o(D).
+}
+\tag{15}
+\]
+
+At the square-root hard scale,
+
+\[
+\nu=O(\sqrt D),
+\]
+
+one gets the finite-order version
+
+\[
+\boxed{
+|E_C^{\rm leaf}|
+\ge
+\frac q2-O(\sqrt D)
+\ge
+\frac D2-O(\sqrt D).
+}
+\tag{16}
+\]
+
+No assumption on \(x_B/D\) appears.
+
+## 5. Loaded-loaded versus loaded-unloaded collar
+
+Every edge of \(E_C^{\rm leaf}\) has one loaded endpoint, namely a diameter leaf.
+Its other endpoint is either loaded or unloaded. Split
+
+\[
+E_C^{\rm leaf}=E_{BB}^{\rm leaf}\sqcup E_{BI}^{\rm leaf}.
+\]
+
+Equation (13) gives the exact fork
+
+\[
+\boxed{
+\max\{|E_{BB}^{\rm leaf}|,\ |E_{BI}^{\rm leaf}|\}
+\ge
+\frac q4-\nu-1.
+}
+\tag{17}
+\]
+
+Hence in every sublinear-matching sequence at least one of the following is present:
+
+1. a linear family of loaded-loaded unit contacts incident with diameter leaves;
+2. a linear family of loaded-unloaded attachment contacts incident with diameter
+   leaves.
+
+More precisely,
+
+\[
+\boxed{
+\nu=o(D)
+\Longrightarrow
+\max\{|E_{BB}^{\rm leaf}|,\ |E_{BI}^{\rm leaf}|\}
+\ge
+\frac D4-o(D).
+}
+\tag{18}
+\]
+
+In the canonical full-core near-disk branch, every loaded-loaded unit contact is a
+true loaded hull side. The second branch instead feeds directly into the harmonic
+attachment-cell / loaded-boundary incidence system. Thus the hard diameter-matching
+branch cannot avoid a linear physical contact interface by putting all its defect into
+outer-walk repetitions.
+
+## 6. Relation to the earlier leaf/KKT split
+
+Current main already proves, for the same diameter-leaf population, the normalized
+stress alternative
+
+\[
+\sum_{e\in C_{\rm leaf}}\alpha_e\ge D/4
+\]
+
+or a core diameter multiplier of order \(1/\nu\). The present theorem is independent:
+it is a **support cardinality** statement, not a multiplier statement.
+
+Together, at \(\nu=O(\sqrt D)\), the hard branch simultaneously has
+
+\[
+D-O(\sqrt D)
+\]
+
+diameter leaves on only \(O(\sqrt D)\) nonleaf diameter carriers,
+
+\[
+\frac D2-O(\sqrt D)
+\]
+
+distinct actual unit contacts touching those leaves, and either linear aggregate
+leaf-contact stress or a \(D^{-1/2}\)-scale core diameter multiplier.
+
+This is the first unconditional linear actual-contact collar obtained from the
+square-root diameter branch; the earlier small-\(x_B\) corollary produced
+\(D-o(D)\) contacts only after assuming \(x_B=o(D)\).
+
+## 7. Remaining obstruction
+
+Equation (18) identifies the next two concrete geometric cases.
+
+- **Loaded-loaded collar:** exploit that these are hull sides in the full-core branch
+  and couple their cyclic order to the contiguous Woodall diameter-star blocks.
+- **Loaded-unloaded collar:** use attachment-cell planarity and the common
+  2-edge-connected contact hub to bound how many diameter leaves one unloaded
+  component can service without paying additional face/rank currency.
+
+Neither multiplicity bound is proved here. The macroscopic inactive-container branch
+remains independent.
+
+**Disposition:** proof-only exact reduction. No computation, numerical experiment,
+verifier execution, or CI output is used.
+
+## Slot 2 recovery provenance — 2026-10-05
+
+Recovered from `research/weighted-cover-stress-concentration-2026-10-02` at exact source tip `ab10eeda2bc16a36daacd54be7cb2cbfdeb1fe1f`. No original PR is associated with the source branch. This report remains a proof-only, unreviewed Target C-II candidate; its stated KKT and train hypotheses are not promoted, and it does not close C-II or Level I. No verifier or computational certificate was present in the source lineage.

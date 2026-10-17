@@ -1,0 +1,158 @@
+# Erdős Problem #99 — current Target C continuation
+
+**State:** `2026-10-05.audit.62`
+**LEVEL I STATUS: STILL OPEN.**  
+**C-I: CLOSED.**  
+**C-II: OPEN.**
+
+## Bootstrap
+
+Read, in order:
+
+1. `docs/STATE.md`;
+2. `docs/problem/statement.md`;
+3. `docs/targets/target-c/CURRENT.md`;
+4. `docs/targets/target-c/README.md`;
+5. `docs/targets/target-c/105-121-promotion-audit-2026-09-12.md`;
+6. `docs/targets/target-c/122-123-promotion-audit-2026-09-12.md`;
+7. the canonical modules/reports explicitly named by `docs/state/theorem-state.yaml`;
+8. this prompt last.
+
+Do not infer theorem authority from a merge, date, filename, or section number.
+
+## Mission
+
+Close C-II for every sufficiently large triangle-free global minimizer in the canonical normal form, or produce a valid Level I disproof. Do not spend the run re-proving audited extraction/density machinery or optimizing another carrier decimal unless it creates a new implication to global closure.
+
+## Binding normalization
+
+Use the contact-minimal, then diameter-pair-minimal representative and retain every source point, including contact-isolated points.
+
+The §57 ZR/ZF theorem is only on the nonisolated positive-contact core `V`:
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\qquad
+\operatorname{rank}R_{C\cup H}[V]=2v-3.
+\]
+
+Do not extend this affine-kernel theorem to contact-isolated coordinates. Full-source geometry comes from the separate canonical full-source modules.
+
+## Canonical input to treat as solved
+
+Audit.62 is controlling.
+
+Retain the complete audit.52--61 stack.
+
+Audit.61 already reduces a sufficiently small O--O finite motion to
+\[
+\boxed{
+\text{old diameter constraints}
++\ |J|\le d_H\text{ inactive upper exceptions}
++\ \text{unary rhombus tests}
++\ \text{outer-face near-unit pairs}.
+}
+\]
+
+Audit.62 adds two exact finite restrictions.
+
+### Loaded near-unit adjacency
+
+For the actual loaded set \(B\),
+\[
+\tau_D=\frac{3D}{\sqrt{3D^2+4}+1}.
+\]
+If loaded endpoints \(a,b\) are nonconsecutive on the loaded hull and \(|ab|<D\), then
+\[
+\boxed{|ab|\ge\tau_D.}
+\]
+For \(D\ge6\), every loaded pair of length at most \(13/12\) is a loaded-hull side. Thus the loaded near-unit graph is a subgraph of the loaded hull cycle and has maximum degree two.
+
+Do not model loaded-loaded lower clauses as an arbitrary planar graph.
+
+### Loaded-hull cap budget
+
+Put
+\[
+K=\operatorname{conv}A,\qquad
+F=\operatorname{conv}B,\qquad
+W=\operatorname{per}K-q.
+\]
+
+Canonically:
+
+- occupied loaded-hull caps: at most \(W\);
+- total occupied cap arc/base length: at most \(2W\);
+- core points within \(<\sqrt2\) of a source point outside \(F\): at most \(68W\);
+- nonloaded source points in \(F\) within boundary distance \(1/2\): at most \(12W\);
+- every deeper point has exact upper margin \(D-1/2\);
+- extreme source vertices outside \(B\): at most \(W\).
+
+Since \(\operatorname{per}K<\pi D\), every subsequence with
+\[
+q/D\to\pi
+\]
+has
+\[
+W=o(D),
+\]
+so all three cap/exterior blocker populations above are \(o(D)\).
+
+### Binding regressions
+
+Do not infer:
+
+- small amplitude + contact preservation \(\Rightarrow\) unary rhombus immunity;
+- source-level path forest \(\Rightarrow\) acyclic owner implication graph.
+
+Both are exactly false.
+
+## Exact next split
+
+### Full-core branch
+
+The remaining small-motion obstruction is now
+\[
+\boxed{
+\text{outer-face owner/implication structure inside the loaded hull}
++\text{cyclic loaded-hull near-unit clauses}
++\text{unary rhombus blockers}
++\text{at most }d_H\text{ upper exceptions}.
+}
+\]
+
+Along \(q/D\to\pi\), loaded-hull caps, exterior extreme isolates, short cap attachments, and the shallow nonloaded boundary layer are sublinear and cannot support a linear failed-assignment certificate.
+
+Highest-value attacks:
+
+1. prove an outer-face order theorem showing that implication paths cannot return to the same owner after respecting actual outer-walk occurrence order and loaded-hull cyclic order;
+2. combine audit.53 loaded-return paths with audit.62 loaded degree-\(\le2\) near-unit geometry to control owner reuse at loaded endpoints;
+3. use audit.56 local active-diameter coordinates to choose move packets whose prescribed shortening signs are compatible with that outer order;
+4. use audit.60 least-positive Horn/2-SAT obstruction certificates to show any forced-\(1\) to forced-\(0\) path must consume more outer occurrences or loaded-return capacity than the source possesses;
+5. explicitly solve all unary rhombus states and construct a satisfying finite shortening assignment.
+
+Do not spend the run proving another generic near-unit planarity statement; audit.61--62 already localize the geometry sharply.
+
+### Macroscopic inactive-container branch
+
+Unchanged. Audit.62 applies to the finite source geometry around the loaded hull and does not close the separate macroscopic inactive-container route.
+
+## Binding dead routes
+
+Do not use without a new proof:
+
+- incident-diameter sequence `=>` Euler trail/path;
+- FB4 force-bulk localization;
+- incompatible-cut C53 pentagon objection;
+- RSR disk-equality uniqueness;
+- Eppstein near-equality `=>` near quadrangulation;
+- five-host measure saturation `=>` all hosts occupied;
+- inward OP pocket `subset` exterior Reuleaux minor cap;
+- deletion of contact-isolated source points;
+- full-source extension of the §57 affine-kernel theorem;
+- `r/(6C_T)` as the sharp limit of the Section-90 bin method;
+- `G_loc=o(D^2) => G_loc/d=o(1)` in Section 121.
+
+## Research standard
+
+Before promoting a new lemma, write its exact dependency chain to either an exact unit triangle, a source-preserving strict sub-`D` competitor, or the Level I conclusion. A computation may certify finite arithmetic or a regression; it does not supply global optimality.

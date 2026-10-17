@@ -1,0 +1,48 @@
+"""Retained arithmetic provenance for the retracted bounded-face fan floor.
+
+The finite fan pair lemma remains valid, but its density-floor normalization was
+retracted because f,T=O(D). This checks old endpoint arithmetic only and does not
+certify a density floor, the train-fan theorem, or global optimality.
+"""
+
+from fractions import Fraction as F
+
+
+def main() -> None:
+    pi_lo = F(3141592653589793, 10**15)
+    pi_hi = F(3141592653589794, 10**15)
+    s3_lo = F(1732050807568877, 10**15)
+    s3_hi = F(1732050807568878, 10**15)
+
+    delta_lo = pi_lo / (2 * s3_hi)
+    delta_hi = pi_hi / (2 * s3_lo)
+    sd_lo = F(9523128, 10**7)
+    sd_hi = F(9523129, 10**7)
+    assert sd_lo * sd_lo < delta_lo < delta_hi < sd_hi * sd_hi
+
+    gamma_lo = 2 * sd_lo - pi_hi / 2
+    gamma_hi = 2 * sd_hi - pi_lo / 2
+    assert F(3338, 10000) < gamma_lo < gamma_hi < F(3339, 10000)
+
+    rad_lo = 2 * delta_lo + 10 * gamma_lo
+    rad_hi = 2 * delta_hi + 10 * gamma_hi
+    root_lo = F(2269822, 10**6)
+    root_hi = F(2269823, 10**6)
+    assert root_lo * root_lo < rad_lo < rad_hi < root_hi * root_hi
+
+    t_lo = root_lo - gamma_hi
+    t_hi = root_hi - gamma_lo
+    assert t_lo > F(19359, 10000)
+    assert t_lo < t_hi
+
+    # The monotonicity interval used in the audit stays below sqrt(rad)=5:
+    # g'(z)=5/sqrt(2 Delta_2+10 z)-1>0 when the square root is below 5.
+    z_max = 4 * t_hi - 2 * pi_lo
+    assert z_max < F(1461, 1000)
+    assert 2 * delta_hi + 10 * z_max < 25
+
+    print("bounded-face fan crossing-floor arithmetic provenance: OK; density claim retracted")
+
+
+if __name__ == "__main__":
+    main()

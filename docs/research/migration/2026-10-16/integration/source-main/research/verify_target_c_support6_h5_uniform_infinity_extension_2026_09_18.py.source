@@ -1,0 +1,130 @@
+#!/usr/bin/env python3
+"""Exact oriented-matroid overcheck for the uniform H5 projection lemma.
+
+This is the coordinate-free companion to the projection-potential attack.  A
+generic projection order is encoded by adjoining one point U at infinity with
+
+    chi(U,i,j) = sign(x_j-x_i).
+
+Every realizable projection order gives a rank-three chirotope extension, so
+enumerating all extensions that pass the Grassmann--Pluecker tests is a safe
+overapproximation.  If none of those overapproximate orders has an acyclic
+signed constraint graph, the metric equilibrium is impossible without relying
+on a particular coordinate realization or on an allowable-sequence assertion.
+"""
+
+from itertools import combinations, permutations
+from importlib.util import module_from_spec, spec_from_file_location
+from pathlib import Path
+
+
+HERE = Path(__file__).resolve().parent
+SOURCE = HERE / "verify_target_c_support6_h5_metric_normal_form_2026_09_18.py"
+spec = spec_from_file_location("h5_metric_normal_form", SOURCE)
+metric = module_from_spec(spec)
+assert spec.loader is not None
+spec.loader.exec_module(metric)
+h5 = metric.h5
+
+
+U = 7
+ELEMENTS = tuple(range(8))
+
+
+def parity(t):
+    inversions = sum(t[i] > t[j] for i in range(len(t)) for j in range(i + 1, len(t)))
+    return -1 if inversions & 1 else 1
+
+
+def extension_signs(signs, order):
+    position = {vertex: k for k, vertex in enumerate(order)}
+    out = {}
+    for triple in combinations(range(7), 3):
+        out[triple] = signs[h5.TINDEX[triple]]
+    for i, j in combinations(range(7), 2):
+        # det((0,1,0), (x_i,y_i,1), (x_j,y_j,1)) = x_j-x_i.
+        value = 1 if position[i] < position[j] else -1
+        out[(i, j, U)] = parity((U, i, j)) * value
+    return out
+
+
+def chi(table, a, b, c):
+    if len({a, b, c}) < 3:
+        return 0
+    sorted_triple = tuple(sorted((a, b, c)))
+    return parity((a, b, c)) * table[sorted_triple]
+
+
+def grassmann_pluecker_ok(table):
+    for subset in combinations(ELEMENTS, 5):
+        # The other permutations of b,c,d,e only permute the same three
+        # Pluecker products and multiply all three by a common sign.  One
+        # sorted ordering is therefore sufficient for each choice of a.
+        for a in subset:
+            rest = [x for x in subset if x != a]
+            b, c, d, e = rest
+            values = (
+                chi(table, a, b, c) * chi(table, a, d, e),
+                -chi(table, a, b, d) * chi(table, a, c, e),
+                chi(table, a, b, e) * chi(table, a, c, d),
+            )
+            if values[0] == values[1] == values[2]:
+                return False
+    return True
+
+
+def is_acyclic(order, edge_signs):
+    position = {vertex: k for k, vertex in enumerate(order)}
+    outgoing = [[] for _ in range(7)]
+    for (i, j), sign in edge_signs.items():
+        if sign == (position[i] > position[j]):
+            outgoing[j].append(i)
+        else:
+            outgoing[i].append(j)
+
+    indegree = [0] * 7
+    for i in range(7):
+        for j in outgoing[i]:
+            indegree[j] += 1
+    stack = [i for i in range(7) if indegree[i] == 0]
+    removed = 0
+    while stack:
+        i = stack.pop()
+        removed += 1
+        for j in outgoing[i]:
+            indegree[j] -= 1
+            if indegree[j] == 0:
+                stack.append(j)
+    return removed == 7
+
+
+def main():
+    uniform = h5.enumerate_uniform_extensions()
+    _, full = h5.uniform_survivors(uniform)
+    representatives = {}
+    for signs, missing, edge_signs in full:
+        representatives[h5.canonical_candidate(signs, missing, edge_signs)] = (
+            signs, missing, edge_signs
+        )
+    representatives = list(representatives.values())
+    assert len(representatives) == 6
+
+    rows = []
+    for signs, _missing, edge_signs in representatives:
+        valid = []
+        for order in permutations(range(7)):
+            table = extension_signs(signs, order)
+            if grassmann_pluecker_ok(table):
+                valid.append(order)
+        acyclic = [order for order in valid if is_acyclic(order, edge_signs)]
+        assert not acyclic
+        rows.append((len(valid), len(acyclic)))
+
+    print("uniform_metric_orbits", len(representatives))
+    print("rank3_infinity_extensions_by_orbit", [n for n, _ in rows])
+    print("acyclic_extensions_by_orbit", [n for _, n in rows])
+    print("PASS: no rank-three projection extension admits a signed potential")
+
+
+if __name__ == "__main__":
+    main()

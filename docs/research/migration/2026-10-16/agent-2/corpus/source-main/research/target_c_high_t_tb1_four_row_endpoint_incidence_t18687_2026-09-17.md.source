@@ -1,0 +1,274 @@
+# Target C-II — endpoint incidence sharpens inverse-`D` near-unit bandwidth to four rows
+
+**Date:** 2026-09-17  
+**Status:** proof-only strengthening of the high-`t` exact-swap branch; no canonical promotion claimed  
+**Scope:** selected O--O path coordinates in the one-sign strong-TB1 branch through `t=(q-k)/D<=1.8687`  
+**Dependencies:** crossed-row rhombus-center capsule lemma; pairwise-disjoint selected O--O centerline crosscuts; unit separation; five-row capsule theorem; Horn reduction; sharp all-residue Horn budget  
+**Certificate:** `research/verify_target_c_high_t_tb1_four_row_endpoint_incidence_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The five-row capsule theorem is sharp for arbitrary `sqrt(3)/2`-separated points in the radius-`1/2` capsule of a unit segment. Crossed-row centers have more structure: each belongs to an actual unit-rhombus contact face while the endpoints of the short segment are source vertices. That endpoint incidence removes the abstract five-center configuration.
+
+> **Four-row endpoint-incidence theorem.** If `x,y` are distinct source vertices and
+> \[
+> 1<\ell:=|x-y|\le1+\varepsilon,
+> \qquad 0\le\varepsilon\le {1\over20},
+> \]
+> then
+> \[
+> \boxed{|\operatorname{reg}(x)-\operatorname{reg}(y)|\le4.}
+> \tag{EI.1}
+> \]
+> Thus every inverse-`D` near-unit LOWER exact-swap blocker crosses at most four selected O--O rows for all sufficiently large `D`.
+
+---
+
+## 1. A nonincident source point is far from a rhombus center
+
+Let `F` be a unit rhombus with center `c`. Write its vertices as
+
+\[
+c+p,\quad c-p,\quad c+q,\quad c-q,
+\]
+
+where
+
+\[
+p\perp q,
+\qquad |p|^2+|q|^2=1.
+\tag{EI.2}
+\]
+
+If a source point `z` is not a vertex of `F`, unit separation gives `|z-v|>=1` for every vertex. Therefore
+
+\[
+\begin{aligned}
+4
+&\le\sum_{v\in V(F)}|z-v|^2\\
+&=|z-c-p|^2+|z-c+p|^2+|z-c-q|^2+|z-c+q|^2\\
+&=4|z-c|^2+2.
+\end{aligned}
+\]
+
+Hence
+
+\[
+\boxed{|z-c|\ge {1\over\sqrt2}.}
+\tag{EI.3}
+\]
+
+---
+
+## 2. Nonincident crossed-row centers collapse to two pole clusters
+
+Rigidly place
+
+\[
+x=(0,0),\qquad y=(\ell,0),\qquad \ell=1+\varepsilon.
+\]
+
+For every selected row separating `x` and `y`, choose a strict unit rhombus whose midpoint centerline meets `xy`, as in the crossed-row center-capsule argument. If its center is `c=(t,h)`, the length-one centerline gives
+
+\[
+\operatorname{dist}(c,xy)\le {1\over2}.
+\tag{EI.4}
+\]
+
+Suppose the chosen rhombus is incident to neither endpoint. Equation (EI.3) applied to both endpoints gives
+
+\[
+t^2+h^2\ge {1\over2},
+\qquad
+(\ell-t)^2+h^2\ge {1\over2}.
+\tag{EI.5}
+\]
+
+The nearest point of `xy` to `c` cannot be an endpoint, since that would make the corresponding endpoint-center distance at most `1/2`. Hence
+
+\[
+0\le t\le\ell,
+\qquad |h|\le {1\over2}.
+\]
+
+Combining this with (EI.5),
+
+\[
+\boxed{{1\over2}\le t\le {1\over2}+\varepsilon}
+\tag{EI.6}
+\]
+
+and
+
+\[
+\boxed{h^2\ge {1\over4}-\varepsilon-\varepsilon^2.}
+\tag{EI.7}
+\]
+
+Put
+
+\[
+a=\sqrt{{1\over4}-\varepsilon-\varepsilon^2}.
+\]
+
+Since
+
+\[
+\left({1\over2}-a\right)\left({1\over2}+a\right)=\varepsilon+\varepsilon^2
+\]
+
+and `1/2+a>=1/2`,
+
+\[
+{1\over2}-a\le2(\varepsilon+\varepsilon^2).
+\tag{EI.8}
+\]
+
+Two nonincident centers with the same sign of `h` therefore differ horizontally by at most `epsilon` and vertically by at most `2(epsilon+epsilon^2)`. At `epsilon<=1/20`, their squared distance is at most
+
+\[
+\varepsilon^2+4(\varepsilon+\varepsilon^2)^2
+\le {541\over40000}
+<{3\over4}.
+\tag{EI.9}
+\]
+
+Distinct selected rows use strict rhombus faces with disjoint interiors. Each strict unit rhombus contains the open disk of radius `sqrt(3)/4` about its center, so distinct crossed-row centers satisfy
+
+\[
+|c-c'|\ge {\sqrt3\over2}.
+\tag{EI.10}
+\]
+
+Thus at most one nonincident center lies above `xy` and at most one below it:
+
+\[
+\boxed{N_{nonincident}\le2.}
+\tag{EI.11}
+\]
+
+---
+
+## 3. Endpoint-incident crossed rows contribute at most one per endpoint
+
+Fix endpoint `x` and the ray from `x` through `y`. The relative interior of a rhombus midpoint centerline lies inside the rhombus; its endpoints are edge midpoints.
+
+If the ray meets the relative interior of the centerline of a rhombus incident to `x`, the ray direction lies in the interior angular sector of that contact face at `x`. Distinct incident contact faces have disjoint interior sectors, so at most one such face occurs.
+
+If the ray lies on a contact edge shared by two incident faces, a midpoint centerline can meet that boundary ray only at the midpoint of the shared contact edge. The audited selected O--O centerline crosscuts are pairwise disjoint proper crosscuts, so two selected rows cannot both use that midpoint.
+
+Therefore
+
+\[
+N_x\le1,
+\qquad N_y\le1.
+\tag{EI.12}
+\]
+
+Together with (EI.11),
+
+\[
+N\le N_x+N_y+N_{nonincident}\le4,
+\]
+
+proving (EI.1).
+
+---
+
+## 4. Exact-swap and Horn consequences
+
+A LOWER exact-swap blocker satisfies
+
+\[
+1<|x-y|\le1+q_i,
+\qquad q_i=O(D^{-1}),
+\]
+
+so the four-row theorem applies eventually.
+
+A single exact-swap Horn subsystem may therefore retain one residue class modulo five. With
+
+\[
+s_0={791\over320{,}000{,}000},
+\]
+
+the retained one-class density is
+
+\[
+\boxed{
+\gamma_5={s_0\over10}
+={791\over3{,}200{,}000{,}000}
+=2.471875\times10^{-7}.
+}
+\tag{EI.13}
+
+Its basic Horn floors are
+
+\[
+N_{lower}>{\gamma_5\over4}D-o(D),
+\qquad
+N_{upper}>{\gamma_5\over8}D-o(D),
+\qquad
+N_{forest}>{\gamma_5\over2}D-o(D).
+\tag{EI.14}
+
+Using the current selected-path cap
+
+\[
+A_*={14\over3\sqrt3},
+\]
+
+the corresponding one-class UPPER flexible-localization coefficient is
+
+\[
+\boxed{
+\widehat c_{*,5}
+={\gamma_5\over48A_*}
+={113\sqrt3\over102{,}400{,}000{,}000}
+=1.91134512945\ldots\times10^{-9}.
+}
+\tag{EI.15}
+
+Running the Horn reduction independently on all five residue classes and using the current repeated-UPPER rigidity gives the sharper source-wide weighted budget
+
+\[
+\boxed{
+2N_L+N_U>
+\left({s_0\over8}-o(1)\right)D.
+}
+\tag{EI.16}
+\]
+
+Consequently one metric type has density at least
+
+\[
+\boxed{
+\delta_{sharp}={s_0\over24}
+={791\over7{,}680{,}000{,}000}
+=1.02994791666\ldots\times10^{-7}.
+}
+\tag{EI.17}
+
+The all-residue numerical improvement comes from the separate repeated-UPPER theorem; the contribution of the present theorem is that all LOWER objects in this sharp fork now have support depth at most four.
+
+---
+
+## 5. Frontier effect
+
+The short LOWER seam has been reduced as follows:
+
+```text
+whole crossed rhombi in a tube
+    -> bandwidth <= 14;
+
+rhombus centers + Oler / exact capsule packing
+    -> bandwidth <= 6, then <= 5;
+
+rhombus centers + source-endpoint incidence
+    -> bandwidth <= 4.
+```
+
+The abstract five-point capsule packing remains valid, but five arbitrary capsule points cannot all be realized as crossed selected-row rhombus centers for a near-unit source pair. Nonincident centers are confined to two tiny pole clusters, and endpoint-incident rows are individually unique.
+
+The remaining GLOBAL LOWER problem is a strict `1+O(D^-1)` source pair crossing at most four co-phased near-equilateral O--O rows. The global four-row ladder theorem uses injective ownership to repeat this gadget linearly many times against one fixed transverse train.
+
+**Disposition:** proved the four-row endpoint-incidence bound, reduced valid exact-swap spacing from six to five, and sharpened the GLOBAL LOWER local seam to support depth at most four. C-II and Level I remain open.

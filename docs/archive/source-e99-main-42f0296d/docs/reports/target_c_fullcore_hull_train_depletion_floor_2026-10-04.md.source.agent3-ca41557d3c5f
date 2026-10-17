@@ -1,0 +1,332 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "a050bbdf0ad4c963cd77799a30c07868013b8c27", "source_canonical": true, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "canonical", "source_path": "docs/reports/target_c_fullcore_hull_train_depletion_floor_2026-10-04.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "ca41557d3c5f2af62b09673c2d6beb32ec32b9fe5cce6b0e7a968ac2c3ae2a25"} -->
+
+> **Historical source snapshot; destination authority remains current.** Source lifecycle was `canonical`; it is retained as provenance only. Destination status remains unreviewed/noncanonical. Source path: `docs/reports/target_c_fullcore_hull_train_depletion_floor_2026-10-04.md`. Source commit: `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`.
+
+# Target C: diffuse hull trains give a stronger global full-core surplus floor
+
+Date: 2026-10-04. Base: `419c9bec2ed8fa2cc105a80803a279339e7bea9e`.
+Starting state: `2026-09-14.audit.51`. Target: C-II, full-core Type II.
+Canonical promotion: `2026-10-05.audit.52` as `C-FULLCORE-HULL-DEPLETION-FLOOR`, after the independent October structural promotion audit.
+C-II and Level I remain open.
+
+## 1. Exact source theorem
+
+Use the actual canonical lexicographic source, retaining all points and contact
+isolates. Put
+
+\[
+\Delta_2=\frac{\pi}{2\sqrt3},\quad s=\sqrt{\Delta_2},\quad
+\mu_{\rm hull}=\frac{\pi+s}{2}.
+\]
+
+For every unbounded full-core Type-II sequence, the new conclusions are
+
+\[
+\boxed{\liminf\left(5t_D+\frac{x_B+m_B}{D}\right)
+        \ge3\pi+2s},                                      \tag{1}
+\]
+\[
+\boxed{\liminf\left(4\mu_D-\frac{k+3m_B}{D}\right)
+        \ge2\pi+2s},                                      \tag{2}
+\]
+\[
+\boxed{\liminf\mu_D\ge\mu_{\rm hull}}.                    \tag{3}
+\]
+
+There is no such sequence with `mu_D -> mu_hull`. As in the canonical
+endpoint-gap argument, (3) and that exclusion give a non-explicit uniform
+positive gap above `mu_hull` for sufficiently large canonical full-core
+sources. No value of this gap is claimed.
+
+The implication chain is
+
+```text
+near-disk force-hull direction measure + canonical phase deletion
+ -> trains with a good hull end carry o(D^2) actual rhombi
+ -> at least (2 sqrt(Delta_2)-o(1))D other actual trains
+ -> exact source face/pinned ledgers give (1)--(3)
+ -> Mantel endpoint extraction excludes mu_D -> mu_hull.
+```
+
+This removes the full-core source regime below a substantially larger surplus
+floor, not merely a selected grid or shell. It leaves Type I and the higher
+surplus regime open. No feasible source is changed or constructed.
+
+## 2. Coordination and independently audited inputs
+
+PR [#666](https://github.com/1337isnot1337/e-99/pull/666) appeared during this
+run and proposes the diffuse-good-hull-train depletion route. This report
+acts as an independent audit of that load-bearing claim and extends its
+consequences using the exact good-end count. At the time of the original proof, neither PR #666's report nor any other
+unpromoted October result was assumed as a theorem. The present claim is now canonical
+through the independent audit.52 promotion.
+
+The [exterior-occurrence proof](target_c_hull_side_exact_train_capacity_audit_2026-10-04.md),
+Sections 2--3, is the new dependency proved in this branch. It identifies every
+unit loaded-hull side with one good interval. If `m=m_B`, the number of good
+terminal occurrences is exactly `q-m`. At most two trains have two good
+ends. Therefore the family `G_D` of actual complete stopped trains with at
+least one good hull end satisfies
+
+\[
+|G_D|\ge q-m-2.                                         \tag{4}
+\]
+
+Canonical inputs are Sections 61 and 63 for actual train and face ledgers;
+Section 69 for the phase-cut/coarea construction; Sections 68 and 80 for
+`R_4/D^2 -> Delta_2`, angular defect `O(D)`, and the force-hull disk limit;
+Section 62 and the promoted loaded-chord theorem for the pinned ledger;
+Section 75 for `c_I=o(D)`. The final endpoint step uses the already audited
+train-family argument in Sections 2--5 of the canonical
+[endpoint proof](target_c_fullcore_endpoint_unbalanced_pseudosegment_completion_2026-09-14.md)
+and its [independent audit](../audits/target_c_fullcore_endpoint_unbalanced_pseudosegment_completion_independent_audit_2026-09-14.md).
+The precise reuse hypotheses are checked in Section 7 below.
+
+## 3. A uniform directional count for unit hull sides
+
+Translate a Type-II sequence so that
+
+\[
+B(0,r_D)\subset F_D\subset B(0,R_D),\quad
+r_D/D,R_D/D\longrightarrow1/2.
+\]
+
+Let `alpha_D=acos(r_D/R_D) -> 0`. At a point `p` of a hull side with
+outward unit normal `n`,
+
+\[
+n\cdot p\ge r_D,\quad |p|\le R_D,
+\quad\angle(n,p)\le\alpha_D.                            \tag{5}
+\]
+
+For any oriented normal interval of width `w`, all its sides lie in the
+radial-angle interval enlarged by `alpha_D` on each end. Radial
+parametrization preserves convex boundary order because `F_D` contains the
+inner disk. On a side with support height `h`, its radial function is
+
+\[
+\rho(\theta)=\frac{h}{n\cdot e_\theta},\quad
+\sqrt{\rho^2+(\rho')^2}
+ =\frac{\rho}{\cos\angle(n,e_\theta)}
+ \le\frac{R_D}{\cos\alpha_D}.
+\]
+
+Integrating over that radial interval bounds the sum of side lengths by
+
+\[
+\frac{R_D}{\cos\alpha_D}(w+2\alpha_D).                  \tag{6}
+\]
+
+The estimate is uniform in the interval's position; circular intervals that
+wrap around the origin are lifted before integration. Each unit side has
+length exactly one, so (6) also bounds its count.
+
+A reduced phase bin of width `epsilon<pi/6` consists of three projective
+edge-direction intervals. It gives six oriented outward-normal intervals,
+each of width `epsilon`. Thus the number of unit hull sides in this union
+is at most
+
+\[
+\frac{6R_D}{\cos\alpha_D}(\epsilon+2\alpha_D)
+=(3\epsilon+o_\epsilon(1))D.                            \tag{7}
+\]
+
+This does not assume a rate in the disk limit or a curvature lower bound.
+It applies to a polygon with arbitrarily uneven turning. The error is uniform
+over bin shifts and over the bin's position.
+
+## 4. Hull-end trains carry only subquadratic rhombi
+
+Fix `epsilon` first. Canonical Section 69 deletes `O_epsilon(D)` actual
+rhombus crossings so that each remaining edge has both train potentials in
+one real phase bin of width `epsilon`. Every train has one potential and
+one of three labels, and its physical projective edge direction equals that
+potential plus its label times `pi/3`. No train is duplicated between bins.
+
+Let `T_j` count all train vertices in bin `j`, and let `g_j` count its
+vertices in `G_D`. Each member of `G_D` has at least one distinct good hull
+side. Equation (7) gives, uniformly in `j`,
+
+\[
+g_j\le(3\epsilon+o_\epsilon(1))D.                       \tag{8}
+\]
+
+The whole train graph is simple. Therefore the number of retained crossing
+edges incident to `G_D` is at most
+
+\[
+\sum_j g_jT_j\le(3\epsilon+o_\epsilon(1))D\,T_D.       \tag{9}
+\]
+
+The exact canonical identities give `Q=q-x_B-2k<=q`, `f<=Q`, and
+
+\[
+T_D=t_DD+2f\le3q\le3\pi D.                             \tag{10}
+\]
+
+Adding back the deleted crossings, (9)--(10) imply
+
+\[
+\limsup_{D\to\infty}\frac{R_G}{D^2}\le9\pi\epsilon,
+\]
+
+where `R_G` counts every actual rhombus having at least one train in `G_D`.
+This bound holds for every fixed positive `epsilon`. Taking `epsilon` to
+zero **after** the sequence limit proves
+
+\[
+\boxed{R_G=o(D^2).}                                     \tag{11}
+\]
+
+Only crossing edges of the auxiliary train graph are counted or removed in
+this argument. Every source point, contact edge, diameter edge, and actual
+rhombus remains in the source. A deleted phase edge is not a deleted packing
+constraint. No grain is assumed to share a phase with every other grain.
+
+## 5. Remove good trains before Mantel
+
+Let `M_D=T_D-|G_D|` count the other complete actual trains. Their induced
+crossing graph retains
+
+\[
+R_{\rm bulk}=R_4-R_G=(\Delta_2-o(1))D^2
+\]
+
+edges, by Type II and (11). It is a simple triangle-free graph, so Mantel gives
+
+\[
+\boxed{M_D\ge(2s-o(1))D.}                               \tag{12}
+\]
+
+Using (4), the exact train count and `f<=Q`,
+
+\[
+\begin{aligned}
+M_D&\le t_DD+2Q-q+m+2\\
+   &=5t_DD-3b+x_B+m+2.                                  \tag{13}
+\end{aligned}
+\]
+
+Since `b>=P_F` and `P_F/D -> pi`, equations (12)--(13) prove (1).
+If `x_B=o(D)`, then `m=o(D)` and
+
+\[
+\boxed{\liminf t_D\ge\frac{3\pi+2s}{5}>\frac{2\pi}{3}.} \tag{14}
+\]
+
+Thus the whole positive `4pi-6t` one-cell collar window is excluded in the
+small-excess branch, not only the October endpoint or two-cell window.
+
+## 6. The unconditional full-core floor
+
+Use `b=q+x_B`, `t_DD=q-k`, and the canonical identity
+
+\[
+w_D:=q+m-k=\mu_DD+2c_I+4.                               \tag{15}
+\]
+
+Rewriting (13) in terms of `w_D` gives the finite source inequality
+
+\[
+\boxed{4\mu_DD+8c_I+18\ge2b+M_D+k+3m.}                 \tag{16}
+\]
+
+Indeed its right side is bounded by
+`2b+(4q-5k+m-2b+2)+k+3m=4w_D+2`.
+There is also an exact slack identity. Let `d_D<=2` count the trains with
+two good hull ends. Since `|G_D|=q-m-d_D`,
+
+\[
+\boxed{4\mu_DD+8c_I+18-2b-M_D-k-3m
+       =2(Q-f)+2-d_D\ge0.}                              \tag{16a}
+\]
+
+Divide (16) by `D`, use `c_I=o(D)`, (12), and the perimeter limit. This
+proves (2)--(3). All penalty terms are nonnegative because `k=d_H+s_Z>=0`
+and `m>=0`. No small-outer-walk or small-matching assumption is used.
+
+## 7. Hostile endpoint audit
+
+Suppose `mu_D -> mu_hull`. Equation (16), `b>=P_F`, and (12) force
+
+\[
+M_D/D\to2s,\quad b/D\to\pi,\quad k/D\to0,\quad m/D\to0.
+\tag{17}
+\]
+
+The induced graph on the `M_D` remaining actual train curves has
+`R_bulk/D^2 -> Delta_2`, so its crossing density tends to the Mantel limit:
+
+\[
+R_{\rm bulk}/M_D^2\longrightarrow1/4.                    \tag{18}
+\]
+
+The canonical endpoint argument, Sections 2--5, uses exactly these geometric
+train-family hypotheses, not the formula defining the old surplus floor:
+
+1. actual train curves are pseudosegments with a simple triangle-free crossing
+   graph; restriction to a train subfamily preserves this;
+2. a phase-circle cut removes only `O(D)` crossing pairs, and the remaining
+   trains inherit their same three labels and real potentials;
+3. `M_D/D -> 2s` and (18) give Mantel stability on this restricted graph;
+4. the retained near-complete two shores have largest distinct-label classes
+   of total size at least `3M_D/4-o(D)`, each at least `M_D/4-o(D)`;
+5. the canonical unbalanced pseudosegment extraction produces an actual
+   complete biclique with the same leading shore sizes;
+6. wrong-orientation/equality pairs are the same phase threshold chain graph,
+   with `O(D)` edges. Its `O(sqrt(D))` vertex cover removes them;
+7. the global `O(D)` angle-defect budget gives a phase-tail trim of `o(D)`
+   trains to one bin of width `o(1)`;
+8. canonical Section 76 applies to this complete forward actual grid. Its
+   endpoints are actual rhombus centers in the full source hull, including
+   when other trains, holes, or interfaces occur between selected crossings.
+
+These are precisely the hypotheses checked in the canonical endpoint proof
+and its independent audit. Restricting the train vertex set changes none of
+the phase equations, curve geometry, or full source-hull diameter. In
+particular (11)'s removal of auxiliary train vertices is not a packing
+deletion and is not used as a same-cardinality competitor.
+
+For the extracted shores `a_D,b_D`, Section 76 yields
+
+\[
+D\ge\frac{\sqrt3}{2}(a_D+b_D)-O(1)
+  \ge\frac{3\sqrt3}{4}sD-o(D)-O(1).
+\]
+
+The coefficient `3sqrt(3)s/4` exceeds one because
+`Delta_2>16/27`. This is the identical strict source-diameter contradiction
+in the canonical endpoint proof. Hence (17)--(18) are impossible, and no
+full-core sequence converges to `mu_hull`.
+
+If there were no uniform positive gap above `mu_hull`, choose full-core
+sources with `D_j>=j` and `mu_j<mu_hull+1/j`. The floor (3) squeezes this
+sequence to the forbidden endpoint. This proves the stated non-explicit gap.
+
+## 8. Limits, tests, and remaining obligation
+
+The report's universal statements are analytic. The companion
+[exact verifier](../../research/verify_target_c_hull_side_train_capacity_2026_10_04.py)
+tests the exterior-occurrence dependency on actual finite rational sources,
+the slack identities, interval arithmetic for the constants, and scalar
+regressions. It does not prove (11), global optimality, or a uniform rate.
+The finite runs passed on 383 rational geometry packets and 183,212 integer
+depletion ledgers. The latter checks (16a), including the finite constant
+and both good-to-good train losses. It omits geometric realization, KKT,
+the phase-depletion limit, and source optimality.
+
+The source-level regime `limsup mu_D<mu_hull` and convergence to its endpoint
+are eliminated by this candidate proof. The canonical ledger still records
+the old promoted floor until independent promotion. The Type-I macroscopic
+container remains open. Higher-surplus Type II remains open, including
+strong open-cell deep-port/grid and inactive-pair obstructions.
+
+The next global obligation is a strict source-preserving competitor or a
+sharp upper currency bound for sources above `mu_hull`. For any proposed
+low-surplus alternative, (1) now requires linear `x_B+m_B`; the exact
+global walk must be paid, not silently replaced by a harmonic-cell walk.
+
+Promotion recommendation: independently audit (4), the order of limits in
+(11), the finite rewrite (16), and the endpoint restriction before any
+theorem-state change. No new external theorem is imported: the endpoint
+extraction is the existing canonical, independently audited dependency.

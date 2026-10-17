@@ -1,0 +1,171 @@
+# Target C-II — every sub-`sqrt(2)` source-pair graph is plane
+
+**Date:** 2026-09-17  
+**Status:** proved elementary geometric lemma; proof-only tool for the FREE reflection branch  
+**Scope:** every unit-separated planar source; applied to all lower gates in the two-sided FREE repair  
+**Certificate:** `research/verify_target_c_short_inactive_edge_planarity_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+There is a sharper crossing threshold than the `sqrt(3)` contact-crossing lemma when
+**both** source segments are short.
+
+Let `A subset R^2` be unit-separated and form the straight-line graph
+
+\[
+P_{<\sqrt2}(A)
+:=\{xy:x,y\in A,\ 1\le |x-y|<\sqrt2\}.
+\]
+
+Then
+
+\[
+\boxed{P_{<\sqrt2}(A)\text{ is a plane straight-line graph.}}
+\tag{SP.1}
+
+In particular, two independent source segments of lengths below `sqrt(2)` cannot
+properly cross.
+
+For the current FREE repair,
+
+\[
+t_D<h_*+D^{-1/3},
+\qquad
+h_*={\sqrt{303}\over52}=0.3347479843\ldots,
+\]
+
+and
+
+\[
+1+h_*=1.3347479843\ldots<\sqrt2.
+\]
+
+Hence, for all sufficiently large `D`, **every lower-gate edge from every reflection
+module belongs to one common plane graph** `P_<sqrt(2)(A)`.  The original unit-contact
+graph is a subgraph of the same plane graph.  Therefore:
+
+\[
+\boxed{
+\text{lower-gate edges from distinct modules can meet only at common source vertices;
+they cannot pass transversely through one another.}
+}
+\tag{SP.2}
+
+Combined with the two-sided outer-face localization, the complete collection of
+all-inactive lower-gate runs is a plane augmentation of the original outer contact
+face.  Different runs may merge, split, or reuse vertices, but any future multi-module
+closure can treat those interactions combinatorially in one fixed planar graph rather
+than as arbitrary crossing inactive chords.
+
+---
+
+## 1. A short source edge contains no third source point
+
+If a source point `z` lies in the relative interior of the segment `xy`, then
+
+\[
+|x-y|=|x-z|+|z-y|\ge2
+\]
+
+by unit separation.  Thus no segment of length below `2`, and in particular no edge of
+`P_<sqrt(2)(A)`, contains a third source point in its interior.
+
+---
+
+## 2. Two sub-`sqrt(2)` source segments cannot cross
+
+Assume for contradiction that independent edges `ab` and `cd` of
+`P_<sqrt(2)(A)` cross properly.  Their four endpoints are then the vertices of a
+convex quadrilateral, with `ab` and `cd` as its two diagonals.
+
+The four interior angles of a convex quadrilateral sum to `2pi`, so at least one
+interior angle is at least `pi/2`.
+
+Suppose first that this angle is at `c`.  Its adjacent quadrilateral sides join `c` to
+`a` and `b`.  Unit separation gives
+
+\[
+|c-a|\ge1,
+\qquad
+|c-b|\ge1.
+\]
+
+The diagonal opposite that angle is `ab`.  By the law of cosines,
+
+\[
+\begin{aligned}
+|a-b|^2
+&=|c-a|^2+|c-b|^2
+ -2|c-a||c-b|\cos\angle acb\\
+&\ge |c-a|^2+|c-b|^2\\
+&\ge2.
+\end{aligned}
+\]
+
+Thus `|a-b|>=sqrt(2)`, contradicting the definition of the graph.
+
+If the angle at least `pi/2` occurs at `a` or `b`, the same argument instead forces
+`|c-d|>=sqrt(2)`.  The fourth case is symmetric.  Therefore no proper crossing is
+possible.
+
+Together with Section 1 this proves SP.1.
+
+The constant is sharp.  The four vertices of a unit square are unit-separated and its
+two diagonals have length exactly `sqrt(2)` and cross.  Therefore `<sqrt(2)` cannot be
+replaced by `<=sqrt(2)`.
+
+---
+
+## 3. Application to every FREE lower gate
+
+For a lower ancestry edge the two-sided activation theorem gives
+
+\[
+1<|z_j-z_{j+1}|
+\le1+\Delta_j
+\le1+t_D.
+\tag{SP.3}
+\]
+
+Since
+
+\[
+\sqrt2-1-h_*
+=0.079465577\ldots>0,
+\]
+
+we have
+
+\[
+1+t_D<\sqrt2
+\]
+
+for all sufficiently large `D`.  Thus every lower gate, independently of which
+reflection module generated it, is an edge of the same geometric graph
+`P_<sqrt(2)(A)`.
+
+Every unit contact also has length below `sqrt(2)`, so adjoining all lower-gate edges
+to the original contact graph preserves planarity.  The outer-face localization theorem
+says every all-inactive lower-gate endpoint is already in the original outer contact
+face.  Consequently these lower edges subdivide only that face; none can cross the
+positive contact core or another lower edge.
+
+This is stronger than proving one selected run is simple.  It is simultaneous over all
+lower runs and all reflection modules in the fixed original source.
+
+---
+
+## 4. What this does and does not close
+
+SP.1 removes transverse crossing as a way for many FREE near-unit corridors to coexist.
+They must instead coexist by vertex sharing and planar branching in one bounded-degree
+geometric proximity graph.  It does not yet bound how many reflection modules can reuse
+the same inactive corridor, and therefore does not by itself close C-II.
+
+The next useful multi-module step is to combine this common plane graph with the
+ordered canonical reflection normals and the antipodal support localization.  A closure
+would follow from a quantitative statement forcing too much vertex sharing, outer-walk
+detour, or an active-core gate when many ordered modules are routed through this one
+plane near-unit network.
+
+**Disposition:** proved the sharp sub-`sqrt(2)` short-edge planarity lemma and applied it
+simultaneously to every FREE lower gate.  C-II and Level I remain open.

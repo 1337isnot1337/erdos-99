@@ -1,0 +1,41 @@
+{
+  "assignment_rule": "units sorted by descending cost then lexicographic unit key; seed [90,75,60]; sequentially assign to least-loaded agent, ties by agent number",
+  "destination_commit": "c6e0394b3152d21075328bf4f26e6c070229bf13",
+  "destination_tree": "383999d67c789e79166e6e3c8f69aa5d56844c8e",
+  "frozen_813_index_sha256": "12e5b08b2ff78f48e28ce00cbf8b351ac16b5ea0856c5fb102f75fe182d211ca",
+  "frozen_set_members": 813,
+  "frozen_set_present_in_source": 813,
+  "max_minus_min_percent_of_mean": 0.023366305787055064,
+  "obligation_file_count": 3043,
+  "obligation_file_count_by_agent": {
+    "1": 1014,
+    "2": 1015,
+    "3": 1014
+  },
+  "outputs_sha256": {
+    "source-main-allocation.jsonl": "509d1c3d4927cba83d77e9973d242931e48a2b195dd2720af91e2476dae3debd",
+    "source-main-units.jsonl": "2721761cbb31f62776a38ca7f79e93cd17b06ae3dad0f8cd7e4e0285924c22d8"
+  },
+  "pairing_rule": "pair target_a_, target_b_, target_c_, or global_ Markdown research files with Python/C++ verifier basenames after stripping verify_, extensions, and normalizing YYYY-MM-DD versus YYYY_MM_DD; all unpaired obligations use their full source path as unit key",
+  "relation_counts": {
+    "exact_content_copy": 1471,
+    "frozen_813_excluded": 203,
+    "missing_content": 2938,
+    "same_path_content_conflict": 105
+  },
+  "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "source_file_count": 4717,
+  "source_tree": "e061f039eac44c286a00eacdcaa9a4cbbb877891",
+  "unit_cost_rule": "third-party exclusion review 1; otherwise markdown research/proof 3+min(12,ceil(bytes/10000)); Python/C++ verifier 3+min(12,ceil(bytes/8000)); other 1+min(12,ceil(bytes/20000)); +3 per same-path content conflict file",
+  "unit_count": 2685,
+  "unit_count_by_agent": {
+    "1": 894,
+    "2": 896,
+    "3": 895
+  },
+  "workload_scores_seeded": {
+    "1": 4280,
+    "2": 4280,
+    "3": 4279
+  }
+}

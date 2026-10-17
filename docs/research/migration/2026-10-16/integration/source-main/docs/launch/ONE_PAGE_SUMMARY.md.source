@@ -1,0 +1,27 @@
+# Erdős Problem #99: research overview
+
+**Snapshot:** `origin/main` commit `ab6dd3336f9f8d440f2bada76edb32153391cddc`; theorem-state label `2026-10-10.audit.234`.
+
+For each $n$, let $D(n)$ be the least diameter of $n$ planar points whose pairwise distances are at least one. Erdős asked whether, for all sufficiently large $n$, **every** configuration attaining $D(n)$ contains a unit equilateral triangle. The problem remains open. A disproof requires triangle-free global minimizers for an unbounded sequence of cardinalities; density, local optimality, and a single finite construction do not suffice. See the exact [problem statement](../problem/statement.md) and [Erdős Problems entry 99](https://www.erdosproblems.com/99).
+
+## What has been established
+
+The repository has an authoritative, machine-readable theorem ledger and three distinct proof routes. A canonical population theorem applies to every sufficiently large global minimizer, without a triangle-free or contact-structure assumption. For
+
+\[
+g_A=n-1-\frac{\pi D^2}{2\sqrt3},
+\]
+
+Audit.243 proves $g_A\ge\kappa_0D^{2/3}-C_\theta D^\theta$, where $\kappa_0\approx0.647826$ and $131/208<\theta<2/3$. This population reserve does not yet give a legal rearrangement of a minimizer or force a unit triangle. See the [independent audit](../audits/target_c_population_excess_sharp_coefficient_independent_audit_2026-10-10.md).
+
+Canonical stress and rigidity results identify the affine kernel and rank of the mixed rigidity system on the nonisolated positive-contact core. Contact-isolated points remain in the full source and are excluded from that core theorem. See the [Target C core audit](../targets/target-c/57-zr-zf-rigidity-audit.md).
+
+## Three open routes
+
+- **Target A — source capacity and response.** Its current global endpoint is a rank/deficiency inequality. The locked-stress branch has an exact population-versus-response target; the missing step is to derive its required surplus from global-minimizer geometry or construct a strict smaller-diameter competitor. [Route](../targets/target-a/README.md) · [Sections 175–177](../targets/target-a/27-tube-only-right-deficiency-frontier.md) · [Section 177 refinements](../targets/target-a/29-lens-source-gate-refinements.md)
+- **Target B — rhombic shell stability.** In the first-order-jammed branch, the contact structure reduces to an almost-rhombic system. A sufficient closure is $G+E\ge(\sqrt3/4)B+(\sqrt3/2)(t+\chi-1)$. Coherent near-extremal cores are excluded under stated hypotheses; the missing result must control multiple grains and their boundary and topology costs together. [Route and exact endpoint](../targets/target-b/README.md)
+- **Target C — force geometry and finite motion.** C-I is closed; C-II is open. The remaining task is to produce a legal full-source move or replacement that respects all unit-separation and actual-diameter constraints, retains contact-isolated labels, and yields the required contradiction. [Current frontier](../targets/target-c/CURRENT.md)
+
+The [state lock](../STATE.md) and [theorem manifest](../state/theorem-state.yaml) decide which claims are canonical. Internal audits are not external peer review, and a result's stated scope matters. A fuller account with traceable theorem and literature links is in the [technical briefing](TECHNICAL_BRIEF.md) and [literature review](../literature_review.md).
+
+A future collaboration could assign one bounded question at a time across the three routes, independent audits, exact computation, and literature-led methods. Each contribution should record its base state, dependencies, evidence, and limits, with independent review before promotion. This is a proposed model for a future research community; the private repository is not announcing an open submission process.

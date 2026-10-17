@@ -1,0 +1,492 @@
+# Target C-II — a SIGNED common-cut braid locks to a polynomial robust owner grid
+
+**Date:** 2026-09-17  
+**Status:** proof-only strengthening of the SIGNED upper Horn / COMMON-CUT branch; no canonical promotion claimed  
+**Scope:** the 15-spaced one-sign strong-TB1 Horn upper family through `t=(q-k)/D<=1.8687`  
+**Dependencies:** upper-blocker COMMON-CUT localization; fixed-slack near-diameter noncrossing-capacity theorem; injective 15-spaced blocker ownership; strong-TB1 cone collapse; force/block common inverse-`D` grid; line/train uniqueness lemma; row-slot stabilization lemma  
+**Certificate:** `research/verify_target_c_high_t_tb1_signed_common_cut_robust_grid_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The latest SIGNED theorem turns every localized SIGNED winner into a growing pairwise-crossing matching of inactive near-diameters. In the `COMMON-CUT` half of the localization dichotomy, the owner structure gives substantially more than one common row.
+
+The blockers still have distinct 15-spaced strong-TB1 owner coordinates. Split those owners by which side of the common supported cut they lie on. Keep the farther half of the blockers on the winning side and use the nearer half only as row markers. Every far-owner blocker then supports the robust row adjacent to every near owner. Since every strong-TB1 owner is a fixed-good robust interface, all of those marker rows cross the same global transverse train family
+
+\[
+|B_0|>0.0783D-o(D)
+\]
+
+with inverse-`D` phase error.
+
+Thus the SIGNED `COMMON-CUT` branch contains a balanced polynomial braid-by-row grid before any new averaging:
+
+\[
+D^{\varepsilon_K-o(1)}\text{ pairwise-crossing SIGNED chords}
+\]
+
+against
+
+\[
+D^{\varepsilon_K-o(1)}\text{ robust owner rows}
+\]
+
+and one fixed linear column family `B_0`, where
+
+\[
+\varepsilon_K={1\over4\alpha_{K+1}}
+=4.9754866034\ldots\times10^{-10},
+\]
+
+\[
+K=31.4\times10^6,
+\qquad
+\alpha_{K+1}=502{,}463{,}417.
+\]
+
+The inverse-`D` directional-capacity lemma and the train step-cone theorem then give an exact geometric fork on a constant fraction of the braid:
+
+1. **ROW-UNIQUE:** every retained SIGNED chord meets every retained robust owner row exactly once; or
+2. **COLUMN-UNIQUE:** every retained SIGNED chord meets every train in `B_0` at most once.
+
+The ROW-UNIQUE side can be pushed farther. Taking only `n_D^(1/4)` chords, where `n_D=D^(epsilon_K-o(1))` is the pre-split braid size, the existing row-slot argument leaves a fixed-order cable through
+
+\[
+D^{\varepsilon_K/2-o(1)}
+\]
+
+robust rows. A final two-color Ramsey extraction gives
+
+\[
+\boxed{
+\left({\varepsilon_K\over8}-o(1)\right)\log_2D
+}
+\]
+
+SIGNED chords whose every mutual crossing lies on the same side of that polynomial-height robust row slab.
+
+So `COMMON-CUT/SIGNED` no longer means merely `D/log D` inactive almost-diameters around one clean row. It contains either a polynomial braid with exact uniqueness against a linear fixed train fence, or a logarithmic one-sided crossing cable through a polynomial number of globally co-phased robust rows and the same linear train family.
+
+---
+
+## 1. Start from the current SIGNED crossing braid
+
+In the SIGNED / COMMON-CUT alternative, the upper-blocker localization theorem gives more than
+
+\[
+(c_*-o(1)){D\over\log D}
+\]
+
+distinct owned SIGNED blockers which all support one selected cut `tau_j`. Every blocker satisfies
+
+\[
+D-{K+o(1)\over D}<|e|<D,
+\qquad
+r_e\cdot w_*
+\le-\left({1\over4K}-o(1)\right)D,
+\tag{SG.1}
+\]
+
+with `K=31.4e6`.
+
+The generic inactive-near-diameter degree bound extracts a vertex-disjoint matching of size
+
+\[
+D^{1/4-o(1)}.
+\]
+
+The fixed-slack noncrossing-capacity theorem, applied with `A=K+1`, then gives a pairwise-properly-crossing submatching `F_D` of size
+
+\[
+\boxed{
+n_D:=|F_D|=D^{\varepsilon_K-o(1)},
+\qquad
+\varepsilon_K={1\over4\alpha_{K+1}}>0.
+}
+\tag{SG.2}
+
+The explicit conservative packing constant is
+
+\[
+\alpha_{K+1}
+=1+\left\lceil
+8\left(\sqrt{2(K+1)}+{1\over2}\right)^2
+\right\rceil
+=502{,}463{,}417,
+\tag{SG.3}
+\]
+
+so
+
+\[
+\boxed{
+\varepsilon_K
+=4.975486603435648\ldots\times10^{-10}.
+}
+\tag{SG.4}
+
+Every extraction above only takes subsets. Hence the blockers in `F_D` still have distinct retained strong-TB1 owners, still support `tau_j`, and still satisfy the signed projection in (SG.1).
+
+---
+
+## 2. Split owner coordinates around the common cut
+
+Write the exact path-region support of a blocker as
+
+\[
+I(e)=\{a(e)+1,\ldots,b(e)\},
+\qquad a(e)<b(e),
+\tag{SG.5}
+\]
+
+and let its owner be one of the two endpoint-region indices `a(e),b(e)`. Since `tau_j` is supported by every blocker,
+
+\[
+a(e)<j\le b(e).
+\tag{SG.6}
+\]
+
+The owner coordinates are distinct and belong to the retained 15-spaced strong-TB1 set.
+
+At most one blocker has owner exactly `j`. Delete it if present. Among the remaining blockers, at least
+
+\[
+{n_D-1\over2}
+\tag{SG.7}
+
+have their owner strictly on the same side of the common cut.
+
+Assume first that the winning side is the left side. Write those owner coordinates in increasing order
+
+\[
+i_1<i_2<\cdots<i_m<j,
+\qquad
+m\ge{n_D-1\over2}.
+\tag{SG.8}
+
+Let
+
+\[
+r=\lfloor m/2\rfloor.
+\tag{SG.9}
+\]
+
+Keep as blockers the **far half** with owners
+
+\[
+i_1,\ldots,i_r,
+\]
+
+and reserve the **near half**
+
+\[
+i_{r+1},\ldots,i_m
+\]
+
+only as robust row markers.
+
+A blocker with left owner `i_s` has `a(e)=i_s` and, by (SG.6), `b(e)>=j`. Therefore its support contains every cut
+
+\[
+\tau_{i_s+1},\tau_{i_s+2},\ldots,\tau_j.
+\tag{SG.10}
+
+For every near owner `i_t`, `t>r`, choose the robust adjacent row
+
+\[
+\sigma_t:=\tau_{i_t+1}.
+\tag{SG.11}
+
+Since `i_t>i_s` for every retained far owner, (SG.10) gives
+
+\[
+\boxed{
+\text{every retained far-owner blocker supports every row }\sigma_t.
+}
+\tag{SG.12}
+
+The right-owner case is symmetric. If
+
+\[
+j<b_1<b_2<\cdots<b_m
+\]
+
+are right owners, keep the far-right half as blockers and use the near-right half as row markers, taking
+
+\[
+\sigma_t:=\tau_{b_t}.
+\]
+
+Because a right-owned blocker has support ending at its owner cut, every retained far-right blocker supports every such near-right marker row.
+
+Consequently there are families `E_D^{far}` and `A_D^{owner}` satisfying
+
+\[
+\boxed{
+|E_D^{far}|\ge {n_D\over4}-O(1),
+\qquad
+|A_D^{owner}|\ge {n_D\over4}-O(1),
+}
+\tag{SG.13}
+
+such that:
+
+- the blockers in `E_D^{far}` are vertex-disjoint and pairwise cross properly;
+- every blocker supports every row in `A_D^{owner}`;
+- every row in `A_D^{owner}` is adjacent to a distinct retained strong-TB1 robust interface.
+
+The 15-spacing is not needed for (SG.13), but it guarantees that all marker rows are distinct and preserves their strict path order.
+
+---
+
+## 3. Every owner row uses the same global inverse-D column family
+
+The strong-TB1 cone-collapse theorem places every retained strong-TB1 interface in the fixed-good robust population of the force/block common-grid theorem.
+
+That theorem supplies one global train family `B_0`, chosen once from the high-`t` complete rectangle, with
+
+\[
+\boxed{|B_0|>0.0783D-o(D).}
+\tag{SG.14}
+
+For every robust interface `i`, both adjacent rows cross every `b in B_0`, and
+
+\[
+0<\theta(\tau_s,b)-{\pi\over3}
+<{31.4\times10^6\over D}+o(D^{-1})
+\tag{SG.15}
+
+for each adjacent row `tau_s`.
+
+Moreover `B_0` itself has projective width
+
+\[
+<{3.004\times10^6\over D}+o(D^{-1}).
+\tag{SG.16}
+
+Fixing one `b_* in B_0` in (SG.15) shows that all rows in `A_D^{owner}` have one common projective transverse phase up to `O(D^-1)`. Thus the product
+
+\[
+A_D^{owner}\times B_0
+\tag{SG.17}
+
+is a common inverse-`D` near-equilateral train grid.
+
+Because every blocker in `E_D^{far}` supports every marker row, its endpoints lie on opposite sides of that proper crosscut. Therefore its straight segment meets every row in `A_D^{owner}` at least once.
+
+This is the first useful point of the owner split: the rows do not come from a fresh defect average. They are themselves robust interfaces, so the full inverse-`D` phase control and the same global `B_0` are inherited with no asymptotic loss.
+
+---
+
+## 4. A row-unique / column-unique fork on a constant fraction of the braid
+
+Use the line/train uniqueness lemma from the THIN phase-cone theorem. If a straight line direction lies outside the closed midpoint-step cone of a complete stopped train, it meets that train at most once.
+
+Let `[u_*]` be the common transverse phase of the owner rows. The row midpoint-step cone is an `O(D^-1)` perturbation of
+
+\[
+\mathcal S_{row}
+=
+\left([u_*]+{\pi\over3},
+      [u_*]+{2\pi\over3}\right)
+\pmod\pi.
+\tag{SG.18}
+
+The `B_0` transverse phase differs from `[u_*]` by `pi/3+O(D^-1)`, so every `B_0` midpoint-step cone is an `O(D^-1)` perturbation of the adjacent sector
+
+\[
+\mathcal S_{col}
+=
+\left([u_*]+{2\pi\over3},
+      [u_*]+\pi\right)
+\pmod\pi.
+\tag{SG.19}
+
+Choose one fixed constant `L_phase` larger than all inherited inverse-`D` phase constants by a factor of ten. Delete every blocker whose projective direction lies within `L_phase/D` of either boundary of `S_row`.
+
+The inverse-`D` directional-capacity lemma applies to every pair with
+
+\[
+|e|\ge D-{K+1\over D}.
+\]
+
+Hence each deleted boundary tube contains only `O_K(1)` blockers. Only `O_K(1)` blockers are removed in total.
+
+Every remaining blocker lies safely either inside `S_row` or outside its closure. Keep the larger class. It has size
+
+\[
+\boxed{
+\ge {n_D\over8}-O_K(1)
+=D^{\varepsilon_K-o(1)}.
+}
+\tag{SG.20}
+
+There are two cases.
+
+### Case R — ROW-UNIQUE
+
+The retained blocker directions lie outside every marker-row step cone. Therefore each blocker meets each row of `A_D^{owner}` at most once.
+
+Every blocker supports every marker row, so it must meet it at least once. Hence
+
+\[
+\boxed{
+\text{every retained SIGNED chord meets every row in }A_D^{owner}
+\text{ exactly once.}
+}
+\tag{SG.21}
+
+### Case C — COLUMN-UNIQUE
+
+The retained blocker directions lie safely inside `S_row`. Because `S_col` is the adjacent disjoint step sector, every such direction lies outside the closed step cone of every `b in B_0`. Therefore
+
+\[
+\boxed{
+\text{every retained SIGNED chord meets every train }b\in B_0
+\text{ at most once.}
+}
+\tag{SG.22}
+
+The conclusion is source-wide along each complete train, not only inside the owner-row rectangle.
+
+This proves the advertised exact uniqueness fork.
+
+---
+
+## 5. ROW-UNIQUE stabilizes to a one-sided logarithmic cable
+
+Assume Case R. We now exploit the fact that the row population and the original braid population have the same polynomial scale.
+
+Let
+
+\[
+k_D:=\lfloor n_D^{1/4}\rfloor.
+\tag{SG.23}
+
+For sufficiently large `D`, (SG.20) contains more than `k_D` chords. Keep any `k_D` of them. Let
+
+\[
+H_D:=|A_D^{owner}|\ge {n_D\over4}-O(1).
+\tag{SG.24}
+
+The selected rows are pairwise disjoint proper crosscuts in their path order. Every chosen chord meets every selected row exactly once, and every pair of chosen chords crosses properly exactly once.
+
+Apply the existing row-slot stabilization lemma with
+
+\[
+C_D={k_D\choose2}.
+\]
+
+It gives an ordered row subblock `A_D^{ord}` with
+
+\[
+|A_D^{ord}|
+\ge {H_D-C_D\over C_D+1}.
+\tag{SG.25}
+
+Since
+
+\[
+k_D=n_D^{1/4+o(1)},
+\qquad
+C_D=n_D^{1/2+o(1)},
+\]
+
+while `H_D=(1/4+o(1))n_D`, we obtain
+
+\[
+\boxed{
+|A_D^{ord}|=n_D^{1/2-o(1)}
+=D^{\varepsilon_K/2-o(1)}.
+}
+\tag{SG.26}
+
+On every row in `A_D^{ord}`, the `k_D` chord intersections occur in one fixed total order. No pairwise chord crossing lies inside the closed slab bounded by the extreme rows of this ordered block.
+
+Color each chord pair by which of the two exterior sides of the slab contains its unique crossing point. The diagonal Ramsey bound
+
+\[
+R(r,r)<4^{r-1}
+\]
+
+gives a monochromatic sub-braid `G_D` with
+
+\[
+|G_D|
+\ge {1\over2}\log_2 k_D-O(1).
+\]
+
+Using (SG.2) and (SG.23),
+
+\[
+\boxed{
+|G_D|
+\ge
+\left({\varepsilon_K\over8}-o(1)\right)\log_2D.
+}
+\tag{SG.27}
+
+Numerically,
+
+\[
+{\varepsilon_K\over8}
+=6.21935825429\ldots\times10^{-11}.
+\tag{SG.28}
+
+Equivalently, relative to natural logarithm,
+
+\[
+|G_D|
+\ge
+(8.97263731098\ldots\times10^{-11}-o(1))\log D.
+\tag{SG.29}
+
+Every pair of chords in `G_D` crosses on the same side of the entire `D^(epsilon_K/2-o(1))` robust-row slab.
+
+All inherited metric information survives:
+
+- every chord remains an inactive `D-O(D^-1)` pair;
+- every chord retains the fixed SIGNED projection (SG.1);
+- every chord supports and crosses exactly once every row of `A_D^{ord}`;
+- every row of `A_D^{ord}` crosses every column of the same fixed `B_0`;
+- every row-column angle is `pi/3+O(D^-1)`;
+- the chord order is constant throughout the slab;
+- all global chord-chord crossings of `G_D` lie on one common exterior side.
+
+Thus the ROW-UNIQUE half of SIGNED / COMMON-CUT has the normal form
+
+```text
+Theta(log D) pairwise-crossing inactive near-diameters,
+one fixed macroscopic negative TB1-axis projection,
+all mutual crossings on one side of a robust row slab;
+D^(epsilon_K/2-o(1)) globally co-phased robust rows;
+>0.0783 D one fixed transverse train family B_0;
+pi/3+O(1/D) on the entire row-by-B_0 rectangle;
+and one fixed chord order throughout the slab.
+```
+
+The coefficient is numerically tiny because the current fixed-slack Ramsey exponent is extremely conservative. The structural conclusion is independent of its optimization.
+
+---
+
+## 6. Frontier effect
+
+This note only treats the `SIGNED / COMMON-CUT` localization branch. It does not claim the same owner-row rectangle for `LOCAL-WINDOW`, where the blockers do not initially share one cut.
+
+Within `COMMON-CUT`, the remaining SIGNED geometry is now split sharply:
+
+```text
+ROW-UNIQUE:
+    a logarithmic one-sided SIGNED crossing cable
+    through D^(epsilon_K/2-o(1)) robust rows
+    and one fixed >0.0783D inverse-D-phase column family B_0;
+
+COLUMN-UNIQUE:
+    D^(epsilon_K-o(1)) pairwise-crossing SIGNED near-diameters
+    plus D^(epsilon_K-o(1)) robust owner rows,
+    with every chord meeting every b in the fixed linear family B_0 at most once.
+```
+
+The next direct target in ROW-UNIQUE is metric: combine the fixed negative `w_*` projection with the one-sided cable and the inverse-`D` near-equilateral `A_D^{ord} x B_0` rectangle. The next direct target in COLUMN-UNIQUE is order-theoretic: exploit exact pseudosegment incidence against the linear noncrossing `B_0` fence.
+
+No contradiction is claimed here.
+
+**Disposition:** upgraded SIGNED / COMMON-CUT from one clean supported row to a balanced polynomial robust owner grid, proved an exact row/column uniqueness fork, and reduced ROW-UNIQUE further to a logarithmic one-sided cable through a polynomial-height inverse-`D` common train grid. C-II and Level I remain open.

@@ -1,0 +1,1340 @@
+state_version: "2026-10-05.audit.54"
+state_date: "2026-10-05"
+cleanup_baseline: "34085ac264eb5241985de7b453bf7d612a25fa4d"
+level_i_status: open
+
+status_vocabulary:
+  canonical: "proved/audited and part of the active theorem stack"
+  unreviewed: "research artifact not independently audited or promoted; never an unqualified premise"
+  audited-working: "proof plus audit/correction history, not promoted as a canonical dependency"
+  conditional: "depends on an unproved or unresolved hypothesis"
+  regression: "exact or certified obstruction to an overstrong claim"
+  superseded: "historically valid/formerly current but not the live frontier"
+  rejected: "proof or claimed implication is invalid"
+  provenance: "history only; not a theorem source"
+
+authority_order:
+  - "docs/STATE.md and this manifest for lifecycle/status"
+  - "active target route map and explicitly named canonical modules"
+  - "reports explicitly promoted by the state lock or route map"
+  - "audited-working reports"
+  - "conditional reports and regressions"
+  - "unreviewed research artifacts"
+  - "superseded, rejected, and provenance material"
+
+defaults:
+  report_not_explicitly_promoted: unreviewed
+  archived_document: provenance
+  historical_prompt: provenance
+  merged_pull_request_without_promotion: unreviewed
+  file_on_main_without_promotion: unreviewed
+  target_c_colocated_module_not_named_by_route_map: provenance
+  module_local_handoff_prose: "historical at that module's section unless repeated by the current route map"
+
+terminology:
+  woodall_cyclic_branch: "full loaded diameter graph H has d_H=0 and is connected odd-unicyclic"
+  cyclic_shell: "historical shell/projective-direction wording; may occur in old d_H=1 P1/S1 report titles and does not mean Woodall cyclic"
+
+artifact_policy:
+  index: "docs/state/artifact-index.jsonl"
+  roots:
+    - "docs/reports"
+    - "docs/audits"
+    - "docs/archive"
+  exclude:
+    - "docs/reports/README.md"
+    - "docs/reports/REPORT_TEMPLATE.md"
+    - "docs/archive/README.md"
+  metadata_header: "theorem-state"
+  default_status: unreviewed
+  archive_status: provenance
+
+graph_policy:
+  canonical_dependency_statuses:
+    - canonical
+  require_resolved_edges: true
+  require_acyclic_depends_on: true
+
+generated_views:
+  status_summary: "docs/state/STATUS.generated.md"
+  theorem_graph: "docs/state/THEOREM_GRAPH.generated.md"
+
+certificate_policy:
+  run_in_ci: true
+  require_paths_exist: true
+
+targets:
+  target-a:
+    status: open
+    route_map: "docs/targets/target-a/README.md"
+    canonical_sections_through: 177
+    global_endpoint: "rank(S) <= d_int + |C^partial| - Delta_Lambda, equivalently d_sc >= Delta_Lambda"
+    locked_branch_endpoint: "Section 175 interior-tube right-deficiency inequality: |O_iso| + sum_i max(0,|O_i|-|C_i|) >= j_* + |T_Z|"
+    superseded_frontiers:
+      - claim: "source-labeled planar Menger lemma is the live Target A endpoint"
+        status: superseded
+        superseded_by: "Sections 168-174"
+      - claim: "Section 174 full basis-closed shield charge is the live locked-branch endpoint"
+        status: superseded
+        superseded_by: "Section 175 tube-only right-deficiency theorem"
+      - claim: "the eleven-sites-per-contact-edge estimate is the current pointwise tube bound"
+        status: superseded
+        superseded_by: "Section 175 nine-site bound; Section 177 gives a two-site edge-lens alternative"
+    active_prompt: "docs/prompts/erdos_problem_99_TARGET_A_CURRENT_CONTINUATION_PROMPT.md"
+
+  target-b:
+    status: open
+    route_map: "docs/targets/target-b/README.md"
+    global_endpoint: "G+E >= (sqrt(3)/4) B + (sqrt(3)/2)(t+chi-1)"
+    active_prompt: null
+    current_canonical_entries:
+      - id: "TB-DENSE-GRID"
+        report: "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md"
+        audit: "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent dependency audit"
+        scope: "pure simply connected rhombic disk; stated coherent-phase and, for GPI, dominant-component hypotheses; MCP2 uses fixed Section-50 lambda before D->infinity"
+        conclusion: "DT1-DT4, TG1-TG3, PDG, PC1/PC3, MCP1 and fixed-lambda MCP2, and GPI are valid; GPI gives liminf Delta >= 4e-17 tau^2 for one dominant coherent component, but no multi-grain globalization or full shell-stability inequality follows"
+        depends_on: []
+    audited_working: []
+
+  target-c:
+    status: open
+    route_map: "docs/targets/target-c/README.md"
+    current_frontier: "docs/targets/target-c/CURRENT.md"
+    c_i: closed
+    c_ii: open
+    active_prompt: "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md"
+    canonical_modules:
+      - "docs/targets/target-c/01-force-hull-and-shear.md"
+      - "docs/targets/target-c/02-fully-visible-bridge-frontier.md"
+      - "docs/targets/target-c/03-pinned-block-and-loaded-boundary-frontier.md"
+      - "docs/targets/target-c/04-near-minimal-response-frontier.md"
+      - "docs/targets/target-c/05-quadrangulation-defect-frontier.md"
+      - "docs/targets/target-c/56-ci-restored-frontier.md"
+      - "docs/targets/target-c/57-zr-zf-rigidity-audit.md"
+      - "docs/targets/target-c/58-full-source-geometry-audit.md"
+      - "docs/targets/target-c/59-difference-body-density-audit.md"
+      - "docs/targets/target-c/60-perfect-matching-exclusion-audit.md"
+      - "docs/targets/target-c/61-linear-nonmatching-excess-audit.md"
+      - "docs/targets/target-c/62-attachment-incidence-currency-audit.md"
+      - "docs/targets/target-c/63-loaded-hull-slack-audit.md"
+      - "docs/targets/target-c/64-extreme-circuit-transfer-audit.md"
+      - "docs/targets/target-c/65-primitive-loaded-split-audit.md"
+      - "docs/targets/target-c/66-forest-doubled-gap-audit.md"
+      - "docs/targets/target-c/67-rhombus-population-transport-audit.md"
+      - "docs/targets/target-c/68-punctured-packing-phase-audit.md"
+      - "docs/targets/target-c/69-coherent-grain-interface-audit.md"
+      - "docs/targets/target-c/70-forest-endpoint-geometry-audit.md"
+      - "docs/targets/target-c/71-extreme-attachment-geometry-audit.md"
+      - "docs/targets/target-c/72-primitive-shell-leaf-forcing-audit.md"
+      - "docs/targets/target-c/73-pseudosegment-grid-extraction-audit.md"
+      - "docs/targets/target-c/74-complete-grid-phase-collapse-audit.md"
+      - "docs/targets/target-c/75-all-phase-component-deatomization-audit.md"
+      - "docs/targets/target-c/76-hole-stable-complete-grid-order-diameter-audit.md"
+      - "docs/targets/target-c/77-inactive-chamber-saturation-audit.md"
+      - "docs/targets/target-c/78-harmonic-cell-grid-localization-audit.md"
+      - "docs/targets/target-c/79-inactive-chamber-rhombic-saturation-dichotomy-audit.md"
+      - "docs/targets/target-c/80-global-isolate-concentration-fullcore-disk-audit.md"
+      - "docs/targets/target-c/82-harmonic-cell-near-quadrangulation-audit.md"
+      - "docs/targets/target-c/83-attachment-cell-disjoint-tiling-audit.md"
+      - "docs/targets/target-c/84-typeII-interface-collapse-audit.md"
+      - "docs/targets/target-c/85-train-boundary-interface-currency-audit.md"
+      - "docs/targets/target-c/88-harmonic-wrapping-diameter-audit.md"
+      - "docs/targets/target-c/89-harmonic-cell-train-budget-audit.md"
+      - "docs/targets/target-c/90-dense-inverse-phase-crossing-core-audit.md"
+      - "docs/targets/target-c/91-explicit-ordered-grid-audit.md"
+      - "docs/targets/target-c/92-wrapping-perimeter-diameter-audit.md"
+      - "docs/targets/target-c/93-full-gap-wrapping-diameter-audit.md"
+      - "docs/targets/target-c/94-three-forbidden-gap-wrapping-audit.md"
+      - "docs/targets/target-c/96-outer-walk-forbidden-gap-threshold-audit.md"
+      - "docs/targets/target-c/100-wrapping-angular-measure-threshold-audit.md"
+      - "docs/targets/target-c/101-complement-gap-chord-threshold-audit.md"
+      - "docs/targets/target-c/102-phase-corridor-endpoint-exclusion-audit.md"
+      - "docs/targets/target-c/103-unique-wrapping-cap-deficit-audit.md"
+      - "docs/targets/target-c/104-quantitative-phase-gap-audit.md"
+      - "docs/targets/target-c/105-optimized-quantitative-phase-gap-audit.md"
+      - "docs/targets/target-c/106-strong-phase-shore-quantitative-gap-audit.md"
+      - "docs/targets/target-c/107-wrapping-support-area-rigidity-audit.md"
+      - "docs/targets/target-c/108-area-boosted-quantitative-phase-gap-audit.md"
+      - "docs/targets/target-c/109-asymptotically-sharp-phase-shores-audit.md"
+      - "docs/targets/target-c/122-aggregate-two-arc-detour-audit.md"
+      - "docs/targets/target-c/123-augmented-cell-defect-budget-audit.md"
+      - "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+      - "docs/targets/target-c/122-123-promotion-audit-2026-09-12.md"
+      - "docs/targets/target-c/CURRENT.md"
+    promoted_catalog_snapshot: "docs/targets/target-c/HISTORY-pre-cleanup-2026-09-11.md"
+    current_canonical_entries:
+      - id: "C-ZTA"
+        report: "docs/reports/target_c_zero_transfer_additive_promotion_2026-09-11.md"
+        status: canonical
+        promotion_origin: "pre-cleanup historical catalog item 62"
+        conclusion: "for D>=9, min_{e!=f} K_ef < 0"
+        depends_on: []
+      - id: "C-ZRF"
+        report: "docs/targets/target-c/57-zr-zf-rigidity-audit.md"
+        audit: "docs/targets/target-c/57-zr-zf-rigidity-audit.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent ZR/ZF dependency audit; 2026-09-11 core-scope correction"
+        scope: "nonisolated positive-contact core V of the contact-minimal then diameter-pair-minimal C-II representative; contact-isolated source points remain in the full configuration but are not counted by v and are not vertices of the core stress/rigidity matrices"
+        conclusion: "after zero-transfer exclusion, ker Omega_V=span{1,Px|_V,Py|_V}; the mixed contact/diameter framework on V has rank 2v-3, so e+h>=2v-2 and h>=delta>=ceil(D); the exact ZF defect ledgers use this same core convention; no bound on the isolated source population follows"
+        depends_on:
+          - "C-ZTA"
+      - id: "C-FS-GEOM"
+        report: "docs/targets/target-c/58-full-source-geometry-audit.md"
+        audit: "docs/targets/target-c/58-full-source-geometry-audit.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent full-source geometry audit"
+        scope: "every noncollinear global minimum-diameter source; selected-force statements hold uniformly over every normalized KKT stress"
+        conclusion: "R(K)<D/2+3^(1/4)sqrt(D); every selected force hull inherits the same upper circumradius; P_*=2D-O(sqrt(D)); actual diameter-star angles are O(D^(-1/4)); diameter midpoints are O(D^(3/4)) from one source circumcenter; coordinate response is radially approximated on affine fields; pi D-per(K)<pi sqrt(3)/2; and delta_K+O_A=c0 P-a0 g_A exactly"
+        depends_on: []
+      - id: "C-FSD"
+        report: "docs/targets/target-c/58-full-source-geometry-audit.md"
+        audit: "docs/targets/target-c/58-full-source-geometry-audit.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent full-source geometry audit"
+        scope: "contact-minimal then diameter-pair-minimal post-ZF C-II representative"
+        conclusion: "Delta(H)=O(D^(3/4)); the diameter vertex-cover and matching numbers are Omega(D^(1/4)); the guaranteed matching chords cross pairwise and have midpoints O(D^(3/4)) from one full-source circumcenter"
+        depends_on:
+          - "C-FS-GEOM"
+          - "C-ZRF"
+      - id: "C-DB-DENSITY"
+        report: "docs/targets/target-c/59-difference-body-density-audit.md"
+        audit: "docs/targets/target-c/59-difference-body-density-audit.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent difference-body density audit"
+        scope: "contact-minimal then diameter-pair-minimal post-ZF C-II representative with full actual force hull"
+        conclusion: "distinct actual diameter directions are projectively separated by 2 asin(1/(2D)); Q+2s_Z <= h+1-2D cos((h-1)asin(1/(2D))); liminf h/D >= 2rho where rho=cos rho; liminf per(F)/D >=4rho"
+        depends_on:
+          - "C-ZRF"
+      - id: "C-FS-STABILITY"
+        report: "docs/targets/target-c/59-difference-body-density-audit.md"
+        audit: "docs/targets/target-c/59-difference-body-density-audit.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent difference-body density audit"
+        scope: "same post-ZF C-II representative and its full actual force hull F"
+        conclusion: "near half-turn symmetry improves area(F-F)<=6area(F) to 4area(F)+o(D^2); liminf area(F)/D^2 >= (2rho+sin(2rho))/4 = 0.6184708847696858...; the full force hull contains a disk centered at the full-source circumcenter with asymptotic radius at least 0.5 sin(rho) D = 0.3368060145916074... D"
+        depends_on:
+          - "C-DB-DENSITY"
+          - "C-FS-GEOM"
+      - id: "C-MATCHING-EXCLUSION"
+        report: "docs/targets/target-c/60-perfect-matching-exclusion-audit.md"
+        audit: "docs/targets/target-c/60-perfect-matching-exclusion-audit.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent perfect-matching branch audit"
+        scope: "contact-minimal then diameter-pair-minimal post-ZF C-II representative; full actual diameter graph perfect-matching subbranch"
+        conclusion: "for all sufficiently large survivors the full actual diameter graph is not a perfect matching; perfect matching forces a pure strict-rhombic force-hull disk with area(F)<=pi^2 D^2/16, contradicting C-FS-STABILITY since (2rho+sin(2rho))/4>pi^2/16"
+        depends_on:
+          - "C-ZRF"
+          - "C-FS-STABILITY"
+      - id: "C-LINEAR-NONMATCH"
+        report: "docs/targets/target-c/61-linear-nonmatching-excess-audit.md"
+        audit: "docs/targets/target-c/61-linear-nonmatching-excess-audit.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent linear nonmatching-excess audit"
+        scope: "contact-minimal then diameter-pair-minimal post-ZF C-II representative; full actual force hull and loaded diameter graph"
+        conclusion: "with r_H=2h-q=x_B+Q+2s_Z, the exact train-end theorem gives 3r_H>=h-2; combining it with the defect-sensitive difference-body inequality gives liminf r_H/D >= c_*, where c_*=cos(3c_*/2) and 0.6099<c_*<0.61; in the Woodall forest branch sum_j(q_j-2)=r_H"
+        certificates:
+          - "research/verify_target_c_linear_nonmatching_excess.py"
+        depends_on:
+          - "C-DB-DENSITY"
+          - "C-MATCHING-EXCLUSION"
+      - id: "C-ATTACH-CURRENCY"
+        report: "docs/targets/target-c/62-attachment-incidence-currency-audit.md"
+        audit: "docs/targets/target-c/62-attachment-incidence-currency-audit.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent attachment-incidence currency audit"
+        scope: "contact-minimal then diameter-pair-minimal post-ZF C-II representative; every Woodall branch and every s_Z>=0"
+        conclusion: "exactly e_BB>=d_H+s_Z and sum_r per(P_r)<=pi(2+2q-e_BB-(d_H+s_Z)); combining with C-MU-09604 gives retained currency floors liminf [e_BB+s_C-2(d_H+s_Z)]/D >= z_*/2 and liminf [max(e_BB,s_C)-(d_H+s_Z)]/D >= z_*/3"
+        depends_on:
+          - "C-ZRF"
+          - "C-MU-09604"
+      - id: "C-LOADED-HULL"
+        report: "docs/targets/target-c/63-loaded-hull-slack-audit.md"
+        audit: "docs/targets/target-c/63-loaded-hull-slack-audit.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent loaded-hull slack audit"
+        scope: "contact-minimal then diameter-pair-minimal post-ZF C-II representative; all Woodall branches and all s_Z>=0"
+        conclusion: "with k=d_H+s_Z and explicit u_B,c_B>=0, e_BB=Q+2k+u_B+c_B, hence e_BB+x_B>=q and liminf max(e_BB,x_B)/D>=rho; also e_BB+2s_C-3k=x_B+Q+s_C-c_I-2 exactly"
+        depends_on:
+          - "C-LINEAR-NONMATCH"
+          - "C-MU-09604"
+      - id: "C-EXTREME-TRANSFER"
+        report: "docs/targets/target-c/64-extreme-circuit-transfer-audit.md"
+        audit: "docs/targets/target-c/64-extreme-circuit-transfer-audit.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent extreme-circuit transfer audit"
+        scope: "every extreme normalized KKT stress of the contact-minimal then diameter-pair-minimal post-ZF C-II representative; asymptotic frontier transfer under kappa_*=o(D)"
+        conclusion: "the normalized KKT stress polytope has affine dimension s_Z; every extreme support is a rigidity-matroid circuit with kappa_*=2(v-v_*)+sigma_* and b_*+Q_*=2h_*+2sigma_*; if kappa_*=o(D), then liminf h_*/D>=2rho, liminf (2h_*-q_*)/D>=c_*, and liminf max(e_BB,*,x_B,*)/D>=rho"
+        depends_on:
+          - "C-ZRF"
+          - "C-DB-DENSITY"
+          - "C-LINEAR-NONMATCH"
+          - "C-WOODALL"
+      - id: "C-PRIMITIVE-SPLIT"
+        report: "docs/targets/target-c/65-primitive-loaded-split-audit.md"
+        audit: "docs/targets/target-c/65-primitive-loaded-split-audit.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent primitive-boundary synthesis audit"
+        scope: "contact-minimal then diameter-pair-minimal post-ZF C-II representative; all Woodall branches and all s_Z>=0"
+        conclusion: "exactly max(e_BB,x_B)>=[h-1+2D cos((h-1)asin(1/(2D)))]/3; hence liminf max(e_BB,x_B)/D>=4rho/3=0.9854468442..., where rho=cos rho"
+        depends_on:
+          - "C-LOADED-HULL"
+          - "C-DB-DENSITY"
+      - id: "C-FOREST-DOUBLE-GAP"
+        report: "docs/targets/target-c/66-forest-doubled-gap-audit.md"
+        audit: "docs/targets/target-c/66-forest-doubled-gap-audit.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent corrected forest doubled-gap audit"
+        scope: "sufficiently large Woodall forest branch d_H>0; arbitrary s_Z>=0"
+        conclusion: "vertex-disjoint diameter edges have projective separation at least 4asin(1/(2D)); after retaining the minimum of the two exact finite gap-extreme formulas, every convergent forest subsequence q/D->x satisfies liminf x_B/D>=2cos(x/2); hence liminf max(e_BB,x_B)/D>=kappa, where kappa=2cos kappa=1.0298665293..."
+        depends_on:
+          - "C-WOODALL"
+          - "C-DB-DENSITY"
+          - "C-LOADED-HULL"
+      - id: "C-RHOMBUS-POP"
+        report: "docs/targets/target-c/67-rhombus-population-transport-audit.md"
+        audit: "docs/targets/target-c/67-rhombus-population-transport-audit.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent rhombus/population transport audit"
+        scope: "contact-minimal then diameter-pair-minimal post-ZF C-II representative with all source points retained; all Woodall branches and arbitrary s_Z>=0"
+        conclusion: "with a0=sqrt(3)/2 and c0=sqrt(3)/4, a0 N_F<=area(F)+c0 per(F)+a0-E_4; hence E_4+[pi D^2/4-area(F)]<a0 Z_ext+c0 per(F), so d_H+s_Z cancels completely from inside-force-hull capacity; also Z_ext>=n-2h^2/(pi sqrt(3))-h-1, and approaching the C-PRIMITIVE-SPLIT 4rho/3 endpoint forces h/D->2rho and a positive quadratic external population"
+        depends_on:
+          - "C-ZRF"
+          - "C-FS-GEOM"
+          - "C-PRIMITIVE-SPLIT"
+      - id: "C-PUNCTURED-PHASE"
+        report: "docs/targets/target-c/68-punctured-packing-phase-audit.md"
+        audit: "docs/targets/target-c/68-punctured-packing-phase-audit.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent punctured finite-packing / phase audit"
+        scope: "contact-minimal then diameter-pair-minimal post-ZF C-II representative with all source points retained; all Woodall branches and arbitrary s_Z>=0"
+        conclusion: "puncturing every bounded quadrilateral contact-face interior from the full source hull and applying the Graham-Witsenhausen-Zassenhaus finite packing inequality gives E_4+delta_K<c0 per(K)<=pi sqrt(3)D/4, so total strict-rhombus area defect is O(D) independently of external population; the phase-circle cut then deletes only O(D) rhombus crossings and leaves an exact acyclic real phase potential"
+        depends_on:
+          - "C-RHOMBUS-POP"
+          - "C-FS-GEOM"
+      - id: "C-COHERENT-GRAINS"
+        report: "docs/targets/target-c/69-coherent-grain-interface-audit.md"
+        audit: "docs/targets/target-c/69-coherent-grain-interface-audit.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent coherent grain/interface audit"
+        scope: "all post-ZF C-II survivors after the canonical Section-68 phase potential; every fixed phase-bin width epsilon in (0,pi/6)"
+        conclusion: "a fixed-width coarea phase cut deletes only O_epsilon(D) additional rhombi; all surviving physical grains are epsilon-coherent and have total perimeter O_epsilon(D); hence 2sqrt(pi a0) sum sqrt(R_j)=O_epsilon(D), so quadratic rhombus mass forces one physically connected quadratic coherent grain; local train segments satisfy 2T_j=P_j; and the exact face count gives m=R_4+O(D), splitting the problem into a quadratic-core coherent-grain branch versus a subquadratic positive-KKT-core branch"
+        depends_on:
+          - "C-PUNCTURED-PHASE"
+          - "C-RHOMBUS-POP"
+          - "C-DB-DENSITY"
+      - id: "C-FOREST-ENDPOINT-GEOM"
+        report: "docs/targets/target-c/70-forest-endpoint-geometry-audit.md"
+        audit: "docs/targets/target-c/70-forest-endpoint-geometry-audit.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent forest endpoint geometry audit"
+        scope: "Woodall-forest post-ZF subsequences; sharpened boundary/contact conclusions at the Section-66 equality endpoint"
+        conclusion: "if q/D->x then liminf area(F)/D^2 >= (x+sin x)/4 and liminf r_o(F)/D >= 0.5 sin(x/2); at the sharp kappa endpoint there are (kappa-o(1))D distinct unloaded shallow two-edge hull-detour vertices and at least (kappa/2-o(1))D distinct extra inward unit contacts with normal component sqrt(3)/2-o(1)"
+        depends_on:
+          - "C-FOREST-DOUBLE-GAP"
+          - "C-FS-GEOM"
+          - "C-LOADED-HULL"
+      - id: "C-EXTREME-ATTACH-GEOM"
+        report: "docs/targets/target-c/71-extreme-attachment-geometry-audit.md"
+        audit: "docs/targets/target-c/71-extreme-attachment-geometry-audit.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent extreme-circuit attachment geometry audit"
+        scope: "every selected extreme KKT circuit outside the single-block/all-loaded exception; low-degeneracy asymptotics where stated"
+        conclusion: "selected incidence blocks satisfy the exact cross-row identity m_cross=2u0+3s-2-sigma_*+sum delta_j; the selected pinned-flex ledgers give e_BB,*>=d_*-sigma_* and sum per(P_r,*)<=pi(2+2q_*-e_BB,* - d_* + sigma_*); low-degeneracy extreme circuits therefore inherit linear selected attachment separation/perimeter control, with pinned right-nullity retained explicitly rather than discarded"
+        depends_on:
+          - "C-EXTREME-TRANSFER"
+          - "C-FS-GEOM"
+          - "C-ATTACH-CURRENCY"
+      - id: "C-PRIMITIVE-SHELL-LF"
+        report: "docs/targets/target-c/72-primitive-shell-leaf-forcing-audit.md"
+        audit: "docs/audits/target_c_primitive_shell_leaf_forcing_promotion_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent primitive-shell CY/CG/LF promotion audit"
+        scope: "exact primitive all-loaded unit-shell normal form m=0, d_H+s_Z=2, C=C_q; CG/LF conclusions require q>=6; the facet-derived nonleaf-edge lower bound requires s_Z>0"
+        conclusion: "the normalized KKT stress polytope has dimension s_Z=2-d_H; every normalized stress retains the full positive contact cycle and every full-H leaf diameter edge stays positive throughout the polytope; when s_Z>0 at least s_Z+1=3-d_H full-diameter edges join two nonleaf vertices; for d_H=2,s_Z=0 no facet-derived nonleaf-edge lower bound is asserted, while the separate full-support rigidity-circuit conclusion survives"
+        depends_on:
+          - "C-ZTA"
+          - "C-ZRF"
+          - "C-WOODALL"
+      - id: "C-PSEUDO-GRID"
+        report: "docs/targets/target-c/73-pseudosegment-grid-extraction-audit.md"
+        audit: "docs/audits/target_c_pseudosegment_grid_promotion_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent pseudosegment grid-extraction promotion audit"
+        scope: "quadratic coherent physical grains supplied by C-COHERENT-GRAINS; holes and boundary-order physical interfaces retained; fixed epsilon in (0,pi/6)"
+        conclusion: "for a Section-69 grain with R rhombi and T=P/2 local train segments, Fox-Pach gives all-crossing internally noncrossing shores C1,C2 with |C1|,|C2|>=c_PS R/T; the phase-label supports of C1 and C2 are disjoint nonempty subsets of Z/3, so phase purification gives distinct-phase shores A,B with |A|,|B|>=(c_PS/2)R/T; hence R>=rD^2 and P<=CD force linear-by-linear actual train grids even with holes"
+        depends_on:
+          - "C-COHERENT-GRAINS"
+      - id: "C-GRID-PHASE-COLLAPSE"
+        report: "docs/targets/target-c/74-complete-grid-phase-collapse-audit.md"
+        audit: "docs/audits/target_c_complete_grid_phase_collapse_promotion_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent complete-grid phase-collapse promotion audit"
+        scope: "quadratic positive-core branch after C-PSEUDO-GRID; linear phase-pure complete train grid inside one Section-69 physical grain; holes retained"
+        conclusion: "fixed phase labels force one orientation on every A x B crossing, so delta_ab=x_b-x_a>0 on the whole product; the global O(D) Section-68 angular-defect budget then yields half-sized complete shores A0,B0 for which every rhombus defect is O(1/D), quantitatively delta_ab<=5 C_phase/(gamma^2 D) whenever the original shores are at least gamma D"
+        depends_on:
+          - "C-PUNCTURED-PHASE"
+          - "C-PSEUDO-GRID"
+      - id: "C-COMP-DEATOMIZATION"
+        report: "docs/targets/target-c/75-all-phase-component-deatomization-audit.md"
+        audit: "docs/audits/target_c_sections75_76_promotion_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent Sections 75-76 hostile audit"
+        scope: "every sufficiently large post-ZF C-II survivor; unloaded connected components of the nonisolated positive-contact core only; contact-isolated source points explicitly excluded from c_I and retained globally"
+        conclusion: "for every M>=1, c_I <= 5000*pi*(M+2)^2 + (2+2*pi*D)/(M+1), hence c_I=O(D^(2/3)); consequently e_BB+s_C=q+k+O(D^(2/3)), m_B+k=c_B+s_C+O(D^(2/3)), and liminf(mu_D+2k/D)>=2rho; no bound on contact-isolated source population or total component population follows"
+        depends_on:
+          - "C-ATTACH-CURRENCY"
+          - "C-FS-STABILITY"
+          - "C-FS-GEOM"
+          - "C-DB-DENSITY"
+      - id: "C-HOLE-GRID-DIAMETER"
+        report: "docs/targets/target-c/76-hole-stable-complete-grid-order-diameter-audit.md"
+        audit: "docs/audits/target_c_sections75_76_promotion_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent Sections 75-76 hostile audit"
+        scope: "quadratic positive-core branch after C-PSEUDO-GRID; any phase-pure complete train grid inside one Section-69 physical grain; arbitrary holes and train endpoints retained"
+        conclusion: "fixed phase labels plus the Section-68 phase law give one crossing sign; Theorem-10.6 displacement cones admit a common strictly monotone projection, forcing one common crossing order on both shores even with holes; D>=e.(sum_A u_a+sum_B v_b)-2 and D>=(sqrt(3)/2)(a+b)-S_AB/min(a,b)-2; since S_AB<C_phase D, any a,b>=gamma D obey a+b<=(2/sqrt(3))(D+C_phase/gamma+2) and ab<=D^2/3+O_gamma(D)"
+        depends_on:
+          - "C-PUNCTURED-PHASE"
+          - "C-COHERENT-GRAINS"
+          - "C-PSEUDO-GRID"
+      - id: "C-INACTIVE-CHAMBER"
+        report: "docs/targets/target-c/77-inactive-chamber-saturation-audit.md"
+        audit: "docs/audits/target_c_inactive_chamber_promotion_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent inactive-chamber saturation audit"
+        scope: "every sufficiently large post-ZF C-II survivor for full force-hull population saturation; the single macroscopic inactive-chamber conclusion assumes m=o(D^2); all source points, including contact isolates, are retained"
+        conclusion: "with a0=sqrt(3)/2, a0 N_F=area(F)+O(D) and a0 Z_ext=pi D^2/4-area(F)+O(D); inactive convex chambers inside F satisfy a0 Z_ch=A_ch+O(D), total chamber perimeter and total isolate-only Oler slack are O(D); if m=o(D^2), one actual convex inactive chamber has area Omega(D^2), Omega(D^2) contact-isolated source points, perimeter O(D), and Oler slack O(D), with liminf area(C_*)/D^2 >= 4 A_SC^2/(169 pi)"
+        depends_on:
+          - "C-FS-STABILITY"
+          - "C-RHOMBUS-POP"
+          - "C-PUNCTURED-PHASE"
+      - id: "C-INACTIVE-HULL-STABILITY"
+        report: "docs/reports/target_c_subquadratic_chamber_hull_saturation_2026-09-11.md"
+        audit: "docs/audits/target_c_inactive_chamber_hull_stability_promotion_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent hostile convex-cap stability audit"
+        scope: "subquadratic positive-contact-core branch after C-INACTIVE-CHAMBER; selected actual contact-isolated source points in one convex inactive chamber; source points retained globally"
+        conclusion: "if A_*>=a_ch D^2, P_*<=P_ch D, and a0 z_*>=A_*-L_ch D, then K_*=conv(S_*) satisfies area(C_*)-area(K_*)<=M_ch D and d_H(C_*,K_*)<=C_ch sqrt(D), and contains an inner disk of radius kappa_ch D-C_ch sqrt(D); this is geometric stability only and does not supply PIHR"
+        depends_on:
+          - "C-INACTIVE-CHAMBER"
+      - id: "C-INACTIVE-NEAR-MATCHING"
+        report: "docs/targets/target-c/81-near-unit-isolate-matching-audit.md"
+        audit: "docs/audits/target_c_inactive_near_unit_matching_promotion_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent hostile near-unit matching audit"
+        scope: "macroscopic convex inactive chamber after C-INACTIVE-CHAMBER; actual retained contact-isolated source points; inverse-diameter and larger near-contact scales"
+        conclusion: "for isolate-only slack sigma=A/a0+P/2+1-z, the maximum matching nu_epsilon in the graph of pairs with 1<|x-y|<=1+epsilon obeys 2nu_epsilon >= (A/a0)(1-(1+epsilon)^(-2))+(P/2)(1-(1+epsilon)^(-1))-sigma; in a Section-77 macroscopic chamber this yields Omega(D) disjoint pairs at distance at most 1+K/D for a fixed sufficiently large K"
+        depends_on:
+          - "C-INACTIVE-CHAMBER"
+      - id: "C-INACTIVE-DEEP-MATCHING"
+        report: "docs/targets/target-c/87-deep-near-unit-isolate-matching-audit.md"
+        audit: "docs/audits/target_c_inactive_deep_matching_promotion_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent hostile deep-matching audit"
+        scope: "Section-77 macroscopic inactive chamber after C-INACTIVE-NEAR-MATCHING and C-INACTIVE-HULL-STABILITY; fixed physical depth w>0; pair-closing safety for w>1"
+        conclusion: "for every fixed w>0 there are c_w D vertex-disjoint actual isolate pairs with 1<|x-y|<=1+K_w/D and both endpoints at depth at least w; for w>1, pair-closing stays inside the chamber inner parallel body, so no source point outside the chamber or global diameter constraint can be the first blocker"
+        depends_on:
+          - "C-INACTIVE-CHAMBER"
+          - "C-INACTIVE-HULL-STABILITY"
+          - "C-INACTIVE-NEAR-MATCHING"
+      - id: "C-INACTIVE-DICHOTOMY"
+        report: "docs/targets/target-c/79-inactive-chamber-rhombic-saturation-dichotomy-audit.md"
+        audit: "docs/audits/target_c_global_container_fullcore_dichotomy_promotion_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent global inactive-chamber dichotomy audit"
+        scope: "every unbounded post-ZF C-II survivor; internal inactive chambers; full source retained"
+        conclusion: "either a quadratic internal inactive population concentrates in one actual convex chamber with quadratic area and O(D) perimeter/slack, or Z_ch=o(D^2), m=N_F-o(D^2), and strict rhombi fill the force hull in area to o(D^2); fixed-width coherent grains then cover the force hull up to o(D^2) area"
+        depends_on:
+          - "C-INACTIVE-CHAMBER"
+          - "C-RHOMBUS-POP"
+          - "C-PUNCTURED-PHASE"
+          - "C-COHERENT-GRAINS"
+          - "C-FS-STABILITY"
+      - id: "C-FULLCORE-NEAR-DISK"
+        report: "docs/targets/target-c/80-global-isolate-concentration-fullcore-disk-audit.md"
+        audit: "docs/audits/target_c_global_container_fullcore_dichotomy_promotion_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent global container/full-core dichotomy audit"
+        scope: "every unbounded post-ZF C-II survivor; exterior caps and internal chambers; full source retained"
+        conclusion: "either one internal inactive chamber or exterior cap is macroscopic, or n-m=o(D^2), A_F/D^2->pi/4, D^{-1}F converges to a radius-1/2 disk up to translation, A_4/A_F->1, and m,R_4=(pi/(2sqrt(3))+o(1))D^2; coherent grains cover the force hull up to o(D^2) area"
+        depends_on:
+          - "C-INACTIVE-DICHOTOMY"
+          - "C-INACTIVE-CHAMBER"
+          - "C-RHOMBUS-POP"
+          - "C-PUNCTURED-PHASE"
+          - "C-COHERENT-GRAINS"
+          - "C-FS-STABILITY"
+      - id: "C-HARMONIC-CARRIER-QUAD"
+        report: "docs/targets/target-c/82-harmonic-cell-near-quadrangulation-audit.md"
+        audit: "docs/audits/target_c_sections79_80_82_83_88_chain_audit_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent harmonic-carrier near-quadrangulation audit"
+        scope: "unloaded harmonic carrier components in the quadratic positive-contact-core branch; induced positive-contact graph with loaded attachments; source points retained"
+        conclusion: "for an unloaded harmonic component with n vertices and a loaded attachments, the induced contact carrier has F4=n+O(a) bounded quadrilateral faces and O(a) outer/nonquadrilateral boundary defect; a Section-78 quadratic carrier is near-quadrangulated and remains eligible for the phase-cut machinery"
+        depends_on:
+          - "C-HARMONIC-GRID-LOCAL"
+          - "C-ATTACH-CURRENCY"
+      - id: "C-HARMONIC-CELL-TILING"
+        report: "docs/targets/target-c/83-attachment-cell-disjoint-tiling-audit.md"
+        audit: "docs/audits/target_c_sections79_80_82_83_88_chain_audit_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent harmonic attachment-cell tiling audit"
+        scope: "post-ZF unloaded positive-contact components and their convex loaded-attachment cells; all source points retained"
+        conclusion: "distinct harmonic attachment cells have disjoint interiors; their perimeter has O(D) total and their areas add up to the force hull up to o(D^2) in the full-core near-disk branch after deleting only O(D) loaded-touching rhombi; local rhombic deficits are nonnegative and sum to o(D^2)"
+        depends_on:
+          - "C-ATTACH-CURRENCY"
+          - "C-INACTIVE-DICHOTOMY"
+          - "C-FULLCORE-NEAR-DISK"
+      - id: "C-HARMONIC-WRAPPING"
+        report: "docs/targets/target-c/88-harmonic-wrapping-diameter-audit.md"
+        audit: "docs/audits/target_c_sections79_80_82_83_88_chain_audit_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent harmonic wrapping-diameter audit"
+        scope: "full-core near-disk Type-II branch after C-FULLCORE-NEAR-DISK; harmonic attachment cells and loaded support sets; all source points retained"
+        conclusion: "wrapping circle-supported cell limits obey lambda/3<=6 asin(lambda)-2 pi, so lambda>=mu0=0.889670810115...; for every mu<mu0 a positive area fraction lies in cells of diameter >mu D, and one cell has diameter (mu0-o(1))D, area Omega(D^2), and local strict-rhombus filling 1-o(1)"
+        depends_on:
+          - "C-FULLCORE-NEAR-DISK"
+          - "C-HARMONIC-CARRIER-QUAD"
+          - "C-HARMONIC-CELL-TILING"
+          - "C-ATTACH-CURRENCY"
+      - id: "C-TYPEII-INTERFACE-COLLAPSE"
+        report: "docs/targets/target-c/84-typeII-interface-collapse-audit.md"
+        audit: "docs/audits/target_c_sections84_85_89_interface_train_promotion_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent Type-II interface-collapse audit"
+        scope: "full-core near-disk Type-II branch after C-FULLCORE-NEAR-DISK; internal inactive chambers and exterior caps; full source retained"
+        conclusion: "the source hull shares the radius-1/2 disk limit; exterior caps have o(D) diameter/perimeter; every linear-perimeter internal inactive chamber collapses after scaling to a segment and its contact boundary is a doubled near-geodesic corridor; only finitely many corridors occur at each fixed linear scale"
+        depends_on:
+          - "C-FULLCORE-NEAR-DISK"
+          - "C-INACTIVE-CHAMBER"
+          - "C-PUNCTURED-PHASE"
+      - id: "C-TRAIN-INTERFACE-CURRENCY"
+        report: "docs/targets/target-c/85-train-boundary-interface-currency-audit.md"
+        audit: "docs/audits/target_c_sections84_85_89_interface_train_promotion_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent train-boundary interface currency audit"
+        scope: "all post-ZF strict-rhombus complexes with full source retained; Type-II asymptotic specialization"
+        conclusion: "the finite train-boundary inequality is q-k+2f>=2 sqrt(R_4), m-R_4>=sqrt(R_4)+1, and A_ch-a0 Z_ch >= (3c0/5)(4 sqrt(R_4)-per(F)); in Type II it gives a positive first-order Oler-weighted interface surplus with coefficient (3 sqrt(3)/20)(4 sqrt(pi/(2 sqrt(3)))-pi)"
+        depends_on:
+          - "C-RHOMBUS-POP"
+          - "C-LOADED-HULL"
+          - "C-INACTIVE-CHAMBER"
+          - "C-FULLCORE-NEAR-DISK"
+      - id: "C-HARMONIC-TRAIN-BUDGET"
+        report: "docs/targets/target-c/89-harmonic-cell-train-budget-audit.md"
+        audit: "docs/audits/target_c_sections84_85_89_interface_train_promotion_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent harmonic-cell train-budget audit"
+        scope: "unloaded harmonic carrier components after C-HARMONIC-CARRIER-QUAD; Type-II carrier consequence after C-HARMONIC-WRAPPING; source retained"
+        conclusion: "a harmonic carrier with a loaded attachments, pinned surplus s, and loaded-loaded contacts c has T_R<=6a-15-5s-5c+2c_partial and 2A_4<=T_R diam(P); consequently the Type-II macroscopic carrier has Omega(D) attachments and trains with exact local area/diameter coupling"
+        depends_on:
+          - "C-HARMONIC-CARRIER-QUAD"
+          - "C-HARMONIC-WRAPPING"
+      - id: "C-DENSE-PHASE-CORE"
+        report: "docs/targets/target-c/90-dense-inverse-phase-crossing-core-audit.md"
+        audit: "docs/audits/target_c_sections90_94_promotion_audit_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent Sections 90-94 hostile audit"
+        scope: "canonical Type-II near-disk harmonic carrier; source retained"
+        conclusion: "one macroscopic carrier contains a simple bipartite train-crossing graph with quadratic edge count, linear minimum degree after pruning, and all reduced phases in one O(1/D) interval"
+        depends_on:
+          - "C-HARMONIC-WRAPPING"
+          - "C-HARMONIC-CARRIER-QUAD"
+          - "C-PUNCTURED-PHASE"
+      - id: "C-EXPLICIT-ORDERED-GRID"
+        report: "docs/targets/target-c/91-explicit-ordered-grid-audit.md"
+        audit: "docs/audits/target_c_sections90_94_promotion_audit_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent Sections 90-94 hostile audit"
+        scope: "canonical Type-II dense phase core; source retained"
+        conclusion: "the dense phase core contains an explicit linear-by-linear complete ordered near-triangular train grid"
+        depends_on:
+          - "C-DENSE-PHASE-CORE"
+          - "C-HOLE-GRID-DIAMETER"
+      - id: "C-WRAP-PERIMETER"
+        report: "docs/targets/target-c/92-wrapping-perimeter-diameter-audit.md"
+        audit: "docs/audits/target_c_sections90_94_promotion_audit_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent Sections 90-94 hostile audit"
+        scope: "canonical Type-II wrapping harmonic-cell limits"
+        conclusion: "wrapping limits obey the perimeter-capacity threshold lambda>=0.914487471642104..."
+        depends_on:
+          - "C-FULLCORE-NEAR-DISK"
+          - "C-HARMONIC-CARRIER-QUAD"
+          - "C-HARMONIC-CELL-TILING"
+          - "C-HARMONIC-WRAPPING"
+      - id: "C-WRAP-FULL-GAP"
+        report: "docs/targets/target-c/93-full-gap-wrapping-diameter-audit.md"
+        audit: "docs/audits/target_c_sections90_94_promotion_audit_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent Sections 90-94 hostile audit"
+        scope: "canonical Type-II wrapping harmonic-cell limits"
+        conclusion: "using all attachment gaps raises the wrapping threshold to lambda>=0.915964980334399..."
+        depends_on:
+          - "C-FULLCORE-NEAR-DISK"
+          - "C-HARMONIC-CARRIER-QUAD"
+          - "C-HARMONIC-CELL-TILING"
+          - "C-HARMONIC-WRAPPING"
+      - id: "C-WRAP-THREE-GAP"
+        report: "docs/targets/target-c/94-three-forbidden-gap-wrapping-audit.md"
+        audit: "docs/audits/target_c_sections90_94_promotion_audit_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent Sections 90-94 hostile audit"
+        scope: "canonical Type-II wrapping harmonic-cell limits"
+        conclusion: "three forbidden wrapping gaps raise the carrier threshold to lambda>=0.919778662688621..."
+        depends_on:
+          - "C-FULLCORE-NEAR-DISK"
+          - "C-HARMONIC-CARRIER-QUAD"
+          - "C-HARMONIC-CELL-TILING"
+          - "C-HARMONIC-WRAPPING"
+      - id: "C-WRAP-OUTER-WALK-GAP"
+        report: "docs/targets/target-c/96-outer-walk-forbidden-gap-threshold-audit.md"
+        audit: "docs/audits/target_c_section96_outer_walk_gap_hostile_audit_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent Section 96 hostile audit"
+        scope: "canonical Type-II wrapping harmonic-cell limits"
+        conclusion: "three forbidden wrapping gaps force three long outer-contact routes and raise the carrier threshold to lambda>=0.936215741409583...; at equality the local face and pinned defects are sublinear"
+        certificates:
+          - "research/verify_target_c_outer_walk_gap_threshold.py"
+        depends_on:
+          - "C-WRAP-THREE-GAP"
+          - "C-HARMONIC-CARRIER-QUAD"
+          - "C-FULLCORE-NEAR-DISK"
+      - id: "C-WRAP-CAUCHY"
+        report: "docs/reports/target_c_cauchy_wrapping_threshold_candidate_2026-09-12.md"
+        audit: "docs/audits/target_c_cauchy_wrapping_threshold_hostile_audit_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent Cauchy wrapping-threshold hostile audit"
+        scope: "canonical Type-II wrapping harmonic-cell limits"
+        conclusion: "Cauchy perimeter combined with Sections 94 and 96 raises the wrapping threshold to lambda>=sqrt(1-(pi/9)^2)=0.9370981976747776..."
+        certificates:
+          - "research/verify_target_c_cauchy_wrapping_threshold.py"
+        depends_on:
+          - "C-WRAP-THREE-GAP"
+          - "C-WRAP-OUTER-WALK-GAP"
+          - "C-FULLCORE-NEAR-DISK"
+      - id: "C-WRAP-MIXED-CAUCHY"
+        report: "docs/reports/target_c_mixed_gap_cauchy_threshold_candidate_2026-09-12.md"
+        audit: "docs/audits/target_c_mixed_gap_cauchy_threshold_hostile_audit_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent mixed-gap Cauchy hostile audit"
+        scope: "canonical Type-II wrapping harmonic-cell limits"
+        conclusion: "retaining residual forbidden-gap angular mass and applying Cauchy raises the wrapping threshold to lambda>=0.9399896933531978..."
+        certificates:
+          - "research/verify_target_c_mixed_gap_cauchy_threshold.py"
+        depends_on:
+          - "C-WRAP-THREE-GAP"
+          - "C-WRAP-OUTER-WALK-GAP"
+          - "C-FULLCORE-NEAR-DISK"
+      - id: "C-WRAP-ANGULAR-MEASURE"
+        report: "docs/targets/target-c/100-wrapping-angular-measure-threshold-audit.md"
+        audit: "docs/targets/target-c/wrapping-angular-measure-hostile-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent Section 100 hostile audit; independently corroborated by the paired-piece translation proof in PR #289"
+        scope: "canonical Type-II wrapping harmonic-cell limits; all source points retained"
+        conclusion: "pairwise angular diameter sharpens the wrapping support ceiling to |S|<=3 theta-2 pi, hence alpha<=(3 theta-2 pi)/2; combined with the Section-96 floor alpha>=(3/2)sin(theta), every wrapping limit has lambda>=0.964267074283897284..., and the Section-88 cap-family transfer yields an actual macroscopic locally rhombus-saturated carrier of diameter at least (0.964267074283897284...-o(1))D"
+        certificates:
+          - "research/verify_target_c_wrapping_angular_measure_threshold.py"
+          - "research/verify_target_c_paired_six_cluster_density.py"
+        depends_on:
+          - "C-HARMONIC-WRAPPING"
+          - "C-WRAP-THREE-GAP"
+          - "C-WRAP-OUTER-WALK-GAP"
+          - "C-HARMONIC-CELL-TILING"
+      - id: "C-WRAP-COMPLEMENT-CHORD"
+        report: "docs/targets/target-c/101-complement-gap-chord-threshold-audit.md"
+        audit: "docs/audits/target_c_sections100_101_promotion_audit_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent Section 101 promotion audit with finite-gap Hausdorff repair"
+        scope: "canonical Type-II wrapping harmonic-cell limits; all source points retained"
+        conclusion: "the full complement of the limiting attachment support is charged through distinct outer unit-contact routes: 2 alpha >= sum_j sin(gamma_j/2); with m=|S| and canonical Section 100, m >= sin(theta/2)+sin((theta-m)/2)+sin(theta), so the easiest case m=3theta-2pi gives sin(theta/2)+2sin(theta)<=3theta-2pi and lambda>=0.976040765267051982...; the Section-88/83 transfer yields an actual macroscopic locally rhombus-saturated carrier of diameter at least (0.976040765267051982...-o(1))D; endpoint saturation forces m->3theta-2pi and macroscopic complement-gap profile (theta,phi,phi)"
+        certificates:
+          - "research/verify_target_c_complement_chord_threshold.py"
+        depends_on:
+          - "C-WRAP-ANGULAR-MEASURE"
+          - "C-WRAP-THREE-GAP"
+          - "C-ATTACH-CURRENCY"
+          - "C-HARMONIC-CARRIER-QUAD"
+          - "C-HARMONIC-CELL-TILING"
+          - "C-HARMONIC-WRAPPING"
+          - "C-FULLCORE-NEAR-DISK"
+      - id: "C-PHASE-CORRIDOR-ENDPOINT-EXCLUSION"
+        report: "docs/targets/target-c/102-phase-corridor-endpoint-exclusion-audit.md"
+        audit: "docs/audits/target_c_section102_phase_corridor_hostile_audit_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent Section 102 hostile audit; projective-to-oriented boundary-direction lift made explicit at audit.42"
+        scope: "canonical Type-II near-disk branch; hypothetical macroscopic locally rhombus-saturated wrapping carriers at the Section-101 endpoint; all source points retained"
+        conclusion: "the Section-101 endpoint lambda=mu_8 is incompatible with the cell-local Section-90 two-phase train core: endpoint saturation forces one curved dense support arc plus two isolated points and three near-geodesic complement corridors, while two linear inverse-phase train families have projective directions separated by pi/3; curved-arc dispersion pushes linear endpoint mass onto two distinct corridors, but the three corridor chord directions have pairwise projective separations theta_8/2, theta_8/2, and pi-theta_8, none equal pi/3. Hence the mu_8 endpoint is excluded. Compactness and the Section-88 cap-family deficit yield absolute epsilon_*>0 and c_*>0 such that every sufficiently large Type-II survivor has a locally rhombus-saturated harmonic carrier of area at least c_*D^2 and diameter at least (mu_8+epsilon_*)D. No numerical epsilon_* is claimed."
+        certificates:
+          - "research/verify_target_c_phase_corridor_endpoint_exclusion.py"
+        depends_on:
+          - "C-WRAP-COMPLEMENT-CHORD"
+          - "C-DENSE-PHASE-CORE"
+          - "C-HARMONIC-TRAIN-BUDGET"
+          - "C-HARMONIC-CARRIER-QUAD"
+          - "C-HARMONIC-CELL-TILING"
+          - "C-HARMONIC-WRAPPING"
+          - "C-PUNCTURED-PHASE"
+      - id: "C-UNIQUE-WRAP-CAP-DEFICIT"
+        report: "docs/targets/target-c/103-unique-wrapping-cap-deficit-audit.md"
+        audit: "docs/audits/target_c_section103_unique_wrapping_cap_deficit_hostile_audit_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent Section 103 hostile audit; macroscopic-cutoff diagonal selection made explicit at audit.43"
+        scope: "Type-II full-core subsequential regimes under a fixed common diameter cap mu<1 for every positive-area macroscopic harmonic-cell limit; all source points retained"
+        conclusion: "among the positive-area macroscopic harmonic-cell limits there is exactly one wrapping cell; every other macroscopic cell is cap type, and the wrapping cell has normalized area at least Gamma(mu)=pi/4-C(mu), where C(mu) is the canonical Section-88 cap-family capacity. At mu_8 the counterfactual endpoint constant is Gamma(mu_8)=0.202319755440525...; for theta<=theta_8+0.03, hence mu<=0.979194656445937..., Gamma(mu)>0.1905 and the wrapping carrier admits the explicit local bounds R>=0.18D^2, T<=6D, and Delta_train<5.317D. This is a structural concentration theorem, not an unconditional diameter improvement; canonical Section 102 already excludes the exact mu_8 endpoint."
+        certificates:
+          - "research/verify_target_c_unique_wrapping_cap_deficit.py"
+        depends_on:
+          - "C-FULLCORE-NEAR-DISK"
+          - "C-HARMONIC-CELL-TILING"
+          - "C-HARMONIC-WRAPPING"
+          - "C-WRAP-ANGULAR-MEASURE"
+          - "C-HARMONIC-TRAIN-BUDGET"
+          - "C-PUNCTURED-PHASE"
+      - id: "C-WRAP-QUANT-PHASE-GAP"
+        report: "docs/targets/target-c/104-quantitative-phase-gap-audit.md"
+        audit: "docs/audits/target_c_section104_quantitative_phase_gap_hostile_audit_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent Section 104 hostile audit; canonical Section 103 dependency"
+        scope: "canonical Type-II full-core near-disk branch under the Section-103 macroscopic-cell cap; all source points retained"
+        conclusion: "transporting Section-101 scalar slack through complement-gap stability, exact outer-walk currency, attachment-base leakage, and the Section-90 phase core excludes every cap theta<=theta_9 with sigma(theta)<=1e-7; theta_9=2.7029080509166894011..., mu_9=0.9760407675809149535..., so a locally rhombus-saturated carrier has area c_9D^2 and diameter at least (mu_9-o(1))D"
+        certificates:
+          - "research/verify_target_c_quantitative_phase_gap.py"
+        depends_on:
+          - "C-WRAP-COMPLEMENT-CHORD"
+          - "C-PHASE-CORRIDOR-ENDPOINT-EXCLUSION"
+          - "C-UNIQUE-WRAP-CAP-DEFICIT"
+          - "C-HARMONIC-CARRIER-QUAD"
+          - "C-HARMONIC-CELL-TILING"
+          - "C-DENSE-PHASE-CORE"
+          - "C-HARMONIC-TRAIN-BUDGET"
+          - "C-PUNCTURED-PHASE"
+      - id: "C-ROUTE-EXCESS-OPT"
+        report: "docs/targets/target-c/105-optimized-quantitative-phase-gap-audit.md"
+        audit: "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.45 Sections 105-121 hostile promotion audit"
+        conclusion: "optimized principal-route excess and tooth cutoff give a valid sigma<=7e-7 carrier improvement; later sections supersede the decimal"
+        depends_on:
+          - "C-WRAP-QUANT-PHASE-GAP"
+          - "C-UNIQUE-WRAP-CAP-DEFICIT"
+          - "C-DENSE-PHASE-CORE"
+          - "C-HARMONIC-TRAIN-BUDGET"
+      - id: "C-STRONG-PHASE-SHORES"
+        report: "docs/targets/target-c/106-strong-phase-shore-quantitative-gap-audit.md"
+        audit: "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.45 Sections 105-121 hostile promotion audit"
+        conclusion: "stronger Section-90 shore extraction raises the safe window to sigma<=1.2e-5 and mu=0.9760410429297387484..."
+        depends_on:
+          - "C-ROUTE-EXCESS-OPT"
+          - "C-DENSE-PHASE-CORE"
+          - "C-UNIQUE-WRAP-CAP-DEFICIT"
+      - id: "C-WRAP-AREA-RIGIDITY"
+        report: "docs/targets/target-c/107-wrapping-support-area-rigidity-audit.md"
+        audit: "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.45 plus prior independent Sections 107-108 hostile audits"
+        conclusion: "area(conv S)=pi/4-(1/8)sum_j(g_j-sin g_j); Section-101 gap stability gives wrapping carrier area >0.473D^2 in the stated window"
+        depends_on:
+          - "C-WRAP-COMPLEMENT-CHORD"
+          - "C-WRAP-THREE-GAP"
+          - "C-WRAP-ANGULAR-MEASURE"
+          - "C-HARMONIC-CELL-TILING"
+      - id: "C-AREA-BOOSTED-PHASE-GAP"
+        report: "docs/targets/target-c/108-area-boosted-quantitative-phase-gap-audit.md"
+        audit: "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.45 plus prior independent Sections 107-108 hostile audits"
+        conclusion: "the >0.473D^2 carrier rhombus mass enlarges the inverse-phase shores and proves sigma<=4.5e-5, mu=0.9760418064930821..."
+        depends_on:
+          - "C-WRAP-AREA-RIGIDITY"
+          - "C-ROUTE-EXCESS-OPT"
+          - "C-DENSE-PHASE-CORE"
+      - id: "C-PHASE-SHORE-BASELINE"
+        report: "docs/targets/target-c/109-asymptotically-sharp-phase-shores-audit.md"
+        audit: "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.45 with false sharpness subclaim removed from authority"
+        conclusion: "the baseline bin argument validly gives two shores of density a for every a<r/(6C_T) and the stated 5e-5 carrier consequence; r/(6C_T) is not sharp and is improved in Section 111"
+        depends_on:
+          - "C-WRAP-AREA-RIGIDITY"
+          - "C-HARMONIC-TRAIN-BUDGET"
+          - "C-DENSE-PHASE-CORE"
+          - "C-ROUTE-EXCESS-OPT"
+      - id: "C-LOCAL-TRAIN-COUNT-GAP"
+        report: "research/target_c_section110_local_train_count_gap.md"
+        audit: "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.45 normalized namespace and dependency audit"
+        conclusion: "retaining exact local train-count currency strengthens the same phase/corridor contradiction; later sections supersede the numerical endpoint"
+        depends_on:
+          - "C-PHASE-SHORE-BASELINE"
+          - "C-HARMONIC-TRAIN-BUDGET"
+          - "C-WRAP-AREA-RIGIDITY"
+      - id: "C-JOINT-PHASE-SHORES"
+        report: "research/target_c_section111_joint_shore_gap.md"
+        audit: "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.45 correction of Section 109 capacity split"
+        conclusion: "because the two fixed phase-label shores are disjoint subsets of the same train set, the corrected asymptotic shore threshold is a<r/(3C_T)"
+        depends_on:
+          - "C-LOCAL-TRAIN-COUNT-GAP"
+          - "C-PHASE-SHORE-BASELINE"
+          - "C-WRAP-AREA-RIGIDITY"
+      - id: "C-AGGREGATE-PROJECTION-GAP"
+        report: "research/target_c_section112_aggregate_projection_gap.md"
+        audit: "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.45 plus prior full hostile audit"
+        conclusion: "aggregate projection loss from both distinct phase families can be charged before corridor pigeonholing against one total principal-route excess budget"
+        depends_on:
+          - "C-JOINT-PHASE-SHORES"
+          - "C-LOCAL-TRAIN-COUNT-GAP"
+          - "C-WRAP-AREA-RIGIDITY"
+      - id: "C-EXTENDED-STABILITY-GAP"
+        report: "research/target_c_section113_extended_stability_gap.md"
+        audit: "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.45 plus prior independent hostile audit"
+        conclusion: "the corrected joint shores and aggregate projection argument prove sigma<=1.4e-3 and carrier coefficient 0.976073147411914233..."
+        depends_on:
+          - "C-AGGREGATE-PROJECTION-GAP"
+          - "C-JOINT-PHASE-SHORES"
+          - "C-WRAP-AREA-RIGIDITY"
+          - "C-WRAP-COMPLEMENT-CHORD"
+      - id: "C-STABILITY-ENVELOPE"
+        report: "research/target_c_section114_stability_envelope.md"
+        audit: "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.45 direct endpoint arithmetic and dependency audit"
+        conclusion: "optimized conservative constants prove sigma<=1.46e-3 and carrier coefficient 0.9760745346846268...; the larger decoupled envelope is method-diagnostic only"
+        certificates:
+          - "research/verify_target_c_stability_envelope_114.py"
+        depends_on:
+          - "C-EXTENDED-STABILITY-GAP"
+          - "C-AGGREGATE-PROJECTION-GAP"
+          - "C-WRAP-AREA-RIGIDITY"
+      - id: "C-INTEGRATED-TOOTH-LEAKAGE"
+        report: "research/target_c_section115_integrated_leakage_envelope.md"
+        audit: "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.45 hostile check of convex quantile and double-leg cases"
+        conclusion: "integrated tooth leakage gives L_int=Q(sigma)+175sigma/6, proves sigma<=1.75e-3, and carrier coefficient 0.9760812392179798..."
+        certificates:
+          - "research/verify_target_c_integrated_envelope_115.py"
+        depends_on:
+          - "C-STABILITY-ENVELOPE"
+          - "C-EXTENDED-STABILITY-GAP"
+          - "C-AGGREGATE-PROJECTION-GAP"
+          - "C-WRAP-AREA-RIGIDITY"
+      - id: "C-ZERO-HOST-SIGNED-RETURN"
+        report: "research/target_c_section116_zero_host_closed_faces.md"
+        audit: "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.45 reconciliation and finite occurrence-counted return audit"
+        conclusion: "zero-displacement hosts absorb every bounded defect-face train end and give d(L+P_exc-2d)>=(4-2sqrt(3))A_4, with the exact face-count companion"
+        depends_on:
+          - "C-HARMONIC-TRAIN-BUDGET"
+          - "C-HARMONIC-CARRIER-QUAD"
+      - id: "C-SIGNED-RETURN-TRANSPORT"
+        report: "research/target_c_section117_signed_return_transport_gap.md"
+        audit: "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.45 plus independent Section 117 hostile audit"
+        conclusion: "whole-core signed-return transport and area reweighting prove the safe sigma<=0.0029 carrier theorem, coefficient 0.9761078160770649..."
+        depends_on:
+          - "C-ZERO-HOST-SIGNED-RETURN"
+          - "C-INTEGRATED-TOOTH-LEAKAGE"
+          - "C-WRAP-AREA-RIGIDITY"
+          - "C-EXTENDED-STABILITY-GAP"
+      - id: "C-CORRELATED-SLACK-RETURN"
+        report: "research/target_c_section118_correlated_slack_signed_return.md"
+        audit: "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.45 incorporates merged corrected sharp hostile review"
+        conclusion: "with sigma=x+y+z+w, the corrected correlated bad-end bound yields a safe sigma<=0.0088 window and the live explicit full-core carrier coefficient 0.9762439137425688..."
+        depends_on:
+          - "C-SIGNED-RETURN-TRANSPORT"
+          - "C-WRAP-AREA-RIGIDITY"
+          - "C-WRAP-COMPLEMENT-CHORD"
+      - id: "C-ANALYTIC-SLACK-ENVELOPE"
+        report: "research/target_c_section119_analytic_slack_envelope.md"
+        audit: "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.45 validity audit; quantitative frontier explicitly remains Section 118"
+        conclusion: "the analytic relaxation of the correlated bad-direction slack is valid but quantitatively weaker than the corrected Section-118 sharp companion"
+        depends_on:
+          - "C-CORRELATED-SLACK-RETURN"
+      - id: "C-ANISOTROPIC-TWO-ARC-RETURN"
+        report: "research/target_c_section120_anisotropic_two_arc_return.md"
+        audit: "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.45 direct finite signed-return audit; cut vertices interpreted as specific outer-walk occurrences"
+        conclusion: "for two cut occurrences with chord rq and carrier diameter d, d(L+P_exc-2r)>=sum_R area(R)[4-2(|q.u_R|+|q.v_R|)]; the Section-116 constant follows pointwise"
+        certificates:
+          - "research/verify_target_c_anisotropic_two_arc_return_120.py"
+        depends_on:
+          - "C-ZERO-HOST-SIGNED-RETURN"
+          - "C-SIGNED-RETURN-TRANSPORT"
+          - "C-HARMONIC-CARRIER-QUAD"
+      - id: "C-LOCAL-RETURN-OLER-BRIDGE"
+        report: "research/target_c_section121_local_return_oler_bridge.md"
+        audit: "docs/targets/target-c/105-121-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.45 corrected finite bridge only; invalid asymptotic moment inference excluded"
+        conclusion: "G_loc>=c0[(L-p)+(2f+Q)]>=(3c0/5)(L+P_exc-p); combined with Section 120 this gives the finite local return-to-Oler bridge. G_loc=o(D^2) alone does not yield the discarded normalized moment limit."
+        certificates:
+          - "research/verify_target_c_local_return_oler_121.py"
+        depends_on:
+          - "C-ANISOTROPIC-TWO-ARC-RETURN"
+          - "C-HARMONIC-CARRIER-QUAD"
+          - "C-ATTACH-CURRENCY"
+      - id: "C-AGGREGATE-TWO-ARC-DETOUR"
+        report: "docs/targets/target-c/122-aggregate-two-arc-detour-audit.md"
+        audit: "docs/targets/target-c/122-123-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.46 hostile globalization audit of the concurrent Section-120 research artifact"
+        conclusion: "summing only unloaded-only strict-rhombus area makes the cellwise Section-116 return inequalities area-injective; in Type II liminf D^(-1) sum_r(L_r+P_exc,r-2d_r) >= (pi/2)(2-sqrt(3))"
+        depends_on:
+          - "C-ZERO-HOST-SIGNED-RETURN"
+          - "C-HARMONIC-CELL-TILING"
+          - "C-FULLCORE-NEAR-DISK"
+      - id: "C-AUGMENTED-CELL-DEFECT-BUDGET"
+        report: "docs/targets/target-c/123-augmented-cell-defect-budget-audit.md"
+        audit: "docs/targets/target-c/122-123-promotion-audit-2026-09-12.md"
+        status: canonical
+        promotion_origin: "audit.46 hostile planar-ledger audit of the concurrent Section-121 research artifact"
+        conclusion: "the exact augmented-cell ledger gives sum_r Q_r^+<=2(e_BB-k), and comparison with actual induced harmonic graphs yields sum_r P_exc,r<=10(e_BB-k); the residual live currency is aggregate outer-walk detour"
+        depends_on:
+          - "C-ATTACH-CURRENCY"
+          - "C-LOADED-HULL"
+          - "C-HARMONIC-CELL-TILING"
+      - id: "C-FULLCORE-DIAMETER-BUDGET-FLOOR"
+        report: "docs/reports/target_c_fullcore_diameter_budget_floor_2026-09-14.md"
+        audit: "docs/audits/target_c_fullcore_diameter_budget_floor_independent_audit_2026-09-14.md"
+        status: canonical
+        promotion_origin: "2026-09-14 independent large-cell/isodiametric budget audit"
+        scope: "canonical full-core Type-II sequences with all source points retained; attachment cells are actual convex hulls of unloaded-component attachments; asymptotic sequence statement with D tending to infinity"
+        quantity: "mu_D=(e_BB+2s_C-3(d_H+s_Z))/D"
+        conclusion: "in the full-core near-disk rhombic-saturation branch, liminf mu_D >= 1; the proof uses sum area(P_r)=pi D^2/4-o(D^2), sum sqrt(area(P_r))=O(D), d_r<=delta_r+2, and the exact sum delta_r<=6+mu_D D budget, with the threshold order D->infinity then eta->0"
+        depends_on:
+          - "C-FULLCORE-NEAR-DISK"
+          - "C-HARMONIC-CELL-TILING"
+          - "C-ATTACH-CURRENCY"
+      - id: "C-FULLCORE-MU-ONE-CELL"
+        report: "docs/reports/target_c_mu_one_cell_concentration_2026-09-14.md"
+        audit: "docs/audits/target_c_mu_one_cell_concentration_independent_audit_2026-09-14.md"
+        status: canonical
+        promotion_origin: "2026-09-14 independent equality-case concentration audit"
+        scope: "canonical full-core Type-II sequences with all source points retained; actual convex attachment cells; asymptotic equality regime mu_D -> 1"
+        quantity: "mu_D=(e_BB+2s_C-3(d_H+s_Z))/D"
+        conclusion: "if mu_D -> 1, one actual attachment cell has diameter D-o(D), area pi D^2/4-o(D^2), perimeter pi D-o(D), all other cell diameters sum to o(D), and its normalized Hausdorff limits are radius-1/2 disks"
+        depends_on:
+          - "C-FULLCORE-DIAMETER-BUDGET-FLOOR"
+          - "C-FULLCORE-NEAR-DISK"
+          - "C-HARMONIC-CELL-TILING"
+          - "C-ATTACH-CURRENCY"
+          - "C-COMP-DEATOMIZATION"
+      - id: "C-FULLCORE-LOADED-CHORD"
+        report: "docs/reports/target_c_fullcore_loaded_chord_elimination_2026-09-14.md"
+        audit: "docs/audits/target_c_fullcore_loaded_chord_elimination_independent_audit_2026-09-14.md"
+        status: canonical
+        promotion_origin: "2026-09-14 independent near-disk loaded-chord audit"
+        scope: "canonical full-core Type-II near-disk sequences with actual loaded force hull and all source points retained; asymptotic sufficiently-large-D statement"
+        quantity: "loaded-loaded unit contacts among vertices of the actual loaded force hull"
+        conclusion: "every loaded-loaded unit chord is a consecutive side of the actual loaded force hull; hence c_B=0 and e_BB=q-m_B, where m_B is the number of nonunit loaded-hull sides; in the mu_D->1 endpoint this forces q_0+3m_0<=2 and liminf s_Z/D>=2rho-1"
+        depends_on:
+          - "C-FULLCORE-NEAR-DISK"
+          - "C-LOADED-HULL"
+          - "C-DB-DENSITY"
+      - id: "C-FULLCORE-TRAIN-SURPLUS-FLOOR"
+        report: "docs/reports/target_c_fullcore_train_coupled_surplus_floor_2026-09-14.md"
+        audit: "docs/audits/target_c_fullcore_train_coupled_surplus_floor_independent_audit_2026-09-14.md"
+        status: canonical
+        promotion_origin: "2026-09-14 independent loaded-chord and train/interface coupling audit"
+        scope: "canonical full-core no-macroscopic-container near-disk Type-II sequences with all source points retained; loaded force-hull vertices and occurrence-counted outer walks"
+        quantity: "mu_D=(e_BB+2s_C-3(d_H+s_Z))/D"
+        conclusion: "every loaded-loaded unit contact is a loaded force-hull side; consequently liminf mu_D >= (2*pi+2*sqrt(pi/(2*sqrt(3))))/5 = 1.6375621841815..."
+        depends_on:
+          - "C-FULLCORE-NEAR-DISK"
+          - "C-LOADED-HULL"
+          - "C-COMP-DEATOMIZATION"
+          - "C-TRAIN-INTERFACE-CURRENCY"
+      - id: "C-FULLCORE-FLOOR-ENDPOINT-EXCLUSION"
+        report: "docs/reports/target_c_fullcore_endpoint_unbalanced_pseudosegment_completion_2026-09-14.md"
+        audit: "docs/audits/target_c_fullcore_endpoint_unbalanced_pseudosegment_completion_independent_audit_2026-09-14.md"
+        status: canonical
+        promotion_origin: "2026-09-14 independent phase-lift, cloning, and endpoint-sign audit"
+        scope: "canonical full-core no-macroscopic-container Type-II sequences with all source points retained; asymptotic sequence statement excluding convergence to the exact train-coupled scalar floor"
+        quantity: "mu_D=(e_BB+2s_C-3(d_H+s_Z))/D"
+        conclusion: "no canonical full-core sequence can satisfy mu_D -> (2*pi+2*sqrt(pi/(2*sqrt(3))))/5; the proof extracts unequal near-complete phase shores, uses Fox-Pach-Suk Theorem 2.10 by cloning, removes O(sqrt(D)) wrong-orientation trains through the phase-cut threshold chain, trims O(D^(1/4)) phase tails, and applies the hole-stable complete-grid diameter inequality; combined with the canonical floor, this implies an existential non-explicit epsilon_*>0 and D_* with mu_D>=mu_TC+epsilon_* for every canonical full-core minimizer with D>=D_*"
+        depends_on:
+          - "C-FULLCORE-TRAIN-SURPLUS-FLOOR"
+          - "C-FULLCORE-NEAR-DISK"
+          - "C-TRAIN-INTERFACE-CURRENCY"
+          - "C-PUNCTURED-PHASE"
+          - "C-HOLE-GRID-DIAMETER"
+      - id: "C-OBLIQUE-LATTICE-COMPETITOR"
+        report: "docs/reports/target_c_oblique_lattice_global_comparison_2026-09-14.md"
+        audit: "docs/audits/target_c_oblique_lattice_global_comparison_independent_audit_2026-09-14.md"
+        status: canonical
+        promotion_origin: "2026-09-14 independent finite source-comparison audit"
+        scope: "finite full-dimensional subsets of one exact two-direction unit oblique lattice with basis angle in (pi/3, pi/2], with the reflected-angle extension to [pi/2,2pi/3); source-cardinality exact and global-minimality comparison only under the stated finite threshold"
+        quantity: "kappa_theta=sqrt((sqrt(3)/2)/sin(theta)); (1-kappa_theta)D > 4*kappa_theta+2/sqrt(3)"
+        conclusion: "under the finite threshold, an n-point subset of the oblique lattice is beaten by an n-point subset of the unit triangular lattice with strictly smaller diameter; consequently any such global minimizer must have angle excess O(1/D). The theorem does not supply an affine chart for general C-II sources and leaves the inverse-diameter shear endpoint open."
+        depends_on: []
+      - id: "C-HARMONIC-GRID-LOCAL"
+        report: "docs/targets/target-c/78-harmonic-cell-grid-localization-audit.md"
+        audit: "docs/audits/target_c_harmonic_cell_grid_localization_promotion_2026-09-12.md"
+        status: canonical
+        promotion_origin: "2026-09-12 independent harmonic-cell grid localization audit"
+        scope: "quadratic positive-core post-ZF C-II subsequences after C-COHERENT-GRAINS; all source points remain present, but the localized rhombic subgrain lies in one unloaded nonisolated positive-contact component"
+        conclusion: "after deleting only O(D) rhombi incident to loaded vertices from a quadratic coherent grain, one remaining coherent subgrain G_* has Omega(D^2) rhombi and lies in one unloaded component I_* subset P_*=conv(A_*), with d_*=diam(P_*)=Omega(D); C-PSEUDO-GRID yields Omega(D)-sized complete phase-pure shores inside P_*, and C-HOLE-GRID-DIAMETER localizes to d_* >= (sqrt(3)/2)(a+b)-S_AB/min(a,b)-2, hence a+b <= (2/sqrt(3))d_*+O(1) and ab<=d_*^2/3+O(d_*)"
+        depends_on:
+          - "C-COHERENT-GRAINS"
+          - "C-ATTACH-CURRENCY"
+          - "C-PSEUDO-GRID"
+          - "C-HOLE-GRID-DIAMETER"
+          - "C-PUNCTURED-PHASE"
+      - id: "C-WOODALL"
+        report: "docs/reports/target_c_woodall_diameter_topology_2026-09-10.md"
+        status: canonical
+        promotion_origin: "2026-09-11 theorem-state cleanup"
+        conclusion: "d_H=0 gives one connected odd-unicyclic diameter graph with pendant leaves; d_H>0 gives exactly d_H caterpillar components"
+        depends_on: []
+      - id: "C-COMMON-BLOCK"
+        report: "docs/reports/target_c_common_bridge_transfer_exclusion_2026-09-10.md"
+        audit: "docs/reports/target_c_common_bridge_transfer_audit_2026-09-10.md"
+        status: canonical
+        promotion_origin: "2026-09-11 theorem-state cleanup"
+        conclusion: "the common selected-diameter route intersection is exactly one positive-contact bridge block"
+        depends_on: []
+      - id: "C-MU-09604"
+        report: "docs/reports/target_c_attachment_perimeter_three_gap_endpoint_repair_2026-09-11.md"
+        audit: "docs/reports/target_c_pr188_full_dependency_audit_2026-09-11.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent PR #188 dependency audit"
+        quantity: "mu_D=(e_BB+2s_C-3(d_H+s_Z))/D"
+        conclusion: "liminf mu_D >= z_* > 0.9604, where 10 asin(z_*)-4pi=z_*/3; the endpoint mu_D->z_* is excluded, hence some absolute positive gap above z_* holds for sufficiently large survivors"
+        certificates:
+          - "research/target_c_five_arc_pin_threshold_check.py"
+        depends_on:
+          - "C-ZRF"
+        invalidates:
+          - "C-FIVE-ARC-NEAR-QUAD"
+          - "C-FIVE-HOST-OCCUPANCY"
+      - id: "C-RSR-DD"
+        report: "docs/reports/target_c_pr182_full_dependency_audit_2026-09-11.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent PR #182 dependency audit"
+        conclusion: "the RSR/DD/boundary-sharing chain is valid; HE+ gives liminf (e_BB+2s_C)/D > 0.5983685"
+        certificates:
+          - "research/verify_pr182_heplus_05983685.py"
+        depends_on:
+          - "C-ZRF"
+      - id: "C-PD"
+        report: "docs/reports/target_c_pocket_degree_dirichlet_cavity_2026-09-10.md"
+        audit: "docs/reports/target_c_pr182_full_dependency_audit_2026-09-11.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent PR #182 dependency audit"
+        conclusion: "A(y,p)-pi lambda^2/4 <= lambda^(3/2) sqrt(2y-p)/sqrt(6); the report's approximately 0.767 optimizer remains exploratory and is not a theorem"
+        depends_on:
+          - "C-ZRF"
+      - id: "C-CYCLIC-STRUCTURAL"
+        report: "docs/reports/target_c_pr191_dependency_audit_2026-09-11.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent PR #191 dependency audit"
+        scope: "Woodall cyclic branch d_H=0 for perimeter/disk statements; E=O(D) is valid in every C-II branch through the independently audited full-source cell-slack theorem"
+        conclusion: "P_F=pi D-O(sqrt D); area(F)/D^2->pi/4; E=O(D); no general b-P_F=o(D) or H_out=o(D^2) follows"
+        depends_on:
+          - "C-WOODALL"
+          - "C-ZRF"
+        invalidates:
+          - "C-CYCLIC-CAP-DETOUR"
+          - "C-CYCLIC-099554"
+      - id: "C-P1-PRX"
+        report: "docs/reports/target_c_cyclic_p1_complete_ramification_exclusion_2026-09-10.md"
+        audit: "docs/reports/target_c_cyclic_shell_d1_p1_s1_dependency_audit_2026-09-11.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent primitive cyclic-shell d_H=1 audit"
+        scope: "exact primitive all-loaded unit-shell endpoint m=0, d_H=1, s_Z=1; P1 parallel-side subcase"
+        conclusion: "P1 is impossible for all relevant m=q-2 by the Littlewood/geometric 2-adic ramification argument"
+        depends_on:
+          - "C-WOODALL"
+          - "C-ZRF"
+      - id: "C-S1-RSQ"
+        report: "docs/reports/target_c_cyclic_s1_reciprocal_square_closure_2026-09-10.md"
+        audit: "docs/reports/target_c_cyclic_shell_d1_p1_s1_dependency_audit_2026-09-11.md"
+        status: canonical
+        promotion_origin: "2026-09-11 independent primitive cyclic-shell d_H=1 audit"
+        scope: "exact primitive all-loaded unit-shell endpoint m=0, d_H=1, s_Z=1; S1 short-antipodal subcase"
+        conclusion: "every S1 state satisfies Q(z)=Q*(z) and F_m(z)=(z-1)^2 Q(z)^2; this is a reduction, not an exclusion"
+        depends_on:
+          - "C-WOODALL"
+          - "C-ZRF"
+      - id: "C-FULLCORE-HULL-DEPLETION-FLOOR"
+        report: "docs/reports/target_c_fullcore_hull_train_depletion_floor_2026-10-04.md"
+        audit: "docs/audits/target_c_october_structural_promotion_audit_2026-10-05.md"
+        status: canonical
+        promotion_origin: "2026-10-05 independent October structural promotion audit"
+        scope: "canonical full-core no-macroscopic-container Type-II sequences with all source points retained; actual loaded force hull and occurrence-counted stopped trains"
+        quantity: "mu_D=(e_BB+2s_C-3(d_H+s_Z))/D"
+        conclusion: "with s=sqrt(pi/(2sqrt(3))), liminf(5t_D+(x_B+m_B)/D)>=3pi+2s and liminf(4mu_D-(k+3m_B)/D)>=2pi+2s; hence liminf mu_D>=(pi+s)/2=2.046952730226875..., and convergence to that endpoint is impossible, yielding an existential nonexplicit uniform positive gap above it for sufficiently large full-core sources"
+        certificates:
+          - "research/verify_target_c_hull_side_train_capacity_2026_10_04.py"
+        depends_on:
+          - "C-FULLCORE-NEAR-DISK"
+          - "C-FULLCORE-LOADED-CHORD"
+          - "C-COMP-DEATOMIZATION"
+          - "C-PUNCTURED-PHASE"
+          - "C-HOLE-GRID-DIAMETER"
+      - id: "C-AUGMENTED-TRAIN-RANK"
+        report: "docs/reports/target_c_augmented_train_phase_rank_small_residual_exclusion_2026-10-05.md"
+        audit: "docs/audits/target_c_october_structural_promotion_audit_2026-10-05.md"
+        status: canonical
+        promotion_origin: "2026-10-05 independent October structural promotion audit"
+        scope: "canonical triangle-free C-II nonisolated positive-contact core after force-hull augmentation; every physical exceptional face and every added-side pocket retained"
+        conclusion: "all stopped-train angular columns whose two terminal occurrences lie on bounded augmented faces are linearly independent; therefore every nonempty bounded augmented node set U satisfies e(U)<=2|U|-2 and internal train loops are impossible"
+        certificates:
+          - "research/verify_target_c_augmented_train_phase_rank_2026_10_05.py"
+          - "research/verify_target_c_actual_loaded_augmented_star_2026_10_05.py"
+        depends_on:
+          - "C-ZRF"
+          - "C-RHOMBUS-POP"
+      - id: "C-FULLCORE-RESIDUAL-FLOOR"
+        report: "docs/reports/target_c_augmented_train_phase_rank_small_residual_exclusion_2026-10-05.md"
+        audit: "docs/audits/target_c_october_structural_promotion_audit_2026-10-05.md"
+        status: canonical
+        promotion_origin: "2026-10-05 independent October structural promotion audit"
+        scope: "canonical full-core Type-II sequences with all source points retained; fixed-boundary chamber residual includes assigned contact-isolated points"
+        quantity: "R_F=A_F/a0+P_F/2+1-N_F-E_4/a0"
+        conclusion: "exact augmented-chamber residual conservation plus the finite phase-bank inequality N_j<=10|H|+4E_j exclude R_F=o(D); in fact there is a universal nonexplicit kappa_fr>0 with liminf R_F/D>=kappa_fr, forcing a linear bank of bounded-complexity direction-frustrated chambers"
+        certificates:
+          - "research/verify_target_c_augmented_train_phase_rank_2026_10_05.py"
+        depends_on:
+          - "C-AUGMENTED-TRAIN-RANK"
+          - "C-FULLCORE-HULL-DEPLETION-FLOOR"
+          - "C-COHERENT-GRAINS"
+          - "C-FULLCORE-NEAR-DISK"
+          - "C-RHOMBUS-POP"
+      - id: "C-CONTACT-FACE-REGULARITY"
+        report: "docs/reports/target_c_complete_face_elimination_and_contact_regularity_2026-10-05.md"
+        audit: "docs/audits/target_c_october_structural_promotion_audit_2026-10-05.md"
+        status: canonical
+        promotion_origin: "2026-10-05 independent October structural promotion audit"
+        scope: "every canonical triangle-free C-II source in the Section-57 mixed-rigidity regime; nonisolated positive-contact core, with contact isolates retained globally"
+        conclusion: "every physical exceptional face admits complete two-anchor elimination; rank C_face=2f, rank R_C=e and sigma_C=0; the exact unit-contact realization space of the core is a smooth manifold of dimension q-k+2, while active diameter feasibility remains a separate constraint"
+        certificates:
+          - "research/verify_target_c_complete_face_closure_elimination_2026_10_05.py"
+        depends_on:
+          - "C-AUGMENTED-TRAIN-RANK"
+          - "C-RHOMBUS-POP"
+          - "C-ZRF"
+      - id: "C-RECIPROCAL-TRAIN-GRAPH"
+        report: "docs/reports/target_c_positive_reciprocal_internal_train_graph_2026-10-05.md"
+        audit: "docs/audits/target_c_returns_reciprocal_promotion_audit_2026-10-05.md"
+        status: canonical
+        promotion_origin: "2026-10-05 independent reciprocal/return promotion audit"
+        scope: "canonical triangle-free C-II nonisolated positive-contact core after force-hull augmentation; bounded augmented endpoints only; every hull pocket retained and contact isolates retained globally"
+        conclusion: "positive contact equilibrium integrates actual reciprocal coordinates on bounded augmented faces; every internal stopped train is a positive reciprocal segment, the bounded-endpoint train graph is simple, and each nontrivial induced component U_i satisfies e(U_i)<=2|U_i|-3, hence e(U)<=sum_i(2|U_i|-3)"
+        certificates:
+          - "research/verify_target_c_reciprocal_internal_train_graph_2026_10_05.py"
+          - "research/verify_target_c_actual_loaded_augmented_star_2026_10_05.py"
+        depends_on:
+          - "C-AUGMENTED-TRAIN-RANK"
+          - "C-ZRF"
+          - "C-RHOMBUS-POP"
+      - id: "C-OUTER-TRAIN-DETERMINATION"
+        report: "docs/reports/target_c_outer_train_rank_groemer_bank_synthesis_2026-10-05.md"
+        audit: "docs/audits/target_c_returns_reciprocal_promotion_audit_2026-10-05.md"
+        status: canonical
+        promotion_origin: "2026-10-05 independent reciprocal/return promotion audit"
+        scope: "finite canonical triangle-free C-II nonisolated positive-contact core; occurrence-counted old outer contact walk; all source isolates retained outside the matrix argument"
+        conclusion: "outer-ended stopped-train angular rates determine every contact flex modulo translations; in general |O|>=q-k+sigma_C, and with canonical C-CONTACT-FACE-REGULARITY this becomes |O|>=q-k"
+        certificates:
+          - "research/verify_target_c_outer_train_rank_groemer_bank_2026_10_05.py"
+        depends_on:
+          - "C-ZRF"
+          - "C-RHOMBUS-POP"
+          - "C-CONTACT-FACE-REGULARITY"
+      - id: "C-GLOBAL-FACE-RETURN-QUOTAS"
+        report: "docs/reports/target_c_global_exceptional_face_return_quotas_2026-10-04.md"
+        audit: "docs/audits/target_c_returns_reciprocal_promotion_audit_2026-10-05.md"
+        status: canonical
+        promotion_origin: "2026-10-05 independent reciprocal/return promotion audit"
+        scope: "finite canonical triangle-free C-II core with an arbitrary plane augmentation by auxiliary loaded-to-loaded edges; selected bounded augmented faces of degree at least five"
+        conclusion: "for a minimum endpoint-inclusive physical-contact separator S from selected face boundaries to the loaded set, Q_F<=2|S|-2c_U-4c_K<=2|S|-4; consequently all face demands r_f=max(0,floor((m_f-4)/2)-ell_f) admit simultaneous globally vertex-disjoint actual contact returns to distinct loaded endpoints"
+        certificates:
+          - "research/verify_target_c_global_face_return_quotas_2026_10_04.py"
+        depends_on:
+          - "C-ZRF"
+          - "C-LOADED-HULL"
+      - id: "C-JOINT-BULK-FACE-SEPARATOR"
+        report: "docs/reports/target_c_joint_bulk_defect_separator_capacity_2026-10-05.md"
+        audit: "docs/audits/target_c_returns_reciprocal_promotion_audit_2026-10-05.md"
+        status: canonical
+        promotion_origin: "2026-10-05 independent reciprocal/return promotion audit"
+        scope: "canonical triangle-free C-II physical contact graph; selected physical exceptional faces and selected unloaded strict-rhombus faces; metric separator theorem uses only physical unit contacts"
+        conclusion: "every separator satisfies 2sqrt(pi a0(R-5k_I)_+)+Q_F<=4k-2c_U-4c_K-2e_S<=4k-4, with 4k-6 when retained bulk is nonempty; a Type-II bulk R=(Delta_2-o(1))D^2 forces p_D>=pi D/4+Q_F/4-o(D), and face defect in a radius-r cluster satisfies Q_F<=(32+4pi)r+18"
+        certificates:
+          - "research/verify_target_c_joint_bulk_separator_2026_10_05.py"
+        depends_on:
+          - "C-GLOBAL-FACE-RETURN-QUOTAS"
+          - "C-ZRF"
+          - "C-RHOMBUS-POP"
+      - id: "C-TERMINAL-PHYSICAL-FRUSTRATION"
+        report: "docs/reports/target_c_terminal_short_pocket_physical_frustration_2026-10-05.md"
+        audit: "docs/audits/target_c_returns_reciprocal_promotion_audit_2026-10-05.md"
+        status: canonical
+        promotion_origin: "2026-10-05 independent reciprocal/return promotion audit"
+        scope: "canonical triangle-free full-core Type-II sequences with q/D->pi and u_B/D->0; no assumption m_B=o(D)"
+        conclusion: "all outer-ended trains carry o(D^2) strict rhombi; there is a universal nonexplicit kappa_phys>0 with liminf R_phys/D>=kappa_phys on original physical contact faces, and a linear boundary-vertex-disjoint physical direction-frustrated face bank; with sigma_C=0, 2f>=2sD+max(0,k-m_B)+S_U-o(D)"
+        certificates:
+          - "research/verify_target_c_terminal_short_pocket_physical_frustration_2026_10_05.py"
+        depends_on:
+          - "C-FULLCORE-HULL-DEPLETION-FLOOR"
+          - "C-AUGMENTED-TRAIN-RANK"
+          - "C-FULLCORE-RESIDUAL-FLOOR"
+          - "C-OUTER-TRAIN-DETERMINATION"
+          - "C-CONTACT-FACE-REGULARITY"
+          - "C-COHERENT-GRAINS"
+      - id: "C-LOADED-FLAT-PENTAGON-DEPLETION"
+        report: "docs/reports/target_c_loaded_flat_pentagon_second_depletion_2026-10-05.md"
+        audit: "docs/audits/target_c_returns_reciprocal_promotion_audit_2026-10-05.md"
+        status: canonical
+        promotion_origin: "2026-10-05 independent reciprocal/return promotion audit"
+        scope: "canonical triangle-free full-core Type-II sequences with x_B=b-q=o(D)"
+        conclusion: "there are g_D>=q-e_BI-6(Q-f)-o(D) distinct physical near-flat pentagons whose incident train family is second-depletable; with sigma_C=0, 2(f-g_D)>=2sD+S_U-o(D) and e_BI+6(Q-f)>=sD+2k+S_U/2-o(D)"
+        certificates:
+          - "research/verify_target_c_loaded_flat_pentagon_second_depletion_2026_10_05.py"
+        depends_on:
+          - "C-TERMINAL-PHYSICAL-FRUSTRATION"
+          - "C-OUTER-TRAIN-DETERMINATION"
+          - "C-CONTACT-FACE-REGULARITY"
+          - "C-FULLCORE-LOADED-CHORD"
+      - id: "C-EMBEDDED-WALL-REFILL"
+        report: "docs/reports/target_c_embedded_grain_wall_replacement_2026-10-02.md"
+        audit: "docs/audits/target_c_collective_wall_promotion_audit_2026-10-05.md"
+        status: canonical
+        promotion_origin: "2026-10-05 independent collective-wall promotion audit"
+        scope: "canonical contact-minimal triangle-free global minimizer; simple polygonal walls made of actual unit contacts; simultaneous refill theorem allows pairwise interior-disjoint walls; embedded-patch corollaries require actual consecutive affine/contact patches"
+        conclusion: "wall-safe packet sites are strictly separated from every retained old source point; if total certified wall-safe packet capacity pays deleted wall interiors plus an actual diameter vertex cover, replacing them gives a same-cardinality source of diameter strictly below D; in particular the explicit 7-by-7 unit square packet and its 1/50-stable near-square actual-contact perturbations are excluded, and the stated oblique area inequality excludes sufficiently large consecutive oblique patches"
+        certificates:
+          - "research/verify_target_c_embedded_grain_replacement_2026_10_02.py"
+        depends_on:
+          - "C-WOODALL"
+      - id: "C-PENTAGON-WALL-DISJOINT-BULK"
+        report: "docs/reports/target_c_pentagon_terminal_wall_disjoint_quadratic_bulk_2026-10-05.md"
+        audit: "docs/audits/target_c_collective_wall_promotion_audit_2026-10-05.md"
+        status: canonical
+        promotion_origin: "2026-10-05 independent collective-wall promotion audit"
+        scope: "finite theorem for any family of complete actual stopped trains with two bounded physical pentagon terminal occurrences; asymptotic application to canonical full-core Type-II sequences with m_B,u_B,Q-f=o(D)"
+        conclusion: "with K=250 and c_K=(K+1)^(-2)(K/(K+1))^(2K), a pentagon-to-pentagon train family has a subfamily with pairwise source-vertex-disjoint terminal pentagon walls retaining at least c_K[R_PP-(4+K/2)P]_+ crossings; if m_B,u_B,Q-f=o(D), canonical hull depletion localizes (Delta_2-o(1))D^2 crossings to pentagon-pair trains, yielding Omega(D) macroscopically long wall-disjoint trains and Omega(D^2) retained actual strict-rhombus crossings"
+        certificates:
+          - "research/verify_target_c_pentagon_wall_disjoint_bulk_2026_10_05.py"
+        depends_on:
+          - "C-FULLCORE-HULL-DEPLETION-FLOOR"
+          - "C-COHERENT-GRAINS"
+    audited_working: []
+    regressions:
+      - id: "C-FIXED-WALL-ACTIVATION-REGRESSION"
+        report: "docs/reports/target_c_phase_frustration_fixed_wall_activation_regression_2026-10-05.md"
+        audit: "docs/audits/target_c_collective_wall_promotion_audit_2026-10-05.md"
+        status: regression
+        scope: "finite regular unit pentagon KKT framework; local fixed-wall capacity implication only"
+        conclusion: "positive fixed-boundary residual, definite phase mismatch, positive normalized KKT stress and mixed rigidity do not imply even one unit-clear fixed-wall interior site; deleting any one wall vertex still leaves no inward unit-clear vacancy"
+        certificates:
+          - "research/verify_target_c_loaded_pentagon_wall_regression_2026_10_05.py"
+        depends_on: []
+      - id: "C-LARGE-WALL-LOCK-REGRESSION"
+        report: "docs/reports/target_c_large_near_triangular_fixed_wall_lock_2026-10-05.md"
+        audit: "docs/audits/target_c_collective_wall_promotion_audit_2026-10-05.md"
+        status: regression
+        scope: "finite near-triangular parallelogram unit-contact grids with prescribed full boundary wall; not asserted global minimum-diameter sources"
+        conclusion: "arbitrarily large triangle-free near-triangular unit walls with quadratic interior population and positive pinned equilibrium can admit no alternative same-cardinality fixed-wall packing; an explicit capacity-optimal family has positive Oler residual below one yet no extra container slot"
+        certificates:
+          - "research/verify_target_c_large_near_triangular_wall_lock_2026_10_05.py"
+        depends_on:
+          - "C-FULLCORE-RESIDUAL-FLOOR"
+      - id: "C-S1-Q13"
+        report: "docs/reports/target_c_cyclic_d1_s1_q13_kkt_psd_regression_2026-09-10.md"
+        audit: "docs/reports/target_c_cyclic_shell_d1_p1_s1_dependency_audit_2026-09-11.md"
+        status: regression
+        scope: "finite q=13 primitive S1 shell"
+        conclusion: "the displayed shell, active sets, positive KKT stress, maximal-rank PSD interior stress, and PSD KKT endpoints are independently numerically reproduced; no interval-certified global-minimizer claim is made"
+        certificates:
+          - "research/target_c_s1_q13_shell_regression.py"
+          - "research/verify_s1_q13_kkt_endpoints.py"
+        depends_on:
+          - "C-S1-RSQ"
+    rejected_or_overridden:
+      - id: "C-PATH-EULER"
+        status: rejected
+        claim: "consecutive incident diameter states imply an Euler trail/path"
+        reason: "three-edge star counterexample"
+        depends_on: []
+      - id: "C-FB4"
+        status: rejected
+        claim: "force-bulk localization/FB4"
+        reason: "exact heptagon-plus-center audit"
+        depends_on: []
+      - id: "C53-BAD-PENTAGON"
+        status: rejected
+        claim: "incorrectly normalized pentagon regression refutes C53"
+        reason: "incompatible projective cut/orientation"
+        depends_on: []
+      - id: "RSR-EQUALITY-UNIQUE"
+        status: rejected
+        claim: "Rogalski-Saint Raymond 1985 proves disk is the unique equality case"
+        reason: "source leaves uniqueness as an open problem"
+        depends_on: []
+      - id: "C-FIVE-ARC-NEAR-QUAD"
+        status: rejected
+        claim: "the five-arc endpoint forces near-quadrangulation by Eppstein equality"
+        reason: "Eppstein's bound is inductive and supplies no such equality classification; the PR #188 numerical theorem survives independently"
+        depends_on: []
+      - id: "C-FIVE-HOST-OCCUPANCY"
+        status: rejected
+        claim: "five-component endpoint packing saturation by itself proves that all five host components contain actual attachment pins"
+        reason: "total angular measure saturation is not an occupancy theorem; the repaired endpoint proof needs only three occupied hosts"
+        depends_on: []
+      - id: "C-CYCLIC-CAP-DETOUR"
+        status: rejected
+        claim: "an inward OP outer pocket is contained in the exterior Reuleaux minor cap, hence ell<=D phi and b-P_F=O(sqrt D) in every Woodall-cyclic survivor"
+        reason: "pocket and minor cap lie on opposite sides of the force-hull chord; exact pentagon-center regression violates ell<=D phi"
+        depends_on:
+          - "C-WOODALL"
+      - id: "C-CYCLIC-099554"
+        status: rejected
+        claim: "PR #191 proves liminf (e_BB+2s_C)/D >= 0.99554058458... with a qualitative endpoint gap"
+        reason: "the cavity/train proof depends on the rejected cyclic inward-cap detour; the later scalar audit does not repair this missing premise"
+        depends_on:
+          - "C-CYCLIC-CAP-DETOUR"
+      - id: "C-ZRF-FULL-SOURCE"
+        status: rejected
+        claim: "ZR/ZF gives ker Omega=span{1,Px,Py} and mixed rigidity rank 2v-3 on the full source including contact-isolated points"
+        reason: "contact-isolated source points contribute zero stress rows/columns and independent kernel coordinates; the audited ZR/ZF theorem is only on the nonisolated positive-contact core V"
+        depends_on:
+          - "C-ZRF"
+
+active_prompts:
+  target-a: "docs/prompts/erdos_problem_99_TARGET_A_CURRENT_CONTINUATION_PROMPT.md"
+  target-c: "docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md"
+  whole-problem: "docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md"
+
+historical_prompt_compatibility_paths:
+  - "docs/prompts/erdos_problem_99_1.7.10_FINAL_CONTINUATION_PROMPT.md"
+  - "docs/prompts/erdos_problem_99_TARGET_C_1.0_FINAL_CONTINUATION_PROMPT.md"
+
+promotion_contract:
+  required_same_change:
+    - "increment state_version in docs/state/theorem-state.yaml"
+    - "docs/STATE.md"
+    - "affected target route map or CURRENT.md"
+    - "active route prompt when the exact next obligation changes"
+    - "theorem dependency edges and computational certificate registrations when applicable"
+    - "docs/state/artifact-index.jsonl and per-artifact theorem-state headers"
+    - "docs/state/STATUS.generated.md and docs/state/THEOREM_GRAPH.generated.md"

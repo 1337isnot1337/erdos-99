@@ -1,0 +1,169 @@
+#!/usr/bin/env python3
+"""Exact-rational certificate for the correlated terminal FREE t-gap 0.00704.
+
+The mathematical note supplies the geometric implications. This script certifies the
+scalar part with rational arithmetic only:
+
+  * outward enclosures for pi, sqrt(3), Delta_2 and sqrt(Delta_2);
+  * preservation of the exact stability correlation a + 2(r+delta) <= 5 epsilon;
+  * the one-variable residual envelope rho_e(delta);
+  * monotonicity of the reduced feasibility margin in z and delta;
+  * a positive endpoint contradiction margin at epsilon = 0.00704;
+  * the resulting t-floor and its separation from the former 0.00669 window.
+
+No floating-point quantity is load-bearing.
+"""
+
+from fractions import Fraction
+from math import isqrt
+
+Q = Fraction
+
+
+def atan_inv_bounds(q: int, terms: int):
+    """Alternating-series enclosure for atan(1/q)."""
+    s = Q(0)
+    for k in range(terms):
+        term = Q(1, (2 * k + 1) * q ** (2 * k + 1))
+        s += term if k % 2 == 0 else -term
+    nxt = Q(1, (2 * terms + 1) * q ** (2 * terms + 1))
+    if terms % 2 == 0:
+        return s, s + nxt
+    return s - nxt, s
+
+
+def sqrt_floor(x: Q, scale: int) -> Q:
+    n = isqrt((x.numerator * scale * scale) // x.denominator)
+    y = Q(n, scale)
+    assert y * y <= x
+    return y
+
+
+def sqrt_ceil(x: Q, scale: int) -> Q:
+    n = isqrt((x.numerator * scale * scale) // x.denominator) + 1
+    y = Q(n, scale)
+    assert y * y >= x
+    return y
+
+
+DIGITS = 90
+SCALE = 10 ** DIGITS
+
+# Machin: pi = 16 atan(1/5) - 4 atan(1/239).
+a5_lo, a5_hi = atan_inv_bounds(5, 100)
+a239_lo, a239_hi = atan_inv_bounds(239, 30)
+pi_lo = 16 * a5_lo - 4 * a239_hi
+pi_hi = 16 * a5_hi - 4 * a239_lo
+assert pi_lo < pi_hi
+
+# sqrt(3), Delta_2 = pi/(2 sqrt(3)), and s_2 = sqrt(Delta_2).
+n3 = isqrt(3 * SCALE * SCALE)
+sqrt3_lo = Q(n3, SCALE)
+sqrt3_hi = Q(n3 + 1, SCALE)
+assert sqrt3_lo * sqrt3_lo < 3 < sqrt3_hi * sqrt3_hi
+
+delta2_lo = pi_lo / (2 * sqrt3_hi)
+delta2_hi = pi_hi / (2 * sqrt3_lo)
+s2_lo = sqrt_floor(delta2_lo, SCALE)
+s2_hi = sqrt_ceil(delta2_hi, SCALE)
+assert s2_lo * s2_lo <= delta2_lo
+assert s2_hi * s2_hi >= delta2_hi
+
+# Matched all-train input and the new correlated gap.
+g = Q(7707, 10**6)
+epsilon = Q(22, 3125)          # 0.00704
+five_epsilon = 5 * epsilon      # 0.0352
+delta_max = Q(5, 2) * epsilon  # 0.0176
+assert five_epsilon == Q(22, 625)
+assert delta_max == Q(11, 625)
+
+# Exact stability is a + 2(r+delta) <= 5 epsilon. Dropping only r>=0 gives
+# a <= 5 epsilon - 2 delta. For fixed delta, the two-bin residual is therefore
+# maximized at C(delta)=A_0+5 epsilon-2 delta, A_0=2 s_2+g.
+# r_2(C)=(C-sqrt(8 Delta_2-C^2))/2 is increasing in C on this interval.
+C_uniform_hi = 2 * s2_hi + g + five_epsilon
+radicand_uniform_lo = 8 * delta2_lo - C_uniform_hi * C_uniform_hi
+assert radicand_uniform_lo > 0
+sqrt_radicand_uniform_lo = sqrt_floor(radicand_uniform_lo, SCALE)
+residual_uniform_hi = (C_uniform_hi - sqrt_radicand_uniform_lo) / 2
+assert residual_uniform_hi < Q(1, 20)  # <0.05 throughout the box
+
+# Energy feasibility forces F(z)=z-6 sin(z/6) <= delta <= delta_max.
+# For z_cap=1.5626, alternating Taylor gives
+# F(z_cap) >= z^3/216-z^5/155520 > delta_max, hence z<z_cap.
+z_cap = Q(7813, 5000)  # 1.5626
+Fz_cap_lower = z_cap**3 / 216 - z_cap**5 / 155520
+assert Fz_cap_lower > delta_max
+
+# H_delta(z) = pi/2-rho-z-[rho^2+delta-F(z)]/[2(1-delta)].
+# H_z = -1+F'(z)/(2(1-delta)); F'(z)=1-cos(z/6)<=z^2/72.
+Fp_cap = z_cap * z_cap / 72
+assert Fp_cap / (2 * (1 - delta_max)) < 1
+
+# Let z_delta solve F(z_delta)=delta and
+# G(delta)=pi/2-rho(delta)-z_delta-rho(delta)^2/[2(1-delta)].
+# For delta>0,
+#   -rho'(delta) = 1 + C/sqrt(8 Delta_2-C^2),
+#   z_delta' = 1/F'(z_delta).
+# Hence
+#   G' <= (-rho')*(1+rho/(1-delta)) - z_delta'.
+# Bound the first term uniformly from above and z_delta' from below.
+minus_rho_prime_hi = 1 + C_uniform_hi / sqrt_radicand_uniform_lo
+rho_factor_hi = 1 + Q(1, 20) / (1 - delta_max)
+positive_derivative_cap = minus_rho_prime_hi * rho_factor_hi
+zprime_lower = 1 / Fp_cap
+assert positive_derivative_cap < zprime_lower
+# Therefore G'(delta)<0 on (0,delta_max]; continuity handles delta=0.
+
+# At delta=delta_max, the correlation forces a=0 (after dropping r>=0), so the
+# residual envelope returns to the baseline C=A_0. Certify rho(delta_max)<0.0078.
+C_endpoint_hi = 2 * s2_hi + g
+radicand_endpoint_lo = 8 * delta2_lo - C_endpoint_hi * C_endpoint_hi
+assert radicand_endpoint_lo > 0
+sqrt_radicand_endpoint_lo = sqrt_floor(radicand_endpoint_lo, SCALE)
+residual_endpoint_hi = (C_endpoint_hi - sqrt_radicand_endpoint_lo) / 2
+residual_cap = Q(39, 5000)  # 0.0078
+assert residual_endpoint_hi < residual_cap
+
+# Since G is decreasing, its minimum is at delta_max. Since z_delta<z_cap and
+# rho(delta_max)<residual_cap, the following is a rigorous lower bound for that
+# endpoint value.
+margin = (
+    pi_lo / 2
+    - residual_cap
+    - z_cap
+    - residual_cap**2 / (2 * (1 - delta_max))
+)
+assert margin > Q(36, 100000)  # >0.00036
+
+# Therefore epsilon=0.00704 is impossible. Report the strengthened t floor.
+# mu_* = pi/2 + (2/5)sqrt(Delta_2) + g/5.
+t_floor_lo = pi_lo / 2 + Q(2, 5) * s2_lo + g / 5 + epsilon
+t_report = Q(1960302849, 10**9)  # 1.960302849, safe truncation
+assert t_floor_lo > t_report
+
+# The latest exact-flex note works only through epsilon=0.00669, so the new gap
+# clears that entire window by exactly 0.00035 at the epsilon level.
+old_flex_epsilon = Q(669, 100000)
+window_clearance = epsilon - old_flex_epsilon
+assert window_clearance == Q(35, 100000)  # 0.00035
+
+# Optional downstream bookkeeping: H_ch/D >= t + gamma_g, where
+# gamma_g=2 sqrt(Delta_2)-pi/2+g, then multiply by sqrt(3)/4 for Oler surplus.
+gamma_lo = 2 * s2_lo - pi_hi / 2 + g
+chamber_floor_lo = t_floor_lo + gamma_lo
+assert chamber_floor_lo > Q(2301839, 10**6)  # >2.301839
+oler_floor_lo = sqrt3_lo * chamber_floor_lo / 4
+assert oler_floor_lo > Q(99672, 100000)       # >0.99672
+
+print("PASS: correlated terminal FREE t-gap 0.00704 certified")
+print("epsilon =", float(epsilon))
+print("delta_max =", float(delta_max))
+print("uniform residual upper <", float(Q(1, 20)))
+print("endpoint residual upper <", float(residual_cap))
+print("F(1.5626) lower =", float(Fz_cap_lower))
+print("G endpoint contradiction margin >", float(margin))
+print("t floor >", float(t_floor_lo))
+print("old exact-flex epsilon clearance =", float(window_clearance))
+print("chamber-interface floor >", float(chamber_floor_lo))
+print("Oler chamber surplus floor >", float(oler_floor_lo))

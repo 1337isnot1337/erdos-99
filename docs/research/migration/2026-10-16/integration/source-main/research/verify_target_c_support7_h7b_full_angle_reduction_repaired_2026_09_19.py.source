@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+"""Executable repair shim for the generic H7b full-angle exact certificate.
+
+The original committed verifier has one dispatch typo in build_system: it passes the
+whole per-vertex force-cycle dictionary to raw_force_angle instead of the cycle for
+the current vertex.  This shim refuses to run unless that exact one-site defect is
+present, repairs it in memory, and executes the otherwise unchanged verifier.
+
+This file is intentionally small so the historical certificate payload remains
+single-sourced in verify_target_c_support7_h7b_full_angle_reduction_2026_09_19.py.
+"""
+from pathlib import Path
+
+p = Path(__file__).with_name(
+    "verify_target_c_support7_h7b_full_angle_reduction_2026_09_19.py"
+)
+src = p.read_text(encoding="utf-8")
+old = "vf,c=raw_force_angle(cyc,i,a,b,sd,po)"
+new = "vf,c=raw_force_angle(cyc[i],i,a,b,sd,po)"
+
+assert src.count(old) == 1, "expected exactly one historical force-cycle dispatch defect"
+assert src.count(new) == 0, "historical verifier already appears repaired"
+patched = src.replace(old, new)
+assert patched.count(old) == 0 and patched.count(new) == 1
+
+ns = {"__name__": "__main__", "__file__": str(p)}
+exec(compile(patched, str(p) + "[dispatch-repair]", "exec"), ns)

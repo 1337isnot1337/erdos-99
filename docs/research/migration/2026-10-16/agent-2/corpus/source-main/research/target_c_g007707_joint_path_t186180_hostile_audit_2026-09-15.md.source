@@ -1,0 +1,115 @@
+# Hostile audit — `g=0.007707` corrected O–O path through `t<=1.86180`
+
+**Date:** 2026-09-15  
+**Audited source:** `research/target_c_g007707_joint_path_t186180_2026-09-15.md`  
+**Certificate:** `research/verify_target_c_g007707_joint_path_t186180.py`  
+**Verdict:** **PASS at proof-only scope.**  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+## 1. Scope substitution is legitimate
+
+The only new upstream substitution is
+
+\[
+C_{76}=2\sqrt{\Delta_2}+0.0076
+\quad\longrightarrow\quad
+C_{707}=2\sqrt{\Delta_2}+0.007707.
+\]
+
+The hostile-audited uniform strong-branch theorem proves
+
+\[
+\liminf (T-q/2)/D\ge C_{707}
+\]
+
+at the same scope as the previous scope-safe `g=0.0076`/`0.0077` theorems, and explicitly states that no branch hypothesis is extended.  The corrected path theorem uses this quantity only as a lower bound in the adverse residual ceiling.  Replacing it by the stronger lower bound is therefore monotone and noncircular.
+
+**Disposition:** PASS.
+
+## 2. Exact endpoint arithmetic
+
+The committed verifier uses only rational arithmetic, Machin enclosures for `pi`, alternating-series enclosures for `sin`, and integer-square-root enclosures.  At
+
+\[
+T=1.86180,
+\quad z_0=2.09586,
+\quad \lambda=0.49744,
+\]
+
+it proves all of the following with outward rounding:
+
+\[
+H(z_0)<-10^{-6},
+\]
+
+\[
+\delta_{max}<0.0913,
+\]
+
+\[
+\left(1-\delta_{max}-{\lambda\over2}\right)^2
+-\left(\lambda-{\lambda^2\over4}\right)>7\times10^{-6},
+\]
+
+and
+
+\[
+P_{low}>{1\over200000}D-o(D).
+\]
+
+Thus neither the residual root nor the physical-terminal-branch inequality is being inferred from a floating-point solve.
+
+**Disposition:** PASS.
+
+## 3. Tiny positive density is still asymptotically sufficient
+
+The phase pigeonhole gives more than
+
+\[
+{1\over600000}D-o(D)
+\]
+
+actual same-phase O–O complete trains.  Although the coefficient is small, it is a fixed positive constant.  Therefore, after deleting the single hub train/boundary and all `o(D)` losses already present in the inherited theorem, the path still has linearly many internal boundaries for all sufficiently large `D`.
+
+No finite-`D` threshold is claimed.
+
+**Disposition:** PASS.
+
+## 4. Switch averaging and integer rounding
+
+The total start/stop count of actual diameter intervals satisfies
+
+\[
+\sum_i N_i\le2|H|\le2\pi D+o(D).
+\]
+
+Using `pi<355/113` and more than `D/600000-o(D)` internal path boundaries gives the asymptotic average upper bound
+
+\[
+{2(355/113)\over1/600000}
+=3{,}769{,}911.5044\ldots<3{,}769{,}912.
+\]
+
+Hence some nonhub boundary has integer switching count
+
+\[
+N_i\le3{,}769{,}911
+\]
+
+for all sufficiently large sources.  The theorem states this integer bound, not the noninteger average.
+
+**Disposition:** PASS.
+
+## 5. No claim beyond the scalar ceiling
+
+A direct numerical solve of the same corrected residual/Markov formulas places the zero-retained-mass endpoint at approximately
+
+\[
+1.8618007267
+\]
+
+with `g=0.007707`.  The audited theorem claims only the rounded endpoint `1.86180`.  It does not extrapolate to `1.86181`, `1.862`, or `1.8623`.
+
+This matters because the remaining gap is structural: further decimal optimization of this exact architecture cannot bridge it.
+
+**Final verdict:** PASS.  The branch gives a valid proof-only extension of the corrected path/hub normal form through `t<=1.86180`; it does not close C-II.

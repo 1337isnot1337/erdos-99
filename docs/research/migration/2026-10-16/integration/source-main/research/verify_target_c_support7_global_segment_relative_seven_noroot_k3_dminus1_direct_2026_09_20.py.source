@@ -1,0 +1,469 @@
+#!/usr/bin/env python3
+"""Exact direct six-shadow audit for seven-no-root D=-1,k=3,d=0,p=1.
+
+The deletion-shadow theorem already established that a hypothetical state in
+this branch has a rank-four coefficient-constraint space P_7 whose projection
+remains rank four after deleting any one or any two of its seven coordinates.
+Every six-row deletion shadow therefore has rank-four P_6, d=0, p=1, and every
+single-coordinate projection of P_6 has rank four.
+
+This verifier bypasses the much larger five-shadow extension tree. It builds
+an exact canonical-augmentation cover of all six-subsets of the 105 no-root
+four-cycles, enumerates every realizable rank-four P_6 with one singleton
+incomplete root block, imposes d=0 and the six single-deletion rank conditions,
+and then extends only those states to seven rows. Every seven-row extension is
+finally required to preserve rank four after all 21 pair deletions.
+
+Coefficient-space ranks use q=2^31-1. Every raw local constraint row has at
+most seven entries, each in {-1,0,1}, so squared norm <=7. Any relevant rank
+is witnessed by a minor of order at most seven; Hadamard gives det^2<=7^7.
+The script verifies q is prime by Lucas-Lehmer and q^2>7^7, so reduction mod q
+cannot erase a nonzero rational minor. Complete-block ranks use the established
+2^127-1 exact-rank framework; complete relation rows have squared norm <=12.
+"""
+from argparse import ArgumentParser
+from collections import Counter
+from math import comb
+from pathlib import Path
+import contextlib
+import functools
+import importlib.util
+import io
+import pickle
+import time
+
+
+HERE = Path(__file__).resolve().parent
+BASE = HERE / "verify_target_c_support7_global_segment_relative_six_noroot_k5_2026_09_20.py"
+spec = importlib.util.spec_from_file_location("seven_k3_dminus1_direct_base", BASE)
+S = importlib.util.module_from_spec(spec)
+with contextlib.redirect_stdout(io.StringIO()):
+    spec.loader.exec_module(S)
+R = S.R
+K = S.K
+
+Q = (1 << 31) - 1
+
+
+def lucas_lehmer(p):
+    m = (1 << p) - 1
+    s = 4
+    for _ in range(p - 2):
+        s = (s * s - 2) % m
+    return s == 0
+
+
+@functools.lru_cache(maxsize=None)
+def rowspace_key_cached(rows):
+    basis = {}
+    for row in rows:
+        v = [int(x) % Q for x in row]
+        for pivot in sorted(basis):
+            if v[pivot]:
+                a = v[pivot]
+                br = basis[pivot]
+                v = [(x - a * y) % Q for x, y in zip(v, br)]
+        pivot = next((j for j, x in enumerate(v) if x), None)
+        if pivot is None:
+            continue
+        inv = pow(v[pivot], -1, Q)
+        v = [x * inv % Q for x in v]
+        for old in list(basis):
+            if basis[old][pivot]:
+                a = basis[old][pivot]
+                basis[old] = [(x - a * y) % Q for x, y in zip(basis[old], v)]
+        basis[pivot] = v
+    return tuple(tuple(basis[p]) for p in sorted(basis))
+
+
+def rowspace_key(rows):
+    rows = tuple(tuple(int(x) % Q for x in row) for row in rows)
+    return rowspace_key_cached(rows)
+
+
+@functools.lru_cache(maxsize=None)
+def union_key(a, b):
+    return rowspace_key(a + b)
+
+
+def is_subspace(a, b):
+    return len(union_key(a, b)) == len(b)
+
+
+def local_constraint_key(ext, block, state):
+    vals = [R.QCOMP[e][block] for e in ext]
+    kind = R.STATES[state][3]
+    if kind == 2:
+        return ()
+    if kind == 1:
+        lx, ly = R.STATES[state][4]
+        row = tuple(lx * v[1] - ly * v[0] for v in vals)
+        return rowspace_key((row,))
+    x = tuple(v[0] for v in vals)
+    y = tuple(v[1] for v in vals)
+    return rowspace_key((x, y))
+
+
+def touched_blocks(ext):
+    return tuple(
+        b for b in range(35)
+        if any(R.QCOMP[e][b] != (0, 0) for e in ext)
+    )
+
+
+def project_space(space, drops):
+    if isinstance(drops, int):
+        drops = (drops,)
+    drops = set(drops)
+    return rowspace_key(tuple(
+        tuple(x for j, x in enumerate(row) if j not in drops)
+        for row in space
+    ))
+
+
+def permute_space(space, old_ext, new_ext):
+    pos = {e: i for i, e in enumerate(old_ext)}
+    return rowspace_key(tuple(
+        tuple(row[pos[e]] for e in new_ext)
+        for row in space
+    ))
+
+
+def singleton_touch_count(ext, block):
+    return sum(R.QCOMP[e][block] != (0, 0) for e in ext)
+
+
+class DeficiencyCache:
+    def __init__(self):
+        self.cache = {}
+
+    def __call__(self, complete):
+        complete = tuple(sorted(complete))
+        value = self.cache.get(complete)
+        if value is None:
+            rank = R.rank_mod([S.COMPLETE_T[b] for b in complete])
+            value = len(complete) - rank
+            self.cache[complete] = value
+        return value
+
+
+def candidate_rank4_spaces_p1(ext, touched):
+    """All rank-four P realizable with empty blocks and at most one singleton."""
+    best = {(): 0}
+    for block in touched:
+        empty = local_constraint_key(ext, block, 0)
+        singles = {local_constraint_key(ext, block, state) for state in (1, 2, 4)}
+        new = dict(best)
+        for space, cost in best.items():
+            joined = union_key(space, empty)
+            if len(joined) <= 4:
+                old = new.get(joined)
+                if old is None or cost < old:
+                    new[joined] = cost
+            if cost == 0:
+                for singleton in singles:
+                    joined = union_key(space, singleton)
+                    if len(joined) <= 4:
+                        old = new.get(joined)
+                        if old is None or 1 < old:
+                            new[joined] = 1
+        best = new
+    return tuple(space for space, cost in best.items() if len(space) == 4 and cost <= 1)
+
+
+def canonical_generated(ext, touched, P, singleton_block, singleton_state):
+    generated = local_constraint_key(ext, singleton_block, singleton_state)
+    if not is_subspace(generated, P):
+        return ()
+    for block in touched:
+        if block == singleton_block:
+            continue
+        empty = local_constraint_key(ext, block, 0)
+        if is_subspace(empty, P):
+            generated = union_key(generated, empty)
+    return generated
+
+
+def canonical_complete(ext, touched, P, singleton_block):
+    return tuple(
+        block for block in touched
+        if block != singleton_block
+        and not is_subspace(local_constraint_key(ext, block, 0), P)
+    )
+
+
+def direct_six_states(ext, deficiency):
+    touched = touched_blocks(ext)
+    spaces = candidate_rank4_spaces_p1(ext, touched)
+    out = []
+    seen = set()
+    for P in spaces:
+        if any(len(project_space(P, i)) != 4 for i in range(6)):
+            continue
+        for singleton_block in touched:
+            if singleton_touch_count(ext, singleton_block) < 2:
+                continue
+            for singleton_state in (1, 2, 4):
+                singleton = local_constraint_key(ext, singleton_block, singleton_state)
+                if not is_subspace(singleton, P):
+                    continue
+                if canonical_generated(ext, touched, P, singleton_block, singleton_state) != P:
+                    continue
+                complete = canonical_complete(ext, touched, P, singleton_block)
+                if deficiency(complete) != 0:
+                    continue
+                key = (P, singleton_block, singleton_state)
+                if key in seen:
+                    continue
+                seen.add(key)
+                out.append((P, singleton_block, singleton_state, complete, touched))
+    return tuple(out), len(spaces)
+
+
+def extend_parent(ext, parent_P, singleton_block, singleton_state, deficiency):
+    """Extend a six-row rank-four P by the final seventh coordinate."""
+    assert len(ext) == 7
+    drop = 6
+    touched = touched_blocks(ext)
+    if singleton_block not in touched:
+        return (), 0, 0
+    singleton = local_constraint_key(ext, singleton_block, singleton_state)
+    if not is_subspace(project_space(singleton, drop), parent_P):
+        return (), 0, 0
+    eligible = []
+    for block in touched:
+        if block == singleton_block:
+            continue
+        empty = local_constraint_key(ext, block, 0)
+        if is_subspace(project_space(empty, drop), parent_P):
+            eligible.append(empty)
+    spaces = {singleton}
+    for empty in eligible:
+        new = set(spaces)
+        for space in spaces:
+            joined = union_key(space, empty)
+            if len(joined) <= 4:
+                new.add(joined)
+        spaces = new
+    out = []
+    for P in spaces:
+        if len(P) != 4 or project_space(P, drop) != parent_P:
+            continue
+        if any(len(project_space(P, i)) != 4 for i in range(7)):
+            continue
+        if canonical_generated(ext, touched, P, singleton_block, singleton_state) != P:
+            continue
+        complete = canonical_complete(ext, touched, P, singleton_block)
+        if deficiency(complete) != 0:
+            continue
+        out.append((P, complete, touched))
+    return tuple(out), len(spaces), len(eligible)
+
+
+def six_cover():
+    keys, five_orbits, orbit_sizes, augmentation_candidates = K.five_no_root_orbits()
+    assert len(five_orbits) == 20451
+    assert sum(orbit_sizes) == comb(105, 5) == 96560646
+    assert augmentation_candidates == 20475
+    cover = S.six_augmentation_cover(keys, five_orbits)
+    assert len(cover) == 325955
+    return keys, cover
+
+
+def scan_six(keys, cover, start, end):
+    key_to_global = {K.cycle_key(R.DESC[e]): e for e in R.NO_ROOT}
+    deficiency = DeficiencyCache()
+    states = []
+    state_dist = Counter()
+    space_dist = Counter()
+    touch_dist = Counter()
+    t0 = time.time()
+    for index in range(start, end):
+        local = cover[index]
+        ext = tuple(key_to_global[keys[i]] for i in local)
+        cand, nspaces = direct_six_states(ext, deficiency)
+        state_dist[len(cand)] += 1
+        space_dist[nspaces] += 1
+        for P, sb, ss, complete, touched in cand:
+            states.append((ext, P, sb, ss, complete, touched))
+            touch_dist[singleton_touch_count(ext, sb)] += 1
+    return {
+        "states": tuple(states),
+        "state_dist": state_dist,
+        "space_dist": space_dist,
+        "touch_dist": touch_dist,
+        "cache_size": len(deficiency.cache),
+        "seconds": time.time() - t0,
+    }
+
+
+def scan_seven(six_states):
+    deficiency = DeficiencyCache()
+    counts = Counter()
+    min_pair_rank = Counter()
+    bad_pair_count = Counter()
+    survivors = []
+    seen = set()
+    max_spaces = 0
+    max_eligible = 0
+    t0 = time.time()
+    for ext6, P6, sb, ss, _complete, _touched in six_states:
+        for extra in R.NO_ROOT:
+            if extra in ext6:
+                continue
+            ext7 = tuple(ext6) + (extra,)
+            counts["extensions"] += 1
+            if singleton_touch_count(ext7, sb) < 3:
+                counts["singleton_touch_reject"] += 1
+                continue
+            cand, nspaces, neligible = extend_parent(ext7, P6, sb, ss, deficiency)
+            max_spaces = max(max_spaces, nspaces)
+            max_eligible = max(max_eligible, neligible)
+            counts["single_deletion_synchronized_candidates"] += len(cand)
+            for P7, complete, touched in cand:
+                sevent = tuple(sorted(ext7))
+                normalized = permute_space(P7, ext7, sevent)
+                signature = (sevent, normalized, sb, ss)
+                if signature in seen:
+                    counts["duplicates"] += 1
+                    continue
+                seen.add(signature)
+                ranks = [
+                    len(project_space(normalized, (i, j)))
+                    for i in range(7) for j in range(i + 1, 7)
+                ]
+                minimum = min(ranks)
+                bad = sum(rank < 4 for rank in ranks)
+                min_pair_rank[minimum] += 1
+                bad_pair_count[bad] += 1
+                if bad == 0:
+                    survivors.append((sevent, normalized, sb, ss, complete, touched))
+    return {
+        "counts": counts,
+        "unique_candidates": len(seen),
+        "min_pair_rank": min_pair_rank,
+        "bad_pair_count": bad_pair_count,
+        "survivors": tuple(survivors),
+        "max_spaces": max_spaces,
+        "max_eligible": max_eligible,
+        "cache_size": len(deficiency.cache),
+        "seconds": time.time() - t0,
+    }
+
+
+def save(path, value):
+    with open(path, "wb") as f:
+        pickle.dump(value, f, protocol=pickle.HIGHEST_PROTOCOL)
+
+
+def load(path):
+    with open(path, "rb") as f:
+        return pickle.load(f)
+
+
+def main():
+    ap = ArgumentParser()
+    sub = ap.add_subparsers(dest="stage", required=True)
+    p = sub.add_parser("cover")
+    p.add_argument("--output", required=True)
+    p = sub.add_parser("six")
+    p.add_argument("--cover", required=True)
+    p.add_argument("--part", type=int, default=0)
+    p.add_argument("--parts", type=int, default=1)
+    p.add_argument("--output", required=True)
+    p = sub.add_parser("merge-six")
+    p.add_argument("--inputs", nargs="+", required=True)
+    p.add_argument("--output", required=True)
+    p = sub.add_parser("seven")
+    p.add_argument("--input", required=True)
+    args = ap.parse_args()
+
+    assert lucas_lehmer(31)
+    assert Q * Q > 7 ** 7
+    assert max(abs(x) for e in R.NO_ROOT for v in R.QCOMP[e] for x in v) <= 1
+    assert R.lucas_lehmer_127()
+    assert max(sum(x * x for x in row) for row in S.COMPLETE_T) == 12
+    assert R.P * R.P > 12 ** 15
+
+    if args.stage == "cover":
+        keys, cover = six_cover()
+        save(args.output, (keys, cover))
+        print("PASS: six-row canonical-augmentation cover")
+        print("cover_representatives", len(cover))
+        print("known_six_orbits", 325911)
+        print("cover_excess", len(cover) - 325911)
+        return
+
+    if args.stage == "six":
+        keys, cover = load(args.cover)
+        assert len(cover) == 325955
+        assert args.parts >= 1 and 0 <= args.part < args.parts
+        start = len(cover) * args.part // args.parts
+        end = len(cover) * (args.part + 1) // args.parts
+        result = scan_six(keys, cover, start, end)
+        save(args.output, result["states"])
+        print("PASS: direct six-row shadow shard")
+        print("cover_range", start, end)
+        print("states", len(result["states"]))
+        print("cover_representatives_with_states", sum(v for k, v in result["state_dist"].items() if k))
+        print("states_per_representative", dict(sorted(result["state_dist"].items())))
+        print("singleton_touch_census", dict(sorted(result["touch_dist"].items())))
+        print("max_candidate_spaces", max(result["space_dist"], default=0))
+        print("complete_rank_cache_size", result["cache_size"])
+        print("seconds", round(result["seconds"], 3))
+        return
+
+    if args.stage == "merge-six":
+        states = tuple(x for path in args.inputs for x in load(path))
+        if len(states) == 767:
+            assert len({x[0] for x in states}) == 107
+            assert len({(x[0], x[2], x[3]) for x in states}) == 475
+            assert dict(sorted(Counter(len(x[4]) for x in states).items())) == {
+                4: 57, 5: 231, 6: 111, 7: 89, 8: 205, 9: 61, 10: 8, 11: 5,
+            }
+            assert dict(sorted(Counter(singleton_touch_count(x[0], x[2]) for x in states).items())) == {
+                2: 312, 3: 370, 4: 64, 5: 18, 6: 3,
+            }
+        save(args.output, states)
+        print("PASS: merged direct six-row shadow shards")
+        print("states", len(states))
+        print("cycle_sets", len({x[0] for x in states}))
+        print("singleton_state_keys", len({(x[0], x[2], x[3]) for x in states}))
+        print("complete_block_census", dict(sorted(Counter(len(x[4]) for x in states).items())))
+        print("singleton_touch_census", dict(sorted(Counter(singleton_touch_count(x[0], x[2]) for x in states).items())))
+        return
+
+    if args.stage == "seven":
+        states = tuple(load(args.input))
+        result = scan_seven(states)
+        if len(states) == 767:
+            assert dict(result["counts"]) == {
+                "extensions": 75933,
+                "single_deletion_synchronized_candidates": 1765,
+                "singleton_touch_reject": 27768,
+                "duplicates": 79,
+            }
+            assert result["unique_candidates"] == 1686
+            assert dict(result["min_pair_rank"]) == {3: 1686}
+            assert dict(result["bad_pair_count"]) == {
+                1: 36, 2: 50, 3: 2, 4: 766, 6: 710, 7: 122,
+            }
+            assert not result["survivors"]
+        print("PASS: direct seven-row extension scan completed")
+        print("six_shadow_states", len(states))
+        print("counts", dict(result["counts"]))
+        print("unique_seven_candidates", result["unique_candidates"])
+        print("minimum_pair_projection_rank_census", dict(sorted(result["min_pair_rank"].items())))
+        print("bad_pair_count_census", dict(sorted(result["bad_pair_count"].items())))
+        print("depth_two_survivors", len(result["survivors"]))
+        print("max_intermediate_spaces", result["max_spaces"])
+        print("max_eligible_blocks", result["max_eligible"])
+        print("complete_rank_cache_size", result["cache_size"])
+        print("seconds", round(result["seconds"], 3))
+        if result["survivors"]:
+            print("first_survivor", repr(result["survivors"][0]))
+        return
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,332 @@
+# Target C: eight-no-root `k=7` containment and capacity reduction
+
+Date: 2026-09-21
+
+Status: rigorous structural reduction of the rank-one eight-no-root layer. Six of the nine arithmetic boundary cases are excluded. Three arithmetic branches remain, with their virtual-canonical profiles and deletion shadows sharply constrained.
+
+Companion arithmetic checker:
+
+- `research/verify_target_c_support7_global_segment_relative_eight_noroot_k7_reduction_2026_09_21.py`
+
+## 1. Setup
+
+Let `B=R union E`, `|E|=8`, be a hypothetical eight-no-root counterexample and write
+
+`D(X)=|X|-3 delta(X)`.
+
+The established seven-no-root theorem implies that every external row is an `M`-coloop and a `Q`-noncoloop. Hence
+
+`D(B) in {-2,-1}`.
+
+This note treats `k=7`. Thus the external `Q`-quotient rank is one. Let
+
+`P <= Q^8`
+
+be the corresponding coefficient line. Because no external row is a `Q`-coloop, a generator of `P` has support at least two.
+
+For a coordinate `i`, call its one-row deletion good when the projected line `P_i` has support at least two. If `P` has support exactly two, precisely the six zero coordinates are good. If `P` has support at least three, all eight coordinates are good. Thus there are always at least six good deletions.
+
+The exact root-block formula is
+
+`D(B)=8+p+3d_root-3k = p+3d_root-13`.
+
+The arithmetic boundary is therefore
+
+```text
+D=-2: (d_root,p)=(0,11),(1,8),(2,5),(3,2)
+D=-1: (d_root,p)=(0,12),(1,9),(2,6),(3,3),(4,0).
+```
+
+## 2. Defect-free seven-row rank-one containment lemma
+
+The containment argument in the committed seven-no-root `k=6` reduction is structural; its proof does not use a negative seven-row defect once the coefficient line has support at least two.
+
+Concretely, for any seven-row rank-one coefficient line `L<=Q^7` with support at least two, define its virtual-canonical complete set `C(L)` exactly as in the preceding work. The six-row rank-one containment theorem applied to the good coordinate deletions gives
+
+```text
+|C(L)| - rank H(C(L)) >= 2,
+external null(L) relations subset H(C(L)).
+```
+
+For completeness, the spanning point is the same as before. If `N=null(L)` and
+
+`N_j={alpha in N: alpha_j=0}`,
+
+then there are at least two good coordinate hyperplanes `N_j`, and two distinct such hyperplanes span `N`. The six-row relations lift back without correction because a block omitted from a deletion complete set is either untouched, in which case `alpha_j=0`, or deletion-virtual-empty, in which case its projected quotient demand vanishes.
+
+This seven-row lemma can therefore be used as an input for another deletion lift.
+
+## 3. Lift containment to eight rows
+
+Define the eight-row virtual-canonical complete set `C` by declaring a touched root block complete exactly when its empty-state coefficient-constraint space is not contained in `P`. Put
+
+`d_v=|C|-rank H(C)`.
+
+For a good coordinate `i`, let `C_i` be the seven-row virtual-complete set of the deletion shadow. Projection of a globally virtual-empty block is still virtual-empty or untouched, so
+
+`C_i subset C`.
+
+The seven-row lemma gives
+
+`d_i>=2`,
+
+hence
+
+`d_v>=2`.
+
+Let `N=null(P)` and, for good `i`,
+
+`N_i={alpha in N: alpha_i=0}`.
+
+At least two good `N_i` are distinct. If `support(P)=2`, choose two zero coordinates. If `support(P)>=3`, equality of two coordinate hyperplanes would put a nonzero vector supported on those two coordinates in the line `P`, impossible.
+
+Distinct codimension-one hyperplanes in `N` span `N`. For `alpha in N_i`, the seven-row deletion relation lies in `H(C_i)`. The same lift used in the previous rank-one argument shows the eight-row relation lies in `H(C_i) subset H(C)`. Therefore
+
+`external null(P) relations subset H(C)`.
+
+Let `q` be the number of virtual-complete blocks made incomplete in the actual state. A virtual-complete block cannot be actual-empty, so `q<=p`. The standard containment accounting now gives
+
+`D(B) >= 8+p+3d_v-3q`.
+
+Using `d_v>=2` and `q<=p`,
+
+`D(B) >= 14-2p`.
+
+## 4. Five arithmetic cases close immediately
+
+The crude bound excludes
+
+```text
+D=-2: (d_root,p)=(2,5),(3,2)
+D=-1: (d_root,p)=(2,6),(3,3),(4,0).
+```
+
+The only arithmetic cases left at this point are
+
+```text
+A: D=-2, d_root=0, p=11
+B: D=-2, d_root=1, p=8
+C: D=-1, d_root=0, p=12
+D: D=-1, d_root=1, p=9.
+```
+
+The global containment inequality gives the following possible `(d_v,q,s_min)` triples, where
+
+`s_min=max(0,2q-p)`
+
+is the minimum number of singleton blocks among the `q` virtual-complete incomplete blocks:
+
+```text
+A, p=11:
+(2,9,7),(2,10,9),(2,11,11),(3,10,9),(3,11,11),(4,11,11)
+
+B, p=8:
+(2,8,8)
+
+C, p=12:
+(2,9,6),(2,10,8),(2,11,10),(2,12,12),
+(3,10,8),(3,11,10),(3,12,12),
+(4,11,10),(4,12,12),(5,12,12)
+
+D, p=9:
+(2,8,7),(2,9,9),(3,9,9).
+```
+
+## 5. Projection-loss lemma for singleton capacity
+
+A second lift turns the exact six-row deficiency-two capacity bound into seven- and eight-row bounds.
+
+Fix a rank-one virtual-canonical state and a virtual-complete block `b` that admits a compatible singleton state.
+
+For a good coordinate deletion `i`, the block fails to remain a singleton-capable virtual-complete block for only two possible reasons.
+
+1. `b` becomes untouched. This can happen for at most one coordinate, because then its full external touch support is exactly `{i}`.
+2. `b` remains touched but becomes virtual-empty. If `E_b` is the empty-state coefficient-constraint space, this means
+
+   `pi_i(E_b) subset pi_i(P)`,
+
+   equivalently
+
+   `E_b subset P + span(e_i)`.
+
+   This can happen for at most one good coordinate. For two distinct good coordinates `i,j`, the intersection
+
+   `(P+span(e_i)) intersect (P+span(e_j))`
+
+   equals `P`: in the support-two case the good coordinates lie outside `support(P)`, and in the support-at-least-three case `support(P)` is not contained in `{i,j}`. Two such collapses would therefore imply `E_b subset P`, contradicting that `b` is globally virtual-complete.
+
+A globally singleton-capable complete block is therefore counted in all but at most two good deletion capacities.
+
+## 6. Lift the exact deficiency-two singleton bound
+
+The committed exact six-row all-touch audit proves:
+
+> every synchronized six-row rank-one virtual state of deficiency two has singleton capacity at most three.
+
+Consider a seven-row rank-one virtual state of deficiency two.
+
+- If its coefficient line has support two, there are five good deletions. Every good deletion has deficiency exactly two, so if the seven-row singleton capacity is `S`,
+
+  `S(5-2) <= 5*3`,
+
+  hence `S<=5`.
+
+- If its coefficient line has support at least three, all seven deletions are good, so
+
+  `S(7-2) <= 7*3`,
+
+  hence `S<=4`.
+
+Thus
+
+```text
+seven-row d=2 singleton capacity:
+support 2     => at most 5
+support >=3   => at most 4.
+```
+
+Apply the projection-loss lemma once more to an eight-row deficiency-two state.
+
+- If `support(P)=2`, all six good seven-row deletions still have support two and capacity at most five. Hence
+
+  `S(6-2)<=6*5`,
+
+  so `S<=7`.
+
+- If `support(P)=3`, five zero-coordinate deletions have seven-row support three and capacity at most four, while three support-coordinate deletions have support two and capacity at most five. Thus
+
+  `S(8-2)<=5*4+3*5=35`,
+
+  so `S<=5`.
+
+- If `support(P)>=4`, every seven-row deletion has support at least three, so
+
+  `S(8-2)<=8*4`,
+
+  again giving `S<=5`.
+
+Therefore
+
+```text
+eight-row d_v=2 singleton capacity:
+support 2     => at most 7
+support >=3   => at most 5.
+```
+
+In particular, any eight-row deficiency-two state with singleton capacity at least six has coefficient support exactly two.
+
+## 7. Close branch B completely
+
+Branch B has
+
+`D=-2,p=8`.
+
+The global containment inequality has only one possibility:
+
+`d_v=2,q=8`.
+
+All eight changed virtual-complete blocks must therefore be singletons. This requires singleton capacity at least eight, contradicting the eight-row deficiency-two maximum of seven.
+
+Hence
+
+> `D=-2,k=7,d_root=1,p=8` is impossible.
+
+Six of the nine arithmetic `k=7` cases are now closed.
+
+## 8. Remove the remaining deficiency-two profiles in A and D
+
+For a one-row deletion, the seven-row shadow has `k=6` and defect
+
+```text
+D_7=0 in the D=-2 branch,
+D_7=1 in the D=-1 branch.
+```
+
+Its incomplete-row count differs from the global `p` by a multiple of three. A selected row contributes to the one-row loss for at most one coordinate, so the sum of all eight one-row losses is at most `p`.
+
+Consequently the four original residuals have at least the following numbers of good deletions that retain `p` exactly:
+
+```text
+p=11: at least 3
+p=8:  at least 4
+p=12: at least 2
+p=9:  at least 3.
+```
+
+Now consider branch A with global `(d_v,q)=(2,9)`. The eight-row capacity bound forces coefficient support two and exactly seven actual singleton blocks among the nine changed blocks; the other two are pairs, consuming all `p=11` rows.
+
+Choose a good deletion with `p_i=11`. Then `d_i=2`. Seven-row containment gives `q_i>=8`. Any eight of the global seven singleton plus two pair blocks contain at least six singleton blocks. But a seven-row deficiency-two state has singleton capacity at most five. Contradiction.
+
+Thus all `d_v=2` profiles in A are impossible; the `q=10,11` profiles were already excluded by the global capacity-seven bound.
+
+Similarly, in branch D the profile `(d_v,q)=(2,8)` forces exactly seven singleton blocks and one pair. A good unchanged deletion has `d_i=2` and seven-row containment gives `q_i>=7`. Any seven of those eight blocks contain at least six singletons, again contradicting the seven-row capacity-five bound. The `(2,9)` profile is already globally impossible because it requires nine singleton blocks.
+
+Therefore branch D is forced to
+
+`d_v=3,q=9`,
+
+and all nine changed blocks are singletons.
+
+## 9. The special deficiency-two residual in branch C
+
+For branch C, the global deficiency-two possibilities with `q>=10` require at least eight singleton blocks and are impossible by the eight-row capacity-seven bound. Only
+
+`d_v=2,q=9`
+
+can remain at deficiency two.
+
+This profile has at least six actual singleton blocks among the nine changed blocks. The global capacity bound forces coefficient support exactly two.
+
+If there were seven or more actual singleton blocks, a good unchanged deletion would have `d_i=2`, `q_i>=8`, and any eight of the nine changed blocks would contain at least six singletons, contradicting seven-row capacity five.
+
+Hence this profile is exact:
+
+```text
+six singleton blocks,
+three pair blocks,
+no additional selected incomplete rows.
+```
+
+Moreover, every good deletion retaining `p_i=12` must have
+
+```text
+d_i=2,
+q_i=8,
+exactly five of the six singleton blocks,
+all three pair blocks.
+```
+
+There are at least two such good unchanged deletions. This is a small, rigid support-two subproblem.
+
+## 10. Remaining `k=7` target
+
+After the reductions above, only three arithmetic branches remain:
+
+```text
+A: D=-2, d_root=0, p=11
+C: D=-1, d_root=0, p=12
+D: D=-1, d_root=1, p=9.
+```
+
+Their surviving virtual profiles are
+
+```text
+A:
+(d_v,q,s_min)=(3,10,9),(3,11,11),(4,11,11)
+
+C:
+(2,9,6),
+(3,10,8),(3,11,10),(3,12,12),
+(4,11,10),(4,12,12),(5,12,12)
+
+D:
+(3,9,9).
+```
+
+The unchanged-shadow budget gives at least three, two, and three good `p_i=p` seven-row shadows for A, C, and D respectively.
+
+For A and D, every such shadow has deficiency at least three. In the smallest A profile `(d_v,q)=(3,10)`, an unchanged shadow must have `d_i=3`, `q_i>=9`, and singleton capacity at least eight. In D, every unchanged shadow must have `d_i=3`, `q_i>=8`, and singleton capacity at least eight. The larger profiles require still higher capacities.
+
+For C, the `d_v=2` profile is the exact six-singleton/three-pair support-two pattern from Section 9. All `d_v>=3` profiles force unchanged shadows of deficiency at least three; for example `(d_v,q)=(3,10)` forces `d_i=3`, `q_i>=9`, and singleton capacity at least seven.
+
+These are the next finite targets. They can be attacked by extending the already committed six-row deficiency-three/high-capacity cover, rather than enumerating arbitrary eight-row states.

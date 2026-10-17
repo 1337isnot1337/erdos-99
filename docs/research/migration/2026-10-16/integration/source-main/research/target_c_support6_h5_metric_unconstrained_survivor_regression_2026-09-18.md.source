@@ -1,0 +1,22 @@
+# Target C-II — unconstrained metric root is outside the H5 order type
+
+**Date:** 2026-09-18  
+**Status:** exploratory numerical regression; not a theorem  
+**Certificate:** `research/verify_target_c_support6_h5_metric_unconstrained_survivor_regression_2026_09_18.py`
+
+The full signed unit-force equations for the tenth simple-wall sign pattern (W9)
+have a floating-point root with infinity-norm residual below `2e-14` and minimum
+pair distance above `0.2`.  The same point has six convex-hull vertices and the
+purported wall triple `036` has nonzero oriented area, so it is not a realization
+of the prescribed H5 simple-wall order type.
+
+This is a useful scope regression.  The metric equations alone do not exclude the
+W9 signing; the order-type, wall, and source-derived constraints are essential.  It
+also confirms that “a numerical solver found no H5 root” would not be a theorem:
+unconstrained solves can converge to a different order type.
+
+The result is intentionally not used to weaken the existing exact projection-
+potential exclusions of the six uniform and ten simple-wall H5 cases.  It supplies
+no global source realization and no C-II closure.
+
+**Classification:** unreviewed candidate/regression, floating-point only.

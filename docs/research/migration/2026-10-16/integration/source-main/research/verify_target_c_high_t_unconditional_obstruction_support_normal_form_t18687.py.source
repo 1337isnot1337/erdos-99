@@ -1,0 +1,79 @@
+#!/usr/bin/env python3
+"""Regression checks for the unconditional one-bar support normal form."""
+
+from fractions import Fraction
+from itertools import combinations_with_replacement
+from math import pow
+
+
+def nondec(xs):
+    return all(a <= b for a, b in zip(xs, xs[1:]))
+
+
+def noninc(xs):
+    return all(a >= b for a, b in zip(xs, xs[1:]))
+
+
+def unimodal(xs):
+    if not xs:
+        return True
+    return any(nondec(xs[: p + 1]) and noninc(xs[p:]) for p in range(len(xs)))
+
+
+def longest_monotone_piece(xs):
+    if not xs:
+        return 0
+    n = len(xs)
+    best = 0
+    for p in range(n):
+        if nondec(xs[: p + 1]):
+            best = max(best, p + 1)
+        if noninc(xs[p:]):
+            best = max(best, n - p)
+    return best
+
+
+# Generic one-bar topology. A repeated selected boundary position models
+# several chosen diameter bars sharing one hubward partner vertex.
+for m in range(2, 8):
+    master = [(r, "U") for r in range(1, m + 1)]
+    master += [(m, "T"), (m, "T")]
+    master += [(r, "D") for r in range(m, 0, -1)]
+
+    for n in range(1, 7):
+        for idxs in combinations_with_replacement(range(len(master)), n):
+            labels = [master[j][0] for j in idxs]
+            assert unimodal(labels), (m, idxs, labels)
+            assert longest_monotone_piece(labels) >= (n + 1) // 2
+
+            # For a nested monotone lane, the selected incidences outside the
+            # matching physical host side have one common support-end tag.
+            if nondec(labels):
+                wrong = [master[j][0] for j in idxs if master[j][1] != "U"]
+                assert len(set(wrong)) <= 1, (m, idxs, "nondec")
+            if noninc(labels):
+                wrong = [master[j][0] for j in idxs if master[j][1] != "D"]
+                assert len(set(wrong)) <= 1, (m, idxs, "noninc")
+
+
+# Arithmetic of the unconditional corrected blocker fork.
+c0 = Fraction(113, 20_000_000)
+combined_fork = Fraction(7, 8) * c0
+one_mechanism = combined_fork / 2
+normal_form = one_mechanism / 8
+
+assert combined_fork == Fraction(791, 160_000_000)
+assert one_mechanism == Fraction(791, 320_000_000)
+assert normal_form == Fraction(791, 2_560_000_000)
+
+root = pow(3.0, 1.0 / 8.0)
+endpoint_disjoint = float(one_mechanism) / (32.0 * root)
+
+assert abs(float(normal_form) - 3.08984375e-7) < 1e-20
+assert abs(endpoint_disjoint - 6.733430316518974e-8) < 1e-22
+
+print("PASS: unconditional blocker support normal-form regressions")
+print(f"combined_fork_density={float(combined_fork):.12g}")
+print(f"one_mechanism_density={float(one_mechanism):.12g}")
+print(f"uniform_support_normal_form_density={float(normal_form):.12g}")
+print(f"endpoint_disjoint_D_quarter={endpoint_disjoint:.12g}")

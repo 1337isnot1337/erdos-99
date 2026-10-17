@@ -1,0 +1,202 @@
+# Hostile audit — finite-defect KKT strip through `t<=1.86596`
+
+**Date:** 2026-09-15  
+**Reviewed:**
+- `research/target_c_finite_defect_kkt_strip_t186596_2026-09-15.md`
+- `research/verify_target_c_finite_defect_kkt_strip_t186596.py`
+
+**Verdict:** **PASS at proof-only full-core Type-II scope.**  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The candidate transports the finite-defect averaging argument from the current
+`1.8623` coupled path to the much thinner paired-remainder O--O path proved through
+`1.86596`. No new local geometry is introduced. The audit checks that all three global
+ledgers and the path-region assignment survive this change of path source.
+
+## 1. The `1.86596` family has the required path structure
+
+The hostile-audited paired-remainder endpoint theorem supplies more than
+
+\[
+(17/10^6)D-o(D)
+\]
+
+actual complete O--O trains in one dominant phase window. Their opposite oriented
+terminal branches lie in two disjoint boundary arcs. The Jordan crosscut theorem makes
+their proper midpoint crosscuts pairwise noncrossing, hence one simple complement-dual
+path. The same theorem stack supplies phase-free region saturation and the common
+Helly routing region.
+
+These are exactly the topological inputs used by the `1.8623` finite-defect argument.
+No center-fan, small-leaf, or low-`t` rectangle hypothesis is imported.
+
+**Verdict:** PASS.
+
+## 2. Signed diameter incidence is still one constant-sign interval
+
+Laminar rooted shores depend only on the ordered noncrossing O--O crosscuts. For one
+actual diameter edge, the set of path cuts it crosses is therefore one interval; while
+inside that interval the same endpoint remains on the rooted shore, so the sign cannot
+flip. Thus each actual diameter row changes at most twice, independently of how the
+O--O path was extracted. Hence both
+
+\[
+\sum_iN_i\le2|H|
+\]
+
+and
+
+\[
+\sum_iB_i\le2\sum_h\beta_h=2
+\]
+
+remain exact.
+
+**Verdict:** PASS.
+
+## 3. Diameter count bound is source-global
+
+Hopf--Pannwitz gives `|H|<=q`. Consecutive loaded force-hull vertices are source points
+and hence their hull-side lengths are at least one, so `q<=per(F)`. Cauchy's
+perimeter-diameter inequality gives `per(F)<=pi D`. Therefore
+
+\[
+\sum_iN_i\le2\pi D
+\]
+
+without any `t<=1.8623` input.
+
+**Verdict:** PASS.
+
+## 4. The stopped-train terminal ledger is uniform through `T=1.86596`
+
+The exact identities
+
+\[
+T_{tr}=(b+Q)/2+2f,
+\qquad b+Q=2(q-k)
+\]
+
+give `T_tr=tD+2f`. Every bounded nonquadrilateral face contributes at least one to
+`Q`, so `f<=Q`. The perimeter ledger
+
+\[
+Q/D\le2T-\pi+o(1)
+\]
+
+is uniform for every source with `t<=T`; it is not tied to the previous endpoint.
+Thus
+
+\[
+2T_{tr}/D\le10T-4\pi+o(1)
+\]
+
+is valid at `T=1.86596`. The exact verifier checks the adverse endpoint using an
+outward lower bound for `pi`.
+
+**Verdict:** PASS.
+
+## 5. Terminal occurrences can be assigned to the new path regions
+
+A selected O--O crosscut is the midpoint path of one complete stopped train. Its
+interior runs through strict rhombi; its endpoints lie on the outer face. It does not
+enter the interior of a bounded nonquadrilateral face. Therefore each bounded
+exceptional face lies wholly in one complement region of the selected path and all
+terminal face-side occurrences on that face can be assigned to that region.
+
+Outer-face terminal occurrences lie on one boundary subarc of one path region. Endpoint
+ties involve only selected cut endpoints and can be assigned arbitrarily without
+increasing the total count. Hence
+
+\[
+\sum_iL_i\le2T_{tr}
+\]
+
+for this path exactly as for the coupled path.
+
+**Verdict:** PASS.
+
+## 6. Joint average and integer consequences are correctly rounded
+
+The verifier proves with exact Machin arithmetic
+
+\[
+{10T-2\pi+2\over17/10^6}<845672.
+\]
+
+Deleting the hub region and two end regions changes a linear path denominator by
+`o(D)`. Therefore for all sufficiently large sources one eligible region has
+
+\[
+N_i+L_i+D B_i<845675.
+\]
+
+Because `N_i,L_i` are nonnegative integers,
+
+\[
+N_i,L_i\le845674.
+\]
+
+Every bounded exceptional face has degree at least five and all its terminal
+occurrences are counted in `L_i`; therefore its number is at most
+
+\[
+\lfloor845674/5\rfloor=169134.
+\]
+
+All displayed integer constants are safe.
+
+**Verdict:** PASS.
+
+## 7. Crossing-neighborhood symmetric difference is charged injectively
+
+If a complete train crosses `tau_i` but not `tau_{i+1}`, it enters the intervening
+region at its unique strict-rhombus crossing with `tau_i`. Distinct complete trains
+meet at most once, so it cannot return across `tau_i`; by hypothesis it does not leave
+through `tau_{i+1}`. As a stopped path it must terminate in the region, consuming one
+assigned terminal occurrence. Different defect trains have different train-terminal
+occurrences. The reverse set difference is identical.
+
+Thus
+
+\[
+|\Gamma(\tau_i)\triangle\Gamma(\tau_{i+1})|\le L_i.
+\]
+
+**Verdict:** PASS.
+
+## 8. KKT/resultant conclusions use the same positive stress
+
+The relative-interior KKT normalization has `sum beta_h=1` and all actual active rows
+positive. For Section-157 resultants
+
+\[
+F_j=\sum_h\beta_h\varepsilon_{hj}r_h,
+\qquad |r_h|=D,
+\]
+
+the triangle inequality gives
+
+\[
+\|F_{i+1}-F_i\|\le D B_i,
+\]
+
+while reverse triangle inequality gives the same bound on `|A_{i+1}-A_i|`. The
+adjacent-strip reaction nondegeneracy theorem is path-local and therefore applies to
+this selected nonhub region. Planar conic Caratheodory reduces its nonzero reaction to
+one or two actual switching diameter bars.
+
+No uniform lower bound on an individual `beta_h` is inferred from the small total
+switching mass.
+
+**Verdict:** PASS.
+
+## 9. Scope
+
+The theorem gives fixed complexity, not closure. `845675` is deliberately crude and
+the two reaction bars may carry arbitrarily small KKT weights. The result does not
+supply an `O(1/D)` phase gap or bounded Euclidean blocker clusters, and it does not
+address the separate Type-I macroscopic-container branch.
+
+**Final verdict:** **PASS.** The finite-defect, low-KKT, one-sided nonhub strip normal
+form is valid throughout the paired-remainder range `t<=1.86596`.

@@ -1,0 +1,111 @@
+<!-- theorem-state: {"artifact_id":"ART-32D5C3A32583","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: a macroscopic one-deficit cloud with diffuse strain and no vacancy
+
+Date: 2026-10-07. Authority: audit.75.
+Classification: **regression**, with a proved candidate exact competitor.
+This family is explicitly nonglobal and is not a Level I disproof.
+
+## 1. What fails and the surviving theorem
+
+One area-unit of Oler deficit does not by itself create a discrete vacancy
+or even a nonzero finite combinatorial defect. There is an unbounded
+macroscopic convex-unit-wall family at exactly that deficit whose entire
+Delaunay triangulation has valence-six interior vertices and no bad
+triangle at the fixed thresholds of the preceding defect theorem.
+Its excess is distributed metric strain. The strongest surviving
+statement is the completion/defect-budget alternative **with its metric
+budget retained**, not a claim that all missing capacity resides at the
+exceptional vertices.
+
+This regression does not contradict the specified six-direction curved
+wall theorem. Its wall is a straight parallelogram, and its interior
+points have actual contacts rather than being canonical inactive isolates.
+It lacks global optimality. Those omitted hypotheses are explicit.
+
+## 2. Exact unbounded family
+
+For every integer M>=3 put
+
+`h_M=(sqrt(3)/2)*(1+1/M^2)`,
+`c_M=sqrt(M^4-6*M^2-3)/(2*M^2)>0`,
+`u=(1,0)`, `v=(c_M,h_M)`.
+
+One has c_M^2+h_M^2=1 and 0<c_M<1/2, so the angle between the
+unit vectors is strictly between pi/3 and pi/2. Define
+
+`A_M={i*u+j*v:0<=i,j<=M}`.
+
+Every lattice difference has squared length
+`i^2+j^2+2*c_M*i*j`. If i,j have the same sign it is at least
+i^2+j^2. If both are nonzero with opposite signs, write their absolute
+values as a,b; its squared length is
+`(a-b)^2+2*(1-c_M)*a*b>1`.
+Consequently the only unit contacts are the horizontal and vertical
+nearest-neighbour edges. The contact graph is a square grid, hence
+triangle-free, with 2*M*(M+1) contacts. There are (M+1)^2 retained labels.
+
+The 4M boundary vertices form a convex unit wall. The interior population
+is z=(M-1)^2. Its area-form full-wall Oler slack is
+
+`area(F_M)-sqrt(3)/4*(2*z+4*M-2)`
+`=M^2*h_M-(sqrt(3)/2)*M^2=sqrt(3)/2`.
+
+Thus Oler permits exactly one point beyond the current count. Both area
+and population are quadratic in M, and perimeter/diameter are linear;
+this is not a thin or bounded regression.
+
+## 3. Saturation and diffuse metric excess
+
+The M^2 unit rhombi tile F_M. Each is covered by the open unit disks
+about its four corners. One way to check this is to split it on the
+short diagonal: both triangles are acute with circumradius squared
+`1/[2*(1+c_M)]<1/2`. The maximum nearest-vertex distance within an
+acute triangle is its circumradius (or a boundary half-edge length,
+which is smaller here). Therefore no additional unit-separated point
+can be inserted anywhere in the closed wall.
+
+That short-diagonal triangulation is Delaunay. Across the diagonal the
+two opposite angles sum to twice the rhombus angle, below pi; across a
+horizontal or vertical internal edge the opposite-angle sum is pi minus
+that angle, also below pi. All its 2M^2 triangles are acute, its interior
+valences are six, and each triangle's exact area excess is
+
+`sigma_T=sqrt(3)/(4*M^2)`.
+
+For M>=7 every sigma_T<1/100. Hence the bounded-defect theorem's
+exceptional set can be empty despite total excess sqrt(3)/2. The
+equilateral development is the full M-by-M lattice parallelogram:
+it has the same number of vertices, with no missing lattice site.
+The strain has been spread over every triangle.
+
+No impossibility of a different nonlocal rearrangement is asserted.
+Saturation means no one-site insertion at these fixed old coordinates,
+not maximum packet cardinality in the wall or global packing optimality.
+
+## 4. Complete strict sub-diameter competitor
+
+Replace every source label by the unit square grid
+`B_M={(i,j):0<=i,j<=M}`. Its cardinality is exactly (M+1)^2, every
+lower distance is at least one, and its contact graph is triangle-free.
+Its diameter squared is 2M^2. The old diameter is attained on the
+long corner diagonal and has square
+
+`D_M^2=2*M^2*(1+c_M)=2*M^2+sqrt(M^4-6*M^2-3)>2*M^2`.
+
+All old labels are replaced; there is no omitted retained-old constraint.
+Every inserted-to-inserted lower pair is checked by its integer squared
+distance, and every new upper pair is strictly below the actual old D_M.
+No new pair can be an old actual diameter. Contacts and triangles are
+counted exactly, and cardinality is unchanged. Thus the whole-source
+competitor has strictly smaller diameter for every M>=3.
+
+This proves the regression family is nonglobal even though it is
+macroscopic, exactly one Oler point below the bound, saturated at its
+old coordinates, and locally has the required near-equilateral metric
+and valence pattern. Global optimality and the inactive-isolate premise
+must provide additional information in any source-level application.
+
+The exact verifier checks complete finite old/new pair ledgers at
+M=3,4,7,10 using signs in Q(sqrt(M^4-6M^2-3)); the universal proof is
+the algebra above. It does not certify global optimality, and does not
+advertise this explicitly beaten family as a disproof of Level I.

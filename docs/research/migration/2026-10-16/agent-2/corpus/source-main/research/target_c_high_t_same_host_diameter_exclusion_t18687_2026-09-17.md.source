@@ -1,0 +1,377 @@
+# Target C-II — same-host diameter exclusion sharpens the physical support normal form
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** the coupled/adaptive O--O path through `t=(q-k)/D<=1.8687` and every actual diameter endpoint lying on its two physical host arcs  
+**Dependencies:** coupled paired-remainder path through `t<=1.8687`; Type-II near-disk convergence; monotone support-normal order on a convex boundary; physical-piece support normal form; terminal-piece macroscopic-span theorem  
+**Certificate:** `research/verify_target_c_high_t_same_host_diameter_exclusion_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current physical-piece theorem partitions the hubward partner of a selected pre-hub switching diameter into three pieces:
+
+\[
+Q^\uparrow,\qquad T_m,\qquad Q^\downarrow.
+\]
+
+The two `Q` pieces lie on the two fixed outer-boundary host arcs of the selected O--O path. After fixing the birth host side, one of those two pieces is on the **same** physical host arc as the birth and the other is on the opposite host arc. The earlier theorem paid a factor of three because it allowed all three partner pieces.
+
+The same-host piece is in fact impossible for an actual diameter edge once `D` is large. The adaptive endpoint-energy threshold is uniformly below one, so each host arc has support-normal width strictly below `pi`; Type-II near-disk convergence makes radial and support-normal directions asymptotically identical; two points on one such arc therefore have distance at most `(c_*+o(1))D` for a fixed `c_*<1`, contradicting diameter length `D`.
+
+This leaves only two physical partner pieces: the **opposite host arc** and the far terminal piece `T_m`. Consequently every density constant in the physical-piece theorem improves from a `1/6` loss to a `1/4` loss before endpoint-degree thinning. In the deep exact-force branch, where the birth-side choice is already available at every retained cell, the `1/3` physical-piece loss improves to `1/2`.
+
+---
+
+## Theorem SH — no actual diameter lies within one selected host arc
+
+Let `A_D^+` and `A_D^-` be the two physical host arcs of the coupled paired-remainder O--O path through `t<=1.8687`. Then for all sufficiently large members of a Type-II survivor sequence,
+
+\[
+\boxed{
+xy\in H_D\quad\Longrightarrow\quad
+\{x,y\}\not\subset A_D^+
+\text{ and }
+\{x,y\}\not\subset A_D^-.
+}
+\tag{SH.1}
+\]
+
+More quantitatively, put
+
+\[
+a={5857\over10000},
+\qquad
+c_0:=1-a={4143\over10000},
+\qquad
+\vartheta_0:=\arccos c_0<\frac\pi2.
+\tag{SH.2}
+\]
+
+Then any two source-hull vertices `x,y` lying on the same selected host arc satisfy
+
+\[
+\boxed{
+|x-y|
+\le
+\bigl(\sin\vartheta_0+o(1)\bigr)D
+<
+(0.911+o(1))D.
+}
+\tag{SH.3}
+\]
+
+Since every actual diameter edge has length exactly `D`, (SH.1) follows.
+
+---
+
+## 1. The adaptive path gives host arcs of angular width strictly below `pi`
+
+The coupled paired-remainder path uses the sourcewise terminal-energy threshold
+
+\[
+\lambda(\delta)=0.5857-\delta.
+\tag{SH.4}
+\]
+
+In particular
+
+\[
+\lambda(\delta)\le0.5857+o(1).
+\tag{SH.5}
+\]
+
+For a selected train, let `alpha,beta` be the endpoint deviations from its two ideal opposite oriented normals. The audited endpoint-energy inequality gives separately
+
+\[
+1-\cos\alpha\le e_\tau+o(1),
+\qquad
+1-\cos\beta\le e_\tau+o(1).
+\tag{SH.6}
+\]
+
+Therefore
+
+\[
+\alpha,\beta\le\vartheta_0+o(1),
+\qquad
+\cos\vartheta_0=0.4143.
+\tag{SH.7}
+\]
+
+All selected trains lie in one shrinking projective phase window. Hence, after orienting the two opposite normal branches consistently, all terminal support normals on either one physical host arc lie in an angular interval of width
+
+\[
+\boxed{
+2\vartheta_0+o(1)<\pi.
+}
+\tag{SH.8}
+\]
+
+The host arc itself is the convex-hull boundary interval between extreme selected terminal positions on that branch. Outward support-normal angle is monotone along a convex boundary. Thus every support normal occurring on the entire physical host arc also lies in the same interval (SH.8), not only the normals at the selected train terminals.
+
+This is the only place where the terminal-energy threshold enters. No fixed-margin TB1 or exact-antipodal assumption is used.
+
+---
+
+## 2. Near-disk convergence transfers support-normal width to radial width
+
+Center the source as in the Type-II near-disk theorem. There are radii
+
+\[
+r_D={D\over2}-o(D),
+\qquad
+R_D={D\over2}+o(D)
+\tag{SH.9}
+\]
+
+such that the source hull lies between the concentric circles of radii `r_D,R_D`.
+
+Let `x` be a source-hull vertex and `n_x` an outward support normal at `x`. Then
+
+\[
+n_x\cdot x\ge r_D,
+\qquad
+|x|\le R_D,
+\]
+
+so the angle between `n_x` and the radial direction `u_x=x/|x|` is at most
+
+\[
+\arccos(r_D/R_D)=o(1).
+\tag{SH.10}
+\]
+
+This estimate is uniform over the boundary.
+
+Take two source-hull vertices `x,y` on the same physical host arc. Choose support normals from the monotone normal interval in (SH.8). Equations (SH.8)--(SH.10) give
+
+\[
+\angle(u_x,u_y)\le2\vartheta_0+o(1).
+\tag{SH.11}
+\]
+
+Write
+
+\[
+x=r_xu_x,
+\qquad
+y=r_yu_y,
+\qquad
+r_x,r_y={D\over2}+o(D).
+\]
+
+The cosine law now yields, uniformly,
+
+\[
+\begin{aligned}
+|x-y|^2
+&=r_x^2+r_y^2-2r_xr_y\cos\angle(u_x,u_y)\\
+&\le D^2\sin^2\!\vartheta_0+o(D^2).
+\end{aligned}
+\tag{SH.12}
+\]
+
+Since
+
+\[
+\sin^2\vartheta_0
+=1-\left({4143\over10000}\right)^2
+={82{,}835{,}551\over100{,}000{,}000}
+<0.911^2,
+\tag{SH.13}
+\]
+
+we obtain (SH.3). In particular the same-host gap from diameter is macroscopic, about `0.0898D`; the conclusion is not sensitive to the `o(D)` near-disk errors.
+
+---
+
+## 3. Sharpened unconditional physical support normal form
+
+Let `Z_D` be the winning one-bar obstruction family from the unconditional exact-antipodal/strong-TB1 fork, with
+
+\[
+|Z_D|>s_0D-o(D),
+\qquad
+s_0={791\over320{,}000{,}000}.
+\tag{SH.14}
+\]
+
+As in the physical-piece theorem, first fix one of the two birth host sides. This leaves more than
+
+\[
+{s_0\over2}D-o(D)
+\tag{SH.15}
+\]
+
+selected switching bars with distinct ordered birth endpoints on one fixed host arc.
+
+For sufficiently large `D`, Theorem SH deletes the partner class lying on that same host arc. Every retained partner therefore lies either
+
+1. on the **opposite** hubward host arc; or
+2. on `T_m`.
+
+One of these two classes has size more than
+
+\[
+\boxed{
+{s_0\over4}D-o(D)
+=
+{791\over1{,}280{,}000{,}000}D-o(D).
+}
+\tag{SH.16}
+
+If the opposite-host class wins, weak thrackle order gives the same two possibilities as before on that single physical host piece:
+
+- a fixed-opposite-host support staircase; or
+- a fixed-opposite-host strictly nested support rail.
+
+If the terminal class wins, every support ends at `m`, so the supports form the far-terminal strictly nested rail.
+
+Thus the unconditional three-piece physical trichotomy sharpens to
+
+\[
+\boxed{
+\text{opposite-host staircase}
+\quad\text{or}\quad
+\text{opposite-host nested rail}
+\quad\text{or}\quad
+\text{far-terminal nested rail},
+}
+\tag{SH.17}
+\]
+
+with uniform density
+
+\[
+\boxed{
+{791\over1{,}280{,}000{,}000}
+=6.1796875\times10^{-7}.
+}
+\tag{SH.18}
+\]
+
+The important geometric sharpening is not only the constant: **same-host diameter rails no longer exist as a branch at all.**
+
+---
+
+## 4. Endpoint-disjoint extraction improves accordingly
+
+The birth endpoints in the selected physical branch are already distinct. The global diameter-degree bound is
+
+\[
+\Delta(H_D)
+\le
+(4\,3^{1/8}+o(1))D^{3/4}.
+\tag{SH.19}
+\]
+
+Greedy deletion of partner collisions therefore extracts an endpoint-disjoint family of size
+
+\[
+\boxed{
+\left(
+{ s_0\over16\,3^{1/8}}-o(1)
+\right)D^{1/4}.
+}
+\tag{SH.20}
+\]
+
+Numerically the coefficient is
+
+\[
+\boxed{1.3466860633\times10^{-7}.}
+\tag{SH.21}
+\]
+
+The extracted diameter bars are pairwise vertex-disjoint and hence pairwise crossing in the convex diameter thrackle.
+
+---
+
+## 5. Deep exact-force branch: the physical loss is only `1/2`
+
+In the parameterized deep exact-force branch, bilateral loading supplies a blocker born on either chosen host side at every retained force cell, so the birth-side choice has already been paid. If the retained force-cell density is
+
+\[
+|F_D|>\lambda D-o(D),
+\tag{SH.22}
+\]
+
+then Theorem SH again removes the same-host partner piece. Partitioning only between the opposite host piece and `T_m` gives one physical branch of size
+
+\[
+\boxed{
+>{\lambda\over2}D-o(D).
+}
+\tag{SH.23}
+\]
+
+For the current 90%-density choice `lambda=5.085e-6`, this is
+
+\[
+\boxed{2.5425\times10^{-6}D-o(D),}
+\tag{SH.24}
+\]
+
+instead of the previous `1.695e-6 D-o(D)` physical-piece floor.
+
+After partner-degree thinning, the endpoint-disjoint coefficient becomes
+
+\[
+\boxed{
+{\lambda\over8\,3^{1/8}}
+=5.5406512319\times10^{-7}
+}
+\tag{SH.25}
+\]
+
+at the current parameter choice.
+
+---
+
+## 6. The terminal-span theorem inherits the improved density
+
+If the unconditional far-terminal branch is the winner, the terminal-piece macroscopic-span theorem may now use
+
+\[
+\mu={s_0\over4}
+={791\over1{,}280{,}000{,}000}
+\tag{SH.26}
+\]
+
+rather than `s_0/6`. Hence its direction-packing conclusion strengthens to
+
+\[
+\liminf\operatorname{angdiam}_o(T_m\cap S)
+\ge {791\over1{,}280{,}000{,}000},
+\tag{SH.27}
+\]
+
+and its radial-projection chord bound gives
+
+\[
+\liminf {\operatorname{diam}(T_m\cap S)\over D}
+\ge
+\sin\!\left({791\over2{,}560{,}000{,}000}\right).
+\tag{SH.28}
+
+In the current deep exact-force parameter choice, the corresponding terminal density is at least `lambda/2=2.5425e-6` whenever that branch wins.
+
+---
+
+## 7. Frontier effect
+
+The high-`t` support frontier now has only two physical destinations for a blocker born on a fixed host side:
+
+```text
+birth on host A
+    -> opposite host B
+    -> far terminal piece T_m
+
+birth on host A
+    -/-> host A   (impossible for an actual diameter edge)
+```
+
+So the remaining C-II geometry is narrower than the earlier three-piece normal form. The opposite-host branch is now a genuine antipodal-side ordered rail/staircase, rather than an unspecified host-to-host family. The only non-host alternative remains the far terminal rail, now at a larger forced density and therefore with a larger forced terminal angular span.
+
+This does not close C-II. The next useful step is to compare the ordered opposite-host rail against the near-antipodal endpoint map and common inverse-`D` train grid, or to turn the strengthened far-terminal span into a contradiction with the terminal-region ledger.
+
+**Disposition:** proved same-host diameter exclusion, removed one physical support branch entirely, and improved the unconditional/deep physical-piece densities. C-II and Level I remain open.

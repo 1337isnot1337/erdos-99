@@ -1,0 +1,273 @@
+# Target C-II — orbit-pure pentagons force a residual-free flat-tooth sea
+
+**Date:** 2026-09-15  
+**Repository base:** branch `research/c2-orbit-routing-sol-20260915` after dominant-orbit bounded-endpoint purity  
+**Status:** proof-only structural strengthening; theorem-state authority unchanged  
+**Scope:** fully force-visible no-container/full-core Type-II branch, `t=(q-k)/D<=1.826`  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The bounded-endpoint purity theorem on this branch gives
+
+\[
+P_{5,\mathrm{pure}}
+\ge0.4106157004\ldots D-o(D)
+\]
+
+pentagonal bounded contact faces whose five terminal train phases all lie in one common shrinking exact `pi/3` projective orbit.
+
+This already forces the local geometry.  No small face residual, empty-face assumption, Oler near-equality hypothesis, or KKT coefficient floor is needed.
+
+After a global rotation, the three projective orbit axes are
+
+\[
+0,\quad \pi/3,\quad 2\pi/3\pmod\pi.
+\]
+
+Hence their six directed rays are the sixth roots
+
+\[
+1,\omega,\omega^2,-1,-\omega,-\omega^2,
+\qquad \omega=e^{i\pi/3}.
+\]
+
+Every orbit-pure pentagon converges, up to Euclidean symmetry and cyclic relabeling, to the unique flat unit trapezoid with one long side subdivided by a fifth vertex:
+
+\[
+(0,0),\ (1,0),\ (2,0),\ (3/2,\sqrt3/2),\ (1/2,\sqrt3/2).
+\]
+
+Consequently the low-`t` branch contains a linear **flat-tooth sea** without the older true-residual hypothesis.
+
+## 1. Exact five-step orbit closure
+
+Consider an exact limiting orbit-pure pentagon.  Let `n_j` be the number of directed unit sides with direction `omega^j`, `j=0,...,5`.  Closure gives
+
+\[
+\sum_{j=0}^5 n_j\omega^j=0,
+\qquad
+\sum_{j=0}^5 n_j=5.
+\tag{FT.1}
+\]
+
+Using
+
+\[
+\omega^3=-1,
+\qquad
+\omega^4=-\omega,
+\qquad
+\omega^5=-\omega^2,
+\qquad
+\omega^2=\omega-1,
+\]
+
+(FT.1) becomes
+
+\[
+(n_0-n_3)-(n_2-n_5)
++
+[(n_1-n_4)+(n_2-n_5)]\omega=0.
+\]
+
+Since `1` and `omega` are real-linearly independent,
+
+\[
+\boxed{
+(n_0-n_3,n_1-n_4,n_2-n_5)=(a,-a,a)
+}
+\tag{FT.2}
+\]
+
+for an integer `a`.
+
+If `a=0`, every opposite pair has equal multiplicity and the total number of sides is even, contradicting five.  Thus `|a|>=1`.  Each opposite pair has total multiplicity at least `|a|`, so
+
+\[
+3|a|\le5.
+\]
+
+Therefore
+
+\[
+\boxed{|a|=1.}
+\tag{FT.3}
+\]
+
+Assume `a=1`; the other case reverses all directions.  Write
+
+\[
+n_0=r+1,\quad n_3=r,
+\]
+
+\[
+n_1=s,\quad n_4=s+1,
+\]
+
+\[
+n_2=u+1,\quad n_5=u,
+\]
+
+with `r,s,u>=0`.  The total-side equation gives
+
+\[
+2(r+s+u)+3=5,
+\]
+
+so exactly one of `r,s,u` is one and the others are zero.  Hence there are only six directed count vectors in total, all rotations/reflections of
+
+\[
+\boxed{(2,0,1,1,1,0).}
+\tag{FT.4}
+\]
+
+## 2. Strict convexity selects the flat trapezoid
+
+Canonical bounded-face convexity says every bounded pentagonal contact face is a simple strictly convex unit polygon.
+
+For a convex polygon, the directed edge angles occur in cyclic nondecreasing order; in the strict finite polygon they strictly turn, while equal directions can occur only in a limiting degeneration.
+
+For the representative count pattern (FT.4), cyclic order is therefore
+
+\[
+0,\ 0,\ 2\pi/3,\ \pi,\ 4\pi/3.
+\tag{FT.5}
+\]
+
+Starting at the origin and summing these five unit vectors gives the limiting vertices
+
+\[
+(0,0),
+\]
+
+\[
+(1,0),
+\]
+
+\[
+(2,0),
+\]
+
+\[
+(3/2,\sqrt3/2),
+\]
+
+\[
+(1/2,\sqrt3/2),
+\]
+
+and then back to `(0,0)`.
+
+Thus the exact orbit limit is unique up to Euclidean symmetry: a `2 x 1` equilateral trapezoid whose long base is subdivided at its midpoint.
+
+## 3. Uniform stability for shrinking orbit windows
+
+Let `rho_D->0` be the diagonal sequence of dominant-orbit phase-window radii supplied by the bounded-endpoint purity theorem.
+
+Suppose uniform convergence to the flat trapezoid failed.  Then for some fixed `epsilon>0` there would be a sequence of orbit-pure pentagons, one from each of infinitely many sources, remaining at normalized vertex distance at least `epsilon` from every symmetry of the flat trapezoid.
+
+Translate the first vertex to the origin and rotate by the common dominant-orbit orientation.  Five unit edge vectors lie in a compact set, so pass to a convergent subsequence.  Since `rho_D->0`, every limiting edge is one of the six exact orbit rays.  Closure survives the limit, and Sections 1--2 classify the limit as the flat trapezoid, contradiction.
+
+Therefore:
+
+### Theorem FT.1 — residual-free flat-tooth stability
+
+For every `epsilon>0`, all sufficiently large sources in a survivor sequence with `t<=1.826` contain at least
+
+\[
+\boxed{
+0.41061D-o(D)
+}
+\]
+
+bounded pentagons which, after symmetry and cyclic relabeling, are `epsilon`-close to the flat subdivided equilateral trapezoid.
+
+The phrase `epsilon-close` can be taken in maximum vertex distance after fixing one boundary vertex and one boundary-edge direction.
+
+## 4. Two hidden near-unit diagonals per tooth
+
+Label a flat-tooth pentagon cyclically as
+
+\[
+l,m,r,a,b
+\]
+
+so `l,m,r` are the three almost-collinear base vertices.  In the flat limit,
+
+\[
+|m-a|=|m-b|=1.
+\tag{FT.6}
+\]
+
+In every finite triangle-free contact face, `ma` and `mb` are nonconsecutive boundary pairs.  Hence neither is a unit contact:
+
+\[
+|m-a|>1,
+\qquad
+|m-b|>1.
+\tag{FT.7}
+\]
+
+By flat-tooth stability,
+
+\[
+\boxed{
+|m-a|=1+o(1),
+\qquad
+|m-b|=1+o(1)
+}
+\tag{FT.8}
+\]
+
+uniformly over the orbit-pure pentagon family.
+
+Thus the new normal form produces two hidden near-active noncontacts per good face without invoking Groemer residual conservation.
+
+## 5. Vertex-disjoint extraction
+
+Triangle-freeness gives the global unit-contact degree cap five.  A vertex is incident to at most its contact degree many bounded face sectors, hence to at most five bounded pentagons.
+
+One pentagon has five vertices, and at each vertex there are at most four other pentagons through that vertex.  Therefore the intersection graph of orbit-pure pentagons has maximum degree at most
+
+\[
+5\cdot4=20.
+\]
+
+A greedy independent-set extraction yields a vertex-disjoint subfamily of size at least
+
+\[
+{P_{5,\mathrm{pure}}\over21}.
+\]
+
+Using the `0.4106157004...D` floor,
+
+\[
+\boxed{
+P_{5,\mathrm{disj}}
+\ge0.0195531D-o(D).
+}
+\tag{FT.9}
+
+Each disjoint pentagon supplies its two hidden near-unit diagonals, and different selected pentagons have disjoint vertex sets.  Hence there are at least
+
+\[
+\boxed{
+0.0391062D-o(D)
+}
+\tag{FT.10}
+
+endpoint-disjoint hidden pairs at distance `1+o(1)`.
+
+## 6. Frontier effect
+
+The previous flat-pentagon endpoint required small true face residual in order to force Groemer near-equality.  The present theorem reaches the same flat local shape from a completely different source: global atomic-orbit purity forced by the joint outer-energy equality regime.
+
+The remaining obstruction is therefore sharper.  A survivor in the narrow band `1.82516<t<=1.826` must simultaneously support
+
+- more than `0.4106D` near-flat orbit-locked pentagonal teeth;
+- more than `0.0391D` endpoint-disjoint hidden near-unit pairs;
+- the matched strict-rhombus slack `sigma_R>=0.0100D-o(D)`; and
+- a near-extremal Woodall diameter thrackle with two-sided bracing on every outer-to-outer train.
+
+A valid next theorem must make one of these near-active hidden pairs or flat-tooth degrees pay against the mixed rigidity / diameter-bracing system.  The local shape itself is now forced without residual assumptions.
+
+**Disposition:** proof-only structural strengthening. C-II and Level I remain open.

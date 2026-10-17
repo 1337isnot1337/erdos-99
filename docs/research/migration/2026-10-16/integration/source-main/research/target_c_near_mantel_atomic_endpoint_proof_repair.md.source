@@ -1,0 +1,224 @@
+# Target C — near-Mantel endpoint proof repair
+
+**Date:** 2026-09-12  
+**Lifecycle:** proof-only repair note for `target_c_near_mantel_atomic_endpoint_exclusion.md`; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This note expands two compressed steps in the near-Mantel endpoint exclusion. It does
+not change its statement or constants.
+
+## 1. Atomic equality extraction is an equality case of the §142 measure sandwich
+
+Use exactly the normalization of audited-working §142. Let `mu_D` be the empirical
+projective train-phase measure and let `nu_D` be the normalized crossing measure used
+there. Along the endpoint sequence,
+
+\[
+{T\over D}\to x,
+\qquad
+{R\over T^2}\to{\Delta_2\over x^2},
+\]
+
+and after a subsequence
+
+\[
+\mu_D\Rightarrow\mu,
+\qquad
+\nu_D\Rightarrow\nu.
+\]
+
+Write `rho` for the total atomic mass of `mu`. The proof of §142 gives the chain
+
+\[
+{\Delta_2\over x^2}
+=\|\nu\|
+\le \mathcal M(\mu)
+\le {\rho^2\over4},
+\tag{R.1}
+\]
+
+where `mathcal M(mu)` is the product-measure capacity of the exact projective
+`pi/3` relation, with the same unoriented-edge normalization as §142. The second
+inequality is the weighted Mantel bound on the atomic relation graph. No new
+factor-of-two convention is introduced here.
+
+The endpoint proof already derives
+
+\[
+x\rho=2\sqrt{\Delta_2}.
+\tag{R.2}
+\]
+
+Therefore the two ends of (R.1) are equal:
+
+\[
+{\Delta_2\over x^2}={\rho^2\over4}.
+\]
+
+Hence every inequality in (R.1) is equality. In particular:
+
+1. the limiting crossing measure loses no mass outside the exact `pi/3` relation;
+2. it loses no mass to the nonatomic part of `mu`; and
+3. the atomic relation graph saturates its weighted Mantel capacity.
+
+To pass back to finite trains, enumerate the atoms of `mu`. For each `j`, choose
+disjoint phase neighborhoods around the first `j` atoms whose boundaries have
+`mu`-measure zero. First let `D->infinity` at fixed `j`, then let `j->infinity`.
+Equality in (R.1) implies that the train count captured by these neighborhoods tends
+to `rho T` and the number of crossings with both ends captured tends to all of `R`.
+A diagonal choice therefore gives a finite induced train graph `G_D` with
+
+\[
+|V(G_D)|=(\rho x+o(1))D
+=(2\sqrt{\Delta_2}+o(1))D,
+\]
+
+\[
+|E(G_D)|=(\Delta_2-o(1))D^2
+={|V(G_D)|^2\over4}-o(D^2).
+\tag{R.3}
+\]
+
+This is the precise justification for equation (NM.16). It does not assert that the
+limiting atomic support is finite.
+
+## 2. The ordering coordinate and the diameter projection are different
+
+Lemma NM.2 uses two linear directions for two different purposes. Conflating them
+would create a real orientation error.
+
+Let the two contact-direction families have lifted arguments
+
+\[
+\alpha=\alpha_0+O(\rho_D),
+\qquad
+\beta=\alpha_0+{\pi\over3}+O(\rho_D),
+\qquad \rho_D\to0.
+\]
+
+### 2.1 Order all trains using their canonical orientations
+
+For a train with contact direction `alpha`, canonical midpoint displacement lies in
+
+\[
+(\alpha+\pi/3,\alpha+2\pi/3).
+\]
+
+For the second family, in its **canonical** orientation, midpoint displacement lies in
+
+\[
+(\beta+\pi/3,\beta+2\pi/3).
+\]
+
+The union of these two cone families has angular span
+
+\[
+{2\pi\over3}+O(\rho_D)<\pi
+\]
+
+for large `D`. Thus one order coordinate `X` is strictly increasing on every selected
+train in canonical orientation. This is the common-half-plane step used in
+proof-only §145; it does not require every possible cross-family pair to cross and it
+does not require a strict phase threshold between all train potentials.
+
+For every **actual** cross-family crossing, strict-rhombus geometry forces the lifted
+phase difference to be `pi/3+positive`, because a difference below `pi/3` cannot be a
+strict-rhombus crossing. Hence all actual crossings have one common signed graph
+crossing in the `X` coordinate.
+
+After the high-degree pruning in NM.2, every two trains on one shore have a common
+neighbor and every three have a common neighbor on the opposite shore. Applying the
+pair-order argument of canonical Lemma 76.1 to a common neighbor makes the relative
+order of each pair independent of which common neighbor is used. Applying it to a
+common neighbor of each triple makes those pairwise relations transitive. Therefore
+each shore has a genuine global total order, and every train sees its actual neighbors
+in the restriction of the opposite global order.
+
+### 2.2 Build the diameter path by reversing the second train
+
+Let `B+` be maximal in the global `B` order and let `A+` be maximal among the actual
+neighbors of `B+` in the global `A` order. Then `B+` is the last actual retained
+`B`-neighbor encountered along `A+` in canonical orientation, and `A+` is the last
+actual retained `A`-neighbor encountered along `B+` in canonical orientation.
+
+The diameter path therefore follows
+
+1. `A+` in canonical orientation, from its first retained `B` crossing to `B+`; then
+2. `B+` in the **reverse** of its canonical orientation, from `A+` to its first
+   retained `A` crossing.
+
+This reversal is deliberate. The order was established before the reversal and is
+unchanged as an unoriented order; reversing the second leg makes the selected crossing
+vectors point in the useful directions.
+
+Let `p` have argument
+
+\[
+\alpha_0+{\pi\over6}.
+\]
+
+At an `A`--`B` crossing, the selected displacement on the canonical `A` leg is the
+unit `B` contact vector, with argument `beta`, while on the reversed `B` leg it is the
+unit `A` contact vector, with argument `alpha`. Hence each selected vector has
+projection
+
+\[
+p\cdot u,\ p\cdot v
+\ge {\sqrt3\over2}-O(\rho_D).
+\tag{R.4}
+\]
+
+For an arbitrary intervening rhombus on the canonical `A` leg, its midpoint
+displacement has argument in
+
+\[
+(\alpha+\pi/3,\alpha+2\pi/3),
+\]
+
+so its `p`-projection is at least `-O(rho_D)`. For an arbitrary intervening rhombus on
+the **reversed** `B` leg, its midpoint displacement has argument in
+
+\[
+(\beta-2\pi/3,\beta-\pi/3),
+\]
+
+and again its `p`-projection is at least `-O(rho_D)`.
+
+Finally, a complete stopped train crosses at most
+
+\[
+{2D\over\sqrt3}
+\tag{R.5}
+\]
+
+strict rhombi. Indeed its canonical transverse coordinate increases by exactly
+`sin(theta)>=sqrt(3)/2` in every crossed strict rhombus, while its two terminal contact
+edge midpoints lie in `conv(A)` and hence have transverse separation at most the source
+diameter `D`. Thus all intervening-rhombus losses on the two path legs total only
+`O(rho_D D)=o(D)`.
+
+The path endpoints are centers of actual source rhombi, hence are convex combinations
+of source points and have mutual distance at most `D`. The usual endpoint half-vector
+loss is `O(1)`. Therefore
+
+\[
+D\ge
+\left({\sqrt3\over2}-o(1)\right)
+\bigl(\deg_B(A^+)+\deg_A(B^+)\bigr),
+\]
+
+and the high-degree pruning makes the two degrees equal to the corresponding shore
+sizes up to `o(D)`. This is exactly (NM.23).
+
+## 3. Repair disposition
+
+The two potentially ambiguous steps are therefore resolved without adding hypotheses:
+
+- the atomic finite graph follows from equality throughout the exact §142
+  crossing-measure/product-measure/weighted-Mantel sandwich;
+- train ordering uses canonical orientations and a dedicated order coordinate, while
+  the diameter estimate separately reverses the second path leg and uses the
+  `pi/6` midpoint projection.
+
+No complete biclique, disk topology, source deletion, or full-source affine-kernel
+extension is used.

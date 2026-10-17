@@ -1,0 +1,490 @@
+# Target C-II — parameterized near-full density of deep grid-locked force cells
+
+**Date:** 2026-09-17  
+**Status:** proof-only quantitative strengthening; no canonical promotion claimed  
+**Scope:** no-fixed-margin-TB1 side of the canonical high-`t` branch through `t=(q-k)/D<=1.8687`  
+**Dependencies:** force-carrying robust angle-density tradeoff; linear joint-cost budget; non-antipodal TB2 direction localization; C67 direction separation; bilateral birth loading; deep two-sided cusp argument; common-grid locking theorem; source-wide diameter-degree bound  
+**Certificate:** `research/verify_target_c_high_t_parameterized_deep_grid_force_density_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The existing deep-cell theorem fixed one conservative angle and then spent half of the surviving force density to clear a prescribed exact-phase neighborhood. That was sufficient for a qualitative growing-depth theorem, but it hides a stronger quantitative fact.
+
+On the no-fixed-margin-TB1 branch, the force-pair angle, separator loss, and two-sided axial margin are independent parameters. For every fixed positive choice of those parameters, a positive linear family survives. Letting the three fixed losses tend to zero shows that the density of deep grid-locked two-sided force cells can be made arbitrarily close to the full fixed-good density
+
+\[
+c_0={113\over20{,}000{,}000}=5.65\times10^{-6}.
+\tag{PD.1}
+\]
+
+This also improves the coefficient in the disjoint deep-force braid by a factor approaching eight relative to the first fixed-constant extraction.
+
+Put
+
+\[
+c={113\over5{,}000{,}000}=4c_0,
+\qquad C=1{,}109{,}000,
+\qquad H=4C=4{,}436{,}000.
+\tag{PD.2}
+\]
+
+Fix constants
+
+\[
+0<\rho<{c_0\over6},
+\qquad \eta>0,
+\qquad \delta>0,
+\tag{PD.3}
+\]
+
+such that
+
+\[
+\boxed{
+\lambda:=c_0-6\rho-\eta-2\delta>0.
+}
+\tag{PD.4}
+\]
+
+For an exact-phase radius `r>=0`, write
+
+\[
+m_r:=2r+1
+\tag{PD.5}
+\]
+
+and choose any fixed threshold
+
+\[
+\boxed{
+T_r\ge4,
+\qquad
+{m_rc\over T_r}<\eta.
+}
+\tag{PD.6}
+\]
+
+For example, `T_r=1+max(4,m_r c/eta)` is enough after harmless upward rounding.
+
+---
+
+## Theorem PD — parameterized deep grid-force density
+
+Assume the positive-density fixed-margin TB1 alternative does not occur. Then, for every fixed `r` and every fixed parameter triple satisfying (PD.3)--(PD.4), all sufficiently large `D` contain a family
+
+\[
+Q_D(r;\rho,\eta,\delta)
+\tag{PD.7}
+\]
+
+of interface centers with
+
+\[
+\boxed{
+|Q_D(r;\rho,\eta,\delta)|
+>\lambda D-o(D).
+}
+\tag{PD.8}
+\]
+
+Every selected center `i` simultaneously has the following properties.
+
+### 1. Deep exact phase
+
+Every interface
+
+\[
+j\in[i-r,i+r]
+\tag{PD.9}
+\]
+
+is exact-antipodal and `T_r`-good:
+
+\[
+J_j<T_rC.
+\tag{PD.10}
+\]
+
+Hence all rows in the neighborhood have exactly one phase,
+
+\[
+u_{i-r}=u_{i-r+1}=\cdots=u_{i+r+1}=:v_i,
+\tag{PD.11}
+\]
+
+and
+
+\[
+N_j,L_j<T_rC,
+\quad
+B_j<{T_rC\over D},
+\quad
+S_j+S_{j+1}<T_rC,
+\quad
+0<|G_j|<T_rC.
+\tag{PD.12}
+\]
+
+### 2. One common inverse-`D` train grid
+
+There is one column family `B_0`, independent of the center and of `r`, with
+
+\[
+|B_0|>0.0783D-o(D),
+\tag{PD.13}
+\]
+
+such that every row in every selected neighborhood crosses every `b in B_0` in common order and
+
+\[
+\boxed{
+0<\theta(\tau_j,b)-{\pi\over3}
+<{31.4\times10^6\over D}+o(D^{-1}).
+}
+\tag{PD.14}
+\]
+
+All selected neighborhood row axes lie in the same `O(D^{-1})` projective window, and the `B_0` axes lie in their own `O(D^{-1})` window.
+
+### 3. `rho`-wide exact force diamond
+
+At the center,
+
+\[
+G_i
+=D(\lambda_i^-d_i^-+\lambda_i^+d_i^+),
+\qquad \lambda_i^\pm>0,
+\tag{PD.15}
+\]
+
+for two actual switching diameter bars whose projective gap is at least `rho`. Because the center comes from the original fixed-good force family,
+
+\[
+|G_i|<H.
+\tag{PD.16}
+\]
+
+The two bars have four distinct endpoints, cross centrally, and their four-endpoint hull contains the fixed-angle central disk from the wide-dipole theorem.
+
+### 4. Bilateral birth
+
+Except for only `O_rho(1)` interfaces over the whole shore, the two selected force bars have birth endpoints on opposite ordered host subarcs. Those bounded exceptions have already been deleted in (PD.8).
+
+### 5. `delta`-two-sided transverse margin
+
+Both selected force bars satisfy
+
+\[
+d_{\mathbb{RP}^1}([d_i^\pm],[v_i])\ge\delta.
+\tag{PD.17}
+\]
+
+Consequently the elementary antipodal dipole coordinate has the quantitative two-sided cusp
+
+\[
+\boxed{
+|\ell_{h_i^\pm}(s d^{(i)})|
+\ge2D|s|\sin\delta,
+}
+\tag{PD.18}
+\]
+
+with opposite signs, and the exact-force coefficients obey
+
+\[
+\boxed{
+{|G_i|\over D}\sin\delta
+\le \lambda_i^\pm
+\le {H\over D\sin\rho}.
+}
+\tag{PD.19}
+\]
+
+Thus the geometric cusp remains uniformly conditioned even though the absolute KKT scale may vanish.
+
+---
+
+## 1. Robust exact-force density loses only `6 rho`
+
+The parameterized force-carrying robust fork gives
+
+\[
+|E_D^{force}(\rho)|+|S_D(\rho)|
+>(c_0-6\rho)D-o(D).
+\tag{PD.20}
+\]
+
+If `S_D(rho)` had positive density for any fixed `rho>0`, that would itself be the positive-density fixed-margin TB1 alternative. Under the hypothesis of Theorem PD,
+
+\[
+|S_D(\rho)|=o(D),
+\]
+
+and therefore
+
+\[
+\boxed{
+|E_D^{force}(\rho)|
+>(c_0-6\rho)D-o(D).
+}
+\tag{PD.21}
+\]
+
+Every center in this family is an original fixed-good interface, so `J_i<H=4C`; in particular it is `T_r`-good whenever `T_r>=4`.
+
+---
+
+## 2. A radius-`r` separator neighborhood costs only `eta D`
+
+Call an interface `T_r`-bad when `J_i>=T_rC`. The global joint-cost budget
+
+\[
+\sum_iJ_i<CcD+o(D)
+\tag{PD.22}
+\]
+
+implies
+
+\[
+|Z_D^{bad}(T_r)|<{c\over T_r}D+o(D).
+\tag{PD.23}
+\]
+
+At fixed `T_r`, the good non-antipodal TB2 population is `o(D)` by the common-column direction-packing argument. The good TB1 population is also `o(D)` under the no-fixed-margin-TB1 hypothesis. Hence the full separator set
+
+\[
+Z_D(T_r)
+\tag{PD.24}
+\]
+
+of threshold-bad or non-antipodal interfaces obeys
+
+\[
+|Z_D(T_r)|<{c\over T_r}D+o(D).
+\tag{PD.25}
+\]
+
+A separator can lie in the radius-`r` window of at most `m_r=2r+1` possible centers. Therefore the number of centers whose neighborhood meets a separator is at most
+
+\[
+m_r|Z_D(T_r)|
+<{m_rc\over T_r}D+o(D)
+<\eta D+o(D).
+\tag{PD.26}
+\]
+
+Deleting those centers from (PD.21) leaves
+
+\[
+>(c_0-6\rho-\eta)D-o(D)
+\tag{PD.27}
+\]
+
+`rho`-wide exact-force centers with clean radius-`r` exact-phase neighborhoods.
+
+---
+
+## 3. Bilateral birth costs only `O(1)`
+
+The fixed-angle bilateral theorem gives
+
+\[
+N_{same}(D,\rho)=O_\rho(1).
+\tag{PD.28}
+\]
+
+Delete those interfaces. This does not alter the linear coefficient in (PD.27).
+
+---
+
+## 4. The two-sided axial margin costs only `2 delta D`
+
+All center row axes lie in the same shrinking projective window. Choose one selected force bar from each center that has at least one force ray within `delta` of its local reaction axis.
+
+Switching supports at distinct interfaces are disjoint, so the chosen diameter bars are distinct. Their directions lie in the `delta`-neighborhood of the common row-axis window, whose projective length is
+
+\[
+2\delta+o(1).
+\tag{PD.29}
+\]
+
+C67 separates distinct actual diameter directions by at least `1/D`. Therefore the number of such axis-near centers is at most
+
+\[
+\boxed{
+2\delta D+o(D).
+}
+\tag{PD.30}
+\]
+
+Delete them from (PD.27). The retained count is precisely
+
+\[
+(c_0-6\rho-\eta-2\delta)D-o(D)
+=\lambda D-o(D),
+\]
+
+proving (PD.8) and (PD.17).
+
+The derivative and force-coefficient bounds (PD.18)--(PD.19) follow exactly as in the fixed-constant two-sided theorem.
+
+---
+
+## 5. Common-grid locking is free
+
+The common-grid theorem chooses `B_0` once from the global high-`t` complete rectangle. Every original fixed-good robust center crosses all of `B_0` with the inverse-`D` angle bound (PD.14).
+
+Inside a clean neighborhood all row phases are exactly equal to the center phase. Hence every row in (PD.11) inherits the same `B_0` crossings and the same angle bound with no factor depending on `r`.
+
+Thus none of the density deletions above spends any additional column density or phase accuracy.
+
+---
+
+## 6. Arbitrarily high retained density
+
+The parameters are fixed before sending `D->infinity`, but they may be chosen as small positive constants. Therefore:
+
+### Corollary PD.1
+
+For every fixed `epsilon` with
+
+\[
+0<\epsilon<c_0,
+\tag{PD.31}
+\]
+
+one may choose positive fixed `rho,eta,delta` satisfying
+
+\[
+6\rho+\eta+2\delta<\epsilon
+\tag{PD.32}
+\]
+
+so that, for every fixed `r`, the no-TB1 branch contains more than
+
+\[
+\boxed{
+(c_0-\epsilon)D-o(D)
+}
+\tag{PD.33}
+\]
+
+deep bilateral two-sided exact-force centers, all locked to the same `B_0` grid.
+
+The geometric angle/cusp margins depend on `epsilon` but remain strictly positive constants independent of `D`.
+
+An explicit convenient choice retaining ninety percent of `c_0` is
+
+\[
+\rho=\delta={c_0\over100},
+\qquad
+\eta={c_0\over50}.
+\tag{PD.34}
+\]
+
+Then
+
+\[
+\boxed{
+\lambda={9c_0\over10}
+={1017\over200{,}000{,}000}
+=5.085\times10^{-6},
+}
+\tag{PD.35}
+\]
+
+and one may take
+
+\[
+T_r=201(2r+1),
+\tag{PD.36}
+\]
+
+because `m_r c/T_r<c_0/50=eta`.
+
+The resulting normalized two-sided squared-length cusp margin is
+
+\[
+2\sin(c_0/100)>0.
+\tag{PD.37}
+\]
+
+---
+
+## 7. Growing-depth and optimized disjoint-braid corollaries
+
+The leading coefficient in (PD.8) is independent of every fixed radius. A diagonal extraction therefore gives radii `r_D->infinity` with the same density `lambda D-o(D)` while choosing `D` fast enough that
+
+\[
+{T_{r_D}\over D}\to0.
+\tag{PD.38}
+\]
+
+Thus all normalized local switching masses and reactions in the selected growing neighborhoods tend to zero.
+
+Apply the simultaneous window/endpoint conflict graph from the disjoint-braid theorem. Its maximum degree is
+
+\[
+4\Delta(H)+4r_D,
+\qquad
+\Delta(H)\le(4\,3^{1/8}+o(1))D^{3/4}.
+\tag{PD.39}
+\]
+
+Choose the diagonal also with `r_D=o(D^{3/4})`. Then there is a pairwise window-disjoint and force-endpoint-disjoint family of size
+
+\[
+\boxed{
+\left(
+{\lambda\over16\,3^{1/8}}-o(1)
+\right)D^{1/4}.
+}
+\tag{PD.40}
+
+All cross-cell selected diameter bars cross geometrically, every cell uses the same linear `B_0` column family, and every cell retains its `rho`/`delta` quantitative force and cusp margins.
+
+For the ninety-percent choice (PD.34), the explicit leading braid coefficient is
+
+\[
+\boxed{
+{0.9c_0\over16\,3^{1/8}}
+\approx2.77032561594\times10^{-7}.
+}
+\tag{PD.41}
+
+In the parameter limit `rho,eta,delta downarrow0`, the attainable leading coefficient approaches
+
+\[
+\boxed{
+{c_0\over16\,3^{1/8}}
+={c\over64\,3^{1/8}}
+\approx3.07813957327\times10^{-7}.
+}
+\tag{PD.42}
+
+This is eight times the leading coefficient of the initial fixed-constant `c/32` braid extraction.
+
+---
+
+## 8. Frontier effect
+
+The no-fixed-margin-TB1 branch cannot explain the robust population by saying that deep, bilateral, two-sided, grid-locked force cells are sparse. Up to an arbitrarily small fixed density loss, **every** interface in the original fixed-good lower-bound population can be required to have that full structure.
+
+For any prescribed finite exact-phase depth and any prescribed small density loss, the survivor contains
+
+```text
+(c0-o_epsilon(1)) D deep force centers
++ one common >0.0783 D near-triangular column family
++ bilateral ordered birth
++ fixed positive force-pair angle
++ fixed positive two-sided transverse margin
++ uniform first-order cusp
++ bounded-complexity exact-phase neighborhoods.
+```
+
+On a growing-depth diagonal, an optimized `Omega(D^(1/4))` subfamily can additionally be made window-disjoint and force-endpoint-disjoint.
+
+The remaining closure issue is therefore not lack of density. It is to prove that this near-maximal population is incompatible with the shared ordered near-triangular grid and source diameter geometry, or to turn that incompatibility into a strict diameter descent or an exact unit triangle.
+
+No C-II or Level-I closure is claimed.
+
+**Disposition:** parameterized the deep grid-force extraction, retaining arbitrarily close to the full `c_0D` fixed-good density in the no-TB1 branch and improving the disjoint deep-force braid coefficient up to the sharp limit allowed by the present density input. C-II and Level I remain open.

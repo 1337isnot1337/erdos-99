@@ -1,0 +1,533 @@
+# Target C — Section-146 `q-k` corollary and endpoint exclusion
+
+**Date:** 2026-09-12  
+**Lifecycle:** proof-only consequence of audited-working §§142–146; theorem-state authority unchanged  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The audited-working structural omnibus proves in §146 the Type-II inequality
+
+\[
+\liminf {1\over D}
+\left(
+ h-{d_H\over9}-{10s_Z\over9}
+\right)
+\ge
+c_*,
+\qquad
+c_*:={4\over9}\left(\pi+\sqrt{\Delta_2}\right),
+\quad
+\Delta_2={\pi\over2\sqrt3}.
+\tag{QC.1}
+\]
+
+This note records a missed exact corollary and then excludes its equality endpoint.
+The first observation is algebraic:
+
+\[
+q-k=h-s_Z
+=\left(h-{d_H\over9}-{10s_Z\over9}\right)
++{d_H+s_Z\over9}.
+\tag{QC.2}
+\]
+
+Since `k=d_H+s_Z>=0`, §146 already implies
+
+\[
+\boxed{
+\liminf {q-k\over D}
+\ge c_*
+={4\over9}\left(\pi+\sqrt{\frac\pi{2\sqrt3}}\right)
+=1.8195135379794445\ldots .
+}
+\tag{QC.3}
+\]
+
+This is much stronger than the separately corrected `1.637562...` proof-only floor.
+It does **not** revive the rejected `1.9046256...` claim.
+
+The main new theorem below shows that even (QC.3) cannot be asymptotically sharp.
+The mechanism is the equality structure already latent in §142: the endpoint forces a
+positive atomic train-direction mass, while the outer contact walk is forced to be
+asymptotically perimeter-minimizing around the near-disk force hull. Such a walk has
+uniform projective edge-direction measure and therefore cannot carry any atomic mass.
+
+No source point is deleted. Contact-isolated coordinates never enter the Section-57
+affine-kernel theorem.
+
+---
+
+## 1. The missed Section-146 corollary
+
+Recall
+
+\[
+d_H=q-h,
+\qquad
+k=d_H+s_Z.
+\]
+
+Then
+
+\[
+q-k=q-d_H-s_Z=h-s_Z.
+\]
+
+Subtract the left side of (QC.1):
+
+\[
+(h-s_Z)-\left(h-{d_H\over9}-{10s_Z\over9}\right)
+={d_H+s_Z\over9}={k\over9}\ge0.
+\tag{QC.4}
+\]
+
+Taking liminf proves (QC.3) immediately. This uses no new geometric input.
+
+---
+
+## 2. Equality in (QC.3) forces the full §146 scalar stack to saturate
+
+Put
+
+\[
+s_*:=\sqrt{\Delta_2},
+\qquad
+c_*={4\over9}(\pi+s_*),
+\qquad
+\phi_*:={8s_*-\pi\over9}=2c_*-\pi.
+\tag{QC.5}
+\]
+
+Numerically
+
+\[
+s_*=0.9523128068\ldots,
+\qquad
+\phi_*=0.4974344224\ldots .
+\]
+
+Assume for contradiction that an unbounded Type-II survivor sequence satisfies
+
+\[
+{q-k\over D}\to c_*.
+\tag{QC.6}
+\]
+
+Let
+
+\[
+E_D:=h-{d_H\over9}-{10s_Z\over9}.
+\]
+
+By (QC.2),
+
+\[
+q-k=E_D+{k\over9}.
+\tag{QC.7}
+\]
+
+Audited-working §146 gives `liminf E_D/D>=c_*`. Equation (QC.6) and `k>=0` therefore
+force
+
+\[
+\boxed{
+{k\over D}\to0,
+\qquad
+{d_H\over D}\to0,
+\qquad
+{s_Z\over D}\to0,
+\qquad
+{h\over D},{q\over D}\to c_*.
+}
+\tag{QC.8}
+\]
+
+Audited-working (146.2) then gives
+
+\[
+\liminf {f\over D}
+\ge s_*-{c_*\over4}
+={8s_*-\pi\over9}
+=\phi_*.
+\tag{QC.9}
+\]
+
+The exact outer-walk ledger is
+
+\[
+b=2h-Q-2s_Z.
+\tag{QC.10}
+\]
+
+Canonical Type II gives `per(F)/D->pi` and `per(F)<=b`; hence
+
+\[
+\limsup {Q\over D}
+\le2c_*-\pi
+=\phi_*.
+\tag{QC.11}
+\]
+
+Since `f<=Q`, (QC.9)--(QC.11) force simultaneous equality:
+
+\[
+\boxed{
+{f\over D},{Q\over D}\to\phi_*,
+\qquad
+{Q-f\over D}\to0,
+\qquad
+{b\over D}\to\pi,
+\qquad
+{b-\operatorname{per}(F)\over D}\to0.
+}
+\tag{QC.12}
+\]
+
+Thus asymptotically all exceptional-face degree excess is the mandatory one unit per
+face: all but `o(D)` exceptional faces are pentagons. More importantly for the present
+argument, the outer contact walk is asymptotically perimeter-minimizing around the
+near-disk force hull.
+
+---
+
+## 3. Equality also fixes the atomic/non-atomic train split
+
+Use audited-working §142 notation. Let `T` be the number of complete stopped trains,
+including singleton trains, and let `mu_D` be their empirical projective direction
+measure. Pass to a subsequence on which
+
+\[
+{T\over D}\to x,
+\qquad
+{q\over T}\to y,
+\qquad
+\mu_D\Rightarrow\mu.
+\tag{QC.13}
+\]
+
+Let `a in [0,1]` be the total atomic mass of `mu`.
+
+The exact stopped-train ledger is
+
+\[
+T=q+2f-k=(q-k)+2f.
+\tag{QC.14}
+\]
+
+Therefore (QC.6) and (QC.12) give
+
+\[
+\boxed{
+x=c_*+2\phi_*={2\pi+20s_*\over9}.}
+\tag{QC.15}
+\]
+
+Also
+
+\[
+\boxed{y={c_*\over x}.}
+\tag{QC.16}
+\]
+
+Audited-working §142 proves
+
+\[
+2s_*\le xa
+\tag{QC.17}
+\]
+
+and
+
+\[
+y\le2(1-a).
+\tag{QC.18}
+\]
+
+But direct substitution of (QC.15)--(QC.16) gives
+
+\[
+x\left(1-{y\over2}\right)
+=x-{c_*\over2}
+=2s_*.
+\tag{QC.19}
+\]
+
+Combining (QC.17)--(QC.19),
+
+\[
+2s_*
+\le xa
+\le x\left(1-{y\over2}\right)
+=2s_*.
+\]
+
+Hence both inequalities saturate:
+
+\[
+\boxed{
+a={2s_*\over x}=1-{y\over2}.}
+\tag{QC.20}
+\]
+
+Equivalently the non-atomic train fraction is exactly
+
+\[
+1-a={y\over2},
+\]
+
+so the number of non-atomic trains has normalized limit
+
+\[
+\boxed{
+{(1-a)T\over D}\to {c_*\over2}.
+}
+\tag{QC.21}
+\]
+
+Numerically the limiting atomic and non-atomic fractions are approximately
+
+\[
+a=0.6767472769\ldots,
+\qquad
+1-a=0.3232527231\ldots .
+\]
+
+The proof below uses only the exact relation (QC.21), not these decimals.
+
+---
+
+## 4. Near-geodesic outer walks around a disk have uniform projective edge-direction measure
+
+For every outer contact-walk edge occurrence `e`, let
+
+\[
+\phi_e\in\mathbb R/\pi\mathbb Z
+\]
+
+be its projective unit-edge direction. Define the finite measure
+
+\[
+\nu_D:={1\over D}\sum_{e\in\partial_{out}}\delta_{\phi_e}
+\tag{QC.22}
+\]
+
+on the projective direction circle. Its total mass is `b/D->pi` by (QC.12).
+
+### Lemma QC.1 — uniform direction measure
+
+Under Type-II near-disk convergence and (QC.12),
+
+\[
+\boxed{
+\nu_D\Rightarrow d\phi
+}
+\tag{QC.23}
+\]
+
+where `d phi` is Lebesgue measure on `R/pi Z`.
+
+### Proof
+
+Write the occurrence-counted outer walk as
+
+\[
+p_0,p_1,\ldots,p_b=p_0,
+\qquad |p_{j+1}-p_j|=1.
+\]
+
+All loaded force-hull vertices occur on the outer walk and every walk vertex lies in
+`F`, so the convex hull of the walk vertices is exactly `F`.
+
+For `n_theta=(cos theta,sin theta)`, define
+
+\[
+V_D(\theta)
+:=\sum_j |(p_{j+1}-p_j)\cdot n_\theta|
+=D\int |\cos(\theta-\phi)|\,d\nu_D(\phi).
+\tag{QC.24}
+\]
+
+The projected closed walk visits the minimum and maximum support values of `F`, so
+
+\[
+V_D(\theta)\ge2w_F(\theta).
+\tag{QC.25}
+\]
+
+Integrating over `theta in [0,pi]`,
+
+\[
+\int_0^\pi V_D(\theta)d\theta=2b,
+\qquad
+\int_0^\pi w_F(\theta)d\theta=\operatorname{per}(F)
+\tag{QC.26}
+\]
+
+by the elementary cosine integral and Cauchy's perimeter formula. Therefore
+
+\[
+\int_0^\pi[V_D(\theta)-2w_F(\theta)]d\theta
+=2[b-\operatorname{per}(F)]=o(D).
+\tag{QC.27}
+\]
+
+The integrand is nonnegative. Canonical Section 80 gives the uniform width limit
+
+\[
+\sup_\theta|w_F(\theta)/D-1|\to0.
+\tag{QC.28}
+\]
+
+Hence
+
+\[
+{V_D\over D}\to2
+\quad\text{in }L^1([0,\pi]).
+\tag{QC.29}
+\]
+
+Take any weakly convergent subsequence `nu_D -> nu`. The masses are uniformly bounded,
+and the kernel `|cos(theta-phi)|` is continuous and 1-Lipschitz in `theta`, so the
+cosine transforms are equicontinuous. Equation (QC.29) forces
+
+\[
+\int |\cos(\theta-\phi)|d\nu(\phi)=2
+\quad\text{for every }\theta.
+\tag{QC.30}
+\]
+
+The transform is injective on finite measures on the projective circle. A direct
+proof is distributional. For
+
+\[
+g(\theta)=|\cos\theta|
+\]
+
+as a `pi`-periodic distribution,
+
+\[
+g''+g=2\delta_{\pi/2\pmod\pi}.
+\tag{QC.31}
+\]
+
+Apply `d^2/dtheta^2+1` to (QC.30). The left side becomes twice a translate of `nu`,
+while the same operator applied to the constant `2` is the constant density `2`.
+Thus `nu` is Lebesgue measure. Every subsequential weak limit is the same, proving
+(QC.23). `square`
+
+In particular no fixed finite collection of shrinking direction arcs can carry a
+positive normalized number of outer-walk occurrences.
+
+---
+
+## 5. Atomic trains do not have enough non-atomic partners to supply the outer walk
+
+Choose finitely many atoms of `mu` carrying train mass at least `a-epsilon`, and take
+disjoint `delta`-neighborhoods of their projective directions. Along the subsequence
+in (QC.13), the number of trains outside these neighborhoods is at most
+
+\[
+(1-a+\epsilon+o(1))T.
+\tag{QC.32}
+\]
+
+Every complete stopped train has at most two outer-face edge occurrences; this is the
+same endpoint-count fact used in audited-working §142. Therefore outer occurrences
+belonging to trains outside the selected atomic neighborhoods number at most
+
+\[
+2(1-a+\epsilon+o(1))T.
+\tag{QC.33}
+\]
+
+By (QC.21), after sending the source size to infinity and then `epsilon->0`, the
+normalized capacity of the entire non-atomic train population is only
+
+\[
+\boxed{c_*D+o(D)}
+\tag{QC.34}
+\]
+
+outer occurrences.
+
+But the complete outer walk has
+
+\[
+b=\pi D+o(D).
+\tag{QC.35}
+\]
+
+Since
+
+\[
+\pi-c_*>0,
+\tag{QC.36}
+\]
+
+at least
+
+\[
+(\pi-c_*-o(1))D
+\tag{QC.37}
+\]
+
+outer occurrences must belong to trains in the selected atom neighborhoods. Now send
+`delta->0` after the source-size limit. Equation (QC.37) forces a positive atomic mass
+in a weak limit of the outer-edge direction measures `nu_D`.
+
+An outer edge occurrence belonging to a selected train has the same projective
+direction as that train: every contact edge in one auxiliary stopped-train component
+is parallel by the construction in §142.1. Thus shrinking the selected train-phase
+neighborhoods also shrinks the corresponding outer-edge direction neighborhoods; no
+unproved relation between a train phase and an outer tangent is being used.
+
+This contradicts Lemma QC.1, which says that every such limit is the nonatomic
+Lebesgue measure.
+
+Therefore (QC.6) is impossible.
+
+---
+
+## 6. Main theorem
+
+### Theorem QC.2 — the audited-working `1.8195135...` `q-k` floor is not attainable
+
+Assuming the audited-working §§142–146 module, every Type-II C-II survivor sequence
+satisfies
+
+\[
+\liminf {q-k\over D}\ge c_*,
+\]
+
+and there is **no** unbounded Type-II survivor sequence for which
+
+\[
+\boxed{
+{q-k\over D}\to
+c_*={4\over9}\left(\pi+\sqrt{\frac\pi{2\sqrt3}}\right).
+}
+\tag{QC.38}
+\]
+
+Thus the strengthened proof-only floor has a structural, not merely numerical,
+endpoint gap.
+
+As with any sequence-defined Type-II endpoint exclusion, a uniform positive separation
+from `c_*` follows only in the corresponding diagonal/compactness formulation. No
+finite explicit epsilon is claimed here.
+
+---
+
+## 7. Scope and remaining obstruction
+
+- The proof depends on audited-working §142 and §146; it is not canonical theorem-state
+  mathematics.
+- The exact stopped-train ledger retains singleton trains, bridge occurrences, bounded
+  defect faces, and positive `s_Z` before endpoint saturation forces the latter
+  sublinear.
+- Every source point is retained.
+- The macroscopic inactive-container branch is untouched.
+- Type-II sequences bounded away from the endpoint remain possible.
+- No strict sub-`D` source is constructed and no exact unit triangle is forced.
+
+**Disposition:** proof-only downstream theorem awaiting hostile audit. C-II remains
+open.

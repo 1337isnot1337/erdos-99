@@ -1,0 +1,134 @@
+#!/usr/bin/env python3
+"""Exact certificate: the g=.0077 endpoint margin forces h>5.49e-6 and t>=1.843578."""
+
+from fractions import Fraction as Q
+from math import factorial, isqrt
+
+
+def atan_inv_bounds(q, n):
+    s = Q(0)
+    for k in range(n):
+        term = Q(1, (2 * k + 1) * q ** (2 * k + 1))
+        s += term if k % 2 == 0 else -term
+    nxt = Q(1, (2 * n + 1) * q ** (2 * n + 1))
+    return (s, s + nxt) if n % 2 == 0 else (s - nxt, s)
+
+
+def sqrt_bounds(lo, hi, scale):
+    a = isqrt((lo.numerator * scale * scale) // lo.denominator)
+    b = isqrt((hi.numerator * scale * scale) // hi.denominator) + 1
+    return Q(a, scale), Q(b, scale)
+
+
+def sin_bounds(x, n=26):
+    s = Q(0)
+    for k in range(n):
+        term = x ** (2 * k + 1) / factorial(2 * k + 1)
+        s += term if k % 2 == 0 else -term
+    nxt = x ** (2 * n + 1) / factorial(2 * n + 1)
+    return (s, s + nxt) if n % 2 == 0 else (s - nxt, s)
+
+
+def F_bounds(z):
+    slo, shi = sin_bounds(z / 6)
+    return z - 6 * shi, z - 6 * slo
+
+
+SCALE = 10**100
+a5_lo, a5_hi = atan_inv_bounds(5, 100)
+a239_lo, a239_hi = atan_inv_bounds(239, 30)
+pi_lo = 16 * a5_lo - 4 * a239_hi
+pi_hi = 16 * a5_hi - 4 * a239_lo
+n3 = isqrt(3 * SCALE * SCALE)
+sq3_lo = Q(n3, SCALE)
+sq3_hi = Q(n3 + 1, SCALE)
+K_lo = Q(2) / sq3_hi
+K_hi = Q(2) / sq3_lo
+Delta_lo = pi_lo / (2 * sq3_hi)
+Delta_hi = pi_hi / (2 * sq3_lo)
+s_lo, s_hi = sqrt_bounds(Delta_lo, Delta_hi, SCALE)
+C77_lo = 2 * s_lo + Q(77, 10000)
+C77_hi = 2 * s_hi + Q(77, 10000)
+
+# Each explicit one-orbit capacity branch is 6/5-Lipschitz above C77 through U=2.013.
+# Strong branch: C_*(W) lies in (W/3,W/2), and the envelope derivative is Phi_W.
+Ubar = Q(2013, 1000)
+rcrit_lo, rcrit_hi = sqrt_bounds(Q(20, 29), Q(20, 29), SCALE)
+strong_Cmax = Ubar / 2
+strong_Cmin = C77_lo / 3
+strong_e_hi = (Ubar + strong_Cmax) / 2 - K_lo
+strong_dW_hi = strong_Cmax + Q(1, 10) * strong_e_hi * strong_e_hi / strong_Cmin
+assert strong_dW_hi < Q(104, 100)
+
+# Fallback branch B0(W)=Phi_{2/29}(W,C_s(W)); include its moving-boundary term.
+# C_s(W)=W-(W-K)/rcrit decreases in W.
+Cs_max = C77_hi - (C77_hi - K_hi) / rcrit_hi
+Cs_min = Ubar - (Ubar - K_lo) / rcrit_lo
+assert 0 < Cs_min <= Cs_max < K_hi
+cp_abs_hi = 1 / rcrit_lo - 1
+fb_e_hi = (Ubar + Cs_max) / 2 - K_lo
+fb_q_hi = 3 - C77_lo / Cs_max
+fb_pW_hi = Cs_max + Q(2, 29) * fb_e_hi * fb_e_hi / Cs_min
+fb_neg_pC_hi = (2 * Cs_max - C77_lo) + Q(2, 29) * (
+    Ubar * fb_e_hi * fb_e_hi / (Cs_min * Cs_min) + fb_q_hi * fb_e_hi
+)
+fallback_dW_hi = fb_pW_hi + cp_abs_hi * fb_neg_pC_hi
+assert fallback_dW_hi < Q(104, 100)
+
+# High-center branch B_H(W)=K(W-K) has derivative K.
+assert K_hi < Q(116, 100)
+L = Q(6, 5)
+assert max(strong_dW_hi, fallback_dW_hi, K_hi) < L
+
+# Existing residual stability gives R <= 1.05 h. Retain the exact endpoint deficit
+# Delta_2-Psi(C77)>6.6e-6 from the g=.0077 certificate.
+c = Q(21, 20)
+eps = Q(66, 10_000_000)
+h0 = Q(549, 100_000_000)  # 5.49e-6
+endpoint_allowance = L * h0 + c * c * h0 * h0 / 4
+assert endpoint_allowance < eps
+# If M<C77, monotonicity below C77 removes the Lipschitz term entirely.
+assert c * c * h0 * h0 / 4 < eps
+
+# Recheck the feasible-triangle derivative domain at the slightly larger target.
+T = Q(921789, 500000)  # 1.843578
+Umax_hi = Q(9, 2) * T - 2 * pi_lo
+Rt_hi = Umax_hi - C77_lo
+assert Umax_hi < Ubar
+assert Rt_hi < Q(101, 1000)
+delta_max_hi = Rt_hi / 2
+assert delta_max_hi < Q(51, 1000)
+Fprime_cap = Q(67, 500)
+Qx_upper = -1 / (2 * Fprime_cap) + 1
+Qh_upper = -1 / (2 * Fprime_cap) + c + c * c * Q(101, 1000) / (1 - Q(51, 1000))
+assert Qx_upper < Q(-27, 10)
+assert Qh_upper < Q(-5, 2)
+
+# Since Q decreases in x and h, the weakest survivor now has x=0 and h=h0.
+# Q<0 is equivalent to F(S-residual)>delta.
+delta_hi = (Q(9, 2) * T - 2 * pi_lo - C77_lo - h0) / 2
+assert delta_hi < Q(51, 1000)
+resid_hi = c * c * h0 * h0 / (2 * (1 - delta_hi))
+z_lo = pi_lo - T / 2 - c * h0 - resid_hi
+F_lo, _ = F_bounds(z_lo)
+margin_lo = F_lo - delta_hi
+assert margin_lo > Q(13, 10_000_000)
+
+# This relaxation does not certify the next sixth decimal.
+T2 = Q(1843579, 1_000_000)
+delta2_lo = (Q(9, 2) * T2 - 2 * pi_hi - C77_hi - h0) / 2
+resid2_lo = c * c * h0 * h0 / (2 * (1 - delta2_lo))
+z2_hi = pi_hi - T2 / 2 - c * h0 - resid2_lo
+_, F2_hi = F_bounds(z2_hi)
+fail_hi = F2_hi - delta2_lo
+assert fail_hi < 0
+
+print("PASS endpoint-margin residual-slack floor t>=1.843578")
+print("strong dW upper =", float(strong_dW_hi))
+print("fallback dW upper =", float(fallback_dW_hi))
+print("high-center dW =", float(K_hi), "L =", float(L))
+print("endpoint allowance at h0 =", float(endpoint_allowance), "epsilon =", float(eps))
+print("h0 =", float(h0), "Umax =", float(Umax_hi), "delta max =", float(delta_max_hi))
+print("Q_x upper =", float(Qx_upper), "Q_h upper =", float(Qh_upper))
+print("1.843578 contradiction margin =", float(margin_lo))
+print("1.843579 margin upper =", float(fail_hi))

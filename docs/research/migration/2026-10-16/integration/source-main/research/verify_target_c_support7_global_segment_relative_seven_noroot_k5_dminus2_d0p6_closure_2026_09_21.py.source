@@ -1,0 +1,118 @@
+#!/usr/bin/env python3
+"""Exact closure certificate for seven-no-root D=-2,k=5,d=0,p=6.
+
+The preceding reduction proves that every hypothetical counterexample has a
+six-row deletion shadow with a rank-two coefficient plane P6 such that:
+
+* P6 and every one-coordinate projection have rank two;
+* the six-row virtual canonical complete-block deficiency is d6=2;
+* six canonical-complete blocks admit compatible singleton states;
+* every five-row coordinate deletion has virtual deficiency d5=2; and
+* at least five of the same six singleton blocks remain canonical-complete in
+  every five-row deletion.
+
+The imported exact audit enumerates this class by starting from every repaired
+five-row d=2 rank-two parent with singleton capacity at least five, extending by
+every possible sixth no-root cycle, and enumerating every realizable rank-two
+P6 projecting to that parent.  The full census below has zero states for which
+all six five-row projections still have d=2.  Thus the branch dies before the
+common-six-block test or any final T-space rerank.
+
+All coefficient-space operations in the imported verifier are exact rational
+row-space operations.  Complete-block ranks use MOD=2^127-1; Lucas-Lehmer plus
+the checked Hadamard bound MOD^2 > 12^15 makes those ranks exact over Q.
+"""
+
+from collections import Counter
+from pathlib import Path
+import contextlib
+import importlib.util
+import io
+
+HERE = Path(__file__).resolve().parent
+BASE = HERE / "verify_target_c_support7_global_segment_relative_six_noroot_k4_d2_singleton_capacity_2026_09_21.py"
+spec = importlib.util.spec_from_file_location("seven_k5_d0p6_d2_audit", BASE)
+A = importlib.util.module_from_spec(spec)
+with contextlib.redirect_stdout(io.StringIO()):
+    spec.loader.exec_module(A)
+
+EXPECTED_COUNTS = {
+    "five_d2_parents": 15865,
+    "five_d2_capacity5_parents": 2436,
+    "parent_extensions": 243600,
+    "candidate_P6": 355691,
+    "synchronized_P6": 138552,
+    "synchronized_d2": 1418,
+    "six_d2_capacity6": 761,
+}
+EXPECTED_FIVE_CAPACITY = {
+    0: 1,
+    1: 297,
+    2: 532,
+    3: 4339,
+    4: 8260,
+    5: 693,
+    6: 1377,
+    7: 68,
+    8: 110,
+    9: 76,
+    10: 48,
+    11: 64,
+}
+EXPECTED_SIX_CAPACITY = {
+    0: 102,
+    2: 18,
+    3: 126,
+    4: 255,
+    5: 156,
+    6: 433,
+    7: 296,
+    8: 32,
+}
+
+
+def main():
+    assert A.R.lucas_lehmer_127()
+    max_complete_norm2 = max(
+        sum(x * x for x in row) for row in A.P0.COMPLETE_T
+    )
+    assert max_complete_norm2 == 12
+    assert A.MOD * A.MOD > max_complete_norm2 ** 15
+
+    _, orbits, orbit_sizes, augmentation_candidates = A.K.five_no_root_orbits()
+    assert len(orbits) == 20451
+    assert sum(orbit_sizes) == 96560646
+    assert augmentation_candidates == 20475
+
+    result = A.scan_orbits(0, len(orbits), stop_on_survivor=False)
+
+    assert dict(result["counts"]) == EXPECTED_COUNTS, result["counts"]
+    assert dict(sorted(result["parent_capacity_census"].items())) == EXPECTED_FIVE_CAPACITY
+    assert dict(sorted(result["six_capacity_census"].items())) == EXPECTED_SIX_CAPACITY
+    assert result["common_set_census"] == Counter()
+    assert result["first_survivor"] is None
+
+    # In particular no d6=2, capacity>=6 state reaches the point where all six
+    # projected five-row virtual canonical states still have d5=2.
+    assert result["counts"]["six_d2_capacity6"] == 761
+    assert result["counts"]["all_five_projections_d2"] == 0
+    assert result["counts"]["structural_survivor_P6"] == 0
+
+    print("PASS: seven-no-root D=-2,k=5,d=0,p=6 closure")
+    print("five_d2_parents", EXPECTED_COUNTS["five_d2_parents"])
+    print("five_d2_singleton_capacity", EXPECTED_FIVE_CAPACITY)
+    print("five_d2_capacity5_parents", EXPECTED_COUNTS["five_d2_capacity5_parents"])
+    print("parent_extensions", EXPECTED_COUNTS["parent_extensions"])
+    print("rank2_P6_candidates", EXPECTED_COUNTS["candidate_P6"])
+    print("synchronized_P6", EXPECTED_COUNTS["synchronized_P6"])
+    print("synchronized_d2", EXPECTED_COUNTS["synchronized_d2"])
+    print("six_d2_singleton_capacity", EXPECTED_SIX_CAPACITY)
+    print("six_d2_capacity6", EXPECTED_COUNTS["six_d2_capacity6"])
+    print("all_five_projections_d2", 0)
+    print("structural_survivors", 0)
+    print("max_complete_relation_row_norm_squared", max_complete_norm2)
+    print("hadamard_exact_rank_bound", A.MOD * A.MOD > max_complete_norm2 ** 15)
+
+
+if __name__ == "__main__":
+    main()

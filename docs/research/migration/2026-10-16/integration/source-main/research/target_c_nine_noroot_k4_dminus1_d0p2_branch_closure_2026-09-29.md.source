@@ -1,0 +1,73 @@
+# Target C: close the nine-no-root k=4, D=-1, d_root=0, p=2 branch
+
+Date: 2026-09-29
+
+Status: proof-level composition of the committed support narrowing and the exact orientation certificates for all thirteen support orbits. This closes the two-selected-singleton subprofile. Together with the already-committed selected-pair closure, it closes the full `D=-1,p=2` branch of the nine-no-root `k=4` layer.
+
+No new finite search is claimed by this note. The computational inputs are the persisted exact verifiers cited below, each with its own fail-closed census and execution record.
+
+## 1. Exhaustive support reduction
+
+The executed support verifier
+
+`research/verify_target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_two_singleton_support_reimplementation_2026_09_28.cpp`
+
+has blob `f9ed9ea83d4dd8c54afe2597464036a51c0f935a` and proves that every realizable two-selected-singleton state is contained in exactly one of these thirteen support orbits:
+
+1. `[0123]^3 [0124]^3 [0134] [0234] [1234]`
+2. `[0123]^3 [0124]^3 [0134] [0234] [1235]`
+3. `[0123]^3 [0124]^2 [0134]^2 [0234]^2`
+4. `[0123]^3 [0124]^2 [0134]^2 [0234] [1234]`
+5. `[0123]^3 [0124] [0125] [0134] [0145] [0234] [1234]`
+6. `[0123]^3 [0124] [0134] [0145]^2 [0234] [1234]`
+7. `[0123]^3 [0124] [0134] [0145] [0156] [0234] [1234]`
+8. `[0123]^3 [0124] [0134] [0145] [0234] [0245] [1234]`
+9. `[0123]^3 [0124] [0134] [0145] [0234] [0246] [1234]`
+10. `[0123]^3 [0124] [0134] [0145] [0234] [0456] [1234]`
+11. `[0123]^3 [0124] [0134] [0145] [0234] [1234] [2345]`
+12. `[0123]^3 [0124] [0134] [0145] [0234] [1234] [2346]`
+13. `[0123]^2 [0124]^2 [0134]^2 [0234]^2 [1234]`.
+
+The support search is one-sided in the safe direction: every actual state is represented among the searched relaxed states.
+
+## 2. Exclusion of every support orbit
+
+Each orbit has a persisted exact certificate on this branch:
+
+1. `research/target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_two_singleton_rep13_orientation_2026-09-28.md`
+2. `research/target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_two_singleton_rep5_orientation_2026-09-28.md`
+3. `research/verify_target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_two_singleton_support3_closure_2026_09_29.py`
+4. `research/target_c_two_singleton_support4_closure_2026-09-29.txt`
+5. `research/target_c_two_singleton_support5_closure_2026-09-29.md`
+6. `research/target_c_two_singleton_support6_closure_2026-09-29.md`
+7. `research/target_c_two_singleton_support7_closure_2026-09-29.md`
+8. `research/target_c_two_singleton_support8_closure_2026-09-29.md`
+9. `research/target_c_two_singleton_support9_closure_2026-09-29.md`
+10. `research/target_c_two_singleton_support10_closure_2026-09-29.md`
+11. `research/target_c_two_singleton_support11_closure_2026-09-29.md`
+12. `research/target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_two_singleton_support12_closure_2026-09-29.md`
+13. `research/target_c_two_singleton_support13_closure_2026-09-29.md`.
+
+The exclusions use exact rational rank where needed, and otherwise use rank modulo 2 only one-sidedly: a mod-2 rank lower bound is also a rational rank lower bound for the integral matrices involved. The support-specific certificates that admit rank-four exceptional spaces test the already-committed necessary generalized-weight condition `parity_profile_ok` exactly over the rationals.
+
+Therefore all thirteen support orbits are impossible. Since the support verifier is exhaustive, the two-selected-singleton profile has no realizable state.
+
+## 3. Close the D=-1,p=2 branch
+
+The already-committed note
+
+`research/target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_selected_pair_closure_2026-09-28.md`
+
+proves the other `p=2` subprofile, one selected pair, and explicitly identifies two selected singletons as the only remaining finite subprofile in this arithmetic branch.
+
+Hence the full nine-no-root
+
+`k=4, D=-1, d_root=0, p=2`
+
+branch is closed.
+
+The companion nine-no-root `k=4` reduction shows that the only two `k=4` arithmetic branches are `D=-2,d_root=0,p=1` and `D=-1,d_root=0,p=2`. The `D=-2,p=1` branch is already closed on main. Therefore the entire nine-no-root `k=4` layer is closed.
+
+## 4. Remaining frontier
+
+This does not close the nine-no-root layer, Target C-II, or Erdos Problem #99. After the `k=4` closure, any remaining nine-no-root counterexample must have `k>=5`. That is the next arithmetic frontier to reduce before another finite support search is justified.

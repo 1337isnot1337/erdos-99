@@ -1,0 +1,96 @@
+#include "r1_repair_a.hpp"
+#include "r1_repair_b.hpp"
+
+vector<array<uint16_t,4>> MATCHINGS;
+
+void matching_rec(vector<int> items,array<uint16_t,4> cur,int depth){
+    if(items.empty()){MATCHINGS.push_back(cur);return;}
+    int a=items[0];
+    for(int k=1;k<(int)items.size();k++){
+        int b=items[k]; vector<int> rest;
+        for(int i=1;i<(int)items.size();i++) if(i!=k) rest.push_back(items[i]);
+        cur[depth]=uint16_t((1u<<a)|(1u<<b));
+        matching_rec(rest,cur,depth+1);
+    }
+}
+
+bool union_of_pairs(uint16_t m,const array<uint16_t,4>&ps){
+    for(uint16_t p:ps){uint16_t q=m&p;if(q!=0&&q!=p)return false;}
+    return true;
+}
+int met_pairs(uint16_t m,const array<uint16_t,4>&ps){int n=0;for(uint16_t p:ps)if(m&p)n++;return n;}
+bool contains_pair(uint16_t m,const array<uint16_t,4>&ps){for(uint16_t p:ps)if((m&p)==p)return true;return false;}
+
+bool survivor(const array<BD,35>&d,uint64_t T,const array<uint16_t,4>&ps,long long&placements,long long&passes){
+    int rt=trank(T); uint64_t E=0,S=0;
+    for(int b=0;b<35;b++) if((T>>b)&1ULL){
+        if(union_of_pairs(d[b].mask,ps) && (!d[b].repeated || d[b].inc>=4)) E|=1ULL<<b;
+        bool sel=met_pairs(d[b].mask,ps)>=3;
+        if(sel && d[b].repeated) sel=contains_pair(d[b].mask,ps);
+        if(sel) S|=1ULL<<b;
+    }
+    if(popcount(S)<3) return false;
+    vector<int> sv; for(int b=0;b<35;b++) if((S>>b)&1ULL) sv.push_back(b);
+    for(int i=0;i<(int)sv.size();i++) for(int j=i+1;j<(int)sv.size();j++) for(int k=j+1;k<(int)sv.size();k++){
+        placements++;
+        uint64_t ss=(1ULL<<sv[i])|(1ULL<<sv[j])|(1ULL<<sv[k]);
+        uint64_t C=T&~E&~ss;
+        int rc=trank(C);
+        if(rc!=popcount(C)) continue;
+        if(rt-rc<4) continue;
+        passes++;
+        return true;
+    }
+    return false;
+}
+
+void init_r4(){
+    fill(begin(SI),end(SI),-1); fill(begin(TI),end(TI),-1); fill(begin(EI),end(EI),-1);
+    for(int a=0;a<7;a++)for(int b=a+1;b<7;b++)for(int c=b+1;c<7;c++)for(int d=c+1;d<7;d++){
+        int bits=(1<<a)|(1<<b)|(1<<c)|(1<<d); SI[bits]=SUP.size(); SUP.push_back({a,b,c,d});
+    }
+    for(int a=0;a<7;a++)for(int b=a+1;b<7;b++)for(int c=b+1;c<7;c++){
+        int bits=(1<<a)|(1<<b)|(1<<c); TI[bits]=TRI.size(); TRI.push_back({a,b,c});
+    }
+    for(int a=0;a<7;a++)for(int b=a+1;b<7;b++){EI[(1<<a)|(1<<b)]=ED.size();ED.push_back({a,b});}
+    for(int b=0;b<35;b++){
+        TROW[b].fill(0); int a=TRI[b][0],c=TRI[b][1],d=TRI[b][2];
+        TROW[b][EI[(1<<c)|(1<<d)]]=1; TROW[b][EI[(1<<a)|(1<<d)]]=-1; TROW[b][EI[(1<<a)|(1<<c)]]=1;
+    }
+    array<uint16_t,4> cur{}; matching_rec({0,1,2,3,4,5,6,7},cur,0);
+}
+
+bool lucas_lehmer_31(){long long s=4;for(int i=0;i<29;i++)s=(s*s-2)%MOD;return s==0;}
+
+int main(){
+    init_r4();
+    if(!lucas_lehmer_31()) return 10;
+    if((long long)MOD*MOD<=14348907LL) return 11;
+    if(MATCHINGS.size()!=105) return 12;
+    vector<long long> expected={1,1,4,14,61,268,1283,6032,27763};
+    unordered_set<Multiset,MH> reps; Multiset e; reps.insert(e);
+    for(int sz=1;sz<=8;sz++){
+        unordered_set<Multiset,MH> next; next.reserve(reps.size()*8);
+        for(auto&ms:reps){
+            int mult[35]={}; for(int i=0;i<ms.n;i++) mult[ms.a[i]]++;
+            for(int s=0;s<35;s++) if(mult[s]<3){Multiset x=ms;x.a[x.n++]=s;sort(x.a.begin(),x.a.begin()+x.n);next.insert(canon(x));}
+        }
+        reps.swap(next); if((long long)reps.size()!=expected[sz]) return 13;
+    }
+    long long all=0,h20=0,matching_tests=0,placements=0,passes=0,survivors=0;
+    for(auto&ms:reps){
+        all++; uint64_t T; auto d=bdata(ms,T);
+        if(popcount(T)>20) continue;
+        h20++;
+        for(auto&ps:MATCHINGS){matching_tests++;if(survivor(d,T,ps,placements,passes))survivors++;}
+    }
+    cout<<"support_multiset_orbits_size_8 "<<all<<"\n";
+    cout<<"touch_at_most_20 "<<h20<<"\n";
+    cout<<"perfect_matchings "<<MATCHINGS.size()<<"\n";
+    cout<<"support_matching_pairs_tested "<<matching_tests<<"\n";
+    cout<<"relaxed_singleton_triples "<<placements<<"\n";
+    cout<<"structural_passes "<<passes<<"\n";
+    cout<<"survivors "<<survivors<<"\n";
+    bool ok=all==27763&&h20==13574&&matching_tests==1425270&&placements==47546&&passes==0&&survivors==0;
+    return ok?0:20;
+}

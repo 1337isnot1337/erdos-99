@@ -1,0 +1,75 @@
+# Research reports and audit archive
+
+`docs/reports/` is a provenance-rich research archive, not a directory of uniformly current theorems. Start with [`../STATE.md`](../STATE.md), [`../state/theorem-state.yaml`](../state/theorem-state.yaml), and the generated [`../state/artifact-index.jsonl`](../state/artifact-index.jsonl).
+
+## Status rule
+
+A report is canonical only when the state lock or an active target route map explicitly promotes its exact theorem ID. A merged PR or a file present on `main` is not enough.
+
+The conservative default is **unreviewed**. `audited-working` is never inferred from a filename, date, PR merge, or presence on `main`; an audit must explicitly earn that status. The theorem/claim vocabulary is canonical, unreviewed, audited-working, conditional, regression, superseded, rejected, and provenance.
+
+Every research artifact in the configured report/audit/archive roots has a generated first-line `<!-- theorem-state: ... -->` metadata header. The header and `artifact-index.jsonl` are generated from the manifest by `tools/build_artifact_index.py`; do not hand-promote a report by editing its header. When one physical report is the source for claims with different theorem statuses, its artifact-level header says `status: mixed` and carries an exact `claim_statuses` map. `mixed` is an artifact container state, not an additional theorem status; use the claim ID's status for logical dependency decisions.
+
+## Current navigation
+
+- Target A: [`../targets/target-a/README.md`](../targets/target-a/README.md)
+- Target B: [`../targets/target-b/README.md`](../targets/target-b/README.md)
+- Target C: [`../targets/target-c/CURRENT.md`](../targets/target-c/CURRENT.md) and [`../targets/target-c/README.md`](../targets/target-c/README.md)
+
+Target C's pre-cleanup promoted catalog remains at [`../targets/target-c/HISTORY-pre-cleanup-2026-09-11.md`](../targets/target-c/HISTORY-pre-cleanup-2026-09-11.md), subject to later state-lock overrides.
+
+## Independent audits completed 2026-09-11
+
+### Target B dense-grid / penetration / interpolation chain
+
+[`target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md`](target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md) promotes the corrected DT1–DT4, TG1–TG3, PDG, PC1/PC3, MCP1, fixed-`lambda` MCP2, and GPI tools at their exact pure-disk/coherence scopes. The GPI conclusion is a dominant-component theorem, not a multi-grain globalization or a proof of the full shell-stability inequality.
+
+### Target C PR #188
+
+[`target_c_pr188_full_dependency_audit_2026-09-11.md`](target_c_pr188_full_dependency_audit_2026-09-11.md) independently certifies the all-phase renormalized-surplus chain
+
+\[
+\mu_D={e_{BB}+2s_C-3(d_H+s_Z)\over D},
+\qquad
+\liminf\mu_D\ge z_*>0.9604.
+\]
+
+[`target_c_attachment_perimeter_three_gap_endpoint_repair_2026-09-11.md`](target_c_attachment_perimeter_three_gap_endpoint_repair_2026-09-11.md) excludes the endpoint `mu_D->z_*`, yielding a nonexplicit absolute gap above it. The old Eppstein near-quadrangulation interpretation remains rejected. The exact five-arc threshold script `research/target_c_five_arc_pin_threshold_check.py` is registered under canonical theorem `C-MU-09604` and is executed by theorem-state CI.
+
+### Target C PR #182
+
+[`target_c_pr182_full_dependency_audit_2026-09-11.md`](target_c_pr182_full_dependency_audit_2026-09-11.md) independently certifies the RSR/DD and boundary-sharing chain. It also extracts the stronger HE+ coefficient already implicit in the hidden-edge proof and certifies
+
+\[
+\liminf {e_{BB}+2s_C\over D}>0.5983685.
+\]
+
+The pocket-degree Dirichlet theorem is valid; its displayed optimizer near `0.76719537` remains exploratory only.
+
+### Target C PR #191
+
+[`target_c_pr191_dependency_audit_2026-09-11.md`](target_c_pr191_dependency_audit_2026-09-11.md) rejects the claimed `0.99554058458...` ordinary-surplus theorem. The load-bearing cyclic Reuleaux-cap step puts an inward OP pocket in an exterior cap on the opposite side of the force-hull chord, so the general `b-P_F=O(sqrt D)` / `H_out=o(D^2)` premise is unproved.
+
+The independently surviving cyclic structural facts are near-maximal force-hull perimeter, disk-limit force-hull area, and `E=O(D)`.
+
+### Target C primitive cyclic-shell P1/S1 chain
+
+[`target_c_cyclic_shell_d1_p1_s1_dependency_audit_2026-09-11.md`](target_c_cyclic_shell_d1_p1_s1_dependency_audit_2026-09-11.md) certifies the historical `d_H=1` shell chain only at the exact primitive all-loaded scope `m=0`, `d_H=1`, `s_Z=1`. P1 is completely excluded by the Littlewood/2-adic ramification argument. S1 is reduced exactly to the reciprocal-square system but is not excluded. The finite `q=13` S1 KKT/PSD package remains a numerical regression rather than a global-minimizer theorem.
+
+## Binding corrections commonly surfaced by search
+
+Before using an older Target C report, check whether it depends on any of these rejected inferences:
+
+- incident diameter sequence `=>` Euler trail/path;
+- FB4 force-bulk localization;
+- incompatible projective cut/orientation in the old C53 pentagon objection;
+- RSR equality uniqueness;
+- Eppstein near-equality `=>` near quadrangulation;
+- five-host measure saturation `=>` all five hosts populated;
+- inward OP pocket contained in the exterior Reuleaux minor cap.
+
+The state lock gives exact scope and surviving repaired conclusions.
+
+## Writing new reports
+
+Use [`REPORT_TEMPLATE.md`](REPORT_TEMPLATE.md). State exact dependencies, proof status, regressions checked, what the theorem does not prove, and the requested promotion status. New reports enter as `unreviewed` unless the same change carries an explicit completed audit and ledger classification. A frontier-changing theorem must update the state files and active route in the same change.

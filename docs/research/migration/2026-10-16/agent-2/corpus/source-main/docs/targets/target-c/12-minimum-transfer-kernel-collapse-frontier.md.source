@@ -1,0 +1,85 @@
+# Target C — minimum-transfer kernel-collapse frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+This module records C56 from
+`docs/reports/target_c_minimum_transfer_kernel_collapse_2026-08-31.md`.
+It strictly sharpens the C55 Robinson-block localization.
+
+## C56 dichotomy
+
+For a selected two-dimensional normalized KKT stress, order positive diameter edges by
+projective direction and use the C53 notation
+
+`K = Q^T Lambda^+ Q`,
+`M = Gamma (B^{-1}-K) Gamma >= 0`,
+`M 1 = M t = 0`,
+
+with strict `t_0<...<t_(m-1)` and Robinson `K`.
+
+Set
+
+`c = min_{i!=j} K_ij`.
+
+Then `c<=0`, and exactly one of the following holds.
+
+### Generic phase: `c<0`
+
+Shift `K` by its minimum: `A_ij=K_ij-c`. The shifted similarity is nonnegative
+Robinson. On the weighted-mean-zero space its Laplacian is
+
+`L_A = M - c(G Gamma-gamma gamma^T)`.
+
+The strict slope vector is therefore a weighted Fiedler vector with value `-cG>0`.
+A weighted plateau/simplicity argument makes that Fiedler value simple. Hence
+
+`ker M = span{1,t}`.
+
+C55 gives both `omega` and `t omega` in `ker M` for a tangential diameter velocity in
+the selected stress kernel. Since `c<0` cannot occur with only two diameter edges,
+there are at least three slope samples, and the two affine-in-`t` conditions force
+`omega` to be constant. Thus the generic phase has no selected-support diameter shear.
+
+### Zero-transfer phase: `c=0`
+
+The strict slope vector has zero energy in a nonnegative weighted Laplacian. Therefore
+every off-diagonal transfer vanishes:
+
+`K_ij=0` for `i!=j`.
+
+Then
+
+`M=0`,
+`K=B^{-1}`.
+
+Consequences:
+
+1. every C55 direction gap is isolated simultaneously;
+2. the diameter incidence matrix has independent columns, so the positive diameter
+   graph is a forest;
+3. every positive Kalmanson split vector is supported on one diameter edge or on two
+   adjacent diameter directions in projective order.
+
+## What C56 removes
+
+C55 allowed a mixed equality kernel with large Robinson blocks separated by isolated
+one-gap electrical hinges. C56 proves that such a mixed pattern cannot occur. There
+is only one global block, or the entire edge defect vanishes.
+
+Therefore any genuine C-I shear selected from the C54 null face is trapped in a
+global zero-transfer forest response.
+
+## Next exact target
+
+Prove that the C54 exposed null face cannot annihilate the whole strong-framework flex
+space while all relevant two-dimensional stresses lie in the zero-transfer forest
+phase and all one-dimensional stresses are the C54.1 straight chains.
+
+The two shortest routes are:
+
+1. convert the one-/two-adjacent-edge Kalmanson split support into a physical
+   one-/two-vertex contact separator and use the strong-support bridge/connectivity
+   theorems; or
+2. prove the zero-transfer property is not convex across genuinely different diameter
+   supports. A convex combination inside the null face would then have `c<0`, and C56
+   would force a common angular rate, closing Gate C-I by C7.

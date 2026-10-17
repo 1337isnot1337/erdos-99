@@ -1,0 +1,74 @@
+# Target C — C85 chain null-face mass frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_chain_null_face_mass_separation_2026-09-01.md](../../reports/target_c_chain_null_face_mass_separation_2026-09-01.md).
+
+Let `h_0=za` be the exact C80 chain diameter and let `P` be its ordered `D` parallel
+train tracks. C84 identifies the chain-supported first-order-neutral space
+
+`N_P={v supported on P: sum_P v=0 and g_h v=0 for every active diameter h}`
+
+with the disconnected part of the prefix interval graph:
+
+`dim N_P = c(G_P)-1`.
+
+C83 gives, for every active diameter bar and every `v in N_P`,
+
+`H_h[v,v] = -c_h ||v_(I_h)||^2`,
+
+where `I_h` is one consecutive chain interval and `c_h` is uniformly forward,
+backward, or tangent on that interval. The chain bar has
+
+`H_h0[v,v] = -D ||v||^2`.
+
+C54 says every normalized KKT stress has PSD signed stress matrix and supplies one
+fixed extreme null-face stress annihilating the full critical-cone span. Along exact
+train-angle paths this is equivalent to zero weighted diameter Hessian on every
+`v in N_P`.
+
+C85 proves the exact consequence:
+
+`beta_h0 < 1/2`
+
+for every zero-energy KKT stress on every nonzero chain-neutral mode.
+
+If such a stress retains positive weight on `h_0`, then its total beta mass on
+backward intervals is strictly larger than its chain-edge weight:
+
+`sum_(h backward) beta_h > beta_h0`.
+
+The strict inequality uses `|c_h|<D` for every backward bar; equality would make a
+second diameter segment parallel to the unique chain diameter direction.
+
+Thus, whenever `N_P` is nonzero, the single C54 null-face extreme stress lies across
+the fixed hyperplane `beta_h0=1/2` from the exposed C76 chain stress `beta_h0=1`.
+The direction-dependent secondary-stress loophole cannot be an arbitrarily small
+perturbation of the chain face.
+
+## Weighted backward coverage
+
+For one zero-energy stress put
+
+`b_j=sum_(h backward, tau_j in I_h) beta_h |c_h|/D`.
+
+Every nonzero neutral mode satisfies
+
+`sum_j v_j^2 b_j >= beta_h0 sum_j v_j^2`.
+
+When `beta_h0>0`, some moving chain track has backward coverage at least
+`beta_h0`. By C83 and Target B Section 42.3 every track in a backward interval has
+both terminal boundary edges off the convex hull.
+
+## Current exact split
+
+1. `G_P` connected: C84 gives `N_P=0`, a bridgeless prefix circulation, and at least
+   `D+2` active diameter bars. The live problem is first-order ordered
+   diameter-thrackle capacity.
+2. `G_P` disconnected: `N_P!=0` and the fixed null-face extreme stress has
+   `beta_h0<1/2`; if it retains the chain edge, backward crossing bars carry still
+   more total beta mass. The live problem is to combine that mass separation with C66
+   matching response transport or the ordered non-hull terminal structure.
+
+C85 therefore replaces an unconstrained secondary-stress choice by a sharp KKT-face
+separation in the entire disconnected-prefix branch.

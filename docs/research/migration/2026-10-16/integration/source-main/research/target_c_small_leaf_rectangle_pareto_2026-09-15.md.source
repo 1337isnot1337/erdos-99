@@ -1,0 +1,259 @@
+# Target C-II — Pareto profile for the small-leaf/center complete rectangle
+
+**Date:** 2026-09-15  
+**Status:** proof-only phase-resolved structural sharpening  
+**Scope:** full-core Type-II branch with `t=(q-k)/D<=1.844`  
+**Dependencies:** corrected dual-tree-backbone rectangle theorem `target_c_small_leaf_complete_rectangle_t1844_2026-09-15.md`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The corrected rectangle theorem fixes one block length, `0.003D`, and obtains a complete
+
+\[
+0.003D\times0.35D
+\]
+
+smallest-leaf/center crossing rectangle. The proof actually leaves the block length free. Keeping that parameter gives a full aspect-ratio tradeoff that can be chosen later to suit a strip-reuse or simultaneous-shear argument.
+
+Put
+
+\[
+s_0={627\over42520}=0.01474600188\ldots,
+\]
+
+for the certified dual-tree backbone density,
+
+\[
+d_0={57\over100},
+\qquad
+n_0={1063\over1000},
+\]
+
+for the per-backbone-leaf center degree floor and total center-train ceiling, and
+
+\[
+\boxed{
+\alpha:={n_0\over s_0}
+={1129969\over15675}
+=72.0873365231\ldots .
+}
+\tag{P.1}
+
+Then for every fixed
+
+\[
+0<\rho<\rho_{\max}:={d_0\over\alpha}
+={35739\over4519876}
+=0.0079070753268\ldots,
+\tag{P.2}
+
+there are subfamilies `L_rho` of smallest-leaf outer-to-outer trains and `C_rho` of exact center-phase complete trains such that every member of `L_rho` crosses every member of `C_rho` and
+
+\[
+\boxed{
+|L_\rho|\ge \rho D-o(D),
+}
+\tag{P.3}
+
+\[
+\boxed{
+|C_\rho|>
+\left(d_0-\alpha\rho\right)D-o(D).
+}
+\tag{P.4}
+
+Thus the corrected rectangle theorem supplies an entire linear Pareto frontier, not only the single point `(0.003,0.35)`.
+
+Two useful explicit consequences are:
+
+1. a **balanced complete square**
+
+\[
+\boxed{
+|L_*|>0.00779D-o(D),
+\qquad
+|C_*|>0.00779D-o(D);
+}
+\tag{P.5}
+
+2. a **near product-optimal rectangle** with
+
+\[
+\rho_*={d_0\over2\alpha}
+={35739\over9039752}
+=0.0039535376634\ldots,
+\]
+
+for which
+
+\[
+\boxed{
+|L_*|\ge \rho_*D-o(D),
+\qquad
+|C_*|>0.285D-o(D).
+}
+\tag{P.6}
+
+The corresponding guaranteed complete-crossing density is
+
+\[
+\rho_*\,{57\over200}
+=0.00112675823407\ldots,
+\tag{P.7}
+
+slightly above the fixed theorem's safe product `0.003*0.35=0.00105`.
+
+---
+
+## 1. Keep the block length symbolic
+
+Use exactly the corrected dual-tree-backbone theorem. It produces a simple backbone path
+
+\[
+P_0=(\lambda_1,\ldots,\lambda_s)
+\]
+
+of good smallest-leaf outer-to-outer trains with
+
+\[
+s>s_0D-o(D),
+\tag{P.8}
+
+such that every backbone leaf is crossed by more than
+
+\[
+d_0D-o(D)
+\]
+
+center trains. The total number of center trains satisfies
+
+\[
+N_C<n_0D+o(D).
+\tag{P.9}
+
+For every center train `gamma`, its intersection with `P_0` is a consecutive interval because both are paths in the same complement dual tree.
+
+Fix a constant `rho>0` and put
+
+\[
+r=\lfloor\rho D\rfloor.
+\]
+
+When `rho<rho_max<s_0`, one has `r<s` for all sufficiently large `D`. The block-counting inequality from the parent theorem is
+
+\[
+\sum_B\#\{\gamma:B\subset N(\gamma)\cap P_0\}
+\ge I_0-(r-1)N_C,
+\tag{P.10}
+
+where
+
+\[
+I_0>d_0sD-o(D^2).
+\tag{P.11}
+
+There are at most `s` consecutive `r`-blocks. Therefore some block `B_rho` has common center neighborhood of size
+
+\[
+\begin{aligned}
+|N(B_\rho)|
+&>{d_0sD-rN_C\over s}-o(D)\\
+&>\left(d_0-{\rho n_0\over s/D}\right)D-o(D)\\
+&\ge\left(d_0-{\rho n_0\over s_0}\right)D-o(D)\\
+&=\left(d_0-\alpha\rho\right)D-o(D).
+\end{aligned}
+\tag{P.12}
+
+Take
+
+\[
+L_\rho=B_\rho,
+\qquad
+C_\rho=N(B_\rho).
+\]
+
+Then every train in `L_rho` crosses every train in `C_rho`, while `|L_rho|=r=\rho D-o(D)`. This proves (P.3)--(P.4).
+
+The upper restriction `rho<rho_max=d_0/alpha` is only the range where the displayed center lower bound remains positive. The topological extraction itself remains valid for any fixed `rho<s_0`.
+
+---
+
+## 2. Balanced square
+
+The continuous balance point solves
+
+\[
+\rho=d_0-\alpha\rho,
+\]
+
+hence
+
+\[
+\rho_{bal}
+={d_0\over1+\alpha}
+={35739\over4582576}
+=0.0077988886600\ldots .
+\tag{P.13}
+
+Choose the safely rounded value
+
+\[
+\rho={779\over100000}=0.00779.
+\]
+
+The exact center lower bound is
+
+\[
+d_0-\alpha\rho
+={696271\over82500000}
+=0.00843964848\ldots
+>0.00779.
+\tag{P.14}
+
+Thus both shores contain more than `0.00779D-o(D)` trains, proving (P.5).
+
+---
+
+## 3. Product-optimal aspect ratio
+
+The guaranteed normalized rectangle product is
+
+\[
+P(\rho)=\rho(d_0-\alpha\rho),
+\]
+
+a strictly concave quadratic on `(0,rho_max)`. Its unique maximizer is
+
+\[
+\rho_*={d_0\over2\alpha}
+={35739\over9039752}
+=0.0039535376634\ldots .
+\tag{P.15}
+
+At this point
+
+\[
+d_0-\alpha\rho_*={d_0\over2}={57\over200}=0.285,
+\tag{P.16}
+
+which gives (P.6)--(P.7).
+
+For a simple decimal alternative, `rho=0.00395=79/20000` gives the exact center lower bound
+
+\[
+{89427449\over313500000}
+=0.2852550207\ldots .
+\]
+
+---
+
+## 4. Why this matters downstream
+
+Different closure mechanisms want different rectangle aspect ratios.
+
+- A strip-reuse argument benefits from maximizing the number of ordered outer-to-outer leaf cuts; (P.5) increases the certified leaf block from `0.003D` to `0.00779D` while retaining a linear common center family.
+- A two-parameter or grid-shear argument may care about the number of complete leaf/center crossings; (P.6) maximizes the guaranteed product under the present backbone information.
+- The original `0.003D x 0.35D` point remains useful when a very large common center family is the priority.
+
+No new global-minimality conclusion follows from the Pareto optimization itself. It only exposes all of the quantitative content already latent in the corrected dual-tree rectangle proof.
+
+**Disposition:** proved proof-only rectangle-profile sharpening; C-II and Level I remain open.

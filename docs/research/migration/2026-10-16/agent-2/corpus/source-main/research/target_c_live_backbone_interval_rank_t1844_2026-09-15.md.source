@@ -1,0 +1,465 @@
+# Target C-II — the live `t<=1.844` branch has a `0.017104D` O--O backbone with distributed diameter support
+
+**Date:** 2026-09-15  
+**Repository base:** `c0e3cfd451bbc80b796a5a984940dd70977fb8ac`  
+**Status:** proof-only finite/source-level structural strengthening  
+**Scope:** full-core Type-II branch with `t=(q-k)/D<=1.844`; after the new two-leaf exclusion this applies to the surviving band `1.8436<t<=1.844`  
+**Dependencies:** audited `0.7404D` weighted small-leaf center fan; audited smallest-leaf O--O pair floor; corrected dual-tree backbone construction; audited §157 train cut/resultant; canonical mixed infinitesimal rigidity  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current rectangle stack extracts complete leaf/center rectangles from a longer dual-tree backbone and then discards most of that backbone to gain a common center neighborhood.  For the brace-reuse problem this discard is unnecessary.  The backbone itself is the right object.
+
+Keeping the good-leaf threshold free and optimizing only the backbone length gives a simple safe choice
+
+\[
+\lambda={477\over1000}.
+\]
+
+At this threshold the current `0.7404D` weighted fan theorem forces a single center train to cross a simple dual-tree path of more than
+
+\[
+\boxed{0.017104D-o(D)}
+\]
+
+distinct smallest-leaf outer-to-outer trains.
+
+On any such consecutive O--O backbone, one actual diameter edge crosses a single signed interval of cuts.  The simultaneous train-shear derivative matrix has full column rank.  Combining these facts forces diameter support to start or stop throughout the path:
+
+\[
+\boxed{N_{prop}>0.017104D-o(D)}
+\]
+
+distinct actual diameter edges cross a nonempty proper subinterval of the backbone, and at least
+
+\[
+\boxed{0.008552D-o(D)}
+\]
+
+distinct internal strip boundaries carry a change of actual-diameter shore incidence.  The latter boundaries localize at least the same number of distinct loaded diameter endpoints to distinct dual-tree positions.
+
+The exact KKT cut resultants `F_i=A_i u_i` also satisfy
+
+\[
+\boxed{
+\sum_i\|F_{i+1}-F_i\|\le2D.
+}
+\]
+
+Consequently some adjacent pair on this live backbone obeys
+
+\[
+\boxed{
+\|F_{i+1}-F_i\|<117+o(1),
+\qquad
+|A_{i+1}-A_i|<117+o(1).
+}
+\]
+
+This is a direct quantitative answer to the current rectangle notes' brace-reuse question.  It does not yet produce a feasible two-train shear because the newly forced proper-interval diameter edges can have arbitrarily small KKT multiplier.
+
+---
+
+## 1. Use the full good-leaf backbone, not the extracted rectangle block
+
+The audited `0.7404D` fan theorem supplies retained pair weights `w_tau in(0,1]` on smallest-leaf outer-to-outer trains with
+
+\[
+{\sum_\tau w_\tau d_\tau\over\sum_\tau w_\tau}
+>0.7404-o(1),
+\tag{LB.1}
+\]
+
+where `d_tau D` is the number of center-phase complete trains crossing `tau`.  It also gives
+
+\[
+{1\over D}\sum_\tau w_\tau>0.0848-o(1),
+\tag{LB.2}
+\]
+
+and the total number of center trains satisfies
+
+\[
+N_C<1.063D+o(D).
+\tag{LB.3}
+\]
+
+For a fixed threshold `lambda<0.7404`, call a leaf train good if
+
+\[
+d_\tau>\lambda.
+\]
+
+The audited weighted-threshold argument gives retained good weight density
+
+\[
+g(\lambda)
+={ (0.7404-\lambda)(0.0848)\over1.063-\lambda},
+\tag{LB.4}
+\]
+
+and hence at least `g(lambda)D-o(D)` distinct good leaf trains, because each retained pair weight is at most one.
+
+The good O--O leaf trains are pairwise noncrossing, so their complement-region dual is a tree.  Every center train crosses a simple path in this tree.  Total good-leaf/center incidence is more than
+
+\[
+\lambda g(\lambda)D^2-o(D^2).
+\]
+
+Since there are fewer than `1.063D+o(D)` center trains, some center train crosses a path of length
+
+\[
+ s(\lambda)D-o(D),
+\qquad
+s(\lambda):={\lambda g(\lambda)\over1.063}.
+\tag{LB.5}
+
+Take
+
+\[
+\lambda={477\over1000}.
+\]
+
+Exact rational arithmetic gives
+
+\[
+g(0.477)
+={69801\over1831250}
+=0.0381165870307\ldots,
+\tag{LB.6}
+\]
+
+\[
+\boxed{
+ s(0.477)
+={33295077\over1946618750}
+=0.0171040564568\ldots
+>0.017104.
+}
+\tag{LB.7}
+
+Thus there is a center train `gamma` crossing, in order, a simple dual-tree path
+
+\[
+P=(\tau_1,\ldots,\tau_m)
+\]
+
+of smallest-leaf O--O trains with
+
+\[
+\boxed{m>0.017104D-o(D).}
+\tag{LB.8}
+
+The center train `gamma` is not one of the selected leaf trains, a fact used below to remove the Euclidean rotation kernel.
+
+---
+
+## 2. One actual diameter edge occupies one signed interval of cuts
+
+Let the complement-dual path be
+
+\[
+v_0\xleftrightarrow{\tau_1}v_1
+\xleftrightarrow{\tau_2}\cdots
+\xleftrightarrow{\tau_m}v_m.
+\]
+
+Root it at `v_0`.  For each `i`, remove the dual edge `tau_i` and let `chi_i=0` on the component containing `v_0` and `chi_i=1` on the other component.  Because train midpoint curves cross contact edges only at edge midpoints, every positive-core vertex belongs to a unique complement region.
+
+Fix an orientation `h=xy` of an actual diameter edge and set
+
+\[
+r_h=p_y-p_x,
+\qquad |r_h|=D,
+\]
+
+\[
+\varepsilon_{hi}:=\chi_i(y)-\chi_i(x)\in\{-1,0,1\}.
+\tag{LB.9}
+
+If `a,b` are the two endpoint regions, `tau_i` separates them exactly when it lies on the unique dual-tree path `[a,b]`.  Hence
+
+\[
+\{i:\varepsilon_{hi}\ne0\}
+=P\cap[a,b]
+\]
+
+is a consecutive interval.  Root orientation makes every nonzero sign the same.  Thus
+
+\[
+\boxed{
+(\varepsilon_{h1},\ldots,\varepsilon_{hm})
+=0,\ldots,0,s,\ldots,s,0,\ldots,0,
+\quad s\in\{+1,-1\}.
+}
+\tag{LB.10}
+
+Extending by
+
+\[
+\varepsilon_{h0}=\varepsilon_{h,m+1}=0,
+\]
+
+gives
+
+\[
+\boxed{
+\sum_{i=0}^{m}
+|\varepsilon_{h,i+1}-\varepsilon_{hi}|
+\le2.
+}
+\tag{LB.11}
+
+---
+
+## 3. The exact §157 cut resultants have total variation at most `2D`
+
+Normalize the positive diameter KKT multipliers by
+
+\[
+\sum_{h\in H}\beta_h=1.
+\tag{LB.12}
+
+Orient each selected train unit contact vector `u_i` consistently with the rooted shore split.  The audited §157 shore resultant is
+
+\[
+\boxed{
+F_i:=A_i u_i
+=\sum_h\beta_h\varepsilon_{hi}r_h,
+\qquad
+A_i=\sum_{e\in E(\tau_i)}\alpha_e>0.
+}
+\tag{LB.13}
+
+Put `F_0=F_{m+1}=0`.  By (LB.11),
+
+\[
+\begin{aligned}
+\sum_{i=0}^{m}\|F_{i+1}-F_i\|
+&\le
+D\sum_h\beta_h
+\sum_{i=0}^{m}|\varepsilon_{h,i+1}-\varepsilon_{hi}|\\
+&\le2D.
+\end{aligned}
+\]
+
+Therefore
+
+\[
+\boxed{
+\operatorname{TV}(F_0,F_1,\ldots,F_m,F_{m+1})\le2D.
+}
+\tag{LB.14}
+
+For each internal strip boundary define the switching multiplier mass
+
+\[
+q_i:=\sum_h\beta_h
+|\varepsilon_{h,i+1}-\varepsilon_{hi}|.
+\tag{LB.15}
+
+Then
+
+\[
+\sum_{i=1}^{m-1}q_i\le2,
+\qquad
+\|F_{i+1}-F_i\|\le Dq_i.
+\tag{LB.16}
+
+Hence some adjacent pair satisfies
+
+\[
+q_i\le{2\over m-1},
+\qquad
+\|F_{i+1}-F_i\|\le{2D\over m-1}.
+\tag{LB.17}
+
+Since `|F_i|=A_i`, reverse triangle inequality also gives
+
+\[
+|A_{i+1}-A_i|\le\|F_{i+1}-F_i\|.
+\tag{LB.18}
+
+Using (LB.8),
+
+\[
+{2\over0.017104}
+=116.9317\ldots<117,
+\]
+
+so
+
+\[
+\boxed{
+\|F_{i+1}-F_i\|<117+o(1),
+\qquad
+|A_{i+1}-A_i|<117+o(1).
+}
+\tag{LB.19}
+
+---
+
+## 4. Simultaneous train shears give a full-column-rank diameter derivative matrix
+
+Superpose the first-order exact shears of the selected O--O trains.  For shear coordinates `theta_i`, the first squared-length derivative of diameter edge `h` is twice
+
+\[
+\sum_i
+\varepsilon_{hi}(r_h\cdot Ju_i)\theta_i.
+\]
+
+Define the `|H| x m` matrix
+
+\[
+M_{hi}:=\varepsilon_{hi}(r_h\cdot Ju_i).
+\tag{LB.20}
+
+### Lemma LB.1 — selected-backbone shear injectivity
+
+\[
+\boxed{\operatorname{rank}M=m.}
+\tag{LB.21}
+
+### Proof
+
+If `M theta=0`, the superposed shear is an infinitesimal flex of every positive contact and every actual diameter constraint.  Canonical mixed infinitesimal rigidity makes it Euclidean.
+
+In complete-train angular coordinates, the flex has rate `theta_i` on the selected leaf trains and zero on every other complete train.  The center train `gamma` crossing the entire backbone is outside the selected family and has rate zero.  A Euclidean translation has zero train rates, while a Euclidean rotation has one common rate on every train.  Therefore the Euclidean rotation rate is zero and all `theta_i=0`. `square`
+
+No coefficient floor or near-parallel approximation is used.
+
+---
+
+## 5. At least `m-2` diameter edges have proper crossing intervals
+
+Call a diameter edge full-span if its incidence is nonzero on every selected cut.  For such an edge, (LB.10) makes the sign constant, so its row is
+
+\[
+s_h(r_h\cdot Ju_1,\ldots,r_h\cdot Ju_m).
+\]
+
+As `r_h` varies in the plane, every full-span row lies in the span of the two fixed coordinate sequences of `Ju_i`.  Hence all full-span diameter edges together contribute row rank at most two.
+
+Let `N_prop` be the number of diameter edges whose nonzero incidence interval is nonempty and proper.  Zero rows add nothing and each proper edge contributes at most one row dimension.  Thus
+
+\[
+\operatorname{rank}M\le2+N_{prop}.
+\]
+
+Use (LB.21):
+
+\[
+\boxed{N_{prop}\ge m-2.}
+\tag{LB.22}
+
+Together with (LB.8),
+
+\[
+\boxed{
+N_{prop}>0.017104D-o(D).
+}
+\tag{LB.23}
+
+Thus the same two full-span diameter braces cannot carry the selected backbone modulo only sublinear extra support.
+
+---
+
+## 6. Diameter support changes at at least half the internal strips
+
+Let
+
+\[
+S:=\{i\in\{1,\ldots,m-1\}:\exists h,
+\ \varepsilon_{h,i+1}\ne\varepsilon_{hi}\},
+\qquad s:=|S|.
+\tag{LB.24}
+
+These switching boundaries partition the columns `1,...,m` into `s+1` consecutive blocks.  Every incidence sequence is constant on each block.
+
+For a block `B_j`, the restriction of any diameter row is a scalar sign times
+
+\[
+(r_h\cdot Ju_i)_{i\in B_j},
+\]
+
+which lies in the two-dimensional span of the two coordinate sequences of `Ju_i` on that block.  Therefore the entire row space of `M` lies in a space of dimension at most
+
+\[
+2(s+1).
+\]
+
+Since `rank M=m`,
+
+\[
+\boxed{
+s\ge\left\lceil{m\over2}\right\rceil-1.}
+\tag{LB.25}
+
+Using (LB.7)--(LB.8),
+
+\[
+\boxed{
+|S|>0.008552D-o(D).
+}
+\tag{LB.26}
+
+This is an exact support-distribution conclusion, not a weighted-average statement.
+
+---
+
+## 7. Switching strips localize distinct loaded diameter endpoints
+
+If a diameter edge changes incidence between adjacent path edges `tau_i,tau_{i+1}`, its endpoint-region path contains exactly one of those two backbone edges.  Hence that path enters or leaves the backbone at their common dual vertex `v_i`.  At least one diameter endpoint therefore lies in a complement region whose unique projection to the backbone is `v_i`.
+
+One physical endpoint has only one projection vertex.  Distinct switching indices have distinct `v_i`.  Consequently (LB.25) forces at least
+
+\[
+\boxed{
+\left\lceil{m\over2}\right\rceil-1
+}
+\]
+
+distinct actual diameter endpoints localized at distinct internal dual positions.  C65 makes all of them loaded positive-core vertices.
+
+In the live band this gives
+
+\[
+\boxed{
+>0.008552D-o(D)
+}
+\tag{LB.27}
+
+distinct loaded diameter endpoints distributed through the backbone strips.
+
+This statement is deliberately topological: it does not yet claim an `O(1)` Euclidean distance from such a loaded endpoint to the crossing of `gamma` with the corresponding leaf train.
+
+---
+
+## 8. Frontier effect
+
+After the two-leaf energy exclusion, the only part of the old `t<=1.844` rectangle band still relevant is
+
+\[
+1.8436<t\le1.844.
+\]
+
+The current structural normal form in that surviving band can now be stated without the smaller block extraction:
+
+```text
+one center train
+x
+>0.017104 D consecutive smallest-leaf O-O cuts
++
+>=0.017104 D-o(D) proper-interval actual diameter edges
++
+>=0.008552 D-o(D) distinct strips where diameter support starts/stops
++
+>=0.008552 D-o(D) distinct loaded endpoints at distinct dual positions
++
+TV of all KKT cut resultants <=2D
++
+some adjacent resultants differ by <117+o(1).
+```
+
+This materially narrows the reuse obstruction identified by the rectangle work.  What remains is to turn dual localization into metric localization or multiplier mass.  The exact inverse-`D` phase-collapse theorem and the common center train are the natural geometric inputs for that next step.
+
+No theorem-state promotion is requested.  C-II and Level I remain open.

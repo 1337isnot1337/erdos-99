@@ -1,0 +1,86 @@
+<!-- theorem-state: {"artifact_id":"ART-41CA6392E978","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Audit — Target B dense phase-grid extraction correction
+
+**Date:** 2026-09-05  
+**Candidate:** `docs/reports/target_b_dual_tree_dense_grid_extraction_correction_2026-09-05.md`  
+**Verdict:** PASS.  
+**Supersedes:** the interval-neighborhood check in `target_b_unique_max_phase_stability_audit_2026-09-05.md` and every downstream audit that cites it without an independent linear-stack theorem.  
+**Global LEVEL I status:** STILL OPEN.
+
+## 1. Original interval claim
+
+The sentence
+
+> pairwise noncrossing proper tracks split the disk into a linear chain of regions
+
+is false in that generality. Three or more disjoint proper crosscuts can cut off separate boundary caps, giving a branching complement dual.
+
+Therefore the original US1 proof is rejected unless an additional common-stack hypothesis is supplied.
+
+## 2. Complement dual
+
+For `b` pairwise disjoint proper crosscuts in a disk, adding the arcs one at a time increases the complement-component count by one. The complement has `b+1` regions. Its region/arc dual is connected with `b` edges and `b+1` vertices, hence is a tree.
+
+PASS.
+
+## 3. Crossing set of one train
+
+A second proper train traverses complement regions and crosses a dual edge exactly when it crosses the corresponding `B` train. Train pairs cross at most once, so no dual edge repeats. An edge-simple trail in a tree is a simple path.
+
+Thus every crossing set is a path in the complement dual.
+
+PASS.
+
+## 4. Dense pair creates an almost-spanning backbone
+
+If the missing crossing density is
+
+`epsilon=q/(Mb)->0`,
+
+averaging gives one `A` train crossing at least `(1-epsilon)b` `B` tracks. Its crossing path therefore supplies a dual-tree backbone containing all but `epsilon b` `B` edges.
+
+PASS.
+
+## 5. Other crossing sets become intervals on the backbone
+
+The intersection of two simple paths in a tree is connected. Hence every other `A` train crosses a consecutive subpath of the chosen backbone.
+
+This is the correct interval theorem and requires no global path structure for the original `B` dual.
+
+PASS.
+
+## 6. Markov and central trimming
+
+Choose `eta->0` with `epsilon/eta->0`. At most `(epsilon/eta)M=o(M)` `A` trains miss more than `eta b` `B` tracks. Every retained train's backbone interval misses at most `eta b` backbone edges total, so it contains the common central subpath obtained by deleting `eta b` edges from each end.
+
+The central path has
+
+`b-o(b)`
+
+edges, and the retained `A` family has
+
+`M-o(M)`
+
+tracks. Mutual crossing is complete.
+
+PASS.
+
+## 7. Downstream use
+
+The unique-max, balanced, and two-max phase reports invoke the disputed interval lemma only after their graph-theoretic stability steps have produced one coherent phase pair with `o(Mb)` missing crossings. Coherent phase classes are internally pairwise noncrossing. Therefore the corrected theorem supplies the same complete grid required by the trimmed-grid diameter argument.
+
+No other step in those reports depends on the false claim that the entire original phase family is globally linearly nested.
+
+Accordingly their diameter conclusions are retained **after substitution of the dual-tree extraction theorem**.
+
+## 8. Canonical warning
+
+Future Target B arguments must not use
+
+`pairwise noncrossing proper train family => complement dual is a path`
+
+without a separate hypothesis. The safe statements are:
+
+- complement dual is a tree;
+- one train's crossing set is a path in that tree;
+- a near-complete bipartite crossing pair forces an almost-spanning backbone path and hence an almost-full complete grid.

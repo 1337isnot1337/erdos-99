@@ -1,0 +1,74 @@
+#!/usr/bin/env python3
+"""Arithmetic checker for the nine-no-root k=5 reduction."""
+
+from math import ceil
+
+
+def profiles(D):
+    out = []
+    for d in range(10):
+        p = D - 9 - 3*d + 15
+        if p >= 0:
+            out.append((d, p))
+    return out
+
+
+def weights(D):
+    return tuple(ceil((3*j-D)/2) for j in range(1, 5))
+
+
+def puncture(D, s, q):
+    return (9-s, 5-s+q, D+2*s-3*q)
+
+
+def touched_max(d_root, p, d1):
+    cmax = 10 + d_root
+    return max(
+        h for h in range(37)
+        if 36 >= h + (d1-1)*max(0, h-cmax-p)
+    )
+
+
+def main():
+    assert profiles(-2) == [(0, 4), (1, 1)]
+    assert profiles(-1) == [(0, 5), (1, 2)]
+    assert weights(-2) == (3, 4, 6, 7)
+    assert weights(-1) == (2, 4, 5, 7)
+
+    assert puncture(-2, 4, 2) == (5, 3, 0)
+    assert puncture(-2, 5, 2) == (4, 2, 2)
+    assert puncture(-1, 4, 2) == (5, 3, 1)
+
+    assert puncture(-2, 4, 3)[2] < 0
+    assert puncture(-2, 5, 3)[2] < 0
+    assert puncture(-1, 4, 3)[2] < 0
+
+    sharpened = {
+        (-2, 0, 4): (3, 5, 6, 7),
+        (-2, 1, 1): (3, 6, 7, 8),
+        (-1, 1, 2): (2, 5, 6, 7),
+    }
+    assert sharpened[(-2, 0, 4)] == (3, 5, 6, 7)
+    assert sharpened[(-2, 1, 1)] == (3, 6, 7, 8)
+    assert sharpened[(-1, 1, 2)] == (2, 5, 6, 7)
+
+    assert touched_max(0, 4, 3) == 21
+    assert touched_max(1, 1, 3) == 20
+    assert touched_max(0, 5, 2) == 25
+    assert touched_max(1, 2, 2) == 24
+
+    print("PASS: nine-no-root k=5 arithmetic reduction")
+    print("D=-2", profiles(-2), "base weights", weights(-2))
+    print("D=-1", profiles(-1), "base weights", weights(-1))
+    print("sharpened", sharpened)
+    print("touched maxima", {
+        (-2, 0, 4): 21,
+        (-2, 1, 1): 20,
+        (-1, 0, 5): 25,
+        (-1, 1, 2): 24,
+    })
+    print("D=-1,d_root=0,p=5: d2=4 forces the sharp five-row p=5,D=1 boundary")
+
+
+if __name__ == "__main__":
+    main()

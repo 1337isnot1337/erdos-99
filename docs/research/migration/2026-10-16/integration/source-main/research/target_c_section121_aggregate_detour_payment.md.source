@@ -1,0 +1,404 @@
+# Target C — Section 121: exact global payment for the aggregate two-arc detour
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** unreviewed proof-only research candidate.  
+**Base:** `b8c040f94899b886a7183abfc5c39ae82b1c7c8a`.  
+**Dependencies:** canonical Sections 62, 75, 82, 83; proof-only Section 116 and hostile-audited proof-only Section 120.
+
+Section 120 proves that the Type-II full-core branch must pay a linear aggregate
+harmonic-cell detour
+
+\[
+E_\Sigma:=\sum_r\bigl(L_r+P_{{\rm exc},r}-2d_r\bigr),
+\qquad
+\liminf {E_\Sigma\over D}\ge {\pi\over2}(2-\sqrt3).
+\]
+
+Its hostile audit correctly leaves one globalization problem open: different harmonic
+induced graphs may reuse loaded boundary data, so the left side is not yet one
+injective global boundary quantity.
+
+This section resolves the purely combinatorial part of that payment problem. It proves
+three finite statements:
+
+1. every local strict-rhombus face is one physical global strict rhombus, and no such
+   rhombus is counted by two harmonic cells;
+2. a loaded-loaded contact is used by at most one harmonic cell when it is a force-hull
+   side, and by at most two harmonic cells otherwise;
+3. the entire aggregate detour has an exact source-level face-incidence identity.
+
+The remaining obstruction after these reductions is geometric, not bookkeeping: one
+still needs a closing upper bound on the surviving global defect currency or a
+source-preserving deformation.
+
+---
+
+## 121.1 Notation
+
+Use the canonical post-ZF notation. For every unloaded positive-contact component
+`I_r`, let
+
+\[
+A_r\subset B,
+\qquad P_r=\operatorname{conv}(A_r),
+\qquad d_r=\operatorname{diam}(P_r),
+\]
+
+and let `H_r` be the induced positive-contact graph on `I_r\cup A_r`, including every
+loaded-loaded unit contact whose two endpoints lie in `A_r`.
+
+Write
+
+- `M_r=|E(H_r)|`;
+- `R_r` for the number of bounded quadrilateral faces of `H_r`;
+- `L_r` for the occurrence-counted outer-face walk length;
+- `P_{{\rm exc},r}` for the total boundary degree of bounded nonquadrilateral faces;
+- `c_r` for the loaded-loaded contacts whose endpoints both lie in `A_r`.
+
+Put
+
+\[
+R_{\rm loc}:=\sum_rR_r,
+\qquad
+C_{\rm att}:=\sum_rc_r,
+\qquad
+d_\Sigma:=\sum_rd_r.
+\tag{121.1}
+\]
+
+For the full positive-contact core write
+
+- `R_4` for the number of bounded strict-rhombus faces;
+- `f` for the number of bounded nonquadrilateral faces;
+- `e_{BB}` for the loaded-loaded contact count;
+- `q=|B|`;
+- `k=d_H+s_Z`.
+
+Finally let `m_B` be the number of nonunit force-hull sides and `c_B` the number of
+loaded-loaded unit contacts beyond the unit force-hull sides, so canonical Section 75
+records
+
+\[
+e_{BB}=q-m_B+c_B.
+\tag{121.2}
+\]
+
+---
+
+## 121.2 A local strict rhombus is a physical global rhombus
+
+### Lemma 121.1 — no omitted source point can lie in a strict unit rhombus
+
+Let `R` be a unit rhombus in a unit-separated triangle-free source. Then the interior
+of `R` contains no other source point.
+
+### Proof
+
+Let `o` be the center of `R`. Triangle-freeness and unit separation make both
+diagonals strictly longer than one. Since `R` is a nondegenerate unit rhombus, both
+half-diagonals are nevertheless strictly shorter than one.
+
+Join `o` to the four vertices. This decomposes `R` into four triangles. Every such
+triangle has one side equal to a side of `R`, hence of length one, and its two other
+sides are half-diagonals, hence strictly shorter than one. Therefore each closed
+triangle has diameter one. A point in its relative interior is at distance strictly
+less than one from each endpoint of its unit side. A point in the relative interior of
+a rhombus side is likewise at distance strictly less than one from a side endpoint.
+Thus no distinct source point can lie in the interior of `R` or in the relative
+interior of one of its sides. `square`
+
+### Lemma 121.2 — local-to-global rhombus injection
+
+Every quadrilateral face counted by some `R_r` is a bounded strict-rhombus face of the
+full positive-contact core. Moreover the same physical rhombus is counted by at most
+one index `r`.
+
+### Proof
+
+Canonical Section 82 classifies every quadrilateral face of `H_r` as a strict unit
+rhombus. Lemma 121.1 excludes every omitted source vertex from its interior. A full
+positive-contact edge cannot properly cross one of its unit sides by planarity, and
+there is no omitted endpoint inside the rhombus from which an additional contact chord
+could arise. Hence the same four-cycle is a face of the full positive-contact core.
+
+Suppose one physical rhombus were counted by both `H_r` and `H_s`.
+
+If it has an unloaded vertex, that vertex belongs to both `I_r` and `I_s`, because
+unloaded vertices are never attachment vertices. Hence `r=s`.
+
+If all four vertices are loaded, all four belong to `A_r\cap A_s`. Canonical Section
+83's incidence argument forbids two distinct harmonic components from sharing three
+loaded attachments: contracting the two components and retaining the six incidences
+to three shared loaded vertices would violate the planar bound
+`e<=q+2c-2`. Four shared attachments are therefore impossible. Again `r=s`.
+
+Thus
+
+\[
+\boxed{R_{\rm loc}\le R_4.}
+\tag{121.3}
+\]
+
+The same proof is area-preserving: if `A_{4,r}^{\rm loc}` denotes the total area of
+all local strict-rhombus faces of `H_r`, then
+
+\[
+\boxed{
+\sum_r A_{4,r}^{\rm loc}
+\le A_4,
+}
+\tag{121.4}
+\]
+
+with no repeated physical rhombus. `square`
+
+### Consequence for Section 120
+
+Proof-only Section 116 applies to the full local strict-rhombus area, so before any
+discarding one has the finite inequality
+
+\[
+\boxed{
+E_\Sigma
+\ge(4-2\sqrt3)
+\sum_r{A_{4,r}^{\rm loc}\over d_r}.
+}
+\tag{121.5}
+\]
+
+Every unloaded-only global rhombus is still present in exactly one local graph by the
+Section-120 hostile audit. Hence
+
+\[
+A_4^0\le\sum_rA_{4,r}^{\rm loc}\le A_4.
+\tag{121.6}
+\]
+
+Thus (121.5) is a finite strengthening of Section 120, although the additional
+loaded-touching area is only `O(D)` in the Type-II limit and does not by itself improve
+the asymptotic coefficient.
+
+---
+
+## 121.3 Loaded-contact reuse is at most two, and hull-side reuse is at most one
+
+For a loaded-loaded contact `uv`, put
+
+\[
+\nu(uv):=\#\{r:u,v\in A_r\}.
+\tag{121.7}
+\]
+
+Then
+
+\[
+C_{\rm att}=\sum_{uv\in E_{BB}}\nu(uv).
+\tag{121.8}
+\]
+
+### Lemma 121.3 — contact multiplicity
+
+If `uv` is a force-hull side, then `nu(uv)<=1`. For every other loaded-loaded contact,
+`nu(uv)<=2`.
+
+### Proof
+
+Canonical Section 83 gives pairwise interior-disjoint convex cells `P_r`.
+
+First suppose `uv` is a side of the strictly convex force hull `F`. Its endpoints are
+consecutive loaded hull vertices. Whenever `u,v\in A_r`, the segment `uv` is therefore
+a side of `P_r`. All cells lie in the same closed half-plane bounded by the hull-side
+line. Two positive-area convex polygons that share the full side `uv` and lie on the
+same side of its line have intersecting interiors in every sufficiently small one-sided
+neighborhood of a relative-interior point of `uv`. Thus two distinct cells cannot both
+contain that hull side.
+
+Now suppose `uv` is not a force-hull side. If `uv` is a diagonal of one `P_r`, its
+relative interior lies in `int(P_r)`. Any second cell containing both endpoints also
+contains the segment `uv`; whether that segment is a side or a diagonal of the second
+cell, the two cell interiors then intersect near a relative-interior point of `uv`.
+So multiplicity greater than one is possible only when `uv` is a side of every cell
+that uses it. Interior-disjoint convex cells sharing one side can occupy at most one
+cell on each side of the supporting line. Hence there are at most two. `square`
+
+There are exactly `q-m_B` unit force-hull sides, while `c_B` counts the other
+loaded-loaded contacts. Therefore
+
+\[
+\boxed{
+C_{\rm att}
+\le(q-m_B)+2c_B
+=e_{BB}+c_B.
+}
+\tag{121.9}
+\]
+
+This is the promised global payment theorem for loaded-contact reuse.
+
+---
+
+## 121.4 Exact aggregate face-incidence identity
+
+For one connected plane graph `H_r`, face-edge handshaking gives
+
+\[
+2M_r=L_r+4R_r+P_{{\rm exc},r}.
+\]
+
+Hence
+
+\[
+L_r+P_{{\rm exc},r}-2d_r
+=2M_r-4R_r-2d_r.
+\tag{121.10}
+\]
+
+The non-loaded-loaded positive contacts occur in exactly one harmonic induced graph,
+so
+
+\[
+\sum_rM_r=e_C-e_{BB}+C_{\rm att},
+\tag{121.11}
+\]
+
+where `e_C` is the full positive-contact edge count on the nonisolated core.
+
+Canonical mixed-rigidity and the exact full face ledger give
+
+\[
+e_C=2m-2-q+k,
+\qquad
+m=R_4+f+q-k+1,
+\]
+
+and therefore
+
+\[
+\boxed{e_C=2R_4+2f+q-k.}
+\tag{121.12}
+\]
+
+Put
+
+\[
+\Delta_R:=R_4-R_{\rm loc}\ge0.
+\tag{121.13}
+\]
+
+Summing (121.10) and using (121.11)--(121.13) yields the exact finite identity
+
+\[
+\boxed{
+E_\Sigma
+=4\Delta_R+4f
++2\bigl(q-k-e_{BB}+C_{\rm att}\bigr)
+-2d_\Sigma.
+}
+\tag{121.14}
+\]
+
+This equality is the source-level form of the Section-120 detour demand.
+
+Using (121.9),
+
+\[
+\boxed{
+E_\Sigma
+\le4\Delta_R+4f+2(q-k+c_B)-2d_\Sigma.
+}
+\tag{121.15}
+\]
+
+Canonical Section 75 gives the exact identity
+
+\[
+m_B+k=c_I+c_B+s_C+2.
+\tag{121.16}
+\]
+
+Eliminating `c_B` from (121.15) gives the cleaner global-payment upper bound
+
+\[
+\boxed{
+E_\Sigma
+\le
+4\Delta_R+4f
++2(q+m_B-c_I-s_C-2)
+-2d_\Sigma.
+}
+\tag{121.17}
+\]
+
+No harmonic-cell boundary occurrence appears on the right side. Every term is a
+global source/core quantity or the sum of actual cell diameters.
+
+---
+
+## 121.5 Composition with the Section-120 lower bound
+
+Combining hostile-audited proof-only Section 120 with (121.17), every Type-II survivor
+sequence must satisfy
+
+\[
+\boxed{
+\liminf_{D\to\infty}{1\over D}
+\left[
+4\Delta_R+4f
++2(q+m_B-c_I-s_C-2)
+-2d_\Sigma
+\right]
+\ge {\pi\over2}(2-\sqrt3).
+}
+\tag{121.18}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+\liminf {1\over D}
+\left[
+2\Delta_R+2f+q+m_B-c_I-s_C-2-d_\Sigma
+\right]
+\ge {\pi\over4}(2-\sqrt3).
+}
+\tag{121.19}
+\]
+
+This is a necessary source-level inequality for any surviving Type-II sequence.
+
+---
+
+## 121.6 Hostile scope check and exact remaining obstruction
+
+The new statements do **not** close C-II.
+
+1. `Delta_R` is only known to be boundary order. Every unloaded-only global rhombus is
+   local, so `Delta_R` is supported on loaded-touching rhombi and is `O(D)`, but the
+   current coefficient is not small enough to discard it in (121.18).
+2. The exceptional-face count `f` and nonunit hull-side count `m_B` are also allowed
+   to be linear outside the near-endpoint slack regimes.
+3. The negative term `d_Sigma` is useful but no current all-regime theorem forces it
+   large enough relative to the positive defect terms.
+4. Contact-isolated source points never enter the derivation. They remain in the full
+   source exactly as required by the canonical normalization.
+5. No KKT coefficient floor, rejected cap containment, incident-diameter Euler path,
+   or full-source ZR/ZF extension is used.
+
+The aggregate-multiplicity problem from the Section-120 audit is therefore partly
+resolved: loaded contact reuse and local rhombus reuse are now paid exactly. The live
+closure target is narrower:
+
+\[
+\boxed{
+4\Delta_R+4f+2(q+m_B-c_I-s_C-2)-2d_\Sigma
+< {\pi\over2}(2-\sqrt3)D
+}
+\]
+
+from global minimality or another structural theorem would contradict Section 120.
+Alternatively it is enough to derive a deformation whenever the left side has the
+required positive linear size.
+
+**Disposition:** unreviewed proof-only candidate; theorem authority unchanged.

@@ -1,0 +1,66 @@
+# Target C — universal PSD and null-face selection frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+> **Update (2026-09-09):** The C53 pentagon rejection is withdrawn. The
+> [restoration audit](56-ci-restored-frontier.md) supplies universal selected-stress
+> PSD and closes C-I directly by C63. Generic PSD face-selection warnings remain
+> binding; the audit's stronger common-kernel conclusion uses C-II lexicographic
+> finite optimality.
+
+Historical draft (conditional): [target_c_universal_psd_null_face_selection_2026-08-31.md](../../reports/target_c_universal_psd_null_face_selection_2026-08-31.md).
+
+## C54.1 — universal PSD now includes one-dimensional stresses
+
+C53's `Omega_s>=0` statement is restored by the September 9 dependency audit.
+
+If a selected positive diameter endpoint hull is one-dimensional, it has exactly two source hull vertices and one positive diameter edge. Projecting positive-contact equilibrium perpendicular to that diameter forces the entire connected positive contact graph onto the same line. It is exactly a consecutive unit chain from one diameter endpoint to the other. Its common contact stress is `D`, and
+
+`z^T Omega_s z = D sum(delta_r^2) - (sum delta_r)^2 >= 0`
+
+by Cauchy-Schwarz.
+
+Therefore
+
+`Omega_s>=0`
+
+for **every** normalized KKT stress, with no support-selection or dimension exception.
+
+## C54 — one extreme null stress controls the whole critical-cone span
+
+Let `S` be the normalized KKT polytope and let
+
+`q_s(v)=tr(V^T Omega_s V)`.
+
+C13.3 says that for every fixed-diameter critical velocity `v`, some normalized stress has `q_s(v)<=0`. Universal PSD gives `q_s(v)>=0` for every stress. Hence
+
+`min_(s in S) q_s(v)=0`.
+
+The minimum of this linear functional of `s` occurs at an extreme point of `S`. Thus every critical velocity belongs to the zero-energy velocity kernel of at least one extreme KKT stress.
+
+There are only finitely many extreme stresses. Their linear zero-energy subspaces cover the polyhedral critical cone. A finite union of proper linear subspaces cannot cover a relatively open subset of the cone's linear span. Therefore one extreme normalized KKT stress `s^dagger` satisfies
+
+`Omega_(s^dagger) V_x = Omega_(s^dagger) V_y = 0`
+
+for **every** critical velocity.
+
+By C6, the linear span of the critical cone is exactly
+
+`{v : phi_e(v)=0 for every strong active constraint e in E_*}`,
+
+the infinitesimal-flex space of the maximal strong mixed framework.
+
+Hence one extreme PSD KKT stress annihilates every infinitesimal flex of `C_* union H_*`.
+
+Equivalently, if a basis of that flex space is fixed, the stresses annihilating all basis flexes form a nonempty exposed face of the normalized KKT polytope. This is the **second-order null face**.
+
+## Exact C-I bottleneck after C54
+
+The direction-dependent stress-selection problem has been removed. The remaining task is kernel rigidity inside one exposed KKT face:
+
+- prove the null face contains a stress whose kernel forces all strong diameter angular rates to agree; or
+- prove that a nontrivial shear flex cannot be annihilated by every stress in the null face.
+
+Either conclusion gives a relative-interior weak-release velocity with common diameter angular rate, and C7 then integrates it to a same-diameter minimizer with fewer contacts.
+
+C54 does not say the null face has maximal support, and it does not say the scalar stress kernel is only `span{1,x,y}`. Those are the live issues.

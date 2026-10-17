@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+"""Exact certificate for a finite-window finite-defect strip through t<=1.86596."""
+from fractions import Fraction as Q
+from math import isqrt
+
+
+def atan_inv_bounds(q,n):
+    s=Q(0)
+    for k in range(n):
+        term=Q(1,(2*k+1)*q**(2*k+1))
+        s += term if k%2==0 else -term
+    nxt=Q(1,(2*n+1)*q**(2*n+1))
+    return (s,s+nxt) if n%2==0 else (s-nxt,s)
+
+
+def sqrt_bounds(lo,hi,scale):
+    a=isqrt((lo.numerator*scale*scale)//lo.denominator)
+    b=isqrt((hi.numerator*scale*scale)//hi.denominator)
+    return Q(a,scale),Q(b+1,scale)
+
+S=10**110
+a5l,a5h=atan_inv_bounds(5,100)
+a239l,a239h=atan_inv_bounds(239,30)
+pi_lo,pi_hi=16*a5l-4*a239h,16*a5h-4*a239l
+n3=isqrt(3*S*S)
+s3lo,s3hi=Q(n3,S),Q(n3+1,S)
+Dlo,Dhi=pi_lo/(2*s3hi),pi_hi/(2*s3lo)
+sDlo,_=sqrt_bounds(Dlo,Dhi,S)
+C76lo=2*sDlo+Q(19,2500)
+
+T=Q(46649,25000)       # 1.86596
+path=Q(17,1000000)     # 0.000017
+
+U0hi=Q(9,2)*T-2*pi_lo
+delta_hi=(U0hi-C76lo)/2
+assert 0<delta_hi<Q(101,1000)
+
+Q_upper=2*T-pi_lo
+terminal_upper=2*T+4*Q_upper
+switch_upper=2*pi_hi
+kkt_upper=Q(2)
+outer_window_upper=pi_hi+delta_hi
+combined=terminal_upper+switch_upper+kkt_upper+outer_window_upper
+ratio=combined/path
+
+assert terminal_upper<Q(6094,1000)
+assert switch_upper<Q(6284,1000)
+assert outer_window_upper<Q(3243,1000)
+assert combined<Q(17619,1000)
+assert ratio<1036395
+
+print('PASS: finite-window finite-defect strip through t<=1.86596')
+for k,v in [
+    ('delta upper',delta_hi),('terminal upper',terminal_upper),
+    ('switch upper',switch_upper),('KKT scaled upper',kkt_upper),
+    ('outer-window global density upper',outer_window_upper),
+    ('combined density upper',combined),('average ratio',ratio),
+    ('margin to 1036395',Q(1036395)-ratio),
+]: print(k,'=',float(v))

@@ -1,0 +1,325 @@
+# Target C-II — `g=0.0077` residual stability raises the full-core floor to `1.843577`
+
+**Date:** 2026-09-15  
+**Status:** proof-only downstream strengthening  
+**Scope:** full-core Type-II branch  
+**Dependencies:** corrected scope-safe `g=0.0077` phase-star capacity; `g=0.0076` residual-coupled scalar theorem; hostile-audited joint endpoint retention and complement-rhombus incidence  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current residual-coupled theorem uses the matched atomic input
+
+\[
+C_{76}=2\sqrt{\Delta_2}+0.0076,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+\]
+
+and proves
+
+\[
+\liminf {q-k\over D}\ge1.843555.
+\]
+
+The corrected three-branch phase-star capacity now gives the stronger safe input
+
+\[
+\boxed{C_{77}=2\sqrt{\Delta_2}+0.0077.}
+\tag{R77.1}
+\]
+
+The residual-stability and feasible-triangle arguments survive with the same convenient
+constant `c=1.05`.  Substituting `C77` and certifying the new corner gives
+
+\[
+\boxed{
+\liminf_{D\to\infty}{q-k\over D}\ge1.843577.
+}
+\tag{R77.2}
+\]
+
+A non-load-bearing high-precision solve of the corner equation is
+
+\[
+t_*=1.8435775982814395\ldots .
+\]
+
+Only the rationally certified value `1.843577` is claimed.
+
+---
+
+## 1. Residual stability at `C77`
+
+Write
+
+\[
+t={q-k\over D},\qquad
+\kappa={k\over D},\qquad
+\delta={d_{out}\over D},
+\]
+
+and
+
+\[
+U={9t\over2}-2\pi-2\delta-\kappa/2.
+\tag{R77.3}
+\]
+
+Let `M` be the mass of a dominant exact projective `pi/3` orbit and put
+
+\[
+h:=U-C_{77},\qquad R:=U-M.
+\]
+
+The corrected `g=.0077` theorem proves that the full physical one-orbit capacity
+`Psi(W)` is strictly below `Delta2` at `W=C77`.  On the only interval needed when
+`M<C77`, namely the generic two-bin localization range below `C77`, the exact branch
+derivatives give the uniform lower slope
+
+\[
+\boxed{
+\Psi(C_{77})-\Psi(W)>0.596(C_{77}-W).
+}
+\tag{R77.4}
+\]
+
+The strong branch actually has derivative above `0.6058`; the fallback and high-center
+branches are larger.  The rounded `0.596` is used only to keep the stability algebra
+transparent.
+
+As in the `g=.0076` theorem, the generic two-bin bound on the whole live range
+`U<=2.013` gives
+
+\[
+R<0.112.
+\tag{R77.5}
+\]
+
+The exact orbit decomposition gives
+
+\[
+\Delta_2\le\Psi(M)+{R^2\over4}.
+\tag{R77.6}
+\]
+
+If `M>=C77`, then `R<=h`.  If `M<C77`, combine (R77.4)--(R77.6) and discard the
+additional positive endpoint margin at `C77` to obtain
+
+\[
+0.596(C_{77}-M)<{R^2\over4}.
+\]
+
+Since `C77-M=R-h`,
+
+\[
+R-h<{R^2\over4(0.596)}.
+\]
+
+Using (R77.5),
+
+\[
+R
+< {h\over1-0.112/[4(0.596)]}
+<1.05h.
+\]
+
+Therefore throughout `C77<=U<=2.013`,
+
+\[
+\boxed{0\le U-M\le1.05(U-C_{77}).}
+\tag{R77.7}
+\]
+
+This is the only new stability input required downstream.
+
+---
+
+## 2. The residual-coupled survivor system is unchanged
+
+Put
+
+\[
+x={\kappa\over2},\qquad c=1.05.
+\]
+
+Equation (R77.3) becomes
+
+\[
+\boxed{
+2\delta+x+h
+=R_t:={9t\over2}-2\pi-C_{77}.
+}
+\tag{R77.8}
+\]
+
+Exactly as in the hostile-audited `g=.0076` scalar theorem, shared routewise retention
+and (R77.7) give retained dominant outer-occurrence mass `z` and complement O--O pair
+mass `p` satisfying
+
+\[
+z+p\ge\pi-{t\over2}-x-ch-o(1).
+\tag{R77.9}
+\]
+
+The complement-rhombus incidence budget is at most the square of the same residual:
+
+\[
+p(1-\delta)-{e_c\over2}
+\le {c^2h^2\over2}+o(1).
+\tag{R77.10}
+\]
+
+If
+
+\[
+F(z)=z-6\sin(z/6),
+\]
+
+then the retained dominant occurrences consume at least `F(z)D-o(D)` of the exact outer
+directional energy, and the selected dominant and complement supports are disjoint.  Thus
+
+\[
+e_c\le\delta-F(z)+o(1),
+\tag{R77.11}
+\]
+
+and every survivor satisfies `F(z)<=delta+o(1)`.
+
+Eliminating `p` gives the same survivor-capacity function as before:
+
+\[
+Q(t,h,x)=
+F^{-1}(\delta)
++{c^2h^2\over2(1-\delta)}
+-\left(\pi-{t\over2}-x-ch\right),
+\tag{R77.12}
+\]
+
+with
+
+\[
+\delta={R_t-x-h\over2}.
+\]
+
+Survival requires
+
+\[
+Q(t,h,x)\ge0.
+\tag{R77.13}
+\]
+
+---
+
+## 3. The full feasible triangle again collapses to one corner
+
+For `t<=1.843577`, the exact verifier proves
+
+\[
+U<2.013,\qquad
+\delta<0.051,\qquad
+h<0.101.
+\tag{R77.14}
+\]
+
+On `0<=z<=pi`,
+
+\[
+F'(z)=1-\cos(z/6)<0.134.
+\]
+
+Therefore the derivatives used by the `g=.0076` proof remain valid without any change
+of sign.  In particular,
+
+\[
+Q_x
+=-{1\over2F'(F^{-1}\delta)}
+-{c^2h^2\over4(1-\delta)^2}+1
+<-2.7,
+\tag{R77.15}
+\]
+
+and
+
+\[
+Q_h
+=-{1\over2F'(F^{-1}\delta)}
++c+{c^2h\over1-\delta}
+-{c^2h^2\over4(1-\delta)^2}
+<-2.5.
+\tag{R77.16}
+\]
+
+Also `Q_t>0`.  Hence, for fixed `t`, survivor capacity is maximized at
+
+\[
+\boxed{x=0,\qquad h=0.}
+\tag{R77.17}
+\]
+
+Thus no interior topology or residual-orbit allocation is weaker than the matched
+corner.
+
+---
+
+## 4. Exact corner certificate
+
+At the corner,
+
+\[
+\delta_0(t)
+={1\over2}\left({9t\over2}-2\pi-C_{77}\right),
+\]
+
+and survival requires
+
+\[
+\boxed{
+\delta_0(t)
+\ge F\left(\pi-{t\over2}\right).
+}
+\tag{R77.18}
+\]
+
+The exact verifier
+
+`research/verify_target_c_g0077_residual_stability_floor_1843577.py`
+
+uses only `Fraction` arithmetic, Machin enclosures for `pi`, integer-square-root bounds,
+and alternating Taylor bounds for `sin`.  It proves
+
+\[
+F\left(\pi-{1.843577\over2}\right)-\delta_0(1.843577)
+>1.36\times10^{-6},
+\tag{R77.19}
+\]
+
+so `t=1.843577` is impossible.  The same certificate proves that the corresponding
+margin at `1.843578` is negative, consistent with the numerical root
+`1.84357759828...`.
+
+Since `Q_t>0`, all smaller `t` are excluded as well.  This proves (R77.2).
+
+---
+
+## 5. Frontier effect
+
+The numerical gain is modest,
+
+\[
+1.843577-1.843555=2.2\times10^{-5},
+\]
+
+but the proof is clean: the stronger atomic theorem propagates through the complete
+correlated feasible triangle without introducing a new relaxation.
+
+At the weakest corner,
+
+\[
+U=C_{77},\qquad U-M=0,\qquad\kappa=0,
+\]
+
+so all exact atomic mass is forced into one exact three-phase orbit and the independent
+complement-rhombus budget vanishes.  The new small-leaf O--O rectangle and `>0.73D`
+center-fan theorems should therefore be attacked directly rather than further optimizing
+residual mass.
+
+No C-II or Level-I closure is claimed.

@@ -1,0 +1,97 @@
+#pragma once
+#include "k5_d0p4_geom.hpp"
+
+struct BD {
+    uint16_t occ = 0;
+    int inc = 0;
+    bool rep = false;
+};
+
+inline array<BD,35> bdata(const Multiset& ms, uint64_t& t) {
+    int mult[35] = {};
+    for (int i = 0; i < ms.n; ++i) ++mult[ms.a[i]];
+    array<BD,35> out{};
+    t = 0;
+    for (int b = 0; b < 35; ++b) {
+        int tb = 0;
+        for (int v : TRIANGLES[b]) tb |= 1 << v;
+        uint16_t occ = 0;
+        bool rep = false;
+        for (int i = 0; i < ms.n; ++i) {
+            int sb = 0;
+            for (int v : SUPPORTS[ms.a[i]]) sb |= 1 << v;
+            if ((sb & tb) != tb) continue;
+            occ |= uint16_t(1u << i);
+            if (mult[ms.a[i]] >= 2) rep = true;
+        }
+        int inc = popcount((unsigned) occ);
+        if (!inc) continue;
+        t |= 1ULL << b;
+        out[b] = {occ, inc, rep};
+    }
+    return out;
+}
+
+inline vector<int> dims(const BD& x) {
+    vector<int> d;
+    if (x.rep) {
+        if (x.inc >= 5) d.push_back(2);
+        return d;
+    }
+    if (x.inc >= 3) d.push_back(1);
+    if (x.inc >= 5) d.push_back(2);
+    return d;
+}
+
+inline bool compat(const BD& x, int dx, const BD& y, int dy) {
+    int i = popcount((unsigned) (x.occ & y.occ));
+    int u = x.inc + y.inc - i;
+    if (dx == 1 && dy == 1) return i >= 3 || u >= 5;
+    if (dx != dy) return i >= 3 || u >= 6;
+    return i >= 5 || (i >= 3 && u >= 6) || u >= 7;
+}
+
+inline bool structural(uint64_t t, uint64_t e) {
+    int h = popcount(t);
+    int ne = popcount(e);
+    int rt = trank(t);
+    int rr = trank(t & ~e);
+    int rsz = h - ne;
+    int lo = max(0, rsz - 2);
+    int hi = min({rsz, rr + 1, rt - 4});
+    return lo <= hi;
+}
+
+inline bool survives(const array<BD,35>& d, uint64_t t, long long& tests) {
+    int h = popcount(t);
+    int need = max(0, h - 13);
+    vector<int> v;
+    for (int b = 0; b < 35; ++b)
+        if ((t >> b & 1ULL) && !dims(d[b]).empty()) v.push_back(b);
+
+    vector<pair<int,int>> ch;
+    function<bool(int)> rec = [&](int at) {
+        if ((int) ch.size() + (int) v.size() - at < need) return false;
+        if ((int) ch.size() >= need) {
+            ++tests;
+            uint64_t e = 0;
+            for (auto [b, x] : ch) e |= 1ULL << b;
+            if (structural(t, e)) return true;
+        }
+        for (int j = at; j < (int) v.size(); ++j) {
+            int b = v[j];
+            for (int x : dims(d[b])) {
+                bool ok = true;
+                for (auto [c, y] : ch) {
+                    if (!compat(d[b], x, d[c], y)) { ok = false; break; }
+                }
+                if (!ok) continue;
+                ch.push_back({b, x});
+                if (rec(j + 1)) return true;
+                ch.pop_back();
+            }
+        }
+        return false;
+    };
+    return rec(0);
+}

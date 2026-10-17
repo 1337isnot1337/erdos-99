@@ -1,0 +1,218 @@
+# Target C-II — corrected uniform strong-branch orbit-capacity gap `0.0077`
+
+**Date:** 2026-09-15  
+**Status:** proof-only matched all-train/rhombic strengthening  
+**Scope:** identical to the hostile-audited `g=0.0076` theorem  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The hostile-audited corrected uniform strong-branch theorem proves the matched atomic
+floor
+
+\[
+2\sqrt{\Delta_2}+0.0076,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+\]
+
+by splitting the physical three-phase capacity into three scope-correct branches:
+
+1. a strong `1/10` pair-deficit branch below the explicit strong/fallback threshold;
+2. the unconditional `2/29` fallback while the center mass remains at most
+   `K=2/sqrt(3)`;
+3. a high-center `C>K` branch using only generic triangle-free capacity.
+
+The same analytic proof has enough exact margin to support the stronger safe round
+value
+
+\[
+\boxed{g=0.0077.}
+\]
+
+Put
+
+\[
+C_{77}:=2\sqrt{\Delta_2}+0.0077.
+\]
+
+Then, at the same proof-only scope,
+
+\[
+\boxed{
+\liminf {T-q/2\over D}\ge C_{77},
+}
+\tag{G77.1}
+
+and independently on the strict-rhombus train graph,
+
+\[
+\boxed{
+\liminf {T_R\over D}\ge C_{77},
+\qquad
+\liminf {\sigma_R\over D}\ge0.0154.
+}
+\tag{G77.2}
+
+---
+
+## 1. No change in branch logic
+
+Let `W` be one exact three-phase orbit mass, with ordered phase masses
+
+\[
+C\ge U\ge V\ge0,
+\qquad W=C+U+V.
+\]
+
+Write
+
+\[
+K={2\over\sqrt3},
+\qquad
+r_{crit}=\sqrt{20/29}.
+\]
+
+The hostile-audited proof uses exactly the following three branches.
+
+### Strong branch
+
+When the center/leaf excess ratios lie below `r_crit`, the iterative-pruning theorem
+supplies the physical missing-pair floor
+
+\[
+\rho\ge {1\over10}(a+b-K)_+^2.
+\]
+
+The resulting physical one-orbit capacity is `Psi_s(W)`.
+
+### Fallback branch
+
+Past the strong threshold but still with `C<=K`, use only the unconditional physical
+pair theorem
+
+\[
+\rho\ge {2\over29}(a+b-K)_+^2.
+\]
+
+The fallback capacity is `B_0(W)`.
+
+### High-center branch
+
+For `C>K`, no physical pair theorem is invoked.  Use only
+
+\[
+E\le C(W-C),
+\]
+
+which is maximized at `C=K` because the relevant orbit interval lies below `2K`.
+
+Thus the `0.0077` strengthening inherits the exact scope repair already hostile-audited
+at `0.0076`; it does not extend either physical pair theorem beyond its hypotheses.
+
+---
+
+## 2. Exact certificate
+
+The verifier
+
+`research/verify_target_c_uniform_strong_branch_orbit_capacity_gap_0077.py`
+
+uses exact `Fraction` arithmetic, Machin bounds for `pi`, and integer-square-root
+enclosures for every radical.  It reproduces every load-bearing derivative and branch
+comparison from the `0.0076` certificate with
+
+\[
+A_0=C_{77}.
+\]
+
+The exact outward bounds include
+
+\[
+A_0<1.912325614,
+\qquad
+M_0={4\Delta_2\over A_0}>1.896956617,
+\]
+
+and the worst center/leaf excess ratio in the strong half-orbit interval satisfies
+
+\[
+0.79236<\sqrt{20/29}=0.83045\ldots .
+\]
+
+The dominant-mass total-capacity derivative remains strictly positive:
+
+\[
+\boxed{Q_s'(W)>0.59668.}
+\tag{G77.3}
+
+The exact endpoint branch margins are
+
+\[
+\boxed{
+\Delta_2-\Psi_s(C_{77})
+>6.67\times10^{-6},
+}
+\tag{G77.4}
+
+\[
+\boxed{
+\Delta_2-B_0(C_{77})
+>1.394\times10^{-3},
+}
+\tag{G77.5}
+
+and
+
+\[
+\boxed{
+\Delta_2-B_H(C_{77})
+>3.206\times10^{-2}.
+}
+\tag{G77.6}
+
+For the strong tangent certificate the verifier uses
+
+\[
+c_0=0.935386
+\]
+
+and the strong concavity `Phi_CC<=-2`.  The outward bound on the tangent error is
+small enough that the residual strong margin remains above `6.6e-6`.
+
+Thus total exact atomic mass at most `C77` cannot carry the required strict-rhombus
+crossing density `Delta2`.  The same exposed-hull transfer used in the audited parent
+then gives (G77.1), and the rhombic-only copy gives (G77.2).
+
+---
+
+## 3. Numerical ceiling is not used
+
+A non-load-bearing floating-point solve puts the strong capacity zero near
+
+\[
+g=0.00770727\ldots .
+\]
+
+The proof does **not** claim that value.  At `g=0.0077` the exact strong margin is only
+about `6.67e-6`, so there is little useful room left in this architecture.  Further
+progress should use a new structural constraint rather than another un-audited decimal
+push.
+
+---
+
+## 4. Downstream substitution
+
+The safe matched replacement is now
+
+```text
+C_77 = 2 sqrt(Delta_2) + 0.0077,
+(T-q/2)/D >= C_77 - o(1),
+T_R/D       >= C_77 - o(1),
+sigma_R/D   >= 0.0154 - o(1).
+```
+
+The restored-incidence and residual-stability arguments can use `C77` in place of
+`C76`.  Because the exact strong endpoint margin is much smaller than at `g=.0076`, a
+residual-stability proof should retain the derivative information rather than spend the
+endpoint margin twice.
+
+**Disposition:** proved proof-only matched atomic strengthening; C-II and Level I remain open.

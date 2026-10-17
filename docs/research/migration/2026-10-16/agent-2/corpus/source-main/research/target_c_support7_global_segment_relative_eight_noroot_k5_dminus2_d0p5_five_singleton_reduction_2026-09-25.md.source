@@ -1,0 +1,17 @@
+# Target C: five-singleton reduction for D=-2,p=5
+
+Date: 2026-09-25
+
+This is a proof-level reduction of the (s,t)=(5,0) profile. No new finite computation is claimed.
+
+Let h be the number of touched singleton blocks.
+
+An untouched singleton is relation-neutral: the external cycles have zero local quotient demand there, while the selected root row has nonzero local quotient vector. Projection to that quotient forces its coefficient to vanish in every relation.
+
+If h=3, the two untouched singletons can be ignored. The three touched singleton rows form a basis of P. The touched state is contained in the exact current-main D=-1,d_root=1,p=3,m=3 census, with stronger generalized weights (3,4,6) and complete-root nullity zero. That census has external increment at most one, while this branch requires increment five. Hence h=3 is impossible.
+
+If h=4, ignore the unique untouched singleton. Of the four touched singleton lines, choose three forming a basis of P; the fourth line is redundant. Promote that fourth block to complete. P is unchanged. Modulo the new complete-root relation, the external relation rows before and after promotion agree, so r_old <= r_prom+1. Promoted complete-root nullity is at most one; for m=4 or m=5 it is exactly one by the tetrahedron-boundary restriction argument.
+
+Therefore existing exact p=3 certificates exclude m=3, m=5, and every already-certified m=4 support orbit. On current main the only (3,2,2,1) support orbit still lacking executed p=3 certificate evidence is {1234,1235,1267,1467}.
+
+Thus the five-singleton residual is reduced to h=4 on {1234,1235,1267,1467}, plus h=5. The separate D=-1,(d_root,p)=(0,6) branch remains open.

@@ -1,0 +1,67 @@
+# Target C — second-order support-duality frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_second_order_support_duality_2026-08-31.md](../../reports/target_c_second_order_support_duality_2026-08-31.md).
+
+## C62 — exact second-order analogue of C6
+
+Fix one relative-interior weak-release velocity `v`. On strong active rows define the signed second-order acceleration system
+
+`R_* a >= b(v)`,
+
+where `b_e=-|dv_e|^2` for unit contacts and `b_h=|dv_h|^2` for diameter rows.
+
+For a nonnegative equilibrium dependence `lambda=(alpha,beta)`, normalized as a KKT stress,
+
+`lambda^T b(v) = -q_lambda(v)`.
+
+Universal PSD gives `q_lambda(v)>=0` for every normalized stress, hence `lambda^T b(v)<=0` for every Farkas dual dependence. Therefore the acceleration system is feasible.
+
+Let
+
+`Z(v)={s in S : q_s(v)=0}`
+
+be the velocity-specific zero-energy KKT face, and let `E_2(v)` be the union of its supports.
+
+For a feasible acceleration define residual
+
+`rho_e(a)=R_e a-b_e>=0`.
+
+Then
+
+`e in E_2(v)`
+
+if and only if
+
+`rho_e(a)=0 for every feasible acceleration a`.
+
+The forward direction is complementary slackness with a zero-energy stress. For the converse, if row `e` is universally equal, the reverse inequality is valid on the acceleration polyhedron. Farkas gives a nonnegative equilibrium dependence with positive `e` coefficient and nonnegative pairing with `b`; universal PSD forces that pairing to zero, producing a zero-energy KKT stress with `e` positive.
+
+Thus `E_2(v)` is exactly the set of genuinely second-order-frozen rows.
+
+## Simultaneous strict quadratic release
+
+Every strong row outside `E_2(v)` has positive residual for some feasible acceleration. Averaging finitely many such accelerations gives one `a^circ` with
+
+`rho_e(a^circ)=0` on `E_2(v)`,
+
+`rho_e(a^circ)>0` on every strong row outside `E_2(v)`.
+
+Combined with relative-interior first-order release:
+
+- weak rows are strict at first order;
+- strong rows outside `E_2(v)` are strict at second order;
+- `E_2(v)` rows are forced equal through second order.
+
+## Body consequence
+
+C57-C61 apply directly to `Z(v)`, not only to the smaller global null face. Every extreme zero-energy stress is a rigid body for this fixed velocity; all distinct motion classes collapse to a common source hinge; the covered bouquet has an exact finite rotation path.
+
+So all rows requiring exact nonlinear treatment are already inside that common-hinge body bouquet.
+
+## Exact next target
+
+The only remaining C-I issue is jet stitching: reconcile the explicit bouquet path on `E_2(v)` with the strict acceleration `a^circ` on its complement. A naive replacement of the bouquet's second derivative by `a^circ` is invalid because it can alter second-order coefficients on omitted rows.
+
+Prove a path whose tangent is `v`, which preserves the `E_2(v)` equalities exactly and retains the positive quadratic margins outside `E_2(v)`. That closes Gate C-I.

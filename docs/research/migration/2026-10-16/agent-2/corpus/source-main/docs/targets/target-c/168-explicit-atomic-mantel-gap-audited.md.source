@@ -1,0 +1,293 @@
+# Target C — audited §168 explicit all-regime atomic Mantel gap
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working proof-only route theorem; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module normalizes the stronger quantitative refinement developed in
+`research/target_c_section164_explicit_atomic_gap_2026-09-12.md` and independently
+checked in its hostile audit. It supersedes the weaker `10^-4` candidate.
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+s_2:=\sqrt{\Delta_2}.
+\]
+
+For every audited-working Type-II §142 train-measure subsequential limit, with
+`x=lim T/D` and total atomic train-direction mass `sigma`, one has
+
+\[
+\boxed{x\sigma\ge 2s_2+0.0004.}
+\tag{168.1}
+\]
+
+Thus the existential constant `eta_grid` from §164 may be taken to be `0.0004`.
+No outer-detour hypothesis is used.
+
+## 168.1 Dominant orbit concentration
+
+Assume for contradiction
+
+\[
+A:=x\sigma\le \bar A:=2s_2+\eta,
+\qquad \eta=0.0004.
+\]
+
+Group atomic masses by the exact projective orbit
+`phi -> phi+pi/3 mod pi`. Let `M_r` be the absolute train mass in orbit `r` and `E_r`
+its limiting strict-rhombus crossing mass. Audited §§142 and 164 give
+
+\[
+E_r\le {M_r^2\over4},
+\qquad
+\sum_rE_r=s_2^2,
+\qquad
+\sum_rM_r=A.
+\]
+
+If `M=max_r M_r`, then
+
+\[
+4s_2^2\le\sum_rM_r^2\le MA,
+\]
+
+hence
+
+\[
+\boxed{M\ge M_0:={4s_2^2\over\bar A}.}
+\tag{168.2}
+\]
+
+The total atomic mass outside the dominant orbit is at most
+
+\[
+R_0:=\bar A-M_0,
+\]
+
+so its crossing mass is at most `R_0^2/4`. Therefore the dominant orbit carries at
+least `s_2^2-R_0^2/4` crossing mass. A conservative Mantel deficit for that orbit is
+
+\[
+\boxed{
+d_0:={\bar A^2\over4}-s_2^2+{R_0^2\over4}.
+}
+\tag{168.3}
+\]
+
+Numerically,
+
+\[
+\begin{aligned}
+s_2&=0.9523128068639574\ldots,\\
+\bar A&=1.9050256137279147\ldots,\\
+M_0&=1.9042256977162868\ldots,\\
+R_0&=0.0007999160116279\ldots,\\
+d_0&=0.0003811250891520\ldots .
+\end{aligned}
+\tag{168.4}
+\]
+
+The dominant orbit exists even with countably many atoms: a positive supremum of a
+summable family is attained after restricting to the finite set above half that
+supremum.
+
+## 168.2 Quantitative finite Mantel stability
+
+Freeze sufficiently small continuity windows around the at most three atoms of the
+dominant orbit, then choose a sufficiently far finite source as in §164. The induced
+triangle-free crossing graph has
+
+\[
+N=(M+o(1))D
+\]
+
+vertices and at least
+
+\[
+\left({M^2\over4}-d_0-o(1)\right)D^2
+\]
+
+edges.
+
+Choose a maximum-degree vertex, put its neighborhood in `X`, and set `Y=V\setminus X`.
+Triangle-freeness makes `X` independent. If `e_Y` is the number of edges inside `Y`,
+maximum degree gives
+
+\[
+e+e_Y\le |X||Y|\le {N^2\over4}.
+\]
+
+Hence
+
+\[
+\left||X|-{N\over2}\right|\le(\sqrt{d_0}+o(1))D,
+\tag{168.5}
+\]
+
+and the number of missing `X`--`Y` pairs is at most
+
+\[
+(2d_0+o(1))D^2.
+\tag{168.6}
+\]
+
+For each of the three atom windows write normalized shore populations `x_i,y_i`.
+Same-window pairs cannot cross once the windows have projective diameter below `pi/3`,
+so
+
+\[
+\sum_i x_i y_i\le2d_0+o(1).
+\]
+
+Assign each atom window to its majority shore and discard the minority population.
+Using
+
+\[
+\sum_i\min(x_i,y_i)
+\le \sqrt{3\sum_i x_i y_i},
+\]
+
+the total discarded atom mass is at most `sqrt(6d_0)+o(1)`. Thus each shore retains
+assigned atom mass at least
+
+\[
+\boxed{
+S_0={M_0\over2}-\sqrt{d_0}-\sqrt{6d_0}
+=0.8847704430706024\ldots .
+}
+\tag{168.7}
+\]
+
+There are at most three atom windows and both shores retain positive mass. Hence one
+opposite-shore atom family has size at least `S_0D-o(D)` and another has size at least
+`S_0D/2-o(D)`. Their limiting axes differ by exactly `pi/3` and their missing cross-pair
+count is still at most `(2d_0+o(1))D^2`.
+
+## 168.3 Pay separately for phase order and degree pruning
+
+Put
+
+\[
+p_0:=\sqrt{2d_0}
+=0.0276088786136620\ldots .
+\tag{168.8}
+\]
+
+For projective lifts centered at axes differing by `pi/3`, every phase inversion is a
+missing pair. The tie-safe Markov threshold argument from §163 therefore deletes at
+most `p_0D+o(D)` trains from each family to obtain strict phase order.
+
+This loss is distinct from the degree-pruning loss. After phase pruning, delete every
+train missing more than `p_0D+o(D)` opposite trains. Since the total missing-pair count
+is at most `(2d_0+o(1))D^2`, this removes at most another `p_0D+o(D)` trains per shore.
+
+The retained families `A',B'` satisfy
+
+\[
+{|A'|\over D}\ge S_0-2p_0-o(1),
+\]
+
+\[
+{|B'|\over D}\ge {S_0\over2}-2p_0-o(1),
+\]
+
+and every retained train misses at most `p_0D+o(D)` opposite trains.
+
+Triple common neighbors are far from the threshold:
+
+\[
+{S_0\over2}-2p_0=0.3871674643\ldots
+>3p_0=0.0828266358\ldots .
+\]
+
+Thus the actual-`K_{2,2}` consistency and triple-neighbor transitivity proof from §163
+globalizes the crossing orders.
+
+## 168.4 Opposite-corner diameter contradiction
+
+Take the same opposite-corner two-leg path as §163. The two endpoint trains each lose
+at most `p_0D+o(D)` neighbors. Therefore the selected degree sum is at least
+
+\[
+\left({3S_0\over2}-6p_0-o(1)\right)D.
+\]
+
+Numerically,
+
+\[
+\boxed{
+{3S_0\over2}-6p_0
+=1.1615023929239314\ldots .
+}
+\tag{168.9}
+\]
+
+The phase-window widths tend to zero, so the common projection of every selected unit
+train vector tends uniformly to `sqrt(3)/2`. Consequently the source diameter would
+satisfy
+
+\[
+1\ge {\sqrt3\over2}(1.1615023929239314\ldots)-o(1)
+=1.005890578828539\ldots-o(1),
+\]
+
+impossible.
+
+This proves (168.1). The six `p_0` losses have explicit provenance: phase pruning on
+each shore, degree pruning on each shore, and one corner-degree deficit on each shore.
+
+## 168.5 Propagated all-regime floors
+
+Audited §164 propagates the same atomic gain to
+
+\[
+\boxed{
+\liminf {T-q/2\over D}
+\ge2s_2+0.0004,
+}
+\tag{168.10}
+\]
+
+and, using `T-q=2f-k` and `q/D<=pi+o(1)`,
+
+\[
+\boxed{
+\liminf {2f-k\over D}
+\ge2s_2-{\pi\over2}+0.0004.
+}
+\tag{168.11}
+\]
+
+The §146 elimination gains exactly `(2/9)0.0004=1/11250`:
+
+\[
+\boxed{
+\liminf {1\over D}
+\left(h-{d_H\over9}-{10s_Z\over9}\right)
+\ge {4\over9}(\pi+s_2)+{1\over11250}.
+}
+\tag{168.12}
+\]
+
+In particular,
+
+\[
+\liminf {h\over D}\ge1.819602426868333\ldots .
+\]
+
+## 168.6 Scope
+
+- Atomic-mass semicontinuity is not used. Continuity windows are frozen inside one
+  fixed subsequential limit before finite sources are chosen.
+- Phase-order pruning and minimum-degree pruning are both paid explicitly.
+- Unselected intervening rhombi only add positive projection, exactly as in §§76 and
+  163.
+- The constant `0.0004` is conservative; no larger value is certified here.
+- No outer-detour hypothesis is used.
+- Contact-isolated source points remain outside the train/rigidity kernel.
+
+**Independent audit disposition:** PASS at audited-working proof-only scope. C-II and
+Level I remain open.

@@ -1,0 +1,215 @@
+# Target C-II — Folkman–Graham strictness globalizes the residual/near-contact fork
+
+**Date:** 2026-09-15
+**Status:** proof-only source-level structural strengthening
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch
+**Dependencies:** canonical bounded-face convexity; exact inactive-chamber residual conservation; low-degree face staircase; canonical contact-degree bound; Folkman–Graham 1969 proof of Oler's packing inequality
+**Certificate:** `research/verify_target_c_global_low_degree_oler_matching.py`
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The degree-5/6 residual theorem used Wegner equality because it was available in the repository. The low-degree staircase now forces linearly many faces of bounded degree throughout the entire Type-II range. A direct equality analysis of the Folkman–Graham proof of Oler's inequality removes the 5/6 restriction.
+
+The result is a global Type-II normal form:
+
+\[
+\boxed{
+\text{either }\limsup R_F/D>0,
+\quad\text{or there is an endpoint-disjoint matching }M_D
+\text{ with }|M_D|>0.00063D-o(D)
+}
+\]
+
+and
+
+\[
+\boxed{
+\max_{xy\in M_D}(|x-y|-1)\to0.
+}
+\]
+
+Thus every full-core Type-II survivor has either linear fixed-boundary residual or a linear source matching of inactive constraints approaching unit activation. No upper restriction on `t=(q-k)/D` remains.
+
+## 1. Chamber residual is exactly Oler slack
+
+Let `P` be a bounded exceptional contact face of degree `d`. Canonical bounded-face convexity makes `P` a simple strictly convex unit-edge polygon. Let `z_P` be the number of assigned contact-isolated source points in its chamber. The chamber source set consists of the `d` boundary vertices together with these `z_P` assigned points, so
+
+\[
+N_P=d+z_P,
+\qquad \operatorname{per}(P)=d.
+\]
+
+With `a_0=sqrt(3)/2`, exact chamber residual conservation gives
+
+\[
+\boxed{
+r_P={A_P\over a_0}+{d\over2}+1-N_P.
+}
+\tag{GO.1}
+\]
+
+This is precisely the slack in Oler's planar packing inequality
+
+\[
+N_P\le {A_P\over a_0}+{\operatorname{per}(P)\over2}+1.
+\]
+
+Residual conservation gives
+
+\[
+\boxed{\sum_P r_P\le R_F,\qquad r_P\ge0.}
+\tag{GO.2}
+\]
+
+## 2. Strict Oler inequality when every hidden pair is longer than one
+
+Call a pair of chamber source points a **boundary pair** only when it is one of the `d` consecutive unit sides of `P`. Every other pair is a **hidden pair**.
+
+### Lemma GO.1
+
+If every hidden pair in a chamber has distance strictly greater than one, then
+
+\[
+r_P>0.
+\]
+
+### Proof
+
+Triangulate the convex chamber using every chamber source point as a vertex. Among all such triangulations choose one with minimum total edge length, exactly as in Folkman–Graham's proof of Oler's inequality.
+
+Every boundary edge has length one. Since `d>=5`, the triangulation has an internal edge; every internal edge joins a hidden pair and therefore has length greater than one. Let `sigma` be a longest triangulation edge. Then `sigma` is internal, has length `d_0>1`, and is incident to two triangles.
+
+Folkman–Graham Case III considers the convex quadrilateral `Q` formed by those two triangles. Minimality under the diagonal flip and maximality of `sigma` imply
+
+\[
+\text{each diagonal of }Q\ge\text{each side of }Q\ge1.
+\]
+
+Their Lemma 2 proves
+
+\[
+\Phi(Q):={4\over\sqrt3}A(Q)-P(Q)+2\ge0.
+\tag{GO.3}
+\]
+
+We only need to inspect equality in that elementary proof. Write the two angles opposite `sigma` as `theta,theta'`, with adjacent side pairs `(s,t)` and `(s',t')`. The proof gives
+
+\[
+A(Q)\ge{\sqrt3\over4}(st+s't')
+\]
+
+and hence
+
+\[
+\Phi(Q)\ge(s-1)(t-1)+(s'-1)(t'-1)\ge0.
+\]
+
+If equality held, then
+
+\[
+\sin\theta=\sin\theta'={\sqrt3\over2},
+\]
+
+and at least one side in each of `(s,t)` and `(s',t')` would equal one. Because `sigma` is at least as long as either adjacent side, each opposite angle is at least `pi/3`.
+
+If `theta=pi/3`, the cosine law with one adjacent side equal to one and `d_0>=` the other adjacent side forces that other side also to equal one and then `d_0=1`. Since `d_0>1`, equality would instead force `theta=2pi/3`. The same argument forces `theta'=2pi/3`. But Folkman–Graham choose this opposite pair with
+
+\[
+\theta+\theta'\le\pi,
+\]
+
+contradiction. Therefore
+
+\[
+\boxed{\Phi(Q)>0.}
+\tag{GO.4}
+\]
+
+The Case-III induction inserts one half of `Phi(Q)` into the Oler functional. Hence the final Oler inequality for the chamber is strict, proving `r_P>0`.
+
+## 3. Uniform stability for every fixed degree cutoff
+
+Fix an integer `r>=5` and `eta>0`. Consider chambers of degree `5<=d<=r` in which every hidden pair has distance at least `1+eta`.
+
+For fixed `d`, the convex unit-edge polygon has bounded diameter, so unit separation gives a finite upper bound on the number `z_P` of assigned interior points. Hence only finitely many pairs `(d,z_P)` occur. Modulo rigid motion, each corresponding configuration family is compact.
+
+Residual `r_P` is continuous. Lemma GO.1 excludes zero residual on every one of these compact families. Therefore there is a uniform constant
+
+\[
+\boxed{c_r(eta)>0}
+\tag{GO.5}
+\]
+
+such that every degree-`<=r` chamber with all hidden pairs at least `1+eta` satisfies
+
+\[
+r_P\ge c_r(eta).
+\]
+
+This is the all-fixed-degree replacement for the earlier degree-5/6 Wegner stability lemma.
+
+## 4. Insert the universal degree-22 face floor
+
+The modern low-degree staircase proves throughout every Type-II sequence
+
+\[
+\boxed{F_{\le22}>0.0057D-o(D).}
+\tag{GO.6}
+\]
+
+Suppose now that `R_F=o(D)`. Fix `eta>0`. By (GO.2) and (GO.5),
+
+\[
+\#\{P:\deg P\le22,\ h(P)\ge eta\}
+\le {R_F\over c_{22}(eta)}=o(D),
+\tag{GO.7}
+\]
+
+where `h(P)` is the minimum hidden-pair gap `|x-y|-1` in the chamber. Thus all but `o(D)` of the faces in (GO.6) contain a hidden pair shorter than `1+eta`.
+
+A diagonal choice `eta_D downarrow0` gives at least
+
+\[
+(0.0057-o(1))D
+\]
+
+bounded degree-`<=22` chambers, each with one selected inactive pair of length `1+o(1)`, uniformly over the selected family.
+
+## 5. Endpoint-disjoint extraction costs only a factor nine
+
+Choose one such hidden pair from each selected chamber. A boundary contact vertex belongs to at most `deg_C(v)<=5` bounded face boundaries. An assigned contact-isolated point belongs to only its assigned chamber. Therefore a source point is an endpoint of at most five selected pair occurrences.
+
+The selected pairs form a multigraph of maximum degree at most five. One selected pair conflicts with at most eight other occurrences, so greedy edge selection gives an endpoint-disjoint matching of at least one ninth of all selected pairs.
+
+Consequently
+
+\[
+\boxed{
+|M_D|>{0.0057\over9}D-o(D)>0.00063D-o(D),
+}
+\tag{GO.8}
+
+and every pair in `M_D` is inactive with
+
+\[
+\boxed{
+1<|x-y|=1+o(1)
+}
+\tag{GO.9}
+
+uniformly on the matching.
+
+## 6. Scope and remaining obstruction
+
+This theorem uses only fixed-degree compactness; it does not assert an explicit modulus `c_22(eta)`. It also does not claim simultaneous activation of the matching.
+
+The high-t residual route is no longer limited by the 5/6 Wegner equality classification or by the scalar `t` endpoint. The remaining fork is global:
+
+```text
+linear fixed-boundary residual R_F
+or
+linear endpoint-disjoint almost-active source matching.
+```
+
+Closing C-II now requires either an upper/payment contradiction for linear `R_F`, or an activation/finite-exchange theorem for the almost-active matching in the lexicographically normalized diameter minimizer.
+
+**Disposition:** proved proof-only global residual/near-contact matching fork for the entire Type-II range. C-II and Level I remain open.

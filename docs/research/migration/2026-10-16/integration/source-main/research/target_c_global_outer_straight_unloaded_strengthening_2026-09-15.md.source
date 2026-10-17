@@ -1,0 +1,420 @@
+# Target C-II — unloaded strengthening of global outer-walk penetration
+
+**Date:** 2026-09-15  
+**Repository base:** `687b6ddf5b2ecb2514928a7d505674e3d2fceacc` plus the independently hostile-audited loaded-route exclusion `80561aa` / `ca938ae0`  
+**Status:** proved proof-only composition; theorem-state authority unchanged  
+**Scope:** fully force-visible, no-container/full-core Type-II low-`t` branch  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The global straight-event theorem `1283dfb` obtained a large population of strongly
+transverse physical contacts from the entire distinguished outer walk. Its finite
+count retained a degree-two internal-route escape and paid for that escape through
+outer bridges.
+
+The independently proved loaded-route theorem `80561aa`, hostile-audited in
+`ca938ae0`, removes that escape completely: every physical vertex occurring internally
+on a Section-63 distinguished route is unloaded. Canonical C26 therefore gives contact
+degree at least three at every such occurrence.
+
+As a result the bridge term disappears from the global straight-event theorem. At the
+current proof-only low-`t` endpoint this raises the physical-contact floor from
+`0.6388257253 D` to
+
+\[
+\boxed{0.6402677128496573613\ldots D-o(D)}.
+\]
+
+Every counted contact has absolute transverse component strictly greater than `1/2`
+relative to the loaded-hull chord direction associated with the straight occurrence
+that selected it.
+
+## 1. Inputs
+
+Let
+
+\[
+W_i:b_i\leadsto b_{i+1}
+\]
+
+be the Section-63 distinguished outer-face contact routes between consecutive
+positively loaded force-hull vertices. Put
+
+\[
+s_i=|b_i-b_{i+1}|,
+\qquad
+u_i={b_{i+1}-b_i\over s_i},
+\]
+
+and orient every unit edge occurrence of `W_i` from `b_i` to `b_{i+1}`.
+If `theta_{i,j}` is the angle from `u_i` to the `j`th oriented unit edge occurrence,
+the exact directional-energy identity is
+
+\[
+\boxed{
+d_{out}:=b-\operatorname{per}(F)
+=\sum_i\sum_j(1-\cos\theta_{i,j}).
+}
+\tag{US.1}
+\]
+
+The total number of internal distinguished-route occurrences is exactly
+
+\[
+\boxed{
+\sum_i(\ell_i-1)=b-q=:x_B.
+}
+\tag{US.2}
+\]
+
+Both identities are occurrence-counted and allow bridges and repeated outer-face
+vertices.
+
+## 2. Directional concentration on the entire outer walk
+
+Fix
+
+\[
+0<\beta\le\pi/6,
+\qquad
+c_\beta:=1-\cos\beta.
+\]
+
+Call an outer-route edge occurrence bad when `|theta_{i,j}|>=beta`. Equation (US.1)
+gives
+
+\[
+A_\beta\le {d_{out}\over c_\beta}.
+\tag{US.3}
+\]
+
+Call an internal route occurrence `beta`-straight when both adjacent oriented route
+edges are good. One bad edge occurrence is adjacent to at most two internal
+occurrences, so the number `S_beta` of straight internal occurrences satisfies
+
+\[
+\boxed{
+S_\beta
+\ge x_B-{2d_{out}\over c_\beta}.
+}
+\tag{US.4}
+\]
+
+No tooth/long-side split is used.
+
+## 3. Every internal straight occurrence is branching
+
+The proved loaded-route exclusion `80561aa` uses the actual Section-63 occurrence
+partition and the selected-stress loaded-nonarticulation theorem. If a positively
+loaded physical vertex occurred internally on one `W_i`, that occurrence would be
+non-distinguished, so the same physical vertex would occur at least twice on the full
+outer-face walk. A repeated facial vertex is an articulation vertex. The selected
+stress proves that positively loaded vertices are not articulations. Hence
+
+\[
+\boxed{
+\text{every physical vertex occurring internally on every }W_i\text{ is unloaded.}
+}
+\tag{US.5}
+\]
+
+The hostile audit `ca938ae0` independently rechecks both the facial-repetition lemma
+and the loaded-nonarticulation argument and passes this implication at proof-only fully
+force-visible C-II scope.
+
+Canonical C26 then gives
+
+\[
+\boxed{3\le\deg_C(x)\le5}
+\tag{US.6}
+\]
+
+for every internal route vertex `x`. In particular every straight occurrence has at
+least one contact edge not used by its predecessor/successor route pair.
+
+## 4. Strong transverse direction at every straight occurrence
+
+At a `beta`-straight occurrence on `W_i`, viewed from its physical vertex `x`, the ray
+to the predecessor lies within `beta` of `-u_i`, while the ray to the successor lies
+within `beta` of `+u_i`.
+
+Every other contact ray at `x` is separated from both route rays by strictly more than
+`pi/3`; equality would create a unit equilateral triangle. Therefore each extra unit
+contact `xw` satisfies
+
+\[
+\boxed{
+|(w-x)\cdot Ju_i|
+>\sin(\pi/3-\beta).
+}
+\tag{US.7}
+\]
+
+At `beta=pi/6`, every extra contact has absolute transverse component strictly greater
+than `1/2`.
+
+## 5. At most two straight occurrences per physical vertex
+
+The two route-contact rays at a `beta`-straight occurrence have smaller angular
+separation strictly greater than
+
+\[
+\pi-2\beta.
+\]
+
+They delimit one angular sector occupied by the unbounded face. Either sector between
+the two rays has angular measure at least the smaller separation, so every straight
+occurrence consumes an outer-face sector of size strictly greater than
+
+\[
+\pi-2\beta.
+\tag{US.8}
+\]
+
+Distinct outer-face occurrences of one physical vertex correspond to disjoint sectors
+in the cyclic rotation at that vertex. If `beta<=pi/6`, three such sectors would have
+total angular measure strictly greater than `2pi`. Therefore one physical vertex
+supports at most two straight occurrences.
+
+## 6. Inject one selected contact incidence per straight occurrence
+
+Fix one physical vertex `x` supporting `r` straight occurrences. By the previous
+section, `r<=2`.
+
+For an occurrence `o`, let `P_o` be its unordered predecessor/successor physical-edge
+pair and let
+
+\[
+A_o:=E_C(x)\setminus P_o.
+\]
+
+By (US.6), every `A_o` is nonempty. Every edge in `A_o` obeys the transverse bound
+(US.7).
+
+If `r=1`, choose any member of `A_o`. If `r=2`, the two outer-face sectors are
+distinct, hence `P_1!=P_2`.
+
+- If `deg_C(x)=3`, each `A_o` is the singleton complement of `P_o`, so the two
+  allowed singletons are distinct.
+- If `deg_C(x)>=4`, both allowed sets have size at least two, and Hall's condition for
+  two indices is automatic.
+
+Thus the straight occurrences at `x` admit distinct representative contact-edge
+incidences. Applying this independently at every physical vertex selects exactly one
+edge incidence per straight occurrence.
+
+One undirected physical contact edge has only two endpoints. Local injectivity means
+it is selected at most once at each endpoint. Therefore, if `E_perp(beta)` is the
+number of distinct physical selected edges,
+
+\[
+\boxed{
+2E_\perp(\beta)\ge S_\beta.
+}
+\tag{US.9}
+\]
+
+Combining (US.4) and (US.9) gives the finite global theorem
+
+\[
+\boxed{
+2E_\perp(\beta)
+\ge
+x_B-{2d_{out}\over1-\cos\beta}
+\qquad(0<\beta\le\pi/6).
+}
+\tag{US.10}
+\]
+
+Unlike `1283dfb`, no outer-bridge or bridge-isoperimetry term remains.
+
+## 7. Type-II normalization
+
+On a convergent full-core Type-II subsequence write
+
+\[
+t={q-k\over D},
+\qquad
+\kappa={k\over D},
+\qquad
+\delta={d_{out}\over D}.
+\]
+
+Near-disk loaded-hull perimeter convergence gives
+
+\[
+{x_B\over D}
+=\pi+\delta-t-\kappa+o(1).
+\tag{US.11}
+\]
+
+Dividing (US.10) by `D` gives
+
+\[
+\boxed{
+\liminf {E_\perp(\beta)\over D}
+\ge
+{1\over2}
+\left[
+\pi-t-\kappa
+-\left({2\over1-\cos\beta}-1\right)\delta
+\right].
+}
+\tag{US.12}
+\]
+
+## 8. Joint optimization with the low-`t` network squeeze
+
+Set
+
+\[
+\beta={\pi\over6},
+\qquad
+c_*:=1-{\sqrt3\over2}.
+\]
+
+Proof-only AG42 plus audited Section 171 gives
+
+\[
+2\delta+{\kappa\over2}\le R(t),
+\qquad
+R(t):={9t\over2}-2\pi-C_0,
+\]
+
+where
+
+\[
+C_0=2\sqrt{\Delta_2}+0.00042,
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\]
+
+To minimize the right side of (US.12), maximize
+
+\[
+\kappa+\left({2\over c_*}-1\right)\delta
+\]
+
+under the network constraint. Spending one unit of the network budget on `kappa`
+yields objective gain `2`, while spending one unit on `delta` yields
+
+\[
+{1\over2}\left({2\over c_*}-1\right)
+={1\over c_*}-{1\over2}
+>2.
+\]
+
+Thus the worst point is
+
+\[
+\boxed{
+\delta={R(t)\over2},
+\qquad
+\kappa=0.
+}
+\tag{US.13}
+\]
+
+and every survivor in the low-`t` scope satisfies
+
+\[
+\boxed{
+\liminf {E_\perp\over D}
+\ge
+{1\over2}
+\left[
+\pi-t-
+\left({1\over1-\sqrt3/2}-{1\over2}\right)R(t)
+\right].
+}
+\tag{US.14}
+\]
+
+## 9. Current endpoint
+
+At
+
+\[
+t_{42}=C_{146}+0.0013751
+=1.8208886379794447041\ldots,
+\]
+
+one has
+
+\[
+R(t_{42})=0.00576795,
+\qquad
+\delta_{worst}=0.002883975,
+\qquad
+\kappa_{worst}=0.
+\]
+
+Then
+
+\[
+{x_B\over D}
+\ge1.3235879906103485343\ldots-o(1),
+\]
+
+\[
+{A_{\pi/6}\over D}
+\le0.0215262824555169058\ldots+o(1),
+\]
+
+and
+
+\[
+{S_{\pi/6}\over D}
+\ge1.2805354256993147228\ldots-o(1).
+\]
+
+Equation (US.9) therefore gives
+
+\[
+\boxed{
+{E_\perp\over D}
+\ge0.64026771284965736138\ldots-o(1).
+}
+\tag{US.15}
+\]
+
+Every selected edge has absolute transverse component strictly greater than `1/2`.
+
+## 10. Frontier effect
+
+The current low-`t` Type-II endpoint is now forced into the following source-level
+normal form:
+
+```text
+x_B >= 1.3235879906 D-o(D) internal distinguished-route occurrences
++ d_out <= 0.002883975 D+o(D)
+ -> S_pi/6 >= 1.2805354257 D-o(D) near-straight internal occurrences
+ -> every such occurrence is unloaded and degree >=3
+ -> occurrence-injective transverse selection
+ -> E_perp >= 0.6402677128 D-o(D) distinct physical contacts
+ -> every selected contact has transverse component >1/2.
+```
+
+This supersedes bridge-paid straight-event counting and is stronger than the complete
+tooth/long-side physicalization chain. The tooth and long-side theorems remain useful
+for finer geometry but are no longer needed to obtain a large physical contact
+population from the low-`t` endpoint.
+
+C-II remains open. The unresolved step is global rather than local: explain how more
+than `0.640D` robust transverse contacts can be routed through the sparse pentagon /
+strict-rhombus stopped-train network while the same source supports the near-extremal
+Woodall diameter graph. Vanishing-shear rhombic strips show that no fixed local
+rhombus-area penalty can supply this contradiction.
+
+The next useful theorem should control train occupancy or diameter-brace reuse for the
+straight occurrences counted in (US.4), or turn the resulting boundary structure into
+a finite source-preserving deformation.
+
+## 11. Reproducibility
+
+Run
+
+```bash
+python3 research/verify_target_c_global_outer_straight_unloaded_strengthening.py
+```
+
+for the high-precision constant checks.

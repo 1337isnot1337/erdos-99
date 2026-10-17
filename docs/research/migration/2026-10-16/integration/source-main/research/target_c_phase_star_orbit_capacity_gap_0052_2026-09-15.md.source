@@ -1,0 +1,550 @@
+# Target C-II — phase-star orbit capacity gives matched atomic gap `0.0052`
+
+**Date:** 2026-09-15  
+**Repository base:** `c4381ba445ac5b3d1d7a1434b1eeba83ed67708c`  
+**Status:** proof-only strengthening of the matched all-train/rhombic atomic gap  
+**Scope:** canonical full-core Type-II train-measure branch  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current hostile-audited iterative-pruning theorem gives the physical two-family
+missing-pair inequality
+
+\[
+ \rho\ge {2\over29}(a+b-K)_+^2,
+ \qquad K={2\over\sqrt3},
+\tag{PC.1}
+\]
+
+for any two exact train-phase atom families at projective separation `pi/3`, with
+`a,b<=K`.  The previous minimax proof feeds (PC.1) into a scalar dominant-orbit
+deficit and safely obtains the matched gap `g=0.0050`.
+
+There is a stronger use of the same theorem.  For one exact three-phase orbit, maximize
+the **physical crossing mass itself** subject to (PC.1) and the triangle-free
+center/leaf correlation.  The resulting orbit-capacity function is strictly below the
+generic Mantel capacity `W^2/4`.  Combining that sharpened capacity on the dominant
+orbit with the generic square bound on all residual orbit mass gives
+
+\[
+\boxed{
+\liminf {T-q/2\over D}
+\ge 2\sqrt{\Delta_2}+0.0052,
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+}
+\tag{PC.2}
+\]
+
+The same proof on the strict-rhombus train graph gives
+
+\[
+\boxed{
+\liminf {T_R\over D}
+\ge 2\sqrt{\Delta_2}+0.0052,
+\qquad
+\liminf {\sigma_R\over D}\ge0.0104.
+}
+\tag{PC.3}
+\]
+
+The exact rational certificate has more than `1.39e-4` crossing-mass margin at the
+claimed endpoint.  A non-load-bearing numerical solve puts the corresponding one-orbit
+capacity crossing near `g=0.0053500`; only `0.0052` is claimed here.
+
+---
+
+## 1. Input: unconditional physical pair deficit
+
+Write
+
+\[
+\alpha={2\over29}.
+\]
+
+The hostile-audited iterative-pruning corollary says that if two exact train-phase atom
+families of normalized masses `a,b<=K` have projective axes separated by `pi/3`, and
+`rho` is their normalized missing-pair mass, then
+
+\[
+\boxed{
+\rho\ge\alpha(a+b-K)_+^2.
+}
+\tag{PC.4}
+\]
+
+No lower-size hypothesis is needed.  The common-neighbor and opposite-corner geometry
+is internal to the theorem supplying (PC.4).
+
+---
+
+## 2. A physical crossing-capacity theorem for one exact orbit
+
+Fix one exact `pi/3` orbit.  Let its three phase-class masses be ordered
+
+\[
+C\ge U\ge V\ge0,
+\qquad
+W=C+U+V.
+\tag{PC.5}
+\]
+
+Let `e(C,U)`, `e(C,V)`, and `e(U,V)` be the corresponding limiting crossing masses and
+put
+
+\[
+x=CU-e(C,U),
+\qquad
+y=CV-e(C,V).
+\tag{PC.6}
+\]
+
+If `E` is the total crossing mass of this orbit, define
+
+\[
+h:=C(U+V)-E=x+y-e(U,V).
+\tag{PC.7}
+\]
+
+For every actual `UV` crossing, triangle-freeness makes the two endpoint neighborhoods
+in the center class disjoint.  The standard center-degree deficit sum therefore gives
+
+\[
+C e(U,V)\le Vx+Uy.
+\tag{PC.8}
+\]
+
+With
+
+\[
+a=1-{V\over C},
+\qquad
+b=1-{U\over C},
+\]
+
+(PC.7)--(PC.8) imply
+
+\[
+\boxed{a x+b y\le h.}
+\tag{PC.9}
+\]
+
+The pair theorem (PC.4) gives
+
+\[
+x\ge\alpha(C+U-K)_+^2,
+\qquad
+y\ge\alpha(C+V-K)_+^2.
+\tag{PC.10}
+\]
+
+### Lemma PC.1 — equal leaves minimize the forced center/leaf penalty
+
+For fixed `W` and `C`, subject to `U+V=W-C` and `C>=U>=V>=0`,
+
+\[
+\boxed{
+ a(C+U-K)_+^2+b(C+V-K)_+^2
+ \ge
+ {3C-W\over C}
+ \left({W+C\over2}-K\right)_+^2.
+}
+\tag{PC.11}
+\]
+
+#### Proof
+
+Put
+
+\[
+\ell={U+V\over2},
+\qquad d={U-V\over2}\ge0,
+\qquad r=C+\ell-K,
+\qquad A_0=1-{\ell\over C}\ge0.
+\]
+
+Then
+
+\[
+a=A_0+{d\over C},
+\qquad b=A_0-{d\over C}.
+\]
+
+If `r<=-d`, both positive parts vanish and (PC.11) is equality.  If
+`-d<r<=d`, only the `U` term can be active.  For `r<=0` the right side vanishes; for
+`0<r<=d`,
+
+\[
+(A_0+d/C)(r+d)^2\ge4A_0r^2\ge2A_0r^2.
+\]
+
+If `r>d`, both terms are active and direct expansion gives
+
+\[
+\begin{aligned}
+&(A_0+d/C)(r+d)^2+(A_0-d/C)(r-d)^2\\
+&=2A_0r^2+2A_0d^2+{4rd^2\over C}
+\ge2A_0r^2.
+\end{aligned}
+\]
+
+Finally `2A_0=(3C-W)/C` and `r=(W+C)/2-K`.  This proves (PC.11).  \(\square\)
+
+Combining (PC.9)--(PC.11) yields the one-orbit capacity bound
+
+\[
+\boxed{
+E\le\Phi(W,C):=
+C(W-C)-\alpha{3C-W\over C}
+\left({W+C\over2}-K\right)_+^2.
+}
+\tag{PC.12}
+\]
+
+Define
+
+\[
+\boxed{
+\Psi(W):=\max_{W/3\le C\le W}\Phi(W,C).
+}
+\tag{PC.13}
+\]
+
+Then every exact orbit of total mass `W` has crossing mass at most `Psi(W)`.
+
+---
+
+## 3. Shape of the capacity maximizer in the relevant interval
+
+The endpoint proof only needs
+
+\[
+M_0\le W\le A_0,
+\tag{PC.14}
+\]
+
+where
+
+\[
+A_0:=2\sqrt{\Delta_2}+0.0052,
+\qquad
+M_0:={4\Delta_2\over A_0}.
+\tag{PC.15}
+\]
+
+The exact verifier gives
+
+\[
+M_0>1.8994>\sqrt3.
+\tag{PC.16}
+\]
+
+Hence for `C>=W/3`,
+
+\[
+r:={W+C\over2}-K>0.
+\]
+
+On `W/3<=C<=W/2`, put
+
+\[
+q=3-{W\over C}.
+\]
+
+Then `0<=q<=1`, and
+
+\[
+\Phi(W,C)=C(W-C)-\alpha q r^2.
+\tag{PC.17}
+\]
+
+Differentiating in `C`,
+
+\[
+\Phi_C
+=W-2C-\alpha\left({W\over C^2}r^2+qr\right),
+\tag{PC.18}
+\]
+
+and
+
+\[
+\Phi_{CC}
+=-2-\alpha\left[
+-{2Wr^2\over C^3}+{2Wr\over C^2}+{q\over2}
+\right].
+\tag{PC.19}
+\]
+
+In this interval `0<r<C`: indeed `r>0` follows from (PC.16), while `r<C` is equivalent
+to `W-C<2K`, and `W-C<=2W/3<2K` throughout (PC.14).  Therefore the bracket in
+(PC.19) is nonnegative:
+
+\[
+-{2Wr^2\over C^3}+{2Wr\over C^2}+{q\over2}
+={2Wr\over C^2}\left(1-{r\over C}\right)+{q\over2}
+\ge0.
+\]
+
+Thus
+
+\[
+\boxed{\Phi_{CC}\le-2.}
+\tag{PC.20}
+\]
+
+For `C>=W/2`, the first term in (PC.18) is nonpositive and the penalty derivative is
+positive, so `Phi_C<0`.  The verifier also checks uniformly on (PC.14) that
+`Phi_C(W,W/3)>0`.  Consequently `Psi(W)` has a unique maximizer
+
+\[
+\boxed{C_*(W)\in(W/3,W/2).}
+\tag{PC.21}
+\]
+
+This is important below because it gives `q<=1` at the optimizer.
+
+---
+
+## 4. Dominant-orbit reduction for the whole atomic measure
+
+Let the exact orbit masses be `M_r`, with total atomic mass
+
+\[
+A=\sum_rM_r,
+\]
+
+and let
+
+\[
+M=\max_rM_r.
+\]
+
+The audited crossing decomposition gives
+
+\[
+\sum_rE_r=\Delta_2.
+\tag{PC.22}
+\]
+
+The generic Mantel capacity still gives
+
+\[
+4\Delta_2\le\sum_rM_r^2\le MA,
+\]
+
+so if `A<=A_0`,
+
+\[
+\boxed{M\ge {4\Delta_2\over A}\ge M_0.}
+\tag{PC.23}
+\]
+
+Apply (PC.13) to one dominant orbit and the generic square capacity to all residual
+orbits.  Since the residual masses sum to `A-M`,
+
+\[
+\boxed{
+\Delta_2
+\le\Psi(M)+{(A-M)^2\over4}.
+}
+\tag{PC.24}
+\]
+
+For fixed `M`, the right side is increasing in `A`, so under `A<=A_0` it is enough to
+consider `A=A_0`.
+
+It remains to maximize over `M in [M_0,A_0]`.  At the unique maximizer `C_*(M)` of
+`Psi`, the envelope derivative is
+
+\[
+\Psi'(M)=\Phi_W(M,C_*(M)).
+\]
+
+From (PC.17),
+
+\[
+\Phi_W
+=C+\alpha{r^2\over C}-\alpha q r
+\ge C-\alpha q r.
+\tag{PC.25}
+\]
+
+By (PC.21), `C>=M/3`, `q<=1`, and
+
+\[
+r\le {3A_0\over4}-K.
+\]
+
+Therefore
+
+\[
+\boxed{
+\Psi'(M)
+\ge {M_0\over3}
+-\alpha\left({3A_0\over4}-K\right).
+}
+\tag{PC.26}
+\]
+
+The exact certificate gives the conservative lower bound
+
+\[
+\Psi'(M)>0.6139.
+\tag{PC.27}
+\]
+
+On the other hand,
+
+\[
+{A_0-M\over2}
+\le {A_0-M_0\over2}<0.00520.
+\]
+
+Hence
+
+\[
+{d\over dM}
+\left[
+\Psi(M)+{(A_0-M)^2\over4}
+\right]
+>0.6088>0.
+\tag{PC.28}
+\]
+
+Thus the right side of (PC.24) is largest at
+
+\[
+\boxed{M=A_0.}
+\tag{PC.29}
+\]
+
+The residual atomic mass disappears at the extremum.  The entire atomic-capacity
+problem has therefore reduced to the capacity of one physical three-phase orbit:
+
+\[
+\Delta_2\le\Psi(A_0).
+\tag{PC.30}
+\]
+
+---
+
+## 5. Exact rational certificate at `g=0.0052`
+
+The verifier
+
+`research/verify_target_c_phase_star_orbit_capacity_gap_0052.py`
+
+uses exact `Fraction` arithmetic.  It encloses `pi` by Machin's identity
+
+\[
+\pi=16\arctan(1/5)-4\arctan(1/239)
+\]
+
+with alternating-series remainder bounds, and encloses every square root by integer
+square-root arithmetic.
+
+At
+
+\[
+c_0=0.94043
+\]
+
+it evaluates `Phi(A_0,c_0)` and `Phi_C(A_0,c_0)` with outward rational bounds.  Since
+(PC.20) gives `Phi_CC<=-2`, strong concavity implies
+
+\[
+\max_C\Phi(A_0,C)
+\le
+\Phi(A_0,c_0)+{\Phi_C(A_0,c_0)^2\over4}.
+\tag{PC.31}
+\]
+
+The certificate proves
+
+\[
+\boxed{
+\Delta_2-\Psi(A_0)
+>1.3913\times10^{-4}.
+}
+\tag{PC.32}
+\]
+
+It also checks the derivative facts used above, including
+
+\[
+\Phi_C(W,W/3)>0
+\]
+
+throughout the entire interval (PC.14), and the monotonicity margin in (PC.28).
+
+Equations (PC.30) and (PC.32) contradict each other.  Therefore
+
+\[
+\boxed{A>2\sqrt{\Delta_2}+0.0052-o(1).}
+\tag{PC.33}
+\]
+
+The exposed-hull train-measure inequality gives `A<=C=(T-q/2)/D`, proving (PC.2).
+
+---
+
+## 6. Rhombic-only transfer
+
+The hostile audit of the earlier matched minimax theorem already checked the same
+train-phase framework independently on the strict-rhombus train graph:
+
+- vertices are non-singleton complete rhombic trains;
+- the graph is simple and triangle-free;
+- its crossing count is exactly `R_4`;
+- limiting crossings occur only at exact projective separation `pi/3`; and
+- the physical two-family theorem (PC.4) applies to selected center/leaf families.
+
+Nothing in Sections 2--5 uses singleton trains or an all-train-only exposed-hull step.
+Repeating the capacity proof on the rhombic graph gives
+
+\[
+\liminf {T_R\over D}
+\ge2\sqrt{\Delta_2}+0.0052.
+\]
+
+The standard exact transfer
+
+\[
+\sigma_R=B_4-4\sqrt{R_4},
+\qquad B_4=2T_R,
+\]
+
+then yields
+
+\[
+\boxed{\liminf {\sigma_R\over D}\ge0.0104.}
+\]
+
+---
+
+## 7. Frontier effect
+
+This result is not a decimal retuning of the old minimax certificate.  The old route
+first compresses the dominant orbit into one scalar deficit and then applies a weighted
+two-leaf contradiction.  The present route instead computes a sharp enough upper
+capacity for the entire physical three-phase crossing graph and only afterwards sums
+across exact orbits.
+
+That distinction matters: the old note identified a non-load-bearing scalar ceiling
+near `0.00505782508`, whereas the present theorem safely proves `0.0052` and numerically
+remains feasible until roughly `0.0053500`.
+
+The immediately useful downstream substitutions are
+
+```text
+C_52 = 2 sqrt(Delta_2) + 0.0052,
+(T-q/2)/D >= C_52 - o(1),
+T_R/D       >= C_52 - o(1),
+sigma_R/D   >= 0.0104 - o(1).
+```
+
+These can be inserted into the current Section-171 envelope and the hostile-audited
+two-bin/shared outer-energy stack.  They do not themselves construct a same-cardinality
+strict sub-`D` source or force an exact unit triangle.
+
+**Disposition:** proved proof-only matched atomic strengthening. C-II and Level I remain open.

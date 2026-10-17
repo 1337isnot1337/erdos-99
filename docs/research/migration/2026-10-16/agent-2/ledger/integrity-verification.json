@@ -1,0 +1,24 @@
+{
+  "checks": {
+    "active_artifact_index_unchanged": true,
+    "agent2_cache_rows_verified": 885,
+    "agent2_worktree_paths": 11,
+    "agent2_worktree_paths_preserved": 9,
+    "branch_file_rows": 541,
+    "branch_preserved_path_occurrences": 387,
+    "branch_source_objects_verified": 343,
+    "branch_unique_preserved_blobs": 235,
+    "certificates_passed": 12,
+    "pr956_dependency_objects_verified": 4,
+    "source_main_conflicts_archived_separately": 28,
+    "source_main_preserved_bytes": 7190620,
+    "source_main_preserved_paths": 956,
+    "source_pr_changed_files": 28,
+    "source_pr_new_files_archived": 17,
+    "source_pr_objects_verified": 28
+  },
+  "destination_main": "c6e0394b3152d21075328bf4f26e6c070229bf13",
+  "errors": [],
+  "result": "PASS",
+  "source_main": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+}

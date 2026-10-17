@@ -1,0 +1,250 @@
+# Target C-II — odd exceptional faces force a two-window angular escape
+
+**Date:** 2026-09-14  
+**Repository base:** `9d7998d86d3e672ba4d1a7f627aadb2ed50aa219`  
+**Status:** proof-only finite geometric lemma awaiting independent audit  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The existing pentagon regression correctly shows that a strict triangle-free unit
+pentagon may approach the **three** projective lattice axes.  That blocks any uniform
+"pentagon leaves the three-axis orbit" theorem.  It does not block a two-axis theorem.
+
+There is in fact a simple parity obstruction: no closed odd equilateral polygon can
+have all of its edge directions arbitrarily close to only two projective lines.  The
+result is uniform in the angle between the two lines and gives an explicit pentagon
+radius of
+
+\[
+\epsilon_5=2\arcsin(1/10)
+=0.200334842323119\ldots
+=11.4783409545\ldots ^\circ.
+\]
+
+This supplies exactly the kind of nonovercounting endpoint statement requested by the
+older dense-pentagon reports, but only against **two** direction windows.  Three lattice
+windows remain compatible with the known regression.
+
+## 1. Odd-face two-window lemma
+
+Let
+
+\[
+z_1,\ldots,z_d\in S^1,
+\qquad
+\sum_{i=1}^d z_i=0,
+\]
+
+be the oriented unit edge vectors of a closed equilateral polygon, with `d` odd.  Let
+`[u],[v]` be any two projective directions.  Denote projective angular distance by
+`dist_P`, taking values in `[0,pi/2]`.
+
+Then
+
+\[
+\boxed{
+\max_i\min\{\operatorname{dist}_P([z_i],[u]),
+             \operatorname{dist}_P([z_i],[v])\}
+\ge
+\epsilon_d:=2\arcsin\!\left({1\over2d}\right).
+}
+\tag{OF.1}
+\]
+
+### Proof
+
+Assume every `z_i` lies at projective angular distance `<epsilon` from one of the two
+lines, where `epsilon<epsilon_d`.  For each edge choose
+
+\[
+w_i\in\{u,-u,v,-v\}
+\]
+
+so that its ordinary oriented angle from `z_i` is `<epsilon`.  Hence
+
+\[
+\|z_i-w_i\|<2\sin(\epsilon/2).
+\tag{OF.2}
+\]
+
+Let `n_u` edges be assigned to the `u` line and `n_v=d-n_u` to the `v` line.  After
+collecting signs,
+
+\[
+\sum_i w_i=a u+b v,
+\tag{OF.3}
+\]
+
+where `a,b` are integers satisfying
+
+\[
+a\equiv n_u\pmod2,
+\qquad
+b\equiv n_v\pmod2.
+\tag{OF.4}
+\]
+
+Because `d=n_u+n_v` is odd, `n_u,n_v` have opposite parity.  Therefore `a,b` have
+opposite parity.
+
+If one of `a,b` is zero, the other is a nonzero odd integer, so
+
+\[
+\|a u+b v\|\ge1.
+\]
+
+If both are nonzero, `|a|` and `|b|` are integers of opposite parity, hence
+`||a|-|b||>=1`.  The reverse triangle inequality gives
+
+\[
+\|a u+b v\|
+\ge\bigl||a|-|b|\bigr|
+\ge1.
+\tag{OF.5}
+\]
+
+On the other hand, polygon closure and (OF.2) give
+
+\[
+\left\|\sum_i w_i\right\|
+=
+\left\|\sum_i(w_i-z_i)\right\|
+<2d\sin(\epsilon/2)
+<1,
+\tag{OF.6}
+\]
+
+contradicting (OF.5).  This proves (OF.1).
+
+No convexity, unit-separation diagonal bound, or rhombic crossing theorem is needed;
+only odd cardinality, unit edge lengths, and polygon closure enter the lemma.
+
+## 2. Pentagon consequence
+
+For `d=5`,
+
+\[
+\boxed{
+\epsilon_5=2\arcsin(0.1)
+=0.200334842323119\ldots\text{ radians}.
+}
+\tag{OF.7}
+\]
+
+Therefore for any two projective directions and any fixed
+
+\[
+0<\epsilon<\epsilon_5,
+\]
+
+every bounded pentagonal contact face contains at least one boundary edge whose
+projective direction lies outside both `epsilon`-windows.
+
+Every edge incident with a bounded nonquadrilateral contact face is a terminal
+occurrence of its complete stopped train, and its edge direction is that train's
+projective direction.  Hence if `p_5` bounded pentagons are present and
+`N_off^bd(u,v;epsilon)` counts exceptional-face terminal occurrences belonging to
+trains outside the two windows, then
+
+\[
+\boxed{
+N_{off}^{bd}(u,v;\epsilon)\ge p_5.
+}
+\tag{OF.8}
+\]
+
+A stopped train has only two terminal incidences in total.  Thus if `T_off` is the
+number of distinct stopped trains outside the same two windows,
+
+\[
+\boxed{
+T_{off}(u,v;\epsilon)\ge {p_5\over2}.
+}
+\tag{OF.9}
+\]
+
+This is occurrence-safe: a single off-window train may pay two pentagons, one at each
+end, but cannot pay a third.
+
+## 3. Quantitative consequence for the old minimal-interface endpoint
+
+The proved minimal-interface pentagon-density report gives, under its explicit
+`Q_B/D -> 2` hypotheses,
+
+\[
+{p_5\over D}
+\ge
+2\sqrt{\Delta_2}-(\pi-2)-o(1)
+=0.763032960138121\ldots-o(1).
+\tag{OF.10}
+\]
+
+Therefore for **every** pair of projective directions and every fixed
+`epsilon<epsilon_5`, that endpoint necessarily has
+
+\[
+\boxed{
+{T_{off}(u,v;\epsilon)\over D}
+\ge0.381516480069060\ldots-o(1).
+}
+\tag{OF.11}
+\]
+
+So the dense pentagon fault network cannot be transported by two narrow train-direction
+families plus `o(D)` exceptional trains.  Any proposed two-phase model of that endpoint
+must leave at least `0.3815D` complete stopped trains outside its two phase windows.
+
+This is a genuine strengthening of the older qualitative statement that the
+`0.763D` pentagons require endpoint capacity: it identifies a uniform angular escape
+and turns it into a distinct-train lower bound.
+
+## 4. Compatibility with the known three-axis pentagon regression
+
+There is no conflict with
+`target_c_pentagon_lattice_phase_regression_2026-09-12.md`.  That construction makes
+pentagon directions approach the three projective lines
+
+\[
+[0],\quad[\pi/3],\quad[2\pi/3].
+\]
+
+The present theorem forbids concentration near **two** lines only.  Indeed the
+three-axis regression is evidence that the distinction is necessary: no analogous
+positive escape radius can hold against three arbitrary projective windows.
+
+This also explains how the lemma should be used.  It can close or sharpen branches
+where an independent theorem has already reduced almost all stopped trains to two
+narrow direction families.  It cannot by itself eliminate the global three-phase
+lattice endpoint.
+
+## 5. General odd-face version
+
+For a bounded exceptional face of any odd degree `d>=5`, the same argument gives
+
+\[
+\epsilon_d=2\arcsin\!\left({1\over2d}\right).
+\tag{OF.12}
+\]
+
+For reference,
+
+\[
+\epsilon_7=8.1920875163\ldots ^\circ,
+\qquad
+\epsilon_9=6.3694770734\ldots ^\circ.
+\]
+
+The radius decays like `1/d`, so the strongest application is precisely the
+pentagon-dominated endpoint that existing Target-C reductions already isolate.
+
+The parity and constants are regression-checked in
+`research/verify_target_c_odd_face_two_window_gap.py`.
+
+## 6. Scope
+
+- This is a finite geometric lemma and does not assume global optimality.
+- It counts projective **train directions** only through actual exceptional-face edge
+  incidences; no source vertex is counted as a train.
+- It does not assert that two global phase windows exist.  That must come from a
+  separate phase-purity/stability theorem.
+- It does not contradict the three-axis pentagon regression.
+- It supplies no same-cardinality strict sub-`D` competitor by itself.

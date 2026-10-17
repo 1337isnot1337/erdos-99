@@ -1,0 +1,396 @@
+# Target C-II — the TB1 inactive-slack branch contains a large near-unit or near-diameter matching
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** the `NEAR-ACTIVE` side of the strong-TB1 exact contact-swap fork through `t=(q-k)/D<=1.8687`  
+**Dependencies:** TB1 exact contact-swap obstruction fork; full-source circumradius bound; unit separation  
+**Certificate:** `research/verify_target_c_high_t_tb1_inactive_slack_matching_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The exact contact-swap theorem leaves one new escape for a linear same-sign strong-TB1 family: linearly many distinct previously strict source pairs lie within `O(D^-1)` of either the unit lower constraint or the diameter upper constraint.
+
+That statement can be sharpened without any new KKT input.
+
+Let
+
+\[
+s_0={791\over320{,}000{,}000}.
+\]
+
+On the `NEAR-ACTIVE` side of the explicit TB1 fork there are more than
+
+\[
+{s_0\over4}D-o(D)
+\]
+
+distinct witnesses. Therefore one of the two slack types has more than
+
+\[
+\boxed{
+{s_0\over8}D-o(D)
+=(3.08984375\times10^{-7})D-o(D)
+}
+\]
+
+distinct pairs.
+
+The two cases have different geometry.
+
+1. **Near-unit case.** For sufficiently large `D`, the graph of pairs of length at most
+   \[
+   1+{31.4\times10^6\over D}+o(D^{-1})
+   \]
+   has maximum degree at most `6`. Hence the witness family contains a vertex-disjoint matching of size
+   \[
+   \boxed{
+   {s_0\over88}D-o(D)
+   =(2.8089488636\ldots\times10^{-8})D-o(D).
+   }
+   \]
+
+2. **Near-diameter case.** Every pair of length
+   \[
+   D-O(D^{-1})
+   \]
+   has midpoint in the same
+   \[
+   (3^{1/8}+o(1))D^{3/4}
+   \]
+   ball around the canonical source circumcenter. The near-diameter graph has maximum degree at most
+   \[
+   (8\,3^{1/8}+o(1))D^{3/4}.
+   \]
+   Hence the witness family contains a vertex-disjoint matching of size
+   \[
+   \boxed{
+   \left({s_0\over128\,3^{1/8}}-o(1)\right)D^{1/4}
+   }
+   \]
+   with coefficient
+   \[
+   1.6833575791\ldots\times10^{-8}.
+   \]
+
+So the inactive-slack alternative cannot be supported by repeated use of a few vertices. If the lower constraint is responsible, a linear vertex-disjoint almost-contact matching appears. If the upper constraint is responsible, an unbounded vertex-disjoint family of almost-diameter chords appears, all with centrally localized midpoints.
+
+---
+
+## 1. Split the contact-swap witnesses by active boundary
+
+The contact-swap fork gives a set `W_D` of distinct previously strict source pairs with
+
+\[
+|W_D|>{s_0\over4}D-o(D),
+\tag{IM.1}
+
+such that every pair satisfies either
+
+\[
+1<|xy|\le1+q_D
+\tag{IM.2}
+
+or
+
+\[
+D-q_D\le|xy|<D,
+\tag{IM.3}
+
+where
+
+\[
+q_D={31.4\times10^6\over D}+o(D^{-1})
+=O(D^{-1}).
+\tag{IM.4}
+
+Let `W_D^1` and `W_D^D` denote the two types. At least one has cardinality
+
+\[
+\boxed{
+>{s_0\over8}D-o(D).
+}
+\tag{IM.5}
+
+No pair is counted twice for all sufficiently large `D`, since `D\to\infty` while the two distance windows are disjoint.
+
+---
+
+## 2. Near-unit witness graph has degree at most six
+
+Form the graph `G_1(D)` on the source points by joining every pair whose distance lies in
+
+\[
+[1,1+q_D].
+\]
+
+Fix a vertex `x`. Suppose it had seven distinct neighbors `y_1,...,y_7`. Order their rays around `x`. Two consecutive rays have angular separation at most
+
+\[
+{2\pi\over7}.
+\tag{IM.6}
+
+Every neighbor radius lies in `[1,1+q_D]`. Put
+
+\[
+R_D^{(1)}:=1+q_D.
+\]
+
+For the two neighbors with angular gap `phi<=2pi/7`, radially extend each point to radius `R_D^(1)` on the same ray. The triangle inequality gives
+
+\[
+|y_j-y_{j+1}|
+\le2q_D+2(1+q_D)\sin{\pi\over7}.
+\tag{IM.7}
+
+Since `q_D->0` and
+
+\[
+2\sin{\pi\over7}=0.867767\ldots<1,
+\]
+
+the right side is strictly below `1` for all sufficiently large `D`. This contradicts the source separation condition.
+
+Therefore
+
+\[
+\boxed{\Delta(G_1(D))\le6}
+\tag{IM.8}
+
+for all sufficiently large sources.
+
+A greedy matching in a graph of maximum degree `6` removes at most
+
+\[
+2\cdot6-1=11
+\]
+
+edges per chosen edge. Hence any `E`-edge subgraph contains a matching of size at least `E/11`.
+
+If the near-unit case in (IM.5) occurs, `W_D^1` therefore contains a matching of size
+
+\[
+\boxed{
+>{s_0\over88}D-o(D).
+}
+\tag{IM.9}
+
+Numerically,
+
+\[
+{s_0\over88}
+={791\over28{,}160{,}000{,}000}
+=2.808948863636\ldots\times10^{-8}.
+\tag{IM.10}
+
+The matching edges are previously strict, so their lengths are actually greater than `1`; the closed lower endpoint was used only for the degree estimate.
+
+---
+
+## 3. Near-diameter witnesses have centrally localized midpoints
+
+Now assume the near-diameter case in (IM.5). Let `xy` be one such witness and let
+
+\[
+m={x+y\over2},
+\qquad
+\ell=|x-y|\ge D-q_D.
+\]
+
+The full source hull lies in the canonical circumdisk
+
+\[
+B(o,R_D),
+\qquad
+R_D<{D\over2}+\eta_D,
+\qquad
+\eta_D=3^{1/4}\sqrt D.
+\tag{IM.11}
+
+The midpoint identity gives
+
+\[
+|m-o|^2
+={|x-o|^2+|y-o|^2\over2}-{\ell^2\over4}.
+\tag{IM.12}
+
+Therefore
+
+\[
+\begin{aligned}
+|m-o|^2
+&<\left({D\over2}+\eta_D\right)^2
+-{(D-q_D)^2\over4}\\
+&=D\eta_D+\eta_D^2+{Dq_D\over2}-{q_D^2\over4}.
+\end{aligned}
+\tag{IM.13}
+
+Define
+
+\[
+L_D'
+:=\sqrt{D\eta_D+\eta_D^2+{Dq_D\over2}}.
+\tag{IM.14}
+
+Since `q_D=O(D^-1)`, the new term `Dq_D/2=O(1)` is negligible relative to `D eta_D`. Thus
+
+\[
+\boxed{
+|m-o|<L_D'
+=(3^{1/8}+o(1))D^{3/4}.
+}
+\tag{IM.15}
+
+So inactive pairs only `O(D^-1)` below the diameter inherit the same leading midpoint-localization scale as actual diameter edges.
+
+---
+
+## 4. The near-diameter graph has degree `O(D^(3/4))`
+
+Let `G_D^{near}` join all source pairs with length in
+
+\[
+[D-q_D,D].
+\]
+
+Fix a vertex `x` and two distinct near-diameter neighbors `y,z`. Put
+
+\[
+r=|y-x|,
+\qquad
+s=|z-x|,
+\]
+
+so
+
+\[
+D-q_D\le r,s\le D.
+\tag{IM.16}
+
+By (IM.15), both midpoints
+
+\[
+m_y={x+y\over2},
+\qquad
+m_z={x+z\over2}
+\]
+
+lie in `B(o,L_D')`. Hence
+
+\[
+|y-z|=2|m_y-m_z|\le4L_D'.
+\tag{IM.17}
+
+Let `theta` be the angle at `x` between the rays to `y` and `z`. For the unit directions
+
+\[
+u={y-x\over r},
+\qquad
+v={z-x\over s},
+\]
+
+we have
+
+\[
+|u-v|
+\le {2|y-z|\over D-q_D}
+\le {8L_D'\over D-q_D}.
+\tag{IM.18}
+
+Thus, for large `D`,
+
+\[
+\theta
+\le
+\Theta_D'
+:=2\arcsin\left({4L_D'\over D-q_D}\right)
+=(8\,3^{1/8}+o(1))D^{-1/4}.
+\tag{IM.19}
+
+So all near-diameter neighbor directions of one vertex lie in one projective angular interval of width at most `Theta_D'`.
+
+They also have a minimum angular separation. Source separation gives
+
+\[
+1\le|y-z|^2
+=(r-s)^2+4rs\sin^2{\theta\over2}.
+\tag{IM.20}
+
+Because `|r-s|<=q_D` and `rs<=D^2`,
+
+\[
+\sin{\theta\over2}
+\ge {\sqrt{1-q_D^2}\over2D}
+\tag{IM.21}
+
+for all sufficiently large `D` when `q_D<1`. Hence distinct near-diameter neighbor directions are separated by at least
+
+\[
+\delta_D'
+:=2\arcsin\left({\sqrt{1-q_D^2}\over2D}\right)
+={1+o(1)\over D}.
+\tag{IM.22}
+
+Packing `delta_D'`-separated directions into an interval of width `Theta_D'` gives
+
+\[
+\boxed{
+\Delta(G_D^{near})
+\le1+{\Theta_D'\over\delta_D'}
+\le(8\,3^{1/8}+o(1))D^{3/4}.
+}
+\tag{IM.23}
+
+---
+
+## 5. The near-diameter witnesses contain an `Omega(D^(1/4))` matching
+
+Apply greedy matching to the witness subgraph with edge set `W_D^D`. A chosen edge meets at most
+
+\[
+2\Delta(G_D^{near})-1
+\]
+
+witness edges. Combining (IM.5) and (IM.23) yields a matching of size
+
+\[
+\begin{aligned}
+M_D
+&\ge
+{|W_D^D|\over2\Delta(G_D^{near})-1}\\
+&>
+\left(
+{s_0\over128\,3^{1/8}}-o(1)
+\right)D^{1/4}.
+\end{aligned}
+\tag{IM.24}
+
+Numerically,
+
+\[
+\boxed{
+{s_0\over128\,3^{1/8}}
+=1.6833575791\ldots\times10^{-8}.
+}
+\tag{IM.25}
+
+Every edge in this matching is a previously strict nondiameter pair of length `D-O(D^-1)`, and every midpoint satisfies the common central bound (IM.15).
+
+---
+
+## 6. Frontier effect
+
+Combining the contact-swap theorem with this note, a winning strong-TB1 branch now has three concrete geometric realizations:
+
+```text
+(A) linear fixed-angle crossing switching-diameter pairs;
+
+(B1) a linear vertex-disjoint matching of inactive almost-unit pairs;
+
+(B2) an Omega(D^(1/4)) vertex-disjoint matching of inactive almost-diameter pairs,
+     all with midpoints in one O(D^(3/4)) central ball.
+```
+
+The residual inactive-slack branch therefore has genuine matching structure rather than an arbitrary multiset of nearly active constraints.
+
+This still does not close C-II. The near-unit matching is compatible with locally dense packing, and the near-diameter matching is not an active diameter matching. The next useful step is to couple the witness edge's unique layer-incidence tag from the contact swap with the common train order. In the near-diameter case, the midpoint localization makes that comparison particularly close to the active-diameter weave; in the near-unit case, bounded degree makes simultaneous local exchanges more plausible.
+
+**Disposition:** upgraded the linear inactive-slack alternative from a count of distinct near-active pairs to a linear near-unit matching or an `Omega(D^(1/4))` centrally localized near-diameter matching. C-II and Level I remain open.

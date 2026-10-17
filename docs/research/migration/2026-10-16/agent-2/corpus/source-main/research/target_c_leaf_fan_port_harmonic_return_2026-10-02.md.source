@@ -1,0 +1,232 @@
+# Target C: fan ports enter canonical harmonic attachment cells
+
+**Date:** 2026-10-02  
+**Base main:** `1c5c0fb8aefeed7aec9e0fc6c0edd3ebf59f8326`  
+**Status:** proof-only reduction. Level I and C-II remain open.
+
+## 1. Setup
+
+Assume the current low-outer-walk, square-root matching branch
+\[
+\nu(H)\le K_\nu\sqrt D,\qquad x_B\le K_x\sqrt D.
+\]
+The current fan theorem gives
+\[
+I\ge \lceil D\rceil-(4K_\nu+2K_x)\sqrt D
+\tag{1}
+\]
+internal exact same-carrier fan vertices. Let \(T\) be the contact-degree-three
+population and \(U=I-T\).
+
+The current exact fan-flip/blocker theorem already proves that if \(U\ge I/2\),
+there are at least \(I/2\) distinct strict loaded-to-diameter-inactive pairs in
+\((1,1+1/D]\), including a vertex-disjoint matching of size at least \(I/22\);
+it also gives at least \(I/12\) distinct inactive blocker endpoints.
+
+This note treats the complementary case \(T\ge I/2\).
+
+Fix a degree-three fan leaf \(p\), its carrier \(a\), adjacent leaves
+\(p_-,p_+\), and third positive-contact neighbor \(z\). Put
+\[
+u={p-a\over D},\quad \varepsilon={1\over2D},\quad
+\tau=\sqrt{1-\varepsilon^2},\quad
+c_D={\varepsilon+\sqrt3\,\tau\over2}.
+\tag{2}
+\]
+
+## 2. Each port is a canonical attachment incidence
+
+The current third-neighbor theorem gives \(\deg_H(z)=0\). Hence \(z\) is
+unloaded. Since \(pz\) is a positive unit contact, \(z\) lies in a canonical
+unloaded positive-contact component \(I_r\), and the loaded fan leaf \(p\) is
+in its attachment set \(A_r\).
+
+The leaf \(p\) has exactly three positive contacts: the two loaded-loaded fan
+contacts and \(pz\). Thus \(pz\) is its unique contact into the unloaded
+subgraph. Distinct degree-three fan leaves therefore give distinct edges of the
+contracted loaded/component attachment-incidence graph, even if several leaves
+enter the same component.
+
+So the degree-three side has \(T\) distinct canonical fan attachment
+incidences. This removes the factor-five loss that occurs when one counts only
+distinct third-neighbor vertices.
+
+## 3. Harmonic trapping forces a deep loaded return
+
+Canonical C-ATTACH-CURRENCY gives
+\[
+I_r\subseteq P_r:=\operatorname{conv}(A_r).
+\tag{3}
+\]
+Thus \(z\in\operatorname{conv}(A_r)\). Apply the linear functional
+\(x\mapsto u\cdot x\). Some \(b\in A_r\) satisfies
+\[
+u\cdot b\le u\cdot z.
+\]
+The exact inward-spoke theorem gives
+\[
+u\cdot(p-z)\ge c_D.
+\]
+Therefore
+\[
+\boxed{u\cdot(p-b)\ge c_D.}
+\tag{4}
+\]
+
+For the adjacent fan leaves,
+\[
+u\cdot(p-p_-)=u\cdot(p-p_+)=\varepsilon<c_D,
+\]
+and \(u\cdot(p-p)=0\). Hence
+\[
+\boxed{b\notin\{p,p_-,p_+\}.}
+\tag{5}
+\]
+
+Every port therefore forces its harmonic component to return to a nonlocal
+loaded attachment at constant radial support depth.
+
+## 4. A return on the carrier circle forces a square-root cell
+
+Every source point lies in the closed radius-\(D\) disk centered at \(a\), so
+\[
+|b-a|\le D.
+\tag{6}
+\]
+
+If \(b=a\), then \(p,a\in A_r\), hence
+\[
+\operatorname{diam}(P_r)=D.
+\tag{7}
+\]
+
+Suppose \(b\ne a\) and \(|b-a|=D\). Since \(p-a=Du\),
+\[
+|p-b|^2
+=2D\,u\cdot(p-b)
+\ge2Dc_D.
+\tag{8}
+\]
+Thus
+\[
+\boxed{\operatorname{diam}(P_r)\ge L_D:=\sqrt{2Dc_D}.}
+\tag{9}
+\]
+Since \(c_D\to\sqrt3/2\),
+\[
+L_D=(3^{1/4}+o(1))\sqrt D.
+\tag{10}
+\]
+
+If this return is another leaf \(p_{i+k}\) on the same exact fan run as
+\(p=p_i\), with \(\alpha_D=\arcsin(1/(2D))\), then
+\[
+D(1-\cos(2k\alpha_D))\ge c_D,
+\]
+so
+\[
+k\ge{\arccos(1-c_D/D)\over2\alpha_D}
+=(3^{1/4}+o(1))\sqrt D.
+\tag{11}
+\]
+Thus a same-run return skips a square-root number of exact fan steps.
+
+## 5. There are only O(sqrt(D)) square-root cells
+
+Let \(\delta_r\) be the graph diameter of \(I_r\). Canonical Section 62 gives
+\[
+\operatorname{diam}(P_r)\le\delta_r+2
+\tag{12}
+\]
+and
+\[
+\sum_r\delta_r\le6+e_{BB}+2s_C-3k,\qquad k=d_H+s_Z.
+\tag{13}
+\]
+Because the present branch has \(c_I>0\), the pinned ledger and attachment
+incidence bound give
+\[
+c_I+e_{BB}+s_C=q-2+k,\qquad s_C\le q-c_I-2.
+\tag{14}
+\]
+Substitution yields
+\[
+\sum_r\delta_r
+\le2q+2-2c_I-2k
+\le2q
+\le2\pi D.
+\tag{15}
+\]
+
+Hence the number \(N_L\) of components with
+\(\operatorname{diam}(P_r)\ge L_D\) obeys
+\[
+\boxed{N_L\le {2\pi D\over L_D-2}
+=\left({2\pi\over3^{1/4}}+o(1)\right)\sqrt D.}
+\tag{16}
+\]
+
+## 6. Global harmonic-return fork
+
+Assume \(T\ge I/2\). For every degree-three leaf choose a return \(b(p)\)
+satisfying (4).
+
+Call the incidence **off-carrier** if
+\[
+b(p)\ne a(p),\qquad |b(p)-a(p)|<D.
+\tag{17}
+\]
+Otherwise Section 4 places it in a cell of diameter at least \(L_D\).
+
+If at least \(T/2\) incidences are off-carrier, then there are at least
+\[
+\boxed{I/4}
+\tag{18}
+\]
+distinct canonical fan attachment incidences with an off-carrier loaded return
+satisfying (4). The return vertices themselves need not be distinct.
+
+Otherwise at least \(T/2\ge I/4\) incidences lie in \(L_D\)-large cells.
+By (16), one component \(I_*\) contains at least
+\[
+\boxed{
+{I(L_D-2)\over8\pi D}
+=
+\left({3^{1/4}\over8\pi}-o(1)\right)\sqrt D
+}
+\tag{19}
+\]
+distinct degree-three fan leaves among its loaded attachment vertices, and
+\[
+\operatorname{diam}(P_*)\ge
+(3^{1/4}+o(1))\sqrt D.
+\tag{20}
+\]
+
+Combining with the fan-flip theorem, the current low-\(x_B\),
+square-root-matching branch now has only three alternatives:
+
+1. a linear vertex-disjoint inverse-\(D\) almost-unit matching from loaded fan
+   leaves to diameter-inactive interior blockers;
+2. a linear family of canonical fan attachment incidences with off-carrier
+   deep loaded returns; or
+3. one square-root-diameter harmonic cell carrying a square-root population of
+   exact diameter-fan attachment vertices.
+
+## 7. Remaining bottleneck
+
+This does not close C-II.
+
+In alternative 2, the return vertices may be reused, so the next missing theorem
+must convert the linear support-depth incidences into a planar-incidence,
+perimeter, or diameter-thrackle obstruction.
+
+In alternative 3, the forced cell is only square-root scale. The next target is
+to combine its square-root fan attachment population with noncrossing attachment
+order and the actual diameter thrackle, with the aim of forcing a diameter-scale
+cell, linear outer-walk defect, an exact unit triangle, or a same-cardinality
+strict sub-\(D\) replacement.
+
+**Disposition:** exact proof-only coupling to canonical C-ATTACH-CURRENCY. No
+numerical experiment, verifier execution, CI result, or unexecuted certificate
+is used.

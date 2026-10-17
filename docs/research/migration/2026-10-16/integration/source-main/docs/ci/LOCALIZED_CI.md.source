@@ -1,0 +1,249 @@
+# Localized CI and optional research packages
+
+This is CI infrastructure, with no mathematical promotion claim. Canonical theorem
+state, theorem certificates, research reports and the research catalogue are unchanged.
+A passing Tier 0 or Tier 1 is never full mathematical verification.
+
+## Three verification levels
+
+| Machine result | Automatic work after owner enables rollout | Meaning |
+| --- | --- | --- |
+| `fast-only` | One planning/integrity job | Reviewed prose changed; metadata integrity checked. No mathematical replay. |
+| `targeted-replay` | Planning plus one serial replay job, only for affected packages | Declared package checks passed when replay actually succeeds. All other certificates remain unexecuted. |
+| `full-verification-required` | Planning/integrity only, nonzero required-check status | Comprehensive verification **or explicit AI-agent assessment of impact** is needed. No automatic full replay. |
+
+`plan.json` always contains `full_verified: false`. `dependency_closure` describes
+only declared inputs, never complete inferred Python dependencies. A successful
+plan is an authorization to run scoped checks, not evidence those checks ran.
+`replay.json` separately records execution and failure/timeout. The workflow uses
+`--require-localized`, making uncertain impact fail visibly with exit 3 (invalid
+metadata or a failed check exits 1). Full verification remains an owner operation:
+
+```sh
+python3 -m pip install --require-hashes --only-binary=:all: \
+  -r tools/requirements-verification-linux-x86_64.lock
+python3 -B tools/verify_prelaunch.py --full --base-ref origin/main
+```
+
+The existing full verifier and 94-certificate runner are preserved. Their original
+conservative selection API is also preserved for callers that explicitly request it.
+Do not interpret its certificate success as a proof of an unbounded theorem.
+
+## Local commands
+
+Use a clean, committed checkout with full Git ancestry and Python 3.14:
+
+```sh
+python3 -B tools/local_ci.py --base-ref origin/main --output /tmp/e99-plan
+python3 -B tools/local_ci.py --base-ref origin/main --integrity \
+  --require-localized --output /tmp/e99-tier0
+python3 -B tools/local_ci.py --base-ref origin/main --integrity --replay \
+  --require-localized --output /tmp/e99-replay
+python3 -B -m unittest tools.test_local_ci tools.test_prelaunch_workflows tools.test_verification_wheels
+```
+
+Alternatively use `--event-file event.json`; it accepts pinned PR base/head SHAs
+or a fast-forward push event with `forced: false`. The launcher verifies the
+checkout equals the event head. A new event after a force push uses its new exact
+head and a unique merge base; explicit forced push events require review. Missing,
+shallow, ambiguous or unrelated history, a dirty checkout, and stale head events
+fail closed. No network operation is performed to guess missing ancestry.
+
+Linux bubblewrap (`bwrap`) and a selected Python 3.14 interpreter are required for
+integrity/replay isolation. Install/provision these in an owner-managed environment.
+A missing binary or a kernel/AppArmor policy that blocks namespaces fails the
+check; there is no unisolated fallback. The integrity Python environment needs
+the six existing hash-locked lightweight packages. Replay uses only the standard
+library, with site initialization disabled. Native, third-party or long-running
+packages need a separately reviewed owner environment; runtime installation is
+rejected, so a failed or unsupported dependency cannot become a skipped success.
+
+## Optional package layout
+
+Register a new directory `research-packages/<id>/` with:
+
+- `TASK.json`: `version: 1`, matching `id`, `scope` with nonempty `statement`,
+  `domain`, `limitations`; `result`; `remaining_questions` list; `classification`
+  in `unreviewed`, `conditional`, `regression`. Packages cannot promote claims.
+- `SOURCES.json`: `version: 1`, `baseline_commit` (40 hex, an available ancestor),
+  `inputs`, package dependency directories in `packages`, and `unresolved` list.
+- `VERIFY.json`: `version: 1`, exact input paths, `environment`, `commands`, and
+  `domain` identical to `TASK.scope.domain`.
+- `README.md`: result, limitations, reproduction and remaining questions.
+
+See [the working example](../../research-packages/ci-protocol-example/README.md)
+and its three JSON files for a copyable contract. The validator in
+`tools/localized_ci/packages.py` implements the strict version 1 schema; unknown
+keys, duplicate JSON keys, duplicate source paths/identities and missing files
+are errors. There is no requirement to retrofit historical research artifacts.
+Only this opt-in directory participates in package discovery.
+
+Each source has `path`, current `sha256`, stable `identity`, and `generated_from`
+(a list of generator/input paths, each also declared as a source). An optional
+`commit` pins the exact same bytes at a specific available ancestor. The baseline
+commit anchors provenance; current hashes bind newly contributed code without
+requiring a self-referential commit hash. Sources may live anywhere in the repo.
+Every executable, data file, imported local helper and transitive helper must be
+a declared input. Imported package `__init__.py` files must also be declared.
+Package dependencies are impact edges; every package must remain independently
+replayable from its own complete declared input set. A dependency package's
+commands are not implicitly prerequisites and no generated output is carried
+from one replay to another. Commit necessary generated inputs with their pins.
+Local modules and regular packages that shadow an allowed standard-library
+module must also be declared. The import audit checks both `module.py` and
+`module/__init__.py` in the repository and entry-script search roots; an
+undeclared candidate requires review, preventing silent substitution during
+isolated replay.
+
+`VERIFY.environment` is exactly `{"python":"3.14","dependencies":[]}`. Each
+command is `{"argv":["{python}","repo/path/verify.py"],"timeout_seconds":120}`.
+There are 1–4 commands, 1–120 seconds each and at most 120 seconds total per
+package. CLI arguments, interpreter flags, shell commands, arbitrary environment
+variables and installation hooks are intentionally unsupported in v1. Put the
+complete domain in the checked script and declare it in TASK and VERIFY.
+
+Use canonical relative POSIX paths. Absolute paths, dot components, repeated
+slashes, traversal, aliases, symlinks and submodules are rejected. Source blobs
+are limited to 2 MiB, inputs to 256 per package, discovery to 1,000 packages,
+manifest reads to 32 MiB and the shared planning input cache to 64 MiB.
+Use explicit `unresolved` entries for dynamic imports, conditional filesystem
+inputs or other dependencies that cannot be declared safely. These require
+comprehensive verification/review when the package is affected.
+
+## Impact rules and mathematical limits
+
+The planner compares the PR merge base to the exact head and also reads the
+current target base registry. Renames are treated
+as deletion plus addition, preserving both names. It validates both package
+registries and takes the union of merge-base, head and current-base
+input/dependency edges. A newly affected package absent from the head, or an
+affected contract changed on the target base since the fork, requires rebase/review. Selection
+includes direct package changes, changed declared inputs outside the package,
+and transitive package dependents. Changed shared CI tooling selects all packages
+for impact reporting and requires Tier 2/review; the workload cap prevents a
+large batch from being launched. Deleting a package/input, removing dependency
+declarations, changing its verification contract/scope or exceeding the cap
+requires review. Hash mismatch, malformed manifests, missing/cyclic package
+dependencies and unsupported environments are integrity errors.
+
+Any canonical state, active target, mathematical foundation, registered certificate,
+or generated theorem-state index change requires comprehensive verification.
+The protected source/certificate set is read from both snapshots and the current
+base's theorem ledger. Unknown files and unpackaged research also require Tier 2
+or documented AI-agent impact assessment. They never automatically launch 94 certificates. The
+prose allowlist is narrow; `docs/ci/*.md` is documentation, while JSON/YAML and
+unknown data in those directories are not automatically exempted. Legacy research,
+source, script and report trees retain unknown dependency closure even when an
+opt-in package declares one of their files; those changes still require Tier 2.
+The reviewed new input namespace is `research-package-inputs/`. Declared inputs
+elsewhere still select dependents, but require comprehensive verification/review
+when legacy certificate dependency closure is unknown. Use package directories
+or that dedicated input namespace for new independently scoped work.
+
+A conservative AST audit flags unresolved local imports, dynamic capabilities,
+and undeclared or nonliteral filesystem access. Changes in loop domains and
+conditional verifier structure require review. The audit is a tripwire, not a
+proof that arbitrary Python has a complete dependency closure or covers a claimed
+mathematical domain. Namespace replay exposes only declared repository inputs;
+missing files cannot be supplied accidentally by the larger checkout. A malicious
+verifier can still print success, lie about its domain or compute the wrong
+statement. Reviewers must examine its argument, controls, stated domain and
+source pins. In particular a fresh package with a reduced scientific domain
+cannot establish a global theorem, even when every scoped command passes.
+
+## Trust and resource boundary
+
+The PR workflow checks out exact base and head SHAs separately. Only base tools
+and base regression tests execute in the control plane. Contributed tools cannot
+replace the planner or the metadata generators. Trusted metadata checks run in
+a read-only namespace against contributed data, including schema, theorem graph,
+promotion transaction, exact generated views/artifact index, active route summaries,
+changed-file whitespace and credential/privileged-trigger tripwires. Package
+validation and dependency planning never import contributed Python.
+
+Replay materializes only declared Git blobs in a fresh read-only `/work`.
+Bubblewrap unshares user, PID, network and other namespaces, drops capabilities,
+clears the environment and exposes no home, credentials, checkout `.git`, Docker
+socket or runner command files. The selected interpreter and its runtime are bound explicitly, including
+setup-python tool-cache paths; replay asserts Python 3.14 inside the namespace.
+The standard-library interpreter uses `-I -S`;
+`PYTHONOPTIMIZE`, user site packages and inherited tokens are absent. `/tmp` is
+private, system runtime is read only, output is captured in bounded files.
+Processes have 1 GiB address-space, 8 MiB file, 128-fd and CPU limits. Wall timeouts
+kill the process group; PID namespace teardown also removes detached descendants.
+Hosted job timeout provides the outer limit. Standard hosted ephemeral runners
+are required; do not execute this protocol on a privileged persistent runner.
+Resource limits are per process/command, not a repository-wide quota or a complete
+host cgroup memory/process quota. OS isolation availability must be checked before
+rollout. Do not add an unsafe fallback to work around unavailable namespaces.
+
+GitHub tokens are read only and checkout credentials are not persisted. No
+`pull_request_target`, secrets, artifact promotion, write permissions or package
+installer is used. Actions are commit-pinned and integrity wheels hash-pinned.
+Workflow edits still need owner review: an untrusted contributor can propose a
+changed workflow, and a file inside the PR cannot enforce its own immutability.
+No branch protection or collaborator policy is changed by this implementation.
+
+## Queue behavior and workload comparison
+
+The previous workflow runs integrity plus the existing selector on PRs and main
+pushes. A non-allowlisted change selects all 94 certificates. This implementation
+has one cheap planning job per enabled, non-draft PR, no push duplicate, no replay
+job at zero impact and one **serial** job for at most two packages / 240 declared
+seconds. There is no matrix to expand. Superseded runs for the same PR cancel.
+No historical, scheduled full replay or automatic rerun of zero-step failures is
+introduced. Environment installation is limited to the same small pinned lock
+once in each ephemeral job; no numerical stack or per-package installs/caches.
+
+Per-PR cancellation does **not** bound concurrent runs across distinct PRs.
+Let C be actual available runner slots, P measured planning service time including
+setup, R replay service time, and f the fraction of PRs eligible for replay. A
+burst costs approximately `N*(P+f*R)` runner seconds, with a rough drain-time lower
+bound of that work divided by C. Real queue ordering and other repository loads
+can increase latency. There is no measured hosted P/R because the account rejects
+runs before steps. Local measurements and projections are in
+[BENCHMARKS.md](BENCHMARKS.md). The [adversarial test map](ADVERSARIAL_TESTS.md)
+links each required failure case to its executable regression.
+
+| Concurrent PRs | Current gated rollout | Enabled planner, no affected packages | Worst allowed localized batches |
+| --- | --- | --- | --- |
+| 10 | 0 runner jobs | 10 plan, 0 replay | 10 plan + 10 serial replay jobs, at most 20 package commands sets |
+| 100 | 0 runner jobs | 100 plan, 0 replay | 100 plan + 100 serial replay jobs, at most 200 package command sets |
+| 500 | 0 runner jobs | 500 plan, 0 replay | 500 plan + 500 serial replay jobs, at most 1,000 package command sets |
+
+These are job/work counts, not promises about queue latency. With two available
+slots even 500 cheap jobs queue; local planning for researchers and staged owner
+admission are necessary at that scale. The independent switches allow Tier 0 to
+be enabled first, with required replay visibly pending until Tier 1 is authorized.
+GitHub-hosted execution cannot have a strict repository-wide cap from ordinary
+per-workflow concurrency alone. A true global admission queue would require a
+separate reviewed owner service; this change creates no such privileged service.
+
+## Migration without hosted execution
+
+1. Review this focused PR and its local evidence. Keep `E99_LOCALIZED_CI` and
+   `E99_PACKAGE_REPLAY` unset. Do not change billing, visibility, access or branch
+   protection. The account restriction is external to mathematical validation.
+2. Use the local commands on exact committed heads. For Tier 2 requests, review
+   impact or run the full owner verifier locally and attach its exact commit/log.
+   Do not mark a scoped result as full repository verification.
+3. Integrate the control tooling before enabling the workflow. Its trusted base
+   checkout must already contain these files. New CI tooling in a PR continues
+   to require Tier 2/review and is not trusted by its own hosted check.
+4. Only after separate owner authorization, provision/test the namespace runtime
+   and six locked wheels in the intended ephemeral image. Enable Tier 0 with
+   `E99_LOCALIZED_CI=true` for a small admission batch. Packages needing replay
+   remain non-green while the replay switch is unset. Measure hosted setup and
+   queue time before wider admission.
+5. Separately authorize `E99_PACKAGE_REPLAY=true` after a real isolated canary.
+   Review the full-verification/agent-impact gate and desired required-check names before
+   any protection update; this implementation makes no protection changes.
+6. Roll back automatic work by unsetting the switches. Continue local verification.
+   Never rerun account-restricted zero-step failures to try to make them green.
+
+Protocol inspiration: CrocSwap's
+[research workflow](https://github.com/CrocSwap/integer-mult-bounds/blob/main/.github/workflows/research-packages.yml)
+and [package guide](https://github.com/CrocSwap/integer-mult-bounds/blob/main/docs/research/research-package-guide.md),
+read via GitHub during implementation. This is a new smaller E99 protocol; no
+CrocSwap runtime dependency, copied source, historical migration or mathematical
+claim is introduced.

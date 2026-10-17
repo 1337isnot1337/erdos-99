@@ -1,0 +1,149 @@
+<!-- theorem-state: {"artifact_id":"ART-B03A6D1613C7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Audit - Target B fractional balanced-grain exclusion
+
+**Date:** 2026-09-05  
+**Candidate:** `docs/reports/target_b_fractional_balanced_grain_exclusion_2026-09-05.md`  
+**Verdict:** PASS under its stated asymptotically coherent balanced-grain hypotheses.  
+**Global LEVEL I status:** STILL OPEN.
+
+## 1. Fraction/diameter identity
+
+For a balanced grain with
+
+`E=(2-epsilon)m^2+o(D^2)`
+
+and global retained crossing fraction
+
+`Theta=E/R_*`,
+
+where `R_*/D^2->Delta_2=1/c`, one has
+
+`(2-epsilon)m^2=Theta Delta_2 D^2+o(D^2)`.
+
+Hence
+
+`D^2/m^2=c(2-epsilon)/Theta+o(1)`.
+
+This is an identity, not a dominant-component estimate.
+
+PASS.
+
+## 2. External coarea components do not spoil the balanced grid lower bound
+
+The balanced phase pair lies in one coarea component. Crossings from its trains to trains outside that component belong to the coarea cut. Choosing phase-bin width tending to zero slowly gives phase error `o(1)` while the coarea cut remains `o(D^2)`.
+
+For a fixed positive central trim of a macroscopic balanced grid, TG1 says every genuinely external separator train spends `Theta(m)` cut crossings. Since the total cut has `o(D^2)=o(m^2)` edges, only `o(m)` external separator trains can affect the selected deep diagonal.
+
+Therefore the audited balanced-grid estimate survives:
+
+`D^2/m^2>=3-4sqrt(3)L(epsilon)-o(1)`,
+
+with
+
+`L(epsilon)=6epsilon^(1/4)+4sqrt(epsilon)`.
+
+PASS.
+
+## 3. Fractional grain cap
+
+Combining the exact identity with the geometric lower bound gives
+
+`Theta<=c(2-epsilon)/Q(epsilon)+o(1)`
+
+whenever
+
+`Q(epsilon)=3-4sqrt(3)L(epsilon)>0`.
+
+At `epsilon=0`,
+
+`Theta<=2c/3=0.7351051939...`.
+
+PASS.
+
+## 4. Residual train budget
+
+The balanced grain uses `3m` distinct train vertices. The remaining coarea components have total crossing count
+
+`(1-Theta)Delta_2D^2+o(D^2)`.
+
+Componentwise Mantel gives residual train count at least
+
+`2sqrt((1-Theta)Delta_2)D-o(D)`
+
+because `sum sqrt(e_j)>=sqrt(sum e_j)`.
+
+Also
+
+`m/D=sqrt(Theta Delta_2/(2-epsilon))+o(1)`.
+
+Therefore
+
+`x>=3sqrt(Theta Delta_2/(2-epsilon))+2sqrt((1-Theta)Delta_2)-o(1)`.
+
+PASS.
+
+## 5. Lower-edge calculus
+
+At
+
+`x_0=8/(3sqrt(c))`,
+
+GMC2 gives
+
+`Theta>=0.8142696805...`.
+
+For `epsilon=0`, divide the train-budget right side by `sqrt(Delta_2)` and write
+
+`f(Theta)=3sqrt(Theta/2)+2sqrt(1-Theta)`.
+
+Its derivative is
+
+`f'(Theta)=3/(2sqrt(2Theta))-1/sqrt(1-Theta)`.
+
+The unique critical point solves
+
+`9(1-Theta)=8Theta`,
+
+so
+
+`Theta=9/17=0.5294...`.
+
+Thus `f` is strictly decreasing throughout the relevant interval `Theta>=0.814...`.
+
+Direct substitution gives
+
+`f(8/9)sqrt(Delta_2)=x_0`.
+
+Therefore any `Theta<8/9` in the GMC-forced interval violates the global train budget; a balanced largest grain requires
+
+`Theta>=8/9-o(1)`.
+
+PASS.
+
+## 6. Explicit epsilon threshold
+
+The fractional cap
+
+`U(epsilon)=c(2-epsilon)/Q(epsilon)`
+
+is continuous and strictly increasing for the tiny epsilon range used. Solving
+
+`U(epsilon)=8/9`
+
+numerically gives the first positive root
+
+`epsilon_*=2.3516153...e-8`.
+
+At smaller epsilon, the fractional diameter theorem forces `Theta<8/9`, contradicting the train-budget requirement.
+
+The numerical margin is stable at the displayed precision.
+
+PASS.
+
+## 7. Scope
+
+The theorem applies when the **largest crossing-mass coarea grain is balanced**. It does not yet handle a unique-max or general unbalanced largest grain, so it is not a Level-I closure.
+
+## Verdict
+
+PASS.

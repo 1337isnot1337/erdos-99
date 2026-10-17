@@ -1,0 +1,98 @@
+#!/usr/bin/env python3
+"""Exact algebraic certificate for >0.072 D^2 center/small-leaf O-O crossing incidence.
+
+Upstream exact certificates supply the safe rounded constants
+  W <= 1.915963,
+  E_dom >= 0.9068958,
+  C > 0.8538,
+  z_V > 0.616.
+This script certifies the remaining finite optimization exactly with Fraction arithmetic.
+"""
+
+from fractions import Fraction as Q
+
+W = Q(1915963, 1_000_000)
+E = Q(9068958, 10_000_000)
+z0 = Q(616, 1000)
+Cmin = Q(4269, 5000)  # 0.8538
+target = Q(72, 1000)
+
+# Global center-capacity defect.
+Hmax = W * W / 4 - E
+assert Hmax > 0
+
+# Branch A: ordering itself forces W_actual <= 2C+V < W, so use y<=CV.
+# Then V <= W-2C and the worst rounded constants occur at C=Cmin.
+Vmax_A = W - 2 * Cmin
+J_A = Cmin * (z0 - 2 * Vmax_A)
+assert J_A > target
+
+# Branch B has W_actual pushed to W.  The switch between y<=CV and y<=h/b
+# solves V(2C+V-W)=h.  A switch value V>=0.255 is impossible because its
+# left side already exceeds the global h ceiling.
+Vswitch = Q(255, 1000)
+switch_product = Vswitch * (2 * Cmin + Vswitch - W)
+assert switch_product > Hmax
+J_switch = Cmin * (z0 - 2 * Vswitch)
+assert J_switch > target
+
+# After the switch, the lower-bound function is concave in V, so its minimum
+# is at the switch or at the upper endpoint V=(W-C)/2 (balanced leaves).
+# At that upper endpoint, J(C)>target iff N(C)>0 because 3C-W>0, where:
+#
+# N(C) = (J(C)-target)(3C-W).
+def N(c):
+    return (
+        -6 * target * c
+        + 2 * target * W
+        + 6 * z0 * c * c
+        - 2 * z0 * c * W
+        + 7 * c**3
+        - 8 * c * c * W
+        + 4 * c * E
+        + c * W * W
+    ) / 2
+
+
+def dN(c):
+    return (
+        -6 * target
+        + 12 * z0 * c
+        - 2 * z0 * W
+        + 21 * c * c
+        - 16 * c * W
+        + 4 * E
+        + W * W
+    ) / 2
+
+
+def d2N(c):
+    return (12 * z0 + 42 * c - 16 * W) / 2
+
+
+assert 3 * Cmin - W > 0
+assert N(Cmin) > 0
+assert d2N(Cmin) > 0
+
+# dN is strictly increasing for C>=Cmin.  Its unique critical point in that
+# range lies in [0.8575,0.8576].  Bound N throughout that interval by a
+# derivative-Lipschitz estimate; outside, monotonicity moves away from the minimum.
+c1 = Q(8575, 10000)
+c2 = Q(8576, 10000)
+assert Cmin < c1 < c2
+assert dN(c1) < 0 < dN(c2)
+
+max_abs_dN = max(abs(dN(c1)), abs(dN(c2)))
+N_interval_lower = N(c1) - max_abs_dN * (c2 - c1)
+assert N_interval_lower > 0
+
+print("Hmax =", float(Hmax))
+print("branch-A V upper =", float(Vmax_A))
+print("branch-A crossing lower =", float(J_A))
+print("switch product excess =", float(switch_product - Hmax))
+print("switch crossing lower =", float(J_switch))
+print("N(Cmin) =", float(N(Cmin)))
+print("dN(0.8575) =", float(dN(c1)))
+print("dN(0.8576) =", float(dN(c2)))
+print("N critical-interval lower =", float(N_interval_lower))
+print("PASS: weighted center / smallest-leaf O-O crossing incidence > 0.072 D^2")

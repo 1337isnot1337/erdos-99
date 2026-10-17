@@ -1,0 +1,65 @@
+#!/usr/bin/env python3
+"""Arithmetic regression for the parameterized deep grid-force extraction.
+
+This script does not prove the geometric inputs. It checks the exact constant
+bookkeeping and the derived disjoint-braid coefficients used in
+`target_c_high_t_parameterized_deep_grid_force_density_t18687_2026-09-17.md`.
+"""
+from fractions import Fraction as Q
+import math
+
+c0 = Q(113, 20_000_000)
+c = 4 * c0
+C = 1_109_000
+H = 4 * C
+
+assert c0 == Q(113, 20_000_000)
+assert c == Q(113, 5_000_000)
+assert H == 4_436_000
+
+# The 90%-density choice in PD.34.
+rho = c0 / 100
+delta = c0 / 100
+eta = c0 / 50
+loss = 6 * rho + eta + 2 * delta
+lam = c0 - loss
+assert loss == c0 / 10
+assert lam == 9 * c0 / 10
+assert lam == Q(1017, 200_000_000)
+assert 0 < rho < c0 / 6
+assert 0 < lam < c0
+
+# With m_r=2r+1 and T_r=201m_r, the separator-window loss is < eta.
+# The m_r factor cancels exactly.
+separator_coeff = c / 201
+assert separator_coeff < eta
+assert separator_coeff / c0 == Q(4, 201)
+assert eta / c0 == Q(1, 50)
+assert 2 * delta == c0 / 50
+
+# Conflict-graph extraction: Delta(H) <= (4*3^(1/8)+o(1))D^(3/4),
+# so four endpoint conflicts give denominator 16*3^(1/8).
+kappa = 3 ** (1 / 8)
+braid_90 = float(lam) / (16 * kappa)
+braid_limit = float(c0) / (16 * kappa)
+old_braid = float(c) / (512 * kappa)
+
+assert abs(braid_90 - 2.77032561594e-7) < 5e-19
+assert abs(braid_limit - 3.07813957327e-7) < 5e-19
+assert abs(braid_limit / old_braid - 8.0) < 1e-12
+
+# The normalized local cusp margin is fixed and positive for fixed parameters.
+cusp_margin = 2 * math.sin(float(delta))
+assert cusp_margin > 0
+
+print("PASS: parameterized deep grid-force density arithmetic")
+print("c0 =", float(c0))
+print("c =", float(c))
+print("lambda_90 =", float(lam))
+print("separator loss coefficient / c0 =", float(separator_coeff / c0))
+print("eta / c0 =", float(eta / c0))
+print("H =", H)
+print("90% braid coefficient =", braid_90)
+print("limiting braid coefficient =", braid_limit)
+print("improvement over fixed c/32 extraction =", braid_limit / old_braid)
+print("90% normalized cusp margin =", cusp_margin)

@@ -1,0 +1,343 @@
+#!/usr/bin/env python3
+"""Exact combinatorial verifier for domination width in minimal L(K8) cycles.
+
+The reciprocal segment-comparison graph is L(K8).  A potential all-root
+interior-domination atom compares {r,t} with {r,h}, where t is one of the two
+interior reciprocal vertices 6,7 and h is a hull vertex 0,...,5.  Thus, at the
+shared root r, the two non-root endpoints have opposite H/I type.
+
+This verifier enumerates every chordless cycle template used by the committed
+global segment-order theorem and proves two nested bounds: an undirected
+minimal template touches at most four distinct domination clauses (r,t), while
+either directed cyclic orientation can use at most two domination atoms in
+their forced target-to-hull direction.  It also records both exact censuses.
+Integer/set combinatorics only; no floating point.
+"""
+
+from collections import Counter, defaultdict
+from itertools import combinations, permutations
+from math import comb, factorial
+
+V = tuple(range(8))
+HULL = frozenset(range(6))
+INTERIOR = frozenset((6, 7))
+
+
+def seg(a, b):
+    assert a != b
+    return frozenset((a, b))
+
+
+def domination_atom(e, f):
+    """Return (root,target,hull_endpoint), or None if comparison is ineligible."""
+    shared = e & f
+    assert len(shared) == 1
+    root = next(iter(shared))
+    a = next(iter(e - {root}))
+    b = next(iter(f - {root}))
+    if (a in INTERIOR) == (b in INTERIOR):
+        return None
+    target = a if a in INTERIOR else b
+    hull = b if a in INTERIOR else a
+    assert target in INTERIOR and hull in HULL
+    assert root != target and root != hull
+    return (root, target, hull)
+
+
+def domination_arrow(e, f):
+    """Return (shorter_segment,longer_segment,atom), or None if ineligible.
+
+    A domination atom is lambda_{r,t} <= lambda_{r,h}; in the strict geometric
+    branch it is lambda_{r,t} < lambda_{r,h}.  Thus its comparison direction in
+    the global shorter-to-longer segment graph is {r,t} -> {r,h}.
+    """
+    atom = domination_atom(e, f)
+    if atom is None:
+        return None
+    root, target, hull = atom
+    return seg(root, target), seg(root, hull), atom
+
+
+def clause(atom):
+    return atom[:2]
+
+
+def all_line_edges():
+    segments = tuple(seg(a, b) for a, b in combinations(V, 2))
+    out = []
+    for e, f in combinations(segments, 2):
+        if len(e & f) == 1:
+            out.append((e, f))
+    return segments, tuple(out)
+
+
+def simple_cycles(k):
+    """Canonical undirected labelled simple k-cycles in K8."""
+    out = []
+    for chosen in combinations(V, k):
+        first = min(chosen)
+        rest = tuple(x for x in chosen if x != first)
+        for tail in permutations(rest):
+            # first is fixed, so reversal is the only remaining duplication.
+            if tail[0] > tail[-1]:
+                continue
+            out.append((first,) + tail)
+    assert len(out) == len(set(out))
+    return tuple(out)
+
+
+def cycle_segment_vertices(vertices):
+    k = len(vertices)
+    return tuple(seg(vertices[i], vertices[(i + 1) % k]) for i in range(k))
+
+
+def cycle_atoms(segment_vertices):
+    k = len(segment_vertices)
+    atoms = []
+    for i in range(k):
+        atom = domination_atom(segment_vertices[i - 1], segment_vertices[i])
+        if atom is not None:
+            atoms.append(atom)
+    return tuple(atoms)
+
+
+def directed_domination_atoms(segment_vertices):
+    """Atoms agreeing with the forward and reverse cyclic orientations."""
+    n = len(segment_vertices)
+    forward = []
+    reverse = []
+    for i in range(n):
+        previous = segment_vertices[i - 1]
+        current = segment_vertices[i]
+        arrow = domination_arrow(previous, current)
+        if arrow is None:
+            continue
+        shorter, longer, atom = arrow
+        if shorter == previous and longer == current:
+            forward.append(atom)
+        elif shorter == current and longer == previous:
+            reverse.append(atom)
+        else:
+            raise AssertionError((previous, current, arrow))
+    return tuple(forward), tuple(reverse)
+
+
+def star_triangles():
+    out = []
+    for root in V:
+        others = tuple(x for x in V if x != root)
+        for triple in combinations(others, 3):
+            edges = tuple(seg(root, x) for x in triple)
+            atoms = tuple(
+                atom
+                for e, f in combinations(edges, 2)
+                if (atom := domination_atom(e, f)) is not None
+            )
+            out.append((root, triple, atoms))
+    assert len(out) == 280
+    return tuple(out)
+
+
+def side_triangles():
+    out = []
+    for a, b, c in combinations(V, 3):
+        edges = (seg(a, b), seg(b, c), seg(c, a))
+        atoms = cycle_atoms(edges)
+        out.append(((a, b, c), atoms))
+    assert len(out) == 56
+    return tuple(out)
+
+
+def main():
+    segments, line_edges = all_line_edges()
+    assert len(segments) == 28
+    assert len(line_edges) == 168
+
+    potential = tuple(
+        atom for e, f in line_edges if (atom := domination_atom(e, f)) is not None
+    )
+    assert len(potential) == len(set(potential)) == 72
+    all_clauses = {(root, target) for target in INTERIOR for root in V if root != target}
+    assert len(all_clauses) == 14
+    assert {clause(atom) for atom in potential} == all_clauses
+
+    potential_per_clause = Counter(clause(atom) for atom in potential)
+    assert Counter(potential_per_clause.values()) == Counter({5: 12, 6: 2})
+
+    expected_simple = {
+        4: (210, {0: 60, 2: 120, 4: 30}),
+        5: (672, {0: 72, 2: 480, 4: 120}),
+        6: (1680, {0: 60, 2: 1080, 4: 540}),
+        7: (2880, {2: 1440, 4: 1440}),
+        8: (2520, {2: 720, 4: 1800}),
+    }
+
+    simple_width = {}
+    simple_by_interiors = {}
+    all_nontrivial_widths = Counter()
+    all_nontrivial_directional = Counter()
+    directed_clause_pairs = Counter()
+    directed_atom_pairs = Counter()
+
+    for k in range(4, 9):
+        cycles = simple_cycles(k)
+        width = Counter()
+        by_interiors = defaultdict(Counter)
+        for vertices in cycles:
+            edges = cycle_segment_vertices(vertices)
+            atoms = cycle_atoms(edges)
+            keys = tuple(clause(atom) for atom in atoms)
+
+            # A simple K8 cycle visits each root once, so every eligible
+            # comparison belongs to a different root-target clause.
+            assert len(keys) == len(set(keys))
+            assert len(keys) <= 4
+            forward, reverse = directed_domination_atoms(edges)
+            assert len(forward) == len(reverse)
+            assert len(forward) * 2 == len(atoms)
+            assert len(forward) <= 2
+            assert len({clause(atom) for atom in forward}) == len(forward)
+            assert len({clause(atom) for atom in reverse}) == len(reverse)
+            for aligned in (forward, reverse):
+                if len(aligned) == 2:
+                    clause_pair = tuple(sorted(clause(atom) for atom in aligned))
+                    atom_pair = tuple(sorted(aligned))
+                    directed_clause_pairs[clause_pair] += 1
+                    directed_atom_pairs[atom_pair] += 1
+            width[len(keys)] += 1
+            all_nontrivial_directional[len(forward)] += 1
+            by_interiors[sum(v in INTERIOR for v in vertices)][len(keys)] += 1
+
+        expected_count, expected_width = expected_simple[k]
+        assert len(cycles) == expected_count
+        assert dict(sorted(width.items())) == expected_width
+        simple_width[k] = dict(sorted(width.items()))
+        simple_by_interiors[k] = {
+            n: dict(sorted(c.items())) for n, c in sorted(by_interiors.items())
+        }
+        all_nontrivial_widths.update(width)
+
+    stars = star_triangles()
+    star_eligible = Counter()
+    star_width = Counter()
+    for root, triple, atoms in stars:
+        edges = tuple(seg(root, x) for x in triple)
+        forward, reverse = directed_domination_atoms(edges)
+        assert len(forward) == len(reverse)
+        assert len(forward) <= 1
+        star_eligible[len(atoms)] += 1
+        star_width[len({clause(atom) for atom in atoms})] += 1
+        all_nontrivial_directional[len(forward)] += 1
+    assert dict(sorted(star_eligible.items())) == {0: 100, 2: 180}
+    assert dict(sorted(star_width.items())) == {0: 100, 1: 150, 2: 30}
+    all_nontrivial_widths.update(star_width)
+
+    sides = side_triangles()
+    side_eligible = Counter(len(atoms) for _, atoms in sides)
+    side_width = Counter(len({clause(atom) for atom in atoms}) for _, atoms in sides)
+    side_directional = Counter()
+    for (a, b, c), _ in sides:
+        edges = (seg(a, b), seg(b, c), seg(c, a))
+        forward, reverse = directed_domination_atoms(edges)
+        assert len(forward) == len(reverse)
+        assert len(forward) <= 1
+        side_directional[len(forward)] += 1
+    assert dict(sorted(side_eligible.items())) == {0: 20, 2: 36}
+    assert dict(sorted(side_width.items())) == {0: 20, 2: 36}
+
+    # Side triangles are the 56 order-tautological templates already removed
+    # by the complete-angle triangle identities.  The remaining 8,242 minimal
+    # templates have domination-clause width exactly distributed as follows.
+    expected_total_width = {0: 292, 1: 150, 2: 3870, 4: 3930}
+    assert dict(sorted(all_nontrivial_widths.items())) == expected_total_width
+    assert sum(all_nontrivial_widths.values()) == 8242
+    assert sum(v for w, v in all_nontrivial_widths.items() if w > 0) == 7950
+    assert max(all_nontrivial_widths) == 4
+    assert 3 not in all_nontrivial_widths
+
+    expected_directional = {0: 292, 1: 4020, 2: 3930}
+    assert dict(sorted(all_nontrivial_directional.items())) == expected_directional
+    assert max(all_nontrivial_directional) == 2
+    assert dict(sorted(side_directional.items())) == {0: 20, 1: 36}
+
+    # A two-literal directed cycle must use opposite targets at distinct roots,
+    # and the two roots cannot both be interior.  These conditions are also
+    # sufficient at the static template level.
+    expected_pair_set = {
+        tuple(sorted(((r, 6), (s, 7))))
+        for r in V if r != 6
+        for s in V if s != 7
+        if r != s and not (r in INTERIOR and s in INTERIOR)
+    }
+    assert set(directed_clause_pairs) == expected_pair_set
+    assert len(directed_clause_pairs) == 42
+    hull_hull_pairs = {
+        pair for pair in directed_clause_pairs
+        if all(root in HULL for root, _ in pair)
+    }
+    hull_interior_pairs = set(directed_clause_pairs) - hull_hull_pairs
+    assert len(hull_hull_pairs) == 30
+    assert len(hull_interior_pairs) == 12
+    assert {directed_clause_pairs[pair] for pair in hull_hull_pairs} == {132}
+    assert {directed_clause_pairs[pair] for pair in hull_interior_pairs} == {325}
+
+    atom_pairs_by_clause_pair = defaultdict(set)
+    for atom_pair in directed_atom_pairs:
+        cp = tuple(sorted(clause(atom) for atom in atom_pair))
+        atom_pairs_by_clause_pair[cp].add(atom_pair)
+    assert set(atom_pairs_by_clause_pair) == expected_pair_set
+    assert len(directed_atom_pairs) == 420
+    assert {len(atom_pairs_by_clause_pair[pair]) for pair in hull_hull_pairs} == {12}
+    assert {len(atom_pairs_by_clause_pair[pair]) for pair in hull_interior_pairs} == {5}
+    hull_hull_atom_pairs = {
+        atom_pair for atom_pair in directed_atom_pairs
+        if all(atom[0] in HULL for atom in atom_pair)
+    }
+    hull_interior_atom_pairs = set(directed_atom_pairs) - hull_hull_atom_pairs
+    assert len(hull_hull_atom_pairs) == 360
+    assert len(hull_interior_atom_pairs) == 60
+    assert {directed_atom_pairs[pair] for pair in hull_hull_atom_pairs} == {11}
+    assert {directed_atom_pairs[pair] for pair in hull_interior_atom_pairs} == {65}
+    assert sum(directed_clause_pairs.values()) == sum(directed_atom_pairs.values()) == 7860
+
+    # Independent closed-form checks for the per-atom directed-cycle
+    # multiplicities.  Contracting the forced paths gives these finite sums.
+    hull_hull_cycle_multiplicity = sum(
+        comb(2, m) * factorial(m + 1) for m in range(3)
+    )
+    hull_interior_cycle_multiplicity = sum(
+        comb(4, m) * factorial(m) for m in range(5)
+    )
+    assert hull_hull_cycle_multiplicity == 11
+    assert hull_interior_cycle_multiplicity == 65
+    assert 30 * 12 == len(hull_hull_atom_pairs) == 360
+    assert 12 * 5 == len(hull_interior_atom_pairs) == 60
+    assert (
+        len(hull_hull_atom_pairs) * hull_hull_cycle_multiplicity
+        + len(hull_interior_atom_pairs) * hull_interior_cycle_multiplicity
+        == 7860
+    )
+
+    print("PASS: domination-cycle clause width <= 4; directed cut width <= 2")
+    print("segments", len(segments), "line_edges", len(line_edges))
+    print("potential_domination_atoms", len(potential), "clauses", len(all_clauses))
+    print("potential_atoms_per_clause_counts", dict(sorted(Counter(potential_per_clause.values()).items())))
+    print("star_eligible_comparisons", dict(sorted(star_eligible.items())))
+    print("star_distinct_clause_width", dict(sorted(star_width.items())))
+    print("side_distinct_clause_width", dict(sorted(side_width.items())))
+    print("side_directed_capacity", dict(sorted(side_directional.items())))
+    for k in range(4, 9):
+        print("simple_cycle", k, "width", simple_width[k], "by_interiors", simple_by_interiors[k])
+    print("nontrivial_8242_clause_width", dict(sorted(all_nontrivial_widths.items())))
+    print("nontrivial_8242_directed_capacity", dict(sorted(all_nontrivial_directional.items())))
+    print("directed_two_literal_clause_pairs", len(directed_clause_pairs))
+    print("two_literal_clause_pair_types", {"hull_hull": len(hull_hull_pairs), "hull_interior": len(hull_interior_pairs)})
+    print("two_literal_clause_pair_occurrences", {"hull_hull": 132, "hull_interior": 325})
+    print("directed_two_literal_atom_pairs", len(directed_atom_pairs))
+    print("two_literal_atom_pair_types", {"hull_hull": len(hull_hull_atom_pairs), "hull_interior": len(hull_interior_atom_pairs)})
+    print("two_literal_atom_pair_occurrences", {"hull_hull": 11, "hull_interior": 65})
+    print("domination_touched_nontrivial_templates", 7950)
+
+
+if __name__ == "__main__":
+    main()

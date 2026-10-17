@@ -1,0 +1,191 @@
+# Hostile audit — `g=0.0071` reflection / long-side / blocker normal form
+
+**Date:** 2026-09-15  
+**Reviewed:**
+- `research/target_c_g0071_reflection_longside_blocker_normal_form_2026-09-15.md`
+- `research/verify_target_c_g0071_reflection_longside_blocker_normal_form.py`
+
+**Disposition:** **PASS at proof-only full-core Type-II scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The candidate rebases a finite support-reflection argument onto the current
+hostile-audited matched atomic input `g=0.0071` and safe floor `t>=1.84323`.  The audit
+checks the finite route losses, support reflection, exterior-cap additivity, scalar
+extremizer, degree-four tail sharpening, and blocker-reuse/matching conclusions.
+
+## 1. The route losses are side-injective in the required places
+
+One straight internal vertex is selected per surviving nonunit loaded side.  A side
+with no such vertex contains a beta-bad route edge, costing at least `1-cos beta` in
+the exact route energy.  The support-projection escape uses horizontal negative
+variation and costs `d_out/(2 cos beta)`.  Deep selected sides are distinct by
+construction and Jensen applies to their side lengths.  No outer occurrence is
+converted to a side count without the one-per-side selection.
+
+**Verdict:** PASS.
+
+## 2. Support-line reflection has the correct feasibility alternative
+
+For reflected `x^-`, the identity
+
+\[
+|w-x^-|^2-|w-x|^2=4hq_w
+\]
+
+shows that all positive-core contacts are preserved or lengthened because the full
+positive core lies in the inward force-hull half-plane.  At least one old contact is
+strictly lengthened.  Therefore a feasible reflected source would contradict diameter
+minimality or the contact-minimal tie-break unless a new unit contact appears.
+Every strict unit blocker or new unit contact must lie in the exterior half-plane.
+Otherwise the reflection identity moves an old noncontact weakly farther away.
+The remaining obstruction is an actual diameter violation; shallow depth gives
+`|x-y|>D-1`.
+
+**Verdict:** PASS.
+
+## 3. Exterior-witness elimination is valid for arbitrary loaded sides
+
+The foot-interiority argument uses only selected support depth `h<=1/2`, old endpoint
+separation, and the witness inequality; it does not require a symmetric two-edge tooth.
+For fixed `beta<pi/6`, compactness and triangle freeness supply a uniform positive
+witness depth.
+
+Canonical Section 77 proves loaded diameter endpoints are full-source-hull extreme
+points and decomposes the exterior region into convex caps over consecutive loaded
+vertices.  Distinct witnessed sides therefore give distinct cap sectors.  The
+arc-minus-chord cost is convex/decreasing in side length, so Jensen with total selected
+side length at most `pi D` is in the safe direction.  Type-II perimeter saturation
+then forces only `o(D)` exterior-witness sides.
+
+**Verdict:** PASS.
+
+## 4. The `m_B` cancellation and long-side conversion are exact
+
+The finite lower bound for `B_beta` begins with `m_B`.  Adding the exact Section-63
+identity `u_B=x_B-m_B` removes it exactly.  The independent integer route theorem gives
+
+\[
+0\le u_B-L_{>2}\le d_{out},
+\]
+
+so the second half of the final alternative is literal Euclidean loaded-side length,
+not a new integer proxy.
+
+**Verdict:** PASS.
+
+## 5. The current `g=0.0071` scalar endpoint is correctly rebased
+
+Current main gives
+
+\[
+2\delta+\kappa/2\le R_{71}(t)=9t/2-2\pi-C_{71}.
+\]
+
+At fixed `t,delta` the candidate bound decreases with `kappa`, hence takes the largest
+feasible topology defect.  After substitution its derivative in `delta` is
+`5-mathcal L'(delta)`, which is strictly negative at `beta_0` throughout the relevant
+interval.  Thus the weak point is
+
+\[
+\kappa=0,
+\qquad
+\delta=R_{71}(t)/2.
+\]
+
+The committed Decimal formula gives at `t=1.84323`
+
+\[
+\delta=0.0498120395462494157\ldots,
+\]
+
+\[
+G=0.3858186091163249747\ldots .
+\]
+
+Therefore the two half-split constants are
+
+\[
+B_{\beta_0}/D\ge0.1929093045581624873\ldots
+\]
+
+or
+
+\[
+L_{>2}/D\ge0.1430972650119130716\ldots .
+\]
+
+The reflection boundary zero is bracketed by
+
+\[
+1.8569406450521027102<t_{ref}<1.8569406450521027103.
+\]
+
+**Verdict:** PASS.
+
+## 6. The degree-four tail bound is correct
+
+At a beta-straight convex-pocket route vertex the local convex-chain turn is below
+`2 beta`.  Thus the complementary core-side sector containing every non-route contact
+ray has angle below `pi+2beta<4pi/3`.  Triangle freeness makes every pair of unit
+neighbor rays strictly more than `pi/3` apart.  Three non-route neighbors would need
+four such gaps between the two route rays and cannot fit.  Hence an unloaded selected
+tail has contact degree three or four.
+
+A physical degree-four plane vertex has at most four occurrences on one facial walk.
+Thus the blocker side family yields at least
+
+\[
+0.19290930455816248/4
+=0.04822732613954062
+\]
+
+distinct physical unloaded tails per diameter scale.
+
+**Verdict:** PASS.
+
+## 7. Blocker reuse is only claimed at the strength proved
+
+Type-II force-hull disk convergence plus the diameter bound forces the full source hull
+to have the same normalized disk limit.  `D-1` blocker pairs are therefore uniformly
+asymptotically antipodal.  The selected tail is `O(1)` from its loaded support side,
+and uniform support convergence aligns the side normal with the tail radial direction.
+All sides blocked by one source point lie in one shrinking normal window.
+
+The normalized side-perimeter measures converge weakly to Lebesgue measure.  A compact
+moving-center argument upgrades this to uniformly vanishing mass in shrinking windows.
+Since every loaded side has length at least one, one blocker serves only `o(D)` selected
+sides.
+
+The proof correctly stops at `o(D)`.  It supplies no explicit reuse exponent.
+
+**Verdict:** PASS.
+
+## 8. The near-diameter matching conclusion is valid but nonquantitative
+
+After physical-tail deduplication, choose one blocker per tail.  This gives `Omega(D)`
+near-diameter edges.  One unordered pair can be generated from at most its two
+endpoints, so simplification retains `Omega(D)` edges.  Tail-role degree is one;
+blocker-role degree is `o(D)`.  Greedy matching therefore gives size
+`Omega(D)/o(D)->infinity`.
+
+Every matched edge has an unloaded positive-core tail endpoint and hence is not an
+actual diameter edge at that endpoint.
+
+**Verdict:** PASS.
+
+## Final disposition
+
+The current proof-only normal form is valid:
+
+```text
+>=0.1929093 D distinct loaded sides with distributed D-1 blockers,
+including >=0.0482273 D distinct unloaded degree-3/4 tails and an unbounded
+near-diameter matching,
+
+or
+
+L_{>2} >=0.1430973 D-o(D) literal loaded-side length beyond two.
+```
+
+No exact unit triangle, exact diameter promotion, source motion, or Type-I closure is
+proved.  **PASS. C-II remains open.**

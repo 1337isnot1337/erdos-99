@@ -1,0 +1,446 @@
+# Target C — actual diameter endpoints cannot support translated double rails
+
+```text
+repeated macroscopic displacement of actual loaded endpoints
+-> source ball-hull width capacity
+-> a linear double rail requires macroscopic translation defects
+-> a contact extension carries quadratic total path length
+-> contradiction if that same extension is paid by a subquadratic source ledger;
+   no such payment or physical endpoint/chart identification is assumed.
+```
+
+**Date:** 2026-10-02.  
+**Starting checkout:** `fbeae9b3fa18a63e07573676b4e2e512a91ca4d5`.  
+**Fetched research base / initial worktree HEAD:**
+`3bad7c12bf5133665be466d0396362108fadef2c`.  
+**State version:** `2026-09-14.audit.51`.  
+**Branch:** `swarm/source-stress/translated-rails-20261002`.  
+**Mission:** a physical source-geometric bridge between paired loaded rails and
+an additive contact chart, allowing variable phases and curved marker rows.  
+**Classification:** proved candidates awaiting independent audit and promotion;
+artifact lifecycle **unreviewed**. Counterexamples are **regressions**.  
+**Level I OPEN; C-I CLOSED; C-II OPEN.**
+
+No open coordination issue supplied an assignment. Current remote main, the open
+mixed-core rigidity PR #624, and active worktree names were inspected. This packet
+does not duplicate a private tree-leaf release, a new multiplier floor, a lattice
+atlas theorem, or the earlier straight-marker depth theorem.
+
+## 1. Authority, dependencies, and exact new quantity
+
+The finite geometric results concern any finite unit-separated planar source
+`A`, of diameter `D>=1`, and its actual diameter endpoints `E`. Every original
+point, including every contact isolate, enters the source upper constraints.
+Global optimality, positive stress, near-disk geometry, a lattice, and train
+extraction are not hypotheses of these results.
+
+Canonical interpretation uses [Theory 01, Lemma 5.1](../theory/01-local-structure.md)
+(actual diameter endpoints are extreme), [Target C 56](../targets/target-c/56-ci-restored-frontier.md)
+(lexicographic full support), and [Target C 57](../targets/target-c/57-zr-zf-rigidity-audit.md)
+(core-only rigidity and the loaded diameter ledger). They are not needed as
+unproved steps in the elementary geometry below. No literature result is imported.
+
+The unpromoted [transverse rail saturation](target_c_exact_phase_threshold_transverse_rail_saturation_2026-10-01.md)
+supplies, within its hypotheses, two actual loaded endpoints for each internal
+layer. It explicitly does **not** identify them with grid vertices or train
+terminals. The application here is conditional on that report and on a further
+physical extension hypothesis stated in Section 5.
+
+Two related packets are acknowledged without importing their theorems:
+
+- [Straight-row depth and populated rail caps](target_c_threshold_rail_deep_attachment_2026-10-02.md)
+  uses a single affine marker row. Here the marker sequence can be any curve;
+  the constraint couples its two translated copies.
+- [Ball-hull lattice capacity](target_c_diameter_ball_hull_lattice_discrepancy_2026-10-02.md)
+  controls endpoints near one unit-rhombic lattice. Here there is no lattice;
+  the new quantity is `|(q_i-p_i)-w|` for the same actual paired endpoints.
+
+## 2. Exact repeated displacement
+
+**Theorem TR.1.** For every nonzero vector `w`, there are at most two distinct
+points `p` such that both `p` and `p+w` are actual diameter endpoints of `A`.
+
+**Proof.** Form the actual source ball hull
+
+\[
+ W=\bigcap_{a\in A}\overline B(a,D).
+ \tag{TR.1}
+\]
+
+It contains `A`. Each `p in E` has an original partner `a` with `|p-a|=D`,
+so lies on `partial W`. The body has interior: if `z,a` is a diameter pair
+and `o=(z+a)/2`, the parallelogram identity gives
+`|x-o|<=sqrt(3)D/2` for every `x in A`; hence
+`B(o,(1-sqrt(3)/2)D) subset W`.
+
+Rotate coordinates so `w=(t,0)`, `t>0`. At every interior height `y` in the
+vertical projection of `W`, its horizontal slice is `[g(y),f(y)]`. Explicitly,
+
+\[
+\begin{split}
+ f(y)&=\min_{a\in A}\{a_x+\sqrt{D^2-(y-a_y)^2}\},\\
+ g(y)&=\max_{a\in A}\{a_x-\sqrt{D^2-(y-a_y)^2}\}.
+\end{split}
+\tag{TR.2}
+\]
+
+For a single circle the upper second derivative is
+`-D^2/(D^2-(y-a_y)^2)^(3/2)<=-1/D`. Thus
+`f(y)+y^2/(2D)` is concave: it is a minimum of concave functions.
+Similarly `g(y)-y^2/(2D)` is convex. Consequently the slice width
+
+\[
+ \ell(y)=f(y)-g(y),\qquad \ell(y)+y^2/D\text{ is concave}.
+ \tag{TR.3}
+\]
+
+In particular `ell` is strictly concave. Each horizontal slice has only two
+boundary points, since `W` is strictly convex. The latter follows directly:
+a strict convex combination of two distinct points of `W` is strictly inside
+each of its finitely many defining disks, hence inside `W`.
+If `p,p+w in partial W`, they are the left and right slice endpoints,
+and `ell(p_y)=t`. A positive horizontal chord cannot occur at either extreme
+height. A strictly concave width is strictly increasing to its unique maximum
+and strictly decreasing afterwards; the equation `ell=t` has at most two
+solutions. Each height has one left endpoint. This proves the claim. ∎
+
+This exact consequence is also consistent with elementary convex-position
+difference geometry. The load-bearing refinement below is the **quantitative**
+source curvature in (TR.3), not a claimed contradiction from convexity alone.
+
+**Corollary TR.2 (arbitrary additive charts).** Suppose an actual source contains
+chart vertices `x_ij=a_i+b_j`, with the `a_i` distinct. Fix two distinct column
+positions `b_j,b_k`. At most two rows can have both `x_ij` and `x_ik` actual
+diameter endpoints. In particular a rectangular additive chart cannot have
+three doubly loaded rows with the same opposite-column displacement.
+
+This requires neither constant phases nor lattice coordinates. It does require
+the two original loaded endpoints to be those chart vertices.
+
+## 3. Approximate displacement capacity
+
+**Theorem TR.3.** Fix `0<t=|w|<=D`, put `delta=t/D`, and let `epsilon>=0`.
+Let `p_1,...,p_N` be distinct actual diameter endpoints. Suppose each has an
+actual diameter endpoint `q_i` satisfying
+
+\[
+ |q_i-p_i-w|\le\epsilon.
+ \tag{TR.4}
+\]
+
+The `q_i` need not be distinct, and need not be the diameter partners of the
+`p_i`. Then
+
+\[
+ \boxed{N\le32\delta^{-3/2}\sqrt{D\epsilon}
+                 +10\delta^{-1}\epsilon+4.}
+ \tag{TR.5}
+\]
+
+For `epsilon=0`, TR.1 gives the sharper `N<=2`.
+
+### Proof: original partner normals and bounded graph slopes
+
+Use the coordinates of Section 2. If `p` has actual partner `a`, the unit
+normal `n=(p-a)/D` satisfies, for every source point `x`,
+
+\[
+ n\cdot(x-p)\le-|x-p|^2/(2D).
+ \tag{TR.6}
+\]
+
+It is also a supporting normal of `W`, since `W subset B(a,D)`.
+First suppose `epsilon<=t^2/(16D)`. Set `r_i=q_i-p_i=w+e_i`.
+Applying (TR.6) at `p_i` to `q_i`, and at `q_i` to `p_i`, gives
+
+\[
+ \begin{split}
+ t(n_{p_i})_x&\le-(t-\epsilon)^2/(2D)+\epsilon
+                       \le-3t^2/(8D),\\
+ t(n_{q_i})_x&\ge (t-\epsilon)^2/(2D)-\epsilon
+                       \ge 3t^2/(8D).
+ \end{split}
+ \tag{TR.7}
+\]
+
+Here `t<=D`, `epsilon<t`, and `t epsilon/D+epsilon<=2epsilon`
+justify the last inequalities. In particular `p_i` is on the left graph,
+`q_i` on the right graph, and their available supporting normals have
+horizontal components of magnitude at least `delta/4`.
+The corresponding subgradient of `g` or supergradient of `f` is
+`-n_y/n_x`, with absolute value at most `4/delta`.
+
+Let `I_p` be the interval between the smallest and largest `p_i` heights,
+and define `I_q` similarly. Convex subgradients and concave supergradients
+are ordered. Therefore `g` is `4/delta`-Lipschitz throughout `I_p`, and
+`f` is `4/delta`-Lipschitz throughout `I_q`, even across corners.
+For example every secant slope of `g` lies between an available subgradient
+at the first point and one at the last point. This justifies the assertion
+without smoothness or a bound on the number of defining disks.
+Arclength of the left graph over an interval of height length `b` is at most
+
+\[
+ \sqrt{1+16/\delta^2}\,b\le(5/\delta)b.
+ \tag{TR.8}
+\]
+
+### Proof: two short height packets
+
+Since `|(p_i)_y-(q_i)_y|<=epsilon`, those `p_i` outside `I_q` occupy two
+end intervals of height length at most `epsilon` each. Unit separation and
+(TR.8) bound their number by `10 epsilon/delta+2`.
+
+For the remaining points, both heights lie in `I_q`. Since `g((p_i)_y)=(p_i)_x`
+and `f((q_i)_y)=(q_i)_x`, (TR.4) and the right-graph Lipschitz bound give
+
+\[
+ |\ell((p_i)_y)-t|\le\eta,
+ \qquad \eta=(1+4/\delta)\epsilon.
+ \tag{TR.9}
+\]
+
+On each side of the maximum of `ell`, the inverse image of
+`[t-eta,t+eta]` is an interval of height length at most `sqrt(2D eta)`.
+Indeed, for two heights `a<b` on the increasing side, strong concavity
+(TR.3) and a nonnegative supergradient at `b` imply
+`ell(b)-ell(a)>=(b-a)^2/D`; the difference is at most `2eta`.
+On the decreasing side use a nonpositive supergradient at `a`.
+Taking limits handles interval endpoints and corners.
+
+Thus (TR.8) bounds the number of remaining unit-separated endpoints by
+`10 sqrt(2D eta)/delta+2`. For every arc packet, `k` distinct source points
+consume arclength at least `k-1`, since consecutive Euclidean chords are
+at least one. Combining the packets, and using
+`1+4/delta<=5/delta`, proves
+
+\[
+ N\le 10\sqrt{10}\,\delta^{-3/2}\sqrt{D\epsilon}
+            +10\delta^{-1}\epsilon+4,
+\]
+
+which implies (TR.5), since `10 sqrt(10)<32`.
+
+Finally, if `epsilon>t^2/(16D)`, the first term in (TR.5) is greater than
+`8 D/sqrt(delta)>=8D`. The extreme-point lemma and unit separation give
+`N<=pi D` when `N>=3`: the convex hull of these endpoints has `N` unit-separated
+boundary sides and perimeter at most `pi D`. For `N<=2` the constant four
+suffices. Thus (TR.5) also holds in this regime. ∎
+
+**Corollary TR.4.** If `delta>=delta_0>0`, `N>=cD`, and `D` tends to
+infinity, the displacement error cannot be `o(D)`. This is uniform in the
+shape, population and phase of the source. It is an obstruction to actual
+paired endpoints having a common macroscopic displacement, not an operator
+estimate or a finite deformation.
+
+## 4. Quadratic contact extension cost for arbitrary curved rows
+
+The next finite consequence makes the source quantity explicit.
+
+**Theorem TR.5.** Fix `c>0`, `0<delta_0<=1`, and put
+
+\[
+ \kappa=\min\{c^2\delta_0^3/65536,\ c\delta_0/160\}.
+ \tag{TR.10}
+\]
+
+Suppose `D>=32/c`, there are `m>=cD` distinct actual endpoints `p_i`,
+and actual endpoints `q_i`, with `delta_0 D<=|w|<=D`. Write
+
+\[
+ p_i=a_i+\xi_i,\qquad q_i=a_i+w+\zeta_i.
+ \tag{TR.11}
+\]
+
+The markers `a_i` may form an arbitrary curve and need not be source points.
+More than `m/2` of the indices obey
+
+\[
+ |\zeta_i-\xi_i|>\kappa D,
+ \qquad |\xi_i|+|\zeta_i|>\kappa D.
+ \tag{TR.12}
+\]
+
+Consequently
+
+\[
+ \boxed{\sum_i(|\xi_i|+|\zeta_i|)> c\kappa D^2/2.}
+ \tag{TR.13}
+\]
+
+**Proof.** Apply (TR.5) to the subpacket with error at most `kappa D`.
+Its count is at most
+
+\[
+ 32\delta_0^{-3/2}\sqrt\kappa D+
+ 10\delta_0^{-1}\kappa D+4
+ \le(c/8+c/16+c/8)D=5cD/16<m/2.
+\]
+
+Subtract from `m`, then use the triangle inequality and sum. ∎
+
+If the markers are actual contact-chart vertices and the two offsets are
+realized by paths of unit contacts, their path lengths `L_i^-`,`L_i^+`
+satisfy `L_i^-+L_i^+>=|xi_i|+|zeta_i|`. Their **sum**, with path multiplicity,
+therefore exceeds `c kappa D^2/2`. This is not a lower bound on distinct
+contact edges: paths can share arbitrarily many edges.
+
+In a complete additive contact chart, the two marker rows have
+`a_i=A_i+B_j` and `a_i+w=A_i+B_k`, where `w=B_k-B_j`. The `A_i`
+can be partial sums of different unit phase vectors. The theorem applies
+without flattening that row or assuming an affine lattice.
+
+## 5. Next source attack, and the exact surviving obstruction
+
+Under the unpromoted threshold rail saturation, select one actual endpoint
+on each transverse extreme rail for each internal layer. These are paired
+by the layer index, not by an assertion that they form a diameter pair.
+The new theorem would exclude the threshold branch if a linear subpacket
+could be assigned to two opposite actual additive marker rows with
+
+\[
+ |w|\ge\delta_0D,\qquad
+ \sum_i(L_i^-+L_i^+)=o(D^2).
+ \tag{TR.14}
+\]
+
+The implication to contradiction is exact: use TR.5. The hypotheses in
+(TR.14) are **not** supplied by a complement-dual layer label. The attempt
+to import them from those labels fails at the physical co-embedding step.
+Existing rail saturation explicitly warns that the selected endpoints need
+not be grid vertices or train terminals. No such identification is made here.
+
+A second attempted payment is also insufficient: rhombic source paths can
+have `Theta(D)` length at `Theta(D)` different rows while the full source
+has `Theta(D^2)` contact edges. Thus the quadratic cost (TR.13) does not
+contradict an ordinary source-size bound. To close this mechanism one needs
+an actual subquadratic extension budget, bounded congestion into a
+subquadratic defect network, or a feasible finite source replacement.
+
+Sections 6 and 7 test two hypotheses that cannot be discarded to evade this
+obstruction. Neither regression is a global-minimizer family.
+
+## 6. Regression: convex hull vertices cannot replace actual endpoints
+
+Fix an integer `L>=2` and `e=1/100`. For `i=-L,...,L`, let
+
+\[
+ p_i=(i,L/2+e(1-i^2/L^2)),\qquad
+ q_i=(i,-L/2-e(1-i^2/L^2)).
+ \tag{TR.15}
+\]
+
+These are all strict convex-hull vertices; the upper parabola is strictly
+concave and the lower parabola strictly convex. Points on the same row
+have distinct integer horizontal coordinates and hence are at least unit
+separated; the two rows have vertical separation at least `L`.
+
+The actual diameter is `D=sqrt(5)L`, attained at opposite corner points.
+For a cross-row pair put `x=i/L`, `y=j/L`, `k=2-x^2-y^2 in [0,2]`.
+Since `(x-y)^2<=4-2k`,
+
+\[
+ |p_i-q_j|^2\le5L^2+k(-2L^2+2Le+2e^2)\le5L^2.
+ \tag{TR.16}
+\]
+
+Same-row pairs have squared distance at most `4L^2+e^2<5L^2`.
+Equality in the cross-row bound requires `k=0` and opposite horizontal
+corners. Thus the interior row vertices are not diameter endpoints.
+
+Nevertheless all `2L+1` ordered pairs satisfy
+`|q_i-p_i-(0,-L)|<=2e=1/50`, and `|(0,-L)|/D=1/sqrt(5)` is macroscopic.
+Their count grows linearly in `D`, exceeding (TR.5)'s square-root bound.
+For example `L=1000`: use `D<3L`, `delta>1/3`; the right side of (TR.5)
+is less than `192 sqrt(60)+1+4<1541`, while there are `2001` pairs.
+
+The contact graph consists only of possible same-row edges and is triangle-free.
+This is an exact regression against replacing actual diameter endpoints by
+extreme source-hull vertices in the quantitative theorem.
+
+## 7. Regression: the macroscopic displacement hypothesis is necessary
+
+For an integer `R>=300`, put `J=floor(R/300)` and
+
+\[
+ z(s)=R\left({1-s^2\over1+s^2},{2s\over1+s^2}\right),
+ \qquad p_i=z(3i/R),\quad q_i=z((3i+1)/R),\quad |i|\le J.
+ \tag{TR.17}
+\]
+
+Take all these points and their antipodes as the source. All are on the
+radius-`R` circle, so its diameter is exactly `D=2R` and every point is
+an actual diameter endpoint. For these parameters `|s|<=1/50`. The identity
+
+\[
+ |z(s)-z(t)|^2={4R^2(s-t)^2\over(1+s^2)(1+t^2)}
+ \tag{TR.18}
+\]
+
+gives strict unit separation within a parameter packet, since distinct
+parameters differ by at least `1/R`. Antipodal packets are separated by
+more than one as well. Thus the source is contact-free and triangle-free.
+
+With `w=(0,2)`, the displacement errors have norm less than `1/10`.
+Indeed `|z_x'(s)|/R<=4|s|` and
+`0<=2-z_y'(s)/R<=6s^2`; integrate across a parameter interval of length
+`1/R` to bound the sum of absolute coordinate errors by
+`4/50+6/2500<1/10`.
+There are `2J+1=Theta(D)` such pairs, while `|w|/D=1/R` tends to zero.
+This rejects a bound `O(sqrt(D epsilon)+epsilon+1)` with no dependence
+on the relative displacement. It does not contradict (TR.5).
+
+These sources have linear population and no positive contact stress or
+global optimality. No claim about dense canonical sources is inferred.
+
+## 8. Computation and audit boundary
+
+Run [the exact verifier](../../research/verify_translated_endpoint_rails_2026_10_02.py):
+
+```text
+python3 research/verify_translated_endpoint_rails_2026_10_02.py
+```
+
+It uses integer and Fraction arithmetic. It checks complete finite circle
+sources and their actual diameter sets, repeated exact differences, original
+partner support inequalities, approximate short-displacement packets, complete
+small parabola sources, and the symbolic nonpositive coefficient used for the
+large parabola regression. The general graph-width and capacity proofs above
+are analytic; sampled survival is not their proof. Scope is also recorded in
+[research/README](../../research/README.md).
+
+| Claim or attempted extension | Classification | Exact boundary |
+| --- | --- | --- |
+| Repeated endpoint displacement TR.1 | proved candidate awaiting promotion | Actual endpoint subset of one original source |
+| Approximate capacity TR.3 | proved candidate awaiting promotion | Unit separation; constants depend on `delta` |
+| Curved-row extension cost TR.5 | proved candidate awaiting promotion | Same actual paired endpoints and common `w` |
+| Threshold exclusion using (TR.14) | conditional | Physical chart attachment and subquadratic cost unproved |
+| Replace actual endpoints by convex-hull vertices | rejected / regression | (TR.15)–(TR.16) |
+| Omit macroscopic-displacement dependence | rejected / regression | (TR.17)–(TR.18) |
+| Pay path sum by ordinary quadratic contact population | rejected mechanism | Quadratic cost is compatible with quadratic source size |
+| C-II or Level I closure | not proved | Surviving global branches remain |
+
+The theorem permits stars, paths, shared endpoint partners, source isolates,
+arbitrarily many ball-hull corners, and nonlattice phases. No isolated point
+is dropped, no inactive pair is made active, no infinitesimal move is called
+finite, and no diameter Euler path is used.
+
+## 9. Frontier effect and next obligation
+
+This is a physical paired-rail obstruction valid before KKT or extraction.
+A linear family of actual loaded pairs cannot follow two macroscopic translates
+of **any** marker curve at sublinear displacement error. If actual chart tails
+exist, their total length is quadratic. This extends the single straight-row
+depth mechanism to paired curved rows, without manufacturing a lattice atlas.
+
+The concrete remaining theorem for this mechanism is to construct the physical
+attachment in (TR.14), or charge its unavoidable quadratic cost to a genuinely
+subquadratic source defect network with controlled path multiplicity. Constant
+layer labels, positive cut reactions, and an ordinary `O(D^2)` contact bound
+do not supply that theorem.
+
+Open-cell exact phase, threshold staircase, nonconstant-phase swaps, split-star
+O–O, inactive-interface, higher-surplus full-core, and macroscopic inactive
+container/exterior-cap branches remain open. Canonical state and prompts are
+unchanged. **Promotion recommendation: unreviewed**, with an independent audit
+of the original-partner normals, nonsmooth slope bounds and level-band estimate
+before any promotion transaction.

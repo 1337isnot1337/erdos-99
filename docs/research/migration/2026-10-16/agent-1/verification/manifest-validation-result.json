@@ -1,0 +1,23 @@
+{
+  "agent1_backlog_files": 1013,
+  "agent1_branch_heads": 19,
+  "agent1_branch_payloads": 156,
+  "agent1_dirty_snapshots": 10,
+  "agent1_explicit_exclusions": 62,
+  "agent1_source_main_payloads": 951,
+  "certificate_comparisons": 7,
+  "final_workloads": [
+    4269,
+    4269,
+    4268
+  ],
+  "frozen_reports_not_copied": 813,
+  "other_exact_matches_not_copied": 861,
+  "payload_file_count": 1162,
+  "pr737_archived_payloads": 45,
+  "pr737_paths": 46,
+  "result": "PASS",
+  "source_files": 4717,
+  "verifier_executions": 15,
+  "workload_spread_points": 1
+}

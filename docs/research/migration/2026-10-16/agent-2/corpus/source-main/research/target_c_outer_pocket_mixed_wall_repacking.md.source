@@ -1,0 +1,284 @@
+# Target C — mixed-wall repacking for a hull-augmentation outer pocket
+
+**Date:** 2026-09-12  
+**Status:** proof-only research candidate; theorem-state authority unchanged.  
+**LEVEL I STATUS:** STILL OPEN. C-II REMAINS OPEN.
+
+This theorem applies to the convex **outer pockets inside the force hull** from canonical
+Sections 67 and 77. It does not apply to the distinct exterior caps between the force
+hull and the full source hull in Sections 77.2/80/162.
+
+A Section-67 outer pocket has boundary consisting of
+
+- one added force-hull side `[u,v]`, which is not assumed to be a unit contact; and
+- one complementary old outer-contact path made of unit contact edges.
+
+The full one-unit geometric collar is unnecessary on the contact-path side. The added
+side still needs ordinary distance-one erosion, while the contact path is protected by
+its original boundary source vertices and the unit-edge crossing inequality.
+
+---
+
+## 1. Canonical pocket geometry
+
+Let `A` be the triangle-free global diameter minimizer, let `K=conv(A)`, and let
+`F` be the force hull. Let `C subset F` be one convex outer pocket from the
+hull-augmentation construction in canonical Section 67.3.
+
+Write
+
+\[
+ \partial C=[u,v]\cup W,
+\tag{1.1}
+\]
+
+where `[u,v]` is the one added force-hull side and
+
+\[
+ W=(u=p_0,p_1,\ldots,p_\ell=v)
+\tag{1.2}
+\]
+
+is the complementary old contact path. Every old path edge is a unit contact:
+
+\[
+ |p_{i+1}-p_i|=1.
+\tag{1.3}
+\]
+
+Let `Z_C` be the contact-isolated source points assigned to this pocket by canonical
+Section 67.6, including the convention that a contact-isolated source point lying on
+the added side is assigned to the unique adjacent interior pocket. Put `z_C=|Z_C|`.
+
+All assigned points lie outside the positive contact core. Every actual diameter
+endpoint is a source-hull extreme point and belongs to the loaded force-hull vertex set;
+in particular an assigned contact-isolated point on the relative interior of the added
+side is not a diameter endpoint.
+
+---
+
+## 2. Mixed-wall safe region
+
+Define
+
+\[
+ S_{mix}(C):=\left\{
+ y\in\operatorname{int}C:
+ \operatorname{dist}(y,[u,v])\ge1,
+ \quad |y-p_i|\ge1\ \text{for }0\le i\le\ell
+ \right\}.
+\tag{2.1}
+\]
+
+Compared with the full inner parallel body, this keeps the unit collar only on the
+artificial side `[u,v]` and replaces contact-path erosion by discrete guards at the
+boundary source vertices.
+
+---
+
+## 3. Mixed-wall shield
+
+We use the elementary crossing fact: if a segment of length `<1` properly crosses a
+unit edge `[p,q]`, and its outside endpoint is at distance at least one from `p,q`,
+then its inside endpoint is at distance `<1` from both `p,q`.
+
+### Theorem 3.1 — pocket mixed-wall shield
+
+If `y in S_mix(C)` and `x` is any old source point outside `int C`, then
+
+\[
+ \boxed{|x-y|\ge1.}
+\tag{3.1}
+\]
+
+#### Proof
+
+Suppose `|x-y|<1`. Follow the segment from `y` toward `x` and let `r` be its first
+intersection with `partial C`.
+
+If `r` lies in the relative interior of the added side `[u,v]`, then
+
+\[
+ \operatorname{dist}(y,[u,v])\le |y-r|<|x-y|<1,
+\]
+
+contradicting (2.1).
+
+If `r=p_i` is a boundary source vertex, then either `x=p_i`, in which case (2.1)
+already gives `|x-y|>=1`, or source unit separation gives `|x-p_i|>=1`. In the latter
+case `p_i` lies strictly between `x,y`, so
+
+\[
+ |x-y|=|x-p_i|+|p_i-y|\ge2,
+\]
+
+a contradiction.
+
+Otherwise `r` lies in the relative interior of one old unit-contact edge
+`[p_i,p_{i+1}]`. If `x` is one of its endpoints the vertex guard already applies.
+Otherwise source unit separation gives
+
+\[
+ |x-p_i|,|x-p_{i+1}|\ge1.
+\]
+
+Convexity makes the crossing proper, so the unit-edge crossing lemma yields
+
+\[
+ |y-p_i|<1,
+ \qquad |y-p_{i+1}|<1,
+\]
+
+contradicting (2.1). These cases exhaust `partial C`. `square`
+
+A source point on the relative interior of the added side is protected directly by
+the distance-to-side condition; no contact-edge claim is made for the added side.
+
+---
+
+## 4. Diameter-cover repacking
+
+Let
+
+\[
+ M_{mix}(C):=\sup\{|Y|:Y\subset S_{mix}(C),\ |y-y'|\ge1\}.
+\tag{4.1}
+\]
+
+Let `H` be the complete actual diameter graph and let `U` be a vertex cover of `H`.
+If
+
+\[
+ M_{mix}(C)\ge z_C+|U|,
+\tag{4.2}
+\]
+
+choose a unit-separated `Y subset S_mix(C)` of that size and define
+
+\[
+ A':=(A\setminus(Z_C\cup U))\cup Y.
+\tag{4.3}
+\]
+
+### Theorem 4.1 — mixed-wall cover repacking
+
+Under (4.2), `A'` is a same-cardinality unit-separated source with
+
+\[
+ \boxed{\operatorname{diam}A'<D.}
+\tag{4.4}
+\]
+
+#### Proof
+
+Assigned chamber points are not actual diameter endpoints, so `Z_C cap U` is empty.
+Cardinality is preserved.
+
+Old-old unit separation is unchanged, new-new separation holds by construction, and
+Theorem 3.1 gives new-old separation because every retained old source point lies
+outside `int C`.
+
+The cover `U` meets every actual diameter edge, so no retained old-old pair remains at
+distance `D`. Every new point lies in `int C subset int F subset int K`; every distance
+from an interior point of `K` to a point of `K` is strictly below `D`. Thus every pair
+in the finite set `A'` has distance `<D` except possibly retained old-old pairs, which
+were already handled by the cover. Hence `diam A'<D`, contradicting global minimality.
+`square`
+
+The replacement need not be triangle-free.
+
+---
+
+## 5. Lattice capacity and the exact residual
+
+Let
+
+\[
+ s=|u-v|,
+\]
+
+so `per(C)=s+ell`. Let `k_C=ell+1` be the augmented graph-boundary vertex count: one
+added side plus `ell` old contact edges form a simple polygon with `ell+1` vertices.
+Define
+
+\[
+ \sigma_C={A_C\over a_0}+{s+\ell\over2}+1-z_C,
+ \qquad
+ r_C:=\sigma_C-k_C,
+ \qquad a_0={\sqrt3\over2}.
+\tag{5.1}
+\]
+
+The canonical pocket Oler inequality is exactly `r_C>=0`.
+
+Let
+
+\[
+ c_*={\pi\over6}+{\sqrt3\over4},
+ \qquad
+ h_*={\pi\over3}-{\sqrt3\over4},
+ \qquad
+ \kappa_*={\pi\over3\sqrt3},
+ \qquad
+ \lambda_*={2\over\sqrt3}+{1\over2}.
+\tag{5.2}
+\]
+
+The companion contact-chain area theorem proves
+
+\[
+ \operatorname{area}S_{mix}(C)
+ \ge A_C-s-\ell c_*-h_*.
+\tag{5.3}
+\]
+
+Translation averaging of the unit triangular lattice gives
+
+\[
+ M_{mix}(C)
+ \ge\left\lfloor{\operatorname{area}S_{mix}(C)\over a_0}\right\rfloor.
+\tag{5.4}
+\]
+
+Since
+
+\[
+ {A_C\over a_0}=z_C+r_C+{\ell\over2}-{s\over2},
+\]
+
+we obtain the explicit realized-spare bound
+
+\[
+ \boxed{
+ M_{mix}(C)-z_C
+ \ge
+ \left\lfloor
+ r_C-\kappa_*\ell-\lambda_*s-{h_*\over a_0}
+ \right\rfloor.
+ }
+\tag{5.5}
+\]
+
+Consequently this pocket can absorb a minimum diameter cover whenever
+
+\[
+ r_C\ge
+ \tau(H)+\kappa_*\ell+\lambda_*s+{h_*\over a_0}.
+\tag{5.6}
+\]
+
+This is a constructive lower bound; no Oler inequality is reversed.
+
+---
+
+## 6. Scope boundary
+
+This theorem concerns the Section-67/77 outer pockets which tile the old outer
+positive-contact face **inside `F`**. It does not apply to the convex exterior caps in
+`K\setminus int F` used in Sections 77.2, 80 and 162. For those exterior caps the old
+outer boundary follows the source hull rather than a certified unit-contact path, so
+the audited-working full-collar theorem of Section 165 remains the valid general
+repacking mechanism.
+
+No source point is deleted without replacement, and contact-isolated points are not
+placed under the Section-57 affine-kernel theorem.

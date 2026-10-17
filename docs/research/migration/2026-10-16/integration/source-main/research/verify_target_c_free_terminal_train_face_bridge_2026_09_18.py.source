@@ -1,0 +1,90 @@
+#!/usr/bin/env python3
+"""Regression checks for the terminal FREE train/face bridge.
+
+This checks the exact scalar algebra and constants. It is not a geometric proof or a
+certificate that the dependency theorems hold.
+"""
+
+import math
+import random
+
+PI = math.pi
+DELTA2 = PI / (2.0 * math.sqrt(3.0))
+SQDELTA = math.sqrt(DELTA2)
+GAMMA = 2.0 * SQDELTA - PI / 2.0
+C_FREE = PI / 2.0 + 1.0 / 5.0 + (2.0 / 5.0) * SQDELTA
+RHS = 3.0 * PI + 1.0 + GAMMA
+
+# Constant identities.
+assert abs(C_FREE - RHS / 5.0) < 1e-14
+assert abs(GAMMA - 0.33382928693301817) < 1e-14
+assert abs(C_FREE - 2.1517214495404793) < 1e-14
+
+# Exact finite elimination of lambda:
+#   lambda + Z + (CH+1)H >= R
+#   lambda = 2(q-k)-Q-q-H
+# iff
+#   2(q-k)+Z+CH H >= q+Q+R.
+rng = random.Random(990618)
+for _ in range(300_000):
+    q = rng.uniform(10.0, 10000.0)
+    k = rng.uniform(0.0, q)
+    Q = rng.uniform(0.0, 2.0 * (q - k))
+    H = rng.uniform(0.0, 100.0)
+    CH = rng.uniform(0.0, 30.0)
+    Z = rng.uniform(0.0, 10000.0)
+    R = rng.uniform(-100.0, 10000.0)
+    lam = 2.0 * (q - k) - Q - q - H
+    a = lam + Z + (CH + 1.0) * H - R
+    b = 2.0 * (q - k) + Z + CH * H - q - Q - R
+    assert abs(a - b) < 1e-9 * max(1.0, abs(a), abs(b))
+
+# Scalar implication:
+#   2t+z >= pi+1/2+phi
+#   phi >= (pi-t+gamma)/2
+# implies 5t+2z >= 3pi+1+gamma.
+for _ in range(300_000):
+    t = rng.uniform(0.0, PI)
+    face_floor = (PI - t + GAMMA) / 2.0
+    phi = face_floor + rng.random() * 3.0
+    z_min = max(0.0, PI + 0.5 + phi - 2.0 * t)
+    z = z_min + rng.random() * 3.0
+    assert 2.0 * t + z + 1e-12 >= PI + 0.5 + phi
+    assert phi + 1e-12 >= face_floor
+    assert 5.0 * t + 2.0 * z + 1e-12 >= RHS
+    assert t + 0.4 * z + 1e-12 >= C_FREE
+
+# Equality point for the relaxed z=0 scalar problem.
+t_eq = C_FREE
+kappa_eq = PI - t_eq
+phi_eq = (kappa_eq + GAMMA) / 2.0
+lambda_eq = 2.0 * t_eq - PI - phi_eq
+assert abs(lambda_eq - 0.5) < 1e-14
+assert abs(phi_eq - 0.6618502454911660) < 1e-14
+
+# External-population prices at useful t caps.
+def z_price(T: float) -> float:
+    return (RHS - 5.0 * T) / 2.0
+
+expected = {
+    1.8440: 0.7693036238511981,
+    1.8600: 0.7293036238511981,
+    1.8687: 0.7075536238511981,
+    2.0000: 0.3793036238511984,
+}
+for T, want in expected.items():
+    got = z_price(T)
+    assert abs(got - want) < 1e-13
+
+# The new small-external floor lies strictly beyond the complete September-17
+# t<=1.8687 support-normal-form window.
+assert C_FREE - 1.8687 > 0.283
+
+print(f"Delta2 = {DELTA2:.15f}")
+print(f"gamma = {GAMMA:.15f}")
+print(f"terminal FREE train/face floor = {C_FREE:.15f}")
+print(f"margin beyond 1.8687 = {C_FREE - 1.8687:.15f}")
+for T in sorted(expected):
+    print(f"t <= {T:.4f} => z >= {z_price(T):.15f}")
+print(f"z=0 endpoint: k/D <= {kappa_eq:.15f}, Q/D >= {phi_eq:.15f}, lambda/D = {lambda_eq:.15f}")
+print("all regression checks passed")

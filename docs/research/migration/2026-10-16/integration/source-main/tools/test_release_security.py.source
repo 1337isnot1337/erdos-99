@@ -1,0 +1,287 @@
+"""Adversarial tests of release boundaries; fixture approvals grant no real rights."""
+import hashlib
+import json
+import os
+import stat
+import subprocess
+import tempfile
+import unittest
+from pathlib import Path
+from unittest.mock import patch
+
+from tools import release_dependencies as release
+
+
+class GitFixture(unittest.TestCase):
+    def setUp(self):
+        self.temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temporary.cleanup)
+        self.root = Path(self.temporary.name)
+        self.git("init", "-q")
+        self.git("config", "user.name", "Release Fixture")
+        self.git("config", "user.email", "fixture@example.invalid")
+        self.write("README.md", "# Fixture\n")
+        self.write("docs/state/theorem-state.yaml", 'state_version: test\ntargets: {}\n')
+        self.write("docs/research/agent-task-catalog.json", '{"tasks": []}')
+        self.write(release.LITERATURE, '{"replacements": {}}')
+        self.write(release.REVIEWS, '{"schema_version": 1, "owner_approved_release": false, "files": []}')
+        self.commit()
+
+    def git(self, *args):
+        return subprocess.check_output(["git", "-C", str(self.root), *args], stderr=subprocess.PIPE).decode().strip()
+
+    def write(self, path, raw):
+        p = self.root / path
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_bytes(raw.encode() if isinstance(raw, str) else raw)
+
+    def commit(self):
+        self.git("add", ".")
+        self.git("commit", "-qm", "fixture")
+        self.sha = self.git("rev-parse", "HEAD")
+
+    def review(self, **changes):
+        record = {"schema_version": 1, "commit": self.sha, "files": [],
+                  "owner_approved_release": False, **changes}
+        return record
+
+    def test_approvals_are_exact_commit_and_unambiguous(self):
+        row = {"path": "README.md", "reviewer": "fixture reviewer"}
+        for record in (self.review(commit="0"*40), self.review(files=[row, row]),
+                       self.review(owner_approved_release="true"),
+                       self.review(files=[{**row, "reviewer": True}])):
+            with self.subTest(record=record), self.assertRaises(ValueError):
+                release.review_records(record, self.sha, private=True)
+        with self.assertRaisesRegex(ValueError, "different commit"):
+            release.review_records({"schema_version": 1, "files": [row]}, self.sha, private=False)
+
+    def test_each_missing_approval_changed_blob_and_blank_reviewer_stay_pending(self):
+        approved = {"path": "README.md", "git_blob_oid": self.git("rev-parse", "HEAD:README.md"),
+                    "reviewer": "fixture reviewer", **dict.fromkeys(release.REVIEW_FIELDS, "approved")}
+        cases = [{**approved, field: "pending"} for field in release.REVIEW_FIELDS]
+        cases += [{**approved, "git_blob_oid": "0"*40}, {**approved, "reviewer": "  "}, approved]
+        for i, row in enumerate(cases):
+            with self.subTest(i=i):
+                record = self.root / ".git/fixture-review.json"
+                record.write_text(json.dumps(self.review(files=[row])))
+                plan = release.build_plan(self.root, review_file=record)
+                entry = next(r for r in plan["entries"] if r["path"] == "README.md")
+                self.assertEqual(entry["clearance"], "reviewed" if i == len(cases)-1 else "pending-file-review")
+                self.assertFalse(plan["release_cleared"])
+
+    def test_binary_input_is_retained_but_blocks_export(self):
+        self.write("research/input.dat", b"\0binary")
+        self.commit()
+        plan = release.build_plan(self.root)
+        self.assertIn("research/input.dat", {r["path"] for r in plan["entries"]})
+        self.assertIn("binary dependency needs an explicit format policy: research/input.dat", plan["missing_dependencies"])
+        self.assertFalse(plan["dependency_complete"])
+
+    def test_unexpected_executable_is_retained_but_blocks_export(self):
+        self.write("research/evidence.md", "# Required evidence\n")
+        (self.root / "research/evidence.md").chmod(0o755)
+        self.commit()
+        plan = release.build_plan(self.root)
+        self.assertIn("research/evidence.md", {r["path"] for r in plan["entries"]})
+        self.assertIn("unexpected executable dependency: research/evidence.md", plan["missing_dependencies"])
+
+    def test_corrupted_manifest_is_rejected_before_building_a_candidate(self):
+        self.write("docs/state/theorem-state.yaml", "state_version: test\ntargets: []\n")
+        self.commit()
+        with self.assertRaisesRegex(ValueError, "target mappings"):
+            release.build_plan(self.root)
+        self.write("docs/state/theorem-state.yaml", "state_version: test\ntargets: {}\n")
+        schema = Path(__file__).resolve().parents[1] / "docs/state/theorem-state.schema.json"
+        self.write("docs/state/theorem-state.schema.json", schema.read_bytes())
+        self.commit()
+        with self.assertRaisesRegex(ValueError, "manifest schema"):
+            release.build_plan(self.root)
+
+    def test_copying_txt_is_consistent_with_inventory_without_granting_clearance(self):
+        self.write("COPYING.txt", "Fixture placeholder; no real rights are granted.\n")
+        self.commit()
+        record = self.root / ".git/fixture-review.json"
+        record.write_text(json.dumps(self.review(owner_approved_release=True)))
+        plan = release.build_plan(self.root, review_file=record)
+        self.assertIn("COPYING.txt", {r["path"] for r in plan["entries"]})
+        self.assertTrue(plan["owner_gate_satisfied"])
+        self.assertFalse(plan["release_cleared"])
+
+    def test_generator_manifest_paths_are_checked_before_materialization(self):
+        import yaml
+        policy = {"index": release.GENERATED_OVERLAY, "roots": ["docs/audits"], "exclude": []}
+        for changed in ({"index": "../../outside.jsonl"}, {"index": "/outside.jsonl"},
+                        {"index": "tools/check_theorem_state.py"}, {"roots": ["../../private"]},
+                        {"roots": ["/private"]}, {"roots": ["C:/private"]},
+                        {"exclude": ["../private.md"]}):
+            with self.subTest(changed=changed):
+                state = {"state_version": "test", "targets": {}, "artifact_policy": {**policy, **changed}}
+                self.write("docs/state/theorem-state.yaml", yaml.safe_dump(state))
+                self.commit()
+                with self.assertRaisesRegex(ValueError, "unsafe release path|index output"):
+                    release.build_plan(self.root)
+                self.assertFalse((self.root / "candidate").exists())
+        release.check_manifest_paths(self.root, {"targets": {}, "artifact_policy": policy})
+
+    def test_git_symlink_is_rejected_even_outside_selected_roots(self):
+        (self.root / "unselected-link").symlink_to("/outside")
+        self.commit()
+        with self.assertRaisesRegex(ValueError, "symlinks"):
+            release.tree_files(self.root, "HEAD")
+
+    def test_git_replace_cannot_change_bytes_under_an_approved_blob_id(self):
+        oid = self.git("rev-parse", "HEAD:README.md")
+        original = (self.root / "README.md").read_bytes()
+        replacement = subprocess.check_output(["git", "-C", str(self.root), "hash-object", "-w", "--stdin"],
+                                              input=b"Unapproved replacement bytes\n").decode().strip()
+        self.git("replace", oid, replacement)
+        self.assertNotEqual(self.git("show", "HEAD:README.md").encode(), original.rstrip())
+        plan = release.build_plan(self.root)
+        entry = next(r for r in plan["entries"] if r["path"] == "README.md")
+        self.assertEqual(entry["git_blob_oid"], oid)
+        self.assertEqual(entry["source_sha256"], hashlib.sha256(original).hexdigest())
+        with self.assertRaisesRegex(ValueError, "object identity"):
+            release.check_object_identity(b"unapproved", oid)
+
+    def transport_plan(self):
+        for name in ("build_artifact_index.py", "generate_theorem_state_views.py", "check_theorem_state.py"):
+            self.write("tools/" + name, "# Transport fixture: no mathematical validation.\n")
+        self.commit()
+        _, files = release.tree_files(self.root, self.sha)
+        paths = ["README.md", *("tools/" + n for n in ("build_artifact_index.py", "generate_theorem_state_views.py", "check_theorem_state.py"))]
+        return {"commit": self.sha, "dependency_complete": True, "external_citations": {},
+                "generated_overlay": [], "task_evidence": {}, "entries": [
+                    {"path": p, **files[p], "source_sha256": hashlib.sha256((self.root/p).read_bytes()).hexdigest(),
+                     "planned_export_sha256": hashlib.sha256((self.root/p).read_bytes()).hexdigest()} for p in paths]}
+
+    def test_materialization_checks_source_and_overlay_before_creating_destination(self):
+        plan = self.transport_plan()
+        destination = self.root / "candidate"
+        for field in ("git_blob_oid", "source_sha256", "planned_export_sha256"):
+            with self.subTest(field=field):
+                bad = {**plan, "entries": [{**plan["entries"][0], field: "0"*64}, *plan["entries"][1:]]}
+                with self.assertRaisesRegex(ValueError, "differs from plan"):
+                    release.materialize_plan(self.root, bad, destination)
+                self.assertFalse(destination.exists())
+        release.materialize_plan(self.root, plan, destination)
+        self.assertEqual(stat.S_IMODE(destination.stat().st_mode), 0o700)
+        self.assertEqual(release.validate_export(plan, destination), [])
+
+    def test_forged_complete_plan_cannot_skip_generator_path_validation(self):
+        plan = self.transport_plan()
+        path = "docs/state/theorem-state.yaml"
+        self.write(path, 'targets: {}\nartifact_policy:\n  index: ../../outside.jsonl\n  roots: [docs/audits]\n')
+        self.commit()
+        _, files = release.tree_files(self.root, self.sha)
+        raw = (self.root / path).read_bytes()
+        plan["commit"] = self.sha
+        plan["entries"].append({"path": path, **files[path],
+            "source_sha256": hashlib.sha256(raw).hexdigest(),
+            "planned_export_sha256": hashlib.sha256(raw).hexdigest()})
+        destination = self.root / "candidate"
+        with self.assertRaisesRegex(ValueError, "unsafe release path"):
+            release.materialize_plan(self.root, plan, destination)
+        self.assertFalse(destination.exists())
+
+
+class ExportFilesystemTests(unittest.TestCase):
+    def setUp(self):
+        self.temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temporary.cleanup)
+        self.root = Path(self.temporary.name)
+        self.note = self.root / "note.md"
+        self.note.write_text("# Reviewed fixture\n")
+        self.note.chmod(0o644)
+        self.plan = {"entries": [{"path": "note.md", "mode": "100644",
+                     "planned_export_sha256": hashlib.sha256(self.note.read_bytes()).hexdigest()}],
+                     "task_evidence": {}, "generated_overlay": []}
+
+    def test_executable_and_special_permission_changes_are_rejected(self):
+        for mode in (0o755, 0o4644):
+            with self.subTest(mode=mode):
+                self.note.chmod(mode)
+                self.assertTrue(any("mode differs" in e for e in release.validate_export(self.plan, self.root)))
+
+    def test_no_rejected_symlink_is_read(self):
+        outside = self.root / "outside.md"
+        outside.write_text("private fixture")
+        for target in (outside, self.root.parent / "nonexistent-private-file"):
+            with self.subTest(target=target):
+                self.note.unlink()
+                self.note.symlink_to(target)
+                with patch.object(Path, "read_bytes", side_effect=AssertionError("read unsafe tree")), \
+                     patch.object(Path, "read_text", side_effect=AssertionError("read unsafe tree")):
+                    self.assertTrue(any("unsafe filesystem" in e for e in release.validate_export(self.plan, self.root)))
+
+    def test_directory_symlink_and_fifo_are_rejected_without_following(self):
+        (self.root / "alias").symlink_to(self.root, target_is_directory=True)
+        os.mkfifo(self.root / "pipe")
+        errors = release.validate_export(self.plan, self.root)
+        self.assertIn("unsafe filesystem entry in export: alias", errors)
+        self.assertIn("unsafe filesystem entry in export: pipe", errors)
+
+    def metadata_fixture(self):
+        import yaml
+        (self.root / "docs/audits").mkdir(parents=True)
+        state = {"targets": {}, "artifact_policy": {"index": release.GENERATED_OVERLAY,
+                 "roots": ["docs/audits"], "exclude": [], "default_status": "unreviewed",
+                 "archive_status": "provenance"}}
+        manifest = self.root / "docs/state/theorem-state.yaml"
+        manifest.parent.mkdir(parents=True)
+        manifest.write_text(yaml.safe_dump(state))
+        manifest.chmod(0o644)
+        self.plan["entries"].append({"path": "docs/state/theorem-state.yaml",
+            "planned_export_sha256": hashlib.sha256(manifest.read_bytes()).hexdigest()})
+        return state, manifest
+
+    def test_standalone_metadata_cannot_read_an_outside_index_even_with_matching_hash(self):
+        import yaml
+        state, manifest = self.metadata_fixture()
+        outside = self.root.parent / (self.root.name + "-private-index.jsonl")
+        outside.write_text("private fixture")
+        self.addCleanup(outside.unlink)
+        state["artifact_policy"]["index"] = str(outside)
+        manifest.write_text(yaml.safe_dump(state))
+        self.plan["entries"][-1]["planned_export_sha256"] = hashlib.sha256(manifest.read_bytes()).hexdigest()
+        original = Path.read_text
+        def read(path, *args, **kwargs):
+            if path == outside:
+                raise AssertionError("validator read an outside file")
+            return original(path, *args, **kwargs)
+        with patch.object(Path, "read_text", read):
+            errors = release.validate_export(self.plan, self.root)
+        self.assertTrue(any("unsafe release path" in e for e in errors), errors)
+
+    def test_rejected_extra_report_is_not_read_by_metadata_validation(self):
+        self.metadata_fixture()
+        index = self.root / release.GENERATED_OVERLAY
+        index.write_text("")
+        self.plan["entries"].append({"path": release.GENERATED_OVERLAY})
+        self.plan["generated_overlay"] = [release.GENERATED_OVERLAY]
+        extra = self.root / "docs/audits/private.md"
+        extra.write_text("private fixture")
+        original = Path.open
+        def opened(path, *args, **kwargs):
+            if path == extra:
+                raise AssertionError("validator read rejected report")
+            return original(path, *args, **kwargs)
+        with patch.object(Path, "open", opened):
+            errors = release.validate_export(self.plan, self.root)
+        self.assertIn("unexpected file in export: docs/audits/private.md", errors)
+
+    def test_plan_traversal_duplicates_and_unrecognized_overlay_fail_before_reads(self):
+        for bad in ("../outside.md", "/outside.md", "./note.md", "docs/../note.md", "docs\\note.md", ".git/config",
+                    "C:/outside.md", "C:outside.md"):
+            with self.subTest(path=bad):
+                plan = {**self.plan, "entries": [{**self.plan["entries"][0], "path": bad}]}
+                self.assertTrue(any("unsafe release path" in e for e in release.validate_export(plan, self.root)))
+                with self.assertRaisesRegex(ValueError, "unsafe release path"):
+                    release.materialize_plan(self.root, plan, self.root/"candidate")
+        for plan in ({**self.plan, "entries": self.plan["entries"]*2},
+                     {**self.plan, "generated_overlay": ["note.md"]},
+                     {**self.plan, "generated_overlay": [release.GENERATED_OVERLAY]}):
+            self.assertTrue(any("invalid release plan" in e for e in release.validate_export(plan, self.root)))
+
+
+if __name__ == "__main__":
+    unittest.main()

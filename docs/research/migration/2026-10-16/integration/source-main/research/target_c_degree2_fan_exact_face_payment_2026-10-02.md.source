@@ -1,0 +1,645 @@
+# Target C: exact half-scale exceptional-face payment for degree-two fans
+
+**Date:** 2026-10-02  
+**Base main:** \`7f7ac29e6a5e797ff4a1a2fcfa7fafffbaaf5d94\`  
+**Status:** proof-only strengthening of the current degree-two fan exceptional-face route. Level I and C-II remain open.
+
+## 1. Statement
+
+Use the notation of
+
+\[
+\texttt{research/target\_c\_degree2\_fan\_exceptional\_face\_payment\_2026-10-02.md}.
+\]
+
+Let \(U\) be the number of internal good-fan vertices whose positive contact degree is
+exactly two. Let
+
+\[
+x_B=b_{\rm out}-q
+\]
+
+be loaded outer-walk excess and
+
+\[
+Q=\sum_{G\ {\rm exceptional}}(\deg G-4)
+\]
+
+the bounded nonquadrilateral face excess.
+
+The current report proves
+
+\[
+U\le 2x_B+3Q+4.
+\]
+
+The factor three is unnecessary.
+
+### Theorem 1.1
+
+For every canonical post-ZF source in the same scope,
+
+\[
+\boxed{
+U\le 2x_B+Q+4.
+}
+\tag{1}
+\]
+
+Hence in the square-root branch
+
+\[
+\nu(H)\le K_\nu\sqrt D,\qquad
+x_B\le K_x\sqrt D,
+\tag{2}
+\]
+
+where the current global fan theorem gives
+
+\[
+I\ge
+\lceil D\rceil-(4K_\nu+2K_x)\sqrt D,
+\tag{3}
+\]
+
+if the degree-two population is at least half of the internal fan population,
+
+\[
+U\ge I/2,
+\tag{4}
+\]
+
+then
+
+\[
+\boxed{
+Q\ge
+{\lceil D\rceil\over2}
+-
+(2K_\nu+3K_x)\sqrt D
+-4.
+}
+\tag{5}
+\]
+
+In particular,
+
+\[
+\boxed{
+U\ge I/2
+\quad\Longrightarrow\quad
+Q\ge(1/2-o(1))D.
+}
+\tag{6}
+\]
+
+No numerical experiment or verifier is used.
+
+## 2. Bridge-adjacent fan vertices
+
+Retain the notation from the current report. Let \(U_{\rm br}\) count degree-two
+internal fan vertices for which at least one of the two fan contacts is a bridge of
+the positive contact graph.
+
+The existing bridge-occurrence argument gives
+
+\[
+\boxed{
+U_{\rm br}\le2x_B.
+}
+\tag{7}
+\]
+
+It remains to prove the sharp proper-run estimate and the uniform bound
+
+\[
+\boxed{
+U_{\rm exc}:=U-U_{\rm br}\le Q+4.
+}
+\tag{8}
+\]
+
+Every vertex counted by \(U_{\rm exc}\) lies on one bounded exceptional face
+\(G(p)\), and both of its fan edges occur on the boundary walk of that face.
+
+## 3. Fan blocks on one exceptional face
+
+Fix one bounded exceptional face \(G\). Let
+
+\[
+r_G
+\]
+
+be the number of vertices counted by \(U_{\rm exc}\) that are assigned to \(G\).
+
+Assume first that \(G\) is not incident with the entire loaded-hull cycle. On the loaded hull cycle, mark the hull edges incident with \(G\). They form
+\(c_G\ge1\) proper cyclic runs. Let
+
+\[
+e_G
+\]
+
+be the total number of such hull-edge occurrences.
+
+Within those \(c_G\) hull runs, let
+
+\[
+H_G
+\]
+
+be the number of internal loaded-hull vertices that are **not** counted by \(r_G\).
+Then exactly
+
+\[
+\boxed{
+r_G=e_G-c_G-H_G.
+}
+\tag{9}
+\]
+
+Indeed, a hull run of \(e\) edges has \(e-1\) internal hull vertices. Summing over
+the \(c_G\) runs gives \(e_G-c_G\) internal positions, and \(H_G\) of them are not
+degree-two good-fan vertices assigned to \(G\).
+
+Every transition between two distinct hull runs uses at least one non-hull boundary
+edge occurrence of \(G\). Therefore
+
+\[
+\deg G\ge e_G+c_G.
+\tag{10}
+\]
+
+Combining (9)--(10),
+
+\[
+\deg G-4-r_G
+\ge
+2c_G+H_G-4.
+\tag{11}
+\]
+
+Thus
+
+\[
+\boxed{
+r_G\le\deg G-4
+}
+\tag{12}
+\]
+
+already follows whenever either
+
+\[
+c_G\ge2
+\]
+
+or
+
+\[
+H_G\ge2.
+\]
+
+Only the two one-run cases
+
+\[
+c_G=1,\qquad H_G\in\{0,1\}
+\tag{13}
+\]
+
+need geometric input.
+
+## 4. Exact metric for one same-carrier fan block
+
+Let
+
+\[
+x_0,x_1,\ldots,x_e
+\]
+
+be consecutive loaded-hull vertices lying on one exact good fan with common diameter
+carrier \(a\). Thus
+
+\[
+|x_i-a|=D,
+\qquad
+|x_i-x_{i+1}|=1.
+\tag{14}
+\]
+
+Put
+
+\[
+\alpha_D=\arcsin{1\over2D}.
+\]
+
+Every fan step subtends central angle \(2\alpha_D\). Since every source pair has
+distance at most \(D\), all leaves on one same-carrier block lie inside a minor
+carrier arc of angular length at most \(\pi/3\). Hence the cyclic order agrees with
+the carrier-circle angular order and
+
+\[
+|x_0-x_e|
+=
+2D\sin(e\alpha_D).
+\tag{15}
+\]
+
+For \(e\ge3\),
+
+\[
+e\alpha_D\le\pi/6
+\]
+
+and sine is increasing there, so
+
+\[
+|x_0-x_e|
+\ge
+2D\sin(3\alpha_D)
+=
+3-{1\over D^2}
+>2
+\tag{16}
+\]
+
+for \(D>1\).
+
+Consequently any unit-edge path joining \(x_e\) back to \(x_0\) has at least three
+edges.
+
+This is the only quantitative metric estimate needed below.
+
+## 5. One hull run with no hole
+
+Assume
+
+\[
+c_G=1,\qquad H_G=0.
+\]
+
+Let the unique hull run of \(G\) have \(e=e_G\) edges.
+
+Every internal vertex of the run is counted by \(r_G\). Consecutive counted vertices
+share one fan edge. Since each counted vertex is a diameter leaf and both of its fan
+neighbors have the same unique diameter carrier, the common carrier propagates
+through the whole run. Hence the run is exactly of the form (14), and
+
+\[
+r_G=e-1.
+\tag{17}
+\]
+
+Let \(R\) be the number of remaining edge occurrences on the boundary walk of \(G\),
+so
+
+\[
+\deg G=e+R.
+\tag{18}
+\]
+
+If \(e\ge3\), (16) gives
+
+\[
+R\ge3.
+\]
+
+Hence
+
+\[
+\deg G-4
+\ge
+e-1
+=
+r_G.
+\tag{19}
+\]
+
+If \(e=2\), then \(r_G=1\). The current exact fan-face lemma already proves that the
+bounded face through one degree-two fan vertex cannot be a quadrilateral. Therefore
+
+\[
+\deg G\ge5
+\]
+
+and again
+
+\[
+\deg G-4\ge1=r_G.
+\tag{20}
+\]
+
+So (12) holds in the \(H_G=0\) case.
+
+## 6. One hull run with exactly one hole
+
+Now assume
+
+\[
+c_G=1,\qquad H_G=1.
+\]
+
+Let the unique hull run be
+
+\[
+x_0,x_1,\ldots,x_e.
+\]
+
+Exactly one internal hull vertex is not counted by \(r_G\), so
+
+\[
+r_G=e-2.
+\tag{21}
+\]
+
+As before, write
+
+\[
+R=\deg G-e
+\]
+
+for the complementary boundary-walk length. To prove
+
+\[
+\deg G-4\ge r_G,
+\]
+
+it is enough to prove
+
+\[
+R\ge2.
+\tag{22}
+\]
+
+Assume for contradiction that
+
+\[
+R=1.
+\tag{23}
+\]
+
+Then the complementary face path is one unit contact joining \(x_e\) directly to
+\(x_0\):
+
+\[
+|x_e-x_0|=1.
+\tag{24}
+\]
+
+If \(e=3\), then \(\deg G=4\), but \(r_G=1\) means \(G\) contains one degree-two
+fan vertex, contradicting the current no-quadrilateral fan-face lemma.
+
+So suppose
+
+\[
+e\ge4.
+\tag{25}
+\]
+
+Let \(x_j\) be the unique internal hull vertex not counted by \(r_G\).
+
+### 6.1 The hole is not adjacent to an endpoint
+
+Suppose
+
+\[
+2\le j\le e-2.
+\]
+
+Then there is at least one counted fan vertex on each side of \(x_j\). The fan edge
+from the left counted vertex into \(x_j\) shows that \(x_j\) is a diameter leaf with
+the same carrier as the left block. The fan edge from \(x_j\) into the right counted
+vertex shows the same for the right block. Hence the two carriers coincide, and the
+entire hull run is one exact same-carrier fan.
+
+Equation (16) then gives
+
+\[
+|x_0-x_e|>2,
+\]
+
+contradicting (24).
+
+### 6.2 The hole is adjacent to an endpoint
+
+By symmetry take
+
+\[
+j=1.
+\]
+
+Then the counted vertices
+
+\[
+x_2,\ldots,x_{e-1}
+\]
+
+propagate one common carrier through
+
+\[
+x_1,x_2,\ldots,x_e.
+\]
+
+Thus this subrun has \(e-1\ge3\) unit fan edges on one radius-\(D\) circle. Equation
+(16) gives
+
+\[
+|x_1-x_e|>2.
+\tag{26}
+\]
+
+But (23)--(24) and the hull edge \(x_0x_1\) give
+
+\[
+|x_1-x_0|=1,
+\qquad
+|x_0-x_e|=1.
+\]
+
+Triangle inequality therefore gives
+
+\[
+|x_1-x_e|\le2,
+\]
+
+contradicting (26).
+
+The case \(j=e-1\) is symmetric.
+
+Therefore \(R=1\) is impossible, proving (22). Hence
+
+\[
+\deg G-4
+=
+e+R-4
+\ge
+e-2
+=
+r_G.
+\tag{27}
+\]
+
+This proves (12) also in the \(H_G=1\) case.
+
+## 7. Exact face payment
+
+Sections 3--6 prove, for every bounded exceptional face used by a nonbridge
+degree-two fan vertex whose loaded-hull incidence is a proper subset of the hull
+cycle,
+
+\[
+\boxed{
+r_G\le\deg G-4.
+}
+\tag{28}
+\]
+
+There is one separate topological case: a bounded face \(G_0\) may be incident with
+the entire loaded-hull cycle. Then trivially
+
+\[
+r_{G_0}\le q,
+\]
+
+while its boundary walk contains all \(q\) loaded-hull edges, so
+
+\[
+\deg G_0\ge q
+\]
+
+and therefore
+
+\[
+\boxed{
+r_{G_0}\le (\deg G_0-4)+4.
+}
+\tag{29}
+\]
+
+There can be at most one such whole-hull bounded face. Summing the proper-run
+estimate (28) and, if present, (29), gives
+
+\[
+\boxed{
+U_{\rm exc}\le Q+4.
+}
+\tag{30}
+\]
+
+Combine this with the bridge payment (7):
+
+\[
+\boxed{
+U\le2x_B+Q+4.
+}
+\tag{31}
+\]
+
+This proves the corrected exact finite form of Theorem 1.1. The additive four is
+confined entirely to the possible whole-hull bounded face; every proper-run face pays
+its degree-two fan vertices one-for-one with \(\deg G-4\).
+
+## 8. Square-root consequence
+
+Assume (2) and the degree-two-heavy alternative (4). From (1),
+
+\[
+Q
+\ge
+U-2x_B-4
+\ge
+{I\over2}-2x_B-4.
+\tag{32}
+\]
+
+Use (3) and \(x_B\le K_x\sqrt D\):
+
+\[
+Q
+\ge
+{\lceil D\rceil\over2}
+-
+(2K_\nu+K_x)\sqrt D
+-
+2K_x\sqrt D.
+\]
+
+Therefore
+
+\[
+\boxed{
+Q
+\ge
+{\lceil D\rceil\over2}
+-
+(2K_\nu+3K_x)\sqrt D
+-4.
+}
+\tag{33}
+\]
+
+This is (5), and (6) follows.
+
+The previous \(D/6\) floor was a combinatorial face-count loss. Exact fan metric
+removes it.
+
+## 9. Frontier effect
+
+In the low-\(x_B\), square-root-matching branch, the internal good-fan population is
+
+\[
+I=D-O(\sqrt D).
+\]
+
+The branch split \(I=U+T\) now has the sharper form:
+
+1. **degree-two-heavy**
+   \[
+   U\ge I/2
+   \quad\Longrightarrow\quad
+   \boxed{Q\ge(1/2-o(1))D};
+   \]
+2. **degree-three-heavy**
+   \[
+   T\ge I/2,
+   \]
+   which remains the current harmonic-return / attachment-cell branch.
+
+Thus the degree-two side is no longer merely a linear exceptional-face defect. It
+forces half a diameter unit of face excess.
+
+Combine with the current matching/currency identity in the same square-root regime,
+
+\[
+x_B+Q+2s_Z\ge D-O(\sqrt D).
+\]
+
+On the degree-two-heavy low-\(x_B\) side, at least one half of the entire near-unit
+defect ledger is therefore already forced specifically into bounded exceptional
+faces adjacent to exact diameter-leaf fans.
+
+## 10. Remaining bottleneck
+
+This still does not close C-II.
+
+The scalar value
+
+\[
+Q\sim D/2
+\]
+
+is compatible with the current global face ledger. The gain is localization and
+coefficient: the forced face excess occurs on bounded faces whose outer boundary
+contains exact same-carrier \((D,D,1)\) fan blocks, and each degree-two fan vertex is
+paid one-for-one by \(\deg G-4\).
+
+The next high-value target is to combine this one-for-one face payment with either
+
+- the current stopped-train / O--O endpoint budget, by showing each unit of fan-adjacent
+  face excess consumes train-terminal capacity; or
+- the current Type-II face/rank identity, to force the complementary mixed-rank
+  surplus below what the exact fan topology permits.
+
+The degree-three harmonic-return branch remains separate.
+
+**Disposition:** exact proof-only strengthening. No numerical search, verifier
+execution, CI result, or unexecuted certificate code is used.

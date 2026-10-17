@@ -1,0 +1,200 @@
+# Target C-II - the ROW-UNIQUE THIN braid stabilizes to one ordered cable
+
+**Date:** 2026-09-17  
+**Status:** proof-only topological strengthening of the THIN ROW-UNIQUE branch; no canonical promotion claimed  
+**Scope:** THIN side of the 15-spaced one-sign strong-TB1 Horn upper family through `t=(q-k)/D<=1.8687`  
+**Dependencies:** macroscopic four-guard theorem; phase-cone uniqueness theorem; THIN directional-dispersion theorem; internally noncrossing selected O--O rows  
+**Certificate:** `research/verify_target_c_high_t_tb1_thin_row_unique_order_stabilization_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The phase-cone theorem leaves two alternatives. This note sharpens the `ROW-UNIQUE` alternative.
+
+In that branch every selected THIN chord meets every retained selected row exactly once. Because the rows are internally noncrossing proper crosscuts and the THIN chords are straight segments, the order of two chord intersections can change between two rows only if the unique crossing point of those two chords lies on one of the rows or in the slab between them.
+
+There are only `O(K^2)` crossing points for a `K`-chord braid. With `K=Theta(log D)` and `D^(1/2-o(1))` common rows, deleting the `O(K^2)` occupied row/gap slots leaves one `D^(1/2-o(1))` consecutive row block on which the entire braid has one fixed intersection order.
+
+The directional-dispersion theorem can be applied first, so this ordered cable may still be chosen with pairwise direction separation larger than `L/D` for any prescribed fixed `L`.
+
+Finally, every pair of braid chords still crosses globally, but no pair crosses inside the stabilized row slab. Color each chord pair by which side of the slab contains its crossing point. The elementary diagonal Ramsey bound then gives a `(1/2-o(1)) log_2 log D` sub-braid whose every mutual crossing lies on the same side of the polynomial-height row slab.
+
+Thus `ROW-UNIQUE` reduces to a one-sided crossing normal form rather than an arbitrary wiring diagram.
+
+---
+
+## 1. Finite row-slot stabilization lemma
+
+Let
+\[
+a_1<a_2<\cdots<a_H
+\tag{RS.1}
+\]
+be pairwise disjoint proper crosscuts of a topological disk, listed in their common path order. Orient every row from the same boundary shore to the other.
+
+Let
+\[
+e_1,\ldots,e_K
+\]
+be straight segments in the disk such that:
+
+1. every `e_i` meets every `a_j` exactly once;
+2. every two `e_i,e_l` meet properly exactly once.
+
+For a pair `i<l`, let
+\[
+p_{il}=e_i\cap e_l.
+\]
+There are at most
+\[
+C={K\choose2}
+\tag{RS.2}
+\]
+distinct pair labels and at most `C` distinct crossing points.
+
+Classify each crossing point into exactly one slot of the ordered row system:
+
+- a **row slot** if `p_{il}` lies on some `a_j`;
+- a **gap slot** if it lies in the open slab between `a_j` and `a_{j+1}`;
+- one of the two exterior sides if it lies beyond the extreme rows.
+
+Mark every occupied row or gap slot. The number `q` of marked internal slots satisfies
+\[
+q\le C.
+\tag{RS.3}
+\]
+Delete marked rows and cut the row sequence at every marked gap. The remaining unmarked rows split into at most `q+1` consecutive blocks. At most `C` rows were deleted, so one block `A'` has
+\[
+\boxed{
+|A'|\ge {H-C\over C+1}.
+}
+\tag{RS.4}
+\]
+
+### Lemma RS.1 - order is constant on an unmarked block
+
+For every pair of chords `e_i,e_l`, their unique intersection points with the rows of `A'` occur in the same order on every row of `A'`.
+
+### Proof
+
+It is enough to compare two consecutive rows `a_j,a_{j+1}` inside `A'`. By construction neither row slot nor the gap between them contains `p_{il}`.
+
+Take the portions of `e_i` and `e_l` between their unique intersections with `a_j` and `a_{j+1}`. Because each chord meets each boundary row exactly once, these portions are proper arcs in the closed slab between the two rows. They do not cross there, since their unique global crossing point is not in the slab.
+
+Two disjoint proper arcs joining the two boundary crosscuts of a disk cannot have alternating endpoint order. With the common row orientations, the order of the `e_i` and `e_l` intersection points is therefore the same on `a_j` and `a_{j+1}`.
+
+Propagating through the block proves the claim. `square`
+
+Since this holds for every pair, there is one total order
+\[
+e_{\pi(1)}<e_{\pi(2)}<\cdots<e_{\pi(K)}
+\tag{RS.5}
+\]
+of braid intersections along every row in `A'`.
+
+Equivalently, inside the closed slab between the first and last rows of `A'`, the `K` chord portions are pairwise disjoint even though the full THIN chords cross pairwise outside that slab.
+
+---
+
+## 2. One side contains all crossings of an unbounded sub-braid
+
+No pairwise chord crossing lies in the stabilized closed slab. Hence every pair `{i,l}` has its crossing point in exactly one of the two exterior path sides of that slab.
+
+Color the edge `{i,l}` of the complete graph on the `K` chords by that side. This is a two-coloring of `K_K`.
+
+The standard diagonal Ramsey estimate
+\[
+R(r,r)\le {2r-2\choose r-1}<4^{r-1}
+\tag{RS.6}
+\]
+implies that whenever
+\[
+K\ge4^{r-1},
+\]
+there is a monochromatic `r`-clique. Therefore one may take
+\[
+\boxed{
+r\ge \left\lfloor {1\over2}\log_2K\right\rfloor+1.}
+\tag{RS.7}
+\]
+
+For the corresponding chord subfamily `G`, every two chords cross properly on the same side of the stabilized row slab.
+
+This extraction only takes subsets, so any pre-existing incidence word, directional separation, hull-endpoint property, and fixed train guards survive.
+
+---
+
+## 3. Apply to the THIN ROW-UNIQUE branch
+
+Fix any constant `L>0`. Start with the half-exponent macroscopic-guard normal form and assume the phase-cone fork lands in `ROW-UNIQUE`.
+
+Apply the directional-dispersion theorem first. It gives a sub-braid
+\[
+F_D^{sep}(L)
+\]
+of size
+\[
+K_D\ge \kappa_L\log D-o(\log D),
+\qquad
+\kappa_L:={1\over96\log5\,C_L}>0,
+\tag{RS.8}
+\]
+whose chord directions are pairwise more than `L/D` apart. Every chord still meets every retained selected row exactly once, and the same four-bit incidence word against the same four macroscopic guards survives.
+
+The retained row family has
+\[
+H_D\ge D^{1/2-o(1)}.
+\tag{RS.9}
+\]
+Put
+\[
+C_D={K_D\choose2}=O((\log D)^2).
+\]
+Lemma RS.1 and (RS.4) give a consecutive row block `A_D^{ord}` with
+\[
+|A_D^{ord}|
+\ge {H_D-C_D\over C_D+1}
+=D^{1/2-o(1)}
+\tag{RS.10}
+\]
+on which all `K_D` chord intersections occur in one common total order.
+
+Apply the Ramsey extraction of Section 2. There is a sub-braid `G_D` satisfying
+\[
+\boxed{
+|G_D|
+\ge
+\left({1\over2}-o(1)\right)\log_2\log D
+}
+\tag{RS.11}
+\]
+such that:
+
+1. the chords of `G_D` are vertex-disjoint THIN hull chords and every two cross properly;
+2. their directions are pairwise more than `L/D` apart;
+3. every chord meets every row of `A_D^{ord}` exactly once;
+4. their intersection points have one common order on every row of `A_D^{ord}`;
+5. **every pairwise chord crossing lies on the same exterior side of the entire `A_D^{ord}` slab**;
+6. `|A_D^{ord}|=D^{1/2-o(1)}`;
+7. the same four macroscopic train guards and the same homogeneous four-bit incidence word remain available on every retained row.
+
+Thus the `ROW-UNIQUE` branch has a one-sided normal form:
+
+```text
+Theta(log log D) globally pairwise-crossing THIN chords,
+robustly separated in direction at any prescribed fixed inverse-D scale;
+D^(1/2-o(1)) internally noncrossing rows;
+one fixed chord order on every row;
+no chord-chord crossing inside the row slab;
+and all global chord-chord crossings on one and the same side of that slab.
+```
+
+---
+
+## 4. Frontier effect
+
+Before this reduction, `ROW-UNIQUE` still allowed an arbitrary allowable-sequence wiring of the logarithmic braid through the polynomial row stack. The wiring inside a polynomial-height substack is now trivial: the selected chords form one noncrossing ordered cable there, and an unbounded sub-braid performs all of its pairwise crossings on only one side of the cable region.
+
+This does not yet contradict the metric train geometry. The next row-side target is sharper: use the four macroscopic guards and the near-equilateral common grid to rule out a robustly slope-separated straight cable whose pairwise crossings all occur beyond one side of a `D^(1/2-o(1))` row slab.
+
+The `GUARD-UNIQUE` side remains separate and is addressed by the growing-fence incidence system.
+
+**Disposition:** stabilized the ROW-UNIQUE THIN branch to a polynomial-height constant-order cable and extracted a `Theta(log log D)` sub-braid whose every mutual crossing lies on one common side. C-II and Level I remain open.

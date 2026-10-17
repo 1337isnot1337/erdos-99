@@ -1,0 +1,67 @@
+#!/usr/bin/env python3
+"""Exact e=7 closure for final k=5,D=-1,d_root=0,p=6 branch."""
+from collections import Counter
+from itertools import combinations, product
+from pathlib import Path
+import sys
+HERE=Path(__file__).resolve().parent
+sys.path.insert(0,str(HERE))
+import verify_target_c_p6_e8_support_closure_2026_09_26 as E8
+import verify_target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d0p6_e4_weight_closure_2026_09_26 as B
+
+def heptuples(eligible):
+    vs=tuple(sorted(eligible)); later={v:{w for w in vs if w>v and E8.pair_compatible(v,w,eligible)} for v in vs}; out=[]
+    def rec(ch,cand):
+        need=7-len(ch)
+        if need==0: out.append(tuple(ch)); return
+        if len(cand)<need: return
+        a=sorted(cand)
+        for i,v in enumerate(a):
+            if len(a)-i<need: break
+            rec(ch+[v],set(a[i+1:])&later[v])
+    rec([],set(vs)); return tuple(out)
+
+def phase_exts(ms):
+    c=Counter(ms); opts=[]
+    for si in sorted(c):
+        es=B.SUPPORT_CYCLES[B.SUPPORTS[si]]; k=c[si]
+        opts.append((es,) if k==3 else tuple(combinations(es,2)) if k==2 else tuple((e,) for e in es))
+    for choice in product(*opts):
+        ext=tuple(sorted(e for q in choice for e in q)); assert len(ext)==8; yield ext
+
+def rows(ext,b):
+    return (tuple(B.M.R.QCOMP[e][b][0] for e in ext),tuple(B.M.R.QCOMP[e][b][1] for e in ext))
+
+def main():
+    assert E8.burnside_orbit_counts()==E8.EXPECTED_ORBITS
+    reps=E8.support_multiset_orbits(); assert len(reps)==27763
+    C=Counter(); Z=Counter(); kept=[]
+    for ms in reps:
+        touched,eligible=E8.block_data(ms)
+        if len(touched)<13: continue
+        C['touch13']+=1
+        if len(eligible)<7: continue
+        C['eligible7']+=1
+        qs=heptuples(eligible)
+        if not qs: continue
+        C['pair_orbits']+=1; C['pair_heptuples']+=len(qs); good=[]
+        for q in qs:
+            z=sum(eligible[b][1]==1 and eligible[b][2]==2 for b in q); Z[z]+=1
+            if z<=3: good.append(q); C['zsurv']+=1
+        if good: kept.append((ms,tuple(good)))
+    assert C==Counter({'touch13':27712,'eligible7':5133,'pair_heptuples':48,'zsurv':25,'pair_orbits':20}),C
+    assert Z==Counter({4:23,3:18,2:7}) and len(kept)==9,(Z,len(kept))
+    P=Counter(); R=Counter()
+    for ms,qs in kept:
+        for ext in phase_exts(ms):
+            P['phases']+=1
+            for q in qs:
+                P['pairs']+=1; r=B.rank_mod2(tuple(x for b in q for x in rows(ext,b))); R[r]+=1
+                assert r>3,(ms,ext,q,r)
+    assert P==Counter({'pairs':145071,'phases':46413}),P
+    assert R==Counter({8:140486,7:4522,6:63}),R
+    print('PASS: p=6 e=7 closure')
+    print('support_survivors',len(kept),'empty_heptuples',C['zsurv'])
+    print('phase_configs',P['phases'],'phase_heptuple_pairs',P['pairs'])
+    print('rank_F2_census',dict(sorted(R.items())))
+if __name__=='__main__': main()

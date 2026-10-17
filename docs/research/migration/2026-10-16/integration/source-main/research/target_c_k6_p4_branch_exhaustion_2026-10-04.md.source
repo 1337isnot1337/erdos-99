@@ -1,0 +1,39 @@
+# Target C: exhaust the nine-no-root k=6, D=-2, d_root=1, p=4 branch
+
+Date: 2026-10-04
+Base main: d432d18a14cfeccbb7e47c51960847ecc33351f2
+Status: unreviewed case synthesis. The m=5 verifier source is unavailable, so full p=4 exhaustion is not certified. C-II and Level I remain open.
+
+The nine-no-root k=6 reduction chain forces, in the D=-2, d_root=1, p=4 branch:
+
+- rank P = 3 on nine external coordinates;
+- generalized weights at least (3,4,6);
+- exactly four touched singleton root blocks;
+- no touched empty block and no selected pair block;
+- singleton touch multiplicity at least four;
+- touched-complete root nullity at most one;
+- required external relation-rank increment six.
+
+Let m be the number of distinct tetrahedral four-supports among the nine no-root rows. Each support has at most three undirected four-cycle orientations, so m >= 3. The unverified support-compression report claims m <= 6. Hence every survivor lies in exactly one of m=3,4,5,6.
+
+The m=3 argument is a direct incidence proof. The m=4 and m=6 exact verifiers pass for their encoded slices under the stated support reductions. The support-compression census needed to restrict to m=3,4,5,6 has no committed verifier source, and the m=5 audit source is also unavailable. The full p=4 exhaustion is therefore not established by this packet.
+
+For m=3, multiplicity is (3,3,3). Each required singleton triangle must occur in at least two supports, but three distinct tetrahedra have only three support pairs and each pair shares at most one triangle. Thus at most three triangles can have support multiplicity at least two, while the branch requires four.
+
+For m=4, the exact certificate in commit f7addda0b924915ab62b9158fef1ea5cdf2c1b36 exhausts the multiplicity profiles (3,3,2,1) and (3,2,2,2). Every generalized-weight survivor has external relation-rank increment one, not six.
+
+For m=5, the written audit in commit 5d474b9e7133d07c28976334f66ccd0e6105b70f reports that across all 824 generalized-weight survivors the external relation-rank increment is zero or one, never six. Its verifier source is unavailable, so this remains an unreproduced claim.
+
+For m=6, commit 8b6774a1de70277c88bbebf48772a49a32b5dba5 gives the exact support reduction and executed certificate. The overlap-two class dies at the generalized-weight test and every overlap-three survivor has external relation-rank increment zero, not six.
+
+This report does not establish whether a nine-no-root state exists with
+
+    k=6, D=-2, d_root=1, p=4.
+
+If both missing finite censuses are independently reproduced, this would remove one of the four surviving arithmetic branches. The other branches are
+
+    D=-2, d_root=0, p=7;
+    D=-1, d_root=1, p=5;
+    D=-1, d_root=0, p=8.
+
+This note does not claim C-II or Level I closure.

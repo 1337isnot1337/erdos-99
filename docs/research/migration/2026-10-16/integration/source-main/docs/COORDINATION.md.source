@@ -1,0 +1,162 @@
+# Research coordination
+
+This protocol coordinates autonomous AI-agent research and independent agent audits on
+one shared theorem ledger. Coordination records are leads and handoffs; they do not change the
+canonical theorem state. Read [`STATE.md`](STATE.md) and the relevant target route
+before claiming a mathematical question.
+
+## Choose and bound a question
+
+Start from a specific open obligation, proposed audit, or reproducible computational
+question. Record the current `main` commit and `state_version`; state the exact object,
+hypotheses, and conclusion under investigation. Name theorem IDs and files actually
+used. For a proof task, write the intended chain from candidate lemma to the canonical
+quantity and then to the contradiction or strict sub-diameter competitor. If that last
+step is missing, label the work exploratory.
+
+Before investing, inspect open pull requests (including drafts), active coordination
+threads, the relevant route map, and focused searches of the ledger, reports, and
+research code. Compare hypotheses, objects, and intended evidence, not just titles.
+Closed work matters when it established a regression or predecessor; consult its ledger
+entry or report when relevant. A lack of search hits is not proof of novelty.
+
+For a bounded task expected to take more than a short session, use an **issue claim**.
+Issues are enabled and Discussions are disabled. A branch-only note cannot tell other
+contributors what is active. Short experiments can use an existing claim issue and
+link their scope; independent audits may overlap with a proof claim.
+
+The catalogue uses stable task IDs. The selector's `scope_key` hashes task ID and method,
+excluding seed and base commit; it identifies a method scope, not mathematical novelty.
+Query current open PRs (including drafts) and issues without mutating GitHub:
+
+```sh
+python3 scripts/choose_research_task.py --count 1 --live-overlap --json
+python3 scripts/choose_research_task.py --task target-c-face-coupled-move --claim-template > /tmp/e99-claim.txt
+# After comparing overlap and replacing every placeholder, the contributor posts:
+gh issue create --repo 1337isnot1337/e-99 --title "Claim: target-c-face-coupled-move" --body-file /tmp/e99-claim.txt
+```
+
+The live query uses paginated read-only GitHub endpoints and emits titles and explicit
+coordination markers, not private issue bodies. Results include still-open PRs named by
+the task card's `potential_open_overlap_prs`, along with title/marker matches. These are
+leads that need manual scope comparison; absence of a match does not establish novelty.
+Authentication/network failure is explicit. The default offline fallback is the
+catalogue's dated snapshot; use `--overlap-snapshot` for saved query JSON. Refresh before
+posting a claim.
+
+Use this compact claim format:
+
+```text
+CLAIM — <short question>
+E99-TASK-ID: <catalogue task ID>
+E99-SCOPE-ID: <selector scope_key>
+E99-CLAIM-EXPIRES: <UTC ISO timestamp, at most seven days away>
+Base commit / state version:
+Exact question and object:
+Hypotheses changed or claim being audited:
+Canonical dependencies and nearest predecessors:
+Method and bounded domain:
+Expected evidence and falsification check:
+Planned stopping point / expiry:
+Owner or branch, if work has started:
+```
+
+A claim is advisory, not exclusive ownership, a novelty finding, or permission to edit
+the canonical state. Give it an expiry no longer than seven days; renew it with one
+sentence about progress and the remaining step. Anyone may pursue a genuinely
+independent audit, counterexample, or complementary proof. If work overlaps, state the
+precise difference in question, assumptions, or method and link the predecessor.
+
+## Use discussions, issues, and pull requests deliberately
+
+Use an issue for each maintained claim, correction, independent-review request, or
+handoff. The research-task form accepts the catalogue IDs, scope, expiry, and reviewed
+commit. Use a PR for durable code or evidence and link its claim issue. Review requests
+name the exact PR head, theorem IDs, scope, and reviewer independence; the
+[review policy](REVIEW_POLICY.md) defines the mathematical gate. An issue or merged
+artifact never promotes a theorem.
+
+Expired claims remain visible as predecessors but no longer indicate active allocation.
+Renew by updating the expiry marker in the issue body and posting a brief progress
+comment, so read-only queries can distinguish renewal from stale claims. After failure,
+supersession, or completion, post the result classification and next obligation, link any
+preserved regression or successor, and close the issue. Do not erase predecessor credit.
+A failed experiment without durable evidence can close with a concise handoff.
+
+Post brief status updates on the original claim instead of opening a new thread for
+every step:
+
+- `UPDATE` — what changed and the next bounded step; renew expiry if needed.
+- `FINDING` — exact result, evidence location, scope, and what it does not establish.
+- `HANDOFF` — files/commands, current status, unresolved obligation, and next action.
+- `DONE` — completed artifact or PR link and exact claim status.
+- `RELEASED` — work stopped; summarize useful partial evidence and remove any
+  impression that the task remains actively claimed.
+
+Do not post private material, credentials, or unlicensed third-party text. A mathematical
+claim in a discussion is a research lead until its proof and hypotheses are checked.
+
+## Work safely in parallel
+
+Each substantial run uses its own branch or worktree based on a recorded commit. Check
+the current state before starting and again before importing results from another
+branch. Do not commit to `main`, force-push a shared branch, or overwrite another
+contributor's working files. Keep predecessor reports and exact regressions; do not
+silently merge partial arguments that use different source configurations, optima,
+scaffolds, or response networks. When another branch changes your dependency, pin its
+commit and ask for a handoff or review rather than treating the unmerged result as
+canonical.
+
+Before submitting, refresh the overlap check against open PRs and coordination threads.
+For a duplicate result, explain what it independently confirms or what scope it adds.
+For a materially different result, identify the changed hypothesis or object. Report
+false starts when they establish a reusable obstruction or prevent a known invalid
+inference; do not turn an unchanged failed experiment into a second report.
+
+## Make a handoff reproducible
+
+A finding or handoff should let the next researcher continue without the original chat
+or private notes. Include:
+
+1. exact question, status, base commit, and state version;
+2. statement with all hypotheses and objects distinguished;
+3. dependencies and nearest predecessor reports or PRs;
+4. proof, counterexample, or computation, with exact reproduction commands and inputs;
+5. regressions checked and limitations, including why the result does not close a larger
+   claim;
+6. remaining exact obligation and one feasible next step;
+7. contributor and AI-assistance attribution where applicable.
+
+Use `docs/reports/REPORT_TEMPLATE.md` for substantial mathematical artifacts. Register
+reusable computation in `research/README.md`; if it becomes load-bearing for a promoted
+claim, register its certificate through the theorem manifest. A commit or merged PR
+does not change a result's lifecycle status.
+
+## Preserve credit
+
+## Agent-only mathematical review
+
+Canonical promotion requires one independent AI-agent audit, combining complete proof
+reconstruction with adversarial bridge/regression testing against the exact PR-head
+SHA. The project owner may operate the review session while auditing other agents'
+submissions. It must be independent of the originating proof/checker; a second
+reviewer, a second model family, and a human mathematical referee are not required.
+Record the model/session when known, inputs, inspected arguments, tests, verdict,
+and remaining limitations. See `REVIEW_POLICY.md`.
+
+
+Link and name predecessor work when reusing its statements, proof ideas, code, or data.
+Record the specific contribution added by each collaborator, including useful audits,
+counterexamples, and partial arguments that are later superseded. Ask contributors how
+they want to be credited before drafting a joint paper or public contributor list.
+Repository credit records contributions; it does not automatically determine paper
+authorship or redistribution rights. Disclose the originating and reviewing agent
+identities/models when known and their exact roles. No human mathematical review is
+solicited or claimed. Preserve actual contributors' credit and source permissions.
+
+## Maintainer branch closeout
+
+Branch creators clean their merged branches after checking exact tips and ongoing use.
+Use the [maintainer reconciliation runbook](MAINTENANCE.md) and its read-only paginated
+audit before housekeeping. Preserve unfinished evidence and protect open PR heads/bases;
+a cleanup preview never authorizes deleting an active or unclear branch.

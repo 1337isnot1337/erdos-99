@@ -1,0 +1,190 @@
+# Erdős Problem #99 — current Target C continuation
+
+**State:** `2026-09-14.audit.51`
+**LEVEL I STATUS: STILL OPEN.**  
+**C-I: CLOSED.**  
+**C-II: OPEN.**
+
+## Bootstrap
+
+Read, in order:
+
+1. `docs/STATE.md`;
+2. `docs/problem/statement.md`;
+3. `docs/targets/target-c/CURRENT.md`;
+4. `docs/targets/target-c/README.md`;
+5. `docs/targets/target-c/105-121-promotion-audit-2026-09-12.md`;
+6. `docs/targets/target-c/122-123-promotion-audit-2026-09-12.md`;
+7. the canonical modules/reports explicitly named by `docs/state/theorem-state.yaml`;
+8. this prompt last.
+
+Do not infer theorem authority from a merge, date, filename, or section number.
+
+## Mission
+
+Close C-II for every sufficiently large triangle-free global minimizer in the canonical normal form, or produce a valid Level I disproof. Do not spend the run re-proving audited extraction/density machinery or optimizing another carrier decimal unless it creates a new implication to global closure.
+
+## Binding normalization
+
+Use the contact-minimal, then diameter-pair-minimal representative and retain every source point, including contact-isolated points.
+
+The §57 ZR/ZF theorem is only on the nonisolated positive-contact core `V`:
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\qquad
+\operatorname{rank}R_{C\cup H}[V]=2v-3.
+\]
+
+Do not extend this affine-kernel theorem to contact-isolated coordinates. Full-source geometry comes from the separate canonical full-source modules.
+
+## Canonical input to treat as solved
+
+Audit.50 is controlling. Canonical Target C reaches normalized **Section 123** and
+also includes the promoted full-core diameter-budget floor, loaded-chord/train
+surplus floor, and exact-floor endpoint exclusion.
+
+The post-104 chain is canonical, with these binding corrections:
+
+- §109 proves the baseline shore theorem `a<r/(6C_T)`, but that coefficient is **not sharp**;
+- §111 gives the corrected joint-shore threshold `a<r/(3C_T)`;
+- §120 uses specific outer-walk occurrences, not silently identified repeated vertices;
+- §121 is canonical only in its corrected finite form; `G_loc=o(D^2) => G_loc/d=o(1)` is false without stronger local filling control.
+
+Key canonical conclusions:
+
+- §107 gives the wrapping-support area floor `>0.473D^2` in the near-endpoint window;
+- §§112--115 give aggregate projection and stability/tooth-leakage refinements;
+- §116 gives
+  \[
+  d(L+P_{exc}-2d)\ge(4-2\sqrt3)A_4;
+  \]
+- §117 gives whole-core signed-return transport;
+- corrected §118 gives the strongest promoted explicit full-core carrier coefficient
+  \[
+  \boxed{0.9762439137425688\ldots}
+  \]
+  through `sigma<=0.0088`;
+- §119 is valid but quantitatively weaker than corrected §118;
+- §§120--121 give the finite anisotropic return/local-Oler bridge on one actual harmonic carrier;
+- normalized §122 gives the all-cell aggregate detour floor
+  \[
+  \boxed{
+  \liminf {1\over D}\sum_r(L_r+P_{{\rm exc},r}-2d_r)
+  \ge {\pi\over2}(2-\sqrt3);
+  }
+  \]
+- normalized §123 gives the exact global payment theorem
+  \[
+  \boxed{
+  \sum_rP_{{\rm exc},r}\le10(e_{BB}-k),
+  \qquad k=d_H+s_Z.
+  }
+- the promoted full-core budget floor gives, with
+  \(\mu_D=(e_{BB}+2s_C-3(d_H+s_Z))/D\),
+  \[
+  \boxed{\liminf_{D\to\infty}\mu_D\ge1.}
+  \]
+
+The concurrent proof-only artifacts that were also numbered 120/121 are provenance only; their normalized canonical section numbers are 122/123.
+
+The floor eliminates only the subunit-\(\mu_D\) full-core regime. The promoted
+loaded-chord/train coupling strengthens the same near-disk full-core branch to
+\[
+\boxed{\displaystyle
+\liminf_{D\to\infty}\mu_D\ge
+\frac{2\pi+2\sqrt{\pi/(2\sqrt3)}}5
+=1.6375621841815\ldots.}
+\]
+It still gives no upper bound on \(\mu_D\), so it does not close C-II.
+
+Canonical `C-FULLCORE-FLOOR-ENDPOINT-EXCLUSION` now removes the exact endpoint:
+there is no canonical full-core sequence with
+\(\mu_D\to\mu_{\rm TC}\). Its proof uses the Mantel endpoint graph, an
+unequal-shore Fox--Pach--Suk extraction by cloning, the exact phase-cut
+forward/reverse lift (with right-angle pairs charged to the O(D) defect budget),
+and an O(D^(1/4)) phase-tail trim before Section 76. Combined with the canonical
+floor, it gives an existential, non-explicit uniform gap above the floor. Do not
+re-open this endpoint unless a direct dependency conflict appears.
+
+The promoted equality-case companion `C-FULLCORE-MU-ONE-CELL` formally says that if
+\(\mu_D\to1\), one actual attachment cell has diameter \(D-o(D)\), area
+\(\pi D^2/4-o(D^2)\), and all other cell diameters sum to \(o(D)\). After
+normalization, every dominant-cell limit is a radius-\(1/2\) disk. The stronger
+train-coupled floor makes this antecedent impossible for canonical Type-II
+sequences, so it is not a live equality branch.
+
+The restricted affine-source theorem C-OBLIQUE-LATTICE-COMPETITOR is canonical
+only under its exact two-direction lattice hypothesis. It supplies an exact
+same-cardinality triangular-lattice strict competitor above its displayed finite
+threshold and forces any affine-lattice global minimizer into angle excess
+O(D^{-1}). It does not provide an affine chart for a general canonical
+full-core source. Treat the inverse-diameter shear endpoint as unresolved and do
+not use this restricted theorem as a full-core source theorem.
+
+## Exact next split
+
+### Full-core branch
+
+Do not redo §§100--119 merely to enlarge a numerical window or re-prove the exact
+floor endpoint exclusion. The live source-level target is now the interaction of
+§§122--123 and the
+\(\liminf\mu_D\ge1.6375621841815\ldots\) loaded-chord/train floor with the
+global loaded-hull/diameter ledger.
+
+Section 122 forces
+
+\[
+\sum_r(L_r+P_{{\rm exc},r}-2d_r)
+\ge
+\left[{\pi\over2}(2-\sqrt3)-o(1)\right]D,
+\]
+
+while Section 123 gives
+
+\[
+\sum_rP_{{\rm exc},r}\le10(e_{BB}-k).
+\]
+
+Therefore focus on the aggregate outer-walk detour
+
+\[
+\boxed{\sum_r(L_r-2d_r)}
+\]
+
+and its coupling to `e_BB-k` and the actual diameter graph.
+
+Acceptable closing routes are:
+
+1. prove an upper bound on the **same aggregate detour** strong enough to contradict §122 after paying `P_exc` with §123;
+2. use global diameter minimality to turn the forced aggregate detour into a source-preserving strict decrease of the global diameter;
+3. force an exact unit equilateral triangle directly from the loaded-hull / harmonic-cell geometry;
+4. prove a genuinely boundary-order local filling theorem that closes the §§120--121 anisotropic moment bridge and then globalize it.
+
+A limiting moment argument must control the Section-121 error at scale `o(d)`, not merely `o(D^2)`.
+
+### Macroscopic inactive-container branch
+
+One internal inactive chamber or exterior cap has quadratic population/area and only `O(D)` perimeter/slack. For an internal chamber, hull stability and deep matching give a protected isolate hull and isolate-only blocker graph. Proof-only §95 shows contact creation alone need not transfer positive KKT force.
+
+The missing theorem must force an exact unit triangle, alter or replace part of the old diameter-carrying core, or construct a same-cardinality feasible source with strictly smaller global diameter.
+
+## Binding dead routes
+
+Do not use without a new proof:
+
+- incident-diameter sequence `=>` Euler trail/path;
+- FB4 force-bulk localization;
+- incompatible-cut C53 pentagon objection;
+- RSR disk-equality uniqueness;
+- Eppstein near-equality `=>` near quadrangulation;
+- five-host measure saturation `=>` all hosts occupied;
+- inward OP pocket `subset` exterior Reuleaux minor cap;
+- deletion of contact-isolated source points;
+- full-source extension of the §57 affine-kernel theorem;
+- `r/(6C_T)` as the sharp limit of the Section-90 bin method;
+- `G_loc=o(D^2) => G_loc/d=o(1)` in Section 121.
+
+## Research standard
+
+Before promoting a new lemma, write its exact dependency chain to either an exact unit triangle, a source-preserving strict sub-`D` competitor, or the Level I conclusion. A computation may certify finite arithmetic or a regression; it does not supply global optimality.

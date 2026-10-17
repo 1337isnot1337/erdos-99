@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+"""Regression checks for the repaired almost-linear tagged resultant ladder."""
+
+M = 9_000_000
+r0 = 0.6536
+phase_coefficient = M / r0
+
+assert 13_769_000 < phase_coefficient < 13_770_000
+
+# For k_D=D/log D, all interval quantities controlled by k_D/D vanish:
+# switching KKT mass M/log D, all-subslab opening width (M/r0)/log D,
+# and normalized resultant diameter M/log D.
+prev_mass = None
+prev_opening = None
+for logD in [1e4, 1e6, 1e8, 1e10]:
+    mass = M / logD
+    opening = phase_coefficient / logD
+    assert mass > 0
+    assert opening > 0
+    if prev_mass is not None:
+        assert mass < prev_mass
+        assert opening < prev_opening
+    prev_mass = mass
+    prev_opening = opening
+
+# k_D tagged positions, then one mechanism and one destination each cost at
+# most one factor two.
+assert 1 * (1 / 2) * (1 / 2) == 1 / 4
+
+print("PASS: repaired almost-linear tagged-resultant-ladder regressions")
+print("all-subslab phase coefficient =", phase_coefficient)
+print("tag+destination fraction of tagged positions =", 1 / 4)

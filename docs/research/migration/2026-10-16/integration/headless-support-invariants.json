@@ -1,0 +1,21 @@
+{
+  "schema": "headless-support-invariants-v1",
+  "scope": "Exact reconstructed JSON and object identities; not Python test execution or Gate 2",
+  "original_index_rows": 1391,
+  "new_index_rows": 58,
+  "original_rows_identical": true,
+  "new_rows_unreviewed_noncanonical": true,
+  "source_inclusion_rows": 810,
+  "changed_inclusion_rows": 1,
+  "source_identities_and_permissions_identical": true,
+  "only_builder_editorial_hash_note_changed": true,
+  "release_verified": false,
+  "deprecation_ready": false,
+  "policy_blob_sha1": "0b4235302a697098f52daa7bf275cdf01d35ef29",
+  "policy_captured_commit": "f282d53169df4d507117893bfdcc99f663855923",
+  "historical_payload_rows": 1505,
+  "captured_unreviewed_metadata_rows": 55,
+  "baseline_transformations": 6,
+  "policy_sha256_sources": "Original immutable source/branch/frozen inventories, with SHA256 recomputed for 99 remaining unique Git blobs and all six support files.",
+  "metadata_provenance_source_identity_bindings_verified": true
+}

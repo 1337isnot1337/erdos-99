@@ -1,0 +1,49 @@
+# Target C: leaf-fan sector run
+
+Date: 2026-10-02.
+Starting shared checkout: `539f5187b3cac9287f6b30cdf6b36aafb1763c5a`.
+Starting research base: `75aac1464f80ca91256e96dc70ca0c865e0b3b0e`.
+State version: `2026-09-14.audit.51`.
+Mission: exact diameter-leaf fans, their inward spokes, and stopped rhombus trains.
+Branch: `swarm/sol/leaf-fan-sector-20261002`.
+Classification at initialization: unreviewed candidate. Level I and C-II remain open.
+
+`fan-edge unique support -> fan trains end on actual defect incidences -> exact Q/x_B charge; a contradiction still requires an independent upper bound on that same currency or a finite source competitor.`
+
+Canonical inputs actually used: Target C Sections 26/35 (fully visible contact core,
+loaded extremality/degree and unloaded harmonicity), Sections 57/58 (full-support
+normalization, full-source geometry), Section 61 (finite stopped-rhombus trains and
+face-incidence currency), and Section 63 (distinguished outer-walk intervals).
+Unpromoted dependencies to be audited before application: current-main leaf-fan
+outer-walk reduction (`abdbe1f5`) and inward-spoke fork (`75aac146`).
+
+Initial concrete attacks:
+
+1. Prove that an inward third neighbor is strictly inside the triangle formed by the
+   carrier and the two neighboring fan leaves, and hence is unloaded.
+2. Test whether consecutive third spokes force nonquadrilateral faces; construct an
+   exact positive-equilibrium rhombic collar if they do not.
+3. Prove that a fan unit chord has a unique opposite supporting vertex (its carrier),
+   then count the actual stopped-train endpoints without identifying source points
+   with abstract train or response vertices.
+
+No canonical theorem-state change or promotion is authorized by this report.
+
+Durable results are in
+`docs/reports/target_c_leaf_fan_stopped_train_and_collar_2026-10-02.md`.
+The fan-count dependency is rederived from canonical Woodall and outer-walk
+inputs; the inward triangle is proved directly. New candidates are the unique
+opposite support, stopped-train charge `5Q >= h-3nu-3x_B`, rank-to-face
+transport `s_Z <= 2f+3nu+x_B`, and common-train area surcharge
+`E_4 >= Rg(g-1)/(8D)` under the stated small-width/full-crossing hypotheses.
+
+The exact positive-equilibrium rhombic collar rejects a local spoke-to-non4
+inference. Its missing carrier and four endpoint equations are recorded;
+it is not a global-minimum or full-stress counterexample. Certificate:
+`research/verify_target_c_leaf_fan_sector_2026_10_02.py`.
+
+The next area attack was performed and does not close square-root fans:
+`g=Theta(sqrt(D)), R=Theta(D)` costs only `Theta(D)`, consistent with the
+linear full-source area budget when `Z_ext=O(D)`. The surviving obstruction
+is the completed source's actual non4 train endpoints, not local rhombic
+immunity or an unproved positive multiplier floor.

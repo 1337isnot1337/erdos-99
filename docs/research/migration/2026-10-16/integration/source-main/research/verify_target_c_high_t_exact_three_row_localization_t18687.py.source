@@ -1,0 +1,116 @@
+#!/usr/bin/env python3
+"""Constants and algebra checks for the high-t exact three-row cusp theorem."""
+
+from fractions import Fraction as Q
+from math import cos, hypot, sin
+from random import Random
+
+C = 1_109_000
+r = 2
+column_density = Q(1567, 10_000)  # |B_+| > 0.1567 D-o(D)
+
+support_bound = C * r
+adjacent_phase_exact = Q(C * r, 1) / column_density
+block_phase_exact = 2 * Q(C * r, 1) / column_density
+
+assert support_bound == 2_218_000
+assert adjacent_phase_exact < 14_160_000
+assert block_phase_exact < 28_320_000
+
+
+def u(a):
+    return (cos(a), sin(a))
+
+
+def J(v):
+    return (-v[1], v[0])
+
+
+def dot(x, y):
+    return x[0] * y[0] + x[1] * y[1]
+
+
+def add(*vs):
+    return (sum(v[0] for v in vs), sum(v[1] for v in vs))
+
+
+def smul(c, v):
+    return (c * v[0], c * v[1])
+
+
+# Verify the explicit determinant kernel and the two-interface balance for a
+# deterministic sample of narrow real phase triples. The formulas are exact
+# trigonometric identities; this numerical loop is only a regression guard.
+rng = Random(20260917)
+max_kernel_residual = 0.0
+max_balance_residual = 0.0
+
+for _ in range(10_000):
+    a0 = rng.uniform(-0.2, 0.2)
+    a1 = a0 + rng.uniform(-0.1, 0.1)
+    a2 = a1 + rng.uniform(-0.1, 0.1)
+    u0, u1, u2 = u(a0), u(a1), u(a2)
+
+    d0 = a1 - a0
+    d1 = a2 - a1
+    c0 = sin(d1)
+    c1 = -sin(d0 + d1)
+    c2 = sin(d0)
+
+    kernel = add(smul(c0, u0), smul(c1, u1), smul(c2, u2))
+    max_kernel_residual = max(max_kernel_residual, hypot(*kernel))
+
+    M0, M1, M2 = (rng.uniform(0.01, 3.0) for _ in range(3))
+    F0, F1, F2 = smul(M0, u0), smul(M1, u1), smul(M2, u2)
+    target = 2 * M1 * sin(d0) * sin(d1)
+
+    # Hub beyond row 2: H0 subset H1 subset H2.
+    fresh0 = (F1[0] - F0[0], F1[1] - F0[1])
+    fresh1 = (F2[0] - F1[0], F2[1] - F1[1])
+    vel0 = smul(-c0, J(u0))
+    vel1 = smul(c2, J(u2))
+    D0 = 2 * dot(fresh0, vel0)
+    D1 = 2 * dot(fresh1, vel1)
+
+    max_balance_residual = max(
+        max_balance_residual,
+        abs(D0 + target),
+        abs(D1 - target),
+        abs(D0 + D1),
+    )
+
+    # Hub beyond row 0: H0 superset H1 superset H2.
+    fresh0 = (F0[0] - F1[0], F0[1] - F1[1])
+    fresh1 = (F1[0] - F2[0], F1[1] - F2[1])
+    vel0 = smul(c0, J(u0))
+    vel1 = smul(-c2, J(u2))
+    D0 = 2 * dot(fresh0, vel0)
+    D1 = 2 * dot(fresh1, vel1)
+
+    max_balance_residual = max(
+        max_balance_residual,
+        abs(D0 + target),
+        abs(D1 - target),
+        abs(D0 + D1),
+    )
+
+assert max_kernel_residual < 2e-15
+assert max_balance_residual < 5e-15
+
+# Exact-parallel branch: any nontrivial first-order kernel sample has strictly
+# negative radial full-support drift at finite nonzero angle.
+for theta in (
+    (0.10, -0.04, -0.06),
+    (0.03, 0.02, -0.05),
+    (0.20, 0.00, -0.20),
+):
+    assert abs(sum(theta)) < 1e-15
+    radial = sum(cos(t) - 1 for t in theta)
+    assert radial < 0
+
+print("PASS: high-t exact three-row localization constants and cusp algebra")
+print("switching support bound =", support_bound)
+print("exact adjacent phase coefficient =", float(adjacent_phase_exact))
+print("exact block phase coefficient =", float(block_phase_exact))
+print("max kernel residual =", max_kernel_residual)
+print("max cusp-balance residual =", max_balance_residual)

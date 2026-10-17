@@ -1,0 +1,47 @@
+name: Target C k7 C d5q12 d5 pair retention functional
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    if: github.actor == github.repository_owner && vars.E99_HISTORICAL_CI == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - start: 0
+            end: 41000
+          - start: 41000
+            end: 82000
+          - start: 82000
+            end: 123000
+          - start: 123000
+            end: 164000
+          - start: 164000
+            end: 205000
+          - start: 205000
+            end: 246000
+          - start: 246000
+            end: 286000
+          - start: 286000
+            end: 325955
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact-enumeration dependency
+        run: python -m pip install 'numpy>=2.0,<3'
+      - name: Run d5 pair-retention functional shard
+        run: >-
+          python research/verify_target_c_support7_global_segment_relative_eight_noroot_k7_C_d5q12_d5_pair_retention_functional_2026_09_21.py
+          --cover-start ${{ matrix.start }}
+          --cover-end ${{ matrix.end }}

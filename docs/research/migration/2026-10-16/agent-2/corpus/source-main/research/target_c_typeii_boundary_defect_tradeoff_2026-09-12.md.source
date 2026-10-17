@@ -1,0 +1,198 @@
+# Target C — Type-II low-q-k boundary-defect tradeoff
+
+**Date:** 2026-09-12  
+**Lifecycle:** proof-only Type-II composition; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This note makes explicit a source-level tradeoff implicit in the cellwise rhombus
+payment. It combines the proof-only Type-II loaded-hull localization with the
+proof-only Section-132 square-root payment and keeps the exact residual outer-walk
+slack.
+
+Put
+
+- k=d_H+s_Z;
+- t=(q-k)/D=(h-s_Z)/D;
+- Q for the global bounded nonquadrilateral degree defect;
+- u_B for the exact loaded-hull outer-walk slack from Section 63; and
+- s_C for the total pinned-contact surplus of the unloaded components.
+
+Then every Type-II sequence in the common scope of Sections 125 and 132 satisfies
+
+\[
+\boxed{
+3(h-s_Z)-2s_C
+=(q-k)+2Q+2u_B+2c_I+4,
+}
+\tag{163.1}
+\]
+
+where c_I is the number of unloaded positive-contact components. Since the canonical
+component bound gives c_I=O(D^{2/3}), the normalized form is
+
+\[
+\boxed{
+\frac{3(h-s_Z)-2s_C}{D}
+=t+2\frac{Q+u_B}{D}+o(1).
+}
+\tag{163.2}
+\]
+
+The exact Section-132 lower payment therefore implies the tradeoff
+
+\[
+\boxed{
+\liminf\frac{Q+u_B}{D}
+\ge
+\frac12\left(2\sqrt{\Delta_2}-\limsup t\right)_+,
+\qquad
+\Delta_2=\frac{\pi}{2\sqrt3},
+}
+\tag{163.3}
+\]
+
+along any Type-II subsequence on which t has a limit. In the same Type-II scope,
+Section 125 gives the exact identity
+
+\[
+\boxed{Q+u_B=e_{BB}-2k.}
+\tag{163.4}
+\]
+
+Thus a low-(q-k) regime cannot hide all of its cellwise rhombus boundary demand in
+pinned surplus: it must retain a linear loaded-hull residual, either as bounded-face
+degree or as repeated/long outer-walk occurrences.
+
+## 163.1 Exact algebra
+
+Section 125's Type-II identities are
+
+\[
+e_{BB}=q-m,
+\qquad
+c_I+s_C=m+k-2,
+\tag{163.5}
+\]
+
+where m is the number of nonunit sides of the loaded force hull. Section 63 defines
+
+\[
+x_B=q-Q-2k,
+\qquad
+u_B=x_B-m.
+\tag{163.6}
+\]
+
+Using q=(q-k)+k in (163.6) gives
+
+\[
+m=(q-k)-Q-k-u_B.
+\tag{163.7}
+\]
+
+Substitute (163.7) into the second identity in (163.5):
+
+\[
+s_C=(q-k)-Q-u_B-c_I-2.
+\tag{163.8}
+\]
+
+Therefore
+
+\[
+\begin{aligned}
+3(h-s_Z)-2s_C
+&=3(q-k)-2s_C\\
+&=(q-k)+2Q+2u_B+2c_I+4,
+\end{aligned}
+\]
+
+which proves (163.1). Equation (163.4) follows directly from Section 125's exact
+identity e_{BB}=Q+2k+u_B.
+
+## 163.2 Cellwise payment gives the lower tradeoff
+
+The proof-only Section-132 theorem gives
+
+\[
+3(h-s_Z)-2s_C
+\ge 2\sum_r\sqrt{R_{4,r}}+6,
+\tag{163.9}
+\]
+
+where R_{4,r} is the number of strict quadrilateral faces in induced harmonic cell r.
+In Type II, all but O(D) global strict rhombi are unloaded-only and belong to one of
+these cells, so
+
+\[
+\sum_rR_{4,r}\ge\Delta_2D^2-o(D^2),
+\qquad
+\sum_r\sqrt{R_{4,r}}
+\ge(\sqrt{\Delta_2}-o(1))D.
+\tag{163.10}
+\]
+
+Combining (163.1) and (163.9), then dividing by D, gives
+
+\[
+t+2\frac{Q+u_B}{D}+o(1)
+\ge2\sqrt{\Delta_2}-o(1).
+\tag{163.11}
+\]
+
+This is the finite-current form of (163.3). The positive-part notation records that
+the right side is only informative when the limiting t lies below
+2\sqrt{\Delta_2}.
+
+## 163.3 Explicit low-window consequence
+
+For example, on any Type-II subsequence with
+
+\[
+\limsup t\le1.85,
+\]
+
+the exact certified value 2\sqrt{\Delta_2}=1.9046256137... yields
+
+\[
+\liminf\frac{Q+u_B}{D}
+\ge0.0273128068\ldots .
+\tag{163.12}
+\]
+
+More generally, if limsup t<=C_{146}+1/1250, the current audited Section-162 gap gives
+
+\[
+\liminf\frac{Q+u_B}{D}
+\ge
+\frac12\left(2\sqrt{\Delta_2}-1.820313537979\ldots\right)
+>0.0421.
+\tag{163.13}
+\]
+
+This is a conditional low-window bound, not a universal lower bound: t may lie above
+2\sqrt{\Delta_2}.
+
+## 163.4 Exact implication chain and limitation
+
+\[
+\text{Type-II cellwise rhombus payment}
+\to
+\text{exact }(q-k)+2(Q+u_B)\text{ decomposition}
+\to
+\text{linear loaded-boundary residual at low }q-k
+\to
+\text{candidate target }e_{BB}-2k.
+\]
+
+This does not close C-II. It does, however, remove a possible false escape in which a
+near-minimal q-k is paid entirely by s_C: the exact Type-II hull ledger forces the
+remaining payment into e_{BB}-2k.
+
+The global route-surplus floor from the atomic endpoint theorem sees the global
+quantity (b-per(F))+(Q+4f). Section 163 sees Q+u_B=e_{BB}-2k. No inequality between
+these two currencies is asserted here; establishing one is the next bridge required
+for a contradiction.
+
+**Classification:** proved candidate awaiting independent audit; proof-only Type-II
+tradeoff. C-II remains open.

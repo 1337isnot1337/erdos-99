@@ -1,0 +1,109 @@
+from __future__ import annotations
+
+import importlib.util
+import shutil
+import tempfile
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+MODULE_PATH = ROOT / "tools/check_research_entrypoints.py"
+spec = importlib.util.spec_from_file_location("check_research_entrypoints", MODULE_PATH)
+assert spec and spec.loader
+entrypoint_check = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(entrypoint_check)
+
+
+def copy_fixture(root: Path) -> None:
+    paths = {entrypoint_check.MANIFEST, *entrypoint_check.ACTIVE_ENTRYPOINTS}
+    for relative in entrypoint_check.ACTIVE_ENTRYPOINTS:
+        text = (ROOT / relative).read_text(encoding="utf-8")
+        for _, linked_path in entrypoint_check.markdown_link_targets(relative, text):
+            if (ROOT / linked_path).is_file():
+                paths.add(linked_path)
+            elif (ROOT / linked_path).is_dir():
+                (root / linked_path).mkdir(parents=True, exist_ok=True)
+    for relative in paths:
+        destination = root / relative
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy(ROOT / relative, destination)
+
+
+class ResearchEntrypointTests(unittest.TestCase):
+    def test_current_entrypoints_match_manifest_and_links_resolve(self):
+        self.assertEqual(entrypoint_check.run_checks(ROOT), [])
+
+    def test_stale_target_a_section_is_rejected(self):
+        state = entrypoint_check.load_manifest(ROOT)
+        expected = state["targets"]["target-a"]["canonical_sections_through"]
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            copy_fixture(root)
+            path = root / "AGENTS.md"
+            text = path.read_text(encoding="utf-8")
+            text = text.replace(
+                f"The canonical chain runs through Section {expected}.",
+                f"The canonical chain runs through Section {expected - 1}.",
+            )
+            path.write_text(text, encoding="utf-8")
+            errors = entrypoint_check.run_checks(root)
+            self.assertTrue(
+                any(f"AGENTS.md gives Target A through Section {expected - 1}" in e for e in errors),
+                errors,
+            )
+
+    def test_stale_active_prompt_state_is_rejected(self):
+        state = entrypoint_check.load_manifest(ROOT)
+        expected = state["state_version"]
+        relative = "docs/prompts/erdos_problem_99_TARGET_A_CURRENT_CONTINUATION_PROMPT.md"
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            copy_fixture(root)
+            path = root / relative
+            text = path.read_text(encoding="utf-8") + "\n**State:** `stale.audit`\n"
+            path.write_text(text, encoding="utf-8")
+            errors = entrypoint_check.run_checks(root)
+            self.assertTrue(any(f"{relative} gives state stale.audit" in e for e in errors), errors)
+
+    def test_unrelated_state_revision_does_not_invalidate_frontier_review(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            copy_fixture(root)
+            path = root / entrypoint_check.MANIFEST
+            text = path.read_text().replace('state_version: "2026-10-10.audit.234"',
+                                            'state_version: "2026-10-14.metadata.235"')
+            path.write_text(text)
+            self.assertEqual(entrypoint_check.run_checks(root), [])
+
+    def test_target_c_status_drift_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            copy_fixture(root)
+            path = root / "docs/README.md"
+            text = path.read_text(encoding="utf-8").replace(
+                "C-II remains open.", "C-II remains closed.", 1
+            )
+            path.write_text(text, encoding="utf-8")
+            errors = entrypoint_check.run_checks(root)
+            self.assertTrue(
+                any("docs/README.md gives Target C c_ii closed" in e for e in errors), errors
+            )
+
+    def test_broken_internal_link_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            copy_fixture(root)
+            path = root / "docs/prompts/README.md"
+            text = path.read_text(encoding="utf-8").replace(
+                "](../STATE.md)", "](../MISSING_STATE.md)", 1
+            )
+            path.write_text(text, encoding="utf-8")
+            errors = entrypoint_check.run_checks(root)
+            self.assertTrue(
+                any("docs/prompts/README.md has a broken internal link" in e for e in errors),
+                errors,
+            )
+
+
+if __name__ == "__main__":
+    unittest.main()

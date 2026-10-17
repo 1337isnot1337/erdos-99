@@ -1,0 +1,50 @@
+# Hostile audit — defect-face outer directional anchoring
+
+**Date:** 2026-09-12  
+**Status:** audited-working proof-only material; theorem state unchanged  
+**Audited source:** [defect-face host components require outer directional anchoring](target_c_face_host_anchor_rank_2026-09-12.md)
+
+## Verdict
+
+The component anchoring inequality
+'sum_j(2-r_j) <= dim ker(C_face transpose) <= s_Z' is valid once the
+train closure matrix and exact corank identity are in force. It is a finite dual
+statement: a bounded-face train component with no outer anchor costs two kernel
+dimensions, and one with only one projective anchor costs one. The result does not
+supply a quantitative lower mass for the second direction and does not close C-II.
+
+## Checks
+
+1. The face variables are two-dimensional vectors, and each train joining two distinct
+   bounded faces contributes opposite blocks while a train joining a bounded face to the
+   outer face contributes one grounded block. A bridge occurring twice on one bounded
+   face has opposite signs and contributes zero, so it is not an artificial anchor.
+
+2. For a connected bounded-face component K_j, assigning one vector t_j to every face
+   in K_j and zero elsewhere annihilates every internal train column. Requiring t_j to
+   be orthogonal to the span of the outer-anchor vectors leaves a space of dimension
+   '2-r_j'. Different K_j use disjoint face blocks, so their kernel subspaces are
+   independent. This proves the lower bound on the transpose kernel.
+
+3. The upper bound uses the audited exact identity
+   'dim ker(C_face transpose)=2f-rank(C_face)=sigma_C<=s_Z'. No new positivity,
+   asymptotic, or carrier assumption is introduced.
+
+4. The result keeps train endpoints as physical occurrences and leaves outer-to-outer
+   trains outside the bounded-face closure matrix. Contact-isolated source points are
+   not inserted into any matrix.
+
+## Limits
+
+- The statement excludes nontrivial same-bounded-face train returns through the
+  audited post-126 train-loop lemma; it does not infer that exclusion from the
+  scalar ledger.
+- The integer rank condition does not imply a uniform angular separation or a positive
+  density of secondary outer anchors. Near-collinear anchors can still have rank two.
+- The theorem applies to bounded-face components in the full contact core, not to the
+  Type-I inactive-container branch, and it does not establish a source-preserving
+  diameter descent.
+
+**Claim classification:** audited-working exact dual obstruction; proof-only research
+candidate; C-II remains open.
+

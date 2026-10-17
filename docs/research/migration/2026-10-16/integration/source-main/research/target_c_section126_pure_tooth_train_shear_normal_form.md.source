@@ -1,0 +1,409 @@
+# Target C — Section 126: the pure-tooth one-cell endpoint has an exact train-shear normal form
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** proof-only research candidate stacked on canonical audit.46 and proof-only Section 125.  
+**Dependencies:** canonical Sections 57, 62, 63, 67, 82, 123; the finite stopped-train theorem DT; the exact outer-to-outer train shear argument ZGS.
+
+Section 125 isolates the sharp residual regression in the full-core route: augmented side-faces can be almost entirely two-edge triangular teeth. This section classifies the **exact pure endpoint** of that regression.
+
+Assume a finite post-ZF C-II source has exactly one unloaded positive-contact component `I`, its attachment set is the entire loaded set `A=B`, and, in the canonical Section-123 augmented cell `J^+`,
+
+\[
+\boxed{T_\triangle=q,\qquad Q^+=0,}
+\tag{126.1}
+\]
+
+where `q=|B|`, `T_triangle` is the augmented triangular-face count, and `Q^+` is the augmented degree-above-four defect.
+
+Then:
+
+1. every attachment-polygon side closes a two-edge outer contact route into a triangular tooth;
+2. the full positive contact core has
+   \[
+   \boxed{e_{BB}=k=d_H=s_Z=Q=0,\qquad h=q;}
+   \tag{126.2}
+   \]
+   hence the loaded diameter graph is connected odd-unicyclic;
+3. every bounded contact face is a strict unit rhombus and the global stopped-train decomposition has exactly
+   \[
+   \boxed{T_{train}=q}
+   \tag{126.3}
+   \]
+   trains, all stopped only at the actual outer face;
+4. the contact rigidity matrix has independent rows and its infinitesimal contact-flex space modulo Euclidean motions has dimension exactly `q-1`;
+5. train angular velocities give complete coordinates on the contact-flex space: modulo translations,
+   \[
+   \boxed{\mathcal F_C/\mathrm{Trans}\cong\mathbb R^q,}
+   \tag{126.4}
+   \]
+   with the common vector `1` representing Euclidean rotation; and
+6. in these exact train coordinates the `q` active diameter derivatives form a square matrix `A_train` satisfying
+   \[
+   \boxed{
+   \operatorname{rank}A_{train}=q-1,\qquad
+   \ker A_{train}=\operatorname{span}\{\mathbf1\},
+   }
+   \tag{126.5}
+   \]
+   \[
+   \boxed{
+   \ker A_{train}^{T}=\operatorname{span}\{\beta\},
+   \qquad \beta_h>0\text{ for every diameter edge }h.
+   }
+   \tag{126.6}
+   \]
+
+Thus the exact pure-tooth endpoint is not an arbitrary near-rhombic disk. It is a **minimally diameter-pinned train-shear system**: there are exactly as many stopped trains as active diameter edges, the only right-kernel direction is common rotation, and the only left-kernel direction is the strictly positive KKT diameter weight vector.
+
+This is not yet a contradiction. It reduces exact pure-tooth closure to a finite sign/topology problem for the train-cut/diameter-thrackle derivative matrix.
+
+---
+
+## 126.1 The augmented ledger kills every loaded/contact-topology surplus
+
+There is exactly one unloaded component and its attachment set is all of `B`, so the canonical tile defect is
+
+\[
+d_{tile}=q-2-(q-2)=0.
+\tag{126.7}
+\]
+
+Canonical Section 123 gives
+
+\[
+e_{BB}-k
+={1\over2}(q-T_\triangle+Q^+)+d_{tile}.
+\tag{126.8}
+\]
+
+Under (126.1),
+
+\[
+\boxed{e_{BB}-k=0.}
+\tag{126.9}
+\]
+
+Canonical Section 63 gives the stronger exact decomposition
+
+\[
+e_{BB}=Q+2k+u_B+c_B,
+\qquad Q,k,u_B,c_B\ge0.
+\tag{126.10}
+\]
+
+Subtract `k` and use (126.9):
+
+\[
+0=Q+k+u_B+c_B.
+\]
+
+Hence every term vanishes:
+
+\[
+\boxed{Q=k=u_B=c_B=0,\qquad e_{BB}=0.}
+\tag{126.11}
+\]
+
+Since
+
+\[
+k=d_H+s_Z,
+\qquad d_H,s_Z\ge0,
+\]
+
+we obtain
+
+\[
+\boxed{d_H=s_Z=0.}
+\tag{126.12}
+\]
+
+By definition `d_H=q-h`, so
+
+\[
+\boxed{h=q.}
+\tag{126.13}
+\]
+
+The canonical Woodall split identifies `d_H=0` exactly with the connected odd-unicyclic loaded diameter graph. This proves (126.2).
+
+---
+
+## 126.2 The contact core is a no-defect rhombic graph with `q` stopped trains
+
+Because `e_BB=0`, the full positive contact core is exactly the graph consisting of
+
+- the internal contacts of `I`; and
+- the attachment contacts from `I` to `B`.
+
+There is no additional loaded-loaded contact edge.
+
+Canonical Section 67 gives the global post-ZF face identity
+
+\[
+b+Q=2(q-k).
+\tag{126.14}
+\]
+
+Using `Q=k=0`,
+
+\[
+\boxed{b=2q.}
+\tag{126.15}
+\]
+
+Every bounded contact face is triangle-free and has degree at least four. Since the total bounded degree excess `Q` is zero, every bounded face has degree exactly four. Canonical convex-face geometry therefore makes every bounded face a strict unit rhombus.
+
+Now apply the finite stopped-train theorem DT to the full contact core. With `f=0` bounded nonquadrilateral faces and `Q=0`, DT gives
+
+\[
+T_{train}
+={b+Q\over2}+2f
+={2q\over2}
+=q.
+\tag{126.16}
+\]
+
+There is no bounded exceptional face at which a train can stop. Hence every non-singleton train has both physical endpoints on the actual global outer face. A singleton stopped train is a contact edge incident to no quadrilateral; with no bounded nonquadrilateral face available, both sides are outer-face occurrences, so that edge is a bridge of the contact graph.
+
+Thus every one of the `q` stopped trains is an outer-to-outer contact cut in the following sense:
+
+- for a non-singleton train, the ZGS midpoint-curve/Jordan-closure argument makes its parallel contact edges exactly one global cutset;
+- for a singleton train, the one edge is itself a bridge cutset.
+
+In either case there is an exact one-parameter contact-preserving shear that rotates precisely the contact edges of that train and translates one shore rigidly. This will be used below.
+
+---
+
+## 126.3 Contact rows are independent
+
+Let `m` be the number of vertices in the nonisolated positive-contact core. Canonical Section 57 gives mixed active rigidity rank
+
+\[
+\operatorname{rank}R_{C\cup H}=2m-3.
+\tag{126.17}
+\]
+
+The exact post-ZF surplus is
+
+\[
+s_Z=e+h-(2m-2).
+\tag{126.18}
+\]
+
+Since `s_Z=0` and `h=q`,
+
+\[
+\boxed{e=2m-2-q.}
+\tag{126.19}
+\]
+
+The mixed row set has
+
+\[
+e+h=2m-2
+\]
+
+rows and rank `2m-3`, hence its left kernel is one-dimensional. The relative-interior KKT stress spans that left kernel and has strictly positive diameter coordinates `beta_h`.
+
+Suppose the contact rigidity matrix `R_C` had a nonzero row dependence `gamma`. Extending `gamma` by zero on every diameter row would give a mixed row dependence linearly independent of the KKT stress, because its diameter coordinates vanish while the KKT diameter coordinates are all positive. This contradicts one-dimensional mixed left nullity.
+
+Therefore
+
+\[
+\boxed{\operatorname{rank}R_C=e.}
+\tag{126.20}
+\]
+
+The infinitesimal contact-flex space `F_C=ker R_C` has dimension
+
+\[
+\dim\mathcal F_C
+=2m-e
+=q+2.
+\tag{126.21}
+\]
+
+After quotienting the three Euclidean infinitesimal motions,
+
+\[
+\boxed{
+\dim(\mathcal F_C/\mathrm{Euc})=q-1.
+}
+\tag{126.22}
+\]
+
+---
+
+## 126.4 Train angular velocity is well-defined on every contact flex
+
+Fix one stopped train `tau`. All contact edges belonging to `tau` are parallel in the realized source.
+
+For an infinitesimal contact flex `v`, a unit contact edge with vector `u` has derivative perpendicular to `u`, so write its edge-vector derivative as
+
+\[
+\dot u=\omega Ju.
+\]
+
+Across one strict rhombus, let `u,u` be one pair of opposite side vectors and `w,w` the other pair, with infinitesimal angular rates `omega_1,omega_3` on the opposite `u` sides and `eta_2,eta_4` on the opposite `w` sides. Differentiating the parallelogram closure gives
+
+\[
+(\omega_1-\omega_3)Ju+(\eta_2-\eta_4)Jw=0.
+\]
+
+The two rhombus directions are linearly independent, so
+
+\[
+\omega_1=\omega_3,
+\qquad
+\eta_2=\eta_4.
+\tag{126.23}
+\]
+
+Therefore angular rate propagates unchanged across opposite sides of every rhombus. It is constant on each stopped train, including singleton trains. Denote it by `theta_tau(v)`.
+
+This defines a linear train-angle map
+
+\[
+\Phi:\mathcal F_C\longrightarrow\mathbb R^q,
+\qquad
+v\longmapsto(\theta_\tau(v))_\tau.
+\tag{126.24}
+\]
+
+Translations lie in `ker Phi`.
+
+If `Phi(v)=0`, every contact edge vector has zero derivative. Since the contact core is connected, velocities agree across every contact edge, so `v` is a global translation. Thus
+
+\[
+\boxed{\ker\Phi=\mathrm{Trans}.}
+\tag{126.25}
+\]
+
+Using (126.21),
+
+\[
+\dim(\mathcal F_C/\mathrm{Trans})=q.
+\]
+
+The target `R^q` also has dimension `q`, so (126.25) proves the isomorphism (126.4).
+
+Under this isomorphism an infinitesimal Euclidean rotation has the same angular rate on every contact edge, hence corresponds to
+
+\[
+\boxed{\mathbf1=(1,\ldots,1).}
+\tag{126.26}
+\]
+
+Consequently
+
+\[
+\mathcal F_C/\mathrm{Euc}
+\cong
+\mathbb R^q/\operatorname{span}\{\mathbf1\}.
+\tag{126.27}
+\]
+
+---
+
+## 126.5 The exact train shears are the coordinate basis
+
+For each non-singleton stopped train `tau`, the outer-to-outer ZGS shear rotates every cut contact edge of `tau` by parameter angle `theta` while every contact internal to either shore is unchanged. Its infinitesimal train-angle vector is therefore the standard basis vector `e_tau`.
+
+For a singleton bridge train, translate one bridge shore by
+
+\[
+R_\theta u-u
+\]
+
+where `u` is the bridge contact vector. This rotates that bridge contact exactly while preserving every same-shore contact. Its infinitesimal train-angle vector is again `e_tau`.
+
+Thus the `q` exact finite train shears map to the standard basis of `R^q`. They form a basis of `F_C/Trans`; their common sum differs from Euclidean rotation only by a translation.
+
+This is stronger than merely counting `q` train paths: every infinitesimal contact flex is, modulo translation, a unique linear combination of exact one-train shear velocities.
+
+---
+
+## 126.6 The diameter derivative matrix is square and minimally pinned
+
+Use train angular coordinates `theta in R^q`. For every active diameter edge `h=xy`, let
+
+\[
+F_h(\theta)
+:=\frac12\frac d{dt}
+|x(t)-y(t)|^2\Big|_{t=0}
+\]
+
+under the infinitesimal contact flex with train coordinate `theta`. Let `A_train` be the `q times q` matrix whose `h`-th row is this linear functional.
+
+There are `q` rows because `h=q` by (126.13).
+
+A common train rotation `theta=c\mathbf1` is Euclidean rotation modulo translation, so every diameter first variation vanishes. Hence
+
+\[
+A_{train}\mathbf1=0.
+\tag{126.28}
+\]
+
+Canonical mixed rigidity says the only contact flexes with zero first variation on **all** active diameter rows are Euclidean. In train coordinates this says
+
+\[
+\ker A_{train}=\operatorname{span}\{\mathbf1\}.
+\tag{126.29}
+\]
+
+Therefore
+
+\[
+\operatorname{rank}A_{train}=q-1.
+\]
+
+Finally restrict the normalized KKT stationarity equation to the contact-flex space. Contact rows vanish identically on every contact flex, so the positive diameter weights satisfy
+
+\[
+\boxed{\beta^TA_{train}=0.}
+\tag{126.30}
+\]
+
+with every `beta_h>0`. Since the matrix rank is `q-1`, its left kernel is one-dimensional, proving (126.6).
+
+Equivalently, after any deletion of one train coordinate and any quotient by common rotation, the diameter gradients form a minimally positive spanning family: exactly one positive dependence remains.
+
+---
+
+## 126.7 Exact next obstruction
+
+The pure-tooth endpoint is now reduced to the following finite matrix problem.
+
+Every train is a circular contact cut of the actual outer face. A diameter derivative is nonzero exactly when its two endpoints lie on opposite shores of that cut; its sign and magnitude are the oriented crossing derivative
+
+\[
+(p_x-p_y)\cdot J u_\tau
+\]
+
+with the shore orientation of the train cut. The active diameter edges form a straight-line convex thrackle whose graph is connected odd-unicyclic.
+
+The required matrix therefore has simultaneously:
+
+1. circular-split support columns coming from the `q` stopped train cuts;
+2. row supports and signs coming from the `q` pairwise-intersecting diameter chords;
+3. `A_train 1=0`;
+4. rank `q-1`; and
+5. a strictly positive left kernel vector `beta`.
+
+A proof that this signed circular-split matrix class cannot satisfy all five properties would eliminate the exact pure-tooth endpoint. The existing two-edge cusp regression shows that arbitrary sparse split matrices can satisfy local positive-span conditions, so the missing theorem must use the **global odd-unicyclic diameter-thrackle plus the complete train-cut system**, not one shear at a time.
+
+This section does not assert that such a matrix is impossible.
+
+---
+
+## 126.8 Scope
+
+- Contact-isolated source points remain in the full source. Section 126 concerns the nonisolated positive-contact core and does not delete isolates or add their coordinates to the Section-57 affine kernel.
+- The one-cell hypothesis is exact: there is exactly one unloaded positive-contact component and its attachment set is all loaded vertices.
+- The pure-tooth hypothesis is exact: `T_triangle=q` and `Q^+=0` in the canonical augmented graph.
+- Singleton stopped trains are treated as bridge shears directly; no rhombus is invented around them.
+- No theorem-state authority changes. Audit.46 remains canonical through Section 123; Sections 124--126 are proof-only.
+
+**Disposition:** exact endpoint normal form. C-II and Level I remain open.

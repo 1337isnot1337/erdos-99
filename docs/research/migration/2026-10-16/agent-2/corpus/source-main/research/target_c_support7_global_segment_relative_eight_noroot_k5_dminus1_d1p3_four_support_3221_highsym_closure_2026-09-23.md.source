@@ -1,0 +1,136 @@
+# Target C: close the high-symmetry `(3,2,2,1)` four-support shard in the `p=3,m=4` branch
+
+Date: 2026-09-23
+
+Status: exact finite closure of the seven four-support `S_7` orbits with setwise stabilizer order at least 16 in the eight-no-root `k=5,D=-1,d_root=1,p=3,m=4,(3,2,2,1)` branch. This does not close the remaining 28 nullity-four `(3,2,2,1)` support classes, the full `p=3` branch, the `k=5` layer, Target C-II, or Erdos Problem #99.
+
+Inputs:
+
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_three_singleton_basis_reduction_2026-09-23.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_nullity_catalog_2026-09-23.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_3311_closure_2026-09-23.md`;
+- the exact K8 coordinate normal form in `research/verify_target_c_support7_global_segment_relative_four_noroot_k2_2026_09_20.py`.
+
+## 1. Necessary conditions
+
+The existing `p=3,m=4` reduction forces exactly three touched singleton root blocks. Their three nonzero singleton coefficient rows form a basis of a rank-three coefficient space `P <= Q^8`; every other touched root block is complete. The established generalized-weight floors are
+
+```text
+(d1,d2,d3) >= (2,4,5).
+```
+
+The touched complete-root nullity must be exactly one on any candidate that survives the support filter. For `D=-1,d_root=1`, the five-dimensional coefficient nullspace must contribute external relation-rank increment five over the touched complete-root span. Hence any state with increment less than five is impossible. Untouched complete blocks cannot increase this quotient increment.
+
+## 2. High-symmetry support shard
+
+The complete four-support catalog has 38 `S_7` support orbits. The prior exact nullity catalog removes three nullity-five classes, leaving 35 nullity-four support classes for `(3,2,2,1)`.
+
+This certificate selects the seven remaining support classes whose setwise stabilizer has order at least 16. Their representatives and stabilizers are
+
+```text
+{1234,1235,1236,1237}  |Stab|=144
+{1234,1235,1236,4567}  |Stab|=36
+{1234,1235,1245,1267}  |Stab|=24
+{1234,1235,1245,1345}  |Stab|=48
+{1234,1235,1246,1256}  |Stab|=16
+{1234,1235,1467,1567}  |Stab|=16
+{1234,1256,1357,1467}  |Stab|=24
+```
+
+For a fixed four-support set, the `(3,2,2,1)` profile has
+
+```text
+4 * 3 * 3^3 = 324
+```
+
+cycle choices: choose which support has multiplicity three, which distinct support has multiplicity one, choose the omitted orientation on each multiplicity-two support, and choose the singleton orientation.
+
+Quotienting those 324 choices by each support stabilizer gives respectively
+
+```text
+4, 14, 28, 15, 24, 30, 15
+```
+
+cycle-set orbits, for
+
+```text
+130 S_7 cycle-set representatives
+```
+
+in this shard. The seven support orbits contain 1330 labeled support sets, so the certificate covers
+
+```text
+1330 * 324 = 430920
+```
+
+labeled eight-cycle sets.
+
+## 3. Exact finite census
+
+A standalone reconstruction of the current repository K8 coordinate normal form and verifier logic was executed on all seven support classes. The first six support classes were completed in one bounded run before the enclosing process hit its time limit; each class had already printed its completed exact result. The seventh class was then run separately to completion. No result below is inferred from a partial class computation.
+
+Per support class, the exact data are:
+
+```text
+support                         orbits  singleton triples  directions  rank-3   weights  increment census  max ||row||^2
+1234,1235,1236,1237                4          648           17496      13608     1063      {0:1063}            70
+1234,1235,1236,4567               14         2772           74844      58016     4142      {0:4142}            70
+1234,1235,1245,1267               28         5096          137592     111377    12620      {0:12620}           70
+1234,1235,1245,1345               15         1650           44550      39454    10603      {0:10603}           70
+1234,1235,1246,1256               24         3936          106272      88566    13292      {0:13292}           70
+1234,1235,1467,1567               30         6300          170100     134136     9816      {0:9816}            36
+1234,1256,1357,1467               15         3840          103680      77760     2880      {0:2880}            18
+```
+
+Aggregate:
+
+```text
+S_7 cycle-set orbits               130
+admissible singleton triples     24242
+singleton-direction states      654534
+coefficient-rank-three states   522917
+generalized-weight states        54416
+external increment census    {0:54416}
+max relation-row norm^2             70
+```
+
+Every generalized-weight-admissible state has external relation-rank increment zero. A survivor requires increment five. Therefore all seven support classes are impossible.
+
+> **Theorem.** No `(3,2,2,1)` state in the eight-no-root `k=5,D=-1,d_root=1,p=3,m=4` branch can have a four-support set whose `S_7` stabilizer has order at least 16.
+
+## 4. Exactness of rank decisions
+
+The coefficient-rank-three tests use exact integer `3 x 3` minors. The generalized weights are computed directly from the eight coefficient columns. The support-level touched nullity of each selected support class is checked as exactly four using rational Gaussian elimination.
+
+Root and full relation ranks are computed modulo
+
+```text
+P = 2^127 - 1.
+```
+
+The base verifier checks the Lucas-Lehmer certificate for `P`. Complete-root rows have maximum squared Euclidean norm 12; the largest squared norm of any full relation row in this shard is 70. The certificate checks
+
+```text
+P^2 > 70^15.
+```
+
+Hadamard's inequality therefore makes every modular rank decision used here identical to its rational rank.
+
+The companion repository verifier asserts every support representative, stabilizer, per-support orbit count, per-support census, aggregate census, zero-only increment distribution, and the Hadamard bound. Its source was syntax-checked before upload. The exact committed wrapper was not executed from a checked-out repository in this run; the finite census above was executed by the standalone reconstruction described above.
+
+## 5. Remaining `(3,2,2,1)` target
+
+The prior nullity-five certificate removed three support classes, with stabilizers 4, 8, and 12. This note removes the seven nullity-four classes with stabilizer order at least 16. Thus the `(3,2,2,1)` profile is reduced to exactly 28 nullity-four support classes, with stabilizer distribution
+
+```text
+1^2, 2^8, 4^11, 6^2, 8^4, 12^1.
+```
+
+The next bounded target is the unique remaining stabilizer-order-12 class or the four order-8 classes, using the same completion-independent external-rank-increment test.
+
+The other unresolved `k=5` arithmetic branches remain
+
+```text
+D=-2, (d_root,p)=(0,5),
+D=-1, (d_root,p)=(0,6).
+```

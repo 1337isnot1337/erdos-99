@@ -1,0 +1,292 @@
+# Target C: seven-no-root depth-two deletion reduction
+
+Date: 2026-09-20
+
+Status: exact structural reduction for any hypothetical seven-no-root factor-three rank-density counterexample, plus an exact `S_7` orbit count for the seven-no-root layer. This does not prove the seven-no-root density inequality, does not reduce the 3,874-cell generic-H6 endpoint, and does not close C-II.
+
+Companion verifiers:
+
+- `research/verify_target_c_support7_global_segment_relative_seven_noroot_shadow_depth2_2026_09_20.py`
+- `research/verify_target_c_support7_global_segment_relative_seven_noroot_orbits_2026_09_20.py`
+
+This note uses the established six-no-root theorem:
+
+> every four-cycle family with at most six no-root four-cycles satisfies `3 delta(A) <= |A|`.
+
+It also uses the same root-block decomposition and quotient-nullity notation as the committed five- and six-no-root audits.
+
+## Setup
+
+Let `B=R union E`, where `R` is the selected root-0 four-cycle set and `E` consists of exactly seven no-root four-cycles. Write
+
+`D(X)=|X|-3 delta(X)`
+
+and suppose
+
+`D(B)<0`.
+
+For the seven no-root rows define
+
+`k(B)=7-(r_Q(B)-r_Q(R))`.
+
+Thus `7-k(B)` is their quotient rank after contracting the root-row span.
+
+For `e in E`, write
+
+`A_e=B\{e}`.
+
+## Every no-root row is M-coloop / Q-noncoloop
+
+Adding or deleting one row changes each of `r_M` and `r_Q` by zero or one. Since `Q` is a quotient of `M`, a row dependent in `M` is also dependent in `Q`. Therefore
+
+`m_e = delta(B)-delta(A_e)`
+
+lies in `{0,1}`.
+
+The defect identity is
+
+`D(A_e)=D(B)-1+3m_e`.
+
+Every `A_e` has six no-root cycles, so the established six-no-root theorem gives
+
+`D(A_e)>=0`.
+
+If `m_e=0`, then `D(A_e)=D(B)-1<0`, impossible. Hence
+
+`m_e=1`
+
+for all seven choices of `e`. Consequently
+
+`D(A_e)=D(B)+2>=0`,
+
+so
+
+`D(B) in {-2,-1}`.
+
+Moreover `m_e=1` can only arise from
+
+`r_M(B)-r_M(A_e)=1`,
+
+`r_Q(B)-r_Q(A_e)=0`.
+
+Thus every no-root row is a coloop of the restricted `M` row matroid and a non-coloop of the restricted `Q` row matroid. In particular all seven no-root rows are independent modulo `R` in `M`, while deleting any one leaves their quotient rank unchanged.
+
+Therefore every one-row deletion shadow has
+
+`k(A_e)=k(B)-1`
+
+and defect
+
+- `D(A_e)=0` when `D(B)=-2`;
+- `D(A_e)=1` when `D(B)=-1`.
+
+## Exact seven-row defect formula
+
+Let the root-row set `R` contain `c` complete root quotient blocks and `p` selected rows in incomplete root quotient blocks. Thus
+
+`|R|=3c+p`.
+
+The established root-block decomposition gives
+
+`delta(R)<=c`.
+
+Define the root deficiency
+
+`d=c-delta(R)>=0`.
+
+Equivalently, in the complete-block relation formulation used throughout the preceding audits, `delta(R)` is the rank of the complete-block relation span, so
+
+`d=c-rank H(C)`.
+
+Because all seven no-root rows are `M`-coloops modulo `R`,
+
+`r_M(B)=r_M(R)+7`.
+
+By definition of `k(B)`,
+
+`r_Q(B)=r_Q(R)+7-k(B)`.
+
+Hence the relative-rank gain is exact:
+
+`delta(B)=delta(R)+k(B)`.
+
+Substituting `|B|=7+3c+p` gives
+
+`D(B)=7+p+3d-3k(B)`.
+
+This is an equality, not the crude inequality `D>=7+p-3k`.
+
+Since `D(B)` is either `-2` or `-1`, every seven-no-root counterexample lies in exactly one of the following 30 arithmetic boundary cases.
+
+For `D=-2`:
+
+```text
+k=3: (d,p) = (0,0)
+k=4: (d,p) = (0,3), (1,0)
+k=5: (d,p) = (0,6), (1,3), (2,0)
+k=6: (d,p) = (0,9), (1,6), (2,3), (3,0)
+k=7: (d,p) = (0,12), (1,9), (2,6), (3,3), (4,0)
+```
+
+For `D=-1`:
+
+```text
+k=3: (d,p) = (0,1)
+k=4: (d,p) = (0,4), (1,1)
+k=5: (d,p) = (0,7), (1,4), (2,1)
+k=6: (d,p) = (0,10), (1,7), (2,4), (3,1)
+k=7: (d,p) = (0,13), (1,10), (2,7), (3,4), (4,1)
+```
+
+In particular `k>=3`. The companion arithmetic checker reproduces exactly these 30 tuples.
+
+## Depth-two deletion theorem for the D=-2 branch
+
+Now assume
+
+`D(B)=-2`.
+
+Every one-row deletion `A_e` has `D(A_e)=0`. Fix distinct `e,f in E` and put
+
+`C_{e,f}=B\{e,f}`.
+
+Because all seven no-root rows are `M`-coloops in `B`, deleting `e` does not destroy the coloop property of `f`. Thus
+
+`r_M(A_e)-r_M(C_{e,f})=1`.
+
+Let
+
+`s_{e,f}=r_Q(A_e)-r_Q(C_{e,f}) in {0,1}`.
+
+Then
+
+`delta(A_e)-delta(C_{e,f})=1-s_{e,f}`
+
+and
+
+`D(C_{e,f})=D(A_e)-1+3(1-s_{e,f})=2-3s_{e,f}`.
+
+But `C_{e,f}` has only five no-root cycles, so the established five-no-root theorem gives
+
+`D(C_{e,f})>=0`.
+
+Therefore `s_{e,f}=0` for every pair `{e,f}`. Hence every two-row deletion has
+
+`D(C_{e,f})=2`
+
+and its quotient rank is still the quotient rank of `B`. Its no-root quotient nullity is therefore
+
+`k(C_{e,f})=k(B)-2`.
+
+So the `D=-2` branch has complete depth-two synchronization: deleting any one or any two no-root rows does not lower the quotient rank.
+
+## Coding-theoretic form of the depth-two condition
+
+Let `P` be the global coefficient-constraint space on the seven external coefficients. As in the preceding local-block audits,
+
+`rank(P)=7-k(B)`.
+
+Deleting external coordinate `i` projects `P` to the coefficient-constraint space of the corresponding deletion shadow. Since every one-row deletion keeps the same constraint rank, `P` contains no nonzero vector supported on a single coordinate.
+
+In the `D=-2` branch, every two-row deletion also keeps the same quotient rank and hence the same constraint rank. Therefore projection of `P` after deleting any two coordinates is injective. Equivalently,
+
+> every nonzero vector of `P` has support at least three.
+
+Thus `P` is a rational length-seven linear code with minimum Hamming support at least three.
+
+This has an immediate local consequence. Any nonzero local coefficient constraint contributed by a root quotient block lies in `P` and is supported only on the no-root cycles that touch that block. Hence, in a `D=-2` seven-row counterexample,
+
+> every block imposing a nonzero coefficient constraint must be touched by at least three of the seven no-root cycles.
+
+The seven no-root four-cycles provide only 28 block-support incidences in total. Therefore at most nine blocks can impose nonzero local coefficient constraints. This is only a counting prefilter; it does not by itself exclude the branch.
+
+The smallest remaining `D=-2` case is especially rigid:
+
+`(k,d,p)=(3,0,0)`.
+
+There `P` has rank four and minimum support at least three, the complete-block relation rows are independent (`d=0`), and every incomplete root block is empty (`p=0`). This is the natural first finite target for the seven-no-root layer.
+
+## The D=-1 branch
+
+If instead
+
+`D(B)=-1`,
+
+then every one-row deletion has defect one. For a two-row deletion the same calculation gives
+
+`D(C_{e,f})=3-3s_{e,f}`,
+
+where `s_{e,f}` is the second quotient-rank drop. Thus each pair deletion has exactly one of the two forms
+
+```text
+s=0: D=3, k=k(B)-2
+s=1: D=0, k=k(B)-1
+```
+
+The one-row synchronization still forbids a support-one vector in `P`, so every nonzero vector of `P` has support at least two. A support-two vector on coordinates `{e,f}` occurs precisely when deleting those two coordinates lowers the constraint-space rank, i.e. in the `D=0` pair-shadow case.
+
+This identifies the support-two part of `P` with the sharp five-no-root boundary shadows rather than treating it as an unrestricted local possibility.
+
+## Exact size of the seven-no-root orbit layer
+
+There are 105 no-root four-cycles, so the raw number of seven-subsets is
+
+`C(105,7)=22,760,723,700`.
+
+Burnside's lemma under the natural `S_7` action gives exactly
+
+`4,546,114`
+
+orbits.
+
+The Burnside numerator is
+
+`22,912,414,560`,
+
+and
+
+`22,912,414,560 / 5,040 = 4,546,114`.
+
+The same computation reproduces the independently committed counts
+
+- `20,451` five-subset orbits;
+- `325,911` six-subset orbits.
+
+The seven-subset layer is therefore about 13.95 times the six-subset layer. A blind repetition of the six-row local-state scan is not a sensible next step; the depth-two projection and local-support restrictions should be imposed before any seven-orbit enumeration.
+
+The exact fixed seven-subset census by vertex-permutation cycle type is
+
+```text
+cycle type             class size    fixed seven-subsets
+(1,1,1,1,1,1,1)                1       22,760,723,700
+(2,1,1,1,1,1)                 21            4,646,900
+(2,2,1,1,1)                  105              256,500
+(2,2,2,1)                    105              256,500
+(3,1,1,1,1)                   70                1,683
+(3,2,1,1)                    420                   41
+(3,2,2)                      210                   51
+(3,3,1)                      280                    0
+(4,1,1,1)                    210                  100
+(4,2,1)                      630                  100
+(4,3)                        420                    1
+(5,1,1)                      504                    0
+(5,2)                        504                    0
+(6,1)                        840                    0
+(7)                          720                   15
+```
+
+## Next finite target
+
+The seven-no-root search should start with the `D=-2,k=3,d=0,p=0` branch, not with all 4.55 million seven-subset orbits.
+
+For that branch a verifier can enumerate only rank-four obtainable coefficient spaces `P` satisfying the depth-two condition `minimum support(P)>=3`, reject every local state containing a nonzero constraint on a block touched by fewer than three no-root cycles, and require the complete-block relation set to be independent. Only survivors of those structural tests need exact reranking.
+
+The `D=-1,k=3,d=0,p=1` branch is the next case; there the constraint space has minimum support at least two, and every support-two vector must correspond to a `D=0` five-row pair shadow.
+
+## Direct C-II bottleneck
+
+This remains an auxiliary metric-basis route. The direct generic-H6 endpoint is still
+
+`3874 = 3076 C7 + 798 (C3 disjoint-union C4)`.
+
+The existing exact forced-segment-order scan has not yet removed those endpoint cells. The state-specific exact forced-order / quantitative metric compatibility route remains the direct endpoint attack. No theorem-state authority file is changed by this result.

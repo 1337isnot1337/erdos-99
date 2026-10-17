@@ -1,0 +1,451 @@
+# Hostile audit — complement outer-train bracing energy
+
+**Date:** 2026-09-15  
+**Reviewed:**
+- `research/target_c_complement_outer_train_bracing_energy_2026-09-15.md`
+- `research/verify_target_c_complement_outer_train_bracing_energy.py`
+
+**Disposition:** **PASS at proof-only full-core Type-II scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The candidate adds a second outer-detour payment from trains outside the dominant
+atomic orbit.  The highest-risk points are not the scalar calculation; they are:
+
+1. whether Section 157 really turns two-sided diameter bracing into a statement about
+   the angular interval between outer terminals;
+2. whether outer-pocket retraction preserves the noncrossing chord order used in the
+   packing lemma;
+3. whether the round-hull perimeter measure gives the claimed endpoint-capacity
+   constant `1/2`; and
+4. whether dominant and complement energy payments are genuinely disjoint rather than
+   two uses of the same detour currency.
+
+All four checks pass, with the scope restrictions recorded below.
+
+---
+
+## 1. Complement two-outer population: count audit
+
+Let `M` be the absolute train mass in the frozen dominant `pi/3` orbit and `C` the
+all-train scalar.  Audited §142/168 gives
+
+\[
+M\ge4\Delta_2/C.
+\]
+
+The number of complete trains outside the dominant windows is
+
+\[
+N_c={T\over D}-M+o(1)
+=C+{t+\kappa\over2}-M+o(1).
+\]
+
+Since `C<=U` and `C-4Delta2/C` is strictly increasing,
+
+\[
+N_c\le U+{t+\kappa\over2}-{4\Delta_2\over U}+o(1).
+\]
+
+The joint orbit-capacity theorem applies to the actual dominant-window outer
+occurrence count `K`, so
+
+\[
+K\le Q(\delta):=\Phi^{-1}(\delta).
+\]
+
+Thus complement trains carry at least `pi+delta-Q(delta)` outer occurrences.  If
+`P_c` complement trains have two outer occurrences, then all other complement trains
+have at most one, giving
+
+\[
+P_c\ge
+\pi+\delta-Q(\delta)-N_c.
+\]
+
+No assumption that complement mass is non-atomic is used; it includes all trains
+outside the frozen dominant-orbit windows.
+
+**Verdict:** PASS.
+
+---
+
+## 2. Fractional pair retention loses at most `delta`
+
+On route `i`, the number `c_i` of selected complement endpoints satisfies
+
+\[
+c_i\le\ell_i=s_i+d_i.
+\]
+
+Retain endpoint weight at most `s_i`, discarding no more than
+
+\[
+(c_i-s_i)_+\le d_i.
+\]
+
+If the two endpoint weights of one train are `a,b`, the retained pair weight
+`min(a,b)` loses at most `(1-a)+(1-b)`.  Therefore total pair-weight loss is no more
+than the total endpoint-weight loss, hence at most
+
+\[
+\sum_i d_i=d_{out}=\delta D.
+\]
+
+This is valid even for bridge occurrences: the outer walk and `ell_i` are
+occurrence-counted, so a bridge traversed twice supplies two endpoint occurrences and
+two route-energy occurrences.
+
+**Verdict:** PASS.
+
+---
+
+## 3. Physical perimeter measure has density `1/2`
+
+For the diameter-`D` disk, radius is `D/2`.  An oriented normal-angle increment
+`dtheta` carries boundary length `(D/2)dtheta`; after division by `D`, the limiting
+physical perimeter measure on `R/2pi Z` is
+
+\[
+{1\over2}d\theta.
+\]
+
+The Type-II near-disk convergence used in audited §142 gives the same weak limit for
+the loaded force hull.  Because the limit distribution is continuous, the cumulative
+distribution convergence is uniform over angular intervals.  Thus a moving interval
+of angular width `A` carries normalized side-length mass at most `A/2+o(1)`.
+
+The finite hull may have one side containing several retained terminal occurrences and
+all those occurrences are assigned the same side-normal atom.  Canonical Type-II
+interface collapse gives `max s_i=o(D)`, so no single such atom has macroscopic mass;
+the uniform interval statement remains valid in the limit.
+
+**Verdict:** PASS.
+
+---
+
+## 4. Outer-pocket retraction preserves cyclic order
+
+Sections 67/126 add every missing loaded-hull side and identify the Section-63 route
+`W_i` with the boundary chain of the corresponding convex outer pocket.  Distinct
+pocket interiors are disjoint.  Therefore each outer terminal midpoint can be pushed
+through its own pocket to the loaded-hull side without passing another terminal or
+crossing a train midpoint curve.  Along each route, use the original occurrence order
+as an infinitesimal tie-breaker when several terminals retract to the same side.
+
+Consequently a family of train midpoint arcs that is pairwise noncrossing before
+retraction gives a nonalternating endpoint pairing on the convex hull boundary after
+retraction.  Collapsing a whole side to its normal angle can create ties, but not a
+macroscopic order reversal; `max s_i=o(D)` makes tie mass negligible.
+
+**Verdict:** PASS.
+
+---
+
+## 5. Same-sector train curves are noncrossing
+
+Audited §142 proves that a strict-rhombus crossing between two trains requires their
+projective directions to differ by strictly more than `pi/3`.  Partitioning the
+projective phase circle into three half-open sectors of width `pi/3` therefore makes
+each sector family crossing-free.
+
+Train midpoint segments lie inside strict-rhombus faces.  Distinct train curves cannot
+have a transverse geometric intersection outside a common strict rhombus, because
+face interiors are disjoint and a contact edge belongs to one train.  Hence
+"no train crossing" is the topological noncrossing condition needed by the chord
+argument.
+
+**Verdict:** PASS.
+
+---
+
+## 6. Section 157 really forces a phase zero into either shore interval
+
+Fix an outer-to-outer train `tau` and choose either one of its Jordan shores as `S`.
+Section 157 is symmetric under exchanging the two shores, so its two-sign conclusion
+holds for the shore whose convex-hull boundary arc has smaller normal-angle width
+`w<=pi`.
+
+Every actual diameter endpoint belongs to the loaded force-hull set in the canonical
+C65 normalization.  Type-II near-disk convergence gives a common center `o_D` such
+that uniformly for loaded points
+
+\[
+|p-o_D|=D/2+o(D).
+\]
+
+If `xy` is an actual diameter and `y` is its endpoint in `S`, then
+
+\[
+{p_y-p_x\over D}=n_y+o(1),
+\]
+
+where `n_y` is the outward radial direction at `y`.  This follows by expanding the
+identity `|p_y-p_x|=D` inside the `D/2+o(D)` annulus: the endpoint radial directions
+must be antipodal up to `o(1)`.
+
+Section 157 supplies crossing diameter vectors oriented into `S` with both signs of
+`r_h dot Ju`.  Therefore the radial normals of loaded endpoints in `S` occur with both
+signs of `n dot Ju`.  Loaded hull vertices in `S` occupy the single convex-hull arc
+between the two retracted train terminals.  By continuity, that normal-angle interval
+contains a zero of `n dot Ju`.
+
+The zeros occur at normal angles equal, modulo `pi`, to the train contact phase.  Thus
+one representative of the projective train phase lies in the terminal normal-angle
+interval, up to `o(1)`.
+
+This is the decisive geometric step.  It uses **actual diameter bracing**, not merely
+the train cut topology.
+
+**Verdict:** PASS.
+
+---
+
+## 7. Terminal energy formula is correct
+
+Normalize the smaller shore normal interval to `[0,w]`, `0<=w<=pi`, and put the
+train phase representative at `phi in[0,w]`.  The two hull tangent directions are
+`pi/2` and `w+pi/2` projectively.  An outer terminal contact edge has projective phase
+`phi`, while its exact oriented route energy is at least its projective energy.  Hence
+
+\[
+E_{term}
+\ge2-\sin\phi-\sin(w-\phi)
+\ge2-2\sin(w/2).
+\]
+
+For antipodal deficit `r=pi-w`, this equals
+
+\[
+2-2\cos(r/2).
+\]
+
+At `w=pi` the lower bound is zero, as it must be for an exactly antipodal pair; at a
+local return `w=0` it is two.  The endpoint behavior is geometrically consistent.
+
+**Verdict:** PASS.
+
+---
+
+## 8. Near-antipodal capacity lemma: laminar audit
+
+Take one same-sector noncrossing family and retain only chords with antipodal deficit
+`r<=r_0<pi/3`.  Each chord's unique shorter boundary arc then has length
+
+\[
+>2pi/3.
+\]
+
+For noncrossing chords, these shorter arcs are laminar: two partially overlapping,
+non-nested shorter arcs would have alternating endpoints and hence crossing chords.
+
+There are at most two top-level disjoint shorter arcs, because three arcs each longer
+than `2pi/3` cannot be disjoint on a circle of length `2pi`.  Inside one top-level arc,
+two disjoint children are impossible because the parent has length at most `pi` while
+two children would have combined length greater than `4pi/3`.  Thus each top-level
+component is one nested chain.
+
+For a nested chain, write the left endpoint span as `A` and right endpoint span as
+`B`.  The outermost shorter arc minus the innermost shorter arc has length exactly
+`A+B`; both arc lengths lie in `[pi-r_0,pi]`, so
+
+\[
+A+B\le r_0.
+\]
+
+If the chain has pair weight `m`, each endpoint set has weight `m` and is dominated by
+`(1/2)dtheta`; hence `A>=2m-o(1)` and `B>=2m-o(1)`.  Thus
+
+\[
+m\le r_0/4+o(1).
+\]
+
+Two top-level chains give total weight at most `r_0/2+o(1)`.
+
+Exact-diameter chords (`r=0`) make the shorter-arc choice nonunique, but two distinct
+exact diameter chords cross.  A noncrossing sector contains at most one, whose
+normalized weight is `o(1)`, so it does not affect the limiting lemma.
+
+**Verdict:** PASS.
+
+---
+
+## 9. Integration and the three-sector cost
+
+For one sector family of mass `m<=pi/6`, the capacity lemma gives the deficit quantile
+bound `r(s)>=2s`.  Since
+
+\[
+B(r)=2-2\cos(r/2)
+\]
+
+is increasing,
+
+\[
+E_{sector}
+\ge\int_0^m B(2s)ds
+=2m-2\sin m.
+\]
+
+This function is convex on the relevant interval.  If all three sector masses are at
+most `pi/6`, Jensen gives
+
+\[
+E_{comp}\ge2p-6\sin(p/3)=J(p).
+\]
+
+If one sector exceeds `pi/6`, retaining only `pi/6` in that sector costs at least
+
+\[
+E(pi/6)=pi/3-1=0.04719\ldots .
+\]
+
+For the only range used in the scalar theorem, `p<=1`, this exceeds `J(p)` even at
+`p=1`.  Hence the displayed `J(p)` bound is valid without assuming balanced sector
+masses.
+
+**Verdict:** PASS.
+
+---
+
+## 10. Dominant and complement payments are disjoint
+
+The additive dominant payment uses only fractionally retained outer occurrences whose
+trains lie in the frozen dominant-orbit windows.  The complement bracing payment uses
+terminal occurrences of trains **outside** those windows.  An outer edge occurrence
+belongs to exactly one complete train.  Therefore no occurrence contributes to both
+energy sums.
+
+Both retention arguments use the scalar `delta` to upper-bound how much endpoint or
+occurrence mass can exceed hull-side length capacity.  That does not itself count
+energy; it only lowers the retained masses.  Adding the actual weighted edge-energy
+lower bounds after retention is therefore legitimate.
+
+This distinction is why the candidate adds the older `F(z)` dominant payment rather
+than the joint `Phi(K)` payment: `Phi` can use total route detour to pay occurrence
+excess and would not be manifestly disjoint from complement energy.  The `F(z)` term
+is an actual selected dominant-edge energy sum.
+
+**Verdict:** PASS.
+
+---
+
+## 11. Scalar minimization audit
+
+For
+
+\[
+z_*=
+pi-t-kappa-2U+8Delta_2/U
+\]
+
+and
+
+\[
+p_*=
+pi-Q(delta)-U-(t+kappa)/2+4Delta_2/U,
+\]
+
+the margin is
+
+\[
+M=F(z_*)+J(p_*)-delta.
+\]
+
+### `kappa`
+
+`dz_*/dkappa=4Delta_2/U^2>0`.  Also
+
+\[
+{d\over d\kappa}
+\left(U+{t+\kappa\over2}-{4\Delta_2\over U}\right)
+=-{2\Delta_2\over U^2}<0,
+\]
+
+so `p_*` increases with `kappa`.  Both energy terms increase.  Worst case is
+`kappa=0`.
+
+### `delta`
+
+On the claimed interval the certificate verifies
+
+\[
+z_*<1.33,
+\quad p_*>0.61,
+\quad Q(delta)<1.62.
+\]
+
+Hence
+
+\[
+F'(z_*)<0.025,
+\qquad dz_*/d\delta<8,
+\]
+
+while
+
+\[
+Q'(delta)>25,
+\qquad -dN_*/d\delta<4,
+\]
+
+so `dp_*/ddelta<-21`.  Finally
+
+\[
+J'(p_*)>J'(0.61)>0.041.
+\]
+
+Therefore
+
+\[
+{dM\over d\delta}
+<0.2-21(0.041)-1<-1.6.
+\]
+
+Worst case is maximum detour `delta=R(t)/2`, where `U=C0`.
+
+The one-variable boundary margin is strictly decreasing in `t`; Pyroam independently
+reproduced
+
+\[
+M(1.82806)=2.95119\times10^{-5}>0,
+\]
+
+\[
+M(1.8280659)=7.17\times10^{-8}>0,
+\]
+
+\[
+M(1.828066)<0.
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 12. Final disposition
+
+The proof-only implication survives hostile review:
+
+```text
+dominant atomic orbit
+ -> retained dominant outer-edge energy F(z)
+
+joint orbit capacity
+ -> upper bound on dominant outer terminal count
+ -> many complement trains must be outer-to-outer
+
+Section 157 two-sided actual-diameter bracing
+ + three pi/3 noncrossing phase sectors
+ + round-hull endpoint capacity
+ -> independent complement terminal energy J(p)
+
+F(z)+J(p) > total available outer detour
+ -> exclude t <= 1.82806.
+```
+
+The result does not close C-II.  It is, however, qualitatively stronger than the
+preceding scalar refinements because it couples the atomic crossing phase to the
+**actual diameter-braced complement train population**.
+
+**Final verdict:** PASS at proof-only full-core Type-II scope.  C-II and Level I remain
+open.

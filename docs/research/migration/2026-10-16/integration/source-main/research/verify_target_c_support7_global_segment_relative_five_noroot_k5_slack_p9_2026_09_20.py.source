@@ -1,0 +1,172 @@
+#!/usr/bin/env python3
+"""Certify slack two for the five-no-root k=5 branch through p=9.
+
+Write
+
+    D(A) = |A| - 3 * delta(A),
+    delta(A) = r_M(A) - r_Q(A).
+
+The committed k=5 verifier only needed to exclude D(A)<0 for p<=9.  The
+six-no-root deletion reduction instead needs to know where D(A) can be 0 or
+1.  This verifier reuses the exact S7 orbit reduction from the k=5 verifier
+and checks every local state with p<=9 whose all-complete rank bound is below
+2.  There are 323,545 such residual states, and their minimum exact defect is
+7.  Therefore any five-no-root k=5 state with D(A)<2 must have p=10 or p=11;
+p>=12 is already safe by the crude bound D(A)>=p-10.
+
+Ranks are computed modulo P=2^127-1.  The inherited Lucas-Lehmer primality
+check plus the explicit Hadamard determinant bound below makes every modular
+rank decision exact over Q rather than probabilistic finite-field evidence.
+"""
+from collections import Counter
+from itertools import combinations, product
+from pathlib import Path
+import contextlib
+import importlib.util
+import io
+
+HERE = Path(__file__).resolve().parent
+BASE = HERE / "verify_target_c_support7_global_segment_relative_five_noroot_k5_2026_09_20.py"
+spec = importlib.util.spec_from_file_location("relative_five_noroot_k5_for_slack_p9", BASE)
+K = importlib.util.module_from_spec(spec)
+with contextlib.redirect_stdout(io.StringIO()):
+    spec.loader.exec_module(K)
+R = K.R
+
+
+def main():
+    assert R.lucas_lehmer_127()
+    keys, orbits, orbit_sizes, augmentation_candidates = K.five_no_root_orbits()
+    assert len(orbits) == 20451
+    assert sum(orbit_sizes) == 96560646
+    assert augmentation_candidates == 20475
+    key_to_global = {K.cycle_key(R.DESC[e]): e for e in R.NO_ROOT}
+
+    state_count = 0
+    exact_defects = Counter()
+    exact_by_lb = Counter()
+    exact_by_qp = Counter()
+    max_norm2 = 0
+    minimum = None
+
+    for five in orbits:
+        ext = tuple(key_to_global[keys[i]] for i in five)
+        touched = tuple(sorted(
+            b for b in range(35)
+            if any(R.QCOMP[e][b] != (0, 0) for e in ext)
+        ))
+        m = len(touched)
+        singleton = {
+            pos: K.singleton_options(ext, b)[0]
+            for pos, b in enumerate(touched)
+            if K.singleton_options(ext, b)
+        }
+        singleton_positions = tuple(singleton)
+
+        full_rows = K.relation_rows_zero(ext, touched, (7,) * m)
+        for row in full_rows:
+            max_norm2 = max(max_norm2, sum(v * v for v in row))
+        full_rank = R.rank_mod(full_rows)
+
+        for q in range(m + 1):
+            for p in range(q, min(2 * q, 9) + 1):
+                pair_count = p - q
+                singleton_count = 2 * q - p
+                if (
+                    singleton_count < 0
+                    or singleton_count > len(singleton_positions)
+                    or pair_count < 0
+                    or singleton_count + pair_count != q
+                    or pair_count > m - singleton_count
+                ):
+                    continue
+
+                lower_bound = 5 + 3 * (m - q) + p - 3 * full_rank
+                if lower_bound >= 2:
+                    continue
+
+                for singles in combinations(singleton_positions, singleton_count):
+                    single_set = set(singles)
+                    remaining = tuple(
+                        pos for pos in range(m) if pos not in single_set
+                    )
+                    for pairs in combinations(remaining, pair_count):
+                        for pair_states in product((3, 5, 6), repeat=pair_count):
+                            states = [7] * m
+                            for pos in singles:
+                                states[pos] = singleton[pos]
+                            for pos, state in zip(pairs, pair_states):
+                                states[pos] = state
+
+                            rows = K.relation_rows_zero(ext, touched, tuple(states))
+                            for row in rows:
+                                max_norm2 = max(
+                                    max_norm2, sum(v * v for v in row)
+                                )
+                            delta = R.rank_mod(rows)
+                            n = 5 + sum(
+                                R.STATES[state][1] for state in states
+                            )
+                            defect = n - 3 * delta
+
+                            state_count += 1
+                            exact_defects[defect] += 1
+                            exact_by_lb[(lower_bound, defect)] += 1
+                            exact_by_qp[(q, p, defect)] += 1
+                            minimum = (
+                                defect if minimum is None else min(minimum, defect)
+                            )
+                            assert defect >= 2
+
+    assert state_count == 323545
+    assert minimum == 7
+    assert dict(sorted(exact_defects.items())) == {
+        7: 127459,
+        8: 62173,
+        9: 155,
+        10: 108520,
+        11: 19675,
+        13: 5563,
+    }
+    assert dict(sorted(exact_by_lb.items())) == {
+        (-2, 10): 16,
+        (-1, 8): 62173,
+        (-1, 11): 19675,
+        (0, 9): 155,
+        (1, 7): 127459,
+        (1, 10): 108504,
+        (1, 13): 5563,
+    }
+    assert dict(sorted(exact_by_qp.items())) == {
+        (7, 7, 9): 155,
+        (7, 8, 7): 6828,
+        (7, 8, 10): 4287,
+        (8, 8, 7): 120631,
+        (8, 8, 10): 104233,
+        (8, 8, 13): 5563,
+        (8, 9, 8): 1860,
+        (8, 9, 11): 384,
+        (9, 9, 8): 60313,
+        (9, 9, 11): 19291,
+    }
+    assert max_norm2 == 24
+    assert R.P * R.P > max_norm2 ** 15
+
+    print("PASS: five-no-root k=5,p<=9 has defect at least two")
+    print("five_no_root_subsets", 96560646)
+    print("S7_orbits", len(orbits))
+    print("residual_states_checked", state_count)
+    print("minimum_exact_defect", minimum)
+    print("exact_defect_census", dict(sorted(exact_defects.items())))
+    print("exact_by_coarse_lower_bound", dict(sorted(exact_by_lb.items())))
+    print("exact_by_qp", dict(sorted(exact_by_qp.items())))
+    print("max_relation_row_norm_squared", max_norm2)
+    print("hadamard_exact_rank_bound", R.P * R.P > max_norm2 ** 15)
+    print(
+        "consequence",
+        "any five-no-root k=5 state with defect below 2 has p in {10,11}",
+    )
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,213 @@
+# Target C-II — the finite-defect strip contains a macroscopic common-transverse ladder
+
+**Date:** 2026-09-15  
+**Status:** proof-only high-`t` structural strengthening  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch with `t=(q-k)/D<=1.8623`  
+**Dependencies:** coupled adaptive O–O path through `1.8623`; finite-defect KKT strip; complement train rhombus-incidence theorem; audited stopped-train crossing graph  
+**Certificate:** `research/verify_target_c_common_transverse_ladder_t18623.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The finite-defect strip theorem gives two consecutive selected outer-to-outer trains
+
+\[
+\tau_0,\tau_1
+\]
+
+bounding one nonhub path region, with crossing-neighborhood symmetric difference bounded by an absolute constant:
+
+\[
+|\Gamma(\tau_0)\triangle\Gamma(\tau_1)|\le21729.
+\tag{CL.1}
+\]
+
+The same two trains belong to the adaptively selected low-terminal-energy family. The audited train-length/terminal-energy theorem therefore makes each of them macroscopic in the strict-rhombus crossing graph. Combining the two facts forces a linear family of complete trains crossing **both** boundaries.
+
+The conclusion is
+
+\[
+\boxed{
+|\Gamma(\tau_0)\cap\Gamma(\tau_1)|
+>0.6608D-o(D).
+}
+\tag{CL.2}
+
+Moreover this common family is pairwise noncrossing. Thus the selected strip contains a train-crossing `K_{2,M}` with
+
+\[
+M>0.6608D-o(D),
+\]
+
+whose two-vertex side is `\{\tau_0,\tau_1\}` and whose macroscopic side is an independent family of through-going transverse trains.
+
+This upgrades the finite-defect strip from an abstract bounded-cusp object to a macroscopic rhombic ladder.
+
+---
+
+## 1. Every selected boundary train crosses more than `0.6608D` distinct trains
+
+For a complete outer-to-outer train `tau`, let `r_tau` be the number of strict rhombi traversed by the stopped train. The audited complement train rhombus-incidence theorem proves
+
+\[
+\boxed{
+{r_\tau\over D}
+\ge1-\delta-{e_\tau\over2}-o(1),
+}
+\tag{CL.3}
+\]
+
+where `e_tau` is the exact two-terminal directional energy and `delta=d_out/D`.
+
+In the coupled adaptive path theorem every selected train satisfies
+
+\[
+e_\tau\le\lambda(\delta),
+\qquad
+\lambda(\delta)=0.5857-\delta.
+\tag{CL.4}
+\]
+
+Hence
+
+\[
+{r_\tau\over D}
+\ge1-\delta-{0.5857-\delta\over2}-o(1)
+=0.70715-{\delta\over2}-o(1).
+\tag{CL.5}
+\]
+
+At `t<=1.8623`, the matched atomic floor gives
+
+\[
+\delta<0.09246954+o(1).
+\]
+
+The exact certificate checks
+
+\[
+0.70715-{0.09246954\over2}>0.6609152,
+\]
+
+so, uniformly for the selected family,
+
+\[
+\boxed{r_\tau>0.6608D-o(D).}
+\tag{CL.6}
+
+Each strict rhombus traversed by `tau` is exactly one crossing with another complete stopped train. The audited train crossing graph is simple: two complete trains cross at most once. Therefore distinct rhombi on `tau` give distinct crossing neighbors, and
+
+\[
+\boxed{|Γ(\tau)|=r_\tau>0.6608D-o(D).}
+\tag{CL.7}
+
+In particular (CL.7) holds for both strip boundaries `tau_0,tau_1`.
+
+---
+
+## 2. Finite neighborhood change forces a linear common family
+
+Put
+
+\[
+A=\Gamma(\tau_0),
+\qquad
+B=\Gamma(\tau_1).
+\]
+
+The finite-defect theorem gives (CL.1). Since
+
+\[
+|A\cap B|
+\ge\min(|A|,|B|)-|A\triangle B|,
+\]
+
+(CL.1) and (CL.7) imply
+
+\[
+|A\cap B|
+>0.6608D-o(D)-21729.
+\]
+
+The fixed constant is `o(D)`, hence
+
+\[
+\boxed{
+|A\cap B|>0.6608D-o(D).
+}
+\tag{CL.8}
+
+Call this common family `\mathcal C`.
+
+Every `sigma in mathcal C` is a complete train which crosses `tau_0` once and `tau_1` once, in two distinct strict rhombi. Its midpoint subpath between those crossings lies in the selected strip region and consists entirely of strict-rhombus steps. Thus every member of `mathcal C` is a genuine through-going transverse train for the strip.
+
+---
+
+## 3. The common transverse family is pairwise noncrossing
+
+Take distinct
+
+\[
+\sigma,\rho\in\mathcal C.
+\]
+
+Both cross `tau_0`. If `sigma` and `rho` also crossed each other, then the three complete trains
+
+\[
+\tau_0,\sigma,\rho
+\]
+
+would be pairwise crossing.
+
+But the audited stopped-train crossing graph is triangle-free: crossing in a strict rhombus forces projective phase separation strictly greater than `pi/3`, and three directions on the projective circle cannot have all three pairwise separations greater than `pi/3`.
+
+Therefore
+
+\[
+\boxed{
+\sigma\text{ and }\rho\text{ do not cross.}
+}
+\tag{CL.9}
+
+Thus `mathcal C` is a pairwise-noncrossing family.
+
+Since every member crosses each of `tau_0,tau_1`, the selected trains induce a complete bipartite crossing pattern
+
+\[
+\boxed{K_{2,M},\qquad M=|\mathcal C|>0.6608D-o(D).}
+\tag{CL.10}
+
+The common transverse paths are consistently ordered between the two boundary train crosscuts.
+
+---
+
+## 4. Interaction with the finite-defect strip
+
+The same strip already satisfies
+
+```text
+N_i <= 21729 switching actual diameter rows;
+B_i < 21730/D switching KKT mass;
+||F_{i+1}-F_i|| < 21730;
+L_i <= 21729 complete-train terminal occurrences;
+<= 4345 bounded exceptional faces;
+|Gamma(tau_0) triangle Gamma(tau_1)| <= 21729;
+all diameter switching is one-sided toward the common hub;
+exact nonzero layer reaction is generated by <=2 actual diameter bars.
+```
+
+The present theorem adds
+
+```text
+>0.6608 D through-going transverse complete trains;
+those transverse trains are pairwise noncrossing;
+each crosses both strip boundaries exactly once.
+```
+
+Hence almost all rhombi of either boundary train belong to the same ordered transverse ladder. Only finitely many boundary rhombi are not shared by the opposite boundary's crossing neighborhood.
+
+This is the first current `t<=1.8623` theorem reducing the high-`t` branch to a fixed-complexity defect set sitting inside a **macroscopic two-by-linear rhombic train grid**.
+
+The remaining closing question is correspondingly local: exploit the bounded exceptional/diameter set against this ordered `K_{2,Theta(D)}` scaffold to produce either a clean subrectangle admitting a diameter-decreasing multishear or a forbidden convex-diameter endpoint pattern.
+
+No such final deformation is claimed here.
+
+**Disposition:** proved proof-only macroscopic common-transverse ladder through `t<=1.8623`. C-II and Level I remain open.

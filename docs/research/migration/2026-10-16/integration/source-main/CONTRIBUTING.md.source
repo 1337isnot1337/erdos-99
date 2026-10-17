@@ -1,0 +1,224 @@
+# Contributing to the research ledger
+
+The repository has one active theorem state and a large supporting archive. The first
+maintenance obligation is to keep those layers separate.
+
+**Agent-only research:** Mathematical contributions, independent audits and theorem
+promotions are performed exclusively by AI agents. Human mathematicians, human
+reviewers and human approval are not prerequisites. One independent AI-agent audit is required for consequential canonical promotion.
+The project owner may operate the reviewer agent to audit other agents' claims.
+Its review must cover the complete proof and adversarial bridge/regression checks;
+no second or human mathematical review is required. See `docs/REVIEW_POLICY.md`.
+
+Read `docs/STATE.md`, `AGENTS.md`, and `docs/RESEARCH_WORKFLOW.md` before a substantial
+mathematical change.
+
+For task claims, overlap checks, handoffs, and parallel work, follow
+[`docs/COORDINATION.md`](docs/COORDINATION.md). For the review and promotion gates, see
+[`docs/REVIEW_POLICY.md`](docs/REVIEW_POLICY.md). The state lock and active target routes
+remain the only authority for current mathematical status.
+
+## Where material belongs
+
+- definitions, quantifiers, and baseline literature audits: `docs/problem/`;
+- shared proved mathematics: `docs/theory/`;
+- route-specific canonical mathematics: the relevant `docs/targets/target-*/` route;
+- dated proof drafts, audits, regressions, experiments, and handoffs: `docs/reports/`;
+- continuation instructions: `docs/prompts/`;
+- reproducible computation: `research/`;
+- lifecycle/status metadata: `docs/STATE.md` and `docs/state/theorem-state.yaml`.
+
+Do not create another monolithic canonical report.
+
+## Status is explicit
+
+Use the lifecycle categories defined in `docs/STATE.md`:
+
+- canonical;
+- unreviewed;
+- audited-working;
+- conditional;
+- regression;
+- superseded;
+- rejected;
+- provenance.
+
+A report is `unreviewed` and noncanonical by default. A merged PR, a file on `main`, a recent timestamp,
+or a filename containing `proof`/`frontier`/`final` does not promote anything.
+
+Historical documents generally stay at stable paths. Correct their lifecycle status in
+the state lock rather than moving hundreds of files and breaking links.
+
+## Theorem promotion
+
+A mathematical claim should normally move through:
+
+1. precise candidate statement;
+2. complete proof draft;
+3. dependency/scope/regression audit;
+4. dated report when substantial;
+5. explicit promotion;
+6. route/current-frontier update;
+7. prompt refresh when the next obligation changes.
+
+A frontier-changing promotion is incomplete unless the same change updates:
+
+1. `state_version` in `docs/state/theorem-state.yaml`;
+2. `docs/STATE.md`;
+3. the affected target route map or current-frontier file;
+4. the active route prompt if its mission changed;
+5. theorem dependency edges and registered certificates when applicable;
+6. generated artifact metadata/index and state views.
+
+This is a hard repository invariant, not a recommendation.
+
+An ordinary research PR records evidence in the archive or supporting code and leaves
+its result `unreviewed` unless a completed audit gives it a narrower status. Its merge
+does not promote a theorem. A promotion request is a separate claim about an exact
+statement: include the complete proof, canonical dependencies, scope and regression
+audit, one independent AI-agent review, and every required state/generated-view update in one
+change. See the review gates in [`docs/REVIEW_POLICY.md`](docs/REVIEW_POLICY.md).
+
+## Corrections and rejections
+
+When an audit finds a false theorem or dependency:
+
+- preserve the original report for provenance unless there is a strong reason to remove
+  it;
+- add the exact regression/correction;
+- mark the affected claim `rejected` or `conditional` in the state lock immediately;
+- identify downstream reports whose conclusions actually depend on the failed step;
+- preserve unaffected conclusions rather than discarding a whole branch mechanically;
+- update active prompts if the failed claim had changed the mission.
+
+When a later proof repairs the issue, identify exactly which theorem is restored and
+which historical stronger statements remain invalid.
+
+## Parallel research
+
+Parallel runs must not create parallel canonical states. Each substantial run records
+its base commit and state version, exact question, dependencies, method, scope, and
+nearest predecessors before work begins. Check open PRs, active coordination threads,
+the route map, and targeted reports or code for overlap. A task claim helps people
+coordinate; it does not reserve a theorem or block independent audits. The full claim,
+overlap, and handoff protocol is in [`docs/COORDINATION.md`](docs/COORDINATION.md).
+
+When several runs overlap:
+
+1. normalize notation and hypotheses;
+2. compare theorem statements, not prose volume;
+3. keep the strongest result whose proof survives audit;
+4. retain false stronger variants as regressions when useful;
+5. promote only through the shared state files and route map.
+
+Do not merge partial proofs by silently identifying different source configurations,
+optima, scaffolds, response networks, or KKT stresses.
+
+## Attribution and AI assistance
+
+Preserve the provenance of imported claims, data, code, and proof ideas. Credit the
+people whose prior work a submission uses, and state what the new contribution adds,
+including when it only repairs or narrows an earlier result. Disclose substantial AI
+assistance in the pull request: identify the tools or models when known and describe
+their role (for example, proof drafting, code generation, or independent checking).
+Every submitting agent must document its role, sources, predecessor credit, and
+unverified claims. Independent agent audits do not create human reviewers or human
+mathematical authorship, and a passing review does not settle later publication
+attribution, legal rights, or the source owner's licensing permissions.
+
+## Issues, discussions, and pull requests
+
+Use a Discussion, when enabled, for an early hypothesis, a bounded task claim, a
+potential duplicate, or a research handoff. Use an issue for an actionable correction,
+reproducible failure, or maintainer-tracked task. Use a pull request for a durable
+artifact or requested policy change. A PR may contain a useful negative result or an
+independent audit even when the canonical frontier does not move. Follow
+`.github/PULL_REQUEST_TEMPLATE.md`; write `none` or `not applicable` for required
+fields that do not apply rather than leaving the claim or its limits implicit.
+
+## Branch lifecycle
+
+A working branch should exist only while it serves an active run, open PR, or unique
+unmerged research state. The agent or contributor that creates a branch is responsible
+for cleaning it up when that purpose ends.
+
+After a branch is merged, explicitly superseded, or intentionally abandoned:
+
+1. compare it with `main` and any replacement PR/branch;
+2. verify that no unique unmerged proof, regression, report, or other research artifact
+   would be lost;
+3. preserve anything still valuable in the appropriate report/module or replacement
+   branch;
+4. delete the stale branch promptly.
+
+Do not keep merged branches merely for provenance: merged commits, PR history, reports,
+and Git history provide that record. Conversely, do not delete a branch solely because
+it is old or behind `main`; unique unmerged research must be audited first. Remove
+obsolete predecessor branches after a corrected/rebuilt replacement is established,
+and remove temporary maintenance branches and cleanup-only workflows when their task is
+complete.
+
+## Reports
+
+Use `docs/reports/REPORT_TEMPLATE.md`. A substantial report must state:
+
+- exact claim status;
+- dependencies;
+- complete new proof;
+- regression checks;
+- what is not proved;
+- frontier effect;
+- promotion recommendation.
+
+If a report remains unpromoted, do not call its result canonical in the report title or
+handoff.
+
+## Computation
+
+For a reusable script, document in `research/README.md`:
+
+1. the exact proposition tested;
+2. assumptions encoded/omitted;
+3. arithmetic type;
+4. what positive output proves;
+5. what it does not prove;
+6. the theorem/regression it supports.
+
+Prefer exact arithmetic or certified margins for results used as proof regressions. If a computation is load-bearing for a ledger entry, list the script in that entry's `certificates` field so CI runs it.
+
+## Literature
+
+Record exact theorem statements, source, hypotheses, normalization, and applicability.
+A secondary summary is not a substitute for checking a source when a proof depends on a
+subtle equality case or quantitative constant.
+
+The repository's RSR equality-uniqueness correction is the model failure to avoid: the
+sharp inequality survived, but the cited source did not prove the uniqueness statement
+once attributed to it.
+
+## Before committing
+
+Run:
+
+1. `python3 tools/check_theorem_state.py`;
+2. `git diff --check`;
+3. existing repository tests relevant to changed scripts;
+4. a relative-link check if documentation paths changed.
+
+Then verify manually:
+
+- every promoted theorem has a complete audited proof;
+- every dependency is canonical or explicitly declared conditional;
+- state lock and route map agree;
+- current prompt states the same endpoint;
+- rejected/superseded language has not reappeared as a current mission;
+- historical reports were not accidentally made parallel theorem sources.
+
+## Structural compatibility
+
+Old prompt paths may be compatibility pointers. The original prompt contents are kept in
+`docs/prompts/historical/` and Git history.
+
+Target C's pre-cleanup large route-map catalog is preserved at
+`docs/targets/target-c/HISTORY-pre-cleanup-2026-09-11.md`. The current route map remains
+small and points to that catalog only for historical promotions/provenance.

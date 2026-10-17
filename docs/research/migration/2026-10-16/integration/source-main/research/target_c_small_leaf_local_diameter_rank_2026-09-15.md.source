@@ -1,0 +1,300 @@
+# Target C-II — a leaf rectangle block forces one extra distinct diameter edge
+
+**Date:** 2026-09-15  
+**Status:** proof-only mixed-rigidity structural strengthening  
+**Scope:** C65/ZR/ZF full positive-contact core; applied below to the audited `t=(q-k)/D<=1.844` small-leaf rectangle  
+**Dependencies:** audited train-rate/exceptional-face closure parametrization; audited mixed rigidity and relative-interior KKT stress; audited `0.7404D` small-leaf rectangle profile  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The current small-leaf rectangle gives a linear ordered family of outer-to-outer complete stopped trains, and Section 157 braces every one of those cuts by actual diameter edges of both transverse signs.  Incidence counting alone does not make those bracing edges distinct: one diameter chord can cross many nested train cuts.
+
+There is nevertheless an exact local distinctness statement that follows from mixed rigidity and KKT stationarity.
+
+Let
+
+\[
+\mathcal L=\{\tau_1,\ldots,\tau_m\}
+\]
+
+be **any proper subfamily of complete outer-to-outer trains**, where proper means that at least one complete train of the positive contact core is not in `L`.  Let
+
+\[
+H(\mathcal L)
+:=\{h\in H:\text{ the endpoints of }h\text{ lie on opposite shores of at least one }\tau_i\}.
+\]
+
+Then
+
+\[
+\boxed{|H(\mathcal L)|\ge m+1.}
+\tag{LR.1}
+\]
+
+Thus the `0.7404D` rectangle profile, which contains a balanced block of more than `0.00831D-o(D)` smallest-leaf outer-to-outer trains and simultaneously more than `0.00831D-o(D)` center trains, forces
+
+\[
+\boxed{
+|H(\mathcal L)|>0.00831D-o(D)
+}
+\tag{LR.2}
+\]
+
+distinct actual diameter edges whose endpoints are separated by that one ordered leaf block.
+
+For a consecutive dual-tree-backbone block there is also an exact interval structure: after orienting the cuts from one end of the backbone, every diameter edge has a constant-signed shore-separation vector supported on one consecutive interval of leaf indices.  Hence the local diameter first-variation matrix is an interval-supported matrix of full column rank whose positive KKT left kernel is nontrivial.
+
+This does not close C-II, but it converts the current repeated-bracing statement into a local rank obstruction on the same macroscopic rectangle.
+
+---
+
+## 1. Train-rate coordinates on outer-to-outer trains are free contact-flex coordinates
+
+Work on the nonisolated positive-contact core.  Let `T` be the complete stopped-train set and let
+
+\[
+C_{\rm face}
+\]
+
+be the two-coordinate exceptional-face closure matrix from the audited train-rate parametrization.
+
+A train-rate vector `omega in R^T` integrates to an infinitesimal contact flex, unique modulo translation, exactly when
+
+\[
+C_{\rm face}\omega=0.
+\tag{LR.3}
+\]
+
+Every outer-to-outer train is a zero column of `C_face`: it has no bounded exceptional-face terminal.  Consequently every rate vector supported on `L` satisfies (LR.3).  We therefore obtain an `m`-parameter family of contact flexes
+
+\[
+\omega=(\omega_1,\ldots,\omega_m)\in\mathbb R^m.
+\tag{LR.4}
+\]
+
+These `m` parameters remain independent modulo Euclidean motions.  Translation has zero train rate everywhere.  Infinitesimal rotation has one common rate on **every** complete train.  Because `L` is proper, a rate vector supported only on `L` can equal the all-trains rotation rate only when that common rate is zero.  Hence
+
+\[
+\boxed{
+\dim \mathcal F_{\mathcal L}=m
+}
+\tag{LR.5}
+\]
+
+for the induced leaf-supported contact-flex space modulo the three Euclidean infinitesimal motions.
+
+For the small-leaf rectangle the properness condition is automatic: its common center family is nonempty, indeed linear in `D`, and no center-phase train belongs to the smallest-leaf phase.
+
+---
+
+## 2. Mixed rigidity makes the local diameter derivative map injective
+
+Canonical ZR/ZF gives the full mixed contact-plus-diameter rigidity matrix rank
+
+\[
+\operatorname{rank}R_{C\cup H}=2v-3.
+\tag{LR.6}
+\]
+
+Thus its kernel consists exactly of the three Euclidean infinitesimal motions.
+
+Restrict the diameter first-variation map to `F_L`.  If a leaf-supported contact flex had zero first variation on every actual diameter edge, it would lie in the kernel of the full mixed matrix.  By (LR.5) it cannot be a nonzero Euclidean motion.  Therefore the restricted diameter map is injective.
+
+Choose any basis of the `m` one-train shear coordinates and write the resulting diameter derivative matrix as
+
+\[
+D_{\mathcal L}.
+\]
+
+A diameter edge whose endpoints lie on the same shore of every selected train has zero row in this matrix.  Deleting all such rows leaves precisely rows indexed by a subset of `H(L)` and does not change rank.  In particular
+
+\[
+\boxed{
+\operatorname{rank}D_{\mathcal L}=m,
+\qquad
+D_{\mathcal L}\in\mathbb R^{|H(\mathcal L)|\times m}.
+}
+\tag{LR.7}
+\]
+
+No lower bound on a singular value is asserted; only exact rank is used.
+
+---
+
+## 3. Positive KKT stationarity supplies an extra left-null direction
+
+Use the C65 relative-interior normalized KKT stress.  Every actual contact multiplier and every actual diameter multiplier is strictly positive.  Write the diameter multipliers as
+
+\[
+\beta_h>0
+\qquad(h\in H).
+\]
+
+KKT stationarity annihilates every infinitesimal contact flex.  Applied to each column of `D_L`, the contact contribution is zero, so
+
+\[
+\sum_{h\in H}\beta_h(D_{\mathcal L})_{h,i}=0
+\qquad(1\le i\le m).
+\tag{LR.8}
+\]
+
+All rows outside `H(L)` vanish.  Therefore
+
+\[
+\boxed{
+\beta_{H(\mathcal L)}^{\mathsf T}D_{\mathcal L}=0.
+}
+\tag{LR.9}
+\]
+
+The restricted vector `beta_{H(L)}` is nonzero: (LR.7) with `m>0` already implies that `D_L` has a nonzero row, and every corresponding `beta_h` is positive.
+
+Thus the left nullity of `D_L` is at least one.  Together with (LR.7),
+
+\[
+|H(\mathcal L)|
+-\operatorname{rank}D_{\mathcal L}
+\ge1,
+\]
+
+which proves
+
+\[
+\boxed{|H(\mathcal L)|\ge m+1.}
+\]
+
+This is the local version of the global `L_OO<=h-1` mixed-rigidity bound: only diameter edges that actually separate at least one selected leaf cut are counted.
+
+---
+
+## 4. A consecutive backbone block has interval-supported diameter rows
+
+Now suppose `L` is a consecutive block of the audited dual-tree backbone from the small-leaf rectangle theorem.  Write its cuts in backbone order as
+
+\[
+\tau_1,\ldots,\tau_m.
+\]
+
+The complement-region dual of the full good-leaf family is a tree.  Removing one backbone edge separates that tree into two components.  Fix a region beyond one end of the selected backbone block, and for each `i` choose the shore `S_i` of `tau_i` that contains this fixed region.
+
+The components are nested along the backbone.  After reversing the index if necessary,
+
+\[
+S_1\subset S_2\subset\cdots\subset S_m
+\tag{LR.10}
+\]
+
+at the level of source vertices/regions.
+
+Let
+
+\[
+\chi_i(x)=1_{x\in S_i}.
+\]
+
+For an actual diameter edge `h=xy`, orient `h` once and put
+
+\[
+\varepsilon_{hi}=\chi_i(y)-\chi_i(x)\in\{-1,0,1\}.
+\tag{LR.11}
+\]
+
+Because `i -> chi_i(x)` and `i -> chi_i(y)` are step functions, their difference is zero except on one consecutive interval.  On that interval it has one constant sign.  Hence for every diameter edge there are indices `ell_h<=r_h` and a sign `s_h in {+1,-1}` such that
+
+\[
+\boxed{
+\varepsilon_{hi}
+=
+\begin{cases}
+s_h,&\ell_h\le i\le r_h,\\
+0,&\text{otherwise},
+\end{cases}
+}
+\tag{LR.12}
+\]
+
+whenever the edge separates at least one selected cut.
+
+For the exact one-train shear column at `tau_i`, the diameter derivative has the form
+
+\[
+(D_{\mathcal L})_{h,i}
+=\varepsilon_{hi}\,\Gamma_{hi},
+\tag{LR.13}
+\]
+
+where `Gamma_hi` is the transverse first-variation factor determined by the fixed diameter vector and the train direction.  It may vanish when that diameter is momentarily parallel to the train direction, so (LR.12) is a statement about the exact **shore-separation support**, not a claim that every matrix entry on the interval is nonzero.
+
+Equations (LR.7), (LR.9), and (LR.12) give the finite object left by the current rectangle:
+
+```text
+m ordered outer-to-outer leaf cuts,
+>= m+1 distinct actual diameter edges interacting with the block,
+each diameter edge separates one signed consecutive interval of cuts,
+rank(D_L)=m,
+and beta^T D_L=0 with beta_h>0.
+```
+
+This is the correct starting point for a strip-reuse or interval-circulation closure argument.
+
+---
+
+## 5. Quantitative application to the audited `0.7404D` rectangle profile
+
+The hostile-audited `0.7404D` fan rectangle theorem gives a balanced complete rectangle with
+
+\[
+|\mathcal L|>0.00831D-o(D),
+\qquad
+|\mathcal C|>0.00831D-o(D),
+\tag{LR.14}
+\]
+
+where `L` is a consecutive smallest-leaf outer-to-outer backbone block and `C` is a center-phase family crossing every member of `L`.
+
+The companion exact profile certificate uses
+
+\[
+\lambda=0.561,
+\qquad
+\rho=0.00831,
+\]
+
+and proves that the common-center lower bound is actually
+
+\[
+0.0086808291\ldots D-o(D),
+\]
+
+so the rectangle has a fixed positive margin on both shores.
+
+Apply (LR.1) with
+
+\[
+m=|\mathcal L|.
+\]
+
+Because `C` is nonempty, `L` is proper.  Therefore
+
+\[
+|H(\mathcal L)|\ge |\mathcal L|+1
+>0.00831D-o(D).
+\tag{LR.15}
+\]
+
+Every edge counted here is an **actual distinct source diameter pair**.  No multiplicity of Section-157 bracing incidences is being counted.
+
+---
+
+## 6. What this does and does not solve
+
+The theorem eliminates one weak interpretation of the current rectangle: its linear family of leaf cuts cannot all be braced by only `o(D)` distinct diameter edges.  At least one extra diameter row beyond the number of selected leaf shear coordinates is forced locally.
+
+It does **not** yet give a contradiction.  The full diameter graph has linear size, so a local `0.00831D` lower bound is compatible with Woodall's straight-thrackle topology.  The exact next target is stronger:
+
+1. exploit the interval support (LR.12) together with the narrow leaf phase width to classify rows whose transverse sign changes across the block;
+2. show that all but `O(1)` actual diameter rows have a fixed transverse sign on their entire separation interval; and
+3. combine positive KKT balance with the straight-line diameter-thrackle topology to force many interval endpoints or a forbidden common bracing profile.
+
+No exact triangle, strict sub-`D` competitor, or theorem-state closure is claimed.
+
+**Disposition:** proved proof-only local diameter-rank/interval reduction; C-II and Level I remain open.

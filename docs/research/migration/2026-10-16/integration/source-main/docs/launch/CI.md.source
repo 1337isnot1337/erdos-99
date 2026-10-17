@@ -1,0 +1,122 @@
+# CI and local verification
+
+The private repository's included Actions quota was exhausted in October 2026; the
+reported reset is November 1. Budget-blocked hosted checks are not code-test failures.
+Do not rerun them repeatedly, change spending limits, upgrade the account, or select
+billable larger runners. This integration uses local validation and does not change
+billing settings. Keep the owner's paid-usage allowance at zero; a standard hosted
+runner can still incur charges if an owner later authorizes paid minutes.
+
+## Ordinary PRs and main pushes
+
+One standard `ubuntu-latest` job runs theorem-state and promotion-transaction checks,
+active-route and entrypoint checks, tool/catalogue/coordination/export unit tests,
+publication dependency planning, navigation, and whitespace checks. Lightweight
+PyYAML/jsonschema dependencies suffice until certificates are selected. Concurrent
+superseded runs are cancelled. Tokens have only `contents: read`; checkout does not
+persist credentials. PR event values enter through JSON/environment, not shell code.
+
+Only explicitly listed workflow prose can skip certificates. Every research-code/data
+change runs all registered certificates, including unregistered/transitive/dynamic
+helpers and file inputs. Authority, manifest, canonical proof sources, workflows,
+verification tools and unknown paths also run the full suite. This conservative
+fallback avoids an unvalidated Python dependency graph. The tests exercise both skip
+and must-run cases. It prioritizes soundness over finer computational selection.
+
+PRs use the unique merge base of event base/head SHAs and check out the actual head.
+Main pushes compare the entire before/after trees after confirming ancestry, event
+fast-forward metadata, clean checkout, and complete history. Merge commits retain both
+parents' changes. Renames are additions plus deletions; filenames use NUL delimiters.
+Force pushes, missing/zero endpoints, ambiguous ancestry, shallow clones, dirty trees,
+and failed diffs require full certificates. Missing transaction ancestry also makes
+the integrity validator fail; a certificate pass never replaces promotion review.
+
+## Reproduce locally
+
+Use CPython 3.14.7 in a clean isolated worktree; keep the virtual environment outside it.
+Exact transitive package versions are in `../../tools/requirements-verification.lock`.
+That file pins versions across platforms; the separately measured
+`tools/requirements-verification-linux-x86_64.lock` pins ten downloaded wheel hashes for
+CPython 3.14.7 on Linux x86_64. `tools/verification-wheels.json` records exact filenames,
+sizes and hashes. Its clean offline installation and `pip check` were exercised on
+glibc 2.44. This does not pin the OS, pip, hardware or package-index trust, and no
+other platform has been replayed. Unsupported wheel/platform combinations fail
+installation; do not remove `--require-hashes` to suppress that failure.
+
+```sh
+python3 -m venv /tmp/e99-verification-venv
+/tmp/e99-verification-venv/bin/python -m pip install --require-hashes --only-binary=:all: -r tools/requirements-verification-linux-x86_64.lock
+/tmp/e99-verification-venv/bin/python tools/verify_prelaunch.py --base-ref origin/main
+/tmp/e99-verification-venv/bin/python tools/verify_prelaunch.py --full --base-ref origin/main
+python3 tools/run_theorem_certificates.py --base-ref origin/main --plan
+```
+
+`--full` runs all research unit tests and every registered certificate. No CI optimization
+changes that command. Run the baseline utility with `--expected-commit <full SHA>` for
+an exact clean-tree identity check. The historical baseline document remains pinned to
+its original commit; it is not a hash promise about today's integration.
+
+## Optional comprehensive and historical workflows
+
+The ordinary workflow also has `workflow_dispatch`, guarded by the repository owner
+and `E99_COMPREHENSIVE_CI=true`; unknown dispatch ranges select the full suite. This
+variable defaults to unset and was not enabled by integration. Dispatch only after
+checking the available included quota and retaining a zero paid-usage allowance.
+
+All 21 historical Target C workflows are manual only, guarded before matrix expansion
+by the owner and `E99_HISTORICAL_CI=true` (unset by default). They preserve their original
+research commands and certificates but no longer run on main pushes. They can use
+large shard counts and long timeouts: prefer their local commands for historical
+experiments. No historical workflow or comprehensive dispatch was launched here.
+
+## Owner configuration before public collaboration
+
+The October 15 read-only inspection still found no protection on `main`. The latest
+inspected hosted job had **zero steps** and an annotation citing failed payments or
+the spending limit; that annotation does not distinguish quota from payment failure.
+The November 1 reset above remains a historical report. No billing change or retry
+was made to investigate it.
+
+For a future approved destination, require PRs, at least one accountable maintainer
+approval, resolved review conversations and a successful `state-consistency` check;
+dismiss stale approvals after material changes. Decide who may bypass those controls
+and restrict that group explicitly. Keep the two independent mathematical reviews in
+the promotion policy even if branch settings cannot encode their scope. Review and
+pin action revisions, and choose an update process for actions and verifier packages.
+Do not require a check that cannot execute while the account is blocked, or mistake
+a local test result for a hosted approval. These instructions change no live setting.
+
+For a clean-history export rehearsal, initialize only a disposable local copy and run
+the full suite with `--base-ref HEAD`. There is no `origin/main` or private historical
+Git object database in the original file export. The restoration-body check is
+self-contained; `check_restored_evidence.py --source-root <private-archive>` is the
+separate optional source-object audit. Full prelaunch verification now has **14 stages**.
+
+## Offline wheel rehearsal
+
+Use a new external venv and wheel directory. Downloading with the hash lock verifies
+each artifact before an offline installation; pip also verifies it again on install.
+
+```sh
+python3 -m pip download --require-hashes --only-binary=:all: -r tools/requirements-verification-linux-x86_64.lock --dest /tmp/e99-wheels
+/tmp/e99-verification-venv/bin/python -m pip install --no-index --find-links /tmp/e99-wheels --require-hashes --only-binary=:all: -r tools/requirements-verification-linux-x86_64.lock
+/tmp/e99-verification-venv/bin/python -m pip check
+```
+
+A one-byte wheel mutation was rejected by pip's hash check during the October 15
+rehearsal. The lock-consistency test detects changes that diverge from the measured
+manifest or the cross-platform version lock; it does not download packages during CI.
+Keep optional privacy scanners outside the verifier runtime. Updating packages requires
+a fresh measured wheel set and complete replay, with additional platforms recorded
+separately. No container/platform reproducibility is claimed from version pins alone.
+
+## Workflow wheel integrity
+
+Both ordinary workflow install stages enforce `--require-hashes --only-binary=:all:`.
+The lightweight stage uses `tools/requirements-integrity-linux-x86_64.lock`, a six-wheel
+subset of the measured ten-wheel manifest; it installs no NumPy, SciPy, SymPy or mpmath.
+The full measured lock remains conditional on the conservative certificate planner.
+Tests bind both lock sets to the measured hashes and preserve that conditional, read-only
+permissions and checkout credential settings. A fresh lightweight environment passes the
+12-stage integrity suite locally. Hosted execution remains blocked before steps; no other
+runner platform or operating-system image is claimed verified by that local replay.

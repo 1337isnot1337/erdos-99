@@ -1,0 +1,31 @@
+# Repository research instructions
+
+Follow [`../AGENTS.md`](../AGENTS.md). Before any mathematical work, read
+[`../docs/STATE.md`](../docs/STATE.md).
+
+Level I remains open. Target A and Target B remain open; Target C has C-I closed and
+C-II open.
+
+Key rules:
+
+- `docs/STATE.md` and `docs/state/theorem-state.yaml` control lifecycle/status;
+- active target route maps and the modules they explicitly name control theorem content;
+- reports are `unreviewed` by default; historical prompts, archive snapshots, merged PRs, and computations are not canonical unless explicitly promoted;
+- Target A currently runs through Section 177; Section 175's interior-tube right-deficiency inequality is the preferred locked-branch endpoint, Sections 176–177 add zero-slack, edge-lens/coarse-Hall, and source-gate refinements, and both global conversion steps remain open;
+- Target B's exact sufficient closure is `G+E >= (sqrt(3)/4) B + (sqrt(3)/2)(t+chi-1)`; the independently audited dense-grid/penetration/interpolation tools are canonical under their stated scopes, but the multi-grain shell-stability endpoint remains open;
+- Target C has C-I closed and C-II open; use `docs/targets/target-c/CURRENT.md` for its full-core face-coupled finite-move and separate macroscopic-container obligations. Audit.230's quarter-fold population result does not supply an integrated endpoint or moved-geometry capacity;
+- preserve the exact global-minimizer quantifiers;
+- do not silently identify the genuine source with an independently constructed
+  optimum, scaffold, response network, or selected stress;
+- check named regressions/corrections before importing an older report;
+- a frontier-changing promotion must increment `state_version`, update the state lock, machine manifest, affected route/current-frontier file and active prompt, and regenerate/verify the artifact index and state views in the same change;
+- run `python3 tools/check_theorem_state_pr.py` for repository-state checks; pull-request transaction checks use `python3 tools/check_theorem_state_pr.py --base-ref <base>`.
+
+If any operational document disagrees with `docs/STATE.md` on lifecycle/status, the
+state lock controls and the disagreement itself is a repository bug to fix.
+
+Permanent governance: mathematical proof reviews and promotions are AI-agent-only.
+One independent reviewer AI session may be operated by the project owner to audit
+other agents' work and must check both the complete proof and its decisive bridge
+and regressions. No human referee or second agent audit is required. See
+`docs/REVIEW_POLICY.md`.

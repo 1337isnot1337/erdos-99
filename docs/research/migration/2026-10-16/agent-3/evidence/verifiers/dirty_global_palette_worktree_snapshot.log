@@ -1,0 +1,8 @@
+PASS Boolean propagation/branching against independent small enumeration
+PASS core palette endpoint: 43 labels, 903 pairs, 13 search nodes
+PASS core endpoint min squared distance > 1.01; squared diameter < 185 < old D^2
+PASS full-source palette UNSAT: 175 labels, 2039 constrained label pairs, 4 exhaustive search nodes
+PASS independent full-source winner: all 15225 pairs > 1, D^2 < 183.2352
+PASS unlabeled hybrid cloud: 349 sites partitioned into one forbidden triangle and 173 edges
+PASS exact hybrid capacity = 174; no 175-site unit-separated subset, even without a diameter bound
+SCOPE: certified failure of one finite palette on a nonglobal source; Level I remains open

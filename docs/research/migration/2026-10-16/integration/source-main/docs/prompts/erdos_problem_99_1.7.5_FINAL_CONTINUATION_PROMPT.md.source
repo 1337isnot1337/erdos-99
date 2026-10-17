@@ -1,0 +1,191 @@
+# Erdős Problem #99 — continuation after exact Kuperberg-rate promotion
+
+Work in one context. Do not delegate to subagents or separate research workers.
+
+## Objective and quantifiers
+
+Obtain a Level I proof or disproof of Erdős Problem #99. The immediate priority is
+Target A. A proof must handle every sufficiently large global minimum-diameter
+configuration; a disproof requires triangle-free global minimizers for infinitely many
+cardinalities.
+
+## Authoritative files
+
+Read, in order:
+
+1. `../README.md`;
+2. `../problem/statement.md` and shared theory modules actually used;
+3. `../targets/target-a/README.md`;
+4. every active Target A module linked there, especially Sections 152–159;
+5. this prompt only as operational context.
+
+Historical reports, archived monolithic files, and older prompts are provenance only.
+Treat explicitly promoted theorems in active modules as trusted unless a new argument
+exposes a concrete hypothesis problem.
+
+## Exact Target A endpoint
+
+For the plateau-terminalized scaffold,
+
+\[
+\zeta=\dim\ker S=|C^\partial|-\operatorname{rank}S,
+\qquad
+s=\Delta_\Lambda-d_{\rm int}.
+\]
+
+A survivor has
+\[
+g=s-\zeta=\Delta_\Lambda-d_{\rm sc}\ge1.
+\]
+
+Target A closes exactly if
+\[
+\boxed{\zeta\ge s},
+\]
+equivalently
+\[
+\boxed{
+\operatorname{rank}S
+\le d_{\rm int}+|C^\partial|-\Delta_\Lambda.
+}
+\]
+
+A second valid closure is an actual \(N\)-point unit-separated competitor of diameter
+strictly below \(D=D(N)\).
+
+## Binding source/capacity facts
+
+For the genuine source \(A\subset H\), fixed-hull Hall capacity is exact:
+\[
+|Q|-|N_A(Q)|\le\widehat p_H
+\]
+for every unit-separated \(Q\subset H\). Do not seek a same-hull witness above that
+capacity. A source argument needs a strict diameter certificate or direct transport to
+the Schur response.
+
+Section 154 gives an \(O(D)\)-defect Hall shadow for every prescribed triangular-lattice
+phase. Section 155 co-embeds the smaller optimum and its inner scaffold in the actual
+source hull once the explicit \(\rho=\Omega(D^{3/2})\) threshold holds. The remaining
+lemma in that subbranch is two-shadow compatibility; pure image-intersection counting
+is insufficient.
+
+## Binding activation no-go results
+
+- Section 152: large local activation rank plus coherent monomer incidence can coexist
+  with zero response nullity without global optimality.
+- Section 153: along the actual global-minimizer activation sequence, every created
+  constraint has multiplier zero in every normalized terminal KKT stress.
+- Section 156: all created activation constraints can be independently released in an
+  exact affine orthant of triangle-free global minimizers.
+- Section 158: the activation rows are relative coloops with a finite direction that
+  releases every created unit/diameter pair simultaneously.
+- Section 159: a universally locked triangle has a nonnegative stress certificate whose
+  support reaches two distinct points of the source hull boundary.
+
+Do not revive activation-rank-to-stress, activation-only critical-cone locking, or local
+planarity arguments. Any activation proof must use finite collision geometry beyond the
+orthant, another cardinality, or actual source/scaffold transport.
+
+## Quantitative Kuperberg state
+
+The support-rate question in old Section 150 is no longer open for the free aligned-gap
+model. Section 157 proves, in canonical minimum-distance-one normalization,
+\[
+\boxed{W(d)\le C_1\exp(C_2d^{-3})}
+\]
+for sufficiently small aligned gap width \(d\). The published five-block architecture
+has exact quartic gain
+\[
+\delta_{\rm can}(d)=\frac{\sqrt3}{9}d^4+O(d^5),
+\]
+and recursive block-size factor three. Consequently, for fixed-shape homothetic patches,
+\[
+\boxed{\alpha_L^{-3}=o(\log L)}
+\]
+is sufficient for the same-hull add-one conclusion.
+
+Do **not** spend a run re-proving an asymptotic support rate for the same five-block
+mechanism. The missing geometric theorem is exterior compatibility: in a genuinely
+derived monomer region, exterior source/scaffold blockers may obstruct the free nested
+moves. A useful improvement would either protect a Section-157 witness with support
+\(o(D)\) at an actual canonical gap scale or invent a lower-order finite gap mechanism
+with a substantially smaller support cost.
+
+Section 146 remains compatible: deletion cardinality still diverges as \(d\downarrow0\).
+
+## Locked-cage and response warnings
+
+Exact first-transition cages exist. A locked triangle does not automatically produce a
+Schur separator; local cage geometry, planarity, and generic response algebra can have
+full response rank. Any cage-to-Schur theorem must use genuine global source/scaffold
+data.
+
+The Schur response is an exact planar strict gammoid. Planarity alone does not force the
+required rank loss.
+
+## Highest-priority attacks
+
+1. **Two-shadow compatibility:** in the Section-155 co-embedded subbranch, combine the
+   two source matchings with geometric conflict data and force either the Schur bound or
+   a strict smaller-diameter competitor.
+2. **Exterior-compatible finite gap concentration:** protect the Section-157 nested
+   rearrangement inside an actual monomer domain, or construct a lower-support finite
+   mechanism.
+3. **Direct source-to-Schur transport:** construct an exact global source invariant
+  mapping into \(\ker S\).
+4. **Locked-support transport:** map the boundary reaction paths of Section 159, or
+   finite directions from Sections 156/158, to saved scaffold terminals or a strict
+   sub-\(D\) competitor.
+5. **Finite activation collision theorem:** use collision walls beyond the exact
+  deactivation orthant and respect the locked-cage regression.
+6. **Direct strict-gammoid separator theorem:** prove the needed separator saving from
+   source/global data absent from pure planarity.
+
+Before investing in a lemma, state its exact implication to \(\zeta\ge s\) or to a
+strict smaller-diameter competitor.
+
+## Regression tests
+
+Any proposed theorem must identify the hypothesis that excludes or accommodates:
+
+- strained-monomer and regular-shell families;
+- exact two-leaf locked cage and closed-semicircle cases;
+- overlapping Hall circuits and zero-charge monomer/dimer bulk;
+- full-rank planar response and annular routing;
+- Sections 152, 153, and 156 activation regressions;
+- Sections 158–159 simultaneous-release and locked-boundary certificates;
+- Section 146 witness-complexity divergence;
+- Section 157 free-gap/exterior-blocker distinction.
+
+## Literature and computation
+
+Internet literature search is allowed. Import only theorem-level results whose exact
+hypotheses match the finite packing/container/reconfiguration setting. Record source,
+hypotheses, conclusion, constants/rates, and precise point of use.
+
+Computation is allowed for exact finite enumeration, symbolic verification, certified
+regressions, and falsification. It is not a certificate of global minimum-diameter
+optimality.
+
+## Required output
+
+Begin with one of:
+
+`LEVEL I STATUS: SOLVED`
+
+`LEVEL I STATUS: DISPROVED`
+
+`LEVEL I STATUS: STILL OPEN`
+
+If still open, report only:
+
+1. strongest genuinely new theorem or regression;
+2. complete proof or exact certificate;
+3. exact target quantity/mechanism advanced;
+4. shortest remaining implication;
+5. regressions checked and failed routes;
+6. literature imported and exact applicability;
+7. canonical files that should change.
+
+Do not report Sections 157–159 themselves as new progress. Do not call Target A solved until the
+exact Schur inequality is proved or a genuine strict sub-\(D\) competitor is built.

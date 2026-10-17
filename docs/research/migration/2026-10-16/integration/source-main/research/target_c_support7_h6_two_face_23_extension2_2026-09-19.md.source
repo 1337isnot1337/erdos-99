@@ -1,0 +1,85 @@
+# Target C: extend the generic H6 two-face reduction to 4,841 cells
+
+Date: 2026-09-19
+
+Status: exact finite reduction inside the generic H6 branch. The theorem-state authority is unchanged. C-II remains open.
+
+## Result
+
+The committed generic H6 endpoint before this step is
+
+\[
+4871=3880\,C_7+991\,(C_3\sqcup C_4).
+\]
+
+Continuing the exact two-face branch search at physical faces 2 and 3 excludes 30 additional cells:
+
+\[
+\boxed{4871\longrightarrow4841}
+\]
+
+with
+
+\[
+\boxed{4841=3853\,C_7+988\,(C_3\sqcup C_4).}
+\]
+
+The 30 exclusions split by ground pattern as
+
+```text
+235   11
+236    2
+256   16
+346    1
+```
+
+and by missing graph as
+
+```text
+C7       27
+C3+C4     3
+```
+
+The resulting pattern census is
+
+```text
+145      4
+156     16
+235    659
+236   1280
+237     16
+245    477
+256   1228
+345     21
+346    480
+347      4
+356    656
+```
+
+These counts sum to 4,841.
+
+## Exact branch-product cover
+
+Each physical pentagon face has 20 closed local branches: ten admissible cyclic gap orders times the two closed median sides, with the five rank-specific branch-adaptive closure secants already certified earlier in the theorem chain.
+
+For every listed cell the verifier exact-certifies each locally impossible branch at faces 2 and 3. Any of the 400 branch products containing one of those branches is then already impossible. It exact-certifies every remaining product of locally feasible branches. This covers all 400 possible simultaneous branch choices at the two faces and excludes the reciprocal cell.
+
+Across the 30 new cells the check uses 856 exact one-face branch certificates and 1,024 exact two-face product certificates, 1,880 certificates total. Of these, 1,770 have a strictly negative forced constant and 110 have forced constant zero. The largest denominator among active exact dual coefficients is
+
+\[
+3742297537070786996599355.
+\]
+
+Numerical LPs only locate candidate dual supports. Each accepted certificate is reconstructed and checked in exact rational arithmetic: inequality multipliers are nonnegative, strict weights sum to one, all 85 variable coefficients cancel exactly, equality multipliers are unrestricted, and the forced constant is nonpositive.
+
+## Relation to the discovery scan
+
+The fixed face-`(2,3)` discovery pass over the first 700 positions of the 4,944-cell one-face endpoint found 126 numerical candidate exclusions with no LP failures. The preceding committed two-face batches accounted for the first 60 candidates after removing overlap with earlier certificates. This step exactifies candidates 61 through 90 of that ordered discovery list. Their complete-angle indices are all larger than those in the prior face-`(2,3)` extension, so the 30 cells here are disjoint from all earlier exact two-face batches; the verifier also checks disjointness explicitly.
+
+There remain 36 numerical candidates from that first-700 fixed-pair batch that are not counted until exactification is complete.
+
+## Scope and next target
+
+This is a necessary-condition reduction in the generic H6 branch. It does not prove any of the remaining 4,841 cells geometrically realizable and it does not cover reciprocal-collinearity walls.
+
+The immediate next task is to exactify the remaining 36 face-`(2,3)` candidates from the first 700-cell block, then continue the same fixed-pair scan beyond position 700. After exhausting cheap two-face affine cuts, the surviving generic cells still must satisfy the fifteen independent complete reciprocal sine-law metric consistency equations. Reciprocal-collinearity walls remain a separate nongeneric branch.

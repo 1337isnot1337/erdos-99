@@ -1,0 +1,458 @@
+# Erdős Problem #99 — weighted-overlap two-leaf amplification raises the atomic gap to 0.00145
+
+**Date:** 2026-09-14  
+**Repository base:** `9aaefbf1` on `research/c2-gluing-sol-20260914-r8`  
+**Target:** Target C-II, canonical full-core Type-II branch  
+**Claim class:** proof-only strengthening of LA90 / TL69  
+**External input:** none beyond the existing stopped-train, finite Mantel, chain-cover, and Section-163 ordered-path stack
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+LA90 raises the atomic train gap to `0.0009`.  The two-leaf theorem TL69 shows that,
+after majority assignment of the three dominant-orbit labels, both center-to-leaf pairs
+must separately spend missing-crossing budget.  The remaining loss is that the minority
+mass deleted from the two Mantel shores was previously charged symmetrically.
+
+The center shore and the two-leaf shore enter the Jensen path estimate with different
+weights.  Keeping that asymmetry gives the sharp elementary inequality
+
+\[
+\left(L_X+{L_Y\over2}\right)^2\le {9\over4}p,
+\]
+
+where `p` is the same-label missing budget and `L_X,L_Y` are the two majority-deletion
+masses after orienting `X` as the one-center shore.  This raises the all-regime atomic
+train gap to
+
+\[
+\boxed{
+ x\sigma\ge2\sqrt{\Delta_2}+0.00145,
+ \qquad
+ \Delta_2={\pi\over2\sqrt3}.
+}
+\tag{WO145.1}
+\]
+
+Hence, at the same proof-only scope,
+
+\[
+\boxed{\eta_{\rm grid}=0.00145.}
+\tag{WO145.2}
+\]
+
+The finite inequality used below has its first numerical zero near
+`0.00145635040627`, so `0.00145` remains below its method ceiling with an exact
+interval margin.
+
+---
+
+## 1. Dominant-orbit setup
+
+Put
+
+\[
+ s_2:=\sqrt{\Delta_2},
+ \qquad
+ \eta:=0.00145,
+ \qquad
+ \bar A:=2s_2+\eta.
+\tag{WO145.3}
+\]
+
+Assume for contradiction that the total absolute atomic train mass satisfies
+
+\[
+ A:=x\sigma\le\bar A.
+\tag{WO145.4}
+\]
+
+Use the same dominant three-direction orbit and maximum-degree Mantel partition as
+Section 168, AG47, AG58, TL69, and LA90.  Define
+
+\[
+ M_0={4s_2^2\over\bar A},
+ \qquad
+ R_0=\bar A-M_0,
+\tag{WO145.5}
+\]
+
+and
+
+\[
+ d_0={\bar A^2\over4}-s_2^2+{R_0^2\over4}.
+\tag{WO145.6}
+\]
+
+Each Mantel shore contains dominant-orbit atomic mass at least
+
+\[
+\boxed{
+ s_0={M_0\over2}-\sqrt{d_0}.
+}
+\tag{WO145.7}
+\]
+
+Trim the three atom populations on each shore until both shore totals are exactly
+`s_0`.  Write the resulting masses as
+
+\[
+ x_1+x_2+x_3=s_0,
+ \qquad
+ y_1+y_2+y_3=s_0.
+\tag{WO145.8}
+\]
+
+Let `M` be the normalized total missing cross-shore pair mass in the trimmed system.
+The Mantel partition gives
+
+\[
+\boxed{M\le2d_0.}
+\tag{WO145.9}
+\]
+
+Same-window pairs cannot be strict-rhombus crossings, hence
+
+\[
+\boxed{
+ p:=x_1y_1+x_2y_2+x_3y_3\le M.
+}
+\tag{WO145.10}
+\]
+
+---
+
+## 2. Majority assignment and the exact weighted-deletion inequality
+
+Majority-assign each label to a shore on which it has weakly larger mass and delete its
+minority copy.  If one retained shore were empty, all `s_0` mass on that shore would be
+minority mass.  The standard estimate
+
+\[
+ \left(\sum_i\min\{x_i,y_i\}\right)^2\le3p
+\]
+
+would then give `p>=s_0^2/3`.  The exact certificate verifies
+`s_0^2/3>2d_0`, contradicting (WO145.9)--(WO145.10).  Thus both retained shores are
+nonempty.
+
+Their label supports are disjoint subsets of three labels.  After relabeling labels and
+possibly swapping the shores, `X` contains one center label and `Y` contains one or two
+leaf labels.  Thus
+
+\[
+ x_1\ge y_1,
+ \qquad
+ y_2\ge x_2,
+ \qquad
+ y_3\ge x_3.
+\tag{WO145.11}
+\]
+
+Set
+
+\[
+ u:=x_2+x_3,
+ \qquad
+ v:=y_1.
+\tag{WO145.12}
+\]
+
+These are exactly the minority masses deleted from the center shore and leaf shore,
+respectively.  Since the shores both have total mass `s_0`,
+
+\[
+ x_1=s_0-u,
+ \qquad
+ y_2+y_3=s_0-v.
+\tag{WO145.13}
+\]
+
+The majority inequalities imply
+
+\[
+ s_0-u=x_1\ge v.
+\tag{WO145.14}
+\]
+
+Now bound the same-label product from below.  First,
+
+\[
+ x_1y_1=(s_0-u)v\ge v^2.
+\tag{WO145.15}
+\]
+
+Second, because `y_2>=x_2` and `y_3>=x_3`,
+
+\[
+ x_2y_2+x_3y_3
+ \ge x_2^2+x_3^2
+ \ge {u^2\over2}.
+\tag{WO145.16}
+\]
+
+Therefore
+
+\[
+\boxed{
+ p\ge {u^2\over2}+v^2.
+}
+\tag{WO145.17}
+\]
+
+The weighted deletion appearing in the two-leaf Jensen estimate is
+
+\[
+ q:=u+{v\over2}.
+\tag{WO145.18}
+\]
+
+A direct square completion gives
+
+\[
+\begin{aligned}
+{9\over4}\left({u^2\over2}+v^2\right)-q^2
+&={1\over8}(u-4v)^2\ge0.
+\end{aligned}
+\tag{WO145.19}
+\]
+
+Combining (WO145.17)--(WO145.19),
+
+\[
+\boxed{
+ q^2\le {9\over4}p,
+ \qquad
+ q\le {3\over2}\sqrt p.
+}
+\tag{WO145.20}
+\]
+
+The coefficient `9/4` is sharp.  Equality occurs, after scaling, at
+
+\[
+ x=y=\left({1\over5},{2\over5},{2\over5}\right),
+\]
+
+with the first label assigned to the center shore and the other two to the leaf shore
+through tie-breaking.  Thus no improvement of (WO145.20) is available without using
+more than the same-label product and the majority signs.
+
+---
+
+## 3. The two leaf pairs consume additional disjoint missing budget
+
+Put
+
+\[
+ K:={2\over\sqrt3},
+ \qquad
+ L:=4+\sqrt2.
+\tag{WO145.21}
+\]
+
+After majority deletion the center mass is
+
+\[
+ a=s_0-u,
+\]
+
+and the two leaf masses `b,c` satisfy
+
+\[
+ b+c=s_0-v.
+\tag{WO145.22}
+\]
+
+Every atom population is at most `s_0`, and the exact certificate verifies `s_0<K`.
+TL69 therefore applies separately to the two center-to-leaf pairs.  If their normalized
+missing masses are `rho_b,rho_c`, then
+
+\[
+ \rho_b\ge{(a+b-K)_+^2\over L^2},
+ \qquad
+ \rho_c\ge{(a+c-K)_+^2\over L^2}.
+\tag{WO145.23}
+\]
+
+These pair sets are disjoint from one another and from the same-label pair sets counted
+by `p`, so
+
+\[
+\boxed{M\ge p+\rho_b+\rho_c.}
+\tag{WO145.24}
+\]
+
+Convexity and Jensen give
+
+\[
+\begin{aligned}
+\rho_b+\rho_c
+&\ge {2\over L^2}
+\left(a+{b+c\over2}-K\right)_+^2\\
+&={2\over L^2}
+\left({3s_0\over2}-K-u-{v\over2}\right)_+^2.
+\end{aligned}
+\tag{WO145.25}
+\]
+
+Define
+
+\[
+ B:={3s_0\over2}-K.
+\tag{WO145.26}
+\]
+
+Using (WO145.20) in (WO145.25), then (WO145.24), yields
+
+\[
+\boxed{
+ M\ge p+{2\over L^2}
+ \left(B-{3\over2}\sqrt p\right)_+^2.
+}
+\tag{WO145.27}
+\]
+
+This is the shared missing-budget inequality.
+
+---
+
+## 4. Exact minimization
+
+Set `z=sqrt(p)>=0`.  On `0<=z<=2B/3`, the right side of (WO145.27) is
+
+\[
+ f(z)=z^2+{2\over L^2}\left(B-{3z\over2}\right)^2.
+\tag{WO145.28}
+\]
+
+The quadratic has its unique minimizer inside this interval and its minimum is
+
+\[
+\boxed{
+ \min_{z\ge0}f(z)
+ ={2B^2\over L^2+9/2}.
+}
+\tag{WO145.29}
+\]
+
+For `z>=2B/3`, the positive-part term vanishes and the same lower bound follows from
+`z^2>=4B^2/9`.
+
+Consequently every feasible survivor must satisfy
+
+\[
+\boxed{
+ 2d_0\ge
+ {2(3s_0/2-2/\sqrt3)^2
+  \over(4+\sqrt2)^2+9/2}.
+}
+\tag{WO145.30}
+\]
+
+---
+
+## 5. Exact contradiction at `eta=0.00145`
+
+The exact interval certificate gives
+
+\[
+\begin{aligned}
+\bar A&=1.906075613727914\ldots,\\
+M_0&=1.903176716779643\ldots,\\
+R_0&=0.002898896948271\ldots,\\
+d_0&=0.001383480095831\ldots,\\
+s_0&=0.914393196126001\ldots,\\
+B&=0.216889255809750\ldots .
+\end{aligned}
+\tag{WO145.31}
+\]
+
+The shared-payment lower bound is
+
+\[
+ {2B^2\over(4+\sqrt2)^2+9/2}
+ >0.0027823596626273,
+\tag{WO145.32}
+\]
+
+while the entire available Mantel missing budget satisfies
+
+\[
+ 2d_0<0.0027669601916639.
+\tag{WO145.33}
+\]
+
+The outward-certified gap exceeds
+
+\[
+1.5\times10^{-5}.
+\tag{WO145.34}
+\]
+
+This contradicts (WO145.30), proving (WO145.1).
+
+A high-precision solution of equality in (WO145.30) occurs near
+
+\[
+\eta_*=0.00145635040626572\ldots .
+\tag{WO145.35}
+\]
+
+Thus `0.00145` is close to the ceiling of this weighted-overlap/two-leaf architecture.
+
+---
+
+## 6. Immediate consequences
+
+Every proof-only consequence that depends only on the atomic gap may now use
+`g=0.00145`.  In particular,
+
+\[
+\boxed{
+\liminf {T-q/2\over D}
+\ge2\sqrt{\Delta_2}+0.00145,
+}
+\tag{WO145.36}
+\]
+
+and the rhombic-only transfer gives
+
+\[
+\boxed{
+\liminf {\sigma_R\over D}\ge0.0029.
+}
+\tag{WO145.37}
+\]
+
+The correlated stopped-train identity gives
+
+\[
+\boxed{
+\liminf {\rho_{rec}+\sigma_R-q\over D}\ge0.0029.
+}
+\tag{WO145.38}
+\]
+
+The Section-171 and chamber/residual coefficients should be recomputed using
+`g=0.00145`.
+
+---
+
+## 7. Scope audit
+
+- The theorem has the same full-core Type-II train-measure scope as audited Section 168,
+  TL69, and LA90.
+- Same-label products are counted only because same-window trains cannot form actual
+  strict-rhombus crossings once the continuity windows are sufficiently small.
+- Majority deletion is not free: its weighted cost is bounded directly by the same-label
+  missing budget through (WO145.17)--(WO145.20).
+- TL69 is applied only to distinct dominant-orbit labels, hence to limiting axes
+  separated by exactly `pi/3`.
+- Trimming and majority assignment are limiting-mass inequalities, not physical source
+  modifications.  Every source point remains in the source.
+- No strict-diameter competitor, exact unit triangle, C-II closure, or Level-I closure is
+  asserted.
+
+**Disposition:** proof-only WO145 candidate awaiting independent audit.  C-II remains open.

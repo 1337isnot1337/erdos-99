@@ -1,0 +1,373 @@
+# Target C-II — projected diameter-stress dimension is exactly the row-nullity on the contact tangent
+
+**Date:** 2026-09-18  
+**Status:** proof-only exact structural identity; theorem-state authority unchanged  
+**Scope:** canonical full-core Type-II positive-contact core with actual loaded diameter graph `H`  
+**Depends on:** canonical mixed rigidity rank; exact pure-contact stress/closure-corank identity; projected diameter-stress dimension theorem; relative-interior KKT stress  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current defect partition uses
+
+\[
+k=d_H+p_D+\sigma_C,
+\]
+
+where `d_H=q-h` is the Woodall diameter-edge deficit, `sigma_C` is pure-contact
+self-stress dimension, and `p_D` is the affine dimension of the normalized projected
+diameter-stress polytope.  The quantity `p_D` has so far been treated mainly as a stress
+parameter.  It has an exact primal interpretation.
+
+Let
+
+\[
+V_C:=\ker R_C/\mathcal E
+\]
+
+be the contact infinitesimal-flex space modulo the three Euclidean motions, and let
+
+\[
+G:V_C\longrightarrow\mathbb R^h
+\]
+
+be the derivative map of the `h` actual diameter bars, obtained by restricting the
+diameter rigidity rows to contact infinitesimal flexes.  Then
+
+\[
+\boxed{G\text{ is injective}}
+\tag{TD.1}
+\]
+
+and
+
+\[
+\boxed{
+\ker G^T=\pi_H\bigl(\ker R_{C\cup H}^T\bigr).
+}
+\tag{TD.2}
+\]
+
+Consequently, if
+
+\[
+d_C:=\dim V_C,
+\]
+
+then
+
+\[
+\boxed{
+h-d_C=p_D+1,}
+\tag{TD.3}
+\]
+
+or equivalently
+
+\[
+\boxed{d_C=h-p_D-1.}
+\tag{TD.4}
+\]
+
+Since `d_H=q-h`, this gives the second exact identity
+
+\[
+\boxed{
+d_H+p_D=q-d_C-1.}
+\tag{TD.5}
+\]
+
+Thus the entire currently unconverted defect `d_H+p_D` is exactly the codimension of
+the full contact tangent inside the `q-1` diameter-row budget.  It is not merely a sum
+of two bookkeeping quantities.
+
+Combining (TD.5) with the current correlated weighted-seed frontier rewrites the live
+remaining obstruction directly in tangent-space language.  Since `q/D->pi`, every live
+terminal survivor satisfies
+
+\[
+\boxed{
+\pi-{d_C\over D}
+>
+\max\left\{
+5.9765850-4{m_D\over D},
+\ 1.5158692-{8\over15}{m_D\over D},
+\ 0.6733591
+\right\}-o(1).
+}
+\tag{TD.6}
+\]
+
+Here `m_D` is the dimension of the explicit exact finite contact-preserving manifold,
+whereas `d_C` is the complete infinitesimal contact-flex dimension.  Equation (TD.6)
+therefore measures the remaining nonlinear integration gap without introducing a new
+parameter.
+
+A useful endpoint occurs when `p_D=0`.  Then
+
+\[
+\dim\ker G^T=1.
+\]
+
+The relative-interior KKT diameter vector has every coordinate positive and spans this
+one-dimensional kernel.  Therefore the `h` diameter derivative rows on `V_C` form a
+positive linear circuit:
+
+\[
+\boxed{
+\operatorname{rank}G=h-1,
+\quad
+\ker G^T=\mathbb R\beta,
+\quad
+\beta_e>0\ (e\in H),
+}
+\tag{TD.7}
+\]
+
+and every set of `h-1` diameter derivative rows is linearly independent.  More
+generally, `p_D+1` is exactly the linear row-nullity of the actual-diameter derivative
+system on the full contact tangent.
+
+This does not close C-II.  It identifies the exact linear object that a closing theorem
+has to constrain: the straight-line diameter thrackle gives `h` covectors on the
+contact tangent, injectively locking that tangent, with row-nullity precisely `p_D+1`.
+The unresolved `d_H+p_D` is exactly `q-d_C-1`.
+
+---
+
+## 1. The diameter derivative map on contact flexes
+
+Let the nonisolated positive-contact core have `v` vertices, contact rigidity matrix
+`R_C`, and actual-diameter rigidity matrix `R_H`.  Euclidean infinitesimal motions lie
+in `ker R_C` and are also killed by every distance derivative, so `R_H` descends to a
+well-defined map
+
+\[
+G:V_C=\ker R_C/\mathcal E\to\mathbb R^h.
+\]
+
+Canonical mixed rigidity gives
+
+\[
+\operatorname{rank}R_{C\cup H}=2v-3.
+\]
+
+If a class `[u] in V_C` lies in `ker G`, then
+
+\[
+R_Cu=0,
+\qquad
+R_Hu=0.
+\]
+
+Thus `u` is an infinitesimal flex of the full mixed active framework.  Full mixed rank
+forces `u` to be Euclidean, so `[u]=0` in `V_C`.  Therefore `G` is injective, proving
+(TD.1), and
+
+\[
+\operatorname{rank}G=d_C.
+\tag{1.1}
+\]
+
+---
+
+## 2. The projected mixed-stress space is exactly `ker G^T`
+
+Let
+
+\[
+\mathcal L:=\ker R_{C\cup H}^T
+\]
+
+be the signed mixed equilibrium-stress space, and write a mixed stress as
+`(alpha,beta)` with contact coordinates `alpha` and diameter coordinates `beta`.
+
+If `(alpha,beta) in mathcal L`, then
+
+\[
+R_C^T\alpha+R_H^T\beta=0.
+\]
+
+For every contact infinitesimal flex `u in ker R_C`,
+
+\[
+\beta^TR_Hu=-\alpha^TR_Cu=0.
+\]
+
+Hence the projected diameter vector `beta` annihilates the image of `G`, so
+
+\[
+\pi_H(\mathcal L)\subseteq\ker G^T.
+\tag{2.1}
+\]
+
+Conversely, suppose `beta in ker G^T`.  Then
+
+\[
+\beta^TR_Hu=0
+\qquad(u\in\ker R_C).
+\]
+
+Therefore `R_H^T beta` lies in the orthogonal complement of `ker R_C`.  By finite
+dimensional linear algebra,
+
+\[
+(\ker R_C)^\perp=\operatorname{im}R_C^T.
+\]
+
+So there is an `alpha` such that
+
+\[
+R_C^T\alpha=-R_H^T\beta.
+\]
+
+Thus `(alpha,beta) in mathcal L`, and
+
+\[
+\ker G^T\subseteq\pi_H(\mathcal L).
+\tag{2.2}
+\]
+
+Equations (2.1)--(2.2) prove (TD.2).
+
+No sign condition is used here.  This is an identity of signed linear stress spaces.
+
+---
+
+## 3. Dimension identity
+
+The hostile-audited projected-stress theorem gives
+
+\[
+\dim\pi_H(\mathcal L)=s_Z+1-\sigma_C=p_D+1,
+\tag{3.1}
+\]
+
+where the final equality is exactly the definition of the normalized projected
+polytope's affine dimension, justified by the full-support relative-interior KKT stress.
+
+By (TD.2) and (1.1),
+
+\[
+\dim\pi_H(\mathcal L)
+=\dim\ker G^T
+=h-\operatorname{rank}G
+=h-d_C.
+\]
+
+Comparing with (3.1) gives
+
+\[
+h-d_C=p_D+1,
+\]
+
+which proves (TD.3)--(TD.4).
+
+Now use `d_H=q-h`:
+
+\[
+\begin{aligned}
+d_H+p_D
+&=q-h+p_D\\
+&=q-(d_C+p_D+1)+p_D\\
+&=q-d_C-1.
+\end{aligned}
+\]
+
+This proves (TD.5).
+
+For consistency, the exact contact-flex formula gives the same result:
+
+\[
+d_C=T-2f-1+\sigma_C=(q-k)-1+\sigma_C,
+\]
+
+while `k=d_H+p_D+sigma_C`.
+
+---
+
+## 4. Positive-circuit endpoint when `p_D=0`
+
+If `p_D=0`, equation (TD.3) gives
+
+\[
+h=d_C+1,
+\qquad
+\dim\ker G^T=1.
+\]
+
+The canonical relative-interior KKT stress projects to a vector
+
+\[
+\beta\in\ker G^T
+\]
+
+with every actual-diameter coefficient strictly positive.  Because the kernel is
+one-dimensional, every linear dependence among the `h` diameter derivative rows is a
+multiple of this full-support positive dependence.
+
+If some `h-1` rows were dependent, extending that dependence by zero on the omitted row
+would produce a nonzero vector in `ker G^T` with one zero coordinate.  It could not be a
+multiple of the full-support `beta`.  Contradiction.  Therefore every `h-1` rows are
+independent and the complete row family is a positive circuit, proving (TD.7).
+
+This statement concerns derivative rows on the full contact tangent.  It does not claim
+that all `d_C` infinitesimal contact flexes integrate to exact finite motions.
+
+---
+
+## 5. Live frontier in tangent language
+
+The current correlated weighted-seed note gives
+
+\[
+{d_H+p_D\over D}
+>
+\max\left\{
+5.9765850-4{m_D\over D},
+\ 1.5158692-{8\over15}{m_D\over D},
+\ 0.6733591
+\right\}-o(1).
+\tag{5.1}
+\]
+
+From (TD.5) and `q/D->pi`,
+
+\[
+{d_H+p_D\over D}
+=\pi-{d_C\over D}+o(1).
+\tag{5.2}
+\]
+
+Substitution gives (TD.6).  No new numerical approximation is needed.
+
+Two interpretations are exact enough to be useful for the next step.
+
+1. `p_D` is the row-nullity minus one of the diameter derivative system on the full
+   contact tangent.  Bounding projected-stress dimension is therefore the same linear
+   problem as bounding excess diameter-row dependence after restriction to contact
+   flexes.
+2. `d_H+p_D` is the loss from the maximal possible `q-1` contact-tangent dimension.
+   The current scalar/topological frontier is already a statement about the complete
+   contact tangent, not merely about an auxiliary stress polytope.
+
+The remaining gap is nonlinear: only an explicit `m_D`-dimensional submanifold of this
+`d_C`-dimensional contact tangent is presently integrated exactly in the singular
+closure-corank cases.  Either a stronger integration theorem or a direct obstruction
+to positive diameter locking on the full tangent would attack the remaining C-II
+branch without introducing another scalar defect.
+
+---
+
+## 6. Scope audit
+
+- `R_C`, `R_H`, and `G` use only the nonisolated positive-contact core.  Contact-isolated
+  source points remain in the source and are not inserted into the rigidity matrices.
+- The equality `pi_H(mathcal L)=ker G^T` is signed linear algebra.  Nonnegativity enters
+  only in the `p_D=0` positive-circuit corollary through the known full-support KKT
+  stress.
+- No finite nonlinear integration is inferred from infinitesimal contact-flex
+  dimension.
+- No theorem-state file is changed.
+
+**Disposition:** proved the exact contact-tangent/projected-stress duality (TD.1)--(TD.5)
+and isolated `p_D=0` as a full-support positive circuit of diameter derivatives.  C-II
+remains open.

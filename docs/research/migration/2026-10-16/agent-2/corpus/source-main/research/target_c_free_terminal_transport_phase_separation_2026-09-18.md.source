@@ -1,0 +1,696 @@
+# Target C-II — terminal FREE transport/phase separation
+
+**Date:** 2026-09-18  
+**Status:** proof-only endpoint refinement; theorem-state authority unchanged  
+**Scope:** terminal full-core Type-II FREE survivor sequences with `pi D-q=o(D)` and all-phase surplus `mu_D -> mu_*`  
+**Depends on:** terminal FREE surplus-endpoint stability; audited outer-geodesic direction-measure theorem; audited atomic stopped-train phase decomposition; exact stopped-train endpoint multigraph; exact arbitrary O--O multishear  
+**Certificate:** `research/verify_target_c_free_terminal_transport_phase_separation_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The exact surplus endpoint has a much more rigid endpoint-transport structure than the
+previous fan alternatives show. Almost every outer-face train occurrence belongs to
+an outer-to-outer train, while almost every bounded exceptional-face occurrence belongs
+to a bounded-to-bounded train. The bounded-to-bounded population is in turn almost
+entirely concentrated in one atomic `pi/3` phase orbit.
+
+The key point is to use the atomlessness of the geodesic outer-walk direction measure
+before spending the bounded endpoint capacity. Atomic train mass cannot consume a
+linear number of outer endpoints. Since the quadratic strict-rhombus crossing density
+requires at least `2 sqrt(Delta_2)` atomic train mass, the bounded-to-outer transport
+population is at most `2g D`, where `g=0.007707` is the matched all-train gap.
+
+Put
+
+\[
+\Delta_2=\frac{\pi}{2\sqrt3},
+\qquad
+s_2=\sqrt{\Delta_2},
+\qquad
+g=0.007707,
+\]
+
+\[
+A_0:=2s_2+g
+=1.912332613727915\ldots,
+\]
+
+and
+
+\[
+M_*:=4s_2+2g=2A_0
+=3.824665227455829\ldots.
+\]
+
+At the exact surplus endpoint,
+
+\[
+\frac bD\to\pi,
+\qquad
+\frac{Q+4f}{D}\to M_*.
+\tag{TP.1}
+\]
+
+Let
+
+- `E_BB` be the number of stopped trains with both terminal occurrences on bounded
+  nonquadrilateral faces;
+- `E_BO` the number with one bounded and one outer terminal occurrence; and
+- `L_O` the number with both terminal occurrences on the actual outer face.
+
+Then
+
+\[
+\boxed{
+\limsup\frac{E_{BO}}D\le 2g=0.015414,
+}
+\tag{TP.2}
+\]
+
+\[
+\boxed{
+\liminf\frac{E_{BB}}D\ge 2s_2
+=1.904625613727915\ldots,
+}
+\tag{TP.3}
+\]
+
+and
+
+\[
+\boxed{
+\liminf\frac{L_O}D
+\ge\frac{\pi}{2}-g
+=1.563089326794897\ldots.
+}
+\tag{TP.4}
+\]
+
+Thus the earlier `0.105849...D` O--O branch is not merely one possible endpoint
+alternative: at exact surplus saturation there are at least `1.563089...D-o(D)`
+O--O trains.
+
+There is also a sharp one-parameter phase frontier. Along any subsequence on which
+
+\[
+e:=\lim \frac{E_{BO}}D
+\]
+
+exists, necessarily `0<=e<=2g`, and if
+
+\[
+B(e):=\frac{M_*-e}{2},
+\]
+
+then one exact atomic `pi/3` orbit has train mass at least
+
+\[
+\boxed{
+w(e):=
+\frac{B(e)+\sqrt{8\Delta_2-B(e)^2}}{2}.
+}
+\tag{TP.5}
+\]
+
+All bounded-to-bounded trains outside that dominant orbit have total mass at most
+
+\[
+\boxed{
+r(e):=
+B(e)-w(e)
+=
+\frac{B(e)-\sqrt{8\Delta_2-B(e)^2}}{2}.
+}
+\tag{TP.6}
+\]
+
+The worst endpoint is `e=0`, where
+
+\[
+w(0)=1.904609957194518\ldots,
+\qquad
+r(0)=0.007722656533397\ldots.
+\tag{TP.7}
+\]
+
+At the opposite endpoint `e=2g`,
+
+\[
+B(2g)=w(2g)=2s_2,
+\qquad
+r(2g)=0.
+\tag{TP.8}
+\]
+
+So throughout the entire exact-surplus transport segment, at least
+`1.904609957...D-o(D)` bounded-to-bounded trains lie in one three-axis atomic
+orbit, and at most `0.007722657...D+o(D)` bounded-to-bounded trains lie outside it.
+
+The outer-to-outer population has the opposite behavior. If `lambda` denotes
+Lebesgue measure on the projective direction circle `R/pi Z`, and `omega` is any weak
+limit of the O--O train direction counting measures normalized by `D`, then
+
+\[
+\boxed{
+omega=\frac{\lambda-\beta}{2}
+}
+\tag{TP.9}
+\]
+
+for some positive measure `beta<=lambda` of total mass at most `2g`. Consequently
+
+\[
+\boxed{
+\left\|\omega-\frac{\lambda}{2}\right\|_{\rm TV}\le g.
+}
+\tag{TP.10}
+\]
+
+In particular every fixed projective interval `I` satisfies
+
+\[
+\boxed{
+\liminf\frac{N_{OO}(I)}D
+\ge
+\max\left\{0,\frac{|I|-2g}{2}\right\}.
+}
+\tag{TP.11}
+\]
+
+Every fixed `pi/6` direction sector therefore contains at least
+
+\[
+\boxed{
+\left(\frac{\pi}{12}-g-o(1)\right)D
+=
+(0.254092387799149\ldots-o(1))D
+}
+\tag{TP.12}
+\]
+
+O--O trains, and every fixed `pi/12` sector contains at least
+
+\[
+\boxed{
+\left(\frac{\pi}{24}-g-o(1)\right)D
+=
+(0.123192693899575\ldots-o(1))D.
+}
+\tag{TP.13}
+\]
+
+Finally, the O--O train crossing graph is a triangle-free circle graph. By the
+classical theorem of Kostochka that every triangle-free circle graph is 5-colourable,
+there is a pairwise noncrossing O--O family of size at least
+
+\[
+\boxed{
+\left(\frac{\pi}{10}-\frac g5-o(1)\right)D
+=
+(0.312617865358979\ldots-o(1))D.
+}
+\tag{TP.14}
+\]
+
+The audited exact O--O multishear therefore supplies at least that many simultaneous
+contact-preserving shear coordinates whose split supports are laminar/dual-tree
+intervals. Inside every fixed `pi/6` direction sector there is such a noncrossing
+family of size at least
+
+\[
+\boxed{
+\left(\frac{\pi}{60}-\frac g5-o(1)\right)D
+=
+(0.050818477559830\ldots-o(1))D.
+}
+\tag{TP.15}
+\]
+
+This changes the live endpoint problem. The exact-surplus endpoint is not a generic
+mixture of singleton, outer-loop, and flower transport. It is an almost separated
+two-phase network:
+
+```text
+bounded--bounded:
+  >= 1.9046256137 D total,
+  >= 1.9046099572 D in one atomic pi/3 orbit,
+  <= 0.0077226566 D outside that orbit;
+
+bounded--outer:
+  <= 0.015414 D;
+
+outer--outer:
+  >= 1.5630893268 D,
+  direction measure within TV 0.007707 of half-Lebesgue,
+  >= 0.3126178654 D in one pairwise-noncrossing exact-shear family.
+```
+
+No diameter-decreasing motion is claimed. The remaining problem is to make the
+diffuse laminar O--O shear reservoir interact with the nearly saturated atomic
+bounded--bounded rhombus grid and the active diameter rows.
+
+---
+
+## 1. Exact endpoint transport identities
+
+The stopped-train endpoint multigraph gives
+
+\[
+2E_{BB}+E_{BO}=Q+4f,
+\qquad
+E_{BO}+2L_O=b.
+\tag{1.1}
+\]
+
+At the exact surplus endpoint, (TP.1) therefore gives, after passing to any subsequence
+on which `E_BO/D -> e`,
+
+\[
+\frac{E_{BB}}D\to B(e):=\frac{M_*-e}{2},
+\tag{1.2}
+\]
+
+and
+
+\[
+\frac{L_O}D\to\frac{\pi-e}{2}.
+\tag{1.3}
+\]
+
+The task is to bound `e`.
+
+---
+
+## 2. Atomic train mass must be bounded--bounded
+
+Let `mu_D` be the stopped-train projective direction counting measure normalized by
+`D`, and pass to the phase subsequence used by the audited atomic decomposition. Let
+
+\[
+A=\sum_j M_j
+\tag{2.1}
+\]
+
+be the total atomic mass in absolute `D` normalization, where `M_j` is the mass in one
+exact projective `pi/3` orbit.
+
+The terminal outer walk is asymptotically geodesic around the near disk. The audited
+outer-direction theorem therefore gives
+
+\[
+\nu_D^{out}
+:=
+\frac1D\sum_{\text{outer edge occurrences }a}\delta_{\phi_a}
+\Longrightarrow
+\lambda,
+\tag{2.2}
+\]
+
+where `lambda` is Lebesgue measure on `R/pi Z`.
+
+In particular `lambda` has no atoms. Fix the countable atomic support of the train
+phase limit. For each finite collection of its atoms, choose shrinking disjoint
+neighborhoods. Equation (2.2) says that the number of outer occurrences in those
+neighborhoods is `o(D)` after diagonalization. Every train having an outer endpoint
+uses at least one such occurrence. Hence the entire atomic train mass is carried by
+bounded-to-bounded trains in the limit:
+
+\[
+\boxed{
+A\le B(e).
+}
+\tag{2.3}
+\]
+
+This is stronger than the previous endpoint-capacity estimate `A<=A_0`, because it
+subtracts the actual B--O transport before paying the atomic mass.
+
+---
+
+## 3. Quadratic crossing mass bounds B--O transport by `2g D`
+
+The audited atomic decomposition gives orbit crossing masses `X_j` with
+
+\[
+X_j\le\frac{M_j^2}{4}
+\tag{3.1}
+\]
+
+and
+
+\[
+\sum_jX_j=\Delta_2.
+\tag{3.2}
+\]
+
+Therefore
+
+\[
+\Delta_2
+\le
+\frac14\sum_jM_j^2
+\le
+\frac14\left(\sum_jM_j\right)^2
+=
+\frac{A^2}{4}.
+\tag{3.3}
+\]
+
+Thus
+
+\[
+\boxed{
+A\ge2\sqrt{\Delta_2}=2s_2.
+}
+\tag{3.4}
+\]
+
+Combine (2.3), (1.2), and (3.4):
+
+\[
+2s_2
+\le
+\frac{M_*-e}{2}.
+\]
+
+Since `M_*=4s_2+2g`,
+
+\[
+\boxed{
+e\le2g.
+}
+\tag{3.5}
+\]
+
+Because the initial subsequence was arbitrary, this proves (TP.2). Equations
+(1.2)--(1.3) immediately give (TP.3)--(TP.4).
+
+The constant `2g` is sharp for this scalar relaxation: at `e=2g`, bounded-to-bounded
+capacity is exactly `2s_2`, and one atomic orbit of that mass can saturate the weighted
+Mantel bound `Delta_2=A^2/4`.
+
+---
+
+## 4. Sharp dominant-orbit frontier
+
+Fix a subsequential value `e in [0,2g]` and abbreviate
+
+\[
+B=B(e)=\frac{M_*-e}{2}.
+\]
+
+Let
+
+\[
+W:=\max_jM_j.
+\tag{4.1}
+\]
+
+From (3.2),
+
+\[
+4\Delta_2\le\sum_jM_j^2.
+\tag{4.2}
+\]
+
+The elementary bound `sum M_j^2 <= W A <= WB` first gives
+
+\[
+W\ge\frac{4\Delta_2}{B}>\frac B2
+\tag{4.3}
+\]
+
+throughout `2s_2<=B<=A_0`. Since `W>B/2`, all residual atomic mass has total at most
+`B-W<W`. Concentrating that residual in one orbit maximizes its square sum, so
+
+\[
+\sum_jM_j^2
+\le
+W^2+(A-W)^2
+\le
+W^2+(B-W)^2.
+\tag{4.4}
+\]
+
+Combining (4.2)--(4.4),
+
+\[
+W^2+(B-W)^2\ge4\Delta_2.
+\tag{4.5}
+\]
+
+On `[B/2,B]` the left side is increasing in `W`, so solving the quadratic gives
+
+\[
+W\ge
+\frac{B+\sqrt{8\Delta_2-B^2}}2
+=w(e).
+\tag{4.6}
+\]
+
+As in Section 2, atomic trains in this dominant orbit have only `o(D)` outer
+occurrences. Hence `(W-o(1))D` of them are bounded-to-bounded. Since the entire
+bounded-to-bounded population is `(B+o(1))D`, all B--B trains outside the dominant
+orbit number at most
+
+\[
+(B-W+o(1))D
+\le
+(r(e)+o(1))D.
+\tag{4.7}
+\]
+
+This proves (TP.5)--(TP.8).
+
+The same calculation localizes the quadratic strict-rhombus mass. All non-dominant
+atomic orbits together have mass at most `r(e)`, hence crossing mass at most
+
+\[
+\frac{r(e)^2}{4}.
+\tag{4.8}
+\]
+
+Crossings involving the nonatomic phase part are `o(D^2)` in the audited atomic
+decomposition. Therefore the dominant orbit alone carries at least
+
+\[
+\boxed{
+\left(
+\Delta_2-\frac{r(e)^2}{4}-o(1)
+\right)D^2
+}
+\tag{4.9}
+\]
+
+strict rhombi.
+
+At the worst endpoint `e=0`,
+
+\[
+\Delta_2-\frac{r(0)^2}{4}
+=
+0.906884772261126\ldots.
+\tag{4.10}
+\]
+
+Thus essentially the full quadratic rhombus population lies in the dominant bounded
+three-axis orbit, while the O--O population below remains diffuse.
+
+---
+
+## 5. The O--O direction measure is almost half-Lebesgue
+
+Define the normalized projective direction measures
+
+\[
+\beta_D
+:=
+\frac1D\sum_{\tau\in BO}\delta_{\phi_\tau},
+\qquad
+\omega_D
+:=
+\frac1D\sum_{\tau\in OO}\delta_{\phi_\tau}.
+\tag{5.1}
+\]
+
+Every B--O train contributes one outer terminal occurrence and every O--O train
+contributes two. This includes an O--O singleton: its physical bridge edge has two
+outer-face occurrences. Therefore the occurrence-counted identity is exact:
+
+\[
+\boxed{
+\nu_D^{out}=\beta_D+2\omega_D.
+}
+\tag{5.2}
+\]
+
+Pass to a weakly convergent subsequence. By (2.2),
+
+\[
+\nu_D^{out}\Longrightarrow\lambda.
+\]
+
+Because `beta_D` is literally a submeasure of `nu_D^{out}`, every weak limit `beta`
+satisfies
+
+\[
+0\le\beta\le\lambda.
+\tag{5.3}
+\]
+
+Its total mass is the subsequential value `e`, so Section 3 gives
+
+\[
+\beta(\mathbb R/\pi\mathbb Z)=e\le2g.
+\tag{5.4}
+\]
+
+Equation (5.2) then yields
+
+\[
+\omega=\frac{\lambda-\beta}{2},
+\]
+
+which is (TP.9). Since `beta` is positive,
+
+\[
+\left\|\omega-\frac{\lambda}{2}\right\|_{\rm TV}
+=
+\frac{\|\beta\|_{\rm TV}}2
+=
+\frac e2
+\le g.
+\tag{5.5}
+\]
+
+For every fixed projective interval `I`, its endpoints have zero `beta` mass because
+`beta<=lambda`, so weak convergence gives
+
+\[
+\omega(I)
+=
+\frac{|I|-\beta(I)}2
+\ge
+\frac{|I|-e}{2}
+\ge
+\frac{|I|-2g}{2}.
+\tag{5.6}
+\]
+
+This proves (TP.10)--(TP.13).
+
+The conclusion is stronger than saying there are many O--O trains. A linear O--O
+population is forced in every fixed direction sector, and its limiting direction
+measure can differ from half-Lebesgue by total variation at most `0.007707`.
+
+---
+
+## 6. O--O trains form a triangle-free circle graph
+
+The following topological observation turns the diffuse O--O population into a large
+laminar shear reservoir.
+
+### Lemma 6.1 — O--O crossing graph is a circle graph
+
+Ignore O--O singleton trains for a moment. Replace the embedded contact graph by a
+small regular neighborhood, resolve repeated outer-face vertices into their physical
+outer-walk occurrences, and cap every inner boundary component. The result is a
+topological disk. Every non-singleton O--O train midpoint path becomes a proper simple
+arc in this disk with two distinct endpoints on its boundary. Capping the inner
+components does not alter any train path or any train-path intersection.
+
+By the audited train pseudosegment theorem, two distinct train arcs meet transversely
+at most once. Two proper arcs in a disk have odd mod-two intersection number exactly
+when their four boundary endpoints alternate. Since the actual intersection count is
+zero or one, two train arcs cross if and only if their endpoint pairs alternate.
+
+Replacing every train arc by the straight chord joining the corresponding two points
+on an abstract circle therefore preserves the intersection graph. Hence the
+non-singleton O--O train crossing graph is a circle graph.
+
+An O--O singleton contains no strict rhombus and is an isolated vertex of the train
+crossing graph. Adding isolated vertices preserves the circle-graph conclusion.
+`square`
+
+The full train crossing graph is simple and triangle-free by the audited finite train
+theorem. Its O--O induced subgraph is therefore a triangle-free circle graph.
+
+A theorem of Kostochka (1988) says every triangle-free circle graph is 5-colourable.
+A convenient later source stating this result is A. A. Ageev, *Every circle graph of
+girth at least 5 is 3-colourable*, Discrete Mathematics 195 (1999), 229--233,
+doi:10.1016/S0012-365X(98)00192-7. Ageev's abstract records the Kostochka
+5-colour theorem and the sharp 5-chromatic triangle-free examples.
+
+Therefore every O--O train set contains an independent set of at least one fifth of
+its vertices. In train geometry, an independent set is a pairwise noncrossing train
+family. Applying (TP.4) proves (TP.14). Applying the same theorem to the induced
+subgraph in any fixed `pi/6` sector and using (TP.12) proves (TP.15).
+
+The constant five is best possible for arbitrary triangle-free circle graphs, so any
+improvement of the factor `1/5` must use additional train geometry.
+
+---
+
+## 7. Exact multishear consequence
+
+The audited exact arbitrary-O--O multishear applies to every finite O--O family. Thus
+(TP.4) already gives
+
+\[
+\left(\frac{\pi}{2}-g-o(1)\right)D
+\]
+
+simultaneous exact contact-preserving shear coordinates on the full source.
+
+For the pairwise noncrossing family from Section 6, the cut system is laminar after
+rooting the complement dual tree. Every source pair is separated by exactly the
+train cuts on one dual-tree path, so its signed split support is an interval in that
+tree order. Hence (TP.14) gives an exact laminar multishear of dimension at least
+
+\[
+(0.312617865358979\ldots-o(1))D.
+\tag{7.1}
+\]
+
+For every fixed `pi/6` direction sector, (TP.15) gives a laminar exact multishear with
+
+\[
+(0.050818477559830\ldots-o(1))D
+\tag{7.2}
+\]
+
+coordinates whose train directions all lie in that sector.
+
+No claim is made that these motions preserve the diameter bound. Section 152's
+two-sided diameter bracing applies to every individual O--O coordinate, and the exact
+multishear formulas describe all active-diameter first and second variations. The new
+gain is that this system is now simultaneously large, nearly direction-uniform, and
+laminar on a linear subfamily.
+
+---
+
+## 8. Remaining obstruction
+
+At exact terminal FREE surplus saturation, the prior fan split has collapsed into a
+more rigid transport decomposition. Up to the small `g`-budget:
+
+1. bounded-to-bounded trains form one near-Mantel atomic `pi/3` orbit carrying almost
+   every strict-rhombus crossing;
+2. outer-to-outer trains use almost the entire outer boundary occurrence budget and
+   have an almost half-Lebesgue direction measure;
+3. bounded-to-outer trains are limited to at most `0.015414D+o(D)`;
+4. a `0.312617865...D` O--O subfamily is pairwise noncrossing and supports an exact
+   laminar multishear.
+
+This does not yet contradict C-II. The next useful theorem should couple the
+near-saturated atomic B--B grid to the diffuse laminar O--O shears. Two concrete
+routes remain:
+
+- prove that a near-disk source cannot route `Theta(D)` direction-diffuse O--O trains
+  through or around a B--B train system carrying
+  `(0.906884772...-o(1))D^2` rhombi while keeping the O--O rhombus incidence
+  `o(D^2)`; or
+- use the laminar signed-split matrix of the `0.312617865...D` exact O--O shear family,
+  together with two-sided active-diameter bracing, to produce a simultaneous
+  diameter-nonincreasing non-Euclidean motion.
+
+No theorem-state file is changed.

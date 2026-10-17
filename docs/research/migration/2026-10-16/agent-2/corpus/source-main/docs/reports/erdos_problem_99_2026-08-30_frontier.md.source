@@ -1,0 +1,588 @@
+<!-- theorem-state: {"artifact_id":"ART-8BEE317F2303","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Erdős Problem #99 — 2026-08-30 frontier log
+
+## Checkpoint 0: starting state
+
+The canonical v1.7 modules still report **LEVEL I STATUS: STILL OPEN**.  The
+authoritative Target A endpoint is the source-specific response inequality
+
+\[
+\dim\ker S \ge \Delta_\Lambda-d_{\rm int},
+\]
+
+equivalently
+
+\[
+\operatorname{rank}S
+\le d_{\rm int}+|C^\partial|-\Delta_\Lambda.
+\]
+
+An earlier draft described the fixed-source target as a finite unit-separated
+\(Q\subseteq H\) with
+\[
+|Q|-|N_A(Q)|\ge \widehat p_H+1.
+\]
+The exact same-source capacity theorem now rules this out: every such Q has
+deficiency at most \(\widehat p_H=\alpha_1(H)-|A|\).  The valid remaining source
+route must add boundary/diameter control to an add-one replacement, or connect the
+capacity flag directly to the Schur response inequality.  The current flag reaches,
+but cannot exceed, the available same-hull slack \(\widehat p_H\).
+
+## Checkpoint 3: fixed-source Hall-surplus route is impossible as stated
+
+The source module's exact capacity theorem gives, for every finite unit-separated
+\(Q\subseteq H\),
+\[
+|Q|-|N_A(Q)|\le\alpha_1(H)-|A|=\widehat p_H.
+\]
+The proof is the one-line replacement argument: remove the source points in
+\(N_A(Q)\), insert Q, and compare the resulting unit-separated subset of H with
+\(\alpha_1(H)\).  Therefore a proposed \(\widehat p_H+1\) deficiency—and the older
+\(p+1\) proposal—is not an open lemma; it is incompatible with the definitions.
+
+This audit removes a misleading branch from the frontier.  It does not change the
+direct Target A endpoint
+\[
+\dim\ker S\ge\Delta_\Lambda-d_{\rm int},
+\]
+nor the first-transition and finite-gap investigations.  A source replacement can
+still be useful if its complete configuration is certified to have diameter \(<D\)
+(for example by placing all \(N+1\) points in \(\operatorname{int}H\)), or if it is
+transported directly into the Schur response.  A same-hull Hall number alone cannot
+provide the contradiction.
+
+## Literature/status check
+
+On 2026-08-30 an external status search found the maintained Erdős Problems entry
+for Problem 99, which continues to label it **OPEN** and explicitly states the
+same global-minimizer quantifiers.  No newer proof or certified infinite family
+was found in that check.  This is a status check only, not a mathematical input
+to the theorem stack.
+
+## Immediate research tests
+
+1. Determine whether the exchange flag plus a first triangle supplies a
+   boundary/diameter-certified add-one replacement.  A fixed-source Hall surplus
+   beyond the exact same-hull capacity is unavailable.
+2. Build small exact planar conflict networks and source/capacity realizations
+   as regressions.  Any proposed rank-saving rule must survive these finite
+   models before it is promoted.
+3. If the flag route fails, isolate the precise geometric datum absent from the
+   abstract transversal-matroid model; that datum is the next bridge to prove.
+
+This file is a dated working log.  It does not change the canonical theorem state
+until a new claim has been independently audited.
+
+## Checkpoint 1: exact finite regressions for the two local scaffold phases
+
+The local scaffold cells have two neutral models: a degree-three monomer and a
+degree-four dimer.  Both admit arbitrarily large finite patches in which the
+left side is completely matchable.  This is a useful negative result: local
+degree, planarity, and the neutral phase count do not by themselves imply the
+left-nullity needed at the Target A endpoint.
+
+Let
+
+
+\[
+ e_1=(1,0),\qquad e_2=(1/2,\sqrt3/2),\qquad
+ \Lambda=\mathbb Z e_1+\mathbb Z e_2,
+\]
+
+and write
+\(\|a e_1+b e_2\|^2=a^2+ab+b^2\).  For integers L >= 2, take the
+parallelogram-indexed patch
+
+
+\[
+ H_L=\operatorname{conv}X_L,qquad
+ X_L=\{c+i e_1+j e_2:0\le i,j<L\}.
+\]
+
+For the monomer phase, use c=(e_1+e_2)/3.  A lattice point
+\(a e_1+b e_2\) is at distance strictly less than one from
+\(x_{ij}=c+i e_1+j e_2\) exactly when
+
+
+\[
+ (a,b)\in\{(i,j),(i+1,j),(i,j+1)\}.
+\]
+
+Indeed, after putting r=a-i and s=b-j, the squared distance is
+\(Q(1/3-r,1/3-s)\), where Q(u,v)=u^2+uv+v^2.  The three displayed
+choices give Q=1/3; a direct check of the neighboring integer pairs gives
+at least 1 for every other pair.  The natural finite one-layer shore
+
+
+\[
+ Y_L^{(3)}=\{a e_1+b e_2:0\le a,b\le L\}\setminus
+ \{L e_1+L e_2\}
+\]
+
+contains all three conflicts of every x_{ij}.  The map
+\(x_{ij}\mapsto i e_1+j e_2\) is a matching saturating X_L.  Thus
+
+
+\[
+ \nu(X_L,Y_L^{(3)})=L^2,\qquad
+ |X_L|-\nu=0,qquad |Y_L^{(3)}|-\nu=2L.
+\]
+
+The omitted corner is not an arbitrary truncation: it is the only corner of
+this particular monomer hull's lattice square that lies beyond the closed
+unit parallel body; retaining it would not improve the left matching anyway.
+
+For the dimer phase, take c=(e_1+e_2)/2 and
+
+
+\[
+ Y_L^{(4)}=\{a e_1+b e_2:0\le a,b\le L\}.
+\]
+
+The strict conflict neighborhood is exactly
+
+
+\[
+ N(x_{ij})=\{i e_1+j e_2,(i+1)e_1+j e_2,
+ i e_1+(j+1)e_2,(i+1)e_1+(j+1)e_2\}.
+\]
+
+Here Q(\pm1/2,\pm1/2)=1/4 for the four choices, while every other
+integer pair gives squared distance at least one.  Again
+\(x_{ij}\mapsto i e_1+j e_2\) saturates the left side, so
+
+
+\[
+ \nu(X_L,Y_L^{(4)})=L^2,\qquad
+ |X_L|-\nu=0,qquad |Y_L^{(4)}|-\nu=2L+1.
+\]
+
+Both patches are unit-separated translated lattice patches, and their
+conflict graphs have exactly the advertised monomer or dimer local degrees.
+They are not counterexamples to the Erdős problem: they deliberately contain
+unit triangles and do not satisfy the source-side triangle-free hypotheses.
+Their role is sharper.  Any proposed proof of
+
+
+\[
+ d_{\rm sc}=|X_m|-\nu(X_m,Y)\ge \Delta_\Lambda-d_{\rm int}
+\]
+
+must use a genuinely global fact tying the independent source to the chosen
+smaller-optimum scaffold.  Planarity, Euler charge, local cell type, and the
+neutral phase equation all survive these exact regressions while
+\(d_{\rm sc}=0\) for every \(L\).
+
+## Checkpoint 2: rectangular shear patches cannot be global minimizers
+
+A natural triangle-free bulk ansatz is a rectangular patch of a sheared
+triangular lattice: keep one unit direction and stretch the other.  This
+ansatz can be excluded exactly, without assuming that a global minimizer is
+lattice-based.
+
+For \(s>1\), set
+
+\[
+ u=(1,0),\qquad v_s=s(1/2,\sqrt3/2),
+\]
+
+and, for \(r,q\ge2\), define
+
+\[
+ P_{r,q}(s)=\{i u+j v_s:0\le i<r,\ 0\le j<q\}.
+\]
+
+For an integer difference \(a u+b v_s\), its squared length is
+
+\[
+ F_s(a,b)=a^2+sab+s^2b^2
+        =\left(a+\frac{s b}{2}\right)^2+\frac34s^2b^2.
+\]
+
+The patch is unit-separated.  If \(b=0\), a nonzero difference has length at
+least one.  If \(|b|\ge2\), the completed-square expression is larger than
+one.  For \(b=1\), the cases \(a=0\) and \(a=-1\) give
+\(s^2>1\) and \(1-s+s^2=1+s(s-1)>1\).  For \(a\ge1\) the inequality is
+immediate, while for \(a=-k\le-2\),
+\[
+ F_s(-k,1)-1=s^2-ks+k^2-1
+ =\left(s-\frac{k}{2}\right)^2+\frac{3k^2}{4}-1>0.
+\]
+The case \(b=-1\) follows by replacing \(a\) with \(-a\).  Thus every
+nonzero difference has length at least one.
+
+The same patch has no unit equilateral triangle.  A unit equilateral
+triangle would require two independent unit vectors in the difference
+lattice.  The preceding calculation shows that the only unit difference
+vectors are \(u\) and \(-u\): the \(b\ne0\) cases are strictly longer than
+one.  Hence no three points of \(P_{r,q}(s)\) form a unit equilateral
+triangle.
+
+Nevertheless, it cannot be a global diameter minimizer for its cardinality.
+Put \(A=r-1\) and \(B=q-1\).  The maximum of the convex quadratic \(F_s\) on
+\([-A,A]\times[-B,B]\) occurs at a corner, and because \(sAB>0\),
+
+\[
+ \operatorname{diam}(P_{r,q}(s))^2
+ =F_s(A,B)=A^2+sAB+s^2B^2.
+\]
+
+The unsheared patch \(P_{r,q}(1)\) has the same \(rq\) points and is also
+unit-separated, but
+
+\[
+ F_s(A,B)-F_1(A,B)
+ =(s-1)\bigl(AB+(s+1)B^2\bigr)>0.
+\]
+
+Therefore \(P_{r,q}(1)\) is a strict smaller-diameter competitor.  The
+conclusion is conditional but exact:
+
+> No global minimizer for \(D(rq)\) can be a rectangular \(s\)-sheared
+> triangular-lattice patch with \(s>1\) and \(r,q\ge2\).
+
+This removes one plausible infinite triangle-free model, but it does not
+control non-rectangular shear, boundary surgery, or aperiodic configurations.
+It also does not provide the missing Hall surplus.  The remaining geometric
+bridge must therefore address how a genuinely irregular triangle-free
+configuration differs from every regular bulk patch while preserving the
+global diameter optimum.
+
+## Checkpoint 3: a geometric cyclic circuit with only one unit of deficiency
+
+The cyclic fundamental-circuit branch also has a small exact obstruction to
+naive face-charge summation.  Let
+
+\[
+ b_k=(\cos(k\pi/3),\sin(k\pi/3)),\qquad 0\le k<6,
+\]
+
+and let \(B=\{b_0,\ldots,b_5\}\).  Define four left-shore points
+
+\[
+ \begin{aligned}
+ x_1&=(-2/5,4/5),&
+ x_2&=(1/20,17/10),\\
+ x_3&=(2/5,3/20),&
+ x_4&=(1,19/20).
+ \end{aligned}
+\]
+
+Direct squared-distance checks give
+
+\[
+ \begin{aligned}
+ N(x_1)=N(x_2)&=\{b_1,b_2\},\\
+ N(x_3)=N(x_4)&=\{b_0,b_1\},
+ \end{aligned}
+\]
+
+where \(N(x)=\{b\in B:|x-b|<1\}\).  The only borderline nonedge needed in
+the calculation is \(|x_1-b_3|=1\); all other omitted cross-distances are
+strictly greater than one.  The four \(x_i\) are unit-separated: the only
+unit pair is \(|x_3-x_4|=1\), and the other five pairwise distances are
+strictly greater than one.  The regular hexagon \(B\) is unit-separated as
+well.
+
+Consequently the induced strict-conflict graph on
+\[
+ C=\{x_1,x_2,x_3,x_4\},
+ \qquad
+ W=\{b_0,b_1,b_2\}
+\]
+is two copies of \(K_{2,2}\) sharing \(b_1\).  It is connected, every right
+vertex has degree at least two, and
+
+\[
+ |C|=4,\qquad |W|=3,\qquad
+ \nu(C,W)=3,\qquad |C|-\nu=1.
+\]
+
+Every proper left subset is matchable, so \(C\) is a minimal transversal
+matroid circuit.  Its graph has \(e=8\) and \(e-2|W|=2\), hence two bounded
+faces in a planar embedding, while its Hall deficiency is only one.  If a
+full capacity-style shore is desired, add the three left points
+\(b_3,b_4,b_5\); they are isolated cross-shore matching components and do
+not alter the circuit.
+
+This is an exact geometric cyclic regression, not merely an abstract planar
+graph.  It rules out the implication
+
+\[
+ \text{“two bounded circuit faces”}\quad\Longrightarrow\quad
+ \text{“two independent Hall/Schur null directions.”}
+\]
+
+The cyclic branch therefore needs an overlap-sensitive linkage theorem, not
+just a count of \(\kappa=e-2|W|\).  Together with the monomer and dimer
+patches above, this leaves the unresolved Target A input explicitly global:
+it must couple the source minimizer or the diameter boundary to the circuit
+geometry.
+
+## Checkpoint 4: activation budget and fixed-angle lattice exclusion
+
+The canonical Target A module now contains a monotone activation theorem: starting
+from any triangle-free global minimizer, strict rattlers can be moved one at a time
+to regular active boundaries while preserving every old active pair and creating
+exactly one new pair per step.  At most \(\pi D\) steps can terminate on the
+diameter boundary, because all diameter endpoints lie on the hull and the hull
+perimeter is at most \(\pi D\).  Consequently a retained strict-rattler population
+of size \(\rho\) leaves at least
+\[
+\max\{0,\rho-5\widehat p_H-2\pi D\}
+\]
+unit-first activations after same-hull extension, and these activations contain a
+forest of at least half that many edges.  The forest rigidity rows are independent,
+so this is a constraint-rank resource rather than an automatic Schur nullity.
+
+The canonical Target B module also now proves, by a centered fundamental-cell
+estimate, that an exact subset of a unit-rhombic lattice with angle bounded away
+from \(\pi/3\) and \(2\pi/3\) cannot be a sufficiently large global minimizer.  Any
+one-lattice survivor must satisfy
+\[
+\sin\theta-\frac{\sqrt3}{2}=O(n^{-1/2}).
+\]
+This formalizes the earlier fixed-oblique scaling heuristic, but leaves varying-angle
+and nonlattice meshes untouched.
+
+The exact Level I endpoint remains the Target A source-response inequality and the
+Target B higher-order shell-rank theorem.  The executable checks
+capacity_flag.py --demo and transition_scan.py --width 2 --height 2 both pass.
+
+## Checkpoint 5: plateau-endpoint audit (left versus right)
+
+An attempted strengthening of the source-capacity theorem needs a correction.
+If
+
+\[
+N_-:=\min\{q:D(q)=D\},
+\qquad
+N_+:=\max\{q:D(q)=D\},
+\]
+
+and \(A_-\) is an \(N_-\)-point subset of a \(D\)-optimal configuration,
+then \(H_-:=\operatorname{conv}A_-\) has diameter \(D\), but the definition of
+\(N_-\) only controls \(D(N_--1)\).  It does **not** imply
+\(D(N_-+1)>D\): the plateau can continue to \(N_+\).  The only unconditional
+capacity conclusion is therefore
+
+\[
+N_-
+\le \alpha_1(H_-)
+\le N_+.
+\]
+
+By contrast, at the right endpoint the zero-slack statement is exact.  If
+\(A_+\) is any \(N_+\)-point \(D\)-optimal configuration and
+\(H_+:=\operatorname{conv}A_+\), then
+
+\[
+\boxed{\alpha_1(H_+)=N_+.}
+\]
+
+The lower bound is supplied by \(A_+\).  A unit-separated set of \(N_++1\)
+points in \(H_+\) would have diameter at most \(D\), forcing
+\(D(N_++1)\le D\), contrary to the definition of the right endpoint and
+monotonicity of \(D(\cdot)\).  Hence the rebuilt source has
+\(\widehat p_{H_+}=0\), while a left-endpoint source retains at most the full
+plateau slack \(N_+-N_-\).
+
+This audit preserves the exact target: zero source slack may be used only after
+right-endpoint terminalization (and a corresponding scaffold rebuild).  It must
+not be silently assigned to the original source or to the left endpoint.
+
+**LEVEL I STATUS: STILL OPEN.  TARGET A REMAINS UNRESOLVED.**
+
+## Checkpoint 7: facial localization of train holonomy is rejected
+
+An attempted overlap argument assigned mod-three gain charges to bounded faces of
+the train-crossing graph.  That graph is an intersection graph, not the planar
+rhombic 1-skeleton: it has \(O(D)\) train vertices but \(\Theta(D^2)\) crossing
+edges, and so cannot have a planar embedding for large \(D\).  The physical rhombic
+complex is planar, but the gain labels live on pairs of trains rather than on its
+1-skeleton edges.  Consequently the proposed facial charge, dual cut, and
+overlap-safe \(O(D)\)-face conclusion are not valid.
+
+The exact mod-three cycle lemma and its warning about edge-disjoint cycles remain
+valid.  A future face-space construction must introduce a new planar incidence
+object that preserves the train-pair gain; none is currently known.
+
+## Checkpoint 8: dense low-defect cores are three-phase-balanced
+
+The valid replacement is a graph-diameter argument.  If crossing defects satisfy
+\(\sum_e\delta_e\le C_\delta D\) and the number of trains satisfies \(T\le C_TD\),
+delete crossings with \(\delta_e>D^{-1+\eta}\), then iteratively delete trains of
+current degree below \(\lambda D\).  The exact count is
+\[
+C_\delta D^{2-\eta}+C_T\lambda D^2
+\]
+deleted crossing edges.  Every retained component has minimum degree
+\(\lambda D\), hence graph diameter at most
+\(\lceil3T/(\lambda D)\rceil\).  A root-to-edge closed walk then has bounded
+length and vanishing defect as \(D\to\infty\); a nonzero \(\mathbb Z/3\) gain would
+force defect at least \(\pi/3\), a contradiction.  Thus each retained component
+has an exact three-phase potential, with at most \(C_T/\lambda+1\) components.
+
+For fixed \(\varepsilon>0\), choosing \(\lambda\) small leaves all but
+\(\varepsilon D^2+o(D^2)\) crossing edges in only \(O_\varepsilon(1)\) balanced
+components.  This is a concrete reduction of the ordered shell problem, but the
+deleted interface edges are still too numerous at the boundary-rank scale to close
+Target B.
+
+## Checkpoint 6: the first-transition escape test survives at (3\times3)
+
+The finite transition harness was rerun with the triangular-lattice comparison
+shore generated in the (3\times3) rectangular window.  The window contains 14
+comparison points.  Exhaustive enumeration of its triangle-free subshores gives
+
+\[
+\begin{array}{c|r}
+\text{quantity}&\text{count}\\ \hline
+\text{triangle-free subshores}&5339\\
+\text{subshores with a first bad flag member}&5339\\
+\text{first-transition triangles}&6891\\
+\text{locally caged first-transition triangles}&3560\\
+\text{locally escapable first-transition triangles}&3331
+\end{array}
+\]
+
+Here “locally caged” means that the newly inserted point has no one-point
+velocity, with every other point held fixed, that strictly increases all of its
+current unit separations.  The test omits diameter constraints and uses the
+floating-point coordinates generated by `transition_scan.py`; it is therefore a
+reproducible diagnostic rather than an exact global theorem.  The (2\times2)
+window gives the same qualitative behavior (112 caged versus 79 escapable).
+
+The main conclusion is negative but useful: neither a deterministic circuit
+ordering nor a one-point perturbation of the first inserted site can be promoted
+to the missing Target A alternative.  More than half of the (3\times3) first
+transition triangles are already caged in this restricted slice.  A successful
+argument must either move a coupled set of sites, exploit diameter-boundary
+freedom, or charge the caged angular pattern to the global Schur/source budget.
+
+The counts are now independently reproduced by
+`research/exact_lattice_transition.py`.  That checker uses integer axial
+coordinates and the exact form (a^2+ab+b^2); it reports the same 5,339
+nonempty triangle-free subshores, 6,891 first-transition triangles, and the
+3,560/3,331 caged/escapable split.  The geometric row-window selection still
+uses the stated (3\times3) dimensions, but no floating-point tolerance enters
+the distance or cage classification after the points are selected.
+
+**LEVEL I STATUS: STILL OPEN.  TARGET A REMAINS UNRESOLVED.**
+
+## Checkpoint 9: phase order improves the dense-core extremal count
+
+The three-phase potential does more than certify local consistency.  Orienting
+crossings cyclically between the three phase classes and using the absence of
+directed 3-cycles gives the exact component bound
+
+\[
+|E(H)|\le \max_i n_i(T_H-n_i).
+\]
+
+Thus a balanced phase core has at most \((2/9+o(1))T_H^2\) crossing edges,
+strictly below the generic tripartite/Mantel scale \(T_H^2/4\).  The estimate
+also holds in the long-directed-cycle alternative; it is not an acyclicity
+argument.  This is a genuine phase-sensitive density reduction, but it still
+does not extract the complete bipartite block required by the Cartesian
+determinant inequality, nor does it charge the deleted interface edges at the
+boundary-rank scale.
+
+## Checkpoint 10: exact maximal phase density is bipartite
+
+For three equal phase classes of size (m), the phase-order bound gives
+(|E|le2m^2).  Equality forces every phase triple to contain exactly two
+crossings, and an explicit colouring argument then shows that the whole crossing
+graph is complete bipartite (the two colour classes may split each phase class).
+This identifies the exact dense endpoint, but not its near-equality stability and
+not the additive two-direction train block required by the determinant estimate.
+
+## Checkpoint 11: boundary-order density gaps are impossible for feasible sets
+
+The tempting estimate
+
+\[
+|A|\le \frac{\pi}{2\sqrt3}D^2-\kappa D+O(1)
+\]
+
+for all triangle-free unit-separated sets of diameter at most (D) is false.  Take
+the unit rhombic lattice with angle (pi/3+D^{-3}).  Its only unit lattice
+vectors are the two basis directions and their negatives, so it contains no unit
+equilateral triangle.  Translation-averaging the lattice in an open disk of
+diameter (D) gives a set with
+
+\[
+|A|\ge \frac{\pi D^2}{4\sin(\pi/3+D^{-3})}
+ =\frac{\pi}{2\sqrt3}D^2-O(D^{-1}),
+\]
+
+and the full-density count forces a unit-neighbor pair, so the minimum distance is
+exactly one.  This is a rigorous family of near-optimal triangle-free feasible sets,
+not a family of global minimizers.  It confirms that the remaining proof must detect
+finite global optimality at the vanishing-shear scale; density and local
+triangle-freeness alone cannot supply the missing boundary-order sign.
+
+## Checkpoint 12: aligned phase wings have a quadratic diameter penalty
+
+The exact bipartite phase endpoint supplies two opposite-side wings sharing a
+phase family.  An elementary determinant identity shows that aligned wings obey
+
+\[
+D^2\ge2\bigl(|\det(U,V)|+|\det(U,W)|\bigr).
+\]
+
+At balanced equality, one wing has at least half the third phase class, so an
+aligned endpoint core would force at least \((3\sqrt3/2)m^2\) diameter-square
+while its \(2m^2+O(m)\) rhombi permit only \((4\sqrt3/\pi+o(1))m^2\).  The
+remaining gap is explicit: the two abstract complete-bipartite wings need not yet
+be shown to share a base up to a displacement parallel to their common train
+direction.  The fan inequality is therefore conditional, but it converts the
+phase endpoint into a concrete geometric alignment target.
+
+The displacement audit is exact: if the two wing bases differ by (Z), the same
+four-corner calculation gives
+
+\[
+D^2\ge2\left|\det(U,V-W-Z)\right|,
+\qquad
+D^2\ge |\det(U,V)|+|\det(U,W)|.
+\]
+
+Thus uncontrolled transverse displacement can erase the aligned factor of two;
+the remaining route must control that displacement over many wing pairs or find a
+second independent common direction.
+
+## Checkpoint 13: coherent additive blocks have a (3m^2) endpoint cost
+
+For an additive (a\times b) block whose two train directions are phase-coherent
+and near the triangular angles, the block corners give
+
+\[
+D^2\ge\cos^2\!\alpha\left(a^2+b^2+2\cos(\pi/3+\beta+2\alpha)ab\right).
+\]
+
+Thus a coherent balanced (m\times m) block costs ((3-o(1))m^2) in
+diameter-square.  At the exact balanced phase endpoint, a complete (m\)-by-(m)
+crossing family would then contradict the global upper bound
+((4\sqrt3/\pi+o(1))m^2), provided the family is an additive block.  This
+strengthens the target: the unresolved step is biclique-to-additive-block
+promotion (or an equivalent penalty from intervening trains), not the final
+diameter comparison.
+
+## Checkpoint 14: weighted coherent stars are conditionally excluded
+
+The coherent-block norm estimate extends beyond balanced classes.  If a phase
+star has class sizes \(a\le b\le M\), accounts for
+\(R=M(a+b)+o(M^2)\) rhombi, and its \(M\times b\) pair is an additive coherent
+block, then
+\[
+D^2\ge(1-o(1))M^2(1+t+t^2),
+\qquad t=b/M,
+\]
+whereas \(D(n)^2<(2ct+o(1))M^2\), \(c=2\sqrt3/\pi\).  The difference
+\(1+t+t^2-2ct\) is uniformly positive because its discriminant is negative.
+Thus every non-degenerate full coherent-star endpoint (\(b/M\ge\tau>0\)) is
+ruled out once the phase crossing family is promoted from a biclique to an
+additive block.  If \(b/M\to0\), the same comparison requires the stronger
+remainder \(R=M(a+b)+o(Mb)\).  The promotion remains the unresolved geometric
+step.

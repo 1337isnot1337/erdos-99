@@ -1,0 +1,179 @@
+# Hostile audit — Type-II linear loaded-unit-side floor
+
+**Date:** 2026-09-12  
+**Reviewed:** `research/target_c_linear_non_tooth_boundary_deficit_2026-09-12.md`  
+**Disposition:** **PASS at proof-only scope, with a stronger retained defect tradeoff.**  
+**Theorem authority:** unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The reviewed theorem combines the audited-working Type-II hull-side theorem with
+canonical Section 63 and audited-working §142. The main conclusion is
+
+\[
+\liminf {e_{BB}\over D}
+\ge {\gamma\over2},
+\qquad
+\gamma=2\sqrt{\frac\pi{2\sqrt3}}-\frac\pi2.
+\]
+
+Because `c_B=0` in Type II, every edge counted by `e_BB` is an actual unit side of the
+loaded force hull.
+
+## 1. Exact algebra
+
+For sufficiently large Type-II survivors, the independently audited hull-side theorem
+sets `c_B=0` in the canonical Section-63 identity
+
+\[
+e_{BB}=Q+2k+u_B+c_B.
+\]
+
+Thus
+
+\[
+\boxed{e_{BB}=Q+2k+u_B.}
+\tag{A.1}
+\]
+
+Every bounded nonquadrilateral face has degree at least five, so
+
+\[
+Q\ge f.
+\tag{A.2}
+\]
+
+Therefore one actually has the stronger finite inequality
+
+\[
+\boxed{
+e_{BB}
+\ge f+2k+u_B
+={2f-k\over2}+{5k\over2}+u_B.
+}
+\tag{A.3}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+e_{BB}-{5k\over2}-u_B
+\ge {2f-k\over2}.
+}
+\tag{A.4}
+\]
+
+Audited-working §142 gives
+
+\[
+\liminf {2f-k\over D}\ge\gamma.
+\]
+
+Hence the strongest direct asymptotic consequence of this chain is
+
+\[
+\boxed{
+\liminf {1\over D}
+\left(e_{BB}-{5k\over2}-u_B\right)
+\ge {\gamma\over2}.
+}
+\tag{A.5}
+\]
+
+Dropping the nonnegative defect terms recovers the reviewed headline floor
+
+\[
+\boxed{
+\liminf {e_{BB}\over D}\ge {\gamma\over2}
+=0.166914643466509\ldots .
+}
+\tag{A.6}
+\]
+
+The reviewed proof used the equivalent upper chain
+`2f-k<=2e_BB-5k-2u_B<=2e_BB`; its signs are correct.
+
+**Verdict:** PASS, with (A.5) retained as the sharper form.
+
+## 2. Conversion to hull geometry is valid only in Type II
+
+The conclusion that all `e_BB` contacts are force-hull sides uses the separately
+audited Type-II theorem `c_B=0`. Without that theorem, `e_BB` can include loaded-loaded
+unit chords that are not hull sides. The reviewed note states this scope explicitly.
+
+With `c_B=0`, if `m` is the number of nonunit loaded-hull sides, then
+
+\[
+e_{BB}=q-m.
+\]
+
+Audited-working §130 gives
+
+\[
+r_{deep}=m-T_{\triangle}\ge0.
+\]
+
+Therefore
+
+\[
+\boxed{q-T_{\triangle}=e_{BB}+r_{deep}.}
+\tag{A.7}
+\]
+
+Combining (A.6) and (A.7) proves the linear non-tooth deficit. No stopped-train count
+is confused with the augmented triangular-face count.
+
+**Verdict:** PASS.
+
+## 3. Constant check
+
+With
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+\gamma=2\sqrt{\Delta_2}-{\pi\over2},
+\]
+
+one has
+
+\[
+{\gamma\over2}
+=\sqrt{\frac\pi{2\sqrt3}}-{\pi\over4}
+=0.166914643466509\ldots .
+\]
+
+No rounded decimal is used in the proof.
+
+**Verdict:** PASS.
+
+## 4. Occurrence, bridge, and source-point scope
+
+The §142 lower bound is built from the occurrence-counted stopped-train ledger and
+explicitly retains singleton trains, bridges, and bounded exceptional faces. The
+Section-63 quantities `Q,k,u_B` are global exact ledger terms. Hence no simple-boundary
+substitution enters (A.3).
+
+Contact-isolated source points are untouched. Neither Section 63 nor §142 inserts them
+into the Section-57 core affine kernel.
+
+**Verdict:** PASS.
+
+## 5. Explicit non-implications
+
+The theorem does not prove:
+
+- a positive lower bound on KKT stress carried by the unit hull sides;
+- a long consecutive run of unit hull sides;
+- that a unit hull side belongs to an outer-to-outer train;
+- that the linear unit-side set alone forces a unit equilateral triangle; or
+- a same-cardinality diameter-decreasing deformation.
+
+In particular, an oblique near-triangular bulk with a boundary-order defect layer is
+not excluded merely by (A.6).
+
+## Final disposition
+
+**PASS at proof-only scope.** Future use should prefer the stronger defect-sensitive
+form (A.5). The exact loaded-unit-side floor is a genuine new structural constraint,
+but C-II remains open.

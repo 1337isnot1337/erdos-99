@@ -1,0 +1,92 @@
+# Hostile audit — hull-augmentation outer-pocket mixed-wall repacking
+
+**Date:** 2026-09-12  
+**Audited source:** `research/target_c_outer_pocket_mixed_wall_repacking.md`  
+**Verdict:** PASS at the stated Section-67/77 outer-pocket scope.  
+**LEVEL I STATUS:** STILL OPEN. C-II REMAINS OPEN.
+
+## 1. Geometry and scope
+
+Canonical Section 67 constructs a 2-connected hull-augmented graph by adding force-hull
+sides. Each new convex outer pocket inside `F` is bounded by one added side and one
+complementary old outer-contact route. Canonical Section 67.6 counts the added side as
+one graph-boundary edge and explicitly assigns contact-isolated source points on an
+added side to the unique adjacent interior pocket.
+
+This is not the geometry of the exterior caps in `K\setminus int F` from Sections
+77.2/80/162. The source theorem now states that distinction explicitly. No conclusion
+in this audit extends the mixed-wall theorem to those exterior caps.
+
+## 2. Shield audit
+
+A subunit segment from a safe replacement point to an old source outside the pocket
+must first leave the convex pocket through one of three boundary types.
+
+1. Relative interior of the added side: the replacement point is then at distance
+   `<1` from that side, contradicting the side-distance guard.
+2. A boundary source vertex: the vertex guard applies directly if the old point is the
+   vertex; otherwise the two segment pieces have total length at least two.
+3. Relative interior of an old unit-contact edge: source separation puts the outside
+   point at distance at least one from both endpoints, and the exact two-endpoint
+   crossing inequality forces the replacement point to be within unit distance of
+   those endpoints.
+
+A contact-isolated source point lying on the added side is protected by case 1; the
+added side is never treated as a unit contact.
+
+**Verdict:** the mixed-wall shield is valid.
+
+## 3. Diameter-cover replacement
+
+Assigned chamber points are contact-isolated and are outside the positive contact
+core. Actual diameter endpoints are loaded force-hull/source-hull extreme vertices,
+so the assigned set is disjoint from any diameter-graph vertex cover.
+
+Deleting the assigned chamber points and a cover of the complete actual diameter
+graph, then inserting the same total number of safe points, preserves cardinality and
+unit separation. Every new point lies in `int F subset int K`, so every pair involving
+a new point has distance strictly below `D`; the cover removes every old-old pair at
+exactly `D`.
+
+**Verdict:** the strict-diameter competitor is valid.
+
+## 4. Capacity constants
+
+For an outer pocket with `ell` old unit-contact edges and added-side length `s`, the
+augmented boundary count is `k=ell+1`. Hence
+
+\[
+ r=\sigma-k=A/a_0+s/2-\ell/2-z.
+\]
+
+The contact-chain area theorem gives safe area at least
+
+\[
+ A-s-\ell c_*-h_*.
+\]
+
+Dividing by `a_0=sqrt(3)/2` and substituting the preceding identity yields
+
+\[
+ {area(S_{mix})\over a_0}-z
+ \ge r-{\pi\over3\sqrt3}\ell
+ -\left({2\over\sqrt3}+{1\over2}\right)s
+ -{h_*\over a_0}.
+\]
+
+A single triangular-lattice translate realizes at least the floor of the left-hand
+side in extra packing points. The direction is a constructive lower bound, not a
+reversal of Oler.
+
+**Verdict:** the coefficients and floor criterion are correct.
+
+## 5. Scope correction recorded
+
+An earlier scratch file on this research branch used the phrase "exterior cap" for
+this one-added-side geometry. That wording was rejected after checking Sections 77.2,
+80 and 162. The valid object is the Section-67/77 hull-augmentation outer pocket inside
+`F`. The final proof package must exclude the stale overbroad scratch file.
+
+**Final verdict:** PASS for hull-augmentation outer pockets only. The Section-80/162
+exterior-cap alternative still relies on the audited-working full-collar theorem of
+Section 165.

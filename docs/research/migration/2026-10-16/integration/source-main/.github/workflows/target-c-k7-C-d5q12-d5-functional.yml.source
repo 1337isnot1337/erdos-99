@@ -1,0 +1,39 @@
+name: Target C k7 C d5q12 d5 singleton functional
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    if: github.actor == github.repository_owner && vars.E99_HISTORICAL_CI == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - start: 0
+            end: 82000
+          - start: 82000
+            end: 164000
+          - start: 164000
+            end: 246000
+          - start: 246000
+            end: 325955
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact-enumeration dependency
+        run: python -m pip install 'numpy>=2.0,<3'
+      - name: Run exact d5 functional shard
+        run: >-
+          python research/verify_target_c_support7_global_segment_relative_six_noroot_k5_d5_capacity10_functional_2026_09_21.py
+          --cover-start ${{ matrix.start }}
+          --cover-end ${{ matrix.end }}

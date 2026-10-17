@@ -1,0 +1,15 @@
+diff --git a/research/README.md b/research/README.md
+index 765484397..c7c8cdc63 100644
+--- a/research/README.md
++++ b/research/README.md
+@@ -10,6 +10,10 @@ despite an independently verified alternative full-source packet. Every source
+ label, inactive pair and contact isolate is retained. Public decimal fixture
+ coordinates are exact rational input with checked hashes. No numerical
+ infeasibility, global optimality or eventual Level I conclusion is certified.
++A separate unlabelled cloud of all 175 contracted old sites and 174 actual
++triangular-lattice sites has exact packing capacity 174: one forbidden triangle
++and 173 disjoint forbidden pairs partition every site. Its complete integer
++certificate is checked independently of the discovery matching solver.
+ See the [report](../docs/reports/global_palette_endpoints_and_full_source_exhaustion_2026-10-12.md).
+ 
+ ## 2026-10-12 — global colour lifting, rank barrier, planar endpoints

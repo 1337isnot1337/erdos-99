@@ -1,0 +1,271 @@
+# Erdős Problem #99 — continuation prompt from audited v1.7 state
+
+Work entirely in this single context. Do not spawn subagents, parallel agents,
+delegated workers, or separate research agents.
+
+Internet literature search is allowed and encouraged when it can materially help the
+proof. Treat external results as untrusted until their exact hypotheses are checked.
+
+This is a continuation of a long research investigation, not a fresh attempt. The
+objective is a **Level I proof or disproof of Erdős Problem #99**. The immediate
+priority is to **resolve Target A completely**. Do not work on Target B unless a
+Target B theorem directly supplies the missing Target A bridge.
+
+## Canonical files
+
+Read the current documentation map first:
+
+- `../README.md`
+- `../problem/statement.md`
+- `../problem/literature_baseline.md`
+- `../theory/01-local-structure.md`
+- `../theory/02-nonlinear-and-regressions.md`
+- `../theory/03-oler-shell.md`
+- `../targets/target-a/README.md`
+- all four Target A route modules listed there, including
+  `../targets/target-a/04-post-v1.7-audited-addenda.md`
+- `../targets/target-b/README.md` only as needed for cross-branch facts.
+
+The seven supplied primary PDFs remain under `../../papers/primary/`. Related
+literature is under `../../papers/related/` and is not automatically part of the
+proved theorem stack.
+
+Historical reports, old prompts, and the archived monolithic report are provenance,
+not independent theorem sources. Later audited corrections in the active modules take
+precedence over older formulations.
+
+## Problem and quantifiers
+
+\[
+D(n)=\min\{\operatorname{diam}(A):A\subset\mathbb R^2,\ |A|=n,\ |x-y|\ge1\}.
+\]
+
+Erdős Problem #99 asks whether there is \(n_0\) such that for every \(n\ge n_0\),
+**every** global minimizer contains a unit equilateral triangle.
+
+A proof that some minimizer contains a triangle is insufficient. A local or
+near-optimal triangle-free packing is not a disproof. A disproof requires
+triangle-free **global minimizers** for arbitrarily large cardinalities.
+
+## Authoritative Target A endpoint
+
+For the plateau-terminalized Schur response,
+
+\[
+\zeta=\dim\ker S=|C^\partial|-\operatorname{rank}S,
+\qquad
+s=\Delta_\Lambda-d_{\rm int}.
+\]
+
+A hypothetical survivor has
+
+\[
+\boxed{g=\Delta_\Lambda-d_{\rm sc}=s-\zeta=\rho^\dagger-\Phi(v)\ge1.}
+\]
+
+Target A closes exactly if
+
+\[
+\boxed{\zeta\ge s,}
+\]
+
+or equivalently
+
+\[
+\boxed{\operatorname{rank}S
+\le d_{\rm int}+|C^\partial|-\Delta_\Lambda.}
+\]
+
+The Schur response is an exact planar strict gammoid: its rank is a maximum
+vertex-disjoint alternating linkage and a minimum directed vertex separator. Planarity
+alone does not force the required rank loss.
+
+## Critical source-Hall correction
+
+Let the genuine source be \(A\subset H=\operatorname{conv}A\), \(|A|=N\), and put
+
+\[
+\widehat p_H=\alpha_1(H)-N.
+\]
+
+The exact fixed-container theorem gives, for **every** finite unit-separated
+\(Q\subset H\),
+
+\[
+\boxed{|Q|-|N_A(Q)|\le\widehat p_H.}
+\]
+
+Therefore the formerly proposed target
+
+\[
+|Q|-|N_A(Q)|\ge\widehat p_H+1
+\]
+
+inside the same hull is **impossible**, not an open lemma. Do not attempt to prove it.
+The same correction applies after maximal triangle-free extension \(B\): if
+\(\tau=\alpha_1(H)-|B|\), no unit-separated \(Q\subset H\) can have
+\(|Q|-|N_B(Q)|>\tau\).
+
+A source replacement can close Target A only when it carries extra information not
+contained in the same-hull Hall number—for example:
+
+1. an \(N+1\)-point unit-separated competitor inside a set of diameter **strictly
+   below** \(D(N)\); or
+2. a direct transport of source/transition data into \(s\) independent Schur-kernel
+   directions / alternating nonlinkages.
+
+This correction is binding.
+
+## Exact source-capacity flag and its limitation
+
+For the maximal triangle-free extension \(B\subset H\), choose a capacity endpoint
+\(X\subset H\) with \(|X|=\alpha_1(H)=|B|+\tau\). The fixed-basis fundamental-circuit
+construction gives global optima
+
+\[
+P_E=(B\setminus W_E)\cup U_E,
+\qquad
+|P_E|=|B|+|E|,
+\qquad
+\operatorname{diam}P_E=D.
+\]
+
+The exact source-Hall profile is
+
+\[
+N_A(P_E)=A,
+\qquad
+|P_E|-|N_A(P_E)|=k+|E|,
+\]
+
+where \(|B|=N+k\). Its residual capacity slack is \(\tau-|E|\), and
+
+\[
+\boxed{(k+|E|)+(\tau-|E|)=\widehat p_H.}
+\]
+
+Thus the exchange flag consumes the available source slack exactly and reaches, but
+can never exceed, \(\widehat p_H\). Do not try to obtain the missing integer merely
+by pushing the fixed-hull flag farther.
+
+If all flag members are triangle-free, the chain reaches a triangle-free capacity
+endpoint. Otherwise let \(P_j\) be the first triangle-producing member. Every new
+triangle meets \(\Delta X_j\), and the transition is an exact net-+1 Hall-tight
+exchange.
+
+## First-transition geometry now proved
+
+The active Target A module contains two rigorous perturbation results.
+
+1. **One-point semicircle/cage dichotomy.** A non-diametral inserted point whose unit
+   contact directions lie in a closed semicircle can be moved slightly so that all
+   newly created triangles disappear while feasibility and diameter are preserved.
+   If the directions are not contained in a closed semicircle, the point is locally
+   isolated in the one-point feasible slice.
+
+2. **Simultaneous fixed-container locked-triangle alternative.** For a unit-separated
+   configuration in a convex hull, either one expansive-cone velocity simultaneously
+   breaks every unit triangle, or there exists a unit triangle all three of whose edge
+   derivatives vanish for every fixed-container infinitesimally feasible velocity.
+   Applied to the first bad flag member, the first alternative gives a triangle-free
+   global optimum at the same new cardinality.
+
+The locked branch is real. Proposition 139.1 gives an exact two-leaf tree-circuit
+family for which either leaf swap creates an infinitesimally pinned unit triangle.
+Therefore leaf ordering and one-point perturbation alone cannot close Target A.
+
+**Do not claim that one locked triangle gives one Schur null direction.** That
+transport theorem is still missing.
+
+## Homothetic strain and Kuperberg gap concentration
+
+For a free triangular rhombic patch
+
+\[
+P_L=(1+\varepsilon_L)R_L,
+\]
+
+Section 137 proves:
+
+\[
+L\varepsilon_L\ge\eta>0
+\quad\Longrightarrow\quad
+\alpha_1(\operatorname{conv}P_L)\ge|P_L|+1
+\]
+
+for all sufficiently large \(L\). In particular this covers every fixed
+\(\varepsilon_L=\alpha/L\), \(\alpha>0\). The proof concentrates the accumulated
+strain into a fixed positive linear gap and inserts one finite
+Kuperberg–Kuperberg–Kuperberg witness.
+
+This theorem is **free-patch only**. An embedded monomer domain may have exterior
+blockers; a successful Target A application needs an exterior-protected concentration
+or another global transport argument.
+
+The post-v1.7 addendum also proves the vanishing-gap complexity theorem. If
+\(\kappa_*(d)\) is the smallest number of deleted old centers in any positive-gain
+finite rearrangement of any triangular-lattice gap packing of width \(d\), then
+
+\[
+\boxed{\kappa_*(d)\to\infty\qquad(d\downarrow0).}
+\]
+
+Kuperberg proves finiteness for every fixed positive gap, but no explicit growth rate
+is presently established. Do not assume \(O(d^{-c})\), \(\Theta(d^{-c})\), or any
+other rate.
+
+## Other binding source facts
+
+Use, when relevant:
+
+- strict-rattler product-germ theorem: finite-order local KKT/stress cannot see strict
+  rattler coordinates;
+- exact inner-parallel capacity theorem;
+- same-cardinality rattler-preserving source saturation;
+- capacity-shadow injection \(A\to X_{\max}\) with displacement \(<1\), same-cardinality
+  global optimum partner, and hull Hausdorff distance \(<1\);
+- finite-chord stress inequality;
+- only collinear root paths can support codimension-one affine triangle walls;
+- monotone activation normal form, persistent unit-activation transfer, activation-edge
+  forest, and independence of its rigidity rows.
+
+These are exact tools, not a license to identify representatives. In particular,
+replacing or extending the source may change its contact graph and requires rebuilding
+any scaffold whose construction depended on the old representative.
+
+## Highest-value next attacks
+
+Prioritize one of these exact bridges:
+
+1. **Locked-triangle → Schur transport.** Use global first-transition/source data—not
+   local cage geometry alone—to turn locked triangle constraints into at least
+   \(s=\Delta_\Lambda-d_{\rm int}\) independent failures of the boundary alternating
+   linkage.
+
+2. **Exterior-compatible strain concentration.** Upgrade the free-rhombus add-one
+   theorem to a coherent monomer domain with the actual exterior source/scaffold
+   blockers and a strict diameter certificate.
+
+3. **Capacity-shadow transport.** Push the bounded-displacement same-cardinality
+   source shadow through deletion/plateau terminalization and prove that its boundary
+   displacement lands in an \(s\)-dimensional kernel of \(S\).
+
+4. **Activation-rank compensation.** Show that the large independent activation-edge
+   forest forced by a super-boundary rattler source requires compensating dependence
+   in the boundary Schur response.
+
+5. **Vanishing-gap quantitative theory.** Derive an explicit rate or constructive
+   upper/lower bound for Kuperberg witness complexity only if it can be connected to
+   the scale and protection available in the actual monomer scaffold.
+
+Regression-test every proposed theorem against the exact two-leaf cage, strained
+monomer patch, mixed monomer interface, cyclic Hall circuit, regular-shell, long
+rooted-chain, and overlapping-circuit examples already stored in the repository.
+
+## Status discipline
+
+Do not call Target A solved until the exact Schur inequality is proved or a genuine
+source replacement gives a strictly smaller-diameter global competitor. Do not call a
+local, asymptotic, or finite regression a global counterexample.
+
+**LEVEL I STATUS: STILL OPEN. TARGET A REMAINS UNRESOLVED.**

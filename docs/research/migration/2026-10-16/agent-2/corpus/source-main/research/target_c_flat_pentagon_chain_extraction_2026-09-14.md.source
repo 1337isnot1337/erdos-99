@@ -1,0 +1,283 @@
+# Erdős Problem #99 — flat-pentagon contact-chain extraction
+
+**Date:** 2026-09-14
+**Target:** C-II, canonical full-core Type-II branch
+**Dependencies:** global pentagon face floor/degree-excess bookkeeping; empty-pentagon trapezoid stability; triangle-free contact-degree bound
+**Claim class:** proof-only structural refinement awaiting independent audit
+**External literature:** no new import
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The empty-pentagon endpoint theorem identifies the zero-residual pentagon with the flat
+three-triangle lattice trapezoid. Its global extraction keeps pairwise vertex-disjoint
+**five-vertex pentagons**, which costs a factor `1/21`. For the next deformation target
+that is stronger than necessary. The local obstruction is already present in the
+three-vertex boundary chain through the almost-flat middle vertex.
+
+Let
+
+\[
+X:=Q-f,
+\qquad
+f_*:=\sqrt{\Delta_2}-{\pi\over4}+0.00021
+=0.167124643466509\ldots .
+\]
+
+On every Type-II subsequence with
+
+\[
+R_F=o(D),
+\]
+
+there is a scale `epsilon_D->0` for which the following two source-level inequalities
+hold:
+
+\[
+\boxed{
+X+5V_{flat}\ge(f_*-o(1))D,
+}
+\tag{FC.1}
+\]
+
+and
+
+\[
+\boxed{
+X+13C_{flat}\ge(f_*-o(1))D.
+}
+\tag{FC.2}
+\]
+
+Here:
+
+- `V_flat` is the number of **distinct positive-core source vertices** that occur as
+  the almost-flat middle vertex of one good pentagon and have two exact unit-contact
+  neighbors whose angle at the middle vertex is at least `pi-epsilon_D`;
+- `C_flat` is the maximum number of pairwise vertex-disjoint three-vertex contact
+  chains `l-m-r` of that form.
+
+Thus if `Q-f=o(D)`,
+
+\[
+\boxed{
+{V_{flat}\over D}\ge {f_*\over5}-o(1)
+=0.0334249286933018\ldots-o(1),
+}
+\tag{FC.3}
+\]
+
+and
+
+\[
+\boxed{
+{C_{flat}\over D}\ge {f_*\over13}-o(1)
+=0.0128557418051160\ldots-o(1).
+}
+\tag{FC.4}
+\]
+
+This is stronger for chain-based deformations than the `f_*/21` whole-pentagon
+extraction. It also retains a continuous tradeoff with high-degree face excess.
+
+## 1. Good flat pentagons versus degree excess
+
+Let `p_5` be the number of bounded pentagonal exceptional faces. The exact degree
+identity gives
+
+\[
+X=Q-f=\sum_{d\ge6}(d-5)n_d,
+\]
+
+so
+
+\[
+p_5\ge f-X.
+\tag{FC.5}
+\]
+
+Fix `epsilon>0`. The empty-pentagon endpoint theorem and Wegner first-jump argument
+supply a threshold `theta(epsilon)>0` such that every pentagon with
+
+\[
+r(P)<\theta(\epsilon)
+\]
+
+has no assigned interior isolate and, after labeling its boundary as
+`l,m,r,a,b`, satisfies
+
+\[
+|l-m|=|m-r|=1,
+\qquad
+\angle lmr>\pi-\epsilon,
+\tag{FC.6}
+\]
+
+and is `epsilon`-close to the flat unit trapezoid.
+
+On `R_F=o(D)`, all local residuals are nonnegative and sum to `R_F`, so the number of
+pentagons failing this fixed threshold is `o(D)`. If `G_epsilon` is the number of good
+pentagons, then
+
+\[
+G_\epsilon\ge p_5-o(D).
+\]
+
+Combining with (FC.5) and the AG42/Section-171 face floor
+
+\[
+f\ge(f_*-o(1))D
+\]
+
+gives
+
+\[
+\boxed{
+X+G_\epsilon\ge(f_*-o(1))D.
+}
+\tag{FC.7}
+\]
+
+This relation is valid without assuming `X=o(D)`.
+
+## 2. Distinct almost-flat core vertices: loss only `1/5`
+
+Choose the distinguished almost-flat middle vertex `m(P)` from each good pentagon.
+For sufficiently small fixed `epsilon`, the trapezoid stability neighborhood makes
+this middle vertex unambiguous; alternatively choose any vertex satisfying (FC.6).
+
+A triangle-free unit-contact graph has contact degree at most five. Around a source
+vertex, each bounded face containing that vertex occupies an incident face sector, so
+one source vertex belongs to at most five bounded exceptional faces. Consequently one
+source vertex can be selected as `m(P)` for at most five good pentagons.
+
+If `V_flat(epsilon)` is the number of distinct selected middle vertices, then
+
+\[
+G_\epsilon\le5V_{flat}(\epsilon).
+\tag{FC.8}
+\]
+
+Together with (FC.7),
+
+\[
+\boxed{
+X+5V_{flat}(\epsilon)
+\ge(f_*-o(1))D.
+}
+\tag{FC.9}
+\]
+
+In particular
+
+\[
+\max\left\{{X\over D},{V_{flat}(\epsilon)\over D}\right\}
+\ge {f_*\over6}-o(1)
+=0.0278541072444181\ldots-o(1).
+\tag{FC.10}
+\]
+
+## 3. Vertex-disjoint near-straight unit-contact chains: loss `1/13`
+
+For each good pentagon retain only its three-vertex path
+
+\[
+l(P)-m(P)-r(P).
+\]
+
+Build the conflict graph whose vertices are these paths and where two paths are
+adjacent when they share a source vertex. A fixed source vertex lies on at most five
+bounded exceptional faces, and only one path was selected from each face. Therefore a
+source vertex belongs to at most five selected paths.
+
+Each selected path has three source vertices. Through each of them there are at most
+four other paths, so the conflict graph has maximum degree at most
+
+\[
+3(5-1)=12.
+\tag{FC.11}
+\]
+
+A greedy independent set therefore keeps at least `1/13` of all good paths. If
+`C_flat(epsilon)` denotes the maximum vertex-disjoint subfamily,
+
+\[
+C_{flat}(\epsilon)\ge {G_\epsilon\over13}.
+\tag{FC.12}
+\]
+
+Using (FC.7),
+
+\[
+\boxed{
+X+13C_{flat}(\epsilon)
+\ge(f_*-o(1))D.
+}
+\tag{FC.13}
+\]
+
+The corresponding unweighted alternative is
+
+\[
+\max\left\{{X\over D},{C_{flat}(\epsilon)\over D}\right\}
+\ge {f_*\over14}-o(1)
+=0.0119374745333220\ldots-o(1).
+\tag{FC.14}
+\]
+
+## 4. Vanishing-turn diagonalization
+
+For every fixed `epsilon>0`, (FC.9) and (FC.13) hold with only `o(D)` loss on an
+`R_F=o(D)` subsequence. Apply them successively to `epsilon_j=1/j`. Because
+`R_F/D->0`, choose a nondecreasing index `j(D)->infinity` slowly enough that the
+high-residual exceptional loss at threshold `theta(epsilon_{j(D)})` remains `o(D)`.
+Set
+
+\[
+\epsilon_D:=\epsilon_{j(D)}\to0.
+\]
+
+Then (FC.1)--(FC.2) hold at this vanishing turn scale. In the low-degree-excess corner
+`X=o(D)`, the extracted chains satisfy
+
+\[
+|l-m|=|m-r|=1,
+\qquad
+\angle lmr=\pi-o(1),
+\]
+
+with the coefficient in (FC.4).
+
+## 5. Frontier effect
+
+The hard small-residual, low-degree-excess branch can now be stated without carrying
+whole pentagonal holes:
+
+```text
+Omega(D) distinct positive-core vertices
+with two exact unit contacts becoming antipodal,
+and Omega(D) vertex-disjoint length-two unit-contact chains
+with total turning angle o(1) per chain.
+```
+
+The next useful theorem can therefore attack a three-vertex source object directly.
+Possible mechanisms are a quantitative KKT force-balance constraint at the middle
+vertex, a source-preserving straight-chain flex, or a charge of these almost-zero turns
+to the diameter bracing system. None of those consequences is asserted here.
+
+## 6. Scope audit
+
+- The theorem is conditional on the true force-hull residual branch `R_F=o(D)`.
+- No assumption `Q-f=o(D)` is needed for the tradeoff forms (FC.1)--(FC.2).
+- `V_flat` counts distinct actual source vertices in the positive contact core.
+- `C_flat` counts pairwise vertex-disjoint actual three-source contact paths; it does
+  not count whole pentagons.
+- The factor `1/13` uses only the canonical triangle-free contact-degree bound and one
+  chosen path per bounded face.
+- The flattening input is exactly the already-classified empty-pentagon trapezoid
+  endpoint; no new equality classification is imported.
+- No exact hidden contact, unit equilateral triangle, or strict sub-`D` competitor is
+  produced.
+
+C-II and Level I remain open.

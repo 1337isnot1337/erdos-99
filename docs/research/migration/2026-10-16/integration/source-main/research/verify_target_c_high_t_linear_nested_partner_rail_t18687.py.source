@@ -1,0 +1,102 @@
+#!/usr/bin/env python3
+"""Regression checks for the linear-density nested partner-rail theorem.
+
+The proof is exact for arbitrary size. This script exhaustively checks the weak
+order statement for small two-shore thrackle graphs with partner collisions and
+checks the current extraction constants.
+"""
+from fractions import Fraction as Q
+from itertools import product
+import math
+
+
+def in_open_arc(x, a, b, N):
+    return 0 < (x - a) % N < (b - a) % N
+
+
+def crosses(e, f, N):
+    a, b = e
+    c, d = f
+    if len({a, b, c, d}) != 4:
+        return False
+    return in_open_arc(c, a, b, N) != in_open_arc(d, a, b, N)
+
+
+def nondecreasing(xs):
+    return all(a <= b for a, b in zip(xs, xs[1:]))
+
+
+def nonincreasing(xs):
+    return all(a >= b for a, b in zip(xs, xs[1:]))
+
+
+def unimodal(xs):
+    return any(nondecreasing(xs[: p + 1]) and nonincreasing(xs[p:]) for p in range(len(xs)))
+
+
+# P is a block of n distinct birth vertices, Q a complementary block of m
+# possible partner vertices. An assignment q_i may repeat (a shared partner).
+# If every pair of edges either shares Q or crosses, q_i must be nondecreasing.
+for n in range(2, 7):
+    for m in range(1, 5):
+        N = n + m
+        for assignment in product(range(m), repeat=n):
+            edges = [(i, n + assignment[i]) for i in range(n)]
+            thrackle = True
+            for i in range(n):
+                for j in range(i + 1, n):
+                    if assignment[i] == assignment[j]:
+                        continue
+                    if not crosses(edges[i], edges[j], N):
+                        thrackle = False
+                        break
+                if not thrackle:
+                    break
+            if thrackle:
+                assert nondecreasing(assignment), (n, m, assignment)
+
+# The partner-region word may contain ties and is weakly unimodal. Splitting it
+# as (b_N^+,...,b_1^+ | b_1^-,...,b_N^-) forces one natural lane to be
+# nonincreasing.
+for M in range(1, 5):
+    for S in product(range(4), repeat=2 * M):
+        if not unimodal(S):
+            continue
+        A = S[:M]
+        B = S[M:]
+        plus_natural = tuple(reversed(A))
+        minus_natural = B
+        assert nonincreasing(plus_natural) or nonincreasing(minus_natural), (M, S)
+
+# Current quantitative constants.
+c0 = Q(113, 20_000_000)
+rho = c0 / 100
+delta = c0 / 100
+eta = c0 / 50
+lam = c0 - 6 * rho - eta - 2 * delta
+assert lam == Q(1017, 200_000_000)
+
+kappa = 3 ** (1 / 8)
+full_disjoint = float(lam) / (4 * kappa)
+coherent_disjoint = float(lam) / (8 * kappa)
+assert abs(full_disjoint - 1.108130246375694e-6) < 5e-19
+assert abs(coherent_disjoint - 5.54065123187847e-7) < 5e-19
+
+sigma = Q(1, 2)
+mu = (1 - sigma) * lam
+K = 1 / (sigma * lam)
+budget_coherent_disjoint = float(mu) / (8 * kappa)
+assert abs(float(mu) - 2.5425e-6) < 1e-20
+assert abs(float(K) - 393313.66764995083) < 1e-9
+assert abs(budget_coherent_disjoint - 2.770325615939235e-7) < 5e-20
+
+print("PASS: linear nested partner-rail regressions")
+print("weak two-shore thrackle order checked with partner collisions")
+print("unimodal nested-lane implication checked with ties")
+print("90% linear nested density =", float(lam))
+print("90% coherent-sign linear density =", float(lam) / 2)
+print("endpoint-disjoint nested D^(1/4) coefficient =", full_disjoint)
+print("coherent-sign endpoint-disjoint coefficient =", coherent_disjoint)
+print("half-quantile linear nested density =", float(mu))
+print("half-quantile reaction ceiling =", float(K))
+print("half-quantile coherent endpoint-disjoint coefficient =", budget_coherent_disjoint)

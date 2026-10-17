@@ -1,0 +1,184 @@
+# Target C support-seven: a six-exchange barrier for the 45-cycle metric test
+
+Date: 2026-09-19
+
+Status: exact structural refinement of the generic reciprocal metric layer. The theorem-state authority is unchanged. C-II remains open.
+
+## Result
+
+Let `F` be the selected 45 simple `K8` four-cycles in the current complete metric test. The preceding exact audits ruled out every sufficient 44-cycle family using zero through five cycles outside `F`.
+
+The new audit rules out the six-outsider layer:
+
+\[
+\boxed{\text{Any sufficient 44-cycle family must use at least seven cycles outside }F.}
+\]
+
+Equivalently, a hypothetical sufficient 44-cycle family must omit at least eight of the current 45 selected cycles and introduce at least seven external simple four-cycles.
+
+Certificate:
+
+`research/verify_target_c_support7_global_segment_45_four_cycle_six_exchange_barrier_2026_09_19.py`
+
+The verifier imports the preceding exact four-exchange construction to rebuild the 165 external cycle rows, their 105 projective quotient classes, and the 45 selected-cycle coordinates. All kernel and compensation decisions in the new layer are exact integer or rational arithmetic.
+
+## Dimension reduction
+
+For six external cycles `E`, a 44-cycle replacement contains 38 members of `F`, so seven selected cycles are removed. Let `d(E)` be the rank of the six external images modulo
+
+\[
+W=\operatorname{span}(\mathrm{SIDE}\cup F).
+\]
+
+The external cycles supply a `W`-valued kernel of dimension
+
+\[
+6-d(E).
+\]
+
+If the seven removed selected coordinates touch `t(R)` of the fifteen three-coordinate ground blocks, recovering all missing ground equations requires
+
+\[
+t(R)\le 6-d(E).
+\tag{1}
+\]
+
+Seven removed coordinates touch at least three blocks, so `d(E)<=3`. Each external projective class contains at most two cycles, hence six external cycles use at least three projective classes and `d(E)>=2`. Only quotient ranks two and three can possibly work.
+
+For rank three the kernel has dimension three, so exactly three ground blocks may be touched. The only seven-coordinate removal patterns are
+
+- `3+3+1`;
+- `3+2+2`.
+
+For rank two the kernel has dimension four. In addition to those three-block patterns, four touched blocks are possible, with distributions
+
+- `3+2+1+1`;
+- `2+2+2+1`.
+
+No other removal shape satisfies (1).
+
+## Exact rank-at-most-three candidate ledger
+
+As in the five-outsider audit, the compact quotient directions lie in
+
+\[
+\{-1,0,1\}^{59}.
+\]
+
+The verifier enumerates every span of three of the 105 projective quotient directions over `F_251`, pools equal reduced row spaces, and expands each pooled flat into its available external cycles. The pooled-flat cycle capacities are exactly
+
+```text
+capacity 5: 76950 flats
+capacity 6: 30800 flats
+capacity 7:   900 flats
+capacity 8:  1140 flats
+```
+
+Every rational-rank-at-most-three six-set occurs in this ledger. The finite-field indexing is exact: a nonzero `4x4` minor of a `{-1,0,1}` matrix has absolute value at most 16 by Hadamard, and a nonzero `3x3` minor has absolute value below 6, so reduction modulo 251 cannot erase a nonzero minor relevant to the rank-two/rank-three classification.
+
+After deduplication there are exactly
+
+\[
+\boxed{66980}
+\]
+
+candidate six-outsider sets. Their exact quotient ranks are
+
+```text
+rank 3: 66960
+rank 2:    20
+```
+
+For every candidate, the verifier constructs exact kernel relations by Cramer's rule on certified pivot coordinates and then checks each relation in all 59 quotient coordinates.
+
+## Rank-three audit
+
+Each rank-three set has a three-dimensional `W` kernel and must use a three-block removal pattern.
+
+There are
+
+\[
+\binom{15}{3}\left(9+27\right)
+=455\cdot36
+=\boxed{16380}
+\]
+
+possible `3+3+1` or `3+2+2` removal patterns per candidate. Across 66960 rank-three candidates this represents
+
+\[
+66960\cdot16380
+=\boxed{1,096,804,800}
+\]
+
+removal patterns.
+
+The verifier does not iterate that billion-pattern product mechanically. It applies equivalent exact rank tests in the three-dimensional kernel coefficient space. For `3+3+1`, fixing the singleton block reduces the question to the rank of the eligible full-block coefficient vectors and whether a singleton coefficient vector leaves their plane. For `3+2+2`, fixing the full block reduces the double-block options modulo that full-block direction; exact cross-product projective keys decide whether two distinct double blocks provide independent quotient directions. These tests are equivalent to the nonzero `3x3` determinant condition for the missing three ground rows.
+
+No rank-three candidate works.
+
+## Rank-two audit
+
+There are only 20 exact rank-two six-outsider sets. Their kernels are four-dimensional.
+
+For the three-block patterns, the verifier performs exact fraction-free integer row-rank containment on each seven-coordinate restriction. This covers
+
+\[
+20\cdot16380=\boxed{327600}
+\]
+
+exact `3+3+1` and `3+2+2` checks. None succeeds.
+
+For four touched blocks, the target ground space and the external kernel both have dimension four. Successful compensation therefore requires every kernel row to be blockwise proportional to the corresponding restricted `(1,-1,-1)` ground vector and the resulting `4x4` coefficient matrix to be nonsingular. The number of represented removal patterns per rank-two candidate is
+
+\[
+\binom{15}{4}\left(324+324\right)
+=\boxed{884520},
+\]
+
+covering both `3+2+1+1` and `2+2+2+1`. Across all 20 rank-two candidates this represents
+
+\[
+\boxed{17,690,400}
+\]
+
+four-block patterns. None succeeds.
+
+Thus the complete six-outsider layer is empty.
+
+## Validation
+
+The committed Python verifier was syntax-checked and its 66980-candidate ledger was run exhaustively in deterministic slices against the exact serialized base arrays reconstructed from the preceding verifier. The slice rank counts were:
+
+```text
+[0, 10000)       rank 3: 9998   rank 2: 2
+[10000, 20000)   rank 3: 9999   rank 2: 1
+[20000, 30000)   rank 3: 9998   rank 2: 2
+[30000, 40000)   rank 3: 9998   rank 2: 2
+[40000, 50000)   rank 3: 9997   rank 2: 3
+[50000, 60000)   rank 3: 9996   rank 2: 4
+[60000, 66980)   rank 3: 6974   rank 2: 6
+```
+
+Every slice returned `PASS`. The totals reproduce exactly 66960 rank-three and 20 rank-two cases.
+
+A separately written exact integer C++ audit over the same reconstructed rows independently reproduced the 66960/20 rank census and found no compensation in any rank-three or rank-two case. The C++ check used exact Cramer relations, exact integer row-rank elimination, and integer `3x3`/`4x4` determinants.
+
+## Consequence and next finite target
+
+Combining the zero-through-six audits gives
+
+\[
+\boxed{|E|\ge7}
+\]
+
+for any sufficient 44-cycle family among the 210 simple `K8` four-cycles.
+
+The first unresolved exchange layer is therefore seven external cycles. Such a family removes eight selected cycles. Eight removals touch at least three ground blocks, while the external `W` kernel has dimension `7-d(E)`, so only quotient ranks
+
+\[
+d(E)\le4
+\]
+
+can possibly work. This is the first layer where quotient rank four matters; the triple-flat rank-at-most-three enumeration used above is no longer complete. The next exact finite task is to enumerate rational-rank-at-most-four seven-outsider sets and test the allowed three- and four-block removal patterns.
+
+This is a minimization result for the simple-four-cycle metric completion layer. It does not itself exclude additional generic-H6 states and does not prove that 45 is globally minimal. The explicit reflection-closed generic-H6 endpoint remains 4464 states, and C-II remains open.

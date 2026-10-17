@@ -1,0 +1,217 @@
+<!-- theorem-state: {"artifact_id":"ART-C007489C29AB","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: effective small-slack chart reconstruction for an arbitrary unit wall
+
+Date: 2026-10-07. Authority: audit.75, main
+`baadff26b3fae1107f8ed2d9d18f03f78cd4a23b`.
+**Proved candidate awaiting independent audit.** No promotion.
+
+## 1. Scope, implication and missing transfer
+
+Let F be any convex polygon with b cyclic unit sides in a unit-separated
+set X consisting of those b wall vertices and z interior points. Let
+n=b+z, a=sqrt(3)/4, and define the area-form Oler slack
+
+`sigma=area(F)-a*(2*z+b-2)`.
+
+Suppose 0<=sigma<=1/1000. Then X has a triangulation combinatorially
+equal to the full unit triangular lattice in a convex lattice polygon:
+all interior valences are six, and boundary vertices have one, two or
+three incident triangles. The developed boundary has at most six
+nonstraight corners, with turns multiples of pi/3. After matching this
+chart and anchoring a boundary unit edge, every actual point differs
+from its developed lattice point by at most 60*b*sigma. Every
+triangulation edge has length between 1 and 1+5*sigma_T, where sigma_T
+is its adjacent triangle's area excess above a.
+
+This is a genuine arbitrary-unit-wall conclusion at an explicit small
+**total** slack scope. It is not an arbitrary one-deficit classification:
+one point less adds sqrt(3)/2 to this area-form slack, far beyond the
+hypothesis. Canonical macroscopic chambers have only sigma=O(D), not
+sigma<=1/1000. The missing transfer is precisely the reduction of that
+boundary-order slack to a usable chart/packet. No area-to-capacity
+inference is made.
+
+For the arithmetic six-direction wall with z=N and
+`0<theta<=1/(10000*M^3)`, the earlier explicit area bound gives
+sigma<1/1000. This theorem supplies the complete chart **uniformly in M**,
+with displacement at most 1000*M^4*theta. It replaces a nonquantitative
+Oler-limit localization in this joint regime. Finite triangle forcing
+still needs the quantitative rate/energy and isolation bridge.
+
+`small total full-wall Oler slack -> exact triangular combinatorics and
+explicit chart displacement -> bounded approximate rate system ->
+uniform finite triangle or controlled defect packet`.
+
+Only the first two implications are proved here. They advance the
+maximum-population uniformity obligation and identify the exact slack
+loss that an arbitrary-container transfer must overcome.
+
+## 2. Saturation supplies a bounded-radius triangulation
+
+Oler for a convex unit wall states
+`n<=area(F)/(sqrt(3)/2)+b/2+1`.
+Its right side is n+sigma/(sqrt(3)/2). Since sigma<sqrt(3)/2,
+no further unit-separated point can be inserted in the closed F.
+
+Extend X to an auxiliary separated packing of the whole plane by
+enumerating a dense countable set and successively adding a point when
+its distance from the current set is at least one. The packing is locally
+finite. Its covering radius is at most one: a point at distance greater
+than one would have a dense proposed neighbour that either was accepted
+or was blocked by an even closer accepted point. No added point lies
+in F by the preceding integer Oler bound. This auxiliary construction
+is not a source competitor and uses no diameter upper constraint.
+
+The Voronoi cells are bounded by the covering-radius property. Their
+planar dual has convex cyclic Delaunay faces; triangulate co-circular
+faces arbitrarily. Each empty circumcircle has radius at most one,
+since its center has distance at most one from the packing. Every unit
+wall edge belongs to this dual: its midpoint has distance 1/2 from its
+two endpoints, and every other separated packing point has midpoint
+distance at least sqrt(3)/2. A neighbourhood on the perpendicular
+bisector therefore belongs only to those two Voronoi cells. Thus all
+wall edges survive in the triangulation.
+
+Restrict to the triangles enclosed by the wall cycle. Their vertices
+are exactly X. Euler gives T=2*z+b-2 triangles. The triangulation is
+Delaunay, so opposite angles at every internal edge sum to at most pi.
+All its edges have length at least one and every triangle has
+circumradius at most one. Degenerate co-circular cases do not affect
+the nondegenerate triangle areas or the opposite-angle inequality.
+
+## 3. Triangle area and an obtuse-pair gap
+
+For a triangle with sides at least one and circumradius R<=1, every
+angle is at least l=asin(1/(2R))>=pi/6, and R>=1/sqrt(3). The area is
+2*R^2 times the product of its three angle sines. Concavity of log(sin)
+on the angle simplex shows its minimum at fixed R occurs at angles
+l,l,pi-2l. The minimum area is
+
+`sqrt(4*R^2-1)/(4*R^2)>=sqrt(3)/4=a`.
+
+The last inequality follows by differentiating its square on
+R^2 in [1/3,1]: its maximum is at 1/2 and its endpoint minima agree.
+Thus every triangle has nonnegative excess sigma_T=area(T)-a and
+sum sigma_T=sigma.
+
+Suppose a triangle has largest angle alpha>=pi/2. Then alpha<=2pi/3,
+and its opposite edge length L satisfies
+L^2>=2-2*cos(alpha)>=2. This edge is internal, since every boundary
+edge has length one. Its neighbour has opposite angle beta<=pi-alpha
+<=pi/2. Its other two angles are at least pi/6. Concavity of log(sin)
+with their fixed sum bounds their product below by
+(1/2)*sin(beta+pi/6). Its area is consequently at least
+
+`L^2/(4*sin(beta))*sin(beta+pi/6)`
+`=L^2/4*(sqrt(3)/2+(1/2)*cot(beta))`
+`>=sqrt(3)*L^2/8`.
+
+The first triangle has area at least (1/2)*sin(alpha). The pair's
+total area is at least
+
+`(1/2)*sin(alpha)+(sqrt(3)/4)*(1-cos(alpha))`.
+
+This function is increasing for alpha in [pi/2,2pi/3], so it is at
+least (2+sqrt(3))/4. Subtracting the two baseline areas gives the
+fixed gap (2-sqrt(3))/4>1/1000. This contradicts the total slack.
+Hence **every triangle is acute**. The gap is a valid lower bound;
+sharpness is not asserted.
+
+## 4. Quantitative edge and angle control
+
+Let L be an acute triangle's largest side. If L>=sqrt(2), its area
+is at least 1/2. For completeness, put x,y for the other squared
+side lengths. They lie in [1,L^2], and acuteness gives x+y>=L^2.
+Heron's squared area
+`[4*x*y-(x+y-L^2)^2]/16` is concave in (x,y). Its minimum on that
+polygon is attained at a vertex; evaluating the vertices gives at
+least (L^2-1)/4>=1/4. Thus L>=sqrt(2) contradicts
+area<=a+sigma<1/2.
+
+For L<sqrt(2), projecting the opposite vertex onto its base shows
+its height is at least sqrt(1-L^2/4): both other sides are at least
+one and the projection is within the segment. Hence its area is at
+least f(L)=L*sqrt(4-L^2)/4. The function is increasing up to sqrt(2),
+and f(11/10)>a+1/1000. Therefore L<11/10. On [1,11/10],
+f'(L)=(2-L^2)/(2*sqrt(4-L^2))>1/5. It follows that
+
+`L-1<=5*sigma_T`.
+
+All three sides are in [1,11/10]. Differentiating the cosine law
+bounds each partial derivative of cos(angle) by two. Throughout this
+cube the angle sine exceeds 4/5. Therefore
+
+`|angle-pi/3| <= (5/2)*sum(side-1) <= 50*sigma_T`.
+
+These are exact analytic bounds, not empirical near-equilateral tests.
+
+## 5. Valences and global equilateral development
+
+At an interior vertex k incident triangle angles sum to 2pi. Their
+total deviation from k*pi/3 is at most 50*sigma<=1/20<pi/3.
+Thus k=6. At a boundary vertex the angle sum is its convex interior
+angle, at most pi. The same bound implies k<=3; k>=1 since the
+triangulation is nondegenerate. Each developed boundary turn is
+(3-k)*pi/3, so it is nonnegative. The discrete angle sum/Euler identity
+gives total boundary turn 2pi; there are at most six nonzero turns.
+
+Replace each triangle by a unit equilateral one and develop across
+shared edges. Development around an interior vertex closes exactly
+because it has six triangles. Since the complex is a topological disk,
+these vertex circuits generate its compatibility relations: development
+is single valued. Its boundary is a closed convex polygon with unit
+lattice edges and turns 0,pi/3 or 2pi/3. The local orientation is
+positive and the convex boundary has degree one, so the development
+is one-to-one and covers that polygon. Its vertices are precisely all
+triangular-lattice sites in it; any missing site would lie inside a
+unit elementary triangle or edge and cannot be a distinct lattice site.
+
+Anchor one boundary edge to its actual edge. Along a simple dual path,
+edge directions differ from their developed directions by at most
+50*sum_path sigma_T<=50*sigma. Each edge length differs from one by
+at most 5*sigma. Hence corresponding edge vectors differ by at most
+55*sigma. A convex triangular-lattice polygon is the intersection of
+interval bounds on i, j and i+j. A two-direction shortest lattice path
+can keep each of these three coordinates between its endpoint values:
+use u,v when the coordinate changes have the same sign, and otherwise
+use the diagonal (1,-1) or (-1,1) plus the remaining axis direction.
+Every intermediate site therefore stays in the polygon. Its length is
+max(|delta_i|,|delta_j|,|delta_i+delta_j|)<=b, since each coordinate's
+boundary range is at most b/2. Summing edge errors gives 60*b*sigma.
+The spare constant covers the choice of path endpoint/anchor.
+
+For the original regular-hexagon development this path length is at
+most 2M. The first actual wall edge differs in angle from its prescribed
+flat direction by at most (M-1)*theta, and its corner anchor shift is
+at most M^2*theta. The parallel-body bound gives sigma<=7*M^3*theta.
+Thus displacement from the fixed P_M chart is at most
+
+`M^2*theta+2*M*((M-1)*theta+55*sigma)`
+`<=1000*M^4*theta`.
+
+At theta<=1/(10000*M^3), sigma<=6/10000+pi/(10^8*M^2)<1/1000.
+The six boundary corner valences are two and the remaining boundary
+valences three, since their actual angle deviations from 2pi/3 or pi
+are less than 2*(M-1)*theta and the total triangle error is below 1/20.
+So the developed polygon is exactly H_M, proving the uniform chart claim.
+
+## 6. Exact limits and continuation
+
+This theorem neither discards isolates nor promotes auxiliary points
+to KKT-positive. Saturation points live outside F only for proving
+triangulation inequalities; they are not inserted into a source endpoint.
+The effective localization uses the full wall-plus-cloud Oler count.
+
+It does not classify deficit-one clouds, prove a general small-slack
+triangle, supply additional capacity, or treat a nonunit cap closing
+chord as a unit wall. Macroscopic canonical chamber slack O(D) is the
+explicit missing hypothesis. A next attack is to charge triangles with
+large defects to that slack and couple the remaining lattice regions
+without boundary-order loss; another is to use the explicit chart bound
+in a quantitative finite sorting isolation proof for growing M.
+
+The exact companion verifier checks elementary-triangle areas, acute
+angles, bounded circumradii, every internal Delaunay edge, complete
+pair separation and the explicit displacement bound in five rational
+sorting examples. It also checks the exact constants of the proof.
+Those finite checks are corroboration, not the arbitrary-wall theorem.

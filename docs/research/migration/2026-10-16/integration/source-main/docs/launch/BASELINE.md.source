@@ -1,0 +1,139 @@
+# Reproducible research baseline
+
+## Snapshot identity
+
+This baseline was fetched from `origin/main` on 2026-10-13. The exact repository
+snapshot is:
+
+| Field | Value |
+| --- | --- |
+| Commit | `ab6dd3336f9f8d440f2bada76edb32153391cddc` |
+| Git tree | `bd5b3835d57cad67d387c7bb92687e88bf48f982` |
+| Parent | `5d93ac0eec111ee56e07548f55085fd553b9e4f5` |
+| Commit date | `2026-10-10T06:45:40-05:00` |
+| Theorem state | `2026-10-10.audit.234` |
+| Manifest SHA-256 | `a8b571cacc2c77623a991f50114a70141d59bcde9685f916db8153599e58b2b6` |
+
+At this snapshot, Level I remains open. Target A is open through Section 177, Target B
+is open at the global shell-stability inequality, and Target C-I is closed while C-II
+remains open. See [`../STATE.md`](../STATE.md) and the target route maps for the exact
+claims and hypotheses. This baseline does not certify those proofs.
+
+The ledger contains 451 unique theorem IDs: 372 canonical, 3 audited-working, 62
+regression, 5 superseded, and 9 rejected. Its registered theorem-ID graph has 451 nodes
+and 845 `depends_on` edges. The manifest registers 94 unique certificate scripts across
+130 entries. The generated artifact index contains 1,410 records. These are inventory
+counts, not measures of proof completeness. Registered theorem IDs are distributed as
+0 for Target A, 1 for Target B, and 450 for Target C; Target A's active authority is
+route/module-based here, so the ID graph must not be read as a complete theorem or proof
+dependency inventory.
+
+## Reproduce the checks
+
+Use a clean worktree at the recorded commit. The validation utility may be taken from a
+checkout that contains this document; `--root` points it at the exact historical tree.
+
+```sh
+git clone https://github.com/1337isnot1337/e-99.git e-99
+cd e-99
+git fetch origin main
+git worktree add --detach /tmp/e99-baseline-2026-10-10 ab6dd3336f9f8d440f2bada76edb32153391cddc
+python3 -m venv /tmp/e99-baseline-venv
+/tmp/e99-baseline-venv/bin/python -m pip install -r /tmp/e99-baseline-2026-10-10/tools/requirements-theorem-state.txt
+/tmp/e99-baseline-venv/bin/python tools/verify_research_baseline.py \
+  --root /tmp/e99-baseline-2026-10-10 \
+  --expected-commit ab6dd3336f9f8d440f2bada76edb32153391cddc
+```
+
+The utility refuses a wrong commit or a dirty checkout, prints the manifest summary and
+identity-file hashes, then runs the theorem-state checker, its CI unit suite, the active
+route summary checker, the push-mode state/PR checker, the repository's research unit
+tests, all registered certificates, and `git diff --check`. A failed command makes the
+overall result fail; the tool still reports later independent checks. Dependencies come
+from `tools/requirements-theorem-state.txt`.
+
+## Recorded validation
+
+The checks were run in an isolated Python 3.14.7 virtual environment with PyYAML 6.0.3,
+jsonschema 4.26.0, NumPy 2.5.4, SciPy 1.18.1, SymPy 1.14.0, and mpmath 1.3.0.
+
+| Check | Result |
+| --- | --- |
+| `tools/check_theorem_state.py` | Passed; manifest schema, registered dependency edges, generated state views, artifact metadata, and lifecycle constraints were mechanically consistent. |
+| The three theorem-state CI test modules | Passed: 22 tests. |
+| `tools/check_active_route_summaries.py` | Passed. |
+| Push-mode `tools/check_theorem_state_pr.py` | Passed. |
+| Research unit-test modules under `research/` | Passed: 65 tests across 11 files. These are not run by the current theorem-state workflow. |
+| Registered certificates | Passed: 94 unique certificates. |
+| `git diff --check` on the clean baseline | Passed. |
+
+The end-to-end `verify_research_baseline.py` run against a second clean worktree at this
+commit completed **7/7 checks**. The certificate step took 325.9 seconds in this local
+environment; future runtime depends on hardware and package versions.
+
+This was a local run, not a GitHub Actions run. The requirements file specifies compatible
+version ranges rather than a hash-locked environment, and the workflow selects Python
+`3.x`; exact long-term environment reproduction therefore requires recording or pinning
+the resolved toolchain separately.
+
+## Hashes for identity-critical files
+
+SHA-256 hashes below identify the exact source and generated files in the recorded Git
+tree. The validation utility prints hashes for the full identity-file set.
+
+| File | SHA-256 |
+| --- | --- |
+| `docs/state/theorem-state.yaml` | `a8b571cacc2c77623a991f50114a70141d59bcde9685f916db8153599e58b2b6` |
+| `docs/state/theorem-state.schema.json` | `6d055fe9dadf43a8ee7a2ec845143afa68d7c330130670842e40ee04298a0b66` |
+| `docs/state/STATUS.generated.md` | `8062f9db48739d2a9ad452e1551b640af8f9a307e1588c14652e142783255bee` |
+| `docs/state/THEOREM_GRAPH.generated.md` | `8d25ac207602a22ec955b87f1805a50f8ddbeba31d8209f5c877b8d67fe00cb4` |
+| `docs/state/artifact-index.jsonl` | `a8d39bf697db4298b50f237c987ce2888aff632215a284b56175ebef6ea2fd05` |
+| `docs/STATE.md` | `6d648ebaad9c35ec80a3823da3fbee80eb9ed2ccf3881a535ecccaa0593709bd` |
+| `docs/targets/target-a/README.md` | `2865f3e52893aaf6b7d0ad45a4133894896698241f9de9cb3a5e74251c64aa1a` |
+| `docs/targets/target-b/README.md` | `2c0042154c17d706bd9cc1f371f61b93ecf273f8368ec37ef93826a3db5c67ca` |
+| `docs/targets/target-c/README.md` | `aceb9a5829ed8a87433945223e4a742a5c037d8ebba701940e2aba9959416f47` |
+| `docs/targets/target-c/CURRENT.md` | `8a5c80555cc31a85543dcb3906032ddb6b6e4f820e5b782b57befcc38c68af00` |
+| `docs/problem/statement.md` | `cd658816999c19ab88bae4d497f3150403dffeb6a8b508e9c92a0ae60bb2926d` |
+| `docs/problem/literature_baseline.md` | `21bac2fde1a2d5f012f843de2d7bc8ed13a24c07081e9d3dc3541c7bba4e7784` |
+| `CONTRIBUTING.md` | `e8fc2944b9bc9371c274cad41b05a617cc45886216ae902ddad02a7e3b5c49e2` |
+| `docs/RESEARCH_WORKFLOW.md` | `f5c35fdb235445a9db4a80e57a776ae5380b44dca3ffabf66cdf24a57eeba620` |
+| `.github/workflows/theorem-state.yml` | `427ec99c987521096e3aec5ab934a29b446ce1b81a5140b4483711fa80f48296` |
+| `tools/check_theorem_state.py` | `2f98c5a4e0f243910538c71f4c9a0916273b29ad28c298ae2ecbfd43c954f71b` |
+| `tools/generate_theorem_state_views.py` | `464fa3fd3b5180b2703565c113bdd4628112132dde5cd1025106d08184abae19` |
+| `tools/run_theorem_certificates.py` | `fed50fa396c5b27c5b05fd01ebed262e4901f91dc460731bf968a6bf28ce7acf` |
+| `tools/requirements-theorem-state.txt` | `c342d6ac5858334336f106bdcf16a6756c68210641b225bef573ec09ebd0b34f` |
+
+## Release versioning proposal
+
+For a future research snapshot, use an immutable annotated tag named
+`e99-research-YYYY-MM-DD-audit-N`, with the date and `N` copied from the exact
+`state_version`. For example, this snapshot would be `e99-research-2026-10-10-audit-234`.
+The tag annotation should record the commit, tree, state version, validation commands,
+and the fact that Level I is open. This is a repository-state label, not a claim of
+semantic versioning, publication, or external mathematical review. Do not retag an
+existing snapshot; create no tag without repository-owner authorization.
+
+## Readiness assessment
+
+This commit is a reproducible **mechanical baseline** when the recorded checks pass.
+The theorem-state checker verifies only registered IDs, edges, lifecycle rules, and
+generated metadata. Its graph does not enumerate every lemma inside the active route
+modules. Passing tests and finite certificates do not verify proofs or settle E99; an
+independent mathematical audit remains necessary. Public-release clearance, licensing,
+and the disposition of historical or third-party material are separate review gates.
+
+## Independent integration replay (2026-10-14)
+
+The integration worker independently reran the seven historical stages against a clean
+worktree at the recorded commit: **7/7 passed**, including **94/94 certificates**, 22
+state-tooling tests and 65 research tests. The certificate phase took 327.6 seconds.
+The historical inventory and all SHA-256 records above were checked against the recorded
+Git tree. This is additional mechanical evidence and does not independently audit proofs.
+
+Current integration uses the exact-version [verification lock](../../tools/requirements-verification.lock)
+and CPython 3.14.7. The baseline utility now compares every tracked working-file blob
+against the commit, rejects noncache ignored inputs, and isolates Python bytecode lookup;
+Git's status alone can hide edits marked assume-unchanged. On integrated checkouts it
+also runs the platform integrity command. Historical checkouts retain the seven stages.
+See [current verification instructions](CI.md). Historical hashes stay pinned and do not
+claim byte identity for integration or a curated export.

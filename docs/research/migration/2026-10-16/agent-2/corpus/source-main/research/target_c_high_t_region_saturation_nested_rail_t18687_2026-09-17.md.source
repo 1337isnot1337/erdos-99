@@ -1,0 +1,318 @@
+# Target C-II — region saturation amplifies the nested diameter rail
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch with `t=(q-k)/D<=1.8687`  
+**Dependencies:** coupled paired-remainder O--O path; phase-free path-region saturation; diameter-path Helly hub and one-sided switching; same-host diameter exclusion; full opposite-or-terminal nesting theorem; canonical C67 diameter-direction separation and degree bound  
+**Certificate:** `research/verify_target_c_high_t_region_saturation_nested_rail_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The existing unconditional nested-rail theorem starts from the positive-density exact-antipodal/strong-TB1 blocker fork. That local fork is not needed to obtain a dense nested **geometric** rail.
+
+The coupled high-`t` O--O path already has more than `0.0002D-o(D)` cuts, every internal complementary region has a nonempty switching-diameter set, all diameter support intervals contain one common hub, and every nonhub switch points toward that hub. Choosing one switching diameter from every region on the larger side of the hub and then applying the already-proved physical nesting theorem gives a much denser rail.
+
+Put
+
+\[
+\rho={1\over5000}=0.0002.
+\tag{SR.1}
+\]
+
+Then the high-`t` survivor contains:
+
+1. more than
+   \[
+   {\rho\over2}D-o(D)={1\over10000}D-o(D)
+   \]
+   distinct one-sided switching diameter bars with distinct birth regions on one side of the hub;
+2. more than
+   \[
+   {\rho\over4}D-o(D)={1\over20000}D-o(D)
+   \]
+   bars forming one strictly nested opposite-host-or-terminal rail after fixing one physical birth host;
+3. more than
+   \[
+   {\rho\over8}D-o(D)={1\over40000}D-o(D)
+   \]
+   bars in one fixed physical destination, either the opposite host or the far terminal piece `T_m`.
+
+This improves the previous unconditional nested-rail density `791/640000000 = 1.2359375e-6` by a factor greater than `40.45`. The exact-antipodal/strong-TB1 fork remains valuable because it attaches force or fixed-margin information to selected interfaces, but it is no longer the source of the strongest unconditional rail cardinality.
+
+---
+
+## Theorem SR — saturated one-sided switching family
+
+Let
+
+\[
+R_0\xleftrightarrow{\tau_1}R_1\xleftrightarrow{\tau_2}\cdots
+\xleftrightarrow{\tau_m}R_m
+\tag{SR.2}
+\]
+
+be the coupled paired-remainder O--O path through `t<=1.8687`, and let `R_k` be the common diameter-routing hub. The path theorem gives
+
+\[
+\boxed{m>\rho D-o(D).}
+\tag{SR.3}
+\]
+
+For each internal region `R_i`, `1<=i<=m-1`, phase-free region saturation gives a nonempty switching set
+
+\[
+H_{sw,i}\ne\varnothing.
+\tag{SR.4}
+\]
+
+Discard the hub region if it is internal. The number of internal nonhub regions strictly to the left plus the number strictly to the right is at least `m-2`. Hence one side contains at least
+
+\[
+{m-2\over2}
+>{\rho\over2}D-o(D)
+\tag{SR.5}
+\]
+
+internal nonhub regions.
+
+Reverse the path if necessary and call this the pre-hub side. For every retained tag `i<k`, choose one bar
+
+\[
+e_i=x_iy_i\in H_{sw,i}
+\tag{SR.6}
+\]
+
+with `x_i in R_i`. The one-sided switching theorem forces the other endpoint into a hubward region
+
+\[
+y_i\in R_{b_i},
+\qquad b_i\ge k.
+\tag{SR.7}
+\]
+
+The chosen diameter bars are distinct. Indeed, a diameter support interval contains the hub, so one actual diameter edge can have at most one endpoint region strictly on this pre-hub side. The birth endpoints `x_i` are also distinct because the regions `R_i` are disjoint.
+
+Therefore there is a one-sided switching family `J_D` with
+
+\[
+\boxed{
+|J_D|>{1\over10000}D-o(D).
+}
+\tag{SR.8}
+
+No KKT weight, exact-antipodal reaction, or strong-TB1 margin is used here.
+
+---
+
+## 1. Fixing the birth host gives a linear nested rail
+
+Every `x_i` is an endpoint of an actual diameter edge, hence is a source-hull vertex. For an internal strip region of the proper O--O crosscut path, its hull part lies on one of the two fixed physical host arcs. Split `J_D` according to the host arc containing `x_i`.
+
+One host class has size
+
+\[
+\boxed{
+M>{\rho\over4}D-o(D)
+={1\over20000}D-o(D).
+}
+\tag{SR.9}
+
+Its birth endpoints are distinct and occur in increasing interface order on one fixed host arc. The full opposite-or-terminal nesting theorem applies verbatim to any such one-sided family of selected actual switching bars. Same-host diameter exclusion removes the same-host partner piece. Along the remaining contiguous partner segment
+
+\[
+T_m\cup Q^{opp}
+\]
+
+the path-region labels are weakly decreasing in the order transported by the convex diameter-thrackle map.
+
+Writing the retained tags as
+
+\[
+i_1<i_2<\cdots<i_M<k,
+\]
+
+and their partner region tags as `b_s`, we obtain
+
+\[
+\boxed{b_1\ge b_2\ge\cdots\ge b_M\ge k.}
+\tag{SR.10}
+
+The exact selected-cut supports
+
+\[
+I_s=\{i_s+1,\ldots,b_s\}
+\tag{SR.11}
+
+therefore satisfy
+
+\[
+\boxed{
+I_1\supsetneq I_2\supsetneq\cdots\supsetneq I_M.
+}
+\tag{SR.12}
+
+Thus the path-region saturation theorem itself forces an unconditional strictly nested diameter rail at density `1/20000`, without passing through the sparse local blocker fork.
+
+For comparison, the previous unconditional blocker-based rail density was
+
+\[
+{791\over640000000}=1.2359375\times10^{-6},
+\]
+
+while
+
+\[
+{1\over20000}=5\times10^{-5}
+>40.45\,{791\over640000000}.
+\tag{SR.13}
+
+---
+
+## 2. The remaining physical split has density `1/40000`
+
+Every partner in the rail (SR.12) lies either on the opposite physical host arc or on the far terminal piece `T_m`. Pigeonholing only this final physical destination gives one of
+
+\[
+\boxed{
+\text{opposite-host nested rail}
+\quad\text{or}\quad
+\text{far-terminal nested rail}
+}
+\tag{SR.14}
+
+with size
+
+\[
+\boxed{
+>{\rho\over8}D-o(D)
+={1\over40000}D-o(D).
+}
+\tag{SR.15}
+
+This is the strongest currently available unconditional cardinality for either physical rail branch. It is purely geometric; it does not assert that the selected bars carry the exact-antipodal force pair or the strong-TB1 derivative margin.
+
+---
+
+## 3. Endpoint-disjoint crossing extractions
+
+The selected births on one hub side are all distinct and no hubward partner can equal another selected pre-hub birth. Hence only partner-partner collisions need to be removed.
+
+Canonical C67 gives
+
+\[
+\Delta(H_D)\le(4\,3^{1/8}+o(1))D^{3/4}.
+\tag{SR.16}
+
+A greedy partner-vertex thinning applied already to `J_D` gives an endpoint-disjoint family of actual diameter bars of size
+
+\[
+\boxed{
+>\left(
+{\rho\over8\,3^{1/8}}-o(1)
+\right)D^{1/4}.
+}
+\tag{SR.17}
+
+Numerically the coefficient is
+
+\[
+\boxed{2.17921385718\times10^{-5}.}
+\tag{SR.18}
+
+All retained bars are pairwise vertex-disjoint actual diameter edges and therefore pairwise cross.
+
+If strict support nesting on one fixed birth host is also required, thinning (SR.9) gives
+
+\[
+\boxed{
+>\left(
+{\rho\over16\,3^{1/8}}-o(1)
+\right)D^{1/4}
+}
+\tag{SR.19}
+
+with coefficient
+
+\[
+\boxed{1.08960692859\times10^{-5}.}
+\tag{SR.20}
+
+After fixing one physical destination as in (SR.15), the coefficient is still
+
+\[
+\boxed{5.44803464295\times10^{-6}.}
+\tag{SR.21}
+
+These are geometry-only crossing families; the smaller force-labeled braids remain necessary when the KKT or tangent-blocking metadata itself is used.
+
+---
+
+## 4. Any winning physical partner piece has macroscopic span
+
+The C67 direction-packing argument used for the terminal rail depends only on three facts:
+
+1. the selected bars are distinct actual diameter edges;
+2. their projective directions are separated by
+   \[
+   2\arcsin(1/(2D))\ge1/D;
+   \]
+3. full-source midpoint localization makes each partner radial line differ from its diameter-chord line by `o(1)`.
+
+It is therefore not special to `T_m`. Apply it to the one-destination subrail from (SR.15), whether the destination is the opposite host or the terminal piece. With
+
+\[
+\mu={1\over40000},
+\tag{SR.22}
+
+its partner endpoint set `Y_D` satisfies
+
+\[
+\boxed{
+\liminf_{D\to\infty}\operatorname{angdiam}_o(Y_D)
+\ge {1\over40000}=2.5\times10^{-5}.
+}
+\tag{SR.23}
+
+Radial projection to the radius-`D/2` circle gives
+
+\[
+\boxed{
+\liminf_{D\to\infty}{\operatorname{diam}(Y_D)\over D}
+\ge \sin\!\left({1\over80000}\right)
+>1.2499999999\times10^{-5}.
+}
+\tag{SR.24}
+
+In particular, if the terminal branch wins, this strengthens the current unconditional terminal-span lower bound by more than an order of magnitude. If the opposite-host branch wins, the same packing statement supplies an explicit macroscopic span on that host rather than only an abstract linear rail count.
+
+---
+
+## 5. What this changes and what it does not
+
+The geometric rail frontier no longer needs the local exact-antipodal/strong-TB1 fork:
+
+```text
+>0.0002 D O--O cuts
++ every internal region has a switching diameter
++ one common diameter hub
++ one-sided nonhub switching
+        |
+        v
+>0.0001 D switching bars on one hub side
+        |
+        v
+>0.00005 D strictly nested bars on one birth host
+        |
+        v
+>0.000025 D bars to one physical destination
+(opposite host or far terminal)
+```
+
+The local blocker fork still supplies information absent from this amplified rail:
+
+- in the strong-TB1 branch, a fixed first-order blocking margin;
+- in the exact-antipodal branch, the opposite-transverse force pair and positive two-ray reaction;
+- in the deep exact-force branch, synchronization to the common inverse-`D` train grid and coercive dipole information.
+
+So the present theorem does not close C-II. It removes rail **cardinality** as the scarce resource. The remaining closing step must use geometry or force metadata: either contradict a `1/40000`-density opposite-host nested diameter rail using near-antipodality and the common train grid, or contradict a `1/40000`-density terminal nested rail using the terminal ledger/endpoint-energy geometry. Any future argument that only needs a large ordered diameter rail should use (SR.9)--(SR.15), not the much smaller blocker-fork density.
+
+**Disposition:** phase-free region saturation plus the common hub amplifies the unconditional nested diameter rail to density `1/20000`, with a `1/40000` one-destination branch and substantially stronger endpoint-disjoint and span constants. C-II and Level I remain open.

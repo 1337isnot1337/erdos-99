@@ -1,0 +1,40 @@
+# Target C — C89 staircase shell-bound frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_staircase_shell_bound_2026-09-01.md](../../reports/target_c_staircase_shell_bound_2026-09-01.md).
+
+Write `x=T/D`, `y=q/T`, and `Delta_2=pi/(2sqrt(3))`. C82 gives
+
+`x >= (1+Delta_2)/(1-y/2)+o(1)`.
+
+C87 gives `q/D=xy>=2+o(1)`, hence `x>=2/y-o(1)`. Optimizing the decreasing and
+increasing lower bounds yields
+
+`liminf T/D >= 2+Delta_2`
+
+`= 2.9068996821...`.
+
+This replaces C82's `2.5425329094...` chain-face lower bound.
+
+The unique equality point is
+
+`T/D -> 2+Delta_2`,
+
+`q/T -> 2/(2+Delta_2)`,
+
+`q/D ->2`.
+
+At that point every inequality in C82's heavy-chain-atom Mantel argument is tight. The
+chain direction has atomic mass exactly `1/(2+Delta_2)`, the total atomic mass is
+`(1+Delta_2)/(2+Delta_2)`, and the positive-density atomic crossing graph is a star
+centered at the chain direction.
+
+Thus the remaining pure chain-face branch splits into:
+
+1. a train-surplus phase with `T/D` bounded strictly above `2+Delta_2`; or
+2. an endpoint-sharp phase with `q/D->2` and a star atomic crossing measure.
+
+The next target is to combine C88's quadratic secondary-train separator budget with
+the surplus phase, or to exclude the endpoint star crossing measure using C87's paired
+staircase and global packing density.

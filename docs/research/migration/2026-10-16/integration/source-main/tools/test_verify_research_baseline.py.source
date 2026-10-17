@@ -1,0 +1,142 @@
+from __future__ import annotations
+
+import importlib.util
+import subprocess
+import tempfile
+import unittest
+from pathlib import Path
+
+
+TOOL = Path(__file__).with_name("verify_research_baseline.py")
+SPEC = importlib.util.spec_from_file_location("verify_research_baseline", TOOL)
+assert SPEC and SPEC.loader
+baseline = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(baseline)
+
+
+class BaselineSummaryTests(unittest.TestCase):
+    def test_summary_counts_entries_edges_and_unique_certificates(self) -> None:
+        state = {
+            "state_version": "test.1",
+            "state_date": "2026-10-13",
+            "level_i_status": "open",
+            "artifact_policy": {"index": "docs/state/artifact-index.jsonl"},
+            "targets": {
+                "target-a": {
+                    "current_canonical_entries": [
+                        {
+                            "id": "A1",
+                            "status": "canonical",
+                            "depends_on": ["A0"],
+                            "certificates": ["check.py"],
+                        }
+                    ],
+                    "audited_working": [],
+                    "regressions": [],
+                    "rejected_or_overridden": [],
+                },
+                "target-b": {
+                    "current_canonical_entries": [
+                        {
+                            "id": "B1",
+                            "status": "regression",
+                            "depends_on": [],
+                            "certificates": ["check.py", "other.py"],
+                        }
+                    ],
+                    "audited_working": [],
+                    "regressions": [],
+                    "rejected_or_overridden": [],
+                },
+            },
+        }
+
+        summary = baseline.summarize_state(state)
+
+        self.assertEqual(summary["theorem_entries"], 2)
+        self.assertEqual(summary["dependency_graph_nodes"], 2)
+        self.assertEqual(summary["statuses"], {"canonical": 1, "regression": 1})
+        self.assertEqual(summary["dependency_edges"], 1)
+        self.assertEqual(summary["unique_certificates"], 2)
+        self.assertEqual(summary["certificate_bearing_entries"], 2)
+
+    def test_duplicate_ids_are_rejected(self) -> None:
+        state = {
+            "artifact_policy": {"index": "index.jsonl"},
+            "targets": {
+                "target-a": {
+                    "current_canonical_entries": [
+                        {"id": "same", "status": "canonical"},
+                        {"id": "same", "status": "canonical"},
+                    ]
+                }
+            },
+        }
+        with self.assertRaisesRegex(baseline.BaselineError, "duplicate theorem IDs"):
+            baseline.summarize_state(state)
+
+
+class CheckoutVerificationTests(unittest.TestCase):
+    def setUp(self) -> None:
+        self.temporary = tempfile.TemporaryDirectory()
+        self.root = Path(self.temporary.name)
+        subprocess.run(["git", "init", "-q", str(self.root)], check=True)
+        subprocess.run(
+            ["git", "-C", str(self.root), "config", "user.email", "baseline-test@example.invalid"],
+            check=True,
+        )
+        subprocess.run(
+            ["git", "-C", str(self.root), "config", "user.name", "Baseline Test"],
+            check=True,
+        )
+        (self.root / "tracked.txt").write_text("baseline\n", encoding="utf-8")
+        subprocess.run(["git", "-C", str(self.root), "add", "tracked.txt"], check=True)
+        subprocess.run(
+            ["git", "-C", str(self.root), "commit", "-q", "-m", "baseline"],
+            check=True,
+        )
+        self.commit = subprocess.run(
+            ["git", "-C", str(self.root), "rev-parse", "HEAD"],
+            check=True,
+            capture_output=True,
+            text=True,
+        ).stdout.strip()
+
+    def tearDown(self) -> None:
+        self.temporary.cleanup()
+
+    def test_exact_clean_checkout_is_accepted(self) -> None:
+        commit, tree = baseline.verify_checkout(self.root, self.commit)
+        self.assertEqual(commit, self.commit)
+        self.assertEqual(len(tree), 40)
+
+    def test_wrong_commit_is_rejected(self) -> None:
+        with self.assertRaisesRegex(baseline.BaselineError, "expected"):
+            baseline.verify_checkout(self.root, "0" * 40)
+
+    def test_untracked_file_is_rejected(self) -> None:
+        (self.root / "untracked.txt").write_text("change\n", encoding="utf-8")
+        with self.assertRaisesRegex(baseline.BaselineError, "not clean"):
+            baseline.verify_checkout(self.root, self.commit)
+
+    def test_assume_unchanged_source_edit_is_rejected(self):
+        subprocess.run(["git", "-C", str(self.root), "update-index", "--assume-unchanged", "tracked.txt"], check=True)
+        (self.root / "tracked.txt").write_text("hidden edit\n")
+        with self.assertRaisesRegex(baseline.BaselineError, "differs from committed blob"):
+            baseline.verify_checkout(self.root, self.commit)
+
+    def test_ignored_noncache_input_is_rejected(self):
+        subprocess.run(["git", "-C", str(self.root), "config", "core.excludesFile", str(self.root / ".git" / "ignored")], check=True)
+        (self.root / ".git" / "ignored").write_text("input.json\n")
+        (self.root / "input.json").write_text("{}")
+        with self.assertRaisesRegex(baseline.BaselineError, "ignored input"):
+            baseline.verify_checkout(self.root, self.commit)
+
+    def test_git_whitespace_check_runs_in_target_checkout(self) -> None:
+        self.assertTrue(
+            baseline.run_check(self.root, "clean diff", ("git", "diff", "--check"))
+        )
+
+
+if __name__ == "__main__":
+    unittest.main()

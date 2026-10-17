@@ -1,0 +1,291 @@
+# Target C — exact Type-II five-currency conservation
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** proof-only structural composition; theorem authority unchanged.
+
+This note combines the audited Type-II loaded-hull identities with the audited
+component remainder of §§160–161.  The result is an exact finite conservation law
+linking the harmonic-diameter moment, component non-geodesicity, global bounded-face
+defect, outer-walk surplus, and diameter/rank topology.
+
+No source point is removed and no contact-isolated coordinate enters a core rigidity
+statement.
+
+## 1. Notation
+
+Use the current Type-II notation
+
+- `q=|B|` for the loaded force-hull vertex count;
+- `m` for the number of nonunit sides of the loaded force hull `F`;
+- `Q` for global bounded nonquadrilateral face degree excess;
+- `k=d_H+s_Z`;
+- `u_B=x_B-m>=0` for the outer-walk occurrence surplus beyond the one-extra-edge
+  baseline on nonunit hull sides;
+- `d_r=diam(P_r)` for harmonic attachment cells;
+- `G_D` for the exact component remainder of §160;
+- `b` for the old outer contact-walk occurrence length; and
+- `P_F=per(F)`.
+
+The centralized audited Type-II hull-side theorem gives
+
+\[
+ e_{BB}=q-m=Q+2k+u_B.
+\tag{1.1}
+\]
+
+Audited §160 gives
+
+\[
+ G_D=2+q+m-k-\sum_r d_r.
+\tag{1.2}
+\]
+
+Both identities are finite.
+
+## 2. Five-currency conservation
+
+From (1.1),
+
+\[
+ Q+u_B=q-m-2k.
+\tag{2.1}
+\]
+
+Add (2.1), `k`, and `sum_r d_r+G_D`.  Using (1.2),
+
+\[
+\begin{aligned}
+\sum_r d_r+G_D+Q+u_B+k
+&=(2+q+m-k)+(q-m-2k)+k\\
+&=2+2q-2k.
+\end{aligned}
+\]
+
+Therefore
+
+\[
+\boxed{
+ 2(q-k)+2
+ =\sum_r d_r+G_D+Q+u_B+k.
+}
+\tag{2.2}
+\]
+
+Every term on the right except the harmless constant is an existing geometric or
+combinatorial currency.  In particular, (2.2) is an equality, not a relaxation.
+
+Two immediate exact rearrangements are
+
+\[
+\boxed{
+ Q+u_B
+ =2(q-k)+2-k-G_D-\sum_r d_r,
+}
+\tag{2.3}
+\]
+
+and
+
+\[
+\boxed{
+ \sum_r d_r+G_D
+ =2(q-k)+2-k-Q-u_B.
+}
+\tag{2.4}
+\]
+
+Thus a large harmonic-diameter/remainder profile and a large boundary-defect profile
+cannot be spent independently.
+
+## 3. Exact outer-detour identity
+
+The loaded-hull outer-walk ledger has
+
+\[
+ b=q+x_B=q+m+u_B.
+\tag{3.1}
+\]
+
+Solving (1.2) for `q+m` and substituting in (3.1) gives
+
+\[
+ b
+ =\sum_r d_r+G_D+k+u_B-2.
+\tag{3.2}
+\]
+
+Hence
+
+\[
+\boxed{
+ b-P_F
+ =\sum_r d_r+G_D+k+u_B-P_F-2.
+}
+\tag{3.3}
+\]
+
+This identifies precisely how a large harmonic-diameter moment can coexist with an
+almost-geodesic old outer walk: it must be offset by the force-hull perimeter together
+with the component/topology/surplus currencies on the right.
+
+Define the hull-side chord currency
+
+\[
+ \chi_D:=q+m-P_F.
+\tag{3.4}
+\]
+
+Then
+
+\[
+\boxed{
+ b-P_F=u_B+\chi_D.
+}
+\tag{3.5}
+\]
+
+If the nonunit hull sides have lengths `s_i`, then, because the other `q-m` hull sides
+are unit sides,
+
+\[
+\boxed{
+ \chi_D=\sum_{i:\,s_i>1}(2-s_i).
+}
+\tag{3.6}
+\]
+
+The sign is not fixed: two-edge tooth bases contribute positively, while nonunit hull
+sides longer than two contribute negatively.  Equation (3.5), not `chi_D>=0`, is the
+safe statement.  In particular `chi_D<0` forces `u_B>=-chi_D` because the geometric
+outer detour is nonnegative.
+
+## 4. Refinement of the stopped-train phase elimination
+
+Let `T` be the complete stopped-train count and `f` the bounded nonquadrilateral face
+count.  The exact train ledger is
+
+\[
+ T=q+2f-k.
+\tag{4.1}
+\]
+
+Since every bounded nonquadrilateral face contributes at least one unit to `Q`,
+`f<=Q`.  Therefore
+
+\[
+\begin{aligned}
+T-{q\over2}
+&={q\over2}+2f-k\\
+&\le {q\over2}+2Q-k\\
+&\le {q\over2}+2(Q+u_B)-k.
+\end{aligned}
+\tag{4.2}
+\]
+
+From (1.1) and (3.4),
+
+\[
+\begin{aligned}
+Q+u_B
+&=q-m-2k\\
+&=2(q-k)-P_F-\chi_D.
+\end{aligned}
+\tag{4.3}
+\]
+
+Insert (4.3) in (4.2) and rearrange.  This gives the finite inequality
+
+\[
+\boxed{
+q-k
+\ge
+{2\over9}\left(T-{q\over2}\right)
++{1\over9}k
++{4\over9}(P_F+\chi_D).
+}
+\tag{4.4}
+\]
+
+Equivalently, since `P_F+chi_D=q+m`,
+
+\[
+ q-k
+\ge
+{2\over9}\left(T-{q\over2}\right)
++{1\over9}k
++{4\over9}(q+m).
+\tag{4.5}
+\]
+
+The form (4.4) exposes the geometry lost when one replaces the actual hull by the
+coarse Type-II perimeter limit.
+
+The audited all-regime atomic-gap theorem supplies an absolute `eta_grid>0` with
+
+\[
+{T-q/2\over D}
+\ge
+2\sqrt{\Delta_2}+\eta_{grid}-o(1),
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\tag{4.6}
+\]
+
+Type II has `P_F/D->pi`.  Thus every convergent Type-II subsequence satisfies
+
+\[
+\boxed{
+\liminf {q-k\over D}
+\ge
+C_{146}+{2\over9}\eta_{grid}
++{1\over9}\liminf{k\over D}
++{4\over9}\liminf{\chi_D\over D},
+}
+\tag{4.7}
+\]
+
+whenever the displayed liminf terms are taken on one common subsequence, where
+
+\[
+ C_{146}={4\over9}\left(\pi+\sqrt{\Delta_2}\right).
+\]
+
+More safely, without separating liminfs, (4.4) gives along every subsequence
+
+\[
+\boxed{
+{q-k\over D}
+-{k\over9D}
+-{4\chi_D\over9D}
+\ge
+C_{146}+{2\over9}\eta_{grid}-o(1).
+}
+\tag{4.8}
+\]
+
+Thus the only way the hull-side correction can weaken the perimeter-only §146 floor is
+through a linear population of long nonunit hull sides; by (3.5) that escape forces a
+matching amount of outer-walk occurrence surplus.
+
+## 5. Scope and frontier
+
+The identities (2.2) and (3.3) are exact finite Type-II statements once the audited
+`c_B=0` theorem and §160 remainder are assumed.  The phase refinement (4.8) additionally
+uses the audited all-regime atomic-gap theorem.
+
+This does **not** close Type II.  The unresolved escape is explicit:
+
+```text
+large harmonic/profile currency
+  -> five-currency conservation
+  -> either stronger q-k pressure
+     or long nonunit hull sides / outer-walk surplus.
+```
+
+A closing continuation should therefore attack the negative `chi_D` branch by showing
+that linear long-side excess cannot be carried by the near-disk outer contact routes
+without additional bounded-face, phase-order, or source-diameter cost.
+
+**Disposition:** new proof-only structural invariant and correlated elimination; C-II
+remains open.

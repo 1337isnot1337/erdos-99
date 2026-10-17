@@ -1,0 +1,159 @@
+#!/usr/bin/env python3
+"""Fast exactification wrapper for the audited 4,158-state face-(2,3) ledger.
+
+The slow source-backed verifier
+
+  verify_target_c_support7_h6_face23_saturation_reflection_2026_09_19.py
+
+reconstructs the 4,158-state endpoint from earlier exact reductions. Its
+--inventory-only pass proves that exactly 192 of the 298 numerically discovered
+face-(2,3) candidates remain in that endpoint; the other 106 were already
+removed by Extension VI. This file freezes those 192 state indices so expensive
+reconstruction of the 5,692-cell complete-angle predecessor need not be repeated
+for every exactification chunk.
+
+This wrapper does not replace the slow membership audit. It proves the branch
+contradictions for the frozen ledger. Every selected state is excluded only
+when all twenty-by-twenty physical branch products at faces 2 and 3 are covered
+by exact rational Farkas certificates. Numerical LPs only recover sparse dual
+supports. Hull reflection then transports each exact direct exclusion to its
+reflected state.
+"""
+from argparse import ArgumentParser
+from collections import Counter
+from pathlib import Path
+import contextlib
+import hashlib
+import importlib.util
+import io
+
+HERE = Path(__file__).resolve().parent
+SLOW = HERE / "verify_target_c_support7_h6_face23_saturation_reflection_2026_09_19.py"
+spec = importlib.util.spec_from_file_location("face23_saturation_slow", SLOW)
+S = importlib.util.module_from_spec(spec)
+with contextlib.redirect_stdout(io.StringIO()):
+    spec.loader.exec_module(S)
+
+FRESH_IDX_4158 = (
+    6496,6498,6503,6511,6517,6520,6522,6525,6532,6534,6579,6588,
+    6592,6602,6603,6609,6610,6611,6614,6617,6620,6623,6634,6639,
+    6655,6659,6669,6677,6684,6690,6691,6693,6710,6713,6744,6760,
+    6769,6771,6779,6836,6842,6855,6889,6892,6895,6901,6988,7004,
+    7012,7014,7026,7031,7051,7053,7062,7063,7076,7083,7145,7214,
+    7754,7767,7921,7923,7959,7963,7969,7979,7988,7989,7996,8023,
+    8035,8057,8058,8399,8497,8540,8547,8577,8608,8616,8641,8644,
+    8653,8659,8676,8762,9237,9254,9267,9272,9277,9284,9297,9301,
+    9315,9343,9352,9383,9386,9416,9506,9540,9598,10302,10375,10386,
+    10768,10936,10944,10951,10953,10966,10972,10980,10985,10991,
+    11014,11017,11029,11036,11045,11047,11049,11060,11062,11064,
+    11070,11073,11077,11083,11223,11320,11321,11324,11333,11335,
+    11336,11340,11360,11366,11368,11374,11377,11386,11411,11463,
+    11465,11466,11473,11477,11478,11485,11501,11512,11517,11519,
+    11528,11529,11551,11554,11563,11603,11608,11671,11678,11687,
+    11695,11710,11716,11726,11729,11808,11810,11826,11853,12008,
+    12041,12491,12503,12842,13078,13088,13116,13157,13171,13185,
+    13186,13251,13789,13818,
+)
+FRESH_SHA256 = "3388a16ee53a772581652d144b03d25230f44aeff1db9a7b954860f84250b6f0"
+
+assert len(FRESH_IDX_4158) == len(set(FRESH_IDX_4158)) == 192
+assert set(FRESH_IDX_4158) <= set(S.CANDIDATE_IDX_4276)
+assert len(set(S.CANDIDATE_IDX_4276) - set(FRESH_IDX_4158)) == 106
+assert hashlib.sha256(
+    ",".join(map(str, FRESH_IDX_4158)).encode()
+).hexdigest() == FRESH_SHA256
+
+
+def summarize(states, reflected):
+    direct = set(FRESH_IDX_4158)
+    image = {reflected[i] for i in direct}
+    removed = direct | image
+    assert {reflected[i] for i in removed} == removed
+
+    graph_removed = Counter(states[i][1] for i in removed)
+    pattern_removed = Counter("".join(map(str, states[i][5])) for i in removed)
+    graph_survivors = Counter({
+        k: S.START_GRAPH[k] - graph_removed[k] for k in S.START_GRAPH
+    })
+    pattern_survivors = Counter({
+        k: S.START_PATTERN[k] - pattern_removed[k] for k in S.START_PATTERN
+    })
+    assert sum(graph_survivors.values()) == 4158 - len(removed)
+    assert sum(pattern_survivors.values()) == 4158 - len(removed)
+    assert all(v >= 0 for v in graph_survivors.values())
+    assert all(v >= 0 for v in pattern_survivors.values())
+    assert pattern_survivors["145"] == pattern_survivors["347"]
+    assert pattern_survivors["156"] == pattern_survivors["237"]
+    assert pattern_survivors["235"] == pattern_survivors["356"]
+    assert pattern_survivors["236"] == pattern_survivors["256"]
+    assert pattern_survivors["245"] == pattern_survivors["346"]
+
+    print("fresh_direct", len(direct))
+    print("reflected_image", len(image))
+    print("direct_image_overlap", len(direct & image))
+    print("removed_union", len(removed))
+    print("survivors", 4158 - len(removed))
+    print("graph_removed", dict(sorted(graph_removed.items())))
+    print("pattern_removed", dict(sorted(pattern_removed.items())))
+    print("graph_survivors", dict(sorted(graph_survivors.items())))
+    print("pattern_survivors", dict(sorted(pattern_survivors.items())))
+    return removed, graph_survivors, pattern_survivors
+
+
+def verify_range(start, stop, summary_only=False):
+    states = S.O.tri.collect_survivors()
+    assert len(states) == 14174
+    reflected, _ = S.E5.reflection_data(states)
+
+    if summary_only:
+        summarize(states, reflected)
+        print("PASS summary-only")
+        return
+
+    selected = FRESH_IDX_4158[start:stop]
+    graph = Counter()
+    pattern = Counter()
+    forced = Counter()
+    certificates = 0
+    max_den = 1
+
+    for serial, idx in enumerate(selected, start=start):
+        count, f, den, live2, live3 = S.exactify_idx(states, idx)
+        certificates += count
+        forced.update(f)
+        max_den = max(max_den, den)
+        graph[states[idx][1]] += 1
+        pattern["".join(map(str, states[idx][5]))] += 1
+        print(
+            "GOOD", serial, idx, count, dict(f), den, live2, live3,
+            flush=True,
+        )
+
+    print("EXACT_DONE")
+    print("range", start, stop)
+    print("good_count", len(selected))
+    print("graph", dict(sorted(graph.items())))
+    print("patterns", dict(sorted(pattern.items())))
+    print("certificates", certificates)
+    print("forced", dict(forced))
+    print("max_denominator", max_den)
+
+    if start == 0 and stop == len(FRESH_IDX_4158):
+        summarize(states, reflected)
+        print("PASS full")
+    else:
+        print("PASS chunk")
+
+
+def main():
+    parser = ArgumentParser()
+    parser.add_argument("--start", type=int, default=0)
+    parser.add_argument("--stop", type=int, default=len(FRESH_IDX_4158))
+    parser.add_argument("--summary-only", action="store_true")
+    args = parser.parse_args()
+    assert 0 <= args.start <= args.stop <= len(FRESH_IDX_4158)
+    verify_range(args.start, args.stop, args.summary_only)
+
+
+if __name__ == "__main__":
+    main()

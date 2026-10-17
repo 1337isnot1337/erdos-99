@@ -1,0 +1,143 @@
+# Target C-II — the sparse `R=1` reuse choice is Pareto-optimal inside the current common-run pipeline
+
+**Date:** 2026-09-18  
+**Status:** proved candidate awaiting promotion; proof-only optimization/audit of the FREE heavy-reuse mechanism  
+**Scope:** evenly thinned FREE module families followed by reuse counting, pair pigeonhole, lower-run pigeonhole, and two-normal cone/Euler extraction  
+**Dependencies:** sparse FREE subfamily common-run theorem and its listed dependencies  
+**Certificate:** `research/verify_target_c_tooth_reflection_reuse_pareto_optimality_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The preceding sparse-family theorem uses the minimum reuse threshold `R=1`. This note checks that this is not merely a convenient choice. Within the current counting pipeline, `R=1` is the exact Pareto optimum once the desired matching amplification is fixed. Therefore further tuning of the reuse threshold cannot improve the `m^(3/2)` heavy-branch loss without adding a new geometric input.
+
+Fix an evenly thinned family of `m` FREE modules with consecutive normal gap
+
+\[
+\gamma_D\ge(c_*-o(1))/m,
+\qquad
+c_*=0.129220199818177\ldots .
+\tag{PO.1}
+\]
+
+Let `1<=R<m` be the threshold in the multi-module reuse theorem, and put
+
+\[
+A:=\frac mR.
+\tag{PO.2}
+\]
+
+The parameter `A` is the matching-amplification scale.
+
+The light branch gives
+
+\[
+\boxed{
+|M_{\rm light}|
+\ge
+\left(\frac{\alpha_K}{22}-o(1)\right)AD,
+}
+\tag{PO.3}
+\]
+
+where `alpha_K=1-h_*/K`.
+
+In the heavy branch, every retained edge occurs in at least `R+1` selected modules. Assign it to its first and last participating selected modules. Their index gap is at least `R`, hence
+
+\[
+\boxed{
+\theta\ge(c_*-o(1))\frac Rm
+=(c_*-o(1))\frac1A.
+}
+\tag{PO.4}
+\]
+
+The heavy-edge population is still at least `(alpha_K/2-o(1))D`, independent of `R`. Pair pigeonholing and then lower-run pigeonholing give one pair of runs with
+
+\[
+\boxed{
+q\ge
+(\alpha_K-o(1))
+\frac{D}{m^2(Z_D+1)^2}.
+}
+\tag{PO.5}
+
+The componentwise cone/Euler minimax then yields heavy-branch currency at least
+
+\[
+\boxed{
+\left(
+\sqrt{\alpha_K\sin\!\left(\frac{c_*}{2A}\right)}-o(1)
+\right)
+\frac{\sqrt D}{m(Z_D+1)}.
+}
+\tag{PO.6}
+
+Because `m=AR`, this is
+
+\[
+\boxed{
+\left(
+\frac{\sqrt{\alpha_K\sin(c_*/(2A))}}{AR}-o(1)
+\right)
+\frac{\sqrt D}{Z_D+1}.
+}
+\tag{PO.7}
+
+For fixed amplification `A`, the sine factor does not depend on `R`. The right side therefore decreases exactly like `1/R`. Hence
+
+\[
+\boxed{R=1\text{ maximizes the heavy-branch guarantee at fixed matching amplification }A.}
+\tag{PO.8}
+
+Equivalently, among all choices in this pipeline that force an `Omega(AD)` light-branch matching, the best guaranteed heavy-branch currency is obtained with
+
+\[
+m=A,
+\qquad R=1.
+\]
+
+For `A->infinity`,
+
+\[
+\sin\left(\frac{c_*}{2A}\right)
+=\frac{c_*}{2A}(1+o(1)),
+\]
+
+so the Pareto envelope is
+
+\[
+\boxed{
+\Omega(AD)
+\quad\text{or}\quad
+\left(
+\sqrt{\frac{\alpha_Kc_*}{2}}-o(1)
+\right)
+\frac{\sqrt D}{(Z_D+1)A^{3/2}}.
+}
+\tag{PO.9}
+
+Thus the `A^(3/2)` loss is the best possible output of the present four-step mechanism:
+
+1. multiplicity thresholding;
+2. assignment of a heavy edge to one module pair;
+3. pigeonholing that pair into one lower-run pair;
+4. balancing common-component drift against two-path cycle rank.
+
+A better exponent now requires a new theorem, not another scale choice. Concretely, one must improve at least one of the following structural losses:
+
+- replace the `1/m^2` module-pair pigeonhole by a many-pair/global incidence argument;
+- exploit many lower-run pairs simultaneously instead of one `(Z_D+1)^2` pigeonhole cell;
+- convert the full heavy-edge network directly into canonical outer-walk/force-hull currency;
+- or use a source-preserving multi-module deformation that bypasses the pairwise common-run reduction.
+
+For `K=1`, the Pareto coefficient in (PO.9) is
+
+\[
+\boxed{
+\sqrt{\frac{\alpha_1c_*}{2}}
+=0.207321005198949\ldots .
+}
+\]
+
+This note does not strengthen the theorem-state endpoint by itself; it proves that the new sparse-family theorem is already optimal inside its current combinatorial reduction. C-II remains open and the canonical theorem ledger is unchanged.
+
+**Disposition:** derived the full `(m,R)` matching-versus-common-run tradeoff and showed that fixing the matching amplification `A=m/R` makes the heavy guarantee exactly decrease as `1/R`. The minimal threshold `R=1` is therefore Pareto-optimal, and the `A^(3/2)` loss identifies a genuine structural bottleneck of the current reuse-to-pair pipeline.

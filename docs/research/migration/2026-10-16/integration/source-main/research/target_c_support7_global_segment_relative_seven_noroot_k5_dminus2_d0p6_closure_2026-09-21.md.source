@@ -1,0 +1,180 @@
+# Target C: close seven-no-root `D=-2,k=5,d=0,p=6`
+
+Date: 2026-09-21
+
+Status: exact closure of the last `D=-2,k=5` seven-no-root arithmetic branch. Together with the previously closed `(d,p)=(2,0)` and `(1,3)` cases, there is no seven-no-root counterexample with `D=-2,k=5`.
+
+Companion exact certificate:
+
+`research/verify_target_c_support7_global_segment_relative_seven_noroot_k5_dminus2_d0p6_closure_2026_09_21.py`
+
+It uses the already committed finite-search engine
+
+`research/verify_target_c_support7_global_segment_relative_six_noroot_k4_d2_singleton_capacity_2026_09_21.py`.
+
+## Reduction already established
+
+Suppose a seven-no-root state existed with
+
+`D=-2, k=5, d=0, p=6`.
+
+Its coefficient-constraint space `P <= Q^7` has rank two. The all-depth deletion theorem for defect `-2` implies that every one- and two-coordinate puncture preserves rank two.
+
+For every one-row deletion, defect transport gives a synchronized six-row shadow of defect zero and incomplete-root cost six. The six-row `k=4` containment theorem says
+
+`0 >= 6 + 6 + 3 d_6 - 3 q_6`.
+
+The only arithmetic possibilities are `(d_6,q_6)=(1,5),(1,6),(2,6)`. The exact deficiency-one singleton-capacity bound is three. The first case needs at least four singleton replacements and the second needs six, so both are impossible. Hence every one-row deletion has
+
+`d_6=2, q_6=6`.
+
+Because the total incomplete cost is six, the original seven-row state has exactly six singleton incomplete blocks and no pair block. All six singleton blocks are virtual-canonical complete in every one-row deletion.
+
+Now delete any two no-root rows. Defect transport gives a five-row `D=2,k=3,p=6` shadow. Row-nullity monotonicity gives `d_5<=2`, while the repaired five-row `k=3` theorem gives `d_5>=1` and
+
+`2 >= 5 + 6 + 3 d_5 - 3 q_5`.
+
+If `d_5=1`, then `q_5>=4`. But all six actual incomplete blocks are singletons, while the exact five-row deficiency-one singleton-capacity maximum is three. Therefore `d_5=2`, and then `q_5>=5`.
+
+Thus every hypothetical counterexample produces a six-row rank-two state satisfying all of the following:
+
+1. every coordinate projection still has rank two;
+2. its virtual canonical deficiency is `d_6=2`;
+3. at least six virtual-canonical complete blocks admit compatible singleton states;
+4. every one-coordinate projection has five-row virtual deficiency `d_5=2`;
+5. in each such projection at least five of the same six singleton blocks remain virtual-canonical complete.
+
+The branch is therefore reduced to a finite synchronized six-row audit.
+
+## Exact five-row parent census
+
+The audit starts from the exact `20,451` `S_7` orbit representatives of five no-root cycles. These cover all
+
+`C(105,5)=96,560,646`
+
+five-subsets. For every orbit representative it enumerates every realizable rank-two coefficient plane using the repaired five-row block-state dynamic program.
+
+There are
+
+`535,040`
+
+rank-two virtual canonical states in this cover. Exactly
+
+`15,865`
+
+have virtual complete-block deficiency two.
+
+Their number of canonical-complete blocks admitting at least one compatible singleton state is:
+
+```text
+capacity   d=2 parent states
+0                    1
+1                  297
+2                  532
+3                4,339
+4                8,260
+5                  693
+6                1,377
+7                   68
+8                  110
+9                   76
+10                  48
+11                  64
+----------------------
+total            15,865
+```
+
+Only capacities at least five can occur in a deletion shadow of the hypothetical seven-row state. This leaves exactly
+
+`2,436`
+
+five-row parents.
+
+## Exact six-row extension audit
+
+Each of the 2,436 parents is extended by every no-root four-cycle not already present, giving
+
+`243,600`
+
+parent-extension instances.
+
+For a fixed five-row parent plane `P_5` and added sixth row, every realizable rank-two `P_6` projecting to `P_5` is generated in one of two ways:
+
+- one local block state contributes a rank-two coefficient space; or
+- two distinct local block states contribute independent rank-one coefficient spaces.
+
+The committed generator enumerates both cases exactly. Pair and complete local states contribute zero coefficient constraint and therefore cannot supply a missing basis direction.
+
+The exact extension census is:
+
+```text
+five-row d=2 capacity>=5 parents      2,436
+parent extensions                    243,600
+rank-two P6 candidates               355,691
+all six projections rank two         138,552
+six-row virtual d6=2                   1,418
+six-row singleton capacity >=6           761
+all six projected five-row d5=2            0
+```
+
+The singleton-capacity distribution among the 1,418 synchronized `d_6=2` states is:
+
+```text
+capacity   states
+0             102
+2              18
+3             126
+4             255
+5             156
+6             433
+7             296
+8              32
+---------------
+total       1,418
+```
+
+There are 761 states with enough singleton-compatible complete blocks at the six-row level. Not one of those 761 has virtual deficiency two after all six possible coordinate deletions.
+
+Therefore no six-row deletion shadow required by the seven-row reduction exists. The search dies before it is necessary to choose a common six-block singleton set, and before any final 15-dimensional `T`-space rerank.
+
+Hence
+
+`D=-2, k=5, d=0, p=6`
+
+is impossible.
+
+## Exactness
+
+All coefficient-space row reduction and containment is exact over `fractions.Fraction`.
+
+Complete-block relation ranks are computed modulo
+
+`2^127-1`.
+
+The imported verifier runs the Lucas-Lehmer primality check. Every complete-block relation row has squared Euclidean norm at most 12, and
+
+`(2^127-1)^2 > 12^15`.
+
+Hadamard's bound therefore makes every modular complete-block rank decision equal to the rational rank.
+
+The five-row orbit construction is exact integer combinatorics. The six-row search is an exhaustive extension cover; duplicate extension paths are harmless because the survivor set is empty.
+
+The full census was independently reproduced by splitting the 2,436 filtered five-row parents into eight disjoint ranges and summing the exact counts. The aggregate counts are encoded as assertions in the closure certificate.
+
+## Consequence
+
+The three `D=-2,k=5` arithmetic cases were
+
+```text
+(d,p) = (2,0), (1,3), (0,6).
+```
+
+All three are now closed.
+
+Within the seven-no-root `k=5` layer, the only remaining arithmetic branch is
+
+`D=-1, k=5, d=0, p=7`.
+
+The direct C-II endpoint remains unchanged at
+
+`3874 = 3076 C7 + 798 (C3 disjoint-union C4)`.

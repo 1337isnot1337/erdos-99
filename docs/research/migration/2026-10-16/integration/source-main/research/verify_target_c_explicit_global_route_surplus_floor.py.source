@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+"""Exact arithmetic checks for the explicit Type-II route-surplus floor.
+
+The geometric inputs are audited canonical theorems.  This script checks only the
+displayed constant and the ledger rearrangements; it does not construct a minimizer.
+"""
+
+from fractions import Fraction as F
+from math import pi, sqrt
+
+
+def main() -> None:
+    # Conservative rational enclosures are enough for the displayed strict margin.
+    pi_hi = F(314160, 100000)
+    # 4*sqrt(pi/(2*sqrt(3))) > 3.8092 is the existing certified enclosure.
+    four_sqrt_delta_lo = F(38092, 10000)
+    c_lo = four_sqrt_delta_lo - pi_hi
+    assert c_lo > F(667, 1000)
+
+    # Exact ledger algebra: b+Q=2(q-k), so
+    # (b+Q+4f-pi D)/D = 2(q-k)/D + 4f/D - pi.
+    t = F(29, 10)
+    f = F(1, 5)
+    # The left side's non-pi part is exactly 2*t+4*f.
+    assert 2 * t + 4 * f == F(33, 5)
+    assert F(33, 5) - pi_hi > c_lo
+
+    # The Type-II payment implication keeps the direction:
+    # delta + P_exc >= c and P_exc <= 10(e_BB-k) => delta+10(e_BB-k)>=c.
+    delta = F(1, 2)
+    payment = F(1, 5)
+    assert delta + 10 * payment >= c_lo
+
+    print("explicit global route-surplus floor: arithmetic checks OK")
+    print(f"certified_floor_lower={float(c_lo):.9f}")
+    print(f"exact_floor={4 * sqrt(pi / (2 * sqrt(3))) - pi:.12f}")
+
+
+if __name__ == "__main__":
+    main()

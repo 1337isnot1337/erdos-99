@@ -1,0 +1,142 @@
+# Target C support-seven H6: exact state-level reflection closure
+
+Date: 2026-09-19
+
+Status: exact finite reduction inside the generic H6 branch. The theorem-state authority is unchanged. C-II remains open.
+
+## Result
+
+The previous explicit exact generic-H6 endpoint is
+
+\[
+4704=3760\,C_7+944\,(C_3\sqcup C_4).
+\]
+
+The earlier reflection argument used only aggregate ground-pattern counts and therefore gave the conservative bound
+
+\[
+|S_{H6}^{\rm refl}|\le 4582.
+\]
+
+The state-level reflection map can now be constructed on the complete exact 14,174-state H6 universe. Closing the 4,704-cell exact survivor set under this involution gives
+
+\[
+\boxed{4464=3580\,C_7+884\,(C_3\sqcup C_4)}.
+\]
+
+Thus reflection transfers already certified branch exclusions to exactly
+
+\[
+\boxed{240}
+\]
+
+additional labelled H6 states. This is an explicit exact survivor census, not only a counting upper bound.
+
+The 240 new exclusions split as
+
+```text
+C7       180
+C3+C4     60
+```
+
+and by normalized ground sign pattern as
+
+```text
+235    37
+236   129
+245     6
+256    19
+345     4
+346    13
+356    32
+```
+
+The remaining reflection-closed census is
+
+```text
+145       4
+156      16
+235     605
+236    1134
+237      16
+245     465
+256    1134
+345      16
+346     465
+347       4
+356     605
+```
+
+The paired ground-pattern counts are now exactly equal under reflection.
+
+## State-level involution
+
+Use the reciprocal-label reflection
+
+\[
+\rho=(1\ 5)(2\ 4),
+\qquad
+\rho(0)=0,\quad \rho(3)=3,\quad \rho(6)=6,\quad \rho(7)=7.
+\]
+
+For one exact H6 state, the verifier transforms the stored data as follows.
+
+1. Relabel every missing relation edge by `rho`.
+2. Reverse each hull radial order and relabel its entries by `rho`; the radial order formerly based at hull vertex `i` is placed at base vertex `rho(i)`.
+3. Send the normalized ground positive-position pattern `P` to `{8-p : p in P}`.
+4. Relabel every signed relation edge by `rho`, preserving its scalar sign.
+
+The state key uses graph type, the relabelled missing-edge set, the six relabelled raw radial orders, the ground pattern, and the signed relation-edge dictionary. On the full 14,174-state exact universe the companion verifier checks that this map is a permutation, is involutive, and preserves the missing-graph type.
+
+Hence the generic-H6 combinatorial state space itself is closed under the geometric hull reflection, with no appeal to aggregate counting.
+
+## Exact exclusion transfer
+
+Let `S` be the previously certified 4,704-state endpoint, represented by exact state indices in the 14,174-state universe. Let `rho(S)` be its image under the exact involution. Any genuine realization whose state lies in `S` must have its reflected realization in `S` as well, because all reductions used to obtain `S` are geometric necessary conditions.
+
+Therefore the reflection-closed survivor set is
+
+\[
+S\cap\rho(S).
+\]
+
+The verifier computes
+
+\[
+|S\cap\rho(S)|=4464,
+\qquad
+|S\setminus\rho(S)|=240.
+\]
+
+For every one of those 240 newly removed states, the reflected partner is checked to lie among the 272 exact post-order-hull branch exclusions already proved by the committed adaptive and two-face Farkas verifiers through face-(2,3) extension IV. Thus no numerical feasibility decision is introduced by the reflection step. It only transports an existing exact impossibility certificate through an exact symmetry.
+
+The reflected partner set has cardinality 240, so the transfer is one-to-one on the newly excluded states. The final 4,464-state set is then checked directly to be invariant under the same state-level involution.
+
+## Certificate design
+
+Certificate:
+
+`research/verify_target_c_support7_h6_state_reflection_closure_2026_09_19.py`
+
+The verifier embeds two hashed state-index bitsets:
+
+- the previously certified 4,704-state endpoint;
+- the 272 exact post-order-hull branch exclusions used as reflection sources.
+
+Those ledgers are bookkeeping snapshots of results already proved by the earlier Fraction/Farkas verifiers; they do not replace those proofs. The new reflection argument itself uses no floating-point arithmetic and no optimization.
+
+A source-reconstructing scratch audit independently rebuilt the same ledgers from the committed H6 enumeration and the six committed post-order-hull branch verifiers, then obtained the same 240 new states. A separate cached-state implementation reproduced the 4,704-to-4,464 reduction and the same graph/pattern census.
+
+The full source-backed state enumeration is substantially slower than the compact bookkeeping pass. The committed verifier keeps the state representation and the ledger hashes explicit so the closure calculation can be audited separately from the expensive predecessor certificate generation.
+
+## Consequence for further scans
+
+The exact endpoint is now reflection closed. In particular, duplicating a fixed physical-face `(2,3)` search on its reflected `(3,4)` image is unnecessary: any exact exclusion found on one side can be transported immediately to the reflected state on the other side.
+
+The remaining affine branch work should therefore use reflection orbits from the start. The fixed face-(2,3) scan still has unexamined positions beyond the previously completed range, and other face-pair orbits remain available.
+
+The metric-order route is independent and should now start from these 4,464 explicit states. The 168 rooted segment comparisons on `L(K8)`, the fourteen all-root interior-domination disjunctions, and the exact short sine-cycle engine can all be applied state by state without carrying the 240 reflection duplicates.
+
+## Scope
+
+This closes the reflection bookkeeping gap for the generic H6 branch. It does not prove C-II, does not establish realizability of any of the 4,464 survivors, and does not address reciprocal-collinearity walls. The next bottleneck is to obtain new exact exclusions from the remaining face-branch or metric-order/metric-magnitude constraints.

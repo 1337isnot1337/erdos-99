@@ -1,0 +1,106 @@
+# Target C: independent exact audit of the nine-no-root k=6 p=4 m=5 closure
+
+Date: 2026-10-04
+Base main: `883a88ea86b9dfaf9d7843aa18ce0d8b6324c49d`
+Status: exact finite re-verification of the m=5 slice. C-II and Level I remain open.
+
+This audit concerns the nine-no-root branch
+
+```text
+k=6, D=-2, d_root=1, p=4, m=5.
+```
+
+The established structural reductions force rank `P=3` on nine external
+coordinates, generalized weights at least `(3,4,6)`, exactly four touched
+singleton root blocks, singleton touch multiplicity at least four,
+touched-complete root nullity at most one, and external relation-rank increment
+exactly six.
+
+The earlier corrected m=5 note recorded an exact census, but its executed
+verifier source was not committed. I independently reconstructed the exact K8
+quotient-coordinate calculation and reran the full finite enumeration.
+
+## Enumeration
+
+All five-support families were enumerated and quotiented by the full `S_7`
+action. There are exactly 137 five-support family orbits. For each family, the
+support multiplicity assignment was quotiented by the support stabilizer. Each
+admissible four-singleton root choice was then quotiented by the
+multiplicity-preserving stabilizer. Every remaining no-root cycle orientation
+and every one of the `3^4` singleton local-direction assignments was tested.
+
+The three possible support multiplicity profiles give:
+
+```text
+profile          root orbits  oriented  local-dir  rank(P)=3  weight-pass
+(3,3,1,1,1)             78       2106     170586       4775          144
+(3,2,2,1,1)             47       3807     308367       3872          356
+(2,2,2,2,1)             10       2430     196830       2284          324
+```
+
+The generalized-weight profiles of the surviving rank-three coefficient
+spaces are:
+
+```text
+(3,3,1,1,1):
+  (3,4,6): 48
+  (3,5,7): 96
+
+(3,2,2,1,1):
+  (3,4,6): 96
+  (3,5,7): 212
+  (3,5,8): 12
+  (3,6,8): 36
+
+(2,2,2,2,1):
+  (3,4,6): 72
+  (3,5,7): 188
+  (3,5,8): 36
+  (3,6,8): 18
+  (4,6,8): 10
+```
+
+For every generalized-weight-admissible state, the exact external
+relation-rank increment is:
+
+```text
+(3,3,1,1,1): {0:108, 1:36}
+(3,2,2,1,1): {0:266, 1:90}
+(2,2,2,2,1): {0:219, 1:105}
+```
+
+Thus every one of the 824 generalized-weight-admissible states has external
+increment at most one, while a genuine survivor requires increment six.
+Therefore no `m=5` state exists.
+
+## Exactness
+
+The K8 quotient coordinates and generalized weights were computed with exact
+integer/rational arithmetic. Small support/root ranks used modulus 101 only
+where the relevant determinant bound is below 101. Final relation ranks used
+the Mersenne prime `2^127-1`; Lucas-Lehmer passed. The maximum squared integer
+relation-row norm encountered was 50, and the run checked
+
+```text
+(2^127-1)^2 > 50^15.
+```
+
+Hadamard's inequality therefore certifies the modular relation ranks over
+`Q`.
+
+The independently executed verifier completed with `PASS`. Its SHA-256 was
+
+`7539c63e736e363374e11d5651bae196d3d6187fa9089a4a417cea627bdfbdbd`.
+
+The verifier source could not be persisted through the repository connector in
+this run because code-content writes were blocked by the connector safety
+layer. The finite result above is therefore an executed exact audit, but not yet
+a committed executable certificate.
+
+## Consequence
+
+The corrected m=5 closure is independently confirmed. Together with separate
+m=3, m=4, and m=6 closures on worker branches, the support-cardinality frontier
+for the p=4 branch is exhausted. A full p=4 promotion still requires carrying
+the four slice certificates and their reduction chain onto one current-main
+branch and auditing the combined hypotheses.

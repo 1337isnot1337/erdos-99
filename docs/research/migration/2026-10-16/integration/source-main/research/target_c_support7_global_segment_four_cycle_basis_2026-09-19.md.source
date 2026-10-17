@@ -1,0 +1,130 @@
+# Target C support-seven: canonical four-cycle metric basis on `L(K8)`
+
+Date: 2026-09-19
+
+Status: exact structural refinement of the generic reciprocal metric layer. The theorem-state authority is unchanged. C-II remains open.
+
+## Result
+
+Let `H` be the reciprocal log-sine cochain on the 168 edges of the segment line graph
+
+\[
+L(K_8),
+\]
+
+as defined in `target_c_support7_global_segment_order_2026-09-19.md`. The graph has 28 vertices and cycle rank
+
+\[
+168-28+1=141.
+\]
+
+For every reciprocal triangle `{a,b,c}`, the three side segments `ab,bc,ac` form a line-graph triangle. Its `H`-sum is identically zero: it is just the three sine-law side ratios of one Euclidean triangle multiplied around a loop. There are 56 such triangle-side cycles.
+
+The remaining cycle space can be generated entirely by short cross-root four-cycles. In fact there is an explicit canonical family of exactly 85 four-cycles which, together with the 56 triangle-side cycles, forms a basis of the full 141-dimensional cycle space.
+
+Fix reciprocal point `0`. For every
+
+\[
+1\le a<b<c\le 7
+\]
+
+take the two `K8` vertex cycles
+
+\[
+A_{abc}=(0,a,b,c,0),
+\qquad
+B_{abc}=(0,a,c,b,0).
+\]
+
+These give `35+35=70` line-graph four-cycles. In addition, for every
+
+\[
+2\le b<c\le 7
+\]
+
+take
+
+\[
+C_{bc}=(0,b,1,c,0),
+\]
+
+giving another `C(6,2)=15` four-cycles. Thus
+
+\[
+70+15=\boxed{85}.
+\]
+
+The 56 triangle-side cycle rows and these 85 four-cycle rows are linearly independent over `Q`. Since their total number is
+
+\[
+56+85=141,
+\]
+
+they form a cycle-space basis of `L(K8)`.
+
+Consequently, for an arbitrary antisymmetric cochain `H` whose 56 triangle-side sums vanish,
+
+\[
+\boxed{
+H\text{ is exact on }L(K_8)
+\iff
+\text{all 85 canonical four-cycle sums vanish.}
+}
+\]
+
+For the reciprocal log-sine cochain, the 56 triangle-side sums vanish identically, so the 85 four-cycle identities alone are a complete cross-root metric exactness test.
+
+## Why this matters
+
+The previous chordless-cycle classification lists 210 four-cycles, 672 five-cycles, 1,680 six-cycles, 2,880 seven-cycles, and 2,520 eight-cycles. Those longer cycles remain useful as *derived interval certificates*: a long product may be easier for the exact sine-interval engine to separate from `1` because interval propagation loses dependencies.
+
+They are not independent metric equations. Once the 85 basis four-cycle identities hold, every line-graph cycle identity holds automatically. In particular, every one of the 210 four-cycles and every length-5 through length-8 sine-cycle identity is a rational linear consequence at the log-cochain level.
+
+This gives a cleaner search hierarchy for the generic H6 survivors:
+
+1. use any short cycle, basis or nonbasis, as a discovery/exclusion certificate when its certified sine interval misses `1`;
+2. when enforcing a complete cross-root metric system, branch or solve only against the canonical 85 four-cycle basis rather than treating length 5 through 8 as additional equation layers;
+3. retain the existing fifteen ground-root equations when the smallest equation count is preferable, because the complete-angle manifold already reduces the metric defect dimension to 15.
+
+The 85-cycle theorem is therefore not a claim that 85 beats the existing fifteen-equation complete-metric theorem. Its value is that every nontrivial equation is a four-cycle involving four reciprocal points, which matches the local interval/certificate machinery and avoids long products.
+
+## Exact cycle-space certificate
+
+The companion verifier constructs `L(K8)` with 28 segment vertices and 168 adjacency edges. It uses exact arithmetic modulo the prime `1,000,000,007` to check
+
+```text
+rank(56 side triangles) = 56
+rank(56 side triangles + 85 canonical four-cycles) = 141.
+```
+
+A full-rank minor modulo a prime is a nonzero integer minor, hence proves the same rows are independent over `Q`. There is no floating-point rank decision.
+
+The verifier also checks the representative `K4` identity
+
+\[
+2S_0(1,2,3)
+=
+-T_{012}+T_{013}-T_{023}-T_{123}
++C_{0123}-C_{0132}-C_{0213},
+\]
+
+with orientations fixed by the script. Thus even a root-star triangle lies in the span of triangle-side and four-cycle rows. Since the displayed 141 rows already have full cycle-space rank, every other cycle row does as well.
+
+Certificate:
+
+`research/verify_target_c_support7_global_segment_four_cycle_basis_2026_09_19.py`
+
+## Important distinction: sign cycles are different
+
+This basis reduction applies to additive log-sine cycle equations. It does **not** permit dropping the length-5 through length-8 templates from the strict segment-order acyclicity test.
+
+A directed-cycle obstruction is a conjunction of oriented strict inequalities, not a linear cycle-space equation. A longer directed cycle need not contain a directed four-cycle. Therefore the 8,242-template strict-order statement in `target_c_support7_global_segment_chordless_cycles_2026-09-19.md` remains valid and should not be replaced by an 85-cycle sign test.
+
+The practical split is now precise:
+
+- strict order consistency: keep the chordless directed-cycle logic;
+- nonlinear metric exactness: 85 canonical four-cycles plus the 56 automatic side triangles already span the entire line-graph cycle space.
+
+## Scope
+
+This is a structural metric reduction. It does not by itself exclude a new generic H6 cell and does not address reciprocal-collinearity walls. The current explicit generic-H6 survivor endpoint remains 4,704 cells, with the separate reflection-closed upper bound 4,582 from the current committed exact census.

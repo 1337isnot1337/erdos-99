@@ -1,0 +1,128 @@
+# Hostile audit — Target C train-cut covariance identity
+
+**Date:** 2026-09-12  
+**Artifact:** `target_c_train_cut_covariance_identity_2026-09-12.md`  
+**State lock:** `2026-09-12.audit.46`  
+**Verdict:** **PASS at proof-only scope; no C-II closure.**
+
+## 1. Sign and orientation audit
+
+Choose the train shores `S_tau,T_tau` with `chi_tau=0` on `S_tau` and `1` on
+`T_tau`, and orient the common train contact vector from `S_tau` to `T_tau`.
+The exact Section-159 identity is then
+
+\[
+p_y-p_x=\sum_\tau(\chi_\tau(y)-\chi_\tau(x))u_\tau.
+\]
+
+For a diameter edge oriented as `r_h=p_y-p_x`, the coefficient
+`epsilon_(h,tau)=chi_tau(y)-chi_tau(x)` is exactly the sign needed to orient the
+diameter vector from the `S_tau` shore to the `T_tau` shore.  Summing KKT equilibrium
+over `S_tau` gives
+
+\[
+a_tau u_tau=\sum_h beta_h epsilon_(h,tau)r_h.
+\]
+
+Thus the transpose in
+`A_alpha U=E^T B_beta R` is correct; no unproved path-crossing multiplicity is
+introduced.
+
+**Verdict:** pass.
+
+## 2. Matrix and dimension audit
+
+`E` has one row per diameter edge and one column per train, `U` and `R` have two
+columns, and `R=EU` has the compatible dimensions
+
+\[
+(q\times q)(q\times2)=q\times2.
+\]
+
+`A_alpha` and `B_beta` are diagonal with positive contact-train and normalized
+diameter weights.  Substitution gives
+
+\[
+A_alpha U=E^T B_beta E U.
+\]
+
+Left multiplication by `U^T` gives the symmetric covariance identity.  The trace is
+`sum_tau a_tau` on the left and `D^2 sum_h beta_h` on the right.  The shared KKT
+virial identity gives `sum_tau a_tau=sum_C alpha_e=D^2`, so the normalization is
+exact.
+
+**Verdict:** pass.
+
+## 3. Nullspace audit
+
+Strict rhombi supply at least two nonparallel train directions, so the two coordinate
+columns of `U` are independent.  From
+
+\[
+(E^T B_beta E-A_alpha)U=0
+\]
+
+both columns lie in the kernel of the same `q x q` matrix.  Hence its kernel has
+dimension at least two.  This is a linear-algebra statement about the exact pure
+endpoint; it is not a claim that the matrix is singular for arbitrary abstract
+support data.
+
+**Verdict:** pass.
+
+## 4. Angular-slack normalization
+
+For one train,
+
+\[
+a_tau\le D\sum_{h\pitchfork tau}beta_h.
+\]
+
+Summing and using `sum_tau a_tau=D^2` gives
+
+\[
+\sum_h beta_h(t_h-D)
+={1\over D}\sum_{tau,h\pitchfork tau}
+ beta_h\bigl(D-u_tau\cdot(epsilon_(h,tau)r_h)\bigr)\ge0.
+\]
+
+The factor `1/D` is required because the shore-resultant slack has units of length,
+while `t_h-D` is a count.  The checked note includes this factor.
+
+**Verdict:** pass.
+
+## 5. Scope and closure gate
+
+- The construction applies only to the proof-only exact pure-tooth endpoint.
+- Contact-isolated source points remain outside the core coordinate map.
+- No uniform lower bound on `beta_h` or `a_tau` is inferred.
+- A PSD matrix minus a positive diagonal having a two-dimensional kernel does not,
+  by itself, contradict planarity, the Woodall topology, or global minimality.
+- The missing step remains a circular-split/odd-thrackle sign or covariance theorem,
+  or a finite source-preserving diameter-decreasing motion.
+
+**Final verdict:** the exact reduction is algebraically sound at proof-only scope;
+the theorem state remains unchanged and C-II remains open.
+
+## 6. Circulant regression audit
+
+The companion finite script uses cyclic interval shores, constructs
+
+\[
+p_i=\sum_s\chi_{S_s}(i)u_s,
+\]
+
+and checks directly that the `r=(q-1)/2` shell chords are equal-length maximum
+distances, that every pair is strictly longer than one, that `R=EU`, and that
+uniform `beta` satisfies
+
+\[
+E^{\mathsf T}B_\beta E U=(D^2/q)U.
+\]
+
+The tested values have `q/D` between `1.8030` and `1.8175`, approaching the claimed
+`pi/sqrt(3)` scale.  The script does not test or claim the strict-rhombus train
+crossing graph; the regularly spaced train directions are precisely the missing
+geometric layer.  Thus the regression is correctly classified as an obstruction to
+an algebra-only closure, not as a source counterexample.
+
+**Verdict:** pass at regression scope.

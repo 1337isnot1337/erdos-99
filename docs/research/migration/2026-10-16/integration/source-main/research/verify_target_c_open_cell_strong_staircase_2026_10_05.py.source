@@ -1,0 +1,76 @@
+#!/usr/bin/env python3
+"""Finite nested signed-chain census, m=1,...,5; no geometric extraction.
+
+Preserved from audit/target-c-open-cell-finite-mechanics-20261005 at
+ dad8485f18aaff02ea9b40ada95bca06b98682fc. The historical promotion was not
+ imported. This checks a finite combinatorial domain, not an all-size theorem.
+"""
+if not __debug__:
+    raise SystemExit("certificate requires assertions; run without -O")
+
+from functools import lru_cache
+
+def subintervals(cur):
+    a,b=cur
+    out=[]
+    for c in range(a,b):
+        for d in range(c+1,b+1):
+            if (c,d)!=(a,b) and a<=c and d<=b:
+                out.append((c,d))
+    return out
+
+@lru_cache(None)
+def chains_from(cur):
+    res={(cur,)}
+    for nxt in subintervals(cur):
+        for tail in chains_from(nxt):
+            res.add((cur,)+tail)
+    return tuple(sorted(res))
+
+def all_chains(m):
+    return chains_from((0,m))
+
+def strongly_connected(m,pos,neg):
+    n=m+1
+    adj=[set() for _ in range(n)]
+    radj=[set() for _ in range(n)]
+    for a,b in pos:
+        adj[a].add(b); radj[b].add(a)
+    for a,b in neg:
+        adj[b].add(a); radj[a].add(b)
+    def reach(graph):
+        seen={0}; stack=[0]
+        while stack:
+            u=stack.pop()
+            for v in graph[u]:
+                if v not in seen:
+                    seen.add(v); stack.append(v)
+        return len(seen)==n
+    return reach(adj) and reach(radj)
+
+def maximal_staircase(m,ch):
+    if len(ch)!=m: return False
+    if ch[0]!=(0,m): return False
+    lens=[b-a for a,b in ch]
+    if lens!=list(range(m,0,-1)): return False
+    for (a,b),(c,d) in zip(ch,ch[1:]):
+        if not ((c==a+1 and d==b) or (c==a and d==b-1)):
+            return False
+    return True
+
+total_pairs=0
+strong_pairs=0
+for m in range(1,6):
+    C=all_chains(m)
+    count=0
+    for pos in C:
+        for neg in C:
+            total_pairs+=1
+            if strongly_connected(m,pos,neg):
+                strong_pairs+=1
+                count+=1
+                assert pos==neg, (m,pos,neg)
+                assert maximal_staircase(m,pos), (m,pos)
+    assert count==2**(m-1), (m,count,2**(m-1))
+    print(f"m={m}: chains={len(C)}, strong_pairs={count}, expected={2**(m-1)}")
+print(f"PASS: {total_pairs} nested-chain pairs checked; {strong_pairs} strongly connected cases all identical maximal staircases")

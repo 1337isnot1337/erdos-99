@@ -1,0 +1,52 @@
+# Hostile audit — short hidden-chord matching from the low-degree face sea
+
+**Date:** 2026-09-15
+**Reviewed:** `research/target_c_low_degree_hidden_chord_matching_2026-09-15.md`
+**Verdict:** `PASS` at the stated proof-only scope.
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The theorem chooses one two-edge diagonal from every bounded degree-5/6 contact face, bounds its length by `sqrt(3)`, and extracts a vertex-disjoint matching using the triangle-free contact-degree cap.
+
+## 1. The diagonal length calculation is correct
+
+For a strict convex equilateral `m`-gon the positive exterior turns satisfy `sum alpha_i=2pi`. Hence some turn is at least `2pi/m`. The two-edge chord across that corner has length
+
+\[
+2\cos(\alpha_i/2)\le2\cos(\pi/m).
+\]
+
+For `m=5` this is `(1+sqrt(5))/2`; for `m=6` it is `sqrt(3)`.
+
+## 2. The selected pair is strictly inactive
+
+The selected vertices are nonconsecutive on the displayed canonical face boundary. Unit separation gives distance at least one. The canonical contact-face visibility used already in the audited low-degree hidden-triangle theorem says a nonboundary pair at exact distance one would be an actual contact chord and would subdivide the face. Therefore the distance is strictly greater than one.
+
+No uniform positive gap above one is claimed.
+
+## 3. Contact degree at most five is geometric
+
+All unit-contact neighbors of one source vertex lie on its unit circle. Unit separation makes their angular gaps at least `pi/3`; equality would make the two neighbors themselves unit-separated at equality and create a unit equilateral triangle. In the triangle-free branch every gap is strictly greater than `pi/3`, so there are at most five unit-contact neighbors.
+
+This is a bound on the full geometric contact degree and therefore also bounds the degree in any canonical contact subgraph used to define the faces.
+
+## 4. Face incidence does not break the degree bound
+
+A bounded exceptional face is a strict convex simple cycle, so a vertex occurs at most once on its boundary. The number of bounded face sectors incident to one planar contact vertex is at most its graph degree, hence at most five. Therefore the auxiliary selected-pair multigraph has maximum degree at most five even when multiplicity is retained.
+
+The proof deliberately uses the coarse multigraph-safe maximal-matching estimate rather than assuming selected pairs are all distinct.
+
+## 5. Matching constant is safe
+
+A maximal matching edge `xy` can cover at most
+
+\[
+\deg(x)+\deg(y)-1\le9
+\]
+
+selected multiedges. Hence `|M|>=F_{<=6}/9`. The numerical consequences use only the certified face floors `0.1175` and `0.0075`, so the rounded matching claims `0.0130` and `0.00083` are conservative.
+
+## 6. Scope warning retained
+
+The matching gives inactive pairs at distance in `(1,sqrt(3)]`; it does not provide `1+o(1)` slack and does not itself define a feasible local motion. External contacts or diameter constraints can block a reflection/contraction. The theorem is therefore a source-level structural input for a later simultaneous exchange argument, not a closure claim.
+
+**Final verdict:** PASS. C-II and Level I remain open.

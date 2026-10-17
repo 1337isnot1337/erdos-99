@@ -1,0 +1,129 @@
+<!-- theorem-state: {"artifact_id":"ART-00DB87B37447","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: an explicit joint M-curvature window for one-deficit exclusion
+
+Date: 2026-10-07. Authority: audit.75, main
+`baadff26b3fae1107f8ed2d9d18f03f78cd4a23b`.
+**Proved candidate awaiting independent audit.** No promotion.
+
+## 1. Joint quantifiers
+
+For every M>=4 and every
+
+`0<theta<=1/(100*M^3)`,
+
+the arithmetic-profile six-direction curved wall admits the strict
+N-site one-deleted-vertex packet of the sector-peeling report,
+N=3M^2-3M+1. Hence an arbitrary canonical triangle-free old source
+with z<=N-1 interior points is excluded throughout this explicit window.
+The finite Oler upper bound is z<=N throughout the same window.
+
+This strengthens the earlier fixed-M, unspecified-onset statement.
+It applies to sequences with growing M in this window. It does not
+assert finite maximum-population classification uniformly on the whole
+window, or extract such a wall from an arbitrary macroscopic chamber.
+The full terminal goal remains open and active.
+
+## 2. Complete chart and quantitative elementary bounds
+
+Put A=M-1, z_h=exp(i*(A-2h)*theta), and use the descending-prefix
+sorting chart from the sector-peeling report. Each radius-r point is
+a sum of r unit factors times either of the two unit sector generators.
+Its distance from its flat chart point is at most
+r*A*theta<=M^2*theta, since |exp(ix)-1|<=|x|.
+
+Every flat nonnearest pair has distance at least sqrt(3), so its actual
+distance is at least sqrt(3)-2*M^2*theta>1 in the stated window.
+The two weak nearest-neighbour lengths have the exact cosine formulas
+in the sector-peeling report; their angle increments are positive and
+at most 2*A*theta<pi/3. Thus they are strictly above one. The exact
+four offaxis, five axis and six central contacts are the complete graph.
+The wall has positive turns 2*theta along each side and
+pi/3-2*A*theta at its six corners. Its monotonically ordered edge
+directions make it a strictly convex unit wall.
+
+For an actual unit edge and any limiting point in the flat radius-M
+hexagon, the signed support cross product changes by at most
+5*M^2*theta: edge rotation contributes at most 2*M*A*theta, and the
+two endpoint/point shifts contribute at most 2*M^2*theta (the spare
+constant also covers the root below). Every strict interior lattice site
+has limiting support margin at least sqrt(3)/2, so all moving chart
+sites stay strictly inside the wall. The angular gaps used in every
+offaxis and axis half-plane elimination retain their stated strict
+signs because all rate-angle differences are below 2*A*theta.
+Consequently the complete constructive sector peeling works throughout
+this explicit interval. The finite opening amplitude can depend on M
+and theta; no uniform amplitude lower bound is needed or asserted.
+
+## 3. Root containment is an exact positive sine sum
+
+Omit h=(1,M-2), delete wall v=(1,M-1), and put
+
+`root=v+3*sin(theta)*J(exp(i*(M-2)*theta)*w)`,
+
+where w=v_basis-u_basis. The root drift from its limiting wall site is
+at most (M*A+3)*theta<=M^2*theta for M>=3. Therefore all root pairs
+having flat length at least sqrt(3) remain above one by the preceding
+2*M^2*theta distance bound. Its two adjacent wall-neighbour squared
+distances are exactly 1+3*sin^2(theta)>1.
+
+Let edge j=0,...,M-1 be on this wall side, with ascending rate
+b_j=2j-A, initial endpoint a_j, and k=M-1-j. Directly summing the
+remaining side edges from a_j to v gives the exact identity
+
+`cross(exp(i*b_j*theta)*w, root-a_j)`
+`= sum_(ell=0)^(k-1) sin(2*ell*theta)`
+`  +3*sin(theta)*cos((2k-1)*theta)`.
+
+Every sine in this expression is nonnegative and the last term is
+strictly positive in the stated interval. This checks *every* edge
+on the chosen side, including k=0, without a Taylor onset constant.
+Every other side has limiting support margin at least sqrt(3)/2,
+because the limiting root lies one unit from the adjacent flat corner
+on the relative interior of its side. The 5*M^2*theta bound preserves
+those margins. Thus the root is strictly interior uniformly in M.
+
+## 4. The sole remaining limiting unit neighbour
+
+The omitted h is not an old source point deletion; it is an absent
+auxiliary target. Apart from h, the deleted wall v, and the two guarded
+wall neighbours, the sole remaining limiting root unit neighbour is
+a=(0,M-1). Put B=2M-3, beta=pi/3+B*theta. Rotating the root-a vector
+by -(M-2)*theta gives
+
+`exp(-i*B*theta)*v_basis+(-cos(theta)+2i*sin(theta))*w`.
+
+Its exact squared length f(theta) is
+
+`2+3*sin^2(theta)-2*cos(theta)*cos(beta)`
+`                  -4*sin(theta)*sin(beta)`.
+
+Here f(0)=1 and f'(0)=sqrt(3)*(2M-5). The product derivative bounds
+give |f''|<=6+6*(B+1)^2<=24*M^2. Taylor's remainder inequality yields
+
+`f(theta)-1 >= theta*(sqrt(3)*(2M-5)-12*M^2*theta)>0`
+
+throughout theta<=1/(100*M^3), M>=4. All root lower guards are now
+checked at the explicit joint scope. After choosing a sufficiently small
+positive opening amplitude to preserve these strict root margins and
+all inactive pairs, the root plus N-1 opened sites is the strict N-site
+packet. The canonical one-vertex shield and complete full-source ledger
+in the sector-peeling report apply without further onset restrictions.
+
+## 5. Oler at the same explicit scope
+
+The full wall hull lies in the Euclidean delta-neighbourhood of the
+flat H_M, with delta=M^2*theta. Steiner's elementary convex parallel-body
+area formula bounds its area by
+
+`area(H_M)+6*M*delta+pi*delta^2`
+`<=area(H_M)+6/100+pi/(10000*M^2)`.
+
+The excess is less than sqrt(3)/2 for every M>=4. The wall perimeter
+is exactly 6M and it contributes all 6M retained source labels to Oler.
+Subtracting these labels therefore gives z<N+1, hence z<=N. No
+contact-isolated point is silently discarded or counted as core.
+
+The one-deficit branch is excluded for every growing-M sequence in this
+window. The uniform z=N finite-triangle onset is the next separate wall
+obligation. Arbitrary chamber transfer and the cap/full-core routes still
+require actual source geometry or a complete finite packet, not area alone.

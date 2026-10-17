@@ -1,0 +1,536 @@
+# Erdős Problem #99 — six-pair missing-budget atomic gap
+
+**Date:** 2026-09-14  
+**Target:** Target C-II, canonical full-core Type-II branch  
+**Repository branch:** `research/c2-gluing-sol-20260914-r9`  
+**Claim class:** proof-only strengthening of LA90 / TL69  
+**External input:** none beyond the audited dominant-orbit Mantel reduction and TL69 per-pair payment lemma  
+**LEVEL I STATUS:** `STILL OPEN`
+
+LA90 removed the majority-assignment loss and proved
+
+\[
+ x\sigma\ge2\sqrt{\Delta_2}+0.0009,
+ \qquad \Delta_2={\pi\over2\sqrt3},
+\]
+
+but still selected one distinct-label pair and charged the entire Mantel missing budget to it. The missing budget actually decomposes over all nine label pairs. Same-label pairs are automatically missing, while each of the six distinct-label pairs separately obeys the TL69 quadratic payment lemma.
+
+Using all six payments gives
+
+\[
+\boxed{
+ x\sigma\ge2\sqrt{\Delta_2}+0.001625.
+}
+\tag{SP.1}
+\]
+
+Thus at the same proof-only scope one may take
+
+\[
+\boxed{\eta_{grid}=0.001625.}
+\tag{SP.2}
+\]
+
+This is an approximately 81 percent increase over LA90's `0.0009`. The improvement is structural: it comes from a sharp three-label minimization of the complete missing-pair budget, not from decimal tuning of the one-pair endpoint.
+
+---
+
+## 1. Per-pair input
+
+Retain the TL69 constants
+
+\[
+K={2\over\sqrt3},
+\qquad
+L=4+\sqrt2,
+\qquad
+c={1\over L^2}.
+\tag{SP.3}
+\]
+
+For two stopped-train atom families of normalized sizes `a,b`, whose projective direction windows converge to axes separated by `pi/3`, TL69 proves that their normalized missing-pair mass `rho` satisfies
+
+\[
+\boxed{
+\rho\ge c\,(a+b-K)_+^2
+}
+\tag{SP.4}
+\]
+
+provided `a,b<=K`. This statement already includes the small-family case; no robust-grid size lower bound is needed.
+
+The six-pair argument below only combines disjoint applications of (SP.4).
+
+---
+
+## 2. Sharp three-label missing-payment lemma
+
+Let
+
+\[
+x=(x_1,x_2,x_3),\qquad y=(y_1,y_2,y_3),
+\]
+
+with
+
+\[
+x_i,y_i\ge0,
+\qquad
+\sum_i x_i=\sum_i y_i=s.
+\tag{SP.5}
+\]
+
+Define
+
+\[
+H(z):=(z-K)_+^2
+\]
+
+and the complete lower-payment functional
+
+\[
+\Phi_s(x,y)
+:=\sum_i x_i y_i
++c\sum_{i\ne j}H(x_i+y_j).
+\tag{SP.6}
+\]
+
+The first term is the same-label missing mass. The second term is the sum of the six TL69 distinct-label payments.
+
+### Lemma SP.1
+
+If
+
+\[
+{2K\over3}<s<K,
+\tag{SP.7}
+\]
+
+then
+
+\[
+\boxed{
+\Phi_s(x,y)
+\ge
+2c\left({3s\over2}-K\right)^2.
+}
+\tag{SP.8}
+\]
+
+Equality is attained, up to simultaneous relabeling and exchange of the two shores, at
+
+\[
+\boxed{
+ x=(s,0,0),
+ \qquad
+ y=(0,s/2,s/2).
+}
+\tag{SP.9}
+\]
+
+Thus the full six-pair optimization has an exact elementary solution.
+
+### Proof
+
+We use two concavity reductions and then one Jensen inequality.
+
+#### Step 1: a minimizer has at most one common positive label
+
+Consider a vector `v in R^3` with `sum_i v_i=0` and the feasible anti-diagonal line
+
+\[
+x(t)=x+tv,
+\qquad
+y(t)=y-tv.
+\tag{SP.10}
+\]
+
+The same-label term has exact second derivative
+
+\[
+{d^2\over dt^2}\,x(t)\cdot y(t)
+=-2\|v\|^2.
+\tag{SP.11}
+\]
+
+For one distinct-label hinge, the argument changes with slope `v_i-v_j`. Since
+
+\[
+z\mapsto(z-K)_+^2
+\]
+
+is `C^1`, piecewise quadratic, and has second derivative between `0` and `2`, its second derivative along this line is at most
+
+\[
+2(v_i-v_j)^2.
+\]
+
+Because `sum_i v_i=0`,
+
+\[
+\sum_{i\ne j}(v_i-v_j)^2=6\|v\|^2.
+\tag{SP.12}
+\]
+
+Hence, wherever the second derivative exists,
+
+\[
+{d^2\over dt^2}\Phi_s(x(t),y(t))
+\le(-2+12c)\|v\|^2<0,
+\tag{SP.13}
+\]
+
+since `L^2>6`. The restricted function is therefore strictly concave on every feasible anti-diagonal segment.
+
+If two labels `r,s` had simultaneously
+
+\[
+x_r,y_r,x_s,y_s>0,
+\]
+
+we could take `v=e_r-e_s`; the current point would lie in the interior of a nontrivial feasible segment, impossible for a minimum of a strictly concave restriction. Therefore
+
+\[
+\boxed{
+\#\{i:x_i>0\text{ and }y_i>0\}\le1.
+}
+\tag{SP.14}
+\]
+
+#### Step 2: if there is one common label, both shores cannot also have exclusive mass at a minimizer
+
+Suppose label `1` is common and both shores have positive mass away from it. By (SP.14), the two remaining labels must be assigned to opposite shores. After relabeling,
+
+\[
+x=(a,s-a,0),
+\qquad
+y=(u,0,s-u),
+\qquad 0<a,u<s.
+\tag{SP.15}
+\]
+
+Because each coordinate is below `s<K`, the only possibly nonzero hinge terms are
+
+\[
+H(a+s-u),\qquad
+H(s-a+u),\qquad
+H(2s-a-u).
+\]
+
+Thus
+
+\[
+\Phi_s
+=au+c\bigl[
+H(a+s-u)+H(s-a+u)+H(2s-a-u)
+\bigr].
+\tag{SP.16}
+\]
+
+Restrict to `(a,u)->(a+t,u-t)`. The product `au` has second derivative `-2`. The first two hinge arguments have slopes `+2,-2`; the third is constant. Hence the hinge contribution has second derivative at most `16c`, and
+
+\[
+{d^2\over dt^2}\Phi_s\le-2+16c<0
+\tag{SP.17}
+\]
+
+because `L^2>8`. Again the restriction is strictly concave, so an interior point `0<a,u<s` cannot minimize. Therefore a global minimizer with one common label must lie on a boundary: either the common overlap disappears, or one shore is supported entirely on the common label.
+
+#### Step 3: no common label
+
+If the supports are disjoint, two nonempty subsets of three labels cannot both have size at least two. After exchanging shores and relabeling,
+
+\[
+x=(s,0,0),
+\qquad
+y=(0,u,s-u),
+\qquad0\le u\le s.
+\tag{SP.18}
+\]
+
+The same-label term vanishes, and all hinges except two are zero because `s<K`. Hence
+
+\[
+\Phi_s
+=c\bigl[H(s+u)+H(2s-u)\bigr].
+\]
+
+The two arguments have average `3s/2`. Convexity of `H` gives
+
+\[
+\Phi_s
+\ge2cH(3s/2)
+=2c\left({3s\over2}-K\right)^2,
+\tag{SP.19}
+\]
+
+where (SP.7) makes the positive part active. Equality occurs at `u=s/2`.
+
+#### Step 4: one shore supported on the common label
+
+It remains to treat, after exchanging shores if necessary,
+
+\[
+y=(s,0,0),
+\qquad
+x=(a,b,s-a-b),
+\qquad0\le a\le s.
+\tag{SP.20}
+\]
+
+Here
+
+\[
+\Phi_s
+=as+c\bigl[H(s+b)+H(2s-a-b)\bigr].
+\tag{SP.21}
+\]
+
+For fixed `a`, Jensen gives
+
+\[
+H(s+b)+H(2s-a-b)
+\ge2H\left({3s-a\over2}\right).
+\tag{SP.22}
+\]
+
+Put
+
+\[
+A={3s\over2}-K>0.
+\]
+
+Then
+
+\[
+\Phi_s
+\ge G(a):=as+2c(A-a/2)_+^2.
+\tag{SP.23}
+\]
+
+If the positive part is active,
+
+\[
+G'(a)=s-2c(A-a/2).
+\]
+
+Since `s<K`, we have `A<s/2`, so
+
+\[
+G'(a)>s-cs=(1-c)s>0.
+\tag{SP.24}
+\]
+
+If the positive part is inactive, `G'(a)=s>0`. Thus `G` is strictly increasing and is minimized at `a=0`, where (SP.23) is exactly the right side of (SP.8).
+
+Steps 1--4 prove the lemma. `square`
+
+---
+
+## 3. Apply the lemma to all nine label pairs
+
+Assume for contradiction that the Type-II train-measure limit satisfies
+
+\[
+A:=x\sigma\le\bar A:=2s_2+\eta,
+\qquad
+s_2:=\sqrt{\Delta_2},
+\qquad
+\eta:=0.001625.
+\tag{SP.25}
+\]
+
+Use the same dominant-orbit reduction as Section 168, TL69, and LA90. The dominant projective three-cycle has mass at least
+
+\[
+M_0={4s_2^2\over\bar A},
+\tag{SP.26}
+\]
+
+with outside mass at most
+
+\[
+R_0=\bar A-M_0,
+\]
+
+and conservative Mantel deficit
+
+\[
+d_0={\bar A^2\over4}-s_2^2+{R_0^2\over4}.
+\tag{SP.27}
+\]
+
+The maximum-degree Mantel partition gives two shores whose dominant-orbit masses are each at least
+
+\[
+\boxed{
+s_0={M_0\over2}-\sqrt{d_0},
+}
+\tag{SP.28}
+\]
+
+and whose total missing cross-shore pair mass is at most
+
+\[
+(2d_0+o(1))D^2.
+\tag{SP.29}
+\]
+
+Do **not** majority-assign labels. Instead, physically trim trains inside the three atom windows on each shore until both retained shores have total normalized mass exactly `s_0+o(1)`. Write the retained label masses as
+
+\[
+x_1,x_2,x_3,
+\qquad
+y_1,y_2,y_3,
+\qquad
+\sum_i x_i=\sum_i y_i=s_0.
+\tag{SP.30}
+\]
+
+Trimming cannot create missing pairs and keeps every selected family in the same shrinking atom window.
+
+For `i=j`, same-window pairs do not cross, so all `x_i y_iD^2+o(D^2)` selected pairs are missing. For `i ne j`, the two atom axes are distinct members of the projective three-cycle and hence differ by exactly `pi/3`. Apply the TL69 per-pair lemma to each of the six disjoint ordered label-pair blocks. Therefore the global missing budget forces
+
+\[
+\boxed{
+2d_0
+\ge
+\sum_i x_i y_i
++c\sum_{i\ne j}(x_i+y_j-K)_+^2.
+}
+\tag{SP.31}
+\]
+
+The exact certificate verifies that every selected family lies below `K` and that
+
+\[
+{2K\over3}<s_0<K,
+\]
+
+so Lemma SP.1 applies. Consequently
+
+\[
+2d_0
+\ge
+2c\left({3s_0\over2}-K\right)^2.
+\tag{SP.32}
+\]
+
+Equivalently every survivor would require
+
+\[
+\boxed{
+d_0\ge
+\left({3s_0/2-K\over L}\right)^2.
+}
+\tag{SP.33}
+\]
+
+At `eta=0.001625`, exact rational interval arithmetic gives
+
+\[
+\begin{aligned}
+\bar A&=1.906250613727914\ldots,\\
+M_0&=1.903001998973370\ldots,\\
+R_0&=0.003248614754544\ldots,\\
+d_0&=0.00155080684185979\ldots,\\
+s_0&=0.912120714547901\ldots,
+\end{aligned}
+\tag{SP.34}
+\]
+
+while
+
+\[
+\left({3s_0/2-K\over L}\right)^2
+=0.00155469711928518\ldots .
+\tag{SP.35}
+\]
+
+Thus the required half-payment exceeds the available half-budget by more than
+
+\[
+\boxed{3.89\times10^{-6}.}
+\tag{SP.36}
+\]
+
+Contradiction. This proves (SP.1).
+
+The exact certificate is
+
+`research/verify_target_c_six_pair_atomic_gap_001625.py`.
+
+---
+
+## 4. Method ceiling
+
+The equality configuration of Lemma SP.1 shows that the three-label optimization itself is sharp. Solving the unchanged scalar endpoint
+
+\[
+d_0(\eta)
+=
+{1\over L^2}
+\left({3s_0(\eta)\over2}-K\right)^2
+\tag{SP.37}
+\]
+
+numerically gives
+
+\[
+\eta_*=0.00162815664946\ldots .
+\tag{SP.38}
+\]
+
+Hence `0.001625` is close to the ceiling of the present dominant-orbit + Mantel + independent TL69 pair-payment architecture. Further decimal tuning can recover only about `3.2e-6` in `eta` and is not a useful target.
+
+A larger atomic gain would require a genuinely stronger per-pair geometric payment, a constraint coupling the six distinct-label missing blocks beyond disjointness, or additional global geometry.
+
+---
+
+## 5. Immediate propagation
+
+Every proof-only consequence depending only on the atomic gain may now use `g=0.001625`. In particular,
+
+\[
+\boxed{
+\liminf {T-q/2\over D}
+\ge2\sqrt{\Delta_2}+0.001625,
+}
+\tag{SP.39}
+\]
+
+and the rhombic-only transfer gives
+
+\[
+\boxed{
+\liminf {\sigma_R\over D}\ge0.00325.
+}
+\tag{SP.40}
+\]
+
+The correlated stopped-train identity gives
+
+\[
+\boxed{
+\liminf {\rho_{rec}+\sigma_R-q\over D}\ge0.00325.
+}
+\tag{SP.41}
+\]
+
+The Section-171 endpoint and all downstream chamber, pentagon, topology, tooth/long-side, and residual constants should be recomputed from `g=0.001625`; they are not copied from LA90 here.
+
+---
+
+## 6. Scope audit
+
+- The theorem has exactly the same full-core Type-II train-measure scope as audited Section 168, TL69, and LA90.
+- No majority assignment is used.
+- The only new theorem is Lemma SP.1, an exact finite-dimensional inequality proved above.
+- The selected subfamilies are physical subsets of the original atom windows; trimming is not a deletion from the source configuration.
+- Same-label selected pairs are missing by the same-window noncrossing statement already used by LA90.
+- Distinct selected labels differ by `pi/3`, so TL69 applies separately to each of the six disjoint label-pair blocks.
+- The complete cross-shore missing budget is not charged twice: the three diagonal blocks and six off-diagonal blocks partition the selected cross-shore pairs.
+- No disk-topology assumption, outer-detour assumption, pseudosegment biclique theorem, or unproved multiplicity estimate is used.
+
+**Disposition:** proof-only six-pair atomic strengthening. C-II and Level I remain open.

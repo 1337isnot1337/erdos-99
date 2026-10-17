@@ -1,0 +1,17 @@
+{
+  "source_repository": "1337isnot1337/e-99",
+  "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "agent3_receipt_commit": "9ca239fc0e773b41005ddedd1a877b7799019877",
+  "receipt": "docs/research/migration/2026-10-16/agent-3/evidence/verification.json",
+  "missing_import_references_addressed": 8,
+  "modules": [
+    {"path": "research/affine_lattice.py", "git_blob_sha1": "1aa2f508042511acece7f9e955952d7226ffe1a4", "method": "existing exact destination blob restored at required import path"},
+    {"path": "research/homothetic_capacity.py", "git_blob_sha1": "2e109d930cf34a47a6775ec07b67c2049090b2be", "method": "recovered source blob; exact Git identity verified"},
+    {"path": "research/rectilinear_capacity.py", "git_blob_sha1": "77ad084f9e5069da2808a08d2875c00b703fd271", "method": "existing exact destination blob restored at required import path"},
+    {"path": "research/verify_target_c_support7_global_segment_relative_eight_noroot_k4_dminus1_d1p0_support_closure_2026_09_26.py", "git_blob_sha1": "acce53eedc2ab64147588a21a4e8e693cb6bfbc6", "method": "recovered source blob; exact Git identity verified"},
+    {"path": "research/verify_target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_selected_pair_orientation_2026_09_28.py", "git_blob_sha1": "867e8e583f6073c92b1f7afbf2aaf536e2567fa9", "method": "existing exact destination blob restored at required import path"}
+  ],
+  "theorem_promotion": false,
+  "full_certificate_replay": false,
+  "remaining_corpus_coverage_complete": false
+}

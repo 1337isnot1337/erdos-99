@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+"""Regression checks for the THIN directional-dispersion note.
+
+The proof is analytic and lives in the markdown note. This script checks the
+constants, the finite cap formula, its fixed-L asymptotics numerically, and the
+simple greedy-packing arithmetic used in the application.
+"""
+
+import math
+
+A = 0.25
+
+
+def eps(D: float, L: float, A: float = A) -> float:
+    x = L / D
+    return 2.0 * D * math.sin(x / 2.0) ** 2 + (A / D) * math.cos(x)
+
+
+def finite_cap_bound(D: float, L: float, A: float = A) -> float:
+    e = eps(D, L, A)
+    assert 0.0 < e < 1.0
+    return 1.0 + 2.0 * math.sqrt(2.0 * D * e - e * e) / math.sqrt(1.0 - e * e)
+
+
+def limiting_cap_bound(L: float, A: float = A) -> float:
+    return 1.0 + 2.0 * math.sqrt(2.0 * A + L * L)
+
+
+# Fixed-L convergence of the exact finite formula to DD.19/DD.20.
+for L in [0.25, 1.0, 3.0, 10.0, 30.0]:
+    target = limiting_cap_bound(L)
+    vals = [finite_cap_bound(D, L) for D in [1e5, 1e6, 1e7, 1e8]]
+    assert abs(vals[-1] - target) < 2e-4, (L, vals[-1], target)
+    # Eventual integer envelope C_L from DD.21.
+    C_L = 2 + math.ceil(math.sqrt(2.0 + 4.0 * L * L))
+    assert vals[-1] < C_L
+
+# The THIN simplification 1 + 2 sqrt(2A+L^2) = 1 + sqrt(2+4L^2).
+for L in [0.0, 0.5, 2.0, 17.0]:
+    lhs = 1.0 + 2.0 * math.sqrt(2.0 * A + L * L)
+    rhs = 1.0 + math.sqrt(2.0 + 4.0 * L * L)
+    assert abs(lhs - rhs) < 1e-12
+
+# Half-exponent angular-dispersion coefficient DD.5.
+coeff = 1.0 / (96.0 * math.log(5.0))
+assert abs(coeff - 0.006472238901662624) < 1e-16
+
+# Parent uniqueness-braid coefficient is unchanged by the K/D dispersion factor.
+parent = 1.0 / (96.0 * math.log(5.0))
+assert abs(parent - coeff) < 1e-18
+
+# Greedy arithmetic: if each closed deletion neighborhood has < C elements,
+# at least ceil(K/C) selections are needed to delete K elements.
+for K in range(1, 80):
+    for C in range(1, 15):
+        q = math.ceil(K / C)
+        assert (q - 1) * C < K <= q * C
+
+# The limiting fixed-tube bound has linear slope 2 as L grows.
+ratios = []
+for L in [10.0, 30.0, 100.0, 300.0]:
+    lead = 2.0 * L
+    ratios.append(limiting_cap_bound(L) / lead)
+assert all(ratios[i + 1] < ratios[i] for i in range(len(ratios) - 1))
+assert abs(ratios[-1] - 1.0) < 0.002
+
+print("THIN directional-dispersion regression checks passed")
+print(f"half-exponent angular coefficient = {coeff:.15g}")

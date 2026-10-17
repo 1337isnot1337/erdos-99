@@ -1,0 +1,538 @@
+<!-- theorem-state: {"artifact_id":"ART-99F6077C863B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Erdős Problem #99 — contact direction cones force inactive caps
+
+**Date:** 2026-09-26
+**Repository commit:** 53ab4cac73738c82f6291b41a7ec88a8577c5d55
+**State version:** 2026-09-14.audit.51
+**Run type:** alternate global proof attack / exact regression
+**Target:** Level I, with a scoped C-II full-core consequence
+**Starting status:** Level I open; C-I closed; C-II open
+**Active prompt:** [whole-problem prompt](../prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md)
+**External literature search:** not used; no external theorem imported
+**Computation:** [exact regression](../../research/verify_two_direction_stress_caps.py)
+
+## LEVEL I STATUS
+
+STILL OPEN.
+
+Classification: proved candidate awaiting independent audit, noncanonical.
+The analytic results below are new candidates; the exact-lattice vertex-count
+exclusion discussed in Section 7 is prior work and is not claimed as new.
+
+## 1. Starting endpoint and implication chain
+
+The original endpoint is every sufficiently large global minimizer containing a
+unit triangle. C-II still has its macroscopic-container and high-surplus full-core
+branches. Its full-core branch has a disk limit for the actual force hull; its
+macroscopic branch does not. The aggregate outer-walk endpoint remains open.
+
+The chain pursued here is
+
+```text
+positive contact directions in two narrow bands
+ -> equilibrium at an exposed actual loaded vertex
+ -> four forbidden intervals of actual stressed diameter directions
+ -> a fixed quadratic area deficit of the actual force hull
+ -> four quadratic populations outside that hull
+ -> exclusion of this approximate-direction full-core subbranch.
+```
+
+The attempted extension from the last population statement to Level I fails:
+the diameter-carrying core must also be replaced or released. Section 6 gives a
+source-level regression against using leading density and positive stress as that
+missing bridge. No independently constructed source or scaffold is substituted
+for the global source in the proof.
+
+## 2. Dependencies and notation
+
+The proof uses exactly these canonical shared inputs:
+
+- [local structure, Theorem 4.1 and Lemmas 5.1–5.4](../theory/01-local-structure.md):
+  normalized KKT equilibrium; diameter endpoints are extreme; positive-contact
+  components have loaded vertices; unloaded vertices are contact barycenters;
+- [ambient force geometry, AG](../theory/04-ambient-force-and-cap-transport.md):
+  the full source is in a radius `D/2+eta` disk and actual diameter midpoints are
+  within `mu` of its center;
+- [finite Oler inequality](../theory/03-oler-shell.md), isodiametry, and convex
+  perimeter bound; the strict global lattice comparison is Theorem 10.9 in the
+  shared local-structure module.
+
+The full-core C-II application uses
+[`C-FULLCORE-NEAR-DISK`](../targets/target-c/80-global-isolate-concentration-fullcore-disk-audit.md).
+The additional topology application DC.3 uses `C-WOODALL` and the Section-57
+strong-diameter-row normalization. The main cone and population theorems do not
+use ZR/ZF, the Woodall classification, train topology,
+contact minimality, a full-support stress, or a lattice chart.
+
+Let `A` be the entire global minimizing source, `n=|A|`, `D=diam(A)>16sqrt(3)`.
+Translate its circumcenter to zero. Set
+
+\[
+ R=D/2,\quad a_0=\sqrt3/2,\quad
+ \eta=3^{1/4}\sqrt D,\quad
+ \mu=\sqrt{D\eta+\eta^2}.
+\]
+
+Choose any normalized KKT stress `(alpha,beta)`. Define `C_+`, `H_+`, and
+`V=V(C_+)`; let `B=V(H_+)` and `F=conv(B)`. Here `V` means the support of
+this selected stress, not all source points. Contact-isolated source points and
+points incident only to zero multipliers remain in `A`.
+
+In fact `conv(V)=F`. Every positive-contact component has a loaded vertex. If a
+linear functional attained a value larger than its maximum on `B` somewhere in
+`V`, choose a component maximum. That vertex is unloaded and is a strictly
+positive weighted average of its neighbors. All its neighbors must have the same
+maximal value. Propagation reaches a loaded vertex, a contradiction. Thus `V`
+is contained in `F`; conversely every loaded vertex has positive contact load.
+
+## 3. Finite angular exclusion theorem
+
+Rotate axes so two reference line directions have unit representatives at angles
+`0` and `theta`, where `0<theta<=pi/2`. Suppose every positive-contact vector has
+angle within `omega` of one of
+
+\[
+ 0,\quad\theta,\quad\pi,\quad\pi+\theta.
+\]
+
+Set
+
+\[
+ \tau=2\sqrt{2\eta/D+\eta^2/D^2}+2\mu/D.
+\]
+
+Assume `tau<1`, put `epsilon=arcsin(tau)`, and assume
+
+\[
+ \Delta=\pi/2-\theta-2\omega-\epsilon>0.
+\]
+
+**Theorem DC.1.** The four-band hypothesis can be weakened to containment of all positive contact
+directions in the two antipodal intervals
+`[-omega,theta+omega]` and `pi+[-omega,theta+omega]`. Thus this is a theorem
+about any single projective arc of width `W=theta+2omega<pi/2`, rather than
+only two coherent direction families.
+
+No oriented direction of an edge in `H_+` lies in any of
+these four open intervals:
+
+\[
+ I_1=(\theta+\omega+\epsilon,\ \pi/2-\omega),\qquad
+ I_2=(\theta+\pi/2+\omega,\ \pi-\omega-\epsilon),
+ \qquad I_1+\pi,\ I_2+\pi.
+\]
+
+Each interval has length `Delta`. This is a theorem about actual stressed diameter
+pairs of the original source. No lower bound on a nonzero multiplier is assumed.
+
+### Proof
+
+Suppose `w` is such a unit diameter direction, and choose an actual endpoint `b`
+with partner `k=b-Dw`. Since `|k|<=R+eta`,
+
+\[
+ w\cdot b=w\cdot k+D\ge R-\eta.
+\]
+
+Choose an exposed vertex `p` maximizing `w dot x` on `F`. It is loaded, and
+
+\[
+ w\cdot p\ge R-\eta,\qquad |p|\le R+\eta.
+\]
+
+Consequently
+
+\[
+ |p/D-w/2|^2
+ \le (1/2+\eta/D)^2-(1/2-\eta/D)+1/4
+ =2\eta/D+\eta^2/D^2.
+\]
+
+For every positive diameter partner `q` of `p`, AG bounds its midpoint `m_pq` by
+`mu`. Thus
+
+\[
+ \left|(p-q)/D-w\right|
+ =\left|2p/D-2m_{pq}/D-w\right|\le\tau.
+\]
+
+Let `s_p=sum_q beta_pq>0`. The normalized diameter resultant
+
+\[
+ z={1\over Ds_p}\sum_q\beta_{pq}(p-q)
+\]
+
+satisfies `|z-w|<=tau`. KKT equilibrium puts `z` in the cone generated by the
+outward positive-contact vectors `p-r`. Every such `r` is in `F`, so
+`w dot (p-r)>=0`.
+
+If the angle `alpha` of `w` lies in `I_1`, this half-plane condition removes the
+entire antipodal interval `pi+[-omega,theta+omega]`. The remaining cone lies between angles
+`-omega` and `theta+omega`. Its distance from `w` is at least
+
+\[
+ \sin(\alpha-\theta-\omega)>\sin\epsilon=\tau.
+\]
+
+The difference angle is below `pi/2`, so this is the ordinary distance to the
+nearest bounding ray. This contradicts `|z-w|<=tau`.
+
+If `alpha` lies in `I_2`, the remaining cone lies between `pi-omega` and
+`pi+theta+omega`; its distance from `w` is at least
+`sin(pi-omega-alpha)>tau`, again a contradiction. Reversing both endpoint
+orientations proves the two antipodal exclusions. QED.
+
+## 4. Area, perimeter, and actual source population
+
+**Theorem DC.2.** Under DC.1,
+
+\[
+ \operatorname{area}F
+ \le {\pi D^2\over4}-{D^2\over2}(\Delta-\sin\Delta)
+       +\pi D\mu+\pi\mu^2,
+\]
+
+\[
+ \operatorname{per}F
+ \le\pi D-2D(\Delta-2\sin(\Delta/2))+2\pi\mu.
+\]
+
+With `Z=|A outside F|`,
+
+\[
+ Z>{D^2\over2a_0}(\Delta-\sin\Delta)
+       -{\pi D\mu+\pi\mu^2\over a_0}-{\pi D\over2}-1.
+\]
+
+### Proof
+
+Let `E` contain both orientations of every positive diameter direction and put
+`P=R conv(E)`. By DC.1, `P` lies in the radius-`R` disk with four open circular
+caps removed. Each missing arc has angle `Delta`, and its cap has area
+`R^2(Delta-sin Delta)/2`. These caps have disjoint interiors. The containing
+convex body has area
+`pi R^2-2R^2(Delta-sin Delta)` and perimeter
+`2pi R-4R(Delta-2sin(Delta/2))`. AG gives `d_H(F,P)<=mu`.
+The parallel-body area formula, with `per(P)<=pi D`, and perimeter monotonicity
+prove the first two inequalities.
+
+Apply Oler to the entire population `A intersect F` in its actual container `F`:
+
+\[
+ n-Z\le\operatorname{area}(F)/a_0+\operatorname{per}(F)/2+1
+     \le\operatorname{area}(F)/a_0+\pi D/2+1.
+\]
+
+The strict global lattice comparison gives `n>pi D^2/(4a_0)`. Substitution proves
+the population inequality. QED.
+
+### Asymptotic consequence
+
+Suppose `D` tends to infinity, `theta` tends to `theta_*`, and `omega` tends to
+`omega_*>=0`, with `theta_*+2omega_*<pi/2`. Write
+`g=pi/2-theta_*-2omega_*`. Then
+
+\[
+ \limsup {\operatorname{area}F\over D^2}
+ \le {\pi\over4}-{g-\sin g\over2},\qquad
+ \liminf {Z\over D^2}\ge{g-\sin g\over2a_0}>0.
+\]
+
+For `theta_*=pi/3` and `omega_*=0` these become
+
+\[
+ \limsup {\operatorname{area}F\over D^2}\le {\pi\over6}+{1\over4},\qquad
+ \liminf {Z\over D^2}\ge {\pi-3\over6\sqrt3}.
+\]
+
+Since `n/D^2 -> pi/(2sqrt3)`, the exterior fraction is at least
+`1/3-1/pi-o(1)`. Therefore a C-II **full-core** survivor cannot have all its
+positive-contact directions in two vanishing bands with angle tending to 60
+degrees. More generally, a full-core survivor cannot have all positive contact line
+directions in any fixed projective arc of width less than 90 degrees. The limit
+of its projective contact-direction set must have no gap larger than 90 degrees.
+This includes direction drift that does not admit any single affine lattice
+chart. It does not eliminate a carrier with these directions when the
+rest of the actual positive core has other directions.
+
+### Theorem DC.3 — an actual linear bipartition of the diameter support
+
+Under DC.1 assume in addition
+
+\[
+ \sin(\Delta/2)>2\mu/D.
+\]
+
+Then a line through the full source circumcenter separates the two endpoints of
+**every** edge in `H_+`. In particular `H_+` is bipartite.
+
+To prove this, let `alpha_*` be the center of `I_1`, and let `t` be its
+perpendicular unit direction. Every oriented positive diameter direction `w`
+avoids both `I_1` and `I_1+pi`; hence
+
+\[
+ |t\cdot w|\ge\sin(\Delta/2).
+\]
+
+For an actual pair write `b=m+Rw` and `k=m-Rw`. Since `|m|<=mu`,
+`R|t dot w|>mu` makes `t dot b` and `t dot k` strictly opposite in sign.
+No loaded vertex lies on the separating line. Thus the sign of `t dot x` gives
+one simultaneous bipartition of all positive diameter edges. This uses the
+actual pair midpoints; central symmetry of the finite source is not assumed.
+
+For the canonical relative-interior C-II source, weak diameter rows have been
+removed, so this is its entire active `H`. The canonical
+[`C-WOODALL`](target_c_woodall_diameter_topology_2026-09-10.md) classification
+then makes `H` a caterpillar forest. In particular `d_H>0`, and the odd-unicyclic
+`d_H=0` branch is impossible. This application uses the exact scopes of
+[Section 57](../targets/target-c/57-zr-zf-rigidity-audit.md) and `C-WOODALL`,
+not a replacement diameter graph.
+
+Consequently, along a sequence with positive contact directions in a projective
+arc of limiting width strictly below 90 degrees, **both** the full-core branch
+and the canonical odd-unicyclic branch are excluded. Any survivor is in the
+macroscopic-container, caterpillar-forest branch. There is no improvement of a
+carrier coefficient in this implication.
+
+## 5. Four macroscopic populations separated from the stressed core
+
+Take a fixed `0<delta<g`. In each forbidden interval choose its centered
+subinterval of angular width `delta`; let `t_j` point in its center direction.
+Define four geometric source caps
+
+\[
+ A_j=\{x\in A:t_j\cdot x>R\cos(\delta/2)\}.
+\]
+
+For sufficiently large `D`, each cap is outside `F`, and its points have distance
+at least `c_delta D` from `V` for some positive constant `c_delta`. Indeed DC.1
+implies
+
+\[
+ \max_{x\in F}t_j\cdot x\le R\cos(\Delta/2)+\mu,
+\]
+
+so its projection gap from `A_j` is at least
+`R[cos(delta/2)-cos(Delta/2)]-mu`, which is a positive multiple of `D`.
+The four caps are disjoint for all sufficiently large `D`.
+
+Each cap has a separate population lower bound
+
+\[
+ \liminf {|A_j|\over D^2}\ge{\delta-\sin\delta\over8a_0}>0.
+\]
+
+Here is the population proof, without a local-density assumption. The rest of the
+source is contained in the convex body
+
+\[
+ L_j=\operatorname{conv}(A)\cap\{x:t_j\cdot x\le R\cos(\delta/2)\}.
+\]
+
+Its diameter is at most `D`, and its area is at most that of the radius-`R+eta`
+disk cut by the same half-plane. The removed disk cap has area
+`D^2(delta-sin delta)/8+o(D^2)`. Thus Oler and the strict global source lower
+count give the claimed inequality. Every point of `A_j` has zero contact and
+diameter multiplier in this selected stress, because it is outside `F=conv(V)`.
+This does not say its actual contact degree is zero in an arbitrary source.
+In the canonical C-II full-contact-support normal form these points are actual
+contact isolates.
+
+These are four explicit **geometric** caps. They need not equal four of the
+canonical caps between consecutive loaded hull vertices. The canonical
+inactive-container concentration theorem can still be applied separately.
+
+## 6. Exact regression against the global extrapolation
+
+Choose `u=(1,0)`, `v=(2/5,sqrt(21)/5)`, so their angle is strictly between 60
+and 90 degrees. For an integer `m>=4` define
+
+\[
+ V_m=\{iu:-m\le i\le m\}\cup\{iv:-m\le i\le m\}.
+\]
+
+The source has `4m+1` core points, precisely `4m` unit contacts, and precisely two
+diameter pairs `(-mu,mu)` and `(-mv,mv)`, of length `D=2m`. For different rays,
+nonzero integer coefficients give squared distances
+`i^2+j^2-(4/5)ij>=6/5`; the opposite-ray formula is larger. Contacts within
+one line are the consecutive integer pairs. Put contact multiplier `m` on each
+contact and diameter multiplier `1/2` on each diameter pair. At chain interiors
+opposite forces cancel; at each endpoint the contact force `m` equals its
+normalized diameter force `(1/2)(2m)`. At the shared center both pairs cancel.
+Thus KKT, including `sum beta=1` and `sum alpha=D^2`, holds exactly.
+
+Set `s_m=1+m^-2`. Add all sites of the triangular lattice of spacing `s_m`
+in the radius-`m-2` disk whose distance from **every** core point is strictly
+larger than one. Call this added set `I_m` and let `A_m=V_m union I_m`.
+All distances in `I_m` are greater than one. Every added point is an actual
+contact isolate. The diameter remains `2m`, with the same two active pairs;
+all added points have radius at most `m-2`. The stress extends by zero.
+There is no unit triangle.
+
+The count is
+
+\[
+ |A_m|={\pi m^2\over a_0}+O(m)
+       =\left({\pi\over2\sqrt3}+o(1)\right)D^2.
+\]
+
+For completeness: triangular Voronoi cells have area `a_0 s_m^2` and radius
+`s_m/sqrt3`. Covering and containment of the radius-`m-2` disk give its site
+count `pi m^2/a_0+O(m)`. Sites deleted by the distance-to-core test have cells
+inside the `(1+s_m/sqrt3)` neighborhood of the two length-`2m` chain segments.
+That neighborhood has area `O(m)`, so only `O(m)` sites are deleted. This proves
+the displayed count, rather than inferring it from finite output.
+
+### An analytic strict competitor for every `m>=64`
+
+Let `N_s(r)` count sites of the spacing-`s` triangular lattice in a closed disk
+of radius `r`, and put `rho=1/sqrt3`. The unit-chain row `b=0` deletes at least
+`2m-6` of the candidate sites. Each of the rows `b=1` and `b=-1` deletes at
+least `2m-12` sites, as follows.
+
+Keep half-integers `q=a+b/2` with `|s_m q|<=m-3` and `|q|>=5/2`. There are
+at least `2m-8` half-integers before removing the four central values, hence at
+least `2m-12` remain. They are in the radius-`m-2` disk since their squared
+vertical coordinate is `3s_m^2/4<1`. Their horizontal distance from the nearest
+integer on the `u` chain is `1/2-|q|/m^2`. Therefore their squared distance from
+that chain is at most
+
+\[
+ (1/2-5/(2m^2))^2+3(1+m^{-2})^2/4
+ =1-m^{-2}+7m^{-4}<1.
+\]
+
+All these sites are deleted. They are on three different rows, so
+
+\[
+ |A_m|\le N_{s_m}(m-2)-2m+31.
+\]
+
+The triangular Voronoi cells give
+
+\[
+ N_1(m-1)\ge {\pi\over a_0}(m-1-\rho)^2,\qquad
+ N_{s_m}(m-2)\le {\pi\over a_0}(m-2+\rho)^2.
+\]
+
+Thus
+
+\[
+ N_1(m-1)-|A_m|
+ \ge {\pi\over a_0}(1-2\rho)(2m-3)+2m-31.
+\]
+
+Using `rho<3/5`, `a_0>5/6`, and `pi<22/7`, the right side is strictly larger
+than `(86m-5029)/175`, positive for `m>=64`. Hence at least `|A_m|` unit
+triangular-lattice sites lie in the radius-`m-1` disk. Selecting exactly that many
+produces a unit-separated competitor of diameter at most `2m-2<2m`. This proves
+nonoptimality for an unbounded family, with a uniform additive diameter gain.
+It is a regression against the intermediate inputs, not a disproof of Level I.
+
+The scalar signed stress on `V_m` even has the canonical-looking PSD and
+three-dimensional-kernel properties. For a scalar field `f` its energy is the
+sum, over the two length-`2m` chains, of
+
+\[
+ m\sum_{i=-m}^{m-1}(f_{i+1}-f_i)^2
+ -\tfrac12(f_m-f_{-m})^2\ge0.
+\]
+
+Equality holds precisely when `f` is affine along each chain. Since they share
+one center, the kernel has dimension three and equals `span{1,P_x,P_y}`.
+Extending by zero to the source adds isolate kernel directions. The mixed bar
+framework nevertheless has an angle-changing flex and fails canonical ZF; in
+particular `h=2` violates its linear diameter-edge lower bound.
+
+The exact verifier checks every source pair, the complete contact and diameter
+sets, all equilibrium coordinates, stress normalization, and a same-cardinality
+triangular-lattice competitor of diameter strictly below `2m` for each displayed
+finite instance. Coordinates are in `Q(sqrt3,sqrt21)` and all squared distances
+are in `Q(sqrt7)`; signs are decided by rational squares.
+
+This regression is **not** a global minimizer. It shows why leading optimal
+packing density, ambient disk roundness, exact positive KKT stress, and two
+contact directions cannot replace the canonical rank/global-optimality bridge.
+It has `h=2`, not canonical `h>=ceil(D)`, and a subquadratic positive core. The
+regression uses full source populations; no isolates are discarded.
+
+## 7. Attacks killed and comparison with current swarm work
+
+1. **Every force hull is a disk.** False. AG gives the convex hull of an
+   antipodal subset of a circle. DC.1 explicitly allows a smaller hull and proves
+   the resulting exterior population. The regression supplies such a smaller hull.
+2. **Exact lattice vertices plus a linear loaded-vertex count.** Valid, but
+   already proved in
+   [the September 11 affine vertex exclusion](target_c_affine_lattice_boundary_vertex_exclusion_2026-09-11.md).
+   Its `O(D^(2/3))` lattice count already excludes the canonical exact-chart
+   subbranch, including vanishing shear. This run does not reclassify it as new.
+3. **Only the reference two directions occur on a large carrier, so DC.1 applies
+   globally.** Invalid. DC.1 requires the band condition on every positive contact
+   in the selected source stress. Other grains and interfaces can supply contacts
+   outside those bands at loaded vertices. The theorem cannot be transferred from
+   a carrier without that missing hypothesis.
+4. **A quadratic inactive exterior population contradicts global minimality.**
+   Not proved. The exact regression shows the local/scalar inputs do not do so;
+   only an additional global source argument could eliminate the canonical branch.
+5. **Small positive multipliers are negligible.** Not used. The proof divides by
+   the actual positive diameter mass at a loaded vertex. Arbitrarily small mass is
+   allowed; all its partners have the same uniform geometric bound.
+
+Open PRs #578 and #579 respectively use affine boundary counts and lattice shadows
+of the loaded hull. DC.1 uses contact-force directions rather than proximity of
+positions to any lattice. PRs #581 and #586 concern source refill and paired
+macroscopic exterior caps. This report does not identify the new caps with their
+containers or assume their additional source-replacement hypotheses.
+
+## 8. Regression and scope audit
+
+The unit-square and positive-stress plus-complex regressions have orthogonal
+contact directions (`g=0`), so no positive angular exclusion is asserted. The
+previous false orthogonal-polygon shortcut is not used. Repeated outer-walk
+vertices, bridges, non-Eulerian diameter graphs, disconnected positive-contact
+components, and contact isolates do not affect DC.1. No motion is integrated and
+no PSD or zero multiplier is used to infer finite motion. The theorem has no
+assumption on stress magnitudes and no boundary-order term is discarded in its
+finite statements. Its asymptotic applications only claim a fixed quadratic gap.
+A regular unit-side pentagon is a separate scope check: it is triangle-free,
+its five contact line directions are equally spaced by 36 degrees on the
+projective circle, and its diameter graph is an odd five-cycle. Thus local
+triangle-freeness cannot be used to supply the missing sub-90-degree contact-arc
+hypothesis. No claim about its large-cardinality global optimality is made.
+The near-equilateral shear is allowed to vanish at any rate; the gap depends on
+`pi/2-theta`, not `theta-pi/3`.
+
+## 9. Exact remaining obligation and frontier effect
+
+The canonical frontier is unchanged pending independent audit and promotion.
+The candidate excludes a global approximate-direction full-core subbranch and
+the corresponding canonical odd-unicyclic branch. It reduces any surviving
+macroscopic, caterpillar-forest case to four prescribed angular
+caps with quadratic population and linear clearance from the stressed core.
+It supplies neither a universal detour payment nor an exact unit triangle.
+
+A concrete remaining lemma for this route is:
+
+> For a canonical contact-minimal, then diameter-pair-minimal triangle-free
+> global source whose **entire** positive-contact stress is contained in two
+> vanishing direction bands with acute angle tending to 60 degrees, and whose
+> diameter graph therefore has the actual line-cut caterpillar-forest structure
+> of DC.3, replace or
+> deform the old diameter-carrying core while relocating the populations in the
+> four caps of Section 5 to construct a unit-separated source of exactly `n`
+> points and diameter strictly smaller than `D`.
+
+Every separation across old/new interfaces and every active diameter row must be
+verified. Merely refilling an isolate cap while retaining the old loaded core
+cannot satisfy this conclusion. The general full-core route still needs a
+payment for aggregate outer-walk detour or a source competitor when additional
+contact directions repair the cones.
+
+## 10. Work products and promotion recommendation
+
+The dated report, exact regression script, and script documentation are the work
+products. The report is unreviewed and should receive an independent audit of the
+support-point selection, cone signs, area currency, and four-cap population proof.
+No canonical files or theorem status have been changed. If promoted, DC.1–DC.3
+and the full-source cap consequence should be registered with the shared KKT and
+AG dependencies. The global and C-II prompts must retain the macroscopic branch.

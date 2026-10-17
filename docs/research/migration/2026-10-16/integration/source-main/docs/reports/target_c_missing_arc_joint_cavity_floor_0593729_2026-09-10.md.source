@@ -1,0 +1,381 @@
+<!-- theorem-state: {"artifact_id":"ART-5BEF95AF1F4F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Erdős Problem #99 — missing-arc capacity raises the post-ZF floor to 0.593729
+
+**Date:** 2026-09-10  
+**Repository state:** branch `research/c-ii-cyclic-gap-2026-09-10`, after missing-arc theorem MA  
+**Run type:** exact asymptotic inequality synthesis / closing-proof continuation  
+**Target:** Target C, C-II after ZF/FS/FSDB/JC/MA  
+**External web search:** not used  
+**Computation:** decimal evaluation only; proof is analytic
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+Let `rho` be the unique positive solution of
+
+\[
+\rho=\cos\rho.
+\]
+
+The force-hull missing-arc theorem couples diameter density, actual perimeter, and area.
+Inserting that joint constraint into the actual-perimeter JC cavity inequality gives
+
+\[
+\boxed{
+\liminf_{D\to\infty}
+\frac{e_{BB}+2s_C}{D}
+\ge
+\lambda_{MAJC}
+=0.5937285472681860970\ldots .
+}
+\tag{MJ.1}
+\]
+
+The constant is the positive root of
+
+\[
+\boxed{
+(\pi^2+1)\lambda^2
++4\rho\lambda
++4\rho^2
+-\pi(2\rho+\sin2\rho)
+=0.
+}
+\tag{MJ.2}
+\]
+
+Unlike the preceding CAP/CQ floors, the global minimizer of the feasible region is now
+at the **existing DB lower endpoint**
+
+\[
+\boxed{
+\frac hD\to2\rho,
+\qquad
+\frac{\operatorname{per}F}{D}\to4\rho
+}
+\tag{MJ.3}
+\]
+
+when equality is approached. The new value strictly improves
+`0.5933858947681038...`.
+
+---
+
+## 1. Joint MA area lower bound
+
+Pass to a convergent post-ZF survivor subsequence and write
+
+\[
+\lambda=\lim\frac{e_{BB}+2s_C}{D},
+\qquad
+y=\lim\frac hD,
+\qquad
+p=\lim\frac{\operatorname{per}F}{D}.
+\tag{1.1}
+\]
+
+MA gives
+
+\[
+y\in[2\rho,\pi],
+\qquad
+p\ge p_0(y):=y+2\cos(y/2),
+\tag{1.2}
+\]
+
+and
+
+\[
+\liminf\frac{\operatorname{area}F}{D^2}
+\ge
+\Phi(y)+s(y)[p-p_0(y)],
+\tag{1.3}
+\]
+
+where
+
+\[
+\Phi(y)=\frac{y+\sin y}{4},
+\qquad
+s(y)=\cos^3\left(\frac{\pi-y}{4}\right)>\frac34.
+\tag{1.4}
+\]
+
+GU's attachment-cell estimate and JC's actual-perimeter cavity bound therefore imply
+
+\[
+\boxed{
+Q_M(y,p,\lambda):=
+(\pi^2+1)\lambda^2
++2m(y,p)\lambda
++m(y,p)^2
+-4\pi\{\Phi(y)+s(y)[p-p_0(y)]\}
+\ge0,
+}
+\tag{1.5}
+\]
+
+with
+
+\[
+m(y,p)=\min\{y,p-y\}.
+\tag{1.6}
+\]
+
+For fixed `(y,p)`, `Q_M` is strictly increasing in `lambda>=0`. As before, its positive
+threshold root is below `pi`, because the actual force-hull area is at most `pi/4` and
+substitution `lambda=pi` is far on the positive side of the necessary inequality.
+
+---
+
+## 2. The minimum possible perimeter is already on the two-sided cavity branch
+
+The Dottie equation makes the comparison exact. Since the function
+
+\[
+x\mapsto x-\cos x
+\]
+
+is strictly increasing on `[0,pi/2]` and vanishes at `rho`, for every
+`y>=2rho`,
+
+\[
+\frac y2\ge\rho=\cos\rho\ge\cos(y/2).
+\]
+
+Therefore
+
+\[
+\boxed{
+p_0(y)=y+2\cos(y/2)\le2y,}
+\tag{2.1}
+\]
+
+with equality only at `y=2rho`.
+
+Thus for
+
+\[
+p_0(y)\le p\le\min\{2y,\pi\},
+\]
+
+we have `m=p-y`. At the threshold root, `lambda<pi` and `m<=pi/2`. Differentiate
+(1.5) in `p`:
+
+\[
+\partial_pQ_M
+=2(\lambda+m)-4\pi s(y).
+\tag{2.2}
+\]
+
+Since `s(y)>3/4`,
+
+\[
+\partial_pQ_M
+<3\pi-3\pi=0.
+\tag{2.3}
+\]
+
+Because `Q_M` increases in `lambda`, a negative `partial_pQ_M` means the threshold
+root **increases** with `p`.
+
+If `p>=2y`, then `m=y` and
+
+\[
+\partial_pQ_M=-4\pi s(y)<0,
+\tag{2.4}
+\]
+
+so the threshold continues to increase. Hence for every fixed `y`, the survivor's
+most favorable perimeter is the smallest one MA permits:
+
+\[
+\boxed{p=p_0(y).}
+\tag{2.5}
+\]
+
+This is the key gain over the independent FSDB/CAP/CQ bounds.
+
+---
+
+## 3. The diameter-density threshold is strictly increasing
+
+At `p=p_0(y)`, the MA area is exactly `Phi(y)`, and by (2.1)
+
+\[
+m(y,p_0(y))=p_0(y)-y=2\cos(y/2).
+\tag{3.1}
+\]
+
+Thus the threshold equation reduces to
+
+\[
+\boxed{
+R(y,\lambda):=
+(\pi^2+1)\lambda^2
++4\cos(y/2)\lambda
++4\cos^2(y/2)
+-\pi(y+\sin y)
+=0.
+}
+\tag{3.2}
+\]
+
+Differentiate at fixed `lambda`:
+
+\[
+\begin{aligned}
+\partial_yR
+&=
+-2\sin(y/2)\,[\lambda+2\cos(y/2)]
+-\pi(1+\cos y)\\
+&<0
+\qquad(2\rho\le y\le\pi).
+\end{aligned}
+\tag{3.3}
+\]
+
+The derivative in `lambda` is positive. Hence the positive threshold root is strictly
+increasing in `y`.
+
+Therefore the entire MA/JC feasible region has its global minimum at
+
+\[
+\boxed{y=2\rho.}
+\tag{3.4}
+\]
+
+At this endpoint, `cos rho=rho`, so
+
+\[
+p_0(2\rho)=2\rho+2\cos\rho=4\rho,
+\]
+
+and (3.2) becomes exactly MJ.2. This proves MJ.1. `square`
+
+---
+
+## 4. Endpoint localization
+
+Every monotonicity used above is strict away from the displayed minimizer. Hence any
+survivor sequence approaching `lambda_MAJC` must satisfy
+
+\[
+\boxed{
+\frac hD\to2\rho,
+\qquad
+\frac{\operatorname{per}F}{D}\to4\rho.
+}
+\tag{4.1}
+\]
+
+The JC relaxation
+
+\[
+\frac{e_{BB}}D\le
+\frac{e_{BB}+2s_C}{D}
+\]
+
+must also saturate. Therefore
+
+\[
+\boxed{
+\frac{e_{BB}}D\to\lambda_{MAJC},
+\qquad
+\frac{s_C}{D}\to0.
+}
+\tag{4.2}
+\]
+
+Numerically,
+
+\[
+2\rho=1.4781702664303212833\ldots,
+\]
+
+\[
+4\rho=2.9563405328606425666\ldots,
+\]
+
+\[
+\lambda_{MAJC}=0.5937285472681860970\ldots .
+\]
+
+The force-hull missing-arc budget must simultaneously saturate: its retained projective
+circle set has measure `2rho`, its missing set has total measure `pi-2rho`, and the
+shrink/split proof of MA can lose no linear-scale area relative to the one-gap extremal.
+This sharply identifies the next equality structure to audit.
+
+---
+
+## 5. Exact target implication
+
+The explicit report-level post-ZF lower floor now satisfies
+
+\[
+0.5882283437736394
+<0.5932351999620735
+<0.5933858947681038
+<\boxed{0.5937285472681861}.
+\]
+
+More important than the decimal is the endpoint collapse. Instead of an interior
+`(y,p)` crossover, every near-extremal survivor is forced to the DB lower-density
+boundary and the one-gap missing-arc boundary simultaneously.
+
+This still does not close C-II: the project has no universal upper bound on
+`(e_{BB}+2s_C)/D` below `lambda_MAJC`.
+
+---
+
+## 6. Regression audit and global-optimality location
+
+- **Regular odd shell:** has `y->pi`, not `2rho`, and currency near `pi`; it is far from
+  the MAJC endpoint.
+- **Dense isolated shell fillings:** retain the FS/MA geometry but do not carry a
+  global-minimizer certificate; nothing here infers optimality from their density.
+- **Half-weight matching regression:** unused.
+- **Response trace defect regression:** unused; MAJC uses only force-hull geometry and
+  exact JC population/cavity ledgers.
+- **Near-equilateral strict rhombi:** no local angular gap is assumed.
+
+The full-source global information enters through FS.1/FS.4. The diameter-density lower
+endpoint `2rho` enters through the audited DB/post-ZF chain. The conclusion is therefore
+not a theorem about arbitrary dense isolated fillings or arbitrary cyclic shells.
+
+---
+
+## 7. Audit classification
+
+| Claim | Classification | Reason |
+| --- | --- | --- |
+| MA missing-arc budget | proved in adjacent report | separated diameter directions have limit measure at least `y` and lie in the force-hull circle set |
+| MA joint area/perimeter slope | proved in adjacent report | exact shrink/split trigonometric ratios |
+| perimeter minimization `p=p_0(y)` | proved | MA slope `>3/4` makes `partial_pQ_M<0` at every threshold |
+| density minimization `y=2rho` | proved | exact derivative (3.3) |
+| explicit floor MJ.1 | proved asymptotically | unique positive root MJ.2 |
+| endpoint exclusion | not proved here | requires auditing equality in DB/MA and the source topology |
+| Level I | still open | high surplus remains feasible under current inequalities |
+
+---
+
+## 8. Promotion recommendation and next run
+
+**Hold as report pending joint dependency audit.** MAJC supersedes the earlier CAPJC and
+CQJC scalar floors as the strongest explicit result on this branch.
+
+The next route should attack the equality structure, not iterate a decimal. At the MAJC
+endpoint all of the following are forced simultaneously:
+
+1. `h/D->2rho`, the DB lower endpoint;
+2. `per(F)/D->4rho=p_0(2rho)`;
+3. `s_C/D->0`;
+4. the force-hull missing circle set has total projective angle `pi-2rho`;
+5. the MA shrink/split inequality must be asymptotically sharp.
+
+Since the split slope in MA.3 is strictly larger than its lower bound unless the gap
+geometry degenerates, endpoint sharpness should force a **single macroscopic missing
+projective arc** of angle `pi-2rho`, with the retained circle set an antipodal pair of
+closed arcs of total measure `2rho`. Proving that stability statement and feeding it
+back into the actual contact/diameter topology is the next concrete closing implication.

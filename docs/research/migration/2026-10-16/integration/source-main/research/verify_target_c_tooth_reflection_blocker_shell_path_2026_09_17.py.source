@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+"""Regression checks for the thin-shell reflection-blocker path theorem."""
+
+from fractions import Fraction
+import math
+
+
+h2 = Fraction(303, 2704)
+h = math.sqrt(float(h2))
+assert abs(h - math.sqrt(303) / 52) < 1e-15
+assert h < 0.5
+
+# For a unit contact between two blockers in the shell
+# D < r,s < D+h, the radial component is bounded by
+# H_D = h + (h^2 + 1/2)/D.  It is decreasing in D, so D=4
+# is the worst integer D >= 4.
+H4 = h + (float(h2) + 0.5) / 4
+assert H4 < 0.5
+assert 2 * math.asin(H4) < math.pi / 3
+
+# Exact certification of H_4 < 1/2.
+# The inequality is equivalent to
+#   h < 3/8 - h^2/4 = 3753/10816.
+# Both sides are positive, so squaring is valid.
+rhs = Fraction(3, 8) - h2 / 4
+assert rhs == Fraction(3753, 10816)
+assert rhs > 0
+assert rhs * rhs > h2
+
+# The current shallow threshold has alpha < pi/6 because
+# cos(alpha) >= 49/52 > sqrt(3)/2.
+assert Fraction(49, 52) > math.sqrt(3) / 2
+
+# A same-side pair of unit contact vectors lying within beta < pi/6
+# of one tangent direction makes mutual angle < pi/3, so its endpoints
+# would be closer than one.
+beta = math.asin(H4)
+endpoint_distance = 2 * math.sin(beta)
+assert endpoint_distance < 1
+
+# A radial shell of thickness h<1 cannot contain two source points on
+# the same ray while preserving unit separation.
+assert h < 1
+
+print("PASS: reflection blocker thin-shell path certificate")
+print(f"h_*={h:.15f}")
+print(f"H_4={H4:.15f}")
+print(f"2 asin(H_4)={2*beta:.15f} < pi/3={math.pi/3:.15f}")

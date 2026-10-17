@@ -1,0 +1,395 @@
+# Erdős Problem #99 — full-core post-endpoint defect decomposition
+
+**Date:** 2026-09-14  
+**Repository base:** `30a4da0fe95658b50fe19feddd21bd0ce70ff17c`  
+**State version:** `2026-09-14.audit.51`  
+**Run type:** closing-proof reduction / exact algebraic-geometric decomposition  
+**Target:** Target C-II, full-core branch  
+**Starting status:** `C-FULLCORE-TRAIN-SURPLUS-FLOOR` and `C-FULLCORE-FLOOR-ENDPOINT-EXCLUSION` canonical; C-II open  
+**External literature:** not used  
+**Computation:** exact-rational regression used only as an algebra check; proof below is symbolic
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+This note does not claim C-II or Level-I closure. It converts the remaining high-surplus full-core branch from one scalar inequality into four explicit nonnegative geometric defect currencies.
+
+## 1. Starting endpoint
+
+In the canonical full-core near-disk Type-II branch, write
+
+\[
+k=d_H+s_Z,
+\qquad
+\mu_D=\frac{e_{BB}+2s_C-3k}{D}.
+\]
+
+The promoted loaded-chord theorem and component deatomization give
+
+\[
+c_B=0,
+\qquad e_{BB}=q-m_B,
+\qquad
+\mu_DD=q+m_B-k-2c_I-4.
+\tag{PE.1}
+\]
+
+Here `m_B` is the number of nonunit sides of the actual loaded force hull `F`, `q=|B|`, and `c_I=O(D^{2/3})`.
+
+Canonical Section 63 gives the exact outer-walk identity
+
+\[
+b+Q=2(q-k),
+\tag{PE.2}
+\]
+
+where `b` is the occurrence-counted outer contact-face walk and `Q` is the total degree-above-four defect of bounded nonquadrilateral contact faces. If `p=per(F)`, then `b-p>=0`.
+
+Canonical Section 85 gives
+
+\[
+q-k+2f\ge 2\sqrt{R_4},
+\tag{PE.3}
+\]
+
+where `f` is the number of bounded nonquadrilateral faces and `R_4` is the number of bounded strict unit-rhombus faces. Also `Q>=f`.
+
+The train-coupled floor is
+
+\[
+\mu_{\rm TC}
+=\frac{2\pi+2\sqrt{\pi/(2\sqrt3)}}5
+=1.6375621841815\ldots.
+\tag{PE.4}
+\]
+
+The exact endpoint `mu_D -> mu_TC` is canonically excluded. Thus some non-explicit `epsilon_*>0` and `D_*>0` satisfy
+
+\[
+\mu_D\ge\mu_{\rm TC}+\epsilon_*
+\tag{PE.5}
+\]
+
+for every sufficiently large canonical full-core survivor.
+
+The question is: where must this positive post-endpoint gap live geometrically?
+
+## 2. Strongest new result
+
+### Theorem PE — exact post-endpoint defect decomposition
+
+Define the train-boundary slack
+
+\[
+\tau_D:=(q-k)+2f-2\sqrt{R_4}\ge0.
+\tag{PE.6}
+\]
+
+Then every sufficiently large canonical full-core near-disk Type-II survivor satisfies the exact finite identity
+
+\[
+\boxed{
+\mu_DD
+=
+\frac{2p+2\sqrt{R_4}}5
++m_B
++\frac25(Q-f)
++\frac25(b-p)
++\frac15\tau_D
+-2c_I-4.
+}
+\tag{PE.7}
+\]
+
+Every displayed defect term after the baseline is nonnegative:
+
+\[
+m_B\ge0,
+\qquad Q-f\ge0,
+\qquad b-p\ge0,
+\qquad \tau_D\ge0.
+\tag{PE.8}
+\]
+
+Since the canonical full-core asymptotics give
+
+\[
+\frac pD\to\pi,
+\qquad
+\frac{R_4}{D^2}\to\Delta_2:=\frac\pi{2\sqrt3},
+\qquad
+\frac{c_I}{D}\to0,
+\tag{PE.9}
+\]
+
+(PE.7) yields the asymptotically exact surplus formula
+
+\[
+\boxed{
+\mu_D-\mu_{\rm TC}
+=
+\frac1D\left[
+ m_B
++\frac25(Q-f)
++\frac25(b-p)
++\frac15\tau_D
+\right]
++o(1).
+}
+\tag{PE.10}
+\]
+
+Thus the entire first-order excess above the train-coupled floor is carried by exactly four explicit currencies: nonunit loaded-hull sides, degree above pentagons, outer-walk metric detour, and slack in the train-boundary inequality.
+
+### Corollary PE.1 — uniform linear four-way split
+
+By the canonical endpoint exclusion (PE.5), there is a non-explicit constant `delta_*>0` such that every sufficiently large canonical full-core survivor satisfies
+
+\[
+\boxed{
+\max\left\{
+ m_B,
+ Q-f,
+ b-p,
+ \tau_D
+\right\}
+\ge \delta_*D.
+}
+\tag{PE.11}
+\]
+
+One may take any `delta_*<epsilon_*/4` after increasing the diameter threshold.
+
+Therefore the post-endpoint branch cannot remain simultaneously
+
+- `m_B=o(D)`,
+- `Q-f=o(D)`,
+- `b-p=o(D)`, and
+- `tau_D=o(D)`.
+
+This is the structural content missing from the scalar statement `mu_D>=mu_TC+epsilon_*`.
+
+## 3. Proof
+
+Put
+
+\[
+U:=q-k.
+\]
+
+From (PE.2),
+
+\[
+U=\frac{b+Q}{2},
+\qquad
+U-\frac{p+Q}{2}=\frac{b-p}{2}.
+\tag{PE.12}
+\]
+
+From the definition (PE.6),
+
+\[
+U-\left(2\sqrt{R_4}-2f\right)=\tau_D.
+\tag{PE.13}
+\]
+
+Take the convex combination with weights `4/5` and `1/5`, but retain both exact slacks instead of discarding them:
+
+\[
+\begin{aligned}
+U
+&=\frac45\frac{p+Q}{2}
+ +\frac15\left(2\sqrt{R_4}-2f\right)\\
+&\quad
+ +\frac45\left(U-\frac{p+Q}{2}\right)
+ +\frac15\left(U-2\sqrt{R_4}+2f\right).
+\end{aligned}
+\tag{PE.14}
+\]
+
+Substitute (PE.12) and (PE.13):
+
+\[
+\boxed{
+U
+=\frac{2p+2\sqrt{R_4}}5
+ +\frac25(Q-f)
+ +\frac25(b-p)
+ +\frac15\tau_D.
+}
+\tag{PE.15}
+\]
+
+Now (PE.1) is
+
+\[
+\mu_DD=U+m_B-2c_I-4.
+\]
+
+Insert (PE.15). This proves the exact identity (PE.7).
+
+For (PE.10), divide by `D` and use (PE.9). The baseline satisfies
+
+\[
+\frac{2p+2\sqrt{R_4}}{5D}
+\to
+\frac{2\pi+2\sqrt{\Delta_2}}5
+=\mu_{\rm TC},
+\]
+
+while `2c_I/D+4/D -> 0`. This proves (PE.10).
+
+Finally, let
+
+\[
+\Xi_D
+:=m_B+\frac25(Q-f)+\frac25(b-p)+\frac15\tau_D.
+\]
+
+Endpoint exclusion and (PE.10) imply `Xi_D/D >= epsilon_*/2` for all sufficiently large `D`. The four coefficients in `Xi_D` sum to
+
+\[
+1+\frac25+\frac25+\frac15=2.
+\]
+
+Hence if all four raw defect currencies were `<(epsilon_*/4)D`, then `Xi_D<(epsilon_*/2)D`, contradiction. This proves (PE.11) with any slightly smaller fixed constant if one wants to absorb the final asymptotic threshold strictly.
+
+## 4. Relation to the train-interface floor
+
+Let
+
+\[
+\kappa_{\rm tr}:=4\sqrt{\Delta_2}-\pi
+=0.667658573866\ldots.
+\]
+
+Then
+
+\[
+f_{\rm TC}:=\frac{\kappa_{\rm tr}}5
+=0.133531714773\ldots,
+\]
+
+and
+
+\[
+\mu_{\rm TC}
+=\frac\pi2+\frac{f_{\rm TC}}2
+=\frac\pi2+\frac{\kappa_{\rm tr}}{10}.
+\tag{PE.16}
+\]
+
+Thus (PE.7) is a stability decomposition around the unique scalar optimizer used by the train-coupled floor. At the formal floor endpoint, all four normalized defects in (PE.10) vanish. The canonical endpoint-exclusion theorem says that this simultaneous near-equality package cannot actually persist for global minimizers. Corollary PE.1 records the exact first-order consequence: at least one of those four defects must instead be linear.
+
+This also clarifies the earlier endpoint report. Its conclusions
+
+\[
+m_B=o(D),\quad Q-f=o(D),\quad b-p=o(D)
+\]
+
+were not three unrelated endpoint facts; together with train-boundary tightness they are exactly the vanishing of the four defect currencies in (PE.10).
+
+## 5. Frontier effect
+
+This result does not close C-II, but it materially sharpens the live full-core frontier.
+
+Before PE, the post-endpoint branch was recorded only as
+
+```text
+mu_D >= mu_TC + epsilon_*
+    -> higher-surplus full-core regime
+    -> geometric/source-level argument still required.
+```
+
+After PE, every sufficiently large survivor lies in at least one of four concrete linear-defect branches:
+
+```text
+(A) m_B = Omega(D): linearly many nonunit loaded-hull sides;
+(B) Q-f = Omega(D): linear degree excess above the pentagon baseline;
+(C) b-p = Omega(D): linear metric detour of the occurrence-counted outer walk;
+(D) tau_D = Omega(D): linear slack in the global rhombus train-boundary inequality.
+```
+
+This is not merely another numerical improvement. It removes the possibility that the canonical post-endpoint gap is hidden in an undifferentiated scalar combination of `q`, `k`, and `s_C`.
+
+The concurrently audited exact aggregate-detour decomposition is complementary: it rewrites the Section-122 residual `sum_r(L_r-2d_r)` in actual attachment-cell currencies. PE instead rewrites the high-surplus gap itself. A closing proof should now couple at least one of branches (A)–(D) to that aggregate-detour identity or directly to a source-preserving strict diameter decrease.
+
+## 6. Scope audit
+
+- The result is full-core Type-II only. It does not address the macroscopic-container/exterior-cap branch.
+- It uses the canonical loaded-chord theorem; hence `c_B=0` is essential.
+- `b` remains the occurrence-counted outer contact-face walk. No simple-boundary assumption is introduced.
+- `p` is the Euclidean perimeter of the actual loaded force hull.
+- Contact-isolated source points remain in the full source. They are not inserted into the positive-contact-core quantities.
+- The exact endpoint exclusion is imported only at the corollary step. Identity (PE.7) itself does not use it.
+- No external theorem, affine-lattice model, response-network coefficient floor, or rate stronger than the canonical asymptotics is used.
+
+## 7. Regression checks
+
+1. **Formal train-floor endpoint.** Setting all four normalized defects to zero and using (PE.9) gives `mu_D -> mu_TC`, exactly as required. The canonical endpoint-exclusion theorem then rules out this limiting package for actual sufficiently large global minimizers.
+
+2. **Linear `m_B` branch.** PE permits it and charges its full first-order contribution with coefficient one. No false claim that nonunit sides are sublinear is made away from the excluded endpoint.
+
+3. **High-degree exceptional faces.** A face of degree `d>=5` contributes `d-5` to `Q-f`, so branch (B) measures degree beyond the pentagon baseline rather than merely counting exceptional faces.
+
+4. **Bridge/repeated outer occurrences.** These contribute through `b-p`; the occurrence convention is exactly the canonical one from Section 63.
+
+5. **Train slack.** `tau_D` is nonnegative by canonical Section 85 and is kept explicitly. PE does not silently replace the train-boundary inequality by equality.
+
+6. **Component deatomization.** The only negative term is `-2c_I-4`; canonical `c_I=O(D^{2/3})` makes it first-order negligible but it is retained in the exact finite identity.
+
+## 8. Computation
+
+A Pyroam exact-rational regression checked the algebraic identity corresponding to (PE.7) on 10,000 randomly generated rational assignments satisfying the two defining equalities for `U`. It returned
+
+```text
+PASS: exact decomposition verified on 10,000 rational assignments
+Delta2=0.906899682117109
+mu_TC=1.637562184181500
+```
+
+A second numerical orientation check verified
+
+```text
+kappa_tr = 0.667658573866036
+f_TC     = 0.133531714773207
+mu_TC    = pi/2 + f_TC/2 = 1.637562184181500
+```
+
+These computations are regressions only. The proof is the exact symbolic derivation (PE.12)–(PE.15).
+
+## 9. Promotion recommendation
+
+`unreviewed`.
+
+The exact algebra is short and uses only canonical dependencies, but this note should receive an independent hostile audit before any theorem-state promotion. No state version, route map, or active prompt is changed by this commit.
+
+## 10. Exact next obligation
+
+For each of the four linear-defect branches in (PE.11), prove at least one source-level consequence strong enough to close the full-core branch:
+
+\[
+\boxed{
+\text{linear PE defect}
+\Longrightarrow
+\text{strict same-cardinality sub-}D\text{ competitor or exact unit triangle.}
+}
+\]
+
+The most immediate branch-specific targets are:
+
+- charge linear `m_B` to actual loaded-interior incidence/equilibrium and then to a diameter-decreasing exchange;
+- convert linear `Q-f` into a quantitative high-degree-face/corridor obstruction;
+- couple linear `b-p` directly to the audited aggregate-detour identity;
+- show linear `tau_D` forces additional interface/chamber currency beyond the existing near-geodesic regressions.
+
+No claim is made here that any one of these four implications is already proved.
+
+## 11. Handoff
+
+1. Strongest new result: exact identity (PE.7) and asymptotically exact gap formula (PE.10).
+2. Canonical dependencies: `C-FULLCORE-LOADED-CHORD`, `C-COMP-DEATOMIZATION`, `C-LOADED-HULL` / Section 63, `C-TRAIN-INTERFACE-CURRENCY` / Section 85, `C-FULLCORE-NEAR-DISK`, and `C-FULLCORE-FLOOR-ENDPOINT-EXCLUSION` for the linear-split corollary.
+3. Exact frontier reduction: every sufficiently large full-core survivor has one of four linear defects (PE.11).
+4. Exact remaining lemma: turn one of those four linear defects into a source-preserving strict diameter decrease or an exact unit equilateral triangle.
+5. Read next: `docs/reports/target_c_exact_aggregate_detour_decomposition_2026-09-14.md`, `docs/targets/target-c/63-loaded-hull-slack-audit.md`, `docs/targets/target-c/85-train-boundary-interface-currency-audit.md`, and the endpoint-exclusion audit.

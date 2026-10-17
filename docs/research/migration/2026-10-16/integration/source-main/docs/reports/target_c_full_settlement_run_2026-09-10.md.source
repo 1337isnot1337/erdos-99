@@ -1,0 +1,1416 @@
+<!-- theorem-state: {"artifact_id":"ART-95ED6B83FC92","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Erdős Problem #99 — all-phase Target C settlement run
+
+**Date:** 2026-09-10  
+**Repository state:** started at `3f37ef0eab4407a411f9a6d51d016ba600302be7`; canonical `main` advanced during the run and was locked for the principal branch at `1adc420e9227476135d6891b61f1a75193aa90ab`; synthesis branch `research/c2-general-mu05947-20260910`  
+**Run type:** closing proof / audit / literature / exact computation / synthesis  
+**Target:** Target C, C-II  
+**Active prompt:** `docs/prompts/erdos_problem_99_TARGET_C_1.0_FINAL_CONTINUATION_PROMPT.md`  
+**External web search:** used narrowly for equality provenance and a later penny-graph literature check  
+**Computation:** exact rational certificates `research/target_c_general_mu05947_certificate.py` and `research/target_c_e5981_certificate.py`; both independently rerun during the audit
+
+## LEVEL I STATUS
+
+`STILL OPEN`.
+
+No proof or disproof of Erdős Problem #99 was obtained.  The run nevertheless changes
+the C-II frontier materially: the renormalized surplus mechanism is no longer confined
+to the `s_Z=0` Laman-circuit phase, and the low-renormalized-surplus branch is reduced
+to a quantitatively extreme inactive outer-shell normal form.
+
+The strongest genuinely new theorem stack is the following.
+
+For every post-ZF survivor define
+
+\[
+\boxed{
+\mu_D:=\frac{e_{BB}+2s_C-3(d_H+s_Z)}D.
+}
+\tag{0.1}
+\]
+
+Then:
+
+1. **all-phase coefficient-three renormalization:**
+   \[
+   \boxed{
+   \liminf_{D\to\infty}\mu_D>0.5947;
+   }
+   \tag{0.2}
+   \]
+2. **exact force-bulk population conversion:** if along a subsequence
+   `mu_D->mu` and `s_B/D->sigma_B`, then
+   \[
+   \boxed{
+   \limsup\frac vn
+   \le\frac4{\pi^2}(\mu-\sigma_B)^2;
+   }
+   \tag{0.3}
+   \]
+3. **exact outer-shell phase threshold:** put
+   \[
+   \boxed{
+   u_\pi=
+   \frac{\pi(\sqrt{3\pi^2+4}-1)}{2(\pi^2+1)}
+   =0.6932725422\ldots .
+   }
+   \tag{0.4}
+   \]
+   For every fixed `u<u_pi`, every sequence with `mu_D<=u+o(1)` has more than
+   \[
+   1-\frac{4u^2}{\pi^2}-o(1)
+   \]
+   of the whole source in C65 fully inactive rattlers, while the source hull gains
+   linear perimeter/support beyond the positive force hull.
+
+Thus C-II now has the exact quantitative phase split
+
+```text
+PT-L: mu <= u+o(1) for some fixed u<u_pi
+      => positive-density (indeed >80% near u_pi) fully inactive rattlers
+         + a linear-scale inactive outer shell beyond F;
+
+PT-H: no such fixed window
+      => liminf mu >= u_pi
+      => sum_r(delta_r+r_r)+s_B >= u_pi D+o(D).
+```
+
+Neither side is yet excluded.  The shortest remaining Level-I implication is therefore
+not another lower-bound constant.  It is either a finite rearrangement theorem for
+PT-L or an upper theorem for the exact PT-H component/boundary currency.
+
+---
+
+## 1. Starting endpoint
+
+At the beginning of the run C-I was already closed.  The live gate was C-II: exclude
+every sufficiently large triangle-free global source selected first to minimize unit
+contacts and then diameter pairs, retaining all contact-isolated source points.
+
+The first requested whole-source endpoint was
+
+\[
+\delta_K+\mathscr O_A\ge c_0P_K.
+\tag{1.1}
+\]
+
+A useful algebraic observation made at the start of the run is that (1.1) is exactly
+
+\[
+D^2\ge\frac{2\sqrt3}{\pi}(n-1).
+\tag{1.2}
+\]
+
+Indeed
+
+\[
+\delta_K+\mathscr O_A-c_0P_K
+=
+\frac{\pi D^2}{4}-a_0(n-1),
+\]
+
+because the source-hull area cancels.  The canonical strict translated-lattice
+comparison gives the strict reverse inequality.  Consequently any proof of (1.1) must
+use information absent from generic force-hull near-circularity; improving force-hull
+area alone cannot reach it.
+
+The alternate post-ZF exact endpoint was
+
+\[
+b+Q>2h,
+\]
+
+while ZF gives the opposite stress-rank requirement.  The run therefore attacked the
+exact post-ZF defect ledgers rather than trying to derive (1.1) from near-radiality.
+
+The new implication chain that emerged is
+
+```text
+exact PC/JC/ZK algebra
+  -> all-phase renormalized currency mu
+  -> FSDB/RSR + GU/JC/ZG + DD
+  -> mu > 0.5947
+  -> exact Eppstein component isoperimetry
+  -> low mu forces overwhelmingly inactive source population
+  + near-maximal full-source perimeter
+  -> low mu forces a macroscopic inactive outer shell
+  -> exact phase threshold u_pi.
+```
+
+---
+
+## 2. Strongest genuinely new audited theorem: all-phase renormalization
+
+### Theorem GR — all-phase coefficient-three surplus
+
+Let `A` be a post-ZF triangle-free global source in the canonical lexicographic
+normalization, and use the canonical quantities `e_BB,s_C,d_H,s_Z,D`.  Define `mu_D`
+by (0.1).  Then there are absolute constants `epsilon_G>0` and `D_0<infinity` such
+that every such source with `D>=D_0` satisfies
+
+\[
+\boxed{
+\mu_D\ge0.5947+\epsilon_G.
+}
+\tag{GR.1}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+ e_{BB}+2s_C
+ \ge
+ (0.5947+\epsilon_G)D+3(d_H+s_Z).
+}
+\tag{GR.2}
+\]
+
+Using the exact ZK identity, this is also
+
+\[
+\boxed{
+\sum_r(\delta_r+r_r)+s_B
+\ge(0.5947+\epsilon_G)D+6.
+}
+\tag{GR.3}
+\]
+
+The theorem has **no `s_Z=0` hypothesis**.
+
+### Scope
+
+GR concerns the actual lexicographically selected global source after the promoted
+post-ZF reductions.  It retains all C65 contact-isolated points.  The graph variables
+refer to the nonisolated positive contact core exactly as in the canonical ZF/ZK
+stack.  It is asymptotic only in the final constant; the identities used to define the
+currency are finite and exact.
+
+### Proof, Part I: exact algebra
+
+Write
+
+\[
+k:=d_H+s_Z,
+\qquad
+M_G:=e_{BB}+2s_C-3k=D\mu_D.
+\]
+
+The exact ZK component-slack identity is
+
+\[
+\sum_r\delta_r+R_I+s_B+3k
+=6+e_{BB}+2s_C.
+\tag{2.1}
+\]
+
+Therefore
+
+\[
+\boxed{
+M_G+6
+=\sum_r(\delta_r+r_r)+s_B\ge0.
+}
+\tag{2.2}
+\]
+
+In particular every subsequential limit of `mu_D` is nonnegative.
+
+Let `P_F=per(F)`.  The exact JC outer-pocket identity is
+
+\[
+E_{out}=x_B+P_F-q-a,
+\tag{2.3}
+\]
+
+while PC gives
+
+\[
+q=x_B+Q+2k.
+\tag{2.4}
+\]
+
+Subtracting gives
+
+\[
+E_{out}+Q=P_F-a-2k.
+\tag{2.5}
+\]
+
+PC also gives
+
+\[
+e_{BB}=q-a+c_B,
+\qquad q=h+d_H.
+\tag{2.6}
+\]
+
+Substitution into (2.5) yields the new exact all-phase identity
+
+\[
+\boxed{
+E_{out}+Q
+=e_{BB}-c_B+P_F-h-3d_H-2s_Z.
+}
+\tag{2.7}
+\]
+
+The post-ZF face identity is
+
+\[
+b+Q=2h-2s_Z.
+\tag{2.8}
+\]
+
+Set
+
+\[
+r_{out}:=b-P_F\ge0.
+\]
+
+Then
+
+\[
+h=\frac{P_F+r_{out}+Q}{2}+s_Z.
+\tag{2.9}
+\]
+
+Insert (2.9) into (2.7) and group the renormalized numerator.  One obtains
+
+\[
+\boxed{
+E_{out}+Q
+=M_G+\frac{P_F}{2}
+-\left(
+2s_C+c_B+\frac Q2+\frac{r_{out}}2
+\right).
+}
+\tag{2.10}
+\]
+
+Every term in parentheses is nonnegative.  Consequently
+
+\[
+\boxed{
+E_{out}+Q\le M_G+\frac{P_F}{2}.
+}
+\tag{2.11}
+\]
+
+This is the decisive extension beyond the old circuit-only renormalization.  The
+coefficient `3s_Z` is not inserted by normalization: one copy of `s_Z` that appears to
+be lost in (2.7) is recovered exactly from half of the `-2s_Z` outer-walk defect in
+(2.8).
+
+### Proof, Part II: generalized RSJ necessary inequality
+
+ZK/GU bounds the attachment-cell area by
+
+\[
+\sum_r\operatorname{area}(P_r)
+\le
+\frac\pi4(M_G+6)^2+\pi(M_G+6)+\pi^2D.
+\tag{2.12}
+\]
+
+Hence on a convergent sequence with `mu_D->mu`,
+
+\[
+\limsup\frac{1}{D^2}
+\sum_r\operatorname{area}(P_r)
+\le\frac\pi4\mu^2.
+\tag{2.13}
+\]
+
+JC gives
+
+\[
+H_{out}+A_{exc}
+\le\frac{(E_{out}+Q)^2}{4\pi}+o(D^2),
+\tag{2.14}
+\]
+
+and ZG gives
+
+\[
+G:=\operatorname{area}F-\sum_r\operatorname{area}(P_r)
+\le H_{out}+A_{exc}+O(D).
+\tag{2.15}
+\]
+
+Write
+
+\[
+y=\lim\frac hD,
+\qquad
+p=\lim\frac{P_F}{D}.
+\]
+
+Using (2.11)--(2.15),
+
+\[
+\limsup\frac{\operatorname{area}F}{D^2}
+\le
+\frac\pi4\mu^2+
+\frac{(\mu+p/2)^2}{4\pi}.
+\tag{2.16}
+\]
+
+FSDB and the symmetric Rogalski--Saint Raymond inequality give independently
+
+\[
+\liminf\frac{\operatorname{area}F}{D^2}
+\ge
+A_*(y,p),
+\tag{2.17}
+\]
+
+where
+
+\[
+\Phi(y)=\frac{y+\sin y}{4},
+\qquad
+\Psi(p)=\frac\pi{(\pi-2)^2}\left(\frac p2-1\right)^2,
+\qquad
+A_*:=\max\{\Phi,\Psi\}.
+\]
+
+Therefore every post-ZF limit satisfies
+
+\[
+\boxed{
+A_*(y,p)-\frac\pi4\mu^2
+\le
+\frac{(\mu+p/2)^2}{4\pi}.
+}
+\tag{2.18}
+\]
+
+The geometric domain includes
+
+\[
+2\rho\le y\le p\le\pi,
+\qquad p\le2y,
+\tag{2.19}
+\]
+
+with `rho=cos rho`.  The last inequality is exact from
+`P_F<=b=2h-Q-2s_Z`.
+
+### Proof, Part III: analytic minimum and endpoint exclusion
+
+For `A>0,m>=0`, let `R(A,m)` be the least nonnegative `u` satisfying
+
+\[
+A\le\frac\pi4u^2+rac{(u+m)^2}{4\pi}.
+\]
+
+The RSJ calculus gives
+
+\[
+\partial_A R>0,
+\qquad
+\partial_mR<0.
+\tag{2.20}
+\]
+
+Let `y_R` be the unique solution of
+
+\[
+\Phi(y_R)=\Psi(2y_R),
+\qquad
+\frac32<y_R<\frac\pi2,
+\]
+
+and set
+
+\[
+\lambda_R:=R(\Phi(y_R),y_R)
+=0.592140543606288\ldots .
+\]
+
+For `2rho<=y<=y_R`, the minimizing perimeter in (2.18) is `p=2y`, and the threshold
+is `R(Phi(y),y)`, strictly decreasing in `y`.  For `y>=y_R`, the minimizing perimeter
+is the crossover
+
+\[
+p_e(y)=2+2\sqrt{\Phi(y)/c_R},
+\qquad c_R=\frac\pi{(\pi-2)^2},
+\]
+
+and differentiating the root equation shows the threshold is strictly increasing in
+`y`.  Thus the relaxed problem has the unique minimum
+
+\[
+\boxed{
+\mu\ge\lambda_R,
+\qquad
+(y,p)=(y_R,2y_R)
+\text{ at equality.}
+}
+\tag{2.21}
+\]
+
+Equality cannot occur for an actual survivor sequence.  Suppose
+`mu_D->lambda_R`.  The strict minimization forces
+
+\[
+y_D\to y_R,
+\qquad
+P_F/D\to2y_R.
+\tag{2.22}
+\]
+
+Return to the exact remainder in (2.10):
+
+\[
+R_D:=2s_C+c_B+\frac Q2+\frac{b-P_F}{2}\ge0.
+\]
+
+If `R_D/D` had a positive subsequential limit, the effective cavity variable in
+(2.18) would be strictly smaller than `p/2=y_R`; by `partial_mR<0`, the required
+surplus would then be strictly larger than `lambda_R`, contradicting the assumed
+limit.  Hence
+
+\[
+R_D=o(D),
+\]
+
+and termwise
+
+\[
+s_C,c_B,Q,b-P_F=o(D).
+\tag{2.23}
+\]
+
+DD gives
+
+\[
+H_{out}
+\le\frac1{\sqrt6}(x_B+a)^{3/2}\sqrt{b-P_F}.
+\tag{2.24}
+\]
+
+The exact PC identities give `x_B+a=O(D)`, so (2.23) implies
+
+\[
+H_{out}=o(D^2).
+\]
+
+The exceptional-face isoperimetric estimate similarly gives
+
+\[
+A_{exc}=o(D^2).
+\]
+
+ZG therefore forces
+
+\[
+G=o(D^2).
+\tag{2.25}
+\]
+
+But FSDB and the attachment estimate give
+
+\[
+\liminf\frac GD^2
+\ge
+\Phi(y_R)-\frac\pi4\lambda_R^2
+=
+\frac{(\lambda_R+y_R)^2}{4\pi}>0,
+\tag{2.26}
+\]
+
+where the equality is the defining root equation.  This contradicts (2.25).  Hence
+the endpoint is excluded without any classification of equality in the RSR theorem.
+
+### Proof, Part IV: explicit `0.5947`
+
+The qualitative endpoint exclusion gives some nonexplicit positive gap above
+`lambda_R`.  The exact script
+
+`research/target_c_general_mu05947_certificate.py`
+
+makes a portion of that gap explicit.
+
+It first proves that any hypothetical limit with
+
+\[
+\mu\le u_0:=5947/10000
+\]
+
+must have
+
+\[
+1.478<y<1.5245.
+\]
+
+It partitions this interval into 465 rational cells of width `10^-4`.  On each cell it
+uses the generalized RSJ inequality to give a rational upper barrier
+
+\[
+\delta:=2y-p<d_j
+\]
+
+and then compares:
+
+\[
+\text{FSDB/ZK force-gap lower bound}
+\quad
+\Phi(y)-\frac\pi4u_0^2
+\]
+
+against
+
+\[
+\text{DD + exceptional-face upper bound}
+\quad
+\frac1{\sqrt6}(2y)^{3/2}\sqrt\delta
++\frac{\delta^2}{4\pi}.
+\]
+
+All transcendental quantities are enclosed by rational barriers.  Every cell has
+strictly positive margin.  The smallest localization margin is
+
+\[
+\boxed{
+\frac{127118647}{76966750000000000}>0,
+}
+\]
+
+and the smallest final cavity-capacity margin is
+
+\[
+\boxed{
+\frac{1466294867848439}{307867000000000000}>0.
+}
+\]
+
+The script uses `fractions.Fraction` and integer square roots only.  It was rerun
+independently during this completion audit and all 465 assertions passed.  Therefore no
+unbounded survivor sequence can have `mu<=0.5947`, and a diagonal argument proves the
+uniform finite statement GR.1.
+
+### Dependencies
+
+The detailed theorem and certificate audit is in
+`docs/reports/target_c_general_renormalized_surplus_05947_2026-09-10.md`.
+The proof uses only the canonical/report-level post-ZF inputs explicitly named there:
+ZF/ZE/ZT, ZK, PC, JC, GU/ZG, FSDB, the RSR **inequality**, and DD.  No RSR equality
+classification is used.
+
+### Why it is new
+
+The previous promoted/recent frontier had the coefficient-three renormalization only
+in the `s_Z=0` Laman-circuit phase:
+
+\[
+(e_{BB}+2s_C-3d_H)/D.
+\]
+
+GR proves that the same coefficient applies to the full mixed defect
+
+\[
+d_H+s_Z
+\]
+
+for every post-ZF survivor.  This removes the `s_Z>0` branch separation from this
+quantitative obstruction.
+
+---
+
+## 3. Exact Eppstein conversion: the low-`mu` source is overwhelmingly inactive
+
+### Theorem EA
+
+Let
+
+\[
+a_r:=\delta_r+r_r,
+\qquad
+A:=\sum_ra_r.
+\]
+
+For every nonsingleton unloaded component `I_r` with `n_r` vertices,
+
+\[
+\boxed{
+ n_r\le2a_r+
+ \frac{2}{\pi\sqrt3}a_r^2.
+}
+\tag{EA.1}
+\]
+
+If `c_1` is the number of singleton unloaded components, then
+
+\[
+\boxed{
+ v\le q+c_1+2A+
+ \frac{2}{\pi\sqrt3}A^2.
+}
+\tag{EA.2}
+\]
+
+Since GR/ZK gives
+
+\[
+A+s_B=\mu_DD+6,
+\tag{3.1}
+\]
+
+any convergent bounded-`mu` subsequence with `s_B/D->sigma_B` satisfies
+
+\[
+\boxed{
+\limsup\frac v{D^2}
+\le\frac{2}{\pi\sqrt3}(\mu-\sigma_B)^2.
+}
+\tag{EA.3}
+\]
+
+For global minimizers
+
+\[
+\frac n{D^2}\to\frac\pi{2\sqrt3},
+\]
+
+so
+
+\[
+\boxed{
+\limsup\frac vn
+\le\frac4{\pi^2}(\mu-\sigma_B)^2.
+}
+\tag{EA.4}
+\]
+
+### Proof
+
+For a connected nonsingleton unloaded component, let `k_r` be its outer-face incidence
+count with multiplicity and let `Q_r` be the sum of `deg(f)-4` over its bounded faces.
+Euler and face-degree double counting give
+
+\[
+e_r=2n_r-2-\frac{k_r+Q_r}{2}.
+\tag{3.2}
+\]
+
+By definition of the canonical Eppstein slack,
+
+\[
+e_r=2n_r-\delta_r-2-r_r
+=2n_r-a_r-2.
+\tag{3.3}
+\]
+
+Comparing (3.2) and (3.3) yields the new exact face identity
+
+\[
+\boxed{
+a_r=\frac{k_r+Q_r}{2}.
+}
+\tag{3.4}
+\]
+
+In particular `k_r<=2a_r`.
+
+Eppstein's Lemmas 3--4 give the finite outer-face isoperimetric estimate
+
+\[
+n_r\le k_r+rac{k_r^2}{2\pi\sqrt3}.
+\tag{3.5}
+\]
+
+This statement uses outer-face incidences with multiplicity and therefore allows
+bridges.  Substituting `k_r<=2a_r` into (3.5) proves EA.1.
+
+Sum over nonsingleton components and add the singleton components separately:
+
+\[
+\begin{aligned}
+v
+&=q+\sum_rn_r\\
+&\le q+c_1+2A+
+\frac{2}{\pi\sqrt3}\sum_ra_r^2\\
+&\le q+c_1+2A+
+\frac{2}{\pi\sqrt3}A^2.
+\end{aligned}
+\]
+
+This proves EA.2.  C36 gives `c_1<=c_I=O(D)`, while loaded vertices are
+unit-separated on the convex force hull, so `q<=P_F<=pi D`.  Equation (3.1) then gives
+EA.3 after division by `D^2`.  The standard global-minimizer density asymptotic gives
+EA.4.
+
+The detailed finite derivation is in
+`docs/reports/target_c_eppstein_exact_component_addendum_2026-09-10.md`.
+
+### Consequence
+
+At `mu<=0.60+o(1)`, even after discarding the favorable `s_B` term,
+
+\[
+\frac{|R|}{n}
+\ge1-\frac{4(0.60)^2}{\pi^2}-o(1)
+>0.85409-o(1).
+\tag{3.6}
+\]
+
+Thus more than 85% of the actual global source is fully inactive in any such window.
+This is a source-population conclusion, not merely a statement about the positive
+network.
+
+### Exact use of global optimality
+
+EA.1--EA.3 are contact-graph/packing consequences once the post-ZF state is reached.
+The decisive additional use of **global minimum-diameter optimality** is the conversion
+from EA.3 to EA.4 through
+
+\[
+n/D(n)^2\to\pi/(2\sqrt3).
+\]
+
+An odd shell with an arbitrarily dense isolated filling but no certificate that
+`D=D(n)` cannot invoke this source-density conclusion.
+
+---
+
+## 4. Source perimeter and the exact inactive outer-shell phase
+
+The following source-hull lemma was independently derived in this run but was also
+present contemporaneously on another open repository branch.  It is therefore a
+rediscovery/independent verification, not counted as the strongest new theorem.
+
+### Lemma OS — full-source perimeter deficit is bounded absolutely
+
+For every global minimizer source hull `K`,
+
+\[
+\boxed{
+P_K>
+\pi\left(\sqrt{D^2+\frac34}-\frac{\sqrt3}{2}\right).
+}
+\tag{4.1}
+\]
+
+Hence
+
+\[
+\boxed{
+0\le\pi D-P_K<\frac{\pi\sqrt3}{2}.
+}
+\tag{4.2}
+\]
+
+### Proof
+
+Strict translated triangular-lattice comparison gives
+
+\[
+\frac{\sqrt3}{2}(n-1)>\frac{\pi D^2}{4}.
+\tag{4.3}
+\]
+
+Oler gives
+
+\[
+\operatorname{area}K+rac{\sqrt3}{4}P_K
+\ge\frac{\sqrt3}{2}(n-1).
+\tag{4.4}
+\]
+
+Isoperimetry gives
+
+\[
+\operatorname{area}K\le\frac{P_K^2}{4\pi}.
+\tag{4.5}
+\]
+
+Combining (4.3)--(4.5),
+
+\[
+P_K^2+\pi\sqrt3P_K-\pi^2D^2>0.
+\]
+
+Taking the positive root proves (4.1).  Cauchy's diameter-perimeter inequality
+`P_K<=pi D` and `sqrt(D^2+3/4)>D` prove (4.2).
+
+### Theorem PT — exact phase boundary
+
+Define `u_pi` by (0.4).  Fix `u<u_pi`.  Let `p_u in(2,pi)` be the unique root of
+
+\[
+\boxed{
+\Psi(p_u)=
+\frac\pi4u^2+
+\frac{(u+p_u/2)^2}{4\pi}.
+}
+\tag{4.6}
+\]
+
+Then any post-ZF sequence satisfying `mu_D<=u+o(1)` has
+
+\[
+\boxed{
+\limsup\frac{P_F}{D}\le p_u<\pi.
+}
+\tag{4.7}
+\]
+
+Consequently
+
+\[
+\boxed{
+P_K-P_F\ge(\pi-p_u)D-O(1),
+}
+\tag{4.8}
+\]
+
+and some C65 fully inactive source point has one-sided support excess beyond `F` at
+least
+
+\[
+\boxed{
+\frac{\pi-p_u}{2\pi}D-O(1).
+}
+\tag{4.9}
+\]
+
+Simultaneously EA gives
+
+\[
+\boxed{
+\liminf\frac{|R|}{n}
+\ge1-\frac{4u^2}{\pi^2}.
+}
+\tag{4.10}
+\]
+
+### Proof
+
+Discard the FSDB term `Phi(y)` from the generalized necessary inequality (2.18).  If
+`mu<=u`, then
+
+\[
+\Psi(p)
+\le
+\frac\pi4u^2+
+\frac{(u+p/2)^2}{4\pi}.
+\tag{4.11}
+\]
+
+Define
+
+\[
+g_u(p)=
+\Psi(p)-
+\frac\pi4u^2-
+\frac{(u+p/2)^2}{4\pi}.
+\]
+
+This is a quadratic in `p` with positive leading coefficient, and `g_u(2)<0`.
+At `p=pi`, using `Psi(pi)=pi/4`, the inequality `g_u(pi)>0` is equivalent to
+
+\[
+(\pi^2+1)u^2+\pi u-rac{3\pi^2}{4}<0.
+\tag{4.12}
+\]
+
+The positive root of the left side is exactly
+
+\[
+u_\pi=
+\frac{\pi(\sqrt{3\pi^2+4}-1)}{2(\pi^2+1)}.
+\]
+
+Therefore `g_u(2)<0<g_u(pi)` precisely for `0<=u<u_pi`.  Because the quadratic is
+convex, it has exactly one zero above `2`; call it `p_u`.  Equation (4.11) then forces
+`p<=p_u`, proving (4.7).
+
+Combine (4.7) with (4.2) to obtain (4.8).  Cauchy's width formula gives
+
+\[
+P_K-P_F=
+\int_0^\pi(w_K-w_F)\,d\theta.
+\]
+
+The integrand is nonnegative because `F subseteq K`, so some direction has width gap
+at least `(pi-p_u)D/pi-O(1)`.  One of the two opposite support gaps is at least half,
+which gives (4.9).  C36 places every positive-core vertex inside `F`; C65 therefore
+identifies a source support point outside `F` as a fully inactive non-diameter rattler.
+Equation (4.10) is EA.4 with the favorable `s_B` term discarded.
+
+At `u=u_pi`, `p=pi` satisfies equality in (4.11), so this perimeter-only mechanism
+cannot force a linear `K\F` shell beyond that threshold.  Thus `u_pi` is the exact
+endpoint of the present GR+RSR+OS mechanism.
+
+The detailed phase proof is in
+`docs/reports/target_c_parametric_outer_shell_threshold_2026-09-10.md`.
+
+---
+
+## 5. Exact target implication after this run
+
+The all-phase ZK identity and GR reduce the entire post-ZF defect currency to
+
+\[
+\boxed{
+\mu_DD+6
+=\sum_r(\delta_r+r_r)+s_B.
+}
+\tag{5.1}
+\]
+
+Using the component face identity (3.4), this can also be written as
+
+\[
+\boxed{
+\mu_DD+6
+=\frac12\sum_r(k_r+Q_r)+s_B.
+}
+\tag{5.2}
+\]
+
+Thus the high-surplus branch is pure unloaded-component outer-boundary/internal-face
+defect plus unused loaded contact-degree capacity.  The mixed stress surplus `s_Z` and
+diameter component defect `d_H` have already been charged at coefficient three and no
+longer need separate branch treatment in this lower-bound mechanism.
+
+The new exact phase split is:
+
+### PT-L — inactive outer-shell phase
+
+For any fixed `u<u_pi`, if `mu_D<=u+o(1)`, then:
+
+- a fraction at least `1-4u^2/pi^2-o(1)` of the **whole source** consists of C65 fully
+  inactive rattlers;
+- `P_K=pi D-O(1)`;
+- `P_F<=p_uD+o(D)` with `p_u<pi`;
+- some fully inactive source point protrudes a fixed positive fraction of `D` beyond
+  `F` in a support direction.
+
+Even as `u` approaches `u_pi`, the guaranteed rattler fraction remains above 80%.
+
+### PT-H — high exact component/boundary defect
+
+Any sequence not lying in any fixed PT-L window must satisfy
+
+\[
+\boxed{
+\liminf\mu_D\ge u_\pi.
+}
+\tag{5.3}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+\sum_r(\delta_r+r_r)+s_B
+\ge u_\pi D+o(D).
+}
+\tag{5.4}
+\]
+
+This is the precise current C-II dichotomy produced by the run.
+
+---
+
+## 6. Exact remaining lemma
+
+No single theorem presently excludes both PT-L and PT-H.  The shortest rigorous
+remaining obligations are the following two statements; proving one side does not
+silently dispose of the other.
+
+### PT-LR — macroscopic inactive-shell rearrangement
+
+There exist fixed constants `u<u_pi` and `eta(u)>0` such that every sufficiently large
+post-ZF global source satisfying
+
+\[
+\mu_D\le u,
+\]
+
+and therefore the conclusions of PT, admits an `n`-point unit-separated configuration
+of diameter strictly less than `D`.
+
+A sufficient source-side formulation is: the combination of a positive-density C65
+inactive set and a support point at distance `eta(u)D` beyond the diameter-carrying
+force hull permits a finite relocation that preserves **all** pair separations while
+strictly reducing the maximum pair distance.
+
+The proof must use global-optimality information absent from a synthetic regular shell
+with a dense strict filling; leading packing density alone is insufficient.
+
+### PT-HU — high-defect upper theorem
+
+Prove
+
+\[
+\boxed{
+\sum_r(\delta_r+r_r)+s_B
+<u_\pi D-o(D)
+}
+\tag{6.1}
+\]
+
+for every sufficiently large post-ZF triangle-free global source, or prove any
+strictly stronger source-specific upper tradeoff that contradicts (5.4).
+
+By (5.2), an equivalent planar form is
+
+\[
+\boxed{
+\frac12\sum_r(k_r+Q_r)+s_B
+<u_\pi D-o(D).
+}
+\tag{6.2}
+\]
+
+The strongest available inputs for PT-HU are Woodall's exact diameter-thrackle
+topology, C36--C40 attachment incidence/harmonic diameter control, mixed
+3-connectivity/redundant rigidity, and the full-source FS response.  None currently
+controls the internal face term `sum Q_r` of a giant near-rhombic unloaded component.
+
+A complete Level-I proof through this program needs both PT-LR and PT-HU, unless one is
+replaced by a different theorem that directly excludes all post-ZF survivors.
+
+---
+
+## 7. Audit classification of other claims
+
+| Claim | Classification | Reason |
+| --- | --- | --- |
+| all-phase exact pocket identity (2.7) | proved, genuinely new | direct PC/JC/ZF algebra; no circuit hypothesis |
+| coefficient `3s_Z` in `mu` | proved, genuinely new | exact remainder (2.10) recovers the apparent `s_Z` loss from outer-walk defect |
+| `liminf mu>0.5947` | proved, genuinely new | analytic GR plus 465-cell exact certificate |
+| `s_Z=0` specialization `nu>0.5981` | proved on PR #185 | 470-cell exact certificate; sharper constant but narrower scope |
+| Eppstein face identity `delta_r+r_r=(k_r+Q_r)/2` | proved, genuinely new in this route | Euler plus canonical `r_r` definition |
+| core ratio EA.4 | proved, genuinely new | exact Eppstein component estimate plus global source density |
+| full-source perimeter (4.1) | proved but independent rediscovery | same consequence was found contemporaneously on PR #178 |
+| RSR equality uniqueness | rejected as a cited dependency | the 1985 source states sharpness and disk equality but leaves uniqueness as an open problem |
+| RSR endpoint repair by simultaneous FSDB equality | proved but independent rediscovery | equivalent repair exists on PR #176; not counted as new here |
+| PT threshold `u_pi` | proved, genuinely new | exact root where `p=pi` becomes feasible in generalized RSR perimeter inequality |
+| paired-lens `lambda>=0.944988...` on PR #173 | unpromoted candidate, not imported | its DI/PP dependency chain was not fully audited in this run |
+| Level I | still open | neither PT-L nor PT-H is excluded |
+
+---
+
+## 8. Regression tests and adversarial audit
+
+| Regression / failure mode | Passed? | Exact reason |
+| --- | --- | --- |
+| regular odd shell | yes | GR/PT never infer near-perfect diameter matching or small response trace; shell lacks the source conclusions required to close PT-L |
+| dense isolated filling | yes | EA's source-fraction conclusion uses `D=D(n)` through the global density asymptotic; arbitrary dense fillings lack that certificate |
+| folded unit-contact path | yes | no Euclidean lower bound is inferred from contact-graph diameter; large `delta_r` is allowed |
+| near-rhombic / square-grid component | yes | large internal face/boundary currency is allowed and is exactly the unresolved PT-H obstruction |
+| singleton unloaded components | yes | separated explicitly in EA and contribute only `O(D)` because `c_I=O(D)` |
+| bridges/repeated outer incidences | yes | Eppstein `k_r` is counted with multiplicity; Euler identity (3.2) remains valid |
+| positive `s_Z` | yes | no step sets `s_Z=0`; equations (2.7)--(2.11) retain it exactly |
+| contact-isolated source points | yes | never deleted; C65 identifies them and EA/PT count them in `n-v` |
+| hull saturation | yes | never imposed; `K` and `F` are those of the contact/diameter-minimal selected source |
+| RSR equality body | yes | GR endpoint exclusion uses exact pocket remainder and DD, not equality uniqueness |
+| exact certificate arithmetic | yes | both new scripts use rational arithmetic/integer square roots and were rerun independently |
+
+No finite competitor was claimed in this run, so there are no unverified pairwise
+separation or diameter checks hidden behind a construction.
+
+The uniform finite thresholds in GR are obtained by contradiction/diagonal sequence:
+if no absolute positive gap above `0.5947` existed, one could choose `D_j>=j` with
+`mu_j<0.5947+1/j`, pass to compact normalized parameters, and contradict the exact
+limit exclusion.  Thus the quantifier is uniform over all post-ZF survivors, not
+source-dependent.
+
+---
+
+## 9. Failed routes and no-go results
+
+### 9.1 Force-hull near-circularity cannot prove the requested whole-source inequality
+
+The target
+
+\[
+\delta_K+\mathscr O_A\ge c_0P_K
+\]
+
+cancels `area(K)` exactly and reduces to (1.2).  A theorem only about `F` or about
+near-circular area therefore has no direct sign leverage on the endpoint.
+
+### 9.2 Attachment incidence does not upper-bound the full component currency
+
+C37--C40 control attachment incidences and harmonic component graph diameter, but one
+giant unloaded component can attach to many/all loaded vertices while carrying large
+internal face defect `Q_r`.  The exact identity
+
+\[
+\delta_r+r_r=(k_r+Q_r)/2
+\]
+
+shows why: attachment counts do not control `Q_r`.  Treating C40 as a bound on
+`delta_r+r_r` would be false.
+
+### 9.3 A folded/indented contact boundary defeats cell-perimeter counting
+
+The outer-face walk incidence `k_r` of a penny-graph component can be large inside one
+convex attachment cell without forcing comparable attachment-cell perimeter.  Positive
+KKT equilibrium does not imply that every component outer-face vertex is itself an
+attachment.  Hence there is no valid direct C43-to-`sum k_r` upper inequality from the
+current hypotheses.
+
+### 9.4 Extreme-stress zeros are not C63-releasable rows
+
+C63 releases active rows outside the **maximal KKT support** `E_*`.  After contact and
+diameter-pair minimization, every remaining active row belongs to some normalized KKT
+stress.  A coefficient that vanishes in one extreme stress is therefore not a weak row
+and cannot be released by C63.  Extra stress dimension `s_Z>0` is not automatically a
+finite descent direction.
+
+### 9.5 Common circumcenter does not kill Woodall's odd cycle by parity alone
+
+FS makes each diameter pair nearly antipodal about a common source center, but the
+available endpoint/midpoint error is large enough to accumulate around an
+`Theta(D)`-length odd cycle.  The regular odd shell is the exact regression.  A parity
+argument without a summable error estimate is invalid.
+
+### 9.6 Mixed 3-connectivity degree counting is too weak
+
+The generic connectivity/degree consequences give only bounds of the scale
+`s_B<=2h`, far above the required PT-H threshold.  An upper theorem must use geometry
+or face structure, not minimum degree alone.
+
+### 9.7 Many rattlers alone do not contradict global packing density
+
+A near-triangular configuration scaled by `1+epsilon_D`, with `epsilon_D->0`, can have
+no exact unit contacts while approaching optimal density.  Splitting Oler over force
+and rattler regions reproduces an internal boundary term of order `D`.  Therefore even
+the `>80%` inactive conclusion cannot be closed by leading area density alone.
+
+### 9.8 A macroscopic inactive protrusion alone does not reduce `D`
+
+All actual diameter endpoints lie in the positive loaded set by C65.  An inactive
+point protruding beyond `F` may still be strictly inside every diameter constraint.
+Moving it inward does not relax the KKT obstruction carried by the positive core.  A
+valid PT-L rearrangement must coordinate enough of the inactive population and/or the
+core to obtain strict diameter reduction.
+
+---
+
+## 10. Literature imported/audited
+
+### Rogalski--Saint Raymond (1985)
+
+The sharp symmetric area/perimeter/diameter inequality remains a valid imported input.
+The source says the disk attains equality, but its concluding Problem 2 asks whether
+equality forces the disk.  Therefore the uniqueness statement previously used in one
+report is not supported by that citation.  GR does not use it.
+
+### Eppstein (2018)
+
+David Eppstein, *Edge Bounds and Degeneracy of Triangle-Free Penny Graphs and
+Squaregraphs*, JGAA 22(3) (2018), 483--499, already stored under `papers/primary/`.
+The run checked the repository extraction `extracted/text/463.txt`, in particular the
+outer-face/Voronoi isoperimetric lemmas and the resulting triangle-free penny-graph
+edge deficit.  EA uses the more exact finite content of those lemmas rather than
+summing an opaque `O(1)` from Theorem 4.
+
+A targeted literature search did not locate a later proof of Swanepoel's stronger
+conjectural `2n-2sqrt(n)` triangle-free penny-graph edge bound.  It was therefore not
+imported.
+
+### Woodall thrackle classification
+
+This entered canonical `main` during the run at `1adc420e...` and is treated as an
+upstream theorem, not new work here.  It sharpens the PT-H topology into the cyclic
+odd-unicyclic case (`d_H=0`) or caterpillar-forest case (`d_H>0`), but no valid upper
+bound on the internal component-face currency was derived from it.
+
+---
+
+## 11. Computation and reproducibility
+
+### General all-phase certificate
+
+- script: `research/target_c_general_mu05947_certificate.py`
+- command: `python3 research/target_c_general_mu05947_certificate.py`
+- arithmetic: exact `fractions.Fraction` plus integer square-root ceilings
+- cells: 465
+- proposition certified: no post-ZF limit satisfying the named scalar theorem inputs
+  can have `mu<=0.5947`
+- weakest localization margin:
+  `127118647/76966750000000000>0`
+- weakest final capacity margin:
+  `1466294867848439/307867000000000000>0`
+- independently rerun during this audit: PASS
+- does not prove: ZK/PC/JC/FSDB/DD/ZG themselves, global optimality, or Level I
+
+### `s_Z=0` specialization
+
+- script: `research/target_c_e5981_certificate.py`
+- command: `python3 research/target_c_e5981_certificate.py`
+- arithmetic: exact rational/integer
+- cells: 470
+- proposition certified:
+  \[
+  \nu=(e_{BB}+2s_C-3d_H)/D>0.5981+o(1)
+  \]
+  in the circuit phase
+- weakest localization margin:
+  `133924761/9620843750000000>0`
+- weakest capacity margin:
+  `55831047300377/307867000000000000>0`
+- independently rerun during this audit: PASS
+
+Both scripts are documented in the appropriate branch copies of `research/README.md`
+with their encoded and omitted assumptions.
+
+---
+
+## 12. Repository/check audit
+
+The principal work is isolated on draft PR #186,
+`research/c2-general-mu05947-20260910`, based on canonical commit
+`1adc420e9227476135d6891b61f1a75193aa90ab`.  At the synthesis checkpoint it was
+reported by GitHub as mergeable and had no configured commit-status checks.  No
+canonical route map or active prompt was modified; all new mathematics remains
+report-level pending independent review/promotion.
+
+The narrower `s_Z=0` exact strengthening is isolated on draft PR #185.  The RSR
+citation audit/independent repair is on draft PR #181.
+
+`research/README.md` was updated on the certificate branches so the reproduction
+commands and proof scope are not separated from the code.
+
+The PR patch was inspected for file placement and link targets.  New theorem reports
+stay under `docs/reports/`; exact scripts stay under `research/`; the referenced new
+report/script paths exist on their respective branches.  No source PDF, generated bulk
+output, or canonical module was duplicated.
+
+A literal local `git diff --check` could not be run against the private remote through
+the connector-only checkout because no local authenticated working tree was created.
+The connector reports the PR mergeable; this report does **not** mislabel that as a
+substitute for `git diff --check`.  Before promotion/merge, run the repository's normal
+local whitespace/link check in a real checkout.
+
+---
+
+## 13. Canonical promotion recommendation
+
+**Promote after independent audit.**
+
+Recommended promotion order:
+
+1. promote the exact GR identities (2.7), (2.10) and the qualitative all-phase
+   renormalized theorem before any numerical convenience constant;
+2. promote EA's exact face identity (3.4) and finite component population theorem;
+3. promote the already independently derived source-perimeter lemma if not already
+   accepted from its parallel PR;
+4. index PT's exact phase boundary `u_pi` only after its GR/EA dependencies are
+   accepted;
+5. keep the explicit `0.5947` and `0.5981` certificates report-level unless the route
+   map benefits from a fixed numerical benchmark.
+
+Do not promote any statement attributing RSR equality uniqueness to the 1985 paper.
+Do not import PR #173's paired-lens `0.944988...` candidate into this theorem stack
+without auditing its DI/PP dependencies and equality/compactness steps.
+
+If the stack is promoted, update:
+
+- `docs/targets/target-c/README.md`;
+- the appropriate post-ZF active modules or a new audited addendum;
+- `docs/prompts/erdos_problem_99_TARGET_C_1.0_FINAL_CONTINUATION_PROMPT.md`;
+- `research/README.md` references as necessary.
+
+---
+
+## 14. Next run
+
+The highest-value theorem is **PT-HU**, not a further scalar lower-bound iteration:
+
+\[
+\sum_r(\delta_r+r_r)+s_B<u_\pi D-o(D).
+\]
+
+The most concrete remaining route is to use Woodall's exact diameter topology together
+with C36--C40 attachment structure to attack the internal face term `sum Q_r` in
+
+\[
+2(\mu_DD+6-s_B)=\sum_r(k_r+Q_r).
+\]
+
+The route must add geometry not present in a giant near-rhombic penny-graph component;
+plain planarity, attachment incidence, harmonic diameter, and minimum degree have all
+been shown insufficient.
+
+In parallel, but still within the same proof context, PT-LR is now sharply specified:
+use the combination of `>80%` fully inactive source population, `P_K=pi D-O(1)`, and a
+linear support protrusion beyond `F` to construct a genuine same-`n` unit-separated
+competitor of diameter `<D`.  A successful proof must exploit the source's global
+minimality/lexicographic structure rather than only asymptotic packing density.
+
+---
+
+## 15. Compact handoff
+
+```text
+LEVEL I STATUS: STILL OPEN.
+
+Starting canonical state:
+  main began this continuation at 3f37ef0e... and advanced to 1adc420e...
+  C-I closed; C-II open.
+
+Strongest genuinely new theorem:
+  For every post-ZF survivor define
+    mu=(e_BB+2s_C-3(d_H+s_Z))/D.
+  Exact PC/JC/ZK algebra gives
+    E_out+Q
+      =D mu+P_F/2-[2s_C+c_B+Q/2+(b-P_F)/2],
+  so the coefficient 3 on s_Z is valid in every post-ZF phase.
+  FSDB/RSR + GU/JC/ZG + DD then give
+    liminf mu>0.5947,
+  certified by 465 exact rational cells.
+
+Exact component/source conversion:
+  For unloaded component r,
+    delta_r+r_r=(k_r+Q_r)/2,
+    n_r<=2a_r+2a_r^2/(pi sqrt3), a_r=delta_r+r_r.
+  Since sum a_r+s_B=mu D+6,
+    v/n <= (4/pi^2)(mu-s_B/D)^2+o(1).
+  Thus low mu forces overwhelmingly many fully inactive C65 rattlers.
+
+Exact phase threshold:
+  u_pi=pi(sqrt(3pi^2+4)-1)/(2(pi^2+1))
+      =0.6932725422...
+  For every fixed u<u_pi, mu<=u+o(1) forces
+    P_F<=p_u D with p_u<pi,
+    P_K=pi D-O(1),
+    rattler fraction >=1-4u^2/pi^2-o(1),
+    and a fully inactive rattler protruding
+      (pi-p_u)/(2pi) D-O(1)
+    beyond F in support coordinate.
+
+Exact remaining split:
+  PT-L: turn the macroscopic inactive outer shell into a strict sub-D competitor.
+  PT-H: prove
+    sum_r(delta_r+r_r)+s_B < u_pi D-o(D)
+  (equivalently a strict upper bound on the exact component face/boundary currency).
+
+Binding no-go results:
+  C37/C40 do not control internal face slack Q_r;
+  folded/near-rhombic components defeat cell-perimeter counting;
+  extreme-stress zeros are not C63 weak rows;
+  odd-cycle antipodality errors do not sum strongly enough;
+  leading packing density does not exclude >80% strict-contact rattlers.
+
+Main working PR:
+  #186 research/c2-general-mu05947-20260910
+Narrow s_Z=0 certificate:
+  #185
+RSR provenance audit:
+  #181
+
+Authoritative new reports:
+  docs/reports/target_c_general_renormalized_surplus_05947_2026-09-10.md
+  docs/reports/target_c_eppstein_exact_component_addendum_2026-09-10.md
+  docs/reports/target_c_parametric_outer_shell_threshold_2026-09-10.md
+  docs/reports/target_c_full_settlement_run_2026-09-10.md
+```

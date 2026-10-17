@@ -1,0 +1,178 @@
+import hashlib
+import tempfile
+import unittest
+from pathlib import Path
+
+from tools import release_dependencies as release
+from tools.publication_inventory import Entry, build_inventory
+from unittest.mock import patch
+
+
+class ReleaseDependencyTests(unittest.TestCase):
+    def fixture(self, root):
+        raw = b"# Exact scoped audit\n"
+        path = "docs/audits/proof.md"
+        p = root / path
+        p.parent.mkdir(parents=True)
+        p.write_bytes(raw)
+        p.chmod(0o644)
+        return {"entries": [{"path": path, "planned_export_sha256": hashlib.sha256(raw).hexdigest()}],
+                "task_evidence": {"task-1": [path]}, "generated_overlay": []}
+
+    def test_missing_task_audit_is_detected_in_export(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            plan = self.fixture(root)
+            self.assertEqual(release.validate_export(plan, root), [])
+            (root / "docs/audits/proof.md").unlink()
+            errors = release.validate_export(plan, root)
+            self.assertTrue(any("task task-1 lacks evidence" in e for e in errors))
+
+    def test_altered_proof_bytes_are_detected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            plan = self.fixture(root)
+            (root / "docs/audits/proof.md").write_text("altered conclusion")
+            self.assertTrue(any("source bytes differ" in e for e in release.validate_export(plan, root)))
+
+    def test_unplanned_files_are_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            plan = self.fixture(root)
+            extra = root / "private-notes.txt"
+            extra.write_text("not part of the reviewed export")
+            self.assertIn("unexpected file in export: private-notes.txt",
+                          release.validate_export(plan, root))
+
+    def test_bundled_pdf_and_broken_export_reference_are_detected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            plan = self.fixture(root)
+            (root / "paper.pdf").write_bytes(b"pdf")
+            (root / "README.md").write_text("[missing](docs/reports/omitted.md)")
+            plan["entries"].append({"path": "README.md", "planned_export_sha256":
+                hashlib.sha256((root / "README.md").read_bytes()).hexdigest()})
+            errors = release.validate_export(plan, root)
+            self.assertIn("prohibited bundled literature in export", errors)
+            self.assertTrue(any("broken export link" in e for e in errors))
+
+    def test_standalone_export_check_recomputes_overlay_index_and_headers(self):
+        import yaml
+        from tools.build_artifact_index import build_records, index_text, header_for
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            plan = self.fixture(root)
+            state = {"targets": {}, "artifact_policy": {"roots": ["docs/audits"],
+                     "exclude": [], "index": "docs/state/artifact-index.jsonl",
+                     "default_status": "unreviewed", "archive_status": "provenance"}}
+            manifest = root / "docs/state/theorem-state.yaml"
+            manifest.parent.mkdir(parents=True)
+            manifest.write_text(yaml.safe_dump(state))
+            manifest.chmod(0o644)
+            records = build_records(root, state)
+            proof = root / "docs/audits/proof.md"
+            proof.write_text(header_for(records[0]) + "\n# Exact scoped audit\n")
+            plan["entries"][0]["planned_export_sha256"] = hashlib.sha256(proof.read_bytes()).hexdigest()
+            plan["entries"].append({"path": "docs/state/theorem-state.yaml",
+                "planned_export_sha256": hashlib.sha256(manifest.read_bytes()).hexdigest()})
+            plan["entries"].append({"path": "docs/state/artifact-index.jsonl"})
+            plan["generated_overlay"] = ["docs/state/artifact-index.jsonl"]
+            index = root / "docs/state/artifact-index.jsonl"
+            index.write_text(index_text(records))
+            index.chmod(0o644)
+            self.assertEqual(release.validate_export(plan, root), [])
+            index.write_text("tampered metadata\n")
+            errors = release.validate_export(plan, root)
+            self.assertTrue(any("artifact-index.jsonl is stale" in e for e in errors), errors)
+            index.write_text(index_text(records))
+            proof.write_text("# Exact scoped audit\n")
+            # Even if a generic source-hash check accepted these bytes, the
+            # independently regenerated lifecycle header must still reject it.
+            plan["entries"][0]["planned_export_sha256"] = hashlib.sha256(proof.read_bytes()).hexdigest()
+            self.assertTrue(any("metadata header" in e for e in release.validate_export(plan, root)))
+
+    def test_uncleared_export_refuses_before_creating_directory(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            dest = Path(tmp) / "export"
+            with self.assertRaisesRegex(ValueError, "release blocked"):
+                release.export_reviewed(Path(tmp), {"release_cleared": False}, dest)
+            self.assertFalse(dest.exists())
+
+    def test_export_literature_overlay_preserves_mathematical_wording(self):
+        raw = b"For every n, preserve scope. [paper](../../papers/source.pdf)\n"
+        replacement = {"papers/source.pdf": {"url": "https://publisher.example/source"}}
+        result = release.rewrite_references("docs/launch/brief.md", raw, replacement)
+        self.assertEqual(result, b"For every n, preserve scope. [paper](https://publisher.example/source)\n")
+
+    def test_relative_links_images_references_and_escapes(self):
+        text = "[audit](../audits/a.md) ![image](../images/a.png)\n[x]: ../theory/t.md\n```\n[example](absent.md)\n```"
+        self.assertEqual(release.markdown_targets("docs/launch/a.md", text),
+                         ["docs/audits/a.md", "docs/images/a.png", "docs/theory/t.md"])
+        with self.assertRaisesRegex(ValueError, "escapes"):
+            release.local_target("README.md", "../../private.txt")
+
+    def test_tilde_and_long_backtick_fences_are_not_navigation(self):
+        text = (
+            "[visible](outside.md)\n"
+            "~~~markdown\n[tilde example](missing-tilde.md)\n~~~~\n"
+            "````markdown\n[backtick example](missing-backtick.md)\n"
+            "```\n[still inside](missing-nested.md)\n````\n"
+            "[also visible](after.md)\n"
+        )
+        self.assertEqual(release.markdown_targets("docs/launch/a.md", text),
+                         ["docs/launch/outside.md", "docs/launch/after.md"])
+
+    def test_math_expression_is_not_a_markdown_dependency(self):
+        text = r"\[ N(C):=[J_{bal}(C)-0.072](3C-W_0). \]"
+        self.assertEqual(release.markdown_targets("research/note.md", text), [])
+
+    def test_code_math_comments_and_balanced_destinations_share_rewrite_rules(self):
+        example = "`[example](../../private.md)`\n``[another ` example](absent.md)``\n"
+        example += "~~~md\n[example](../../private.md)\n~~~\n"
+        example += r"\[ [math](absent.md) \]" + "\n<!-- [comment](absent.md) -->\n"
+        links = r"[nested [label]](proof(a(b)).md) [escaped](proof\(b\).md)"
+        links += '\n[x]: <proof &amp; c.md> "title"\n[title](proof.md "caption")\n'
+        text = example + links
+        self.assertEqual(release.markdown_targets("docs/note.md", text),
+                         ["docs/proof(a(b)).md", "docs/proof(b).md", "docs/proof & c.md", "docs/proof.md"])
+        citations = {"docs/proof(a(b)).md": {"url": "https://publisher.example/paper"}}
+        rewritten = release.rewrite_references("docs/note.md", text.encode(), citations).decode()
+        self.assertEqual(rewritten, example + links.replace("proof(a(b)).md", "https://publisher.example/paper"))
+
+    def test_unmatched_code_delimiter_does_not_hide_actual_links(self):
+        text = "an unmatched ` delimiter [evidence](proof.md)\n"
+        self.assertEqual(release.markdown_targets("README.md", text), ["proof.md"])
+        text = "unmatched ` delimiter\n\n[actual](proof.md)\n\nLater `code`.\n"
+        self.assertEqual(release.markdown_targets("README.md", text), ["proof.md"])
+        text = "unmatched ` delimiter\n# Section\n[actual](proof.md)\nLater `code`.\n"
+        self.assertEqual(release.markdown_targets("README.md", text), ["proof.md"])
+
+    def test_html_navigation_is_a_dependency_and_code_examples_are_not(self):
+        text = '<a href="proof.md">audit</a> <img src="../image.png" />\n'
+        text += '`<a href="private.md">example</a>`\n'
+        text += '~~~html\n<a href="absent.md">example</a>\n~~~\n'
+        self.assertEqual(release.markdown_targets("docs/note.md", text), ["docs/proof.md", "image.png"])
+        self.assertEqual(release.markdown_targets("docs/note.md", '<a href="proof&amp;amp;notes.md">audit</a>'),
+                         ["docs/proof&amp;notes.md"])
+
+    def test_html_bundled_literature_cannot_silently_escape_rewriting(self):
+        with self.assertRaisesRegex(ValueError, "Markdown reference"):
+            release.rewrite_references("README.md", b'<a href="papers/source.pdf">paper</a>',
+                {"papers/source.pdf": {"url": "https://publisher.example/source"}})
+
+    def test_required_archive_overrides_exclusion_only_as_review(self):
+        entry = Entry("docs/audits/proof.md", "exclude", "archive", 3, "b"*40)
+        plan = {"commit": "a"*40, "entries": [{"path": entry.path, "git_blob_oid": entry.git_blob_oid}]}
+        with patch("tools.publication_inventory.resolve_commit", return_value="a"*40), \
+             patch("tools.publication_inventory.read_entries", return_value=[entry]), \
+             patch("tools.publication_inventory.read_state_version", return_value="snapshot"):
+            result = build_inventory(".", "HEAD", plan)
+            self.assertEqual(result["entries"][0]["action"], "review")
+            with self.assertRaisesRegex(ValueError, "different commit"):
+                build_inventory(".", "HEAD", {**plan, "commit": "c"*40})
+            with self.assertRaisesRegex(ValueError, "blob identity"):
+                build_inventory(".", "HEAD", {**plan, "entries": [{"path": entry.path, "git_blob_oid": "c"*40}]})
+
+
+if __name__ == "__main__":
+    unittest.main()

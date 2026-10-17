@@ -1,0 +1,659 @@
+<!-- theorem-state: {"artifact_id":"ART-ABC12235AB90","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"provenance","target":"shared"} -->
+# Erdős Problem #99 — Canonical Working Report v1.7.0
+
+**Version:** 1.7.0
+
+**Date:** 2026-08-30
+
+**LEVEL I STATUS:** **STILL OPEN — TARGET A UNRESOLVED**
+
+> **Archive note.** This condensed audit-history snapshot was recovered from the
+> homelab modular working tree on 2026-08-30. It is retained for provenance and is
+> not a second canonical copy. The authoritative current report is
+> [`docs/README.md`](../README.md).
+
+This snapshot summarizes the canonical research state for the investigation of Erdős
+Problem #99. It supersedes `erdos_problem_99_1.5.1.md`, `erdos_problem_99_1.5.0.md`,
+`erdos_problem_99_1.4.1.md`, `erdos_problem_99_1.4.0.md`, all earlier theorem-state
+files, old working reports, `FINAL(1)`, `FINAL(2)`, synthesized reports, and
+continuation addenda as a theorem-state file.
+
+The seven supplied papers remain the literature baseline supporting the canonical
+stack. Internet literature search was permitted during the post-v1.5.1 research run,
+but no additional web result is promoted here as a theorem dependency: the v1.7.0
+continuation below is proved internally from the trusted canonical stack.
+
+
+## Version 1.5.1 audit policy
+
+Version 1.5.1 is the audited patch successor to v1.5.0. It preserves the complete
+v1.5.0 theorem state but corrects the source-localization statements and restores exact
+bounds/identities omitted from the first v1.5 build. **Sections 109 onward are
+authoritative wherever they sharpen or correct Sections 97--108.** Sections 97--102
+survive the v1.5.1 re-audit unchanged.
+
+The principal corrections are: branchwise rather than unqualified face-by-face latent
+forest confinement; an explicit outer-terminal row bound for the Schur response; an
+exact O(D) one-root component-incidence budget; a corrected thermodynamic-cage
+localization; safer wording for the strained-monomer regression; restoration of the
+general biphasic Hall-core bounds; and restoration of the exact two-sided
+finite-packing-defect transfer identity.
+
+The authoritative Target A endpoint remains the exact Schur-response inequality
+\[
+\operatorname{rank}S\le d_{\rm int}+|C^\partial|-\Delta_\Lambda.
+\]
+
+## Version 1.5.0 audit policy
+
+Version 1.5.0 is the first major Target A consolidation after v1.4.1. It preserves
+the complete audited v1.4.1 theorem stack and promotes the subsequently audited
+fixed-basis tight-core, phase-selective contraction, plateau-terminalization,
+phase-pure boundary-minor, Schur-response, quantized Hall-core, and source-specific
+rattler/forest refinements.
+
+**Sections 97 onward are the authoritative v1.5.0 frontier.** Sections 88--96 are
+retained as the frozen v1.4.1 endpoint and are historical wherever Sections 97
+onward explicitly sharpen or supersede them.
+
+The central change is conceptual. Target A is no longer treated as one undifferentiated
+monomer--dimer Hall problem. The audited reductions now separate:
+
+1. **scaffold-only structure**, valid for an independently chosen smaller optimum;
+2. **plateau/boundary structure**, which contracts the quadratic scaffold bulk to
+   an exact boundary-order rank problem; and
+3. **source-specific structure**, which remembers that the scaffold was extracted
+   from a genuine triangle-free global minimizer with a super-boundary population
+   of strict rattlers.
+
+The first two levels by themselves cannot close Target A. A surviving counterexample
+already satisfies
+\[
+h(G)\le j-1,
+\qquad
+d_{\rm sc}\le\Delta_\Lambda-1,
+\]
+so no theorem that depends only on the independent smaller optimum, its plateau
+saturation, or its monomer--dimer scaffold can imply the reverse inequality without
+using additional source information.
+
+The promoted Target A results include:
+
+- fixed-basis fundamental-circuit unions have **exactly additive signed Hall
+  deficiency**, with every successive overlap Hall-tight;
+- the full fixed-basis tight core contracts exactly, leaving a fully matchable
+  residual and the invariant
+  \[
+  g=\Delta_\Lambda-d_{\rm sc};
+  \]
+- every hypothetical survivor has
+  \[
+  d_{\rm sc}=O(D)
+  \]
+  with an explicit coefficient;
+- all dimers together with either complete monomer orientation form an independent
+  transversal set and may be contracted without losing any scaffold nullity;
+- the contracted matroid has six layered planar gammoid presentations and exact
+  directed-contour formulas;
+- terminalizing the smaller optimum at the right endpoint of its diameter plateau
+  makes its interior lattice conflict graph right-Hall-tight:
+  \[
+  \nu(G_0)=|Z|;
+  \]
+- after exact interior contraction, all live matching obstruction is boundary-order;
+- after contracting dimers and one monomer phase, an exact phase-pure quotient has
+  only \(O(D)\) nonloop ground elements;
+- positive Hall cores have a quantized convexification gap; every unit-nullity
+  circuit has at least fourteen monomers in total and at least six of each
+  orientation;
+- the full quadratic matching problem admits an exact boundary Schur complement
+  \(S\), with
+  \[
+  d_{\rm sc}=d_{\rm int}+|C^\partial|-\operatorname{rank}S,
+  \qquad
+  h(G)=|O|-\operatorname{rank}S;
+  \]
+- source strict rattlers are almost all independent over the source core in a
+  natural triangular-lattice transversal matroid: their conditional nullity is
+  \(O(D)\);
+- the unchanged contact-minimal backbone in the hybrid representative satisfies an
+  exact facial-defect budget, and the latent forest can be chosen too short to cross
+  a fixed unit core edge;
+- the explicit strained-monomer regression shows that a triangle-free
+  \(D^2\)-scale near-lattice phase can spend only \(O(D)\) total clearance while
+  preserving exact monomer scaffold combinatorics.
+
+The last item is a binding warning: **no proof may assign a fixed positive geometric
+cost to every triangle-free monomer cell, near-equilateral face, or strict rattler.**
+The missing theorem must detect exact global diameter optimality at the boundary.
+
+The authoritative Target A endpoint in v1.5.0 is the source-specific
+boundary-response inequality
+\[
+\boxed{
+\operatorname{rank}S
+\le
+d_{\rm int}+|C^\partial|-\Delta_\Lambda,
+}
+\]
+equivalently
+\[
+\boxed{d_{\rm sc}\ge\Delta_\Lambda}
+\]
+and equivalently
+\[
+\boxed{h(G)\ge j.}
+\]
+
+A useful geometric restatement of the missing mechanism is:
+
+> **Boundary-to-bulk first-variation theorem.** A super-boundary triangle-free
+> strict-rattler population may distribute \(O(1/D)\)-scale expansive strain through
+> \(D^2\)-scale near-triangular bulk at only \(O(D)\) total local cost. Prove that an
+> exact global minimum-diameter boundary cannot support that strain: either the
+> boundary admits a strict diameter decrease, or the source information forces the
+> exact Schur-response rank loss required above.
+
+No such theorem is proved in v1.5.0.
+
+The authoritative Target B endpoint is unchanged:
+\[
+\boxed{
+\operatorname{rank}\overline{\mathcal B}_\xi+I+r
+\le T-q-r_\alpha,
+}
+\]
+followed by exact topology-corrected transport. The `s_C=1` tree-specific obstruction
+remains the projected active-bar-average span \(\mathcal A_{1\rm t}\).
+
+### Binding v1.5.0 audit corrections
+
+The following refinements supersede older wording:
+
+- Fundamental circuits relative to one fixed maximum basis **may overlap heavily but
+  their signed Hall deficiency is exactly additive along the fixed-basis union flag**.
+  What is not available is disjointness or absolute/spatial interface-charge
+  additivity.
+- The old prohibition on contracting zero-charge phase regions is narrowed:
+  **arbitrary** phase-region contraction remains invalid, but the audited
+  phase-selective contractions of Section 98 and the fixed-basis tight-core
+  contraction of Section 97 preserve transversal-matroid nullity exactly.
+- A residual set obtained after matroid contraction or deletion is **not**
+  automatically a global optimum at its new cardinality.
+- Plateau terminalization creates a boundary-terminal planar gammoid; it does not
+  prove that all routing lies in a width-one annulus.
+- The contact-minimal and maximal-contact representatives need not coincide. When
+  source-face and forest information are combined, the legitimate bridge is the
+  hybrid representative of Theorem 12.4, which contains the unchanged
+  contact-minimal backbone pointwise.
+- Asymptotic convergence to the triangular lattice is not a contradiction:
+  triangle-freeness is not closed under the relevant limit.
+
+## Version 1.4.1 audit policy
+
+Version 1.4.1 is a patch-level canonical successor to v1.4.0. It preserves the
+complete audited v1.4.0 theorem stack and promotes the subsequently audited dual-Hall,
+phase-charge, peeling, transversal-matroid, and bounded-`s_C=1`-tree refinements.
+Sections 88 onward are the authoritative v1.4.1 frontier. Sections 79--87 are retained
+as the frozen v1.4.0 endpoint and are historical wherever Sections 88 onward explicitly
+supersede their frontier language.
+
+The promoted Target A refinements are:
+
+1. if `R=Y_in`, `y=|R|`, `nu=nu(G)`,
+   \[
+   d_{\rm sc}=\max_{S\subseteq X_m}(|S|-|N(S)|)=m-\nu
+   \]
+   is the left Hall nullity and
+   \[
+   \Delta_\Lambda=N-|Y|\ge1
+   \]
+   is the exact lattice-population deficit, then
+   \[
+   \boxed{h(G)-j=d_{\rm sc}-\Delta_\Lambda};
+   \]
+   hence Target A is exactly `d_sc >= Delta_Lambda`;
+2. every selected monomer--dimer cell family `S` satisfies the exact cell-complex
+   identity
+   \[
+   |S|-|N(S)|=\frac{m_3(S)-b(S)}2-\chi(S)
+   \]
+   and the exact local incidence-charge identity
+   \[
+   |S|-|N(S)|
+   =\frac1{12}\sum_{v\in N(S)}(4p_v(S)+3q_v(S)-12);
+   \]
+3. a positive-deficiency maximizer of minimum cardinality is a Hall core: every
+   lattice vertex has selected incidence degree at least two and every connected
+   incidence component has positive deficiency;
+4. on such a core the only zero local phase-charge states are
+   \[
+   (p_v,q_v)=(3,0)\quad\text{and}\quad(0,4),
+   \]
+   corresponding exactly to monomer and dimer crystalline cancellation phases;
+5. if `U=N_G(X_m)` and `z=|Y_in setminus U|`, then Hall deficiency has the exact cell-peeling
+   representation
+   \[
+   \boxed{h(G)=z+\max_{\rm deletion\ sequences}\sum_i(\pi_i-1)};
+   \]
+6. the matchable cell subsets form a transversal matroid of rank `nu`; every
+   fundamental circuit has Hall deficiency exactly one and therefore net local phase
+   charge exactly `12`;
+7. fundamental circuits need not be disjoint or weakly separated. Section 97
+   supersedes the old unqualified nonadditivity warning: relative to one fixed maximum
+   basis, unions of fundamental circuits have exactly additive **signed Hall
+   deficiency**, while disjoint/absolute spatial interface charge is still not
+   available; and
+8. the preferred v1.4.1 Target A endpoint is the exact global scaffold phase-charge
+   inequality
+   \[
+   \boxed{
+   \max_{S\subseteq X_m}
+   \sum_{v\in N(S)}(4p_v(S)+3q_v(S)-12)
+   \ge12\Delta_\Lambda,
+   }
+   \]
+   equivalently `d_sc>=Delta_Lambda`, equivalently the peeling inequality
+   `z+max sum(pi_i-1)>=j`, equivalently the older `h(G)>=j` statement.
+
+The promoted Target B refinements are:
+
+1. the cyclic hypothesis in the old two-direction conclusion is unnecessary:
+   \[
+   \boxed{s_C=1\Longrightarrow C\text{ uses exactly two train directions}};
+   \]
+2. if an `s_C=1` terminal component is a tree, then
+   \[
+   \boxed{|V(C)|\le10,\qquad |E(C)|\le9};
+   \]
+3. if `k_{1t}` is the number of `s_C=1` tree components that are strict-backward
+   origins, origin concentration gives
+   \[
+   k_{1t}\le r_\alpha+1,
+   \]
+   and `k_{1t}<=r_alpha` in the proper-origin case;
+4. consequently the total train population in such origin components is at most
+   `9(r_alpha+1)`, or `9r_alpha` in the proper-origin case; and
+5. if `A_{1t}` denotes the span of the projected active-bar average functionals
+   arising from blockers whose origins lie in `s_C=1` trees, then
+   \[
+   \boxed{
+   \operatorname{rank}\overline{\mathcal B}_{\xi,1t}
+   \le8k_{1t}+\operatorname{rank}\mathcal A_{1t}.
+   }
+   \]
+   Thus unbounded train multiplicity is removed from the `s_C=1` tree class. The
+   surviving tree-specific obstruction is repeated-bar diversity through
+   `rank A_{1t}`.
+
+The following v1.4.1 warnings are binding:
+
+- a charge identity is not by itself a lower bound; zero-charge monomer and dimer
+  bulk can be arbitrarily large in local models;
+- the `d_sc` fundamental circuits may overlap heavily, so one cannot sum one
+  spatially distinct unit of interface charge per circuit without an additional
+  theorem;
+- if `d_sc=0`, the empty set is an allowed minimum-cardinality maximizer. Statements
+  about nonempty Hall cores are to be read in the positive-deficiency case;
+- `s_C=1` trees are now exactly two-directional and bounded by nine trains, but they
+  are **not** automatically cyclic/Ferrers systems;
+- the new tree bound does not control the active-bar average span `A_{1t}`; and
+- the exact pure Target B endpoint remains
+  \[
+  \operatorname{rank}\overline{\mathcal B}_\xi+I+r
+  \le T-q-r_\alpha,
+  \]
+  followed by exact topology-corrected transport.
+
+## Version 1.4.0 audit policy
+
+Version 1.4.0 preserves the complete audited v1.3.0 theorem stack and promotes two
+independent post-v1.3 advances, one on each surviving branch. Sections 79 onward are
+the authoritative v1.4 frontier. Sections 75--78 are retained as the frozen v1.3
+endpoint and are historical where v1.4 explicitly supersedes them.
+
+The promoted Target A additions are:
+
+1. a generic safe-collar translate may be chosen so that no relevant lattice point
+   lies on either parallel-body boundary and no scaffold cross-distance is exactly
+   `0` or `1`, without sacrificing the strict collar population estimate;
+2. because `t>1`, every lattice point within open unit distance of a point of the
+   independent optimum `X_m` automatically lies in the inner scaffold
+   `Y_in = Lambda_v cap int(K_m+B)`;
+3. every scaffold blocker `x in X_m` has **exactly three or four** lattice conflicts;
+   the full conflict neighborhood is respectively an elementary unit equilateral
+   triangle or a unit lozenge, and `x` lies strictly in the interior of that cell;
+4. distinct blocker cells have disjoint interiors, so the scaffold blockers form an
+   exact **monomer--dimer packing** on the honeycomb dual of the triangular tiling;
+5. the radial conflict graph is planar and every lattice-side vertex has degree at
+   most five;
+6. the full-complex Euler identity
+   \[
+   \delta=m_3+2m_4+\gamma-s-g
+   \]
+   and, for every induced Hall subgraph,
+   \[
+   |Q|-|N(Q)|
+   =\gamma_Q-\mu_Q-b_1(Q)+b_3(Q)+2b_4(Q)
+   \]
+   are exact;
+7. a maximum-deficiency Hall set of minimum cardinality has no degree-one left
+   vertices, giving the exact leafless formula
+   \[
+   h(G)=\max_{b_1(Q)=0}
+   \bigl(\gamma_Q-\mu_Q+b_3(Q)+2b_4(Q)\bigr);
+   \]
+8. the full complex admits exact face-shell identities separating monomer gaps,
+   dimer shared edges, outer boundary, and nontriangular gap excess; and
+9. the new Target A endpoint is the **monomer--dimer cycle-cut rigidity lemma**
+   `h(G)>=j`.  The old cross-configuration two-well transfer problem remains a
+   valid alternate route, but it is no longer the only route and is not needed if
+   the scaffold-internal cycle-cut theorem is proved.
+
+The promoted Target B additions are:
+
+1. every stochastic Minkowski width coefficient is in fact strictly positive:
+   `a_{hC}>0` for every active diameter bar `h` and every terminal component `C`;
+2. every `s_C=0` terminal component is atomic: it consists of one train edge, its
+   Minkowski summand is a unit segment, and that train is strictly forward for every
+   active diameter bar, hence can never be a strict-backward origin; in the nonzero
+   minimal-face-kernel branch, the same atomic train forces all selected bar
+   potentials to coincide and hence `r=1`;
+3. common component rotations admit an exact second-variation formula whose
+   zero-first-derivative term is a strictly negative weighted variance modulo common
+   rotation;
+4. local diameter minimality therefore forces the active component-rotation
+   derivative covectors to positively span the full quotient
+   `R^{c(Theta)}/<1>`, so their rank is exactly `c(Theta)-1` and at least
+   `c(Theta)` nonzero active restrictions are required when `c(Theta)>=2`;
+5. a strict-backward blocker row whose origin is component `C` restricts to the
+   full-support stochastic row `e_C^*-a_h`; rows selected from distinct origins are
+   independent until all components are used, and all-component selection has rank
+   exactly `c(Theta)-1`;
+6. if `k_org` is the number of distinct strict-backward origin components, then
+   \[
+   r_\alpha\ge\min\{k_{\rm org},c(\Theta)-1\},
+   \qquad
+   k_{\rm org}\le r_\alpha+1,
+   \]
+   with the sharper `k_org<=r_alpha` whenever `r_alpha<c(Theta)-1`; and
+7. strict-backward origins are proved only to satisfy `s_C>0`.  **They are not
+   proved to be cyclic.**  In particular, `s_C=1` tree components remain a live
+   residual case and must be handled explicitly in any Target B closure.
+
+The following v1.4 warnings are binding:
+
+- the new scaffold monomer--dimer theorem does **not** identify the original
+  saturated minimizer with the independent `m`-optimum; it avoids that invalid
+  identification by deriving a second exact two-well structure entirely within the
+  scaffold;
+- planarity, Euler charge, and motif counts alone do not imply the required Hall
+  surplus.  Shifted-lattice monomer and lozenge phases provide exact local
+  cancellation regressions;
+- the exact Target A gap remains one Hall-rank unit: `h(G)>=j` versus survivor
+  bound `h(G)<=j-1`;
+- the face-shell quantity `b_infty` used below is the **radial-graph unbounded
+  facial boundary-walk length**.  Equivalently, the number of exposed lattice cell
+  edges on the unbounded side is `b_infty/2`;
+- the Dulmage--Mendelsohn/dual-contour, Ferrers-strip, and monomer phase-rigidity
+  continuations are proposed routes, not promoted theorems;
+- the Target B positive-spanning theorem controls only common component rotations;
+  it does not by itself prove the internal `xi` coforest inequality;
+- `s_C=1` trees cannot be silently merged into the cyclic two-family case;
+- the pure Target B residual remains
+  \[
+  \operatorname{rank}\overline{\mathcal B}_\xi+I+r
+  \le T-q-r_\alpha,
+  \]
+  followed by exact topology-corrected transport; and
+- no width-one-annulus gammoid or plateau-terminalization theorem is part of v1.4.0
+  unless separately proved and audited.  Such language is a research target, not a
+  canonical result.
+
+## Version 1.3.0 audit policy
+
+Version 1.3.0 preserves the complete audited v1.2.0 theorem stack and promotes the
+subsequent compatible-collar, clearance, Delaunay-matching, and Hall-conflict-graph
+continuation. Sections 71 onward are the authoritative frontier. Earlier Target A
+frontier language is retained for provenance and should not be treated as the current
+endgame. Target B is unchanged except for restatement with the already-corrected
+component-rotation rank budget.
+
+The promoted v1.3 additions are:
+
+1. the **unconditional compatible-collar dichotomy** with
+   \(C_{\rm col}=\pi(1/2+2/\sqrt3)\): either \(\rho<C_{\rm col}D\), or the
+   independently chosen \(m=N-\rho\) optimum admits a common strict sub-\(D\)
+   scaffold containing \(>N-C_{\rm col}D\) points;
+2. the sharper safe-collar count, including the uniform additive gain
+   \(2\pi/\sqrt3\) and the stronger \(t\)-dependent form;
+3. the **deep Voronoi containment theorem** and the sharp local Delaunay clearance
+   inequality
+   \[
+   \operatorname{area}(T)-\frac{\sqrt3}{4}
+   \ge\frac{\sqrt3}{6}\sum_{v\in T}\mu_T(v),
+   \]
+   with exact equality side multisets \(\{1,1,1\}\) and
+   \(\{1,1,\sqrt3\}\);
+4. the global nearest-neighbor clearance budget
+   \[
+   \sum_{p\in A}\delta(p)
+   <\left(24+\frac\pi2\right)D+18;
+   \]
+5. the degree-six nearest-neighbor graph bound, the matching estimate
+   \( |M|\ge\rho/24-D-3/4 \), and the fact that the selected matching edges are
+   strong Gabriel edges that can be included simultaneously in a Delaunay triangulation;
+6. the **matched two-well theorem**: along \(\rho/D\to\infty\),
+   \(\rho/24-o(\rho)\) disjoint matched edges have both incident deep Delaunay
+   faces approaching one of the two exact equality wells
+   \(\{1,1,1\}\) or \(\{1,1,\sqrt3\}\);
+7. the **exact Hall--Kőnig conflict-graph theorem** for the independently constructed
+   scaffold,
+   \[
+   m+|Y|-\nu\le N-1,
+   \qquad
+   |S|-|N(S)|\le\rho-1;
+   \]
+8. the resulting **inner-band near-perfect conflict matching**: after removing the
+   conflict-free safe-collar sites, all but at most \(\rho-k-1=O(D)\) remaining
+   lattice sites can be matched injectively to distinct conflicting points of the
+   \(m\)-optimum; and
+9. the resulting v1.3 Target A endpoint: a **two-well configuration-transfer /
+   inner-band Hall-rigidity theorem**, not another forest-rigidity statement.
+
+The following v1.3 warnings are binding:
+
+- the original saturated minimizer \(A\), in which the clearance matching and
+  two-well Delaunay geometry live, is **not co-embedded** with the independently
+  chosen \(m\)-optimum scaffold; transporting capacity between them is exactly the
+  unresolved step;
+- triangle-freeness excludes the exact \(\{1,1,1\}\) equality triangle but does
+  **not** exclude convergence to that well. The scaled equilateral family is a
+  regression against every “\(120^\circ\)-only” conclusion;
+- strict rattlers have no uniform positive clearance. In a super-boundary survivor,
+  the total clearance is only \(O(D)\), so most rattlers become increasingly
+  near-contact;
+- the Hall--Kőnig theorem is a necessary expansion property of a surviving
+  counterexample, not by itself a contradiction;
+- Target B receives no new blocker-rank theorem in v1.3. The exact residual target
+  remains
+  \(\operatorname{rank}\overline{\mathcal B}_\xi+I+r\le T-q-r_\alpha\),
+  followed by exact topology-corrected transport.
+
+## Version 1.2.0 audit policy
+
+Version 1.2.0 preserves the complete audited v1.1.0 theorem stack and integrates the
+subsequent hybrid-forest and terminal-component continuation. Within the historical
+v1.2 layer, Sections 60 onward were the authoritative frontier. In v1.3, Sections 71
+onward supersede the old Target A frontier. Earlier language is retained only for
+provenance.
+
+The promoted additions are:
+
+1. the exact rooted-forest rank/self-stress identity
+   \(\ell=u-r+c+\sigma\), with \(0\le\sigma\le r-c\), replacing the historical
+   coarse estimate \(u\ge\ell/2\);
+2. the root-skeleton exactification theorem: after pinning at most \(r-c\) branch
+   junctions and opening at most \(2(r-c)\) old forest contacts, the hybrid branch
+   contains a smooth one-root exact-unit-bar manifold of dimension at least
+   \(u-r+c\);
+3. the affine forest triangle-factor exclusion theorem and the forest rattlerization
+   theorem: a nearby same-diameter triangle-free global minimizer contains at least
+   \(u-r+c\) genuine strict rattlers and hence a local open set of dimension at least
+   \(2(u-r+c)\);
+4. the same-diameter saturation theorem: any triangle-free minimizer can be extended
+   inside its fixed hull to a unit-covering triangle-free minimizer by adding fewer
+   than \((\pi/2)D\) points;
+5. the strict open-disk replacement and collar inequalities, which reduce a
+   super-boundary rattler population to an exact packing/grafting problem rather than
+   a linkage problem;
+6. the terminal-component Minkowski decomposition of the convex hull;
+7. the componentwise vector-closure strengthening of the terminal-turn inequality and
+   its exact \(s_C=0,1,2\) equality classification;
+8. the stochastic Minkowski-width formula for component rotations of the true inverse
+   blocker, giving component-rotation blocker rank at most \(c(\Theta)-1\); and
+9. the resulting v1.2.0 endgame: **saturated rattler capacity** for Target A and
+   **internal terminal-component blocker rank** for Target B.
+
+The following warnings are part of the audit:
+
+- deletion optimality \(D(n-u)=D(n)\) is still not assumed;
+- raw triangle-wall normal rank on the exact-bar torus can be \(u-O(1)\); the affine
+  factor-exclusion theorem concerns the straight same-\(D\) forest flat instead;
+- the root-skeleton theorem does not claim that all \(r-c\) root-separating edges can
+  always be opened while preserving a full \(u\)-dimensional bar manifold; branch
+  junctions may have to be pinned;
+- the cycle-lift shortcut remains rejected because \(\mathcal D\) is injective;
+- the new component-rotation calculation controls only the common rotation of each
+  terminal component.  Internal relative-angle coordinates remain the pure Target B
+  obstruction;
+- neither the strict-lattice population estimate nor saturation alone proves the
+  required rattler-capacity/grafting theorem.
+
+## Version 1.1.0 audit policy
+
+Version 1.1.0 preserves the complete audited v1.0.0 theorem stack and integrates the subsequently audited continuation. The new material is promoted only where its proof survives a second review. In particular:
+
+1. the minimal-face harmonic--Dirichlet reduction and its six-potential bound are promoted;
+2. visible tangent quartic freedom is compressed to at most five non-rotational terminal-potential degrees;
+3. the peripheral-dual rank theorem is promoted;
+4. the terminal direction-network, terminal-turn factorization, and boundary-velocity blocker normal form are promoted;
+5. the proposed cycle-lift deficit is explicitly rejected: the terminal direction map is already injective, and its scalar cycle space is not the neutral train-angle space;
+6. the six-block facial-peeling algebra is promoted only in corrected form. A globally diameter-invisible terminal train set is not claimed impossible. Instead, such a terminal set itself yields a local same-diameter optimal train-angle flat;
+7. the exact diameter-plateau theorem `D(m)=D(n)=D => n-m < (pi/2)D` is promoted; and
+8. the hybrid bridge-forest lineality is promoted to an exact local optimal-flat statement, while deletion optimality remains open.
+
+The older Section 18 two-potential wall reduction from the continuation is not used as a trusted dependency in v1.1.0; the later harmonic--Dirichlet theorem supersedes it. Historical statements from v1.0.0 remain in the file for provenance, but Sections 48 onward are the authoritative frontier.
+
+## Version 1.0.0 audit policy (retained history)
+
+Sections 1--23 below are the previously synthesized and adversarially audited base
+record. Their theorem statements and proofs are retained in full because later work
+uses them extensively. Some *frontier descriptions* in Sections 18, 21--23 are now
+historical and are explicitly superseded by Sections 24 onward.
+
+Sections 24 onward consolidate the post-synthesis work and a fresh second-pass audit
+of the recent Sol/Pro derivations. Recent claims were re-derived rather than accepted
+merely because they appeared in an addendum. The audit produced several corrections:
+
+1. the translated-lattice `n-1` improvement survives and sharpens the exact shell
+   threshold to `G+E<c0 B` in the pure rhombic-disk case;
+2. the sixfold phase-energy and phase-atomic/exposed-hull machinery survives, and in
+   fact yields a **uniform macroscopic gap** `T-q >= 0.333829... D-o(D)`;
+3. the train-angle Hessian, signed-variance formula, stress-projected signed
+   Laplacian, and backward-flip rank reduction survive;
+4. the older claim that higher-order locking must be "backward or invisible" was
+   too strong: **tangent incidences with lambda=0 can produce genuine quartic
+   blocking** and must be retained;
+5. the previously displayed tangent expansion omitted a generally nonzero fifth
+   order term. The corrected expansion is recorded below; its quartic conclusion
+   remains valid;
+6. a claim that two diameter-bar rotation classes automatically give a global
+   same-diameter flex is **not established** because unsupported active equality
+   bars can still block. Only the stress-supported bars are controlled by that
+   argument;
+7. raw support depth remains non-Oler currency because of exact support-turning
+   cancellation;
+8. Target A, the super-boundary bridge-forest branch, remains genuinely open.
+
+Accordingly, the authoritative current frontier is Sections 45--48, not the older
+"current target" language embedded in Sections 18 or 23.
+
+## Source provenance for v1.0.0
+
+This version consolidates, deduplicates, and where necessary corrects the mathematical
+content of the earlier canonical/synthesis files, the post-synthesis Sol Max addenda,
+and the two most recent independent continuation runs (backward-flip/terminal-rank and
+stress-projected signed-Laplacian/quartic-tangent work), together with the subsequent
+in-context audit that produced the generalized phase-atomic theorem and secondary-cusp
+reduction. Superseded prompts and duplicated transcript text are not treated as
+independent evidence. The seven supplied papers remain the literature baseline.
+
+---
+
+## Contents
+
+The report preserves the numbering of the audited research record. Sections 28--35
+were intermediate post-synthesis notebooks whose surviving content is folded into
+Sections 24--27 and 36 onward; their numbers are intentionally retired so that later
+cross-references remain stable.
+
+- **1--20:** problem, literature baseline, KKT/rigidity framework, almost-rhombic
+  structure, nonlinear stress, canonical representatives, regressions, and original
+  audit.
+- **21--23:** Oler-surplus shell decomposition, exact train-end depth, and the first
+  combined continuation frontier. Their old capacity thresholds are historical and
+  superseded below.
+- **24:** perimeter saturation, uniform width, and linear support depth.
+- **25:** exact support-turning and mixed-area identities.
+- **26:** sixfold phase energy, grain decomposition, zonotope identities, train-angle
+  modes, and difference-body transport.
+- **27:** historical post-synthesis route log.
+- **36:** strict translated-lattice \(n-1\) diameter improvement and the current
+  shell threshold \(G+E<c_0B\) in the pure disk.
+- **37:** exact train-angle Hessian, signed variance, backward trains, and tangent
+  equality.
+- **38:** second-pass audit ledger for the recent work.
+- **39:** generalized phase-atomic/exposed-hull theorem and quantitative train/hull
+  ratios.
+- **40:** macroscopic common first-order-neutral train space.
+- **41:** stress-projected signed train Laplacian.
+- **42:** backward-flip rank, terminal localization, secondary cusp, tangent
+  potential transfer, and the conditional invisible-coordinate normalization.
+- **43:** corrected quartic tangent-class mechanism.
+- **44:** stronger support-depth tail and boundary-curvature consequences.
+- **45:** v1.0.0 Target B frontier (historical after Sections 49--69).
+- **46:** v1.0.0 Target A frontier (historical after Sections 60--64).
+- **47:** regression tests and dead routes.
+- **48:** v1.1.0 continuation audit and notation.
+- **49--50:** minimal-face harmonic--Dirichlet reduction, ordered tangent collapse,
+  harmonic transport, and peripheral-dual rank.
+- **51--52:** terminal direction-network normal form, terminal-turn factorization,
+  and the exact boundary-velocity/inverse-blocker representation.
+- **53:** corrected six-block facial peeling: backward rank or same-diameter optimal flat.
+- **54:** exact diameter-plateau theorem and the historical v1.1 Target A flat formulation.
+- **55:** Ferrers endpoint, terminal resources, and correct phase-atomic bookkeeping.
+- **56--58:** historical v1.1 remaining lemmas, strategy, and status; superseded by
+  Sections 60--69 except where individual inequalities are explicitly reused.
+- **59:** v1.1.0 version history.
+- **60:** rooted-forest rank/self-stress identity.
+- **61:** root-skeleton exactification.
+- **62:** affine forest triangle-factor exclusion and forest rattlerization.
+- **63:** same-diameter saturation, strict lattice replacement, and collar growth.
+- **64:** authoritative v1.2 Target A: saturated rattler capacity / scaffolded grafting.
+- **65:** terminal-component Minkowski decomposition.
+- **66:** componentwise turn closure and the exact \(s_C=0,1,2\) classification.
+- **67:** stochastic Minkowski-width formula and explicit component-rotation rank budget.
+- **68:** authoritative v1.2 remaining lemmas and topology correction.
+- **69:** version 1.2.0 exact status.
+- **70:** version history and provenance through v1.2.0 (historical).
+- **71:** unconditional compatible-collar dichotomy and exact safe-collar population.
+- **72:** deep Voronoi containment, local Delaunay clearance, and global clearance budget.
+- **73:** degree-six nearest-neighbor matching, Gabriel/Delaunay promotion, and the matched two-well theorem.
+- **74:** exact Hall--Kőnig scaffold conflict graph and inner-band near-perfect conflict matching.
+- **75:** authoritative v1.3 Target A: two-well configuration transfer / Hall rigidity.
+- **76:** authoritative v1.3 Target B: unchanged internal blocker/coforest rank plus topology transport.
+- **77:** version 1.3.0 exact status and unified endgame.
+- **78:** current version history and provenance.
+
+---

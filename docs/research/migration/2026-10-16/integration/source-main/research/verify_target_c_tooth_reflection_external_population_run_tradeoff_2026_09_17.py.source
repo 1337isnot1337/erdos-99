@@ -1,0 +1,52 @@
+import math
+import random
+
+h = math.sqrt(303.0) / 52.0
+rng = random.Random(20260917)
+
+# Abstract regression for ER.1--ER.2.
+# U distinct upper children are charged injectively to Z_ext >= U.
+# Lower progress is split among U+1 runs.
+for _ in range(10000):
+    U = rng.randrange(0, 100)
+    Z_ext = U + rng.randrange(0, 100)
+    runs = U + 1
+    spans = [rng.random() * 20.0 + 1e-6 for _ in range(runs)]
+    G_low = sum(spans)
+    S = max(spans)
+    assert U <= Z_ext
+    assert (Z_ext + 1) * S + 1e-12 >= G_low
+
+# Run-level slack/matching regression.
+# If sum sigma <= t, then at least half the edges have sigma <= 2t/R.
+for D in (1e6, 1e9, 1e12):
+    t = h + D ** (-1.0 / 3.0)
+    for R in (10, 101, 1000):
+        raw = [rng.random() for _ in range(R)]
+        total = sum(raw)
+        sig = [t * x / total for x in raw]
+        good = [i for i, x in enumerate(sig) if x <= 2.0 * t / R + 1e-15]
+        assert len(good) >= R // 2
+        even = sum(1 for i in good if i % 2 == 0)
+        odd = len(good) - even
+        assert max(even, odd) >= len(good) / 2.0
+
+# Exponent-scale consequences of (Z_ext+1) S >= D-o(D).
+for D in (1e8, 1e12, 1e16):
+    for alpha in (0.0, 0.25, 0.5, 0.75):
+        Z = max(1.0, D ** alpha)
+        S = D / (Z + 1.0)
+        R = S - (h + D ** (-1.0 / 3.0))
+        if R <= 0:
+            continue
+        threshold = 2.0 * (h + D ** (-1.0 / 3.0)) / R
+        # S has scale D^(1-alpha) up to the harmless +1 in Z+1.
+        ratio = S / (D ** (1.0 - alpha))
+        assert 0.49 <= ratio <= 1.01
+        # threshold has the dual scale D^(alpha-1).
+        scaled = threshold * D ** (1.0 - alpha)
+        assert scaled < 4.0 * h + 1.0
+
+print('PASS: FREE external-population / outer-face-run tradeoff regression')
+print(f'h_*={h:.15f}')
+print(f'2h_*={2.0*h:.15f}')

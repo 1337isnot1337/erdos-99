@@ -1,0 +1,129 @@
+# Target C: five-no-root `k=3,p=4` sharp boundary
+
+Date: 2026-09-21
+
+Status: exact strengthening of the repaired five-no-root `k=3` containment theorem through `p=4`:
+
+> every five-no-root `k=3,p=4` state has `D>=3`.
+
+The exact `D=3` canonical cores are classified. There are 19,392 of them, and every one has virtual canonical deficiency two with four singleton replacements of four canonical-complete blocks.
+
+Companion verifier:
+
+`research/verify_target_c_support7_global_segment_relative_five_noroot_k3_p4_sharp_2026_09_21.py`
+
+## Containment reduction
+
+For the repaired rank-two coefficient space `P`, let `C` be the virtual canonical complete-block set, put
+
+`d=|C|-rank H(C)`,
+
+and let `q` be the number of canonical-complete blocks replaced by incomplete states in the actual realization. The repaired theorem gives
+
+`D >= 5+p+3d-3q`, `d>=1`, `q<=p`.
+
+At `p=4`,
+
+`D >= 9+3d-3q`.
+
+A state below `D=3` can therefore occur only at
+
+`d=1, q=4`.
+
+To classify the sharp `D=3` boundary as well, only two further equality classes need inspection:
+
+`d=1,q=3`
+
+and
+
+`d=2,q=4`.
+
+All other values already have containment lower bound at least six.
+
+The incomplete-row partitions of four are only
+
+`2+2`, `2+1+1`, `1+1+1+1`.
+
+The `2+2` form uses at most two incomplete blocks, hence cannot occur in any of the relevant `q>=3` classes. Thus the exact finite audit needs only:
+
+- `d=1,q=3`: one pair plus two singletons on canonical-complete blocks, or four singletons with three on canonical-complete blocks and one on a canonical-empty block;
+- `d=1,q=4`: four singleton replacements on canonical-complete blocks;
+- `d=2,q=4`: four singleton replacements on canonical-complete blocks.
+
+## Coverage-correct exact scan
+
+The verifier uses the full repaired coefficient-space enumeration rather than the older empty-generated subset. Across all 20,451 `S_7` orbit representatives it reproduces exactly
+
+`535,040`
+
+rank-two virtual canonical states. Of these,
+
+`15,951`
+
+have deficiency one or two and can enter the sharp `p=4` scan.
+
+Every local replacement is checked to ensure that its actual local constraints generate exactly the target plane `P`; compatible singleton constraints alone are not treated as sufficient. Every surviving state is then reranked through its complete-block and three external `T`-relation rows.
+
+The exact replacement census is
+
+```text
+class                    exact states   fail to realize P
+4 singletons, d=1,q=3            36              0
+pair+1+1, d=1,q=3               576              0
+4 singletons, d=1,q=4             0              0
+4 singletons, d=2,q=4        81,950          1,286
+```
+
+In particular the only containment class that could have produced `D<3`, namely `d=1,q=4`, has no realizable local state at all.
+
+The exact defect census is
+
+```text
+class                    D=3      D=6      D=9     D=12
+4 singletons, d=1,q=3      0        0        36        0
+pair+1+1, d=1,q=3          0      468       108        0
+4 singletons, d=2,q=4  19,392   33,188    27,880    1,490
+```
+
+Therefore every five-no-root `k=3,p=4` state satisfies
+
+`D>=3`.
+
+## The sharp cores
+
+All 19,392 `D=3` canonical cores come from
+
+`d=2,q=4`
+
+and have exactly four singleton incomplete blocks, all replacing virtual-canonical complete blocks. Their remaining complete-block count `c'` and exact relation rank `delta` are
+
+```text
+c'   delta   D=3 cores
+3      5          379
+4      6        2,439
+5      7        1,118
+6      8        8,288
+7      9        7,168
+----------------------
+total           19,392
+```
+
+An arbitrary actual sharp state may additionally complete canonical-empty blocks when that completion raises the relation rank by one. Such a completion changes the defect by zero. Thus the 19,392 objects above are canonical minimal cores, not a count of all actual `D=3` states. The incomplete part, however, remains four singleton blocks.
+
+## Exactness
+
+Coefficient-space construction and containment use exact rational row spaces. Final relation ranks use the established prime
+
+`2^127-1`.
+
+The maximum squared norm of any relation row encountered in this audit is 44, and the verifier checks
+
+`MOD^2 > 44^15`.
+
+The existing Lucas-Lehmer/Hadamard certificate therefore makes the modular relation ranks exact over `Q`.
+
+## Consequence
+
+The previous coverage-correct five-row theorem stopped at `p<=3`. This audit extends the sharp quantitative statement to `p=4` and identifies the only defect-three local structure.
+
+For the current seven-no-root route, the separate synchronized-six-shadow argument closes `D=-1,k=5,d=1,p=4` even more directly. The present classification remains useful for later pair-deletion analyses, especially the final `k=5,p=6/7` cases.

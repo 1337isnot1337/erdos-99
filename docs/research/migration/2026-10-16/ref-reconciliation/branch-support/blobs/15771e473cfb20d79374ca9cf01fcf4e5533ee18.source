@@ -1,0 +1,272 @@
+# Target C — KKT force-hull / reciprocal-geometry route
+
+**LEVEL I STATUS: STILL OPEN.**
+**C-I: CLOSED.**
+**C-II: OPEN.**
+
+Read [`../../STATE.md`](../../STATE.md) first, then [`CURRENT.md`](CURRENT.md). The theorem-state manifest controls lifecycle; merge status, dates, and section numbers do not.
+
+## Canonical reading order
+
+1. [`CURRENT.md`](CURRENT.md)
+2. [`01-force-hull-and-shear.md`](01-force-hull-and-shear.md)
+3. [`02-fully-visible-bridge-frontier.md`](02-fully-visible-bridge-frontier.md)
+4. [`03-pinned-block-and-loaded-boundary-frontier.md`](03-pinned-block-and-loaded-boundary-frontier.md)
+5. [`04-near-minimal-response-frontier.md`](04-near-minimal-response-frontier.md)
+6. [`05-quadrangulation-defect-frontier.md`](05-quadrangulation-defect-frontier.md)
+7. [`56-ci-restored-frontier.md`](56-ci-restored-frontier.md)
+8. [`57-zr-zf-rigidity-audit.md`](57-zr-zf-rigidity-audit.md)
+9. [`58-full-source-geometry-audit.md`](58-full-source-geometry-audit.md)
+10. [`59-difference-body-density-audit.md`](59-difference-body-density-audit.md)
+11. [`60-perfect-matching-exclusion-audit.md`](60-perfect-matching-exclusion-audit.md)
+12. [`61-linear-nonmatching-excess-audit.md`](61-linear-nonmatching-excess-audit.md)
+13. [`62-attachment-incidence-currency-audit.md`](62-attachment-incidence-currency-audit.md)
+14. [`63-loaded-hull-slack-audit.md`](63-loaded-hull-slack-audit.md)
+15. [`64-extreme-circuit-transfer-audit.md`](64-extreme-circuit-transfer-audit.md)
+16. [`65-primitive-loaded-split-audit.md`](65-primitive-loaded-split-audit.md)
+17. [`66-forest-doubled-gap-audit.md`](66-forest-doubled-gap-audit.md)
+18. [`67-rhombus-population-transport-audit.md`](67-rhombus-population-transport-audit.md)
+19. [`68-punctured-packing-phase-audit.md`](68-punctured-packing-phase-audit.md)
+20. [`69-coherent-grain-interface-audit.md`](69-coherent-grain-interface-audit.md)
+21. [`70-forest-endpoint-geometry-audit.md`](70-forest-endpoint-geometry-audit.md)
+22. [`71-extreme-attachment-geometry-audit.md`](71-extreme-attachment-geometry-audit.md)
+23. [`72-primitive-shell-leaf-forcing-audit.md`](72-primitive-shell-leaf-forcing-audit.md)
+24. [`73-pseudosegment-grid-extraction-audit.md`](73-pseudosegment-grid-extraction-audit.md)
+25. [`74-complete-grid-phase-collapse-audit.md`](74-complete-grid-phase-collapse-audit.md)
+26. [`75-all-phase-component-deatomization-audit.md`](75-all-phase-component-deatomization-audit.md)
+27. [`76-hole-stable-complete-grid-order-diameter-audit.md`](76-hole-stable-complete-grid-order-diameter-audit.md)
+28. [`77-inactive-chamber-saturation-audit.md`](77-inactive-chamber-saturation-audit.md)
+29. [`78-harmonic-cell-grid-localization-audit.md`](78-harmonic-cell-grid-localization-audit.md)
+30. [`79-inactive-chamber-rhombic-saturation-dichotomy-audit.md`](79-inactive-chamber-rhombic-saturation-dichotomy-audit.md)
+31. [`80-global-isolate-concentration-fullcore-disk-audit.md`](80-global-isolate-concentration-fullcore-disk-audit.md)
+32. [`82-harmonic-cell-near-quadrangulation-audit.md`](82-harmonic-cell-near-quadrangulation-audit.md)
+33. [`83-attachment-cell-disjoint-tiling-audit.md`](83-attachment-cell-disjoint-tiling-audit.md)
+34. [`84-typeII-interface-collapse-audit.md`](84-typeII-interface-collapse-audit.md)
+35. [`85-train-boundary-interface-currency-audit.md`](85-train-boundary-interface-currency-audit.md)
+36. [`88-harmonic-wrapping-diameter-audit.md`](88-harmonic-wrapping-diameter-audit.md)
+37. [`89-harmonic-cell-train-budget-audit.md`](89-harmonic-cell-train-budget-audit.md)
+38. [`90-dense-inverse-phase-crossing-core-audit.md`](90-dense-inverse-phase-crossing-core-audit.md)
+39. [`91-explicit-ordered-grid-audit.md`](91-explicit-ordered-grid-audit.md)
+40. [`92-wrapping-perimeter-diameter-audit.md`](92-wrapping-perimeter-diameter-audit.md)
+41. [`93-full-gap-wrapping-diameter-audit.md`](93-full-gap-wrapping-diameter-audit.md)
+42. [`94-three-forbidden-gap-wrapping-audit.md`](94-three-forbidden-gap-wrapping-audit.md)
+43. [`96-outer-walk-forbidden-gap-threshold-audit.md`](96-outer-walk-forbidden-gap-threshold-audit.md)
+44. [`100-wrapping-angular-measure-threshold-audit.md`](100-wrapping-angular-measure-threshold-audit.md)
+45. [`101-complement-gap-chord-threshold-audit.md`](101-complement-gap-chord-threshold-audit.md)
+46. [`102-phase-corridor-endpoint-exclusion-audit.md`](102-phase-corridor-endpoint-exclusion-audit.md)
+47. [`103-unique-wrapping-cap-deficit-audit.md`](103-unique-wrapping-cap-deficit-audit.md)
+48. [`104-quantitative-phase-gap-audit.md`](104-quantitative-phase-gap-audit.md)
+49. [`105-optimized-quantitative-phase-gap-audit.md`](105-optimized-quantitative-phase-gap-audit.md)
+50. [`106-strong-phase-shore-quantitative-gap-audit.md`](106-strong-phase-shore-quantitative-gap-audit.md)
+51. [`107-wrapping-support-area-rigidity-audit.md`](107-wrapping-support-area-rigidity-audit.md)
+52. [`108-area-boosted-quantitative-phase-gap-audit.md`](108-area-boosted-quantitative-phase-gap-audit.md)
+53. [`109-asymptotically-sharp-phase-shores-audit.md`](109-asymptotically-sharp-phase-shores-audit.md)
+54. [`122-aggregate-two-arc-detour-audit.md`](122-aggregate-two-arc-detour-audit.md)
+55. [`123-augmented-cell-defect-budget-audit.md`](123-augmented-cell-defect-budget-audit.md)
+56. [`105-121-promotion-audit-2026-09-12.md`](105-121-promotion-audit-2026-09-12.md)
+57. [`122-123-promotion-audit-2026-09-12.md`](122-123-promotion-audit-2026-09-12.md)
+58. [`target_c_fullcore_diameter_budget_floor_2026-09-14.md`](../../reports/target_c_fullcore_diameter_budget_floor_2026-09-14.md)
+59. [`target_c_fullcore_diameter_budget_floor_independent_audit_2026-09-14.md`](../../audits/target_c_fullcore_diameter_budget_floor_independent_audit_2026-09-14.md)
+60. [`target_c_mu_one_cell_concentration_2026-09-14.md`](../../reports/target_c_mu_one_cell_concentration_2026-09-14.md)
+61. [`target_c_mu_one_cell_concentration_independent_audit_2026-09-14.md`](../../audits/target_c_mu_one_cell_concentration_independent_audit_2026-09-14.md)
+62. [`target_c_fullcore_loaded_chord_elimination_2026-09-14.md`](../../reports/target_c_fullcore_loaded_chord_elimination_2026-09-14.md)
+63. [`target_c_fullcore_loaded_chord_elimination_independent_audit_2026-09-14.md`](../../audits/target_c_fullcore_loaded_chord_elimination_independent_audit_2026-09-14.md)
+64. [`target_c_fullcore_train_coupled_surplus_floor_2026-09-14.md`](../../reports/target_c_fullcore_train_coupled_surplus_floor_2026-09-14.md)
+65. [`target_c_fullcore_train_coupled_surplus_floor_independent_audit_2026-09-14.md`](../../audits/target_c_fullcore_train_coupled_surplus_floor_independent_audit_2026-09-14.md)
+66. [`target_c_oblique_lattice_global_comparison_2026-09-14.md`](../../reports/target_c_oblique_lattice_global_comparison_2026-09-14.md)
+67. [`target_c_oblique_lattice_global_comparison_independent_audit_2026-09-14.md`](../../audits/target_c_oblique_lattice_global_comparison_independent_audit_2026-09-14.md)
+
+Only these route-local modules plus report-level claims explicitly marked canonical in `docs/state/theorem-state.yaml` are canonical Target C theorem sources at audit.53. Sections 110--121 are canonical report-level entries and are linked below. The exact train-coupled floor endpoint exclusion is also canonical; its detailed proof and independent audit are linked below. The file `95-protected-contact-creation-obstruction-audit.md` remains proof-only and is intentionally outside the canonical reading order.
+
+## Scope rule
+
+The §57 ZR/ZF theorem is on the nonisolated positive-contact core `V`, not the full source:
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\qquad
+\operatorname{rank}R_{C\cup H}[V]=2v-3.
+\]
+
+Contact-isolated source points remain in the global configuration. Do not extend the affine-kernel conclusion to their coordinates.
+
+## Current route
+
+Audit.53 retains the audit.52 full-core structural stack and adds six canonical reciprocal/return/depletion theorems.
+
+The global full-core baseline remains
+\[
+\mu_D\ge\mu_{\rm hull}+\varepsilon_*,
+\qquad
+R_F\ge(\kappa_{\rm fr}-o(1))D,
+\qquad
+\sigma_C=0,
+\]
+with
+\[
+\mu_{\rm hull}
+=
+\frac{\pi+\sqrt{\pi/(2\sqrt3)}}2
+=
+2.046952730226875\ldots.
+\]
+
+The new finite train structure is stronger than the audit.52 \((2,2)\)-sparsity statement. Canonical \`C-RECIPROCAL-TRAIN-GRAPH\` integrates positive contact equilibrium into actual reciprocal face coordinates. The bounded-endpoint internal train graph is simple and every nontrivial induced connected component \(U_i\) satisfies
+\[
+e(U_i)\le2|U_i|-3.
+\]
+Canonical \`C-OUTER-TRAIN-DETERMINATION\` gives
+\[
+|\mathcal O|\ge q-k,
+\]
+where \(\mathcal O\) is the family of old-outer-ended stopped trains.
+
+Canonical \`C-GLOBAL-FACE-RETURN-QUOTAS\` makes exceptional-face defect globally spendable as **independent endpoint/face-label currency**. For every selected face family,
+\[
+Q_{\mathcal F}\le2|S|-4
+\]
+for a minimum endpoint-inclusive separator, and all demands
+\[
+r_f=
+\max\left\{
+0,
+\left\lfloor\frac{m_f-4}{2}\right\rfloor-\ell_f
+\right\}
+\]
+can be realized simultaneously by globally vertex-disjoint actual contact paths to distinct loaded vertices.
+
+Canonical \`C-JOINT-BULK-FACE-SEPARATOR\` couples this with unloaded rhombus bulk:
+\[
+2\sqrt{\pi a_0(R-5k_I)_+}+Q_{\mathcal F}
+\le4k-4,
+\qquad a_0=\frac{\sqrt3}{2}.
+\]
+In a quadratic Type-II unloaded-rhombus bulk this forces
+\[
+p_D\ge\frac{\pi}{4}D+\frac14Q_{\mathcal F_D}-o(D),
+\]
+and a selected face-defect cluster in radius \(r\) obeys
+\[
+Q_{\mathcal F}\le(32+4\pi)r+18.
+\]
+So a persistent linear exceptional-face tail cannot hide in one submacroscopic cluster, or in sublinearly many clusters with sublinear total radius.
+
+Two asymptotic subbranches are now significantly narrower.
+
+- If \(q/D\to\pi\) and \(u_B=o(D)\), canonical \`C-TERMINAL-PHYSICAL-FRUSTRATION\` gives
+  \[
+  R_{\mathcal O}=o(D^2),
+  \qquad
+  \liminf R_{\rm phys}/D\ge\kappa_{\rm phys}>0,
+  \]
+  plus a linear family of pairwise boundary-vertex-disjoint physical direction-frustrated unit walls.
+- If \(x_B=b-q=o(D)\), canonical \`C-LOADED-FLAT-PENTAGON-DEPLETION\` produces
+  \[
+  g_D\ge q-e_{BI}-6(Q-f)-o(D)
+  \]
+  distinct second-depletable near-flat physical pentagons and forces
+  \[
+  \boxed{
+  e_{BI}+6(Q-f)
+  \ge
+  sD+2k+\frac{S_U}{2}-o(D),
+  \qquad
+  s=\sqrt{\pi/(2\sqrt3)}.
+  }
+  \]
+
+These return paths and walls are not yet path-length currency, spare packing capacity, or an active-diameter motion. The live source-level target remains to combine the smooth exact contact manifold, positive reciprocal train graph, global loaded-return capacity, and forced physical residual into a motion/replacement that respects **all** lower constraints and strictly lowers the maximum active diameter, or forces an exact unit equilateral triangle.
+
+The separate macroscopic-container branch remains open.
+
+## Promoted report dependencies
+
+- Audit.53 reciprocal/return promotion audit: [\`target_c_returns_reciprocal_promotion_audit_2026-10-05.md\`](../../audits/target_c_returns_reciprocal_promotion_audit_2026-10-05.md).
+- Positive reciprocal train graph: [\`target_c_positive_reciprocal_internal_train_graph_2026-10-05.md\`](../../reports/target_c_positive_reciprocal_internal_train_graph_2026-10-05.md).
+- Outer-train determination: [\`target_c_outer_train_rank_groemer_bank_synthesis_2026-10-05.md\`](../../reports/target_c_outer_train_rank_groemer_bank_synthesis_2026-10-05.md).
+- Global face-return quotas: [\`target_c_global_exceptional_face_return_quotas_2026-10-04.md\`](../../reports/target_c_global_exceptional_face_return_quotas_2026-10-04.md).
+- Joint bulk/face separator capacity: [\`target_c_joint_bulk_defect_separator_capacity_2026-10-05.md\`](../../reports/target_c_joint_bulk_defect_separator_capacity_2026-10-05.md).
+- Terminal physical-frustration theorem: [\`target_c_terminal_short_pocket_physical_frustration_2026-10-05.md\`](../../reports/target_c_terminal_short_pocket_physical_frustration_2026-10-05.md).
+- Loaded flat-pentagon second depletion: [\`target_c_loaded_flat_pentagon_second_depletion_2026-10-05.md\`](../../reports/target_c_loaded_flat_pentagon_second_depletion_2026-10-05.md).
+
+- Exact train-coupled endpoint exclusion report: [\`target_c_fullcore_endpoint_unbalanced_pseudosegment_completion_2026-09-14.md\`](../../reports/target_c_fullcore_endpoint_unbalanced_pseudosegment_completion_2026-09-14.md).
+- Exact train-coupled endpoint exclusion independent audit: [\`target_c_fullcore_endpoint_unbalanced_pseudosegment_completion_independent_audit_2026-09-14.md\`](../../audits/target_c_fullcore_endpoint_unbalanced_pseudosegment_completion_independent_audit_2026-09-14.md).
+
+- October structural promotion audit: [`target_c_october_structural_promotion_audit_2026-10-05.md`](../../audits/target_c_october_structural_promotion_audit_2026-10-05.md).
+- Promoted hull-depletion floor: [`target_c_fullcore_hull_train_depletion_floor_2026-10-04.md`](../../reports/target_c_fullcore_hull_train_depletion_floor_2026-10-04.md).
+- Promoted augmented train-rank / residual-floor theorem: [`target_c_augmented_train_phase_rank_small_residual_exclusion_2026-10-05.md`](../../reports/target_c_augmented_train_phase_rank_small_residual_exclusion_2026-10-05.md).
+- Promoted complete face/contact regularity theorem: [`target_c_complete_face_elimination_and_contact_regularity_2026-10-05.md`](../../reports/target_c_complete_face_elimination_and_contact_regularity_2026-10-05.md).
+
+- Sections 105--121 promotion audit: [`105-121-promotion-audit-2026-09-12.md`](105-121-promotion-audit-2026-09-12.md).
+- Sections 122--123 promotion audit: [`122-123-promotion-audit-2026-09-12.md`](122-123-promotion-audit-2026-09-12.md).
+- Canonical Section 110 report: [`target_c_section110_local_train_count_gap.md`](../../../research/target_c_section110_local_train_count_gap.md).
+- Canonical Section 111 report: [`target_c_section111_joint_shore_gap.md`](../../../research/target_c_section111_joint_shore_gap.md).
+- Canonical Section 112 report: [`target_c_section112_aggregate_projection_gap.md`](../../../research/target_c_section112_aggregate_projection_gap.md).
+- Canonical Section 113 report: [`target_c_section113_extended_stability_gap.md`](../../../research/target_c_section113_extended_stability_gap.md).
+- Canonical Section 114 report: [`target_c_section114_stability_envelope.md`](../../../research/target_c_section114_stability_envelope.md).
+- Canonical Section 115 report: [`target_c_section115_integrated_leakage_envelope.md`](../../../research/target_c_section115_integrated_leakage_envelope.md).
+- Canonical Section 116 report: [`target_c_section116_zero_host_closed_faces.md`](../../../research/target_c_section116_zero_host_closed_faces.md).
+- Canonical Section 117 report: [`target_c_section117_signed_return_transport_gap.md`](../../../research/target_c_section117_signed_return_transport_gap.md).
+- Canonical Section 118 report: [`target_c_section118_correlated_slack_signed_return.md`](../../../research/target_c_section118_correlated_slack_signed_return.md).
+- Canonical Section 119 report: [`target_c_section119_analytic_slack_envelope.md`](../../../research/target_c_section119_analytic_slack_envelope.md).
+- Canonical Section 120 report: [`target_c_section120_anisotropic_two_arc_return.md`](../../../research/target_c_section120_anisotropic_two_arc_return.md).
+- Canonical Section 121 report: [`target_c_section121_local_return_oler_bridge.md`](../../../research/target_c_section121_local_return_oler_bridge.md).
+
+- Independent Section 100 hostile audit: [`wrapping-angular-measure-hostile-audit-2026-09-12.md`](wrapping-angular-measure-hostile-audit-2026-09-12.md).
+- Section 101 promotion audit: [`../../audits/target_c_sections100_101_promotion_audit_2026-09-12.md`](../../audits/target_c_sections100_101_promotion_audit_2026-09-12.md).
+- Independent Section 102 hostile audit: [`../../audits/target_c_section102_phase_corridor_hostile_audit_2026-09-12.md`](../../audits/target_c_section102_phase_corridor_hostile_audit_2026-09-12.md).
+- Independent Section 103 hostile audit: [`../../audits/target_c_section103_unique_wrapping_cap_deficit_hostile_audit_2026-09-12.md`](../../audits/target_c_section103_unique_wrapping_cap_deficit_hostile_audit_2026-09-12.md).
+- Independent Section 104 hostile audit: [`../../audits/target_c_section104_quantitative_phase_gap_hostile_audit_2026-09-12.md`](../../audits/target_c_section104_quantitative_phase_gap_hostile_audit_2026-09-12.md).
+
+The state manifest also promotes the following report-level dependencies; these links are part of the canonical route:
+
+- [`target_c_zero_transfer_additive_promotion_2026-09-11.md`](../../reports/target_c_zero_transfer_additive_promotion_2026-09-11.md)
+- [`target_c_woodall_diameter_topology_2026-09-10.md`](../../reports/target_c_woodall_diameter_topology_2026-09-10.md)
+- [`target_c_common_bridge_transfer_exclusion_2026-09-10.md`](../../reports/target_c_common_bridge_transfer_exclusion_2026-09-10.md)
+- [`target_c_common_bridge_transfer_audit_2026-09-10.md`](../../reports/target_c_common_bridge_transfer_audit_2026-09-10.md)
+- [`target_c_attachment_perimeter_three_gap_endpoint_repair_2026-09-11.md`](../../reports/target_c_attachment_perimeter_three_gap_endpoint_repair_2026-09-11.md)
+- [`target_c_pr188_full_dependency_audit_2026-09-11.md`](../../reports/target_c_pr188_full_dependency_audit_2026-09-11.md)
+- [`target_c_pr182_full_dependency_audit_2026-09-11.md`](../../reports/target_c_pr182_full_dependency_audit_2026-09-11.md)
+- [`target_c_pocket_degree_dirichlet_cavity_2026-09-10.md`](../../reports/target_c_pocket_degree_dirichlet_cavity_2026-09-10.md)
+- [`target_c_pr191_dependency_audit_2026-09-11.md`](../../reports/target_c_pr191_dependency_audit_2026-09-11.md)
+- [`target_c_cyclic_p1_complete_ramification_exclusion_2026-09-10.md`](../../reports/target_c_cyclic_p1_complete_ramification_exclusion_2026-09-10.md)
+- [`target_c_cyclic_shell_d1_p1_s1_dependency_audit_2026-09-11.md`](../../reports/target_c_cyclic_shell_d1_p1_s1_dependency_audit_2026-09-11.md)
+- [`primitive-shell leaf-forcing promotion audit`](../../audits/target_c_primitive_shell_leaf_forcing_promotion_2026-09-12.md)
+- [`pseudosegment-grid promotion audit`](../../audits/target_c_pseudosegment_grid_promotion_2026-09-12.md)
+- [`complete-grid phase-collapse promotion audit`](../../audits/target_c_complete_grid_phase_collapse_promotion_2026-09-12.md)
+- [`Sections 75–76 promotion audit`](../../audits/target_c_sections75_76_promotion_2026-09-12.md)
+- [`inactive-chamber promotion audit`](../../audits/target_c_inactive_chamber_promotion_2026-09-12.md)
+- [`inactive-chamber hull stability report`](../../reports/target_c_subquadratic_chamber_hull_saturation_2026-09-11.md)
+- [`inactive-chamber hull stability promotion audit`](../../audits/target_c_inactive_chamber_hull_stability_promotion_2026-09-12.md)
+- [`near-unit isolate matching audit`](81-near-unit-isolate-matching-audit.md)
+- [`near-unit isolate matching promotion audit`](../../audits/target_c_inactive_near_unit_matching_promotion_2026-09-12.md)
+- [`deep near-unit isolate matching audit`](87-deep-near-unit-isolate-matching-audit.md)
+- [`deep near-unit matching promotion audit`](../../audits/target_c_inactive_deep_matching_promotion_2026-09-12.md)
+- [`harmonic-cell grid localization promotion audit`](../../audits/target_c_harmonic_cell_grid_localization_promotion_2026-09-12.md)
+- [`global container/full-core dichotomy promotion audit`](../../audits/target_c_global_container_fullcore_dichotomy_promotion_2026-09-12.md)
+- [`Sections 79, 80, 82, 83, and 88 chain audit`](../../audits/target_c_sections79_80_82_83_88_chain_audit_2026-09-12.md)
+- [`Sections 84, 85, and 89 interface/train promotion audit`](../../audits/target_c_sections84_85_89_interface_train_promotion_2026-09-12.md)
+- [`Sections 90–94 promotion audit`](../../audits/target_c_sections90_94_promotion_audit_2026-09-12.md)
+- [`Section 96 outer-walk gap hostile audit`](../../audits/target_c_section96_outer_walk_gap_hostile_audit_2026-09-12.md)
+- [`Cauchy wrapping-threshold report`](../../reports/target_c_cauchy_wrapping_threshold_candidate_2026-09-12.md)
+- [`Cauchy wrapping-threshold hostile audit`](../../audits/target_c_cauchy_wrapping_threshold_hostile_audit_2026-09-12.md)
+- [`Mixed-gap Cauchy wrapping-threshold report`](../../reports/target_c_mixed_gap_cauchy_threshold_candidate_2026-09-12.md)
+- [`Mixed-gap Cauchy wrapping-threshold hostile audit`](../../audits/target_c_mixed_gap_cauchy_threshold_hostile_audit_2026-09-12.md)
+- [`target_c_cyclic_s1_reciprocal_square_closure_2026-09-10.md`](../../reports/target_c_cyclic_s1_reciprocal_square_closure_2026-09-10.md)
+
+## Binding rejected implications
+
+Do not use without a new proof:
+
+- incident-diameter sequence `=>` Euler trail/path;
+- FB4 force-bulk localization;
+- the incompatible-cut C53 pentagon objection;
+- RSR disk-equality uniqueness;
+- Eppstein near-equality `=>` near quadrangulation;
+- five-host occupancy from angular-measure saturation;
+- inward OP pocket `subset` exterior Reuleaux minor cap;
+- deletion of contact-isolated source points;
+- full-source extension of the §57 affine-kernel theorem;
+- `r/(6C_T)` as the sharp limit of the Section-90 bin-counting method.
+
+The PR #191 `0.995540...` theorem remains rejected. The finite `q=13` S1 computation remains a regression, not a global-minimizer theorem.

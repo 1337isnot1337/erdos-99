@@ -1,0 +1,110 @@
+from __future__ import annotations
+
+import importlib.util
+import shutil
+import tempfile
+import unittest
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def load_module(name: str, path: Path):
+    spec = importlib.util.spec_from_file_location(name, path)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader
+    spec.loader.exec_module(module)
+    return module
+
+
+summary_guard = load_module(
+    "check_active_route_summaries", ROOT / "tools/check_active_route_summaries.py"
+)
+
+
+def copy_fixture(root: Path) -> None:
+    paths = {summary_guard.MANIFEST, *summary_guard.ACTIVE_TARGET_C_FILES}
+    for relative in paths:
+        destination = root / relative
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy(ROOT / relative, destination)
+
+
+class ActiveRouteSummaryTests(unittest.TestCase):
+    def test_current_repository_summary_matches_manifest(self):
+        self.assertEqual(summary_guard.run_checks(ROOT), [])
+
+    def test_stale_target_c_section_is_rejected(self):
+        state = summary_guard.load_state(ROOT)
+        expected = max(summary_guard.numbered_target_c_canonical_sections(state))
+        stale = max(0, expected - 1)
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            copy_fixture(root)
+            text = (root / summary_guard.README).read_text(encoding="utf-8")
+            text = text.replace("**C-I is closed; C-II is open.**",
+                                f"**C-I is closed; C-II is open.** Highest-numbered canonical Target C theorem source: Section {stale}.")
+            (root / summary_guard.README).write_text(text, encoding="utf-8")
+            errors = summary_guard.run_checks(root)
+            self.assertTrue(
+                any(f"highest canonical Section {stale}" in error for error in errors),
+                errors,
+            )
+
+    def test_duplicate_target_c_audit_section_number_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            copy_fixture(root)
+            target_dir = root / summary_guard.TARGET_C_DIR
+            (target_dir / "96-first-audit.md").write_text("first\n")
+            (target_dir / "96-second-audit.md").write_text("second\n")
+            errors = summary_guard.run_checks(root)
+            self.assertTrue(
+                any("duplicate Target C audit Section 96 filenames" in error for error in errors),
+                errors,
+            )
+
+    def test_stale_prompt_state_is_rejected(self):
+        state = summary_guard.load_state(ROOT)
+        expected = state["state_version"]
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            copy_fixture(root)
+            prompt = root / summary_guard.TARGET_C_PROMPT
+            text = prompt.read_text(encoding="utf-8")
+            text += "\n**State:** `stale.audit`\n"
+            prompt.write_text(text, encoding="utf-8")
+            errors = summary_guard.run_checks(root)
+            self.assertTrue(
+                any("but the manifest gives" in error and expected in error for error in errors),
+                errors,
+            )
+
+    def test_obsolete_section96_endpoint_directive_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            copy_fixture(root)
+            prompt = root / summary_guard.TARGET_C_PROMPT
+            text = prompt.read_text(encoding="utf-8")
+            text += "\nAttack the Section-96 boundary endpoint next.\n"
+            prompt.write_text(text, encoding="utf-8")
+            errors = summary_guard.run_checks(root)
+            self.assertTrue(
+                any("obsolete Section-96 endpoint" in error for error in errors),
+                errors,
+            )
+
+    def test_missing_authority_surface_is_rejected(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            copy_fixture(root)
+            (root / summary_guard.TARGET_C_CURRENT).unlink()
+            errors = summary_guard.run_checks(root)
+            self.assertTrue(
+                any(f"cannot read {summary_guard.TARGET_C_CURRENT}" in error for error in errors),
+                errors,
+            )
+
+
+if __name__ == "__main__":
+    unittest.main()

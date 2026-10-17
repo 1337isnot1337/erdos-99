@@ -1,0 +1,98 @@
+#!/usr/bin/env python3
+"""Regression checks for the high-t strong-TB1 exact contact-swap fork.
+
+This certificate checks only the finite algebra, counting arithmetic, and constants
+used in the proof note. It does not replace the geometric parent theorems cited there.
+"""
+
+from fractions import Fraction
+from math import asin, cos, pi, sin
+
+C_H = 0.453819885927
+GAMMA_H = asin(C_H)
+KAPPA = 31.4e6
+S0 = Fraction(791, 320_000_000)
+SIGMA = S0 / 2
+FINAL = S0 / 4
+
+# Current strong-TB1 branch constants.
+assert S0 == Fraction(791, 320_000_000)
+assert abs(float(S0) - 2.471875e-6) < 1e-18
+assert abs(float(SIGMA) - 1.2359375e-6) < 1e-18
+assert abs(float(FINAL) - 6.1796875e-7) < 1e-18
+assert float(SIGMA) < GAMMA_H
+
+# CS.2--CS.6: exact contact swap for a=(1,0), b at theta=pi-epsilon.
+# Avoid ultra-tiny sampled epsilon where 1+cos(theta) loses floating precision;
+# the identities themselves are exact algebraically.
+for eps in [1e-5, 1e-4, 1e-2, 0.2]:
+    theta = pi - eps
+    a = (1.0, 0.0)
+    b = (cos(theta), sin(theta))
+    v = (-(a[0] + b[0]), -(a[1] + b[1]))
+
+    ap = (a[0] + v[0], a[1] + v[1])
+    bp = (b[0] + v[0], b[1] + v[1])
+    assert abs(ap[0] + b[0]) < 1e-12
+    assert abs(ap[1] + b[1]) < 1e-12
+    assert abs(bp[0] + a[0]) < 1e-12
+    assert abs(bp[1] + a[1]) < 1e-12
+
+    q = (v[0] ** 2 + v[1] ** 2) ** 0.5
+    q_stable = 2 * sin(eps / 2)
+    assert abs(q - q_stable) < 1e-11
+    assert q <= eps + 1e-12
+
+    w = ((a[0] + b[0]) / q, (a[1] + b[1]) / q)
+    adot = a[0] * w[0] + a[1] * w[1]
+    bdot = b[0] * w[0] + b[1] * w[1]
+    assert abs(adot - q_stable / 2) < 1e-8
+    assert abs(bdot - q_stable / 2) < 1e-8
+
+# CS.13--CS.14: with n.w >= c_H D, the exact squared-length change
+# -2 q n.w + q^2 is strictly negative for the asymptotic regime. The
+# cone-collapse bound q <= KAPPA/D makes this overwhelmingly strict.
+for D in [100, 10_000, 10**9]:
+    q = min(1.0, KAPPA / D)
+    delta_sq = -2 * q * C_H * D + q * q
+    assert delta_sq < 0
+
+# CS.18: a pair can be moved by at most two pairwise-disjoint path layers,
+# one for the layer containing each endpoint. Exhaust small layer systems.
+for m in range(1, 15):
+    locations = list(range(m)) + [None]  # None = outside the selected layers
+    for x in locations:
+        for y in locations:
+            affected = [i for i in range(m) if (x == i) ^ (y == i)]
+            assert len(affected) <= 2
+
+# CS.27: if narrow projective gaps grow by at least 2 delta_D per selected
+# interface, then more than rho/(2 delta_D)+1 narrow pairs are impossible.
+for D in [10, 100, 1_000, 10_000]:
+    delta_D = 2 * asin(1 / (2 * D))
+    assert delta_D >= 1 / D
+    for rho in [1e-5, 1e-3, 0.1]:
+        n_too_many = int(rho / (2 * delta_D)) + 2
+        last_gap_floor = 2 * (n_too_many - 1) * delta_D
+        assert last_gap_floor >= rho - 1e-15
+
+# Section 8 density split. If at least half of an s0-density TB1 family is
+# two-sign, setting rho=s0/2 deletes at most rho/2=s0/4 density and leaves
+# s0/4. If at least half is one-sign, witness multiplicity two also leaves
+# s0/4 distinct near-active pairs.
+assert SIGMA / 2 == FINAL
+assert S0 / 4 == FINAL
+
+# The wide-pair central-diamond coefficient is positive and asymptotically
+# rho/4 at this very small fixed aperture.
+rho = float(SIGMA)
+central_radius_coeff = 0.5 * sin(rho / 2)
+assert 3.08e-7 < central_radius_coeff < 3.10e-7
+
+print("PASS: high-t TB1 exact contact-swap obstruction fork regressions")
+print("gamma_H radians =", GAMMA_H)
+print("strong-TB1 density floor s0 =", float(S0))
+print("two-sign density after half split =", float(SIGMA))
+print("final wide-pair / near-active density =", float(FINAL))
+print("wide-pair aperture rho =", rho)
+print("central-diamond radius coefficient at rho =", central_radius_coeff)

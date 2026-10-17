@@ -1,0 +1,488 @@
+<!-- theorem-state: {"artifact_id":"ART-DE1FD41E0E0A","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: loaded cap tips and exact paired-packet gluing
+
+**Date:** 2026-10-06. **Authority:**
+`a2811924d18778e8220c42904c9a5a92b58ffd78`,
+state `2026-10-06.audit.66`. **Worker:** 2, actual exterior caps.
+**Classification:** proved candidates awaiting independent audit for the
+finite geometric statements; conditional for their cap-closure application;
+regression for the sharp finite examples. Default lifecycle: unreviewed.
+C-II, the exterior-cap branch, and Level I remain open.
+
+The implication being attacked is
+
+```text
+two actual macroscopic antipodal caps
+ -> four separated actual loaded endpoints
+ -> delete those diameter-carrying endpoints and both full cell populations
+ -> protected packets glue with every cross lower pair checked
+ -> exact total cardinality and contact/diameter ledger
+ -> contradiction if the required packet population is supplied.
+```
+
+The packet population is not supplied here. The new implications remove
+the old restriction that a deletable wall vertex be unloaded, and remove
+an independent cross-packet compatibility hypothesis for the stated
+paired regions. They do not infer net insertion credit from safe area.
+
+## 1. Dependencies and provenance
+
+Canonical inputs are the full-source normalization, actual diameter
+endpoints being extreme vertices of K, the G-x loaded-component property,
+positive unloaded equilibrium, convex contact/pocket geometry, and
+`C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT` from audit.64.
+The unit-edge crossing identity is also canonical.
+
+Audit.66 now promotes the collective **closed unit wall** shield from
+Worker 1 at `e6d04c4d`. Only its precise elementary implication is used:
+separated deleted guards let a point be inside at most one deleted unit
+disk, after which one local vertex-cone argument suffices. A cap closing
+chord is still nonunit. The new one-unit-side hull-tip argument below is
+not covered by that promotion.
+
+The actual convex cells and their assigned isolate populations are the
+proved candidates M.1--M.2 of
+[the partial-wall report](target_c_exterior_cap_mixed_boundary_wall_capacity_2026-10-06.md).
+The only proof-only asymptotic input is the previously audited implication
+from [antipodal cap pairing](target_c_antipodal_exterior_cap_pairing_2026-09-25.md):
+the two cap limits, including their endpoints, are antipodal. Inter-cap
+error is o(D); no exact symmetry or O(sqrt(D)) inter-cap error is assumed.
+The finite statements below do not require antipodality.
+
+Worker 1's newer curved closed-wall packets at `1ca17812`, `91b61011`, and
+`d7395e79` were read. Their rounded population bound uses a complete unit
+wall with four side families. Q has a nonunit source-hull arc. Neither that
+population bound nor its packet is imported into Q. In particular, the
+discrete Green bow inequality does not give an exterior population bound
+or an actual cap lattice chart.
+
+## 2. Each cap cell has one hull arc and one unit path
+
+Use G, B, F, K, and Gamma=G union partial(K) as in M.1. Core vertices on
+partial(K) are exactly B. Between consecutive loaded vertices a,b, the
+source-hull arc has no internal core vertex. Its internal source vertices
+are isolates and have degree two in Gamma. If this arc is already a core
+edge, it is one unit hull contact; otherwise adding the entire arc to the
+connected G increases E-V by one. Let r be the number of arcs that are
+not already core edges.
+
+**Lemma T.0.** Each new bounded face of Gamma contains exactly one of
+these r added arcs. In particular, the cell Q containing an actual
+occupied cap between a,b is bounded by that full source-hull arc and a
+simple unit-contact path P from b to a. Its two hull-arc tips a,b are the
+actual loaded endpoints of the cap base.
+
+**Proof.** Euler gives exactly r new bounded faces; the old bounded G
+faces are unchanged. A new face must contain an added edge, since a face
+with its entire boundary and no interior edge in G was already a G face.
+Every added arc belongs on its K-interior side to just one face: each
+internal arc vertex has degree two and no core edge intervenes. Thus r
+arcs are distributed over r new faces, with at least one per face.
+There is exactly one per face. Gamma is 2-connected by M.1, so the rest
+of each face boundary is a simple path, consisting of unit G edges. QED.
+
+Write W_Q for the vertices of P and
+
+    S_Q=(A intersect Q) minus W_Q.
+
+These are all contact isolates, including every source point on the
+pure source-hull arc. At either tip there is one incident unit path side
+and one pure source-hull side. Any other vertex of P has two incident
+unit path sides, including any additional loaded vertex on P. No claim
+that such additional loaded vertices are absent is needed.
+
+## 3. Deleting a loaded hull tip needs only one unit guard
+
+Let v be a hull-arc tip of Q, w its unit-path neighbor, and h the ray of
+the pure hull side at v. Put v=0, w=(1,0), and orient the plane so that
+the Q vertex cone is
+
+    0<arg(x)<theta,    h has angle theta,    0<theta<pi.
+
+The hull-side supporting half-plane containing K consists of directions
+in [theta-pi,theta]. This is the extra exterior premise unavailable at an
+arbitrary opened internal wall.
+
+**Lemma T.1 (one-unit-side tip shield).** If x is in int(Q), unit-clear
+of every other path vertex, and no guard is imposed at v, then x is
+unit-clear of every old source point outside Q other than v. Strict path
+guards give strict clearance. With nonstrict guards, every old nonwall
+point outside Q is still strictly clear; possible new-old unit contacts
+are confined to the explicitly guarded path vertices.
+
+**Proof.** If x is at least one from v, it is at least one from all
+original wall vertices. The first exit of xq cannot be through a pure
+hull side: x is in int(K), q is in K, and the segment is in int(K)
+before q. At a unit wall cd, the weighted-square identity bounds each
+segment piece below by sqrt(3)/2, giving |x-q|>=sqrt(3)>1. A vertex exit
+gives at least two.
+
+Otherwise set r=|x|<1. The guard at w implies
+
+    x dot w <= r^2/2 < 1/2.                              (1)
+
+An old q outside the Q cone but in K has argument in [theta-pi,0].
+If x has argument phi in (0,theta), its scalar product with a unit
+vector in that interval is maximized uniquely at the unit ray w:
+phi-arg(q) is in [phi,phi+pi-theta], contained in (0,pi).
+Consequently x dot q <= |q|(x dot w). Original source separation
+gives |q|>=1, so
+
+    |x-q|^2 >= r^2+1-2(x dot w) >= 1.                  (2)
+
+Equality requires q=w, already handled by its guard. For a q inside
+the cone but outside Q, its segment cannot exit through either incident
+ray or v. It cannot exit early through the source hull either. Its
+first exit is a different unit path side, whose two vertices are guarded;
+the crossing bound applies. This also proves the claimed strictness
+for nonwall points with nonstrict guards. QED.
+
+The same proof covers r=1 by the first case. Notice that q need not be
+an old source point for the geometric argument: it is enough that q
+is in K, outside Q, and unit-clear of the original path vertices and v.
+This form will check new-new pairs below.
+
+**Lemma T.2 (acute loaded tips).** In a canonical source, each of Q's
+two loaded tip angles is strictly below pi/2.
+
+**Proof.** Suppose theta>pi/2. Choose a ray strictly inside the Q cone
+at angle phi in (pi/2,theta); a point x tending to v on it is strictly
+farther than one from w. At theta=pi/2 use
+
+    x=(t^2/4,t),   t>0 sufficiently small.
+
+It is strictly inside Q and
+
+    |x-w|^2=1+t^2/2+t^4/16>1.
+
+Every other path vertex is strictly unit-clear of v. A nonconsecutive
+unit edge from v to a path vertex would cross the convex face interior
+and split Q, so the only path unit neighbor of v is w. Finiteness
+therefore preserves all its other path guards for small t. Every S_Q
+point is a contact isolate, so its strict distance from v also persists.
+T.1 checks all remaining outside source points. Replace v alone by x.
+No contact is created, at least vw is removed, and triangle-freeness is
+preserved. All new upper pairs are strict because x is in int(K).
+In addition v is an actual diameter endpoint. The canonical audit.64
+endpoint with j=0<t gives a contradiction. QED.
+
+Let T_P be the sum of internal left turns on the oriented unit path
+and T_K the sum of the internal turns on the pure hull arc. Convexity
+and total polygon turn give the useful exact consequence
+
+    T_P+T_K=theta_a+theta_b<pi,   hence T_P<pi.         (3)
+
+This is an exterior unit **arc**, rather than a closed unit wall.
+
+## 4. A finite displacement gap at each deleted loaded tip
+
+For x in int(Q) with |x-w|>=1, its argument phi is strictly between
+0 and theta_v. Since theta_v<pi/2,
+
+    |x-v|^2 >= 2(x-v) dot (w-v)
+             > 2|x-v| cos(theta_v).
+
+Thus every proposed interior site, even one with exact contacts, satisfies
+
+    |x-v| > 2 cos(theta_v) > 0.                         (4)
+
+This explains why deleting the loaded endpoint cannot be implemented by
+an arbitrarily small movement into its own cap cell. It is a finite
+source-dependent gap; there is no claimed uniform gap across sources.
+For theta_v<=pi/3, the missing tip guard is redundant: (4) already gives
+|x-v|>1. Deleting that tip alone does not enlarge this protected region.
+
+The exact rational cone of angle arctan(4/3) has cos(theta)=3/5 and
+gap 6/5. This does not refute a nonlocal replacement or a motion of the
+retained core. It rules out treating the old loaded site as an interior
+site by continuity.
+
+**Lemma T.2a (exact full-guard population).** Put
+
+    W_{Q,empty}={x in int(Q): |x-w|>1 for every w in W_Q}.
+
+Its unit-separated capacity in a canonical source is exactly |S_Q|.
+
+**Proof.** The old S_Q points have every lower distance strictly above
+one. A sufficiently small common contraction about an interior Q point
+moves every outer-boundary isolate into int(Q), while preserving every
+finite strict mutual and wall margin. This supplies |S_Q| sites.
+
+Conversely, if |S_Q|+1 sites fit, delete S_Q and any contact vertex of
+the unit path. Keep the strict guard at that deleted vertex as well.
+Tiny packet dilation opens all mutual contacts. The all-guard unit-edge
+exit identity shields every retained outside source point; every new
+upper pair is strict by interiority in K. The new source is triangle-free,
+has exactly the old cardinality, and loses at least one old contact.
+Audit.64 gives a contradiction. QED.
+
+This is an exact source count, not an estimate from area. In particular,
+when a loaded tip angle is at most pi/3, deleting that tip adds **zero**
+strict packet capacity: its missing guard is redundant by (4), and the
+region still has exactly |S_Q| sites. If both tips have that angle bound,
+their joint deletion likewise adds zero strict capacity. Two additional
+points cannot be inferred from the two missing labels.
+
+More generally, a deleted internal unit-path vertex of angle psi<=2pi/3
+also has a redundant guard in the strict region: the two strict neighbor
+guards give |x-v|>2cos(psi/2)>=1. Its neighbors remain guarded whenever
+deleted vertices are pairwise at least four apart. Thus, if every bank
+vertex on Q has its appropriate angle bound (pi/3 at a hull tip and
+2pi/3 at an internal path vertex), the collectively relaxed **strict**
+region equals W_{Q,empty} exactly.
+
+This excludes the proposed fixed-wall strict endpoint-refill mechanism
+in that angle regime. It does not exclude the source or provide an
+exact-contact or moved-core replacement. In particular it cannot be
+advertised as exterior-cap elimination.
+
+## 5. The four actual endpoints form a separated bank
+
+Let C_1,C_2 be the actual antipodal macroscopic cap pair. The proof-only
+pairing theorem gives opposite normalized disk-cap limits. If theta is
+their limiting half-width, macroscopic area gives theta>0. Canonical
+centered inradius of F is (sin(rho)/2-o(1))D, where rho=cos(rho), so
+
+    theta <= pi/2-rho < pi/2.
+
+The four normalized endpoints consequently have angular separations
+bounded below by min(2theta,pi-2theta)>0 and norm tending to 1/2.
+Every subsequential limit has four distinct endpoints. Compactness for
+a fixed positive cap-area lower bound supplies a constant gamma>0 with
+
+    min_{v!=w in R}|v-w| >= gamma D,  eventually,       (5)
+
+where R consists of the two actual loaded tips of each cell. In
+particular R has four points and satisfies pair separation at least four
+for sufficiently large sources. No exact central symmetry is used.
+
+## 6. Collective shield in each actual cell
+
+For the four-point bank R above define
+
+    N_i={x in int(Q_i): |x-w|>=1 for w in W_i minus R},
+    W_i^o={x in int(Q_i): |x-w|>1 for w in W_i minus R}.
+
+The symbol W_i^o is a region; W_i is the original unit-path vertex set.
+Other-cap endpoints that happen to lie on this path are also deleted
+guards. No source point in S_i is retained in the eventual exchange.
+
+**Lemma T.3.** Every x in N_i is unit-clear of every original point in
+A minus (S_i union R). It is strictly clear of every such point not
+on W_i. With the strict region W_i^o, all these distances are strict.
+Moreover x is strictly clear of any original member of R not on W_i.
+
+**Proof.** Pair separation of R implies that x is within distance
+strictly below one of at most one deleted guard. If it is not, all
+original wall distances are at least one, and the unit-edge crossing
+bound proves the result. If it is close to v in R intersect W_i, all
+other deleted guards are at distance at least three. Its incident unit
+neighbors are retained. A hull tip has the one-unit-side shield T.1;
+an internal path vertex has the two-unit-ray cone argument of M.2 and
+canonical audit.63/66. The first exit cannot use a pure hull side.
+All other exit vertices have guards at least one. This proves strict
+clearance of every nonwall point, including original R points outside
+the wall, by exactly the same source-separation inequalities. At exact
+distance one from a deleted guard the first crossing case applies. QED.
+
+## 7. Automatic cross-packet separation
+
+**Theorem T.4.** If Q_1,Q_2 are distinct actual cells with distinct
+hull-arc tips, R is their four tips, and pair distances in R are at
+least four, then
+
+    |x-y|>1 for every x in N_1 and y in N_2.             (6)
+
+The result includes nonstrict wall guards. Thus every pair of locally
+unit-separated packets in these regions is globally unit-separated,
+and it creates no cross-packet contacts or triangles.
+
+**Proof.** Call a point close to R if its distance to some v in R is
+at most one. There is at most one such v. By T.3 a close deleted point
+must be on that point's own path boundary; old deleted points outside
+the path are strictly clear.
+
+If x and y are close to different v,w, then
+
+    |x-y| >= |v-w|-|x-v|-|y-w| >= 2>1.
+
+They cannot both be close to the same v. Here v is an extreme point of
+K, so distinct incident face sectors have total angle strictly below pi.
+An internal unit-path sector of angle psi admits a point at radius r<=1
+guarding both unit neighbors only if
+
+    r>=2 cos(psi/2),  hence psi>=2pi/3.                 (7)
+
+A hull-tip sector admits a point at radius r<=1 guarding its one unit
+neighbor only if its angle is strictly above pi/3, by (4). The same v
+cannot be a hull tip of both cells because their four tips are distinct.
+Two internal sectors would require total angle at least 4pi/3; an
+internal sector and a tip sector would require total angle greater than
+pi. Both contradict the hull cone bound.
+
+It remains that neither point is close to R, or just one is. T.3 checks
+every original retained wall vertex of the other cell; a point far from
+R is also unit-clear of every deleted vertex. If both points are far,
+follow xy to the first unit-wall exit of Q_1: both endpoints guard that
+wall, so |x-y|>=sqrt(3)>1 (or at least two for a vertex exit).
+
+If only x is close to v, y guards every original Q_1 wall vertex and v.
+Use the geometric T.1 or two-unit-cone proof for x against y instead of
+an old q. If y is outside the local cone, equality in the cone estimate
+could occur only at an original unit wall neighbor. But y is in int(Q_2),
+and an original core wall point is never inside that face. If y is in
+the cone, its first exit from Q_1 is a different guarded unit wall.
+Thus |x-y|>1. Exchange the two cells for the remaining case. QED.
+
+This is not an independent-cap area sum. It is a finite geometric proof
+of every new cross lower distance, including the deleted-vertex corners.
+The distinct-tip hypothesis is essential; Section 10 preserves its
+failure when two cells share an actual loaded tip.
+
+## 8. Exact paired-cap diameter-endpoint exchange
+
+The populations S_1,S_2 are disjoint: face interiors are disjoint and
+their only shared boundary source points are core wall vertices. A hull
+isolate is assigned to just one pure arc. Define
+
+    R_all=S_1 union S_2 union R,
+    m=|S_1|+|S_2|+4.
+
+Every R point is an actual diameter endpoint and a contact vertex. Let
+t be the number of original contacts lost and d the number of original
+actual diameter pairs lost, with edges counted once. Since R vertices
+are pairwise at least four apart, no old contact joins two of them, and
+
+    t=sum_{v in R} deg_C(v),    4<=t<=20,    d>0.        (8)
+
+The upper bound uses triangle-freeness: six unit neighbors would force
+six angular gaps exactly 60 degrees and hence a unit triangle.
+
+**Theorem T.5 (conditional paired loaded-core release).** Suppose finite
+packets Y_i subset N_i are locally unit-separated and their total size
+is m. Count every packet-internal and packet-to-retained-wall unit pair
+as j_i. If each complete local new contact graph is triangle-free and
+
+    j_1+j_2<=t,                                        (9)
+
+the canonical source is impossible.
+
+**Proof.** Delete R_all and insert Y_1 union Y_2. T.3 checks every
+new-old lower pair; T.4 checks every cross new pair strictly. Every
+inserted point is in int(K), so every involving upper pair is <D.
+New unit contacts are exactly the j_1+j_2 pairs. The full new graph is
+triangle-free: retained old triangles do not exist, and a triangle
+meeting both packets would require a forbidden cross contact. The
+local triangle check includes both retained anchors of any triangle.
+Cardinality is m on both sides. All old diameter pairs meeting R are
+removed, and none are created. Audit.64 applies with j<=t and d>0,
+including the case j=t. QED.
+
+If R_all also covers all old diameter pairs, strict diameter follows
+without any contact or triangle restriction. That coverage is not
+claimed for these four endpoints alone.
+
+**Strict-capacity corollary.** Let M_i=Pack_1(W_i^o). Then
+
+    M_1+M_2 >= |S_1|+|S_2|+4                            (10)
+
+would contradict the canonical source. Select exactly m sites and dilate
+each finite packet slightly: all internal unit pairs open, the strict
+wall guards persist, and T.4 still supplies strict cross separation.
+Then j=0<t. Thus an actual surviving pair necessarily satisfies
+
+    M_1+M_2 <= |S_1|+|S_2|+3.                           (11)
+
+Every M_i is at least |S_i|: each old S_i point is strict-clear of every
+old source point, and its finitely many boundary points can be moved
+slightly into Q_i with all strict pair margins preserved. No packet
+needs to be allocated exactly |S_i|+2 sites separately; (10) is a total
+cardinality comparison with proved cross compatibility.
+
+For a paid exact-contact packet, at most 2j<=40 inserted vertices are
+incident with new contacts. Its quadratic remaining population is strict.
+This localizes a contact ledger; it does not supply the m sites.
+
+## 9. One site cannot be pinned by a half-turn unit arc
+
+Here all internal vertices of a convex unit path P are guarded. Only
+its endpoints may be missing guards. Let its internal turn be <pi.
+Let x be in the Q side of P, unit-clear of all retained path vertices,
+and suppose the contact graph formed by x and the path is triangle-free.
+
+**Lemma T.6.** The unit-neighbor vectors from x to retained path vertices
+do not strictly surround the origin. Consequently all these contacts
+can be opened by an arbitrarily small finite movement of x, by the
+canonical audit.64 one-site argument.
+
+**Proof.** If they strictly surrounded x, the polar gaps between cyclic
+unit neighbors would all be <pi. Choose three consecutive such neighbors
+a,b,c in path order. Write their unwrapped polar angles about x as
+phi_a<phi_b<phi_c, with both intervening gaps <pi. Orient P with Q
+on its left. Its edge directions are monotone and x is left of every
+path edge.
+
+Let p be the path vertex immediately after a. It is not b: otherwise
+xa,xb,ab form a unit triangle. It is an internal path vertex between
+a and c and therefore is guarded. Put x=0, |a|=|b|=1, and let eta
+be the direction of the unit vector p-a. Guarding p and left-sidedness
+give 0<eta-phi_a<=2pi/3. Original wall separation |p-b|>=1 gives
+
+    (b-a) dot (p-a) <= |b-a|^2/2.
+
+On this direction interval that excludes
+phi_b<eta<phi_a+pi, so eta<=phi_b.
+
+Similarly the unit edge into c, whose preceding vertex is not b and
+is guarded, has direction zeta>=phi_b+pi. This is the same inequality
+reversed, together with zeta-phi_c>=pi/3. Monotone convex path turning
+then gives T_P>=zeta-eta>=pi, a contradiction. QED.
+
+The lemma concerns a single site with wall contacts, not a coupled packet
+with internal contacts or an arbitrary cell with deleted internal guards.
+For a packet with all mutual distances strict and all internal path
+vertices guarded, its individual wall contacts can be opened successively
+by sufficiently small moves, while preserving every other finite strict
+pair margin. Exact wall contacts in such an independent packet supply
+no additional contact-budget mechanism. A general packet can instead
+have a coupled internal contact graph; this argument does not release it.
+
+## 10. Exact regressions and the remaining closure obligation
+
+The companion rational verifier preserves three sharp checks.
+
+1. At a right-angle hull tip, x=(t^2/4,t) opens its sole wall contact
+   while entering the polygon. This checks the equality case in T.2.
+2. For the unit path
+   b,b+c,c,c+a,a, where
+   a=(24/25,7/25), b=(-24/25,7/25), c=(0,-1), the turn is exactly pi.
+   The inserted origin has three unit wall neighbors a,b,c, is strictly
+   clear of the other wall vertices, and the full contact graph is
+   triangle-free. Positive weights 25/14,25/14,1 strictly surround it.
+   The origin is the only feasible site in its radius-1/2 neighborhood.
+   Thus the strict half-turn scope in T.6 cannot be weakened to <=pi.
+3. Take every integer point on [0,L] x {0}, L>=26, and hull isolates
+   (1,+7),(1,-7). Its actual diameter is L, with sole pair (0,0),(L,0).
+   Both convex outer cells share those loaded tips. After removing the
+   common tip (0,0), the sites (1/20,+1/3),(1/20,-1/3) each strictly
+   guard their unit wall and all old outside points, but their mutual
+   squared distance is 4/9<1. This is an exact actual-diameter regression
+   against gluing cells with shared loaded tips. Its force hull is a
+   line and its degree-two core violates the canonical two-dimensional
+   rigidity/normalization; it is not a macroscopic-cap counterexample.
+
+The strained triangular cap, adaptive saturation, old diameter core,
+nonexact cap antipodality, and retained isolates remain binding. No
+proof-only closed-wall chart from Worker 1 has been substituted for Q.
+The new endpoint gap (4) also rules out a continuous push of the old
+loaded tips into their protected cell.
+
+**Exact remaining paired-cap lemma:** force either the joint integer
+population (10), or packets of total population m with complete local
+triangle-freeness and paid ledger (9), or a same-cardinality global
+strict-sub-D rearrangement. The finite source and cross-packet checks
+are now proved under these exact hypotheses. The forced population
+and any required motion of the rest of the core remain unproved.
+
+This is not CAP-BRANCH CLOSED. It is a new finite loaded-endpoint and
+paired-packet implication available for a future closing theorem.

@@ -1,0 +1,128 @@
+#!/usr/bin/env python3
+"""Regression checks for metric train-grid span and full-rectangle saturation lock."""
+
+from decimal import Decimal, getcontext
+from fractions import Fraction as Q
+from itertools import combinations
+
+getcontext().prec = 70
+D = Decimal
+sqrt3 = D(3).sqrt()
+c = sqrt3 / D(2)
+
+# Proven shore-density floors.
+a_full = Q(113, 5_000_000)       # 0.0000226
+b_full = Q(1567, 5_000)          # 0.3134
+a_phase = Q(7, 625_000)          # 0.0000112
+b_phase = Q(783, 10_000)         # 0.0783
+
+# Full-rectangle hub synchronization costs: strict hub side, then hubward half.
+a_sync_full = a_full / 4
+nested_full = a_full / 8
+one_dest_full = a_full / 16
+
+# Existing phase-collapsed synchronization.
+a_sync_phase = Q(7, 2_500_000)   # 2.8e-6
+
+assert a_sync_full == Q(113, 20_000_000)
+assert nested_full == Q(113, 40_000_000)
+assert one_dest_full == Q(113, 80_000_000)
+assert float(a_sync_full) == 5.65e-6
+assert float(nested_full) == 2.825e-6
+assert float(one_dest_full) == 1.4125e-6
+
+
+def dec(q: Q) -> Decimal:
+    return D(q.numerator) / D(q.denominator)
+
+# Asymptotic metric crossing-center spans from the exact train-step bound sqrt(3)/2.
+row_full_span = c * dec(b_full)
+col_full_span = c * dec(a_full)
+row_phase_span = c * dec(b_phase)
+col_phase_span = c * dec(a_phase)
+col_sync_phase_span = c * dec(a_sync_phase)
+col_sync_full_span = c * dec(a_sync_full)
+
+assert D('0.27141') < row_full_span < D('0.27142')
+assert D('1.9572e-5') < col_full_span < D('1.9573e-5')
+assert D('0.067809') < row_phase_span < D('0.067811')
+assert D('9.6993e-6') < col_phase_span < D('9.6996e-6')
+assert D('2.4248e-6') < col_sync_phase_span < D('2.4250e-6')
+assert D('4.8929e-6') < col_sync_full_span < D('4.8932e-6')
+
+# Full-rectangle synchronized incidence product.
+product_full = dec(a_sync_full) * dec(b_full)
+assert product_full == D('0.000001770710')
+
+# Endpoint-disjoint extraction via Delta(H) <= (4*3^(1/8)+o(1))D^(3/4).
+root8_3 = D(3) ** (D(1) / D(8))
+sync_disjoint = dec(a_sync_full) / (D(4) * root8_3)
+nested_disjoint = dec(nested_full) / (D(4) * root8_3)
+dest_disjoint = dec(one_dest_full) / (D(4) * root8_3)
+assert D('1.2312e-6') < sync_disjoint < D('1.2313e-6')
+assert D('6.1562e-7') < nested_disjoint < D('6.1564e-7')
+assert D('3.0780e-7') < dest_disjoint < D('3.0783e-7')
+
+# Finite train-step lemma. Normalize the lower h_u increment of every full
+# centerline step to 2 units. A crossing-rhombus center at step k has h-coordinate
+# sum_{j<k} inc_j + inc_k/2. For arbitrary integer increments >=2 and any
+# increasing crossing-step subsequence, consecutive crossing centers are separated
+# by at least 2, hence extremes by >=2(M-1).
+for nsteps in range(1, 9):
+    # Test all low-complexity increment patterns 2/3; larger increments can only help.
+    for mask in range(1 << nsteps):
+        inc = [2 + ((mask >> j) & 1) for j in range(nsteps)]
+        prefix = [0]
+        for x in inc:
+            prefix.append(prefix[-1] + x)
+        centers = [prefix[k] + inc[k] / 2 for k in range(nsteps)]
+        for m in range(1, nsteps + 1):
+            for ks in combinations(range(nsteps), m):
+                span = centers[ks[-1]] - centers[ks[0]]
+                assert span >= 2 * (m - 1), (inc, ks, span)
+
+# Finite median-index synchronization lemma for a consecutive A_* block relative
+# to an arbitrary hub. Removing the hub-adjacent row(s), one strict side has at
+# least half asymptotically; the hubward half of that side has enough earlier
+# internal regions to supply the same number of switching diameters.
+for m in range(8, 35):
+    rows = list(range(1, m + 1))
+    for hub in range(0, m + 2):
+        left = [j for j in rows if j < hub]
+        right = [j for j in rows if j > hub]
+        side = left if len(left) >= len(right) else right
+        if len(side) < 2:
+            continue
+        if side is left:
+            L = len(side) // 2
+            block = side[-L:]
+            first = block[0]
+            available = list(range(1, first))
+            # In an ambient path the A_* block can start later, so this model is
+            # the worst case when it starts at index 1.
+            assert len(available) >= L
+        else:
+            # Reverse path symmetry.
+            rev = [m + 1 - j for j in side]
+            rev.sort()
+            L = len(rev) // 2
+            block = rev[-L:]
+            first = block[0]
+            available = list(range(1, first))
+            assert len(available) >= L
+
+print('PASS: high-t metric train-grid span regressions')
+print('sqrt(3)/2 =', c)
+print('full row B_* crossing span coefficient =', row_full_span)
+print('full column A_* crossing span coefficient =', col_full_span)
+print('phase-collapsed row B_0 crossing span coefficient =', row_phase_span)
+print('phase-collapsed column A_0 crossing span coefficient =', col_phase_span)
+print('synchronized phase column A_1 crossing span coefficient =', col_sync_phase_span)
+print('full synchronized column A_1* crossing span coefficient =', col_sync_full_span)
+print('full synchronized E_0/A_1 density =', dec(a_sync_full))
+print('full synchronized incidence product coefficient =', product_full)
+print('full synchronized nested density =', dec(nested_full))
+print('full synchronized one-destination density =', dec(one_dest_full))
+print('full sync disjoint coefficient =', sync_disjoint)
+print('full nested disjoint coefficient =', nested_disjoint)
+print('full destination disjoint coefficient =', dest_disjoint)

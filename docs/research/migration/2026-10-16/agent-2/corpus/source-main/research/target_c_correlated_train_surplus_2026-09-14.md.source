@@ -1,0 +1,288 @@
+# Erdős Problem #99 — correlated stopped-train surplus
+
+**Date:** 2026-09-14
+**Repository base:** `bb363adf`
+**State version:** `2026-09-14.audit.51`
+**Target:** Target C-II, canonical full-core Type-II branch
+**Status:** proof-only candidate depending on the AG42 `eta_grid=0.00042` refinement; theorem-state authority unchanged
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+This note couples the all-stopped-train atomic gap to the exact split between
+rhombic and singleton stopped trains.  The sharpened constants use the proof-only AG42
+refinement `eta_grid=0.00042`; therefore every `0.00042`-dependent conclusion below
+inherits AG42's awaiting-audit status.  Let `T` be the full stopped-train count of
+§142, `T_R=B_4/2` the non-singleton rhombic-train count, `S=T-T_R` the singleton
+count, and
+
+\[
+\sigma_R=B_4-4\sqrt{R_4},\qquad
+\rho_{rec}=b+4f+Q-B_4.
+\]
+
+The main result is
+
+\[
+\boxed{\liminf {\rho_{rec}+\sigma_R-q\over D}\ge0.00084.}
+\tag{CS.1}
+\]
+
+Together with the canonical difference-body bound
+
+\[
+\liminf {q\over D}\ge2\rho,
+\qquad \rho=\cos\rho=0.7390851332151606\ldots,
+\tag{CS.2}
+\]
+
+this gives
+
+\[
+\boxed{\liminf {\rho_{rec}+\sigma_R\over D}
+\ge2\rho+0.00084=1.4790102664303213\ldots}
+\tag{CS.3}
+\]
+
+and hence
+
+\[
+\boxed{\liminf {\max\{\rho_{rec},\sigma_R\}\over D}
+\ge\rho+0.00042=0.7395051332151606\ldots .}
+\tag{CS.4}
+\]
+
+Inserting (CS.3) into the exact post-endpoint identity raises the proof-only full-core
+surplus floor to
+
+\[
+\boxed{\liminf\mu_D\ge
+\mu_{TC}+{\rho\over5}+0.000084
+=1.785463210824532\ldots .}
+\tag{CS.5}
+\]
+
+This does not close C-II because no universal `mu_D` ceiling below (CS.5) is currently
+available.  It does remove the former near-floor scalar region and forces one of two
+large geometric mechanisms.
+
+## 1. Exact stopped-train bookkeeping
+
+The §142 stopped-train decomposition includes singleton positive-contact edges.  Every
+train containing a strict rhombus has two strict-rhombus boundary ends, so
+
+\[
+T=T_R+S,
+\qquad B_4=2T_R.
+\tag{CS.6}
+\]
+
+The full endpoint handshake is
+
+\[
+b+4f+Q=2T.
+\tag{CS.7}
+\]
+
+Therefore
+
+\[
+\boxed{\rho_{rec}=b+4f+Q-B_4=2S.}
+\tag{CS.8}
+\]
+
+Since `sigma_R=2T_R-4sqrt(R_4)`,
+
+\[
+\boxed{\rho_{rec}+\sigma_R=2T-4\sqrt{R_4}.}
+\tag{CS.9}
+\]
+
+Equivalently, using `T-q=2f-k`, the old train-boundary slack
+
+\[
+\tau_D=q-k+2f-2\sqrt{R_4}=T-2\sqrt{R_4}
+\]
+
+satisfies the exact finite identity
+
+\[
+\boxed{2\tau_D=\rho_{rec}+\sigma_R.}
+\tag{CS.10}
+\]
+
+## 2. Audited §168 preserves a loaded-hull term
+
+The audited §168 argument, with the proof-only AG42 quantitative refinement, gives
+
+\[
+\boxed{\liminf {T-q/2\over D}
+\ge2\sqrt{\Delta_2}+0.00042,}
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\tag{CS.11}
+\]
+
+Canonical full-core rhombic saturation gives
+
+\[
+{\sqrt{R_4}\over D}\to\sqrt{\Delta_2}.
+\tag{CS.12}
+\]
+
+Subtracting the convergent `2sqrt(R_4)/D` term from (CS.11),
+
+\[
+\liminf {T-2\sqrt{R_4}-q/2\over D}\ge0.00042.
+\tag{CS.13}
+\]
+
+Using (CS.10) and multiplying by two proves (CS.1).  The crucial point is that the
+full `q` term survives; this is far stronger than the separate universal
+`sigma_R/D>=0.00084` bound.
+
+## 3. Difference-body density makes the correlation macroscopic
+
+Audited §59 proves
+
+\[
+\liminf {h\over D}\ge2\rho=1.4781702664303213\ldots
+\tag{CS.14}
+\]
+
+and canonically `q>=h`.  Combining this with (CS.1) gives (CS.3), and
+`max(x,y)>=(x+y)/2` gives (CS.4).
+
+Thus every sufficiently large full-core survivor has, up to `o(D)`, at least one of:
+
+1. **singleton branch**
+   \[
+   \rho_{rec}\ge(\rho+0.00042-o(1))D,
+   \]
+   hence
+   \[
+   S\ge(\rho/2+0.00021-o(1))D
+   =0.3697525666075803\ldots D-o(D);
+   \]
+2. **rhombic non-Mantel branch**
+   \[
+   \sigma_R\ge(\rho+0.00042-o(1))D.
+   \]
+
+## 4. Explicit full-core `mu_D` floor
+
+The exact post-endpoint decomposition is
+
+\[
+\begin{aligned}
+\mu_DD={}&{2P_F+2\sqrt{R_4}\over5}
++m_B+{2\over5}(Q-f)+{2\over5}(b-P_F)\\
+&+{1\over10}\rho_{rec}+{1\over10}\sigma_R-2c_I-4.
+\end{aligned}
+\tag{CS.15}
+\]
+
+Here `P_F/D->pi`, `R_4/D^2->Delta_2`, `c_I/D->0`, and the three remaining defect
+terms are nonnegative.  Therefore (CS.3) gives
+
+\[
+\boxed{\liminf\mu_D\ge
+{2\pi+2\sqrt{\Delta_2}\over5}+{2\rho+0.00084\over10}
+=1.785463210824532\ldots .}
+\tag{CS.16}
+\]
+
+The improvement over `mu_TC` is `0.147901026643032...`, so this is not a perturbative
+sharpening.
+
+Earlier near-floor abstract scalar witnesses did not encode the audited §168
+correlation between the full stopped-train count and `q`.  Future full-stack scalar
+regressions must include (CS.1) or an equivalent form; witnesses with
+`mu<1.785459...` are not compatible with the complete currently available
+canonical/audited-working/proof-only input stack.
+
+## 5. The large-Mantel side is genuinely quadratic
+
+On the second branch put `c_*=rho+0.00042`.  With
+
+\[
+M_R={T_R^2\over4}-R_4,
+\]
+
+the exact rationalization is
+
+\[
+M_R={\sigma_R(T_R+2\sqrt{R_4})\over8}
+={\sigma_R\over8}
+\left(4\sqrt{R_4}+{\sigma_R\over2}\right).
+\tag{CS.17}
+\]
+
+Thus
+
+\[
+\boxed{\liminf {M_R\over D^2}\ge
+{c_*\over8}\left(4\sqrt{\Delta_2}+{c_*\over2}\right)
+=0.3862993446794404\ldots .}
+\tag{CS.18}
+\]
+
+This is a macroscopic fraction of the Mantel capacity, qualitatively stronger than the
+small universal deficit in the preceding rhombic-train note.
+
+## 6. Correlated endpoint-defect floor
+
+The full stopped-train handshake also turns the sharpened all-train theorem into a
+large direct boundary/interface statement.  Put
+
+\[
+E_{exc}:=Q+4f.
+\]
+
+Then
+
+\[
+(b-P_F)+E_{exc}=2T-P_F.
+\tag{CS.19}
+\]
+
+Using the sharpened all-train bound
+
+\[
+{T-q/2\over D}\ge2\sqrt{\Delta_2}+0.00042-o(1),
+\]
+
+together with `q/D>=2rho-o(1)` and `P_F/D->pi`, we obtain
+
+\[
+\boxed{
+\liminf { (b-P_F)+(Q+4f) \over D}
+\ge
+2\rho+4\sqrt{\Delta_2}-\pi+0.00084
+=2.1466688402963574\ldots .
+}
+\tag{CS.20}
+\]
+
+This is a full stopped-train endpoint-defect floor.  It is much larger than the
+rhombic-boundary-only baseline
+`4sqrt(Delta_2)-pi=0.667658573866...`, because it preserves the loaded-hull term from
+§168 rather than discarding singleton trains.
+
+It does not by itself close C-II: the theorem stack has no sufficiently small universal
+upper bound on `Q+4f`.  It does, however, show that any survivor has more than
+`2.1466D` combined metric outer detour and exceptional-face perimeter.
+
+## 7. Live closure targets
+
+The full-core branch is now reduced to two sharply different geometric mechanisms:
+
+- about `0.36974D` or more singleton positive-contact edges belonging to no strict
+  rhombus; or
+- rhombic isoperimetric slack about `0.73949D` or more, hence the macroscopic
+  quadratic crossing deficit (CS.18).
+
+These should be charged separately.  Singleton trains are actual defect-network edges;
+large rhombic Mantel deficit is missing quadratic crossing capacity among rhombic
+pseudosegments.  Merging them back into one scalar discards the new information.

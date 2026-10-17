@@ -1,0 +1,94 @@
+from fractions import Fraction
+
+# Regression certificate for
+# target_c_high_t_tb1_exact_swap_slack_ratio_t18687_2026-09-17.md
+#
+# This script checks the exact algebra and displayed density/constants.  The
+# finite-pigeonhole/continuity step proving exact-swap obstruction is a proof
+# argument, not a finite computation, and is audited in the companion note.
+
+S0 = Fraction(791, 320_000_000)
+
+assert S0 / 4 == Fraction(791, 1_280_000_000)
+assert S0 / 8 == Fraction(791, 2_560_000_000)
+assert S0 / 16 == Fraction(791, 5_120_000_000)
+
+assert abs(float(S0 / 4) - 6.1796875e-7) < 1e-20
+assert abs(float(S0 / 8) - 3.08984375e-7) < 1e-20
+assert abs(float(S0 / 16) - 1.544921875e-7) < 1e-20
+
+C_H = 0.453819885927
+TAU0 = C_H / 2
+K_SWAP = 31_400_000
+THIN_CONSTANT = TAU0 * K_SWAP
+
+assert abs(TAU0 - 0.2269099429635) < 1e-15
+assert 7_124_972 < THIN_CONSTANT < 7_124_973
+
+# Exact directional identities.  Put x = slack/q in (0,1].
+# Near unit:
+#   (ell^2 - 1 + q^2)/(2q)
+#   = x + (x^2+1)q/2 >= x.
+# Near diameter:
+#   (ell^2 - D^2 + q^2)/(2qD)
+#   = -x + (x^2+1)q/(2D),
+# with correction at most q/D.
+for D in [101, 1009, 10007, 100003]:
+    DF = Fraction(D, 1)
+    for qnum in [1, 3, 17, 99]:
+        q = Fraction(qnum, 100 * D)
+        for xn in range(1, 101):
+            x = Fraction(xn, 100)
+
+            ell1 = 1 + x * q
+            p1 = (ell1 * ell1 - 1 + q * q) / (2 * q)
+            rhs1 = x + (x * x + 1) * q / 2
+            assert p1 == rhs1
+            assert p1 >= x
+
+            ellD = DF - x * q
+            pD = (ellD * ellD - DF * DF + q * q) / (2 * q)
+            rhsD = DF * (-x + (x * x + 1) * q / (2 * DF))
+            assert pD == rhsD
+
+            correction = (x * x + 1) * q / (2 * DF)
+            assert 0 < correction <= q / DF
+
+# Exact boundary-contact formula.  For unit a,b with q^2=|a+b|^2,
+# a.b=(q^2-2)/2 and
+# |a-lambda(a+b)|^2 = 1+q^2 lambda(lambda-1).
+for q2 in [
+    Fraction(1, 10_000),
+    Fraction(1, 100),
+    Fraction(1, 2),
+    Fraction(3, 1),
+]:
+    adotb = (q2 - 2) / 2
+    for lam in [
+        Fraction(1, 1),
+        Fraction(1001, 1000),
+        Fraction(3, 2),
+        Fraction(2, 1),
+    ]:
+        lhs = 1 - 2 * lam * (1 + adotb) + lam * lam * q2
+        rhs = 1 + q2 * lam * (lam - 1)
+        assert lhs == rhs
+        if lam > 1:
+            assert rhs > 1
+
+# A moving diameter with n.w >= c_H D has squared-length change bounded by
+# q(-2 lambda c_H D + lambda^2 q).  With q <= K_SWAP/D this is negative
+# uniformly for 1 <= lambda <= 2 once D is large.
+for D in [10**6, 10**8, 10**10]:
+    q = K_SWAP / D
+    for lam in [1, 1.000001, 1.5, 2]:
+        assert lam * q < 2 * C_H * D
+        change_bound = q * (-2 * lam * C_H * D + lam * lam * q)
+        assert change_bound < 0
+
+print("PASS: TB1 exact-swap slack-ratio certificate")
+print("s0/4 =", float(S0 / 4))
+print("s0/8 =", float(S0 / 8))
+print("s0/16 =", float(S0 / 16))
+print("tau0 =", TAU0)
+print("tau0 * 31.4e6 =", THIN_CONSTANT)

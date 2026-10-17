@@ -1,0 +1,203 @@
+#!/usr/bin/env python3
+"""Distinguished touch-three kernel witness filter for remaining Profile B.
+
+This wrapper sits on top of the exact source-basis kernel-lattice audit. The
+latest source geometry proves that every genuine remaining Profile B source
+has a chosen singleton block b which is
+
+* aligned (its local empty constraint has rank one),
+* dependency-active (its source basis vector is not in the six-dimensional
+  external subspace L = W^perp), and
+* touched by exactly three source cycles T.
+
+Deleting T preserves coefficient rank two and produces a five-row descendant
+of virtual deficiency two. Since b is then untouched, its source basis vector
+e_b lies in the four-dimensional puncture kernel K_T. The exact kernel-lattice
+theorem gives E_T <= K_T, dim(E_T)=3, and K_T intersect L = E_T. As
+e_b is not in L, necessarily
+
+    K_T = E_T + <e_b>.
+
+The filter below requires an actual chosen source basis to contain such a
+witness. It is a necessary condition only; a zero-survivor full cover would
+exclude Profile B, while a survivor remains a candidate.
+"""
+
+from collections import Counter
+from fractions import Fraction
+from pathlib import Path
+import contextlib
+import importlib.util
+import io
+
+HERE = Path(__file__).resolve().parent
+BASE = HERE / "verify_target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_exact_kernel_lattice_2026_09_22.py"
+spec = importlib.util.spec_from_file_location("e99_profile_b_exact_kernel", BASE)
+K = importlib.util.module_from_spec(spec)
+with contextlib.redirect_stdout(io.StringIO()):
+    spec.loader.exec_module(K)
+
+M = K.M
+R = M.A.R
+
+ORIG_CHOSEN_PASSES_EXACT_KERNEL = M.chosen_passes_all_clean_fans
+TOUCH3_KERNEL_COUNTS = Counter()
+TOUCH3_KERNEL_EXAMPLES = []
+
+
+def source_basis_vector(index, width=9):
+    return tuple(Fraction(int(i == index)) for i in range(width))
+
+
+def touch_positions(ext8, block):
+    return tuple(
+        i for i, e in enumerate(ext8)
+        if R.QCOMP[e][block] != (0, 0)
+    )
+
+
+def is_aligned(ext8, block):
+    return len(R.local_constraint_key(ext8, block, 0)) == 1
+
+
+def touch3_kernel_witness_ok(ext8, space8, block_states):
+    """Require the distinguished active aligned touch-three d5=2 witness."""
+    fans, by_deleted = K.all_descendant_kernels(ext8, space8, block_states)
+    if fans is None:
+        TOUCH3_KERNEL_COUNTS["kernel_reconstruction_failed"] += 1
+        return False
+
+    d3_spaces = tuple(
+        kernel
+        for deficiency, kernel in by_deleted.values()
+        if deficiency == 3
+    )
+    L = K.span_basis(*d3_spaces, width=9)
+    if len(L) != 6:
+        TOUCH3_KERNEL_COUNTS[("bad_external_span_dimension", len(L))] += 1
+        return False
+
+    one_kernels = {}
+    for i in range(8):
+        item = by_deleted.get(frozenset((i,)))
+        if item is None or item[0] != 3 or len(item[1]) != 1:
+            TOUCH3_KERNEL_COUNTS["missing_clean_one_puncture_kernel"] += 1
+            return False
+        one_kernels[i] = item[1]
+
+    aligned_count = 0
+    active_aligned_count = 0
+    candidate_touch3_count = 0
+    witnesses = []
+
+    for basis_index, (block, _state) in enumerate(block_states):
+        if not is_aligned(ext8, block):
+            continue
+        aligned_count += 1
+
+        e_block = source_basis_vector(basis_index)
+        if K.is_subspace((e_block,), L, width=9):
+            continue
+        active_aligned_count += 1
+
+        deleted = touch_positions(ext8, block)
+        if len(deleted) != 3:
+            continue
+        candidate_touch3_count += 1
+        deleted_set = frozenset(deleted)
+
+        item = by_deleted.get(deleted_set)
+        if item is None:
+            TOUCH3_KERNEL_COUNTS["missing_distinguished_triple_kernel"] += 1
+            continue
+        deficiency, kernel = item
+        if deficiency != 2 or len(kernel) != 4:
+            TOUCH3_KERNEL_COUNTS[("distinguished_triple_wrong_state", deficiency, len(kernel))] += 1
+            continue
+
+        if not K.is_subspace((e_block,), kernel, width=9):
+            # Deleting every source cycle touching b makes b untouched, so the
+            # descended source class must be zero.
+            TOUCH3_KERNEL_COUNTS["touch3_block_not_in_triple_kernel"] += 1
+            continue
+
+        external = K.span_basis(
+            *(one_kernels[i] for i in deleted),
+            width=9,
+        )
+        if len(external) != 3:
+            TOUCH3_KERNEL_COUNTS[("distinguished_external_rank", len(external))] += 1
+            continue
+        if not K.is_subspace(external, L, width=9):
+            TOUCH3_KERNEL_COUNTS["distinguished_external_not_in_L"] += 1
+            continue
+        if K.is_subspace((e_block,), external, width=9):
+            TOUCH3_KERNEL_COUNTS["active_coordinate_inside_external_triple"] += 1
+            continue
+
+        expected = K.span_basis(external, (e_block,), width=9)
+        if expected != kernel:
+            TOUCH3_KERNEL_COUNTS["distinguished_kernel_split_mismatch"] += 1
+            continue
+
+        witnesses.append((basis_index, block, deleted, kernel, external))
+
+    TOUCH3_KERNEL_COUNTS[("aligned_chosen_blocks", aligned_count)] += 1
+    TOUCH3_KERNEL_COUNTS[("active_aligned_chosen_blocks", active_aligned_count)] += 1
+    TOUCH3_KERNEL_COUNTS[("active_aligned_touch3_candidates", candidate_touch3_count)] += 1
+
+    if not witnesses:
+        TOUCH3_KERNEL_COUNTS["no_distinguished_touch3_kernel_witness"] += 1
+        return False
+
+    TOUCH3_KERNEL_COUNTS[("distinguished_touch3_kernel_witnesses", len(witnesses))] += 1
+    TOUCH3_KERNEL_COUNTS["touch3_kernel_witness_pass"] += 1
+    if len(TOUCH3_KERNEL_EXAMPLES) < 20:
+        TOUCH3_KERNEL_EXAMPLES.append(
+            (
+                tuple(ext8),
+                space8,
+                tuple(block_states),
+                tuple(witnesses),
+            )
+        )
+    return True
+
+
+def chosen_passes_touch3_kernel_witness(ext8, space8, rank_cache, block_states):
+    if not ORIG_CHOSEN_PASSES_EXACT_KERNEL(
+        ext8, space8, rank_cache, block_states
+    ):
+        return False
+    return touch3_kernel_witness_ok(ext8, space8, block_states)
+
+
+M.chosen_passes_all_clean_fans = chosen_passes_touch3_kernel_witness
+
+
+# Pure linear-algebra sanity check for the split identity used above.
+_E9 = tuple(source_basis_vector(i) for i in range(9))
+_LTEST = K.span_basis(*_E9[:6], width=9)
+_EXTTEST = K.span_basis(_E9[0], _E9[1], _E9[2], width=9)
+_KTEST = K.span_basis(_EXTTEST, (_E9[6],), width=9)
+assert len(_LTEST) == 6
+assert len(_EXTTEST) == 3
+assert len(_KTEST) == 4
+assert K.is_subspace(_EXTTEST, _LTEST, width=9)
+assert not K.is_subspace((_E9[6],), _LTEST, width=9)
+assert K.span_basis(_EXTTEST, (_E9[6],), width=9) == _KTEST
+
+
+if __name__ == "__main__":
+    try:
+        M.F.L.B.main()
+    finally:
+        print("global_lift_counts", M.F.L.GLOBAL_LIFT_COUNTS)
+        print("fixed_nine_counts", M.F.FIXED_NINE_COUNTS)
+        print("actual_realization_counts", M.A.ACTUAL_COUNTS)
+        print("all_clean_counts", M.ALL_CLEAN_COUNTS)
+        print("low_weight_counts", K.E.LW.LOW_WEIGHT_COUNTS)
+        print("external_kernel_counts", K.E.EXTERNAL_KERNEL_COUNTS)
+        print("kernel_lattice_counts", K.KERNEL_LATTICE_COUNTS)
+        print("touch3_kernel_counts", TOUCH3_KERNEL_COUNTS)
+        print("touch3_kernel_examples", TOUCH3_KERNEL_EXAMPLES)

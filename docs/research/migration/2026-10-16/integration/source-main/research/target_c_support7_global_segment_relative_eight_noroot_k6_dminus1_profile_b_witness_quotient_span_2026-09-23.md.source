@@ -1,0 +1,286 @@
+# Target C: touch-three witness quotient span and forced deeper deficiency drop
+
+Date: 2026-09-23
+
+Status: rigorous strengthening of the remaining eight-no-root `k=6,D=-1,p=9` Profile B. The previous rank-loss-robust double-witness theorem showed that for two dependency-active aligned touch-three witnesses with touch triples `T,U`, the union puncture satisfies
+
+```text
+d_{T union U} <= 3-rho(T,U),
+```
+
+where `rho(T,U)` is the dimension of the two witness classes in `V/L`. The remaining concern was the borderline `rho=1,d=2` pair. This note adds a global quotient-span argument. It proves that the complete family of touch-three witness classes spans at least two dimensions in `V/L`. Hence every genuine remaining source has some witness pair with `rho=2`, and therefore some five- or six-coordinate union puncture with deficiency at most one.
+
+If the witness classes span all of `V/L`, an independent witness triple forces a union puncture of deficiency zero. If they span exactly two dimensions, there is exactly one dependency-active source class outside the witness family; it is the unique complementary touch-four or rank-two class.
+
+Profile B and Target C-II are not yet closed.
+
+Companion exact filter:
+
+`research/verify_target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_witness_quotient_span_2026_09_23.py`
+
+## 1. Source-basis setup
+
+Use the fixed source-basis model already established for Profile B:
+
+```text
+V = Q^9,
+q_1,...,q_9 is the chosen source singleton basis,
+L = W^perp <= V,
+dim L = 6,
+dim(V/L)=3.
+```
+
+A chosen source class is dependency-active exactly when its basis vector is not in `L`.
+
+Every dependency-active aligned chosen block has source touch count three or four. Every dependency-active aligned touch-three block is one of the distinguished witnesses already proved in the repository: if its touch triple is `T`, then
+
+```text
+d_5(T)=2,
+K_T = E_T direct-sum <q_i>.
+```
+
+The previous forcing theorem gives at least two such witnesses.
+
+## 2. Reuse of the earlier finite source exclusions
+
+Two consequences of the earlier Case-A and Case-B censuses are stronger than the hypotheses under which they were first introduced.
+
+### 2.1 Two touch-four blocks are impossible once a touch-three witness exists
+
+The Case-A argument started with one aligned touch-three block and two aligned touch-four blocks. The geometric reduction to the two normalized eight-cycle source sets did not use uniqueness of the touch-three witness. The exact census then ranged over every rank-two coefficient-plane incidence pattern on those source sets and found no source of virtual deficiency three.
+
+Therefore, in the current branch, which already has at least one touch-three witness,
+
+```text
+number of aligned touch-four chosen blocks <= 1.       (2.1)
+```
+
+### 2.2 A touch-four block cannot coexist with a rank-two singleton
+
+The Case-B argument started with one aligned touch-three witness, one aligned touch-four chosen block, and one rank-two chosen singleton block. The exact census ranged over every compatible rank-two coefficient plane containing the forced singleton line and again found no source of virtual deficiency three. Uniqueness of the touch-three witness was not used in the finite exclusion.
+
+Hence, in the current branch,
+
+```text
+if a touch-four chosen block exists,
+then no rank-two chosen singleton exists.               (2.2)
+```
+
+The earlier two-rank-two closure already proved
+
+```text
+number of rank-two chosen singleton blocks <= 1.        (2.3)
+```
+
+Combining (2.1)--(2.3), there is at most one chosen source block which can be dependency-active without being a touch-three witness.
+
+Indeed every active aligned non-witness has touch count four, while every non-aligned chosen singleton is rank two. There cannot be two blocks of the first type, two of the second type, or one of each.
+
+## 3. The touch-three witness classes span at least two quotient dimensions
+
+Let `I` be the set of all dependency-active aligned touch-three witnesses and define
+
+```text
+H = span(L,{q_i : i in I}) / L <= V/L.
+```
+
+Since `q_1,...,q_9` is a basis of `V`, their images span all of the three-dimensional quotient `V/L`.
+
+By Section 2, at most one dependency-active chosen class lies outside the witness family. Therefore, if `dim H <= 1`, the images of all nine source basis classes would span at most
+
+```text
+1 witness dimension + 1 non-witness dimension = 2
+```
+
+in `V/L`, contradicting `dim(V/L)=3`.
+
+Thus
+
+```text
+dim H in {2,3}.                                      (3.1)
+```
+
+In particular there exist two witnesses `q_i,q_j` whose images are linearly independent modulo `L`:
+
+```text
+rho(i,j)
+ = dim span(L,q_i,q_j)-dim L
+ = 2.                                                 (3.2)
+```
+
+This eliminates the possibility that all touch-three witness pairs lie in the previous `rho=1,d=2` borderline configuration.
+
+## 4. Forced five- or six-coordinate puncture with deficiency at most one
+
+Let `T_i,T_j` be the touch triples of a pair satisfying (3.2), and put
+
+```text
+R = T_i union T_j.
+```
+
+Distinct aligned touch-three stars intersect in at most one source cycle, so
+
+```text
+|R| in {5,6}.
+```
+
+The rank-loss-robust double-witness theorem applies at every projected coefficient rank and gives
+
+```text
+d_R <= 3-rho(i,j)=1.                                (4.1)
+```
+
+Hence every genuine remaining Profile B source has a five- or six-coordinate witness-union puncture with
+
+```text
+d_R in {0,1}.                                        (4.2)
+```
+
+This is strictly stronger than the preceding statement that an arbitrary witness pair has `d_R<=2`.
+
+## 5. Multi-witness union bound
+
+The same dimension argument works for any collection `A` of touch-three witnesses.
+
+Let
+
+```text
+R_A = union_{i in A} T_i,
+r = |R_A|,
+k_A = 2-rank(P_{R_A}),
+rho_A = dim span(L,{q_i:i in A})-dim L.
+```
+
+The labeled one-puncture relation-plane theorem gives
+
+```text
+dim E_{R_A}=r-k_A.                                   (5.1)
+```
+
+The rank-uniform descendant quotient has dimension
+
+```text
+s_A
+ = (8-r)-(2-k_A)+d_A
+ = 6-r+k_A+d_A,
+```
+
+so the source-basis puncture kernel has dimension
+
+```text
+dim K_{R_A}=9-s_A=3+r-k_A-d_A.                       (5.2)
+```
+
+For every witness `i in A`, puncture functoriality gives
+
+```text
+K_{T_i} <= K_{R_A}.
+```
+
+Since `K_{T_i}` contains both `E_{T_i}` and `q_i`, their total span gives
+
+```text
+span(E_{R_A},{q_i:i in A}) <= K_{R_A}.               (5.3)
+```
+
+Because `E_{R_A}<=L`, adjoining the witness classes to `E_{R_A}` adds at least `rho_A` dimensions. Thus the left side of (5.3) has dimension at least
+
+```text
+r-k_A+rho_A.
+```
+
+Combining this with (5.2),
+
+```text
+3+r-k_A-d_A >= r-k_A+rho_A,
+```
+
+and the coefficient-rank-loss term again cancels:
+
+```text
+d_A <= 3-rho_A.                                      (5.4)
+```
+
+This is the multi-witness form of the pair theorem.
+
+## 6. Exact global dichotomy
+
+Equation (3.1) leaves two cases.
+
+### 6.1 Witness quotient rank three
+
+If
+
+```text
+dim H=3,
+```
+
+choose three witnesses whose images are independent modulo `L`. Then `rho_A=3`, and (5.4) gives
+
+```text
+d_A <= 0.
+```
+
+Canonical deficiency is nonnegative by definition, so
+
+```text
+d_A=0.                                               (6.1)
+```
+
+The union of three distinct touch-three sets has size at least six because their pairwise intersections have size at most one. Since the source has only eight coordinates,
+
+```text
+6 <= |R_A| <= 8.
+```
+
+Thus the rank-three witness-span branch forces an explicit depth-six-or-more puncture of zero deficiency, independently of coefficient-rank loss.
+
+### 6.2 Witness quotient rank two
+
+If
+
+```text
+dim H=2,
+```
+
+then the source-basis images still have to span the three-dimensional quotient `V/L`. Section 2 allows at most one dependency-active non-witness class. Therefore exactly one such class exists, and its image lies outside `H`.
+
+That unique complementary active block is one of exactly two types:
+
+```text
+one aligned touch-four block and no rank-two singleton,
+```
+
+or
+
+```text
+one rank-two singleton and no aligned touch-four block.
+```
+
+Every other active source class is a touch-three witness whose quotient image lies in the same two-dimensional witness span.
+
+This reduces the remaining source structure to a finite two-branch split.
+
+## 7. Exact filter
+
+The companion verifier wraps the rank-loss cancellation filter and reconstructs the complete witness family and `L`. It then:
+
+1. computes the dimension of the witness span modulo `L` and rejects quotient rank one;
+2. reconstructs every dependency-active source basis class outside the witness family and rejects more than one;
+3. checks that all active source classes together span all three dimensions of `V/L`;
+4. finds at least one witness pair with quotient increment two;
+5. if the witness quotient rank is three, checks every quotient-independent witness triple and requires the canonical union descendant to have deficiency zero;
+6. if the witness quotient rank is two, records the unique complementary active class and verifies that it is either aligned touch-four or rank two.
+
+The imported rank-loss filter has already checked `d_R<=1` for every quotient-independent witness pair, including coefficient-rank-drop descendants.
+
+## 8. Remaining bottleneck
+
+The previous bottleneck was the isolated pairwise branch `rho=1,d_R=2`. It is no longer globally sufficient: every genuine source must also contain a quotient-independent witness pair with a deeper deficiency drop.
+
+The remaining source now lies in one of two sharper branches:
+
+1. witness quotient rank three, with an independent witness triple whose union puncture has `d=0`;
+2. witness quotient rank two, with exactly one complementary dependency-active non-witness block, either touch-four or rank two, and at least one independent witness-pair union with `d<=1`.
+
+The next target is to exhaust these two branches directly at the source level. The rank-three branch is especially rigid because the zero-deficiency union has at most two surviving source coordinates.

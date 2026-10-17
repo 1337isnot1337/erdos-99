@@ -1,0 +1,17 @@
+# Operating-system and editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Local Python/tooling caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Scratch output and logs
+tmp/
+*.log

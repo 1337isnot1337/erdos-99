@@ -1,0 +1,518 @@
+# Target C-II — the canonical reflection braid thickens to four-strand antipodal stars
+
+**Date:** 2026-09-17  
+**Status:** proof-only strengthening of the `eta=3/26` slow-scale reflection branch; no canonical promotion claimed  
+**Scope:** current canonical central reflection braid  
+**Dependencies:** canonical farthest reflection blockers; slow-scale central reflection braid; shallow-tooth penetration matching  
+**Certificate:** `research/verify_target_c_tooth_reflection_thick_star_braid_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current central braid uses only one long source-pair segment from each five-point tooth gadget, namely the reflection blocker `x_i y_i`. The other three local source points are only unit distance from `x_i`:
+
+\[
+|a_i-x_i|=|b_i-x_i|=|w_i-x_i|=1.
+\]
+
+At the slow scale this `O(1)` endpoint perturbation is negligible compared with both the `D-O(1)` blocker length and the `kappa_D D^{-1/4}` angular separation between different gadgets. Therefore the entire four-ray star
+
+\[
+\boxed{
+\mathcal S_i=
+\{y_i a_i,\ y_i b_i,\ y_i x_i,\ y_i w_i\}
+}
+\tag{SB.1}
+\]
+
+inherits the crossing braid.
+
+For every
+
+\[
+\kappa_D\to\infty,
+\qquad
+\kappa_D=o(D^{1/4}),
+\]
+
+there are more than
+
+\[
+\boxed{
+(0.129220199818177\ldots-o(1))
+{D^{1/4}\over\kappa_D}
+}
+\tag{SB.2}
+
+pairwise-disjoint five-point gadgets such that:
+
+1. every segment in every star has length greater than
+   \[
+   D-\left(1+{\sqrt{303}\over26}\right)
+   =D-1.669495968674200\ldots;
+   \]
+2. the four rays in one star have the common exposed hull head `y_i`;
+3. if `i!=j`, **every one of the sixteen cross-star segment pairs**
+   \[
+   y_i z_i,\qquad y_j z_j,
+   \qquad
+   z_i\in\{a_i,b_i,x_i,w_i\},
+   \quad
+   z_j\in\{a_j,b_j,x_j,w_j\}
+   \]
+   crosses properly;
+4. every such proper crossing lies in one common
+   \[
+   O(D/\kappa_D)=o(D)
+   \]
+   disk about the source circumcenter.
+
+Thus every two distinct stars form a complete `4 by 4` crossing system.  No assertion is needed about intersections among rays belonging to the same star beyond their common head.
+
+The penetration contact also acquires a fixed support-depth location relative to the canonical hull normal. If `N_i` is the outward support normal at `y_i`, then
+
+\[
+\boxed{
+\operatorname{depth}_{N_i}(w_i)
+>{\sqrt3\over2}-o(1),
+}
+\tag{SB.3}
+
+while the shallow apex obeys
+
+\[
+\boxed{
+\operatorname{depth}_{N_i}(x_i)
+<{\sqrt{303}\over26}
+=0.669495968674200\ldots .
+}
+\tag{SB.4}
+
+Consequently the actual penetration contact crosses a much larger fixed normal-depth gap:
+
+\[
+\boxed{
+\operatorname{depth}_{N_i}(w_i)
+-
+\operatorname{depth}_{N_i}(x_i)
+>
+{49\sqrt3-\sqrt{303}\over104}-o(1)
+=0.648688407551402\ldots-o(1).
+}
+\tag{SB.5}
+\]
+The loaded base endpoints lie even shallower, below depth `0.630872`. The deep penetration endpoint remains within a fixed opposite-hull layer,
+
+\[
+\boxed{
+{\sqrt3\over2}-o(1)
+<\operatorname{depth}_{N_i}(w_i)
+<1+{\sqrt{303}\over26}
+=1.669495968674200\ldots .
+}
+\tag{SB.6}
+
+This couples the object that the preceding reflection work had left separate: the ordered near-diametral central braid and the actual inward unit penetration contacts now belong to one thick geometric braid, with an explicit support-depth jump at every tooth.
+
+---
+
+## 1. Start from the canonical central braid
+
+Use the canonical farthest-blocker refinement at
+
+\[
+\eta_*={3\over26}.
+\]
+
+For each retained gadget write
+
+\[
+G_i=\{a_i,b_i,x_i,w_i,y_i\},
+\]
+
+where
+
+- `a_i,b_i` are the loaded base endpoints;
+- `x_i` is the shallow apex;
+- `w_i` is the chosen inward penetration endpoint;
+- `y_i` is the canonical farthest reflection blocker head.
+
+The five-point sets `G_i` are pairwise disjoint.
+
+Put
+
+\[
+C_*={\sqrt{303}\over26}=0.669495968674200\ldots .
+\tag{SB.7}
+\]
+
+The blocker segment
+
+\[
+e_i=x_i y_i
+\]
+
+satisfies
+
+\[
+|e_i|>D-C_*.
+\tag{SB.8}
+\]
+
+Its midpoint `m_i` obeys
+
+\[
+|m_i-o|=O(D^{3/4}),
+\tag{SB.9}
+\]
+
+and for distinct selected gadgets the supporting-line angle satisfies
+
+\[
+\phi_{ij}
+\ge(2-o(1))\kappa_DD^{-1/4}.
+\tag{SB.10}
+\]
+
+The selected population is (SB.2), and all blocker intersections already lie in `B(o,O(D/kappa_D))`.
+
+---
+
+## 2. Every local tail point gives another fixed-slack long segment
+
+Define the four-point tail cluster
+
+\[
+T_i:=\{a_i,b_i,x_i,w_i\}.
+\]
+
+Every `z in T_i` satisfies
+
+\[
+|z-x_i|\le1.
+\tag{SB.11}
+\]
+
+Indeed the inequality is equality for `a_i,b_i,w_i`, while it is zero for `x_i`.
+
+Therefore, by (SB.8),
+
+\[
+\begin{aligned}
+|y_i-z|
+&\ge |y_i-x_i|-|z-x_i|\\
+&>D-C_*-1.
+\end{aligned}
+\]
+
+Hence
+
+\[
+\boxed{
+|y_i-z|
+>D-C_{\rm thick},
+\qquad
+C_{\rm thick}:=1+C_*
+=1.669495968674200\ldots .
+}
+\tag{SB.12}
+\]
+
+This estimate applies simultaneously to all four rays of every star.
+
+---
+
+## 3. Thickening changes directions by only `O(D^-1)`
+
+Orient the original blocker from its tail to its head:
+
+\[
+d_i={y_i-x_i\over|y_i-x_i|}.
+\]
+
+For `z in T_i`, put
+
+\[
+d_{i,z}={y_i-z\over|y_i-z|}.
+\]
+
+The two unnormalized vectors differ by `z-x_i`, of norm at most one. Both lengths exceed `D-C_thick`. The normalized-vector estimate gives
+
+\[
+\boxed{
+|d_{i,z}-d_i|
+\le {2\over D-C_{\rm thick}}
+=O(D^{-1}).
+}
+\tag{SB.13}
+\]
+
+Thus
+
+\[
+\angle(d_{i,z},d_i)=O(D^{-1}).
+\tag{SB.14}
+\]
+
+Since
+
+\[
+{D^{-1}\over\kappa_DD^{-1/4}}
+={1\over\kappa_DD^{3/4}}
+\to0,
+\]
+
+the thickened rays from distinct gadgets retain the same angular separation:
+
+\[
+\boxed{
+\angle(d_{i,z_i},d_{j,z_j})
+\ge(2-o(1))\kappa_DD^{-1/4}
+}
+\tag{SB.15}
+\]
+
+uniformly over all sixteen choices of `z_i,z_j`.
+
+---
+
+## 4. Every cross-star ray pair intersects in the common central core
+
+Let
+
+\[
+m_{i,z}:={y_i+z\over2}
+\]
+
+be the midpoint of one thickened ray. From (SB.11),
+
+\[
+|m_{i,z}-m_i|
+\le{1\over2}.
+\tag{SB.16}
+\]
+
+Together with (SB.9),
+
+\[
+|m_{i,z}-o|=O(D^{3/4})
+\tag{SB.17}
+\]
+
+uniformly over all selected gadgets and all four tail choices.
+
+Take distinct gadgets `i,j` and arbitrary `z_i in T_i`, `z_j in T_j`. Let `q` be the intersection of the two supporting lines. The standard two-line estimate and (SB.15)--(SB.17) give
+
+\[
+\begin{aligned}
+|q-m_{i,z_i}|,
+|q-m_{j,z_j}|
+&\le
+{O(D^{3/4})\over
+ \sin((2-o(1))\kappa_DD^{-1/4})}\\
+&=O(D/\kappa_D).
+\end{aligned}
+\tag{SB.18}
+\]
+
+Because `kappa_D=o(D^{1/4})`, the `O(D^{3/4})` midpoint radius is absorbed by this scale, so
+
+\[
+\boxed{|q-o|=O(D/\kappa_D)=o(D).}
+\tag{SB.19}
+\]
+
+Every thickened segment has half-length
+
+\[
+>{D-C_{\rm thick}\over2}
+=\left({1\over2}-o(1)\right)D.
+\]
+
+Equation (SB.18) is `o(D)`, so `q` lies strictly inside both finite segments for sufficiently large `D`. The gadgets are vertex-disjoint, so this is a proper crossing.
+
+Since the tail choices were arbitrary, every one of the sixteen ray pairs between two distinct stars crosses properly. Within one star all four rays share `y_i`. This proves the complete cross-star crossing statement.
+
+---
+
+## 5. The penetration endpoint sits in a fixed deeper support layer
+
+Let `N_i` be the canonical outward hull normal at `y_i`, and let `n_i` be the inward loaded-base normal. The canonical slow-scale theorem gives
+
+\[
+\angle(N_i,n_i)=O(D^{-1/4}).
+\tag{SB.20}
+\]
+
+Let
+
+\[
+u_i:=w_i-x_i,
+\qquad |u_i|=1.
+\]
+
+The penetration theorem gives
+
+\[
+\boxed{
+u_i\cdot n_i
+>\sin(\pi/3-\alpha_i).
+}
+\tag{SB.21}
+\]
+
+Therefore
+
+\[
+u_i\cdot N_i
+>\sin(\pi/3-\alpha_i)-o(1).
+\tag{SB.22}
+\]
+
+The canonical support-cap proof also gives a lower bound for the apex depth. With `theta_i=angle(N_i,n_i)`, the base-midpoint inequality is
+
+\[
+s_{p,i}\ge \cos\alpha_i\sin\theta_i.
+\]
+
+Thus
+
+\[
+\begin{aligned}
+\operatorname{depth}_{N_i}(x_i)
+&=s_{p,i}+\sin\alpha_i\cos\theta_i\\
+&\ge
+\cos\alpha_i\sin\theta_i
++\sin\alpha_i\cos\theta_i\\
+&=\sin(\alpha_i+\theta_i)\\
+&\ge\sin\alpha_i.
+\end{aligned}
+\tag{SB.23}
+\]
+
+Adding (SB.22),
+
+\[
+\begin{aligned}
+\operatorname{depth}_{N_i}(w_i)
+&=
+\operatorname{depth}_{N_i}(x_i)
++u_i\cdot N_i\\
+&>
+\sin\alpha_i
++\sin(\pi/3-\alpha_i)
+-o(1)\\
+&=
+\cos(\alpha_i-\pi/6)-o(1).
+\end{aligned}
+\tag{SB.24}
+\]
+
+For
+
+\[
+0\le\alpha_i<\pi/6,
+\]
+
+one has
+
+\[
+\cos(\alpha_i-\pi/6)\ge\cos(\pi/6)={\sqrt3\over2}.
+\]
+
+Therefore
+
+\[
+\boxed{
+\operatorname{depth}_{N_i}(w_i)
+>{\sqrt3\over2}-o(1),
+}
+\tag{SB.25}
+\]
+
+which is (SB.3).
+
+---
+
+## 6. The penetration edge has a fixed normal component
+
+Equation (SB.22) already gives the exact depth jump, because
+
+\[
+\operatorname{depth}_{N_i}(w_i)
+-\operatorname{depth}_{N_i}(x_i)
+=u_i\cdot N_i.
+\]
+
+For `0<=alpha_i<=alpha_*`, the function `sin(pi/3-alpha_i)` decreases, so
+
+\[
+\begin{aligned}
+\operatorname{depth}_{N_i}(w_i)-\operatorname{depth}_{N_i}(x_i)
+&>\sin(\pi/3-\alpha_*)-o(1)\\
+&={49\sqrt3-\sqrt{303}\over104}-o(1)\\
+&=0.648688407551402\ldots-o(1).
+\end{aligned}
+\tag{SB.26}
+\]
+
+This proves (SB.5). The weaker absolute layer separation in (SB.3)--(SB.4) is useful because it locates both endpoints relative to the actual opposite support line, but the contact itself has the substantially larger normal jump (SB.26).
+
+The upper depth bound is immediate from the unit contact:
+
+\[
+\operatorname{depth}_{N_i}(w_i)
+\le
+\operatorname{depth}_{N_i}(x_i)+1
+<1+C_*.
+\tag{SB.27}
+\]
+
+Together with (SB.25), this proves (SB.6).
+
+The loaded base endpoints satisfy the sharper canonical bound
+
+\[
+\operatorname{depth}_{N_i}(a_i),
+\operatorname{depth}_{N_i}(b_i)
+<0.6308712013\ldots,
+\]
+
+so the penetration endpoint lies a fixed normal distance deeper than the entire three-point shallow tooth cap.
+
+---
+
+## 7. Frontier effect
+
+The slow-scale reflection survivor now has a thick source-level form.
+
+For
+
+\[
+M_D>
+(0.129220199818177\ldots-o(1)){D^{1/4}\over\kappa_D},
+\]
+
+there are `M_D` pairwise-disjoint gadgets satisfying simultaneously:
+
+```text
+one exposed source-hull head y_i;
+one shallow loaded base a_i b_i;
+one shallow apex x_i;
+one actual inward penetration contact x_i w_i;
+
+four D-O(1) source-pair rays
+    y_i a_i, y_i b_i, y_i x_i, y_i w_i;
+all four rays are O(D^-1)-parallel to the same canonical hull normal;
+
+between distinct gadgets every ray crosses every ray properly;
+all these crossings lie in one O(D/kappa_D)=o(D) central core;
+
+a_i,b_i depth < 0.630872;
+x_i depth < 0.669496;
+w_i depth > 0.866025-o(1).
+```
+
+Thus the penetration contacts are no longer merely labels attached to the reflection braid. They produce a second long strand `y_iw_i` in every gadget, and in fact the two loaded base endpoints give two more. Across distinct gadgets these four-strand stars form a complete crossing system through the same sublinear central core.
+
+This still does not close C-II: a near-circular source can geometrically accommodate such radial star bundles. The next step must use that three of the four tail relations are **actual unit contacts** while all four corresponding long pairs are simultaneously near diametral. A useful target is an exact multi-point diameter/contact variation for one star, then a simultaneous variation across the ordered support-normal family.
+
+**Disposition:** thickened every slow-scale reflection blocker to a four-ray antipodal star, proved complete cross-star crossing in the same `o(D)` core, and placed the penetration endpoint in a fixed deeper support layer with penetration-edge normal jump `0.648688...-o(1)`. C-II and Level I remain open.

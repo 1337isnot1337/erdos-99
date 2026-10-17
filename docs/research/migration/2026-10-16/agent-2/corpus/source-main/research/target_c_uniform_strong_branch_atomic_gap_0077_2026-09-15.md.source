@@ -1,0 +1,239 @@
+# Target C-II — uniform strong-branch capacity certifies matched gap `0.0077`
+
+**Date:** 2026-09-15  
+**Status:** proof-only strengthening of the matched all-train/rhombic atomic gap  
+**Scope:** canonical full-core Type-II train-measure branch  
+**Dependencies:** hostile-audited iterative-pruning physical pair theorem; hostile-audited corrected `g=0.0076` one-orbit capacity proof  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The corrected uniform strong-branch orbit-capacity theorem proves the matched atomic gap
+
+\[
+ g=0.0076
+\]
+
+and records a numerical architecture ceiling near `0.0077072732`.  The same proof has enough exact margin to certify the safely rounded value
+
+\[
+\boxed{g=0.0077.}
+\tag{G77.1}
+\]
+
+Consequently, with
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\]
+
+the proof-only train-measure floors become
+
+\[
+\boxed{
+\liminf {T-q/2\over D}
+\ge2\sqrt{\Delta_2}+0.0077,
+}
+\tag{G77.2}
+\]
+
+and, by rerunning the same theorem on the strict-rhombus train graph,
+
+\[
+\boxed{
+\liminf {T_R\over D}
+\ge2\sqrt{\Delta_2}+0.0077,
+\qquad
+\liminf {\sigma_R\over D}
+\ge0.0154.
+}
+\tag{G77.3}
+\]
+
+No geometric ingredient changes relative to the hostile-audited `0.0076` proof.  This note records the exact outward re-certification at `0.0077` and the resulting downstream constants.
+
+---
+
+## 1. Retained physical pair theorem
+
+Put
+
+\[
+K={2\over\sqrt3},
+\qquad
+r_*:=\sqrt{20\over29}.
+\]
+
+For two exact train-phase atom families of masses `a,b<=K`, whose projective directions differ by `pi/3`, let `rho` be their normalized missing-pair mass.  The hostile-audited iterative-pruning theorem gives
+
+\[
+\rho\ge
+\min\left\{
+{(a+b-K)_+^2\over10},
+{2\min(a,b)^2\over29}
+\right\}.
+\tag{G77.4}
+\]
+
+Whenever
+
+\[
+{(a+b-K)_+\over\min(a,b)}\le r_*,
+\]
+
+the strong branch applies:
+
+\[
+\boxed{
+\rho\ge{(a+b-K)_+^2\over10}.
+}
+\tag{G77.5}
+\]
+
+The `0.0076` proof already establishes that the actual one-orbit capacity maximizer lies uniformly inside this strong branch; only the endpoint mass `A_0` changes below.
+
+---
+
+## 2. One-orbit capacity at `g=0.0077`
+
+Write
+
+\[
+s:=\sqrt{\Delta_2},
+\qquad
+A_0:=2s+0.0077.
+\tag{G77.6}
+\]
+
+Assume for contradiction that the total exact atomic train mass `A` satisfies `A<=A_0`.  Let `W` be a dominant exact `pi/3` orbit mass.  The generic orbit-square argument gives
+
+\[
+\boxed{
+W\ge M_0:={4\Delta_2\over A_0}.
+}
+\tag{G77.7}
+\]
+
+For one orbit write its three phase masses as
+
+\[
+C\ge U\ge V\ge0,
+\qquad
+W=C+U+V.
+\]
+
+On the strong branch the center/leaf correlation and (G77.5) give the same physical capacity function as in the `0.0076` theorem:
+
+\[
+\boxed{
+\Phi_{1/10}(W,C)
+=C(W-C)
+-{1\over10}{3C-W\over C}
+\left({W+C\over2}-K\right)^2
+}
+\tag{G77.8}
+\]
+
+throughout the relevant optimizer interval `W/3<=C<=W/2`.  The function is strictly concave there, with
+
+\[
+\partial_C^2\Phi_{1/10}\le-2.
+\tag{G77.9}
+\]
+
+Exactly as in the audited parent theorem, the strong/fallback boundary is
+
+\[
+C_s(W)=W-{W-K\over r_*}.
+\tag{G77.10}
+\]
+
+and the fallback region is controlled by `Phi_{2/29}(W,C_s(W))` because the fallback capacity decreases for `C>=C_s(W)>W/2`.
+
+The companion exact certificate checks all scope and monotonicity inequalities at `A_0`:
+
+\[
+M_0>1.89695,
+\]
+
+\[
+2-{2K\over A_0}<0.79236<r_*,
+\]
+
+\[
+\partial_C\Phi_{1/10}(W,W/3)>0.6254,
+\]
+
+and, after adding the generic residual-orbit square capacity, both the strong and fallback total capacities increase with `W`.  Therefore each branch is worst at
+
+\[
+W=A_0.
+\tag{G77.11}
+\]
+
+---
+
+## 3. Exact strong-capacity certificate
+
+At `W=A_0` choose the rational tangent point
+
+\[
+c_0=0.935386.
+\]
+
+Strong concavity gives
+
+\[
+\max_C\Phi_{1/10}(A_0,C)
+\le
+\Phi_{1/10}(A_0,c_0)
++{\Phi_C(A_0,c_0)^2\over4}.
+\tag{G77.12}
+\]
+
+The exact outward-Fraction verifier
+
+`research/verify_target_c_uniform_strong_branch_orbit_capacity_gap_0077.py`
+
+uses a Machin enclosure for `pi`, integer-square-root enclosures, and rational arithmetic only for load-bearing assertions.  It proves
+
+\[
+\boxed{
+\Delta_2-\max_C\Phi_{1/10}(A_0,C)
+>6.67\times10^{-6}.
+}
+\tag{G77.13}
+\]
+
+The fallback branch has much larger margin:
+
+\[
+\boxed{
+\Delta_2-\Phi_{2/29}(A_0,C_s(A_0))
+>1.39\times10^{-3}.
+}
+\tag{G77.14}
+\]
+
+Thus no atomic measure of total mass at most `A_0` can carry the required strict-rhombus crossing mass `Delta_2`.  This proves
+
+\[
+A>2\sqrt{\Delta_2}+0.0077-o(1).
+\tag{G77.15}
+\]
+
+The exposed-hull comparison `A<=(T-q/2)/D` proves (G77.2).  The strict-rhombus transfer used in the hostile-audited parent theorem is independent of singleton trains and gives (G77.3).
+
+---
+
+## 4. Scope and frontier
+
+The gain from `0.0076` to `0.0077` is small but certified.  It is close to the numerical ceiling of the present one-orbit capacity architecture; the remaining numerical room is only about `7.3e-6` in `g`.  Further useful progress should therefore come from an additional geometric constraint on the single dominant exact orbit, not finer tuning of the same scalar optimizer.
+
+A particularly relevant exact constraint, developed separately, is the one-shore train-projection capacity: for a phase class of mass `C` with opposite phase masses `U,V` and center/leaf missing masses `x,y`, source diameter gives
+
+\[
+{\sqrt3\over2}\,[C(U+V)-x-y]\le C.
+\]
+
+It is nonbinding at the present capacity maximizer, so it does not justify a value above `0.0077` by itself.
+
+**Disposition:** proof-only matched atomic strengthening.  C-II and Level I remain open.

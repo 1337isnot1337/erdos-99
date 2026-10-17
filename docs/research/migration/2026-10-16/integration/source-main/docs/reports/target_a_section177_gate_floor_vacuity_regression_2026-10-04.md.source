@@ -1,0 +1,48 @@
+<!-- theorem-state: {"artifact_id":"ART-91F66D6B7274","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
+# Target A §177.5B gate floor is vacuous under the canonical populations
+
+**Date:** 2026-10-04<br>
+**Classification:** exact regression candidate; unreviewed lifecycle.<br>
+**Target A / Level I status:** open.
+
+## Provenance and scope
+
+This note extracts the unique gate-floor regression from closed PR [#577](https://github.com/1337isnot1337/e-99/pull/577), source branch `swarm/codex-a-sector-source-20260925` at `b41edc61033d9b597252eb499a43920a3cd78267`. Its unit-contact midpoint-confinement result is omitted here because the related one-source-arm-per-contact-edge theorem was preserved in main through #648. The statement below concerns only the displayed lower bound in Target A Section 177.5B. It does not assert that canonical configurations have no actual gates.
+
+## Packing bounds
+
+Let `K` be a planar convex body of diameter `d` and perimeter `P`. For any unit-separated finite set `X` contained in `K` with `dist(x,partial K)<1` for every `x in X`,
+
+\[
+|X|\le {8P\over\pi}+1\le 8d+1.
+\tag{1}
+\]
+
+For any unit-separated finite set `O` outside `K` with `dist(o,K)<1` for every `o in O`,
+
+\[
+|O|\le {8P\over\pi}+9\le 8d+9.
+\tag{2}
+\]
+
+To see (1), place disjoint open radius-`1/2` disks around the points of `X`. Their union lies in `(K+\tfrac12 B)\setminus(K\ominus\tfrac32 B)`. The outer Steiner shell has area `P/2+pi/4`; the inner layer removed has area at most `3P/2`, by coarea and monotonicity of inner parallel perimeters. Hence the union area is at most `2P+pi/4`. Each disk has area `pi/4`, giving `|X|<=8P/pi+1`.
+
+For (2), the disks lie in `(K+\tfrac32 B)\setminus(K\ominus\tfrac12 B)`. The outer shell has area `3P/2+9pi/4`, and the inner layer has area at most `P/2`, so the union area is at most `2P+9pi/4`. Division by `pi/4` gives `|O|<=8P/pi+9`. The final inequalities in both cases use Cauchy's convex-perimeter bound `P<=pi d`. The inner-layer estimates also hold when the inner parallel body disappears before the indicated offset: integrate the nonincreasing inner perimeter only up to its extinction depth.
+
+## Consequence for the displayed canonical gate floor
+
+In the canonical Section 177 setup, `C^partial` is a subset of the unit-separated response set and each of its points is less than one from `partial K^*`; every point of `O` is outside `K^*` at distance less than one. Applying (1) and (2) separately gives
+
+\[
+|C^partial|+|O|\le16d+10<20d+25.
+\]
+
+Therefore the Section 177.5B formula
+
+\[
+G_{CO}\ge {1\over10}\max\{0,|C^partial|+|O|-20d-25\}
+\]
+
+reduces to `G_CO >= 0` for every canonical configuration. It cannot guarantee a positive number of source gates at its stated constants. This does not prove `G_CO=0`, and it does not remove actual gates from a particular source. The route still needs a sharper overlap bound or a source-to-Schur / strict-competitor theorem.
+
+No theorem-state, Target A route, or prompt is changed by this report. Independent audit is needed before altering how Section 177.5B is used in the active route.

@@ -1,0 +1,162 @@
+<!-- theorem-state: {"artifact_id":"ART-CAAD31E90FE7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: an exact fan reflection destroys strict octagon capacity
+
+Date: 2026-10-05. Base main: `d99168a39401a00f1716fe1603dfc2fd7468dff3`.
+Controlling state: `2026-10-05.audit.58`.
+Classification: **regression**, unreviewed artifact. C-II and Level I remain open.
+
+## 1. Implication and scope
+
+```
+strict old actual unit wall + actual diameter-fan reflection
+-> need strict capacity in the reflected wall to repair interior isolates
+-> old positive margins alone do not supply that capacity:
+   this octagon changes from nonempty W to empty W
+-> a closure argument needs new endpoint capacity or relocation outside that wall.
+```
+
+This kills a proposed transport bridge, not canonical fan reflections.
+The finite example has no positive KKT certificate and is not globally
+optimal. It does not disprove collective full-source isolate repair.
+Its walls have eight edges, so the canonical short-wall theorem does not
+already decide their old capacity.
+
+## 2. Exact source family
+
+For any real D>=10 put
+
+    e=1/(2D), d=e/2, a=1-e/2,
+    t=sqrt(1-e^2), h=sqrt(1-a^2).
+
+The simple unit octagon has cyclic vertices
+
+    p=(0,0), r+=(-e,t), T=(-1-d,t+h),
+    l+=(-2-2d+e,t), L=(-2-2d,0),
+    l-=(-2-2d+e,-t), B=(-1-d,-t-h), r-=(-e,-t).
+
+Add the interior site z=(-1-d,0) and the carrier b=(-D,0).
+The eight wall sides have length one: the four oblique sides at T,B
+have vectors with components a,h, and the other four have components e,t.
+The top and bottom chains bound a simple polygon; their signed heights
+are opposite and their interior diagonals used below do not cross.
+
+The old site z is strictly clear of every wall vertex. Its distances to
+p,L are 1+d; squared distances to r+,r-,l+,l- are a^2+t^2>1;
+and distances to T,B are t+h>1. For the latter inequality, h^2=e-e^2/4
+whereas 1-t=e^2/(1+t), and 0<e<=1/20.
+Thus z belongs to the old strict wall-safe set W.
+
+All other nonconsecutive wall pairs are strictly longer than one. Pairs
+at equal positive or negative height have separation at least 2a>1;
+other opposite-chain pairs have vertical separation at least 2t>1,
+except pairs using p or L. Those remaining pairs either have horizontal
+separation greater than one or squared separation at least a^2+t^2>1.
+Consequently the old contact graph is exactly the octagon, with z and b
+contact-isolated, and is triangle-free.
+
+The carrier has the three exact diameters bp,br+,br-, since
+
+    (D-e)^2+t^2=D^2.
+
+Every other carrier distance is strictly shorter than D. For T,B this
+follows from (D-1-d)^2+(t+h)^2<D^2: use t<=1, h<=sqrt(e),
+D>=10 and 1+d>=1. The farther-left wall vertices and z have a smaller
+horizontal carrier separation; the l+,l- squared distances are smaller
+than those of r+,r- because 0<D-2-2d+e<D-e. Distances to L,z are
+strict. All noncarrier points lie in a rectangle of width at most 2.05
+and height at most 2(1+sqrt(1/20)); its diagonal is less than 4<D.
+Thus the complete source diameter is D and p is an exact fan leaf with
+unique diameter partner b and exactly its two unit neighbors r+,r-.
+
+This source has ten points. A ten-point unit square-grid subset has
+diameter at most sqrt(13)<D, so global optimality is explicitly absent.
+The carrier is contact-isolated; no canonical positive-core hypothesis
+is asserted for it.
+
+## 3. Reflected wall has no strict site
+
+Reflect p across the line r+r-, obtaining
+
+    p'=(-2e,0).
+
+This is precisely the fan map p-(p-b)/D^2. Both contacts to r+,r-
+stay unit and all other wall contacts stay fixed. The new polygon is
+simple, with an inward notch at p'. Its upper half triangulates into
+
+    (p',r+,T), (p',L,T), (L,l+,T),
+
+and its lower half has the reflected three triangles.
+
+The central upper triangle has circumcenter
+
+    c=(-1-d-e,h)
+
+and circumradius exactly one. Indeed its vectors to p',L have horizontal
+components +/-a and vertical component -h; its vector to T has
+components e,t. Both squared lengths are one.
+
+The two adjacent upper triangles have two unit sides. Their included
+angle cosines are, respectively,
+
+    c_R=e*a-t*h,   c_L=-e*a-t*h.
+
+Each is greater than -1/2: t*h<=sqrt(e), e*a<=e, and
+1/20+sqrt(1/20)<1/2. A triangle with two unit sides and included cosine c
+has squared circumradius
+
+    R^2=1/[2(1+c)].
+
+Both adjacent circumradii are therefore strictly less than one. The
+bottom triangles have identical bounds.
+
+A triangle of circumradius at most one is covered by the closed unit
+disks about its vertices. If x=sum lambda_i v_i is a convex combination
+of its three vertices and c is its circumcenter, then
+
+    sum lambda_i |x-v_i|^2=R^2-|x-c|^2<=R^2.
+
+At least one vertex is therefore within distance R of x.
+The six triangles therefore cover
+the whole reflected polygon by unit disks centered at its actual wall
+vertices. Hence
+
+    W_reflected=empty,
+
+where W requires distance strictly greater than one from every wall
+vertex. This is a coverage proof, not a sampled empty-region claim.
+
+The old site collides with the reflected leaf:
+
+    |p'-z|=1+d-2e=1-3e/2<1.
+
+No position strictly inside the reflected wall can replace z while
+remaining strictly clear of its wall. The old nonempty strict region
+has vanished under displacement 2e=1/D tending to zero.
+
+## 4. Consequence for the live closure attempt
+
+Canonical audit.58 correctly guarantees upper nonexpansiveness of the
+fan move; this example satisfies that geometry. It cannot guarantee
+transport of old wall capacity or the isolate lower constraints.
+The old site has a positive finite margin for each D, but that margin
+shrinks with D and is insufficient for the exact reflection endpoint.
+The reflected wall remains an actual simple unit-contact wall with eight
+edges. Merely exceeding the short-wall count threshold does not prevent
+finite contact-preserving capacity loss.
+
+The fixed-wall/refill route must certify endpoint sites independently,
+or permit replacement across a larger protected region, or relocate the
+isolate outside this chamber with full-source checks. The example does
+not constrain such unrestricted relocation. It also gives no canonical
+fan population, stress, global minimizer, or asymptotic counterexample.
+
+## 5. Exact verification
+
+Run `python3 research/verify_target_c_fan_octagon_capacity_loss_2026_10_05.py`.
+For D=10,20,100,1000,10000 the verifier uses rational arithmetic and
+exact signs in Q(sqrt((1-e^2)(1-a^2))). It certifies 225 old and 225
+reflected full-source pairs, the exact octagon contact graph, the three
+actual diameters, the sole lower collision p'z, the central unit
+circumcircle identities, and both adjacent circumradius bounds.
+The universal covering and family proofs are analytic above. The script
+omits global optimality, KKT, unrestricted relocation and Level I closure.

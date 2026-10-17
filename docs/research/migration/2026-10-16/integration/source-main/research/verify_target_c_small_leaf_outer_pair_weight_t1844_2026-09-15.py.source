@@ -1,0 +1,147 @@
+#!/usr/bin/env python3
+"""Exact certificate: t<=1.844 forces >0.0848D O-O pair weight in the smallest leaf phase."""
+
+from fractions import Fraction as Q
+from math import factorial, isqrt
+
+
+def atan_inv_bounds(q, n):
+    s = Q(0)
+    for k in range(n):
+        term = Q(1, (2 * k + 1) * q ** (2 * k + 1))
+        s += term if k % 2 == 0 else -term
+    nxt = Q(1, (2 * n + 1) * q ** (2 * n + 1))
+    return (s, s + nxt) if n % 2 == 0 else (s - nxt, s)
+
+
+def sqrt_bounds(lo, hi, scale):
+    a = isqrt((lo.numerator * scale * scale) // lo.denominator)
+    b = isqrt((hi.numerator * scale * scale) // hi.denominator)
+    return Q(a, scale), Q(b + 1, scale)
+
+
+def sin_bounds(x, n=28):
+    s = Q(0)
+    for k in range(n):
+        term = x ** (2 * k + 1) / factorial(2 * k + 1)
+        s += term if k % 2 == 0 else -term
+    nxt = x ** (2 * n + 1) / factorial(2 * n + 1)
+    return (s, s + nxt) if n % 2 == 0 else (s - nxt, s)
+
+
+def F_bounds(z):
+    slo, shi = sin_bounds(z / 6)
+    return z - 6 * shi, z - 6 * slo
+
+
+def phase_energy_bounds(m):
+    """f(m)=m-2 sin(m/2)."""
+    slo, shi = sin_bounds(m / 2)
+    return m - 2 * shi, m - 2 * slo
+
+
+# Exact pi/algebraic enclosures.
+a5_lo, a5_hi = atan_inv_bounds(5, 100)
+a239_lo, a239_hi = atan_inv_bounds(239, 30)
+pi_lo = 16 * a5_lo - 4 * a239_hi
+pi_hi = 16 * a5_hi - 4 * a239_lo
+
+SCALE = 10**100
+n3 = isqrt(3 * SCALE * SCALE)
+sqrt3_lo = Q(n3, SCALE)
+sqrt3_hi = Q(n3 + 1, SCALE)
+Delta_lo = pi_lo / (2 * sqrt3_hi)
+Delta_hi = pi_hi / (2 * sqrt3_lo)
+s_lo, s_hi = sqrt_bounds(Delta_lo, Delta_hi, SCALE)
+C76_lo = 2 * s_lo + Q(19, 2500)
+C76_hi = 2 * s_hi + Q(19, 2500)
+
+T = Q(461, 250)  # 1.844
+Umax_lo = Q(9, 2) * T - 2 * pi_hi
+Umax_hi = Q(9, 2) * T - 2 * pi_lo
+delta_max_hi = (Umax_hi - C76_lo) / 2
+
+
+def m2_bounds(Ulo, Uhi):
+    xlo = 8 * Delta_lo - Uhi * Uhi
+    xhi = 8 * Delta_hi - Ulo * Ulo
+    assert xlo > 0
+    rlo, rhi = sqrt_bounds(xlo, xhi, SCALE)
+    return (Ulo + rlo) / 2, (Uhi + rhi) / 2
+
+
+def bootstrap_step(z):
+    Flo, _ = F_bounds(z)
+    Ulo = Umax_lo - 2 * Flo
+    Uhi = Umax_hi - 2 * Flo
+    mlo, _ = m2_bounds(Ulo, Uhi)
+    rhi = Uhi - mlo
+    Slo = pi_lo - Uhi - T / 2 + mlo
+    p_hi = (
+        delta_max_hi - Flo + rhi * rhi
+    ) / (2 * (1 - delta_max_hi))
+    return Slo - p_hi, Flo, Uhi
+
+
+# Exact generic restored-incidence bootstrap at t<=1.844, now with C76.
+z_levels = [
+    Q(0),
+    Q(2072, 1000),
+    Q(2185, 1000),
+    Q(22033, 10000),
+    Q(22064, 10000),
+    Q(22069, 10000),
+]
+
+for i, z in enumerate(z_levels[:-1]):
+    nxt, _, _ = bootstrap_step(z)
+    assert nxt > z_levels[i + 1]
+    print(
+        f"bootstrap {i}: {float(z):.4f} -> {float(nxt):.15f}; "
+        f"margin={float(nxt-z_levels[i+1]):.9g}"
+    )
+
+z_total = z_levels[-1]  # 2.2069
+Flo, _ = F_bounds(z_total)
+Ubound_hi = Umax_hi - 2 * Flo
+h_hi = Ubound_hi - C76_lo
+residual_hi = Q(21, 20) * h_hi
+Edom_lo = Delta_lo - residual_hi * residual_hi / 4
+
+# If largest phase C<=0.8538, then E_dom<=C(W-C) is too small.
+C_threshold = Q(4269, 5000)  # 0.8538
+capacity_hi = C_threshold * (Ubound_hi - C_threshold)
+assert capacity_hi < Edom_lo
+
+# Hence C>0.8538, so the smaller leaf V<=(W-C)/2 is below this bound.
+Vmax_hi = (Ubound_hi - C_threshold) / 2
+assert Vmax_hi < Q(5311, 10000)
+
+# Phasewise bathtub energy.  If one retained phase occurrence mass were <=0.616,
+# convexity makes the least possible total energy occur at
+# z1=0.616, z2=z3=(2.2069-0.616)/2.
+phase_min = Q(616, 1000)
+other = (z_total - phase_min) / 2
+f1_lo, _ = phase_energy_bounds(phase_min)
+f2_lo, _ = phase_energy_bounds(other)
+phase_energy_lo = f1_lo + 2 * f2_lo
+assert phase_energy_lo > delta_max_hi
+
+# For the smallest leaf phase, retained outer occurrence mass >0.616 while train
+# mass is <Vmax.  Summing a_tau+b_tau<=1+min(a_tau,b_tau) gives pair weight.
+pair_floor = phase_min - Vmax_hi
+assert pair_floor > Q(848, 10000)
+
+print("delta max upper =", float(delta_max_hi))
+print("F(2.2069) lower =", float(Flo))
+print("post-energy U upper =", float(Ubound_hi))
+print("endpoint slack h upper =", float(h_hi))
+print("residual exact-orbit mass upper =", float(residual_hi))
+print("dominant crossing lower =", float(Edom_lo))
+print("capacity at C=0.8538 upper =", float(capacity_hi))
+print("center-mass contradiction margin =", float(Edom_lo - capacity_hi))
+print("smallest leaf train mass upper =", float(Vmax_hi))
+print("phase imbalance energy lower =", float(phase_energy_lo))
+print("phase imbalance margin =", float(phase_energy_lo - delta_max_hi))
+print("smallest-leaf O-O pair floor =", float(pair_floor))
+print("PASS: t<=1.844 forces >0.0848D retained O-O pair weight in the smallest leaf phase")

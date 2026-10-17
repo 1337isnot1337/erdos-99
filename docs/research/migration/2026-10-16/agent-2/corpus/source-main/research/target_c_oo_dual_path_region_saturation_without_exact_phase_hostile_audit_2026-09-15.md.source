@@ -1,0 +1,103 @@
+# Hostile audit — phase-free O--O dual-path region saturation
+
+**Date:** 2026-09-15  
+**Reviewed:** `research/target_c_oo_dual_path_region_saturation_without_exact_phase_2026-09-15.md`  
+**Disposition:** **PASS at its stated exact structural scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The candidate proves that every complementary region of a canonical simple O--O dual path contains an actual diameter endpoint, without using finite-source exact phase equality.  The proof uses a one-layer physical translation for internal regions and Section 157 for the two path ends.
+
+## 1. Interval support identifies switching with the middle region exactly
+
+For path regions `R_0,...,R_m`, a source pair with endpoint regions `R_a,R_b`, `a<b`, crosses exactly the selected cuts
+
+\[
+\{a+1,\ldots,b\}.
+\]
+
+Between adjacent selected columns `i,i+1`, its incidence changes iff `a=i` or `b=i`.  In either case one endpoint region is exactly `R_i`.  Conversely an endpoint in `R_i` and the other endpoint outside `R_i` makes the pair switch at one of the two sides of that layer.
+
+Thus the candidate's identity
+
+\[
+H_{sw,i}=\{h\in H:\text{one endpoint region is }R_i\}
+\]
+
+is correct for actual diameter rows at an internal boundary.
+
+**Verdict:** PASS.
+
+## 2. Empty switching set would create a legitimate contact-opening global minimizer
+
+Suppose `H_sw,i` is empty.  Translate only the source layer `R_i`.
+
+The audited adjacent-strip construction supplies arbitrarily small nonzero translations opening both boundary contact families.  The antipodal case is not a first-order exception: a perpendicular translation changes each boundary contact squared length from `1` to `1+|v|^2`.
+
+Every source pair has relative displacement
+
+\[
+r_h(v)=r_h+\delta_hv,
+\]
+
+where `delta_h` is the difference of the two adjacent shore incidences.  Hence `delta_h=0` means exact invariance for all `v`, not merely zero first derivative.
+
+Under the empty-switch hypothesis every old actual diameter row has `delta_h=0`, so every old diameter remains exactly length `D`.  This is stronger than the continuity argument needed for strict old nondiameter pairs.  Because the finite source has positive strict slack on every old noncontact and old nondiameter pair, one common sufficiently small nonzero `v` preserves all of those inequalities.
+
+Both boundary contact families open.  No new unit contact appears for sufficiently small `v`, again by finite strict lower-distance slack.  Therefore the moved source is another global minimizer of diameter exactly `D` with fewer unit contacts, contradicting the canonical contact-minimal normalization.
+
+No claim that inactive slack is uniform in `D` is used: the move is chosen separately for each finite source.
+
+**Verdict:** PASS.
+
+## 3. Internal region loading follows immediately
+
+The contradiction proves `H_sw,i` is nonempty for every internal region `R_i`.  Every switching row has an endpoint in `R_i`, so each internal region contains an actual diameter endpoint.
+
+This implication does not use KKT positivity or the later sparse-reaction theorem.  Contact minimality plus actual-diameter invariance is sufficient.
+
+**Verdict:** PASS.
+
+## 4. Extreme regions are correctly supplied by Section 157
+
+Section 157 proves every O--O train is crossed by at least two actual diameter edges with opposite transverse signs.  In particular `tau_1` and `tau_m` each have a crossing actual diameter.
+
+For a row with support `{a+1,...,b}`:
+
+- crossing cut `1` forces `a=0`, hence an endpoint in `R_0`;
+- crossing cut `m` forces `b=m`, hence an endpoint in `R_m`.
+
+Thus both end regions are loaded.  No assumption about the phases of the selected trains appears.
+
+**Verdict:** PASS.
+
+## 5. The high-`t` application is scope-safe
+
+The live `t<=1.859` low-energy theorem produces a simple O--O dual path of length
+
+\[
+m>0.0007D-o(D)
+\]
+
+whose selected trains lie in a shrinking phase window.  The candidate deliberately avoids the exact-phase rank factorization used by the separate dual-tree saturation theorem.  Its inputs — O--O cut geometry, interval support, contact-minimal layer translation, and Section 157 bracing — are finite-source exact for this shrinking-window family.
+
+Therefore all `m+1` regions on that live path are diameter-endpoint loaded.  Since complementary regions are disjoint, these witnesses are distinct source vertices when one witness is selected per region.
+
+The theorem does not infer `m+1` distinct diameter edges; one diameter edge can have its two endpoints in two different loaded regions.
+
+**Verdict:** PASS.
+
+## 6. What remains open
+
+Region saturation still permits a long ordered bipartite/thrackle pattern with very small KKT masses.  It does not force a long matching, a uniform endpoint separation beyond source unit separation, or a sub-`D` deformation.
+
+The new exact normal form is nevertheless stronger:
+
+```text
+all path regions loaded
++ all actual diameter intervals contain one common hub
++ all nonhub switches are one-sided toward that hub.
+```
+
+The unresolved step is to exploit convex-hull cyclic order or near-disk antipodality across this saturated interval system.
+
+**Final verdict:** **PASS.** The phase-free path-region saturation theorem is valid at the stated scope. C-II remains open.

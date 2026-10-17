@@ -1,0 +1,164 @@
+# Target C-II — explicit global route-surplus floor from the rhombus boundary
+
+**Date:** 2026-09-13
+**Status:** proof-only Type-II composition; theorem-state authority unchanged.
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The canonical train-boundary theorem already gives an explicit lower bound on the
+global route currency.  It is stronger than the earlier `0.1224` Fejer-only bound
+because it uses the entire strict-rhombus boundary before any phase atomization.
+
+Put
+
+\[
+S_{route}:={b-\operatorname{per}(F)+Q+4f\over D},
+\]
+
+where `b` is the occurrence-counted outer contact walk, `f` is the number of bounded
+nonquadrilateral faces, and `Q=sum(deg G-4)` over those faces.  Then every full-core
+Type-II survivor sequence satisfies
+
+\[
+\boxed{
+\liminf_{D\to\infty}S_{route}
+\ge c_{route}:=
+4\sqrt{\frac{\pi}{2\sqrt3}}-\pi
+=0.6676585738660363\ldots .}
+\tag{GR.1}
+\]
+
+Equivalently, with `delta=(b-per(F))/D` and
+`P_exc=(Q+4f)/D`,
+
+\[
+\boxed{\liminf(\delta+P_{exc})\ge c_{route}.}
+\tag{GR.2}
+\]
+
+## 1. Finite occurrence-safe inequality
+
+Let `R_4` be the global number of strict-rhombus bounded faces and let `B_4` be the
+number of contact-edge occurrences incident to exactly one strict rhombus.  The
+canonical train-boundary theorem gives
+
+\[
+B_4\ge4\sqrt{R_4}.
+\tag{GR.3}
+\]
+
+Every occurrence counted by `B_4` has a non-rhombus face on its other side.  The other
+side is either the unbounded face or a bounded nonquadrilateral face: every bounded
+quadrilateral contact face is itself a strict rhombus.  Therefore the occurrence-safe
+recipient count gives
+
+\[
+B_4\le b+\sum_{G\ {m non4}}\deg G=b+Q+4f.
+\tag{GR.4}
+\]
+
+Combining (GR.3)--(GR.4) yields the exact finite inequality
+
+\[
+\boxed{b+Q+4f\ge4\sqrt{R_4}.}
+\tag{GR.5}
+\]
+
+Subtracting `per(F)` is safe because the outer contact walk contains a cyclic walk
+around the force hull, so `per(F)<=b` in the canonical post-ZF representative.  More
+directly, no sign assumption on `b-per(F)` is needed for (GR.5); the subtraction is
+only used after the Type-II perimeter limit below.
+
+## 2. Type-II limit
+
+The canonical full-core Type-II population theorem gives
+
+\[
+{R_4\over D^2}\longrightarrow
+\Delta_2={\pi\over2\sqrt3},
+\]
+
+and the Type-II near-disk force-hull theorem gives
+
+\[
+{\operatorname{per}(F)\over D}\longrightarrow\pi.
+\]
+
+Divide (GR.5), subtract `per(F)/D`, and pass to `liminf`:
+
+\[
+\liminf {b-\operatorname{per}(F)+Q+4f\over D}
+\ge4\sqrt{\Delta_2}-\pi,
+\]
+
+which is (GR.1).  The decimal is only an evaluation of the exact constant; the proof
+uses the symbolic expression.
+
+## 3. Immediate branch consequences
+
+The floor gives a useful exact split of the surviving Type-II branch:
+
+\[
+\delta+P_{exc}\ge c_{route}-o(1).
+\tag{GR.6}
+\]
+
+Thus a near-geodesic outer walk must carry at least `0.6676D` exceptional-face
+perimeter, while a sublinear exceptional-face perimeter forces an outer-walk detour of
+at least `0.6676D`.  The two currencies cannot both be cheap.
+
+Using the exact outer ledger `b+Q=2(q-k)`, (GR.6) also gives
+
+\[
+{2(q-k)\over D}+{4f\over D}-\pi
+\ge c_{route}-o(1),
+\]
+
+or
+
+\[
+\boxed{
+{q-k\over D}+2{f\over D}
+\ge2\sqrt{\Delta_2}-o(1).
+}
+\tag{GR.7}
+\]
+
+This is the train-count/Mantel endpoint in route form, not a new unconditional
+`q-k` floor.  It remains valid when the exceptional perimeter is distributed over
+many faces and when the outer walk has repeated bridge or articulation occurrences.
+
+## 4. Interaction with current ledgers
+
+The canonical augmented-cell payment and the exact Type-II loaded-contact identity
+give `Q+4f <= 10(e_BB-k)` in the coarse form.  Hence (GR.6) implies the explicit
+three-currency necessary condition
+
+\[
+\boxed{
+{b-\operatorname{per}(F)\over D}
+ +10{e_{BB}-k\over D}
+\ge c_{route}-o(1).
+}
+\tag{GR.8}
+\]
+
+The sharper route identity `b+Q+4f=2T` gives the same floor as
+`2T-per(F)`, while (GR.8) keeps the loaded/topological payment visible.  Neither
+inequality supplies an upper bound on the same currencies.  In particular, a large
+outer detour or a linear exceptional-face population remains compatible with the
+current high-detour scalar region.
+
+## 5. Scope
+
+- `B_4`, `b`, and `Q+4f` are edge-occurrence quantities; no global/local boundary
+  identification is made.
+- The only face classification used is the canonical fact that bounded quadrilaterals
+  are strict rhombi.
+- The Type-II limits are full-core limits.  No claim is made for Type-I containers or
+  for an arbitrary selected harmonic carrier.
+- All source points, including contact-isolated points, remain present.
+- This is a proved candidate at proof-only scope. It does not produce an exact unit
+  triangle, a strict source-preserving diameter descent, or a Level-I conclusion.
+
+**Disposition:** a valid explicit narrowing of the full-core Type-II branch; C-II and
+Level I remain open.

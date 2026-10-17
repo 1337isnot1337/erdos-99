@@ -1,0 +1,470 @@
+# Target C-II — the three remaining uniform H5 support-six orbits have five translation-surface signatures
+
+**Date:** 2026-09-18  
+**Status:** proved candidate; theorem-state authority unchanged  
+**Scope:** the three uniform noncollapsed H5 sign/order orbits left after the simple-wall and concave-pentagon exclusions  
+**Depends on:** `target_c_support6_reciprocal_h5_reduction_2026-09-18.md`; `target_c_support6_reciprocal_h5_uniform_angle_exclusion_2026-09-18.md`; `target_c_one_anchor_k5_force_translation_surface_2026-09-18.md`; the strict one-turn and two-turn bounds for the six physical force pentagons  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The latest exact H5 classification leaves three uniform noncollapsed support-six reciprocal sign/order orbits.  Each orbit has seven reciprocal vertices: the ground vertex `0`, five convex-hull vertices `0,1,2,3,4`, two interior reciprocal points `5,6`, and missing matching
+
+\[
+M=\{16,25,34\}.
+\]
+
+Every non-ground reciprocal vertex has degree five in `K_7\setminus M`; its five signed unit forces form a strict convex equilateral pentagon.  The ground vertex has six signed unit forces, which form a strict convex equilateral hexagon.  Pairing opposite copies of every force edge therefore gives a closed orientable translation surface with seven faces and eighteen edge classes.
+
+For the three remaining sign/order orbits, the exact force rotation systems determine the surface genus and vertex classes.  The source one-turn/two-turn inequalities and the `<pi/3` ground cone then force the cone orders into only five possibilities total:
+
+\[
+\boxed{
+\begin{array}{c|c|c}
+\text{orbit}&g&\text{cone orders }(m_v)\\ \hline
+P_1&4&(5,3,1,1,1)\text{ or }(4,4,1,1,1)\\
+P_2&4&(7,1,1,1,1)\\
+P_3&5&(5,5,1)\text{ or }(6,4,1).
+\end{array}}
+\tag{0.1}
+\]
+
+Equivalently, in Abelian-differential notation the five remaining topological signatures are
+
+\[
+\boxed{\mathcal H(4,2),\ \mathcal H(3,3),\ \mathcal H(6),\ \mathcal H(4,4),\ \mathcal H(5,3).}
+\tag{0.2}
+\]
+
+This does not yet exclude any of the three reciprocal sign/order orbits.  It replaces each orbit by one or two exact cone signatures and records which physical exterior-angle gaps feed each cone point.  Any metric solution of the remaining reciprocal equations must realize one of these five signatures.
+
+---
+
+## 1. The closed seven-face force surface
+
+For every present reciprocal edge `ij`, write the signed unit force at `i` as `f_ij`.  The reciprocal unit-force equations give
+
+\[
+|f_{ij}|=1,\qquad f_{ji}=-f_{ij},\qquad
+\sum_{j:ij\in E(H)}f_{ij}=0,
+\tag{1.1}
+\]
+
+where
+
+\[
+H=K_7\setminus\{16,25,34\}.
+\tag{1.2}
+\]
+
+At each non-ground vertex `i=1,...,6`, the five vectors `f_ij` in cyclic angular order form the boundary vectors of a strict convex unit-sided pentagon `P_i`.  At the ground vertex, the six vectors form a strict convex unit-sided hexagon `P_0`.  Uniformity excludes projectively parallel force directions, so no side-direction degeneracy occurs.
+
+For a present edge `ij`, the copy of that edge on `P_i` has vector `f_ij`, while the copy on `P_j` has vector `-f_ij`.  Identify the two sides by translation.  All `36` polygon sides are paired, producing a closed orientable translation surface with
+
+\[
+F=7,\qquad E=18.
+\tag{1.3}
+\]
+
+If the side identifications have `V_s` vertex classes and the surface genus is `g`, then
+
+\[
+V_s-18+7=2-2g,
+\qquad
+\boxed{V_s=13-2g.}
+\tag{1.4}
+\]
+
+The six pentagons contribute total corner angle `18pi`, and the hexagon contributes `4pi`.  Thus the total cone angle is `22pi`.  Writing the cone angle at surface vertex `v` as `2pi m_v`,
+
+\[
+\boxed{\sum_v m_v=11.}
+\tag{1.5}
+\]
+
+---
+
+## 2. Exact force side orders for the three remaining orbits
+
+Use the representative normalization of the current exact H5 verifier: hull `0,1,2,3,4`, interior points `5,6`, missing matching `{16,25,34}`, ground radial order `[1,6,5,2,3,4]`, and ground signs positive on `01,02,03` and negative on `04,05,06`.
+
+Because the raw ground rays lie in a cone of width `<pi/3`, the ground **force** side order is
+
+\[
+\boxed{P_0=(1,2,3,6,5,4).}
+\tag{2.1}
+\]
+
+The three remaining uniform representatives have the following exact non-ground force cycles.
+
+For `P_1`:
+
+\[
+\begin{array}{c|c}
+i& P_i\\ \hline
+1&(0,3,5,2,4)\\
+2&(0,1,4,6,3)\\
+3&(0,6,2,5,1)\\
+4&(0,5,2,6,1)\\
+5&(0,6,1,3,4)\\
+6&(0,3,4,2,5).
+\end{array}
+\tag{2.2}
+\]
+
+For `P_2`:
+
+\[
+\begin{array}{c|c}
+i& P_i\\ \hline
+1&(0,3,5,2,4)\\
+2&(0,1,4,6,3)\\
+3&(0,6,2,5,1)\\
+4&(0,6,2,5,1)\\
+5&(0,4,1,3,6)\\
+6&(0,3,5,2,4).
+\end{array}
+\tag{2.3}
+\]
+
+For `P_3`:
+
+\[
+\begin{array}{c|c}
+i& P_i\\ \hline
+1&(0,3,4,2,5)\\
+2&(0,1,4,6,3)\\
+3&(0,6,2,5,1)\\
+4&(0,1,2,6,5)\\
+5&(0,6,4,3,1)\\
+6&(0,3,4,2,5).
+\end{array}
+\tag{2.4}
+\]
+
+These are combinatorial consequences of the exact chirotope/sign representatives; no numerical reciprocal coordinates are used.
+
+---
+
+## 3. Vertex classes and genera
+
+Index the corner at the start of side `k` of face `P_i` by `(i,k)`.  If side `ij` is side `k` of `P_i` and side `ji` is side `l` of `P_j`, translation pairing identifies
+
+\[
+(i,k)\sim(j,l+1),
+\qquad
+(i,k+1)\sim(j,l),
+\tag{3.1}
+\]
+
+with face indices taken cyclically.  Applying (3.1) to the side orders in Section 2 gives the following vertex-class statistics `(number of corners, physical-pentagon corners, ground-hexagon corners)`.
+
+For `P_1`:
+
+\[
+\boxed{(16,12,4),\ (3,2,1),\ (3,2,1),\ (3,3,0),\ (11,11,0).}
+\tag{3.2}
+\]
+
+Hence `V_s=5` and
+
+\[
+\boxed{g=4.}
+\tag{3.3}
+\]
+
+For `P_2`:
+
+\[
+\boxed{(22,16,6),\ (3,3,0),\ (4,4,0),\ (3,3,0),\ (4,4,0).}
+\tag{3.4}
+\]
+
+Again `V_s=5`, so
+
+\[
+\boxed{g=4.}
+\tag{3.5}
+\]
+
+For `P_3`:
+
+\[
+\boxed{(19,16,3),\ (14,12,2),\ (3,2,1).}
+\tag{3.6}
+\]
+
+Thus `V_s=3` and
+
+\[
+\boxed{g=5.}
+\tag{3.7}
+\]
+
+---
+
+## 4. General cone-order bounds
+
+Let `delta_{i,k}` be the exterior turn from side `k` to side `k+1` of physical pentagon `P_i`, normalized below in ordinary radians.  The source theorems give
+
+\[
+0<\delta_{i,k}<{2\pi\over3},
+\qquad
+\delta_{i,k}+\delta_{i,k+1}<\pi,
+\qquad
+\sum_{k=0}^4\delta_{i,k}=2\pi.
+\tag{4.1}
+\]
+
+Thus every physical corner angle is
+
+\[
+\alpha_{i,k}=\pi-\delta_{i,k}\in(\pi/3,\pi).
+\tag{4.2}
+\]
+
+Every corner of the strict convex ground hexagon lies in `(0,pi)`.  Therefore a surface vertex class with `N` total corners, `p` of them physical, and cone order `m` obeys
+
+\[
+{p\pi\over3}<2\pi m<N\pi.
+\tag{4.3}
+\]
+
+Equivalently,
+
+\[
+\boxed{{p\over6}<m<{N\over2}.}
+\tag{4.4}
+\]
+
+Together with `sum m=11`, this already makes the list finite.
+
+We will also use the following elementary consequence of (4.1): for three consecutive physical gaps `x,y,z`,
+
+\[
+x+y+z<{5\pi\over3}.
+\tag{4.5}
+\]
+
+Indeed, if `y<=pi/3`, then `x+z<4pi/3`; if `y>=pi/3`, the two-turn inequalities give `x<pi-y` and `z<pi-y`, hence `x+y+z<2pi-y<=5pi/3`.
+
+---
+
+## 5. Orbit P1 has only cone orders `(5,3,1,1,1)` or `(4,4,1,1,1)`
+
+Call the five classes in the order displayed in (3.2) `C_0,...,C_4`.  Equation (4.4) forces
+
+\[
+m_1=m_2=m_3=1,
+\tag{5.1}
+\]
+
+and therefore
+
+\[
+m_0+m_4=8.
+\tag{5.2}
+\]
+
+The basic bounds leave
+
+\[
+(m_0,m_4)\in\{(3,5),(4,4),(5,3),(6,2)\}.
+\tag{5.3}
+\]
+
+The eleven physical exterior gaps contributing to `C_4` are
+
+\[
+\begin{aligned}
+&\delta_{1,2};\\
+&\delta_{2,1},\delta_{2,2},\delta_{2,3};\\
+&\delta_{3,2};\\
+&\delta_{4,1},\delta_{4,2};\\
+&\delta_{5,1},\delta_{5,3};\\
+&\delta_{6,2},\delta_{6,3}.
+\end{aligned}
+\tag{5.4}
+\]
+
+If `m_4=5`, the cone equation would require their sum to be exactly
+
+\[
+(11-2\cdot5)\pi=\pi.
+\tag{5.5}
+\]
+
+But on face `P_2`, the selected triple satisfies
+
+\[
+\delta_{2,1}+\delta_{2,2}+\delta_{2,3}
+=2\pi-(\delta_{2,4}+\delta_{2,0})>\pi,
+\tag{5.6}
+\]
+
+because `delta_{2,4}` and `delta_{2,0}` are adjacent and their sum is `<pi`.  The remaining selected gaps are positive, contradicting (5.5).  Hence `m_4\ne5`.
+
+If `m_4=2`, the cone equation would require selected-gap sum `7pi`.  The face-2 consecutive triple is `<5pi/3` by (4.5), and each of the other eight selected physical gaps is `<2pi/3`.  Thus
+
+\[
+\sum_{C_4}\delta
+<{5\pi\over3}+8{2\pi\over3}=7\pi,
+\tag{5.7}
+\]
+
+again a strict contradiction.  Therefore
+
+\[
+\boxed{(m_0,m_1,m_2,m_3,m_4)=(4,1,1,1,4)\text{ or }(5,1,1,1,3).}
+\tag{5.8}
+\]
+
+Unordered, the singular cone orders are `(4,4)` or `(5,3)`, i.e. strata `H(3,3)` or `H(4,2)`.
+
+---
+
+## 6. Orbit P2 is forced into the single cone signature `(7,1,1,1,1)`
+
+For the four small classes in (3.4), (4.4) gives `m=1` immediately: a three-corner all-physical class has `1/2<m<3/2`, and a four-corner all-physical class has `2/3<m<2`.
+
+Their four cone orders therefore sum to four.  Since all cone orders sum to eleven,
+
+\[
+\boxed{m_0=7.}
+\tag{6.1}
+\]
+
+Hence
+
+\[
+\boxed{P_2:\quad(m_v)=(7,1,1,1,1),}
+\tag{6.2}
+\]
+
+which is the stratum `H(6)`.
+
+---
+
+## 7. Orbit P3 has only cone orders `(5,5,1)` or `(6,4,1)`
+
+Call the three classes in (3.6) `C_0,C_1,C_2`.  The three-corner class has cone order
+
+\[
+\boxed{m_2=1.}
+\tag{7.1}
+\]
+
+The basic bounds leave
+
+\[
+(m_0,m_1)\in\{(4,6),(5,5),(6,4),(7,3)\},
+\tag{7.2}
+\]
+
+because `m_0+m_1=10`.
+
+The gaps contributing to `C_1` are
+
+\[
+\begin{aligned}
+&\gamma_0,\gamma_4;\\
+&\delta_{1,2},\delta_{1,3},\delta_{1,4};\\
+&\delta_{2,0},\delta_{2,1},\delta_{2,3};\\
+&\delta_{3,2};\\
+&\delta_{4,0},\delta_{4,2};\\
+&\delta_{5,3},\delta_{5,4};\\
+&\delta_{6,2},
+\end{aligned}
+\tag{7.3}
+\]
+
+where `gamma_k` are the exterior gaps of the ground force hexagon in side order `(1,2,3,6,5,4)`.
+
+If `m_1=6`, the cone equation requires the selected-gap sum to equal
+
+\[
+(14-12)\pi=2\pi.
+\tag{7.4}
+\]
+
+But the face-1 selected triple is `>pi`, because its omitted pair `delta_{1,0}+delta_{1,1}` is adjacent and `<pi`.  The face-2 selected set is
+
+\[
+2\pi-(\delta_{2,2}+\delta_{2,4})>{2\pi\over3},
+\tag{7.5}
+\]
+
+because both omitted gaps are `<2pi/3`.  Finally, the face-5 selected pair equals `2pi` minus three consecutive omitted gaps, hence is `>pi/3` by (4.5).  These three physical contributions alone sum strictly above `2pi`, contradicting (7.4).  Thus `m_1\ne6`.
+
+For the other extreme, `m_1=3` would require selected-gap sum
+
+\[
+(14-6)\pi=8\pi.
+\tag{7.6}
+\]
+
+The physical part of (7.3) has the strict upper bound
+
+\[
+{5\pi\over3}+{5\pi\over3}+{2\pi\over3}+{4\pi\over3}+\pi+{2\pi\over3}=7\pi.
+\tag{7.7}
+\]
+
+The six terms correspond respectively to faces `1,...,6`: a consecutive triple; an adjacent pair plus one gap; one gap; two gaps; an adjacent pair; and one gap.
+
+It remains to bound the two selected ground gaps.  Write the six raw ground-ray angles in the exact order
+
+\[
+a_1<a_6<a_5<a_2<a_3<a_4,
+\qquad a_4-a_1<{\pi\over3}.
+\tag{7.8}
+\]
+
+In ground force order `(1,2,3,6,5,4)`,
+
+\[
+\gamma_0=a_2-a_1<{\pi\over3},
+\qquad
+\gamma_4=a_4-a_5<{\pi\over3}.
+\tag{7.9}
+\]
+
+Therefore the selected ground contribution is `<2pi/3`.  Combining (7.7)--(7.9),
+
+\[
+\sum_{C_1}\text{selected gaps}
+<7\pi+{2\pi\over3}
+<8\pi,
+\tag{7.10}
+\]
+
+contradicting (7.6).  Thus `m_1\ne3`.
+
+Consequently
+
+\[
+\boxed{(m_0,m_1,m_2)=(5,5,1)\text{ or }(6,4,1).}
+\tag{7.11}
+\]
+
+These are the strata `H(4,4)` and `H(5,3)`.
+
+---
+
+## 8. Resulting finite frontier
+
+The three remaining uniform H5 sign/order orbits are no longer unconstrained metric cases.  Their force translation surfaces must lie in exactly five cone signatures:
+
+\[
+\boxed{\mathcal H(3,3),\ \mathcal H(4,2),\ \mathcal H(6),\ \mathcal H(4,4),\ \mathcal H(5,3).}
+\tag{8.1}
+\]
+
+The next noncollapsed support-six target can therefore work signature by signature.  Two structures are available that were not used in the cone classification:
+
+1. the exact equilateral-polygon closure equations for every one of the six physical force pentagons and the ground hexagon, beyond the one-turn/two-turn inequalities used above; and
+2. reciprocal metric integrability: the same unit force directions must be parallel to an H5 straight-line reciprocal realization with the specified sign graph and positive edge lengths.
+
+A contradiction in all five signatures eliminates the entire noncollapsed support-six branch.  The independently certified collapsed support-six branch remains and requires a global train/source or diameter-locking obstruction.
+
+No theorem-state file is changed.
+
+**Disposition:** glued the seven force polygons for the three surviving uniform H5 orbits; computed exact surface genera and vertex classes; used the strict physical turn bounds and the ground `<pi/3` cone to reduce their cone data to five signatures total.  C-II remains open.

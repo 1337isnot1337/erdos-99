@@ -1,0 +1,214 @@
+# Authoritative theorem state
+
+<!-- BEGIN GENERATED: theorem-state-snapshot -->
+**Generated state snapshot (`2026-09-14.audit.51`):** Level I **OPEN**; Target A **OPEN** through Section 177; Target B **OPEN**; Target C **C-I CLOSED / C-II OPEN**.
+
+Machine-derived tables: [`state/STATUS.generated.md`](state/STATUS.generated.md) and [`state/THEOREM_GRAPH.generated.md`](state/THEOREM_GRAPH.generated.md).
+<!-- END GENERATED: theorem-state-snapshot -->
+
+**State date:** 2026-09-14
+**LEVEL I STATUS: STILL OPEN.**
+
+This file and [`state/theorem-state.yaml`](state/theorem-state.yaml) control theorem lifecycle and status. Presence on `main`, a merged pull request, a newer date, or a larger section number does not make a claim canonical.
+
+## Global state
+
+Erdős Problem #99 remains open. No proof covers every sufficiently large global minimizer, and no unbounded family of triangle-free global minimizers is known.
+
+## Target A
+
+**Status:** open. Canonical development is through Section 177.
+**Authority:** [`targets/target-a/README.md`](targets/target-a/README.md).
+
+The global sufficient endpoint remains
+
+\[
+\operatorname{rank}S\le d_{\rm int}+|C^\partial|-\Delta_\Lambda,
+\qquad d_{\rm sc}\ge\Delta_\Lambda.
+\]
+
+The preferred locked endpoint remains the Section-175 interior-tube right-deficiency inequality
+
+\[
+|O_{\rm iso}|+\sum_i\max\{0,|O_i|-|C_i|\}\ge j_*+|T_Z|.
+\]
+
+## Target B
+
+**Status:** open.
+**Authority:** [`targets/target-b/README.md`](targets/target-b/README.md).
+
+The sufficient closure remains
+
+\[
+G+E\ge {\sqrt3\over4}B+{\sqrt3\over2}(t+\chi-1).
+\]
+
+The audited dense-grid, penetration, cancellation, multicomponent, and dominant-component interpolation tools remain canonical only under their recorded scopes. The multi-grain/global shell-stability transfer remains open.
+
+## Target C
+
+**C-I: CLOSED.**
+**C-II: OPEN.**
+**Authority:** [`targets/target-c/README.md`](targets/target-c/README.md) and [`targets/target-c/CURRENT.md`](targets/target-c/CURRENT.md).
+
+Use the contact-minimal, then diameter-pair-minimal representative and retain every source point, including contact-isolated points.
+
+### ZR/ZF scope correction
+
+The independently audited ZR/ZF theorem is a theorem about the **nonisolated positive-contact core** `V`, not the full source. With `v=|V|`,
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\qquad
+\operatorname{rank}R_{C\cup H}[V]=2v-3,
+\]
+
+and therefore
+
+\[
+e+h\ge2v-2,
+\qquad
+h\ge\delta\ge\lceil D\rceil.
+\]
+
+Contact-isolated source points remain in the global configuration. Extending the core stress matrix by zero rows and columns creates additional kernel directions. `C-ZRF-FULL-SOURCE` remains rejected. No bound on the isolated source population follows from ZR/ZF.
+
+### Current C-II frontier
+
+Audit.50 controls theorem authority. Canonical Target C now reaches normalized **Section 123** and includes the full-core diameter-budget floor, the loaded-chord/train surplus floor, the formal \(\mu_D\to1\) concentration implication, and the promoted exclusion of the exact train-coupled floor endpoint. The post-104 promotion audits are [`targets/target-c/105-121-promotion-audit-2026-09-12.md`](targets/target-c/105-121-promotion-audit-2026-09-12.md) and [`targets/target-c/122-123-promotion-audit-2026-09-12.md`](targets/target-c/122-123-promotion-audit-2026-09-12.md).
+
+The post-104 chain is no longer proof-only. Its durable conclusions include:
+
+- §§105--108: stronger route-excess, phase-shore, and wrapping-area inputs;
+- §109: the baseline theorem `a<r/(6C_T)` is valid, but its old sharpness claim is rejected;
+- §111: the corrected joint-shore theorem gives `a<r/(3C_T)`;
+- §§112--115: aggregate projection and stability/tooth-leakage refinements;
+- §§116--117: exact occurrence-counted signed-return transport with bounded defect faces absorbed by zero-displacement hosts;
+- §118: corrected correlated-slack return, with the strongest promoted explicit full-core carrier coefficient
+  \[
+  \boxed{0.9762439137425688\ldots};
+  \]
+- §119: a valid analytic relaxation, quantitatively weaker than corrected §118;
+- §120: the finite anisotropic two-arc signed-return inequality;
+- §121: the corrected finite local return-to-Oler bridge;
+- §122: an all-cell aggregate two-arc detour floor
+  \[
+  \liminf {1\over D}\sum_r(L_r+P_{{\rm exc},r}-2d_r)
+  \ge {\pi\over2}(2-\sqrt3);
+  \]
+- §123: the exact global payment theorem
+  \[
+  \sum_rP_{{\rm exc},r}\le10(e_{BB}-k).
+  \]
+- `C-FULLCORE-DIAMETER-BUDGET-FLOOR`: in the full-core near-disk rhombic-saturation
+  branch, the canonical cell area and square-root budgets, the retained conversion
+  \(d_r\le\delta_r+2\), and the exact component currency imply
+  \[
+  \liminf_{D\to\infty}{e_{BB}+2s_C-3(d_H+s_Z)\over D}\ge1.
+  \]
+  This removes the subunit-\(\mu_D\) full-core regime but supplies no upper bound on
+  \(\mu_D\) and does not apply to the macroscopic-container branch.
+- `C-FULLCORE-MU-ONE-CELL`: formally, if \(\mu_D\to1\), one actual
+  attachment cell has diameter \(D-o(D)\), area \(\pi D^2/4-o(D^2)\), perimeter
+  \(\pi D-o(D)\), and all other attachment-cell diameters sum to \(o(D)\); after
+  normalization, every Hausdorff limit of that dominant cell is a radius-\(1/2\)
+  disk. The stronger train-coupled floor below makes this antecedent impossible for
+  canonical Type-II sequences, so this is a vacuous equality-case implication in the
+  current state, not a source-preserving deformation or an exact triangle theorem.
+- C-FULLCORE-LOADED-CHORD: in the full-core near-disk branch, every loaded-loaded
+  unit chord is a consecutive side of the actual loaded force hull. Thus
+  c_B=0 and e_BB=q-m_B. In the endpoint mu_D to 1, this gives
+  q_0+3m_0<=2 and s_Z/D>=2rho-1-o(1). This is a ledger narrowing, not a
+  source-preserving deformation or a triangle theorem.
+- `C-FULLCORE-TRAIN-SURPLUS-FLOOR`: in the canonical full-core near-disk Type-II
+  branch, every loaded-loaded unit contact is a side of the loaded force hull. The
+  exact loaded-hull and train/interface ledgers then imply
+  \[
+  \liminf\mu_D\ge
+  \frac{2\pi+2\sqrt{\pi/(2\sqrt3)}}5
+  =1.6375621841815\ldots.
+  \]
+  This is still only a necessary scalar floor; it supplies no upper detour bound,
+  strict source-preserving competitor, or exact triangle.
+- `C-FULLCORE-FLOOR-ENDPOINT-EXCLUSION`: the exact train-coupled endpoint is now
+  excluded as a sequence limit. If \(\mu_D\to\mu_{\rm TC}\), Mantel stability
+  and the three phase labels give unequal linear shores with \(o(T_D^2)\) missing
+  crossings. Fox--Pach--Suk extraction, the phase-cut threshold-chain repair,
+  and an \(o(D)\) phase-tail trim produce a complete forward grid with
+  \(a+b\ge(3/4+o(1))T_D\) and
+  \(\min(a,b)\ge(1/4+o(1))T_D\). Section 76 then gives
+  \(D\ge(1+\eta)D-O(1)\) because
+  \(\Delta_2=\pi/(2\sqrt3)>16/27\), a contradiction. This is a sequence-level
+  endpoint exclusion. Combined with the canonical floor, it gives an existential,
+  non-explicit uniform gap: some \(\varepsilon_*>0\) and \(D_*>0\) satisfy
+  \(\mu_D\ge\mu_{\rm TC}+\varepsilon_*\) for every canonical full-core minimizer
+  with \(D\ge D_*\). It does not eliminate the higher-surplus full-core regime.
+
+The restricted affine-source theorem \`C-OBLIQUE-LATTICE-COMPETITOR\` gives an exact
+same-cardinality triangular-lattice competitor whenever a finite subset of one
+unit oblique lattice satisfies
+
+\[
+(1-\kappa_\theta)D>4\kappa_\theta+2/\sqrt3,
+\qquad
+\kappa_\theta=\sqrt{(\sqrt3/2)/\sin\theta}.
+\]
+
+Thus an affine-lattice global minimizer in the open triangle-free angle range must
+have angle excess \`O(D^{-1})\`. This is a genuine source-level strict competitor,
+but it does not supply an affine chart for a general C-II source and leaves the
+inverse-diameter shear endpoint open.
+
+The strongest promoted numerical full-core conclusion remains: every sufficiently large Type-II survivor has a locally rhombus-saturated harmonic carrier of quadratic area and diameter at least
+
+\[
+(0.9762439137425688\ldots-o(1))D.
+\]
+
+This is a carrier theorem, not C-II closure.
+
+The normalized §§122--123 namespace resolves two concurrent proof artifacts that had also been numbered 120/121. Their original proof-only filenames may remain as provenance, but the canonical theorem IDs and section numbers are the normalized 122/123 forms.
+
+Three corrections are binding.
+
+1. Section 109's `r/(6C_T)` coefficient is only the proven separate-shore baseline. It is not sharp; Section 111 improves it to `r/(3C_T)`.
+2. Section 121 is canonical only in its corrected **finite** form. The discarded inference `G_loc=o(D^2) => G_loc/d=o(1)` for `d=Theta(D)` is false.
+3. In Section 120, the cut points are chosen **occurrences** on the occurrence-counted outer walk; repeated boundary vertices and bridges are not silently identified.
+
+### Exact remaining split
+
+The global §§79--80 dichotomy still leaves two real branches.
+
+1. **Macroscopic-container branch.** One actual internal inactive chamber or exterior cap has quadratic source population/area with only `O(D)` perimeter/slack. For an internal chamber, canonical hull stability and deep matching give a protected isolate hull and isolate-only blocker graph. Proof-only §95 shows contact creation alone is not a force-transfer theorem. A closure must force an exact unit triangle, alter or replace the old diameter-carrying core, or construct a same-cardinality strict sub-`D` source.
+
+2. **Full-core branch.** The new canonical diameter-budget floor first removes every
+   survivor sequence with \(\liminf\mu_D<1\), and
+   `C-FULLCORE-FLOOR-ENDPOINT-EXCLUSION` removes convergence to the exact
+   train-coupled endpoint \(\mu_{\rm TC}\), where
+   \[
+   \mu_D={e_{BB}+2s_C-3(d_H+s_Z)\over D}.
+   \]
+   The remaining full-core regime still has only the necessary
+   \(\liminf\mu_D\ge1.6375621841815\ldots\) by the loaded-chord/train floor; the
+   endpoint exclusion supplies a non-explicit qualitative gap above
+   \(\mu_{\rm TC}\), but no numerical/effective gap or upper bound. It still has
+   the two compatible source-level scales.
+   - On one actual carrier, §§120--121 convert train anisotropy into local detour and then into local non-rhombic area currency.
+   - Globally across the harmonic tiling, §§122--123 force a linear aggregate detour and pay the exceptional-face portion by the single loaded-hull scalar `e_BB-k`.
+
+   The clean remaining aggregate target is therefore
+   \[
+   \sum_r(L_r-2d_r)
+   \]
+   coupled to `e_BB-k` and the global diameter graph. A closure needs a sharp enough upper bound on this same currency, a source-preserving deformation, or an exact unit triangle. Further carrier-decimal optimization is secondary unless it creates such a source-level implication.
+
+The full loaded diameter graph retains the exact Woodall split. The independently audited PR #188 and PR #182 scalar chains remain canonical under the dependencies recorded in the manifest. PR #191's `0.995540...` theorem remains rejected.
+
+### Binding Target C corrections
+
+Do not use, without a new proof, the incident-diameter Euler-path inference, FB4 localization, the incompatible-cut C53 pentagon objection, RSR disk-equality uniqueness, Eppstein-near-equality-to-near-quadrangulation, five-host occupancy from measure saturation, the inward-pocket/exterior-Reuleaux-cap containment, deletion of contact-isolated source points, extension of the ZR/ZF affine-kernel theorem to isolated coordinates, `r/(6C_T)` as the sharp phase-bin limit, or the discarded Section-121 normalization `G_loc=o(D^2) => G_loc/d=o(1)`.
+
+## Promotion rule
+
+A frontier-changing result must update the machine manifest, this state lock, the affected route/current-frontier file, the active prompt when its next obligation changes, applicable dependency/certificate registrations, and every generated view whose generated bytes change.

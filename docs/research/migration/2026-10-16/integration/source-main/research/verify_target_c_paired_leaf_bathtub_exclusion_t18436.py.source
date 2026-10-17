@@ -1,0 +1,99 @@
+#!/usr/bin/env python3
+"""Exact certificate for the paired-leaf bathtub exclusion at t <= 1.8436.
+
+Dependencies proved elsewhere on the current Target-C stack:
+- matched atomic floor C_707 = 2*sqrt(Delta_2) + 0.007707;
+- t<=1.8436 two-leaf localization and phasewise retained mass z_i>0.616;
+- total retained dominant outer mass z_C+z_U+z_V>2.2069;
+- common-center trimming leaves good pair weight >0.06895 in each leaf;
+- the good cross-product forces e_tau+e_sigma >= 2-sqrt(3).
+
+The geometric proof trims each good leaf family to pair weight g=0.06895.
+The paired endpoint submeasure then has mass 2g in each leaf.  Removing those
+submeasures leaves total phase-occurrence mass at least
+    2.2069 - 4g = 1.9311,
+so convexity/Jensen for f(z)=z-2 sin(z/2) gives the energy floor
+    delta >= 3 f(0.6437) + (2-sqrt(3))*g.
+This script certifies that floor above the network-envelope ceiling at t=1.8436.
+"""
+
+from fractions import Fraction as Q
+from math import factorial, isqrt
+
+
+def atan_inv_bounds(q, n):
+    s = Q(0)
+    for k in range(n):
+        term = Q(1, (2 * k + 1) * q ** (2 * k + 1))
+        s += term if k % 2 == 0 else -term
+    nxt = Q(1, (2 * n + 1) * q ** (2 * n + 1))
+    return (s, s + nxt) if n % 2 == 0 else (s - nxt, s)
+
+
+def sqrt_bounds(lo, hi, scale):
+    a = isqrt((lo.numerator * scale * scale) // lo.denominator)
+    b = isqrt((hi.numerator * scale * scale) // hi.denominator) + 1
+    return Q(a, scale), Q(b, scale)
+
+
+def sin_bounds(x, n=12):
+    s = Q(0)
+    for k in range(n):
+        term = x ** (2 * k + 1) / factorial(2 * k + 1)
+        s += term if k % 2 == 0 else -term
+    nxt = x ** (2 * n + 1) / factorial(2 * n + 1)
+    return (s, s + nxt) if n % 2 == 0 else (s - nxt, s)
+
+
+SCALE = 10**50
+
+# Certified pi and sqrt(3) enclosures.
+a5_lo, a5_hi = atan_inv_bounds(5, 60)
+a239_lo, a239_hi = atan_inv_bounds(239, 20)
+pi_lo = 16 * a5_lo - 4 * a239_hi
+pi_hi = 16 * a5_hi - 4 * a239_lo
+n3 = isqrt(3 * SCALE * SCALE)
+sqrt3_lo = Q(n3, SCALE)
+sqrt3_hi = Q(n3 + 1, SCALE)
+
+# Current matched atomic constant C_707.
+Delta_lo = pi_lo / (2 * sqrt3_hi)
+Delta_hi = pi_hi / (2 * sqrt3_lo)
+s_lo, s_hi = sqrt_bounds(Delta_lo, Delta_hi, SCALE)
+C707_lo = 2 * s_lo + Q(7707, 10**6)
+C707_hi = 2 * s_hi + Q(7707, 10**6)
+assert C707_lo > Q(191233, 100000)
+
+# At t<=1.8436, U_net >= C_707 and kappa>=0 imply the displayed detour ceiling.
+T = Q(4609, 2500)  # 1.8436
+delta_upper = (Q(9, 2) * T - 2 * pi_lo - C707_lo) / 2
+assert delta_upper < Q(1007, 20000)  # 0.05035
+
+# Paired-leaf trimming constants.
+g = Q(1379, 20000)       # 0.06895 pair weight in each leaf
+z_total = Q(22069, 10000) # 2.2069 retained phase-occurrence mass
+remaining = z_total - 4 * g
+assert remaining == Q(19311, 10000)
+x = remaining / 3
+assert x == Q(6437, 10000)
+
+# Lower f(x)=x-2 sin(x/2) using an upper sine enclosure.
+_, sin_hi = sin_bounds(x / 2, 12)
+f_lo = x - 2 * sin_hi
+
+# Safe rational upper bound on sqrt(3), hence lower bound on 2-sqrt(3).
+sqrt3_coarse_hi = Q(17321, 10000)
+assert sqrt3_coarse_hi > sqrt3_hi
+pair_energy_lo = g * (2 - sqrt3_coarse_hi)
+energy_lower = 3 * f_lo + pair_energy_lo
+assert energy_lower > Q(5163, 100000)  # 0.05163
+
+margin = energy_lower - delta_upper
+assert margin > Q(127, 100000)  # 0.00127
+
+print("C_707 lower =", float(C707_lo))
+print("detour upper at t=1.8436 =", float(delta_upper))
+print("remaining phase mass =", float(remaining), "average =", float(x))
+print("paired-leaf outer-energy lower =", float(energy_lower))
+print("contradiction margin lower =", float(margin))
+print("PASS: no full-core Type-II survivor can have t<=1.8436")

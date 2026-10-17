@@ -1,0 +1,316 @@
+# Target B: relative-isoperimetric concentration of a phase-cut grain
+
+**Phase 2 preservation provenance:** PR #564, branch astra-b-relative-isoperimetry-20260922, audited source head 8f6c29178197dfe9c08d8f0702b1dae0ed479038. Preserve the finite relative-isoperimetric inequality; its grain-concentration implication is conditional.
+
+**Date:** 2026-09-22
+**Classification:** proved candidate awaiting independent audit
+**Target:** the multi-grain/globalization obstruction in the jammed pure-rhombic
+branch
+**Level I / Target B status:** unchanged and open
+
+## Candidate implication
+
+The new finite lemma is
+
+```text
+phase-cut component + relative boundary budget
+    -> exact two-set isoperimetric inequality
+    -> quantitative area concentration of the largest retained grain.
+```
+
+Combined with the canonical phase-cut estimate `|F| <= (2+sqrt(3))E`, it gives a
+one-dominant-grain theorem whenever the angular surplus and the original
+convexification-boundary roughness are both `o(D)`. This is strictly stronger than
+the preceding phase-cut note, which only forced one `Omega(D^2)` grain from a
+global `O(D)` interface budget. The result does **not** prove that the roughness is
+`o(D)` in a general survivor; that is the remaining multi-grain obstruction.
+
+The exact canonical quantity strengthened is the area distribution of retained
+phase-cut grains. If the dominant grain also satisfies the canonical GPI
+near-extremal hypotheses, the new concentration result supplies the missing
+global-core accounting needed to invoke GPI. No theorem-state promotion is
+claimed here.
+
+## 1. Setup and boundary quantity
+
+Let `U` be the union of the strict unit-rhombus faces in a simply connected pure
+rhombic-disk survivor, and let `K=conv(U)`. Write `D=diam(K)`. The canonical
+Target B estimates give
+
+\[
+ |K|=\frac{\pi D^2}{4}+O(D),\qquad
+ \operatorname{per}(K)=\pi D+O(1).
+\tag{1.1}
+\]
+
+Let `F` be any set of physical rhombi deleted by the canonical phase-circle cut,
+and let `U_F` be the union of the retained faces. Let `C` be one Euclidean
+connected component of `U_F`, and put `A=area(C)`. More generally, below `S` may
+be a union of any subcollection of the components, with `A=area(S)`. Define the original pocket
+roughness
+
+\[
+ Q_U:=\mathcal H^1(\partial U\cap\operatorname{int}K).
+\tag{1.2}
+\]
+
+Thus `Q_U` counts only boundary of the original rhombic disk lying strictly
+inside its convex hull. It does not count the convex-hull boundary itself. This
+is the boundary length that can mask a separating cut when one applies a relative
+isoperimetric argument in `K`.
+
+Let
+
+\[
+ L_S:=\mathcal H^1(\partial S\cap U^\circ)
+\tag{1.3}
+\]
+
+be the internal interface of `S` with the retained complement. Every such
+interface edge is incident to a deleted face: two retained faces sharing an edge
+would be in the same Euclidean component. Each deleted rhombus has four unit
+sides, so
+
+\[
+ L_S\le 4|F|.
+\tag{1.4}
+\]
+
+The boundary of `S` lying in `int(K)` is contained in the disjoint union of its
+deleted-face interface and the original pocket boundary. Consequently
+
+\[
+ \mathcal H^1(\partial S\cap\operatorname{int}K)
+ \le Q_U+4|F|.
+\tag{1.5}
+\]
+
+No smoothness assumption is used; all sets are finite unions of polygons and the
+perimeters are ordinary finite-perimeter measures.
+
+## 2. Exact relative-isoperimetric concentration inequality
+
+For any finite-perimeter set `S subset K`, in particular for a union of retained
+components, the perimeter identity for the pair `S` and `K\\S` is
+
+\[
+ \operatorname{per}(S)+\operatorname{per}(K\setminus S)
+ =\operatorname{per}(K)
+  +2\mathcal H^1(\partial S\cap\operatorname{int}K).
+\tag{2.1}
+\]
+
+Applying the planar isoperimetric inequality separately to `S` and `K\\S`, then
+using (1.5), gives the exact finite bound
+
+\[
+\boxed{
+ \sqrt{\pi A}+\sqrt{\pi(|K|-A)}
+ \le \frac{\operatorname{per}(K)}2+Q_U+4|F|.
+}
+\tag{2.2}
+\]
+
+This remains valid if `S` has holes or if `K\\S` is disconnected, because the
+planar isoperimetric inequality applies to arbitrary finite-perimeter sets and
+the perimeter identity counts every internal interface twice.
+
+There is an important quantifier point here: a largest component need not have
+area at least `|K|/2` (there may be three or more macroscopic components).
+Equation (2.2) must therefore be applied to unions of components, not only to a
+selected component. Writing `x=A/|K|`, (1.1)--(2.2) give
+
+\[
+ \frac{\pi}{2}\bigl(\sqrt{x}+\sqrt{1-x}-1\bigr)
+ \le \frac{Q_U+4|F|}{D}+o(1).
+\tag{2.3}
+\]
+
+The `o(1)` is uniform along every sequence with `D->infinity`; it comes only
+from the `O(D)` area error and the `O(1)` perimeter error in (1.1).
+
+Here is the resulting multi-grain separator statement. Let the retained
+components have areas `A_1,A_2,\ldots`, let `A_*:=\max_i A_i`, and assume their
+total area is `|K|-o(|K|)`. Fix `eta in (0,1/2]`. If
+`A_*<=(1-eta)|K|`, there is a union `S` of retained components with
+
+\[
+   \frac{\eta}{4}|K|\le \operatorname{area}(S)\le\frac12|K|
+\tag{2.4}
+\]
+
+for all sufficiently large `D`:
+
+* if `A_*>=|K|/2`, take `S` to be the union of all components except a
+  largest one; its area is at least `eta|K|-o(|K|)` and at most `|K|/2`;
+* if `A_*<|K|/2` and `A_*>=eta|K|/4`, take `S` to be a largest component;
+* if `A_*<eta|K|/4`, greedily add components until their total first reaches
+  `eta|K|/4`; the last summand is smaller than `eta|K|/4`, so the total is
+  below `eta|K|/2`.
+
+Applying (2.3) to this `S`, and using monotonicity of
+`sqrt(x)+sqrt(1-x)-1` on `[0,1/2]`, yields
+
+\[
+\boxed{
+ \frac{Q_U+4|F|}{D}
+ \ge
+ \frac\pi2\left(\sqrt{\eta/4}+\sqrt{1-\eta/4}-1\right)-o(1).
+}
+\tag{2.5}
+\]
+
+In particular, if `(Q_U+4|F|)/D -> 0`, then `A_*/|K| -> 1`: otherwise a fixed
+`eta` would contradict (2.5). This is stronger than a generic `Omega(D^2)`
+conclusion because it retains the dependence on the actual roughness and cut
+size while correctly handling arbitrarily many retained components.
+
+## 3. Quantitative corollaries
+
+If
+
+\[
+ \frac{Q_U+4|F|}{D}\longrightarrow 0,
+\tag{3.1}
+\]
+
+then the preceding separator statement forces `beta:=1-A_*/|K|->0`; hence one
+retained component contains `(1-o(1))|K|` area. The argument is deliberately
+qualitative in `beta`: without an additional bound on the number or smallest
+mass of the components, a quadratic inversion in `Q_U+4|F|` does not follow from
+the relative inequality alone. (For a known dominant component with
+`A_*/|K|>=1/2`, the direct inversion of (2.3) is available.)
+
+For a fixed target fraction `eta in (0,1/2]`, (2.5) gives the explicit separator
+threshold
+
+\[
+ \frac{Q_U+4|F|}{D}
+ \ge
+ \frac\pi2\left(\sqrt{\eta/4}+\sqrt{1-\eta/4}-1\right)-o(1)
+\tag{3.4}
+\]
+
+whenever the largest grain has area at most `(1-eta)|K|`.
+
+## 4. Transfer from area to rhombus population
+
+The concentration result is an area statement. It becomes a population statement
+in the small-angular-surplus regime relevant to the phase cut. Let
+
+\[
+ E=\sum_{R\subset U}\bigl(\operatorname{area}(R)-a_0\bigr),
+ \qquad a_0=\sqrt3/2.
+\tag{4.1}
+\]
+
+Triangle-freeness gives every acute rhombus angle strictly larger than `pi/3`,
+so each summand is nonnegative. If `E=o(D)`, the phase-circle cut satisfies
+
+\[
+ |F|\le(2+\sqrt3)E=o(D).
+\tag{4.2}
+\]
+
+The strict shell window gives `G=area(K)-area(U)=O(D)`. Therefore, under the
+additional roughness hypothesis `Q_U=o(D)`, (3.1) holds and a component `C_*`
+has area `|K|-o(D^2)`. Since the total angular area surplus of **all** rhombi is
+`E=o(D)`,
+
+\[
+ a_0R(C_*)
+ \ge \operatorname{area}(C_*)-E
+ =a_0R-o(D^2),
+\]
+
+and hence
+
+\[
+\boxed{R(C_*)=R-o(D^2).}
+\tag{4.3}
+\]
+
+Thus the only way for a small-angular-surplus sequence to retain two
+quadratic phase-cut grains is to have `Q_U=Omega(D)`: the original outer pocket
+boundary itself must carry a linear separator budget. This is a concrete,
+quantitative narrowing of the multi-grain branch.
+
+## 5. Composition with the canonical GPI scope
+
+Suppose, in addition to `E=o(D)` and `Q_U=o(D)`, that the dominant component
+`C_*` has the canonical GPI hypotheses: its crossing graph contains a coherent
+three-phase component with class sizes `M>=b>=a`, `b/M>=tau>0`, and
+
+\[
+ R(C_*)=M(a+b)+o(M^2),
+\tag{5.1}
+\]
+
+where `M=Theta(D)`. Let `e_*` be the number of retained crossings between the
+two selected classes and put
+
+\[
+ \Delta_*:=\frac{M(a+b)-e_*}{M^2}.
+\tag{5.2}
+\]
+
+The audited canonical GPI theorem gives
+
+\[
+\liminf\Delta_*\ge4\cdot10^{-17}\tau^2.
+\tag{5.3}
+\]
+
+This is now a genuinely global-core statement: by (4.3), all but `o(D^2)` of
+the rhombic population lies in `C_*`, so (5.1) is no longer an assumption that
+can be satisfied by a negligible local grain. The remaining route obligation is
+exactly to connect the `o(D^2)` crossing deficit outside the selected coherent
+core to the strict shell comparison. The concentration theorem removes the
+multi-grain population escape, but does not itself prove that core accounting.
+
+## 6. Hostile audit and exact scope
+
+The argument does **not** assert any of the following false implications:
+
+* `|F|=O(D)` implies one dominant grain; (2.4) shows that the coefficient can be
+  absorbed by a genuine `Q_U=Theta(D)` pocket boundary;
+* small `E` implies small `Q_U`; no such theorem is currently canonical;
+* area concentration implies a near-extremal coherent phase graph; (5.1) is kept
+  as an explicit GPI hypothesis;
+* a phase-cut deletion is a source deletion; all statements concern the analytic
+  retained-face decomposition only.
+
+The exact new candidates are therefore the following two statements. If two
+individual retained components each carry at least an `eta` fraction of the
+hull area, the smaller of them has area fraction in `[eta,1/2]`, so (2.3) gives
+
+\[
+ \text{two individual macroscopic grains}
+ \Longrightarrow
+ Q_U+4|F|\ge c_{\rm sep}(\eta)D-o(D),
+\]
+
+where
+
+\[
+ c_{\rm sep}(\eta)=\frac\pi2(\sqrt{1-\eta}+\sqrt\eta-1).
+\]
+
+For the stronger statement that the **largest** grain misses an `eta` fraction,
+possibly with many smaller grains, the union construction in (2.4)--(2.5) gives
+the safe threshold with `eta/4` in place of `eta`. Thus the correct general
+candidate is
+
+\[
+ \boxed{
+ \text{largest grain}\le(1-\eta)|K|
+ \Longrightarrow
+ Q_U+4|F|\ge
+ \frac\pi2\left(\sqrt{\eta/4}+\sqrt{1-\eta/4}-1\right)D-o(D).
+ }
+\]
+
+This is a proved candidate awaiting audit. It narrows the canonical Target B
+multi-grain endpoint to the simultaneous linear roughness/interface regime and
+provides a precise input for any future shell-payment or source-preserving
+deformation theorem.

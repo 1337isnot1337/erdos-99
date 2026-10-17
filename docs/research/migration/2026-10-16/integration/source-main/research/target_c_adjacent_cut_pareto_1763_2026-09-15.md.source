@@ -1,0 +1,130 @@
+# Target C-II — count-optimal adjacent Pareto refinement forces at most `1762` switching rows
+
+**Date:** 2026-09-15  
+**Status:** proof-only source-level structural strengthening  
+**Scope:** the audited `t=(q-k)/D<=1.844` full-core Type-II adjacent-cut backbone  
+**Dependencies:** `target_c_adjacent_cut_pareto_refinement_2026-09-15.md`  
+**Certificate:** `research/verify_target_c_adjacent_cut_pareto_1763.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The general Pareto inequality from the adjacent-cut refinement says that fixed positive
+thresholds `n,b,a` are simultaneously attainable on one internal boundary whenever
+
+\[
+{2\pi\over n}
++{2\over b}
++{2C_{phase}\over d_{low}a}
+<p,
+\]
+
+where
+
+\[
+p={278778993\over78216868750}=0.0035641799\ldots,
+\qquad
+d_{low}={9891\over62500}.
+\]
+
+The earlier convenient choice `n=1800`, `a=b=10^6` leaves visible numerical room.  If
+the downstream objective is instead to minimize the number of exceptional diameter
+rows, that choice can be driven almost to the limit of the switch-count budget itself.
+
+Take
+
+\[
+\boxed{
+n=1763,
+\qquad a=b=3\times10^8.}
+\]
+
+Using the same outward rational bounds
+
+\[
+\pi<{355\over113},
+\qquad
+C_{phase}
+<{3258689123681\over612912000000},
+\]
+
+the exact verifier gives
+
+\[
+{2(355/113)\over1763}
+=0.00356391709626\ldots,
+\]
+
+\[
+{2\over3\times10^8}
+=6.6666\ldots\times10^{-9},
+\]
+
+and
+
+\[
+{2C_{phase}^{up}\over d_{low}(3\times10^8)}
+=2.2397181\ldots\times10^{-7}.
+\]
+
+Their sum is
+
+\[
+0.00356414773474\ldots
+<p,
+\]
+
+with exact rational gap
+
+\[
+\boxed{>3\times10^{-8}.}
+\]
+
+Therefore one adjacent boundary satisfies
+
+\[
+\boxed{N_i<1763+o(1),}
+\]
+
+\[
+\boxed{DB_i<3\times10^8+o(1),}
+\]
+
+and
+
+\[
+\boxed{D(q_i+q_{i+1})<3\times10^8+o(1).}
+\]
+
+Because `N_i` is integer, along every sufficiently large survivor this yields
+
+\[
+\boxed{N_i\le1762.}
+\]
+
+The other two bounds still imply
+
+\[
+B_i=O(D^{-1}),
+\qquad
+d_{\mathbb{RP}^1}(u_i,u_{i+1})=O(D^{-1}),
+\]
+
+with fixed constants, so the exact opposite-shear finite-cusp reduction remains valid.
+Combining with
+`target_c_adjacent_switching_caterpillar_2026-09-15.md`, the large-first-derivative
+exceptional graph is therefore a caterpillar forest with at most `1762` edges for all
+sufficiently large members of the live branch.
+
+This is essentially count-optimal for the current three-budget argument.  Indeed the
+switch-count budget alone has limiting average threshold
+
+\[
+{2(355/113)\over p}
+=1762.8699958\ldots .
+\]
+
+Thus reducing the guaranteed exceptional count below `1762` requires genuinely new
+information beyond the present global switch-count, switching-weight, and phase-defect
+budgets.
+
+**Disposition:** proved proof-only count-focused Pareto endpoint for the adjacent
+finite-cusp normal form. C-II and Level I remain open.

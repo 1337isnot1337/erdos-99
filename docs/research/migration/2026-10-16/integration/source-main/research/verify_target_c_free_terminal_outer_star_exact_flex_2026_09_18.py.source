@@ -1,0 +1,106 @@
+#!/usr/bin/env python3
+"""Exact-rational scalar certificate for the terminal outer-star flex theorem.
+
+The geometric proof is in target_c_free_terminal_outer_star_exact_flex_2026-09-18.md.
+This script certifies, without load-bearing floating point:
+
+* outward enclosures for pi, sqrt(3), Delta_2 and s_2;
+* the live constant c_star(0.00710) > 0.7916632813;
+* the near-maximal-detour constant > 0.8175382813;
+* positivity of the B--B transport surplus used to exclude global rotation;
+* the signed-incidence total implied by the live product floor.
+"""
+
+from fractions import Fraction
+from math import isqrt
+
+Q = Fraction
+
+
+def atan_inv_bounds(q: int, terms: int):
+    s = Q(0)
+    for k in range(terms):
+        term = Q(1, (2 * k + 1) * q ** (2 * k + 1))
+        s += term if k % 2 == 0 else -term
+    nxt = Q(1, (2 * terms + 1) * q ** (2 * terms + 1))
+    if terms % 2 == 0:
+        return s, s + nxt
+    return s - nxt, s
+
+
+def sqrt_floor(x: Q, scale: int) -> Q:
+    n = isqrt((x.numerator * scale * scale) // x.denominator)
+    y = Q(n, scale)
+    assert y * y <= x
+    return y
+
+
+def sqrt_ceil(x: Q, scale: int) -> Q:
+    n = isqrt((x.numerator * scale * scale) // x.denominator) + 1
+    y = Q(n, scale)
+    assert y * y >= x
+    return y
+
+
+DIGITS = 90
+SCALE = 10 ** DIGITS
+
+# Rigorous pi enclosure from Machin's formula.
+a5_lo, a5_hi = atan_inv_bounds(5, 100)
+a239_lo, a239_hi = atan_inv_bounds(239, 30)
+pi_lo = 16 * a5_lo - 4 * a239_hi
+pi_hi = 16 * a5_hi - 4 * a239_lo
+assert pi_lo < pi_hi
+
+# sqrt(3), Delta_2=pi/(2sqrt(3)), s_2=sqrt(Delta_2).
+n3 = isqrt(3 * SCALE * SCALE)
+sqrt3_lo = Q(n3, SCALE)
+sqrt3_hi = Q(n3 + 1, SCALE)
+assert sqrt3_lo * sqrt3_lo < 3 < sqrt3_hi * sqrt3_hi
+
+delta2_lo = pi_lo / (2 * sqrt3_hi)
+delta2_hi = pi_hi / (2 * sqrt3_lo)
+s2_lo = sqrt_floor(delta2_lo, SCALE)
+s2_hi = sqrt_ceil(delta2_hi, SCALE)
+assert s2_lo * s2_lo <= delta2_lo
+assert s2_hi * s2_hi >= delta2_hi
+
+g = Q(7707, 10**6)
+epsilon = Q(71, 10000)  # 0.00710
+
+# p_*=M_*/5=(4s_2+2g)/5. For a rigorous lower bound on
+# c_star=pi/2-p_*-2epsilon, use pi_lo and s2_hi.
+pstar_hi = (4 * s2_hi + 2 * g) / 5
+cstar_lo = pi_lo / 2 - pstar_hi - 2 * epsilon
+assert cstar_lo > Q(7916632813, 10**10)
+
+# In the p<=0.01 complement branch, delta>0.01725 and a+2r<=0.001.
+# The flex expression is c0 + 7delta/10 + r/5 - 2a/5.
+# Its minimum over the closed relaxation delta>=0.01725, a+2r<=0.001
+# occurs at delta=0.01725, r=0, a=0.001.
+delta_cut = Q(69, 4000)  # 0.01725
+remaining = Q(1, 1000)
+c0_lo = pi_lo / 2 - pstar_hi
+nearmax_lo = c0_lo + Q(7, 10) * delta_cut - Q(2, 5) * remaining
+assert nearmax_lo > Q(8175382813, 10**10)
+
+# Live transport surplus E_BB-L_O >= e_*-(5/2)epsilon,
+# e_*=(M_*-pi)/2. Use Mstar_lo and pi_hi for a lower bound.
+Mstar_lo = 4 * s2_lo + 2 * g
+transport_surplus_lo = (Mstar_lo - pi_hi) / 2 - Q(5, 2) * epsilon
+assert transport_surplus_lo > Q(323786, 10**6)
+
+# The positive KKT relation forces at least m positive and m negative derivative
+# incidences. Certify the corresponding total live density.
+signed_total_lo = 2 * cstar_lo
+assert signed_total_lo > Q(1583326562, 10**9)
+
+# Elementary finite ledger inequalities used in the proof.
+for j in range(0, 50):
+    assert max(j - 2, 0) >= j - 2
+
+print("PASS: terminal outer-star exact-flex scalar certificate")
+print("c_star(0.00710) >", float(cstar_lo))
+print("near-maximal-detour flex density >", float(nearmax_lo))
+print("B-B transport surplus density >", float(transport_surplus_lo))
+print("signed derivative-incidence total density >", float(signed_total_lo))

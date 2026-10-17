@@ -1,0 +1,500 @@
+# Target C-II — deep bilateral force pairs form two simultaneous nested support rails
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** the no-fixed-margin-TB1 parameterized deep exact-force branch through `t=(q-k)/D<=1.8687`  
+**Dependencies:** parameterized deep grid-force density; wide-dipole bilateral birth loading; same-host diameter exclusion; full fixed-birth-side nesting; C67 diameter-direction separation; full-source diameter-midpoint localization  
+**Certificate:** `research/verify_target_c_high_t_bilateral_paired_nested_destination_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The linear nested-rail theorem keeps one force bar from each deep exact-force cell. That is enough for one ordered rail, but it discards the second bar in the exact positive force pair. Bilateral birth plus the later same-host exclusion let both bars be retained simultaneously.
+
+The result is a paired normal form. At every retained cell there is one force-carrying diameter bar born on each physical host arc. Both birth-side lanes have strictly nested support intervals in the same interface order. In each lane, terminal partners form an initial segment. Therefore the paired destination pattern can change at most twice:
+
+```text
+both partners terminal
+        -> exactly one partner terminal
+        -> both partners on the opposite physical host.
+```
+
+One of these three consecutive regimes has positive linear density. If the first regime is the large one, both bars from every cell terminate in `T_m`; using both distinct diameter directions doubles the terminal direction-packing lower bound available from a one-bar terminal rail.
+
+---
+
+## 1. Setup
+
+Use the parameterized deep family
+
+\[
+Q_D=Q_D(r;\rho,\eta,\delta),
+\qquad
+|Q_D|>\lambda D-o(D),
+\tag{BP.1}
+\]
+
+where
+
+\[
+\lambda=c_0-6\rho-\eta-2\delta>0,
+\qquad
+c_0={113\over20{,}000{,}000}.
+\tag{BP.2}
+\]
+
+We are on one pre-hub shore; write the retained interfaces in increasing order
+
+\[
+i_1<i_2<\cdots<i_N<k,
+\qquad N=|Q_D|.
+\tag{BP.3}
+\]
+
+At each cell `i_s`, the exact force pair consists of two distinct switching diameter bars
+
+\[
+h_s^A=x_s^Ay_s^A,
+\qquad
+h_s^B=x_s^By_s^B,
+\tag{BP.4}
+\]
+
+labeled by their birth hosts. Bilateral birth gives
+
+\[
+x_s^A\in C_{i_s}^A,
+\qquad
+x_s^B\in C_{i_s}^B,
+\tag{BP.5}
+\]
+
+on the two physical host arcs `A,B`. The bounded exceptional set from bilateral birth is already absorbed into the `o(D)` term in (BP.1).
+
+The two bars satisfy the exact positive force identity
+
+\[
+G_{i_s}
+=D\bigl(\lambda_s^A d_s^A+\lambda_s^B d_s^B\bigr),
+\qquad
+\lambda_s^A,\lambda_s^B>0,
+\tag{BP.6}
+\]
+
+and their projective direction gap is at least the fixed parameter `rho`. In particular they have four distinct endpoints and cross.
+
+Let their support ends be
+
+\[
+y_s^A\in R_{b_s^A},
+\qquad
+y_s^B\in R_{b_s^B},
+\qquad b_s^A,b_s^B\ge k,
+\tag{BP.7}
+\]
+
+with exact selected-cut supports
+
+\[
+I_s^A=\{i_s+1,\ldots,b_s^A\},
+\qquad
+I_s^B=\{i_s+1,\ldots,b_s^B\}.
+\tag{BP.8}
+\]
+
+---
+
+## 2. Same-host exclusion localizes both partner lanes
+
+The same-host diameter-exclusion theorem applies to every actual diameter bar in the selected O--O path. Therefore
+
+\[
+\boxed{
+y_s^A\in Q^B\cup T_m,}
+\qquad
+\boxed{
+y_s^B\in Q^A\cup T_m,}
+\tag{BP.9}
+\]
+
+where `Q^A,Q^B` are the hubward portions of the two physical host arcs.
+
+Thus each force pair has only four raw physical destination patterns:
+
+\[
+(T,T),\quad(T,A),\quad(B,T),\quad(B,A),
+\tag{BP.10}
+\]
+
+where the first entry is the destination of the bar born on `A`, and the second is the destination of the bar born on `B`. Here `(B,A)` means that both bars go to the opposite host.
+
+The point below is that these four patterns cannot occur in arbitrary interface order.
+
+---
+
+## 3. Both birth-side lanes are nested, simultaneously
+
+Apply the full fixed-birth-side nesting theorem first to the entire `A`-born lane
+
+\[
+\{h_s^A:1\le s\le N\}.
+\]
+
+Every bar is born on the same physical host `A`, crosses the common hub cut, and by (BP.9) its partner lies on the contiguous opposite-host-plus-terminal segment `Q^B\cup T_m`. Hence, in increasing interface order,
+
+\[
+\boxed{
+b_1^A\ge b_2^A\ge\cdots\ge b_N^A.}
+\tag{BP.11}
+\]
+
+Apply the same theorem, with the physical hosts interchanged, to the entire `B`-born lane. It gives
+
+\[
+\boxed{
+b_1^B\ge b_2^B\ge\cdots\ge b_N^B.}
+\tag{BP.12}
+\]
+
+No density factor is paid in either application because bilateral birth already supplies one selected force bar on each host at every retained cell.
+
+Since the birth indices increase strictly, both support lanes are strictly nested:
+
+\[
+\boxed{
+I_1^A\supsetneq I_2^A\supsetneq\cdots\supsetneq I_N^A,
+}
+\tag{BP.13}
+\]
+
+\[
+\boxed{
+I_1^B\supsetneq I_2^B\supsetneq\cdots\supsetneq I_N^B.
+}
+\tag{BP.14}
+\]
+
+Consequently the paired support envelope and paired common support,
+
+\[
+U_s:=I_s^A\cup I_s^B,
+\qquad
+J_s:=I_s^A\cap I_s^B,
+\tag{BP.15}
+\]
+
+are themselves nested:
+
+\[
+U_1\supsetneq U_2\supsetneq\cdots\supsetneq U_N,
+\qquad
+J_1\supsetneq J_2\supsetneq\cdots\supsetneq J_N.
+\tag{BP.16}
+\]
+
+Thus the exact two-bar KKT reaction at each cell is carried by a **paired nested laminar bundle**, not merely by one selected rail bar.
+
+---
+
+## 4. Terminal partners are prefixes in both lanes
+
+Use the boundary-piece convention of the full nesting theorem: the terminal boundary piece `T_m` carries path-region label `m`, while the opposite-host piece continues with labels
+
+\[
+m-1,m-2,\ldots,k.
+\tag{BP.17}
+\]
+
+Harmless shared cut-endpoint ties are assigned to `T_m` as in that boundary decomposition. Therefore, in either lane,
+
+\[
+y_s^\sigma\in T_m
+\quad\Longleftrightarrow\quad
+b_s^\sigma=m,
+\qquad \sigma\in\{A,B\}.
+\tag{BP.18}
+\]
+
+Because both sequences in (BP.11)--(BP.12) are nonincreasing and `m` is their maximum possible value, there are cut indices
+
+\[
+r_A,r_B\in\{0,1,\ldots,N\}
+\tag{BP.19}
+\]
+
+such that
+
+\[
+y_s^A\in T_m\iff s\le r_A,
+\qquad
+y_s^B\in T_m\iff s\le r_B.
+\tag{BP.20}
+\]
+
+After the terminal prefix, same-host exclusion leaves only the opposite host:
+
+\[
+s>r_A\Longrightarrow y_s^A\in Q^B,
+\qquad
+s>r_B\Longrightarrow y_s^B\in Q^A.
+\tag{BP.21}
+\]
+
+Put
+
+\[
+r_-:=\min\{r_A,r_B\},
+\qquad
+r_+:=\max\{r_A,r_B\}.
+\tag{BP.22}
+\]
+
+Then the entire ordered deep-force population has exactly three consecutive destination regimes, some possibly empty:
+
+1. `1<=s<=r_-`: **TT**, both force bars terminate in `T_m`;
+2. `r_-<s<=r_+`: **mixed**, exactly one force bar terminates in `T_m` and the other goes to the opposite host;
+3. `r_+<s<=N`: **OO**, both force bars go to the opposite physical host.
+
+There is only one mixed orientation: if `r_A>r_B`, it is `A->T_m` together with `B->A`; if `r_B>r_A`, it is `A->B` together with `B->T_m`.
+
+Thus
+
+\[
+\boxed{
+\max\{M_{TT},M_{mix},M_{OO}\}\ge {N\over3},
+}
+\tag{BP.23}
+\]
+
+and one of these three **consecutive paired regimes** has size
+
+\[
+\boxed{
+>{\lambda\over3}D-o(D).
+}
+\tag{BP.24}
+\]
+
+Every retained tag in every regime still carries the exact force identity (BP.6), projective pair gap at least `rho`, the common inverse-`D` train grid, and its prescribed deep exact-phase neighborhood.
+
+This is stronger than separately pigeonholing physical destinations in the two lanes: the two terminal/nonterminal decisions are synchronized by two monotone cutoffs.
+
+---
+
+## 5. A large TT regime doubles the terminal direction-packing span
+
+Assume the TT regime has
+
+\[
+M_{TT}>\theta D-o(D)
+\tag{BP.25}
+\]
+
+for some fixed `theta>0`. It contains **two** distinct actual diameter bars per retained cell, and switching sets at distinct interfaces are disjoint. Hence the TT block contains `2M_TT` distinct actual diameter edges, all with their hubward endpoints in `T_m`.
+
+Canonical C67 separates their projective chord directions by
+
+\[
+\delta_D=2\arcsin{1\over2D}\ge {1\over D}.
+\tag{BP.26}
+\]
+
+Let
+
+\[
+L_D=\sqrt{D\eta_D+\eta_D^2},
+\qquad
+\eta_D=3^{1/4}\sqrt D,
+\tag{BP.27}
+\]
+
+be the common midpoint-localization radius, and put
+
+\[
+\epsilon_D
+:=
+\arcsin\!\left({L_D\over D/2-L_D}\right)
+=O(D^{-1/4}).
+\tag{BP.28}
+\]
+
+The circle-packing lemma already used for the one-bar terminal rail gives projective chord-direction diameter at least
+
+\[
+\min\left\{{\pi\over3},(2M_{TT}-1)\delta_D\right\}.
+\tag{BP.29}
+\]
+
+For a diameter bar oriented from its birth endpoint `x` to its terminal endpoint `y`, midpoint localization gives
+
+\[
+y-o={D\over2}d+(m-o),
+\qquad |m-o|<L_D.
+\tag{BP.30}
+\]
+
+So the terminal radial projective line is within `epsilon_D` of the chord line. Therefore
+
+\[
+\boxed{
+\operatorname{angdiam}_o(T_m\cap S)
+\ge
+\min\left\{{\pi\over3},(2M_{TT}-1)\delta_D\right\}
+-2\epsilon_D.
+}
+\tag{BP.31}
+\]
+
+Radial projection to the radius-`D/2` circle also gives
+
+\[
+\boxed{
+\operatorname{diam}(T_m\cap S)
+\ge
+D\sin\!\left(
+{\min\{\pi/3,(2M_{TT}-1)\delta_D\}-2\epsilon_D\over2}
+\right)-2L_D
+}
+\tag{BP.32}
+\]
+
+whenever the displayed angle is positive.
+
+Consequently
+
+\[
+\boxed{
+\liminf\operatorname{angdiam}_o(T_m\cap S)
+\ge \min\{\pi/3,2\theta\},
+}
+\tag{BP.33}
+\]
+
+and
+
+\[
+\boxed{
+\liminf {\operatorname{diam}(T_m\cap S)\over D}
+\ge
+\sin\!\left({\min\{\pi/3,2\theta\}\over2}\right).
+}
+\tag{BP.34}
+\]
+
+At the small densities currently relevant, this is `2 theta` in central angle and `sin(theta)` in normalized chord diameter. It is exactly the factor-two direction count unavailable after throwing away one bar from each force pair.
+
+---
+
+## 6. Explicit current constants
+
+For the ninety-percent parameter choice
+
+\[
+\rho=\delta={c_0\over100},
+\qquad
+\eta={c_0\over50},
+\qquad
+\lambda={9c_0\over10}=5.085\times10^{-6},
+\tag{BP.35}
+\]
+
+one of TT, mixed, or OO contains more than
+
+\[
+\boxed{
+1.695\times10^{-6}D-o(D)
+}
+\tag{BP.36}
+\]
+
+paired exact-force cells in one consecutive interface block.
+
+If TT is that block, (BP.33)--(BP.34) give
+
+\[
+\boxed{
+\liminf\operatorname{angdiam}_o(T_m\cap S)
+\ge3.39\times10^{-6}
+}
+\tag{BP.37}
+\]
+
+and
+
+\[
+\boxed{
+\liminf {\operatorname{diam}(T_m\cap S)\over D}
+\ge\sin(1.695\times10^{-6})
+=1.695\times10^{-6}+O(10^{-18}).
+}
+\tag{BP.38}
+\]
+
+As the fixed parameter losses tend to zero, the guaranteed largest paired regime density approaches
+
+\[
+\boxed{
+{c_0\over3}=1.88333333333\times10^{-6}.
+}
+\tag{BP.39}
+\]
+
+---
+
+## 7. Stress pruning and growing-depth inheritance
+
+The global one-sided KKT budget may be imposed before the paired-order argument. For fixed `0<sigma<1`, remove cells with
+
+\[
+B_i>{1\over\sigma\lambda D}.
+\tag{BP.40}
+\]
+
+Fewer than `sigma lambda D` cells are removed. Repeating Sections 2--4 on the survivor gives a paired nested family of size
+
+\[
+>(1-\sigma)\lambda D-o(D)
+\tag{BP.41}
+\]
+
+and one consecutive TT/mixed/OO regime of size
+
+\[
+\boxed{
+>{(1-\sigma)\lambda\over3}D-o(D),
+}
+\tag{BP.42}
+\]
+
+with
+
+\[
+B_i\le {1\over\sigma\lambda D},
+\qquad
+0<|G_i|\le {1\over\sigma\lambda}.
+\tag{BP.43}
+\]
+
+The proof uses only the parameterized deep-cell properties whose constants are independent of exact-phase depth. Hence it also applies on the existing diagonal where the exact-phase radius tends to infinity.
+
+---
+
+## 8. Frontier effect
+
+The no-fixed-margin-TB1 branch no longer consists merely of a linear collection of deep force diamonds plus one independently chosen nested rail. The **whole two-bar force certificate** can be globally ordered:
+
+```text
+Theta(D) deep exact-force cells
++ one force bar born on each physical host at every cell
++ both support lanes strictly nested on the same interface order
++ both terminal sets are prefixes
++ at most two destination transitions
++ one consecutive linear-density regime of type TT, mixed, or mutual opposite-host
++ exact positive force compression and fixed pair angle retained at every tag.
+```
+
+If TT survives at linear density, the far terminal piece must absorb two C67-separated diameter directions per cell and therefore has twice the one-bar asymptotic direction-packing span. If mixed survives, every cell couples one terminal diameter to one opposite-host diameter in the same exact force pair. If OO survives, every cell is a fixed-angle crossing pair of mutually opposite-host diameter bars with both laminar support lanes nested.
+
+These three paired regimes are now the concrete exact-antipodal closing targets. The next useful argument should attack one of these paired geometries directly; another one-bar support extraction would discard information already available from the exact KKT force pair.
+
+No C-II or Level-I closure is claimed.
+
+**Disposition:** retained both bilateral force bars at every parameterized deep cell, proved simultaneous strict nesting of both support lanes, reduced their physical destination word to three consecutive regimes, and doubled the terminal direction-packing span in the TT regime. C-II and Level I remain open.

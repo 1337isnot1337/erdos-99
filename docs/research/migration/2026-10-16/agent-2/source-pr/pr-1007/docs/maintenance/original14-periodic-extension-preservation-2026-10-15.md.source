@@ -1,0 +1,82 @@
+# Original dirty worktree 14: periodic extension preservation
+
+**Original tracked head:** `669cb4a7a8e904516f567f1091f8e973c4d4fca2`.
+**Authority:** `2026-10-10.audit.234`; Level I and C-II remain open.
+**Classification:** complete AI source/preservation audit. Mathematical
+candidates remain unpromoted and require independent human review.
+
+## Every changed, untracked and ignored file
+
+The archived source contains three mathematical/catalogue files and three
+ignored CPython 3.14 bytecode files. The entire lattice report, full checker
+and exact README delta were examined. The report's common argument was
+compared with the previously audited PR956 report; the unique periodic
+extension was then audited separately and incorporated into that existing
+draft review package. It is preserved at exact head
+`bbc549f36ac964fd7eee211782eb2c979d12af32`:
+
+- [Complete report](https://github.com/1337isnot1337/e-99/blob/bbc549f36ac964fd7eee211782eb2c979d12af32/docs/reports/global_lattice_defect_from_linear_reserve_2026-10-11.md).
+- [Complete exact checker](https://github.com/1337isnot1337/e-99/blob/bbc549f36ac964fd7eee211782eb2c979d12af32/research/verify_global_lattice_population_bound_2026_10_11.py).
+- [Initial and continuation proof audit](https://github.com/1337isnot1337/e-99/blob/bbc549f36ac964fd7eee211782eb2c979d12af32/docs/audits/pr956_autonomous_proof_audit_2026-10-15.md).
+- The same head's research catalogue retains the source README's complete
+  new periodic-scope entry together with both merged catalogues.
+
+The original mathematical report, README and checker SHA256 values are,
+respectively,
+`b570559ac2c334c9216a317f0597a4b1996e8214ab4fb0a2775d48944f6dff78`,
+`763cc1820821eee62f32c1c539d17a76302e9f9d64f43c93354bae1a151be1b1`,
+and `dd666cd0c34aa63eb57a111e5078f93bf1fd50ad8b7fa298cb2799c5babd8658`.
+All exact original bytes and original tracked commits remain in private
+recovery. The repair retains the earlier correct Pick/Euler provenance and
+optimized-Python refusal; it does not restore their original deficiencies.
+
+## Mathematical disposition
+
+The unique extension keeps the lattice covolume in the boundary/area estimate,
+giving error `86V^(1/5)D^(4/5)+1` when `D>=max(1,V)`. Maximizing
+`-delta/V+36D^(1/3)T delta^(1/3)` and choosing `T=(D/V)^(1/5)` supplies
+the displayed constant, including a separate collinear case.
+
+For a **full infinite** unit-separated periodic packing with `q` distinct
+cosets, [finite Oler](../theory/03-oler-shell.md) on enlarging period
+parallelograms proves `V>=q*sqrt(3)/2`. For `q<=D/16`, cells with
+`V<=4q` then give population at most
+`pi D^2/(2sqrt(3))+114q^(6/5)D^(4/5)+q`. For `V>4q`, a reduced
+shortest-vector basis and exact row/column counts give a smaller bound.
+Every actual source label is counted; separate coset hulls may differ.
+
+Combining that candidate bound with the separate **unreviewed candidate**
+linear global-minimizer reserve gives the conditional growing motif lower
+bound. There is no theorem extracting a bounded motif from arbitrary
+triangle-free minimizers and no Level I conclusion. Separation of a finite
+crop, or of the individual infinite cosets, does not establish the required
+cross-coset hypothesis. This distinction preserves the earlier 39-lattice
+finite-union counterexample without contradiction.
+
+Both the original checker and the repaired checker pass the earlier 16
+crops/hulls, 309 sides and 18,154 lattice labels, plus four periodic patterns
+with 5,462 labels, 214 coset-hull sides and 1,112 exact period/phase checks.
+A quadratic-form lower bound covers all omitted period translates. The
+repaired checker also rejects two individually separated but mutually too-close
+cosets at their actual pair-distance check. These are finite regressions,
+not certificates of global optimality or of the analytic infinite theorem.
+
+## Activity, metadata and recovery
+
+Fresh Asus inspection found the original working directory physically absent.
+All eight retained Git metadata file hashes agree with the preserved snapshot;
+there is no staged delta, metadata lock, or process cwd/fd reference to the
+working path or its metadata. The initial three-member working archive and
+the comprehensive six-member archive were freshly hash-verified. All three
+ignored bytecode objects exactly recompile from their pinned original Git
+sources under Python 3.14.7, with matching magic, original filenames and no
+trailing marshalled data. They contain no additional unrepresented research.
+Full original bytes and Git metadata are retained privately on both hosts.
+
+The independent mathematical review gate protects PR956 and its source branch.
+After this disposition lands, only the exact obsolete registration may be
+retired under a repeated fresh activity/metadata/archive check and exact
+preservation-head guard. Every other registration and all local branch refs
+must remain unchanged. Retirement is recorded by a separate private execution
+receipt; neither an absent directory nor this document alone authorizes bulk
+pruning or establishes that deletion already occurred.

@@ -1,0 +1,323 @@
+#!/usr/bin/env python3
+"""Exact closure of the no-d5=2 / all-active-aligned-touch-four Profile B branch.
+
+Inputs proved elsewhere in the repository:
+
+* the remaining eight-no-root Profile B source has rank(P)=2 and d1(P)>=4;
+* there are exactly nine singleton changed blocks, at most two of which are
+  rank-two local-empty blocks, hence at least seven are aligned;
+* the nine replacement classes are a basis of V, while L=W^perp has dimension
+  six, so at most six chosen classes are dependency-inactive;
+* a dependency-active aligned block has source touch count 3 or 4; if the
+  touch count is 3, its full three-coordinate puncture has d5=2.
+
+This certificate checks the remaining local geometry and the sole finite
+exception left after the counting argument in the companion note.  It proves:
+
+1. every aligned direction star has four cycles;
+2. two distinct aligned stars intersect in at most one cycle, so an eight-cycle
+   source contains at most two aligned touch-four blocks;
+3. the support of any rank-two singleton coefficient line intersects any
+   distinct aligned direction star in at most one cycle;
+4. under the hypothesis that no dependency-active aligned touch-three block
+   exists, only count profiles (a,h,r)=(7,1,2),(7,2,2),(8,2,1) remain, where
+   a is the aligned count, h the aligned touch-four count, and r=9-a the
+   rank-two count;
+5. the last two profiles are excluded by support/zero-column counting;
+6. the first profile has one common-two-set normalized geometry.  Exhausting
+   all local directions and all coefficient-compatible outside cycles leaves
+   exactly 64 rank-two source-plane candidates, and every one has virtual
+   canonical deficiency 7 rather than the required 3.
+
+All ranks and subspace tests in the 64-state census are exact over Q.
+"""
+
+from collections import Counter
+from fractions import Fraction
+from itertools import combinations, product
+from pathlib import Path
+import contextlib
+import importlib.util
+import io
+
+HERE = Path(__file__).resolve().parent
+BASE = HERE / "verify_target_c_support7_global_segment_relative_four_noroot_k2_2026_09_20.py"
+spec = importlib.util.spec_from_file_location("profile_b_touch4_base", BASE)
+R = importlib.util.module_from_spec(spec)
+with contextlib.redirect_stdout(io.StringIO()):
+    spec.loader.exec_module(R)
+
+LOCAL = R.LOCAL
+
+COMPLETE_T = tuple(
+    tuple(
+        R.MCOORD[ids[0]][70 + j]
+        - R.MCOORD[ids[1]][70 + j]
+        - R.MCOORD[ids[2]][70 + j]
+        for j in range(15)
+    )
+    for ids in R.BLOCKS
+)
+
+
+def det(a, b):
+    return a[0] * b[1] - a[1] * b[0]
+
+
+def aligned_star(block, direction):
+    return frozenset(
+        e for e in R.NO_ROOT
+        if R.QCOMP[e][block] != (0, 0)
+        and det(direction, R.QCOMP[e][block]) == 0
+    )
+
+
+def global_singleton_support(block, direction):
+    return frozenset(
+        e for e in R.NO_ROOT
+        if det(direction, R.QCOMP[e][block]) != 0
+    )
+
+
+def singleton_row(ext, block, direction):
+    return tuple(det(direction, R.QCOMP[e][block]) for e in ext)
+
+
+def local_empty_space(ext, block):
+    vals = tuple(R.QCOMP[e][block] for e in ext)
+    return R.rowspace_key((
+        tuple(v[0] for v in vals),
+        tuple(v[1] for v in vals),
+    ))
+
+
+def is_subspace(a, b):
+    return len(R.union_key(a, b)) == len(b)
+
+
+def touched_blocks(ext):
+    return tuple(
+        b for b in range(35)
+        if any(R.QCOMP[e][b] != (0, 0) for e in ext)
+    )
+
+
+def canonical_deficiency(ext, space):
+    complete = tuple(
+        b for b in touched_blocks(ext)
+        if not is_subspace(local_empty_space(ext, b), space)
+    )
+    rank = len(R.rowspace_key(tuple(COMPLETE_T[b] for b in complete)))
+    return len(complete) - rank, complete
+
+
+def projective_column_profile(space):
+    basis = R.rowspace_key(space)
+    assert len(basis) == 2
+    counts = Counter()
+    zero = 0
+    for j in range(len(basis[0])):
+        x, y = basis[0][j], basis[1][j]
+        if x == 0 and y == 0:
+            zero += 1
+            continue
+        if x != 0:
+            key = (Fraction(1), y / x)
+        else:
+            key = (Fraction(0), Fraction(1))
+        counts[key] += 1
+    return zero, tuple(sorted(counts.values(), reverse=True))
+
+
+def local_geometry_checks():
+    stars = tuple(
+        (b, s, aligned_star(b, direction))
+        for b in range(35)
+        for s, direction in enumerate(LOCAL)
+    )
+    assert len(stars) == 105
+    assert {len(star) for _b, _s, star in stars} == {4}
+
+    max_pair_intersection = 0
+    min_triple_union = 105
+    for i, j in combinations(range(len(stars)), 2):
+        max_pair_intersection = max(
+            max_pair_intersection,
+            len(stars[i][2] & stars[j][2]),
+        )
+    for i, j, k in combinations(range(len(stars)), 3):
+        min_triple_union = min(
+            min_triple_union,
+            len(stars[i][2] | stars[j][2] | stars[k][2]),
+        )
+    assert max_pair_intersection == 1
+    assert min_triple_union == 9
+
+    # A rank-two singleton coefficient line is supported on the global cycles
+    # whose local quotient direction is not the chosen singleton direction.
+    # Its intersection with a distinct aligned star is at most one cycle.
+    max_line_star_intersection = 0
+    for b, _s, star in stars:
+        for c in range(35):
+            if c == b:
+                continue
+            for direction in LOCAL:
+                support = global_singleton_support(c, direction)
+                max_line_star_intersection = max(
+                    max_line_star_intersection,
+                    len(star & support),
+                )
+    assert max_line_star_intersection == 1
+
+    return max_pair_intersection, min_triple_union, max_line_star_intersection
+
+
+def count_profiles_under_no_touch3_active():
+    """Integer consequence of a>=7, h<=2, and at most six inactive classes."""
+    profiles = set()
+    for a in range(7, 10):
+        r = 9 - a
+        if r > 2:
+            continue
+        for h in range(0, min(2, a) + 1):
+            low_aligned = a - h
+            # Under the no-active-touch-three hypothesis, every aligned block
+            # below touch four is dependency-inactive and hence lies in the
+            # six-dimensional L.  The nine source classes are independent.
+            if low_aligned <= 6:
+                profiles.add((a, h, r))
+    assert profiles == {(7, 1, 2), (7, 2, 2), (8, 2, 1)}
+    return profiles
+
+
+def profile_one_census():
+    """Close the sole (a,h,r)=(7,1,2) count profile exactly.
+
+    Let b be the unique aligned touch-four changed block and c,d the two
+    rank-two singleton blocks.  Each rank-two coefficient line meets the
+    aligned star in at most one coordinate.  Since the two distinct lines live
+    in a rank-two length-eight code with d1>=4, this forces d2=6, exactly two
+    zero columns, both inside the aligned star, and one distinct nonzero
+    coordinate of each line inside that star.  Their support intersection has
+    size two, so b,c,d are pairwise two-intersecting root triples.  The
+    tetrahedral three-face geometry is impossible because one aligned star has
+    only one cycle on a fixed four-set.  Thus, up to S7, normalize
+
+        b=123, c=124, d=125.
+
+    The enumeration below checks every local direction choice and every four
+    outside cycles consistent with the forced column pattern.
+    """
+    b = R.BLOCK_INDEX[(1, 2, 3)]
+    c = R.BLOCK_INDEX[(1, 2, 4)]
+    d = R.BLOCK_INDEX[(1, 2, 5)]
+
+    direction_patterns = 0
+    coefficient_candidates = 0
+    deficiency_histogram = Counter()
+
+    for sb, sc, sd in product(LOCAL, repeat=3):
+        star = tuple(sorted(aligned_star(b, sb)))
+        assert len(star) == 4
+
+        star_columns = tuple(
+            (
+                det(sc, R.QCOMP[e][c]),
+                det(sd, R.QCOMP[e][d]),
+            )
+            for e in star
+        )
+        z = sum(x == 0 and y == 0 for x, y in star_columns)
+        x_only = sum(x != 0 and y == 0 for x, y in star_columns)
+        y_only = sum(x == 0 and y != 0 for x, y in star_columns)
+        both = sum(x != 0 and y != 0 for x, y in star_columns)
+        if (z, x_only, y_only, both) != (2, 1, 1, 0):
+            continue
+        direction_patterns += 1
+
+        star_set = set(star)
+        outside = tuple(
+            e for e in R.NO_ROOT
+            if e not in star_set and R.QCOMP[e][b] == (0, 0)
+        )
+        cats = {"x": [], "y": [], "both": []}
+        for e in outside:
+            x = det(sc, R.QCOMP[e][c])
+            y = det(sd, R.QCOMP[e][d])
+            if x != 0 and y == 0:
+                cats["x"].append(e)
+            elif x == 0 and y != 0:
+                cats["y"].append(e)
+            elif x != 0 and y != 0:
+                cats["both"].append(e)
+
+        for ex in cats["x"]:
+            for ey in cats["y"]:
+                for e1, e2 in combinations(cats["both"], 2):
+                    ext = star + (ex, ey, e1, e2)
+                    row_c = singleton_row(ext, c, sc)
+                    row_d = singleton_row(ext, d, sd)
+                    plane = R.rowspace_key((row_c, row_d))
+                    if len(plane) != 2:
+                        continue
+
+                    zero, multiplicities = projective_column_profile(plane)
+                    if zero != 2:
+                        continue
+                    if multiplicities not in ((2, 2, 2), (2, 2, 1, 1)):
+                        continue
+                    if 6 - max(multiplicities) < 4:
+                        continue
+
+                    e_b = local_empty_space(ext, b)
+                    e_c = local_empty_space(ext, c)
+                    e_d = local_empty_space(ext, d)
+                    if len(e_b) != 1 or len(e_c) != 2 or len(e_d) != 2:
+                        continue
+                    if any(is_subspace(e, plane) for e in (e_b, e_c, e_d)):
+                        continue
+
+                    coefficient_candidates += 1
+                    deficiency, _complete = canonical_deficiency(ext, plane)
+                    deficiency_histogram[deficiency] += 1
+
+    assert direction_patterns == 12
+    assert coefficient_candidates == 64
+    assert deficiency_histogram == Counter({7: 64})
+    return direction_patterns, coefficient_candidates, deficiency_histogram
+
+
+def main():
+    pair_intersection, triple_union, line_star = local_geometry_checks()
+    profiles = count_profiles_under_no_touch3_active()
+
+    # The two h=2 count profiles are impossible analytically:
+    #
+    # (7,2,2): each of the two distinct rank-two codeword lines vanishes on at
+    # least three coordinates of each touch-four star.  For one star this
+    # already forces at least two P-zero columns; two rank-two lines imply
+    # d2>=6, so there are exactly two zero columns.  Both touch-four stars would
+    # have to contain both zero columns, contradicting star intersection <=1.
+    #
+    # (8,2,1): the sole rank-two codeword support meets each touch-four star in
+    # at most one coordinate.  Two stars in an eight-coordinate source have
+    # union size at least seven, leaving at most one coordinate outside their
+    # union.  Hence the codeword has weight at most 1+1+1=3, contradicting
+    # d1(P)>=4.
+    assert (7, 2, 2) in profiles and (8, 2, 1) in profiles
+
+    patterns, candidates, histogram = profile_one_census()
+
+    print("PASS: Profile B all-active-aligned-touch-four alternative excluded")
+    print("max_distinct_aligned_star_intersection", pair_intersection)
+    print("min_union_of_three_aligned_stars", triple_union)
+    print("max_ranktwo_line_intersection_with_distinct_aligned_star", line_star)
+    print("no_touch3_active_count_profiles", sorted(profiles))
+    print("normalized_profile_one_direction_patterns", patterns)
+    print("normalized_profile_one_coefficient_candidates", candidates)
+    print("normalized_profile_one_deficiency_histogram", dict(sorted(histogram.items())))
+    print("consequence", "every genuine Profile B source has a dependency-active aligned touch-three block, hence a specified d5=2 puncture")
+
+
+if __name__ == "__main__":
+    main()

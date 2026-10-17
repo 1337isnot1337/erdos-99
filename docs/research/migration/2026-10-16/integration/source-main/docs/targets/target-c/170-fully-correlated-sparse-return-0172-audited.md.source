@@ -1,0 +1,439 @@
+# Target C — audited §170 fully correlated sparse-return exclusion through `sigma=0.0172`
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working proof-only full-core Type-II route theorem; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Dependencies:** the hostile-audited Section-117/118 sparse-directional signed-return mechanism and the geometry already certified through §167.
+
+The previous sparse-return proof bounded its directional product and sparse penalty by separate maxima. Those maxima spend the same slack in incompatible coordinates. Keeping the complete slack simplex correlated produces a much larger safe exclusion window:
+
+\[
+\boxed{0\le\sigma\le s_0:=0.0172.}
+\tag{170.1}
+\]
+
+The first numerical zero of the same fully correlated scalar mechanism is near `0.0173116294`; that value is not promoted. At `0.0172` the exact reduced return bracket remains above `0.00232`.
+
+Use
+
+\[
+x+y+z+w=\sigma,
+\qquad x,y,z,w\ge0,
+\tag{170.2}
+\]
+
+and the signed-return necessity
+
+\[
+\lambda z\ge\kappa[J]_+,
+\qquad
+\kappa=2-\sqrt3.
+\tag{170.3}
+\]
+
+The inherited return bracket is
+
+\[
+\begin{aligned}
+J={}&A_*(x,w)
+-\lambda\left(10z+{x\over2}+{25w\over3}\right)\\
+&-2(U-x-y+2z)
+\left(Q(y)+y+x+{10w\over3}\right),
+\end{aligned}
+\tag{170.4}
+\]
+
+where
+
+\[
+A_*(x,w)
+={\pi\over4}-G(\theta)-2G(\phi_8+r)-G(r),
+\qquad
+r=x+{10w\over3},
+\tag{170.5}
+\]
+
+\[
+G(t)={t-\sin t\over8},
+\]
+
+and `Q(y)` is the increasing tooth inverse determined by
+
+\[
+\sin Q+\sqrt3(1-\cos Q)-Q={y\over2}.
+\tag{170.6}
+\]
+
+Put
+
+\[
+\widetilde J=J-{\lambda z\over\kappa}.
+\tag{170.7}
+\]
+
+If `widetilde J>0`, then (170.3) implies `lambda z>lambda z`, impossible. Thus it suffices to prove a positive uniform lower bound for `widetilde J` on the slack simplex.
+
+---
+
+## 170.1 Conservative endpoint relaxation
+
+Let `theta_0` be the unique solution of
+
+\[
+3\theta_0-2\pi-\sin(\theta_0/2)-2\sin\theta_0=s_0.
+\]
+
+At `s_0=0.0172`,
+
+\[
+\boxed{
+\begin{aligned}
+\theta_0&=2.70656462926518\ldots,\\
+U_0&=3\theta_0-2\pi=1.8365085806160\ldots,\\
+\lambda_0&=\sin(\theta_0/2)=0.97643694937291\ldots,\\
+\phi_0&=2\pi-2\theta_0=0.8700560486492\ldots .
+\end{aligned}}
+\tag{170.8}
+\]
+
+For every physical `sigma<=s_0`, monotonicity gives
+
+\[
+\theta\le\theta_0,
+\qquad U\le U_0,
+\qquad\lambda\le\lambda_0.
+\]
+
+Replacing `theta,U,lambda` by these endpoint values decreases the lower bound for `widetilde J`:
+
+- `G` is increasing, so larger `theta` decreases the area term;
+- larger `U` increases the negative directional product, whose other factor is nonnegative;
+- larger `lambda` increases the nonnegative sparse penalty.
+
+Enlarge the feasible domain to
+
+\[
+x+y+z+w\le s_0.
+\]
+
+For fixed `x,y,z`, the relaxed lower bound is strictly decreasing in `w`: the area derivative is negative, the sparse penalty increases, and the directional factor `B` increases while `C=U_0-x-y+2z>0` stays fixed. Hence the relaxed minimum fills all unused slack into `w`:
+
+\[
+\boxed{x+y+z+w=s_0.}
+\tag{170.9}
+\]
+
+This is only an optimization relaxation; no fictitious physical source is introduced.
+
+---
+
+## 170.2 Geometry remains in the inherited branch
+
+The hostile-audited largest-gap transfer has derivative above `0.30` on the relevant rectangle, and the coarse `delta>=0.1` branch costs more than `0.0326`. Since
+
+\[
+w\le0.0172<0.0326,
+\]
+
+that branch remains impossible and
+
+\[
+\boxed{\delta\le{10\over3}w.}
+\tag{170.10}
+\]
+
+The exact complement identity yields
+
+\[
+x_2+x_3+\tau=\delta+x
+\le x+{10\over3}w
+\le {10\over3}s_0
+=0.0573333\ldots .
+\tag{170.11}
+\]
+
+This is tiny compared with the residual principal gap `phi_0>0.8700`. The tangent-lift extent also remains strict:
+
+\[
+U_0+{10s_0\over3}
+=1.8938419139\ldots<\pi.
+\tag{170.12}
+\]
+
+The coarser principal-corridor margin is still `0.0949897...>0`, and
+
+\[
+Q(s_0)=0.100673979368082\ldots<0.101<\pi/3.
+\tag{170.13}
+\]
+
+Thus the fourth-gap ordering, tangent lift, circular-segment area identity, tooth inverse branch, and signed-return theorem are all still valid at the enlarged endpoint.
+
+---
+
+## 170.3 Exact correlated simplex
+
+Using (170.9), set
+
+\[
+w=s_0-x-y-z.
+\]
+
+Then
+
+\[
+r={10s_0\over3}-{7x\over3}-{10y\over3}-{10z\over3},
+\tag{170.14}
+\]
+
+\[
+C=U_0-x-y+2z,
+\tag{170.15}
+\]
+
+\[
+B=Q(y)+{10s_0\over3}
+-{7x\over3}-{7y\over3}-{10z\over3}.
+\tag{170.16}
+\]
+
+The relaxed bracket is
+
+\[
+\mathcal F(x,y,z)
+=A(r)-\lambda_0P(x,y,z)-2CB,
+\tag{170.17}
+\]
+
+where
+
+\[
+A(r)={\pi\over4}-G(\theta_0)-2G(\phi_8+r)-G(r),
+\]
+
+and
+
+\[
+P=10z+{x\over2}+{25w\over3}+{z\over\kappa}.
+\]
+
+The correlation now excludes the incompatible independent maxima.
+
+---
+
+## 170.4 The global minimizer has `x=z=0`
+
+Let
+
+\[
+A_r=-2G'(\phi_8+r)-G'(r)<0.
+\]
+
+Direct differentiation gives
+
+\[
+\boxed{
+\mathcal F_x
+=-{7\over3}A_r
++{47\over6}\lambda_0
++2B+{14\over3}C>0.
+}
+\tag{170.18}
+\]
+
+Every term is positive, so every minimizer has
+
+\[
+\boxed{x=0.}
+\tag{170.19}
+\]
+
+Similarly,
+
+\[
+\mathcal F_z
+=-{10\over3}A_r
+-\lambda_0\left(10+{1\over\kappa}-{25\over3}\right)
+-4B+{20\over3}C.
+\tag{170.20}
+\]
+
+Throughout the simplex,
+
+\[
+C\ge U_0-s_0=1.8193085806\ldots,
+\]
+
+and, using the original nonnegative expression for `B`,
+
+\[
+B\le Q(s_0)+{10s_0\over3}<0.158008.
+\]
+
+Dropping the favorable area derivative still gives
+
+\[
+\boxed{\mathcal F_z>6.22.}
+\tag{170.21}
+\]
+
+Thus every minimizer also has
+
+\[
+\boxed{z=0.}
+\tag{170.22}
+\]
+
+This is the decisive improvement: the slack location producing the worst `z` penalty cannot coexist with the directional-product extremizer.
+
+---
+
+## 170.5 One-dimensional strictly convex envelope
+
+With `x=z=0`, put
+
+\[
+w=s_0-y,
+\qquad
+r={10\over3}(s_0-y).
+\]
+
+The exact relaxed lower bound becomes
+
+\[
+\begin{aligned}
+H(y)={}&{\pi\over4}-G(\theta_0)
+-2G\left(\phi_8+{10\over3}(s_0-y)\right)
+-G\left({10\over3}(s_0-y)\right)\\
+&-{25\lambda_0\over3}(s_0-y)\\
+&-2(U_0-y)
+\left(Q(y)+{10s_0\over3}-{7y\over3}\right),
+\end{aligned}
+\tag{170.23}
+\]
+
+for `0<=y<=s_0`.
+
+For
+
+\[
+F(q)=\sin q+\sqrt3(1-\cos q)-q,
+\]
+
+implicit differentiation of `F(Q(y))=y/2` gives
+
+\[
+Q'={1\over2F'(Q)},
+\qquad
+Q''=-{F''(Q)\over4F'(Q)^3}<0.
+\tag{170.24}
+\]
+
+Since `Q<0.101`,
+
+\[
+F'(Q)<0.175,
+\qquad
+F''(Q)>1.62,
+\]
+
+so
+
+\[
+-Q''>75.7,
+\qquad
+Q'>2.857.
+\tag{170.25}
+\]
+
+The second derivative of the area term is bounded below by `-25/6`. Direct differentiation of the product term therefore yields the uniform bound
+
+\[
+\boxed{
+H''(y)
+>-{25\over6}
++4\left({1\over0.35}-{7\over3}\right)
++2(1.8193)(75.7)
+>273.
+}
+\tag{170.26}
+\]
+
+Hence `H` is strictly convex and has a unique minimum.
+
+Direct endpoint-safe evaluation gives
+
+\[
+H'(0.00669)<-0.0068,
+\qquad
+H'(0.00670)>0.0059.
+\tag{170.27}
+\]
+
+Thus the unique minimizer lies in this interval. At its midpoint,
+
+\[
+H(0.006695)
+=0.0023269894\ldots .
+\tag{170.28}
+\]
+
+Within the bracket, moving at most `5e-6` from the midpoint can lower the value by less than `3.5e-8`. Therefore
+
+\[
+\boxed{
+\min_{0\le y\le s_0}H(y)>0.0023269>0.00232.
+}
+\tag{170.29}
+\]
+
+Consequently `widetilde J>0` throughout the full relaxed endpoint simplex, contradicting the necessary signed-return inequality.
+
+### Theorem 170.A — fully correlated sparse-return exclusion
+
+No proof-only full-core Type-II survivor in the inherited sparse/directional signed-return scope can satisfy
+
+\[
+\boxed{0\le\sigma\le0.0172.}
+\tag{170.30}
+\]
+
+---
+
+## 170.6 Envelope and hostile-audit disposition
+
+Solving the same reduced one-dimensional problem as a function of endpoint slack gives first numerical zero
+
+\[
+0.0173116294\ldots .
+\]
+
+No theorem is claimed at that root. The safe endpoint `0.0172` is more than `1.1e-4` below it and retains a fixed `>0.00232` return margin.
+
+The independent hostile audit rechecked:
+
+- every endpoint relaxation changes `widetilde J` in the conservative direction;
+- filling unused slack into `w` strictly decreases the relaxed lower bound;
+- the `delta>=0.1` branch remains excluded;
+- fourth-gap, tangent-lift, corridor, and tooth-inverse geometry remains strict;
+- `mathcal F_x>0` identically and `mathcal F_z>6.22` uniformly;
+- `H''>273` globally and the unique minimum bracket has fixed positive margin;
+- no source point is deleted and no contact-isolated coordinate enters a core affine-kernel theorem.
+
+The earlier §167 `sigma<=0.0105` theorem is strictly superseded as a full-core window bound. The surviving sparse/directional full-core regime now has
+
+\[
+\boxed{\sigma>0.0172,}
+\]
+
+corresponding at the endpoint to wrapping-carrier diameter parameter
+
+\[
+\lambda>0.9764369493729\ldots .
+\]
+
+Further decimal optimization of this same scalar mechanism has little room; the next useful step should exploit the geometry of the remaining larger-slack, nearly diameter-spanning carrier.
+
+The Type-I inactive-container branch remains open.
+
+**Disposition:** PASS at audited-working proof-only scope. C-II and Level I remain open.

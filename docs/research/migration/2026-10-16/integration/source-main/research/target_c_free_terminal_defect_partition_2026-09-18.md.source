@@ -1,0 +1,314 @@
+# Target C-II — live defect budget splits into exact flex, diameter topology, or projected-stress complexity
+
+**Date:** 2026-09-18  
+**Status:** proof-only structural consequence; theorem-state authority unchanged  
+**Scope:** terminal full-core Type-II FREE subsequences with `limsup t_D <= mu_*+0.00710`  
+**Depends on:** live detour pinching; audited sealed dual-component rotation flex; projected diameter-stress dimension theorem; canonical defect identity `k=d_H+s_Z`; Woodall diameter topology  
+**Certificate:** `research/verify_target_c_free_terminal_defect_partition_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current live endpoint has two defect currencies which have been used separately:
+
+- `d_H=q-h`, the Hopf--Pannwitz diameter-edge deficit, which Woodall identifies with the number of caterpillar components in the forest branch and which is zero in the connected cyclic branch;
+- `s_Z`, the mixed-rigidity stress excess.
+
+The canonical terminal variable uses only their sum
+
+\[
+k=d_H+s_Z,
+\qquad
+t_D={q-k\over D}.
+\tag{1}
+\]
+
+The projected-stress theorem further splits
+
+\[
+s_Z=\sigma_C+p_D,
+\qquad
+p_D:=\dim\operatorname{aff}\mathcal P_H,
+\tag{2}
+\]
+
+where `sigma_C` is the pure-contact closure corank. The newest sealed-component theorem converts every linear amount of `sigma_C` into extra exact finite contact flex at rate `1/4` in the live window. Combining the three identities gives a useful conservation law: the whole defect budget `k` is now accounted for by one of three concrete structures.
+
+For every live terminal survivor,
+
+\[
+\boxed{
+ {m_D\over D}
+ +{d_H+p_D\over4D}
+ >1.4941462550-o(1).
+}
+\tag{3}
+\]
+
+Thus a sequence cannot simultaneously stay near the `1.1988388040D` pair-shield exact-flex floor, have sublinear diameter-component defect, and have a low-dimensional projected diameter-stress polytope. In particular, if
+
+\[
+{m_D\over D}\le1.25+o(1),
+\]
+
+then
+
+\[
+\boxed{
+{d_H+p_D\over D}>0.9765850200-o(1).
+}
+\tag{4}
+\]
+
+This does not close C-II. It removes a diffuse escape: any low-flex survivor must now put almost a full `D` of complexity into either the straight-line diameter topology or the affine family of projected KKT diameter stresses.
+
+---
+
+## 1. Exact partition of the canonical defect
+
+Use the standard full-core notation
+
+\[
+q=|B|,
+\qquad h=|H|,
+\qquad d_H=q-h,
+\qquad k=d_H+s_Z.
+\tag{5}
+\]
+
+The projected-stress dimension theorem gives the exact affine dimension
+
+\[
+\boxed{
+p_D=s_Z-\sigma_C.}
+\tag{6}
+\]
+
+Therefore
+
+\[
+\boxed{
+k=d_H+p_D+\sigma_C.}
+\tag{7}
+\]
+
+All three terms on the right are nonnegative. No identification between `d_H` and `p_D` is being made: `d_H` is a diameter-graph edge deficit/topology count, while `p_D` is an affine stress-space dimension.
+
+This distinction matters because the same symbol `d_H` has occasionally been used informally for a projected-stress dimension in intermediate notes. Here it has only the canonical Woodall meaning `q-h`.
+
+---
+
+## 2. Pure-contact corank is already converted to exact finite flex
+
+The audited sealed dual-component result gives, throughout the current live window,
+
+\[
+\boxed{
+{m_D\over D}
+>C_0+{1\over4}{\sigma_C\over D}-o(1),
+}
+\tag{8}
+\]
+
+where the exact live certificate proves
+
+\[
+C_0>1.1988388040.
+\tag{9}
+\]
+
+Add `(d_H+p_D)/(4D)` to (8), and use (7):
+
+\[
+\begin{aligned}
+{m_D\over D}+{d_H+p_D\over4D}
+&>C_0+{\sigma_C+d_H+p_D\over4D}-o(1)\\
+&=C_0+{k\over4D}-o(1).
+\end{aligned}
+\tag{10}
+\]
+
+By definition of `t_D`,
+
+\[
+{k\over D}={q\over D}-t_D.
+\tag{11}
+\]
+
+On the terminal branch `q/D -> pi`, while the live hypothesis is
+
+\[
+\limsup t_D\le\mu_*+0.00710,
+\tag{12}
+\]
+
+with
+
+\[
+\mu_*
+={\pi\over2}
++{2\over5}\sqrt{\frac{\pi}{2\sqrt3}}
++{0.007707\over5}.
+\tag{13}
+\]
+
+Hence
+
+\[
+\liminf {k\over D}
+\ge
+\pi-(\mu_*+0.00710)
+=1.181229804049313\ldots .
+\tag{14}
+\]
+
+Substitute (9) and (14) into (10):
+
+\[
+\boxed{
+\liminf
+\left(
+{m_D\over D}+{d_H+p_D\over4D}
+\right)
+>1.494146255061642\ldots .
+}
+\tag{15}
+\]
+
+The accompanying exact-rational certificate verifies the safe decimal statement (3).
+
+---
+
+## 3. Woodall makes the topology term literal
+
+The actual loaded diameter graph `H` is a finite straight-line thrackle. Woodall's classification gives exactly two cases.
+
+### Cyclic branch
+
+If `H` contains an odd cycle, it is connected and unicyclic with possible pendant leaves. Then
+
+\[
+d_H=0,
+\]
+
+so (15) becomes
+
+\[
+\boxed{
+\liminf
+\left(
+{m_D\over D}+{p_D\over4D}
+\right)
+>1.4941462550.
+}
+\tag{16}
+\]
+
+Thus the connected cyclic topology has no combinatorial component budget available to absorb the terminal defect. A low exact-flex density there forces a macroscopically high-dimensional projected diameter-stress polytope.
+
+### Forest branch
+
+If `H` has no cycle, it is a disjoint union of caterpillars and
+
+\[
+d_H=c_H,
+\]
+
+where `c_H` is its number of components. Equation (15) becomes
+
+\[
+\boxed{
+\liminf
+\left(
+{m_D\over D}+{c_H+p_D\over4D}
+\right)
+>1.4941462550.
+}
+\tag{17}
+\]
+
+Each diameter caterpillar component therefore pays exactly the same quarter-weight in this combined budget as one affine dimension of the projected stress polytope.
+
+No assertion is made that those two objects are geometrically interchangeable. The equality is only the exact defect ledger (7).
+
+---
+
+## 4. Quantitative low-flex consequences
+
+Rearranging (15), any subsequence with
+
+\[
+{m_D\over D}\le M+o(1)
+\]
+
+must satisfy
+
+\[
+\boxed{
+{d_H+p_D\over D}
+>4(1.4941462550-M)-o(1).
+}
+\tag{18}
+\]
+
+For example, `M=1.25` gives the exact-certified bound
+
+\[
+\boxed{
+{d_H+p_D\over D}>0.9765850200-o(1).
+}
+\tag{19}
+\]
+
+At the opposite end, if `d_H+p_D=o(D)`, then
+
+\[
+\boxed{
+\liminf {m_D\over D}>1.4941462550.
+}
+\tag{20}
+\]
+
+The general interpolation is more useful than either endpoint. It says that trying to suppress the new sealed-component flexes cannot make the obstruction disappear; it moves the missing defect into a large diameter caterpillar forest and/or a high-dimensional family of projected KKT stresses.
+
+---
+
+## 5. Relation to the stress-transversal route
+
+The projected-stress transversal theorem says that at most
+
+\[
+p_D+1
+\]
+
+selected actual-diameter coordinates, hence at most that many chosen core endpoints, suffice to destroy every normalized inherited mixed KKT stress before guarded reinsertion.
+
+Equation (15) exposes the exact tradeoff with the current finite-flex route:
+
+- large `sigma_C` is no longer a low-flex escape, because it raises `m_D` by at least `sigma_C/4`;
+- large `p_D` means the generic projected-stress theorem no longer certifies a small transversal: its available bound is only `p_D+1`;
+- large `d_H` means Woodall forces a genuinely large caterpillar-component count in the diameter graph.
+
+A closing argument can therefore target `d_H+p_D` rather than the full defect `k`. Proving
+
+\[
+d_H+p_D=o(D)
+\]
+
+on the live terminal source would immediately raise the exact contact-flex floor to `1.4941462550D`. Conversely, proving an upper bound on exact flex near the pair-shield floor would force `d_H+p_D` to have density close to one, giving a much more rigid topological/stress target.
+
+---
+
+## 6. Remaining obstruction
+
+This theorem is bookkeeping plus the newest exact-flex conversion; it does not create a common diameter-decreasing tangent. Positive KKT locking can still hold on the resulting manifold.
+
+The next high-leverage targets are now narrower:
+
+1. bound the Woodall caterpillar-component density `d_H/D` using the same near-disk terminal source geometry; or
+2. bound the projected-stress dimension `p_D/D` using the straight-line diameter thrackle and the explicit pair-shield/sealed-component tangent coordinates; or
+3. prove that a source with `d_H+p_D` near the forced low-flex value cannot support the required positive-spanning diameter derivative system.
+
+The point is that pure-contact corank `sigma_C` no longer belongs on this list: the audited component-rotation theorem already charges it into exact flex. The unconverted defect is exactly `d_H+p_D`.
+
+No theorem-state file is changed.
+
+**Disposition:** proved the exact defect partition `k=d_H+p_D+sigma_C`, converted it with the audited live corank-to-flex law into the certified combined floor (15), and reduced every low-flex live survivor to macroscopic diameter-topology/projected-stress complexity. C-II remains open.

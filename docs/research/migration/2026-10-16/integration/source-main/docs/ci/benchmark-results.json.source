@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "kind": "local measured; not hosted runner timing",
+  "commit": "5058d15053a5e2291d36b10a2b941297071e78a4",
+  "python": "3.14.7",
+  "platform": "Linux-7.2.4-arch1-2-x86_64-with-glibc2.44",
+  "samples": 3,
+  "scenarios": [
+    {
+      "scenario": "documentation",
+      "head": "e052d18e1850f54185e77b887c7d058e84923b74",
+      "level": "fast-only",
+      "packages": [],
+      "planning_seconds": [
+        1.2019769610196818,
+        1.9098059170064516,
+        1.1803210639918689
+      ],
+      "planning_median_seconds": 1.2019769610196818,
+      "integrity_seconds": 3.076574503997108,
+      "tier0_local_seconds": 4.27855146501679,
+      "previous_selected_certificates": 0,
+      "proposed_automatic_certificates": 0,
+      "proposed_package_count": 0
+    },
+    {
+      "scenario": "isolated-package",
+      "head": "b2489ca48bd421576358b8a2d0ff36de05bfa248",
+      "level": "targeted-replay",
+      "packages": [
+        "research-packages/ci-protocol-example"
+      ],
+      "planning_seconds": [
+        1.8767389669956174,
+        1.5372731840179767,
+        1.1738451120036189
+      ],
+      "planning_median_seconds": 1.5372731840179767,
+      "integrity_seconds": 2.4753727549978066,
+      "tier0_local_seconds": 4.012645939015783,
+      "previous_selected_certificates": 94,
+      "proposed_automatic_certificates": 0,
+      "proposed_package_count": 1,
+      "replay_seconds": 1.1967329389881343,
+      "replay_status": "passed"
+    },
+    {
+      "scenario": "dependency-change",
+      "head": "c6700cb3e69003cf45e66e406c0abf52bd67f998",
+      "level": "targeted-replay",
+      "packages": [
+        "research-packages/ci-protocol-example"
+      ],
+      "planning_seconds": [
+        0.9970503789954819,
+        1.0001991580065805,
+        1.1063907369971275
+      ],
+      "planning_median_seconds": 1.0001991580065805,
+      "integrity_seconds": 2.5242531539988704,
+      "tier0_local_seconds": 3.524452312005451,
+      "previous_selected_certificates": 94,
+      "proposed_automatic_certificates": 0,
+      "proposed_package_count": 1,
+      "replay_seconds": 0.9961990019946825,
+      "replay_status": "passed"
+    },
+    {
+      "scenario": "canonical-change",
+      "head": "dfd6f8749cc6d15d09fb56acb460f5e67a1dd441",
+      "level": "full-verification-required",
+      "packages": [],
+      "planning_seconds": [
+        1.0083089130057488,
+        1.4771751079824753,
+        1.2372555830224883
+      ],
+      "planning_median_seconds": 1.2372555830224883,
+      "integrity_seconds": 2.624993428995367,
+      "tier0_local_seconds": 3.8622490120178554,
+      "previous_selected_certificates": 94,
+      "proposed_automatic_certificates": 0,
+      "proposed_package_count": 0
+    },
+    {
+      "scenario": "unknown-impact",
+      "head": "8590117037c023d1093ebe31a4bd764b43a49487",
+      "level": "full-verification-required",
+      "packages": [],
+      "planning_seconds": [
+        1.1840016119822394,
+        1.447718392999377,
+        1.011290836991975
+      ],
+      "planning_median_seconds": 1.1840016119822394,
+      "integrity_seconds": 2.372825541999191,
+      "tier0_local_seconds": 3.5568271539814305,
+      "previous_selected_certificates": 94,
+      "proposed_automatic_certificates": 0,
+      "proposed_package_count": 0
+    }
+  ],
+  "full_verified": false,
+  "registered_certificates": 94,
+  "registry_scaling": [
+    {
+      "packages": 10,
+      "planning_seconds": [
+        1.1909059199970216,
+        1.1442160469887313,
+        1.0766971849952824
+      ],
+      "planning_median_seconds": 1.1442160469887313,
+      "selected_packages": 1
+    },
+    {
+      "packages": 100,
+      "planning_seconds": [
+        1.2714420880074613,
+        1.228987413982395,
+        1.193672890018206
+      ],
+      "planning_median_seconds": 1.228987413982395,
+      "selected_packages": 1
+    },
+    {
+      "packages": 500,
+      "planning_seconds": [
+        1.903386809019139,
+        1.6659933099872433,
+        1.664850540983025
+      ],
+      "planning_median_seconds": 1.6659933099872433,
+      "selected_packages": 1
+    }
+  ],
+  "essential_regressions": {
+    "commit": "5058d15053a5e2291d36b10a2b941297071e78a4",
+    "tests": 69,
+    "seconds": 14.033657438994851,
+    "exit": 0
+  }
+}

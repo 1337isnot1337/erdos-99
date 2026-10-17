@@ -1,0 +1,100 @@
+# Target C-II — conditional support-six elimination improves the one-anchor corank floor
+
+**Date:** 2026-09-18  
+**Status:** proved conditional candidate; theorem-state authority unchanged  
+**Scope:** the one-anchor transpose-kernel reduction, assuming the remaining collapsed support-six endpoint is globally excluded  
+**Depends on:** `target_c_free_terminal_one_anchor_corank_2026-09-18.md`; the audited support-five equality exclusion; `target_c_support6_noncollapsed_h5_h6_exclusion_2026-09-18.md`  
+**Certificate:** `research/verify_target_c_free_terminal_support6_conditional_corank_2026_09_18.py`  
+**Classification:** conditional propagation, not a promotion; C-II remains open
+
+The completed noncollapsed support-six theorem changes the exact next endpoint of the
+one-anchor transpose-kernel program. If the collapsed support-six branch is also
+excluded by a genuinely global theorem, then the degree-pure component-size argument
+starts at seven rather than six. The resulting finite coefficient and terminal
+consequence are
+
+\[
+\boxed{\sigma_C\le 2n_0+n_2+{n_1\over7}}\tag{SC.1}
+\]
+
+and, with
+
+\[
+E_U=a_F+{x_A\over2}+{n_0+n_2\over2},\qquad f=a_F+n_0+n_1+n_2,
+\]
+
+\[
+\boxed{\sigma_C\le {f\over7}+{26\over7}E_U.}\tag{SC.2}
+\]
+
+In the current terminal window `t_D <= mu_*+0.00710+o(1)`, the existing ledger gives
+`limsup f/D <= 0.7791330455`. Hence a sequence at the pair-shield counting floor
+(`E_U=o(D)`) would satisfy
+
+\[
+\boxed{\limsup {\sigma_C\over D}<0.111304721.}\tag{SC.3}
+\]
+
+This is a conditional consequence only. The certified local collapsed realization
+shows why the hypothesis cannot be replaced by the local pentagon closure conditions.
+
+## 1. Exact component-size propagation
+
+The one-anchor theorem gives a nonzero relation component dimension at most one and
+shows that every such component has at least five vertices. The support-five equality
+block is excluded by the earlier reciprocal theorem. The present combined theorem
+excludes every noncollapsed degree-pure support-six reciprocal block: H5 is ruled out
+by the strict source-gap angle lemma, and H6 by the exact sign/order certificate.
+
+Thus, under the additional hypothesis that the collapsed support-six endpoint has no
+global realization in the canonical residual system, the next degree-pure component
+size is at least seven. Each live component still contributes at most one scalar fiber
+dimension, so its contribution is bounded by `n_1/7`.
+
+The qualification “degree-pure” is binding: this note does not silently classify
+arbitrary six-vertex relation graphs with extra nonparallel links.
+
+## 2. Exact coefficient algebra
+
+The comparison with the structural excess is the exact identity
+
+\[
+\left({f\over7}+{26\over7}E_U\right)
+ -\left(2n_0+n_2+{n_1\over7}\right)
+={27a_F+13x_A+7n_2\over7}\ge0.
+\tag{SC.4}
+\]
+
+No asymptotic estimate or KKT multiplier lower bound is used.
+
+## 3. Terminal propagation
+
+The already audited terminal ledger has
+
+\[
+{f\over D}\le {M_*\over5}+2(0.00710)+o(1),\qquad
+M_*=4\sqrt{\frac{\pi}{2\sqrt3}}+2(0.007707).
+\]
+
+The exact rational enclosure in the companion verifier gives
+
+\[
+{1\over7}\left({M_*\over5}+2(0.00710)\right)<0.111304721.
+\]
+
+Combining this with (SC.2) proves (SC.3) whenever `E_U=o(D)`.
+
+## 4. C-II consequence and live obstruction
+
+The result does not improve the canonical theorem state, because the collapsed
+support-six branch is not globally excluded. It identifies the exact payoff of the
+remaining global task: excluding that one branch upgrades the low-flex endpoint from
+the current `n_1/6` route to `n_1/7` and lowers the pair-floor pure-contact corank
+density below `0.111304721`.
+
+The next required theorem must therefore either establish global train-corridor/source
+compatibility failure for the collapsed two-parameter family or use the actual diameter
+and KKT system to exclude it. The local contraction certificate is a binding regression
+against any argument using only the six pentagon closures and their local turn gaps.
+
+**Disposition:** conditional proved candidate; no theorem-state change.

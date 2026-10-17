@@ -1,0 +1,278 @@
+# Hostile audit — paired-remainder high-`t` O--O path through `t<=1.865`
+
+**Date:** 2026-09-15  
+**Reviewed:**
+- `research/target_c_paired_remainder_path_t1865_2026-09-15.md`
+- `research/verify_target_c_paired_remainder_path_t1865.py`
+
+**Verdict:** **PASS at proof-only full-core Type-II scope.**  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+This audit targets the new step only. The inherited corrected retained-mass system, physical opposite-branch theorem, path topology, region saturation, Helly hub, one-sided switching, and sparse strip reaction were already audited in their parent chain.
+
+---
+
+## 1. Pair and residual occurrence weights are disjoint
+
+For one train let the retained terminal weights be `a,b` and put `w=min(a,b)`. Then
+
+\[
+a=w+(a-w),\qquad b=w+(b-w),
+\]
+
+with all terms nonnegative. Therefore the pair energy
+
+\[
+w(e_1+e_2)
+\]
+
+and residual energy
+
+\[
+(a-w)e_1+(b-w)e_2
+\]
+
+sum **exactly** to the original retained occurrence energy
+
+\[
+ae_1+be_2.
+\]
+
+Summing train by train proves that no directional-energy unit is charged twice.
+
+**Verdict:** PASS.
+
+---
+
+## 2. The residual measure remains perimeter-dominated
+
+The hostile-audited dominant-orbit outer-energy theorem constructs the retained occurrence measure by assigning weight at most the physical hull-side length capacity. Hence, after normalization and the order of limits used there,
+
+\[
+0\le\nu\le d\theta.
+\]
+
+The residual measure is obtained only by lowering individual nonnegative occurrence weights from `a,b` to `a-w,b-w`. Thus
+
+\[
+0\le\nu_{res}\le\nu\le d\theta.
+\]
+
+Its total mass is exactly `z-2P`. The same three-well bathtub theorem therefore gives
+
+\[
+E_{res}\ge F(z-2P)-o(1),
+\qquad F(s)=s-6\sin(s/6).
+\]
+
+No new weak-convergence or density assertion is required.
+
+**Verdict:** PASS.
+
+---
+
+## 3. The pair-energy upper bound has the correct direction
+
+Because pair and residual energies partition the selected dominant occurrence energy and the latter is a subbudget of the outer detour,
+
+\[
+E_{pair}+E_{res}\le\delta+o(1).
+\]
+
+Using the residual lower bound gives
+
+\[
+E_{pair}\le\delta-F(z-2P)+o(1).
+\]
+
+Weighted Markov then yields
+
+\[
+P_{low}
+\ge P-{E_{pair}\over\lambda}-o(1)
+\ge P-{\delta-F(z-2P)\over\lambda}-o(1).
+\]
+
+Both inequality directions are correct.
+
+**Verdict:** PASS.
+
+---
+
+## 4. Substituting the pair-weight floor is legitimate
+
+Define
+
+\[
+L(P)=P-{\delta-F(z-2P)\over\lambda}.
+\]
+
+Since the residual mass lies in `[0,pi]`,
+
+\[
+F'(s)=1-\cos(s/6)\le1-\sqrt3/2.
+\]
+
+Therefore
+
+\[
+L'(P)=1-{2F'(z-2P)\over\lambda}
+\ge1-{2-\sqrt3\over\lambda}.
+\]
+
+The chosen threshold is
+
+\[
+\lambda=0.4906>2-\sqrt3=0.267949\ldots,
+\]
+
+so `L'(P)>0`. The exact endpoint-count floor
+
+\[
+P\ge z-U_0(t)+2\delta+\kappa/2-o(1)
+\]
+
+may therefore be substituted without reversing the bound.
+
+**Verdict:** PASS.
+
+---
+
+## 5. The endpoint monotonicities are all adverse in the claimed directions
+
+After inserting the pair floor and setting `kappa=0`, write
+
+\[
+P_0=z-U_0+2\delta,
+\qquad
+r_0=2U_0-z-4\delta.
+\]
+
+The lower-bound functional is
+
+\[
+L=z-U_0+2\delta-\delta/\lambda+F(r_0)/\lambda.
+\]
+
+Because `lambda>2-sqrt(3)` and `lambda<1/2`:
+
+\[
+L_z=1-F'(r_0)/\lambda>0,
+\]
+
+\[
+L_\delta=2-1/\lambda-4F'(r_0)/\lambda<0,
+\]
+
+\[
+L_{U_0}=-1+2F'(r_0)/\lambda<0.
+\]
+
+Before setting `kappa=0`, the derivative in `kappa` is
+
+\[
+{1\over2}-F'(r_0)/\lambda>0.
+\]
+
+Thus the adverse endpoint is indeed
+
+\[
+t=T,\quad z=z_0,\quad\kappa=0,\quad\delta=\delta_{max}.
+\]
+
+No hidden interior minimizer is omitted.
+
+**Verdict:** PASS.
+
+---
+
+## 6. The corrected retained-mass feasibility box still closes at `T=1.865`
+
+The parent proof reduces feasibility to `H(z)=G(F(z),z)` and proves monotonicity from explicit derivative bounds. The new exact certificate rechecks those inequalities on the enlarged box rather than reusing the old endpoint numerically.
+
+It certifies
+
+- `U0<2.109315`;
+- `delta_max<0.098545`;
+- `5 U0^2<32 Delta_2`;
+- the required denominator remains above `0.9`;
+- `G_delta>-7.7` and `G_z>24/25` on the box;
+- `F'(z)<1/16` for `z<=2.0738`;
+- hence `H'(z)>0` there; and
+- the outward endpoint evaluation
+  \[
+  H(2.0738)<-7.77\times10^{-5}.
+  \]
+
+Thus `z>2.0738-o(1)` is valid at `T=1.865`.
+
+**Verdict:** PASS.
+
+---
+
+## 7. The exact endpoint arithmetic has substantial margin
+
+The independent Pyroam run of the same outward arithmetic gives
+
+```text
+U0 upper                   2.1093146928204134
+delta max                  0.09854453954624942
+H(2.0738)                  -7.7796003851e-05
+opposite-branch margin      1.1207828327e-04
+pair-weight floor           0.1615743862720853
+residual occurrence mass    1.7506512274558295
+residual bathtub floor      0.02473411211829885
+low-energy pair floor       0.01112508454369035
+one-phase path floor        0.00370836151456345
+```
+
+The theorem rounds these to `0.011` and `0.0036`, leaving large safety margins relative to exact arithmetic.
+
+**Verdict:** PASS.
+
+---
+
+## 8. The physical opposite-branch step remains valid
+
+At the adverse detour cap and `lambda=0.4906`, the exact certificate proves
+
+\[
+\left(1-\delta_{max}-{\lambda\over2}\right)^2
+-\left(\lambda-{\lambda^2\over4}\right)
+>1.12\times10^{-4}.
+\]
+
+Thus the inherited Section-157 chord lower bound still contradicts the same-oriented terminal branch. The selected trains genuinely connect the two opposite terminal arcs. No projective orientation shortcut is reintroduced.
+
+**Verdict:** PASS.
+
+---
+
+## 9. Path and switch-count conclusions use actual train count
+
+One dominant phase has retained pair weight `>0.0036D-o(D)`. Since every train has pair weight at most one, that phase contains `>0.0036D-o(D)` distinct actual O--O trains. Their same-phase crosscuts are pairwise noncrossing and connect the same separated boundary arcs, so the inherited dual-path theorem applies.
+
+After deleting the one hub boundary, the global interval endpoint budget is at most `2pi D+o(D)`. The outward inequality
+
+\[
+{2(355/113)\over0.0036}<1746
+\]
+
+therefore gives an integer nonhub switch count at most `1745`.
+
+**Verdict:** PASS.
+
+---
+
+## 10. What is not proved
+
+The theorem does not rule out the resulting one-sided finite strip. In particular:
+
+- `1745` is a support-count bound, not a KKT multiplier lower bound;
+- the exact reaction is generated by one or two bars, but those bars need not carry a fixed fraction of total KKT mass;
+- no `O(D^{-1})` adjacent phase gap is obtained at high `t`;
+- no source-level strict diameter decrease follows yet.
+
+The result is nevertheless a real strengthening: it invalidates the old statement that the corrected Markov architecture intrinsically dies near `1.861799`. That ceiling was an artifact of charging pair weight against energy already forced on the residual dominant occurrence measure.
+
+**Final verdict:** **PASS at proof-only scope.** C-II and Level I remain open.

@@ -1,0 +1,66 @@
+<!-- theorem-state: {"artifact_id":"ART-55E1F3B22733","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Erdős Problem #99 — activation-edge forest
+
+## Statement
+
+Start with a triangle-free global minimizer and a specified set \(R_0\) of strict
+rattlers. Apply the monotone activation procedure from the canonical source-response
+route: move one currently strict point at a time, keep every old active pair, and stop
+at a boundary point where exactly one new active pair appears.
+
+Call an activation a **unit activation** when its new pair is a unit contact. For each
+member of \(R_0\) whose first active pair is a unit contact, record that contact, keeping
+only one copy if the same contact is simultaneously the first contact of both endpoints.
+
+> **Lemma (activation-edge forest).** The recorded unit contacts form a forest. Every
+> recorded edge contains at least one member of \(R_0\), and if \(u\) members of \(R_0\)
+> first activate through unit contacts, the forest has at least
+> \[
+> \left\lceil\frac u2\right\rceil
+> \]
+> edges.
+
+## Proof
+
+Order the recorded edges by the activation step at which they are created. At that
+step the moved endpoint is a currently strict member of \(R_0\), so it has not been an
+endpoint of any earlier recorded edge: a point that has acquired an active pair is no
+longer strict and is never moved again by the procedure. Thus every new edge introduces
+at least one vertex not present in the earlier recorded-edge graph. If both endpoints
+are strict \(R_0\)-members, it introduces two new vertices; otherwise it introduces one.
+
+Adding an edge with a new endpoint cannot create a cycle, so the final graph is a forest.
+One recorded edge can be the first active pair for at most its two endpoints. Therefore
+the number of recorded edges is at least \(\lceil u/2\rceil\). The endpoint statement is
+part of the construction. \(\square\)
+
+## Quantitative consequence
+
+The canonical activation budget gives, for an initial strict-rattler set of size
+\(\rho\), at most \(2\pi D\) members whose first active pair is a diameter pair. After the
+same-hull extension loss of at most \(5\widehat p_H\), the activation-edge forest in the
+extended representative therefore has at least
+
+\[
+\frac12\max\{0,\rho-5\widehat p_H-2\pi D\}
+\]
+
+edges. This is a structural refinement of the persistent unit-activation transfer: the
+unit trace is not merely a large collection of contacts, but an explicitly ordered
+forest embedded in the final triangle-free contact graph.
+
+## Exact limitation
+
+The forest can be long, can have rootless components formed by a first contact between
+two strict rattlers, and can later be supplemented by additional contact edges. A unit
+forest of this size is compatible with triangle-freeness, and the forest need not be a
+bridge in the final contact graph. Consequently the lemma does not yet give either
+
+\[
+|Q|-|N_A(Q)|\ge \widehat p_H+1
+\qquad\text{or}\qquad
+\dim\ker S\ge\Delta_\Lambda-d_{\rm int}.
+\]
+
+The missing bridge is still a theorem charging this activation forest to the source
+Hall deficiency or to independent null directions of the boundary Schur response.

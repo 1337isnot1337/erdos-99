@@ -1,0 +1,113 @@
+# Slot 2 Target C-II research shard salvage provenance (2026-10-05)
+
+This is a fresh-main recovery of unique, unreviewed research artifacts from the 90-ref SHA-256 8-f review shard. It does not change `docs/state/theorem-state.yaml`, promote a theorem, or close Target C-II. Imported reports stay discovery material. Finite scripts certify only their local checks and do not establish global optimality.
+
+## Source refs
+
+| Source branch | Exact source tip |
+|---|---|
+| `research/affine-core-diameter-shell-exclusion-final-2026-10-02` | `2d790268b227310603474c77f87db3a11983de56` |
+| `research/c2-0076-scope-repair-sol-20260915` | `db573d20fe3b42a03d311c322ce9ed8948e2c589` |
+| `research/c2-adjacent-cusp-carath-sol-20260915` | `9bf40b06afe85af4242f20d4497e6d404e445a44` |
+| `research/c2-adjacent-metric-quadruple-small-20260915` | `704a6f120ba775adbf32fa98b265a33e8e21938a` |
+| `research/c2-adjacent-strip-forest-20260915` | `cec8c94660cad2c1a2c9538989b08310b75ead97` |
+| `research/c2-backbone-920-exchange-sol-20260915` | `e23ba7e7c55a519f4ba1dad05e5bfcddd633295b` |
+| `research/c2-backbone-920-strip-sol-20260915` | `831df05cb7b0a0bf84ed8dcd3a0156faef44bf5c` |
+| `research/c2-closure-route-a-20260912` | `afede36aba64d6452de348abdf051ef00611fae8` |
+| `research/c2-closure-sol-20260914-r7` | `1541dac85e9ddf6450bb3cd7b14f5ce76e119420` |
+| `research/c2-common-ladder-18687-sol-20260915` | `85554e54cbbd79a392cc0e87b0f940f525c959d0` |
+| `research/c2-coupled-paired-remainder-1868-sol-20260915` | `e595a5ba54253ef6b6ae2654142270e8c5a49e1b` |
+| `research/c2-current-support6-20260918` | `e5e135338690516fedee8aaf0026f3500f6d0650` |
+| `research/c2-cusp-920-sol-20260915` | `8d66783eb9aa8cedbfa4555cea84efd3315a1169` |
+| `research/c2-cusp-multiregion-sol-20260915` | `1b3d391b916250d5479ccd99b2a32eef96db1339` |
+| `research/c2-cusp35-sol-20260914` | `7001b8e7da333bef0891a64909373ca58fee4169` |
+| `research/c2-dominant-oo-t1865-sol-20260915` | `5c063a67c475f1cb471d4f49a272f3177958eb7c` |
+| `research/c2-effective-sixpair-sol-20260914` | `61fdcef24d0b53de9beae3f286021b1424ce74b9` |
+| `research/c2-flat-stress-sol-20260914` | `92e33e034b4ae056fa51c106874ce3e9cf05b695` |
+| `research/c2-flower-high-t-sol-20260915` | `7de4cdc3e9aa0cac5b278c2ccc17158bd8d66bdb` |
+| `research/c2-g0050-complement-energy-sol-20260915` | `31a50feb941779d1b9bf0716a0072feca997900e` |
+| `research/c2-g0050-externalization-matching-sol-20260915` | `72df1b62f61ef0e8d5e645944ee70f3233cae33b` |
+| `research/c2-g0077-sol-20260915` | `384a97bfbe8eff49569c5d77ff8c944a82a44024` |
+| `research/c2-gluing-sol-20260914` | `eb3c973f49b40352046fbbd3dca21af04fd97334` |
+| `research/c2-gluing-sol-20260914-r10` | `58950d925eaec5d281cddc0202a4ef3df4c1b0fd` |
+| `research/c2-gluing-sol-20260914-r8` | `c8f0a4b7a2df25b466fbf7fa5ce484f7e3af2a45` |
+| `research/c2-high-t-pentagon-sea-sol-20260915` | `c390f561b9eabc2d0fd9c9693e5ead376b70c59b` |
+| `research/c2-high-t-short-anchor-20260915` | `2523d045628d19a3d2477e3f73d37e1200d361de` |
+| `research/c2-high-t-three-row-clustered-cusp-sol-20260915` | `09c2fe3347cdbaf0a4b1c0f57bd3a45dd7762eac` |
+| `research/c2-isolate-free-clean-grid-sol-20260915` | `b3ef8e3ef4b09cdfbbaec7245c7eaa1783025403` |
+| `research/c2-local-leaf-diameter-rank-20260915-sol` | `76e276bfa9e188c6b58123302320cc57144997ff` |
+| `research/c2-long-common-ladder-18687-sol-20260915` | `8cb691cd1f649aaa3ea0a682148fa33316229b39` |
+| `research/c2-marker-rectangle-sol-20260915` | `015de562f125261634770ed6ba6e127e1eb385d0` |
+| `research/c2-modern-high-t-j-bootstrap-sol-20260915` | `75a4f9ad9547cf9f5ed06bafeea9d32ee0c84577` |
+| `research/c2-open-guard-sol-20260912` | `7203a32680d7e49325d5df45f05b71bb45ace050` |
+| `research/c2-orbit-routing-sol-20260915` | `4710f0d7f72fe22a7eb1552d2cde51cc94ffdc09` |
+| `research/c2-outer-flat-kernel-amplification` | `2748801d267197fc9a3f82163f42438a5135d54b` |
+| `research/c2-paired-bathtub-closure-sol-20260915` | `16202f2ae46c8eaf2f5d0221089fc0e4183d4b53` |
+| `research/c2-paired-bathtub-sol-20260915` | `5aa474b51af1b3a75180fe604b153fd8f9fce702` |
+| `research/c2-paired-path-186875-sol-20260915` | `94d9f06202288cd9b8a935925c3a7e8146230473` |
+| `research/c2-path-1861799-sol-20260915` | `be95cec8577a62e17fd1c790c8c9ad54b187212f` |
+| `research/c2-phase-controlled-threecut-sol-20260915` | `d0776333ec40901e6e7bcc84a81a8628a3d88718` |
+| `research/c2-phase-zero-quantile-377-20260915` | `9f9ada2dda3d4b0ad44eeea746181bbb7117b538` |
+| `research/c2-phasezero18687-sol-20260915` | `997eb9d51914f5b17ae899fc07c38262fe1c4402` |
+| `research/c2-post186177-audit-synthesis-sol-20260915` | `460eebe960aec59faae6d74eff98dafbe48fcef8` |
+| `research/c2-profile-injectivity-20260915` | `f505f12bb7e0d92ea8175f087455cd8e6b9e5a08` |
+| `research/c2-rectangle-tradeoff-20260915` | `611ee90e4477cc5b861036b106bbbbb18110ef2a` |
+| `research/c2-reflection-g0071-current-20260915` | `c4ac198c3462e898066642c0cf66b8de9e73cd05` |
+| `research/c2-second-layer-sol-20260915` | `c2f116847895882c229b62079144db8d94651862` |
+| `research/c2-shore-balance-orbit-energy-sol-20260915` | `4873a7d50fcd2ad785af2fb93be7def1ade635b4` |
+| `research/c2-straight-degree-split-20260915` | `015c1dd21b865aae8462d396d633f72b80913b6d` |
+| `research/c2-strip-two-ray-sol-20260915` | `2b3648832905a7addbec5f1134fd2cdf016faf22` |
+| `research/c2-support6-h5-luna-20260918` | `6e62599327850c2824104e1bb6c9f13df55c3e44` |
+| `research/c2-support6-h5-metric-20260918` | `04fb5a4e2999eb895d758d8cc0f5cde74094635b` |
+| `research/c2-switching-open-semicircle-integrated-sol-20260915` | `e3c434c90e8e552035685be20cd7727ea4b4c70e` |
+| `research/c2-switching-open-semicircle-sol-20260915` | `ef8e8493e6328fe3e8c73ce417aa212a195e674c` |
+| `research/c2-switching-thrackle-sol-20260915` | `1c5a1d0da054545ebc29bcde232dcbc3721213ca` |
+| `research/c2-thin-strip-window-20260915` | `e510f514d1fc2af9395848d1beb604cf1afd9dd2` |
+| `research/c2-three-cut-kernel-1086-sol-20260915` | `4edde0908914a6ae2f0d76888de2e8fcccb76765` |
+| `research/c2-threecut-sandwich-release-sol-20260915` | `83bf2b2ad84006fc68473304517c51e2a2f10880` |
+| `research/c2-two-leaf-184364-sol-20260915` | `e4af15bc16ede611c85181e0926d518a5fb1948e` |
+| `research/c2-two-leaf-1843645-sol-20260915` | `3b288804e6aa5643be923463425e441083118c0f` |
+| `research/c2-twoleaf-energy-184364-20260915` | `fed000d5f765433b005b5d0aaf8decd5749a4f2b` |
+| `research/c2-twoleaf-energy-184364-v2-20260915` | `b2fcee83e3ade26fb37ef26feed159701bfd19ef` |
+| `research/c2-typeI-adaptive-safe-saturation-sol-20260915` | `83d71ed8cd9621a17ae17bf8ce00a7e2a134bed6` |
+| `research/c2-unloading-0021-sol-20260914` | `28367bf1e5b13df276eaca8177d1c23786b30990` |
+| `research/c2-weighted-hidden-rank-sol-20260915` | `2180303425d7ba869b877e850c0dfb8886f5fbf7` |
+| `research/cii-closure-sol-20260912-0953` | `4034a3bfbe34ab9b278502cd90f1c44c7583f57b` |
+| `research/cii-face-closure-rank-clean` | `11207c3e22e166611112122848eeb6f9e614587c` |
+| `research/cii-zero-detour-pentagon-regression-20260912` | `3c045bf852b51aec074c6cc98cfa9840eab5a728` |
+| `research/exact-phase-fixed-angle-reaction-braid-2026-10-01` | `bbb61ed6155b9ec220b582052a3bcf211b1cc181` |
+| `research/exact-phase-gap-circulation-2026-10-01` | `0143ba399a27245809929ee2bcd8d6fd39503fad` |
+| `research/exact-phase-threshold-edgewise-flux-packets-2026-10-02` | `0d31111038bcd62af8b03024b1f901bd4bb0eebd` |
+| `research/exact-phase-threshold-edgewise-flux-packets-2026-10-02-r2` | `d43912fda6fd784eac0c30b5b7d50adda6079e9d` |
+| `research/fullcore-detour-currency-trichotomy-2026-10-02` | `24dc9accecd85eb2cfd50832bc7b810d68f53e80` |
+| `research/midpoint-diameter-dispersion-2026-10-02-final` | `e3a600c8ff99d1a0837141e69a6b000162524559` |
+| `research/reflection-closure-audit-20260919` | `542bc89ecee7a3b7a22d388c271dfd2756b39acf` |
+| `research/run6-fast23` | `1e05587d5c5a59051ba3035f13ddfa682e9dddf1` |
+| `research/run6-symmetry` | `a3148159f32355c61f20af3cd5bd86d3ba423243` |
+| `research/target-c-667-audit-synthesis-20261004` | `e54dc5be6f88516570c82af38ed7707deb22ac89` |
+| `research/target-c-harmonic-concentration-77-20260912` | `cb5ff8fe695b352fd00ae1302b48ec73aed2a9d2` |
+| `research/target-c-high-t-three-cut-kernel-20260915` | `68a66199252cd598221f485b16109d8c99edacb6` |
+| `research/target-c-inactive-aggregate-fix2-2026-09-12` | `a68df4cac4ee93dce50334d53ccb6e4893b73311` |
+| `research/target-c-inactive-face-wall-clean-2026-09-12` | `06614b8c85c29928d2dc4a578cb57cf4ccd74354` |
+| `research/target-c-inactive-face-wall-fixed-2026-09-12` | `f1181032f7ed4a4199f45f917b1ea9cc16ef577f` |
+| `research/target-c-near-mantel-endpoint` | `ca768a42c65623f60f93938bd0068763b68c62e2` |
+| `research/threshold-cross-shore-two-cut-escape-2026-10-02` | `29139abd8ec1e846a46269c43299837b55dfdc14` |
+| `research/threshold-strict-packet-resultants-2026-10-02` | `2b9a9731aad70dab31682b784c8524075d376f4d` |
+| `research/threshold-strict-packet-resultants-final-2026-10-02` | `6339db4f307e54d4872a0dd618f51334eb46122b` |
+| `research/threshold-transverse-nested-matching-r2-2026-10-02` | `344666a3f89543c18cecd90153e54522579bca0c` |
+| `research/weighted-cover-stress-concentration-2026-10-02` | `ab10eeda2bc16a36daacd54be7cb2cbfdeb1fe1f` |
+
+The file-level source/variant mapping is `cleanup/slot2-8f-ref-artifact-map-2026-10-05.tsv`. For a path shared by branch revisions, the map records every exact source blob and the selected version. The selected report files are newest by last path-touch time among these source tips; current `main` paths were not overwritten.
+
+## Preserved families
+
+- Adjacent O-O cusp, strip, switching, and three-cut reductions.
+- High-t paired-remainder, ladder, phase-zero, and terminal-free grid reductions.
+- Collapsed support-six regressions and constrained chamber candidates.
+- Earlier C-II exact-phase, flat-center, gluing, inactive-wall, and penetration/hidden-rank discovery reports from this hash shard.
+
+The marker-rectangle and cusp-multiregion source refs share the same final report blobs; the TSV records both source tips against the selected files. The old §§155-156 pure-tooth module is not copied into `docs/targets`; PR #392 records that its exact regression and metric incidence result are superseded by audited §§158-159 on main. The earlier all-phase harmonic-concentration target module is retained only as `research/legacy_target_modules/...`, outside the active route.
+
+## Verification limits
+
+This archival import does not claim that each source theorem is valid. The already adopted #692/#693/#697 verifiers passed from their exact PR snapshots; the Slot 2 adjacent/high-t/support-six selected checks are listed in #635. One support-six metric exploration timed out at 120 seconds and is not used to support a theorem claim. Most imported historical verifier scripts are preserved but were not re-run in this cleanup.

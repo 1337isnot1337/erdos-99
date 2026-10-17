@@ -1,0 +1,40 @@
+{
+  "schema": "migration-recovery-provenance-v1",
+  "captured_candidate": "f282d53169df4d507117893bfdcc99f663855923",
+  "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "baseline_commit": "c6e0394b3152d21075328bf4f26e6c070229bf13",
+  "execution_environment": "Disconnected during upload; original local candidate unavailable.",
+  "lost_local_candidate_commit": "18cf92d0796abfb8fd4a2b9e5c798c0662436a56",
+  "lost_local_candidate_tree": "2ec17b75a6cc943fb0909f778a8ff4f2ffd4c88c",
+  "recovery_checkpoints": {
+    "source": "c0ef17ae3cfb329d7ef582a9daeb444e6b1ea9f4",
+    "rootbaseline": "d25e9bdd02220e4a8b4040284fe1d8ee4e603912",
+    "policycode": "cfcddb201872eb64e59274044ec624e10b52076f",
+    "coverage": "8938a8b3cb2ea262b49328e2828462445019fb7d",
+    "refs": "d75eb5d073252a45ead2a7c8fa56bf704746a8fe",
+    "references": "ae0ac8a4431087f21c8538c2800809b283eaf3a0",
+    "independent": "1c15edd65ccf78c5516c66bb70a1c1d966d41bc8",
+    "ledger": "19b15edd2f3e1c30efc4f7818f1e425e3d9f4693",
+    "release": "27eaded9587d4e1703ead20bbf4b83f18d4b08ac"
+  },
+  "recovery_method": "Recover pinned source/archive blobs by recorded Git SHA1 and SHA256. Reconstruct engineering code and receipts from retained writer histories. Preserve every original destination commit through captured candidate ancestry.",
+  "exact_reconstructed_git_hash_matches": {
+    "check_public": "0801b0614b03f75bafcd80ec6a85f70a06b258c9",
+    "build_artifact_index": "cdf38c178afd6de63219c80e3dea299c1c0695fa",
+    "release_runner": "96a884c5facf38441a3f2adc79cc5c022b8196cb",
+    "audit_public_release": "654df0bd54d5523370a78f664de3002fdc7c1023",
+    "repair_migration_union": "fa71919e55d9295ca3fb6616442ef6f40c7bd4f6",
+    "test_migration_repair": "6cc6b3be939eb1143520ef6d9a0ec046d1e1f624"
+  },
+  "hash_match_scope": "These files match retained pre-loss Git object identities or recorded diff prefixes. This is not proof that the complete recovered tree equals the lost candidate.",
+  "post_recovery_python_tests_executed": false,
+  "release_verified": false,
+  "deprecation_ready": false,
+  "known_missing_dirty_versions": 5,
+  "unknown_uninventoried_historical_worktrees": 2,
+  "limits": [
+    "Earlier local diagnostic tests are not a final-candidate test receipt.",
+    "Headless GitHub tree/ledger identity checks do not execute Python code or replace Gate 2.",
+    "Retain e-99 until unavailable dirty evidence has a justified disposition and final verification succeeds."
+  ]
+}

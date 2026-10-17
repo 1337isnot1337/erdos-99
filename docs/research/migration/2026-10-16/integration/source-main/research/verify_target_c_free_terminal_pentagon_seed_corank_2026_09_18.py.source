@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+"""Exact certificate for the live pentagon-bootstrap corank consequences."""
+from fractions import Fraction
+from math import isqrt
+
+Q = Fraction
+
+
+def atan_inv_bounds(q, terms):
+    s = Q(0)
+    for j in range(terms):
+        t = Q(1, (2*j+1)*q**(2*j+1))
+        s += t if j % 2 == 0 else -t
+    nxt = Q(1, (2*terms+1)*q**(2*terms+1))
+    return (s, s+nxt) if terms % 2 == 0 else (s-nxt, s)
+
+
+def sqrt_floor(x, scale):
+    n = isqrt((x.numerator*scale*scale)//x.denominator)
+    y = Q(n, scale)
+    assert y*y <= x
+    return y
+
+
+def sqrt_ceil(x, scale):
+    n = isqrt((x.numerator*scale*scale)//x.denominator) + 1
+    y = Q(n, scale)
+    assert y*y >= x
+    return y
+
+
+S = 10**90
+a5l, a5h = atan_inv_bounds(5, 100)
+a239l, a239h = atan_inv_bounds(239, 30)
+pil = 16*a5l - 4*a239h
+pih = 16*a5h - 4*a239l
+n3 = isqrt(3*S*S)
+s3l = Q(n3, S)
+s3h = Q(n3+1, S)
+d2l = pil/(2*s3h)
+d2h = pih/(2*s3l)
+s2h = sqrt_ceil(d2h, S)
+
+g = Q(7707, 10**6)
+eps = Q(71, 10000)
+mu_hi = pih/2 + Q(2,5)*s2h + g/5
+tmax_hi = mu_hi + eps
+k_lo = pil - tmax_hi
+assert k_lo > Q(1181229803, 10**9)
+
+# Strict outward bounds from the live detour-pinching certificate.
+f_hi = Q(76152405, 10**8)
+r_hi = Q(141, 10**6)
+sigma_hi = Q(2,3)*f_hi + Q(4,3)*r_hi
+assert sigma_hi == Q(5078707, 10**7)
+assert sigma_hi < Q(507871, 10**6)
+
+unconverted_lo = k_lo - sigma_hi
+assert unconverted_lo > Q(6733591, 10**7)
+half_unconverted_lo = unconverted_lo/2
+assert half_unconverted_lo > Q(3366795, 10**7)
+
+# If p_D=o(D), Woodall forest component count d_H has this density.
+# Bound the limiting mean component size q/d_H using q/D -> pi.
+mean_size_hi = pih/unconverted_lo
+assert mean_size_hi < Q(46656, 10000)  # 4.6656
+
+print('PASS: pentagon bootstrap corank consequences certified')
+print('k/D floor >', float(k_lo))
+print('sigma_C/D cap <', float(sigma_hi))
+print('(d_H+p_D)/D >', float(unconverted_lo))
+print('one of d_H/D,p_D/D >', float(half_unconverted_lo))
+print('if p_D=o(D), mean forest component size <', float(mean_size_hi))

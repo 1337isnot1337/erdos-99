@@ -1,0 +1,380 @@
+# Erdős Problem #99 — correlated endpoint interface and population consequences
+
+**Date:** 2026-09-14
+**Repository base:** `5ff91a6acd3c0447be127606805e4f2cf911eadd`
+**State version:** `2026-09-14.audit.51`
+**Run type:** closing-proof reduction / exact propagation of the correlated train surplus
+**Target:** Target C-II, canonical full-core branch
+**Claim class:** proof-only consequence awaiting independent audit
+**External literature:** no new import
+**Computation:** dependency-free constant regression only
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The correlated stopped-train theorem now gives the global endpoint/interface floor
+
+\[
+J_D:=(b-P_F)+(Q+4f),
+\qquad
+\liminf {J_D\over D}\ge j_*:=2\rho+4\sqrt{\Delta_2}-\pi+0.00084,
+\tag{CI.1}
+\]
+
+where
+
+\[
+\rho=\cos\rho,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+j_*=2.146668840296357\ldots .
+\]
+
+This note propagates (CI.1) into canonical Section-85/77 currencies. The resulting
+bounds are substantially stronger than the older train-interface baseline and expose
+an additional live obstruction: every full-core survivor carries large *local chamber
+packing slack* even though a direct comparison with the single full-hull Oler slack is
+not valid.
+
+No C-II closure is claimed.
+
+## 1. The smaller Section-85 interface currency
+
+Put
+
+\[
+H_D:=(b-P_F)+(Q+2f).
+\tag{CI.2}
+\]
+
+Canonical Section 85 uses `H_D`, while the full stopped-train handshake naturally
+produces `J_D`. Since
+
+\[
+J_D-H_D=2f
+\]
+
+and `Q>=f`, `b-P_F>=0`, one has the finite inequality
+
+\[
+\begin{aligned}
+5H_D-3J_D
+&=2\bigl[(b-P_F)+(Q-f)\bigr]\\
+&\ge0.
+\end{aligned}
+\]
+
+Therefore
+
+\[
+\boxed{H_D\ge {3\over5}J_D.}
+\tag{CI.3}
+\]
+
+Combining with (CI.1),
+
+\[
+\boxed{
+\liminf {H_D\over D}
+\ge h_*:={3\over5}j_*
+=1.288001304177814\ldots .
+}
+\tag{CI.4}
+\]
+
+This sharpens the old Section-85 use of only
+`B_4-P_F>=4sqrt(R_4)-P_F` by retaining the all-train correlation with the loaded hull.
+
+## 2. A much stronger second-order positive-core population floor
+
+Canonical Section 63 gives
+
+\[
+b+Q=2(q-k),
+\tag{CI.5}
+\]
+
+and Section 67 gives
+
+\[
+m=R_4+f+q-k+1.
+\tag{CI.6}
+\]
+
+Hence (CI.2) has the exact finite interpretation
+
+\[
+\begin{aligned}
+H_D
+&=b-P_F+Q+2f\\
+&=2(q-k+f)-P_F\\
+&=2(m-R_4-1)-P_F.
+\end{aligned}
+\]
+
+Thus
+
+\[
+\boxed{
+m-R_4={P_F+H_D\over2}+1.}
+\tag{CI.7}
+\]
+
+In the canonical full-core branch `P_F/D->pi`, so (CI.4) gives
+
+\[
+\boxed{
+\liminf {m-R_4\over D}
+\ge c_{pop}:={\pi\over2}+{3j_*\over10}
+=2.214796978883804\ldots .
+}
+\tag{CI.8}
+\]
+
+For comparison, canonical Section 85 alone records only
+
+\[
+\liminf {m-R_4\over D}\ge\sqrt{\Delta_2}=0.9523\ldots .
+\]
+
+The new coefficient is more than twice as large.
+
+## 3. Chamber area surplus becomes explicit and large
+
+Canonical Section 85 proves
+
+\[
+A_{ch}-a_0Z_{ch}\ge c_0H_D,
+\qquad
+a_0={\sqrt3\over2},
+\qquad
+c_0={\sqrt3\over4}={a_0\over2}.
+\tag{CI.9}
+\]
+
+Therefore
+
+\[
+\boxed{
+\liminf {A_{ch}-a_0Z_{ch}\over D}
+\ge \beta_*:={3c_0\over5}j_*
+=0.557720924762737\ldots .
+}
+\tag{CI.10}
+\]
+
+Since `Z_ch>=0`, this also gives the weaker but sometimes useful geometric statement
+
+\[
+\boxed{
+\liminf {A_{ch}\over D}\ge\beta_*.
+}
+\tag{CI.11}
+\]
+
+The result is only boundary-order. It does not contradict the full-core condition,
+which excludes quadratic inactive area but permits linear thin-corridor area.
+
+## 4. Total inactive-chamber perimeter has the full `J_D` floor
+
+Let `P_ch` be the total perimeter of the inactive chambers from canonical Section 77.
+The exceptional bounded faces contribute exactly
+
+\[
+P_{exc}=4f+Q.
+\tag{CI.12}
+\]
+
+If `a` is the number of convex outer pockets, Section 77 gives
+
+\[
+P_{out}=b+P_F-2q+2a.
+\tag{CI.13}
+\]
+
+Every side of the loaded force hull joins distinct unit-separated source points, so
+its length is at least one. Hence
+
+\[
+P_F\ge q.
+\tag{CI.14}
+\]
+
+Subtracting `b-P_F` from (CI.13),
+
+\[
+P_{out}-(b-P_F)=2(P_F-q+a)\ge0.
+\tag{CI.15}
+\]
+
+Consequently
+
+\[
+\boxed{
+P_{ch}=P_{exc}+P_{out}\ge (4f+Q)+(b-P_F)=J_D.
+}
+\tag{CI.16}
+\]
+
+Together with (CI.1),
+
+\[
+\boxed{
+\liminf {P_{ch}\over D}\ge j_*
+=2.146668840296357\ldots .
+}
+\tag{CI.17}
+\]
+
+This is an explicit lower bound complementary to Section 77's coarse upper bound
+`P_ch<=13 pi D`.
+
+## 5. The chamber Oler-slack sum is forced above `1.717 D`
+
+For each inactive chamber `C_j`, canonical Section 77 defines the isolate-only Oler
+slack
+
+\[
+\sigma_j={A_j\over a_0}+{P_j\over2}+1-z_j\ge0.
+\]
+
+Let
+
+\[
+\Sigma_{ch}:=\sum_j\sigma_j,
+\qquad
+s:=\#\{\text{inactive chambers}\}.
+\]
+
+Summing the definitions gives the exact identity
+
+\[
+\Sigma_{ch}
+={A_{ch}-a_0Z_{ch}\over a_0}+{P_{ch}\over2}+s.
+\tag{CI.18}
+\]
+
+By (CI.9), `c_0/a_0=1/2`, (CI.3), and (CI.16),
+
+\[
+\begin{aligned}
+\Sigma_{ch}
+&\ge {H_D\over2}+{J_D\over2}\\
+&\ge {3J_D\over10}+{J_D\over2}
+={4J_D\over5}.
+\end{aligned}
+\]
+
+Thus
+
+\[
+\boxed{
+\liminf {\Sigma_{ch}\over D}
+\ge {4\over5}j_*
+=1.717335072237086\ldots .
+}
+\tag{CI.19}
+\]
+
+This coefficient is larger than `pi/2`. That observation is **not** a contradiction.
+The single full-source Oler slack on `K=conv(A)` does not dominate the sum of chamber
+slacks: partitioning creates internal chamber perimeter, and `P_ch/2` appears explicitly
+in (CI.18). Any closure using (CI.19) must cancel or globally pay that internal-boundary
+term rather than compare the two slacks naively.
+
+## 6. A linear deficit from the absolute rhombus-count maximum
+
+The full-source Oler bound in canonical Section 77 is
+
+\[
+n\le \Delta_2D^2+{\pi\over2}D+1.
+\tag{CI.20}
+\]
+
+Since `m<=n`, (CI.8) implies
+
+\[
+\Delta_2D^2-R_4
+\ge(m-R_4)-{\pi\over2}D-1.
+\]
+
+Therefore
+
+\[
+\boxed{
+\liminf {\Delta_2D^2-R_4\over D}
+\ge \gamma_*:={3j_*\over10}
+=0.644000652088907\ldots .
+}
+\tag{CI.21}
+\]
+
+This is compatible with `R_4/D^2->Delta_2`; it supplies a second-order linear gap,
+not a leading-density contradiction.
+
+Multiplying by `a_0` gives the equivalent geometric deficit
+
+\[
+\boxed{
+\liminf {\pi D^2/4-a_0R_4\over D}
+\ge a_0\gamma_*=\beta_*
+=0.557720924762737\ldots .
+}
+\tag{CI.22}
+\]
+
+Indeed
+
+\[
+{\pi D^2\over4}-a_0R_4
+=\delta_K+[\operatorname{area}(K)-A_F]+A_{ch}+E_4,
+\tag{CI.23}
+\]
+
+where all four terms are nonnegative. Equation (CI.10) already forces the chamber
+part at the same numerical scale, so (CI.22) is best viewed as a useful count/area
+consistency check rather than an independent closure.
+
+## 7. Frontier effect
+
+The correlated all-train theorem no longer leaves Section 85 at the small
+`4sqrt(Delta_2)-pi` interface scale. Every full-core survivor now has simultaneously
+
+```text
+J_D / D >= 2.1466688402... - o(1),
+H_D / D >= 1.2880013041... - o(1),
+(m-R_4) / D >= 2.2147969788... - o(1),
+(A_ch-a_0 Z_ch) / D >= 0.5577209247... - o(1),
+P_ch / D >= 2.1466688402... - o(1),
+Sigma_ch / D >= 1.7173350722... - o(1),
+(Delta_2 D^2-R_4) / D >= 0.6440006520... - o(1).
+```
+
+The cleanest new closure target is now the chamber-slack identity (CI.18). A theorem
+that pays a fixed positive fraction of the internal chamber perimeter from the single
+full-source boundary budget would immediately turn the large local slack floor into a
+global obstruction. Without such a perimeter cancellation, comparing local and global
+Oler slacks is invalid.
+
+A second possible target is the linear rhombus-count deficit (CI.21): couple it to
+canonical Section 68's punctured-packing identity and the phase/angular-defect budget
+at **linear** order, rather than only through `o(D^2)` rhombic saturation.
+
+The macroscopic-container branch is untouched.
+
+## 8. Scope audit
+
+- All statements are full-core Type-II only.
+- `b` is the canonical occurrence-counted old outer contact-face walk.
+- `P_F` is Euclidean force-hull perimeter; `P_F>=q` uses only unit separation of
+  consecutive force-hull vertices.
+- No local exceptional-face perimeter is identified with the Section-123 induced-cell
+  quantity `sum_r P_exc,r`; those are different ledgers.
+- Contact-isolated source points remain in the source and enter `Z_ch` exactly as in
+  canonical Section 77.
+- The `.00042` / `.00084` margin is proof-only pending independent audit of the new
+  sharpened §168 artifact.
+- No source-preserving deformation, exact unit triangle, or Level-I conclusion is
+  asserted.

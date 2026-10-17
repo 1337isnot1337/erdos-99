@@ -1,0 +1,390 @@
+# Target C-II — repeated exact-swap blockers have `D^-2` slack and row-parallel direction
+
+**Date:** 2026-09-17  
+**Status:** proof-only strengthening of the one-sign strong-TB1 exact-swap system; no canonical promotion claimed  
+**Scope:** one-sign strong-TB1 exact swaps through `t=(q-k)/D<=1.8687`  
+**Dependencies:** common strong-TB1 swap axis; exact contact-swap algebra; disjoint physical path layers; row-parallel almost-diameter packing lemma  
+**Certificate:** `research/verify_target_c_high_t_tb1_exact_swap_double_witness_collapse_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The existing double-witness theorem was stated for the contact-minimal **overswap**. The Horn system, however, is encoded using the exact contact swaps themselves. The same collapse is true at the exact-swap endpoint and follows from the same two-interface algebra with the overswap factor removed.
+
+Let a previously strict source pair block the singleton exact swap at two distinct one-sign strong-TB1 interfaces `i,j`. Then the two physical-layer incidences orient the same pair oppositely. The exact swap axes satisfy
+
+\[
+|w_i-w_j|=O(D^{-1}),
+\]
+
+and the exact swap lengths satisfy
+
+\[
+q_i,q_j=O(D^{-1}).
+\]
+
+If the pair hits the lower metric boundary at both swaps, then
+
+\[
+\boxed{|xy|-1=O(D^{-2})}.
+\tag{ED.1}
+\]
+
+If it hits the diameter boundary at both swaps, then
+
+\[
+\boxed{D-|xy|=O(D^{-2})}.
+\tag{ED.2}
+\]
+
+In both cases its projective direction lies within `O(D^-1)` of the common train row line. Consequently the source-wide row-parallel packing lemma gives
+
+\[
+\boxed{
+N_{\rm repeated,UPPER}^{\rm exact}=O(1).
+}
+\tag{ED.3}
+\]
+
+This supplies the exact-swap version needed by the all-residue Horn UPPER deduplication theorem. No appeal to overswap persistence is required.
+
+---
+
+## 1. Exact-swap notation and opposite layer incidence
+
+At one-sign interface `i`, write the exact contact swap as
+
+\[
+v_i=-q_iw_i,
+\qquad
+q_i=|a_i+b_i|>0,
+\qquad
+|w_i|=1.
+\tag{ED.4}
+\]
+
+The common-axis theorem gives fixed constants `Q,W` such that, uniformly over the strong-TB1 population,
+
+\[
+q_i\le {Q\over D},
+\qquad
+|w_i-w_j|\le {W\over D}
+\tag{ED.5}
+\]
+
+for all sufficiently large `D`. The current explicit bound permits `Q=31.4\times10^6+o(1)`; its value is immaterial here.
+
+Let `h=xy` be moved by two distinct physical layers `R_i,R_j`. Since the layers are disjoint and the pair has two endpoints, one endpoint lies in each layer. Orient
+
+\[
+r=p_y-p_x,
+\qquad
+\ell=|r|,
+\]
+
+and let `n` be the inward relative vector at interface `i`. Then the inward vector at `j` is exactly `-n`:
+
+\[
+\boxed{n_j=-n_i=-n.}
+\tag{ED.6}
+
+At interface `i`, the post-swap squared length is
+
+\[
+\ell_i'^2
+=\ell^2-2q_i(n\cdot w_i)+q_i^2.
+\tag{ED.7}
+\]
+
+At `j`, because the incidence sign reverses,
+
+\[
+\ell_j'^2
+=\ell^2+2q_j(n\cdot w_j)+q_j^2.
+\tag{ED.8}
+
+Put
+
+\[
+d_{ij}:=|w_i-w_j|,
+\qquad
+H_{ij}:={q_iq_j\over q_i+q_j}.
+\tag{ED.9}
+
+Then
+
+\[
+d_{ij}=O(D^{-1}),
+\qquad
+H_{ij}=O(D^{-1}).
+\tag{ED.10}
+
+No positive lower bound on either `q_i` or `q_j` is used.
+
+---
+
+## 2. Repeated exact LOWER blockers have `O(D^-2)` slack
+
+Assume
+
+\[
+\ell>1,
+\qquad
+\ell_i'\le1,
+\qquad
+\ell_j'\le1.
+\tag{ED.11}
+
+Set
+
+\[
+A:=\ell^2-1>0.
+\]
+
+Equation (ED.7) gives
+
+\[
+n\cdot w_i
+\ge {A+q_i^2\over2q_i}
+={A\over2q_i}+{q_i\over2}.
+\tag{ED.12}
+
+Equation (ED.8) gives
+
+\[
+n\cdot w_j
+\le-{A+q_j^2\over2q_j}
+=-{A\over2q_j}-{q_j\over2}.
+\tag{ED.13}
+
+Subtracting and using
+
+\[
+|n\cdot(w_i-w_j)|\le\ell d_{ij}
+\]
+
+gives
+
+\[
+\ell d_{ij}
+\ge
+{A\over2}\left({1\over q_i}+{1\over q_j}\right)
++{q_i+q_j\over2}.
+\tag{ED.14}
+
+Multiply by `2H_ij`:
+
+\[
+\boxed{
+A+q_iq_j
+\le2\ell d_{ij}H_{ij}.
+}
+\tag{ED.15}
+
+Every exact LOWER blocker already satisfies
+
+\[
+1<\ell\le1+q_i=1+O(D^{-1}),
+\]
+
+so `ell=O(1)`. Together with (ED.10), (ED.15) gives
+
+\[
+A=O(D^{-2}).
+\]
+
+Therefore
+
+\[
+\boxed{
+\ell-1={A\over\ell+1}=O(D^{-2}).
+}
+\tag{ED.16}
+
+The direction also collapses. Equation (ED.12) makes `n dot w_i>0`, while (ED.13) makes `n dot w_j<0`. Hence
+
+\[
+0<n\cdot w_i
+\le|n\cdot(w_i-w_j)|
+\le\ell d_{ij}=O(D^{-1}).
+\tag{ED.17}
+
+After division by `ell=1+o(1)`, the direction of the pair is `O(D^-1)` from the line perpendicular to the common swap axis. This is the common train row line.
+
+---
+
+## 3. Repeated exact UPPER blockers have `O(D^-2)` diameter slack
+
+Assume instead
+
+\[
+\ell<D,
+\qquad
+\ell_i'\ge D,
+\qquad
+\ell_j'\ge D.
+\tag{ED.18}
+
+Put
+
+\[
+B:=D^2-\ell^2>0.
+\]
+
+Equation (ED.7) yields
+
+\[
+n\cdot w_i
+\le {q_i\over2}-{B\over2q_i},
+\tag{ED.19}
+
+and (ED.8) yields
+
+\[
+n\cdot w_j
+\ge {B\over2q_j}-{q_j\over2}.
+\tag{ED.20}
+
+Thus
+
+\[
+\ell d_{ij}
+\ge
+{B\over2}\left({1\over q_i}+{1\over q_j}\right)
+-{q_i+q_j\over2}.
+\tag{ED.21}
+
+Multiplication by `2H_ij` gives
+
+\[
+\boxed{
+B-q_iq_j
+\le2\ell d_{ij}H_{ij},
+}
+\tag{ED.22}
+
+hence
+
+\[
+\boxed{
+B\le2\ell d_{ij}H_{ij}+q_iq_j.
+}
+\tag{ED.23}
+
+Every exact UPPER blocker already lies in the local window
+
+\[
+D-q_i\le\ell<D,
+\]
+
+so `ell=D-O(D^-1)`. Using (ED.10) in (ED.23),
+
+\[
+2\ell d_{ij}H_{ij}=O(D^{-1}),
+\qquad
+q_iq_j=O(D^{-2}),
+\]
+
+and therefore
+
+\[
+B=O(D^{-1}).
+\]
+
+Since
+
+\[
+D-\ell={B\over D+\ell},
+\]
+
+we obtain
+
+\[
+\boxed{D-\ell=O(D^{-2}).}
+\tag{ED.24}
+
+For the direction, (ED.19) implies
+
+\[
+n\cdot w_i\le q_i/2=O(D^{-1}),
+\]
+
+while (ED.20) and the axis difference give
+
+\[
+n\cdot w_i
+\ge n\cdot w_j-\ell d_{ij}
+\ge -q_j/2-\ell d_{ij}
+=O(1)\text{ from below}.
+\]
+
+Consequently
+
+\[
+\left|{n\over\ell}\cdot w_i\right|=O(D^{-1}),
+\tag{ED.25}
+\]
+
+because `ell~D`. With `w_i=w_*+O(D^-1)`, the projective direction `[xy]` is `O(D^-1)` from the common row line.
+
+---
+
+## 4. Repeated exact UPPER blockers are source-wide bounded
+
+Sections 1--3 give fixed constants `A,L` such that every source pair which blocks the exact UPPER boundary at two distinct one-sign strong-TB1 interfaces satisfies
+
+\[
+D-{A\over D^2}\le|xy|<D
+\tag{ED.26}
+
+and
+
+\[
+d_{\mathbb{RP}^1}([xy],[u_*])\le {L\over D}.
+\tag{ED.27}
+
+The already proved row-parallel almost-diameter packing lemma is purely metric: in a unit-separated planar source of diameter `D`, the total number of pairs satisfying (ED.26)--(ED.27) is `O_{A,L}(1)`.
+
+Therefore
+
+\[
+\boxed{
+N_{\rm repeated,UPPER}^{\rm exact}=O(1).
+}
+\tag{ED.28}
+
+Unlike the repeated-LOWER matching statement, no chosen-witness uniqueness is needed for this count. Equation (ED.28) applies to **all** repeated exact UPPER blockers in the source.
+
+---
+
+## 5. Horn consequence
+
+A Horn UPPER blocker is a previously strict source pair which is bad under one singleton exact swap. This includes
+
+- permanent UPPER forbidden pairs;
+- persistent two-coordinate UPPER pairs;
+- and UPPER pairs realizing implication arcs.
+
+If the same source pair appears in UPPER extractions from two different modulo-six Horn systems, it is bad under singleton exact swaps at two distinct physical layers. Hence it is counted by (ED.28).
+
+Thus only `O(1)` source pairs can duplicate across the six UPPER classwise extractions. This is exactly the missing justification for removing the factor-two UPPER deduplication loss in the all-residue Horn theorem.
+
+The analogous conclusion is false for LOWER: Sections 1--2 put a repeated exact LOWER pair into an ultra-near-unit row-parallel class, but a linear vertex-disjoint family of such pairs has not been excluded.
+
+---
+
+## 6. Frontier effect
+
+The exact finite-swap system and the earlier overswap analysis now have the same multiplicity-two metric collapse:
+
+```text
+same strict pair blocks two one-sign layer moves
+    -> opposite endpoint-incidence signs
+    + swap axes differ by O(D^-1)
+    + swap magnitudes are O(D^-1)
+
+    -> same active boundary forces D^-2 original slack
+    + pair direction lies in the common row cone.
+```
+
+For UPPER, the source-wide row-parallel near-diameter packing theorem then makes repetition bounded. This converts all-residue UPPER occurrence counts into distinct-pair counts up to only `O(1)` loss.
+
+**Disposition:** proved the exact-swap double-witness collapse and the source-wide `O(1)` bound for repeated exact UPPER blockers. C-II and Level I remain open.

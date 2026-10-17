@@ -1,0 +1,399 @@
+# Target C — KKT force-hull / reciprocal-geometry route
+
+**LEVEL I STATUS: STILL OPEN.**
+**C-I: CLOSED.**
+**C-II: OPEN.**
+
+Read [`../../STATE.md`](../../STATE.md) first, then [`CURRENT.md`](CURRENT.md). The theorem-state manifest controls lifecycle; merge status, dates, and section numbers do not.
+
+## Canonical reading order
+
+1. [`CURRENT.md`](CURRENT.md)
+2. [`01-force-hull-and-shear.md`](01-force-hull-and-shear.md)
+3. [`02-fully-visible-bridge-frontier.md`](02-fully-visible-bridge-frontier.md)
+4. [`03-pinned-block-and-loaded-boundary-frontier.md`](03-pinned-block-and-loaded-boundary-frontier.md)
+5. [`04-near-minimal-response-frontier.md`](04-near-minimal-response-frontier.md)
+6. [`05-quadrangulation-defect-frontier.md`](05-quadrangulation-defect-frontier.md)
+7. [`56-ci-restored-frontier.md`](56-ci-restored-frontier.md)
+8. [`57-zr-zf-rigidity-audit.md`](57-zr-zf-rigidity-audit.md)
+9. [`58-full-source-geometry-audit.md`](58-full-source-geometry-audit.md)
+10. [`59-difference-body-density-audit.md`](59-difference-body-density-audit.md)
+11. [`60-perfect-matching-exclusion-audit.md`](60-perfect-matching-exclusion-audit.md)
+12. [`61-linear-nonmatching-excess-audit.md`](61-linear-nonmatching-excess-audit.md)
+13. [`62-attachment-incidence-currency-audit.md`](62-attachment-incidence-currency-audit.md)
+14. [`63-loaded-hull-slack-audit.md`](63-loaded-hull-slack-audit.md)
+15. [`64-extreme-circuit-transfer-audit.md`](64-extreme-circuit-transfer-audit.md)
+16. [`65-primitive-loaded-split-audit.md`](65-primitive-loaded-split-audit.md)
+17. [`66-forest-doubled-gap-audit.md`](66-forest-doubled-gap-audit.md)
+18. [`67-rhombus-population-transport-audit.md`](67-rhombus-population-transport-audit.md)
+19. [`68-punctured-packing-phase-audit.md`](68-punctured-packing-phase-audit.md)
+20. [`69-coherent-grain-interface-audit.md`](69-coherent-grain-interface-audit.md)
+21. [`70-forest-endpoint-geometry-audit.md`](70-forest-endpoint-geometry-audit.md)
+22. [`71-extreme-attachment-geometry-audit.md`](71-extreme-attachment-geometry-audit.md)
+23. [`72-primitive-shell-leaf-forcing-audit.md`](72-primitive-shell-leaf-forcing-audit.md)
+24. [`73-pseudosegment-grid-extraction-audit.md`](73-pseudosegment-grid-extraction-audit.md)
+25. [`74-complete-grid-phase-collapse-audit.md`](74-complete-grid-phase-collapse-audit.md)
+26. [`75-all-phase-component-deatomization-audit.md`](75-all-phase-component-deatomization-audit.md)
+27. [`76-hole-stable-complete-grid-order-diameter-audit.md`](76-hole-stable-complete-grid-order-diameter-audit.md)
+28. [`77-inactive-chamber-saturation-audit.md`](77-inactive-chamber-saturation-audit.md)
+29. [`78-harmonic-cell-grid-localization-audit.md`](78-harmonic-cell-grid-localization-audit.md)
+30. [`79-inactive-chamber-rhombic-saturation-dichotomy-audit.md`](79-inactive-chamber-rhombic-saturation-dichotomy-audit.md)
+31. [`80-global-isolate-concentration-fullcore-disk-audit.md`](80-global-isolate-concentration-fullcore-disk-audit.md)
+32. [`82-harmonic-cell-near-quadrangulation-audit.md`](82-harmonic-cell-near-quadrangulation-audit.md)
+33. [`83-attachment-cell-disjoint-tiling-audit.md`](83-attachment-cell-disjoint-tiling-audit.md)
+34. [`84-typeII-interface-collapse-audit.md`](84-typeII-interface-collapse-audit.md)
+35. [`85-train-boundary-interface-currency-audit.md`](85-train-boundary-interface-currency-audit.md)
+36. [`88-harmonic-wrapping-diameter-audit.md`](88-harmonic-wrapping-diameter-audit.md)
+37. [`89-harmonic-cell-train-budget-audit.md`](89-harmonic-cell-train-budget-audit.md)
+38. [`90-dense-inverse-phase-crossing-core-audit.md`](90-dense-inverse-phase-crossing-core-audit.md)
+39. [`91-explicit-ordered-grid-audit.md`](91-explicit-ordered-grid-audit.md)
+40. [`92-wrapping-perimeter-diameter-audit.md`](92-wrapping-perimeter-diameter-audit.md)
+41. [`93-full-gap-wrapping-diameter-audit.md`](93-full-gap-wrapping-diameter-audit.md)
+42. [`94-three-forbidden-gap-wrapping-audit.md`](94-three-forbidden-gap-wrapping-audit.md)
+43. [`96-outer-walk-forbidden-gap-threshold-audit.md`](96-outer-walk-forbidden-gap-threshold-audit.md)
+44. [`100-wrapping-angular-measure-threshold-audit.md`](100-wrapping-angular-measure-threshold-audit.md)
+45. [`101-complement-gap-chord-threshold-audit.md`](101-complement-gap-chord-threshold-audit.md)
+46. [`102-phase-corridor-endpoint-exclusion-audit.md`](102-phase-corridor-endpoint-exclusion-audit.md)
+47. [`103-unique-wrapping-cap-deficit-audit.md`](103-unique-wrapping-cap-deficit-audit.md)
+48. [`104-quantitative-phase-gap-audit.md`](104-quantitative-phase-gap-audit.md)
+49. [`105-optimized-quantitative-phase-gap-audit.md`](105-optimized-quantitative-phase-gap-audit.md)
+50. [`106-strong-phase-shore-quantitative-gap-audit.md`](106-strong-phase-shore-quantitative-gap-audit.md)
+51. [`107-wrapping-support-area-rigidity-audit.md`](107-wrapping-support-area-rigidity-audit.md)
+52. [`108-area-boosted-quantitative-phase-gap-audit.md`](108-area-boosted-quantitative-phase-gap-audit.md)
+53. [`109-asymptotically-sharp-phase-shores-audit.md`](109-asymptotically-sharp-phase-shores-audit.md)
+54. [`122-aggregate-two-arc-detour-audit.md`](122-aggregate-two-arc-detour-audit.md)
+55. [`123-augmented-cell-defect-budget-audit.md`](123-augmented-cell-defect-budget-audit.md)
+56. [`105-121-promotion-audit-2026-09-12.md`](105-121-promotion-audit-2026-09-12.md)
+57. [`122-123-promotion-audit-2026-09-12.md`](122-123-promotion-audit-2026-09-12.md)
+58. [`target_c_fullcore_diameter_budget_floor_2026-09-14.md`](../../reports/target_c_fullcore_diameter_budget_floor_2026-09-14.md)
+59. [`target_c_fullcore_diameter_budget_floor_independent_audit_2026-09-14.md`](../../audits/target_c_fullcore_diameter_budget_floor_independent_audit_2026-09-14.md)
+60. [`target_c_mu_one_cell_concentration_2026-09-14.md`](../../reports/target_c_mu_one_cell_concentration_2026-09-14.md)
+61. [`target_c_mu_one_cell_concentration_independent_audit_2026-09-14.md`](../../audits/target_c_mu_one_cell_concentration_independent_audit_2026-09-14.md)
+62. [`target_c_fullcore_loaded_chord_elimination_2026-09-14.md`](../../reports/target_c_fullcore_loaded_chord_elimination_2026-09-14.md)
+63. [`target_c_fullcore_loaded_chord_elimination_independent_audit_2026-09-14.md`](../../audits/target_c_fullcore_loaded_chord_elimination_independent_audit_2026-09-14.md)
+64. [`target_c_fullcore_train_coupled_surplus_floor_2026-09-14.md`](../../reports/target_c_fullcore_train_coupled_surplus_floor_2026-09-14.md)
+65. [`target_c_fullcore_train_coupled_surplus_floor_independent_audit_2026-09-14.md`](../../audits/target_c_fullcore_train_coupled_surplus_floor_independent_audit_2026-09-14.md)
+66. [`target_c_oblique_lattice_global_comparison_2026-09-14.md`](../../reports/target_c_oblique_lattice_global_comparison_2026-09-14.md)
+67. [`target_c_oblique_lattice_global_comparison_independent_audit_2026-09-14.md`](../../audits/target_c_oblique_lattice_global_comparison_independent_audit_2026-09-14.md)
+
+Only these route-local modules plus report-level claims explicitly marked canonical in `docs/state/theorem-state.yaml` are canonical Target C theorem sources at audit.91. Sections 110--121 are canonical report-level entries and are linked below. The exact train-coupled floor endpoint exclusion is also canonical; its detailed proof and independent audit are linked below. The file `95-protected-contact-creation-obstruction-audit.md` remains proof-only and is intentionally outside the canonical reading order.
+
+## Scope rule
+
+The §57 ZR/ZF theorem is on the nonisolated positive-contact core `V`, not the full source:
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\qquad
+\operatorname{rank}R_{C\cup H}[V]=2v-3.
+\]
+
+Contact-isolated source points remain in the global configuration. Do not extend the affine-kernel conclusion to their coordinates.
+
+## Current route
+
+Audit.64 retains the complete audit.52--63 stack, including terminal O--O depletion, and adds exact finite contact-budget and low-contact packet-opening endpoints.
+
+Audit.65 adds the odd-shell blocker-payment theorem and an exact nonglobal-family regression. For regular odd `q>=65`, each strict interior contact isolate blocks at most one adjacent wall side, so fully blocking the inward one-vertex proposals requires at least `(q+1)/2` isolates. The constructed blocked quadratic filling is strictly beaten by a whole-source packet; this does not yield arbitrary-container capacity or change the C-II endpoint.
+
+Audit.66 adds a collective exterior shield for a pairwise-distance-at-least-two set of deleted wall vertices, and a greedy `ceil(M/25)` bank from `1`-separated wall vertices. The finite replacement implication is subsumed by Audit.64. An exact D(8) heptagon-plus-center source shows that the wall-safe region can have capacity one even at a global minimizer; the capacity obstacle therefore needs a genuinely asymptotic canonical hypothesis.
+
+Audit.67 proves a conditional isolate-preserving inward release in one explicit curved-wall chamber. In its canonical blocker-count form, each blocked root requires a distinct interior source point at distance below one; the blocker may be a contact-core point and need not be an isolate. The exact local regression and scope are in the [independent audit](../../audits/target_c_curved_wall_independent_audit_2026-10-06.md). This does not change the C-II frontier.
+
+Audit.68 uses Oler's finite bound to show that every source in a strict-area near-triangular curved-wall chamber has at most `(M-1)^2` interior points. Audit.67's explicit packet has exactly that capacity, so replacing the full interior and a separated wall bank excludes the chamber from canonical sources. The strict area condition has a nonempty parameter family for every fixed `M>=4`; extraction of such a chamber from an arbitrary canonical source remains open.
+
+Audit.69 extends this exclusion to two independent uneven opposite-side angular profiles for `M>=8`. The discrete Green-function lower bound provides a positive clearance margin on the middle wall bank. A concentrated-curvature corner root fails exactly, so the bank restriction is part of the theorem. No arbitrary-source chamber extraction or C-II closure follows.
+
+Audit.70 proves a strategy regression for the full three-direction triangular-lattice interior packet: retaining all six radial corner guards prevents every near-identity homothety and every C2 affine packet family through the identity. Remote affine packets, nonaffine rearrangements, and guard-deletion exchanges remain open.
+
+Audit.71 supplies an independently audited local stress requirement for the nonaffine packet route. In the complete radius-`M-1` triangular-lattice chart with six guards whose second-order inward coefficient is `C=M(M^2-1)/6`, each nested ring `r=0,...,M-1` must satisfy `E_r >= 12C`. This is a necessary condition for a one-sided C2 feasible family; overlapping ring inequalities cannot be added as independent energy. The corresponding energy upper bound and any extraction from a canonical source remain open.
+
+Audit.72 proves a complementary local packet result for a specified six-sided curved wall. Removing the target-chart center and one actual wall corner eliminates the selected-stress obstruction. A layer-peeling proof rules out every nonnegative equilibrium on the punctured chart plus the five retained corner guards, so a strict nonaffine direction exists. Curvature opens every remaining noncorner wall guard. The resulting `N-1`-site packet excludes canonical sources with `z<=N-2` interior points in this wall class; its Oler area threshold leaves `z=N-1` or `N`. Audits.77--78 subsequently exclude the complete specified fixed-profile wall family for every fixed `M>=4`. Arbitrary wall extraction remains open.
+
+Audit.73 gives an exact equality regression for audit.71: every fixed `M>=3` and every permutation of the radial rates has an explicit unit-separated sorting packet with `E_r=12C` on every nested ring. Deleting the center still leaves an actual unit triangle. This rules out a strict energy-gap deduction from the physical lower constraints and six guards alone; it does not refute a stronger triangle-free hypothesis and is not a global-source counterexample. Audit.78 separately promotes the fixed-profile highest-population classification; arbitrary-wall extraction remains open.
+
+Audit.74 promotes the Oler equality limit for the `z=N` population: every sequence of placements in the specified six-sided curved wall converges along a subsequence to the complete triangular-lattice chart as `theta` tends to zero. This is a limiting reduction only. Audit.78 supplies the separate finite classification and triangle conclusion for each fixed profile.
+
+Audit.75 promotes `C-ONE-VACANCY-FLAT-PINNING-RATE` for auxiliary triangular-lattice charts: for every interior vacancy and every `M>=2`, pinning the full boundary gives a strictly positive equilibrium and full moving-column rank, hence a zero static cone and local flat-wall isolation. Feasible placements converging to such a chart under an `O(theta)` boundary perturbation move by `O(theta)` and have bounded subsequential first velocities. The theorem does not extract an arbitrary source as a vacancy chart or supply a finite exchange.
+
+Audit.77 extends the one-deficit strict packet and full-source exclusion to every fixed `M>=4` and every fixed strictly decreasing symmetric profile, for all sufficiently small positive curvature. Audit.78 classifies the remaining `z=N` cloud for every fixed `M>=3` as an exact sorting packet with a unit triangle. Thus the specified fixed-wall source class is exhausted for `M>=4`; for `M=3`, the highest population is classified but lower populations remain. Arbitrary wall extraction remains open.
+
+Audit.79 extracts the full active-row rank used in the maximum-population classification and proves an explicit first correction for the descending principal radial-chain stress. Its diagonal weak-row coefficient has a fixed-profile lower bound; the exact stress continuation is per fixed M/profile, with no uniform onset. The result does not change the arbitrary-wall extraction obligation.
+
+Audit.80 gives an explicit joint window for the symmetric arithmetic profile `a_h=M-1-2h`: for every `M>=4` and `0<theta<=1/(100*M^3)`, it proves the one-deficit strict packet, Oler cap `z<=N`, and full-source exclusion when `z<=N-1`. Audit.107 adds a common growing-M classification of the remaining `z=N` case for `0<theta<=c_*M^-40`, with one universal positive `c_*`, and hence excludes the entire specified arithmetic-wall class on that narrower interval. Arbitrary wall extraction remains open.
+
+Audit.81 extends Oler localization and the full-chart `O(theta)` pinning rate to any fixed C2 convex six-sided unit-wall family tending to `H_M`. It proves that a maximal `z=N` cloud arbitrarily near zero curvature requires all six strictly ordered first side-rate profiles to match after one common infinitesimal rotation. A mismatch gives a family-dependent `z<=N-1` cap, but no packet or source-level wall extraction. C-II remains open.
+
+Audit.82 proves that area-form Oler slack at most `1/1000` forces an arbitrary convex unit-wall packing to have a developed triangular-lattice chart, with explicit edge/angle errors and displacement at most `60*b*sigma`. For the specified arithmetic six-wall, all feasible `z=N` clouds at `0<theta<=1/(10000*M^3)` lie within `1000*M^4*theta` of `P_M`. Audit.107 turns this into an exact sorting-packet classification on `0<theta<=c_*M^-40`, uniformly for `M>=4`, and proves the corresponding canonical fixed-wall exclusion. It still does not extract such a wall from an arbitrary source; C-II remains open.
+
+Audit.83 independently audits the face-coupled quarter-fold route. Face closure integrates to an exact finite contact-preserving fold; the canonical stress yields strict weighted diameter currency for a nonaffine state when `D>=9`, but only an endpoint keeping old contacts unit, old noncontacts strictly above one, old diameters at most D, and old nondiameters below D would contradict the lexicographic minimum. Exact two-hop compatibility relations and convex-face transition classification restrict sign states. Hexagon and rhombic-grid regressions reject shortcuts through weighted mean decrease or old-diameter shortening alone. The existence of a nonaffine fully feasible endpoint remains open.
+
+Audit.61 reduces a sufficiently small O–O motion to
+\[
+\boxed{
+\text{old diameter constraints}
++\ |J|\le d_H\text{ inactive upper exceptions}
++\ \text{unary rhombus tests}
++\ \text{outer-face near-unit pairs}.
+}
+\]
+
+Audit.62 makes the remaining near-unit geometry substantially more ordered.
+
+Canonical \`C-LOADED-NEAR-UNIT-ADJACENCY\` gives
+\[
+\tau_D=\frac{3D}{\sqrt{3D^2+4}+1}
+\]
+and proves that every nonconsecutive loaded pair \(a,b\) with \(|ab|<D\) satisfies
+\[
+|ab|\ge\tau_D.
+\]
+For \(D\ge6\), every loaded pair of length at most \(13/12\) is therefore a loaded-hull side. The loaded near-unit conflict graph is a subgraph of the loaded hull cycle and has maximum degree two.
+
+Canonical \`C-LOADED-HULL-CAP-BUDGET\` controls geometry outside and near the loaded hull. With
+\[
+W=\operatorname{per}(\operatorname{conv}A)-q,
+\]
+occupied loaded-hull caps are at most \(W\), their total outer/base length is at most \(2W\), short core-to-exterior attachments are supported on at most \(68W\) core vertices, the nonloaded \(1/2\)-boundary layer inside the loaded hull has size at most \(12W\), and extreme source vertices outside the loaded set are at most \(W\). Deep loaded-hull interior points have an exact \(D-1/2\) upper margin.
+
+Since canonical full-source geometry gives
+\[
+\operatorname{per}(\operatorname{conv}A)<\pi D,
+\]
+every subsequence with \(q/D\to\pi\) has \(W=o(D)\). Thus loaded-hull cap/exterior blockers are sublinear in the terminal regime.
+
+Audit.63 narrows the live full-core branch: when q/D -> pi and u_B=o(D), no linear O--O stopped-train bank remains, and distinct narrow-window binary loaded witnesses number at most u_B. Any remaining linear obstruction must use face-coupled outer-to-bounded or bounded-to-bounded trains, unary rhombus tests, or the at most d_H inactive upper exceptions, while meeting all source lower and actual-diameter upper constraints.
+
+The one-vertex shield retains contact isolates and excludes strict one-site activation in canonical unit hexagons; it does not yield general packet capacity.
+
+Audit.84 promotes the full-source hull-augmented cell structure and exact single-cell strict capacity. For a face with one source-hull arc and a unit path, a replacement clear of the path is strictly separated from every retained point outside the cell, including isolates. Actual loaded tips are acute; at tip angles at most `pi/3` and internal wall angles at most `2pi/3`, deleting separated guards does not enlarge the strict region. The exact capacity remains the full assigned isolate count `|S_Q|`, so this creates no spare site or macroscopic-cap closure. The audit also records a shared-loaded-tip cross-collision regression; paired gluing with four distinct separated tips remains a separate unaudited claim. See the [independent Audit.84](../../audits/target_c_exterior_hull_cell_and_tip_capacity_independent_audit_2026-10-07.md).
+
+Audit.85 now promotes that paired geometry only under the explicit finite hypothesis of four distinct extreme loaded tips pairwise at least four apart. The full-source shield checks retained isolates, and the two cell packets are strictly separated even with weak wall guards. If packets meet the exact cardinality, triangle-free, and contact-budget conditions, the actual diameter-pair endpoint excludes the exchange. In particular, the sum of the two strict guarded capacities is at most the two assigned isolate counts plus three. The unreviewed antipodal cap-pair route does not establish the four-tip hypothesis, so no large-source cap conclusion follows. See the [independent Audit.85](../../audits/target_c_exterior_paired_cell_gluing_independent_audit_2026-10-07.md).
+
+Audit.86 promotes the finite positive-circuit transversal characterization for strict-negative contact directions and records two exact covector regressions. The source report's residual-cage release/refill is valid but superseded for its stated strict wall-safe packets: `kappa>=1` makes its packet condition pay at least one extra site, which the canonical contact-budget endpoint already excludes without a source motion. The exact topology-only and positive-spanning deletion regressions are in the [independent Audit.86](../../audits/target_c_residual_cage_release_refill_independent_audit_2026-10-07.md).
+
+Audit.87 promotes the finite KKT strict-motion alternative and the canonical loaded-diameter-support transversal. The support criterion is on the full normalized source stress polytope; contact-isolated points stay retained, while the strict motion is only for the reduced source. The costs satisfy `kappa_open<=kappa(H,G)<=tau_*<=s_Z+1`, but no useful geometric bound, finite pivot, refill, or cardinality restoration is proved. The exact nonlinear regression refutes equality between first-order and finite-release deletion costs in a smooth abstract chart only. See the [independent Audit.87](../../audits/target_c_contact_opening_transversal_independent_audit_2026-10-07.md).
+
+Audit.88 promotes a full-source shield for any simple source-vertex polygon with side lengths at most `sqrt(3)`. Wall-safe sites are strictly separated from every old source point outside the polygon; packets in pairwise interior-disjoint walls are jointly unit-separated. A wall-safe point in an `n`-edge polygon requires maximum side length `>2 sin(pi/n)`, giving a fixed positive displacement threshold for opening a unit pentagon. A rational rectangle regression makes the `sqrt(3)` cutoff sharp. The geometry does not certify a feasible motion or spare capacity. See the [independent Audit.88](../../audits/target_c_noncontact_wall_shield_independent_audit_2026-10-07.md).
+
+Audit.89 promotes the finite actual-face depth-population bound from `C-GLOBAL-FACE-RETURN-QUOTAS` and the subquadratic-core macroscopic-face corollary. An area-`Omega(D^2)` bounded physical face has linear perimeter and, for each fixed `eta>0`, at most half plus `o(D)` boundary vertices at distance at least `eta D` from actual loaded endpoints. This leaves outer pockets, exterior caps, quadratic-core sequences, and the capacity/finite-competitor endpoint open. See the [independent Audit.89](../../audits/target_c_macroscopic_face_return_depth_independent_audit_2026-10-07.md).
+
+Audit.90 promotes the unloaded KKT stress transversal: if no normalized stress is supported entirely on the loaded endpoints, at most `s_Z+1` unloaded positive-contact vertices can be deleted to eliminate every stress and obtain a strict first motion on the reduced source. In the full-core loaded-chord regime only, any surviving loaded-only stress uses every loaded-hull side and has positive diameter support at every loaded vertex; this gives a transversal with any prescribed loaded endpoint and at most `s_Z` unloaded vertices. An exact weighted-work regression blocks opening all deleted contacts along that same reduced descent. None of these first-order statements supplies packet capacity or finite activation. See the [independent Audit.90](../../audits/target_c_unloaded_stress_transversal_independent_audit_2026-10-07.md).
+
+Audit.91 promotes a finite affine-lattice vertex count, an exact-lattice attachment remainder bound, and two conditional approximate-lattice cover obstructions. In either canonical branch, a fixed number of uniformly conditioned lattices with vanishing physical positional error cannot cover all but `o(D)` loaded endpoints; in the full-core near-disk branch the finite radial-arc estimate also forces `q=o(D)`. The exact-lattice component application leaves at least `D-O(D^(8/9))` loaded endpoints unused or attached to nonlattice components. These conditions are not derived from phase coherence; no packet or C-II closure follows. See the [independent Audit.91](../../audits/target_c_loaded_attachment_lattice_independent_audit_2026-10-07.md).
+
+Audit.92 promotes the exact bent-grid regression `C-BENT-GRID-REDUCED-POSITIONAL-TRANSPORT-REGRESSION`. Small phase spread, `O(D)` total angular and area excess, positive pinned equilibrium, and full pinned rank do not by themselves give a vanishing single-lattice positional approximation of the physical grain. The construction's pins are not actual diameter endpoints, so this does not refute the conditional cover claims of Audit.91 for the canonical loaded set, and it leaves bounded multiple-lattice covers open. The finite-move and capacity endpoint is unchanged. See the [independent Audit.92](../../audits/target_c_bent_grid_positional_transport_independent_audit_2026-10-07.md).
+
+Audit.93 promotes `C-PENTAGON-CAPPED-LOCKED-TRAIN-BANK-REGRESSION`. An explicit near-triangular parallelogram grid can have quadratic physical train crossings, linearly many long trains, and disjoint direction-frustrated pentagon terminal walls, yet the exact fixed-container capacity leaves no positive aggregate surplus for any bank of wall-safe packets inside actual contact cycles, including composite walls. This uses the general finite-source wall shield and the short-pentagon zero-capacity theorem. The boundary pins are not certified actual diameter endpoints and the source is nonglobal; the result only blocks a geometry-only fixed-wall surplus implication. It does not change the active loaded-return/movable-wall finite-competitor endpoint. See the [independent Audit.93](../../audits/target_c_pentagon_capped_locked_train_bank_independent_audit_2026-10-07.md).
+
+Audit.94 promotes `C-PAIRED-CAP-SPOKE-NONGLOBAL-REGRESSION`. The explicit six-spoke source has actual loaded endpoints and positive KKT equilibrium, six antipodal exterior caps with `Theta(D^2)` actual isolates and `O(D)` Oler allowance, and a `3/5` isolate cover of each depth-one cap. A discrete guard injection gives a same-cardinality unit-separated competitor of diameter `D-1/2`. The source fails canonical mixed-rigidity and loaded-diameter density, so the regression blocks deriving canonicality or global optimality from those reduced cap features; it does not prove the macroscopic-cap extraction for canonical minimizers. See the [independent Audit.94](../../audits/target_c_paired_cap_spoke_global_comparison_independent_audit_2026-10-07.md).
+
+Audit.95 adds two exact local common-angle regressions. A single regular-hexagon face with six independent side bits has a non-Horn closure relation, even after existential Horn auxiliaries; this does not classify arbitrary train-network relations. In a second finite example, the alternating pattern shortens every core pair below the old core diameter but increases the actual diameter pair to a retained isolate. Common-angle proposals must therefore respect the complete source pair list. Neither example supplies a canonical source or a C-II closure. See the [independent Audit.95](../../audits/target_c_common_angle_hexagon_and_isolate_regressions_independent_audit_2026-10-07.md).
+
+The regular-shell barrier payment and strict sub-diameter whole-source competitor are recorded in the [Audit.65 independent audit](../../audits/target_c_odd_shell_barrier_payment_independent_audit_2026-10-06.md). They constrain that explicit shell family and do not close the macroscopic-container branch.
+
+The [Audit.66 collective wall audit](../../audits/target_c_collective_wall_capacity_independent_audit_2026-10-06.md) retains exterior isolates under separated multi-vertex deletions, but proves no packet capacity for large chambers.
+
+The [Audit.67 curved-wall audit](../../audits/target_c_curved_wall_independent_audit_2026-10-06.md) excludes one explicit wall-plus-grid chamber under a full-source clearance hypothesis and corrects an isolate-only blocker claim.
+
+The [Audit.68 near-triangular wall audit](../../audits/target_c_near_triangular_curved_wall_capacity_independent_audit_2026-10-06.md) extends this to arbitrary old interior populations under the strict Oler-area threshold; it does not prove arbitrary chamber extraction.
+
+The [Audit.69 uneven-wall audit](../../audits/target_c_uneven_wall_packet_independent_audit_2026-10-06.md) carries the exact capacity exchange to independently bent opposite side pairs and records the corner-root failure that motivates its middle bank.
+
+The [Audit.70 corner-barrier audit](../../audits/target_c_three_direction_corner_barrier_independent_audit_2026-10-06.md) records the exact lower-constraint obstruction to the complete triangular-lattice affine packet when all corner guards remain.
+
+The [Audit.71 nested-stress audit](../../audits/target_c_nested_hexagon_packet_stress_independent_audit_2026-10-06.md) proves the selected ring-and-spoke stress identities and their per-ring second-order energy demand. It does not establish an energy upper bound or a source-level packet.
+
+The [Audit.72 one-corner packet audit](../../audits/target_c_one_corner_one_vacancy_independent_audit_2026-10-07.md) proves the punctured-chart strict packet, the full-source contact-loss exchange for `z<=N-2`, and the conditional Oler residual `{N-1,N}`. It does not extract the wall or close C-II.
+
+The [Audit.73 sorted-rate energy audit](../../audits/target_c_sorted_rate_energy_equality_independent_audit_2026-10-07.md) promotes only the finite equality regression. Its center-deleted packet still contains triangles; the fixed-profile highest-population classification is audited separately in Audit.78.
+
+The [Audit.74 Oler-limit audit](../../audits/target_c_six_sided_wall_oler_high_population_limit_independent_audit_2026-10-07.md) fixes the subsequential limit of every `z=N` cloud at `P_(M-1)`. Audit.78 separately proves a finite sorting classification and a unit triangle for each fixed profile.
+
+The [Audit.75 flat vacancy pinning/rate audit](../../audits/target_c_one_vacancy_flat_pinning_rate_independent_audit_2026-10-07.md) gives a zero-cone and `O(theta)` localization theorem for every auxiliary one-vacancy lattice chart. It leaves the curved-wall first-order system, arbitrary-source extraction, and finite packet question open.
+
+The [Audit.76 one-deficit root-packet audit](../../audits/target_c_one_deficit_root_packet_independent_audit_2026-10-07.md) promotes five exact-curvature cases. Its M4 all-small-curvature result is subsumed by [Audit.77](../../audits/target_c_one_deficit_sector_peeling_independent_audit_2026-10-07.md), which proves the all-fixed-profile `M>=4` theorem. Neither Audit.76 nor Audit.77 extracts the wall from a canonical source.
+
+The [Audit.78 highest-population classification audit](../../audits/target_c_profile_wall_sorting_classification_independent_audit_2026-10-07.md) proves that every maximum-population fixed-profile wall cloud is a sorting packet with a unit triangle. Together with Audit.77 this exhausts the specified fixed-wall class for every fixed `M>=4`; no arbitrary-wall extraction or C-II closure follows.
+
+The [Audit.79 active-row and stress-correction audit](../../audits/target_c_profile_first_stress_correction_independent_audit_2026-10-07.md) extracts the full active-row rank lemma and gives the all-M explicit first correction for the descending principal radial-chain stress. It strengthens the local stress bridge with no common onset in M/profile and does not change the arbitrary-wall C-II obligation.
+
+The [Audit.80 arithmetic-profile window audit](../../audits/target_c_arithmetic_one_deficit_uniform_window_independent_audit_2026-10-07.md) makes the one-deficit packet and Oler source-population bounds explicit uniformly in `M` on `0<theta<=1/(100*M^3)` for `a_h=M-1-2h`. It excludes only `z<=N-1`; it does not uniformly classify `z=N` or extract the wall from an arbitrary source.
+
+The [Audit.81 general first-profile audit](../../audits/target_c_general_six_wall_first_profile_compatibility_independent_audit_2026-10-07.md) proves the fixed-family Oler limit, full-chart pinning rate, and matching of the six first boundary-rate profiles under maximal population. A mismatch lowers the wall population by one, without supplying the required strict packet or arbitrary-source extraction.
+
+The [Audit.82 effective-chart audit](../../audits/target_c_effective_small_slack_unit_wall_chart_independent_audit_2026-10-07.md) promotes the low-Oler-slack triangular-lattice development and the uniform `P_M` localization on the arithmetic six-wall. It gives no finite sorting classification, triangle forcing, or arbitrary-wall source extraction.
+
+Audit.107 promotes `C-ARITHMETIC-SIX-WALL-POLYNOMIAL-MAXIMUM-CLASSIFICATION`: for every `M>=4` and `0<theta<=c_*M^-40`, with one universal `c_*>0`, each maximal cloud in the specified arithmetic wall is an exact sorting packet and contains a unit triangle. `C-ARITHMETIC-SIX-WALL-POLYNOMIAL-SOURCE-EXCLUSION` combines this with Audit.80 to exclude canonical triangle-free sources containing that wall across the same joint growing-M interval, retaining every exterior point and contact isolate. This narrows the fixed-wall uncertainty but supplies no arbitrary-source extraction; C-II stays open. See the [independent Audit.107](../../audits/target_c_uniform_polynomial_wall_classification_independent_audit_2026-10-07.md).
+
+The [Audit.83 face-coupled quarter-fold audit](../../audits/target_c_face_coupled_quarter_fold_independent_audit_2026-10-07.md) promotes exact fold integration, conditional stress currency, source-realized sign constraints, and convex-face transition classification, together with three finite regressions. It supplies no universally feasible nonaffine state or C-II closure.
+
+Audit.64 requires every finite exchange to count all inserted-to-retained contacts and actual diameter pairs. With strict upper slack, one or two new unit contacts can be opened, so a packet that removes an old contact must create at least three new contacts unless it also removes an actual diameter pair or strictly improves diameter.
+
+The audit.61 regressions remain binding:
+
+- arbitrarily small contact-preserving motion can still break a unary rhombus diagonal;
+- a source path forest can become cyclic after contraction to owner labels.
+
+The live full-core target is now a source-realized **face-coupled finite-move theorem**. A linear O--O train supply is unavailable in the terminal q/D -> pi, u_B=o(D) regime, and narrow-window binary loaded witnesses cost at most u_B. The remaining endpoint must use outer-to-bounded or bounded-to-bounded trains, explicit unary rhombus tests, or at most d_H inactive upper exceptions, while meeting every full-source lower and actual-diameter upper constraint.
+
+The macroscopic-container branch remains separate. Audit.89 proves a finite actual-contact-face depth-population bound from canonical loaded-return quotas and, when `|V|=o(D^2)`, forces at least half of any area-`Omega(D^2)` bounded physical face boundary to lie within every fixed macroscopic scale of actual loaded endpoints. Audit.108 adds a common closed-unit-covering Delaunay completion for arbitrary convex polygon crops: Oler slack `S`, boundary-strip population `B<=20p/pi+25`, triangle excess `Sigma<=sqrt(3)S/2+7sqrt(3)B`, and at most `73B+(12/delta+450)Sigma` exceptional vertices. For `S,p=O(D)` these are `O(D)` geometric bookkeeping bounds. They do not identify Delaunay edges with source contacts, create a spare site, or give a source-realized finite move. The canonical inactive-chamber budget gives `m<=13*pi*D`; outer pockets, exterior caps, packet capacity, and the full-source finite-competitor endpoint remain open. See the [independent return-depth audit](../../audits/target_c_macroscopic_face_return_depth_independent_audit_2026-10-07.md) and [Audit.108](../../audits/target_c_coupled_delaunay_container_transfer_independent_audit_2026-10-07.md).
+
+Audit.96 adds the exact capped-wall actual-diameter escape regression. Under an explicit full-source oblique-grid and pentagon-cap contact hypothesis, the opposite grid corners are the unique actual diameter pair, yet a small common-angle motion of the whole packet preserves every contact and strictly lowers its actual diameter. The two finite source realizations are triangle-free and pass all-pair interval checks. This is a scoped nonglobal result, not a canonical-source extraction or a motion through arbitrary retained exterior points; the C-II endpoint is unchanged. See the [independent Audit.96](../../audits/target_c_capped_wall_actual_diameter_escape_independent_audit_2026-10-07.md).
+
+Audit.97 promotes the necessary source-dependent half-angle thresholds for a nonconstant integrated common-angle train pattern on a canonical C-II core with `D>=9`. Positive and negative diameter transverse terms follow from relative-interior stress balance and mixed rigidity. Every old diameter upper bound requires the angle to clear the corresponding positive `B/A` or `-B/A` maximum when its denominators are positive; a wrong-sign denominator rules out that direction. This is not a feasible-endpoint theorem, gives no uniform threshold, and leaves every retained isolate pair in the full endpoint check. The active C-II obligation does not change. See the [independent Audit.97 report](../../audits/target_c_common_angle_active_diameter_amplitude_independent_audit_2026-10-07.md).
+
+Audit.98 promotes the pentagon component bit-collapse theorem. Face closure on an actual physical triangle-free unit pentagon forces all five side bits to agree; shared complete trains propagate the bit across each connected pentagon component. Reciprocal sparsity gives at least `f+6` outside terminal incidences for a component of `f>=2` faces, but all those occurrences carry the same bit. No existence of a large physical component or linear suppressed-proposal count is proved. See the [independent Audit.98](../../audits/target_c_pentagon_train_component_bit_collapse_independent_audit_2026-10-07.md).
+
+Audit.99 promotes `C-ZERO-VALID-PINNED-CLOSURE`: for any finite zero-valid 2-CNF formula in implication/negative-unit/negative-pair form, pinned satisfiability is exactly forward closure avoiding unary/false pins and forbidden pairs. Failure has a directed path to a forbidden variable or two directed paths to a forbidden pair. The unpinned nonzero criterion is the existence of an eligible sink SCC. This gives a reusable exact certificate for finite-move obstruction systems. It does not rule out such certificates geometrically or change the C-II frontier; canonical source applications require the independent hypotheses of `C-DISJOINT-SWAP-2SAT`. See the [independent Audit.99](../../audits/target_c_zero_valid_pinned_closure_independent_audit_2026-10-07.md).
+
+Audit.100 promotes `C-GENERIC-ISOLATE-ANCHOR-AVOIDANCE`, `C-SHORT-WALL-WEAK-CLEARANCE-CLASSIFICATION`, `C-LOADED-UNIT-ANCHOR-STRICT-OBTUSE`, and `C-STATIC-SINGLETON-UNLOADED-ANCHOR`. Generic isolate motion excludes contact isolates as exact unit anchors in a locally pinned static singleton exchange. For `D>=10000`, three loaded unit anchors are strictly obtuse, so the pinned exchange also needs an unloaded core anchor. Inside an intact simple wall of at most six edges of length at most one, the only weak-clearance site is the regular unit hexagon center and insertion makes a unit triangle. No result supplies such a site, packet capacity, or a global competitor; the C-II frontier remains open. See the [independent Audit.100](../../audits/target_c_generic_isolate_anchor_avoidance_independent_audit_2026-10-07.md).
+
+Audit.101 promotes `C-FAN-REFLECTION-STRICT-CAPACITY-LOSS-REGRESSION`. An explicit ten-point nonglobal family has an actual diameter-fan leaf and an eight-edge unit wall with a strictly safe isolate. The fan reflection retains the wall contacts and full-source diameter upper bound but collides with that isolate; six unit-circumradius triangles cover the reflected wall, leaving no strict safe interior site. This shows old wall clearance and upper nonexpansiveness do not transport wall capacity. The example has no positive KKT or canonical full-core optimality hypothesis and does not refute the canonical fan theorem or exclude unrestricted relocation. See the [independent Audit.101](../../audits/target_c_fan_reflection_capacity_loss_independent_audit_2026-10-07.md).
+
+Audit.102 promotes `C-THIRD-CONTACT-FAN-REFLECTION-COLLISION-REGRESSION`. Whenever a unit-separated source of diameter `D>=2` contains a fan leaf `p` with two unit neighbors at diameter distance from a common carrier `a` and a third unit neighbor `z`, the third neighbor is strictly inside `conv{a,p_-,p_+}`. The fan reflection across the two designated neighbors keeps their contacts and all diameter upper bounds but moves `p` to within distance less than one of `z`. This is an exact finite-geometry guardrail for the degree-two fan scope, with no global-source or population claim. See the [independent Audit.102](../../audits/target_c_third_fan_contact_reflection_collision_independent_audit_2026-10-07.md).
+
+Audit.103 promotes `C-LOADED-ANCHOR-SPARSE-PACKET-OBSTRUCTION`. For canonical `D>=9`, `C=C_*`, `H=H_*` C-II sources, if an equal-cardinality replacement deletes at least one contact, every inserted-involving pair is unit-separated and strictly below `D`, and every retained nonisolated core endpoint of a new contact is loaded, then its inserted-involving contact count satisfies `J(J+2L_D)>=D/4`, with `L_D=sqrt(D*eta_D+eta_D^2)` and `eta_D=3^(1/4)*sqrt(D)`. The all-loaded-core threshold is `J >= sqrt(L_D^2+D/4)-L_D = (1/(8*3^(1/8))+o(1))*D^(1/4)`. The proof retains/moves every source isolate and derives finite release from a `1/2`-wide strip of straight positive-stress chains. It neither produces a packet nor handles unloaded retained core anchors or inserted-involving diameter pairs; C-II remains open. See the [independent Audit.103](../../audits/target_c_loaded_anchor_sparse_packet_obstruction_independent_audit_2026-10-07.md).
+
+Audit.104 promotes two full-source diameter-endpoint incidence bounds. For each fixed `1<t<sqrt(2)` and all sufficiently large noncollinear global minimizers, any source point has at most two actual diameter endpoints within distance `t`; any two diameter endpoints within `t` are consecutive full-source hull vertices. The threshold depends only on `t`, and no source isolates are omitted. The shorter loaded-hull-side consequence is compatible with canonical `C-LOADED-NEAR-UNIT-ADJACENCY`, while full-source hull consecutivity is stronger. These are geometry inputs only; owner-capacity counting remains separate. See the [independent Audit.104](../../audits/target_c_loaded_endpoint_local_incidence_independent_audit_2026-10-07.md).
+
+Audit.105 promotes `C-OO-OUTER-ISOLATE-COLLAR-BOUND` in the Type-II near-disk branch: with `x_B=b-q` and `a` nonunit loaded-hull sides, at most `48(x_B+a)` distinct contact isolates lie within distance `5/4` of the convex outer pockets and nondegenerate exterior caps. Under the canonical small O--O isolate assignment, every isolate lower-clause endpoint lies in these collars. Thus `x_B+a=o(D)` leaves only `o(D)` distinct isolate blockers. By itself this does not charge owners or prove an O--O proposal family. See the [independent Audit.105](../../audits/target_c_outer_isolate_collar_independent_audit_2026-10-07.md).
+
+Audit.106 promotes `C-OO-LOWER-WITNESS-OWNER-CAPACITY` for an already specified disjoint-owner O--O family. If its singleton proposals preserve all contacts and upper bounds, pass unary rhombus tests, and strictly shorten old diameters, then lower-witness charging gives `k<=2m_B+3(x_B+Z_out)`. In the Type-II near-disk branch, Audit.105 confines all isolate witnesses to the defect-sized collar, improving the bound to `k<=147(x_B+m_B)`; thus `x_B+m_B=o(D)` rules out a linear counted family. This does not produce the family or show that the low-defect condition holds. The source report's `2d_H` deletion corollary remains unaudited. C-II stays open. See the [independent Audit.106](../../audits/target_c_outer_owner_witness_capacity_independent_audit_2026-10-07.md).
+
+## Promoted report dependencies
+
+- Audit.64 finite contact-budget / diameter exchange audit: [independent audit](../../audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md).
+- Audit.65 regular-shell blocker payment and nonglobal-family regression: [independent audit](../../audits/target_c_odd_shell_barrier_payment_independent_audit_2026-10-06.md).
+- Audit.66 collective wall shield and D(8) capacity regression: [independent audit](../../audits/target_c_collective_wall_capacity_independent_audit_2026-10-06.md).
+
+- Audit.63 independent owner-order, terminal-capacity, and wall-shield audit: [promotion audit](../../audits/target_c_owner_order_and_terminal_capacity_promotion_audit_2026-10-06.md).
+
+- Audit.62 loaded near-unit / cap promotion audit: [\`target_c_loaded_near_unit_cap_promotion_audit_2026-10-05.md\`](../../audits/target_c_loaded_near_unit_cap_promotion_audit_2026-10-05.md).
+- Canonical loaded near-unit adjacency theorem: [\`target_c_loaded_near_unit_hull_adjacency_2026-10-01.md\`](../../reports/target_c_loaded_near_unit_hull_adjacency_2026-10-01.md).
+- Canonical loaded-hull cap attachment budget: [\`target_c_loaded_hull_cap_attachment_budget_2026-10-01.md\`](../../reports/target_c_loaded_hull_cap_attachment_budget_2026-10-01.md).
+
+- Audit.61 near-unit conflict promotion audit: [\`target_c_near_unit_conflict_promotion_audit_2026-10-05.md\`](../../audits/target_c_near_unit_conflict_promotion_audit_2026-10-05.md).
+- Mixed canonical/regression near-unit conflict source: [\`target_c_near_unit_faces_and_pure_conflict_paths_2026-10-01.md\`](../../reports/target_c_near_unit_faces_and_pure_conflict_paths_2026-10-01.md).
+
+- Audit.60 finite-compatibility promotion audit: [\`target_c_finite_compatibility_promotion_audit_2026-10-05.md\`](../../audits/target_c_finite_compatibility_promotion_audit_2026-10-05.md).
+- Canonical long-pair/isolate dispatch: [\`target_c_forest_isolate_dispatch_2026-10-01.md\`](../../reports/target_c_forest_isolate_dispatch_2026-10-01.md).
+- Canonical exact disjoint-swap 2-SAT: [\`target_c_simultaneous_disjoint_swaps_exact_2sat_2026-10-01.md\`](../../reports/target_c_simultaneous_disjoint_swaps_exact_2sat_2026-10-01.md).
+- Actual-cut finite-barrier regression: [\`target_c_actual_cut_finite_competitor_regression_2026-10-01.md\`](../../reports/target_c_actual_cut_finite_competitor_regression_2026-10-01.md).
+
+- Audit.59 adaptive strict-safe saturation audit: [\`target_c_adaptive_safe_saturation_promotion_audit_2026-10-05.md\`](../../audits/target_c_adaptive_safe_saturation_promotion_audit_2026-10-05.md).
+- Canonical adaptive saturation source: [\`target_c_adaptive_safe_region_saturation_2026-09-15.md\`](../../../research/target_c_adaptive_safe_region_saturation_2026-09-15.md).
+
+- Audit.58 finite-motion/exposure promotion audit: [\`target_c_finite_motion_exposure_promotion_audit_2026-10-05.md\`](../../audits/target_c_finite_motion_exposure_promotion_audit_2026-10-05.md).
+- Canonical centered fan reflections: [\`target_c_centered_fan_simultaneous_reflections_2026-10-02.md\`](../../reports/target_c_centered_fan_simultaneous_reflections_2026-10-02.md).
+- Canonical translation-lens exposure: [\`target_c_finite_translation_lens_exposure_2026-10-02.md\`](../../reports/target_c_finite_translation_lens_exposure_2026-10-02.md).
+
+- Audit.57 short-wall zero-capacity audit: [\`target_c_short_unit_wall_zero_capacity_promotion_audit_2026-10-05.md\`](../../audits/target_c_short_unit_wall_zero_capacity_promotion_audit_2026-10-05.md).
+- Canonical short unit-wall zero-capacity theorem: [\`target_c_short_unit_wall_zero_capacity_2026-10-05.md\`](../../reports/target_c_short_unit_wall_zero_capacity_2026-10-05.md).
+
+- Audit.56 local active-diameter coordinate audit: [\`target_c_local_diameter_coordinates_promotion_audit_2026-10-05.md\`](../../audits/target_c_local_diameter_coordinates_promotion_audit_2026-10-05.md).
+- Canonical contact-manifold local diameter coordinates: [\`target_c_contact_manifold_local_diameter_coordinates_2026-10-05.md\`](../../reports/target_c_contact_manifold_local_diameter_coordinates_2026-10-05.md).
+
+- Audit.55 singleton/flower promotion audit: [\`target_c_singleton_flower_promotion_audit_2026-10-05.md\`](../../audits/target_c_singleton_flower_promotion_audit_2026-10-05.md).
+- Canonical good-hull singleton charge: [\`target_c_good_hull_singleton_face_charge_2026-10-05.md\`](../../reports/target_c_good_hull_singleton_face_charge_2026-10-05.md).
+- Canonical full-flower \(k\)-payment theorem: [\`target_c_full_flower_blocker_k_payment_2026-10-05.md\`](../../reports/target_c_full_flower_blocker_k_payment_2026-10-05.md).
+- Canonical bounded-face endpoint fan source: [`target_c_bounded_face_endpoint_fan_2026-09-12.md`](../../../research/target_c_bounded_face_endpoint_fan_2026-09-12.md).
+- Canonical full-flower projective blocker source: [`target_c_full_flower_projective_blocker_2026-09-15.md`](../../../research/target_c_full_flower_projective_blocker_2026-09-15.md).
+
+- Audit.54 collective-wall promotion audit: [\`target_c_collective_wall_promotion_audit_2026-10-05.md\`](../../audits/target_c_collective_wall_promotion_audit_2026-10-05.md).
+- Canonical embedded-wall refill theorem: [\`target_c_embedded_grain_wall_replacement_2026-10-02.md\`](../../reports/target_c_embedded_grain_wall_replacement_2026-10-02.md).
+- Canonical pentagon-wall-disjoint bulk theorem: [\`target_c_pentagon_terminal_wall_disjoint_quadratic_bulk_2026-10-05.md\`](../../reports/target_c_pentagon_terminal_wall_disjoint_quadratic_bulk_2026-10-05.md).
+- Fixed-wall activation regression: [\`target_c_phase_frustration_fixed_wall_activation_regression_2026-10-05.md\`](../../reports/target_c_phase_frustration_fixed_wall_activation_regression_2026-10-05.md).
+- Large near-triangular wall-lock regression: [\`target_c_large_near_triangular_fixed_wall_lock_2026-10-05.md\`](../../reports/target_c_large_near_triangular_fixed_wall_lock_2026-10-05.md).
+
+- Audit.53 reciprocal/return promotion audit: [\`target_c_returns_reciprocal_promotion_audit_2026-10-05.md\`](../../audits/target_c_returns_reciprocal_promotion_audit_2026-10-05.md).
+- Positive reciprocal train graph: [\`target_c_positive_reciprocal_internal_train_graph_2026-10-05.md\`](../../reports/target_c_positive_reciprocal_internal_train_graph_2026-10-05.md).
+- Outer-train determination: [\`target_c_outer_train_rank_groemer_bank_synthesis_2026-10-05.md\`](../../reports/target_c_outer_train_rank_groemer_bank_synthesis_2026-10-05.md).
+- Global face-return quotas: [\`target_c_global_exceptional_face_return_quotas_2026-10-04.md\`](../../reports/target_c_global_exceptional_face_return_quotas_2026-10-04.md).
+- Joint bulk/face separator capacity: [\`target_c_joint_bulk_defect_separator_capacity_2026-10-05.md\`](../../reports/target_c_joint_bulk_defect_separator_capacity_2026-10-05.md).
+- Terminal physical-frustration theorem: [\`target_c_terminal_short_pocket_physical_frustration_2026-10-05.md\`](../../reports/target_c_terminal_short_pocket_physical_frustration_2026-10-05.md).
+- Loaded flat-pentagon second depletion: [\`target_c_loaded_flat_pentagon_second_depletion_2026-10-05.md\`](../../reports/target_c_loaded_flat_pentagon_second_depletion_2026-10-05.md).
+
+- Exact train-coupled endpoint exclusion report: [\`target_c_fullcore_endpoint_unbalanced_pseudosegment_completion_2026-09-14.md\`](../../reports/target_c_fullcore_endpoint_unbalanced_pseudosegment_completion_2026-09-14.md).
+- Exact train-coupled endpoint exclusion independent audit: [\`target_c_fullcore_endpoint_unbalanced_pseudosegment_completion_independent_audit_2026-09-14.md\`](../../audits/target_c_fullcore_endpoint_unbalanced_pseudosegment_completion_independent_audit_2026-09-14.md).
+
+- October structural promotion audit: [`target_c_october_structural_promotion_audit_2026-10-05.md`](../../audits/target_c_october_structural_promotion_audit_2026-10-05.md).
+- Promoted hull-depletion floor: [`target_c_fullcore_hull_train_depletion_floor_2026-10-04.md`](../../reports/target_c_fullcore_hull_train_depletion_floor_2026-10-04.md).
+- Promoted augmented train-rank / residual-floor theorem: [`target_c_augmented_train_phase_rank_small_residual_exclusion_2026-10-05.md`](../../reports/target_c_augmented_train_phase_rank_small_residual_exclusion_2026-10-05.md).
+- Promoted complete face/contact regularity theorem: [`target_c_complete_face_elimination_and_contact_regularity_2026-10-05.md`](../../reports/target_c_complete_face_elimination_and_contact_regularity_2026-10-05.md).
+
+- Sections 105--121 promotion audit: [`105-121-promotion-audit-2026-09-12.md`](105-121-promotion-audit-2026-09-12.md).
+- Sections 122--123 promotion audit: [`122-123-promotion-audit-2026-09-12.md`](122-123-promotion-audit-2026-09-12.md).
+- Canonical Section 110 report: [`target_c_section110_local_train_count_gap.md`](../../../research/target_c_section110_local_train_count_gap.md).
+- Canonical Section 111 report: [`target_c_section111_joint_shore_gap.md`](../../../research/target_c_section111_joint_shore_gap.md).
+- Canonical Section 112 report: [`target_c_section112_aggregate_projection_gap.md`](../../../research/target_c_section112_aggregate_projection_gap.md).
+- Canonical Section 113 report: [`target_c_section113_extended_stability_gap.md`](../../../research/target_c_section113_extended_stability_gap.md).
+- Canonical Section 114 report: [`target_c_section114_stability_envelope.md`](../../../research/target_c_section114_stability_envelope.md).
+- Canonical Section 115 report: [`target_c_section115_integrated_leakage_envelope.md`](../../../research/target_c_section115_integrated_leakage_envelope.md).
+- Canonical Section 116 report: [`target_c_section116_zero_host_closed_faces.md`](../../../research/target_c_section116_zero_host_closed_faces.md).
+- Canonical Section 117 report: [`target_c_section117_signed_return_transport_gap.md`](../../../research/target_c_section117_signed_return_transport_gap.md).
+- Canonical Section 118 report: [`target_c_section118_correlated_slack_signed_return.md`](../../../research/target_c_section118_correlated_slack_signed_return.md).
+- Canonical Section 119 report: [`target_c_section119_analytic_slack_envelope.md`](../../../research/target_c_section119_analytic_slack_envelope.md).
+- Canonical Section 120 report: [`target_c_section120_anisotropic_two_arc_return.md`](../../../research/target_c_section120_anisotropic_two_arc_return.md).
+- Canonical Section 121 report: [`target_c_section121_local_return_oler_bridge.md`](../../../research/target_c_section121_local_return_oler_bridge.md).
+
+- Independent Section 100 hostile audit: [`wrapping-angular-measure-hostile-audit-2026-09-12.md`](wrapping-angular-measure-hostile-audit-2026-09-12.md).
+- Section 101 promotion audit: [`../../audits/target_c_sections100_101_promotion_audit_2026-09-12.md`](../../audits/target_c_sections100_101_promotion_audit_2026-09-12.md).
+- Independent Section 102 hostile audit: [`../../audits/target_c_section102_phase_corridor_hostile_audit_2026-09-12.md`](../../audits/target_c_section102_phase_corridor_hostile_audit_2026-09-12.md).
+- Independent Section 103 hostile audit: [`../../audits/target_c_section103_unique_wrapping_cap_deficit_hostile_audit_2026-09-12.md`](../../audits/target_c_section103_unique_wrapping_cap_deficit_hostile_audit_2026-09-12.md).
+- Independent Section 104 hostile audit: [`../../audits/target_c_section104_quantitative_phase_gap_hostile_audit_2026-09-12.md`](../../audits/target_c_section104_quantitative_phase_gap_hostile_audit_2026-09-12.md).
+
+The state manifest also promotes the following report-level dependencies; these links are part of the canonical route:
+
+- [`target_c_zero_transfer_additive_promotion_2026-09-11.md`](../../reports/target_c_zero_transfer_additive_promotion_2026-09-11.md)
+- [`target_c_woodall_diameter_topology_2026-09-10.md`](../../reports/target_c_woodall_diameter_topology_2026-09-10.md)
+- [`target_c_common_bridge_transfer_exclusion_2026-09-10.md`](../../reports/target_c_common_bridge_transfer_exclusion_2026-09-10.md)
+- [`target_c_common_bridge_transfer_audit_2026-09-10.md`](../../reports/target_c_common_bridge_transfer_audit_2026-09-10.md)
+- [`target_c_attachment_perimeter_three_gap_endpoint_repair_2026-09-11.md`](../../reports/target_c_attachment_perimeter_three_gap_endpoint_repair_2026-09-11.md)
+- [`target_c_pr188_full_dependency_audit_2026-09-11.md`](../../reports/target_c_pr188_full_dependency_audit_2026-09-11.md)
+- [`target_c_pr182_full_dependency_audit_2026-09-11.md`](../../reports/target_c_pr182_full_dependency_audit_2026-09-11.md)
+- [`target_c_pocket_degree_dirichlet_cavity_2026-09-10.md`](../../reports/target_c_pocket_degree_dirichlet_cavity_2026-09-10.md)
+- [`target_c_pr191_dependency_audit_2026-09-11.md`](../../reports/target_c_pr191_dependency_audit_2026-09-11.md)
+- [`target_c_cyclic_p1_complete_ramification_exclusion_2026-09-10.md`](../../reports/target_c_cyclic_p1_complete_ramification_exclusion_2026-09-10.md)
+- [`target_c_cyclic_shell_d1_p1_s1_dependency_audit_2026-09-11.md`](../../reports/target_c_cyclic_shell_d1_p1_s1_dependency_audit_2026-09-11.md)
+- [`primitive-shell leaf-forcing promotion audit`](../../audits/target_c_primitive_shell_leaf_forcing_promotion_2026-09-12.md)
+- [`pseudosegment-grid promotion audit`](../../audits/target_c_pseudosegment_grid_promotion_2026-09-12.md)
+- [`complete-grid phase-collapse promotion audit`](../../audits/target_c_complete_grid_phase_collapse_promotion_2026-09-12.md)
+- [`Sections 75–76 promotion audit`](../../audits/target_c_sections75_76_promotion_2026-09-12.md)
+- [`inactive-chamber promotion audit`](../../audits/target_c_inactive_chamber_promotion_2026-09-12.md)
+- [`inactive-chamber hull stability report`](../../reports/target_c_subquadratic_chamber_hull_saturation_2026-09-11.md)
+- [`inactive-chamber hull stability promotion audit`](../../audits/target_c_inactive_chamber_hull_stability_promotion_2026-09-12.md)
+- [`near-unit isolate matching audit`](81-near-unit-isolate-matching-audit.md)
+- [`near-unit isolate matching promotion audit`](../../audits/target_c_inactive_near_unit_matching_promotion_2026-09-12.md)
+- [`deep near-unit isolate matching audit`](87-deep-near-unit-isolate-matching-audit.md)
+- [`deep near-unit matching promotion audit`](../../audits/target_c_inactive_deep_matching_promotion_2026-09-12.md)
+- [`harmonic-cell grid localization promotion audit`](../../audits/target_c_harmonic_cell_grid_localization_promotion_2026-09-12.md)
+- [`global container/full-core dichotomy promotion audit`](../../audits/target_c_global_container_fullcore_dichotomy_promotion_2026-09-12.md)
+- [`Sections 79, 80, 82, 83, and 88 chain audit`](../../audits/target_c_sections79_80_82_83_88_chain_audit_2026-09-12.md)
+- [`Sections 84, 85, and 89 interface/train promotion audit`](../../audits/target_c_sections84_85_89_interface_train_promotion_2026-09-12.md)
+- [`Sections 90–94 promotion audit`](../../audits/target_c_sections90_94_promotion_audit_2026-09-12.md)
+- [`Section 96 outer-walk gap hostile audit`](../../audits/target_c_section96_outer_walk_gap_hostile_audit_2026-09-12.md)
+- [`Cauchy wrapping-threshold report`](../../reports/target_c_cauchy_wrapping_threshold_candidate_2026-09-12.md)
+- [`Cauchy wrapping-threshold hostile audit`](../../audits/target_c_cauchy_wrapping_threshold_hostile_audit_2026-09-12.md)
+- [`Mixed-gap Cauchy wrapping-threshold report`](../../reports/target_c_mixed_gap_cauchy_threshold_candidate_2026-09-12.md)
+- [`Mixed-gap Cauchy wrapping-threshold hostile audit`](../../audits/target_c_mixed_gap_cauchy_threshold_hostile_audit_2026-09-12.md)
+- [`target_c_cyclic_s1_reciprocal_square_closure_2026-09-10.md`](../../reports/target_c_cyclic_s1_reciprocal_square_closure_2026-09-10.md)
+
+## Binding rejected implications
+
+Do not use without a new proof:
+
+- incident-diameter sequence `=>` Euler trail/path;
+- FB4 force-bulk localization;
+- the incompatible-cut C53 pentagon objection;
+- RSR disk-equality uniqueness;
+- Eppstein near-equality `=>` near quadrangulation;
+- five-host occupancy from angular-measure saturation;
+- inward OP pocket `subset` exterior Reuleaux minor cap;
+- deletion of contact-isolated source points;
+- full-source extension of the §57 affine-kernel theorem;
+- `r/(6C_T)` as the sharp limit of the Section-90 bin-counting method.
+- reduced grain phase coherence, positive pinned equilibrium, and full pinned rank imply a single-lattice physical-position cover of the grain; the bent-grid regression refutes this reduced-input implication.
+- the bent-grid regression neither refutes positional covers of canonical actual loaded endpoints nor rules out bounded multiple-lattice covers.
+
+The PR #191 `0.995540...` theorem remains rejected. The finite `q=13` S1 computation remains a regression, not a global-minimizer theorem.

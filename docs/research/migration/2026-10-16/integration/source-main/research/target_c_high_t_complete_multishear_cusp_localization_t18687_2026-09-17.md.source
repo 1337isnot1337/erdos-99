@@ -1,0 +1,342 @@
+# Target C-II — every nonzero high-`t` full-support shear tangent has a force-visible diameter sign cusp
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening  
+**Scope:** canonical C65-normalized full-core/no-macroscopic-container Type-II branch with `t=(q-k)/D<=1.8687`  
+**Dependencies:** high-`t` fixed cusp chain; high-`t` multirow interface normal form; high-`t` critical phase-block classification; exact-antipodal two-edge blocker theorem; canonical C65 full actual-diameter visibility  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The preceding multirow analysis left two first-order mechanisms:
+
+1. a nonzero KKT interface aggregate on a chain whose adjacent row phases are not all equal;
+2. an aggregate-critical tangent supported inside one or more exact equal-phase blocks.
+
+At canonical C-II scope the second mechanism is not a weak-constraint escape. C65 gives a relative-interior KKT stress with
+
+\[
+\boxed{\beta_h>0\qquad\text{for every actual diameter edge }h.}
+\tag{MC.1}
+\]
+
+Moreover an internal equal-phase interface is exactly an antipodal strip, and the exact-antipodal blocker theorem forces two switching actual diameter edges with opposite transverse signs.
+
+These facts close the phase-degeneracy gap in the multishear program.
+
+---
+
+## Theorem MC — complete first-order sign-cusp localization
+
+Fix any integer `r>=2` before taking `D->infinity`, and choose `r+1` consecutive high-`t` rows
+
+\[
+\tau_0,\ldots,\tau_r
+\tag{MC.2}
+\]
+
+on one side of the common diameter-routing hub. Let
+
+\[
+u_j=(\cos\alpha_j,\sin\alpha_j)
+\]
+
+be their coherent real shore orientations. Let
+
+\[
+c=(c_0,\ldots,c_r)\ne0
+\tag{MC.3}
+\]
+
+be any first-order full-support cancellation vector:
+
+\[
+\boxed{\sum_{j=0}^r c_ju_j=0.}
+\tag{MC.4}
+\]
+
+Apply the corresponding laminar contact shear to first order. Then among the switching actual diameter edges in the selected block there exist two edges `h_+,h_-` such that
+
+\[
+\boxed{
+\ell_{h_+}>0>\ell_{h_-},
+\qquad
+\ell_h:={d\over ds}|r_h(s)|^2\Big|_{s=0}.
+}
+\tag{MC.5}
+\]
+
+Both edges have strictly positive C65 KKT multipliers.
+
+Equivalently, no nonzero vector satisfying (MC.4) is first-order nonincreasing on every actual diameter edge. More strongly, the obstruction can always be localized by the following exact dichotomy.
+
+### MC-A — nonzero interface aggregate
+
+For
+
+\[
+P_i(c):=\sum_{j=0}^ic_ju_j,
+\qquad
+F_j=M_ju_j,
+\qquad M_j>0,
+\tag{MC.6}
+\]
+
+define
+
+\[
+\mathcal D_i(c)
+=-2(F_{i+1}-F_i)\cdot JP_i(c).
+\tag{MC.7}
+\]
+
+If some `D_i(c)` is nonzero, then the exact balance
+
+\[
+\sum_i\mathcal D_i(c)=0
+\tag{MC.8}
+\]
+
+forces one positive and one negative interface aggregate. Those two aggregates directly yield the two actual diameter edges in (MC.5).
+
+### MC-B — aggregate-critical phase block
+
+If
+
+\[
+\mathcal D_i(c)=0
+\qquad\text{for every }i,
+\tag{MC.9}
+\]
+
+then there is an internal interface `k` with
+
+\[
+\boxed{
+u_k=u_{k+1}}
+\tag{MC.10}
+\]
+
+and
+
+\[
+\boxed{P_k(c)\ne0.}
+\tag{MC.11}
+\]
+
+The corresponding physical strip boundary vectors are antipodal. The exact-antipodal blocker theorem gives two switching actual diameter directions of opposite transverse sign. Their first derivatives under the selected shear are therefore opposite and nonzero, proving (MC.5) at one explicit interface.
+
+Thus the generic and phase-degenerate multishear branches end in the same canonical object: a positive-stress actual-diameter sign cusp.
+
+---
+
+## 1. Interface aggregates already settle the noncritical branch
+
+Let `X_i` be the switching actual diameter set at interface `i`. The multirow interface normal form gives
+
+\[
+\mathcal D_i(c)
+=\sum_{h\in X_i}\beta_h\ell_h
+=-2(F_{i+1}-F_i)\cdot JP_i(c),
+\tag{MC.12}
+\]
+
+independently of which side of the hub contains the selected block. It also gives the exact telescoping stationarity identity
+
+\[
+\boxed{\sum_{i=0}^{r-1}\mathcal D_i(c)=0.}
+\tag{MC.13}
+\]
+
+Suppose the interface vector is nonzero. A nonzero real vector whose coordinates sum to zero has at least one positive and one negative coordinate. Choose `i_+,i_-` with
+
+\[
+\mathcal D_{i_+}>0>\mathcal D_{i_-}.
+\]
+
+By C65 every actual diameter multiplier in (MC.12) is strictly positive. Hence
+
+\[
+\mathcal D_{i_+}>0
+\Longrightarrow
+\exists h_+\in X_{i_+}:\ell_{h_+}>0,
+\]
+
+and similarly
+
+\[
+\mathcal D_{i_-}<0
+\Longrightarrow
+\exists h_-\in X_{i_-}:\ell_{h_-}<0.
+\]
+
+This proves (MC.5) in MC-A without any individual multiplier lower bound.
+
+---
+
+## 2. Aggregate criticality forces a nontrivial equal-phase interface
+
+Now assume (MC.9).
+
+Partition the row indices into maximal consecutive phase blocks on which `u_j` is exactly constant.
+
+If there are at least two phase blocks, the critical phase-block classification gives
+
+\[
+\boxed{
+\sum_{j\in B}c_j=0
+\quad\text{for every maximal phase block }B.
+}
+\tag{MC.14}
+\]
+
+Since `c` is nonzero, choose one phase block
+
+\[
+B=[p,q]
+\]
+
+on which the coefficient vector is not identically zero. Equation (MC.14) implies `|B|>=2`. Its within-block partial sums
+
+\[
+s_i:=\sum_{j=p}^i c_j
+\qquad(p\le i<q)
+\tag{MC.15}
+\]
+
+cannot all vanish, or every coefficient on `B` would vanish. Choose `k` with `s_k!=0`. All earlier phase blocks have zero coefficient sum, so
+
+\[
+P_k(c)=s_ku_k\ne0,
+\tag{MC.16}
+\]
+
+while maximal-block constancy gives
+
+\[
+u_k=u_{k+1}.
+\]
+
+This proves (MC.10)--(MC.11).
+
+If there is only one phase block, all row vectors equal one unit vector `u`. The full-support first-order cancellation equation is simply
+
+\[
+\sum_{j=0}^r c_j=0.
+\tag{MC.17}
+\]
+
+Again a nonzero zero-sum coefficient sequence has a nonzero proper partial sum. Thus there is an internal index `k` with
+
+\[
+P_k(c)=\left(\sum_{j=0}^k c_j\right)u\ne0,
+\]
+
+and every interface is equal-phase. So the same conclusion holds.
+
+Therefore every nonzero aggregate-critical vector exposes an internal equal-phase interface with nonzero prefix shear.
+
+---
+
+## 3. Equal row phase is exactly the antipodal strip branch
+
+At interface `k`, the coherent rooted-shore convention identifies the two physical boundary contact vectors as
+
+\[
+a=u_k,
+\qquad
+b=-u_{k+1}.
+\tag{MC.18}
+\]
+
+Equation (MC.10) therefore gives
+
+\[
+\boxed{b=-a.}
+\tag{MC.19}
+\]
+
+This is precisely the exact-antipodal branch of the adjacent-strip theorem.
+
+The one-sided interval normal form says that every switching row at this interface has one common first relative-displacement vector up to the harmless global hub-side sign:
+
+\[
+w=\pm JP_k(c).
+\tag{MC.20}
+\]
+
+By (MC.16),
+
+\[
+w=\pm s_kJu_k\ne0.
+\tag{MC.21}
+\]
+
+The exact-antipodal blocker theorem supplies two switching actual diameter edges `h_+,h_-` whose inward unit diameter directions `d_+,d_-` satisfy
+
+\[
+d_+\cdot Ju_k>0,
+\qquad
+d_-\cdot Ju_k<0.
+\tag{MC.22}
+\]
+
+Changing the hub-side sign or the sign of `s_k` reverses both derivative signs together, so after relabeling the pair,
+
+\[
+2D d_+\cdot w>0>2D d_-\cdot w.
+\tag{MC.23}
+\]
+
+These are exactly their first squared-length derivatives. Hence (MC.5) holds inside one equal-phase switching interface.
+
+C65 then adds
+
+\[
+\beta_{h_+}>0,
+\qquad
+\beta_{h_-}>0.
+\tag{MC.24}
+\]
+
+There is no universally-zero-KKT fallback in the canonical source.
+
+---
+
+## 4. Consequences for the three-row degeneracies
+
+This theorem sharpens the earlier three-row note.
+
+If both adjacent phase gaps are nonzero, the explicit three-row formulas already give nonzero equal-and-opposite interface aggregates.
+
+If exactly one adjacent phase gap vanishes, the explicit kernel has zero aggregate on both interfaces. The present theorem says the zero-gap interface itself contains two positive-stress actual diameter edges with opposite nonzero first derivatives. The earlier possibility of a universally-zero-KKT blocker is excluded by C65.
+
+If both gaps vanish, every nonzero coefficient vector with `c_0+c_1+c_2=0` has a nonzero proper partial sum, so one of the two exact-antipodal interfaces already carries an opposite-sign actual-diameter pair at first order. The separate quadratic inward full-support drift remains true, but it is not needed to prove first-order jamming of the diameter constraints.
+
+Thus all three phase patterns are now first-order localized.
+
+---
+
+## 5. What this does and does not close
+
+The result closes one natural escape route:
+
+```text
+add more consecutive rows
+-> use the larger exact/contact-shear kernel
+-> hope phase degeneracy removes the KKT cusp
+```
+
+Phase degeneracy does not remove the cusp. It relocates it to an exact-antipodal interface, where actual diameter geometry forces opposite derivative signs.
+
+This does **not** solve C-II. Positive full-support KKT stationarity and mixed rigidity already imply, abstractly, that a nontrivial contact shear cannot be a first-order diameter descent. The new content here is the exact high-`t` localization of that obstruction for every phase pattern:
+
+```text
+noncritical tangent:
+    opposite signs detected by two nonzero interface aggregates;
+
+aggregate-critical tangent:
+    opposite signs detected inside one exact-antipodal interface.
+```
+
+Therefore a successful high-`t` closing move must leave this first-order exact-full-support shear program. The remaining concrete routes are second-order antipodal curvature, a deformation that also moves the persistent diameter core, or a diameter-thrackle/common-ladder contradiction for the linear exact-antipodal / strong-TB1 fork.
+
+**Disposition:** proved proof-only complete force-visible sign-cusp localization for every nonzero high-`t` full-support first-order shear tangent through `t<=1.8687`. C-II and Level I remain open.

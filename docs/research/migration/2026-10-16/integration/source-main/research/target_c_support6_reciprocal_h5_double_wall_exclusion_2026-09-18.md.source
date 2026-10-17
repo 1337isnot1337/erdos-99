@@ -1,0 +1,211 @@
+# Target C-II — exclude all higher-codimension ground-collinearity strata in reciprocal `H5`
+
+**Date:** 2026-09-18  
+**Status:** proof-only structural strengthening; theorem-state authority unchanged  
+**Scope:** the noncollapsed degree-pure support-six reciprocal `H5` endpoint after the uniform/simple-wall finite reduction  
+**Depends on:** `target_c_support6_reciprocal_h5_reduction_2026-09-18.md`; bounded-pentagon no-parallel-side theorem; local hull `2+3` sign alternation  
+**Regression:** `research/verify_target_c_support6_reciprocal_h5_double_wall_exclusion_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The preceding `H5` reduction left higher-codimension configurations with more than one ground-ray coincidence untreated. This note removes them completely.
+
+An allowed ground collinearity `0,i,j` forces `ij` to be a missing matching edge. Since no three non-ground reciprocal points are collinear, ground-ray coincidence classes have size at most two. In an `H5` reciprocal hull a coincident pair cannot consist of two hull vertices, so each pair consumes an interior reciprocal point. There are only two interior points. Hence at most two such pairs can occur.
+
+If two occur, symmetry forces the unique configuration
+
+\[
+\boxed{25\text{ tied at the ground},\qquad 36\text{ tied at the ground},\qquad M=\{14,25,36\}.}
+\]
+
+The ground equilibrium then fixes the signs, up to global reversal, to
+
+\[
+\boxed{s_{01}=-,
+\quad s_{02}=s_{05}=+,
+\quad s_{03}=s_{06}=-,
+\quad s_{04}=+.}
+\]
+
+Convexity fixes enough of the local radial order at hull vertices 2 and 3 that the existing positions-two-and-four alternation theorem gives contradictory signs for the present reciprocal edge `23`: vertex 2 forces `s_{23}=-`, while vertex 3 forces `s_{23}=+`.
+
+Therefore no double ground-collinearity stratum exists. Since triple or higher coincidence is already impossible, the `H5` nonuniform analysis is complete:
+
+\[
+\boxed{\text{every noncollapsed support-six reciprocal `H5` block is either uniform or lies on one simple wall.}}
+\]
+
+Combined with the preceding finite reduction, the entire noncollapsed `H5` branch is now reduced to exactly six uniform and ten simple-wall sign/order symmetry orbits. The simple `056` wall is empty.
+
+---
+
+## 1. Allowed ground coincidences form disjoint missing-matching pairs
+
+The support-six reciprocal theorem already proves that no three non-ground reciprocal points are collinear.
+
+If `0,i,j` are collinear and `ij` is a present relation edge, then at physical pentagon `F_i` the outside anchor `i0` and relation train `ij` are projectively parallel. The bounded-pentagon no-parallel-side theorem forbids this. Hence every ground-collinear pair satisfies
+
+\[
+\boxed{ij\in M.}
+\tag{1.1}
+\]
+
+Since `M` is a perfect matching, distinct ground coincidences are disjoint.
+
+Because all non-ground points lie in the ground hull cone of width `<pi/3`, a ground-collinear pair lies on one common ray from `0`, not opposite rays. Two distinct hull vertices cannot lie on one such ray: the nearer point would lie on the segment from `0` to the farther point and would not be an extreme point of the reciprocal hull. Thus every coincident pair contains at least one of the two interior reciprocal points `5,6`.
+
+It follows that there can be at most two ground-collinear pairs.
+
+If there are two, both interior points are consumed, one per pair. An interior reciprocal point cannot lie on either boundary ray `01` or `04`, because it would lie on the boundary of the reciprocal hull. Therefore each interior point pairs with hull vertex `2` or `3`. After interchanging `5,6` if necessary, the only possibility is
+
+\[
+\boxed{25,\ 36.}
+\tag{1.2}
+\]
+
+The remaining matching edge is forced to be `14`, so
+
+\[
+\boxed{M=\{14,25,36\}.}
+\tag{1.3}
+\]
+
+Thus (1.2)--(1.3) are the unique higher-codimension `H5` stratum up to the existing symmetries.
+
+---
+
+## 2. Ground equilibrium on the double wall
+
+Write the four distinct ground unit rays in increasing angular order as
+
+\[
+u_1,\quad u_A,\quad u_B,\quad u_4,
+\]
+
+where
+
+\[
+u_A=u_2=u_5,
+\qquad
+u_B=u_3=u_6.
+\]
+
+All four angles lie in an open interval of width `<pi/3`.
+
+The ground sign split is still exactly `3+3`: the earlier cone projection argument ruling out `0+6`, `1+5`, and `2+4` uses only cone width and unit magnitudes, not distinctness of the rays.
+
+Neither duplicate pair can have opposite signs. If both pairs had opposite signs, they cancel and the two remaining singleton rays would have to cancel, impossible because `u_1` and `u_4` are distinct and non-antipodal.
+
+If exactly one duplicate pair had opposite signs, the other four signs consist of a same-sign duplicate pair and two singleton signs of the opposite color. Ground equilibrium would then have the form
+
+\[
+2u_A=u_1+u_4
+\]
+
+or its sign-swapped analogue. But `u_1\ne u_4`, so `|u_1+u_4|<2`, whereas `|2u_A|=2`. Contradiction.
+
+Hence each duplicate pair has one common sign. Since the total count is `3+3`, the two duplicate pairs have opposite signs, and the two singleton rays also have opposite signs.
+
+Globally reverse all signs if necessary and suppose the `A` pair is positive and the `B` pair negative. If `u_1` is positive and `u_4` negative, equilibrium gives
+
+\[
+2(u_B-u_A)=-(u_4-u_1).
+\tag{2.1}
+\]
+
+Both `u_B-u_A` and `u_4-u_1` are forward chord vectors of the unit circle whose endpoint angles lie in one interval of width `<pi`. Their arguments lie in one open interval of width `<pi`; they cannot point in opposite directions. Equation (2.1) is impossible.
+
+Consequently the only ground signs, up to global reversal, are
+
+\[
+\boxed{
+u_1:-,
+\quad u_2=u_5:+,
+\quad u_3=u_6:-,
+\quad u_4:+.
+}
+\tag{2.2}
+\]
+
+---
+
+## 3. Hull vertex 2 forces `s_23=-`
+
+At hull vertex `2`, the missing matching mate is `5`. Since `5` lies on segment `02`, its raw ray from `2` coincides with ray `20` and is deleted before the local five-ray rule is applied.
+
+For the convex hull `0,1,2,3,4`, the hull rays from vertex `2` occur from one boundary of the hull cone to the other in the order
+
+\[
+3,\ 4,\ 0,\ 1.
+\]
+
+Point `6` lies on segment `03`, so its ray from `2` lies strictly between rays `23` and `20`. Its position relative to ray `24` can vary, but after deleting `5` the five present raw rays have one of the two orders
+
+\[
+3,4,6,0,1
+\qquad\text{or}\qquad
+3,6,4,0,1.
+\tag{3.1}
+\]
+
+Thus edge `20` is in raw position four and edge `23` is in raw position one.
+
+By (2.2), `s_{20}=+`. The local hull alternation theorem says the size-two sign class occupies positions two and four. Since position four is positive, the positive class is the size-two class. Position one is therefore negative:
+
+\[
+\boxed{s_{23}=-.}
+\tag{3.2}
+\]
+
+---
+
+## 4. Hull vertex 3 forces `s_23=+`
+
+At hull vertex `3`, the missing matching mate is `6`. Since `6` lies on segment `03`, deleting it removes the ray tied with `30`.
+
+The hull rays from vertex `3` occur in order
+
+\[
+4,\ 0,\ 1,\ 2.
+\]
+
+Point `5` lies on segment `02`, so its ray from `3` lies strictly between rays `30` and `32`. Its position relative to ray `31` can vary. Hence after deleting `6`, the five present rays have one of the two orders
+
+\[
+4,0,5,1,2
+\qquad\text{or}\qquad
+4,0,1,5,2.
+\tag{4.1}
+\]
+
+Thus edge `30` is in raw position two and edge `32` is in raw position five.
+
+By (2.2), `s_{30}=-`. Position two belongs to the size-two sign class, so here the negative class is the size-two class. Position five belongs to the opposite size-three class and is therefore positive:
+
+\[
+\boxed{s_{32}=+.}
+\tag{4.2}
+\]
+
+But `s_{32}=s_{23}` because reciprocal edge signs are undirected. Equations (3.2) and (4.2) contradict each other. The global sign-reversed case gives the same contradiction with both predictions reversed.
+
+Therefore the double ground-collinearity stratum is empty.
+
+---
+
+## 5. Consequence
+
+Section 1 shows that more than two ground-collinear pairs are impossible in `H5`; Sections 2--4 exclude the unique two-pair case. Hence every noncollapsed `H5` reciprocal block is either uniform or has exactly one allowed ground-ray coincidence.
+
+Combining this theorem with `target_c_support6_reciprocal_h5_reduction_2026-09-18.md` gives the complete sign/order reduction
+
+\[
+\boxed{\text{noncollapsed support-six `H5`}\Longrightarrow 6\text{ uniform orbits }\cup 10\text{ simple-wall orbits}.}
+\]
+
+There are no omitted higher-codimension ground-collinearity strata.
+
+This still does not prove the sixteen surviving orbits metrically realizable or impossible. The remaining noncollapsed support-six task is exactly to solve those sixteen finite metric unit-force cases. The collapsed branch `y_1=\cdots=y_6\ne0` remains separate.
+
+No theorem-state file is changed.
+
+**Disposition:** all higher-codimension ground-collinearity strata in the reciprocal `H5` branch are excluded. C-II remains open.

@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+"""Arithmetic regression for the bridge-subtracted singleton/rhombic tradeoff."""
+
+from __future__ import annotations
+
+from decimal import Decimal, getcontext
+
+getcontext().prec = 70
+PI = Decimal("3.14159265358979323846264338327950288419716939937510")
+SQRT3 = Decimal(3).sqrt()
+DELTA2 = PI / (2 * SQRT3)
+S2 = DELTA2.sqrt()
+RHO = Decimal("0.73908513321516064165531208767387340401341175890076")
+ETA2 = Decimal("0.00084")
+C = 2 * RHO + ETA2
+
+
+def mantel_floor(c: Decimal) -> Decimal:
+    return c * (4 * S2 + c / 2) / 8
+
+
+assert Decimal("1.4790102") < C < Decimal("1.4790104")
+
+# Equal three-currency split: detour, twice exceptional-singleton count, rhombic slack.
+third = C / 3
+sixth = C / 6
+mthird = mantel_floor(third)
+assert Decimal("0.4930033") < third < Decimal("0.4930036")
+assert Decimal("0.2465016") < sixth < Decimal("0.2465019")
+assert Decimal("0.24993") < mthird < Decimal("0.24995")
+
+# The previously useful balanced singleton/rhombic branch is recovered when detour=0
+# and exceptional singletons consume half the correlated currency.
+half = C / 2
+mhalf = mantel_floor(half)
+assert Decimal("0.7395050") < half < Decimal("0.7395053")
+assert Decimal("0.38629") < mhalf < Decimal("0.38631")
+
+# Monotonicity on the nonnegative c range used in the corollary.
+for j in range(1000):
+    a = C * Decimal(j) / Decimal(1000)
+    b = C * Decimal(j + 1) / Decimal(1000)
+    assert mantel_floor(a) <= mantel_floor(b)
+
+print("Delta_2 =", DELTA2)
+print("sqrt(Delta_2) =", S2)
+print("correlated currency C =", C)
+print("equal-split detour threshold C/3 =", third)
+print("equal-split exceptional-singleton threshold C/6 =", sixth)
+print("equal-split rhombic Mantel floor =", mthird)
+print("half-split rhombic Mantel floor =", mhalf)
+print("bridge-subtracted singleton tradeoff arithmetic: PASS")

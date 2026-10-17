@@ -1,0 +1,637 @@
+# Target C-II — direct dominant/complement outer-energy tradeoff
+
+**Date:** 2026-09-15  
+**Repository base:** after the hostile-audited `g=0.0050` atomic gap and complement outer-train bracing theorem  
+**Status:** proof-only full-core Type-II strengthening; theorem-state authority unchanged  
+**Scope:** no-container/full-core Type-II low-`t` branch  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The complement-bracing theorem first bounded the number of dominant-orbit outer
+terminal occurrences from above using the joint route cost `Phi^{-1}(delta)`, then
+forced the remaining outer terminals into diameter-braced complement trains.  That is
+safe but unnecessarily separates two populations which share one exact identity:
+**every outer terminal belongs either to the dominant phase windows or to their
+complement**.
+
+This note optimizes that split directly.  If the dominant windows use `K D` outer
+terminal occurrences, then
+
+- after paying at most `delta D` hull-length capacity loss, those dominant occurrences
+  contribute at least
+  \[
+  F(K-\delta)D,
+  \qquad F(z)=z-6\sin(z/6),
+  \]
+  of actual outer directional energy; while
+- the remaining outer occurrences force at least
+  \[
+  pD=(\pi-K-N_*)D
+  \]
+  retained complement outer-to-outer train pairs, whose two-sided actual-diameter
+  bracing contributes at least
+  \[
+  J(p)D,
+  \qquad J(p)=2p-6\sin(p/3).
+  \]
+
+The sum is minimized at a unique interior split.  With the hostile-audited atomic
+input
+
+\[
+C_0=2\sqrt{\Delta_2}+0.0050,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+\]
+
+the resulting scalar exclusion gives the safe explicit floor
+
+\[
+\boxed{
+\liminf_{D\to\infty}{q-k\over D}\ge1.83236.
+}
+\]
+
+The one-variable numerical root of this exact relaxation is
+
+\[
+1.8323676277438298975\ldots .
+\]
+
+Only the round value `1.83236` is claimed.
+
+---
+
+## 1. Low-`t` scalar region with the current atomic gap
+
+Pass to a convergent full-core Type-II subsequence and write
+
+\[
+t={q-k\over D},
+\qquad
+\kappa={k\over D},
+\qquad
+\delta={d_{out}\over D}
+={b-\operatorname{per}(F)\over D}.
+\]
+
+Put
+
+\[
+C={T-q/2\over D},
+\qquad
+C_0=2\sqrt{\Delta_2}+0.0050.
+\]
+
+The hostile-audited iterative-pruning atomic theorem and the audited §171 upper
+envelope give
+
+\[
+\boxed{
+C_0\le C\le
+U:={9t\over2}-2\pi-2\delta-{\kappa\over2}.
+}
+\tag{DT.1}
+\]
+
+Hence
+
+\[
+\boxed{
+2\delta+{\kappa\over2}
+\le
+R(t):={9t\over2}-2\pi-C_0.
+}
+\tag{DT.2}
+
+The already-audited joint orbit theorem excludes `t<1.82515`, so below we only need
+consider
+
+\[
+1.82515\le t\le1.83236.
+\tag{DT.3}
+
+---
+
+## 2. Dominant-orbit train mass and outer-terminal lower bound
+
+Use the audited §142/168 exact atomic `pi/3`-orbit decomposition.  If `M` is the
+absolute train mass in a dominant orbit and `A` is total absolute atomic train mass,
+then
+
+\[
+M\ge{4\Delta_2\over A}.
+\]
+
+The exposed-hull theorem gives `A<=C`, so
+
+\[
+\boxed{
+M\ge{4\Delta_2\over C}.
+}
+\tag{DT.4}
+
+Freeze shrinking disjoint phase windows around the at most three atoms of this orbit.
+Let `K D+o(D)` be the number of outer terminal occurrences carried by trains in these
+windows.  Every train outside the windows has at most two outer terminal occurrences.
+Since
+
+\[
+{b\over D}\to\pi+\delta
+\]
+
+and
+
+\[
+{T\over D}=C+{t+\kappa\over2},
+\]
+
+we have
+
+\[
+K
+\ge
+\pi+\delta-t-\kappa-2C+{8\Delta_2\over C}.
+\tag{DT.5}
+
+The function
+
+\[
+-2C+{8\Delta_2\over C}
+\]
+
+is strictly decreasing.  Using `C<=U`,
+
+\[
+\boxed{
+K\ge K_L:=
+\pi+\delta-t-\kappa-2U+{8\Delta_2\over U}.
+}
+\tag{DT.6}
+
+---
+
+## 3. Complement train population has a simultaneous upper bound
+
+Let `N_c D+o(D)` be the number of complete trains outside the dominant windows.  Then
+
+\[
+N_c
+={T\over D}-M+o(1)
+\le
+C+{t+\kappa\over2}-{4\Delta_2\over C}+o(1).
+\]
+
+The function
+
+\[
+C-{4\Delta_2\over C}
+\]
+
+is increasing, hence `C<=U` gives
+
+\[
+\boxed{
+N_c\le N_*:=
+U+{t+\kappa\over2}-{4\Delta_2\over U}.
+}
+\tag{DT.7}
+
+Equations (DT.6) and (DT.7) use the same dominant-orbit mass estimate in opposite
+directions; no independent optimization of `M` is being assumed.
+
+---
+
+## 4. Actual dominant outer occurrences pay `F(K-delta)` energy
+
+For loaded-hull route `W_i`, let
+
+\[
+s_i=|b_i-b_{i+1}|,
+\qquad
+\ell_i=|W_i|,
+\qquad
+d_i=\ell_i-s_i,
+\]
+
+and let `n_i` be the number of dominant-window outer terminal occurrences on this
+route.  Retain fractional occurrence weight
+
+\[
+m_i=\min\{n_i,s_i\}.
+\]
+
+Because `n_i<=ell_i`,
+
+\[
+n_i-m_i=(n_i-s_i)_+\le d_i.
+\]
+
+Thus the retained dominant occurrence mass is at least
+
+\[
+\sum_i m_i/D\ge K-\delta.
+\tag{DT.8}
+
+The retained direction measure is dominated by the normalized loaded-hull perimeter
+measure.  Type-II near-disk convergence makes the latter tend to Lebesgue measure on
+the projective direction circle.  Exactly as in the hostile-audited dominant-orbit
+outer-energy theorem, the three-point bathtub minimum gives
+
+\[
+\boxed{
+E_{dom}\ge F(K-\delta),
+\qquad
+F(z):=z-6\sin(z/6),
+}
+\tag{DT.9}
+
+whenever `K>delta`.  This is an **actual weighted sum of directional energies on
+outer edge occurrences**, not the joint route relaxation `Phi`.
+
+---
+
+## 5. The remaining outer occurrences force complement two-outer trains
+
+The complement trains carry
+
+\[
+\pi+\delta-K
+\]
+
+outer terminal occurrences per unit `D`.  If `P_cD+o(D)` complement trains have two
+outer terminals, then the other complement trains have at most one, so
+
+\[
+\pi+\delta-K
+\le N_c+P_c.
+\]
+
+Using (DT.7),
+
+\[
+P_c
+\ge
+\pi+\delta-K-N_*.
+\tag{DT.10}
+
+Apply the fractional pair-retention argument from the hostile-audited complement
+bracing theorem.  At most `delta D` pair weight is lost when both endpoint measures
+are truncated to physical hull-side length capacity.  Hence the retained complement
+outer-to-outer pair mass obeys
+
+\[
+\boxed{
+p\ge
+\pi-K-N_*.
+}
+\tag{DT.11}
+
+The metric detour cancels: its `+delta` contribution to the total outer occurrence
+count is exactly the maximum pair-retention capacity loss.
+
+For `0<=p<=1`, the three `pi/3` noncrossing phase sectors plus audited §157 two-sided
+actual-diameter bracing give
+
+\[
+\boxed{
+E_{comp}\ge J(p),
+\qquad
+J(p):=2p-6\sin(p/3).
+}
+\tag{DT.12}
+
+For `p>1`, retaining only unit pair mass gives the fixed lower bound `J(1)`, which is
+already larger than every detour density in (DT.3).  Thus the minimizing regime is
+inside `0<p<1`.
+
+---
+
+## 6. The direct split inequality
+
+Dominant-window and complement terminal occurrences belong to disjoint train sets, so
+the edge-energy sums in (DT.9) and (DT.12) are disjoint.  The total exact outer
+route energy is `delta`.  Therefore the actual dominant occurrence density `K` must
+satisfy
+
+\[
+\boxed{
+\delta
+\ge
+F(K-\delta)
++J\!\left(\pi-K-N_*\right)
+}
+\tag{DT.13}
+
+whenever the two displayed arguments are positive.  If the complement argument is
+nonpositive, the `J` term is replaced by zero; that large-`K` regime is even more
+expensive in `F` on the numerical interval below.
+
+The point of (DT.13) is that `K` is not first bounded above or replaced by an inverse
+scalar function.  It is optimized directly.
+
+---
+
+## 7. The split optimization is strictly convex and interior
+
+For fixed `t,delta,kappa`, put
+
+\[
+H(K)=F(K-\delta)+J(\pi-K-N_*).
+\]
+
+On the active range,
+
+\[
+H'(K)
+=F'(K-\delta)-J'(\pi-K-N_*),
+\tag{DT.14}
+\]
+
+where
+
+\[
+F'(z)=1-\cos(z/6),
+\qquad
+J'(p)=2-2\cos(p/3).
+\]
+
+Also
+
+\[
+H''(K)
+={1\over6}\sin((K-\delta)/6)
++{2\over3}\sin((\pi-K-N_*)/3)>0.
+\tag{DT.15}
+\]
+
+So there is at most one interior minimizer.
+
+The whole feasible region (DT.2)--(DT.3) has the following coarse uniform bounds,
+certified by the companion script:
+
+\[
+\boxed{
+0.9225<N_*<1.083,
+\qquad
+K_L<1.32,
+\qquad
+\delta<0.0265.
+}
+\tag{DT.16}
+
+At `K=1.5`, these imply
+
+\[
+H'(1.5)<0,
+\tag{DT.17}
+\]
+
+while at `K=1.7`,
+
+\[
+H'(1.7)>0.
+\tag{DT.18}
+
+Hence the unique minimizer satisfies
+
+\[
+\boxed{1.5<K_*^{split}<1.7.}
+\tag{DT.19}
+
+In particular the lower constraint `K>=K_L` is inactive, `K-delta>0`, and
+
+\[
+0<\pi-K-N_*<1.
+\]
+
+Thus the smooth formulas above apply at the true minimum.
+
+---
+
+## 8. The feasible `(delta,kappa)` triangle again collapses to one endpoint
+
+Let
+
+\[
+G(t,\delta,\kappa)
+:=\min_K H(K)-\delta.
+\tag{DT.20}
+
+Because the minimizer is unique and interior, the envelope theorem applies.
+
+### `kappa` direction
+
+At fixed `t,delta`,
+
+\[
+{\partial N_*\over\partial\kappa}
+=-{2\Delta_2\over U^2}<0.
+\]
+
+The dominant term has no explicit `kappa` dependence once `K` is held fixed, while
+`p=pi-K-N_*` increases with `kappa`.  Therefore
+
+\[
+\boxed{
+{\partial G\over\partial\kappa}
+={2\Delta_2\over U^2}J'(p)>0.
+}
+\tag{DT.21}
+
+So the weakest point has
+
+\[
+\kappa=0.
+\]
+
+### `delta` direction
+
+At fixed `t,kappa`,
+
+\[
+{\partial N_*\over\partial\delta}
+=-2\left(1+{4\Delta_2\over U^2}\right).
+\]
+
+Hence at the minimizing split
+
+\[
+{\partial G\over\partial\delta}
+=-F'(z)
++2\left(1+{4\Delta_2\over U^2}\right)J'(p)-1.
+\tag{DT.22}
+
+Since `U>=C0>2sqrt(Delta2)`, the coefficient of `J'` is less than four.  The uniform
+split bounds give `p<0.72`, hence
+
+\[
+J'(p)<0.058.
+\]
+
+Therefore
+
+\[
+\boxed{
+{\partial G\over\partial\delta}
+<4(0.058)-1<0.
+}
+\tag{DT.23}
+
+The contradiction margin decreases with detour.  The weakest feasible point is
+therefore
+
+\[
+\boxed{
+\kappa=0,
+\qquad
+\delta={R(t)\over2},
+\qquad
+U=C_0.
+}
+\tag{DT.24}
+
+---
+
+## 9. One-variable boundary problem
+
+At (DT.24), define
+
+\[
+\delta_0(t)={R(t)\over2},
+\tag{DT.25}
+
+\[
+N_0(t)
+=C_0+{t\over2}-{4\Delta_2\over C_0}.
+\tag{DT.26}
+
+Let `K_0(t)` be the unique root in `(1.5,1.7)` of
+
+\[
+\boxed{
+F'(K_0-\delta_0)
+=J'(\pi-K_0-N_0).
+}
+\tag{DT.27}
+
+The boundary contradiction margin is
+
+\[
+\boxed{
+G_0(t)
+=F(K_0-\delta_0)
++J(\pi-K_0-N_0)
+-\delta_0.
+}
+\tag{DT.28}
+
+It is strictly decreasing.  By the envelope theorem,
+
+\[
+G_0'(t)
+=-{9\over4}F'(K_0-\delta_0)
+-{1\over2}J'(\pi-K_0-N_0)
+-{9\over4}<0.
+\tag{DT.29}
+
+So one endpoint sign check excludes the entire interval below it.
+
+---
+
+## 10. New floor with `g=0.0050`
+
+At
+
+\[
+t=1.83236,
+\]
+
+the high-precision certificate gives
+
+\[
+\begin{aligned}
+\delta_0&=0.0264045395462494157\ldots,\\
+N_0&=0.9261669084286363358\ldots,\\
+K_0&=1.6442871060685511792\ldots,\\
+z_0:=K_0-\delta_0
+&=1.6178825665223017635\ldots,\\
+p_0:=\pi-K_0-N_0
+&=0.5711386390926057234\ldots,\\
+F(z_0)&=0.0195347667658293035\ldots,\\
+J(p_0)&=0.0068876931759360769\ldots .
+\end{aligned}
+\]
+
+Therefore
+
+\[
+\boxed{
+G_0(1.83236)
+=0.0000179203955159647\ldots>0.
+}
+\tag{DT.30}
+
+The scalar root is
+
+\[
+\boxed{
+1.8323676277438298975236677815\ldots .
+}
+\tag{DT.31}
+
+Hence:
+
+### Theorem DT.1 — direct dominant/complement energy floor
+
+Every full-core Type-II survivor sequence in the stated proof-only scope satisfies
+
+\[
+\boxed{
+\liminf_{D\to\infty}{q-k\over D}
+\ge1.83236.
+}
+\tag{DT.32}
+
+This supersedes the standalone `1.82515` joint-orbit floor and the older complement
+bracing floor numerically.  Its gain comes from optimizing the **actual allocation of
+outer terminal occurrences** between the two disjoint train populations.
+
+---
+
+## 11. Frontier effect
+
+The low-`t` escape is no longer described by a single dominant phase population.  At
+the new scalar boundary the minimizing split is explicit:
+
+```text
+t                   = 1.83236
+outer detour/D       = 0.02640454...
+dominant outer ends/D K = 1.64428711...
+complement train cap/D  = 0.92616691...
+retained complement OO pairs/D = 0.57113864...
+
+dominant energy/D    = 0.01953477...
+complement bracing energy/D = 0.00688769...
+```
+
+Both terms are macroscopically load-bearing.  A future closure cannot discard the
+complement train system as a small error, and it cannot put essentially all outer
+terminals into the dominant orbit without making the dominant tangent-mismatch energy
+larger.
+
+The next structural target is therefore the **cyclic interaction between these two
+large populations**, especially the Woodall diameter-thrackle reuse needed to brace
+roughly `0.57D` complement near-antipodal outer trains while the dominant atomic
+trains simultaneously consume the rest of the boundary.
+
+C-II remains open.
+
+## 12. Reproducibility
+
+Run
+
+```bash
+python3 research/verify_target_c_direct_dominant_complement_energy_tradeoff.py
+```
+
+for the high-precision split optimizer, scalar root, and uniform derivative bounds.

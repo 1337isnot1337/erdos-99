@@ -1,0 +1,23 @@
+#!/usr/bin/env python3
+from decimal import Decimal as D, getcontext
+getcontext().prec=70
+PI=D('3.141592653589793238462643383279502884197169399375105820974944')
+S=(PI/(D(2)*D(3).sqrt())).sqrt()
+G=D('0.002123'); EPS=D('0.0017327')
+C146=D(4)*(PI+S)/D(9); T=C146+EPS; C0=D(2)*S+G
+DET=(D('4.5')*EPS-G)/D(2); KCAP=D(4)*DET
+PHI=C0/D(2)-T/D(4); X=D(9)*T/D(4)-PI-C0/D(2)
+P5=PI+C0-D(5)*T/D(2); LOO=D(3)*PI-D(5)*T
+CDF=S-PI/D(4)+D('2.5')*G; L=T+D(2)*G
+GLEAF=L-D(8)*X-D(4)*T+D(2)*PI
+assert DET==D('0.002837075') and X==DET and KCAP==D('0.011348300')
+assert D('0.49806274')<PHI<D('0.49806276')
+assert D('0.49522567')<P5<D('0.49522568')
+assert D('0.31854677')<LOO<D('0.31854678')
+assert D('0.17222214')<CDF<D('0.17222215')
+assert D('1.82549223')<L<D('1.82549225')
+assert D('0.80099599')<GLEAF<D('0.80099600')
+assert D('0.00762853')<GLEAF/D(105)<D('0.00762854')
+assert D('0.00770188')<GLEAF/D(104)<D('0.00770189')
+print('PASS g=0.002123 global propagation arithmetic')
+for k,v in [('t0',T),('detour_cap',DET),('kappa_cap',KCAP),('f_floor',PHI),('X_cap',X),('p5_floor',P5),('L_OO_floor',LOO),('c_DF',CDF),('bridge_floor',L),('leaf_gate',GLEAF),('leaf_uniform',GLEAF/D(105)),('leaf_low_sigma',GLEAF/D(104))]: print(k,'=',v)

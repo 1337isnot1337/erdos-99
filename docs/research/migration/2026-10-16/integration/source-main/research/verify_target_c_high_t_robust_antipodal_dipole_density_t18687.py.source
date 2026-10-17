@@ -1,0 +1,79 @@
+#!/usr/bin/env python3
+"""Arithmetic/asymptotic regressions for robust antipodal dipole density."""
+
+from fractions import Fraction
+from math import acos, asin, pi
+
+c0 = Fraction(113, 20_000_000)
+gamma = c0 / 32
+robust_union = Fraction(13, 16) * c0
+winning_density = robust_union / 2
+rho_bundle = float(winning_density) / (16.0 * (3.0 ** (1.0 / 8.0)))
+
+assert abs(float(c0) - 5.65e-6) < 1e-20
+assert abs(float(gamma) - 1.765625e-7) < 1e-20
+assert abs(float(robust_union) - 4.590625e-6) < 1e-18
+assert abs(float(winning_density) - 2.2953125e-6) < 1e-18
+assert 1.24e-7 < rho_bundle < 1.26e-7
+
+# Exact density arithmetic used in RA.29.
+assert Fraction(7, 8) * c0 - 2 * gamma == robust_union
+assert robust_union == Fraction(1469, 320_000_000)
+assert winning_density == Fraction(1469, 640_000_000)
+
+
+def delta_D(D: float) -> float:
+    return 2.0 * asin(1.0 / (2.0 * D))
+
+
+def theta_shared_endpoint(D: float) -> float:
+    eta = (3.0 ** 0.25) * (D ** 0.5)
+    return 2.0 * acos(D / (D + 2.0 * eta))
+
+
+# C67 spacing is at least 1/D on the tested asymptotic range.
+for D in (1e6, 1e9, 1e12, 1e15):
+    assert delta_D(D) >= 1.0 / D
+
+# Representative shrinking row windows verify that the narrow-pair packing
+# ratio approaches 2*gamma. The proof permits any omega_D=o(1).
+for D in (1e8, 1e12, 1e16):
+    omega = D ** (-0.05)
+    bound_ratio = 1.0 / D + 0.5 * omega + 2.0 * float(gamma)
+    assert bound_ratio > 2.0 * float(gamma)
+    assert bound_ratio - 2.0 * float(gamma) < 0.21
+
+# The source-wide shared-endpoint angular width tends to zero and eventually
+# lies below the fixed robust angle gamma.
+D = 1e30
+assert theta_shared_endpoint(D) < float(gamma)
+
+# Regression checks for the normalized open-semicircle dichotomy. If
+# 0 < theta_minus < omega < theta_plus < pi and the projective gap is small,
+# then either the pair is close around omega or both ends are close to the
+# common projective boundary line {0, pi}.
+g = 0.1
+examples = [
+    (1.00, 1.04, 1.02),       # small ordinary separation: row-near
+    (0.03, pi - 0.04, 1.20),  # ordinary separation near pi: boundary-near
+]
+for theta_minus, theta_plus, omega in examples:
+    assert 0.0 < theta_minus < omega < theta_plus < pi
+    s = theta_plus - theta_minus
+    eta = min(s, pi - s)
+    assert eta < g
+    if s < g:
+        assert omega - theta_minus < g
+        assert theta_plus - omega < g
+    else:
+        assert pi - s < g
+        assert theta_minus < g
+        assert pi - theta_plus < g
+
+print("PASS: robust antipodal dipole density regressions")
+print(f"c0={float(c0):.12g}")
+print(f"gamma={float(gamma):.12g}")
+print(f"robust_union={float(robust_union):.12g}")
+print(f"winning_density={float(winning_density):.12g}")
+print(f"rho_bundle={rho_bundle:.12g}")
+print(f"theta_shared_endpoint(1e30)={theta_shared_endpoint(D):.12g}")

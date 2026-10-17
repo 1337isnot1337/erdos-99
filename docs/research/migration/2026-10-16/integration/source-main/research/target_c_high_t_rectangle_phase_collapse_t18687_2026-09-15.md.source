@@ -1,0 +1,322 @@
+# Target C-II — the high-`t` complete rectangle has common order and inverse-`D` phase width
+
+**Date:** 2026-09-15  
+**Status:** proof-only high-`t` structural strengthening  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch with `t=(q-k)/D<=1.8687`  
+**Dependencies:** high-`t` complete rectangle; canonical global strict-rhombus angular-defect budget; canonical train displacement cones and signed monotone-grid order lemma  
+**Certificate:** `research/verify_target_c_high_t_complete_rectangle_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The high-`t` complete-rectangle theorem gives internally noncrossing train families
+
+\[
+A_*\times B_*,
+\]
+
+with
+
+\[
+|A_*|>0.0000226D-o(D),
+\qquad
+|B_*|>0.3134D-o(D),
+\]
+
+such that every cross-pair is one strict rhombus. The rows `A_*` lie in one shrinking dominant projective phase window.
+
+This note upgrades that combinatorial rectangle to an ordered, near-triangular grid. After deleting only `O(1)` orientation-ambiguous columns, choosing one of the two oriented crossing sides, and then trimming at most half of each shore, there are subfamilies
+
+\[
+A_0\subset A_* ,
+\qquad
+B_0\subset B_*
+\]
+
+with
+
+\[
+\boxed{|A_0|>0.0000112D-o(D),}
+\tag{HP.1}
+\]
+
+\[
+\boxed{|B_0|>0.0783D-o(D),}
+\tag{HP.2}
+\]
+
+for which
+
+\[
+\boxed{
+{\pi\over3}<\theta_{ab}
+<{\pi\over3}+{7.7\times10^6\over D}+o(D^{-1})
+\qquad(a\in A_0,b\in B_0).
+}
+\tag{HP.3}
+\]
+
+Both families have internal projective phase spread `O(1/D)`, and every row sees the columns in one common order while every column sees the rows in one common order.
+
+Thus the current `t<=1.8687` survivor contains an actual common-order, inverse-diameter-width oblique train grid of size `Theta(D) x Theta(D)`.
+
+---
+
+## 1. Remove the orientation-ambiguous columns
+
+Let the row phases in `A_*` lie in a shrinking projective window of width
+
+\[
+\omega_D=o(1)
+\]
+
+about the dominant atom `phi`.
+
+For `b in B_*`, every crossing angle with a row belongs to
+
+\[
+\left({\pi\over3},{\pi\over2}\right].
+\]
+
+Relative to the row window, there are two possible oriented branches, clockwise and counterclockwise from `phi`.
+
+Call a column **ambiguous** if its acute representative uses different oriented branches for two rows of `A_*`. Since all row phases differ by at most `omega_D`, an ambiguous column must lie within `O(omega_D)` of the projective direction orthogonal to `phi`. Consequently every one of its crossings with `A_*` has angle
+
+\[
+\theta_{ab}\ge {\pi\over2}-O(\omega_D),
+\]
+
+and therefore angular defect
+
+\[
+\theta_{ab}-{\pi\over3}
+\ge {\pi\over6}-o(1).
+\tag{HP.4}
+\]
+
+The canonical global defect budget is
+
+\[
+\sum_R\left(\theta_R-{\pi\over3}\right)
+<C_{phase}D,
+\qquad
+C_{phase}={\pi^2\sqrt3(2+\sqrt3)\over12}.
+\tag{HP.5}
+\]
+
+One ambiguous column has more than `0.0000226D-o(D)` crossings with `A_*`, so by (HP.4) it spends `Omega(D)` defect. Hence (HP.5) permits only `O(1)` ambiguous columns.
+
+Delete them. The remaining `>0.3134D-o(D)` columns split into two classes according to their consistent oriented crossing side. One class, call it `B_+`, satisfies
+
+\[
+\boxed{|B_+|>0.1567D-o(D).}
+\tag{HP.6}
+\]
+
+Reverse all orientations if necessary. We may choose real phase representatives
+
+\[
+\alpha_a\quad(a\in A_*),
+\qquad
+\beta_b\quad(b\in B_+)
+\]
+
+so that every cross-pair obeys
+
+\[
+{\pi\over3}<\beta_b-\alpha_a<{2\pi\over3}.
+\tag{HP.7}
+\]
+
+The actual acute rhombus angle is represented on this common branch; after the `O(1)` ambiguous deletion no sign change occurs across the shrinking row window.
+
+---
+
+## 2. The complete product spends only `O(D)` angular defect
+
+For `a in A_*`, `b in B_+`, put
+
+\[
+\delta_{ab}:=\beta_b-\alpha_a-{\pi\over3}>0.
+\tag{HP.8}
+\]
+
+Every `A_* x B_+` pair is a distinct strict rhombus, so by (HP.5)
+
+\[
+S:=\sum_{a\in A_*}\sum_{b\in B_+}\delta_{ab}
+<C_{phase}D.
+\tag{HP.9}
+\]
+
+The safe shore sizes give
+
+\[
+|A_*||B_+|
+>(0.0000226)(0.1567)D^2-o(D^2).
+\]
+
+Define the average defect
+
+\[
+\lambda_D={S\over |A_*||B_+|}.
+\]
+
+The exact certificate proves
+
+\[
+\boxed{
+\lambda_D
+<{1.502\times10^6\over D}+o(D^{-1}).
+}
+\tag{HP.10}
+\]
+
+---
+
+## 3. Product structure collapses both phase spreads
+
+Set
+
+\[
+\alpha^+=\max_{a\in A_*}\alpha_a,
+\qquad
+\beta^-=\min_{b\in B_+}\beta_b,
+\]
+
+\[
+g=\beta^- -\alpha^+-{\pi\over3}>0,
+\]
+
+\[
+r_a=\alpha^+-\alpha_a\ge0,
+\qquad
+q_b=\beta_b-\beta^-\ge0.
+\]
+
+Then exactly
+
+\[
+\boxed{
+\delta_{ab}=g+r_a+q_b.
+}
+\tag{HP.11}
+\]
+
+Averaging over the complete product gives
+
+\[
+\lambda_D
+=g+{1\over|A_*|}\sum_ar_a
++{1\over|B_+|}\sum_bq_b.
+\tag{HP.12}
+\]
+
+All three terms are nonnegative. Hence
+
+\[
+g\le\lambda_D,
+\qquad
+{1\over|A_*|}\sum_ar_a\le\lambda_D,
+\qquad
+{1\over|B_+|}\sum_bq_b\le\lambda_D.
+\tag{HP.13}
+
+By Markov retain at least half of each shore:
+
+\[
+A_0=\{a:r_a\le2\lambda_D\},
+\qquad
+B_0=\{b:q_b\le2\lambda_D\}.
+\tag{HP.14}
+\]
+
+Then
+
+\[
+|A_0|\ge|A_*|/2>0.0000112D-o(D),
+\]
+
+\[
+|B_0|\ge|B_+|/2>0.0783D-o(D),
+\]
+
+and, using (HP.11),
+
+\[
+0<\delta_{ab}
+\le g+2\lambda_D+2\lambda_D
+\le5\lambda_D.
+\]
+
+The exact certificate verifies
+
+\[
+5{C_{phase}\over(0.0000226)(0.1567)}
+<7.7\times10^6.
+\]
+
+This proves (HP.3).
+
+Equations (HP.14) also show directly that the row and column phase spreads are each at most
+
+\[
+2\lambda_D=O(D^{-1}).
+\tag{HP.15}
+\]
+
+---
+
+## 4. Common crossing order
+
+The signed monotone-grid order argument used by the lower-`t` rectangle theorem depends only on:
+
+1. two internally noncrossing train families;
+2. complete mutual crossing;
+3. one common real orientation satisfying (HP.7).
+
+All three hold for `A_0,B_0`.
+
+Canonical train geometry gives a common projection direction along which every selected train centerline is strictly monotone. Every `A_0 x B_0` crossing has the same determinant sign. Therefore the signed monotone-grid lemma yields
+
+\[
+\boxed{
+\text{all rows meet the columns in one common order,}
+}
+\tag{HP.16}
+\]
+
+and
+
+\[
+\boxed{
+\text{all columns meet the rows in one common order.}
+}
+\tag{HP.17}
+\]
+
+Thus `A_0 x B_0` is a genuine ordered pseudoline rectangle, not only a complete bipartite crossing graph.
+
+---
+
+## 5. Frontier effect
+
+The high-`t` branch through `1.8687` now contains
+
+```text
+>0.0000112 D row trains
+x
+>0.0783 D column trains
+complete mutual strict-rhombus crossing
++ both shores internally noncrossing
++ one common crossing order on both shores
++ each shore has projective phase spread O(1/D)
++ every grid angle = pi/3 + O(1/D)
+  (explicitly < pi/3 + 7.7e6/D + o(1/D)).
+```
+
+The large numerical constant reflects the very thin guaranteed row shore at the current endpoint, but the scale is the important point: across a linear-by-linear rectangle, the total phase drift is bounded in absolute coordinates.
+
+The next closing target is no longer to find a grid. It is to combine this ordered near-triangular rectangle with the finite-defect/KKT strip and the common diameter hub, so that one adjacent row pair has both a bounded active-diameter interface and a macroscopic ordered transverse scaffold. That is the natural setting for a source-preserving local multishear or a forbidden diameter-chord pattern.
+
+No C-II or Level-I closure is claimed here.
+
+**Disposition:** proved proof-only high-`t` common-order/inverse-`D` phase-collapse rectangle through `t<=1.8687`. C-II and Level I remain open.

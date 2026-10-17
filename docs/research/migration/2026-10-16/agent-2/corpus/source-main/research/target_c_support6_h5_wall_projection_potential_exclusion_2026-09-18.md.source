@@ -1,0 +1,90 @@
+# Target C-II — simple-wall support-six `H5` exclusion by projection potentials
+
+**Date:** 2026-09-18  
+**Status:** proved candidate awaiting independent audit; theorem-state authority unchanged  
+**Scope:** the ten noncollapsed simple-wall support-six reciprocal `H5` sign/order orbits  
+**Certificate:** `research/verify_target_c_support6_h5_wall_projection_potential_2026_09_18.py`
+
+This note eliminates the ten simple ground-collinearity-wall cases left after
+the exact support-six `H5` reduction. Together with the uniform exclusion note,
+it closes the entire uniform and simple-wall noncollapsed `H5` metric branch.
+It does not address the collapsed support-six branch. Higher-codimension walls
+are covered only to the extent of the separate promoted double-wall exclusion.
+
+The dependency chain is
+
+```text
+simple-wall H5 finite reduction + double-wall exclusion
+  -> ten exact zero-aware chirotope/sign representatives
+  -> all weak rank-3 extensions at a generic projection infinity
+  -> no acyclic signed projection constraint graph
+  -> contradiction with full signed unit-force equilibrium
+  -> simple-wall H5 eliminated.
+```
+
+## Zero-aware projection-potential lemma
+
+The summed equilibrium identity is the same as in the uniform case. For any
+scalar potential `a` and generic projection vector `u`,
+
+\[
+ 0=\sum_i a_i\,u\!\cdot F_i
+  =\sum_{ij\in E}s_{ij}(a_i-a_j)
+    \frac{u\!\cdot(y_i-y_j)}{|y_i-y_j|}.
+\tag{1}
+\]
+
+If the signed constraint graph defined by the projection order and the edge
+signs is acyclic, a strict topological potential makes every summand positive.
+Therefore every generic projection order of a metric equilibrium must contain a
+directed cycle.
+
+The wall has one reciprocal collinearity, so its ordinary point chirotope has a
+zero triple. This does not invalidate the argument: a generic `u` still gives a
+strict total order of all seven reciprocal points. Adjoining the formal point
+`U` at infinity gives a rank-three chirotope extension with no new zero triple
+involving `U`. The correct weak Grassmann--Plücker condition is that the three
+products either vanish identically or contain both signs. The certificate uses
+this zero-aware condition, not the strict uniform test.
+
+## Exact finite result
+
+The existing wall verifier supplies ten canonical representatives, all with a
+simple wall of type `036` after the allowed symmetries. For each representative,
+the certificate enumerates all `7!` possible generic projection orders, assigns
+the signs of the point-at-infinity triples, and checks every eight-element
+rank-three weak chirotope axiom. Thus every realizable metric projection is in
+the tested overapproximation.
+
+The numbers of weak rank-three infinity extensions are
+
+\[
+\boxed{138,128,124,136,136,132,134,120,120,120},
+\]
+
+and the number of acyclic signed projection graphs is zero in every case.
+Consequently no simple-wall representative can satisfy the full signed
+unit-force equilibrium.
+
+This is an exact finite sign certificate: no coordinates, floating-point
+thresholds, or numerical nonlinear solver are used.
+
+## Consequence and remaining obstruction
+
+Within the current noncollapsed support-six reduction, the six uniform and ten
+simple-wall `H5` branches are now excluded. The remaining support-six endpoint
+is the collapsed branch
+
+\[
+ y_1=\cdots=y_6\ne0,
+\]
+
+whose local two-dimensional closure family has already been certified. That
+local family cannot be excluded by repeating the six local pentagon, turn-gap,
+parallel-anchor, or no-extra-contact tests. A global stopped-train,
+source-embedding, source-separation, diameter-bar/KKT, or source-preserving
+finite-motion argument is still required.
+
+**Disposition:** proved candidate awaiting independent audit; all ten simple-wall
+metric cases closed within the stated full-equilibrium hypotheses; C-II remains
+open because the collapsed branch remains live.

@@ -1,0 +1,32 @@
+# Target C post-disjoint-witness bridge note
+
+**Status:** research note, not a promoted theorem.
+
+## Repository state inspected
+
+The latest Target C work certifies the exclusion of the disjoint two-witness Profile B branch. The remaining task is not to revisit that branch, but to convert the surviving intersecting-witness configurations into a source-level contradiction or a forced unit-triangle conclusion.
+
+## Highest-leverage next subproblem
+
+The surviving configuration has two touch-three witnesses whose witness triples intersect in exactly one source cycle after the disjoint case is removed. The immediate question is:
+
+> Does the one-point intersection force a bounded-rank quotient obstruction analogous to the disjoint-witness deficiency-3 exclusion?
+
+A useful target is a finite certificate over the remaining role orbits:
+
+1. Enumerate the surviving intersecting touch-three witness role orbits.
+2. Derive the forced singleton-row support constraints from the current rank-two setup.
+3. Enumerate rational rank-two coefficient planes containing the forced line.
+4. Check whether every remaining incidence pattern either has deficiency below the required threshold or forces a forbidden source geometry.
+
+## What would count as closure
+
+A valid advance would be one of:
+
+- a complete finite certificate excluding all remaining intersecting witness profiles;
+- a reduction from the surviving profiles to a known canonical obstruction;
+- an explicit counterexample showing that the current witness quotient does not contain enough information for closure.
+
+## Non-claims
+
+This file does not claim that the remaining profiles are impossible. The disjoint-witness certificate only removes that branch. The intersecting case remains the bottleneck until an independently verified argument is supplied.

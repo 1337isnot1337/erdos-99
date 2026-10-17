@@ -1,0 +1,221 @@
+# Erdős Problem #99 — local KKT regression for flat chains and sharp two-contact teeth
+
+**Date:** 2026-09-14  
+**Target:** Target C-II / flat-pentagon and two-contact-tooth branches  
+**Claim class:** exact finite regression; no theorem-state promotion  
+**External input:** none
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The current small-residual pentagon route produces two local objects in linear quantity:
+
+1. almost-flat unit-contact chains `l-m-r` with `angle lmr -> pi`; and
+2. two-contact near-equilateral teeth `x-y-z` with `angle xyz -> pi/3` from above.
+
+A natural next attempt is to use positive KKT force balance at the middle vertex to charge either object by a uniform amount of contact or diameter stress. That local route is false.
+
+There is an exact three-contact equilibrium for **every** triangle-free angle
+
+\[
+\boxed{\pi/3<\theta<\pi}
+\]
+
+with no diameter reaction at the central vertex. Moreover, in the flat limit the third blocking contact may carry arbitrarily small positive stress.
+
+This does not construct a global Target-C survivor. It does prove that any closing theorem for the extracted pentagon chains must use global train topology, stress transport, diameter bracing, or finite source geometry rather than a per-vertex positive-stress lower bound.
+
+---
+
+## 1. Exact degree-three equilibrium
+
+Fix
+
+\[
+\pi/3<\theta<\pi
+\]
+
+and put
+
+\[
+r_+=\left(\cos{\theta\over2},\ \sin{\theta\over2}\right),
+\qquad
+r_-=\left(\cos{\theta\over2},\ -\sin{\theta\over2}\right),
+\qquad
+r_0=(-1,0).
+\tag{1.1}
+\]
+
+These are three unit contact directions from one central source vertex. The first two bound a face sector of angle `theta`; the third lies strictly in the complementary sector.
+
+Assign positive contact stresses
+
+\[
+\alpha_+=\alpha_-=1,
+\qquad
+\alpha_0=2\cos{\theta\over2}>0.
+\tag{1.2}
+\]
+
+Then
+
+\[
+\begin{aligned}
+\alpha_+r_++\alpha_-r_-+\alpha_0r_0
+&=
+\left(2\cos{\theta\over2},0\right)
+-\left(2\cos{\theta\over2},0\right)\\
+&=0.
+\end{aligned}
+\tag{1.3}
+\]
+
+Thus the vertex satisfies exact positive contact equilibrium with **zero** diameter reaction.
+
+---
+
+## 2. The local source is triangle-free
+
+The angular separations of the three contact rays are
+
+\[
+\angle(r_+,r_-)=\theta>{\pi\over3},
+\tag{2.1}
+\]
+
+and
+
+\[
+\angle(r_\pm,r_0)=\pi-{\theta\over2}>{\pi\over2}>{\pi\over3}.
+\tag{2.2}
+\]
+
+If the three neighbors are placed one unit from the center on these rays, their pairwise distances are
+
+\[
+2\sin{\theta\over2}>1
+\tag{2.3}
+\]
+
+for the two face neighbors and
+
+\[
+2\sin\left({\pi\over2}-{\theta\over4}\right)>\sqrt2>1
+\tag{2.4}
+\]
+
+for either face neighbor against the third neighbor.
+
+Hence no pair of neighbors is at unit distance. The local four-point contact star contains no unit equilateral triangle.
+
+---
+
+## 3. Flat-chain limit
+
+Write
+
+\[
+\theta=\pi-\delta,
+\qquad
+\delta\downarrow0.
+\]
+
+The two face contacts become antipodal, exactly as in the flat-pentagon chain extraction. The third equilibrium weight is
+
+\[
+\boxed{
+\alpha_0=2\cos{\pi-\delta\over2}
+=2\sin{\delta\over2}
+=\delta+O(\delta^3).
+}
+\tag{3.1}
+\]
+
+Therefore an arbitrarily flat two-contact chain can be balanced by one actual external contact whose positive KKT coefficient tends to zero linearly with the turning defect.
+
+In particular, there is no local theorem of the form
+
+\[
+\text{flat positive-contact chain}
+\Longrightarrow
+\text{external contact or diameter reaction of weight }\ge c>0.
+\tag{3.2}
+\]
+
+Relative-interior KKT positivity is fully compatible with `alpha_0 -> 0` along a source sequence.
+
+A weaker weighted statement proportional to the turning angle remains possible, but summing it would require a global lower bound on the two chain-edge stresses or an independent transport identity. Neither follows from local equilibrium.
+
+---
+
+## 4. Near-equilateral tooth limit
+
+Write
+
+\[
+\theta={\pi\over3}+\varepsilon,
+\qquad
+\varepsilon\downarrow0.
+\]
+
+The hidden chord between the two face neighbors has length
+
+\[
+2\sin{\theta\over2}=1+{\sqrt3\over2}\varepsilon+O(\varepsilon^2),
+\tag{4.1}
+\]
+
+so this is exactly the local geometry of the two-contact near-equilateral teeth extracted from cheap pentagons.
+
+The third equilibrium weight tends instead to
+
+\[
+\boxed{
+\alpha_0=2\cos{\theta\over2}\longrightarrow\sqrt3.
+}
+\tag{4.2}
+\]
+
+Thus a sharp two-contact tooth is also perfectly compatible with an unloaded degree-three positive-contact vertex. The near-unit hidden chord does not force that vertex to be diameter-loaded and does not force an additional active hidden contact.
+
+---
+
+## 5. Consequence for the current pentagon program
+
+The small-residual branch currently supplies, after suitable extraction,
+
+```text
+Omega(D) almost-flat two-contact chains,
+and/or
+Omega(D) two-contact near-equilateral teeth.
+```
+
+The regression above removes the weakest KKT closure strategy:
+
+```text
+many local defects
+  -> each needs a uniformly positive extra reaction
+  -> total normalized stress budget is exceeded.
+```
+
+That implication is false already at one vertex. In the flat limit the required extra contact stress can vanish at the same scale as the turn.
+
+A valid next theorem must therefore correlate different defects. Plausible quantities are:
+
+- total turn times transported train stress;
+- the incidence of flat-chain blocker edges in the global stopped-train network;
+- the loaded-diameter thrackle needed when the blocker is supplied by diameter reaction rather than contact reaction;
+- simultaneous finite motions of many vertex-disjoint teeth, where first-order KKT obstruction is treated globally rather than vertexwise.
+
+The local regression does not rule out those mechanisms.
+
+## 6. Scope
+
+- The statement is a finite local force-balance regression, not a claim that the four-point star extends to a global diameter minimizer.
+- It respects the triangle-free unit-contact angular restriction exactly.
+- All three contact multipliers are strictly positive for every finite `theta in (pi/3,pi)`.
+- No diameter multiplier is used.
+- The result is compatible with contact degree at most five and, in fact, uses degree three only.
+
+**Disposition:** exact no-go regression for per-vertex KKT stress charging. C-II remains open.

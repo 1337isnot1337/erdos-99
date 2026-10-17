@@ -1,0 +1,249 @@
+# Target C-II — phase-continuity upgrades mixed flower matching from one third to one half
+
+**Date:** 2026-09-15\
+**Status:** proof-only asymptotic sharpening of the mixed matching-splice theorem\
+**Scope:** local through pairs supplied by the three-dominant full-flower normal form\
+**Dependencies:** `target_c_mixed_flower_matching_splice_deficit_2026-09-15.md`; oriented through continuation at every selected flower\
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The preceding mixed-phase theorem used only the maximum-degree-two property of the
+splice graph and therefore kept a greedy `L/3` matching.  The geometric through-pair
+input excludes all short splice cycles.  Since the phase mismatch on every local
+through edge tends uniformly to zero, the number of cycle components is `o(D)`.
+Therefore almost half of all local through pairs can be selected vertex-disjointly.
+
+If `L_D` local through-pair flowers satisfy the hypotheses of the mixed-splice theorem,
+then
+
+\[
+\boxed{
+P_D\ge {L_D\over2}-o(D)
+}
+\tag{HM.1}
+\]
+
+matched splices can be selected.  The already-audited two-piece supertrain theorem
+then gives
+
+\[
+\boxed{
+{T_D^2\over4}-R_D
+\ge {L_D^2\over8}-o(D^2).
+}
+\tag{HM.2}
+
+For `M_D` full flowers with `C_D` complement terminal occurrences relative to the
+dominant orbit, the three-dominant local normal form supplies
+
+\[
+L_D\ge M_D-C_D/3-o(D),
+\]
+
+so
+
+\[
+\boxed{
+{T_D^2\over4}-R_D
+\ge {1\over8}
+\left(M_D-{C_D\over3}\right)_+^2-o(D^2).
+}
+\tag{HM.3}
+
+This is a factor `9/4` stronger than the prior `1/18` coefficient and is the natural
+matching constant for a degree-two splice system.
+
+---
+
+## 1. Oriented through edges preserve the phase lift
+
+For every selected local through pair, choose oriented contact representatives on its
+two stopped trains so that their positive train normals differ by at most
+
+\[
+\epsilon_D\to0
+\]
+
+uniformly over all selected flowers.  The connector joins an endpoint at which the
+first positive-normal train enters the face to an endpoint from which the second
+positive-normal train leaves.  Thus it gives a directed continuation
+
+\[
+\tau\longrightarrow\sigma.
+\]
+
+Flipping both oriented representatives reverses the same directed continuation; it
+does not turn a through connection into a U-turn.  In particular the relation between
+the two oriented projective lifts is preserving, not antipodal.
+
+A complete train has one tail terminal and one head terminal in its positive-normal
+orientation.  Hence in the directed splice graph every train vertex has
+
+\[
+\deg^+\le1,
+\qquad
+\deg^-\le1.
+\tag{HM.4}
+\]
+
+An underlying degree-two cycle is therefore a directed cycle after choosing one
+orientation around it.
+
+---
+
+## 2. A short directed splice cycle has impossible positive projection
+
+Consider a directed splice cycle with train vertices
+
+\[
+\tau_1,\ldots,\tau_\ell.
+\]
+
+Choose the oriented contact direction `u_1` on `tau_1`.  Propagate the oriented lift
+around the cycle using the through continuations.  Consecutive directions differ by at
+most `epsilon_D`, so before the cycle closes
+
+\[
+\angle(u_j,u_1)\le (j-1)\epsilon_D.
+\tag{HM.5}
+\]
+
+Suppose
+
+\[
+\ell\epsilon_D<\pi/12.
+\tag{HM.6}
+\]
+
+Then every train normal on the cycle lies within `pi/12` of
+
+\[
+n_1=Ju_1.
+\]
+
+Every elementary midpoint displacement on one stopped train lies within strictly
+`pi/6` of its own positive normal.  Therefore every train segment used in the directed
+cycle lies within
+
+\[
+\pi/6+\pi/12=\pi/4
+\]
+
+of `n_1` and has strictly positive `n_1` projection.
+
+The selected connector on each splice edge lies within
+
+\[
+\pi/6+\epsilon_D
+\]
+
+of the corresponding common positive normal, hence within `pi/4+o(1)` of `n_1` under
+(HM.6), and also has positive `n_1` projection for large `D`.
+
+Following the directed cycle therefore produces a closed polygonal curve every segment
+of which has strictly positive `n_1` projection.  Its total displacement would have
+positive `n_1` projection, contradicting closure.
+
+Hence every splice-graph cycle obeys
+
+\[
+\boxed{
+\ell\ge {\pi\over12\epsilon_D}.
+}
+\tag{HM.7}
+
+The argument is exactly why the local connectors had to be genuine through
+continuations rather than arbitrary chords of the pentagon.
+
+---
+
+## 3. There are only `o(D)` cycle components
+
+The stopped-train count is `O(D)` in the full-core Type-II branch; the exact finite
+bound `T_D<=3q=O(D)` is more than enough.  Distinct splice-graph cycle components are
+vertex-disjoint.  By (HM.7), if `c_D` is their number,
+
+\[
+c_D {\pi\over12\epsilon_D}\le T_D=O(D).
+\]
+
+Thus
+
+\[
+\boxed{c_D=O(\epsilon_DD)=o(D).}
+\tag{HM.8}
+\]
+
+No assertion that the splice graph is globally acyclic is made.  Long phase-winding
+cycles are permitted; there are simply too few of them to affect the leading matching
+density.
+
+---
+
+## 4. Maximum matching in paths and long cycles
+
+A loopless graph of maximum degree two is a disjoint union of paths, cycles, and
+parallel-edge two-vertex components.  A path with `e` edges has a matching of size at
+least `e/2`.  An even cycle has matching size exactly `e/2`; an odd cycle loses only
+`1/2` from that real-valued bound.  A parallel two-edge component has matching size
+one, again exactly half its edge count.
+
+Summing componentwise,
+
+\[
+P_D\ge {L_D\over2}-{c_D\over2}.
+\]
+
+Use (HM.8):
+
+\[
+P_D\ge {L_D\over2}-o(D),
+\]
+
+which is (HM.1).
+
+---
+
+## 5. Improved global train deficit
+
+The hostile-audited mixed-splice theorem applies to any matching of the local through
+pairs.  It gives
+
+\[
+{T_D^2\over4}-R_D
+\ge {P_D^2\over2}-o(D^2).
+\]
+
+Insert (HM.1):
+
+\[
+{P_D^2\over2}
+\ge {L_D^2\over8}-o(D^2),
+\]
+
+proving (HM.2).  Equation (HM.3) follows from the three-dominant allocation
+`L_D>=M_D-C_D/3-o(D)`.
+
+A coarse live-row consequence is now
+
+```text
+if L_D >= M_D/2:
+    global train deficit >= M_D^2/32-o(D^2);
+else:
+    >3M_D/4-o(D) distinct complement trains terminate on the flowers.
+```
+
+At `M_D>0.1327D-o(D)`, the first alternative gives a deficit above
+
+\[
+0.1327^2/32>0.0005502
+\]
+
+in normalized `D^2` units.
+
+The aggregate flower branch already has a larger unlocalized scalar deficit.  The
+value of (HM.2)--(HM.3) is that the deficit is generated by a linear family of actual
+through mechanisms, with an asymptotically optimal matching density, and remains valid
+without a common splice phase.
+
+**Disposition:** proved proof-only half-matching upgrade conditional on the stated
+oriented through-pair hypotheses.  C-II and Level I remain open.

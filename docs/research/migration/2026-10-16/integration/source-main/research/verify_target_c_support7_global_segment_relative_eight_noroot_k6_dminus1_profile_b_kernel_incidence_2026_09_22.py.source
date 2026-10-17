@@ -1,0 +1,48 @@
+#!/usr/bin/env python3
+"""Regression guard for the Profile B source-basis kernel-incidence filter.
+
+This checks the finite coordinate-plane endpoint used in the proof note. The
+linear-algebra proof that the seven six-row kernels are distinct is separate.
+"""
+
+from itertools import combinations
+
+N = 9
+PAIRS = tuple(combinations(range(N), 2))
+
+
+def pair_intersection_dimension(a, b):
+    """Dimension of span(e_i : i in a) intersect span(e_i : i in b)."""
+    return len(set(a) & set(b))
+
+
+# If the first puncture kernel K0 is not a coordinate line, two distinct
+# coordinate 2-planes cannot both contain K0: their intersection has dimension
+# at most one, and dimension one means that intersection is a coordinate line.
+for p, q in combinations(PAIRS, 2):
+    d = pair_intersection_dimension(p, q)
+    assert d in (0, 1)
+    if d == 1:
+        shared = tuple(set(p) & set(q))
+        assert len(shared) == 1
+
+# If K0 = span(e_a), the coordinate 2-planes through K0 are exactly
+# span(e_a,e_b), b != a, and their second labels are unique.
+for a in range(N):
+    through_a = tuple(p for p in PAIRS if a in p)
+    assert len(through_a) == N - 1
+    second = []
+    for p in through_a:
+        b = p[0] if p[1] == a else p[1]
+        second.append(b)
+    assert len(set(second)) == N - 1
+
+# Seven distinct six-row kernels therefore fit only these zero-class patterns:
+# (i) no source basis vector dies at the seven-row level: at most one child can
+#     kill two source basis vectors;
+# (ii) one source basis vector a dies at seven rows: every child kills a, and
+#      children that kill a second basis vector must use distinct second labels.
+assert 1 < 7
+assert N - 1 == 8
+
+print("profile_b_kernel_incidence_endpoint_ok")

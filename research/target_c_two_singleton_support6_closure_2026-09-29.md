@@ -1,0 +1,75 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e2c3ba0bbb093f6119a9e70de69c2cf238ef8373", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_two_singleton_support6_closure_2026-09-29.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "3441b05c2f08844c6a5865fd45cbc09775c0209cd6ce9f21f3f8adbffdcb8b44"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: exact exclusion of two-singleton support 6
+
+Date: 2026-09-29
+
+Support 6 in the committed thirteen-support narrowing is
+
+`[0123]^3 [0124] [0134] [0145]^2 [0234] [1234]`.
+
+This note records a complete orientation-level exclusion for that support in the nine-no-root `k=4, D=-1, d_root=0, p=2` two-selected-singleton profile.
+
+Companion verifier:
+
+`research/verify_target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_two_singleton_support6_seven_empty_obstruction_2026_09_29.py`
+
+## Structural lower bound on empty blocks
+
+For every orientation of this support, the touched block family `T` is support-determined and has
+
+`|T| = 13`, `rank H(T) = 8`.
+
+Let `C` be the touched actual-complete blocks, `S` the touched selected-singleton blocks, and `E` the touched actual-empty blocks. Because `d_root=0`, the triangle rows `H(C)` are independent, so `|C|=rank H(C)`. The established four-direction capacity condition gives
+
+`rank H(T) - rank H(C) >= 4`.
+
+Therefore `|C| <= 4`. Since at most two selected singletons lie in `T`,
+
+`|E| = 13 - |C| - |S| >= 13 - 4 - 2 = 7`.
+
+Thus every realizable state contains at least seven touched actual-empty blocks.
+
+## Exact seven-empty obstruction
+
+The triple tetrahedral support has a unique orientation choice, the double support has three choices, and the four multiplicity-one supports have three choices each. Hence there are exactly
+
+`3 * 3^4 = 243`
+
+raw orientation assignments.
+
+For each orientation, the verifier examines all `C(13,7)=1716` seven-block subsets, for a total of
+
+`243 * 1716 = 416,988`
+
+subsets.
+
+For a seven-block set `F`, let
+
+`U(F) = sum_{b in F} E_b`,
+
+where `E_b` is the integral local empty-block constraint space in the nine external coordinates supplied by the committed exact orientation model.
+
+If all seven blocks were actual-empty, then every `E_b` would lie in the actual aggregate constraint space `W`, which has dimension four. Thus realizability requires `rank_Q U(F) <= 4` for at least one seven-block subset.
+
+The verifier reduces the integral rows modulo 2. Reduction modulo 2 cannot increase rank, so
+
+`rank_F2 U(F) >= 5  =>  rank_Q U(F) >= 5`.
+
+The exact executed census is:
+
+- orientations: `243`;
+- seven-block subsets: `416,988`;
+- subsets with rank at least five modulo 2: `416,988`.
+
+There are no exceptional seven-block subsets. Therefore no rank-four aggregate space can contain the empty-block spaces of the at least seven actual-empty touched blocks required by the structural bound.
+
+Hence no orientation of support 6 is realizable.
+
+## Consequence
+
+The committed thirteen-support narrowing now has exact exclusions for supports 1, 2, 3, 4, 5, 6, and 12. The unresolved two-selected-singleton support orbits are supports 7, 8, 9, 10, 11, and 13: six support orbits.
+
+This closes support 6 only. It does not close the full two-singleton profile, the full `D=-1,p=2` branch, or Erdos Problem #99.

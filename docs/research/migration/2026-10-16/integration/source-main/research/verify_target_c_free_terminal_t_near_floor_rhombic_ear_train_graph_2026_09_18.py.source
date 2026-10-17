@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+"""Regression checks for the terminal near-floor rhombic ear/train graph note."""
+
+import math
+import random
+
+N0 = 0.4155508927753457501087997262559491
+SPLIT_SINGLETON = 0.1
+FULL_NEAR = N0 - 2.0 * SPLIT_SINGLETON
+EAR_MATCH = FULL_NEAR / 9.0
+TIGHTENABLE = EAR_MATCH / 2.0
+
+assert FULL_NEAR > 0.2155
+assert EAR_MATCH > 0.0239
+assert TIGHTENABLE > 0.0119
+
+# Exact local derivative identity.  Put u=(1,0), v=(cos(theta),sin(theta)),
+# d=u+v, du=alpha J u, dv=beta J v.  Then
+#   d/dt |d|^2 = 2 sin(theta) (alpha-beta).
+rng = random.Random(20260918)
+for _ in range(100_000):
+    theta = rng.uniform(1.0e-3, math.pi - 1.0e-3)
+    alpha = rng.uniform(-3.0, 3.0)
+    beta = rng.uniform(-3.0, 3.0)
+    u = (1.0, 0.0)
+    v = (math.cos(theta), math.sin(theta))
+    Ju = (0.0, 1.0)
+    Jv = (-math.sin(theta), math.cos(theta))
+    d = (u[0] + v[0], u[1] + v[1])
+    dd = (
+        alpha * Ju[0] + beta * Jv[0],
+        alpha * Ju[1] + beta * Jv[1],
+    )
+    lhs = 2.0 * (d[0] * dd[0] + d[1] * dd[1])
+    rhs = 2.0 * math.sin(theta) * (alpha - beta)
+    assert abs(lhs - rhs) < 1.0e-10
+
+# A maximum-degree-two multigraph is a union of paths and cycles.  Deleting one
+# edge from every cycle keeps at least half the edges even if two-edge parallel
+# cycles are allowed.
+for cycle_len in range(2, 100):
+    assert cycle_len - 1 >= cycle_len / 2.0
+
+print("terminal near-floor rhombic ear/train graph certificate passed")
+print(f"full_near_floor={FULL_NEAR:.15f}")
+print(f"ear_matching_floor={EAR_MATCH:.15f}")
+print(f"raw_tightenable_floor={TIGHTENABLE:.15f}")

@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+from fractions import Fraction as F
+
+# Parent t<=1.844 fan/center constants.
+A = F(1851, 2500)          # 0.7404 weighted center-degree average
+P = F(53, 625)             # 0.0848 retained smallest-leaf O-O pair weight
+N = F(1063, 1000)          # center-train count ceiling
+
+# Simple threshold / upper-phase quantile used in the theorem.
+lam = F(677, 1000)
+r = F(61, 125)             # 0.488
+
+# Exact good-leaf weight/count density.
+g = (A - lam) * P / (N - lam)
+
+# Every good leaf has at least d_top D neighbors in the top-r center block.
+# Once gamma is chosen in that block, every good leaf has at least d_low D
+# neighbors with center phase <= phase(gamma).
+d_top = lam - (1 - r) * N
+d_low = lam - r * N
+assert d_top > 0
+assert d_low > 0
+
+# Averaging over the top-r center block gives one center train whose good-leaf
+# crossing path has this normalized length.
+p = d_top * g / (r * N)
+assert p > F(3564, 10**6)
+
+# Outward elementary enclosures already used throughout the repo.
+pi_u = F(355, 113)
+sqrt3_u = F(17321, 10000)
+C_phase_u = pi_u * pi_u * sqrt3_u * (2 + sqrt3_u) / 12
+
+# At an internal backbone boundary i, combine three nonnegative costs:
+#   n_i                 = number of diameter rows whose interval starts/stops;
+#   D*b_i               = D times switching KKT multiplier mass;
+#   D*(q_i+q_{i+1})     = phase-offset cost of the adjacent leaf pair.
+# Their sums are bounded by 2*pi*D, 2D, and 2*C_phase/d_low * D.
+K = (2 * pi_u + 2 + 2 * C_phase_u / d_low) / p
+assert K < 21200
+
+print("g =", g, float(g))
+print("d_top =", d_top, float(d_top))
+print("d_low =", d_low, float(d_low))
+print("backbone density p =", p, float(p))
+print("C_phase upper =", C_phase_u, float(C_phase_u))
+print("combined adjacent-boundary constant K =", K, float(K))
+print("margin to 21200 =", F(21200) - K, float(F(21200) - K))
+print("PASS: one adjacent live O-O pair has switch-count, D*switch-weight, and D*phase-gap all < 21200+o(1)")

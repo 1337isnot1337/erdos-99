@@ -1,0 +1,154 @@
+# Target C: single-train collars have zero wall-refill surplus
+
+**Date:** 2026-10-05
+**Base main:** \`0351e2c529e01750f7aceb87f8f6f0cb9c21dea7\` (\`2026-10-05.audit.54\`)
+**Status:** proof-only Target C / C-II candidate; theorem-state authority unchanged.
+**Level I:** OPEN. **C-II:** OPEN.
+
+## 1. Statement
+
+Let \(F\) be a bounded physical pentagonal contact face and let \(\tau\) be a non-singleton stopped train terminating on a boundary edge \(e_0\) of \(F\). Let
+\[
+R_1,\dots,R_j
+\]
+be any finite prefix of consecutive bounded quadrilateral faces of \(\tau\), ordered away from \(F\), and put
+\[
+U_j=F\cup R_1\cup\cdots\cup R_j.
+\]
+Let \(C_j=\partial U_j\) be the outer unit-contact wall. Then
+\[
+\boxed{W_{C_j}=\varnothing},
+\qquad
+W_C=\{x\in\operatorname{int}C:|x-b|>1\text{ for every wall vertex }b\}.
+\]
+
+Thus a terminal pentagon plus an arbitrarily long one-cell-wide prefix of its train has zero wall-safe refill capacity. Long-train length alone cannot activate the audit.54 embedded-wall replacement theorem.
+
+## 2. Short unit polygons have no strict safe point
+
+### Lemma 2.1
+If \(P=(v_1,\ldots,v_n)\) is a simple polygon with \(n\le6\) and every side has length at most one, then
+\[
+\{x\in\operatorname{int}P:|x-v_i|>1\ \forall i\}=\varnothing.
+\]
+
+### Proof
+Assume such an \(x\) exists. Put \(r_i=|v_i-x|>1\), and let \(\theta_i\in(-\pi,\pi]\) be the principal oriented angle from \(v_i-x\) to \(v_{i+1}-x\). Winding gives
+\[
+\sum_i\theta_i=\pm2\pi.
+\]
+If \(a_i=|v_{i+1}-v_i|\le1\), the cosine law gives
+\[
+\cos|\theta_i|
+\ge
+\frac{r_i^2+r_{i+1}^2-1}{2r_ir_{i+1}}.
+\]
+Also
+\[
+r_i^2+r_{i+1}^2-r_ir_{i+1}-1
+=(r_i-r_{i+1})^2+r_ir_{i+1}-1>0,
+\]
+so \(\cos|\theta_i|>1/2\), hence \(|\theta_i|<\pi/3\). Therefore
+\[
+2\pi
+=\left|\sum_i\theta_i\right|
+\le\sum_i|\theta_i|
+<n\pi/3
+\le2\pi,
+\]
+a contradiction. \(\square\)
+
+The cutoff is sharp at the polygon level: the center of a regular unit heptagon is at radius \(1/(2\sin(\pi/7))>1\).
+
+## 3. A stopped-train prefix is an embedded one-cell strip
+
+Every bounded quadrilateral contact face is a strict unit rhombus. If \(\alpha\) is any rhombus angle, both diagonals are noncontacts and hence strictly longer than one, so
+\[
+\pi/3<\alpha<2\pi/3.
+\tag{3.1}
+\]
+
+Fix the projective train-edge direction \(u\). Choose the perpendicular unit vector \(n\) pointing from the terminal pentagon into \(R_1\). Let \(e_i\) be the successive train edges, with \(e_0\subset\partial F\), and let
+\[
+t_i=n\cdot m(e_i).
+\]
+Canonical stopped-train monotonicity gives
+\[
+t_0<t_1<\cdots<t_j.
+\tag{3.2}
+\]
+Every \(e_i\) is parallel to \(u\), so both endpoints of \(e_i\) lie on the level \(n\cdot x=t_i\). Hence every vertex of \(R_i\) lies on one of the two levels \(t_{i-1},t_i\).
+
+It follows that nonconsecutive rhombi in this prefix cannot share a vertex: a shared vertex would have to occur on a common train-edge level, contradicting (3.2). Consecutive rhombi share exactly their common train edge.
+
+The pentagon \(F\) is strictly convex. Since \(e_0\) is a supporting edge and \(n\) points outward across it, every other pentagon vertex satisfies
+\[
+n\cdot v<t_0.
+\]
+Every rhombus-prefix vertex has \(n\cdot v\ge t_0\), with equality only on \(e_0\). Thus no later rhombus has an additional vertex identification with \(F\).
+
+The straight-line contact embedding is planar, so distinct face interiors do not overlap. Therefore \(U_j\) is a polygonal disk formed by gluing one rhombus at a time along a full boundary train edge.
+
+## 4. Every cell vertex remains on the outer wall
+
+Nonshared vertices are on \(\partial U_j\). At an endpoint of a shared edge \(e_i\), \(1\le i<j\), the selected local interior angle is the sum of one angle from \(R_i\) and one from \(R_{i+1}\). By (3.1),
+\[
+\angle_{U_j}(v)<4\pi/3<2\pi,
+\]
+so the endpoint remains a boundary vertex.
+
+At an endpoint of \(e_0\), the selected local angle is one strictly convex pentagon angle plus one rhombus angle, hence
+\[
+\angle_{U_j}(v)<\pi+2\pi/3=5\pi/3<2\pi.
+\]
+Thus those endpoints also remain on the wall.
+
+Consequently
+\[
+\boxed{\text{every vertex of }F,R_1,\ldots,R_j\text{ is a wall vertex of }C_j.}
+\tag{4.1}
+\]
+The wall has \(5+2j\) unit edges, but the proof below does not use this count.
+
+## 5. Zero-capacity theorem
+
+Take \(x\in\operatorname{int}U_j\).
+
+If \(x\) lies in the interior of \(F\), Lemma 2.1 applied to the five unit sides of \(F\) gives a vertex \(v\in V(F)\) with \(|x-v|\le1\). By (4.1), \(v\) is a wall vertex.
+
+If \(x\) lies in the interior of a rhombus \(R_i\), Lemma 2.1 applied to its four unit sides gives a wall vertex \(v\in V(R_i)\) with \(|x-v|\le1\).
+
+If \(x\) lies on an internal shared train edge, it lies on a unit segment whose endpoints are wall vertices, so again it is within distance one of a wall vertex.
+
+These cases cover \(\operatorname{int}U_j\). Therefore
+\[
+\boxed{W_{C_j}=\varnothing.}
+\]
+
+The same argument excludes any old source point from the open collar. An old point in a constituent face interior would be at distance at most one from a face vertex. Unit separation forces equality if it is not already a violation, but equality would create an additional contact through the interior of a declared contact face. Hence
+\[
+\boxed{A\cap\operatorname{int}C_j=\varnothing,\qquad W_{C_j}=\varnothing.}
+\tag{5.1}
+\]
+For the audit.54 refill bookkeeping, the collar therefore has
+\[
+M_j-|S_j|=0-0=0.
+\]
+It cannot pay even one vertex of an actual diameter cover.
+
+## 6. Target C consequence
+
+Audit.54 gives macroscopically long trains with pairwise source-vertex-disjoint terminal pentagon walls. Enlarging one such pentagon only along its own train, for any finite number of rhombi, never creates a wall-safe site.
+
+A viable collective-wall activation theorem must therefore use genuinely two-dimensional structure. In particular it must do at least one of the following:
+
+1. include transverse train crossings so that some contact-cell vertices become interior to the composite wall;
+2. extract a width-at-least-two rhombic grain rather than a one-cell train strip;
+3. open or delete retained wall contacts before certifying replacement sites; or
+4. use a protected replacement region other than the canonical \(W_C\).
+
+This does not assert that width two is sufficient. The canonical large-wall-lock regression still applies. The theorem only removes the entire width-one train-collar mechanism.
+
+## 7. Classification
+
+This is a finite analytic obstruction. No computation, verifier, numerical experiment, or CI output is a proof premise. It is proof-only and noncanonical. C-II and Level I remain open.

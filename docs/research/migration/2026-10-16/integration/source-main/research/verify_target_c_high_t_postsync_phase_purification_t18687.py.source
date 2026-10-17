@@ -1,0 +1,74 @@
+#!/usr/bin/env python3
+"""Regression checks for post-synchronization phase purification."""
+
+from decimal import Decimal, getcontext
+from fractions import Fraction as Q
+import math
+
+getcontext().prec = 70
+D = Decimal
+
+a_sync = Q(113, 20_000_000)  # 5.65e-6
+b_plus = Q(1567, 10_000)      # 0.1567
+product = a_sync * b_plus
+assert product == Q(177071, 200_000_000_000)
+assert float(product) == 8.85355e-7
+
+# Illustrative 90% retention on each synchronized shore.
+eps = Q(1, 10)
+a90 = (1 - eps) * a_sync
+b90 = (1 - eps) * b_plus
+assert a90 == Q(1017, 200_000_000)  # 5.085e-6
+assert b90 == Q(14103, 100_000)      # 0.14103
+
+# Global angular-defect constant from the canonical budget.
+Cphase = math.pi**2 * math.sqrt(3.0) * (2.0 + math.sqrt(3.0)) / 12.0
+avg_coeff = Cphase / float(product)
+angle_coeff_90 = (1.0 + 2.0 / float(eps)) * avg_coeff
+assert 6.004e6 < avg_coeff < 6.006e6
+assert 1.260e8 < angle_coeff_90 < 1.262e8
+
+# Metric span inherited from the exact sqrt(3)/2 train-step lemma.
+c = math.sqrt(3.0) / 2.0
+row_span90 = c * float(b90)
+col_span90 = c * float(a90)
+assert 0.12213 < row_span90 < 0.12214
+assert 4.403e-6 < col_span90 < 4.405e-6
+
+# Synchronized strict-rhombus product after 90%/90% purification.
+product90 = float(a90 * b90)
+assert 7.1713e-7 < product90 < 7.1715e-7
+
+# Verify the parameterized Markov algebra on exact finite arrays. If
+# delta_ab = g + r_a + q_b with all terms nonnegative and lambda the product
+# average, retaining r_a <= lambda/eps and q_b <= lambda/eps loses at most an
+# eps fraction from either shore and every retained defect is <=(1+2/eps)lambda.
+for na in range(5, 13):
+    for nb in range(5, 13):
+        # Deterministic nonnegative test families with ties and nonuniform tails.
+        r = [Q((3*i*i + 2*i) % 17, 17) for i in range(na)]
+        q = [Q((5*j*j + j) % 19, 19) for j in range(nb)]
+        g = Q(1, 23)
+        lam = g + sum(r, Q(0))/na + sum(q, Q(0))/nb
+        for e in (Q(1,2), Q(1,3), Q(1,4), Q(1,5)):
+            A = [x for x in r if x <= lam/e]
+            B = [x for x in q if x <= lam/e]
+            # Markov only guarantees >=(1-e) fraction in real arithmetic.
+            assert len(A) * e.denominator >= na * (e.denominator - e.numerator)
+            assert len(B) * e.denominator >= nb * (e.denominator - e.numerator)
+            for x in A:
+                for y in B:
+                    assert g + x + y <= (1 + 2/e) * lam
+
+print('PASS: high-t post-synchronization phase purification regressions')
+print('synchronized row density =', float(a_sync))
+print('oriented column density =', float(b_plus))
+print('raw synchronized product =', float(product))
+print('C_phase =', Cphase)
+print('subproduct average-defect coefficient =', avg_coeff)
+print('90% row density =', float(a90))
+print('90% column density =', float(b90))
+print('90% angle-defect coefficient =', angle_coeff_90)
+print('90% row metric-span coefficient =', row_span90)
+print('90% column metric-span coefficient =', col_span90)
+print('90% grid product coefficient =', product90)

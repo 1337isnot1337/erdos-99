@@ -1,0 +1,154 @@
+# Hostile audit — support-seven ground projection reductions
+
+**Date:** 2026-09-19  
+**Audited source:** `research/target_c_support7_ground_semicircle_pairing_2026-09-19.md`  
+**Certificate:** `research/verify_target_c_ground_semicircle_pairing_2026_09_19.py`  
+**Verdict:** PASS at the stated ground-local scope  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The source makes two different claims and keeps their hypotheses separate:
+
+1. an open-semicircle pivot/matching obstruction, valid for any ground hull cone of width `<pi`;
+2. a stronger bisector-projection obstruction that additionally uses the `H6` bound `phi<2pi/3`.
+
+The second claim must not be transferred to `H7a` or `H8` without an independent `<2pi/3` ground-cone bound.
+
+## 1. Pairing sign check
+
+For minority `P` of size three and majority `M` of size four, equilibrium is
+
+\[
+\sum_{n\in P}u_n=\sum_{m\in M}u_m.
+\]
+
+Given a pivot `p in M` and a matching from `M\setminus{p}` to `P`, the source requires each matched majority index `m` to lie strictly between `p` and its minority partner `n`. Since all seven angles lie in an interval shorter than `pi`, this implies
+
+\[
+0<|\theta_m-\theta_p|<|\theta_n-\theta_p|<\pi.
+\]
+
+Cosine is strictly decreasing on this distance range, so
+
+\[
+(u_m-u_n)\cdot u_p>0.
+\]
+
+The unpaired term contributes `u_p\cdot u_p=1`. Hence the claimed contradiction has the correct strict sign.
+
+The verifier exhausts all subset/pivot/matching combinations. It finds exactly fourteen minority subsets admitting at least one valid certificate:
+
+```text
+123 124 125 127 134 135 137 157 167 357 367 457 467 567
+```
+
+Reflection `i -> 8-i` preserves this set and splits it into seven classes. The previously used `137/157` convex-H8 obstruction is one of them.
+
+## 2. H6 bisector normalization
+
+For `H6`, the prior endpoint theorem gives
+
+\[
+\phi=\theta_7-\theta_1<2\pi/3.
+\]
+
+With `beta=(theta_1+theta_7)/2` and `c=cos(phi/2)`, this gives the strict bound
+
+\[
+c>1/2.
+\]
+
+For every ordered ground ray,
+
+\[
+|\theta_i-\beta|\le\phi/2<\pi/3,
+\]
+
+so
+
+\[
+c_i=\cos(\theta_i-\beta)\in[c,1].
+\]
+
+As `theta_i` increases through the fixed bisector, `c_i` increases and then decreases. Thus the cosine sequence is unimodal; no convexity or equal-spacing assumption is used.
+
+After normalization
+
+\[
+y_i=(c_i-c)/(1-c),
+\]
+
+we have `y_1=y_7=0`, `0<=y_i<=1`, and the interior sequence remains unimodal.
+
+## 3. Layer-cake step
+
+For `s_i=+1` on the size-three class and `-1` on its complement,
+
+\[
+\sum_i s_i=-1.
+\]
+
+Therefore the signed bisector projection is exactly
+
+\[
+F=-c+(1-c)\sum_{i=2}^6 s_i y_i.
+\]
+
+The layer-cake identity
+
+\[
+y_i=\int_0^1 \mathbf 1_{\{y_i\ge t\}}\,dt
+\]
+
+is exact. Every nonempty superlevel set of a finite unimodal sequence is a contiguous block. Hence if every contiguous interior block `B subset {2,...,6}` has signed excess
+
+\[
+q(B)=\sum_{i\in B}s_i\le1,
+\]
+
+then
+
+\[
+\sum_{i=2}^6 s_i y_i
+=\int_0^1 q(B_t)\,dt
+\le1.
+\]
+
+Consequently
+
+\[
+F\le1-2c<0,
+\]
+
+which contradicts zero vector equilibrium after projection. The strictness comes only from `phi<2pi/3`; equality at `phi=2pi/3` is deliberately not claimed impossible by this argument.
+
+## 4. Finite census check
+
+The verifier evaluates the maximum signed excess over all contiguous blocks of `2,...,6` for all `35` minority subsets. Exactly eighteen satisfy `q_max<=1` and are killed by the H6 bisector argument.
+
+Ten of those eighteen were already among the fourteen semicircle-pairing exclusions. The eight new patterns are exactly
+
+```text
+126 136 146 147 246 247 257 267
+```
+
+so the union has
+
+\[
+14+18-10=22
+\]
+
+patterns. The exact complement is
+
+```text
+145 156 234 235 236 237 245 256 345 346 347 356 456
+```
+
+of size thirteen. The verifier checks reflection invariance of both the excluded and surviving sets.
+
+## 5. Scope guard
+
+The thirteen survivors are only survivors of two ground-local projection tests. No existence claim follows. They still have to satisfy the `C7` or `C3+C4` missing-graph structure, edge-sign consistency, all seven non-ground equilateral-pentagon closures, reciprocal order geometry, and the global Target C constraints.
+
+Conversely, the eight H6-specific exclusions cannot be reused for current `H8` just because some H8 minority patterns have the same index names; the needed ground width `<2pi/3` is absent there.
+
+No theorem-state file is changed. C-II remains open.

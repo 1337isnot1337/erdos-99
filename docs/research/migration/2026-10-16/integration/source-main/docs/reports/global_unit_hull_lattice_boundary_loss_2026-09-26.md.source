@@ -1,0 +1,1336 @@
+<!-- theorem-state: {"artifact_id":"ART-92B271B51BD8","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Erdős Problem #99 — boundary loss for an almost unit hull and a lattice interior
+
+**Date:** 2026-09-26
+**Base commit:** `53ab4cac73738c82f6291b41a7ec88a8577c5d55`
+**State version:** `2026-09-14.audit.51`
+**Run type:** source competitor / proof candidate
+**Target:** alternate global route; a restricted macroscopic-container source class
+**Classification:** proved candidate awaiting independent audit; unreviewed and noncanonical
+**Active prompt:** `docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md`
+**External literature:** none imported
+**Computation:** supplementary floating-point falsification; no computation is load-bearing
+
+## Level I status
+
+**STILL OPEN.** This report excludes a specified source class. It does not obtain
+either of the global quantifiers required for Level I closure.
+
+## 1. Starting endpoint and lane
+
+The canonical global problem is open. In particular, the macroscopic inactive
+population cannot be discarded while improving its old diameter-carrying core.
+The canonical regular-shell regression in shared theory §§13–14 shows that local
+optimality, KKT stress, and leading hexagonal density can coexist with a quadratic
+contact-isolated interior. It does not certify global optimality.
+
+Open PRs inspected before choosing this lane: #578 (an affine chart for the whole
+source), #579 (loaded-hull lattice-shadow obstruction), #581 (diameter cover and
+vacancy refill), #582 (fixed-index straightening regression), and the titles/scopes
+of #583–588 (harmonic outer-walk/cap charges). This argument allows every hull
+vertex to be a lattice-chart outlier. It counts missing *interior* chart sites and
+changes the index set of the competitor.
+
+```text
+almost unit hull + one near-exact lattice chart for almost all actual interior points
+    -> a positive linear deficit below area / (sqrt(3)/2)
+    -> translated triangular-lattice disk with the same cardinality and diameter < D
+    -> exclusion of this source class from global minimizers
+```
+
+The missing lattice sites are not vacant source sites. No simultaneous insertion
+into the old source is asserted or used.
+
+## 2. Main theorem
+
+Put
+
+\[
+a_0=\sqrt3/2,\qquad r_0=(1-a_0)/2,
+\qquad \mu_0=\frac\pi6-\frac{\sqrt3}4,
+\qquad \delta_0=2\mu_0=\frac\pi3-\frac{\sqrt3}2.
+\]
+
+Consider a sequence of finite unit-separated sources \(A_j\), of cardinalities
+\(n_j\), diameters \(D_j\to\infty\), and two-dimensional hulls \(K_j\).
+Assume:
+
+1. The actual source hull has perimeter \(P_j\), vertex count \(q_j\), and
+   **perimeter excess** \(P_j-q_j=o(D_j)\). Equivalently, the sum of
+   \(\ell_i-1\) over all hull sides is sublinear. All hull sides have length
+   at least one, by source separation. Write the vertices in cyclic order as
+   \(p_0,\ldots,p_{q_j-1}\). Exact unit sides are a special case; no side
+   is required to be an exact contact.
+2. After a translation,
+   \(D_j^{-1}K_j\to B(0,1/2)\) in Hausdorff distance.
+3. Apart from \(t_j=o(D_j)\) exceptional non-hull points, every actual interior
+   source point has an injective lattice shadow at distance
+   at most \(\epsilon_j\to0\), in one lattice
+   \(\Lambda_j=b_j+\lambda_j U_j\mathbb Z^2\). The columns of \(U_j\)
+   are unit vectors with angle in \([\pi/3,2\pi/3]\), and
+   \(1\le\lambda_j\le L\) for one fixed finite \(L\).
+
+Then
+
+\[
+\boxed{\liminf_j
+\frac{\pi D_j^2/(4a_0)-n_j}{D_j}
+\ge\frac{\pi\mu_0}{a_0}>0.}
+\tag{2.1}
+\]
+
+There is consequently a same-cardinality unit-separated triangular-lattice
+competitor, with unrestricted new indices, and
+
+\[
+\boxed{\liminf_j\bigl(D_j-D(n_j)\bigr)\ge\delta_0>0.}
+\tag{2.2}
+\]
+
+In particular, such a sequence cannot consist of global minimizers. Triangle
+freeness is not needed for this conclusion. Every contact-isolated source point
+is retained in the cardinality; an isolated point must have a shadow or be counted
+among the exceptional points.
+
+Here \(\delta_0=0.1811721474\ldots\) and
+\(\pi\mu_0/a_0=0.3286099257\ldots\). The positive constant is a strict-competitor margin for this class, not an
+improvement to a carrier coefficient. No effective threshold in \(D\) is claimed.
+
+## 3. Proof: geometry and counting
+
+The one-chart proof and its physical atlas extensions are given in full, including the equidistribution step that must not be
+replaced by an assumption of a generic translation. First, §§3.1–3.7 prove the
+result under the stronger condition that the total length of nonunit sides is
+\(o(D_j)\). Section 3.8 then proves the stated perimeter-excess version,
+including sources in which every hull side is slightly longer than one.
+
+### 3.1 Unit hull sides exclude a boundary layer of depth a_0
+
+Let \(x\in A_j\) be a non-hull point and let \(y\) be a closest point of
+\(\partial K_j\). If \(y\) is a vertex, then \(|x-y|\ge1\). Otherwise suppose
+\(y\) lies on a unit side with endpoints \(u,v\), and \(xy\) is perpendicular
+to that side. The closer endpoint is at distance at most
+
+\[
+\sqrt{\operatorname{dist}(x,\partial K_j)^2+1/4}.
+\]
+
+Unit separation therefore gives
+
+\[
+x\in (K_j)_{-a_0}
+=\bigcap_{\nu}\{x:x\cdot\nu\le h_{K_j}(\nu)-a_0\}.
+\tag{3.1}
+\]
+
+For each point satisfying (3.1), a lattice shadow lies in \((K_j)_{-(a_0-\epsilon_j)}\), by the
+same half-plane inequalities. No other source point can lie in the interior of
+a unit hull side, since its distance to a side endpoint would be less than one.
+If the closest boundary point instead lies on a nonunit side, an interior point
+with distance less than \(a_0\) lies in that side's radius-\(a_0\) capsule.
+Disjoint radius-\(1/2\) disks at these source points bound their number by
+\(C(\ell+1)\) for a side of length \(\ell\). Every nonunit side has
+\(\ell\ge1\), so summing gives \(O(P_{\rm bad})=o(D_j)\) exceptions,
+where \(P_{\rm bad}\) is the total nonunit side length. All other interior
+points satisfy (3.1). The uncharted \(t_j\) points are also retained explicitly
+in the count. A shadow is needed only for the remaining interior points.
+
+### 3.2 Consequences of the normalized disk limit
+
+Write \(R_j=D_j/2\) and let \(\phi_i\) denote exterior turning angles.
+Hausdorff convergence of convex bodies gives uniform convergence of support
+functions, so \(h_{K_j}/R_j\to1\). The following consequences are uniform:
+
+\[
+q_j=\operatorname{per}(K_j)+o(R_j)=2\pi R_j+o(R_j),
+\qquad \max_i\phi_i\to0.
+\tag{3.2}
+\]
+
+Here is a direct verification. Between successive edge-normal directions the
+support function is the scalar product with one vertex, hence satisfies
+\(h''+h=0\). At an edge normal its derivative has an upward jump equal to that
+edge's length. In distributional notation,
+
+\[
+h+h''=\sum_i |p_{i+1}-p_i|\,\delta_{\nu_i}
+=\sum_i\ell_i\delta_{\nu_i}.
+\tag{3.3}
+\]
+
+Pairing with the constant function gives \(P_j=\int h=2\pi R_j+o(R_j)\).
+Since the nonunit side count is at most \(P_{\rm bad}\), we have
+\(q_j=P_j-P_{\rm bad}+\#\{\text{nonunit sides}\}=P_j+o(D_j)\).
+Pairing with a smooth periodic test function \(f\) gives
+
+\[
+\frac1{P_j}\sum_i \ell_i f(\nu_i)
+=\frac1{P_j}\int h(f+f'')
+\longrightarrow \frac1{2\pi}\int f.
+\tag{3.4}
+\]
+
+Approximation extends (3.4) to every continuous test function. The nonunit edges have total weight \(o(P_j)\). Thus the unit edge
+directions, counted once each, are asymptotically uniformly distributed in angle. If a vertex had
+an exterior angle bounded below, a convergent subsequence of its normalized
+position and two incident support normals would give two distinct normals at
+one boundary point of the limit disk. A disk has a unique normal there. This
+proves the second assertion of (3.2).
+
+For fixed bounded \(s\ge0\), all offset sides remain nonempty for large \(j\):
+their lengths are
+\(\ell_i-s(\tan(\phi_i/2)+\tan(\phi_{i+1}/2))\), with \(\ell_i\ge1\).
+Consequently the elementary polygon-offset formula gives
+
+\[
+\operatorname{area}((K_j)_{-s})
+=\operatorname{area}(K_j)-s P_j+s^2\sum_i\tan(\phi_i/2)
+=\operatorname{area}(K_j)-s P_j+O(1).
+\tag{3.5}
+\]
+
+To obtain the formula, the perimeter after offset \(s\) is
+\(P_j-2s\sum\tan(\phi_i/2)\); integrating this perimeter from zero to \(s\)
+subtracts the swept area. The sum of tangents tends to \(\pi\), since
+\(\sum\phi_i=2\pi\) and \(\max\phi_i\to0\).
+
+### 3.3 A lattice count with an o(D) boundary error
+
+For the compact family of lattices in the theorem, and any convex regions
+\(Q_j\) with the same normalized disk limit, put
+\(a_j=\lambda_j^2\sin\theta_j\ge a_0\). Then
+
+\[
+\#(\Lambda_j\cap Q_j)
+\le \operatorname{area}(Q_j)/a_j+o(D_j).
+\tag{3.6}
+\]
+
+This requires more than the usual cell-cover \(O(D)\) error. Let
+\(H_j=\operatorname{conv}(\Lambda_j\cap Q_j)\), and let \(B_j\) be the number
+of lattice sites on its boundary. Covering radii are uniformly bounded. The regions \(Q_j\) contain disks of
+radius \(D_j/2-o(D_j)\). Taking nearest lattice sites to points in a fixed
+constant erosion of these disks shows that \(H_j/D_j\) has the same disk limit. In particular its longest side is \(o(D_j)\): a side of
+linear length would converge to a nontrivial straight segment on a disk boundary.
+
+Write each oriented hull side as a positive integer multiple of a primitive
+lattice vector. Primitive vectors of length at least \(M\) contribute at most
+\(\operatorname{per}(H_j)/M=O(D_j/M)\) to \(B_j\). For fixed \(M\) there are
+uniformly finitely many shorter primitive vectors, because the lattice matrices
+and their inverses are bounded. Each direction occurs on at most one oriented
+hull side, contributes \(o(D_j)\), and the shortest lattice vector has length
+at least one. First let \(j\to\infty\), then \(M\to\infty\). This proves
+\(B_j=o(D_j)\).
+
+Triangulate \(H_j\) using all its lattice sites as vertices. If there are \(I_j\)
+interior sites, Euler's formula gives \(2I_j+B_j-2\) triangles. A nondegenerate
+lattice triangle has area at least \(a_j/2\), by its integer determinant. Thus
+\(\operatorname{area}(H_j)/a_j\ge I_j+B_j/2-1\), and
+\(I_j+B_j\le\operatorname{area}(Q_j)/a_j+B_j/2+1\). This proves (3.6).
+
+The assertion about the shortest vector follows directly from
+\(m^2+n^2+2mn\cos\theta\ge m^2+n^2-|mn|\ge1\) for nonzero integer
+\((m,n)\), and multiplication by \(\lambda_j\ge1\).
+
+### 3.4 An inward trace is uniformly equidistributed modulo the lattice
+
+At \(p_i\), choose the outward unit normal \(N_i\) bisecting its normal cone.
+Put
+
+\[
+t_0=(1+a_0)/2,\qquad z_i=p_i-t_0N_i.
+\]
+
+For every fixed \(0<r<r_0\), uniformly over the allowed lattice translations,
+rotations, angles, and scales,
+
+\[
+\frac1{q_j}\sum_i\#(\Lambda_j\cap B(z_i,r))
+=\frac{\pi r^2}{a_j}+o(1).
+\tag{3.7}
+\]
+
+The balls are open. Their radius is less than \(1/2\), so each contains at most
+one lattice point. The conclusion includes adversarial translations.
+
+Here is a proof of (3.7). Write the lattice as \(b_j+M_j\mathbb Z^2\).
+For a nonzero integer vector \(m\), its physical character frequency is
+\(k_j=M_j^{-T}m\). It stays in a compact set separated from zero. To prove
+equidistribution, it suffices to show
+
+\[
+\frac1{q_j}\sum_i
+e^{2\pi i k_j\cdot(z_i-b_j)}\longrightarrow0.
+\tag{3.8}
+\]
+
+Pass to any subsequence on which \(k_j\to k\ne0\). For each fixed integer
+\(h>0\), small exterior angles imply, outside at most \(h\) times the nonunit side count
+(which is \(o(q_j)\)),
+
+\[
+z_{i+h}-z_i=h u_i+o(1),\qquad u_i=p_{i+1}-p_i.
+\tag{3.9}
+\]
+
+Indices are cyclic. On these good index windows every intervening edge is unit.
+Their directions differ by at
+most \(h\max\phi_i\), and the normal difference tends to zero. By (3.4), the
+character correlation tends to
+
+\[
+C_h=\frac1{2\pi}\int_0^{2\pi}
+e^{2\pi i h k\cdot(\cos v,\sin v)}\,dv.
+\tag{3.10}
+\]
+
+Moreover \(C_h\to0\) as \(h\to\infty\). To verify this without a Bessel
+asymptotic, rotate \(k\) to the horizontal axis. Remove arcs of angular width
+\(\eta\) around the two zeros of the phase derivative. Their contribution is
+\(O(\eta)\). Integration by parts on the remaining arcs bounds their
+contribution by \(O((h|k|\eta^2)^{-1})\). Choosing \(\eta=h^{-1/3}\) proves
+convergence to zero.
+
+For unit-modulus cyclic numbers \(w_i\), averaging the \(H\) cyclic shifts and
+applying Cauchy–Schwarz gives the exact inequality
+
+\[
+\left|q^{-1}\sum_i w_i\right|^2
+\le\frac1H+\frac2{H^2}\sum_{h=1}^{H-1}(H-h)
+\operatorname{Re}\left(q^{-1}\sum_i w_{i+h}\overline{w_i}\right).
+\tag{3.11}
+\]
+
+Apply it to the characters in (3.8), take \(j\to\infty\), and bound real parts
+by \(|C_h|\). The omitted index windows contribute \(o(1)\) for each fixed
+\(h\), because their character correlations have modulus at most one. The right side tends to zero as \(H\to\infty\), since the
+Cesàro average of \(|C_h|\) tends to zero. This proves (3.8). Translations
+only multiply the character by a unit complex number; they never change this
+bound.
+
+Trigonometric polynomial approximation now proves convergence against continuous
+functions on the lattice torus. The indicator of a radius-\(r\) ball modulo a
+lattice has mean \(\pi r^2/a_j\) and boundary of zero torus area. Continuous
+inner and outer approximations therefore give (3.7). Uniformity for varying
+lattice matrices follows by compactness: extract \(M_j\to M\); in a fixed
+fundamental square the corresponding ellipses can be sandwiched between the
+limit ellipses with radii \(r\pm\eta\). Only finitely many lattice translates
+meet this square, and the annular area tends to zero with \(\eta\). Thus a
+purported failure of uniformity would contradict the subsequence proof above.
+
+### 3.5 These sites are excluded, distinct, and inside the counted region
+
+For fixed \(r<r_0\) and large \(j\),
+
+\[
+B(z_i,r)\subset (K_j)_{-(a_0-\epsilon_j)},
+\qquad B(z_i,r+\epsilon_j)\subset B(p_i,1).
+\tag{3.12}
+\]
+
+The second inclusion follows from \(t_0+r<1\). For the first, the support-line
+clearance of \(z_i\) is at least \(t_0-o(1)\). To check this uniformly, consider
+any support line with normal \(\nu\). Its clearance equals
+
+\[
+h_{K_j}(\nu)-p_i\cdot\nu+t_0N_i\cdot\nu.
+\]
+
+The first term is nonnegative. Along any subsequence on which \(\nu-N_i\to0\),
+the last term tends to \(t_0\). If the two normals instead remain separated,
+normalize by \(R_j\) and use the disk limit: the first term has a positive
+linear lower bound, since both vertex position and its normal converge to the
+same point/direction on a circle. These alternatives prove the asserted
+clearance. Since \(t_0-r>a_0\), (3.12) follows.
+
+The target balls are disjoint for large \(j\). Otherwise two centers would be
+within \(2r\), and their original vertices would be at bounded distance. In the
+normalized disk limit their positions coincide, hence their outward normals
+converge to the same normal. It follows that
+\(|z_i-z_l|\ge|p_i-p_l|-o(1)\ge1-o(1)>2r\), a contradiction.
+
+A lattice site in one of these balls cannot be the shadow of an actual interior
+source point. Such a source point would, by (3.12), lie at distance less than one
+from \(p_i\). Thus (3.7) provides
+
+\[
+M_j=q_j\pi r^2/a_j+o(D_j)
+\tag{3.13}
+\]
+
+distinct missing sites inside the very same offset region used in (3.6).
+
+### 3.6 Population deficit and a genuine strict competitor
+
+Apply (3.5), (3.6), and (3.13) to the injective shadows of the covered interior
+points. The points near nonunit sides contribute \(o(D_j)\), and all uncharted
+points contribute \(t_j\):
+
+\[
+n_j\le q_j+t_j+
+\frac{\operatorname{area}(K_j)-a_0P_j-q_j\pi r^2}{a_j}+o(D_j).
+\tag{3.14}
+\]
+
+The numerator is positive for large \(j\), because area is quadratic and
+\(q_j\) is linear. Since \(a_j\ge a_0\), replacing its denominator by \(a_0\), using
+\(q_j\le P_j\), and retaining \(t_j=o(D_j)\) gives
+
+\[
+n_j\le\operatorname{area}(K_j)/a_0-q_j\pi r^2/a_0+o(D_j)
+\le\frac{\pi D_j^2}{4a_0}-\frac{\pi^2r^2}{a_0}D_j+o(D_j).
+\tag{3.15}
+\]
+
+The last step uses the Euclidean isodiametric inequality and (3.2). Let
+\(r\uparrow r_0\) *after* taking the lower limit. This proves the preliminary ball version of (2.1), with coefficient
+\(\pi^2r_0^2/a_0\), without
+assuming a convergence rate for roundness, chart error, or turning angles.
+
+For completeness, average translations of the unit triangular lattice in a disk
+of radius \(\rho=\sqrt{a_0 n_j/\pi}\). The mean number of sites is exactly
+\(\pi\rho^2/a_0=n_j\). Some translation therefore contains at least \(n_j\)
+sites. Select any \(n_j\) of them. Every separation is at least one and their
+diameter is at most \(2\rho\). The theorem has thus constructed a competitor
+with the full source cardinality. No old diameter constraint has to survive.
+
+This preliminary estimate implies
+
+\[
+2\sqrt{a_0n_j/\pi}\le D_j-2\pi r_0^2+o(1).
+\]
+
+One can avoid manipulating the lower-limit error by using (3.15) for each fixed
+\(r<r_0\) first and then increasing \(r\). This first proves a strict gap of \(2\pi r_0^2\). The next subsection proves
+the stronger constants stated in (2.1)–(2.2).
+
+### 3.7 The full scalloped strip gives the stated stronger gap
+
+The inward balls deliberately count only a small portion of the missing strip.
+One can count almost all of that strip, without assuming a favorable lattice
+phase, by strengthening §3.4 to **joint** equidistribution of side-center phase
+and side direction.
+
+For each unit side write \(c_i=(p_i+p_{i+1})/2\), let \(u_i\) be its directed
+unit tangent, and let \(\nu_i\) be its outward normal. For every continuous
+function \(g\) on the direction circle and every nonzero lattice character,
+
+\[
+q_j^{-1}\sum_{i:\ell_i=1}g(u_i)
+ e^{2\pi i k_j\cdot(c_i-b_j)}\longrightarrow0.
+\tag{3.16}
+\]
+
+To prove it, apply (3.11) to
+\(w_i=g(u_i)e^{2\pi i k_j\cdot(c_i-b_j)}\), with zero values at nonunit
+sides. The same identity holds for these bounded, not necessarily unit-modulus,
+values, with diagonal term \(H^{-1}q_j^{-1}\sum|w_i|^2\).
+Outside \(o(q_j)\) bad windows, for each fixed h,
+\(c_{i+h}-c_i=h u_i+o(1)\) and \(g(u_{i+h})-g(u_i)=o(1)\).
+The correlation therefore tends to
+
+\[
+(2\pi)^{-1}\int |g(u(v))|^2 e^{2\pi i h k\cdot u(v)}\,dv.
+\]
+
+This tends to zero as h tends to infinity. Approximate the continuous weight
+\(|g|^2\) uniformly by a smooth weight, then use the integration-by-parts
+argument in §3.4. The diagonal term tends to zero as H increases. This proves
+(3.16). For the zero character, (3.4) supplies the uniform direction marginal.
+Trigonometric polynomial approximation on the product torus consequently proves
+that side-center phase and direction converge jointly to Haar measure on the
+lattice torus times uniform angular measure. Lattice matrices can vary in the
+same compact family; the subsequence and boundary-sandwich argument of §3.4
+still applies. The fact that c_i itself has size D does not require a bound on
+(M_j-M)c_i: all character estimates used the actual frequency k_j and the
+bounded fixed-h differences, not the absolute phases.
+
+For fixed \(\eta>0\), sufficiently small, use the following open patch in
+side coordinates, with positive y pointing inward:
+
+\[
+F_\eta=\left\{(s,y): |s|<\tfrac12-\eta,\quad
+ a_0+\eta<y<\sqrt{1-(\tfrac12-|s|)^2}-\eta\right\}.
+\tag{3.17}
+\]
+
+Empty vertical intervals contribute nothing. Place it at each unit side as
+\(c_i+s u_i-y\nu_i\). Its area tends, as \(\eta\downarrow0\), to
+
+\[
+\begin{aligned}
+\mu_0
+&=2\int_0^{1/2}(\sqrt{1-v^2}-a_0)\,dv\\
+&=\frac{\sqrt3}4+\frac\pi6-a_0
+=\frac\pi6-\frac{\sqrt3}4.
+\end{aligned}
+\tag{3.18}
+\]
+
+For fixed eta these patches have the following three properties for large j:
+
+1. They lie in \((K_j)_{-(a_0-\epsilon_j)}\). For a support normal approaching
+   \(\nu_i\), the clearance of a patch point is at least \(y-o(1)>a_0\):
+   the tangential correction is \(o(1)\). If that normal stays separated, the
+   disk limit gives a positive linear support gap, as in §3.5. This proves the
+   inclusion uniformly over the entire patch.
+2. Every patch point, and every point within \(\epsilon_j\) of it, is less
+   than one from one side endpoint. Its squared distance to the closer endpoint
+   is \((1/2-|s|)^2+y^2\). The upper bound on y makes this at most
+   \(1-2a_0\eta+\eta^2<1\). A fixed eta therefore leaves a uniform positive
+   margin for the chart error.
+3. Distinct patches are disjoint. If two patches intersect, their side centers
+   have bounded distance. Their normalized positions then coincide on the
+   disk, and their outward normals approach the same normal. On the shorter
+   boundary-normal interval joining them, all tangents approach one direction.
+   Their center displacement in that tangent direction is
+   \(\ell_i/2+\sum\ell_k+\ell_l/2+o(1)\ge1-o(1)\); bounded center distance
+   bounds that intermediate arc length, since its tangents are almost parallel.
+   The two patch tangent intervals have total width \(1-2\eta\), and their
+   bounded inward depths change the tangent projections by \(o(1)\).
+   They cannot intersect. This also handles unit sides separated by nonunit
+   sides; each intermediate side has length at least one.
+
+The function that counts lattice sites in an oriented translated \(F_\eta\)
+is periodic in the center phase, uniformly bounded, and has a discontinuity
+set of zero measure on the product torus. Its boundaries are finitely many
+line/circle arcs. At every fixed orientation its mean over lattice translations
+is \(\operatorname{area}(F_\eta)/a_j\). Joint equidistribution therefore gives
+
+\[
+M_j=q_j\operatorname{area}(F_\eta)/a_j+o(D_j)
+\tag{3.19}
+\]
+
+distinct lattice sites, inside the counted erosion, that cannot be shadows of
+source points. Indicator approximation and uniformity for varying lattice
+matrices follow by the same compact-family argument as (3.7); rotated patch
+boundaries still have zero area. This step counts actual excluded chart sites,
+not a virtual determinant or an average over replacement sources.
+
+Replace \(\pi r^2\) by \(\operatorname{area}(F_\eta)\) in (3.14)–(3.15).
+First take j to infinity for fixed eta, then let eta decrease to zero. The
+result is
+
+\[
+\liminf\frac{\pi D_j^2/(4a_0)-n_j}{D_j}
+\ge\frac{\pi\mu_0}{a_0}.
+\]
+
+Translation averaging of the independent triangular-lattice disk now gives
+\(\liminf(D_j-D(n_j))\ge2\mu_0\), exactly (2.1)–(2.2). All pairwise
+separations and the cardinality are verified by the disk construction in §3.6.
+
+### 3.8 Perimeter excess suffices; exact unit sides are unnecessary
+
+Write \(E_j=P_j-q_j=\sum_i(\ell_i-1)=o(D_j)\). Fix a small \(\alpha>0\).
+Call a side good if \(1\le\ell_i\le1+\alpha\). The remaining sides have total
+length at most \((1+1/\alpha)E_j=o(D_j)\). Points within a bounded-width strip
+at these sides contribute \(o(D_j)\), by the capsule packing count in §3.1.
+
+For a good side, the closest-endpoint estimate gives an interior point's
+boundary clearance at least \(\sqrt{1-\ell_i^2/4}\). For \(1\le\ell\le2\),
+
+\[
+\sqrt{1-\ell^2/4}\ge a_0(2-\ell),
+\]
+
+because the difference of the squares is \((\ell-1)(2-\ell)\ge0\).
+Thus all other covered source points have shadows in
+\((K_j)_{-(a_0(1-\alpha)-\epsilon_j)}\). Formula (3.5) is valid: every original
+side still has length at least one and every turn tends to zero.
+
+The joint phase/direction argument remains valid with nonunit edge lengths.
+The difference between length-weighted and vertex-counted direction measures
+is bounded by \(E_j/q_j=o(1)\). For each fixed h the following averaged error
+bound replaces the uniform good-window estimate:
+
+\[
+q_j^{-1}\sum_i|c_{i+h}-c_i-h u_i|
+\le h E_j/q_j+C h^2(\max\phi_i)P_j/q_j=o(1),
+\tag{3.20}
+\]
+
+where now \(u_i=(p_{i+1}-p_i)/\ell_i\). To verify it, express the center
+increment as half the first and last edge vector plus the full intervening
+edge vectors. Their lengths differ from one by nonnegative amounts; each
+length excess is counted h times in the sum over i. Their directions differ
+from u_i by at most \((h+1)\max\phi_i\). This yields (3.20), with an absolute
+constant. Continuous direction weights vary by o(1), and the character map
+is Lipschitz at a fixed bounded frequency. These facts suffice for every
+correlation limit in (3.16), hence for joint equidistribution.
+
+Fix a patch parameter \(\eta>0\), then take alpha sufficiently small relative
+to eta, for example \(\alpha< a_0\eta/2\). Place the same reference patch
+\(F_\eta\) at each good side's midpoint. Its closer endpoint has tangential
+distance \(\ell_i/2-|s|\), rather than \(1/2-|s|\). The squared-distance
+increase is at most \(\alpha/2+\alpha^2/4\), whereas the original exclusion
+margin is at least \(2a_0\eta-\eta^2\). Thus each patch and its vanishing
+chart-error neighborhood remain inside one endpoint's open unit disk.
+The support-clearance and disjointness proofs in §3.7 are unchanged: good
+side lengths are at least one, and the reference tangent width is still
+\(1-2\eta\). The patches lie inside the erosion being counted. Omitting the
+bad sides removes only o(D) uniformly bounded lattice counts. Consequently
+(3.19) still holds.
+
+Counting the covered shadows, the uncharted points, and the o(D) points near
+bad sides gives
+
+\[
+\begin{aligned}
+n_j
+&\le q_j+t_j+
+ \frac{\operatorname{area}(K_j)-a_0(1-\alpha)P_j
+       -q_j\operatorname{area}(F_\eta)}{a_j}+o(D_j)\\
+&\le \operatorname{area}(K_j)/a_0+\alpha P_j
+       -q_j\operatorname{area}(F_\eta)/a_0+t_j+o(D_j).
+\end{aligned}
+\tag{3.21}
+\]
+
+The second line uses positivity of the quadratic numerator, \(a_j\ge a_0\),
+and \(q_j\le P_j\). Therefore
+
+\[
+\liminf\frac{\pi D_j^2/(4a_0)-n_j+t_j}{D_j}
+\ge\frac{\pi\operatorname{area}(F_\eta)}{a_0}-\pi\alpha.
+\]
+
+For each fixed eta let alpha decrease to zero after j tends to infinity. Then
+let eta decrease to zero. This proves the exact constants of (2.1) and (2.2)
+under the perimeter-excess hypothesis, and also proves the exception allowance
+in §4.1. There is no exchange of an uncontrolled convergence rate with D.
+
+## 4. Application to actual global minimizers
+
+The disk-limit hypothesis holds for actual global minimizers by the canonical
+source-roundness and Oler inputs, without a stress or core-population hypothesis.
+Here is the precise dependency chain:
+
+1. Triangular-lattice translation averaging gives
+   \(n\ge\pi D(n)^2/(4a_0)\). The non-strict version suffices.
+2. Canonical shared theory Lemma 21.1 and perimeter \(\le\pi D\) give
+   \(\operatorname{area}(K)\ge\pi D^2/4-O(D)\).
+3. Canonical ambient-force module §1 explicitly records the *full source* bound
+   \(K\subset B(0,D/2+3^{1/4}\sqrt D)\). It does not require the extra
+   smaller-optimum embedding hypothesis of its Target A source.
+4. These two bounds force \(K/D\to B(0,1/2)\). Otherwise a support line would
+   omit a fixed positive-area disk cap after normalization, contradicting the
+   area lower bound. Compactness supplies such a cap along any nonconvergent
+   subsequence.
+
+Hence, for every fixed \(L\), there cannot be global minimizers of unbounded
+cardinality whose hull perimeter excess \(P-q\) is \(o(D)\), and whose actual interior
+admits the specified chart with error tending to zero apart from \(o(D)\)
+exceptional points. This statement concerns the actual
+source, including isolated points, rather than its harmonic carrier.
+
+The bounded-scale restriction is harmless if one wants to apply the corollary
+to charts initially allowed arbitrary inflation: if \(\lambda_j\to\infty\),
+disjoint radius-\(\lambda_j/2\) disks at the interior lattice shadows bound
+their number by \(O((D_j/\lambda_j+1)^2)\). Hull vertices and uncharted exceptions number \(O(D_j)\).
+This contradicts the required quadratic source population. Thus a subsequence
+of global minimizers has bounded inflation, or is already impossible by this
+coarse count.
+
+Regular unit polygons with the canonical lattice fillings satisfy these
+hypotheses, as do arbitrary unit-sided near-round convex hulls. Unlike the
+canonical leading-density construction, this theorem pays an explicit
+boundary-order loss and proves a strict diameter comparison.
+
+### 4.1 A quantified allowance for uncharted interior points
+
+The same proof retains an arbitrary exceptional population \(t_j\) in (3.14).
+For each fixed \(\eta>0\), replace the coefficient in the next display by
+\(\pi\operatorname{area}(F_\eta)/a_0\); then let eta decrease to zero:
+
+\[
+\liminf_j\frac{\pi D_j^2/(4a_0)-n_j+t_j}{D_j}
+\ge\frac{\pi\mu_0}{a_0}.
+\tag{4.1}
+\]
+
+If \(\limsup t_j/D_j\le\tau<\pi\mu_0/a_0\), it follows that
+
+\[
+\liminf\bigl(D_j-D(n_j)\bigr)
+\ge 2\mu_0-\frac{2a_0}{\pi}\tau>0.
+\tag{4.2}
+\]
+
+Thus the chart need not cover every interior point, or even all but a sublinear
+number: a small linear exception budget is permitted. A source with a larger
+uncharted or interface population is not excluded by this argument.
+
+For sources subject to fixed roundness and exception moduli tending to zero,
+the theorem also implies existence of fixed positive tolerances for hull
+perimeter-excess fraction and chart displacement, with strict gap at least
+\(\delta_0/2\) once D is large. Otherwise diagonal choices with both
+tolerances tending to zero would contradict (2.2). No numerical tolerance or
+effective diameter threshold is claimed.
+
+### 4.2 A necessary interior-outlier population for actual minimizers
+
+The chart is allowed to cover any subset of the actual non-hull points. Put t_j
+equal to the number it misses, with no size restriction. The argument leading
+to (4.1) still applies. For global minimizers, translated-lattice averaging gives
+\(n_j\ge\pi D_j^2/(4a_0)\). Consequently
+
+\[
+\boxed{\liminf_j\frac{t_j}{D_j}\ge
+\frac{\pi\mu_0}{a_0}=0.3286099257\ldots.}
+\tag{4.3}
+\]
+
+This holds for every allowed sequence of near-exact charts when the actual hull
+perimeter excess is o(D). It concerns *interior* outliers, even though all hull
+vertices were already allowed to be outliers. It does not infer quadratic
+outlier population or a payment of these outliers into canonical detour currency.
+
+### 4.3 Two physical grains separated by one straight interface
+
+The mechanism extends to two genuinely different interior charts, provided the
+actual source is partitioned by one straight cut. This is an additional proved
+candidate, not an assumption that a canonical grain admits such a partition.
+
+Retain the source hull and roundness hypotheses of §2. A line splits the hull
+into two regions. Its normalized offset converges to a value strictly between
+-1/2 and 1/2, so both limiting regions have positive area. Let L_j be its chord
+length in K_j. Apart from t_j exceptions, the actual non-hull source points on
+each side have an o(1)-error injective chart in a lattice of the same compact
+family, independently on the two sides. Then
+
+\[
+\boxed{\liminf_j
+\frac{\pi D_j^2/(4a_0)-n_j+L_j+t_j}{D_j}
+\ge \frac{\pi\mu_0}{a_0}.}
+\tag{4.4}
+\]
+
+If \(\limsup(L_j+t_j)/D_j\le\tau<\pi\mu_0/a_0\), there is a same-cardinality
+strict competitor with
+
+\[
+\liminf(D_j-D(n_j))\ge2\mu_0-(2a_0/\pi)\tau>0.
+\tag{4.5}
+\]
+
+The implication chain is
+
+```text
+actual two-chart partition + small physical cut/interface length
+    -> inward forbidden-site payment minus the exact linear cut charge
+    -> positive full-source population deficit
+    -> strict same-cardinality triangular-lattice competitor
+```
+
+Proof. Fix the small parameters alpha and eta used in §3.8. Covered source
+points away from bad sides lie in the erosion
+\(Q=(K_j)_{-(a_0(1-\alpha)-\epsilon_j)}\). Their lattice shadows lie in the two
+cut half-planes enlarged by epsilon. Denote the resulting two convex regions by
+Q_+ and Q_-. Their overlap has area o(D), and
+\(\operatorname{area}(Q_+)+\operatorname{area}(Q_-)=\operatorname{area}(Q)+o(D)\).
+The cut chords of these regions have length \(L_j+o(D_j)\), since a bounded
+erosion or o(1) line displacement changes a transverse macroscopic chord by o(D).
+
+For either lattice, let H be the lattice-site hull in its cut region. Its
+normalized limit is a circular segment, with exactly one straight boundary
+segment, namely the limiting cut chord. The lattice boundary count satisfies
+
+\[
+B(H)\le L_j+o(D_j).
+\tag{4.6}
+\]
+
+Here is the modification of §3.3 that proves it. First split primitive vectors
+at a fixed length M. Long vectors contribute O(D/M). Among the finitely many
+short directions, any side of H with linear length must converge to a straight
+side of the limiting circular segment, so its direction must approach the
+cut direction. Distinct bounded-length primitive directions have an angular
+separation bounded below within the compact lattice family. Thus at most one
+oriented short direction can converge to that cut side. Its physical length is
+at most L_j+o(D); its lattice multiplicity is no larger, since the primitive
+vector has length at least one. Every other short-direction side has length
+o(D). Let D increase, then M increase. This proves (4.6). The H limit follows
+by bounded covering radius and support approximation inside the positive-area
+circular segment. More explicitly, that cut region contains a disk of radius
+rho D for one rho>0. Move any boundary point a fraction O(1/D) toward this
+disk's center. Convexity puts a disk of the lattice covering radius around the
+moved point inside the region. A nearest lattice site then approximates the
+original point within O(1), which proves the normalized H limit. Triangulation now gives a lattice count at most
+\(\operatorname{area}(Q_\pm)/a_\pm+L_j/2+o(D_j)\).
+
+Assign the forbidden patches of §3.8 to their cut side, skipping any patch
+within bounded distance of the cut. The skipped sides number o(D): after
+normalization they lie near one of the two points where the limiting cut
+meets the circle, and the direction measure is uniform. Each cut side corresponds
+to a fixed limiting angular interval. The joint equidistribution of §3.7 remains
+valid restricted to that interval, by continuous inner/outer approximation of
+its indicator; the two endpoint directions have zero angular measure. Thus on
+side sigma, with q_sigma eligible hull sites,
+
+\[
+M_\sigma=q_\sigma\operatorname{area}(F_\eta)/a_\sigma+o(D_j),
+\qquad q_++q_-=q_j+o(D_j).
+\]
+
+These are distinct excluded chart sites *inside* the corresponding counted
+regions. Each region has quadratic area, so its area-minus-patch numerator
+is positive. Replacing its covolume by a_0 is therefore valid. Summing the two
+triangulation counts, adding the q hull vertices, all t exceptions, and the
+bad-side o(D) population gives
+
+\[
+n_j\le \operatorname{area}(K_j)/a_0+\alpha P_j+L_j+t_j
+       -q_j\operatorname{area}(F_\eta)/a_0+o(D_j).
+\]
+
+Taking limits in the same order as §3.8 proves (4.4); the independent disk
+competitor proves (4.5). Both charts and all exceptions are actual source
+populations, and no cross-chart compatibility of an independently rebuilt
+source is assumed.
+
+For an actual global minimizer in this two-chart class, (4.4) forces
+\(\liminf(L_j+t_j)/D_j\ge\pi\mu_0/a_0\). A cut with longer interface is not
+excluded by this estimate. In particular an interface of length comparable to
+D can absorb the entire forbidden-strip gain. Dropping the interface term would
+be wrong: a primitive lattice row on a flat boundary has linear boundary count.
+For the triangular-lattice parallelogram with index rectangle 0<=i<=m,
+0<=k<=s, the exact boundary lattice count is 2m+2s. The cut boundary cannot
+be treated as a curved outer boundary with o(D) lattice sites.
+
+### 4.4 The interface charge vanishes without lattice resonance
+
+The cut charge in (4.4) can be made source-specific, rather than bounded only
+by physical length. Pass to a subsequence on which the two lattice matrices and
+the unit cut tangent converge. In limit lattice sigma, let ell_sigma be the
+length of its primitive vector parallel to the limiting cut; set ell_sigma to
+infinity if no nonzero lattice vector is parallel to that cut. Phases do not
+enter this definition. Use the convention 1/infinity=0. Then
+
+\[
+\boxed{\liminf_j
+\frac{\pi D_j^2/(4a_0)-n_j+t_j
+ +(L_j/2)(1/\ell_++1/\ell_-)}{D_j}
+\ge\frac{\pi\mu_0}{a_0}.}
+\tag{4.7}
+\]
+
+In particular:
+
+- If both limiting cut directions are nonresonant, the full gap 2mu_0 survives
+  for every macroscopic cut length, when t=o(D).
+- If one is nonresonant and the other has primitive length at least sqrt(3),
+  the full-source gap is at least
+  \(2\mu_0-1/(2\pi)>0.0220\), since \(L_j\le D_j\).
+- If both primitive lengths are at least sqrt(13), a strict competitor exists
+  for every cut length: \(1/\sqrt{13}<\pi\mu_0/a_0\).
+
+Proof. In the proof of (4.6), keep the primitive vector's length instead of
+replacing it by one. At any fixed cutoff M, a short direction can have a hull
+side of linear length only if its limiting direction is exactly parallel to
+the limiting cut. In a lattice there is at most one primitive direction with
+that orientation. Its multiplicity is at most \(L_j/\ell_\sigma+o(D_j)\).
+If the direction is nonresonant, all short-direction side lengths are o(D).
+The long directions still contribute O(D/M), with a uniform constant. Taking
+D to infinity and then M to infinity proves
+
+\[
+B(H_\sigma)\le L_j/\ell_\sigma+o(D_j).
+\]
+
+Use this bound in the triangulation count of §4.3. No change to the exclusion,
+chart, or separation argument is necessary. This proves (4.7) and its strict
+competitor conclusion whenever the retained weighted cut charge plus t is
+less than \((\pi\mu_0/a_0)D\).
+
+For actual global minimizers with two macroscopic chart domains and t=O(D),
+each chart's covolume must tend to a_0, in fact with excess O(1/D). Indeed,
+even the unsharpened chart counts and cut bounds give
+
+\[
+n_j\le q_j+\sum_\sigma\operatorname{area}(Q_\sigma)/a_{\sigma,j}
+       +O(D_j)+t_j.
+\]
+
+Each Q_sigma has area bounded below by a fixed positive multiple of D^2;
+its total area is at most pi D^2/4+o(D), with its actual erosion retained.
+Combining with \(n_j\ge\pi D_j^2/(4a_0)\) bounds
+\(\sum\operatorname{area}(Q_\sigma)(1/a_0-1/a_{\sigma,j})\) by O(D).
+Both nonnegative covolume excesses are therefore O(1/D). Since lambda>=1
+and sin(theta)>=a_0, each limiting chart is a unit triangular lattice, with
+angle pi/3 or 2pi/3 and inflation one. This conclusion does not assert a
+triangular contact in the actual o(1)-displaced source.
+
+Thus the primitive lengths in surviving limiting interfaces have the
+triangular-lattice form sqrt(m^2+n^2+mn), with gcd(m,n)=1, or the equivalent
+minus-sign form. Generic cut directions already close. A long interface can
+survive this estimate only through sufficiently short rational lattice rows
+or a sufficiently large explicit exception population. This is a real
+restriction on a physical two-chart source, not a statement about an abstract
+phase crossing graph.
+
+### 4.5 An exact remaining seam inequality
+
+The coarse length L and its refined primitive-row charge are upper bounds.
+The next obstruction can be expressed as an exact discrete population ledger.
+For each cut region Q_sigma, let S_sigma be all sites of its chart in that
+region, let M_sigma count the disjoint forbidden patch sites of §3.7, and let
+N_sigma count actual covered source points, using their injective shadows.
+Define
+
+\[
+E_\sigma=|S_\sigma|-\operatorname{area}(Q_\sigma)/a_\sigma,
+\qquad
+J=\sum_\sigma(|S_\sigma|-M_\sigma-N_\sigma)\ge0.
+\]
+
+Here the fixed positive patch trimming and vanishing chart margins are retained
+until D tends to infinity; uncovered bad-side points are included in the o(D)
+error. The exact identity is
+\(\sum N_\sigma=\sum\operatorname{area}(Q_\sigma)/a_\sigma
+ +E_++E_--M_+-M_--J\).
+Repeating the positive-numerator comparison gives the sufficient closure
+
+\[
+\limsup\frac{E_++E_--J+t}{D}<\frac{\pi\mu_0}{a_0}.
+\tag{4.8}
+\]
+
+A stronger, especially clean seam theorem would be
+\(E_++E_--J\le o(D)\) for the actual two-chart source under its cross-interface
+unit-separation constraints. Section 4.6 proves it for exactly parallel
+periods in {1,sqrt(3),sqrt(7)}, both equal and mixed. It is not proved for every resonant interface. It cannot be replaced by J>=L: for two
+identical charts, the artificial cut charge may already cancel in E_++E_-
+without any additional missing site. Such a replacement would demand holes
+that a single feasible lattice does not have. The new open proposition must
+charge the actual count deviation E, rather than the worst-case cut length.
+
+### 4.6 Exact parallel rows of equal period 1 or sqrt(3) close
+
+There is a provable seam cancellation in two important resonant cases. Retain
+the two-chart physical source setup. Suppose both charts have a primitive
+vector **exactly parallel to the actual cut**, their covolumes tend to a_0,
+and these two primitive lengths tend to the same
+\(\ell\in\{1,\sqrt3\}\). This assumption is stronger than limit parallelism;
+no uncontrolled rate of cut-angle convergence is used. Then
+
+\[
+\boxed{E_++E_--J\le o(D).}
+\tag{4.9}
+\]
+
+Consequently the full strict competitor gap 2mu_0 survives for any macroscopic
+cut length when t=o(D); the linear exception version survives as in (4.2).
+For hypothetical global minimizers the required covolume limits are automatic
+by §4.4, but exact cut parallelism is still an additional hypothesis.
+
+Proof. Write the actual primitive lengths as ell_sigma and their normal row
+pitches as \(h_\sigma=a_\sigma/\ell_\sigma\). Thus
+\(h_\sigma\to h=a_0/\ell\). Let d_sigma in [0,h_sigma) be the distance
+from the enlarged cut half-plane boundary to its nearest lattice row inside
+that region. Moving that boundary inward by d_sigma does not remove a lattice
+site: there are no lattice rows in the open gap. The new clipped convex region
+has area smaller by \(d_\sigma L_j+o(D_j)\). Its cut lattice boundary count is
+at most \(L_j/\ell_\sigma+o(D_j)\), by §4.4. Triangulation therefore gives
+
+\[
+E_\sigma\le\frac{L_j}{a_\sigma}(h_\sigma/2-d_\sigma)+o(D_j).
+\tag{4.10}
+\]
+
+All row distances are bounded. The actual separation g_j of the two outermost
+rows, measured normal to the original cut, is
+\(d_++d_--2\epsilon_j\). It is at least -2epsilon and has bounded size.
+Equation (4.10) consequently yields
+
+\[
+E_++E_-\le(L_j/a_0)(h-g_j)+o(D_j).
+\tag{4.11}
+\]
+
+Pass to any subsequence on which g_j has a limit g>=0. If g>=h, (4.11) is
+already at most o(D), and J>=0 proves (4.9). If g<h, retain a fixed positive
+margin below h. Match points on the two outermost ideal chart rows by nearest
+tangential coordinate. The row periods both tend to ell. Removing duplicate
+nearest matches costs \(O(L_j|\ell_+-\ell_-|+1)=o(D_j)\) sites. Endpoint
+truncation also costs o(D), since both row intersections have length L_j+o(D).
+Thus there are \(L_j/\ell-o(D_j)\) disjoint matched pairs, with tangential
+separation at most ell/2+o(1). Row sites in the forbidden outer-hull patches
+number o(D), since the macroscopic cut meets the circle transversely at only
+two points; discard them as well. All remaining missing row sites contribute
+to J rather than to the already paid M_sigma.
+
+For ell=1 or sqrt(3), precisely,
+
+\[
+h^2+(\ell/2)^2=a_0^2/\ell^2+\ell^2/4=1.
+\]
+
+Since g<h by a fixed margin, both source points of a matched pair cannot
+exist: their shadow separation is less than one, and the vanishing chart errors
+preserve the strict inequality. Each pair therefore removes at least one ideal
+site. The injective charts and disjoint matching imply
+\(J\ge L_j/\ell-o(D_j)\). Combining with (4.11) gives
+
+\[
+E_++E_--J
+\le (L_j/a_0)(h-g)-L_j/\ell+o(D_j)
+= -g L_j/a_0+o(D_j)\le o(D_j).
+\]
+
+This proves (4.9) on every subsequence, including the limiting case g=h handled
+by the first alternative. The extra holes are forced by actual cross-interface
+source separation, not assumed from independently assembled half-lattices.
+The independent disk construction then verifies the strict competitor.
+
+The matching rate assertion can also be seen directly: two increasing
+arithmetic progressions of periods tending to ell have counts differing by
+o(D) on a length-O(D) interval. Nearest-index rounding is monotone. Its repeats
+are bounded by the period-ratio deficit times the interval length plus endpoint
+errors. Deleting those repeats leaves the claimed injective nearest matching.
+
+The remaining seam cases involve higher primitive periods or limit-parallel
+cuts without exact parallelism. The mixed cases and sqrt(7) extension are
+proved below. The full matching
+argument above does not cover those hypotheses. A supplementary full-row
+mirror pilot tested primitive norms 1, sqrt(3), sqrt(7), sqrt(13), sqrt(19).
+It found the expected limiting gaps h in the first two cases and larger gaps
+in the others; those floating-point values do not prove the remaining cases
+or an arbitrary-hole charge.
+
+#### Mixed periods 1 and sqrt(3) also close
+
+Assume both primitive rows are exactly parallel to the actual cut, with limiting
+periods 1 and sqrt(3), respectively. The limiting pitches are a_0 and 1/2.
+The same first-row clipping argument gives
+
+\[
+E_++E_-\le L\left(\frac{1+1/\sqrt3}{2}-\frac g{a_0}\right)+o(D).
+\tag{4.12}
+\]
+
+Let \(\bar h=(a_0+1/2)/2\). If g>=bar_h, this is nonpositive. If g<bar_h,
+there are two matching alternatives that supply the missing-site payment:
+
+- For 0<=g<=1/4, use the first **two** ideal rows of the sqrt(3)-period chart.
+  In the limiting unit triangular lattice their tangential phases differ by
+  sqrt(3)/2, and their normal heights differ by 1/2. For example, take primitive
+  direction (1,1) and companion (0,1); their tangential projection is sqrt(3)/2
+  and normal projection 1/2. Symmetries give the same statement for every
+  sqrt(3) primitive direction. The two-row union therefore has alternating
+  tangential gaps tending to sqrt(3)/2=a_0<1. Every unit-row site can be matched
+  injectively to its nearest tangential site of this union, up to o(D) endpoint
+  errors: the nearest-site cells have width tending to a_0, less than the
+  unit-row period. The tangent separation is at most sqrt(3)/4+o(1), and the
+  normal separation at most g+1/2+o(1)<=3/4+o(1). Thus the squared distance is
+  at most 3/16+9/16+o(1)=3/4+o(1)<1. Each pair forces a missing site.
+  Consequently J>=L-o(D), while the coefficient in (4.12) is at most
+  (1+1/sqrt(3))/2<1. This pays the entire possible positive count deviation.
+- For 1/4<g<bar_h, match just the first sqrt(3)-period row to nearest sites of
+  the unit-period row. That matching is injective because the former period
+  is larger, and supplies L/sqrt(3)-o(D) pairs. The tangent separation is at
+  most 1/2+o(1), and g<bar_h<a_0; hence each pair still has distance less
+  than one by a fixed limiting margin. At g=1/4 the coefficient in (4.12)
+  is exactly 1/2, since 1/(2sqrt(3))=1/(4a_0); it decreases thereafter.
+  Since 1/sqrt(3)>1/2, the missing-site payment again exceeds that deviation.
+
+The row-phase and period assertions remain valid for the vanishing chart
+perturbations because the limiting chart is triangular. As in the equal-period
+proof, remove o(D) sites at endpoints or the already-paid outer patches; every
+retained deleted site is charged to J. These alternatives prove
+E_++E_--J<=o(D), including the threshold cases by subsequences. Thus both mixed
+short-period interfaces close as well. A single outer-row matching would have
+failed at very small g: its L/sqrt(3) payment is below the possible coefficient
+(1+1/sqrt(3))/2. The two-row union supplies the missing global charge.
+
+#### The sqrt(7) primitive period: equal and both mixed cases close
+
+The short-period seam theorem extends to every pair of periods in
+\(\{1,\sqrt3,\sqrt7\}\), under the same exact-parallel and triangular-limit
+hypotheses. The following proof treats the additional cases.
+
+Put \(b=\sqrt7\), \(h=a_0/b\), and \(d=5/(2b)\). In a unit triangular
+lattice, a primitive direction of length b is a symmetry of index (2,1).
+With companion (1,1), its projected row phase is \(9/(2b)\), and its normal
+pitch is h. Thus the two first rows have alternating tangent gaps
+\(d=5/(2b)\) and \(b-d=9/(2b)\). Rotations and reflections either preserve
+or interchange these gaps. Completeness is elementary: norm
+\(m^2+n^2+mn=7\) implies \(m^2+n^2\le14\), so |m|,|n|<=3; the twelve
+solutions are precisely the hexagonal rotation/reflection orbit of (2,1).
+The exact script enumerates this finite set. All phases below mean phases
+modulo their primitive period, and vanishing chart errors are treated as in
+§4.6.
+
+**Periods b and b.** Their possible positive count deviation is at most
+\((L/a_0)(h-g)+o(D)\). If g>=h there is nothing to pay. Otherwise retain a
+fixed limiting margin g<h. For each site of the first chart's outermost row,
+let tau in [-b/2,b/2] be its nearest phase difference from the other chart's
+outermost row. If |tau|<=d, pair those first-row sites. The squared distance
+bound is strictly below
+\(d^2+h^2=25/28+3/28=1\).
+If |tau|>d, use the other chart's next row. Its relative phase is shifted by
++d or -d. For every such tau the new closest tangent difference is at most
+2/b: opposite signs give at most b/2-d=1/b; equal signs wrap modulo b and
+give at most 2/b. The squared distance is strictly below
+\((2/b)^2+(2h)^2=4/7+3/7=1\).
+Nearest-index maps to each target row have only o(D) repeats because their
+period ratio tends to one. Discard these repeats and endpoints. This provides
+L/b-o(D) disjoint pairs, even when the row choice varies with tau.
+Therefore J>=L/b-o(D), paying the maximum deviation L/b. This closes b,b.
+
+**Periods sqrt(3) and b.** Their possible deviation is at most
+\(L[(1/\sqrt3+1/b)/2-g/a_0]+o(D)\). Let
+\(\bar h=(1/2+h)/2<1/2\). If g>=bar_h it is nonpositive. For g<=1/6,
+match the sqrt(3)-period outer row to nearest tangent sites of the other
+chart's first two rows. The union's nearest-site cells have width tending
+to b/2<sqrt(3), hence the matching is injective. Tangent differences are at
+most 9/(4b), and normal differences at most g+h. The worst squared bound is
+
+\[
+(9/(4b))^2+(1/6+h)^2<1.
+\]
+
+This supplies J>=L/sqrt(3)-o(D), exceeding the maximum possible deviation.
+For 1/6<g<bar_h, match just the b-period first row to the other first row.
+The tangent bound is sqrt(3)/2, and g<bar_h<1/2, so pairs have distance <1.
+The matching is injective and supplies L/b-o(D). At g=1/6 the deviation
+coefficient is already less than 1/b, and decreases with g. This closes
+sqrt(3),b in either orientation.
+
+**Periods 1 and b.** For g>=\(\bar h=(a_0+h)/2<a_0\), the deviation is
+nonpositive. For g<=1/3, match *both* b-period rows to nearest sites of the
+unit-period first row. Every prospective pair has distance <1, since its
+tangent difference is at most 1/2 and its normal difference at most
+1/3+h<a_0. Some target repeats must be removed, and they must be counted
+rather than assumed negligible.
+
+A repeat occurs only at the short gap d<1 between two consecutive sites
+of the b-period two-row union. The other gap exceeds one. As the periods
+advance, the phase of that pair modulo the unit period is uniformly
+distributed, even for adversarial shifts. Here is the required elementary
+uniformity: for every fixed nonzero integer k, the normalized exponential
+sum of an arithmetic progression with step rho_j tending to the irrational
+number b is at most
+\(2/(N|1-e^{2\pi i k\rho_j}|)\to0\). Indicator approximation applies to the
+nearest-index repeat interval, of limiting length 1-d. Thus repeats number
+\((1-d)L/b+o(D)\). Keeping one pair per target yields
+
+\[
+J\ge\frac{1+d}{b}L-o(D)
+=\left(\frac1b+\frac5{14}\right)L-o(D).
+\]
+
+This exceeds the maximum deviation coefficient (1+1/b)/2, because their
+difference is 1/(2b)-1/7>0. For 1/3<g<bar_h, match only the b-period first
+row to nearest unit-row sites. That matching is injective and has distance
+<1 since g<bar_h<a_0. It supplies L/b-o(D) holes, while the deviation
+coefficient at g=1/3 is already less than 1/b. This closes 1,b in either
+orientation.
+
+All required scalar margins and squared-distance identities are checked
+outwardly with Fraction bounds in the exact script. The phase progression
+argument counts the repeats that a naive nearest matching would have missed;
+it does not rely on a random row translation. Near outer endpoints discard
+o(D) sites, as before, so these additional missing sites are outside the
+already-paid forbidden patches. The row strips have bounded physical depth,
+allowing their charges to be summed in the finite-atlas proof below.
+
+### 4.7 A fixed finite physical atlas: the seam charges really add
+
+The two-grain payment is compatible across a fixed finite partition. This is
+an additional source theorem, not an identification with the canonical
+contact/phase grain decomposition.
+
+Assume the source hull, roundness, and perimeter-excess hypotheses of §2.
+Partition the actual hull into a fixed finite number of convex cells using
+straight segments. The normalized partition converges to a partition of the
+disk into positive-area convex cells with finitely many interfaces. Assume
+its macroscopic interface/vertex pattern is stable, with nonzero incident
+angles, and that interface endpoints on the outer circle are transverse.
+Each actual non-hull source point, except t_j=o(D_j) points, has a vanishing-error
+injective chart belonging to its physical cell. All charts belong to the compact
+family of §2 and their covolumes tend to a_0. For every internal interface,
+assume one of:
+
+- its limiting tangent is nonresonant in both adjacent limiting lattices; or
+- both adjacent lattices have primitive rows exactly parallel to the actual
+  interface, with each limiting period in {1,sqrt(3),sqrt(7)}, either equal or mixed.
+
+Then the source has a same-cardinality strict competitor with
+\(\liminf(D_j-D(n_j))\ge2\mu_0\).
+For an actual global-minimizer sequence, each positive-area chart's covolume
+limit is automatically a_0 by the leading-area comparison of §4.4. Thus this
+atlas class is excluded from global minimizers. No source chart is inferred
+from an abstract harmonic grain.
+
+Proof. Erode the hull and enlarge each cell half-plane by the chart error,
+as in §4.3. The sum of cell-region areas equals the eroded hull area plus
+o(D), since finitely many overlaps have vanishing width and O(D) total length.
+Assign each forbidden outer patch to its physical cell. Only o(D) patches
+meet cell interfaces: after normalization their locations approach finitely
+many interface endpoints on the circle. Joint equidistribution on each of
+the finitely many outer angular intervals gives the same total forbidden
+strip payment as §3.7, with each chart's own covolume.
+
+For each cell define S, M, N, E and its additional missing-site count as in
+§4.5. The normalized lattice-site hull is that cell's limiting convex region.
+The short-primitive-vector argument of §4.4 bounds its boundary-site count
+by the sum of L/ell over its resonant straight faces, plus o(D); its curved
+outer faces and nonresonant straight faces contribute o(D). At exactly parallel
+resonant faces, clip each supporting line to the first ideal lattice row.
+Every clip preserves all lattice sites. The area loss is the sum of d L over
+those faces plus O(1), because the finite vertex angles stay nonzero. Thus
+
+\[
+E_r\le\sum_{e\text{ resonant at }r}
+\frac{L_e}{a_r}(h_{r,e}/2-d_{r,e})+o(D).
+\]
+
+All cell covolumes tend to a_0. Group the two contributions from each interface
+and apply the alternative in §4.6. If the opposing rows are too close, the
+one-row or two-row matching of §4.6 forces enough unused ideal sites to pay
+that interface's count deviation. If they are not too close, its count deviation
+is already nonpositive to o(D).
+Nonresonant interfaces have no linear count deviation.
+
+These missing-site charges can be summed. Away from bounded neighborhoods of
+the finitely many interface vertices, the bounded-depth row strips of
+different interfaces are disjoint: separate macroscopic edges have positive
+scaled distance, and edges meeting at a vertex have a fixed nonzero angle.
+Ideal lattice sites in the excluded vertex neighborhoods number O(1), by the
+uniform minimum separation. Outer-patch intersections at the finitely many
+outer endpoints cost o(D). After removing these sites, a matched chart site
+belongs to only one interface. Consequently the global additional missing-site
+count J is at least the sum of all retained row-deletion charges, with error
+o(D). This is a simultaneous count on the same actual source; no one-at-a-time
+exchange or independent grain reconstruction is being combined.
+
+It follows that \(\sum_r E_r-J\le o(D)\). The exact global count identity is
+\(\sum_r N_r=\sum_r\operatorname{area}(Q_r)/a_r+\sum_r E_r-\sum_r M_r-J\).
+Subtracting M_r before replacing each covolume by a_0 is justified by each
+cell's positive quadratic area. The erosion cancels the hull-site count, and
+we obtain
+
+\[
+n_j\le\operatorname{area}(K_j)/a_0-(\pi\mu_0/a_0)D_j+o(D_j).
+\]
+
+The independent translated triangular-lattice disk proves the stated strict
+diameter gap. The same argument retains a linear t budget with the margin
+(4.2). Fixed finiteness, nondegenerate cell geometry, actual charts, and the
+specified interface hypotheses are necessary scope restrictions here.
+
+## 5. Scope, regressions, and failed attacks
+
+| Claim or attack | Classification | Exact disposition |
+| --- | --- | --- |
+| (2.1) and (2.2) | Proved candidate awaiting promotion | Complete proof above; independent audit still needed |
+| Fixed finite physical atlas with the specified seams (4.7) | Proved candidate awaiting promotion | Missing-site charges add on disjoint interface strips; full-source strict competitor |
+| Exact parallel periods in {1,sqrt(3),sqrt(7)}, equal or mixed (§4.6) | Proved candidate awaiting promotion | Actual separation forces the seam payment; full strict competitor gap |
+| Nonresonant or sufficiently long primitive cut rows (4.7) | Proved candidate awaiting promotion | Exact source competitor; no physical short-cut hypothesis needed |
+| Two actual chart grains with short cut (4.4)–(4.5) | Proved candidate awaiting promotion | Full source competitor when cut plus exceptions is below 0.3286099 D |
+| Necessary interior outliers (4.3) | Proved candidate awaiting promotion | At least 0.3286099 D misses from any one chart, under the perimeter-excess hypothesis |
+| Global corollary with almost unit hull and one near-exact interior chart | Proved candidate awaiting promotion | Uses only the canonical full-source roundness/Oler inputs listed in §4 |
+| Unit-shell conclusion with arbitrary uncharted interior | Unproved | The o(D) lattice count and its missing-site trace have no established replacement |
+| One triangular-lattice competitor per cardinality proves Level I | Rejected inference | Our conclusion is only exclusion of the class in §2 |
+| Generic translation of the old source | Rejected tactic | The old chart may have adversarial phase; §3.4 treats every translation |
+| Leading area comparison for a unit ring | Insufficient | The shell population exactly cancels the a_0 erosion term at a=a_0; the inward-trace missing sites supply the strict loss |
+| Refilling old vacant sites | Insufficient | Dense sources can have no unit-clear insertion site; the new source is independently constructed |
+| Straightening the same lattice indices | Not used | PR #582 shows this can increase diameter; the proof changes the index set |
+
+Specific regression checks:
+
+- **Regular prime shell local minima:** preserved. The theorem compares a distant
+  configuration and does not assert an infinitesimal or finite local release.
+- **Dense regular-shell filling:** now excluded from global optimality when its
+  actual interior has one exact or o(1)-error lattice chart. Leading density and
+  exact KKT stress alone remain insufficient.
+- **Contact-isolated source points:** all are included in n, and have shadows or
+  are charged to the explicit exception budget.
+- **Actual source versus carrier:** no carrier is used in the proof.
+- **Simultaneous exchanges:** none are used; the competitor is verified as a whole.
+- **Boundary-order losses:** every loss from chart error, offset, lattice hull
+  boundary, and equidistribution is o(D); the retained missing-site gain is cD.
+- **Star/non-Eulerian diameter graphs:** no diameter-graph topology is assumed.
+- **Repeated outer-walk vertices or bridges:** no contact outer walk is used.
+- **RSR equality uniqueness and inward-pocket containment:** neither is imported.
+
+## 6. Exact remaining lemma and frontier effect
+
+No canonical state file is changed. The report excludes a restricted source
+class, including the prominent regular-shell/lattice-interior model. It does not
+eliminate the macroscopic-container branch, the high-surplus full-core branch,
+or an entire canonical Target A/B/C endpoint.
+
+A precise next obligation for this lane is the following unit-hull capacity
+statement, requiring genuinely new source information:
+
+> There is c>0 such that every sequence of triangle-free global minimizers with
+> D_j tending to infinity and (P_j-q_j)/D_j tending to zero satisfies
+> liminf (area(conv A_j)/a_0-n_j)/D_j >= c.
+
+Together with the independent translated-lattice competitor this is an exact
+contradiction. This report proves it under the one-chart interior hypothesis.
+Removing that hypothesis requires a payment for actual multigrain/interface
+population; it cannot follow from generic local jamming or from regular-shell
+stress. Sources with perimeter excess \(P-q=\Theta(D)\) still need a separate argument.
+
+Sections 4.3–4.4 supply the intermediate inequality for two actual convex
+grains separated by a straight cut, and eliminate the nonresonant interface
+class. The sharper remaining obligation is the exact seam ledger (4.8),
+particularly E_++E_--J<=o(D) for surviving higher-period or limit-parallel resonant rows. Exactly parallel
+cut periods in {1,sqrt(3),sqrt(7)}, including mixed periods, are closed by §4.6, and §4.7 sums those payments across a fixed finite
+physical atlas with stable geometry. One cannot replace
+actual count deviation E by a presumed missing-site charge J>=L. No universal
+resonant seam cancellation is asserted here.
+
+## 7. Computation and reproducibility
+
+`research/check_unit_hull_lattice_boundary_loss.py` performs two supplementary
+checks. Its exact `Fraction` mode verifies rational lower bounds on r_0, uses a
+Machin/alternating-series pi enclosure, and checks both positive competitor
+margins and the full-strip exception threshold. Its numerical mode enumerates regular-shell lattice
+fillings and adversarial translations/rotations, compares their cardinalities
+with the disk translation-average competitor, and measures inward-trace
+characters. Floating-point output is discovery/regression evidence only; it
+does not certify global optimality or prove the asymptotic theorem.
+
+The numerical pilot covered q=101, 401, 1001, and 5001 at three rotations and
+translations, with chart angle excess q^-2 and inflation 1+q^-3. At q=5001
+it counted 2,297,515–2,297,617 source points, 531–567 omitted sites inside the
+eroded disk, and average-disk competitor gaps 0.17518–0.21052. One finite
+gap is below the limiting guarantee; the theorem supplies no finite threshold.
+The exact constant check passed with diameter margin >0.18117214 and interior
+exception threshold >0.3286099. See the compact JSON summary under research/.
+
+## 8. Promotion recommendation and handoff
+
+**Unreviewed.** Request an independent proof audit, especially of the uniform
+joint trace/direction equidistribution, the disjoint strip patches, and the
+support-clearance argument. The result
+does not warrant a change to Level I or C-II status. A later promotion should
+register this restricted competitor theorem and its exact dependencies, rather
+than claiming that the remaining global source chart exists.
+
+Read next: this report §3, shared theory §14 for the original shell regression,
+and the canonical full-source roundness/Oler inputs named in §4. The next agent
+should attack the exact seam ledger (4.8) for short resonant rows, not repeat a
+leading-density comparison or assume a favorable lattice phase.
+
+## 9. Research checkpoint and branch disposition
+
+The original report version and exact checker were preserved through PR #700.
+The original report's §9 references to draft PR #592 and an active branch are
+historical; that branch is no longer active. A later unstaged local-worktree
+revision has now been recovered from `swarm/root/global-vacancy-20260926` at
+`e5e0f2ba0cbbf790098318e78e874eb782dc1756`. It adds the nonresonant interface
+bounds and seam ledger in §§4.4–4.8, plus the exact checker assertions and an
+optional `--seam-pilot` floating-point phase scan. The recovered proof claims
+remain unreviewed and noncanonical. The seam scan is exploratory computation,
+not a certificate for the asymptotic claim.
+
+The exact Fraction checks pass. The optional `--seam-pilot` run was attempted
+with the recovered checker but stopped at its NumPy import because NumPy is not
+installed in this environment; the preceding exact checks passed. This does
+not affect the main theorem-state, route map, or Level I/C-II status.

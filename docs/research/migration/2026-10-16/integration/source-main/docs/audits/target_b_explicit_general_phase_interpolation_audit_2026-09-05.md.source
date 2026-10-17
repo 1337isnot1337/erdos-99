@@ -1,0 +1,227 @@
+<!-- theorem-state: {"artifact_id":"ART-78E00F3AB103","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Audit - Target B explicit general coherent-phase interpolation
+
+**Date:** 2026-09-05  
+**Candidate:** `docs/reports/target_b_explicit_general_phase_interpolation_2026-09-05.md`  
+**Verdict:** PASS under its stated dominant coherent-component hypotheses.  
+**Global LEVEL I status:** STILL OPEN.
+
+## 1. Scope
+
+The candidate considers one coherent three-phase component with class sizes
+
+`M>=b>=a`,
+
+`t=b/M>=tau>0`, `s=a/M`,
+
+and local Theorem-51 deficit
+
+`Delta=[M(a+b)-E]/M^2`.
+
+It assumes the same strong component-scale hypotheses used by the previously audited explicit phase-gap theorems: triangular phase coherence, no transversal triangle, `o(M^2)` crossings outside the component, `T=O(M)`, and the component carries the global quadratic rhombus core at its scale (`R=E+o(M^2)`).
+
+The theorem is therefore a **local dominant-component interpolation theorem**, not a multi-grain global theorem.
+
+## 2. Kappa-free largest/second pair missing floor
+
+Write
+
+`e_AB=Mb-x`, `mu=x/(Mb)`.
+
+The candidate reuses only the geometric part of the explicit unique-max proof. That part does not use a positive class gap `kappa`.
+
+If `mu<=mu_0=8*10^(-5)`, corrected dual-tree extraction gives a complete `A' x B'` grid with total two-phase omission, normalized by `M`,
+
+`L<=3sqrt(mu)+mu+o(1)`.
+
+The trimmed-grid star theorem gives the full ideal diagonal function `F(s,t)` after optimizing the entire coherent third-phase cancellation. Its uniform margin is
+
+`F(s,t)-c(s+t)>=gamma_0`,
+
+`gamma_0=3/4-c/2=0.1986711045...`.
+
+The omitted `A/B` trains are charged once for shortening the coherent sums and once for arbitrary signed diagonal contribution, giving
+
+`D^2/M^2>=F(s,t)-4sqrt(3)L-o(1)`.
+
+At `mu_0`, the loss is below `0.1865`, strictly below `gamma_0`. Therefore the lower diameter bound exceeds `c(s+t)` by a fixed margin.
+
+The dominant-component assumption gives
+
+`n/M^2<=s+t+o(1)`,
+
+so the strict translated-lattice comparison gives the incompatible upper bound
+
+`D^2/M^2<c(s+t)+o(1)`.
+
+Thus
+
+`liminf x/(Mb)>=8*10^(-5)`
+
+is valid without any lower bound on `1-b/M`.
+
+PASS.
+
+## 3. Transversal-triple algebra
+
+Write
+
+`e_AC=Ma-y`, `e_BC=z`.
+
+No transversal triangle gives
+
+`Mz<=ax+by`.
+
+Hence
+
+`Delta M^2=x+y-z`
+
+`>=(1-s)x+(1-t)y`
+
+`>=(1-s)x`.
+
+Using the missing floor `x>=(mu_0-o(1))Mb=(mu_0 t-o(1))M^2` and `t>=tau` gives
+
+`1-s<=Delta/(mu_0 tau)+o(1)`.
+
+Since `s<=t<=1`, this also controls `1-t` and `t-s`.
+
+PASS.
+
+## 4. Random balanced restriction
+
+Choose uniformly random subsets `A_0 subset A`, `B_0 subset B` of size `a` and retain all of `C`.
+
+The survival probabilities are
+
+- `A-B`: `s^2/t`;
+- `A-C`: `s`;
+- `B-C`: `s/t`.
+
+Because `0<=s<=t<=1`, both latter probabilities are at least `s^2/t`. Therefore
+
+`E[E_0]>=(s^2/t)E`,
+
+so some deterministic restriction has this crossing count.
+
+Since `a^2=s^2M^2`,
+
+`E_0/a^2>=E/(tM^2)=(s+t-Delta)/t`.
+
+Thus the balanced deficit obeys
+
+`epsilon_bal<= (t-s+Delta)/t`
+
+`<= (1-s+Delta)/tau`
+
+`<= [Delta/(mu_0 tau)+Delta]/tau+o(1)`.
+
+PASS.
+
+## 5. Balanced combinatorial stability is used within scope
+
+The explicit balanced combinatorial lemma is graph-theoretic: a balanced tripartite graph with no transversal triangle and deficit `epsilon_bal` has a phase pair with missing density at most
+
+`4sqrt(epsilon_bal)`.
+
+The selected phase pair remains internally noncrossing because it is a subset of coherent phase classes of the original train component. The corrected dual-tree theorem therefore applies and gives complete-grid omission
+
+`L_grid<=6 epsilon_bal^(1/4)+4sqrt(epsilon_bal)+o(1)`.
+
+PASS.
+
+## 6. All trains deleted by balancing are restored
+
+The random restriction deletes exactly
+
+`(M-a)+(b-a)`
+
+original trains from the `A,B` classes. This is at most
+
+`2M(1-s)`.
+
+Regardless of which two balanced classes supply the complete grid, every deleted original train is restored as an arbitrary signed train-coordinate contribution. Relative to the balanced scale `a=sM`, the candidate uses the safe bound
+
+`L_del=2(1-s)/s`.
+
+This covers all cases:
+
+- selected pair `A_0-B_0`, third phase `C`;
+- selected pair `A_0-C`, third phase `B_0`;
+- selected pair `B_0-C`, third phase `A_0`.
+
+The unselected balanced phase class receives its full coherent cancellation through `F(1,1)=3`. No original train is omitted without charge.
+
+PASS.
+
+## 7. External-component error
+
+Under the contradiction threshold, the algebra forces `s->1`, hence `a=Theta(M)` with `a/M->1`. The candidate hypothesis says crossings involving trains outside the coherent component are `o(M^2)=o(a^2)`.
+
+After a fixed positive central trim of the extracted complete grid, TG1 penetration depth is `Theta(a)`. Therefore only `o(a)` genuinely external trains can separate the selected diagonal. Sending the trim fraction to zero after the asymptotic limit gives the stated `o(a)` error.
+
+PASS.
+
+## 8. Numerical threshold
+
+Assume
+
+`Delta<4*10^(-17)tau^2`.
+
+Then
+
+`1-s<5*10^(-13)tau+o(1)<=5*10^(-13)+o(1)`,
+
+so the deleted-original-train error is below `3*10^(-12)` eventually.
+
+The balanced deficit satisfies
+
+`epsilon_bal<6*10^(-13)+o(1)<10^(-12)`.
+
+Hence
+
+`L_grid<0.00601`.
+
+The balanced grid lower bound gives
+
+`D^2/a^2>3-4sqrt(3)(0.00601)-10^(-10)>2.95`.
+
+For the full original dominant component,
+
+`D^2/a^2<c(s+t-Delta)/s^2+o(1)`.
+
+Since `s=1-o(1)`, `t<=1`, this is eventually below `2.21` (`2c=2.20531558...`). Contradiction.
+
+The numerical slack is large; small rounding changes cannot affect the conclusion.
+
+PASS.
+
+## 9. Section-50 phase-ratio insertion
+
+For fixed pruning threshold `lambda`, every retained vertex has degree at least `lambda D`. If `A` is the largest phase class and `B` the second largest, an `A` vertex has at most `a+b<=2b` possible phase neighbors. Therefore
+
+`b>=lambda D/2`.
+
+Since `M<=T<=C_TD`,
+
+`t=b/M>=lambda/(2C_T)`.
+
+Thus the theorem supplies an explicit local coefficient for every fixed dense-core regime.
+
+PASS.
+
+## 10. What is not proved
+
+The theorem does **not** globalize across several macroscopic retained components. Its diameter upper comparison uses `R=E+o(M^2)` for the selected component. If several grains each carry a positive quadratic share of the global rhombi, one component's local crossing count does not determine global `n` and therefore does not provide the same local diameter upper bound.
+
+This multi-grain local-to-global transfer remains the principal Target B obstruction.
+
+## Verdict
+
+The candidate theorem survives audit:
+
+`Delta >= 4*10^(-17) tau^2-o(1)`
+
+under its stated dominant coherent-component hypotheses.
+
+It closes the previously explicit local `M>b` versus tied/balanced class-size interpolation gap. It does not settle Erdős #99.

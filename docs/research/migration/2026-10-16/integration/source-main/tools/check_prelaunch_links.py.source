@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+"""Check newcomer/launch/policy navigation without interpreting old prose as live."""
+from pathlib import Path
+import sys
+
+try:
+    from tools.release_dependencies import markdown_targets
+except ModuleNotFoundError:
+    from release_dependencies import markdown_targets
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def main():
+    paths = [ROOT/p for p in ("README.md", "CONTRIBUTING.md", "autoresearch.md", "AGENTS.md",
+                              "docs/README.md", "docs/START_HERE.md", "docs/GLOSSARY.md",
+                              "docs/COORDINATION.md", "docs/REVIEW_POLICY.md")]
+    paths.extend(ROOT.glob("docs/launch/*.md"))
+    count, errors = 0, []
+    for p in sorted(paths):
+        for target in markdown_targets(p.relative_to(ROOT).as_posix(), p.read_text()):
+            count += 1
+            if not (ROOT/target).exists():
+                errors.append(f"{p.relative_to(ROOT)} -> {target}")
+    for error in errors:
+        print("prelaunch-links: " + error, file=sys.stderr)
+    print(f"prelaunch-links: {count} references, {len(errors)} errors")
+    return bool(errors)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

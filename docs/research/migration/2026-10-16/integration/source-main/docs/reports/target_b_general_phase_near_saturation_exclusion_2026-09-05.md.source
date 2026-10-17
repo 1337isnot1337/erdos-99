@@ -1,0 +1,149 @@
+<!-- theorem-state: {"artifact_id":"ART-36FF5FAE72C7","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Erdős Problem #99 — Target B general coherent phase near-saturation exclusion
+
+**Date:** 2026-09-05  
+**Run type:** combined stability theorem  
+**Target:** upstream dense-core near-saturation gate  
+**Depends on:** unique-max phase stability; two-largest-tie phase stability; trimmed-grid exclusion  
+**LEVEL I STATUS:** STILL OPEN
+
+## 1. Statement
+
+Let a coherent three-phase train component have phase-class sizes
+
+`M>=b>=a`
+
+and crossing count `E`. The cyclic-order theorem gives
+
+`E<=M(a+b)`.
+
+Assume the component is genuinely quadratic, so
+
+`E=Theta(M^2)`,
+
+and that only `o(M^2)` relevant rhombus crossings lie outside the coherent component in the dense-core reduction.
+
+### Theorem GPS1 — no coherent phase component can asymptotically saturate the cyclic-order bound
+
+There is no sufficiently large pure-rhombic global-minimizer sequence satisfying
+
+`E=M(a+b)-o(M^2)`.
+
+Equivalently, along every such sequence,
+
+`liminf [M(a+b)-E]/M^2 >0`.
+
+The theorem covers all phase-class ratios.
+
+## 2. Positive-density second class
+
+Because
+
+`E=Theta(M^2)`
+
+and `E<=M(a+b)<=2Mb`,
+
+the second-largest class has positive density:
+
+`b>=tau M`
+
+along a subsequence for some `tau>0`.
+
+Thus complete-grid extraction from an almost-complete `M x b` pair always has macroscopic dimensions.
+
+## 3. Case I — the largest class has a fixed gap
+
+Suppose along a subsequence
+
+`b/M<=1-kappa`
+
+for some fixed `kappa>0`.
+
+Then also `a/M<=1-kappa`. The audited unique-max stability theorem applies directly: near saturation
+
+`E=M(a+b)-o(M^2)`
+
+forces asymptotically complete center-to-leaf crossing pairs, ordered interval extraction produces a complete positive-density grid, and the trimmed-grid diameter theorem contradicts the global minimizer scale.
+
+Hence this case is impossible.
+
+## 4. Case II — the two largest classes become equal asymptotically
+
+The only remaining possibility is
+
+`b/M->1`.
+
+Delete any `M-b=o(M)` trains from the largest phase class. Call the retained largest class `A_0`; now
+
+`|A_0|=|B|=b`, `|C|=a`.
+
+Deleting `o(M)` trains removes at most
+
+`(M-b)(a+b)=o(M^2)`
+
+phase crossings. Therefore the retained component has
+
+`E_0 >= E-o(M^2)`.
+
+The extremal bound changes by exactly
+
+`M(a+b)-b(a+b)=(M-b)(a+b)=o(M^2)`.
+
+Hence
+
+`E_0=b(a+b)-o(M^2)`.
+
+Since `b~M`, the retained component is still quadratic and still carries all but `o(b^2)` of the relevant coherent-core crossings. The removed `o(M)` train vectors contribute only `o(b)` to any trimmed-grid diagonal and are harmless in the geometric error term.
+
+The audited two-largest-tie theorem now applies to the retained class sizes
+
+`b,b,a`
+
+and gives a contradiction.
+
+Thus this case is also impossible.
+
+## 5. Exhaustion
+
+Every sequence has a subsequence on which either
+
+1. `b/M<=1-kappa` for some fixed `kappa>0`, or
+2. `b/M->1`.
+
+Sections 3 and 4 exclude both possibilities. This proves GPS1.
+
+## 6. Uniform-gap corollary
+
+Fix any positive-density threshold `tau>0` and the standard dense-core coherence/error hypotheses. If no asymptotic positive gap existed, there would be a sequence of admissible components with
+
+`b/M>=tau`
+
+and
+
+`[M(a+b)-E]/M^2 ->0`,
+
+contradicting GPS1.
+
+Therefore the coherent phase endpoint has a genuine stability gap: for each fixed dense-core regime there is some
+
+`delta_phase>0`
+
+such that all sufficiently large admissible components obey
+
+`E <= M(a+b)-delta_phase M^2`.
+
+No explicit numerical value of `delta_phase` is claimed; obtaining one would require quantitative coherence and pruning moduli.
+
+## 7. What remains upstream
+
+The phase equality/stability problem is now closed conditionally on reaching one coherent component near its local cyclic-order bound.
+
+The remaining Target B gate is a **global deficit-transfer theorem**:
+
+> Starting from Theorem 50.1, the shell/phase-energy bounds, and the fact that the retained dense core contains all but arbitrarily small `O(D^2)` crossing mass, show that the sum of local phase deficits
++>
++> `sum_H [M_H(T_H-M_H)-E(H)]`
++>
++> cannot stay bounded below by a positive multiple of `D^2` in a hypothetical global minimizer.
+
+GPS1 says that every quadratic coherent component actually contributes such a positive-density local deficit. A successful summation of those deficits into the existing global crossing/shell inequalities would now give the desired contradiction.

@@ -1,0 +1,39 @@
+#define main selected_pair_support_main_from_include
+#include "verify_target_c_support7_global_segment_relative_nine_noroot_k4_dminus1_d0p2_selected_pair_support_reimplementation_2026_09_28.cpp"
+#undef main
+
+struct TwoCensus { long long final_states=0, singleton_placements=0; };
+
+bool two_singleton_survives2(const array<BD,35>&d,uint64_t T,TwoCensus&z){
+ int h=popcount(T); vector<int> cand; for(int b=0;b<35;b++) if((T>>b&1)&&opts(d[b])) cand.push_back(b); vector<pair<int,int>> ch;
+ auto cw=[&](int b,int db){for(auto[a,da]:ch)if(!compat(d[a],da,d[b],db))return false;return true;};
+ auto test=[&](uint64_t em,int nom)->bool{
+   int ne=ch.size(); uint64_t rem=T&~em; vector<int> rb; for(int b=0;b<35;b++) if(rem>>b&1) rb.push_back(b); z.final_states++;
+   for(int t=0;t<=2;t++){
+     if(35-h<2-t || ne<h-11-t) continue;
+     if(t==0){z.singleton_placements++; if(nom>=5 && usize(em,d)>=8 && structural(T,em)) return true; continue;}
+     if(t==1){for(int s:rb)for(int ds=0;ds<=1;ds++){if(ds&&d[s].inc<2)continue; z.singleton_placements++; if(ds&&!cw(s,1))continue; uint64_t I=em|(1ULL<<s); if(nom+ds<5)continue; uint16_t u=0; for(int b=0;b<35;b++)if(em>>b&1)u|=d[b].mask; if(ds)u|=d[s].mask; if(popcount((unsigned)u)<8)continue; if(structural(T,I))return true;} continue;}
+     for(int ii=0;ii<(int)rb.size();ii++)for(int jj=ii+1;jj<(int)rb.size();jj++){int s1=rb[ii],s2=rb[jj];for(int d1=0;d1<=1;d1++)for(int d2=0;d2<=1;d2++){
+       if(d1&&d[s1].inc<2)continue;
+       if(d2&&d[s2].inc<2)continue;
+       z.singleton_placements++;
+       if(d1&&!cw(s1,1))continue;
+       if(d2&&!cw(s2,1))continue;
+       if(d1&&d2&&!compat(d[s1],1,d[s2],1))continue;
+       uint64_t I=em|(1ULL<<s1)|(1ULL<<s2); if(nom+d1+d2<5)continue; uint16_t u=0; for(int b=0;b<35;b++)if(em>>b&1)u|=d[b].mask; if(d1)u|=d[s1].mask; if(d2)u|=d[s2].mask; if(popcount((unsigned)u)<8)continue; if(structural(T,I))return true;}}
+   } return false;
+ };
+ function<bool(int,uint64_t,int)>rec=[&](int pos,uint64_t em,int nom)->bool{int minE=max(0,h-13); if((int)ch.size()>=minE&&test(em,nom))return true; if(pos==(int)cand.size())return false; if((int)ch.size()+((int)cand.size()-pos)<minE)return false; int maxnom=nom; for(int i=pos;i<(int)cand.size();i++)maxnom+=(opts(d[cand[i]])&2)?2:1; if(maxnom+2<5)return false; for(int i=pos;i<(int)cand.size();i++){int b=cand[i],op=opts(d[b]); if((op&1)&&cw(b,1)){ch.push_back({b,1});if(rec(i+1,em|(1ULL<<b),nom+1))return true;ch.pop_back();} if((op&2)&&cw(b,2)){ch.push_back({b,2});if(rec(i+1,em|(1ULL<<b),nom+2))return true;ch.pop_back();}} return false;};
+ return rec(0,0,0);
+}
+
+int main(){
+ init(); if(!ll())return 10; if((long long)MOD*MOD<=14348907LL)return 11; vector<long long>exp={1,1,4,14,61,268,1283,6032,27763,121458}; if(burnside_counts()!=exp)return 12;
+ unordered_set<Multiset,MH>reps; Multiset e; reps.insert(e); for(int sz=1;sz<=8;sz++){unordered_set<Multiset,MH>n;n.reserve(reps.size()*8);for(auto&ms:reps){int mult[35]={};for(int i=0;i<ms.n;i++)mult[ms.a[i]]++;for(int s=0;s<35;s++)if(mult[s]<3){Multiset x=ms;if(x.n>=9)abort();x.a[x.n]=s;++x.n;sort_prefix(x);n.insert(canon(x));}}reps.swap(n);if((long long)reps.size()!=exp[sz])return 13;}
+ unordered_set<Multiset,MH>all9,h24; all9.reserve(130000);h24.reserve(110000); long long raw=0,rawh=0; for(auto&ms:reps){int mult[35]={};uint64_t t=0;for(int i=0;i<ms.n;i++){mult[ms.a[i]]++;t|=STM[ms.a[i]];}for(int s=0;s<35;s++)if(mult[s]<3){raw++;Multiset x=ms;x.a[x.n]=s;++x.n;sort_prefix(x);Multiset cx=canon(x);all9.insert(cx);if(popcount(t|STM[s])<=24){rawh++;h24.insert(cx);}}}
+ TwoCensus z; vector<Multiset>surv; for(auto&ms:h24){uint64_t T;auto d=bdata(ms,T);if(two_singleton_survives2(d,T,z))surv.push_back(ms);} sort(surv.begin(),surv.end(),[](const Multiset&a,const Multiset&b){return lexicographical_compare(a.a.begin(),a.a.begin()+a.n,b.a.begin(),b.a.begin()+b.n);});
+ const vector<vector<int>> expected={{0,0,0,1,1,1,4,10,20},{0,0,0,1,1,1,4,10,21},{0,0,0,1,1,4,4,10,10},{0,0,0,1,1,4,4,10,20},{0,0,0,1,2,4,7,10,20},{0,0,0,1,4,7,7,10,20},{0,0,0,1,4,7,9,10,20},{0,0,0,1,4,7,10,13,20},{0,0,0,1,4,7,10,14,20},{0,0,0,1,4,7,10,19,20},{0,0,0,1,4,7,10,20,30},{0,0,0,1,4,7,10,20,31},{0,0,1,1,4,4,10,10,20}};
+ if(all9.size()!=121458||h24.size()!=103247||raw!=966977||rawh!=802570||z.final_states!=43041||z.singleton_placements!=7566114||surv.size()!=13)return 20;
+ for(int i=0;i<13;i++){vector<int>got;for(int j=0;j<surv[i].n;j++)got.push_back(surv[i].a[j]);if(got!=expected[i])return 21;}
+ cout<<"PASS two-singleton support 13\n"; for(auto&ms:surv)print_ms(ms); return 0;
+}

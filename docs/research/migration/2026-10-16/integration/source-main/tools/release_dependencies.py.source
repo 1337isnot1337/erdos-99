@@ -1,0 +1,652 @@
+#!/usr/bin/env python3
+"""Dependency-closed, rights-gated release planning; never publish or push."""
+from __future__ import annotations
+
+import argparse
+import ast
+import hashlib
+import html
+import json
+import os
+import posixpath
+import re
+import stat
+import subprocess
+import sys
+import warnings
+from collections import deque
+from html.parser import HTMLParser
+from pathlib import Path, PurePosixPath
+from urllib.parse import unquote, urlsplit
+
+import yaml
+from jsonschema import Draft202012Validator
+
+try:
+    from tools.run_theorem_certificates import entries
+    from tools.check_research_entrypoints import ACTIVE_ENTRYPOINTS
+    from tools.build_artifact_index import build_records, check_state
+    from tools.publication_inventory import ROOT_LICENSE_NAMES
+    from tools.check_theorem_state import Checker, run_checks as check_theorem_state
+except ModuleNotFoundError:
+    from run_theorem_certificates import entries
+    from check_research_entrypoints import ACTIVE_ENTRYPOINTS
+    from build_artifact_index import build_records, check_state
+    from publication_inventory import ROOT_LICENSE_NAMES
+    from check_theorem_state import Checker, run_checks as check_theorem_state
+
+ROOT = Path(__file__).resolve().parents[1]
+LITERATURE = "docs/launch/literature-links.json"
+REVIEWS = "docs/launch/release-reviews.json"
+REFERENCE = re.compile(r"(?m)^\s*\[[^\]]+\]:\s*(<[^>]+>|\S+)")
+CODE_PATH = re.compile(r"`([^`\n]+\.(?:md|py|json|jsonl|yaml|yml|txt|csv|tsv|pdf))`")
+FORBIDDEN = ("papers/", "extracted/")
+REVIEW_FIELDS = ("content", "attribution", "privacy", "license")
+GENERATED_OVERLAY = "docs/state/artifact-index.jsonl"
+
+
+def git_bytes(root: Path, *args: str) -> bytes:
+    return subprocess.check_output(["git", "--no-replace-objects", "-C", str(root), *args])
+
+
+def check_object_identity(raw: bytes, oid: str, kind: str = "blob") -> None:
+    algorithm = {40: hashlib.sha1, 64: hashlib.sha256}.get(len(oid))
+    if algorithm is None or algorithm(kind.encode() + b" " + str(len(raw)).encode() + b"\0" + raw).hexdigest() != oid:
+        raise ValueError(f"Git {kind} bytes do not match their object identity")
+
+
+def safe_path(path: str) -> str:
+    """Require a portable, normalized path before joining it to any root."""
+    if (not isinstance(path, str) or not path or "\\" in path or ":" in path
+            or any(ord(c) < 32 or ord(c) == 127 for c in path)
+            or PurePosixPath(path).is_absolute()
+            or any(p in {"", ".", ".."} or p.lower() == ".git" for p in path.split("/"))):
+        raise ValueError(f"unsafe release path: {path!r}")
+    return path
+
+
+def check_manifest_paths(root: Path, state: dict) -> None:
+    """Check generator inputs before any copied generator can write headers/index."""
+    if not isinstance(state, dict):
+        raise ValueError("theorem manifest must be a mapping")
+    checker = Checker(root)
+    checker.state = state
+    for path in checker.registered_paths():
+        safe_path(path)
+    policy = state.get("artifact_policy", {})
+    for path in [*policy.get("roots", []), *policy.get("exclude", [])]:
+        safe_path(path)
+    if policy and policy.get("index") != GENERATED_OVERLAY:
+        raise ValueError("unrecognized artifact index output path")
+
+
+def planned_paths(plan: dict) -> dict[str, dict]:
+    identities = {}
+    for entry in plan["entries"]:
+        path = safe_path(entry["path"])
+        if entry.get("mode", "100644") not in {"100644", "100755"}:
+            raise ValueError(f"unsafe release mode: {path}")
+        if path in identities:
+            raise ValueError(f"duplicate release path: {path}")
+        identities[path] = entry
+    overlays = plan.get("generated_overlay", [])
+    if len(overlays) != len(set(overlays)) or set(overlays) - {GENERATED_OVERLAY}:
+        raise ValueError("unrecognized generated overlay")
+    if set(overlays) - identities.keys():
+        raise ValueError("generated overlay is absent from planned entries")
+    for paths in plan["task_evidence"].values():
+        for path in paths:
+            safe_path(path)
+    return identities
+
+
+def review_records(reviews: dict, commit: str, *, private: bool) -> dict[str, dict]:
+    if not isinstance(reviews, dict) or reviews.get("schema_version") != 1:
+        raise ValueError("unsupported review record schema")
+    if not isinstance(reviews.get("owner_approved_release", False), bool):
+        raise ValueError("owner approval must be a boolean")
+    rows = reviews.get("files", [])
+    if not isinstance(rows, list):
+        raise ValueError("file reviews must be a list")
+    if (private or rows or reviews.get("owner_approved_release")) and reviews.get("commit") != commit:
+        raise ValueError("review record belongs to a different commit")
+    result = {}
+    for row in rows:
+        if not isinstance(row, dict):
+            raise ValueError("file review must be an object")
+        path = safe_path(row.get("path"))
+        if path in result:
+            raise ValueError(f"duplicate file review: {path}")
+        if not isinstance(row.get("reviewer", ""), str):
+            raise ValueError(f"reviewer must be a nonempty name or identifier: {path}")
+        result[path] = row
+    return result
+
+
+def local_target(source: str, target: str, *, markdown_escaped: bool = True) -> str | None:
+    # CommonMark destinations may contain entity references and escaped ASCII
+    # punctuation, including parentheses in otherwise ordinary filenames.
+    if markdown_escaped:
+        target = re.sub(r"\\([!-/:-@\[-`{-~])", r"\1", html.unescape(target.strip("<>")))
+    parsed = urlsplit(target)
+    if parsed.scheme or parsed.netloc or not parsed.path:
+        return None
+    path = unquote(parsed.path)
+    result = posixpath.normpath(path.lstrip("/") if path.startswith("/") else
+                               posixpath.join(posixpath.dirname(source), path))
+    if result == ".." or result.startswith("../"):
+        raise ValueError(f"link escapes release tree in {source}")
+    return result
+
+
+def strip_fenced_code(text: str) -> str:
+    """Mask fences while retaining offsets for exact destination-only rewrites."""
+    visible = []
+    fence_char = None
+    fence_length = 0
+    opening = re.compile(r"^ {0,3}(`{3,}|~{3,})(.*?)(?:\r?\n)?$")
+    for line in text.splitlines(keepends=True):
+        if fence_char is None:
+            match = opening.match(line)
+            if not match:
+                visible.append(line)
+                continue
+            fence = match.group(1)
+            info = match.group(2)
+            # CommonMark forbids backticks in a backtick-fence info string.
+            if fence[0] == "`" and "`" in info:
+                visible.append(line)
+                continue
+            fence_char, fence_length = fence[0], len(fence)
+            visible.append(mask(line))
+            continue
+
+        close = re.fullmatch(
+            rf" {{0,3}}{re.escape(fence_char)}{{{fence_length},}}[ \t]*(?:\r?\n)?",
+            line,
+        )
+        if close:
+            fence_char, fence_length = None, 0
+        visible.append(mask(line))
+        # All content through the matching close is example text, not navigation.
+    return "".join(visible)
+
+
+def mask(text: str) -> str:
+    return re.sub(r"[^\r\n]", " ", text)
+
+
+def navigation_text(text: str) -> str:
+    """Mask examples and mathematics while preserving source offsets."""
+    text = strip_fenced_code(text)
+    runs = list(re.finditer(r"`+", text))
+    next_equal, last = {}, {}
+    for i in range(len(runs)-1, -1, -1):
+        length = len(runs[i][0])
+        if length in last:
+            next_equal[i] = last[length]
+        last[length] = i
+    i = 0
+    while i < len(runs):
+        opening = runs[i]
+        escaped = len(text[:opening.start()]) - len(text[:opening.start()].rstrip("\\"))
+        if i not in next_equal or escaped % 2:
+            i += 1
+            continue
+        close = next_equal[i]
+        a, b = opening.start(), runs[close].end()
+        # Inline parsing ends at a paragraph/block boundary. An unmatched
+        # historical backtick must not swallow dependencies in later prose.
+        if re.search(r"\r?\n[ \t]*\r?\n|(?m:^ {0,3}#{1,6}[ \t])", text[a:b]):
+            i += 1
+            continue
+        text = text[:a] + mask(text[a:b]) + text[b:]
+        i = close + 1
+    text = re.sub(r"(?s)(?<![\w\\])\\\[.*?\\\]|\$\$.*?\$\$|(?<![\w\\])\\\(.*?\\\)|<!--.*?-->",
+                  lambda m: mask(m[0]), text)
+    return text
+
+
+def markdown_destinations(text: str):
+    """Yield source spans for inline links and conservative reference definitions."""
+    text = navigation_text(text)
+    stack, spans = [], []
+    i = 0
+    while i < len(text):
+        char = text[i]
+        if char == "\\":
+            i += 2
+            continue
+        if char == "[":
+            stack.append(i)
+        elif char == "]" and stack:
+            stack.pop()
+            if text[i+1:i+2] == "(":
+                start = i + 2
+                while start < len(text) and text[start].isspace():
+                    start += 1
+                end, depth = start, 0
+                angle = text[start:start+1] == "<"
+                if angle:
+                    end = text.find(">", start+1)
+                    if end < 0 or "\n" in text[start:end]:
+                        i += 1
+                        continue
+                    end += 1
+                else:
+                    while end < len(text):
+                        c = text[end]
+                        if c == "\\":
+                            end += 2
+                            continue
+                        if c == "(":
+                            depth += 1
+                        elif c == ")":
+                            if depth == 0:
+                                break
+                            depth -= 1
+                        elif c.isspace():
+                            break
+                        end += 1
+                tail = re.match(r'''(?:\s+(?:"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\([^()]*\)))?\s*\)''', text[end:])
+                if not depth and tail:
+                    spans.append((start, end, text[start:end]))
+                    i = end + tail.end()
+                    continue
+        i += 1
+    for match in REFERENCE.finditer(text):
+        spans.append((*match.span(1), match[1]))
+    yield from sorted(spans)
+
+
+def html_destinations(text: str) -> list[str]:
+    class Navigation(HTMLParser):
+        def handle_starttag(self, tag, attrs):
+            self.destinations.extend(value for key, value in attrs
+                                     if key in {"href", "src"} and value)
+        handle_startendtag = handle_starttag
+    parser = Navigation(convert_charrefs=True)
+    parser.destinations = []
+    parser.feed(navigation_text(text))
+    parser.close()
+    return parser.destinations
+
+
+def markdown_targets(source: str, text: str) -> list[str]:
+    raw_targets = [raw for _, _, raw in markdown_destinations(text)]
+    targets = [p for raw in raw_targets if (p := local_target(source, raw)) is not None]
+    targets.extend(p for raw in html_destinations(text)
+                   if (p := local_target(source, raw, markdown_escaped=False)) is not None)
+    return targets
+
+
+def rewrite_references(path: str, raw: bytes, citations: dict) -> bytes:
+    if not path.endswith(".md"):
+        return raw
+    text = raw.decode("utf-8")
+    if any(local_target(path, raw_target, markdown_escaped=False) in citations for raw_target in html_destinations(text)):
+        raise ValueError(f"use a Markdown reference for bundled literature in raw HTML: {path}")
+    for start, end, destination in reversed(list(markdown_destinations(text))):
+        target = local_target(path, destination)
+        replacement = citations.get(target)
+        if replacement:
+            text = text[:start] + replacement["url"] + text[end:]
+    return text.encode("utf-8")
+
+
+def tree_files(root: Path, ref: str) -> tuple[str, dict[str, dict]]:
+    if not re.fullmatch(r"[A-Za-z0-9_./^~-]+", ref) or ref.startswith("-"):
+        raise ValueError("unsafe revision")
+    commit = git_bytes(root, "rev-parse", "--verify", f"{ref}^{{commit}}").decode().strip()
+    check_object_identity(git_bytes(root, "cat-file", "commit", commit), commit, "commit")
+    raw = git_bytes(root, "ls-tree", "-rz", commit)
+    files = {}
+    for record in raw.split(b"\0"):
+        if not record:
+            continue
+        meta, name = record.split(b"\t", 1)
+        mode, kind, oid = meta.decode().split()
+        path = os.fsdecode(name)
+        safe_path(path)
+        if kind != "blob" or mode not in {"100644", "100755"}:
+            raise ValueError("release inventory rejects symlinks and submodules")
+        files[path] = {"git_blob_oid": oid, "mode": mode}
+    return commit, files
+
+
+def build_plan(root: Path, ref: str = "HEAD", review_file: Path | None = None) -> dict:
+    commit, files = tree_files(root, ref)
+    cache = {}
+    def read(path):
+        if path not in cache:
+            cache[path] = git_bytes(root, "show", f"{commit}:{path}")
+            check_object_identity(cache[path], files[path]["git_blob_oid"])
+        return cache[path]
+    state = yaml.safe_load(read("docs/state/theorem-state.yaml"))
+    if not isinstance(state, dict) or not isinstance(state.get("targets"), dict):
+        raise ValueError("theorem manifest must contain a mapping and target mappings")
+    schema_path = "docs/state/theorem-state.schema.json"
+    if schema_path in files:
+        error = next(Draft202012Validator(json.loads(read(schema_path))).iter_errors(state), None)
+        if error:
+            where = ".".join(map(str, error.absolute_path)) or "root"
+            raise ValueError(f"invalid theorem manifest schema at {where}")
+    check_manifest_paths(root, state)
+    catalogue = json.loads(read("docs/research/agent-task-catalog.json"))
+    literature = json.loads(read(LITERATURE))
+    reviews = json.loads(review_file.read_text()) if review_file else json.loads(read(REVIEWS))
+    review_map = review_records(reviews, commit, private=review_file is not None)
+    cited = literature["replacements"]
+    selected, reasons, edges, external, missing = set(), {}, set(), {}, set()
+    executable_roots = set()
+    queue = deque()
+    def add(path, source, reason):
+        if path.endswith(".py") and reason != "conservative computational dependency":
+            executable_roots.add(path)
+        if path in {"papers", "extracted"} or path.startswith(FORBIDDEN) or path.lower().endswith(".pdf"):
+            replacement = cited.get(path)
+            if not replacement or not replacement.get("url", "").startswith("https://"):
+                missing.add(f"uncleared literature needs bibliographic replacement: {path}")
+            else:
+                external[path] = replacement
+            edges.add((source, path, "external-citation"))
+            return
+        if path not in files:
+            # Directory navigation needs its README, not its entire archive.
+            if path + "/README.md" in files:
+                add(path + "/README.md", source, "directory navigation")
+            elif any(f.startswith(path.rstrip("/") + "/") for f in files):
+                # An empty directory cannot be represented in Git; retain one
+                # actual member when a directory link otherwise has no witness.
+                witness = sorted(f for f in files if f.startswith(path.rstrip("/") + "/"))[0]
+                add(witness, source, "directory navigation witness")
+            else:
+                missing.add(f"missing dependency: {source} -> {path}")
+            return
+        edges.add((source, path, reason))
+        reasons.setdefault(path, set()).add(reason)
+        if path not in selected:
+            selected.add(path)
+            queue.append(path)
+
+    roots = {*ACTIVE_ENTRYPOINTS, "docs/STATE.md", "docs/state/theorem-state.yaml",
+             "docs/state/theorem-state.schema.json", "docs/state/STATUS.generated.md",
+             "docs/state/THEOREM_GRAPH.generated.md", "docs/state/artifact-index.jsonl",
+             "docs/problem/statement.md", "docs/problem/literature_baseline.md",
+             "docs/RESEARCH_WORKFLOW.md", "research/README.md", "autoresearch.md",
+             "docs/COORDINATION.md", "docs/REVIEW_POLICY.md", "docs/START_HERE.md",
+             "docs/GLOSSARY.md", "docs/reports/REPORT_TEMPLATE.md",
+             "docs/research/agent-task-catalog.json", LITERATURE, REVIEWS}
+    roots.update(p for p in files if p.lower() in ROOT_LICENSE_NAMES)
+    roots.update(p for p in files if p.startswith(("docs/launch/", "tools/", "scripts/",
+                                                 "tests/", ".github/")))
+    # These are the active proof modules and shared definitions. Their full
+    # text, rather than the uneven theorem-ID graph alone, is load-bearing.
+    roots.update(p for p in files if p.startswith(("docs/targets/", "docs/theory/", "docs/problem/"))
+                 and not "/HISTORY" in p)
+    for p in sorted(roots):
+        add(p, "release-root", "active system root")
+    for entry in entries(state):
+        for field in ("report", "audit"):
+            if isinstance(entry.get(field), str):
+                add(entry[field], entry["id"], f"ledger {field} ({entry['status']})")
+        for p in entry.get("certificates", []) or []:
+            add(p, entry["id"], "registered computational certificate")
+    # Fail closed for dynamic imports and file-based computational inputs.
+    # The release has no validated exact Python dependency graph yet. Preserve
+    # all research files as review-required runtime contingencies, including
+    # transitive helpers/data. Never label this set as proved minimal.
+    for p in sorted(files):
+        if p.startswith("research/"):
+            add(p, "runtime-uncertainty", "conservative computational dependency")
+    task_paths = {}
+    for task in catalogue["tasks"]:
+        paths = sorted({r["path"] for field in ("canonical_dependencies", "previous_obstructions")
+                        for r in task[field]})
+        task_paths[task["id"]] = paths
+        for p in paths:
+            add(p, task["id"], "task evidence")
+    while queue:
+        p = queue.popleft()
+        if not p.endswith(".md"):
+            continue
+        text = read(p).decode("utf-8")
+        for target in markdown_targets(p, text):
+            add(target, p, "internal Markdown reference")
+        # Actual inline source paths are dependencies too. Ignore illustrative
+        # nonexistent paths; required links/ledger/task paths fail above.
+        for raw in CODE_PATH.findall(strip_fenced_code(text)):
+            candidates = [raw, posixpath.normpath(posixpath.join(posixpath.dirname(p), raw))]
+            for target in candidates:
+                if target in files:
+                    add(target, p, "inline evidence path")
+                    break
+    # Validate direct/transitive local verifier imports for load-bearing and
+    # explicitly cited computations, independently of the runtime contingency.
+    checked_code = set()
+    code_queue = deque(sorted(executable_roots))
+    while code_queue:
+        path = code_queue.popleft()
+        if path in checked_code or path not in files:
+            continue
+        checked_code.add(path)
+        try:
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore", SyntaxWarning)
+                nodes = list(ast.walk(ast.parse(read(path))))
+        except SyntaxError:
+            missing.add(f"unparseable computational dependency: {path}")
+            continue
+        for node in nodes:
+            names = [a.name for a in node.names] if isinstance(node, ast.Import) else (
+                [node.module] if isinstance(node, ast.ImportFrom) and node.module else [])
+            for name in names:
+                local = posixpath.join(posixpath.dirname(path), name.replace(".", "/") + ".py")
+                if local in files:
+                    add(local, path, "transitive local Python import")
+                    code_queue.append(local)
+                elif name.startswith(("verify_", "target_")):
+                    missing.add(f"missing local verifier import: {path} -> {name}")
+    inventory = []
+    for p in sorted(selected):
+        identity = files[p]
+        review = review_map.get(p, {})
+        raw = read(p)
+        try:
+            raw.decode("utf-8")
+            if b"\0" in raw:
+                raise UnicodeError
+        except UnicodeError:
+            missing.add(f"binary dependency needs an explicit format policy: {p}")
+        if identity["mode"] == "100755" and not p.endswith((".py", ".sh")):
+            missing.add(f"unexpected executable dependency: {p}")
+        approved = review.get("git_blob_oid") == identity["git_blob_oid"] and all(
+            review.get(k) == "approved" for k in REVIEW_FIELDS) and bool(review.get("reviewer", "").strip())
+        pending = [k for k in REVIEW_FIELDS if review.get(k) != "approved"]
+        if review.get("git_blob_oid") != identity["git_blob_oid"]:
+            pending.append("exact-blob identity")
+        if not review.get("reviewer", "").strip():
+            pending.append("reviewer identity")
+        inventory.append({"path": p, **identity,
+                          "source_sha256": hashlib.sha256(raw).hexdigest(),
+                          "planned_export_sha256": hashlib.sha256(rewrite_references(p, raw, external)).hexdigest(),
+                          "reasons": sorted(reasons[p]),
+                          "pending_review_fields": pending,
+                          "clearance": "reviewed" if approved else "pending-file-review"})
+    root_license = any(p.lower() in ROOT_LICENSE_NAMES for p in selected)
+    global_ok = reviews.get("owner_approved_release") is True and root_license
+    uncleared = sum(r["clearance"] != "reviewed" for r in inventory)
+    # artifact-index is regenerated over retained reports only; theorem IDs,
+    # dependencies, canonical definitions and state views remain byte-identical.
+    return {"schema_version": 1, "mode": "local dependency plan; not release clearance",
+            "commit": commit, "state_version": state["state_version"],
+            "dependency_complete": not missing, "missing_dependencies": sorted(missing),
+            "release_cleared": not missing and not uncleared and global_ok,
+            "pending_file_reviews": uncleared, "owner_gate_satisfied": global_ok,
+            "entries": inventory, "edges": [list(e) for e in sorted(edges)],
+            "task_evidence": task_paths, "external_citations": external,
+            "excluded_nonessential_paths": sorted(set(files) - selected - set(external)),
+            "generated_overlay": ["docs/state/artifact-index.jsonl"],
+            "limits": "Link/dependency closure is mechanical. Runtime uncertainty retains all research inputs. Every retained file requires content, attribution, privacy and rights review; no consent or license is inferred."}
+
+
+def validate_export(plan: dict, root: Path) -> list[str]:
+    errors = []
+    try:
+        identities = planned_paths(plan)
+    except (ValueError, KeyError, TypeError) as exc:
+        return [f"invalid release plan: {exc}"]
+    selected = set(identities)
+    if root.is_symlink() or not root.is_dir():
+        return ["export root must be an existing nonsymlink directory"]
+    # Inspect types without following any symlink, before reading content or
+    # asking generators to traverse the tree. In particular, a rejected link
+    # must never cause a read of a private file outside this export.
+    unsafe = False
+    def walk_error(exc):
+        errors.append("cannot inspect export directory")
+    for directory, dirs, names in os.walk(root, followlinks=False, onerror=walk_error):
+        for name in [*dirs, *names]:
+            p = Path(directory) / name
+            relative = p.relative_to(root).as_posix()
+            mode = p.lstat().st_mode
+            if stat.S_ISLNK(mode) or not (stat.S_ISDIR(mode) or stat.S_ISREG(mode)):
+                errors.append(f"unsafe filesystem entry in export: {relative}")
+                unsafe = True
+            if not stat.S_ISDIR(mode) and relative not in selected:
+                errors.append(f"unexpected file in export: {relative}")
+            if relative.startswith(FORBIDDEN) or p.suffix.lower() == ".pdf":
+                errors.append("prohibited bundled literature in export")
+    if unsafe or "cannot inspect export directory" in errors:
+        return sorted(set(errors))
+    for path in sorted(selected):
+        p = root / path
+        if not p.resolve().is_relative_to(root.resolve()):
+            errors.append(f"export path escapes destination: {path}")
+            continue
+        if not p.is_file() or p.is_symlink():
+            errors.append(f"missing/unsafe exported dependency: {path}")
+        else:
+            wanted_mode = 0o755 if identities[path].get("mode", "100644") == "100755" else 0o644
+            if stat.S_IMODE(p.stat().st_mode) != wanted_mode:
+                errors.append(f"exported mode differs from plan: {path}")
+            if path not in plan.get("generated_overlay", []):
+                expected = identities[path].get("planned_export_sha256")
+                if not expected or hashlib.sha256(p.read_bytes()).hexdigest() != expected:
+                    errors.append(f"exported source bytes differ from planned overlay: {path}")
+    for task, paths in plan["task_evidence"].items():
+        for p in paths:
+            if p not in selected or not (root / p).is_file():
+                errors.append(f"task {task} lacks evidence: {p}")
+    for path in sorted(selected):
+        p = root / path
+        if p.is_file() and p.suffix == ".md":
+            for target in markdown_targets(p.relative_to(root).as_posix(), p.read_text()):
+                if not (root / target).exists():
+                    errors.append(f"broken export link: {p.relative_to(root)} -> {target}")
+    # The artifact index is intentionally regenerated over the selected tree,
+    # so its source hash cannot be used as the expected export hash. Recompute
+    # its exact content and every retained lifecycle header instead.
+    manifest_path = "docs/state/theorem-state.yaml"
+    if not errors and manifest_path in selected and (root / manifest_path).is_file():
+        try:
+            state = yaml.safe_load((root / manifest_path).read_text())
+            check_manifest_paths(root, state)
+            records = build_records(root, state)
+            errors.extend("export artifact metadata: " + e for e in check_state(root, state, records))
+        except (OSError, ValueError, KeyError, TypeError, yaml.YAMLError) as exc:
+            errors.append("cannot validate exported artifact metadata: " + str(exc))
+    if not errors and "docs/state/theorem-state.schema.json" in selected:
+        errors.extend("export theorem state: " + e for e in check_theorem_state(root))
+    return sorted(set(errors))
+
+
+def export_reviewed(root: Path, plan: dict, destination: Path) -> None:
+    if not plan["release_cleared"]:
+        raise ValueError("release blocked by missing dependencies, per-file reviews, or owner/license gate")
+    materialize_plan(root, plan, destination)
+
+
+def materialize_plan(root: Path, plan: dict, destination: Path) -> None:
+    """Unshared structural candidate; no permission to redistribute its files."""
+    identities = planned_paths(plan)
+    if plan.get("dependency_complete") is not True:
+        raise ValueError("cannot materialize a dependency-incomplete candidate")
+    commit, files = tree_files(root, plan["commit"])
+    if commit != plan["commit"]:
+        raise ValueError("release plan must pin an exact source commit")
+    # Check the source objects and both hashes before creating or writing any
+    # destination. A saved plan cannot be reused with changed source identities.
+    contents = {}
+    for p, entry in identities.items():
+        if p not in files or any(entry.get(k) != files[p][k] for k in ("git_blob_oid", "mode")):
+            raise ValueError(f"source Git identity differs from plan: {p}")
+        raw = git_bytes(root, "show", f"{commit}:{p}")
+        check_object_identity(raw, files[p]["git_blob_oid"])
+        if hashlib.sha256(raw).hexdigest() != entry.get("source_sha256"):
+            raise ValueError(f"source hash differs from plan: {p}")
+        contents[p] = rewrite_references(p, raw, plan["external_citations"])
+        if hashlib.sha256(contents[p]).hexdigest() != entry.get("planned_export_sha256"):
+            raise ValueError(f"export overlay hash differs from plan: {p}")
+    manifest_path = "docs/state/theorem-state.yaml"
+    if manifest_path in contents:
+        check_manifest_paths(root, yaml.safe_load(contents[manifest_path]))
+    if destination.exists():
+        raise ValueError("destination must not exist")
+    destination.mkdir(parents=True, mode=0o700)
+    for entry in plan["entries"]:
+        p = entry["path"]
+        dest = destination / p
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_bytes(contents[p])
+        dest.chmod(0o755 if entry["mode"] == "100755" else 0o644)
+    for directory in ("docs/archive", "docs/audits", "docs/reports"):
+        (destination / directory).mkdir(parents=True, exist_ok=True)
+    subprocess.run([sys.executable, str(destination / "tools/build_artifact_index.py"),
+                    "--root", str(destination), "--write", "--write-headers"], check=True)
+    subprocess.run([sys.executable, str(destination / "tools/generate_theorem_state_views.py"),
+                    "--root", str(destination)], check=True)
+    errors = validate_export(plan, destination)
+    if errors:
+        raise ValueError("export validation failed: " + "; ".join(errors))
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--root", type=Path, default=ROOT)
+    parser.add_argument("--ref", default="HEAD")
+    parser.add_argument("--review-file", type=Path, help="private exact-commit approval record outside the exported tree")
+    parser.add_argument("--summary", action="store_true")
+    parser.add_argument("--check", action="store_true", help="require dependency closure, not rights clearance")
+    parser.add_argument("--validate-export", type=Path)
+    output_group = parser.add_mutually_exclusive_group()
+    output_group.add_argument("--export-reviewed", type=Path, help="local files only; requires all clearance gates")
+    output_group.add_argument("--local-candidate", type=Path, help="unshared structural QA only; leaves release clearance false")
+    args = parser.parse_args(argv)
+    try:
+        plan = build_plan(args.root, args.ref, args.review_file)
+        if args.validate_export:
+            errors = validate_export(plan, args.validate_export)
+            if errors:
+                raise ValueError("; ".join(errors))
+        if args.export_reviewed:
+            export_reviewed(args.root, plan, args.export_reviewed)
+        if args.local_candidate:
+            if not plan["dependency_complete"]:
+                raise ValueError("cannot materialize a dependency-incomplete candidate")
+            materialize_plan(args.root, plan, args.local_candidate)
+            plan["mode"] = "unshared local structural QA; NOT CLEARED FOR REDISTRIBUTION"
+        output = {k:v for k,v in plan.items() if k not in {"entries", "edges", "task_evidence", "external_citations", "excluded_nonessential_paths"}} if args.summary else plan
+        if args.summary:
+            output.update(required_files=len(plan["entries"]), dependency_edges=len(plan["edges"]),
+                          task_cards=len(plan["task_evidence"]), external_citations=len(plan["external_citations"]),
+                          excluded_nonessential_files=len(plan["excluded_nonessential_paths"]))
+        print(json.dumps(output, indent=2, sort_keys=True))
+        return 1 if args.check and not plan["dependency_complete"] else 0
+    except (OSError, ValueError, KeyError, TypeError, yaml.YAMLError, subprocess.SubprocessError) as exc:
+        print(f"release-dependencies: {exc}", file=sys.stderr)
+        return 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

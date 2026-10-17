@@ -1,0 +1,155 @@
+#!/usr/bin/env python3
+"""Exact first-transition regression for a finite triangular-lattice window.
+
+The floating-point transition scan is useful for discovery, but this special
+case admits an exact audit. Represent a lattice point by integer coordinates
+``(a, b)`` meaning ``a*e1 + b*e2``, where
+
+    e1 = (1, 0),  e2 = (1/2, sqrt(3)/2).
+
+Squared distances are the integer quadratic form ``a*a + a*b + b*b``. Since
+both shores are subsets of one lattice, a strict cross-conflict is possible
+only at coincident sites. The flag is therefore the ordered insertion of
+omitted lattice sites. The one-point cage test is also exact: unit-neighbor
+directions are the six lattice directions, and a nontrivial finite one-point
+motion exists iff the contact directions fit in a closed semicircle, equivalently
+iff the largest complementary direction gap is at least three sixth-turns.
+
+This is a finite regression only; it makes no global-optimality claim.
+"""
+
+from __future__ import annotations
+
+import argparse
+import itertools
+import json
+import math
+from collections import Counter
+
+
+Point = tuple[int, int]
+
+
+def qdist2(p: Point, q: Point) -> int:
+    da = p[0] - q[0]
+    db = p[1] - q[1]
+    return da * da + da * db + db * db
+
+
+def window(width: int, height: int) -> list[Point]:
+    """Return the same staggered-row window as ``triangular_points_in_box``."""
+    points: list[Point] = []
+    j = 0
+    while j * math.sqrt(3.0) / 2.0 <= height + 1e-12:
+        offset = j % 2
+        i = 0
+        while i + 0.5 * offset <= width + 1e-12:
+            points.append((i - j // 2, j))
+            i += 1
+        j += 1
+    return points
+
+
+def triangle_free(points: list[Point]) -> bool:
+    return all(
+        not (qdist2(a, b) == qdist2(a, c) == qdist2(b, c) == 1)
+        for a, b, c in itertools.combinations(points, 3)
+    )
+
+
+def unit_direction_index(delta: Point) -> int:
+    directions = ((1, 0), (0, 1), (-1, 1), (-1, 0), (0, -1), (1, -1))
+    return directions.index(delta)
+
+
+def has_closed_semicircle(direction_indices: set[int]) -> bool:
+    """Exact finite one-point escape test for lattice unit-neighbor directions."""
+    if len(direction_indices) <= 1:
+        return True
+    ordered = sorted(direction_indices)
+    gaps = [
+        (ordered[(i + 1) % len(ordered)] - ordered[i]) % 6
+        for i in range(len(ordered))
+    ]
+    return max(gaps) >= 3
+
+
+def first_transition(
+    source: list[Point], capacity: list[Point]
+) -> tuple[int, bool, int, int] | None:
+    """Return step, cage status, degree, and triangle count at first event."""
+    source_set = set(source)
+    omitted = [point for point in capacity if point not in source_set]
+    current = list(source)
+    for step, inserted in enumerate(omitted, start=1):
+        current.append(inserted)
+        if not triangle_free(current):
+            triangles = [
+                (a, b, c)
+                for a, b, c in itertools.combinations(current, 3)
+                if qdist2(a, b) == qdist2(a, c) == qdist2(b, c) == 1
+            ]
+            directions = {
+                unit_direction_index((q[0] - inserted[0], q[1] - inserted[1]))
+                for q in current
+                if q != inserted and qdist2(inserted, q) == 1
+            }
+            return (
+                step,
+                not has_closed_semicircle(directions),
+                len(directions),
+                len(triangles),
+            )
+    return None
+
+
+def scan(width: int, height: int) -> dict[str, object]:
+    capacity = window(width, height)
+    status: Counter[str] = Counter()
+    by_step: Counter[tuple[int, str]] = Counter()
+    by_degree: Counter[tuple[int, str]] = Counter()
+    subshores = 0
+
+    for size in range(1, len(capacity) + 1):
+        for indices in itertools.combinations(range(len(capacity)), size):
+            source = [capacity[i] for i in indices]
+            if not triangle_free(source):
+                continue
+            subshores += 1
+            event = first_transition(source, capacity)
+            if event is None:
+                continue
+            step, caged, degree, triangle_count = event
+            label = "caged" if caged else "escapable"
+            status[label] += triangle_count
+            by_step[(step, label)] += 1
+            by_degree[(degree, label)] += 1
+
+    return {
+        "width": width,
+        "height": height,
+        "capacity_points": len(capacity),
+        "triangle_free_subshores": subshores,
+        "first_transition_events": sum(status.values()),
+        "status": dict(sorted(status.items())),
+        "by_step": {
+            f"{step}:{label}": count
+            for (step, label), count in sorted(by_step.items())
+        },
+        "by_contact_degree": {
+            f"{degree}:{label}": count
+            for (degree, label), count in sorted(by_degree.items())
+        },
+    }
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--width", type=int, default=3)
+    parser.add_argument("--height", type=int, default=3)
+    args = parser.parse_args()
+    print(json.dumps(scan(args.width, args.height), indent=2, sort_keys=True))
+
+
+if __name__ == "__main__":
+    main()

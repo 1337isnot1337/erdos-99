@@ -1,0 +1,95 @@
+#!/usr/bin/env python3
+"""Exact endpoint-order reduction for a collapsed common outer host.
+
+If all six parallel host trains terminate at one outer host, their bounded
+endpoints have a cyclic order.  Every pair of endpoint-disjoint internal trains
+whose chords alternate in that order must cross.  The audited endpoint-fan
+theorem makes the train-crossing graph triangle-free.  Therefore any endpoint
+order for which three such alternating pairs form a triangle is impossible,
+independently of the metric collapsed root.
+
+This is only a universal combinatorial reduction: the remaining endpoint orders
+are not claimed realizable or impossible here.
+"""
+
+from collections import Counter
+from itertools import combinations, permutations
+
+EDGES = ((0, 1), (0, 2), (0, 4), (0, 5), (1, 2), (1, 3),
+         (1, 5), (2, 3), (2, 4), (3, 4), (3, 5), (4, 5))
+
+
+def alternates(e, f, order):
+    if set(e) & set(f):
+        return False
+    position = {v: i for i, v in enumerate(order)}
+    a, b = sorted((position[e[0]], position[e[1]]))
+    c, d = sorted((position[f[0]], position[f[1]]))
+    return (a < c < b < d) or (c < a < d < b)
+
+
+def alternating_graph(order):
+    graph = {i: set() for i in range(len(EDGES))}
+    for i, j in combinations(range(len(EDGES)), 2):
+        if alternates(EDGES[i], EDGES[j], order):
+            graph[i].add(j)
+            graph[j].add(i)
+    return graph
+
+
+def has_triangle(graph):
+    return any(
+        j in graph[i] and k in graph[i] and k in graph[j]
+        for i in graph
+        for j in graph[i]
+        for k in graph[i]
+        if i < j < k
+    )
+
+
+def is_bipartite(graph):
+    color = {}
+    for start in graph:
+        if start in color:
+            continue
+        color[start] = 0
+        stack = [start]
+        while stack:
+            vertex = stack.pop()
+            for neighbor in graph[vertex]:
+                if neighbor in color:
+                    if color[neighbor] == color[vertex]:
+                        return False
+                else:
+                    color[neighbor] = 1 - color[vertex]
+                    stack.append(neighbor)
+    return True
+
+
+def remaining_type(order):
+    graph = alternating_graph(order)
+    degrees = tuple(sorted(len(neighbors) for neighbors in graph.values()))
+    return is_bipartite(graph), degrees
+
+
+orders = list(permutations(range(6)))
+triangle_orders = [order for order in orders if has_triangle(alternating_graph(order))]
+remaining_orders = [order for order in orders
+                    if not has_triangle(alternating_graph(order))]
+
+assert len(orders) == 720
+assert len(triangle_orders) == 384
+assert len(remaining_orders) == 336
+
+type_counts = Counter(remaining_type(order) for order in remaining_orders)
+assert type_counts == Counter({
+    (True, (0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2)): 48,
+    (True, (0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 3, 3)): 144,
+    (False, (0, 0, 0, 0, 2, 2, 3, 3, 3, 3, 3, 3)): 144,
+})
+
+print("endpoint_orders", len(orders))
+print("triangle_forcing_orders", len(triangle_orders))
+print("remaining_orders", len(remaining_orders))
+print("remaining_forced_crossing_types", dict(type_counts))
+print("PASS: 384 common-host endpoint orders violate triangle-free train crossing")

@@ -1,0 +1,46 @@
+# Target C: h=5,m=6,(2,2,1,1,1,1) pair/phase symmetry compression
+
+Date: 2026-09-25
+
+Status: executed exact finite symmetry classification. This is a reduction of the remaining m=6 profile, not a closure claim.
+
+The support-nullity reduction leaves two six-support families:
+
+A={1234,1235,1236,1245,1345,2345},
+B={1234,1235,1245,1267,1345,2345}.
+
+For multiplicity (2,2,1,1,1,1), choose the two doubled supports. For a fixed doubled-support pair there are 3^6=729 cycle-set phase choices: on each doubled support choose the omitted one of the three no-root 4-cycles, and on each other support choose its unique used cycle.
+
+I enumerated all 5040 permutations of {1,...,7}, computed the exact support-family stabilizers, their orbits on unordered support pairs, and then the residual pair stabilizer action on the 729 phase assignments. Hamiltonian 4-cycles were represented by their four undirected edges, so the induced cycle action is purely combinatorial.
+
+Family A has stabilizer order 12 and five doubled-support pair types:
+
+- (1234,1235): pair orbit size 1, pair stabilizer 12, 69 phase orbits; phase-orbit size distribution {3:1,6:15,12:53}.
+- (1234,1236): pair orbit size 2, pair stabilizer 6, 123 phase orbits; distribution {3:3,6:120}.
+- (1234,1245): pair orbit size 6, pair stabilizer 2, 366 phase orbits; distribution {1:3,2:363}.
+- (1236,1245): pair orbit size 3, pair stabilizer 4, 192 phase orbits; distribution {1:1,2:18,4:173}.
+- (1245,1345): pair orbit size 3, pair stabilizer 4, 192 phase orbits; distribution {1:1,2:18,4:173}.
+
+Thus A contributes exactly 942 cycle-set orbits.
+
+Family B has stabilizer order 24 and five doubled-support pair types:
+
+- (1234,1235): pair orbit size 3, pair stabilizer 8, 138 phase orbits; distribution {1:1,2:16,4:68,8:53}.
+- (1234,1267): pair orbit size 3, pair stabilizer 8, 138 phase orbits; distribution {1:1,2:16,4:68,8:53}.
+- (1234,1345): pair orbit size 6, pair stabilizer 4, 246 phase orbits; distribution {1:3,2:123,4:120}.
+- (1267,1345): pair orbit size 2, pair stabilizer 12, 84 phase orbits; distribution {3:3,6:42,12:39}.
+- (1345,2345): pair orbit size 1, pair stabilizer 24, 56 phase orbits; distribution {3:1,6:15,12:27,24:13}.
+
+Thus B contributes exactly 662 cycle-set orbits.
+
+Checks:
+
+- the pair-orbit sizes sum to 15 in each family;
+- 15*3^6=10935 raw cycle sets occur on each canonical support family;
+- A has 5040/12=420 labeled support realizations and B has 5040/24=210;
+- hence the two support families contain 4,592,700 and 2,296,350 fully labeled cycle sets, respectively, for 6,889,050 total;
+- all of these reduce to exactly 942+662=1604 S7 cycle-set orbits.
+
+Therefore the remaining h=5,m=6,(2,2,1,1,1,1) search need not scan 6,889,050 labeled cycle sets or even 21,870 canonical-support raw phase states. It is enough to scan these 1604 exact cycle-set orbits, then the compatible five-singleton choices, local singleton directions, generalized-weight filter (3,4,6), and required external increment five.
+
+No relation-rank claim is made here. The next finite target is to run the exact relation-rank engine on the ten pair types above, preferably shardwise.

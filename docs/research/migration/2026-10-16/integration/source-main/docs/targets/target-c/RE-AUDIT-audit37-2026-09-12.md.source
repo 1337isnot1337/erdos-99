@@ -1,0 +1,231 @@
+# Target C audit.37 repository re-audit
+
+**Date:** 2026-09-12  
+**Scope:** active canonical Target C chain through Section 96, the audit.36/audit.37 promotion chain, corrected endpoint work, and the proof-only results added immediately afterward.  
+**Level I:** OPEN. **C-I:** CLOSED. **C-II:** OPEN.
+
+This is an audit record, not a theorem promotion. `docs/state/theorem-state.yaml` remains the lifecycle authority.
+
+## Verdict
+
+The canonical Section-96 result survives hostile re-check. In the Type-II full-core branch there is a locally rhombic-saturated macroscopic harmonic carrier with
+
+\[
+\operatorname{diam}(P_*)\ge(0.936215741409583\ldots-o(1))D.
+\]
+
+At the sharp wrapping endpoint, each of the three distinguished outer-contact routes has
+
+\[
+\ell_j=d_j=\sin(\theta_4)D+o(D),
+\qquad
+\ell_j-d_j=o(D).
+\]
+
+The earlier stronger assertion that the **entire** outer walk is asymptotically geodesic, or that `per(P_D)/D -> 4 alpha_4`, is false. The corrected endpoint argument and the later route-excess analysis do not revive that claim.
+
+C-II remains open. No audited statement forces an exact unit equilateral triangle or constructs a source-preserving strict sub-`D` competitor.
+
+## 1. Sections 90--94 / audit.36
+
+The audit.36 promotion remains valid.
+
+- Section 90 correctly combines a quadratic carrier, `O(D)` local train count, and `O(D)` total angular defect to obtain a quadratic crossing graph inside one `O(1/D)` phase bin. Its Markov, random-shift, small-shore, and minimum-degree pruning estimates have the required scales.
+- Section 91 does not infer a linear biclique from arbitrary graph density. The needed extra geometry is present: phase separation, the Section-76 monotonicity cone, endpoint-balanced slabs, interval neighborhoods, and a consecutive-ones rectangle extraction.
+- Sections 92, 93, and 94 are independent strengthening routes built from the same wrapping geometry; Section 94 does not logically require 92 or 93. Its three forbidden arcs occur in three distinct finite cyclic attachment gaps and give the valid `0.919778662688621...` predecessor threshold.
+
+There is one nonfatal wording defect in Lemma 91.1. The quantity summed over order cuts is the number of cuts between endpoints, `j-i`. The prose description as the number of vertices “from its left endpoint through its right endpoint” is off by one if read literally. The proof and asymptotic conclusion are correct with the cut-count definition.
+
+**Disposition:** canonical conclusions retained; wording cleanup recommended for Section 91.
+
+## 2. Protected-contact creation / proof-only Section 95
+
+The original broad fixed-hull formulation was invalid: an arbitrary contact isolate can be a source-hull extreme point or diameter endpoint, so moving it need not preserve the source hull or active diameter set.
+
+The repaired version, which moves isolates starting inside the protected chamber, avoids that problem. It remains an obstruction theorem only. New contacts can be universally zero-stressed, so contact creation does not imply new KKT visibility or force transfer.
+
+**Disposition:** original broad statement rejected; narrowed repaired statement valid in its stated proof-only scope.
+
+## 3. Section 96 / audit.37
+
+The Section-96 scalar chain is valid.
+
+Section 82 gives the exact carrier identity
+
+\[
+L+Q=4a-6-2s-2c.
+\]
+
+Section 94 gives three distinct forbidden attachment gaps. Their endpoint chords have length at least `D sin(theta)-o(D)`, so the corresponding unit-contact outer routes have the same lower bound. Every other consecutive-attachment route has length at least two unless the polygon side is a direct loaded-loaded contact. Thus
+
+\[
+L\ge3D\sin\theta+2(a-3)-c^{\partial}-o(D),
+\]
+
+which combines with the exact ledger to give
+
+\[
+2a\ge3D\sin\theta+2s+c+Q-o(D).
+\]
+
+Writing `alpha=a/D`, the independent six-cluster ceiling is
+
+\[
+\alpha\le3\theta-2\pi.
+\]
+
+Therefore every wrapping limit satisfies
+
+\[
+\frac32\sin\theta\le3\theta-2\pi.
+\]
+
+The difference is strictly increasing on the admissible interval, producing the unique threshold
+
+\[
+\lambda\ge0.936215741409583\ldots .
+\]
+
+At equality, `s/D`, `c/D`, and `Q/D` vanish. The exact outer-walk identity and the three individual chord lower bounds then squeeze each distinguished route separately to `o(D)` excess.
+
+Bridges do not invalidate the count. `L` is an outer-face walk length with multiplicity; bridge excursions only add route length.
+
+**Disposition:** canonical threshold and three distinguished near-geodesic routes retained.
+
+## 4. Corrected endpoint stability
+
+The first endpoint-stability proof was invalid because it claimed a perimeter squeeze that did not exist. Section 94 gave only
+
+\[
+\liminf \operatorname{per}(P_D)/D\ge\alpha_4+3\sin\theta_4,
+\]
+
+while Section 82 gave
+
+\[
+\limsup \operatorname{per}(P_D)/D\le4\alpha_4.
+\]
+
+These bounds differ by a positive linear amount at the Section-96 endpoint. They do not imply `per(P_D)/D -> 4alpha_4` or `L_D-per(P_D)=o(D)`.
+
+The corrected report on `main` properly withdraws those statements and recovers only the three distinguished near-geodesic corridors from the exact route budget.
+
+**Disposition:** original perimeter argument rejected; corrected route-level conclusion valid.
+
+## 5. Endpoint route-excess split
+
+The later proof-only report `target_c_endpoint_route_excess_split_2026-09-12.md` uses a different argument and survives re-check.
+
+At the endpoint, the six allowed Section-88 angular intervals have total measure `2alpha_4`. Section 88 gives force-hull boundary length `(D/2+o(D))L` for any fixed finite angular union, so these six intervals have total boundary length at most `alpha_4D+o(D)`. The endpoint also has `a_D=alpha_4D+o(D)` attachments. Unit separation forces at least `N-1` boundary length for `N` attachments in one allowed component. With at most six components, the upper and lower bounds squeeze the allowed boundary length to `alpha_4D+o(D)` and force only `o(D)` unused boundary margin/spacing excess.
+
+This makes the three forbidden finite gaps approach their limiting sizes. Their polygon sides contribute `2alpha_4D+o(D)` total perimeter. The remaining `a_D-3` short sides have total length `alpha_4D+o(D)`. Hence
+
+\[
+\boxed{\operatorname{per}(P_D)/D\to3\alpha_4,}
+\]
+
+not `4alpha_4`. Since Section 96 gives `L_D/D ->4alpha_4`, the walk/polygon gap is genuinely linear:
+
+\[
+\boxed{(L_D-\operatorname{per}(P_D))/D\to\alpha_4.}
+\]
+
+The same route budget shows that all but `o(D)` ordinary attachment intervals are exactly two-edge routes, while the short polygon sides have total excess above one equal to `o(D)`. Thus linearly many ordinary intervals are unit-unit “teeth” with base length `1+o(1)` but strictly greater than one by triangle-freeness.
+
+This does not contradict the corrected endpoint report: the three special macroscopic routes are near-geodesic while the rest of the boundary carries a linear number of microscopic two-edge detours.
+
+**Disposition:** valid proof-only endpoint refinement; no promotion performed here.
+
+## 6. Near-geodesic local-face regression
+
+`target_c_near_geodesic_face_regression_2026-09-12.md` is valid in the local scope it claims. Its explicit two-chain convex unit-contact corridor is triangle-free, has no hidden unit chords, has zero interior isolate population, and has area linear in diameter.
+
+It blocks the purely local implication
+
+```text
+linear unit-contact/interface boundary currency
+  -> o(D) inactive-face area/population deficit.
+```
+
+It is not a Type-II global minimizer, carries no required global KKT structure, and therefore invalidates no canonical theorem.
+
+**Disposition:** valid local regression; noncanonical.
+
+## 7. Finite core escape barrier
+
+The proof-only `target_c_core_escape_barrier_2026-09-11.md` also survives re-check.
+
+For a fixed labeled core with a strictly positive stress on every actual contact/diameter row and mixed rigidity rank `2m-3`, define
+
+\[
+\kappa(P)=\min_{u\in T^\perp,\|u\|=1}\max_e\{-\phi_e(u)\}.
+\]
+
+Strict positive equilibrium plus mixed rigidity makes `kappa(P)>0`. After optimal rigid alignment, the displacement lies in `T^perp`. Exact squared-distance expansions give
+
+\[
+\kappa(P)r\le\max\{2r^2,\tau\},
+\qquad
+\tau=\operatorname{diam}(X)^2-D^2.
+\]
+
+For `0<r<kappa(P)/2`, the quadratic term is too small, so `tau>=kappa(P)r`. A connected diameter-nonincreasing feasible path therefore cannot move the original core away from its congruence orbit: the continuous core-distance function cannot cross the forbidden interval `(0,kappa(P)/2)`.
+
+The theorem is source-specific; it gives no useful uniform lower bound on `kappa(P)` as `D` grows and does not rule out a separately constructed distant competitor.
+
+**Disposition:** valid proof-only finite escape obstruction; no global closure.
+
+## 8. Simultaneous inactive activation no-go
+
+The proof-only `target_c_simultaneous_inactive_activation_2026-09-11.md` is valid in its stated chamber scope.
+
+From a linear deep near-unit matching, a radius-four greedy packing retains at least a `1/81` fraction of well-separated movers. Stopping each mover at its first contact produces mutually disjoint star components, and the full Cartesian product of stopped segments remains unit-separated. Chamber depth keeps every new star strictly inside the source hull, so no new star vertex is diametral.
+
+For any KKT stress at an activated endpoint, summing equilibrium over one isolated star yields
+
+\[
+\sum_{ij\in E(\text{star})}\alpha_{ij}|p_i-p_j|^2=0.
+\]
+
+All contact coefficients are nonnegative and all star edges have length one, so every new coefficient is zero in every normalized stress. Original stresses extend by zero, and restriction removes only these zero coordinates. Thus the normalized KKT polytope on the original force core is unchanged.
+
+Together with the finite escape barrier, this kills the proposed chain
+
+```text
+deep isolate matching -> many new contacts -> new force support -> unlock core.
+```
+
+The first arrow is possible; the second is false for these activations.
+
+**Disposition:** valid proof-only no-go result; C-II remains open.
+
+## 9. Corridor bridge/rhombus dichotomy
+
+The proof-only corridor report on `main` survives a first hostile check.
+
+- Individual corridor `o(D)` excess comes from the valid Section-96 route budget.
+- A nonbridge outer edge has one bounded inner face; only `o(D)` nonbridge outer incidences can border nonquadrilateral faces because their total incidence is at most `5Q=o(D)`.
+- Hence each special corridor is either bridge-rich or contains linearly many exposed strict-rhombus sides asymptotically aligned with its chord.
+- A bridge cannot cut off an attachment-free harmonic subcomponent: positive harmonic equilibrium with a single boundary value would collapse that subcomponent.
+- Bridge cuts cannot alternate their attachment sets around the convex attachment boundary by planarity.
+- In the bridge tree, every backtracking traversal pair contributes exactly two to `sum(1-cos psi)`. Since the whole corridor has `o(D)` path excess, only `o(D)` such backtracking can occur, leaving a linear simple bridge-tree path in the bridge-rich case.
+
+**Disposition:** mathematically plausible/valid as a proof-only structural split; no canonical promotion in this audit.
+
+## Repository-state findings
+
+1. PR #277 correctly repaired audit.37 frontier drift in the active README/state/navigation and restricted the modern duplicate-section guard to `NN-*-audit.md`, leaving the intentionally duplicated early frontier namespace alone.
+2. `96-outer-walk-forbidden-gap-threshold-audit.md` still ends with stale pre-promotion lifecycle prose (`proved candidate`, theorem state unchanged). The manifest is authoritative, but this source prose should eventually be changed to `canonical; promoted by the independent Section-96 hostile audit` / `2026-09-11.audit.37`.
+3. Section 96 directly invokes Section 88's six-cluster/cap-family machinery. The manifest reaches it transitively through `C-WRAP-THREE-GAP`; an explicit `C-HARMONIC-WRAPPING` dependency would improve provenance, not mathematics.
+4. Two distinct proof-only reports currently label their theorems **Section 97**: the endpoint route-excess split and the corridor bridge/rhombus split. This is a provenance collision. The route-excess report landed first and is logically prior. If the corridor theorem is promoted into the numbered Target-C namespace, it should be Section 98 (or remain unnumbered). PR #281 currently proposes it as `97-...-audit.md`; that numbering should be fixed before merge.
+5. Old PR #279 is superseded and should remain closed. Its content already exists on `main` as a proof-only report.
+6. Numbered proof-only source files or reports are not canonical merely because they are merged. Promotion still requires a hostile-audit/theorem-state transaction.
+
+## True frontier
+
+The live canonical split remains:
+
+- **Macroscopic-container branch:** one actual inactive chamber or exterior cap carries quadratic population with boundary-order perimeter/slack. Deep matching exists, but bulk contact activation can remain completely force-invisible, and the original core cannot be unlocked by a continuous diameter-nonincreasing path. A closure must use a genuinely global replacement/packing argument or prove the branch structurally impossible.
+- **Full-core near-disk branch:** one harmonic carrier has normalized diameter at least `0.936215741409583...`, local rhombic filling `1-o(1)`, a dense inverse-diameter phase core, an explicit linear-by-linear ordered grid, and three distinguished near-geodesic outer corridors at the sharp endpoint. The endpoint additionally has a linear boundary layer of near-equilateral two-edge teeth. The local-face regression prevents closing the branch from corridor perimeter/area data alone. The bridge/rhombus dichotomy, if later promoted, only sharpens the remaining structural alternatives.
+
+No current theorem settles C-II or Erdős Problem #99.

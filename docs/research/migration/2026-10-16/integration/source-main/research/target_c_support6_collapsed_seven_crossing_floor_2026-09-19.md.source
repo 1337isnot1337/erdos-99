@@ -1,0 +1,341 @@
+# Target C-II — collapsed support-six blocks consume at least seven strict rhombi
+
+**Date:** 2026-09-19  
+**Claim class:** exact finite/global train-topology strengthening; theorem-state authority unchanged  
+**Scope:** degree-pure collapsed support-six one-anchor components after maximal two-anchor activation  
+**Depends on:** audited collapsed support-six rotation-cell census; audited MI.1 mod-2 relation-cycle equation; stopped-train pseudoline theorem; strict unit-rhombus crossing-angle criterion  
+**Certificate:** `research/verify_target_c_support6_collapsed_seven_crossing_floor_2026_09_19.cpp`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The remaining degree-pure support-six one-anchor mechanism is the collapsed block
+
+\[
+y_1=\cdots=y_6\ne0,
+\qquad
+R[K]=K_6\setminus M,
+\]
+
+with six projectively parallel outside anchors in a `3+3` orientation split. The existing rotation-cell theorem reduced its local angle/order data to 388 exact rational cells, or 42 conservative symmetry orbits. The coarse MI.1 regression then showed that forgetting simultaneous crossing-threshold information is too weak: every one of the 388 coarse parity systems is consistent.
+
+Retaining that information gives a much stronger global conclusion.
+
+Let `X_K` be the number of strict-rhombus crossings whose two complete trains are both among the twelve internal relation trains of the collapsed block `K`. Then
+
+\[
+\boxed{X_K\ge7.}
+\tag{SC.1}
+\]
+
+The proof is finite and exact. It does not use the nonlinear six-pentagon closure equations. For every proposed crossing set of size at most six it simultaneously checks:
+
+1. the full audited MI.1 system over `F_2`;
+2. exact joint feasibility of all selected strict crossing windows under one projective-angle vector in the rotation cell; and
+3. planarity of the train drawing after every selected crossing is planarized with its geometrically forced local cyclic order, allowing every possible order of multiple crossings along each train.
+
+No candidate of size `0,...,6` passes all three tests in either matching type.
+
+This converts the last support-six exception into a second universal resource payment. If `c_6` is the number of active degree-pure collapsed support-six components and `R_4` is the total number of bounded strict-rhombus contact faces, then internal train sets of distinct relation components are disjoint, so their internal crossing rhombi are disjoint. Hence
+
+\[
+\boxed{R_4\ge7c_6,\qquad c_6\le {R_4\over7}.}
+\tag{SC.2}
+\]
+
+Together with the already proved tangent payment
+
+\[
+d_C\ge M_0+2c_6,
+\qquad
+M_0={b-f\over2}+E_U+p_U,
+\]
+
+one obtains the two-currency bound
+
+\[
+\boxed{
+c_6\le
+\min\left\{
+{d_C-M_0\over2},
+{R_4\over7}
+\right\}.
+}
+\tag{SC.3}
+\]
+
+Substitution into the current support accounting gives
+
+\[
+\boxed{
+\sigma_C
+\le
+2n_0+n_2+{n_1\over7}+{x_U\over7}
++\min\left\{
+{d_C-M_0\over14},
+{R_4\over49}
+\right\}.
+}
+\tag{SC.4}
+\]
+
+The point is structural. A support-six dual escape now has to spend both contact-tangent capacity and at least seven actual strict rhombi. It is no longer a cheap local closure defect.
+
+---
+
+## 1. Input: the exact 388-cell endpoint
+
+Use the notation of the collapsed rotation-cell reduction. Each internal relation train `e` has a projective direction
+
+\[
+0<\alpha_e<\pi,
+\qquad
+x_e={3\alpha_e\over\pi}.
+\]
+
+At each of the six exceptional pentagons, the current exact local geometry becomes the strict integer-difference system
+
+\[
+0<G_i<2,
+\qquad
+2<G_i+G_{i+1}<3.
+\tag{1.1}
+\]
+
+After enumerating the Eulerian `2`-in/`2`-out relation orientations and the four local order choices at each face, the prior exact certificate leaves
+
+\[
+180
+\]
+
+labelled cells for the all-cross missing matching type and
+
+\[
+208
+\]
+
+for the mixed missing matching type. There are 388 in total.
+
+Every actual collapsed support-six block satisfying the current pentagon theorems lies in one of these cells. The present argument works over the whole open rational cell. It does not assume a numerical closure root exists there.
+
+---
+
+## 2. A selected crossing set must satisfy MI.1
+
+There are twelve internal relation trains, hence 66 unordered train pairs. For a pair `e,f`, let
+
+\[
+z_{e,f}\in\{0,1\}
+\]
+
+record whether their canonical complete train paths cross in a strict rhombus.
+
+For every pair of edge-disjoint simple relation cycles `C,D`, the audited plane-intersection theorem gives
+
+\[
+\bigoplus_{e\in E(C),\,f\in E(D)} z_{e,f}
+=
+\bigoplus_{v\in V(C)\cap V(D)}\eta_v(C,D).
+\tag{2.1}
+\]
+
+The right side is read exactly from the four-edge cyclic relation order at each common exceptional face. Train pairs sharing an exceptional endpoint remain in the left side; such trains may meet later in a rhombus.
+
+The verifier generates every simple relation cycle and every unordered edge-disjoint cycle pair, then row-reduces (2.1) exactly over `F_2`. For a proposed crossing set `S`, satisfying this affine system is the first necessary test.
+
+Already this rules out `|S|=0` and `|S|=1` in every one of the 388 cells.
+
+---
+
+## 3. Selected crossings must be jointly angle-feasible
+
+A strict unit-rhombus crossing of `e,f` requires
+
+\[
+{\pi\over3}<\angle_{\rm proj}(e,f)\le{\pi\over2}.
+\]
+
+For representatives `0<\alpha_e,\alpha_f<\pi`, this is equivalent to one of the two oriented strict windows
+
+\[
+1<x_e-x_f<2,
+\qquad\text{or}\qquad
+1<x_f-x_e<2.
+\tag{3.1}
+\]
+
+The important point is simultaneity. If `S` contains several crossings, one common angle vector must realize all their windows. The coarse regression intentionally forgot this and therefore admitted spurious combinations of crossing bits.
+
+For every MI.1 crossing set `S` with `|S|\le6`, the new verifier enumerates the two orientations in (3.1) for every selected pair and appends all selected inequalities to the same base rotation-cell difference system. Feasibility is decided by the same exact transformed-cycle Bellman--Ford criterion used in the 388-cell theorem.
+
+Unselected train pairs receive no angle constraint. This is an over-relaxation in the safe direction: two trains may have crossing-compatible directions without actually meeting. Only pairs asserted to cross are forced into a crossing window.
+
+---
+
+## 4. The local rotation at a crossing is not free
+
+Angle compatibility and MI.1 are still not enough. A proposed set of train crossings must planarize the fixed exceptional-face rotation system with the correct geometric crossing signs.
+
+This sign is determined by the coherent train orientations.
+
+For a relation train `e`, choose its upper-half-plane unit direction `u_e` and orient the relation edge from the exceptional face carrying the occurrence `+u_e` to the face carrying `-u_e`. Orient the complete train midpoint path from that tail face to that head face.
+
+Along the train, every rhombus is entered through a side whose counterclockwise rhombus boundary vector is `-u_e` and exited through the opposite side `+u_e`. This is true in the first rhombus because the boundary direction reverses across the terminal contact edge, and it propagates across every subsequent shared contact edge.
+
+Suppose trains `e,f` cross and put
+
+\[
+D=\det(u_e,u_f)\ne0.
+\]
+
+If `D>0`, the crossing rhombus can be written in counterclockwise side order
+
+\[
+-u_e,-u_f,+u_e,+u_f.
+\]
+
+The oriented midpoint displacement of train `e` is then `-u_f`, while that of train `f` is `+u_e`. If `D<0`, the corresponding displacements are `+u_f` and `-u_e`. In both cases, writing `t_e,t_f` for the oriented train tangents through the crossing,
+
+\[
+\boxed{\operatorname{sign}\det(t_e,t_f)=\operatorname{sign}D.}
+\tag{4.1}
+\]
+
+Now let `eA` denote the dart at the crossing pointing toward the lower-numbered endpoint of relation edge `e`. In the exact cell encoding, `orientation_bits[e]=0` means that lower-numbered endpoint is the tail, while bit `1` means it is the head. Thus
+
+\[
+eA=c_e t_e,
+\qquad
+c_e=
+\begin{cases}-1,&\text{bit }e=0,\\+1,&\text{bit }e=1.
+\end{cases}
+\]
+
+Similarly for `f`. Therefore
+
+\[
+\boxed{
+\operatorname{sign}\det(eA,fA)
+=c_ec_f\operatorname{sign}\det(u_e,u_f).
+}
+\tag{4.2}
+\]
+
+Equation (3.1) determines the last sign exactly. Hence the crossing vertex has one forced cyclic order:
+
+- `eA,fA,eB,fB` when the sign in (4.2) is positive;
+- `eA,fB,eB,fA` when it is negative.
+
+The two alternating rotations cannot be chosen independently. This is the extra topological information that makes the finite exclusion work.
+
+---
+
+## 5. Exact planarization test
+
+Fix a proposed selected crossing set `S` and one jointly feasible orientation choice for all windows (3.1).
+
+Replace every selected strict-rhombus crossing by a degree-four crossing vertex. Split each of the twelve relation edges at all its selected crossings. At the six original exceptional-face vertices, retain the exact cyclic relation-edge order of the rotation cell. At every crossing vertex, use the forced cyclic order from Section 4.
+
+If one train participates in several selected crossings, their linear order along the complete train is not determined by the coarse rotation cell. The verifier therefore enumerates **every** permutation of those crossings along each train independently. This deliberately gives the proposed drawing all possible topological freedom.
+
+For each resulting rotation system, the verifier counts the face cycles and computes
+
+\[
+2-2g=V-E+F.
+\tag{5.1}
+\]
+
+Any actual planar stopped-train drawing would produce one of these planarizations with
+
+\[
+g=0.
+\]
+
+Therefore, if every crossing-order permutation has positive genus, the proposed crossing set is impossible globally.
+
+This is only a necessary test. A genus-zero planarization would not by itself prove a straight unit-rhombus realization. The certificate uses the test only in the excluding direction.
+
+---
+
+## 6. Complete enumeration through six crossings
+
+The exact output is:
+
+\[
+\begin{array}{c|r|r|r|r}
+\text{matching}&|S|&\text{MI.1 sets}&\text{joint-angle sets}&\text{planar sets}\\ \hline
+\text{all-cross}&0&0&0&0\\
+&1&0&0&0\\
+&2&156&132&0\\
+&3&1176&96&0\\
+&4&10788&756&0\\
+&5&87648&1416&0\\
+&6&583296&5160&0\\ \hline
+\text{mixed}&0&0&0&0\\
+&1&0&0&0\\
+&2&40&32&0\\
+&3&696&192&0\\
+&4&10024&528&0\\
+&5&82264&1288&0\\
+&6&617952&5480&0
+\end{array}
+\tag{6.1}
+\]
+
+Here:
+
+- `MI.1 sets` counts selected train-pair sets satisfying all cycle-intersection equations;
+- `joint-angle sets` counts those for which at least one common projective-angle vector lies in the base rotation cell and in every selected crossing window;
+- `planar sets` counts those for which at least one jointly feasible crossing orientation and at least one ordering of crossings along every train gives genus zero with the forced crossing rotations.
+
+The final column is identically zero for every `|S|\le6` in both matching types.
+
+Every actual global collapsed block supplies exactly such a selected set, namely its actual internal strict-rhombus crossings. Therefore no actual block can have at most six internal crossings, proving (SC.1).
+
+The certificate uses only integer difference constraints, bit arithmetic over `F_2`, finite permutation enumeration, and Euler characteristic. No floating-point decision occurs.
+
+---
+
+## 7. Global rhombus payment
+
+Let `K,K'` be distinct one-anchor relation components. Their internal relation-train sets are disjoint: a complete relation train has only its two terminal exceptional incidences and therefore cannot be an internal edge of both components.
+
+A strict rhombus belongs to exactly two complete trains. Hence a rhombus counted by `X_K`, whose two crossing trains are internal to `K`, cannot simultaneously be counted by `X_{K'}`.
+
+Summing (SC.1) over all degree-pure collapsed support-six components gives
+
+\[
+R_4
+\ge
+\sum_K X_K
+\ge
+7c_6,
+\]
+
+which is (SC.2).
+
+The preceding tangent-payment theorem independently gives
+
+\[
+c_6\le{d_C-M_0\over2}.
+\]
+
+Taking the minimum proves (SC.3). Inserting `c_6/7` into the existing support count proves (SC.4).
+
+No claim is made here that (SC.4), by itself, beats every existing scalar frontier after all other variables are eliminated. It is a new exact coupling: a support-six component must pay simultaneously in full contact tangent and in actual strict-rhombus population.
+
+---
+
+## 8. Remaining obligation
+
+This theorem does not exclude the collapsed support-six mechanism outright. It proves that any surviving block is globally expensive:
+
+\[
+\boxed{X_K\ge7.}
+\]
+
+The direct finite search becomes less attractive beyond six crossings because the number of selected train-pair sets grows quickly. The next useful attacks are therefore:
+
+1. extract a structural invariant from the forced crossing rotations that replaces weight-by-weight enumeration;
+2. feed the new `R_4\ge7c_6` payment into the live terminal/FREE rhombus and train budgets; and
+3. only if needed, enumerate seven-crossing endpoint types with symmetry and crossing-order pruning before applying the nonlinear six-face closure equations.
+
+**Disposition:** proved an exact seven-rhombus floor for every global degree-pure collapsed support-six block and coupled the last support-six exception to both contact-tangent dimension and strict-rhombus population. C-II remains open.

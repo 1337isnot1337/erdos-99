@@ -1,0 +1,122 @@
+# Target C — Section 128: no strict-rhombus train returns to one bounded face
+
+**Date:** 2026-09-12
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+**Status:** proof-only exact structural theorem.
+**Dependencies:** canonical positive-core/force-hull normalization and relative-interior KKT equilibrium; Section 127 only for the harmonic-cell corollary.
+
+Let `G=(V,C)` be the nonisolated positive-contact core of the canonical post-ZF
+representative, equipped with a relative-interior normalized KKT stress. Thus every
+positive contact has weight `alpha_e>0`, and every active diameter edge has positive
+weight. Let
+
+\[
+B=\operatorname{Vert}(F)
+\]
+
+be the loaded force-hull vertex set.
+
+A nontrivial strict-rhombus train has a simple midpoint path through successive rhombi,
+meeting the contact graph exactly at the midpoints of its parallel train edges. The
+claim is
+
+\[
+\boxed{
+\text{the two terminal sides of a nontrivial train cannot belong to one bounded face.}
+}
+\tag{128.1}
+\]
+
+## 128.1 Close the train through the bounded face
+
+Assume the two terminal contact edges `e_-`, `e_+` are incident, on their terminal
+sides, to the same bounded face `K` of `G`.
+
+Join their midpoints by a simple arc inside the open face `K`, avoiding the finitely
+many contact-isolated source points. Together with the train midpoint path this gives a
+simple closed curve `Gamma` crossing the positive-contact graph transversely exactly at
+the train contact edges.
+
+The train path lies in the convex hull of positive-core vertices, hence in `F`. The
+bounded face `K` also lies in `F`. Therefore
+
+\[
+\Gamma\subset F,
+\qquad
+\operatorname{int}(\Gamma)\subseteq\operatorname{conv}(\Gamma)\subseteq F.
+\tag{128.2}
+\]
+
+The Jordan interior is open in the plane. No loaded vertex can lie there: every
+`b in B` is an extreme boundary point of `F`, while membership in the open Jordan
+interior would give a planar neighborhood of `b` contained in `F`.
+
+Hence the bounded shore `S` of the cut contains no loaded vertex and therefore no
+endpoint of an active diameter edge. In particular,
+
+\[
+\delta_H(S)=\varnothing.
+\tag{128.3}
+\]
+
+## 128.2 The contact cut has a nonzero resultant
+
+Orient the common train-edge direction `u` so every contact crossing `Gamma` points
+from the exterior shore into `S`. Train geometry makes this orientation coherent along
+the whole midpoint path. The contact cut is exactly the train-edge set:
+
+\[
+\delta_C(S)=E(\tau).
+\tag{128.4}
+\]
+
+All relative-interior contact weights are positive, so
+
+\[
+A_\tau:=\sum_{e\in E(\tau)}\alpha_e>0.
+\]
+
+The total contact-force resultant entering `S` is therefore
+
+\[
+A_\tau u\ne0.
+\tag{128.5}
+\]
+
+## 128.3 Summed equilibrium contradicts the cut
+
+Sum KKT equilibrium over all positive-core vertices in `S`. Internal contact forces
+cancel pairwise. Internal diameter forces cancel pairwise, and (128.3) says no diameter
+edge crosses the cut. The only surviving boundary forces are the train contacts, so
+summed equilibrium requires
+
+\[
+A_\tau u=0,
+\]
+
+contradicting (128.5).
+
+Thus (128.1) holds exactly and finitely.
+
+## 128.4 Harmonic-cell consequence
+
+Section 127 identifies every bounded face of every harmonic induced graph `H_r` with a
+unique bounded face of the full positive-contact core. Therefore a complete local
+strict-rhombus train cannot have both terminal physical occurrences on the same bounded
+local defect face.
+
+Equivalently, in the endpoint multigraph whose vertices are stopping faces, every
+bounded-face vertex is loop-free. A loop may still occur at the outer stopping face.
+
+This does not reduce the scalar zero-host count by itself: different bounded faces can
+all have host displacement zero. The gain is topological—every bounded-to-bounded
+train transports between two distinct actual inactive chambers.
+
+## 128.5 Scope
+
+The theorem does not exclude outer-to-outer trains, outer-to-bounded trains, or trains
+joining two distinct bounded faces. It uses no finite shear, no affine-kernel statement
+on contact-isolated coordinates, and no old response theorem. Contact-isolated source
+points remain in the full source and can be avoided by the auxiliary closing arc.
+
+**Disposition:** proved proof-only exact train-loop exclusion. C-II remains open.

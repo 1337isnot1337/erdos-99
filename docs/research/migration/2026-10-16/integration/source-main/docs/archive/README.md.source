@@ -1,0 +1,13 @@
+# Archived material
+
+Nothing in this folder is the active theorem-state source.
+
+- [erdos_problem_99_1.7.0-full.md](erdos_problem_99_1.7.0-full.md) is the complete
+  pre-reorganization v1.7 report, retained for exact comparison and provenance.
+- [erdos_problem_99_complete_working_report.md](erdos_problem_99_complete_working_report.md)
+  is an earlier non-canonical working report.
+- [homelab_audit_history_v1.7.0.md](homelab_audit_history_v1.7.0.md) is a condensed
+  audit-history snapshot recovered during the reorganization.
+
+When an archived file conflicts with the current modules, the [current documentation
+map](../README.md) controls.

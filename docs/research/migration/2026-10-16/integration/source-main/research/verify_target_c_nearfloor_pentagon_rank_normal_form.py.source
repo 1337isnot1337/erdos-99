@@ -1,0 +1,191 @@
+#!/usr/bin/env python3
+from decimal import Decimal, getcontext
+
+getcontext().prec = 100
+D = Decimal
+
+pi = D('3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117068')
+sqrt3 = D(3).sqrt()
+Delta2 = pi / (D(2) * sqrt3)
+s2 = Delta2.sqrt()
+g = D('0.0050')
+C0 = D(2) * s2 + g
+T_SAFE = D('1.83236')
+T_BAND = D('1.8325')
+
+
+def sin_decimal(x: Decimal) -> Decimal:
+    term = x
+    total = term
+    n = 1
+    while True:
+        term = -term * x * x / D((2*n)*(2*n+1))
+        old = total
+        total += term
+        if total == old:
+            return total
+        n += 1
+        assert n < 300
+
+
+def cos_decimal(x: Decimal) -> Decimal:
+    term = D(1)
+    total = term
+    n = 1
+    while True:
+        term = -term * x * x / D((2*n-1)*(2*n))
+        old = total
+        total += term
+        if total == old:
+            return total
+        n += 1
+        assert n < 300
+
+
+def L(a: Decimal) -> Decimal:
+    return ((D(1) + sin_decimal(a)) / cos_decimal(a)).ln()
+
+
+def phi_inverse(delta: Decimal) -> Decimal:
+    lo = D(0)
+    hi = pi / D(6)
+    target = delta / D(6)
+    for _ in range(360):
+        mid = (lo + hi) / D(2)
+        if L(mid) - mid < target:
+            lo = mid
+        else:
+            hi = mid
+    a = (lo + hi) / D(2)
+    return D(6) * L(a)
+
+
+def phi_prime(q: Decimal) -> Decimal:
+    lo = D(0)
+    hi = pi / D(6)
+    target = q / D(6)
+    for _ in range(360):
+        mid = (lo + hi) / D(2)
+        if L(mid) < target:
+            lo = mid
+        else:
+            hi = mid
+    a = (lo + hi) / D(2)
+    return D(1) - cos_decimal(a)
+
+
+def F(z: Decimal) -> Decimal:
+    return z - D(6) * sin_decimal(z / D(6))
+
+
+def Fp(z: Decimal) -> Decimal:
+    return D(1) - cos_decimal(z / D(6))
+
+
+def J(p: Decimal) -> Decimal:
+    return D(2) * p - D(6) * sin_decimal(p / D(3))
+
+
+def Jp(p: Decimal) -> Decimal:
+    return D(2) - D(2) * cos_decimal(p / D(3))
+
+
+def R(t: Decimal) -> Decimal:
+    return D('4.5') * t - D(2) * pi - C0
+
+
+def direct_boundary_values(t: Decimal):
+    delta = R(t) / D(2)
+    N = C0 + t / D(2) - D(4) * Delta2 / C0
+    lo = D('1.5')
+    hi = D('1.7')
+    for _ in range(360):
+        mid = (lo + hi) / D(2)
+        derivative = Fp(mid - delta) - Jp(pi - mid - N)
+        if derivative < 0:
+            lo = mid
+        else:
+            hi = mid
+    K = (lo + hi) / D(2)
+    z = K - delta
+    p = pi - K - N
+    margin = F(z) + J(p) - delta
+    return delta, N, K, z, p, margin
+
+
+# Direct-energy boundary at the top of the structural band.
+delta_band, N_band, K_band, z_band, p_opt_band, G_band = direct_boundary_values(T_BAND)
+assert D('-0.000312') < G_band < D('-0.000310')
+assert D('1.64') < K_band < D('1.65')
+assert D('0.570') < p_opt_band < D('0.572')
+
+# The parent direct theorem gives, uniformly, dG/ddelta < -0.76.
+a_max = Delta2 / (C0 * C0)
+derivative_upper = D(2) * (D(1) + D(4) * a_max) * Jp(D('0.72')) - D(1)
+assert derivative_upper < D('-0.76')
+SLOPE = D('0.76')
+slack_cap = (-G_band) / SLOPE
+assert D('0.0004091') < slack_cap < D('0.0004093')
+
+# Network and face-ledger consequences.
+kappa_cap = D(4) * slack_cap
+f_floor = C0 / D(2) - T_BAND / D(4)
+p5_floor = f_floor - slack_cap
+rank_floor = D(2) * f_floor - kappa_cap
+assert kappa_cap < D('0.001637')
+assert f_floor > D('0.4966878')
+assert p5_floor > D('0.4962786')
+assert rank_floor > D('0.9917388')
+assert slack_cap / f_floor < D('0.000824')
+
+# Extend the older audited complement-capacity lower bound over this band.
+# At maximum detour and kappa=0 it is pcomp = pi-Phi^{-1}(delta)-N0.
+qinv_band = phi_inverse(delta_band)
+Ncomp_band = C0 + T_BAND / D(2) - D(4) * Delta2 / C0
+pcomp_band = pi - qinv_band - Ncomp_band
+assert qinv_band < D('1.81')
+assert pcomp_band > D('0.40819')
+
+# Monotonicity checks: pcomp increases with kappa; it decreases with delta because
+# Q'(delta) > 1/Phi'(1.81) while -dN/ddelta < 4.
+phip_181 = phi_prime(D('1.81'))
+assert phip_181 < D('0.044')
+assert D(1) / phip_181 > D('22.7')
+minus_dN_ddelta_max = D(2) * (D(1) + D(4) * a_max)
+assert minus_dN_ddelta_max < D(4)
+assert -D(1) / phip_181 + minus_dN_ddelta_max < D('-18.7')
+
+# Correlated stopped-train split using the current safe t floor.
+correlated_sum_floor = T_SAFE + D(2) * g
+branch_floor = correlated_sum_floor / D(2)
+singleton_train_floor = branch_floor / D(2)
+mantel_floor = branch_floor / D(8) * (D(4) * s2 + branch_floor / D(2))
+mu_floor = (D(2) * pi + D(2) * s2) / D(5) + correlated_sum_floor / D(10)
+assert correlated_sum_floor == D('1.84236')
+assert branch_floor == D('0.92118')
+assert singleton_train_floor == D('0.46059')
+assert mantel_floor > D('0.4916615')
+assert mu_floor > D('1.82179818')
+
+print('Delta2 =', Delta2)
+print('C0 =', C0)
+print('t_safe =', T_SAFE)
+print('t_band =', T_BAND)
+print('direct boundary delta =', delta_band)
+print('direct optimal K =', K_band)
+print('direct optimal p =', p_opt_band)
+print('direct boundary margin =', G_band)
+print('certified dG/ddelta upper =', derivative_upper)
+print('network slack cap =', slack_cap)
+print('kappa cap =', kappa_cap)
+print('f floor =', f_floor)
+print('pentagon floor =', p5_floor)
+print('closure-rank floor =', rank_floor)
+print('old complement qinv at band =', qinv_band)
+print('universal retained complement pair floor =', pcomp_band)
+print('Phi_prime(1.81) =', phip_181)
+print('correlated rho_rec+sigma_R floor =', correlated_sum_floor)
+print('singleton-train branch floor =', singleton_train_floor)
+print('rhombic Mantel-deficit floor =', mantel_floor)
+print('mu_D floor =', mu_floor)
+print('PASS: revised near-floor pentagon/rank normal form')

@@ -1,0 +1,57 @@
+#!/usr/bin/env python3
+"""Exact scalar certificate for the multi-grain endpoint-capacity candidate.
+
+This checks only the pruning and Mantel scalar implication recorded in
+target_c_multigrain_endpoint_capacity_2026-09-12.md. It does not certify the
+geometric carrier, the inherited Section-118 endpoint-capacity input, or global
+minimum-diameter optimality.
+"""
+
+from __future__ import annotations
+
+import math
+
+
+def forced_excess(edge_mass: float, train_ceiling: float, bad_capacity: float) -> float:
+    """Lower bound for sum_i (n_i/D - 3B)_+ from componentwise Mantel."""
+
+    cap = 3.0 * bad_capacity
+    discriminant = cap * cap - 4.0 * cap * train_ceiling + 16.0 * edge_mass
+    assert discriminant > 0.0
+    return (-cap + math.sqrt(discriminant)) / 2.0
+
+
+def main() -> None:
+    area_floor = 0.4703752868004241
+    train_ceiling = 1.848752398466895
+    bad_capacity = 0.1162704799276074
+    route_ceiling = 1.8692857318002269
+    phase_defect_constant = 5.317
+    angle_threshold = 10000.0
+    prune_threshold = 1.0e-5
+
+    retained = (
+        area_floor
+        - phase_defect_constant / angle_threshold
+        - prune_threshold * train_ceiling
+    )
+    assert retained > 0.4697
+
+    edge_mass = 0.4697
+    train_bound = 1.8488
+    bad_bound = 0.1163
+    route_bound = 1.8693
+    forced = forced_excess(edge_mass, train_bound, bad_bound)
+    margin = 2.0 * forced - route_bound
+
+    assert forced > 0.9499
+    assert margin > 0.0305
+    print(f"retained_edge_mass_lower={retained:.16f}")
+    print(f"three_label_capacity={3.0 * bad_bound:.16f}")
+    print(f"forced_excess={forced:.16f}")
+    print(f"route_endpoint_margin={margin:.16f}")
+    print("PASS: multi-grain endpoint capacity contradiction")
+
+
+if __name__ == "__main__":
+    main()

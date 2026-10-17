@@ -1,0 +1,186 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "1e33ef1a8cd228149c227e0d948aa78022ef8cf4", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "docs/prompts/erdos_problem_99_1.7.2_FINAL_CONTINUATION_PROMPT.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "d2a9b3ab552e595d3387981b059b1a20e85a9204753d1157f6eff07b4430e16a"} -->
+
+> **Historical source snapshot; destination authority remains current.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical. Source path: `docs/prompts/erdos_problem_99_1.7.2_FINAL_CONTINUATION_PROMPT.md`. Source commit: `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`.
+
+# Erdős Problem #99 — Target A continuation prompt after five-claim audit
+
+Work entirely in one context. Do not spawn delegated research agents. Internet literature
+search is allowed when it materially helps, but verify exact hypotheses before importing a
+result.
+
+The objective is a Level I proof or disproof of Erdős Problem #99. The immediate priority is
+Target A. Do not spend the run re-proving the trusted theorem stack.
+
+## Canonical files
+
+Read the current map in `../README.md`, then the shared theory and **all five** Target A route
+modules indexed by `../targets/target-a/README.md`. In particular, read:
+
+- `../targets/target-a/04-post-v1.7-audited-addenda.md`;
+- `../targets/target-a/05-fixed-shape-and-separator-audit.md`.
+
+Reports, older prompts, and the archived monolithic report are provenance rather than
+independent theorem sources.
+
+## Exact Target A endpoint
+
+For the plateau-terminalized boundary response,
+\[
+\zeta=\dim\ker S=|C^\partial|-\operatorname{rank}S,
+\qquad
+s=\Delta_\Lambda-d_{\rm int}.
+\]
+A hypothetical survivor has
+\[
+g=\Delta_\Lambda-d_{\rm sc}=s-\zeta\ge1.
+\]
+Target A closes exactly if
+\[
+\boxed{\zeta\ge s,}
+\]
+equivalently
+\[
+\boxed{
+\operatorname{rank}S
+\le d_{\rm int}+|C^\partial|-\Delta_\Lambda.
+}
+\]
+The response is an exact planar strict gammoid. Planarity by itself does not force the
+required rank loss.
+
+## Binding fixed-hull correction
+
+For the genuine source \(A\subset H\),
+\[
+\widehat p_H=\alpha_1(H)-|A|,
+\]
+and every unit-separated finite \(Q\subset H\) satisfies
+\[
+|Q|-|N_A(Q)|\le\widehat p_H.
+\]
+After maximal triangle-free extension \(B\), the analogous bound is
+\[
+|Q|-|N_B(Q)|\le\tau,
+\qquad
+\tau=\alpha_1(H)-|B|.
+\]
+
+Therefore do **not** seek a same-hull Hall witness of deficiency
+\(\widehat p_H+1\), \(p+1\), or \(\tau+1\). Such a witness is impossible. A source
+replacement is useful only if it yields a strict smaller-diameter competitor or is transported
+directly into the Schur response.
+
+The source-capacity exchange flag is Hall-tight and consumes the available fixed-hull slack
+exactly.
+
+## First-transition status
+
+The exact fixed-container cone theorem gives this alternative at the first triangle-producing
+flag member:
+
+1. a simultaneous feasible motion breaks every unit triangle and yields a triangle-free global
+   optimum at the same cardinality; or
+2. some unit triangle is universally first-order locked by the active contact/container cone.
+
+For a one-point slice, use the **closed** semicircle criterion. If the unit-contact directions
+fit in a closed semicircle, a nontrivial finite motion exists; first-order-neutral contacts open
+quadratically. Fixed-neighbor local isolation occurs only when no closed semicircle contains the
+contact directions.
+
+The exact two-leaf family in Section 139.1 is a binding regression: either leaf order creates a
+locally isolated unit triangle. One-point leaf perturbation cannot close the tree branch.
+
+The finite transition scan has been corrected accordingly. Do not use the older open-semicircle
+caged counts.
+
+## Cage-to-Schur transport remains global
+
+Section 149 gives a formal local no-go. An exact source-side cage can coexist, at the level of
+local hypotheses, with a planar strict-conflict response whose generic response matrix is
+diagonal and full rank. Thus
+\[
+\text{local cage}+\text{planarity}+\text{generic response algebra}
+\not\Rightarrow
+\ker S\ne0.
+\]
+
+This is not a counterexample to Target A because the two objects are not globally coupled by one
+minimizer. It proves the missing theorem must use the actual source/plateau/scaffold relation.
+Do not claim that one locked triangle automatically supplies one Schur separator.
+
+## Homothetic strain is closed for every fixed shape and fixed accumulated strain
+
+Let \(K\) be any fixed full-dimensional convex triangular-lattice polygon with
+\(0\in\operatorname{int}K\), and put
+\[
+P_L=\Lambda\cap LK.
+\]
+For every fixed \(\alpha>0\), Section 148 proves that the hull of
+\[
+\left(1+\frac\alpha L\right)P_L
+\]
+contains a unit-separated set with one additional point for all sufficiently large \(L\).
+
+The proof moves the two lattice half-patches apart inside the homothetic margin, obtaining a
+fixed positive linear gap, then inserts one finite Kuperberg–Kuperberg–Kuperberg witness.
+
+This eliminates the free fixed-shape \((1+\alpha/L)\) regression. It does **not** yet handle
+exterior blockers of an actual embedded source/scaffold monomer domain.
+
+## Quantitative Kuperberg status
+
+Two different complexity quantities must not be confused.
+
+Let \(\kappa_*(d)\) be the minimum number of old centers deleted by any positive-gain finite
+rearrangement of any width-\(d\) triangular gap packing. Section 146 proves
+\[
+\boxed{
+\kappa_*(d)\to\infty
+\qquad(d\downarrow0).
+}
+\]
+The proof is a compactness argument against complete saturation of the perfect triangular
+lattice. This is a genuine quantitative asymptotic lower-complexity theorem, but it gives no
+explicit growth rate.
+
+Separately let \(W(d)\) be the least support radius of a positive-gain finite witness. The
+Kuperberg theorem gives only
+\[
+W(d)<\infty\qquad(d>0).
+\]
+No audited polynomial, exponential, or other explicit upper rate for \(W(d)\) is known from
+the checked paper/literature.
+
+For vanishing accumulated strain \(\alpha_L\to0\) in a fixed shape with
+\(r\mathbb B\subset K\), the Section 150 embedding argument gives the sufficient condition
+\[
+W(r\alpha_L)=o(L).
+\]
+Do not invent a rate. Proving a usable support-radius rate is a legitimate new theorem only if
+it connects to the actual scaffold scale.
+
+## Highest-value next attacks
+
+Prioritize one exact bridge:
+
+1. **Exterior-compatible gap concentration.** Execute the fixed-shape row-split/Kuperberg
+   replacement inside a genuinely derived monomer region while respecting all exterior
+   blockers and obtain a strict diameter certificate.
+2. **Locked-cage to Schur transport.** Use global first-transition/source data to turn locked
+   triangles into at least \(s\) independent failures of the boundary alternating linkage.
+3. **Capacity-shadow transport.** Push the bounded-displacement source shadow through plateau
+   terminalization to an \(s\)-dimensional response kernel.
+4. **Activation-rank compensation.** Force response dependence from the large independent
+   activation-edge forest of the source.
+5. **Quantitative gap support.** Prove an explicit upper bound for \(W(d)\) strong enough for a
+   vanishing-gap regime that actually occurs in the canonical geometry.
+
+Regression-test every proposed theorem against the exact two-leaf cage, corrected
+closed-semicircle boundary cases, cyclic Hall circuits, distributed strain with exterior
+locking, full-rank planar response examples, overlapping circuits, annular full-linkage
+networks, near-equilateral Delaunay wells, regular shells, and caged branch junctions.
+
+Do not call Target A solved until the exact Schur inequality is proved or a genuine global
+source replacement gives a strictly smaller-diameter competitor.
+
+**LEVEL I STATUS: STILL OPEN. TARGET A REMAINS UNRESOLVED.**

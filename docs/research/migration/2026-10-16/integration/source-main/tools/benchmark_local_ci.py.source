@@ -1,0 +1,129 @@
+#!/usr/bin/env python3
+"""Measure real-repository synthetic PRs in a disposable local clone, never hosted CI."""
+from __future__ import annotations
+import argparse
+import hashlib
+import json
+import platform
+import statistics
+import subprocess
+import sys
+import tempfile
+import time
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from localized_ci.plan import make_plan
+from localized_ci.replay import integrity, replay
+from run_theorem_certificates import select_certificates, registered_certificates
+import yaml
+
+
+def run(root, *args):
+    return subprocess.check_output(['git','-C',str(root),*args],stderr=subprocess.PIPE).decode().strip()
+
+
+def commit(root):
+    run(root,'add','-A'); run(root,'commit','-qm','benchmark fixture')
+    return run(root,'rev-parse','HEAD')
+
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output',type=Path,required=True)
+    parser.add_argument('--samples',type=int,default=3)
+    parser.add_argument('--registry-sizes',type=int,nargs='*',default=[])
+    args=parser.parse_args()
+    if not 1<=args.samples<=5: parser.error('samples must be 1..5')
+    if any(n < 1 or n > 1000 for n in args.registry_sizes): parser.error('registry size must be 1..1000')
+    control=Path(__file__).resolve().parents[1]
+    result=dict(version=1,kind='local measured; not hosted runner timing',commit=run(control,'rev-parse','HEAD'),
+                python=platform.python_version(),platform=platform.platform(),
+                samples=args.samples,scenarios=[],full_verified=False)
+    with tempfile.TemporaryDirectory(prefix='e99-ci-benchmark-') as temp:
+        root=Path(temp)/'repo'
+        subprocess.run(['git','clone','--shared','--quiet',str(control),str(root)],check=True)
+        run(root,'config','user.name','CI benchmark'); run(root,'config','user.email','ci@example.invalid')
+        package=root/'research-packages/ci-protocol-example'
+        # Add a declared dependency outside the package, without touching historical artifacts.
+        dependency=root/'research-package-inputs/ci-example.txt'; dependency.parent.mkdir()
+        dependency.write_text('complete benchmark domain: all 289 pairs\n')
+        verifier=package/'verify.py'
+        verifier.write_text(verifier.read_text()+"\nwith open('research-package-inputs/ci-example.txt') as source:\n    assert source.read().startswith('complete benchmark domain:')\n")
+        sources=json.loads((package/'SOURCES.json').read_text())
+        sources['inputs'][0]['sha256']=hashlib.sha256(verifier.read_bytes()).hexdigest()
+        sources['inputs'].append(dict(path=str(dependency.relative_to(root)),sha256=hashlib.sha256(dependency.read_bytes()).hexdigest(),identity='benchmark-domain-input',generated_from=[]))
+        (package/'SOURCES.json').write_text(json.dumps(sources,indent=2)+'\n')
+        verify=json.loads((package/'VERIFY.json').read_text())
+        verify['inputs'].append(str(dependency.relative_to(root)))
+        (package/'VERIFY.json').write_text(json.dumps(verify,indent=2)+'\n')
+        base=commit(root)
+        state=yaml.safe_load((root/'docs/state/theorem-state.yaml').read_text())
+        count=len(registered_certificates(state)); result['registered_certificates']=count
+        for scenario in ('documentation','isolated-package','dependency-change','canonical-change','unknown-impact'):
+            # root is owned by this TemporaryDirectory; no shared worktree is reset.
+            run(root,'reset','--hard',base)
+            if scenario=='documentation':
+                p=root/'CONTRIBUTING.md'; p.write_text(p.read_text()+'\nBenchmark documentation edit.\n')
+            elif scenario=='isolated-package':
+                p=package/'README.md'; p.write_text(p.read_text()+'\nReproduction clarification.\n')
+            elif scenario=='dependency-change':
+                dependency.write_text('complete benchmark domain: all 17 by 17 pairs\n')
+                sources['inputs'][-1]['sha256']=hashlib.sha256(dependency.read_bytes()).hexdigest()
+                (package/'SOURCES.json').write_text(json.dumps(sources,indent=2)+'\n')
+            elif scenario=='canonical-change':
+                p=root/'docs/STATE.md'; p.write_text(p.read_text()+'\n<!-- benchmark-only canonical edit -->\n')
+            else:
+                (root/'unknown-ci-impact.txt').write_text('unclassified benchmark input\n')
+            head=commit(root)
+            timings=[]
+            for _ in range(args.samples):
+                start=time.perf_counter(); plan=make_plan(root,base); timings.append(time.perf_counter()-start)
+            start=time.perf_counter()
+            check=integrity(root,control,plan,Path(temp)/scenario/'integrity')
+            integrity_seconds=time.perf_counter()-start
+            if check['status']!='passed':
+                raise RuntimeError(f'{scenario}: integrity failed: '+(Path(temp)/scenario/'integrity/integrity.log').read_text())
+            selected=select_certificates(state,{c['path'] for c in plan['changes']})
+            record=dict(scenario=scenario,head=head,level=plan['level'],packages=plan['packages'],
+                        planning_seconds=timings,planning_median_seconds=statistics.median(timings),
+                        integrity_seconds=integrity_seconds,
+                        tier0_local_seconds=statistics.median(timings)+integrity_seconds,
+                        previous_selected_certificates=count if selected.paths is None else len(selected.paths),
+                        proposed_automatic_certificates=0,proposed_package_count=len(plan['packages']) if plan['replay_allowed'] else 0)
+            if plan['replay_allowed']:
+                start=time.perf_counter(); replay_result=replay(root,plan,Path(temp)/scenario/'replay')
+                record['replay_seconds']=time.perf_counter()-start
+                record['replay_status']=replay_result['status']
+                if replay_result['status']!='passed': raise RuntimeError(replay_result)
+            result['scenarios'].append(record)
+        result['registry_scaling']=[]
+        for size in args.registry_sizes:
+            run(root,'reset','--hard',base)
+            # Prior scale fixtures are untracked only within this disposable clone.
+            run(root,'clean','-fdq')
+            template={name:json.loads((package/(name+'.json')).read_text()) for name in ('TASK','SOURCES','VERIFY')}
+            for index in range(size-1):
+                name=f'benchmark-scale-{index:04d}'
+                directory=root/'research-packages'/name; directory.mkdir()
+                for kind,value in template.items():
+                    value=json.loads(json.dumps(value))
+                    if kind=='TASK': value['id']=name
+                    (directory/(kind+'.json')).write_text(json.dumps(value,indent=2)+'\n')
+                (directory/'README.md').write_text('Synthetic registry fixture; no mathematical claim.\n')
+            if size>1: registry_base=commit(root)
+            else: registry_base=base
+            p=package/'README.md'; p.write_text(p.read_text()+'\nRegistry scaling fixture edit.\n')
+            commit(root)
+            timings=[]
+            for _ in range(args.samples):
+                start=time.perf_counter(); plan=make_plan(root,registry_base); timings.append(time.perf_counter()-start)
+            if plan['level']!='targeted-replay' or plan['packages']!=['research-packages/ci-protocol-example']:
+                raise RuntimeError(plan)
+            result['registry_scaling'].append(dict(packages=size,planning_seconds=timings,
+                planning_median_seconds=statistics.median(timings),selected_packages=1))
+    args.output.parent.mkdir(parents=True,exist_ok=True)
+    args.output.write_text(json.dumps(result,indent=2)+'\n')
+    print(json.dumps(result,indent=2))
+
+if __name__=='__main__': main()

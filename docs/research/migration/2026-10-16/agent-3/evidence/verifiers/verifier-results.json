@@ -1,0 +1,189 @@
+{
+  "commands_timeout_seconds": 240,
+  "external_fixture_hashes": {
+    "132": "64c8a85573a5ced26e666fa25b713c4fc6264c409d811eab101cd13ff65ef00a",
+    "175": "6f889e1143dbb5aee039224198617355070104f161a2bdd0705166eaf814f140"
+  },
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "results": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/erdos99-migration-agent3-20261016/research/verify_target_a_seed066_locked_fullrank.py"
+      ],
+      "cwd": "/tmp/erdos99-migration-agent3-20261016",
+      "elapsed_seconds": 5.046,
+      "log_path": "docs/research/migration/2026-10-16/agent-3/evidence/verifiers/pr966_seed066_locked_fullrank.log",
+      "name": "pr966_seed066_locked_fullrank",
+      "output_tail": "  \"m\": 4,\n      \"pinned_columns\": 122,\n      \"pinned_rank_mod_prime\": 122,\n      \"response_edges\": 244,\n      \"response_rows\": 88,\n      \"schur_columns\": 13,\n      \"schur_minor_determinant\": \"8192\",\n      \"schur_nullity\": 0,\n      \"schur_rank\": 13,\n      \"source_max_squared\": 64,\n      \"source_min_squared\": 1,\n      \"source_pairs\": 1830,\n      \"source_points\": 61,\n      \"stress_labels_checked\": 61,\n      \"surviving_direct_terminal_sinks\": 11,\n      \"unit_contacts\": 156\n    },\n    {\n      \"actual_crossing_coarse_left_deficiency\": 0,\n      \"exterior_rows\": 76,\n      \"fan_crossing_edges\": 1,\n      \"fan_crossing_right_rows\": 1,\n      \"fan_edges\": 25,\n      \"fan_vertices\": 25,\n      \"interior_rows\": 192,\n      \"m\": 8,\n      \"pinned_columns\": 434,\n      \"pinned_rank_mod_prime\": null,\n      \"response_edges\": 868,\n      \"response_rows\": 268,\n      \"schur_columns\": 25,\n      \"schur_minor_determinant\": \"33554432\",\n      \"schur_nullity\": 0,\n      \"schur_rank\": 25,\n      \"source_max_squared\": 256,\n      \"source_min_squared\": 1,\n      \"source_pairs\": 23436,\n      \"source_points\": 217,\n      \"stress_labels_checked\": 217,\n      \"surviving_direct_terminal_sinks\": 23,\n      \"unit_contacts\": 600\n    }\n  ],\n  \"classification\": \"exact finite regression replay; report unreviewed\",\n  \"negative_controls_rejected\": [\n    \"missing facet reaction\",\n    \"changed positive contact weight\",\n    \"phase violates four-neighbor chamber\",\n    \"own-row determinant loses last diagonal\",\n    \"omitted replacement label\",\n    \"duplicate replacement label\"\n  ],\n  \"phase_axial\": [\n    \"1/1000\",\n    \"1/500\"\n  ],\n  \"rank_certificate_prime\": 1000003,\n  \"replacement\": {\n    \"all_replacement_pairs_checked\": 5019696,\n    \"available_disk_sites\": 3343,\n    \"certified_upper_squared\": \"92416/25\",\n    \"created_label_contacts\": 9133,\n    \"labels_relocated\": 3167,\n    \"m\": 32,\n    \"maximum_squared\": 3484,\n    \"minimum_squared\": 1,\n    \"new_unit_contacts\": 9300,\n    \"old_diameter_pairs_strictly_shortened\": 3,\n    \"old_diameter_squared\": 4096,\n    \"old_points\": 3169,\n    \"old_unit_contacts\": 9312,\n    \"population_bound_excess_numerator\": 288,\n    \"removed_label_contacts\": 9145,\n    \"replacement_points\": 3169,\n    \"retained_label_contacts\": 167\n  },\n  \"scope\": \"finite checks corroborate the all-m proof; no canonical global minimizer or Level I certificate\",\n  \"seed\": 66,\n  \"state_version\": \"2026-10-10.audit.234\"\n}\n",
+      "returncode": 0,
+      "script_sha256": "0426b56c5289e2624e1e49b8b17f0296c9531e41e8e101b29ffc83c8845c53ef",
+      "status": "pass",
+      "stdout_bytes": 4205,
+      "stdout_sha256": "9e789d9cfd1c1bafc3bffe434b541529d75a3faa730f9f39359befc85a3b5146"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/erdos99-migration-agent3-20261016/research/check_seed054_cartesian_certificate.py"
+      ],
+      "cwd": "/tmp/erdos99-migration-agent3-20261016",
+      "elapsed_seconds": 27.438,
+      "log_path": "docs/research/migration/2026-10-16/agent-3/evidence/verifiers/pr967_cartesian_certificate.log",
+      "name": "pr967_cartesian_certificate",
+      "output_tail": "{\n  \"independent_cartesian_checks\": [\n    {\n      \"k\": 2,\n      \"R\": 24,\n      \"n\": 1893,\n      \"direct_lattice_source_pairs\": 1788886,\n      \"isolate_pairs\": 1892,\n      \"diameter_margin_squared\": \"304\",\n      \"bad_cells_in_verified_endpoint\": 1788\n    },\n    {\n      \"k\": 2,\n      \"R\": 64,\n      \"n\": 13141,\n      \"direct_lattice_source_pairs\": 0,\n      \"isolate_pairs\": 13140,\n      \"diameter_margin_squared\": \"848\",\n      \"bad_cells_in_verified_endpoint\": 12876\n    },\n    {\n      \"k\": 3,\n      \"R\": 40,\n      \"n\": 5259,\n      \"direct_lattice_source_pairs\": 13820653,\n      \"isolate_pairs\": 5258,\n      \"diameter_margin_squared\": \"552\",\n      \"bad_cells_in_verified_endpoint\": 5086\n    },\n    {\n      \"k\": 3,\n      \"R\": 144,\n      \"n\": 66657,\n      \"direct_lattice_source_pairs\": 0,\n      \"isolate_pairs\": 66656,\n      \"diameter_margin_squared\": \"1980\",\n      \"bad_cells_in_verified_endpoint\": 66064\n    }\n  ],\n  \"global_optimality_proved\": false\n}\n",
+      "returncode": 0,
+      "script_sha256": "7e304ecbcc72814c01ecce9e0c68c07d96bd83b901420f5190fd33941040c346",
+      "status": "pass",
+      "stdout_bytes": 953,
+      "stdout_sha256": "a220239c0d14f431353b5f3123ba32cede5719aaa149fb82b622b678d951c66f"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/erdos99-migration-agent3-20261016/research/verify_seed054_rhombus_mesh.py"
+      ],
+      "cwd": "/tmp/erdos99-migration-agent3-20261016",
+      "elapsed_seconds": 1.751,
+      "log_path": "docs/research/migration/2026-10-16/agent-3/evidence/verifiers/pr967_rhombus_mesh.log",
+      "name": "pr967_rhombus_mesh",
+      "output_tail": "12c3de4ea03\",\n      \"local_growth_cells_required_at_comparison_diameter\": 8,\n      \"bad_cells_of_lexicographic_replacement\": 12876,\n      \"grown_local_pairs_of_lexicographic_replacement\": 34942,\n      \"pairs_per_full_source\": 86336370,\n      \"classification\": \"regression; candidate proof awaits independent audit\"\n    },\n    {\n      \"k\": 3,\n      \"R\": 40,\n      \"cells\": 5086,\n      \"n\": 5259,\n      \"contacts\": 10344,\n      \"contact_isolates\": 1,\n      \"source_sha256\": \"d01f86b8c890b9f8b410650fa0ebffbc1a55d6530c8fb75d3521b0ea20421f7f\",\n      \"source_diameter_squared\": \"6636\",\n      \"source_hull_vertices\": 40,\n      \"diameter_witness\": [\n        [\n          -33,\n          -19\n        ],\n        [\n          33,\n          19\n        ]\n      ],\n      \"isolate_min_squared\": \"361/100\",\n      \"available_replacement_sites\": 5527,\n      \"replacement_diameter_squared\": \"6084\",\n      \"replacement_hull_vertices\": 46,\n      \"replacement_sha256\": \"dd7b4b6b8f503db5b263827cbe44c601c4011cf5144084817120b942731c391e\",\n      \"local_growth_cells_required_at_comparison_diameter\": 5,\n      \"bad_cells_of_lexicographic_replacement\": 5086,\n      \"grown_local_pairs_of_lexicographic_replacement\": 13321,\n      \"pairs_per_full_source\": 13825911,\n      \"classification\": \"regression; candidate proof awaits independent audit\"\n    },\n    {\n      \"k\": 3,\n      \"R\": 144,\n      \"cells\": 66064,\n      \"n\": 66657,\n      \"contacts\": 132720,\n      \"contact_isolates\": 1,\n      \"source_sha256\": \"5fc657428b17f82b8b91d383718ce52648580402a58c5b6e6a7f7442cb02bb91\",\n      \"source_diameter_squared\": \"83776\",\n      \"source_hull_vertices\": 96,\n      \"diameter_witness\": [\n        [\n          -108,\n          -80\n        ],\n        [\n          108,\n          80\n        ]\n      ],\n      \"isolate_min_squared\": \"361/100\",\n      \"available_replacement_sites\": 74179,\n      \"replacement_diameter_squared\": \"81796\",\n      \"replacement_hull_vertices\": 70,\n      \"replacement_sha256\": \"0254337c0c8a9e3982e572c8184042f61fc476a2b28f5c527293d9446d73c997\",\n      \"local_growth_cells_required_at_comparison_diameter\": 18,\n      \"bad_cells_of_lexicographic_replacement\": 66064,\n      \"grown_local_pairs_of_lexicographic_replacement\": 189078,\n      \"pairs_per_full_source\": 2221544496,\n      \"classification\": \"regression; candidate proof awaits independent audit\"\n    }\n  ],\n  \"negative_controls\": 5,\n  \"global_optimality_proved\": false\n}\n",
+      "returncode": 0,
+      "script_sha256": "50f4971452a41e049073185c9ac47e933dd32248568de9743da5afd8380be83e",
+      "status": "pass",
+      "stdout_bytes": 4095,
+      "stdout_sha256": "8519dddf3d675b0ae8fd8efa2770c3f3ea56efbdb7a1519d0ba98f7d77feb32a"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/erdos99-migration-agent3-20261016/research/verify_target_a_seed063_tight_isolates.py"
+      ],
+      "cwd": "/tmp/erdos99-migration-agent3-20261016",
+      "elapsed_seconds": 0.829,
+      "log_path": "docs/research/migration/2026-10-16/agent-3/evidence/verifiers/pr969_seed063_tight_isolates.log",
+      "name": "pr969_seed063_tight_isolates",
+      "output_tail": "M=4: n=15, |Z|=10, Schur rank=5, beta=0, coarse deficiency=0, surviving direct paths=2\nM=5: n=21, |Z|=15, Schur rank=6, beta=0, coarse deficiency=0, surviving direct paths=3\nM=8: n=45, |Z|=36, Schur rank=9, beta=0, coarse deficiency=0, surviving direct paths=6\nM=15: n=136, |Z|=120, Schur rank=16, beta=0, coarse deficiency=0, surviving direct paths=13\nM=33: n=595, |Z|=561, Schur rank=34, beta=0, coarse deficiency=0, surviving direct paths=31\ncompetitor M=33: retains 595 labels from 621; full-packet diameter squared=991 < 1089\ncompetitor M=40: retains 861 labels from 896; full-packet diameter squared=1477 < 1600\nPASS: 187200 source pairs, 1140415 packet pairs, 42 exchange pairs; 1023 nonempty right subsets; global three-point and two hypothesis controls\nScope: exact finite certificates; general proofs are in the report. No Level I or large-source global-optimality claim.\n",
+      "returncode": 0,
+      "script_sha256": "aae150e1b0f60007f518b0e4b78a16d5937dba713113be8d223708abafef4fc6",
+      "status": "pass",
+      "stdout_bytes": 882,
+      "stdout_sha256": "19b1a789ea17e9c52ffa7319463b1cdac31148f97b8693bc53690579f3fd674e"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/erdos99-migration-agent3-20261016/research/verify_global_attainment_infimum.py"
+      ],
+      "cwd": "/tmp/erdos99-migration-agent3-20261016",
+      "elapsed_seconds": 0.066,
+      "log_path": "docs/research/migration/2026-10-16/agent-3/evidence/verifiers/branch_global_attainment.log",
+      "name": "branch_global_attainment",
+      "output_tail": "PASS: 6 exact three-point cases; 6 one-contact grid fixtures; 1641 pairs checked\nScope: finite approximation regressions; no global optimality or Level I closure\n",
+      "returncode": 0,
+      "script_sha256": "cc397cb0d6272648b79b658b97c4869591765a7269f09b61adf1626bc96496ef",
+      "status": "pass",
+      "stdout_bytes": 162,
+      "stdout_sha256": "79b399a0cee93a9ff547f3d31dd227d39fcd42dc02822650a1748bf2043c6e2d"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/erdos99-migration-agent3-20261016/research/verify_global_isolate_forest_normalization.py"
+      ],
+      "cwd": "/tmp/erdos99-migration-agent3-20261016",
+      "elapsed_seconds": 1.824,
+      "log_path": "docs/research/migration/2026-10-16/agent-3/evidence/verifiers/branch_global_isolate_forest.log",
+      "name": "branch_global_isolate_forest",
+      "output_tail": "PASS: four exact square-wall fixtures; 39 activations; 78690 full-source pair checks\nPASS: contact/diameter ledgers, finite paths, zero-stress forests, PSD/rank, rigidity increments, strict nonglobality, generic first-hit guard\nScope: global normalization proof is analytic; fixtures do not settle Level I\n",
+      "returncode": 0,
+      "script_sha256": "652a8a84a875b1fa15b6b272a1ba399d6588248c037eaecd882669e5e2b10c6e",
+      "status": "pass",
+      "stdout_bytes": 306,
+      "stdout_sha256": "931cbed6ebefbe5059480279d854fe9440db5b73fde42a94aa4bd5e2bf40dcb9"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/erdos99-migration-agent3-20261016/research/verify_periodic_release_diameter_transfer.py"
+      ],
+      "cwd": "/tmp/erdos99-migration-agent3-20261016",
+      "elapsed_seconds": 0.046,
+      "log_path": "docs/research/migration/2026-10-16/agent-3/evidence/verifiers/branch_periodic_release.log",
+      "name": "branch_periodic_release",
+      "output_tail": "PASS: eight-label torus; 16 contacts; fixed rank 14; free-strain rank 16\nPASS: 5 exact path states; 3120 integer lattice vectors; strict cell compression and finite-crop diameter growth; square guard\nScope: periodic/crop regressions; no large-source global optimum or Level I closure\n",
+      "returncode": 0,
+      "script_sha256": "dce86a2c4f3128c60e7eaf7d766b5eee867da231fff432c56f31d03c0956d7ca",
+      "status": "pass",
+      "stdout_bytes": 284,
+      "stdout_sha256": "31f047ecbd08ca99ebc288a515df31d7410597a6cafabb3c357edc7ffe0a2cdc"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/erdos99-migration-agent3-20261016/research/verify_target_c_cap_crop_return_suffix_2026_10_08.py"
+      ],
+      "cwd": "/tmp/erdos99-migration-agent3-20261016",
+      "elapsed_seconds": 0.553,
+      "log_path": "docs/research/migration/2026-10-16/agent-3/evidence/verifiers/branch_target_c_cap_crop_suffix.log",
+      "name": "branch_target_c_cap_crop_suffix",
+      "output_tail": "{\n  \"status\": \"PASS\",\n  \"cases\": [\n    {\n      \"m\": 16,\n      \"source_pairs\": 41616,\n      \"rhombi\": 256,\n      \"chord_crossing_faces\": 46,\n      \"cap_rhombi\": 105,\n      \"complete_grid_crossings\": 4,\n      \"disjoint_contact_returns\": 8,\n      \"cell_strip_distinct_internal_vertices\": 8,\n      \"outside_cap_crop_distinct_internal_vertices\": 8,\n      \"actual_loaded_endpoints\": 2,\n      \"artificial_boundary_terminals\": 64\n    },\n    {\n      \"m\": 24,\n      \"source_pairs\": 195000,\n      \"rhombi\": 576,\n      \"chord_crossing_faces\": 70,\n      \"cap_rhombi\": 253,\n      \"complete_grid_crossings\": 9,\n      \"disjoint_contact_returns\": 12,\n      \"cell_strip_distinct_internal_vertices\": 24,\n      \"outside_cap_crop_distinct_internal_vertices\": 24,\n      \"actual_loaded_endpoints\": 2,\n      \"artificial_boundary_terminals\": 96\n    },\n    {\n      \"m\": 32,\n      \"source_pairs\": 592416,\n      \"rhombi\": 1024,\n      \"chord_crossing_faces\": 94,\n      \"cap_rhombi\": 465,\n      \"complete_grid_crossings\": 16,\n      \"disjoint_contact_returns\": 16,\n      \"cell_strip_distinct_internal_vertices\": 48,\n      \"outside_cap_crop_distinct_internal_vertices\": 48,\n      \"actual_loaded_endpoints\": 2,\n      \"artificial_boundary_terminals\": 128\n    }\n  ],\n  \"scope\": \"nonglobal artificial-pin geometry/flow fixtures; no KKT or Level I certification\"\n}\n",
+      "returncode": 0,
+      "script_sha256": "d1846b155a775ea6351b27757c97c32c95141d1313d008c4e95e675a31a4babd",
+      "status": "pass",
+      "stdout_bytes": 1328,
+      "stdout_sha256": "7b90509378a0f68048b7d7137041f1f27b6d1cb2b09b133b19949610a7822ffd"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/tmp/erdos99-migration-agent3-20261016/research/verify_global_palette_transversal_2026_10_12.py",
+        "--fixture-dir",
+        "/home/cinna/math/e99-global-repacking-20261012/research/fixtures/global_palette_translation_2026_10_12"
+      ],
+      "cwd": "/tmp/erdos99-migration-agent3-20261016",
+      "elapsed_seconds": 1.33,
+      "log_path": "docs/research/migration/2026-10-16/agent-3/evidence/verifiers/destination_global_palette_with_dirty_hybrid_fixture.log",
+      "name": "destination_global_palette_with_dirty_hybrid_fixture",
+      "output_tail": "PASS Boolean propagation/branching and UNSAT proof replay: 4100 cases against independent enumeration, including all 4096 binary-relation systems\nPASS core palette endpoint: 43 labels, 903 pairs, 13 search nodes\nPASS core endpoint min squared distance > 1.01; squared diameter < 185 < old D^2\nPASS corrupted pruning and incomplete branch cover rejected\nPASS full-source palette UNSAT: 175 labels, 2039 constrained label pairs, 4 exhaustive search nodes\nPASS independent full-source winner: all 15225 pairs > 1, D^2 < 183.2352\nPASS full-source JSON UNSAT proof replay without search\nSCOPE: certified failure of one finite palette on a nonglobal source; Level I remains open\n",
+      "returncode": 0,
+      "script_sha256": "20f09bd8016fc8e5e0e187cf9da23d5e95f5f6f7ebb0e7da3a0689b738e8badf",
+      "status": "pass",
+      "stdout_bytes": 673,
+      "stdout_sha256": "db961e7c0ad5b63ab78a5ab1f36b3afb4384cb3a657c7a713bcc89d68ad7484d"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "-B",
+        "/home/cinna/math/e99-global-repacking-20261012/research/verify_global_palette_transversal_2026_10_12.py"
+      ],
+      "cwd": "/home/cinna/math/e99-global-repacking-20261012",
+      "elapsed_seconds": 1.228,
+      "log_path": "docs/research/migration/2026-10-16/agent-3/evidence/verifiers/dirty_global_palette_worktree_snapshot.log",
+      "name": "dirty_global_palette_worktree_snapshot",
+      "output_tail": "PASS Boolean propagation/branching against independent small enumeration\nPASS core palette endpoint: 43 labels, 903 pairs, 13 search nodes\nPASS core endpoint min squared distance > 1.01; squared diameter < 185 < old D^2\nPASS full-source palette UNSAT: 175 labels, 2039 constrained label pairs, 4 exhaustive search nodes\nPASS independent full-source winner: all 15225 pairs > 1, D^2 < 183.2352\nPASS unlabeled hybrid cloud: 349 sites partitioned into one forbidden triangle and 173 edges\nPASS exact hybrid capacity = 174; no 175-site unit-separated subset, even without a diameter bound\nSCOPE: certified failure of one finite palette on a nonglobal source; Level I remains open\n",
+      "returncode": 0,
+      "script_sha256": "950e7b80144a2c13cc8bb0a9386fe3364d83cc1c065dcd666dd3ef3a62622576",
+      "status": "pass",
+      "stdout_bytes": 676,
+      "stdout_sha256": "2e458c72508896c6273712aa48c1bb732dcef82b23497114e1f3a4cb8381fd89"
+    },
+    {
+      "name": "source_dirty_worktree_integrity",
+      "porcelain_entry_count": 4,
+      "porcelain_sha256_after": "e86cf4cfef3db7166d55d5aad9f447e8a81275b0aea11cdeae1bac4351f208b0",
+      "porcelain_sha256_before": "e86cf4cfef3db7166d55d5aad9f447e8a81275b0aea11cdeae1bac4351f208b0",
+      "status": "pass_unchanged"
+    }
+  ]
+}

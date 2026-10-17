@@ -1,0 +1,190 @@
+# Target C: support-zero pair shadows in the final seven-no-root `k=6,p=10` branch
+
+Date: 2026-09-21
+
+Status: rigorous strengthening of the final support-two residual. The branch is not closed. The preceding pair-shadow reduction identifies a five-row `D=0,k=5,p=10` all-singleton boundary shadow under deletion of the two support coordinates. This note shows that at least four additional support-zero pair deletions are five-row `D=3,k=4,p=10` all-singleton shadows, and that every such `p=10` shadow has virtual-canonical deficiency at least four.
+
+Companion checker:
+
+- `research/verify_target_c_support7_global_segment_relative_seven_noroot_k6_dminus1_d0p10_supportzero_pair_shadows_2026_09_21.py`
+
+The only finite inputs beyond the established deletion arithmetic are the already committed five-row `k=4` singleton-functional audits at virtual deficiency two and three.
+
+## 1. Setup
+
+Assume the residual hypothetical seven-row state `B` with
+
+```text
+D(B)=-1, k(B)=6, p(B)=10.
+```
+
+The preceding reduction proves that the coefficient line has support exactly
+
+```text
+S={a,b},
+```
+
+and that all ten selected incomplete root rows are singleton blocks. Deleting both `a,b` leaves all ten singleton rows present.
+
+Let `Z` be the five zero coordinates of the coefficient line.
+
+## 2. Every support-zero pair shadow has `D=3,k=4`
+
+Fix one support coordinate, say `b`, and a zero coordinate `z in Z`. Put
+
+```text
+A_{b,z}=B\{b,z}.
+```
+
+The projected coefficient line is still nonzero, supported on the other support coordinate `a`, so deleting `{b,z}` causes no quotient-rank drop. The all-depth defect identity therefore gives
+
+```text
+D(A_{b,z})=-1+4=3.
+```
+
+There are five no-root rows and the projected coefficient space has rank one, hence
+
+```text
+k(A_{b,z})=4.
+```
+
+For any actual five-row state the exact root arithmetic is
+
+```text
+D=5+p+3d_root-3k.
+```
+
+Substituting `D=3,k=4` gives
+
+```text
+p+3d_root=10.
+```
+
+Thus every support-zero pair shadow has
+
+```text
+p in {10,7,4,1}.
+```
+
+Equivalently, relative to the ten global singleton rows, its root loss lies in
+
+```text
+{0,3,6,9}.
+```
+
+## 3. At least two `p=10` shadows for each support coordinate
+
+Again fix the deleted support coordinate `b` and vary `z` over the five zero coordinates.
+
+Every global singleton survives deletion of both support coordinates `{a,b}`. Therefore every singleton block is touched by at least one zero coordinate.
+
+A singleton row disappears from `A_{b,z}` only when its block becomes untouched after deleting `{b,z}`. Because the block has at least one zero-coordinate touch, this can happen for at most one value of `z`: all of its zero-coordinate touches would have to be exactly that `z`, and it may additionally be touched by `b` but by no undeleted coordinate.
+
+Hence each of the ten singleton rows contributes to the loss of at most one of the five shadows `A_{b,z}`. Therefore
+
+```text
+sum_{z in Z} (10-p(A_{b,z})) <= 10.
+```
+
+Every nonzero loss is at least three. Thus at most three of the five shadows can have `p<10`, and at least two satisfy
+
+```text
+D=3, k=4, p=10,
+```
+
+with all ten singleton rows still present.
+
+The same argument applies after exchanging `a` and `b`. The deletion pairs on the two sides are distinct, so the seven-row residual has at least
+
+```text
+4
+```
+
+distinct five-row `D=3,k=4,p=10` all-singleton support-zero pair shadows.
+
+## 4. Deficiency two is impossible in a `p=10` shadow
+
+Take one of these `D=3,k=4,p=10` all-singleton shadows and apply the established rank-one virtual-canonical construction. Let `d_v` be its virtual complete-row deficiency. The five-row containment theorem gives `d_v>=2`.
+
+If the canonical-complete singleton replacements have replacement-functional extra rank `s`, the functional accounting used in the committed `p=7` audits gives
+
+```text
+D >= 5+p+3d_v-3s.
+```
+
+At `D=3,p=10`, this requires
+
+```text
+s >= d_v+4.
+```
+
+If `d_v=2`, one would need `s>=6`. But the exact committed deficiency-two singleton-functional audit proves that whenever enough compatible singleton blocks exist, the span of all such singleton functionals has extra rank exactly two. Thus `d_v=2` is impossible.
+
+## 5. Deficiency three is impossible
+
+If `d_v=3`, the same defect equation requires
+
+```text
+s>=7.
+```
+
+This already forces at least seven compatible canonical-complete singleton blocks, exactly the class covered by the committed deficiency-three functional audit. That exhaustive audit proves that the span of all compatible singleton functionals has extra rank at most six.
+
+Therefore `d_v=3` is also impossible.
+
+Hence every `D=3,k=4,p=10` all-singleton pair shadow forced above satisfies
+
+```text
+d_v>=4.
+```
+
+## 6. Only three virtual deficiency/rank thresholds remain
+
+There are only ten singleton incomplete blocks, so at most ten canonical-complete singleton replacement functionals are available. Therefore
+
+```text
+s<=10.
+```
+
+Combining this with `s>=d_v+4` gives
+
+```text
+d_v<=6.
+```
+
+Every forced `p=10` support-zero pair shadow is therefore in exactly one of the three virtual ranges
+
+```text
+d_v=4: required singleton-functional extra rank >=8,
+d_v=5: required singleton-functional extra rank >=9,
+d_v=6: required singleton-functional extra rank =10.
+```
+
+In particular it must have at least 8, 9, or 10 canonical-complete singleton-compatible blocks respectively.
+
+So the final seven-row `k=6` residual simultaneously forces:
+
+1. one five-row `D=0,k=5,p=10` all-singleton shadow under deletion of the support pair, whose two deleted cycles must form the nonzero projective quotient-residual collision described in the preceding note; and
+2. at least four five-row `D=3,k=4,p=10` all-singleton shadows with virtual deficiency in `{4,5,6}` and required singleton-functional extra ranks `{8,9,10}`.
+
+This gives a second exact finite attack. A five-row `k=4,p=10` functional audit only needs to inspect the three classes
+
+```text
+(d_v, singleton capacity lower bound) = (4,8), (5,9), (6,10).
+```
+
+If none reaches functional extra rank `d_v+4`, the entire seven-no-root `k=6` branch closes without classifying the `k=5,p=10` sharp boundary.
+
+## 7. Checker output
+
+The arithmetic/incidence checker reports
+
+```text
+PASS: support-zero pair-shadow reduction for final seven-no-root k6 p10
+five_shadow {'D': 3, 'k': 4, 'p_options': [10, 7, 4, 1]}
+minimum_p10_pair_shadows_per_support 2
+minimum_p10_pair_shadows_total 4
+p10_virtual_remaining [(4, 8), (5, 9), (6, 10)]
+```
+
+The checker is pure integer arithmetic. The deficiency-two and deficiency-three exclusions use the previously committed exact modular/Hadamard-certified functional audits; no new finite census is claimed here.

@@ -1,0 +1,499 @@
+# Target C-II — high-`t` three-row exact localization and two-interface cusp balance
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch with `t=(q-k)/D<=1.8687`  
+**Dependencies:** high-`t` fixed cusp chain; exact laminar finite multishear; audited Section-157 cut resultants; one-sided diameter-hub interval support; canonical mixed infinitesimal rigidity  
+**Certificate:** `research/verify_target_c_high_t_exact_three_row_localization_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The high-`t` fixed-chain theorem allows `r=2`. Thus every unbounded survivor sequence has, after passage to a subsequence, three consecutive rectangle rows
+
+\[
+\tau_0,\tau_1,\tau_2
+\tag{TR.1}
+\]
+
+on one side of the unique diameter-routing hub. The two intervening interfaces have a finite total switching set
+
+\[
+H_{\rm exc}=X_0\sqcup X_1,
+\qquad
+\boxed{|H_{\rm exc}|<2{,}218{,}000,}
+\tag{TR.2}
+\]
+
+and for the canonical maximal-support normalized KKT stress,
+
+\[
+\boxed{
+\sum_{h\in H_{\rm exc}}\beta_h
+<{2{,}218{,}000\over D}.
+}
+\tag{TR.3}
+\]
+
+The real shore-oriented row phases `alpha_0,alpha_1,alpha_2` obey
+
+\[
+|\alpha_{j+1}-\alpha_j|
+<{1.416\times10^7\over D}+o(D^{-1}),
+\tag{TR.4}
+\]
+
+and the whole three-row block has phase diameter
+
+\[
+\boxed{
+\max_{j,k}|\alpha_j-\alpha_k|
+<{2.832\times10^7\over D}+o(D^{-1}).
+}
+\tag{TR.5}
+\]
+
+A common ordered transverse family of more than `0.0783D-o(D)` columns crosses all three rows, with every row-column angular excess below the same `2.832e7/D+o(D^-1)` scale.
+
+This note combines that current-endpoint chain with the exact three-coordinate multishear. The gain is twofold.
+
+1. Unless all three real row directions are exactly equal, there is a genuine nonconstant finite contact-preserving motion under which **every actual diameter edge outside `H_exc` is unchanged exactly**. The entire finite source obstruction is therefore the two switching interfaces.
+2. In the generic case where both adjacent row-phase gaps are nonzero, the KKT-weighted first derivatives on the two switching interfaces are not merely balanced in aggregate. They have the exact equal-and-opposite values
+
+\[
+\boxed{
+\mathcal D_0
+=-2M_1\sin(\alpha_1-\alpha_0)\sin(\alpha_2-\alpha_1),
+}
+\tag{TR.6}
+\]
+
+\[
+\boxed{
+\mathcal D_1
+=+2M_1\sin(\alpha_1-\alpha_0)\sin(\alpha_2-\alpha_1),
+}
+\tag{TR.7}
+\]
+
+where `F_1=M_1u_1` is the positive Section-157 cut resultant on the middle row. Hence both interfaces are force-visible whenever both gaps are nonzero: one contains a positive-KKT active diameter row shortened to first order by the kernel direction and the other contains a positive-KKT row lengthened to first order. Reversing the motion exchanges the two signs.
+
+The old three-cut reduction at the lower endpoint left a force-visible-cusp / universally-zero-KKT-blocker dichotomy. At the current high-`t` endpoint, equations (TR.6)--(TR.7) remove the force-invisible-only alternative in the generic two-gap branch. The remaining first-order obstruction is an explicit two-interface balanced cusp.
+
+---
+
+## 1. The `r=2` high-`t` chain
+
+Apply the fixed-chain theorem with `r=2`. Its window budget gives
+
+\[
+\sum_{i=0}^1
+\bigl(N_i+L_i+D B_i+S_i+S_{i+1}\bigr)
+<2(1{,}109{,}000)=2{,}218{,}000.
+\tag{TR.8}
+\]
+
+All terms are nonnegative. Therefore
+
+\[
+N_0+N_1<2{,}218{,}000,
+\qquad
+B_0+B_1<{2{,}218{,}000\over D}.
+\tag{TR.9}
+\]
+
+Because both interfaces lie on the same side of the diameter-routing hub, all diameter-interval switches have the same one-sided orientation. A diameter interval can switch at only one of the two interfaces. Thus the switching sets `X_0,X_1` are disjoint, and
+
+\[
+|X_0|+|X_1|\le N_0+N_1.
+\]
+
+This proves (TR.2). The KKT switching-mass budget gives (TR.3).
+
+The same fixed-chain theorem gives, with `r=2`,
+
+\[
+|\alpha_{j+1}-\alpha_j|
+<{2(7.08\times10^6)\over D}+o(D^{-1}),
+\]
+
+which is (TR.4), and
+
+\[
+\max_{j,k}|\alpha_j-\alpha_k|
+<{2(1.416\times10^7)\over D}+o(D^{-1}),
+\]
+
+which is (TR.5).
+
+The common transverse family follows from the same specialization of the fixed-chain theorem.
+
+---
+
+## 2. An explicit three-row kernel
+
+Let
+
+\[
+u_j=(\cos\alpha_j,\sin\alpha_j)
+\qquad(j=0,1,2)
+\tag{TR.10}
+\]
+
+be the real shore-oriented row vectors supplied by the common-transversal/rooted-shore sign theorem. Define
+
+\[
+\delta_0:=\alpha_1-\alpha_0,
+\qquad
+\delta_1:=\alpha_2-\alpha_1.
+\tag{TR.11}
+\]
+
+The standard planar determinant identity gives
+
+\[
+\boxed{
+ c_0=\sin\delta_1,
+\qquad
+ c_1=-\sin(\delta_0+\delta_1),
+\qquad
+ c_2=\sin\delta_0,
+}
+\tag{TR.12}
+\]
+
+and
+
+\[
+\boxed{c_0u_0+c_1u_1+c_2u_2=0.}
+\tag{TR.13}
+\]
+
+Indeed (TR.13) is
+
+\[
+\det(u_1,u_2)u_0+
+\det(u_2,u_0)u_1+
+\det(u_0,u_1)u_2=0.
+\]
+
+If the three row directions are not all parallel, `c` is nonzero and spans the one-dimensional kernel of the map
+
+\[
+L:\mathbb R^3\to\mathbb R^2,
+\qquad
+L(c)=\sum_{j=0}^2c_ju_j.
+\tag{TR.14}
+\]
+
+The phase diameter in (TR.5) tends to zero. Hence, for sufficiently large `D`, projective parallelism of all three rows cannot hide opposite real orientations: if the three projective directions are parallel, then the real representatives in the common phase window satisfy
+
+\[
+\boxed{u_0=u_1=u_2.}
+\tag{TR.15}
+\]
+
+Thus the rank-one mixed-sign regression from the abstract three-cut classification is absent here. The high-`t` chain has only two cases:
+
+```text
+rank two: at least two real row directions differ;
+rank one: u_0=u_1=u_2 exactly.
+```
+
+---
+
+## 3. Exact finite localization in the rank-two branch
+
+Use the exact laminar finite multishear on the three selected cuts. For angles `theta=(theta_0,theta_1,theta_2)`, put
+
+\[
+G(\theta)
+:=\sum_{j=0}^2(R_{\theta_j}u_j-u_j).
+\tag{TR.16}
+\]
+
+At the origin,
+
+\[
+DG(0)[a]
+=J\sum_{j=0}^2a_ju_j.
+\tag{TR.17}
+\]
+
+When the row directions span the plane, `DG(0)` has rank two. The implicit-function theorem therefore gives a nonconstant smooth local curve
+
+\[
+\theta(s),
+\qquad
+\theta(0)=0,
+\qquad
+\theta'(0)=c,
+\qquad
+G(\theta(s))=0.
+\tag{TR.18}
+\]
+
+Every old unit contact is preserved exactly by the laminar multishear. Because the selected triple lies wholly on one side of the hub, the incidence of any actual diameter interval with the triple is one-sided: it is a prefix or a suffix. Therefore a diameter edge is of exactly one of the following types inside the selected block:
+
+1. it crosses none of the three selected cuts;
+2. it crosses all three;
+3. it switches at exactly one of the two internal interfaces and belongs to `X_0` or `X_1`.
+
+Rows of type 1 receive no relative displacement. Rows of type 2 receive exactly `G(theta(s))=0`. Hence
+
+\[
+\boxed{
+|r_h(s)|=D
+\quad\text{identically for every actual diameter edge }h\notin H_{\rm exc}.
+}
+\tag{TR.19}
+\]
+
+All strict old noncontacts and strictly subdiameter pairs remain strict for sufficiently small source-dependent `s` by finiteness and continuity. Consequently the full finite source obstruction to this genuine motion is the fixed set `H_exc` of fewer than `2,218,000` switching diameter edges.
+
+The motion is not Euclidean: `c` is nonzero on the selected rows, while a common transverse column from the linear ladder is unselected and is unchanged. Thus canonical mixed infinitesimal rigidity also implies that at least one edge of `H_exc` has nonzero first diameter derivative.
+
+---
+
+## 4. One-sided support gives a two-interface normal form
+
+Let the positive Section-157 KKT cut resultants be
+
+\[
+F_j=M_ju_j,
+\qquad M_j>0.
+\tag{TR.20}
+\]
+
+Orient every active diameter vector `r_h` by increasing layer index, as in the exact interval-shear theorem, so the same orientation is compatible with all selected cut resultants.
+
+First suppose the hub lies beyond `tau_2`. The active diameter supports are nested increasingly:
+
+\[
+H_0\subseteq H_1\subseteq H_2.
+\tag{TR.21}
+\]
+
+Then
+
+\[
+X_0=H_1\setminus H_0,
+\qquad
+X_1=H_2\setminus H_1,
+\tag{TR.22}
+\]
+
+and
+
+\[
+\sum_{h\in X_0}\beta_hr_h=F_1-F_0,
+\qquad
+\sum_{h\in X_1}\beta_hr_h=F_2-F_1.
+\tag{TR.23}
+\]
+
+The first relative-displacement vectors under the kernel direction (TR.12) are constant on each switching class. A row in `X_0` crosses cuts 1 and 2, so
+
+\[
+a_h=J(c_1u_1+c_2u_2)=-c_0Ju_0.
+\tag{TR.24}
+\]
+
+A row in `X_1` crosses only cut 2, so
+
+\[
+a_h=c_2Ju_2.
+\tag{TR.25}
+\]
+
+If instead the hub lies beyond `tau_0`, the supports are nested decreasing. Then the two relative-displacement vectors are `c_0Ju_0` and `-c_2Ju_2`, while the corresponding weighted fresh vectors are `F_0-F_1` and `F_1-F_2`. The scalar formulas below are unchanged.
+
+Thus the many switching rows at each interface do not present arbitrary first-order shear directions. Each interface is governed by one scalar endpoint kernel vector.
+
+---
+
+## 5. Exact equal-and-opposite KKT cusp balance
+
+Define the KKT-weighted first squared-length derivative on each interface by
+
+\[
+\mathcal D_i
+:=\sum_{h\in X_i}\beta_h
+{d\over ds}|r_h(s)|^2\Big|_{s=0}.
+\tag{TR.26}
+\]
+
+In the increasing-support case, (TR.23)--(TR.25) give
+
+\[
+\begin{aligned}
+\mathcal D_0
+&=2(F_1-F_0)\cdot(-c_0Ju_0)\\
+&=-2c_0M_1(u_1\cdot Ju_0),
+\end{aligned}
+\tag{TR.27}
+\]
+
+because `F_0` is parallel to `u_0`. Since
+
+\[
+u_1\cdot Ju_0=\sin(\alpha_1-\alpha_0)=\sin\delta_0,
+\]
+
+and `c_0=sin(delta_1)`, this is exactly (TR.6).
+
+Likewise,
+
+\[
+\begin{aligned}
+\mathcal D_1
+&=2(F_2-F_1)\cdot(c_2Ju_2)\\
+&=-2c_2M_1(u_1\cdot Ju_2)\\
+&=+2M_1\sin\delta_0\sin\delta_1,
+\end{aligned}
+\tag{TR.28}
+\]
+
+which is (TR.7). The decreasing-support case gives the same two formulas by the sign reversal noted in Section 4.
+
+Therefore
+
+\[
+\boxed{\mathcal D_0+\mathcal D_1=0}
+\tag{TR.29}
+\]
+
+for the explicit kernel direction, but the cancellation is much more rigid than the abstract global KKT stationarity identity: each of the two interface contributions is known exactly.
+
+If
+
+\[
+\delta_0\ne0,
+\qquad
+\delta_1\ne0,
+\tag{TR.30}
+\]
+
+then (TR.4) makes both gaps smaller than `pi/2` for large `D`, so both sines are nonzero and
+
+\[
+\boxed{\mathcal D_0=-\mathcal D_1\ne0.}
+\tag{TR.31}
+\]
+
+Because all positive-support KKT multipliers are positive, a nonzero weighted sum cannot be carried only by universally zero-KKT active constraints. Thus each interface contains a force-visible active diameter row with the sign of its corresponding aggregate. In particular the generic high-`t` three-row cusp necessarily has force-visible blockers on **both** switching interfaces.
+
+This is stronger than the older three-cut dichotomy.
+
+---
+
+## 6. The two degenerate phase branches are explicit
+
+There are only two remaining degeneracies.
+
+### 6.1 Exactly one adjacent gap vanishes
+
+Suppose, for example,
+
+\[
+\delta_0=0,
+\qquad
+\delta_1\ne0.
+\]
+
+Then the three row vectors still span the plane, so the exact finite localization of Section 3 remains valid. But `c_2=0` and equations (TR.6)--(TR.7) give
+
+\[
+\mathcal D_0=\mathcal D_1=0.
+\]
+
+Mixed infinitesimal rigidity still forces some switching actual-diameter first derivative to be nonzero, so the zero aggregate hides either mixed positive-stress signs on an interface or a universally zero-KKT blocker. This is now a sharply identified codimension-one first-order degeneracy rather than the generic branch.
+
+The case `delta_1=0`, `delta_0!=0` is symmetric.
+
+### 6.2 Both gaps vanish
+
+If
+
+\[
+\delta_0=\delta_1=0,
+\]
+
+then
+
+\[
+u_0=u_1=u_2=:u.
+\]
+
+The exact full-support displacement is
+
+\[
+G(\theta)
+=\sum_{j=0}^2(R_{\theta_j}u-u).
+\tag{TR.32}
+\]
+
+Its radial component is
+
+\[
+\boxed{
+ u\cdot G(\theta)
+=\sum_{j=0}^2(\cos\theta_j-1)\le0,
+}
+\tag{TR.33}
+\]
+
+with equality near the origin only at `theta=0`. Thus no nontrivial exact full-support cancellation curve exists in this branch.
+
+The first-order kernel is
+
+\[
+c_0+c_1+c_2=0.
+\tag{TR.34}
+\]
+
+For any nonzero kernel direction and any differentiable path `theta_j(s)=s c_j+o(s)`, the radial full-support displacement has the forced second-order sign
+
+\[
+\boxed{
+ u\cdot G(\theta(s))
+=-{s^2\over2}\sum_{j=0}^2c_j^2+o(s^2)<0.
+}
+\tag{TR.35}
+\]
+
+So the exactly parallel high-`t` survivor is a specific second-order branch, not an unresolved integration-rank accident.
+
+---
+
+## 7. Frontier effect
+
+At `t<=1.8687`, the three-row part of the high-`t` rectangle is now reduced to the following exact alternatives.
+
+```text
+three consecutive rows + linear common transverse ladder
++ <2,218,000 total switching actual-diameter rows
++ <2,218,000/D total switching KKT mass
+
+if both adjacent row-phase gaps are nonzero:
+    exact finite localization to the two switching interfaces
+    + explicit equal-and-opposite nonzero KKT first-derivative aggregates
+    + force-visible active diameter rows on both interfaces
+
+if exactly one gap is zero:
+    exact finite localization still holds
+    + first-order aggregate degeneracy on the two-interface cusp
+
+if both gaps are zero:
+    exact full-support cancellation is impossible
+    + every first-order kernel has a forced one-sided quadratic radial drift.
+```
+
+The generic rank-two branch therefore no longer has a diffuse diameter obstruction and no longer has a force-invisible-only escape. Its obstruction is an explicit finite two-interface KKT cusp with opposite aggregate signs.
+
+A useful next closing step is correspondingly narrower: either
+
+1. use four or more consecutive rows to obtain enough exact-kernel freedom to eliminate the two-interface sign cusp while retaining the common transverse ladder; or
+2. close the codimension-one one-gap-zero branch and the exactly-parallel second-order branch by a finite diameter-thrackle/curvature classification.
+
+No diameter descent or C-II closure is claimed here.
+
+**Disposition:** proved proof-only exact high-`t` three-row localization and an exact two-interface KKT cusp-balance formula through `t<=1.8687`. C-II and Level I remain open.

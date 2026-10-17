@@ -1,0 +1,351 @@
+# Target C-II — the opened adjacent strip has a `<=3` diameter-blocker witness
+
+**Date:** 2026-09-15  
+**Status:** proof-only finite/source-level structural strengthening  
+**Scope:** the adjacent strip supplied by `target_c_adjacent_strip_opening_reduction_2026-09-15.md`  
+**Dependencies:** exact adjacent-strip translation formula; canonical contact-minimal global-minimizer normalization; finite planar separation / Caratheodory  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The adjacent-strip opening theorem reduces all moving upper-distance constraints to the switching diameter set.  That set has fewer than `1763+o(1)` edges and is an ordered caterpillar forest.  For the two-dimensional translation itself, however, the whole finite set is unnecessary.
+
+Let `R` be the middle source layer and let `a,b` be the two coherently oriented unit contact vectors on its boundary trains, each oriented from the fixed exterior into `R`.  For a switching diameter edge `h=xy`, put
+
+\[
+r_h=p_y-p_x,
+\qquad
+\delta_h=\mathbf 1_R(y)-\mathbf 1_R(x)\in\{-1,+1\},
+\]
+
+and define its layer-oriented diameter vector
+
+\[
+\boxed{c_h:=\delta_h r_h.}
+\tag{TW.1}
+\]
+
+Thus `c_h` always points from the endpoint outside `R` to the endpoint inside `R`, and
+
+\[
+|c_h|=D.
+\]
+
+Under a layer translation `v`, every switching diameter satisfies exactly
+
+\[
+|r_h(v)|^2-D^2
+=2c_h\cdot v+|v|^2.
+\tag{TW.2}
+\]
+
+The two boundary contacts become `a+v` and `b+v`.
+
+This note proves that if the canonical source survives the strip-opening move, then its obstruction is already witnessed by at most three switching diameter bars, and in the antipodal boundary case by at most two.
+
+---
+
+## 1. Nonantipodal boundary directions: a planar positive-dependence certificate
+
+Assume first
+
+\[
+\boxed{b\ne-a.}
+\tag{TW.3}
+\]
+
+Consider the finite set of planar normals
+
+\[
+\mathcal N
+:=\{a,b\}\cup\{-c_h:h\in H_{sw}\}.
+\tag{TW.4}
+\]
+
+### Theorem TW.1
+
+For every canonical survivor in the nonantipodal case,
+
+\[
+\boxed{0\in\operatorname{conv}(\mathcal N).}
+\tag{TW.5}
+\]
+
+Consequently there is a subfamily
+
+\[
+\mathcal N_0\subseteq\mathcal N,
+\qquad
+1\le|\mathcal N_0|\le3,
+\]
+
+and coefficients
+
+\[
+\lambda_n\ge0,
+\qquad
+\sum_{n\in\mathcal N_0}\lambda_n=1,
+\]
+
+such that
+
+\[
+\boxed{
+\sum_{n\in\mathcal N_0}\lambda_n n=0.
+}
+\tag{TW.6}
+\]
+
+At least one member of `N_0` is a switching-diameter normal `-c_h`.  In particular the complete strip obstruction has a certificate involving at most three switching diameter edges, and at most three constraints total if the two fixed boundary-contact normals are counted.
+
+### Proof
+
+Suppose instead that
+
+\[
+0\notin\operatorname{conv}(\mathcal N).
+\]
+
+Because `conv(N)` is a compact convex set disjoint from the origin, strict separation gives a vector `w` and a number `eta>0` such that
+
+\[
+\boxed{n\cdot w\ge\eta>0\quad(n\in\mathcal N).}
+\tag{TW.7}
+\]
+
+Thus
+
+\[
+a\cdot w>0,
+\qquad
+b\cdot w>0,
+\tag{TW.8}
+\]
+
+and for every switching diameter edge
+
+\[
+c_h\cdot w<0.
+\tag{TW.9}
+\]
+
+Translate the layer by
+
+\[
+v=s w,
+\qquad s>0.
+\]
+
+The two boundary contacts satisfy
+
+\[
+|a+sw|^2
+=1+2s(a\cdot w)+s^2|w|^2>1,
+\]
+
+\[
+|b+sw|^2
+=1+2s(b\cdot w)+s^2|w|^2>1
+\]
+
+for every sufficiently small positive `s`.
+
+For a switching diameter, (TW.2) gives
+
+\[
+|r_h(sw)|^2-D^2
+=2s(c_h\cdot w)+s^2|w|^2<0
+\]
+
+simultaneously for all `h` once `s` is sufficiently small.  Every nonswitching source-pair vector is unchanged exactly by the strip theorem.  Since the source is finite, shrinking `s` once more preserves every strict old lower-distance and strict old nondiameter slack.
+
+The resulting source therefore has diameter at most `D`, remains unit-separated, and has strictly fewer old unit contacts.  If its diameter is below `D`, global minimality fails; if its diameter is exactly `D`, canonical contact minimality fails.  Contradiction.  This proves (TW.5).
+
+Planar Caratheodory now gives (TW.6) with at most three normals.  Finally,
+
+\[
+0\notin\operatorname{conv}\{a,b\}
+\]
+
+because `a,b` are unit vectors and `b!=-a`.  Hence every zero-convex-combination witness contains at least one switching-diameter normal.  `square`
+
+---
+
+## 2. What the three-normal certificate means
+
+The nonantipodal obstruction has only the following finite possibilities after deleting zero coefficients from a minimal witness:
+
+1. one contact normal and one diameter normal form an opposite pair;
+2. both contact normals and one diameter normal positively balance;
+3. one contact normal and two diameter normals positively balance;
+4. three diameter normals positively balance.
+
+Thus the `<1763` ordered caterpillar is needed only to guarantee that some such local pattern exists.  The actual infinitesimal obstruction lives on at most three of its bars.
+
+Equivalently, in the generic case the next closure problem is no longer a finite classification with up to 1762 diameter edges.  It is a classification of two- and three-bar positive-dependence patterns compatible with
+
+- the one-arc prefix/hub/suffix switching order;
+- equal diameter length `D`;
+- the two boundary train directions `a,b`; and
+- the Section-157 cut-resultant identities.
+
+No KKT coefficient lower bound is used in this reduction.
+
+---
+
+## 3. Antipodal boundary directions require a second-order contact calculation
+
+Now assume
+
+\[
+\boxed{b=-a.}
+\tag{TW.10}
+\]
+
+The linear inequalities `a dot v>0` and `b dot v>0` are then incompatible, but this is not a genuine blocker: a perpendicular translation opens both contacts quadratically.  Therefore Theorem TW.1 must not be applied blindly in this case.
+
+Let
+
+\[
+w:=Ja,
+\]
+
+so `(a,w)` is an orthonormal basis.  Write
+
+\[
+q_h:=c_h\cdot w.
+\tag{TW.11}
+\]
+
+### Theorem TW.2
+
+If the canonical source survives in the antipodal case, then two switching diameter edges already witness the obstruction.  More precisely at least one of the following holds.
+
+**Transverse sign pair.** There are switching edges `h_+,h_-` with
+
+\[
+\boxed{
+q_{h_+}>0,
+\qquad
+q_{h_-}<0.
+}
+\tag{TW.12}
+\]
+
+**Longitudinal opposite pair.** There are switching edges `h_+,h_-` with
+
+\[
+\boxed{
+c_{h_+}=Da,
+\qquad
+c_{h_-}=-Da.}
+\tag{TW.13}
+\]
+
+Hence the antipodal strip obstruction has a diameter witness of size at most two.
+
+### Proof
+
+Assume no transverse sign pair exists.  Replacing `w` by `-w` if necessary, we may suppose
+
+\[
+q_h\le0
+\qquad(h\in H_{sw}).
+\tag{TW.14}
+\]
+
+Every edge with `q_h<0` strictly shortens to first order under `v=sw`, `s>0`.
+
+For an edge with `q_h=0`, the equality `|c_h|=D` forces
+
+\[
+c_h=\sigma_h Da,
+\qquad
+\sigma_h\in\{-1,+1\}.
+\tag{TW.15}
+\]
+
+Suppose the zero-transverse edges do not contain both signs.  If there are none, take simply `v=sw`.  Otherwise they all have one sign `sigma`.  Choose a fixed number
+
+\[
+{1\over2D}<\kappa<{1\over2},
+\tag{TW.16}
+\]
+
+which exists for every `D>1`, and put
+
+\[
+v_s=sw-\sigma\kappa s^2a.
+\tag{TW.17}
+\]
+
+For the two boundary contacts,
+
+\[
+|a+v_s|^2-1
+=2a\cdot v_s+|v_s|^2,
+\]
+
+\[
+|-a+v_s|^2-1
+=-2a\cdot v_s+|v_s|^2.
+\]
+
+Since
+
+\[
+|v_s|^2=s^2+\kappa^2s^4,
+\qquad
+|a\cdot v_s|=\kappa s^2,
+\]
+
+both expressions are positive for all sufficiently small `s>0` because `kappa<1/2`.
+
+For a zero-transverse diameter edge, `c_h=sigma Da`, so
+
+\[
+2c_h\cdot v_s+|v_s|^2
+=(-2D\kappa+1)s^2+\kappa^2s^4<0
+\]
+
+for small `s`, using `kappa>1/(2D)`.
+
+Every edge with `q_h<0` still has a negative linear term
+
+\[
+2s q_h
+\]
+
+which dominates the `O(s^2)` correction.  Hence all switching diameters strictly shorten for sufficiently small `s` while both boundary contact families strictly open.  As in Theorem TW.1, all remaining strict source-pair slacks survive after shrinking `s`, contradicting global/contact minimality.
+
+Therefore, if no transverse sign pair exists, the zero-transverse set must contain both signs in (TW.15), which is exactly (TW.13).  This proves TW.2. `square`
+
+---
+
+## 4. Relation to the ordered switching interface
+
+The hostile-audited adjacent switching-order theorem says that if both left- and right-switch orientations occur, all switching middle endpoints lie on one common outer-boundary arc and split into a right prefix, at most one common hub, and a left suffix.
+
+TW.1--TW.2 now say that only a constant-size subset of that interface is load-bearing for the strip-opening obstruction:
+
+```text
+nonantipodal boundary contacts:
+    <=3 total positive-dependence normals
+    and therefore <=3 switching diameter bars;
+
+antipodal boundary contacts:
+    <=2 switching diameter bars,
+    either transverse-opposite or longitudinal-opposite.
+```
+
+Thus large stars, long caterpillar spines, and the numerical `<1763` edge cap are not themselves the final local obstruction.  A survivor must contain one of a handful of two-/three-bar directional patterns inside that ordered interface.
+
+---
+
+## 5. Scope and non-implications
+
+- This theorem uses the currently merged adjacent-strip opening reduction.  It does not repair or replace any independent audit that theorem may still require.
+- The reduction is finite-source exact; no uniform inactive-slack lower bound in `D` is required.  The translation scale is chosen separately for each finite source after the strict first-order signs are obtained.
+- The theorem does not claim that the selected two or three diameter bars alone form a KKT support.  They only certify infeasibility of the strip-opening direction cone.
+- No claim is made that every positive-dependence pattern is geometrically realizable.
+- C-II is not closed.  The next high-value step is to classify the two-/three-bar witnesses using the one-arc thrackle order and the exact train/cut resultant equations, and to eliminate them or convert them into an exact unit triangle / strict competitor.
+
+**Disposition:** proved proof-only reduction of the adjacent-strip blocker from a bounded caterpillar forest to a `<=3` directional witness (and `<=2` in the antipodal case). C-II and Level I remain open.

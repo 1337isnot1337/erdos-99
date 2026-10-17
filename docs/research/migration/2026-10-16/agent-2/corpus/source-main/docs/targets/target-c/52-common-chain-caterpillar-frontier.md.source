@@ -1,0 +1,45 @@
+# Target C — C96 common-chain caterpillar frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_common_chain_caterpillar_2026-09-01.md](../../reports/target_c_common_chain_caterpillar_2026-09-01.md).
+
+C87's D staircase intervals all contain one common C80 chain train `tau_r`, and every
+simple interval is represented by at least two active diameter pairs, one in each
+hull-arc orientation. The chain diameter `za` is also separated by `tau_r`.
+
+Therefore the complete source diameter graph crossing the cut `tau_r` contains at
+least
+
+`2D+1`
+
+edges.
+
+C90's train-cut theorem applies: the crossing diameter graph is bipartite, hence
+acyclic because planar diameter cycles are odd, and every component is a caterpillar.
+If it has `m_r` edges and `c_r` nontrivial components, its incident endpoint count is
+
+`v_r=m_r+c_r`.
+
+Thus
+
+`q>=v_r>=2D+2`.
+
+More exactly, writing `e_r=m_r-(2D+1)`,
+
+`q-(2D+2) >= e_r+(c_r-1)`.
+
+So endpoint surplus pays for every extra common-cut diameter edge and every extra
+caterpillar component. At the minimum `q=2D+2`, the common-cut graph is one spanning
+caterpillar tree with exactly the chain edge plus the two selected orientations over
+all D staircase edges.
+
+In C94's low-train phase `T/D<3+o(1)`, C82 also gives
+
+`q/D <= 2.1862006358...+o(1)`,
+
+so this common-cut caterpillar already consumes almost the entire diameter-endpoint
+budget.
+
+The next target is a geometric classification of this near-spanning equal-length
+caterpillar, especially the minimum-slack regime `q=2D+2+o(D)`.

@@ -1,0 +1,555 @@
+# Target C — Section 124: tooth-pocket transport and the joint full-source packing budget
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** proof-only research candidate stacked on canonical audit.46.  
+**Dependencies:** canonical Sections 62, 67, 68, 82, 83, 122 and 123.
+
+Canonical Sections 122--123 now give the full-core aggregate source-level frontier
+
+\[
+\liminf_{D\to\infty}{1\over D}
+\sum_r\bigl(L_r+P_{{\rm exc},r}-2d_r\bigr)
+\ge R_0,
+\qquad
+R_0:={\pi\over2}(2-\sqrt3),
+\tag{124.1}
+\]
+
+and
+
+\[
+\sum_rP_{{\rm exc},r}\le10(e_{BB}-k).
+\tag{124.2}
+\]
+
+This section resolves what the remaining outer-walk term means geometrically. For each harmonic cell, every missing attachment-polygon side cuts off a convex **tooth pocket** whose other boundary is the corresponding unit-contact outer route. The pocket interior contains no nonisolated positive-contact source point. Oler on the route vertices plus the contact-isolated points in the pocket gives a finite transport
+
+\[
+\boxed{
+G_{\rm tooth}-a_0Z_{\rm tooth}
+\ge c_0D_{\rm tooth},
+}
+\tag{124.3}
+\]
+
+where
+
+\[
+D_{\rm tooth}:=\sum_r\bigl(L_r-\operatorname{per}(P_r)\bigr),
+\qquad
+a_0={\sqrt3\over2},\quad c_0={\sqrt3\over4}.
+\]
+
+More sharply, each tooth has an exact nonnegative Oler slack `omega_i`, and puncturing all tooth interiors directly out of the **full source hull** gives
+
+\[
+\boxed{
+\Omega_{\rm tooth}-a_0H_{\rm chord}
+\le \mathscr O_A,
+}
+\tag{124.4}
+\]
+
+with
+
+\[
+\mathscr O_A
+:=\operatorname{area}(K)+c_0\operatorname{per}(K)-a_0(n-1),
+\]
+
+\[
+H_{\rm chord}:=\sum_i(s_i-1)
+=\sum_r\bigl(\operatorname{per}(P_r)-a_r\bigr).
+\]
+
+Finally, unloaded-only strict rhombi and tooth pockets have disjoint open interiors. Puncturing both families in the same GWZ complex gives the stronger shared-budget theorem
+
+\[
+\boxed{
+E_4^0+\Omega_{\rm tooth}-a_0H_{\rm chord}
+\le\mathscr O_A.
+}
+\tag{124.5}
+\]
+
+Thus rhombus area defect and tooth Oler slack do not have independent `O(D)` allowances.
+
+Combining (124.1)--(124.3) gives the new source-level three-currency requirement
+
+\[
+\boxed{
+\liminf_{D\to\infty}{1\over D}
+\left[
+{G_{\rm tooth}-a_0Z_{\rm tooth}\over c_0}
++\sum_r\bigl(\operatorname{per}(P_r)-2d_r\bigr)
++10(e_{BB}-k)
+\right]
+\ge R_0.
+}
+\tag{124.6}
+\]
+
+This does not close C-II. It removes arbitrary local outer-walk complexity as a free currency. The promoted aggregate return demand must now be paid by inactive tooth packing surplus, convex cell shape excess, or the single global loaded-contact scalar `e_BB-k`; the nonnegative tooth Oler remainder shares the full-source packing budget with rhombus defect through (124.5).
+
+---
+
+## 124.1 One attachment interval cuts off one convex tooth pocket
+
+Fix one unloaded positive-contact component `I_r`, attachment set
+
+\[
+A_r=\{a_1,\ldots,a_{a_r}\}
+\]
+
+in cyclic order, and attachment polygon
+
+\[
+P_r=\operatorname{conv}(A_r).
+\]
+
+Let `H_r` be the canonical induced contact graph on `I_r\cup A_r`, including the loaded-loaded contacts with both endpoints in `A_r`. Let `L_r` be its occurrence-counted outer-face walk length.
+
+Canonical Section 82 adds every missing side of `P_r` and obtains a 2-connected plane graph `\widehat H_r` whose bounded faces are convex. The added sides split only the old outer face.
+
+For consecutive attachments `a_i,a_{i+1}`, put
+
+\[
+s_i:=|a_i-a_{i+1}|.
+\]
+
+If the polygon side is already a unit contact, its outer route has one edge and
+
+\[
+\ell_i=s_i=1.
+\tag{124.7}
+\]
+
+Assign zero tooth area to this degenerate interval.
+
+Otherwise the added chord `[a_i,a_{i+1}]` bounds one convex face `C_i` of `\widehat H_r`; its other boundary is exactly the old outer-contact route between these consecutive attachments. Let that simple route have `\ell_i` unit edges. Then
+
+\[
+\operatorname{per}(C_i)=\ell_i+s_i.
+\tag{124.8}
+\]
+
+The attachment intervals partition the same occurrence-counted outer walk, and the polygon sides partition `partial P_r`. Hence
+
+\[
+\boxed{
+\sum_i\ell_i=L_r,
+\qquad
+\sum_i s_i=\operatorname{per}(P_r).
+}
+\tag{124.9}
+\]
+
+Bridge occurrences are not identified: Section 82's augmentation makes each bounded face boundary simple, while the collection of attachment intervals retains the old occurrence multiplicity in the sum.
+
+---
+
+## 124.2 Tooth interiors contain only contact-isolated source points
+
+Take a nondegenerate tooth pocket `C_i`.
+
+No vertex of `I_r` lies in `int(C_i)` because `C_i` is a face of the augmented graph.
+
+No loaded vertex `b\in B\setminus A_r` lies in `P_r`: every member of `B=Vert(F)` is extreme in the convex force hull, so membership in `conv(A_r)` without belonging to `A_r` would contradict extremality.
+
+If `x` is an unloaded vertex of another component `I_s`, canonical harmonic trapping gives
+
+\[
+x\in int(P_s).
+\]
+
+If `x\in int(C_i)\subset int(P_r)`, canonical Section 83 would give
+
+\[
+int(P_r)\cap int(P_s)\ne\varnothing,
+\]
+
+contradicting pairwise cell-interior disjointness.
+
+Therefore
+
+\[
+\boxed{
+A\cap int(C_i)
+\text{ consists entirely of contact-isolated source points.}
+}
+\tag{124.10}
+\]
+
+Let `z_i` be their number. Source points on the artificial chord are deliberately excluded from `z_i`; they remain in the full source and this omission only weakens the local Oler estimate.
+
+Distinct tooth pockets in one cell are distinct bounded faces of `\widehat H_r`. Pockets from distinct cells have disjoint interiors by Section 83. Thus all open tooth interiors are pairwise disjoint globally.
+
+---
+
+## 124.3 Oler transports route detour into tooth packing surplus
+
+The `\ell_i+1` route vertices together with the `z_i` interior isolates form a unit-separated set of
+
+\[
+N_i=\ell_i+1+z_i
+\]
+
+points in the convex pocket `C_i`. Finite Oler gives
+
+\[
+a_0(N_i-1)
+\le\operatorname{area}(C_i)+c_0\operatorname{per}(C_i).
+\tag{124.11}
+\]
+
+Using `a_0=2c_0` and (124.8),
+
+\[
+\boxed{
+\operatorname{area}(C_i)-a_0z_i
+\ge c_0(\ell_i-s_i).
+}
+\tag{124.12}
+\]
+
+Define
+
+\[
+G_r:=\sum_i\operatorname{area}(C_i),
+\qquad
+Z_r:=\sum_i z_i.
+\]
+
+Summing (124.12) in one cell and using (124.9) gives
+
+\[
+G_r-a_0Z_r
+\ge c_0\bigl(L_r-\operatorname{per}(P_r)\bigr).
+\tag{124.13}
+\]
+
+Summing over the pairwise interior-disjoint cells proves (124.3).
+
+Every term is finite and source-preserving; no asymptotic limit or affine-kernel statement is used.
+
+---
+
+## 124.4 Exact tooth Oler slack
+
+For one nondegenerate pocket define
+
+\[
+\boxed{
+\omega_i
+:=\operatorname{area}(C_i)
++c_0(\ell_i+s_i)+a_0
+-a_0(\ell_i+1+z_i).
+}
+\tag{124.14}
+\]
+
+This is precisely the finite Oler slack of the selected pocket point set, so `omega_i>=0`. Algebra gives
+
+\[
+\boxed{
+\omega_i
+=\operatorname{area}(C_i)-a_0z_i-c_0(\ell_i-s_i).
+}
+\tag{124.15}
+\]
+
+Put
+
+\[
+\Omega_{\rm tooth}:=\sum_i\omega_i,
+\qquad
+H_{\rm chord}:=\sum_i(s_i-1).
+\tag{124.16}
+\]
+
+Then the tooth transport has the exact refinement
+
+\[
+\boxed{
+G_{\rm tooth}-a_0Z_{\rm tooth}
+=c_0D_{\rm tooth}+\Omega_{\rm tooth}.
+}
+\tag{124.17}
+\]
+
+Direct contact sides have `s_i=1` and zero tooth contribution. Therefore summing `s_i-1` over the nondegenerate intervals is the same as summing over every attachment-polygon side:
+
+\[
+\boxed{
+H_{\rm chord}
+=\sum_r\bigl(\operatorname{per}(P_r)-a_r\bigr).
+}
+\tag{124.18}
+\]
+
+---
+
+## 124.5 Puncture all tooth pockets out of the full source hull
+
+Let
+
+\[
+K=\operatorname{conv}(A).
+\]
+
+Choose a straight triangulation with vertex set the full source and respecting every tooth-pocket boundary. No Steiner point is required: pairwise interior-disjoint convex pocket boundaries have no proper crossings; shared/overlapping segments can be subdivided at existing source endpoints, and the remaining source points are inserted by edge or stellar subdivision.
+
+Delete every simplex in every open tooth interior, including its `z_i` interior source vertices, but retain every tooth boundary cycle. Call the result `S^o_{tooth}`.
+
+If `M` is the number of nondegenerate tooth pockets, then
+
+\[
+\alpha_0(S^o_{tooth})=n-Z_{\rm tooth},
+\tag{124.19}
+\]
+
+\[
+A(S^o_{tooth})=\operatorname{area}(K)-G_{\rm tooth},
+\tag{124.20}
+\]
+
+\[
+P(S^o_{tooth})
+=\operatorname{per}(K)+\sum_i(\ell_i+s_i),
+\tag{124.21}
+\]
+
+and
+
+\[
+\chi(S^o_{tooth})=1-M.
+\tag{124.22}
+\]
+
+The perimeter formula uses the exact GWZ occurrence convention from canonical Section 68. If a punctured side has a retained 2-face on the other side, its multiplicity rises from zero to one; if both sides are punctured, the final nonbounding edge is counted twice; if the side lies on `partial K`, its multiplicity rises from one to two. Every punctured side occurrence contributes once.
+
+Apply the canonical Euclidean GWZ inequality
+
+\[
+a_0\alpha_0(S)
+\le A(S)+c_0P(S)+a_0\chi(S).
+\tag{124.23}
+\]
+
+Substitution yields
+
+\[
+\boxed{
+a_0(n-1)
+\le
+\operatorname{area}(K)+c_0\operatorname{per}(K)
+-\Omega_{\rm tooth}+a_0H_{\rm chord}.
+}
+\tag{124.24}
+\]
+
+Define the full-source Oler surplus
+
+\[
+\mathscr O_A
+:=\operatorname{area}(K)+c_0\operatorname{per}(K)-a_0(n-1)
+\ge0.
+\]
+
+Equation (124.24) is exactly the full-source bound (124.4).
+
+For a global minimum-diameter source, the canonical strict translated-lattice comparison
+
+\[
+a_0(n-1)>{\pi D^2\over4}
+\]
+
+gives the sharper form
+
+\[
+\boxed{
+\Omega_{\rm tooth}-a_0H_{\rm chord}+\delta_K
+<c_0\operatorname{per}(K)
+\le c_0\pi D,
+}
+\tag{124.25}
+\]
+
+where `delta_K=pi D^2/4-area(K)`.
+
+---
+
+## 124.6 Rhombus defect and tooth slack share one packing allowance
+
+Let `R_4^0` be the global strict-rhombus contact faces whose four vertices are unloaded, and put
+
+\[
+A_4^0
+:=\sum_{R\in R_4^0}\operatorname{area}(R),
+\qquad
+E_4^0
+:=\sum_{R\in R_4^0}
+\bigl(\operatorname{area}(R)-a_0\bigr).
+\tag{124.26}
+\]
+
+Every `R in R_4^0` belongs to exactly one unloaded component because its unit-edge cycle is connected. It remains a bounded face of that component's induced harmonic graph. Tooth pockets split only that graph's old outer face. Therefore an unloaded-only rhombus interior is disjoint from every tooth interior in its cell. It is also disjoint from tooth interiors of other cells by Section 83.
+
+Puncture the unloaded-only rhombi and all tooth pockets simultaneously in one full-source GWZ complex. For every rhombus use the canonical Section-68 operation: triangulate by one source-to-source diagonal, delete the two 2-faces and the diagonal, and retain the four unit sides and vertices.
+
+The joint complex has
+
+\[
+A=A_K-A_4^0-G_{\rm tooth},
+\]
+
+\[
+P=P_K+4|R_4^0|+\sum_i(\ell_i+s_i),
+\]
+
+\[
+\chi=1-|R_4^0|-M,
+\qquad
+\alpha_0=n-Z_{\rm tooth}.
+\]
+
+The rhombus baseline cancels because
+
+\[
+A_4^0=a_0|R_4^0|+E_4^0,
+\qquad
+4c_0=2a_0.
+\]
+
+The tooth terms cancel as in (124.24). GWZ therefore gives
+
+\[
+\boxed{
+a_0(n-1)
+\le A_K+c_0P_K
+-E_4^0-\Omega_{\rm tooth}+a_0H_{\rm chord}.
+}
+\tag{124.27}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+E_4^0+\Omega_{\rm tooth}-a_0H_{\rm chord}
+\le\mathscr O_A,
+}
+\tag{124.28}
+\]
+
+which is (124.5). Under global minimality,
+
+\[
+\boxed{
+E_4^0+\Omega_{\rm tooth}-a_0H_{\rm chord}+\delta_K
+<c_0P_K.
+}
+\tag{124.29}
+\]
+
+The theorem intentionally excludes loaded-incident rhombi; they are not needed for the exact coupling and their interaction with artificial harmonic-cell chords is not assumed.
+
+---
+
+## 124.7 Compose with canonical Sections 122--123
+
+For every harmonic cell decompose the canonical Section-122 detour as
+
+\[
+\begin{aligned}
+L_r+P_{{\rm exc},r}-2d_r
+={}&
+\bigl(L_r-\operatorname{per}(P_r)\bigr)\\
+&+\bigl(\operatorname{per}(P_r)-2d_r\bigr)
++P_{{\rm exc},r}.
+\end{aligned}
+\tag{124.30}
+\]
+
+All three terms are nonnegative. The first is the tooth detour. The second is nonnegative because the two boundary arcs between a diameter pair of a convex polygon each have length at least the diameter chord. The third is nonnegative by definition.
+
+Canonical Section 122 gives the lower bound (124.1). Equation (124.3) gives
+
+\[
+\sum_r\bigl(L_r-\operatorname{per}(P_r)\bigr)
+\le {G_{\rm tooth}-a_0Z_{\rm tooth}\over c_0}.
+\tag{124.31}
+\]
+
+Canonical Section 123 gives (124.2). Substituting both upper payments into (124.30) and then into (124.1) proves (124.6).
+
+A coarse trichotomy follows: along every Type-II sequence, after subsequence extraction at least one of
+
+\[
+\limsup {G_{\rm tooth}-a_0Z_{\rm tooth}\over D}
+\ge {c_0R_0\over3},
+\tag{124.32}
+\]
+
+\[
+\limsup {1\over D}
+\sum_r\bigl(\operatorname{per}(P_r)-2d_r\bigr)
+\ge {R_0\over3},
+\tag{124.33}
+\]
+
+or
+
+\[
+\limsup {e_{BB}-k\over D}
+\ge {R_0\over30}
+\tag{124.34}
+\]
+
+must hold. The exact weighted inequality (124.6) is the main statement.
+
+---
+
+## 124.8 What is genuinely removed, and what remains
+
+Section 124 does not prove an upper bound contradicting (124.6). It does remove two forms of local bookkeeping freedom.
+
+1. A long harmonic outer route cannot be treated as free graph multiplicity. Its excess over the actual attachment polygon creates pairwise disjoint convex source regions and must be paid by full-source packing surplus.
+2. The Oler slack in those regions cannot be optimized independently of strict-rhombus area defect. Both spend the same global source-hull allowance.
+
+The remaining full-core obstruction is now the coupled source-level system
+
+\[
+D_{\rm tooth},
+\qquad
+H_{\rm chord},
+\qquad
+\sum_r(\operatorname{per}(P_r)-2d_r),
+\qquad
+e_{BB}-k,
+\qquad
+\mathscr O_A.
+\]
+
+A closing theorem can take any of three forms:
+
+- cap the combination in (124.6) below `R_0D` using the full-source Oler/lattice allowance;
+- prove that a linear shape/tooth payment admits a same-cardinality strict sub-`D` replacement; or
+- show that the loaded-contact payment `e_BB-k` is incompatible with the Woodall diameter topology once the other two currencies are small.
+
+The pure oblique-grid regression remains binding: nearly equilateral rhombi can have arbitrarily small individual area defect, while near-Oler-saturated tooth regions can have arbitrarily small `omega_i`. No uniform positive gap is asserted.
+
+---
+
+## 124.9 Scope
+
+- Every original source point remains in the source. Points are omitted only from auxiliary punctured complexes used to derive inequalities.
+- Contact-isolated coordinates are never inserted into the Section-57 affine kernel.
+- Boundary isolates on artificial chords are retained and not double counted.
+- Repeated outer-walk occurrences are retained by the Section-82 attachment-interval decomposition.
+- GWZ nonbounding edges are counted with their canonical multiplicity.
+- Loaded-incident rhombi are excluded from the joint puncture theorem.
+- Theorem authority is unchanged. Audit.46 remains canonical through Section 123; this Section 124 is proof-only.
+
+**Disposition:** proof-only structural bridge. C-II and Level I remain open.

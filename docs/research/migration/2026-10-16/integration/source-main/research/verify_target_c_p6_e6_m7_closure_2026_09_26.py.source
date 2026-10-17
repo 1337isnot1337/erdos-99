@@ -1,0 +1,121 @@
+#!/usr/bin/env python3
+"""Exact closure of the e=6,m=7 slice in the final p=6 branch."""
+from collections import Counter
+from itertools import combinations
+from pathlib import Path
+import contextlib, importlib.util, io
+
+HERE = Path(__file__).resolve().parent
+BASE = HERE / "verify_target_c_p6_e6_m6_closure_2026_09_26.py"
+spec = importlib.util.spec_from_file_location("p6_e6_m7_parent", BASE)
+M6 = importlib.util.module_from_spec(spec)
+with contextlib.redirect_stdout(io.StringIO()):
+    spec.loader.exec_module(M6)
+
+B = M6.B
+E5 = M6.E5
+M = M6.M
+SUPPORTS = M6.SUPPORTS
+
+def support_orbits_m7():
+    cands = set()
+    for ss in M6.support_orbits_m6():
+        for j in range(35):
+            if j in ss:
+                continue
+            u = tuple(sorted(ss + (j,)))
+            if B.support_nullity(u) <= 7:
+                cands.add(u)
+    unseen = set(cands)
+    out = []
+    while unseen:
+        ss = min(unseen)
+        orbit = {tuple(sorted(smap[i] for i in ss)) for smap, _ in B.PERM_DATA}
+        unseen.difference_update(orbit)
+        out.append(ss)
+    out = tuple(sorted(out))
+    nullities = dict(sorted(Counter(B.support_nullity(s) for s in out).items()))
+    assert len(out) == 693 and nullities == {6: 10, 7: 683}, (len(out), nullities)
+    return out
+
+def strong_empty_sextuples(ss, a):
+    poss = {}
+    for b, tri in enumerate(M.R.BLOCK_LABELS):
+        idx = tuple(j for j, si in enumerate(ss) if set(tri).issubset(SUPPORTS[si]))
+        if not idx:
+            continue
+        n = sum(a[j] for j in idx)
+        dim = 2 if any(a[j] >= 2 for j in idx) else 1
+        if dim == 2 and n < 4:
+            continue
+        if dim == 1 and n < 2:
+            continue
+        poss[b] = (idx, dim, n)
+    out = []
+    for q in combinations(poss, 6):
+        ok = True
+        for x, y in combinations(q, 2):
+            ix = set(poss[x][0])
+            iy = set(poss[y][0])
+            inter = sum(a[j] for j in ix & iy)
+            dx, dy = poss[x][1], poss[y][1]
+            union = poss[x][2] + poss[y][2] - inter
+            if dx == dy == 2 and inter < 2:
+                ok = False
+                break
+            if dx != dy and inter < 2 and union < 5:
+                ok = False
+                break
+            if dx == dy == 1 and inter < 2 and union < 4:
+                ok = False
+                break
+        if ok:
+            out.append(q)
+    return tuple(out)
+
+def main():
+    profile = (2, 1, 1, 1, 1, 1, 1)
+    assignments = 0
+    kept = []
+    for ss in support_orbits_m7():
+        for a in B.assignment_orbits(ss, profile):
+            assignments += 1
+            qs = strong_empty_sextuples(ss, a)
+            if qs:
+                kept.append((ss, a, qs))
+    assert assignments == 4143, assignments
+    assert len(kept) == 3, len(kept)
+    assert sum(len(qs) for _, _, qs in kept) == 3
+    expected_cases = {
+        ((0, 2, 4, 5, 7, 10, 11), (1, 1, 1, 1, 2, 1, 1), (0, 1, 3, 5, 9, 10)),
+        ((0, 1, 2, 5, 9, 10, 11), (1, 1, 1, 1, 2, 1, 1), (0, 1, 3, 5, 6, 7)),
+        ((0, 2, 3, 4, 5, 10, 12), (2, 1, 1, 1, 1, 1, 1), (0, 1, 3, 5, 8, 9)),
+    }
+    got_cases = {(ss, a, qs[0]) for ss, a, qs in kept}
+    assert got_cases == expected_cases, got_cases
+    counts = Counter()
+    ranks = Counter()
+    for ss, a, qs in kept:
+        blocks = set(b for q in qs for b in q)
+        for ext in B.phase_exts(ss, a):
+            counts["phases"] += 1
+            mm = E5.masks(ext, blocks)
+            for q in qs:
+                counts["pairs"] += 1
+                r = E5.rank2(tuple(z for b in q for z in mm[b]))
+                ranks[r] += 1
+                assert r > 3, (ss, a, ext, q, r)
+    assert counts["phases"] == 6561, counts
+    assert counts["pairs"] == 6561, counts
+    assert dict(ranks) == {6: 9, 7: 348, 8: 6204}, ranks
+    print("PASS: p=6 e=6 m=7 closure")
+    print("support_orbits", 693)
+    print("support_multiplicity_orbits", assignments)
+    print("prefilter_assignments", len(kept))
+    print("prefilter_empty_sextuples", sum(len(qs) for _, _, qs in kept))
+    print("phase_configs", counts["phases"])
+    print("phase_empty_sextuple_pairs", counts["pairs"])
+    print("rank_F2_census", dict(sorted(ranks.items())))
+
+if __name__ == "__main__":
+    main()

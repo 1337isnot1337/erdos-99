@@ -1,0 +1,532 @@
+# Target C-II — near-floor three-spoke pentagons carry exact contact flexes
+
+**Date:** 2026-09-18
+**Status:** proof-only structural refinement; theorem-state authority unchanged
+**Scope:** terminal full-core Type-II FREE subsequences in the concrete low-detour near-`t` window
+**Depends on:** the certified `0.4155508927...D` near-orbit pentagon floor; the pentagonal-hole strengthening of the double-ear theorem; terminal `t`-stability; the exact stopped-train endpoint multigraph; `P_5-F_5^{full}<=2S`; the five-root two-ear closure lemma; the no-return-to-one-face train theorem; the train-angle/face-period representation
+**Certificate:** `research/verify_target_c_free_terminal_t_near_floor_three_spoke_exact_flex_2026_09_18.py`
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current double-ear theorem now correctly identifies every fully-rhombic pentagon
+as a five-edge hole of the full strict-rhombus complex. Thus its five train directions
+are constrained by a genuine hole-period equation. This note isolates a positive-
+density branch where that equation can be solved exactly rather than estimated by a
+global kernel dimension.
+
+A near-orbit fully-rhombic pentagon with at least three incident trains running to the
+actual outer face has a one-parameter **exact** contact-preserving deformation obtained
+by varying only three of those outer-reaching train directions and maintaining the
+pentagon/hole closure equation. One of the two near-unit ears is nonstationary along that
+curve, so the parameter can be oriented to shorten it. Different such pentagons use
+disjoint pentagon-to-outer train coordinates, hence these local curves form a product
+family and one near-unit ear per pentagon can be shortened simultaneously.
+
+In the concrete window
+
+\[
+\limsup t_D\le1.959952849540479\ldots,
+\qquad
+\limsup{b-P_F\over D}\le10^{-5},
+\tag{TS.1}
+\]
+
+the transport ledger forces the trichotomy
+
+\[
+\boxed{
+\max\left\{
+ {S\over D},\ {L_O\over D},\ {Y^{near}_{3O}\over D}
+\right\}
+\ge
+0.045152736769091\ldots-o(1),
+}
+\tag{TS.2}
+\]
+
+where `S` is the singleton stopped-train count, `L_O` is the outer-to-outer stopped-
+train count, and `Y^{near}_{3O}` is the number of near-orbit fully-rhombic pentagons
+with at least three pentagon-to-outer trains.
+
+Thus, away from the singleton branch, either at least `0.0451D` exact global O--O
+multishear coordinates already exist, or at least `0.0451D` independent exact
+pentagon-spoke contact-flex coordinates exist and can be oriented to shorten that many
+near-unit ear inequalities simultaneously. The remaining obstruction on the latter
+branch is the active diameter system, not contact closure.
+
+---
+
+## 1. Scalar window and the bounded-to-bounded train budget
+
+Retain the notation of the terminal `t`-gap and near-contact notes. Put
+
+\[
+s_2=\sqrt{\frac\pi{2\sqrt3}},
+\qquad
+g=0.007707,
+\qquad
+M_*=4s_2+2g,
+\tag{1.1}
+\]
+
+\[
+e_*={M_*-\pi\over2}
+=0.341536286933018\ldots .
+\tag{1.2}
+\]
+
+The current concrete window is `e=0.00669` above the old terminal baseline:
+
+\[
+e=0.00659+10^{-4}=0.00669.
+\tag{1.3}
+\]
+
+After the standard subsequence extraction, write
+
+\[
+\delta=\lim{b-P_F\over D},
+\qquad
+r=\lim{Q-f\over D},
+\qquad
+a=\lim\left({\tau_D\over D}-\tau_*\right).
+\tag{1.4}
+\]
+
+The exact terminal `t` decomposition gives
+
+\[
+\boxed{a+2(r+\delta)\le5e,}
+\tag{1.5}
+\]
+
+with `a,r,delta>=0`. The stopped-train endpoint multigraph has bounded-to-bounded edge
+count `E_BB` and outer-loop count `L_O`, with the exact identity
+
+\[
+E_{BB}-L_O={4f+Q-b\over2}.
+\tag{1.6}
+\]
+
+The same terminal ledger gives
+
+\[
+{f\over D}
+={M_*+2a-\delta-r\over5}+o(1),
+\qquad
+{b\over D}=\pi+\delta+o(1).
+\tag{1.7}
+\]
+
+Substitution into (1.6) cancels `r` exactly:
+
+\[
+\boxed{
+{E_{BB}\over D}
+={L_O\over D}+e_*+a-\delta+o(1).
+}
+\tag{1.8}
+\]
+
+By (1.5),
+
+\[
+a-\delta
+\le5e-2r-3\delta
+\le5e.
+\]
+
+Hence
+
+\[
+\boxed{
+{E_{BB}\over D}
+\le {L_O\over D}+e_*+5e+o(1).
+}
+\tag{1.9}
+\]
+
+Numerically,
+
+\[
+e_*+5e
+=0.374986286933018\ldots .
+\tag{1.10}
+\]
+
+---
+
+## 2. Near fully-rhombic pentagons force outer spokes unless `E_BB` is large
+
+The certified near-contact theorem gives, in (TS.1),
+
+\[
+\lim_{\theta\downarrow0}\liminf
+{P_5^{near}(\theta)\over D}
+\ge
+N_0,
+\qquad
+N_0=0.415550892775345\ldots .
+\tag{2.1}
+\]
+
+Let `H_theta` be the near-orbit pentagons that are also fully rhombic. The exact
+singleton/full-flower inequality gives
+
+\[
+|H_\theta|
+\ge P_5^{near}(\theta)-2S.
+\tag{2.2}
+\]
+
+For `P in H_theta`, let `o(P)` be the number of its five distinct stopped trains whose
+other terminal occurrence is the actual outer face. The five trains are distinct by
+the no-return-to-one-face theorem. Therefore `5-o(P)` is the number of bounded-to-
+bounded train incidences at `P`.
+
+Every bounded-to-bounded train has only two bounded terminal occurrences, so over any
+subset of bounded faces
+
+\[
+\sum_{P\in H_\theta}(5-o(P))\le2E_{BB}.
+\tag{2.3}
+\]
+
+Let
+
+\[
+Y^{near}_{3O}(\theta)
+:=\#\{P\in H_\theta:o(P)\ge3\}.
+\tag{2.4}
+\]
+
+Pentagons outside this set contribute at most two outer incidences and pentagons inside
+it at most five. Thus
+
+\[
+\sum_{P\in H_\theta}o(P)
+\le2|H_\theta|+3Y^{near}_{3O}(\theta).
+\tag{2.5}
+\]
+
+On the other hand, (2.3) gives
+
+\[
+\sum_{P\in H_\theta}o(P)
+=5|H_\theta|-\sum_{P\in H_\theta}(5-o(P))
+\ge5|H_\theta|-2E_{BB}.
+\tag{2.6}
+\]
+
+Combining (2.5)--(2.6),
+
+\[
+\boxed{
+Y^{near}_{3O}(\theta)
+\ge |H_\theta|-{2\over3}E_{BB}.
+}
+\tag{2.7}
+\]
+
+Insert (1.9) and (2.2), then shrink `theta` along the usual boundary-null sequence. In
+normalized form,
+
+\[
+\boxed{
+{Y^{near}_{3O}\over D}
+\ge
+K_0
+-2{S\over D}
+-{2\over3}{L_O\over D}
+-o(1),
+}
+\tag{2.8}
+\]
+
+where
+
+\[
+\boxed{
+K_0
+:=N_0-{2\over3}(e_*+5e)
+=0.165560034820000\ldots .
+}
+\tag{2.9}
+\]
+
+This is stronger than intersecting the near-pentagon theorem with the transport-fan
+ladder by a crude union bound. It uses the exact bounded-to-bounded transport budget.
+
+Set
+
+\[
+c_{3O}:={3K_0\over11}
+=0.045152736769091\ldots .
+\tag{2.10}
+\]
+
+If all three quantities in (TS.2) were smaller than `(c_{3O}-o(1))D`, then (2.8)
+would give
+
+\[
+{Y^{near}_{3O}\over D}
+\ge
+K_0-{8\over3}c_{3O}-o(1)
+=c_{3O}-o(1),
+\]
+
+a contradiction. This proves (TS.2).
+
+---
+
+## 3. Local three-spoke closure has a genuine ear-shortening tangent
+
+Fix one strict convex unit pentagon `P` counted by `Y^{near}_{3O}(theta)`, with `theta`
+sufficiently small for the five-root closure theorem. Orient its boundary sides
+cyclically as
+
+\[
+u_0,\ldots,u_4,
+\qquad
+\sum_{i=0}^4u_i=0.
+\tag{3.1}
+\]
+
+The five-root theorem supplies two disjoint adjacent side pairs
+
+\[
+E_1=\{a,b\},
+\qquad
+E_2=\{c,d\},
+\tag{3.2}
+\]
+
+whose turning angles are near `2pi/3`. Let `e` be the fifth side index.
+
+Choose any three pentagon-to-outer train sides and call their index set `O`, `|O|=3`.
+Only these three train directions will vary. Define
+
+\[
+\Phi((x_i)_{i\in O})
+:=
+\sum_{i\in O}R_{x_i}u_i
++
+\sum_{i\notin O}u_i.
+\tag{3.3}
+\]
+
+Then `Phi(0)=0`. Its derivative is
+
+\[
+D\Phi(0)\,\alpha
+=J\sum_{i\in O}\alpha_i u_i.
+\tag{3.4}
+\]
+
+### Lemma 3.1 — rank two
+
+`D Phi(0)` has rank two.
+
+Indeed three boundary side vectors of a strict convex polygon cannot all lie on one
+projective line. If they did, their oriented directions would use only two antipodal
+values; among three edges two would have the same oriented direction, impossible for a
+strictly convex polygon whose boundary direction angle is strictly increasing. Hence
+the three selected vectors span the plane.
+
+Thus `ker D Phi(0)` is one-dimensional.
+
+### Lemma 3.2 — the tangent cannot leave both special ears stationary
+
+Extend `alpha` by zero outside `O`. For one special ear `{i,j}`, the exact derivative
+identity is
+
+\[
+{d\over dt}|u_i+u_j|^2\Big|_{0}
+=2\sin\vartheta_{ij}(\alpha_i-\alpha_j),
+\qquad 0<\vartheta_{ij}<\pi.
+\tag{3.5}
+\]
+
+Suppose a nonzero `alpha in ker D Phi(0)` made both special-ear derivatives zero. Then
+
+\[
+\alpha_a=\alpha_b,
+\qquad
+\alpha_c=\alpha_d.
+\tag{3.6}
+\]
+
+Because only three of the five entries can be nonzero, there are only two essential
+cases.
+
+1. If the leftover side `e` is not selected, one ear has both selected sides and the
+   other has exactly one selected side. The latter equality in (3.6) forces that
+   single rate to zero; the former gives a common rate `x`. Equation (3.4) reduces to
+   `x(u_i+u_j)=0` on the double-selected ear. Its diagonal is nonzero, so `x=0`.
+
+2. If `e` is selected, either the two other selected sides lie in different ears, in
+   which case (3.6) kills both and then (3.4) kills the leftover rate, or both lie in
+   one ear. In the latter case (3.4) becomes
+
+   \[
+   x(u_i+u_j)+z u_e=0.
+   \tag{3.7}
+   \]
+
+   For the five-root pattern, the projective direction of the limiting ear diagonal
+   `u_i+u_j` is separated from the limiting leftover-side direction by exactly
+   `pi/3`. Since equal-length vector sums point along the angular bisector, under the
+   existing orbit tolerance their projective separation is at least
+   `pi/3-2theta>0`. The five-root hypothesis `10 sin(theta/2)<1` already implies
+   `theta<pi/6`. Hence the two vectors in (3.7) are not parallel, forcing `x=z=0`.
+
+In every case `alpha=0`, contrary to choice. Therefore every nonzero tangent to the
+three-spoke closure curve changes at least one special ear to first order. Reversing
+`alpha` if necessary makes that derivative strictly negative.
+
+The finite sixth-root patterns and all ten choices of three variable sides are checked
+by the companion certificate through the equivalent stacked-rank test.
+
+---
+
+## 4. The infinitesimal tangent integrates to an exact contact deformation
+
+By Lemma 3.1 and the implicit-function theorem, the zero set
+
+\[
+\Phi^{-1}(0)
+\tag{4.1}
+\]
+
+is a smooth one-dimensional curve through the origin. Choose its orientation using
+Lemma 3.2. Along one side of this curve, one of the two near-unit ear diagonals
+strictly decreases while the pentagon remains exactly closed and all five side lengths
+remain exactly one.
+
+This local angle curve is already enough to remove the contact-side locking systems
+for the selected three trains:
+
+- `P` is itself a five-edge rhombic hole, and `Phi=0` is exactly its vector period /
+  exceptional-face closure equation;
+- each selected train has terminal faces `P` and the actual outer face, so it occurs in
+  no other bounded nonquadrilateral face or rhombic-hole boundary;
+- every rhombus traversed by a selected train closes identically for arbitrary choices
+  of its two train direction vectors.
+
+Thus no additional rhombic-hole or bounded-exceptional-face equation is left to impose
+on this local curve. The large global period-kernel estimate from the double-ear note
+is not needed on this outer-spoke subfamily.
+
+---
+
+## 5. Different three-spoke pentagons give a product family
+
+Let `C` be any collection of pentagons counted by `Y^{near}_{3O}(theta)`. For each
+`P in C`, choose three of its pentagon-to-outer trains.
+
+The selected train-coordinate triples for distinct pentagons are disjoint. A complete
+stopped train joining `P` to the outer face has exactly one bounded terminal occurrence,
+so it cannot also be a pentagon-to-outer train for another bounded pentagon.
+
+Consequently the closure maps `Phi_P` depend on disjoint train-angle variables. Their
+one-dimensional solution curves therefore form a local product manifold of dimension
+`|C|`.
+
+Assign the resulting unit vector to every contact edge in each varied train and leave
+all other contact-edge vectors fixed. Every bounded face walk has zero vector period:
+
+- selected pentagons close by construction;
+- unselected bounded exceptional faces contain no varied terminal train side;
+- rhombi close identically by opposite-edge cancellation.
+
+The bounded face walks generate the cycle space of each plane contact component, so
+this unit edge-vector assignment integrates to actual vertex positions, unique up to a
+translation on each contact component. Contact-isolated source points may be held
+fixed.
+
+For each finite source, all old noncontact distances are strictly greater than one.
+Continuity therefore supplies a neighborhood of the product origin in which every old
+noncontact remains strictly greater than one. Taking the parameters smaller still
+keeps every chosen shrinking ear above one. Hence this is an **exact finite
+same-cardinality unit-separated deformation of the full source preserving every old
+contact**.
+
+Because the train triples are disjoint, choose the sign of each local coordinate
+independently. One special near-unit ear per pentagon then strictly shortens
+simultaneously.
+
+We have proved:
+
+### Theorem 5.1 — exact three-spoke product flex
+
+For every sufficiently small orbit tolerance and every collection `C` of near-orbit
+fully-rhombic pentagons with at least three pentagon-to-outer stopped trains, the full
+source has a local exact contact-preserving deformation family of dimension at least
+`|C|`. The coordinates can be oriented so that at least one of the two five-root ears
+at **every** pentagon in `C` strictly shortens for positive parameter.
+
+No source-vertex matching, rhombic period kernel, or bounded exceptional-face closure
+matrix is needed.
+
+---
+
+## 6. Concrete near-floor package
+
+Combine Theorem 5.1 with (TS.2). In the window (TS.1), at least one of the following
+holds:
+
+1. **singleton branch**
+   \[
+   S\ge(0.0451527-o(1))D;
+   \tag{6.1}
+   \]
+
+2. **outer-loop branch**
+   \[
+   L_O\ge(0.0451527-o(1))D;
+   \tag{6.2}
+   \]
+   the audited arbitrary O--O multishear theorem supplies that many simultaneous exact
+   global contact-shear coordinates;
+
+3. **near three-spoke branch**
+   \[
+   Y^{near}_{3O}\ge(0.0451527-o(1))D;
+   \tag{6.3}
+   \]
+   Theorem 5.1 supplies an exact contact-preserving product deformation with that many
+   independent coordinates, and one near-unit ear per coordinate can be shortened
+   simultaneously.
+
+The conservative common coefficient is `0.0451`.
+
+The third branch complements the corrected pentagonal-hole theorem. Every selected
+pentagon is a genuine rhombic hole, but actual outer-reaching localization reduces its
+five-edge period equation to a one-dimensional exact local flex. Its coefficient is
+smaller than the raw ear/hole counts, but once it occurs the entire contact-closure
+obstruction disappears on the selected coordinates.
+
+---
+
+## 7. Scope and remaining obstruction
+
+1. **No diameter descent is claimed.** The exact product flex can increase active
+   diameter distances. Global minimality therefore does not yet contradict (6.3).
+2. **The outer-loop branch has the same issue.** Exact O--O multishears preserve every
+   contact, but active diameter rows can block them.
+3. **The singleton branch remains separate.** A generic singleton train need not be an
+   outer-to-outer bridge and is not promoted here to an independent exact shear.
+4. **Full source retained.** Contact-isolated points are not inserted into any affine
+   kernel. They are held fixed and all strict pairwise slacks persist for sufficiently
+   small parameters.
+5. **No theorem-state promotion.** The numerical near-`t` input and several train
+   dependencies remain proof-only, so no canonical claim status is changed.
+
+The live low-detour near-floor problem is therefore reduced further. In two of the
+three branches carrying at least `0.0451D` coordinates, contact preservation is exact
+at finite amplitude and all rhombic/exceptional face closure has already been paid.
+The next theorem should act directly on the active diameter rows of these exact
+multi-parameter manifolds: either find a common diameter-nonincreasing direction, or
+extract a rank/stress/ordered-incidence payment of linear size. The remaining singleton
+branch needs a separate endpoint localization or bridge/cut argument.
+
+**Disposition:** proved proof-only exact-flex refinement; C-II remains open.

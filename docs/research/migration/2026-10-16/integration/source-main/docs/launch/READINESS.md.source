@@ -1,0 +1,302 @@
+# Prelaunch integration and readiness record
+
+**Date:** 2026-10-14. **Engineering classification:** audited-working; mechanically
+verified integration, not a new mathematical audit or theorem promotion.
+**Integration:** [PR #974](https://github.com/1337isnot1337/e-99/pull/974).
+**Validated code candidate:** `74dc4eab1e6c65f5125088a0c969f759355bf7b4`.
+**Original baseline:** `ab6dd3336f9f8d440f2bada76edb32153391cddc`.
+**Theorem state:** `2026-10-10.audit.234`, unchanged. Level I, A, B and C-II remain
+open; C-I remains closed. The authority manifest, `STATE.md`, active route/theory/problem
+modules and their mathematical claims are byte-identical to the baseline.
+
+## Reviewed components
+
+All eight original heads were inspected, including actual diffs, files, descriptions,
+review/comment histories and check results. They had no reviews or comments. Their
+original commits are retained through individual Git merge commits in #974. The combined
+candidate is landed atomically to avoid defective intermediate states and extra workflow
+amplification. This is engineering review of their contributions, not external peer review.
+
+| PR | Contribution | Original reviewed head | Material repair |
+| --- | --- | --- | --- |
+| [#965](https://github.com/1337isnot1337/e-99/pull/965) | State consistency | `a28ad4926a8607830a2441cd04ad54308addfc43` | Historical prompt review markers; live assertions and semantic frontiers still checked; tests integrated |
+| [#973](https://github.com/1337isnot1337/e-99/pull/973) | Reproduction/provenance | `9e9e7d39232d73704d8b96e0c8fe5b4a46dca804` | Independent baseline replay, exact source-blob guard, ignored-input and bytecode isolation, environment version lock |
+| [#964](https://github.com/1337isnot1337/e-99/pull/964) | Publication preparation | `b96b2e0544f0f6caab3a1c7146ac6a3319a42f0f` | Dependency closure overrides blanket archive exclusions as review candidates; actual local export validation and private approval records |
+| [#963](https://github.com/1337isnot1337/e-99/pull/963) | Technical briefing | `7854892209f5798d6cda47d092708d665b26f3aa` | Broken bundled-PDF paths replaced by bibliographic publisher/source links |
+| [#961](https://github.com/1337isnot1337/e-99/pull/961) | Onboarding | `c9455280ac8baf7b4852d95f921aacfbe3ab0800` | README route-table checker compatibility; complete platform navigation and offline handoff smoke |
+| [#968](https://github.com/1337isnot1337/e-99/pull/968) | Research catalogue | `e5d81d08b6f8a5aacbac8cce31aeaabcda8da90f` | Live/offline overlap evidence, issue claim templates, regression-role correction and ledger-backed claim-ID checks |
+| [#962](https://github.com/1337isnot1337/e-99/pull/962) | Governance | `024556bfc9060aed0c498a8eef78e19fd441125f` | Functioning issue-based claims/reviews, task/scope IDs, expiry and predecessor handoffs while Discussions stay disabled |
+| [#971](https://github.com/1337isnot1337/e-99/pull/971) | CI/pilot preparation | `6aaee1b0353de92ef9aa55f0d7f1e3d39840411f` | Fail-closed helper/data verification and trusted PR/push ranges; all 21 historical workflows manual owner opt-in |
+
+No unrelated mathematical research PR was modified. Newer unrelated heads were observed
+but not integrated. The seeded selector makes suggestions, never reservations or novelty
+claims. A pilot procedure is prepared; no swarm sessions or outside-contributor results
+were fabricated or measured.
+
+## Independent local verification
+
+Environment: clean isolated Git worktrees, external CPython **3.14.7** virtual environment,
+Linux x86_64; PyYAML 6.0.3, jsonschema 4.26.0, NumPy 2.5.4, SciPy 1.18.1, SymPy 1.14.0,
+mpmath 1.3.0. The [lock](../../tools/requirements-verification.lock) records exact transitive
+package versions. Wheel hashes, operating system and hardware are not locked.
+
+```sh
+python tools/verify_research_baseline.py --root <clean-historical-worktree>   --expected-commit ab6dd3336f9f8d440f2bada76edb32153391cddc
+python tools/verify_prelaunch.py --full --base-ref origin/main
+python tools/release_dependencies.py --check --summary
+python tools/release_dependencies.py --local-candidate <new-unshared-directory> --check --summary
+python tools/run_theorem_certificates.py --root <unshared-candidate>
+git diff --check origin/main...HEAD
+```
+
+- Historical baseline: **7/7 stages**, **22 tooling tests**, **65 research tests**, and
+  **94/94 registered certificates**; certificate phase **327.6 seconds**. All **19**
+  documented file hashes and the recorded Git tree matched the exact historical commit.
+- Final integrated code candidate: **13/13 stages**, including **81 tooling tests**,
+  **17 catalogue/coordination tests**, **65 research tests**, and **94/94 certificates**.
+  State, PR transaction, routes, entrypoints, catalogue roles, publication dependencies,
+  documentation navigation and committed patch whitespace passed.
+- Selective verification: real unregistered corner-helper change selected **94/94**;
+  tests cover direct/transitive/dynamic/data paths, renamed/deleted files, newline
+  filenames, doc-only skip, merge pushes, force pushes, missing ancestry, shallow and
+  dirty trees, malformed events and live assertion/frontier errors.
+- All **five** restored historical finite verifiers were separately rerun and passed.
+  They were not newly registered or promoted. Their scripts state the encoded finite
+  assumptions and omitted analytic/global conclusions.
+- Offline onboarding from a clean checkout passed: **19 cards / 111 evidence references**,
+  identical repeated seeded selection, and a valid six-part claim/handoff template.
+  The live paginated read-only query worked; no issue/claim or collaborator invitation
+  was posted.
+- Actual unshared export passed generated-state, theorem-state and all internal-link/
+  task-evidence checks, plus **94/94** registered certificates. Its selected artifact
+  index had **634** records. Exact path counts can change with new infrastructure prose;
+  use the current committed dependency plan, not a copied historical count.
+
+Earlier failures were repaired: the raw combined README broke the old bullet-specific
+route checker; a positive entrypoint fixture omitted linked directories; the first full
+run passed all certificates but failed seven trailing-whitespace lines in one restored
+report. The final run passes. Existing hosted failures had zero executed steps and a
+billing/spending-limit annotation; they are not used as test evidence.
+
+## Evidence restoration and release preparation
+
+Dependency validation found missing source artifacts behind canonical audit links.
+**17 historical artifacts (12 reports and five verifiers)** were restored from recorded
+frozen commits. [Source commits and hashes](restored-evidence.json) preserve provenance;
+only a recorded trailing-whitespace presentation normalization differs. Restored report
+lifecycle headers remain unreviewed. The private artifact index grew from **1,410 to
+1,422**; the theorem manifest remains **451 IDs / 845 edges / 94 certificates**. Two
+preexisting relative references were corrected and the parser now excludes display
+mathematics from Markdown link interpretation.
+
+The dependency planner preserves essential proof/audit/task evidence, all research
+runtime inputs where exact dependencies are uncertain, canonical definitions and the
+complete ledger. It omits nonessential history and replaces uncleared bundled literature
+with external references. The [release process](RELEASE_PREPARATION.md) validates an
+actual local candidate; every selected file still requires exact-blob content, attribution,
+privacy and rights review. Approval records stay private and outside the export to avoid
+self-referential hashes and exposing reviewer records. A reviewed export is refused until
+all file/owner/license gates pass. Structural QA never grants redistribution permission.
+
+## CI and financial state
+
+The [CI design](CI.md) uses one standard runner with read-only permissions and lightweight
+integrity tests. Only explicitly reviewed workflow prose skips certificates. All research
+code/data, canonical authority/proof inputs, verification infrastructure or uncertain
+changes require the full suite. Main push ranges verify ancestry and both complete trees;
+untrusted ranges fail closed. All 21 historical Target C workflows require owner dispatch
+and an unset-by-default opt-in variable before any matrix expands. Comprehensive dispatch
+also requires owner opt-in. No such dispatch or blocked-workflow retry was requested.
+
+No paid usage, spending limit, plan upgrade or larger runner was enabled. Ordinary PR/main
+events may create automatic hosted attempts, which are budget-blocked in this billing
+cycle; inspect their zero-step results separately from local checks. At inspection main
+had no branch protection or ruleset to bypass. Nothing changed those settings.
+
+## Pilot and owner-controlled launch decisions
+
+The private platform is prepared for a limited pilot by contributors who already have
+authorized access. The owner still controls invitations and reviewer/merge permissions.
+No pilot has been launched. The curated export is technically dependency-closed and
+locally validated, **not cleared for public distribution**. The repository stays private.
+
+Before public release the owner must:
+
+1. Approve software, mathematical-text and contribution licensing terms after determining
+   actual rights and contributor consent. Recommendation: review code and exposition
+   separately; keep the default rights gate closed until explicit terms exist.
+2. Approve each required blob's rights and attribution record. Recommendation: retain
+   essential project evidence after review and use bibliographic links for papers/scans;
+   do not infer consent from a task reference, audit or commit author.
+3. Approve privacy, named attribution and redacted secret-scan clearance for the exact
+   proposed tree. Recommendation: review the selected export, disclose no scan values,
+   and avoid exporting the private historical Git database.
+4. Choose a release destination/name and explicitly authorize publication. Recommendation:
+   a separately approved clean-history curated repository; preserve this private archive.
+5. Choose invited pilot contributors, independent mathematical reviewers and a small
+   accountable merge group. Recommendation: use issue-based bounded claims and maintain
+   the independent promotion gate; do not imply external peer review from internal audits.
+
+These are outstanding human/owner decisions, not missing engineering implementations.
+No license, release tag, repository visibility/ownership, collaborator permission or
+publication action was chosen or changed during integration.
+
+## Standalone export-validation repair
+
+A final adversarial review found that standalone `--validate-export` needed the same
+artifact-index/header recomputation already performed during candidate construction.
+The focused [follow-up PR #975](https://github.com/1337isnot1337/e-99/pull/975) adds that check: altered overlay index bytes and missing lifecycle
+headers are rejected, while an intact generated export passes. This is an engineering
+validation repair, with no mathematical state change; the follow-up verification record
+is retained in its PR.
+
+The follow-up complete local replay passed **13/13 stages**, **82 tooling tests**,
+**17 catalogue/coordination tests**, **65 research tests**, and **94/94 registered
+certificates**. An actual unshared 634-record export passed, rejected an intentionally
+altered index, and passed after restoration. Validation also rejects an older export
+when compared with a newer commit's file hashes; its correct pinned source ref passes.
+The header-reader resource warning exposed by the new direct test was repaired.
+# Publication hardening follow-up — 2026-10-15
+
+This follow-up is engineering self-review with automated cross-checks. It supplies no
+new mathematical audit, external peer review, consent or redistribution permission.
+The fetched base was `4a10ce3b6e846f31b167b63aaa41abde9193b345`; theorem state remains
+`2026-10-10.audit.234`. The manifest SHA-256 remains
+`a8b571cacc2c77623a991f50114a70141d59bcde9685f916db8153599e58b2b6`.
+Authority, route, theory, problem and active-prompt files are unchanged.
+
+The integration retains the original commits of [#976](https://github.com/1337isnot1337/e-99/pull/976),
+[#977](https://github.com/1337isnot1337/e-99/pull/977) and
+[#978](https://github.com/1337isnot1337/e-99/pull/978). The separate mathematical
+audit [#979](https://github.com/1337isnot1337/e-99/pull/979) was not integrated.
+
+## Repairs and falsification
+
+- Reject unsafe paths, symlinks and special files before reading exported content;
+  check modes and source/overlay identities before writing into a private `0700` root.
+- Bind Git reads to original objects despite local `git replace` references, verify
+  commit/blob content hashes, and reject stale or duplicate approvals. Pending fields
+  are listed without disclosing reviewer identities.
+- Use matching scan/rewrite rules for code examples, display mathematics, comments,
+  escaped/balanced destinations and references. Include raw HTML navigation; require
+  Markdown syntax for bundled-literature rewrites. A separate CommonMark implementation
+  exposed an unmatched-backtick bug during self-review; paragraph-boundary regressions
+  now prevent it from hiding later evidence links.
+- Remove a test's dependency on a bundled private PDF and an absent license. Its
+  replacement checks exact committed inventories and a minimal clean-history fixture.
+- Pin all 17 restored bodies and check their frozen sources optionally, without private
+  history in the ordinary check. All 12 reports retain unreviewed lifecycle headers;
+  their canonical audit records govern only the exact accepted statements.
+
+## Recorded evidence and scope
+
+The following complete code candidate was checked before the final Git-object guard:
+`c6a99f8478536e5016d75e6b0ebdb4b787ab83f0`. Its full source replay passed **14/14 stages**,
+including **104 tooling tests**, **18 catalogue/coordination tests**, **65 research tests**
+and **94/94 certificates**, in **512.08 seconds**. Subsequent object/path guards have
+focused regressions; the accompanying integration PR records the final reviewed head
+and post-integration replay. Do not treat this earlier SHA as validation of later bytes.
+
+At that candidate, two actual exports had identical **3,769 files and permissions**;
+both passed validation, including standalone state/index/header checks. Their plan had
+**9,333 dependency edges**, **19 cards**, **29 external citations** and **842 nonessential
+excluded paths**. Construction/comparison took **193.33 seconds**. Counts belong to
+that exact source commit; regenerate the plan for a later head.
+
+All **13 mutation attacks** against an actual exported tree were rejected: altered
+bytes, missing canonical audit and task evidence, corrupted state, stale views/index,
+altered lifecycle header, executable mode, outside symlink, extra approval/PDF files,
+traversal and wrong Git blob identity. The restored candidate passed again. Reviewed
+export was refused before destination creation. Unit regressions additionally cover
+special files, ambiguous/stale/partial approvals, binaries retained behind a blocking
+gate, executable evidence, and Git replacement objects.
+
+The five restored finite verifiers passed from the curated tree. All 19 task cards
+validated there; repeated seeded output matched and the claim/handoff template was
+complete. The separate clean-history newcomer copy passed **14/14 stages**, including
+all **94 certificates**, in **433.09 seconds**. A read-only live query returned
+catalogue-linked PR leads #947 and #953.
+The independent CommonMark comparison found no omitted rendered local destinations
+across **2,415 candidate Markdown files**, after accounting for the repository's math
+extension. This is a corpus check, not general Markdown conformance.
+
+Gitleaks **8.30.1**, downloaded from its official release with its published checksum
+verified, reported **zero findings** in the restored candidate using default rules,
+redacted output and no inline-allow suppression. A bounded privacy scan counted three
+distinct email-shaped strings in seven files without disclosing values. Human privacy
+and attribution review remain pending; scanner success is not clearance.
+
+## Remaining release gates
+
+| Gate | Condition and next action |
+| --- | --- |
+| Source/export mechanics | Local checks above pass at their stated SHAs; use the integration PR for final-head evidence and regenerate the exact plan. Validation assumes no concurrent writer. |
+| Rights and license | Blocked: no root license, owner release approval or actual file approvals. Every retained blob still needs review. Use the [owner decision register](PUBLICATION_AUDIT.md#owner-decision-register-2026-10-15). |
+| Privacy and attribution | Automated scan has no findings; human clearance and contributor consent remain unresolved. Keep actual reviewer records private. |
+| Third-party material | No bundled PDFs/extractions in the candidate; quotations and citation metadata still require rights review. |
+| Provenance | All 17 source hashes and normalized bodies match. Recovery and verifier passes do not promote their claims. |
+| Hosted CI | Not executed: latest inspected job has zero steps and the payment/spending annotation. No retry, paid usage or historical matrix was enabled. |
+| Governance | Owner must select maintainers/reviewers and future protection settings. Existing private `main` had no protection. No permissions changed. |
+| Mathematical status | Level I/A/B/C-II remain open and C-I closed under the existing authority. External proof review was not established by this work. |
+
+The main technical follow-up is a validated runtime-dependency graph if maintainers
+want a smaller review set: the plan conservatively retains all research inputs. Never
+remove them on filename or area/claim heuristics. Markdown extensions beyond the tested
+syntax need regressions before becoming load-bearing navigation. Exact wheel hashes and
+OS/hardware reproduction also remain outside the present version lock.
+
+The next owner action is to decide the software, exposition and inbound-contribution
+license policy, then commission exact-blob rights/attribution/privacy review. Publication
+remains blocked. Keep this archive and every local candidate private.
+
+# Overnight maintainer reconciliation — 2026-10-15
+
+Starting main was `297d962c16cb89f73aa875640a7f5971e4048a8f`, state
+`2026-10-10.audit.234`. This is engineering maintenance; Level I, A, B and C-II
+remain open and C-I remains closed. No canonical theorem input was promoted or edited.
+
+The complete paginated baseline contained 139 remote branches, 978 historical PRs,
+21 open research PRs, four standalone issues, two tags and 119 registered worktrees.
+A new durable private all-ref bundle was verified and a representative unmerged ref
+was restored into a separate bare repository with a successful integrity check. All
+29 dirty worktrees were separately archived and left in place.
+
+Maintenance removed 75 stale remote refs with exact-SHA leases: 38 were ancestors of
+main and 37 had their changed file blobs represented in main history. A separate
+history pass inspected all 39 unique commits and 356 intermediate file versions in
+that latter set. One intermediate audit-ledger note differed only by a superseded
+promotion-transaction annotation; its original bytes remain in the private bundle.
+No unique committed mathematical content was discarded. Twenty-two clean integrated worktrees,
+33 absent-directory registrations and 35 integrated local aliases were removed.
+Protected PR heads/bases and active/dirty worktrees were preserved. Ignored files in the
+22 removed worktrees were not separately inventoried; their absence or preservation
+cannot be certified retrospectively. Future removals require an explicit ignored-file
+inventory as well as the ordinary status check. Gross deletions
+and ending branch counts must be distinguished from new maintenance branches.
+
+All 21 initial PRs received exact-head maintenance dispositions and isolated technical
+reproduction: 21 theorem-state checks and 54 changed verifier/check scripts passed.
+Nine merge-tree probes found textual conflicts. Eight intentional drafts remain drafts;
+new substantive claims still require the mathematical review policy. The Seed 90
+shared-label correction in #979 remains a specific dependency for repairing #972.
+These are maintenance/reproducibility checks, not independent human proof reviews.
+Historical issue closeouts point to their completed integrations; newly unique research
+is retained for a separate preservation/review handoff.
+
+- [#983](https://github.com/1337isnot1337/e-99/pull/983) adds the read-only paginated
+  [branch audit/runbook](../MAINTENANCE.md) and exact-blob review grouping. No deletion
+  automation or approval inheritance is introduced.
+- [#984](https://github.com/1337isnot1337/e-99/pull/984) records ten measured verifier
+  wheel hashes and a clean offline hash-enforced installation. A one-byte mutation is
+  rejected. Only the recorded CPython/Linux platform was exercised.
+- [#985](https://github.com/1337isnot1337/e-99/pull/985) repairs an independently
+  reproduced engineering inconsistency: certificate selection and promotion comparison
+  now ignore Git replacement objects, as release attribution already does. The two
+  regressions fail before the repair and pass afterward.
+
+Final integrated source/export replay results belong to the exact commit recorded in
+those PRs and the private maintenance evidence inventory. Earlier passing counts in
+this document do not validate subsequent bytes. Hosted billing restrictions, licenses,
+per-file rights/privacy/attribution approvals and publication authorization remain
+separate gates. No visibility, reviewer permission, billing, license or public release
+setting was changed. The private archive and recovery objects are not export inputs.

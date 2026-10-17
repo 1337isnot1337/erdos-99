@@ -1,0 +1,84 @@
+# Hostile audit — physical-boundary two-arc transport
+
+**Date:** 2026-09-12  
+**Status:** audited-working proof-only material; theorem state unchanged  
+**Audited source:** [`target_c_physical_boundary_two_arc_transport.md`](target_c_physical_boundary_two_arc_transport.md)
+
+## Verdict
+
+The finite component inequality (PB.1), its disconnected form (PB.13), and the
+source-level incidence reduction (PB.16) are sound under the explicitly stated
+strict-rhombus train hypotheses. The Type-II projection corollary (PB.17)--(PB.19)
+is also valid once the canonical near-isodiametric area hypotheses are supplied.
+The result is a bookkeeping and transport strengthening only. It does not close
+C-II, and no theorem-state file is changed.
+
+## Checks of the finite argument
+
+1. **Boundary occurrences.** `P` counts physical boundary-edge occurrences, not
+   distinct edges or vertices. Thus holes, repeated outer vertices, bridges, and
+   pinches do not create an uncounted endpoint. The canonical train lemma supplies
+   exactly two physical ends per train and uses each physical boundary occurrence
+   once.
+
+2. **Diameter cut.** A diameter endpoint of a finite vertex set is extreme in its
+   convex hull: strict convexity of squared distance gives a contradiction if it is
+   a nontrivial convex combination of other vertices. Both selected vertices
+   therefore occur on the unbounded boundary walk. Cutting at occurrences gives
+   two open routes with hosts `q` and `-q`; every hole route is closed and has host
+   `0`.
+
+3. **Return estimate.** For a train with projective direction `u`, the two terminal
+   edge orientations are opposite. With endpoint hosts in `{q,-q,0}`, their signed
+   contribution is `2-u·(q_1-q_2)`, whose lower bound is
+   `2-2|q·u|`. Summing over train endpoints is legitimate because the endpoint
+   occurrences are injective. No positive host-width floor is assumed.
+
+4. **Two-direction cost.** For the two projective directions of a strict rhombus,
+   `|q·u|+|q·v| <= 2 cos(varphi/2)`. Triangle-freeness gives
+   `varphi>pi/3`, hence the strict coefficient `4-2sqrt(3)`. The absolute-value
+   choice covers either representative of each projective direction.
+
+5. **Area transport.** Each rhombus belongs to two trains. The canonical transverse
+   span identity makes the area carried by one train the displacement between its
+   terminal-edge midpoints, at most the component vertex diameter `rho`. Therefore
+   the weighted return sum is at most `rho` times the unweighted return sum, and
+   `E=P-2rho` is the exact two-route excess. This proves (PB.1) without
+   simple-connectedness.
+
+6. **Global incidence.** For each component, `rho_i(P_i-2rho_i)` is nonnegative.
+   Replacing `rho_i` by an ambient diameter `D` and summing is therefore valid. The
+   canonical occurrence inclusion `P_R <= b+4f+Q` and exact face identity
+   `b+Q=2(h-s_Z)` give (PB.16); the inequality is intentionally not an equality.
+
+## Check of the projection corollary
+
+For a convex body of diameter `d_D<=D`, a diameter-direction section profile is
+concave. If its maximum is `H`, then `H >= area(K_D)/d_D >= cD`. A missed projection
+set of measure `m` has left/right pieces of measures `m_-`,`m_+`; the tent bounds
+give missing area at least
+
+\[
+ {H\over 2D}(m_-^2+m_+^2)\ge {H\over4D}m^2\ge {c\over4}m^2.
+\]
+
+Thus an `o(D^2)` missing area implies `m=o(D)`. The projection of each connected
+piece is an interval of length at most its diameter, so the sum of component spans
+is at least `d_D-o(D)`. Applying this to the canonical Type-II full-core area
+saturation gives (PB.18) and then (PB.19).
+
+## Failure modes retained explicitly
+
+- The subtraction `sum_i rho_i` in (PB.16) cannot be dropped. The Type-II
+  near-disk outer boundary already gives `h-s_Z >= (pi/2)D-o(D)`, whose scalar
+  coefficient exceeds the new `1+(pi/4)(2-sqrt(3))` coefficient.
+- The theorem does not convert the angle-sensitive return integral into a strict
+  source-diameter descent, and it supplies no uniform positive return after host
+  directions are selected.
+- The projection lemma is a Type-II statement. It says nothing about the Type-I
+  inactive-container branch or about global minimum-diameter optimality by itself.
+- Contact-isolated source points remain in the source population; the rhombus
+  subcomplex is not silently promoted to a full-source replacement.
+
+**Claim classification:** audited-working finite transport theorem and Type-II
+corollary; proof-only research candidate; C-II remains open.

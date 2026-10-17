@@ -1,0 +1,311 @@
+# Target C-II — the uniform all-train gap forces a pentagon sea through `t<=2.02`
+
+**Date:** 2026-09-15  
+**Status:** proof-only scope propagation / high-`t` structural strengthening  
+**Scope:** canonical full-core Type-II train-measure branch  
+**Dependencies:** hostile-audited scope-safe all-train gap `g=0.007707`; canonical stopped-train/face ledger; Type-II force-hull perimeter limit; modern singleton/rhombic train-slack split  
+**Certificate:** `research/verify_target_c_uniform_pentagon_sea_extended_range.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The previously published modern pentagon-sea theorem stopped at
+
+\[
+t={q-k\over D}\le1.8623.
+\]
+
+That endpoint was inherited from the then-current O--O path program.  It is **not** a scope boundary of the all-train theorem used to prove the pentagon floor.
+
+The hostile scope audit explicitly proves that
+
+\[
+\boxed{
+\liminf {T_{train}-q/2\over D}
+\ge C_{707}:=2\sqrt{\Delta_2}+0.007707,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+}
+\tag{EP.1}
+\]
+
+holds throughout the canonical full-core Type-II train-measure branch, with no upper restriction `t<=1.8623`.
+
+Therefore the exact same face algebra extends much farther.  In particular:
+
+\[
+\boxed{
+t\le2.000\Longrightarrow P_5>0.0539D-o(D),}
+\tag{EP.2}
+\]
+
+and even
+
+\[
+\boxed{
+t\le2.020\Longrightarrow P_5>0.0039D-o(D).}
+\tag{EP.3}
+\]
+
+The exact positivity threshold of the certified scalar envelope is above
+
+\[
+\boxed{2.0215.}
+\tag{EP.4}
+\]
+
+Moreover the modern Branch R rhombus/pentagon interface remains linearly forced through `t<=1.960`:
+
+\[
+\boxed{I_5>0.0228D-o(D).}
+\tag{EP.5}
+\]
+
+Thus Branch R still has linearly many rhombic trains terminating at pentagons and linearly many pentagons touching strict rhombi well beyond the former `1.8623` endpoint.
+
+---
+
+## 1. Uniform all-train input
+
+Canonical stopped-train bookkeeping gives
+
+\[
+T_{train}-q=2f-k.
+\tag{EP.6}
+\]
+
+Put
+
+\[
+t={q-k\over D},
+\qquad
+\kappa={k\over D}\ge0.
+\]
+
+Then
+
+\[
+{T_{train}-q/2\over D}
+={t\over2}+2{f\over D}-{\kappa\over2}.
+\tag{EP.7}
+\]
+
+Combining (EP.1) and (EP.7), for every fixed endpoint `t<=X`,
+
+\[
+\boxed{
+\liminf {f\over D}
+\ge f_0(X):={C_{707}\over2}-{X\over4}.
+}
+\tag{EP.8}
+\]
+
+No path theorem, residual localization, or low-`t` hypothesis appears here.
+
+---
+
+## 2. Uniform exceptional-degree upper bound
+
+Canonical loaded-hull algebra gives
+
+\[
+b+Q=2(q-k),
+\tag{EP.9}
+\]
+
+where
+
+\[
+Q=\sum_P(\deg P-4)
+\]
+
+over bounded nonquadrilateral faces.
+
+The old outer contact walk contains the force-hull boundary, and Type II has
+
+\[
+{\operatorname{per}(F)\over D}\to\pi.
+\]
+
+Therefore
+
+\[
+\boxed{
+\limsup {Q\over D}
+\le Q_0(X):=2X-\pi.
+}
+\tag{EP.10}
+\]
+
+---
+
+## 3. Pentagon floor at arbitrary fixed endpoint
+
+If `f_d` counts bounded exceptional `d`-faces, then
+
+\[
+f=\sum_{d\ge5}f_d,
+\qquad
+Q=\sum_{d\ge5}(d-4)f_d.
+\]
+
+Hence
+
+\[
+Q-f=\sum_{d\ge6}(d-5)f_d
+\ge f-P_5,
+\]
+
+which is equivalent to the standard bound
+
+\[
+\boxed{P_5\ge2f-Q.}
+\tag{EP.11}
+\]
+
+Combining (EP.8)--(EP.11),
+
+\[
+\boxed{
+\liminf {P_5\over D}
+\ge p_5(X):=C_{707}+\pi-{5X\over2}.
+}
+\tag{EP.12}
+\]
+
+Thus the pentagon lower envelope stays positive exactly while
+
+\[
+X<{2(C_{707}+\pi)\over5}.
+\tag{EP.13}
+\]
+
+The exact outward certificate gives the lower enclosure
+
+\[
+{2(C_{707}+\pi)\over5}>2.0215.
+\tag{EP.14}
+\]
+
+Safe representative rows are
+
+\[
+\begin{array}{c|c|c}
+X & P_5/D\text{ lower} & N_5/D\text{ lower}\\ \hline
+1.880 & 0.3539 & 0.8848\\
+1.900 & 0.3039 & 0.7598\\
+1.920 & 0.2539 & 0.6348\\
+1.950 & 0.1789 & 0.4473\\
+1.960 & 0.1539 & 0.3848\\
+2.000 & 0.0539 & 0.1348\\
+2.020 & 0.0039 & 0.0098.
+\end{array}
+\tag{EP.15}
+\]
+
+Here `N_5` is the number of distinct complete stopped trains touching at least one pentagon.  The train bound uses only that each pentagon supplies five terminal occurrences and each stopped train has at most two terminal occurrences:
+
+\[
+\boxed{N_5\ge{5P_5\over2}.}
+\tag{EP.16}
+\]
+
+By the merged isolate-host theorem, all pentagons in (EP.15) are source-empty.
+
+---
+
+## 4. Branch R also extends beyond `1.8623`
+
+The modern train-slack theorem is likewise not restricted to the old path endpoint.  It gives the global full-core dichotomy
+
+```text
+Branch S:
+    S_D >= (0.373396-o(1))D singleton stopped trains;
+
+Branch R:
+    sigma_R > (0.746792-o(1))D
+    and Mantel deficit > (0.390-o(1))D^2.
+```
+
+In Branch R the exact incidence argument gives
+
+\[
+I_5
+\ge5(2f-Q)-\tau_0D-o(D),
+\qquad
+\tau_0=0.7467921.
+\tag{EP.17}
+\]
+
+Using the uniform endpoint envelopes above,
+
+\[
+\boxed{
+\liminf {I_5\over D}
+\ge i_5(X):=5p_5(X)-\tau_0.
+}
+\tag{EP.18}
+\]
+
+This remains positive while
+
+\[
+X<{2(C_{707}+\pi-\tau_0/5)\over5}.
+\tag{EP.19}
+\]
+
+The exact certificate gives the lower enclosure
+
+\[
+{2(C_{707}+\pi-\tau_0/5)\over5}>1.9618.
+\tag{EP.20}
+\]
+
+Representative safe rows are
+
+\[
+\begin{array}{c|c|c|c}
+X & I_5/D\text{ lower} & N_{R5}/D\text{ lower} & P_5^{touch}/D\text{ lower}\\ \hline
+1.880 & 1.0228 & 0.5114 & 0.2045\\
+1.900 & 0.7728 & 0.3864 & 0.1545\\
+1.920 & 0.5228 & 0.2614 & 0.1045\\
+1.950 & 0.1478 & 0.0739 & 0.0295\\
+1.960 & 0.0228 & 0.0114 & 0.0045.
+\end{array}
+\tag{EP.21}
+\]
+
+As before,
+
+\[
+N_{R5}\ge I_5/2,
+\qquad
+P_5^{touch}\ge I_5/5.
+\]
+
+Every touched pentagon is source-empty.
+
+---
+
+## 5. What changed and what did not
+
+Nothing in the proof of (EP.12) or (EP.18) depends on the corrected O--O path, its terminal-energy threshold, or its present `t<=1.860` endpoint.  The former `1.8623` cutoff entered only because the first pentagon note was written to match a then-current path range.
+
+The corrected structural picture is therefore:
+
+```text
+all full-core train-measure survivors:
+    uniform all-train gap g=0.007707;
+    global singleton/rhombic train-slack dichotomy;
+
+through t<~2.0215:
+    a forced linear source-empty pentagon sea;
+
+Branch R through t<~1.9618:
+    a forced linear strict-rhombus/pentagon interface;
+
+only through the separately proved path endpoint (currently t<=1.860):
+    the opposite-branch O-O path/hub/finite-strip normal form.
+```
+
+This does not exclude the wider high-`t` range.  It does remove the accidental coupling between pentagon structure and the path endpoint and supplies explicit geometry in a substantially larger band.
+
+**Disposition:** proved scope propagation of the modern pentagon sea through `t<=2.02` and of the Branch-R rhombus/pentagon interface through `t<=1.96`. C-II and Level I remain open.

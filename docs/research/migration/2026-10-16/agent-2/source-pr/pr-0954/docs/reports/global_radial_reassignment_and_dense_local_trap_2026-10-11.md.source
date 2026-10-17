@@ -1,0 +1,315 @@
+<!-- theorem-state: {"artifact_id":"ART-FFC457C44EDA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Global radial reassignment: a barrier and an exact nonlocal replacement
+
+**Date:** 2026-10-11
+
+**State base:** `ab6dd3336f9f8d440f2bada76edb32153391cddc`
+
+**State version:** `2026-10-10.audit.234`
+
+**Working base:** `81df48e6`
+
+**Target:** independent whole-source Level I research
+
+**Classification:** regression; proved candidates awaiting promotion for the
+radial barrier and the all-odd-polygon core calculation
+
+**LEVEL I STATUS: STILL OPEN.**
+
+The previous global clearance reduction leaves the interval
+`0<s<3000/D(n)` unresolved. This run investigates a nonlocal tactic, rather
+than another perturbation of the same loaded contact core:
+
+```text
+an independently checked radial/angle reassignment of the whole source
+ -> n unit-separated points with every pair strictly below old D
+ -> contradiction to global optimality
+```
+
+No universal reassignment theorem has been proved. This report identifies a
+global obstruction to preserving the old radial population, and certifies a
+nonlocal whole-source replacement beyond that obstruction. The losing source
+is not a global minimizer, so it is not a Level I counterexample.
+
+## 1. A global radius-multiset obstruction
+
+Let `q>=5` be odd and put
+
+\[
+R_q=\frac1{2\sin(\pi/q)},\qquad
+D_q=\frac1{2\sin(\pi/(2q))}=2R_q\cos(\pi/(2q)).
+\]
+
+Suppose a source contains the `q` vertices of a regular unit `q`-gon centered
+at `o`, and all other source labels are strictly closer than `R_q` to `o`.
+Every unit-separated replacement with the **same multiset** of distances to
+some center `o'` has diameter at least `D_q`, regardless of how all angles
+and labels are reassigned.
+
+### Proof
+
+The new source still has `q` points on the radius-`R_q` circle. Order them
+cyclically. Let their consecutive positive angular gaps be `gamma_i`.
+Since a chord has length `2R_q*sin(gamma_i/2)`, unit separation forces
+
+\[
+\gamma_i\ge2\arcsin(1/(2R_q))=2\pi/q.
+\]
+
+Their sum is `2*pi`, so every gap equals `2*pi/q`. Thus the outer points
+are a regular `q`-gon and already have diameter `D_q`. The inside points
+cannot remove those actual diameter pairs. QED.
+
+This is a global obstruction, not a derivative test. Individual rotations,
+arbitrary angle changes, permutations of the old radii, and a common change
+of center do not bypass it. A strict competitor must change that radial
+multiset; in particular it cannot retain all `q` points on that outer circle.
+Candidate pools that allow changing the number of sites at each radius are
+outside this obstruction.
+
+## 2. Exact active-core calculations for every odd q
+
+For the regular unit `q`-gon, its full contact graph is `C_q`. Its full
+diameter graph consists of step-`m` chords, `m=(q-1)/2`, also one odd cycle.
+Set
+
+\[
+\alpha_e=D_q^2/q\quad(e\in C_q),\qquad
+\beta_e=1/q\quad(e\in H_q).
+\]
+
+These give a strictly positive normalized equilibrium stress. The chord
+identity
+
+\[
+D_q^2\sin^2(\pi/q)=\sin^2(m\pi/q)
+\]
+
+proves equilibrium at each vertex; summing gives `sum beta=1` and
+`sum alpha=D_q^2`.
+
+### Positive semidefinite stress, with exact core scope
+
+For `Omega=L_alpha-L_beta`, its Fourier eigenvalues are
+
+\[
+\lambda_k=\frac4q\left(
+D_q^2\sin^2(k\pi/q)-\sin^2(mk\pi/q)\right).
+\]
+
+The modes `0,1,q-1` are zero, exactly. For `2<=k<=q-2`,
+
+\[
+D_q^2\sin^2(k\pi/q)
+\ge D_q^2\sin^2(2\pi/q)
+=4\cos^2(\pi/q)\cos^2(\pi/(2q))>1,
+\]
+
+where `q>=5` suffices. Since the other squared sine is at most one,
+`lambda_k>0`. Hence
+
+\[
+\ker\Omega=\operatorname{span}\{1,P_x,P_y\},\qquad
+\operatorname{rank}\Omega=q-3
+\]
+
+on this `q`-vertex contact core. Appending contact isolates adds zero rows
+and columns and additional independent kernel directions. It does not
+produce a full-source affine-kernel statement.
+
+### Exact mixed infinitesimal rank for all odd q
+
+Write a velocity at vertex `j` as `v_j=a_j p_j+b_j Jp_j`. Preserving the
+first derivative of a step-`s` bar gives
+
+\[
+b_{j+s}-b_j=-\tan(s\pi/q)(a_j+a_{j+s}).                    \tag{1}
+\]
+
+Apply the discrete Fourier transform. At mode `k!=0`, the contact and
+diameter rows require, respectively,
+
+\[
+\widehat b_k=i\tan(\pi/q)\cot(k\pi/q)\widehat a_k,
+\qquad
+\widehat b_k=i\tan(m\pi/q)\cot(km\pi/q)\widehat a_k.       \tag{2}
+\]
+
+All denominators used here are nonzero: `q` is odd, and
+`gcd(m,q)=1`. Put `x=pi/(2q)`, `t=tan(x)`, and `T=tan(kx)>0`.
+For odd `k`, `cot(km*pi/q)=T`, and equality of the two coefficients in
+(2) becomes `T^2=t^2`; only `k=1` satisfies it. For even `k`, that cotangent
+is `-1/T`, and equality becomes `T^2=1/t^2`; only `k=q-1` satisfies it.
+Every other nonzero mode vanishes. At mode zero, (1) forces `a_0=0` and
+leaves `b_0` free. The surviving real modes are exactly the two translations
+and one rotation. Thus
+
+\[
+\boxed{\operatorname{rank}R_{C_q\cup H_q}=2q-3.}           \tag{3}
+\]
+
+This elementary calculation does not require primality of `q` or an imported
+polygon equality-uniqueness theorem.
+
+### Local diameter minimality of the core
+
+If a first-order feasible velocity has all contact derivatives nonnegative
+and all old-diameter derivatives nonpositive, equilibrium and strict positivity
+of the displayed stress force every one of those derivatives to be zero.
+Equation (3) then forces the velocity to be Euclidean.
+
+To get the local conclusion, suppose there were noncongruent feasible core
+placements approaching the regular polygon with diameter at most `D_q`.
+Align each by its closest Euclidean isometry, divide its displacement by
+its norm, and pass to a limit. The limiting unit velocity is orthogonal to
+translations and rotation, but satisfies the preceding contact/diameter
+derivative inequalities. This contradicts (3). Consequently the regular core
+is a strict local diameter minimum modulo congruence for every odd `q>=5`.
+
+If strict interior isolates are added, the full source remains a local
+diameter minimum because its nearby core alone has this property. Isolates
+can still move at fixed diameter. The full source is not called a strict
+local minimum modulo congruence.
+
+## 3. An unbounded leading-density family locked against radial preservation
+
+Take odd `q` tending to infinity. Let
+
+\[
+r_q=R_q-1-q^{-1},\qquad s_q=1+q^{-3}.
+\]
+
+For sufficiently large `q`, choose a translated triangular lattice of spacing
+`s_q` and keep
+
+\[
+m_q=\left\lfloor\frac{\pi r_q^2}{(\sqrt3/2)s_q^2}\right\rfloor
+\]
+
+sites in the open radius-`r_q` disk. Translation averaging guarantees that
+there is such a translate. Add the regular unit outer polygon.
+
+All interior distances are at least `s_q>1`. Every cross lower distance is
+greater than `R_q-r_q=1+1/q`. Every cross upper distance is less than
+`R_q+r_q=2R_q-1-1/q<D_q`; every interior upper distance is smaller still.
+Thus the full actual contacts and diameters remain the two outer cycles.
+The source has `m_q` contact isolates, all retained.
+
+For the displayed strict cross upper bound, note that
+`D_q^2=4R_q^2-1/(4cos^2(pi/(2q)))>4R_q^2-1`. For large `q` we have
+`R_q>=1`, so `(2R_q-1)^2<4R_q^2-1<D_q^2`.
+
+Its cardinality satisfies, with `Delta=pi/(2sqrt(3))`,
+
+\[
+n_q=q+m_q
+=\Delta D_q^2-\pi(2/\sqrt3-1)D_q+O(1).                   \tag{4}
+\]
+
+So it has the correct leading density, the positive PSD stress and maximal
+mixed rank on its actual core, and local diameter minimality for unbounded
+cardinalities. Every radius-multiset-preserving rearrangement still fails
+globally by Section 1.
+
+These configurations are nonglobal for sufficiently large `q`: the negative
+linear term in (4) makes `n_q<Delta D_q^2`, and lattice averaging in the
+open radius-`D_q/2` disk gives a same-cardinality strict competitor.
+They do **not** satisfy the canonical global positive population reserve.
+This missing hypothesis is not concealed.
+
+## 4. A finite dense local trap that also has a positive population reserve
+
+The exact finite fixture has `q=43` outer vertices and 132 strict interior
+isolates, hence 175 labels. The interior coordinates come from the primary
+[Packomania 132-point data](https://www.packomania.com/cci/txt/cci132.txt),
+rescaled by a certified rational factor. The old full source satisfies
+
+\[
+g_A=175-1-\Delta D_{43}^2>\frac7{10}D_{43}^{2/3}>0.         \tag{5}
+\]
+
+The rational certificate checks (5) by cubing positive quantities. The
+coefficient `7/10` exceeds the canonical population reserve's asymptotic
+coefficient `kappa0`: using `a0=sqrt(3)/2`,
+
+\[
+\kappa_0^3=\frac{243\pi^3}{32000a_0}<(7/10)^3.
+\]
+
+This is a finite comparison, not a claim about the onset or error term of
+that asymptotic theorem, and not a refutation of an asymptotic C-II claim.
+
+Nevertheless the source is not global. A second certified rational scaling
+of the primary
+[Packomania 175-point data](https://www.packomania.com/cci/txt/cci175.txt)
+has every pair distance strictly greater than one and strictly smaller
+diameter. The certified squared-diameter gain is greater than four:
+
+\[
+D_{43}^2>187.4262,
+\qquad\operatorname{diam}(B)^2<183.2352,
+\qquad D_{43}^2-\operatorname{diam}(B)^2>4.1910.             \tag{6}
+\]
+
+The reported source population excess is between `4.0232` and `4.0233`.
+No optimality claim for the external packing data is imported: their decimal
+coordinates are exact rational input, and **all pairs are verified anew**.
+The alternative's strict unit margin permits normalization to minimum
+distance exactly one, further reducing its diameter.
+
+The normalized alternative is itself triangle-free. Three noncollinear
+rational planar points cannot form an equilateral triangle of any size:
+their squared side length and determinant area would both be rational, while
+the area of an equilateral triangle is `sqrt(3)/4` times its squared side
+length. A common scaling does not change that obstruction. This arithmetic
+fact supplies no rational global minimizer; rational feasible sources can
+approach an unattained optimum, as the earlier infimum report explains.
+
+Thus this is an explicit global improvement of a dense, triangle-free,
+locally minimizing source with a positive normalized stress, PSD core stress,
+maximal mixed core rank, and a positive `D^(2/3)` population reserve. The
+winner changes its radial population, as Section 1 requires.
+
+## 5. Exact certification and provenance
+
+Run
+
+```text
+python3 research/verify_global_radial_reassignment_barrier_2026_10_11.py
+```
+
+The two original numeric fixtures and SHA-256 provenance are preserved in
+`research/fixtures/global_odd_shell_reassignment_2026_10_11/`. The publisher's
+table is dated 2024-12-25. These are primary coordinate data, not another
+worker's proposed solution.
+
+The verifier measures each imported minimum squared distance using exact
+integers, chooses a rational factor strictly above its inverse square root,
+and inflates it by `1+10^-6`. It verifies all 15,225 old-source pairs,
+including 5,676 core/isolate pairs, and all 15,225 winner pairs. Actual old
+unit and diameter equalities are justified by the polygon formulas; they
+are never inferred from approximate interval equality.
+
+Machin's arctangent identity and Taylor derivative remainders give directed
+rational sine/cosine intervals. The Fourier positivity and population/gain
+inequalities use those intervals, with no floating decisions. Null modes,
+equilibrium, maximal mixed rank, and the unbounded-family conclusions are
+proved analytically in the report. The script's finite checks do not certify
+a global minimum, a Level I counterexample, or a general reassignment theorem.
+
+## 6. Consequence for the active global tactic
+
+The universal global clearance plateau is still the target. The proposed
+route cannot preserve the old radial multiset, even if it permits nonlocal
+angle permutations and has favorable stress/density signatures. A successful
+whole-source comparison must change that population and verify the resulting
+new lower and upper pairs.
+
+The exact outstanding bridge is a radial-and-angle reallocation theorem for
+**actual triangle-free global minimizers**, producing the same number of
+unit-separated points at strictly smaller diameter. The finite winner here
+demonstrates that such a jump can bypass a genuine local trap; it does not
+prove its universal existence. Level I and C-II remain unchanged.
+
+**Promotion recommendation:** preserve as unreviewed regression/candidate;
+no canonical state change.

@@ -1,0 +1,220 @@
+<!-- theorem-state: {"artifact_id":"ART-3A8BF8F6E499","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Branch consolidation audit — 2026-09-04
+
+## Scope
+
+This audit covers every branch ref present in the repository on 2026-09-04: 100 total refs, consisting of `main` plus 99 non-main branches.
+
+The goal was preservation of research state, not mechanical history merging. For every surviving branch, the audit used one or more of:
+
+- merged-PR head checks;
+- ancestry / compare checks against current `main`;
+- merge-base-to-branch comparisons for divergent branches;
+- exact-file and distinctive-theorem searches on `main`;
+- direct theorem comparison when an older branch and a later mainline report used different names.
+
+A branch was considered semantically disposable only when its branch-only content was either already present on `main`, superseded by a stronger/corrected mainline result, or copied into `main` by this consolidation.
+
+## Canonical status
+
+This recovery does **not** change the current mathematical status of Erdős Problem #99. The current Target C theorem stack remains canonical and `LEVEL I` remains open. Recovered reports retain their historical theorem numbering and should not displace later mainline numbering when there is a collision.
+
+## Recovered branch-only material
+
+The following eight branches contained substantive material that was not represented in the current main corpus under an equivalent or stronger statement. Their unique files are copied verbatim into `main` by the consolidation commit.
+
+### `research/target-c-general-matching-audit-2026-08-31`
+
+Recovered:
+
+- `docs/reports/target_c_general_matching_contraction_audit_2026-08-31.md`
+- `research/target_c_matching_contraction_audit.py`
+
+Key preserved finding: the naive cross-cut sign proof for arbitrary opposite matching contraction fails on an exact five-pair witness, while the contraction defect remains PSD in the tested witness. The useful surviving target is a Gale-matrix / matrix-Kalmanson / planar-dual certificate, not the invalid sign argument.
+
+### `research/target-c-formal-integrability-c1-closure-2026-08-31`
+
+Recovered:
+
+- `docs/reports/target_c_formal_integrability_gate_c1_closure_2026-08-31.md`
+
+This is an alternate exact proof of Gate C-I closure using formal Taylor recursion, Farkas obstruction elimination, ordered Laurent series / real closure, and transfer back to the reals. The later Newton-Hoffman C63 proof remains canonical.
+
+### `research/target-c-c62-facial-second-order-strictification-2026-08-31`
+
+Recovered:
+
+- `docs/reports/target_c_facial_second_order_strictification_2026-08-31.md`
+
+This preserves the intermediate lemma that, for a fixed weak-release direction, all strong rows outside the exposed zero-energy face can be made strict at second order. Later C63 closes the gate globally, but this facial localization lemma is distinct.
+
+### `research/target-c-c64-fully-visible-response-psd-2026-08-31`
+
+Recovered:
+
+- `docs/reports/target_c_fully_visible_response_psd_transport_2026-08-31.md`
+
+Current main retains the PSD response theorem, but this orphan report also records the useful transport currency:
+
+- for a non-diameter response pair, `c_ij^2 <= d_i d_j`;
+- a degree-`Delta` family of non-diameter response pairs carries mass at most `(Delta/2) tr M`;
+- a matching carries at most `tr M/2`;
+- on a diameter matching, total response/diameter-weight variation is at most `tr M/2`.
+
+### `research/target-c-diameter-contraction-rigidity-2026-08-31`
+
+Recovered:
+
+- `docs/reports/target_c_diameter_contraction_rigidity_2026-08-31.md`
+- `docs/reports/target_c_diameter_class_stress_2026-08-31.md`
+- `docs/reports/target_c_diameter_component_reciprocal_2026-08-31.md`
+
+These preserve three C-II structural reductions absent from current main: diameter-class translation rigidity and `2 r_D >= delta_C + m_same >= ceil(D)`; positive self-stress on the cross-class framework and identification of full-diameter endpoints with positive reaction vertices; and the componentwise reciprocal-polygon / Minkowski decomposition with `2V(F,F_Q^*)=D^2 beta_Q`.
+
+### `research/target-c-low-diameter-prestress-2026-08-31`
+
+Recovered:
+
+- `docs/reports/target_c_low_diameter_prestress_2026-08-31.md`
+- `docs/reports/target_c_response_inertia_budget_2026-08-31.md`
+- `docs/reports/target_c_two_diameter_weak_contact_elimination_2026-08-31.md`
+- `docs/reports/target_c_two_direction_cross_chain_2026-08-31.md`
+
+These preserve the low-diameter-support prestress sequence: the special PSD theorem for at most two positive diameter edges; the general negative-inertia budget `nu_-(Omega_s) <= r_H-2`; the three-edge forest scalar effective-resistance criterion; the exact two-direction cross-chain normal form; and the historical proof eliminating weak contacts when `|H_*|<=2`. Later C63 gives the global Gate C-I closure, so the low-support elimination is historical machinery rather than the canonical closure proof.
+
+`research/target-c-prestress-mainline-2026-08-31` contains the same four report blobs and adds no further unique material.
+
+### `research/target-c-star-maxflow-c81-2026-08-31`
+
+Recovered:
+
+- `docs/reports/target_c_star_leaf_maxflow_2026-08-31.md`
+
+This preserves the arbitrary star-separating cut lower bound and the resulting max-flow / stress-flow saturation reduction, which is not present in the current text corpus.
+
+### `research/target-c-two-terminal-corridor-2026-08-31`
+
+Recovered:
+
+- `docs/reports/target_c_two_terminal_corridor_2026-08-31.md`
+
+This preserves the general unloaded-domain convex-hull principle and the two-terminal harmonic-corridor collapse. Later bridge results strengthen the main route, but this exact harmonic formulation is not otherwise present.
+
+## Superseded or corrected divergent branches
+
+The following branch tips are not ancestors of current `main`, but their mathematical content is already represented by a later equal/stronger/corrected result or is an obsolete intermediate. No stale file is reintroduced. The audit above records the disposition, so the research history is not lost when the refs are removed.
+
+- `noop-temp-should-not-use`
+- `promotion/target-a-168-174-final`
+- `research/target-c-all-block-diameter-budget-2026-08-31`
+- `research/target-c-attachment-cell-decomposition-2026-08-31`
+- `research/target-c-bridge-reciprocal-2026-08-31`
+- `research/target-c-c54-kernel-dichotomy-2026-08-31`
+- `research/target-c-c59-resistance-equality-articulation-2026-08-31`
+- `research/target-c-c62-newton-hoffman-gate-ci-2026-08-31`
+- `research/target-c-cells-v3`
+- `research/target-c-chain-interval-rank-2026-09-01`
+- `research/target-c-chain-secondary-mass-c84-2026-09-01`
+- `research/target-c-degree-four-rhombic-bulk-2026-08-31`
+- `research/target-c-exact-star-face-collapse-c75-2026-08-31`
+- `research/target-c-extreme-body-rigidity-2026-08-31`
+- `research/target-c-force-hull-v2-2026-08-30`
+- `research/target-c-multibody-shunt-collapse-2026-08-31`
+- `research/target-c-nested-paired-prefix-2026-09-01`
+- `research/target-c-promote-c30-c32-2026-08-31`
+- `research/target-c-radial-cut-transport-c71-2026-08-31`
+- `research/target-c-radial-winner-take-all-c79-2026-08-31`
+- `research/target-c-robinson-matching-contraction-2026-08-31`
+- `research/target-c-two-body-hinge-integration-2026-08-31`
+- `research/zero-slack-response-2026-08-31`
+- `unused-temp-cleanup`
+
+Important examples:
+
+- the old all-block diameter budget is weaker than the later loaded-block/global endpoint bounds;
+- C54 kernel dichotomy is subsumed and sharpened by the C56 kernel-collapse stack;
+- the old C62 Newton-Hoffman branch is a precursor of the later canonical C63 closure;
+- the old degree-four, exact-star, extreme-body, multibody, radial-cut, radial-winner and two-body branches have later revised versions on main;
+- the nested-paired-prefix branch claimed a maximal nested/Hamiltonian-path normal form, but the later canonical C87 replaces it by the proved antitone staircase-tree/common-cut theorem;
+- the stale force-hull and zero-slack branches were explicitly superseded by later promotion branches.
+
+## Already represented on `main`
+
+The following branches are direct ancestors of current `main`, heads of merged PRs, or otherwise have their branch result already represented on `main`. No extra copy was needed.
+
+- `audit/target-c-train-track-crossroute-2026-08-31`
+- `promotion/target-a-168-172-2026-08-31`
+- `promotion/target-a-168-174-rebased`
+- `promotion/target-c-c20-c21-2026-08-31`
+- `research/target-c-all-stress-nullity-2026-09-01`
+- `research/target-c-anti-reuleaux-gap-2026-08-31`
+- `research/target-c-c2-diameter-matching-minors-2026-08-31`
+- `research/target-c-c2-full-diameter-visibility-2026-08-31`
+- `research/target-c-c2-psd-cut-domination-2026-08-31`
+- `research/target-c-c56-min-transfer-collapse-2026-08-31`
+- `research/target-c-c58-zero-transfer-star-forest-2026-08-31`
+- `research/target-c-c60-star-center-articulation-2026-08-31`
+- `research/target-c-c63-newton-hoffman-gate-ci-2026-08-31`
+- `research/target-c-central-six-kalmanson-2026-08-31`
+- `research/target-c-chain-atom-mantel-c82-2026-08-31`
+- `research/target-c-chain-interval-normal-form-c83-2026-09-01`
+- `research/target-c-chain-nullface-mass-c85-2026-09-01`
+- `research/target-c-chain-spectral-stability-c81-2026-08-31`
+- `research/target-c-chain-train-atom-c80-2026-08-31`
+- `research/target-c-common-chain-caterpillar-c96-2026-09-01`
+- `research/target-c-contact-activation-pockets-c95-2026-09-01`
+- `research/target-c-contact-minimal-neutral-chain-exclusion-2026-08-31`
+- `research/target-c-current-frontier-2026-08-31`
+- `research/target-c-degree-four-rhombic-bulk-c73-2026-08-31`
+- `research/target-c-endpoint-ferrers-exclusion-c91-2026-09-01`
+- `research/target-c-equality-audit-2026-08-31`
+- `research/target-c-equality-concurrency-2026-08-31`
+- `research/target-c-exact-star-face-collapse-c76-2026-08-31`
+- `research/target-c-extreme-body-rigidity-v2-2026-08-31`
+- `research/target-c-force-hull-area-c67-2026-08-31`
+- `research/target-c-general-matching-contraction-2026-08-31`
+- `research/target-c-kalmanson-next-2026-08-31`
+- `research/target-c-kernel-localization-2026-08-31`
+- `research/target-c-lexicographic-critical-flatness-2026-09-01`
+- `research/target-c-macroscopic-active-flat-c94-2026-09-01`
+- `research/target-c-macroscopic-response-components-2026-08-31`
+- `research/target-c-mainline-promotion-2026-08-31`
+- `research/target-c-multibody-shunt-collapse-v2-2026-08-31`
+- `research/target-c-no-neutral-corridors-2026-08-31`
+- `research/target-c-null-face-selection-2026-08-31`
+- `research/target-c-one-leaf-flow-c83-2026-08-31`
+- `research/target-c-positive-prefix-thrackle-c87-2026-09-01`
+- `research/target-c-post-c32-2026-08-31`
+- `research/target-c-prefix-circulation-2026-09-01`
+- `research/target-c-quantitative-ferrers-stability-c92-2026-09-01`
+- `research/target-c-radial-cut-transport-c72-2026-08-31`
+- `research/target-c-radial-flux-divergence-c74-2026-08-31`
+- `research/target-c-radial-stress-c68-2026-08-31`
+- `research/target-c-radial-winner-take-all-c79-v2-2026-08-31`
+- `research/target-c-response-reductions-2026-08-31`
+- `research/target-c-response-starization-c70-2026-08-31`
+- `research/target-c-rhombic-train-tracks-c77-2026-08-31`
+- `research/target-c-rhombus-diagonal-slack-c75-2026-08-31`
+- `research/target-c-second-order-support-duality-2026-08-31`
+- `research/target-c-secondary-train-caterpillar-c90-2026-09-01`
+- `research/target-c-self-stress-response-2026-08-31`
+- `research/target-c-staircase-separator-budget-c88-2026-09-01`
+- `research/target-c-staircase-shell-bound-c89-2026-09-01`
+- `research/target-c-star-branch-leakage-2026-08-31`
+- `research/target-c-star-equality-2026-08-31`
+- `research/target-c-star-perimeter-c69-2026-08-31`
+- `research/target-c-strict-secondary-separators-c93-2026-09-01`
+- `research/target-c-thrackle-response-contraction-2026-08-31`
+- `research/target-c-train-track-width-c78-2026-08-31`
+- `research/target-c-two-body-hinge-integration-v2-2026-08-31`
+- `research/target-c-two-terminal-collapse-2026-08-31`
+
+## Duplicate recovery source
+
+- `research/target-c-prestress-mainline-2026-08-31` contains the same four low-diameter/prestress reports copied from `research/target-c-low-diameter-prestress-2026-08-31`; it has no additional branch-only report to preserve.
+
+## Deletion state
+
+After the consolidation commit, every one of the 99 non-main branch refs is semantically safe to delete: unique material is copied, duplicate material is already on `main`, and obsolete material is recorded here with its supersession status.
+
+The GitHub connector used for this audit exposes branch creation and ref updates but does not expose a delete-branch / delete-ref mutation. Therefore this audit does **not** claim that the refs themselves were deleted. Actual ref deletion remains a mechanical cleanup step after this commit.

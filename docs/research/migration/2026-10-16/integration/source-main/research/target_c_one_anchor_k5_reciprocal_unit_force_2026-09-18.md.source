@@ -1,0 +1,402 @@
+# Target C-II — a minimal one-anchor `K_5` dual block produces a six-point unit-force reciprocal equilibrium
+
+**Date:** 2026-09-18  
+**Status:** proved candidate; theorem-state authority unchanged  
+**Scope:** the degree-pure five-face endpoint of the proof-only one-anchor closure-corank reduction  
+**Depends on:** one-anchor transpose-kernel theorem; its `K_5` minimal-support consequence; bounded contact-pentagon no-parallel-side lemma; exact stopped-train occurrence signs  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The one-anchor corank theorem leaves a sharp finite dual object: five degree-five
+one-anchor residual faces whose nonparallel relation graph is `K_5` and which support a
+nonzero pure-contact dual closure mode.  This note converts that object into an exact
+six-point reciprocal equilibrium problem.
+
+The conversion is stronger than a direction-only restatement.  If the five dual face
+vectors are `y_1,...,y_5` and `y_0=0` is the common zero dual value of the
+outer/activated side, then:
+
+1. the six points `y_0,...,y_5` are distinct and no three are collinear;
+2. every edge `ij` of the complete graph `K_6` has a nonzero signed length
+   `lambda_ij` with `|lambda_ij|=|y_i-y_j|`;
+3. at every reciprocal vertex,
+   \[
+   \boxed{
+   \sum_{j\ne i}{y_i-y_j\over\lambda_{ij}}=0;
+   }
+   \]
+   each summand is a unit vector; and
+4. the associated signed inverse-distance stress has stress-matrix rank at most three
+   and satisfies the exact tensor cancellation
+   \[
+   \boxed{
+   \sum_{i<j}{(y_i-y_j)(y_i-y_j)^T\over\lambda_{ij}}=0.
+   }
+   \]
+
+Equivalently, a minimal `K_5` dual block would create a nondegenerate straight-line
+`K_6` tensegrity in the reciprocal plane in which every one of the fifteen edges exerts
+force of exactly unit magnitude and every reciprocal vertex is in equilibrium.
+
+This is now a finite geometric target.  Excluding these reciprocal equilibria under the
+additional cyclic-order data inherited from the five physical contact pentagons would
+remove the sharp `K_5` corank block.  No such exclusion is claimed here.
+
+---
+
+## 1. The minimal degree-pure block
+
+Let the five residual one-anchor faces be
+
+\[
+F_1,\ldots,F_5.
+\]
+
+Assume each is a bounded strict unit-contact pentagon and the nonparallel relation graph
+on these faces is `K_5`.  Let
+
+\[
+y=(y_1,\ldots,y_5)\in\ker C_{face}^T
+\]
+
+be a nonzero dual mode supported on this component.  The one-anchor theorem gives
+
+\[
+y_i=c_i a_i,
+\qquad c_i\ne0,
+\tag{1.1}
+\]
+
+where `a_i` is the projective direction of the unique train from `F_i` to the
+outer/activated side.
+
+All activated dual face variables are zero, and the actual outer face has no bounded
+closure block.  For this component they can therefore be represented by one reciprocal
+point
+
+\[
+y_0:=0.
+\tag{1.2}
+\]
+
+Each `F_i` has exactly five terminal train occurrences: its unique outside/activated
+anchor and one internal train to each of the four other faces in the `K_5` block.
+
+---
+
+## 2. The five nonzero dual vectors are distinct
+
+First, `y_i ne 0` by (1.1).
+
+Suppose `y_i=y_j` for distinct `i,j`.  If some third `y_k` differs from this common
+value, then
+
+\[
+y_k-y_i=y_k-y_j\ne0.
+\]
+
+The transpose equations on the relation edges `ki` and `kj` say these two nonzero
+vectors are projectively parallel to the corresponding two train directions.  Thus the
+pentagon `F_k` would contain two distinct projectively parallel sides, contradicting the
+bounded-pentagon no-parallel-side theorem.
+
+Therefore any coincidence `y_i=y_j` would force
+
+\[
+y_1=\cdots=y_5=:v\ne0.
+\tag{2.1}
+\]
+
+But then all five outside-anchor directions are projectively parallel to `v`.  Sum the
+five physical pentagon closure equations.  Every internal `F_iF_j` train occurs with
+opposite oriented side vectors on its two terminal faces and cancels.  What remains is
+the sum of the five oriented unit anchor-side vectors.  Under (2.1) each is either
+`v/|v|` or `-v/|v|`.  A sum of five numbers from `{+1,-1}` cannot be zero, so the five
+parallel unit vectors cannot close.  Contradiction.
+
+Hence
+
+\[
+\boxed{y_1,\ldots,y_5\text{ are pairwise distinct and nonzero}.}
+\tag{2.2}
+\]
+
+---
+
+## 3. No three reciprocal points are collinear
+
+The six points
+
+\[
+y_0,y_1,\ldots,y_5
+\]
+
+have no collinear triple.
+
+If `y_i,y_j,y_k` with `i,j,k>0` were distinct and collinear, then at physical face
+`F_i` the internal trains `ij` and `ik` would be projectively parallel, because their
+dual differences `y_i-y_j` and `y_i-y_k` lie on the same line.  This is impossible for
+a bounded contact pentagon.
+
+If `y_0=0,y_i,y_j` were collinear, then at `F_i` its outside anchor train and the
+internal train `ij` would be projectively parallel, again contradicting the pentagon
+lemma.
+
+Thus
+
+\[
+\boxed{\text{no three of }y_0,\ldots,y_5\text{ are collinear}.}
+\tag{3.1}
+\]
+
+In particular the six reciprocal points affinely span the plane.
+
+---
+
+## 4. Signed reciprocal edge lengths
+
+For an internal train between `F_i` and `F_j`, choose its coherent unit direction
+`u_ij` and let the occurrence sign at `F_i` be `epsilon_ij`; the occurrence at `F_j`
+has sign `-epsilon_ij`.  The dual train coefficient satisfies
+
+\[
+\epsilon_{ij}(y_i-y_j)=\lambda_\tau u_{ij}.
+\]
+
+The oriented physical side vector contributed by this train to the closure of `F_i`
+is
+
+\[
+w_{ij}^{(i)}:=\epsilon_{ij}u_{ij}.
+\]
+
+Multiplying the dual relation by `epsilon_ij` gives
+
+\[
+\boxed{
+y_i-y_j=\lambda_{ij}w_{ij}^{(i)},}
+\tag{4.1}
+\]
+
+where `lambda_ij:=lambda_tau`.  At the other endpoint,
+
+\[
+w_{ij}^{(j)}=-w_{ij}^{(i)}
+={y_j-y_i\over\lambda_{ij}}.
+\]
+
+For the unique outside/activated anchor of `F_i`, the same calculation with `y_0=0`
+gives
+
+\[
+\boxed{
+y_i-y_0=\lambda_{i0}w_{i0}^{(i)}.}
+\tag{4.2}
+\]
+
+By Sections 2--3 all reciprocal edge differences are nonzero.  Every physical side
+vector in (4.1)--(4.2) has unit length, hence
+
+\[
+\boxed{
+\lambda_{ij}\ne0,
+\qquad
+|\lambda_{ij}|=|y_i-y_j|
+\quad(0\le i<j\le5).
+}
+\tag{4.3}
+\]
+
+Thus all fifteen edges of the reciprocal complete graph are present with nonzero signed
+length.
+
+---
+
+## 5. Unit-force equilibrium at all six reciprocal vertices
+
+The physical pentagon closure equation at `F_i` is the sum of its five oriented unit
+sides.  Using (4.1)--(4.2), it becomes
+
+\[
+\boxed{
+\sum_{\substack{0\le j\le5\\j\ne i}}
+{y_i-y_j\over\lambda_{ij}}=0,
+\qquad i=1,\ldots,5.
+}
+\tag{5.1}
+\]
+
+Each summand has norm one by (4.3).
+
+Now sum (5.1) over `i=1,...,5`.  Every internal term `ij` cancels against the term
+`ji`.  The remaining anchor terms give
+
+\[
+\sum_{i=1}^5{y_i-y_0\over\lambda_{i0}}=0.
+\]
+
+Negating this identity gives the missing reciprocal equilibrium at `y_0`:
+
+\[
+\boxed{
+\sum_{j=1}^5{y_0-y_j\over\lambda_{0j}}=0.
+}
+\tag{5.2}
+\]
+
+Hence (5.1)--(5.2) hold for every `i=0,...,5`.
+
+Put
+
+\[
+s_{ij}:=\operatorname{sgn}(\lambda_{ij}),
+\qquad
+r_{ij}:=|y_i-y_j|.
+\]
+
+Then
+
+\[
+{y_i-y_j\over\lambda_{ij}}
+=s_{ij}{y_i-y_j\over r_{ij}},
+\]
+
+so the reciprocal system is exactly a complete straight-line framework with one unit
+central force on every edge, attractive or repulsive according to `s_ij`, and zero net
+force at every vertex.
+
+---
+
+## 6. Stress-matrix and tensor consequences
+
+Define the symmetric signed inverse-distance edge weights
+
+\[
+\omega_{ij}:={1\over\lambda_{ij}}
+={s_{ij}\over r_{ij}}.
+\tag{6.1}
+\]
+
+Let `Omega` be the usual six-by-six stress matrix,
+
+\[
+\Omega_{ij}=-\omega_{ij}\quad(i\ne j),
+\qquad
+\Omega_{ii}=\sum_{j\ne i}\omega_{ij}.
+\]
+
+The reciprocal equilibrium equations give
+
+\[
+\Omega\mathbf1=0,
+\qquad
+\Omega Y_x=0,
+\qquad
+\Omega Y_y=0.
+\tag{6.2}
+\]
+
+Because the reciprocal points affinely span the plane, the three displayed kernel
+vectors are linearly independent.  Therefore
+
+\[
+\boxed{\operatorname{rank}\Omega\le3.}
+\tag{6.3}
+\]
+
+Equivalently every four-by-four minor of this signed inverse-distance stress matrix
+vanishes.  This converts the minimal `K_5` obstruction into a finite algebraic system in
+six planar points and fifteen edge signs.
+
+There is also a coordinate-free second-moment identity.  Multiply the equilibrium at
+`y_i` on the left by `y_i` and sum over all six vertices.  Pairing the two endpoint
+contributions of each edge gives
+
+\[
+\boxed{
+\sum_{0\le i<j\le5}
+{(y_i-y_j)(y_i-y_j)^T\over\lambda_{ij}}=0.
+}
+\tag{6.4}
+\]
+
+Writing
+
+\[
+e_{ij}:={y_i-y_j\over r_{ij}},
+\]
+
+this is
+
+\[
+\boxed{
+\sum_{i<j}s_{ij}r_{ij}\,e_{ij}e_{ij}^T=0.
+}
+\tag{6.5}
+\]
+
+So the positive-sign and negative-sign edge sets have exactly the same
+length-weighted directional second moment:
+
+\[
+\sum_{s_{ij}=+1}r_{ij}e_{ij}e_{ij}^T
+=
+\sum_{s_{ij}=-1}r_{ij}e_{ij}e_{ij}^T.
+\tag{6.6}
+\]
+
+Taking traces yields the exact signed length balance
+
+\[
+\boxed{
+\sum_{s_{ij}=+1}r_{ij}
+=
+\sum_{s_{ij}=-1}r_{ij}.
+}
+\tag{6.7}
+\]
+
+Since `lambda_ij=s_ij r_ij`, (6.7) is also
+
+\[
+\sum_{i<j}\lambda_{ij}=0,
+\]
+
+the all-rotation dual identity specialized to this block.
+
+---
+
+## 7. Why this is a sharper finite target
+
+The previous description of the minimal dual obstruction was combinatorial: a live
+one-anchor relation component could have five vertices and relation graph `K_5`.  The
+result above adds metric and equilibrium structure.
+
+Any such minimal degree-pure block must produce six reciprocal points satisfying all of
+the following simultaneously:
+
+- no three reciprocal points are collinear;
+- every one of the fifteen reciprocal edges carries nonzero stress;
+- the magnitude of the force on every edge is exactly one;
+- the signed inverse-distance stress matrix has rank at most three;
+- the positive and negative reciprocal edges have identical length-weighted directional
+  second moments; and
+- at each of the five non-ground reciprocal vertices, the five unit force directions
+  occur as the side directions of an actual strict bounded unit-contact pentagon in the
+  source.
+
+The last bullet retains source geometry that a generic six-point tensegrity would not
+have.
+
+This reduction does not prove that the reciprocal system is impossible.  It gives a
+smaller next problem than an arbitrary `K_5` closure block: classify or exclude signed
+six-point inverse-distance equilibria satisfying the inherited five pentagon cyclic
+orders.  An exclusion would remove the support-size-five equality case in the
+one-anchor corank theorem; a classification could instead expose an additional exact
+train-angle flex or a source-level forbidden chord.
+
+No theorem-state file is changed.
+
+**Disposition:** converted every degree-pure minimal `K_5` one-anchor dual block into a
+nondegenerate six-point reciprocal `K_6` with unit-magnitude edge forces, rank-at-most-
+three inverse-distance stress matrix, and exact signed second-moment cancellation.
+C-II remains open.

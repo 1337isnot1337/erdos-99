@@ -1,0 +1,215 @@
+# Hostile audit — new strong-TB1 finite-swap reductions
+
+**Date:** 2026-09-17  
+**Reviewed:** repeated-witness collapse, repeated-witness packing collapse, active-diameter decoupling  
+**Disposition:** the three named reductions PASS at proof-only scope; one stronger tag-localization attempt was rejected and removed  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+This audit rechecks the recent strong-TB1 finite-swap chain against the exact shore/layer topology and separates the valid conclusions from one tempting but invalid shortcut.
+
+---
+
+## 1. Repeated-witness `O(D^-2)` collapse — PASS
+
+For a strict pair selected as an overswap witness at two distinct layers, the two layer incidences act on the same original segment with opposite signs. If the overswap sizes are `s_i,s_j=O(D^-1)` and the common-axis theorem gives
+
+\[
+|w_i-w_j|=O(D^{-1}),
+\]
+
+then the exact lower-bound inequalities imply
+
+\[
+A+s_is_j
+\le
+2\ell |w_i-w_j|{s_is_j\over s_i+s_j},
+\qquad
+A=\ell^2-1,
+\]
+
+while the upper-bound inequalities imply
+
+\[
+B
+\le
+2\ell |w_i-w_j|{s_is_j\over s_i+s_j}+s_is_j,
+\qquad
+B=D^2-\ell^2.
+\]
+
+The harmonic factor is `O(D^-1)`. Thus
+
+- lower repeated witness: `A=O(D^-2)`, hence `ell-1=O(D^-2)`;
+- upper repeated witness: `B=O(D^-1)`, hence `D-ell=O(D^-2)`.
+
+The same inequalities force the normalized pair direction into the common `O(D^-1)` row cone.
+
+No lower bound on `q_i` or `s_i` is needed. If one swap size is exceptionally small, the harmonic factor only becomes smaller.
+
+**Verdict:** PASS.
+
+---
+
+## 2. Repeated selected witnesses are already a matching — PASS
+
+One inactive witness is selected per one-sign interface. A pair selected at two distinct layer translations must have one endpoint in each of those two disjoint layers. If two twice-selected pairs shared a source vertex, both would have to be selected at the unique layer containing that vertex. That contradicts the one-witness-per-interface choice.
+
+Therefore the twice-selected witness family has maximum degree one before any geometric thinning.
+
+**Verdict:** PASS.
+
+---
+
+## 3. Row-parallel `D-O(D^-2)` witnesses are globally bounded — PASS
+
+For two almost-diameter chords `e,f` oriented into the same inverse-`D` cone, write midpoint/vector data `(m_e,r_e)` and `(m_f,r_f)`. The two cross-endpoint distances are at most `D`, so
+
+\[
+2|m_f-m_e|^2+{1\over2}|r_e+r_f|^2\le2D^2.
+\]
+
+If both chord lengths are at least `D-A/D^2` and both directions lie within `L/D` of one fixed oriented direction, then
+
+\[
+{1\over2}|r_e+r_f|
+\ge
+\left(D-{A\over D^2}\right)\cos{L\over D}.
+\]
+
+Hence
+
+\[
+|m_f-m_e|^2\le L^2+o(1).
+\]
+
+Also `|r_e-r_f|<=2L+o(1)`. Both oriented endpoint populations therefore lie in fixed-radius disks. Unit separation gives only `O_{A,L}(1)` possible endpoints and hence only `O_{A,L}(1)` such pairs.
+
+This uses the **diameter bound on cross endpoints**, not midpoint localization from the circumradius theorem. It is therefore independent of the earlier `O(D^(3/4))` midpoint estimate.
+
+**Verdict:** PASS.
+
+---
+
+## 4. Positive-density repeated near-diameter witnesses are eliminated — PASS
+
+The constants in the repeated-witness collapse are uniform over the robust strong-TB1 population, so one fixed pair of constants `A,L` contains every repeated upper witness in the family of Section 3. That family has only `O(1)` edges.
+
+Thus if the selected-witness multiplicity-two count is linear, all but `O(1)` repeated witnesses are lower witnesses with
+
+\[
+1<|xy|\le1+O(D^{-2})
+\]
+
+in the common inverse-`D` row cone. Since twice-selected witnesses are already a matching, no matching loss is required.
+
+At the fixed `M/4` cutoff the valid repeated-side floor is therefore
+
+\[
+>{s_0\over8}D-o(D)
+=(3.08984375\times10^{-7})D-o(D)
+\]
+
+vertex-disjoint ultra-near-unit witnesses.
+
+**Verdict:** PASS.
+
+---
+
+## 5. One actual diameter cannot switch at two one-sign TB1 layers — PASS
+
+Suppose an actual diameter `h` switched at one-sign interfaces `i,j`. Exact layer support puts one endpoint in each layer, so the two inward vectors are negatives:
+
+\[
+n_{h,j}=-n_{h,i}.
+\]
+
+One-sign host forcing gives
+
+\[
+n_{h,i}\cdot w_i\ge(c_H-o(1))D,
+\]
+
+\[
+(-n_{h,i})\cdot w_j\ge(c_H-o(1))D.
+\]
+
+Therefore
+
+\[
+n_{h,i}\cdot(w_i-w_j)\ge(2c_H-o(1))D.
+\]
+
+But the common oriented axis gives `|w_i-w_j|=O(D^-1)`, while `|n_{h,i}|=D`, so the left side is `O(1)`. Contradiction.
+
+The orientation is essential. A merely projective common row line would not give this sign contradiction; the cone-collapse theorem supplies the common oriented opening axis needed here.
+
+**Verdict:** PASS.
+
+---
+
+## 6. Parity-thinned simultaneous exact swaps — PASS
+
+Keep one parity class of one-sign layer indices. No two retained layers are adjacent.
+
+The audited contact cutset/partition theorem implies an old contact crosses exactly one selected cut, so its endpoint levels differ by one. Hence a contact has at most one endpoint in the retained moved layers. If it has one, the corresponding local exact-swap identity preserves its length exactly; otherwise it is unchanged.
+
+By Section 5, an old actual diameter is affected by at most one retained one-sign layer. The local contact-swap theorem then strictly shortens it. Thus every old active constraint is safe under the simultaneous move.
+
+If all previously strict constraints also stayed strict, the resulting source would either have smaller diameter or the same diameter with the same contacts and fewer diameter pairs, contradicting the canonical normalization. Therefore a previously strict pair must obstruct the simultaneous move.
+
+**Verdict:** PASS.
+
+---
+
+## 7. Rejected route: near-unit witness tag gap `<=2` — FAIL and removed
+
+A stronger claim was briefly tested: because a `1+O(D^-2)` strict segment cannot properly cross a physical unit contact edge, perhaps it could not span more than two selected path cuts.
+
+That inference is invalid.
+
+The audited selected O--O cut is represented by a **proper centerline crosscut through contact-edge midpoints / complementary regions**. The centerline is not the union of the physical unit contact segments. Endpoints on opposite shores force the straight witness chord to cross the centerline, but that crossing need not cross any physical unit contact edge.
+
+Therefore the valid geometric lemma
+
+```text
+near-unit strict segment cannot properly cross a unit contact segment
+```
+
+does **not** imply
+
+```text
+near-unit strict pair has short support on the selected-cut path.
+```
+
+The proposed tag-gap note and its regression script were deleted from the current tree. No tag-gap bound is retained.
+
+**Verdict:** FAIL for the tag-localization inference; corrected before promotion.
+
+---
+
+## 8. Current strong-TB1 frontier after audit
+
+The valid one-sign picture is now:
+
+```text
+linear one-sign strong-TB1 population
++ all opening/swap axes in one O(1/D) oriented cone
++ fixed host margin for every switching actual diameter
+
+-> active diameter sets are pairwise disjoint across one-sign layers
+-> after parity thinning, > (s0/4)D exact swaps can be applied simultaneously
+   with every old contact exactly preserved and every touched old diameter shortened
+-> every remaining obstruction is a previously strict pair supported on at most
+   two moved layers
+
+and, for one-witness-per-interface selections,
+
+-> either witness selection is mostly injective
+-> or positive-density reuse is an already vertex-disjoint matching of
+   1+O(D^-2), row-parallel pairs;
+   repeated near-diameter reuse is only O(1).
+```
+
+The next closing obligation is not another active-diameter estimate. It is to understand the sparse inactive constraint system induced by the simultaneous exact-swap coordinates. Every inactive pair depends on at most two moved layers. A useful next theorem would either produce a nonzero subset of swaps satisfying all those one-/two-coordinate strict constraints, or prove that a system blocking every nonzero subset forces additional geometric structure beyond the current ultra-near-unit repeated matching.
+
+**Disposition:** PASS for the repeated-witness collapse, packing collapse, active-diameter injectivity, and parity simultaneous-swap theorem; explicit rejection of the invalid centerline/contact-edge tag-localization shortcut. C-II and Level I remain open.

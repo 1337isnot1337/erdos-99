@@ -1,0 +1,482 @@
+# Target C-II — near-disk locality removes shallow-tooth multiplicity
+
+**Date:** 2026-09-14  
+**Repository branch:** `research/c2-effective-sixpair-sol-20260914`  
+**Target:** Target C-II, full-core near-disk branch  
+**Claim class:** proof-only geometric strengthening of the shallow-tooth penetration theorem  
+**Dependencies:** canonical `C-FULLCORE-NEAR-DISK`; outer-tooth exactness; C26 contact-degree bounds; triangle-freeness  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The existing shallow-tooth theorem loses two factors of two.  It allows one unloaded
+apex to support two shallow teeth, and then allows one selected penetration edge to be
+charged from both endpoints.  In the canonical Type-II near-disk branch neither loss
+is real.
+
+For every fixed
+
+\[
+0<\eta<2-\sqrt3,
+\tag{NL.1}
+\]
+
+and all sufficiently large Type-II survivors:
+
+1. one unloaded apex supports at most one `eta`-shallow two-edge tooth;
+2. two `eta`-shallow tooth apices are never joined by a unit contact; and therefore
+3. one may choose a **distinct** inward penetration contact for every shallow tooth.
+
+Consequently, if `N_sh(eta)` is the shallow-tooth count and `E_pen(eta)` is the number
+of distinct selected penetration contacts, then the previous factor-four estimate
+
+\[
+E_{pen}(\eta)\ge {N_{sh}(\eta)\over4}
+\]
+
+improves to
+
+\[
+\boxed{
+E_{pen}(\eta)\ge N_{sh}(\eta)
+\ge N_2-{d_{out}\over\eta}.
+}
+\tag{NL.2}
+\]
+
+Every selected edge still has a fixed positive inward normal component.
+
+---
+
+## 1. Geometry of one shallow tooth
+
+Let `a-x-b` be a two-edge tooth.  The loaded endpoints `a,b` are consecutive vertices
+of the convex force hull `F`, while the unloaded apex `x` lies in `F`.  Put
+
+\[
+s=|a-b|\ge2-\eta.
+\]
+
+Write
+
+\[
+s=2\cos\alpha,
+\qquad
+0\le\alpha\le\alpha_\eta:=\arccos(1-\eta/2).
+\tag{NL.3}
+\]
+
+Let `n` be the outward unit normal to the hull side `ab`, and let `t` be a unit tangent.
+Because `xa=xb=1`, the vectors from the apex to the two base endpoints are
+
+\[
+\boxed{
+a-x=\sin\alpha\,n+\cos\alpha\,t,
+\qquad
+b-x=\sin\alpha\,n-\cos\alpha\,t,
+}
+\tag{NL.4}
+\]
+
+up to exchanging `a,b` and the sign of `t`.  Thus the apex lies only
+
+\[
+h=\sin\alpha\le h_\eta:=\sin\alpha_\eta
+\tag{NL.5}
+\]
+
+inside the supporting line of `F` containing `ab`.
+
+Condition (NL.1) is exactly
+
+\[
+\boxed{\alpha_\eta<\pi/6.}
+\tag{NL.6}
+\]
+
+---
+
+## 2. Near-disk support normals are local at tooth apices
+
+Canonical `C-FULLCORE-NEAR-DISK` gives, after translating the force hull,
+
+\[
+B(0,r_D)\subset F\subset B(0,R_D),
+\qquad
+{r_D\over D},{R_D\over D}\to{1\over2}.
+\tag{NL.7}
+\]
+
+For a tooth with outward base normal `n`, the support value satisfies
+
+\[
+h_F(n)\ge r_D.
+\]
+
+Since the apex is at inward distance at most `h_eta` from that support line,
+
+\[
+n\cdot x\ge r_D-h_\eta.
+\tag{NL.8}
+\]
+
+Also `|x|<=R_D`.  Therefore, writing `e_x=x/|x|`,
+
+\[
+\boxed{
+n\cdot e_x
+\ge {r_D-h_\eta\over R_D}=1-o(1).
+}
+\tag{NL.9}
+\]
+
+The estimate is uniform over all `eta`-shallow teeth because `eta` is fixed.  Hence
+
+\[
+\boxed{
+\angle(n,e_x)=o(1).
+}
+\tag{NL.10}
+\]
+
+This is the key locality input.  A fixed-length shallow tooth on a diameter-`D`
+near-disk body has its base normal asymptotically equal to the radial direction of its
+apex.
+
+---
+
+## 3. One apex cannot support two shallow teeth
+
+Suppose one unloaded vertex `x` supports two distinct `eta`-shallow teeth, with base
+normals `n_1,n_2` and tangent directions `t_1,t_2`.  Equation (NL.10) gives
+
+\[
+\angle(n_1,n_2)=o(1),
+\qquad
+\angle(t_1,t_2)=o(1).
+\tag{NL.11}
+\]
+
+For tooth `j`, equation (NL.4) says its two loaded contact directions lie within
+`alpha_eta` of `+t_j` and `-t_j`, respectively.  Match the endpoint near `+t_1` with the
+endpoint near `+t_2`, and likewise on the negative side.  Each matched pair of contact
+directions has angular separation at most
+
+\[
+2\alpha_\eta+o(1).
+\tag{NL.12}
+\]
+
+By (NL.6), for all sufficiently large `D`,
+
+\[
+2\alpha_\eta+o(1)<\pi/3.
+\tag{NL.13}
+\]
+
+But two distinct source points at unit distance from the same point `x` have angular
+separation at least `pi/3`, because their mutual distance is at least one.  Therefore
+each matched endpoint pair must in fact be the same source point.  The two teeth have
+the same loaded endpoint pair and hence the same hull side, contradicting distinctness.
+
+Thus
+
+\[
+\boxed{
+\text{every unloaded vertex is the apex of at most one `eta`-shallow tooth.}
+}
+\tag{NL.14}
+\]
+
+This improves the purely local degree/matching bound of two teeth per apex.
+
+---
+
+## 4. Strong inwardness holds throughout `eta<2-sqrt3`
+
+The previous shallow-tooth note proved the inward-contact estimate only under the
+smaller auxiliary threshold `alpha_eta<pi/12`, because that threshold was also being
+used there for the two-teeth-per-apex matching argument.  The inward estimate itself
+needs only (NL.6).
+
+Choose coordinates with the base side on `y=0`, the force hull in `y>=0`, and
+
+\[
+a=(-\cos\alpha,0),
+\quad
+b=(\cos\alpha,0),
+\quad
+x=(0,\sin\alpha).
+\]
+
+Let `w` be any contact neighbor of `x` distinct from `a,b`, and write
+
+\[
+w-x=(X,Y),
+\qquad X^2+Y^2=1.
+\]
+
+Triangle-freeness gives `|w-a|>1` and `|w-b|>1`.  Expanding yields
+
+\[
+\cos\alpha\,|X|-\sin\alpha\,Y<1/2.
+\tag{NL.15}
+\]
+
+Write
+
+\[
+Y=\sin\beta,
+\qquad |X|=\cos\beta,
+\qquad \beta\in[-\pi/2,\pi/2].
+\]
+
+Since `w in F subset {y>=0}`,
+
+\[
+\beta\ge-\alpha.
+\tag{NL.16}
+\]
+
+Equation (NL.15) becomes
+
+\[
+\cos(\alpha+\beta)<1/2.
+\tag{NL.17}
+\]
+
+By (NL.16), `alpha+beta>=0`; by (NL.6) and `beta<=pi/2`,
+
+\[
+\alpha+\beta<2\pi/3.
+\]
+
+Hence (NL.17) forces
+
+\[
+\beta>\pi/3-\alpha.
+\]
+
+Therefore every extra contact has inward component
+
+\[
+\boxed{
+Y>Y_\eta
+:=\sin(\pi/3-\alpha_\eta)>0.
+}
+\tag{NL.18}
+\]
+
+Equivalently,
+
+\[
+\boxed{
+Y_\eta
+={\sqrt3\over2}(1-\eta/2)
+-{1\over2}\sqrt{\eta-\eta^2/4}.
+}
+\tag{NL.19}
+\]
+
+---
+
+## 5. Two shallow apices cannot be contact-adjacent
+
+Suppose distinct `eta`-shallow apices `x,y` satisfy
+
+\[
+|x-y|=1.
+\tag{NL.20}
+\]
+
+Let `n_x,n_y` be the outward normals of their respective tooth bases and put
+
+\[
+m_x=-n_x,
+\qquad m_y=-n_y
+\]
+
+for the inward normals.
+
+Equation (NL.8) gives
+
+\[
+|x|,|y|\ge r_D-h_\eta.
+\tag{NL.21}
+\]
+
+The law of cosines and (NL.20) then show that the polar angle between `x` and `y` is
+`O(D^{-1})`.  Combining this with (NL.10),
+
+\[
+\boxed{
+\|m_x-m_y\|=o(1).
+}
+\tag{NL.22}
+\]
+
+Because tooth apices are unloaded while tooth base endpoints are loaded, `y` is an
+extra contact neighbor of `x`, and `x` is an extra contact neighbor of `y`.  Apply
+(NL.18) in both directions.  With
+
+\[
+u=y-x,
+\qquad |u|=1,
+\]
+
+we obtain
+
+\[
+u\cdot m_x>Y_\eta,
+\qquad
+(-u)\cdot m_y>Y_\eta.
+\tag{NL.23}
+\]
+
+Adding,
+
+\[
+2Y_\eta
+< u\cdot(m_x-m_y)
+\le\|m_x-m_y\|=o(1),
+\]
+
+contradicting the fixed positivity of `Y_eta`.
+
+Therefore
+
+\[
+\boxed{
+\text{the set of `eta`-shallow tooth apices is independent in the contact graph.}
+}
+\tag{NL.24}
+\]
+
+---
+
+## 6. One distinct penetration edge per shallow tooth
+
+Canonical C26 gives every unloaded contact-core vertex degree at least three.  Thus each
+shallow tooth apex `x` has some contact neighbor `w` distinct from its two loaded base
+endpoints.
+
+By (NL.14), different shallow teeth have different apices.  By (NL.24), no selected
+extra contact can join two shallow apices.  Hence an edge selected from one shallow
+apex cannot be selected from any other shallow apex.  The selected edges are therefore
+all distinct.
+
+Together with the exact outer-detour Markov bound,
+
+\[
+N_{sh}(\eta)
+\ge N_2-{d_{out}\over\eta},
+\]
+
+we obtain
+
+\[
+\boxed{
+E_{pen}(\eta)
+\ge N_{sh}(\eta)
+\ge N_2-{d_{out}\over\eta}.
+}
+\tag{NL.25}
+\]
+
+Every selected edge satisfies the local inward projection floor (NL.18).
+
+This is an unweighted physical-edge theorem.  No KKT coefficient lower bound is used.
+
+---
+
+## 7. Numerical consequence at the `g=0.00335` endpoint
+
+Combine this theorem with the proof-only `eta_grid=0.00335` propagation on the present
+branch.  The tooth alternative gives
+
+\[
+{N_2\over D}
+\ge0.436291371870117\ldots-o(1),
+\tag{NL.26}
+\]
+
+and Section 171 gives
+
+\[
+{d_{out}\over D}
+\le0.002803625+o(1).
+\tag{NL.27}
+\]
+
+Choose the convenient fixed threshold
+
+\[
+\eta=0.06<2-\sqrt3.
+\]
+
+Then
+
+\[
+\boxed{
+{N_{sh}(0.06)\over D}
+\ge0.389564288536783\ldots-o(1).
+}
+\tag{NL.28}
+\]
+
+By (NL.25), the same lower bound holds for **distinct penetration contacts**:
+
+\[
+\boxed{
+{E_{pen}(0.06)\over D}
+\ge0.389564288536783\ldots-o(1).
+}
+\tag{NL.29}
+\]
+
+For `eta=0.06`,
+
+\[
+\boxed{
+Y_{0.06}
+={97\sqrt3-\sqrt{591}\over200}
+=0.718492183859473\ldots .
+}
+\tag{NL.30}
+\]
+
+Thus the sum of the local inward-normal projections over the selected distinct edges
+is at least
+
+\[
+\boxed{
+0.279898896424455\ldots D-o(D).
+}
+\tag{NL.31}
+\]
+
+The normals vary around the hull, so (NL.31) is a sum of local scalar penetrations, not
+a single global vector projection.
+
+---
+
+## 8. Frontier effect
+
+The tooth branch is now much more rigid:
+
+```text
+low t + tooth alternative
+ -> >0.38956 D shallow actual teeth
+ -> >0.38956 D distinct unloaded shallow apices
+ -> those apices form a contact-independent set
+ -> >0.38956 D distinct inward unit contacts
+ -> each advances >0.71849 in its own local inward normal
+```
+
+This removes both multiplicity losses in the previous shallow-tooth theorem.  A closing
+argument can now try to charge a linear independent boundary-apex population and a
+linear set of distinct inward contacts directly to
+
+1. the almost pure pentagon closure network,
+2. harmonic-cell attachment capacity, or
+3. a simultaneous source-preserving shear of many disjoint tooth neighborhoods.
+
+The long-side alternative remains separate.  C-II and Level I are still open.

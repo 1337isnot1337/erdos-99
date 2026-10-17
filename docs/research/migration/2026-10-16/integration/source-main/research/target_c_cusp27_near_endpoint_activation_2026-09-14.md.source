@@ -1,0 +1,465 @@
+# Erdős Problem #99 — coefficient-27 near-endpoint activation
+
+**Date:** 2026-09-14  
+**Target:** Target C-II, canonical full-core Type-II branch  
+**Dependency branch:** `research/c2-cusp35-sol-20260914`  
+**Claim class:** proof-only structural refinement of the coefficient-27 scalar endpoint  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The coefficient-27 scalar floor does more than exclude
+`t< C146+0.00452`. Immediately above that floor it forces the outer detour to use
+almost all of its allowed topology budget. The unused detour slack then controls the
+complete Woodall/mixed-rigidity defect
+
+\[
+\kappa={d_H+s_Z\over D}.
+\]
+
+This note quantifies that activation on the narrow band
+
+\[
+\boxed{
+C_{146}+0.00452\le t\le C_{146}+0.00460.
+}
+\tag{A27.1}
+\]
+
+Every survivor in this band satisfies
+
+\[
+\boxed{0.00839<\delta\le0.00860,}
+\tag{A27.2}
+\]
+
+\[
+\boxed{\kappa<0.00084,}
+\tag{A27.3}
+\]
+
+and consequently the loaded diameter graph and bounded defect network are far closer
+to their extremal forms than the coarse bound `kappa<=2R(t)` suggests.
+
+## 1. Scalar feasibility forces `delta>0.00839`
+
+Retain the coefficient-27 scalar function
+
+\[
+F_t^{(27)}(\delta)=
+10t-5\pi-5\delta
++\left(27(\pi+\delta)^2\delta\right)^{1/3}
+-{8\Delta_2\over {9t\over2}-2\pi-2\delta}.
+\tag{A27.4}
+\]
+
+The previous theorem proves that `F_t^(27)` is increasing in both `t` and `delta`
+through the relevant small-detour domain. The present certificate extends the
+`delta`-derivative check through `delta=0.00860` with the explicit lower bound
+
+\[
+{\partial F_t^{(27)}\over\partial\delta}>42.
+\tag{A27.5}
+\]
+
+Set
+
+\[
+t_{60}=C_{146}+0.00460,
+\qquad \delta_0=0.00839.
+\]
+
+Outward rational arithmetic gives
+
+\[
+\boxed{F_{t_{60}}^{(27)}(\delta_0)<-2.5\times10^{-4}.}
+\tag{A27.6}
+\]
+
+Therefore if `t<=t60` and `delta<=delta0`, monotonicity gives
+
+\[
+F_t^{(27)}(\delta)
+\le F_{t60}^{(27)}(\delta_0)<0,
+\]
+
+contradicting scalar feasibility. This proves the lower half of (A27.2).
+
+The atomic feasibility interval gives
+
+\[
+\delta\le\delta_{max}(t)
+={ {9\over2}(t-C_{146})-0.0035\over2}.
+\]
+
+At `t=t60`,
+
+\[
+\delta_{max}=0.00860,
+\]
+
+proving the upper half of (A27.2). The full interval remains inside the disjoint-three-cusp regime.
+
+## 2. Detour activation collapses the topology defect
+
+The low-`t` topology identity is
+
+\[
+2\delta+{\kappa\over2}
+\le R(t):={9t\over2}-2\pi-C_0,
+\qquad
+C_0=2\sqrt{\Delta_2}+0.0035.
+\tag{A27.7}
+\]
+
+At `t=t60`,
+
+\[
+R(t_{60})=4.5(0.00460)-0.0035=0.01720.
+\]
+
+Using `delta>0.00839`,
+
+\[
+\kappa
+\le2R(t)-4\delta
+<2(0.01720)-4(0.00839)
+=0.00084.
+\]
+
+This proves (A27.3).
+
+Equivalently, in terms of unused detour slack,
+
+\[
+\boxed{
+\kappa\le4\bigl(\delta_{max}(t)-\delta\bigr).
+}
+\tag{A27.8}
+\]
+
+Thus the scalar inequality has activated almost the entire topology budget into actual
+metric detour.
+
+## 3. The loaded diameter graph is `>99.9539%` extremal
+
+The exact diameter-graph identities are
+
+\[
+{q\over D}=t+\kappa,
+\qquad
+{h\over D}=t+{s_Z\over D}\ge t.
+\]
+
+Using the lower endpoint `t35=C146+0.00452` and (A27.3),
+
+\[
+\boxed{
+{h\over q}
+\ge {t_{35}\over t_{35}+0.00084}
+>0.99953969-o(1).
+}
+\tag{A27.9}
+\]
+
+If the Woodall graph is in the caterpillar-forest branch, then `d_H<=k`, so every
+nonempty forest satisfies
+
+\[
+\boxed{
+{q\over d_H}
+\ge {t_{35}\over0.00084}
+>2171.46-o(1).
+}
+\tag{A27.10}
+\]
+
+Thus the forest branch has only macroscopic caterpillar components; the alternative is
+the canonical connected odd-unicyclic thrackle.
+
+## 4. Almost every exceptional face is a pentagon
+
+Write
+
+\[
+\varphi={f\over D},
+\qquad
+\chi={Q\over D}.
+\]
+
+The exact low-`t` identities give
+
+\[
+\varphi\ge {C_0\over2}-{t\over4}+{\kappa\over4},
+\tag{A27.11}
+\]
+
+and
+
+\[
+\chi-\varphi
+\le {9t\over4}-\pi-{C_0\over2}-\delta-{\kappa\over4}.
+\tag{A27.12}
+\]
+
+At `t=t60`, with `delta>0.00839` and `kappa>=0`,
+
+\[
+\boxed{
+{Q-f\over D}<0.000211+o(1).
+}
+\tag{A27.13}
+\]
+
+while
+
+\[
+\boxed{
+{f\over D}\ge0.498034422369096\ldots-o(1).
+}
+\tag{A27.14}
+\]
+
+Since `p_5>=2f-Q`,
+
+\[
+\boxed{
+{p_5\over D}
+\ge0.497824422369097\ldots-o(1).
+}
+\tag{A27.15}
+\]
+
+So fewer than about `0.043%` of bounded exceptional faces can have degree at least six.
+Their total terminal occurrence count obeys
+
+\[
+\boxed{
+{B_{\ge6}\over D}<0.001266+o(1).
+}
+\tag{A27.16}
+\]
+
+## 5. Pentagon closure rank: the `kappa` loss cancels
+
+For the pentagon set `P_5`, the audited closure-rank theorem gives
+
+\[
+\operatorname{rank}C_{P_5}
+\ge2p_5-\sigma_C,
+\qquad
+\sigma_C\le s_Z.
+\tag{A27.17}
+\]
+
+The sharper pentagon formula before discarding nonnegative terms is
+
+\[
+{p_5\over D}
+\ge \pi+C_0-{5t\over2}+\delta+{\kappa\over2}-o(1).
+\tag{A27.18}
+\]
+
+Therefore
+
+\[
+{\operatorname{rank}C_{P_5}\over D}
+\ge
+2\pi+2C_0-5t+2\delta
++\kappa-{s_Z\over D}-o(1).
+\]
+
+But
+
+\[
+\kappa-{s_Z\over D}={d_H\over D}\ge0.
+\]
+
+Hence the full topology defect cancels rather than being paid pessimistically:
+
+\[
+\boxed{
+{\operatorname{rank}C_{P_5}\over D}
+\ge2\pi+2C_0-5t+2\delta-o(1).
+}
+\tag{A27.19}
+\]
+
+At the activated band endpoint this yields
+
+\[
+\boxed{
+{\operatorname{rank}C_{P_5}\over D}
+>0.995648844738194-o(1).
+}
+\tag{A27.20}
+\]
+
+This cancellation is stronger than first setting `kappa=0` in the pentagon count and
+then subtracting a separate worst-case stress corank.
+
+## 6. The stopped-train count is almost pinned
+
+Let
+
+\[
+B=Q+4f
+\]
+
+be the bounded-face terminal occurrence count. Since `Q>=f`, (A27.14) gives
+
+\[
+{B\over D}\ge5{f\over D}
+\ge2.490172111845481\ldots-o(1).
+\tag{A27.21}
+\]
+
+The Section-171 endpoint capacity gives
+
+\[
+{B\over D}\le10t-5\pi-5\delta,
+\]
+
+so in the activated band
+
+\[
+\boxed{
+2.490172111845481\ldots
+\le {B\over D}
+<2.491222111845478\ldots
+}
+\tag{A27.22}
+\]
+
+up to `o(1)`.
+
+Since the outer occurrence count is `b/D=pi+delta` and `2T=b+B`,
+
+\[
+\boxed{
+2.820077382717637\ldots
+\le {T\over D}
+<2.820602382717636\ldots
+}
+\tag{A27.23}
+\]
+
+up to `o(1)`. The admissible first-order train-count band has width only
+
+\[
+0.000525D.
+\]
+
+## 7. More outer-to-outer bracing than the coarse bound sees
+
+The endpoint identities
+
+\[
+b=2L_{OO}+L_{OB},
+\qquad
+B=L_{OB}+2L_{BB}
+\]
+
+give
+
+\[
+L_{OO}\ge{b-B\over2}.
+\]
+
+Using the activated lower detour and the Section-171 upper bound for `B`,
+
+\[
+{L_{OO}\over D}
+\ge3\pi+3\delta-5t-o(1).
+\]
+
+Therefore throughout the band
+
+\[
+\boxed{
+{L_{OO}\over D}
+>0.329380270872158-o(1).
+}
+\tag{A27.24}
+\]
+
+Every one of these cuts remains two-sidedly braced by actual diameter edges.
+
+## 8. The tooth / long-side burden recovers its stronger size
+
+The exact physical boundary inequality is
+
+\[
+{N_2+2L_{>2}\over D}
+\ge \pi-t-\kappa-\delta-o(1).
+\tag{A27.25}
+\]
+
+Using (A27.7),
+
+\[
+\kappa+\delta
+\le2R(t)-3\delta.
+\]
+
+The worst point in the activated band is `t=t60`, `delta=0.00839`, giving
+
+\[
+\boxed{
+{N_2+2L_{>2}\over D}
+>1.308249115610349-o(1).
+}
+\tag{A27.26}
+\]
+
+and hence
+
+\[
+\boxed{
+{1\over D}\max\{N_2,L_{>2}\}
+>0.436083038536783-o(1).
+}
+\tag{A27.27}
+\]
+
+On the tooth branch choose the shallowness threshold `eta=0.065`, which remains below
+the geometric limit `2(1-cos(pi/12))`. Since `delta<=0.00860`, the shallow-tooth theorem gives more than `0.3037D` shallow teeth and therefore more than
+
+\[
+\boxed{0.0759D-o(D)}
+\]
+
+distinct inward penetration contacts, each with inward normal component greater than
+`0.711`.
+
+## 9. Frontier effect
+
+A survivor in the first `8e-5`-wide `t` band above the new scalar floor must now realize
+all of the following simultaneously:
+
+```text
+0.00839 < outer detour / D <= 0.00860
+k / D < 0.00084
+loaded diameter graph >99.9539% of Woodall edge density
+forest components, if present, average >2171 loaded vertices
+Q-f < 0.000211 D
+p_5 > 0.497824 D
+pentagon closure rank >0.995648 D
+total stopped trains in a width-0.000525 D band
+outer-to-outer trains >0.329380 D
+max(two-edge teeth, long-side mass) >0.436083 D
+```
+
+This is a materially narrower structural target than the prior coarse low-`t` package.
+The next closure step should exploit simultaneous near-equality, not another scalar
+constant: either classify the almost extremal Woodall graph against the almost-full
+pentagon closure matrix, or show that the activated outer-tooth/long-side population
+cannot coexist with that near-equality.
+
+Run
+
+```bash
+python3 research/verify_target_c_cusp27_near_endpoint_activation.py
+```
+
+for the scalar-negativity, monotonicity, cusp-regime, and topology-slack certificates.
+
+**Disposition:** proof-only near-endpoint structural refinement. C-II and Level I remain open.

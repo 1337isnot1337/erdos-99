@@ -1,0 +1,184 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "7667efbb157e30a44547ef1a79b4f103ba55140a", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_three_circuit_normal_form_2026-09-20.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "b8e4c9eba6b22cc2e91a91d100f8c3aaa9322be2d340081016db222f38a7c2c1"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: relative three-circuit and tetrahedral normal form
+
+Date: 2026-09-20
+
+This note isolates the short-dependency structure of the 210 undirected simple
+`K8` four-cycle metric rows used in the global segment consistency layer. It
+does **not** prove that 45 four-cycle rows are minimal, but it removes a large
+class of possible 44-row shortcuts and gives a much smaller algebraic model for
+the remaining search.
+
+The companion exact verifier is
+
+`research/verify_target_c_support7_global_segment_relative_three_circuit_normal_form_2026_09_20.py`.
+
+## Spaces
+
+Let `SIDE` be the span of the 56 side-triangle flows in `L(K8)`. Let `M` be
+the span of all 210 four-cycle flows modulo `SIDE`. Let `T` be the
+15-dimensional ground star-cycle space generated at root `0`, and put
+
+`Q = M / T`.
+
+The exact ranks are
+
+- `dim M = 85`,
+- `dim T = 15`,
+- `dim Q = 70`.
+
+The verifier obtains ranks modulo the prime `1000003` only when modular
+independence is enough to certify rational independence. Every dependence
+used below is separately checked over `Q` with exact `Fraction` elimination.
+The ambient upper bound `141` is the ordinary cycle-space dimension
+`168 - 28 + 1` of connected `L(K8)`.
+
+For a set `A` of four-cycle rows, define
+
+`delta(A) = r_M(A) - r_Q(A)`.
+
+Then
+
+`delta(A) = dim(span_M(A) intersect T)`.
+
+Thus a four-cycle family is sufficient for the full 15-dimensional ground
+metric space exactly when `delta(A)=15`.
+
+Equivalently, if `C_M` and `C_Q` are the dependency codes of the two column
+representations, then `C_M` is a subcode of `C_Q`, their dimension difference
+is 15, and the minimum size of a sufficient family is the top relative
+generalized Hamming weight of this nested pair. The known 45-row family gives
+the upper bound 45. Proving that no 44-row family has `delta=15` is exactly
+the missing lower bound.
+
+## All three-element quotient circuits
+
+Project the 210 four-cycle rows to `Q`. The verifier proves:
+
+1. every projected row is nonzero;
+2. no two projected rows are parallel;
+3. among the rank-two flats there are exactly `21840` two-point flats and
+   exactly `35` three-point flats;
+4. those 35 three-point flats are precisely the three four-cycles supported on
+   each four-set
+
+   `{0,a,b,c}`, with `{a,b,c}` a three-subset of `{1,...,7}`.
+
+The 35 triples are pairwise disjoint and cover exactly 105 of the 210
+four-cycle rows. There are no other three-element circuits in `Q`.
+
+For the orientation convention in the verifier, the three rows in every local
+block satisfy an exact relation of the form
+
+`-C0 + C1 + C2 in SIDE + T`.
+
+The membership is checked with rational arithmetic, not inferred from a finite
+field calculation.
+
+## Root-0 direct-sum normal form
+
+The 105 four-cycles containing vertex `0` already span all of `M` and all of
+`Q`:
+
+- their `M`-rank is 85;
+- their `Q`-rank is 70.
+
+Their `Q`-kernel therefore has dimension `105-70=35`. The 35 disjoint local
+three-cycle relations above are coordinate-independent, so they form the
+entire kernel. Consequently the quotient representation on the root-0 rows
+splits as a direct sum of 35 two-dimensional local blocks, one block for every
+three-subset of `{1,...,7}`.
+
+This gives an immediate obstruction to any 44-row replacement. A subset of
+root-0 rows has quotient nullity exactly equal to the number of complete local
+triples it contains. Forty-four rows contain at most
+
+`floor(44/3) = 14`
+
+complete triples, so a 44-row family made only of four-cycles containing root
+`0` has `delta <= 14`. It cannot span all 15 ground directions.
+
+Therefore every hypothetical sufficient family of at most 44 four-cycle rows
+must contain at least one four-cycle avoiding root `0`. This restriction is
+global; it does not depend on proximity to the currently selected 45-row
+family.
+
+There is a second useful consequence. If a hypothetical 44-row sufficient
+family is made `M`-independent (any dependent sufficient family can first be
+pruned and then augmented back to 44 independent rows), then its quotient
+kernel has dimension 15. Since all support-three quotient circuits are the 35
+disjoint local triples, at most 14 independent kernel directions can be
+supplied by support-three circuits. At least one required kernel direction
+must therefore use support at least four.
+
+## Cycles avoiding root 0: tetrahedral four-block support
+
+The remaining 105 four-cycles avoid root `0`. Let such a cycle use the
+four-set
+
+`A = {a,b,c,d} subset {1,...,7}`.
+
+The verifier proves an exact normal form in `Q`: its image is a signed sum of
+exactly four root-0 four-cycle images, one from each local block indexed by a
+three-face of `A`, namely
+
+`A\{a}, A\{b}, A\{c}, A\{d}`.
+
+All 105 no-root cycles admit such a `+/-1` four-term representation. Each
+candidate identity is first located in the finite-field direct-sum model and
+then checked exactly over the rationals by reducing the integer difference
+against `SIDE + T`.
+
+Because the 35 local block spans form a direct sum and all four displayed
+components are nonzero, four is also the block-support forced by this normal
+form: a no-root cycle couples four distinct local blocks. This is the first
+cross-block mechanism that a 44-row search must exploit; root-0 local triples
+alone cannot reach relative dimension 15 with only 44 coordinates.
+
+## Verified output
+
+The current verifier returns
+
+```text
+PASS: relative four-cycle 3-circuit structure
+M_rank 85
+T_rank 15
+Q_rank 70
+four_cycles 210
+projective_Q_points 210
+rank2_flats_size2 21840
+rank2_flats_size3 35
+three_circuit_elements 105
+root0_four_cycles 105
+root0_Q_kernel_dimension 35
+root0_kernel_local_triples 35
+max_complete_local_triples_in_44_root0_cycles 14
+no0_four_cycles 105
+no0_exact_four_face_representations 105
+no0_root0_representation_support 4
+```
+
+## Next reduction
+
+The natural next step for the 44-versus-45 metric-basis question is to exploit
+this direct-sum model instead of searching arbitrary 210-column subsets.
+The unknown part is now the interaction between the 35 local two-dimensional
+blocks and the 105 tetrahedral four-block columns. A proof of the rank-density
+inequality
+
+`2 r_M(A) <= 3 r_Q(A)`
+
+for every four-cycle subset `A` would immediately give the desired lower bound:
+if `delta(A)=15`, then `r_Q(A)=r_M(A)-15`, hence the inequality forces
+`r_M(A) >= 45`, and therefore `|A| >= 45`.
+
+The local triples attain equality in that proposed inequality, so the constant
+`3/2` cannot be improved. The verifier in this note does not prove the global
+rank-density inequality; it identifies the exact block/tetrahedron structure
+on which such a proof or finite certificate should operate.
+
+This metric-basis subproblem remains secondary to the direct 3,874-state H6
+endpoint scan. No theorem-state authority file is changed by this result.

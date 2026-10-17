@@ -1,0 +1,61 @@
+# Target C — C73 degree-four rhombic bulk frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_degree_four_rhombic_bulk_2026-08-31.md](../../reports/target_c_degree_four_rhombic_bulk_2026-08-31.md).
+
+C42/C49 show that all but `O(D)` bounded contact faces are strict unit rhombi. C73 upgrades that face statement to a vertex statement.
+
+Let `m` be the force-visible contact-core population, `q=|B|` the loaded boundary
+count, `h` the outer contact-face walk length, and
+
+`Q=sum_bounded(k_f-4)`.
+
+Euler and face counting give
+
+`sum_v(4-deg_C v)=h+Q+4`,
+
+while C49 gives
+
+`h+Q<=4q-4`.
+
+Every bounded quadrilateral face is a strict unit rhombus, so every one of its angles
+lies in `(pi/3,2pi/3)`. An unloaded interior degree-three vertex therefore cannot be
+surrounded only by quadrilateral faces: its three face angles would each be `<2pi/3`
+but must sum to `2pi`.
+
+The total boundary length of bounded nonquadrilateral faces is at most `5Q`. Hence
+
+`N3<=h+5Q`.
+
+Loaded vertices have degree at most three and unloaded vertices have degree `3,4,5`.
+The curvature identity then gives
+
+`N5<=4Q+3q-4`.
+
+Therefore all but at most
+
+`h+9Q+3q-4 <=39q-40 <39pi D`
+
+contact-core vertices are interior degree-four vertices incident to four bounded strict
+unit-rhombus faces.
+
+## Interaction with C72
+
+C72 radial cut transport says the near-zero single-port phase sends `Omega(D)` stress
+through every graph layer and places almost all alpha mass on graph-outward, nearly
+maximal-radial-progress contacts. C73 independently says there are only `O(D)` local
+vertices where the carrier can use outer-boundary interaction, a nonquadrilateral
+face, or unloaded degree three/five.
+
+Thus a quadratic-size carrier is overwhelmingly a clean degree-four rhombic medium,
+even if geometrically essential transverse edges have tiny alpha weight.
+
+## Next target
+
+Classify positive equilibrium through a clean degree-four strict-rhombus neighborhood
+and propagate it through a connected clean region. The desired outcome is a rhombic
+transport theorem: high stress either pays C68 transverse energy or follows a
+fixed-direction strip until one of the `O(D)` C73 exceptional sites.
+
+C73 does not assume or assert equality of opposite-edge stresses.

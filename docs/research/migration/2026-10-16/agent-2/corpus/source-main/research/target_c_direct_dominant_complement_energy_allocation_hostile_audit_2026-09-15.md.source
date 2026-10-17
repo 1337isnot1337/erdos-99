@@ -1,0 +1,312 @@
+# Hostile audit — direct dominant/complement outer-energy allocation
+
+**Date:** 2026-09-15  
+**Reviewed:**
+- `research/target_c_direct_dominant_complement_energy_allocation_2026-09-15.md`
+- `research/verify_target_c_direct_dominant_complement_energy_allocation.py`
+
+**Disposition:** **PASS at proof-only full-core Type-II scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The candidate raises the current safe low-`t` floor to
+
+\[
+\boxed{t=(q-k)/D\ge1.83236-o(1)}.
+\]
+
+The main audit risk is double counting the outer detour budget.  A tempting stronger
+inequality would add the joint capacity/phase function `Phi(K)` directly to the
+complement bracing energy.  That is invalid because `Phi` already uses the whole
+route detour through the capacity inequality `d_i>=n_i-s_i`.  The final candidate does
+**not** make that move.  It adds only energies of two disjoint retained physical edge
+classes and uses capacity trimming only to lower-bound their total retained mass.
+
+---
+
+## 1. Complement train-count bound
+
+Let `C=(T-q/2)/D` and let `M` be the dominant exact `pi/3` orbit train mass.  The
+standard orbit/Mantel inequality gives
+
+\[
+M\ge4\Delta_2/C.
+\]
+
+Hence the complete train mass outside the dominant windows is
+
+\[
+N_c\le C+(t+\kappa)/2-4\Delta_2/C.
+\]
+
+The function `C-4Delta2/C` is strictly increasing for `C>0`.  With `C<=U`,
+
+\[
+N_c\le U+(t+\kappa)/2-4\Delta_2/U=N_*.
+\]
+
+No atomic semicontinuity or assumption that all train mass is atomic is used.
+
+**Verdict:** PASS.
+
+---
+
+## 2. Dominant capacity trimming
+
+If `K` is the actual dominant-window outer occurrence mass, route `i` contains `n_i`
+such occurrences and has loaded side length `s_i` and detour `d_i=ell_i-s_i`.
+Retaining weight `min(n_i,s_i)` loses at most
+
+\[
+(n_i-s_i)_+\le d_i.
+\]
+
+Summing gives retained dominant mass
+
+\[
+z\ge K-\delta.
+\]
+
+The retained weights are dominated by the round loaded-hull perimeter measure.  The
+three-direction bathtub theorem therefore charges only the selected dominant edge
+occurrences and gives
+
+\[
+E_{dom}\ge F(z)=z-6\sin(z/6).
+\]
+
+This is an additive **edge-energy** statement, unlike the later joint capacity theorem.
+
+**Verdict:** PASS.
+
+---
+
+## 3. Complement pair trimming
+
+The complement class carries
+
+\[
+\pi+\delta-K+o(1)
+\]
+
+outer terminal occurrences.  If `P_c` complement trains have two outer terminals,
+then all other complement trains contribute at most one outer occurrence, so
+
+\[
+P_c\ge\pi+\delta-K-N_c-o(1).
+\]
+
+The complement theorem's pair-capacity trimming discards at most `delta+o(1)` pair
+mass, yielding
+
+\[
+p\ge\pi-K-N_c-o(1)
+\ge\pi-K-N_*-o(1).
+\]
+
+The cancellation of the `+delta` here is legitimate: it comes from the extra outer
+walk length `b-per(F)`, while the trimming loses at most that same amount.
+
+The retained complement pairs are partitioned into three projective sectors.  Within
+one sector trains do not cross; Section 157 supplies two-sided diameter bracing.  The
+already-audited noncrossing endpoint-capacity lemma then gives
+
+\[
+E_{comp}\ge J(p)=2p-6\sin(p/3)
+\]
+
+for the relevant `p<1` range.
+
+**Verdict:** PASS.
+
+---
+
+## 4. The two energy payments are disjoint
+
+Dominant selected edge occurrences belong to trains inside shrinking windows around
+one exact atomic orbit.  Complement selected terminal edges belong to complete trains
+outside those windows.  A physical contact edge belongs to exactly one complete
+stopped train.  Therefore no selected edge occurrence can belong to both classes.
+
+Thus
+
+\[
+d_{out}\ge E_{dom}+E_{comp}
+\]
+
+is a genuine sum of disjoint edge-energy contributions.
+
+This is the decisive distinction from the rejected `Phi(K)+J(p)` shortcut.  The final
+proof never adds a total-route-capacity payment to a complement edge payment.
+
+**Verdict:** PASS.
+
+---
+
+## 5. Cancellation of the unknown `K`
+
+The two independent retained-mass bounds give
+
+\[
+z+p\ge(K-\delta)+(\pi-K-N_*)
+=\pi-\delta-N_*.
+\]
+
+If either individual right-hand side is negative, replacing it by zero only increases
+the sum because
+
+\[
+\max(a,0)+\max(b,0)\ge a+b.
+\]
+
+Hence the candidate's
+
+\[
+W=\pi-\delta-N_*
+\]
+
+is valid without a hidden positivity assumption on either class.
+
+Since `F,J` are increasing and convex on the relevant ranges, the least disjoint
+energy compatible with `z+p>=W` is the infimal convolution
+
+\[
+\mathcal E(W)=\min_{z+p=W}[F(z)+J(p)].
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 6. Allocation optimizer
+
+On the interval used by the proof, the optimizer is interior and unique.  The stationarity
+condition is
+
+\[
+F'(z)=J'(p),
+\qquad z+p=W,
+\]
+
+or
+
+\[
+1-\cos(z/6)=2-2\cos(p/3).
+\]
+
+The verifier solves this monotone equation directly.  At the scalar crossing it finds
+approximately
+
+\[
+z=1.6178670508,\qquad p=0.5711331785,
+\]
+
+well inside
+
+\[
+0<z<\pi,\qquad0<p<1.
+\]
+
+Thus neither the dominant bathtub range nor the complement `p<1` branch is being used
+outside its proved interval.
+
+**Verdict:** PASS.
+
+---
+
+## 7. Feasible-region endpoint
+
+With
+
+\[
+U={9t\over2}-2\pi-2\delta-\kappa/2,
+\]
+
+one has
+
+\[
+W=\pi-\delta-U-(t+\kappa)/2+4\Delta_2/U.
+\]
+
+At fixed `t,delta`,
+
+\[
+\partial_\kappa W=2\Delta_2/U^2>0,
+\]
+
+so the contradiction margin is weakest at `kappa=0`.
+
+At fixed `t,kappa`,
+
+\[
+\partial_\delta W=1+8\Delta_2/U^2
+\le2.9895404541\ldots .
+\]
+
+The envelope derivative of the infimal convolution is the common marginal cost and is
+at most
+
+\[
+F'(\pi)=1-\sqrt3/2.
+\]
+
+Therefore
+
+\[
+\partial_\delta[\mathcal E(W)-\delta]
+<0.401-1<0.
+\]
+
+The weakest feasible point is consequently
+
+\[
+\kappa=0,
+\qquad\delta=R_{50}(t)/2,
+\qquad U=C_0.
+\]
+
+No numerical grid is needed for this reduction.
+
+**Verdict:** PASS.
+
+---
+
+## 8. Numerical certificate
+
+Pyroam independently reproduced the scalar optimization.  The committed Decimal
+verifier checks
+
+\[
+H_0(1.83236)=1.7920\times10^{-5}>0,
+\]
+
+\[
+H_0(1.83237)=-5.5733\times10^{-6}<0,
+\]
+
+and brackets the unique zero by
+
+\[
+1.83236762774382989752
+<t_*<
+1.83236762774382989753.
+\]
+
+The same verifier checks the derivative product used in the feasible-region reduction
+is below `0.401`.
+
+**Verdict:** PASS.
+
+---
+
+## 9. Scope and remaining gap
+
+The theorem is still proof-only because it composes proof-only train-measure and
+low-`t` inputs.  It does not promote near-diameter bracing pairs to exact diameter
+edges, bound diameter-edge reuse across many complement trains, or construct a
+same-cardinality diameter-decreasing competitor.
+
+The new result does, however, remove the artificial separate worst-case optimization
+of dominant and complement outer populations.  Any further scalar progress must use a
+new constraint on the allocation itself, not repeat the same total-mass ledger.
+
+**Final verdict:** PASS at stated proof-only scope.  C-II remains open.

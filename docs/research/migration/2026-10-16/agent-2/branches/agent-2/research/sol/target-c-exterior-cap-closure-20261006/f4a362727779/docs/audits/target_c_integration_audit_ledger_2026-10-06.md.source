@@ -1,0 +1,96 @@
+<!-- theorem-state: {"artifact_id":"ART-EEF46B36595C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C independent audit and promotion ledger — 2026-10-06
+
+This ledger tracks immutable source snapshots, audit verdicts, and canonical transactions for the independent integration run. It records exact claim scope; a PR description or verifier pass alone is not an audit.
+
+## Authoritative state and snapshots
+
+- Run started from `origin/main` 583203ac1dc1d7bc49f0ca0574d75e85f9de2ee1, state `2026-10-05.audit.62`.
+- Promotion PR #728 merged to `main` as ae6697b649d5516cfe36cc855a89948940f9ce14, state `2026-10-06.audit.63`.
+- Promotion PR #729 merged to `main` as 4249c5abc91bbb85fb9c22d650892bf0b53d0f33, state `2026-10-06.audit.64`.
+- Promotion PR #730 merged to `main` as 35f5843ab9f5d11327d0f4cc803ed00707806ae7, state `2026-10-06.audit.65`.
+- Audit cycle 2 used PR #722 branch `research/target-c-residual-closure-20261005` at ed535f5a3a45e3921d91a29c38a0cb37f1d27921.
+- Audit cycle 3 is based on main `4249c5abc91bbb85fb9c22d650892bf0b53d0f33`, state `2026-10-06.audit.64`; its Worker 1 source snapshot is recorded below.
+- Audit cycle 4 is based on main `35f5843ab9f5d11327d0f4cc803ed00707806ae7`, state `2026-10-06.audit.65`; its Worker 1 source snapshot is recorded below.
+- No discovery-worker branch or source worktree was modified.
+
+## Completed audit cycle 1 — Worker 1 owner / terminal / wall packet
+
+| Field | Record |
+| --- | --- |
+| Source branch and snapshot | `research/sol/target-c-owner-order-closure-20261006` at `51853ce9752c065663fd407289c6d46adc767f69` |
+| Current source branch tip at refresh | `ece938d9`; later commits did not modify the audited reports or verifiers |
+| Independently audited claims | Terminal O--O capacity; disjoint-crosscut owner-region recurrence; acute independent-binary laminarity; narrow-window binary loaded-witness pocket budget; terminal O--O population depletion and face ledger; one-vertex convex unit-wall shield |
+| Verdict | PASS for all six with exact scopes; the terminal span constant is universal/nonexplicit and its onset threshold may depend on the sequence |
+| Canonical IDs | `C-OO-TERMINAL-OWNER-CAPACITY`, `C-OWNER-REGION-TREE-RECURRENCE`, `C-ACUTE-BINARY-OO-LAMINARITY`, `C-BINARY-LOADED-WITNESS-POCKET-BUDGET`, `C-OO-TERMINAL-TRAIN-POPULATION`, `C-ONE-VERTEX-CONVEX-WALL-SHIELD` |
+| Regressions promoted | `C-CROSSING-MULTISHEAR-INDEPENDENT-OWNER-REGRESSION`, `C-TWO-WALL-DELETION-EXTERIOR-SHIELD-REGRESSION`, `C-ABSTRACT-OWNER-HORN-PACKET` |
+| Claims withheld | Loaded-run/root overlap allocation; common-diameter hub / fourteen-cut tube estimate; source realization of any Horn packet |
+| Verification | Four new exact checkers passed; all 45 registered canonical certificates passed; state, route, generated-view, PR-transaction, and diff checks passed |
+| Canonical transaction | PR #728, squash merge `ae6697b649d5516cfe36cc855a89948940f9ce14` |
+| Frontier effect | In `q/D -> pi`, `u_B=o(D)`, complete stopped O--O train populations are `o(D)`; no linear O--O bank remains. The exact face inequality leaves smaller linear banks possible. C-II and Level I remain open. |
+
+Audit artifact: `docs/audits/target_c_owner_order_and_terminal_capacity_promotion_audit_2026-10-06.md`.
+
+## Completed audit cycle 2 — PR #722 finite packet endpoints
+
+| Field | Record |
+| --- | --- |
+| Source branch and snapshot | `research/target-c-residual-closure-20261005` at `ed535f5a3a45e3921d91a29c38a0cb37f1d27921` |
+| Source artifacts | `target_c_contact_budget_diameter_exchange_2026-10-05.md`; `target_c_one_spare_site_contact_minimality_endpoint_2026-10-05.md` |
+| Independently audited claims | Exact finite contact-budget / diameter-pair endpoint; at-most-two-new-contact opening lemma; one-site surrounding condition |
+| Verdict | PASS for three finite lemmas. The one-spare-site exclusion implication is subsumed by the stronger contact-budget endpoint. Packet-existence and residual-cage applications remain unreviewed. |
+| Canonical IDs proposed | `C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT`, `C-TWO-CONTACT-PACKET-OPENING`, `C-ONE-SITE-CONTACT-SURROUND` |
+| Verification | Direct proof audit; no computation needed. The source branch is unmodified. |
+| Canonical transaction | PR #729, squash merge `4249c5abc91bbb85fb9c22d650892bf0b53d0f33` |
+| Frontier effect | No source-realized packet is supplied. Candidate moves must count all inserted-to-retained contacts and actual diameter pairs; one or two new contacts cannot balance an old-contact deletion under strict upper slack. |
+
+Audit artifact: `docs/audits/target_c_contact_budget_diameter_exchange_independent_audit_2026-10-06.md`.
+
+## Completed audit cycle 3 — Worker 1 regular-shell barrier payment
+
+| Field | Record |
+| --- | --- |
+| Source branch and snapshot | `research/sol/target-c-owner-order-closure-20261006` at `ece938d957c42f6719276e0a2b4dc51d25dc22ea` |
+| Source artifacts | `target_c_odd_shell_single_vertex_barrier_payment_2026-10-06.md`; `verify_target_c_odd_shell_single_vertex_barriers_2026_10_06.py` |
+| Independently audited claims | One isolate blocks at most two adjacent proposals; full odd-shell blocking requires at least `(q+1)/2` collar isolates; exact matching/singleton blocker family; strict same-cardinality whole-source sub-`D_q` competitor for its quadratic filling |
+| Verdict | PASS for the blocker-payment theorem and the explicit nonglobal-family regression. Analytic all-odd-q scope is separate from the finite verifier samples. No global-optimality claim survives for the displayed shell family. |
+| Canonical disposition | Promote `C-REGULAR-SHELL-BLOCKER-PAYMENT`; record `C-REGULAR-SHELL-BARRIER-NONGLOBAL-FAMILY` as a regression |
+| Verification | Self-contained interval verifier passed for q=65,101,201; 61,680 wall/collar pairs; 27,597 blocker-site relations; 820 exact Fourier-factor checks |
+| Frontier effect | Quantifies the isolate population needed to block every regular-shell one-site proposal and kills the explicit blocked quadratic filling. Does not bound arbitrary macroscopic-container capacity or change the finite-move endpoint. |
+| Canonical transaction | PR #730, squash merge `35f5843ab9f5d11327d0f4cc803ed00707806ae7` |
+
+Audit artifact: `docs/audits/target_c_odd_shell_barrier_payment_independent_audit_2026-10-06.md`.
+
+The source branch later advanced to `e6d04c4d58f3c104d82714375fe4e886ea864c11`; that diff does not modify the audited odd-shell report or verifier.
+At `1ca17812adc0b8741a423d0a19fae61d3fa2332a`, the author replaced the odd-shell verifier's imported interval helpers with self-contained copies; the theorem statement was unchanged.
+
+## Completed audit cycle 4 — Worker 1 collective wall shield and D(8) capacity regression
+
+| Field | Record |
+| --- | --- |
+| Source branch and snapshot | `research/sol/target-c-owner-order-closure-20261006` at `e6d04c4d58f3c104d82714375fe4e886ea864c11` |
+| Source artifact | `target_c_collective_wall_deletion_and_global_capacity_regression_2026-10-06.md`, Sections 1--4 |
+| Independently audited claims | Collective exterior shield for pairwise-separated deleted wall vertices; `ceil(M/25)` eligible-deletion bank for a 1-separated candidate set; finite packet endpoint; exact D(8) heptagon-plus-center capacity obstruction |
+| Verdict | PASS for collective shield and narrowed deletion bank; finite endpoint PASS — already subsumed by `C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT`; D(8) example REGRESSION VALID. Section 5 common-angle/hexagon claims are withheld for separate audit. |
+| Canonical disposition | Promote `C-COLLECTIVE-WALL-EXTERIOR-SHIELD` and `C-COLLECTIVE-WALL-DELETION-BANK`; record `C-HEPTAGON-WALL-CAPACITY-REGRESSION` |
+| Verification | Self-contained exact cyclotomic verifier passed for all 28 source pairs, seven contacts, seven actual diameters, PSD core stress rank four, mixed core rank eleven, 28 independent wall-deletion sets and 14 sets with pairwise distance at least two |
+| Literature | Inspected local original Bezdek--Fodor PDF/transcription, Theorem 1.1 p.106; publisher DOI record checked. Global optimality is a literature premise, not a computed result. |
+| Frontier effect | A collective shield is available once deleted vertices are pairwise at least two apart. The generic finite replacement conclusion was already Audit.64. D(8) shows this geometry does not force any capacity gain for small sources; sufficiently-large capacity and the face-coupled endpoint remain open. |
+| Canonical transaction | Audit.66 promotion pending |
+
+Audit artifact: `docs/audits/target_c_collective_wall_capacity_independent_audit_2026-10-06.md`.
+
+The source report's Section 5 and linked common-angle amplitude candidate are not part of this verdict.
+
+## Open audit queue at latest refresh
+
+| Priority | Immutable snapshot | Candidate | Status |
+| --- | --- | --- | --- |
+| High | Worker 1 branch `research/sol/target-c-owner-order-closure-20261006` at `1ca17812adc0b8741a423d0a19fae61d3fa2332a` | Curved-wall isolate-preserving inward release; then common-angle Boolean/hexagon claims and linked amplitude test | Not audited; collective wall Sections 1--4 audited from immutable `e6d04c4d58f3c104d82714375fe4e886ea864c11` |
+| High | Worker 2 branch `research/sol/target-c-exterior-cap-closure-20261006` at `e1f799fd48404e711f70def91cf180bd7a32efed` | Latest exterior-cap separator/refill update; compare it with the original packet-release/cut claims at the same branch | Not audited |
+| High | PR #722 branch `research/target-c-residual-closure-20261005` at `ed535f5a3a45e3921d91a29c38a0cb37f1d27921` | Residual-cage release/refill, contact-opening transversal, noncontact-wall shield, macroscopic return depth, unloaded-stress transversal, loaded-attachment lattice obstruction, and exact regressions | Not audited as a group; continue one module at a time |
+| Later | Open older PRs #624, #662--664, #666--668, #671--672, #677 | Check against new canonical bounds for redundancy, empty regimes, and unique reusable mathematics | Triage after current live claims |
+
+## Operational boundary
+
+The first audited source branch advanced after snapshot. The added capped-wall, curved-wall, and common-angle modules are separate claims; this audit did not import or promote them. The newly fetched exterior-cap branch is also preserved as a separate exact tip. Research branches remain intact. The initial user worktree stayed on its pre-existing research branch.

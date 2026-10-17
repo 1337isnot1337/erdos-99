@@ -1,0 +1,452 @@
+#!/usr/bin/env python3
+"""Full-span one-cycle lift obstruction for k=7 C:(5,12,12), d6=5.
+
+The sole remaining profile in the current eight-no-root split is
+
+    C: D=-1, p=12, (d_v,q,s)=(5,12,12),
+
+and its only unresolved six-row shadow has d6=5. Replacement-functional
+accounting forces six-row singleton-functional extra rank at least ten.
+For a d6=5 canonical state with c complete blocks the canonical relation
+column span has rank c-5 inside a coordinate space of dimension c+5, so the
+quotient containing replacement functionals has dimension exactly ten.
+Thus every surviving shadow must attain the full quotient rank ten.
+
+An actual eight-row target restores two distinct deleted cycles. In each
+one-cycle restoration every one of the target's twelve singleton blocks is
+still compatible. Their six-row replacement functionals already span the
+full ten-dimensional quotient. Hence, for each restored cycle, the set of all
+six-row compatible singleton blocks retained by that seven-row lift must also
+have functional extra rank ten. Therefore an actual target requires at least
+two distinct remaining cycles admitting qualifying seven-row lifts whose
+retained singleton functionals have full extra rank ten.
+
+This verifier exhausts the same exact 325955-representative six-row
+augmentation cover as the pair-retention audit. For every d6=5 six-row state
+that itself attains full singleton-functional rank ten it enumerates every
+qualifying one-cycle lift, computes the functional rank retained by that lift,
+and counts distinct cycles with at least one full-span lift. If every six-row
+state has full-span-lift cycle multiplicity at most one, the target is
+impossible. This is a weaker condition than the pairwise-intersection audit,
+but it is linear rather than quadratic in the number of qualifying lifts.
+
+Seven-row profiles are updated incrementally from the six-row profile. The
+optional --crosscheck flag recomputes the corresponding full block profiles
+and asserts equality of candidate coefficient lines, complete sets, and
+singleton capacities on small validation ranges.
+
+All ranks use P=2^127-1. Lucas-Lehmer primality plus the observed Hadamard
+bound certifies every functional-rank decision over Q.
+"""
+
+from collections import Counter
+from pathlib import Path
+import argparse
+import contextlib
+import importlib.util
+import io
+from functools import lru_cache
+
+HERE = Path(__file__).resolve().parent
+BASE = HERE / "verify_target_c_support7_global_segment_relative_eight_noroot_k7_C_d5q12_d5_pair_retention_functional_2026_09_21.py"
+
+spec = importlib.util.spec_from_file_location("e99_C_d5_pair_retention_base", BASE)
+P = importlib.util.module_from_spec(spec)
+with contextlib.redirect_stdout(io.StringIO()):
+    spec.loader.exec_module(P)
+
+D5, E = P.D5, P.E
+B, S, R = P.B, P.S, P.R
+STATE_INDEX = P.STATE_INDEX
+
+
+@lru_cache(maxsize=None)
+def _extended_block_profile_cached(old_values, xy):
+    return P.extended_block_profile(old_values, xy)
+
+
+def extended_block_profile(old_values, xy):
+    old_key = None if old_values is None else tuple(tuple(v) for v in old_values)
+    return _extended_block_profile_cached(old_key, tuple(xy))
+
+
+def relation_rows_line_with_alphas(ext_global, touched, states, alphas):
+    rows = [S.COMPLETE_T[b] for b, state in zip(touched, states) if state == 7]
+    for alpha in alphas:
+        tvec = [
+            sum(alpha[i] * R.MCOORD[e][70 + j] for i, e in enumerate(ext_global))
+            for j in range(15)
+        ]
+        for block, state in zip(touched, states):
+            vx = sum(alpha[i] * R.QCOMP[e][block][0] for i, e in enumerate(ext_global))
+            vy = sum(alpha[i] * R.QCOMP[e][block][1] for i, e in enumerate(ext_global))
+            beta = R.solve_local_coeffs_int(R.STATES[state][0], (-vx, -vy))
+            ids = R.BLOCKS[block]
+            for local_index, coefficient in enumerate(beta):
+                if coefficient:
+                    for j in range(15):
+                        tvec[j] += coefficient * R.MCOORD[ids[local_index]][70 + j]
+        rows.append(tuple(tvec))
+    return rows
+
+
+def singleton_functional_with_alphas(ext_global, block, state, complete_index, c, alphas):
+    out = [0] * (c + 5)
+    out[complete_index[block]] = 1
+    for i, alpha in enumerate(alphas):
+        vx = sum(alpha[j] * R.QCOMP[e][block][0] for j, e in enumerate(ext_global))
+        vy = sum(alpha[j] * R.QCOMP[e][block][1] for j, e in enumerate(ext_global))
+        beta_complete = R.solve_local_coeffs_int(7, (-vx, -vy))
+        beta_singleton = R.solve_local_coeffs_int(state, (-vx, -vy))
+        diff = [beta_singleton[j] - beta_complete[j] for j in range(3)]
+        lam = diff[0]
+        assert diff == [lam, -lam, -lam]
+        out[c + i] = -lam
+    return tuple(out)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument(
+        "--cover-cache",
+        help="optional pickle containing (keys, six_augmentation_cover, local_cycle_info)",
+    )
+    ap.add_argument("--cover-start", type=int, default=0)
+    ap.add_argument("--cover-end", type=int)
+    ap.add_argument(
+        "--crosscheck",
+        action="store_true",
+        help="recompute seven-row block profiles and assert incremental equality",
+    )
+    args = ap.parse_args()
+
+    assert R.lucas_lehmer_127()
+    assert max(sum(x * x for x in row) for row in S.COMPLETE_T) == 12
+    assert R.P * R.P > 12 ** 15
+
+    keys, cover, info = B.load_cover(args.cover_cache)
+    info = tuple(
+        tuple((block, int(x), int(y)) for block, x, y in cycle)
+        for cycle in info
+    )
+    local_to_global, _ = S.local_cycle_data(keys)
+    assert len(cover) == 325955
+
+    start = args.cover_start
+    end = len(cover) if args.cover_end is None else args.cover_end
+    assert 0 <= start <= end <= len(cover)
+
+    all_cycles = set(range(105))
+    cycle_maps = tuple({block: (x, y) for block, x, y in cycle} for cycle in info)
+    cycle_blocks_all = tuple(set(m) for m in cycle_maps)
+    rank_cache = {}
+
+    def deficiency(complete_set):
+        complete_set = tuple(sorted(complete_set))
+        cached = rank_cache.get(complete_set)
+        if cached is not None:
+            return cached
+        value = len(complete_set) - R.rank_mod(
+            [S.COMPLETE_T[block] for block in complete_set]
+        )
+        rank_cache[complete_set] = value
+        return value
+
+    synchronized_states = 0
+    functional_witness_states = 0
+    seven_threshold_lifts = 0
+    seven_d4_lifts = 0
+    seven_d5_lifts = 0
+    retained_extra_census = Counter()
+    full_span_lifts = 0
+    full_span_cycle_multiplicity = Counter()
+    max_full_span_cycles = 0
+    two_cycle_examples = []
+    full_span_last_coordinate = Counter()
+    full_span_retained_loss = Counter()
+    crosschecks = 0
+    max_functional_norm2 = 0
+    max_functional_width = 0
+    max_singleton_multiplicity = 0
+
+    for cover_index, ext6 in enumerate(cover[start:end], start=start):
+        values6, lines6, empty6, singles6 = S.block_profile(ext6, info)
+        ext6_global = tuple(local_to_global[i] for i in ext6)
+        values6_blocks = set(values6)
+
+        for line6 in lines6:
+            if sum(x != 0 for x in line6) < 2:
+                continue
+            synchronized_states += 1
+
+            complete6 = tuple(
+                sorted(block for block in values6 if empty6[block] != line6)
+            )
+            d6 = deficiency(complete6)
+            if d6 != 5:
+                continue
+            rank6 = len(complete6) - d6
+
+            singleton_state6 = {}
+            for block in complete6:
+                options = tuple(
+                    (1, 2, 4)[i]
+                    for i, local_line in enumerate(singles6[block])
+                    if local_line is None or local_line == line6
+                )
+                max_singleton_multiplicity = max(
+                    max_singleton_multiplicity, len(options)
+                )
+                if options:
+                    assert len(options) == 1
+                    singleton_state6[block] = options[0]
+            if len(singleton_state6) < 10:
+                continue
+
+            touched6 = tuple(sorted(values6))
+            complete6_set = set(complete6)
+            canonical_states6 = tuple(
+                7 if block in complete6_set else 0 for block in touched6
+            )
+            alphas6 = R.nullspace_int(R.rowspace_key((line6,)), 6)
+            assert len(alphas6) == 5
+            rows6 = relation_rows_line_with_alphas(
+                ext6_global, touched6, canonical_states6, alphas6
+            )
+            assert R.rank_mod(rows6) == rank6
+            transposed6 = [
+                tuple(rows6[j][k] for j in range(len(rows6)))
+                for k in range(15)
+            ]
+            assert D5.F.rank_mod_rows(transposed6) == rank6
+
+            complete_index6 = {block: i for i, block in enumerate(complete6)}
+            functionals = {
+                block: singleton_functional_with_alphas(
+                    ext6_global,
+                    block,
+                    state,
+                    complete_index6,
+                    len(complete6),
+                    alphas6,
+                )
+                for block, state in singleton_state6.items()
+            }
+            functional_rows = transposed6 + list(functionals.values())
+            extra6 = D5.F.rank_mod_rows(functional_rows) - rank6
+            if extra6 < 10:
+                continue
+            # The quotient dimension is (c+5)-(c-5)=10, so threshold
+            # survivors necessarily attain the full quotient rank exactly.
+            assert extra6 == 10
+            functional_witness_states += 1
+
+            max_functional_width = max(max_functional_width, len(rows6))
+            for row in functional_rows:
+                max_functional_norm2 = max(
+                    max_functional_norm2, sum(x * x for x in row)
+                )
+
+            empty_blocks = {
+                block for block in values6 if empty6[block] == line6
+            }
+            generator_blocks = {
+                block
+                for block in values6
+                if empty6[block] == line6
+                or any(local_line == line6 for local_line in singles6[block])
+            }
+            zero_line = line6 + (0,)
+            full_cycles = set()
+
+            for cycle in all_cycles.difference(ext6):
+                cycle_map = cycle_maps[cycle]
+                cycle_blocks = cycle_blocks_all[cycle]
+                profiles = {
+                    block: extended_block_profile(values6.get(block), xy)
+                    for block, xy in cycle_map.items()
+                }
+
+                candidates = set()
+                if generator_blocks - cycle_blocks:
+                    candidates.add(zero_line)
+                for block in cycle_blocks & values6_blocks:
+                    empty7, singles7 = profiles[block]
+                    if empty6[block] == line6 and empty7 is not None:
+                        candidates.add(empty7)
+                    for i, local6 in enumerate(singles6[block]):
+                        if local6 == line6 and singles7[i] is not None:
+                            candidates.add(singles7[i])
+                candidates = {
+                    line7
+                    for line7 in candidates
+                    if S.primitive_line(line7[:6]) == line6
+                }
+
+                if args.crosscheck:
+                    values7_ref, lines7_ref, empty7_ref, singles7_ref = B.block_profile(
+                        ext6 + (cycle,), info
+                    )
+                    expected = {
+                        line7
+                        for line7 in lines7_ref
+                        if S.primitive_line(line7[:6]) == line6
+                    }
+                    assert candidates == expected, (
+                        cover_index,
+                        ext6,
+                        line6,
+                        cycle,
+                        candidates,
+                        expected,
+                    )
+
+                for line7 in candidates:
+                    added = set(cycle_blocks - values6_blocks)
+                    for block in empty_blocks:
+                        empty7 = (
+                            profiles[block][0]
+                            if block in cycle_blocks
+                            else zero_line
+                        )
+                        if empty7 != line7:
+                            added.add(block)
+                    complete7 = complete6_set | added
+
+                    cap7 = 0
+                    for block in complete7:
+                        if block in cycle_blocks:
+                            singleton_lines7 = profiles[block][1]
+                            compatible = any(
+                                local_line is None or local_line == line7
+                                for local_line in singleton_lines7
+                            )
+                        else:
+                            compatible = any(
+                                local_line is None
+                                or (local_line == line6 and zero_line == line7)
+                                for local_line in singles6[block]
+                            )
+                        cap7 += compatible
+
+                    if args.crosscheck:
+                        complete_ref = {
+                            block
+                            for block in values7_ref
+                            if empty7_ref[block] != line7
+                        }
+                        cap_ref = sum(
+                            any(
+                                local_line is None or local_line == line7
+                                for local_line in singles7_ref[block]
+                            )
+                            for block in complete_ref
+                        )
+                        assert complete7 == complete_ref, (
+                            cover_index,
+                            cycle,
+                            line7,
+                            complete7,
+                            complete_ref,
+                        )
+                        assert cap7 == cap_ref, (
+                            cover_index,
+                            cycle,
+                            line7,
+                            cap7,
+                            cap_ref,
+                        )
+                        crosschecks += 1
+
+                    d7 = deficiency(complete7)
+                    if d7 == 4 and cap7 >= 10:
+                        seven_d4_lifts += 1
+                    elif d7 == 5 and cap7 >= 11:
+                        seven_d5_lifts += 1
+                    else:
+                        continue
+                    seven_threshold_lifts += 1
+
+                    retained = []
+                    for block, state in singleton_state6.items():
+                        index = STATE_INDEX[state]
+                        if block in cycle_blocks:
+                            local_line = profiles[block][1][index]
+                            compatible = local_line is None or local_line == line7
+                        else:
+                            local_line = singles6[block][index]
+                            compatible = local_line is None or (
+                                local_line == line6 and zero_line == line7
+                            )
+                        if compatible:
+                            retained.append(block)
+
+                    if len(retained) < 10:
+                        retained_extra_census[(len(retained), -1)] += 1
+                        continue
+                    retained_extra = (
+                        D5.F.rank_mod_rows(
+                            transposed6 + [functionals[block] for block in retained]
+                        )
+                        - rank6
+                    )
+                    retained_extra_census[(len(retained), retained_extra)] += 1
+                    if retained_extra == 10:
+                        full_span_lifts += 1
+                        full_cycles.add(cycle)
+                        full_span_last_coordinate[line7[-1]] += 1
+                        full_span_retained_loss[
+                            len(singleton_state6) - len(retained)
+                        ] += 1
+
+            multiplicity = len(full_cycles)
+            full_span_cycle_multiplicity[multiplicity] += 1
+            max_full_span_cycles = max(max_full_span_cycles, multiplicity)
+            if multiplicity >= 2 and len(two_cycle_examples) < 50:
+                two_cycle_examples.append(
+                    (cover_index, ext6, line6, tuple(sorted(full_cycles)))
+                )
+
+    assert max_singleton_multiplicity <= 1
+    if max_functional_width:
+        assert R.P * R.P > max_functional_norm2 ** max_functional_width
+
+    print("six_augmentation_cover", len(cover))
+    print("cover_range", (start, end))
+    print("synchronized_states", synchronized_states)
+    print("functional_witness_states", functional_witness_states)
+    print("seven_threshold_lifts", seven_threshold_lifts)
+    print("seven_d4_lifts", seven_d4_lifts)
+    print("seven_d5_lifts", seven_d5_lifts)
+    print("retained_extra_census", dict(sorted(retained_extra_census.items())))
+    print("full_span_lifts", full_span_lifts)
+    print(
+        "full_span_cycle_multiplicity",
+        dict(sorted(full_span_cycle_multiplicity.items())),
+    )
+    print("max_full_span_cycles_per_state", max_full_span_cycles)
+    print("full_span_last_coordinate", dict(sorted(full_span_last_coordinate.items())))
+    print("full_span_retained_loss", dict(sorted(full_span_retained_loss.items())))
+    print("two_cycle_examples", two_cycle_examples)
+    print("unique_complete_sets_ranked", len(rank_cache))
+    print("max_singleton_multiplicity", max_singleton_multiplicity)
+    print("max_row_norm_squared", max_functional_norm2)
+    print("max_functional_width", max_functional_width)
+    print(
+        "hadamard_exact_rank_bound",
+        (not max_functional_width)
+        or R.P * R.P > max_functional_norm2 ** max_functional_width,
+    )
+    print("incremental_profile_crosschecks", crosschecks)
+
+    if max_full_span_cycles >= 2:
+        raise SystemExit(
+            "FAIL: a six-row functional witness has two distinct full-span one-cycle lifts"
+        )
+    print(
+        "PASS: every six-row functional witness has at most one distinct full-span one-cycle lift"
+    )
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,43 @@
+#!/usr/bin/env python3
+"""Check task theorem IDs and dependency roles against live ledger statuses."""
+from pathlib import Path
+import json
+import sys
+import yaml
+
+try:
+    from tools.run_theorem_certificates import entries
+except ModuleNotFoundError:
+    from run_theorem_certificates import entries
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def check_roles(catalogue: dict, state: dict) -> list[str]:
+    claims = {entry["id"]: entry for entry in entries(state)}
+    errors = []
+    for task in catalogue["tasks"]:
+        for role in ("canonical_dependencies", "previous_obstructions"):
+            for ref in task[role]:
+                ident = ref.get("claim_id")
+                if not ident:
+                    continue
+                if ident not in claims:
+                    errors.append(f"{task['id']} references unknown claim {ident}")
+                elif role == "canonical_dependencies" and claims[ident]["status"] != "canonical":
+                    errors.append(f"{task['id']} treats {ident} ({claims[ident]['status']}) as canonical")
+    return errors
+
+
+def main():
+    catalogue = json.loads((ROOT / "docs/research/agent-task-catalog.json").read_text())
+    state = yaml.safe_load((ROOT / "docs/state/theorem-state.yaml").read_text())
+    errors = check_roles(catalogue, state)
+    for error in errors:
+        print("catalogue-state: " + error, file=sys.stderr)
+    print(f"catalogue-state: {len(catalogue['tasks'])} task cards, {len(errors)} role errors")
+    return bool(errors)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

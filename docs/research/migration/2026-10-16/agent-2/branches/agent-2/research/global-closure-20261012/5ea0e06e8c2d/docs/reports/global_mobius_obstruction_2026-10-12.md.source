@@ -1,0 +1,231 @@
+<!-- theorem-state: {"artifact_id":"ART-C423442771F3","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# A global obstruction to circle-inversion competitors
+
+**Date:** 2026-10-12  
+**Base commit:** `8d76737c36d3177efd008508fb888c1d92aeae4a`  
+**Canonical base:** `ab6dd3336f9f8d440f2bada76edb32153391cddc`  
+**State version:** `2026-10-10.audit.234`  
+**Target:** independent full-source Level I competitor route  
+**Classification:** proved candidate awaiting promotion; regression  
+**Level I:** OPEN. No global-minimizer example or Level I closure is supplied.
+
+## 1. Global question and implication chain
+
+The intended endpoint is an unrestricted same-cardinality planar replacement:
+
+```text
+every sufficiently large triangle-free global minimizer
+  -> a unit-separated full-source replacement of diameter strictly below D(n)
+  -> contradiction -> Level I
+```
+
+Circle inversion is an attractive collective nonlinear operation because its exact
+distance formula checks the full source without a local approximation. This report
+proves that replacing affine maps by arbitrary planar Möbius maps does not give a
+universal escape from even some nonglobal sources. It investigates the transformation
+class itself, with no phase, lattice extraction, canonical C-II representative, or
+contact-isolate deletion hypothesis. The square-grid theorem is elementary and uses
+no unreviewed research claim as a premise. It is not a theorem about global minimizers.
+
+## 2. Exact full-pair test for inversion
+
+For a finite source A and a pole a not in A, put
+
+\[
+q_i=|p_i-a|^2,\qquad I_a(p_i)=(p_i-a)/q_i.
+\]
+
+Expanding both sides gives the exact identity
+
+\[
+|I_a(p_i)-I_a(p_j)|^2={|p_i-p_j|^2\over q_iq_j}.
+\tag{1}
+\]
+
+Define m(a) and M(a) to be the minimum and maximum of the right side over **all**
+distinct source pairs. Every q_i is positive, and inversion is injective away from
+its pole, so m(a)>0. A similarity of scale lambda makes the image unit-separated
+exactly when lambda squared is at least 1/m(a). Its least possible squared diameter
+is therefore
+
+\[
+\boxed{T_I(a)=M(a)/m(a).}
+\tag{2}
+\]
+
+All source labels, including contact isolates, participate in (2). A strict inversion
+competitor exists exactly when \(T_I(a)<\operatorname{diam}(A)^2\) for some admissible pole. Neither
+the old contact graph nor the old diameter graph alone suffices to compute (2).
+
+## 3. All-pole obstruction for square grids
+
+**Theorem (proved candidate awaiting promotion).** Let m>=2 be an integer and
+
+\[
+A_m=\{(i,j):0\le i,j\le m-1\}.
+\]
+
+For every pole \(a\notin A_m\), \(T_I(a)\ge2(m-1)^2\). Consequently no planar Möbius
+image of A_m, followed by any unit-separation normalization, has smaller diameter.
+The assertion is uniform in m and in the pole; it includes arbitrarily distant poles.
+
+**Proof.** Center the source and write R=(m-1)/2, so its squared diameter is \(8R^2\).
+The grid symmetries allow a=(r,s) with r>=s>=0. Let F=(-R,-R), O=(R,R), and
+N=(-R,-R+1). The pair FN is unit and FO is diametral. With u=r+s,
+
+\[
+q_F=2R^2+r^2+s^2+2Ru,\qquad
+q_O=2R^2+r^2+s^2-2Ru,\qquad
+q_N=q_F-2R+1-2s.
+\tag{3}
+\]
+
+First suppose m=2. Here R=1/2 and q_N-q_O=2r>=0. Formula (1) at FN and FO gives
+
+\[
+{M(a)\over m(a)}\ge
+{8R^2/(q_Fq_O)\over 1/(q_Fq_N)}
+=8R^2q_N/q_O\ge8R^2.
+\tag{4}
+\]
+
+For m>=3 we have R>=1. If u>=1/2, then 2s<=u and
+
+\[
+q_N-q_O=4Ru-2s-2R+1
+\ge(4R-1)u-2R+1\ge1/2>0.
+\]
+
+Again (4) proves the claim. These poles include the whole region outside a fixed
+central diamond, regardless of the source's size.
+
+It remains to handle u<1/2. We will exhibit a grid pair AB of original length one
+with q_Aq_B<=1/4; by (1), M(a)>=4.
+
+If m is odd, take A=(0,0) and B=(1,0). Both are grid points. Here
+
+\[
+q_A=r^2+s^2<1/4,\qquad q_B=1+r^2+s^2-2r\le1,
+\]
+
+because \(r^2+s^2\le r(r+s)<r/2\le2r\). The pole A is excluded by hypothesis,
+and the product bound follows.
+
+If m is even, take A=(1/2,1/2), B=(1/2,-1/2). Put
+\(b=1/2+r^2+s^2-r\). Then
+
+\[
+q_Aq_B=(b-s)(b+s)=b^2-s^2\le1/4.
+\]
+
+Indeed b>=1/2-r>0 and b<=1/2, using \(r^2+s^2\le r(r+s)<r/2\). This establishes
+M(a)>=4 in both parity cases.
+
+On the other hand, FN remains an original unit pair and
+
+\[
+q_F\ge2R^2,\qquad q_N\ge2R^2-2R+1.
+\]
+
+The second inequality follows from
+\(q_N=2R^2-2R+1+r^2+s^2+2Rr+(2R-2)s\), with every added term
+nonnegative for R>=1. Thus m(a)<=1/(q_Fq_N), and
+
+\[
+{M(a)\over m(a)}\ge4q_Fq_N
+\ge8R^2(2R^2-2R+1)\ge8R^2,
+\]
+
+as required. This is a proof for every pole, not a numerical extrapolation.
+
+To justify the Möbius conclusion, a map f(z)=(az+b)/(cz+d), ad-bc nonzero, is a
+similarity if c=0. If c is nonzero, elementary division writes it as
+f(z)=A+B/(z-z_0), B nonzero. Complex reciprocal is a reflection of real circle
+inversion. Post-composition with B and A is a similarity, so (2)--(4) apply. Taking
+the complex conjugate of such a map preserves all distances and changes nothing.
+Maps with a source point as a pole do not give a finite planar source. ∎
+
+## 4. Hereditary version with all other source points retained
+
+**Corollary (proved candidate awaiting promotion).** Suppose a unit-separated finite
+source contains a congruent copy of A_m and its diameter equals that copy's diameter.
+Then it admits no strict normalized Möbius improvement, however its other labels are
+placed. In particular the other labels may be contact isolates.
+
+**Proof.** Adding pairs can only increase M(a) and decrease m(a). Apply Section 3 to
+the retained grid subset. A pole at any added point is excluded as well. ∎
+
+This is a necessary obstruction for this entire transformation class. It supplies no
+global optimality certificate, population bound, or source-specific C-II assertion.
+
+## 5. Exact nonglobal controls and failed universal inference
+
+The unit square is an optimal finite control: the result correctly permits equality.
+For m>=3 the grids are nonglobal. For m>=4, average the population of a disk of radius
+\(\sqrt{(\sqrt3/(2\pi))m^2}\) over translations of the unit triangular lattice.
+The average is m squared, so some translate contains at least m squared sites. Its
+squared diameter is at most \((2\sqrt3/\pi)m^2<2(m-1)^2\): at m=4 the right-to-left
+coefficient comparison is \(9/8>2\sqrt3/\pi\), and the ratio increases thereafter.
+Select exactly m squared sites. A sufficiently small dilation retains the strict
+diameter improvement and makes every pair strictly farther than one, hence triangle-free.
+The numerical comparison follows, for example, from \(\sqrt3<26/15\) and \(\pi>31/10\),
+giving \(2\sqrt3/\pi<104/93<9/8\). The elementary rational pi bounds and averaging
+argument are checked in the predecessor verifier and explained in its report.
+
+For m=3, the nine-point source A_3 has squared
+diameter eight, whereas the following independent nine-label replacement has squared
+diameter 125/17 and minimum squared separation one:
+
+\[
+u=(1,0),\quad v=(8/17,15/17),\qquad
+B=\{au+bv:(a,b)\in S\},
+\]
+
+\[
+S=\{(0,0),(1,0),(0,1),(-1,1),(-1,0),(0,-1),(1,-1),(1,1),(2,-1)\}.
+\]
+
+The replacement's contact graph is bipartite. Its exact all-pair certificate is repeated
+in the new verifier; no globality of B is claimed. The complete KKT, affine obstruction,
+and unrestricted replacement proofs for the unbounded grid family are recorded in
+`global_affine_obstruction_and_whole_set_reassignment_2026-10-11.md`. Those results
+remain unreviewed candidates; the present all-pole theorem does not depend on them.
+
+One inactive-pair control is important. Invert the eight-point perimeter of A_3 about
+its omitted center. Old contacts give m=1/2 and old diameters give only M_old=2, which
+would falsely suggest normalized squared diameter four. The actual image has M=4,
+attained by a different pair, and normalized squared diameter eight. The verifier checks
+all 28 pairs. Keeping only the active source pairs is therefore invalid even for this
+simple global transformation.
+
+The rejected inference is "no improvement under affine and Möbius maps implies global
+minimum diameter". Its failure does not refute a theorem restricted to actual global
+minimizers. In particular no dense local/KKT fixture is identified with a global source.
+
+## 6. Verification and remaining global obligation
+
+Run `python3 research/verify_global_mobius_obstruction_2026_10_12.py`. It checks (1)
+against the actual rational image coordinates, every lower and upper pair in finite
+fixtures, both proof regimes and both grid parities, a same-diameter augmented source
+with an off-lattice contact isolate, the inactive-diameter control,
+and the strict nine-point whole-source replacement. Symbolic polynomial checks verify
+the identities used in (3) and the even-parity product calculation. Finite samples do
+not prove the theorem's all-pole quantifier; Section 3 supplies that proof.
+
+No theorem-state promotion is made. The exact next global obligation is to construct a
+full-source strict-sub-D competitor for arbitrary sufficiently large triangle-free
+global minimizers, allowing unrestricted rearrangement of old hull labels and interiors.
+The affine and Möbius obstructions show why adding transformation parameters without
+using that global-minimizer hypothesis does not close this obligation.
+
+| Claim | Classification | Dependency |
+| --- | --- | --- |
+| Exact full-pair inversion test | proved candidate awaiting promotion | elementary identity (1) |
+| Square-grid all-pole obstruction | proved candidate awaiting promotion | Sections 2--3 |
+| Same-diameter super-source obstruction | proved candidate awaiting promotion | Section 3 |
+| Möbius optimality does not imply globality | regression | exact nine-point replacement |
+| Full Level I closure | open | unrestricted global replacement missing |
+
+Promotion recommendation: preserve as an **unreviewed** proof candidate and regression;
+obtain an independent proof and scope audit before promotion. No existing canonical
+theorem or lifecycle claim is corrected by this report.

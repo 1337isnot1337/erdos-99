@@ -1,0 +1,161 @@
+<!-- theorem-state: {"artifact_id":"ART-D3DFBC1E0A3C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Erdős Problem #99 — Target B local virtual-area / interface certificate
+
+**Date:** 2026-09-05  
+**Run type:** exact local train identity plus Section-50 pruning consequence  
+**Target:** global coherent-phase deficit transfer  
+**Depends on:** virtual-zonotope identity; Section 24 width saturation; Section 50 dense-core pruning  
+**LEVEL I STATUS:** STILL OPEN
+
+## 1. Local virtual-area certificate for one train
+
+Work in a pure simply connected strict-rhombic disk. Fix a train `tau` with unit direction `u_tau`, and let `nu_tau=J u_tau` be a unit normal.
+
+Write
+
+`L_tau = sum_(sigma crosses tau) |det(u_tau,u_sigma)|`.
+
+This is the Euclidean transverse span accumulated while following `tau` from one boundary terminal to the other: every crossing rhombus with train `sigma` advances the train by the normal projection `|det(u_tau,u_sigma)|`.
+
+Let
+
+`h_tau = rho_(tau,-)^K + rho_(tau,+)^K`
+
+be the sum of the two convex-hull support depths at the train terminals. Section 25 gives the exact width decomposition
+
+`w_K(nu_tau)=L_tau+h_tau`.                         (1.1)
+
+For the centered train zonotope
+
+`Z=sum_sigma[-u_sigma/2,u_sigma/2]`,
+
+its width in the same normal direction is
+
+`w_Z(nu_tau)=sum_(sigma!=tau)|det(u_tau,u_sigma)|`. (1.2)
+
+Train coordinates place a translate of `K` inside `Z`. Therefore
+
+`w_K(nu_tau)<=w_Z(nu_tau)`.
+
+Subtract the physical crossing span `L_tau` from both sides.
+
+### Theorem 1 — local virtual-area certificate
+
+For every train `tau`,
+
+`h_tau <= sum_(sigma not crossing tau)|det(u_tau,u_sigma)|`.  (1.3)
+
+Thus the two support-depth pockets of one train require at least the same amount of virtual determinant mass from train pairs that do not physically cross.
+
+Summing over all trains counts each noncrossing pair twice and recovers
+
+`H_partial^K <= 2 V_miss`,
+
+which is the global virtual-zonotope inequality.
+
+## 2. Subset form
+
+For any train subset `I`, put
+
+`H_I=sum_(tau in I)h_tau`
+
+and define the directed virtual incidence mass
+
+`V_dir(I)=sum_(tau in I) sum_(sigma not crossing tau)|det(u_tau,u_sigma)|`.
+
+Then exactly
+
+`H_I<=V_dir(I)`.                                      (2.1)
+
+If `V_inc(I)` denotes the unordered virtual determinant mass over noncrossing pairs with at least one endpoint in `I`, then
+
+`V_dir(I)<=2V_inc(I)`,
+
+so
+
+`V_inc(I)>=H_I/2`.                                    (2.2)
+
+This is the useful localization form.
+
+## 3. Apply to the Section-50 pruned train population
+
+Fix `0<eta<1` and `0<lambda<1`. In Theorem 50.1 first delete every crossing edge whose angular defect exceeds `D^(-1+eta)`, and then repeatedly delete train vertices of current degree below `lambda D`.
+
+Let `I` be the set of train vertices removed in the vertex-pruning stage, and let `r=|I|`.
+
+Section 24 width saturation gives uniformly over all directions
+
+`w_K(nu_tau)>=D-O(D^(1/3))`,                         (3.1)
+
+because `n=Theta(D^2)` and the canonical minimum-width error is `O(n^(1/6))`.
+
+Therefore
+
+`H_I = sum_(tau in I)[w_K(nu_tau)-L_tau]`
+
+`>= rD - O(rD^(1/3)) - sum_(tau in I)L_tau`.         (3.2)
+
+We now bound the physical spans incident with pruned trains. Let `E_hi` be the initially removed high-defect crossing edges and `E_pr` the crossing edges removed during vertex pruning. Theorem 50.1 gives
+
+`|E_hi| <= C_delta D^(2-eta)`,
+
+`|E_pr| < C_T lambda D^2`.                           (3.3)
+
+Every physical crossing incident with a pruned train belongs to `E_hi union E_pr`: if it survived the high-defect deletion, it disappears when the first of its pruned endpoints is deleted. Since one crossing can contribute to the spans of at most two pruned trains and each rhombus transverse increment is at most one,
+
+`sum_(tau in I)L_tau <= 2|E_hi|+2|E_pr|`
+
+`<=2C_delta D^(2-eta)+2C_T lambda D^2`.              (3.4)
+
+Insert (3.4) into (3.2):
+
+### Theorem 2 — pruned-interface support-depth floor
+
+`H_I >= rD - 2C_T lambda D^2 - o(D^2)`,              (3.5)
+
+where the `o(D^2)` absorbs the high-defect term and the uniform-width error for fixed `eta>0`.
+
+Consequently the virtual determinant mass incident with the pruned train set obeys
+
+`V_inc(I) >= rD/2 - C_T lambda D^2 - o(D^2)`.        (3.6)
+
+## 4. Quantitative meaning
+
+If the Section-50 pruning removes a positive linear train population
+
+`r>=rho D`,
+
+then after choosing `lambda` small relative to `rho`, those interface trains necessarily carry a positive quadratic virtual-area mass:
+
+`V_inc(I)/D^2 >= rho/2-C_T lambda-o(1)`.              (4.1)
+
+Thus the strengthened virtual-area dichotomy can be sharpened geometrically:
+
+1. if `Omega(D)` trains are pruned, they are not merely numerous; their convex-hull terminal support depths force `Omega(D^2)` noncrossing determinant incidence;
+2. if only `o(D)` trains are pruned, their incident virtual mass is at most `o(D^2)` by the trivial `rT` upper bound, so essentially all compulsory virtual area lies among the retained phase trains.
+
+The theorem does not yet exclude either branch. It identifies the exact currency that must be charged next: terminal support depth on a linear interface population versus internal virtual deficit between retained coherent phase components.
+
+## 5. Audit boundary
+
+No claim is made that all high-defect edges are incident with pruned train vertices. They enter (3.4) only because a crossing incident with `I` may already have been removed in the initial high-defect stage.
+
+No claim is made that `V_inc(I)` consists only of pairs between `I` and retained trains; pairs internal to `I` are included and are counted once in `V_inc(I)`.
+
+The estimate uses only cardinality to upper-bound physical span in (3.4), so it remains valid without a lower bound on individual crossing angles.
+
+## Handoff
+
+```text
+For every train tau:
+  h_tau := rho_-(tau)+rho_+(tau)
+  <= sum_{sigma noncross tau}|det(u_tau,u_sigma)|.
+
+For the Section-50 vertex-pruned set I, |I|=r:
+  H_I >= rD - 2 C_T lambda D^2-o(D^2),
+  V_virtual,incident(I) >= rD/2-C_T lambda D^2-o(D^2).
+
+Hence a linear interface-train population necessarily carries quadratic virtual area through its terminal support depth. If the pruned population is sublinear, essentially all compulsory virtual area must remain among the retained coherent phase trains.
+
+Next: attack these two branches separately using the linear reflex-boundary resource in the interface case and the phase-deficit stability theorem in the retained-core case.
+```

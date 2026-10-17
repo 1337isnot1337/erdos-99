@@ -1,0 +1,369 @@
+# Erdős Problem #99 — exclusion of sublinear train-isoperimetric slack
+
+**Date:** 2026-09-14
+**Repository base:** `b195184e2f2759d0db7c08cb1569f734557540cc`
+**State version:** `2026-09-14.audit.51`
+**Run type:** closing-proof reduction / extension of the canonical endpoint geometry
+**Target:** Target C-II, canonical full-core branch
+**Claim class:** proved candidate awaiting independent audit/promotion
+**External literature:** no new import; uses the already-audited Fox--Pach--Suk input inside `C-FULLCORE-FLOOR-ENDPOINT-EXCLUSION`
+**Computation:** non-load-bearing constant check only
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+This note strengthens the post-endpoint train-slack analysis. It proves that the
+train-isoperimetric slack cannot even be sublinear in a canonical full-core Type-II
+survivor sequence.
+
+Write
+
+\[
+\sigma_D:=B_4-4\sqrt{R_4}\ge0,
+\]
+
+where `R_4` is the number of strict-rhombus faces and `B_4=2T` is their
+occurrence-counted train boundary. Then there is no canonical full-core sequence with
+
+\[
+\sigma_D=o(D).
+\]
+
+Consequently there are non-explicit constants `epsilon_sigma>0` and `D_sigma` such
+that every sufficiently large canonical full-core survivor satisfies
+
+\[
+\boxed{\sigma_D\ge\epsilon_\sigma D.}
+\]
+
+Equivalently, the global stopped-train crossing graph has a uniform quadratic Mantel
+deficit:
+
+\[
+\boxed{
+M_D:=\frac{T^2}{4}-R_4\ge c_\sigma D^2
+}
+\]
+
+for some non-explicit `c_sigma>0` and all sufficiently large full-core survivors.
+
+This does not close C-II by itself, but it removes the near-Mantel train branch
+throughout the entire high-surplus regime, not only at the excluded scalar floor
+endpoint.
+
+## 1. Candidate chain to the source-level contradiction
+
+The exact implication is
+
+```text
+sigma_D=o(D)
+  -> T/D -> 2 sqrt(Delta_2)
+  -> Mantel deficit o(D^2)
+  -> the phase-cut retained train graph is still Mantel-extremal
+  -> the canonical endpoint-completion geometry supplies two unequal phase shores
+       with total size >=(3/4-o(1))T and each size >=(1/4-o(1))T
+  -> almost-full complete actual pseudosegment biclique
+  -> remove o(D) reverse/right-angle and phase-tail trains
+  -> canonical Section 76:
+       D >= (sqrt(3)/2)(3/4 T)-O(1)
+  -> D >= (1+eta)D-O(1), contradiction.
+```
+
+The final contradiction is with the diameter of the original source. No source points
+are deleted, and the cloning used inside the already-audited pseudosegment theorem is
+only a graph-theoretic proof device.
+
+## 2. Canonical full-core inputs
+
+Work along a hypothetical canonical full-core Type-II sequence with `D->infinity` and
+
+\[
+\sigma_D=o(D).
+\tag{SL.1}
+\]
+
+The canonical full-core near-disk/rhombic-saturation theorem gives
+
+\[
+\frac{R_4}{D^2}\longrightarrow
+\Delta_2:=\frac{\pi}{2\sqrt3}.
+\tag{SL.2}
+\]
+
+The train theorem gives
+
+\[
+B_4=2T,
+\qquad
+R_4\le\frac{T^2}{4}.
+\tag{SL.3}
+\]
+
+The post-endpoint train-slack identity is only algebra applied to (SL.3):
+
+\[
+\sigma_D=2T-4\sqrt{R_4}.
+\tag{SL.4}
+\]
+
+Hence (SL.1)--(SL.2) imply
+
+\[
+T=2\sqrt{R_4}+o(D)
+=(2\sqrt{\Delta_2}+o(1))D.
+\tag{SL.5}
+\]
+
+Define the Mantel deficit
+
+\[
+M_D:=\frac{T^2}{4}-R_4.
+\]
+
+Rationalizing (SL.4) gives the exact finite identity
+
+\[
+\sigma_D={8M_D\over T+2\sqrt{R_4}}.
+\tag{SL.6}
+\]
+
+Since `T=Theta(D)`, (SL.1) and (SL.6) imply
+
+\[
+M_D=o(D^2),
+\qquad
+\frac{R_4}{T^2}\to\frac14.
+\tag{SL.7}
+\]
+
+Thus (SL.2), (SL.5), and (SL.7) reproduce exactly the endpoint train asymptotics
+(1.1) used by the canonical `C-FULLCORE-FLOOR-ENDPOINT-EXCLUSION` proof, without any
+assumption on `mu_D`.
+
+## 3. The phase-cut retained graph remains near-Mantel
+
+Canonical `C-PUNCTURED-PHASE` supplies one reduced phase cut deleting only `O(D)`
+strict-rhombus crossing pairs. Let `G_D^o` be the retained crossing graph. Then
+
+\[
+e(G_D^o)=R_4-O(D)
+=\frac{T^2}{4}-o(D^2).
+\tag{SL.8}
+\]
+
+It is simple and triangle-free. The elementary Mantel-stability lemma used in the
+canonical endpoint proof therefore yields a partition
+
+\[
+\mathcal T_D=X_D\sqcup Y_D
+\]
+
+with
+
+\[
+|X_D|=\frac T2+o(T),
+\qquad
+|Y_D|=\frac T2+o(T),
+\tag{SL.9}
+\]
+
+and only `o(T^2)` missing retained cross pairs.
+
+The phase cut gives every train one label in `Z/3Z`. Same-label trains cannot be
+retained crossing pairs. Therefore the exact three-label allocation lemma from the
+canonical endpoint proof applies unchanged. There are distinct labels and shores
+`A_D subset X_D`, `B_D subset Y_D` with
+
+\[
+|A_D|+|B_D|\ge\frac34T-o(T),
+\qquad
+\min\{|A_D|,|B_D|\}\ge\frac14T-o(T),
+\tag{SL.10}
+\]
+
+and
+
+\[
+|A_D||B_D|-e_{G_D^o}(A_D,B_D)=o(T^2).
+\tag{SL.11}
+\]
+
+Both shores are `Theta(D)` by (SL.5).
+
+## 4. Endpoint completion uses no scalar-floor equality
+
+From this point onward, the canonical endpoint proof depends only on
+(SL.10)--(SL.11), the canonical phase cut, the train pseudosegment property, the global
+`O(D)` angular-defect budget, and Section 76. None depends on `mu_D`.
+
+For completeness, the steps are:
+
+1. The already-audited unbalanced Fox--Pach--Suk cloning lemma turns crossing density
+   `1-o(1)` in (SL.11) into complete actual-crossing subfamilies retaining a
+   `1-o(1)` fraction of each shore.
+2. For the two fixed distinct phase labels, every reverse-oriented or ambiguous
+   right-angle crossing lies in a threshold/chain graph with only `O(D)` edges.
+   Its vertex cover has size `O(sqrt(D))`, so deleting it loses `o(D)` trains.
+3. On the resulting complete forward grid the total angular defect is `O(D)`.
+   The endpoint phase-tail argument deletes only `O(D^(1/4))=o(D)` additional trains
+   and puts every remaining reduced phase into one interval of width `<pi/6`, exactly
+   the common-cone hypothesis needed by canonical Section 76.
+
+Thus there are complete forward phase-pure shores of sizes `a_D,b_D` satisfying
+
+\[
+a_D+b_D\ge\frac34T-o(T),
+\qquad
+\min(a_D,b_D)\ge\frac14T-o(T),
+\tag{SL.12}
+\]
+
+with crossing defect sum `S_D=O(D)`.
+
+## 5. Source-hull diameter contradiction
+
+Canonical Section 76 gives
+
+\[
+D\ge {\sqrt3\over2}(a_D+b_D)
+-{S_D\over\min(a_D,b_D)}-2.
+\tag{SL.13}
+\]
+
+The defect quotient is `O(1)`. By (SL.5) and (SL.12),
+
+\[
+\frac{a_D+b_D}{D}
+\ge {3\over4}{T\over D}-o(1)
+=\frac32\sqrt{\Delta_2}-o(1).
+\tag{SL.14}
+\]
+
+Therefore
+
+\[
+D\ge
+\left[
+{3\sqrt3\over4}\sqrt{\Delta_2}-o(1)
+\right]D-O(1).
+\tag{SL.15}
+\]
+
+But
+
+\[
+{3\sqrt3\over4}\sqrt{\Delta_2}>1
+\iff
+\Delta_2>{16\over27},
+\]
+
+and
+
+\[
+\Delta_2={\pi\over2\sqrt3}>{3\over4}>{16\over27}.
+\tag{SL.16}
+\]
+
+Hence (SL.15) says `D>=(1+eta)D-O(1)` for some fixed `eta>0`, impossible for
+large `D`. This contradicts (SL.1).
+
+### Theorem SL.1
+
+There is no canonical full-core Type-II sequence with `D->infinity` and
+
+\[
+\boxed{\sigma_D=o(D).}
+\tag{SL.17}
+\]
+
+## 6. Uniform linear gap and quadratic Mantel deficit
+
+The sequence exclusion upgrades to a uniform asymptotic gap. If no
+`epsilon_sigma>0` existed, then for every integer `j` one could choose a canonical
+full-core survivor with
+
+\[
+D_j\ge j,
+\qquad
+0\le {\sigma_{D_j}\over D_j}< {1\over j},
+\]
+
+producing a forbidden sequence with `sigma_D=o(D)`. Therefore there are
+non-explicit constants `epsilon_sigma>0,D_sigma` such that
+
+\[
+\boxed{
+\sigma_D\ge\epsilon_\sigma D
+\quad(D\ge D_\sigma)
+}
+\tag{SL.18}
+\]
+
+throughout the canonical full-core branch.
+
+Using (SL.6) in the equivalent form
+
+\[
+M_D={\sigma_D(T+2\sqrt{R_4})\over8}
+\ge {\sigma_D\sqrt{R_4}\over4},
+\]
+
+and (SL.2), one gets another non-explicit constant `c_sigma>0` with
+
+\[
+\boxed{
+M_D\ge c_\sigma D^2
+}
+\tag{SL.19}
+\]
+
+for all sufficiently large full-core survivors.
+
+Thus every genuine high-surplus full-core survivor is uniformly separated from the
+Mantel endpoint at the quadratic crossing scale.
+
+## 7. Interaction with the post-endpoint five-currency split
+
+The exact post-endpoint identity was
+
+\[
+\begin{aligned}
+\mu_DD
+={}&{2p+2\sqrt{R_4}\over5}
++m_B+{2\over5}(Q-f)+{2\over5}(b-p)\\
+&+{1\over10}\rho_D+{1\over10}\sigma_D
+-2c_I-4.
+\end{aligned}
+\tag{SL.20}
+\]
+
+Before this note, `sigma_D` was one of five possible places for the positive
+post-endpoint gap to live, and the `sigma_D=o(D)` case led to a highly structured
+near-Mantel carrier. Theorem SL.1 rules that case out completely. Instead, every
+sufficiently large full-core survivor itself has
+
+\[
+\sigma_D=\Omega(D),
+\qquad
+M_D=\Omega(D^2).
+\]
+
+The next live question is therefore no longer how to complete a near-Mantel train
+system. It is how a uniformly positive quadratic Mantel deficit is paid by phase,
+interface, detour, or source-level diameter currency.
+
+## 8. Scope audit
+
+This note does **not**:
+
+- alter the macroscopic-container branch;
+- give an explicit numerical value for `epsilon_sigma`;
+- upper-bound the aggregate outer-walk detour;
+- construct a strict sub-`D` same-cardinality source;
+- force an exact unit triangle.
+
+It retains all contact-isolated source points. The final Section-76 inequality is a
+source-hull inequality on actual strict-rhombus centers, exactly as in the canonical
+endpoint audit. The only new bridge is the observation that `sigma_D=o(D)` itself
+reproduces all endpoint train asymptotics needed by that audited geometric proof.

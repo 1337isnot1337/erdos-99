@@ -1,0 +1,314 @@
+# Target C-II — a phase-controlled three-cut finite cusp through `t<=1.8687`
+
+**Date:** 2026-09-15  
+**Status:** proof-only high-`t` structural strengthening  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch with `t=(q-k)/D<=1.8687`  
+**Dependencies:** high-`t` complete rectangle and phase-collapse theorem; finite-defect/KKT path ledgers; laminar diameter-interval support; exact three-train multishear  
+**Certificate:** `research/verify_target_c_phase_controlled_three_cut_cusp_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current high-`t` rectangle gives a consecutive row block
+
+\[
+A_*=(\tau_1,\ldots,\tau_m),
+\qquad m>0.0000226D-o(D),
+\]
+
+and one consistently oriented transverse family
+
+\[
+B_+,
+\qquad |B_+|>0.1567D-o(D),
+\]
+
+with complete crossing product `A_* x B_+`.  The existing joint-cusp theorem spends the angular and finite-defect budgets on one adjacent row pair.  The present note instead keeps a fixed positive fraction of the entire rectangle by an inverse-`D` phase cutoff, and only then averages the two-interface cusp budget.  This forces **three consecutive phase-controlled rows** inside one macroscopic ordered transverse scaffold.
+
+### Theorem PC3-87
+
+For every sufficiently large source in the stated scope there exist three consecutive rectangle rows
+
+\[
+\tau_1,\tau_2,\tau_3
+\]
+
+bounding two nonhub path regions, and a common transverse family `B_6`, such that:
+
+1. the combined two-interface finite defect obeys
+   \[
+   \boxed{
+   (N_1+N_2)+(L_1+L_2)+D(B_1+B_2)<2{,}573{,}000;
+   }
+   \tag{PC3.1}
+   \]
+2. the three row phases lie in an interval of width
+   \[
+   \boxed{
+   <{9.012\times10^6\over D}+o(D^{-1});
+   }
+   \tag{PC3.2}
+   \]
+3. the common transverse family satisfies
+   \[
+   \boxed{|B_6|>0.1305D-o(D),}
+   \tag{PC3.3}
+   \]
+   and its own phases lie in an interval of width
+   \[
+   \boxed{
+   <{9.012\times10^6\over D}+o(D^{-1});
+   }
+   \tag{PC3.4}
+   \]
+4. every row-column crossing in `\{\tau_1,\tau_2,\tau_3\}\times B_6` is a strict rhombus whose acute-angle excess satisfies
+   \[
+   \boxed{
+   0<\theta(\tau_i,b)-{\pi\over3}
+   <{1.9526\times10^7\over D}+o(D^{-1});
+   }
+   \tag{PC3.5}
+   \]
+5. the trains in `B_6` are pairwise noncrossing and occur in the same order along all three selected rows;
+6. for any nonzero coefficient vector `c=(c_1,c_2,c_3)` satisfying
+   \[
+   c_1u_1+c_2u_2+c_3u_3=0,
+   \tag{PC3.6}
+   \]
+   every potentially nonzero first diameter derivative of the exact three-train multishear belongs to the finite switching set across the two selected interfaces.
+
+In particular, the live high-`t` obstruction contains a finite first-order diameter cusp embedded in an inverse-`D`-phase `K_{3,\Theta(D)}` near-triangular ladder.
+
+---
+
+## 1. Phase coordinates on the complete rectangle
+
+Use the consistently oriented representatives from the hostile-audited high-`t` rectangle phase theorem.  Let the row phases be `alpha_a` and column phases be `beta_b`.  On the common oriented branch write
+
+\[
+\alpha^+=\max_{a\in A_*}\alpha_a,
+\qquad
+\beta^-=\min_{b\in B_+}\beta_b,
+\]
+
+and
+
+\[
+r_a=\alpha^+-\alpha_a\ge0,
+\qquad
+q_b=\beta_b-\beta^-\ge0,
+\qquad
+g=\beta^- - \alpha^+-{\pi\over3}\ge0.
+\tag{PC3.7}
+\]
+
+Then every row-column angular excess has the exact additive form
+
+\[
+\delta_{ab}
+:=\theta(\tau_a,b)-{\pi\over3}
+=g+r_a+q_b>0.
+\tag{PC3.8}
+\]
+
+Put
+
+\[
+\lambda_D
+={1\over |A_*||B_+|}
+\sum_{a\in A_*}\sum_{b\in B_+}\delta_{ab}.
+\tag{PC3.9}
+\]
+
+The global angular-defect budget and the rectangle density floors give
+
+\[
+\boxed{
+\lambda_D
+<{1.502\times10^6\over D}+o(D^{-1}).
+}
+\tag{PC3.10}
+\]
+
+Because every term in (PC3.8) is nonnegative,
+
+\[
+g\le\lambda_D,
+\qquad
+{1\over |A_*|}\sum_a r_a\le\lambda_D,
+\qquad
+{1\over |B_+|}\sum_b q_b\le\lambda_D.
+\tag{PC3.11}
+\]
+
+---
+
+## 2. Six-times-average trimming keeps most rows and columns
+
+Define
+
+\[
+A_6:=\{a\in A_*:r_a\le6\lambda_D\},
+\qquad
+B_6:=\{b\in B_+:q_b\le6\lambda_D\}.
+\tag{PC3.12}
+\]
+
+Markov's inequality and (PC3.11) give
+
+\[
+|A_*\setminus A_6|\le {|A_*|\over6},
+\qquad
+|B_+\setminus B_6|\le {|B_+|\over6}.
+\tag{PC3.13}
+\]
+
+Hence
+
+\[
+|B_6|\ge {5\over6}|B_+|
+>0.1305D-o(D),
+\]
+
+which proves (PC3.3).
+
+All numbers `r_a` on `A_6` lie in `[0,6 lambda_D]`; therefore the real oriented row phases have total spread at most `6 lambda_D`.  The same argument applies to the `q_b` and the column phases on `B_6`.  Equation (PC3.10) gives (PC3.2) and (PC3.4).
+
+Finally, for `a in A_6`, `b in B_6`,
+
+\[
+0<\delta_{ab}=g+r_a+q_b
+\le13\lambda_D
+<{1.9526\times10^7\over D}+o(D^{-1}),
+\]
+
+proving (PC3.5).
+
+The internally noncrossing rectangle families and the common orientation were already established before this trimming.  The signed monotone-grid order lemma therefore applies to the retained subfamilies: every column in `B_6` crosses every selected row exactly once and the column order is the same on each row.
+
+---
+
+## 3. There are linearly many consecutive good row triples
+
+Call a rectangle row bad when it is not in `A_6`.  There are at most `m/6` bad rows.  Among the `m-2` starts of consecutive row triples, one bad row can contaminate at most three starts.  Therefore the number `G_3` of triples all of whose rows lie in `A_6` satisfies
+
+\[
+G_3\ge (m-2)-3{m\over6}
+={m\over2}-2.
+\tag{PC3.14}
+\]
+
+Since
+
+\[
+m>0.0000226D-o(D),
+\]
+
+we may safely record
+
+\[
+\boxed{
+G_3>0.0000112D-o(D).
+}
+\tag{PC3.15}
+\]
+
+Deleting the `O(1)` triple starts touching either path end or the unique diameter-routing hub does not alter this density.
+
+---
+
+## 4. Average the finite cusp only over the good triples
+
+For one path interface put
+
+\[
+C_i:=N_i+L_i+D B_i.
+\tag{PC3.16}
+\]
+
+The hostile-audited global ledgers give, uniformly for `t<=T=1.8687`,
+
+\[
+\sum_i C_i
+\le (10T-2\pi+2)D+o(D).
+\tag{PC3.17}
+\]
+
+For a consecutive triple beginning at row `i`, let
+
+\[
+U_i=C_i+C_{i+1}.
+\tag{PC3.18}
+\]
+
+Each `C_i` occurs in at most two such sums, hence
+
+\[
+\sum_i U_i
+\le2(10T-2\pi+2)D+o(D).
+\tag{PC3.19}
+\]
+
+Restricting the sum to the good nonhub triple starts only decreases the left side.  Divide by (PC3.15).  The exact certificate proves
+
+\[
+{2(10T-2\pi+2)\over0.0000112}
+<2{,}573{,}000.
+\tag{PC3.20}
+\]
+
+Thus some good nonhub consecutive triple satisfies (PC3.1).
+
+Because all summands are nonnegative, the same triple has
+
+\[
+|H_{sw,1}\cup H_{sw,2}|<2{,}573{,}000,
+\qquad
+B_1+B_2<{2{,}573{,}000\over D},
+\tag{PC3.21}
+\]
+
+and
+
+\[
+L_1+L_2<2{,}573{,}000.
+\tag{PC3.22}
+\]
+
+Each individual cut-resultant jump also satisfies
+
+\[
+\|F_2-F_1\|<2{,}573{,}000,
+\qquad
+\|F_3-F_2\|<2{,}573{,}000.
+\tag{PC3.23}
+\]
+
+---
+
+## 5. Exact three-cut first-order localization
+
+Let the coherently oriented contact vectors of the selected rows be `u_1,u_2,u_3`.  Since they lie in the plane, choose a nonzero coefficient vector `c` with
+
+\[
+c_1u_1+c_2u_2+c_3u_3=0.
+\]
+
+Use the exact three-train multishear with these coefficients.  Laminar interval support says that one actual diameter row meets the selected three cuts in a contiguous subset of `{1,2,3}`.
+
+- A row meeting none of the selected cuts has zero relative displacement.
+- A row meeting all three has first relative displacement
+  \[
+  J(c_1u_1+c_2u_2+c_3u_3)=0.
+  \]
+- Every other nonempty proper interval starts or stops at one of the two selected interfaces.
+
+Therefore every potentially nonzero first diameter derivative lies in
+
+\[
+H_{sw,1}\cup H_{sw,2},
+\]
+
+which has the fixed cardinality and KKT-mass bounds in (PC3.21).  KKT stationarity gives the exact weighted first-derivative balance on this finite cusp.
+
+This does not produce a first-order feasible shear: mixed rigidity still forbids that conclusion.  The gain is that the finite cusp now sits inside a macroscopic complete train rectangle whose **three row phases, common column phases, and every selected crossing defect are all explicitly inverse-`D` controlled**.
+
+**Disposition:** proved a phase-controlled finite three-cut cusp inside the high-`t` complete rectangle through `t<=1.8687`.  The next local target is to remove the remaining exceptional faces and classify the finite diameter cusp inside an exact all-rhombic two-strip subladder.  C-II and Level I remain open.

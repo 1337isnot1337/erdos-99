@@ -1,0 +1,321 @@
+# Target C-II — coupled physical-contact floor from the exact tooth/long-side burden
+
+**Date:** 2026-09-15  
+**Repository base:** `6f76ec45a65aa0475f31c940c490c3c5b60694fb`  
+**Status:** proved proof-only composition; theorem-state authority unchanged  
+**Scope:** no-container/full-core Type-II low-`t` branch  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The exact outer-boundary theorem gives a coupled burden
+
+\[
+N_2+2L_{>2}\ge x_B-2d_{out},
+\]
+
+where `N_2` counts genuine two-edge teeth and `L_{>2}` is the loaded-hull side
+length above two. Previous notes first split this burden into a tooth branch or a
+long-side branch and only then physicalized the chosen branch. That loses information.
+
+Both physicalizations are linear. Optimizing them simultaneously against the exact
+coupled burden gives a stronger branch-independent conclusion. At the present low-`t`
+endpoint every survivor carries at least
+
+\[
+\boxed{0.2025300201\,D-o(D)}
+\]
+
+distinct robustly non-tangential unit contacts in one of the two explicit boundary
+families.
+
+The proof also sharpens the convenient shallow-tooth threshold from `4/15` to
+`15/56`. The choice is almost extremal and has an exact one-unit square margin:
+
+\[
+\left({97\over112}\right)^2-{3\over4}={1\over12544}>0.
+\]
+
+## 1. Tooth physicalization with `eta=15/56`
+
+Put
+
+\[
+\eta={15\over56},
+\qquad
+\alpha_\eta=\arccos(1-\eta/2).
+\]
+
+Then
+
+\[
+\cos\alpha_\eta={97\over112}>{\sqrt3\over2},
+\]
+
+so `alpha_eta<pi/6`. The global-turn shallow-tooth theorem therefore applies: all but
+at most two `eta`-shallow teeth have distinct unloaded apices.
+
+The exact tooth-detour deletion gives
+
+\[
+N_{sh}(\eta)\ge N_2-{d_{out}\over\eta}.
+\]
+
+Choosing one inward contact at every distinct shallow apex and dividing only by the
+two endpoints of a physical edge gives the finite estimate
+
+\[
+\boxed{
+E_T
+\ge {1\over2}
+\left(N_2-{d_{out}\over\eta}-2\right).
+}
+\tag{CP.1}
+\]
+
+Every selected contact has inward normal component greater than
+
+\[
+Y_\eta
+=\sin(\pi/3-\alpha_\eta)
+={97\sqrt3-\sqrt{3135}\over224}
+=0.5000797215067117\ldots>{1\over2}.
+\tag{CP.2}
+\]
+
+Thus the threshold is very close to the limiting value `2-sqrt(3)` while preserving
+a strict source-level directional margin.
+
+## 2. Long-side physicalization
+
+Set
+
+\[
+\beta={\pi\over6},
+\qquad
+c_\beta:=1-\cos\beta=1-{\sqrt3\over2}.
+\]
+
+The directional-energy theorem gives at least
+
+\[
+S_\beta
+\ge L_{>2}-{2d_{out}\over c_\beta}
+\]
+
+`beta`-straight internal outer-route occurrences on long-side intervals.
+Occurrence-injective transverse selection and bridge suppression give
+
+\[
+2B_o+2E_L\ge S_\beta,
+\]
+
+where `B_o` is the number of outer bridges and every edge counted by `E_L` has
+absolute transverse component strictly greater than `1/2` relative to the associated
+loaded-hull side direction.
+
+On a full-core Type-II convergent subsequence, write
+
+\[
+\delta:=\lim {d_{out}\over D}.
+\]
+
+Full-core near-disk area plus bridge-subtracted isoperimetry gives
+
+\[
+\limsup {2B_o\over D}\le\delta.
+\]
+
+Therefore, if
+
+\[
+\ell:=\lim {L_{>2}\over D},
+\]
+
+then
+
+\[
+\boxed{
+\liminf {E_L\over D}
+\ge {\ell\over2}
+-\delta\left({1\over2}+{1\over c_\beta}\right).
+}
+\tag{CP.3}
+\]
+
+## 3. Optimize both physicalizations before splitting
+
+On the same convergent Type-II subsequence write
+
+\[
+n_2:=\lim {N_2\over D},
+\qquad
+\kappa:=\lim {k\over D}.
+\]
+
+The exact outer tooth/long-side burden gives
+
+\[
+\boxed{
+n_2+2\ell\ge\pi-t-\kappa-\delta.}
+\tag{CP.4}
+\]
+
+Let
+
+\[
+y:=\max\left\{
+\liminf {E_T\over D},
+\liminf {E_L\over D}
+\right\}.
+\]
+
+Equations (CP.1) and (CP.3) imply
+
+\[
+n_2\le2y+{\delta\over\eta},
+\]
+
+\[
+\ell\le2y+\delta\left(1+{2\over c_\beta}\right).
+\]
+
+Insert these upper bounds into (CP.4). One obtains
+
+\[
+\boxed{
+6y
+\ge
+\pi-t-\kappa-K\delta,
+}
+\tag{CP.5}
+\]
+
+with
+
+\[
+\begin{aligned}
+K
+&=3+{1\over\eta}+{4\over c_\beta}\\
+&=3+{56\over15}+8(2+\sqrt3)\\
+&={341\over15}+8\sqrt3\\
+&=36.58973979388435\ldots .
+\end{aligned}
+\tag{CP.6}
+\]
+
+This is the gain that is lost if one replaces (CP.4) by the crude
+`max{N_2,L_{>2}}` bound first.
+
+## 4. Use the low-`t` network squeeze jointly, not independently
+
+Proof-only AG42 plus audited Section 171 gives
+
+\[
+2\delta+{\kappa\over2}\le R(t),
+\qquad
+R(t):={9t\over2}-2\pi-C_0,
+\]
+
+where
+
+\[
+C_0=2\sqrt{\Delta_2}+0.00042,
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\]
+
+At fixed `delta`, the right side of (CP.5) is smallest when
+
+\[
+\kappa=2R(t)-4\delta.
+\]
+
+Since `0<=delta<=R(t)/2` and `K>4`, the remaining expression decreases with
+`delta`; hence its worst case is
+
+\[
+\delta={R(t)\over2},
+\qquad
+\kappa=0.
+\]
+
+Therefore every low-`t` survivor in this scope obeys
+
+\[
+\boxed{
+y\ge
+{1\over6}
+\left[
+\pi-t-
+\left({341\over30}+4\sqrt3\right)R(t)
+\right].}
+\tag{CP.7}
+\]
+
+This joint optimization is important. Simultaneously substituting the separate worst
+bounds `kappa+delta<=2R(t)` and `delta<=R(t)/2` would combine two incompatible
+extreme points and lose a real constant.
+
+## 5. Current endpoint
+
+At
+
+\[
+t_{42}=C_{146}+0.0013751
+=1.8208886379794447\ldots,
+\]
+
+one has
+
+\[
+R(t_{42})=0.00576795.
+\]
+
+Equation (CP.7) gives
+
+\[
+\boxed{
+y\ge0.2025300201313801518\ldots .}
+\tag{CP.8}
+\]
+
+Thus at least one of the following holds:
+
+1. there are at least `0.2025300201 D-o(D)` distinct shallow-tooth penetration
+   contacts, each with inward component greater than `0.5000797215`; or
+2. there are at least `0.2025300201 D-o(D)` distinct long-side transverse contacts,
+   each with absolute transverse component greater than `1/2`.
+
+For reference, if the crude tooth-vs-long-side split is taken first, the best current
+branch-independent floor is only about `0.195226D`. The coupled optimization recovers
+roughly `0.00730D` additional guaranteed physical contacts.
+
+## 6. What changed in the C-II frontier
+
+The low-`t` endpoint can no longer hide behind any of the following linear losses:
+
+- repeated shallow-tooth apices;
+- rounded long-side metric mass without physical contacts;
+- loaded degree-two repetitions along the outer walk;
+- fivefold straight-event multiplicity at one contact vertex; or
+- premature splitting of the exact `N_2+2L_{>2}` burden.
+
+The remaining obstruction is genuinely global. A survivor must route at least about
+`0.2025D` robust non-tangential boundary contacts through the nearly triangular
+pentagon/rhombus train network while simultaneously realizing the near-extremal
+Woodall diameter thrackle. Local rhombus-area penalties cannot close this: the
+vanishing-shear regression allows the contact directions to approach the triangular
+lattice directions with arbitrarily small per-cell excess.
+
+The next useful theorem must therefore control **train occupancy / diameter-brace
+reuse** for this forced contact family, or produce a source-preserving boundary
+motion. Scalar ledgers alone are already known to be compatible.
+
+## 7. Reproducibility
+
+Run
+
+```bash
+python3 research/verify_target_c_coupled_physical_contact_floor.py
+```
+
+for the high-precision constant checks.

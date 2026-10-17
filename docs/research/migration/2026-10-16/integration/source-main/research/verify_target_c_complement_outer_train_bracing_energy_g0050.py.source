@@ -1,0 +1,165 @@
+#!/usr/bin/env python3
+from decimal import Decimal, getcontext
+
+getcontext().prec = 90
+D = Decimal
+
+pi = D('3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628')
+sqrt3 = D(3).sqrt()
+Delta2 = pi / (D(2) * sqrt3)
+s2 = Delta2.sqrt()
+g = D('0.0050')
+C0 = D(2) * s2 + g
+t_base = D('1.82515')
+t_safe = D('1.82891')
+
+
+def sin_decimal(x: Decimal) -> Decimal:
+    term = x
+    total = x
+    for n in range(1, 140):
+        term = -term * x * x / D((2 * n) * (2 * n + 1))
+        new = total + term
+        if new == total:
+            return total
+        total = new
+    raise AssertionError('sin series did not converge')
+
+
+def cos_decimal(x: Decimal) -> Decimal:
+    term = D(1)
+    total = term
+    for n in range(1, 140):
+        term = -term * x * x / D((2 * n - 1) * (2 * n))
+        new = total + term
+        if new == total:
+            return total
+        total = new
+    raise AssertionError('cos series did not converge')
+
+
+def L(a: Decimal) -> Decimal:
+    return ((D(1) + sin_decimal(a)) / cos_decimal(a)).ln()
+
+
+def phi_inverse(delta: Decimal) -> Decimal:
+    # Phi(q)=delta, parameterized by q=6L(a), Phi=6(L(a)-a).
+    lo = D(0)
+    hi = pi / D(6)
+    target = delta / D(6)
+    for _ in range(240):
+        mid = (lo + hi) / D(2)
+        if L(mid) - mid < target:
+            lo = mid
+        else:
+            hi = mid
+    a = (lo + hi) / D(2)
+    return D(6) * L(a)
+
+
+def F(z: Decimal) -> Decimal:
+    return z - D(6) * sin_decimal(z / D(6))
+
+
+def J(p: Decimal) -> Decimal:
+    return D(2) * p - D(6) * sin_decimal(p / D(3))
+
+
+def R(t: Decimal) -> Decimal:
+    return D('4.5') * t - D(2) * pi - C0
+
+
+def boundary_values(t: Decimal):
+    # Worst feasible point from the symbolic complement-energy theorem:
+    # kappa=0, delta=R(t)/2, U=C0.
+    delta = R(t) / D(2)
+    z = pi - t - D(2) * C0 + D(8) * Delta2 / C0
+    qinv = phi_inverse(delta)
+    ncomp = C0 + t / D(2) - D(4) * Delta2 / C0
+    p = pi - qinv - ncomp
+    e_dom = F(z)
+    e_comp = J(p)
+    margin = e_dom + e_comp - delta
+    return delta, z, e_dom, qinv, ncomp, p, e_comp, margin
+
+
+# The previous g=0.0050 joint-orbit floor is excluded with substantial margin.
+assert boundary_values(t_base)[-1] > D('0.014')
+
+# Safe strengthened complement-energy endpoint.
+delta, z, e_dom, qinv, ncomp, p, e_comp, margin = boundary_values(t_safe)
+assert margin > D('0.0000118')
+assert D('0.616') < p < D(1)
+assert qinv < D('1.61')
+assert z < D('1.30')
+
+# Tight scalar crossing retained as a regression bracket only.
+root_lo = D('1.82891235390268043')
+root_hi = D('1.82891235390268044')
+assert boundary_values(root_lo)[-1] > 0
+assert boundary_values(root_hi)[-1] < 0
+
+# Uniform derivative bounds from the symbolic endpoint reduction.
+Fprime_133 = D(1) - cos_decimal(D('1.33') / D(6))
+
+# Phi'(q)=1-sech(q/6)=1-cos(a), where q=6L(a).
+q_cap = D('1.62')
+lo = D(0)
+hi = pi / D(6)
+for _ in range(240):
+    mid = (lo + hi) / D(2)
+    if L(mid) < q_cap / D(6):
+        lo = mid
+    else:
+        hi = mid
+phase_a = (lo + hi) / D(2)
+Phiprime_162 = D(1) - cos_decimal(phase_a)
+Jprime_061 = D(2) - D(2) * cos_decimal(D('0.61') / D(3))
+
+dz_ddelta_max = D(4) + D(16) * Delta2 / (C0 * C0)
+minus_dN_ddelta_max = D(2) * (D(1) + D(4) * Delta2 / (C0 * C0))
+
+assert Fprime_133 < D('0.025')
+assert dz_ddelta_max < D(8)
+assert Phiprime_162 < D('0.04')
+assert minus_dN_ddelta_max < D(4)
+assert Jprime_061 > D('0.041')
+assert D(1) / Phiprime_162 > D(25)
+
+# dp/ddelta < -25 + 4 < -21, so the total margin derivative is negative.
+coarse_margin_derivative_upper = (
+    D('0.025') * D(8)
+    - D(21) * D('0.041')
+    - D(1)
+)
+assert coarse_margin_derivative_upper < D('-1.6')
+
+# Sector Jensen regime remains valid for all p<=1.
+sector_cap_cost = pi / D(3) - D(1)
+assert sector_cap_cost > D('0.047')
+assert J(D(1)) < sector_cap_cost
+
+print('Delta2 =', Delta2)
+print('g =', g)
+print('C0 =', C0)
+print('t_base =', t_base)
+print('base margin =', boundary_values(t_base)[-1])
+print('t_safe =', t_safe)
+print('delta0 =', delta)
+print('z0 =', z)
+print('F(z0) =', e_dom)
+print('Phi^{-1}(delta0) =', qinv)
+print('Ncomp upper =', ncomp)
+print('retained complement pair floor p0 =', p)
+print('J(p0) =', e_comp)
+print('margin =', margin)
+print('root bracket =', root_lo, root_hi)
+print('margin(root_lo) =', boundary_values(root_lo)[-1])
+print('margin(root_hi) =', boundary_values(root_hi)[-1])
+print('Fprime(1.33) =', Fprime_133)
+print('Phiprime(1.62) =', Phiprime_162)
+print('Jprime(0.61) =', Jprime_061)
+print('dz/ddelta max =', dz_ddelta_max)
+print('-dN/ddelta max =', minus_dN_ddelta_max)
+print('coarse dmargin/ddelta upper =', coarse_margin_derivative_upper)
+print('PASS: g=0.0050 complement bracing floor t >= 1.82891')

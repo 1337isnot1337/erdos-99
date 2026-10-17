@@ -1,0 +1,238 @@
+<!-- theorem-state: {"artifact_id":"ART-D414F9770662","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-a"} -->
+# Erdős Problem #99 — Target A contact-edge lens shield
+
+**Date:** 2026-09-05  
+**Branch:** `research/target-c-c97-caterpillar-fan-capacity-2026-09-04`  
+**Run type:** exact strengthening of Sections 169–173 / contracted Schur shield  
+**Target:** locked-response contact separator  
+**Status:** LEVEL I STILL OPEN
+
+## 1. Main point
+
+The promoted contact-shield argument deletes every response-lattice neighbor of every
+contact-shield vertex.  For a response edge which actually crosses a unit contact
+edge, this is much larger than necessary.
+
+If `pq` is a unit contact and a strict response edge `xy` properly crosses `pq`, with
+`x` a response point distinct from `p,q`, then the right endpoint `y` is not merely a
+strict lattice neighbor of **one** of `p,q`: it is a strict common neighbor of **both**.
+
+Consequently a contact separator can be shielded by the union of its edge lenses
+
+`N_Lambda(p) cap N_Lambda(q)`
+
+instead of the full vertex-neighborhood union.  Every unit-contact lens contains at
+most two sites of the unit triangular lattice.
+
+The resulting Schur penalty is
+
+`|L_Sigma| + beta_Sigma`,
+
+where `L_Sigma` is the right-shore lens union and `beta_Sigma` counts only basis
+contact vertices whose fixed matched lattice partner was not already lens-shielded.
+This is an exact basis-sensitive refinement of the previous `|R_Sigma|` penalty.
+
+## 2. A crossing endpoint lies in both endpoint neighborhoods
+
+Let `p,q,x` belong to one unit-separated response set, with
+
+`|p-q|=1`,
+
+`x notin {p,q}`,
+
+and let `y` be a right response vertex satisfying
+
+`|x-y|<1`.
+
+Assume the closed segments `[x,y]` and `[p,q]` meet properly at `z`.
+Unit separation gives
+
+`|x-p|>=1`, `|x-q|>=1`.
+
+By the triangle inequality through `z`,
+
+`|x-p|+|y-q|`
+
+`<= |x-z|+|z-p|+|y-z|+|z-q|`
+
+`= |x-y|+|p-q| < 2`.
+
+Therefore `|y-q|<1`.  Interchanging `p,q` gives `|y-p|<1`.
+
+### Theorem EL1 — two-endpoint crossing transport
+
+If a strict response radial edge from a response point distinct from the endpoints
+properly crosses a unit contact edge `pq`, then
+
+`y in N_Lambda(p) cap N_Lambda(q)`.
+
+The endpoint-on-edge case is even simpler: if the right endpoint `y` lies in the
+relative interior of `pq`, then both distances are strictly below one.  The collinear
+overlap case is excluded exactly as in Lemma 173.1.  Thus the same conclusion covers
+every non-vertex crossing relevant to the shielding argument.
+
+This strictly strengthens the one-endpoint conclusion used in Section 169.5.
+
+## 3. A unit-contact lens has at most two triangular-lattice sites
+
+Fix `|p-q|=1` and put
+
+`L(pq)=N_Lambda(p) cap N_Lambda(q)`.
+
+After a rigid motion take
+
+`p=(-1/2,0)`, `q=(1/2,0)`.
+
+The open Euclidean lens
+
+`B(p,1) cap B(q,1)`
+
+is centrally symmetric about the origin.  For a point `(x,t)` in its closure the two
+disk inequalities are equivalent to
+
+`x^2+t^2+|x| <= 3/4`.
+
+Hence its largest radius from the origin is `sqrt(3)/2`, attained only at the two
+circle-intersection points `(0,+-sqrt(3)/2)`.  The open lens therefore has strict
+diameter `<sqrt(3)`.
+
+Distinct unit triangular-lattice sites have squared distances
+
+`a^2+ab+b^2`, `a,b in Z`.
+
+There is no value strictly between `1` and `3`: the equation
+`a^2+ab+b^2=2` has no integer solution.  Thus any two distinct lattice sites in the
+open lens must be exactly unit distance apart.
+
+If the lens contained three lattice sites, all three would therefore form an elementary
+unit equilateral triangle.  Both `p` and `q` would lie strictly inside all three unit
+disks centered at those triangle vertices, i.e. in the interior of the corresponding
+unit Reuleaux triangle.  That closed Reuleaux triangle has diameter one, and two
+interior points have distance strictly below one.  This contradicts `|p-q|=1`.
+
+### Theorem EL2 — two-site lens bound
+
+For every unit contact edge,
+
+`1 <= |L(pq)| <= 2`
+
+under the generic response-lattice phase.  The lower bound is CN1; the upper bound is
+the argument above.
+
+## 4. Edge-lens geometric shield
+
+Let `Sigma` be any finite unit-contact subgraph of `X^*`.  Define
+
+`L_Sigma = (union_(pq in E(Sigma)) L(pq)) cap Y_in`.
+
+Delete
+
+`V(Sigma) sqcup L_Sigma`
+
+from the full response graph.  A surviving response radial edge cannot pass through a
+distinct contact vertex by the usual genericity condition.  If it meets the relative
+interior of a contact edge, EL1 puts its right endpoint in `L_Sigma`, contradiction.
+The collinear case is unchanged from Section 173.
+
+### Theorem EL3 — lens-sector trapping
+
+No response edge of
+
+`G - (V(Sigma) sqcup L_Sigma)`
+
+intersects `|Sigma|`.  Hence every surviving internal response component is contained
+in one component of `K^*\|Sigma|`.
+
+Moreover EL2 gives the crude but exact finite bound
+
+`|L_Sigma| <= 2|E(Sigma)|`.
+
+For the locked unit triangle core `T_*`, the three edge lenses have union of size at
+most four.  Indeed a site in any edge lens is within unit distance of two of the three
+triangle vertices.  Two such sites, even if attached to different triangle edges, are
+both within unit distance of at least one common triangle vertex, because two
+2-subsets of a 3-set intersect.  Thus the whole core lens union has strict diameter
+`<2`.  Partitioning the triangular lattice into the four cosets of `2Lambda` gives
+
+`|L_(T_*)|<=4`.
+
+Consequently for the locked fan, whose unique cycle is `T_*` and whose remaining
+`v-3` edges form channel trees,
+
+`|L_Sigma| <= 4+2(v-3)=2v-2`.
+
+## 5. Contracted gammoid penalty
+
+Fix the Section-113 basis matching
+
+`mu_0:B->Z`.
+
+Write
+
+`L_Z=L_Sigma cap Z`,
+
+`L_O=L_Sigma cap O`.
+
+In the contracted directed gammoid, shield
+
+1. every contracted `B-Z` pair whose right endpoint lies in `L_Z`;
+2. every contracted `B-Z` pair whose left endpoint lies in `B cap V(Sigma)`;
+3. every terminal in `C^partial cap V(Sigma)`;
+4. every sink in `L_O`.
+
+The first two classes may overlap.  Define the uncovered basis-contact count
+
+`beta_Sigma`
+
+`= |{b in B cap V(Sigma): mu_0(b) notin L_Z}|`.
+
+Then the number of shielded contracted basis pairs is exactly
+
+`|L_Z|+beta_Sigma`.
+
+Let `delta_Sigma^lens` be the same coarse sector Hall deficiency as in Section 173,
+but formed after deleting the lens shield above.  EL3 supplies sector locality.
+The standard path deletion argument therefore gives
+
+### Theorem EL4 — edge-lens Schur nullity
+
+`zeta >= delta_Sigma^lens - |L_Sigma| - beta_Sigma`.
+
+The contact-terminal count cancels exactly, and deep nonbasis contact vertices never
+occur internally on a directed Schur path.
+
+The previous contact-neighborhood theorem has
+
+`zeta >= delta_Sigma - |R_Sigma|`.
+
+EL4 replaces that indiscriminate right-shore union by the strictly crossing-relevant
+lens set, at the cost of only those basis contact vertices whose matched partner is not
+already in a lens.
+
+## 6. Explicit fan and crosscut forms
+
+For a contact crosscut path with `v` vertices and `v-1` edges,
+
+`|L_Sigma|+beta_Sigma <= 2(v-1)+|B cap V(Sigma)| <= 3v-2`.
+
+For the locked connected unicyclic three-channel fan with `v` vertices,
+
+`|L_Sigma|+beta_Sigma`
+
+`<= (2v-2)+|B cap V(Sigma)|`
+
+`<= 3v-2`.
+
+The worst-case coefficient is still three because a response basis could in principle
+contain every fan vertex.  The improvement is structural rather than merely a constant:
+all right-shore shielding is now edge-local, and the remaining extra term is an exact
+matroid/basis quantity `beta_Sigma`.
+
+A closing continuation can attack either factor separately:
+
+- prove that a suitable `Z`-basis matching makes `beta_Sigma` small for the
+  stress-generated fan/crosscut; or
+- use overlap among the two-site edge lenses to improve `|L_Sigma|` along the actual
+  positive-stress geometry.
+
+No Level I closure is claimed.

@@ -1,0 +1,92 @@
+#!/usr/bin/env python3
+"""Exact arithmetic certificate for the live Target-C defect-partition tradeoff.
+
+Checks, at epsilon=0.00710 and delta_cut=0.017609:
+  * the audited pair-shield/sealed-component base C0 > 1.1988388040;
+  * the live topology/rigidity defect density k/D = q/D-t_D has asymptotic
+    lower endpoint pi-(mu_*+epsilon);
+  * C0 + [pi-(mu_*+epsilon)]/4 > 1.4941462550;
+  * if m_D/D <= 1.25+o(1), then (d_H+p_D)/D > 0.9765850200-o(1),
+    where p_D=dim aff(P_H)=s_Z-sigma_C.
+
+All transcendental bounds use Fractions, integer square roots, and Machin series.
+"""
+from fractions import Fraction
+from math import isqrt
+
+Q = Fraction
+
+
+def atan_inv_bounds(q: int, terms: int):
+    s = Q(0)
+    for j in range(terms):
+        term = Q(1, (2*j+1) * q**(2*j+1))
+        s += term if j % 2 == 0 else -term
+    nxt = Q(1, (2*terms+1) * q**(2*terms+1))
+    if terms % 2 == 0:
+        return s, s+nxt
+    return s-nxt, s
+
+
+def sqrt_floor(x: Q, scale: int) -> Q:
+    n = isqrt((x.numerator * scale * scale) // x.denominator)
+    y = Q(n, scale)
+    assert y*y <= x
+    return y
+
+
+def sqrt_ceil(x: Q, scale: int) -> Q:
+    n = isqrt((x.numerator * scale * scale) // x.denominator) + 1
+    y = Q(n, scale)
+    assert y*y >= x
+    return y
+
+
+SCALE = 10**90
+a5_lo, a5_hi = atan_inv_bounds(5, 100)
+a239_lo, a239_hi = atan_inv_bounds(239, 30)
+pi_lo = 16*a5_lo - 4*a239_hi
+pi_hi = 16*a5_hi - 4*a239_lo
+assert pi_lo < pi_hi
+
+n3 = isqrt(3*SCALE*SCALE)
+sqrt3_lo = Q(n3, SCALE)
+sqrt3_hi = Q(n3+1, SCALE)
+assert sqrt3_lo*sqrt3_lo < 3 < sqrt3_hi*sqrt3_hi
+
+delta2_lo = pi_lo / (2*sqrt3_hi)
+delta2_hi = pi_hi / (2*sqrt3_lo)
+s2_lo = sqrt_floor(delta2_lo, SCALE)
+s2_hi = sqrt_ceil(delta2_hi, SCALE)
+
+g = Q(7707, 10**6)
+epsilon = Q(71, 10000)
+delta_cut = Q(17609, 10**6)
+
+# Live pair-shield/sealed-component base from the audited detour pinching theorem.
+Mstar_hi = 4*s2_hi + 2*g
+C0_lo = pi_lo/2 - Mstar_hi/10 - epsilon + delta_cut
+assert C0_lo > Q(1198838804, 10**9)  # 1.198838804
+
+# mu_* = pi/2 + (2/5)s_2 + g/5.  Use an upper enclosure because
+# k/D=q/D-t_D and q/D -> pi while t_D is bounded above by mu_*+epsilon.
+mu_hi = pi_hi/2 + Q(2,5)*s2_hi + g/5
+tmax_hi = mu_hi + epsilon
+k_density_lo = pi_lo - tmax_hi
+assert k_density_lo > Q(1181229803, 10**9)  # 1.181229803
+
+# The exact decomposition k=d_H+s_Z=d_H+p_D+sigma_C and CR.2 give
+# m_D + (d_H+p_D)/4 > C0 D + k/4 - o(D).
+combined_lo = C0_lo + k_density_lo/4
+assert combined_lo > Q(1494146255, 10**9)  # 1.494146255
+
+# A concrete low-flex corollary.
+complexity_if_m125 = 4*(combined_lo - Q(5,4))
+assert complexity_if_m125 > Q(976585020, 10**9)
+
+print('PASS: live defect partition tradeoff certified')
+print('C0 >', float(C0_lo))
+print('t_live_max <', float(tmax_hi))
+print('k/D asymptotic floor >', float(k_density_lo))
+print('m/D + (d_H+p_D)/(4D) >', float(combined_lo))
+print('if m/D <=1.25, (d_H+p_D)/D >', float(complexity_if_m125))

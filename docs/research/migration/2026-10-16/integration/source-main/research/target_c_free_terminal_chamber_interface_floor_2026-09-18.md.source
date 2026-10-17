@@ -1,0 +1,490 @@
+# Target C - terminal FREE branch forces a sharp chamber-interface floor
+
+**Date:** 2026-09-18  
+**Status:** proof-only synthesis; theorem-state authority unchanged  
+**Scope:** full-core Type-II survivor sequences carrying the current terminal FREE branch, with `pi D-q=o(D)`  
+**Depends on:** canonical Sections 63, 67, and 85; audited-working all-defect stopped-train/phase gap Section 142; the current terminal FREE reduction only for the branch hypothesis  
+**Certificate:** `research/verify_target_c_free_terminal_chamber_interface_floor_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The latest terminal FREE notes force a first-order strict-rhombus count deficit. This note extracts a different first-order consequence from the same terminal geometry: the raw inactive-chamber interface itself must be very large, and one of its two geometric classes must already be linearly large.
+
+Put
+
+\[
+a_0={\sqrt3\over2},\qquad c_0={\sqrt3\over4}={a_0\over2},
+\qquad
+\Delta_2={\pi\over2\sqrt3},\qquad s_2:=\sqrt{\Delta_2},
+\]
+
+and
+
+\[
+\gamma:=2s_2-{\pi\over2}.
+\]
+
+Let
+
+\[
+U:=q-k,\qquad t_D:={U\over D},\qquad p:=\operatorname{per}(F),
+\qquad \lambda_D:=b-p\ge0.
+\]
+
+For the bounded nonquadrilateral faces, let `f` be their number and
+`Q=sum_P(deg P-4)`. Since every such face has degree at least five,
+
+\[
+Q\ge f.
+\tag{CF.1}
+\]
+
+Define the canonical Section-85 raw chamber-interface currency
+
+\[
+\mathcal H_D:=(b-p)+(Q+2f)=\lambda_D+Q+2f.
+\tag{CF.2}
+\]
+
+The main result is
+
+\[
+\boxed{
+\liminf {\mathcal H_D\over D}
+\ge {12\over5}s_2
+=2.285550736473497\ldots .
+}
+\tag{CF.3}
+\]
+
+Consequently Section 85 gives
+
+\[
+\boxed{
+\liminf {A_{ch}-a_0Z_{ch}\over D}
+\ge {6a_0\over5}s_2
+=0.989672499712141\ldots .
+}
+\tag{CF.4}
+\]
+
+This is terminal-specific. It does not replace the older general full-core `0.586223...D` chamber-surplus floor outside the terminal branch.
+
+There is also a classwise strengthening. Write
+
+- `A_exc,Z_def` for the total area and assigned isolate population in bounded nonquadrilateral faces;
+- `H_out,Z_in` for the total area and assigned isolate population in the convex outer pockets of Section 67.
+
+Then one of the two chamber classes alone satisfies
+
+\[
+\boxed{
+\max\{
+ A_{exc}-a_0Z_{def},
+ H_{out}-a_0Z_{in}
+\}
+\ge
+\left({3a_0s_2\over4}-o(1)\right)D,
+}
+\tag{CF.5}
+\]
+
+where
+
+\[
+{3a_0s_2\over4}
+=0.618545312320088\ldots .
+\tag{CF.6}
+\]
+
+Equivalently, before applying Oler to the two classes,
+
+\[
+\boxed{
+\max\{Q+2f,\lambda_D\}
+\ge
+\left({3s_2\over2}-o(1)\right)D
+= (1.428469210295936\ldots-o(1))D.
+}
+\tag{CF.7}
+\]
+
+The constants in (CF.3) and (CF.7) are sharp for the relaxed scalar system used here. Improving either requires new geometry, not another rearrangement of the same terminal, face-degree, and all-defect inequalities.
+
+---
+
+## 1. Exact terminal interface identity
+
+Canonical Section 63 gives
+
+\[
+\boxed{b+Q=2(q-k)=2U.}
+\tag{CF.8}
+\]
+
+Therefore
+
+\[
+\boxed{Q+\lambda_D=Q+b-p=2U-p.}
+\tag{CF.9}
+\]
+
+On the terminal branch
+
+\[
+\pi D-q=o(D).
+\tag{CF.10}
+\]
+
+Every force-hull side joins distinct source points and has length at least one, so
+
+\[
+q\le p\le\pi D.
+\]
+
+Hence
+
+\[
+\boxed{{p\over D}\to\pi.}
+\tag{CF.11}
+\]
+
+The audited-working all-defect Section-142 theorem gives
+
+\[
+\boxed{2f-k\ge(\gamma-o(1))D.}
+\tag{CF.12}
+\]
+
+Since `k=q-U`, terminality gives
+
+\[
+{k\over D}=\pi-t_D+o(1).
+\tag{CF.13}
+\]
+
+Thus
+
+\[
+\boxed{
+{f\over D}
+\ge {\pi-t_D+\gamma\over2}-o(1).
+}
+\tag{CF.14}
+\]
+
+No FREE-specific matching or reflection count is used in (CF.8)-(CF.14). The FREE hypothesis enters only because the current live reduction places the branch under study on the terminal face.
+
+---
+
+## 2. Terminal feasibility already forces `t_D>=1.951721...`
+
+Equation (CF.9), nonnegativity of `lambda_D`, and (CF.1) imply
+
+\[
+2U-p=Q+\lambda_D\ge f.
+\]
+
+Divide by `D` and use (CF.11):
+
+\[
+2t_D-\pi\ge {f\over D}-o(1).
+\tag{CF.15}
+\]
+
+Insert (CF.14):
+
+\[
+2t_D-\pi
+\ge {\pi-t_D+\gamma\over2}-o(1).
+\]
+
+Therefore
+
+\[
+\boxed{
+ t_D\ge t_0-o(1),
+ \qquad
+ t_0:={3\pi+\gamma\over5}
+ ={\pi\over2}+{2s_2\over5}
+ =1.951721449540479\ldots .
+}
+\tag{CF.16}
+\]
+
+The numerical value has appeared elsewhere in the research tail under stronger or different route hypotheses. The point here is the short terminal derivation: on `q/D->pi`, the all-defect face floor and the elementary feasibility `Q+lambda>=f` already force it.
+
+---
+
+## 3. The raw Section-85 interface is at least `2.285550...D`
+
+From (CF.2) and (CF.9),
+
+\[
+\mathcal H_D
+=2U-p+2f.
+\tag{CF.17}
+\]
+
+Divide by `D`, use (CF.11), and then (CF.14):
+
+\[
+\begin{aligned}
+{\mathcal H_D\over D}
+&=2t_D-\pi+2{f\over D}+o(1)\\
+&\ge 2t_D-\pi+(\pi-t_D+\gamma)-o(1)\\
+&=t_D+\gamma-o(1).
+\end{aligned}
+\tag{CF.18}
+\]
+
+Insert (CF.16):
+
+\[
+\liminf {\mathcal H_D\over D}
+\ge t_0+\gamma.
+\]
+
+The constants simplify exactly:
+
+\[
+t_0+\gamma
+=\left({\pi\over2}+{2s_2\over5}\right)
+ +\left(2s_2-{\pi\over2}\right)
+={12s_2\over5}.
+\]
+
+This proves (CF.3).
+
+### Sharpness of the current scalar relaxation
+
+Equality in the limiting scalar system is possible at
+
+\[
+t=t_0,\qquad
+{f\over D}={Q\over D}={4s_2\over5},
+\qquad
+{\lambda_D\over D}=0.
+\tag{CF.19}
+\]
+
+Indeed, (CF.14) and (CF.15) are then equalities. Moreover the current FREE recipient laws can also be saturated at the same scalar point by taking
+
+\[
+{Z_{ext}\over D}={1\over2}.
+\]
+
+Then `lambda_D+Z_ext=D/2` and
+
+\[
+t+{2\over5}{Z_{ext}\over D}
+=t_0+{1\over5}
+={\pi\over2}+{1\over5}+{2s_2\over5},
+\]
+
+which is exactly the current terminal FREE train/face constant. Thus (CF.3) cannot be improved by recombining only these scalar constraints.
+
+---
+
+## 4. Convert the interface floor to actual inactive-chamber surplus
+
+Canonical Section 67 gives the two chamber-class inequalities separately.
+
+For bounded nonquadrilateral faces,
+
+\[
+\boxed{
+A_{exc}-a_0Z_{def}
+\ge a_0f+c_0Q
+=c_0(2f+Q).
+}
+\tag{CF.20}
+\]
+
+For the outer pockets,
+
+\[
+\boxed{
+H_{out}-a_0Z_{in}
+\ge c_0(b-p)
+=c_0\lambda_D.
+}
+\tag{CF.21}
+\]
+
+Adding them gives the canonical Section-85 inequality in its exact class decomposition:
+
+\[
+\boxed{
+A_{ch}-a_0Z_{ch}
+\ge c_0\mathcal H_D.
+}
+\tag{CF.22}
+\]
+
+Equation (CF.3) therefore gives
+
+\[
+\liminf {A_{ch}-a_0Z_{ch}\over D}
+\ge c_0{12s_2\over5}
+={6a_0s_2\over5},
+\]
+
+which is (CF.4).
+
+This is stronger than the older proof-only `0.586223D` floor on the present terminal branch, but it does not contradict Type II: a linear Oler surplus can still be spread across `O(D)` thin chambers.
+
+---
+
+## 5. One chamber class alone carries `0.618545...D`
+
+The total floor does not by itself identify where the interface is paid. A sharper minimax does.
+
+Normalize
+
+\[
+F_D:={f\over D},\qquad
+Q_D:={Q\over D},\qquad
+L_D:={\lambda_D\over D}.
+\]
+
+The raw exceptional class has normalized size
+
+\[
+E_D:=2F_D+Q_D\ge3F_D
+\tag{CF.23}
+\]
+
+because `Q_D>=F_D`.
+
+Also, by (CF.17) and (CF.14),
+
+\[
+E_D+L_D
+={\mathcal H_D\over D}
+\ge 4s_2-2F_D-o(1).
+\tag{CF.24}
+\]
+
+To see the last expression directly, rewrite (CF.14) as
+
+\[
+t_D\ge\pi+\gamma-2F_D-o(1)
+\]
+
+and insert it into
+
+\[
+{\mathcal H_D\over D}=2t_D-\pi+2F_D+o(1).
+\]
+
+Therefore
+
+\[
+\max\{E_D,L_D\}
+\ge
+\max\left\{3F_D,\,2s_2-F_D\right\}-o(1).
+\tag{CF.25}
+\]
+
+The right side is minimized when
+
+\[
+3F_D=2s_2-F_D,
+\qquad F_D={s_2\over2},
+\]
+
+and the minimum is
+
+\[
+{3s_2\over2}.
+\]
+
+This proves (CF.7). Multiplying by `c_0` and using (CF.20)-(CF.21) proves (CF.5).
+
+The split constant is also sharp for the relaxed scalar system. Take
+
+\[
+{f\over D}={Q\over D}={s_2\over2},
+\qquad
+ t={\pi\over2}+s_2,
+\qquad
+ {\lambda_D\over D}={3s_2\over2}.
+\tag{CF.26}
+\]
+
+Then the all-defect inequality is tight and
+
+\[
+2{f\over D}+{Q\over D}
+={\lambda_D\over D}
+={3s_2\over2}.
+\]
+
+Hence no larger classwise constant follows from the scalar constraints used here.
+
+---
+
+## 6. Relation to the new rhombus-deficit floor
+
+The immediately preceding terminal FREE theorem proves
+
+\[
+\mathcal D_4:=\Delta_2D^2-R_4
+\ge(1.2427753682\ldots-o(1))D+{4\over5}Z_{ext}.
+\]
+
+The present theorem is complementary rather than a rearrangement of that count deficit. It says that the inactive-chamber part of the force-hull decomposition must itself carry
+
+\[
+A_{ch}-a_0Z_{ch}
+\ge(0.9896724997\ldots-o(1))D,
+\]
+
+and that at least one of the bounded-exceptional or outer-pocket classes carries at least
+
+\[
+(0.6185453123\ldots-o(1))D
+\]
+
+of this Oler-weighted surplus.
+
+Using the exact geometric identity
+
+\[
+a_0\mathcal D_4=\delta_F+A_{ch}+E_4,
+\]
+
+the rhombus-count deficit and the chamber-interface theorem now locate two different first-order costs in the same terminal survivor: a global strict-rhombus deficiency and a large source-level chamber/interface payment.
+
+---
+
+## 7. Remaining bottleneck
+
+This still does not close C-II. The missing implication is now more localized.
+
+A terminal FREE survivor must satisfy both
+
+\[
+\mathcal D_4\ge(1.2427753682\ldots-o(1))D+{4\over5}Z_{ext}
+\]
+
+and
+
+\[
+\mathcal H_D\ge(2.2855507364\ldots-o(1))D,
+\]
+
+with one of `Q+2f` or `b-per(F)` at least
+
+\[
+(1.4284692102\ldots-o(1))D.
+\]
+
+The next useful theorem should attack these two class branches separately:
+
+1. **Exceptional-face branch:** transfer a linear `Q+2f` population into the occurrence-counted Section-122/123 attachment-cell detour, or prove that the accompanying first-order rhombus deficit cannot be supported by the full-core harmonic tiling.
+2. **Outer-pocket branch:** convert a linear `b-per(F)` into a source-preserving strict diameter decrease, or into an upper budget incompatible with the terminal near-disk force hull.
+
+A generic statement that `A_ch-a_0Z_ch=Omega(D)` is no longer enough. The classwise split (CF.7) is the sharper handoff.
+
+**Disposition:** proved a sharp terminal raw-interface floor, the resulting `0.989672...D` chamber-surplus floor, and a `0.618545...D` one-class surplus dichotomy. The authoritative theorem-state ledger remains unchanged; C-II remains open.

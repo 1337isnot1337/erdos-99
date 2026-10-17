@@ -1,0 +1,179 @@
+# Target C: close the order-6 `(2,2,2,2)` four-support shard
+
+Date: 2026-09-23
+
+Status: exact finite closure of the two four-support `S_7` orbits with setwise stabilizer order `6` in the eight-no-root `k=5,D=-1,d_root=1,p=3,m=4,(2,2,2,2)` branch. This is a proper shard closure only. It does not close the full `(2,2,2,2)` profile, the `(3,2,2,1)` profile, the full `p=3` branch, the `k=5` layer, Target C-II, or Erdos Problem #99.
+
+Inputs:
+
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_three_singleton_basis_reduction_2026-09-23.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_tetrahedral_support_compression_2026-09-23.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_nullity_catalog_2026-09-23.md`;
+- the exact verifier committed with this note.
+
+## 1. Necessary conditions already proved
+
+For a surviving `m=4,p=3` state:
+
+- exactly three touched root blocks are singletons;
+- every other touched root block is complete;
+- the three singleton coefficient rows have rank three;
+- their generalized weights satisfy
+
+```text
+(d1,d2,d3) >= (2,4,5);
+```
+
+- the touched complete-root row system has nullity exactly one;
+- because `D=-1` and `d_root=1`, all five dimensions of the coefficient nullspace must survive independently modulo the complete-root relation span.
+
+Thus the required external relation-rank increment is
+
+```text
+5.
+```
+
+The latest support-nullity catalog proves that both stabilizer-order-6 support orbits have full touched nullity four, so the pure support-nullity obstruction does not eliminate them. They require the coefficient-code / external-rank test.
+
+## 2. The two support geometries
+
+The complete four-support `S_7` census has exactly two support-set orbits with stabilizer order `6`. Representatives are
+
+```text
+A = {1234,1235,1246,1347},
+B = {1234,1256,1357,2367}.
+```
+
+For multiplicity profile `(2,2,2,2)`, each support contributes two of its three four-cycle orientations. Hence each labeled support set has
+
+```text
+3^4 = 81
+```
+
+cycle choices.
+
+Since each order-6 support orbit has `5040/6 = 840` labeled support sets, the two support geometries cover
+
+```text
+2 * 840 * 81 = 136080
+```
+
+labeled eight-cycle sets.
+
+Exact quotienting by the support stabilizers gives
+
+```text
+33 S_7 cycle-set orbits.
+```
+
+## 3. Exact coefficient and relation census
+
+For every one of the 33 cycle-set orbit representatives, the verifier enumerates every three-element singleton set that leaves touched complete-root nullity exactly one, and then all `3^3` local singleton directions.
+
+The exact counts are
+
+```text
+admissible singleton triples:  7368
+direction states:             198936
+rank-three coefficient states:198936
+generalized-weight states:     11219
+```
+
+So every state passing the root-nullity filter already has coefficient rank three. After imposing
+
+```text
+(d1,d2,d3) >= (2,4,5),
+```
+
+there are 11219 states left.
+
+For each such state, the verifier forms the complete-root relation rows together with the five lifted relations coming from the coefficient nullspace and computes the rank increment over the complete-root span. The exact census is
+
+```text
+external rank increment 0 : 11219 states.
+```
+
+There are no states with increment 1, 2, 3, 4, or 5.
+
+Therefore every generalized-weight-admissible state has external rank increment zero, while a surviving `D=-1,d_root=1` state requires increment five.
+
+> **Theorem.** No `(2,2,2,2)` state supported on either stabilizer-order-6 four-support geometry can occur in the eight-no-root `k=5,D=-1,d_root=1,p=3` branch.
+
+This closes both order-6 support orbits.
+
+## 4. Exactness of the rank calculation
+
+The coefficient-rank and generalized-weight calculations are integral/exact. Relation ranks are computed modulo
+
+```text
+P = 2^127 - 1.
+```
+
+The largest squared Euclidean norm of any relation row encountered in the census is
+
+```text
+66.
+```
+
+The verifier checks the same explicit Hadamard criterion used by the preceding certificates:
+
+```text
+P^2 > 66^15.
+```
+
+Therefore no nonzero rational minor relevant to these rank calculations can vanish only modulo `P`; the modular relation ranks equal the rational ranks.
+
+## 5. Execution record
+
+A standalone exact reconstruction of the repository K8 normal form and the full order-6 census was executed locally. It produced
+
+```text
+support representatives:
+  {1234,1235,1246,1347}
+  {1234,1256,1357,2367}
+raw cycle sets:               136080
+S_7 cycle-set orbits:             33
+admissible singleton triples:   7368
+direction states:             198936
+rank-three states:            198936
+generalized-weight states:     11219
+external-rank increment census:{0:11219}
+max relation-row norm^2:           66
+Hadamard bound:                  true
+```
+
+The committed verifier is
+
+`research/verify_target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_2222_order6_closure_2026_09_23.py`.
+
+The committed wrapper itself was not executed from a checked-out repository in this run. It is a repository-native wrapper around the existing `(3,3,1,1)` exact infrastructure and encodes the same order-6 census and asserted counts as the executed standalone reconstruction. The closure claim rests on the exact finite enumeration described above, not on CI or probabilistic evidence.
+
+## 6. Remaining target
+
+Before this run, the still-open low-symmetry `(2,2,2,2)` support geometries consisted of
+
+```text
+stabilizer order 1:  2 orbits
+stabilizer order 2:  8 orbits
+stabilizer order 4: 11 orbits
+stabilizer order 6:  2 orbits
+```
+
+The two order-6 orbits are now closed. The remaining `(2,2,2,2)` support geometries are therefore
+
+```text
+2 + 8 + 11 = 21 support-set orbits,
+```
+
+all of stabilizer order `1`, `2`, or `4`.
+
+The full `(3,2,2,1)` profile also remains open on its support-nullity-four geometries. The direct next target is the same completion-independent external-rank-increment test, preferably on another bounded low-symmetry shard.
+
+The other unresolved `k=5` arithmetic branches remain
+
+```text
+D=-2, (d_root,p)=(0,5),
+D=-1, (d_root,p)=(0,6).
+```
+
+No theorem-state authority file is changed by this note.

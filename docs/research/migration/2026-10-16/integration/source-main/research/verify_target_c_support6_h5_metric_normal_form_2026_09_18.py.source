@@ -1,0 +1,143 @@
+#!/usr/bin/env python3
+"""Exact boundary normal form for the support-six reciprocal H5 cases.
+
+This verifier imports the exact sign/order enumeration from the preceding H5
+reduction and checks the additional finite statement used by the metric attack:
+
+* all six uniform symmetry representatives have the same missing matching
+  (up to the prescribed H5 symmetries), with exactly one hull-boundary pair
+  missing; the other four hull-boundary reciprocal edges have one common sign;
+* all ten simple-wall representatives have one common wall type, the wall pair
+  is a missing matching edge, and all five hull-boundary edges have one common
+  sign;
+* the signed metric equilibrium residual is defined on exactly the 18 present
+  edges and ten independent vector equations (vertices 1,...,5).
+
+The script is exact in its finite part: all chirotope/sign data are integers or
+booleans.  It deliberately does not claim that the nonlinear metric residual
+has no zero.  Numerical solving belongs in a separate exploratory run.
+"""
+
+from importlib.util import module_from_spec, spec_from_file_location
+from pathlib import Path
+
+
+HERE = Path(__file__).resolve().parent
+SOURCE = HERE / "verify_target_c_support6_reciprocal_h5_reduction_2026_09_18.py"
+spec = spec_from_file_location("h5_reduction", SOURCE)
+h5 = module_from_spec(spec)
+assert spec.loader is not None
+spec.loader.exec_module(h5)
+
+
+HULL_BOUNDARY = {
+    h5.edge(0, 1),
+    h5.edge(1, 2),
+    h5.edge(2, 3),
+    h5.edge(3, 4),
+    h5.edge(0, 4),
+}
+
+
+def orbit_representatives(uniform, wall_full):
+    uniform_reps = {}
+    for signs, missing, edge_signs in uniform:
+        key = h5.canonical_candidate(signs, missing, edge_signs)
+        uniform_reps[key] = (signs, missing, edge_signs)
+
+    wall_reps = {}
+    for target, signs, missing, edge_signs in wall_full:
+        key = h5.canonical_candidate(signs, missing, edge_signs)
+        wall_reps[key] = (target, signs, missing, edge_signs)
+
+    return list(uniform_reps.values()), list(wall_reps.values())
+
+
+def present_boundary_signs(edge_signs, missing):
+    present = HULL_BOUNDARY - set(missing)
+    return tuple(sorted(edge_signs[e] for e in present)), present
+
+
+def metric_residual_edges(edge_signs, missing):
+    """Return the exact edge/equation incidence used by the metric attack.
+
+    For coordinates y_0=0 and y_1,...,y_6, the residual at i is
+
+        sum_j s_ij (y_i-y_j)/|y_i-y_j|,
+
+    over the 5 present edges incident to i.  Vertices 1,...,5 supply ten
+    scalar equations; the vertex-6 and ground equations follow from global
+    cancellation once all six face closures are imposed.
+    """
+    edges = frozenset(edge_signs)
+    assert edges == frozenset(
+        h5.edge(i, j)
+        for i in range(7)
+        for j in range(i + 1, 7)
+        if h5.edge(i, j) not in set(missing)
+    )
+    rows = []
+    for i in range(1, 6):
+        rows.append(tuple(sorted(e for e in edges if i in e)))
+        assert len(rows[-1]) == 5
+    assert len(rows) == 5
+    return tuple(rows)
+
+
+def main():
+    uniform_extensions = h5.enumerate_uniform_extensions()
+    _, uniform_full = h5.uniform_survivors(uniform_extensions)
+    walls = h5.enumerate_simple_walls(uniform_extensions)
+    _, wall_full = h5.wall_survivors(uniform_extensions, walls)
+    uniform_reps, wall_reps = orbit_representatives(uniform_full, wall_full)
+
+    assert len(uniform_reps) == 6
+    assert len(wall_reps) == 10
+
+    uniform_boundary = []
+    for signs, missing, edge_signs in uniform_reps:
+        assert len(missing) == 3
+        present = HULL_BOUNDARY - set(missing)
+        assert len(present) == 4
+        assert len(set(missing) & HULL_BOUNDARY) == 1
+        boundary_signs, _ = present_boundary_signs(edge_signs, missing)
+        # In the canonical orientation the three consecutive sides 01,12,23
+        # share one sign and the surviving side 04 has the opposite sign.
+        # (The fourth hull side 34 is the missing matching edge.)
+        assert edge_signs[h5.edge(0, 1)] == edge_signs[h5.edge(1, 2)]
+        assert edge_signs[h5.edge(1, 2)] == edge_signs[h5.edge(2, 3)]
+        assert edge_signs[h5.edge(0, 4)] != edge_signs[h5.edge(0, 1)]
+        assert len(metric_residual_edges(edge_signs, missing)) == 5
+        uniform_boundary.append((tuple(sorted(missing)), boundary_signs[0]))
+
+    wall_boundary = []
+    for target, signs, missing, edge_signs in wall_reps:
+        assert target == (0, 3, 6)
+        assert h5.edge(target[1], target[2]) in missing
+        assert len(HULL_BOUNDARY & set(missing)) == 0
+        boundary_signs, _ = present_boundary_signs(edge_signs, missing)
+        assert len(boundary_signs) == 5
+        assert len(set(boundary_signs)) == 1
+        assert len(metric_residual_edges(edge_signs, missing)) == 5
+        wall_boundary.append((tuple(sorted(missing)), boundary_signs[0]))
+
+    assert len(set(uniform_boundary)) == 1
+    assert len(set(wall_boundary)) == 2
+    # The two wall matching choices are exactly the symmetry-related choices
+    # retained by the ten wall orbits.
+    assert {m for m, _ in wall_boundary} == {
+        ((1, 4), (2, 5), (3, 6)),
+        ((1, 5), (2, 4), (3, 6)),
+    }
+
+    print("uniform_metric_orbits", len(uniform_reps))
+    print("uniform_boundary_normal_form", uniform_boundary[0])
+    print("simple_wall_metric_orbits", len(wall_reps))
+    print("simple_wall_boundary_normal_forms", sorted(set(wall_boundary)))
+    print("metric_equations_per_representative", 10)
+    print("metric_present_edges_per_representative", 18)
+    print("PASS: exact H5 boundary normal form and metric residual interface")
+
+
+if __name__ == "__main__":
+    main()

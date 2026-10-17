@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "purpose": "Exact historical source recovery for previously dangling canonical audit and evidence links. Generated lifecycle headers may differ from source; no mathematical claim is promoted. Source hashes identify frozen original bytes; presentation normalization is recorded separately.",
+  "sources": [
+    {
+      "path": "docs/reports/target_c_loaded_attachment_lattice_obstruction_2026-10-05.md",
+      "source_commit": "ed535f5a3a45e3921d91a29c38a0cb37f1d27921",
+      "source_sha256": "6af268a4ba51b8a86de6d9ea0652957bf4c8f3e85bb66fe0255fcb1cc2275c27",
+      "classification": "historical source restored without promotion",
+      "restored_body_sha256": "c7ce734b96dde70c7b7228309b4fbe9981db5b6217c2db5a65fa65ccee8c4680"
+    },
+    {
+      "path": "docs/reports/target_c_macroscopic_face_return_depth_2026-10-05.md",
+      "source_commit": "ed535f5a3a45e3921d91a29c38a0cb37f1d27921",
+      "source_sha256": "364a03dcbf95893cbad5e223a2a418bc1fe25e3bec38bb01bfd07415deb3e75a",
+      "classification": "historical source restored without promotion",
+      "restored_body_sha256": "c32566ca048528b6ecb93120dc9372dd47f5a5e9a05412573ab46130b618c5a9"
+    },
+    {
+      "path": "docs/reports/target_c_unloaded_stress_transversal_2026-10-05.md",
+      "source_commit": "ed535f5a3a45e3921d91a29c38a0cb37f1d27921",
+      "source_sha256": "44cfcce1e5b298a32fffe9a24ed4bbeba67c3caa4af69337f176c8eb4a5f6221",
+      "classification": "historical source restored without promotion",
+      "restored_body_sha256": "68e1e38a3d9514a592a9b533a9bd304150d091357e01d06630daec3d378bb059"
+    },
+    {
+      "path": "docs/reports/target_c_vacancy_funded_unit_wall_activation_2026-10-05.md",
+      "source_commit": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+      "source_sha256": "372a10ce01e1aa8c5a70b39c215b070164eaf851383739d0d0129acd0b1d753b",
+      "classification": "historical source restored without promotion",
+      "restored_body_sha256": "c3be690ff786e21290ea169c07ba656bb51739e1ab89926a0815167425f5797e"
+    },
+    {
+      "path": "research/verify_target_c_vacancy_funded_unit_wall_activation_2026_10_05.py",
+      "source_commit": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+      "source_sha256": "53660a5a8d61c512065d1b188a3e6259a03cc4cf59f3510090c2c3d10b282746",
+      "classification": "historical source restored without promotion",
+      "restored_body_sha256": "53660a5a8d61c512065d1b188a3e6259a03cc4cf59f3510090c2c3d10b282746"
+    },
+    {
+      "path": "docs/reports/target_c_train_cut_hull_bank_2026-10-08.md",
+      "source_commit": "12f6833725f281ce39a6d04ebcb45630b3a6768f",
+      "source_sha256": "15e2530cbae69f6c43cf0d8dea664e626ded9ce80b216dbccf9d1c98de9d58e9",
+      "classification": "historical source restored without promotion",
+      "restored_body_sha256": "03861dec28eb8324ccf6c3bec96331612ae4776ed725a514b213b0023e88bb6e"
+    },
+    {
+      "path": "docs/reports/target_c_weak_pivot_axial_pressure_2026-10-02.md",
+      "source_commit": "c2a37e22df4cd4dc7bbbbb66420fdf9cd7a8e560",
+      "source_sha256": "ac5d949cc89be97945ae8ab125fc6cb5332252b1f64788f72d43899375369836",
+      "classification": "historical source restored without promotion",
+      "presentation_changes": "Trailing whitespace normalized; mathematical wording unchanged.",
+      "restored_body_sha256": "db50f8a301ca3f283383e5fb76e5b21dd2cbde9ef01d5b786a33258a2e009642"
+    },
+    {
+      "path": "docs/reports/target_c_weak_packet_correction_mass_2026-10-02.md",
+      "source_commit": "8c86a3c49bb87951a30e86a86d963593829cf1f0",
+      "source_sha256": "df4003dd1111efa3cf5c215d9932698b52146483820e6a2db02818743b8f5965",
+      "classification": "historical source restored without promotion",
+      "restored_body_sha256": "13bc16bee4dacc0bd97e15d11bb41217857296d7c3e3bd9a2a2eda9a064b67e9"
+    },
+    {
+      "path": "research/verify_target_c_train_cut_hull_bank_2026_10_08.py",
+      "source_commit": "12f6833725f281ce39a6d04ebcb45630b3a6768f",
+      "source_sha256": "fa8e9b25abf7949c61cc77a4ff27e9ee9e486442a885a57ee52a5d3aab86a9c0",
+      "classification": "historical source restored without promotion",
+      "restored_body_sha256": "fa8e9b25abf7949c61cc77a4ff27e9ee9e486442a885a57ee52a5d3aab86a9c0"
+    },
+    {
+      "path": "docs/reports/target_c_contact_opening_cage_transversal_2026-10-05.md",
+      "source_commit": "ed535f5a3a45e3921d91a29c38a0cb37f1d27921",
+      "source_sha256": "e8e62e2b0c0a05feab5da31334c282581108d48985693da1f55cd2cc5c484ac3",
+      "classification": "historical source restored without promotion",
+      "restored_body_sha256": "372f5e69718f8e17cc0f83c9c73e6f5b01c5b182691ae096c438d83393ff33e2"
+    },
+    {
+      "path": "docs/reports/target_c_one_vacancy_collective_strictification_2026-10-05.md",
+      "source_commit": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+      "source_sha256": "f0257acc588d5e3d2b437bf4df73d8ebda768c5d733d7489934feba475e54a69",
+      "classification": "historical source restored without promotion",
+      "restored_body_sha256": "0e317fa26ca612ee1a411e0f362d221fbfb96356ad94d363d310dfe666e5213b"
+    },
+    {
+      "path": "research/verify_target_c_one_vacancy_collective_strictification_2026_10_05.py",
+      "source_commit": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+      "source_sha256": "a7dde4b19c70f31266d3e17c781d2523238e25d4e1abc04b251d8d5c7ec1249a",
+      "classification": "historical source restored without promotion",
+      "restored_body_sha256": "a7dde4b19c70f31266d3e17c781d2523238e25d4e1abc04b251d8d5c7ec1249a"
+    },
+    {
+      "path": "research/verify_weak_packet_correction_mass_2026_10_02.py",
+      "source_commit": "8c86a3c49bb87951a30e86a86d963593829cf1f0",
+      "source_sha256": "c8ff779fc36c3af8eb999798ba771021b77562117bc9505f734fe738d9168229",
+      "classification": "historical source restored without promotion",
+      "restored_body_sha256": "c8ff779fc36c3af8eb999798ba771021b77562117bc9505f734fe738d9168229"
+    },
+    {
+      "path": "research/verify_weak_pivot_pressure_2026_10_02.py",
+      "source_commit": "c2a37e22df4cd4dc7bbbbb66420fdf9cd7a8e560",
+      "source_sha256": "a4ef81f9f01d3ed4b9b07f5ca8c590025126515e98770fc7f9bda7cc85b979fd",
+      "classification": "historical source restored without promotion",
+      "restored_body_sha256": "a4ef81f9f01d3ed4b9b07f5ca8c590025126515e98770fc7f9bda7cc85b979fd"
+    },
+    {
+      "path": "docs/reports/target_c_residual_cage_release_refill_2026-10-05.md",
+      "source_commit": "ed535f5a3a45e3921d91a29c38a0cb37f1d27921",
+      "source_sha256": "7a974d9897c955ae89d4e0b10d502f0f9eabd9cb2cbfc7b0a5582c53762d8f74",
+      "classification": "historical source restored without promotion",
+      "restored_body_sha256": "650f671ad9a004eae4bfb7086494caf76d386c02f6e03af33b3762a15a4d4681"
+    },
+    {
+      "path": "docs/reports/target_c_noncontact_wall_shield_2026-10-05.md",
+      "source_commit": "ed535f5a3a45e3921d91a29c38a0cb37f1d27921",
+      "source_sha256": "0fe41f3f850e0734971d78b257a62a429061d51311276819c7ef174ba864d4c5",
+      "classification": "historical source restored without promotion",
+      "restored_body_sha256": "3ce8597def6ac7d7bfc870ad933607afda464347a2cceba9ecf9ccbbef40fb26"
+    },
+    {
+      "path": "docs/reports/target_c_one_spare_site_contact_minimality_endpoint_2026-10-05.md",
+      "source_commit": "ed535f5a3a45e3921d91a29c38a0cb37f1d27921",
+      "source_sha256": "afd5a20ba695bd56ee8306beb1a0f78b961176b2a7b239603670f4e6466814f5",
+      "classification": "historical source restored without promotion",
+      "restored_body_sha256": "bf9c821ae0c0917b830ec3e6f31493de01a1bc2223a0b0777df374c3f4121fa6"
+    }
+  ]
+}

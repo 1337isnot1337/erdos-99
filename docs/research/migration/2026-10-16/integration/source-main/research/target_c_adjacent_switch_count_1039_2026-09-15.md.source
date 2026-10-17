@@ -1,0 +1,315 @@
+# Target C-II — the live adjacent switching forest has at most `1038` edges
+
+**Date:** 2026-09-15  
+**Status:** proof-only source-level structural strengthening  
+**Scope:** full-core Type-II branch with `t=(q-k)/D<=1.844`  
+**Dependencies:** matched atomic gap `g=0.007707`; Section-171 residual envelope; `t<=1.844` retained dominant mass `z>2.2069`; audited adjacent-backbone switch budgets; adjacent Pareto refinement; adjacent switching-caterpillar theorem  
+**Certificate:** `research/verify_target_c_adjacent_switch_count_1039.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The count-focused adjacent Pareto theorem previously used only the universal
+Hopf--Pannwitz/Cauchy bound
+
+\[
+h_H\le q\le\pi D
+\]
+
+for the number `h_H` of actual diameter edges.  In the live `t<=1.844` branch the
+current defect ledger is much tighter.  Combining it with the already-proved dominant
+retained-mass floor reduces the finite switching obstruction from at most `1762` edges
+to at most `1038` edges.
+
+## Theorem SW1039
+
+Every sufficiently large survivor in the proof-only full-core Type-II branch with
+
+\[
+t={q-k\over D}\le1.844
+\]
+
+has two consecutive smallest-leaf O--O cuts on the audited good-leaf backbone such
+that their switching diameter graph satisfies
+
+\[
+\boxed{N_i\le1038.}
+\tag{S39.1}
+
+The same pair has
+
+\[
+B_i=O(D^{-1})
+\]
+
+for switching KKT multiplier mass and
+
+\[
+d_{\mathbb{RP}^1}(u_i,u_{i+1})=O(D^{-1})
+\]
+
+for projective phase mismatch.  Its switching graph is the layer cut of the full
+diameter graph and hence, by the adjacent switching theorem, is a caterpillar forest.
+
+Thus the large-first-order finite cusp has the normal form
+
+```text
+at most 1038 active switching diameter edges
++ disjoint union of caterpillars
++ exact layer-cut support
++ switching beta mass O(1/D)
++ adjacent phase mismatch O(1/D)
++ exact opposite two-cut multishear
+```
+
+for all sufficiently large members of the live branch.
+
+---
+
+## 1. The defect ledger bounds the full diameter-edge density
+
+Write
+
+\[
+k=d_H+s_Z,
+\qquad
+\kappa={k\over D},
+\]
+
+where
+
+\[
+d_H=q-h_H.
+\]
+
+The exact identity
+
+\[
+q-k=h_H-s_Z
+\]
+
+gives
+
+\[
+\boxed{{h_H\over D}=t+{s_Z\over D}\le t+\kappa.}
+\tag{S39.2}
+
+Use the matched atomic constant
+
+\[
+C_{707}=2\sqrt{\Delta_2}+0.007707,
+\qquad
+\Delta_2={\pi\over2\sqrt3}.
+\]
+
+The Section-171 residual envelope is
+
+\[
+2\delta+{\kappa\over2}+h_{res}
+=R_t:={9t\over2}-2\pi-C_{707},
+\tag{S39.3}
+\]
+
+with
+
+\[
+h_{res}\ge0.
+\]
+
+The uniform `t<=1.844` phase theorem proves retained dominant outer-occurrence mass
+
+\[
+z>2.2069-o(1).
+\]
+
+Since
+
+\[
+F(z)=z-6\sin(z/6)
+\]
+
+is increasing and selected dominant occurrence energy is part of the outer detour,
+
+\[
+\boxed{
+\delta>F(2.2069)-o(1).
+}
+\tag{S39.4}
+
+The exact certificate gives
+
+\[
+F(2.2069)>0.0494260581341351.
+\tag{S39.5}
+
+At the adverse endpoint `t=1.844`, substitute (S39.4) into (S39.3):
+
+\[
+{\kappa\over2}
+\le R_{1.844}-2F(2.2069)+o(1).
+\]
+
+Using outward Machin/radical/Taylor enclosures, the certificate obtains
+
+\[
+\boxed{
+\kappa<0.007259926+o(1).
+}
+\tag{S39.6}
+
+Therefore (S39.2) gives
+
+\[
+\boxed{
+{h_H\over D}<1.851259926+o(1).
+}
+\tag{S39.7}
+
+This is the key improvement over the old `h_H/D<=pi` input.
+
+---
+
+## 2. The global switching-count budget drops to `3.70252D`
+
+For the selected consecutive good-leaf path, each actual diameter interval starts and
+stops at most twice.  Hence the parent interval theorem gives
+
+\[
+\sum_i N_i\le2h_H.
+\]
+
+Equation (S39.7) therefore yields
+
+\[
+\boxed{
+\sum_iN_i
+<3.702519852D+o(D).
+}
+\tag{S39.8}
+
+The audited path has
+
+\[
+m>pD-o(D),
+\qquad
+p={278778993\over78216868750}
+=0.0035641799199\ldots .
+\]
+
+Thus the count-only average threshold is
+
+\[
+{3.702519852\over p}
+=1038.81396\ldots .
+\tag{S39.9}
+
+So the integer `1039` lies strictly above the switch-count average.
+
+---
+
+## 3. Keep phase and KKT switching mass small on the same boundary
+
+The parent adjacent theorem independently gives
+
+\[
+\sum_i D B_i\le2D
+\tag{S39.10}
+\]
+
+and
+
+\[
+\sum_iD(q_i+q_{i+1})
+\le{2C_{phase}\over d_{low}}D+o(D),
+\tag{S39.11}
+\]
+
+with
+
+\[
+d_{low}={9891\over62500}.
+\]
+
+Use the Pareto union-bound argument with thresholds
+
+\[
+n=1039,
+\qquad
+a=b=10^{11}.
+\]
+
+The exact verifier bounds the three bad-boundary densities by
+
+\[
+0.00356354172406\ldots,
+\]
+
+\[
+2\times10^{-11},
+\]
+
+and
+
+\[
+6.7191544\times10^{-10},
+\]
+
+respectively.  Their sum is below `p` by more than
+
+\[
+6.3\times10^{-7}.
+\]
+
+Hence one boundary is simultaneously good for all three conditions:
+
+\[
+N_i<1039+o(1),
+\]
+
+\[
+DB_i<10^{11}+o(1),
+\]
+
+\[
+D(q_i+q_{i+1})<10^{11}+o(1).
+\]
+
+Since `N_i` is integer, sufficiently far along the survivor sequence
+
+\[
+N_i\le1038.
+\]
+
+The two large fixed constants still give `B_i=O(D^{-1})` and phase gap
+`O(D^{-1})`, exactly the asymptotic scales needed by the finite-cusp theorem.
+
+---
+
+## 4. Structural consequence
+
+The switching rows are exactly
+
+\[
+\delta_H(S_{i+1}\setminus S_i),
+\]
+
+a bipartite layer cut of the straight-line diameter thrackle.  The adjacent
+switching-caterpillar theorem therefore upgrades (S39.1) to
+
+\[
+\boxed{
+H_{sw}\text{ is a caterpillar forest with at most }1038\text{ edges}
+}
+\tag{S39.12}
+
+for every sufficiently large survivor.
+
+This does not remove the full-support KKT max-function cusp; local old-contact O--O
+shear descent remains blocked.  It does make the remaining interface obstruction
+substantially smaller and more rigid than the original `<21200` arbitrary-row normal
+form.
+
+A next closing theorem should use the cyclic endpoint order of a diameter caterpillar,
+together with the two adjacent cut-resultant equations, to constrain the signs of these
+at most `1038` exceptional rows or replace the layer nonlocally.
+
+**Disposition:** proved proof-only strengthening of the adjacent finite-cusp normal
+form. C-II and Level I remain open.

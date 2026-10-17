@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "review_kind": "post_environment_loss_static_policy_review",
+  "module_path": "tools/publication_migration.py",
+  "module_checkpoint": "cfcddb201872eb64e59274044ec624e10b52076f",
+  "module_blob": "c4c243380ff64e13071ce4e5e366299bf39f4f67",
+  "test_path": "tools/test_publication_migration.py",
+  "reconstructed_test_blob": "6615cac39b6f78562643a1f80e4332d14fa8543c",
+  "test_controls": 12,
+  "reviewer": "/root/independent_integration_audit",
+  "comparison_basis": "Retained complete earlier source reads, exact final test names and outcomes, and coordinator's literal two-method test patch.",
+  "findings": [
+    "Baseline changes remain limited to six named engineering/index files; changed proof files cannot be authorized.",
+    "Every baseline change binds its old and new Git and SHA256 identities and retains the old Git blob at an inert source path.",
+    "Historical navigation/import exemptions are limited to the complete exact captured f282 snapshot set under explicit archive roots.",
+    "Source metadata inventories and the frozen ledger are checked against retained Git identities, with replacement objects disabled.",
+    "Alternative metadata binds exact captured reports to known source identities and unreviewed lifecycle; the artifact-index consumer rejects canonical/claimed alternatives.",
+    "Generated artifact-index changes preserve all old rows; added rows cannot introduce canonical status or proof dependencies.",
+    "The inclusion-manifest update permits only the existing artifact generator's public hash and editorial description; source and rights fields remain unchanged.",
+    "The recovered regular_bytes helper additionally checks symlink ancestors and actual file modes."
+  ],
+  "static_blockers_found": [],
+  "python_execution_after_environment_loss": false,
+  "byte_identity_with_lost_original_module_proven": false,
+  "full_gate2_verified": false,
+  "deprecation_ready": false,
+  "mathematical_proof": false,
+  "limits": [
+    "This records static inspection, not a Python replay of the reconstructed module or tests.",
+    "The twelve test controls passed before environment loss on local candidate18cf92d/tree2ec17b75; that evidence does not establish a fresh pass on any recovered commit.",
+    "Final combined-tree source/frozen/policy identity checks remain separate from this module review."
+  ]
+}

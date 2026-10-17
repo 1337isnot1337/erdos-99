@@ -1,0 +1,443 @@
+# Target C — inactive-source hull stability audit
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+Canonical Section 77 produces, in the subquadratic positive-core branch, one actual
+convex inactive chamber `C_*` with
+
+\[
+\operatorname{area}(C_*)=\Omega(D^2),
+\qquad
+\operatorname{per}(C_*)=O(D),
+\qquad
+z_*={\operatorname{area}(C_*)\over a_0}+O(D),
+\tag{86.1}
+\]
+
+where the `z_*` assigned points are actual contact-isolated source points and
+`a_0=sqrt(3)/2`.
+
+This module upgrades population saturation to geometric saturation by the **source
+points themselves**. Let
+
+\[
+K_*:=\operatorname{conv}S_*,
+\]
+
+where `S_*` is the set of assigned isolates. Then
+
+\[
+\boxed{
+\operatorname{area}(C_*)-\operatorname{area}(K_*)=O(D),
+\qquad
+d_H(C_*,K_*)=O(\sqrt D).
+}
+\tag{86.2}
+\]
+
+Moreover `K_*` contains a disk of radius `kappa D-O(sqrt(D))` for an absolute
+`kappa>0` along the fixed chamber branch.
+
+Thus the isolate-heavy branch contains a macroscopic convex hull made entirely from
+contact-isolated source points. The isolates cannot realize their near-capacity count
+as a thin or spatially sparse cloud inside the chamber.
+
+The result does not turn any strict distance into a unit contact and does not produce
+a diameter-decreasing motion. It is a geometric stability theorem for the remaining
+inactive-chamber branch.
+
+---
+
+# 86. A near-capacity isolated population fills its chamber in Hausdorff distance
+
+We prove a slightly more general finite statement and then apply it to Section 77.
+
+Let `C` be a compact convex body with
+
+\[
+\operatorname{diam}C\le D,
+\qquad
+\operatorname{area}C\ge \alpha D^2,
+\qquad
+\operatorname{per}C\le P_0D,
+\tag{86.3}
+\]
+
+for fixed constants `alpha,P_0>0`. Let `S subset C` be a unit-separated set with
+`z=|S|`, and assume
+
+\[
+\boxed{
+a_0z\ge\operatorname{area}C-L_0D}
+\tag{86.4}
+\]
+
+for some fixed `L_0>=0`. Put
+
+\[
+K:=\operatorname{conv}S.
+\tag{86.5}
+\]
+
+## 86.1 A coarse but uniform inradius bound
+
+Let `r(C)` denote the inradius of `C`.
+
+### Lemma 86.1
+
+Every compact convex planar body of positive area satisfies
+
+\[
+\boxed{r(C)\ge {\operatorname{area}C\over\operatorname{per}C}.}
+\tag{86.6}
+\]
+
+### Proof
+
+For `0<=t<=r(C)`, let
+
+\[
+C_{-t}:=\{x\in C:\operatorname{dist}(x,\partial C)\ge t\}
+\]
+
+be the inner parallel body. At `t=r(C)` the inner parallel body has zero planar area;
+otherwise it would contain an interior point and hence a positive-radius disk,
+contradicting maximality of the inradius.
+
+The coarea formula for the distance to `partial C` gives
+
+\[
+\operatorname{area}C
+=\int_0^{r(C)}\operatorname{per}(C_{-t})\,dt.
+\tag{86.7}
+\]
+
+Convex perimeter is monotone under inclusion, so
+
+\[
+\operatorname{per}(C_{-t})\le\operatorname{per}C.
+\]
+
+Hence
+
+\[
+\operatorname{area}C\le r(C)\operatorname{per}C,
+\]
+
+which proves (86.6). `square`
+
+Under (86.3),
+
+\[
+\boxed{r(C)\ge\kappa D,
+\qquad \kappa:={\alpha\over P_0}>0.}
+\tag{86.8}
+\]
+
+## 86.2 A support gap cuts off quadratic cap area
+
+For a compact convex body `M`, write `h_M(u)` for its support function in unit
+direction `u`.
+
+### Lemma 86.2
+
+Let `K subset C`, let `r=r(C)`, and put
+
+\[
+t(u):=h_C(u)-h_K(u)\ge0.
+\]
+
+For every
+
+\[
+0\le s\le\min\{t(u),r\},
+\]
+
+one has
+
+\[
+\boxed{
+\operatorname{area}(C\setminus K)
+\ge {r\over D}s^2.
+}
+\tag{86.9}
+\]
+
+### Proof
+
+Choose an inball `B(o,r) subset C` and a support point `v in C` with
+
+\[
+u\cdot v=h_C(u).
+\]
+
+Let `w` be a unit vector perpendicular to `u` and set
+
+\[
+q_\pm=o\pm rw.
+\]
+
+The triangle
+
+\[
+T:=\operatorname{conv}\{v,q_+,q_-\}
+\]
+
+lies in `C`. Put
+
+\[
+s_0:=h_C(u)-u\cdot o.
+\]
+
+The inball support inequality gives `s_0>=r`, while
+
+\[
+s_0\le|v-o|\le\operatorname{diam}C\le D.
+\]
+
+The part of `T` cut off by the half-plane
+
+\[
+u\cdot x\ge h_C(u)-s
+\]
+
+is a similar triangle of height `s` and base `2rs/s_0`, hence area
+
+\[
+{rs^2\over s_0}\ge {r\over D}s^2.
+\tag{86.10}
+\]
+
+Since `s<=t(u)`, every point of `K` satisfies
+
+\[
+u\cdot x\le h_K(u)\le h_C(u)-s.
+\]
+
+Thus the cap in (86.10) is contained in `C\setminus K`, proving (86.9). `square`
+
+## 86.3 Oler converts population saturation into area saturation
+
+Oler applied to the unit-separated set `S subset K` gives
+
+\[
+a_0z
+\le\operatorname{area}K+c_0\operatorname{per}K+a_0,
+\qquad c_0={\sqrt3\over4}.
+\tag{86.11}
+\]
+
+Because `K subset C`, convex perimeter monotonicity gives
+
+\[
+\operatorname{per}K\le\operatorname{per}C\le P_0D.
+\tag{86.12}
+\]
+
+Combine (86.4), (86.11), and (86.12):
+
+\[
+0\le\operatorname{area}C-\operatorname{area}K
+\le (L_0+c_0P_0)D+a_0.
+\tag{86.13}
+\]
+
+For `D>=1`, define
+
+\[
+M_0:=L_0+c_0P_0+a_0.
+\]
+
+Then
+
+\[
+\boxed{
+0\le\operatorname{area}C-\operatorname{area}K\le M_0D.
+}
+\tag{86.14}
+\]
+
+## 86.4 Every support gap is `O(sqrt(D))`
+
+Fix a unit direction `u` and let `t=t(u)`.
+
+First, for all sufficiently large `D`, one must have
+
+\[
+t\le r(C).
+\tag{86.15}
+\]
+
+Indeed, if `t>r(C)`, Lemma 86.2 with `s=r(C)` and (86.8) give
+
+\[
+\operatorname{area}(C\setminus K)
+\ge {r(C)^3\over D}
+\ge\kappa^3D^2,
+\]
+
+contradicting the `O(D)` upper bound (86.14).
+
+Now use Lemma 86.2 with `s=t`. Equations (86.8) and (86.14) give
+
+\[
+\kappa t^2
+\le {r(C)\over D}t^2
+\le M_0D.
+\]
+
+Therefore
+
+\[
+\boxed{
+t(u)\le C_0\sqrt D
+\quad\text{for every }u\in S^1,}
+\qquad
+C_0:=\sqrt{M_0/\kappa}.
+\tag{86.16}
+\]
+
+For nested compact convex bodies, Hausdorff distance is the uniform support-function
+gap. Hence
+
+\[
+\boxed{
+d_H(C,K)\le C_0\sqrt D.}
+\tag{86.17}
+\]
+
+This proves the finite stability theorem.
+
+## 86.5 The isolated-source hull contains a protected macroscopic disk
+
+Let `o` be a center of an inball of `C`. For every unit direction `u`,
+
+\[
+\begin{aligned}
+h_K(u)
+&\ge h_C(u)-C_0\sqrt D\\
+&\ge u\cdot o+r(C)-C_0\sqrt D.
+\end{aligned}
+\tag{86.18}
+\]
+
+The right side is the support function of the disk
+
+\[
+B\bigl(o,r(C)-C_0\sqrt D\bigr).
+\]
+
+Therefore
+
+\[
+\boxed{
+B\bigl(o,\kappa D-C_0\sqrt D\bigr)
+\subset K\subset C
+}
+\tag{86.19}
+\]
+
+for all sufficiently large `D`.
+
+The same support estimate gives
+
+\[
+\boxed{
+\operatorname{diam}K
+\ge\operatorname{diam}C-2C_0\sqrt D,
+}
+\tag{86.20}
+\]
+
+and (86.14) gives
+
+\[
+\boxed{
+\operatorname{area}K
+=\operatorname{area}C-O(D).
+}
+\tag{86.21}
+\]
+
+Every extreme point of `K` is a member of the original set `S`; in the Target-C
+application these are actual contact-isolated source points.
+
+## 86.6 Application to the canonical macroscopic inactive chamber
+
+Canonical `C-INACTIVE-CHAMBER` supplies, along the subquadratic positive-core branch,
+absolute constants `alpha,P_0,L_0>0` and one chamber `C_*` with assigned isolate set
+`S_*` satisfying
+
+\[
+\operatorname{area}(C_*)\ge\alpha D^2,
+\qquad
+\operatorname{per}(C_*)\le P_0D,
+\qquad
+a_0|S_*|\ge\operatorname{area}(C_*)-L_0D.
+\tag{86.22}
+\]
+
+Apply Sections 86.1--86.5. Writing `K_*=conv(S_*)`,
+
+\[
+\boxed{
+\operatorname{area}(C_*)-\operatorname{area}(K_*)=O(D),
+\qquad
+d_H(C_*,K_*)=O(\sqrt D),
+}
+\tag{86.23}
+\]
+
+and for some absolute `kappa>0`,
+
+\[
+\boxed{
+B(o_*,\kappa D-O(\sqrt D))
+\subset K_*.
+}
+\tag{86.24}
+\]
+
+Thus the chamber branch contains a genuinely macroscopic **inactive source hull**:
+its convex hull is formed entirely from actual source points having no unit contact in
+the canonical representative, yet it fills the chamber to sublinear support error.
+
+This is compatible with proof-only Section 81: the same chamber also contains
+`Omega(D)` vertex-disjoint isolate pairs with distances in `(1,1+K_0/D]`. Section 86
+does not assert that those near-unit pairs are hull edges or are spatially uniform.
+
+## 86.7 Scope and remaining obstruction
+
+Section 86 eliminates one possible escape from the inactive-chamber theorem. A
+near-capacity chamber cannot contain its isolates only in a thin boundary cloud while
+leaving a macroscopic empty convex region: the isolates' own convex hull contains a
+linear-radius disk and is `O(sqrt(D))`-close to the chamber.
+
+It still does not prove an exact unit contact or a strict global competitor. Strictly
+perturbed triangular packings show why density and Hausdorff filling alone do not force
+an exact contact.
+
+The next exact chamber-side target is therefore a **protected inactive-hull release**:
+use the fact that a macroscopic convex body made entirely of contact-isolated source
+points lies at only `O(sqrt(D))` support distance from a positive-core chamber
+boundary, together with the global diameter-minimality/diameter-pair-minimality
+conditions, to force either
+
+1. a source-preserving strict diameter decrease, or
+2. an exact contact/response-ledger contradiction.
+
+## 86.8 Dependency audit
+
+- **Canonical Section 77 / `C-INACTIVE-CHAMBER`:** macroscopic chamber area, `O(D)`
+  perimeter, and boundary-order population-capacity deficit in the subquadratic-core
+  branch.
+- **Oler:** applied only to the actual unit-separated isolate set inside its own convex
+  hull.
+- **Convex geometry:** inner-parallel coarea, convex perimeter monotonicity,
+  support-function characterization of Hausdorff distance.
+- **Proof-only Section 81:** compatible handoff only; not a dependency.
+- **Contact isolates:** retained as source points; no KKT theorem is extended to them.
+
+**Status:** independently rebuilt proved candidate, proof-only pending promotion.  
+**Theorem state:** unchanged by this proof.

@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+from fractions import Fraction as Q
+
+# Audited fan constants.
+A = Q(7404, 10000)
+W = Q(848, 10000)
+N = Q(1063, 1000)
+
+# Phase-only rational choice.
+lam = Q(6794, 10000)
+r = Q(4803, 10000)
+
+g = (A - lam) * W / (N - lam)
+d_top = lam - (1 - r) * N
+d_low = lam - r * N
+p = d_top * g / (r * N)
+
+# Same outward C_phase enclosure used by the audited adjacent-cut certificate.
+Cphase_hi = Q(3258689123681, 612912000000)
+K = 2 * Cphase_hi / (d_low * p)
+
+assert g > 0
+assert d_top > 0
+assert d_low > 0
+assert p > 0
+assert K < Q(18782)
+
+print("PASS: phase-only adjacent strip opening width < 18782/D + o(1/D)")
+print("g =", float(g), g)
+print("d_top =", float(d_top), d_top)
+print("d_low =", float(d_low), d_low)
+print("path density p =", float(p), p)
+print("K upper =", float(K), K)
+print("margin to 18782 =", float(Q(18782) - K))

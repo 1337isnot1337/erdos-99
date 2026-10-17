@@ -1,0 +1,323 @@
+# Target C-II — the live O--O backbone multishear is a sharp diameter cusp, not a descent route
+
+**Date:** 2026-09-15
+**Status:** proof-only structural no-go theorem
+**Scope:** any finite selected O--O train family whose simultaneous shear diameter-derivative matrix has full column rank; in particular the live `0.017104D-o(D)` backbone on the current `t<=1.844` full-core Type-II branch
+**Dependencies:** exact finite arbitrary-O--O multishear; positive relative-interior actual-diameter KKT stress; live-backbone full-column-rank theorem
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The exact finite O--O multishear and the new live-backbone interval-rank theorem fit
+together in the opposite way from a descent argument.  On the live backbone, the
+current minimizer is a **sharp cusp minimum of diameter inside the entire exact
+multishear family**.
+
+Let `tau_1,...,tau_m` be selected O--O trains and let
+
+\[
+p_v(\theta)
+=p_v+
+\sum_{i:v\in S_i}(R_{\theta_i}u_i-u_i)
+\tag{SC.1}
+\]
+
+be the exact contact-preserving multishear.  For each actual active diameter pair `h`,
+orient the pair once and put
+
+\[
+\varepsilon_{hi}
+=1_{S_i}(y_h)-1_{S_i}(x_h)
+\in\{-1,0,1\}.
+\]
+
+Define the diameter first-variation matrix
+
+\[
+\boxed{
+M_{hi}:=\varepsilon_{hi}(r_h\cdot Ju_i),
+\qquad r_h=p_{y_h}-p_{x_h}.
+}
+\tag{SC.2}
+\]
+
+Assume `rank M=m`.  If `beta_h>0` is one relative-interior normalized diameter KKT
+stress, the cut-resultant identity gives
+
+\[
+\boxed{
+\beta^T M=0.
+}
+\tag{SC.3}
+\]
+
+Full column rank and strict positivity of `beta` force every nonzero shear direction to
+lengthen at least one active diameter edge to first order and shorten at least one
+other.  Because the unit sphere is compact, the lengthening is uniformly linear in the
+parameter norm for that finite source.  Consequently there are constants
+`gamma>0,rho>0` such that
+
+\[
+\boxed{
+0<\|\theta\|<\rho
+\quad\Longrightarrow\quad
+\operatorname{diam}A(\theta)^2
+\ge D^2+\gamma\|\theta\|>D^2.
+}
+\tag{SC.4}
+
+Thus no nontrivial sufficiently small exact O--O multishear can preserve or reduce the
+diameter.  In particular, a negative KKT-weighted quadratic curvature of the multishear
+cannot become a source-level diameter descent on the live full-rank backbone: the
+first-order max-function cusp dominates it.
+
+This is a no-go theorem for one proposed closure mechanism, not a no-go theorem for
+C-II.  Closure must leave the pure O--O shear coordinate family, for example by
+simultaneously changing additional non-O--O contact-flex coordinates, activating weak
+near-contacts, or proving that the assumed full-rank cusp structure is incompatible
+with another independent geometric constraint.
+
+---
+
+## 1. KKT stationarity annihilates every shear column
+
+For selected cut `i`, the exact KKT cut resultant is
+
+\[
+A_i u_i
+=\sum_h\beta_h\varepsilon_{hi}r_h,
+\qquad A_i>0.
+\tag{SC.5}
+\]
+
+Dot with `Ju_i`:
+
+\[
+0=A_i u_i\cdot Ju_i
+=\sum_h\beta_h\varepsilon_{hi}(r_h\cdot Ju_i)
+=\sum_h\beta_h M_{hi}.
+\tag{SC.6}
+\]
+
+This holds for every selected column, proving (SC.3).
+
+For any coefficient vector `c`, therefore,
+
+\[
+\sum_h\beta_h(Mc)_h=0.
+\tag{SC.7}
+\]
+
+---
+
+## 2. Every nonzero tangent has both diameter signs
+
+Take `c\ne0`.  Full column rank gives
+
+\[
+Mc\ne0.
+\]
+
+If all entries of `Mc` were nonpositive, then strict positivity of every `beta_h` and
+(SC.7) would force every entry to be zero, contradiction.  The same argument applied
+to `-c` excludes all entries being nonnegative.  Hence
+
+\[
+\boxed{
+\max_h(Mc)_h>0,
+\qquad
+\min_h(Mc)_h<0
+\quad(c\ne0).
+}
+\tag{SC.8}
+
+This is the simultaneous version of Section 157 two-sided bracing.  It is stronger than
+saying that each coordinate separately has two signs: no nonzero linear combination of
+the selected shears escapes the cusp.
+
+---
+
+## 3. Compactness upgrades sign change to a sharp linear cusp
+
+Use the Euclidean norm on `R^m` and define
+
+\[
+g(c):=\max_h(Mc)_h.
+\tag{SC.9}
+\]
+
+The function `g` is continuous.  By (SC.8), it is strictly positive on the unit sphere.
+Since the unit sphere is compact,
+
+\[
+\boxed{
+\gamma_0
+:=\min_{\|c\|=1}g(c)>0.
+}
+\tag{SC.10}
+\]
+
+Positive homogeneity gives
+
+\[
+\boxed{
+\max_h(Mc)_h\ge\gamma_0\|c\|
+\quad\text{for all }c.
+}
+\tag{SC.11}
+
+The constant is source-specific and may tend to zero along an asymptotic sequence.  No
+uniform lower bound in `D` is claimed or needed for the finite local statement.
+
+---
+
+## 4. Exact finite multishear has the same first-order matrix
+
+For an active diameter row `h`, the exact multishear identity is
+
+\[
+r_h(\theta)
+=r_h+
+\sum_i\varepsilon_{hi}(R_{\theta_i}u_i-u_i).
+\tag{SC.12}
+\]
+
+Because the source and selected family are finite, uniformly for all active diameter
+rows as `theta->0`,
+
+\[
+R_{\theta_i}u_i-u_i
+=\theta_iJu_i+O(\theta_i^2).
+\]
+
+Thus
+
+\[
+\begin{aligned}
+|r_h(\theta)|^2-D^2
+&=2\sum_i\varepsilon_{hi}\theta_i(r_h\cdot Ju_i)
++O(\|\theta\|^2)\\
+&=2(M\theta)_h+O(\|\theta\|^2).
+\end{aligned}
+\tag{SC.13}
+\]
+
+There is one finite constant `C` such that every active row obeys
+
+\[
+|r_h(\theta)|^2-D^2
+\ge2(M\theta)_h-C\|\theta\|^2
+\tag{SC.14}
+\]
+
+in a neighborhood of the origin.
+
+Choose a row attaining the maximum in (SC.11).  Then
+
+\[
+\max_h(|r_h(\theta)|^2-D^2)
+\ge2\gamma_0\|\theta\|-C\|\theta\|^2.
+\tag{SC.15}
+\]
+
+For
+
+\[
+0<\|\theta\|<\rho:=\gamma_0/C
+\]
+
+(with any smaller positive `rho` if `C=0`),
+
+\[
+\max_h|r_h(\theta)|^2>D^2.
+\tag{SC.16}
+\]
+
+Since these are actual source pairs, the full source diameter is also strictly larger
+than `D`.  This proves (SC.4).
+
+Strict noncontact preservation is irrelevant to the no-go conclusion: even where the
+multishear remains unit-separated, an old diameter row already exceeds `D`.
+
+---
+
+## 5. No higher-order path can sneak through with a nonzero first jet
+
+The same argument applies to any differentiable parameter path
+
+\[
+\theta(t)=t^k c+o(t^k),
+\qquad c\ne0,
+\qquad k\ge1.
+\tag{SC.17}
+\]
+
+Substituting into (SC.13) gives
+
+\[
+\max_h(|r_h(\theta(t))|^2-D^2)
+\ge2\gamma_0|t|^k\|c\|+o(|t|^k)>0
+\tag{SC.18}
+\]
+
+for sufficiently small nonzero `t` on either side.  Reparametrizing a shear as
+`theta=t^2c`, for example, does not bypass the first-order cusp; it only moves the same
+linear obstruction to the first nonzero parameter jet.
+
+Therefore the weighted second-curvature matrix from the KKT interval identity is not a
+hidden descent certificate inside this full-rank family.  Its sign becomes relevant to
+diameter only after one first finds a nonzero shear direction in the kernel of `M`, and
+full rank says there is none.
+
+---
+
+## 6. Application to the live `0.017104D` backbone
+
+The newly merged live-backbone theorem selects `m` smallest-leaf O--O trains on one
+dual-tree path and proves that their diameter derivative matrix
+
+\[
+M_{hi}=\varepsilon_{hi}(r_h\cdot Ju_i)
+\]
+
+has
+
+\[
+\boxed{\operatorname{rank}M=m.}
+\tag{SC.19}
+
+The proof uses the fact that a center train outside the selected leaf family has angular
+rate zero, eliminating the global Euclidean-rotation kernel.  The current uniform
+`t<=1.844` theorem also gives
+
+\[
+m>0.017104D-o(D).
+\tag{SC.20}
+
+Hence every finite source far enough along that branch has a linear-dimensional exact
+contact-preserving O--O multishear family on which the original source is nevertheless
+a strict sharp local diameter minimum.
+
+This explains why adding more exact O--O shear coordinates alone does not solve the
+current obstruction: mixed rigidity and the positive diameter stress use additional
+diameter braces at enough interval locations to cusp-lock the entire family.
+
+---
+
+## 7. Frontier consequence
+
+The exact multishear remains useful as a coordinate system, but not as a standalone
+descent family.  The live obligations become more specific:
+
+1. **enlarge the coordinate space:** couple the O--O shears to bounded-face or weak-contact release coordinates so the augmented diameter derivative map acquires a nontrivial critical kernel;
+2. **attack cusp compatibility:** show that the interval-rank pattern needed for full
+   column rank cannot coexist with the near-disk geometry, KKT resultant total variation,
+   or the phase-collapsed rectangle; or
+3. **force activation:** use the sharp cusp to quantify how near-contacts outside the
+   positive-contact core must activate under attempted O--O motion, then exploit their
+   packing/matching constraints.
+
+What is no longer a productive standalone target is proving merely that
+`K-diag(A)` has a negative direction on the same full-rank O--O block.  Without a
+first-order kernel, such a direction cannot decrease the source diameter.
+
+**Disposition:** proved proof-only sharp-cusp no-go for the live exact O--O multishear
+family.  C-II and Level I remain open.

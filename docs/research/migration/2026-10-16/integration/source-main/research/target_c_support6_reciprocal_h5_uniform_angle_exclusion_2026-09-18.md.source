@@ -1,0 +1,180 @@
+# Target C-II — a concave reciprocal angle identity excludes half of the uniform `H5` orbits
+
+**Date:** 2026-09-18  
+**Status:** proof-only structural strengthening; theorem-state authority unchanged  
+**Scope:** the six uniform noncollapsed degree-pure support-six reciprocal `H5` symmetry orbits after all nonuniform walls are removed  
+**Depends on:** `target_c_support6_reciprocal_h5_reduction_2026-09-18.md`; local strict one-turn bound for physical equilateral pentagons; reciprocal hull-angle bounds `phi_i>2pi/3` for non-ground hull vertices  
+**Certificate:** `research/verify_target_c_support6_reciprocal_h5_uniform_angle_exclusion_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+Three of the six uniform reciprocal `H5` sign/order orbits admit a symmetry representative for which five raw reciprocal angles satisfy an exact concave-pentagon identity. The physical source-pentagon angle bounds force the left side of that identity to be strictly too large.
+
+Therefore
+
+\[
+\boxed{3\text{ of the }6\text{ uniform reciprocal `H5` symmetry orbits are impossible.}}
+\]
+
+Combined with the simple-wall and double-wall exclusions, the entire noncollapsed support-six branch is reduced to exactly three uniform `H5` sign/order orbits.
+
+---
+
+## 1. Fixed representative and the concave five-cycle
+
+For each of the three obstructed symmetry orbits, the exact finite enumeration has a representative with
+
+\[
+M=\{16,25,34\}
+\tag{1.1}
+\]
+
+and raw ground-ray order
+
+\[
+1,6,5,2,3,4.
+\tag{1.2}
+\]
+
+Consider the reciprocal polygon
+
+\[
+P=(0,1,2,3,6).
+\tag{1.3}
+\]
+
+The vertices `0,1,2,3` are consecutive vertices of the convex reciprocal hull and `6` is interior to that hull. Hence `P` is simple: its first three edges are hull edges, while segments `36` and `60` remain inside the convex hull and cannot cross its boundary away from their endpoints.
+
+For the three obstructed representatives the exact chirotope gives the turn-sign pattern
+
+\[
+\boxed{(+,+,+,+,-)}
+\tag{1.4}
+\]
+
+around `0,1,2,3,6`. Thus `6` is the unique reflex vertex of `P`.
+
+Define the five small raw reciprocal angles
+
+\[
+\begin{aligned}
+A&=\angle 106,\\
+D&=\angle 012,\\
+E&=\angle 123,\\
+B&=\angle 236,\\
+C&=\angle 360.
+\end{aligned}
+\tag{1.5}
+\]
+
+The interior angle at the reflex vertex `6` is `2pi-C`; the other four interior angles are `A,D,E,B`. Since a simple pentagon has interior-angle sum `3pi`,
+
+\[
+A+D+E+B+(2\pi-C)=3\pi.
+\]
+
+Therefore every realization of any of these three order types satisfies the exact identity
+
+\[
+\boxed{A+B-C+D+E=\pi.}
+\tag{1.6}
+\]
+
+No metric equilibrium equation has been used yet.
+
+---
+
+## 2. Four strict local bounds force the same expression above `pi`
+
+The reciprocal configuration is uniform, so the raw ground rays `01` and `06` are distinct. Hence
+
+\[
+A>0.
+\tag{2.1}
+\]
+
+At reciprocal hull vertices `1` and `2`, the already proved `H5` hull-angle theorem gives
+
+\[
+D>\frac{2\pi}{3},
+\qquad
+E>\frac{2\pi}{3}.
+\tag{2.2}
+\]
+
+It remains to control `B` and `C` from the physical pentagons.
+
+For each of the three obstructed representatives, the exact regular-force tournament has the following two properties:
+
+1. at reciprocal vertex `3`, the force directions on edges `32` and `36` are consecutive and their reciprocal edge signs are opposite;
+2. at reciprocal vertex `6`, the force directions on edges `63` and `60` are consecutive and their reciprocal edge signs are the same.
+
+The physical source pentagon has every consecutive side-direction gap strictly less than `2pi/3`.
+
+For the first pair, opposite reciprocal signs reverse one of the two raw rays. Therefore its physical force gap is `pi-B`, so
+
+\[
+\pi-B<\frac{2\pi}{3}
+\quad\Longrightarrow\quad
+B>\frac\pi3.
+\tag{2.3}
+\]
+
+For the second pair, equal reciprocal signs leave both raw rays in the same orientation. Its physical force gap is `C`, so
+
+\[
+C<\frac{2\pi}{3}.
+\tag{2.4}
+\]
+
+Combining (2.1)--(2.4),
+
+\[
+\begin{aligned}
+A+B-C+D+E
+&>
+0+\frac\pi3-\frac{2\pi}{3}
++\frac{2\pi}{3}+\frac{2\pi}{3}\\
+&=\pi.
+\end{aligned}
+\tag{2.5}
+\]
+
+This contradicts the exact identity (1.6).
+
+Thus all three representatives, and therefore their three full symmetry orbits, are impossible.
+
+---
+
+## 3. Exact finite count and remaining sign/order target
+
+The existing exact enumerator gives forty-eight labelled uniform survivors in six symmetry orbits of size eight. The companion certificate checks the conditions used above using only chirotope signs and signed-edge incidence and finds
+
+\[
+\boxed{3\text{ obstructed orbits},\qquad 3\text{ surviving orbits}.}
+\tag{3.1}
+\]
+
+A convenient representative for each surviving orbit has the common missing matching
+
+\[
+M=\{16,25,34\}
+\]
+
+and, after a global sign normalization, one of the following positive-edge sets:
+
+\[
+\begin{aligned}
+P_1={}&\{01,02,03,12,14,23,36,46\},\\
+P_2={}&\{01,02,03,12,14,23,36,45,56\},\\
+P_3={}&\{01,02,03,12,15,23,36,45,46\}.
+\end{aligned}
+\tag{3.2}
+\]
+
+All other present reciprocal edges are negative. These are sign/order representatives only; no claim is made that any satisfies the full metric unit-force equations or signed trace identity.
+
+The next finite noncollapsed target is therefore only the three systems in (3.2). The collapsed support-six branch remains separate and locally feasible by the exact realization certificate already in the repository.
+
+No theorem-state file is changed.
+
+**Disposition:** excluded exactly three of the six uniform `H5` symmetry orbits by an exact concave-angle identity plus strict source-pentagon angle bounds. C-II remains open.

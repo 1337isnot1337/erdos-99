@@ -1,0 +1,297 @@
+# Target C-II — the adjacent-strip KKT reaction is supported by at most two diameter bars except at one balanced antipodal degeneracy
+
+**Date:** 2026-09-15  
+**Status:** proof-only exact source-level structural theorem  
+**Scope:** any adjacent O--O strip in the canonical full-support KKT normalization  
+**Dependencies:** `target_c_adjacent_strip_opening_reduction_2026-09-15.md`; audited Section 157 cut resultants; C65 full actual-diameter visibility  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The adjacent-strip opening theorem gives an exact two-dimensional layer translation and the exact switching-force identity. The one/two-bar tangent-certificate theorem shows that only two moving diameter bars are needed to certify first-order translation infeasibility. The KKT identity gives a stronger **force-balanced** sparsification except in one explicit case.
+
+Let `R` be the middle layer. Orient the two boundary contact families from the fixed side into `R`, with unit vectors
+
+\[
+a,b.
+\]
+
+Let their positive total KKT contact weights be
+
+\[
+A>0,
+\qquad
+B>0.
+\]
+
+For every switching actual diameter edge `h`, define the orientation-independent inward vector
+
+\[
+n_h=\delta_h r_h,
+\qquad |n_h|=D,
+\]
+
+exactly as in the two-bar tangent theorem, and use one relative-interior normalized diameter stress
+
+\[
+\beta_h>0.
+\]
+
+Then the complete switching reaction is
+
+\[
+\boxed{
+\sum_{h\in H_{sw}}\beta_h n_h
+=Aa+Bb.
+}
+\tag{FR.1}
+\]
+
+Put
+
+\[
+G:=Aa+Bb.
+\tag{FR.2}
+\]
+
+The theorem splits exactly according to whether `G` vanishes.
+
+---
+
+## Theorem FR
+
+### Nondegenerate reaction
+
+If
+
+\[
+G\ne0,
+\]
+
+there are one or two actual switching diameter edges
+
+\[
+J\subseteq E(H_{sw}),
+\qquad
+1\le|J|\le2,
+\]
+
+and positive coefficients `lambda_h` such that
+
+\[
+\boxed{
+G=\sum_{h\in J}\lambda_h n_h.
+}
+\tag{FR.3}
+\]
+
+Thus the **exact KKT layer reaction**, not merely tangent infeasibility, has a one/two-diameter conic certificate.
+
+### Balanced antipodal reaction
+
+The equality
+
+\[
+G=0
+\]
+
+holds if and only if
+
+\[
+\boxed{
+b=-a,
+\qquad A=B.}
+\tag{FR.4}
+\]
+
+In that case there is a positive dependence among at most three actual switching diameter vectors:
+
+\[
+\boxed{
+\sum_{h\in J}\lambda_h n_h=0,
+\qquad
+2\le|J|\le3,
+\qquad
+\lambda_h>0.
+}
+\tag{FR.5}
+\]
+
+Three vectors can genuinely be necessary for a positive zero-sum dependence in the plane, so the number `3` in the degenerate branch must not be replaced by `2` without additional diameter-thrackle geometry.
+
+The separate tangent-certificate theorem still gives a one/two-bar certificate in this balanced antipodal branch; what can require three bars is the **exact positive force balance**.
+
+---
+
+## 1. Recover the layer reaction with the physical strip orientations
+
+Use the nested rooted shores from the laminar interval theorem. For the left boundary cut `tau_i`, the Section-157 train vector points from the complement of the far shore into the far shore. The middle layer lies on that far-shore side, so the physical outside-to-middle contact orientation is
+
+\[
+a=u_i.
+\tag{FR.6}
+\]
+
+For the right boundary cut `tau_{i+1}`, the middle layer lies on the complement side of the farther nested shore. Hence its Section-157 orientation points **out of** the middle layer, and the physical outside-to-middle orientation is
+
+\[
+b=-u_{i+1}.
+\tag{FR.7}
+\]
+
+Write the two exact cut resultants as
+
+\[
+F_i=A u_i,
+\qquad
+F_{i+1}=B u_{i+1}.
+\tag{FR.8}
+\]
+
+The adjacent-strip theorem already proves
+
+\[
+F_i-F_{i+1}
+=\sum_{h\in H_{sw}}\beta_h\delta_h r_h.
+\tag{FR.9}
+\]
+
+Substituting (FR.6)--(FR.8) and `n_h=delta_h r_h` gives
+
+\[
+F_i-F_{i+1}
+=Aa+Bb
+=\sum_{h\in H_{sw}}\beta_hn_h,
+\]
+
+which is (FR.1).
+
+No response inequality and no coefficient floor is used.
+
+---
+
+## 2. Conic Caratheodory gives two bars when the reaction is nonzero
+
+Equation (FR.1) puts the vector `G` in the finitely generated cone
+
+\[
+G\in\operatorname{cone}\{n_h:h\in H_{sw}\}.
+\tag{FR.10}
+\]
+
+In `R^2`, every **nonzero** vector in a finitely generated cone lies in the cone of at most two generators. One direct proof is to choose a representation of `G` using the fewest positive coefficients. If it used three or more nonzero generators, those planar generators would be linearly dependent. Moving the coefficient vector in a dependence direction until one positive coefficient becomes zero preserves the represented vector and contradicts minimality.
+
+Therefore there are one or two actual switching edges and positive coefficients satisfying (FR.3).
+
+Taking the dot product of (FR.3) with any tangent opening direction
+
+\[
+a\cdot w\ge0,
+\qquad
+b\cdot w\ge0
+\]
+
+gives
+
+\[
+\sum_{h\in J}\lambda_h(n_h\cdot w)
+=G\cdot w
+=A(a\cdot w)+B(b\cdot w)
+\ge0.
+\tag{FR.11}
+\]
+
+Hence at least one selected bar has `n_h dot w>=0`. Thus the force-balanced pair is automatically also a one/two-bar tangent obstruction certificate.
+
+This recovers the previous Helly conclusion by a stronger equilibrium argument whenever `G!=0`.
+
+---
+
+## 3. The zero-reaction case is exactly balanced antipodality
+
+Suppose
+
+\[
+Aa+Bb=0
+\]
+
+with `A,B>0` and `|a|=|b|=1`. Then
+
+\[
+Aa=-Bb.
+\]
+
+Taking norms gives
+
+\[
+A=B,
+\]
+
+and then
+
+\[
+b=-a.
+\]
+
+The converse is immediate. This proves (FR.4).
+
+Equation (FR.1) now becomes a nontrivial positive dependence
+
+\[
+\sum_{h\in H_{sw}}\beta_hn_h=0,
+\qquad
+\beta_h>0.
+\tag{FR.12}
+\]
+
+Normalize by the positive total switching multiplier. Then zero lies in the convex hull of the switching diameter vectors. Caratheodory's theorem in the plane gives a subset of at most three vectors whose convex hull contains zero. Taking an inclusion-minimal such subset makes all displayed coefficients positive.
+
+A one-vector positive zero sum is impossible because every `n_h` has length `D>0`. Therefore the minimal subset has size two or three, proving (FR.5).
+
+The three-vector possibility is real in abstract planar convex geometry: three non-antipodal vectors can positively surround the origin while no two are opposite. Eliminating it requires additional geometry of the actual diameter thrackle or the ordered middle-layer interface.
+
+---
+
+## 4. Exact finite frontier after the reaction sparsification
+
+The current adjacent-strip line can now be split by one exact vector `G`.
+
+### FR2 — nonzero reaction
+
+```text
+G = A a + B b != 0
++ G is the positive combination of one or two actual switching diameter vectors
++ the same one/two bars block every strict tangent-opening ray
++ if two bars are used, they are actual diameter-thrackle edges and therefore
+  either cross properly or share an endpoint.
+```
+
+This is the generic branch.
+
+### FR0 — balanced antipodal reaction
+
+```text
+b = -a
++ A = B
++ total switching KKT reaction is exactly zero
++ a positive force certificate needs at most three diameter bars
++ tangent infeasibility still has a separate one/two-bar certificate.
+```
+
+This is the only branch in which a genuinely triangular positive diameter-force balance can survive the planar sparsification.
+
+The next useful geometry theorem should therefore attack either
+
+1. the one/two-bar FR2 chord patterns using the current one-arc switching order; or
+2. the exceptional FR0 three-bar pattern, where exact antipodality of the two boundary contact families and equality of the adjacent train-force magnitudes provide extra structure not present in the generic case.
+
+---
+
+## 5. Scope audit
+
+- The theorem sparsifies the **reaction vector** in the two-dimensional layer-translation problem. It does not replace the global KKT stress by a one/two/three-edge stress.
+- Other moving diameter edges remain exact active constraints and can obstruct a finite nonlinear translation even when they are absent from the sparse force certificate.
+- In the zero-reaction branch, claiming a universal two-bar positive force balance would be false; three planar generators can be necessary.
+- No KKT coefficient lower bound is used.
+- No phase-gap or switching-count estimate is used.
+- No exact triangle or source-level diameter decrease follows yet.
+
+**Disposition:** proved proof-only exact sparse KKT reaction theorem for the adjacent-strip opening problem. C-II and Level I remain open.

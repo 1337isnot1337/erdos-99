@@ -1,0 +1,248 @@
+<!-- theorem-state: {"artifact_id":"ART-F0C6819D0209","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: sector peeling closes the one-deficit curved-wall population
+
+Date: 2026-10-07. Authority: main
+`4b0b982451effe3e8183edfce349ce4c25f9a3bb`, state
+`2026-10-07.audit.74`. **Proved candidate awaiting independent audit.**
+This report does not promote itself. C-II and Level I remain open.
+
+## 1. Quantified statement and implication
+
+For every fixed integer M>=4, the specified six-direction curved unit
+wall admits a strict N-site interior packet, N=3M^2-3M+1, clearing every
+old wall vertex except v=(1,M-1), for every sufficiently small positive
+curvature. Consequently an arbitrary canonical triangle-free old source
+with z<=N-1 points strictly inside that actual wall is excluded.
+
+The same statement holds for every fixed strictly decreasing symmetric
+rate list a_0>...>a_(M-1), a_(M-1-h)=-a_h, with a profile-dependent small
+curvature onset. Arithmetic rates a_h=M-1-2h give the original wall.
+
+`sector peeling -> simultaneous strict opening of N-1 auxiliary sites
+-> add one protected root -> N strict sites -> pay every old interior
+label plus one wall label -> full-source contact loss`.
+
+The old cloud is arbitrary. The vacancy below is a construction in the
+new packet, never a structural assertion about the old source. This
+removes the all-M one-deficit opening obligation left by the M=4,5
+certificates. There is no uniform onset in M asserted here, no extraction
+of the specified wall from a general source, and no finite exclusion of
+z=N. Those are separate obligations.
+
+## 2. Exact sorting geometry and its complete contact graph
+
+Identify the plane with complex numbers. Put u=1, v_basis=exp(i*pi/3),
+w=v_basis-u=exp(2i*pi/3), z_h=exp(i*a_h*theta), and
+S_r=sum_(h=0)^(r-1) z_h. In the sector between u and v_basis set
+
+`p(a,b)=S_a*u+(S_(a+b)-S_a)*v_basis`, a,b>=0, a+b<=M,
+
+and rotate this definition through all six sectors. The definitions agree
+on their common axes. Symmetry gives S_M real, so the radius-M sites are
+the six-direction wall with sorted ascending edge rates on each side.
+For each fixed profile and sufficiently small theta>0, its turns are
+positive, including the six corner turns pi/3-(a_0-a_(M-1))*theta.
+It is a strictly convex unit wall. All nonconsecutive wall distances
+remain strictly above one by their flat limiting gaps.
+
+For an offaxis site a,b>=1, r=a+b<M, the four exact contact neighbours,
+with their outgoing vectors from p(a,b), are:
+
+| neighbour | vector |
+| --- | --- |
+| (a-1,b+1), called F | z_(a-1)*w |
+| (a+1,b-1) | -z_a*w |
+| (a,b+1), called D | z_r*v_basis |
+| (a,b-1) | -z_(r-1)*v_basis |
+
+The other two flat nearest-neighbour vectors are
+z_(a-1)*w-z_(r-1)*v_basis and z_r*v_basis-z_a*w. Their squared lengths
+are respectively
+
+`2-2*cos(pi/3+(a_(a-1)-a_(r-1))*theta)` and
+`2-2*cos(pi/3+(a_a-a_r)*theta)`.
+
+Both exceed one for sufficiently small positive theta because the two
+rate differences are strictly positive. Every other pair has limiting
+distance at least sqrt(3). Finitely many continuity checks therefore
+prove the complete graph, not only a selected subgraph.
+
+On the axis p(r,0), 1<=r<M, the complete five outgoing contact vectors
+are
+
+`-z_(r-1)*u`, `z_r*u`, `z_(r-1)*w`,
+`z_r*v_basis`, `-z_0*v_basis`.
+
+The corresponding neighbours are (r-1,0), (r+1,0), (r-1,1),
+(r,1), and (r,-1). The missing sixth flat neighbour has vector
+z_r*u-z_0*v_basis, whose squared length is
+2-2*cos(pi/3+(a_0-a_r)*theta)>1. At the center there are six contacts
+to the first axis sites. These identities and the flat strict gaps also
+prove unit separation of the entire chart for small theta. All moving
+sites are strictly inside the wall since they are strictly inside its
+flat hexagon at theta=0.
+
+Delete auxiliary h=(1,M-2). Keep every wall vertex fixed, even v for
+the moment. Let R be the matrix of *all* actual unit gradients involving
+the remaining N-1 interior sites. No wall-wall row is included, since
+it has zero moving gradient and imposes no packet-opening constraint.
+
+## 3. Local rule for nonnegative equilibrium
+
+Consider a nonnegative linear dependence among the rows of R. At each
+moving site, the weighted sum of its outgoing unit vectors is zero.
+An incident edge is called zero when its weight is zero; all edges to
+the omitted h are absent and hence zero.
+
+At any offaxis moving site, **if F or D is zero, every incident weight
+is zero**. Indeed if F is removed, the angular gap from D to the inward
+diagonal is pi+(a_(r-1)-a_r)*theta>pi. The remaining vectors lie in
+an open half-plane. If D is removed, the angular gap from the backwards
+ring vector to F is pi+(a_(a-1)-a_a)*theta>pi, with the inward diagonal
+in the complementary arc of length below pi. Again all surviving
+vectors lie in an open half-plane. An exact positive functional on
+these vectors forbids a nonzero nonnegative equilibrium. All small
+angle qualifications here are finite and valid simultaneously for
+each fixed profile.
+
+## 4. The vacancy empties a sector and then the complete graph
+
+First every offaxis moving site in sector 0 is zero. In (a,b)
+coordinates there is a directed path using F and D to h: use a-1
+F steps and M-1-(a+b) D steps. It remains offaxis and inside radius
+M-1 until ending at h. Work backwards from the absent endpoint using
+the local rule. Thus every edge incident to every offaxis site of this
+sector has weight zero.
+
+Now empty the u-axis. For 2<=r<=M-2, the edges with vectors
+z_(r-1)*w and z_r*v_basis end at offaxis moving sites in the empty
+sector and are zero. The remaining three possible vectors are
+
+`z_r*u`, `-z_(r-1)*u`, `-z_0*v_basis`.
+
+The angular gap from the first to the second is
+pi+(a_(r-1)-a_r)*theta>pi; the third lies in the other arc for small
+theta. All three lie in an open half-plane and have zero weights.
+This range is nonempty precisely when M>=4, supplying the axis seed.
+
+At r=1 the outward axis edge is now zero, as is the edge to (1,1).
+The three possible remaining vectors -z_0*u, z_0*w, -z_0*v_basis
+span only an angle 2*pi/3. Their weights vanish. At r=M-1 the inward
+axis edge and z_(M-2)*w edge are zero. The three remaining possibilities
+are
+
+`z_(M-1)*u`, `z_(M-1)*v_basis`, `-z_0*v_basis`.
+
+The gap from the second to the third is
+pi+(a_0-a_(M-1))*theta>pi. They also lie in an open half-plane.
+Thus the entire moving u-axis, including its wall-incident edges, is zero.
+
+In the previous sector, repeated F steps take every offaxis moving site
+to this now-zero axis on its own ring. Backwards local propagation empties
+that sector. Rotate the axis argument and repeat around all six sectors.
+All moving axes and offaxis sites become zero. The six center edges have
+zero weights at their axis endpoints. Hence every row weight is zero.
+No nonzero nonnegative dependence among the rows of R survives.
+
+This proof fails to provide an axis seed for M=3. The associated exact
+local-pruning regression is retained rather than making a universal
+M>=3 assertion. Wall-wall stress is irrelevant to R and was never
+mistaken for an opening obstruction.
+
+## 5. Constructive strict opening and a finite endpoint
+
+Gordan's finite alternative already gives d with R*d>0. There is also
+a direct construction using the same half-plane elimination, which
+does not infer a finite endpoint from a weak first-order direction.
+
+At each elimination step, collect all still-present edges at a moving
+site p_i. Choose a vector n_i whose dot product with each outgoing
+vector on those edges is positive. Remove these edges. The preceding
+proof supplies an order eliminating all edges. Assign
+`d_(p_i)=-lambda_i*n_i`, with lambda_i>0 successively small. When an
+edge to an earlier assigned site is considered, its opening margin was
+strict with this site's velocity zero, and remains strict for sufficiently
+small lambda_i. Edges to later sites or fixed walls open strictly by
+the defining half-plane functional. Finiteness allows all choices, and
+every actual contact has a strict final opening margin. Sites left with
+no edge can have zero velocity.
+
+At each fixed allowed theta, use `p -> p+epsilon*d`. For each active
+unit pair its squared distance is
+
+`1+2*epsilon*(R*d)_e+epsilon^2*|d_p-d_q|^2>1`.
+
+Every inactive lower pair and every interior support-line constraint
+has a strict margin at epsilon=0, so choosing a common sufficiently
+small epsilon>0 retains them. This is a finite strict N-1-site packet
+inside the wall, clearing all original wall vertices.
+
+Add the profile-flexible inward root from Section 2 of
+`target_c_one_deficit_M5_extension_and_profile_root_2026-10-07.md`:
+put A=a_0, Delta=a_0-a_1 and
+
+`root=p(1,M-1)+3*sin(Delta*theta/2)*J(exp(i*(a_0+a_1)*theta/2)*w)`.
+
+The omitted target h is exactly its negative-margin interior blocker.
+All remaining root-to-chart and root-to-retained-wall pairs are strict;
+its wall-neighbour squared distances are 1+3*sin^2(Delta*theta/2).
+Its remaining limiting unit neighbour has first margin
+(sqrt(3)/2)*(2*A-3*Delta/2)>0. Every support-line first coefficient
+is at least 3*Delta/2>0. These calculations explicitly include all
+root neighbours and every support line. Make epsilon still smaller
+to preserve these strict root margins while opening the other sites.
+The result has exactly N strict interior sites, clearing all wall
+vertices other than the single intended deletion v.
+
+## 6. Full-source ledger and remaining branches
+
+Let S be *all* old source points strictly inside the actual wall, including
+contact isolates. If z=|S|<=N-1, delete exactly S and v, and insert
+z+1 distinct sites from the N-site strict packet. Every deleted label
+is paid. No assumption is made about its contacts, coordinates or
+diameter incidence.
+
+- Retained old-old constraints do not change.
+- Every new-new lower pair and new-retained-wall lower pair is strict.
+- The canonical one-vertex convex-wall shield proves strict lower
+  clearance from every retained exterior source point, including isolates.
+- Every new point lies strictly inside the old two-dimensional hull.
+  Strict convexity of squared distance gives distance strictly below
+  the actual old diameter D to every retained point; it gives the
+  new-new upper constraints as well. Actual old diameter pairs remain
+  unchanged or disappear. All inactive upper exceptions are covered.
+- There are zero new contacts, hence no new unit triangle. The retained
+  contact graph is induced from the old triangle-free graph. At least
+  the two old wall contacts incident with v disappear.
+- Cardinality is exactly unchanged. If diameter falls below D, global
+  optimality is contradicted. Otherwise contact minimality is contradicted.
+  A diameter-pair saving is unnecessary.
+
+The canonical dependencies are C-ONE-VERTEX-CONVEX-WALL-SHIELD and
+C-CONTACT-BUDGET-DIAMETER-EXCHANGE-ENDPOINT. Only the explicit sorting
+geometry is used, not the unreviewed arbitrary-cloud sorting classification.
+Together with the audited Oler population bound, the original fixed-M>=4
+wall class now has only z=N surviving at the small-curvature scope.
+
+Next obligations: exclude that maximum population at finite curvature;
+obtain a suitable actual wall or a direct packet in an arbitrary canonical
+macroscopic chamber; handle paired exterior caps and independent full-core
+face-coupled finite moves. Fixed-profile onsets alone do not control a
+growing-M source sequence. The terminal goal remains active.
+
+## 7. Exact checks
+
+`research/verify_target_c_one_deficit_sector_peeling_2026_10_07.py`
+independently enumerates complete actual contact graphs at rational
+positive curvatures, records an exact open-half-plane separator at every
+step, and verifies that all moving-involving edges are removed. It also
+constructs successively scaled exact opening velocities and checks every
+actual unit gradient. Its output is a finite certificate; the all-M and
+all-small-curvature claims are the analytic arguments above.
+
+M=3 is a local-pruning regression, not a universal impossibility result.
+M=4,5 Laurent and finite endpoint certificates remain independent checks,
+and are not used to extrapolate this theorem.
+The constructive M=6 field also passes the complete strict-root finite
+endpoint verifier at t=1/10000 and epsilon=10^-100: 212 opening rows,
+7280 new lower pairs, 7280 upper pairs and 3276 containment tests.

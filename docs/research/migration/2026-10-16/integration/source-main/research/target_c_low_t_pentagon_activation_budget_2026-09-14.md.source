@@ -1,0 +1,383 @@
+# Erdős Problem #99 — low-`t` pentagon activation budget
+
+**Date:** 2026-09-14
+**Target:** C-II, canonical full-core Type-II branch
+**Dependencies:** low-`t` pentagon sea; empty-pentagon trapezoid endpoint; exact force-hull residual conservation; pentagonal tooth conflict bounds
+**Claim class:** proof-only structural refinement awaiting independent audit
+**External literature:** no new import
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The current low-`t`, small-residual theorem gives linearly many two-contact pentagonal
+teeth whose hidden side is `1+o(1)`. The pointwise `o(1)` statement loses useful
+information: the pentagon residual controls the **sum of the activation gaps**.
+Keeping that sum produces an `L^1` budget for a simultaneous first-contact attack.
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},\qquad
+C_0:=2\sqrt{\Delta_2}+0.00042,
+\]
+
+and on a convergent Type-II subsequence write
+
+\[
+t:=\lim{q-k\over D},\qquad
+\delta:=\lim{b-P_F\over D},\qquad
+\kappa:=\lim{k\over D}.
+\]
+
+Define
+
+\[
+P(t,\delta,\kappa)
+:=\pi+C_0-{5t\over2}+\delta+{\kappa\over2}.
+\tag{AB.1}
+\]
+
+The low-`t` pentagon theorem gives
+
+\[
+{p_5\over D}\ge P(t,\delta,\kappa)-o(1).
+\tag{AB.2}
+\]
+
+Fix any constant
+
+\[
+0<c<{2\over3}.
+\tag{AB.3}
+\]
+
+There is a fixed residual threshold `theta_c>0` such that every pentagonal face `P`
+with `r(P)<theta_c` is isolate-free, lies in the flat-trapezoid stability neighborhood,
+and has a distinguished flat middle vertex `m` with two hidden diagonals to the two
+opposite leaf vertices. If their lengths are `x_P,y_P>1`, then
+
+\[
+\boxed{
+r(P)\ge c\bigl[(x_P-1)+(y_P-1)\bigr].
+}
+\tag{AB.4}
+\]
+
+Choose from each such pentagon the **shorter** hidden chord and call its excess over
+one `g(P)`. Then
+
+\[
+\boxed{
+g(P)\le {r(P)\over2c}.}
+\tag{AB.5}
+\]
+
+Consequently, after discarding the at most `R_F/theta_c` high-residual pentagons, one
+can choose one two-contact tooth from every remaining pentagon so that
+
+\[
+\boxed{
+\sum_P g(P)\le {R_F\over2c}.
+}
+\tag{AB.6}
+\]
+
+The standard conflict-graph thinning then gives both
+
+- an endpoint-disjoint hidden-chord family `H_c`, and
+- a vertex-disjoint two-contact-tooth family `T_c`,
+
+with
+
+\[
+\boxed{
+9|H_c|
+\ge p_5-{R_F\over\theta_c},
+\qquad
+13|T_c|
+\ge p_5-{R_F\over\theta_c},
+}
+\tag{AB.7}
+\]
+
+and, simultaneously,
+
+\[
+\boxed{
+\sum_{e\in H_c}(|e|-1)\le {R_F\over2c},
+\qquad
+\sum_{\tau\in T_c}g(\tau)\le {R_F\over2c}.
+}
+\tag{AB.8}
+\]
+
+For the clean choice `c=3/5`, the total activation budget is
+
+\[
+\boxed{{5\over6}R_F.}
+\tag{AB.9}
+\]
+
+Thus the small-residual branch does not merely contain a linear family of hidden
+`1+o(1)` contacts. A linear endpoint-disjoint / vertex-disjoint family can be selected
+whose **total radial distance to first contact** is `O(R_F)`.
+
+## 1. Exact area parametrization by the two hidden diagonals
+
+Let an isolate-free convex equilateral pentagonal face be cyclically labeled
+
+\[
+l,m,r,a,b
+\]
+
+as in the flat-trapezoid endpoint, and set
+
+\[
+x:=|m-a|,\qquad y:=|m-b|.
+\tag{AB.10}
+\]
+
+The boundary sides are all one. Convexity lets the two diagonals from `m` triangulate
+the pentagon into triangles with side data
+
+\[
+(1,1,x),\qquad (x,1,y),\qquad (y,1,1).
+\]
+
+Define
+
+\[
+F(s):={s\over4}\sqrt{4-s^2}
+\tag{AB.11}
+\]
+
+and
+
+\[
+G(x,y):={1\over4}
+\sqrt{(x+y+1)(-x+y+1)(x-y+1)(x+y-1)}.
+\tag{AB.12}
+\]
+
+Then exactly
+
+\[
+\boxed{A(P)=F(x)+G(x,y)+F(y).}
+\tag{AB.13}
+\]
+
+For an isolate-free pentagonal exceptional face the canonical residual is
+
+\[
+r(P)={A(P)\over a_0}-{3\over2},
+\qquad a_0={\sqrt3\over2}.
+\tag{AB.14}
+\]
+
+At the flat equality trapezoid, `x=y=1` and `r(P)=0`.
+
+## 2. The residual opens each hidden contact linearly
+
+Differentiate (AB.11):
+
+\[
+F'(s)={2-s^2\over2\sqrt{4-s^2}},
+\qquad F'(1)={1\over2\sqrt3}.
+\tag{AB.15}
+\]
+
+Also
+
+\[
+16G(x,y)^2=4x^2y^2-(x^2+y^2-1)^2,
+\]
+
+so
+
+\[
+\partial_xG(1,1)=\partial_yG(1,1)={1\over2\sqrt3}.
+\tag{AB.16}
+\]
+
+Hence, writing the right side of (AB.14) as `rho(x,y)`,
+
+\[
+\boxed{
+\partial_x\rho(1,1)=\partial_y\rho(1,1)={2\over3}.
+}
+\tag{AB.17}
+\]
+
+For any fixed `c<2/3`, continuity gives `eta_c>0` such that both partial derivatives
+are at least `c` throughout `1<=x,y<=1+eta_c`. Integrating first in one coordinate
+and then the other gives
+
+\[
+\rho(x,y)\ge c[(x-1)+(y-1)].
+\]
+
+Tighten the pre-existing trapezoid/Wegner stability threshold so every retained
+pentagon lies in this rectangle. This proves (AB.4).
+
+Triangle-freeness gives `x,y>1`: equality for `x`, for example, would make the three
+unit edges `mr`, `ra`, `am` an exact unit equilateral triangle.
+
+## 3. Choosing the nearer tooth improves the global constant
+
+Let
+
+\[
+g(P):=\min\{x_P-1,y_P-1\}.
+\]
+
+From (AB.4),
+
+\[
+g(P)
+\le{(x_P-1)+(y_P-1)\over2}
+\le {r(P)\over2c}.
+\tag{AB.18}
+\]
+
+Choose the leaf tooth corresponding to this shorter hidden chord. The exceptional-face
+residuals are nonnegative and sum to at most `R_F`, so over every retained family
+
+\[
+\sum_Pg(P)
+\le {1\over2c}\sum_Pr(P)
+\le {R_F\over2c}.
+\tag{AB.19}
+\]
+
+This is strictly stronger than summing both hidden gaps. In particular `c=3/5`
+gives the fixed safe coefficient `5/6` in (AB.9). Letting `c` approach `2/3` shows
+that the local endpoint coefficient can be made arbitrarily close to `3/4`, at the
+cost of shrinking the fixed stability neighborhood.
+
+## 4. Disjoint extraction preserves the `L^1` budget
+
+After deleting all pentagons with residual at least `theta_c`, at least
+
+\[
+p_5-{R_F\over\theta_c}
+\tag{AB.20}
+\]
+
+good pentagons remain. Choose the nearer tooth from each one as in Section 3.
+
+For hidden chords, a source endpoint lies on at most five selected bounded faces, so a
+chosen chord conflicts with at most eight others. Greedy thinning keeps at least one
+ninth of the family. For whole three-vertex teeth, the conflict degree is at most
+`3(5-1)=12`, so greedy thinning keeps at least one thirteenth. This proves (AB.7).
+
+All activation gaps are nonnegative. Passing to either thinned subfamily can only
+decrease their sum, so (AB.19) immediately gives (AB.8).
+
+## 5. Low-`t`, small-residual consequences
+
+If
+
+\[
+R_F=o(D),
+\tag{AB.21}
+\]
+
+then `R_F/theta_c=o(D)` for every fixed `c<2/3`. Combining (AB.2), (AB.7), and
+(AB.8) gives
+
+\[
+\boxed{
+\liminf{|H_c|\over D}\ge {P(t,\delta,\kappa)\over9},
+\qquad
+\liminf{|T_c|\over D}\ge {P(t,\delta,\kappa)\over13},
+}
+\tag{AB.22}
+\]
+
+while the total activation gap of each family is at most `R_F/(2c)=o(D)`.
+
+At the current proof-only floor
+
+\[
+t_{42}={4\over9}\left(\pi+\sqrt{\Delta_2}\right)+0.0013751
+=1.8208886379794447\ldots,
+\]
+
+and at the most permissive `delta=kappa=0`,
+
+\[
+P(t_{42},0,0)=0.4944166723690961\ldots .
+\tag{AB.23}
+\]
+
+Therefore
+
+\[
+\boxed{
+{|H_{3/5}|\over D}\ge0.0549351858187884\ldots-o(1),
+}
+\tag{AB.24}
+\]
+
+\[
+\boxed{
+{|T_{3/5}|\over D}\ge0.0380320517206997\ldots-o(1),
+}
+\tag{AB.25}
+\]
+
+and each family's total hidden-side excess is at most
+
+\[
+\boxed{{5\over6}R_F.}
+\tag{AB.26}
+\]
+
+The same `t<=1.8585` low-`t` band gives
+
+\[
+{|H_{3/5}|\over D}\ge0.0444875852575231\ldots-o(1),
+\qquad
+{|T_{3/5}|\over D}\ge0.0307990974859775\ldots-o(1),
+\tag{AB.27}
+\]
+
+again with total activation gap at most `5R_F/6`.
+
+## 6. Frontier effect
+
+The hard low-`t`, small-residual branch now contains a macroscopic disjoint family for
+which the **aggregate motion needed to hit hidden unit contacts is sublinear**:
+
+```text
+~0.055 D endpoint-disjoint hidden chords (near the t42 floor)
++ total hidden-side excess <= (5/6) R_F = o(D),
+```
+
+and simultaneously a vertex-disjoint three-source tooth family of density
+`~0.038D` with the same aggregate bound.
+
+This removes a bookkeeping obstacle from a simultaneous deformation argument. A
+closing theorem no longer needs a uniform lower bound on every hidden gap; it would be
+enough to construct a source-preserving feasible motion with aggregate available
+inward displacement larger than this `L^1` budget.
+
+No such global motion is proved here. The theorem does not assign KKT weight to the
+hidden chords, and near contacts are not promoted to exact contacts by compactness.
+C-II and Level I remain open.
+
+## 7. Scope audit
+
+- The area identity is exact for the isolate-free convex equilateral pentagon normal
+  form.
+- The derivative argument is local but rigorous: only continuity at `(1,1)` is used.
+- `theta_c` is a fixed positive threshold after intersecting the derivative,
+  trapezoid-stability, and first Wegner-jump neighborhoods.
+- The low-`t` count uses actual pentagons, so no second `Q-f` payment occurs.
+- The `R_F=o(D)` hypothesis is needed only for the asymptotic cardinality statements;
+  (AB.4)--(AB.8) are finite residual-budget statements after the fixed threshold is
+  chosen.
+- All hidden chords are inactive actual source pairs of length strictly greater than
+  one.
+- No exact triangle and no same-cardinality strict sub-`D` competitor is claimed.

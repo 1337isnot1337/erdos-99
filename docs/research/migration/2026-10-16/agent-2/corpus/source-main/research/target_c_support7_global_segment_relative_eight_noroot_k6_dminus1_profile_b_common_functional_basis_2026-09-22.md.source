@@ -1,0 +1,79 @@
+# Target C: common functional-basis filter for the remaining `k=6, D=-1` Profile B
+
+Date: 2026-09-22
+
+Status: proved a stronger necessary condition and implemented it in the exact Profile B finite cover. No closure is claimed until the full cover executes.
+
+Companion verifier:
+
+`research/verify_target_c_support7_global_segment_relative_six_noroot_k4_d3_profile_b_common_functional_basis_2026_09_22.py`
+
+## 1. Input
+
+The surviving six-row Profile B state has a rank-two coefficient plane, virtual deficiency three, and replacement-functional quotient dimension
+
+```text
+s_6 = 6 - 2 + 3 = 7.
+```
+
+Its actual singleton replacement classes span this seven-dimensional quotient. Every one-coordinate puncture keeps coefficient rank two and has deficiency `d_i in {2,3}`, hence quotient dimension
+
+```text
+s_{5,i} = 3 + d_i in {5,6}.
+```
+
+The already committed audit checked that the span of *all* compatible singleton classes fills each of these quotients. It also required a common seven-block set obeying the puncture-kernel loss bounds. That block-only test did not yet require the seven classes on those same blocks to be independent.
+
+## 2. Singleton uniqueness removes state-choice ambiguity
+
+On a virtual-canonical complete block the three singleton constraints are, up to nonzero scalar, the local rows
+
+```text
+y, x, x+y.
+```
+
+If two singleton states were compatible with the same coefficient space, two of these rows would lie in that space and therefore both `x` and `y` would lie in it. That is exactly the canonical-empty condition, contradicting virtual-canonical completeness.
+
+Therefore every compatible complete block has exactly one singleton state. A seven-block basis candidate has one well-defined replacement-functional class per block; there is no hidden state matching problem.
+
+## 3. Common functional-basis lemma
+
+Let `V_6` be the seven-dimensional six-row replacement-functional quotient. The actual singleton classes span `V_6`, so seven classes on seven distinct actual singleton blocks form a basis `B`.
+
+For puncture `i`, functoriality gives a surjection
+
+```text
+pi_i : V_6 -> V_{5,i}.
+```
+
+Because `B` is a basis of `V_6`, its image under every `pi_i` spans `V_{5,i}`. A basis block that ceases to be virtual-canonical complete maps to zero. A basis block that remains complete has the same unique compatible singleton state after puncturing, and its class is exactly the corresponding punctured replacement-functional class.
+
+Hence every genuine Profile B state has one common seven-block set such that
+
+1. its six-row singleton classes are independent and have rank seven modulo the six-row canonical relation span; and
+2. for every one-coordinate puncture `i`, the surviving classes from those same seven blocks span the full punctured quotient, of rank `3+d_i`.
+
+This strictly strengthens the earlier block-count condition. The count inequalities
+
+```text
+d_i=2 => at most two basis blocks disappear,
+d_i=3 => at most one basis block disappears
+```
+
+remain necessary, but they do not by themselves force the surviving classes to have the required functional rank.
+
+## 4. Exact implementation
+
+The new verifier wraps the coverage-correct Profile B audit without changing its orbit or coefficient-space cover. It first applies the old block-count filter. For every surviving seven-block candidate it then reconstructs the six-row canonical relation columns and the unique singleton functional on each candidate block.
+
+It requires exact rank seven for those seven classes modulo the six-row canonical relation span. It then reconstructs each of the six five-row punctures and requires the images of the same seven-block basis to have exact extra rank `3+d_i`.
+
+These new rank decisions use Python `Fraction` elimination over `Q`; they are not modular tests. The pre-existing modular relation and all-compatible-span tests retain their existing `2^127-1` Hadamard certificate.
+
+The workflow `.github/workflows/target-c-k6-dminus1-profile-b-rank2.yml` now runs this strengthened verifier over the same 32 disjoint orbit shards.
+
+## 5. Execution status
+
+The strengthened workflow attempt triggered by the implementation commit failed before runner execution. The returned jobs have `steps=null`, so none of the mathematical code ran. This is an infrastructure failure and supplies no finite-census result.
+
+The remaining computational bottleneck is therefore unchanged in coverage but stronger in endpoint: execute the full 20,451-orbit Profile B cover with the common functional-basis condition. A zero-survivor result would exclude Profile B under a strictly tighter necessary-condition audit than the previous version. Any survivor must still be lifted through the remaining global nine-block consistency conditions before it can represent the eight-row profile.

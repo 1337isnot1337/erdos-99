@@ -1,0 +1,83 @@
+# Hostile audit — Section 127 face fidelity and global defect injection
+
+Date: 2026-09-13
+
+Reviewed artifact: `research/target_c_section127_face_fidelity_global_defect_injection.md`
+
+Disposition: PASS at proof-only scope. The theorem state and the C-II status are
+unchanged.
+
+## 1. Cell-interior vertex statement
+
+Section 82 places every vertex of an unloaded component `I_r` in the interior of its
+attachment polygon `P_r`. Section 83 makes distinct cell interiors disjoint. Therefore
+an interior point of `P_r` cannot be a vertex of another unloaded component.
+
+If a loaded hull vertex `b` is not in `A_r`, then `A_r` is contained in
+`B\{b}`. Since `b` is an extreme point of `conv(B)`, it is not in
+`conv(B\{b})`, and hence not in `P_r`. This proves
+
+`V(G) cap int(P_r) = I_r`.
+
+Verdict: valid, with contact-isolated full-source points outside `V(G)` as required.
+
+## 2. Local bounded faces are global faces
+
+The interior of a bounded face of the induced graph `H_r` lies in `int(P_r)` and
+contains no vertex of `H_r`. The cell-interior statement then excludes every other
+positive-core vertex from that interior.
+
+Any positive-core contact edge not in `H_r` cannot meet that open face. If it entered
+and left the face, a proper crossing with its Jordan boundary would occur. If both
+boundary intersections were vertices, both endpoints would lie in `I_r union A_r`,
+so inducedness would put the edge in `H_r`; this also cannot cut the face. Tangential
+contact at a boundary vertex does not enter the open face. Thus the open face contains
+neither an omitted core vertex nor an omitted core edge, and is a bounded face of the
+full positive-contact graph.
+
+The argument does not require contact-isolated source points to be absent: they have
+no contact edges and do not alter the positive-contact embedding.
+
+Verdict: valid. The straight-line planarity and inducedness hypotheses are used at the
+only possible multiplicity points.
+
+## 3. Exceptional-perimeter injection
+
+Distinct local bounded faces cannot be the same global face because their open
+interiors would lie in two disjoint cell interiors. Hence local nonquadrilateral-face
+degrees inject into the global face occurrences, giving
+
+`sum_r P_exc,r <= 4f + Q`.
+
+Every nonquadrilateral bounded face has degree at least five, so `f <= Q`. With the
+canonical identity
+
+`e_BB = Q + 2k + u_B + c_B`,
+
+all terms nonnegative and `k=d_H+s_Z`, this also gives
+
+`sum_r P_exc,r <= 5(e_BB-k)`.
+
+The latter is not stronger than the Type-II `5(e_BB-2k)` payment from the separate
+augmented-triangle argument; no replacement of the sharper Type-II theorem is made.
+
+Verdict: valid, with the scope distinction retained.
+
+## 4. Limiting and closure boundary
+
+Combining the finite injection with Section 122 yields only
+
+`sum_r(L_r-2d_r) >= (4-2sqrt(3)) A_4^0/D - (4f+Q)`.
+
+In Type II this is a lower demand after subtracting a potentially linear defect term.
+It does not upper-bound the aggregate outer detour, force a unit equilateral triangle,
+or produce a source-preserving strict sub-`D` configuration. Macroscopic inactive
+containers and contact-isolated points remain outside the claim.
+
+Verdict: no C-II closure is implied.
+
+## Final audit verdict
+
+Section 127 is a sound proof-only face-fidelity and defect-injection theorem. Its
+strongest safe use is bookkeeping for future source-level detour or descent arguments;
+it must not be promoted to a global C-II conclusion.

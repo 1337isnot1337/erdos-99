@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "baseline_commit": "806b8ad3867468587d6650bad8a6bbfe1098d9b9",
+  "inputs": [
+    {
+      "path": "research-packages/ci-protocol-example/verify.py",
+      "sha256": "e017552cba266e14973413b6360c3fa3bbaa437a41fb6fdbc116beccf81f7a8f",
+      "identity": "finite-square-regression-verifier-v1",
+      "generated_from": []
+    }
+  ],
+  "packages": [],
+  "unresolved": []
+}

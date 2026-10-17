@@ -1,0 +1,662 @@
+# Target C-II — repeated TB1 inactive witnesses collapse to an ultra-active row-parallel family
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** the one-sign / `NEAR-ACTIVE` side of the strong-TB1 contact-swap branch through `t=(q-k)/D<=1.8687`  
+**Dependencies:** TB1 inverse-`D` cone collapse; contact-minimal overswap; exact path-layer support; source unit separation and diameter bound  
+**Certificate:** `research/verify_target_c_high_t_tb1_double_witness_collapse_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The contact-swap branch previously used only one fact about inactive witnesses: a fixed strict pair can be moved by at most two disjoint path-layer translations. That gave the factor-two loss from one-sign TB1 interfaces to distinct inverse-`D` witnesses.
+
+The common-axis theorem makes the multiplicity-two case much more rigid.
+
+If the **same** previously strict pair blocks the overswap at two distinct one-sign TB1 interfaces, then the two layer incidences orient that pair in opposite directions, while the two overswap axes differ by only `O(D^-1)`. The pair can therefore hit the same active boundary twice only if its original slack is one order smaller than the generic contact-swap window:
+
+\[
+\boxed{
+|xy|-1=O(D^{-2})
+\quad\text{or}\quad
+D-|xy|=O(D^{-2}).
+}
+\]
+
+Moreover its projective direction is `O(D^-1)` from the **common row line**. Thus a repeated inactive witness is not an arbitrary inverse-`D` obstruction. It is an ultra-near-active pair aligned with the global train phase.
+
+This has a further consequence in the near-diameter case. A family of chords of length `D-O(D^-2)` whose projective directions all lie in one `O(D^-1)` row cone has **bounded degree**, independent of `D`. Hence any linear family of repeated near-diameter witnesses contains a linear vertex-disjoint matching. The previous generic near-diameter witness theorem only gave an `Omega(D^(1/4))` matching because it had no common direction control.
+
+At the current strong-TB1 density floor
+
+\[
+s_0={791\over320{,}000{,}000},
+\]
+
+let `M_D` be the one-sign population, so on the `NEAR-ACTIVE` side
+
+\[
+|M_D|>{s_0\over2}D-o(D).
+\]
+
+Choose one contact-minimal overswap witness at every interface. Then either
+
+\[
+\boxed{
+>{3s_0\over8}D-o(D)
+=(9.26953125\times10^{-7})D-o(D)
+}
+\]
+
+distinct witness pairs occur, improving the previous unconditional `s_0/4` distinct-witness floor, or at least
+
+\[
+\boxed{
+>{s_0\over8}D-o(D)
+=(3.08984375\times10^{-7})D-o(D)
+}
+\]
+
+distinct pairs are each selected by **two** interfaces and therefore belong to the ultra-active row-parallel class above.
+
+After splitting the repeated family by lower/upper active boundary, one type has density at least
+
+\[
+{s_0\over16}=1.544921875\times10^{-7}.
+\]
+
+- repeated near-unit witnesses contain a vertex-disjoint matching of size
+  \[
+  \boxed{
+  >{s_0\over176}D-o(D)
+  =(1.4044744318\ldots\times10^{-8})D-o(D);
+  }
+  \]
+- repeated near-diameter witnesses also contain `Omega(D)` vertex-disjoint pairs, now because their degree is bounded by a source-independent constant.
+
+So the old multiplicity-two bookkeeping loss has a geometric price: if it is used on a positive-density set, it creates a linear matching of ultra-near-active pairs locked to the common row direction.
+
+---
+
+## 1. Uniform overswap notation
+
+At a one-sign strong-TB1 interface `i`, let
+
+\[
+q_i=|a_i+b_i|,
+\qquad
+w_i={a_i+b_i\over q_i},
+\]
+
+be the exact-swap length and midpoint opening direction. The contact-minimal overswap uses
+
+\[
+\lambda_D=1+D^{-1},
+\qquad
+v_i=-s_iw_i,
+\qquad
+s_i:=\lambda_Dq_i.
+\tag{DW.1}
+\]
+
+The cone-collapse theorem gives, uniformly over the strong-TB1 population,
+
+\[
+s_i=O(D^{-1})
+\tag{DW.2}
+\]
+
+and one common oriented transverse direction `w_*` such that
+
+\[
+|w_i-w_*|=O(D^{-1}).
+\tag{DW.3}
+\]
+
+Consequently
+
+\[
+\boxed{
+d_{ij}:=|w_i-w_j|=O(D^{-1})
+}
+\tag{DW.4}
+\]
+
+uniformly for every two strong-TB1 interfaces `i,j`.
+
+The constants in these `O` terms are absolute in the current high-`t` branch. In particular, the explicit cone theorem has `q_i<(31.4\times10^6)D^{-1}+o(D^{-1})`; no lower bound on `q_i` is needed below.
+
+For an oriented source pair `h=xy`, write
+
+\[
+r=p_y-p_x,
+\qquad \ell=|r|.
+\]
+
+At layer `R_i`, define its orientation-independent inward vector
+
+\[
+n_i:=\delta_i r,
+\qquad
+\delta_i=\mathbf1_{R_i}(y)-\mathbf1_{R_i}(x)\in\{-1,0,1\}.
+\tag{DW.5}
+\]
+
+If the pair moves at interface `i`, then `|n_i|=ell` and its squared distance after the overswap is exactly
+
+\[
+\boxed{
+\ell_i'^2
+=\ell^2-2s_i(n_i\cdot w_i)+s_i^2.
+}
+\tag{DW.6}
+
+---
+
+## 2. A pair moved by two layers has opposite inward orientations
+
+The physical path layers `R_i` are pairwise disjoint. If one unordered pair `xy` moves under two distinct layers `R_i,R_j`, then one endpoint belongs to `R_i` and the other belongs to `R_j`. Therefore
+
+\[
+\boxed{n_j=-n_i.}
+\tag{DW.7}
+\]
+
+This is stronger than the earlier multiplicity-two count: the two possible layer tags act on the same original segment with exactly opposite incidence signs.
+
+Fix such a pair and put
+
+\[
+n:=n_i=-n_j.
+\]
+
+The rest of the argument uses only (DW.4), (DW.6), and this sign reversal.
+
+---
+
+## 3. Double near-unit witnesses have `O(D^-2)` slack
+
+Assume the same previously strict pair is a lower-bound witness for both overswaps. Thus
+
+\[
+\ell>1,
+\qquad
+\ell_i'\le1,
+\qquad
+\ell_j'\le1.
+\tag{DW.8}
+\]
+
+Put
+
+\[
+A:=\ell^2-1>0.
+\]
+
+Using `n_i=n` in (DW.6), the first witness inequality gives
+
+\[
+n\cdot w_i
+\ge {A+s_i^2\over2s_i}
+={A\over2s_i}+{s_i\over2}.
+\tag{DW.9}
+\]
+
+Using `n_j=-n`, the second gives
+
+\[
+n\cdot w_j
+\le -{A+s_j^2\over2s_j}
+=-{A\over2s_j}-{s_j\over2}.
+\tag{DW.10}
+\]
+
+Subtracting,
+
+\[
+n\cdot(w_i-w_j)
+\ge
+{A\over2}\left({1\over s_i}+{1\over s_j}\right)
++{s_i+s_j\over2}.
+\tag{DW.11}
+\]
+
+Let
+
+\[
+H_{ij}:={s_is_j\over s_i+s_j}.
+\]
+
+Since the left side of (DW.11) is at most `ell d_ij`, multiplication by `2H_ij` gives the exact necessary bound
+
+\[
+\boxed{
+A+s_is_j
+\le2\ell d_{ij}H_{ij}.
+}
+\tag{DW.12}
+
+Now
+
+\[
+H_{ij}=O(D^{-1}),
+\qquad
+d_{ij}=O(D^{-1}),
+\qquad\ell=1+O(D^{-1})
+\]
+
+for every near-unit contact-swap witness. Hence
+
+\[
+A=O(D^{-2}).
+\]
+
+Since
+
+\[
+\ell-1={A\over\ell+1},
+\]
+
+we obtain
+
+\[
+\boxed{
+\ell-1=O(D^{-2}).
+}
+\tag{DW.13}
+
+Thus a pair cannot be reused as a near-unit overswap blocker at two interfaces while retaining generic `Theta(D^-1)` lower slack.
+
+There is also directional information. Equations (DW.9)--(DW.10) imply
+
+\[
+0<n\cdot w_i<\ell d_{ij},
+\qquad
+-\ell d_{ij}<n\cdot w_j<0.
+\tag{DW.14}
+\]
+
+Therefore
+
+\[
+\boxed{
+\left|{n\over\ell}\cdot w_i\right|,
+\left|{n\over\ell}\cdot w_j\right|
+=O(D^{-1}).
+}
+\tag{DW.15}
+
+Together with (DW.3), the projective direction of `xy` is `O(D^-1)` from the common row line `[u_*]=[J^{-1}w_*]`.
+
+---
+
+## 4. Double near-diameter witnesses also have `O(D^-2)` slack
+
+Now assume the same pair is an upper-bound witness for both overswaps:
+
+\[
+\ell<D,
+\qquad
+\ell_i'\ge D,
+\qquad
+\ell_j'\ge D.
+\tag{DW.16}
+\]
+
+Put
+
+\[
+B:=D^2-\ell^2>0.
+\]
+
+The first overswap inequality gives
+
+\[
+n\cdot w_i
+\le {s_i\over2}-{B\over2s_i},
+\tag{DW.17}
+\]
+
+while the second, using `n_j=-n`, gives
+
+\[
+n\cdot w_j
+\ge {B\over2s_j}-{s_j\over2}.
+\tag{DW.18}
+\]
+
+Hence
+
+\[
+n\cdot(w_j-w_i)
+\ge
+{B\over2}\left({1\over s_i}+{1\over s_j}\right)
+-{s_i+s_j\over2}.
+\tag{DW.19}
+\]
+
+Again bounding the left side by `ell d_ij` and multiplying by `2H_ij` yields
+
+\[
+\boxed{
+B-s_is_j
+\le2\ell d_{ij}H_{ij},
+}
+\tag{DW.20}
+\]
+
+or
+
+\[
+\boxed{
+B
+\le2\ell d_{ij}H_{ij}+s_is_j.
+}
+\tag{DW.21}
+
+Here
+
+\[
+\ell=D-O(D^{-1}),
+\qquad d_{ij}=O(D^{-1}),
+\qquad H_{ij}=O(D^{-1}),
+\]
+
+so
+
+\[
+B=O(D^{-1}).
+\]
+
+Since
+
+\[
+D-\ell={B\over D+\ell},
+\]
+
+we get the stronger original-length window
+
+\[
+\boxed{
+D-\ell=O(D^{-2}).
+}
+\tag{DW.22}
+
+The direction again collapses to the common row line. From (DW.17),
+
+\[
+n\cdot w_i\le{s_i\over2},
+\]
+
+and from (DW.18) plus `|n\cdot(w_i-w_j)|<=ell d_ij`,
+
+\[
+n\cdot w_i
+\ge-{s_j\over2}-\ell d_{ij}.
+\]
+
+Thus
+
+\[
+\left|{n\over\ell}\cdot w_i\right|
+\le d_{ij}+{s_i+s_j\over2\ell}
+=O(D^{-1}).
+\tag{DW.23}
+\]
+
+The same holds with `i,j` exchanged, and (DW.3) gives
+
+\[
+\boxed{
+d_{\mathbb{RP}^1}([xy],[u_*])=O(D^{-1}).}
+\tag{DW.24}
+
+So a reused upper-slack witness is simultaneously ultra-near-diametrical and locked to the global row phase.
+
+---
+
+## 5. The same pair cannot switch witness type
+
+For large `D`, the two contact-swap windows
+
+\[
+(1,1+O(D^{-1})]
+\]
+
+and
+
+\[
+[D-O(D^{-1}),D)
+\]
+
+are disjoint. The witness type is determined by the original length `ell`, not by the interface.
+
+Therefore if one strict pair is selected as the overswap witness at two interfaces, it is covered by exactly one of Sections 3 or 4. Every repeated selected witness is consequently an `O(D^-2)`-slack, `O(D^-1)` row-parallel pair.
+
+---
+
+## 6. Repeated near-diameter witnesses have bounded degree
+
+The row-direction conclusion changes the matching scale for the repeated near-diameter family.
+
+### Lemma DW.1 — bounded degree in a narrow near-diameter cone
+
+Fix constants `A,L>0`. For all sufficiently large `D`, let `G_D(A,L)` be the graph on a unit-separated diameter-`D` source whose edges satisfy
+
+\[
+D-{A\over D^2}\le|xy|<D
+\tag{DW.25}
+\]
+
+and
+
+\[
+d_{\mathbb{RP}^1}([xy],[u_*])\le{L\over D}.
+\tag{DW.26}
+\]
+
+Then
+
+\[
+\boxed{\Delta(G_D(A,L))=O_{A,L}(1).}
+\tag{DW.27}
+
+### Proof
+
+Fix a vertex `x`. For an incident edge `xy`, orient the ray from `x` to `y`. Projective closeness in (DW.26) gives two possible oriented clusters, one within `L/D` of `+u_*` and one within `L/D` of `-u_*`.
+
+Both clusters cannot occur at the same vertex. If `y` lies in the positive cluster and `z` in the negative cluster, then with
+
+\[
+r=|x-y|,\qquad s=|x-z|,
+\]
+
+we have `r,s>=D-A/D^2`, and the `u_*`-projection of `y-z` has magnitude at least
+
+\[
+(r+s)\cos(L/D)
+\ge2\left(D-{A\over D^2}\right)\cos(L/D)
+>D
+\]
+
+for all sufficiently large `D`. This contradicts the source diameter bound.
+
+Thus all incident witness rays lie in one oriented cone of width at most `2L/D`. For two neighbors `y,z` in that cone,
+
+\[
+||x-y|-|x-z||\le {A\over D^2}
+\]
+
+and their unit ray directions differ by at most `2L/D`. Hence
+
+\[
+|y-z|
+\le {A\over D^2}+2D\sin(L/D)
+\le2L+1
+\tag{DW.28}
+\]
+
+for all large `D`.
+
+So all neighbors of `x` lie in a fixed-radius disk around any one of them. Unit separation bounds the number of source points in such a disk by a constant depending only on `L` (for example, disjoint radius-`1/2` disks give a crude area bound). This proves (DW.27). `square`
+
+Because the constants in (DW.22)--(DW.24) are uniform over the strong-TB1 population, all repeated near-diameter witnesses lie in one graph `G_D(A,L)` for fixed sufficiently large `A,L`. Their maximum degree is therefore bounded independently of `D`.
+
+A greedy matching consequently loses only `O(1)` witness edges per retained edge. Thus
+
+\[
+\boxed{
+\Theta(D)\text{ repeated near-diameter witnesses}
+\Longrightarrow
+\Theta(D)\text{ vertex-disjoint repeated near-diameter witnesses}.
+}
+\tag{DW.29}
+
+This is the main quantitative gain over the generic inactive near-diameter theorem.
+
+---
+
+## 7. Global density dichotomy for the one-sign TB1 branch
+
+On the `NEAR-ACTIVE` side, let
+
+\[
+M:=|M_D|>{s_0\over2}D-o(D).
+\tag{DW.30}
+
+Choose one overswap witness for each one-sign interface. By the exact layer-support theorem, each unordered pair can be selected at most twice.
+
+Let
+
+- `d` be the number of distinct selected pairs used twice;
+- `s` be the number of distinct selected pairs used once.
+
+Then exactly
+
+\[
+M=s+2d,
+\qquad
+N_{\rm distinct}=s+d=M-d.
+\tag{DW.31}
+
+There are two cases.
+
+### Case A — few repeated selected witnesses
+
+If
+
+\[
+d<{M\over4},
+\]
+
+then
+
+\[
+N_{\rm distinct}=M-d>{3M\over4}.
+\]
+
+Hence
+
+\[
+\boxed{
+N_{\rm distinct}
+>{3s_0\over8}D-o(D)
+=(9.26953125\times10^{-7})D-o(D).
+}
+\tag{DW.32}
+
+This improves the earlier factor-two distinct-witness floor on this subcase.
+
+### Case B — many repeated selected witnesses
+
+If
+
+\[
+d\ge{M\over4},
+\]
+
+then Sections 3--5 give at least
+
+\[
+\boxed{
+>{s_0\over8}D-o(D)
+=(3.08984375\times10^{-7})D-o(D)
+}
+\tag{DW.33}
+
+**distinct repeated** witness pairs, every one satisfying
+
+\[
+\operatorname{dist}(|xy|,\{1,D\})=O(D^{-2})
+\tag{DW.34}
+\]
+
+and
+
+\[
+d_{\mathbb{RP}^1}([xy],[u_*])=O(D^{-1}).
+\tag{DW.35}
+
+Split these pairs into near-unit and near-diameter types. One type has size
+
+\[
+\boxed{
+>{s_0\over16}D-o(D)
+=(1.544921875\times10^{-7})D-o(D).
+}
+\tag{DW.36}
+
+If the near-unit type wins, the degree-six almost-contact theorem from the inactive-slack matching note gives a greedy matching of size
+
+\[
+\boxed{
+>{s_0\over176}D-o(D)
+=(1.4044744318\ldots\times10^{-8})D-o(D).
+}
+\tag{DW.37}
+
+If the near-diameter type wins, Lemma DW.1 gives a source-independent degree bound and hence
+
+\[
+\boxed{
+\Omega(D)
+}
+\tag{DW.38}
+
+vertex-disjoint repeated near-diameter pairs. All of them have `O(D^-2)` diameter slack and the same inverse-`D` projective row cone.
+
+---
+
+## 8. Frontier effect
+
+The inactive-slack side of strong TB1 now has a sharper support normal form:
+
+```text
+one-sign strong-TB1 population of linear density
++
+contact-minimal O(1/D) overswap at every interface
++
+all overswap axes in one O(1/D) transverse cone
+
+-> either
+
+   > (3 s0 / 8) D distinct inverse-D inactive witnesses,
+   so witness selection is nearly injective at the interface scale;
+
+or
+
+   > (s0 / 8) D repeated witnesses,
+   each simultaneously
+      O(D^-2) from the unit or diameter boundary
+      and O(D^-1) from the common row projective direction;
+
+   after fixing the active boundary,
+   a linear vertex-disjoint ultra-active matching survives.
+```
+
+This does not close C-II. It does remove the main ambiguity in the previous factor-two witness count. Reusing one inactive pair at two layer swaps is possible only inside a much thinner geometric exceptional set, and that exceptional set itself has linear matching structure.
+
+The next TB1 target can now split cleanly:
+
+1. on the near-injective side, try a simultaneous family of separated overswaps, because most chosen blockers are distinct at the interface scale;
+2. on the repeated side, compare the linear `O(D^-2)`-slack row-parallel matching directly with the common near-equilateral train rectangle. In the near-diameter subcase the projective cone is now narrow enough to give bounded degree, not merely the previous `O(D^(3/4))` degree.
+
+**Disposition:** upgraded multiplicity-two bookkeeping into a geometric collapse theorem. A pair reused as a TB1 inactive witness is forced one order closer to activation and into the common row direction; a positive-density repeated near-diameter family has a linear matching. C-II and Level I remain open.

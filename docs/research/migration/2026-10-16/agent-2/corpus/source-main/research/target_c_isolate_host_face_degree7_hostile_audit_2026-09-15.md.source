@@ -1,0 +1,133 @@
+# Hostile audit — isolate-hosting bounded faces have degree at least seven
+
+**Date:** 2026-09-15  
+**Reviewed:** `research/target_c_isolate_host_face_degree7_2026-09-15.md`  
+**Disposition:** **PASS at its stated exact local/source-level scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The candidate claims that a contact-isolated source point cannot lie in a canonical bounded contact face of degree at most six.  The proof is short, but four points require explicit checking: canonical face convexity, interior assignment of isolates, the strict rather than weak radial inequality, and the central-angle sum.
+
+## 1. Canonical geometry supplies exactly the required convex polygon
+
+Canonical Section 67, as already used by the internal-chamber normalization, states that a bounded nonquadrilateral contact face `C` is a convex polygon whose boundary sides are unit contact edges of the old positive core.
+
+The same canonical normalization defines
+
+\[
+Z_C=A\cap\operatorname{int}C
+\]
+
+as the actual contact-isolated source points assigned to that chamber.  Thus an assigned isolate is strictly interior to the convex polygon; no boundary-assignment convention is being smuggled into the angle argument.
+
+There is also no missed boundary degeneracy.  A source point in the relative interior of a unit side would be at distance `<1` from a side endpoint, contradicting unit separation, while a boundary vertex is incident to the side contact and is not contact-isolated.
+
+**Verdict:** PASS.
+
+## 2. Consecutive radial angles are the genuine polygon sectors
+
+Let `z in int C`.  For a convex polygon, the cyclic order of its vertices agrees with their radial cyclic order about `z`.  Each supporting line through a side has `z` strictly in its interior half-plane, so the angle at `z` subtended by one side is strictly between `0` and `pi`.  These `d` positive consecutive angles partition one full turn:
+
+\[
+\sum_i\theta_i=2\pi.
+\]
+
+Hence the cosine-rule angle used by the candidate is the correct consecutive sector angle, not the complementary angle.
+
+**Verdict:** PASS.
+
+## 3. Contact isolation gives the strict `pi/3` bound
+
+For one unit side with endpoint radii `r,s`, unit separation gives `r,s>=1`.  Contact isolation strengthens this to
+
+\[
+r,s>1.
+\]
+
+The key algebra is exact:
+
+\[
+r^2-rs+s^2=(r-s)^2+rs>1.
+\]
+
+The cosine rule therefore gives
+
+\[
+\cos\theta={r^2+s^2-1\over2rs}>{1\over2},
+\]
+
+and since `0<theta<pi`,
+
+\[
+\theta<\pi/3.
+\]
+
+The strict inequality matters.  With only `r,s>=1`, a six-sided configuration could attain six `pi/3` sectors; contact isolation excludes the equality case because equality would require unit contact to the boundary vertices.
+
+Summing over a `d`-face gives
+
+\[
+2\pi<d\pi/3,
+\]
+
+so `d>6` and hence `d>=7`.
+
+**Verdict:** PASS.
+
+## 4. Pentagon and hexagon corollaries are exact
+
+The theorem immediately implies
+
+\[
+z_P=0
+\]
+
+for every bounded degree-5 or degree-6 contact face.  This is stronger than merely saying that the modern high-`t` pentagon population consists of small chambers: those chambers cannot store any assigned contact-isolate at all.
+
+No assertion is made about degree-7 or higher faces; such a face may contain one or many isolates.
+
+**Verdict:** PASS.
+
+## 5. The host-count inequality is correctly charged to `Q-f`
+
+Write `f_d` for the number of bounded exceptional faces of degree `d`.  Then
+
+\[
+Q-f=\sum_{d\ge6}(d-5)f_d.
+\]
+
+Every isolate-hosting face has `d>=7` and therefore contributes at least two units to this sum.  Consequently
+
+\[
+f_{iso}\le{Q-f\over2}.
+\]
+
+This counts host faces, not isolated points, and the candidate states that limitation explicitly.
+
+Using the already-certified rounded high-`t` parent bounds gives:
+
+```text
+T=1.850: (0.558408-0.4007088)/2 = 0.0788496 < 0.07886
+T=1.855: (0.568408-0.3982088)/2 = 0.0850996 < 0.08510
+T=1.860: (0.578408-0.3957088)/2 = 0.0913496 < 0.09136
+```
+
+A separate exact-`Fraction` Pyroam regression reproduced these margins.  No floating sign is load-bearing.
+
+**Verdict:** PASS.
+
+## 6. What this does not prove
+
+The theorem does not bound isolate multiplicity inside one degree-`>=7` chamber, does not upper-bound the total bounded-face isolate population, and does not turn the linear pentagon population into a unit triangle by itself.  A single high-degree near-geodesic chamber can still carry many inactive points within the currently allowed Type-II regressions.
+
+The useful new information is a support restriction:
+
+```text
+all degree-5 faces: isolate-free
+all degree-6 faces: isolate-free
+all bounded-face isolate mass: supported on degree >=7 faces
+number of possible isolate-host faces <= (Q-f)/2.
+```
+
+This is compatible with the canonical chamber/Oler ledgers and introduces no new KKT or deformation assumption.
+
+**Final verdict:** **PASS.** The exact degree-`>=7` isolate-host obstruction and its high-`t` host-count corollary are valid at the stated scope. C-II remains open.

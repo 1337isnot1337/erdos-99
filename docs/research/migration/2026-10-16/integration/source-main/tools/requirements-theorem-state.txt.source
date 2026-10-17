@@ -1,0 +1,5 @@
+PyYAML>=6.0,<7
+jsonschema>=4.23,<5
+numpy>=2.0,<3
+scipy>=1.14,<2
+sympy>=1.13,<2

@@ -1,0 +1,131 @@
+# Hostile audit — exact-angle collapsed parity and triangle-free regression
+
+**Date:** 2026-09-19  
+**Audited note:** `research/target_c_support6_collapsed_exact_angle_parity_regression_2026-09-19.md`  
+**Certificate:** `research/verify_target_c_support6_collapsed_exact_angle_parity_2026_09_19.cpp`  
+**Disposition:** PASS as an exact negative regression; theorem-state authority unchanged; C-II remains open.
+
+## 1. The claimed implication has the correct direction
+
+The certificate constructs, for every one of the 388 rational rotation cells, an assignment satisfying four necessary conditions:
+
+- the strict local angle inequalities defining the cell;
+- the strict crossing-angle window for every selected crossing bit;
+- every MI.1 cycle-pair equation; and
+- triangle-freeness of the selected train-crossing graph.
+
+Existence of such an assignment proves only that those conditions cannot exclude the cell. It does not prove a stopped-train drawing, a six-pentagon closure solution, or a source. The source note states the conclusion in this negative form and does not promote the witnesses to geometric realizations.
+
+## 2. Strict difference feasibility is exact
+
+All angle variables use the scale
+
+\[
+x_e={3\alpha_e\over\pi}.
+\]
+
+The base pentagon-turn inequalities and the crossing windows have integer right-hand sides. There are twelve angle variables plus one constant node. A simple directed cycle therefore has at most thirteen edges.
+
+Replacing every strict edge weight `c` by `14c-1` is exact: if a cycle has original integer total `C` and length `k<=13`, then its transformed total is
+
+\[
+14C-k,
+\]
+
+which is negative exactly when `C<=0`. Ordinary Bellman--Ford negative-cycle detection therefore decides the strict system without a floating-point tolerance.
+
+For a selected crossing orientation, the two inserted inequalities are
+
+\[
+x_a-x_b<2,
+\qquad
+x_b-x_a<-1,
+\]
+
+which are exactly `1<x_a-x_b<2`. The recursive geometry test tries both orientations and accepts only when all selected crossing windows hold simultaneously.
+
+## 3. The projective crossing interval is represented correctly
+
+For projective directions represented by `alpha_e,alpha_f in (0,pi)`, a strict unit-rhombus crossing requires their acute projective separation to exceed `pi/3`. This is equivalent to
+
+\[
+{\pi\over3}<|\alpha_e-\alpha_f|<{2\pi\over3},
+\]
+
+or, in scaled coordinates,
+
+\[
+1<|x_e-x_f|<2.
+\]
+
+The verifier uses exactly this open interval. No boundary case at `1` or `2` is admitted.
+
+## 4. The affine F2 solution space fixes impossible crossings to zero
+
+A crossing variable is retained only if at least one of its two strict crossing orientations intersects the base rotation cell. Otherwise an actual crossing is impossible everywhere in that cell, so fixing that variable to zero is valid.
+
+The MI.1 rows are reduced to RREF. Pivot columns are necessarily retained crossing variables. Nonpivot columns which were deleted by angle incompatibility are not inserted as affine free directions. The assertion
+
+```text
+basis.size() == allowed_count - rank
+```
+
+checks that the constructed basis has exactly the expected affine dimension.
+
+The particular solution and each basis vector satisfy the reduced MI.1 system. Gray-code enumeration therefore visits the full affine space on the retained variables, with every deleted variable fixed to zero.
+
+## 5. The MI.1 equation set matches the audited theorem
+
+The verifier enumerates every simple undirected cycle of `K_6\setminus M` by its edge mask and every unordered pair of edge-disjoint cycles. No cycle pair outside the theorem's scope is used.
+
+At a common exceptional face, edge-disjoint cycles use four distinct relation halfedges. The local right-hand side is one exactly when one cycle's two positions are opposite in the four-term relation-edge rotation, which is equivalent to alternation of the two chord endpoint pairs. Thus the implementation of the local `eta_v(C,D)` term is correct.
+
+Every selected crossing between one train of each cycle is included on the left side, including train pairs sharing an exceptional endpoint, as required by the audited MI.1 theorem.
+
+## 6. Triangle-freeness is imposed on the actual selected crossing graph
+
+The twelve relation trains are the graph vertices. A parity bit equal to one inserts the corresponding graph edge. The verifier rejects the assignment whenever two adjacent train vertices have a common neighbor, which is exactly the existence of a triangle.
+
+This is stronger than applying only Mantel's edge-count bound. It is the exact finite triangle-free condition proved for stopped trains.
+
+A zero crossing bit correctly imposes no angular restriction. Two train directions may satisfy the strict rhombus angle condition while the particular stopped trains never meet. Requiring every angle-compatible pair to cross would be an invalid strengthening.
+
+## 7. The minimum crossing-count histogram is valid only at the stated relaxation
+
+For each cell, parity assignments are bucketed by Hamming weight. All triangle-free assignments of lower weight are tested for joint crossing-window feasibility before a higher weight is accepted. Every cell finds a witness by weight six, well below the certificate's search cutoff at twelve.
+
+Therefore the reported histograms are exact minima for
+
+\[
+\text{MI.1 + triangle-free + selected-crossing angle windows + base rotation inequalities}.
+\]
+
+They are **not** minima for an actual source drawing. The note does not use them as such.
+
+The locally reproduced certificate output is
+
+```text
+all-cross matching: cells=180, exact-angle MI.1 + triangle-free survivors=180, geometry-tests=328
+all-cross matching: exact minimum crossing-count histogram 2:36 3:48 4:60 5:24 6:12
+mixed matching: cells=208, exact-angle MI.1 + triangle-free survivors=208, geometry-tests=428
+mixed matching: exact minimum crossing-count histogram 2:8 3:32 4:80 5:48 6:40
+PASS: all 388 collapsed support-six rotation cells admit a jointly angle-compatible, triangle-free crossing assignment satisfying every MI.1 equation.
+```
+
+The verifier was compiled with
+
+```text
+g++ -O3 -std=c++17 -Wall -Wextra -pedantic
+```
+
+and completed without assertion failure or compiler warning.
+
+## 8. The load-bearing omitted constraints are stated explicitly
+
+The regression never imposes the nonlinear vector closure equations at the six exceptional faces. This is the largest omitted local condition: the 388 rational cells classify angle/order inequalities, not actual collapsed closure solutions.
+
+It also does not require the chosen crossings to planarize the prescribed face rotation system, does not choose an order for multiple crossings along one train, and does not impose the stronger Jordan-separator conditions that are not consequences of MI.1 alone.
+
+Therefore the correct next target is not another coarse or exact crossing-threshold subdivision using only MI.1 and triangle-freeness. At least one genuinely new layer is required: nonlinear closure, full planarization/rotation compatibility, a stronger Jordan invariant, source embedding, or diameter locking.
+
+**Audit disposition:** PASS. The finite search rigorously shows that crossing-angle necessity, all MI.1 equations, and exact triangle-freeness together leave every one of the 388 collapsed support-six rational rotation cells alive. This is a strategy-killing regression, not a support-six realization theorem and not a C-II closure.

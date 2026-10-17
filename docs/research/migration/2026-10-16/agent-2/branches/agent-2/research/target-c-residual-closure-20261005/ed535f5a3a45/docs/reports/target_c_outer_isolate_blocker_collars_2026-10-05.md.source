@@ -1,0 +1,194 @@
+<!-- theorem-state: {"artifact_id":"ART-6B0F65299877","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: outer isolate blockers fit in defect-sized boundary collars
+
+Date: 2026-10-05. Base main: `0351c2c3aecd34c0427d0ad081afae563468d401`.
+State: `2026-10-05.audit.61`.
+Classification: **proved candidate awaiting independent audit**; artifact
+lifecycle **unreviewed**. C-II and Level I remain open.
+
+## 1. Exact implication
+
+```
+actual small O--O moves on a near-disk full-core source
+-> keep pocket isolates fixed, dispatch only extreme exterior isolates,
+   transport bounded-face isolates with their common owner
+-> every outer-isolate lower witness lies in a pocket/cap boundary collar
+-> total collar population is O(x_B+m_B)
+-> k<=150(x_B+m_B) for upper-safe, rhombus-safe shortening singletons
+-> no linear usable owner family if x_B+m_B=o(D).
+```
+
+This eliminates total outer-isolate population as independent currency
+for the stated move scope. It does not extract a linear O--O family,
+prove unary/upper safety, or close the separate container branch.
+
+Dependencies: canonical Section 67 convex pockets and perimeter identities;
+Section 77 actual exterior caps; Type-II near-disk force hull from Section
+80; audit.60 long-pair isolate dispatch; audit.61 actual O--O bounded-face
+transport. The final owner count uses the **unreviewed candidate** loaded
+incidence theorem in `target_c_loaded_neighbor_outer_owner_bound_2026-10-05.md`.
+No exterior Reuleaux containment or nonconsecutive-grid shield is used.
+
+## 2. Pocket perimeter is controlled by outer-walk excess
+
+Let F=conv B=conv V be the force hull, q=|B|, b the occurrence-counted
+outer contact-walk length, and x_B=b-q. Let a=m_B be the number of nonunit
+loaded-hull sides, and L_add their total length. They are precisely the
+missing sides added in canonical hull augmentation: a unit side already
+is an actual contact. The canonical finite identities are
+
+    P_F=q-a+L_add,
+    sum pocket perimeters=b+2L_add-P_F.
+
+The outer walk has length at least P_F. Hence L_add<=x_B+a and
+
+    sum pocket perimeters=x_B+a+L_add<=2(x_B+a).        (2.1)
+
+There are a convex pockets. Their populations include all outer-contact-
+face isolates inside F, with isolates on added hull sides assigned to
+their adjacent interior pocket. Bounded physical-face isolates are a
+separate population.
+
+## 3. Actual exterior caps have the same perimeter scale
+
+In Type II center coordinates so that B(0,r_D) is contained in F and
+r_D/D tends to 1/2. Every source point z satisfies |z|+r_D<=D, because
+its distance to the force-hull point -r_D*z/|z| is at most D. Thus
+
+    K=conv A is contained in B(0,R_D), R_D=D-r_D,
+    alpha_D=acos(r_D/R_D) tends to zero.
+
+Each canonical exterior cap is bounded by a force-hull chord with
+outward unit normal u and the corresponding full-source hull arc. The
+chord is at distance at least r_D from zero. A point z of that arc has
+u dot z>=r_D and |z|<=R_D, so its radial angle differs from u by at most
+alpha_D. Every supporting normal n of K there also satisfies n dot z>=r_D,
+so its angle from z is at most alpha_D. The arc's tangent directions
+therefore differ from the chord tangent by at most 2alpha_D.
+Projection onto that tangent gives, for chord length L,
+
+    arc length<=L/cos(2alpha_D),
+    cap perimeter<=(1+sec(2alpha_D))*L<=3L             (3.1)
+
+for all sufficiently large sources along the Type-II sequence.
+
+No positive-area cap can have a unit chord for large D. Its arc would
+contain an intermediate source-hull vertex and have at least two sides,
+each of length at least one. But the projection bound gives arc length
+at most sec(2alpha_D)<2 for a unit chord. Therefore positive caps occur
+only on the a nonunit sides, and
+
+    number of positive caps<=a,
+    sum cap perimeters<=3L_add<=3(x_B+a).              (3.2)
+
+This is a direct bound for actual K-versus-F caps. It asserts no location
+inside a Reuleaux minor cap and supplies no packing sites by area averaging.
+Together (2.1)--(3.2) give total region perimeter at most 5(x_B+a),
+for at most 2a pocket/cap regions.
+
+## 4. Isolate assignment and lower-witness location
+
+Take the stated actual small O--O binary family and its checked long-pair
+root dispatch. Its displacement cloud, including zero, must satisfy the
+canonical bound s<min(D-sqrt(D^2-1),sqrt(2)-1). Use this full-source
+assignment:
+
+- every bounded-face isolate moves with its common core owner;
+- every outer-pocket isolate inside F stays fixed;
+- exterior isolates receive canonical long-pair anchors, with unanchored
+  ones fixed.
+
+An isolate in F has no strict-long pair. Represent it by source points
+of B and apply the variance identity: all those points are at least one
+from it, giving every old distance at most sqrt(D^2-1). Keeping a pocket
+isolate fixed is therefore upper-safe. The canonical bounded-face proof
+makes its transported isolates lower- and upper-safe. Every moving
+exterior isolate is a strict-long graph endpoint and hence an extreme
+point of K; only those endpoints receive nontrivial dispatch anchors.
+The original exception set remains explicit and is handled separately.
+
+Any lower equality/violation comes from an old noncontact pair of length
+at most 1+s<5/4 for sufficiently large D. Audit.61 puts all isolate
+witnesses in the outer contact face. Consider an isolate endpoint z:
+
+- If z is in a pocket, it is fixed. The other endpoint must move and
+  cannot be another isolate of that pocket, all of which are fixed.
+  No core vertex lies in its open pocket. The other moving endpoint is
+  outside the pocket or on its boundary. Thus z is within 5/4 of the
+  boundary of its assigned pocket.
+- If z is outside F in a cap and moves, it is on K's boundary, hence on
+  the boundary of that cap. If z is fixed, the other endpoint either
+  is outside its cap, or is a moving exterior isolate on the cap's hull
+  arc. Core points lie in F; other exterior moving isolates lie on K;
+  pocket isolates are fixed. In every case z is within 5/4 of its cap
+  boundary.
+
+Bounded-face isolates cannot be witness endpoints under the canonical
+transport proof. The argument applies to every bad binary local state,
+not merely singleton selections. Consequently all isolate endpoints of
+lower clauses belong to these collars, irrespective of the full number
+of isolates deeper in the pockets or caps.
+
+## 5. Exact collar population estimate
+
+For a convex region of perimeter P, its radius-r boundary tube has area
+at most 2rP+pi*r^2. The outer parallel body contributes rP+pi*r^2;
+inner erosion loses at most rP by integrating its nonincreasing convex
+perimeter, including the case of an empty erosion.
+
+Let N be the number of distinct source isolates in the radius-5/4 collars
+of all assigned pockets/caps. Their open radius-1/2 disks are disjoint
+and lie in the radius-7/4 tubes. With A_*=x_B+a, (2.1)--(3.2) give
+
+    (pi/4)N <= 2*(7/4)*5A_* + pi*(7/4)^2*2a,
+    N <= (70/pi)A_*+(49/2)a < 48A_*.                 (5.1)
+
+The final rational bound uses pi>3 and a<=A_*. The estimate counts
+boundary-near source points, not available capacity. Tube disks may
+extend outside their regions; this only enlarges the area upper bound.
+
+## 6. Composition with actual safe singleton proposals
+
+Assume every surviving singleton preserves all old contacts, keeps old
+diameters at most D and old nondiameters strictly below D, passes all
+unary rhombus tests, and strictly shortens an old diameter. Canonical
+normalization forces an outer-face lower witness for every owner.
+
+The candidate loaded-neighbor theorem gives at most two loaded neighbors
+within 5/4 of any source point for large D, and charges loaded-loaded
+noncontact witnesses to the a nonunit loaded-hull sides. Its exact endpoint
+count can therefore use only the active collar isolates of (5.1):
+
+    k<=2a+3x_B+3N<=147(x_B+a)<150(x_B+m_B).            (6.1)
+
+Use a non-strict final bound k<=150(x_B+m_B), including the zero-defect
+case where there are no regions or isolate witnesses. If canonical
+upper-exception deletion removes at most 2d_H owners from an original
+r-family and all the remaining singleton hypotheses hold, then
+
+    r<=150(x_B+m_B)+2d_H.                            (6.2)
+
+Thus actual r=Omega(D) safe proposals are impossible when
+x_B+m_B+d_H=o(D). In the cyclic diameter branch d_H=0 the upper-exception
+term vanishes. This is a conditional exclusion of that finite-motion
+subcase, not proof that every cyclic survivor has such proposals.
+
+In particular, a large outer-isolate population cannot rescue the
+low-outer-excess near-disk branch: only its defect-sized boundary collar
+can block the selected motions under this assignment. The old pocket
+area can still contain many fixed isolates; they are all retained.
+
+## 7. Remaining scopes and validation
+
+Actual O--O extraction, source contact preservation under every binary
+selection, unary rhombus immunity and the active/inactive upper tests
+remain required. A physical pentagon-to-pentagon train family is not
+an O--O proposal family. The near-disk force-hull hypothesis is essential
+to the exterior-cap estimate; the macroscopic-container branch has not
+been covered by it. No new site, net safe-area credit or finite pivot
+termination is inferred from collar geometry.
+
+All proofs are analytic finite incidence, convex geometry and packing
+counts. No numerical verifier or global-optimality computation is claimed.
+Required repository checks validate metadata/state consistency; the new
+result and the cited loaded-incidence candidate await independent audit.

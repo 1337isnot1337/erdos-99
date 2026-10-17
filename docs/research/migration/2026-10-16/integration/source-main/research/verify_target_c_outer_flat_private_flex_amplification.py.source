@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+from decimal import Decimal, getcontext
+getcontext().prec = 70
+D=Decimal
+PI=D('3.141592653589793238462643383279502884197169399375105820974944')
+S=D('0.9523128068639573458338104262565569008230510550118582389446084732508783')
+GAP=D('0.0021'); EPS=D('0.0017279')
+C0=2*S+GAP; C146=D(4)/D(9)*(PI+S); T0=C146+EPS
+def m(t): return D(7)*PI/D(3)+C0-D('4.5')*t
+def q0(t): return 2*t-PI
+def n2(t): return (m(t)-q0(t))/4
+def old_n3(t): return (m(t)-2*q0(t))/3
+def private_flex(t): return m(t)-2*q0(t)
+def loo(t): return 3*PI-5*t
+assert D('1.8212414379') < T0 < D('1.8212414380')
+assert D('1.0415219') < m(T0) < D('1.0415221')
+assert D('0.5008901') < q0(T0) < D('0.5008903')
+assert D('0.1351578') < n2(T0) < D('0.1351581')
+assert D('0.0132471') < old_n3(T0) < D('0.0132473')
+assert D('0.0397414') < private_flex(T0) < D('0.0397417')
+assert abs(private_flex(T0) - 3*old_n3(T0)) < D('1e-68')
+assert D('0.3185706') < loo(T0) < D('0.3185709')
+combined=private_flex(T0)+loo(T0)
+
+def structured_floor(t): return loo(t)+private_flex(t)
+def branch_floor(t): return min(m(t), structured_floor(t))
+assert D('0.3583121') < combined < D('0.3583125')
+assert abs(structured_floor(T0)-combined) < D('1e-68')
+assert branch_floor(T0) == structured_floor(T0)
+assert D('0.3583121') < branch_floor(T0) < D('0.3583125')
+assert D('0.0675788') < n2(T0)/2 < D('0.0675791')
+print('PASS outer-flat private-flex amplification arithmetic')
+print('g=',GAP); print('t0=',T0); print('outer_or_flat_branch_floor=',m(T0)); print('Q_upper=',q0(T0)); print('two_outer_face_floor=',n2(T0)); print('one_hinge_type_floor=',n2(T0)/2); print('old_one_per_three_outer_face_flex_floor=',old_n3(T0)); print('private_kernel_dimension_floor=',private_flex(T0)); print('universal_outer_to_outer_floor=',loo(T0)); print('disjoint_support_combined_flex_floor=',combined)
+print('unconditional_structured_flex_floor=',branch_floor(T0))

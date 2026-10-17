@@ -1,0 +1,284 @@
+# Target C — finite core escape barrier hostile audit
+
+**Date:** 2026-09-12
+**Verdict:** PASS in its source-specific scope.
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This audit checks the unreviewed report
+`docs/reports/target_c_core_escape_barrier_2026-09-11.md` against the current
+post-audit.42 Target C dependencies. The theorem is valid and useful, but its constant
+is source-specific; no uniform lower bound in `D` is obtained.
+
+The result should be treated as a scoped no-go theorem for continuous deformation
+strategies, not as a global rigidity theorem for the full source.
+
+## 1. Finite theorem audited
+
+Let `P=(p_1,...,p_m)` be a labeled noncollinear unit-separated planar configuration of
+diameter `D>1`. Let `C` and `H` be its actual unit pairs and actual diameter pairs.
+Assume:
+
+1. one equilibrium stress has strictly positive coefficients on every row of
+   `C union H`, normalized by `sum_H beta_h=1`;
+2. the mixed rigidity matrix on `C union H` has rank `2m-3`.
+
+For signed first variations
+
+\[
+\phi_c(u)=2(p_i-p_j)\cdot(u_i-u_j),
+\qquad
+\phi_h(u)=-2(p_i-p_j)\cdot(u_i-u_j),
+\]
+
+let `T` be the three-dimensional Euclidean-motion space, `S=T^perp`, and define
+
+\[
+\kappa(P):=
+\min_{u\in S,\ \|u\|=1}
+\max_{e\in C\cup H}\{-\phi_e(u)\}.
+\]
+
+For another labeled core `X`, put
+
+\[
+r(X):=\inf_{g\in SE(2)}\|gX-P\|.
+\]
+
+The report claims that `kappa(P)>0`, and every unit-separated `X` with
+`0<r(X)<kappa(P)/2` satisfies
+
+\[
+\operatorname{diam}(X)^2
+\ge D^2+\kappa(P)r(X).
+\tag{EA.1}
+\]
+
+Consequently every unit-separated core of diameter `<D` has
+`r(X)>=kappa(P)/2`.
+
+## 2. Positivity of kappa is correct
+
+The positive equilibrium relation is
+
+\[
+\sum_{c\in C}\alpha_c\phi_c(u)
++
+\sum_{h\in H}\beta_h\phi_h(u)=0.
+\tag{EA.2}
+\]
+
+Suppose `max_e{-phi_e(u)}<=0`. Then every signed derivative is nonnegative. Strict
+positivity of all stress coefficients and (EA.2) force every derivative to vanish.
+The rank assumption says the common row kernel is exactly the Euclidean-motion space
+`T`. Hence a nonzero `u in S` cannot satisfy this condition.
+
+Therefore
+
+\[
+\max_e\{-\phi_e(u)\}>0
+\]
+
+on the compact unit sphere of `S`. Continuity gives
+
+\[
+\boxed{\kappa(P)>0.}
+\]
+
+Homogeneity then yields
+
+\[
+\max_e\{-\phi_e(u)\}
+\ge\kappa(P)\|u\|
+\qquad(u\in S).
+\tag{EA.3}
+\]
+
+No uniformity over different cores is implicit in this compactness step.
+
+## 3. The optimal rigid alignment really puts the displacement in S
+
+A minimizing rigid alignment exists. First remove the centroid displacement; the
+remaining minimization is over the compact rotation group. Write the optimally aligned
+configuration as `P+u`.
+
+Translation stationarity gives
+
+\[
+\sum_i u_i=0.
+\]
+
+Rotation stationarity gives
+
+\[
+0=\sum_i u_i\cdot J(p_i+u_i)
+=\sum_i u_i\cdot Jp_i,
+\]
+
+because `u_i dot Ju_i=0`. Thus `u` is orthogonal to both translations and the
+infinitesimal rotation `Jp`, so
+
+\[
+\boxed{u\in S,\qquad \|u\|=r(X).}
+\tag{EA.4}
+\]
+
+This step does not require a unique optimal rigid alignment.
+
+## 4. Exact squared-length expansions give the escape inequality
+
+Let
+
+\[
+r:=r(X),
+\qquad
+\tau:=\operatorname{diam}(X)^2-D^2.
+\]
+
+For an original unit pair `c=ij`, unit separation of `X` gives
+
+\[
+1+\phi_c(u)+|u_i-u_j|^2\ge1,
+\]
+
+so
+
+\[
+-\phi_c(u)
+\le |u_i-u_j|^2
+\le2r^2.
+\tag{EA.5}
+\]
+
+For an original diameter pair `h=ij`, its new squared length is at most
+`D^2+tau`, hence
+
+\[
+D^2-\phi_h(u)+|u_i-u_j|^2
+\le D^2+\tau,
+\]
+
+which implies
+
+\[
+-\phi_h(u)\le\tau.
+\tag{EA.6}
+\]
+
+Equations (EA.3), (EA.5), and (EA.6) give
+
+\[
+\kappa(P)r
+\le\max\{2r^2,\tau\}.
+\tag{EA.7}
+\]
+
+If `0<r<kappa(P)/2`, then `2r^2<kappa(P)r`, so the maximum in (EA.7) must be the
+second entry and
+
+\[
+\boxed{\tau\ge\kappa(P)r.}
+\]
+
+This is exactly (EA.1). If `r=0`, the cores are congruent and have diameter `D`.
+Therefore a unit-separated core of diameter `<D` cannot have
+`r<kappa(P)/2`.
+
+The constants and signs in the original report are correct.
+
+## 5. The connected-component barrier is valid
+
+Now embed the fixed labeled core in a larger labeled source. Additional source points
+may move arbitrarily, acquire or lose contacts, or cease to be isolated. Restrict every
+configuration to the original core labels.
+
+On the full-source feasible set with diameter at most `D`, the restricted core is
+unit-separated and has diameter at most `D`. The finite theorem therefore says its
+continuous orbit-distance function `r` takes values only in
+
+\[
+\{0\}\cup[\kappa(P)/2,\infty).
+\]
+
+The continuous image of a connected set containing the original source is connected
+and contains `0`. A connected subset of the displayed disconnected set containing
+zero can only be `{0}`. Hence every connected diameter-`<=D` family through the
+original source keeps the original core congruent.
+
+This proves the report's strongest qualitative consequence:
+
+\[
+\boxed{
+\text{every continuous diameter-nonincreasing motion preserves the original core.}
+}
+\tag{EA.8}
+\]
+
+No assumption on the changing contact graph of the extra points is needed.
+
+Likewise, any continuous path that moves the core to orbit distance at least
+`kappa(P)/4` must pass through a point with exactly that distance. Applying (EA.1)
+there gives a full-source diameter excursion at least
+
+\[
+\sqrt{D^2+\kappa(P)^2/4}>D.
+\]
+
+## 6. Current Target C hypotheses really supply the finite theorem
+
+The current canonical dependencies match the report's hypotheses without using
+contact-isolated coordinates.
+
+- Canonical Section 56 (`C-I`) gives the lexicographically normalized C-II
+  representative with `C=C_*` and `H=H_*`. A relative-interior normalized KKT stress
+  is strictly positive on every actual active contact and diameter row.
+- Canonical Section 57 (`C-ZRF`) proves on the nonisolated positive-contact core `V`
+  that the mixed active rigidity matrix has rank `2v-3`.
+- Section 57 also records that every actual active diameter endpoint lies in `V`.
+
+Thus Theorem EA applies to the fixed labeled nonisolated core `P=V`. It does **not**
+extend the Section-57 stress kernel to contact-isolated source coordinates. Those
+coordinates are simply extra points in the full-source corollary.
+
+## 7. What the theorem rules out
+
+The theorem kills a broad family of tempting chamber strategies:
+
+```text
+move only inactive points while keeping diameter <= D
+ -> create many exact contacts
+ -> use those contacts to continuously unlock/deform the original core
+ -> obtain diameter < D.
+```
+
+The first step can happen; Section 95 and the simultaneous-activation report show that
+it can happen in a linear-dimensional cube. The escape barrier says no continuation
+inside the diameter-`<=D` feasible component can move the old core at all.
+
+Accordingly, a chamber-side strict sub-`D` competitor must be a genuinely global
+replacement. Its original core labels must end at orbit distance at least
+`kappa(P)/2`; it cannot be reached through a diameter-nonincreasing path from the
+canonical source.
+
+## 8. What the theorem does not prove
+
+The scope limitations are essential.
+
+1. `kappa(P)` is source-specific. The proof gives no lower bound uniform in `D`; it may
+   tend to zero arbitrarily fast along a hypothetical counterexample sequence.
+2. The theorem is local plus topological. It does not prove the core is a global
+   minimum-diameter configuration for its own cardinality.
+3. It does not rule out a disconnected feasible competitor of diameter `<D` whose core
+   is already at orbit distance at least `kappa(P)/2`.
+4. It does not control configurations that relabel the core vertices; the source
+   labels are fixed.
+5. It does not produce a triangle or close C-II.
+
+## 9. Verdict
+
+**PASS.** The finite escape inequality and its connected feasible-component corollary
+are correct under the current canonical C-II hypotheses.
+
+Promotion is reasonable as a scoped no-go theorem, because it prevents future agents
+from repeatedly trying continuous isolate-activation/core-unlocking arguments that
+cannot work. The theorem-state claim should explicitly preserve the source-specific
+nature of `kappa(P)` and should not advertise a uniform stability constant.

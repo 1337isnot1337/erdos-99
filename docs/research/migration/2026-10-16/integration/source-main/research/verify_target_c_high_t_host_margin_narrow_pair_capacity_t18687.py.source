@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+"""Arithmetic/combinatorial regressions for the host-margin narrow-pair theorem."""
+
+from fractions import Fraction
+from math import asin
+
+c0 = Fraction(113, 20_000_000)
+c = Fraction(113, 5_000_000)
+
+# New host-margin narrow-pair loss is rho rather than 2 rho.
+# If a later estimate pays one power of rho, maximize rho*(c0-rho)/2.
+rho1 = c0 / 2
+pop1 = (c0 - rho1) / 2
+assert pop1 == c0 / 4
+new1 = rho1 * pop1
+
+old_rho1 = c0 / 4
+old_pop1 = (c0 - 2 * old_rho1) / 2
+old1 = old_rho1 * old_pop1
+assert new1 == 2 * old1
+
+# If it pays rho^2, maximize rho^2*(c0-rho)/2 at rho=2c0/3.
+rho2 = 2 * c0 / 3
+pop2 = (c0 - rho2) / 2
+assert pop2 == c0 / 6
+new2 = rho2 * rho2 * pop2
+
+old_rho2 = c0 / 3
+old_pop2 = (c0 - 2 * old_rho2) / 2
+old2 = old_rho2 * old_rho2 * old_pop2
+assert new2 == 4 * old2
+
+# Full-shore fixed-r sharpening: replace 2*m*rho by m*rho.
+for r in range(20):
+    m = 2 * r + 1
+    rho = Fraction(1, 10_000_000)
+    eta0 = Fraction(1, 100_000_000)
+    etar = Fraction(1, 100_000_000)
+    old = c / 2 - eta0 - etar - 2 * m * rho
+    new = c / 2 - eta0 - etar - m * rho
+    assert new - old == m * rho
+
+# Double-cell consequence at rho*=p0/8: narrow interfaces <=p0/8 D,
+# each spoils at most two adjacent cells, so >3p0/4 D remain wide.
+p0 = Fraction(2599, 960_000_000)
+rhostar = p0 / 8
+spoiled = 2 * rhostar
+remain = p0 - spoiled
+assert remain == 3 * p0 / 4
+
+# Finite packing sanity: 2N points in one RP1 arc of length 2rho,
+# separated by delta=2 asin(1/(2D)), imply N <= rho/delta + 1/2.
+for D in (10, 100, 1000, 10000):
+    delta = 2 * asin(1 / (2 * D))
+    rho = 1.0e-3
+    max_points = int((2 * rho) // delta) + 1
+    N = max_points // 2
+    assert N <= rho / delta + 0.5 + 1.0e-12
+
+print("PASS: host-margin narrow-pair capacity regressions")
+print(f"c0={float(c0):.12g}")
+print(f"rho_linear={float(rho1):.12g} population={float(pop1):.12g}")
+print(f"rho_square={float(rho2):.12g} population={float(pop2):.12g}")
+print(f"double_cell_retention={float(remain):.12g}")

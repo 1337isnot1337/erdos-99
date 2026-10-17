@@ -1,0 +1,22 @@
+name: Target C k6 Dminus1 five-row d2 mixed functional audit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    if: github.actor == github.repository_owner && vars.E99_HISTORICAL_CI == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run exact mixed functional audit
+        run: python research/verify_target_c_support7_global_segment_relative_five_noroot_k4_d2_four_single_pair_rank_2026_09_22.py

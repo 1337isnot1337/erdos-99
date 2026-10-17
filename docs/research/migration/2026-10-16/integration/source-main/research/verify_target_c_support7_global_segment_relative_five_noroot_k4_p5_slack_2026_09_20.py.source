@@ -1,0 +1,152 @@
+#!/usr/bin/env python3
+"""Exact p=5 slack audit for the five-no-root k=4 Target-C branch.
+
+The committed k=4 containment theorem gives, for a virtual canonical rank-one
+constraint space P with complete-block count c and deficiency
+    d = c - rank H(C),
+and for an actual compatible state obtained by replacing q canonical-complete
+blocks using p selected root-0 rows,
+
+    |A| - 3 delta(A) >= 5 + p + 3d - 3q.
+
+It also proves d>=2 and q<=p.  Hence every p<=4 state has defect at least 3.
+For p=5, the only way the bound can fall below 2 is exactly
+    (d,q,p)=(2,5,5).
+Then the five replaced complete blocks must all be compatible singletons.
+
+This verifier exhausts that equality case over the same 20,451 S7 orbits and
+177,316 virtual canonical rank-one states used by the committed containment
+verifier.  There are 44 realizable five-singleton states.  They are reranked
+exactly over Q, and every one has defect 10.  Combined with the existing p=6
+residual audit (whose only below-2 lower-bound case has exact defect 11), this
+upgrades the whole five-no-root k=4,p<=6 branch to the uniform slack bound
+    |A| - 3 delta(A) >= 2.
+"""
+from collections import Counter
+from itertools import combinations
+from pathlib import Path
+import contextlib
+import importlib.util
+import io
+
+HERE = Path(__file__).resolve().parent
+BASE = HERE / "verify_target_c_support7_global_segment_relative_five_noroot_k4_containment_2026_09_20.py"
+spec = importlib.util.spec_from_file_location("relative_five_noroot_k4_for_p5_slack", BASE)
+C = importlib.util.module_from_spec(spec)
+with contextlib.redirect_stdout(io.StringIO()):
+    spec.loader.exec_module(C)
+R = C.R
+K = C.K
+
+
+def main():
+    assert R.lucas_lehmer_127()
+    assert R.P * R.P > 12 ** 15
+
+    keys, orbits, orbit_sizes, augmentation_candidates = K.five_no_root_orbits()
+    assert len(orbits) == 20451
+    assert sum(orbit_sizes) == 96560646
+    assert augmentation_candidates == 20475
+    key_to_global = {K.cycle_key(R.DESC[e]): e for e in R.NO_ROOT}
+
+    canonical_count = 0
+    d2_count = 0
+    high_capacity_d2 = 0
+    candidate_five_sets = 0
+    realized_states = 0
+    exact_rank_census = Counter()
+    exact_defect_census = Counter()
+    max_exact_norm2 = 0
+
+    for local_five in orbits:
+        ext = tuple(key_to_global[keys[i]] for i in local_five)
+        touched = tuple(sorted(
+            block
+            for block in range(35)
+            if any(R.QCOMP[e][block] != (0, 0) for e in ext)
+        ))
+
+        for line in C.obtainable_lines(ext, touched):
+            states = C.virtual_canonical(ext, touched, line)
+            canonical_count += 1
+            complete_set = tuple(
+                block for block, state in zip(touched, states) if state == 7
+            )
+            hrows = [C.COMPLETE_T[block] for block in complete_set]
+            hrank = R.rank_mod(hrows)
+            d = len(complete_set) - hrank
+            if d != 2:
+                continue
+            d2_count += 1
+
+            singleton_options = []
+            for block in complete_set:
+                opts = tuple(
+                    state
+                    for state in (1, 2, 4)
+                    if R.is_subspace(
+                        R.local_constraint_key(ext, block, state), line
+                    )
+                )
+                assert len(opts) <= 1
+                if opts:
+                    singleton_options.append((block, opts[0]))
+
+            if len(singleton_options) < 5:
+                continue
+            high_capacity_d2 += 1
+            complete_lookup = set(complete_set)
+
+            for five in combinations(singleton_options, 5):
+                candidate_five_sets += 1
+                singleton_map = dict(five)
+                actual_states = tuple(
+                    singleton_map[block]
+                    if block in singleton_map
+                    else (7 if block in complete_lookup else 0)
+                    for block in touched
+                )
+                if C.union_constraints(ext, touched, actual_states) != line:
+                    continue
+
+                realized_states += 1
+                rows = C.relation_rows_line(ext, touched, actual_states, line)
+                delta = R.exact_rank(rows)
+                n = 5 + sum(R.STATES[state][1] for state in actual_states)
+                defect = n - 3 * delta
+                exact_rank_census[(n, delta, defect)] += 1
+                exact_defect_census[defect] += 1
+                for row in rows:
+                    max_exact_norm2 = max(
+                        max_exact_norm2, sum(x * x for x in row)
+                    )
+                assert defect >= 2, (ext, touched, line, actual_states, delta, defect)
+
+    assert canonical_count == 177316
+    assert d2_count == 342
+    assert high_capacity_d2 == 9
+    assert candidate_five_sets == 44
+    assert realized_states == 44
+    assert dict(sorted(exact_rank_census.items())) == {
+        (22, 4, 10): 2,
+        (25, 5, 10): 42,
+    }
+    assert dict(exact_defect_census) == {10: 44}
+    assert max_exact_norm2 <= 12
+
+    print("PASS: five-no-root k=4,p=5 slack audit")
+    print("five_no_root_subsets", 96560646)
+    print("S7_orbits", len(orbits))
+    print("rank_one_virtual_canonical_states", canonical_count)
+    print("d2_states", d2_count)
+    print("d2_states_with_at_least_five_singletons", high_capacity_d2)
+    print("p5_candidate_five_singleton_sets", candidate_five_sets)
+    print("p5_realized_states", realized_states)
+    print("p5_exact_rank_census", dict(sorted(exact_rank_census.items())))
+    print("p5_exact_defect_census", dict(sorted(exact_defect_census.items())))
+    print("max_p5_exact_row_norm_squared", max_exact_norm2)
+    print("consequence", "five-no-root k=4,p<=6 has defect at least 2")
+
+
+if __name__ == "__main__":
+    main()

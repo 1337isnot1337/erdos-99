@@ -1,0 +1,375 @@
+# Target C — aggregate safe-lattice repacking across all inactive chambers
+
+**Date:** 2026-09-12  
+**Status:** proof-only research theorem; theorem-state authority unchanged.  
+**LEVEL I STATUS:** STILL OPEN. C-II REMAINS OPEN.
+
+The previous Type-I repacking route asked one macroscopic inactive chamber to absorb a
+vertex cover of the complete actual diameter graph. That is unnecessarily local.
+Canonical Section 77 already partitions every contact-isolated source point inside the
+force hull among pairwise interior-disjoint inactive chambers. The contact-wall and
+hull-outer-pocket mixed-wall theorems give a safe replacement region in every such
+chamber.
+
+Use **one translated triangular lattice in the union of all safe regions**. Then
+cross-chamber new-new separation is automatic, and translation averaging realizes the
+total safe area without a separate integer floor loss in every chamber.
+
+The result is an exact global criterion. It also converts the chamber-residual
+conservation law into a necessary source-level inequality for every survivor.
+
+This theorem concerns the Section-77 chambers inside the force hull: bounded
+nonquadrilateral contact faces and Section-67 hull-augmentation outer pockets. It does
+not include the distinct exterior caps in `K\setminus int F` from Sections 77.2/80/162.
+
+---
+
+## 1. Canonical chamber data
+
+Use canonical Sections 67 and 77. Let
+
+- `F` be the force hull and `K=conv(A)` the full source hull;
+- `Z_ch=N_F-m` be the full contact-isolated population assigned to inactive chambers
+  inside `F`;
+- `f` be the number of bounded nonquadrilateral faces;
+- `Q=sum(deg C-4)` over those faces;
+- `a` be the number of hull sides added in the Section-67 augmentation, equivalently
+  the number of hull-augmentation outer pockets;
+- `b` be the occurrence-counted old outer contact-walk length;
+- `q=|B|` be the loaded force-hull vertex count;
+- `k=d_H+s_Z` be the canonical topology variable;
+- `L_add` be the total Euclidean length of the added force-hull sides.
+
+For each internal exceptional face `C_j`, let `m_j=deg C_j`. For each outer pocket
+`P_j`, write its boundary as one added side of length `s_j` plus a complementary old
+unit-contact path with `ell_j` edges.
+
+Canonical incidence identities give
+
+\[
+ \sum_{exc}m_j=4f+Q,
+\tag{1.1}
+\]
+
+\[
+ \sum_{out}(\ell_j+1)=b+2a-q,
+\qquad
+ \sum_{out}\ell_j=b+a-q,
+\tag{1.2}
+\]
+
+\[
+ \sum_{out}s_j=L_{add}.
+\tag{1.3}
+\]
+
+Define the total unit-contact boundary length counted in the chamber safe-area theorem
+by
+
+\[
+ L_c:=(4f+Q)+(b+a-q).
+\tag{1.4}
+\]
+
+Using canonical `b+Q=2(q-k)`, this also has the exact form
+
+\[
+ \boxed{L_c=4f+q-2k+a.}
+\tag{1.5}
+\]
+
+---
+
+## 2. Safe regions and one common lattice
+
+For an internal exceptional face, let
+
+\[
+ S_j=\{y\in\operatorname{int}C_j:|y-p|\ge1
+ \text{ for every boundary source vertex }p\}.
+\tag{2.1}
+\]
+
+For a hull-augmentation outer pocket with added side `I_j` and old contact-path
+vertices `p`, let
+
+\[
+ S_j=\{y\in\operatorname{int}C_j:
+ \operatorname{dist}(y,I_j)\ge1,
+ \ |y-p|\ge1\text{ for every old path vertex }p\}.
+\tag{2.2}
+\]
+
+The companion wall-shield theorems prove that every point in `S_j` is unit-separated
+from every old source point outside `int C_j`.
+
+The inactive chamber interiors are pairwise disjoint. Put
+
+\[
+ S:=\bigcup_jS_j.
+\tag{2.3}
+\]
+
+Let `Lambda` be the unit triangular lattice, of covolume
+
+\[
+ a_0={\sqrt3\over2}.
+\]
+
+For every translate `Lambda+t`, all points of `(Lambda+t) cap S` are pairwise
+unit-separated **globally**, including points in different chambers. Translation
+averaging gives
+
+\[
+ \boxed{
+ \max_t |(\Lambda+t)\cap S|
+ \ge\left\lfloor{\operatorname{area}(S)\over a_0}\right\rfloor.
+ }
+\tag{2.4}
+\]
+
+This is stronger than averaging each chamber separately: there is only one floor.
+
+---
+
+## 3. Aggregate diameter-cover repacking
+
+Let `H` be the complete actual diameter graph and let `U` be a minimum vertex cover,
+so `|U|=tau(H)`.
+
+Canonical Section 77 has `Z_ch=A cap F\setminus V(G)` after chamber assignment, while
+every actual diameter endpoint is loaded and lies in the positive core. Hence
+
+\[
+ Z_{ch}\cap U=\varnothing.
+\tag{3.1}
+\]
+
+### Theorem 3.1 — aggregate inactive-chamber repacking
+
+If
+
+\[
+ \boxed{
+ \left\lfloor{\operatorname{area}(S)\over a_0}\right\rfloor
+ \ge Z_{ch}+\tau(H),
+ }
+\tag{3.2}
+\]
+
+then the source is not a global diameter minimizer.
+
+#### Proof
+
+Choose one lattice translate whose intersection with `S` contains at least the
+right-hand side of (3.2), and retain exactly `Z_ch+tau(H)` of those lattice points;
+call the resulting set `Y`. Define
+
+\[
+ A':=(A\setminus(Z_{ch}\cup U))\cup Y.
+\tag{3.3}
+\]
+
+Equation (3.1) gives `|A'|=|A|`.
+
+The new points are pairwise unit-separated because they lie in one translate of the
+unit triangular lattice. Let `y in Y` lie in chamber `C_j`. Every retained old source
+point lies outside `int C_j`: every old source point assigned to the chamber has been
+removed, and positive-core points lie on or outside its boundary. The appropriate
+wall-shield theorem therefore gives distance at least one from `y` to every retained
+old source point. Thus `A'` is unit-separated.
+
+The cover `U` meets every actual diameter edge, so every retained old-old distance is
+strictly below `D`. Every new point lies in the interior of one chamber inside `F`,
+hence in `int F subset int K`. An interior point of `K` is at distance strictly below
+`D` from every point of `K`. Thus every pair involving a new point is also strictly
+below `D`.
+
+The finite set `A'` therefore has diameter strictly below `D`, contradicting the
+definition of `D(n)`. `square`
+
+The competitor is not required to remain triangle-free.
+
+---
+
+## 4. Exact total safe-area lower bound
+
+Put
+
+\[
+ c_*={\pi\over6}+{\sqrt3\over4},
+ \qquad
+ h_*={\pi\over3}-{\sqrt3\over4}.
+\tag{4.1}
+\]
+
+The contact-chain area theorem gives for each internal face
+
+\[
+ area(S_j)\ge A_j-m_jc_*-h_*,
+\tag{4.2}
+\]
+
+and for each hull-augmentation outer pocket
+
+\[
+ area(S_j)\ge A_j-s_j-\ell_jc_*-h_*.
+\tag{4.3}
+\]
+
+Because chamber interiors are disjoint and their total area is `A_ch`, summing
+(4.2)--(4.3), then using (1.1)--(1.4), gives
+
+\[
+ \boxed{
+ area(S)
+ \ge A_{ch}-c_*L_c-L_{add}-h_*(f+a).
+ }
+\tag{4.4}
+\]
+
+This bound is finite and uses no Type-I asymptotics.
+
+---
+
+## 5. Residual-conservation form
+
+For each chamber let
+
+\[
+ r_j=\sigma_j-k_j\ge0
+\]
+
+be its augmented-boundary Oler residual. The companion conservation theorem proves
+
+\[
+ \boxed{
+ \sum_jr_j=R_F,
+ \qquad
+ R_F={A_F\over a_0}+{P_F\over2}+1-N_F-{E_4\over a_0}\ge0.
+ }
+\tag{5.1}
+\]
+
+Define the exact constants
+
+\[
+ \kappa_*={\pi\over3\sqrt3},
+ \qquad
+ \lambda_*={2\over\sqrt3}+{1\over2},
+\tag{5.2}
+\]
+
+\[
+ C_*={1\over2}+{2\pi\over3\sqrt3},
+ \qquad
+ \eta_*={2\pi\over3\sqrt3}-{1\over2}={h_*\over a_0}.
+\tag{5.3}
+\]
+
+For an internal face,
+
+\[
+ {area(S_j)\over a_0}-z_j
+ \ge r_j-\kappa_*m_j-C_*.
+\tag{5.4}
+\]
+
+For an outer pocket,
+
+\[
+ {area(S_j)\over a_0}-z_j
+ \ge r_j-\kappa_*\ell_j-\lambda_*s_j-\eta_*.
+\tag{5.5}
+\]
+
+Summing and using (1.1)--(1.3) and (5.1),
+
+\[
+ \boxed{
+ {area(S)\over a_0}-Z_{ch}
+ \ge \Xi,
+ }
+\tag{5.6}
+\]
+
+where
+
+\[
+ \boxed{
+ \Xi:=R_F
+ -\kappa_*L_c
+ -\lambda_*L_{add}
+ -C_*f
+ -\eta_*a.
+ }
+\tag{5.7}
+\]
+
+Equivalently, by (1.5),
+
+\[
+ \boxed{
+ \Xi=R_F
+ -\kappa_*(4f+q-2k+a)
+ -\lambda_*L_{add}
+ -C_*f
+ -\eta_*a.
+ }
+\tag{5.8}
+\]
+
+Because `Z_ch` is an integer,
+
+\[
+ \left\lfloor{area(S)\over a_0}\right\rfloor-Z_{ch}
+ =\left\lfloor{area(S)\over a_0}-Z_{ch}\right\rfloor
+ \ge\lfloor\Xi\rfloor.
+\tag{5.9}
+\]
+
+Combining with Theorem 3.1 gives the finite closing criterion
+
+\[
+ \boxed{
+ \Xi\ge\tau(H)
+ \quad\Longrightarrow\quad
+ \operatorname{diameter\ minimality\ contradiction}.
+ }
+\tag{5.10}
+\]
+
+Hence every surviving global minimizer necessarily satisfies
+
+\[
+ \boxed{
+ \Xi<\tau(H)
+ \le\left\lceil{q\over2}\right\rceil.
+ }
+\tag{5.11}
+\]
+
+This is the useful source-level form: all Section-77 inactive chambers share one
+residual, one lattice translate, and one diameter-cover requirement.
+
+---
+
+## 6. Frontier effect
+
+The Type-I inactive route no longer needs a theorem of the form
+
+> one macroscopic chamber has at least `tau(H)` spare slots.
+
+For the internal force-hull chamber system it is enough to prove the single scalar
+inequality `Xi>=tau(H)`. Conversely, any survivor must obey the strict upper bound
+(5.11).
+
+What remains is to control `R_F` relative to the exact boundary costs in `Xi`. The
+canonical statement `R_F=O(D)` alone is not enough because every term in (5.7) is also
+boundary order.
+
+The distinct Section-80/162 exterior-cap alternative remains outside this theorem and
+continues to use the full-collar Section-165 repacking criterion.
+
+No contact-isolated source point is placed under the Section-57 affine-kernel theorem,
+and no source point is lost in the competitor.

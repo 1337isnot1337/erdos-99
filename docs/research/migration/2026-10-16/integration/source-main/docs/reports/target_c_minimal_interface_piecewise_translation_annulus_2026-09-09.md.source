@@ -1,0 +1,263 @@
+<!-- theorem-state: {"artifact_id":"ART-E16082311506","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Erdős Problem #99 — the sharp loaded annulus is an exact piecewise translation of the unit shell
+
+**Date:** 2026-09-09  
+**Repository branch:** `research/fullcore-interface-perimeter-2026-09-09`  
+**Run type:** exact local geometry / phase-interface reduction  
+**Target:** full-core near-circle branch with `Q_B/D->2`  
+**Depends on:** AS annular saturation, CF central-face concentration, C51 convex bounded faces  
+**Computation:** not used
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+AS shows that in the sharp interface branch all but `o(D)` loaded terminals have exactly two loaded shell contacts and one unique interior contact, and all but `o(D)` shell-facing bounded faces have exactly one shell side and two loaded endpoints. CF further shows that the total defect of the regular shell-annular faces is `o(D)`.
+
+For a regular shell edge `b_i b_{i+1}`, let the unique unloaded neighbors of its endpoints be `u_i,u_{i+1}`. If the adjacent bounded interface face is a quadrilateral, its boundary is
+
+\[
+b_i,b_{i+1},u_{i+1},u_i.
+\]
+
+All four boundary edges are unit contacts. Therefore the face is a nondegenerate rhombus, hence a parallelogram, and
+
+\[
+\boxed{
+u_i-b_i=u_{i+1}-b_{i+1}.}
+\tag{PT.1}
+
+Thus the spoke vector
+
+\[
+w_i:=u_i-b_i,
+\qquad |w_i|=1,
+\]
+
+is exactly constant along every consecutive run of quadrilateral annular faces.
+
+A change of spoke vector can occur only across
+
+1. an exceptional annular face;
+2. an irregular loaded terminal/shell interval;
+3. a harmonic-component label transition.
+
+In the `Q_B/D->2` branch the first two classes have total cardinality `o(D)`, and AS puts the third class inside the same `o(D)` exceptional shell set. Hence:
+
+### Theorem PT — piecewise-translation annulus
+
+After deleting `o(D)` loaded shell vertices/edges, the remaining near-complete unit shell decomposes into disjoint cyclic runs on each of which
+
+\[
+\boxed{u_i=b_i+w}
+\tag{PT.2}
+
+for one fixed unit vector `w` depending only on the run.
+
+Equivalently, away from `o(D)` phase-jump locations, the inner boundary chain of the harmonic contact complex is an **exact Euclidean translate** of the outer loaded unit chain.
+
+Moreover triangle-freeness gives a local phase interval. If
+
+\[
+e_i:=b_{i+1}-b_i,
+\qquad |e_i|=1,
+\]
+
+then the two rhombus diagonals are `e_i+w` and `e_i-w`. Both are noncontact pairs and therefore have length strictly greater than one. Hence
+
+\[
+|e_i-w|^2=2-2e_i\cdot w>1,
+\]
+
+\[
+|e_i+w|^2=2+2e_i\cdot w>1,
+\]
+
+so
+
+\[
+\boxed{-\frac12<e_i\cdot w<\frac12.}
+\tag{PT.3}
+
+Equivalently, the oriented shell-side direction on one translation run stays strictly between `60` and `120` degrees from its fixed spoke vector.
+
+PT is the exact shell analogue of a rhombic grain phase. It is stronger than saying that the annulus is “near rhombic”: on each surviving run the translation/spoke phase is literally constant.
+
+The result does not bound the number of runs by a constant. There are only `o(D)` jump locations, but a near-disk convex boundary can concentrate a nonzero total turning angle on a sublinear set of vertices, so no unjustified curvature-equipartition is used.
+
+---
+
+## 1. Regular quadrilateral interface face
+
+Take a shell edge `b_i b_{i+1}` satisfying all AS regularity conditions:
+
+- it is a direct unit loaded-loaded hull contact;
+- both endpoints have their unique interior spokes;
+- the bounded face on the interior side has no additional loaded terminal.
+
+AS proves that the face boundary is
+
+\[
+b_i\to b_{i+1}\to u_{i+1}\leadsto u_i\to b_i,
+\]
+
+where the internal `u_{i+1}`-to-`u_i` contact path has length `L_i>=1` and
+
+\[
+Q_F=L_i-1.
+\]
+
+Thus `Q_F=0` exactly when `L_i=1`, i.e. exactly when the face is the four-cycle
+
+\[
+b_i,b_{i+1},u_{i+1},u_i.
+\]
+
+All four sides are active unit contacts.
+
+A Euclidean quadrilateral with all four sides equal is a parallelogram: the diagonal joining opposite vertices splits it into two congruent SSS triangles. Therefore opposite sides are equal as vectors, yielding PT.1.
+
+---
+
+## 2. Changes of spoke phase are defect-supported
+
+Suppose two consecutive regular shell faces sharing the loaded terminal `b_{i+1}` are both quadrilateral. PT.1 for the first gives
+
+\[
+u_i-b_i=u_{i+1}-b_{i+1},
+\]
+
+and for the second gives
+
+\[
+u_{i+1}-b_{i+1}=u_{i+2}-b_{i+2}.
+\]
+
+Thus the spoke vector is identical across both faces. Induction gives one constant vector on an entire quadrilateral run.
+
+Therefore `w` can change only where one of the hypotheses fails.
+
+AS gives only `o(D)` irregular loaded terminals and only `o(D)` shell edges at which the harmonic-component label changes. CF proves that regular annular face defect is `o(D)`. Every exceptional regular annular face contributes at least one to that defect, so there are only `o(D)` such faces.
+
+Delete the union of these exceptional locations. Its size is `o(D)`, and every remaining connected shell run satisfies PT.2.
+
+---
+
+## 3. Triangle-free phase interval
+
+On one quadrilateral face write
+
+\[
+e=b_{i+1}-b_i,
+\qquad
+w=u_i-b_i=u_{i+1}-b_{i+1}.
+\]
+
+Then the two diagonals are
+
+\[
+u_i-b_{i+1}=w-e,
+\]
+
+and
+
+\[
+u_{i+1}-b_i=w+e.
+\]
+
+If either diagonal had length one, one diagonal endpoint together with either adjacent face vertex would form a unit equilateral triangle because the two incident rhombus sides are already unit. More directly, every source pair has distance at least one and triangle-freeness makes both diagonal inequalities strict:
+
+\[
+|w-e|>1,
+\qquad
+|w+e|>1.
+\]
+
+Since `|e|=|w|=1`, squaring gives PT.3.
+
+Thus if `theta_i` is the oriented angle from `e_i` to `w` chosen in `(0,pi)`,
+
+\[
+\boxed{\frac\pi3<\theta_i<\frac{2\pi}{3}.}
+\tag{3.1}
+
+On a fixed translation run, `w` is constant while the convex shell-side direction turns monotonically. Consequently the total side-direction turn inside one run is strictly less than `pi/3`.
+
+This last fact is exact for a run. It does **not** imply a linear lower bound on the number of phase jumps, because the deleted `o(D)` shell locations may carry non-negligible total turning in a near-disk sequence.
+
+---
+
+## 4. Dominant semicircle blocks
+
+FS/CF gives two dominant harmonic components attached along complementary shell blocks, up to `o(D)` exceptional terminals. PT therefore applies separately along almost all of each dominant block.
+
+Inside each block, the annular inner boundary is obtained from the loaded outer shell by a sequence of exact unit translations. Between translation runs, exceptional interface faces act as discrete phase slips.
+
+This gives a concrete dictionary with the Target-B rhombic phase language:
+
+```text
+loaded shell side direction e_i
++ unique interior spoke w
++ quadrilateral annular face
+    <=> exact unit rhombus with phase (e_i,w)
+
+same w on consecutive quadrilaterals
+    <=> coherent boundary rhombic grain
+
+exceptional annular face / irregular terminal
+    <=> phase-slip location.
+```
+
+Unlike the bulk Target-B grain decomposition, no asymptotic angular approximation is needed for constancy of `w` on a run.
+
+---
+
+## 5. Why PT is not already a contradiction
+
+A fixed spoke vector can support a shell-side direction interval of width almost `pi/3` while maintaining strict triangle-freeness. A half-circle of shell turning can therefore be covered by finitely many long translation runs separated by finitely many pentagonal or higher interface faults.
+
+Such a construction is consistent with the known five-sector / oblique-rhombic regressions. Therefore one cannot infer `Omega(D)` interface defect merely from the total `pi` turning of one semicircular shell block.
+
+The useful new information is instead that every phase change has an identifiable exceptional-face carrier. A future winding/phase theorem can charge changes to the actual face defect rather than to an abstract grain decomposition.
+
+---
+
+## 6. Interaction with the central face
+
+CF shows that the inward outer boundary of each dominant harmonic component is one near-geodesic path of length `D+o(D)`, and the two such paths form the boundary of the single central exceptional face.
+
+Thus each dominant component has a closed boundary made of
+
+- a shell-facing piecewise-translation arc governed by PT;
+- one near-straight central contact path.
+
+The natural phase target is now finite and explicit: transport the spoke/edge direction through the component's stopped-train system from the shell translation runs to the central near-geodesic path. If strict rhombic phase can be transported without enough internal exceptional faces, one of the endpoint rhombi must hit the forbidden `60`-degree value.
+
+EP shows that there are in fact many internal faults (`Q_int>=0.990D` and at least `0.763D` pentagons), so any successful transport theorem must use their endpoint budget rather than assume a coherent disk-wide grain.
+
+---
+
+## 7. Audit classification
+
+| Claim | Status | Reason |
+| --- | --- | --- |
+| quadrilateral annular face gives equal spoke vectors | proved | unit rhombus is parallelogram |
+| spoke vector constant on quadrilateral run | proved | iterate local equality |
+| phase changes only at exceptional/irregular shell locations | proved | contrapositive of local equality + AS |
+| number of phase-jump locations is `o(D)` | proved under sharp interface equality | CF annular defect + AS irregular count |
+| rhombus side/spoke angle lies in `(pi/3,2pi/3)` | proved | both diagonals strictly exceed one |
+| one run turns by `<pi/3` | proved | fixed spoke vector + strict phase interval |
+| number of runs is linear | false/not claimed | turning may concentrate at sublinear exceptional set |
+| Level I | still open | finite/sublinear phase slips can absorb total shell winding |
+
+---
+
+## 8. Next target
+
+PT makes the sharp interface branch a discrete boundary phase problem. The next useful theorem is one of:
+
+1. a **phase-slip magnitude bound** for a convex unit exceptional annular face: bound the change `angle(w_+,w_-)` in terms of its degree excess `Q_F`; summing would relate total shell winding directly to `Q_B-Q_{F_*}=o(D)`;
+2. a **train transport theorem** from the piecewise-translation shell arc to the central near-geodesic path through a half-density component with the EP pentagon budget;
+3. a KKT stress theorem showing that an `o(D)` set of phase slips cannot carry the shell-force mismatch produced by the near-maximal diameter cycle-leaf skeleton.
+
+The first is finite and local and should be attacked next because an unexpectedly small per-defect phase capacity could close the sharp equality branch.

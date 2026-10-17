@@ -1,0 +1,213 @@
+<!-- theorem-state: {"artifact_id":"ART-B1488397FEDF","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-b"} -->
+# Erdős Problem #99 — uniform oblique-lattice flex obstruction
+
+**Date:** 2026-09-25
+**Repository commit:** `15cd5d8a8346b42101b355afebd6da28ccd58886`
+**State version:** `2026-09-14.audit.51`
+**Run type:** closing-proof attack and scope audit
+**Target:** B and the flexible-branch interface
+**Starting status:** Target B and Level I open
+**Active prompt:** `docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md`
+**External literature search:** not used
+**Computation:** not used
+
+## LEVEL I STATUS
+
+`STILL OPEN`.
+
+## 1. Starting endpoint and implication chain
+
+The canonical Target B sufficient closure is
+\[
+G+E\ge (\sqrt3/4)B+(\sqrt3/2)(t+\chi-1),
+\]
+strictly reversed for a global minimizer. The attempted lattice lane was
+
+```text
+uniform convex-lattice hull-vertex bound
+  -> too few diameter pins for a dense two-direction unit-contact graph
+  -> nonzero pinned expansive cone
+  -> exclude exact nontriangular-lattice sources from the jammed branch.
+```
+
+The last arrow is proved. It does not pay the shell inequality or eliminate
+the flexible branch, so it does not close Target B or Level I.
+
+## 2. Uniform lattice theorem
+
+**Classification:** proved candidate awaiting independent audit; noncanonical.
+
+Let \(\Lambda\) be any planar lattice whose shortest nonzero vector has
+length at least one, and assume that \(\Lambda\) is not a unit triangular
+lattice. Let \(A\subset\Lambda\) be finite with \(n\ge2\).
+Write \(n=|A|\), \(D=\operatorname{diam}A\), \(Q\) for all endpoints of
+diameter pairs, \(q=|Q|\), and \(e\) for the number of unit contacts.
+Then
+\[
+q\le b(A)\le 4(L+1/2)^2+\frac{\pi D}{L}
+\quad(L>0),\qquad
+e\le2n-2\sqrt n.                           \tag{2.1}
+\]
+where \(b(A)\) is the number of convex-hull vertices. In particular
+\(q=O(D^{2/3})\), with an absolute constant independent of the lattice.
+The pinned contact-preserving linear space has dimension at least
+\[
+2(n-q)-e\ge2\sqrt n-2q.                  \tag{2.2}
+\]
+If \(\sqrt n>q\), there is a nonconstant, same-diameter,
+unit-separated straight-line motion of \(A\) that fixes every diameter
+endpoint. If the unit-contact graph is connected, that motion can be chosen
+to strictly reduce its contact count for all sufficiently small positive
+times.
+
+Consequently, for sufficiently large \(n\), **no global minimizer contained
+in one unit-separated nontriangular lattice is in the canonical
+first-order-jammed branch**. Such a minimizer with a connected contact graph
+cannot be the
+contact-minimal representative among global minimizers of that cardinality.
+The conclusion includes every source point, including contact isolates; no
+rhombic-disk, phase, or fixed-angle assumption is used.
+
+### Proof
+
+First classify the unit vectors of \(\Lambda\). Any two distinct unit
+vectors are separated by at least one, so their angular gap is at least
+\(\pi/3\). There are therefore at most six. If there are six, all gaps
+equal \(\pi/3\), and two adjacent vectors generate a unit triangular
+sublattice \(\Lambda_0\). Its unit equilateral-triangle tiling has covering
+radius \(1/\sqrt3<1\). Since \(\Lambda_0\subseteq\Lambda\), any
+point of \(\Lambda\setminus\Lambda_0\) would be within distance less than
+one of some point of \(\Lambda_0\), contradicting the shortest-vector
+assumption. Thus six unit vectors imply \(\Lambda=\Lambda_0\), excluded by
+hypothesis. Central symmetry leaves either zero, two, or four unit vectors.
+
+If there are four, write them \(\pm u,\pm v\). Each contact-graph component
+lies in a coset of \(\mathbb Zu+\mathbb Zv\) and is a subgraph of its
+horizontal/vertical grid. For coset \(k\), let \(n_k\) be its source
+population and \(r_k,c_k\) its occupied coordinate-line counts. The path
+count in each direction gives
+\[
+e_k\le(n_k-r_k)+(n_k-c_k)
+\le2n_k-2\sqrt{n_k},
+\]
+because \(n_k\le r_kc_k\). Summing and using
+\(\sum_k\sqrt{n_k}\ge\sqrt{\sum_k n_k}=\sqrt n\) yields
+\(e\le2n-2\sqrt n\). If there are only two unit vectors, the contact graph
+is a union of paths and isolated vertices, so \(e\le n-1\le2n-2\sqrt n\).
+If there are none, \(e=0\). This proves the contact bound in (2.1).
+
+Every endpoint of a diameter pair is a vertex of \(K=\operatorname{conv}A\):
+if \(p\) is diametral from \(z\), then the linear functional
+\((p-z)\cdot x\) has \(p\) as its unique maximizer on \(A\). Indeed, for
+\(x\ne p\), equality with \(p\) would imply
+\(|x-z|^2=D^2+|x-p|^2>D^2\).
+Hence \(q\le b(A)\).
+
+List the hull vertices in cyclic order. Because a convex polygon has strictly
+turning edge directions after collinear boundary points are omitted, its
+oriented edge vectors are distinct nonzero vectors of \(\Lambda\).
+If the hull is a segment, it has only two vertices and the asserted bound is
+immediate, so assume it is a polygon.
+The lattice has minimum separation one. Disjoint radius-\(1/2\) disks about
+its vectors of length below \(L\) lie in the radius-\(L+1/2\) disk, so there
+are at most \(4(L+1/2)^2\) such vectors. The number of remaining hull edges
+is at most \(\operatorname{per}(K)/L\le\pi D/L\), by Cauchy's perimeter
+formula. This proves the first inequality of (2.1). Taking \(L=D^{1/3}\)
+gives \(q\le b(A)=O(D^{2/3})\) uniformly in the lattice.
+
+Pin the \(q\) diameter endpoints and impose zero first derivatives on all
+\(e\) unit-contact lengths. This homogeneous linear system has
+\(2(n-q)\) scalar unknowns and at most \(e\) independent equations, so
+its kernel has dimension at least (2.2). If \(\sqrt n>q\), choose a nonzero
+kernel velocity \(w\). For a contact \(ij\),
+\[
+|p_i+t w_i-p_j-t w_j|^2=1+t^2|w_i-w_j|^2\ge1.
+\]
+Every initially noncontact pair has strict separation slack, and every
+initially nondiametral pair has strict diameter slack. Finiteness gives a
+common sufficiently small positive \(t\) for which all those inequalities
+persist. Every active diameter pair has both endpoints pinned, so its length
+remains \(D\); all distances remain at most \(D\). This is a nonconstant
+same-diameter feasible motion. If the contact graph is connected, some
+contact has \(w_i\ne w_j\): otherwise all velocities on the graph would be
+equal, and a pinned endpoint would make them all zero. That contact becomes
+strictly longer than one, while no new contact appears for small \(t\).
+Thus the contact count decreases. Any triangle-free source stays triangle-free
+under this small motion, since no new unit contact is made.
+
+Finally, the canonical strict translated-triangular-lattice comparison for a
+global minimizer gives \(D^2<(2\sqrt3/\pi)(n-1)\). Thus
+\(\sqrt n>D/\sqrt{2\sqrt3/\pi}\), while \(q=O(D^{2/3})\). For all
+sufficiently large \(D\), \(\sqrt n>q\). The pinned expansive cone is
+therefore nonzero, excluding the first-order-jammed branch. In the connected
+case the motion yields another global minimizer with fewer contacts, excluding
+contact minimality. \(\square\)
+
+### Scope and dependencies
+
+The rank and motion proof is self-contained. The only canonical imported
+global input is the strict comparison in Target B Section 36; the definition
+of the first-order-jammed branch is in shared local-structure Section 7.
+No theorem from the unreviewed PRs #575, #576, #578, or #580 is used. The
+argument works for arbitrary finite subsets of the one lattice, including
+holes, disconnected contact graphs, and contact-isolated points. It proves
+flexibility and, under connected contacts, loss of contacts. It does not
+construct a configuration of diameter strictly below \(D(n)\).
+
+## 3. Frontier effect and exact remaining lemma
+
+The result removes exact unit-separated nontriangular-lattice sources from the entire
+first-order-jammed branch without a pure-disk or fixed-angle hypothesis. It
+does not change the canonical Target B shell inequality, because a flexible
+global minimizer is not ruled out, and near-lattice points need not satisfy
+the grid contact count. The exact next source-level lemma for this lane is:
+
+> For all sufficiently large \(n\), if a triangle-free global minimizer is
+> contained in one unit-separated nontriangular lattice, then there exists an
+> \(n\)-point unit-separated configuration of diameter **strictly less**
+> than \(D(n)\).
+
+Even that lemma would eliminate only the exact-lattice lane; a Level I proof
+must cover nonlattice sources and the Target A/C branches.
+
+## 4. Regression and failure audit
+
+| Attempt or regression | Outcome | Exact reason |
+| --- | --- | --- |
+| Infer global contradiction from nonzero pinned cone | Fails | The motion keeps all active diameter pairs at length \(D\). |
+| Infer contact-count loss without connected contacts | Fails | An isolated source point can move with no contact to lose. |
+| Extend (2.1) to arbitrary bounded-displacement charts | Fails | Perturbed points can acquire new contact directions; the grid edge count no longer applies. |
+| Allow an ambient lattice with vectors shorter than one | Not covered | The source may omit short lattice pairs, and the unit-vector classification of the ambient lattice fails. |
+| Treat a local jam or same-diameter flex as global optimality | Avoided | Globality is used only for the strict triangular comparison and the contact-minimal consequence. |
+| Omit isolated source points | Avoided | They remain in \(n\) and in the linear system. |
+| PR #580 irrational/near-resonance diameter-pair lemma | Different scope | The present hull count is uniform in all strict angles and needs no rationality assumption, but gives a weaker sublinear rate. |
+
+No external theorem or computation is imported. Promotion recommendation:
+**unreviewed** pending an independent proof audit. The state lock and active
+route map are unchanged.
+
+## 5. Handoff
+
+The proved candidate is the uniform \(O(D^{2/3})\) diameter-pin bound and
+the resulting grid-rank flex. The dependency chain is Target B Section 36
+plus shared local-structure Section 7. The missing step is a strict
+same-cardinality diameter competitor for exact-lattice flexible minimizers,
+and then a source-level transfer beyond one lattice. The disk-clipped
+tiny-shear sources in PR #580 show that scalar near-disk and shell-window
+inequalities do not supply that step.
+
+
+## 6. Recovered revision provenance (2026-10-05)
+
+This version was recovered from the unstaged report revision in
+`swarm/root/global-shell-coupling-20260925` at
+`3814e20e2aee4eb2f7ba7ee1da2ab93cb5be05a2`. Relative to that source tip, the
+recovered patch has SHA-256
+`f1d68e80e95332686b7235e1627f5848adfdcfeef33a7f1833d6ea28775fe1a7`. It
+extends the exact oblique-lattice argument to every nontriangular planar
+lattice with minimum nonzero spacing at least one. This remains a candidate
+awaiting independent proof audit. It does not exclude flexible global
+minimizers, construct a strict diameter improvement, or close Target B.
+
+No standalone verifier is provided for this report. The recovered claim is
+unreviewed and noncanonical.

@@ -1,0 +1,247 @@
+# Target C-II — an unbounded reflection family survives to near-quarter-power contact depth
+
+**Date:** 2026-09-17  
+**Status:** proof-only corollary of the geometric contact-tube theorem; no canonical promotion claimed  
+**Scope:** Type-II full-core `eta=3/26` reflection branch  
+**Dependencies:** slow-scale simultaneous reflection family; geometric contact-tube packing  
+**Certificate:** `research/verify_target_c_tooth_reflection_near_quarter_contact_depth_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The geometric contact-tube theorem allows a stronger tradeoff than keeping the full slow-scale family. By thinning the number of reflection modules, the isolated contact radius around each surviving module can be raised to almost the inverse-quarter geometric scale itself.
+
+Let `omega_D` be any function satisfying
+
+\[
+\boxed{
+\omega_D\to\infty,
+\qquad
+\omega_D=o(D^{1/8}).
+}
+\tag{QD.1}
+\]
+
+Set
+
+\[
+\boxed{
+\kappa_D:={D^{1/4}\over\omega_D^2}.
+}
+\tag{QD.2}
+\]
+
+Then `kappa_D->infinity` and `kappa_D=o(D^(1/4))`, so the slow-scale reflection theorem applies. It produces at least
+
+\[
+(\rho_*-o(1)){D^{1/4}\over\kappa_D}
+=(\rho_*-o(1))\omega_D^2
+\tag{QD.3}
+\]
+
+pairwise-separated simultaneous reflection modules.
+
+Choose only
+
+\[
+\boxed{m_D:=\lfloor\omega_D\rfloor}
+\tag{QD.4}
+\]
+
+of them, and set the contact-buffer radius
+
+\[
+\boxed{r_D:=\lfloor\kappa_D\rfloor.}
+\tag{QD.5}
+\]
+
+For sufficiently large `D`, (QD.3) is much larger than (QD.4), so this thinning is available. The resulting `m_D` modules satisfy simultaneously:
+
+\[
+\boxed{m_D\to\infty,}
+\tag{QD.6}
+\]
+
+\[
+\boxed{
+r_D
+=(1-o(1)){D^{1/4}\over\omega_D^2},
+}
+\tag{QD.7}
+\]
+
+\[
+\boxed{
+N_{r_D}(U_i)\cap N_{r_D}(U_j)=\varnothing
+\quad(i\ne j),
+}
+\tag{QD.8}
+\]
+
+with no unit-contact edge between distinct buffers, and
+
+\[
+\boxed{
+\left|\bigcup_{i=1}^{m_D}N_{r_D}(U_i)\right|
+=O(D/\omega_D)=o(D).
+}
+\tag{QD.9}
+
+Thus an unbounded number of independent reflection modules can each be protected through contact-graph radius `D^(1/4-o(1))` while their entire buffered population stays sublinear.
+
+For example, choosing
+
+\[
+\omega_D=\log\log D
+\tag{QD.10}
+\]
+
+gives
+
+\[
+\boxed{
+\log\log D+O(1)
+}
+\]
+
+independent modules, each with isolated contact radius
+
+\[
+\boxed{
+{D^{1/4}\over(\log\log D)^2}(1-o(1)),
+}
+\tag{QD.11}
+
+while all buffered modules together occupy only
+
+\[
+\boxed{O(D/\log\log D)}
+\tag{QD.12}
+
+source points.
+
+---
+
+## 1. Availability of `omega_D` surviving modules
+
+From (QD.2),
+
+\[
+{D^{1/4}\over\kappa_D}=\omega_D^2.
+\]
+
+The slow-scale family therefore has size
+
+\[
+(\rho_*-o(1))\omega_D^2.
+\tag{QD.13}
+\]
+
+Since `rho_*>0` is fixed and `omega_D->infinity`,
+
+\[
+(\rho_*-o(1))\omega_D^2
+>\omega_D
+\tag{QD.14}
+\]
+
+for sufficiently large `D`. Hence one may choose exactly `m_D=floor(omega_D)` modules without affecting any of the pairwise geometric separation statements inherited from the slow-scale extraction.
+
+---
+
+## 2. Contact-tube cost at radius `r_D=kappa_D`
+
+The geometric tube theorem gives, for one module and any integer `r`,
+
+\[
+|N_r(U_i)|
+\le
+32C_A(r+h_*+1/2)D^{3/4}
++32(r+h_*+1/2)^2,
+\tag{QD.15}
+\]
+
+where `C_A=9.56283745460...` and `h_*<0.335` are fixed.
+
+Take `r=r_D=floor(kappa_D)`. Then
+
+\[
+|N_{r_D}(U_i)|
+=O(D^{3/4}\kappa_D+\kappa_D^2).
+\tag{QD.16}
+\]
+
+Summing over `m_D=O(omega_D)` selected modules,
+
+\[
+\begin{aligned}
+\left|\bigcup_{i=1}^{m_D}N_{r_D}(U_i)\right|
+&\le
+O\left(
+\omega_DD^{3/4}{D^{1/4}\over\omega_D^2}
+\right)\\
+&\quad+
+O\left(
+\omega_D{D^{1/2}\over\omega_D^4}
+\right)\\
+&=
+O(D/\omega_D)
++O(D^{1/2}/\omega_D^3).
+\end{aligned}
+\tag{QD.17}
+\]
+
+The second term is smaller, and (QD.9) follows.
+
+---
+
+## 3. The near-quarter buffers remain disjoint
+
+The slow-scale module separation at the choice (QD.2) is
+
+\[
+\operatorname{dist}_{\mathbb R^2}(U_i,U_j)
+=\Omega(\kappa_DD^{3/4})
+=\Omega\left({D\over\omega_D^2}\right).
+\tag{QD.18}
+\]
+
+Every unit-contact path has Euclidean displacement at most its number of edges, so the contact-graph distance between distinct modules obeys the same lower bound.
+
+But
+
+\[
+2r_D+1
+=O\left({D^{1/4}\over\omega_D^2}\right)
+=o\left({D\over\omega_D^2}\right).
+\tag{QD.19}
+\]
+
+Therefore no two radius-`r_D` contact neighborhoods intersect or have a contact edge between them. This proves (QD.8).
+
+---
+
+## 4. Slow choices give `D^(1/4-o(1))` contact depth
+
+If `omega_D=D^{o(1)}` in addition to (QD.1), then
+
+\[
+r_D
+={D^{1/4}\over\omega_D^2}(1-o(1))
+=D^{1/4-o(1)}.
+\tag{QD.20}
+\]
+
+At the same time `m_D=omega_D+O(1)->infinity`. Hence the reflection survivor contains an unbounded family of modules for which any contact-based obstruction must propagate through `D^(1/4-o(1))` graph layers before it can reach another selected module or leave the prescribed isolated buffer.
+
+The concrete `omega_D=log log D` choice gives (QD.11)--(QD.12).
+
+---
+
+## 5. Frontier effect
+
+The remaining reflection obstruction is now local in a strong sense. One can retain an unbounded number of simultaneous tooth flips, and around every corresponding blocker path system expose a disjoint contact neighborhood of near-quarter-power radius. The union of all these very deep buffers is still `o(D)`.
+
+This does not itself show that a contact component terminates. A source contact chain can have length `D^(1/4-o(1))`. But the burden on the surviving escape is now explicit: for every one of `omega_D` independent modules, a repair obstruction must propagate through a near-quarter-power chain while staying inside the narrow antipodal geometric tube from the blocker-shell theorem.
+
+The next useful statement would couple graph depth to geometry: prove that any unit-contact path of length comparable to `D^(1/4)/omega_D^2` launched from the thin blocker shell either exits the allowed support-normal tube, accumulates enough turn to consume a non-negligible part of the global contact-turn budget, or reaches a vertex with a feasible inward first-order motion. Any one of these outcomes would convert the current deep-buffer normal form into an actual module repair or a global contradiction.
+
+**Disposition:** by thinning the module count, raised the independent contact-buffer radius from `o(kappa_D)` to `kappa_D` itself. For subpolynomial `omega_D`, an unbounded family survives with `D^(1/4-o(1))` contact depth and only `o(D)` total buffered mass. C-II and Level I remain open.

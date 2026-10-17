@@ -1,0 +1,243 @@
+# Hostile audit — shallow penetration matching and deep-layer purity
+
+**Date:** 2026-09-15  
+**Reviewed:**
+- `research/target_c_shallow_tooth_penetration_matching_2026-09-15.md`
+- `research/target_c_penetration_matching_deep_purity_2026-09-15.md`  
+**Disposition:** **PASS at proof-only Type-II scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This audit targets the places where the widened `eta=4/15` matching could fail:
+apex multiplicity, fixed-scale tangent ordering, inner-endpoint coalescence, overlap of
+the two endpoint classes, and the claim that deep endpoints have no loaded neighbors.
+
+---
+
+## 1. Widening from `alpha<pi/12` to `alpha<pi/6`
+
+The earlier pointwise apex theorem used the stronger `pi/12` threshold. The revised
+matching proof does not silently reuse it. Instead it composes two independent facts:
+
+1. the global-turn theorem proves that two shallow teeth at one apex, when
+   `alpha_eta<pi/6`, must use adjacent loaded-hull sides and force exterior hull turn
+   at least `pi-2 alpha_eta>2pi/3`;
+2. Type-II fixed-scale flatness makes the turn between any two bounded-length adjacent
+   loaded-hull sides in one fixed neighborhood `o(1)`.
+
+The two tooth bases have lengths at most two and share a loaded endpoint, so the
+fixed-scale hypothesis is automatic. Hence duplication is impossible for large `D`.
+
+This is a legitimate Type-II strengthening of the global-turn theorem and does not
+invoke the old `pi/12` pointwise argument.
+
+**Verdict:** PASS.
+
+---
+
+## 2. Tangent-projection separation of two local hull sides
+
+The inner-endpoint injectivity proof uses
+
+\[
+|t_0\cdot(M_1-M_2)|\ge u_1+u_2-o(1).
+\]
+
+This needs more than parallelism: it needs boundary-order monotonicity. In a fixed
+loaded-boundary window, Section-124 flatness places every oriented side direction in an
+`o(1)` cone around the common oriented tangent `t_0`. Therefore every side has
+strictly positive `t_0` projection for large `D`; the `t_0` coordinate is strictly
+monotone along that convex boundary arc.
+
+The projection interval of one side has length
+
+\[
+2u_i\cos(o(1))=2u_i-o(1).
+\]
+
+Distinct sides have disjoint open boundary intervals. Thus the distance between their
+projected midpoints is at least the sum of projected half-lengths, with every
+intervening side contributing additional positive separation. The displayed estimate
+is valid.
+
+The same fixed window contains both bases if they share an inner contact endpoint,
+because every base endpoint is at distance at most two from that endpoint.
+
+**Verdict:** PASS.
+
+---
+
+## 3. Inner-endpoint injectivity at the widened threshold
+
+For one tooth with half-base `u=cos alpha`, triangle-freeness gives an extra contact
+with tangential component strictly below
+
+\[
+r=\cos(\pi/3-\alpha).
+\]
+
+If two teeth shared one inner endpoint, the common tangent projection would imply
+
+\[
+u_1+u_2\le r_1+r_2+o(1).
+\]
+
+For `0<=alpha<=alpha_eta<pi/6`,
+
+\[
+\cos\alpha-\cos(\pi/3-\alpha)>0.
+\]
+
+At `eta=4/15` the uniform per-side margin is
+
+\[
+{13-2\sqrt{42}\over30}
+=0.0012839534394759846\ldots>0.
+\]
+
+The margin is small but fixed; Type-II errors are `o(1)`, so asymptotic contradiction
+is valid. No quantitative convergence rate is needed.
+
+If the physical bases coincide, there is only one unit-circle intersection on the
+inward side of the supporting line, so the apexes coincide; apex injectivity then
+excludes the case.
+
+**Verdict:** PASS.
+
+---
+
+## 4. Shallow and deep endpoint classes are disjoint
+
+The deep endpoint has depth greater than `sqrt(3)/2` relative to its tooth base. If it
+were a shallow tooth apex for another base, its depth relative to that second base
+would be at most `sin alpha_eta<1/2`.
+
+All involved loaded endpoints lie in a bounded neighborhood of the common vertex, so
+Section-124 flatness makes the two support lines differ by `o(1)` in direction and
+normal position. The fixed gap
+
+\[
+\sqrt3/2-1/2>0
+\]
+
+survives. Thus a deep endpoint cannot lie in the shallow-apex class.
+
+**Verdict:** PASS.
+
+---
+
+## 5. A deep endpoint cannot contact a loaded vertex
+
+Let `w` be a deep endpoint over base `ab` and suppose `c` is a loaded contact neighbor.
+The proof first needs `c` distinct from `a,b`; otherwise `a-x-w` or `b-x-w` is a unit
+equilateral triangle. This exclusion is now explicit in the theorem.
+
+Because `|c-a|<=3`, the loaded vertices `a,b,c` lie in one fixed-scale hull window.
+Since `ab` is a physical global loaded-hull side, a distinct loaded vertex lies beyond
+one endpoint in cyclic order. Every intervening hull side has source length at least
+one and tangent projection `1-o(1)`, giving
+
+\[
+|t\cdot(c-M)|\ge\cos\alpha+1-o(1).
+\]
+
+On the other hand, `w` has normal depth greater than `sqrt3/2`, while the loaded vertex
+`c` has normal displacement `o(1)` from the local support line. The unit contact
+`cw` therefore has tangent component less than `1/2+o(1)`. Together with the tooth
+penetration tangent bound,
+
+\[
+|t\cdot(c-M)|
+<\cos(\pi/3-\alpha)+1/2+o(1).
+\]
+
+The lower-minus-upper margin is
+
+\[
+1/2+\cos\alpha-\cos(\pi/3-\alpha).
+\]
+
+At `eta=4/15` it is
+
+\[
+0.5012839534394759846\ldots,
+\]
+
+so the contradiction is robust.
+
+**Verdict:** PASS.
+
+---
+
+## 6. Edge-incidence amplification is occurrence-safe
+
+For a matching of size `Z`, the shallow and deep endpoint classes `X,W` are disjoint
+and each has size `Z`.
+
+- each `x in X` has internal degree at least one;
+- each `w in W` has no loaded contact and, by C26, internal degree at least three.
+
+Thus the internal degree sum over `X union W` is at least `4Z`. A physical internal
+edge contributes at most two incidences to that sum, so at least `2Z` distinct internal
+edges are incident to the two layers.
+
+Each shallow apex has exactly two loaded neighbors, its tooth-base endpoints. Since
+apexes are distinct, the resulting `2Z` loaded-to-unloaded edges are also physically
+distinct. The internal and loaded-to-unloaded classes are disjoint, so their combined
+edge count is at least `4Z`.
+
+No assumption is made that the remaining internal edges have distinct endpoints
+outside `X union W`.
+
+**Verdict:** PASS.
+
+---
+
+## 7. Arithmetic certificate
+
+At the current floor,
+
+\[
+N_2/D\ge0.4363893718701161781\ldots-o(1),
+\qquad
+d_{out}/D\le0.002883975+o(1).
+\]
+
+For `eta=4/15`,
+
+\[
+N_{sh}/D
+\ge N_2/D-{15\over4}d_{out}/D
+=0.4255744656201161781\ldots-o(1).
+\]
+
+Therefore
+
+\[
+2Z/D\ge0.8511489312402323562\ldots-o(1),
+\]
+
+and
+
+\[
+4Z/D\ge1.7022978624804647124\ldots-o(1).
+\]
+
+The Pyroam Decimal certificate independently checks these constants, the tangent
+margin, the inward-component floor, and the loaded-neighbor contradiction margin.
+
+**Verdict:** PASS.
+
+---
+
+## 8. Non-conclusions
+
+The matching theorem still does not supply a positive lower bound on individual KKT
+contact coefficients. The deep-degree amplification also does not force new vertices:
+residual deep-layer contacts may connect deep endpoints to one another. A rhombic or
+strip-like internal shell remains a live regression.
+
+Therefore the new result is a substantial structural reduction, not C-II closure.
+
+**Final verdict:** PASS at proof-only Type-II scope. The next valid target is a
+shell-growth/strip-classification theorem for the residual degree of the attachment-free
+deep matching layer.

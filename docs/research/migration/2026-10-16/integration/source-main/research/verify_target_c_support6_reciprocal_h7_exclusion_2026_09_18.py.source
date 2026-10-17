@@ -1,0 +1,193 @@
+#!/usr/bin/env python3
+"""Exact finite regressions for the support-six reciprocal H7 exclusion.
+
+This script has two jobs:
+
+1. Enumerate all perfect matchings on the six non-ground vertices of a convex
+   reciprocal heptagon and all local 2+3 sign choices allowed by the proved
+   pentagon alternation rule.  It verifies that only four matching types survive
+   undirected-edge consistency, with exactly two globally complementary sign
+   assignments for each.
+2. Verify symbolically the coefficient identity used to exclude the remaining
+   opposite-matching sign graph by strict metric inequalities.
+
+No floating-point arithmetic or numerical geometry is used.
+"""
+
+from collections import Counter
+from itertools import combinations, product
+
+V = tuple(range(7))
+NON_GROUND = tuple(range(1, 7))
+ALL_EDGES = {tuple(sorted(e)) for e in combinations(V, 2)}
+
+
+def perfect_matchings(items):
+    items = tuple(items)
+    if not items:
+        yield ()
+        return
+    a = items[0]
+    for j in range(1, len(items)):
+        b = items[j]
+        rest = items[1:j] + items[j + 1 :]
+        for tail in perfect_matchings(rest):
+            yield tuple(sorted(((min(a, b), max(a, b)),) + tail))
+
+
+def raw_neighbor_order(i, mate):
+    """Hull-cone ray order at i, with the missing matching mate deleted."""
+    order = [((i + k) % 7) for k in range(1, 7)]
+    order = [j for j in order if j != mate]
+    assert len(order) == 5
+    return order
+
+
+def positive_neighbors(i, mate, positive_degree):
+    order = raw_neighbor_order(i, mate)
+    if positive_degree == 2:
+        # Proved local rule: size-two sign class occupies raw positions 2 and 4.
+        return {order[1], order[3]}
+    if positive_degree == 3:
+        return {order[0], order[2], order[4]}
+    raise ValueError(positive_degree)
+
+
+def classify_matching(matching):
+    mate = {}
+    for a, b in matching:
+        mate[a] = b
+        mate[b] = a
+
+    reciprocal_edges = ALL_EDGES - set(matching)
+    solutions = []
+
+    # For one fixed global sign color, each non-ground vertex sees it with
+    # degree 2 or 3.  Enforce the local alternation prescription and require
+    # every undirected edge to receive the same sign from both endpoints.
+    for degrees in product((2, 3), repeat=6):
+        prescribed = {}
+        consistent = True
+        for i, degree in zip(NON_GROUND, degrees):
+            local_positive = positive_neighbors(i, mate[i], degree)
+            for j in V:
+                if j == i:
+                    continue
+                edge = tuple(sorted((i, j)))
+                if edge in matching:
+                    continue
+                value = j in local_positive
+                if edge in prescribed and prescribed[edge] != value:
+                    consistent = False
+                    break
+                prescribed[edge] = value
+            if not consistent:
+                break
+
+        if not consistent:
+            continue
+
+        # Every reciprocal edge has a non-ground endpoint, so all are fixed.
+        assert set(prescribed) == reciprocal_edges
+        positive = frozenset(e for e, value in prescribed.items() if value)
+        solutions.append((degrees, positive))
+
+    return reciprocal_edges, solutions
+
+
+compatible = {}
+for matching in perfect_matchings(NON_GROUND):
+    reciprocal_edges, solutions = classify_matching(matching)
+    if solutions:
+        compatible[matching] = (reciprocal_edges, solutions)
+
+EXPECTED_MATCHINGS = {
+    ((1, 2), (3, 6), (4, 5)),
+    ((1, 4), (2, 3), (5, 6)),
+    ((1, 4), (2, 5), (3, 6)),
+    ((1, 6), (2, 5), (3, 4)),
+}
+
+assert set(compatible) == EXPECTED_MATCHINGS
+assert all(len(solutions) == 2 for _, solutions in compatible.values())
+
+# One representative ground sign set for each matching.  The other surviving
+# solution must be its complement among the six ground edges.
+EXPECTED_GROUND_POSITIVE = {
+    ((1, 2), (3, 6), (4, 5)): frozenset({(0, 2), (0, 3), (0, 5)}),
+    ((1, 4), (2, 3), (5, 6)): frozenset({(0, 2), (0, 4), (0, 5)}),
+    ((1, 4), (2, 5), (3, 6)): frozenset({(0, 2), (0, 5)}),
+    ((1, 6), (2, 5), (3, 4)): frozenset({(0, 2), (0, 4), (0, 6)}),
+}
+
+for matching, (reciprocal_edges, solutions) in compatible.items():
+    actual_ground_sets = {
+        frozenset(e for e in positive if 0 in e) for _, positive in solutions
+    }
+    representative = EXPECTED_GROUND_POSITIVE[matching]
+    all_ground = frozenset(e for e in reciprocal_edges if 0 in e)
+    assert actual_ground_sets == {representative, all_ground - representative}
+
+# The opposite matching is the only case not killed directly by the ground
+# chord-direction argument.
+M_B = ((1, 4), (2, 5), (3, 6))
+H_B, SOLUTIONS_B = compatible[M_B]
+P_B = frozenset({(0, 2), (0, 5), (1, 3), (1, 6), (2, 4), (3, 5), (4, 6)})
+assert P_B in {positive for _, positive in SOLUTIONS_B}
+
+
+def linear_form(*terms):
+    result = Counter()
+    for coefficient, edge in terms:
+        result[tuple(sorted(edge))] += coefficient
+    return result
+
+
+# L = positive reciprocal-edge length sum minus negative reciprocal-edge length sum.
+L = Counter()
+for edge in H_B:
+    L[edge] += 1 if edge in P_B else -1
+lhs = Counter({edge: 2 * coefficient for edge, coefficient in L.items()})
+
+# Eight strict triangle residuals.
+triangles = [
+    linear_form((1, (0, 2)), (-1, (0, 1)), (-1, (1, 2))),
+    linear_form((1, (1, 6)), (-1, (0, 1)), (-1, (0, 6))),
+    linear_form((1, (3, 6)), (-1, (0, 3)), (-1, (0, 6))),
+    linear_form((1, (1, 3)), (-1, (1, 2)), (-1, (2, 3))),
+    linear_form((1, (2, 4)), (-1, (2, 3)), (-1, (3, 4))),
+    linear_form((1, (2, 5)), (-1, (2, 6)), (-1, (5, 6))),
+    linear_form((1, (3, 5)), (-1, (3, 4)), (-1, (4, 5))),
+    linear_form((1, (4, 6)), (-1, (4, 5)), (-1, (5, 6))),
+]
+
+# Four strict convex-quadrilateral residuals: an opposite-side pair minus
+# the two crossing diagonals.
+quadrilaterals = [
+    linear_form((1, (0, 5)), (1, (1, 3)), (-1, (0, 3)), (-1, (1, 5))),
+    linear_form((1, (0, 5)), (1, (2, 4)), (-1, (0, 4)), (-1, (2, 5))),
+    linear_form((1, (0, 2)), (1, (4, 6)), (-1, (0, 4)), (-1, (2, 6))),
+    linear_form((1, (1, 6)), (1, (3, 5)), (-1, (1, 5)), (-1, (3, 6))),
+]
+
+rhs = Counter()
+for residual in triangles + quadrilaterals:
+    rhs.update(residual)
+
+lhs = {edge: coefficient for edge, coefficient in lhs.items() if coefficient}
+rhs = {edge: coefficient for edge, coefficient in rhs.items() if coefficient}
+assert lhs == rhs
+
+print("PASS")
+print(f"compatible perfect matchings: {len(compatible)}")
+for matching, (_, solutions) in sorted(compatible.items()):
+    ground_sets = [
+        sorted(e for e in positive if 0 in e) for _, positive in solutions
+    ]
+    print(
+        matching,
+        "solutions=", len(solutions),
+        "positive-edge-counts=", sorted(len(positive) for _, positive in solutions),
+        "ground-positive=", ground_sets,
+    )
+print("symbolic identity 2L = sum(T_i) + sum(Q_i): PASS")

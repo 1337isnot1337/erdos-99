@@ -1,0 +1,355 @@
+# Target C-II — heavy FREE corridor reuse yields a two-normal shared near-unit skeleton
+
+**Date:** 2026-09-17  
+**Status:** proved candidate awaiting promotion; proof-only corollary of the multi-module lower-edge reuse theorem  
+**Scope:** the HEAVY-REUSE branch for an ordered slow-scale all-inactive FREE family  
+**Dependencies:** multi-module FREE lower-edge reuse; inverse-`D` degree-six bound; slow-scale ordered normal separation; two-sided activation-time telescope  
+**Certificate:** `research/verify_target_c_tooth_reflection_two_normal_shared_skeleton_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The multi-module reuse theorem leaves one concentrated escape: a linear family of original inverse-`D` lower edges is reused by many distinct FREE-module ancestries. The same incidence argument can be pushed one step farther. Unless the source already contains a superlinear inverse-`D` matching, two quantitatively separated module normals share a growing vertex-disjoint near-unit skeleton. The shared skeleton has vanishing total original slack and, on a positive fraction, very small activation increments in both repairs.
+
+Fix any constant
+
+\[
+K>h_*={\sqrt{303}\over52}
+\]
+
+and write
+
+\[
+\alpha_K=1-{h_*\over K}>0.
+\tag{TS.1}
+\]
+
+Let `m=m_D->infinity` all-inactive FREE modules be inherited from one ordered slow-scale family. Let their consecutive normal gap be at least `gamma_D`, and assume
+
+\[
+\boxed{m\gamma_D\ge c_0+o(1)}
+\tag{TS.2}
+\]
+
+for some fixed `c_0>0`. This is the full-order slow-scale situation: if
+
+\[
+m=\Theta(D^{1/4}/\kappa_D),
+\qquad
+\gamma_D=(2-o(1))\kappa_DD^{-1/4},
+\]
+
+then `m gamma_D=Theta(1)`.
+
+Let `omega_D` satisfy
+
+\[
+\omega_D\to\infty,
+\qquad
+\omega_D=o(m),
+\tag{TS.3}
+\]
+
+and put
+
+\[
+R_D=\left\lfloor {m\over\omega_D}\right\rfloor.
+\tag{TS.4}
+\]
+
+Then at least one of the following occurs.
+
+### SKELETON-MATCHING
+
+The original source contains a vertex-disjoint matching of old fully inactive outer-face pairs of size
+
+\[
+\boxed{
+\left({\alpha_K\over22}-o(1)\right)D\omega_D
+}
+\tag{TS.5}
+\]
+
+with
+
+\[
+1<|x-y|\le1+{K\over D}.
+\tag{TS.6}
+\]
+
+### TWO-NORMAL-SKELETON
+
+There are two fixed selected FREE modules `i,j` whose normals satisfy
+
+\[
+\boxed{
+\angle(N_i,N_j)
+\ge {c_0-o(1)\over\omega_D},
+}
+\tag{TS.7}
+\]
+
+and whose two activation ancestries share a vertex-disjoint matching `M_ij` of original source pairs of size
+
+\[
+\boxed{
+|M_{ij}|
+\ge
+\left({\alpha_K\over11}-o(1)\right){D\over m^2}.
+}
+\tag{TS.8}
+\]
+
+Every edge of `M_ij`
+
+1. has old fully inactive outer-face endpoints;
+2. is a lower gate in both module ancestries;
+3. satisfies
+   \[
+   1<|e|\le1+{K\over D};
+   \tag{TS.9}
+   \]
+4. becomes an exact unit edge in each module's separate activation deformation.
+
+One may retain exactly the guaranteed number of edges in (TS.8). Their total original excess above unit length is then
+
+\[
+\boxed{
+\sum_{e\in M_{ij}}(|e|-1)
+\le
+\left({\alpha_KK\over11}+o(1)\right){1\over m^2}.
+}
+\tag{TS.10}
+
+Thus the common skeleton has vanishing total slack whenever `m->infinity`.
+
+There is a further activation-time refinement. For each shared lower edge `e`, let `Delta_i(e)` and `Delta_j(e)` be the parent-child activation-time increments when that same original edge becomes unit in the two repairs. There is a submatching
+
+\[
+M'_{ij}\subseteq M_{ij}
+\]
+
+with
+
+\[
+\boxed{
+|M'_{ij}|
+\ge
+\left({\alpha_K\over22}-o(1)\right){D\over m^2}
+}
+\tag{TS.11}
+\]
+
+such that simultaneously for every `e in M'_ij`,
+
+\[
+\boxed{
+\Delta_i(e),\Delta_j(e)
+\le
+\left({44h_*\over\alpha_K}+o(1)\right){m^2\over D}.
+}
+\tag{TS.12}
+\]
+
+For `K=1`,
+
+\[
+{\alpha_1\over11}=0.0604774559693545\ldots,
+\qquad
+{\alpha_1\over22}=0.0302387279846773\ldots,
+\tag{TS.13}
+\]
+
+and
+
+\[
+{44h_*\over\alpha_1}=22.1403482650941\ldots .
+\tag{TS.14}
+\]
+
+In the full slow-scale regime
+
+\[
+m=\Theta(D^{1/4}/\kappa_D),
+\]
+
+TWO-NORMAL-SKELETON therefore contains
+
+\[
+\boxed{\Omega(\kappa_D^2\sqrt D)}
+\tag{TS.15}
+\]
+
+vertex-disjoint common lower edges. Their selected total original slack is
+
+\[
+\boxed{O(\kappa_D^2/\sqrt D)=o(1),}
+\tag{TS.16}
+\]
+
+while on a positive fraction of them both repairs use activation increments
+
+\[
+\boxed{O(1/(\kappa_D^2\sqrt D)).}
+\tag{TS.17}
+\]
+
+Choosing, for example,
+
+\[
+\omega_D=\log\log D
+\]
+
+forces either a `D log log D`-scale inverse-`D` matching or two module normals separated by `Omega(1/log log D)` sharing the same `Omega(kappa_D^2 sqrt D)` near-unit matching.
+
+This is a stronger residual normal form than generic planar corridor merging. A hard survivor must contain a large set of the same original source pairs that participate as lower gates in two distinct, slowly separating reflection repairs, with vanishing total slack and tiny activation times on a positive fraction. The next useful step is to exploit the two exact unit realizations of this common skeleton, rather than further counting distinct lower edges.
+
+---
+
+## 1. Slow-threshold choice preserves a superlinear matching escape
+
+The multi-module theorem applies with every integer `1<=R<m`. Set `R=R_D` from (TS.4). Since
+
+\[
+{m\over R_D}=(1+o(1))\omega_D,
+\]
+
+its MULTI-MATCHING branch gives
+
+\[
+\left({\alpha_K\over22}-o(1)\right){mD\over R_D}
+=
+\left({\alpha_K\over22}-o(1)\right)D\omega_D,
+\]
+
+which proves (TS.5).
+
+If that branch fails, HEAVY-REUSE applies.
+
+---
+
+## 2. Heavy reuse gives two normals separated on the `1/omega_D` scale
+
+The ordered-normal part of the reuse theorem supplies a fixed module pair whose normal separation is at least
+
+\[
+R_D\gamma_D.
+\]
+
+Using (TS.2)--(TS.4),
+
+\[
+R_D\gamma_D
+=(1-o(1)){m\gamma_D\over\omega_D}
+\ge {c_0-o(1)\over\omega_D}.
+\]
+
+This is (TS.7).
+
+The same pair shares at least
+
+\[
+(\alpha_K-o(1)){D\over m^2}
+\tag{TS.18}
+\]
+
+distinct good lower edges.
+
+---
+
+## 3. Degree six converts the shared edge set into a common matching
+
+All shared good edges have length at most `1+K/D`. For sufficiently large `D`, the inverse-`D` source-pair graph has maximum degree at most six. A greedy matching therefore retains at least one edge out of every eleven.
+
+Applying this to the common edge set (TS.18) gives
+
+\[
+|M_{ij}|
+\ge
+\left({\alpha_K\over11}-o(1)\right){D\over m^2},
+\]
+
+which proves (TS.8).
+
+Each retained edge belonged to both `G_i(K)` and `G_j(K)`. Hence it is the same original source pair appearing as a lower activation gate in both ancestries. At the first-hit event in either repair its relative vector has exact length one, and after the child activates that exact relative vector is frozen until strictification. This proves the simultaneous structural claims following (TS.8).
+
+If necessary, discard extra matching edges and keep exactly the asymptotic guaranteed count. Since each retained original edge has excess at most `K/D`,
+
+\[
+\sum_{e\in M_{ij}}(|e|-1)
+\le {K\over D}|M_{ij}|
+\le
+\left({\alpha_KK\over11}+o(1)\right){1\over m^2},
+\]
+
+which proves (TS.10).
+
+---
+
+## 4. Half the common matching has small activation time in both repairs
+
+For one module, all activation-time increments on the complete ancestry telescope to at most
+
+\[
+t_D<h_*+o(1).
+\]
+
+Therefore
+
+\[
+\sum_{e\in M_{ij}}\Delta_i(e)
+\le h_*+o(1),
+\qquad
+\sum_{e\in M_{ij}}\Delta_j(e)
+\le h_*+o(1).
+\tag{TS.19}
+\]
+
+Let
+
+\[
+N_D=
+\left({\alpha_K\over11}-o(1)\right){D\over m^2}
+\]
+
+be a retained matching size as above. In module `i`, fewer than `N_D/4` retained edges can have
+
+\[
+\Delta_i(e)> {4(h_*+o(1))\over N_D}.
+\]
+
+The same is true in module `j`. Deleting both exceptional quarters leaves at least `N_D/2` edges, proving (TS.11), and on every survivor
+
+\[
+\Delta_i(e),\Delta_j(e)
+\le
+{4(h_*+o(1))\over N_D}
+=
+\left({44h_*\over\alpha_K}+o(1)\right){m^2\over D}.
+\]
+
+This is (TS.12).
+
+---
+
+## 5. Slow-scale specialization
+
+If
+
+\[
+m=\Theta(D^{1/4}/\kappa_D),
+\]
+
+then
+
+\[
+{D\over m^2}=\Theta(\kappa_D^2\sqrt D),
+\qquad
+{1\over m^2}=\Theta(\kappa_D^2/\sqrt D),
+\qquad
+{m^2\over D}=\Theta(1/(\kappa_D^2\sqrt D)).
+\]
+
+Because the slow-scale construction assumes `kappa_D=o(D^(1/4))`, the total-slack term tends to zero. This proves (TS.15)--(TS.17).
+
+C-II remains open. No theorem-state authority is changed.
+
+**Disposition:** converted the heavy corridor-reuse branch into a common vertex-disjoint skeleton shared by two quantitatively separated module normals, with vanishing total original slack and a positive fraction of edges activated after only `O(m^2/D)` relative motion in both repairs.

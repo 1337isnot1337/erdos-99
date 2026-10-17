@@ -1,0 +1,317 @@
+# Erdős Problem #99 — chain-cover sharpening of the atomic train gap to 0.00047
+
+**Date:** 2026-09-14
+**Repository base:** `81b1eecc`
+**Target:** Target C-II canonical full-core Type-II branch
+**Claim class:** proof-only sharpening of audited-working §168
+**External input:** none beyond the already-used König theorem / chain-graph argument
+**Computation:** exact rational interval certificate for the final constants
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+Audited-working §168 proves the all-regime atomic train gap with `0.0004`; the current
+AG42 proof-only refinement raises it to `0.00042`.  The quantitative bottleneck in
+§168.3 is the phase-inversion deletion.  That deletion was bounded by a Markov
+threshold, even though the inversion graph is a chain graph.  The sparse-chain cover
+lemma already used in the canonical full-core endpoint exclusion gives a strictly
+better loss.
+
+The result is
+
+\[
+\boxed{
+ x\sigma\ge2\sqrt{\Delta_2}+0.00047,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+}
+\tag{AG47.1}
+\]
+
+for every §142 Type-II train-measure subsequential limit.  Consequently all uses of the
+atomic gain may take
+
+\[
+\boxed{\eta_{grid}=0.00047}
+\tag{AG47.2}
+\]
+
+at the same proof-only scope.
+
+## 1. Dominant-orbit reduction
+
+Put
+
+\[
+s_2=\sqrt{\Delta_2},
+\qquad
+\eta=0.00047,
+\qquad
+\bar A=2s_2+\eta.
+\]
+
+Assume for contradiction that the total absolute atomic train mass satisfies
+
+\[
+A=x\sigma\le\bar A.
+\]
+
+Exactly as in §168.1, a dominant three-direction projective orbit has mass at least
+
+\[
+M_0={4s_2^2\over\bar A},
+\]
+
+and the total atomic mass outside it is at most
+
+\[
+R_0=\bar A-M_0.
+\]
+
+The dominant-orbit Mantel deficit is at most
+
+\[
+d_0={\bar A^2\over4}-s_2^2+{R_0^2\over4}.
+\tag{AG47.3}
+\]
+
+The maximum-degree Mantel partition and majority assignment from §168.2 therefore leave
+assigned atom mass at least
+
+\[
+S_0={M_0\over2}-\sqrt{d_0}-\sqrt{6d_0}
+\tag{AG47.4}
+\]
+
+on each shore, while the number of missing cross-shore pairs is at most
+
+\[
+(2d_0+o(1))D^2.
+\tag{AG47.5}
+\]
+
+As before, because at most three atom windows are present and both shores have positive
+mass, choose opposite-shore atom families `A_D,B_D` with normalized masses at least
+
+\[
+S_0,
+\qquad
+S_0/2,
+\tag{AG47.6}
+\]
+
+in some order.
+
+Put
+
+\[
+p_0:=\sqrt{2d_0}.
+\tag{AG47.7}
+\]
+
+## 2. The inversion graph is a chain graph
+
+Choose real projective lifts centered at axes differing by `pi/3`, and write
+
+\[
+x_u=\alpha_u,
+\qquad
+y_v=\beta_v-\pi/3.
+\]
+
+Every actual strict-rhombus crossing has `y_v>x_u`.  Therefore every inversion
+
+\[
+x_u\ge y_v
+\]
+
+is a missing cross pair.
+
+Let `H_D` be the bipartite graph of inversions.  It is a chain graph: after ordering
+`A_D` by increasing `x_u`, the neighborhoods
+
+\[
+N_H(u)=\{v:y_v\le x_u\}
+\]
+
+are nested.
+
+The endpoint-exclusion chain-cover lemma applies verbatim.  If a chain graph has `m`
+edges, then its maximum matching has size `nu` with
+
+\[
+m\ge1+2+\cdots+\nu,
+\]
+
+so König's theorem gives a vertex cover of size at most `sqrt(2m)`.  Here
+
+\[
+m\le(2d_0+o(1))D^2,
+\]
+
+hence all inversions can be removed by deleting in total at most
+
+\[
+\boxed{
+(2\sqrt{d_0}+o(1))D
+=(\sqrt2\,p_0+o(1))D
+}
+\tag{AG47.8}
+\]
+
+trains across the two shores combined.
+
+This replaces the old separate phase-pruning losses `p_0D` on each shore.  The old
+total was `2p_0D`; the new total is at most `sqrt(2)p_0D`.
+
+After deleting the cover, every retained pair has strict forward phase order.
+
+## 3. Degree pruning and common-neighbor threshold
+
+The total missing-pair count is still at most `(2d_0+o(1))D^2=p_0^2D^2+o(D^2)`.
+Delete from each shore every train missing more than `(p_0+o(1))D` opposite trains.
+Markov removes at most
+
+\[
+(p_0+o(1))D
+\]
+
+trains from each shore.  Every retained train then misses at most that many opposite
+trains.
+
+In the worst distribution of the chain-cover deletions, the smaller selected family
+has normalized size at least
+
+\[
+{S_0\over2}-(\sqrt2+1)p_0-o(1).
+\]
+
+Thus every triple on the opposite shore has a common neighbor provided
+
+\[
+{S_0\over2}>(4+\sqrt2)p_0.
+\tag{AG47.9}
+\]
+
+The exact interval certificate verifies a much stronger margin:
+
+\[
+{S_0\over2}-(4+\sqrt2)p_0
+>0.27749.
+\tag{AG47.10}
+\]
+
+Hence the §163 actual-`K_{2,2}` consistency argument again produces one global crossing
+order on each retained family.
+
+## 4. Opposite-corner path with the reduced loss
+
+The two selected families start with total normalized mass at least `3S_0/2`.
+Phase deletion loses at most `sqrt(2)p_0` in total; degree pruning loses at most
+`2p_0` in total.  At the opposite corner, the two endpoint trains together miss at
+most another `2p_0` opposite trains.  Therefore the selected degree sum is at least
+
+\[
+\left[
+{3S_0\over2}-(4+\sqrt2)p_0-o(1)
+\right]D.
+\tag{AG47.11}
+\]
+
+The atom windows shrink to axes separated by `pi/3`, so the common projection of every
+selected unit train vector tends uniformly to `sqrt(3)/2`.  The §76/§163 projected
+path therefore gives
+
+\[
+1\ge {\sqrt3\over2}
+\left[{3S_0\over2}-(4+\sqrt2)p_0\right]-o(1).
+\tag{AG47.12}
+\]
+
+For `eta=0.00047`, exact interval arithmetic gives
+
+\[
+\begin{aligned}
+M_0&=1.9041557296801001\ldots,\\
+R_0&=0.0009398840478144\ldots,\\
+d_0&=0.0004478630897318\ldots,\\
+S_0&=0.8790770859602177\ldots,\\
+p_0&=0.0299286848936565\ldots,
+\end{aligned}
+\]
+
+and
+
+\[
+{\sqrt3\over2}
+\left[{3S_0\over2}-(4+\sqrt2)p_0\right]
+>1.00162.
+\tag{AG47.13}
+\]
+
+This contradicts (AG47.12).  Therefore (AG47.1) holds.
+
+## 5. Immediate propagated floors
+
+Every propagation in audited §§164/168 uses only the atomic gain, so at proof-only
+scope one may replace the old gain by `0.00047`.  In particular,
+
+\[
+\boxed{
+\liminf {T-q/2\over D}
+\ge2\sqrt{\Delta_2}+0.00047,
+}
+\tag{AG47.14}
+\]
+
+and
+
+\[
+\boxed{
+\liminf {2f-k\over D}
+\ge2\sqrt{\Delta_2}-{\pi\over2}+0.00047.
+}
+\tag{AG47.15}
+\]
+
+For the rhombic-only train graph, the same transfer used in the explicit-rhombic note
+gives
+
+\[
+\boxed{
+\liminf {\sigma_R\over D}\ge0.00094.
+}
+\tag{AG47.16}
+\]
+
+The correlated stopped-train identity correspondingly becomes
+
+\[
+\boxed{
+\liminf {\rho_{rec}+\sigma_R-q\over D}\ge0.00094.
+}
+\tag{AG47.17}
+\]
+
+Further scalar propagation is recorded separately so that this note remains focused on
+the geometric proof improvement.
+
+## 6. Scope and method ceiling
+
+The improvement uses no new geometric hypothesis.  It only replaces a nonoptimal
+phase-deletion estimate by the exact chain-graph structure already established in the
+canonical endpoint proof.
+
+A numerical root of the unchanged remaining inequalities occurs at
+
+\[
+\eta\approx0.0004764914.
+\]
+
+Thus `0.00047` is close to the ceiling of this particular proof architecture.  Further
+decimal optimization of the same dominant-orbit/Mantel-pruning argument cannot produce
+a macroscopic gap; a larger advance requires a new geometric ingredient.
+
+**Disposition:** proof-only AG47 candidate awaiting independent audit. C-II remains
+open.

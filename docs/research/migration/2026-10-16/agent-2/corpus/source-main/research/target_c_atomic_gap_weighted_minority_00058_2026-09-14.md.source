@@ -1,0 +1,384 @@
+# Erdős Problem #99 — weighted minority allocation sharpens the atomic train gap to 0.00058
+
+**Date:** 2026-09-14  
+**Target:** Target C-II canonical full-core Type-II branch  
+**Claim class:** proof-only sharpening of AG47; theorem-state authority unchanged  
+**External input:** none beyond the already-used Mantel stability, König theorem, and §163 crossing-order machinery  
+**Computation:** exact rational interval certificate for the final constants
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The AG47 chain-cover refinement proves
+
+\[
+ x\sigma\ge 2\sqrt{\Delta_2}+0.00047,
+ \qquad
+ \Delta_2={\pi\over2\sqrt3}.
+\]
+
+Its remaining quantitative loss is not in the chain cover. It occurs one step earlier, when the three dominant-orbit atom windows are assigned to the two Mantel shores.
+
+AG47 first discards every minority copy of each atom window, obtains a lower retained mass `S_0` on **each** shore, and then uses the `1+2` support split to select opposite-label families of masses `S_0` and `S_0/2`. This pays the same worst-case minority loss on both shores.
+
+That is unnecessary. The three labels are assigned to disjoint shores after minority deletion, so the selected `1+2` pair depends on the **total** minority loss, not on the worst loss repeated on both shores. The finite allocation lemma below replaces
+
+\[
+ {3\over2}(S-L)
+\]
+
+by
+
+\[
+ {3S\over2}-L.
+\]
+
+This recovers exactly `L/2` in the opposite-corner path and raises the certifiable atomic gap to
+
+\[
+\boxed{
+ x\sigma\ge2\sqrt{\Delta_2}+0.00058.
+}
+\tag{AG58.1}
+\]
+
+Thus, at the same proof-only scope,
+
+\[
+\boxed{\eta_{grid}=0.00058.}
+\tag{AG58.2}
+\]
+
+The numerical root of this unchanged bookkeeping is about `0.0005819424`; the stated `0.00058` keeps a positive exact interval margin.
+
+---
+
+## 1. Dominant orbit and finite Mantel partition
+
+Put
+
+\[
+ s_2=\sqrt{\Delta_2},
+ \qquad
+ \eta=0.00058,
+ \qquad
+ \bar A=2s_2+\eta.
+\]
+
+Assume for contradiction that
+
+\[
+ A=x\sigma\le\bar A.
+\]
+
+Exactly as in audited §168 and AG47, one dominant three-direction projective orbit has mass at least
+
+\[
+ M_0={4s_2^2\over\bar A},
+\tag{AG58.3}
+\]
+
+and the total atomic mass outside it is at most
+
+\[
+ R_0=\bar A-M_0.
+\tag{AG58.4}
+\]
+
+Use the same conservative dominant-orbit Mantel deficit
+
+\[
+ d_0={\bar A^2\over4}-s_2^2+{R_0^2\over4}.
+\tag{AG58.5}
+\]
+
+Freezing small continuity windows around the at most three dominant-orbit atoms and taking a sufficiently far finite source gives a triangle-free train-crossing graph. The maximum-degree Mantel partition `X\sqcup Y` satisfies
+
+\[
+ |X|,|Y|
+ \ge
+ \left({M_0\over2}-\sqrt{d_0}-o(1)\right)D,
+\tag{AG58.6}
+\]
+
+and at most
+
+\[
+ (2d_0+o(1))D^2
+\tag{AG58.7}
+\]
+
+cross-shore pairs are missing.
+
+Define the pre-assignment shore floor
+
+\[
+\boxed{
+ S:={M_0\over2}-\sqrt{d_0}.
+}
+\tag{AG58.8}
+\]
+
+For the three atom windows let `x_i,y_i` be their normalized populations on `X,Y`. Same-window pairs cannot be strict-rhombus crossings, hence
+
+\[
+ \sum_{i=0}^2x_i y_i\le2d_0+o(1).
+\tag{AG58.9}
+\]
+
+Put
+
+\[
+ \ell_i:=\min(x_i,y_i),
+ \qquad
+ L:=\sum_i\ell_i.
+\]
+
+Then Cauchy gives
+
+\[
+\boxed{
+ L\le\sqrt{3\sum_i x_i y_i}
+ \le\sqrt{6d_0}+o(1).
+}
+\tag{AG58.10}
+\]
+
+---
+
+## 2. Weighted minority-allocation lemma
+
+### Lemma AG58.1
+
+Let three labels be distributed between two shores with total shore masses at least `S`, and let
+
+\[
+ L=\sum_i\min(x_i,y_i).
+\]
+
+Assign each label to a shore on which it has weakly larger mass and delete its population on the other shore. If both retained shores are nonempty, then there are distinct labels `i\ne j`, one retained on each shore, such that
+
+\[
+\boxed{
+ x_i+y_j\ge {3S\over2}-L,
+}
+\tag{AG58.11}
+\]
+
+and individually
+
+\[
+\boxed{
+ x_i,y_j\ge {S-L\over2}.
+}
+\tag{AG58.12}
+\]
+
+### Proof
+
+Write the deleted minority masses from the two shores as `L_X,L_Y`, so
+
+\[
+ L_X+L_Y=L.
+\]
+
+The retained shore totals are at least
+
+\[
+ S-L_X,
+ \qquad
+ S-L_Y.
+\]
+
+After assignment the label supports of the two shores are disjoint. Since there are only three labels and both supports are nonempty, their support sizes are one of
+
+\[
+ (1,1),\quad(1,2),\quad(2,1).
+\]
+
+If the support sizes are `(1,2)`, the unique label on the first shore has mass at least `S-L_X`, while the larger label on the second has mass at least `(S-L_Y)/2`. Their sum is at least
+
+\[
+ S-L_X+{S-L_Y\over2}
+ ={3S\over2}-L+{L_Y\over2}
+ \ge {3S\over2}-L.
+\]
+
+The `(2,1)` case is symmetric. In the `(1,1)` case the sum is at least
+
+\[
+ 2S-L\ge{3S\over2}-L.
+\]
+
+Every selected label is at least `(S-L)/2`: a singleton retained shore has mass at least `S-L`, while the larger label on a two-label retained shore has at least half of that shore's mass. This proves both claims. `\square`
+
+### Application
+
+Here `S-L>0` by the numerical certificate below, so both retained shores are nonempty. Therefore there are opposite-shore atom families `A_D,B_D`, with distinct projective labels and axes separated by `pi/3`, satisfying
+
+\[
+\boxed{
+ {|A_D|+|B_D|\over D}
+ \ge {3S\over2}-\sqrt{6d_0}-o(1),
+}
+\tag{AG58.13}
+\]
+
+and
+
+\[
+\boxed{
+ {|A_D|\over D}, {|B_D|\over D}
+ \ge {S-\sqrt{6d_0}\over2}-o(1).
+}
+\tag{AG58.14}
+\]
+
+Their total missing-pair count is still bounded by (AG58.7).
+
+The improvement over AG47 is exact: AG47 used the pair-sum floor
+
+\[
+ {3\over2}(S-\sqrt{6d_0}),
+\]
+
+while (AG58.13) uses
+
+\[
+ {3S\over2}-\sqrt{6d_0}.
+\]
+
+The recovered amount is
+
+\[
+ {1\over2}\sqrt{6d_0}.
+\tag{AG58.15}
+\]
+
+---
+
+## 3. Reuse the AG47 chain cover
+
+Choose the same projective lifts as AG47,
+
+\[
+ x_u=\alpha_u,
+ \qquad
+ y_v=\beta_v-\pi/3.
+\]
+
+Every inversion `x_u\ge y_v` is a missing pair. The inversion graph is a chain graph, and it has at most `(2d_0+o(1))D^2` edges.
+
+Let
+
+\[
+ p_0:=\sqrt{2d_0}.
+\tag{AG58.16}
+\]
+
+The sparse-chain vertex-cover lemma therefore removes all inversions by deleting in total at most
+
+\[
+ (2\sqrt{d_0}+o(1))D
+ = (\sqrt2\,p_0+o(1))D
+\tag{AG58.17}
+\]
+
+trains across the two shores.
+
+After phase ordering, delete from each shore every train missing more than `(p_0+o(1))D` trains on the opposite shore. Since the total missing count is at most `p_0^2D^2+o(D^2)`, this deletes at most `(p_0+o(1))D` trains from each shore. Every remaining train then misses at most `(p_0+o(1))D` opposite trains.
+
+The worst possible individual-family size after chain-cover and degree pruning is at least
+
+\[
+ {S-\sqrt{6d_0}\over2}
+ -(\sqrt2+1)p_0-o(1).
+\tag{AG58.18}
+\]
+
+Thus every triple on the opposite shore has a common neighbor whenever
+
+\[
+ {S-\sqrt{6d_0}\over2}>(4+\sqrt2)p_0.
+\tag{AG58.19}
+\]
+
+The exact certificate below gives a margin greater than `0.2554`, so the §163 actual-`K_{2,2}` order-consistency and triple-neighbor transitivity argument applies without modification.
+
+---
+
+## 4. Opposite-corner contradiction
+
+Before phase and degree pruning the selected pair has total normalized mass at least
+
+\[
+ {3S\over2}-\sqrt{6d_0}.
+\]
+
+The chain cover costs at most `sqrt(2)p_0` in total, degree pruning costs at most `2p_0` in total, and the two opposite-corner endpoint trains together miss at most another `2p_0` opposite trains.
+
+Hence the selected degree sum in the §163 two-leg path is at least
+
+\[
+\boxed{
+ {3S\over2}-\sqrt{6d_0}-(4+\sqrt2)p_0-o(1).
+}
+\tag{AG58.20}
+\]
+
+The atom windows shrink to axes separated by `pi/3`, so every selected elementary train displacement has common projection tending uniformly to `sqrt(3)/2`. Therefore the source diameter gives
+
+\[
+1\ge {\sqrt3\over2}
+\left[
+ {3S\over2}-\sqrt{6d_0}-(4+\sqrt2)p_0
+\right]-o(1).
+\tag{AG58.21}
+\]
+
+For `eta=0.00058`, exact interval arithmetic gives
+
+\[
+\begin{aligned}
+M_0&=1.904045790296783\ldots,\\
+R_0&=0.001159823431131\ldots,\\
+d_0&=0.000552761825579\ldots,\\
+S&=0.928512007764479\ldots,\\
+\sqrt{6d_0}&=0.057589677490625\ldots,\\
+p_0&=0.033249415801756\ldots .
+\end{aligned}
+\tag{AG58.22}
+\]
+
+The projected lower bound is
+
+\[
+\boxed{
+ {\sqrt3\over2}
+\left[
+ {3S\over2}-\sqrt{6d_0}-(4+\sqrt2)p_0
+\right]
+>1.0003969.
+}
+\tag{AG58.23}
+\]
+
+This contradicts (AG58.21), proving (AG58.1).
+
+---
+
+## 5. Scope and research effect
+
+- The proof uses the same dominant-orbit reduction and finite Mantel partition as audited §168 and AG47.
+- The only new theorem is the finite three-label allocation Lemma AG58.1.
+- The AG47 chain-graph phase cover, degree pruning, `K_{2,2}` order consistency, and opposite-corner diameter path are reused unchanged.
+- No new external theorem, reverse Oler claim, source deletion, or packing competitor is introduced.
+- Contact-isolated source points remain in the full source.
+- The constant `0.00058` is proof-only until independently audited and promoted.
+
+This improvement does not close C-II. It does show that the current quantitative atomic-train mechanism had additional slack in a finite allocation step, not in the geometric opposite-corner argument.
+
+The exact certificate is `research/verify_target_c_atomic_gap_weighted_minority_00058.py`.
+
+**Disposition:** proved proof-only candidate. C-II and Level I remain open.

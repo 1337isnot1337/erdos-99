@@ -1,0 +1,309 @@
+# Erdos Problem #99 - q-k amplified bridge-subtracted train split
+
+**Date:** 2026-09-14
+**Repository base:** `d1bfc8a6`
+**State version:** `2026-09-14.audit.51`
+**Run type:** closing-proof reduction / composition of proof-only full-core ledgers
+**Target:** Target C-II, canonical full-core Type-II branch
+**Claim class:** proved candidate awaiting independent audit
+**External literature:** no new import
+**Computation:** dependency-free arithmetic/bookkeeping regression only
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The bridge-subtracted singleton/rhombic theorem removes outer bridge singletons from
+the raw train-defect currency. Its original constant used only the difference-body
+floor on the loaded hull. The independent proof-only Section-171 floor on
+`U:=q-k` is stronger and can be inserted before the bridge subtraction.
+
+Let
+
+\[
+\Delta_2={\pi\over2\sqrt3},
+\qquad
+C_*:=2\sqrt{\Delta_2}+0.00042,
+\]
+
+and
+
+\[
+t_*:={4\over9}(\pi+\sqrt{\Delta_2})+0.0013751
+=1.820888637979444\ldots .
+\]
+
+The proof-only inputs are
+
+\[
+{T-q/2\over D}\ge C_*-o(1),
+\qquad
+{U\over D}\ge t_*-o(1).
+\tag{QBS.1}
+\]
+
+The resulting bridge-subtracted currency is
+
+\[
+\boxed{
+\sigma_R+2S_E+(b-P_F)
+\ge
+\left(t_*+0.00084-o(1)\right)D.
+}
+\tag{QBS.2}
+\]
+
+Numerically,
+
+\[
+L_*:=t_*+0.00084
+=1.821728637979444\ldots .
+\tag{QBS.3}
+\]
+
+This raises the previous bridge-subtracted constant from
+`1.479010266430321...` to `1.821728637979444...`.
+
+## 1. Strong total train defect
+
+Let `T_R` denote the non-singleton strict-rhombus train count and `S=T-T_R` the
+singleton stopped-train count. As in the exact singleton/rhombic split,
+
+\[
+\rho_{rec}=2S,
+\qquad
+\sigma_R=2T_R-4\sqrt{R_4},
+\]
+
+so
+
+\[
+\rho_{rec}+\sigma_R=2T-4\sqrt{R_4}.
+\tag{QBS.4}
+\]
+
+From (QBS.1), `q=U+k>=U`, and
+`\sqrt{R_4}/D\to\sqrt{\Delta_2}`,
+
+\[
+\begin{aligned}
+\rho_{rec}+\sigma_R
+&\ge q+2C_*D-4\sqrt{R_4}-o(D)\\
+&\ge U+2C_*D-4\sqrt{R_4}-o(D).
+\end{aligned}
+\]
+
+Dividing by `D` and taking lower limits gives
+
+\[
+\boxed{
+\liminf {\rho_{rec}+\sigma_R\over D}
+\ge t_*+2(2\sqrt{\Delta_2}+0.00042)-4\sqrt{\Delta_2}
+=t_*+0.00084=L_*.
+}
+\tag{QBS.5}
+\]
+
+## 2. Subtract pure outer bridge singletons
+
+Split the singleton trains as
+
+\[
+S=S_o+S_E,
+\]
+
+where `S_o` has no bounded exceptional-face terminal incidence and `S_E` has at
+least one. The audited bridge-subtracted isoperimetry used in the existing theorem
+gives
+
+\[
+2S_o\le b-P_F+o(D).
+\tag{QBS.6}
+\]
+
+Using `\rho_{rec}=2S_o+2S_E` in (QBS.5) and then (QBS.6) proves (QBS.2):
+
+\[
+\boxed{
+\sigma_R+2S_E+(b-P_F)
+\ge (L_*-o(1))D.
+}
+\tag{QBS.7}
+\]
+
+The point of (QBS.7) is that every surviving currency is source-geometric:
+
+- `b-P_F` is metric outer-walk detour;
+- `S_E` consists of singleton contact edges incident with bounded exceptional faces;
+- `sigma_R` is strict-rhombus non-Mantel slack.
+
+Pure outer bridge forests have been paid and removed.
+
+## 3. Three-way quantitative split
+
+At least one of
+
+\[
+{b-P_F\over D},
+\qquad
+{2S_E\over D},
+\qquad
+{\sigma_R\over D}
+\]
+
+has asymptotic scale at least
+
+\[
+\boxed{
+{L_*\over3}
+=0.607242879326481\ldots .
+}
+\tag{QBS.8}
+\]
+
+Thus after passing to a subsequence, at least one of the following holds:
+
+1. **outer-detour branch**
+   \[
+   \limsup {b-P_F\over D}
+   \ge0.607242879326481\ldots;
+   \tag{QBS.9}
+   \]
+2. **exceptional-singleton branch**
+   \[
+   \limsup {S_E\over D}
+   \ge0.303621439663240\ldots;
+   \tag{QBS.10}
+   \]
+3. **rhombic-slack branch**
+   \[
+   \limsup {\sigma_R\over D}
+   \ge0.607242879326481\ldots .
+   \tag{QBS.11}
+   \]
+
+This replaces the previous symmetric thresholds
+`0.4930034221...`, `0.2465017110...`, and `0.4930034221...`.
+
+## 4. Rhombic branch gives a larger quadratic Mantel deficit
+
+The exact rationalization is
+
+\[
+M_R={T_R^2\over4}-R_4
+={\sigma_R\over8}
+\left(4\sqrt{R_4}+{\sigma_R\over2}\right).
+\tag{QBS.12}
+\]
+
+Therefore, after selecting a subsequence on which the rhombic-slack alternative
+(QBS.11) holds termwise up to `o(1)`, that selected branch satisfies
+
+\[
+\boxed{
+\liminf_{\rm branch} {M_R\over D^2}
+\ge0.312189080085571\ldots .
+}
+\tag{QBS.13}
+\]
+
+Equivalently, without naming the selected branch, the full sequence has
+`limsup M_R/D^2` at least the same constant whenever the rhombic alternative occurs
+infinitely often.
+
+More generally, (QBS.7) retains the continuous tradeoff: if along a subsequence
+
+\[
+\limsup {b-P_F+2S_E\over D}\le L_*-c,
+\]
+
+then
+
+\[
+\liminf {\sigma_R\over D}\ge c
+\]
+
+and hence
+
+\[
+\boxed{
+\liminf {M_R\over D^2}
+\ge {c\over8}
+\left(4\sqrt{\Delta_2}+{c\over2}\right).
+}
+\tag{QBS.14}
+\]
+
+## 5. A useful two-block version
+
+Sometimes the exceptional-singleton and outer-detour terms should be treated as one
+interface block. From (QBS.7), at least one of
+
+\[
+{b-P_F+2S_E\over D},
+\qquad
+{\sigma_R\over D}
+\]
+
+has asymptotic scale at least
+
+\[
+\boxed{
+{L_*\over2}=0.910864318989722\ldots .
+}
+\tag{QBS.15}
+\]
+
+If the rhombic term carries this two-block split, select the corresponding infinite
+subsequence. Along that selected branch,
+
+\[
+\boxed{
+\liminf_{\rm branch} {M_R\over D^2}
+\ge0.485568491120203\ldots .
+}
+\tag{QBS.16}
+\]
+
+Thus the unconditional statement on the original sequence is a `limsup` alternative,
+while the stronger `liminf` statement is valid after the branch subsequence is fixed.
+
+This is the same large-Mantel branch isolated by the lossless train split, now with
+all pure outer bridge singletons explicitly removed from the competing interface
+currency.
+
+## 6. Interaction with the odd-face angular escape
+
+The new odd-face theorem says that every bounded pentagonal contact face has at least
+one terminal train direction outside any prescribed pair of projective windows of
+radius `<2 arcsin(1/10)`. Equation (QBS.10) is complementary: it forces many
+**singleton** trains to terminate on exceptional faces if neither detour nor rhombic
+slack carries the defect.
+
+These facts do not yet compose into a contradiction. The escaping edge on a pentagon
+need not be the singleton edge, and even-degree exceptional faces are not covered by
+the parity lemma. A valid next bridge needs either:
+
+- a bound showing that a large `S_E` population forces linearly many singleton
+  incidences on pentagons (for example after controlling `Q-f`), plus a theorem that
+  the non-singleton pentagon edges lie in two narrow phase windows; or
+- a direct face-closure/rank bound charging singleton terminal incidences against the
+  actual diameter graph.
+
+This identifies the exact missing composition instead of treating all singleton
+trains as one undifferentiated scalar.
+
+## 7. Scope and status
+
+- The AG42 and Section-171 inputs are proof-only candidates awaiting independent
+  audit. This note inherits that status.
+- The bridge payment is the full-core bridge-subtracted isoperimetric theorem. It is
+  not asserted for arbitrary selected harmonic carriers.
+- `S_E` counts singleton stopped trains, not endpoint occurrences.
+- The three-way statements are subsequential asymptotic alternatives; they are not
+  simultaneous universal lower bounds on all three currencies.
+- No source-preserving strict diameter decrease or exact unit equilateral triangle is
+  proved.
+- The macroscopic inactive-container branch is untouched.
+
+C-II and Level I remain open.

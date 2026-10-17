@@ -1,0 +1,319 @@
+# Target C-II — simultaneous reflection modules admit disjoint growing contact buffers
+
+**Date:** 2026-09-17  
+**Status:** proof-only strengthening of the simultaneous reflection block-diagonal reduction; no canonical promotion claimed  
+**Scope:** the controlled slow-scale `eta=3/26` reflection family  
+**Dependencies:** simultaneous reflection block diagonalization; source unit-contact degree bound  
+**Certificate:** `research/verify_target_c_tooth_reflection_growing_contact_buffers_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The simultaneous reflection theorem gives pairwise-separated blocker modules
+
+\[
+U_i=\{z\in A:|z-q_i|>D\}
+\]
+
+with
+
+\[
+\left|\bigcup_iU_i\right|
+\le(C_0+o(1)){D\over\kappa_D},
+\qquad
+C_0=1.59653882460\ldots,
+\tag{CB.1}
+\]
+
+and
+
+\[
+\operatorname{dist}(U_i,U_j)
+=\Omega(\kappa_DD^{3/4})
+\qquad(i\ne j).
+\tag{CB.2}
+\]
+
+This note propagates that separation through the original unit-contact graph. Because a unit-separated planar source has unit-contact degree at most six, a graph ball of radius `r` contains at most order `5^r` vertices per seed. The blocker union is already `O(D/kappa_D)`, so one may take a contact radius tending to infinity while keeping the full contact buffer sublinear.
+
+Set
+
+\[
+\boxed{
+r_D:=\left\lfloor{1\over2}\log_5\kappa_D\right\rfloor.}
+\tag{CB.3}
+\]
+
+Then `r_D->infinity`, and if `N_r(S)` denotes the closed radius-`r` neighborhood of a vertex set `S` in the original source unit-contact graph,
+
+\[
+\boxed{
+\left|N_{r_D}\left(\bigcup_iU_i\right)\right|
+\le
+(2.39480823691\ldots+o(1)){D\over\sqrt{\kappa_D}}
+=o(D).
+}
+\tag{CB.4}
+\]
+
+Moreover the individual neighborhoods
+
+\[
+\mathcal C_i:=N_{r_D}(U_i)
+\tag{CB.5}
+\]
+
+are pairwise disjoint, and there is no unit-contact edge between `C_i` and `C_j` for `i!=j`. Thus every blocker module is surrounded by a **diverging contact-graph buffer** before different modules can interact.
+
+A useful explicit polynomial choice is
+
+\[
+\kappa_D=D^{1/8}.
+\tag{CB.6}
+\]
+
+It retains
+
+\[
+(\rho_*-o(1))D^{1/8}
+\tag{CB.7}
+\]
+
+simultaneous reflection modules, while
+
+\[
+\boxed{
+r_D=\left({1\over16}+o(1)\right)\log_5D}
+\tag{CB.8}
+\]
+
+and their entire disjoint buffered union has size
+
+\[
+\boxed{O(D^{15/16})=o(D).}
+\tag{CB.9}
+\]
+
+So the local-repair obstruction cannot be blamed on immediate contact entanglement between different reflection modules. Even after exposing a logarithmically growing number of contact layers around each blocker set, the modules remain disjoint and together consume only sublinear source mass.
+
+---
+
+## 1. The source unit-contact graph has maximum degree six
+
+Let `G_1` be the graph on the source points with an edge for every pair at distance exactly one. Fix a source point `v`. All contact neighbors lie on the unit circle centered at `v`. If two distinct neighbors subtend angle `theta`, their mutual distance is
+
+\[
+2\sin(\theta/2).
+\]
+
+Source separation requires this to be at least one, so
+
+\[
+\theta\ge\frac\pi3.
+\]
+
+At most six such directions fit around a full angle. Therefore
+
+\[
+\boxed{\Delta(G_1)\le6.}
+\tag{CB.10}
+\]
+
+This is source-wide and does not use Type II.
+
+---
+
+## 2. Contact balls grow by at most a factor five per additional layer
+
+In any graph of maximum degree six, a closed radius-`r` ball around one vertex contains at most
+
+\[
+1+6\sum_{j=0}^{r-1}5^j
+=1+{6(5^r-1)\over4}
+={3\cdot5^r-1\over2}
+\tag{CB.11}
+\]
+
+vertices. The factor after the first layer is five because a shortest-path tree vertex has at most five children after excluding its parent.
+
+For any seed set `S`, union bounding the balls gives
+
+\[
+\boxed{
+|N_r(S)|
+\le {3\cdot5^r-1\over2}|S|.
+}
+\tag{CB.12}
+\]
+
+No disjointness assumption is required for this upper bound.
+
+---
+
+## 3. A diverging contact radius still costs only `o(D)` vertices
+
+Apply (CB.12) to
+
+\[
+S_D:=\bigcup_iU_i.
+\]
+
+The controlled simultaneous theorem gives (CB.1). For `r_D` from (CB.3),
+
+\[
+5^{r_D}\le\sqrt{\kappa_D}.
+\tag{CB.13}
+\]
+
+Hence
+
+\[
+\begin{aligned}
+|N_{r_D}(S_D)|
+&\le
+{3\cdot5^{r_D}-1\over2}|S_D|\\
+&\le
+\left({3C_0\over2}+o(1)\right){D\over\sqrt{\kappa_D}}.
+\end{aligned}
+\tag{CB.14}
+\]
+
+Numerically,
+
+\[
+\boxed{{3C_0\over2}=2.39480823690\ldots .}
+\tag{CB.15}
+\]
+
+Since `kappa_D->infinity`, this is `o(D)`. At the same time `r_D->infinity`.
+
+More generally, any integer radius satisfying
+
+\[
+5^{r_D}=o(\kappa_D)
+\tag{CB.16}
+\]
+
+keeps the full buffered blocker union sublinear.
+
+---
+
+## 4. Different module buffers remain disjoint
+
+Every contact edge has Euclidean length one. Therefore the graph distance between two vertex sets is at least their Euclidean distance:
+
+\[
+\operatorname{dist}_{G_1}(S,T)
+\ge\operatorname{dist}_{\mathbb R^2}(S,T).
+\tag{CB.17}
+\]
+
+For distinct blocker modules, the simultaneous theorem gives
+
+\[
+\operatorname{dist}_{\mathbb R^2}(U_i,U_j)
+=\Omega(\kappa_DD^{3/4}).
+\tag{CB.18}
+\]
+
+But
+
+\[
+r_D=O(\log\kappa_D)
+=o(\kappa_DD^{3/4}).
+\tag{CB.19}
+\]
+
+If `C_i=N_{r_D}(U_i)` and `C_j=N_{r_D}(U_j)` intersected, there would be a contact path from `U_i` to `U_j` of length at most `2r_D`. If a unit-contact edge joined `C_i` to `C_j`, there would be such a path of length at most `2r_D+1`. Both contradict (CB.18)--(CB.19) for sufficiently large `D`.
+
+Thus
+
+\[
+\boxed{
+\mathcal C_i\cap\mathcal C_j=\varnothing,
+\qquad
+E_{G_1}(\mathcal C_i,\mathcal C_j)=\varnothing
+\quad(i\ne j).
+}
+\tag{CB.20}
+\]
+
+This is stronger than the blocker-set disjointness itself: the separation survives a graph radius tending to infinity.
+
+---
+
+## 5. Explicit polynomial tradeoff
+
+Choose
+
+\[
+\kappa_D=D^\beta,
+\qquad
+0<\beta<\frac14.
+\tag{CB.21}
+\]
+
+Then the slow-scale extraction retains
+
+\[
+(\rho_*-o(1))D^{1/4-\beta}
+\tag{CB.22}
+\]
+
+modules. With the half-logarithmic buffer choice,
+
+\[
+r_D
+=\left({\beta\over2}+o(1)\right)\log_5D,
+\tag{CB.23}
+\]
+
+and
+
+\[
+\left|\bigcup_i\mathcal C_i\right|
+=O(D^{1-\beta/2}).
+\tag{CB.24}
+\]
+
+The Euclidean separation between blocker modules is
+
+\[
+\Omega(D^{3/4+\beta}),
+\tag{CB.25}
+\]
+
+far larger than the logarithmic graph radius.
+
+At the balanced illustrative choice `beta=1/8`,
+
+\[
+|I_D|=(\rho_*-o(1))D^{1/8},
+\qquad
+r_D=\left({1\over16}+o(1)\right)\log_5D,
+\tag{CB.26}
+\]
+
+and
+
+\[
+\left|\bigcup_i\mathcal C_i\right|
+=O(D^{15/16}).
+\tag{CB.27}
+\]
+
+---
+
+## 6. Frontier effect
+
+The reflection branch now has simultaneous modules that are independent on two scales:
+
+1. metric independence: cross-module reflected-apex/blocker pairs lie below `D` by `Omega(kappa_D^2 sqrt D)`;
+2. contact independence: the unit-contact neighborhoods of radius `r_D->infinity` around different blocker modules are disjoint and have no cross edges.
+
+For `kappa_D=D^(1/8)`, polynomially many modules survive while each has a logarithmically growing isolated contact buffer, and all buffers together still occupy only `o(D)` vertices.
+
+This still does not produce a legal repair. Translating a finite contact neighborhood can shorten unit contacts at its outer boundary, and the theorem does not show that a whole contact component is sublinear or bounded. The next target is now sharper: exploit the thin-shell path structure inside `U_i` together with the growing isolated buffer to prove either
+
+- a contact component terminates inside the growing buffer, permitting a rigid translation/rotation repair; or
+- a contact chain survives through `r_D` layers, in which case its forced geometric displacement/order must contradict the narrow antipodal module geometry.
+
+**Disposition:** enlarged every diagonal blocker module to a contact radius tending to infinity while preserving pairwise module separation and keeping the total buffered population sublinear. C-II and Level I remain open.

@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+"""Arithmetic checks for the mixed-area oblique-lattice candidate.
+
+The proof is analytic and load-bearing only through the displayed identities in the
+companion note.  This script checks the constants and the strict-threshold algebra at
+high precision for representative angles; it is not a global-minimizer search.
+"""
+
+from decimal import Decimal, getcontext
+import math
+
+getcontext().prec = 50
+
+pi = Decimal(str(math.pi))
+sqrt3 = Decimal(3).sqrt()
+a0 = sqrt3 / 2
+c = 2 * sqrt3 / pi
+assert abs(c * pi / 4 - a0) < Decimal("1e-45")
+
+
+def threshold(theta):
+    """Return the exact mixed-area D threshold 2c/(sin(theta)-a0)."""
+    s = Decimal(str(math.sin(theta)))
+    if not s > a0:
+        raise ValueError("theta must be strictly above pi/3")
+    return 2 * c / (s - a0)
+
+
+def old_threshold(theta):
+    s = Decimal(str(math.sin(theta)))
+    kappa = (a0 / s).sqrt()
+    rho = 1 / sqrt3
+    return (4 * kappa + 2 * rho) / (1 - kappa)
+
+
+def check(theta, D):
+    s = Decimal(str(math.sin(theta)))
+    lhs = (s - a0) * D
+    rhs = 2 * c
+    assert (lhs > rhs) == (D > threshold(theta))
+    # This is (MA.8) versus D^2, after multiplying by s.
+    assert (a0 * D * D + 2 * c * D < s * D * D) == (lhs > rhs)
+
+
+if __name__ == "__main__":
+    samples = [
+        (math.pi / 3 + 0.01, 1000),
+        (math.pi / 3 + 0.001, 5000),
+        (math.pi / 2, 20),
+    ]
+    for theta, D in samples:
+        check(theta, Decimal(D))
+        print(
+            "theta", theta,
+            "new_threshold", float(threshold(theta)),
+            "old_threshold", float(old_threshold(theta)),
+            "D", D,
+            "strict", Decimal(D) > threshold(theta),
+        )
+    print("PASS: mixed-area threshold identities and strict comparisons")
+

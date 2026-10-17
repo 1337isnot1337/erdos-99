@@ -1,0 +1,181 @@
+# Public-release safety and licensing audit
+
+**Audit date:** 2026-10-13
+
+**Repository:** `1337isnot1337/e-99` (observed as **private**)
+
+**Inspected baseline:** `origin/main` at `ab6dd3336f9f8d440f2bada76edb32153391cddc`
+
+**Theorem state:** `2026-10-10.audit.234`; Level I open, Targets A/B open, Target C-I closed and C-II open. Target A is canonical through Section 177.
+
+This is a conservative preparation audit, not a clearance opinion. No file is
+approved for public distribution by this document. The inventory utility is
+read-only and dry-run only: it reports committed paths and Git blob IDs but does
+not copy, redact, or publish content. Its `include` action means *candidate after
+all global license, owner, and content-review gates*, not permission to redistribute.
+
+## Findings
+
+- There is no tracked root `LICENSE`, `COPYING`, or `NOTICE` file and no recorded
+  contributor license agreement or DCO process. The repository is private. Do not
+  change visibility based on this audit.
+- `papers/` contains 30 PDFs: seven supplied primary papers, 20 related papers,
+  and three supplementary papers/theses. `extracted/` contains 25 page images
+  and extracted text derived from papers. These are third-party material, not
+  project-owned assets by default.
+- The related-literature README says that some source records identify open
+  licenses but expressly makes no blanket redistribution claim. The annotated
+  review identifies at least one paper under CC BY-NC-SA 4.0. A checksum or a
+  citation does not grant distribution rights. No PDF-by-PDF rights register in
+  the repository establishes that every bundled copy and extraction can be
+  redistributed. Exclude all papers and derived page images/text from a first
+  curated export until a rights reviewer records the applicable license or
+  permission for each file. Prefer a bibliographic citation and a link to an
+  authorized source when no redistributable copy is established.
+- The checkout has 4,579 tracked files and is about 213 MB. It includes 1,096
+  files under `docs/reports/`, 313 under `docs/audits/`, and four under
+  `docs/archive/`. These records are valuable private provenance, but their
+  presence on `main` does not establish publication consent, authorship, or
+  canonical status. Retain them in this private repository. The integrated
+  [dependency planner](RELEASE_PREPARATION.md) identifies the exact evidence required
+  by canonical claims and task cards; those files are review candidates regardless
+  of this historical blanket exclusion. No essential evidence may be dropped from
+  an exported research task merely to simplify clearance.
+- The reachable history contains 6,014 commits; the local object database has
+  42,614 objects and `git log --all` reports nine distinct author name/email
+  pairs. Git history also carries earlier versions of research and binary
+  material. A clean-history export to a separately approved repository is safer
+  than changing visibility on this archive. Build that export from an allow-listed committed tree only after
+  content, license, attribution, and secret review. Do not rewrite this history.
+- The checked-out path scan found no files named like credentials, private keys,
+  or environment-secret files. A limited local regex pass inspected all 42,614
+  Git objects, including unreferenced objects, and scanned 13,828 text blobs.
+  It found no PEM private-key markers or common AWS, GitHub, or Slack token
+  shapes; it counted 36 email-shaped strings without printing their values.
+  Those strings may be public citations or private identities and require
+  review. This is not a comprehensive secret or personal-data scan. No dedicated
+  Gitleaks, TruffleHog, or detect-secrets executable was available during this
+  audit. Run a maintained scanner with redacted output before any release. Do
+  not copy scanner findings or values into public issues, commits, or reports.
+
+## Dry-run file disposition
+
+Run the inventory against the exact committed revision intended for review:
+
+```sh
+python3 tools/publication_inventory.py --ref HEAD --summary
+python3 tools/publication_inventory.py --ref HEAD > /tmp/e99-publication-inventory.json
+```
+
+The full JSON lists every tracked path, its action, reason, byte size, and Git
+blob ID. It never emits file contents. By default, only established repository
+infrastructure is marked as a candidate include; that candidate status is
+blocked until the project has an owner-approved license and all applicable
+reviews. The conservative rules are:
+
+| Inventory action | Default treatment | Main path groups |
+| --- | --- | --- |
+| `include` | Candidate infrastructure only; global license and owner-approval gates remain | Root README and basic project metadata; `tools/`; `scripts/` |
+| `exclude` | Keep out of the first export; reconsider only after specific clearance | `papers/`, `extracted/`, `docs/archive/`, `docs/reports/`, `docs/audits/`, historical prompts, legacy/cleanup research, generated artifact index, and binary content such as PDFs/images |
+| `review` | No export decision until a person reviews the file and its provenance | Active theorem state and route maps, current prompts, `research/`, `AGENTS.md`, `.github/`, and all other unmatched files |
+
+On the inspected baseline, the tool classified **14** paths as infrastructure
+candidates, **1,487** as default exclusions, and **3,078** for human review. These
+counts are a reproducibility aid, not a launch quota; the exact path list and blob
+IDs come from the JSON output.
+
+The inventory reads the requested Git commit, not uncommitted working-tree
+changes. Re-run it after the proposed export tree is committed. A report generated
+from an older base commit must not be used as a file list for a later export.
+
+## Rights, ownership, and attribution model
+
+Keep these decisions separate and explicit:
+
+1. **Code.** The repository owner must choose and approve a software license
+   before code is advertised as reusable. Do not assume that a license for code
+   also covers prose, theorem writeups, scans, or derived text.
+2. **Research text and contributions.** The owner should select a clear license
+   for project-authored mathematical exposition and define how new contributors
+   grant rights to their contributions. Preserve contributor-supplied attribution
+   and provenance; do not infer mathematical authorship from commit authorship
+   or AI-assistance metadata.
+3. **Third-party publications.** Track each PDF, extracted page image, and
+   substantial text extraction separately with bibliographic identity, exact
+   source URL, applicable license or written permission, required attribution,
+   and redistribution scope. Until then, omit the binary and derived extraction;
+   keep citation metadata only after its own review.
+4. **Attribution.** Record human contributions and requested names/handles with
+   consent. AI-agent review is the project's sole mathematical review mechanism, with
+   one independently operated agent audit required for consequential canonical
+   promotion. No human mathematical review is expected. This does not settle
+   authorship or third-party redistribution rights; record source credits
+   and proof lifecycle separately.
+
+These are recommendations for an owner decision, not a selected or applied
+license. No license file was added by this change.
+
+## Prelaunch blocking checklist
+
+- [ ] Owner chooses a code license and a separate policy for mathematical text,
+      contributions, and AI-assisted material; license files and contribution
+      terms are reviewed before publishing.
+- [ ] A maintainer creates a versioned, file-level allow-list from the final
+      export candidate and signs off on every `review` item. `exclude` defaults
+      remain in force until a documented exception is approved.
+- [ ] Every PDF and extracted derivative has a verified redistribution basis,
+      including license version, noncommercial/share-alike conditions, required
+      notices, and source/author attribution. Otherwise remove it from the export
+      tree and point to an authorized copy.
+- [ ] A current secret and personal-data scan covers the export tree and the
+      history that will actually be published. Findings are handled privately;
+      scanner output is redacted.
+- [ ] The release is built in a separate repository from an allow-listed tree
+      with a new initial history, after preserving the private source repository.
+      Review commit identities, branches, tags, generated files, fixtures, and
+      CI logs for unintended disclosure.
+- [ ] Active theorem state, links, third-party citations, contributor credits,
+      and generated files are reviewed against the exact export commit. Public
+      wording must continue to state that E99 is open.
+- [ ] Repository owner explicitly approves any visibility change or new public
+      destination. This audit authorizes neither action.
+
+## Verification boundaries
+
+The baseline, file counts, remote visibility, and available scanner executables
+were checked locally on the date above. The inventory and its tests verify
+classification mechanics and enumerate the chosen committed tree; the limited
+regex sweep does not verify a license or detect all secrets or personal
+information. This work did not create a publishable export. Theorem-state
+consistency is unchanged.
+
+## Integration correction
+
+The historical counts and scan above remain dated observations. The current
+[dependency-closed preparation process](RELEASE_PREPARATION.md) takes precedence over
+blanket archive exclusions when constructing a usable release plan. Required reports
+and audits remain pending exact-blob review. No scan result or inventory classification
+is legal clearance or contributor consent. Publication and a redistributable export
+remain blocked by the owner/file-review gates.
+
+## Owner decision register (2026-10-15)
+
+These are alternatives for review, not selected terms. A root license cannot grant
+rights the project does not hold, clear earlier contributions, or license third-party
+material. Generated indexes and AI-assisted text need the same source/attribution review
+as their inputs; mechanical regeneration supplies no ownership determination.
+
+| Decision | Concrete alternatives and consequences |
+| --- | --- |
+| Software | [MIT](https://opensource.org/license/mit) permits broad reuse with retained notices. [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) adds an express contributor patent grant, modification notices and applicable NOTICE obligations. [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html) requires corresponding source and license compliance when covered modified software is conveyed. Choose the intended reuse model and verify all included contributions can use it. |
+| Project mathematical exposition | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) permits reuse and adaptations with attribution and change indication. [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) also requires shared adaptations to use a compatible ShareAlike license. Retaining present restrictions keeps public reuse blocked. Define file scope separately from software and third-party quotations. |
+| Contributions | Explicit inbound terms matching the selected file license, possibly with a [DCO attestation](https://developercertificate.org/), keep a rights/provenance record. A separately reviewed CLA could provide a different grant. Neither mechanism retroactively establishes earlier consent; obtain it from actual rights holders. |
+| Attribution and privacy | Agree on public names/handles and credit with contributors; review exact retained text privately. Keep reviewer details and approval records outside the export. An email count, Git author identity or AI disclosure does not establish consent or mathematical authorship. |
+| Third-party material | Keep bibliography links and omit unlicensed source copies/derivatives, or obtain and record a specific redistribution basis and required notices. Current PDF/extraction exclusion stays in force. Text quotations inside retained reports still need review. |
+| Destination and history | Approve a separate curated repository and its first clean commit after clearance. Keep this complete historical repository private. No visibility change, public tag or release is authorized by a passing validator. |
+| Governance | The project owner operates one independent AI-agent mathematical audit for consequential theorem promotions, combining full proof reconstruction and adversarial bridge/regression checks at the exact SHA. No human mathematical referee or second review is required. Protect the future destination with PR/integrity checks after hosted checks can execute. Release ownership and rights/privacy clearance remain separate. |
+
+The immediate human bottleneck is the exact-blob rights/attribution/privacy review of
+the retained evidence, together with the software/text licensing decision. Do not
+reduce the evidence set merely to avoid those reviews. The file plan exposes each
+pending approval field; there are no actual owner or file approvals in the template.

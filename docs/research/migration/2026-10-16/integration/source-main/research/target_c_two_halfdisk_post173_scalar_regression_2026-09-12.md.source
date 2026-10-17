@@ -1,0 +1,129 @@
+# Target C — post-§173 two-half-disk scalar regression
+
+**Date:** 2026-09-12  
+**Status:** audited arithmetic regression; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This note checks the strongest currently retained scalar currencies in the
+two-half-disk branch together.  It includes the doubled groupwise train floor,
+the global physical-boundary floor, the §161/§163 moment inequalities, the
+§123 exceptional-perimeter payment, the §172 outer-walk sign condition, and the
+all-regime Type-II lower floors.
+
+The exact normalized point below satisfies all of those scalar tests.  It is not
+claimed to be realized by a geometric source.  Its implication is narrower:
+
+```text
+two-half-disk scalar currencies alone -> no contradiction
+```
+
+The missing step remains a source-level theorem controlling the interface/defect
+geometry or producing a finite diameter-decreasing competitor.
+
+## 1. Variables and retained tests
+
+Use
+
+```text
+t      = (q-k)/D
+kappa  = k/D
+S      = sum_r d_r/D
+G      = G_D/D
+mu     = S+G
+f      = exceptional-face count/D
+T      = stopped-train count/D = t+2f
+u      = outer-walk surplus/D
+Q      = bounded-face degree excess/D
+e      = e_BB/D = 2*t+kappa-mu
+```
+
+The identity `T=t+2f` is the exact train/face ledger, while the half-disk
+groupwise floor is
+
+\[
+T-\frac{q}{2D}\ge 2\sqrt{\frac{\pi}{\sqrt3}}-o(1).
+\]
+
+The global physical-boundary floor from the two-half-disk reduction is
+
+\[
+T\ge 2+\frac{\pi}{8}(4-2\sqrt3)-o(1).
+\]
+
+The remaining scalar checks are the finite §161/§163 reductions, the sign
+identity `u+mu+kappa>=pi` on the negative-hull-side branch, and
+
+\[
+4f+Q\le 10(e-\kappa),
+\]
+
+which is the conservative §123 payment check using `P_exc>=4f+Q`.
+
+## 2. Exact rational witness
+
+Take
+
+```text
+t=21/10, kappa=0, S=14/5, G=3/10, mu=31/10,
+f=9/10, T=39/10, u=1/10, Q=1, e=11/10.
+```
+
+Then `q/D=t+kappa=2.1`, `e=2t+kappa-mu`, and `T=t+2f`.  The witness has
+
+\[
+T-\frac{q}{2D}=\frac{57}{20}=2.85,
+\qquad
+u+\mu+\kappa=\frac{16}{5}=3.2.
+\]
+
+Thus it passes both the doubled half-disk train floor and the §172 sign condition
+using conservative bounds.  It also passes the global boundary floor by a wide
+margin.
+
+The §161 and §163 left sides are respectively
+
+\[
+5t-2\kappa=10.5,
+\qquad
+5t-2\mu-2\kappa=4.3,
+\]
+
+while the required right sides are below `9.22` and `1.905` respectively.  The
+exceptional-face payment is also feasible:
+
+\[
+4f+Q=4.6<11=10(e-\kappa).
+\]
+
+The point satisfies `2f-kappa=1.8`, so it also lies above the current all-defect
+phase/train floor, and `t=2.1` lies above the promoted all-regime direction floors.
+Finally, `q/D=2.1<pi`.
+
+## 3. Aggregate-detour diagnostic
+
+To check that the post-§123 aggregate decomposition is not silently violated,
+take the normalized attachment-count diagnostic `a=2` and set the nonnegative
+tile/contact credits to zero.  The resulting conservative upper currency is
+
+\[
+10(e-\kappa)+2(a-S)=11-1.6=9.4,
+\]
+
+which is still above the canonical aggregate lower constant
+
+\[
+\frac\pi2(2-\sqrt3)=0.420893\ldots.
+\]
+
+This is only a scalar consistency check; it does not assert that `a=2` is a
+realized attachment ledger for a source.
+
+## 4. Frontier implication
+
+The witness is not a configuration and does not weaken any geometric theorem.  It
+rules out only the proof attempt that combines the currently stated two-half-disk
+scalar inequalities without adding a geometric correlation.  A valid closure must
+therefore control the actual residual interface/defect arrangement, construct a
+source-preserving strict diameter descent, or force an exact unit triangle.
+
+**Classification:** regression; audited arithmetic only.  C-II remains open.

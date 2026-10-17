@@ -1,0 +1,267 @@
+<!-- theorem-state: {"artifact_id":"ART-5592F5EAFC5B","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Terminal contact pruning and the necessary nonlattice island
+
+**Date:** 2026-10-11  
+**Base:** `ab6dd3336f9f8d440f2bada76edb32153391cddc`, state `2026-10-10.audit.234`  
+**Target:** independent full-source Level I global route  
+**Classification:** proved candidate awaiting promotion  
+**Level I:** STILL OPEN. The nonlattice terminal-island case is not excluded.
+
+## 1. The global chain
+
+```text
+triangle-free global minimizer
+  -> finite full-source contact pruning with every actual diameter pair fixed
+  -> terminal contact components rigid with their diameter endpoints pinned
+  -> macroscopic component with linearly many actual diameter endpoints
+  -> contradiction if its endpoint lattice has minimum spacing bounded below
+```
+
+The finite pruning is valid with any number of actual contact directions. No
+ordinary rigidity of the entire source, common lattice, common phase, convex
+contact complex, or absence of contact-isolated points is assumed. Every source
+label remains present. This is a genuine global-minimizer implication, because
+each constructed feasible endpoint has the same optimal diameter.
+
+## 2. Dependencies and source check
+
+- Canonical normalized KKT equilibrium: shared theory
+  `01-local-structure.md`, Theorem 4.1.
+- Elementary contact-component extent bound from the companion report
+  `global_loaded_grid_contact_opening_2026-10-11.md`, Section 2:
+  a positive-contact component incident to positive diameter stress has diameter
+  at least gamma D, where gamma=sqrt(3)-1. This is a new unreviewed candidate
+  dependency, not a canonical theorem. Its complete proof uses component force
+  cancellation, Jung's planar radius bound, and variance Cauchy-Schwarz.
+- Eppstein, *Edge Bounds and Degeneracy of Triangle-Free Penny Graphs and
+  Squaregraphs*, JGAA 22(3), 483--499 (2018), **Theorem 2**, p. 491:
+  a connected triangle-free penny graph on s vertices with graph diameter d
+  has at most `2s-d-2` edges. The journal PDF was rechecked directly:
+  <https://www.maths.tcd.ie/EMIS/journals/JGAA/accepted/2018/463.pdf>.
+  This is also recorded in the canonical literature baseline, Section 2.4.
+  The diameter d is the graph distance diameter, not the Euclidean source D.
+  Radius-1/2 disks centered at unit-separated points give the same graph after
+  rescaling the author's unit circles, so the graph statement applies unchanged.
+- The lattice extreme-vertex argument below is elementary. The canonical
+  `C-AFFINE-LATTICE-EXTREME-VERTEX-COUNT` already provides an analogous bound
+  in inverse-basis-norm notation. No novelty priority is claimed for that count.
+
+No unlisted report is used as a premise. The endpoint construction and rank
+argument do not require any selected Target C representative.
+
+## 3. Finite pruning with the exact diameter graph unchanged
+
+Let A be a finite global minimizer of diameter D and let Q be all actual
+diameter endpoints. At a current feasible placement define
+
+\[
+F_Q=\{w:r_{ij}\cdot(w_i-w_j)=0\ (ij\in C),\quad w_i=0\ (i\in Q)\}.
+\]
+
+Call an actual contact frozen when w_i=w_j for every w in F_Q. If some contact
+is not frozen, choose one vector w in F_Q outside the proper subspace
+`w_i=w_j` for every nonfrozen contact. Finitely many proper linear subspaces
+cannot cover F_Q. A small straight motion gives
+
+\[
+|r_{ij}+t(w_i-w_j)|^2=1+t^2|w_i-w_j|^2
+\]
+
+on every old contact. Frozen edges stay exactly unit; every other contact opens.
+All old noncontacts have positive lower margins, and all old pairs outside the
+actual diameter graph have positive upper margins. Choose one positive t small
+enough to preserve every full-source margin, including pairs between old contact
+components and all contact-isolate pairs. Every actual diameter endpoint is fixed.
+Thus the source cardinality, diameter D, exact actual diameter graph, and its
+complete endpoint set Q are unchanged. The contact graph loses at least one edge
+and gains none. Triangle-freeness is retained if it held initially.
+
+Recompute F_Q at the new actual placement and repeat. This terminates after at
+most the original number of contacts, because the contact sets strictly decrease.
+Every endpoint is another global minimizer. Call the terminal placement A^dagger.
+At that placement every remaining contact is frozen for the **terminal** F_Q.
+Freezing at only the first step would not justify the terminal rank claim.
+
+The procedure is also valid as a finite geometric operation on a nonglobal
+feasible source; only preservation of global optimality and use of KKT at its
+terminal endpoint require the original global-minimizer hypothesis.
+
+## 4. Terminal components, rank, and original coordinates
+
+Let J be a nontrivial terminal full-contact component and let P_J=J intersect Q,
+s=|J|, q=|P_J|. An unpinned component could rotate about any center with all
+contact length derivatives zero and nonzero contact-relative velocities; that
+would contradict terminal freezing. Thus q>=1.
+
+For any contact-bar flex of J fixing P_J, extend it by zero on the rest of the
+source. This lies in the terminal F_Q. Every remaining contact has equal endpoint
+velocities, so connectivity makes that velocity constant on J, and its pin makes
+the constant zero. The reduced contact rigidity matrix therefore has rank
+
+\[
+\operatorname{rank}R_C[J\setminus P_J]=2(s-q).
+\]
+
+Let e be the number of contacts in J and e_PP the number with both endpoints in
+P_J. The latter give zero rows in this reduced matrix, so
+
+\[
+e-e_{PP}\ge2(s-q).
+\]
+
+Every terminal component is a rigid translation of its original points at every
+earlier pruning step: a final surviving edge survived all steps, so its endpoint
+velocities were equal at each step. Its final paths propagate equality to an
+original pin in Q, whose velocity was zero at all steps. Consequently **every
+point of every nontrivial terminal component is at its original coordinate**.
+Only points becoming contact isolates may have moved. This is stronger than a
+claim that the source merely has an abstract isomorphic contact framework.
+
+## 5. Universal linear loaded population in a macroscopic terminal component
+
+Assume the original global minimizer is triangle-free. Normalize KKT at the
+actual terminal endpoint. The companion extent lemma supplies a terminal
+positive-contact component of diameter at least gamma D. Its containing full
+contact component J also has that diameter and contains an actual diameter endpoint.
+Write d for the graph diameter of J. Its edges have length one, hence
+`d>=diam(J)>=gamma D`.
+
+Apply Eppstein's connected penny-graph bound to this actual full-contact component:
+
+\[
+2(s-q)+e_{PP}\le e\le2s-d-2.
+\]
+
+Therefore
+
+\[
+\boxed{2q\ge d+2+e_{PP}\ge\gamma D+2+e_{PP}.}
+\]
+
+**Universal theorem (proved candidate awaiting promotion).** Every finite
+triangle-free global minimizer admits the above pruning endpoint with a
+macroscopic terminal contact component J, at its original coordinates, containing
+at least `gamma D/2+1` actual diameter endpoints. Its moving-column contact
+matrix has full pinned rank, and every source point, including all old and new
+contact isolates, remains in the configuration.
+
+This conclusion does not bound the total nonisolated population, identify J with
+a selected canonical C-II core, or produce a unit triangle. It applies to the
+original minimizer without assuming that it already has a minimal contact count.
+
+## 6. Minimum lattice spacing is the only lattice uniformity needed
+
+Suppose P_J lies in a translate of a rank-two lattice whose shortest nonzero
+vector has length rho>0. Every actual diameter endpoint is extreme in the full
+source hull, so every point of P_J is a vertex of conv(P_J). If q>=64, set
+`L=rho sqrt(q)/8`. At most
+
+\[
+4(L/\rho+1/2)^2\le9(L/\rho)^2=9q/64<q/2
+\]
+
+lattice vectors have length below L, by disjoint radius-rho/2 disk counting.
+The oriented side vectors of the convex hull are distinct; at least q/2 sides
+have length at least L. Perimeter at most pi D gives
+
+\[
+q\le(16\pi D/\rho)^{2/3}.
+\]
+
+For all q, including the collinear and small-cardinality cases,
+
+\[
+\boxed{q\le64+(16\pi D/\rho)^{2/3}.}
+\]
+
+Together with Section 5 this yields an explicit arithmetic obstruction. For
+D>=512, gamma>1/2 gives q>D/4+1, hence
+`(16pi D/rho)^(2/3)>D/8`. Since pi<4, cubing gives
+
+\[
+\boxed{D\rho^2<2^{21}.}
+\]
+
+Thus any containing lattice of this macroscopic terminal island must have
+shortest-vector spacing O(D^(-1/2)). This is a necessary condition, not evidence
+that such a containing lattice exists. A genuinely nondiscrete integer module
+generated by contact directions need not fit any rank-two lattice.
+
+## 7. Uniform exclusion of lattice-coherent contact components
+
+**Theorem (proved candidate awaiting promotion).** Suppose every nontrivial
+contact component of a finite triangle-free source lies in its own translate of
+a rank-two lattice with shortest vector at least rho0>0. The lattices may have
+different bases, orientations, phases, and arbitrarily many contact directions.
+Contact-isolated points may lie anywhere. If
+
+\[
+D\ge\max\{512,2^{21}/\rho_0^2\},
+\]
+
+the source cannot be a global diameter minimizer.
+
+**Proof.** If it were global, Section 5 would produce the terminal component J.
+It is an unchanged subset of one original contact component, so its pin set lies
+in that component's original lattice. Section 6 would require
+`D rho^2<2^21`, contradicting rho>=rho0 and the displayed threshold.
+
+In particular every sufficiently large global minimizer contained in any
+uniformly separated rank-two lattice contains a unit equilateral triangle.
+This includes triangular lattices, general lattice bases, nonconvex subsets,
+holes, varying source phases, and all contact isolates. The spacing condition
+must hold uniformly; putting rational coordinates in increasingly fine lattices
+does not meet it. The theorem removes whole-source ordinary-rigidity assumptions
+from this exact lattice scope. It does not assert global crystallization.
+
+The canonical lattice attachment obstruction works with a selected post-ZF
+representative and its actual harmonic attachments. The present proof is a
+separate full-source normalization argument, preserving the original diameter
+endpoints and proving the pinned-rank premise it uses. No canonical lifecycle
+or route endpoint is changed by recording it.
+
+## 8. Exact finite certificate and binding controls
+
+`research/verify_global_terminal_contact_pruning_2026_10_11.py` implements exact
+rational nullspaces, pointwise frozen-contact detection, a deterministic generic
+velocity, and finite full-pair margin checks at every pruning round. Exact minima
+of the pair-distance quadratics certify lower feasibility over each entire motion
+interval; convexity certifies upper feasibility from the two endpoints. It retains
+all labels and checks the unchanged full diameter graph, terminal pinned rank,
+and the graph-diameter edge inequalities.
+
+- The 2x3 square source needs two rounds: first its vertical contacts open,
+  then its unpinned middle horizontal pair opens. Its two pinned horizontal
+  pairs remain. A certified final vertical contraction gives a strict competitor.
+- A square source with a central hole, a rational third-direction contact leaf,
+  and an arbitrary off-lattice isolate tests contact directions beyond the
+  preceding two-coordinate chart. Its proper old KKT stress is checked exactly;
+  contact pruning opens the old contacts, and a rational contraction improves D.
+- A rational unit hexagon with three directions has zero pinned bar kernel.
+  Pruning does nothing, but its full equilibrium matrix has independent columns,
+  so it has no nonzero equilibrium stress and no normalized KKT certificate.
+  Six triangular-lattice points with squared diameter four give a strict
+  independent competitor. This prevents mistaking frozen or pinned-rigid
+  configurations for global minimizers.
+- The optimal unit square is an unchanged control with its actual positive KKT
+  stress. The method does not reject that finite triangle-free optimum.
+
+These finite fixtures do not certify a large global minimizer, the general
+asymptotic exclusion, or Level I. The general proof is analytical above.
+
+## 9. Remaining global case
+
+A hypothetical unbounded triangle-free global-minimizer family must now have
+the macroscopic terminal island of Section 5, with linearly many original
+diameter endpoints, and no containing lattice of uniformly positive minimum
+spacing. This can be a genuinely nonlattice contact framework. The proof gives
+no global same-cardinality replacement for that case.
+
+The full goal remains to construct such a replacement of diameter below D or
+prove that every sufficiently large global minimizer's terminal contact graph
+contains a unit triangle. An unrestricted replacement may move every old
+diameter endpoint. The pruning normalization is a necessary-condition tool,
+not a restriction on the allowed final solution.
+
+Promotion recommendation: preserve as an unreviewed proved candidate, obtain an
+independent proof/dependency/scope audit, and do not claim Level I closure.

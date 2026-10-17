@@ -1,0 +1,174 @@
+<!-- theorem-state: {"artifact_id":"ART-42B69223FF7F","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Erdős Problem #99 — integrator run: ambient shape, force geometry, and shell population
+
+**Date:** 2026-09-09
+**Starting repository state:** `main`, `6ed9d78ae146b68fd9b14c3c3486b048f3d59074`
+**Run type:** cross-target synthesis / bridge proof / scope audit
+**Targets:** A, B, C
+**Active instruction:** user-requested integrator run; commit and push completed increments
+**External web search:** allowed; no new literature imported
+**Computation:** analytic proofs plus the finite sanity-check script linked below
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+This is a working report, not a route-map promotion. The controlling C-I restoration
+is [module 56](../targets/target-c/56-ci-restored-frontier.md). The September 9
+post-ZF reports remain separate, conditional dependencies until promoted.
+
+## Completed run: results and promotion scope
+
+The run found a genuine shared geometric input, rather than an identification of
+the three different response/capacity objects. The accepted A/B global hull estimates
+already imply that **every selected C force hull** has circumradius
+`D/2+O(sqrt(D))`, regardless of invisible source population.
+
+| New result | Classification | Exact change |
+| --- | --- | --- |
+| AG/AR/AS/AP ambient-force transport | Proved, audited, promoted | `P_*=2D-O(sqrt(D))` uniformly over KKT stresses; shared-endpoint diameter angles `O(D^(-1/4))`; limiting force hulls are centrally symmetric cyclic hulls with `a>=p-3pi/4`. |
+| EC/EP/ES exterior-cap transport | Proved, audited, promoted | Two-sided exterior-population/area law with `O(D)` error and exact simultaneous sum of independent cap-capacity deficits. |
+| `area(F)/D^2 >= 0.6184708847...-o(1)` | Conditional on DB | Improves the report-level PI floor `0.4978566363...`. |
+| `limsup Z_ext/n <= 0.2125384122...` | Conditional on DB | Actual exterior population upper bound; does not bound interior isolates. |
+| `liminf (e_BB+2s_C)/D >= 0.5932351999...` plus a positive uniform gap | Conditional on the explicit post-ZF signature | Analytic joint optimization improves the latest report-level explicit GS floor `0.4647922503...`. |
+| A Schur closure, B shell closure, complete C-II exclusion | Not proved | No strict sub-D competitor or global contradiction obtained. |
+
+The main proof files are:
+
+1. [Ambient-force geometry](integrator_ambient_force_geometry_2026-09-09.md).
+2. [Exterior-cap capacity](integrator_exterior_cap_capacity_2026-09-09.md).
+3. [Conditional joint cavity exclusion](integrator_joint_cavity_exclusion_2026-09-09.md).
+
+The authoritative shared statements are in
+[theory module 04](../theory/04-ambient-force-and-cap-transport.md). The A/B/C
+route maps index the bridge; the C route map explicitly promotes only the
+unconditional proof scopes. The active prompts record the same limitation.
+
+### Audit record
+
+- **Source identity:** `K` always denotes the full actual source hull; `F` remains
+  a hull of actual diameter endpoints. No smaller optimum or lattice scaffold is
+  substituted. Roundness transfers by inclusion and the midpoint identity.
+- **Quantifiers:** the geometry applies to every global minimizer and every
+  chosen diameter support; triangle-free and lexicographic hypotheses are needed
+  only for the stated C-II applications.
+- **Boundary/population:** cap endpoints, common sides, and repeated container
+  counts are canceled explicitly. Interior isolates are not discarded.
+- **Constants:** `O(D^(7/4))` area error is used only against a fixed quadratic
+  gain. Exact boundary slack is retained for any prospective one-point argument.
+- **Conditional inputs:** DB/ZF/JC/GU remain unpromoted. The cavity theorem lists
+  its exact algebraic/geometric interface instead of treating restoration of PSD
+  as restoration of every later result.
+- **Regressions:** the odd-shell stress calculation disproves any inference of
+  near matching from `P_*/D -> 2`; finite nonsymmetric matching, heptagon-center,
+  near-star, near-equilateral, and A scaffold regressions are preserved.
+- **Overlap:** reciprocal saturation is a new combination of existing C10.16
+  with A155, explicitly resolving the obstacle stated after C10.24. Midpoint,
+  cyclic-model, and cap-capacity proofs supply the additional transport. The
+  conditional cavity floor uses the newer remote JC report, not its superseded
+  independent-pocket predecessor.
+
+### Validation and publication
+
+Run `python3 research/integrator_ambient_force_audit.py`. The checks passed:
+48 enclosing-disk geometry cases, 675 cap partitions, and 20,000 relaxed scalar
+samples, plus one exact rational derivative-sign check. Geometry and root
+evaluation are floating-point. The general results have separate analytic proofs.
+The script omits global optimality and KKT/post-ZF realizability.
+
+The first push to `main` was rejected because remote commit `cf79015` arrived
+during the run. Its four post-PI reports were preserved by rebasing this run onto
+that commit. Work is published incrementally on
+`research/integrator-ambient-force-shell-2026-09-09`; no remote history was rewritten.
+
+### Exact remaining obligation and handoff
+
+The highest-value C-II obligation exposed here is to exclude the coexistence of
+the high pinned/contact surplus with the **cyclic, centrally symmetric limiting
+force-hull class**, while retaining the exact exterior population and the
+post-ZF ledger `b+Q=2h-2s_Z`. A closing result must force `b+Q>2h` or construct
+a strict sub-D competitor. A large surplus or near-maximal reciprocal perimeter
+alone does neither.
+
+The cap route has a concrete separate interface: turn the exact ES capacity
+identity into a protected replacement respecting all cross-cap and diameter
+constraints. Separate cap optima cannot be glued without such a theorem.
+
+```text
+LEVEL I STATUS: STILL OPEN.
+PROMOTED: ambient-force AG/AR/AS/AP; exterior-cap EC/EP/ES.
+CONDITIONAL: DB area floor 0.6184708847; external fraction <=0.2125384122;
+post-ZF pinned/contact floor 0.5932351999 plus an unquantified positive gap.
+DEAD SHORTCUTS: near-maximal reciprocal perimeter -> matching;
+inside-force-hull population -> force-visible population;
+independent cap capacities -> compatible replacements.
+NEXT: high-surplus C-II exclusion within the cyclic limiting boundary class,
+or a protected strict-diameter replacement using the exact exterior-cap ledger.
+AUTHORITATIVE: docs/theory/04-ambient-force-and-cap-transport.md and route maps.
+```
+
+The remaining sections preserve the initial checkpoint and candidate selection.
+
+## 1. Endpoint before tactic
+
+The three exact closing currencies are:
+
+| Route | Required output | Transport that must not be assumed |
+| --- | --- | --- |
+| A | `rank S <= d_int + |C^partial| - Delta_Lambda`, or a strict sub-D competitor | Source structure does not automatically enter the independent response graph. |
+| B | The route-map joint outer-shell stability inequality | An uncontrolled boundary-order loss cannot supply its exact contradiction. |
+| C | Exclude every sufficiently large fully force-visible lexicographic survivor, retaining isolates | Post-ZF rigidity and topology are not consequences merely of restored PSD. |
+
+The first bridge under examination is:
+
+```text
+A Section 155: every global source hull lies in a nearly radius-D/2 disk
+  + B: full-source packing/area/perimeter control
+  + C: actual length-D chords and their force-hull endpoints
+  -> simultaneous control of all diameter midpoints
+  -> an approximate centrally symmetric model of the actual force hull
+  -> stronger force-hull area and external-population restrictions.
+```
+
+The immediate concrete theorem target is a finite Hausdorff bound between the hull
+of actual diameter endpoints and the centered polygon generated by their half
+diameter vectors. Its area error must be `o(D^2)`. This would improve C's area
+constants without identifying the force hull with the full source hull.
+
+A second candidate consequence is that all diameter chords at one endpoint become
+parallel asymptotically. If valid, the normalized reciprocal perimeter should tend
+to its upper endpoint uniformly over normalized KKT stresses. This would replace
+the current fixed-angle ceiling by a vanishing-angle bound.
+
+## 2. Dependency and overlap audit at first checkpoint
+
+- [A prescribed-phase/alignment module](../targets/target-a/08-prescribed-phase-alignment.md),
+  Section 155: its source-hull disk bound uses global packing only. The
+  very-super-boundary assumption is needed for embedding the *smaller optimum*,
+  not for the source-hull disk bound itself.
+- [B route module](../targets/target-b/01-jammed-rhombic-branch.md), Sections 24 and 36:
+  full-source perimeter/area information applies before any jammed classification.
+- [Shared Oler shell module](../theory/03-oler-shell.md): exact finite packing and
+  topology corrections; shell area alone assigns the same bulk allowance to isolates.
+- [C foundational module](../targets/target-c/01-force-hull-and-shear.md): supported
+  diameter endpoints generate the force hull, and reciprocal perimeter sums reaction
+  lengths. Neither statement grants exact central symmetry.
+- [DB report](target_c_post_zf_difference_body_perimeter_2026-09-09.md): direction
+  packing and `liminf h/D >= 2 rho` are useful for a conditional numerical consequence.
+- [PI report](target_c_projective_circle_isodiametric_area_floor_2026-09-09.md): current
+  report-level area floor is `0.4978566363... D^2`.
+- [ER report](target_c_external_rattler_force_area_dichotomy_2026-09-09.md): gives an
+  external-population **lower** bound from area deficit. It does not supply the
+  matching upper bound; the latter requires an actual exterior-container partition.
+
+## 3. Binding scope tests
+
+The bridge must retain regular-shell/local-minimum regressions, the finite
+noncentrally-symmetric matching example, arbitrary stress weights, and the
+heptagon-plus-isolated-center example. No individual stress floor, exact symmetry,
+simultaneous hull saturation, or Schur kernel may be inferred.
+
+## 4. First-checkpoint classification (historical)
+
+The integration statements above are candidates pending complete proofs and
+regression review. No theorem has been promoted at this checkpoint.

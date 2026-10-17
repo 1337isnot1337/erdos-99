@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+from decimal import Decimal, getcontext
+import math
+
+getcontext().prec = 60
+pi = Decimal('3.14159265358979323846264338327950288419716939937510')
+sqrt3 = Decimal(3).sqrt()
+delta2 = pi / (2*sqrt3)
+s = delta2.sqrt()
+a0 = sqrt3/2
+c0 = sqrt3/4
+eta = Decimal('0.00042')
+C = 2*s + eta
+C146 = Decimal(4)/Decimal(9) * (pi+s)
+t = C146 + Decimal('0.0013751')
+
+f = (C-pi/2)/2
+j = t + 2*C - pi
+h = 3*j/5
+pop = pi/2 + 3*j/10
+beta = c0*h
+pex = 5*f
+sig = 4*j/5 + f
+rhdef = 3*j/10
+
+assert Decimal('0.1671245') < f < Decimal('0.1671248')
+assert Decimal('2.4893870') < j < Decimal('2.4893874')
+assert Decimal('1.4936321') < h < Decimal('1.4936326')
+assert Decimal('2.3176123') < pop < Decimal('2.3176127')
+assert Decimal('0.6467616') < beta < Decimal('0.6467620')
+assert Decimal('0.835622') < pex < Decimal('0.835625')
+assert Decimal('2.1586342') < sig < Decimal('2.1586347')
+assert Decimal('0.7468160') < rhdef < Decimal('0.7468164')
+assert abs(beta-a0*rhdef) < Decimal('1e-50')
+
+# H >= 3J/5 from d>=0 and Q>=f.
+for d in range(20):
+    for ff in range(20):
+        for excess in range(20):
+            Q = ff+excess
+            J = Decimal(d+4*ff+Q)
+            H = Decimal(d+2*ff+Q)
+            assert 5*H >= 3*J
+
+# The finite face-count implication is C <= P/2 + 2f.
+for q in range(20):
+    for k in range(q+1):
+        for ff in range(20):
+            P = Decimal(q)  # smallest admissible perimeter for q unit-separated hull sides
+            T_minus = Decimal(q)/2 + 2*Decimal(ff) - Decimal(k)
+            assert T_minus <= P/2 + 2*Decimal(ff)
+
+print('C_* =', C)
+print('t_* =', t)
+print('f_* =', f)
+print('j_171 =', j)
+print('h_171 =', h)
+print('population coefficient =', pop)
+print('chamber surplus coefficient =', beta)
+print('global exceptional perimeter coefficient =', pex)
+print('chamber Oler-slack coefficient =', sig)
+print('absolute rhombus deficit coefficient =', rhdef)
+print('q-k bootstrap / exceptional chambers: PASS')

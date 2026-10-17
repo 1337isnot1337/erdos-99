@@ -1,0 +1,659 @@
+# Target C: Woodall leaf saturation behind the square-root diameter braid
+
+**Date:** 2026-10-02  
+**Remote main rechecked before writing:** \`3bad7c12bf5133665be466d0396362108fadef2c\`  
+**Parent research tip:** \`dea53ff0f6715efe70812b84fdaa5ad8de49e5bd\`  
+**Status:** proof-only candidate. Level I and C-II remain open.
+
+## 1. Purpose and scope
+
+The current-main cubic star budget, together with canonical ZF, yields the
+square-root lower bound for the matching number of the full actual diameter graph
+proved in the parent research note:
+
+\[
+\nu(H)\ge
+\left({1\over2\sqrt{12\pi\sqrt3}}-o(1)\right)\sqrt D.
+\tag{1}
+\]
+
+That theorem gives a large ordered crossing braid, but does not control KKT mass.
+The present note attacks the complementary hard case: suppose the actual diameter
+matching is still sublinear.
+
+Canonical C65 allows the lexicographic C-II source to be equipped with a
+relative-interior normalized KKT stress for which every actual diameter edge is
+positive. Hence the full actual diameter graph is the same loaded graph to which
+canonical C-WOODALL applies.
+
+The new point is that Woodall topology makes sublinear matching much more rigid than
+an arbitrary sparse graph: almost every required diameter edge must be pendant.
+This produces an exact graph/stress fork at distinct loaded terminals.
+
+No new external theorem is imported.
+
+## 2. A matching controls every non-pendant diameter edge
+
+Let
+
+\[
+H=(B,E_H),\qquad h=|E_H|,\qquad \nu=\nu(H),
+\]
+
+be the full actual diameter graph. Let
+
+\[
+B_1:=\{b\in B:\deg_H(b)=1\}
+\]
+
+be the set of diameter leaves and put \(\ell=|B_1|\).
+
+Call an edge **core** if neither endpoint lies in \(B_1\). Let \(E_{\rm core}\)
+be the core-edge set.
+
+### Theorem 2.1 -- core edge bound
+
+\[
+\boxed{|E_{\rm core}|\le2\nu+1.}
+\tag{2}
+\]
+
+Consequently
+
+\[
+\boxed{
+\ell\ge h-2\nu-1.
+}
+\tag{3}
+\]
+
+For the canonical source, ZF gives \(h\ge\lceil D\rceil\), so
+
+\[
+\boxed{
+\ell\ge\lceil D\rceil-2\nu-1.
+}
+\tag{4}
+\]
+
+### Proof
+
+Apply canonical C-WOODALL.
+
+#### Forest case
+
+Every component of \(H\) is a caterpillar. After deleting all degree-one vertices,
+the remaining graph of one component is a path, possibly empty or a single vertex.
+Therefore the core-edge graph is a disjoint union of paths.
+
+A path with \(r\) edges has a matching of size \(\lceil r/2\rceil\ge r/2\).
+Taking maximum matchings independently on the disjoint core paths gives a matching
+of \(H\), so
+
+\[
+\nu\ge{|E_{\rm core}|\over2}.
+\]
+
+Thus \(|E_{\rm core}|\le2\nu\).
+
+#### Cyclic case
+
+C-WOODALL says \(H\) is one odd cycle with pendant leaves attached directly to
+cycle vertices. The core edges are exactly the cycle edges. If its length is \(r\),
+then
+
+\[
+\nu\ge {r-1\over2},
+\]
+
+hence \(r\le2\nu+1\).
+
+This proves (2) in both cases.
+
+Every edge outside \(E_{\rm core}\) is incident to a degree-one vertex. Choose one
+degree-one endpoint from each such edge. These chosen vertices are distinct because
+a degree-one vertex is incident to only one diameter edge. Hence
+
+\[
+\ell\ge |E_H\setminus E_{\rm core}|
+=h-|E_{\rm core}|,
+\]
+
+which together with (2) proves (3). ZF gives (4). QED.
+
+## 3. The hard matching regime is diameter-leaf saturated
+
+Equation (4) gives an exact parameterized dichotomy.
+
+For every \(\epsilon>0\),
+
+\[
+\nu\le\epsilon D
+\quad\Longrightarrow\quad
+\boxed{
+\ell\ge(1-2\epsilon)D-O(1).
+}
+\tag{5}
+\]
+
+In particular, along any unbounded canonical sequence,
+
+\[
+\boxed{
+\nu=o(D)
+\quad\Longrightarrow\quad
+\ell\ge D-o(D).
+}
+\tag{6}
+\]
+
+Thus a survivor cannot have both a sublinear actual-diameter matching and only a
+sublinear population of diameter leaves.
+
+The opposite case is already geometrically strong. If \(\nu\ge\epsilon D\), a
+maximum matching itself gives \(\epsilon D\) vertex-disjoint actual diameter chords.
+They are pairwise properly crossing by the diameter-thrackle property, and the exact
+cyclic-order lemma in the parent note makes them one offset matching on two alternating
+hull shores.
+
+Hence the global support fork is
+
+\[
+\boxed{
+\text{linear crossing diameter braid}
+\quad\text{or}\quad
+D-o(D)\text{ diameter leaves}.
+}
+\tag{7}
+\]
+
+The current-main cubic incidence theorem prevents the second branch from hiding all
+diameter support in \(O(1)\) hubs: (1) still forces \(\nu=\Omega(\sqrt D)\).
+
+
+## 3A. The hard case has only square-root many nonleaf diameter carriers
+
+Let
+
+\[
+B_{\ge2}:=\{b\in B:\deg_H(b)\ge2\},
+\qquad n_{\ge2}:=|B_{\ge2}|.
+\]
+
+Woodall gives a second exact matching bound:
+
+\[
+\boxed{n_{\ge2}\le3\nu+1.}
+\tag{7a}
+\]
+
+In the forest case, after deleting all diameter leaves, the nonleaf vertices in each
+caterpillar form a path. If a component contributes \(r_j>0\) nonleaf vertices, it
+contributes \(r_j-1\) core edges. The number of diameter components is at most
+\(\nu\), because a matching can choose one edge from every component. Hence
+
+\[
+n_{\ge2}
+\le |E_{\rm core}|+\#\{\text{components}\}
+\le2\nu+\nu=3\nu.
+\]
+
+In the cyclic case, the nonleaf vertices are exactly the vertices of the unique odd
+cycle, whose length is at most \(2\nu+1\). This proves (7a).
+
+There is also a leaf-edge version that removes isolated matching components. A
+diameter component isomorphic to \(K_2\) consumes one matching edge, so there are at
+most \(\nu\) such components. Consequently at least
+
+\[
+\boxed{
+h-3\nu-1
+}
+\tag{7b}
+\]
+
+diameter edges join a degree-one diameter leaf to a nonleaf diameter carrier.
+
+Thus if \(\nu\le K\sqrt D\),
+
+\[
+\boxed{
+n_{\ge2}=O(\sqrt D),
+\qquad
+\#\{\text{leaf edges attached to nonleaf carriers}\}
+=D-O(\sqrt D).
+}
+\tag{7c}
+\]
+
+In particular some nonleaf diameter carrier is incident with at least
+
+\[
+\boxed{
+{h-3\nu-1\over 3\nu+1}
+}
+\tag{7d}
+\]
+
+pendant diameter leaves. At the square-root scale this is \(\Omega(\sqrt D)\).
+The cubic star budget prevents all \(D-O(\sqrt D)\) pendant incidences from
+collapsing onto only \(O(1)\) such carriers, but Woodall now shows that the entire
+hard branch lives on only square-root many spine/cycle carriers.
+
+
+## 3B. Contact leaves are paid by outer-walk excess
+
+Now use the canonical positive contact graph \(C\). Let
+
+\[
+L_{11}:=
+\{b\in B:\deg_H(b)=1,\ \deg_C(b)=1\},
+\qquad \ell_{11}:=|L_{11}|.
+\]
+
+Write \(b_{\rm out}\) for the outer-face boundary-walk length of \(C\), counted with
+edge multiplicity, and retain the canonical notation
+
+\[
+x_B:=b_{\rm out}-q.
+\]
+
+### Lemma 3B.1 -- double-leaf charge
+
+\[
+\boxed{\ell_{11}\le x_B+1.}
+\tag{7e}
+\]
+
+### Proof
+
+Every vertex of \(B\) is a strict force-hull vertex and hence lies on the outer face.
+A contact leaf \(p\in L_{11}\) is incident with one contact edge, which is a bridge
+and occurs twice in the outer-face boundary walk. Two contact leaves cannot be
+adjacent here: in a connected graph that would make the entire positive contact
+component a single \(K_2\), whereas canonical C65 makes that component span Euclidean
+diameter \(D>1\).
+
+Delete all vertices of \(L_{11}\) and their incident contact edges. Their incident
+edges are therefore distinct. Removing a pendant vertex from a connected plane graph
+preserves connectivity of the remaining graph and decreases the outer-face walk
+length by exactly two. Hence the remaining
+outer-face walk has length
+
+\[
+b'=b_{\rm out}-2\ell_{11}.
+\]
+
+Every remaining loaded vertex is still an extreme point of the remaining geometric
+vertex set, so it is still on the outer face. If \(q'=q-\ell_{11}\) loaded vertices
+remain, then \(b'\ge q'-1\); the minus one only covers the degenerate possibility
+that one loaded vertex remains after all deletions. Therefore
+
+\[
+b_{\rm out}-2\ell_{11}
+\ge q-\ell_{11}-1,
+\]
+
+which is exactly (7e). QED.
+
+### Lemma 3B.2 -- exact collinear lock at a double leaf
+
+Let \(p\in L_{11}\), let \(l\) be its unique contact neighbor, and let \(a\) be its
+unique diameter partner. If the corresponding KKT multipliers are \(\alpha,\beta>0\),
+then
+
+\[
+\boxed{
+p-l={p-a\over D},
+\qquad
+\alpha=D\beta,
+\qquad
+|l-a|=D-1.
+}
+\tag{7f}
+\]
+
+Indeed equilibrium at \(p\) is
+
+\[
+\alpha(p-l)=\beta(p-a).
+\]
+
+The two vectors have lengths one and \(D\), so positivity forces the displayed
+collinearity and scalar identity.
+
+Thus contact leaves do not provide arbitrary local geometry: they are exact
+one-unit inward locks on their unique diameter bars.
+
+### Consequence at square-root matching scale
+
+Assume again that
+
+\[
+\nu\le K\sqrt D.
+\]
+
+By (4),
+
+\[
+\ell\ge D-O(\sqrt D).
+\]
+
+If \(x_B=o(D)\), Lemma 3B.1 shows that only \(o(D)\) of these diameter leaves can
+also be contact leaves. Therefore
+
+\[
+\boxed{
+\#\{b:\deg_H(b)=1,\ \deg_C(b)\in\{2,3\}\}
+=D-o(D).
+}
+\tag{7g}
+\]
+
+The degree set \(\{2,3\}\) uses canonical C26: a loaded terminal has positive
+contact degree at most three.
+
+Every vertex counted in (7g) is incident with at least two unit contacts. Since one
+contact edge has at most two such endpoints, the number of distinct contact edges
+incident with this leaf population is at least the size of the population. Hence
+
+\[
+\boxed{
+x_B=o(D),\ \nu=O(\sqrt D)
+\Longrightarrow
+D-o(D)\text{ distinct unit contacts touch diameter leaves.}
+}
+\tag{7h}
+\]
+
+More quantitatively, if \(x_B\le\lambda D\) and \(\nu\le K\sqrt D\), then at least
+
+\[
+(1-\lambda)D-O(\sqrt D)
+\tag{7i}
+\]
+
+diameter leaves have contact degree two or three, and at least that many distinct
+unit-contact edges touch them.
+
+So the square-root hard case now has an outer-walk/contact fork before any multiplier
+estimate is used:
+
+\[
+\boxed{
+x_B=\Omega(D)
+\quad\text{or}\quad
+\text{a linear unit-contact collar is incident with diameter leaves}.
+}
+\tag{7j}
+\]
+
+The second alternative is a support statement, not a claim that those unit contacts
+form one geometric chart or carry a uniform amount of KKT stress.
+
+## 4. Exact KKT load split on the pendant edges
+
+Fix the relative-interior normalized KKT stress
+
+\[
+\alpha_e>0,\qquad \beta_h>0,\qquad
+\sum_{h\in E_H}\beta_h=1.
+\tag{8}
+\]
+
+Put
+
+\[
+E_{\rm leaf}:=E_H\setminus E_{\rm core},
+\qquad
+\beta_{\rm leaf}:=\sum_{h\in E_{\rm leaf}}\beta_h.
+\tag{9}
+\]
+
+For every \(h\in E_{\rm leaf}\), choose one degree-one endpoint \(b_h\).
+The chosen endpoints are distinct. Since \(h=b_ha_h\) is the only diameter edge
+incident with \(b_h\),
+
+\[
+g_{b_h}
+:=\sum_k\beta_{b_hk}(p_{b_h}-p_k)
+=\beta_h(p_{b_h}-p_{a_h}),
+\]
+
+and therefore
+
+\[
+\boxed{|g_{b_h}|=D\beta_h.}
+\tag{10}
+\]
+
+KKT equilibrium at \(b_h\) gives
+
+\[
+\sum_{y:\,b_hy\in C}\alpha_{b_hy}(p_{b_h}-p_y)
+=g_{b_h}.
+\tag{11}
+\]
+
+All contact vectors in (11) have length one. Triangle inequality yields
+
+\[
+\sum_{y:\,b_hy\in C}\alpha_{b_hy}\ge D\beta_h.
+\tag{12}
+\]
+
+Summing over the distinct chosen leaf endpoints,
+
+\[
+\boxed{
+\sum_{h\in E_{\rm leaf}}
+\sum_{y:\,b_hy\in C}\alpha_{b_hy}
+\ge D\beta_{\rm leaf}.
+}
+\tag{13}
+\]
+
+A contact edge has at most two chosen endpoints. Therefore, if
+\(C_{\rm leaf}\) denotes the set of contact edges incident with at least one chosen
+diameter leaf,
+
+\[
+\boxed{
+\sum_{e\in C_{\rm leaf}}\alpha_e
+\ge {D\over2}\beta_{\rm leaf}.
+}
+\tag{14}
+\]
+
+This is an exact bridge from pendant diameter stress to actual unit-contact stress.
+No lower bound on an individual multiplier is used.
+
+## 5. If leaf stress is small, a core diameter becomes heavy
+
+All nonleaf diameter stress is carried by \(E_{\rm core}\), whose size is at most
+\(2\nu+1\). Hence for every \(0<\eta<1\),
+
+\[
+\beta_{\rm leaf}<\eta
+\quad\Longrightarrow\quad
+\boxed{
+\max_{h\in E_{\rm core}}\beta_h
+\ge {1-\eta\over2\nu+1}.
+}
+\tag{15}
+\]
+
+Taking \(\eta=1/2\), every canonical source satisfies one of
+
+\[
+\boxed{
+\sum_{e\in C_{\rm leaf}}\alpha_e\ge {D\over4},
+}
+\tag{16}
+\]
+
+or
+
+\[
+\boxed{
+\max_{h\in E_{\rm core}}\beta_h
+\ge {1\over4\nu+2}.
+}
+\tag{17}
+\]
+
+Thus the hard support regime does not merely say that KKT weights might be tiny.
+It localizes where that escape can occur.
+
+If
+
+\[
+\nu\le K\sqrt D
+\tag{18}
+\]
+
+for a fixed \(K\), then the second alternative gives
+
+\[
+\boxed{
+\max_{h\in E_{\rm core}}\beta_h
+\ge\left({1\over4K}-o(1)\right)D^{-1/2}.
+}
+\tag{19}
+\]
+
+This is parametrically larger than the \(D^{-1}\) average scale of a linear
+diameter support.
+
+## 6. A heavy core edge forces a large contact reaction
+
+The current-main midpoint-energy theorem gives a source-wide diameter-star aperture
+\(\varepsilon_D=O(D^{-1/3})=o(1)\). At any fixed diameter endpoint \(b\), all vectors
+
+\[
+p_b-p_k,\qquad bk\in E_H,
+\]
+
+therefore lie in one cone of aperture \(\varepsilon_D\).
+
+Let
+
+\[
+s_b=\sum_k\beta_{bk}.
+\]
+
+Choosing the cone bisector as a unit vector \(n_b\),
+
+\[
+g_b\cdot n_b
+\ge D s_b\cos(\varepsilon_D/2),
+\]
+
+so
+
+\[
+\boxed{
+|g_b|\ge(1-o(1))D s_b.
+}
+\tag{20}
+\]
+
+If \(h=ab\) is the heavy core edge from (19), then \(s_a,s_b\ge\beta_h\).
+Thus both endpoints satisfy
+
+\[
+|g_a|,|g_b|
+\ge
+\left({1\over4K}-o(1)\right)\sqrt D.
+\tag{21}
+\]
+
+Canonical C26 gives contact degree at most three at a loaded terminal. Applying
+(11) at \(a\) and \(b\), at least one unit contact incident with each endpoint has
+multiplier at least one third of the resultant magnitude. Hence
+
+\[
+\boxed{
+\text{the core-heavy branch contains a contact multiplier }
+\alpha_e
+\ge
+\left({1\over12K}-o(1)\right)\sqrt D.
+}
+\tag{22}
+\]
+
+No contradiction is claimed from (22); it is a concrete stress concentration
+target that is absent from a support-only matching theorem.
+
+## 7. Combined square-root hard-case normal form
+
+Combine the parent square-root braid theorem with the present result.
+
+The absolute lower bound is
+
+\[
+\nu(H)\ge
+\left({1\over2\sqrt{12\pi\sqrt3}}-o(1)\right)\sqrt D.
+\tag{23}
+\]
+
+If a subsequence has \(\nu(H)=O(\sqrt D)\), then simultaneously
+
+\[
+\boxed{\ell=D-O(\sqrt D)}
+\tag{24}
+\]
+
+and one of the following holds:
+
+1. **leaf-loaded branch**
+   \[
+   \sum_{e\in C_{\rm leaf}}\alpha_e\ge D/4;
+   \tag{25}
+   \]
+
+2. **core-concentrated branch**
+   one core diameter has
+   \[
+   \beta_h=\Omega(D^{-1/2}),
+   \tag{26}
+   \]
+   and some unit contact incident with each of its two endpoints has
+   \[
+   \alpha_e=\Omega(\sqrt D).
+   \tag{27}
+   \]
+
+Meanwhile the matching itself is an \(\Omega(\sqrt D)\) exact two-shore crossing
+braid whose midpoints lie in one \(O(D^{2/3})\) disk.
+
+This is a materially narrower hard case than
+
+\[
+\text{large matching but arbitrary tiny diameter weights}.
+\]
+
+The support topology and normalized stress now have only two ways to coexist at the
+square-root scale: linear aggregate unit-contact load at pendant diameter terminals,
+or a super-average core diameter/contact stress concentration.
+
+## 8. What remains open
+
+Neither branch is yet contradictory.
+
+- In the leaf-loaded branch, (14) is aggregate multiplier mass, not a geometric chart
+  concentration theorem. The next useful step is to couple the \(D-O(\sqrt D)\)
+  pendant diameter terminals and their actual unit contacts to the current ball-hull
+  / loaded-leaf atlas or to the full-core outer-walk currency.
+- In the core-concentrated branch, (22) is a large local contact stress but current
+  theory has no upper bound excluding such a multiplier. A closing argument should
+  propagate it through the common 2-edge-connected contact hub or turn it into a
+  finite source-preserving release.
+- If \(\nu\) is larger than \(O(\sqrt D)\), the exact crossing braid itself grows
+  beyond the cubic hard scale and should be attacked directly by the two-shore
+  contact/outer-walk geometry.
+
+The macroscopic inactive-container branch remains independent.
+
+**Disposition:** proof-only structural/stress reduction. C-II remains open. No
+computation, numerical experiment, verifier execution, or CI output is used.

@@ -1,0 +1,422 @@
+# Target C — audited §163 robust near-complete grid and zero-detour endpoint exclusion
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working proof-only route module; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module normalizes the repaired theorem and hostile audit recorded in
+`research/target_c_robust_nearcomplete_grid_zero_detour_endpoint_2026-09-12.md`
+and its hostile-audit companion.
+
+The reusable new statement is a stability version of the §76 complete-grid diameter
+bound: a product grid may lose `o(D^2)` crossings and still obey the same leading
+`2/sqrt(3)` shore-size limit. Applying that theorem to the equality structure in §154
+excludes the formal zero-detour endpoint
+
+\[
+t_0={\pi\over2}+{2\over5}\sqrt{\frac\pi{2\sqrt3}}
+=1.9517214495404795\ldots .
+\]
+
+No explicit positive gap above `t_0` is claimed.
+
+---
+
+## 163.1 Robust near-complete-grid diameter theorem
+
+Let `A_D,B_D` be two families of complete stopped-train centerlines in one source
+configuration. Assume
+
+\[
+|A_D|=aD+o(D),
+\qquad
+|B_D|=bD+o(D),
+\qquad a,b>0,
+\tag{163.1}
+\]
+
+and, after choosing projective lifts,
+
+\[
+\alpha_u=\alpha_D+o(1)
+\quad(u\in A_D),
+\qquad
+\beta_v=\alpha_D+{\pi\over3}+o(1)
+\quad(v\in B_D).
+\tag{163.2}
+\]
+
+Suppose all but `o(D^2)` pairs in `A_D x B_D` cross in actual strict unit rhombi.
+Then
+
+\[
+\boxed{
+a+b\le {2\over\sqrt3}.
+}
+\tag{163.3}
+\]
+
+### Phase separation with ties allowed
+
+Put `L=pi/3`, `x_u=alpha_u`, and `y_v=beta_v-L`. Every actual cross-family strict
+rhombus on this branch has
+
+\[
+y_v>x_u.
+\]
+
+Hence every inversion `x_u>=y_v` is a missing pair, and the number `M_D` of inversions
+is `o(D^2)`.
+
+For each occurrence `x` define
+
+\[
+L_D(x)=\#\{y:y\le x\}.
+\]
+
+If `M_D>0`, set
+
+\[
+\epsilon_D={M_D\over |A_D||B_D|},
+\qquad
+\delta_D=\sqrt{\epsilon_D}.
+\]
+
+Since `sum_x L_D(x)=M_D`, Markov deletes at most `delta_D|A_D|=o(D)` values with
+`L_D(x)>delta_D|B_D|`. Let `x_*` be the largest retained value. Deleting the at most
+`L_D(x_*)=o(D)` values `y<=x_*` leaves
+
+\[
+\boxed{
+\max_{u\in A_D'}\alpha_u+L
+<
+\min_{v\in B_D'}\beta_v.
+}
+\tag{163.4}
+\]
+
+This argument is multiplicity-safe; it is the binding repair to the earlier informal
+quantile formulation. Since both clusters shrink,
+
+\[
+\max_{u,v}(\beta_v-\alpha_u)<2L
+\tag{163.5}
+\]
+
+for all large `D`.
+
+### Minimum-degree pruning
+
+After (163.4), let the remaining missing-pair count again be `M_D=o(D^2)`. Choose
+`eta_D->0` with `M_D=o(eta_D D^2)` and delete every train missing more than
+`eta_D D` opposite trains. Only `o(D)` trains are deleted. Thus, after relabeling,
+there is `r_D=o(D)` such that
+
+\[
+\deg_A(u)\ge |B|-r_D,
+\qquad
+\deg_B(v)\ge |A|-r_D.
+\tag{163.6}
+\]
+
+In particular every two and every three trains on one shore have a common neighbor on
+the other shore.
+
+### Global crossing orders from local complete subgrids
+
+The strict angular inequalities (163.4)–(163.5) are exactly the §76 common-projection
+hypotheses. Orient the `A` trains canonically and the `B` trains oppositely. One common
+coordinate
+
+\[
+X(p)=e_D\cdot p
+\]
+
+strictly increases along every selected centerline, and all actual cross-family
+crossings have one sign.
+
+For two `A` trains, define their relative order by their crossings on any common `B`
+neighbor. This is independent of the chosen common neighbor: two choices form an
+actual signed `2 x 2` complete subgrid, so §76 gives the same order. A common neighbor
+for every triple makes the relation transitive. Hence `A` has one global order. The
+same argument gives one global order on `B`, and every actual neighbor list is the
+restriction of the opposite global order.
+
+### Opposite corner and projected path
+
+Let `u_*` be the first `A` train, and let `v_*` be the last actual neighbor of `u_*`
+in the global `B` order. Then their crossing is last among selected `B` crossings on
+`u_*` and first among selected `A` crossings on `v_*`.
+
+Follow `u_*` from its first selected `B` crossing to `u_* cap v_*`, then follow `v_*`
+to its last selected `A` crossing. Every elementary centerline displacement on both
+legs has positive `e_D` projection by the §76 cone estimate. Therefore omitted
+cross-family pairs and any unselected intervening rhombi cannot decrease the projected
+path length.
+
+Exactly as in §76.5, the selected crossings contribute
+
+\[
+D\ge
+\sum_{v\in N(u_*)}e_D\cdot v
++
+\sum_{u\in N(v_*)}e_D\cdot u
+-2.
+\tag{163.7}
+\]
+
+The endpoints are centers of actual source rhombi, hence lie in the full source convex
+hull of diameter `D`. Since the two direction clusters converge to axes separated by
+`pi/3`,
+
+\[
+\min e_D\cdot u,
+\quad
+\min e_D\cdot v
+\ge {\sqrt3\over2}-o(1).
+\tag{163.8}
+\]
+
+Using (163.6) in (163.7) and dividing by `D` gives
+
+\[
+1\ge {\sqrt3\over2}(a+b),
+\]
+
+which proves (163.3).
+
+---
+
+## 163.2 Equality structure at the §154 zero-detour floor
+
+Assume a Type-II survivor sequence has
+
+\[
+{b-\operatorname{per}(F)\over D}\to0
+\tag{163.9}
+\]
+
+and, for contradiction,
+
+\[
+{q-k\over D}\to t_0.
+\tag{163.10}
+\]
+
+Type II gives `per(F)/D->pi`, so `b/D->pi`. The exact outer ledger
+
+\[
+b+Q=2(q-k)
+\]
+
+therefore yields, writing
+
+\[
+s_2=\sqrt{\frac\pi{2\sqrt3}},
+\]
+
+\[
+\boxed{
+{Q\over D}\to {4\over5}s_2.
+}
+\tag{163.11}
+\]
+
+Audited §154 gives
+
+\[
+\liminf {Q+4f\over D}\ge4s_2.
+\tag{163.12}
+\]
+
+Since `f<=Q`, also `Q+4f<=5Q`. Thus
+
+\[
+\boxed{
+{Q+4f\over D}\to4s_2,
+\qquad
+{f\over D}\to{4\over5}s_2,
+\qquad
+Q-f=o(D).
+}
+\tag{163.13}
+\]
+
+The proof below uses the first equality, not a local pentagon obstruction.
+
+Pass to a train-measure subsequence with
+
+\[
+T/D\to x
+\]
+
+and limiting projective train-direction measure having total atomic mass `sigma`.
+Audited §142 gives
+
+\[
+x\sigma\ge2s_2,
+\tag{163.14}
+\]
+
+while the §154 endpoint-capacity inequality and (163.13) give
+
+\[
+2x\sigma\le4s_2.
+\tag{163.15}
+\]
+
+Hence
+
+\[
+\boxed{x\sigma=2s_2.}
+\tag{163.16}
+\]
+
+Thus the absolute `D`-normalized atomic train mass is exactly `2s_2`.
+
+---
+
+## 163.3 Equality forces one phase orbit and a forbidden near-complete pair
+
+Group atomic projective directions by the relation
+
+\[
+\phi\sim\phi+{\pi\over3}\pmod\pi.
+\]
+
+Let `A_j` be the total absolute atomic mass in orbit `j`, and let `E_j` be its
+strict-rhombus crossing mass. The exact §142 relation support and triangle-free train
+crossing graph give weighted Mantel
+
+\[
+E_j\le {A_j^2\over4}.
+\tag{163.17}
+\]
+
+All strict-rhombus crossing mass is accounted for in these atomic relation pairs, so
+
+\[
+\sum_jE_j=s_2^2,
+\qquad
+\sum_jA_j=2s_2.
+\]
+
+Therefore
+
+\[
+s_2^2
+\le {1\over4}\sum_jA_j^2
+\le {1\over4}\left(\sum_jA_j\right)^2
+=s_2^2.
+\tag{163.18}
+\]
+
+Every inequality is equality. Hence exactly one `pi/3` orbit carries positive atomic
+mass. It contains at most the three projective directions
+
+\[
+\phi_0,
+\quad
+\phi_0+{\pi\over3},
+\quad
+\phi_0+{2\pi\over3}
+\pmod\pi,
+\tag{163.19}
+\]
+
+with total absolute mass `2s_2`.
+
+Choose shrinking disjoint atom neighborhoods in the standard fixed-window/diagonal
+order. Their selected train graph has
+
+\[
+|W_D|=2s_2D+o(D),
+\qquad
+ e(W_D)={|W_D|^2\over4}-o(D^2).
+\tag{163.20}
+\]
+
+Near-Mantel stability produces two shores of size `s_2D+o(D)` with only `o(D^2)`
+missing cross pairs. A sufficiently small neighborhood of one atom has no internal
+strict-rhombus crossing, so no atom can have linear mass on both Mantel shores.
+With at most three atom groups and two shores, one shore consists of one atom of mass
+
+\[
+s_2D+o(D),
+\]
+
+while the other shore contains an atom of mass at least
+
+\[
+{s_2\over2}D+o(D).
+\]
+
+These two atom families differ by projective angle `pi/3` and have only `o(D^2)`
+missing crossings. Applying §163.1 gives
+
+\[
+1\ge {\sqrt3\over2}\left(s_2+{s_2\over2}\right)
+={3\sqrt3\over4}s_2.
+\tag{163.21}
+\]
+
+But
+
+\[
+\left({3\sqrt3\over4}s_2\right)^2
+={27\pi\over32\sqrt3}
+>{81\over56}>1,
+\]
+
+using `pi>3` and `sqrt(3)<7/4`. Thus the right side of (163.21) is strictly greater
+than one, a contradiction.
+
+---
+
+## 163.4 Endpoint exclusion
+
+Therefore no unbounded audited-working Type-II survivor sequence can satisfy both
+
+\[
+{b-\operatorname{per}(F)\over D}\to0
+\]
+
+and
+
+\[
+\boxed{
+{q-k\over D}
+\to
+{\pi\over2}+{2\over5}\sqrt{\frac\pi{2\sqrt3}}.
+}
+\tag{163.22}
+\]
+
+The §154 zero-detour lower endpoint is unattainable. By the usual sequence/diagonal
+argument this gives a qualitative separation from the formal endpoint inside the
+zero-detour class, but §163 does not produce an explicit universal epsilon.
+
+---
+
+## Scope audit
+
+- The phase-separation lemma is the repaired tie-safe Markov version.
+- The robust grid theorem never assumes a complete product; completeness is used only
+  on actual `2 x 2` subgrids to make local crossing order consistent.
+- High minimum degree supplies common neighbors for every pair and triple.
+- Missing selected crossings cannot reduce the path estimate because all intervening
+  centerline displacements have positive common projection.
+- The path endpoints are source-rhombus centers in the full source hull, so the diameter
+  bound is the actual source diameter `D`.
+- Equality in the orbitwise weighted-Mantel chain allows the three-atom split; the proof
+  keeps it and uses only the larger atom on the two-atom shore.
+- No local pentagon obstruction is used; the known near-three-axis pentagon regression
+  remains valid.
+- Contact-isolated source points are retained throughout and are not inserted into any
+  core rigidity kernel.
+- Positive normalized outer detour is not handled here.
+- The Type-I inactive-container branch is not handled here.
+
+**Disposition:** §163 PASS at audited-working proof-only scope. It gives a reusable
+robust grid theorem and excludes the §154 zero-detour equality model, but C-II and
+Level I remain open.

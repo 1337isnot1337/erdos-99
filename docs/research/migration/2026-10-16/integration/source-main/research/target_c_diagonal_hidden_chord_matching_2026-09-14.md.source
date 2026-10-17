@@ -1,0 +1,284 @@
+# Target C-II — diagonal hidden-chord matching from the low-`t` pentagon sea
+
+**Date:** 2026-09-14  
+**Status:** proof-only structural refinement; theorem-state authority unchanged  
+**Scope:** canonical full-core Type-II branch with `R_F=o(D)`; low-`t` numerical form uses the audited minimax atomic gap `g=0.0021`  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The low-`t` pentagon metric theorem already gives, for every fixed `eta>0`, an
+endpoint-disjoint matching of hidden chords of length in `(1,1+eta)`, at the sharp
+conflict-graph factor `1/9`.  Because the total true force-hull residual is `o(D)`, the
+flatness threshold can be diagonalized to zero without losing first-order mass.
+
+Thus the small-residual endpoint contains an endpoint-disjoint inactive matching
+`H_diag` satisfying
+
+\[
+\boxed{
+{H_{diag}\over D}
+\ge {1\over9}
+\left(\pi+C_0-{5t\over2}+\delta+{\kappa\over2}\right)-o(1),
+}
+\tag{DH.1}
+\]
+
+where
+
+\[
+C_0=2\sqrt{\Delta_2}+0.0021,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+\]
+
+and every edge `xy in H_diag` has
+
+\[
+\boxed{1<|x-y|\le1+\eta_D,\qquad \eta_D\to0.}
+\tag{DH.2}
+\]
+
+Moreover every such hidden chord has an actual source vertex `a=a(xy)` with
+
+\[
+|a-x|=|a-y|=1.
+\tag{DH.3}
+\]
+
+Hence each matching edge is the missing side of an almost-equilateral source tooth
+with two exact unit sides.
+
+The total activation gap is sublinear:
+
+\[
+\boxed{
+\sum_{xy\in H_{diag}}(|x-y|-1)=o(D).
+}
+\tag{DH.4}
+\]
+
+At the current proof-only low-`t` floor
+
+\[
+t_{21}={4\over9}\left(\pi+\sqrt{\Delta_2}\right)+0.0017279,
+\]
+
+the conservative profile `delta=kappa=0` yields
+
+\[
+\boxed{
+{H_{diag}\over D}
+\ge0.0550238524854551\ldots-o(1).
+}
+\tag{DH.5}
+
+This is the strongest current inactive near-contact matching forced directly by the
+small-residual pentagon sea.  It improves the factor-`1/13` matching obtained from
+flat-center reflection, while the reflection theorem remains useful because it removes
+loadedness and weak-contact alternatives at the level of individual flat centers.
+
+## 1. Fixed-threshold hidden-chord extraction
+
+Let
+
+\[
+P(t,\delta,\kappa)
+:=\pi+C_0-{5t\over2}+\delta+{\kappa\over2}.
+\tag{DH.6}
+\]
+
+The low-`t` pentagon count gives
+
+\[
+{p_5\over D}\ge P(t,\delta,\kappa)-o(1).
+\tag{DH.7}
+\]
+
+Fix `eta>0`.  Empty-pentagon trapezoid stability and the Wegner first residual jump
+give a threshold `theta(eta)>0` such that every pentagon with local residual below
+`theta(eta)` is isolate-free, is sufficiently close to the flat unit trapezoid, and
+contains a two-contact tooth whose hidden chord has length in `(1,1+eta)`.
+
+All local residuals are nonnegative and their sum is at most `R_F`.  Under
+
+\[
+R_F=o(D),
+\tag{DH.8}
+\]
+
+at most
+
+\[
+{R_F\over\theta(eta)}=o(D)
+\]
+
+pentagons fail the threshold.  Therefore the number `G_eta` of good pentagons obeys
+
+\[
+{G_\eta\over D}\ge P(t,\delta,\kappa)-o(1).
+\tag{DH.9}
+\]
+
+Choose one two-contact tooth from each good pentagon and retain only its hidden chord.
+A source vertex belongs to at most five selected bounded faces, so a chosen hidden
+chord conflicts through each endpoint with at most four other selected chords.  The
+hidden-chord conflict graph therefore has maximum degree at most eight.  Greedy
+matching gives
+
+\[
+H_\eta\ge {G_\eta\over9}.
+\tag{DH.10}
+\]
+
+This is the fixed-threshold theorem already implicit in the low-`t` metric
+amplification note.
+
+## 2. Diagonalize the hidden-chord gap
+
+Choose a sequence `eta_j downarrow0`.  For each `j`, let `theta_j=theta(eta_j)>0` be
+the corresponding residual threshold.
+
+Because
+
+\[
+{R_F\over D}\to0,
+\]
+
+choose `j=j(D)->infinity` sufficiently slowly that
+
+\[
+{R_F\over D\,\theta_{j(D)}}\to0.
+\tag{DH.11}
+\]
+
+Set
+
+\[
+\eta_D:=\eta_{j(D)}\to0.
+\]
+
+Then the number of pentagons discarded at this moving threshold remains `o(D)`, so
+(DH.9)--(DH.10) remain valid with `eta=eta_D`.  Call the resulting endpoint-disjoint
+matching `H_diag`.
+
+Every hidden chord is inactive: if its length were exactly one, the two exact tooth
+sides together with the hidden chord would form a forbidden unit equilateral triangle
+and the chord would split the exceptional face.  Therefore (DH.2) holds.
+
+Since `|H_diag|=O(D)` and every gap is at most `eta_D`,
+
+\[
+\sum_{xy\in H_{diag}}(|x-y|-1)
+\le |H_{diag}|\eta_D
+=o(D),
+\]
+
+which proves (DH.4).
+
+## 3. Common-neighbor geometry
+
+For every selected hidden chord `xy`, the parent tooth has an actual common source
+neighbor `a` satisfying
+
+\[
+|a-x|=|a-y|=1.
+\]
+
+By the cosine law, if
+
+\[
+|x-y|=1+\epsilon_{xy},
+\qquad \epsilon_{xy}\to0,
+\]
+
+then the exact contact angle at `a` obeys
+
+\[
+\angle xay
+=2\arcsin\left({1+\epsilon_{xy}\over2}\right)
+={\pi\over3}+O(\epsilon_{xy}).
+\tag{DH.12}
+\]
+
+Thus `H_diag` is not an arbitrary near-contact matching.  It is a linear family of
+inactive near-unit pairs, each locally supported by two exact unit contacts meeting at
+an angle `pi/3+o(1)`.
+
+The hidden endpoints are pairwise disjoint by construction.  If one also needs the
+common neighbors to be disjoint, the existing whole-tooth conflict graph gives the
+weaker but still linear factor `1/13` extraction.
+
+## 4. Current-floor constant
+
+At the audited `g=0.0021` checkpoint,
+
+\[
+C_0=2\sqrt{\Delta_2}+0.0021,
+\]
+
+and the current proof-only scalar floor is
+
+\[
+t_{21}
+={4\over9}\left(\pi+\sqrt{\Delta_2}\right)+0.0017279.
+\]
+
+At `delta=kappa=0`,
+
+\[
+P(t_{21},0,0)
+=0.495214672369096\ldots .
+\]
+
+Therefore
+
+\[
+{P(t_{21},0,0)\over9}
+=0.0550238524854551\ldots,
+\]
+
+which proves (DH.5).
+
+## 5. Relation to the flat-center reflection theorem
+
+The all-flat-center reflection theorem gives one inactive near-pair for every good flat
+center, but its generic assignment matching loses a factor `1/13`.  The pentagon tooth
+geometry already identifies a more structured blocker candidate: the hidden side of a
+two-contact tooth.  Its conflict graph has maximum degree only eight, giving the
+factor `1/9` above.
+
+Thus the correct small-residual near-contact frontier is `H_diag`, not the weaker
+reflection matching.  The reflection theorem still contributes a separate logical
+fact: no flat center can evade near-contact blocking through unloaded status, positive
+weak contacts, or a loaded degree-three contact configuration.
+
+## 6. Remaining obstruction
+
+The endpoint now contains, simultaneously,
+
+```text
+Omega(D) endpoint-disjoint inactive pairs xy,
+|xy|-1 -> 0 uniformly,
+sum(|xy|-1)=o(D),
+and for each xy an exact common unit-contact neighbor a.
+```
+
+A fixed active-set KKT matrix does not see the hidden chord `xy`, so this still does
+not produce a contradiction.  The next useful theorem must exploit the supported-tooth
+geometry: either a simultaneous hinge/exchange theorem for many vertex-disjoint
+almost-equilateral teeth, or a packing/rigidity charge proportional to the number of
+inactive hidden sides rather than to their vanishing total gap.
+
+## 7. Scope audit
+
+- The `1/9` matching count is the existing finite endpoint-conflict bound; only the
+  moving-threshold diagonalization is new here.
+- The small-residual hypothesis is used only to make all but `o(D)` low-`t` pentagons
+  enter arbitrarily tight trapezoid neighborhoods.
+- Every hidden chord is strictly inactive in the original source.
+- The common neighbor and two unit sides are actual source data, not limiting objects.
+- The total activation gap statement follows from `O(D)` matching size and uniform
+  `eta_D->0`; no summability assumption beyond the diagonalization is inserted.
+- Numerical constants inherit the audited proof-only `g=0.0021` lifecycle.
+- No exact unit triangle or strict same-cardinality sub-`D` competitor is produced.
+
+**Disposition:** proof-only structural refinement.  C-II and Level I remain open.

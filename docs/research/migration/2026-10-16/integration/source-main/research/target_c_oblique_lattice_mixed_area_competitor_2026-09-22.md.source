@@ -1,0 +1,204 @@
+# Target C-II — mixed-area competitor for an oblique affine source
+
+**Date:** 2026-09-22  
+**Repository commit:** `84d937ca93decb710b829fc610d46e0d89684988`  
+**State version:** `2026-09-14.audit.51`  
+**Run type:** proof candidate  
+**Target:** C-II, restricted affine-lattice source branch  
+**Classification:** proved candidate awaiting independent audit; noncanonical  
+
+## LEVEL I STATUS
+
+`STILL OPEN`.
+
+This note concerns only a finite subset of one exact oblique lattice. It does not
+identify a general C-II source with such a lattice and does not settle any global
+minimizer quantifier.
+
+## 1. Endpoint and implication chain
+
+The canonical restricted affine theorem `C-OBLIQUE-LATTICE-COMPETITOR` excludes an
+oblique lattice source using a radius-2 fundamental-cell bound. Its remaining
+obstruction is the inverse-diameter shear window
+
+\[
+\sin\theta-\frac{\sqrt3}{2}=O(D^{-1}).
+\]
+
+The new bridge is
+
+```text
+mixed-area cell bound
+  -> exact finite inequality (sin(theta)-sqrt(3)/2) D <= 4 sqrt(3)/pi
+     for every surviving affine-lattice global minimizer
+  -> stronger exclusion of fixed/mesoscopic affine shear
+     (inverse-diameter shear remains open)
+  -> restricted C-II frontier only
+```
+
+## 2. Strongest new result
+
+### Theorem (mixed-area oblique-lattice competitor)
+
+Let \(u,v\) be unit vectors with
+\[
+\frac\pi3<\theta:=\angle(u,v)\le\frac\pi2,
+\qquad s:=\sin\theta,
+\qquad a_0:=\frac{\sqrt3}{2},
+\qquad c:=\frac{2\sqrt3}{\pi},
+\]
+and let \(\Lambda_\theta=\mathbb Zu+\mathbb Zv\). Let
+\(A\subset\Lambda_\theta\) be finite, full-dimensional, with
+\(n=|A|\ge2\) and \(D=\operatorname{diam}(A)\). If
+\[
+\boxed{(s-a_0)D>2c=\frac{4\sqrt3}{\pi}},
+\tag{MA.1}
+\]
+then (A) is not a global minimum-diameter (n)-point configuration.
+
+Equivalently, every finite full-dimensional oblique-lattice global minimizer in this
+angle range must satisfy the exact necessary bound
+\[
+\boxed{
+\left(\sin\theta-\frac{\sqrt3}{2}\right)D
+\le\frac{4\sqrt3}{\pi}.
+}
+\tag{MA.2}
+\]
+
+The reflected statement holds for \(\theta\in[\pi/2,2\pi/3)\) after replacing
+\(v\) by \(-v\). At \(\theta=\pi/3\) and \(2\pi/3\), the lattice itself has
+unit equilateral triangles and is outside the triangle-free affine branch.
+
+### Proof
+
+First, every finite subset of \(\Lambda_\theta\) is unit-separated in the open
+angle range. For a nonzero difference \(iu+jv\), if \(ij\ge0\), then
+\[
+|iu+jv|^2=i^2+j^2+2ij\cos\theta\ge1.
+\]
+If \(ij<0\), write \(a=|i|\), \(b=|j|\). Then
+\[
+|iu+jv|^2=(a-b)^2+2ab(1-\cos\theta)\ge1,
+\]
+with equality in the open angle range only for the basis differences. Thus no
+feasibility is lost in the cell argument.
+
+Let
+\[
+Q=\{\alpha u+\beta v:0\le\alpha,\beta<1\}
+       =[0,u]+[0,v]
+\]
+be the half-open fundamental cell. Its translates by points of \(A\) have disjoint
+interiors and are contained in \(K+Q\), where \(K=\operatorname{conv}A\). Therefore
+\[
+n s\le \operatorname{area}(K+Q).
+\tag{MA.3}
+\]
+
+The exact mixed-area estimate is the key improvement. Minkowski additivity for the
+two segment summands gives
+\[
+\operatorname{area}(K+Q)
+=\operatorname{area}(K)
+ +w_K(u^\perp)+w_K(v^\perp)+\operatorname{area}(Q),
+\tag{MA.4}
+\]
+where \(w_K\) is the width of \(K\). Indeed, adding a segment of unit length in
+direction \(u\) increases area by the width perpendicular to \(u\). Since every width
+of a set of diameter \(D\) is at most \(D\), and \(\operatorname{area}(Q)=s\),
+\[
+\operatorname{area}(K+Q)
+\le \operatorname{area}(K)+2D+s
+\le \frac{\pi D^2}{4}+2D+s.
+\tag{MA.5}
+\]
+Combining (MA.3) and (MA.5),
+\[
+n s\le \frac{\pi D^2}{4}+2D+s.
+\tag{MA.6}
+\]
+
+The canonical strict translated-triangular-lattice comparison (Target B Section
+36.1--36.2 in `docs/targets/target-b/01-jammed-rhombic-branch.md`) gives, for every
+cardinality \(n\),
+\[
+D(n)^2<c(n-1).
+\tag{MA.7}
+\]
+Subtracting \(s\) in (MA.6) and multiplying by (c/s), using
+\(c\pi/4=a_0), yields
+\[
+c(n-1)
+\le \frac{a_0}{s}D^2+\frac{2c}{s}D.
+\tag{MA.8}
+\]
+Set \(\kappa^2=a_0/s<1). Under (MA.1),
+\[
+\frac{a_0}{s}D^2+\frac{2c}{s}D
+<D^2.
+\tag{MA.9}
+\]
+Hence (MA.7) gives \(D(n)<D\), contradicting global minimality of (A).
+
+If (A) is collinear, unit separation gives (n\le D+1), and (MA.7) implies
+\(D^2<cD); this is impossible for the large-(D) regime (and can be checked
+directly for the finitely many remaining values). Thus the full-dimensional hypothesis
+is the only relevant affine case for large sources. The reflected-angle case is the
+same argument after changing the sign of one basis vector. \(\square\)
+
+## 3. Comparison with the canonical restricted theorem
+
+The canonical theorem uses (Q\subset B(0,2)), which gives
+\[
+n s\le \frac{\pi D^2}{4}+2\pi D+4\pi
+\]
+and the sufficient condition
+\((1-\kappa)D>4\kappa+2/\sqrt3\), where
+\(\kappa=\sqrt{a_0/s}). The mixed-area proof replaces the isotropic radius-2
+boundary charge by the exact two-width charge (2D), and the strict
+\(n-1\) triangular comparison cancels the cell-area term (s). The result is the
+single exact threshold (MA.1), or (MA.2) for a survivor.
+
+For example, at \(\theta=\pi/2\) the new threshold is
+\(D>\frac{4\sqrt3/\pi}{1-\sqrt3/2}\approx16.45\), whereas the old sufficient
+threshold is over (70). The numerical comparison is illustrative only; the proof
+uses the symbolic inequalities above.
+
+## 4. Scope and hostile audit
+
+- The cell translates need only have disjoint interiors; boundary overlaps do not
+  affect (MA.3).
+- The estimate is for the actual finite source (A), so contact-isolated points are
+  retained.
+- No source-to-scaffold identification is made. The theorem does not apply to a
+  rhombic grain, a union of affine charts, an interface, a hole, or a macroscopic
+  inactive chamber unless an independent affine-lattice hypothesis is supplied.
+- The strict comparison (MA.7) is used only as the canonical global triangular-lattice
+  competitor; no assertion that the triangular competitor is itself a minimizer is
+  needed.
+- The threshold still permits \(\sin\theta-a_0=O(D^{-1})\). It therefore does not
+  close C-II or Level I, and it does not repair the inverse-diameter shear endpoint.
+- The collinear paragraph is auxiliary; no lower-dimensional source is silently used
+  in the full-dimensional theorem.
+
+## 5. Exact frontier effect
+
+**Classification:** proved candidate awaiting independent audit.
+
+The restricted affine-source necessary condition is strengthened from the canonical
+bound
+\[
+\sin\theta-a_0\le\frac{8+4/\sqrt3}{D}
+\]
+to (MA.2), with constant (4\sqrt3/\pi\approx2.2053). This is a genuine
+source-cardinality strict-competitor theorem, but it leaves the inverse-diameter shear
+window, general C-II sources, the macroscopic-container branch, and all Level-I
+quantifiers unchanged.
+
+## 6. Exact remaining lemma
+
+To use this result for C-II, one still needs a structural theorem placing every
+full-core affine-scale survivor in an exact two-direction lattice chart and then a
+separate argument eliminating the remaining (O(D^{-1})) shear. No such theorem is
+claimed here.

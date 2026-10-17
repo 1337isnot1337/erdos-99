@@ -1,0 +1,162 @@
+# Target C: close all remaining order-4 `(2,2,2,2)` support orbits in the `p=3,m=4` branch
+
+Date: 2026-09-23
+
+Status: exact finite closure of the six previously open stabilizer-order-4 support-set `S_7` orbits in the eight-no-root `k=5,D=-1,d_root=1,p=3,m=4,(2,2,2,2)` branch. Together with the earlier order-4 certificates and the nullity-five hidden-tetrahedron obstruction, this closes every stabilizer-order-4 support geometry in the `(2,2,2,2)` profile. It does not close the full `(2,2,2,2)` profile, the full `p=3` branch, the `k=5` layer, Target C-II, or Erdos Problem #99.
+
+Inputs:
+
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_three_singleton_basis_reduction_2026-09-23.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_tetrahedral_support_compression_2026-09-23.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_nullity_catalog_2026-09-23.md`;
+- the preceding exact `(2,2,2,2)` order-4 shard certificates;
+- the companion verifier committed with this note.
+
+## 1. Exact remaining order-4 support classes
+
+The support catalog has exactly 12 four-support `S_7` orbits with setwise stabilizer order four. Before this run, six were already closed: four in order-4 shard A, one in the single-orbit B1 certificate, and the nullity-five hidden-tetrahedron orbit.
+
+The six remaining support representatives are
+
+```text
+R1 = {1234,1235,1246,3456},
+R2 = {1234,1235,1267,3456},
+R3 = {1234,1235,1267,3467},
+R4 = {1234,1235,1456,4567},
+R5 = {1234,1235,1467,2567},
+R6 = {1234,1256,1357,2467}.
+```
+
+The verifier independently enumerates all 38 four-support orbits, selects the 12 stabilizer-order-4 classes, and checks that those 12 partition exactly into the six previously closed representatives and `R1,...,R6` above. Thus the shard definition does not depend on a manually incomplete list.
+
+Each support orbit contains
+
+```text
+(7!/4) * 3^4 = 102060
+```
+
+labeled `(2,2,2,2)` eight-cycle sets. The six classes therefore cover
+
+```text
+612360
+```
+
+labeled eight-cycle sets. Quotienting the 81 orientation choices on each support set by its order-four stabilizer gives exactly
+
+```text
+159
+```
+
+`S_7` cycle-set orbit representatives in this six-class shard.
+
+## 2. Structural filters
+
+Every surviving state in this arithmetic branch must have exactly three singleton touched root blocks, all other touched root blocks complete, touched-complete root nullity exactly one, singleton coefficient rank three, and generalized weights
+
+```text
+(d1,d2,d3) >= (2,4,5).
+```
+
+For `D=-1,d_root=1,p=3`, the coefficient-nullspace has dimension five and all five directions would have to survive independently modulo the complete-root relation span. Equivalently, the external relation-rank increment must equal five. Any state with increment below five is impossible. Untouched complete blocks cannot increase this quotient increment.
+
+## 3. Exact census
+
+Across the 159 cycle-set orbit representatives, the exact census is
+
+```text
+admissible singleton triples:     36360
+singleton-direction states:      981720
+coefficient-rank-three states:   981720
+generalized-weight states:        42756
+```
+
+Every one of the 42756 generalized-weight-admissible states has external relation-rank increment
+
+```text
+0.
+```
+
+Thus the complete increment census is
+
+```text
+{0: 42756}.
+```
+
+A survivor requires increment five, so no state in any of `R1,...,R6` survives.
+
+> **Theorem.** In the eight-no-root `k=5,D=-1,d_root=1,p=3,m=4,(2,2,2,2)` branch, no state exists whose four-support set has stabilizer order four. Combined with the earlier certificates, the entire stabilizer-order-4 support layer of this profile is empty.
+
+## 4. Exactness and validation
+
+The relation rows are integral and are ranked modulo
+
+```text
+P = 2^127 - 1.
+```
+
+The largest squared Euclidean norm of a relation row in this shard is
+
+```text
+70.
+```
+
+The verifier reuses the base certificate's Lucas-Lehmer check for `P` and verifies
+
+```text
+P^2 > 70^15.
+```
+
+The Hadamard argument therefore rules out modular rank loss in the relevant minors, so the relation ranks are exact over `Q`. The coefficient-rank and generalized-weight filters use exact integer arithmetic.
+
+For validation in this run, a standalone reconstruction of the repository K8 coordinate normal form was first tested on the already-closed B1 orbit `{1234,1235,1246,1257}` and exactly reproduced its committed census
+
+```text
+25 cycle-set orbits,
+4650 admissible singleton triples,
+125550 direction states,
+8177 generalized-weight states,
+external increment census {0:8177},
+maximum relation-row norm^2 70.
+```
+
+The same reconstruction was then executed on all six classes `R1,...,R6`. Their aggregate output was
+
+```text
+159 cycle-set orbits,
+36360 admissible singleton triples,
+981720 direction states,
+981720 coefficient-rank-three states,
+42756 generalized-weight states,
+external increment census {0:42756},
+maximum relation-row norm^2 70.
+```
+
+The committed companion wrapper was syntax-checked before upload. It was not itself executed from a checked-out repository during this run; the executed calculation was the standalone reconstruction using the same coordinate definitions and census logic.
+
+## 5. Remaining target
+
+Before this run the open `(2,2,2,2)` support layer consisted of
+
+```text
+2 stabilizer-order-1 classes,
+8 stabilizer-order-2 classes,
+6 stabilizer-order-4 classes.
+```
+
+This theorem removes all six order-four classes. The `(2,2,2,2)` bottleneck is now exactly
+
+```text
+2 stabilizer-order-1 classes,
+8 stabilizer-order-2 classes,
+```
+
+for ten support-set orbits total.
+
+The `(3,2,2,1)` profile remains open on the 35 support classes with touched nullity four. The other unresolved `k=5` arithmetic branches remain
+
+```text
+D=-2, (d_root,p)=(0,5),
+D=-1, (d_root,p)=(0,6).
+```
+
+The next direct finite target is the external-rank-increment test on the eight remaining order-two `(2,2,2,2)` support classes, preferably in bounded shards.

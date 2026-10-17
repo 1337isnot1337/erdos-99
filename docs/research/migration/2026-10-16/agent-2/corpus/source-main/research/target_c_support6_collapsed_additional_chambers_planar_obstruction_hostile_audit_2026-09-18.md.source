@@ -1,0 +1,53 @@
+# Hostile audit — additional collapsed support-six chamber obstruction
+
+**Disposition:** audited proof-only candidate; C-II remains open.
+
+This audit checks the exact scope of the twelve-chamber obstruction and records the
+ways in which it must not be promoted to a universal collapsed-branch theorem.
+
+## Checks that pass
+
+- The contraction verifier stores all center data as `Fraction` values.  Its
+  Taylor enclosures and interval matrix products are rational.
+- The fixed angles are not treated as approximate variables: the two fixed train
+  angles in each case are the displayed rational decimals.
+- The ten closure residuals and the full interval Jacobian are tested through a
+  rational inverse approximation.  The Banach inequalities give a root in the
+  stated box and uniqueness in that box.
+- Angle normalization is interval-certified.  The script proves strict side
+  ordering, positive five-gap margins, the `2*pi/3` exterior-turn bound, and the
+  two-turn `< pi` bound, rather than reading them from center-point floats.
+- Projective train-angle gaps are interval-classified.  Every pair not retained
+  as angle-eligible is certified to have gap at most `pi/3`; endpoint-sharing
+  pairs are removed separately by the endpoint-fan lemma.
+- The planarization enumeration does not force any eligible crossing.  It checks
+  every subset, then every crossing order on each multiply crossed train and both
+  alternating local crossing rotations.  The rejected Euler face count is exact
+  integer combinatorics.
+
+## Binding limitations
+
+1. The twelve boxes are selected numerical roots.  The verifier proves them, but it
+   does not prove that they exhaust the collapsed closure family or even that the
+   displayed thirteen chambers (including the earlier chamber certificate) are the
+   only strict order chambers.
+2. The planar obstruction imports the audited endpoint-fan and triangle-free
+   hypotheses.  It cannot be used if a future global construction shows that one
+   of those hypotheses is inapplicable to the proposed stopped-train complex; the
+   exact local certificate itself would not settle that issue.
+3. No source points, diameter bars, positive KKT stress, or outer-complex
+   attachment are constructed.  Thus a surviving collapsed chamber is not a
+   global counterexample, and an excluded local chamber is not by itself a
+   C-II closure.
+4. The positive host-deficiency/slack branch is untouched.  The result cannot be
+   inserted into the canonical `s_Z=0` argument without separately proving that
+   the relevant collapsed component lies in one of these boxes.
+
+The corrected compiled enumerator for `ch4/ch5` separately reproduces the exact
+counts `3,545,841` and `660,783`; the Python enumeration covers `ch6/ch7/ch8` with
+117 systems each, `ch9` with 1,027 systems, `ch10` with 507 systems, `ch11` with 1,027 systems, `ch12` with 711 systems, and `ch13` with 507 systems. Its original exploratory version had a duplicated
+vertex adjacency bug and was discarded before these counts were recorded.
+
+The correct classification is therefore **proved candidate awaiting promotion
+audit**, not canonical theorem and not a universal collapsed-support-six
+exclusion.

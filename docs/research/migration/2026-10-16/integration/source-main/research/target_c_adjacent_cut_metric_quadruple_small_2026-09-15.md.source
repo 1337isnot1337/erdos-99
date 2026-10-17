@@ -1,0 +1,463 @@
+# Target C-II — one adjacent O--O pair is also metrically close along the center train
+
+**Date:** 2026-09-15  
+**Status:** proof-only finite/source-level structural strengthening  
+**Scope:** full-core Type-II branch with `t=(q-k)/D<=1.844`; after the current exclusion this is live on `1.843651<t<=1.844`  
+**Dependencies:** audited triple-small adjacent-cut theorem; audited finite train geometry; exact laminar O--O interval rows; audited Section 157 KKT resultants  
+**Certificate:** `research/verify_target_c_adjacent_cut_metric_quadruple_small.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current triple-small theorem forces one consecutive smallest-leaf O--O cut pair
+with three simultaneous small quantities:
+
+- only `O(1)` switching actual diameter rows;
+- switching KKT multiplier mass `O(D^{-1})`; and
+- projective leaf-direction gap `O(D^{-1})`.
+
+That theorem is topological/algebraic.  The chosen pair could still be far apart in the
+actual source.  The same averaging argument has one unused metric budget: all selected
+leaf cuts are crossed by one common center train, and the **total arclength of that
+center train is less than `2D/sqrt(3)`**.
+
+Adding this fourth budget gives a pair that is simultaneously finite-cusp and
+physically close.
+
+### Theorem MQ — metric quadruple-small adjacent pair
+
+For every unbounded survivor sequence in the stated `t<=1.844` scope, for all
+sufficiently large members there are consecutive smallest-leaf outer-to-outer trains
+
+\[
+\tau_i,\tau_{i+1}
+\]
+
+on the good-leaf backbone from the triple-small construction, crossed in that order by
+the same center train `gamma`, such that the following hold simultaneously.
+
+Let `u_i,u_{i+1}` be coherently oriented unit contact directions, let
+
+\[
+N_i
+=\#\{h:\varepsilon_{h,i+1}\ne\varepsilon_{hi}\},
+\]
+
+and let
+
+\[
+B_i
+=\sum_h\beta_h
+|\varepsilon_{h,i+1}-\varepsilon_{hi}|.
+\]
+
+If `x_i,x_{i+1}` are the centers of the two strict rhombi
+
+\[
+\gamma\cap\tau_i,
+\qquad
+\gamma\cap\tau_{i+1},
+\]
+
+and `ell_i` is the arclength of the `gamma` centerline subarc between them, then
+
+\[
+\boxed{N_i<54000+o(1),}
+\tag{MQ.1}
+\]
+
+\[
+\boxed{B_i<{54000\over D}+o(D^{-1}),}
+\tag{MQ.2}
+\]
+
+\[
+\boxed{
+d_{\mathbb{RP}^1}(u_i,u_{i+1})
+<{54000\over D}+o(D^{-1}),
+}
+\tag{MQ.3}
+\]
+
+\[
+\boxed{
+ell_i<540+o(1).}
+\tag{MQ.4}
+\]
+
+In particular
+
+\[
+\boxed{|x_{i+1}-x_i|<540+o(1).}
+\tag{MQ.5}
+\]
+
+The Section-157 cut resultants also satisfy
+
+\[
+\boxed{
+\|F_{i+1}-F_i\|<54000+o(1),
+\qquad
+|A_{i+1}-A_i|<54000+o(1).
+}
+\tag{MQ.6}
+
+The constants are deliberately coarse.  The exact combined average is below
+`53575`, and the corresponding arclength average is below `535.75`.
+
+The new information is the scale in (MQ.4): the two finite-cusp cuts are not only
+adjacent in the complement dual; their actual crossings with the common center train
+are separated by a **uniformly bounded physical path length independent of `D`**.
+
+---
+
+## 1. Reuse the exact triple-small backbone
+
+Use exactly the notation and parameter choice of the hostile-audited triple-small
+adjacent-cut theorem.  It fixes
+
+\[
+\lambda={677\over1000},
+\qquad
+r={61\over125},
+\]
+
+and extracts one center-phase train `gamma` crossing, in order, a path
+
+\[
+P=(\tau_1,\ldots,\tau_m)
+\]
+
+of distinct good smallest-leaf O--O trains with
+
+\[
+\boxed{
+m>pD-o(D),
+}
+\tag{1.1}
+\]
+
+where
+
+\[
+p={278778993\over78216868750}
+=0.0035641799199\ldots .
+\tag{1.2}
+\]
+
+For the real phase offset of leaf `tau_j` from `gamma`, write as before
+
+\[
+a_j
+:=\beta_j-\alpha_\gamma-\frac\pi3>0.
+\tag{1.3}
+\]
+
+The lower center-neighbor density is
+
+\[
+d_{low}
+={9891\over62500}
+=0.158256.
+\tag{1.4}
+\]
+
+The global strict-rhombus angular-defect budget then gives
+
+\[
+\boxed{
+\sum_{j=1}^m a_j
+\le {C_{phase}\over d_{low}}+o(1),
+}
+\tag{1.5}
+\]
+
+where
+
+\[
+C_{phase}
+={\pi^2\sqrt3(2+\sqrt3)\over12}.
+\tag{1.6}
+\]
+
+For adjacent selected leaves,
+
+\[
+d_{\mathbb{RP}^1}(u_i,u_{i+1})
+=|a_{i+1}-a_i|
+\le a_i+a_{i+1}.
+\tag{1.7}
+\]
+
+The interval-row theorem supplies the two global switch budgets
+
+\[
+\sum_{i=1}^{m-1}N_i\le2\pi D+o(D),
+\tag{1.8}
+\]
+
+\[
+\sum_{i=1}^{m-1}B_i\le2+o(1).
+\tag{1.9}
+\]
+
+These are exactly the three budgets used by the preceding theorem.
+
+---
+
+## 2. Every complete train has arclength less than `2D/sqrt(3)`
+
+This is the new metric input.
+
+Fix any complete stopped train `gamma` and orient its unit contact-edge direction by a
+unit vector `u`.  Inside one strict unit rhombus traversed by `gamma`, the train
+centerline joins the midpoints of the two opposite `u`-edges.  That segment is a
+translate of the other unit side vector of the rhombus.  Hence its Euclidean length is
+exactly one.
+
+Orient the centerline so the scalar train height
+
+\[
+h_u(p)=\det(u,p)
+\]
+
+increases.  Triangle-freeness puts the oriented side-angle strictly between `pi/3`
+and `2pi/3`.  Therefore every complete centerline segment advances in height by
+
+\[
+\Delta h_u
+=|\det(u,v)|
+>\frac{\sqrt3}{2}.
+\tag{2.1}
+\]
+
+Every endpoint of every centerline segment is the midpoint of a source contact edge,
+so it lies in `conv(A)`.  The diameter of `conv(A)` equals the source diameter `D`, and
+`h_u` is a unit-Lipschitz linear functional.  Thus the total `h_u` range available to
+the whole train is at most `D`.
+
+If `R_\gamma` is the number of strict rhombi traversed by the train, summing (2.1)
+gives
+
+\[
+R_\gamma{\sqrt3\over2}<D.
+\]
+
+Hence
+
+\[
+\boxed{
+R_\gamma<{2D\over\sqrt3}.
+}
+\tag{2.2}
+
+Since each centerline segment has length one, the entire centerline arclength is
+exactly `R_gamma`.  Therefore
+
+\[
+\boxed{
+\operatorname{len}(\gamma)<{2D\over\sqrt3}.
+}
+\tag{2.3}
+
+No near-disk assumption, phase estimate, or KKT weight is used here.
+
+---
+
+## 3. The selected crossing gaps spend one common arclength budget
+
+Let `x_j` be the center of the crossing rhombus `gamma cap tau_j`.  Because the leaves
+are listed in the order traversed by `gamma`, these points occur in the same order
+along the oriented centerline.
+
+Define
+
+\[
+\ell_i
+:=\operatorname{len}_\gamma[x_i,x_{i+1}]
+\qquad(1\le i<m).
+\tag{3.1}
+\]
+
+The subarcs have disjoint interiors and concatenate from `x_1` to `x_m`.  Therefore
+
+\[
+\sum_{i=1}^{m-1}\ell_i
+\le\operatorname{len}(\gamma)
+<{2D\over\sqrt3}.
+\tag{3.2}
+
+Also Euclidean chord length is at most path length:
+
+\[
+|x_{i+1}-x_i|\le\ell_i.
+\tag{3.3}
+
+This fourth global budget is independent of the phase/switching budgets above.
+
+---
+
+## 4. Average all four costs on the same boundary
+
+For each internal boundary put
+
+\[
+T_i
+:=N_i
++DB_i
++D(a_i+a_{i+1})
++100\ell_i.
+\tag{4.1}
+\]
+
+Every summand is nonnegative.  Equations (1.5), (1.8), (1.9), and (3.2) give
+
+\[
+\begin{aligned}
+\sum_{i=1}^{m-1}T_i
+&\le
+\left(
+2\pi+2
++{2C_{phase}\over d_{low}}
++{200\over\sqrt3}
+\right)D
++o(D).
+\end{aligned}
+\tag{4.2}
+
+Using `m>pD-o(D)`, some internal boundary obeys
+
+\[
+T_i
+\le
+{2\pi+2+2C_{phase}/d_{low}+200/\sqrt3\over p}
++o(1).
+\tag{4.3}
+
+The exact certificate uses the outward rational bounds
+
+\[
+\pi<{355\over113},
+\qquad
+\sqrt3<{17321\over10000},
+\qquad
+\sqrt3>{433\over250},
+\]
+
+and proves
+
+\[
+\boxed{
+{2\pi+2+2C_{phase}/d_{low}+200/\sqrt3\over p}
+<53575<54000.
+}
+\tag{4.4}
+
+Since all four terms in (4.1) are nonnegative, the first three are each below
+`54000+o(1)`, while
+
+\[
+100\ell_i<54000+o(1),
+\]
+
+so
+
+\[
+\ell_i<540+o(1).
+\]
+
+Equations (MQ.1)--(MQ.4) follow, and (3.3) gives (MQ.5).
+
+Finally, the rooted Section-157 resultant identity gives
+
+\[
+\|F_{i+1}-F_i\|\le DB_i,
+\]
+
+and reverse triangle inequality gives
+
+\[
+|A_{i+1}-A_i|\le\|F_{i+1}-F_i\|,
+\]
+
+which proves (MQ.6).
+
+---
+
+## 5. Finite-cusp interpretation
+
+Choose `s in {+1,-1}` so that the ordinary angle between `u_i` and `s u_{i+1}` is the
+projective gap.  Then
+
+\[
+|u_i-su_{i+1}|
+\le d_{\mathbb{RP}^1}(u_i,u_{i+1})
+<{54000\over D}+o(D^{-1}).
+\tag{5.1}
+
+For the exact opposite two-cut multishear with coefficients `(1,-s)`, every diameter
+row spanning both cuts therefore has first relative-displacement coefficient
+`O(D^{-1})`.  Only the switching set can retain a unit-scale coefficient, and by
+(MQ.1)--(MQ.2) that switching set has bounded cardinality and total KKT multiplier
+`O(D^{-1})`.
+
+The previous finite-cusp theorem already gave this normal form with the sharper
+constant `21200`.  The present theorem trades part of that constant for the new metric
+fact
+
+\[
+\boxed{
+\operatorname{len}_\gamma[x_i,x_{i+1}]<540+o(1).
+}
+\]
+
+Thus the exceptional diameter cusps are now tied to two phase-close O--O cuts whose
+actual crossing rhombi with one common center train lie in a uniformly bounded
+transversal corridor.
+
+This still does **not** give a first-order feasible diameter descent: positive KKT
+stationarity and mixed rigidity prohibit any nonzero componentwise nonincreasing
+train-shear direction.  The point is to localize the finite obstruction geometrically
+for a nonlocal replacement or contact-breaking argument.
+
+---
+
+## 6. Why the metric addition matters
+
+Before this theorem, “adjacent” meant only consecutive edges of a complement-dual
+path.  A branch region could be geometrically large, so dual adjacency alone supplied
+no source-scale metric control.
+
+The selected pair now has an actual source path joining its two grid crossings whose
+length is bounded independently of `D`.  Any closing argument may therefore work in a
+fixed-radius neighborhood of that transversal while the global source diameter tends
+to infinity.
+
+Promising uses are:
+
+1. compare the bounded switching diameter-chord set with the two nearby crossing
+   rhombi and the common-center contact chain;
+2. allow a controlled finite number of contacts in this bounded corridor to break,
+   rather than insisting on the locally jammed exact-contact shear space; or
+3. combine the bounded transversal with the diameter-thrackle / interval-support
+   geometry to constrain where switching loaded endpoints can occur.
+
+No such closing implication is claimed here.
+
+---
+
+## 7. Scope audit
+
+- The path `P` and center train `gamma` are exactly those already certified by the
+  triple-small theorem; no new rectangle extraction is assumed.
+- The centerline-length bound uses only exact unit-rhombus geometry and the global
+  diameter `D`.
+- Crossing points `x_j` are rhombus centers, so they lie on the actual train centerline;
+  they need not be source vertices.
+- The `540` bound is on centerline arclength and therefore also bounds Euclidean
+  separation, but it does not bound the diameter of the entire dual strip between the
+  two O--O cuts.
+- The theorem intentionally weakens `21200` to `54000` to obtain a bounded physical
+  transversal on the same pair.
+- No KKT coefficient lower bound, response theorem, or local diameter descent is used.
+
+**Disposition:** proved proof-only metric quadruple-small adjacent-pair theorem. C-II
+and Level I remain open.

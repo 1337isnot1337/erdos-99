@@ -1,0 +1,164 @@
+<!-- theorem-state: {"artifact_id":"ART-E07F9CE44E38","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: preserved pentagon activation and contact-debt obstructions
+
+**Date:** 2026-10-15. **Base:** `d7f1dc7219867ab445046eeab600e0e9e6719352`.
+**State:** `2026-10-10.audit.234`. **Lifecycle:** unreviewed, noncanonical
+consolidation of finite obstructions; the train application below is conditional.
+**Level I / A / B / C-II:** open. No promotion or human peer review is claimed.
+
+This note preserves distinct content from the retained automation sources in
+issue [#986](https://github.com/1337isnot1337/e-99/issues/986), without importing
+their obsolete state transactions or treating their names as evidence of activity.
+The original reports and commit authors remain in the private Git archive.
+OpenAI Codex compared the sources, consolidated the proofs and checked the scope.
+No external literature result is imported.
+
+## Exact sources and consolidation
+
+| Source branch | Exact tip | Content retained here |
+| --- | --- | --- |
+| `automation/target-c-edgewise-pentagon-opening-barrier-2026-10-05` | `17e7722c76a29fee095ceaa293d405ce1e55e736` | Edgewise angular budget, all opening thresholds and sharpness |
+| `automation/target-c-one-edge-pentagon-activation-barrier-2026-10-05` | `5d65517cd9c5dd0b0b252b3046d610f87c988fba` | One-edge case of the stronger budget |
+| `automation/target-c-one-edge-pentagon-activation-barrier-2026-10-05-v2` | `605f42c89b4cbe39789b69bbf2a4307b37b1d64f` | Same report blob as the preceding source |
+| `automation/target-c-pentagon-contact-debt-planarity-2026-10-05` | `c292562bb6c6117ca6acd12a53c9e61bc3bd1c02` | Exact contact-debt count |
+| `automation/target-c-pentagon-contact-debt-planarity-2026-10-05-v2` | `57f508d6427aca7b7fa35eb36d9c66f205d0ce00` | Same report blob as the preceding source |
+| `automation/target-c-short-unit-wall-zero-capacity-2026-10-05-v2` | `6756af64ff67d9dfd9cba059b6e27954aca1c8ee` | Already covered by `C-SHORT-WALL-ZERO-CAPACITY`; cited, not recopied |
+| `automation/target-c-single-train-collar-zero-surplus-2026-10-05-v2` | `5d129524cc9c7bbe65be27ec5d5fb7a18e86098e` | Conditional boundary-vertex cellulation obstruction |
+
+The source paths are `research/target_c_edgewise_pentagon_opening_barrier_2026-10-05.md`,
+`research/target_c_one_edge_pentagon_activation_barrier_2026-10-05.md`,
+`research/target_c_pentagon_contact_debt_planarity_2026-10-05.md`,
+`research/target_c_short_unit_wall_zero_capacity_2026-10-05.md`, and
+`research/target_c_single_train_collar_zero_refill_2026-10-05.md`, respectively.
+No standalone verifier was supplied by these proof-only sources.
+
+## 1. Edgewise activation budget
+
+Let `C=(v_1,...,v_n)` be a simple planar polygon and let `x` be an interior
+point with `|x-v_i|>1` for every vertex. Write `a_i=|v_(i+1)-v_i|` and
+`b_i=min(a_i,2)`. Then
+
+```text
+sum_i asin(b_i/2) > pi.
+```
+
+For `a_i<=2`, put `r_i=|v_i-x|>1`. The principal angle `theta_i` across
+the edge satisfies
+
+```text
+a_i^2=(r_i-r_(i+1))^2+4 r_i r_(i+1) sin^2(|theta_i|/2),
+|theta_i| < 2 asin(a_i/2).
+```
+
+If `a_i>2`, then `|theta_i|<pi=2 asin(1)`: equality would put `x` on
+the edge. Winding about an interior point of a simple polygon gives
+`sum theta_i=+/-2pi`. The triangle inequality proves the strict budget.
+This proof permits nonconvex polygons and does not assume that all angles
+have the same sign.
+
+For a pentagon with exactly `s` original unit sides opened to lengths
+`a_1,...,a_s>1`, all other sides still one, it implies
+
+```text
+sum_j asin(min(a_j,2)/2) > (s+1)pi/6,
+max_j a_j > L_s = 2 sin((s+1)pi/(6s))      (1<=s<=5).
+```
+
+In particular `L_1=sqrt(3)` and `L_2=sqrt(2)`. With exactly two opened
+sides of lengths `a,b`, one also has `a^2+b^2>4`: for `a,b<2` the
+arcsine sum exceeds `pi/2`, giving `a/2>sqrt(1-b^2/4)`; if either
+length is at least two the conclusion is immediate because the other is positive.
+For `n<=6` and all sides at most `sqrt(3)`, the same winding count gives
+at least `7-n` sides longer than one.
+
+The thresholds are sharp as infima. On a circle of radius `r>1` close to
+one, use `5-s` central gaps `alpha=2 asin(1/(2r))` and `s` gaps
+`beta=[2pi-(5-s)alpha]/s`. All gaps are below `pi`, the polygon is
+convex, the first chords are unit, and the remaining chords tend to `L_s`
+as `r` decreases to one. Its center is strictly wall-safe. The limiting
+threshold cannot be attained by a wall-safe point because the inequality is strict.
+All nonadjacent chords are at least one for `r` sufficiently close to one.
+
+If an original unit edge has endpoint displacement difference `delta`, its
+new length is at most `1+|delta|`. Activation therefore requires some
+`|delta|>L_s-1`; after any common Euclidean registration, a uniform
+per-vertex displacement bound `epsilon` requires `epsilon>(L_s-1)/2`.
+This is a necessary finite distortion, not an upper-feasible source motion.
+
+## 2. Internal-contact repayment requires deleted wall adjacencies
+
+Let `A` be a triangle-free unit-separated global diameter minimizer, chosen
+contact-minimal among the relevant triangle-free minimizers. Delete `r>0`
+contact-active labels `R`, and insert `r` new labels `Y` inside `conv(A)`.
+Assume the resulting full set is unit-separated and triangle-free, and
+every new-old distance to `A\R` is **strictly greater than one**.
+Let `c_lost` count old contacts incident with `R`. Then
+
+```text
+c_lost <= kappa(r),
+kappa(0)=kappa(1)=0, kappa(2)=1, kappa(r)=2r-4 for r>=3.
+```
+
+Indeed all new contacts are internal to `Y`. A unit-contact drawing has no
+proper crossings: among the four broken-line endpoint distances across two
+crossing unit segments, one is at most one, and its straight distance is
+strictly smaller. Collinear overlap also contradicts unit separation.
+Thus the triangle-free contact graph is simple planar and has at most
+`kappa(r)` edges. The replacement has diameter at most `D`, hence exactly
+`D` by global minimality. Contact minimality gives the displayed inequality.
+
+If every new point is in the strict interior of `conv(A)` and deletion removes
+an old diameter pair, diameter-pair minimality additionally gives
+`c_lost<kappa(r)`. Interior points cannot be endpoints of a diameter of
+`conv(A)`, so no new diameter replaces the deleted one when contact counts tie.
+
+Suppose the deleted labels lie on pairwise vertex-disjoint unit pentagon
+walls, and let `t` count wall edges with both endpoints deleted. Double
+counting boundary incidences gives `c_lost>=2r-t`. Consequently `t>=4`
+for `r>=3`, or `t>=5` with the strict interior/diameter-loss hypothesis.
+For `r=1,2`, the small contact caps already give a contradiction. Deleting
+one guard per wall or two nonadjacent guards per wall has `t=0` and fails
+this replacement contract. Two adjacent guards per wall need not fail:
+then `r=2p,t=p`, so for large `p` the planar count gives no contradiction.
+New exact contacts to retained old labels are outside this argument.
+
+## 3. Conditional one-cell collar obstruction
+
+Let a polygonal disk be cellulated by one unit pentagon and a finite chain
+of unit rhombi. Assume **every constituent cell vertex is on the outer
+boundary**, and the cells have disjoint interiors. Every point inside a
+cell is within distance one of a cell vertex by the short-wall winding
+lemma; a point on an internal unit edge is within one of its endpoints.
+All these witnesses are outer-boundary vertices, so the disk has no
+strictly wall-safe point.
+
+This retains the valid geometric core of the stopped-train source. Applying
+it to an actual source train still requires its claimed embedding: monotone
+distinct train-edge levels, no extra vertex identifications with the
+pentagon, a simple outer boundary, and all cell vertices on that boundary.
+The source's extraction of these properties is **not independently audited
+here**. A width-two grain can have interior vertices and is not excluded.
+
+## 4. Current dependencies, failure record and bounded review
+
+The angular and planar statements use elementary geometry and Euler's bound.
+Only their source applications use the hypotheses of
+`C-PENTAGON-WALL-DISJOINT-BULK` and `C-EMBEDDED-WALL-REFILL`.
+The already canonical `C-SHORT-WALL-ZERO-CAPACITY` is recorded in the
+[current manifest](../state/theorem-state.yaml); its
+[preserved report](target_c_short_unit_wall_zero_capacity_2026-10-05.md)
+remains the successor of the short-wall automation note.
+No unpromoted source transaction is a canonical premise.
+
+The failed inference is that long width-one trains or a small contact opening
+automatically create refill capacity. These obstructions supply no packet,
+strict diameter competitor, or contradiction for arbitrary canonical sources.
+The missing global implication is a simultaneous full-source construction
+that pays the necessary wall distortion or uses exact new-old contacts,
+while checking every lower pair constraint and every actual upper constraint.
+
+An independent reviewer can bound the assignment to (i) the winding/strictness
+and cyclic sharpness proof, (ii) the small planar contact caps and secondary
+normalization, and (iii) whether a specified actual train satisfies the four
+embedding conditions above. Sections 1--2 need no computation; Section 3's
+source application remains conditional even if the abstract cell argument passes.

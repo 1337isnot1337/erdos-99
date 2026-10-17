@@ -1,0 +1,101 @@
+# Hostile audit — collapsed support-six tangent payment
+
+**Date:** 2026-09-19  
+**Audited note:** `research/target_c_support6_collapsed_tangent_payment_2026-09-19.md`  
+**Certificate:** `research/verify_target_c_support6_collapsed_tangent_payment_2026_09_19.py`  
+**Disposition:** PASS at proof-only scope; C-II remains open.
+
+## 1. The twelve-variable internal matrix is legitimate
+
+A degree-pure support-six active one-anchor component has six degree-five faces. Each face has exactly one outside/activated train incidence and therefore exactly four residual internal incidences. The one-anchor nonzero-component theorem gives relation degree at least four. Hence all four residual incidences are relation edges. Endpoint-pair simplicity makes the relation graph simple, so it is the unique four-regular graph type on six vertices, `K_6` minus a perfect matching, with twelve internal complete trains.
+
+No residual train can leave the six-face component: all four residual incidences of every face have already been used by its four relation neighbors. Thus the component is sealed. This point is required both for the internal-support argument and for importing the sealed common-angle theorem.
+
+## 2. The two-dimensional internal nullity does not assume the certified numerical realization
+
+Freeze every train outside the twelve internal trains. For an internal train joining `F` and `G`, the audited face-closure matrix has opposite endpoint occurrences. Its column is therefore `Jr` in the two rows of one face and `-Jr` in the two rows of the other face, up to the common orientation convention.
+
+Putting the same dual vector `w` on all six face-row blocks annihilates every internal column. The two choices of `w` in a basis of `R^2` are independent. The internal closure matrix is square `12 x 12`, so
+
+\[
+\operatorname{rank}C_K\le10,
+\qquad
+\dim\ker C_K\ge2.
+\]
+
+This argument is symbolic and configuration-independent. It does not use the previously certified local root and does not require `rank C_K=10`. The certificate separately checks the `K_6\setminus M` edge count/degree pattern and the signed endpoint cancellation.
+
+## 3. Internal kernel vectors really are global contact infinitesimal flexes
+
+A vector in `ker C_K`, extended by zero on all other complete trains, closes every exceptional face: the six block faces close by the kernel equation and all other exceptional faces are unchanged. Strict rhombi close automatically because a complete train has one angular rate along its full length. The audited train-angle closure theorem then gives a path-independent global contact infinitesimal flex.
+
+No hidden boundary equation is omitted. The six outside-anchor trains are frozen, and each internal complete train has exactly the two exceptional endpoints already in `K`; intermediate rhombi impose no additional scalar closure rows.
+
+The resulting flex cannot be a nonzero Euclidean rotation because a Euclidean rotation gives the same nonzero angular rate to every train, whereas these vectors have all outside-anchor rates and every train outside `K` equal to zero. Translation has zero edge-vector derivative and was already quotiented in the train-angle model. Thus the full two-dimensional internal nullity survives in `V_C`.
+
+## 4. Independence from the pair-shield tangent is supported by an `R`-edge witness
+
+The pair-shield/peeled tangent freezes residual-internal relation-graph edges. Its `n_2` coordinates lie on two-anchor faces. Its `p_U` one-anchor coordinates use mutually parallel links, which by definition are not edges of the nonparallel relation graph `R`.
+
+Every nonzero internal kernel vector changes at least one of the twelve `R[K]` train coordinates. Therefore no nonzero vector in `W_K` lies in the pair-shield tangent. Distinct collapsed components have disjoint relation-train sets, so their `W_K` spaces are mutually independent.
+
+This is the same coordinate-witness logic already hostile-audited for sealed-component rotation flex. It does not rely on geometric supports of vertex velocities being disjoint; complete trains can pass through rhombi outside the six exceptional faces without invalidating the train-coordinate argument.
+
+## 5. The sealed common-angle direction adds one more coordinate before the global-rotation quotient
+
+The existing sealed-component theorem applies because the degree-pure six-face block is sealed. Its common-angle motion changes every internal `R[K]` train at rate one and also changes the six outside-anchor trains.
+
+The all-ones internal vector is not in `W_K`. At a block face the four oriented internal unit sides sum to the negative of the nonzero anchor side. If all four internal angular rates are one while the anchor is frozen, the linearized face closure is `-J a_F`, which is nonzero. Therefore no nonzero scalar multiple of the internal all-ones vector belongs to `ker C_K`.
+
+Consequently each collapsed block supplies two internal-only tangent directions plus its sealed common-angle direction. Across several blocks these directions remain independent in relation-train coordinates. The only conservative quotient loss retained is exactly the one already retained in the sealed-component theorem: a possible one-dimensional combination equal to global all-train rotation. Hence
+
+\[
+d_C\ge M_0+2c_6+(c_6-1)_+.
+\]
+
+The audit does not remove that `-1` allowance. Doing so would require ruling out the global-rotation overlap in the full train system, which is unnecessary here.
+
+## 6. The component count uses the completed support-six classification at the correct scope
+
+The active one-anchor fiber has dimension at most the number `c_*` of active relation components. Support five is excluded. A support-six active component is either:
+
+1. degree-pure, in which case the completed noncollapsed reciprocal exclusions force it to be collapsed and it is counted by `c_6`; or
+2. not degree-pure, in which case it contains a degree-at-least-six residual face and consumes at least one unit of `x_U`.
+
+Different active components have disjoint face sets, so the second class has size at most `x_U`. Every other active component has support at least seven. Thus
+
+\[
+n_1\ge6c_6+6c_6^++7c_7,
+\qquad
+c_6^+\le x_U,
+\]
+
+which gives
+
+\[
+c_*\le {n_1+c_6+x_U\over7}.
+\]
+
+Combining with `sigma_C<=2n_0+n_2+d_1` and `d_1<=c_*` proves CT.2. No claim is made that support-six components with degree excess are collapsed or locally regular.
+
+## 7. CT.3 and CT.4 are exact relaxations, not a claimed new scalar closure
+
+From CT.1, if `c_6>=1`, then `d_C-M_0>=3c_6-1`; for `c_6=0` the following inequality is trivial. Hence universally
+
+\[
+c_6\le{d_C-M_0+1\over3}.
+\]
+
+Substitution in CT.2 gives CT.3. The aggregate coefficient comparison in CT.4 is nonnegative term by term and uses only `x_U<=Q-f`, which follows from `x_A+x_U=Q-f`.
+
+The exact verifier exhaustively checked 370146 admissible small component/count states and the rational coefficient identities. The finite enumeration is a regression only; the note contains the general algebraic proof.
+
+The note correctly does **not** claim that CT.4 improves the current live quarter-slope or degree-weighted scalar frontier. Eliminating the structural populations can make those existing inequalities stronger. The result is a change in the structural endpoint: the last degree-pure support-six equality block must now pay directly into `d_C`.
+
+## 8. Nonlinear scope is correctly limited
+
+The two internal-only dimensions are infinitesimal. The prior exact local collapsed realization has a regular two-dimensional anchor-fixed finite family, but that does not prove that every collapsed block is a regular point of the nonlinear closure map. No universal two-dimensional finite manifold is asserted here.
+
+The only finite motion imported universally is the already-audited one-dimensional sealed common-angle rotation. Therefore this note does not close C-II and does not justify a theorem-state promotion by itself.
+
+**Audit disposition:** PASS. Degree-pure collapsed support-six blocks force two localized contact-tangent dimensions and one sealed common-angle mechanism, with at most the existing single global-rotation loss across all such blocks. The component bookkeeping then yields CT.1--CT.4. The remaining issue is to convert the enlarged full contact tangent into a finite diameter-decreasing/source-preserving motion or to obstruct positive diameter locking on that tangent.

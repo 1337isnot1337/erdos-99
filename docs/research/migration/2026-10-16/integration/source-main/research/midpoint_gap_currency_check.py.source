@@ -1,0 +1,87 @@
+#!/usr/bin/env python3
+"""Numerical diagnostics for the 2026-09-10 midpoint-gap currency report.
+
+Mathematical claim being checked numerically:
+    pi-Q(lambda) = (pi+2/pi) lambda^2,
+where
+    Q(x)=2 asin(x/2)-x sqrt(1-x^2/4).
+The report proves that the unique root in (0,1) is a necessary asymptotic lower
+threshold for L/D=(e_BB+2s_C)/D, and excludes exact saturation.
+
+Encoded assumptions:
+- only the scalar defining equation and monotonicity diagnostics;
+- optional sampling of the strict-convexity/superadditivity function Q.
+
+Omitted assumptions:
+- no source coordinates, contact graph, diameter graph, KKT stress, OP pockets,
+  finite-D errors, or global-optimality certificate are encoded.
+
+Arithmetic: Python binary64 floating point.  A successful run reproduces displayed
+decimals and basic scalar regressions only.  It does not prove MG.1/MG.2 or Level I.
+"""
+
+from __future__ import annotations
+
+import math
+
+PI = math.pi
+
+
+def qfun(x: float) -> float:
+    return 2.0 * math.asin(x / 2.0) - x * math.sqrt(1.0 - x * x / 4.0)
+
+
+def residual(lam: float) -> float:
+    return PI - qfun(lam) - (PI + 2.0 / PI) * lam * lam
+
+
+def bisect(lo: float, hi: float, steps: int = 100) -> float:
+    flo = residual(lo)
+    fhi = residual(hi)
+    if flo * fhi >= 0.0:
+        raise ValueError("root is not strictly bracketed")
+    for _ in range(steps):
+        mid = (lo + hi) / 2.0
+        fm = residual(mid)
+        if flo * fm > 0.0:
+            lo = mid
+            flo = fm
+        else:
+            hi = mid
+            fhi = fm
+    return (lo + hi) / 2.0
+
+
+def main() -> None:
+    root = bisect(0.8, 1.0)
+    area_floor = (PI - qfun(root)) / 4.0
+    area_upper = (PI / 4.0 + 1.0 / (2.0 * PI)) * root * root
+
+    print(f"lambda_MG={root:.16f}")
+    print(f"Q(lambda_MG)={qfun(root):.16f}")
+    print(f"area_floor={area_floor:.16f}")
+    print(f"area_upper={area_upper:.16f}")
+    print(f"residual={residual(root):.3e}")
+
+    assert 0.89 < root < 0.90
+    assert abs(area_floor - area_upper) < 2e-15
+
+    # Scalar monotonicity regression.
+    previous = residual(0.0)
+    for j in range(1, 1001):
+        lam = j / 1000.0
+        current = residual(lam)
+        assert current < previous
+        previous = current
+
+    # Superadditivity regression for Q on the domain used by the proof.
+    for i in range(101):
+        x = i / 200.0
+        for j in range(101):
+            y = j / 200.0
+            if x + y <= 1.0:
+                assert qfun(x) + qfun(y) <= qfun(x + y) + 2e-15
+
+
+if __name__ == "__main__":
+    main()

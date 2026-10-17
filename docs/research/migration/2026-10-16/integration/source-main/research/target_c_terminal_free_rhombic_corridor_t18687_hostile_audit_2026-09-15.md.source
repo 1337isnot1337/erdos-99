@@ -1,0 +1,96 @@
+# Hostile audit — terminal-free rhombic corridor at `t<=1.8687`
+
+**Date:** 2026-09-15  
+**Reviewed:** `research/target_c_terminal_free_rhombic_corridor_t18687_2026-09-15.md`  
+**Verdict:** **PASS at the stated proof-only scope.**  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+This audit attacks the places where the ladder-cell reduction could silently fail: a transverse train might leave the strip before its second row crossing, a terminal might lie on a selected centerline and evade the cell count, or a nonquadrilateral face might straddle several cells without being terminal-charged.
+
+## 1. The selected strip is a topological quadrilateral — PASS
+
+The joint cusp uses two consecutive trains from the live O--O complement-dual path. Their midpoint paths are disjoint proper crosscuts of the closed outer-face disk joining the same two outer-boundary arcs. Their intervening complement region therefore has boundary consisting of the two row-centerline arcs and two global outer-boundary subarcs.
+
+No claim is made that other unselected train centerlines are absent.
+
+## 2. A common column gives a proper row-to-row crosscut — PASS
+
+Every `b in B_+` crosses each selected row exactly once. Between those crossings its connected midpoint path stays in the intervening complement region. It cannot reach a physical terminal before the second crossing: the complete train midpoint path stops at its terminal edge midpoint and cannot later resume. Hence it cannot leave through the outer face and re-enter.
+
+The between-row portion is therefore a simple proper crosscut joining the two row sides. Distinct `B_+` trains are pairwise noncrossing, so these crosscuts are disjoint and have one common order on the two row sides. Standard disk topology gives `M+1` ladder cells, only the two end cells touching the global outer-boundary sides.
+
+## 3. Terminal occurrences do not lie on internal selected centerlines — PASS
+
+A source vertex never lies on a train centerline. A centerline meets the contact graph at midpoints of its own train edges and otherwise runs through strict-rhombus interiors.
+
+If a contact-edge midpoint on an internal segment of `b` were terminal, that edge would terminate the unique train using its opposite-edge rhombus direction, namely `b`; but `b` continues to its second row crossing. A different train meets `b` only at a strict-rhombus interior crossing, not at a contact-edge midpoint. The same applies to the selected row-centerline interiors.
+
+Thus each bounded terminal occurrence in the strip lies in one open ladder cell. Outer-face terminal occurrences lie only on the two global boundary sides and therefore only in the two end zones. Hence
+
+\[
+\#\{\text{bad internal cells}\}\le L_i.
+\]
+
+## 4. Longest clean-run combinatorics — PASS
+
+There are `M-1` internal cells and at most `L_0=1,108,999` bad cells. Removing them leaves at most `L_0+1` clean runs. The longest has at least
+
+\[
+{M-1-L_0\over L_0+1}
+\]
+
+cells. With `M>0.1567D-o(D)`, the coefficient is exactly
+
+\[
+{0.1567\over1,109,000}
+={1567\over11,090,000,000}
+=1.4129846708\ldots\times10^{-7}.
+\]
+
+The exact verifier checks the stated rounded lower bound.
+
+## 5. No terminal implies no bounded exceptional face — PASS
+
+Selected centerlines pass through strict rhombi and do not enter a bounded nonquadrilateral face. By Sections 2--3 they also cannot touch such a face at a source vertex or a terminal edge midpoint. Hence every bounded nonquadrilateral face in the parent strip lies wholly in one ladder cell.
+
+Every side occurrence of a bounded nonquadrilateral face is a stopped-train terminal occurrence: if the opposite face is a rhombus, the non-singleton train stops there; if neither side is rhombic, the edge is a singleton train. Thus any such face makes its cell bad.
+
+A clean cell has no bounded nonquadrilateral face. Under the C-II triangle-free hypothesis a bounded triangular unit-contact face is impossible, and every bounded quadrilateral face is a strict unit rhombus. The pure-rhombic face conclusion is valid.
+
+## 6. Internal cells have no actual diameter endpoint — PASS
+
+Canonical force-hull geometry proves every actual diameter endpoint is an extreme source-hull vertex and lies on the global outer boundary. Source vertices never lie on train-centerline sides.
+
+Every cell between consecutive transverse crosscuts is internal to the strip and disjoint from both global outer-boundary sides. Hence it contains no actual diameter endpoint. This is a topological exclusion, not an average count.
+
+The theorem correctly allows an active diameter chord with endpoints outside the corridor to pass geometrically across it.
+
+## 7. Near-triangular microcell averaging — PASS
+
+For each oriented common column put
+
+\[
+x_b=\delta_{0b}+\delta_{1b}>0.
+\]
+
+The joint cusp gives `sum x_b<J=1,109,000`. If a clean run has `k` cells and boundary columns `c_0,...,c_k`, then
+
+\[
+\sum_{j<k}(x_{c_j}+x_{c_{j+1}})
+\le2\sum_bx_b<2J.
+\]
+
+Thus one clean cell has adjacent-pair defect below `2J/k`. Combining the exact clean-run density gives
+
+\[
+15,697,268,666,241.225\ldots
+<1.57\times10^{13}.
+\]
+
+Every individual corner defect is nonnegative and hence bounded by the same sum. On the common oriented branch the column phase difference is the difference of two defects against one fixed row, so its absolute value is at most their sum. Equations (RC.4)--(RC.5) follow.
+
+## 8. No unsupported flex claim — PASS
+
+A terminal-free rhombic corridor is not automatically a compactly supported framework flex. Complete-train angular rates propagate outside the cell, and active diameter rows can connect vertices outside the corridor. The candidate explicitly preserves this limitation.
+
+**Final verdict:** the macroscopic terminal-free corridor and terminal-free near-triangular microcell follow from the merged joint cusp with no new unproved metric input. C-II remains open.

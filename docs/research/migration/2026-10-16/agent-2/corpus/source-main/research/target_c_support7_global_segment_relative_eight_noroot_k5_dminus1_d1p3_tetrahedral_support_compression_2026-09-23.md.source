@@ -1,0 +1,280 @@
+# Target C: tetrahedral-support compression in the eight-no-root `k=5,D=-1,d_root=1,p=3` branch
+
+Date: 2026-09-23
+
+Status: proof-level structural reduction of the remaining three-singleton-basis branch. This does not close the branch, the full `k=5` layer, Target C-II, or Erdos Problem #99. No exhaustive census is claimed.
+
+Input:
+
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_three_singleton_basis_reduction_2026-09-23.md`.
+
+That note proves that every surviving state has exactly three singleton root blocks `S={s_1,s_2,s_3}`, no pair block, no touched empty block, every other touched root block complete, and touched-complete relation nullity at most one.
+
+The point here is to use the complete-root relation matroid before doing any coefficient-plane enumeration.
+
+## 1. Root complete-block rows are triangle boundaries
+
+Identify the 35 root blocks with the 3-subsets of `[7]={1,...,7}`. In the standard 15-dimensional `T` coordinate system, indexed by the edges of `K_6` after rooting at vertex `1`, the complete-block relation row for a root block is, up to the harmless common factor `2`, the ordinary oriented triangle boundary:
+
+- for `{1,a,b}` it is the edge basis vector `e_ab`;
+- for `{a,b,c}` with `1` absent it is `e_ab-e_ac+e_bc`, up to orientation.
+
+Thus the complete-block relation matroid is the row matroid of the triangle-boundary map of the simplex on seven vertices.
+
+In particular, if `F` is a 4-subset of `[7]`, the four root blocks which are the 3-faces of `F` satisfy the tetrahedron-boundary relation
+
+```text
+sum_{b subset F, |b|=3} epsilon(F,b) H_b = 0,
+```
+
+with the usual alternating signs.
+
+Every no-root four-cycle has one underlying 4-vertex support `F`, and all three four-cycle orientations on the same `F` touch exactly these same four root blocks.
+
+## 2. Boundary dependencies supplied by the used 4-supports
+
+Let
+
+```text
+mathcal F
+```
+
+be the set of distinct 4-vertex supports occurring among the eight selected no-root cycles, and write
+
+```text
+m = |mathcal F|.
+```
+
+For each `F in mathcal F`, let `z_F` be its signed tetrahedron-boundary dependency on the 35 root-block rows. Let
+
+```text
+Z(mathcal F) = span{z_F : F in mathcal F}
+```
+
+and put
+
+```text
+r_F = dim Z(mathcal F).
+```
+
+Let `T` be the set of all touched root blocks. Every face of every `F in mathcal F` lies in `T`, so every vector of `Z(mathcal F)` is a dependency among the rows `H(T)`.
+
+The preceding three-singleton reduction says that
+
+```text
+C_touch = T \ S
+```
+
+is complete and
+
+```text
+nullity H(C_touch) <= 1.
+```
+
+Restrict a dependency in `Z(mathcal F)` to the three singleton coordinates `S`. This gives a linear map
+
+```text
+rho_S : Z(mathcal F) -> Q^S.
+```
+
+Its kernel consists of tetrahedral boundary dependencies whose singleton coefficients are all zero, hence genuine dependencies among the remaining complete rows `H(C_touch)`. Therefore
+
+```text
+dim ker rho_S <= nullity H(C_touch) <= 1.
+```
+
+Since `rank rho_S <= 3`, rank-nullity gives
+
+```text
+r_F <= 4.
+```
+
+This is the main new restriction.
+
+## 3. Small-rank tetrahedron-boundary lemma
+
+### Lemma
+
+For distinct 4-subsets `F_1,...,F_m` of a vertex set, let `z_i=partial F_i` be their oriented triangle-boundary 2-chains over `Q`.
+
+1. Any four distinct `z_i` are linearly independent.
+2. Five distinct `z_i` are dependent if and only if the five `F_i` are exactly the five 4-subsets of one fixed 5-vertex set. In that case their span has dimension four.
+3. Any collection of at least six distinct tetrahedron boundaries has span dimension at least five.
+
+### Proof
+
+Suppose a nonzero relation
+
+```text
+sum_i lambda_i z_i = 0
+```
+
+has minimal support. Pick one tetrahedron `F_i` in that support. Each of its four triangular faces has nonzero coefficient in `lambda_i z_i` and therefore must be cancelled by another tetrahedron in the support. Two distinct tetrahedra share at most one triangular face. Hence at least four other tetrahedra are required. This proves that every circuit has size at least five, and therefore every set of at most four boundaries is independent.
+
+Now suppose five boundaries are dependent. By the preceding paragraph the relation uses all five. Fix
+
+```text
+F_0={a,b,c,d}.
+```
+
+Its four triangular faces must be cancelled by the other four tetrahedra, one face per tetrahedron. Thus, after reindexing, those four tetrahedra have the form
+
+```text
+{b,c,d,x_a},
+{a,c,d,x_b},
+{a,b,d,x_c},
+{a,b,c,x_d}.
+```
+
+Consider the three faces containing `x_a` in the first of these tetrahedra. They must be cancelled by the other three tetrahedra. Cancellation of a triangular face containing `x_a` forces the corresponding other tetrahedron to contain `x_a`. Hence
+
+```text
+x_a=x_b=x_c=x_d=:x.
+```
+
+The five tetrahedra are therefore exactly the five 4-faces of the 4-simplex on `{a,b,c,d,x}`. Their alternating boundary relation is the unique dependence, so the span has dimension four.
+
+Finally, take at least six distinct tetrahedra. If some five are independent, the span already has dimension at least five. Otherwise choose any five. By the five-element classification they are the five 4-faces of a fixed 5-set `W` and span a four-dimensional space supported entirely on triangles contained in `W`. A sixth distinct tetrahedron uses a vertex outside `W`, so its boundary contains a triangle with that outside vertex and cannot lie in that four-dimensional span. Hence the rank is at least five. `square`
+
+## 4. Exact support-count consequence
+
+Section 2 gives `r_F<=4`. The lemma therefore implies
+
+```text
+m <= 5.
+```
+
+There are only three no-root four-cycle orientations on a fixed 4-vertex support. Eight distinct no-root cycles therefore need at least
+
+```text
+ceil(8/3)=3
+```
+
+distinct supports. Hence
+
+```text
+boxed: 3 <= m <= 5.
+```
+
+Moreover, if `m=5`, the five supports must be exactly the five 4-subsets of one common 5-vertex set.
+
+The multiplicities of the eight cycles among their underlying supports are consequently restricted to the following partitions:
+
+```text
+m=3: (3,3,2);
+
+m=4: (3,3,1,1), (3,2,2,1), or (2,2,2,2);
+
+m=5: (3,2,1,1,1) or (2,2,2,1,1).
+```
+
+No eight-cycle configuration using six, seven, or eight distinct 4-vertex supports can occur in this branch.
+
+This removes the largest support-level part of the finite search before any singleton direction or coefficient row is considered.
+
+## 5. Singleton-incidence rank conditions
+
+The same restriction map gives more information.
+
+### `m=4`
+
+The four tetrahedron boundaries are independent, so `dim Z(mathcal F)=4`. Since `dim ker rho_S<=1`,
+
+```text
+rank rho_S = 3.
+```
+
+Equivalently, the three singleton triangles give three linearly independent signed face-incidence functionals on the four used tetrahedra.
+
+Thus an `m=4` candidate can be rejected using only the support set and singleton triple whenever that `3 x 4` signed incidence matrix has rank at most two.
+
+### `m=3`
+
+Here `dim Z(mathcal F)=3`, so
+
+```text
+rank rho_S >= 2.
+```
+
+Thus the three singleton triangles must have signed incidence rank at least two on the three used tetrahedra.
+
+These are necessary conditions only: the touched triangle complex can have additional dependencies not generated by the selected tetrahedron boundaries.
+
+## 6. The `m=5` branch reduces to a five-vertex model
+
+Suppose `m=5`. Let `W` be the forced common 5-vertex set. The five used tetrahedra are all 4-subsets of `W`, so their touched root blocks are exactly all ten triangles of `W`:
+
+```text
+T = binom(W,3).
+```
+
+The ten triangle-boundary rows have rank six and nullity four. The five tetrahedron boundaries span this entire four-dimensional dependency space. Therefore `rank rho_S=3` is equivalent to
+
+```text
+nullity H(T\S)=1.
+```
+
+There is a simple exact classification of the three forbidden singleton triangles.
+
+### Lemma
+
+For three triangles `S` in a fixed 5-vertex set `W`, the remaining seven triangle boundaries have rank five instead of six if and only if all three triangles in `S` contain one common edge.
+
+Equivalently,
+
+```text
+rank H(binom(W,3)\S)=6
+```
+
+if and only if the three singleton triangles do not all share a common 2-subset.
+
+### Proof
+
+If the three missing triangles all contain an edge `ab`, then they are exactly the three triangles of `W` containing `ab`. Every remaining triangle boundary has zero `ab` coordinate, so the rank drops below six.
+
+Conversely, use the tetrahedron boundary relation as the closure rule: if three faces of a 4-subset are in the span, then its fourth face is also in the span. Up to relabeling the vertices of `W`, a triple of missing triangles which does not have a common edge has one of the following three forms:
+
+```text
+{123,124,134},
+{123,124,135},
+{123,124,345}.
+```
+
+For the first form, `123` is the unique missing face of tetrahedron `1235`; recover it. Then `124` is the unique missing face of `1245`, and finally `134` is recovered.
+
+For the second form, `124` is the unique missing face of `1245`; after recovering it, `123` is the unique missing face of `1234`, and then `135` is recovered.
+
+For the third form, `123` is the unique missing face of `1235`; then `124` is the unique missing face of `1245`, and finally `345` is recovered.
+
+Thus in every non-common-edge case all ten triangle boundaries lie in the span of the seven present ones. Their rank is therefore the full rank six. `square`
+
+Thus the `m=5` branch has the additional necessary condition
+
+```text
+boxed: the three singleton root blocks are triangles of W and do not share one common edge.
+```
+
+## 7. Reduced finite target
+
+The previous finite target enumerated an arbitrary eight-cycle set, three singleton blocks, and singleton directions. It can now be split before coefficient arithmetic into only these support cases:
+
+1. three used 4-supports with multiplicity `(3,3,2)` and singleton incidence rank at least two;
+2. four used 4-supports with one of the three listed multiplicity profiles and singleton incidence rank exactly three;
+3. the five tetrahedra of a single 5-vertex set, with multiplicity `(3,2,1,1,1)` or `(2,2,2,1,1)`, where the three singleton triangles do not share an edge.
+
+Only after these tests is it necessary to choose the three singleton root-row directions, form the three singleton coefficient rows, and impose the generalized weights
+
+```text
+(d_1,d_2,d_3) >= (2,4,5).
+```
+
+The exact remaining bottleneck in the `D=-1,k=5,d_root=1,p=3` branch is therefore a bounded three/four/five-tetrahedron direction problem, not an unrestricted eight-element subset of the 105 no-root cycles.
+
+The other open `k=5` arithmetic branches remain
+
+```text
+D=-2, (d_root,p)=(0,5),
+D=-1, (d_root,p)=(0,6).
+```
+
+No theorem-state authority file is changed by this note.

@@ -1,0 +1,201 @@
+# Target C support-seven H6: all-root interior distance domination
+
+Date: 2026-09-19
+
+Status: exact geometric necessary condition inside the generic H6 branch. The theorem-state authority is unchanged. C-II remains open.
+
+## Result
+
+Let the reciprocal convex hull be the strict convex hexagon
+
+\[
+H=\{0,1,2,3,4,5\}
+\]
+
+in cyclic order, with reciprocal interior vertices `6,7`. Let `t in {6,7}` be an interior target and let `r != t` be any other reciprocal vertex, including the other interior vertex.
+
+Look from `r` in the direction of `t`. In the generic H6 branch this ray is strictly bracketed by the rays from `r` to two consecutive hull vertices `a,b`, and `ab` is the hull edge hit by the ray after it passes through `t`. Then
+
+\[
+\boxed{
+|y_t-y_r|<\max\bigl(|y_a-y_r|,|y_b-y_r|\bigr).
+}
+\tag{1}
+\]
+
+This gives one exact two-branch distance-order obstruction for every ordered pair `(r,t)` with `t` interior and `r != t`. There are
+
+\[
+2\cdot7=\boxed{14}
+\]
+
+such root-target pairs.
+
+The ground-root result in `target_c_support7_h6_interior_radius_order_2026-09-19.md` is only the `r=0` special case. Thus the generic H6 geometry supplies twelve additional root-target restrictions: two at each hull root `1,...,5`, plus one at each interior root `6,7` for the other interior point.
+
+## Geometric proof
+
+Let
+
+\[
+P=\operatorname{conv}(y_0,\ldots,y_5).
+\]
+
+The target `y_t` lies strictly inside `P`, while the root `y_r` lies in `P` and is distinct from `y_t`. Consider the ray
+
+\[
+R=\{y_r+s(y_t-y_r):s\ge0\}.
+\]
+
+Because `y_t` is interior, the ray remains in `P` for some interval beyond `s=1`. Compactness of `P` gives a last point `q` of `R` in `P`, with
+
+\[
+q=y_r+s_*(y_t-y_r),\qquad s_*>1.
+\]
+
+Generic reciprocal noncollinearity prevents `q` from being a hull vertex, so `q` lies in the relative interior of one hull edge `ab`. Hence
+
+\[
+q=(1-u)y_a+u y_b,\qquad 0<u<1.
+\]
+
+The ray reaches `q` after `t`, so
+
+\[
+|y_t-y_r|<|q-y_r|.
+\tag{2}
+\]
+
+Also
+
+\[
+q-y_r=(1-u)(y_a-y_r)+u(y_b-y_r).
+\]
+
+The two vectors `y_a-y_r` and `y_b-y_r` are not positive collinear. Therefore strict triangle inequality gives
+
+\[
+|q-y_r|
+< (1-u)|y_a-y_r|+u|y_b-y_r|
+\le \max\bigl(|y_a-y_r|,|y_b-y_r|\bigr).
+\tag{3}
+\]
+
+Combining (2) and (3) proves (1).
+
+The bracketing claim is also intrinsic. If `r` is a hull vertex, the fan from `r` to the other hull vertices triangulates the convex hexagon, and the ray to `t` lies strictly inside one fan triangle `rab`. If `r` is interior, the six rays from `r` to consecutive hull vertices triangulate the polygon into six triangles, and the ray to the other interior target again lies strictly inside one such triangle. Thus `a,b` are read directly from the radial order at `r`; no coordinate reconstruction is needed.
+
+## Affine angle form
+
+For distinct `r,i,j`, define
+
+\[
+A^{(r)}_{ij}=\angle r i j,
+\qquad
+D^{(r)}_{ij}=A^{(r)}_{ij}-A^{(r)}_{ji}.
+\]
+
+In the nondegenerate triangle `rij`, the sine law gives
+
+\[
+\frac{|y_j-y_r|}{|y_i-y_r|}
+=
+\frac{\sin A^{(r)}_{ij}}{\sin A^{(r)}_{ji}}.
+\]
+
+Since
+
+\[
+A^{(r)}_{ij}+A^{(r)}_{ji}
+=\pi-\angle i r j<\pi,
+\]
+
+the same sine-difference argument used for the ground-radius theorem gives
+
+\[
+\boxed{
+\operatorname{sgn}D^{(r)}_{ij}
+=
+\operatorname{sgn}\bigl(|y_j-y_r|-|y_i-y_r|\bigr).
+}
+\tag{4}
+\]
+
+Applying (4) to (1) yields the exact disjunction
+
+\[
+\boxed{
+D^{(r)}_{a t}<0
+\quad\text{or}\quad
+D^{(r)}_{b t}<0.
+}
+\tag{5}
+\]
+
+On a complete-angle H6 cell, every ordinary triangle angle is an integer-affine sum of reciprocal ray-gap variables. Hence every quantity in (5) is affine in the repository's 85-variable complete-angle lift.
+
+For finite certification it is safe to close the branches:
+
+\[
+D^{(r)}_{a t}\le0
+\quad\text{or}\quad
+D^{(r)}_{b t}\le0.
+\tag{6}
+\]
+
+The realized inequality in (5) is strict, so the two closed halfspaces in (6) still cover every genuine realization. They can therefore be combined directly with the existing exact rational Farkas machinery.
+
+## Finite branch cover
+
+There are fourteen root-target restrictions. Choosing one bracketing endpoint for each gives at most
+
+\[
+\boxed{2^{14}=16384}
+\]
+
+closed affine branch products covering every generic H6 metric realization.
+
+This is not a claim that all 16,384 products are distinct or must be solved independently. A branch-and-bound implementation should add the inequalities one root at a time and stop as soon as an exact Farkas contradiction appears.
+
+The strict rooted-distance-order counts are also exact.
+
+For a root with one interior target and fixed bracketing endpoints, among the `7!=5040` strict orders of the seven distances from that root, the target may not occur after both endpoints. Exactly
+
+\[
+\boxed{3360=\frac23\,5040}
+\]
+
+orders remain.
+
+At any hull root there are two interior targets. Number the four hull-edge slots between the five visible non-root hull rays by `1,2,3,4`, and let the two target slots be `s_6,s_7`. The simultaneous domination restrictions leave
+
+```text
+|s6-s7|    permitted strict rooted-distance orders
+0          2520 = 1/2 * 5040
+1          2352 = 7/15 * 5040
+2 or 3     2240 = 4/9 * 5040
+```
+
+exactly as at the ground root. At each interior root there is only one interior target, so the local count is 3360.
+
+The companion verifier exhausts these finite order counts and the 14-pair / 16,384-branch bookkeeping using integer arithmetic only.
+
+Certificate: `research/verify_target_c_support7_h6_all_root_interior_domination_2026_09_19.py`.
+
+## Consequence for the current H6 endpoint
+
+The current explicit exact generic-H6 census is 4,805 cells, with the separately proved hull-reflection argument giving a reflection-closed survivor upper bound of 4,725. The all-root domination theorem applies to every one of those cells; it does not itself change either count until the new affine branches are run through exact certificates.
+
+The highest-leverage next computation is therefore no longer a 5,040-way ground-radius-order scan. For each surviving cell:
+
+1. reconstruct the radial order at all eight reciprocal roots;
+2. identify the hull edge bracketing each of the fourteen interior-target rays;
+3. form the fourteen two-way affine disjunctions (6);
+4. run exact-certificate branch-and-bound on those endpoint choices, seeding it with the already committed physical-face branches;
+5. exclude a cell only when every covering branch product has an exact rational contradiction.
+
+Only cells surviving this all-root sign layer need the fifteen nonlinear sine-law metric cycle equations.
+
+## Scope
+
+This theorem is a necessary condition for the generic H6 branch. It assumes strict reciprocal convexity, strict interiority of `6,7`, and no reciprocal collinearity. It does not cover reciprocal-collinearity walls and does not by itself prove metric realizability of a surviving affine cell.

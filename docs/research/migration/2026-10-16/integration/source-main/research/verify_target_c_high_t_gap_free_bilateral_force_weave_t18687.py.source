@@ -1,0 +1,41 @@
+#!/usr/bin/env python3
+from decimal import Decimal, getcontext
+from math import asin, pi, sin
+
+getcontext().prec = 50
+
+z0 = 2.0477
+d0 = z0 - 6.0 * sin(z0 / 6.0)
+cH = 0.4143 + d0
+gammaH = asin(cH)
+
+assert 0.45381 < cH < 0.45383
+assert 0.4710 < gammaH < 0.4712
+assert abs(sin(gammaH) - cH) < 1e-14
+assert 7.0 * cH > pi
+assert pi / cH < 7.0
+assert 7.0 * cH - pi > 0.03
+
+# If p,q are ordinary lifted deviations from a common reaction axis,
+# projective margin >= gammaH and p,q in (0,pi) imply p,q>=gammaH.
+# Hence Delta=p+q>=2 gammaH and sin(Delta/2)>=sin(gammaH)=cH
+# whenever Delta<pi. Check the monotone interval numerically.
+for k in range(10001):
+    t = gammaH + (pi / 2.0 - gammaH) * k / 10000.0
+    assert sin(t) + 1e-14 >= cH
+
+c = Decimal(113) / Decimal(5_000_000)
+shore = c / 2
+regime = c / 6
+assert shore == Decimal(113) / Decimal(10_000_000)
+assert regime == Decimal(113) / Decimal(30_000_000)
+
+print('PASS: gap-free bilateral exact-force weave constants')
+print('d0 =', d0)
+print('cH =', cH)
+print('gammaH =', gammaH)
+print('2 gammaH [deg] =', 2.0 * gammaH * 180.0 / pi)
+print('7 cH - pi =', 7.0 * cH - pi)
+print('eventual unilateral-interface ceiling = 6')
+print('full-shore density =', shore)
+print('one paired destination regime density =', regime)

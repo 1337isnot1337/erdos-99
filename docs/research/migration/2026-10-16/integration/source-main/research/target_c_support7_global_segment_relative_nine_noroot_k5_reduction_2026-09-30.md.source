@@ -1,0 +1,90 @@
+# Target C: nine-no-root k=5 reduction
+
+Date: 2026-09-30
+
+Status: proof-level reduction. The nine-no-root k=4 layer is closed on current main, so consider k=5.
+
+For a hypothetical counterexample B with nine no-root cycles, current main gives D in {-2,-1}. The exact identity
+
+D = 9 + p + 3 d_root - 3 k
+
+leaves exactly four k=5 arithmetic cases:
+
+- D=-2: (d_root,p)=(0,4) or (1,1);
+- D=-1: (d_root,p)=(0,5) or (1,2).
+
+The external coefficient space P has rank four. The all-depth puncture identity gives the generic generalized-weight floors
+
+- D=-2: (d1,d2,d3,d4) >= (3,4,6,7);
+- D=-1: (d1,d2,d3,d4) >= (2,4,5,7).
+
+## Critical rank-two punctures
+
+If a two-dimensional subspace of P is supported on s coordinates, puncturing those coordinates lowers coefficient rank by at least two. In each critical case below, a drop of three would give negative defect in a family with at most eight no-root cycles, which current main excludes. Thus the rank drop is exactly two.
+
+The total root-row parameter p is unchanged by puncturing no-root rows. Some selected incomplete root rows can become untouched. When invoking a lower-layer theorem, strip any such inert rows first. If l selected rows are stripped, the touched incomplete cost and the defect both decrease by l; the external nullity k and root deficiency are unchanged.
+
+For D=-2,d_root=0,p=4, equality d2=4 gives an unstripped five-no-root k=3 state of defect 0. If none of the four selected rows becomes untouched, this is p=4 and contradicts the committed sharp p=4 theorem D>=3. If at least one becomes untouched, stripping inert rows gives defect below 0 and touched p<=3, contradicting the coverage-correct p<=3 theorem D>=2. Hence d2>=5, so the weights are at least (3,5,6,7).
+
+For D=-2,d_root=1,p=1, equality d2=4 gives an unstripped five-no-root k=3 state of defect 0. Whether the singleton remains touched or is stripped, the resulting touched state has p<=1 and defect at most 0, contradicting the p<=3 theorem D>=2.
+
+If d2=5, puncturing a five-coordinate support gives an unstripped four-no-root k=2 state of defect 2 with total p=1. If the singleton becomes untouched, stripping it gives p=0 and defect 1; otherwise it remains p=1 and defect 2. The exact four-no-root k=2,p<=1 audit has minimum defect at least 5 across both cases. Thus d2=5 is also impossible. Therefore d2>=6, and the weights are at least (3,6,7,8).
+
+For D=-1,d_root=1,p=2, equality d2=4 gives an unstripped five-no-root k=3 state of defect 1. After stripping newly untouched selected rows, the touched state has p<=2 and defect at most 1. The coverage-correct p<=3 theorem gives D>=2. Hence d2>=5, so the weights are at least (2,5,6,7).
+
+For D=-1,d_root=0,p=5, either d2>=5 or d2=4. In the equality case, a minimum four-coordinate support gives an unstripped five-no-root k=3 state of defect 1. If any selected row became untouched, stripping it would give touched p<=4 and defect at most 0, contradicting D>=2 for p<=3 or D>=3 for p=4. Hence no selected row becomes untouched: the puncture is genuinely a five-no-root k=3,p=5 state of defect 1. Current main classifies that sharp boundary: its canonical minimal cores have virtual deficiency two and five singleton replacements.
+
+## Touched-block bounds
+
+Let T be the touched root-block set, C its touched complete subset, and h=|T|. The five independent external relation directions imply
+
+rank H(T) - rank H(C) >= 5.
+
+The full root-star relation space has rank fifteen, so rank H(C)<=10. Nullity of the subset C is at most the global root deficiency d_root, hence
+
+|C| <= 10 + d_root.
+
+Let e be the number of touched actual-empty blocks. There are at most p touched nonempty incomplete blocks, so
+
+e >= h - (10+d_root) - p.
+
+Every touched empty block contributes a nonzero coefficient constraint contained in P. Its occurrence support therefore has size at least d1(P). Every other touched block has at least one no-root incidence. The nine no-root four-cycles contribute 36 block incidences, so
+
+36 >= h + (d1(P)-1)e.
+
+This gives the branchwise bounds
+
+- D=-2,d_root=0,p=4: h<=21;
+- D=-2,d_root=1,p=1: h<=20;
+- D=-1,d_root=0,p=5: h<=25;
+- D=-1,d_root=1,p=2: h<=24.
+
+## Remaining k=5 targets
+
+The layer is reduced to:
+
+- D=-2,d_root=0,p=4: weights >= (3,5,6,7), h<=21.
+- D=-2,d_root=1,p=1: weights >= (3,6,7,8), h<=20.
+- D=-1,d_root=1,p=2: weights >= (2,5,6,7), h<=24.
+- D=-1,d_root=0,p=5: h<=25, and either weights >= (2,5,6,7), or d2=4 and every minimizing four-coordinate rank-two puncture lies in the exact five-row k=3,p=5,D=1 sharp boundary.
+
+The D=-2,d_root=1,p=1 case is now the strongest immediate finite target. No k=5 branch is closed by this note.
+
+Companion arithmetic checker:
+
+research/verify_target_c_support7_global_segment_relative_nine_noroot_k5_reduction_2026_09_30.py
+
+## Salvage provenance and current scope
+
+Salvaged on 2026-10-04 from the corrected source branch
+`target-c-nine-k5-reduction-final-20260930` at tip
+`c62d231f59bf9317185c8fbb862ac200b817dd69`. Its predecessor branch
+`target-c-nine-k5-reduction-20260930` at tip
+`61c423fa7bd8060a36398e17f41d5ade675191df` contains an earlier reduction; the
+final branch is the corrected version retained here. The companion Python script checks
+its finite arithmetic identities and census constants, not the analytic proof.
+
+The report is a support-7 candidate reduction, not a canonical theorem. It fixes four
+arithmetic profiles and necessary puncture/weight/touched-block conditions. It does not
+by itself close the full nine-no-root layer, C-II, or Level I, and theorem state is
+unchanged. Lifecycle on integration is **unreviewed**.

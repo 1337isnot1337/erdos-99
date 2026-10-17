@@ -1,0 +1,316 @@
+# Hostile audit — coupled paired-remainder path through `t<=1.8687`
+
+**Date:** 2026-09-15  
+**Reviewed:**
+- `research/target_c_coupled_paired_remainder_path_t18687_2026-09-15.md`
+- `research/verify_target_c_coupled_paired_remainder_path_t18687.py`
+
+**Verdict:** **PASS at proof-only full-core Type-II scope.**  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The inherited pair/remainder decomposition, perimeter domination, path topology, region saturation, Helly hub, and one-sided switch theorems were audited separately. This audit focuses on the genuinely new composition: extending the feasibility coupling to the larger detour box and proving that the adaptive paired-remainder lower bound is monotone in detour.
+
+---
+
+## 1. The larger feasibility endpoint is independently certified
+
+At
+
+\[
+T=1.8687,
+\qquad z_0=2.0477,
+\]
+
+the companion verifier re-runs the corrected feasibility system from scratch with outward rational/Taylor bounds. It proves
+
+\[
+U_0<2.125965,
+\qquad
+\delta_{max}<0.107,
+\]
+
+and
+
+\[
+H(z_0)<-6.71\times10^{-5}.
+\]
+
+The derivative gates for `H` are also rechecked on the enlarged box; no earlier endpoint sign is merely extrapolated.
+
+Therefore
+
+\[
+z>z_0-o(1),
+\qquad
+\delta\ge d_0-o(1),
+\quad d_0=F(z_0).
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 2. The coupling slope is weakened before reuse
+
+The earlier adaptive theorem used `G_delta<-1.39` only on a smaller detour interval. The present theorem does not reuse that number.
+
+The exact derivative identity gives the endpoint-independent upper bound
+
+\[
+G_\delta
+\le{1\over2(1-\delta)^2}-2.
+\]
+
+Since the new box has `delta<delta_max<0.107`, the exact verifier evaluates the adverse endpoint and proves
+
+\[
+{1\over2(1-\delta_{max})^2}-2
+<-1.37318<-1.36.
+\]
+
+Thus `c=1.36` is genuinely valid on the full enlarged box. With `G_z<=1`, comparison to `(d_0,z_0)` gives
+
+\[
+z-z_0\ge1.36(\delta-d_0)-o(1).
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 3. The adaptive threshold remains physically valid
+
+The theorem uses
+
+\[
+\lambda(\delta)=a-\delta,
+\qquad a=0.5857.
+\]
+
+The exact assertion
+
+\[
+(2-a)^2>2,
+\qquad 2-a>0
+\]
+
+proves
+
+\[
+a<2-\sqrt2.
+\]
+
+Hence for every `delta>=0`,
+
+\[
+\lambda(\delta)
+<2-\delta-\sqrt2
+<2-\delta-\sqrt{2-\delta^2},
+\]
+
+which is the smaller same-branch root. The sourcewise threshold therefore stays strictly inside the physical opposite-branch regime.
+
+At the largest detour,
+
+\[
+\lambda>0.4787,
+\]
+
+so it also remains positive with large margin.
+
+**Verdict:** PASS.
+
+---
+
+## 4. Pair-weight substitution still has the correct direction
+
+For fixed `z,delta,lambda`, the paired-remainder low-energy functional is
+
+\[
+L(P)=P-{\delta-F(z-2P)\over\lambda}.
+\]
+
+On the relevant mass range,
+
+\[
+L'(P)=1-{2F'(z-2P)\over\lambda}.
+\]
+
+Since the residual mass is at most `pi`,
+
+\[
+2F'(s)\le2-\sqrt3<0.268<0.4787<\lambda.
+\]
+
+Thus `L'(P)>0`. Replacing actual pair weight by the endpoint-count floor
+
+\[
+P\ge z-U_0+2\delta+\kappa/2-o(1)
+\]
+
+is safe, and `kappa=0` is adverse.
+
+**Verdict:** PASS.
+
+---
+
+## 5. The coupled derivative is derived correctly
+
+Insert the coupling lower envelope
+
+\[
+z(\delta)=z_0+c(\delta-d_0),
+\qquad c=1.36,
+\]
+
+and the pair floor
+
+\[
+P=z-U_0+2\delta.
+\]
+
+Then
+
+\[
+r=z-2P,
+\qquad
+P'=c+2,
+\qquad
+r'=-(c+4).
+\]
+
+Writing
+
+\[
+A=\delta-F(r),
+\qquad
+\lambda=a-\delta,
+\]
+
+the lower bound is
+
+\[
+L=P-A/\lambda.
+\]
+
+Differentiation gives exactly
+
+\[
+L'
+=c+2
+-{1+(c+4)F'(r)\over\lambda}
+-{A\over\lambda^2}.
+\]
+
+There is no missing sign from differentiating `1/lambda`: since `lambda'= -1`,
+
+\[
+(1/\lambda)'=+1/\lambda^2.
+\]
+
+**Verdict:** PASS.
+
+---
+
+## 6. The coarse derivative bounds are uniform
+
+Along the coupling lower envelope, the residual mass decreases with `delta`, so its maximum occurs at `delta=d_0`. The certificate bounds it by
+
+\[
+r<2.047.
+\]
+
+Using `1-cos x<=x^2/2`,
+
+\[
+F'(r)=1-\cos(r/6)
+\le r^2/72
+<0.059.
+\]
+
+For feasible sources the pair-energy allowance
+
+\[
+A=\delta-F(r)
+\]
+
+is nonnegative, and trivially
+
+\[
+A\le\delta<0.107.
+\]
+
+Together with
+
+\[
+\lambda>0.4787,
+\]
+
+the exact rational lower bound is
+
+\[
+L'
+>
+1.36+2
+-{1+5.36(0.059)\over0.4787}
+-{0.107\over0.4787^2}
+>0.143.
+\]
+
+Therefore the lower bound is strictly increasing throughout the entire detour interval. No interior minimizer exists.
+
+**Verdict:** PASS.
+
+---
+
+## 7. The endpoint evaluation is outward in every adverse direction
+
+At the minimum `delta=d_0`, the exact interval arithmetic uses
+
+- upper `U_0` and lower `d_0` for the pair-weight floor;
+- lower `U_0` and upper `d_0` for the residual-mass floor;
+- a lower bathtub value on that residual mass;
+- upper `d_0` and lower `lambda(d_0)` for the pair-energy subtraction.
+
+It obtains
+
+```text
+pair floor                  > 0.0007750790
+residual mass               > 2.04614984
+residual bathtub            > 0.0394305489
+pair-energy allowance       < 0.00008933695
+lambda(d0)                  > 0.546180114
+low-energy pair weight      > 0.0006115122
+one-phase path weight       > 0.0002038374
+```
+
+The theorem rounds down to `0.0006` and `0.0002`.
+
+**Verdict:** PASS.
+
+---
+
+## 8. The finite strip count is correctly rounded
+
+Pair weight per train is at most one, so one phase contains more than `0.0002D-o(D)` actual selected trains. After the one hub boundary is removed, the global start/stop budget remains `<=2pi D+o(D)`.
+
+Using `pi<355/113`,
+
+\[
+{2(355/113)\over0.0002}
+=31415.9292\ldots<31416.
+\]
+
+Therefore some nonhub boundary has integer switch count at most `31415`.
+
+**Verdict:** PASS.
+
+---
+
+## 9. Scope and remaining gap
+
+This theorem does **not** convert the one/two-bar reaction into a strict diameter decrease. It also does not provide an inverse-`D` phase gap between adjacent path trains. The remaining closure obligation is still geometric.
+
+However, the theorem changes the quantitative frontier materially: the live O--O path/hub/loaded-region structure now persists well beyond both the old raw-Markov endpoint and the standalone adaptive endpoint. Its new limiting mechanism is the disappearance of O--O pair excess at the minimum-detour feasibility edge.
+
+**Final verdict:** **PASS at proof-only scope. C-II and Level I remain open.**

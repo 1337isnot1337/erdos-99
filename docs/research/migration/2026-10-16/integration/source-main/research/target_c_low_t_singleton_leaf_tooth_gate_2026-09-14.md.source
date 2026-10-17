@@ -1,0 +1,364 @@
+# Erdos Problem #99 - low-t singleton leaf-tooth gate
+
+**Date:** 2026-09-14
+**Target:** C-II, canonical full-core Type-II branch
+**Dependencies:** q-k amplified bridge-subtracted train split; low-t pentagon sea; empty-pentagon trapezoid stability; Wegner first residual jump
+**Claim class:** proof-only closing reduction awaiting independent audit
+**External literature:** no new import
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The low-`t` endpoint contains much more exceptional singleton-train mass than the
+previous singleton-anchored Groemer gate uses.  Near the current `t_42` floor the
+high-degree face budget `X:=Q-f` is only about `0.002884D`.  Jointly charging all
+singleton incidences that can avoid the four leaf-tooth sides of a cheap pentagon
+leaves a large forced family of two-contact teeth with a singleton-train side.
+
+Put
+
+\[
+\Delta_2={\pi\over2\sqrt3},\qquad
+C_0:=2\sqrt{\Delta_2}+0.00042,
+\]
+
+\[
+t_*:={4\over9}(\pi+\sqrt{\Delta_2})+0.0013751,
+\qquad
+L_*:=t_*+0.00084.
+\]
+
+For a scalar upper endpoint `t_0`, define
+
+\[
+A_0(t_0):={9t_0\over4}-\pi-{C_0\over2},
+\tag{SL.1}
+\]
+
+and
+
+\[
+\boxed{
+G(t_0):=L_*-8A_0(t_0)-4t_0+2\pi
+      =L_*-22t_0+10\pi+4C_0.
+}
+\tag{SL.2}
+\]
+
+Fix `eta>0`.  There is `theta_eta>0` such that every pentagonal exceptional face
+with residual below `theta_eta` is isolate-free and close enough to the flat
+trapezoid that both leaf hidden chords have length in `(1,1+eta)`.
+
+Let `A_eta^leaf` be the maximum number of pairwise vertex-disjoint leaf teeth from
+such faces for which at least one of the two exact unit sides is a singleton stopped
+train.  Then every Type-II subsequence with
+
+\[
+\limsup {q-k\over D}\le t_0
+\]
+
+satisfies
+
+\[
+\boxed{
+\sigma_R+104A_\eta^{leaf}+{8\over\theta_\eta}R_F
+\ge (G(t_0)-o(1))D.
+}
+\tag{SL.3}
+
+At `t_0=t_*`,
+
+\[
+\boxed{G(t_*)=0.7982875932\ldots .}
+\tag{SL.4}
+\]
+
+Hence on `R_F=o(D)`,
+
+\[
+\boxed{
+\sigma_R+104A_\eta^{leaf}
+\ge(0.7982875932\ldots-o(1))D.
+}
+\tag{SL.5}
+\]
+
+Without any further branch choice this already gives
+
+\[
+\boxed{
+\max\left\{{\sigma_R\over D},{A_\eta^{leaf}\over D}\right\}
+\ge0.00760273898\ldots-o(1).
+}
+\tag{SL.5a}
+\]
+
+More generally, for any fixed nonnegative `s,r`, if along the same subsequence
+
+\[
+\limsup {\sigma_R\over D}\le s,
+\qquad
+\limsup {R_F\over\theta_\eta D}\le r,
+\]
+
+then
+
+\[
+\boxed{
+\liminf {A_\eta^{leaf}\over D}
+\ge {\bigl(G(t_*)-s-8r\bigr)_+\over104}.
+}
+\tag{SL.6}
+\]
+
+Thus (SL.5a), rather than the now-excluded hypothetical branch `sigma_R=o(D)`, is the
+useful small-residual consequence when this theorem is composed with the independent
+positive rhombic-slack floor.
+
+Without assuming `R_F=o(D)`, put `r_\eta:=R_F/(\theta_\eta D)`. Equation (SL.3)
+also gives the three-way normalized alternative
+
+\[
+\boxed{
+\max\left\{{\sigma_R\over D},{A_\eta^{leaf}\over D},r_\eta\right\}
+\ge {G(t_*)\over113}-o(1)
+=0.0070644\ldots-o(1).
+}
+\tag{SL.6a}
+\]
+
+The coefficient `G(t_0)` remains positive until
+
+\[
+t_0<{L_*+10\pi+4C_0\over22}=1.857\ldots .
+\tag{SL.7}
+\]
+
+Thus the gate covers almost the whole old `t<=1.8585` endpoint band.
+
+---
+
+## 1. Amplified exceptional-singleton currency
+
+Write
+
+\[
+X:=Q-f,\qquad
+\delta_D:={b-P_F\over D},\qquad
+\kappa_D:={k\over D}.
+\]
+
+Let `S_E` count singleton stopped trains with at least one bounded exceptional-face
+terminal incidence.  The q-k amplified bridge-subtracted theorem gives
+
+\[
+\boxed{
+\sigma_R+2S_E+(b-P_F)\ge(L_*-o(1))D.
+}
+\tag{SL.8}
+
+The low-`t` face ledger gives, on `limsup t_D<=t_0`,
+
+\[
+\boxed{
+{X\over D}
+\le A_0(t_0)-\delta_D-{\kappa_D\over4}+o(1).
+}
+\tag{SL.9}
+
+No split into pentagonal and nonpentagonal singleton trains is made yet.
+
+---
+
+## 2. Exact capacity of singleton incidences that avoid leaf teeth
+
+For every train counted by `S_E`, choose one bounded exceptional-face terminal
+incidence.  If the train touches a pentagon, choose a pentagonal incidence; otherwise
+choose any bounded exceptional incidence.
+
+Let `n_d` be the number of bounded exceptional faces of degree `d>=5`, and put
+
+\[
+N_{\ge6}:=\sum_{d\ge6}n_d,
+\qquad
+p_5:=n_5.
+\]
+
+The degree-excess identities are
+
+\[
+f=p_5+N_{\ge6},
+\qquad
+X=Q-f=\sum_{d\ge6}(d-5)n_d.
+\tag{SL.10}
+
+Every chosen singleton assignment landing on a nonpentagonal face uses a distinct
+physical boundary edge, so the total number of such assignments is at most
+
+\[
+\sum_{d\ge6}d n_d
+=5N_{\ge6}+X.
+\tag{SL.11}
+
+On a cheap pentagon use the flat-trapezoid cyclic labeling
+
+\[
+l,m,r,a,b.
+\]
+
+The two leaf teeth are `(m,l,b)` and `(m,r,a)`.  Their exact unit sides are
+
+\[
+lm,\quad bl,\quad mr,\quad ra,
+\]
+
+while `ab` is the unique boundary edge not belonging to either leaf tooth.  Thus at
+most one chosen assignment on a cheap pentagon can avoid all leaf-tooth sides.
+Across all pentagons this nominal bad-edge capacity is at most `p_5`.
+
+The number of pentagons with residual at least `theta_eta` is at most
+`R_F/theta_eta`.  A high-residual pentagon may invalidate the leaf geometry on its
+other four edges; after the one nominal bad-edge slot is already charged, this costs
+at most four additional assignments per such face.  Therefore the number `G_E` of
+chosen singleton assignments that land on a leaf-tooth side of a low-residual
+pentagon obeys
+
+\[
+\begin{aligned}
+G_E
+&\ge S_E-\left(5N_{\ge6}+X+p_5\right)
+          -{4R_F\over\theta_\eta}\\
+&=S_E-\left(Q+4N_{\ge6}\right)
+          -{4R_F\over\theta_\eta}\\
+&\ge
+\boxed{
+S_E-Q-4X-{4R_F\over\theta_\eta},
+}
+\tag{SL.12}
+\end{aligned}
+
+because `N_{>=6}<=X`.
+
+This joint charge is sharper than separately paying `6X` for nonpentagonal singleton
+incidences and one full pentagon count for bad pentagon edges.
+
+---
+
+## 3. Extract vertex-disjoint singleton leaf teeth
+
+A cheap pentagon has four leaf-tooth sides, so at least `G_E/4` distinct pentagons
+receive a good singleton assignment.  From each such pentagon choose one of its two
+leaf teeth containing the assigned singleton side.
+
+There is now at most one chosen triple per pentagon.  In a triangle-free unit-contact
+graph every source vertex has contact degree at most five, hence is incident with at
+most five bounded pentagonal face sectors.  The chosen-triple conflict graph therefore
+has maximum degree at most
+
+\[
+3(5-1)=12.
+\]
+
+A greedy independent set retains at least one thirteenth.  Hence
+
+\[
+\boxed{
+52A_\eta^{leaf}
+\ge S_E-Q-4X-{4R_F\over\theta_\eta}.
+}
+\tag{SL.13}
+
+Equivalently,
+
+\[
+\boxed{
+104A_\eta^{leaf}+{8R_F\over\theta_\eta}
+\ge2S_E-2Q-8X.
+}
+\tag{SL.14}
+
+No finite shear of the singleton edge is used.  In particular, the singleton need not
+be a bridge.
+
+---
+
+## 4. Insert the low-t ledgers
+
+Combine (SL.14) with (SL.8):
+
+\[
+\sigma_R+104A_\eta^{leaf}+{8R_F\over\theta_\eta}
+\ge L_*D-(b-P_F)-2Q-8X-o(D).
+\tag{SL.15}
+
+The exact outer ledger is
+
+\[
+{Q\over D}=2t_D-\pi-\delta_D.
+\tag{SL.16}
+
+Using `t_D<=t_0+o(1)` and (SL.9), the right side of (SL.15), divided by `D`, is at
+least
+
+\[
+\begin{aligned}
+&L_*-\delta_D-2(2t_0-\pi-\delta_D)
+ -8\left(A_0(t_0)-\delta_D-\kappa_D/4\right)-o(1)\\
+&=L_*-8A_0(t_0)-4t_0+2\pi
+  +9\delta_D+2\kappa_D-o(1)\\
+&\ge G(t_0)-o(1).
+\end{aligned}
+\]
+
+This proves (SL.3).
+
+---
+
+## 5. Metric gap on the extracted family
+
+The pentagon hidden-gap theorem gives more than pointwise convergence.  For every
+fixed `lambda<2/3`, after shrinking the cheap-pentagon threshold if necessary, the
+sum of the two hidden leaf gaps over any family of retained pentagons is at most
+`R_F/lambda`.
+
+The family extracted above is a subset of those leaf teeth.  Hence it can be chosen so
+that
+
+\[
+\boxed{
+\sum_{(x,y,z)\in A_\eta^{leaf}}(|x-z|-1)
+\le {R_F\over\lambda}.
+}
+\tag{SL.17}
+
+On `R_F=o(D)`, a slow diagonal choice `lambda_D->2/3` and `eta_D->0` yields
+
+\[
+\sum_{A_{\eta_D}^{leaf}}(|x-z|-1)
+\le\left({3\over2}+o(1)\right)R_F=o(D).
+\tag{SL.18}
+
+Thus the hard low-`t`, low-residual, low-rhombic-slack corner contains linearly many
+vertex-disjoint triples with two exact unit contacts, one of those contacts a
+singleton train, and only `o(D)` aggregate hidden-contact gap across the whole family.
+
+---
+
+## 6. Scope audit
+
+- `S_E` counts singleton trains, not incidences.  Exactly one bounded exceptional
+  incidence is selected per train.
+- A nonpentagonal face of degree `d` absorbs at most `d` chosen assignments.  The exact
+  sum of these capacities is `5N_{>=6}+X`.
+- The combined bad-incidence capacity is `Q+4N_{>=6}<=Q+4X`; this is the key sharpening.
+- A high-residual pentagon pays only four extra slots because the one generic bad-edge
+  slot has already been charged through `p_5`.
+- The factor `52=4*13` consists of four possible leaf-side assignments per pentagon and
+  the degree-12 one-triple-per-face conflict extraction.
+- The theorem does not assert that a pentagon-touching singleton edge is a bridge and
+  does not invoke the audited bridge-only singleton shear.
+- No KKT multiplier is assigned to a hidden chord.  No exact unit triangle or strict
+  same-cardinality sub-`D` source is produced.
+
+**Disposition:** proof-only low-`t` closing reduction.  C-II and Level I remain open.

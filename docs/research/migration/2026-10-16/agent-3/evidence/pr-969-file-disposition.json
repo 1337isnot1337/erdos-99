@@ -1,0 +1,74 @@
+{
+  "base_sha": "ab6dd3336f9f8d440f2bada76edb32153391cddc",
+  "files": [
+    {
+      "additions": 423,
+      "bytes": 18657,
+      "changes": null,
+      "deletions": 0,
+      "destination_blob_same_path": "df0f3bcfebc7b84f710e7d0a9d7b4866178eac43",
+      "destination_identical_blob_paths": [
+        "docs/reports/target_a_seed063_tight_isolates_and_locked_fan_regression_2026-10-13.md"
+      ],
+      "destination_same_path_relation": "identical",
+      "path": "docs/reports/target_a_seed063_tight_isolates_and_locked_fan_regression_2026-10-13.md",
+      "sha256": "b2f5c112443c57181670aec31d46c38f0d6aacef8318e29473c9a6e72e358337",
+      "source_blob": "df0f3bcfebc7b84f710e7d0a9d7b4866178eac43",
+      "source_head": "b3983cdc7f4ca32ad8083eade92952d451c60848",
+      "source_mode": "100644",
+      "status": "added_or_modified_at_head"
+    },
+    {
+      "additions": 1,
+      "bytes": 427604,
+      "changes": null,
+      "deletions": 0,
+      "destination_blob_same_path": "97ed5ce70e9f90c6448884c73efcfcfafd958404",
+      "destination_identical_blob_paths": [],
+      "destination_same_path_relation": "different",
+      "path": "docs/state/artifact-index.jsonl",
+      "sha256": "83ab409a97919051d4bf230e7b74154ff8bc6b0e1d811385e394d3768749b586",
+      "source_blob": "594b1bc3d22fa06273973096f2923e1be0864c1d",
+      "source_head": "b3983cdc7f4ca32ad8083eade92952d451c60848",
+      "source_mode": "100644",
+      "status": "added_or_modified_at_head"
+    },
+    {
+      "additions": 19,
+      "bytes": 257964,
+      "changes": null,
+      "deletions": 0,
+      "destination_blob_same_path": "690710626e0c7e9c24d1890b812536bee9e107fa",
+      "destination_identical_blob_paths": [],
+      "destination_same_path_relation": "different",
+      "path": "research/README.md",
+      "sha256": "c20028fcd14f2cab53191d4009ab6de6204994345a7f95b6ebac103c2e3a88b4",
+      "source_blob": "7fcf22d3c6dba8c9faeb3b6ad7fc71133e978d40",
+      "source_head": "b3983cdc7f4ca32ad8083eade92952d451c60848",
+      "source_mode": "100644",
+      "status": "added_or_modified_at_head"
+    },
+    {
+      "additions": 355,
+      "bytes": 14581,
+      "changes": null,
+      "deletions": 0,
+      "destination_blob_same_path": "d52c1bdabba9f166864db05eec1f8f13b1fed9ba",
+      "destination_identical_blob_paths": [
+        "research/verify_target_a_seed063_tight_isolates.py"
+      ],
+      "destination_same_path_relation": "identical",
+      "path": "research/verify_target_a_seed063_tight_isolates.py",
+      "sha256": "aae150e1b0f60007f518b0e4b78a16d5937dba713113be8d223708abafef4fc6",
+      "source_blob": "d52c1bdabba9f166864db05eec1f8f13b1fed9ba",
+      "source_head": "b3983cdc7f4ca32ad8083eade92952d451c60848",
+      "source_mode": "100644",
+      "status": "added_or_modified_at_head"
+    }
+  ],
+  "head_ref": "research/seed-063-sector-response",
+  "head_sha": "b3983cdc7f4ca32ad8083eade92952d451c60848",
+  "number": 969,
+  "title": "Target A seed 63: tight-isolate reduction and fully locked neutral fan",
+  "url": "https://github.com/1337isnot1337/e-99/pull/969"
+}

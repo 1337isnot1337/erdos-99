@@ -1,0 +1,151 @@
+# Target C: `C:(5,12,12)`, `d_6=5` full-span lift reduction
+
+Date: 2026-09-22
+
+Status: rigorous reduction of the sole remaining six-row-shadow subcase in the current eight-no-root `k=7` finite split. The reduction is proved below. Closure still requires a successful exhaustive execution of the committed verifier over the full 325,955-state six-row augmentation cover.
+
+Companion verifier:
+
+- `research/verify_target_c_support7_global_segment_relative_eight_noroot_k7_C_d5q12_d5_full_span_lift_multiplicity_2026_09_22.py`
+
+This note is a research artifact, not a theorem-state promotion. The canonical Target C state remains governed by `docs/STATE.md` and `docs/targets/target-c/CURRENT.md`.
+
+## 1. Remaining profile and six-row threshold
+
+The current finite split has reduced the unresolved all-singleton profile to
+
+```text
+C: D=-1, p=12, (d_v,q,s)=(5,12,12),
+```
+
+and the only unresolved selected good pair shadow has virtual-canonical deficiency
+
+```text
+d_6=5.
+```
+
+For a `p=12`-retaining good pair deletion the six-row shadow has `D_6=3`. The replacement-functional inequality is
+
+```text
+D_6 >= 6 + p + 3 d_6 - 3 s_f.
+```
+
+Substituting `D_6=3`, `p=12`, and `d_6=5` gives
+
+```text
+s_f >= 10.
+```
+
+Let the six-row virtual-complete set contain `c` blocks. Its canonical relation-column span has rank `c-5` inside the replacement-functional coordinate space of dimension `c+5`. The quotient therefore has dimension exactly
+
+```text
+(c+5) - (c-5) = 10.
+```
+
+Consequently every surviving six-row shadow must attain the *full* quotient rank ten. In particular, the twelve singleton replacements selected by an actual target must contain a subset whose replacement functionals already span the entire ten-dimensional quotient.
+
+## 2. What one restored cycle must preserve
+
+Restore one of the two deleted external cycles. The established seven-row containment alternatives for an actual target are
+
+```text
+d_7=4 with singleton capacity >=10,
+```
+
+or
+
+```text
+d_7=5 with singleton capacity >=11.
+```
+
+Every singleton block selected by the actual eight-row target remains compatible in this seven-row intermediate state: deleting the other external cycle cannot invalidate a root-block state that occurs in the target itself.
+
+Fix the six-row shadow and let `S_sel` be its selected singleton blocks. Let `S_ret(e)` be the set of all six-row-compatible singleton blocks retained by a qualifying one-cycle lift through external cycle `e`. Then
+
+```text
+S_sel subset S_ret(e).
+```
+
+The selected replacement functionals already have extra rank ten. Rank is monotone under adding rows, while the entire quotient has dimension ten. Hence
+
+```text
+extra-rank(S_ret(e)) = 10.
+```
+
+Thus every restored cycle of an actual target must admit at least one qualifying seven-row lift whose retained six-row singleton functionals still span the full quotient.
+
+Call such an external cycle a **full-span lift cycle** for the six-row state.
+
+## 3. Two-cycle necessity
+
+The pair deletion that produced the six-row shadow deleted two distinct external cycles. An actual eight-row target restores both of them. Applying the preceding argument to the two one-cycle intermediate states gives the necessary condition
+
+```text
+number of distinct full-span lift cycles >= 2.
+```
+
+Therefore the following finite statement is sufficient to exclude the `d_6=5` branch:
+
+> For every synchronized six-row `d_6=5` functional witness in the exact augmentation cover, at most one distinct remaining external cycle admits a qualifying full-span one-cycle lift.
+
+This condition is strictly weaker than the previously formulated pair-retention test. The pair-retention test asks whether two qualifying lifts have a retained *intersection* of extra rank ten. For closure it is enough to prove that there cannot even be two distinct cycles whose individual retained sets have extra rank ten.
+
+## 4. Exact verifier
+
+The committed verifier implements precisely this weaker necessary condition.
+
+For every representative in the exact 325,955-element six-row augmentation cover, and every synchronized rank-one line, it:
+
+1. constructs the six-row virtual-canonical state;
+2. retains only `d_6=5` states with singleton capacity at least ten;
+3. computes the exact singleton replacement functionals;
+4. retains only states whose full compatible singleton span has extra rank ten;
+5. enumerates every remaining external cycle and every compatible seven-row coefficient-line lift;
+6. keeps only the established seven-row alternatives `d_7=4, cap>=10` or `d_7=5, cap>=11`;
+7. recomputes the extra rank of the six-row singleton functionals retained by that lift;
+8. counts distinct external cycles having at least one retained-extra-rank-ten lift.
+
+The verifier fails immediately at the end of a shard if any six-row state has multiplicity at least two.
+
+All functional ranks are computed modulo `2^127-1`. The script checks Lucas-Lehmer primality and verifies a Hadamard bound from the observed row norms and functional width, so a successful full execution is an exact rational-rank certificate rather than probabilistic finite-field evidence.
+
+The incremental seven-row profile update also has an optional `--crosscheck` mode that recomputes the complete seven-row block profile and checks equality of the candidate coefficient lines, complete set, and singleton capacity.
+
+## 5. Validation already completed
+
+Small-range validation has been run against the current verifier logic. On the first 1,000 cover representatives it found 519 six-row functional witnesses and 425 full-span lifts. Their full-span cycle multiplicity census was
+
+```text
+0 cycles: 94 states
+1 cycle:  425 states
+```
+
+with
+
+```text
+max full-span cycles per state = 1
+two-cycle examples = []
+```
+
+A separate first-100-representative run with the full incremental-profile crosscheck also passed. These runs validate the implementation path, but they are not a closure certificate for the full cover.
+
+The observed full-span lifts in these validation ranges all had zero new coefficient coordinate and retained every six-row compatible singleton block. That is an empirical structural pattern only; this note does not promote it to a theorem.
+
+## 6. Exact remaining computation
+
+The only computation needed for this reduction is the full disjoint cover execution
+
+```text
+[0, 325955).
+```
+
+A successful aggregate must have, in every shard,
+
+```text
+max_full_span_cycles_per_state <= 1
+two_cycle_examples == []
+hadamard_exact_rank_bound == True
+PASS
+```
+
+Once that full execution is recorded and independently checked for complete, nonoverlapping cover ranges, the `d_6=5` side of `C:(5,12,12)` is excluded. Together with the already-recorded exclusions of its `d_6=3` and `d_6=4` shadows, that would close this final profile in the current eight-no-root `k=7` finite split.

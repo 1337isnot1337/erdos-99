@@ -1,0 +1,73 @@
+# Target C-II — common-outer collapsed blocks pay anchor-length variation
+
+**Date:** 2026-09-18  
+**Status:** proved candidate; scoped source-separation reduction, theorem-state authority unchanged  
+**Scope:** collapsed support-six block whose six outside trains terminate at one common outer host  
+**Certificate:** `research/verify_target_c_support6_collapsed_outer_length_variation_2026_09_18.py`
+
+Assume the six one-anchor trains of a collapsed support-six block all terminate at the
+same outer face `O`, remain pairwise noncrossing, and meet the outer sector in six
+distinct consecutive train corridors. Let `ell_i` be the positive integer number of
+unit contact-edge occurrences in the `i`th train, in cyclic outer order. The collapsed
+dual mode gives a `3+3` sign word `s_i in {+1,-1}` for the six anchor directions.
+
+At two consecutive outer corridors with opposite signs, the two adjacent dual source
+regions are separated by the signed train displacement
+
+\[
+(\ell_i-\ell_{i+1})e_1.
+\]
+
+If the lengths were equal, those two distinct source regions would have the same
+source point, or the two corridors would induce duplicate contact edges. Both are
+excluded by the simple, unit-separated source hypothesis. Consequently
+
+\[
+s_i\ne s_{i+1}\quad\Longrightarrow\quad \ell_i\ne\ell_{i+1}.
+\tag{OV.1}
+\]
+
+Every cyclic `3+3` sign word has at least two sign transitions. Since the `ell_i` are
+integers, (OV.1) implies the exact finite payment
+
+\[
+\boxed{\sum_{i=1}^6|\ell_i-\ell_{i+1}|\ge2.}
+\tag{OV.2}
+\]
+
+The all-outer minimum-crossing enumeration sharpens the finite alternatives.  Of the
+48 six-crossing boundary orders, 36 have two sign transitions and 12 have six sign
+transitions for the fixed collapsed `+++---` label word.  In general, if `T(s)` is
+the number of cyclic sign transitions, the same argument gives
+
+\[
+\boxed{\sum_i|\ell_i-\ell_{i+1}|\ge T(s).}
+\tag{OV.3}
+\]
+
+Thus the six-transition subfamily pays at least six units of integer anchor-length
+variation.  The crossing graph in every six-crossing minimum pattern is also exactly
+one `C_6` on six internal trains plus six isolated internal trains; triangle-freeness
+is therefore not the only available finite structure, although it is still not by
+itself a contradiction.
+
+The certificate exhausts all labelled `3+3` sign words and small positive integer
+length vectors; the combinatorial proof itself is the two-transition argument.
+
+## Dependency chain
+
+```text
+collapsed support-six dual mode
+  -> three plus / three minus parallel anchor directions
+  -> common-outer cyclic order
+  -> opposite-sign transitions have unequal integer train lengths
+  -> total anchor-length variation >= 2
+```
+
+This is not a global exclusion. The current collapsed branch allows anchor trains to
+attach to several activated faces, and the simple outer-sector hypothesis is not yet a
+canonical theorem. The result identifies a concrete source-level currency to couple to
+the train-length/outer-walk ledger when the common-outer branch is isolated.
+
+**Disposition:** proved candidate at scoped reduction; positive-slack collapsed branch
+and C-II remain open.

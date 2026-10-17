@@ -1,0 +1,474 @@
+# Target C-II — terminal FREE surplus-endpoint stability and pentagonal-flower normal form
+
+**Date:** 2026-09-18  
+**Status:** proved candidate awaiting audit; theorem-state authority unchanged  
+**Scope:** full-core Type-II terminal FREE survivor sequences with `pi D-q=o(D)`  
+**Depends on:** scope-safe matched all-train gap `g=0.007707`; exact post-endpoint surplus decomposition; terminal stopped-train/face identities; exact singleton/full-flower incidence lemma  
+**Certificate:** `research/verify_target_c_free_terminal_surplus_endpoint_stability_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+This note keeps a currency that the current terminal FREE package has so far discarded:
+the all-phase surplus
+
+\[
+\mu_D:=\frac{e_{BB}+2s_C-3(d_H+s_Z)}D.
+\]
+
+The exact post-endpoint decomposition and the matched all-train gap imply a new
+terminal floor
+
+\[
+\boxed{
+\liminf\mu_D\ge
+\mu_*:=1.953262849540479\ldots .
+}
+\tag{SE.1}
+\]
+
+The numerical value happens to equal the current terminal feasibility floor for
+`t=(q-k)/D`, but the surplus identity gives substantially more information than that
+scalar coincidence.  If `mu_D` is within `epsilon` of (SE.1), then the actual outer
+walk is nearly geodesic, the superpentagonal degree excess is small, the force-hull
+nonunit-side currency is small, and the train slack is near its matched minimum.  In
+particular, almost `0.765D` bounded contact faces are pentagons at the exact endpoint.
+
+The endpoint structure then admits an exact singleton-versus-fully-rhombic-flower
+split.  At `epsilon=0`, either at least
+
+\[
+0.254977681830389\ldots D
+\]
+
+singleton stopped trains survive, or at least that many bounded pentagons have a
+strict rhombus on every one of their five sides.  In the flower branch at least
+
+\[
+0.637444204575972\ldots D
+\]
+
+distinct non-singleton rhombic trains terminate at those pentagons and the rhombic
+train Mantel deficit is at least
+
+\[
+(1.698340455132259\ldots-o(1))D^2.
+\]
+
+No source-level closure is claimed.  The gain is an endpoint rigidity theorem for a
+currency (`mu_D`) already central to the canonical full-core route.
+
+---
+
+## 1. Constants and exact decomposition
+
+Put
+
+\[
+s_2:=\sqrt{\frac\pi{2\sqrt3}},
+\qquad g:=0.007707,
+\]
+
+\[
+\tau_*:=\frac\pi2+g,
+\qquad
+M_*:=4s_2+2g
+=3.824665227455829\ldots .
+\tag{SE.2}
+\]
+
+The matched terminal FREE package gives
+
+\[
+\frac{\tau_D}{D}\ge\tau_*-o(1),
+\qquad
+\tau_D:=T-2\sqrt{R_4}.
+\tag{SE.3}
+\]
+
+Use the exact stopped-train split
+
+\[
+2\tau_D=\rho_{\rm rec}+\sigma_R.
+\tag{SE.4}
+\]
+
+The exact post-endpoint surplus identity is
+
+\[
+\begin{aligned}
+\mu_DD={}&{2P_F+2\sqrt{R_4}\over5}
++m_B+{2\over5}(Q-f)+{2\over5}(b-P_F)\\
+&+{1\over10}\rho_{\rm rec}+{1\over10}\sigma_R-2c_I-4.
+\end{aligned}
+\tag{SE.5}
+\]
+
+Here `m_B>=0`, `Q-f>=0`, and `b-P_F>=0`; canonical component control gives
+`c_I=o(D)`.  Terminal Type II gives
+
+\[
+\frac{P_F}{D}\to\pi,
+\qquad
+\frac{\sqrt{R_4}}D\to s_2.
+\tag{SE.6}
+\]
+
+Combining (SE.3)--(SE.6),
+
+\[
+\liminf\mu_D
+\ge
+{2\pi+2s_2\over5}+{\tau_*\over5}
+=\frac\pi2+\frac{2s_2}{5}+\frac g5.
+\]
+
+Thus
+
+\[
+\boxed{
+\mu_*
+={2\pi+2s_2\over5}+{\pi/2+g\over5}
+=1.953262849540479\ldots .
+}
+\tag{SE.7}
+\]
+
+This proves (SE.1).
+
+---
+
+## 2. Quantitative stability above the surplus endpoint
+
+Fix `epsilon>=0` and pass to a subsequence on which all normalized currencies used
+below converge.  Assume
+
+\[
+\limsup\mu_D\le\mu_*+\varepsilon.
+\tag{SE.8}
+\]
+
+Write
+
+\[
+\delta:=\lim\frac{b-P_F}{D},
+\qquad
+r:=\lim\frac{Q-f}{D},
+\qquad
+m:=\lim\frac{m_B}{D},
+\]
+
+and
+
+\[
+a:=\lim\left(\frac{\tau_D}{D}-\tau_*\right).
+\]
+
+After a further subsequence if needed, (SE.3) gives `a>=0`.  Subtracting the endpoint
+value (SE.7) from (SE.5) gives the exact asymptotic nonnegative decomposition
+
+\[
+\boxed{
+ m+\frac25(r+\delta)+\frac15a\le\varepsilon.
+}
+\tag{SE.9}
+\]
+
+Consequently
+
+\[
+\boxed{
+ m\le\varepsilon,
+\qquad
+r+\delta\le\frac52\varepsilon,
+\qquad
+a\le5\varepsilon.
+}
+\tag{SE.10}
+\]
+
+Thus surplus near-equality simultaneously forces:
+
+- near-geodesic outer walk: `delta<=5 epsilon/2`;
+- almost-pure pentagonal exceptional degree: `r<=5 epsilon/2`;
+- vanishing nonunit force-hull-side currency: `m<=epsilon`;
+- train slack within `5 epsilon` of the matched lower edge.
+
+At `epsilon=0`, all four quantities vanish.
+
+---
+
+## 3. Near the endpoint there are about `0.765D` pentagons
+
+Let
+
+\[
+B:=\lim\frac{Q+4f}{D}.
+\]
+
+The exact endpoint handshake is
+
+\[
+(b-P_F)+(Q+4f)=2T-P_F.
+\tag{SE.11}
+\]
+
+Using `T=\tau_D+2\sqrt{R_4}` and (SE.6),
+
+\[
+\boxed{
+B+\delta=M_*+2a.
+}
+\tag{SE.12}
+\]
+
+Since `Q=f+(Q-f)`, one also has
+
+\[
+B=5\frac fD+r.
+\tag{SE.13}
+\]
+
+Therefore every subsequential limit satisfies
+
+\[
+\boxed{
+\frac fD\to {M_*+2a-\delta-r\over5},
+\qquad
+\frac QD\to {M_*+2a-\delta+4r\over5}.
+}
+\tag{SE.14}
+\]
+
+Equations (SE.10) and (SE.14) imply the stability interval
+
+\[
+\boxed{
+{M_*\over5}-{\varepsilon\over2}
+\le\liminf {f\over D}
+\le\limsup {f\over D}
+\le {M_*\over5}+2\varepsilon,
+}
+\tag{SE.15}
+\]
+
+and
+
+\[
+\boxed{
+{M_*\over5}-{\varepsilon\over2}
+\le\liminf {Q\over D}
+\le\limsup {Q\over D}
+\le {M_*\over5}+4\varepsilon.
+}
+\tag{SE.16}
+\]
+
+Let `P_5` be the number of bounded pentagonal contact faces.  Degree arithmetic gives
+
+\[
+P_5\ge2f-Q=f-(Q-f).
+\tag{SE.17}
+\]
+
+Combining (SE.10), (SE.14), and (SE.17),
+
+\[
+\boxed{
+\liminf {P_5\over D}
+\ge {M_*\over5}-3\varepsilon.
+}
+\tag{SE.18}
+\]
+
+Also the number of bounded exceptional faces of degree at least six is at most
+`Q-f`, hence at most `(5/2)epsilon D+o(D)`.
+
+At exact surplus saturation,
+
+\[
+\boxed{
+\frac fD,\frac QD,\frac{P_5}D
+\longrightarrow
+{M_*\over5}
+=0.764933045491166\ldots .
+}
+\tag{SE.19}
+\]
+
+Thus the endpoint is not the earlier balanced `0.478D` pentagon regime.  It is an
+outer-geodesic, asymptotically all-pentagonal exceptional network with roughly
+`0.765D` bounded pentagons.
+
+---
+
+## 4. Singleton versus fully rhombic pentagonal flowers
+
+Call a bounded pentagon fully rhombic if each of its five sides has a strict unit
+rhombus on the opposite face side, and let `F_5^{full}` be their number.  Let `S` be
+the singleton stopped-train count.
+
+The exact finite incidence inequality already proved for the modern train ledger is
+
+\[
+\boxed{P_5-F_5^{full}\le2S.}
+\tag{SE.20}
+\]
+
+Indeed every non-full pentagon has a singleton boundary edge, while a singleton edge
+can witness at most two pentagons.
+
+Set
+
+\[
+p_\varepsilon:={M_*\over5}-3\varepsilon.
+\]
+
+Whenever `p_epsilon>0`, (SE.18) and (SE.20) give
+
+\[
+\boxed{
+\max\left\{\liminf{S\over D},
+\liminf{F_5^{full}\over D}\right\}
+\ge {p_\varepsilon\over3}
+={M_*\over15}-\varepsilon.
+}
+\tag{SE.21}
+\]
+
+More precisely, along every fixed subsequence either
+
+\[
+\frac SD\ge {M_*\over15}-\varepsilon-o(1)
+\tag{SE.22}
+\]
+
+or
+
+\[
+\frac{F_5^{full}}D
+\ge {M_*\over15}-\varepsilon-o(1).
+\tag{SE.23}
+\]
+
+At `epsilon=0`, the common coefficient is
+
+\[
+\boxed{
+{M_*\over15}=0.254977681830389\ldots .
+}
+\tag{SE.24}
+\]
+
+Every one of these pentagons is source-empty by the existing isolate-host theorem,
+since a bounded positive-contact face containing a source point has degree at least
+seven.
+
+---
+
+## 5. The flower branch is very far from the rhombic Mantel endpoint
+
+In the flower alternative, (SE.22) fails.  Since
+
+\[
+\rho_{\rm rec}=2S,
+\qquad
+2\tau_D=\rho_{\rm rec}+\sigma_R,
+\]
+
+(SE.3) yields
+
+\[
+\liminf\frac{\sigma_R}{D}
+\ge
+2\tau_*-2\left({M_*\over15}-\varepsilon\right).
+\tag{SE.25}
+\]
+
+In particular, uniformly for `epsilon>=0`, this is at least
+
+\[
+\boxed{
+\sigma_*:=2\tau_*-{2M_*\over15}
+=2.647051289929016\ldots .
+}
+\tag{SE.26}
+\]
+
+The exact strict-rhombus train identity
+
+\[
+{T_R^2\over4}-R_4
+={\sigma_R\sqrt{R_4}\over2}+{\sigma_R^2\over16}
+\tag{SE.27}
+\]
+
+and `sqrt(R_4)/D->s_2` therefore give
+
+\[
+\boxed{
+\liminf {T_R^2/4-R_4\over D^2}
+\ge
+{\sigma_*s_2\over2}+{\sigma_*^2\over16}
+=1.698340455132259\ldots .
+}
+\tag{SE.28}
+\]
+
+A fully rhombic pentagon supplies five terminal rhombic-train occurrences, and one
+complete train has two terminal occurrences.  Hence the number `N_full` of distinct
+non-singleton trains ending on at least one fully rhombic pentagon satisfies
+
+\[
+N_{full}\ge{5\over2}F_5^{full}.
+\tag{SE.29}
+\]
+
+At the exact endpoint, the flower branch therefore gives
+
+\[
+\boxed{
+\liminf {N_{full}\over D}
+\ge {M_*\over6}
+=0.637444204575972\ldots .
+}
+\tag{SE.30}
+\]
+
+This is substantially stronger than the earlier bounded-`t` flower normal form because
+terminal surplus saturation simultaneously kills outer detour and superpentagonal
+degree excess.
+
+---
+
+## 6. What this resolves and what it does not
+
+The surplus floor itself is not a C-II contradiction.  There is no known universal
+upper bound on `mu_D` below `mu_*`.
+
+The useful new information is the stability package.  Any terminal FREE sequence
+attempting to keep the canonical all-phase surplus near its smallest value must
+converge to a much narrower source-level normal form:
+
+```text
+outer detour / D -> 0;
+nonunit force-hull-side currency / D -> 0;
+(Q-f)/D -> 0;
+tau_D/D -> pi/2+g;
+f/D, Q/D, P5/D -> 0.76493304549...;
+and either
+  S/D >= 0.25497768183...,
+or
+  F5_full/D >= 0.25497768183...,
+  N_full/D >= 0.63744420458...,
+  (T_R^2/4-R4)/D^2 >= 1.69834045513....
+```
+
+The next closing attack should therefore split by this normal form rather than re-run
+the relaxed classwise `lambda`/`E_exc` optimization.  In the singleton branch, the
+remaining source-level problem is a simultaneous finite motion for a linear family of
+one-edge stopped trains.  In the flower branch, the remaining problem is the endpoint
+network of a linear family of empty five-rhombus holes together with the very large
+rhombic crossing deficit.  The known pentagon phase regression prevents claiming a
+uniform angular defect per flower without an additional metric or global-network
+input.
+
+No theorem-state file is changed.

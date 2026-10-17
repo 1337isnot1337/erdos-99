@@ -1,0 +1,119 @@
+# Target C: audit r=0 three-singleton local-rank monotonicity
+
+Date: 2026-09-27
+
+Scope: eight-no-root `k=4, D=-1, d_root=0, p=3`, three-singleton profile, `r=0`, where `r` counts projective weight-two lines in the rank-four coefficient space `P<=Q^8`.
+
+Status: proof-level audit of the committed r=0 finite certificate. No new finite computation is claimed.
+
+Audited files:
+
+- `research/target_c_support7_global_segment_relative_eight_noroot_k4_dminus1_d0p3_three_singleton_r0_closure_2026-09-27.md`;
+- `research/verify_target_c_support7_global_segment_relative_eight_noroot_k4_dminus1_d0p3_three_singleton_r0_closure_2026_09_27.py`;
+- `research/verify_target_c_support7_global_segment_relative_eight_noroot_k4_dminus1_d1p0_support_closure_2026_09_26.py`.
+
+The imported helper contains the now-known false converse
+
+`no repeated containing support => dim(E_b)=1`.
+
+This audit proves that the r=0 certificate does not rely on that converse in an exclusionary way.
+
+## 1. Safe support tag
+
+For a touched triangle block `b`, let `E_b` be its true local empty-state coefficient space and `t_b` its external incidence count. Define
+
+`tau_b=2`
+
+if some containing tetrahedral support repeats, and
+
+`tau_b=1`
+
+otherwise.
+
+The repaired local analysis gives only
+
+`tau_b <= dim(E_b)`.
+
+Repeated support forces true local rank two. A no-repeat block may have true rank one or two. The helper field named `dim` is therefore interpreted here as the support tag `tau_b`, not as the true local rank.
+
+## 2. Actual-empty incidence floors in r=0
+
+Current main gives
+
+`rank(P)=4`, `(d1,d2,d3,d4)(P)>=(2,4,5,7)`.
+
+Since r=0 means there is no projective weight-two line in `P`, the first generalized weight strengthens to
+
+`d1(P)>=3`.
+
+Hence every true rank-one actual-empty block has `t_b>=3`.
+
+Now suppose a true rank-two actual-empty block had `t_b=4`. Write its three local projective-direction multiplicities as
+
+`m0+m1+m2=4`.
+
+True local rank two means at least two multiplicities are positive. Thus `max(m0,m1,m2)` is 2 or 3. The corresponding nonzero local coefficient row has weight
+
+`4-max(m0,m1,m2)`,
+
+which is 1 or 2. Since an actual-empty local space lies in `P`, this contradicts `d1(P)>=3`. The generalized-weight bound `d2(P)>=4` already rules out a true rank-two actual-empty block supported on at most three incidences. Therefore every true rank-two actual-empty block has `t_b>=5`.
+
+Every actual-empty block consequently satisfies this support-visible necessary condition:
+
+- if `tau_b=2`, then `t_b>=5`;
+- if `tau_b=1`, then `t_b>=3`.
+
+The second condition is intentionally weak. A no-repeat block with true local rank two actually needs at least five incidences, but allowing it at three only enlarges the virtual empty set.
+
+## 3. The committed verifier uses exactly this safe relaxation
+
+The r=0 verifier applies
+
+```python
+def empty_eligible(x):
+    _, dim, incidence = x
+    if dim == 1:
+        return incidence >= 3
+    return incidence >= 5
+```
+
+to the helper output. Reinterpreting `dim` as `tau_b`, this is exactly the necessary support condition above.
+
+The verifier never otherwise uses the helper's local-rank tag. It forms the virtual empty set `E*`, then uses only the touched set `T`, the exact triangle-row rank `R=rank H(T)`, and `N=T\E*`.
+
+Every actual-empty block lies in `E*`. Hence every block in `N` is singleton or complete. There are exactly three singleton blocks, so
+
+`c>=|N|-3`.
+
+Because `d_root=0`, touched complete rows are independent. The face-local capacity condition for `k=4` gives
+
+`R-c>=4`,
+
+hence `c<=R-4`. Any actual r=0 state would therefore require
+
+`|N|<=R-1`.
+
+The committed exact census proves instead that every one of the 27,763 size-eight support orbits has
+
+`|N|>=R`.
+
+So no actual r=0 state exists.
+
+## 4. Why the false converse cannot create a false exclusion
+
+If a no-repeat block has true rank two, the helper still tags it `tau_b=1`.
+
+- At incidence 3 or 4 it is not actual-empty by Section 2, although the verifier may include it in `E*`.
+- At incidence at least 5 it may be actual-empty and is included in `E*`.
+
+Thus the false converse can only add blocks to the virtual empty set. It never removes an actual-empty block.
+
+Adding virtual empty blocks shrinks `N`, weakens the lower bound `|N|-3` on complete blocks, and makes the contradiction harder. It cannot exclude an actual state spuriously.
+
+## 5. Result
+
+The existing exact finite certificate, together with the monotonicity argument above, rigorously excludes
+
+`k=4, D=-1, d_root=0, p=3, three-singleton, r=0`.
+
+This repairs the logical dependency without rerunning the finite census.

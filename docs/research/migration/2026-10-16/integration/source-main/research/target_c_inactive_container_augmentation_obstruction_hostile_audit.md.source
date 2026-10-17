@@ -1,0 +1,43 @@
+# Hostile audit — inactive-container augmentation obstruction
+
+**Date:** 2026-09-12  
+**Status:** audited-working proof-only negative theorem; theorem state unchanged  
+**Audited source:** [inactive-container augmentation obstruction](target_c_inactive_container_augmentation_obstruction.md)
+
+## Verdict
+
+The construction is a valid negative model theorem. It proves that the four coarse
+container statistics used in the Type-I branch—quadratic area, quadratic isolated
+population, linear perimeter, and linear Oler slack—do not force even one additional
+unit-separated point. The examples are not claimed to be global minimizers and do not
+remove the source-specific coupling required by the actual C-II branch.
+
+## Checks
+
+1. For a compact convex body, the maximum unit-separated packing number exists by
+   compactness. Oler supplies the upper bound, while translation averaging of one unit
+   triangular lattice supplies the lower bound N(C)>=area(C)/a_0.
+
+2. If N(lambda C)>=N(C)+1 for a sequence lambda downarrow1, rescaling the extra
+   packings back into C and taking a compact subsequential limit would produce
+   N(C)+1 unit-separated points in C. Hence the first augmentation threshold
+   lambda_* is strictly above one for each fixed body.
+
+3. For a disk C_R, choose epsilon_R below half that threshold gap and below R^{-2}.
+   The scaled maximum packing remains of cardinality N_R, lies strictly inside the
+   enlarged disk, and all pair distances are at least 1+epsilon_R/2. Thus every
+   point is contact-isolated while no packing of one larger cardinality exists in the
+   enlarged container.
+
+4. The enlarged disk has area Theta(R^2) and perimeter O(R). Lattice averaging gives
+   N_R=Omega(R^2). Since epsilon_R<=R^{-2}, the area increase is O(1), and the
+   enlarged-disk Oler slack is bounded by its perimeter term plus a constant, hence
+   O(R).
+
+5. The conclusion is deliberately only a counterexample to statistics-only
+   augmentation. It does not exclude a theorem using the actual core boundary,
+   contact-wall guards, a protected collar, or the diameter graph.
+
+**Claim classification:** audited-working proof-only negative model theorem; theorem state
+unchanged; C-II remains open.
+

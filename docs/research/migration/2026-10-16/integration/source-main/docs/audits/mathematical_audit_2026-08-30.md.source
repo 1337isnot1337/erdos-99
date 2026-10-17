@@ -1,0 +1,474 @@
+<!-- theorem-state: {"artifact_id":"ART-DE463C0E7079","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Mathematical audit — 2026-08-30
+
+This is a second-pass, repository-wide audit of the Erdős Problem #99 working
+record. The canonical report is the theorem-state document; the modular theory
+and target files are checked against it, while reports in docs/archive/ and
+docs/reports/ are treated as historical snapshots rather than independent
+proofs.
+
+The audit does not claim to settle Erdős Problem #99. The Level I question remains
+open. It records which arguments survive, repairs statements whose hypotheses or
+constants were incomplete, and prevents unsupported intermediate claims from being
+used as theorems.
+
+## Scope and method
+
+The audit covered:
+
+- the canonical report docs/canonical/erdos_problem_99_1.7.0.md;
+- the three theory modules in docs/theory/;
+- the Target A and Target B modules in docs/targets/;
+- the problem statement and literature-baseline files;
+- cross-references from reports and archived working records; and
+- the seven primary PDFs, related PDFs, extracted text, and repository integrity.
+
+The mathematical checks used four kinds of evidence:
+
+1. direct re-derivation of displayed identities and inequality directions;
+2. finite combinatorial enumeration of the small lattice motifs used in the
+   scaffold argument;
+3. independent numerical evaluation of the constants and thresholds; and
+4. adversarial review of quantifiers, limiting arguments, external dependencies,
+   and transitions between geometric, rigidity, and matching models.
+
+The conclusions below use these labels:
+
+- **Established (conditional):** the proof is sound after its stated hypotheses
+  are supplied. “Conditional” matters: many results apply only in the pure,
+  simply connected, strict-rhombic, or jammed branch.
+- **Repaired:** the repository now contains a corrected statement or proof.
+- **Proposed/unproved:** a useful direction or reduction, but not available as a
+  theorem.
+- **Historical:** retained for provenance and not permitted to override a later
+  authoritative correction.
+
+## Executive result
+
+The core reductions remain substantial and mostly coherent, but they do not close
+the problem. The most important audit actions are:
+
+1. Proposition 5.5 now uses the correct integer threshold \(n\ge 44\), not
+   \(n\ge40\).
+2. Theorem 10.9 now explicitly requires the acute rhombus angle
+   \(\theta_{ij}\in(\pi/3,\pi/2]\). The determinant sign alone permits an
+   obtuse angle and is insufficient for the displayed sine chord bound.
+3. The proof of the phase-atomic/exposed-hull estimate in Section 39 now takes
+   the neighborhood and subsequence limits in the required order. For a fixed
+   neighborhood the exceptional chain count is \(O(\delta T)\), not literally
+   \(o(T)\); it becomes negligible only after \(\delta\downarrow0\).
+4. The proof of Theorem 82.2 has been made explicit about the fact that its
+   \(e_j\)'s are nonzero sides between consecutive extreme hull vertices. This
+   rules out repeated same-oriented sides and justifies the atomic conclusion.
+   An abstract path with vectors \(u,-2u,u\) is not a counterexample to this
+   theorem: those vectors cannot occur as the cyclic side sequence of a convex
+   hull with the stated vertex convention.
+5. The boundary-backtracking estimate (37.7) is now clearly marked as a proposed
+   estimate, because its “suitable boundary arc” and its charging argument were
+   not defined or proved.
+6. Lemma 42.6 is explicitly retained as a conjectural/auxiliary selection
+   principle, not as a theorem. Its first-event proof has a triangle-wall
+   loophole: the first event may be an exact unit triangle, which is not an
+   admissible triangle-free endpoint and therefore does not contradict
+   lexicographic maximality.
+7. A non-printing backspace character in two active Markdown files has been
+   removed. The append-only report's repeated late section numbers and stale
+   historical claims are documented rather than silently renumbered.
+
+The unresolved theorem-state targets are still:
+
+\[
+\text{Target A: }\quad
+\operatorname{rank}S\le d_{\rm int}+|C^\partial|-\Delta_\Lambda,
+\]
+
+or an equivalent exact Hall surplus, and
+
+\[
+\text{Target B: }\quad
+\operatorname{rank}\overline{\mathcal B}_\xi+I+r
+\le T-q-r_\alpha
+\]
+
+with the required topology-corrected transport. Neither inequality follows from
+the audited reductions alone.
+
+## Findings by mathematical area
+
+### 1. Definitions and quantifiers
+
+The definition
+
+\[
+D(n)=\min\{\operatorname{diam}(A):|A|=n,\ |x-y|\ge1\}
+\]
+
+and the distinction between “some minimizer” and “every minimizer” are correct.
+The report correctly observes that one finite triangle-free minimizer does not
+disprove the eventual statement and that a triangle-containing minimizer does not
+prove it.
+
+The small-\(n\) examples are consistent with the stated diameter values. The
+phrase “the regular pentagon has circumradius (1)” was an editorial corruption,
+not a mathematical assertion; it is repaired to “circumradius \(1\)”.
+
+### 2. Literature and external dependencies
+
+The supplied papers are preserved as the literature baseline. Their theorems are
+not independently reproved by this audit; statements imported from them must remain
+read with the cited hypotheses. In particular, the following are external
+dependencies rather than internally established facts:
+
+- the exact small-\(n\) diameter results;
+- Oler's finite packing inequality and its strict translated-lattice variant;
+- the Kuperberg asymptotic/finite-density input where invoked; and
+- any theorem cited from the related-paper collection.
+
+The repository's PDF syntax and extracted-text artifacts are checked separately.
+PDF integrity does not certify the mathematical correctness of a cited paper.
+
+### 3. Local rhombic structure
+
+The following local steps survive under the explicit hypotheses in the canonical
+report:
+
+- the KKT/contact-graph setup;
+- the positive stress normalization;
+- the degree and face-excess bookkeeping;
+- the bounded-face classification into strict unit rhombi in the jammed branch;
+- the train-track path property;
+- the no-double-crossing and triangle-free train-crossing graph; and
+- Mantel's bound \(R\le T^2/4\) and \(B_{\mathcal R}=2T\).
+
+The train-track argument is not a statement about arbitrary quadrangulations:
+the strict angle interval and edge-to-edge hypotheses are used. The exceptional
+nonquadrilateral faces, holes, pinches, and outside vertices remain part of the
+later topology-transfer gap.
+
+### 4. Numerical and geometric corrections
+
+For Proposition 5.5, the derived forest inequality is
+
+\[
+n\le 2\pi\sqrt{n/\Delta_2}-2c_+,
+\qquad
+\Delta_2=\frac{\pi}{2\sqrt3}.
+\]
+
+Ignoring the helpful \(-2c_+\) term, the equality threshold is
+
+\[
+n=8\pi\sqrt3=43.531\ldots.
+\]
+
+Thus the integer contradiction begins at \(n=44\). The older \(n\ge40\) wording
+was numerically false and is now corrected in the active canonical/theory files.
+Historical reports still contain the old sentence and are flagged as snapshots.
+
+For Theorem 10.9, the chord inequality
+
+\[
+\sin\left(\frac\pi3+\delta\right)
+\ge\frac{\sqrt3}{2}+\chi_*\delta
+\]
+
+uses the chord on \([\pi/3,\pi/2]\). If \(\theta_{ij}\) were allowed to range
+through the obtuse half of \((\pi/3,2\pi/3)\), the asserted lower bound would not
+follow from concavity in the displayed form. The repaired theorem therefore
+requires the consistently oriented *acute* angle.
+
+### 5. Phase-atomic and exposed-hull limit
+
+The crossing-defect argument correctly identifies the \(60^\circ\) projective
+relation as the only place where \(\Theta(T^2)\) crossing mass can survive. The
+ordered crossing measure has total mass \(2R/T^2\), and the limiting product
+measure sees the relation only through atoms. Weighted Mantel then gives
+
+\[
+\limsup R/T^2\le s^2/4.
+\]
+
+The original exposed-hull paragraph made a quantifier error. For a fixed finite
+atomic set and fixed neighborhood radius \(\delta\), weak convergence gives an
+\(O(\delta T)+o(T)\) bound on hull sides whose normals lie in the corresponding
+finite union of arcs. It does not give \(o(T)\) for that fixed neighborhood.
+The repaired argument fixes \(M\), selects finitely many atoms carrying at least
+\(s-\varepsilon\), takes \(T\to\infty\), then \(\delta\downarrow0\), then
+\(M\to\infty\), and finally \(\varepsilon\downarrow0\). This yields
+
+\[
+\frac qT\le 2(1-s)+o(1),
+\qquad
+s\le1-\frac y2,
+\]
+
+with the displayed order of limits. The result remains conditional on the
+Hausdorff/perimeter-measure convergence of the normalized minimizing hulls to the
+unit-diameter disk, which is supplied by the isodiametric equality argument in
+the canonical stack.
+
+### 6. Terminal components and the \(s_C=0\) class
+
+The componentwise closure identities and the Minkowski splitting are valid provided
+the terminal graph and its incidence conventions are those of Sections 51 and 65.
+The audit initially stress-tested the atomicity proof with a collinear
+three-terminal path. That stress test exposes a potential ambiguity but not a
+counterexample under the actual definitions:
+
+- \(e_j=z_{j+1}-z_j\) are sides between consecutive *extreme* hull vertices;
+- they are nonzero and occur in cyclic convex order; and
+- a convex hull has at most one side in a given oriented direction and at most one
+  in the opposite direction when collinear subdivisions are excluded.
+
+When \(s_C=0\), all \(e_j\) are parallel to one line and component closure forces
+both orientations to occur. Consequently there are exactly two component
+vertices. Theorem 66.2 makes the component a tree, so it has exactly one train
+edge. The strict singleton support of an active diameter endpoint gives positive
+width in every active direction, hence the train is visible and strictly forward.
+The repaired proof of Theorem 82.2 now states these points instead of relying on
+the informal word “merge”.
+
+Accordingly, the downstream conclusions
+
+\[
+\mathcal O\subseteq\{C:s_C>0\}
+\]
+
+and the nonzero-kernel \(r=1\) corollary remain available, but only in the exact
+pure strict-rhombic terminal-component branch. The separate warning that
+\(s_C=1\) trees remain uncontrolled is correct and important.
+
+### 7. Unsupported or incomplete claims
+
+#### 7.1 Boundary backtracking (37.7)
+
+The displayed estimate
+
+\[
+\sum_{\lambda_\tau<0}(-\lambda_\tau)
+\le \frac D2(L-D)
+\]
+
+may be geometrically plausible, but neither the boundary arc \(L\) nor the
+non-overcounted charging map from backward train weight to the arc was defined.
+It is therefore marked **proposed/unproved** and cannot be used in a contradiction.
+
+#### 7.2 Invisible-coordinate selection (42.6)
+
+The intended lexicographic argument varies an invisible train until the first
+constraint event. A first event may be an exact \(60^\circ\) rhombus angle,
+creating a unit triangle. Since the chosen representative is required to remain
+triangle-free, that endpoint is not an admissible competitor. The proof only
+handles the cases where the first event is a new contact or a new active diameter.
+The lemma is therefore **proposed/unproved**, even with the stated
+lexicographic hypothesis. It is not used as a dependency of the main Section 53
+alternative, which correctly allows a local same-diameter train flat.
+
+#### 7.3 Historical theorem-state copies
+
+The archive and reports contain repeated theorem statements, stale constants, and
+superseded frontier descriptions. They are useful provenance, but they are not
+independent evidence and must not be cited to override the canonical report or
+this audit. In particular, the old \(n\ge40\) sentence remains in historical
+copies by design.
+
+### 8. Structural and algebraic results that survive
+
+The following were re-derived or checked for consistency under their local
+hypotheses:
+
+- the translated-lattice averaging bound, including the strict open-disk endpoint;
+- the KKT stress identities and the signed train-angle Hessian;
+- the exact variance formula, including the possibility of negative and tangent
+  train coefficients;
+- the warning that tangent incidences can block at quartic order;
+- the stress-projected signed Laplacian and secondary-cusp transfer;
+- the terminal direction-network interval-cut formula;
+- the injectivity distinction between the vector direction map and the scalar
+  cycle space;
+- the fixed-basis fundamental-circuit Hall-deficiency additivity;
+- the exact matching/König scaffold identities;
+- the local triangular-lattice blocker classification into three-site triangles
+  and four-site lozenges;
+- the two-well geometry and finite-capacity reductions;
+- the component-rotation stochastic-width formula; and
+- the exact topology identities for pure rhombic disks.
+
+These checks do not remove the hypotheses. For example, a fixed-basis matroid
+contraction is not a declaration that the residual point set is a global optimum at
+its new cardinality, and a pure-disk result is not automatically a result for the
+nonquadrilateral shell.
+
+## Current frontier after the audit
+
+The audit leaves two legitimate research programs.
+
+### Target A
+
+The source-specific missing statement is an exact one-integer Hall surplus for the
+inner scaffold, equivalently the boundary Schur-response inequality recorded at
+the top of this file. Existing area, perimeter, lattice, Delaunay, and
+monomer--dimer facts do not transfer the two-well configuration into actual
+cavities of the smaller optimum. A proof must supply that transfer or an exact
+boundary-capacity obstruction.
+
+### Target B
+
+The pure rhombic branch has a corrected terminal-component decomposition. The
+remaining internal theorem must charge the blocker rows, peripheral Dirichlet
+data, and terminal potential classes against the ordered hull-chain slots, while
+retaining the \(s_C=1\) tree case and the topology correction. Scalar cycle
+counting alone is insufficient because the vector direction map is injective.
+
+### Post-audit frontier work
+
+The post-audit work produced several exact finite instruments. They are useful
+advances, but each is recorded with the hypothesis that prevents it from being
+silently promoted to a proof of the original problem.
+
+1. **Finite homothetic capacity (Section 141).** For a strained \(L\times L\)
+   triangular-lattice patch, with
+   \[
+   r=\lfloor\varepsilon(L-1)\rfloor,
+   \]
+   the hull contains an exact \((L+r)\times(L+r)\) lattice patch and the gain is
+   \[
+   2Lr+r^2.
+   \]
+   One complete coordinate layer gives \(2L+1\) additional sites. The result is
+   exact and rationally regression-tested in
+   research/homothetic_capacity.py. It remains a free-patch statement: exterior
+   source points can block the candidate.
+
+2. **Nonuniform product capacity and boundary buffers (Sections 142–143).**
+   For coordinate spans \(X,Y\), the integer layers
+   \[
+   r_1=\lfloor X\rfloor-(L-1),\qquad
+   r_2=\lfloor Y\rfloor-(L-1)
+   \]
+   give the exact gain
+   \[
+   L(r_1+r_2)+r_1r_2.
+   \]
+   A two-coordinate buffer leaves
+   \[
+   (K_1-3)_+(K_2-3)_+
+   \]
+   automatically protected lattice sites when all other source points lie outside
+   the open product hull. Four complete layers in both directions suffice for an
+   \(L\times L\) replacement core; the one-sided \(L=10\) threshold is eleven
+   layers. These are finite, source-compatible criteria only under their explicit
+   hull-isolation assumptions.
+
+3. **Closed-hull covering and localized defects (Sections 144–145).** For a product
+   cell with coordinate gaps \(a,b\), the short-diagonal square
+   \[
+   \sigma(a,b)=a^2-ab+b^2
+   \]
+   controls coverage. If \(\sigma<3\), the cell's *closed* hull is covered by open
+   unit disks at its vertices, so an additional source point cannot lie anywhere
+   in that closed cell. Cells with \(\sigma\ge3\) can instead be marked as a bad-cell
+   hazard, and candidate lattice sites can be excluded from the one-unit
+   neighborhood of the closed bad-cell union. The localized \(15\times15\)
+   regression leaves \(230>225\) protected sites. The actual scaffold still gives
+   local monomer/dimer cells, not a global product patch with a controlled bad-cell
+   mask.
+
+4. **First-transition and tree-branch reductions (Sections 137–140).** The
+   retained-rattler incidence theorem bounds newly created rattler-supported
+   triangles by
+   \[
+   |\mathcal T_j(R)|\le2e_X(\Delta X_j)\le12|\Delta X_j|.
+   \]
+   The simultaneous perturbation alternative and the locked-triangle alternative
+   are valid under their fixed-container hypotheses. The exact interior cage
+   calculation shows why a one-point tree swap does not remove the remaining
+   angular obstruction. None of these results forces a positive fraction of
+   rattlers to participate in the first triangle or supplies a Schur nullity.
+
+5. **Local no-go regressions.** An exact mixed opposite-orientation monomer pair,
+   extendable to an interface of arbitrary finite length, shows that local cell
+   disjointness and blocker separation do not force a single monomer phase. A
+   separate three-point construction shows that ordinary single-triangle
+   barycentric hats can overload one lattice vertex by mass \(6/5\); this invalidates
+   that fractional-matching shortcut, but is not itself a Hall obstruction. The
+   same interface code now proves the general sub-half-anchor bound
+   \(h(G)\le |C|\), where \(C\) is the selected set of blockers with no conflict
+   vertex closer than \(1/2\). The bound follows by an injective assignment of
+   every other blocker to a distinct conflict vertex. The long mixed interface
+   has \(C=\varnothing\), so it is exactly Hall-neutral. The regressions are
+   documented in
+   docs/reports/mixed_monomer_interface_regression_2026-08-30.md and
+   docs/reports/local_hat_matching_regression_2026-08-30.md.
+
+6. **Exact free sinks and alternating Hall cores (Sections 146–147).** For each
+   classified scaffold cell \(C_x\), the lattice trace is exactly its displayed
+   conflict neighborhood. Therefore
+   \[
+   Y_{\rm free}=Y_{\rm in}\setminus\bigcup_x C_x
+   \]
+   is exactly the degree-zero part of the right shore and
+   \[
+   h(G)\ge |Y_{\rm free}|.
+   \]
+   A maximum matching also decomposes the positive Hall witness into alternating
+   components with deficiencies \(d_\ell\ge1\) and
+   \[
+   d_{\rm sc}=\sum_\ell d_\ell.
+   \]
+   The cell-complex charge identity applies componentwise, giving a genuine
+   non-overlapping certificate \(12d_\ell\) for each witness component. The exact
+   remaining target is
+   \[
+   \sum_\ell d_\ell\ge\Delta_\Lambda,
+   \]
+   but no source-side theorem currently forces it. The decomposition does not
+   isolate each component from cells outside the witness that may share its lattice
+   vertices.
+
+These results sharpen the frontier and close several incorrect proof shortcuts.
+They do not close Target A, because the missing step is still a transfer from the
+independent smaller optimum to either an actual protected source replacement or an
+exact boundary Schur-rank saving.
+
+## Validation snapshot
+
+The final local validation performed for this audit was:
+
+- 55 research unit tests passed with
+  PYTHONPATH=research python -m unittest discover -s research -p 'test*.py' -v;
+- all 29 repository PDFs passed qpdf --check --warning-exit-0 with zero syntax
+  failures;
+- three legacy PDFs emitted recoverable qpdf warning diagnostics:
+  papers/primary/1951-03.pdf,
+  papers/primary/s00454-002-0747-6.pdf, and
+  papers/primary/mp05-2-261-269.pdf;
+- git diff --check passed; and
+- the active documentation/research tree contains no remaining backspace,
+  vertical-tab, form-feed, or carriage-return control characters.
+
+The qpdf warnings are properties of the supplied PDF hint tables/linearization
+metadata, not repairs made to the mathematical source. They do not prevent text
+extraction or indicate a syntax failure, but the files should remain labeled as
+legacy warning-bearing references.
+
+## Final audit conclusion
+
+The repository is materially more reliable after this pass: incorrect constants,
+missing geometric hypotheses, a limit-order error, an exposed-hull proof gap,
+ambiguous terminal atomicity, an unproved boundary estimate, an invalid selection
+lemma, finite-witness cardinality omissions, and several active-document notation
+defects have been repaired or explicitly downgraded. Exact finite regressions now
+cover the main scaffold identities, cell traces, capacity formulas, hull covering,
+bad-cell masking, mixed interfaces, and Hall-core decomposition.
+
+The result is not a Level I solution. Target A remains the exact inequality
+\[
+\operatorname{rank}S\le d_{\rm int}+|C^\partial|-\Delta_\Lambda,
+\]
+equivalently the required Hall surplus \(h(G)\ge j\), or the source-side
+contradiction with deficiency at least \(\widehat p_H+1\). Target B also remains
+conditional on its topology-corrected transport. No certified infinite
+counterexample has been found. The canonical report and frontier log state these
+limitations after every new result so that the new lemmas cannot be mistaken for a
+solution.

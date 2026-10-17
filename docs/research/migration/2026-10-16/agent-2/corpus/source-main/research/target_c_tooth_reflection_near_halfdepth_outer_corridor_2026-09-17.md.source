@@ -1,0 +1,411 @@
+# Target C-II — the FREE outer-face corridor reaches the near-central `D^(3/4)` scale
+
+**Date:** 2026-09-17  
+**Status:** proved candidate awaiting promotion; proof-only strengthening of the FREE-module outer-face corridor  
+**Scope:** non-anchored FREE reflection modules after inactive-guard absorption  
+**Dependencies:** audited Section 58 full-source circumradius bound; canonical farthest-blocker support-width bound; linear inactive-chain theorem; FREE-blocker outer-face theorem; support-monotonicity theorem  
+**Certificate:** `research/verify_target_c_tooth_reflection_near_halfdepth_outer_corridor_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The existing inactive-chain theorem stops at every fixed fractional support depth
+
+\[
+a_v<\lambda D,\qquad \lambda<\frac12,
+\]
+
+because its circular-cap estimate becomes exactly critical at `lambda=1/2`. The critical window can nevertheless be entered at a quantitative sublinear scale. The reason is that the full-source circumradius error is only `O(sqrt D)`, while retreating by `D^(3/4)` from half-depth creates a cap-diameter deficit of order `sqrt D`; an arbitrarily slowly growing correction then makes the deficit dominate every retained error.
+
+Put
+
+\[
+\eta_D=3^{1/4}\sqrt D,
+\qquad
+c_*:=3^{1/8},
+\qquad
+h_*:=\frac{\sqrt{303}}{52}.
+\]
+
+Let `omega_D` be any function satisfying
+
+\[
+\omega_D\to\infty,
+\qquad
+\omega_D=o(D^{1/4}),
+\]
+
+and define
+
+\[
+\kappa_D:=c_*+\omega_DD^{-1/4}
+\]
+
+and the moving depth threshold
+
+\[
+\boxed{
+T_D:=\frac D2-c_*D^{3/4}-\omega_D\sqrt D
+=\frac D2-\kappa_DD^{3/4}.
+}
+\tag{NH.1}
+\]
+
+Then every non-anchored FREE reflection module forces an original fully inactive parent chain
+
+\[
+z_0,z_1,\ldots,z_\ell
+\]
+
+contained in the outer face, strictly monotone in the canonical support-depth coordinate, with
+
+\[
+\boxed{
+a_{z_\ell}>T_D.}
+\tag{NH.2}
+\]
+
+Moreover the first vertex crossing this threshold satisfies
+
+\[
+\boxed{
+N\cdot(z_\ell-o)
+=c_*D^{3/4}+\omega_D\sqrt D+O(\sqrt D),
+}
+\tag{NH.3}
+\]
+
+where `o` is the audited full-source circumcenter. In particular
+
+\[
+\boxed{
+N\cdot(z_\ell-o)=(3^{1/8}+o(1))D^{3/4}.
+}
+\tag{NH.4}
+\]
+
+Thus the outer-face inactive corridor reaches an `o(D)` neighborhood of the central support hyperplane. The previous theorem only guaranteed penetration to `(1/2-epsilon)D` for fixed `epsilon>0`.
+
+The chain-length lower bound also sharpens to
+
+\[
+\boxed{
+\ell\ge
+\frac{D}{2(1+h_*)}
+-\frac{3^{1/8}}{1+h_*}D^{3/4}
+-O\!\left(D^{2/3}+\omega_D\sqrt D\right).
+}
+\tag{NH.5}
+\]
+
+Numerically,
+
+\[
+\frac1{2(1+h_*)}=0.374602551093811\ldots,
+\]
+
+and
+
+\[
+\frac{3^{1/8}}{1+h_*}=0.859490108920923\ldots.
+\]
+
+For the concrete choice `omega_D=log D`, the endpoint depth and chain length are
+
+\[
+a_{z_\ell}>
+\frac D2-3^{1/8}D^{3/4}-\sqrt D\log D,
+\tag{NH.6}
+\]
+
+and
+
+\[
+\ell\ge
+0.374602551093811\ldots D
+-0.859490108920923\ldots D^{3/4}
+-O(D^{2/3}).
+\tag{NH.7}
+\]
+
+---
+
+## 1. Explicit near-critical cap geometry
+
+Let `K=conv(A)`, let `o` be the full-source circumcenter, and write
+
+\[
+c=N\cdot o,
+\qquad
+H=h_K(N),
+\qquad
+a_v=H-N\cdot v.
+\]
+
+The audited full-source theorem gives
+
+\[
+K\subset B(o,R_D),
+\qquad
+R_D<\frac D2+\eta_D.
+\tag{NH.8}
+\]
+
+The canonical farthest-blocker width estimate gives
+
+\[
+W_K(N)>D-h_*.
+\]
+
+The opposite support value is at least `c-R_D`, hence
+
+\[
+H-(c-R_D)>D-h_*,
+\]
+
+so
+
+\[
+\boxed{
+H-c>\frac D2-\eta_D-h_*.
+}
+\tag{NH.9}
+\]
+
+Suppose an original source point satisfies
+
+\[
+a_v\le T_D+O(1).
+\]
+
+Then (NH.9) gives
+
+\[
+N\cdot(v-o)
+\ge
+\kappa_DD^{3/4}-\eta_D-O(1).
+\tag{NH.10}
+\]
+
+For all sufficiently large `D`, the right side is positive. Therefore all such points lie in one circular cap of the disk in (NH.8). Its diameter is at most
+
+\[
+M_D:=
+2\sqrt{
+\left(\frac D2+\eta_D\right)^2
+-
+\left(\kappa_DD^{3/4}-\eta_D-O(1)\right)^2
+}.
+\tag{NH.11}
+\]
+
+Now use
+
+\[
+c_*^2=3^{1/4}.
+\]
+
+Since
+
+\[
+\kappa_D^2-c_*^2
+=2c_*\omega_DD^{-1/4}
++\omega_D^2D^{-1/2},
+\]
+
+a direct expansion of (NH.11) gives
+
+\[
+\boxed{
+M_D
+=D-(4c_*+o(1))\omega_DD^{1/4}.
+}
+\tag{NH.12}
+\]
+
+The assumptions `omega_D -> infinity` and `omega_D=o(D^(1/4))` make the displayed deficit tend to infinity. In particular,
+
+\[
+\boxed{M_D<D-1}
+\tag{NH.13}
+\]
+
+for all sufficiently large `D`.
+
+This is the quantitative replacement for the fixed-`lambda` inequality
+
+\[
+2\sqrt{\lambda-\lambda^2}<1.
+\]
+
+At exact half-depth the leading circular-cap diameter is `D`; the `3^(1/8)D^(3/4)` retreat is the scale at which the audited `3^(1/4)sqrt D` circumradius error is first balanced.
+
+---
+
+## 2. The absorption repair is upper-safe through `T_D`
+
+Run the same inactive-guard absorption process as in the linear-chain theorem. Every moving point is displaced by at most the clearing time
+
+\[
+t_D=\delta+D^{-1/3}<h_*+D^{-1/3}<\frac12
+\]
+
+for large `D`.
+
+As long as every absorbed original vertex has support depth at most `T_D+O(1)`, any two relevant original points lie in the cap from Section 1, and therefore their original distance is at most `M_D<D-1`.
+
+Moving one point changes a pair distance by less than `1/2`; moving two absorbed points changes their relative displacement by less than `1/2`. Hence no new distance `D` can be created while the process remains below the threshold:
+
+\[
+\boxed{
+\text{the complete repair is strictly upper-safe while }a_v\le T_D+O(1).
+}
+\tag{NH.14}
+\]
+
+The lower-side estimate against the reflected apex `q` is easier. For any newly absorbed guard below the threshold,
+
+\[
+N\cdot(v-q)=L-a_v
+>\frac D2+o(D),
+\]
+
+so moving it by less than `1/2` cannot create a unit-distance violation with `q`. Original blockers retain the existing clearing estimate.
+
+Thus every safety statement used in the terminal-gate expansion proof remains valid with the moving threshold `T_D`.
+
+---
+
+## 3. A terminal network below `T_D` is still removable
+
+Assume, for contradiction, that a non-anchored FREE module reaches the clearing time without ever absorbing a vertex of support depth greater than `T_D`.
+
+By (NH.14), every upper distance is strict. Every lower equality involving the moving old-inactive set is one of the recorded gate edges. As in the linear-chain theorem, each finite terminal gate component consists only of old fully inactive vertices and can be expanded by an arbitrarily small factor about its centroid, opening all newly created unit contacts while preserving every other strict lower and upper inequality.
+
+After opening the terminal gates, replace the original shallow apex by its reflection and apply the existing arbitrarily small base-opening perturbation. The configuration remains feasible with diameter at most `D` but has strictly fewer unit contacts, contradicting the contact-minimal normalization unless the run had already entered one of the exact source-diameter anchor branches.
+
+Therefore every surviving non-anchored FREE module must absorb some original fully inactive point with
+
+\[
+a_v>T_D.
+\tag{NH.15}
+\]
+
+Choose the first such point and call it `z_ell`.
+
+---
+
+## 4. First-threshold crossing localizes the endpoint to the `D^(3/4)` central scale
+
+The parent increment estimate from the linear-chain theorem is
+
+\[
+a_{z_{j+1}}-a_{z_j}\le1+t_D.
+\tag{NH.16}
+\]
+
+Because `z_ell` is the first vertex with depth above `T_D`,
+
+\[
+T_D<a_{z_\ell}\le T_D+1+t_D.
+\tag{NH.17}
+\]
+
+The support value also satisfies
+
+\[
+\frac D2-\eta_D-h_*<H-c<R_D<\frac D2+\eta_D.
+\tag{NH.18}
+\]
+
+Since
+
+\[
+N\cdot(z_\ell-o)=H-c-a_{z_\ell},
+\]
+
+combining (NH.17)--(NH.18) yields
+
+\[
+\kappa_DD^{3/4}-\eta_D-O(1)
+< N\cdot(z_\ell-o)
+<\kappa_DD^{3/4}+\eta_D.
+\tag{NH.19}
+\]
+
+Therefore
+
+\[
+N\cdot(z_\ell-o)
+=\kappa_DD^{3/4}+O(\sqrt D)
+=c_*D^{3/4}+\omega_D\sqrt D+O(\sqrt D),
+\]
+
+which proves (NH.3)--(NH.4).
+
+Because the chain is already known to lie in the outer contact face and is strictly support-monotone, it meets every intermediate support-depth level between `a_{z_0}` and `a_{z_ell}` exactly once as a polygonal arc. Thus the outer face contains one simple directed corridor from the blocker-side `O(sqrt D)` layer down to an `o(D)` neighborhood of the full-source circumcenter hyperplane.
+
+---
+
+## 5. Chain-length asymptotics at the near-critical depth
+
+The blocker root has
+
+\[
+a_{z_0}=O(\sqrt D).
+\]
+
+Summing (NH.16) along the parent chain gives
+
+\[
+\ell\ge
+\frac{T_D-O(\sqrt D)}{1+h_*+D^{-1/3}}.
+\tag{NH.20}
+\]
+
+Using
+
+\[
+T_D
+=\frac D2-c_*D^{3/4}-\omega_D\sqrt D
+\]
+
+and expanding the denominator gives
+
+\[
+\ell\ge
+\frac{D}{2(1+h_*)}
+-\frac{c_*}{1+h_*}D^{3/4}
+-O\!\left(D^{2/3}+\omega_D\sqrt D\right),
+\]
+
+which is (NH.5).
+
+Since `omega_D=o(D^(1/4))`, the error after the `D^(3/4)` term is `o(D^(3/4))`. Therefore the coefficient of the first sublinear correction is fixed by the same threshold constant `c_*=3^(1/8)` that balances the full-source circumradius error.
+
+---
+
+## 6. Frontier effect
+
+The surviving reflection alternative is now sharper:
+
+```text
+EXACT-BRAID
+    tagged actual source diameters from the reflection modules
+
+or
+
+NEAR-CENTRAL OUTER-FACE INACTIVE CORRIDOR
+    one old fully inactive parent chain
+    entirely in the outer contact face
+    strictly monotone in the canonical support coordinate
+    root at support depth O(sqrt D)
+    first deep endpoint at
+        D/2 - (3^(1/8)+o(1)) D^(3/4)
+    endpoint N-coordinate relative to the full-source circumcenter
+        (3^(1/8)+o(1)) D^(3/4)
+    chain length
+        D/[2(1+h_*)] - [3^(1/8)/(1+h_*)]D^(3/4) - o(D^(3/4))
+```
+
+This removes the fixed positive fractional gap from the previous `lambda<1/2` theorem. It does **not** prove that the corridor crosses the actual force hull, nor does it identify an outer-walk boundary subroute of comparable length. Those remain separate topological/loaded-core obligations. The immediate next seam is to couple this near-central monotone corridor to the actual outer boundary walk or to show that many slow-scale module corridors cannot coexist without producing an exact-diameter anchor.
+
+**Disposition:** upgraded the FREE outer-face corridor from every fixed depth below `D/2` to the asymptotically sharp `D/2-(3^(1/8)+o(1))D^(3/4)` cap-safety scale. C-II remains open.

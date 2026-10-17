@@ -1,0 +1,62 @@
+"""Finite checks for the four-host signed-return regression.
+
+The test uses the square lattice (the oblique-grid report allows any angle in
+the open interval).  It verifies exact unit separation, the four-host widths,
+and the zero perimeter-subtracted return on growing rhombic patches.  It does
+not assert global optimality or construct a C-II source.
+"""
+
+from __future__ import annotations
+
+def main() -> None:
+    # At angle pi/2 the lattice norm is exactly a^2+b^2.  Thus the only
+    # nonzero unit differences are (+/-1,0) and (0,+/-1).
+    for n in (1, 2, 5, 10, 25):
+        points = {(i, j) for i in range(n + 1) for j in range(n + 1)}
+        unit_differences = set()
+        edge_count = 0
+        for x, y in points:
+            for x2, y2 in points:
+                if (x, y) >= (x2, y2):
+                    continue
+                dx, dy = x2 - x, y2 - y
+                if dx * dx + dy * dy == 1:
+                    unit_differences.add((abs(dx), abs(dy)))
+                    edge_count += 1
+                assert dx * dx + dy * dy >= 1
+        assert unit_differences == {(1, 0), (0, 1)}
+        assert edge_count == 2 * n * (n + 1)
+
+        # The patch has n^2 strict unit rhombi of area one and four boundary
+        # chains of total length equal to the convex-hull perimeter.
+        assert edge_count - len(points) + 1 == n * n
+        assert 4 * n == 2 * n + 2 * n
+
+    # Four hosts Q={+u,-u,+v,-v} have width two in both train directions.
+    u = (1, 0)
+    v = (0, 1)
+    hosts = (u, (-u[0], -u[1]), v, (-v[0], -v[1]))
+
+    def width(direction: tuple[int, int]) -> int:
+        projections = [h[0] * direction[0] + h[1] * direction[1] for h in hosts]
+        return max(projections) - min(projections)
+
+    assert width(u) == 2
+    assert width(v) == 2
+    assert 2 - width(u) == 0
+    assert 2 - width(v) == 0
+
+    # The exact perimeter-subtracted route excess is L + P_exc - per(P) = 0.
+    for n in (1, 2, 5, 10, 25):
+        L = 4 * n
+        perimeter = 4 * n
+        P_exc = 0
+        assert L + P_exc - perimeter == 0
+
+    print("four-host signed-return regression: OK")
+    print("patches checked: n=1,2,5,10,25; rhombi=n^2")
+    print("width(u)=width(v)=2; train-return loss=0")
+
+
+if __name__ == "__main__":
+    main()

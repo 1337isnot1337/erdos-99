@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "owner_approved_release": false,
+  "files": [],
+  "required_per_file_fields": [
+    "path",
+    "git_blob_oid",
+    "content",
+    "attribution",
+    "privacy",
+    "license",
+    "reviewer"
+  ],
+  "instructions": "Each review field must be approved for the exact blob. Obtain actual rights and consent; do not infer approval from inclusion or a link. Owner approval and root license are additional gates."
+}

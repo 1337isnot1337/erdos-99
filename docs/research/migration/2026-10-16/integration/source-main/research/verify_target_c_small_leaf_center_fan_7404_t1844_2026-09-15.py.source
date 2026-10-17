@@ -1,0 +1,108 @@
+#!/usr/bin/env python3
+"""Exact Fraction certificate for a >0.7404D center fan on one small-leaf O-O train.
+
+Upstream exact certificates supply the safe rounded constants, valid for t<=1.844:
+  W <= 1.915963,
+  E_dom >= 0.9068958,
+  C > 0.8538,
+  z_V > 0.616.
+This is the same finite optimization as the earlier 0.73 certificate, with the fan
+threshold raised to 0.7404.
+"""
+
+from fractions import Fraction as Q
+
+W = Q(1915963, 1_000_000)
+E = Q(9068958, 10_000_000)
+a = Q(616, 1000)
+L = Q(7404, 10000)
+Cmin = Q(4269, 5000)  # 0.8538
+Cmax = Q(1063, 1000)  # 1.063
+Vmin = a / 2
+
+
+def add(p, q):
+    n = max(len(p), len(q))
+    out = [Q(0)] * n
+    for i, x in enumerate(p):
+        out[i] += x
+    for i, x in enumerate(q):
+        out[i] += x
+    return out
+
+
+def mul(p, q):
+    out = [Q(0)] * (len(p) + len(q) - 1)
+    for i, x in enumerate(p):
+        for j, y in enumerate(q):
+            out[i + j] += x * y
+    return out
+
+
+def scale(p, s):
+    return [s * x for x in p]
+
+
+def deriv(p):
+    return [Q(i) * p[i] for i in range(1, len(p))]
+
+
+def ev(p, x):
+    total = Q(0)
+    for c in reversed(p):
+        total = total * x + c
+    return total
+
+
+# Parent domain checks.
+assert Cmax * (W - Cmax) < E
+Hmax = W * W / 4 - E
+dmin = 2 * Cmin + Vmin - W
+assert dmin > 0
+assert Vmin * dmin > Hmax
+
+# For fixed C, after taking adverse W and E,
+#   R(C,V) >= C - C H(C)/[(2C+V-W)(a-V)].
+# The denominator is concave in V, so only V=a/2 and V=(W-C)/2 matter.
+X = [Q(0), Q(1)]
+Hp = [-E, W, -Q(1)]
+
+Nlo = add(
+    mul(mul([-L, Q(1)], [Vmin - W, Q(2)]), [a - Vmin]),
+    scale(mul(X, Hp), -1),
+)
+
+Nhi = add(
+    mul(
+        mul([-L, Q(1)], [-W / 2, Q(3, 2)]),
+        [(2 * a - W) / 2, Q(1, 2)],
+    ),
+    scale(mul(X, Hp), -1),
+)
+
+
+def certify_convex_minimum(N, left, right):
+    dN = deriv(N)
+    d2N = deriv(dN)
+    assert ev(d2N, Cmin) > 0 and ev(d2N, Cmax) > 0
+    assert Cmin < left < right < Cmax
+    assert ev(dN, left) < 0 < ev(dN, right)
+    lower = ev(N, left) - max(abs(ev(dN, left)), abs(ev(dN, right))) * (right - left)
+    assert lower > 0
+    assert ev(N, Cmin) > 0 and ev(N, Cmax) > 0
+    return lower
+
+
+lo_lower = certify_convex_minimum(Nlo, Q(88341, 100000), Q(88342, 100000))
+hi_lower = certify_convex_minimum(Nhi, Q(90484, 100000), Q(90485, 100000))
+
+# The controlling balanced-leaf polynomial still has a strict positive margin.
+assert hi_lower > Q(4, 1_000_000)
+
+print("PASS: one retained smallest-leaf O-O train has >0.7404D center crossings")
+print("Hmax =", float(Hmax))
+print("uniform denominator lower =", float(dmin))
+print("Vmin*dmin-Hmax =", float(Vmin * dmin - Hmax))
+print("low-endpoint minimum lower polynomial margin =", float(lo_lower))
+print("balanced-endpoint minimum lower polynomial margin =", float(hi_lower))
+print("generic capacity excess at C=1.063 =", float(E - Cmax * (W - Cmax)))

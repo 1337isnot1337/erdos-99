@@ -1,0 +1,116 @@
+#!/usr/bin/env python3
+"""Exact certificate for five universal rank-conditioned closure secants.
+
+The endpoint enclosures are proved over Q using a Machin enclosure for pi and
+alternating Taylor bounds for cosine. Convexity of the already-proved sharp
+closure function M then makes each chord an upper bound on its interval.
+"""
+from fractions import Fraction as Q
+import math
+
+
+def atan_bounds(inv, n):
+    x = Q(1, inv)
+    s = Q(0)
+    for k in range(n + 1):
+        s += (-1 if k & 1 else 1) * x ** (2*k + 1) / Q(2*k + 1)
+    nxt = x ** (2*n + 3) / Q(2*n + 3)
+    return (s - nxt, s) if n % 2 == 0 else (s, s + nxt)
+
+
+l5, u5 = atan_bounds(5, 24)
+l239, u239 = atan_bounds(239, 6)
+PI_LO = 4 * (4*l5 - u239)
+PI_HI = 4 * (4*u5 - l239)
+assert Q(3) < PI_LO < PI_HI < Q(22, 7)
+assert PI_HI - PI_LO < Q(1, 10**30)
+
+
+def cos_lower_multiple(r, n=22):
+    r = Q(r)
+    assert 0 <= r <= Q(2, 3)
+    x = r * PI_HI
+    s = Q(0)
+    xx = Q(1)
+    fact = 1
+    for k in range(n + 1):
+        if k:
+            xx *= x*x
+            fact *= (2*k - 1) * (2*k)
+        s += (-1 if k & 1 else 1) * xx / fact
+    rem = x ** (2*n + 1) / math.factorial(2*n + 1)
+    return s - rem
+
+
+def certify_m_upper(t, u):
+    """Certify M(t) <= u for the required rational knots."""
+    t, u = Q(t), Q(u)
+    if t == 0:
+        assert u >= Q(2, 3)
+        return
+    if t == Q(2, 5):
+        # Exact: cos(3*pi/5)=1/2-cos(pi/5), hence M(2/5)=4/5.
+        assert u >= Q(4, 5)
+        return
+    if t == Q(2, 3):
+        assert u >= 1
+        return
+    q = 1 - u/Q(2)
+    assert 0 < q < Q(2, 3)
+    # M(t) <= u iff cos(q*pi)+cos(t*pi/2) >= 1/2.
+    lower = cos_lower_multiple(q) + cos_lower_multiple(t/Q(2)) - Q(1, 2)
+    assert lower > 0
+
+
+U = {
+    Q(0): Q(2, 3),
+    Q(1, 6): Q(691443, 10**6),
+    Q(1, 3): Q(761437, 10**6),
+    Q(2, 5): Q(4, 5),
+    Q(4, 9): Q(828567, 10**6),
+    Q(1, 2): Q(867191, 10**6),
+    Q(2, 3): Q(1),
+}
+for t, u in U.items():
+    certify_m_upper(t, u)
+
+# Certification intervals by increasing gap rank inside the representative
+# physical order x0 <= x2 <= x3 <= x4 <= x1.
+INTERVALS = (
+    (Q(0), Q(2, 5)),
+    (Q(1, 6), Q(4, 9)),
+    (Q(1, 3), Q(1, 2)),
+    (Q(1, 3), Q(2, 3)),
+    (Q(2, 5), Q(2, 3)),
+)
+
+# Chord lines U_rank(x)=m*x+b.
+EXPECTED = (
+    (Q(1, 3), Q(2, 3)),
+    (Q(308529, 625000), Q(3045843, 5000000)),
+    (Q(158631, 250000), Q(549929, 1000000)),
+    (Q(715689, 1000000), Q(261437, 500000)),
+    (Q(3, 4), Q(1, 2)),
+)
+
+for (left, right), (em, eb) in zip(INTERVALS, EXPECTED):
+    m = (U[right] - U[left]) / (right - left)
+    b = U[left] - m*left
+    assert (m, b) == (em, eb)
+    assert m*left + b == U[left]
+    assert m*right + b == U[right]
+
+# Exact turn-simplex/order-cone bounds already certified independently.
+ORDER_BOUNDS = (
+    (Q(0), Q(2, 5)),
+    (Q(1, 6), Q(5, 12)),
+    (Q(1, 3), Q(1, 2)),
+    (Q(7, 18), Q(2, 3)),
+    (Q(2, 5), Q(2, 3)),
+)
+for (a, b), (left, right) in zip(ORDER_BOUNDS, INTERVALS):
+    assert left <= a <= b <= right
+
+print("PASS")
+for rank, ((left, right), (m, b)) in enumerate(zip(INTERVALS, EXPECTED), 1):
+    print(f"rank {rank}: interval [{left},{right}], M(x) <= ({m})x + ({b})")

@@ -1,0 +1,77 @@
+# Target C — C84 chain-prefix KKT circulation frontier
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_chain_prefix_kkt_circulation_2026-09-01.md](../../reports/target_c_chain_prefix_kkt_circulation_2026-09-01.md).
+
+C83 identifies every active non-chain diameter bar with nonempty restriction to the
+C80 chain atom as one prefix interval edge
+
+`a_h -> b_h`, `0<=a_h<b_h<=D`,
+
+with
+
+`g_h|P = eta_h 1_(a_h,b_h]`
+
+and `eta_h!=0`.
+
+Choose a relative-interior normalized KKT stress in the C65 full-diameter-visible
+normalization. Then every active diameter bar has `beta_h>0`, while train-angle first
+variations preserve all unit contacts. The KKT relation
+
+`sum_h beta_h g_h=0`
+
+therefore restricts to
+
+`sum_h beta_h eta_h 1_(a_h,b_h] = 0`.
+
+Taking the discrete derivative of the interval rows gives
+
+`sum_h w_h(e_(b_h)-e_(a_h))=0`,
+
+where
+
+`w_h=beta_h eta_h !=0`.
+
+Thus the active non-chain interval **multigraph** on prefix levels `0,...,D` supports
+a nowhere-zero circulation.
+
+## Consequences
+
+- The interval multigraph has no bridges. Parallel intervals count as distinct edges;
+  a bridge in the collapsed simple graph must therefore have multiplicity at least two.
+- For each chain track `tau_j`, either no active non-chain interval covers it or at
+  least two do, with both signs of `eta_h` represented in the signed KKT cut balance.
+- If `G_P` is the collapsed simple prefix graph,
+
+  `rank{g_h|P}=D+1-c(G_P)`.
+
+- Full first-order rank `D` forces `G_P` connected and the bridgeless multigraph to
+  contain at least `D+1` non-chain diameter bars. Including the chain bar gives
+
+  `|H|>=D+2`.
+
+C84 also uses C18 to classify all interval bars incident to the chain endpoints. If
+`h` shares `z` or `a` with the chain diameter `za`, then its C83 radial scalar obeys
+
+`c_h>D/2>0`.
+
+Hence every backward interval, which C83 identifies as the only possible positive
+quadratic blocker of a chain-supported neutral motion, is disjoint from `z,a` and its
+straight diameter segment crosses the literal chain `za` in the interior.
+
+## Effect
+
+The remaining chain obstruction is no longer an arbitrary signed interval family. It
+is a bridgeless KKT circulation on ordered prefix levels, and all positive quadratic
+blockers are interior-crossing diameter chords.
+
+## Next target
+
+Exploit this combined structure to prove deficient backward-interval rank. The most
+promising inputs are:
+
+1. the straight-line diameter-thrackle property of the interior crossing chords;
+2. the opposite-sign KKT flow balance across every used chain cut; and
+3. C83's fact that backward intervals are made entirely of doubly non-hull chain
+   tracks.

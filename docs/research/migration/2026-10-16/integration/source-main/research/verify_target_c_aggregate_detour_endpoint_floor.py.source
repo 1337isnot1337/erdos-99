@@ -1,0 +1,64 @@
+"""Outward-safe arithmetic for the aggregate-detour endpoint composition.
+
+This checks the displayed safe threshold and monotonicity margins.  It does not
+certify a global minimizer or a geometric theorem; those are supplied by the
+audited proof inputs cited in the companion note.
+"""
+
+from decimal import Decimal, getcontext
+
+
+getcontext().prec = 80
+D = Decimal
+
+
+def main() -> None:
+    pi = D("3.1415926535897932384626433832795028841971693993751")
+    sqrt3 = D(3).sqrt()
+    delta2 = pi / (D(2) * sqrt3)
+    s2 = delta2.sqrt()
+    s_star = D("2.798596312209462")
+    c0 = pi / D(2) * (D(2) - sqrt3)
+    t0 = D("1.8585")
+
+    def cmin(t, delta):
+        return D("4.5") * t - D(2) * pi - D(2) * delta
+
+    def F(t, delta):
+        C = cmin(t, delta)
+        K = (D(81) * (pi + delta) ** D(2) * delta) ** (D(1) / D(3))
+        return D(10) * t - D(5) * pi - D(5) * delta + K - D(8) * delta2 / C
+
+    A0 = (D(10) * t0 - D(4) * pi - D(2) * s_star - c0) / D(4)
+    assert D(0) < A0 < D("0.00014")
+    assert F(t0, A0) < D("-0.13")
+
+    c_lower = D(2) * s2 + D("0.0004")
+    kprime_lower = (D(81) ** (D(1) / D(3)) / D(3)) * pi * (pi + A0) ** (D(-1) / D(3)) * A0 ** (D(-2) / D(3))
+    negative_derivative_upper = D(16) * delta2 / (c_lower * c_lower)
+    assert kprime_lower > D(1170)
+    assert negative_derivative_upper < D(4)
+    assert -D(5) + kprime_lower - negative_derivative_upper > D(1160)
+
+    # The exact upper-envelope inequality gives the basic detour floor before the
+    # orbit composition.
+    basic_floor = (D(4) * pi + D(2) * s_star + c0) / D(10)
+    assert basic_floor > D("1.8584")
+    assert basic_floor < t0
+
+    # Symbolic finite-ledger check for the identity used in the audit.
+    q, k, m, e, Q, u, f = map(D, (17, 2, 5, 12, 5, 3, 2))
+    assert e == q - m
+    assert e == Q + D(2) * k + u
+    b = q + m + u
+    T = q + D(2) * f - k
+    assert b + (D(4) * f + Q) == D(2) * T
+
+    print("aggregate-detour endpoint floor arithmetic: PASS")
+    print(f"A0={A0}")
+    print(f"F(t0,A0)={F(t0,A0)}")
+    print("certified_safe_threshold=1.8585")
+
+
+if __name__ == "__main__":
+    main()

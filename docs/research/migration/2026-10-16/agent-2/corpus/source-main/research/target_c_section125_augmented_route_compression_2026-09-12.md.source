@@ -1,0 +1,60 @@
+# Target C Section-125 augmented-route compression
+
+Date: 2026-09-12
+
+Lifecycle: audited-working proof-only reduction; theorem-state authority unchanged.
+C-II and Level I remain open.
+
+For harmonic component `r`, let `a_r` be its loaded attachment count, `L_r` its
+occurrence-counted induced outer walk, `d_r=diam(P_r)`, and let `T_r,Q_r^+` be the
+triangular-face count and degree-above-four defect after adding the attachment polygon
+sides. Canonical Section 123 gives
+
+```
+a_r-3-s_r = (a_r-T_r+Q_r^+)/2.
+```
+
+Removing loaded-loaded contacts from the induced graph gives the exact identity
+`Ltilde_r+Qtilde_r=4a_r-6-2s_r`. Adding those contacts can only shorten the outer
+walk, so
+
+```
+L_r-2a_r <= a_r-T_r+Q_r^+.                         (1)
+```
+
+Summing and using the exact Section-123 dissection ledger yields
+
+```
+sum_r(L_r-2a_r) <= 2(e_BB-k-d_tile).               (2)
+```
+
+Now put
+
+```
+Delta_ad = sum_r(a_r-d_r),
+A_*      = sum_r(a_r-T_r),
+Q_*      = sum_r Q_r^+.
+```
+
+Since `L_r-2d_r=(L_r-2a_r)+2(a_r-d_r)`, canonical Section 122 and the cellwise
+bound `P_exc,r<=5Q_r^+` imply the exact proof-only payment
+
+```
+liminf [Delta_ad + A_*/2 + 3Q_*]/D
+    >= pi(2-sqrt(3))/4 = 0.210446803619233... .   (3)
+```
+
+Thus the remaining full-core obstruction is not an unconstrained exceptional-face
+term. It is one of: attachment count beyond Euclidean cell diameter `Delta_ad`,
+nontriangular augmented sides `A_*`, or augmented degree defect `Q_*`.
+
+When `A_*=Q_*=o(D)`, almost every attachment side is a genuine two-edge
+near-triangular tooth and (3) forces `Delta_ad >= 0.2104468D-o(D)`. The adjacent-tooth
+turn inequality records a real constraint on such teeth, but its cyclic consequence
+requires only a constant total base excess and therefore does not yet charge the
+linear `Delta_ad` term. No exact unit triangle or strict diameter descent follows.
+
+All statements retain occurrence multiplicity and contact-isolated source points;
+the Section-57 affine kernel is used only on the nonisolated core. The reduction is
+finite before the final Section-122 limit and makes no local/global face-injectivity
+claim beyond the canonical Section-123 bound.

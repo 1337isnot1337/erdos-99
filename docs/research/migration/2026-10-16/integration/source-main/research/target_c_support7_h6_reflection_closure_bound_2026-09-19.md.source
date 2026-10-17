@@ -1,0 +1,170 @@
+# Target C support-seven H6: reflection-closure bound
+
+Date: 2026-09-19
+
+Status: exact symmetry/counting reduction inside the generic H6 branch. The theorem-state authority is unchanged. C-II remains open.
+
+## Result
+
+The exact generic-H6 interior-force census contains
+
+\[
+14174=10670\,C_7+3504\,(C_3\sqcup C_4)
+\]
+
+labelled cells. The current committed exact reductions leave
+
+\[
+4805=3823\,C_7+982\,(C_3\sqcup C_4).
+\]
+
+The current 4,805-cell ground-pattern census is not invariant under the exact H6 hull reflection. Closing the already-proved exclusions under that reflection forces at least
+
+\[
+\boxed{80}
+\]
+
+further generic-H6 exclusions. Therefore the reflection-closed generic-H6 survivor set has size at most
+
+\[
+\boxed{4725}.
+\]
+
+This is a rigorous upper bound, not an exact new survivor census. It uses only the exact 14,174-cell combinatorial universe, the current certified ground-pattern census, and an exact relabeling symmetry. No new floating-point LP output is used.
+
+## Reflection
+
+Use the reciprocal-label involution
+
+\[
+\rho=(1\ 5)(2\ 4),
+\qquad
+\rho(0)=0,\quad \rho(3)=3,\quad \rho(6)=6,\quad \rho(7)=7.
+\]
+
+Geometrically this is reflection of the reciprocal hexagonal hull through the axis through hull vertices `0` and `3`, followed by the displayed relabeling. It preserves the generic-H6 class and gives a bijection on the 14,174-cell interior-force state space:
+
+- the convex hull remains `0,1,2,3,4,5` after canonical relabeling;
+- strict interior labels `6,7` remain interior;
+- the missing relation graph is relabeled, so its type `C7` or `C3+C4` is preserved;
+- reciprocal chirotope signs reverse orientation in the usual way under reflection;
+- edge scalar signs stay attached to the relabeled edges;
+- every exact local rank-two force condition is preserved.
+
+Thus if a labelled generic-H6 cell is impossible, its reflected cell is impossible as well.
+
+The later affine and branch conditions are also geometric and therefore reflection invariant. In particular, physical face pair `{2,3}` reflects to `{3,4}`. The ten admissible strict pentagon gap orders form one dihedral orbit, and the low/high median branches and rank-specific secants are permuted under reversal. Hence every committed exact Farkas exclusion has a reflected exact exclusion, even when that reflected cell has not yet been entered in an explicit candidate list.
+
+## Ground-pattern action
+
+At ground vertex `0`, reflection reverses the seven-entry CCW radial order. A normalized positive-position pattern
+
+\[
+P\subset\{1,\ldots,7\}
+\]
+
+therefore maps to
+
+\[
+\rho_P(P)=\{8-p:p\in P\}.
+\]
+
+On the surviving pattern names:
+
+```text
+145 <-> 347
+156 <-> 237
+235 <-> 356
+236 <-> 256
+245 <-> 346
+345 <-> 345
+```
+
+The exact 14,174-cell universe has ground-pattern census
+
+```text
+145    144
+156    108
+235   1770
+236   3630
+237    108
+245   1390
+256   3630
+345     90
+346   1390
+347    144
+356   1770
+```
+
+which is pairwise invariant under `rho_P`, as required by the state-space reflection.
+
+The current exact 4,805-cell survivor census is
+
+```text
+145      4
+156     16
+235    654
+236   1278
+237     16
+245    474
+256   1204
+345     21
+346    479
+347      4
+356    655
+```
+
+## Counting lemma
+
+Fix a non-self-mirror pattern pair `{p,rho_P(p)}`. Let the 14,174-cell universe contain `U` cells on each side. Let the current exact exclusion counts be `e_p` and `e_r`. Reflection closure of the excluded set has at least
+
+\[
+\max(e_p,e_r)
+\]
+
+excluded cells on each side. Relative to the current exclusion list, this forces at least
+
+\[
+2\max(e_p,e_r)-(e_p+e_r)=|e_p-e_r|
+\]
+
+additional exclusions.
+
+Equivalently, because `e_p=U-s_p` and `e_r=U-s_r`, where `s_p,s_r` are current survivor counts, the forced gain is
+
+\[
+|s_p-s_r|.
+\]
+
+Applying this to the current census gives
+
+```text
+pair       current survivors   forced new
+145/347          4 / 4              0
+156/237         16 / 16             0
+235/356        654 / 655            1
+236/256       1278 / 1204          74
+245/346        474 / 479            5
+```
+
+The self-mirror pattern `345` contributes no lower bound from this aggregate argument. Therefore
+
+\[
+1+74+5=\boxed{80}
+\]
+
+additional exclusions are forced, and
+
+\[
+4805-80=\boxed{4725}.
+\]
+
+## Why the bound is conservative
+
+The argument uses only ground-pattern cardinalities. It does not identify reflected labelled states, so it cannot detect overlap structure within a pattern pair or any new exclusions in the self-mirror `345` class. It also discards the reflection-preserved missing-graph type and all finer state data.
+
+A graph-by-pattern diagnostic on only the 139 most recent two-face exclusions shows a larger imbalance, but using that to certify a stronger global count would require a state-level audit of the intermediate endpoints. That stronger number is intentionally not claimed here.
+
+The next exact bookkeeping target is therefore clear: construct the reflection map on the full 14,174-state representation, map every currently excluded labelled state, and take the exact union. That will turn this aggregate `<=4725` bound into an exact reflection-closed census. After that, pair-face discovery should run only one representative from each reflection orbit of physical face pairs.
+
+Arithmetic verifier: `research/verify_target_c_support7_h6_reflection_closure_bound_2026_09_19.py`.

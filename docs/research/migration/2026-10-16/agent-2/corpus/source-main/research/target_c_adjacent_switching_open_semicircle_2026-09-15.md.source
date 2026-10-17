@@ -1,0 +1,340 @@
+# Target C-II — adjacent switching diameter directions lie in one open semicircle
+
+**Date:** 2026-09-15
+**Status:** proof-only exact structural strengthening
+**Scope:** any adjacent O--O strip in the audited switching-order theorem
+**Dependencies:** adjacent switching one-arc order; convexity of the source hull; uniqueness of a planar diameter pair in one projective direction; three-ray strip blocker theorem
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The adjacent-strip blocker theorem leaves a generic Caratheodory alternative in which
+three switching diameter directions alone positively surround the origin, and an exact
+KKT alternative in which the switching diameter resultant vanishes. Both alternatives
+are incompatible with the boundary location of the switching diameter endpoints.
+
+For a switching actual diameter edge `h=xm`, orient it from the endpoint outside the
+middle strip layer into its middle-layer endpoint and write
+
+\[
+ m-x=Dd_h,
+ \qquad |d_h|=1.
+ \tag{OS.1}
+\]
+
+Then the complete switching direction set satisfies
+
+\[
+\boxed{\{d_h:h\in H_{sw}\}\text{ is contained in one open semicircle of }S^1.}
+\tag{OS.2}
+\]
+
+Consequently:
+
+1. no positive combination of the switching directions can vanish;
+2. the exact strip KKT resultant
+   \[
+   Aa+Bb=D\sum_{h\in H_{sw}}\beta_hd_h
+   \]
+   is never zero;
+3. in the non-antipodal boundary-contact case `a+b!=0`, every planar blocker
+   certificate can be chosen to contain at least one boundary-contact ray and therefore
+   at most **two switching diameter edges**;
+4. the diameter-only three-ray blocker pattern is impossible;
+5. in the antipodal case `b=-a`, the exact strip resultant forces `A!=B`.
+
+Thus the current local blocker list shrinks from a possible three-diameter positive
+circuit to one- or two-diameter patterns involving the boundary contacts.
+
+---
+
+## 1. A diameter direction is a support normal at both endpoints
+
+Let `K=conv(A)` be the source convex hull and let `xm` be an actual diameter pair.
+Orient
+
+\[
+d={m-x\over D}.
+\]
+
+For every source point `z`,
+
+\[
+d\cdot(z-x)\le |z-x|\le D=d\cdot(m-x).
+\]
+
+Hence
+
+\[
+d\cdot z\le d\cdot m.
+\]
+
+By convexity the same inequality holds for every `z in K`, so `d` belongs to the
+outward normal cone of `K` at `m`.
+
+Similarly,
+
+\[
+(-d)\cdot(z-m)\le |z-m|\le D=(-d)\cdot(x-m),
+\]
+
+and therefore `-d` belongs to the outward normal cone at `x`.
+
+Thus every switching diameter contributes one support-normal direction at its middle
+endpoint and the antipodal support-normal direction at its exterior endpoint:
+
+\[
+\boxed{
+d_h\in N_K(m_h)\cap S^1,
+\qquad
+-d_h\in N_K(x_h)\cap S^1.
+}
+\tag{OS.3}
+
+This is exact and does not use the Type-II near-disk limit.
+
+---
+
+## 2. Normal directions along a convex boundary arc form one circular interval
+
+Traverse the boundary of a planar compact convex polygon counterclockwise. The outward
+normal direction is monotone in circular angle: along an edge it is constant, and at a
+vertex its normal cone fills the circular interval between the adjacent edge normals.
+
+Therefore, for any connected boundary arc `I`, the union
+
+\[
+\mathcal N(I)
+:=\bigcup_{p\in I} (N_K(p)\cap S^1)
+\]
+
+is one closed circular interval after including the endpoint one-sided normal cones.
+For complementary boundary arcs `I,J`, choose the common endpoint conventions so that
+their normal-angle lengths satisfy
+
+\[
+\operatorname{len}\mathcal N(I)
++
+\operatorname{len}\mathcal N(J)
+=2\pi.
+\tag{OS.4}
+\]
+
+The switching diameter endpoints lie strictly inside the four open boundary blocks of
+the adjacent-strip theorem, so no switching direction depends on how the two common arc
+endpoints are assigned.
+
+In particular, at least one of the two complementary normal sweeps has angular length
+at most `pi`.
+
+---
+
+## 3. Both switch orientations: use the common middle arc or its complement
+
+Assume both left-switch and right-switch rows occur. The audited one-arc switching
+order theorem gives one connected middle boundary arc `I=B_M^star` containing **every**
+switching middle endpoint. Every switching exterior endpoint belongs to the connected
+complementary boundary arc
+
+\[
+J=\partial K\setminus I,
+\]
+
+possibly with unused middle-boundary points between the left and right exterior
+blocks.
+
+If
+
+\[
+\operatorname{len}\mathcal N(I)\le\pi,
+\]
+
+then (OS.3) gives
+
+\[
+d_h\in\mathcal N(I)
+\quad\text{for every switching }h,
+\]
+
+so all `d_h` lie in one closed semicircle.
+
+If instead
+
+\[
+\operatorname{len}\mathcal N(I)>\pi,
+\]
+
+then (OS.4) gives
+
+\[
+\operatorname{len}\mathcal N(J)<\pi.
+\]
+
+Equation (OS.3) gives
+
+\[
+-d_h\in\mathcal N(J)
+\quad\text{for every switching }h,
+\]
+
+so all `d_h` lie in the antipodal open semicircle.
+
+Thus in the mixed-orientation case the switching directions are contained in a closed
+semicircle, with an open semicircle unless the relevant normal sweep has exact length
+`pi`.
+
+---
+
+## 4. One switch orientation: use the exterior arc or its complement
+
+Suppose only left-switch rows occur. Then every exterior switching endpoint lies on the
+single connected block `E=B_L`. Middle endpoints may occupy either middle boundary
+arc, but all of them lie in the complementary connected boundary arc
+
+\[
+J=\partial K\setminus E.
+\]
+
+If
+
+\[
+\operatorname{len}\mathcal N(E)\le\pi,
+\]
+
+then all `-d_h` lie in `\mathcal N(E)` and hence all `d_h` lie in one closed semicircle.
+If its length exceeds `pi`, the complementary normal sweep has length below `pi`, and
+all `d_h` lie in that open semicircle.
+
+The all-right-switch case is identical with `E=B_R`.
+
+Therefore every adjacent strip, with one or both switch orientations, satisfies a
+closed-semicircle containment for the full switching direction set.
+
+---
+
+## 5. Parallel-diameter uniqueness makes the semicircle open
+
+It remains only to exclude the possibility that the finite direction set occupies both
+endpoints of a minimal closed semicircle of angular width exactly `pi`.
+
+If that happened, two switching directions would be antipodal:
+
+\[
+d_{h_2}=-d_{h_1}.
+\]
+
+The corresponding actual diameter segments would be parallel in the same projective
+direction. They are distinct graph edges: each switching edge appears once, with the
+unique orientation from its exterior endpoint into its middle endpoint. The audited
+parallel-diameter uniqueness lemma says a finite Euclidean set cannot contain two
+distinct parallel diameter pairs.
+
+Therefore no two switching directions are antipodal. A finite subset of a closed
+semicircle with no antipodal pair is contained in a strictly shorter circular interval,
+hence in an open semicircle. This proves (OS.2).
+
+---
+
+## 6. The zero strip-resultant branch is impossible
+
+Use the relative-interior KKT stress from the strip blocker theorem, so every actual
+diameter multiplier is strictly positive. The exact strip balance is
+
+\[
+Aa+Bb
+=D\sum_{h\in H_{sw}}\beta_hd_h.
+\tag{OS.5}
+\]
+
+Because the `d_h` lie in one open semicircle, there is a vector `w` with
+
+\[
+w\cdot d_h>0
+\quad\text{for every switching }h.
+\]
+
+Hence
+
+\[
+w\cdot\sum_h\beta_hd_h>0,
+\]
+
+and the switching resultant cannot vanish. Therefore
+
+\[
+\boxed{Aa+Bb\ne0.}
+\tag{OS.6}
+\]
+
+The zero-resultant three-direction Caratheodory branch of the current theorem is empty.
+In particular, if `b=-a`, then
+
+\[
+(A-B)a\ne0,
+\]
+
+so
+
+\[
+\boxed{A\ne B.}
+\tag{OS.7}
+\]
+
+---
+
+## 7. Generic strip blockers use at most two diameter edges
+
+Assume `a+b!=0`. The current three-ray theorem proves
+
+\[
+0\in\operatorname{conv}
+\left(\{a,b\}\cup\{-d_h:h\in H_{sw}\}\right)
+\tag{OS.8}
+\]
+
+and planar Caratheodory supplies a witness with at most three rays.
+
+A witness using only switching-diameter rays would put
+
+\[
+0\in\operatorname{conv}\{-d_{h_1},-d_{h_2},-d_{h_3}\},
+\]
+
+contradicting the open-semicircle containment. Therefore every minimal witness contains
+at least one of the two contact rays `a,b`. It consequently contains at most two
+switching-diameter rays.
+
+Thus the generic blocker types reduce to
+
+```text
+one contact + one diameter ray,
+both contacts + one diameter ray,
+one contact + two diameter rays,
+```
+
+with lower-cardinality degeneracies allowed. The diameter-only three-ray case is
+impossible.
+
+---
+
+## 8. Interaction with the current 920-row/caterpillar refinement
+
+The semicircle theorem is independent of the numerical switching-edge count. It applies
+to the current main bound and to the stronger proof-only `<=920` Pareto refinement on
+`research/c2-cusp-920-sol-20260915`.
+
+The combined normal form is therefore
+
+```text
+finite adjacent switching layer cut
++ ordered one-arc caterpillar interface
++ all switching diameter directions in one open semicircle
++ nonzero exact switching KKT resultant
++ generic local blocker uses at most two switching diameter edges
++ antipodal boundary case retains the audited opposite-transverse two-edge obstruction.
+```
+
+No C-II closure is claimed. The next finite task is to classify the remaining one- and
+two-diameter blocker patterns against the prefix/hub/suffix cyclic order and the two
+Section-157 cut-resultant equations.
+
+**Disposition:** proved proof-only exact support-normal strengthening of the adjacent
+strip blocker classification. C-II and Level I remain open.

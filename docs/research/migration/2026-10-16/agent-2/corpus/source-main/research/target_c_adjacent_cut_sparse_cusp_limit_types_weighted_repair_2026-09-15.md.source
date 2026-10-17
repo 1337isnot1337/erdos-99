@@ -1,0 +1,222 @@
+# Target C-II — weighted-normalization repair for the sparse hard-cusp types
+
+**Date:** 2026-09-15  
+**Reviewed:** `research/target_c_adjacent_cut_sparse_cusp_limit_types_2026-09-15.md`  
+**Disposition:** **the three hard-cusp types remain valid after replacing raw-gradient normalization by Carathéodory-weighted gradient normalization.**  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The first version of the hard-cusp classification normalized the sparse certificate by
+
+\[
+\max_j |g_j|.
+\]
+
+That is not sufficient.  A diameter row can have a gradient of order `D` while its
+Carathéodory coefficient tends to zero.  For example, a balance of the schematic form
+
+\[
+{1\over M}(M,0)+\left(1-{1\over M}\right)(-1+o(1),0)=0
+\]
+
+can contain an unbounded raw gradient without leaving any nonzero normalized limiting
+vector with positive limiting coefficient.
+
+The correct object is the **weighted certificate vector**
+
+\[
+\boxed{
+w_{j,D}:=\mu_{j,D}\widetilde g_{j,D}.
+}
+\tag{WR.1}
+\]
+
+The sparse certificate is exactly
+
+\[
+\boxed{
+\sum_{j=1}^{k_D}w_{j,D}=0,
+\qquad 2\le k_D\le3.
+}
+\tag{WR.2}
+\]
+
+Normalize by
+
+\[
+\boxed{
+M_D:=\max_j|w_{j,D}|.
+}
+\tag{WR.3}
+\]
+
+With this change the hard/soft classification is rigorous.
+
+---
+
+## 1. Why weighted normalization cannot lose the balancing rows
+
+Assume
+
+\[
+M_D>0.
+\]
+
+Choose `j_0` with
+
+\[
+|w_{j_0,D}|=M_D.
+\]
+
+Since at most two other vectors sum to `-w_{j_0,D}`, the triangle inequality gives
+
+\[
+\max_{j\ne j_0}|w_{j,D}|\ge {M_D\over2}.
+\tag{WR.4}
+\]
+
+Therefore after dividing by `M_D` and taking a subsequence, at least **two** limiting
+weighted vectors are nonzero.  There is no vanishing-coefficient escape.
+
+If a third normalized vector tends to zero, the limiting certificate simply reduces
+to a two-vector antipodal type.  If all three have nonzero limits, the three-vector
+classification applies.
+
+---
+
+## 2. Axis/diagonal geometry survives multiplication by the coefficients
+
+For a switching row,
+
+\[
+\widetilde g=(a,0)
+\quad\text{or}\quad
+(0,b).
+\]
+
+Multiplication by the positive scalar `mu_j` leaves it on the same coordinate axis.
+
+For a spanning row, the balanced adjacent-pair theorem gives
+
+\[
+|\widetilde g_1-\widetilde g_2|
+<42400+o(1).
+\]
+
+Since
+
+\[
+0<\mu_j\le1,
+\]
+
+the weighted vector obeys
+
+\[
+\boxed{
+|w_{j,1}-w_{j,2}|
+<42400+o(1).
+}
+\tag{WR.5}
+
+Hence, on the **weighted hard branch**
+
+\[
+M_D\to\infty,
+\tag{WR.6}
+
+all normalized spanning vectors converge to the diagonal line while all switching
+vectors remain on the coordinate axes.
+
+On the complementary **weighted soft branch**
+
+\[
+M_D=O(1),
+\tag{WR.7}
+
+all contributions `mu_j g_j` needed for the sparse KKT balance are bounded.  Raw
+individual gradients may still be large if their certificate weights are small; no
+claim to the contrary is made.
+
+---
+
+## 3. Corrected finite classification
+
+Normalize
+
+\[
+v_{j,D}={w_{j,D}\over M_D}
+\]
+
+on a weighted-hard subsequence.  Pass to a convergent subsequence.  By (WR.4), at
+least two limiting vectors are nonzero, and by (WR.2)
+
+\[
+\sum_j v_j=0.
+\tag{WR.8}
+
+Delete any zero limiting vector.  The remaining set has two or three nonzero vectors
+in
+
+\[
+L_d\cup L_x\cup L_y,
+\]
+
+where
+
+\[
+L_d=\{(a,a)\},
+\quad
+L_x=\{(a,0)\},
+\quad
+L_y=\{(0,a)\}.
+\]
+
+The elementary classification from the parent note now applies directly to the
+weighted vectors:
+
+1. **D2 — spanning antipodal pair:**
+   \[
+   (a,a)+(-a,-a)=0
+   \]
+   after normalization of the two weighted vectors;
+2. **X2/Y2 — one-boundary antipodal pair:** two opposite weighted vectors on one
+   coordinate axis;
+3. **DXY3 — mixed triangle:** one nonzero diagonal weighted vector and one nonzero
+   weighted vector on each coordinate axis, with the two axis signs opposite the
+   diagonal sign.
+
+Two diagonal plus one axis, one diagonal plus two vectors on the same axis, or three
+axis vectors cannot form an inclusion-minimal nonzero sum-zero triple.  Three diagonal
+vectors are collinear and reduce to a two-vector limiting certificate.
+
+Thus the three geometric hard-cusp types stated in the parent theorem survive, but
+`hard` must mean (WR.6), not growth of the largest unweighted row gradient.
+
+---
+
+## 4. Correct interpretation
+
+The repaired dichotomy is:
+
+### Weighted-soft sparse cusp
+
+\[
+\max_j|\mu_j g_j|=O(1).
+\]
+
+The sparse KKT balance is carried by bounded weighted first-order forces.  This branch
+allows large raw gradients with vanishing convex weights.
+
+### Weighted-hard sparse cusp
+
+\[
+\max_j|\mu_j g_j|\to\infty.
+\]
+
+After normalization, the sparse balance has one of exactly the three leading-order
+types D2, X2/Y2, or DXY3.
+
+No lower bound on the original KKT multipliers `beta_h` or on the sparse coefficients
+`mu_j` is inferred.
+
+**Final disposition:** parent hard-cusp classification is valid after this weighted
+normalization repair. C-II and Level I remain open.

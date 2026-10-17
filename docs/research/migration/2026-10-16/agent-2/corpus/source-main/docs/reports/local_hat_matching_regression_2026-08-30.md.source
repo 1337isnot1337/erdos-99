@@ -1,0 +1,46 @@
+<!-- theorem-state: {"artifact_id":"ART-83E453302322","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Local barycentric-hat matching regression
+
+This note records an exact obstruction to a tempting shortcut in the triangular
+lattice scaffold.  Let (u_0,u_2,u_4) be three unit lattice directions separated
+by (120^circ), and choose
+
+\[
+r=\frac35.
+\]
+
+The three points (p_i=r u_i) are pairwise at distance
+
+\[
+\sqrt3r=\frac{3\sqrt3}{5}>1.
+\]
+
+Thus this is a unit-separated, triangle-free three-point set.  Each point lies on
+an alternating lattice ray.  If one assigns to it the ordinary barycentric
+weights in a chosen incident elementary triangle, its weight at the central
+lattice vertex is (1-r=2/5).  The total central weight is therefore
+
+\[
+3(1-r)=\frac65>1.
+\]
+
+So the standard continuous piecewise-linear hat functions of the triangular
+triangulation do **not** furnish a fractional matching from arbitrary
+unit-separated, triangle-free points to lattice vertices.
+
+This is not a Hall obstruction.  Each point is in a four-neighbor dimer region on
+the corresponding lattice ray, and the three cells have distinct outer vertices
+available for an integral matching.  The failure is specifically the choice of a
+single-triangle barycentric rule, which ignores the extra dimer vertex on the
+shared edge.
+
+The exact regression is executable with:
+
+```text
+python -m unittest discover -s research -p 'test_local_hat_regression.py' -v
+```
+
+The lesson for Target A is narrow but binding: any fractional source-to-lattice
+transport must use the full monomer--dimer conflict cell, or an equivalent
+phase-aware rule.  A central-vertex mass estimate based only on one elementary
+triangle is invalid even in a triangle-free configuration.

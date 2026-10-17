@@ -1,0 +1,291 @@
+# Target C-II — exact local closure roots occupy 35 of the 42 collapsed support-six rotation-cell orbits
+
+**Date:** 2026-09-19  
+**Claim class:** exact finite nonlinear-closure regression; theorem-state authority unchanged  
+**Scope:** degree-pure collapsed support-six one-anchor blocks after the 42-orbit rational rotation-cell reduction  
+**Depends on:** the audited 388-cell / 42-orbit reduction; the collapsed six-face closure equations; sign-preserving matching automorphisms and reflection used in the existing orbit quotient  
+**Certificate:** `research/verify_target_c_support6_collapsed_closure35_2026_09_19.py` with exact data `research/target_c_support6_collapsed_closure35_data_2026_09_19.json`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The collapsed support-six endpoint is not merely an artifact of dropping the nonlinear equilateral-pentagon closure equations. Exact contraction certificates now place a regular collapsed closure root strictly inside 35 of the 42 conservative symmetry-orbit representatives from the rotation-cell theorem.
+
+The seven representatives not certified here are
+
+\[
+\boxed{0,2,15,18,19,22,26}
+\]
+
+in the fixed representative ordering emitted by the 42-orbit certificate. The other 35 representatives all contain an exact root of the six-face collapsed closure system with every strict one-turn and adjacent-turn inequality holding with positive margin.
+
+Under the existing sign-preserving relabeling/reflection quotient, those 35 representatives cover
+
+\[
+\boxed{324\text{ of the }388\text{ labelled rational rotation cells}.}
+\]
+
+Thus at least 324 labelled cells are genuinely nonlinear-closure-feasible. The remaining 64 labelled cells lie in the seven unresolved orbits above. This does not assert that the seven unresolved orbits are closure-infeasible; numerical optimization puts their best observed roots on rotation-cell walls, but that numerical observation is not used as a theorem.
+
+This result changes the next-step priority. The newly audited seven-crossing theorem already shows that every *global* collapsed block must have at least seven internal strict-rhombus crossings. The present result shows that simply adding the six nonlinear face-closure equations will not remove most of the rational rotation cells before that global topology is used. The local closure manifold is real and regular across 35 of the 42 symmetry types.
+
+---
+
+## 1. The collapsed closure system
+
+For either missing-matching type let
+
+\[
+R=K_6\setminus M
+\]
+
+with twelve internal relation edges. Fix the coherent `2`-in/`2`-out orientation encoded by one rotation-cell representative. For every relation edge `e`, choose its upper-half-plane projective direction
+
+\[
+z_e=e^{i\alpha_e},\qquad 0<\alpha_e<\pi.
+\]
+
+Let
+
+\[
+s=(+1,+1,+1,-1,-1,-1)
+\]
+
+be the six outside-anchor directions after normalizing the common anchor line to the real axis. If `B` is the signed vertex-edge incidence matrix of the coherent relation orientation, exact closure of the six exceptional pentagons is
+
+\[
+\boxed{Bz=-s.}
+\tag{1.1}
+\]
+
+The sum of all six complex equations is redundant because every internal edge occurs once with each sign and
+
+\[
+\sum_v s_v=0.
+\]
+
+The certificate therefore uses the ten real equations from faces `0,...,4`.
+
+There are twelve internal train angles. For every certified representative the certificate freezes two angles at exact decimal-rational radian values and solves the remaining ten variables by a rigorous contraction argument. The resulting `10 x 10` partial Jacobian is invertible, so the full closure Jacobian has real rank ten at the root. Consequently every certified point is a regular point of a local two-dimensional collapsed closure manifold.
+
+---
+
+## 2. Exact contraction certificate
+
+For one representative write the ten variable angles as `x`, the two frozen angles as parameters, and the ten real closure equations as
+
+\[
+F(x)=0.
+\]
+
+The data file records:
+
+- an exact decimal-rational center `x_0` in radians;
+- the two frozen edge indices;
+- the ten variable edge indices; and
+- an exact decimal-rational matrix `C` approximating `J(x_0)^{-1}`.
+
+All logical tests in the verifier use `fractions.Fraction`. Sine and cosine at the rational centers are enclosed by Taylor polynomials with exact Lagrange remainder bounds. A rational Machin-series enclosure supplies `pi`.
+
+The verifier computes
+
+\[
+Y=\|CF(x_0)\|_\infty,
+\qquad
+Z_0=\|I-CJ(x_0)\|_\infty,
+\qquad
+N=\|C\|_\infty.
+\]
+
+Use the common radius
+
+\[
+r=10^{-8}.
+\]
+
+Each scalar face-closure row contains at most four variable train angles, and every sine/cosine derivative is `1`-Lipschitz. Therefore throughout the sup-norm box,
+
+\[
+\|I-CJ(x)\|_\infty
+\le
+Z:=Z_0+4Nr.
+\]
+
+The exact rational checks prove, for all 35 representatives,
+
+\[
+Z<1,
+\qquad
+Y+Zr<r.
+\tag{2.1}
+\]
+
+Hence the Newton-like map
+
+\[
+T(x)=x-CF(x)
+\]
+
+is a strict contraction of the box into itself. Every box contains one exact root for its fixed parameter pair.
+
+The reproduced certificate summary is
+
+```text
+certified orbits: 35
+indices: 1 3 4 5 6 7 8 9 10 11 12 13 14 16 17 20 21 23 24 25 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41
+max Y = 3.646e-14
+max Z = 3.559e-07
+min strict one-turn margin(rad) = 0.09498
+min strict adjacent-lower margin(rad) = 0.0465138
+min strict adjacent-upper margin(rad) = 0.0811253
+PASS: exact contraction certificates place a regular collapsed closure root inside 35 of the 42 rotation-cell symmetry orbits.
+```
+
+The printed decimal values are descriptive conversions of quantities whose pass/fail comparisons were performed as exact rationals.
+
+---
+
+## 3. The roots lie strictly inside the intended rotation cells
+
+For each of the twelve train angles the root box is either a point interval, for a frozen parameter, or
+
+\[
+[\alpha_e-r,\alpha_e+r].
+\]
+
+For one face with stored tuple
+
+\[
+(A_1,A_2,B_1,B_2),
+\]
+
+the five physical exterior-turn intervals are evaluated directly in radians:
+
+\[
+\begin{aligned}
+G_0&=\alpha_{A_1},\\
+G_1&=\alpha_{A_2}-\alpha_{A_1},\\
+G_2&=\pi+\alpha_{B_1}-\alpha_{A_2},\\
+G_3&=\alpha_{B_2}-\alpha_{B_1},\\
+G_4&=\pi-\alpha_{B_2}.
+\end{aligned}
+\tag{3.1}
+\]
+
+The verifier proves on the entire certified root box
+
+\[
+0<G_i<{2\pi\over3},
+\qquad
+{2\pi\over3}<G_i+G_{i+1}<\pi
+\tag{3.2}
+\]
+
+for every face and cyclic index. Thus no certified root sits on a wall of the rational cell.
+
+Across all 35 certificates the weakest rigorous margins are still macroscopic relative to `r`:
+
+\[
+\begin{aligned}
+\text{one-turn margin}&>0.09498,\\
+\text{adjacent lower margin}&>0.04651,\\
+\text{adjacent upper margin}&>0.08112
+\end{aligned}
+\]
+
+in radians.
+
+---
+
+## 4. Regularity and the two-dimensional local manifold
+
+For a certified representative, (2.1) implies that the recorded approximate inverse is a true inverse witness for the ten-variable partial Jacobian at the exact root. In particular that `10 x 10` submatrix is nonsingular.
+
+The full closure derivative has ten rows, so its rank is exactly ten. With twelve train-angle variables, the implicit-function theorem gives a local smooth solution manifold of dimension
+
+\[
+\boxed{12-10=2.}
+\tag{4.1}
+\]
+
+This matches the two-dimensional internal tangent lower bound proved independently for every collapsed support-six block. Here, however, the statement is finite and nonlinear for 35 specific symmetry types: the infinitesimal directions integrate locally because these are regular exact closure points.
+
+No claim is made that the same two-dimensional finite integration holds at every collapsed solution or in the seven unresolved rotation-cell orbits.
+
+---
+
+## 5. Symmetry transfers the representative roots to 324 labelled cells
+
+The existing 42-orbit quotient uses only:
+
+1. relabelings within the positive-anchor set `{0,1,2}` and within the negative-anchor set `{3,4,5}` that preserve the chosen missing matching; and
+2. reflection in the common anchor line.
+
+A sign-preserving relabeling merely permutes rows and relation-edge variables in (1.1), so it preserves exact closure and all strict turn inequalities.
+
+Under reflection,
+
+\[
+\alpha_e\mapsto\pi-\alpha_e,
+\qquad
+z_e\mapsto-\overline{z_e},
+\]
+
+and the coherent relation orientation reverses. The incidence sign therefore also changes. Their product sends
+
+\[
+Bz\mapsto\overline{Bz}.
+\]
+
+Since the anchor vector `s` is real, `Bz=-s` is preserved. This is exactly the reflection action already used by the audited rotation-cell quotient.
+
+The all-cross matching has fifteen orbits, each of size twelve. The two uncertified all-cross representatives are `0` and `2`, so the certified all-cross representatives cover
+
+\[
+13\cdot12=156
+\]
+
+of the 180 labelled cells.
+
+The mixed matching has twenty-seven orbits. The five uncertified mixed representatives `15,18,19,22,26` each have orbit size eight. Hence the certified mixed representatives cover
+
+\[
+208-5\cdot8=168
+\]
+
+labelled cells. Altogether,
+
+\[
+\boxed{156+168=324.}
+\tag{5.1}
+\]
+
+---
+
+## 6. What the seven unresolved orbits mean
+
+The certificate deliberately makes no claim about representatives
+
+\[
+0,2,15,18,19,22,26.
+\]
+
+Numerical constrained optimization repeatedly drives the closure residual toward zero only as one or more strict rotation-cell inequalities approach equality. That is evidence that these seven cells may be boundary-only for the nonlinear closure variety. It is not a proof. No numerical optimization result is used in the exact 35-orbit theorem.
+
+A useful future target is therefore sharply finite: derive an analytic or exact semialgebraic obstruction for these seven representatives. If they are indeed empty, the 42-orbit nonlinear-closure classification would be complete: exactly 35 orbits would be locally feasible.
+
+But even that classification would not close support six. The audited seven-crossing theorem is global and already shows that any actual collapsed block must realize at least seven internal train crossings with the forced crossing rotations. The 35 certified local manifolds do not supply those global stopped-train embeddings.
+
+---
+
+## 7. Consequence for the proof strategy
+
+Before this certificate, one plausible route was that imposing exact six-pentagon closure on the 42 rational rotation cells might remove most of the collapsed endpoint before difficult global train topology was needed.
+
+That route is now sharply limited:
+
+\[
+\boxed{35/42\text{ rotation-cell orbits, covering }324/388\text{ labelled cells, contain regular exact local closure roots}.}
+\]
+
+The load-bearing obstruction must therefore be global for most cells. The current seven-crossing floor is exactly such a constraint. The most useful next work is to classify seven-or-more-crossing planarizations under the forced crossing rotations, or combine the new rhombus payment with the live terminal budgets. Spending substantial effort on local closure feasibility of the already-certified 35 orbits cannot close C-II.
+
+**Disposition:** exact nonlinear closure is present and regular in 35 of the 42 collapsed support-six rotation-cell symmetry orbits, covering 324 of 388 labelled cells. Seven orbit representatives remain unresolved at the local closure level. C-II remains open because global stopped-train integrability and diameter locking are not certified by these local roots.

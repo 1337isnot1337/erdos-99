@@ -1,0 +1,172 @@
+# Target C: seven-row deficiency-three extension obstruction
+
+Date: 2026-09-21
+
+Status: exact finite obstruction. The last deficiency-three profile in the eight-no-root `k=7`, `p=12` branch is closed. The remaining eight-no-root `k=7` profiles are forced to use deficiency at least four in every selected `p`-retaining good seven-row shadow.
+
+Companion exact verifier:
+
+- `research/verify_target_c_support7_global_segment_relative_seven_noroot_k6_d3_capacity7_extension_2026_09_21.py`
+
+## Exact six-to-seven obstruction
+
+Start from the committed six-row augmentation cover of 325,955 representatives. Enumerate every synchronized rank-one state whose coefficient line has support at least two. There are 1,751,870 such states. Retain exactly the states with virtual-canonical deficiency three and singleton capacity at least six.
+
+The retained census is
+
+```text
+capacity 6: 485
+capacity 7:  78
+capacity 8: 116
+capacity 9: 144
+capacity 10: 64
+----------------
+total:      887
+```
+
+For every retained six-row state, adjoin every remaining no-root cycle. For each seven-row cycle set enumerate every obtainable rank-one coefficient line whose restriction to the first six coordinates is the fixed six-row line. Recompute the seven-row virtual-canonical complete set, its deficiency, and its singleton capacity.
+
+The exact scan gives
+
+```text
+restriction-compatible seven-row line extensions: 96,029
+seven-row extensions with d_7=3:                    2,036
+seven-row extensions with d_7=3 and capacity>=7:       0
+unique complete sets ranked:                       72,622
+```
+
+Therefore:
+
+> No synchronized seven-row rank-one virtual-canonical state with `d_7=3` and singleton capacity at least seven can have a six-row deletion shadow with coefficient-line support at least two, `d_6=3`, and singleton capacity at least six.
+
+This is an extension-cover statement. Every relevant six-row deletion shadow is represented in the committed augmentation cover up to the established `S_7` relabeling action, and every remaining no-root cycle is explicitly adjoined.
+
+Complete-block ranks are exact over `Q`. The verifier uses the same certificate as the preceding six- and eight-row scans: ranks are computed modulo `2^127-1`, Lucas-Lehmer certifies that modulus prime, complete `T`-relation rows have squared norm at most 12, and
+
+```text
+(2^127-1)^2 > 12^15.
+```
+
+Hadamard's inequality therefore rules out a rational rank drop hidden by the modular calculation.
+
+## Close `C:(d_v,q,s)=(3,10,8)`
+
+The remaining deficiency-three profile in branch C has
+
+```text
+D_8=-1,
+p=12,
+(d_v,q,s)=(3,10,8).
+```
+
+Thus the ten changed virtual-complete blocks consist of exactly eight singleton blocks and two pair blocks.
+
+The previously committed pair-shadow reduction supplies a good deletion pair which preserves `p=12` and leaves a six-row projected coefficient line of support at least two. Since deletion losses are nonnegative, each intermediate one-row deletion also preserves `p=12`.
+
+Consider the corresponding seven-row shadow. Its defect is
+
+```text
+D_7=1.
+```
+
+Its virtual deficiency is at most the global deficiency three and at least two by the seven-row containment theorem.
+
+If `d_7=2`, containment gives
+
+```text
+q_7 >= 8.
+```
+
+Among any eight of the ten changed blocks, at least six are singleton blocks because globally there are only two pair blocks. But the established seven-row deficiency-two singleton-capacity bound is at most five in the support-two case and at most four when the coefficient support is at least three. Hence `d_7=2` is impossible.
+
+Therefore
+
+```text
+d_7=3.
+```
+
+Containment then gives
+
+```text
+q_7 >= 9,
+```
+
+so the seven-row shadow has singleton capacity at least seven.
+
+Delete the second row of the selected pair. The resulting six-row shadow has
+
+```text
+D_6=3.
+```
+
+Its deficiency is at most three and at least two. If `d_6=2`, containment gives `q_6>=7`, hence at least five singleton blocks, contradicting the exact six-row deficiency-two capacity maximum three. Thus
+
+```text
+d_6=3.
+```
+
+Now containment gives `q_6>=8`, so the six-row shadow has singleton capacity at least six.
+
+This is exactly the configuration excluded by the new six-to-seven extension theorem. Therefore
+
+> `C:(d_v,q,s)=(3,10,8)` is impossible.
+
+All deficiency-three eight-no-root `k=7` profiles are now closed.
+
+## Updated residual profiles
+
+Before this scan the surviving eight-no-root `k=7` profiles were
+
+```text
+A: (4,11,11)
+
+C: (3,10,8),
+   (4,11,10),
+   (4,12,12),
+   (5,12,12).
+```
+
+After removing `C:(3,10,8)`, only
+
+```text
+A: (4,11,11)
+
+C: (4,11,10),
+   (4,12,12),
+   (5,12,12)
+```
+
+remain.
+
+The new obstruction also upgrades the selected `p`-retaining good seven-row shadows in every residual profile.
+
+For A, a deficiency-two seven-row shadow would already exceed the seven-row deficiency-two capacity bound. If a selected seven-row shadow had deficiency three, containment would force singleton capacity at least nine. Its selected six-row deletion could not have deficiency two because that would require at least seven singleton blocks against the exact capacity-three bound; it would therefore have deficiency three and capacity at least eight. The new extension theorem excludes this. Hence every selected `p=11` good seven-row shadow in A has
+
+```text
+d_7=4,
+singleton capacity >=10.
+```
+
+For C with `(d_v,q,s)=(4,11,10)`, the same argument gives
+
+```text
+d_7=4,
+singleton capacity >=9.
+```
+
+For C with `(4,12,12)`, it gives
+
+```text
+d_7=4,
+singleton capacity >=10.
+```
+
+For C with `(5,12,12)`, deficiencies two and three are excluded, so the selected good seven-row shadow satisfies
+
+```text
+d_7 in {4,5},
+singleton capacity >=10 when d_7=4,
+singleton capacity >=11 when d_7=5.
+```
+
+The smallest next exact target is the A profile. A selected good pair shadow must pass through a seven-row `d_7=4`, capacity-at-least-10 state. Its six-row predecessor is either `d_6=3`, capacity at least eight, or `d_6=4`, capacity at least nine. The `d_6=3` side starts from only 324 committed cover states and can be tested first; if it has no valid seven-row extension, A is forced entirely into the `d_6=4`, capacity-at-least-9 class.

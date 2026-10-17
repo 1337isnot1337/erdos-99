@@ -1,0 +1,9 @@
+# r=3 local-rank-safe reduction
+
+For the eight-no-root k=4, D=-1, d_root=0, p=3 three-singleton branch with exactly three weight-two projective lines M1,M2,M3, define E* to contain every repeated-support touched block of incidence at least 4, and every nonrepeated touched block of incidence at least 3, plus incidence-two blocks whose occurrence support is one of M1,M2,M3. Every actual-empty block lies in E*: rank two uses d2(P)>=4; rank one uses d1(P)>=2, and its two-incidence support must be one of the three weight-two lines.
+
+Define S* by the three sharp-puncture inequalities |I_b\\Mi|>=2, incidence at least 2, and incidence at least 4 for repeated-support blocks. Every actual selected singleton lies in S*. The existing r=3 quotient-localization proof still shows every rank-two singleton has at least 4 touches and at most one selected singleton has incidence 2.
+
+For the actual singleton triple S, C*=T\\(E* union S) is a subset of the actual complete family. Since d_root=0, H(C*) is independent; since C* is smaller than the actual complete family, rank H(T)-rank H(C*)>=4. Thus every genuine r=3 state survives this support-only relaxation. This proof uses only the sound direction repeated support => local rank two, never its false converse.
+
+A local exact C++ run of this relaxation regenerated 27,763 support orbits, 13,574 with h<=20, checked 5,701,080 orbit/matching pairs and 676,371 relaxed singleton triples, and found 0 structural passes. The executable source could not be persisted through the repository connector in this run, so the zero census is computational evidence, not yet a repository-auditable certificate.

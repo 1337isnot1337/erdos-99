@@ -1,0 +1,133 @@
+#!/usr/bin/env python3
+"""Exact Laurent certificate of a positive M=4 opening for all small t>0.
+
+Every operation tracks its remainder order in Q(sqrt(3))((t)). The
+companion analytic argument converts the finite rows into a wall exclusion.
+No arbitrary-M or canonical chamber extraction is certified.
+"""
+import sys,json,time
+from pathlib import Path
+import hashlib
+sys.path.insert(0,'research')
+from fractions import Fraction as F
+from itertools import combinations
+import verify_target_c_three_direction_corner_barrier_2026_10_06 as g
+Q=g.Q;Z=Q();ONE=Q(1);PREC=12
+
+def qdiv(a,b):
+ den=b.a*b.a-3*b.b*b.b;assert den
+ return Q((a.a*b.a-3*a.b*b.b)/den,(a.b*b.a-a.a*b.b)/den)
+
+class S:
+ def __init__(self,c=None,p=PREC,exact_zero=False):
+  self.p=p;self.c={k:q for k,q in (c or {}).items() if k<p and q!=Z};self.z=exact_zero
+ @staticmethod
+ def of(x):
+  if isinstance(x,S):return x
+  x=Q.of(x);return S({0:x},exact_zero=x==Z)
+ def val(self):return min(self.c) if self.c else self.p
+ def __add__(self,b):
+  b=S.of(b)
+  if self.z:return b
+  if b.z:return self
+  p=min(self.p,b.p);return S({k:self.c.get(k,Z)+b.c.get(k,Z) for k in self.c.keys()|b.c.keys() if k<p},p)
+ __radd__=__add__
+ def __neg__(self):return S({k:-v for k,v in self.c.items()},self.p,self.z)
+ def __sub__(self,b):return self+-S.of(b)
+ def __rsub__(self,b):return S.of(b)+-self
+ def __mul__(self,b):
+  b=S.of(b)
+  if self.z or b.z:return S(exact_zero=True)
+  p=min(self.p+b.val(),b.p+self.val());c={}
+  for i,a in self.c.items():
+   for j,bb in b.c.items():
+    if i+j<p:c[i+j]=c.get(i+j,Z)+a*bb
+  return S(c,p)
+ __rmul__=__mul__
+ def inverse(self):
+  assert self.c,('insufficient pivot precision',self.p)
+  v=self.val();lead=self.c[v];p=self.p-2*v;inv={0:qdiv(ONE,lead)}
+  for n in range(1,self.p-v):
+   inv[n]=-qdiv(sum((self.c.get(v+j,Z)*inv[n-j] for j in range(1,n+1)),Z),lead)
+  return S({-v+n:c for n,c in inv.items()},p)
+ def __truediv__(self,b):
+  if self.z:return self
+  return self*S.of(b).inverse()
+
+def add(p,q):return (p[0]+q[0],p[1]+q[1])
+def mul(p,q):return (p[0]*q[0]-p[1]*q[1],p[0]*q[1]+p[1]*q[0])
+def power(p,n):
+ if n<0:p,n=(p[0],-p[1]),-n
+ ans=(S.of(1),S.of(0))
+ while n:
+  if n%2:ans=mul(ans,p)
+  p=mul(p,p);n//=2
+ return ans
+m=4;t=S({1:ONE});zero=S.of(0);one=S.of(1);half=S.of(F(1,2));a=S.of(Q(0,F(1,2)));sixth=(half,a);base=((one-t*t)/(one+t*t),2*t/(one+t*t));rates=list(range(m-1,-m,-2));z=[power(base,h) for h in rates];w=(half-one,a);actual={(0,0):(zero,zero)}
+for r in range(1,m+1):
+ total=(sum((q[0] for q in z[:r]),zero),sum((q[1] for q in z[:r]),zero));chosen=sorted(range(r),key=lambda h:rates[h]);prefix=(zero,zero)
+ for j in range(r+1):
+  if j:prefix=add(prefix,z[chosen[j-1]])
+  value=add(total,mul(prefix,w));p=(r-j,j)
+  for k in range(6):actual[p]=value;p=(-p[1],p[0]+p[1]);value=mul(value,sixth)
+basis_path=Path(__file__).with_name('target_c_one_deficit_opening_basis_M4_2026_10_07.json');basis_raw=basis_path.read_bytes();data=json.loads(basis_raw);moving=[tuple(p) for p in data['moving']];col={p:i for i,p in enumerate(moving)};n=2*len(moving)+1;rows=[]
+# Independent unit-support check: coefficients of the formal independent
+# unit complex factors z_h. A single unit coefficient proves exact unit length.
+signature={(0,0):[(Z,Z)]*m}
+constant_sixth=(Q(F(1,2)),Q(0,F(1,2)))
+for r in range(1,m+1):
+ for j in range(r+1):
+  p=(r-j,j)
+  coeff=[((Q(1),Z) if h<r-j else constant_sixth) if h<r else (Z,Z)
+         for h in range(m)]
+  for k in range(6):
+   if p in signature:assert signature[p]==coeff
+   signature[p]=coeff
+   p=(-p[1],p[0]+p[1]);coeff=[g.mul(c,constant_sixth) for c in coeff]
+cloud=set(actual)-{(1,m-2)}
+assert set(moving)=={p for p in cloud if max(abs(p[0]),abs(p[1]),abs(p[0]+p[1]))<m}
+exact_unit_support=set();inactive_pairs=0
+for p,q in combinations(sorted(cloud),2):
+ coeff=[g.sub(a,b) for a,b in zip(signature[p],signature[q])]
+ nonzero=[c for c in coeff if c!=(Z,Z)]
+ exact_unit=(len(nonzero)==1 and g.norm(nonzero[0])==Q(1))
+ if exact_unit:
+  if p in col or q in col:exact_unit_support.add(frozenset((p,q)))
+ else:
+  delta=(actual[p][0]-actual[q][0],actual[p][1]-actual[q][1])
+  gap=delta[0]*delta[0]+delta[1]*delta[1]-1
+  assert gap.c and gap.c[gap.val()].sign()>0
+  inactive_pairs+=1
+assert exact_unit_support=={frozenset((tuple(p),tuple(q))) for p,q in data['pairs']}
+for pp,qq in data['pairs']:
+ p,q=tuple(pp),tuple(qq);row=[zero]*n;d=(actual[p][0]-actual[q][0],actual[p][1]-actual[q][1])
+ if p in col:row[2*col[p]]=d[0];row[2*col[p]+1]=d[1]
+ if q in col:row[2*col[q]]=row[2*col[q]]-d[0];row[2*col[q]+1]=row[2*col[q]+1]-d[1]
+ row[-1]=-one;rows.append(row)
+A=[]
+for (kind,index),rhs in zip(data['basis'],data['rhs']):
+ if kind=='edge':A.append(list(rows[index])+[S.of(rhs)])
+ else:row=[zero]*n;row[index]=one;A.append(row+[S.of(rhs)])
+start=time.monotonic();pivots=[]
+for k in range(n):
+ candidates=[i for i in range(k,n) if A[i][k].c];assert candidates,('precision deficient at column',k)
+ p=min(candidates,key=lambda i:A[i][k].val());A[k],A[p]=A[p],A[k];row=A[k];pivot=row[k];pivots.append(pivot.val())
+ for j in range(k,n+1):row[j]=row[j]/pivot
+ for i in range(k+1,n):
+  factor=A[i][k]
+  if factor.z:continue
+  A[i][k]=zero
+  for j in range(k+1,n+1):
+   if not row[j].z:A[i][j]=A[i][j]-factor*row[j]
+
+x=[zero]*n
+for k in range(n-1,-1,-1):x[k]=A[k][n]-sum((A[k][j]*x[j] for j in range(k+1,n) if not A[k][j].z),zero)
+terms=[]
+for index,row in enumerate(rows):
+ margin=sum((row[j]*x[j] for j in range(n-1) if not row[j].z),zero)
+ assert margin.c,('margin needs precision',index,margin.p)
+ order=margin.val();coef=margin.c[order]
+ assert coef.sign()>0,('negative leading margin',index,order,str(coef))
+ terms.append({'row':index,'order':order,'coefficient':[str(coef.a),str(coef.b)],'certified_remainder_order':margin.p})
+result={'M':m,'series_input_order':PREC,'basis_sha256':hashlib.sha256(basis_raw).hexdigest(),'pivot_orders':pivots,'rows':terms,'inactive_pairs_with_positive_leading_gap':inactive_pairs,'exact_unit_rows':len(exact_unit_support),'minimum_remainder_order':min(q['certified_remainder_order'] for q in terms),'classification':'exact positive Laurent leading coefficients'}
+print(json.dumps(result,sort_keys=True))

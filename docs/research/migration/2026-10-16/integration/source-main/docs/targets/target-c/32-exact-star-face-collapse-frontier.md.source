@@ -1,0 +1,39 @@
+# Target C — C76 exact mechanical star-face collapse
+
+**LEVEL I STATUS: STILL OPEN.**
+
+Full proof: [target_c_exact_mechanical_star_face_collapse_2026-08-31.md](../../reports/target_c_exact_mechanical_star_face_collapse_2026-08-31.md).
+
+For any normalized KKT stress `s` and diameter vertex `z`, let
+
+`S_z(s)=sum_(zk in H) beta_zk`.
+
+For `D>=20`, C76 proves that the exact face `S_z=1` is not a generic mechanical star.
+
+C68 applied to arbitrary normalized stresses gives `S_z=1 -> Q_z=0`. Hence every positive contact attains equality in the reverse triangle inequality for distance from `z`; every component of the positive contact support after deleting `z` lies on one ray and has one physical port.
+
+C12 applies to every normalized stress. Summed equilibrium over one radial branch shows that each positive branch must contain a positive `z`-star diameter partner.
+
+Two different branches would have distinct unit contact ports separated by at least `pi/3`. But C18 gives, for `D>=20`, a common diameter-star cone of width strictly below `pi/3`. Therefore only one branch exists.
+
+The unique ray has only one source point at radius `D`, so
+
+`H_s={za}`, `beta_za=1`.
+
+Connected unit contacts along that ray force `D` to be an integer and the positive contact support to be exactly the `D`-edge straight chain from `z` to `a`. Equilibrium forces every chain contact stress to equal `D`.
+
+Thus the KKT-polytope face
+
+`{s:S_z(s)=1}`
+
+is either empty or a singleton straight-chain stress.
+
+## Effect
+
+C66-C74 should now be read as convergence toward one straight-chain KKT vertex, not toward an arbitrary star network. Concurrent C75 independently forces any near-capacity quadratic core into a weight-free near-triangular missing-diagonal rhombic bulk.
+
+The remaining obstruction is the uniform incompatibility of those two limits: a stress certificate collapsing to a one-dimensional chain while the source geometry retains a quadratic two-dimensional near-triangular carrier.
+
+## Next target
+
+Exploit the full KKT polytope or C75 geometry. Either force a transverse certificate with nonvanishing mixing weight, or prove an exposed straight-chain stress face cannot coexist with the C73/C75 near-capacity bulk in a global minimizer.

@@ -1,0 +1,472 @@
+"""Exact incidence calculations for triangular-lattice scaffold cells.
+
+The Target A scaffold associates each smaller-optimum point with either one
+elementary triangular-lattice triangle (a monomer) or two edge-sharing triangles
+(a dimer).  The code in this file deliberately works in integer lattice
+coordinates.  It therefore avoids floating-point geometry in the matching and
+phase-charge audit.
+
+The module is intentionally dependency-free.  It is a research instrument, not
+an optimizer for the original continuous problem.  In particular, it checks the
+finite combinatorial identities used by Sections 79--91 of the canonical report
+and searches for finite incidence regressions.
+"""
+
+from __future__ import annotations
+
+from collections import deque
+from dataclasses import dataclass
+from itertools import combinations
+from typing import FrozenSet, Iterable, Iterator, Mapping, Sequence
+
+
+Coord = tuple[int, int]
+Edge = tuple[Coord, Coord]
+
+
+def _ordered_edge(a: Coord, b: Coord) -> Edge:
+    return (a, b) if a <= b else (b, a)
+
+
+@dataclass(frozen=True, order=True)
+class Triangle:
+    """An elementary unit triangle in the ``(e1,e2)`` lattice basis."""
+
+    orientation: str
+    i: int
+    j: int
+
+    def __post_init__(self) -> None:
+        if self.orientation not in {"+", "-"}:
+            raise ValueError("orientation must be '+' or '-'")
+
+    @property
+    def vertices(self) -> FrozenSet[Coord]:
+        i, j = self.i, self.j
+        if self.orientation == "+":
+            return frozenset({(i, j), (i + 1, j), (i, j + 1)})
+        return frozenset({(i + 1, j), (i, j + 1), (i + 1, j + 1)})
+
+    @property
+    def edges(self) -> frozenset[Edge]:
+        v = sorted(self.vertices)
+        return frozenset(_ordered_edge(a, b) for a, b in combinations(v, 2))
+
+
+@dataclass(frozen=True)
+class Cell:
+    """A monomer or dimer blocker cell.
+
+    ``triangles`` contains one triangle for a monomer and two edge-sharing
+    triangles for a dimer.  A dimer is identified by its sorted triangle pair,
+    so the object is independent of the order in which it was constructed.
+    """
+
+    triangles: tuple[Triangle, ...]
+
+    def __post_init__(self) -> None:
+        ts = tuple(sorted(self.triangles))
+        if ts != self.triangles:
+            raise ValueError("cell triangles must be sorted")
+        if len(ts) not in {1, 2}:
+            raise ValueError("a cell must contain one or two triangles")
+        if len(ts) == 2 and len(ts[0].vertices & ts[1].vertices) != 2:
+            raise ValueError("dimer triangles must share an edge")
+
+    @classmethod
+    def monomer(cls, triangle: Triangle) -> "Cell":
+        return cls((triangle,))
+
+    @classmethod
+    def dimer(cls, first: Triangle, second: Triangle) -> "Cell":
+        return cls(tuple(sorted((first, second))))
+
+    @property
+    def is_monomer(self) -> bool:
+        return len(self.triangles) == 1
+
+    @property
+    def vertices(self) -> FrozenSet[Coord]:
+        out: set[Coord] = set()
+        for triangle in self.triangles:
+            out.update(triangle.vertices)
+        return frozenset(out)
+
+    @property
+    def edges(self) -> frozenset[Edge]:
+        out: set[Edge] = set()
+        for triangle in self.triangles:
+            out.update(triangle.edges)
+        return frozenset(out)
+
+
+def elementary_triangles(
+    i_range: range, j_range: range
+) -> tuple[Triangle, ...]:
+    """Return both orientations over a finite index rectangle."""
+
+    return tuple(
+        Triangle(orientation, i, j)
+        for i in i_range
+        for j in j_range
+        for orientation in ("+", "-")
+    )
+
+
+def all_cells(
+    i_range: range, j_range: range
+) -> tuple[Cell, ...]:
+    """Return monomers and all edge-sharing dimers in an index rectangle."""
+
+    triangles = elementary_triangles(i_range, j_range)
+    cells = [Cell.monomer(t) for t in triangles]
+    for first, second in combinations(triangles, 2):
+        if len(first.vertices & second.vertices) == 2:
+            cells.append(Cell.dimer(first, second))
+    return tuple(cells)
+
+
+def legal_cell_family(cells: Iterable[Cell]) -> bool:
+    """Whether the selected cells have disjoint triangle interiors."""
+
+    occupied: set[Triangle] = set()
+    for cell in cells:
+        if occupied.intersection(cell.triangles):
+            return False
+        occupied.update(cell.triangles)
+    return True
+
+
+def neighborhood(cells: Iterable[Cell]) -> frozenset[Coord]:
+    """The lattice vertices incident with at least one selected cell."""
+
+    out: set[Coord] = set()
+    for cell in cells:
+        out.update(cell.vertices)
+    return frozenset(out)
+
+
+def _maximum_matching(
+    cells: Sequence[Cell],
+) -> tuple[
+    int,
+    tuple[int, ...],
+    tuple[int, ...],
+    tuple[tuple[int, ...], ...],
+    tuple[Coord, ...],
+]:
+    """Return a deterministic matching and its indexed incidence graph."""
+
+    vertices = sorted(neighborhood(cells))
+    index = {vertex: k for k, vertex in enumerate(vertices)}
+    adjacency = [tuple(index[v] for v in sorted(cell.vertices)) for cell in cells]
+    matched_to_cell = [-1] * len(vertices)
+
+    def augment(cell_index: int, seen: list[bool]) -> bool:
+        for vertex_index in adjacency[cell_index]:
+            if seen[vertex_index]:
+                continue
+            seen[vertex_index] = True
+            previous = matched_to_cell[vertex_index]
+            if previous == -1 or augment(previous, seen):
+                matched_to_cell[vertex_index] = cell_index
+                return True
+        return False
+
+    result = 0
+    for cell_index in range(len(cells)):
+        if augment(cell_index, [False] * len(vertices)):
+            result += 1
+
+    matched_from_cell = [-1] * len(cells)
+    for vertex_index, cell_index in enumerate(matched_to_cell):
+        if cell_index != -1:
+            matched_from_cell[cell_index] = vertex_index
+    return (
+        result,
+        tuple(matched_from_cell),
+        tuple(matched_to_cell),
+        tuple(adjacency),
+        tuple(vertices),
+    )
+
+
+def maximum_matching_size(cells: Sequence[Cell]) -> int:
+    """Compute the cell-to-vertex matching number by augmenting paths."""
+
+    return _maximum_matching(cells)[0]
+
+
+def hall_witness(cells: Sequence[Cell]) -> dict[str, tuple | int]:
+    """Return a constructive maximum-deficiency Hall witness.
+
+    The returned cell indices ``S`` and lattice vertices ``N`` satisfy
+    ``N = neighborhood(S)`` and maximize ``|S|-|N|``.  The witness is obtained
+    from the alternating forest rooted at unmatched cells of a maximum
+    matching.  When the matching saturates every cell, the empty witness is
+    returned with deficiency zero.
+    """
+
+    _, matched_from_cell, matched_to_cell, adjacency, vertices = _maximum_matching(cells)
+    visited_cells = [False] * len(cells)
+    visited_vertices = [False] * len(vertices)
+    queue: deque[int] = deque()
+    for cell_index, matched_vertex in enumerate(matched_from_cell):
+        if matched_vertex == -1:
+            visited_cells[cell_index] = True
+            queue.append(cell_index)
+
+    while queue:
+        cell_index = queue.popleft()
+        matched_vertex = matched_from_cell[cell_index]
+        for vertex_index in adjacency[cell_index]:
+            if vertex_index == matched_vertex or visited_vertices[vertex_index]:
+                continue
+            visited_vertices[vertex_index] = True
+            matched_cell = matched_to_cell[vertex_index]
+            if matched_cell != -1 and not visited_cells[matched_cell]:
+                visited_cells[matched_cell] = True
+                queue.append(matched_cell)
+
+    selected_cells = tuple(index for index, seen in enumerate(visited_cells) if seen)
+    selected_vertices = tuple(
+        vertices[index] for index, seen in enumerate(visited_vertices) if seen
+    )
+    return {
+        "cells": selected_cells,
+        "vertices": selected_vertices,
+        "deficiency": len(selected_cells) - len(selected_vertices),
+    }
+
+
+def dulmage_mendelsohn_core(cells: Sequence[Cell]) -> dict[str, object]:
+    """Return the canonical positive-deficiency DM core of the incidence graph.
+
+    A maximum matching is fixed by ``_maximum_matching``.  Starting at every
+    unmatched cell, the routine follows unmatched edges from left to right and
+    matching edges from right to left.  The reachable vertices form the usual
+    maximum Hall witness.  The induced witness splits into connected bipartite
+    components; each component has deficiency equal to the number of unmatched
+    cells it contains, and hence is positive.  The decomposition is independent
+    of any spatial notion of a circuit, although the returned component vertex
+    sets are exact lattice-vertex sets for the scaffold.
+
+    The result is a diagnostic certificate rather than a new optimization
+    assumption.  In particular, different fundamental circuits may still overlap
+    inside one returned component.
+    """
+
+    _, matched_from_cell, matched_to_cell, adjacency, vertices = _maximum_matching(
+        cells
+    )
+    visited_cells = [False] * len(cells)
+    visited_vertices = [False] * len(vertices)
+    queue: deque[int] = deque()
+    roots: list[int] = []
+    for cell_index, matched_vertex in enumerate(matched_from_cell):
+        if matched_vertex == -1:
+            visited_cells[cell_index] = True
+            roots.append(cell_index)
+            queue.append(cell_index)
+
+    while queue:
+        cell_index = queue.popleft()
+        matched_vertex = matched_from_cell[cell_index]
+        for vertex_index in adjacency[cell_index]:
+            if vertex_index == matched_vertex or visited_vertices[vertex_index]:
+                continue
+            visited_vertices[vertex_index] = True
+            matched_cell = matched_to_cell[vertex_index]
+            if matched_cell != -1 and not visited_cells[matched_cell]:
+                visited_cells[matched_cell] = True
+                queue.append(matched_cell)
+
+    selected_cells = tuple(index for index, seen in enumerate(visited_cells) if seen)
+    selected_vertices = tuple(
+        vertices[index] for index, seen in enumerate(visited_vertices) if seen
+    )
+    selected_vertex_set = set(selected_vertices)
+    expected_vertices = {
+        vertex
+        for index in selected_cells
+        for vertex_index in adjacency[index]
+        for vertex in (vertices[vertex_index],)
+    }
+    if expected_vertices != selected_vertex_set:
+        raise AssertionError("alternating reachability did not produce N(S)")
+
+    cell_to_vertices = {
+        index: tuple(vertices[vertex_index] for vertex_index in adjacency[index])
+        for index in selected_cells
+    }
+    vertex_to_cells: dict[Coord, list[int]] = {}
+    for cell_index, cell_vertices in cell_to_vertices.items():
+        for vertex in cell_vertices:
+            vertex_to_cells.setdefault(vertex, []).append(cell_index)
+
+    components: list[dict[str, object]] = []
+    unseen_cells = set(selected_cells)
+    while unseen_cells:
+        root = min(unseen_cells)
+        component_cells: set[int] = {root}
+        component_vertices: set[Coord] = set()
+        cell_queue: deque[int] = deque([root])
+        unseen_cells.remove(root)
+        while cell_queue:
+            cell_index = cell_queue.popleft()
+            for vertex in cell_to_vertices[cell_index]:
+                if vertex in component_vertices:
+                    continue
+                component_vertices.add(vertex)
+                for neighbor in vertex_to_cells[vertex]:
+                    if neighbor in unseen_cells:
+                        unseen_cells.remove(neighbor)
+                        component_cells.add(neighbor)
+                        cell_queue.append(neighbor)
+        component_roots = tuple(index for index in roots if index in component_cells)
+        deficiency = len(component_cells) - len(component_vertices)
+        if deficiency != len(component_roots) or deficiency <= 0:
+            raise AssertionError("DM component has an invalid deficiency certificate")
+        components.append(
+            {
+                "cells": tuple(sorted(component_cells)),
+                "vertices": tuple(sorted(component_vertices)),
+                "roots": component_roots,
+                "deficiency": deficiency,
+            }
+        )
+
+    components.sort(key=lambda component: component["cells"])
+    component_deficiency = sum(
+        int(component["deficiency"]) for component in components
+    )
+    deficiency = len(selected_cells) - len(selected_vertices)
+    if component_deficiency != deficiency:
+        raise AssertionError("DM component deficiencies do not add")
+    return {
+        "cells": selected_cells,
+        "vertices": selected_vertices,
+        "roots": tuple(roots),
+        "deficiency": deficiency,
+        "components": tuple(components),
+    }
+
+
+def full_set_deficiency(cells: Sequence[Cell]) -> int:
+    """Return the deficiency ``|S|-|N(S)|`` of this selected cell set."""
+
+    return len(cells) - len(neighborhood(cells))
+
+
+def left_nullity(cells: Sequence[Cell]) -> int:
+    """Return the left transversal-matroid nullity ``|S|-rank(S)``.
+
+    For the full ground set this is the maximum Hall deficiency over all subsets,
+    by the matching formulation of Hall's theorem.  It is not the same as the
+    raw deficiency of the full selected set, which is ``|S|-|N(S)|``.
+    """
+
+    return len(cells) - maximum_matching_size(cells)
+
+
+def boundary_edges(cells: Iterable[Cell]) -> frozenset[Edge]:
+    """Edges incident with exactly one occupied elementary triangle."""
+
+    counts: dict[Edge, int] = {}
+    for cell in cells:
+        for triangle in cell.triangles:
+            for edge in triangle.edges:
+                counts[edge] = counts.get(edge, 0) + 1
+    return frozenset(edge for edge, count in counts.items() if count == 1)
+
+
+def euler_characteristic(cells: Sequence[Cell]) -> int:
+    """Euler characteristic of the occupied elementary-triangle complex."""
+
+    occupied_triangles = {
+        triangle for cell in cells for triangle in cell.triangles
+    }
+    edges = {
+        edge for triangle in occupied_triangles for edge in triangle.edges
+    }
+    vertices = {
+        vertex for triangle in occupied_triangles for vertex in triangle.vertices
+    }
+    return len(vertices) - len(edges) + len(occupied_triangles)
+
+
+def phase_charge(cells: Sequence[Cell]) -> Mapping[Coord, int]:
+    """Return the integer charge ``4p+3q-12`` at every neighborhood vertex."""
+
+    p: dict[Coord, int] = {}
+    q: dict[Coord, int] = {}
+    for cell in cells:
+        target = p if cell.is_monomer else q
+        for vertex in cell.vertices:
+            target[vertex] = target.get(vertex, 0) + 1
+    return {
+        vertex: 4 * p.get(vertex, 0) + 3 * q.get(vertex, 0) - 12
+        for vertex in neighborhood(cells)
+    }
+
+
+def cell_complex_deficiency(cells: Sequence[Cell]) -> int:
+    """Evaluate the Euler/boundary expression from the canonical report."""
+
+    monomers = sum(cell.is_monomer for cell in cells)
+    return (monomers - len(boundary_edges(cells))) // 2 - euler_characteristic(cells)
+
+
+def verify_identities(cells: Sequence[Cell]) -> dict[str, int | bool]:
+    """Return exact matching, Euler, and phase-charge audit values."""
+
+    if not legal_cell_family(cells):
+        raise ValueError("the selected family has overlapping cell interiors")
+    matching = maximum_matching_size(cells)
+    full_deficiency = full_set_deficiency(cells)
+    nullity = len(cells) - matching
+    euler_deficiency = cell_complex_deficiency(cells)
+    charges = phase_charge(cells)
+    charge_deficiency = sum(charges.values()) // 12
+    return {
+        "cells": len(cells),
+        "vertices": len(neighborhood(cells)),
+        "matching": matching,
+        "full_deficiency": full_deficiency,
+        "left_nullity": nullity,
+        "euler_deficiency": euler_deficiency,
+        "charge_deficiency": charge_deficiency,
+        "identities_agree": (
+            full_deficiency == euler_deficiency == charge_deficiency
+        ),
+    }
+
+
+def plus_rectangle(side: int) -> tuple[Cell, ...]:
+    """The exact locally neutral all-``+`` monomer phase on a square patch."""
+
+    return tuple(
+        Cell.monomer(Triangle("+", i, j))
+        for i in range(side)
+        for j in range(side)
+    )
+
+
+def dimer_strip(length: int) -> tuple[Cell, ...]:
+    """A legal one-cell-wide dimer strip, useful as a zero-charge regression."""
+
+    return tuple(
+        Cell.dimer(Triangle("+", i, 0), Triangle("-", i, 0))
+        for i in range(length)
+    )
+
+
+def format_summary(summary: Mapping[str, int | bool]) -> str:
+    return " ".join(f"{key}={summary[key]}" for key in sorted(summary))
+
+
+if __name__ == "__main__":
+    for side in (1, 2, 4, 8):
+        print(f"plus[{side}] {format_summary(verify_identities(plus_rectangle(side)))}")
+    for length in (1, 2, 4, 8):
+        print(f"dimer_strip[{length}] {format_summary(verify_identities(dimer_strip(length)))}")

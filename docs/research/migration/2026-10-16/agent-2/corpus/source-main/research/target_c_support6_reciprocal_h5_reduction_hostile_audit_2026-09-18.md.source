@@ -1,0 +1,86 @@
+# Hostile audit — support-six reciprocal `H5` finite reduction
+
+**Date:** 2026-09-18  
+**Audited note:** `target_c_support6_reciprocal_h5_reduction_2026-09-18.md`  
+**Certificate:** `verify_target_c_support6_reciprocal_h5_reduction_2026_09_18.py`  
+**Disposition:** PASS WITH EXPLICIT SCOPE LIMITS. C-II remains open.
+
+This audit checks the places where the `H5` reduction could otherwise overstate a finite enumeration as a geometric exclusion.
+
+## 1. The regular-tournament test is used only as a necessary condition
+
+The new local test does not claim that every regular five-ray cross tournament closes as an equilateral pentagon. The direction is only
+
+\[
+\text{strict physical pentagon}
+\Longrightarrow
+\delta_i+\delta_{i+1}<\pi
+\Longrightarrow
+\text{regular 5-tournament}.
+\]
+
+Therefore retaining 48 uniform and 80 wall candidates is conservative. No candidate is removed because of a condition stronger than the proved two-turn inequality.
+
+## 2. The chirotope enumeration is an over-approximation, not a realizability claim
+
+The verifier checks the rank-three Grassmann-Pluecker sign axiom on all `2^15` free sign assignments compatible with the fixed convex pentagon and two interior-point boundary signs. It does not need every surviving abstract chirotope to be realizable. A nonrealizable survivor only enlarges the candidate set, so the stated reduction remains safe.
+
+## 3. Ground `+--++-` is invoked only in the uniform stratum
+
+The distinct-ray ground order lemma is not used on a wall with coincident ground rays. Uniform `H5` has six distinct ground rays and ground cone width `<pi/3<pi`, so the lemma applies there.
+
+On a simple wall, the verifier instead uses the separate duplicate-ray argument: the tied pair has the same sign, and after global reversal exactly one of the remaining four rays is positive. This is the correct replacement for the distinct-ray word.
+
+## 4. The duplicate-ray argument is scoped to simple walls
+
+If the tied pair had opposite signs, it would cancel and leave a `2+2` equilibrium among four other rays. On a simple wall those four rays are distinct and lie in one open semicircle, so equality of their two unit-vector pair sums forces the unordered pairs to coincide, a contradiction.
+
+This proof needs modification if another ground-ray coincidence occurs simultaneously. The note therefore leaves higher-codimension multiple-collinearity strata open instead of applying the simple-wall argument there.
+
+## 5. The list of simple wall triples is complete for the stated labeling
+
+No three non-ground reciprocal points can be collinear by the preceding support-six lemma. If `0,i,j` is collinear and `ij` is a present reciprocal relation edge, then at one physical endpoint the outside anchor and that relation train are projectively parallel, contradicting the bounded-pentagon no-parallel-side theorem. Hence `ij` must be a missing matching edge.
+
+An interior point cannot lie on either boundary ray `01` or `04`. With hull labels `0,1,2,3,4` and interior labels `5,6`, the only free simple ground-collinearity triples are exactly
+
+\[
+025,026,035,036,056.
+\]
+
+The verifier enumerates every codimension-one adjacency obtained by flipping only the corresponding chirotope sign.
+
+## 6. Deleting the tied matching mate removes the local zero determinant
+
+On a wall `0,i,j`, the relation edge `ij` is missing. At a tied hull endpoint, the collinear mate is deleted before applying the five-ray positions-two-and-four rule. At all other hull vertices the radial order is unchanged across the wall. Thus using either adjacent uniform chirotope to obtain the hull radial order is legitimate.
+
+The regular-tournament checker explicitly rejects any zero determinant among the five present force rays. No hidden parallel present-edge pair is accepted.
+
+## 7. Symmetry quotient is bookkeeping only
+
+The six uniform and ten simple-wall orbit counts quotient by hull reflection fixing ground vertex `0`, interchange of interior labels `5,6`, and global edge-sign reversal. The verifier renormalizes reflected chirotope orientation so the hull remains counterclockwise.
+
+The raw labelled counts `48` and `80` are established before any quotient, so an error in orbit canonicalization could affect only the compact case count, not the underlying finite reduction.
+
+## 8. Independent exact rerun
+
+The final verifier was executed locally with no floating-point operations in the proof logic and returned:
+
+```text
+uniform_rank3_extensions 370
+uniform_hull_sign_survivors 600
+uniform_regular_force_survivors 48
+uniform_symmetry_orbits 6
+uniform_matching_families 4 [12, 12, 12, 12]
+simple_ground_collinearity_walls 316 {(0, 2, 5): 66, (0, 2, 6): 66, (0, 3, 5): 66, (0, 3, 6): 66, (0, 5, 6): 52}
+wall_hull_sign_survivors 488
+wall_regular_force_survivors 80
+wall_symmetry_orbits 10
+interior_pair_collinear_survivors 0
+PASS: support-six reciprocal H5 branch reduced to 6 uniform and 10 simple-wall exact sign/order orbits
+```
+
+## 9. Remaining gap
+
+The finite reduction does not solve the `H5` branch. The sixteen surviving symmetry orbits still have to be tested against the full metric unit-force equations and signed trace identity. Higher-codimension ground-collinearity strata are also not covered. The collapsed support-six branch is untouched.
+
+**Audit disposition:** the stated finite reductions and the elimination of the simple `056` wall are supportable. No stronger exclusion is claimed. C-II remains open.

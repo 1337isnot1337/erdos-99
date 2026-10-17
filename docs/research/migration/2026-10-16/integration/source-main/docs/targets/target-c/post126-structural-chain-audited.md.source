@@ -1,0 +1,801 @@
+# Target C — audited post-126 structural chain, normalized §§128–133, 141, 147
+
+**Date:** 2026-09-12  
+**Lifecycle:** audited-working route module; theorem-state authority unchanged.  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+This module replaces the collision-heavy research consolidation formerly carried by PR
+#359. Historical source filenames reused draft section numbers 124–129; those numbers
+are not authoritative. The normalized labels below are the research-tail namespace.
+
+The duplicated Type-II theorem `c_B=0` is no longer repeated here: it is already
+centralized on `main` in
+[`typeii-loaded-contacts-hull-sides.md`](typeii-loaded-contacts-hull-sides.md).
+
+Canonical theorem-state authority remains audit.46 through canonical Section 123.
+
+---
+
+# §128 — augmented triangles sharpen global defect payment
+
+Use canonical Section-123 augmented cell graphs `J_r^+`. Let `T_r` be their bounded
+triangular-face counts, `Q_r^+` their augmented degree excesses, and
+
+\[
+T:=\sum_rT_r,
+\qquad
+Q^+:=\sum_rQ_r^+.
+\]
+
+Let `m` be the number of nonunit sides of the loaded force hull, `Q` the global bounded
+face-degree excess, and `u_B` the canonical outer-walk surplus.
+
+For sufficiently large Type-II survivors,
+
+\[
+\boxed{T\le m}
+\tag{128.1}
+\]
+
+and
+
+\[
+\boxed{
+Q^+
+=Q+u_B-(m-T)-2(c_I-1)-d_{tile}.
+}
+\tag{128.2}
+\]
+
+Consequently
+
+\[
+\boxed{Q^+\le Q+u_B}
+\tag{128.3}
+\]
+
+and canonical Section 123 improves from the factor-10 coarse payment to
+
+\[
+\boxed{
+\sum_rP_{{\rm exc},r}
+\le5(Q+u_B)
+=5(e_{BB}-2k).
+}
+\tag{128.4}
+\]
+
+## 128.1 Geometry of one augmented triangle
+
+A bounded triangular face of `J_r^+` must use an added side of the attachment polygon,
+because the old contact graph is triangle-free. It cannot use two added polygon sides:
+if `|A_r|>3`, the old third side would be a unit contact between globally
+nonconsecutive loaded vertices, contradicting the audited Type-II `c_B=0` theorem; if
+`|A_r|=3`, the triangle would be the entire attachment polygon boundary and could not
+be a bounded face because `I_r` is nonempty and strictly interior.
+
+Hence every augmented triangle has vertices
+
+\[
+a-x-b,
+\qquad a,b\in A_r,
+\qquad x\in I_r,
+\]
+
+with
+
+\[
+|a-x|=|x-b|=1,
+\qquad
+1<|a-b|\le2,
+\]
+
+and `ab` is the unique added noncontact polygon side.
+
+The apex `x` cannot be loaded. If it were, both unit sides would be global hull sides.
+For `ab` to remain a side of the attachment polygon, the cyclic attachment set would
+then have to be exactly `{a,x,b}`, making the triangle the outer polygon boundary
+rather than a bounded face.
+
+## 128.2 The base is a nonunit global hull side
+
+Suppose the base `ab`, with `|a-b|<=2`, were not a global hull side. The Type-II
+near-disk normal-cone estimate puts all sides of the short polar hull arc from `a` to
+`b` in an `o(1)` tangent cone. Projection along the cone midpoint excludes three or
+more hull sides on this arc; hence exactly one intermediate loaded vertex `y` remains.
+Let
+
+\[
+s=|a-b|,
+\qquad
+\ell_1=|a-y|,
+\qquad
+\ell_2=|y-b|.
+\]
+
+Unit separation plus the projection estimate forces
+
+\[
+s\to2,
+\qquad
+\ell_1,\ell_2\to1.
+\]
+
+For `M=(a+b)/2`, the tooth apex satisfies
+
+\[
+|x-M|^2=1-s^2/4\to0,
+\]
+
+while the exact median identity gives
+
+\[
+|y-M|^2
+={\ell_1^2+\ell_2^2\over2}-{s^2\over4}
+\to0.
+\]
+
+Thus `|x-y|->0`, contradicting source unit separation. Hence `ab` is a nonunit global
+hull side.
+
+The charge from augmented triangles to global base sides is injective: a polygon side
+borders at most one bounded face inside one cell, and two positive-area cells cannot
+share the same global hull side while both lie in its inward half-plane and have
+disjoint interiors. This proves (128.1).
+
+## 128.3 Exact algebra
+
+Canonical Section 123 gives
+
+\[
+e_{BB}-k={1\over2}(a-T+Q^+)+d_{tile}.
+\]
+
+The centralized Type-II hull-side theorem gives
+
+\[
+c_B=0,
+\qquad
+e_{BB}=q-m=Q+2k+u_B.
+\]
+
+Also
+
+\[
+a=q-2+2c_I-d_{tile}.
+\]
+
+Eliminating `a` and `e_BB` yields (128.2). For large Type II, `c_I>=1`, while
+`m-T>=0` and `d_tile>=0`; hence (128.3). Canonical Section 123 has
+`P_{{\rm exc},r}<=5Q_r^+`, proving (128.4).
+
+The corresponding necessary Type-II payment is
+
+\[
+\liminf {1\over D}
+\left[
+\sum_r(L_r-2d_r)+5(Q+u_B)
+\right]
+\ge {\pi\over2}(2-\sqrt3).
+\tag{128.5}
+\]
+
+---
+
+# §129 — full-core strict-rhombus localization
+
+Let `R_4` be the number of bounded strict-rhombus faces of the full nonisolated
+positive-contact core and `R_r` the number of bounded quadrilateral faces in harmonic
+cell `H_r`. Then, for sufficiently large Type-II survivors,
+
+\[
+\boxed{
+0\le R_4-\sum_rR_r\le3c_I+5=o(D).
+}
+\tag{129.1}
+\]
+
+If `A_4` is total full-core strict-rhombus area and `A_{4,r}` the cell areas, then
+
+\[
+\boxed{
+0\le A_4-\sum_rA_{4,r}=o(D).
+}
+\tag{129.2}
+\]
+
+The area bound uses the correct universal estimate
+
+\[
+\operatorname{area}(\text{unit rhombus})\le1.
+\]
+
+The historical sentence `area<=sqrt(3)/2` was false; a unit square is the counterexample.
+
+## 129.1 Local quadrilateral fidelity
+
+A local quadrilateral face is a strict unit rhombus. Its diagonals are strictly larger
+than one—equality would make a unit equilateral triangle with adjacent unit sides—and
+the squared diagonals sum to four, so every half-diagonal is strictly less than one.
+Splitting at the center shows any omitted source point in the rhombus interior would be
+strictly less than one from a rhombus-side endpoint. Unit separation excludes this;
+straight-line contact planarity excludes an omitted crossing edge. Thus each local
+quadrilateral is a physical full-core rhombus face.
+
+No physical rhombus is counted by two harmonic cells: an unloaded vertex identifies its
+component, while an all-loaded duplicate would give two components at least three
+common attachments, forbidden by canonical Section 83.
+
+## 129.2 Missing-rhombus classification
+
+Classify a full-core rhombus not realized locally by its number of loaded vertices.
+
+- **0 or 1 loaded:** the unloaded contact path lies in one component and every loaded
+  cycle vertex attaches to it, so the face is local.
+- **2 adjacent loaded:** the two unloaded vertices are contact-adjacent and hence in one
+  component; again local.
+- **2 opposite loaded:** a missing face requires two distinct unloaded components
+  sharing the same opposite loaded pair. Their convex cells share the loaded diagonal
+  as a common side and lie on opposite sides. Missing faces inject into cell-side
+  adjacencies; the cell adjacency graph is planar, giving at most `3c_I`.
+- **3 loaded:** if the middle loaded vertex attached to the unloaded component, the
+  face would be local. Otherwise its two incident unit contacts are global hull sides.
+  The strict-rhombus angle at that hull vertex lies in `(pi/3,2pi/3)`, so exterior hull
+  turn is `>pi/3`. Total turn `2pi` permits at most five such vertices/faces.
+- **4 loaded:** every rhombus side is a loaded unit contact and therefore a global hull
+  side. Four such sides would close the whole loaded hull, forcing `q=4`, impossible
+  in large Type II.
+
+This proves (129.1); (129.2) follows from area `<=1` per missing rhombus.
+
+---
+
+# §130 — augmented triangles are exactly two-edge outer teeth
+
+Write loaded hull vertices cyclically as `(b_1,...,b_q)`, let
+
+\[
+s_i=|b_i-b_{i+1}|,
+\]
+
+and let `W_i` be the canonical outer-face interval from `b_i` to `b_{i+1}`, with
+occurrence length `ell_i`. Put
+
+\[
+M:=\{i:s_i>1\},
+\qquad m:=|M|.
+\]
+
+Canonical Section 63 has
+
+\[
+x_B=\sum_i(\ell_i-1),
+\qquad
+u_B:=x_B-m\ge0.
+\]
+
+Let `T=sum_rT_r` be the augmented triangular-face count. Then
+
+\[
+\boxed{
+T=\#\{i\in M:\ell_i=2\}.
+}
+\tag{130.1}
+\]
+
+Consequently
+
+\[
+\boxed{0\le m-T\le u_B.}
+\tag{130.2}
+\]
+
+## 130.1 Two-edge nonunit interval gives one triangle
+
+If `i in M` and `ell_i=2`, write the outer interval
+
+\[
+b_i-x-b_{i+1}.
+\]
+
+The middle point is unloaded: if it were loaded, both unit contacts would be global
+hull sides, incompatible with `b_i,b_{i+1}` already being consecutive hull vertices
+for large `q>3`.
+
+Let `I_r` contain `x`. Then `b_i,b_{i+1}` are consecutive attachments, so their
+nonunit chord is an added side of `P_r`. Adding the missing global hull side cuts from
+the old outer face exactly the triangular pocket
+
+\[
+b_i-x-b_{i+1}-b_i.
+\]
+
+The pocket contains no positive-core vertex. Section 83 excludes foreign unloaded
+components, loaded vertices are extreme points, and the old outer-face pocket itself
+contains no embedded core edge. Hence the same triangle is a bounded face of `J_r^+`.
+
+## 130.2 Every augmented triangle is such a tooth
+
+By §128, an augmented triangle has unloaded apex `x` and nonunit global hull base
+`ab`. Its open interior contains no full-core vertex or edge. After adding `ab` to the
+global hull augmentation it is exactly the inward face incident to `ab`; removing the
+added side shows the distinguished old outer interval between `a,b` is the two-edge
+path `a-x-b`. Global base-side injection makes this correspondence one-to-one, proving
+(130.1).
+
+Finally
+
+\[
+\boxed{
+ u_B
+ =\sum_{i\in M}(\ell_i-2)
+ +\sum_{i\notin M}(\ell_i-1).
+}
+\tag{130.3}
+\]
+
+Every nonunit index not counted by `T` has `ell_i>=3` and therefore contributes at
+least one to the first sum. This proves (130.2).
+
+Putting
+
+\[
+r_{deep}:=m-T,
+\]
+
+§128 becomes
+
+\[
+\boxed{
+Q^+=Q+(u_B-r_{deep})-2(c_I-1)-d_{tile}.
+}
+\tag{130.4}
+\]
+
+---
+
+# §131 — harmonic-face fidelity and sharp global defect injection
+
+For harmonic cell `r`, let
+
+\[
+P_r=\operatorname{conv}(A_r)
+\]
+
+and `H_r` be the induced positive-contact graph on `I_r union A_r`. Canonical Section
+82 gives `I_r subset int(P_r)` and convex local bounded faces; Section 83 gives
+pairwise disjoint cell interiors.
+
+Then
+
+\[
+\boxed{V(G)\cap\operatorname{int}P_r=I_r.}
+\tag{131.1}
+\]
+
+A foreign unloaded vertex lies in another cell interior and is excluded by Section 83.
+A loaded vertex outside `A_r` is an extreme point of the force hull and cannot lie in
+the convex hull of the other loaded vertices containing `P_r`.
+
+Let `C` be a bounded face of `H_r`. Its open interior contains no full-core vertex.
+An omitted straight contact edge cannot enter and leave `C` without either properly
+crossing a boundary contact or joining two boundary vertices; the latter edge would
+already belong to the induced graph `H_r`. Hence `C` is an actual bounded face of the
+full positive-contact core.
+
+The same global bounded face cannot occur in two harmonic cells because its nonempty
+open interior would lie in two cell interiors. Thus local bounded faces inject into
+global bounded faces with degree preserved.
+
+Let `f,Q` be the global bounded nonquadrilateral face count and degree excess. Then
+
+\[
+\boxed{
+\sum_rP_{{\rm exc},r}\le4f+Q.
+}
+\tag{131.2}
+\]
+
+Since `f<=Q` and canonical Section 63 has
+
+\[
+e_{BB}=Q+2k+u_B+c_B,
+\]
+
+we obtain
+
+\[
+\boxed{
+\sum_rP_{{\rm exc},r}
+\le4f+Q
+\le5Q
+\le5(e_{BB}-k).
+}
+\tag{131.3}
+\]
+
+This is a finite face-identification theorem; contact-isolated full-source points may
+lie in a face interior without splitting the positive-contact core face.
+
+---
+
+# §132 — no strict-rhombus train returns to one bounded face
+
+Equip the post-ZF positive-contact core with a relative-interior KKT stress, so every
+positive contact has multiplier `alpha_e>0`. Let `B=Vert(F)` be the loaded force-hull
+vertices.
+
+Assume a nontrivial stopped train has both terminal sides on one bounded global face.
+Close its simple midpoint path by an arc through that open face. The resulting Jordan
+curve lies in the force hull and crosses the contact graph exactly at the parallel train
+contacts.
+
+Its bounded Jordan domain contains no loaded vertex: loaded vertices are extreme
+points of the force hull, whereas a point in the open Jordan domain has a planar
+neighborhood contained in the force hull. Hence no active diameter edge crosses the
+bounded shore.
+
+Orient the common train-edge direction `u` so every cut contact points into the bounded
+shore. The contact resultant is
+
+\[
+\left(\sum_{e\in E(\tau)}\alpha_e\right)u\ne0.
+\]
+
+Summing KKT equilibrium over the bounded shore cancels all internal contact/diameter
+forces and leaves no crossing diameter force, so the contact resultant would have to
+vanish. Contradiction.
+
+Thus
+
+\[
+\boxed{
+\text{no nontrivial stopped strict-rhombus train returns to one bounded face.}
+}
+\tag{132.1}
+\]
+
+Using §131, the same is true for one bounded harmonic-cell defect face. Outer-to-outer,
+outer-to-bounded, and distinct-bounded-face trains remain possible.
+
+---
+
+# §133 — macroscopic inactive corridors are phase-pure endpoint hosts
+
+Let `C` be a convex unit-edge polygon of degree `n_C`; choose farthest boundary
+vertices `a,b`, put
+
+\[
+r:=|a-b|=\operatorname{diam}C,
+\qquad q:={b-a\over r}.
+\]
+
+For `0<eta<=pi/2`, let `N_C(eta)` count boundary edge occurrences whose projective
+direction is at least `eta` from `[q]`. Then
+
+\[
+\boxed{
+N_C(\eta)
+\le {n_C-2r\over1-\cos\eta}.
+}
+\tag{133.1}
+\]
+
+and, for either orientation `u_e` of each projective edge direction,
+
+\[
+\boxed{
+\sum_{e\subset\partial C}(1-|q\cdot u_e|)
+\le n_C-2r.
+}
+\tag{133.2}
+\]
+
+Indeed, orient each of the two boundary arcs from `a` to `b`. For any directed unit-edge
+route of length `m` and displacement `rq`,
+
+\[
+m-r=\sum_i(1-q\cdot v_i).
+\]
+
+A projectively `eta`-bad edge costs at least `1-cos eta`. The two arcs have disjoint
+occurrence sets and total excess `n_C-2r`, proving (133.1). Since
+`q·v_e<=|q·u_e|`, the same sum proves (133.2).
+
+In Type II, canonical Section 84 gives for every linear-degree bounded inactive face
+
+\[
+n_C-2\operatorname{diam}C=o(D).
+\]
+
+Hence, for every fixed `eta>0`, only `o(D)` boundary occurrences are transverse by
+`eta` to the corridor direction, and the total weighted alignment defect is `o(D)`.
+
+By §131 this applies to bounded harmonic-cell defect faces with physical occurrences
+preserved; by §132, a train cannot use the same bounded face at both ends. Therefore a
+linear endpoint population on one macroscopic bounded face consists of linearly many
+distinct trains, all but `o(D)` in one projective phase window.
+
+Cutting the face at its diameter pair adds hosts `q,-q`; the same physical corridor
+excess pays the endpoint alignment defect. Thus a macroscopic corridor cannot be
+introduced as a directionally arbitrary free signed-return host.
+
+---
+
+# §141 — consecutive tooth turn budget, with binding ray-order repair
+
+Let `p_i,p_{i+1},p_{i+2}` be consecutive vertices of the loaded hull. Suppose the two
+adjacent hull sides are nonunit tooth bases
+
+\[
+b_i=1+e_i,
+\qquad
+b_{i+1}=1+e_{i+1},
+\qquad
+0<e_i,e_{i+1}<1,
+\]
+
+with unloaded unit-tooth apexes `x_i,x_{i+1}`. Let `alpha_i` be the exterior hull turn
+at `p_{i+1}` and define
+
+\[
+\beta(e):=\arccos{1+e\over2},
+\qquad
+f(e):={\pi\over3}-\beta(e).
+\]
+
+Then
+
+\[
+\boxed{
+\alpha_i\le f(e_i)+f(e_{i+1}).
+}
+\tag{141.1}
+\]
+
+## 141.1 Correct ray order
+
+Direct the preceding hull side at argument zero. The ray from `p_{i+1}` to the first
+apex has argument
+
+\[
+\theta_i=\pi-\beta(e_i),
+\]
+
+while the ray to the next apex has argument
+
+\[
+\theta_{i+1}=\alpha_i+\beta(e_{i+1}).
+\]
+
+The historical proof incorrectly said their common inward wedge alone fixes their
+order. The correct argument also uses unit separation from the first apex to the next
+loaded hull vertex `p_{i+2}`.
+
+If `theta_{i+1}>theta_i`, then
+
+\[
+0\le\theta_i-\alpha_i<\beta(e_{i+1}).
+\]
+
+Because
+
+\[
+|x_i-p_{i+1}|=1,
+\qquad
+|p_{i+2}-p_{i+1}|=b_{i+1},
+\]
+
+the cosine law gives
+
+\[
+|x_i-p_{i+2}|^2
+=1+b_{i+1}^2
+-2b_{i+1}\cos(\theta_i-\alpha_i)
+<1,
+\]
+
+since `cos beta(e_{i+1})=b_{i+1}/2`. This violates source unit separation. Hence
+
+\[
+\theta_{i+1}\le\theta_i.
+\]
+
+The angular separation of the two unit apex rays is therefore
+
+\[
+\gamma_i
+=\pi-\alpha_i-\beta(e_i)-\beta(e_{i+1}).
+\]
+
+Unit separation of `x_i,x_{i+1}` gives
+
+\[
+1\le2\sin(\gamma_i/2),
+\]
+
+so `gamma_i>=pi/3`, proving (141.1).
+
+## 141.2 Tooth-run consequences
+
+For a consecutive run of tooth sides `r,...,s`,
+
+\[
+\boxed{
+\sum_{i=r}^{s-1}\alpha_i
+\le
+f(e_r)+2\sum_{i=r+1}^{s-1}f(e_i)+f(e_s).
+}
+\tag{141.2}
+\]
+
+If every side of a convex loaded cycle is a tooth, summing cyclically gives
+
+\[
+\sum_i f(e_i)\ge\pi.
+\tag{141.3}
+\]
+
+The function `f` is increasing and strictly convex, with `f(0)=0`, `f(1)=pi/3`.
+Convexity gives
+
+\[
+f(e)\le{\pi\over3}e,
+\]
+
+hence the universal finite bound
+
+\[
+\boxed{\sum_i(b_i-1)\ge3.}
+\tag{141.4}
+\]
+
+If every `e_i<=eta<1`, then
+
+\[
+f'(e)={1\over\sqrt{4-(1+e)^2}}
+\le {1\over\sqrt{4-(1+\eta)^2}},
+\]
+
+so
+
+\[
+\boxed{
+\sum_i(b_i-1)
+\ge\pi\sqrt{4-(1+\eta)^2}.
+}
+\tag{141.5}
+\]
+
+As `eta->0`, the right side tends to `pi sqrt(3)`. This remains only an `O(1)` total
+base-excess cost for a `Theta(D)` tooth cycle and therefore does not close C-II.
+
+---
+
+# §147 — correlated augmented-defect cancellation
+
+Define
+
+\[
+\Delta_{ad}:=\sum_r(a_r-d_r),
+\qquad
+A_*:=\sum_r(a_r-T_r),
+\qquad
+Q_*:=\sum_rQ_r^+,
+\]
+
+and
+
+\[
+r_{deep}:=m-T\ge0.
+\]
+
+The current post-126 ledgers give the exact finite identity
+
+\[
+\boxed{
+A_*-Q_*=2k+2r_{deep}+4c_I-4.
+}
+\tag{147.1}
+\]
+
+Proof: canonical Section 123 gives
+
+\[
+d_{tile}=q-2-a+2c_I,
+\]
+
+so
+
+\[
+a=q-2+2c_I-d_{tile}.
+\]
+
+The audited Type-II hull-side theorem gives
+
+\[
+e_{BB}=q-m=Q+2k+u_B.
+\]
+
+Section §130 gives `r_deep=m-T`, while §128 gives
+
+\[
+Q_*=Q+u_B-r_{deep}-2(c_I-1)-d_{tile}.
+\]
+
+Then
+
+\[
+A_*=a-T
+=e_{BB}+r_{deep}+2c_I-2-d_{tile},
+\]
+
+and substituting `Q+u_B=e_{BB}-2k` in the expression for `Q_*` makes both `e_BB` and
+`d_tile` cancel, proving (147.1).
+
+Merged augmented-route compression gives the Type-II return floor
+
+\[
+\liminf {1\over D}
+\left(\Delta_{ad}+{A_*\over2}+3Q_*\right)
+\ge
+{\pi\over4}(2-\sqrt3).
+\tag{147.2}
+\]
+
+Using (147.1),
+
+\[
+\Delta_{ad}+{A_*\over2}+3Q_*
+=
+\Delta_{ad}+{7\over2}Q_*+k+r_{deep}+2c_I-2.
+\]
+
+Canonical Section 75 has `c_I=o(D)`, so
+
+\[
+\boxed{
+\liminf {1\over D}
+\left(
+\Delta_{ad}+{7\over2}Q_*+k+r_{deep}
+\right)
+\ge
+{\pi\over4}(2-\sqrt3).
+}
+\tag{147.3}
+\]
+
+In particular, if `Q_*/D`, `k/D`, and `r_deep/D` are each at most `eta`
+asymptotically, then
+
+\[
+\boxed{
+\liminf{\Delta_{ad}\over D}
+\ge
+{\pi\over4}(2-\sqrt3)-{11\over2}\eta.
+}
+\tag{147.4}
+\]
+
+This is an exhaustive first-order currency split, not a closure theorem.
+
+---
+
+# Final hostile-audit disposition
+
+The chain above was independently rechecked after removing the duplicated `c_B=0`
+source. Binding corrections are carried directly in the text:
+
+- §129 uses `area(unit rhombus)<=1`, not the false `sqrt(3)/2` cap;
+- §141 uses the cross-distance ray-order argument, not the invalid “common wedge fixes
+  order” sentence.
+
+Sections §§131–133 retain occurrence multiplicity, do not identify contact-isolated
+points with positive-core vertices, and do not extend the Section-57 affine kernel to
+isolated coordinates. §147 is conditional only on the named audited-working ledgers.
+
+None of §§128–133, 141, or 147 addresses the macroscopic inactive-container branch or
+produces a same-cardinality strict sub-`D` competitor.
+
+**Overall verdict:** PASS at audited-working proof-only scope. Canonical theorem-state
+authority remains audit.46; C-II and Level I remain open.

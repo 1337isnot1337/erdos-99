@@ -1,0 +1,53 @@
+# Hostile audit — exact route-surplus / stopped-train identity
+
+**Date:** 2026-09-13  
+**Reviewed:** `target_c_route_surplus_train_identity_2026-09-13.md`  
+**Base state:** `2026-09-12.audit.46`  
+**Disposition:** **PASS at proof-only scope; no C-II closure.**
+
+## 1. Finite cancellation
+
+The audited Type-II identities are
+
+\[
+e_{BB}=q-m=Q+2k+u_B,
+\qquad b=q+m+u_B,
+\qquad T=q+2f-k,
+\qquad P_{\rm exc}=Q+4f.
+\]
+
+Substitution gives `b+P_exc=2T` exactly. This uses the occurrence-counted outer
+walk and does not identify repeated boundary vertices. The conversion to
+`(b-per(F)+P_exc)/D=2T/D-per(F)/D` is therefore sound.
+
+**Verdict:** pass.
+
+## 2. Imported asymptotic hypotheses
+
+The lower bound
+`liminf(T-q/2)/D >= 2 sqrt(Delta_2)+eta_grid` is used only in the audited
+Section-142 train-measure scope. The endpoint floor `h/D>=C146` is used on the same
+audited Type-II scope, and `h<=q` is the canonical diameter-pseudoforest bound.
+Near-disk convergence supplies `per(F)/D->pi`. No claim is made that these
+proof-only inputs are already promoted into the theorem-state route.
+
+**Verdict:** pass under the stated scope.
+
+## 3. Numerical margin
+
+The conservative bounds `C146>1.8195`, `4 sqrt(Delta_2)>3.8092`, and `pi<3.1416`
+give a non-gap lower bound greater than `2.4871`. The accompanying exact rational
+verifier passes. The unknown `eta_grid` only increases this value.
+
+**Verdict:** pass.
+
+## 4. Closure boundary
+
+The identity is a lower bound on a global route currency. It supplies no upper bound
+on `T`, the exceptional perimeter, or the outer-walk detour, and it does not identify
+this global currency with the canonical aggregate cell detour. Section 123's payment
+can still absorb a linear exceptional perimeter. Thus no C-II or Level-I conclusion
+follows.
+
+**Final verdict:** PASS as a proof-only audit; theorem state remains unchanged.
+

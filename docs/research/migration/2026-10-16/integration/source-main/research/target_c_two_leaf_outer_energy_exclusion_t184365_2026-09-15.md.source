@@ -1,0 +1,434 @@
+# Target C-II — two-leaf outer energy excludes the full-core branch through `t<=1.84365`
+
+**Date:** 2026-09-15  
+**Status:** proof-only full-core Type-II exclusion  
+**Scope:** full-core/no-macroscopic-container Type-II branch  
+**Dependencies:** scope-safe `g=0.007707` residual stability; hostile-audited two-leaf outer-energy architecture; `t<=1.844` phasewise retained-outer-mass theorem; branch-aware physical center/leaf pair theorem; hostile-audited cross-phase endpoint-energy theorem  
+**Certificate:** `research/verify_target_c_two_leaf_outer_energy_exclusion_t184365.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The two-leaf outer-energy argument can be propagated one more rounded step beyond the certified `1.84364` endpoint. The exact certificate proves
+
+\[
+\boxed{
+\liminf_{D\to\infty}{q-k\over D}\ge1.84365
+}
+\]
+
+at the present proof-only full-core scope.
+
+This is close to the numerical ceiling of the current rounded propagation. The final contradiction margin is only about `1.2e-5 D`, so the proof uses explicit outward arithmetic at every load-bearing step.
+
+The rounded package is
+
+\[
+h<0.000378,
+\qquad
+W<1.912711,
+\qquad
+E_{dom}>0.90689962,
+\]
+
+\[
+z>2.21934,
+\qquad
+z_C,z_U,z_V>0.702,
+\]
+
+\[
+U,V<0.5304.
+\]
+
+Thus each leaf carries more than `0.1716D` retained O-O pair weight. After discarding all pair weight with center degree at most half, each leaf still has more than `0.1349D` good O-O weight. The common-center/triangle-free argument then forces more selected outer directional energy than the total detour budget allows.
+
+---
+
+## 1. Residual stability remains in scope
+
+Let
+
+\[
+C_{707}=2\sqrt{\Delta_2}+0.007707,
+\qquad
+\Delta_2={\pi\over2\sqrt3},
+\]
+
+and use
+
+\[
+t={q-k\over D},
+\qquad
+x={\kappa\over2},
+\qquad
+h=U_{net}-C_{707},
+\qquad
+c=1.05.
+\]
+
+The `g=.007707` residual-stability theorem is stated for `U_net<=2.013`. The older `t<=1.844` phase theorem gives
+
+\[
+z_C,z_U,z_V>0.616-o(1),
+\]
+
+hence total retained dominant outer-occurrence mass above `1.848D`. Therefore
+
+\[
+\delta\ge F(1.848)-o(1),
+\qquad
+F(s)=s-6\sin(s/6),
+\]
+
+and the exact certificate gives `F(1.848)>0.029`. At `t<=1.84365`,
+
+\[
+U_{net}
+\le {9t\over2}-2\pi-2\delta
+<1.956<2.013.
+\]
+
+Thus the residual estimate is valid without extending its scope:
+
+\[
+R:=U_{net}-W\le1.05h,
+\tag{E65.1}
+\]
+
+where `W=C+U+V` is the dominant exact `pi/3` orbit mass.
+
+---
+
+## 2. Residual slack is below `0.000378`
+
+The exact envelope is
+
+\[
+2\delta+x+h
+=R_t:={9t\over2}-2\pi-C_{707}.
+\tag{E65.2}
+\]
+
+The hostile-audited survivor function is increasing in `t` and decreasing in `x,h`. Put
+
+\[
+T=1.84365,
+\qquad
+H=0.000378.
+\]
+
+At `t=T`, `h=H`, `x=0`, let
+
+\[
+\delta_H={R_T-H\over2}
+\]
+
+and
+
+\[
+A_H
+=\pi-{T\over2}-1.05H
+-{1.05^2H^2\over2(1-\delta_H)}.
+\]
+
+The exact certificate proves
+
+\[
+\boxed{
+F(A_H)-\delta_H>2.92\times10^{-7}.
+}
+\tag{E65.3}
+\]
+
+The parent derivative bounds remain strict,
+
+\[
+Q_x<-2.7,
+\qquad
+Q_h<-2.5,
+\]
+
+so every survivor satisfies
+
+\[
+\boxed{h<0.000378-o(1).}
+\tag{E65.4}
+\]
+
+Consequently
+
+\[
+\boxed{W<1.912711-o(1),}
+\tag{E65.5}
+\]
+
+and the residual crossing contribution outside the dominant orbit is at most `(1.05H)^2/4`. The exact certificate therefore gives
+
+\[
+\boxed{E_{dom}>0.90689962-o(1).}
+\tag{E65.6}
+
+The complete detour budget satisfies
+
+\[
+\delta<{R_T\over2}<0.05045354.
+\tag{E65.7}
+
+---
+
+## 3. Total retained dominant outer mass is above `2.21934D`
+
+Let `z` be retained dominant outer-occurrence mass and `p` retained complement O-O pair mass. The same shared-retention/complement-incidence system gives
+
+\[
+z+p\ge\pi-{t\over2}-x-1.05h-o(1),
+\tag{E65.8}
+\]
+
+\[
+p\le
+{1.05^2h^2+\delta-F(z)\over2(1-\delta)}+o(1)
+\tag{E65.9}
+\]
+
+on the energy-feasible side.
+
+Assume `z<=Z=2.21934`. The capped left side is increasing in `z`; the verifier gives derivative above `0.96`. On `delta>=F(Z)`, the adverse `x` motion reaches `delta=F(Z)`. At `h=H`, the boundary still has
+
+\[
+x>3.56\times10^{-6}.
+\]
+
+Substitution on that boundary gives an exact capped-retention excess below
+
+\[
+-2.71\times10^{-5}.
+\]
+
+The complementary `delta<F(Z)` region is controlled by the already-audited negative `x,h` derivatives. Hence
+
+\[
+\boxed{z>2.21934-o(1).}
+\tag{E65.10}
+
+---
+
+## 4. Every exact phase retains more than `0.702D` outer mass
+
+For exact phase retained masses `z_C,z_U,z_V`, the one-well decomposition gives
+
+\[
+\delta\ge f(z_C)+f(z_U)+f(z_V)-o(1),
+\qquad
+f(s)=s-2\sin(s/2).
+\tag{E65.11}
+\]
+
+If one phase had mass at most
+
+\[
+A=0.702,
+\]
+
+convexity puts the cheapest other two masses at `(Z-A)/2`. The exact certificate proves
+
+\[
+f(0.702)+2f\!\left({2.21934-0.702\over2}\right)
+-{R_T\over2}
+>1.14\times10^{-6}.
+\]
+
+Therefore
+
+\[
+\boxed{z_C,z_U,z_V>0.702-o(1).}
+\tag{E65.12}
+
+---
+
+## 5. Both leaf train masses are below `0.5304D`
+
+Write the dominant exact orbit as
+
+\[
+C\ge U\ge V.
+\]
+
+Assume
+
+\[
+U\ge U_0:=0.5304.
+\]
+
+Use
+
+\[
+W<1.912711,
+\qquad
+E_{dom}>0.90689962.
+\]
+
+Set
+
+\[
+C_{low}=1.912711-2(0.5304)=0.851911.
+\]
+
+For `C<=C_low`, generic center capacity is increasing and already gives a deficit above `0.003`. For `C>=1.0443`, generic center capacity is decreasing and lies more than `1e-5` below `E_dom`.
+
+Thus only
+
+\[
+0.851911<C<1.0443
+\]
+
+remains. The worst strong center/leaf excess ratio on this interval is
+
+\[
+<0.79186<\sqrt{20/29},
+\]
+
+so the physical `1/10` pair branch applies to both leaves. The hostile-audited center/leaf correlation gives the one-variable upper capacity
+
+\[
+\begin{aligned}
+G(C)=&\ C(W_0-C)\\
+&-{1\over10}\left(1-{V\over C}\right)(C+U_0-K)^2\\
+&-{1\over10}\left(1-{U_0\over C}\right)(C+V-K)^2,
+\end{aligned}
+\]
+
+where `W_0=1.912711`, `V=W_0-C-U_0`, and `K=2/sqrt(3)`.
+
+The exact derivative calculation gives `G''<-2`. At
+
+\[
+c_0=0.931414,
+\]
+
+the tangent estimate yields
+
+\[
+\max G
+\le G(c_0)+{G'(c_0)^2\over4}
+<0.906897364.
+\]
+
+Hence
+
+\[
+E_{dom}-\max G>2.25\times10^{-6},
+\]
+
+contradiction. Therefore
+
+\[
+\boxed{U,V<0.5304-o(1).}
+\tag{E65.13}
+
+---
+
+## 6. Both leaves retain macroscopic good O-O pair weight
+
+For one phase, terminal weights satisfy
+
+\[
+a_\tau+b_\tau\le1+\min(a_\tau,b_\tau),
+\]
+
+so
+
+\[
+z_i\le M_i+P_i+o(1).
+\]
+
+Equations (E65.12)--(E65.13) imply
+
+\[
+\boxed{P_U,P_V>0.702-0.5304-o(1)=0.1716-o(1).}
+\tag{E65.14}
+
+Let `B_bad` be total retained leaf O-O weight whose center degree is at most half of the center family. The hostile-audited center/leaf correlation gives
+
+\[
+B_{bad}
+\le
+{2[C(W-C)-E_{dom}]\over C-U}+o(1).
+\]
+
+Using the rounded box above, the inequality `B_bad<0.0367` is equivalent to positivity of a quadratic in `C`. Its exact discriminant satisfies
+
+\[
+\boxed{\operatorname{disc}<-2.5\times10^{-4}<0.}
+\tag{E65.15}
+\]
+
+Thus each leaf retains good O-O weight
+
+\[
+\boxed{G_U,G_V>0.1716-0.0367-o(1)=0.1349-o(1).}
+\tag{E65.16}
+
+Every good `U` train and good `V` train cross more than half of the same center family, so every cross-leaf pair shares a center neighbor. Triangle-freeness makes that pair noncrossing. Since the two leaf phases differ by `pi/3`, the hostile-audited endpoint theorem gives
+
+\[
+e_\tau+e_\sigma\ge2-\sqrt3-o(1).
+\]
+
+Summing over the complete weighted product yields
+
+\[
+\boxed{
+E_U+E_V
+>(2-\sqrt3)(0.1349)-o(1).
+}
+\tag{E65.17}
+
+Using `sqrt(3)<1.7321`, the exact certificate records
+
+\[
+E_U+E_V>0.03613971-o(1).
+\]
+
+---
+
+## 7. Final contradiction
+
+The selected center-phase occurrence support is disjoint from the selected leaf O-O terminal supports. Hence the center one-well energy and the two-leaf terminal energy add:
+
+\[
+\delta
+\ge f(z_C)+E_U+E_V-o(1)
+>f(0.702)+0.03613971-o(1).
+\]
+
+The exact certificate gives
+
+\[
+f(0.702)>0.0143259828,
+\]
+
+so
+
+\[
+\delta>0.0504656928-o(1).
+\]
+
+But (E65.7) gives
+
+\[
+\delta<0.0504535396.
+\]
+
+The exact contradiction margin is
+
+\[
+\boxed{>1.21\times10^{-5}.}
+\tag{E65.18}
+
+Therefore no full-core Type-II survivor exists with
+
+\[
+t\le1.84365.
+\]
+
+**Disposition:** proof-only full-core floor raised from `1.84364` to `1.84365`. C-II and Level I remain open.

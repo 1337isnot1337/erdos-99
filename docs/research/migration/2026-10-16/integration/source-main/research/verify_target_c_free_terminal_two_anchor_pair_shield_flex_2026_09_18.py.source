@@ -1,0 +1,97 @@
+#!/usr/bin/env python3
+"""Exact-rational scalar certificate for the two-anchor outside-pair flex theorem."""
+
+from fractions import Fraction
+from math import isqrt
+
+Q = Fraction
+
+
+def atan_inv_bounds(q: int, terms: int):
+    s = Q(0)
+    for k in range(terms):
+        term = Q(1, (2 * k + 1) * q ** (2 * k + 1))
+        s += term if k % 2 == 0 else -term
+    nxt = Q(1, (2 * terms + 1) * q ** (2 * terms + 1))
+    if terms % 2 == 0:
+        return s, s + nxt
+    return s - nxt, s
+
+
+def sqrt_floor(x: Q, scale: int) -> Q:
+    n = isqrt((x.numerator * scale * scale) // x.denominator)
+    y = Q(n, scale)
+    assert y * y <= x
+    return y
+
+
+def sqrt_ceil(x: Q, scale: int) -> Q:
+    n = isqrt((x.numerator * scale * scale) // x.denominator) + 1
+    y = Q(n, scale)
+    assert y * y >= x
+    return y
+
+
+DIGITS = 90
+SCALE = 10 ** DIGITS
+
+a5_lo, a5_hi = atan_inv_bounds(5, 100)
+a239_lo, a239_hi = atan_inv_bounds(239, 30)
+pi_lo = 16 * a5_lo - 4 * a239_hi
+pi_hi = 16 * a5_hi - 4 * a239_lo
+assert pi_lo < pi_hi
+
+n3 = isqrt(3 * SCALE * SCALE)
+sqrt3_lo = Q(n3, SCALE)
+sqrt3_hi = Q(n3 + 1, SCALE)
+assert sqrt3_lo * sqrt3_lo < 3 < sqrt3_hi * sqrt3_hi
+
+delta2_lo = pi_lo / (2 * sqrt3_hi)
+delta2_hi = pi_hi / (2 * sqrt3_lo)
+s2_lo = sqrt_floor(delta2_lo, SCALE)
+s2_hi = sqrt_ceil(delta2_hi, SCALE)
+assert s2_lo * s2_lo <= delta2_lo
+assert s2_hi * s2_hi >= delta2_hi
+
+g = Q(7707, 10**6)
+epsilon = Q(71, 10000)  # 0.00710
+
+# M_*=4s_2+2g appears with a negative coefficient, so use its upper enclosure.
+Mstar_hi = 4 * s2_hi + 2 * g
+live_lo = pi_lo / 2 - Mstar_hi / 10 - epsilon
+assert live_lo > Q(11812298040, 10**10)
+
+# Near-maximal detour: delta>0.01725 and xi+2r<=0.001.
+# In pi/2-M*/10+3delta/5+r/10-xi/5, the closed relaxation
+# is minimized at delta=0.01725, r=0, xi=0.001.
+delta_cut = Q(69, 4000)  # 0.01725
+remaining = Q(1, 1000)
+near_lo = (
+    pi_lo / 2
+    - Mstar_hi / 10
+    + Q(3, 5) * delta_cut
+    - Q(1, 5) * remaining
+)
+assert near_lo > Q(11984798040, 10**10)
+
+signed_total_lo = 2 * live_lo
+assert signed_total_lo > Q(23624596080, 10**10)
+
+# Exact finite identity behind Section 4.  For residual counts n_j and
+# d=2n_0+n_1, the peeling correction plus n_2 pair coordinates equals
+# f/2 + a + x_A/2 + (n_0+n_2)/2 exactly.
+for a in range(10):
+    for x_A in range(10):
+        for n_0 in range(10):
+            for n_1 in range(10):
+                for n_2 in range(10):
+                    f = a + n_0 + n_1 + n_2
+                    d = 2 * n_0 + n_1
+                    correction = Q(3 * a + x_A + d, 2) + n_2
+                    rhs = Q(f, 2) + a + Q(x_A, 2) + Q(n_0 + n_2, 2)
+                    assert correction == rhs
+
+print("PASS: two-anchor outside-pair flex scalar certificate")
+print("live flex density >", float(live_lo))
+print("near-maximal-detour flex density >", float(near_lo))
+print("signed derivative-incidence total density >", float(signed_total_lo))

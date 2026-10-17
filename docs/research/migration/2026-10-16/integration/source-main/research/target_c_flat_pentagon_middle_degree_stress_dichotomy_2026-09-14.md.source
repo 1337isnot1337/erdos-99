@@ -1,0 +1,269 @@
+# Erdős Problem #99 — flat-pentagon middle degree/stress dichotomy
+
+**Date:** 2026-09-14  
+**Target:** Target C-II, canonical full-core Type-II branch  
+**Dependencies:** triangle-free unit separation; positive KKT equilibrium; the proof-only flat-pentagon source-object endpoint  
+**Claim class:** exact local theorem plus asymptotic application
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The small-residual pentagon endpoint produces positive-core vertices `m` with two exact unit-contact neighbors `l,r` such that the face angle
+
+\[
+\theta:=\angle lmr=\pi-o(1).
+\]
+
+This note classifies all possible positive-contact geometry at such a middle vertex. The key point is that triangle-freeness forces every angular gap between consecutive contact rays to exceed `pi/3` strictly.
+
+There are only three possibilities for a sufficiently flat middle:
+
+1. `m` is loaded, hence canonical C35 already gives contact degree at most three;
+2. `m` is unloaded of contact degree three, and the unique external contact carries only `O(pi-theta)` of the local KKT contact force relative to the two flat-chain contacts;
+3. `m` is unloaded of contact degree four, and the two external rays create a three-gap complementary fan in which every gap is `pi/3+o(1)`. The three corresponding pairs of neighboring contact endpoints have distance `1+o(1)` from above.
+
+In particular an unloaded degree-five middle is impossible once `theta` is sufficiently close to `pi`.
+
+---
+
+## 1. Consecutive contact rays are separated by more than `pi/3`
+
+Let `m` be any source point and let `x,y` be two distinct unit-contact neighbors. If the smaller angle between the rays `mx,my` is `gamma`, then
+
+\[
+|x-y|=2\sin(\gamma/2).
+\]
+
+Unit separation gives `gamma>=pi/3`. Equality would give `|x-y|=1`, so `m,x,y` would be a unit equilateral contact triangle, forbidden in the C-II source. Therefore
+
+\[
+\boxed{\gamma>{\pi\over3}.}
+\tag{FD.1}
+\]
+
+This applies in particular to every consecutive pair in the cyclic order of contact rays at `m`.
+
+---
+
+## 2. Near-flat face angle excludes degree five
+
+Assume `l,m,r` are consecutive boundary vertices of a bounded face and
+
+\[
+\theta=\angle lmr\ge\pi-\varepsilon,
+\qquad 0<\varepsilon<{\pi\over3}.
+\tag{FD.2}
+\]
+
+The bounded face occupies the contact-ray sector of angle `theta`; because no contact edge can enter the open face, every other contact ray at `m` lies in the complementary sector, whose angle is
+
+\[
+2\pi-\theta\le\pi+\varepsilon.
+\tag{FD.3}
+\]
+
+If there are `r_ext` additional contact rays in that sector, they divide it into `r_ext+1` consecutive angular gaps. By (FD.1),
+
+\[
+(r_{ext}+1){\pi\over3}<\pi+\varepsilon.
+\tag{FD.4}
+\]
+
+For `epsilon<pi/3`, (FD.4) excludes `r_ext>=3`. Hence
+
+\[
+\boxed{\deg_C(m)\le4.}
+\tag{FD.5}
+\]
+
+Canonical C26 says every unloaded core vertex has degree `3,4,5`, while C35 says every loaded vertex has degree at most three. Therefore a sufficiently flat positive-core middle is either loaded of degree at most three, unloaded degree three, or unloaded degree four.
+
+---
+
+## 3. The unloaded degree-four fan becomes triangular
+
+Suppose `m` is unloaded and `deg_C(m)=4`. Let the two external contact neighbors be `x,y` in cyclic order through the complementary sector. Put
+
+\[
+\phi_1=\angle rmx,
+\qquad
+\phi_2=\angle xmy,
+\qquad
+\phi_3=\angle yml
+\]
+
+along that sector. Then
+
+\[
+\phi_1+\phi_2+\phi_3=2\pi-\theta\le\pi+\varepsilon
+\tag{FD.6}
+\]
+
+and every `phi_i>pi/3`. Therefore, for each `i`,
+
+\[
+\boxed{
+{\pi\over3}<\phi_i<{\pi\over3}+\varepsilon.
+}
+\tag{FD.7}
+\]
+
+Indeed the other two gaps already sum to more than `2pi/3`.
+
+Consequently each of the three endpoint pairs
+
+\[
+(r,x),\qquad(x,y),\qquad(y,l)
+\]
+
+has distance
+
+\[
+1<d_i=2\sin(\phi_i/2)
+<2\sin\left({\pi\over6}+{\varepsilon\over2}\right).
+\tag{FD.8}
+\]
+
+The lower inequality is strict because equality would make a unit triangle with center `m`. Thus
+
+\[
+\boxed{d_i=1+O(\varepsilon),\qquad i=1,2,3.}
+\tag{FD.9}
+\]
+
+So the degree-four alternative does not merely add two unconstrained contact rays. It forces a local three-direction triangular fan and three additional hidden near-unit chords.
+
+---
+
+## 4. Degree-three equilibrium forces vanishing external stress
+
+Now suppose `m` is unloaded and `deg_C(m)=3`. Let `x` be its unique external contact neighbor. Write the cyclic gaps as
+
+\[
+\theta=\angle lmr,
+\qquad
+\phi=\angle rmx,
+\qquad
+\psi=\angle xml,
+\]
+
+so
+
+\[
+\theta+\phi+\psi=2\pi.
+\tag{FD.10}
+\]
+
+From (FD.1), `phi,psi>pi/3`. From `theta>=pi-epsilon`,
+
+\[
+\phi+\psi\le\pi+\varepsilon,
+\]
+
+hence
+
+\[
+{\pi\over3}<\phi,\psi<{2\pi\over3}+\varepsilon.
+\tag{FD.11}
+\]
+
+For `epsilon<pi/6` all three cyclic gaps are strictly less than `pi`, so the positive equilibrium relation at the unloaded vertex is unique up to scale. If `alpha_l,alpha_r,alpha_x>0` are the KKT contact coefficients on `ml,mr,mx`, then elementary planar force balance gives
+
+\[
+\boxed{
+(\alpha_l,\alpha_r,\alpha_x)
+=c(\sin\phi,\sin\psi,\sin\theta)
+}
+\tag{FD.12}
+\]
+
+for some `c>0`.
+
+Since `theta>=pi-epsilon`,
+
+\[
+\sin\theta\le\sin\varepsilon.
+\]
+
+Also the minimum of `sin t` on
+
+\[
+\left[{\pi\over3},{2\pi\over3}+\varepsilon\right]
+\]
+
+is `sin(2pi/3+epsilon)` for sufficiently small positive `epsilon`. Therefore
+
+\[
+\boxed{
+{\alpha_x\over\alpha_l+\alpha_r}
+\le
+{\sin\varepsilon
+\over
+2\sin(2\pi/3+\varepsilon)}.
+}
+\tag{FD.13}
+\]
+
+In particular
+
+\[
+\boxed{
+{\alpha_x\over\alpha_l+\alpha_r}=O(\varepsilon)\to0.
+}
+\tag{FD.14}
+\]
+
+Thus a degree-three unloaded flat middle is an asymptotic stress-through vertex: almost all of its local KKT contact force is carried by the two nearly antipodal chain contacts, while the only contact leaving that line has vanishing relative weight.
+
+---
+
+## 5. Aggregate application to the pentagon endpoint
+
+Consider any family of pairwise vertex-disjoint flat three-vertex chains from the small-residual pentagon endpoint, with flatness parameters bounded by `epsilon_D->0`. Partition their middle vertices into
+
+- loaded middles `L_D`;
+- unloaded degree-three middles `U_{3,D}`;
+- unloaded degree-four middles `U_{4,D}`.
+
+Then
+
+\[
+|L_D|+|U_{3,D}|+|U_{4,D}|=N_D.
+\tag{FD.15}
+\]
+
+Every member of `U_{4,D}` carries the three hidden chords in (FD.8), all of length `1+o(1)`. Every member of `U_{3,D}` carries one external contact edge satisfying the uniform relative stress bound
+
+\[
+\sum_{m\in U_{3,D}}\alpha_{mx(m)}
+\le c_D
+\sum_{m\in U_{3,D}}(\alpha_{ml(m)}+\alpha_{mr(m)}),
+\qquad c_D\to0.
+\tag{FD.16}
+\]
+
+Equation (FD.16) is safe under summation because it is a pointwise inequality. No assumption that external edges are distinct is required.
+
+Therefore any linear family of flat pentagonal chains has a sharp source-level trichotomy:
+
+```text
+many loaded nearly-flat hull vertices,
+or
+many unloaded degree-three asymptotic stress-through vertices,
+or
+many unloaded degree-four triangular fans with three additional 1+o(1) hidden chords.
+```
+
+This is more restrictive than the bare near-flat-chain statement and supplies two distinct next closure mechanisms: a hull-curvature/diameter-bracing argument in the loaded branch, or a stress-transport / near-contact activation argument in the unloaded branches.
+
+---
+
+## 6. What is not claimed
+
+- A hidden `1+o(1)` chord is not asserted to become an exact contact.
+- The relative stress estimate does not give an absolute lower bound on the two chain-edge stresses.
+- No loaded middle is asserted to have a uniform hull turning angle.
+- No simultaneous train shear or strict diameter decrease is constructed here.
+
+**Disposition:** exact local geometric/stress theorem with proof-only pentagon-endpoint application. C-II remains open.

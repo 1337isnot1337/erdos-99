@@ -1,0 +1,94 @@
+# Target C: close the r=2 subcase of the final k=4 p=3 profile
+
+Date: 2026-09-27
+
+Status: proof-level reduction plus exact finite support certificate. This closes the r=2 subcase of the eight-no-root k=4, D=-1, d_root=0, p=3 three-singleton profile, where r is the number of projective weight-two lines in the rank-four coefficient space P <= Q^8. On current main the r=0,1,3,4 cases are already closed, so this completes the three-singleton profile. It does not close Target C-II or Erdos Problem #99.
+
+Companion verifier:
+
+research/verify_target_c_support7_global_segment_relative_eight_noroot_k4_dminus1_d0p3_three_singleton_r2_closure_2026_09_27.py
+
+## 1. Current-main inputs
+
+Current main gives rank(P)=4 and generalized weights at least (2,4,5,7), with exactly three selected singleton blocks. Distinct projective weight-two lines have disjoint supports. If M is the support of a weight-two line, every selected singleton block b satisfies |I_b \ M| >= 2 and E_b is not contained in P + K_(M union {j}) for every j outside M.
+
+Assume exactly two projective weight-two lines, on disjoint supports M1 and M2. Let U be the four-coordinate complement.
+
+## 2. Weight-two singleton quotient rows localize to U
+
+For a selected singleton block b, W_b=(E_b+P)/P is a nonzero quotient line.
+
+A weight-one representative violates a sharp puncture. If a weight-two representative meets M_i, its support is contained in M_i union {j} for some j outside M_i, again violating sharpness. Therefore every weight-two representative of W_b is supported entirely in U.
+
+## 3. Rank-two selected singletons have at least four touches
+
+Suppose rank(E_b)=2 and b has exactly three touches. Let the three local projective-direction multiplicities be m0,m1,m2, and let direction s be selected by the singleton row.
+
+The selected constraint row lies in P, so its weight 3-m_s is at least two. Each nonselected local row represents W_b; weight one is impossible by Section 2. Thus every m_i <= 1, and since the multiplicities sum to three, they are (1,1,1).
+
+The two nonselected quotient rows then have two distinct weight-two supports. Section 2 forces both into U, so all three touches lie in U. The selected constraint row is the third two-subset of those three touches. It is a weight-two word of P supported in U, distinct from the lines on M1 and M2. This contradicts r=2.
+
+Hence every rank-two selected singleton has at least four touches.
+
+## 4. At most two two-touch actual-empty blocks
+
+Let a be an actual-empty touched block. Compatibility gives E_a <= P.
+
+If rank(E_a)=1 and a has exactly two touches, its unique nonzero local row is a weight-two line of P, so its touch set is M1 or M2. For either fixed matched pair there is at most one such root block. If the two corresponding tetrahedral supports coincide, the committed local-block rule gives local rank two. If they are distinct, their intersection has size at most three and contains at most one triangle, so they cannot support two distinct rank-one root blocks with the same occurrence pair.
+
+Thus at most two actual-empty blocks have incidence two. Every other rank-one actual-empty block has incidence at least three, and every rank-two actual-empty block has incidence at least four by d2(P)>=4. If e is the number of touched actual-empty blocks, their total incidence is at least 3e-2.
+
+## 5. Touched-block bound
+
+Let h,e,c count touched, actual-empty, and complete blocks. There are exactly three selected singleton blocks, so h=e+3+c.
+
+Because d_root=0, touched complete triangle rows are independent. Face-local capacity gives rank H(T)-rank H(C)>=4. The seven-label triangle boundary space has rank at most 15, so c<=11 and e>=h-14.
+
+The three selected singletons contribute at least six incidences. Complete touched blocks contribute at least c incidences. The eight no-root four-cycles contribute exactly 32 incidences. Therefore
+
+32 >= (3e-2)+6+c = h+2e+1 >= 3h-27,
+
+so h<=19.
+
+## 6. Exact virtual support certificate
+
+The verifier enumerates every S_7 orbit of multisets of eight tetrahedral four-supports, with multiplicity at most three, reproducing the established orbit counts
+
+1,1,4,14,61,268,1283,6032,27763.
+
+Exactly 9,444 size-eight support orbits have at most 19 touched triangle blocks. For each it checks all 210 unordered choices of two disjoint coordinate pairs, for 1,983,240 support-orbit/pairset tests.
+
+For a fixed pairset, a touched block is declared virtually empty whenever it passes only these necessary conditions:
+
+- rank one with at least three touches;
+- rank one with exactly two touches on one of the chosen pairs;
+- rank two with at least four touches.
+
+A block is eligible as a selected singleton only if it survives every sharp three-coordinate deletion for both chosen weight-two supports; rank-two selected singletons must additionally have at least four touches.
+
+The search makes every empty-eligible block virtually empty, even when no single rank-four coefficient space could contain all those local spaces. This enlarges the actual state space. For every singleton triple it keeps only necessary complete-row independence, face-local capacity, coefficient-dimension at least four, and generator support at least seven coordinates. The dimension and support calculations are overestimates, so every actual r=2 state would survive.
+
+Exact shard census:
+
+range 0:5000: h<=19 3924, pairset tests 824040, survivors 0
+range 5000:10000: h<=19 1642, pairset tests 344820, survivors 0
+range 10000:15000: h<=19 1586, pairset tests 333060, survivors 0
+range 15000:20000: h<=19 781, pairset tests 164010, survivors 0
+range 20000:25000: h<=19 1065, pairset tests 223650, survivors 0
+range 25000:27763: h<=19 446, pairset tests 93660, survivors 0
+
+Total: 9,444 h<=19 support orbits, 1,983,240 pairset tests, zero virtual survivors.
+
+Therefore no r=2 state exists.
+
+## 7. Exactness
+
+All support, incidence, pairset, and canonicalization calculations are exact. Triangle-row ranks are computed modulo 2^31-1. The imported base verifier checks primality by Lucas-Lehmer. Triangle rows have squared Euclidean norm three and rank at most 15, and the verifier checks (2^31-1)^2 > 3^15. Hadamard's inequality therefore makes every modular triangle-row rank used by the certificate equal to its rational rank.
+
+## 8. Consequence on current main
+
+Current main already closes r=0, r=1, r=3, and r=4. This certificate eliminates r=2, so the final k=4, D=-1, d_root=0, p=3 three-singleton profile is closed.
+
+Together with the committed mixed-profile reduction for this arithmetic branch, the committed D=-2, d_root=0, p=2 closure, and the committed D=-1, d_root=1, p=0 closure, this closes all three arithmetic branches in the eight-no-root k=4 layer.
+
+The canonical Target C-II frontier remains the macroscopic-container/full-core split recorded in the k=5-layer/k=4-reduction note.

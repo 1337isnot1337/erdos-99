@@ -1,0 +1,336 @@
+# Hostile audit — modern high-`t` chamber-surplus floor `0.586223`
+
+**Date:** 2026-09-15  
+**Reviewed:** `research/target_c_high_t_chamber_surplus_0586223_2026-09-15.md`  
+**Certificate:** `research/verify_target_c_high_t_chamber_surplus_0586223.py`  
+**Disposition:** **PASS at the stated proof-only full-core/no-container scope.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+The candidate composes two recent improvements that were proved for different purposes:
+
+1. the hostile-audited exclusion of the full-core branch through `t<=1.844`; and
+2. the scope-safe matched all-train gap `g=0.007707`.
+
+The dangerous possibility is a scope mismatch: if the all-train theorem were only a
+low-`t` result, using it after excluding low `t` would be circular.  This audit checks
+that issue first, then verifies the exact train-slack identity, the Section-85 currency
+elimination, the liminf passage, and the numerical enclosure.
+
+---
+
+## 1. The `g=0.007707` all-train theorem is not restricted to low `t`
+
+The `g=0.007707` artifact states that its scope is identical to the hostile-audited
+scope-safe `g=0.0077` theorem.  That theorem in turn inherits the hostile-audited
+`g=0.0076` scope, recorded as
+
+```text
+canonical full-core Type-II train-measure branch.
+```
+
+The proof itself is a uniform three-branch phase-star capacity argument: strong
+physical pair deficit where its ratio hypothesis holds, unconditional fallback where
+that strong hypothesis fails but the center remains below `2/sqrt(3)`, and generic
+triangle-free capacity above that center threshold.  It is not conditional on
+`t<=1.844` or on residual localization at that endpoint.
+
+Therefore the statement
+
+\[
+\liminf {T-q/2\over D}
+\ge2\sqrt{\Delta_2}+0.007707
+\]
+
+is available throughout the full-core train-measure branch, including the surviving
+high-`t` regime.
+
+**Verdict:** PASS.  No low-`t` circularity.
+
+---
+
+## 2. The train-slack identity is exact
+
+Canonical stopped-train bookkeeping gives
+
+\[
+T-q=2f-k.
+\]
+
+Section 85 defines
+
+\[
+\tau_D=(q-k)+2f-2\sqrt{R_4}.
+\]
+
+Hence
+
+\[
+\begin{aligned}
+T-2\sqrt{R_4}
+&=q+(2f-k)-2\sqrt{R_4}\\
+&=(q-k)+2f-2\sqrt{R_4}\\
+&=\tau_D.
+\end{aligned}
+\]
+
+Thus
+
+\[
+\boxed{\tau_D=T-2\sqrt{R_4}}
+\]
+
+is a finite identity.  It is equivalent to the older exact
+`2 tau_D=rho_rec+sigma_R` relation and does not import any obsolete numerical
+constant from that older note.
+
+**Verdict:** PASS.
+
+---
+
+## 3. The modern all-train gap forces `tau_D/D >= rho+0.007707`
+
+Rewrite the exact identity as
+
+\[
+{\tau_D\over D}
+={T-q/2\over D}
++{q\over2D}
+-2{\sqrt{R_4}\over D}.
+\]
+
+The inputs are
+
+\[
+\liminf {T-q/2\over D}
+\ge2\sqrt{\Delta_2}+0.007707,
+\]
+
+\[
+\liminf {q\over D}\ge2\rho,
+\qquad \rho=\cos\rho,
+\]
+
+and
+
+\[
+{\sqrt{R_4}\over D}\to\sqrt{\Delta_2}.
+\]
+
+Since the final term has an actual limit, the standard liminf inequality gives
+
+\[
+\liminf {\tau_D\over D}
+\ge \rho+0.007707.
+\]
+
+The cancellation of `2 sqrt(Delta_2)` is exact.  No assumption that `q/D` converges is
+needed; its lower limit suffices.
+
+**Verdict:** PASS.
+
+---
+
+## 4. The chamber-interface elimination uses the same canonical currencies
+
+Canonical Section 63 gives
+
+\[
+b+Q=2(q-k),
+\]
+
+with occurrence-counted `b`.  Canonical Section 85 uses exactly those same global
+`b,Q,f` in
+
+\[
+H_D=(b-p)+(Q+2f)
+\]
+
+and
+
+\[
+A_{ch}-a_0Z_{ch}\ge {\sqrt3\over4}H_D.
+\]
+
+Using
+
+\[
+\tau_D=(q-k)+2f-2\sqrt{R_4}
+\]
+
+gives identically
+
+\[
+\begin{aligned}
+H_D
+&=(b+Q)-p+2f\\
+&=2(q-k)-p+2f\\
+&=(q-k)+\tau_D-p+2\sqrt{R_4}.
+\end{aligned}
+\]
+
+There is no substitution of local induced-cell degree defects for the global `Q`, and
+no simple-boundary assumption on `b`.
+
+**Verdict:** PASS.
+
+---
+
+## 5. The `t<=1.844` exclusion is used with the correct quantifier
+
+The hostile audit of the phase-resolved remainder theorem proves that the stated
+full-core/no-container branch has no sufficiently large survivor with
+
+\[
+t={q-k\over D}\le1.844.
+\]
+
+The candidate does not infer a uniform positive distance from the endpoint.  It uses
+only the adverse closed-endpoint consequence
+
+\[
+\liminf {q-k\over D}\ge1.844.
+\]
+
+This remains valid for a sequence approaching `1.844` from above.
+
+**Verdict:** PASS.
+
+---
+
+## 6. The asymptotic chamber floor follows without rate assumptions
+
+Canonical full-core Type-II asymptotics give
+
+\[
+{p\over D}\to\pi,
+\qquad
+{\sqrt{R_4}\over D}\to\sqrt{\Delta_2}.
+\]
+
+Combining the exact interface identity with the two lower-limit floors gives
+
+\[
+\liminf {H_D\over D}
+\ge
+1.844+(\rho+0.007707)-\pi+2\sqrt{\Delta_2}.
+\]
+
+Then the finite Section-85 inequality yields
+
+\[
+\liminf {A_{ch}-a_0Z_{ch}\over D}
+\ge
+{\sqrt3\over4}
+\left[
+1.844+\rho+0.007707-\pi+2\sqrt{\Delta_2}
+\right].
+\]
+
+No convergence rate for `p`, `R_4`, or `q-k` is required.
+
+**Verdict:** PASS.
+
+---
+
+## 7. Exact numerical certificate
+
+The companion verifier uses rational bounds
+
+\[
+{103993\over33102}<\pi<{104348\over33215},
+\]
+
+\[
+1.732050807<\sqrt3<1.732050808,
+\]
+
+and an integer-square-root lower enclosure for
+
+\[
+\sqrt{\Delta_2}.
+\]
+
+For the Dottie number it takes
+
+\[
+\rho_0=0.7390851
+\]
+
+and evaluates the alternating cosine series through the negative `x^14/14!` term.
+That partial sum is a lower bound for `cos(rho_0)` and satisfies
+
+\[
+\cos(\rho_0)-\rho_0>5.5\times10^{-8}.
+\]
+
+Since `cos x-x` is strictly decreasing for `x>=0`, this certifies
+
+\[
+\rho>0.7390851.
+\]
+
+With every term rounded in the adverse direction, Pyroam returns
+
+```text
+tau/D lower                  = 0.7467921
+H_D/D lower                  = 1.353825059392579
+chamber-surplus lower        = 0.5862234466644348
+margin above safe 0.586223   = 4.4666e-7
+```
+
+Thus the advertised decimal has a positive exact-rational margin.
+
+**Verdict:** PASS.
+
+---
+
+## 8. Positive-core corollary is algebraically consistent
+
+Section 67 gives
+
+\[
+m=R_4+f+(q-k)+1.
+\]
+
+The exact interface identity also gives
+
+\[
+H_D=2[(q-k)+f]-p.
+\]
+
+Therefore
+
+\[
+m-R_4={p+H_D\over2}+1
+={q-k+\tau_D+2\sqrt{R_4}\over2}+1.
+\]
+
+The same lower-limit inputs yield
+
+\[
+\liminf {m-R_4\over D}>2.247708.
+\]
+
+The companion certificate checks this weaker rounded corollary as well.
+
+**Verdict:** PASS.
+
+---
+
+## 9. What the theorem does not prove
+
+The result does not imply a macroscopic inactive chamber.  The quantity
+`A_ch-a0 Z_ch` is the canonical Oler-weighted chamber surplus, and linear surplus can
+still live in thin doubled near-geodesic corridors or near-degenerate exceptional
+faces.  The Section-85 regression remains binding.
+
+It also does not address the separate Type-I macroscopic-container/exterior-cap branch,
+and it does not promote the proof-only `g=0.007707` artifact to canonical theorem-state
+authority.
+
+No strict same-cardinality competitor or exact unit equilateral triangle is produced.
+
+**Final verdict:** **PASS.**  On the current modern scope-safe stack, every remaining
+full-core Type-II survivor has train slack at least `0.7467921D-o(D)`, Section-85
+interface at least `1.353825D-o(D)`, chamber surplus at least `0.586223D-o(D)`, and
+positive-core excess at least `2.247708D-o(D)`.  C-II and Level I remain open.

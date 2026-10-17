@@ -1,0 +1,127 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "1c34729acbff46b502c2bd661d50f047a61599cd", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "docs/targets/target-c/122-123-promotion-audit-2026-09-12.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "2a8886031d3ba334c720bd44befb7e784c1681139a5b4b21d741ce640fa6322e"} -->
+
+> **Historical source snapshot; destination authority remains current.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical. Source path: `docs/targets/target-c/122-123-promotion-audit-2026-09-12.md`. Source commit: `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`.
+
+# Target C — concurrent Sections 122–123 promotion audit
+
+**Date:** 2026-09-12  
+**Verdict:** **PASS.**  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**
+
+Two proof-only results landed on `main` during the audit. They were both numbered 120/121, colliding with the already-audited anisotropic-return/local-Oler pair. This audit normalizes the later pair as Sections **122–123** and checks their finite proof chains against the current canonical stack.
+
+## 1. Section 122 — aggregate two-arc detour
+
+The theorem is valid.
+
+Canonical Section 116 supplies, cell by cell,
+
+\[
+d_rE_r\ge(4-2\sqrt3)A_{4,r},
+\qquad
+E_r=L_r+P_{{\rm exc},r}-2d_r.
+\]
+
+The only possible globalization trap is double counting. The proof avoids it correctly by summing only unloaded-only rhombi. Such a rhombus has a connected four-cycle of unloaded vertices and therefore belongs to exactly one unloaded component. Hence
+
+\[
+\sum_rA_{4,r}^0=A_4^0
+\]
+
+is genuinely injective in area. No injectivity of local boundary occurrences is asserted or required.
+
+Since `d_r<=D`,
+
+\[
+\sum_rE_r\ge {4-2\sqrt3\over D}A_4^0.
+\]
+
+In Type II, canonical Sections 80/83 give `A_4/D^2->pi/4` and only `O(D)` loaded-touching rhombi, so `A_4^0/D^2->pi/4`. Therefore
+
+\[
+\liminf {1\over D}\sum_rE_r
+\ge {\pi\over2}(2-\sqrt3).
+\]
+
+No carrier selection, phase bin, KKT coefficient floor, or isolated-source deletion is used.
+
+**Disposition:** canonical as `C-AGGREGATE-TWO-ARC-DETOUR`.
+
+## 2. Section 123 — augmented-cell defect budget
+
+The theorem is valid.
+
+For one unloaded component, augment the internal/attachment contact graph by the convex attachment-polygon sides. The graph is connected, all unloaded vertices are inside the polygon, and its outer face is the simple attachment cycle. Euler plus face incidence gives exactly
+
+\[
+a_r-3-s_r={a_r-T_r+Q_r^+\over2}.
+\]
+
+The edge count is not overcounted: the starting graph contains only internal and attachment contacts, so loaded-loaded polygon-side contacts are not already present there as graph edges.
+
+Triangulating the pairwise interior-disjoint convex attachment cells gives a noncrossing straight-line graph on the `q` loaded vertices in convex position. Thus
+
+\[
+d_{tile}=q-2-\sum_r(a_r-2)\ge0.
+\]
+
+Combining this with the canonical Section-62 pinned ledger yields
+
+\[
+e_{BB}-k
+={1\over2}\sum_r(a_r-T_r+Q_r^+)+d_{tile},
+\]
+
+and consequently
+
+\[
+\sum_rQ_r^+\le2(e_{BB}-k).
+\]
+
+The comparison with the actual induced graph is also valid. Adding loaded-loaded contact chords cannot increase total `(deg-4)_+` defect because splitting a face of degree `m` into `m_1,m_2` with `m_1+m_2=m+2` satisfies
+
+\[
+(m_1-4)_++(m_2-4)_+\le(m-4)_+.
+\]
+
+Hence `Q_r<=Q_r^+`. Since every bounded nonquadrilateral face has degree at least five,
+
+\[
+P_{{\rm exc},r}=4f_r+Q_r\le5Q_r\le5Q_r^+.
+\]
+
+Summing gives the claimed global payment theorem
+
+\[
+\boxed{\sum_rP_{{\rm exc},r}\le10(e_{BB}-k).}
+\]
+
+This theorem does not assert global injectivity of local outer-walk occurrences.
+
+**Disposition:** canonical as `C-AUGMENTED-CELL-DEFECT-BUDGET`.
+
+## 3. Frontier effect
+
+Together, Sections 122–123 give
+
+\[
+\liminf {1\over D}
+\sum_r(L_r+P_{{\rm exc},r}-2d_r)
+\ge {\pi\over2}(2-\sqrt3),
+\]
+
+while
+
+\[
+\sum_rP_{{\rm exc},r}\le10(e_{BB}-k).
+\]
+
+Thus the bounded-defect-face part of the aggregate return demand is paid by one global loaded-hull scalar. The remaining source-level quantity is the aggregate outer-walk detour `sum_r(L_r-2d_r)` coupled to `e_BB-k` and the diameter graph.
+
+This is new structural progress but not C-II closure. The strongest explicit carrier coefficient remains canonical Section 118's `0.9762439137425688...`.
+
+## 4. Repository validation
+
+The audit.46 finalization run regenerated the theorem-state views and passed the native theorem-state unit tests, manifest/graph checker, active-route summary checker, and every registered theorem certificate. During that validation one pre-existing Section-115 certificate exposed a platform-sensitive decimal assertion for the transcendental tooth root: the computed root moved by about `2e-13` while the actual contradiction margin remained `3.00218e-5`. The certificate was repaired to certify the defining equation residual and retain a `5e-13` cross-platform decimal regression tolerance. No Section-115 theorem inequality or margin was weakened.
+
+The audit.46 authority transaction is therefore mechanically consistent after this numerical-portability repair.

@@ -1,0 +1,111 @@
+# Local benchmark evidence
+
+Measured on 2026-10-15, CPython 3.14.7, Arch Linux x86_64 / kernel 7.2.4.
+These are local wall times, not hosted runner measurements. The account restriction
+prevents meaningful hosted step timing. The final benchmark and essential regression timing overlapped each other;
+earlier measurements overlapped full certificate replay. These are observed
+samples rather than controlled hardware
+comparisons or statistical performance guarantees.
+
+## Reproduce
+
+```sh
+python3 -B tools/benchmark_local_ci.py --samples 3 \
+  --registry-sizes 10 100 500 --output /tmp/e99-ci-benchmarks.json
+```
+
+The script creates a disposable clone of the actual repository, commits five
+synthetic PR scenarios, and runs trusted integrity checks against the full
+canonical metadata in that clone. It executes the example's full 289-case finite
+regression plus its negative control for each eligible package scenario. The
+external-input fixture is explicitly read by the verifier. No actual research
+file is changed outside the disposable clone. Synthetic commit IDs in the raw
+JSON are measurement labels, not preserved research branches.
+
+[Raw measured samples](benchmark-results.json) record the control commit, platform,
+three planning samples per case, integrity time, actual replay time and workload
+counts. The baseline was `806b8ad3867468587d6650bad8a6bbfe1098d9b9` with 94
+registered certificates. The concurrent worker's update to `8c6f3712` was integrated
+before the final benchmark without changing the registered count.
+
+## Measured work
+
+| Synthetic PR | Classification | Median plan (s) | Integrity (s) | Plan + integrity (s) | Scoped replay (s) | Previous certificate selection | Proposed work |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
+| Existing allowlisted documentation | `fast-only` | 1.202 | 3.077 | 4.279 | — | 0 | 0 certificates, 0 packages |
+| Isolated package clarification | `targeted-replay` | 1.537 | 2.475 | 4.013 | 1.197 | 94 | 0 certificates, 1 package |
+| Declared dependency outside package | `targeted-replay` | 1.000 | 2.524 | 3.524 | 0.996 | 94 | 0 certificates, 1 package |
+| Canonical state file | `full-verification-required` | 1.237 | 2.625 | 3.862 | — | 94 | No replay; review/full verification required |
+| Unknown input | `full-verification-required` | 1.184 | 2.373 | 3.557 | — | 94 | No replay; review/full verification required |
+
+The previous default `verify_prelaunch.py --base-ref origin/main` passed 12/12
+stages in **76.296 seconds** on the initial clean worktree, before executing any
+of the 94 certificate scripts. It included 133 tooling tests and 18 repository
+tests plus publication/dependency inventory. This is the prior default's measured
+local integrity cost, not the duration of all certificates or a hosted job.
+
+The new workflow also runs essential trusted tooling regressions: **69 tests
+passed in 14.034 seconds wall time** (13.738 seconds inside unittest). Adding
+that separately measured cost to the plan/integrity phases gives **17.56–18.31
+seconds** of local Tier 0 command work for these scenarios. This sum is an
+estimate from separately measured phases, not a hosted end-to-end observation. Checkout, runner startup and wheel installation are excluded and remain
+unmeasured on GitHub. The sub-60-second Tier 0 goal is supported for local command
+work on this machine; no hosted runtime promise is made.
+
+The example replays measured here take 1.00–1.20 seconds **including a fresh
+impact recomputation**. They are small exact fixtures, not evidence that an
+arbitrary scientific package finishes in two minutes. Two minutes is a hard
+per-package budget; a slower package times out and fails rather than reducing its
+domain. The 240-second workflow batch cap covers two serial packages.
+
+## Registry scale, measured separately
+
+The same real-repository clone was expanded with synthetic valid manifests. One
+package README was changed; every run selected exactly one package.
+
+| Registered packages | Median plan (s), three samples | Selected packages |
+| ---: | ---: | ---: |
+| 10 | 1.144 | 1 |
+| 100 | 1.229 | 1 |
+| 500 | 1.666 | 1 |
+
+These synthetic packages share verifier and input blobs; this exercises registry
+metadata and selective planning, not 500 distinct large mathematical domains.
+Timings vary with machine load and cache effects. Batch Git blob reads,
+shared content caches and cached ancestry avoid a subprocess per manifest or
+repeated ancestor probe. Registries have a 1,000-package discovery cap, 32 MiB
+manifest-read budget and 64 MiB total cached input budget. Exceeding a budget
+requires review rather than expanding automatic work indefinitely.
+
+## Queue projections, not measurements
+
+Automatic execution is currently gated off: 10, 100 and 500 simultaneous PRs
+consume **zero runner jobs** under the unset switches. After owner enablement,
+the workflow creates N planning jobs and at most N serial replay jobs. Per-PR
+cancellation removes superseded heads, not work for distinct PRs.
+
+For an illustrative projection only, suppose two slots are available, all work
+arrives together, runner/setup overhead is zero, planning service time P=20 s,
+and an ordinary package replay job R=120 s. These assumptions are deliberately
+round and are **not hosted measurements**:
+
+| PR burst N | Plans only: N×20/2 | Every PR replays: N×(20+120)/2 |
+| ---: | ---: | ---: |
+| 10 | 100 s | 700 s (11.7 min) |
+| 100 | 1,000 s (16.7 min) | 7,000 s (116.7 min) |
+| 500 | 5,000 s (83.3 min) | 35,000 s (9.7 h) |
+
+These are idealized work/C drain estimates. Setup, other workflows, account limits,
+job ordering and running cancellations can increase latency. A two-package batch
+can use 240 declared replay seconds. The new architecture prevents automatic
+94-certificate amplification and unbounded matrices; it cannot remove a finite
+runner fleet's queue for 500 independent PRs. At that volume use local verification
+and staged owner admission until a separately reviewed global scheduler is justified.
+No billing adjustment or automatic retry is part of this migration.
+
+## Validation evidence
+
+The [adversarial test map](ADVERSARIAL_TESTS.md) identifies the required failure
+cases. Final command counts/results and the full verifier outcome are recorded
+in the implementation PR. Canonical source/certificate hashes must remain equal
+to the integrated base; new CI test success alone never proves those theorems.

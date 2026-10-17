@@ -1,0 +1,346 @@
+# Target C: seven-no-root `k=6` containment lift and residual reduction
+
+Date: 2026-09-21
+
+Status: exact structural reduction of the seven-no-root `k=6` layer. Six of the eight arithmetic boundary cases are excluded. The two remaining cases are reduced to explicit synchronized six-row virtual-canonical capacity covers:
+
+- `D=-2, k=6, d=0, p=9`;
+- `D=-1, k=6, d=0, p=10`.
+
+This note does not claim those two cases are closed, does not close the seven-no-root `k=7` layer, and does not close C-II.
+
+Companion verifiers:
+
+- `research/verify_target_c_support7_global_segment_relative_six_noroot_k5_alltouch_capacity_2026_09_21.py`
+- `research/verify_target_c_support7_global_segment_relative_seven_noroot_k6_reduction_2026_09_21.py`
+
+The first is an exact finite audit. The second checks the arithmetic implications used below.
+
+## 1. Seven-row `k=6` setup
+
+Let `B=R union E` be a hypothetical seven-no-root counterexample, with `|E|=7`, and suppose `k(B)=6`.
+
+The established seven-row deletion theorem gives
+
+`D(B) in {-2,-1}`
+
+and shows that deleting any one no-root row preserves the quotient rank. Thus every one-row deletion has `k=5`, with defect
+
+- `D_6=0` if `D(B)=-2`;
+- `D_6=1` if `D(B)=-1`.
+
+Let
+
+`P <= Q^7`
+
+be the coefficient-constraint space. Since `k=6`, `rank(P)=1`. Write a nonzero generator as `v`.
+
+The established all-depth code bounds give
+
+- `|supp(v)|>=3` when `D(B)=-2`;
+- `|supp(v)|>=2` when `D(B)=-1`.
+
+For a coordinate `i`, let `P_i` be the projected line after deleting `i`. Call `i` good when `P_i` has support at least two. Then:
+
+- in the `D=-2` branch, all seven coordinates are good;
+- in the `D=-1` branch, at least five coordinates are good. The only way to have fewer than seven is `|supp(v)|=2`, in which case exactly the two support coordinates are bad.
+
+For every good deletion, the committed synchronized six-no-root `k=5` containment theorem applies to `P_i`.
+
+## 2. Global virtual-canonical lift
+
+For a touched root block `b`, let `E_b` be its seven-row empty-state coefficient-constraint space. Define the seven-row virtual canonical state by declaring `b` complete exactly when
+
+`E_b not subset P`.
+
+Let `C` be the set of these virtual-complete blocks, let `H(C)` be the span of their complete-block `T` relation rows, and put
+
+`d_v = |C| - rank H(C)`.
+
+For a good deletion `i`, let `C_i` be the six-row virtual-complete set supplied by the synchronized six-row `k=5` theorem, and let
+
+`d_i = |C_i| - rank H(C_i)`.
+
+If a block is seven-row virtual-empty, then `E_b subset P`. Projection gives
+
+`pi_i(E_b) subset P_i`.
+
+If the block remains touched it is therefore six-row virtual-empty; if it becomes untouched it is absent from `C_i`. Hence
+
+`C_i subset C`.
+
+Row nullity is monotone under adding relation rows, so
+
+`d_v >= d_i >= 2`
+
+for every good deletion. In particular
+
+`d_v>=2`.
+
+It remains to lift external relation containment. Put
+
+`N = null(P)`,
+
+so `dim N=6`, and for each coordinate set
+
+`N_i={alpha in N: alpha_i=0}`.
+
+For a good coordinate `i`, `N_i` is a five-dimensional hyperplane. There are two distinct good hyperplanes:
+
+- if `|supp(v)|=2`, choose two of the five good coordinates outside the support;
+- if `|supp(v)|>=3`, no two coordinate functionals can be proportional modulo the line `P`, because that would put a nonzero vector supported on two coordinates in `P`.
+
+Two distinct hyperplanes span `N`, hence
+
+`N = sum_{i good} N_i`.
+
+Now take `alpha in N_i` for a good `i`. Deleting coordinate `i` gives an element of `null(P_i)`. By the synchronized six-row theorem, its canonical external relation lies in `H(C_i)`.
+
+The lift back to seven rows needs no correction on `C\C_i`:
+
+1. if a block becomes untouched after deleting `i`, its seven-row local demand is supported only on coordinate `i`, and `alpha_i=0`;
+2. if it remains touched but is six-row virtual-empty, its projected empty constraint lies in `P_i`, so `alpha_{-i}` has zero local quotient demand there.
+
+Therefore the seven-row external relation `L(alpha)` lies in
+
+`H(C_i) subset H(C)`.
+
+The good `N_i` span `N` and `L` is linear, so
+
+`L(N) subset H(C)`.
+
+Thus the same virtual-canonical defect accounting used in the preceding five- and six-row containment theorems applies globally.
+
+Let `q` be the number of seven-row virtual-complete blocks that are incomplete in the actual state, and let `p` be the total number of selected root rows in incomplete blocks. A virtual-complete block cannot be actual-empty, so `q<=p`. The containment accounting gives
+
+`D(B) >= 7 + p + 3 d_v - 3 q`.
+
+Since `d_v>=2`, the crude consequence is
+
+`D(B) >= 13 - 2p`.
+
+## 3. Five branches die immediately
+
+The eight `k=6` arithmetic boundary cases are
+
+```text
+D=-2: (d,p)=(0,9),(1,6),(2,3),(3,0)
+D=-1: (d,p)=(0,10),(1,7),(2,4),(3,1)
+```
+
+Here `d` is the actual root deficiency from the original seven-row arithmetic formula, not the virtual deficiency `d_v` above.
+
+The bound `D>=13-2p` immediately excludes:
+
+```text
+D=-2: p=6,3,0
+D=-1: p=4,1
+```
+
+Indeed the corresponding lower bounds are respectively `1,7,13,5,11`.
+
+Only `p=9`, `p=7`, and `p=10` still require information about singleton capacity.
+
+## 4. Deletion-loss budget
+
+For a one-row deletion `i`, let `p_i` be the selected incomplete-root-row count after removing blocks that become untouched. Put
+
+`ell_i = p-p_i`.
+
+A selected root row contributes to `ell_i` only when its incomplete block is touched by exactly one of the seven no-root cycles, namely coordinate `i`. Thus each selected row can contribute to at most one `ell_i`, and
+
+`sum_i ell_i <= p`.
+
+For every one-row deletion, `k=5`. The exact six-row defect formula gives
+
+- in the `D=-2` branch, `p_i+3d_i^root=9`, so `p_i in {0,3,6,9}`;
+- in the `D=-1` branch, `p_i+3d_i^root=10`, so `p_i in {1,4,7,10}`.
+
+Consequently:
+
+- at global `p=9`, all seven deletions are good, and at least one has `p_i=9`; otherwise every deletion loses at least three rows, giving total loss at least `21>9`;
+- at global `p=7`, at least five deletions are good, and at least one good deletion has `p_i=7`; otherwise the good deletions alone lose at least `15>7` rows;
+- at global `p=10`, at least five deletions are good, and at least one good deletion has `p_i=10`; otherwise the good deletions alone lose at least `15>10` rows.
+
+A slightly stronger count will be useful for future extension searches. Since each nonzero loss is at least three:
+
+- at `D=-2,p=9`, at least four of the seven deletions have `p_i=9`;
+- at `D=-1,p=10`, at least two good deletions have `p_i=10` (and at least four if all seven coordinates are good).
+
+## 5. Exact all-touch singleton-capacity audit
+
+The committed six-row `k=5` verifier previously counted singleton-compatible virtual-complete blocks only after imposing the six-row counterexample support-overlap condition on the block itself. That condition is not available for a generic six-row deletion shadow of a seven-row state.
+
+The companion all-touch audit therefore repeats the exact six-row rank-one virtual-canonical scan without any per-block touch-multiplicity filter.
+
+It uses the same exact `S_7` augmentation cover of 325,955 six-subset representatives. The cover has 44 duplicate representatives relative to the known 325,911 orbit count, but covers every six-subset orbit. It scans every obtainable rank-one coefficient line whose generator has support at least two. There are exactly
+
+`1,751,870`
+
+such cover states.
+
+For each state, singleton capacity is the number of virtual-complete blocks admitting at least one singleton state whose local coefficient constraint is zero or equals the global line `P_i`. No block-support filter is imposed.
+
+The exact results needed here are:
+
+```text
+deficiency d_i=2:
+  capacity >=4: 0 states
+
+ deficiency d_i=3, capacity >=6:
+  capacity 6: 485
+  capacity 7:  78
+  capacity 8: 116
+  capacity 9: 144
+  capacity 10: 64
+
+ deficiency d_i=4, capacity >=8:
+  capacity 8:  15,366
+  capacity 9:  13,536
+  capacity 10: 12,922
+  capacity 11: 11,898
+  capacity 12:  8,614
+  capacity 13:  3,733
+  capacity 14:    762
+```
+
+Thus:
+
+- every synchronized six-row `d_i=2` state has singleton capacity at most 3;
+- there are 402 cover states with `d_i=3` and capacity at least 7;
+- there are 324 cover states with `d_i=3` and capacity at least 8;
+- there are 51,465 cover states with `d_i=4` and capacity at least 9.
+
+Complete-block ranks are computed modulo `2^127-1`. As in the committed parent verifier, the Lucas-Lehmer check proves the modulus prime, every complete relation row has squared Euclidean norm at most 12, and `(2^127-1)^2 > 12^15`. Hadamard's bound therefore makes every modular rank used in this audit equal to the corresponding rational rank.
+
+## 6. Close `D=-1,p=7`
+
+Suppose `D=-1,p=7`.
+
+The global defect bound
+
+`-1 >= 7+7+3d_v-3q`
+
+with `d_v>=2` and `q<=7` forces equality throughout:
+
+`d_v=2`, `q=7`.
+
+Since seven virtual-complete incomplete blocks consume only seven selected rows, all seven are singletons and there are no additional selected incomplete rows outside them.
+
+Choose a good deletion with `p_i=7`, which exists by the loss-budget argument. Since `C_i subset C`,
+
+`2 <= d_i <= d_v=2`,
+
+so `d_i=2`.
+
+Let `q_i` be the number of six-row virtual-complete blocks that are incomplete in this deletion shadow. The six-row containment bound gives
+
+`1 >= 6+7+3*2-3q_i`,
+
+hence
+
+`q_i>=6`.
+
+Because `p_i=p`, no selected incomplete block becomes untouched in this deletion. Every such `q_i` block is therefore one of the seven global singleton blocks. Hence the six-row virtual state has singleton capacity at least six. The exact all-touch audit says a synchronized `d_i=2` state has capacity at most three. Contradiction.
+
+Hence
+
+> no seven-no-root counterexample exists with `D=-1,k=6,d=1,p=7`.
+
+Together with the five immediate exclusions above, six of the eight `k=6` boundary cases are now closed.
+
+## 7. Reduce `D=-2,p=9` to 324 six-row cover states
+
+Now suppose `D=-2,p=9`.
+
+The global bound requires
+
+`7+9+3d_v-3q <= -2`.
+
+With `d_v>=2` and `q<=9`, the only possibilities are
+
+```text
+(d_v,q)=(2,8),(2,9),(3,9).
+```
+
+Choose a deletion with `p_i=9`; every coordinate is good in the `D=-2` branch. Because `p_i=p`, every selected incomplete block remains touched.
+
+If `d_v=2`, then `d_i=2`. The six-row bound at defect zero gives
+
+`0 >= 6+9+3*2-3q_i`,
+
+so `q_i>=7`.
+
+If global `q=8`, at least seven of the eight virtual-complete incomplete blocks are singletons because they consume at most nine selected rows. Any subset of at least seven of those eight blocks therefore contains at least six singletons. If global `q=9`, all nine are singletons. Since `C_i subset C`, the six-row `q_i` blocks are drawn from this global set. In either case the six-row `d_i=2` state has singleton capacity at least six, contradicting the exact capacity-three maximum.
+
+Therefore `d_v=3,q=9`. All nine global virtual-complete incomplete blocks are singletons.
+
+For the chosen `p_i=9` deletion, `d_i` is 2 or 3. The `d_i=2` case again requires `q_i>=7`, hence capacity at least seven, impossible. Thus
+
+`d_i=3`.
+
+The six-row bound now gives
+
+`0 >= 6+9+9-3q_i`,
+
+so
+
+`q_i>=8`.
+
+All these blocks are singleton blocks. Therefore the selected six-row shadow has deficiency three and singleton capacity at least eight.
+
+The exact all-touch audit contains only
+
+`116+144+64 = 324`
+
+such cover states.
+
+So the entire remaining `D=-2,k=6,d=0,p=9` branch is covered by extending those 324 synchronized six-row virtual states, with the additional global requirement that at least four of the seven deletion shadows have `p_i=9`.
+
+No extension result is claimed here.
+
+## 8. Reduce `D=-1,p=10`
+
+Finally suppose `D=-1,p=10`.
+
+The global bound leaves only
+
+```text
+(d_v,q)=(2,8),(2,9),(2,10),(3,9),(3,10),(4,10).
+```
+
+Choose a good deletion with `p_i=10`. Because `p_i=p`, every selected incomplete block remains touched.
+
+If `d_i=2`, the six-row bound gives `q_i>=7`. Seven nonempty incomplete blocks using at most ten rows include at least
+
+`2*7-10=4`
+
+singletons. This contradicts the exact deficiency-two capacity maximum of three. Hence `d_i>=3`, and therefore the global cases with `d_v=2` are impossible.
+
+If `d_i=3`, then the six-row bound gives `q_i>=8`. Globally, `d_v>=3` forces `q>=9`. At `q=9`, at least eight of the nine global virtual-complete incomplete blocks are singletons; any `q_i>=8` subset therefore contains at least seven singleton blocks. At `q=10`, all ten are singletons. Thus every `d_i=3` selected shadow has singleton capacity at least seven.
+
+If `d_i=4`, then necessarily `d_v=4,q=10`, so all ten global blocks are singletons. The six-row bound gives `q_i>=9`, hence singleton capacity at least nine.
+
+The exact six-row cover therefore reduces this branch to the union of
+
+- 402 deficiency-three cover states with singleton capacity at least seven;
+- 51,465 deficiency-four cover states with singleton capacity at least nine.
+
+This is a cover of the selected deletion shadow, not an orbit count and not yet a seven-row closure.
+
+The loss budget also forces at least two good `p_i=10` deletion shadows, which should be imposed in the extension step.
+
+## 9. Remaining `k=6` bottleneck
+
+The seven-no-root `k=6` layer has been reduced from eight arithmetic cases to exactly two:
+
+```text
+D=-2, k=6, d=0, p=9
+D=-1, k=6, d=0, p=10
+```
+
+The smaller next finite target is the `D=-2,p=9` branch. Start from the 324 exact six-row `d_i=3`, capacity-at-least-eight cover states, extend by one no-root cycle, require a rank-one seven-row coefficient line of support at least three, and enforce all seven deletion shadows simultaneously. In particular at least four deletions must retain `p_i=9`.
+
+The `D=-1,p=10` branch can be handled analogously after the smaller branch, using the 402 `d_i=3` and 51,465 `d_i=4` high-capacity cover states and requiring at least two good `p_i=10` shadows.
+
+The seven-no-root `k=7` layer remains untouched by this note.

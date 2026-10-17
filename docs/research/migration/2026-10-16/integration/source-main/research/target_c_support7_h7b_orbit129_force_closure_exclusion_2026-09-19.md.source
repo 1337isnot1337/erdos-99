@@ -1,0 +1,395 @@
+# Target C-II — a global two-gap force bound excludes generic H7b orbit 129
+
+**Date:** 2026-09-19  
+**Scope:** generic interior-ground `H7b`, canonical affine cell 129  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+This note strengthens the pentagon force-closure inequality used for orbit 176 and applies it through an exact rational outer certificate to orbit 129. The result is
+
+\[
+\boxed{\text{generic H7b orbit 129 is impossible}.}
+\]
+
+Together with the current combined endpoint, the generic interior-ground `H7b` branch drops from 22 to 21 `C7` cells.
+
+The surviving canonical indices are
+
+```text
+130,
+134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144,
+147, 148,
+169, 170, 171, 172, 173, 174, 175
+```
+
+No theorem-state file is changed.
+
+## 1. The sharp two-gap bound is valid on the full physical pentagon range
+
+Let a strict closed equilateral force pentagon have consecutive angular gaps
+
+\[
+T,A,B,D,E>0,
+\qquad
+T+A+B+D+E=2\pi.
+\]
+
+The already proved physical pentagon inequalities give, cyclically,
+
+\[
+0<T,A,B,D,E<\frac{2\pi}{3},
+\qquad
+\frac{2\pi}{3}<T+A<\pi,
+\qquad
+\frac{2\pi}{3}<E+T<\pi.
+\tag{1.1}
+\]
+
+The orbit-176 proof derived a sharp bound under the narrower condition `T<pi/3`. That restriction is unnecessary.
+
+Let the unit force directions in cyclic order be `u_0,...,u_4`, with gaps `T,A,B,D,E`. From closure,
+
+\[
+u_4+u_0+u_1=-(u_2+u_3),
+\]
+
+and
+
+\[
+u_0+u_1+u_2=-(u_3+u_4).
+\]
+
+Taking squared norms gives
+
+\[
+\cos B=\frac12+\cos E+\cos T+\cos(E+T),
+\tag{1.2}
+\]
+
+\[
+\cos D=\frac12+\cos T+\cos A+\cos(T+A).
+\tag{1.3}
+\]
+
+For fixed `T`, define
+
+\[
+f_T(z)=\arccos\!\left(\frac12+\cos T+\cos z+\cos(T+z)\right),
+\qquad
+H_T(z)=z+f_T(z).
+\tag{1.4}
+\]
+
+On the interval between `A` and `E`, (1.1) gives `0<z+T<pi`. Put
+
+\[
+C=\cos(T/2),\qquad W=z+T/2,\qquad X=\cos W.
+\]
+
+Then
+
+\[
+R:=\frac12+\cos T+\cos z+\cos(T+z)
+=2C(C+X)-\frac12.
+\]
+
+Because `0<W<pi`, `R'=-2C\sin W<0`. The actual endpoint values are cosines, so monotonicity keeps `R` in `[-1,1]` throughout the relevant interval. Hence `f_T` is real there and `f_T'>0`.
+
+The exact second-derivative factorization used in the orbit-176 argument is
+
+\[
+f_T''(z)
+\quad\hbox{has the sign of}\quad
+-(4C^2-1)
+\left(4CX^2+(4C^2+3)X+4C\right).
+\tag{1.5}
+\]
+
+Now the full physical range `0<T<2pi/3` gives
+
+\[
+\frac14<C^2<1.
+\]
+
+The quadratic in `X` in (1.5) has positive leading coefficient and discriminant
+
+\[
+16C^4-40C^2+9
+=16\left(C^2-\frac14\right)\left(C^2-\frac94\right)<0.
+\tag{1.6}
+\]
+
+Also `4C^2-1>0`. Therefore
+
+\[
+f_T''<0,
+\qquad
+H_T'>0,
+\qquad
+H_T''<0
+\tag{1.7}
+\]
+
+for every physical `T`, not only for `T<pi/3`.
+
+Equations (1.2)-(1.3) and the total turn give
+
+\[
+B=f_T(E),
+\qquad
+D=f_T(A),
+\qquad
+H_T(A)+H_T(E)=2\pi-T.
+\tag{1.8}
+\]
+
+Since the inverse of an increasing concave function is convex, Jensen yields
+
+\[
+A+E\ge 2H_T^{-1}\!\left(\pi-\frac T2\right).
+\]
+
+At equality `A=E=a`. Writing `gamma=a+T/2`, the equality equation reduces to
+
+\[
+\cos\gamma=\frac12-\cos(T/2).
+\]
+
+Thus every strict closed equilateral force pentagon satisfies the sharp inequality
+
+\[
+\boxed{
+B+D\le m(T):=
+2\left[\pi-\arccos\!\left(\frac12-\cos(T/2)\right)\right]
+}
+\tag{1.9}
+\]
+
+throughout
+
+\[
+0<T<\frac{2\pi}{3}.
+\]
+
+Equality is the reflected-symmetric pattern `T,A,B,B,A`.
+
+The same differentiation as before gives
+
+\[
+\gamma''(T)
+=-\frac{2c^2-c+2}{16(1-r^2)^{3/2}}<0,
+\qquad
+c=\cos(T/2),\quad r=\frac12-c,
+\]
+
+because `2c^2-c+2>0`. Hence
+
+\[
+\boxed{m''(T)>0\quad\text{on }(0,2\pi/3).}
+\tag{1.10}
+\]
+
+So a secant of `m` over any certified subinterval is an upper bound, with strict improvement over the full-domain chord in the interval interior.
+
+For normalized gaps `x=T/pi`, write
+
+\[
+M(x)=\frac{m(\pi x)}{\pi}
+=2\left[1-\frac1\pi\arccos\!\left(\frac12-\cos(\pi x/2)\right)\right].
+\tag{1.11}
+\]
+
+Then for every face and every cyclic index `k`,
+
+\[
+\boxed{x_{k+2}+x_{k+3}\le M(x_k).}
+\tag{1.12}
+\]
+
+This is the nonlinear information used below.
+
+## 2. Exact affine bounds for orbit 129
+
+Use the repaired full-angle affine system for one-based canonical orbit 129. Its exact representative is
+
+```text
+missing C7 edges:
+12, 14, 25, 36, 37, 47, 56
+
+ground slots:
+(1, 1, 5, 5, 4, 3, 2)
+```
+
+The committed certificate checks the complete representative, including all edge signs, before using any row.
+
+Exact Farkas certificates for the base affine/simplex system give
+
+\[
+\frac16\le x_{1,3}\le\frac49,
+\tag{2.1}
+\]
+
+\[
+0\le x_{2,0}\le\frac13,
+\qquad
+\frac13\le x_{2,4}\le\frac23,
+\tag{2.2}
+\]
+
+\[
+0\le x_{3,1}\le\frac29,
+\qquad
+\frac12\le x_{7,1}\le\frac23,
+\tag{2.3}
+\]
+
+and
+
+\[
+0\le x_{4,1}\le\frac13.
+\tag{2.4}
+\]
+
+All inequalities are used only as closed outer bounds. Therefore proving the resulting closed relaxation empty is sufficient to exclude the original strict cell.
+
+## 3. Rational secants with exact transcendental validation
+
+To keep the polyhedral certificate rational, the verifier does not insert numerical values of `M`. For each rational endpoint `t`, it proves a rational upper bound `U(t)>=M(t)` and uses the line through `(l,U(l))` and `(u,U(u))`.
+
+The endpoint bounds used are
+
+\[
+\begin{array}{c|c}
+t&U(t)\\ \hline
+0&0.666667\\
+1/6&0.691443\\
+2/9&0.710175\\
+1/3&0.761437\\
+4/9&0.828567\\
+1/2&0.867191\\
+3/5&0.944043\\
+2/3&1
+\end{array}
+\tag{3.1}
+\]
+
+These decimal-looking entries are exact rationals with denominator `10^6` except `0.710175=28407/40000` and the exact endpoint `1`.
+
+The verifier certifies every upper bound without floating point. It uses Machin's identity
+
+\[
+\pi=4\left(4\arctan\frac15-\arctan\frac1{239}\right)
+\]
+
+with alternating rational arctangent series to enclose `pi`, and rational Taylor remainder bounds for cosine. To prove `M(t)<=U`, it checks the equivalent inequality
+
+\[
+\cos\!\left((1-U/2)\pi\right)+\cos(t\pi/2)\ge\frac12.
+\tag{3.2}
+\]
+
+Thus every line used below is a rigorously validated upper secant of the physical force-closure function.
+
+Using (2.1)-(2.3), apply these rational secants to the five pairs
+
+\[
+(i,k)=(1,3),(2,0),(2,4),(3,1),(7,1).
+\tag{3.3}
+\]
+
+The resulting rational outer polyhedron yields, again by exact Farkas duals,
+
+\[
+ x_{1,4}\ge
+\frac{239920913653902889}{692699184098952240}
+>\frac13,
+\tag{3.4}
+\]
+
+and
+
+\[
+ x_{1,4}\le
+\frac{5642257}{9678753}
+<\frac35.
+\tag{3.5}
+\]
+
+Therefore the sharper secant on
+
+\[
+\frac13\le x_{1,4}\le\frac35
+\tag{3.6}
+\]
+
+is valid. The secant on (2.4) is valid as well.
+
+## 4. Final exact infeasibility certificate
+
+Add the two valid force-closure secants for
+
+\[
+(i,k)=(4,1)\quad\text{on }[0,1/3],
+\]
+
+and
+
+\[
+(i,k)=(1,4)\quad\text{on }[1/3,3/5].
+\]
+
+Everything is now rational: the original affine equalities, the closed affine/simplex inequalities, and seven rational upper-secant inequalities implied by exact force closure.
+
+For a direct Farkas check, relax every inequality
+
+\[
+a_jx\le b_j
+\]
+
+to
+
+\[
+a_jx-z\le b_j
+\]
+
+with one common scalar `z`, and minimize `z`. The committed exact dual certificate proves
+
+\[
+\boxed{
+z\ge
+\frac{30117197506100285749035263}
+{444741384479402651773792227324}
+>0.
+}
+\tag{4.1}
+\]
+
+Numerically, only for scale,
+
+\[
+z>6.77\times10^{-5}.
+\]
+
+A physical point would satisfy every original inequality with `z=0`, so (4.1) is impossible. Hence canonical orbit 129 has no physical force-closed realization.
+
+This proof is an outer-relaxation argument. It does not rely on a nonlinear optimizer, a tolerance threshold, or a sampled residual. Floating point was used only during discovery and is absent from the committed verifier.
+
+## 5. Current generic H7b endpoint
+
+Before this note, the combined generic endpoint was 22 cells after independent law-of-sines exclusions of `115,118,145,146` and the force-closure exclusion of `176`. Removing `129` gives
+
+\[
+\boxed{22\longrightarrow21.}
+\]
+
+The remaining generic `H7b` cells are
+
+```text
+130,
+134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144,
+147, 148,
+169, 170, 171, 172, 173, 174, 175
+```
+
+The next direct use of (1.12) is to build certified secant outer relaxations for the remaining cells before invoking a full multidimensional interval proof. The force-only numerical probes suggest that some of `130,141,142,143,144` may still fail closure, but no exclusion of those cells is claimed here.
+
+Separate support-seven branches remain: reciprocal-collinearity walls, `H7a`, `H6`, and surviving `H8` cases. C-II remains open.

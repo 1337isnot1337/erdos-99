@@ -1,0 +1,400 @@
+# Target C-II — TT-prefix length and return-suffix aperture obey an exact tradeoff
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural/metric strengthening; no canonical promotion claimed  
+**Scope:** the no-positive-density-TB1 near-full paired exact-force shore through `t=(q-k)/D<=1.8687`  
+**Dependencies:** near-full paired destination regime; ordered bilateral narrow-pair theorem; terminal-or-wide-return host-order lemma; exact diameter-normal order; C67 projective direction separation  
+**Certificate:** `research/verify_target_c_high_t_tt_prefix_return_suffix_tradeoff_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The paired destination word is
+
+```text
+TT  ->  mixed  ->  OO.
+```
+
+The ordered bilateral theorem already shows that a TT prefix of length `M` widens the far terminal support-normal interval by `2 delta_D` per cell. The complementary suffix has a second exact metric effect which was not previously recorded.
+
+Once one force lane leaves `T_m`, that lane runs to its opposite physical host for every later center. At a suffix center, the same physical host arc from the mate birth to this opposite-host partner contains **both endpoints-as-support-normals** of every later force cell: the later mate births and the later opposite-host partners. These are distinct actual diameter directions. C67 therefore spends two direction gaps per later cell inside the current pair's near-antipodal projective gap.
+
+Combining this backward count with the forward `2 delta_D` gap growth from ordered bilateral birth yields an exact minimax bound.
+
+Let
+
+\[
+M:=M_{TT},
+\qquad
+L:=N-M
+\]
+
+where `N` is the full near-shore paired population. Then, for all sufficiently large sources:
+
+\[
+\boxed{
+\operatorname{normalspan}(T_m)
+\ge2\gamma_H+2(M-1)_+\delta_D-o(1),
+}
+\]
+
+and **every** force pair in the `L`-cell mixed/OO suffix satisfies
+
+\[
+\boxed{
+\eta_s\ge L\delta_D-o(1).
+}
+\]
+
+Here
+
+\[
+\delta_D=2\arcsin{1\over2D},
+\qquad
+\gamma_H=\arcsin c_H.
+\]
+
+Since
+
+\[
+N>\left({c\over2}-o(1)\right)D,
+\qquad c={113\over5{,}000{,}000},
+\]
+
+this gives a continuous terminal-width / return-aperture tradeoff with
+
+\[
+{M\over D}+{L\over D}>{c\over2}-o(1).
+\]
+
+In particular, if TT is absent (`M=0`), **all** near-full centers satisfy
+
+\[
+\boxed{
+\eta_s\ge {c\over2}-o(1)
+=1.13\times10^{-5}-o(1)\ \text{radians}.
+}
+\]
+
+This improves the preceding full-density return aperture `7.0547e-6` to the exact density-scale value `c/2`, with no density loss.
+
+---
+
+## 1. Paired prefix/suffix notation
+
+Order the retained exact-force centers toward the hub:
+
+\[
+i_1<i_2<\cdots<i_N<k,
+\qquad
+N>\left({c\over2}-o(1)\right)D.
+\tag{PS.1}
+\]
+
+Write the two force bars at center `s` as
+
+\[
+h_s^A=x_s^Ay_s^A,
+\qquad
+h_s^B=x_s^By_s^B,
+\tag{PS.2}
+\]
+
+with births `x_s^A` on physical host `A` and `x_s^B` on physical host `B`.
+
+Terminal membership is a prefix in each lane. Let the two lane cutoffs be `r_A,r_B`, and put
+
+\[
+M:=\min(r_A,r_B),
+\qquad
+L:=N-M.
+\tag{PS.3}
+\]
+
+The first `M` centers are TT. If `L>0`, one of the two lanes leaves the terminal piece at center `M+1` and stays on its opposite physical host for every remaining center. Interchange `A,B` if needed so that this persistent suffix lane is
+
+\[
+\boxed{
+y_s^B\in Q^A\qquad(M<s\le N).}
+\tag{PS.4}
+\]
+
+The mate birth `x_s^A` and the partner `y_s^B` therefore lie on the same physical host `A`.
+
+---
+
+## 2. The return normal interval contains two directions from every later cell
+
+Fix a suffix center `s>M`. Follow physical host `A` in the boundary orientation from the pre-hub birth `x_s^A` toward the post-hub partner `y_s^B`.
+
+For every later center `t>s`:
+
+1. `x_t^A` lies between `x_s^A` and the common hub, because the birth layers occur in increasing interface order;
+2. `y_t^B` lies between the hub and `y_s^B`.
+
+The second statement follows from strict nested support order in the `B`-born lane. Its support ends are nonincreasing with the interface index, so on the opposite physical host the later partner lies no farther toward the terminal end than the earlier partner.
+
+Hence the host arc from `x_s^A` to `y_s^B` contains
+
+\[
+x_s^A,
+\quad
+\{x_t^A:t>s\},
+\quad
+\{y_t^B:t>s\},
+\quad
+y_s^B
+\tag{PS.5}
+\]
+
+in boundary order (allowing partner-vertex ties, but not direction ties).
+
+Every listed point carries an actual diameter support normal:
+
+\[
+d_t^A
+\quad\text{at }x_t^A,
+\qquad
+-d_t^B
+\quad\text{at }y_t^B.
+\tag{PS.6}
+\]
+
+The corresponding diameter edges are all distinct. Bars selected at different switching interfaces belong to disjoint switching sets, and the two bars at one force cell are distinct. Therefore canonical C67 separates every two listed projective directions by at least
+
+\[
+\delta_D:=2\arcsin{1\over2D}.
+\tag{PS.7}
+\]
+
+Suppose the current force pair is in the near-antipodal regime. Then the ordinary support-normal interval from `d_s^A` at `x_s^A` to `-d_s^B` at `y_s^B` has width exactly the projective pair gap
+
+\[
+\eta_s.
+\tag{PS.8}
+\]
+
+There are
+
+\[
+2(N-s)+2
+\tag{PS.9}
+\]
+
+distinct actual diameter directions in this interval: its two endpoints and two directions for every later center. Because this interval has width below `pi/2`, projective C67 separation is ordinary angular separation. Thus
+
+\[
+\boxed{
+\eta_s\ge[2(N-s)+1]\delta_D.
+}
+\tag{PS.10}
+\]
+
+Partner-vertex collisions do not weaken the count. Distinct diameter edges sharing one convex-hull vertex use distinct support normals in that vertex's normal cone, and C67 still separates their projective directions.
+
+---
+
+## 3. Forward bilateral order supplies the complementary count
+
+The ordered bilateral narrow-pair theorem gives, on the same one-sided exact-force population, the contraction of ordinary force opening by at least `2 delta_D` per retained center. Equivalently, while a force pair remains near-antipodal, its projective gap grows by at least `2 delta_D` per retained center.
+
+Restrict to the suffix and reindex
+
+\[
+j:=s-M,
+\qquad 1\le j\le L.
+\tag{PS.11}
+\]
+
+If the current pair is narrow enough to be in the near-antipodal regime, comparison with the first suffix center gives
+
+\[
+\boxed{
+\eta_s\ge2(j-1)\delta_D.
+}
+\tag{PS.12}
+\]
+
+If it is not in that regime, the host transverse margin gives a fixed lower bound of order one, which is automatically larger than all density-scale bounds below for sufficiently large `D`.
+
+Since
+
+\[
+N-s=L-j,
+\]
+
+(PS.10) becomes
+
+\[
+\boxed{
+\eta_s\ge[2(L-j)+1]\delta_D.
+}
+\tag{PS.13}
+\]
+
+Therefore every suffix center satisfies
+
+\[
+\eta_s
+\ge
+\max\{2(j-1),\ 2(L-j)+1\}\delta_D
+\tag{PS.14}
+\]
+
+unless its gap is already macroscopically larger.
+
+The elementary discrete minimax identity is
+
+\[
+\boxed{
+\min_{1\le j\le L}
+\max\{2(j-1),\ 2(L-j)+1\}
+=L.
+}
+\tag{PS.15}
+\]
+
+Consequently
+
+\[
+\boxed{
+\eta_s\ge L\delta_D
+\qquad(M<s\le N)
+}
+\tag{PS.16}
+\]
+
+up to the harmless finite-source host-margin threshold distinction. Asymptotically it is enough to write `L delta_D-o(1)` uniformly.
+
+This is stronger than the previous host-arc chord estimate: it uses the exact diameter support normals on **both** endpoint lanes and pays no `c_H` projection factor.
+
+---
+
+## 4. TT prefix widens the terminal normal span
+
+For completeness, the ordered bilateral theorem gives the complementary TT statement directly. If `M>=1`, the first TT pair has ordinary force opening at least
+
+\[
+2(\gamma_H-o(1))+2(M-1)\delta_D.
+\tag{PS.17}
+\]
+
+At the two terminal partner endpoints, the outward diameter support normals are the antipodes of the two birth normals, so their ordinary separation is the same. Both belong to `T_m`. Hence
+
+\[
+\boxed{
+\operatorname{normalspan}(T_m)
+\ge2\gamma_H+2(M-1)\delta_D-o(1).
+}
+\tag{PS.18}
+
+Type-II near-disk convergence transfers this to the same central-radial angular lower bound up to `o(1)`.
+
+The pair of bounds (PS.16) and (PS.18) is the advertised tradeoff. Increasing the TT prefix spends terminal normal span; shortening it leaves a longer suffix whose every force cell has a larger projective aperture.
+
+---
+
+## 5. No-TT branch is fixed-wide at full density with aperture `c/2`
+
+Set `M=0`. Then `L=N`, so (PS.16) applies to every center:
+
+\[
+\eta_s\ge N\delta_D-o(1).
+\tag{PS.19}
+
+Since
+
+\[
+D\delta_D\to1
+\]
+
+and (PS.1) gives `N/D>c/2-o(1)`, we obtain
+
+\[
+\boxed{
+\eta_s\ge {c\over2}-o(1)
+=1.13\times10^{-5}-o(1)
+}
+\tag{PS.20}
+\]
+
+uniformly over the entire near-full population.
+
+Thus in the no-TT branch all
+
+\[
+\boxed{
+(1.13\times10^{-5}-o(1))D
+}
+\tag{PS.21}
+
+force cells have a fixed projective aperture asymptotic to at least `1.13e-5` radians.
+
+The corresponding central-diamond endpoint-separation coefficient is
+
+\[
+\boxed{
+\sin{c\over4}
+=5.64999999997\ldots\times10^{-6}.
+}
+\tag{PS.22}
+
+This supersedes the preceding return-only full-density aperture
+
+\[
+{c_Hc\over1+c_H}=7.05474558522\ldots\times10^{-6}
+\]
+
+by using exact support-normal direction counting rather than only host-arc metric projection.
+
+---
+
+## 6. Density-scale tradeoff form
+
+Let along a subsequence
+
+\[
+{M\over D}\to\theta,
+\qquad
+{L\over D}\to\ell.
+\tag{PS.23}
+\]
+
+Then
+
+\[
+\theta+\ell\ge{c\over2}
+\tag{PS.24}
+\]
+
+and the two surviving structures satisfy
+
+\[
+\boxed{
+\liminf\operatorname{normalspan}(T_m)
+\ge2\gamma_H+2\theta,
+}
+\tag{PS.25}
+\]
+
+when `theta>0`, while every force cell in the return suffix has
+
+\[
+\boxed{
+\liminf\eta_s\ge\ell.
+}
+\tag{PS.26}
+\]
+
+Here (PS.26) means the uniform lower bound on the suffix after taking the chosen subsequence.
+
+This is a useful quantitative interface for a later terminal upper bound. Any independent theorem giving
+
+\[
+\operatorname{normalspan}(T_m)
+\le2\gamma_H+2\Theta+o(1)
+\]
+
+would immediately force `theta<=Theta` and hence a return suffix of density at least `c/2-Theta`, every cell of which has projective aperture at least the same density constant.
+
+C-II remains open. The immediate live targets are now sharply separated: control terminal normal span from above, or use the fixed-wide nested return suffix against the common near-equilateral train grid.
+
+**Disposition:** proved an exact TT-prefix / opposite-host-return-suffix tradeoff. Each TT cell spends two C67 gaps of terminal normal span; every cell in the complementary suffix has projective force-pair aperture at least the suffix density scale. In particular, no TT implies a full-density fixed-wide force population with gap `c/2-o(1)`. C-II and Level I remain open.

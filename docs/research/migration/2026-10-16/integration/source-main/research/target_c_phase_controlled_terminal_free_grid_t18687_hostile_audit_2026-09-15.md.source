@@ -1,0 +1,94 @@
+# Hostile audit — phase-controlled terminal-free grid at `t<=1.8687`
+
+**Date:** 2026-09-15  
+**Reviewed:** `research/target_c_phase_controlled_terminal_free_grid_t18687_2026-09-15.md`  
+**Verdict:** **PASS at proof-only scope.**  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+This audit checks the two additions beyond the parent terminal-free corridor: the use of the `B_0` phase-controlled subfamily for a macroscopic clean run, and the exact complete-bipartite classification of all trains meeting one clean cell.
+
+## 1. `B_0` has the claimed size and uniform two-row defect — PASS
+
+The merged high-`t` rectangle joint-cusp theorem first obtains an oriented common family `B_+` with size `>0.1567D-o(D)` and then applies Markov to
+
+\[
+x_b=\delta_{0b}+\delta_{1b},
+\qquad \sum_{b\in B_+}x_b<1,109,000.
+\]
+
+Its retained half-family satisfies
+
+\[
+|B_0|>0.0783D-o(D)
+\]
+
+and
+
+\[
+x_b<{1.416\times10^7\over D}+o(D^{-1}).
+\]
+
+Since both summands are nonnegative, each row/column angular defect separately obeys the same bound. The candidate imports exactly this statement and does not strengthen the coefficient.
+
+## 2. The terminal-free run argument applies unchanged to a subfamily — PASS
+
+The `B_0` trains remain pairwise noncrossing proper row-to-row crosscuts and inherit a common order from `B_+`. Removing columns from the larger family merely coarsens the ladder cells; it does not create a terminal on a selected centerline.
+
+Each bad `B_0` cell contains at least one terminal occurrence assigned to the parent strip, so there are at most `1,108,999` bad cells. Hence the longest clean run has asymptotic density
+
+\[
+{0.0783\over1,109,000}
+={783\over11,090,000,000}
+=7.060414788\ldots\times10^{-8},
+\]
+
+which the exact verifier safely rounds to `>7.06e-8`.
+
+A coarsened clean cell may contain unselected `B_+` trains or other train centerlines. This is allowed and is exactly why the rectangular-saturation classification below is needed.
+
+## 3. Uniform column phase width — PASS
+
+All `B_0` columns use the same oriented branch. With fixed row lift `alpha_0`,
+
+\[
+\beta_b-\alpha_0-\pi/3=\delta_{0b}
+\]
+
+and `0<delta_{0b}<1.416e7/D+o(D^-1)`. Therefore for any two retained columns
+
+\[
+|\beta_b-\beta_{b'}|
+=|\delta_{0b}-\delta_{0b'}|
+<2.832e7/D+o(D^{-1}).
+\]
+
+No circular-wrap problem occurs because all lifts lie in one shrinking oriented branch.
+
+## 4. Every train meeting a clean cell crosses an opposite side pair — PASS
+
+Fix a clean cell `K` bounded cyclically by row/column train arcs `a_0,b_1,a_1,b_0`. Let `sigma` be another complete train meeting `int K`.
+
+- `sigma` cannot terminate in `K` by cleanliness.
+- It cannot cross one boundary train twice because two complete trains meet at most once.
+- It cannot cross two adjacent boundary trains, because adjacent boundary trains already cross at a corner rhombus; a third train crossing both would make a triangle in the stopped-train crossing graph.
+- It cannot pass through a corner crossing: one strict rhombus contains exactly the two crossing trains defining it.
+
+Therefore the boundary-crossing set of `sigma` is an independent two-set in the four-cycle of boundary trains, hence exactly one opposite pair. This gives the row-like/column-like dichotomy. A train wholly trapped in `K` would have both physical terminals there and is also excluded.
+
+## 5. Same-family noncrossing is global, not merely local — PASS
+
+Two column-like trains both cross `a_0`. If they crossed one another anywhere in the full train complex, those three trains would be pairwise crossing, violating global triangle-freeness. Thus they are globally noncrossing. The same argument with `b_0` applies to row-like trains.
+
+This also covers a boundary column versus an interior column-like train: both cross `a_0`, so they cannot cross each other elsewhere. Likewise for boundary rows.
+
+## 6. Every cross-family pair crosses exactly once inside the cell — PASS
+
+A column-like arc in `K` joins the two row sides. A row-like arc joins the two column sides. In a topological quadrilateral, two proper arcs joining opposite side pairs must intersect. Their parent complete trains cross at most once globally, so the intersection is unique. Train-centerline intersections occur at strict-rhombus centers.
+
+Different cross-family pairs give different rhombi because one strict rhombus has exactly one pair of crossing trains. After adjoining the boundary rows/columns, the induced train crossing graph is therefore exactly complete bipartite `K_{p,q}` with `p,q>=2`.
+
+## 7. No deformation claim is smuggled in — PASS
+
+The exact rectangular train grid is a local topological normal form. Its complete trains extend outside the cell, so the theorem does not claim independent local shear coordinates, fixed-boundary flexibility, or a diameter-decreasing motion.
+
+**Final verdict:** the phase-controlled clean run and exact rectangular saturation follow from already-audited joint-cusp and train-topology inputs. C-II remains open.

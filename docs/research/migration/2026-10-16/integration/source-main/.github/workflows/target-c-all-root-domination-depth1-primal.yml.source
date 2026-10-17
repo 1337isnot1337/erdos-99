@@ -1,0 +1,76 @@
+name: Target C all-root domination depth-1 primal audit
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: target-c-all-root-domination-depth1-primal
+  cancel-in-progress: true
+
+jobs:
+  scan:
+    if: github.actor == github.repository_owner && vars.E99_HISTORICAL_CI == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        part: [0, 1, 2, 3, 4, 5, 6, 7]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical discovery dependency
+        run: python -m pip install --disable-pip-version-check scipy
+      - name: Audit one endpoint partition
+        run: |
+          python research/verify_target_c_support7_h6_all_root_domination_depth1_primal_2026_09_19.py \
+            --part ${{ matrix.part }} --parts 8 \
+            --output primal-${{ matrix.part }}.json \
+            | tee primal-${{ matrix.part }}.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: target-c-rootdom-primal-${{ matrix.part }}
+          path: |
+            primal-${{ matrix.part }}.json
+            primal-${{ matrix.part }}.log
+          if-no-files-found: warn
+
+  summarize:
+    if: github.actor == github.repository_owner && vars.E99_HISTORICAL_CI == 'true'
+    needs: scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install numerical discovery dependency
+        run: python -m pip install --disable-pip-version-check scipy
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: target-c-rootdom-primal-*
+          path: primal-results
+          merge-multiple: true
+      - name: Summarize exact primal witnesses
+        run: |
+          python research/verify_target_c_support7_h6_all_root_domination_depth1_primal_2026_09_19.py \
+            --summary-dir primal-results \
+            --summary-output primal-summary.json \
+            | tee primal-summary.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: target-c-rootdom-primal-summary
+          path: |
+            primal-summary.json
+            primal-summary.log

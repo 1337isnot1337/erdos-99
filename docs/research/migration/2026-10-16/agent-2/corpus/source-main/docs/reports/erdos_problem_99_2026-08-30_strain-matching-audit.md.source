@@ -1,0 +1,68 @@
+<!-- theorem-state: {"artifact_id":"ART-F652EF64ED1C","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Erdős Problem #99 — zero-Hall-charge strain audit
+
+## Exact finite lemma
+
+Let (I) be a finite index set, let (z_i) be points of the unit triangular
+lattice, and let
+
+\[
+Y=\{z_i:i\in I\},
+\qquad
+X=\{s z_i+c:i\in I\},
+\qquad s>1.
+\]
+
+Assume (X) is unit-separated and
+
+\[
+|s z_i+c-z_i|<1qquad(i\in I).
+\]
+
+Then the identity map (s z_i+c\mapsto z_i) is a strict-conflict matching from X
+to Y.  Since the two shores have the same cardinality,
+
+\[
+\nu(X,Y)=|I|,
+\qquad
+\max_{Q\subseteq X}\bigl(|Q|-|N_Y(Q)|\bigr)=0.
+\]
+
+The second equality is the ordinary matching deficiency formula.  No geometric
+optimality is being assumed.
+
+## Why this matters
+
+For a square index patch (I=\{0,\ldots,L-1\}^2), take
+
+\[
+s=1+\frac{\alpha}{L},
+\qquad c=0,
+\]
+
+with (0<\alpha<1/\sqrt3).  Every (X)-point is a scaled lattice point, so X has
+no unit edges and no unit equilateral triangles.  Y is an unscaled lattice patch and
+contains many unit equilateral triangles.  Yet the strict-conflict graph has a
+perfect identity matching, because the displacement
+
+\[
+|(s-1)z_i|\le \frac{\alpha}{L}\sqrt3(L-1)<1.
+\]
+
+Thus an (O(1/L)) distributed strain can erase every exact unit contact on the
+source side while leaving the source-to-lattice Hall deficiency exactly zero.  If
+one adds one extra lattice point to Y, the same matching gives deficiency exactly at
+most one; the output of [`capacity_flag.py`](../../research/capacity_flag.py) records
+both values for (L=8, \alpha=1/4).
+
+This is a finite, exact explanation for why local monomer purity, triangle-freeness,
+and bounded-displacement matching cannot by themselves prove the Target A inequality
+
+\[
+h(G)\ge j.
+\]
+
+The missing ingredient must still be global diameter optimality or an exterior/
+boundary constraint that invalidates the identity matching.  In particular, the
+calculation is not a counterexample to Erdős Problem #99: the strained patch is not
+claimed to be a globally diameter-minimizing configuration.

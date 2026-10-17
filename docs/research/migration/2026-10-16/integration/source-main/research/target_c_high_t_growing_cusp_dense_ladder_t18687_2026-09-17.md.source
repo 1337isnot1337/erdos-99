@@ -1,0 +1,312 @@
+# Target C-II — the dense phase-pure cusp ladder can have growing depth
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` strengthening; no canonical promotion claimed  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch through `t=(q-k)/D<=1.8687`  
+**Dependencies:** dense fixed cusp-chain phase/bracket theorem and its global sliding-window budgets  
+**Certificate:** `research/verify_target_c_high_t_growing_cusp_dense_ladder_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The dense cusp-chain theorem was stated for every fixed depth `R`. Its proof also permits an explicit growing depth. The only extra bookkeeping is that a length-`R_D` window containing the unique diameter-routing hub must be discarded; there are at most `R_D` such windows, which is negligible when `R_D=o(D)`.
+
+In particular, taking
+
+\[
+R_D=\lfloor D^{1/3}\rfloor,
+\qquad
+\sigma_D=D^{-1/3},
+\qquad
+\mu=0.01,
+\tag{GC.1}
+\]
+
+produces `R_D+1 -> infinity` consecutive nonhub selected O--O rows with one common transverse train family `P_D` satisfying
+
+\[
+\boxed{|P_D|>(0.6536-o(1))D,}
+\tag{GC.2}
+\]
+
+and every row-column crossing in the whole growing rectangle has defect
+
+\[
+\boxed{
+0<\delta_{jb}
+\le(1{,}109{,}000+o(1))D^{-1/3}.
+}
+\tag{GC.3}
+
+The same common column order contains two common circumcenter flanks, simultaneously on every one of the `R_D+1` rows, each of density
+
+\[
+\boxed{
+0.6536-{1.02\over\sqrt3}-o(1)
+=0.0647027254\ldots-o(1).
+}
+\tag{GC.4}
+
+Thus the dense common-ladder geometry is not only a fixed-depth compactness statement: it persists through a polynomially growing sequence of consecutive strips.
+
+---
+
+## 1. Sliding-window averaging remains valid for `R_D=o(D)`
+
+Use the notation of the dense fixed-chain theorem. The selected consecutive high-`t` row block has
+
+\[
+m_D>cD-o(D),
+\qquad c=0.0000226.
+\tag{GC.5}
+
+For each internal interface let
+
+\[
+J_i^{\rm full}=N_i+L_i+DB_i+F_i+F_{i+1},
+\]
+
+where `F_j` is the full angular-defect sum of row `j`. The global budgets give
+
+\[
+\sum_iJ_i^{\rm full}\le K_{\rm glob}D+o(D),
+\tag{GC.6}
+
+with the already certified strict inequality
+
+\[
+{K_{\rm glob}\over c}<1{,}108{,}000<H,
+\qquad H:=1{,}109{,}000.
+\tag{GC.7}
+
+Let `R_D` be any positive integer sequence satisfying
+
+\[
+R_D\to\infty,
+\qquad
+R_D=o(D).
+\tag{GC.8}
+
+Consider every length-`R_D` window of consecutive internal interfaces in the full row block. Before excluding the hub, the number of such windows is
+
+\[
+m_D-O(R_D)=cD-o(D).
+\tag{GC.9}
+
+A fixed interface, in particular the unique routing-hub interface, belongs to at most `R_D` length-`R_D` windows. Hence deleting every window containing the hub removes only
+
+\[
+O(R_D)=o(D)
+\]
+
+windows. The number of admissible hub-free windows is still
+
+\[
+cD-o(D).
+\tag{GC.10}
+
+Every interface belongs to at most `R_D` admissible windows, so by nonnegativity
+
+\[
+\sum_W\sum_{i\in W}J_i^{\rm full}
+\le R_D\sum_iJ_i^{\rm full}
+\le R_D(K_{\rm glob}D+o(D)).
+\tag{GC.11}
+
+Divide by the `cD-o(D)` admissible windows. Since the strict margin in (GC.7) is fixed, for all sufficiently large `D` some hub-free window satisfies
+
+\[
+\boxed{
+\sum_{i=0}^{R_D-1}J_i^{\rm full}<H R_D.
+}
+\tag{GC.12}
+
+The global `o(D)` error becomes `o(R_D)` after this averaging, so no uniform fixed-`R` asymptotic assumption is being smuggled into the growing-depth step.
+
+---
+
+## 2. The whole growing block shares almost the full crossing family
+
+Let the rows in the selected window be
+
+\[
+\tau_0,\ldots,\tau_{R_D}.
+\]
+
+Every row has
+
+\[
+|\Gamma_j|>r_0D-o(D),
+\qquad r_0=0.6536.
+\tag{GC.13}
+
+Adjacent terminal topology gives
+
+\[
+|\Gamma_j\triangle\Gamma_{j+1}|\le L_j.
+\]
+
+The `L_j` part of (GC.12) gives
+
+\[
+\sum_{j=0}^{R_D-1}L_j<HR_D.
+\]
+
+Starting with `Gamma_0` and passing successively through the rows, at most `L_j` trains can be lost from the running intersection at step `j`. Hence
+
+\[
+\left|\bigcap_{j=0}^{R_D}\Gamma_j\right|
+\ge |\Gamma_0|-\sum_{j=0}^{R_D-1}L_j
+>r_0D-HR_D-o(D).
+\tag{GC.14}
+
+Since `R_D=o(D)`,
+
+\[
+\boxed{
+\left|\bigcap_{j=0}^{R_D}\Gamma_j\right|
+>(r_0-o(1))D.
+}
+\tag{GC.15}
+
+Any two trains in this intersection both cross `tau_0`; triangle-freeness of the complete-train crossing graph makes the common column family internally noncrossing. The standard pseudoline order lemma therefore gives one common column order on all `R_D+1` rows.
+
+---
+
+## 3. Vanishing column deletion gives uniform phase purity through growing depth
+
+The full row-defect part of (GC.12) gives
+
+\[
+\sum_{j=0}^{R_D}F_j<HR_D.
+\tag{GC.16}
+
+For a common column `b`, let
+
+\[
+\Delta_b:=\sum_{j=0}^{R_D}\delta_{jb}.
+\]
+
+Then
+
+\[
+\sum_b\Delta_b<HR_D.
+\tag{GC.17}
+
+Choose any sequence `sigma_D>0` such that
+
+\[
+\sigma_D\to0,
+\qquad
+{R_D\over\sigma_DD}\to0.
+\tag{GC.18}
+
+Delete columns with
+
+\[
+\Delta_b>{HR_D\over\sigma_DD}.
+\tag{GC.19}
+
+There are fewer than `sigma_DD=o(D)` such columns. Call the surviving common family `P_D`. From (GC.15),
+
+\[
+\boxed{|P_D|>(r_0-o(1))D.}
+\tag{GC.20}
+
+For every retained row-column crossing,
+
+\[
+\boxed{
+0<\delta_{jb}
+\le {HR_D\over\sigma_DD}=o(1),
+}
+\tag{GC.21}
+
+uniformly over all `0<=j<=R_D` and all `b in P_D`.
+
+This is one common column family through the entire growing block, not separate local ladders.
+
+---
+
+## 4. Concrete balanced choice `R_D=D^(1/3)`
+
+Take (GC.1). Then
+
+\[
+{R_D\over\sigma_DD}
+=D^{-1/3}+o(D^{-1/3}),
+\]
+
+so (GC.21) becomes (GC.3).
+
+The interface depth grows as `D^(1/3)`, the relative column deletion is `D^-1/3`, and the uniform angular defect is also `O(D^-1/3)`.
+
+More generally, if
+
+\[
+R_D=D^a,
+\qquad
+\sigma_D=D^{-b}
+\]
+
+with
+
+\[
+0<a<1,
+\qquad
+0<b<1-a,
+\]
+
+then the common-column loss is `O(D^{1-b})=o(D)` and the uniform defect is
+
+\[
+O(D^{a+b-1})=o(1).
+\tag{GC.22}
+
+---
+
+## 5. Circumcenter flanks survive through the entire growing block
+
+Fix `mu=.01`. The exact train-step metric and source circumdisk capacity apply row by row to the same ordered family `P_D`. After the `o(D)` column deletion, each row has more than
+
+\[
+\left(
+ r_0-{1.02\over\sqrt3}-o(1)
+\right)D
+\]
+
+retained crossings below `-.01D`, and the same number above `+.01D`.
+
+Since the column order is common on all `R_D+1` rows, the same initial and final column blocks work simultaneously on every row. Therefore there are
+
+\[
+P_D^-,P_D^+\subset P_D
+\]
+
+with
+
+\[
+\boxed{
+|P_D^-|,|P_D^+|>
+(0.0647027254\ldots-o(1))D
+}
+\tag{GC.23}
+
+such that every crossing center in `P_D^-` lies below the `-.01D` row-normal level and every crossing center in `P_D^+` lies above `+.01D`, simultaneously for all rows in the growing block.
+
+---
+
+## 6. Frontier effect
+
+The fixed-chain theorem is therefore not intrinsically finite-depth. The current high-`t` survivor contains a common ordered train rectangle with
+
+```text
+D^(1/3)+1 consecutive rows;
+(0.6536-o(1))D common columns;
+uniform O(D^(-1/3)) angular defect on every cell;
+(0.0647027-o(1))D common columns on each side of a +-0.01D circumcenter corridor on every row.
+```
+
+Other sublinear depth/error tradeoffs are available from (GC.22).
+
+This does not close C-II. It removes the possibility that the dense common-ladder geometry is only a bounded-depth phenomenon. A remaining closure can now use a genuinely growing near-equilateral strip with one common transverse shore and common metric bracketing, rather than only a fixed-depth diagonal statement.
+
+**Disposition:** upgraded the dense fixed cusp-chain scaffold to explicit growing depth `D^(1/3)` with near-full common columns, uniform `O(D^-1/3)` phase defect, and common circumcenter flanks. C-II and Level I remain open.

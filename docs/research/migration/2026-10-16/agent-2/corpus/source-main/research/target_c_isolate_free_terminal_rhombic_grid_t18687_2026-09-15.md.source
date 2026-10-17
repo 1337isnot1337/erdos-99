@@ -1,0 +1,70 @@
+# Target C-II — the high-`t` terminal-free rhombic corridor is isolate-free
+
+**Date:** 2026-09-15  
+**Status:** proof-only structural corollary  
+**Scope:** canonical full-core/no-macroscopic-container Type-II branch with `t=(q-k)/D<=1.8687`  
+**Dependencies:** terminal-free rhombic corridor / phase-controlled terminal-free grid; merged isolate-host face-degree theorem  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The terminal-free corridor theorem already proves that, in a linear consecutive subcorridor of the high-`t` ladder, every bounded contact face is a strict unit rhombus. Its statement deliberately left open the possibility that a contact-isolated source point might lie inside one of those rhombi.
+
+That caveat is unnecessary once the merged isolate-host theorem is used.
+
+## 1. Isolate-host faces have degree at least seven
+
+The merged isolate-host theorem states: if a contact-isolated source point `z` lies in the interior of a bounded contact face `C`, then `C` has at least seven unit-contact sides.
+
+Indeed, for consecutive face vertices `v_i,v_{i+1}` one has
+
+\[
+|z-v_i|>1,\qquad |z-v_{i+1}|>1,\qquad |v_i-v_{i+1}|=1.
+\]
+
+Writing `theta_i` for the angle at `z` between the two radius vectors, the cosine law gives
+
+\[
+\cos\theta_i
+=\frac{|z-v_i|^2+|z-v_{i+1}|^2-1}
+       {2|z-v_i|\,|z-v_{i+1}|}
+>\frac12,
+\]
+
+hence `theta_i<pi/3`. The central angles around an interior point sum to `2pi`, so six sides cannot suffice. Thus every isolate-hosting bounded face has degree at least seven.
+
+## 2. The clean corridor contains no contact-isolates
+
+In the terminal-free corridor, every bounded contact face meeting the open corridor is a strict rhombus, hence has degree four.
+
+Assume a contact-isolated source point `z` lies in the open corridor. Because the retained corridor is internal and disjoint from the global outer boundary, `z` lies in the interior of some bounded face of the embedded contact graph. That face would have to be an isolate-hosting bounded face, so the preceding theorem forces degree at least seven. But the terminal-free corridor theorem forces the same face to be a strict rhombus of degree four. Contradiction.
+
+Therefore
+
+\[
+\boxed{\text{the open terminal-free rhombic corridor contains no contact-isolated source points.}}
+\tag{IF.1}
+\]
+
+Equivalently, every source point in the open corridor belongs to the contact graph; the interiors of all strict-rhombus cells are source-empty.
+
+## 3. Phase-controlled version
+
+The phase-controlled terminal-free grid is a subcorridor of the same terminal-free region. Hence it inherits (IF.1) without further loss. In particular, through `t<=1.8687` there is a consecutive transverse run of length
+
+\[
+>7.06\times10^{-8}D-o(D)
+\]
+
+inside the selected high-`t` adjacent strip such that
+
+- every bounded contact face in the run is a strict unit rhombus;
+- no contact-isolated source point lies in the run;
+- every retained row-column crossing has angular excess `O(D^{-1})`;
+- the common row/column order and the finite KKT cusp remain unchanged.
+
+Thus the live local model is an actual source-pure rhombic grid corridor, not merely a contact-face-pure corridor with hidden interior isolates.
+
+## 4. Scope
+
+This does not eliminate the remaining one-bar tangent obstruction, the exact-equal-row-phase branch, or C-II itself. It removes one local degree of freedom from the current high-`t` normal form: hidden contact-isolates cannot be used to absorb or obstruct a multishear inside the clean rhombic corridor.
+
+**Disposition:** proved the terminal-free high-`t` rhombic corridor and its phase-controlled subgrid are contact-isolate-free. C-II and Level I remain open.

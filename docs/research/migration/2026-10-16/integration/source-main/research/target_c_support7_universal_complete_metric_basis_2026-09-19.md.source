@@ -1,0 +1,120 @@
+# Target C-II — universal `8+7` complete metric basis for support seven
+
+**Date:** 2026-09-19  
+**Status:** exact structural reduction; theorem-state authority unchanged  
+**Scope:** every generic support-seven reciprocal branch (`H6`, `H7`, or `H8`) with no reciprocal collinear triple  
+**Certificate:** `research/verify_target_c_support7_complete_metric_basis_2026_09_19.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The earlier metric reductions used the fourteen present non-ground relation edges. Their graph has seven vertices and fourteen edges, hence cycle rank eight. Those eight sine-law cycle identities are necessary, but they are not the complete reciprocal metric condition.
+
+All seven non-ground reciprocal points exist even when a support relation is missing. Consequently all twenty-one geometric pairs exist, and every missing support edge still gives an ordinary geometric chord of the reciprocal point set. The complete radial metric condition lives on `K_7`, whose cycle rank is fifteen.
+
+This note gives an exact decomposition
+
+\[
+\boxed{15=8+7}
+\]
+
+that works for every labelled support-seven missing graph and is independent of whether the reciprocal hull type is `H6`, `H7`, or `H8`.
+
+## 1. Sine-law cochain
+
+For distinct non-ground vertices `i,j in {1,...,7}`, define
+
+\[
+A_{ij}=\angle 0ij,
+\qquad
+\rho_i=|y_i-y_0|.
+\]
+
+In triangle `0ij`, the law of sines gives
+
+\[
+\frac{\rho_j}{\rho_i}
+=
+\frac{\sin A_{ij}}{\sin A_{ji}}.
+\]
+
+Thus the antisymmetric cochain
+
+\[
+g_{ij}
+=
+\log\sin A_{ij}-\log\sin A_{ji}
+\]
+
+must equal the potential difference
+
+\[
+g_{ij}=\log\rho_j-\log\rho_i.
+\]
+
+Metric consistency is therefore exactness of `g`.
+
+## 2. Present relation graph: eight conditions
+
+For support seven, the missing non-ground graph is 2-regular on seven vertices. It has seven missing edges, so the present relation graph has
+
+\[
+21-7=14
+\]
+
+edges. For both missing-graph types `C7` and `C3+C4`, the present graph is connected. Choose any spanning tree `T` of the present graph. It has six edges, leaving eight present non-tree edges.
+
+Each present non-tree edge closes one fundamental cycle with `T`. Requiring zero cochain sum on those eight cycles is equivalent to exactness of `g` on the present relation graph.
+
+## 3. Missing chords: seven additional independent conditions
+
+Once the eight present-cycle identities hold, the values of `g` on the spanning tree determine a unique vertex potential up to an additive constant. Every one of the seven missing geometric chords `ab` then has one further required equation:
+
+\[
+\boxed{
+g_{ab}=\sum_{uv\in P_{a\to b}} g_{uv},}
+\]
+
+with signs chosen according to orientation, where `P_{a->b}` is the unique tree path from `a` to `b`.
+
+Equivalently, add the missing chord `ab` to `T`. The resulting fundamental cycle must have zero cochain sum. In multiplicative sine form this is a finite product identity involving the missing-pair angle and the tree-path angles.
+
+There are seven missing chords, and these seven equations are independent modulo the eight relation-cycle equations.
+
+The exact verifier enumerates all 465 labelled 2-regular missing graphs,
+
+\[
+360\ C_7+105\ (C_3\sqcup C_4),
+\]
+
+constructs a deterministic spanning tree in each present graph, forms the eight present fundamental-cycle rows and seven missing-chord rows, and checks over `Q` that
+
+\[
+\operatorname{rank}(\text{present rows})=8,
+\]
+
+while
+
+\[
+\operatorname{rank}(\text{present rows}+\text{missing rows})=15.
+\]
+
+Thus the seven missing-pair identities add exactly seven independent metric constraints.
+
+## 4. Why this is stronger than the existing relation-only metric layer
+
+A realization cannot choose the geometry of a missing reciprocal pair independently. The two endpoints already have fixed radii and fixed ground-ray directions, so their geometric chord must agree with the same global radius potential as the fourteen support edges.
+
+Therefore a nonlinear search that imposes only the eight relation cycles leaves seven metric degrees of inconsistency unchecked. The complete system can be imposed either as fifteen `K7` fundamental cycles or, more economically when extending existing code, as
+
+\[
+\boxed{
+8\text{ present relation cycles}
++
+7\text{ missing-chord cycles}.
+}
+\]
+
+The latter form is useful for the current remaining branches because it reuses the relation-cycle machinery already present in the repository and adds exactly one equation per absent support edge.
+
+For generic `H6`, this agrees with the complete-angular reconstruction theorem already proved in `target_c_support7_h6_complete_metric_integrability_2026-09-19.md`. The graph decomposition itself does not depend on the `H6` hull geometry and therefore also applies to generic `H7` and convex `H8` candidates.
+
+The remaining work is not another graph-rank question. It is to intersect these fifteen metric equations with the branch-specific angular realization system and the seven exact equilateral-pentagon closures. Reciprocal-collinearity walls remain separate. C-II remains open.

@@ -1,0 +1,623 @@
+# Target C — cubic curvature windows for individual harmonic components
+
+```text
+small attachment diameter -> low-curvature mass on a completion normal interval
+-> additive cubic area-deficit charge + dyadic attachment capacity
+-> c_I = O(sqrt(D)), and every component
+has delta_r + 2 = Omega(D^(1/3)) -> bounded/tree contact cores are excluded.
+Still missing: a full-source competitor or exact triangle for the surviving
+large components and contact-isolated population. This chain does not close C-II.
+```
+
+**Date:** 2026-10-02.
+**Starting checkout:** `78a65968d51af7871a0ce5a865bf2db1a2c2e0ec`.
+**Research base:** `fbeae9b3fa18a63e07573676b4e2e512a91ca4d5`.
+**State version:** `2026-09-14.audit.51`; the state files agree at both commits.
+**Branch:** `swarm/root/stress-energy-transport-20261002`.
+**Mission:** test transport of actual diameter loads through positive contact
+equilibrium; then attack the curvature paid by actual harmonic attachment sets.
+No individual assignment or coordination issue was present.
+**Classification:** proved candidates awaiting independent audit and promotion;
+exact small-source regressions. Artifact lifecycle is **unreviewed**.
+**Level I / C-II:** **OPEN / OPEN**.
+
+## 1. Authority, dependencies, and prior scope
+
+Canonical inputs, with their precise uses, are:
+
+- [Theory 01, Theorem 4.1](../docs/theory/01-local-structure.md): normalized
+  vertex equilibrium; Theorem 6.1: every nonisolated unloaded vertex has at
+  least three unit neighbors in the contact-minimal source.
+- [C-I restoration](../docs/targets/target-c/56-ci-restored-frontier.md) and
+  [ZR/ZF](../docs/targets/target-c/57-zr-zf-rigidity-audit.md): full actual
+  positive support on the canonical nonisolated core, and `e+h >= 2v-2`.
+- [Full-source geometry, FS.1 and FS.6](../docs/targets/target-c/58-full-source-geometry-audit.md):
+  `R < D/2 + eta`, `eta=3^(1/4)sqrt(D)`, and diameter midpoint distance
+  `<sqrt(D eta+eta^2)` from the same source circumcenter. Its proof also gives
+  `delta_K=pi D^2/4-area(conv A) < (pi sqrt(3)/4)D`.
+- [Section 62](../docs/targets/target-c/62-attachment-incidence-currency-audit.md):
+  harmonic trapping, `diam(A_r)<=delta_r+2`, and
+  `t_r=delta_r+3+s_r+r_r>=delta_r+3` for the number of attachment
+  edges, and `sum_r delta_r <= 2+2 pi D` after the elimination in Section 75.
+- [Section 75](../docs/targets/target-c/75-all-phase-component-deatomization-audit.md):
+  the three-neighbor strip lemma; loaded contact degree at most three; the
+  eventual fat force hull; and the radius-`22L` boundary window containing a
+  component's attachments when `diam(A_r)<=L<=D/10000`.
+- [Woodall topology](../docs/reports/target_c_woodall_diameter_topology_2026-09-10.md):
+  `h<=q` for the full actual loaded diameter graph.
+
+The only literature import is existence of a planar constant-width completion:
+every finite planar diameter-`D` set is contained in a convex body of constant
+width `D`. The exact statement was checked in Kupitz–Martini–Wegner,
+*A Linear-Time Construction of Reuleaux Polygons*, Beitr. Algebra Geom. 37
+(1996), 415–427, **p. 421**, in the proof of Theorem 0.1, citing their
+reference [5], Theorem 54, p. 126. [Original article](https://emis.de/ft/11518).
+We use existence only; the article's separate uniqueness theorem assumes a
+Hamiltonian diameter graph and is not used.
+
+The support-energy bump in PR #615,
+`target_c_global_diameter_star_cubic_budget_2026-10-02.md`, was inspected.
+Its additive actual-star budget is acknowledged as prior unpromoted work.
+Here the entire needed energy calculation is rederived. No theorem of that PR
+is a premise. The new application is to **short attachment clusters with small
+curvature mass**, not forced zero-curvature intervals at actual diameter stars.
+
+Section 75 already proves `c_I=O(D^(2/3))`. The older unreviewed
+`target_c_nearcircle_no_bounded_harmonic_components_2026-09-09.md` proves a
+qualitative minimum-component divergence under a near-circle hypothesis.
+Neither is claimed as new. The new statements are the explicit individual
+cube-root bound, the `D`-dependent counting window, and the final
+`O(sqrt(D))` count after using the attachment-edge capacity.
+
+All source points, including contact isolates, are retained. `I_r` denotes
+only an unloaded component of the positive nonisolated contact core.
+
+## 2. Local normals of actual diameter endpoints
+
+Let the complete source lie in a radius-`R<D` disk centered at `o` and put
+`r_0=D-R`. If `b` is an actual diameter endpoint with partner `b'`, then
+
+\[
+n_b=(b-b')/D
+\]
+
+is a strict outward supporting unit normal of the complete source hull:
+
+\[
+n_b\cdot(b-x)\ge {|b-x|^2\over2D}>0\quad(x\ne b).
+\tag{2.1}
+\]
+
+Also `|b-o|>=r_0`, and
+
+\[
+(b-o)\cdot n_b
+={|b-o|^2+D^2-|b'-o|^2\over2D}\ge r_0.
+\tag{2.2}
+\]
+
+Thus its angle from the radial direction at `b` is at most
+`alpha=arccos(r_0/R)`. Two endpoint radial directions whose source points
+are at distance at most `L<2r_0` differ by at most
+`gamma=2 arcsin(L/(2r_0))`. Consequently chosen actual diameter normals of
+a cluster of diameter `L` have pairwise angular separation at most
+
+\[
+2\alpha+\gamma.
+\tag{2.3}
+\]
+
+For a global minimizer with `D>=4096`, take the safe radius bound
+`R<25D/48`, since `3^(1/4)<4/3` and `sqrt(D)>=64`.
+Then `r_0>23D/48`. Whenever `L<=3`, or whenever
+`D>=65536` and `L<=sqrt(D)/100`, the quantity
+`t=L/(2r_0)` is less than `1/1000`. Hence
+
+\[
+\cos(\alpha+\gamma/2)
+>{23\over25}{999\over1000}-{10\over25}{1\over1000}
+={22967\over25000}>{\sqrt3\over2}.
+\tag{2.4}
+\]
+
+The square of the final inequality is certified by rational arithmetic.
+It follows that (2.3) is strictly less than `pi/3`. Such a finite normal
+family lies in an ordinary arc of length `<pi/3`: lift relative to one
+normal to `(-pi/3,pi/3)`; the extremes differ by less than `2pi/3<pi`,
+so their ordinary difference is itself their minor separation.
+
+### Lemma 2.1 — at most two loaded unit neighbors
+
+In every unit-separated global minimizer with `D>=4096`, every unit circle
+contains at most two actual diameter endpoints.
+
+**Proof.** Three such points form a triangle of circumradius one. Each
+side is at least one, so each interior angle is at least `pi/6` and
+therefore at most `2pi/3`. Every exterior normal-cone angle is at least
+`pi/3`. Strict supporting normals chosen one at each of the three vertices
+cannot all lie in an arc of length `<pi/3`: in their cyclic normal order,
+the arc from the first to the last passes through the full normal cone of
+the middle vertex. But their source cluster has diameter at most two,
+and (2.3)–(2.4) put the chosen diameter normals in just such an arc.
+Contradiction. This proof does not require triangle-freeness. ∎
+
+### Lemma 2.2 — a loaded contact leaf has an unloaded neighbor
+
+For a global minimizer with `D>=4096`, if a positive-diameter vertex `b`
+has exactly one positive-contact neighbor `x`, then `x` is not an actual
+diameter endpoint.
+
+**Proof.** Suppose it is. Its chosen diameter normal `n_x` has angle
+`<pi/3` from **every** positive diameter normal at `b`, by (2.3) for the
+unit pair. Therefore
+
+\[
+n_x\cdot g_b>0,
+\qquad g_b=\sum_{by}\beta_{by}(b-y).
+\]
+
+Equilibrium gives `g_b=alpha_bx(b-x)`, with `alpha_bx>0`.
+On the other hand (2.1) at `x` gives
+`n_x dot (b-x)<=-1/(2D)<0`. Contradiction. ∎
+
+## 3. Completion energy with a small curvature mass
+
+Choose any constant-width-`D` completion `W` containing the whole source.
+Let `h` be its support function, `p=h-D/2`, and
+`rho=h+h''`. In curvature-measure notation,
+
+\[
+p(\theta+\pi)=-p(\theta),\qquad
+\rho(\theta)+\rho(\theta+\pi)=D.
+\tag{3.1}
+\]
+
+Nonnegative curvature measures and (3.1) give a density
+`0<=rho<=D`; in particular `h` is in `W^(2,infinity)`.
+The support-area formula gives
+
+\[
+\delta_W={\pi D^2\over4}-\operatorname{area}(W)
+={1\over2}E(p),\qquad
+E(g)=\int_0^{2\pi}[(g')^2-g^2].
+\tag{3.2}
+\]
+
+On antiperiodic `H^1` functions, `E` is positive semidefinite: only odd
+Fourier frequencies occur, with coefficients proportional to `j^2-1`.
+Its kernel consists of the first harmonics (translations). With
+`f=p+p''=rho-D/2`, polarization and integration by parts give
+
+\[
+\langle f,g\rangle^2\le2\delta_W E(g).
+\tag{3.3}
+\]
+
+For an interval `J=(-a,a)`, define
+
+\[
+g_J(t)=\cos t/\cos a-1\quad(t\in J),
+\]
+
+its negative antipodal copy on `J+pi`, and zero elsewhere. It is a
+continuous antiperiodic `H^1` function. Put `k=tan a-a`. Direct integration
+on each interval, including the zero endpoint values, gives
+
+\[
+E(g_J)=4k,\qquad
+\langle f,g_J\rangle
+=2\int_J\rho g_J-2Dk.
+\tag{3.4}
+\]
+
+Suppose `L>=2`, `a=1/(8L)`, `D>=10000 L^2`, and
+`int_J rho <=2L`. Since `a<=1/16`,
+
+\[
+0\le g_J\le\sec a-1\le a^2,
+\quad k\ge a^3/3,
+\quad 4La^2\le Dk.
+\tag{3.5}
+\]
+
+The secant estimate follows from `cos a>=1-a^2/2`; the tangent estimate
+follows by integrating `tan^2 t>=t^2`. Thus (3.4) is at most `-Dk`.
+
+If `N` intervals of the same length `2a` have their intervals and
+antipodal copies pairwise disjoint in interior, then their bumps have
+disjoint supports. Applying (3.3) to their sum yields
+
+\[
+\boxed{
+\delta_K\ge\delta_W\ge {ND^2k\over8}
+\ge {ND^2\over12288 L^3}.}
+\tag{3.6}
+\]
+
+This is a simultaneous inequality. No individual deficit inequalities are
+summed without first establishing disjoint support.
+
+## 4. Each actual harmonic attachment cluster supplies such an interval
+
+Fix `I_r`, its distinct loaded attachment set `A_r`, and an upper bound
+`diam(A_r)<=L>=2`. Assume `D>=65536` and `L<=sqrt(D)/100`.
+Choose one actual diameter normal at each attachment. By Section 2 their
+normal arc has span `delta<pi/3`.
+
+Let `w` be its bisector, with tangent `Jw`. Supporting inequalities at
+two attachments and the decompositions
+`n_i=cos(theta_i)w+sin(theta_i)Jw`, `|theta_i|<=delta/2`, imply
+
+\[
+\operatorname{width}_{\operatorname{conv}A_r}(w)
+\le L\tan(\delta/2).
+\tag{4.1}
+\]
+
+Indeed for their difference `d`, one supporting inequality bounds `w dot d`
+below by `-tan(theta_i)Jw dot d`, and the other bounds it above by
+`-tan(theta_j)Jw dot d`; `|Jw dot d|<=L`.
+
+Harmonic trapping puts `I_r` and all its contact neighbors in
+`conv(A_r)`. An unloaded vertex has at least three unit neighbors, so
+canonical Lemma 75.1 gives width at least `1/2` in **every** direction.
+Consequently
+
+\[
+\delta\ge2\arctan(1/(2L))\ge1/(2L).
+\tag{4.2}
+\]
+
+The completion is supported at the same actual attachment by each of the
+chosen diameter normals: (2.1) holds for all `x in W` because `W` has
+diameter `D` and contains the attachment's diameter partner.
+Take the extreme normals and their support points. Along the intervening
+completion boundary arc, tangent projection onto the bisector tangent is
+at least `cos(delta/2)>1/2`. The chord of its two support points is at
+most `L`; hence
+
+\[
+\int_{\text{whole normal arc}}\rho\le2L.
+\tag{4.3}
+\]
+
+Choose any subinterval of length `1/(4L)=2a` inside this arc.
+Equations (4.2)–(4.3) establish all hypotheses of (3.6) for `N=1`.
+
+### Theorem 4.1 — uniform individual cube-root diameter
+
+For every canonical triangle-free C-II source with `D>=65536`, every
+unloaded positive-contact component satisfies
+
+\[
+\boxed{(\delta_r+2)^3>{D\over3072\pi\sqrt3}.}
+\tag{4.4}
+\]
+
+**Proof.** Set `L=delta_r+2`. If `L<=sqrt(D)/100`, combine (3.6) and
+`delta_K<(pi sqrt(3)/4)D`. If `L>sqrt(D)/100`, the same conclusion is
+automatic: `3072 pi sqrt(3)>25^3`, and `D^(1/6)>4` in this range, so
+`sqrt(D)/100>(D/(3072 pi sqrt(3)))^(1/3)`. ∎
+
+The identical proof works for `L=max(2,diam(A_r))`; it also gives a
+cube-root lower bound on the **physical** attachment diameter, once the
+right-hand side exceeds eight. This is stronger than divergence of graph
+diameter alone. No smooth disk limit is assumed.
+
+## 5. Simultaneous counting windows and the square-root count
+
+Use the eventual canonical fat force hull in Lemma 75.3. For an integer
+`M>=0`, put `L=M+2`, assume `L<=sqrt(D)/100`, and let `N_M` count
+components with `delta_r<=M`. Section 75.2 puts the attachments of each
+counted component in a circular boundary-arclength window of radius
+`w=22L` around any representative attachment. Its hypotheses hold here:
+`D>=65536` and `L<=sqrt(D)/100` imply `L<=D/10000`.
+
+Choose a maximal collection of representatives separated by more than
+`2w`, retaining one component at each chosen representative. Let its
+size be `K`. Their radius-`w` windows are disjoint. Every other
+representative is within `2w` of a chosen one. Such a covering window
+has arclength `4w`, contains at most `4w+1` unit-separated loaded
+vertices, and each vertex represents at most three components. Therefore
+
+\[
+N_M\le3(88L+1)K\le267LK.
+\tag{5.1}
+\]
+
+The chosen components supply normal intervals of length `1/(4L)` by
+Section 4. These intervals have disjoint interiors: chosen attachment
+sets lie in disjoint source-hull boundary windows, and their strict
+supporting normals occur in the same cyclic normal order. This argument
+uses actual attachment hull vertices; it does not identify a scaffold
+with the source.
+
+An interval of this fixed length can overlap the antipodal copies of at
+most two other intervals of the same length with disjoint interiors.
+Thus the antipodal-overlap graph has maximum degree two. Greedy selection
+retains at least `K/3` intervals whose supports together with antipodal
+copies have pairwise disjoint interiors. Apply (3.6) to this selection,
+and use the canonical area allowance, to obtain
+
+\[
+K<9216\pi\sqrt3\,{L^3\over D}.
+\]
+
+Together with (5.1) this proves the finite window inequality
+
+\[
+\boxed{N_M<C_W{(M+2)^4\over D},\qquad
+C_W=2460672\pi\sqrt3.}
+\tag{5.2}
+\]
+
+The constants are deliberately coarse. When its right side is below one,
+(5.2) means `N_M=0`; if there are no selected representatives, the strict
+bound is immediate.
+
+### Intermediate bound — exponent 3/5 without attachment-edge charging
+
+Every sufficiently large canonical triangle-free C-II source satisfies
+
+\[
+\boxed{c_I=O(D^{3/5}).}
+\tag{5.3}
+\]
+
+More precisely, whenever the finite-window hypotheses above hold,
+
+\[
+\boxed{c_I<C_W{(M+2)^4\over D}
++{2+2\pi D\over M+1}.}
+\tag{5.4}
+\]
+
+**Proof.** Components not counted by `N_M` have integer graph diameter
+at least `M+1`; the canonical sum-diameter ledger bounds their number
+by `(2+2pi D)/(M+1)`. This proves (5.4). Taking
+`M=floor(D^(2/5))` gives (5.3). For all sufficiently large `D`, this
+choice satisfies `M+2<=sqrt(D)/100`. The fat-hull threshold is the
+canonical nonexplicit one; no numerical Level I threshold is inferred. ∎
+
+### Exact scalar consequences
+
+The stronger result below changes the error orders in Section 75's identities:
+
+\[
+e_{BB}+s_C=q+k+O(\sqrt D),\qquad
+m_B+k=c_B+s_C+O(\sqrt D),
+\]
+
+\[
+\mu_DD=q+s_C-2k+O(\sqrt D)
+=2q-e_{BB}-k+O(\sqrt D).
+\tag{5.5}
+\]
+
+These remain necessary ledgers; no sign contradiction follows from them.
+
+### Theorem 5.1 — finite dyadic attachment capacity
+
+For an integer `M>=1`, count components in the diameter band
+`M<=delta_r<2M`, and put `L=2M+2`. Under the same fat-hull hypotheses,
+`D>=65536`, and `L<=sqrt(D)/100`, their number `B_M` satisfies
+
+\[
+\boxed{B_M<C_B{(2M+2)^3\over D},\qquad
+C_B=7372800\pi\sqrt3.}
+\tag{5.6}
+\]
+
+**Proof.** Repeat the maximal separated representative selection, with
+radius `w=22L`. Each component assigned to a chosen representative has
+its own representative within `2w` and all its attachments within `w`
+of that representative. Thus every attachment of every assigned
+component lies in the radius-`3w` boundary window about the chosen one.
+It contains at most `6w+1=132L+1` loaded vertices.
+
+The canonical **edge** identity is
+
+\[
+t_r=\delta_r+3+s_r+r_r\ge M+3.
+\tag{5.7}
+\]
+
+Each attachment edge ends at a loaded vertex. The full loaded contact
+degree is at most three, so all assigned components together use at
+most `3(132L+1)` such edges. Therefore the number assigned to one
+chosen representative is at most
+
+\[
+{3(132L+1)\over M+3}<800.
+\tag{5.8}
+\]
+
+Here `L=2M+2`; the ratio is bounded independently of `M`. Repeated
+attachments to one loaded vertex are counted as separate edges and
+are paid by its full degree, so no identification of incidence
+occurrences is used. Chosen representative windows are disjoint;
+the normal-interval and antipodal selection of Section 5 still gives
+`K<9216 pi sqrt(3)L^3/D`. Multiply by 800 to prove (5.6). ∎
+
+### Theorem 5.2 — all-phase square-root component count
+
+Every sufficiently large canonical triangle-free C-II source satisfies
+
+\[
+\boxed{c_I=O(\sqrt D).}
+\tag{5.9}
+\]
+
+An explicit eventual bound is
+
+\[
+\boxed{c_I<
+\left(800\pi+{512C_B\over7\cdot400^3}\right)\sqrt D
++{800\over\sqrt D}.}
+\tag{5.10}
+\]
+
+**Proof.** There are no singleton unloaded components for `D>=4096`,
+by Lemma 2.1 and the unloaded degree lower bound. Take `D>=262144`
+large enough for the canonical fat-hull conclusion. Let `2^J` be the
+largest power of two at most `sqrt(D)/400`. For every band
+`M=1,2,...,2^J`, with only powers of two included,
+
+\[
+L=2M+2\le\sqrt D/100.
+\]
+
+Thus (5.6) applies. Since `2M+2<=4M`, the sum of these band counts is
+at most
+
+\[
+{64C_B\over D}\sum_{j=0}^J2^{3j}
+<{512C_B\over7D}(2^J)^3
+\le {512C_B\over7\cdot400^3}\sqrt D.
+\tag{5.11}
+\]
+
+Every remaining component has graph diameter at least `2^(J+1)`,
+which is greater than `sqrt(D)/400`. The canonical sum-diameter
+budget therefore bounds their number by
+
+\[
+{400(2+2\pi D)\over\sqrt D}
+=800\pi\sqrt D+800/\sqrt D.
+\]
+
+This proves (5.10) and (5.9). The constants are conservative; the
+nonexplicit canonical fat-hull threshold remains. ∎
+
+The upgrade from (5.4) to (5.9) is not an inference from cell
+disjointness alone. It uses the exact load `t_r>=delta_r+3`, grouping
+by comparable graph diameters, and the simultaneous loaded degree
+capacity. It does not require a new theorem about attachment-cell
+area or a positive KKT multiplier floor.
+
+## 6. The tree contact-core branch is impossible above an explicit diameter
+
+### Theorem 6.1
+
+A canonical triangle-free C-II source with `D>=4096` has a cycle in its
+nonisolated contact core.
+
+**Proof.** Suppose the whole nonisolated contact core is a forest with
+`c>=1` components. Then `e=v-c`. Canonical ZF gives
+`e+h>=2v-2`, while Woodall gives `h<=q`; hence
+`v+c-2<=q`. For `u=v-q`, the number of unloaded core vertices, this
+is `c+u<=2`. The only possibilities are `(c,u)=(1,0),(1,1),(2,0)`.
+
+If `u=0`, every vertex is loaded, so a leaf in any tree component has
+a loaded contact neighbor, contradicting Lemma 2.2. If `(c,u)=(1,1)`,
+call the unloaded vertex `p`. Every leaf is loaded and must be adjacent
+to `p`, again by Lemma 2.2. A finite tree all of whose leaves are
+adjacent to one vertex is a star: any larger component after deleting
+that vertex has a leaf not adjacent to it. The unloaded center has
+contact degree at least three, while Lemma 2.1 permits at most two
+loaded unit neighbors. Contradiction. Thus the contact core is not a
+forest and contains a cycle. ∎
+
+Lemma 2.1 also implies that every unloaded vertex has an unloaded contact
+neighbor. Thus the graph induced by the unloaded core has no singleton
+components for `D>=4096`. Theorem 4.1 gives the substantially stronger
+quantitative conclusion for larger `D`.
+
+## 7. Hostile checks and failed closing attacks
+
+- A connected gap graph does not supply a private leaf release. Positive
+  KKT circulation restores an opposing nonbasis diameter across the same
+  cut. This existing regression remains binding.
+- Weighted contact energy by itself absorbs the packet reactions. The
+  exact virial identity `sum alpha=D^2` supplied no new loss, so no
+  stress-selection lower bound or finite release is claimed here.
+- The suggested convex pure-rhombic perfect-matching shortcut was already
+  present in `target_c_post_zf_perfect_matching_exclusion_2026-09-09.md`.
+  It is not a new result of this run.
+- Unit square: its positive contact core is cyclic; no unloaded component
+  is present. It is retained.
+- Regular pentagon plus its center: an exact triangle-free six-point
+  source has a positive tree contact core, full mixed rigidity, and an
+  affine PSD stress kernel. Its diameter is
+  `sqrt((5+sqrt(5))/2)<2`, so it demonstrates why Theorem 6.1 needs a
+  large-diameter hypothesis. It is not asserted globally optimal here.
+- All claims about `c_I` concern positive-contact components only.
+  Contact isolates neither acquire a harmonic equation nor disappear.
+- Original normal intervals are not enough for addition: antipodal
+  overlap is explicitly removed with the degree-two selection.
+- Arbitrarily many interior points or component populations are not
+  controlled by (5.9). Large components remain.
+
+For completeness, the pentagon-star regression consists of the center
+and five equally spaced points on the unit circle. Its only contacts
+are the five spokes; the outer adjacent squared distance is
+`s^2=(5-sqrt(5))/2>1`, and its five outer skip-one pairs have squared
+diameter `d^2=(5+sqrt(5))/2<4`. Give each spoke weight `alpha=d^2/5`
+and each diameter weight `beta=1/5`. The centered Gram matrix in the
+verifier certifies vertex equilibrium. Eliminating the center from the
+stress gives the outer Schur matrix
+
+\[
+{d^2\over5}(I-\mathbf1\mathbf1^T/5)-L_H(1/5).
+\]
+
+Its constant and coordinate modes vanish; its two remaining Fourier
+modes have eigenvalue `(d^2-s^2)/5=sqrt(5)/5>0`. The center pivot is
+`d^2>0`, so the full stress is PSD with affine kernel of dimension
+three. For mixed rigidity, fix the center velocity. Each spoke forces
+the outer velocity to be `t_i Jp_i`. A skip-one diameter row forces
+`t_i=t_(i+2)`, since `sin(4pi/5)!=0`. The diameter five-cycle makes
+all rates equal, leaving only rotation; restoring translation gives
+mixed rank `2*6-3=9`.
+
+The first attempted closing bridge after Theorem 5.2 was a bound on
+the number of components of a **selected diameter forest** by `c_I`.
+It fails even with positive equilibrium, an affine PSD kernel, and full
+mixed rigidity. A regular unit pentagon has no unloaded vertices, so
+`c_I=0`; two disjoint actual diameters form a forest with two components.
+The same mechanism occurs on every regular odd unit shell. These are
+linear-population shells, without the actual complete O–O grid or a
+large global-optimality certificate. They reject a bridge from stress
+and component counts alone, not the actual train-port coupling target.
+The exact pentagon instance is checked by the verifier.
+
+## 8. Computation and proof status
+
+[Exact verifier](verify_target_c_harmonic_cubic_window_2026_10_02.py):
+`python3 research/verify_target_c_harmonic_cubic_window_2026_10_02.py`.
+It checks the rational threshold/coefficient inequalities, the normal
+and secant margins, the intermediate and final exponent bookkeeping,
+dyadic attachment capacities, fixed-length antipodal
+selection on exact circle intervals, and the square/pentagon-star stress
+regressions with arithmetic in `Q(sqrt(5))`. It does not certify general
+completion geometry, global optimality, the canonical stack, or Level I;
+those geometric implications have the analytic proofs above. The
+verifier is corroboration, not an unlisted theorem premise.
+
+## 9. Frontier effect and next attack
+
+The proposed frontier change is an all-phase **individual** cube-root
+attachment lower bound and an improvement of the component-count error
+from `O(D^(2/3))` to `O(sqrt(D))`, plus explicit tree-core exclusion.
+No canonical state change is made before independent audit.
+
+The first next attack was a constant multiplicity version of (5.1).
+The dyadic edge-capacity argument above resolves it **for comparable
+diameters**, which is enough for the square-root count. A constant
+multiplicity assertion for all diameters at once is not used.
+
+The precise next closing obligation is to couple the actual threshold
+diameter-forest components and their extreme-layer carriers to these
+same harmonic attachment components, with a charge to
+`e_BB+2s_C-3k` or a source-preserving finite motion. Their square-root
+counts alone do not identify the two decompositions.
+
+The square-root component count does not establish a finite competitor. The
+open-cell exact-phase, threshold staircase, nonconstant-phase swaps,
+split-star O–O, inactive-interface, higher-surplus full-core, and
+macroscopic inactive-container/exterior-cap branches remain uncovered.
+
+Promotion recommendation: **unreviewed** pending independent hostile
+audit. A promotion would require the full state-version, route, prompt,
+dependency, certificate, and generated-view transaction; this report
+does not perform it.

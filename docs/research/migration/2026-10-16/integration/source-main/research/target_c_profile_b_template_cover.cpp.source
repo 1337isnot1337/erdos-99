@@ -1,0 +1,175 @@
+// Exact integer prefilter for the eight-row Profile B source cover.
+// See the Python driver for the finite universe and symmetry justification.
+#include <algorithm>
+#include <array>
+#include <cassert>
+#include <cstdint>
+#include <iostream>
+#include <vector>
+
+using namespace std;
+constexpr int N = 105, NB = 35, MOD = 1000000007;
+int constraints[N][N], qcomp[N][NB][2], h[NB][15];
+array<int,8> chosen;
+int left_id, right_id, pivot0, pivot1, determinant;
+uint64_t candidates = 0, capacity_pass = 0, survivors = 0;
+uint64_t deficiency_hist[36] = {}, capacity9_hist[36] = {};
+uint64_t d3_capacity_hist[NB+1] = {};
+vector<array<int,10>> d3_examples;
+
+int modpow(int a, int k) {
+    int64_t r=1, b=a;
+    while(k) { if(k&1) r=r*b%MOD; b=b*b%MOD; k>>=1; }
+    return int(r);
+}
+
+int complete_rank(const vector<int>& blocks) {
+    int a[35][15] = {};
+    for(size_t i=0;i<blocks.size();++i)
+        for(int j=0;j<15;++j) a[i][j]=(h[blocks[i]][j]+MOD)%MOD;
+    int rank=0;
+    for(int j=0;j<15 && rank<int(blocks.size());++j) {
+        int k=rank;
+        while(k<int(blocks.size()) && !a[k][j]) ++k;
+        if(k==int(blocks.size())) continue;
+        for(int x=j;x<15;++x) swap(a[k][x],a[rank][x]);
+        int inv=modpow(a[rank][j], MOD-2);
+        for(int i=rank+1;i<int(blocks.size());++i) {
+            int64_t factor=int64_t(a[i][j])*inv%MOD;
+            for(int x=j;x<15;++x)
+                a[i][x]=int((a[i][x]-factor*a[rank][x]%MOD+MOD)%MOD);
+        }
+        ++rank;
+    }
+    return rank;
+}
+
+bool in_plane(const array<int,8>& row) {
+    int a=constraints[left_id][chosen[pivot0]], b=constraints[right_id][chosen[pivot0]];
+    int c=constraints[left_id][chosen[pivot1]], d=constraints[right_id][chosen[pivot1]];
+    int u=row[pivot0]*d-b*row[pivot1];
+    int v=a*row[pivot1]-c*row[pivot0];
+    for(int i=0;i<8;++i)
+        if(determinant*row[i] != u*constraints[left_id][chosen[i]]+
+                                  v*constraints[right_id][chosen[i]]) return false;
+    return true;
+}
+
+void inspect() {
+    ++candidates;
+    vector<int> complete, good;
+    for(int block=0;block<NB;++block) {
+        array<int,8> x{}, y{}, sum{};
+        for(int i=0;i<8;++i) {
+            x[i]=qcomp[chosen[i]][block][0];
+            y[i]=qcomp[chosen[i]][block][1];
+            sum[i]=x[i]+y[i];
+        }
+        bool has_x=in_plane(x), has_y=in_plane(y);
+        if(has_x && has_y) continue;
+        complete.push_back(block);
+        if(has_x || has_y || in_plane(sum)) good.push_back(block);
+    }
+    int deficiency=int(complete.size())-complete_rank(complete);
+    assert(0<=deficiency && deficiency<36);
+    ++deficiency_hist[deficiency];
+    if(deficiency==3) {
+        ++d3_capacity_hist[good.size()];
+        if(d3_examples.size()<2) {
+            array<int,10> example{};
+            for(int i=0;i<8;++i) example[i]=chosen[i];
+            example[8]=good.size(); example[9]=complete.size();
+            d3_examples.push_back(example);
+        }
+    }
+    if(good.size()<9) return;
+    ++capacity_pass;
+    ++capacity9_hist[deficiency];
+    if(deficiency!=3) return;
+    ++survivors;
+    cout << "SURVIVOR " << left_id << ' ' << right_id;
+    for(int e:chosen) cout << ' ' << e;
+    cout << ' ' << good.size() << ' ' << complete.size() << '\n';
+}
+
+void extend_outside(const vector<int>& outside, int offset, int start) {
+    if(offset==8) { inspect(); return; }
+    for(int j=start;j<=int(outside.size())-(8-offset);++j) {
+        chosen[offset]=outside[j];
+        extend_outside(outside,offset+1,j+1);
+    }
+}
+
+void choose_inside(const vector<int>& inside, const vector<int>& outside,
+                   int need, int offset, int start) {
+    if(offset<need) {
+        for(int j=start;j<=int(inside.size())-(need-offset);++j) {
+            chosen[offset]=inside[j];
+            choose_inside(inside,outside,need,offset+1,j+1);
+        }
+        return;
+    }
+    // The only nonzero column directions of two ternary rows are these four.
+    int counts[4]={0,0,0,0};
+    for(int i=0;i<need;++i) {
+        int a=constraints[left_id][chosen[i]], b=constraints[right_id][chosen[i]];
+        assert(a || b);
+        ++counts[!a ? 1 : !b ? 0 : a==b ? 2 : 3];
+    }
+    if(need-*max_element(counts,counts+4)<4) return;
+    pivot0=0; pivot1=-1;
+    for(int j=1;j<need;++j) {
+        determinant=constraints[left_id][chosen[0]]*constraints[right_id][chosen[j]]-
+                    constraints[right_id][chosen[0]]*constraints[left_id][chosen[j]];
+        if(determinant) { pivot1=j; break; }
+    }
+    assert(pivot1>=0);
+    extend_outside(outside,need,0);
+}
+
+int main(int argc, char** argv) {
+    int number_pairs;
+    cin >> number_pairs;
+    for(auto& row:constraints) for(int& x:row) { cin >> x; assert(-1<=x && x<=1); }
+    for(auto& cycle:qcomp) for(auto& block:cycle) for(int& x:block) cin >> x;
+    for(auto& row:h) for(int& x:row) cin >> x;
+    vector<pair<int,int>> pairs(number_pairs);
+    for(auto& pair:pairs) cin >> pair.first >> pair.second;
+    assert(cin.good());
+    int first=0, last=number_pairs;
+    if(argc==3) { first=stoi(argv[1]); last=stoi(argv[2]); }
+    assert(0<=first && first<=last && last<=number_pairs);
+    // 1000000007 is prime; trial division is cheap and part of this verifier.
+    for(int64_t d=2;d*d<=MOD;++d) assert(MOD%d);
+    uint64_t bound=1;
+    for(int i=0;i<15;++i) bound*=12;
+    assert(uint64_t(MOD)*MOD>bound);
+    for(auto& row:h) { int norm=0; for(int x:row) norm+=x*x; assert(norm<=12); }
+    for(int index=first;index<last;++index) {
+        left_id=pairs[index].first; right_id=pairs[index].second;
+        d3_examples.clear();
+        vector<int> inside,outside;
+        for(int e=0;e<N;++e)
+            (constraints[left_id][e] || constraints[right_id][e] ? inside : outside).push_back(e);
+        // Four possible projective directions imply support >=6 if d1>=4.
+        for(int need=6;need<=8;++need) choose_inside(inside,outside,need,0,0);
+        cout << "COUNTS " << index << ' ' << candidates << ' ' << capacity_pass
+             << ' ' << survivors << endl;
+        for(const auto& example:d3_examples) {
+            cout << "D3EXAMPLE " << index << ' ' << left_id << ' ' << right_id;
+            for(int i=0;i<10;++i) cout << ' ' << example[i];
+            cout << '\n';
+        }
+    }
+    for(int q=9;q<=NB;++q) assert(d3_capacity_hist[q]==0);
+    assert(capacity9_hist[3]==0 && survivors==0);
+    cout << "DEFICIENCY_HIST";
+    for(int d=0;d<36;++d) if(deficiency_hist[d]) cout << ' ' << d << ':' << deficiency_hist[d];
+    cout << '\n' << "CAPACITY9_DEFICIENCY_HIST";
+    for(int d=0;d<36;++d) if(capacity9_hist[d]) cout << ' ' << d << ':' << capacity9_hist[d];
+    cout << '\n' << "D3_CAPACITY_HIST";
+    for(int q=0;q<=NB;++q) if(d3_capacity_hist[q]) cout << ' ' << q << ':' << d3_capacity_hist[q];
+    cout << '\n';
+    cout << "DONE " << first << ' ' << last << ' ' << candidates << ' '
+         << capacity_pass << ' ' << survivors << endl;
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "status": "blocked_known_missing_dirty_bytes",
+  "capture_sha": "f282d53169df4d507117893bfdcc99f663855923",
+  "source_main_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "remote_checkpoint_recovery": {
+    "archived_branch_blobs": 249,
+    "archived_branch_bytes": 35559061,
+    "exact_dirty_indexes": 2,
+    "raw_blob_identity_verification": "Git SHA1 and SHA256 independently checked against captured source ledgers during reupload",
+    "dirty_index_identity_verification": "SHA256 and exact byte length match captured identities"
+  },
+  "earlier_local_validation": {
+    "refs_regression_tests": 3,
+    "status": "passed_before_execution_environment_outage",
+    "local_commits": [
+      "cae1398806ac1da416af7b47c7d84127f7f3f8a4",
+      "d2b6100c24f971fbdf6ee164aecb02a8195a01f3",
+      "190b4866390784b39fa32ea77db9e083b557e758"
+    ]
+  },
+  "current_execution_environment_available": false,
+  "reconstructed_python_files": [
+    {
+      "path": "tools/check_migration_refs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "afeea58251c3a8c7ba9c0addf1b7dcd3b60917b5",
+      "sha256": "3ba6d34d8eae1e6c48b963166b13533404f3bdcd2ba001bb1faf87a71cd224aa",
+      "reconstructed_code_not_rerun": true
+    },
+    {
+      "path": "tools/test_migration_refs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b37d377f653d96a0dbc8dc5bcfc5ac7217e0429b",
+      "sha256": "fc750265a6bb72262e5ffb900144b9f93d20656a6ca78793c1cc044bac79b1da",
+      "reconstructed_code_not_rerun": true
+    }
+  ],
+  "reconstructed_python_files_tested": false,
+  "known_missing_dirty_file_count": 5,
+  "unknown_unavailable_worktree_markers": 2,
+  "deprecation_ready": false,
+  "mathematical_promotion": false
+}

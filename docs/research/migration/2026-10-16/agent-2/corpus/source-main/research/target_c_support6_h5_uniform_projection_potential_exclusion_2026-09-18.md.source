@@ -1,0 +1,110 @@
+# Target C-II — uniform support-six `H5` exclusion by projection potentials
+
+**Date:** 2026-09-18  
+**Status:** proved candidate awaiting independent audit; theorem-state authority unchanged  
+**Scope:** the six noncollapsed uniform support-six reciprocal `H5` sign/order orbits  
+**Certificate:** `research/verify_target_c_support6_h5_uniform_projection_potential_2026_09_18.py`
+
+This note eliminates the six uniform `H5` metric cases left by the exact
+support-six sign/order reduction. It does not address the ten simple-wall cases,
+the collapsed support-six branch, or higher-codimension strata beyond the already
+promoted double-wall exclusion.
+
+The dependency chain is
+
+```text
+uniform H5 finite reduction
+  -> six exact sign/chirotope representatives
+  -> all generic projection orders of each uniform order type
+  -> no acyclic signed projection constraint graph
+  -> contradiction with full signed unit-force equilibrium
+  -> uniform H5 eliminated; ten simple-wall H5 cases remain.
+```
+
+## The projection-potential lemma
+
+Let `E` be the present reciprocal edges, let `s_ij` be their nonzero reciprocal
+signs, and put
+
+\[
+ e_{ij}=\frac{y_i-y_j}{|y_i-y_j|},\qquad
+ F_i=\sum_{j:ij\in E}s_{ij}e_{ij}.
+\]
+
+The six physical pentagon closures give `F_i=0` for every non-ground reciprocal
+vertex. Endpoint cancellation then gives the ground equation as well. For any
+scalar vertex potential `a` and any vector `u`, therefore,
+
+\[
+ 0=\sum_i a_i\,u\!\cdot F_i
+  =\sum_{ij\in E}s_{ij}(a_i-a_j)
+    \frac{u\!\cdot(y_i-y_j)}{|y_i-y_j|}.
+\tag{1}
+\]
+
+Fix a generic `u` and write `x_i=u\cdot y_i`. Direct every present edge so that
+the desired inequality is
+
+\[
+ a_i>a_j\quad\Longleftrightarrow\quad
+ s_{ij}(x_i-x_j)>0.
+\tag{2}
+\]
+
+If this directed graph is acyclic, choose `a` strictly increasing along its
+edges. Every summand in (1) is then strictly positive, a contradiction. Thus a
+necessary condition for a metric reciprocal equilibrium is:
+
+\[
+\boxed{\text{for every generic projection order, the signed constraint graph
+must contain a directed cycle.}}
+\tag{3}
+\]
+
+This is a purely finite consequence of the full equilibrium equations. It uses
+no trace approximation or numerical optimization.
+
+## Exact finite check
+
+The coordinate certificate in the companion verifier is a useful sanity check:
+each stored integer realization has exactly the target 35 triple signs and has
+40 generic projection sectors, with no acyclic signed constraint graph. The
+coordinate-free certificate is stronger and is the authoritative finite check.
+
+It adjoins a formal point `U` at infinity and enumerates all `7!` possible
+projection orders. For each order it assigns
+`chi(U,i,j)=sign(x_j-x_i)` and checks every rank-three
+Grassmann--Pluecker axiom on the eight-element extension. Every realizable
+generic projection order passes these tests, so this is an overapproximation of
+all metric projection orders. None of the valid extensions has an acyclic signed
+constraint graph. This avoids any dependence on one sampled coordinate
+realization or on an unproved realizability claim for the finite enumeration.
+
+The verifier reports:
+
+\[
+\boxed{6\text{ uniform orbits},\quad
+\text{rank-three infinity extensions }(140,140,146,152,152,156),
+\quad 0\text{ acyclic orders}.}
+\]
+
+Consequently every uniform H5 metric realization would violate (1), so the six
+uniform cases are excluded.
+
+## Scope and remaining task
+
+The result is a proof-only candidate, not a canonical theorem-state promotion.
+The next finite task is the ten simple-wall `H5` orbits. Their nonuniform
+chirotopes require a separate treatment of projection orders with the wall
+degeneracy and cannot be silently covered by this uniform certificate. The
+collapsed all-equal support-six local family also remains live; its certified
+local realization prevents an exclusion based only on the already imposed local
+pentagon conditions.
+
+If the ten wall cases and collapsed branch are both removed, the support-six
+endpoint is excluded and the one-anchor coefficient can be propagated from
+`n_1/6` to `n_1/7` through the existing FREE inequalities. This note alone does
+not justify that propagation.
+
+**Disposition:** proved candidate awaiting independent audit; uniform H5 branch
+closed within the stated full-equilibrium hypotheses; C-II remains open.

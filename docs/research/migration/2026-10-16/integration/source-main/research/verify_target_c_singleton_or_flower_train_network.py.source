@@ -1,0 +1,51 @@
+#!/usr/bin/env python3
+from fractions import Fraction as Q
+from math import factorial, isqrt
+
+def atan_inv_bounds(q,n):
+    s=Q(0)
+    for k in range(n):
+        term=Q(1,(2*k+1)*q**(2*k+1))
+        s += term if k%2==0 else -term
+    nxt=Q(1,(2*n+1)*q**(2*n+1))
+    return (s,s+nxt) if n%2==0 else (s-nxt,s)
+def sqrt_bounds(lo,hi,scale):
+    a=isqrt((lo.numerator*scale*scale)//lo.denominator)
+    b=isqrt((hi.numerator*scale*scale)//hi.denominator)
+    return Q(a,scale),Q(b+1,scale)
+
+a5l,a5h=atan_inv_bounds(5,90); a239l,a239h=atan_inv_bounds(239,25)
+pil,pih=16*a5l-4*a239h,16*a5h-4*a239l
+SCALE=10**90
+n3=isqrt(3*SCALE*SCALE); s3l,s3h=Q(n3,SCALE),Q(n3+1,SCALE)
+Dl,Dh=pil/(2*s3h),pih/(2*s3l); sDl,sDh=sqrt_bounds(Dl,Dh,SCALE)
+C707=2*sDl+Q(7707,1000000)
+tau0=Q(7467921,10000000)
+
+def cert(T, claim):
+    p5=pil+C707-Q(5,2)*T
+    a=Q(5,12)*p5
+    # If S<aD, Ffull > p5D-2aD = p5D/6, so Nfull>=5/2 Ffull > 5p5D/12 = aD.
+    ffull=p5-2*a
+    nfull=Q(5,2)*ffull
+    sigma=2*(tau0-a)
+    mantel=sigma*sDl/2+sigma*sigma/16
+    assert ffull == p5/6
+    assert nfull == a
+    assert a>claim
+    print('T=',float(T))
+    print('  P5/D >',float(p5))
+    print('  train-network dichotomy floor a/D >',float(a))
+    print('  flower branch Ffull/D >',float(ffull))
+    print('  flower branch Nfull/D >',float(nfull))
+    print('  flower branch sigma_R/D >',float(sigma))
+    print('  flower branch Mantel deficit/D^2 >',float(mantel))
+
+cert(Q(47,25), Q(147,1000))      # 1.88
+cert(Q(19,10), Q(126,1000))      # 1.90
+cert(Q(48,25), Q(105,1000))      # 1.92
+cert(Q(49,25), Q(64,1000))       # 1.96
+cert(Q(2,1), Q(22,1000))         # 2.00
+cert(Q(201,100), Q(12,1000))     # 2.01
+cert(Q(101,50), Q(16,10000))     # 2.02
+print('PASS optimized singleton/full-flower train-network dichotomy')

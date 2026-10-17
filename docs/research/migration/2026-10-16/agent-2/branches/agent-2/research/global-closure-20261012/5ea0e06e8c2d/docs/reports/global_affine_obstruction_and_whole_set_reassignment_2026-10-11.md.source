@@ -1,0 +1,216 @@
+<!-- theorem-state: {"artifact_id":"ART-6D3824033818","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"shared"} -->
+# Global affine obstruction and whole-set reassignment
+
+**Date:** 2026-10-11  
+**Base commit:** `ab6dd3336f9f8d440f2bada76edb32153391cddc`  
+**State version:** `2026-10-10.audit.234`  
+**Target:** independent Level I global competitor route  
+**Run type:** closing-proof research with exact regression  
+**Classification:** proved candidate awaiting promotion; regression  
+**Active prompt:** `docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md`  
+**Level I:** STILL OPEN. This report supplies no global-minimizer counterexample.
+
+The source is the entire finite point configuration. Contact-isolated points are
+retained. This independent run does not consult another worker's proposed solution.
+
+## 1. Endpoint and dependency lock
+
+The intended chain is:
+
+```text
+whole-set replacement for every sufficiently large triangle-free global minimizer
+  -> a unit-separated n-point set of diameter strictly less than D(n)
+  -> contradiction -> Level I
+```
+
+Only the problem definition and the canonical KKT tensor identity, shared theory
+`01-local-structure.md`, Theorem 4.1, are used in the obstruction below.
+The obstruction is stronger than the affine second-order neutrality in
+`02-nonlinear-and-regressions.md`, Corollary 11.2, but is an elementary consequence
+of the same canonical identity. No novelty priority is claimed.
+
+## 2. Exact finite affine obstruction
+
+**Proposition (proved candidate awaiting promotion).** Suppose a unit-separated
+finite planar source A of diameter D has nonnegative weights alpha on actual unit
+contacts C and beta on actual diameter pairs H such that
+
+\[
+\sum_H\beta=1,\qquad \sum_C\alpha=D^2,\qquad
+\sum_C\alpha r_{ij}r_{ij}^{\mathsf T}
+=\sum_H\beta r_{ij}r_{ij}^{\mathsf T}.
+\]
+
+For every affine map f(x)=Mx+b for which f(A) is unit-separated,
+`diam f(A) >= D`. The matrix M need not be close to the identity or invertible.
+Every global minimizer satisfies the displayed hypotheses, but so do some
+nonglobal sources.
+
+**Proof.** Trace the tensor identity against M^T M. With L=diam f(A),
+
+\[
+D^2=\sum_C\alpha
+\le\sum_C\alpha|Mr_{ij}|^2
+=\sum_H\beta|Mr_{ij}|^2
+\le L^2\sum_H\beta=L^2.
+\]
+
+The first inequality follows from separation at every old contact; the final
+inequality follows from the diameter bound at every old diameter pair.
+Translation cancels in all pair differences. This proves the proposition.
+It also covers an affine map followed by a uniform rescaling, because that
+composition is itself affine. If L=D, every positive-alpha old contact stays
+unit and every positive-beta old diameter stays of length D.
+
+## 3. Exact nine-point whole-set replacement
+
+Let A={(i,j): i,j in {0,1,2}}. It is triangle-free, with minimum separation one
+and squared diameter eight. Give each of its eight perimeter contacts alpha=1,
+its four center-involving contacts alpha=0, and its two opposite-corner diameter
+pairs beta=1/2. These weights satisfy vertex equilibrium, scalar normalization,
+and the tensor identity. Thus A admits no strict affine improvement.
+
+Nevertheless take
+
+\[
+u=(1,0),\quad v=(8/17,15/17),
+\]
+
+and use the nine distinct lattice labels
+
+\[
+S=\{(0,0),(1,0),(0,1),(-1,1),(-1,0),(0,-1),(1,-1),
+       (1,1),(2,-1)\}.
+\]
+
+Define B={a u+b v:(a,b) in S}. Exact all-pair arithmetic gives
+
+\[
+\min_{p\ne q\in B}|p-q|^2=1,
+\qquad \operatorname{diam}(B)^2=125/17<8.
+\]
+
+Its only unit pair differences are ±u and ±v. Its contact graph is bipartite
+under the color (a+b) mod 2 and hence triangle-free. This is a strict
+same-cardinality whole-set improvement between two triangle-free sets; neither
+set is asserted globally optimal. The improvement changes the lattice label
+shape, instead of applying a common affine map to the old nine labels.
+
+The certificate verifies all 36 pairs of B, all 36 pairs of A, both complete
+contact graphs, the full KKT equilibrium at all nine old labels, and the tensor
+identity with rational arithmetic. The exact squared-diameter margin is 11/17.
+
+## 4. Unbounded regression against affine-only closure
+
+For integer m>=3 the square source A_m={0,...,m-1}^2 has n=m^2 and
+D^2=2(m-1)^2. Assign alpha=(m-1)/2 to each of its 4(m-1) perimeter contacts,
+zero to all other contacts, and beta=1/2 to the two opposite-corner diameters.
+At every noncorner perimeter vertex the contact forces cancel; at every corner
+the two unit-edge forces equal half of the opposite-corner displacement.
+At every other vertex all positive stresses vanish. The full source has the
+KKT identities and admits no affine improvement for every m.
+
+For m>=4, translated triangular-lattice averaging supplies m^2 points of
+diameter at most sqrt((2sqrt(3)/pi)m^2), strictly below sqrt(2)(m-1):
+the inequality is already strict at m=4 and its right-to-left ratio increases
+with m. To see the averaging statement without an external premise, a disk of
+radius r has average translated lattice population pi*r^2/(sqrt(3)/2).
+At r^2=(sqrt(3)/(2pi))m^2 this average is the integer m^2, so some translate
+contains at least m^2 points. Select exactly m^2 of them. Scale that finite
+set by 1+epsilon, with epsilon small enough to retain diameter below D. It
+becomes strictly unit-separated and therefore has no unit contacts or unit
+triangles. Such a competitor still satisfies the feasible >=1 contract.
+The m=3 rational example above handles the remaining case directly.
+
+Thus arbitrarily large triangle-free sources satisfying the complete KKT
+first-order identities and the exact finite affine obstruction have strict
+whole-set competitors. KKT and affine optimality are insufficient for Level I.
+This is not a regression against the canonical source-specific C-II theorems:
+the square sources have not been shown to be contact-minimal global minimizers,
+and the stress support is confined to their perimeter.
+
+## 5. Broader transformation check
+
+Even arbitrary two-pencil placements of all m by m Cartesian labels cannot
+improve A_m. Write p_ij=a_i u+b_j v with independent unit vectors u,v.
+Since all labels are present, lower feasibility implies every pair of distinct
+a-coordinates and every pair of distinct b-coordinates differs by at least one.
+Their respective ranges X,Y therefore satisfy X,Y>=m-1. The four extreme
+labels are present and their two diagonal squared lengths are
+X^2+Y^2±2XY(u dot v). Consequently
+
+\[
+\operatorname{diam}\{p_{ij}\}^2
+\ge X^2+Y^2+2XY|u\cdot v|\ge2(m-1)^2.
+\]
+
+This allows nonlinear spacing changes and a change of the angle between the
+two pencils. A whole-set competitor can escape this obstruction by changing
+which label pairs are populated, as the nine-point certificate does.
+
+### Uniform whole-source exclusion, including varying phases and spacings
+
+**Theorem (proved candidate awaiting promotion).** For any independent unit
+vectors u,v and distinct real numbers a_1,...,a_m and b_1,...,b_k, a unit-separated
+full product
+
+\[
+A=\{a_i u+b_j v:1\le i\le m,\ 1\le j\le k\}
+\]
+
+of cardinality n=mk>=5 is not a global minimum-diameter source. There is no
+fixed-angle, asymptotic lattice, contact-stress, rigidity, or contact-minimality
+assumption. The full product hypothesis is essential. This does not exclude
+arbitrary subsets of a two-direction lattice or multigrain sources.
+
+**Proof.** Its two coordinate ranges obey X>=m-1 and Y>=k-1; the four extreme
+labels give D^2>=(m-1)^2+(k-1)^2. Put s=m+k>=2sqrt(n). Since s^2-2s is
+increasing on s>=2,
+
+\[
+D^2\ge s^2-2n-2s+2\ge2(\sqrt n-1)^2.
+\]
+
+The lattice averaging argument in Section 4 gives an independent n-point
+competitor of squared diameter at most (2sqrt(3)/pi)n. The rational bound
+2sqrt(3)/pi<104/93 follows from sqrt(3)<26/15 and pi>31/10. For n>=16,
+
+\[
+\frac{2(\sqrt n-1)^2}{n}\ge\frac98>\frac{104}{93},
+\]
+
+so the comparison is strict. For each n between 5 and 15, checking its integer
+factorizations shows (m-1)^2+(k-1)^2>(104/93)n except possibly at n=6,9,12.
+For those exceptions use respectively:
+
+- six points selected from the triangular lattice center and its six unit
+  neighbors, with squared diameter at most 4<5;
+- the nine-point rational set in Section 3, with squared diameter 125/17<8;
+- twelve points selected from the triangular lattice center, its six unit
+  neighbors, and its six neighbors at radius sqrt(3), with squared diameter
+  at most 12<13.
+
+The numbers 5,8,13 are the minimum squared-diameter lower bounds over product
+factorizations of 6,9,12. Each exceptional competitor is checked pairwise in the
+certificate. One pencil may have only one populated coordinate; the argument
+still holds, with its corresponding range zero. The theorem is a global
+comparison for this precise whole-source class, not a Level I theorem.
+
+For completeness, the elementary pi bound is certified by the regular
+dodecagon perimeter: pi>3(sqrt(6)-sqrt(2))>3(2449-1415)/1000=1551/500>31/10.
+The squared rational inequalities (2449/1000)^2<6 and (1415/1000)^2>2
+justify the second strict inequality.
+
+## 6. Remaining global obligation
+
+Neither affine optimality, restricted-family optimality, nor a dense triangle-free
+example certifies global optimality. The live route must either bound *every*
+triangle-free global-minimizer source by a genuinely larger independent packing,
+or construct a nonaffine finite replacement checking all source pairs and exact
+cardinality. The square regression rules out closing that route by adding more
+finite affine parameters to KKT.
+
+No canonical frontier or lifecycle is changed. The propositions and regression
+are unreviewed artifacts pending an independent promotion audit. The verifier
+is finite evidence for the nine-point formulas; the two general obstructions
+and unbounded nonglobal family are proved analytically here.

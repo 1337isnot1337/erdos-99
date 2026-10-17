@@ -1,0 +1,253 @@
+# Target C-II — FREE reflection blockers lie outside the force hull, so the linear inactive chain is an outer-face corridor
+
+**Date:** 2026-09-17  
+**Status:** proved candidate awaiting promotion; proof-only strengthening of the reflection inactive-chain reduction  
+**Scope:** FREE reflection modules under C65 full visibility  
+**Dependencies:** C65 full diameter visibility; canonical force hull `F=conv B`; FREE-module active-free blocker theorem; linear inactive-chain theorem; inactive-chain face localization  
+**Certificate:** `research/verify_target_c_tooth_reflection_free_blockers_outer_face_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The previous face-localization theorem allowed the reflection chain to lie either in a bounded exceptional contact face or in the outer contact face. The bounded alternative is actually impossible for a FREE module.
+
+Every FREE upper blocker lies strictly outside the force hull
+
+\[
+F=\operatorname{conv}B,
+\]
+
+where `B` is the complete actual-diameter endpoint set. The proof is one line of convexity: if a blocker `z` with `|z-q|>D` belonged to `F`, then some loaded vertex of `F` would be at least as far from `q`, creating a loaded blocker, forbidden by the FREE condition.
+
+Therefore the root of the linear inactive chain starts outside `F`, hence in the outer face of the nonisolated contact graph. Since every chain edge is shorter than `sqrt(3)` and cannot cross a unit contact edge, the **entire** linear chain stays in that same outer face.
+
+For every fixed
+
+\[
+0<\lambda<\frac12,
+\]
+
+a non-anchored FREE module thus forces an original fully inactive outer-face corridor of length
+
+\[
+\boxed{
+\left({\lambda\over1+h_*}-o(1)\right)D
+}
+\]
+
+whose support-depth span is
+
+\[
+\boxed{\lambda D-O(\sqrt D),}
+\]
+
+with every consecutive original distance in
+
+\[
+(1,1.3347479843\ldots+o(1)).
+\]
+
+This removes the bounded-exceptional-face escape from the reflection branch and couples the survivor directly to the canonical outer-face / outer-walk geometry.
+
+---
+
+## 1. No FREE blocker lies in the force hull
+
+Let `G` be the unique nonisolated positive contact core and let
+
+\[
+F=\operatorname{conv}V(G)=\operatorname{conv}B,
+\tag{OF.1}
+\]
+
+where C65 makes `B` the complete set of actual source-diameter endpoints.
+
+Fix a FREE module with reflected apex `q` and blocker set
+
+\[
+U=\{z\in A:|z-q|>D\}.
+\]
+
+The FREE theorem gives
+
+\[
+\deg_C(z)=\deg_H(z)=0
+\qquad(z\in U).
+\tag{OF.2}
+\]
+
+Suppose, for contradiction, that some
+
+\[
+z\in U\cap F.
+\]
+
+Because `F=conv B`, write
+
+\[
+z=\sum_{b\in B}\mu_b b,
+\qquad
+\mu_b\ge0,
+\qquad
+\sum_b\mu_b=1.
+\]
+
+Convexity of the Euclidean norm gives
+
+\[
+|z-q|
+\le\sum_b\mu_b|b-q|
+\le\max_{b\in B}|b-q|.
+\tag{OF.3}
+\]
+
+Since `|z-q|>D`, there exists
+
+\[
+b\in B
+\]
+
+with
+
+\[
+|b-q|>D.
+\]
+
+Thus `b in U`. But `b in B` is an actual diameter endpoint, so
+
+\[
+\deg_H(b)>0,
+\]
+
+contradicting (OF.2).
+
+Hence
+
+\[
+\boxed{U\cap F=\varnothing.}
+\tag{OF.4}
+
+This applies to every blocker, not only the canonical farthest head.
+
+---
+
+## 2. Every blocker root is in the outer contact face
+
+Under C-I/C65, the nonisolated unit-contact graph is exactly the positive contact core `G`; all points outside `G` are isolated vertices of the full contact graph.
+
+The straight-line embedding of `G` is planar. Its convex hull is `F`. Any point strictly outside `F` lies in the unbounded face of this embedding.
+
+By (OF.4), every blocker root
+
+\[
+z_0\in U
+\]
+
+of the absorption parent forest lies outside `F`. Therefore
+
+\[
+\boxed{z_0\text{ lies in the outer face of }G.}
+\tag{OF.5}
+
+---
+
+## 3. The whole linear chain remains in the outer face
+
+The linear inactive-chain theorem produces
+
+\[
+z_0,z_1,\ldots,z_\ell,
+\]
+
+where `z_0 in U` and every parent edge satisfies
+
+\[
+|z_j-z_{j+1}|
+<1+h_*+o(1)
+<\sqrt3.
+\tag{OF.6}
+
+The face-localization theorem proves that such an edge cannot cross any unit contact edge and cannot pass through a contact vertex. Therefore all chain vertices lie in one contact face.
+
+The root face is the outer face by (OF.5). Hence
+
+\[
+\boxed{
+\{z_0,\ldots,z_\ell\}
+\text{ and every parent segment lie in the outer contact face.}
+}
+\tag{OF.7}
+
+The bounded exceptional-face alternative from the preceding face-localization theorem is absent in the FREE reflection setting.
+
+---
+
+## 4. Macroscopic outer-face corridor
+
+For every fixed `lambda<1/2`, the linear-chain theorem gives
+
+\[
+a_{z_0}=O(\sqrt D),
+\qquad
+a_{z_\ell}>\lambda D,
+\]
+
+and
+
+\[
+\ell\ge
+\left({\lambda\over1+h_*}-o(1)\right)D.
+\]
+
+Combining with (OF.7), the outer face contains a polygonal chain of old fully inactive source points whose support-depth span is
+
+\[
+\boxed{\lambda D-O(\sqrt D).}
+\tag{OF.8}
+\]
+
+The chain starts outside the force hull and penetrates linearly far inward in the module support coordinate without crossing the positive contact network.
+
+For example, with `lambda=0.49`,
+
+\[
+\boxed{
+\ell\ge(0.3671105001\ldots-o(1))D,
+}
+\tag{OF.9}
+
+while the support-depth span exceeds
+
+\[
+0.49D-O(\sqrt D).
+\]
+
+As `lambda` tends to `1/2` from below, the chain-length coefficient approaches
+
+\[
+0.374602551093811\ldots .
+\]
+
+---
+
+## 5. Frontier effect
+
+The current reflection alternative can now be stated more sharply:
+
+```text
+EXACT-BRAID
+    D^(1/4-o(1)) tagged actual source diameters
+    pairwise crossing through one o(D) central core
+
+or
+
+OUTER-FACE INACTIVE CORRIDOR
+    a selected FREE module starts outside the force hull
+    one old-inactive near-unit chain remains in the outer contact face
+    chain length Omega(D)
+    support-depth penetration lambda D for every fixed lambda<1/2
+```
+
+Thus a non-anchored reflection module cannot hide in an internal exceptional chamber. Its repair obstruction is a macroscopic corridor in the outer contact face, beginning outside the actual force hull.
+
+This points directly at the active canonical currency left in the promoted Target C route: the outer-face/outer-walk detour and its coupling to the actual diameter graph.
+
+**Disposition:** proved `U cap F = emptyset` for every FREE module and upgraded the reflection-induced linear inactive chain to a macroscopic outer-face corridor. C-II remains open.

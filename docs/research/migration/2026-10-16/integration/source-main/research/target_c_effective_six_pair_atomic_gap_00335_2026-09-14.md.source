@@ -1,0 +1,464 @@
+# Erdős Problem #99 — effective-coefficient six-pair atomic gap `0.00335`
+
+**Date:** 2026-09-14  
+**Target:** Target C-II, canonical full-core Type-II branch  
+**Repository branch:** `research/c2-effective-sixpair-sol-20260914`  
+**Claim class:** proof-only strengthening of the split-budget / iterative-pruning atomic stack  
+**Dependencies:** dominant-orbit Mantel reduction; sharp three-label six-pair minimization; iterative-pruning pair theorem  
+**LEVEL I STATUS:** `STILL OPEN`
+
+The current branch had already raised the atomic train gain to `0.00234`.  The
+iterative-pruning pair theorem then proved, for two atom families of masses `a,b`,
+
+\[
+\rho\ge
+\min\left\{
+{(a+b-K)_+^2\over10},
+{2\min(a,b)^2\over29}
+\right\},
+\qquad K={2\over\sqrt3}.
+\tag{EC.1}
+\]
+
+Its simple denominator-`10` branch is not uniform over all atom families at the
+`0.003` scale if one uses only the coarse shore cap.  That does not block a global
+improvement.  The small-family alternative in (EC.1) can itself be converted into a
+quadratic payment in `(a+b-K)_+` using the same family cap.  The resulting uniform
+coefficient is about `0.094`, after which the sharp six-pair three-label optimization
+applies unchanged.
+
+This gives
+
+\[
+\boxed{
+ x\sigma\ge2\sqrt{\Delta_2}+0.00335,
+ \qquad \Delta_2={\pi\over2\sqrt3}.
+}
+\tag{EC.2}
+\]
+
+Thus at the same proof-only scope one may take
+
+\[
+\boxed{\eta_{grid}=0.00335.}
+\tag{EC.3}
+\]
+
+This is a genuine propagation of the new iterative-pruning theorem, not decimal
+retuning of the previous `0.00234` endpoint.
+
+---
+
+## 1. Convert the pair dichotomy to a uniform effective coefficient
+
+Let
+
+\[
+0\le a,b\le S<K
+\]
+
+and put
+
+\[
+g=(a+b-K)_+,
+\qquad
+m=\min\{a,b\},
+\qquad
+M=\max\{a,b\}.
+\]
+
+If `g=0`, every quadratic lower bound below is trivial.  Suppose `g>0`.  Then
+
+\[
+{g\over m}
+={m+M-K\over m}
+=1-{K-M\over m}.
+\]
+
+For fixed `M<K`, this expression is increasing in `m`, and `m\le M`.  Therefore
+
+\[
+{g\over m}
+\le2-{K\over M}
+\le2-{K\over S}
+=:r_S.
+\tag{EC.4}
+\]
+
+Hence
+
+\[
+m\ge{g\over r_S}.
+\tag{EC.5}
+\]
+
+Insert this in the second branch of (EC.1):
+
+\[
+{2m^2\over29}
+\ge
+{2g^2\over29r_S^2}.
+\]
+
+Consequently every such pair satisfies the single quadratic payment
+
+\[
+\boxed{
+\rho\ge c_S(a+b-K)_+^2,
+}
+\tag{EC.6}
+\]
+
+where
+
+\[
+\boxed{
+ c_S:=
+ \min\left\{
+ {1\over10},
+ {2\over29(2-K/S)^2}
+ \right\}.
+}
+\tag{EC.7}
+\]
+
+No branch information from the iterative-pruning proof is discarded except through
+this explicit worst-case ratio bound.
+
+---
+
+## 2. Three-label minimization with a general coefficient
+
+The sharp SP1625 minimization was written with the earlier pair coefficient, but its
+proof only needs the coefficient to be below `1/8`.
+
+Let
+
+\[
+x=(x_1,x_2,x_3),
+\qquad
+ y=(y_1,y_2,y_3),
+\]
+
+with
+
+\[
+x_i,y_i\ge0,
+\qquad
+\sum_i x_i=\sum_i y_i=s,
+\qquad
+{2K\over3}<s<K.
+\]
+
+For `0<c<1/8`, define
+
+\[
+\Phi_{s,c}(x,y)
+=
+\sum_i x_i y_i
++c\sum_{i\ne j}(x_i+y_j-K)_+^2.
+\tag{EC.8}
+\]
+
+### Lemma EC.1
+
+For every `0<c<1/8`,
+
+\[
+\boxed{
+\Phi_{s,c}(x,y)
+\ge
+2c\left({3s\over2}-K\right)^2.
+}
+\tag{EC.9}
+\]
+
+Equality is attained at, up to simultaneous relabeling and shore exchange,
+
+\[
+x=(s,0,0),
+\qquad
+ y=(0,s/2,s/2).
+\tag{EC.10}
+\]
+
+### Proof
+
+The SP1625 proof carries over with `c` symbolic.
+
+Along an anti-diagonal perturbation
+
+\[
+x(t)=x+tv,
+\qquad y(t)=y-tv,
+\qquad \sum_i v_i=0,
+\]
+
+the same-label term has second derivative `-2||v||^2`, while the six hinge terms have
+total second derivative at most `12c||v||^2`.  Since `c<1/8<1/6`, the restriction is
+strictly concave.  Therefore a minimizer has at most one label positive on both shores.
+
+If one common label remains and both shores also carry exclusive mass, use the SP1625
+one-dimensional perturbation that moves the two exclusive masses oppositely.  The
+same-label term again contributes `-2`, while the two moving hinge arguments contribute
+at most `16c`.  Because `c<1/8`, that restriction is also strictly concave.  Hence a
+minimum lies on the boundary: either the common overlap disappears, or one shore is
+supported entirely on the common label.
+
+If the supports are disjoint, one shore has support size one.  Write
+
+\[
+x=(s,0,0),
+\qquad y=(0,u,s-u).
+\]
+
+Convexity gives
+
+\[
+\Phi_{s,c}
+=c\bigl[(s+u-K)_+^2+(2s-u-K)_+^2\bigr]
+\ge2c\left({3s\over2}-K\right)^2.
+\]
+
+If instead one shore is supported on the common label, write
+
+\[
+y=(s,0,0),
+\qquad x=(a,b,s-a-b).
+\]
+
+Jensen gives
+
+\[
+\Phi_{s,c}
+\ge as+2c\left({3s-a\over2}-K\right)_+^2.
+\]
+
+Put `A=3s/2-K>0`.  Where the positive part is active, the derivative in `a` is
+
+\[
+s-2c(A-a/2).
+\]
+
+Since `A<s/2` and `c<1`, this is positive.  It is also positive after the hinge turns
+off.  Thus the minimum occurs at `a=0`, giving exactly the right side of (EC.9).
+This proves the lemma. `square`
+
+---
+
+## 3. Dominant-orbit constants at `eta=0.00335`
+
+Assume for contradiction that a Type-II train-measure limit satisfies
+
+\[
+A:=x\sigma\le\bar A:=2s_2+\eta,
+\qquad
+s_2:=\sqrt{\Delta_2},
+\qquad
+\eta:=0.00335.
+\tag{EC.11}
+\]
+
+Use the existing dominant-orbit reduction.  The dominant projective three-cycle has
+mass at least
+
+\[
+M_0={4s_2^2\over\bar A},
+\tag{EC.12}
+\]
+
+with outside mass at most
+
+\[
+R_0=\bar A-M_0,
+\]
+
+and conservative Mantel deficit
+
+\[
+d_0={\bar A^2\over4}-s_2^2+{R_0^2\over4}.
+\tag{EC.13}
+\]
+
+The maximum-degree Mantel partition gives two dominant-orbit shore masses each at
+least
+
+\[
+\boxed{
+s_0={M_0\over2}-\sqrt{d_0},
+}
+\tag{EC.14}
+\]
+
+and total missing cross-shore pair mass at most `(2d_0+o(1))D^2`.
+
+As in LA90/SP1625, trim inside the three atom windows until both retained shores have
+normalized mass exactly `s_0`.  Write the retained atom masses as `x_i,y_i`.
+Trimming cannot create missing pairs.
+
+Every retained atom family is bounded by its original Mantel shore.  The standard
+shore-imbalance estimate therefore gives the safe family cap
+
+\[
+\boxed{
+S_0:={\bar A\over2}+\sqrt{d_0}.
+}
+\tag{EC.15}
+\]
+
+The exact certificate gives
+
+\[
+\begin{aligned}
+\bar A&=1.907975613727914\ldots,\\
+M_0&=1.901281495616508\ldots,\\
+R_0&=0.006694118111406\ldots,\\
+d_0&=0.00320425633231662\ldots,\\
+s_0&=0.894034596796932\ldots,\\
+S_0&=1.010593957875280\ldots .
+\end{aligned}
+\tag{EC.16}
+\]
+
+In particular
+
+\[
+{2K\over3}<s_0<S_0<K.
+\tag{EC.17}
+\]
+
+For this cap,
+
+\[
+r_0:=2-{K\over S_0}
+=0.857404074721614\ldots,
+\tag{EC.18}
+\]
+
+so the effective coefficient is
+
+\[
+\boxed{
+ c_0={2\over29r_0^2}
+=0.0938125436217642\ldots< {1\over10}<{1\over8}.
+}
+\tag{EC.19}
+\]
+
+Thus every distinct-label block satisfies
+
+\[
+\rho_{ij}\ge c_0(x_i+y_j-K)_+^2.
+\tag{EC.20}
+\]
+
+---
+
+## 4. All nine label blocks contradict the missing budget
+
+Same-label atom pairs do not cross, so they are all missing.  The nine label blocks are
+disjoint.  Therefore the global Mantel missing budget gives
+
+\[
+2d_0
+\ge
+\sum_i x_i y_i
++c_0\sum_{i\ne j}(x_i+y_j-K)_+^2.
+\tag{EC.21}
+\]
+
+Apply Lemma EC.1 with `s=s_0` and `c=c_0`:
+
+\[
+2d_0
+\ge
+2c_0\left({3s_0\over2}-K\right)^2.
+\tag{EC.22}
+\]
+
+Equivalently every survivor under (EC.11) would require
+
+\[
+\boxed{
+d_0\ge
+c_0\left({3s_0\over2}-K\right)^2.
+}
+\tag{EC.23}
+\]
+
+But exact interval arithmetic gives
+
+\[
+{3s_0\over2}-K
+=0.186351356816147\ldots
+\]
+
+and
+
+\[
+c_0\left({3s_0\over2}-K\right)^2
+=0.00325781208415897\ldots,
+\]
+
+while
+
+\[
+d_0=0.00320425633231662\ldots .
+\]
+
+Thus
+
+\[
+\boxed{
+ c_0\left({3s_0\over2}-K\right)^2-d_0
+>5.35\times10^{-5}.
+}
+\tag{EC.24}
+\]
+
+Contradiction.  Hence (EC.2) holds.
+
+The exact certificate is
+
+`research/verify_target_c_effective_six_pair_atomic_gap_00335.py`.
+
+---
+
+## 5. Method ceiling and next target
+
+For this particular effective-coefficient relaxation, the scalar equality is near
+
+\[
+\eta=0.00338555.
+\]
+
+So `0.00335` deliberately retains a visible margin.  This is **not** asserted to be
+the ceiling of the full iterative-pruning pair theorem.  The reduction from (EC.1) to
+one coefficient `c_S` is worst-case and can lose information about which of the six
+pairs enters the small-family branch.
+
+The next atomic improvement, if useful, should therefore optimize the six pairwise
+`min{g^2/10,2m^2/29}` payments jointly instead of replacing all six by the same
+worst-case coefficient.
+
+More importantly, the outer-tooth/long-side and shallow-tooth geometry on current
+`main` is now likely to be a better closing route than recovering another few
+`10^-5` from this scalar endpoint.
+
+---
+
+## 6. Scope audit
+
+- The theorem has the same full-core Type-II train-measure scope as SP1625 and the
+  split-budget `0.00234` theorem.
+- No majority assignment is used.
+- Trimming only removes retained trains and cannot create missing pairs.
+- Same-label pairs are charged as actual missing blocks; distinct-label pairs use the
+  iterative-pruning theorem.
+- The family cap `S_0` is a safe Mantel-shore cap, not an assumed equal split.
+- Lemma EC.1 is the existing sharp three-label minimization with its coefficient made
+  explicit; `c_0<1/8` is exactly what the concavity proof needs.
+- No source point is deleted from the global source, no KKT coefficient floor is used,
+  and no exact unit equilateral triangle or strict competitor is claimed.
+
+**Disposition:** proof-only strengthening.  C-II and Level I remain open.

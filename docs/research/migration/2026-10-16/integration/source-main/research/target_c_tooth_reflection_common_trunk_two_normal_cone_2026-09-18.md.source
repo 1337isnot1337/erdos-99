@@ -1,0 +1,291 @@
+# Target C-II — compatible common FREE trunks have forced two-normal spatial drift
+
+**Date:** 2026-09-18  
+**Status:** proved candidate awaiting promotion; metric refinement of the parity-compatible common-trunk branch  
+**Scope:** `COMMON-TRUNK` after the order/orientation parity split  
+**Dependencies:** ordered two-normal shared skeleton; small-external common lower runs; common-run parity refinement  
+**Certificate:** `research/verify_target_c_tooth_reflection_common_trunk_two_normal_cone_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The parity refinement leaves exactly two ways in which a multi-edge common trunk can survive: `SAME` traversal with `SAME-ORDER`, or `OPPOSITE` traversal with `REVERSE-ORDER`. The lower-gate first-hit identity then forces every edge of that trunk into an explicit cone determined only by the two module normals. This converts a large shared matching into genuine Euclidean displacement.
+
+Let `P,Q` be the two all-lower paths, let `C` be one connected edge-containing component of `P\cap Q`, and orient every edge of `C` according to the traversal of `P`. Let `N_1,N_2` be the two unit module normals and write
+
+\[
+\theta:=\angle(N_1,N_2)\in(0,\pi).
+\]
+
+Every oriented lower-gate edge vector `r` in module `k` has a positive activation increment `Delta_k` and satisfies
+
+\[
+|r-\Delta_kN_k|=1<|r|.
+\]
+
+Therefore
+
+\[
+r\cdot N_k
+={|r|^2-1+\Delta_k^2\over2\Delta_k}>0.
+\tag{CT.1}
+\]
+
+The sign in the second module depends only on the common-trunk traversal parity.
+
+## SAME + SAME-ORDER
+
+Here both paths traverse `C` in the same direction. Thus every oriented trunk edge satisfies
+
+\[
+r\cdot N_1>0,\qquad r\cdot N_2>0.
+\]
+
+Let
+
+\[
+B:={N_1+N_2\over|N_1+N_2|}
+\]
+
+be the unit internal bisector. Elementary two-half-plane geometry gives
+
+\[
+\boxed{
+ r\cdot B>|r|\sin(\theta/2)>\sin(\theta/2).
+}
+\tag{CT.2}
+\]
+
+Hence, if the common trunk has `L` edges and endpoint displacement `X`,
+
+\[
+\boxed{
+X\cdot B>L\sin(\theta/2).
+}
+\tag{CT.3}
+\]
+
+If the trunk contains `s` edges of the selected vertex-disjoint matching, then no two selected edges are adjacent. Therefore
+
+\[
+L\ge2s-1,
+\]
+
+and
+
+\[
+\boxed{
+X\cdot B>(2s-1)\sin(\theta/2).
+}
+\tag{CT.4}
+\]
+
+So a same-direction common trunk cannot fold back along the bisector: every one of its edges spends positive bisector displacement.
+
+## OPPOSITE + REVERSE-ORDER
+
+Here `Q` traverses the common component in the direction opposite to `P`. With `r` still oriented according to `P`, the second lower-gate condition is
+
+\[
+(-r)\cdot N_2>0,
+\]
+
+so
+
+\[
+r\cdot N_1>0,\qquad r\cdot N_2<0.
+\]
+
+Let
+
+\[
+T:={N_1-N_2\over|N_1-N_2|}
+\]
+
+be the unit difference direction. The corresponding cone geometry gives
+
+\[
+\boxed{
+ r\cdot T>|r|\cos(\theta/2)>\cos(\theta/2).
+}
+\tag{CT.5}
+\]
+
+Therefore
+
+\[
+\boxed{
+X\cdot T>L\cos(\theta/2)
+\ge(2s-1)\cos(\theta/2).
+}
+\tag{CT.6}
+\]
+
+When additionally
+
+\[
+0<\theta\le\pi/2,
+\]
+
+the same geometry gives the individual-normal bound
+
+\[
+0<r\cdot N_1<|r|\sin\theta,
+\qquad
+0<(-r)\cdot N_2<|r|\sin\theta.
+\tag{CT.7}
+\]
+
+The restriction `theta<=pi/2` is necessary for (CT.7): for obtuse normal separation the opposite-traversal cone contains the direction `N_1` (or `-N_2`), so an individual-normal projection can approach `|r|`. The unconditional bound is instead
+
+\[
+0<r\cdot N_1,
+\quad
+0<(-r)\cdot N_2,
+\quad
+\max\{r\cdot N_1,(-r)\cdot N_2\}
+\le|r|\sin(\min\{\theta,\pi/2\}).
+\tag{CT.7'}
+\]
+
+Thus an opposite-direction shared trunk is forced into the transverse cone between the two normal half-planes; the sharper `sin(theta)` individual-normal control is used only in the close-normal regime, where `theta=o(1)`.
+
+---
+
+## A tuning that makes every surviving common trunk spatially unbounded
+
+The previous small-external theorem assumes
+
+\[
+Z_D:=|A\setminus F|=o(\sqrt D).
+\]
+
+Define
+
+\[
+R_D:={D^{1/4}\over\sqrt{Z_D+1}}\longrightarrow\infty
+\tag{CT.8}
+\]
+
+and choose the admissible slow reflection scale
+
+\[
+\boxed{
+\kappa_D:=D^{1/8}(Z_D+1)^{1/4}.
+}
+\tag{CT.9}
+\]
+
+Then
+
+\[
+\kappa_D=o(D^{1/4}),
+\qquad
+m=\Theta(D^{1/4}/\kappa_D)=\Theta(R_D^{1/2}).
+\tag{CT.10}
+\]
+
+The common-lower-run theorem gives
+
+\[
+q=\Omega\!\left({\kappa_DD^{1/4}\over Z_D+1}\right)
+=\Omega(R_D^{3/2})
+\tag{CT.11}
+\]
+
+selected shared inverse-`D` gates on one fixed run pair. The balanced trunk/cycle-rank fork uses
+
+\[
+s=\sqrt q=\Omega(R_D^{3/4}).
+\tag{CT.12}
+\]
+
+The two-normal extraction with its existing choice `omega_D=sqrt(m)` gives
+
+\[
+\theta=\Omega(m^{-1/2})=\Omega(R_D^{-1/4}).
+\tag{CT.13}
+\]
+
+Consequently, if the balanced fork lands in a compatible common trunk, (CT.4)--(CT.6) give:
+
+### SAME + SAME-ORDER trunk
+
+\[
+\boxed{
+X\cdot B=\Omega(R_D^{1/2})\to\infty.
+}
+\tag{CT.14}
+\]
+
+### OPPOSITE + REVERSE-ORDER trunk
+
+\[
+\boxed{
+X\cdot T=\Omega(R_D^{3/4})\to\infty.
+}
+\tag{CT.15}
+\]
+
+Thus the small-external common-trunk branch can be retuned so that a surviving trunk is not merely combinatorially long. Its endpoints separate by a diverging Euclidean amount in a canonically determined direction.
+
+Combining this with the parity refinement yields the following residual normal form at the tuned scale:
+
+1. `PARITY-MISMATCH`: `beta(P union Q)=Omega(R_D^(3/2))`;
+2. parity-compatible `CYCLE-RANK`: `beta(P union Q)=Omega(R_D^(3/4))`;
+3. `SAME/SAME` common trunk: bisector displacement `Omega(R_D^(1/2))`;
+4. `OPPOSITE/REVERSE` common trunk: difference-axis displacement `Omega(R_D^(3/4))`.
+
+The selected trunk gates retain their original metric bound
+
+\[
+1<|e|\le1+K/D
+\]
+
+and are exact lower gates in both repairs.
+
+---
+
+## Cone proof
+
+Put the unit bisector `B` on angle zero and write the two normals at angles `+theta/2` and `-theta/2`.
+
+For SAME traversal, an edge direction angle `phi` must satisfy
+
+\[
+\cos(\phi-\theta/2)>0,
+\qquad
+\cos(\phi+\theta/2)>0.
+\]
+
+Their common interval is
+
+\[
+|\phi|<\pi/2-\theta/2.
+\]
+
+Hence
+
+\[
+\cos\phi>\sin(\theta/2),
+\]
+
+which proves (CT.2).
+
+For OPPOSITE traversal, choose the sign of `T` so that it points from `N_2` toward `N_1`. The conditions become
+
+\[
+\cos(\phi-\theta/2)>0,
+\qquad
+\cos(\phi+\theta/2)<0.
+\]
+
+Thus `phi` lies in the angular interval of width `theta` centered on `T`, so
+
+\[
+r\cdot T>|r|\cos(\theta/2).
+\]
+
+The difference-axis estimate proves (CT.5). For the individual-normal projection, the extremum over this interval is `|r| sin(theta)` when `theta<=pi/2`, but becomes `|r|` once `theta>=pi/2`; this proves the corrected (CT.7)--(CT.7').
+
+C-II remains open. No theorem-state authority is changed.
+
+**Disposition:** converted the parity-compatible common-trunk branch into a two-normal cone theorem and retuned the small-external slow scale so every surviving common trunk has diverging Euclidean displacement, while parity-mismatch retains the stronger full-`q` cycle-rank conclusion.

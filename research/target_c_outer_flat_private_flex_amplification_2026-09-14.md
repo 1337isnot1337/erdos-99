@@ -1,0 +1,178 @@
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3edc248ec2f48b636921fe4e0c79b9d0fd4fe0b0", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_outer_flat_private_flex_amplification_2026-09-14.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "3c8926bb1a0c0cb3fd0cc47e260277fedec6ca2beb270261837f6d1667a6573a"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Erdos Problem #99 - outer-flat private-column flex amplification
+
+**Date:** 2026-09-14
+**Target:** C-II, canonical full-core Type-II branch
+**Dependencies:** minimax phase-star atomic gap `g=0.0021`; low-t outer/flat-pentagon train gate; audited Section 156 train-angle closure coordinates; low-t outer-to-outer train floor
+**Claim class:** proof-only structural composition awaiting independent audit
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The existing outer-flat hinge theorem extracts one localized contact flex from each good pentagon carrying at least three actual outer-to-flat stopped trains. This loses most of the exact local kernel. If a good pentagon carries `j` such trains, all `j` train-angle columns are private to that one bounded face and enter only its two scalar closure rows. Their exact local kernel has dimension at least `j-2`.
+
+Let `G` be the number of good flat pentagons, let `d_O(P)` be the number of terminal trains of `P` whose other endpoint is the actual outer face, and put
+
+\[
+L_{OF}=\sum_P d_O(P).
+\]
+
+Then
+
+\[
+\boxed{\dim W_{OF}^{\rm priv}\ge\sum_P(d_O(P)-2)_+\ge L_{OF}-2G.}
+\tag{PF.1}
+\]
+
+On the outer-flat branch the existing train gate gives
+
+\[
+L_{OF}\ge(m(t)-o(1))D,
+\qquad
+m(t):={7\pi\over3}+C_0-{9t\over2},
+\]
+
+while `G<=p_5<=f<=Q` and the outer ledger gives `Q/D<=q_0(t)+o(1)`, where `q_0(t):=2t-pi`. Therefore
+
+\[
+\boxed{{\dim W_{OF}^{\rm priv}\over D}\ge m(t)-2q_0(t)-o(1).}
+\tag{PF.2}
+\]
+
+Use the current minimax atomic gap
+
+\[
+C_0=2\sqrt{\Delta_2}+0.0021
+\]
+
+and its safe Section-171 endpoint
+
+\[
+t_{21}:={4\over9}\left(\pi+\sqrt{\Delta_2}\right)+0.0017279
+=1.82124143797944\ldots .
+\]
+
+The companion certificate gives
+
+\[
+m(t_{21})=1.0415220011965977\ldots,
+\qquad
+q_0(t_{21})=0.5008902223690962\ldots,
+\]
+
+hence
+
+\[
+\boxed{\dim W_{OF}^{\rm priv}\ge(0.0397415564584054\ldots-o(1))D.}
+\tag{PF.3}
+\]
+
+This is algebraically three times the previous one-selected-mode floor at the same endpoint.
+
+The low-t ledger simultaneously gives
+
+\[
+{L_{OO}\over D}\ge3\pi-5t_{21}
+=0.318570770872156\ldots-o(1).
+\tag{PF.4}
+\]
+
+Outer-to-outer shear coordinates and outer-to-flat private columns are disjoint train sets, so their contact-flex spaces sum directly:
+
+\[
+\boxed{\dim\bigl(W_{OO}\oplus W_{OF}^{\rm priv}\bigr)
+\ge(0.358312327330561\ldots-o(1))D.}
+\tag{PF.5}
+\]
+
+This is not a row-count contradiction. It is an exact amplification of the disjoint-support train-coordinate space that the actual diameter-thrackle must lock.
+
+## 1. Private columns at one face
+
+Fix a good pentagon `P`. Let `J_P` be the set of complete stopped trains whose bounded terminal occurrence is a side of `P` and whose other terminal occurrence is on the actual outer face. Put `j_P=|J_P|`.
+
+Audited Section 156 represents infinitesimal contact flexes by train angular rates. Each bounded exceptional face contributes two scalar closure rows, and a train column occurs only in the closure rows of bounded faces at which the train terminates.
+
+Every train in `J_P` has exactly one bounded endpoint, namely `P`. Thus the restriction of the closure matrix to the two rows of `P` and columns `J_P` is a real `2 x j_P` matrix, while those columns are zero in every other bounded-face row. Therefore
+
+\[
+\dim\ker(C_P|_{J_P})\ge(j_P-2)_+.
+\tag{PF.6}
+\]
+
+Extend a vector in this local kernel by zero on all other train coordinates. The extension lies in the global kernel of `C_face`, hence integrates by audited Section 156.6 to an infinitesimal contact flex modulo translations.
+
+## 2. Direct sum over pentagons
+
+If `P` and `P'` are distinct bounded faces, then `J_P` and `J_{P'}` are disjoint: an outer-to-flat train has only one bounded terminal occurrence. Hence the extended local kernels have disjoint coordinate supports and sum directly:
+
+\[
+\dim W_{OF}^{\rm priv}\ge\sum_P(j_P-2)_+.
+\]
+
+Since `(j-2)_+ >= j-2` for every nonnegative integer `j`,
+
+\[
+\sum_P(j_P-2)_+
+\ge\sum_Pj_P-2G
+=L_{OF}-2G,
+\]
+
+which proves (PF.1). No three-train selection is required.
+
+## 3. Updated endpoint consequences
+
+At `g=0.0021` and `t=t_21`, the same arithmetic gives the two-outer-face count
+
+\[
+{N_2\over D}\ge0.135157944706875\ldots-o(1).
+\]
+
+Thus the almost-parallel/near-60-degree hinge pigeonhole still supplies at least
+
+\[
+0.0675789723534377D-o(D)
+\]
+
+pairwise train-disjoint hinges of one coherent type.
+
+The previous one-selected-mode argument gave
+
+\[
+{N_3\over D}\ge0.0132471854861351\ldots-o(1).
+\]
+
+The identity `m(t)-2q_0(t)=3N_3(t)` explains the factor-three gain in (PF.3).
+
+## 4. Add the outer-to-outer shear space
+
+Let `W_OO` be the coordinate space generated by exact one-train shears on complete trains with both terminal occurrences on the actual outer face. Audited Section 156 gives `dim W_OO=L_OO`.
+
+No train in `W_OO` belongs to any `J_P`, so the two spaces have disjoint coordinate support. Equations (PF.3)--(PF.4) prove (PF.5).
+
+The union of these supports is a proper subset of all complete train coordinates; in this regime the all-train count is above `2.8D`. Hence the direct-sum space does not contain the all-ones global rotation vector. Its nonzero classes are genuinely non-Euclidean.
+
+## 5. Diameter locking consequence
+
+Canonical mixed rigidity says a contact flex annihilating every active diameter derivative is Euclidean. Therefore the active-diameter derivative map is injective on `W_OO direct-sum W_OF^priv`.
+
+KKT stationarity restricted to contact-flex space gives `beta^T A w=0` for the strictly positive active-diameter weight vector `beta`. Hence the image lies in `beta^perp` and has dimension at least the right side of (PF.5).
+
+The remaining closing theorem is therefore sharper: the near-extremal Woodall diameter thrackle must injectively and sign-compatibly lock a `0.3583D` disjoint-support train-coordinate space containing both one-cut outer shears and face-private multi-column kernels. Pure row count is insufficient; circular split support or metric signs are still required.
+
+## 6. Scope audit
+
+- The theorem has the same `R_F=o(D)` low-t scope as the outer-flat train gate.
+- `L_OF` counts trains with one actual outer endpoint and one endpoint on a good flat pentagon; this is exactly what makes each column private.
+- The local kernel estimate is exact linear algebra. No asymptotic phase approximation enters (PF.1).
+- Supports from distinct pentagons are disjoint because one outer-to-flat train has only one bounded endpoint.
+- Outer-to-outer shears use a disjoint train set.
+- Constants use the current minimax atomic gap `g=0.0021` and safe Section-171 endpoint `t_21`, not the stale `0.00042/t_42` values.
+- No claim is made that distinct flex dimensions require distinct diameter rows.
+- No exact unit triangle or same-cardinality strict sub-`D` competitor is produced.
+
+**Disposition:** new proof-only exact flex-dimension amplification. C-II and Level I remain open.

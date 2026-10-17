@@ -1,0 +1,60 @@
+# Hostile audit — endpoint diameter-edge/perimeter feedback
+
+**Date:** 2026-09-12  
+**Artifact:** `target_c_endpoint_diameter_perimeter_feedback_2026-09-12.md`  
+**Verdict:** PASS at proof-only scope; no C-II closure.  
+**State lock:** `2026-09-12.audit.46`
+
+## 1. Dependency and scope audit
+
+The input `q-k\ge S_*D-o(D)` is the proof-only outer-detour floor from the current
+endpoint branch.  The input
+
+\[
+\operatorname{per}(F)\ge h-1+2D\cos((h-1)\arcsin(1/(2D)))
+\]
+
+is the audited all-diameter-direction difference-body bound.  The proof also uses only
+`q\le\operatorname{per}(F)\le\pi D`, `s_Z\ge0`, and
+`q-k=h-s_Z`.  It does not use a forest-only assertion, a cyclic classification, a
+KKT coefficient floor, or a source deletion.
+
+## 2. Limit passage audit
+
+From `h\ge q-k`, any subsequential limit `y=h/D` lies in `[S_*,\pi]`.  The finite
+difference-body bound divided by `D` converges to `y+2\cos(y/2)` because
+`\arcsin(1/(2D))=1/(2D)+O(D^{-3})`.  The limiting function has derivative
+`1-\sin(y/2)\ge0` on `[0,\pi]`.  Thus its minimum on `[S_*,\pi]` is at `S_*`, proving
+the reported perimeter floor.  No false finite monotonicity claim is needed.
+
+The area statement uses the separately audited bound
+`area(F)/D^2\ge(y+\sin y)/4`, whose right side is increasing on `[0,\pi]`.
+
+## 3. Arithmetic audit
+
+The accompanying script uses rational lower bounds for `S_*`, `\pi`, and the
+alternating sine Taylor estimate.  Floating-point values are printed only as
+diagnostics.  It certifies the conservative implications
+
+\[
+P_*>3.1399,
+\qquad \pi-P_*<0.0018,
+\qquad
+{S_*+\sin S_*\over4}>0.7836,
+\qquad
+{\pi\over4}-{S_*+\sin S_*\over4}<0.0018.
+\]
+
+These are weaker than the displayed decimal evaluations and are sufficient to check
+the signs used in the report.
+
+## 4. Closure gate and regressions
+
+The result is only a near-maximal perimeter/area restriction.  It does not imply
+`per(F)=\pi D`, `d_H=o(D)`, a forest stability theorem, or a finite strict-diameter
+competitor.  A regular odd shell remains a compatible cyclic perimeter-saturated
+regression, while a caterpillar forest can still occupy the unresolved near-maximal
+profile.  Hence the correct classification is a proof-only candidate, not a promoted
+theorem and not a C-II closure.
+
+**Final verdict:** PASS for the stated endpoint reduction; theorem state unchanged.

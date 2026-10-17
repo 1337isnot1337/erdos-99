@@ -1,0 +1,476 @@
+# Target C — diameter-vertex-cover repacking criterion for an inactive chamber
+
+**Date:** 2026-09-12  
+**LEVEL I STATUS:** **STILL OPEN. C-II REMAINS OPEN.**  
+**Status:** proof-only structural reduction; theorem authority unchanged.  
+**Base:** `231fcc455f19c54974a3ffd1aaa27f00ca436a86`.  
+**Dependencies:** C65 full actual diameter visibility; canonical Woodall diameter-topology classification; canonical convex inactive-chamber geometry; the strict interior diameter lemma from the audited inactive-exchange module.
+
+The current inactive-chamber exchange theorem deletes one loaded vertex and asks for a
+local `k -> k+1` repacking. There is a stronger global mechanism that does not require
+the replacement to remain triangle-free and does not need a contact-count comparison.
+
+Delete a **vertex cover of the full actual diameter graph** and replace those deleted
+loaded vertices, together with all isolates assigned to one protected inactive chamber,
+by the same number of unit-separated points deep inside that chamber. Every old
+diameter pair then disappears. Every new point lies in the interior of the old source
+hull and therefore participates in no diameter pair. The resulting source has strict
+diameter `<D`, contradicting global minimality directly.
+
+Woodall's exact diameter-graph classification makes the required deletion set only
+linear:
+
+\[
+\boxed{
+\tau(H)\le\left\lceil {q\over2}\right\rceil
+\le {\pi D\over2}+1,
+}
+\tag{1}
+\]
+
+where `tau(H)` is the minimum vertex-cover number of the actual diameter graph and
+`q=|V(H)|` is the loaded-terminal count.
+
+Thus an internal inactive chamber closes C-II as soon as its protected unit-packing
+capacity exceeds its present isolate population by `tau(H)` slots. This is a different
+closure target from the current one-extra-point exchange: it trades a linear chamber
+repacking for deletion of **all** old diameter pairs, after which triangle-freeness of
+the competitor is irrelevant.
+
+---
+
+## 1. Setup and protected packing capacity
+
+Let
+
+\[
+A\subset\mathbb R^2,
+\qquad |A|=n,
+\qquad \min_{x\ne y}|x-y|\ge1,
+\qquad \operatorname{diam}A=D=D(n)
+\]
+
+be the lexicographically normalized hypothetical triangle-free global minimizer.
+C65 identifies the complete actual diameter graph
+
+\[
+H=(B,E_H),
+\qquad B=V(H),
+\qquad q=|B|,
+\]
+
+and every source point outside the nonisolated positive-contact core has all pairwise
+distances strictly between `1` and `D`.
+
+Let `C` be a convex inactive chamber with assigned contact-isolated source set
+
+\[
+Z_C\subset A\cap\operatorname{int}C,
+\qquad z_C:=|Z_C|,
+\]
+
+such that every source point not in `Z_C` lies outside `int C`. This is the protected
+chamber situation used by the canonical/audited inactive-chamber modules.
+
+Put
+
+\[
+C_{-1}:=\{x\in C:\operatorname{dist}(x,\partial C)>1\}.
+\tag{1.1}
+\]
+
+Define its protected unit-packing capacity
+
+\[
+M_1(C):=\sup\Bigl\{|Y|:
+Y\subset C_{-1},
+\ |y-y'|\ge1\ (y\ne y')\Bigr\}.
+\tag{1.2}
+\]
+
+The supremum is a finite integer in the only sense needed below: if
+`M_1(C)>=N`, there exists a unit-separated `N`-point subset of `C_{-1}`.
+
+For every `y in C_{-1}` and every source point `a notin int C`, convexity gives
+
+\[
+|y-a|>1.
+\tag{1.3}
+\]
+
+Indeed the segment from `y` to `a` meets `partial C`, so its length is at least
+`dist(y,partial C)>1`.
+
+---
+
+## 2. A diameter vertex cover is enough to force strict global descent
+
+Let `U subseteq B` be any vertex cover of `H`; that is, every actual diameter edge has
+at least one endpoint in `U`. Suppose there exists
+
+\[
+Y\subset C_{-1}
+\]
+
+with
+
+\[
+|Y|=z_C+|U|,
+\tag{2.1}
+\]
+
+and `Y` unit-separated.
+
+Define
+
+\[
+A':=(A\setminus(Z_C\cup U))\cup Y.
+\tag{2.2}
+\]
+
+### Theorem 2.1 — protected cover-repacking contradiction
+
+Under the preceding hypotheses,
+
+\[
+\boxed{
+|A'|=|A|,
+\qquad
+\min_{x\ne y\in A'}|x-y|\ge1,
+\qquad
+\operatorname{diam}A'<D.
+}
+\tag{2.3}
+\]
+
+Hence such a set `Y` cannot exist in a global diameter minimizer.
+
+### Proof
+
+Cardinality is immediate from (2.1).
+
+For unit separation, retained old source points remain mutually unit-separated. New
+points are mutually unit-separated by hypothesis. Every retained old source point lies
+outside `int C`, because all original source points in `int C` assigned to this inactive
+chamber are in `Z_C`; equation (1.3) therefore gives strict distance greater than one
+between `Y` and every retained old point.
+
+It remains to prove strict diameter decrease.
+
+Because `U` is a vertex cover of the **complete actual** diameter graph, no retained
+old-old pair has distance `D`. Thus every pair in
+
+\[
+A\setminus(Z_C\cup U)
+\]
+
+has distance strictly less than `D`.
+
+Every point of `Y` lies in `C_{-1} subset int C`. The chamber lies in the force hull,
+which lies in the full source hull
+
+\[
+K:=conv(A).
+\]
+
+Hence `Y subset int K`. The standard strict interior lemma says
+
+\[
+|x-y|<D
+\qquad(x\in K,\ y\in int K).
+\tag{2.4}
+\]
+
+For completeness: `K subseteq closed B(x,D)` for each `x in K` because
+`diam K=diam A=D`; an interior point of `K` cannot lie on the boundary circle of that
+disk, since every neighborhood of such a circle point contains points outside the
+disk. Thus (2.4) holds.
+
+Equation (2.4) makes every new-old distance and every new-new distance strictly below
+`D`. All retained old-old distances are also strictly below `D`. Since `A'` is finite,
+its maximum pair distance is strictly below `D`. This proves (2.3), contradicting the
+definition of `D(n)`. `square`
+
+Notice what is **not** required: `A'` need not be triangle-free, and no contact count
+is compared. The contradiction is direct global diameter descent.
+
+---
+
+## 3. Woodall gives a half-terminal vertex cover
+
+Canonical C-WOODALL says the actual diameter graph has exactly one of two forms.
+
+### 3.1 Caterpillar-forest case
+
+If `H` is a forest, it is bipartite. Either color class is a vertex cover, so choosing
+the smaller class gives
+
+\[
+\boxed{
+\tau(H)\le\left\lfloor{q\over2}\right\rfloor.
+}
+\tag{3.1}
+\]
+
+No caterpillar-specific refinement is needed for this bound.
+
+### 3.2 Connected odd-unicyclic case
+
+Suppose the unique cycle has length
+
+\[
+r=2k+1,
+\]
+
+and every remaining loaded vertex is a pendant leaf attached directly to one cycle
+vertex. Let `ell_i>=0` be the number of leaves attached to cycle vertex `i`, and put
+
+\[
+L:=\sum_{i=1}^r\ell_i,
+\qquad q=r+L.
+\]
+
+There are `r` maximum independent sets of size `k` in the odd cycle, obtained by
+cyclically rotating one alternating pattern. By symmetry each cycle vertex belongs to
+exactly `k` of those `r` sets. Therefore the average leaf weight
+
+\[
+w(I):=\sum_{i\in I}\ell_i
+\]
+
+over these maximum cycle-independent sets is
+
+\[
+{1\over r}\sum_I w(I)
+={k\over r}L
+\le {L\over2},
+\tag{3.2}
+\]
+
+with strict inequality when `L>0`.
+
+If `L=0`, the graph is the bare odd cycle and
+
+\[
+\tau(H)=\tau(C_{2k+1})=k+1
+ =\left\lceil{2k+1\over2}\right\rceil.
+\tag{3.2a}
+\]
+
+If `L>0`, choose one such `I` with
+
+\[
+w(I)<L/2.
+\]
+
+Take as a vertex cover
+
+- all cycle vertices outside `I`; and
+- every pendant leaf attached to a vertex of `I`.
+
+The cycle edges are covered because `I` is independent. Every pendant edge is covered
+because either its cycle endpoint is in the cover or its leaf is. The cover size is
+
+\[
+(k+1)+w(I).
+\]
+
+Since `w(I)` is an integer strictly below `L/2`, this is at most
+
+\[
+\left\lceil{2k+1+L\over2}\right\rceil
+=\left\lceil{q\over2}\right\rceil.
+\tag{3.3}
+\]
+
+Thus in both Woodall cases
+
+\[
+\boxed{
+\tau(H)\le\left\lceil{q\over2}\right\rceil.
+}
+\tag{3.4}
+\]
+
+Finally the loaded vertices occur in convex position and are mutually unit-separated
+around the force hull, so
+
+\[
+q\le\operatorname{per}(F)\le\pi D.
+\tag{3.5}
+\]
+
+Hence
+
+\[
+\boxed{
+\tau(H)
+\le\left\lceil{q\over2}\right\rceil
+\le {\pi D\over2}+1.
+}
+\tag{3.6}
+\]
+
+(The harmless final `+1` avoids parity notation.)
+
+---
+
+## 4. Exact inactive-branch capacity obstruction
+
+Take `U` to be a minimum vertex cover. Theorem 2.1 gives the survivor condition
+
+\[
+\boxed{
+M_1(C)
+\le z_C+\tau(H)-1.
+}
+\tag{4.1}
+\]
+
+Equivalently, define the protected spare capacity
+
+\[
+\operatorname{spare}(C):=M_1(C)-z_C.
+\]
+
+Every triangle-free global minimizer with such an inactive chamber must satisfy
+
+\[
+\boxed{
+\operatorname{spare}(C)<\tau(H)
+\le\left\lceil{q\over2}\right\rceil.
+}
+\tag{4.2}
+\]
+
+Thus any theorem proving
+
+\[
+M_1(C)\ge z_C+\tau(H)
+\tag{4.3}
+\]
+
+for the canonical macroscopic inactive chamber closes that branch immediately by a
+same-cardinality strict sub-`D` competitor.
+
+A topology-free sufficient condition is
+
+\[
+\boxed{
+M_1(C)
+\ge z_C+\left\lceil{q\over2}\right\rceil.
+}
+\tag{4.4}
+\]
+
+Because `q=O(D)`, the remaining chamber problem is now explicitly a **linear spare
+packing-capacity theorem**, not a one-extra-point theorem and not a force-transfer
+theorem.
+
+---
+
+## 5. A lattice lower bound records the exact residual packing gap
+
+Let `Lambda` be the unit triangular lattice of covolume
+
+\[
+a_0={\sqrt3\over2}.
+\]
+
+Average the count
+
+\[
+|(t+\Lambda)\cap C_{-1}|
+\]
+
+over one translation fundamental domain. Its mean is
+
+\[
+{\operatorname{area}(C_{-1})\over a_0}.
+\]
+
+Therefore some translate gives
+
+\[
+\boxed{
+M_1(C)
+\ge
+\left\lceil{\operatorname{area}(C_{-1})\over a_0}\right\rceil.
+}
+\tag{5.1}
+\]
+
+Combining with (4.1) gives a necessary survivor inequality
+
+\[
+\boxed{
+{\operatorname{area}(C_{-1})\over a_0}
+< z_C+\tau(H).
+}
+\tag{5.2}
+\]
+
+This does not yet contradict the canonical chamber Oler estimate. It identifies the
+remaining quantitative obstruction correctly: a near-capacity chamber may store a
+linear boundary surplus above the bulk triangular-lattice count.
+
+For a convex chamber with inradius greater than one, inner-parallel coarea gives
+
+\[
+\operatorname{area}(C)-\operatorname{area}(C_{-1})
+\le\operatorname{per}(C).
+\tag{5.3}
+\]
+
+If
+
+\[
+\sigma_C^{\rm Oler}
+:={\operatorname{area}(C)\over a_0}
++{\operatorname{per}(C)\over2}+1-z_C,
+\tag{5.4}
+\]
+
+then (5.2)--(5.3) imply the explicit necessary upper allowance
+
+\[
+\sigma_C^{\rm Oler}
+<
+\left({1\over a_0}+{1\over2}\right)
+\operatorname{per}(C)
++\tau(H)+1.
+\tag{5.5}
+\]
+
+This is consistent with the canonical `O(D)` chamber slack and therefore is a handoff,
+not a closure. Any improvement of the protected lattice/container lower bound by a
+linear boundary term can now be compared directly with `tau(H)`.
+
+---
+
+## 6. Scope and hostile audit
+
+- **Full cardinality:** exactly `z_C+|U|` points are deleted and exactly that many are
+  inserted.
+- **All source points:** no isolate is silently discarded; every deleted isolate is
+  replaced one-for-one before the extra `|U|` slots corresponding to loaded vertices.
+- **Complete diameter support:** C65 is essential. Covering only a selected positive
+  diameter subgraph would not remove all old distance-`D` pairs.
+- **New diameter pairs:** impossible because every replacement point is in `int K`.
+- **Retained diameter pairs:** impossible because `U` covers the complete actual
+  diameter graph.
+- **Cross-boundary unit separation:** depth `>1` in `C_{-1}` is essential.
+- **Triangle-freeness:** intentionally not required for the competitor, because the
+  contradiction is `diam A'<D(n)`, not lexicographic contact minimization.
+- **Contact-isolated affine kernel:** unused. Isolate coordinates never enter the
+  Section-57 core rigidity theorem.
+- **Exterior-cap branch:** not claimed here unless the same protected-depth hypothesis
+  relative to all retained source points is separately established. The theorem is
+  aimed at the canonical internal macroscopic inactive chamber.
+- **Theorem authority:** unchanged. This is proof-only.
+
+**Disposition:** exact inactive-branch reduction. C-II remains open. To eliminate the
+internal macroscopic chamber it now suffices to prove the lower bound
+`spare(C) >= tau(H)`; the topology-free sufficient target is
+`spare(C) >= ceil(q/2)`, and the number of slots required is at most
+`pi D/2+O(1)`.

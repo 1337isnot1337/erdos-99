@@ -1,0 +1,31 @@
+# Hostile audit — coarse Jordan-template cell regression
+
+**Audited source:** `research/target_c_support6_collapsed_jordan_template_cell_regression_2026-09-19.md`  
+**Verifier:** `research/verify_target_c_support6_collapsed_jordan_template_cells_2026_09_19.cpp`
+
+The scan reuses the exact enumeration of 180 all-cross and 208 mixed matching rotation cells and asserts those cell counts. It does not sample angles or assume that a representative point describes a cell.
+
+The strict crossing test is the correct scaled condition for a unit-rhombus train crossing: `1 < |x_e-x_f| < 2`. A pair is marked noncrossing only if both oriented strict windows are infeasible under the full cell inequalities. Consequently the scan may fail to kill a cell because of coarse relaxation, but it cannot falsely claim a cell-wide noncrossing relation from a single numerical point.
+
+The side calculation uses the incoming and outgoing cycle halfedges in the cyclic order at the face and tests both complementary sectors. Reversing the triangle orientation is explicitly enumerated. External vertices are distinct, and every required graph edge is checked before acceptance.
+
+The verifier does not use nonlinear closure equations, source embedding, diameter bars, or positive KKT multipliers. It therefore makes no claim that the 388 cells are locally populated or globally realizable.
+
+## Reproduction
+
+```text
+g++ -std=c++17 -O3 -Wall -Wextra -pedantic \
+  research/verify_target_c_support6_collapsed_jordan_template_cells_2026_09_19.cpp \
+  -o /tmp/target-c-jordan-template
+/tmp/target-c-jordan-template
+```
+
+Expected output includes:
+
+```text
+all-cross matching: cells=180, jordan_template_killed=0, survivors=180
+mixed matching: cells=208, jordan_template_killed=0, survivors=208
+PASS: exact coarse Jordan-template scan completed; remaining cells require threshold refinement or nonlinear closure.
+```
+
+**Audit disposition:** PASS as an exact negative regression. The result identifies the precise loss in the coarse Jordan route: every cell needs crossing-threshold information or a stronger separator construction. It does not advance theorem-state authority and does not close C-II.
