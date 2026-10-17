@@ -27,6 +27,22 @@ equal-weight controls expose the scope boundaries. This is unreviewed finite
 evidence outside the theorem-certificate registry; it does not establish
 geometric realization, source surplus or Target A closure.
 
+## Target B shared-interface capacity
+
+The [2026-10-17 proof candidate](../docs/reports/target_b_interface_capacity_2026-10-17.md)
+keeps internal grid crossings single-counted, charges double penetration use to
+deleted interfaces, and solves the two-grain incidence inventory exactly. Replay
+the standard-library checker with
+`python3 research/verify_target_b_interface_capacity_2026_10_17.py --check
+research/target_b_interface_capacity_2026_10_17.json`.
+Labelled edge assignments and a separate multinomial calculation agree on
+8,336,550 states; a further 15,625 three-grain states check the multiplicity
+identity. The 5,964 exact-interface and 5,964 upper-cap inventory cases include
+infeasible demands. Controls reject naive addition and treating an interface cap
+as an actual physical count. This unreviewed evidence supplies no source
+extraction, positive PC3 excess, virtual-area payment or Target B closure, and
+is outside the registered theorem-certificate suite.
+
 ## Additional noncanonical whole-source verifiers
 
 Two source-identical formal/global-obstruction reports postdate the pinned canonical corpus and are available through [current research proposals](../docs/research/proposals.md). They do **not** add to the 94 registered theorem certificates and must not be treated as canonical premises.

@@ -1,7 +1,7 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2168,
+  "source_documents": 2169,
   "math_pairs_normalized": 71621,
   "documents": [
     {
@@ -2970,6 +2970,13 @@
       "source_sha256": "f8bbcd81a2c3cf3511e816b4ecda0a1e5f59165d57d159b18c3ad024a06bf40b",
       "reading_path": "reading/docs/reports/target_b_fractional_balanced_grain_exclusion_2026-09-05.md",
       "reading_sha256": "71dc8326c9f11f968b3e2d26c64d503bbdb018c0766ab384578dcf40d04679f7",
+      "math_pairs_normalized": 0
+    },
+    {
+      "source": "docs/reports/target_b_interface_capacity_2026-10-17.md",
+      "source_sha256": "c7942820c07dacbbbb931bec9fe408f15f7574c6c2c4814d18baa67c3cb8d31a",
+      "reading_path": "reading/docs/reports/target_b_interface_capacity_2026-10-17.md",
+      "reading_sha256": "2ee56cab70a50d051bfa9aa368f7f041e8176feebe03b3e499351906c86c303f",
       "math_pairs_normalized": 0
     },
     {

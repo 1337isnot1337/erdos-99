@@ -1,0 +1,733 @@
+{
+  "arithmetic": "standard-library integers; determinant units sqrt(3)/2",
+  "catalogue_revision": "public-frontier.7",
+  "controls": {
+    "determinant_units": {
+      "all": 8,
+      "deleted": 1,
+      "internal": 2,
+      "virtual": 5
+    },
+    "missing_deleted_interface_hypothesis_rejected": true,
+    "naive_addition_rejected": {
+      "R": 3,
+      "charge_sets": [
+        [
+          [
+            0,
+            3
+          ]
+        ],
+        [
+          [
+            0,
+            3
+          ]
+        ]
+      ],
+      "grid_edges": [
+        [
+          [
+            0,
+            1
+          ]
+        ],
+        [
+          [
+            2,
+            3
+          ]
+        ]
+      ],
+      "naive_lower_bound": 4,
+      "physical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "repaired_lower_bound": 3
+    },
+    "unshared_same_demands": {
+      "R": 4,
+      "physical_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ]
+    },
+    "upper_cap_as_actual_count_rejected": {
+      "I": 0,
+      "K": 1,
+      "R": 2,
+      "incorrect_lower_bound": 3,
+      "p": [
+        0,
+        0
+      ]
+    },
+    "zero_deficit_regression": [
+      {
+        "I": 0,
+        "R": 2,
+        "p": [
+          0,
+          0
+        ],
+        "shore": 1
+      },
+      {
+        "I": 0,
+        "R": 8,
+        "p": [
+          0,
+          0
+        ],
+        "shore": 2
+      },
+      {
+        "I": 0,
+        "R": 18,
+        "p": [
+          0,
+          0
+        ],
+        "shore": 3
+      },
+      {
+        "I": 0,
+        "R": 200,
+        "p": [
+          0,
+          0
+        ],
+        "shore": 10
+      },
+      {
+        "I": 0,
+        "R": 20000,
+        "p": [
+          0,
+          0
+        ],
+        "shore": 100
+      }
+    ]
+  },
+  "limitations": [
+    "No planar train realization or separator extraction",
+    "No PC1/PC3 penetration lower bound certified by the finite model",
+    "No jammed packing, global minimizer, virtual-area payment or topology estimate",
+    "No Target B or Level I closure; no independent review or canonical promotion"
+  ],
+  "priority_revision": "public-frontier.3",
+  "source_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+  "source_sha256": {
+    "docs/STATE.md": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
+    "docs/reports/target_b_dense_grid_penetration_interpolation_dependency_audit_2026-09-11.md": "c3026f28051b312a4748b6637267b4abf952739826b98c356b7bd3bd7f5d1046",
+    "docs/reports/target_b_multicomponent_penetration_budget_2026-09-05.md": "d855c448a3daa7d09962a0e4089aeaf3d50eca15c5ea2dadc10eb6c9bd8ae843",
+    "docs/reports/target_b_penetration_charged_grid_cancellation_2026-09-05.md": "a1ecda90c62bbe13b93a1c4091fb0ec333255a27014c6536a2b03d588608e5fb",
+    "docs/reports/target_b_trimmed_grid_phase_star_exclusion_2026-09-05.md": "4013536ad4ca97b13f9c0c7d39ca6911cec3f1fc8f1897cf406b5ae3eba3ab86",
+    "docs/research/agent-task-catalog.json": "2103f415963d610bc66f2473c9a057b7ed5bb082febc6c64b5aab90ea46f93b0",
+    "docs/research/onboarding-evaluation-2026-10-15.md": "1b252282e09a02c2d7af45d3d81fb4b2d0c5a78c0d9cd0fa6c0186f3da10a997",
+    "docs/research/priority-state.json": "74262c84658453dbe99752475a54a891203aaa86509acdfd19a3f613f286c4b9",
+    "docs/targets/target-b/01-jammed-rhombic-branch.md": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+    "docs/targets/target-b/README.md": "599455ccbf8c2b20d3e95d3d0c7034810fe62946d4a10757f8de2c9a6bbda3ed",
+    "research/onboarding_two_grain_audit.py": "ddad086f6930aaac4a694a42e58719dd7694dda5c3d850fade48d64fca8aa573"
+  },
+  "state_version": "2026-10-15.publication.2",
+  "status": "unreviewed exact finite evidence",
+  "task_id": "compute-b-two-grain-interface-regressions",
+  "three_grain": {
+    "deletion_bound_equalities": 64,
+    "grids": 3,
+    "rounded_half_bound_equalities": 448,
+    "states": 15625,
+    "trains": 6
+  },
+  "two_grain": {
+    "configurations": [
+      {
+        "counter_bins": 14,
+        "grid_edges": 2,
+        "histogram_sha256": "be4fd4b92b30a80facd3ea84872f37d6cafd519df820f7ecbe128d6dcfd81c8d",
+        "private_slots": [
+          0,
+          0
+        ],
+        "pruned": 0,
+        "shared_slots": 2,
+        "shores": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "states": 25
+      },
+      {
+        "counter_bins": 178,
+        "grid_edges": 2,
+        "histogram_sha256": "980384964f833236cfc16b4afd7e9c30b12598a07fb21c42f5f2f51e9397fe0d",
+        "private_slots": [
+          2,
+          2
+        ],
+        "pruned": 1,
+        "shared_slots": 2,
+        "shores": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "states": 2025
+      },
+      {
+        "counter_bins": 30,
+        "grid_edges": 3,
+        "histogram_sha256": "c54a8a60237db4ae00f1ec9b0d5b530f8155d6476613cbd55e47f09a6bbdc6a3",
+        "private_slots": [
+          0,
+          0
+        ],
+        "pruned": 0,
+        "shared_slots": 3,
+        "shores": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "states": 125
+      },
+      {
+        "counter_bins": 450,
+        "grid_edges": 3,
+        "histogram_sha256": "42a789cebd813ac791d6951cf82a48a61dc250ac32fecf1387b251d476e35d46",
+        "private_slots": [
+          2,
+          3
+        ],
+        "pruned": 1,
+        "shared_slots": 3,
+        "shores": [
+          1,
+          1,
+          1,
+          2
+        ],
+        "states": 30375
+      },
+      {
+        "counter_bins": 55,
+        "grid_edges": 4,
+        "histogram_sha256": "394e15c6552ac7d3ce40f331a503e1690497bac44f20fb89ac2292e05204dde7",
+        "private_slots": [
+          0,
+          0
+        ],
+        "pruned": 0,
+        "shared_slots": 4,
+        "shores": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "states": 625
+      },
+      {
+        "counter_bins": 940,
+        "grid_edges": 4,
+        "histogram_sha256": "24d143a47e3da1d216f217910a8546f0fcb63bd73c41d98aeffdf067d8e9ba3b",
+        "private_slots": [
+          2,
+          4
+        ],
+        "pruned": 1,
+        "shared_slots": 4,
+        "shores": [
+          1,
+          1,
+          1,
+          3
+        ],
+        "states": 455625
+      },
+      {
+        "counter_bins": 30,
+        "grid_edges": 3,
+        "histogram_sha256": "c54a8a60237db4ae00f1ec9b0d5b530f8155d6476613cbd55e47f09a6bbdc6a3",
+        "private_slots": [
+          0,
+          0
+        ],
+        "pruned": 0,
+        "shared_slots": 3,
+        "shores": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "states": 125
+      },
+      {
+        "counter_bins": 450,
+        "grid_edges": 3,
+        "histogram_sha256": "42a789cebd813ac791d6951cf82a48a61dc250ac32fecf1387b251d476e35d46",
+        "private_slots": [
+          2,
+          3
+        ],
+        "pruned": 1,
+        "shared_slots": 3,
+        "shores": [
+          1,
+          1,
+          2,
+          1
+        ],
+        "states": 30375
+      },
+      {
+        "counter_bins": 55,
+        "grid_edges": 5,
+        "histogram_sha256": "394e15c6552ac7d3ce40f331a503e1690497bac44f20fb89ac2292e05204dde7",
+        "private_slots": [
+          0,
+          0
+        ],
+        "pruned": 0,
+        "shared_slots": 4,
+        "shores": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "states": 625
+      },
+      {
+        "counter_bins": 940,
+        "grid_edges": 5,
+        "histogram_sha256": "24d143a47e3da1d216f217910a8546f0fcb63bd73c41d98aeffdf067d8e9ba3b",
+        "private_slots": [
+          2,
+          4
+        ],
+        "pruned": 1,
+        "shared_slots": 4,
+        "shores": [
+          1,
+          1,
+          2,
+          2
+        ],
+        "states": 455625
+      },
+      {
+        "counter_bins": 55,
+        "grid_edges": 4,
+        "histogram_sha256": "394e15c6552ac7d3ce40f331a503e1690497bac44f20fb89ac2292e05204dde7",
+        "private_slots": [
+          0,
+          0
+        ],
+        "pruned": 0,
+        "shared_slots": 4,
+        "shores": [
+          1,
+          1,
+          3,
+          1
+        ],
+        "states": 625
+      },
+      {
+        "counter_bins": 940,
+        "grid_edges": 4,
+        "histogram_sha256": "24d143a47e3da1d216f217910a8546f0fcb63bd73c41d98aeffdf067d8e9ba3b",
+        "private_slots": [
+          2,
+          4
+        ],
+        "pruned": 1,
+        "shared_slots": 4,
+        "shores": [
+          1,
+          1,
+          3,
+          1
+        ],
+        "states": 455625
+      },
+      {
+        "counter_bins": 30,
+        "grid_edges": 3,
+        "histogram_sha256": "c54a8a60237db4ae00f1ec9b0d5b530f8155d6476613cbd55e47f09a6bbdc6a3",
+        "private_slots": [
+          0,
+          0
+        ],
+        "pruned": 0,
+        "shared_slots": 3,
+        "shores": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "states": 125
+      },
+      {
+        "counter_bins": 450,
+        "grid_edges": 3,
+        "histogram_sha256": "5b3b8c0142575ce5b6d0a336cbb3b57021bc8d72a73e21554a020596b32577ad",
+        "private_slots": [
+          3,
+          2
+        ],
+        "pruned": 1,
+        "shared_slots": 3,
+        "shores": [
+          1,
+          2,
+          1,
+          1
+        ],
+        "states": 30375
+      },
+      {
+        "counter_bins": 55,
+        "grid_edges": 4,
+        "histogram_sha256": "394e15c6552ac7d3ce40f331a503e1690497bac44f20fb89ac2292e05204dde7",
+        "private_slots": [
+          0,
+          0
+        ],
+        "pruned": 0,
+        "shared_slots": 4,
+        "shores": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "states": 625
+      },
+      {
+        "counter_bins": 970,
+        "grid_edges": 4,
+        "histogram_sha256": "1be44083e705d31c369656b83255a7899ac9293c065c0fff87f7b34168354fc5",
+        "private_slots": [
+          3,
+          3
+        ],
+        "pruned": 1,
+        "shared_slots": 4,
+        "shores": [
+          1,
+          2,
+          1,
+          2
+        ],
+        "states": 455625
+      },
+      {
+        "counter_bins": 91,
+        "grid_edges": 4,
+        "histogram_sha256": "666ea85c563945b9cb55c8b0a59622bca6b3ccf63987b179edc5ea53246ddcc6",
+        "private_slots": [
+          0,
+          0
+        ],
+        "pruned": 0,
+        "shared_slots": 5,
+        "shores": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "states": 3125
+      },
+      {
+        "counter_bins": 1429,
+        "grid_edges": 4,
+        "histogram_sha256": "d0f56c58a230b9bf028b161390b49fade71978ac47d9d3bd348c1671d14638cf",
+        "private_slots": [
+          3,
+          3
+        ],
+        "pruned": 1,
+        "shared_slots": 5,
+        "shores": [
+          1,
+          2,
+          2,
+          1
+        ],
+        "states": 2278125
+      },
+      {
+        "counter_bins": 55,
+        "grid_edges": 4,
+        "histogram_sha256": "394e15c6552ac7d3ce40f331a503e1690497bac44f20fb89ac2292e05204dde7",
+        "private_slots": [
+          0,
+          0
+        ],
+        "pruned": 0,
+        "shared_slots": 4,
+        "shores": [
+          1,
+          3,
+          1,
+          1
+        ],
+        "states": 625
+      },
+      {
+        "counter_bins": 940,
+        "grid_edges": 4,
+        "histogram_sha256": "a032c03a603e0c767b60999a22ad1695ee690fa61c31d3deb7b60b9d33a8267e",
+        "private_slots": [
+          4,
+          2
+        ],
+        "pruned": 1,
+        "shared_slots": 4,
+        "shores": [
+          1,
+          3,
+          1,
+          1
+        ],
+        "states": 455625
+      },
+      {
+        "counter_bins": 30,
+        "grid_edges": 3,
+        "histogram_sha256": "c54a8a60237db4ae00f1ec9b0d5b530f8155d6476613cbd55e47f09a6bbdc6a3",
+        "private_slots": [
+          0,
+          0
+        ],
+        "pruned": 0,
+        "shared_slots": 3,
+        "shores": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "states": 125
+      },
+      {
+        "counter_bins": 450,
+        "grid_edges": 3,
+        "histogram_sha256": "5b3b8c0142575ce5b6d0a336cbb3b57021bc8d72a73e21554a020596b32577ad",
+        "private_slots": [
+          3,
+          2
+        ],
+        "pruned": 1,
+        "shared_slots": 3,
+        "shores": [
+          2,
+          1,
+          1,
+          1
+        ],
+        "states": 30375
+      },
+      {
+        "counter_bins": 91,
+        "grid_edges": 4,
+        "histogram_sha256": "666ea85c563945b9cb55c8b0a59622bca6b3ccf63987b179edc5ea53246ddcc6",
+        "private_slots": [
+          0,
+          0
+        ],
+        "pruned": 0,
+        "shared_slots": 5,
+        "shores": [
+          2,
+          1,
+          1,
+          2
+        ],
+        "states": 3125
+      },
+      {
+        "counter_bins": 1429,
+        "grid_edges": 4,
+        "histogram_sha256": "d0f56c58a230b9bf028b161390b49fade71978ac47d9d3bd348c1671d14638cf",
+        "private_slots": [
+          3,
+          3
+        ],
+        "pruned": 1,
+        "shared_slots": 5,
+        "shores": [
+          2,
+          1,
+          1,
+          2
+        ],
+        "states": 2278125
+      },
+      {
+        "counter_bins": 55,
+        "grid_edges": 4,
+        "histogram_sha256": "394e15c6552ac7d3ce40f331a503e1690497bac44f20fb89ac2292e05204dde7",
+        "private_slots": [
+          0,
+          0
+        ],
+        "pruned": 0,
+        "shared_slots": 4,
+        "shores": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "states": 625
+      },
+      {
+        "counter_bins": 970,
+        "grid_edges": 4,
+        "histogram_sha256": "1be44083e705d31c369656b83255a7899ac9293c065c0fff87f7b34168354fc5",
+        "private_slots": [
+          3,
+          3
+        ],
+        "pruned": 1,
+        "shared_slots": 4,
+        "shores": [
+          2,
+          1,
+          2,
+          1
+        ],
+        "states": 455625
+      },
+      {
+        "counter_bins": 55,
+        "grid_edges": 5,
+        "histogram_sha256": "394e15c6552ac7d3ce40f331a503e1690497bac44f20fb89ac2292e05204dde7",
+        "private_slots": [
+          0,
+          0
+        ],
+        "pruned": 0,
+        "shared_slots": 4,
+        "shores": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "states": 625
+      },
+      {
+        "counter_bins": 940,
+        "grid_edges": 5,
+        "histogram_sha256": "a032c03a603e0c767b60999a22ad1695ee690fa61c31d3deb7b60b9d33a8267e",
+        "private_slots": [
+          4,
+          2
+        ],
+        "pruned": 1,
+        "shared_slots": 4,
+        "shores": [
+          2,
+          2,
+          1,
+          1
+        ],
+        "states": 455625
+      },
+      {
+        "counter_bins": 55,
+        "grid_edges": 4,
+        "histogram_sha256": "394e15c6552ac7d3ce40f331a503e1690497bac44f20fb89ac2292e05204dde7",
+        "private_slots": [
+          0,
+          0
+        ],
+        "pruned": 0,
+        "shared_slots": 4,
+        "shores": [
+          3,
+          1,
+          1,
+          1
+        ],
+        "states": 625
+      },
+      {
+        "counter_bins": 940,
+        "grid_edges": 4,
+        "histogram_sha256": "a032c03a603e0c767b60999a22ad1695ee690fa61c31d3deb7b60b9d33a8267e",
+        "private_slots": [
+          4,
+          2
+        ],
+        "pruned": 1,
+        "shared_slots": 4,
+        "shores": [
+          3,
+          1,
+          1,
+          1
+        ],
+        "states": 455625
+      }
+    ],
+    "exact_inventory_cases": 5964,
+    "minimal_naive_failure_counters": {
+      "I": 1,
+      "R": 3,
+      "X_1": 1,
+      "X_2": 1,
+      "exterior_R": 1,
+      "grid_trains": 4,
+      "pruned": 0,
+      "shores": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "states": 8336550,
+    "strict_gain_over_mcp1_and_individual_pc1_states": 8335751,
+    "strict_gain_over_rounded_mcp1_states": 8336550,
+    "upper_cap_inventory_cases": 5964
+  }
+}
