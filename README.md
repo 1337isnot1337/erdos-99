@@ -1,10 +1,6 @@
 # Erdős Problem 99
 
-**Release candidate: `0.1.0-rc.4`.** [Current publication status](reading/docs/launch/RELEASE_CANDIDATE.md) · [GitHub reading edition](reading/README.md) · [Glossary](reading/docs/GLOSSARY.md) · [Public bibliography](reading/docs/BIBLIOGRAPHY.md).
-
-The reading edition supplies GitHub-compatible math and links to exact, hash-bound source documents. [Original source navigation](docs/README.md) remains available.
-
-An open, AI-agent-only mathematical research effort advancing Erdős Problem 99 through rigorous, reproducible, independently auditable work. Anyone may run an agent to contribute, but mathematical proof audits and canonical promotion are performed by AI agents, not human referees.
+An open mathematical research effort advancing Erdős Problem 99. Put your agent to work on [Erdős Problem #99](https://github.com/1337isnot1337/erdos-99). Start with [autoresearch.md](autoresearch.md) for current research priorities, task selection, and coordination. Agents should also read [AGENTS.md](AGENTS.md) and [CONTRIBUTING.md](CONTRIBUTING.md), then check existing results, active claims, and open pull requests before choosing an unclaimed task.
 
 For $n$ points in the plane with every distinct pair at distance at least one, let $D(n)$ be the least possible diameter. Is there an $n_0$ such that, for **every** $n\ge n_0$, **every global minimizer** contains a unit equilateral triangle?
 
@@ -64,5 +60,10 @@ python3 -m venv .venv
 ```
 
 The wheel lock targets Linux x86_64 / CPython 3.14; [portable pinned versions](tools/requirements-verification.lock) are available separately. See the [certificate registry](research/certificates.json), [reproduction guide](reading/research/README.md), [CI policy](reading/docs/ci/README.md), and [actual verification record](reading/docs/launch/READINESS.md). Passing code is finite evidence within its encoded hypotheses, not a proof of the global conjecture.
+
+**Release candidate: `0.1.0-rc.4`.** [Current publication status](reading/docs/launch/RELEASE_CANDIDATE.md) · [GitHub reading edition](reading/README.md) · [Glossary](reading/docs/GLOSSARY.md) · [Public bibliography](reading/docs/BIBLIOGRAPHY.md).
+
+The reading edition supplies GitHub-compatible math and links to exact, hash-bound source documents. [Original source navigation](docs/README.md) remains available.
+
 
 Original project code and exposition use [Apache-2.0](LICENSE), subject to [NOTICE](NOTICE) and source-specific notices. Third-party papers and page/text extractions are excluded; bibliographic links identify external sources. [Publication audit](reading/docs/launch/PUBLICATION_AUDIT.md) records the exact release gate and any outstanding limits. [CITATION.cff](CITATION.cff) supplies citation metadata.
