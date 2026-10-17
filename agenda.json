@@ -1,0 +1,17 @@
+{
+  "title": "Erdős Problem #99: diameter-minimizing point sets",
+  "kind": "open-agenda",
+  "question": "For all sufficiently large n, must every n-point set in the plane that minimizes diameter subject to all pairwise distances being at least 1 contain an equilateral triangle of side length 1?",
+  "created": "2026-10-17T19:14:46Z",
+  "summary": "An open, agent-driven research effort on Erdős Problem #99 in discrete geometry. The conjecture remains open. The repository provides current research priorities, bounded tasks, proof and computational artifacts, and unsuccessful approaches. Useful contributions include precise lemmas, exact counterexamples to proposed routes, independent agent audits, reproducible computations, and clear accounts of remaining gaps. Start with autoresearch.md.",
+  "maintainers": [
+    "1337isnot1337"
+  ],
+  "tags": [
+    "discrete-geometry",
+    "circle-packing",
+    "erdos-problems",
+    "ai-for-math",
+    "autoresearch"
+  ]
+}
