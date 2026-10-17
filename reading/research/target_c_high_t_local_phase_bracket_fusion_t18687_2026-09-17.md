@@ -1,0 +1,507 @@
+> Generated reading edition · [exact source](../../research/target_c_high_t_local_phase_bracket_fusion_t18687_2026-09-17.md) · source SHA-256 `2c868296f9a89967c073f364d8fe0c06d751b704374d46ea78afe1fa0ddea197`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "a252bd07adf7a4960b13e3820d4e3d01a034e68f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_local_phase_bracket_fusion_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "301b850f7f7e2d1cd2332f64c3d1a5fc5ebe43342ed3f6c32d034403800e97bb"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — local phase purification and circumcenter bracketing can be imposed on the same adjacent ladder
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** positive-density families of low-terminal adjacent interfaces on the selected O--O path through `t=(q-k)/D<=1.8687`; in particular the host-sharpened robust fork and deep exact-force cells  
+**Dependencies:** canonical global strict-rhombus angular-defect budget; adjacent-row common-train theorem; exact train-step metric bound; full-source circumdisk bound; host-sharpened robust fork  
+**Certificate:** `research/verify_target_c_high_t_local_phase_bracket_fusion_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The adjacent circumcenter-flank theorem gives, at every low-terminal interface, a common two-row transverse family of density almost `0.6536`. Separately, the inverse-`D` phase arguments give near-equilateral train rectangles after global thinning. Those two structures need not remain separate.
+
+The canonical global angular-defect budget is only `O(D)`. A strict rhombus belonging to an adjacent two-row ladder can be charged to at most two adjacent interfaces. Therefore, on any **linear** family of low-terminal interfaces, all but a prescribed fixed fraction have only `O(1)` total angular defect across their entire common two-row transverse family. Markov inside one such interface then deletes only `sigma D` columns and leaves almost the whole `0.6536D` common family with inverse-`D` angular defect on **both** adjacent rows.
+
+The remaining family is still dense enough for the circumdisk-capacity argument. Thus, at positive linear density, one and the same local train ladder is simultaneously
+
+- common to both adjacent rows;
+- ordered and pairwise noncrossing;
+- inverse-`D` near-equilateral on both rows;
+- and equipped with common linear column flanks on opposite sides of the source circumcenter coordinate.
+
+This fuses the two local scaffolds that were separate in the previous frontier.
+
+---
+
+## Theorem LPB — phase-pure circumcenter-bracketing adjacent ladders
+
+Let `I_D` be a family of adjacent selected O--O interfaces. At `i in I_D`, write the adjacent rows as
+
+```math
+\tau_i,\tau_{i+1},
+```
+
+and their complete-train crossing families as `Gamma_i,Gamma_{i+1}`. Assume
+
+```math
+\boxed{|I_D|>\gamma D-o(D)}
+\tag{LPB.1}
+```
+
+for a fixed `gamma>0`, and assume the stopped-train terminal symmetric-difference costs satisfy
+
+```math
+\boxed{L_i=o(D)}
+\tag{LPB.2}
+```
+
+uniformly on `I_D`. Every fixed-good interface used in the current robust/KKT arguments has the stronger `L_i=O(1)` property.
+
+Put
+
+```math
+r:=0.6536.
+\tag{LPB.3}
+```
+
+Fix constants
+
+```math
+0<\eta<1,
+\qquad
+0<\sigma<r,
+\qquad
+\mu\ge0
+\tag{LPB.4}
+```
+
+such that
+
+```math
+\boxed{
+q:=r-\sigma-{1+2\mu\over\sqrt3}>0.
+}
+\tag{LPB.5}
+```
+
+Let
+
+```math
+C_{\rm phase}:={\pi^2\sqrt3(2+\sqrt3)\over12}
+\tag{LPB.6}
+```
+
+be the canonical global strict-rhombus angular-defect constant, and define
+
+```math
+\boxed{
+K={2C_{\rm phase}\over\eta\gamma\sigma}.
+}
+\tag{LPB.7}
+```
+
+Then there is a subfamily
+
+```math
+I_D'\subset I_D
+```
+
+with
+
+```math
+\boxed{
+|I_D'|>((1-\eta)\gamma)D-o(D)
+}
+\tag{LPB.8}
+```
+
+such that every `i in I_D'` admits one transverse family `P_i` satisfying all of the following.
+
+### 1. Almost-full common two-row ladder
+
+```math
+\boxed{
+P_i\subset\Gamma_i\cap\Gamma_{i+1},
+\qquad
+|P_i|>(r-\sigma)D-o(D).
+}
+\tag{LPB.9}
+```
+
+The trains in `P_i` are pairwise noncrossing and occur in one common order along both adjacent rows.
+
+### 2. Inverse-`D` phase purity on both rows
+
+For every `b in P_i` and `j in {i,i+1}`, let `delta(tau_j,b)` denote the canonical nonnegative acute strict-rhombus angular defect above `pi/3`. Then
+
+```math
+\boxed{
+0<\delta(\tau_j,b)\le {K\over D}.
+}
+\tag{LPB.10}
+```
+
+Thus the entire retained common ladder is near-equilateral on both adjacent rows, with a uniform `O(D^{-1})` constant depending only on `eta,gamma,sigma`.
+
+### 3. The same phase-pure columns contain common circumcenter flanks
+
+There are subfamilies
+
+```math
+P_i^-(\mu),P_i^+(\mu)\subset P_i
+```
+
+which are respectively an initial block and a terminal block in the common column order and satisfy
+
+```math
+\boxed{
+|P_i^-(\mu)|,|P_i^+(\mu)|>(q-o(1))D.
+}
+\tag{LPB.11}
+```
+
+Orient each adjacent row as in the common-order train coordinate and put
+
+```math
+h_j(x)=\det(u_j,x-o),
+```
+
+where `o` is the source circumcenter and `u_j` is the row track-edge direction with `h_j` increasing in the common column order. If `z_{j,b}` is the row-column crossing-rhombus center, then simultaneously for both `j=i,i+1`,
+
+```math
+\boxed{
+h_j(z_{j,b})<-\mu D\quad(b\in P_i^-(\mu)),}
+\tag{LPB.12}
+```
+
+```math
+\boxed{
+h_j(z_{j,b})>\mu D\quad(b\in P_i^+(\mu)).}
+\tag{LPB.13}
+```
+
+Every crossing in these flank blocks still satisfies the inverse-`D` defect bound (LPB.10). Hence the circumcenter-bracketing and near-equilateral properties are carried by the **same columns**, not by two unrelated transverse families.
+
+---
+
+## 1. Each adjacent interface receives a two-row defect charge
+
+At interface `i`, the adjacent-row common family is
+
+```math
+C_i:=\Gamma_i\cap\Gamma_{i+1}.
+\tag{LPB.14}
+```
+
+The adjacent terminal-topology theorem and the high-`t` crossing floor give
+
+```math
+|C_i|
+>{rD}-{L_i\over2}-o(D)
+=rD-o(D)
+\tag{LPB.15}
+```
+
+uniformly on `I_D`.
+
+For `b in C_i`, define the two-row defect charge
+
+```math
+\Delta_{i,b}
+:=\delta(\tau_i,b)+\delta(\tau_{i+1},b)
+\ge0,
+\tag{LPB.16}
+```
+
+and
+
+```math
+S_i:=\sum_{b\in C_i}\Delta_{i,b}.
+\tag{LPB.17}
+```
+
+The key point is the multiplicity of this charge. A fixed strict rhombus crossing of row `tau_j` with a transverse train `b` can enter only the adjacent-interface charge `S_{j-1}` and/or `S_j`. It cannot enter any other `S_i`, because only those two interfaces contain `tau_j` as an adjacent row. Train pseudosegment geometry also ensures that the row-column pair contributes at most one strict crossing rhombus.
+
+Therefore every strict-rhombus defect in the source is counted at most twice in
+
+```math
+\sum_{i\in I_D}S_i.
+```
+
+The canonical global defect budget gives
+
+```math
+\boxed{
+\sum_{i\in I_D}S_i
+\le2C_{\rm phase}D.
+}
+\tag{LPB.18}
+```
+
+This is the bridge between the global `O(D)` phase budget and the local `Theta(D)`-column adjacent ladders.
+
+---
+
+## 2. A linear family of interfaces has bounded total local defect
+
+Set
+
+```math
+T:={2C_{\rm phase}\over\eta\gamma}.
+\tag{LPB.19}
+```
+
+By (LPB.18), the number of interfaces with `S_i>T` is at most
+
+```math
+{2C_{\rm phase}D\over T}
+=\eta\gamma D.
+\tag{LPB.20}
+```
+
+Combining with (LPB.1), after absorbing the original `o(D)` term we retain a family `I_D'` satisfying (LPB.8) and
+
+```math
+\boxed{S_i\le T\quad(i\in I_D').}
+\tag{LPB.21}
+```
+
+No phase-bin or complete-biclique argument is used here. The bounded local charge comes directly from averaging over the already identified positive-density interface population.
+
+---
+
+## 3. Delete only `sigma D` columns to obtain a phase-pure common ladder
+
+For fixed `i in I_D'`, call a common column `b in C_i` bad when
+
+```math
+\Delta_{i,b}>{K\over D}.
+\tag{LPB.22}
+```
+
+If there are `N_i^{bad}` bad columns, then
+
+```math
+N_i^{bad}{K\over D}
+< S_i
+\le T.
+```
+
+Using `K=T/sigma`,
+
+```math
+\boxed{N_i^{bad}\le\sigma D.}
+\tag{LPB.23}
+```
+
+Delete the bad columns and call the remainder `P_i`. Equations (LPB.15) and (LPB.23) give (LPB.9).
+
+For `b in P_i`,
+
+```math
+0\le\delta(\tau_i,b),\delta(\tau_{i+1},b)
+\le\Delta_{i,b}
+\le {K\over D},
+```
+
+which proves (LPB.10). Strict rhombi have positive defect in the selected branch, so the lower inequality may be written strictly for the present high-`t` train crossings.
+
+Because deletion preserves pairwise noncrossing and the common two-row column order, `P_i` remains one ordered transverse ladder.
+
+---
+
+## 4. Circumdisk capacity applies after phase purification
+
+The exact train-step metric theorem gives, along either adjacent row in the common column order,
+
+```math
+h_j(z_{j,s+1})-h_j(z_{j,s})>{\sqrt3\over2}.
+\tag{LPB.24}
+```
+
+All crossing centers lie in the source hull, which is contained in
+
+```math
+B(o,R_D),
+\qquad
+R_D<{D\over2}+o(D).
+\tag{LPB.25}
+```
+
+Exactly as in the adjacent circumcenter-flank theorem, on either row the number of retained `P_i` crossings whose coordinate is at least `-mu D` is at most
+
+```math
+\left({1+2\mu\over\sqrt3}+o(1)\right)D,
+\tag{LPB.26}
+```
+
+and the symmetric statement holds below `+mu D`.
+
+Since
+
+```math
+|P_i|>(r-\sigma)D-o(D),
+```
+
+each row has more than
+
+```math
+\left(r-\sigma-{1+2\mu\over\sqrt3}-o(1)\right)D
+=(q-o(1))D
+```
+
+retained columns below `-mu D`, and the same number above `+mu D`.
+
+The coordinate is increasing in the **same** column order on both adjacent rows. Therefore the first `(q-o(1))D` retained columns are below `-mu D` on both rows simultaneously, and the final `(q-o(1))D` retained columns are above `+mu D` on both rows simultaneously. This proves (LPB.11)--(LPB.13).
+
+---
+
+## 5. Concrete host-sharpened robust specialization
+
+Use the host-sharpened robust fork with
+
+```math
+c_0={113\over20{,}000{,}000}=5.65\times10^{-6}
+```
+
+and choose
+
+```math
+\rho={c_0\over4}.
+\tag{LPB.27}
+```
+
+The robust union of host-strong TB1 interfaces and `rho`-wide exact-force interfaces then has density
+
+```math
+\gamma=c_0-2\rho={c_0\over2}=2.825\times10^{-6}.
+\tag{LPB.28}
+```
+
+Every such interface is fixed-good and hence satisfies the terminal-cost hypothesis (LPB.2).
+
+Now take
+
+```math
+\eta={1\over2},
+\qquad
+\sigma={1\over100},
+\qquad
+\mu={1\over100}.
+\tag{LPB.29}
+```
+
+Then
+
+```math
+\boxed{|I_D'|>{c_0\over4}D-o(D)
+=1.4125\times10^{-6}D-o(D).}
+\tag{LPB.30}
+```
+
+At every retained robust interface,
+
+```math
+\boxed{|P_i|>0.6436D-o(D),}
+\tag{LPB.31}
+```
+
+and the common phase-pure flanks satisfy
+
+```math
+\boxed{|P_i^-|,|P_i^+|>
+\left(0.6436-{1.02\over\sqrt3}-o(1)\right)D}
+\tag{LPB.32}
+```
+
+with
+
+```math
+\boxed{
+0.6436-{1.02\over\sqrt3}
+=0.0547027254\ldots .
+}
+\tag{LPB.33}
+```
+
+The phase constant is
+
+```math
+\boxed{
+K_{\rm rob}={800C_{\rm phase}\over c_0}<7.54\times10^8.
+}
+\tag{LPB.34}
+```
+
+Thus every retained interface has more than `0.6436D` common columns near `pi/3` on both adjacent rows to within `<7.54e8/D+o(1/D)`, including more than `0.05470D` common near-equilateral columns on each side of the `+-0.01D` circumcenter corridor.
+
+Finally split `I_D'` by the two robust mechanisms. One of the following has size
+
+```math
+\boxed{>{c_0\over8}D-o(D)
+=7.0625\times10^{-7}D-o(D):}
+\tag{LPB.35}
+```
+
+1. host-strong TB1 interfaces, each carrying its `(0.4143-o(1))D` opening-margin blocker **inside this same phase-pure bracketing ladder**; or
+2. exact-antipodal interfaces, each carrying a force pair of projective gap at least `c_0/4`, exact positive KKT reaction identity, and the host-forced individual transverse margin, again **inside this same phase-pure bracketing ladder**.
+
+This is a local synchronized obstruction, not merely two positive-density populations known to coexist somewhere in the source.
+
+---
+
+## 6. Deep exact-force specialization
+
+On the branch with no positive-density fixed-margin TB1 population, the host-sharpened theorem gives, for the previously displayed choices
+
+```math
+\rho={c_0\over100},
+\qquad
+\eta_{\rm sep}={c_0\over50},
+```
+
+a deep bilateral exact-force family of density
+
+```math
+\gamma_{deep}=0.96c_0=5.424\times10^{-6}.
+\tag{LPB.36}
+```
+
+Apply Theorem LPB to these fixed-good centers with the independent outer averaging choice
+
+```math
+\eta={1\over2},
+\qquad \sigma=\mu=0.01.
+```
+
+Then more than
+
+```math
+\boxed{0.48c_0D-o(D)
+=2.712\times10^{-6}D-o(D)}
+\tag{LPB.37}
+```
+
+deep bilateral cells have the same fused local ladder (LPB.31)--(LPB.33), while retaining their exact-force pair, bilateral ordered birth, prescribed finite exact-phase neighborhood, bounded local switching complexity, and fixed host transverse margin.
+
+The corresponding local phase constant is
+
+```math
+K_{deep}
+={2C_{\rm phase}\over(1/2)(0.96c_0)(0.01)}
+<3.93\times10^8.
+\tag{LPB.38}
+```
+
+Thus positive linear density survives even after demanding all of the current local force metadata and a single two-row transverse ladder that is both circumcenter-bracketing and inverse-`D` near-equilateral.
+
+---
+
+## 7. What this does and does not settle
+
+The prior local frontier had two transverse structures at a robust interface:
+
+1. a large adjacent common ladder with fixed-fraction circumcenter flanks but no inverse-`D` phase control;
+2. an inverse-`D` near-triangular scaffold obtained by separate global extraction.
+
+Theorem LPB merges them on a positive-density subset. There is no longer a need to transfer order, location, or KKT tags between two unrelated transverse column populations at those interfaces.
+
+This still does **not** prove C-II. In particular, the host-forced switching diameter already makes a fixed angle of at least `arcsin(0.4143)-o(1)` from the row axis, so the earlier weak location-or-angle alternative alone does not force it through the central corridor. The remaining step must use the exact boundary-normal order / positive force cone / TB1 tangent inequality together with the now-fused near-equilateral flank order, rather than merely invoke angular separation.
+
+**Disposition:** on any positive-density low-terminal adjacent-interface family, all but a prescribed fixed fraction admit one common two-row ladder that is simultaneously near-full, inverse-`D` near-equilateral, and circumcenter-bracketing. Applied to the latest robust fork, one robust mechanism survives at density `>7.0625e-7 D-o(D)` inside such fused ladders. C-II and Level I remain open.

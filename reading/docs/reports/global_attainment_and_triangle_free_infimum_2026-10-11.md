@@ -1,0 +1,240 @@
+> Generated reading edition · [exact source](../../../docs/reports/global_attainment_and_triangle_free_infimum_2026-10-11.md) · source SHA-256 `f94a9bb4fa071c58070e8b9019482e8a77fe09874b96a6fe8aa2ee4f34b50780`.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "unreviewed_noncanonical", "source_blob": "5a930f477d866610f72811b0e8e187539cbf210f", "source_branch_refs": ["refs/heads/research/sol/global-e99-20261011"], "source_commit": "834219c1e2a0c2d43e710e714853ffb27c9023ad", "source_lifecycle": "unreviewed", "source_path": "docs/reports/global_attainment_and_triangle_free_infimum_2026-10-11.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c54b4a7cf5720823e0a83257664601681b8a04c614c67e20d86ff03d680cf9aa"} -->
+
+> **Imported unreviewed branch research.** Source branch status is historical only; no destination claim is promoted.
+
+# Erdős Problem #99 — global attainment and triangle-free infima
+
+**Date:** 2026-10-11
+
+**Repository commit:** `ab6dd3336f9f8d440f2bada76edb32153391cddc`
+
+**State version:** `2026-10-10.audit.234`
+
+**Run type:** independent closing-proof research; exact regression
+
+**Target:** Level I directly
+
+**Starting status:** Level I open; no Target A/B/C closure imported
+
+**Active prompt:** `docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md`
+
+**External literature:** original problem statement checked in Erdős (1994), p. 268; no external theorem imported
+
+**Computation:** `research/verify_global_attainment_infimum.py`
+
+## LEVEL I STATUS
+
+**STILL OPEN.** This report proves an approximation theorem, not a theorem about
+the contacts of an attained global minimizer. It does not inspect another worker's
+claimed solution. The theorem's novelty relative to the wider literature is not
+asserted.
+
+## 1. Exact global endpoint and dependencies
+
+The endpoint is precisely the quantified statement in
+`docs/problem/statement.md`: every global minimizer has a unit triangle for all
+sufficiently large cardinalities, or triangle-free global minimizers exist for
+an unbounded sequence of cardinalities.
+
+The present result uses only that definition, finite-dimensional compactness,
+continuity, and elementary polynomial algebra. It does not use a source core,
+selected stress, loaded graph, response optimum, scaffold, or any unpromoted
+report. Every source label, including contact isolates, is retained.
+
+```text
+general triangle-free approximation -> identical diameter infima
+-> rule out a positive triangle-free diameter-gap strategy
+```
+
+This is a regression against that strategy. It is not an implication to Level I.
+The candidate closing chain instead must use exact attainment:
+
+```text
+an attainment-sensitive obstruction valid for every sufficiently large source
+-> no triangle-free configuration attains D(n) -> Level I
+```
+
+## 2. Triangle-free infimum theorem
+
+**Classification:** proved candidate awaiting promotion; artifact unreviewed.
+
+For a labeled finite planar source `P=(p_1,...,p_n)`, write `m(P)` for its
+minimum pair distance and `d(P)` for its diameter. For every `n>=3` and every
+unit-separated `P` with `m(P)=1`, there are sources `Q_k` with:
+
+1. the same `n` labels;
+2. exactly one pair at distance one, and every other pair strictly longer;
+3. `Q_k -> P` label by label;
+4. `d(Q_k) -> d(P)`.
+
+In particular, let `D_tf(n)` be the **infimum**, not an assumed minimum, of
+diameters of triangle-free unit-separated `n`-point configurations. Then
+
+```math
+D_{\rm tf}(n)=D(n)\qquad(n\ge3).
+```
+
+### Proof
+
+Set `v_i=(3^i,0)` and `p_i(t)=p_i+t v_i`, for `i=1,...,n` and positive `t`.
+For each unordered pair `i<j`, its squared distance is the degree-two polynomial
+
+```math
+s_{ij}(t)=|p_i-p_j|^2+
+2t(p_i-p_j)\mathbin\cdot(v_i-v_j)+t^2(3^j-3^i)^2.
+```
+
+The positive numbers `3^j-3^i` are pairwise distinct. Indeed their 3-adic
+valuation is `i`, which determines the smaller index, and the remaining factor
+`3^(j-i)-1` determines the larger. Thus the polynomials for two different
+unordered pairs have different leading coefficients. Their difference is a
+nonzero polynomial and has at most two real roots.
+
+The union of these finitely many root sets is finite. Choose `t_k -> 0+`
+avoiding this set. All pair distances of `P(t_k)` are then distinct. Continuity
+gives `m(P(t_k)) -> 1`, so that minimum stays positive for large `k`. Define
+
+```math
+q_i^{(k)}={p_i+t_kv_i\over m(P(t_k))}.
+```
+
+Exactly one pair has distance one after this scaling; every other pair has
+distance greater than one. A unit triangle needs three unit pairs, so these
+sources are triangle-free. Scaling converges to one, yielding labelwise and
+diameter convergence. No label has been deleted.
+
+For completeness `D(n)` is attained: fix one label at the origin, choose any
+finite feasible diameter bound, and minimize on the resulting nonempty compact
+closed set of configurations satisfying all lower pair constraints. At an
+optimum the minimum pair distance is one, because otherwise a common scaling
+strictly decreases its diameter. Applying the construction to any optimum
+gives `D_tf(n)<=D(n)`. The reverse inequality follows from inclusion of the
+feasible classes. This proves equality of infima, without asserting attainment
+in the triangle-free class.
+
+### Explicit perturbation bound
+
+If `E=t max_i |v_i|<1/2`, then every label moves at most `E` before normalization,
+and the triangle inequality gives
+
+```math
+m(P(t))\ge1-2E,\qquad d(P(t))\le d(P)+2E.
+```
+
+Hence the normalized source satisfies
+
+```math
+d(Q(t))\le{d(P)+2E\over1-2E}
+=d(P)+{2E(d(P)+1)\over1-2E}.
+```
+
+This estimate is per finite source. It does not claim a perturbation scale
+uniform in `n`, a source-independent minimum gap, or diameter at most `d(P)`.
+
+## 3. Exact three-point attainment regression
+
+**Classification:** regression; artifact unreviewed.
+
+Let `M>=3`, put `k=floor(M/sqrt(3))+1`, and `u=k/M`. The rational points
+
+```math
+(0,0),\quad(1,0),\quad
+\left({1-u^2\over1+u^2},{2u\over1+u^2}\right)
+```
+
+have pair squared distances
+
+```math
+1,\quad1,\quad {4u^2\over1+u^2}>1.
+```
+
+They have minimum distance one and no unit triangle. Their squared diameter
+excess over `D(3)^2=1` equals
+
+```math
+{3k^2-M^2\over M^2+k^2}>0,
+```
+
+and tends to zero as `M -> infinity`. The formula for `k` is computed exactly as
+`isqrt(M*M//3)+1`. The inequality `k<=M/sqrt(3)+1` gives squared excess at most
+`4/M+3/M^2`, hence at most `5/M` for `M>=3`.
+
+Nevertheless every three-point global minimizer is a unit triangle: diameter
+one plus unit separation forces all three distances to equal one. Thus equality
+of the two infima is compatible with exclusion of triangle-free attained
+optima. No asymptotic conclusion is drawn from `n=3`.
+
+## 4. Compact quantitative reformulation
+
+**Classification:** proved candidate awaiting promotion; artifact unreviewed.
+
+For a unit-separated `n`-point source, `n>=3`, define its unit-triangle defect
+
+```math
+\tau(P)=\min_{\{i,j,k\}}
+\max\{|p_i-p_j|-1,|p_j-p_k|-1,|p_i-p_k|-1\}.
+```
+
+This is continuous and nonnegative; it vanishes exactly when the source
+contains a unit triangle. For `eta>0`, minimize diameter on the compact class
+with one fixed label at zero, unit separation, diameter at most `D(n)+1`, and
+`tau>=eta`; let `R_n(eta)=+infinity` if the class is empty. Then
+
+```math
+\text{every global }n\text{-point minimizer has a unit triangle}
+\quad\Longleftrightarrow\quad
+R_n(\eta)>D(n)\ \text{for every }\eta>0.
+```
+
+If every optimum has a triangle, the compact constrained class contains no
+optimum, so its attained minimum is strictly larger. Conversely a triangle-free
+optimum has strictly positive defect, and lies in one of these classes, giving
+equality with `D(n)`. This proves the equivalence. It establishes no useful
+bound on `R_n(eta)` and no uniform onset in `n`.
+
+## 5. Claim audit and frontier effect
+
+| Claim | Classification | Decisive scope |
+| --- | --- | --- |
+| One-contact approximation of every finite source | Proved candidate awaiting promotion | Diameter converges; it need not decrease |
+| `D_tf(n)=D(n)` | Proved candidate awaiting promotion | Equality of infima only |
+| Three-point isosceles family | Regression | Exact arithmetic; known attained optimum is triangular |
+| Compact defect-separated gap equivalence | Proved candidate awaiting promotion | Fixed cardinality and fixed positive defect |
+| A positive gap between unrestricted and triangle-free diameter infima | Rejected | Contradicts the general approximation theorem |
+| Density convergence implies an exact unit triangle | Rejected as an implication by itself | Triangle-free one-contact approximations retain every label |
+| Level I closure | Unproved | No attained-optimum obstruction has been supplied |
+
+No canonical frontier, lifecycle status, target reduction, or prompt is changed.
+In particular, this does not reject an argument that uses the additional exact
+equilibrium, graph, or minimality properties of an attained optimum. It rejects
+only deductions from a strict gap between the feasible-class infima.
+
+## 6. Computation and literature
+
+Run `python3 research/verify_global_attainment_infimum.py`. It uses integer and
+rational arithmetic to verify the explicit three-point sequence and finite
+rational-grid perturbations with a unique shortest pair. Normalization is
+represented by squared-distance ratios, so no floating square root enters the
+test. These are finite fixtures, not computation of unknown `D(n)` and not an
+all-cardinality optimality certificate. The general theorem follows from the
+proof above rather than the fixtures.
+
+Original problem reference: P. Erdős, *Some problems in number theory,
+combinatorics and combinatorial geometry*, Mathematica Pannonica 5/2 (1994),
+261–269, p. 268,
+<https://mathematica-pannonica.ttk.pte.hu/articles/mp05-2/mp05-2-261-269.pdf>.
+No claimed contemporary solution is used as a source.
+
+## 7. Continuing obligation
+
+**Promotion recommendation:** unreviewed. Preserve this approximation theorem
+and its regressions; do not promote it as a closing lemma.
+
+The exact remaining obligation is to prove a property of attained global
+minimizers, uniform for sufficiently large cardinalities, that forces
+`tau(P)=0`. Neither positive triangle-free infimum separation nor approximate
+triangular density can supply that property. The independent closing run
+continues; these results do not fulfill its objective.

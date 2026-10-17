@@ -1,0 +1,148 @@
+> Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_3221_order2_shard_a_closure_2026-09-24.md) · source SHA-256 `ae6b1e789be3a13ec6482095059a8ce578fe4a5f4a9e969c9e4840baafc96147`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "ae556ad1d97cd5ab4128bb3412dc793c012273ef", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_3221_order2_shard_a_closure_2026-09-24.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "783cb80ee8810143f7aba83c16ddae330c5ec059c72206608f4f71543b7ca5f4"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: close the first order-2 `(3,2,2,1)` support orbit in the `p=3,m=4` branch
+
+Date: 2026-09-24
+
+Status: exact finite closure of one of the eight touched-nullity-four stabilizer-order-2 support-set `S_7` orbits in the eight-no-root `k=5,D=-1,d_root=1,p=3,m=4,(3,2,2,1)` branch. This does not close the full `(3,2,2,1)` profile, the full `p=3` branch, the `k=5` layer, Target C-II, or Erdos Problem #99.
+
+## 1. Support orbit
+
+The support representative is
+
+```text
+A = {1234,1235,1245,1346}.
+```
+
+Its support stabilizer has order two. For `(3,2,2,1)` there are 324 cycle choices on a fixed four-support set, so this support orbit contains
+
+```text
+(7!/2) * 324 = 816480
+```
+
+labeled eight-cycle sets. Quotienting the 324 choices by the order-two support stabilizer gives 165 `S_7` cycle-set representatives.
+
+Every representative touches the same 12 root blocks. The complete touched-root row family has exact rank 8, hence nullity 4. Exactly 160 choices of three touched root blocks leave the remaining complete-root family with nullity one.
+
+## 2. Necessary survivor conditions
+
+The existing `p=3,m=4` reduction forces exactly three singleton touched root blocks, all remaining touched root blocks complete, singleton coefficient rank three, and generalized weights
+
+```text
+(d1,d2,d3) >= (2,4,5).
+```
+
+For `D=-1,d_root=1`, the coefficient constraint space has rank three on eight external cycles, hence a five-dimensional coefficient nullspace. All five external relations must survive independently modulo the complete-root relation span. Thus any survivor requires external relation-rank increment five.
+
+## 3. Exact finite census
+
+The 165 cycle-set representatives were split into three disjoint intervals. The exact results were
+
+```text
+[0,55):
+  admissible singleton triples     8800
+  singleton-direction states     237600
+  coefficient-rank-three states  193337
+  generalized-weight states       24484
+  external increment census   {0:24484}
+  max relation-row norm^2             70
+
+[55,110):
+  admissible singleton triples     8800
+  singleton-direction states     237600
+  coefficient-rank-three states  194390
+  generalized-weight states       26867
+  external increment census   {0:26867}
+  max relation-row norm^2             70
+
+[110,165):
+  admissible singleton triples     8800
+  singleton-direction states     237600
+  coefficient-rank-three states  207580
+  generalized-weight states       28541
+  external increment census   {0:28541}
+  max relation-row norm^2             70
+```
+
+The aggregate census is therefore
+
+```text
+S7 cycle-set representatives       165
+admissible singleton triples     26400
+singleton-direction states      712800
+coefficient-rank-three states   595307
+generalized-weight states        79892
+external increment census    {0:79892}
+```
+
+Every generalized-weight-admissible state has external relation-rank increment zero, not five. Therefore this entire support orbit is empty.
+
+> **Theorem.** In the eight-no-root `k=5,D=-1,d_root=1,p=3,m=4,(3,2,2,1)` branch, no state exists whose four-support set lies in the `S_7` orbit of `{1234,1235,1245,1346}`.
+
+## 4. Exactness and validation
+
+All coefficient and generalized-weight calculations are exact integer/rational arithmetic. Relation rows are integral and ranked modulo
+
+```text
+P = 2^127 - 1.
+```
+
+Lucas-Lehmer verifies that `P` is prime. The largest squared Euclidean norm of any relation row in this census is 70, and
+
+```text
+P^2 > 70^15.
+```
+
+The repository's existing Hadamard argument therefore rules out modular rank loss in the relevant minors, so the recorded ranks equal their ranks over `Q`.
+
+The finite census above was executed with a standalone reconstruction copied from the current-main coordinate model and orbit logic. As an implementation control, the same reconstruction was run on the already-closed final order-four support `{1234,1256,1357,2467}` and reproduced the current-main census exactly:
+
+```text
+S7 cycle-set representatives       87
+admissible singleton triples     22272
+singleton-direction states      601344
+coefficient-rank-three states   451008
+generalized-weight states        16704
+external increment census    {0:16704}
+max relation-row norm^2             36
+```
+
+The companion repository wrapper was syntax-checked locally before upload. It was not executed end-to-end from a repository checkout in this run; the theorem above rests on the executed standalone finite census, not on unexecuted wrapper code.
+
+## 5. Remaining target
+
+Before this result, the open touched-nullity-four `(3,2,2,1)` support layer consisted of
+
+```text
+2 stabilizer-order-1 classes,
+8 stabilizer-order-2 classes.
+```
+
+This theorem removes one order-two class. The exact remaining support bottleneck is therefore
+
+```text
+2 stabilizer-order-1 classes,
+7 stabilizer-order-2 classes,
+```
+
+for nine support-set orbits total.
+
+The next bounded target is the order-two support
+
+```text
+{1234,1235,1246,1356},
+```
+
+which has 162 `S_7` cycle-set representatives, 13 touched root blocks, touched-root rank 9/nullity 4, and 186 admissible singleton triples per representative before direction filtering.
+
+The other unresolved `k=5` arithmetic branches remain
+
+```text
+D=-2, (d_root,p)=(0,5),
+D=-1, (d_root,p)=(0,6).
+```

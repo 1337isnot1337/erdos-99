@@ -1,0 +1,540 @@
+> Generated reading edition · [exact source](../../research/target_c_high_t_tb1_common_superswap_connectivity_t18687_2026-09-17.md) · source SHA-256 `9803957cb4c743d017ecd2fed073ce80e1b4e24ad1414c6ca5c276378091058e`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Source formatting note: 13 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "2183e9b06ad0ee694bef20e48a08195d2244bda4", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_high_t_tb1_common_superswap_connectivity_t18687_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "8e65dd2a08045a676ff052422ca839ed99077a6a0e49339a89ca6394b33a6eaf"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — one common super-swap forces a connected inactive obstruction graph
+
+**Date:** 2026-09-17  
+**Status:** proof-only high-`t` structural strengthening; no canonical promotion claimed  
+**Scope:** the one-sign side of the strong-TB1 branch through `t=(q-k)/D<=1.8687`  
+**Dependencies:** TB1 common-axis cone collapse; one-sign host transverse margin; audited path-layer/contact support; canonical contact-minimal global-minimizer normalization; near-diameter degree theorem; superdiameter-thrackle lemma  
+**Certificate:** `research/verify_target_c_high_t_tb1_common_superswap_connectivity_t18687.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The parity simultaneous-swap theorem showed that a linear family of nonadjacent one-sign TB1 layers can be exact-swapped independently, with every old active constraint safe. The common oriented TB1 axis gives a stronger finite move: the exact local swap lengths do not need to be used at all.
+
+There is one fixed inverse-`D` displacement
+
+```math
+V_D=-Q_Dw_*,\qquad Q_D={K\over D},
+```
+
+with `K` independent of the source, such that **any chosen subset** of one-sign strong-TB1 layers may be translated by this same vector. Under this common translation
+
+- every old contact with both endpoints on the same side is unchanged;
+- every old contact crossing the chosen layer union is strictly opened;
+- every old actual diameter with both endpoints on the same side is unchanged;
+- every old actual diameter crossing the chosen layer union is strictly shortened.
+
+Therefore every nonempty subset of one-sign layers must be blocked by a previously strict source pair crossing that subset. Since the displacement has size `K/D`, all such blockers lie in one fixed inverse-`D` window around distance `1` or `D`.
+
+Encode each one-sign layer as a vertex and all source points outside the one-sign layer population as one root vertex `*`. Join two layer vertices, or a layer vertex to `*`, whenever a previously strict pair in that inverse-`D` window has endpoints in the corresponding classes. The subset-swap statement says **every nontrivial cut separating some one-sign layers from the root is crossed by such an edge**. Hence this inactive obstruction graph is connected.
+
+If the one-sign population has size `m_D`, there are therefore at least `m_D` distinct inverse-`D` inactive pairs. On the current one-sign winner
+
+```math
+m_D>{s_0\over2}D-o(D),\qquad
+s_0={791\over320{,}000{,}000},
+```
+
+so
+
+```math
+\boxed{
+N_{\rm inactive}\ >\ {791\over640{,}000{,}000}D-o(D)
+=(1.2359375\times10^{-6})D-o(D).
+}
+```
+
+This doubles the previous unconditional distinct-witness floor on the one-sign branch and, more importantly, replaces one-witness-per-layer bookkeeping by a global cut-connectivity statement.
+
+---
+
+## 1. Uniform common-axis data
+
+Let `M_D` be the one-sign strong-TB1 layer population. For `i in M_D`, orient the two unit boundary-contact vectors from the fixed side into the physical layer `R_i` and write
+
+```math
+|a_i|=|b_i|=1,
+\qquad
+q_i:=|a_i+b_i|>0,
+\qquad
+w_i:={a_i+b_i\over q_i}.
+\tag{CSU.1}
+```
+
+The cone-collapse theorem gives one common **oriented** transverse axis `w_*` and fixed constants `C_q,C_w` such that, uniformly over `M_D`,
+
+```math
+q_i\le {C_q+o(1)\over D},
+\qquad
+|w_i-w_*|\le {C_w+o(1)\over D}.
+\tag{CSU.2}
+```
+
+The explicit local cone theorem allows `C_q=31.4\times10^6`; no explicit value of `C_w` is needed here.
+
+The one-sign host theorem gives every switching actual diameter at `R_i` an inward vector `n_{h,i}`, `|n_{h,i}|=D`, satisfying
+
+```math
+\boxed{
+n_{h,i}\cdot w_i\ge(c_H-o(1))D,
+\qquad
+c_H=0.453819885927\ldots .
+}
+\tag{CSU.3}
+```
+
+Choose once and for all a fixed constant
+
+```math
+K>C_q+2C_w+2
+\tag{CSU.4}
+```
+
+and put
+
+```math
+\boxed{Q_D={K\over D},\qquad V_D=-Q_Dw_*.}
+\tag{CSU.5}
+```
+
+For all sufficiently large sources,
+
+```math
+Q_D>q_i+2|w_i-w_*|
+\tag{CSU.6}
+```
+
+for every `i in M_D`.
+
+---
+
+## 2. The common super-swap strictly opens every crossing old contact
+
+Take any subset
+
+```math
+\varnothing\ne S\subseteq M_D
+```
+
+and put
+
+```math
+U_S:=\bigcup_{i\in S}R_i.
+\tag{CSU.7}
+```
+
+Translate every source point in `U_S` by the **same** vector `V_D`, leaving all other source points fixed.
+
+If an old contact has both endpoints in `U_S`, or both endpoints outside `U_S`, its vector is unchanged exactly.
+
+Now take an old contact crossing `U_S`. By the audited path-layer/contact-boundary identity, it crosses the boundary of a unique moved layer `R_i`, `i in S`, and its oriented vector from the fixed endpoint into `R_i` is either `a_i` or `b_i`. Call that unit vector `c`.
+
+Because
+
+```math
+a_i+b_i=q_iw_i,
+```
+
+both boundary vectors have the same `w_i` projection:
+
+```math
+a_i\cdot w_i=b_i\cdot w_i={q_i\over2}.
+\tag{CSU.8}
+```
+
+Hence
+
+```math
+c\cdot w_*
+\le {q_i\over2}+|w_i-w_*|.
+\tag{CSU.9}
+```
+
+After the common translation the contact vector is `c-Q_Dw_*`, so
+
+```math
+\begin{aligned}
+|c-Q_Dw_*|^2-1
+&=Q_D^2-2Q_D(c\cdot w_*)\\
+&\ge Q_D\bigl(Q_D-q_i-2|w_i-w_*|\bigr)\\
+&>0
+\end{aligned}
+\tag{CSU.10}
+```
+
+for all sufficiently large `D`, by (CSU.6).
+
+Thus
+
+```math
+\boxed{
+\text{every old contact crossing }U_S\text{ is strictly opened,}
+}
+\tag{CSU.11}
+```
+
+while every old contact internal to either side is unchanged.
+
+No parity thinning is needed. If two adjacent one-sign layers both belong to `S`, their shared train contacts have both endpoints translated and are therefore unchanged automatically.
+
+---
+
+## 3. Every crossing old diameter strictly shortens
+
+Take an old actual diameter `h`.
+
+If its endpoints are both in `U_S`, or both outside `U_S`, it is unchanged.
+
+Suppose exactly one endpoint lies in `U_S`, say in `R_i`, `i in S`. Then `h` is a switching diameter for the layer translation at `i`. Let `n=n_{h,i}` be its inward vector. From (CSU.2)--(CSU.3),
+
+```math
+\begin{aligned}
+n\cdot w_*
+&=n\cdot w_i+n\cdot(w_*-w_i)\\
+&\ge(c_H-o(1))D-D|w_i-w_*|\\
+&=(c_H-o(1))D.
+\end{aligned}
+\tag{CSU.12}
+```
+
+The relative diameter vector therefore changes by `-Q_Dw_*`, and
+
+```math
+\begin{aligned}
+|h|_{\rm new}^2-D^2
+&=-2Q_D(n\cdot w_*)+Q_D^2\\
+&<0
+\end{aligned}
+\tag{CSU.13}
+```
+
+for every sufficiently large `D`.
+
+Consequently
+
+```math
+\boxed{
+\text{every old actual diameter is unchanged or strictly shortened.}
+}
+\tag{CSU.14}
+```
+
+This is stronger than the parity exact-swap conclusion in one respect: it holds for **every subset** `S`, including adjacent one-sign layers, because all selected layers receive one common translation.
+
+---
+
+## 4. Canonical minimality forces a strict crossing witness for every subset
+
+Assume that every previously strict source pair remained strictly between distances `1` and `D` after the common translation of `U_S`.
+
+Then Sections 2--3 imply:
+
+- every source distance remains at least `1`;
+- every source distance remains at most `D`;
+- every old contact crossing `U_S` is removed;
+- no new contact is created.
+
+The union `U_S` is a nonempty proper union of internal path layers, so its contact boundary is nonempty. Hence at least one old unit contact is removed.
+
+If the new diameter is below `D`, global diameter minimality is contradicted. If it is exactly `D`, the new source is another global minimizer with strictly fewer unit contacts, contradicting the canonical contact-minimal normalization.
+
+Therefore some previously strict pair `xy` must violate one of the two metric bounds.
+
+A pair with both endpoints in `U_S`, or both outside it, is unchanged. Thus every such witness has exactly one endpoint in `U_S`. Its relative displacement has norm exactly `Q_D`, so the triangle inequality gives
+
+```math
+\boxed{
+1<|xy|\le1+{K\over D}
+}
+\tag{CSU.15}
+```
+
+or
+
+```math
+\boxed{
+D-{K\over D}\le|xy|<D.
+}
+\tag{CSU.16}
+```
+
+We have proved:
+
+> **Common-super-swap cut theorem.** For every nonempty subset of one-sign strong-TB1 layers, there is a previously strict inverse-`D` near-active source pair with exactly one endpoint in the union of those layers.
+
+The witness is allowed to depend on the subset.
+
+---
+
+## 5. The global inactive obstruction graph is connected
+
+Partition the source points into the one-sign physical layers
+
+```math
+\{R_i:i\in M_D\}
+```
+
+and one residual class containing every source point outside those layers. Introduce a root vertex `*` for the residual class.
+
+Define a multigraph `G_D^{slack}` on
+
+```math
+V(G_D^{slack})=M_D\cup\{*\}
+\tag{CSU.17}
+```
+
+as follows. For every previously strict source pair satisfying (CSU.15) or (CSU.16):
+
+- if its endpoints lie in distinct one-sign layers `R_i,R_j`, add the edge `ij`;
+- if exactly one endpoint lies in a one-sign layer `R_i`, add the edge `i*`;
+- pairs with neither endpoint in a one-sign layer are irrelevant;
+- pairs with both endpoints in the same layer are loops and are irrelevant to cuts.
+
+Take any nonempty vertex subset
+
+```math
+S\subseteq M_D.
+```
+
+By the cut theorem, translating `U_S` forces a near-active strict pair with exactly one endpoint in `U_S`. Its graph edge has exactly one endpoint in `S`. Thus **every** cut
+
+```math
+S\mid (M_D\setminus S)\cup\{*\}
+```
+
+is crossed by an edge of `G_D^{slack}`.
+
+Equivalently,
+
+```math
+\boxed{G_D^{slack}\text{ is connected.}}
+\tag{CSU.18}
+```
+
+If
+
+```math
+m_D:=|M_D|,
+```
+
+then a connected graph on `m_D+1` vertices has at least `m_D` distinct pair-edges. Hence
+
+```math
+\boxed{
+N_{\rm inactive}\ge m_D.
+}
+\tag{CSU.19}
+```
+
+On the one-sign winner of the strong-TB1 split,
+
+```math
+m_D>{s_0\over2}D-o(D),
+\qquad
+s_0={791\over320{,}000{,}000},
+```
+
+so
+
+```math
+\boxed{
+N_{\rm inactive}>
+{s_0\over2}D-o(D)
+=(1.2359375\times10^{-6})D-o(D).
+}
+\tag{CSU.20}
+```
+
+This count uses the entire cut system; it does not choose one witness independently at each interface.
+
+---
+
+## 6. Immediate matching consequences
+
+At least half of the edges in any spanning set from (CSU.20) have the same active boundary type.
+
+### 6.1 Near-unit side
+
+Suppose at least
+
+```math
+{m_D\over2}
+```
+
+distinct graph edges satisfy (CSU.15). Since `K/D=o(1)`, the graph of all source pairs with
+
+```math
+1<|xy|\le1+K/D
+```
+
+has maximum degree at most `6` for all sufficiently large `D`: among seven neighbors of one vertex, two rays subtend angle at most `2pi/7<pi/3`, and their mutual distance is eventually below `1`.
+
+Greedy matching therefore yields at least
+
+```math
+{m_D/2\over 2\cdot6-1}
+={m_D\over22}
+\tag{CSU.21}
+```
+
+vertex-disjoint inactive near-unit pairs. Using `m_D>(s_0/2)D-o(D)`,
+
+```math
+\boxed{
+N_{\rm unit\ matching}
+>
+{s_0\over44}D-o(D)
+=(5.61789772727\ldots\times10^{-8})D-o(D).
+}
+\tag{CSU.22}
+```
+
+### 6.2 Near-diameter side
+
+Suppose instead at least `m_D/2` distinct graph edges satisfy (CSU.16). The existing inactive near-diameter degree theorem applies to every fixed `K`:
+
+```math
+\Delta
+\le(8\,3^{1/8}+o(1))D^{3/4}.
+\tag{CSU.23}
+```
+
+Hence greedy matching yields
+
+```math
+\boxed{
+N_{\rm diameter\ matching}
+>
+\left(
+{s_0\over64\,3^{1/8}}-o(1)
+\right)D^{1/4},
+}
+\tag{CSU.24}
+```
+
+with numerical coefficient
+
+```math
+\boxed{
+{s_0\over64\,3^{1/8}}
+=3.36671515826\ldots\times10^{-8}.
+}
+\tag{CSU.25}
+```
+
+Every such near-diameter edge retains the existing `O(D^{3/4})` midpoint localization.
+
+---
+
+## 7. The near-diameter half still has a signed / superdiameter fork
+
+The common displacement gives more than the inverse-`D` length window.
+
+Take an upper witness and orient its old relative vector `r` from the fixed endpoint toward the translated endpoint. Then
+
+```math
+|r-Q_Dw_*|\ge D.
+\tag{CSU.26}
+```
+
+Write
+
+```math
+\xi:=D-|r|>0.
+```
+
+For any fixed `0<tau<1`, expansion of (CSU.26) gives
+
+```math
+r\cdot w_*
+\le
+-{D^2-|r|^2-Q_D^2\over2Q_D}.
+\tag{CSU.27}
+```
+
+If
+
+```math
+\xi\ge\tau Q_D,
+```
+
+then
+
+```math
+\boxed{
+r\cdot w_*
+\le-(\tau-o(1))D.
+}
+\tag{CSU.28}
+```
+
+Otherwise
+
+```math
+0<\xi<\tau Q_D.
+\tag{CSU.29}
+```
+
+Choose
+
+```math
+\tau={1\over4K}.
+\tag{CSU.30}
+```
+
+Since `Q_D=K/D`, the thin alternative becomes
+
+```math
+D-|r|<{1\over4D}.
+\tag{CSU.31}
+```
+
+For large `D`,
+
+```math
+D-{1\over4D}>\sqrt{D^2-1},
+```
+
+so every thin upper witness belongs to the geometric superdiameter thrackle.
+
+Therefore a linear near-diameter obstruction population contains, after one more halving, either
+
+- a linear family of inactive almost-diameters with one fixed nonzero transverse projection against `w_*`; or
+- a linear family of inactive superdiameter chords whose straight segments form a geometric thrackle.
+
+No active-diameter or KKT claim is made for these pairs.
+
+---
+
+## 8. Frontier effect
+
+The one-sign strong-TB1 branch is no longer merely a collection of locally blocked finite swaps. It has a global inactive cut structure:
+
+```text
+m_D > (s0/2) D one-sign layers
++ one common oriented transverse axis w_*
++ one common inverse-D super-swap vector V_D
+
+for every nonempty subset S of layers:
+    translate all layers in S by V_D
+    -> every crossing old contact opens
+    -> every crossing old diameter shortens
+    -> canonical minimality forces a strict inverse-D witness crossing S
+
+therefore:
+    the inverse-D inactive witness graph on {layers}+root is connected
+    -> at least m_D distinct inactive near-active pairs
+```
+
+This removes the need to treat witness multiplicity as the primary global bookkeeping device. Repeated `1+O(D^-2)` witnesses remain a valid sharpened substructure, but they now sit inside a larger connected inverse-`D` obstruction network.
+
+The next closing target is to use the **ordered path position** of the vertices of this connected graph against the common dense train rectangle. A spanning tree of the inactive network either has many short ordered edges, a high-degree layer/root, or many long edges crossing a common selected cut. Each alternative now carries a concrete geometric type (near-unit, signed near-diameter, or superdiameter thrackle) and can be attacked against train order rather than against local TB1 blocking.
+
+**Disposition:** proved a common super-swap for arbitrary subsets of one-sign TB1 layers and the resulting connectivity/linear-size theorem for the inactive inverse-`D` obstruction graph. C-II and Level I remain open.

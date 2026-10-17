@@ -1,0 +1,165 @@
+> Generated reading edition · [exact source](../../research/target_c_support7_h6_interior_force_chirotope_reduction_hostile_audit_2026-09-19.md) · source SHA-256 `b93fc563f34cfe68c78ae80e5a81fd66719e95ff93fc00a7ada9206a89f70af7`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e5cf7711665322eaa68a249c0ce7d204f0fb8cd9", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_h6_interior_force_chirotope_reduction_hostile_audit_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "51c6e8ae92a86143140818cf9593f99265cd98678ca55d5f9d06864119be6f6b"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Hostile audit — generic H6 interior force-chirotope reduction
+
+**Date:** 2026-09-19  
+**Audited source:** `research/target_c_support7_h6_interior_force_chirotope_reduction_2026-09-19.md`  
+**Certificate:** `research/verify_target_c_support7_h6_interior_force_chirotope_reduction_2026_09_19.py`  
+**Verdict:** PASS at the stated generic necessary-condition scope  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+This audit checks the new reduction independently at the points where a sign convention, a hidden metric assumption, or an incomplete sign assignment could invalidate the `264944 -> 14174` census.
+
+## 1. The 2+2 half-plane condition is a theorem, not a heuristic
+
+Let `f_0,...,f_4` be the five unit force directions of a strict physical pentagon in cyclic order and let `delta_i` be the consecutive positive turn gaps.
+
+The previously audited turn bounds give
+
+```math
+0<\delta_i<2\pi/3,
+\qquad
+2\pi/3<\delta_i+\delta_{i+1}<\pi.
+```
+
+Fix `f_i`. The counterclockwise angle from `f_i` to `f_{i+1}` is `delta_i`, hence is in `(0,pi)`. The counterclockwise angle to `f_{i+2}` is `delta_i+delta_{i+1}`, also in `(0,pi)`. The complementary two-turn bound gives
+
+```math
+\angle_{ccw}(f_i,f_{i+3})
+=2\pi-(\delta_{i+3}+\delta_{i+4})>\pi,
+```
+
+and similarly `f_{i+4}` lies on the opposite side. Therefore exactly two determinant signs from each force ray are positive and two are negative.
+
+No converse is used. A rank-two balanced five-ray configuration need not be a closed equilateral pentagon. The reduction only removes states that violate a necessary condition.
+
+## 2. Reciprocal-to-force determinant signs have the claimed product rule
+
+At reciprocal vertex `v`, write the raw ray toward `a` as
+
+```math
+r_{va}=y_a-y_v.
+```
+
+The signed unit-force construction uses
+
+```math
+{y_v-y_a\over\lambda_{va}}
+=-\operatorname{sgn}(\lambda_{va})\,{r_{va}\over|r_{va}|}.
+```
+
+Thus, if `s_va=sgn(lambda_va)`, the actual force direction differs from `s_va r_va` by the same global minus sign for every edge incident to `v`. Pair determinants therefore satisfy
+
+```math
+\operatorname{sgn}\det(f_{va},f_{vb})
+=s_{va}s_{vb}\operatorname{sgn}\det(r_{va},r_{vb}).
+```
+
+The global minus sign cancels. The certificate's product rule is correct.
+
+Because this branch is generic, every reciprocal triple determinant is nonzero. Multiplying rays by signs does not create a zero determinant, so the force rank-two test has no hidden equality case.
+
+## 3. The hull theorem fixes signs on hull-interior edges too
+
+The preceding H6 sign reduction used the positions-`2,4` theorem mainly to compare two hull endpoints of a hull-hull edge. That does not mean the theorem only controls hull-hull edges.
+
+At each non-ground hull vertex `h`, exactly five reciprocal rays are present: the ground anchor and four relation rays. After the two missing nonneighbors are deleted, the positions-`2,4` theorem assigns a sign class to all five present rays. Once the ground-edge sign `s_0h` is fixed, the local complement choice is fixed, hence every present edge incident to `h` has a definite sign. This includes `h6` and `h7` whenever those edges are present.
+
+The new verifier uses exactly this extension and does not invent a new local rule.
+
+## 4. There is at most one unresolved edge sign
+
+Each interior reciprocal vertex has degree five: one ground anchor plus four relation edges.
+
+For vertex `6`, every present edge to a hull vertex is fixed at its hull endpoint, and `06` is fixed by the ground sign pattern. The same holds at vertex `7`. Therefore the only edge with neither endpoint on the hull is `67`.
+
+- If `67` is missing, the interior incident signs are fully fixed.
+- If `67` is present, its common edge sign is the only free sign and has two possibilities.
+
+The verifier tests both possibilities and requires the same choice to satisfy the force balance at both interior vertices. It does not choose signs independently at `6` and `7`.
+
+The resulting exact census has no state for which both signs of `67` survive. Hence the claimed sign rigidity is a computed consequence, not an assumption.
+
+## 5. The previous outer census is reproduced before the new filter
+
+The verifier rebuilds the generic H6 chirotope extension rather than reading a stored survivor list. It checks
+
+```text
+26      single-interior slot vectors
+4678    paired sign extensions tested
+1848    uniform chirotope / six-hull radial-order types
+20      ground raw orders
+```
+
+and then independently reproduces the previous hull-sign endpoint
+
+```text
+208588  C7
+ 56356  C3+C4
+264944  total.
+```
+
+This matters because the new `14174` count is not obtained by filtering a hand-maintained table.
+
+An independent scratch reimplementation using only Python integers/signs reproduced the same new census:
+
+```text
+10670   C7
+ 3504   C3+C4
+14174   total
+```
+
+with the same ground-pattern counts, missing-graph counts, and `67` sign multiplicities.
+
+## 6. Census cross-checks
+
+The exact post-filter ground-pattern counts are
+
+```text
+145   144
+156   108
+234     0
+235  1770
+236  3630
+237   108
+245  1390
+256  3630
+345    90
+346  1390
+347   144
+356  1770
+456     0
+```
+
+They sum to `14174`. Thus `234` and `456` are genuinely removed only after cross-face propagation; they were both present in the exact ground-only classification.
+
+The surviving missing-graph embedding counts are
+
+```text
+276 / 360  C7
+ 81 / 105  C3+C4.
+```
+
+The surviving cells split according to edge `67` as
+
+```text
+9918  edge 67 present
+4256  edge 67 absent
+```
+
+and `9918+4256=14174`.
+
+For all `9918` survivors with `67` present, exactly one sign survives.
+
+## 7. Scope limits
+
+The reduction does not prove any of the 14174 cells realizable. It uses only the rank-two sign consequence of pentagon angle bounds at the two interior reciprocal vertices. It does not yet impose the full metric turn-simplex inequalities, Euclidean triangle angle sums, law-of-sines cycle integrability, or exact nonlinear pentagon closure on those cells.
+
+The generic assumption is essential. Reciprocal collinearity walls are outside the uniform chirotope census and remain separate.
+
+The main theorem-state file should not be changed on the basis of this reduction alone. C-II remains open.

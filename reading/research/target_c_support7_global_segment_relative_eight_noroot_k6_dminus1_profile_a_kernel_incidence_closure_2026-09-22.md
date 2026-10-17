@@ -1,0 +1,308 @@
+> Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_a_kernel_incidence_closure_2026-09-22.md) · source SHA-256 `36b0733687fa7ac2ad46c4b063b4eae898dfbf4341734bf183191c55cebe76a7`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "ad33c77f99283e612ceb0a73643585640f7a9957", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_a_kernel_incidence_closure_2026-09-22.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "5fbc82419826e4ac39397b7c45ea68c3a475418965dc073b6c936ad51c96f458"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: close remaining `k=6, D=-1` Profile A by puncture-kernel incidence
+
+Date: 2026-09-22
+
+Status: rigorous closure of Profile A. The remaining eight-no-root `k=6, D=-1,p=9` work is therefore only Profile B, the `d_v=3,q=9` all-singleton case. This note uses only previously established puncture functoriality, the already-forced Profile A shadow structure, and a short linear-algebra incidence argument; it does not depend on executing the large Profile A census.
+
+Companion sanity checker:
+
+`research/verify_target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_a_kernel_incidence_2026_09_22.py`
+
+Main dependencies:
+
+- `research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_functional_puncture_reduction_2026-09-22.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus2_p8_functional_puncture_closure_2026-09-22.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_a_common_functional_basis_2026-09-22.md`.
+
+## 1. Forced Profile A shadow
+
+The only remaining Profile A source profile is
+
+```text
+t=8,
+rank(P_8)=2,
+d_8=2,
+seven singleton replacements + one pair replacement,
+functional rank 8.
+```
+
+Choose a three-clean source coordinate `i` and delete it. The preceding reduction proves that the resulting seven-row state `X_7` has
+
+```text
+rank(P_7)=2,
+d_7=2,
+dim(V_7)=7,
+```
+
+and the descended actual replacement classes span `V_7`.
+
+Because `i` is three-clean, every one- and two-coordinate puncture of `P_7` still has rank two.
+
+For every coordinate `j` of `X_7`, delete `j` and call the resulting synchronized six-row state `X_{6,j}`. The preceding Profile A reduction proves the exact child form:
+
+```text
+rank(P_{6,j})=2,
+d_{6,j}=2,
+dim(V_{6,j})=6,
+```
+
+with the global pair block surviving, exactly five of the seven global singleton replacement blocks surviving, and those six surviving actual replacement classes spanning `V_{6,j}`. Since there are exactly six such classes in a six-dimensional quotient, they form a basis.
+
+Thus each puncture loses exactly two of the seven global singleton replacement blocks.
+
+## 2. The seven puncture kernels are distinct lines
+
+The earlier puncture-functoriality theorem gives a surjection
+
+```text
+pi_j : V_7 -> V_{6,j}.
+```
+
+Since the dimensions are `7 -> 6`, its kernel is a line. Write
+
+```text
+L_j = ker(pi_j).
+```
+
+We need one extra fact: these seven lines are pairwise distinct.
+
+### 2.1 Relation-dependency dual model
+
+Let `C` be the seven-row virtual-complete block set and let
+
+```text
+N = null(P_7),
+dim(N)=5.
+```
+
+Work basis-independently with
+
+```text
+U = Q^C direct_sum N.
+```
+
+Let
+
+```text
+R : U -> T
+```
+
+be the canonical relation map: the `Q^C` coordinates take linear combinations of complete-block relations and the `N` coordinate supplies the canonical external relation. The established external-containment theorem says every external relation lies in the complete-row span. If
+
+```text
+K = ker(R),
+```
+
+then projection `K -> N` is surjective: for every `alpha in N`, containment supplies complete-row coefficients cancelling the external relation of `alpha`.
+
+The kernel of `K -> N` is exactly the dependency space among the complete-block rows, of dimension `d_7=2`. Therefore
+
+```text
+dim(K)=dim(N)+d_7=5+2=7.
+```
+
+The implemented row-index functional quotient is canonically dual to this dependency space:
+
+```text
+V_7 ~= K^*.
+```
+
+Indeed, in any adapted basis the quotient is the row-index space modulo the column space of the canonical relation matrix, and restriction to `K` has exactly that column space as its annihilator.
+
+Now puncture coordinate `j`. Put
+
+```text
+N_j = {alpha in N : alpha_j=0}
+```
+
+and let `C_j` be the six-row virtual-complete set. The puncture-functoriality proof already shows that, after using an adapted nullspace basis, the child canonical relation map is the restriction of the parent relation map to
+
+```text
+U_j = Q^(C_j) direct_sum N_j <= U.
+```
+
+Hence its dependency space is
+
+```text
+K_j = K intersect U_j.
+```
+
+The child has `d_{6,j}=2` and `dim(N_j)=4`, so
+
+```text
+dim(K_j)=4+2=6.
+```
+
+It is therefore a hyperplane of `K`. Child containment again gives
+
+```text
+projection_N(K_j)=N_j.
+```
+
+Under the identifications `V_7 ~= K^*` and `V_{6,j} ~= K_j^*`, the puncture map `pi_j` is simply restriction of functionals from `K` to `K_j`. Consequently
+
+```text
+L_j = ann(K_j).
+```
+
+### 2.2 Distinctness
+
+Suppose `L_j=L_k` for distinct coordinates `j,k`. Since `K_j` and `K_k` are hyperplanes of `K`, equal annihilator lines force
+
+```text
+K_j=K_k.
+```
+
+Projecting to `N` gives
+
+```text
+N_j=N_k.
+```
+
+The coordinate functionals `alpha -> alpha_j` and `alpha -> alpha_k` are both nonzero on `N`, because every one-coordinate puncture preserves `rank(P_7)=2`. Equal kernels of two nonzero linear functionals imply proportionality, so for some nonzero scalar `lambda`,
+
+```text
+alpha_j = lambda alpha_k    for every alpha in N.
+```
+
+Equivalently,
+
+```text
+e_j - lambda e_k in N^perp = P_7.
+```
+
+This is a nonzero word of `P_7` supported on `{j,k}`. Deleting coordinates `j,k` would therefore lower the rank of the projected coefficient space, contradicting the three-clean construction, which guarantees rank two after every two-coordinate puncture of `P_7`.
+
+Therefore
+
+> the seven kernel lines `L_j` are pairwise distinct.
+
+## 3. Missing-singleton incidence contradiction
+
+Let
+
+```text
+x_1,...,x_7 in V_7
+```
+
+be the seven descended global singleton replacement classes, and let `y in V_7` be the descended pair class. Puncture functoriality from the eight-row source gives
+
+```text
+span(x_1,...,x_7,y)=V_7.
+```
+
+For each six-row puncture `j`, let
+
+```text
+S_j subset {1,...,7}
+```
+
+be the two singleton labels that do not survive as actual replacement blocks in `X_{6,j}`. We have
+
+```text
+|S_j|=2.
+```
+
+If `a in S_j`, the corresponding replacement class maps to zero, so
+
+```text
+x_a in L_j.
+```
+
+The other five singleton classes together with the pair class are exactly the six surviving actual classes, and they form a basis of `V_{6,j}`.
+
+There are now only two cases.
+
+### Case 1: every singleton class `x_a` is nonzero
+
+For
+
+```text
+S_j={a,b},
+```
+
+both nonzero vectors `x_a,x_b` lie in the one-dimensional space `L_j`. Hence
+
+```text
+L_j=span(x_a)=span(x_b).
+```
+
+If one singleton label occurred in two different missing pairs `S_j,S_k`, its nonzero class would span both kernel lines, forcing `L_j=L_k`, contrary to Section 2.
+
+Thus each of the seven singleton labels can occur in at most one missing pair. But there are seven punctures and every missing pair has two labels, requiring fourteen singleton-label incidences. Only seven are available. Contradiction.
+
+Equivalently, the seven missing pairs would have to be pairwise vertex-disjoint two-subsets of a seven-element set, while at most three such pairs exist.
+
+### Case 2: some singleton class `x_a` is zero
+
+There cannot be two zero singleton classes: the seven singleton classes plus the single pair class span the seven-dimensional `V_7`, so with two zero singleton classes at most six nonzero generators would remain.
+
+Fix the unique possible zero singleton class `x_a=0`. If singleton block `a` survived in some six-row child, its punctured class would still be zero. That child has exactly six surviving actual replacement classes and those six classes have rank six, so this is impossible. Therefore
+
+```text
+a in S_j
+```
+
+for all seven punctures.
+
+Write
+
+```text
+S_j={a,b_j}.
+```
+
+Every `x_{b_j}` is nonzero and lies in `L_j`, hence
+
+```text
+L_j=span(x_{b_j}).
+```
+
+The kernel lines are pairwise distinct, so the labels `b_j` must all be distinct. There are seven punctures but only six singleton labels different from `a`. Contradiction.
+
+Both cases are impossible.
+
+## 4. Closure
+
+The remaining Profile A source profile cannot exist. Therefore
+
+```text
+D=-1,
+k=6,
+d_v=2,
+q=8,
+seven singleton replacements + one pair replacement
+```
+
+is impossible in the eight-no-root layer.
+
+This removes the large Profile A execution bottleneck entirely. The previously committed Profile A exact-state and fixed-global-basis verifiers remain valid independent crosschecks, but they are no longer needed for closure.
+
+After the earlier eliminations and this argument, the only remaining eight-no-root `k=6, D=-1,p=9` profile is
+
+```text
+Profile B:
+d_v=3,
+q=9,
+nine singleton replacements,
+global functional rank 9.
+```
+
+Target C-II and Erdős Problem #99 are not yet closed; the next bottleneck is Profile B.
+
+## 5. Sanity checker
+
+The companion checker verifies the finite combinatorial endpoint:
+
+- `dim(V_7)-dim(V_6)=1`;
+- with no zero singleton class, pairwise distinct kernel lines allow at most three missing pairs;
+- with one zero singleton class, pairwise distinct kernel lines allow at most six punctures;
+- two zero singleton classes cannot span `V_7` even after adding the pair class.
+
+The linear-algebra proof of kernel distinctness is the argument in Section 2; the checker is only a regression guard for the final incidence count.

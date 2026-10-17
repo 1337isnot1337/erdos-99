@@ -1,0 +1,1184 @@
+{
+  "schema": "erdos-99-reading-tex-repairs/v1",
+  "scope": "Presentation-only repairs and literal quotations, bound to exact frozen source bytes. No mathematical lifecycle change.",
+  "documents": {
+    "docs/audits/target_c_consecutive_tooth_turn_budget_hostile_audit_2026-09-12.md": {
+      "source_sha256": "8a452561d6ccdf7a5c0f071428ad2473542cd9280a1eb3000efc3b2254e1e938",
+      "replacements": [
+        {
+          "old": "\b",
+          "new": "\\b",
+          "count": 2,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/audits/target_c_one_vacancy_oblique_grid_strictification_independent_audit_2026-10-09.md": {
+      "source_sha256": "d8a3495ddc33a61365c8099140b4881097134ad7117c9a57c77495bd98c4a6cc",
+      "replacements": [
+        {
+          "old": "\\{+1,-1}",
+          "new": "\\{+1,-1\\}",
+          "count": 1,
+          "reason": "Escape the literal closing set brace."
+        }
+      ]
+    },
+    "docs/reports/cage_or_cophased_lattice_shadow_2026-08-30.md": {
+      "source_sha256": "40bce10b477dac7727c31631de0350772b8a172d08c9f63110f4a4ed345ed2e6",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/exact_kuperberg_five_block_rate_2026-08-30.md": {
+      "source_sha256": "27560100129be1bcfc4a9a19360f10f086b4393af5a313dc284a1fb8f5cc1147",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_cyclic_cubic_corner_deficit_2026-09-09.md": {
+      "source_sha256": "5a2f9d871a7cd68c699583beafdb3cf408f0370049d2217478e319b03e38e456",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_cyclic_d1_p1_power_two_newton_exclusion_2026-09-10.md": {
+      "source_sha256": "d3bc158b6a3b80ad960aba2ce81b68a40fb13e20999db255d869d079b067f7df",
+      "replacements": [
+        {
+          "old": "\b",
+          "new": "\\b",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_cyclic_difference_body_perimeter_collapse_2026-09-09.md": {
+      "source_sha256": "6c540f9214506104c3b68a4ce6c3107d571fe44ff7a86c612fdcb67553f05221",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 9,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_cyclic_extreme_boundary_slack_transfer_2026-09-10.md": {
+      "source_sha256": "d869a2a335fad9043f535639b351bbe61f2d16dca187f93c2b8804b1616d0e92",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_cyclic_kkt_cycle_localization_2026-09-09.md": {
+      "source_sha256": "03861b1e00677bde0ef1d059730b538e36d98e80f05a2a14782214dc70419f57",
+      "replacements": [
+        {
+          "old": "\\text{every KKT extreme in the `d_H=0` equality class has a diameter forest support.}",
+          "new": "\\text{every KKT extreme in the `d\\_H=0` equality class has a diameter forest support.}",
+          "count": 1,
+          "reason": "Escape an underscore in literal text."
+        }
+      ]
+    },
+    "docs/reports/target_c_defect_squaregraph_train_inequality_2026-09-09.md": {
+      "source_sha256": "d2be8170874b5bc3842d0ce3fb7090c49668ddf3c413ef616f8a446bc9af1962",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 5,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_density_sensitive_pi_jc_surplus_2026-09-09.md": {
+      "source_sha256": "02bbf2851c904142d16cf8b1b7c6f4687f15d9e29571491a243966dd98a6ceaf",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_detour_explicit_surplus_0465_2026-09-09.md": {
+      "source_sha256": "dc80e0590301dfdb71ba1a8895df7e6de9044c6550844fd45a77eb01a6da8bbb",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 2,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_diameter_cap_joint_floor_0634057_2026-09-10.md": {
+      "source_sha256": "11cd2239e953163ebccb3cc89c38b91843d8ed31d18efa006603f72c80810480",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 2,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_diameter_capped_outer_pocket_moment_2026-09-10.md": {
+      "source_sha256": "49b291abf45de19411a669912d4d7f1bceeec3ea9240581fee218b0a9039295b",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_diameter_matching_circular_minor_transport_2026-08-31.md": {
+      "source_sha256": "ecdd3bcba6319b8aa6c21be9a694c3f5285bf6e7abd53d75285768f6d0e36607",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_dido_pocket_surplus_08316_2026-09-10.md": {
+      "source_sha256": "2152876cd7c11567067c9174bd2e85e6375e1122732834459bc9330aff927657",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 9,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_discrete_pocket_hybrid_surplus_07739_2026-09-10.md": {
+      "source_sha256": "1f2fce3a1bb1ea499930e4892a8e35da4cc48e421bf77214ad9aaede417f65fe",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 3,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_eppstein_exact_component_addendum_2026-09-10.md": {
+      "source_sha256": "d5f1bec0e9a9e6071e47c667e3bc2a93c0d0e9a6a5b59ec3b364c12e425abd7b",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        },
+        {
+          "old": "\night)",
+          "new": "\\right)",
+          "count": 1,
+          "reason": "Restore the broken closing-delimiter command paired with an existing \\left(."
+        }
+      ]
+    },
+    "docs/reports/target_c_eppstein_rattler_fraction_2026-09-10.md": {
+      "source_sha256": "48465de72a26aa2677e5d66f9f40ce151e656958144c48d42d9606e37aa3f740",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_even_shell_underbraced_circuit_regression_2026-09-10.md": {
+      "source_sha256": "85fbfefb83b1c7ecc5d431fecc393cc7d9e09ba7d8d270bd39702bc656e6e604",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_exact_detour_defect_surplus_04673_2026-09-09.md": {
+      "source_sha256": "1799d5994b9216197ff2664b0176c65d2b0da5546410e2f617b4493f67b71161",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_explicit_anti_reuleaux_kneser_poulsen_2026-09-09.md": {
+      "source_sha256": "618c646c2a29418488bbaa609e716a49815976647564a2d5a32af68f7fe68751",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_explicit_diameter_angle_gap_2026-08-31.md": {
+      "source_sha256": "f21996527a907a74107b56e2773257e42448fb00f50eac0f61abff2d028e493b",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_external_annulus_capacity_2026-09-11.md": {
+      "source_sha256": "061951d1bc28d3a0fbab53e0d3036a093d354bba8a041cd91fb9093d98f52f84",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_external_annulus_saturation_2026-09-10.md": {
+      "source_sha256": "80e891f3731687ab147f127c84bfe6f18fcc059e400db38b1371bc902acfbb39",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_external_rattler_floor_2026-09-09.md": {
+      "source_sha256": "d10bc0a423dfbe98ad4460d1d48a55407a8eeefdc4a6b1590070e42bb1db3399",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 6,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_extreme_circuit_train_branching_2026-09-10.md": {
+      "source_sha256": "baa0ed0437158fe2a8fe897f6b23b442a0fa9ebee4df0860aa20310cafae7ec4",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_favard_external_shell_2026-09-09.md": {
+      "source_sha256": "46cad15b0a7b7cd9bfe1c84724323a7c329d77e2a5b0b38c8504b6d4b7f5db59",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_five_arc_pin_delay_09604_2026-09-10.md": {
+      "source_sha256": "ee142b5f6f99d30a5151b491d13cb8d6b0959b22179a3c89b54651a9625ee119",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 3,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_fixed_angle_small_quadrilateral_2026-09-09.md": {
+      "source_sha256": "f02107347ea8b66f9aa93ec5c2341393035b47d5b62a228627b550bd64a34b87",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_fsdb_low_defect_branch_2026-09-11.md": {
+      "source_sha256": "4015696ae6241fadb837bf2da72bee1c397af6f9c68eb166cbf3b24667ea07d8",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_full_settlement_run_2026-09-10.md": {
+      "source_sha256": "606b4aca774d35d2ab0718a8d502e85b410241e0b842dc2154094b189291de20",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 4,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_full_source_lattice_conflict_deletion_reserve_2026-10-09.md": {
+      "source_sha256": "a8e0334ad495eb5e4eefda1d1b4a1a5a1bf3a14e5851ef46e99cd4d2bfca70a2",
+      "replacements": [
+        {
+          "old": "\\begin{aligned}\n |\\mathcal W|\n &\\le {\\pi\\over a_0}\\{(D+2\\delta)^2-D^2\\}\n       +C_{disk}\\{(D+2\\delta)^{2/3}+D^{2/3}\\}\\\\\n &\\le K_0D^{2/3},\\qquad\n K_0=8\\pi/a_0+3C_{disk}. \\tag{3.2}\n \\end{aligned}",
+          "new": "\\begin{aligned}\n |\\mathcal W|\n &\\le {\\pi\\over a_0}\\{(D+2\\delta)^2-D^2\\}\n       +C_{disk}\\{(D+2\\delta)^{2/3}+D^{2/3}\\}\\\\\n &\\le K_0D^{2/3},\\qquad\n K_0=8\\pi/a_0+3C_{disk}. \n \\end{aligned}\n\\tag{3.2}",
+          "count": 1,
+          "reason": "Place the equation label outside the aligned subenvironment."
+        },
+        {
+          "old": "\\begin{aligned}\n \\mathbb E(N-E)\n &\\ge {\\pi D^2\\over4a_0}\n        +(A_1c-K_1c^{3/2})D^{2/3}\n        +\\pi\\delta^2/a_0\\\\\n &\\ge {\\pi D^2\\over4a_0}+\\kappa D^{2/3}. \\tag{4.2}\n \\end{aligned}",
+          "new": "\\begin{aligned}\n \\mathbb E(N-E)\n &\\ge {\\pi D^2\\over4a_0}\n        +(A_1c-K_1c^{3/2})D^{2/3}\n        +\\pi\\delta^2/a_0\\\\\n &\\ge {\\pi D^2\\over4a_0}+\\kappa D^{2/3}. \n \\end{aligned}\n\\tag{4.2}",
+          "count": 1,
+          "reason": "Place the equation label outside the aligned subenvironment."
+        }
+      ]
+    },
+    "docs/reports/target_c_fullcore_hull_train_depletion_floor_2026-10-04.md": {
+      "source_sha256": "608c950615ff8abd49a72be3c72e89c9019ecc3e834921280add7d31c825433b",
+      "replacements": [
+        {
+          "old": "\\begin{aligned}\nM_D&\\le t_DD+2Q-q+m+2\\\\\n   &=5t_DD-3b+x_B+m+2.                                  \\tag{13}\n\\end{aligned}",
+          "new": "\\begin{aligned}\nM_D&\\le t_DD+2Q-q+m+2\\\\\n   &=5t_DD-3b+x_B+m+2.                                  \n\\end{aligned}\n\\tag{13}",
+          "count": 1,
+          "reason": "Place the equation label outside the aligned subenvironment."
+        }
+      ]
+    },
+    "docs/reports/target_c_fullcore_inverse_phase_mantel_component_2026-09-14.md": {
+      "source_sha256": "a17548d33a7d752fef80663bcdd7ad5eee2e639e2dd3959135a52d656adf3557",
+      "replacements": [
+        {
+          "old": "\u000b",
+          "new": "\\v",
+          "count": 4,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_fullcore_partition_perimeter_interface_2026-09-09.md": {
+      "source_sha256": "6559b0680334e5d6adc54d7749379a68dcb33475e98c4de88999f091e16b3fbf",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_fullcore_two_semicircle_groups_2026-09-09.md": {
+      "source_sha256": "77ccdaf686952cfd31f9ff8955d6baa226ad7d9fa4ba62f65de6e21bac43a831",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 3,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_general_post_zf_rhombus_excess_external_rattler_2026-09-11.md": {
+      "source_sha256": "90cc25220efe337a115a208b8323bcfbc7eef9a6fa332a5096c36ebc8f5c0967",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_general_renormalized_surplus_05947_2026-09-10.md": {
+      "source_sha256": "8ffbf89f3d5a9ab35f42bb0a7d15784eb8cd7f9ef1c0b2ba1d874a1881302abd",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 4,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_giant_rattler_cavity_dichotomy_2026-08-31.md": {
+      "source_sha256": "7d1c1881b90d60515b416f9ddff26685236828c540eec0bffceaba862005bf52",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 2,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_global_inverse_phase_face_tail_exclusion_2026-10-09.md": {
+      "source_sha256": "5061a85a1810c8626123837d7901b3aa7ef1d1db3216a207ca67aaedcb18eb43",
+      "replacements": [
+        {
+          "old": "\\begin{aligned}\n \\int(h')^2\n &=\\int h^2-2A(K)\\\\\n &\\le\\pi D^2/2+8pi eta^2-2A(K)\\\\\n &<8pi eta^2+2c_0pi D\n   ={17pi\\sqrt3\\over2}D=:C_ED. \\tag{11.2}\n \\end{aligned}",
+          "new": "\\begin{aligned}\n \\int(h')^2\n &=\\int h^2-2A(K)\\\\\n &\\le\\pi D^2/2+8pi eta^2-2A(K)\\\\\n &<8pi eta^2+2c_0pi D\n   ={17pi\\sqrt3\\over2}D=:C_ED. \n \\end{aligned}\n\\tag{11.2}",
+          "count": 1,
+          "reason": "Place the equation label outside the aligned subenvironment."
+        }
+      ]
+    },
+    "docs/reports/target_c_groemer_stability_explicit_surplus_2026-09-09.md": {
+      "source_sha256": "280e874604a1b92f62a2cdd49c4e600f919966bc3bd70238f9ac3c326b97e88b",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 2,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_hemmi_kubota_perimeter_area_import_2026-09-09.md": {
+      "source_sha256": "06dc2736c02cdd4875ff7c6bfec13e98e343fa02d3071baa0c765727cb4aa453",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_hidden_edge_rsr_dd_explicit_surplus_0598366_2026-09-10.md": {
+      "source_sha256": "ad9e0bd0fea9f6c2b7e6b45f9907516a81838a005a8913ca3fba6bb390e2bd8f",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_joint_direction_perimeter_area_floor_2026-09-10.md": {
+      "source_sha256": "6876341aa5ede3b93bffc19e3fb13e52287c71af4b3b238f6c573015f6a42faf",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_joint_side_perimeter_floor_085706_2026-09-10.md": {
+      "source_sha256": "86210b0e04c4bcfa7deaac90a296efa4ecea16084d12b3a1a125bc41bf1a4524",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 3,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_low_mu_macroscopic_outer_shell_2026-09-10.md": {
+      "source_sha256": "0a3d43d2cdfbf73f6ffcb9a00a6d816bdc699ce265d2baf2f5b024a435ba32bb",
+      "replacements": [
+        {
+          "old": "\\begin{aligned}\n&\n\\frac{3927/1250}{(3927/1250-2)^2}\n\\left(\\frac{p_0}{2}-1\\right)^2\\\\\n&\\qquad-\n\\left[\n\\frac{3927}{5000}\\left(\\frac35\\right)^2\n+\n\\frac{500}{6283}\\left(\\frac35+\\frac{p_0}{2}\\right)^2\n\\right]\\\\\n&=\n\\boxed{\n\\frac{4002910960071}{6397127553500000}>0.\n}\n\\tag{3.5}\n\\end{aligned}",
+          "new": "\\begin{aligned}\n&\n\\frac{3927/1250}{(3927/1250-2)^2}\n\\left(\\frac{p_0}{2}-1\\right)^2\\\\\n&\\qquad-\n\\left[\n\\frac{3927}{5000}\\left(\\frac35\\right)^2\n+\n\\frac{500}{6283}\\left(\\frac35+\\frac{p_0}{2}\\right)^2\n\\right]\\\\\n&=\n\\boxed{\n\\frac{4002910960071}{6397127553500000}>0.\n}\n\n\\end{aligned}\n\\tag{3.5}",
+          "count": 1,
+          "reason": "Place the equation label outside the aligned subenvironment."
+        }
+      ]
+    },
+    "docs/reports/target_c_ma_dirichlet_joint_floor_0599785_2026-09-10.md": {
+      "source_sha256": "66d4238df3e735bcb7202b72f6751a265f01ee01b200fc3c4da0f0d1194e7b05",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 3,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_madd_endpoint_paired_pocket_exclusion_2026-09-10.md": {
+      "source_sha256": "55e3d43d49016e396ffe6d3d06837d7d2096a3238e1f5ffa4d23f728e17b0648",
+      "replacements": [
+        {
+          "old": "\b",
+          "new": "\\b",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        },
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_matching_branch_externalization_2026-09-09.md": {
+      "source_sha256": "5c80f5b180dc62650a67b7ec2e89eb084675ffb68ad07167de6c4a1ee26d3cda",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 2,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_minimal_interface_internal_pentagon_density_2026-09-09.md": {
+      "source_sha256": "d87ef0d6397e7acf611a1fab2bbe3361d0b7a613ab7da5911dae5165ee3e6882",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 2,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_nearcircle_giant_face_dichotomy_2026-09-09.md": {
+      "source_sha256": "dc47b58f4e3283ba1f07f05f5f794cc2821cccd5a6d0b039b965d492987e375e",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_nearcircle_unified_face_defect_2026-09-09.md": {
+      "source_sha256": "41d43480190ba433464c37fef528ceda73470c06386369f6b4df76456ccf6874",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 3,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_nearzero_series_extremality_2026-09-09.md": {
+      "source_sha256": "a6b315a1f60bee35c4c2d448e539e52b27765ce108af73521e24093955a40607",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_nested_convex_perimeter_area_stability_2026-09-09.md": {
+      "source_sha256": "9568702d4f72050a09779ec52ef9ea5ddac1e8fee66f2b0e2a37fefd9c55e385",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 5,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_oblique_lattice_global_comparison_2026-09-14.md": {
+      "source_sha256": "642b05d4810f98a6ba7519841bffd3f8aee6371336c4f9b70f6b2ca2dab83903",
+      "replacements": [
+        {
+          "old": "\b",
+          "new": "\\b",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_ordered_interval_band_regression_2026-09-14.md": {
+      "source_sha256": "ca0d0e27fdb5e01a0ad9ebaf7aac2dd66f7b0c5879d34ff64ba28aaa57226ba3",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 3,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_paired_lens_surplus_09449_2026-09-10.md": {
+      "source_sha256": "1ad9aeb13b962231f0a226ddde4484e8997412824680a0293794ad99e46fd8dd",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 4,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_paired_pocket_surplus_09307_2026-09-10.md": {
+      "source_sha256": "a26dfb2012f485557e8bd8c5eebbb359d42f3aad9683558830d026b05d1aaea1",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 5,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_pocket_degree_dirichlet_cavity_2026-09-10.md": {
+      "source_sha256": "ebd287e5fd65a75db7bf50052326a397eb1473f9811bf2cbb15a6365f8a61151",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_post_zf_difference_body_perimeter_2026-09-09.md": {
+      "source_sha256": "2409c7d151654bf855edff2ee16dea7eb16bfac2723f5c0fe30e7e5fa89264af",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_post_zf_force_hull_area_upgrade_2026-09-09.md": {
+      "source_sha256": "6bf3060aa2cc4e0014b84899394f716d35c608db3767e7446e71b4cbbe069d6d",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_post_zf_loaded_hull_contact_slack_2026-09-09.md": {
+      "source_sha256": "81419ff23f48218e66cf29019356a8e05735ae9dd05aab38fb1947b88595e147",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_projective_circle_isodiametric_area_floor_2026-09-09.md": {
+      "source_sha256": "a779e7234362b4a7a12f89e8b863f1a501cf1a0210e8ab9f4fcc1f931ca1f479",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_qs_jc_explicit_floor_0590685_2026-09-10.md": {
+      "source_sha256": "080b52c3fa1dca359138edf4ebafbd3aed8962c780a98c2c4d94c0afb15601c0",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 2,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_quantitative_nearcircle_star_rate_2026-09-09.md": {
+      "source_sha256": "7d43ff39291ea4874a252e6ff2530d11cc56b33390a17ad377741e23004f1d0c",
+      "replacements": [
+        {
+          "old": "\night)",
+          "new": "\\right)",
+          "count": 3,
+          "reason": "Restore the broken closing-delimiter command paired with an existing \\left(."
+        }
+      ]
+    },
+    "docs/reports/target_c_rd_endpoint_attachment_concentration_2026-09-10.md": {
+      "source_sha256": "e577cc34f00df696b62eecbab65f7482a0ee90d95e65b4e1f2478c9e886b0c39",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_rd_endpoint_nested_disk_exclusion_2026-09-10.md": {
+      "source_sha256": "8ea39b745599609ac026ae668f0951552434a772a684f6429993547f56376aa8",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_rd_endpoint_singleton_layer_2026-09-10.md": {
+      "source_sha256": "0cf42e3e1581628f21f1d2b5d3c0752d765cde7b83075c5378dcebef7cc1f723",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_renorm_paired_pocket_endpoint_exclusion_2026-09-10.md": {
+      "source_sha256": "1a82bb80be0e62cefb15b20ca525de300d40258322c9411ed8e3d084f3fcf473",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 2,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_renorm_perimeter_lp_080927_2026-09-10.md": {
+      "source_sha256": "1c198ad11d1890e0ecea83c76a8937cfd95439b2e8d5906bca0e8f2842faf4fd",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 4,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_renorm_sidecost_endpoint_exclusion_2026-09-10.md": {
+      "source_sha256": "ed65a4b58538894902e7ccc9a6c4ba99a116d05ec9afe52ec8395eb78fc87866",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_response_component_currency_coupling_2026-09-09.md": {
+      "source_sha256": "16d4798edba2197e1580711ce35b3d75d1116e62f7d1f2f09c07d6ca6ca1c25e",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_rsr_dd_explicit_surplus_0598_2026-09-10.md": {
+      "source_sha256": "156c91b90efd8c009db465892b8a2d5dc70c96cdbf6c4a46fc22c96d36b29bd3",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_sa_endpoint_strip_tangency_exclusion_2026-09-10.md": {
+      "source_sha256": "ca127b99a9f59b09809c7f3243c5eb6ca9c088baf6c7f2de266604a105c38e74",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_semicircle_perimeter_interface_defect_2026-09-09.md": {
+      "source_sha256": "5f37aeac6edf2548f50a457074cc56f5fd86d7d326e3d9f19722085235e7289f",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 6,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_sharp_hemmi_first_branch_2026-09-09.md": {
+      "source_sha256": "34f6f55b6f0dab90c845919e2669acd4ca04fd9833c486cacee3f1ab184a9bdf",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_sharp_hemmi_pi_nonattainment_2026-09-09.md": {
+      "source_sha256": "62862a380b4ea33956849dab0ae7b98a38ec4467f5c8756b85c7a0d56484dded",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_slope_one_detour_density_gap_2026-09-09.md": {
+      "source_sha256": "b2149110ab37d20742b0802cbbf918cfdda03d9de21f8d6d50fc5ecf81ae7404",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 2,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_slope_one_hemmi_exclusion_2026-09-09.md": {
+      "source_sha256": "d4d84d15b0943bba68f466f95d0b2ca8a2df2db0ef95f86a8afc4329aec98526",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_slope_one_outerwalk_singleton_cloud_2026-09-09.md": {
+      "source_sha256": "ab454d30946ba28500f7f8da5d5a6921892fe8d27146b46dd8826f99e3d6d6eb",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_stress_star_force_perimeter_2026-08-31.md": {
+      "source_sha256": "6af9b871c6605c2f5feb1dc6bd4055c5a757b61b68f3f1a0fcc847174f0b9c68",
+      "replacements": [
+        {
+          "old": "\night)",
+          "new": "\\right)",
+          "count": 1,
+          "reason": "Restore the broken closing-delimiter command paired with an existing \\left(."
+        }
+      ]
+    },
+    "docs/reports/target_c_stress_star_radialization_2026-08-31.md": {
+      "source_sha256": "76c704c0ee72fb237e20e350c7fd5ea54162fc8ca84dff9cf065867cabd95ae2",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_sublinear_surplus_macroscopic_gap_2026-09-09.md": {
+      "source_sha256": "fa7d351b717ec7612b50dfaf95ea905868cf5ebccccdb2f00761600ecb15afd3",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        },
+        {
+          "old": "\\tag{1.5}\n\\]",
+          "new": "\\end{aligned}\n\\tag{1.5}\n\\]",
+          "count": 1,
+          "reason": "Close the explicitly opened aligned subenvironment before its label."
+        }
+      ]
+    },
+    "docs/reports/target_c_sz0_explicit_05981_detour_gap_2026-09-10.md": {
+      "source_sha256": "87490799051257775bf4a9d58f0ca2995b8adf16ec0f8f856fbb9240ac04cc77",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 2,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_train_population_dichotomy_2026-09-09.md": {
+      "source_sha256": "a0dac7c415690f3afb9069edc007c49457e1b74977ba19757be243f5191fa236",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 4,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_two_body_hinge_integration_2026-08-31.md": {
+      "source_sha256": "9c60292d661451a0690a65918766ce0e2beca719815f2f0590722d4a9d93a03f",
+      "replacements": [
+        {
+          "old": "\b",
+          "new": "\\b",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_two_semicircle_population_and_eppstein_cost_2026-09-09.md": {
+      "source_sha256": "ef0b99f25366586240bac36eac69a31ca7c49df87c06b3ab3a10148b3c07a3da",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 2,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_zf_zero_transfer_forest_charge_2026-09-11.md": {
+      "source_sha256": "9012238b40004b2a881ecb192d8223325ee814d65e3162ceecd15ffba95dbc00",
+      "replacements": [
+        {
+          "old": "\u000b",
+          "new": "\\v",
+          "count": 2,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_zr_central_attachment_quadratic_core_2026-09-09.md": {
+      "source_sha256": "8bf631ac03e0394aa39f2e5296aa2083dd93c53158563eca7f8241c7d31c1a9b",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_zr_deep_cell_attachment_matching_2026-09-09.md": {
+      "source_sha256": "fb82d6693d953febaa09b4d64e661f6a35db67c0a055ab5d601f9f1513921d6a",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_zr_many_macroscopic_bridge_localization_2026-09-09.md": {
+      "source_sha256": "83927f38cce68dc887e47e27ff4316287082bf32912d4335008fbcc2d5b27124",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 2,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/target_c_zr_trunk_forces_linear_surplus_2026-09-09.md": {
+      "source_sha256": "e395285fc72b9337ea53791f09d6c82309598a6d08e02d33841f8d1d7dc9f5a0",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/reports/wegner_global_boundary_defect_2026-09-09.md": {
+      "source_sha256": "9799b117c93154ed87671735693e69abe8a56ca070e7cc513926db2dc2620f76",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 9,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/research/tracks/target-c-cyclic-reinhardt-corpus-2026-10-16.md": {
+      "source_sha256": "67ad0e3d8809295e8bd64f47423541147d2dd3ffbda77871a5a2fdf55c47005e",
+      "replacements": [],
+      "literal_displays": [
+        "\\boxed{ y_{i+2} = \\…",
+        "\\boxed{ \\lim…",
+        "\\boxed{ \\gamma_P \\le c(\\delta…",
+        "\\boxed{ 0\\le D-w_F(\\theta) \\le \\…"
+      ]
+    },
+    "docs/targets/target-a/26-tube-shield-sector-balance.md": {
+      "source_sha256": "15e470ca494ddf19b5a7fe80a558b2cff01bab824539a0367a2b628436367798",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "docs/targets/target-b/01-jammed-rhombic-branch.md": {
+      "source_sha256": "d48141f6df2894b4dac59d27d05381a2a88c3266ef1417ff72f2d388cbad8408",
+      "replacements": [
+        {
+          "old": "> \\}\n> \\tag{55.1}",
+          "new": "> }\n> \\tag{55.1}",
+          "count": 1,
+          "reason": "Close the boxed expression rather than rendering a literal brace."
+        }
+      ]
+    },
+    "docs/targets/target-c/72-primitive-shell-leaf-forcing-audit.md": {
+      "source_sha256": "57a53f0c03656fa6afb4f4d36986d259b0499a9696fce851ba362064763b8029",
+      "replacements": [
+        {
+          "old": "\\text{apply the `s_Z+1` nonleaf-edge bound only when }",
+          "new": "\\text{apply the `s\\_Z+1` nonleaf-edge bound only when }",
+          "count": 1,
+          "reason": "Escape an underscore in literal text."
+        }
+      ]
+    },
+    "research/target_c_degree2_fan_exceptional_face_payment_2026-10-02.md": {
+      "source_sha256": "ad120ff6dae94c3cebb3451fa1ed123a818f00e69cf06ea2c676045d81dc48f4",
+      "replacements": [
+        {
+          "old": "\\texttt{research/target_c_leaf_fan_port_harmonic_return_2026-10-02.md}",
+          "new": "\\texttt{research/target\\_c\\_leaf\\_fan\\_port\\_harmonic\\_return\\_2026-10-02.md}",
+          "count": 1,
+          "reason": "Escape underscores in a literal filename."
+        }
+      ]
+    },
+    "research/target_c_high_t_tb1_superdiameter_inactive_thrackle_t18687_2026-09-17.md": {
+      "source_sha256": "758077b428562c76c030247d36e220da1cb9c4946a74e100bf5db4bea7949b82",
+      "replacements": [
+        {
+          "old": "&>|D^2-1}+0+1",
+          "new": "&>(D^2-1)+0+1",
+          "count": 1,
+          "reason": "Repair the mismatched grouping punctuation in the displayed lower-bound substitution."
+        }
+      ]
+    },
+    "research/target_c_pentagon_rank_threshold_2026-09-19.md": {
+      "source_sha256": "d65a15f22f2a8f2074818a28bbf685e1c810b5656f2377b2063a9c500c97cbcc",
+      "replacements": [
+        {
+          "old": "\f",
+          "new": "\\f",
+          "count": 2,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "research/target_c_tooth_reflection_common_lower_run_trunk_cycle_fork_2026-09-17.md": {
+      "source_sha256": "7219c7944b37c59bab0561f8c5c60caeea43edfdc86421981bc78c0e9711b114",
+      "replacements": [
+        {
+          "old": "\right",
+          "new": "\\right",
+          "count": 1,
+          "reason": "Restore a TeX escape encoded as a bare carriage return; ordinary CRLF line endings are not changed by this repair."
+        }
+      ]
+    },
+    "research/target_c_tooth_reflection_free_module_linear_inactive_chain_2026-09-17.md": {
+      "source_sha256": "19807bcbb073e644911d7bd29941613b1f39b73fd067d02f0964b3e4a9ad97cb",
+      "replacements": [
+        {
+          "old": "\b",
+          "new": "\\b",
+          "count": 1,
+          "reason": "Restore the visibly truncated TeX escape; the original retains its exact bytes."
+        }
+      ]
+    },
+    "research/target_c_tooth_reflection_monotone_corridor_linear_outer_currency_2026-09-18.md": {
+      "source_sha256": "d85dfc06ccbf56afaa0a8ae2a08fc60b0da756206911c65beefa40171b6eee14",
+      "replacements": [
+        {
+          "old": "\rm ",
+          "new": "\\rm ",
+          "count": 3,
+          "reason": "Restore a TeX escape encoded as a bare carriage return; ordinary CRLF line endings are not changed by this repair."
+        }
+      ]
+    },
+    "research/target_c_two_phase_bad_corridor_boundary_charge_2026-09-13.md": {
+      "source_sha256": "1412cf6e8053f02d9f6a5f461deb2fbd29c8340abd067e1bae392f15e79eadac",
+      "replacements": [
+        {
+          "old": "\rm ",
+          "new": "\\rm ",
+          "count": 1,
+          "reason": "Restore a TeX escape encoded as a bare carriage return; ordinary CRLF line endings are not changed by this repair."
+        }
+      ]
+    }
+  }
+}

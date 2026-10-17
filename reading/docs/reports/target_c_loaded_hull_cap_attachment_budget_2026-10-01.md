@@ -1,0 +1,272 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_loaded_hull_cap_attachment_budget_2026-10-01.md) · source SHA-256 `23856695a5b9ba31044f666fa10dc6edd3d9f7a797b69afc8461c90a43bd5149`.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- theorem-state: {"artifact_id":"ART-C73F3915E20A","canonical":true,"claim_ids":["C-LOADED-HULL-CAP-BUDGET"],"claim_statuses":{"C-LOADED-HULL-CAP-BUDGET":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
+# Target C — loaded-hull cap attachment budget
+
+`loaded perimeter defect -> few core attachments to isolates outside the loaded
+hull -> sublinear obstruction budget for disjoint swaps with such attachments`.
+
+**Date:** 2026-10-01.  
+**Starting commit/state:** `14b2c4cfd7e4ff828fbe62a8cfefebb4ca121e79`,
+`2026-09-14.audit.51`.  
+**Branch:** `swarm/sol/gap-stress-cycle-20261001`.  
+**Mission:** continue the source-isolate repair after forest dispatch and bounded
+inactive-face transport.  
+**Classification:** the finite loaded-hull cap/attachment budget and its canonical `q/D -> pi` corollary are canonical in `2026-10-05.audit.62` as `C-LOADED-HULL-CAP-BUDGET`; swap-count applications retain their conditional scope.  
+**Level I / C-II:** OPEN / OPEN.
+
+## 1. Exact geometric theorem
+
+Let A be a finite unit-separated planar set of diameter D. Let B be a subset of
+the vertices of K=conv(A), in cyclic order, with q>=3 and F=conv(B) having positive
+area. Suppose the positive-contact core V is contained in F. Define
+
+```math
+W=\operatorname{per}(K)-q\ge0.
+```
+
+For each side ab of F, let Q_ab be its closed cap in K on the outer side of the
+line ab, let ell_ab=|ab|, and let L_ab be the length of the boundary arc of K
+from a to b having no other point of B. Call the cap occupied when it contains a
+point of A outside F. Then
+
+```math
+\#\{\text{occupied caps}\}\le W,\qquad
+\sum_{\text{occupied}}L_{ab}\le2W,\qquad
+\sum_{\text{occupied}}\ell_{ab}\le2W.                 \tag{1}
+```
+
+Let P be the set of core points p for which there is a source point z outside F
+with |p-z|<sqrt(2). Then
+
+```math
+|P|\le68W.                                           \tag{2}
+```
+
+Let X be the source points in F outside B whose distance to its boundary is
+at most 1/2. Then |X|<=12W. Every source point p in F at boundary distance at
+least 1/2 satisfies |p-y|<=D-1/2 for all y in K.
+
+Finally, the number of extreme source points outside B is at most W. None of
+these statements bounds the *population* inside a cap by O(W).
+
+## 2. Full proof
+
+The cyclic chords joining consecutive vertices of B partition K into F and
+caps whose interiors are disjoint. One way to see the partition without an
+assumption on curvature is to add these noncrossing diagonals to the polygon K.
+Each outside piece has exactly one F side as its base and the corresponding K
+boundary arc as its other boundary. Thus every point outside F lies in exactly
+one cap, apart from common boundary vertices, which are in F.
+
+Each ell_ab>=1 and L_ab>=ell_ab, so
+
+```math
+W=\sum_{ab}(L_{ab}-1),\qquad L_{ab}-1\ge0.             \tag{3}
+```
+
+If z occupies Q_ab, the triangle abz is contained in that convex cap. Perimeter
+is monotone for convex sets: the projection-width integral
+`per(C)=integral_0^pi width_C(theta) d theta` proves this directly, including
+polygonal and degenerate limits. Comparing the triangle and cap perimeters
+gives
+
+```math
+\ell_{ab}+L_{ab}\ge\ell_{ab}+|az|+|bz|\ge\ell_{ab}+2.
+```
+
+Hence L_ab>=2. On occupied caps, `1<=L_ab-1` and
+`L_ab<=2(L_ab-1)`. Sum and use (3), then ell_ab<=L_ab, to obtain (1).
+
+If z is in the cap Q_ab, its nearest point in F belongs to the segment ab.
+For completeness, z satisfies all the supporting half-plane inequalities of F
+other than the one at ab, by the cap partition. Let y be its nearest point in F.
+If y were not on ab, the projection optimality condition would express z-y as
+a nonnegative combination of outward normals to other sides active at y.
+Each such normal has nonpositive scalar product with z-y, since z satisfies
+that side inequality. Taking the scalar product with z-y would give
+`|z-y|^2<=0`, a contradiction. Vertices a,b are included in the segment, so
+there is no endpoint exception.
+
+If p is in P and z is a corresponding outside point, choose its cap ab and
+its nearest point y in F. Then
+
+```math
+|z-y|\le|z-p|<\sqrt2,\qquad |p-y|<2\sqrt2.           \tag{4}
+```
+
+Put closed disks of radius 1/2 about the points in P. Their interiors are
+disjoint by unit separation. By (4), each disk lies in the tube of radius
+rho=7/2 about one occupied base segment, since `2sqrt(2)+1/2<7/2`.
+The tube about a segment of length ell has area `2rho ell+pi rho^2`.
+Taking the sum of tube areas is an upper bound on their union, hence (1) gives
+
+```math
+|P|\frac\pi4
+\le2\rho\sum_{\text{occupied}}\ell_{ab}
+   +\pi\rho^2\#\{\text{occupied caps}\}
+\le(4\rho+\pi\rho^2)W.
+```
+
+Thus `|P|< (56/pi+49)W <68W` when W>0; when W=0 there are no occupied caps and
+P is empty. This proves (2). The estimate uses source-point separation, not
+just separation of the loaded vertices.
+
+If v_K is the number of vertices of K, every K side has length at least one,
+so `v_K<=per(K)` and `v_K-q<=W`. This proves the last assertion.
+
+There is also a boundary-layer count inside F. Let X consist of source points
+in F outside B whose distance to the boundary of F is at most 1/2. If x is
+such a point, its closest point on the boundary cannot be a vertex of F,
+because those vertices are B and would be less than one away. Thus it projects
+to the relative interior of a side ab. Writing delta for its distance to ab,
+unit separation from both endpoints implies its projection is at least
+`sqrt(1-delta^2)>=sqrt(3)/2` from each endpoint. So `|ab|>=sqrt(3)`.
+
+Write `U=per(F)-q<=W`. There are at most `U/(sqrt(3)-1)` such long sides,
+and their total length is at most `sqrt(3)U/(sqrt(3)-1)`. The radius-1/2
+disks about X are disjoint and contained in the radius-1 tubes around those
+sides. Hence
+
+\\[
+|X|\\frac{\\pi}{4}
+\\le2\\sum_{\\rm long}|ab|+\\pi\\#\\{\\rm long\\}
+\\le\\frac{2\\sqrt{3}+\\pi}{\\sqrt{3}-1}U.
+\\]
+
+Since `4(2sqrt(3)+pi)/(pi(sqrt(3)-1))<12`, this proves the shallow-point
+bound. For example,
+the strict inequality follows from `pi>3` and `sqrt(3)>12/7`.
+
+If p in F has distance at least 1/2 from its boundary, the radius-1/2 disk
+about p lies in F. For any y in K, move from p a distance 1/2 directly away
+from y to p' in this disk. Then `|p'-y|=|p-y|+1/2<=D`, since both lie in K.
+This proves the stated deep-interior diameter margin. If both points in a
+source pair move by at most 1/8, its distance can grow by at most 1/4, so the
+pair remains strictly below D.
+
+## 3. Canonical source applicability
+
+In the canonical full-support source, every actual diameter endpoint is extreme
+in K: the diameter-vector projection argument uniquely exposes each endpoint.
+Thus B is the full loaded endpoint set and meets the hull hypotheses above.
+Every nonloaded, nonisolated source point is a positive weighted barycenter of
+its contact neighbors. The maximum principle for each linear functional, on
+each connected contact component, puts the whole core V inside F. A contact
+component cannot contain no loaded vertex: its maximum would propagate through
+all its positive-contact edges, contradicting that a finite nontrivial connected
+component has distinct positions. These are the canonical local KKT and
+full-support hypotheses; no assertion of isolate rigidity is used.
+
+Every extreme point outside B is contact-isolated. In particular, all long-pair
+isolate leaves anchored in the cyclic dispatch theorem are among these at most
+W points. The finite upper-threshold geometry and dispatch are rederived in
+`target_c_forest_isolate_dispatch_2026-10-01.md`, which is an unpromoted candidate.
+
+The standard convex perimeter bound gives
+
+```math
+0\le W\le\pi D-q.                                   \tag{5}
+```
+
+Consequently, **conditionally** on a sequence having q=pi D-o(D), the
+attachment population P, the shallow interior population X, and the
+anchored-long-leaf population are all o(D).
+The unpromoted wrapping-root defect report of September 30 supplies such a
+conditional regime. This packet does not assert that every C-II source is in
+that regime.
+
+## 4. What the disjoint-swap count actually eliminates
+
+Consider the cyclic ultrasmall ONE-SIGN setting of the dispatch report, with
+s<gamma=D-sqrt(D^2-1), D>=2, and disjoint sets of moving core vertices across r
+proposed swaps. Use the same anchor map for every proposal. An anchored isolate
+has the binary label of its core anchor, so it receives label 1 in at most one
+proposal. Every forcing edge in the fractional-path construction has length
+less than `ell_*=s+sqrt(1+s^2)<sqrt(2)`.
+
+Call a lower obstruction *outer-attached* if its prescribed endpoint with label
+1 is either:
+
+1. an anchored long-pair isolate; or
+2. a core point whose next point in the obstruction is outside F.
+
+Here an obstruction may be an actual blocked prescribed pair or the cost<1
+forcing path of the fractional dispatch theorem. Choose one such endpoint for
+each outer-attached obstructed proposal. The first kind charges one of at most
+W extreme isolates; the second charges a point of P. Each charged point can
+have label 1 in at most one proposal. Therefore
+
+```math
+\#\{\text{outer-attached obstructed proposals}\}\le69W. \tag{6}
+```
+
+This eliminates an outer-attached obstruction for a linear disjoint family when
+W=o(D). It is stronger than counting cap isolates, since a cap can contain many
+points but has few short-distance core attachments in total.
+
+For amplitudes s<=1/8, a binary move and the fixed anchor extension move every
+point by at most 1/8. The deep-interior diameter margin proved above then
+eliminates every inactive upper blocker
+with an endpoint in the deep part of F. The only source points in F not covered
+by this uniform upper margin are the loaded vertices B themselves and the at
+most 12W nonloaded points in X.
+
+## 5. Hostile boundary: the exterior contact face is larger than K minus F
+
+The exterior face of the positive-contact graph may contain points **inside F**.
+It can have deep pockets entered through noncontact loaded-hull sides. A forcing
+path may start at a core point, run through isolates inside F, and only later
+enter a hull cap. That path need not be outer-attached as defined above. Formula
+(6) does not count it. Neither a short path edge nor cofaciality repairs this
+missing hypothesis.
+
+The boundary-layer estimate does eliminate lower blockers incident to X. For
+any fixed source point, unit separation and disjoint radius-1/2 disks imply
+that it has at most
+`4(sqrt(2)+1/2)^2<15` other source points within distance sqrt(2), hence at
+most 14. Therefore at most `14|X|<=168W` distinct near-unit pairs are
+incident to X, and at most `336W` disjoint binary swaps can be blocked by
+such pairs. When W=o(D), a linear disjoint family must instead use lower
+blockers with both endpoints outside X. This still leaves pairs entirely in
+the deep interior, as well as pairs between loaded vertices.
+
+Likewise, small W does not bound the number of noncontact sides of F. An odd
+regular q-gon with side length `1+q^-2` has all q sides noncontact, all vertices
+diameter-loaded, and perimeter defect `1/q`. It is unit-separated; all other
+distances are longer. Its diameter is asymptotic to q/pi. It is a shell
+regression, with no contact KKT or global-optimality claim. Replacing a small
+total side excess by a small *count* of noncontact sides would fail even in this
+diameter-loaded shell.
+
+Thus bounded-face transport plus (6) leaves, at minimum:
+
+- bounded rhombus diagonals not covered by complete-grid immunity;
+- pure-core exterior near-unit pairs;
+- exterior-face isolate chains whose label-1 attachment is inside F;
+- source points in X that may be endpoints of near-unit lower blockers;
+- near-unit edges joining moving loaded vertices B;
+- the forest exceptional upper pairs and unanchored-component complications;
+- all other exact-phase, few-phase/TWO-SIGN, split-star, inactive-interface,
+  macroscopic-container, and uncovered full-core C-II branches.
+
+The repaired closing obligation is to prove that actual O-O slab forcing paths
+are outer-attached, to bound the remaining inner attachments by another exact
+canonical deficit, or to construct a feasible nonparallel repair. No transition
+from near-unit length to exact unit contact has been made.
+
+## 6. Computation and dependency status
+
+The cap theorem and count (6) are finite geometric proofs. They do not depend on
+an LP result, enumeration, an asymptotic packing claim, or global optimality.
+The only canonical source dependencies are full-support KKT normalization and
+actual diameter endpoint exposure. Applying (6) to a ONE-SIGN move uses the
+explicitly conditional, unpromoted swap/dispatch stack. Applying (5) with
+W=o(D) additionally requires the separate unpromoted rooted-defect reduction
+and its dependency audit; the geometric theorem here is stated conditionally
+on q=pi D-o(D), not on that report's promotion or all-branch applicability.
+
+The regular-polygon regression is an exact symbolic family, not a numerical
+certificate. No verifier output certifies the universal minimizer premise, and
+no canonical lifecycle entry is changed.

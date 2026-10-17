@@ -1,0 +1,234 @@
+> Generated reading edition · [exact source](../../../docs/audits/target_c_all_degree_groemer_face_stability_hostile_audit_2026-09-14.md) · source SHA-256 `6c705509fb5c95f4a298021e7cd8058cb0e57f4e2f4f6b452df9fe680e013ff5`.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Source formatting note: 2 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
+<!-- theorem-state: {"artifact_id":"ART-0FE5C28677DA","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Hostile audit and strengthening — all-degree Groemer face stability
+
+**Date:** 2026-09-14\
+**Target:** `research/target_c_all_degree_groemer_face_stability_2026-09-14.md`\
+**Base:** `76bc24c8`\
+**Disposition:** **PASS, with a stronger anchored-near-triangle conclusion**\
+**Theorem-state authority:** unchanged
+
+## 1. Audit target
+
+The target note claims that the exact force-hull fixed-boundary residual
+
+```math
+R_F=\sum_j r_j
+```
+
+has the following Type-II consequence: if `R_F=o(D)`, then linearly many bounded exceptional faces contain hidden source pairs at distance `1+o(1)`, and a linear subfamily can be made vertex-disjoint.
+
+The load-bearing new input is Groemer's equality classification for the same Oler inequality already used in canonical §67. The audit checked the external theorem against the 2007 Böröczky–Ruzsa restatement and then rechecked the compactness, degenerate-limit, incidence, and matching steps.
+
+The result passes. Moreover the equality structure yields a stronger conclusion: the hidden near-contact can be chosen as part of a near-unit equilateral triangle whose base is an **existing exact unit contact edge** of the exceptional face.
+
+## 2. External theorem scope — PASS
+
+Böröczky–Ruzsa, *Note on an Inequality of Wegner*, Discrete Comput. Geom. 37 (2007), 245–249, DOI `10.1007/s00454-006-1277-4`, restate the Thue–Groemer inequality for centers of pairwise nonoverlapping unit disks:
+
+```math
+{A(C)\over2\sqrt3}+{P(C)\over4}+1\ge N.
+```
+
+They explicitly state Groemer's equality classification: either `C` is a segment of length `2(N-1)`, or `C` is the convex hull of the centers and can be triangulated with those centers into regular triangles of side two. In the second case the hull sides lie in the triangular-lattice directions and there are at most six geometric hull sides.
+
+Scaling by `1/2` gives precisely the unit-separated Oler normalization
+
+```math
+N\le A/a_0+P/2+1,
+\qquad a_0=\sqrt3/2,
+```
+
+with equality either on a segment of length `N-1` or in a triangulation by unit equilateral triangles.
+
+No stability theorem is imported from the paper. The target note derives stability only by compactness from the equality classification.
+
+## 3. Fixed-degree compactness — PASS
+
+For a degree-`d` exceptional face with `z` assigned interior isolates, the canonical residual is
+
+```math
+r(P)=A(P)/a_0-d/2+1-z.
+```
+
+A hypothetical sequence with `d<=K`, fixed hidden-pair margin, and `r(P)->0` has bounded `z`: Oler plus `A(P)<=d^2/(4pi)` gives a bound depending only on `K`. After fixing `d,z`, normalizing one unit boundary edge, and taking a subsequence, all source points stay in a fixed compact set and remain unit-separated.
+
+Area and convex perimeter are continuous under this convergence. The limiting point set therefore attains Oler equality.
+
+The segment case is genuinely excluded, not merely ignored. Its convex perimeter is
+
+```math
+2(N-1)=2(d+z-1)>d,
+```
+
+whereas every approximating face has perimeter exactly `d`.
+
+In the two-dimensional equality case, a triangulation using all `N=d+z` points has
+
+```math
+E=3N-h-3\ge2N-3>d
+```
+
+edges, so at least one unit triangulation edge is not one of the `d` original cyclic boundary contacts. This validates the target note's hidden-pair contradiction.
+
+## 4. The matching count — PASS
+
+The exact canonical identities imply
+
+```math
+Q=2(q-k)-b\le2P_F-P_F=P_F.
+```
+
+Together with the AG42 face floor
+
+```math
+f/D\ge f_*-o(1),
+\qquad
+f_*=\sqrt{\Delta_2}-\pi/4+0.00021,
+```
+
+this gives, for degree cutoff `K`,
+
+```math
+f_{\le K}/D\ge f_*-\pi/(K-3)-o(1).
+```
+
+For `K=42`,
+
+```math
+\ell_{42}=0.086570985682155\ldots .
+```
+
+The triangle-free unit-contact graph has maximum degree five. A bounded face of degree at most 42 therefore conflicts, by shared boundary vertex, with at most `4*42=168` other bounded faces. A greedy independent set keeps at least a `1/169` fraction. The target coefficients
+
+```math
+\ell_{42}/169=0.000512254353148\ldots
+```
+
+for fixed `eta`, and half of this for a diagonal `eta_D->0`, are correct.
+
+## 5. Stronger finite theorem: an exact contact anchors the near triangle
+
+The compactness proof gives more than one hidden unit edge.
+
+### Theorem A — anchored Groemer stability
+
+Fix `K>=5` and `eta>0`. There exists `tau_K(eta)>0` such that every canonical exceptional bounded face `P` with `5<=deg(P)<=K` and residual
+
+```math
+r(P)<\tau_K(\eta)
+```
+
+contains three source points `u,v,w` with
+
+```math
+|u-v|=1,
+\qquad
+1\le|u-w|<1+\eta,
+\qquad
+1\le|v-w|<1+\eta,
+\tag{A.1}
+```
+
+where `uv` is one of the original cyclic boundary contact edges of `P`.
+
+Because the global source is triangle-free, at least one of `uw,vw` is strictly longer than one.
+
+### Proof
+
+If false, take a sequence of degree-at-most-`K` faces with residual tending to zero but no triple of the form (A.1). Repeat the compactness argument from the target note. The limit cannot be the segment equality case, so it is a Groemer triangulation by unit equilateral triangles.
+
+Take any original cyclic boundary edge `uv`. Each approximating face is convex and `uv` is a unit segment on its boundary. In the two-dimensional limit the same segment remains on the convex-hull boundary. No third source point can lie in the relative interior of this length-one segment because the limiting source is unit-separated. Hence `uv` is a boundary edge of the Groemer triangulation.
+
+Every boundary edge of a triangulation is incident with exactly one triangular face. Groemer equality makes that face unit equilateral, so there is a third source point `w` satisfying
+
+```math
+|u-w|=|v-w|=1.
+```
+
+Pulling the three fixed labels back along the convergent subsequence gives (A.1) for all sufficiently large indices, contradiction. `square`
+
+This strengthening does not require identifying which hidden edge appears in the equality triangulation; it uses the pre-existing exact unit boundary contact as an anchor.
+
+## 6. Strengthened Type-II consequence
+
+Assume along a Type-II subsequence
+
+```math
+R_F=o(D).
+```
+
+For fixed `eta>0`, every degree-at-most-42 face that does **not** contain an anchored triple (A.1) consumes at least `tau_42(eta)` of residual. Since all chamber residuals are nonnegative and sum to `R_F`, only `o(D)` of the `ell_42 D-o(D)` bounded-degree faces can fail (A.1).
+
+After the same face-conflict greedy selection, for every fixed `eta>0` there are at least
+
+```math
+\boxed{
+(0.000512254353148\ldots-o(1))D
+}
+\tag{A.2}
+```
+
+pairwise vertex-disjoint triples `(u,v,w)` in distinct exceptional faces satisfying (A.1), with `uv` an actual contact edge.
+
+Diagonalizing `eta=1/j` gives a scale `eta_D->0` and
+
+```math
+\boxed{
+\Omega(D)\text{ vertex-disjoint triples with }
+|u-v|=1,
+\quad
+|u-w|,|v-w|=1+o(1).
+}
+\tag{A.3}
+```
+
+Using the conservative half-density from the target note, one may take
+
+```math
+0.000256127176574\ldots D-o(D)
+```
+
+triples.
+
+This strictly strengthens the hidden-pair endpoint. Branch B is not merely close to creating arbitrary new contacts; it contains linearly many almost-equilateral triangles, each already carrying one exact side of the desired unit triangle.
+
+## 7. Why this still stops short of C-II
+
+The theorem gives no rate better than `o(1)` for the two missing sides. The exact target needs both to reach one in an actual minimizing source, or a deformation that reduces diameter while preserving all unit-separation constraints.
+
+The remaining branch can now be stated more tightly:
+
+```text
+R_F = o(D)
+  -> Omega(D) pairwise-disjoint anchored almost-equilateral triples
+  -> ? exact unit equilateral triangle or strict sub-D source.
+```
+
+The next useful attack should use one of:
+
+1. quantitative Groemer stability to improve the `o(1)` gaps to a controlled function of `R_F/D`;
+2. KKT equilibrium on the exact contact base `uv`, exploiting that the two missing contacts approach the two 60-degree directions; or
+3. a source-preserving local exchange on a vertex-disjoint family of anchored triples.
+
+The large-residual branch `R_F=Omega(D)` remains governed by the residual-level gluing identity
+
+```math
+R_F+\Sigma_{ext}=\Omega_K+L_{cap}.
+```
+
+No contradiction is claimed there.
+
+## 8. Final disposition
+
+**PASS at proof-only scope, strengthened.** The all-degree compactness argument is valid and the small-residual endpoint can be upgraded from a linear hidden near-contact matching to a linear family of vertex-disjoint near-unit equilateral triples anchored on actual contact edges.
+
+C-II and Level I remain open.
+
+---
+
+**Recovery provenance:** copied from `research/c2-closure-sol-20260914-r7` at exact tip `1541dac85e9ddf6450bb3cd7b14f5ce76e119420` during the 2026-10-04 Slot 2 branch audit. This recovered claim remains unreviewed and noncanonical.

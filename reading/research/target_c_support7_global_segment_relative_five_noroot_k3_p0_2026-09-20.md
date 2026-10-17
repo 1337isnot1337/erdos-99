@@ -1,0 +1,194 @@
+> Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_five_noroot_k3_p0_2026-09-20.md) · source SHA-256 `8a726837a1058b15978f9e81211b1b95a41c851213144b6b7063ee688029c759`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "77acd82db5886370415328ea32ba62754e75d483", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_five_noroot_k3_p0_2026-09-20.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "1954681fec75411a430defb8903c297226cc81f4516e6c7981596418487f2886"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: five-no-root k=3, p=0 rank-density audit
+
+Date: 2026-09-20
+
+Status: exact finite result for one subcase of the five-no-root four-cycle density problem. This does not reduce the current 3,874-state generic-H6 endpoint and does not close C-II.
+
+Companion verifier:
+
+`research/verify_target_c_support7_global_segment_relative_five_noroot_k3_p0_2026_09_20.py`
+
+## Statement
+
+Keep the relative four-cycle notation from the preceding audits and put
+
+`delta(A) = r_M(A) - r_Q(A)`.
+
+For five no-root four-cycles, the still-dangerous regimes after the `k=2` and `k=5` results are
+
+- `k=3, p<=3`, and
+- `k=4, p<=6`.
+
+The new verifier closes the first slice of the `k=3` branch:
+
+> Every five-no-root family with `k=3` and `p=0` satisfies `3 delta(A) <= |A|`.
+
+The remaining five-no-root cases are therefore
+
+- `k=3, 1<=p<=3`, and
+- `k=4, p<=6`.
+
+## Canonical rank-two states
+
+For `t=5` and `k=3`, the global coefficient-constraint space has rank
+
+`5-k = 2`.
+
+Call it `P`. Its coefficient nullspace has dimension three.
+
+When `p=0`, every touched root-0 quotient block is either empty or complete. Let `E_b` denote the coefficient constraint imposed by leaving block `b` empty. An actual state satisfies
+
+`P = span(E_b : b is empty)`.
+
+For fixed `P`, define the canonical state by leaving `b` empty exactly when
+
+`E_b subset P`,
+
+and completing it otherwise. The same argument as in the `k=2` audit shows that this canonical state realizes `P` and has the fewest selected root-0 rows among realizations of `P`.
+
+Completing an additional compatible empty block does not alter the three external-nullspace relation rows: every coefficient vector in `null(P)` already annihilates `E_b`. The completion only adds the block's complete local `T` relation. It adds three selected rows and raises `delta` by at most one.
+
+Therefore the defect
+
+`|A| - 3 delta(A)`
+
+cannot decrease away from the canonical state. It is enough to scan canonical states.
+
+## Exact finite census
+
+The exact five-subset orbit census gives
+
+`20,451`
+
+`S7` representatives for the
+
+`96,560,646`
+
+five-subsets of the 105 no-root four-cycles.
+
+Generating every obtainable rank-two coefficient-constraint space over those representatives gives exactly
+
+`246,860`
+
+canonical states.
+
+Their complete-block count census is
+
+```text
+c    states
+4         70
+6          4
+7      4,054
+8      7,631
+9      6,703
+10    37,117
+11    95,402
+12    58,433
+13    24,752
+14    10,250
+15     1,802
+16       585
+17        57
+```
+
+## First two pruning layers
+
+If `c>=14`, the ambient rank bound `delta<=dim(T)=15` gives
+
+`5 + 3c - 3*15 >= 2`.
+
+This removes
+
+`12,694`
+
+canonical states.
+
+For the remaining states let `r` be the rank of the `c` complete-block `T` relations and put
+
+`d = c-r`.
+
+The three-dimensional coefficient nullspace contributes at most three more relation directions, so
+
+`delta <= r+3`.
+
+Hence
+
+`|A| - 3 delta(A) >= 5 + 3c - 3(r+3) = 3d - 4`.
+
+Therefore every state with `d>=2` is safe before any external relation is formed. This eliminates another
+
+`234,080`
+
+states.
+
+Across all states with `c<=13`, the exact complete-rank deficiency census is
+
+```text
+d    states
+1         86
+2     13,349
+3    219,112
+4      1,619
+```
+
+Only 86 canonical states remain after these two bounds.
+
+## Exact residual scan
+
+For each of the 86 deficiency-one states, the verifier constructs the three coefficient-nullspace relation rows explicitly in the 15-dimensional `T` coordinate system and reranks the full relation set.
+
+Every residual state has exact defect
+
+`8`.
+
+The exact `(c, r_complete, delta)` census is
+
+```text
+(4,3,3)    70
+(6,5,5)     4
+(7,6,6)    12
+```
+
+Thus in every hard state the external-nullspace rows add no rank beyond the complete-block relation space.
+
+No residual state has negative defect.
+
+## Exactness
+
+Complete-block and residual ranks are computed modulo
+
+`P = 2^127 - 1`.
+
+The imported rank layer runs Lucas-Lehmer for this Mersenne prime. The maximum squared Euclidean norm of any residual relation row in this scan is
+
+`36`,
+
+and the verifier checks
+
+`P^2 > 36^15`.
+
+Hadamard's determinant bound therefore makes every modular rank decision exact over `Q`.
+
+The `S7` orbit reduction uses exact integer permutation/combinadic arithmetic.
+
+## Updated five-no-root bottleneck
+
+The five-no-root factor-three density problem is now reduced to
+
+- `k=3, p=1,2,3`, with a fixed rank-two coefficient-constraint space, and
+- `k=4, p<=6`, with a fixed rank-one coefficient-constraint space.
+
+The next finite target should be `k=3,p<=3` with nonzero `p`. Since `p` is only three, a useful reduction is to fix a rank-two space `P`, choose the at-most-three incomplete selected rows, and canonically empty every remaining block whose empty constraint lies in `P`. Extra compatible completions cannot decrease the defect. A deletion-minimal enumeration should therefore be much smaller than the unrestricted local-state product.
+
+For C-II itself, the explicit generic-H6 endpoint remains
+
+`3874 = 3076 C7 + 798 (C3 disjoint-union C4)`.
+
+The state-specific forced-segment-order scan remains the most direct cell-removal computation. Surviving cells then require quantitative sine-law metric compatibility. The theorem-state authority files are unchanged.

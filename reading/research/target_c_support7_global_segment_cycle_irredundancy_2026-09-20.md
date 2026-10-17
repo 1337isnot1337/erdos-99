@@ -1,0 +1,78 @@
+> Generated reading edition · [exact source](../../research/target_c_support7_global_segment_cycle_irredundancy_2026-09-20.md) · source SHA-256 `c1c6baf34c5ed6b85e1df4fc811eac33f415853ffad461ff4aace45e1614b5a5`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3b7e15398a05d2458b4b6d39975871d3600c3639", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_cycle_irredundancy_2026-09-20.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "26a14c3586b58c3932018aca1e5e85620a2d6c23a0c550a7415248ac68eb637a"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C support-seven: irredundancy of the cross-root segment-cycle family
+
+Date: 2026-09-20
+
+Status: exact finite negative result for attempts to shorten the abstract `L(K8)` sign-obstruction family. The theorem-state authority is unchanged. C-II remains open.
+
+## Result
+
+The support-seven segment-order layer uses the 28 reciprocal segment lengths as the vertices of `L(K8)`. At each reciprocal root, the seven incident segment lengths have one strict local total order. The 56 triangle-side triples are already order-tautological once the complete reciprocal triangle equations are respected.
+
+There are 7,962 cross-root chordless cycle templates, namely the labelled simple cycles of `K8` of lengths 4 through 8:
+
+```text
+length 4:  210
+length 5:  672
+length 6: 1680
+length 7: 2880
+length 8: 2520
+----------------
+total:    7962
+```
+
+Every one of these 7,962 templates is individually necessary if the only background information retained is:
+
+1. a strict total order on the seven incident segments at each of the eight roots; and
+2. acyclicity of all 56 triangle-side triples.
+
+More precisely, for each `k=4,5,6,7,8` there is an explicit system of eight rooted total orders for which:
+
+- all 280 root-star triangles are transitive;
+- all 56 triangle-side triples are acyclic;
+- among all 7,962 cross-root simple-cycle templates, exactly one is directed; and
+- that unique directed cycle is the representative `0-1-...-(k-1)-0` of length `k`.
+
+Because the symmetric group on the eight reciprocal labels acts transitively on labelled simple cycles of each fixed length, relabelling these five witnesses gives the same statement for every individual cross-root template.
+
+Therefore no proper subset of the 7,962 cross-root cycle templates gives a complete abstract order-extension obstruction system under only those local assumptions. In particular, checking only four-cycles, only short cycles up to some cutoff, or any fixed pruned list of cross-root templates is incomplete in this abstract model.
+
+## Certificate
+
+`research/verify_target_c_support7_global_segment_cycle_irredundancy_2026_09_20.py`
+
+The verifier contains the five explicit rooted-order witnesses. It enumerates every labelled simple cycle of `K8` of lengths 4 through 8 using integer combinatorics only and confirms that each witness has exactly one directed cross-root cycle. It also checks all 56 triangle-side triples directly. No floating-point arithmetic, LP result, or search solver is part of the certificate.
+
+A local execution returned:
+
+```text
+PASS: cross-root L(K8) cycle templates are individually irredundant
+simple cycle counts: {4: 210, 5: 672, 6: 1680, 7: 2880, 8: 2520}
+total cross-root templates: 7962
+representative unique directed cycles: {4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+all witnesses: 280 root-star triangles transitive, 56 side triangles acyclic
+```
+
+## Consequence for the H6 closure search
+
+This does not say that every template can occur inside the present 3,874 H6 endpoint. The endpoint has much more affine information than an arbitrary collection of eight local segment orders. State-specific forced signs can still collapse the search sharply.
+
+The result rules out a state-independent shortcut: the 7,962 cross-root family cannot be replaced by a smaller complete family using local rooted-order consistency and triangle-side acyclicity alone.
+
+Accordingly the direct H6 implementation should not enumerate a supposedly sufficient short-cycle basis. It should instead maintain the forced directed comparison graph incrementally and use ordinary directed-cycle detection. The new endpoint scanner
+
+`research/verify_target_c_support7_h6_forced_segment_order_cycles_2026_09_20.py`
+
+implements that approach: exact Farkas certificates prove individual forced segment signs, and any exact forced directed cycle excludes the cell regardless of its length.
+
+The GitHub Actions workflow added for that 3,874-cell scan was triggered in this run, but the matrix jobs failed before executing any step, matching the repository's recent Actions infrastructure failures. No mathematical conclusion is drawn from that failed execution.
+
+## Scope
+
+The five witnesses are abstract rooted segment-order systems. They are not claimed to be realizable by the complete H6 affine angular system, by a Euclidean reciprocal configuration, or by a physical pentagon branch. The result is only an irredundancy theorem for the stated abstract order layer.

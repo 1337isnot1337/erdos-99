@@ -1,0 +1,381 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_nearcircle_laminar_cap_transfer_repair_2026-09-09.md) · source SHA-256 `ccfc4f2b4172c37228e968ba657b8200cc4f626740fc034a0eed3cf9f71a56c0`.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- theorem-state: {"artifact_id":"ART-EC9826A1C917","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+<!-- migration-source: path=docs/reports/target_c_nearcircle_laminar_cap_transfer_repair_2026-09-09.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=a58c3fc66e014346853f305bf1efcce57542827e; lifecycle=unreviewed; canonical=false -->
+> **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
+
+# Erdős Problem #99 — repair of the laminar-cap source transfer
+
+**Date:** 2026-09-09  
+**Repository branch:** `research/post-uf-attachment-fill-2026-09-09`  
+**Run type:** adversarial audit / proof repair  
+**Target:** LC near-circle cap-capacity theorem  
+**Depends on:** DC Hausdorff disk convergence, C49 interior-disjoint attachment cells, C44 cell-diameter control  
+**Computation:** none
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The continuum cap optimization in LC is correct, but its first source-transfer paragraph contains a genuine compactness gap: one cannot simply discard all cells of vanishing normalized area and assert that their **total** area vanishes. There may be many small cells whose combined area is macroscopic.
+
+This report repairs that step without any rate assumption and without summing one approximation error per cell.
+
+The key construction is the single convex body left after all inclusion-maximal attachment caps are cut from the force hull. Passing that one convex body to a Hausdorff limit converts the many-cell problem into a circle-net problem. The same scalar cap capacity
+
+```math
+\mathcal C(\mu)
+=\frac18\left[2\pi-k_\mu\sin\theta_\mu-\sin r_\mu\right]
+```
+
+then follows rigorously for arbitrary numbers of cells.
+
+Thus the LC numerical bound, including the UF crossover constant
+
+```math
+\delta_{\max}/D\ge0.7591662335\ldots,
+```
+
+survives this audit.
+
+---
+
+## 1. Setup
+
+Take a UF near-circle sequence and normalize by `D_j`, translating so that
+
+```math
+F_j:=F/D_j\to B:=B_{1/2}
+```
+
+in Hausdorff distance.
+
+Assume for contradiction that for some fixed `mu<1`,
+
+```math
+\delta_{\max,j}/D_j\le\mu+o(1).
+\tag{1.1}
+```
+
+C44 gives, for every attachment cell `P_{r,j}`,
+
+```math
+\operatorname{diam}(P_{r,j}/D_j)
+\le\mu+o(1).
+\tag{1.2}
+```
+
+All vertices of every attachment cell are loaded vertices on `partial F_j`.
+
+Let
+
+```math
+\theta_\mu:=2\arcsin\mu<\pi.
+\tag{1.3}
+```
+
+Because `F_j->B`, any two boundary vertices whose normalized Euclidean separation is at most `mu+o(1)` have limiting circular angular separation at most `theta_mu`.
+
+---
+
+## 2. Exact finite laminarity on the convex force hull
+
+For each positive-area attachment cell choose the shortest cyclic interval of the loaded force-hull boundary containing its attachment vertices. For all sufficiently large `j`, (1.2) and `mu<1` make this interval shorter than a half-turn in the disk angular coordinate, so the chosen interval is unambiguous after harmless tie-breaking in degenerate cases.
+
+C49 gives pairwise disjoint cell interiors.
+
+Exactly as in LC, two chosen boundary intervals cannot partially overlap without containment. If endpoints alternate in the cyclic order, the corresponding endpoint chords cross properly. Each chord is a boundary edge of the convex hull of its attachment set. At an interior point of such a boundary edge, a positive-area convex cell contains a one-sided open neighborhood. Two transverse crossing boundary edges therefore force a nonempty open wedge contained in both cells, contradicting C49.
+
+Hence the finite family of supporting intervals is laminar.
+
+Let
+
+```math
+J_{1,j},\ldots,J_{m_j,j}
+```
+
+be the inclusion-maximal intervals. Their relative interiors on `partial F_j` are pairwise disjoint.
+
+Every attachment cell whose supporting interval is contained in `J_{a,j}` lies in the convex cap of `F_j` cut off by the chord joining the two endpoints of `J_{a,j}`.
+
+---
+
+## 3. Cut all maximal caps at once
+
+For one maximal interval `J_{a,j}`, let `H_{a,j}` be the closed half-plane bounded by its endpoint chord and containing the complementary part of `F_j`, i.e. the **inner** half-plane rather than the cap side.
+
+Define one convex body
+
+```math
+\boxed{
+K_j:=F_j\cap\bigcap_{a=1}^{m_j}H_{a,j}.
+}
+\tag{3.1}
+```
+
+Because the maximal boundary intervals are disjoint, their caps have pairwise disjoint interiors. Every attachment cell lies in one of these maximal caps. Therefore
+
+```math
+\boxed{
+\sum_r\operatorname{area}(P_{r,j}/D_j)
+\le
+\operatorname{area}(F_j)-\operatorname{area}(K_j).
+}
+\tag{3.2}
+```
+
+This is the crucial repair: there is now only one convex body `K_j` to pass to the limit. No per-cell Hausdorff error is summed.
+
+---
+
+## 4. Hausdorff limit of the uncut cores
+
+The `K_j` lie in a common bounded region. By Blaschke selection, pass to a subsequence such that
+
+```math
+K_j\to K
+```
+
+in Hausdorff distance for some compact convex `K subset B`.
+
+CH gives a common positive central disk whenever `mu<1`, so `K` is nonempty and two-dimensional; however only convex compactness is needed below.
+
+Let
+
+```math
+S:=K\cap\partial B.
+```
+
+### Lemma TR.1 — the surviving circle set is a `theta_mu`-net
+
+Every connected open arc of
+
+```math
+\partial B\setminus S
+```
+
+has angular length at most `theta_mu`.
+
+### Proof
+
+Suppose there were a complementary open arc `I` of angular length greater than `theta_mu`. Choose a closed subarc
+
+```math
+I'\Subset I
+```
+
+still having angular length greater than `theta_mu`.
+
+Hausdorff convergence `F_j->B` and `K_j->K` implies that, for all sufficiently large `j`, the boundary portion of `F_j` corresponding to `I'` is cut away from `K_j`. Since `K_j` is obtained only by cutting the inclusion-maximal caps, `I'` must lie inside one maximal interval `J_{a,j}` up to endpoint errors tending to zero.
+
+The two endpoint vertices of that maximal interval belong to the attachment set of the maximal cell defining it. Their normalized distance is therefore at most `mu+o(1)` by (1.2). Passing to the circle limit, the minor angular length of `J_{a,j}` is at most
+
+```math
+2\arcsin\mu+o(1)=\theta_\mu+o(1).
+```
+
+It cannot contain the fixed longer subarc `I'` for large `j`. Contradiction. `square`
+
+Thus the points of `S` leave no circular gap longer than `theta_mu`.
+
+---
+
+## 5. A circle net gives a sharp lower bound on the convex core area
+
+Because `S subset K` and `K` is convex,
+
+```math
+\operatorname{conv}S\subseteq K.
+\tag{5.1}
+```
+
+We now minimize the area of `conv S` among subsets of the radius-`1/2` circle whose circular gaps are all at most `theta_mu`.
+
+Choose any finite cyclic subset
+
+```math
+x_1,\ldots,x_N\in S
+```
+
+which is still a `theta_mu+epsilon` net, and let the successive central gaps be
+
+```math
+g_1,\ldots,g_N,
+\qquad
+0<g_i\le\theta_\mu+\epsilon,
+\qquad
+\sum_i g_i=2\pi.
+```
+
+The area of the inscribed polygon is
+
+```math
+\boxed{
+\operatorname{area}\operatorname{conv}\{x_i\}
+=\frac18\sum_i\sin g_i.
+}
+\tag{5.2}
+```
+
+Put
+
+```math
+\theta:=\theta_\mu+\epsilon.
+```
+
+Minimizing `sum sin g_i` under `0<=g_i<=theta` and fixed total `2pi` is equivalent to maximizing
+
+```math
+\sum_i(g_i-\sin g_i).
+```
+
+The function
+
+```math
+g\mapsto g-\sin g
+```
+
+is increasing and convex on `[0,pi]`. Therefore the maximum occurs at an extreme distribution: as many gaps as possible equal `theta`, with at most one nonzero remainder.
+
+Let
+
+```math
+k(\theta):=\left\lfloor\frac{2\pi}{\theta}\right\rfloor,
+\qquad
+r(\theta):=2\pi-k(\theta)\theta.
+```
+
+Then
+
+```math
+\sum_i\sin g_i
+\ge
+k(\theta)\sin\theta+\sin r(\theta).
+\tag{5.3}
+```
+
+Let `epsilon->0`. We obtain
+
+### Theorem TR.2 — uncut-core area floor
+
+With
+
+```math
+k_\mu:=\left\lfloor\frac{2\pi}{\theta_\mu}\right\rfloor,
+\qquad
+r_\mu:=2\pi-k_\mu\theta_\mu,
+```
+
+one has
+
+```math
+\boxed{
+\operatorname{area}(K)
+\ge
+\frac18\left[k_\mu\sin\theta_\mu+\sin r_\mu\right].
+}
+\tag{TR.1}
+```
+
+This argument also covers infinite or dense `S`; finite nets approximate it from inside.
+
+---
+
+## 6. Recovered laminar-cap capacity
+
+Area is continuous under Hausdorff convergence of planar convex bodies. Hence from (3.2), `F_j->B`, `K_j->K`, and TR.1,
+
+```math
+\begin{aligned}
+\limsup_j
+\sum_r\frac{\operatorname{area}(P_{r,j})}{D_j^2}
+&\le
+\operatorname{area}(B)-\operatorname{area}(K)\\
+&\le
+\frac\pi4
+-
+\frac18\left[k_\mu\sin\theta_\mu+\sin r_\mu\right]\\
+&=
+\boxed{
+\frac18\left[
+2\pi-k_\mu\sin\theta_\mu-\sin r_\mu
+\right].
+}
+\end{aligned}
+\tag{6.1}
+```
+
+This is exactly the LC capacity
+
+```math
+\boxed{\mathcal C(\mu).}
+```
+
+No cells were discarded, and the proof is independent of the number of cells.
+
+---
+
+## 7. Consequences for LC
+
+The rest of LC is unchanged. AR/CH give the opposite lower bound
+
+```math
+\liminf
+\sum_r\frac{\operatorname{area}(P_r)}{D^2}
+\ge
+\frac\pi4\left(1-\frac\zeta\Delta\right).
+```
+
+Therefore every limit `mu<1` of `delta_max/D` must satisfy
+
+```math
+\mathcal C(\mu)
+\ge
+\frac\pi4\left(1-\frac\zeta\Delta\right).
+```
+
+At the UF crossover
+
+```math
+\zeta_*=0.5572837714\ldots,
+```
+
+the smallest solution remains
+
+```math
+\boxed{
+\mu=0.7591662335\ldots .
+}
+```
+
+Thus the numerical and structural LC conclusions survive the adversarial audit.
+
+---
+
+## 8. Audit classification
+
+| Claim | Status | Reason |
+| --- | --- | --- |
+| original LC scalar cap optimization | survives | one-dimensional convex optimization was correct |
+| original “discard tiny cells” source-transfer sentence | withdrawn | many tiny cells can have macroscopic total area |
+| finite maximal-interval laminarity | proved | alternating endpoint chords force interior overlap |
+| one-body core construction `K_j` | proved | intersect inner half-planes of all maximal cap chords |
+| limit circle gaps `<=theta_mu` | proved | any longer gap would require one forbidden too-long maximal attachment interval |
+| core area floor | proved | inscribed circle-net polygon optimization |
+| LC capacity and `0.759166...` crossover | repaired and survives | follows from the one-body limit argument |
+| Level I | still open | very large harmonic component remains feasible |
+
+---
+
+## 9. Next target
+
+The repaired LC theorem can now be used safely.
+
+At the UF crossover one component has graph diameter and, by CH/C40, distinct attachment count at least
+
+```math
+(0.7591662335-o(1))D.
+```
+
+The next useful object is the diameter graph restricted to this long boundary attachment block. In the near-circle limit, diameter partners of a fixed terminal collapse toward its antipodal direction, while the attachment block occupies a fixed positive angular interval. A quantitative convex-thrackle localization theorem could therefore force many distinct antipodal diameter carriers and interact with `d_H+s_Z` in the exact ZT ledger.

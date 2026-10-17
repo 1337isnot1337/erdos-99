@@ -1,0 +1,63 @@
+> Generated reading edition · [exact source](../../research/target_c_support6_collapsed_local_realization_hostile_audit_2026-09-18.md) · source SHA-256 `16ece3e8c2bb837c2c5d3d24df71407fe87110e06cfdca41afc8910f369a5349`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "fac881b3bc701e3e5ff0a235a9ab677e1f45d601", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support6_collapsed_local_realization_hostile_audit_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "096f25a5eae557c5be89b7955739a9651aac0569369371d9225fa49cf6b239e7"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Hostile audit — collapsed support-six local realization
+
+**Date:** 2026-09-18  
+**Audited source:** `research/target_c_support6_collapsed_local_realization_2026-09-18.md`  
+**Status:** regression audit; theorem-state authority unchanged
+
+## Verdict
+
+Pass, with the scope restriction in Section 6 below binding. The certificate proves an exact local stopped-train closure realization and regular two-parameter local family. It does not prove a global source realization.
+
+## 1. The sixth face is not silently dropped
+
+The verifier solves ten scalar equations, namely the two closure coordinates for faces `0,...,4`. For each internal edge `ij`, its vector appears with opposite signs at its two endpoint faces. Hence all twelve internal contributions cancel in `sum_i Phi_i`. The anchor vectors are three `+e_1` and three `-e_1`, so their sum is also zero. Therefore `sum_i Phi_i=0` identically, and `Phi_0=...=Phi_4=0` forces `Phi_5=0`. No face equation is being approximated or omitted.
+
+## 2. The existence proof is exact, not a floating-point residual test
+
+The center coordinates and approximate inverse entries in the script are parsed as exact decimal rationals. All proof inequalities are evaluated with `fractions.Fraction`. Trigonometric values use finite Taylor polynomials plus Lagrange remainder intervals. The `pi` enclosure uses the exact Machin identity
+
+```math
+\pi=16\arctan(1/5)-4\arctan(1/239)
+```
+
+with alternating-series enclosures. Floating-point conversion occurs only in printed summaries after the exact assertions pass.
+
+The verified bounds satisfy
+
+```math
+Y+Zr<r,
+\qquad Z<1,
+```
+
+so the Newton-like map is a strict contraction of the closed box into itself. This proves an exact root. Since `CJ` stays within operator norm `<1` of the identity, the relevant `10x10` Jacobian is invertible at the root.
+
+## 3. The two-dimensional family follows from the correct Jacobian
+
+The ten solved variables are the ten internal train angles other than `theta_01,theta_02`. The six anchor directions are held fixed. Invertibility of the derivative with respect to those ten solved variables permits the ordinary implicit-function theorem with `theta_01,theta_02` as two free parameters. Thus the claimed local dimension is two before any global embedding conditions are imposed.
+
+No claim is made that these two parameters inject into the global `m_D` count for an arbitrary canonical source.
+
+## 4. The local pentagon checks are sufficient for the claims made
+
+The certificate orders the five side vectors of each face and proves every cyclic turn positive, every one-turn gap `<2pi/3`, and every two-turn sum `<pi`. Positive turns and exact closure give a strict convex equilateral pentagon. The `<2pi/3` bound makes every pentagon diagonal strictly longer than one, so completing the unit-distance contact graph adds no diagonal chord. The two-turn bound rules out antipodal/projectively parallel side directions.
+
+This is exactly the local geometry claimed in the source note. It says nothing about nonlocal distances between vertices belonging to different pentagons.
+
+## 5. The genus-two calculation is only an auxiliary consistency check
+
+The script pairs internal side occurrences using the certified cyclic orders. The discrete quotient has `V=8,E=18,F=6` and two boundary components, hence genus two. This does not identify the auxiliary quotient with the physical plane and is not used to infer source realizability. It only shows that the natural translation side pairing has no immediate combinatorial Euler defect.
+
+## 6. Binding scope restriction
+
+The result must not be cited as an actual support-six block in a global minimizer. The missing work includes global train-corridor/rhombus integrability, source-point embedding, all cross-face unit-separation inequalities, attachment to the activated/outer complex, and the actual diameter/KKT system.
+
+What is disproved is narrower and useful: the collapsed branch is **not** contradictory at the level of the six local unit-pentagon closures plus the existing strict local turn/separation conditions. Any future exclusion must import a genuinely global condition or a new local condition not included here.
+
+**Audit disposition:** pass as a local-realizability regression. C-II remains open.

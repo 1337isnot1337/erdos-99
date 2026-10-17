@@ -1,0 +1,131 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_half_dense_two_train_caterpillar_2026-09-04.md) · source SHA-256 `f83f2d8e5f3d7e9df26bbc2d65eef30687ac238354a4d12c1aa4846df57de193`.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- theorem-state: {"artifact_id":"ART-D21A8C94CE94","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+<!-- migration-source: path=docs/reports/target_c_half_dense_two_train_caterpillar_2026-09-04.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=11f2e1480350fa519f089f492f5abbe79473b058; lifecycle=unreviewed; canonical=false -->
+> **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
+
+# Erdős Problem #99 — Target C half-dense two-train caterpillar
+
+**Date:** 2026-09-04  
+**Repository base:** `89c17412` plus fan-capacity audit `60a33275`  
+**Run type:** exact consequence / frontier sharpening  
+**Target:** C93 + C96 staircase/caterpillar intersection  
+**Status:** LEVEL I STILL OPEN
+
+## 1. Input
+
+Retain the canonical pure-rhombic C80-C96 chain-face survivor. Let
+
+`P={tau_1,...,tau_D}`
+
+be the exact `D` chain trains. C87 supplies `D` simple staircase edges, and for each
+simple edge choose the two actual non-chain diameter pairs supplied by the two hull-arc
+orientations. Let `S` be this selected set, so
+
+`|S|=2D`.
+
+Every selected pair crosses the C87 common chain train `tau_r`.
+
+C93 proves the exact secondary-separator incidence bound
+
+`I := sum_(h in S) # {sigma notin P : sigma separates h} >= D(D+1)`.
+
+There are exactly `T-D` non-chain trains.
+
+## 2. One secondary train cuts a half-density selected subsystem
+
+Averaging the C93 incidences over the non-chain trains gives a train `sigma notin P`
+with
+
+`m_sigma := # {h in S : sigma separates h}`
+
+satisfying
+
+`m_sigma >= ceil(D(D+1)/(T-D))`.
+
+This is finite and exact.
+
+### Theorem H1 — secondary selected-cut density
+
+Every canonical C80-C96 chain-face survivor has a non-chain train `sigma` for which
+
+`m_sigma >= ceil(D(D+1)/(T-D))`.
+
+If additionally `T<=3D`, then
+
+`m_sigma >= ceil((D+1)/2)`.
+
+More generally, along a sequence with `T/D -> x>1`,
+
+`m_sigma/D >= 1/(x-1)+o(1)`.
+
+Thus throughout the C94 low-train range `x<=3+o(1)` one obtains
+
+`m_sigma >= (1/2-o(1))D`,
+
+and every fixed subsequential value `x<3` gives a coefficient strictly larger than
+`1/2`.
+
+This improves the earlier C90 macroscopic-cut coefficient
+`1/(2*pi-1)=0.189279...` on the branch where the C94 exact-flat alternative is
+relevant.
+
+## 3. The same edges cross the common chain train
+
+By C87, every edge in `S` crosses the common chain train `tau_r`. Hence every edge
+counted by `m_sigma` is separated simultaneously by
+
+- the chain train `tau_r`, and
+- the secondary train `sigma`.
+
+Let
+
+`J_(r,sigma) = {h in H : tau_r and sigma both separate h}`.
+
+Then
+
+`|E(J_(r,sigma))| >= m_sigma`.
+
+C90 says the complete diameter graph crossing any fixed train is a caterpillar forest.
+Therefore `J_(r,sigma)`, as a subgraph of both `H_(tau_r)` and `H_sigma`, is itself a
+forest whose nontrivial components are caterpillars after deleting any now-isolated
+vertices.
+
+### Corollary H2 — half-dense two-cut caterpillar
+
+If `T<=3D`, there are a chain train `tau_r` and a non-chain train `sigma` such that at
+least
+
+`ceil((D+1)/2)`
+
+of the selected C87 paired staircase diameters cross **both** train cuts, and those
+edges form a caterpillar forest inside the complete diameter graph.
+
+The statement is stronger than merely having two unrelated macroscopic cuts: the
+secondary cut is loaded by edges already belonging to the C87 paired staircase and to
+the C96 common-cut caterpillar.
+
+## 4. Exact frontier effect
+
+The remaining low-train closing problem can now be formulated on one two-cut object.
+A useful theorem would bound the number of equal-length diameter-thrackle edges that
+can simultaneously
+
+1. belong to the C87 paired staircase;
+2. cross the common chain cut `tau_r`;
+3. cross one secondary train cut `sigma`; and
+4. remain a caterpillar forest in the convex-hull order on both cuts.
+
+To close the low-train branch directly, it would be enough to prove a universal
+capacity strictly below
+
+`D(D+1)/(T-D)`
+
+for the secondary load, or to show that a load of `(1/2-o(1))D` forces a forbidden
+unit triangle, an even diameter cycle, or a strict sub-`D` competitor.
+
+No such capacity theorem is proved here. The advance is the exact reduction from a
+quadratic distributed incidence budget to a single simultaneous two-train subsystem
+of half-linear size in the only train-count regime where C94 leaves a macroscopic
+exact active-face flat.

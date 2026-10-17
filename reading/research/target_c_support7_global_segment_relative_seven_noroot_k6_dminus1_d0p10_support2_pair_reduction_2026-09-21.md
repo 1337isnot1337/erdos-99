@@ -1,0 +1,197 @@
+> Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_seven_noroot_k6_dminus1_d0p10_support2_pair_reduction_2026-09-21.md) · source SHA-256 `86990929bb723a4bc37e4e8d5f823c002eea937d2e5a23dc8b4f92585a0def68`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "564ca5ede0771077c107de971986b0ff8f4b5890", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_seven_noroot_k6_dminus1_d0p10_support2_pair_reduction_2026-09-21.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c346281e614213c2e501be60967d116b2da053f7bcc67a95062b1bbd2875f5b0"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: final seven-no-root `k=6,p=10` support-two pair reduction
+
+Date: 2026-09-21
+
+Status: exact structural reduction. The preceding `D=-1,k=6,d=0,p=10` analysis already forces the global coefficient line to have support exactly two. This note reduces that last support-two case to a five-no-root sharp-boundary classification plus one projective quotient-residual collision test. It does not yet claim that the collision set is empty.
+
+Companion arithmetic checker:
+
+- `research/verify_target_c_support7_global_segment_relative_seven_noroot_k6_dminus1_d0p10_support2_pair_reduction_2026_09_21.py`
+
+## 1. Inputs from the committed reduction
+
+Assume a hypothetical seven-no-root counterexample `B` in the only remaining `k=6` branch:
+
+```text
+D(B)=-1, k(B)=6, d=0, p(B)=10.
+```
+
+The preceding structural reduction proves all of the following.
+
+- The seven-row virtual-canonical pattern is `d_v=3,q=10`.
+- The ten selected incomplete root rows lie in ten singleton blocks; there are no other selected incomplete root rows.
+- The coefficient-constraint space `P<=Q^7` is a line with support exactly two.
+- Every no-root row is an `M`-coloop in the restriction to `B`.
+- Deleting one no-root row preserves quotient rank.
+
+Let the two support coordinates of `P` be `a,b`, put `S={a,b}`, and let
+
+```text
+A = B \ S.
+```
+
+The other five external coordinates are the zero coordinates of `P`.
+
+## 2. The support-pair shadow is exactly the five-row sharp boundary
+
+Deleting `S` kills the rank-one coefficient line, so the quotient-rank drop is one. The all-depth defect identity gives
+
+```text
+D(A)=D(B)+2|S|-3q_S=-1+4-3=0.
+```
+
+After the pair deletion there are five no-root rows and the projected coefficient space has rank zero, hence
+
+```text
+k(A)=5.
+```
+
+The committed exact five-row boundary table says that a five-no-root `k=5,D=0` state must have
+
+```text
+p(A)=10.
+```
+
+But the global state has only the ten selected incomplete root rows, all singleton rows. Therefore none of these ten rows disappears when both support coordinates are deleted. Equivalently, every one of the ten singleton blocks is still touched by at least one of the five zero-coordinate no-root cycles.
+
+Thus the last seven-row branch contains a five-row shadow of the exact form
+
+```text
+D=0, k=5, p=10,
+10 selected incomplete blocks,
+all 10 blocks singleton.
+```
+
+This is substantially narrower than the unrestricted five-row `p=10` boundary.
+
+## 3. The two support cycles form a parallel quotient-residual pair
+
+Consider either support coordinate, say `a`, and put
+
+```text
+C_a = B \ {b}.
+```
+
+The projected coefficient line is still nonzero and is supported only on `a`. Since deleting one row preserves quotient rank,
+
+```text
+D(C_a)=D(B)+2=1.
+```
+
+Because all ten singleton rows already survive deletion of both `a,b`, they certainly survive deletion of only `b`. Hence
+
+```text
+p(C_a)=10.
+```
+
+The same holds with `a,b` reversed. So the two support-single deletion shadows have
+
+```text
+D=1, k=5, p=10,
+coefficient-line support 1.
+```
+
+Now compare ranks to the five-row shadow `A`.
+
+All seven no-root rows are `M`-coloops in `B`, so
+
+```text
+r_M(B)-r_M(A)=2,
+r_M(C_a)-r_M(A)=r_M(C_b)-r_M(A)=1.
+```
+
+For `Q`, deleting either one support coordinate from `B` does not lower rank, whereas deleting both support coordinates lowers rank by one. Therefore
+
+```text
+r_Q(C_a)-r_Q(A)=1,
+r_Q(C_b)-r_Q(A)=1,
+r_Q(B)-r_Q(A)=1.
+```
+
+Let `u_a,u_b` be the quotient residuals of the two support cycles modulo `span_Q(A)`. The first two equalities say
+
+```text
+u_a != 0, u_b != 0,
+```
+
+while the third says
+
+```text
+dim span(u_a,u_b)=1.
+```
+
+Hence
+
+> the two support cycles have the same nonzero projective quotient residual modulo `A`.
+
+At the same time their `M` residuals are independent, because the pair raises `M` rank by two.
+
+This is the exact remaining obstruction.
+
+## 4. Converse for the finite search
+
+Suppose a five-row state `A` of the displayed sharp-boundary type admits two remaining no-root cycles `a,b` such that
+
+```text
+Delta_M(a/A)=Delta_M(b/A)=1,
+Delta_Q(a/A)=Delta_Q(b/A)=1,
+Delta_M({a,b}/A)=2,
+Delta_Q({a,b}/A)=1.
+```
+
+Then adding the pair raises `delta=r_M-r_Q` by one while adding two selected rows. Therefore
+
+```text
+D(A+{a,b}) = 0 + 2 - 3 = -1.
+```
+
+Since the two individual quotient residuals are nonzero but jointly have rank one, the resulting coefficient line is supported on both added coordinates. Thus any such pair is an actual support-two candidate; there is no need to enumerate arbitrary seven-row local states first.
+
+Consequently the remaining `k=6` branch is closed as soon as the following statement is certified:
+
+> No five-no-root `D=0,k=5,p=10` all-singleton boundary state has a nonzero projective `Q`-residual class containing two remaining no-root cycles whose joint `M` rank gain is two.
+
+## 5. Exact finite implementation target
+
+The committed five-row verifier already gives an exact `S_7` cover with 20,451 representatives. The boundary reduction from the six-row note gives the correct efficient enumeration strategy.
+
+For each five-cycle representative:
+
+1. complete every touched quotient block and form the all-complete dependency space;
+2. retain only singleton local choices imposing zero external coefficient constraint;
+3. choose exactly ten singleton replacements of total root cost ten;
+4. use the committed replacement-functional identity
+
+   ```text
+   D = p-10 + 3(d-r_L)
+   ```
+
+   and keep only choices with `r_L=d`, which are exactly the `D=0` boundary states;
+5. for each retained boundary state, compute the nonzero quotient residual of every remaining no-root cycle modulo `span_Q(A)` and group cycles by projective residual;
+6. only buckets of size at least two need pair tests;
+7. reject a pair unless its joint `M` rank gain over `A` is two.
+
+This replaces a generic seven-row extension search by a boundary-state residual-collision scan. It also avoids checking all `C(100,2)=4950` pairs per state: projective hashing reduces pair work to collision buckets.
+
+The already committed explicit `D=0,p=10` example only proves existence of the boundary; its old extension census checked single-cycle rank increments and therefore does not settle this pair-collision condition. The next verifier must classify the whole all-singleton boundary or otherwise prove the residual map projectively injective on the remaining no-root cycles.
+
+## 6. Validation of this reduction
+
+The companion checker verifies the deletion defects, the projected `k` values, the root-cost preservation, and the rank-increment arithmetic:
+
+```text
+PASS: support-two p10 residual reduces to a five-row parallel-extension pair
+five_shadow {'D': 0, 'k': 5, 'p': 10, 'singletons': 10}
+support_single_shadows {'D': 1, 'k': 5, 'p': 10}
+rank_increments_from_five_shadow {'each': (1, 1), 'pair': (2, 1)}
+finite_target nonzero projective Q-residual collision with M-pair gain 2
+```
+
+No empty-collision result is claimed in this note.

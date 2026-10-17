@@ -1,0 +1,137 @@
+> Generated reading edition · [exact source](../../research/target_c_support7_ground_sign_exact_classification_hostile_audit_2026-09-19.md) · source SHA-256 `f19e11033e7198f1788631863d0e514fdd0b380c5b92fa2022729792a85e5828`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "1e3dbdfc903053e53d2792d6073233d34093a7e5", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_ground_sign_exact_classification_hostile_audit_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c3080f3aadf43becdf0e45382df5d15ee991cb5474f89716623eae88e04fc2d1"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Hostile audit - exact support-seven ground sign classification
+
+**Date:** 2026-09-19  
+**Object audited:** `target_c_support7_ground_sign_exact_classification_2026-09-19.md`  
+**Certificate:** `research/verify_target_c_support7_ground_sign_exact_classification_2026_09_19.py`  
+**Verdict:** PASS at the stated ground-only scope  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+## 1. Claim separation
+
+The source proves a classification of the seven signed unit rays incident to the reciprocal ground vertex. It does not claim that any of the thirteen surviving `H6` patterns extends to a full support-seven reciprocal framework.
+
+That distinction is necessary. The construction does not impose the non-ground relation graph, the five-ray cyclic orders at the seven physical force pentagons, reciprocal metric compatibility, or the global Target C embedding constraints.
+
+The valid conclusion is narrower and useful: the existing `14` open-semicircle exclusions and `22` H6-width exclusions are complete under the ground-only hypotheses.
+
+## 2. Impossibility side
+
+The certificate re-enumerates all `C(7,3)=35` minority sets instead of trusting hard-coded survivor lists.
+
+For the open-semicircle pivot/matching test it enumerates every majority pivot and every bijection from the other three majority positions to the three minority positions. It recovers exactly the fourteen previously certified bad patterns.
+
+For the H6 bisector test it computes the largest signed excess over every contiguous block of interior positions `2,...,6`. Exactly eighteen patterns satisfy the prior `q_max<=1` exclusion criterion. Ten overlap the pivot/matching set, leaving exactly eight new H6 exclusions and a `22`-pattern union.
+
+Thus the constructive side is checked against an independently recomputed complement.
+
+## 3. Two-vector completion formula
+
+For five fixed signed unit vectors and two missing positions `a,b` of common sign `sigma`, signed equilibrium requires
+
+```math
+u_a+u_b=R,
+\qquad
+R=-\frac1\sigma\sum_{i\ne a,b}s_i u_i.
+```
+
+The certificate requires `0<|R|^2<4`, sets
+
+```math
+q=\frac{4-|R|^2}{|R|^2},
+```
+
+and uses
+
+```math
+u_{a,b}=\frac R2\mathbin{\pm}\frac{\sqrt q}{2}JR.
+```
+
+There is no hidden numerical solve here. The formula gives the exact two intersections of the unit circle whose sum is `R`. Orthogonality of `R` and `JR` proves unit norm directly, and the pair sum is exactly `R`.
+
+All fixed vectors come from rational half-angle coordinates, so `R` and `q` are rational. Each witness therefore lives in one explicit real quadratic field.
+
+## 4. Exact sign arithmetic
+
+The verifier represents a field element as
+
+```math
+a+b\sqrt q,
+\qquad a,b,q\in\mathbb Q,\ q>0.
+```
+
+If the rational and radical terms have the same sign, the sign is immediate. If they oppose, comparing
+
+```math
+a^2\quad\text{and}\quad b^2q
+```
+
+is exact because both quantities are nonnegative. This is sufficient for every strict inequality used in the witness checks.
+
+No transcendental evaluation of `atan`, `sin`, `cos`, or `pi` occurs.
+
+## 5. Angular-order check
+
+For a unit vector in the canonical half-angle chart, `t=y/(1+x)`. Every witness is first checked to have `1+x>0`, so the chart denominator is positive.
+
+Therefore
+
+```math
+t_v-t_u>0
+```
+
+has exactly the sign of
+
+```math
+y_v(1+x_u)-y_u(1+x_v).
+```
+
+The verifier checks this quantity is strictly positive for each adjacent pair. This proves the intended strict order `theta_1<...<theta_7` without approximate angles.
+
+## 6. Width checks
+
+Once the seven rays are strictly ordered in the canonical chart, a positive cross product between the first and last rays proves their angular span lies in `(0,pi)`.
+
+Within that interval,
+
+```math
+\theta_7-\theta_1<\frac{2\pi}{3}
+```
+
+is equivalent to
+
+```math
+u_1\cdot u_7>\cos(2\pi/3)=-\frac12.
+```
+
+The thirteen H6 witnesses satisfy this strict inequality exactly.
+
+For the eight patterns excluded only by the H6-specific bisector argument, the chosen open-semicircle witnesses satisfy the reverse strict inequality `u_1 dot u_7<-1/2`. This is not needed for open-semicircle realizability, but it verifies that the certificate is not accidentally contradicting the H6 exclusion.
+
+## 7. Exhaustion and scope
+
+The certificate has one witness for every member of the exact `21`-pattern open-semicircle complement and no witness entry outside that complement. Thirteen of those witnesses are exactly the `13`-pattern H6 complement.
+
+Thus the stated classifications are exhaustive at the local ground level:
+
+```math
+35=14+21
+```
+
+for an open semicircle, and
+
+```math
+35=22+13
+```
+
+for the H6 width bound.
+
+The correct next step is not another ground-only projection inequality. It is to use cross-face compatibility: missing-graph structure, actual local sign positions at non-ground hull vertices, force-pentagon closure/gap order, reciprocal collinearity, or metric/trace constraints.
+
+No theorem-state file should change from this result alone. C-II remains open.

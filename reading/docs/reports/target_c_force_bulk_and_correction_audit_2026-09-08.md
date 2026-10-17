@@ -1,0 +1,274 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_force_bulk_and_correction_audit_2026-09-08.md) · source SHA-256 `bc16a918f1dbf230660486b808294024b8bf886969401e4ea0756e3abe8adc9e`.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- theorem-state: {"artifact_id":"ART-53D1239EA2B4","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C — force-bulk and nonlinear correction audit
+
+**Date:** 2026-09-08
+**Repository base:** `7838f6c0aabe0e3d63369bda804643c3c7833426`, with pre-existing working-tree corrections
+**Run type:** exact regression and dependency audit
+**Status:** Level I still open; no exhaustive impossibility claim
+
+**Correction (2026-09-09):** This report wrongly accepted the September 5
+pentagon regression against C53. That regression mixes projective cuts; see the
+[orientation/C-I restoration audit](target_c_c53_orientation_and_ci_restoration_2026-09-09.md).
+The force-bulk counterexample, corrected isolate accounting, all-displacement
+Farkas equivalence, and abstract quadratic regression below are unchanged.
+The assertion that C53's PSD premise has been invalidated is withdrawn.
+
+## 1. Two different broken implications
+
+The promoted [force-bulk report](target_c_force_bulk_transport_2026-09-05.md)
+uses the whole-configuration jammed lemma on a configuration for which only the
+nonisolated core is known to be pinned-jammed. Its statement that every isolated
+point is a diameter endpoint is false under its stated hypotheses. Its sharpened
+inequality `(n-m)+q <= pi D` is also false under those hypotheses.
+
+Separately, [C63](target_c_newton_hoffman_gate_ci_closure_2026-08-31.md)
+correctly deduces integrability from universal PSD, but that premise is supplied
+by the superseded C53/C54 argument. The Newton–Hoffman iteration does not prove
+its own PSD premise. Positivity only on critical velocities does not repair the
+argument, even for globally optimal quadratic programs with MFCQ.
+
+These are exact failures of particular implications. They do not show that the
+asymptotic force-bulk bound, C-I, universal PSD for the relevant packings, or
+Erdős #99 is false or independent of the remaining mathematics.
+
+## 2. Exact global-minimizer regression to force-bulk bookkeeping
+
+Put `theta=pi/7`, `R=1/(2 sin theta)`, and
+
+```math
+p_j=R(\cos(2j\theta),\sin(2j\theta)),\quad 0\le j<7,
+\qquad A=\{p_0,\ldots,p_6,0\}.
+```
+
+### Distances and global optimality
+
+The three hull-distance classes are
+
+```math
+2R\sin\theta=1,\quad 2R\sin(2\theta)>1,
+\quad D=2R\sin(3\theta)=\frac1{2\sin(\pi/14)}.
+```
+
+The center-to-hull distance is `R>1`, because `theta<pi/6`, and is less than
+`D`. Thus the unit-contact graph is exactly a seven-cycle plus an isolated
+center, and all seven hull vertices are diameter endpoints. The hull is
+two-dimensional and already satisfies contact-preserving diametral saturation.
+
+Bezdek–Fodor, *Minimal Diameter of Certain Sets in the Plane*, JCTA 85 (1999),
+Theorem 1.1, proves that this `D` is `D(8)` and every eight-point minimizer has
+a regular unit heptagon as its hull. The original theorem was checked in the
+supplied [paper](https://doi.org/10.1006/jcta.1998.2889), page 106,
+and its [text](https://doi.org/10.1006/jcta.1998.2889).
+Hence every minimizer has at least the seven hull contacts; this configuration
+has exactly seven and is contact-minimal. It also minimizes the number of
+diameter pairs, since the seven heptagon diameter pairs are compulsory.
+
+### Exact KKT support
+
+Assign `beta=1/7` to each hull diameter chord, and `alpha=D^2/7` to each hull
+contact. At `p_j`, the sums of the two contact and the two diameter vectors are
+respectively
+
+```math
+4\sin^2\theta\,p_j,
+\qquad 4\sin^2(3\theta)\,p_j.
+```
+
+Since `D^2=sin^2(3 theta)/sin^2 theta`, equilibrium holds. The center equation
+is zero on both sides. All contacts and all diameter edges receive positive
+weight and `sum beta=1`. Therefore `C=C_*`, `H=H_*`, `m=q=7`, and `n=8`.
+This witness is fully force-visible in the stated sense; the definition does
+not make a contact-isolated vertex part of the contact core.
+
+### Failure of the promoted sharpened inequality
+
+Here `(n-m)+q=8`, whereas `pi D<8`. For an exact elementary verification let
+`t=pi/14<1/4`. The inequality `sin t >= t-t^3/6` gives
+
+```math
+\pi D=\frac{7t}{\sin t}<\frac{672}{95}<8.
+```
+
+Thus (FB4) is false as stated, even with global optimality, contact minimality,
+full contact and diameter support, and diametral saturation. The isolated center
+is interior, not diametral.
+
+The weaker bound `n-m<=pi D` is NOT disproved by this example. Its supplied
+proof fails because the same incorrect localization is its decisive step.
+Nor does an eight-point regression disprove a sufficiently-large-only version.
+
+### Exact failed citation
+
+[Shared Lemma 7.2](../theory/01-local-structure.md) locates isolated vertices on
+the diameter boundary under `E_Q(A)={0}` for the whole configuration.
+[Shared Theorem 12.2](../theory/02-nonlinear-and-regressions.md) pins only the
+nonisolated core of a contact-minimal minimizer. [C1](target_c_force_hull_2026-08-30.md)
+explicitly distinguishes diametral hull saturation from whole-configuration
+jamming. [C26](target_c_fully_visible_no_neutral_vertices_2026-08-31.md) applies
+its barycenter and degree conclusions only to nonisolated vertices.
+None supplies the missing hypothesis. In this witness the center has two
+independent pinned motions, so the whole pinned cone is nonzero.
+
+## 3. Corrected population identity and area endpoint
+
+Retain the C-II hypotheses, and let `z_int` count contact-isolated points in
+`int(conv A)`. Let `z_boundary` count the other isolated points. Then
+
+```math
+\boxed{n-m+q=|Q|+z_{\rm int},\qquad
+       n-m+q\le\pi D+z_{\rm int}.}
+\tag{R1}
+```
+
+**Proof.** C26 implies `Q intersect V(C)=B_+`: an unloaded contact vertex is
+a strict positive barycenter, so cannot be a diameter endpoint; every loaded
+vertex is a diameter endpoint. Diametral hull saturation identifies all boundary
+source points with `Q`. Thus `|Q|=q+z_boundary`, while
+`n-m=z_boundary+z_int`. Subtraction gives the identity. Unit separation of
+successive hull vertices and the perimeter–diameter inequality give
+`|Q|<=pi D`. QED.
+
+This identifies the precise omitted variable. It is not a new bound on that
+variable. It specializes to `8=7+1` in the heptagon witness.
+
+Where the refined C49 attachment-cell estimate applies, retain its notation
+`G`, `c_I`, `e_BB`, and `A_F`. Combining it with (R1) gives
+
+```math
+n<\frac{2(A_F-G)}{\sqrt3}+6q+\pi D+z_{\rm int}
+       -3c_I-3e_{BB}-5.
+\tag{R2}
+```
+
+The unconditional strict `n-1` lattice comparison in
+[Target B Section 36](../targets/target-b/01-jammed-rhombic-branch.md)
+gives `n>Delta_2 D^2+1`. Its hypothesis is global minimum diameter, not the
+Target B jammed branch, so its use here is valid. Using
+`A_F<=pi D^2/4` and `q<=pi D` in (R2) consequently yields
+
+```math
+\boxed{G<\frac{\sqrt3}{2}
+ (7\pi D+z_{\rm int}-3c_I-3e_{BB}-6).}
+\tag{R3}
+```
+
+Every step is algebraic substitution in C49; no new density theorem is used.
+The former linear-only area endpoint requires an additional estimate for
+`z_int`. If `z_int` is quadratic, (R3) is not a boundary-order bound.
+
+## 4. Exact scope of the Newton–Hoffman argument
+
+For an exact homogeneous quadratic system `g(x)=Ax+Q(x)`, the statement
+
+`for every x there is y with Ay >= -g(x)`
+
+is equivalent to
+
+```math
+\lambda^TQ(x)\ge0
+\quad\hbox{for all }x\hbox{ and all }\lambda\ge0
+\hbox{ with }\lambda^TA=0.
+\tag{R4}
+```
+
+**Proof.** Farkas' alternative makes solvability equivalent to
+`lambda^T g(x)>=0` for all such `lambda`. The linear term vanishes, giving
+(R4). The converse is the same alternative. Even if the solvability assertion
+is required only on a full neighborhood of zero, homogeneity of `Q` extends
+(R4) to all `x`. QED.
+
+For C63's signed distance system, every nonzero such multiplier normalizes to
+a KKT stress: a nonnegative all-contact equilibrium dependence is impossible
+by the virial identity. Thus (R4) is exactly universal PSD of the signed stress
+quadratic forms. The correction lemma on a whole neighborhood cannot serve
+as an independent proof of a weaker premise. Feasibility along a carefully
+chosen sequence of corrections could be weaker, but must be proved separately.
+
+Conditional on (R4), C63's proof works: Hoffman gives corrections of norm at
+most `H` times the violation; the quadratic remainder after a correction is
+at most `L(||x||||y||+||y||^2)`. Starting from a strong-row critical tangent
+`tv`, the initial violation is `O(t^2)`. In a sufficiently small `O(t)` ball
+the violation contracts geometrically, and the total correction is `O(t^2)`.
+Weak linear slack survives. The audit finds a missing premise, not an error
+in this conditional convergence argument.
+
+## 5. New quadratic regression: critical-space PSD does not suffice
+
+For any integer `k>=1`, minimize `tau` over `x in R`, `y in R^k`, `tau in R`
+subject to
+
+```math
+g_1=2x+x^2+\|y\|^2\ge0,\quad
+g_2=\tau-2x-2x^2-\|y\|^2\ge0,\quad y_j\ge0.
+\tag{R5}
+```
+
+**Theorem.** The origin is the unique global minimizer, MFCQ holds, every
+`y_j` has zero multiplier in every normalized KKT certificate, the signed
+stress form vanishes on the entire fixed-objective critical space, and every
+critical direction has a feasible second-order jet. Nevertheless no nonzero
+fixed-objective critical direction integrates to feasible points.
+
+**Proof.** Since `g_1+g_2=tau-x^2`, feasibility implies `tau>=x^2>=0`.
+At `tau=0`, necessarily `x=0`, and then `g_2=-||y||^2>=0` forces `y=0`.
+The origin is feasible, proving the unique global minimum.
+
+At the origin the direction `(dx,dy,dtau)=(1,(1,...,1),3)` strictly increases
+every active constraint: the first two derivatives are two and one, and the
+remaining derivatives are one. Thus MFCQ holds.
+
+Stationarity of `tau-lambda_1 g_1-lambda_2 g_2-sum_j mu_j y_j` forces
+`lambda_2=1`, `lambda_1=lambda_2=1`, and `mu_j=0`. The certificate is unique.
+At fixed `tau=0`, the critical cone is `dx=0, dy_j>=0`, whose span is `dx=0`.
+The signed quadratic pairing of the two strong constraints is `-x^2`, zero
+on that entire span. The Lagrangian Hessian has the opposite sign and is PSD
+even on the whole space; ordinary second-order optimality also holds.
+
+For any nonzero `w>=0`, set `y(t)=tw`, `x(t)=-t^2||w||^2/2`, `tau(t)=0`.
+Both strong constraint coefficients vanish through order two, while
+
+```math
+g_1=\tfrac14t^4\|w\|^4,\qquad
+g_2=-\tfrac12t^4\|w\|^4.
+```
+
+Thus the second-order acceleration problem is feasible; all weak rows with
+`w_j>0` release strictly to first order. Yet the fixed-objective feasible set
+is the singleton origin, as proved above. No such nonzero tangent integrates.
+At any proposed corrected point with `x!=0`, the multiplier pairing is
+`g_1+g_2=-x^2<0`, certifying infeasibility of the next fixed-matrix linear
+correction. QED.
+
+This is an abstract quadratic-program regression, with convex lower and
+concave upper constraint functions. It is NOT a realization by unrestricted
+unit-separated planar points, does not satisfy the full distance-incidence
+structure, and does not disprove C-I. It rules out replacing the missing
+all-displacement premise by critical-space PSD plus second-order feasibility
+and global optimality alone. No floating-point computation is used.
+
+## 6. Dependency disposition
+
+| Claim | Disposition |
+| --- | --- |
+| Every C-II isolated point is diametral | Rejected by the exact globally optimal heptagon-center witness |
+| `(n-m)+q<=pi D` under the force-bulk report's stated hypotheses | Rejected by the same witness |
+| `n-m<=pi D` for sufficiently large C-II sources | Not disproved here; its supplied proof does not establish it |
+| Corrected identity (R1) and C49 consequence (R3) | Proved from the named canonical inputs |
+| C53 interval-sign lemma | Already rejected by the 2026-09-05 pentagon regression; not a new discovery |
+| Universal PSD for the actual large global minimizers | Unproved, not disproved by that interval-sign regression |
+| C63 assuming universal PSD | Conditional proof survives |
+| Critical-space PSD suffices for C63 correction | Rejected for general quadratic systems by (R5) |
+| Later C65/C86/C97 deductions relying on C63 | Cannot be used unconditionally through that dependency; independent conditional content needs its own audit |
+
+## 7. Repository recommendation
+
+Preserve this as an audit report. Correct the force-bulk addendum and its
+promoted route-map claims; replace the unsupported linear-only area allowance
+by (R3) until `z_int` is controlled. Flag C63 as conditional on universal PSD
+and propagate that qualification to dependent claims, including the stale
+branch-recovery index. Do not discard independent conditional geometric lemmas
+merely because an upstream PSD proof failed. No canonical file is edited by
+this report.

@@ -1,0 +1,611 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_cyclic_p1_residue_degree_budget_2026-09-10.md) · source SHA-256 `0f6eac4a788b4a8479123b61fc535c482c57477a9e00265f514281fec5ad3dc4`.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- theorem-state: {"artifact_id":"ART-F10F3FC640E0","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Erdős Problem #99 — P1 residue-support degree budget and prime-cluster ramification cost
+
+**Date:** 2026-09-10  
+**Run type:** exact 2-adic degree sharpening  
+**Target:** cyclic primitive `d_H=1`, P1 endpoint  
+**Depends on:** PR #152 zero-trace-cluster exclusion; P1 Littlewood closure and reciprocal lift; standard Newton-polygon degree divisibility  
+**Computation:** none
+
+## LEVEL I STATUS
+
+`STILL OPEN`.
+
+PR #152 proves that if
+
+```math
+m=q-2=ru,\qquad r=2^k,\qquad u\text{ odd},
+```
+
+and `h(T)` is the minimal polynomial of the P1 trace
+
+```math
+Y=z+z^{-1}=2\cos\delta,
+```
+
+then no 2-adic factor of `h` lies over the trace residue `T=0`. This report extracts the full degree consequence of that statement and computes the local ramification cost of every nonzero prime-order residue cluster.
+
+The two main conclusions are:
+
+```math
+\boxed{\deg h\le \frac{r(u-1)}2,}
+\tag{RB.1}
+```
+
+which improves the old Littlewood ceiling `(m-1)/2`, and, when `u=p` is an odd prime at least five,
+
+```math
+\boxed{\text{every used nonzero }p\text{-trace residue orbit costs at least }r f_p\text{ trace degrees},}
+\tag{RB.2}
+```
+
+where
+
+```math
+f_p:=\min\{f\ge1:2^f\equiv\pm1\pmod p\}.
+\tag{RB.3}
+```
+
+In particular, if
+
+```math
+f_p=\frac{p-1}{2},
+```
+
+then any hypothetical P1 factor must saturate the residue budget exactly:
+
+```math
+\boxed{\deg h=\frac{r(p-1)}2.}
+\tag{RB.4}
+```
+
+Equivalently its reciprocal minimal polynomial uses the complete nontrivial `p`-th-root residue support in the P1 Littlewood reduction, with no degree slack.
+
+This does not yet exclude those primes, but it replaces a loose global degree inequality by an exact saturation normal form for a large and arithmetically natural class of odd parts.
+
+---
+
+## 1. Remove the zero residue from the Littlewood factor budget
+
+Let
+
+```math
+P(Z)=\sum_{j=0}^{m-1}\varepsilon_jZ^j,
+\qquad \varepsilon_j\in\{\pm1\},
+\qquad P(z)=0
+```
+
+be the P1 Littlewood polynomial. Let
+
+```math
+d:=\deg h
+```
+
+and let
+
+```math
+M(Z):=Z^d h(Z+Z^{-1})
+```
+
+be the reciprocal minimal polynomial of `z`. As in PR #150/#152,
+
+```math
+M\mid P
+```
+
+in `Z[Z]`, and therefore
+
+```math
+\overline M\mid \overline P
+```
+
+in `F_2[Z]`.
+
+Because every Littlewood coefficient is odd,
+
+```math
+\overline P(Z)=S_m(Z):=1+Z+\cdots+Z^{m-1}.
+\tag{1.1}
+```
+
+Now `m=ru` with `r=2^k`. In characteristic two,
+
+```math
+Z^{ru}-1=(Z^u-1)^r.
+```
+
+Since
+
+```math
+Z^u-1=(Z-1)S_u(Z),
+```
+
+we obtain the exact factorization
+
+```math
+\boxed{S_m(Z)=(Z-1)^{r-1}S_u(Z)^r.}
+\tag{1.2}
+```
+
+Because `u` is odd,
+
+```math
+S_u(1)=u\equiv1\pmod2,
+```
+
+so `Z-1` and `S_u` are coprime over `F_2`.
+
+PR #152 proves that no trace factor of `h` lies over `T=0`. Under the reciprocal transform
+
+```math
+T=Z+Z^{-1},
+```
+
+the residue `T=0` is exactly the ramified reciprocal residue `Z=1`, since in characteristic two
+
+```math
+Z+Z^{-1}=0
+\iff
+Z^2+1=0
+\iff
+(Z+1)^2=0.
+```
+
+Hence
+
+```math
+\boxed{Z-1\nmid\overline M.}
+\tag{1.3}
+```
+
+Combining (1.2) and (1.3),
+
+```math
+\boxed{\overline M\mid S_u(Z)^r.}
+\tag{1.4}
+```
+
+Reduction preserves the degree of the monic polynomial `M`, so
+
+```math
+2d=\deg M=\deg\overline M\le r(u-1).
+```
+
+Therefore
+
+```math
+\boxed{d\le\frac{r(u-1)}2.}
+```
+
+This proves RB.1.
+
+The improvement over the original Littlewood ceiling is
+
+```math
+\frac{m-1}{2}-\frac{r(u-1)}2=\frac{r-1}{2}.
+```
+
+For large 2-primary part this is a genuine linear-in-`r` removal, not a rounding refinement.
+
+---
+
+## 2. Nonzero prime-order trace residues
+
+Now specialize to
+
+```math
+u=p
+```
+
+with `p>=5` an odd prime. Let `xi` be a primitive `p`-th root of unity in an algebraic closure of `F_2`, and put
+
+```math
+\tau=\xi+\xi^{-1}.
+```
+
+The Frobenius orbit of `tau` has size
+
+```math
+f_p=\min\{f\ge1:2^f\equiv\pm1\pmod p\}.
+\tag{2.1}
+```
+
+Indeed Frobenius sends
+
+```math
+\tau\mapsto\xi^2+\xi^{-2},
+```
+
+and the trace returns to itself exactly when `xi^(2^f)` equals `xi` or `xi^-1`.
+
+Thus the irreducible trace polynomial of this residue orbit over `F_2` has degree `f_p`.
+
+The nonzero trace residues are precisely the roots arising from nontrivial `p`-th roots; the zero residue corresponds only to `xi=1` and has already been excluded by PR #152.
+
+---
+
+## 3. Canonical unramified lift of one residue orbit
+
+Let `K/Q_2` be the unramified extension generated by a Teichmüller lift `zeta` of `xi`, and put
+
+```math
+a:=\zeta+\zeta^{-1}.
+```
+
+The trace subfield `Q_2(a)` is unramified of residue degree `f_p`. We work in that field and still call it `K`.
+
+The Dickson/Chebyshev trace polynomial satisfies
+
+```math
+C_p(a)=\zeta^p+\zeta^{-p}=2.
+\tag{3.1}
+```
+
+Moreover `a` is a double root of `C_p(T)-2`. Explicitly,
+
+```math
+C_p(T)-2=(T-2)\prod_{j=1}^{(p-1)/2}(T-a_j)^2,
+\tag{3.2}
+```
+
+where the `a_j` are the distinct nontrivial real cyclotomic traces in characteristic zero.
+
+Modulo two, the corresponding nonzero trace residues remain distinct. Also `a` is nonzero modulo two, while `2` reduces to zero. Therefore the coefficient of `(T-a)^2` in the local expansion is a 2-adic unit.
+
+Write
+
+```math
+U(X):=C_p(a+X)-2.
+```
+
+Then
+
+```math
+\boxed{U(X)=cX^2+O(X^3),\qquad c\in\mathcal O_K^\times.}
+\tag{3.3}
+```
+
+For `p>=5`, `a-1` is also a unit. If its residue were one, then
+
+```math
+\xi+\xi^{-1}=1,
+```
+
+so
+
+```math
+\xi^2+\xi+1=0,
+```
+
+forcing `xi` to have order three, impossible for prime `p>=5`.
+
+Thus
+
+```math
+\boxed{a-1\in\mathcal O_K^\times.}
+\tag{3.4}
+```
+
+---
+
+## 4. Power-of-two outer trace and its mod-four form
+
+Let
+
+```math
+r=2^k.
+```
+
+Define
+
+```math
+F_r(U):=C_r(2+U)-2.
+```
+
+The cases `r=1,2` are exact:
+
+```math
+F_1(U)=U,
+\tag{4.1}
+```
+
+```math
+F_2(U)=4U+U^2.
+\tag{4.2}
+```
+
+For every `r>=4` that is a power of two,
+
+```math
+\boxed{F_r(U)\equiv U^r\pmod4.}
+\tag{4.3}
+```
+
+Proof: for `r=4`, direct expansion gives
+
+```math
+F_4(U)=U^4+8U^3+20U^2+16U.
+```
+
+If (4.3) holds for `r`, then using `C_{2r}=C_r^2-2`,
+
+```math
+F_{2r}(U)=(2+F_r(U))^2-4=4F_r(U)+F_r(U)^2\equiv U^{2r}\pmod4.
+```
+
+This proves (4.3) by induction.
+
+---
+
+## 5. Newton segment at every nonzero prime-order trace lift
+
+Since
+
+```math
+C_{pr}=C_r\circ C_p,
+```
+
+we have
+
+```math
+\begin{aligned}
+G_{pr}(a+X)
+&:=C_{pr}(a+X)+4(a+X)-6\\
+&=F_r(U(X))+4(a-1)+4X.
+\end{aligned}
+\tag{5.1}
+```
+
+We now read its initial 2-adic Newton polygon in `K[X]`.
+
+### Case `r=1`
+
+By (3.3) and (4.1), the constant coefficient has valuation exactly two, the linear coefficient is exactly `4` and also has valuation two, and the quadratic coefficient is the unit `c`. Therefore the initial lower segment is
+
+```math
+\boxed{(0,2)\to(2,0),}
+\tag{5.2}
+```
+
+of slope `-1`.
+
+### Case `r=2`
+
+Using (4.2), `U^2` first contributes a unit at degree four, while `4U`, `4(a-1)`, and `4X` have all coefficients below degree four divisible by four. Hence the initial lower segment is
+
+```math
+\boxed{(0,2)\to(4,0),}
+\tag{5.3}
+```
+
+of slope `-1/2`.
+
+### Case `r>=4`
+
+By (4.3), every coefficient of `F_r(U)` below the first term of `U^r` is divisible by four. Since `U` begins with the unit term `cX^2`, the coefficient of `X^{2r}` in `U^r` is the unit `c^r`. Thus every coefficient below degree `2r` in (5.1) has valuation at least two, the constant coefficient has valuation exactly two by (3.4), and the degree-`2r` coefficient is a unit.
+
+Therefore the initial lower segment is again
+
+```math
+\boxed{(0,2)\to(2r,0),}
+\tag{5.4}
+```
+
+with slope
+
+```math
+\boxed{-\frac1r.}
+\tag{5.5}
+```
+
+Equations (5.2)-(5.5) are uniform if `r=1` is interpreted in the obvious way.
+
+The Newton-polygon factor theorem now says that every irreducible local factor associated with roots reducing to `a` has ramification degree divisible by the denominator `r` of this slope.
+
+The residue degree of the orbit of `a` over `Q_2` is `f_p`. Hence any `Q_2`-irreducible factor of `G_{pr}` supported on this nonzero trace residue orbit has total degree divisible by
+
+```math
+r f_p.
+```
+
+In particular its degree is at least
+
+```math
+\boxed{r f_p.}
+```
+
+This proves RB.2.
+
+The horizontal length of the segment is `2r`; the theorem deliberately claims only the denominator-forced cost `r`, not a false `2r` irreducibility statement. The first residual polynomial is inseparable in characteristic two, so a second-order analysis would be required to decide whether the cluster splits into two degree-`r` branches or remains one degree-`2r` branch over the unramified trace field.
+
+---
+
+## 6. Maximal projective order forces exact saturation
+
+Assume now
+
+```math
+\boxed{f_p=\frac{p-1}{2}.}
+\tag{6.1}
+```
+
+Equivalently the nonzero `p`-th-root traces form one Frobenius orbit over `F_2`.
+
+A hypothetical P1 factor `h` must use at least one nonzero residue orbit by PR #152. RB.2 therefore gives
+
+```math
+d\ge r\frac{p-1}{2}.
+\tag{6.2}
+```
+
+RB.1 gives the opposite inequality
+
+```math
+d\le r\frac{p-1}{2}.
+\tag{6.3}
+```
+
+Hence equality is forced:
+
+```math
+\boxed{d=r\frac{p-1}{2}.}
+```
+
+This proves RB.4.
+
+At the reciprocal level,
+
+```math
+\deg M=2d=r(p-1).
+```
+
+But `S_p` has degree `p-1`, and (1.4) says
+
+```math
+\overline M\mid S_p(Z)^r.
+```
+
+The degrees are equal, so in fact
+
+```math
+\boxed{\overline M(Z)=S_p(Z)^r=\Phi_p(Z)^r}
+\tag{6.4}
+```
+
+for prime `p`.
+
+Since
+
+```math
+S_{pr}(Z)=(Z-1)^{r-1}S_p(Z)^r,
+```
+
+any P1 Littlewood factorization
+
+```math
+P=M Q
+```
+
+must satisfy
+
+```math
+\boxed{\overline Q(Z)=(Z-1)^{r-1}.}
+\tag{6.5}
+```
+
+Because `r` is a power of two,
+
+```math
+(Z-1)^{r-1}=1+Z+\cdots+Z^{r-1}
+```
+
+in characteristic two. Thus the quotient also has every coefficient odd modulo two.
+
+This is the exact saturation normal form.
+
+---
+
+## 7. Examples and scope
+
+The condition
+
+```math
+f_p=(p-1)/2
+```
+
+holds whenever the image of `2` generates the quotient group
+
+```math
+(\mathbb Z/p\mathbb Z)^\times/\{\pm1\}.
+```
+
+For such a prime, a P1 survivor cannot choose a small subset of the nonzero 2-adic trace residues. It must use all of them, at the full multiplicity allowed by the Littlewood reduction.
+
+The already excluded `p=3` family is special because the nonzero trace residue is `T=1`, so `a-1` is not a 2-adic unit and PR #150 obtains a stronger first Newton segment. The present theorem starts at `p>=5`.
+
+No infinitude statement about primes satisfying (6.1) is needed or claimed.
+
+---
+
+## 8. What remains
+
+RB does not yet contradict the saturation normal form. In particular it does not prove that the nonzero trace cluster is locally irreducible of degree `2rf_p`; the first Newton segment alone only forces the ramification denominator `r`.
+
+There are now two precise continuation targets.
+
+### Target A — second-order local splitting
+
+For a nonzero lifted trace `a`, refine the inseparable residual equation on the segment `(0,2)->(2r,0)`. If the second-order polygon forces ramification `2r` rather than `r`, then every maximal-projective-order prime is excluded immediately, because the local degree lower bound doubles RB.4.
+
+### Target B — saturated Littlewood quotient
+
+Under (6.1), every hypothetical factorization has
+
+```math
+\overline M=\Phi_p^r,
+\qquad
+\overline Q=(Z-1)^{r-1},
+\qquad
+P=M Q
+```
+
+with every coefficient of `P` equal to `+1` or `-1`. Use the exact P1 reciprocal equation for `M` to show that such a bounded-coefficient product is impossible.
+
+Both are substantially narrower than the pre-RL arithmetic problem.
+
+---
+
+## 9. Audit classification
+
+| Claim | Status | Reason |
+| --- | --- | --- |
+| `deg h <= r(u-1)/2` | proved | RL removes `Z=1`; exact factorization of `S_m mod 2` |
+| nonzero prime trace residue degree `f_p` | proved | Frobenius orbit modulo inversion |
+| local double root of `C_p-2` has unit quadratic coefficient | proved | exact cyclotomic trace factorization and distinct residues |
+| initial Newton segment `(0,2)->(2r,0)` for `p>=5` | proved | power-of-two trace identity + unit local quadratic term |
+| each used prime residue orbit costs at least `r f_p` degrees | proved | residue degree times Newton ramification denominator |
+| maximal projective order forces exact degree saturation | proved | matching lower and upper bounds |
+| local degree `2r f_p` | not proved | residual polynomial is inseparable; needs second-order analysis |
+| P1 fully excluded | open | saturation still needs an incompatibility theorem |
+| Level I | still open | other cyclic/global branches remain |
+
+---
+
+## Compact handoff
+
+```text
+LEVEL I STATUS: STILL OPEN.
+
+Write m=q-2=r u with r=2^k and u odd. RL says the reciprocal minimal polynomial M
+of the P1 root has no Z=1 factor mod 2. Since
+  S_m=(Z-1)^(r-1) S_u(Z)^r
+and M|S_m mod 2, actually
+  M mod 2 | S_u^r.
+Therefore
+  2 deg(h)=deg(M) <= r(u-1),
+so
+  deg(h) <= r(u-1)/2.
+
+For u=p>=5 prime, let f_p be the least f with 2^f=+/-1 mod p. A nonzero trace
+residue orbit has degree f_p. Lift one trace residue to a=zeta+zeta^-1 in the
+unramified 2-adic trace field. Since C_p(a)=2 and a is a double root of C_p-2,
+  U=C_p(a+X)-2 = c X^2+..., c a unit.
+Also a-1 is a unit for p>=5.
+For r=2^k,
+  G_pr(a+X)=F_r(U)+4(a-1)+4X,
+with F_1=U, F_2=4U+U^2, and F_r(U)=U^r mod 4 for r>=4.
+Hence the initial Newton segment is
+  (0,2)->(2r,0), slope -1/r.
+Every local factor in that residue cluster has ramification degree divisible by r,
+so every Q_2 factor supported on the orbit has degree at least r f_p.
+
+If f_p=(p-1)/2, lower and upper bounds coincide:
+  deg h = r(p-1)/2,
+  M mod2 = Phi_p^r,
+  P/M mod2 = (Z-1)^(r-1).
+Thus maximal-projective-order primes are reduced to an exact saturation normal form.
+Next: refine the inseparable local residual polygon, or kill the saturated Littlewood product.
+```

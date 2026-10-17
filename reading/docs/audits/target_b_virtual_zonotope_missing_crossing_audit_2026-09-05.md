@@ -1,0 +1,61 @@
+> Generated reading edition · [exact source](../../../docs/audits/target_b_virtual_zonotope_missing_crossing_audit_2026-09-05.md) · source SHA-256 `4c628764fa370d809601c78f2314caa1bc08794de4588cfb7dd4b59d8adce16d`.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "3f69d98d0803c82844fd6c413b772892bd83b1e5", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/audits/target_b_virtual_zonotope_missing_crossing_audit_2026-09-05.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "af48aa4feb2ba30e7d37e87bf9786232327e6fafd3ff7747d549b4bc343b370e"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.
+
+# Audit — Target B virtual-zonotope missing-crossing identity
+
+**Date:** 2026-09-05  
+**Candidate:** `docs/reports/target_b_virtual_zonotope_missing_crossing_identity_2026-09-05.md`  
+**Verdict:** PASS in the pure simply connected strict-rhombic train model.  
+**LEVEL I status:** STILL OPEN.
+
+## Checks
+
+1. **Zonotope area formula.** For `Z=sum_tau[-u_tau/2,u_tau/2]` in the plane,
+
+`area(Z)=sum_(tau<sigma)|det(u_tau,u_sigma)|`.
+
+This is the standard two-dimensional zonotope determinant formula, with no extra factor for centered unit segments.
+
+2. **Physical rhombus area.** A rhombus at the unique crossing of trains `tau,sigma` has side vectors equal up to signs to `u_tau,u_sigma`, hence area `|det(u_tau,u_sigma)|`. The strict train pseudoline model gives at most one crossing per train pair. Summing over disjoint rhombus interiors proves
+
+`area(R)=sum_(crossing pairs)|det(u_tau,u_sigma)|`.
+
+Therefore `area(Z)-area(R)` is exactly the determinant sum over noncrossing train pairs.
+
+3. **Hull inclusion.** Train coordinates put every source vertex at `sum epsilon_tau u_tau` up to translation, with `epsilon_tau in {0,1}`. Subtracting `(1/2)sum u_tau` places every vertex in the centered zonotope. Convexity therefore gives a translate of `K` contained in `Z`.
+
+4. **Mixed-area monotonicity.** Translation is irrelevant to mixed area. From `K subseteq Z`, monotonicity in the first argument gives
+
+`V(K,Z)<=V(Z,Z)=area(Z)`.
+
+5. **Support-depth conversion.** Section 25 gives
+
+`J=2(V(K,Z)-area(K))`,
+
+and
+
+`H_partial^K=2G+J`, `G=area(K)-area(R)`.
+
+Hence
+
+`area(Z)-area(R) >= V(K,Z)-area(R)=G+J/2=H_partial^K/2`.
+
+6. **Asymptotic constant.** Section 24 gives
+
+`H_partial^K >= (2sqrt(c)-sqrt(3))n-O(n^(2/3))`,
+
+so division by two yields coefficient
+
+`sqrt(c)-sqrt(3)/2 = 0.1840497...`.
+
+7. **Coherent-phase counting.** When all relevant directions are `o(1)` from three triangular phases, same-phase determinants are `o(1)` and different-phase determinants are `sqrt(3)/2+o(1)`. If only `o(D)` exceptional trains remain and total train count is `O(D)`, all determinant pairs involving an exceptional train contribute only `o(D^2)`. Thus the displayed lower bound on noncrossing different-phase pairs follows.
+
+## Scope / no-go conclusion
+
+The identity supplies a **lower**, not an upper, bound on missing-pair determinant mass. It therefore cannot justify a global near-saturation claim. In fact it proves that a quadratic missing-pair resource is mandatory whenever the Section-24 support-depth lower bound applies.
+
+Any global deficit-transfer proof must distinguish the local cyclic-order deficit from the baseline virtual area forced by support depth, or localize the latter into pruned/interface trains.

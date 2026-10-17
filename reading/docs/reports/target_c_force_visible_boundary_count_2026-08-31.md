@@ -1,0 +1,292 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_force_visible_boundary_count_2026-08-31.md) · source SHA-256 `8b93005ec3c2b452021309fc7fe5704b10bde2b26d637161720f12926daf599c`.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- theorem-state: {"artifact_id":"ART-794B84850256","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+<!-- migration-source: path=docs/reports/target_c_force_visible_boundary_count_2026-08-31.md; commit=42f0296d1aca068c809f74cee5dcdb4ebdb27c73; blob=9f8c1e31384ba43872d4fef09d392b7df6674f06; lifecycle=unreviewed; canonical=false -->
+> **Migration record:** Preserved from source-main commit `42f0296d1aca068c809f74cee5dcdb4ebdb27c73`. The source artifact index marks this report unreviewed; this import preserves its complete argument and does not promote its claims. The destination theorem manifest and current Target C state remain authoritative.
+
+# Erdős Problem #99 — Target C addendum: fully force-visible sources have linearly many positive diameter endpoints
+
+**Date:** 2026-08-31
+**Repository branch:** `research/target-c-no-neutral-corridors-2026-08-31`
+**Run type:** proof / C-II global counting reduction
+**Target:** C-II
+**Depends on:** canonical Theorem 12.2, positive-support connectivity, C26, and Eppstein's connected triangle-free penny-graph bound already imported in the canonical state
+**Computation:** not used
+
+## LEVEL I STATUS
+
+`STILL OPEN`
+
+The fully force-visible hypothesis `C=C_*` lets two canonical inequalities be applied
+to the **same** graph and the **same** pin set.  This gives a global endpoint count that
+does not depend on whether bridge stress is large.
+
+Let `A^circ` be the nonisolated contact core, with `m` vertices and `e` unit contacts,
+and let `B_+` be the positive diameter endpoint set of a relative-interior normalized
+KKT stress.  Then
+
+```math
+\boxed{
+2|B_+|\ge \lceil D\rceil+2.
+}
+\tag{C30.1}
+```
+
+In particular
+
+```math
+|B_+|\ge \frac D2+1
+```
+
+up to the harmless ceiling convention, and the positive diameter support contains at
+least `(ceil(D)+2)/4` edges.
+
+The point is not the constant by itself.  Before C26, the canonical pinned-core rank
+bound used the full set of nonisolated diameter endpoints `Q^circ`, while Target C's
+force geometry used only the KKT-visible subset `B_+`.  C26 identifies these sets in
+C-II, so the rank lower bound and the penny-graph upper bound now close on `B_+`
+directly.
+
+---
+
+## 1. Setup
+
+Let `A` be a contact-minimal, diametrally saturated, triangle-free global minimizer in
+the fully force-visible Target C branch
+
+```math
+C=C_*.
+\tag{C30.2}
+```
+
+Choose a normalized KKT stress in the relative interior of the KKT polytope.  Then
+`C_+=C`.
+
+Let
+
+- `A^circ=V(C)` be the nonisolated contact core;
+- `m=|A^circ|`;
+- `e=|C|`; and
+- `Q^circ` be the set of all source diameter endpoints belonging to `A^circ`, whether
+  or not the corresponding diameter edge is KKT-visible.
+
+C26 proves, specifically under C30.2, that every nonisolated source diameter endpoint
+is positively diameter-loaded.  The reverse inclusion is automatic because every
+vertex of `B_+` is an endpoint of a positive diameter edge and is incident to positive
+contact stress.  Hence
+
+```math
+\boxed{Q^circ=B_+.}
+\tag{C30.3}
+```
+
+Write
+
+```math
+q:=|B_+|=|Q^circ|.
+\tag{C30.4}
+```
+
+---
+
+## 2. Pinned-core rank gives the lower edge count
+
+Canonical Theorem 12.2 is stated for a minimum-contact triangle-free core with its
+nonisolated diameter endpoints pinned.  It gives
+
+```math
+\boxed{
+e\ge 2(m-|Q^circ|).}
+\tag{C30.5}
+```
+
+Using C30.3,
+
+```math
+\boxed{
+e\ge 2(m-q).}
+\tag{C30.6}
+```
+
+No local prestress-stability assertion is being inserted here.  C30.6 is exactly the
+already-proved pinned expansive-cone rank theorem, with C26 used only to identify its
+pin set with `B_+`.
+
+---
+
+## 3. The same core is connected and has graph diameter at least `ceil(D)`
+
+Because `C_+=C`, every nonisolated contact edge belongs to the positive contact
+support.  The promoted support-connectivity theorem says the positive unit-contact
+graph has exactly one nontrivial connected component.  Therefore the entire
+nonisolated core contact graph is connected.
+
+The same theorem says this component contains both endpoints of every positive
+diameter edge and has Euclidean diameter exactly `D`.  Choose `b,k in B_+` with
+
+```math
+|b-k|=D.
+\tag{C30.7}
+```
+
+Every contact edge has Euclidean length one.  Thus every contact path from `b` to `k`
+has at least `D` edges.  Since graph distance is integral, the contact-graph diameter
+`delta` satisfies
+
+```math
+\boxed{\delta\ge\lceil D\rceil.}
+\tag{C30.8}
+```
+
+---
+
+## 4. Eppstein closes the count
+
+The core is a connected triangle-free penny graph.  The canonical state already uses
+Eppstein's inequality in exactly this setting:
+
+```math
+\boxed{
+e\le 2m-\delta-2.}
+\tag{C30.9}
+```
+
+Combining C30.8 and C30.9,
+
+```math
+e\le 2m-\lceil D\rceil-2.
+\tag{C30.10}
+```
+
+Together with C30.6 this gives
+
+```math
+2m-2q
+\le
+2m-\lceil D\rceil-2.
+```
+
+Cancel `2m` and rearrange:
+
+```math
+\boxed{
+2q\ge\lceil D\rceil+2.
+}
+```
+
+This is C30.1. `\square`
+
+---
+
+## 5. Immediate consequences
+
+### Corollary C30.1 (linear positive-diameter support size)
+
+Every vertex of `B_+` is incident to at least one edge of `H_+`.  Hence
+
+```math
+2|H_+|\ge |B_+|.
+```
+
+Therefore
+
+```math
+\boxed{
+|H_+|
+\ge
+\frac{\lceil D\rceil+2}{4}.
+}
+\tag{C30.11}
+```
+
+So the fully force-visible branch necessarily has `Omega(D)` positive diameter edges,
+even though their individual `beta` weights can be arbitrarily small.
+
+### Corollary C30.2 (force-hull boundary count)
+
+Every point of `B_+` is a distinct convex-hull vertex of the force hull `F`.  Consecutive
+force-hull vertices are source points and hence are at distance at least one.  Thus
+
+```math
+\operatorname{per}(F)\ge |B_+|,
+```
+
+and C30.1 gives
+
+```math
+\boxed{
+\operatorname{per}(F)
+\ge
+\frac{\lceil D\rceil+2}{2}.
+}
+\tag{C30.12}
+```
+
+The upper bound `per(F)<=pi D` remains much larger, so this is structural information,
+not a packing contradiction.
+
+---
+
+## 6. C-II effect
+
+C29 proves that **bridge-dominant** stress forces linearly many loaded bridge blocks.
+C30 is orthogonal: it proves linearly many positively loaded diameter endpoints in
+**every** fully force-visible survivor, including the bridge-light / one-block phase.
+
+The updated baseline is therefore
+
+```text
+fully force-visible C-II:
+    Q^circ = B_+
+    |B_+| >= (ceil(D)+2)/2
+    |H_+| >= (ceil(D)+2)/4
+
+plus the existing bridge split:
+    bridge-light -> 2-edge-connected stress bulk
+    bridge-dominant -> C27-C29 macroscopic bridge structure
+```
+
+A closing argument may now use `Omega(D)` genuine force-hull diameter endpoints without
+assuming any lower bound on individual KKT weights.
+
+---
+
+## 7. Regression audit
+
+- **Unit square:** `D=sqrt(2)` and `|B_+|=4`; C30.1 is satisfied easily.
+- **Positive diameter matching:** allowed.  C30 only forces the matching to have
+  `Omega(D)` endpoints/edges in a large C-II survivor.
+- **Bridge-free stress bulk:** covered; no bridge hypothesis is used.
+- **KKT-invisible isolated diameter endpoints:** irrelevant to C30.  C26 identifies
+  `B_+` only with the **nonisolated** diameter endpoint set `Q^circ`; isolated source
+  points may still exist outside the force-visible core.
+- **C-I weak-contact branch:** outside scope.  If `C!=C_*`, the full contact core need
+  not equal the positive support and C30.3 fails.
+
+No new PSD/Loewner claim, KKT weight lower bound, or finite-packing estimate is used.
+
+---
+
+## 8. Compact handoff
+
+```text
+LEVEL I STATUS: STILL OPEN.
+
+C30:
+In C-II choose a relative-interior KKT stress. C=C_* gives C_+=C. C26 gives
+Q^circ=B_+ for the nonisolated minimum-contact core.
+
+Canonical Theorem 12.2:
+    e >= 2(m-|Q^circ|) = 2(m-|B_+|).
+
+Positive-support connectivity makes that full core connected and diameter D, hence its
+contact-graph diameter delta >= ceil(D). Eppstein gives
+    e <= 2m-delta-2 <= 2m-ceil(D)-2.
+
+Therefore
+    2|B_+| >= ceil(D)+2.
+
+Consequently |H_+| >= (ceil(D)+2)/4. This is unconditional inside C-II, not only the
+bridge-dominant phase.
+```

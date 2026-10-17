@@ -1,0 +1,599 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_b_disk_clipped_oblique_scalar_regression_2026-09-25.md) · source SHA-256 `cfad5efc72080e319e13cd1c035cc3d2360699c2200e6f2b8a981765468337a9`.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "c3a82a9c8705b3ff0cdf2f18d7c996ef13d607a4", "source_canonical": false, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "unreviewed", "source_path": "docs/reports/target_b_disk_clipped_oblique_scalar_regression_2026-09-25.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "c6fcd30308d63dffb7b50ff2821c4b554ab4824b602f05b4b25da9919a4ec53b"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle was `unreviewed`; it is retained as provenance only. Destination status remains unreviewed/noncanonical.
+
+# Erdős Problem #99 — disk-clipped oblique-lattice scalar regression
+
+**Date:** 2026-09-25
+**Repository commit:** `f5f68718da7d742128fb7b297854161550d2cce8`
+**State version:** `2026-09-14.audit.51`
+**Run type:** closing-proof attack, ending in an exact regression
+**Target:** B
+**Starting status:** Target B open
+**Active prompt:** `docs/prompts/erdos_problem_99_GPT6_ASTRA_FULL_SOLUTION_PROMPT.md`
+**External literature search:** used for the exact Pick statement and ideal factorization
+**Computation:** not used
+
+## LEVEL I STATUS
+
+**STILL OPEN.**
+
+## 1. Starting endpoint and attempted implication
+
+The canonical sufficient Target B endpoint is
+
+```math
+G+E\ge {\sqrt3\over4}B+{\sqrt3\over2}(t+\chi-1),
+\tag{1.1}
+```
+
+where the exact cell/Euler identities make (1.1) equivalent to
+`area(K) >= a_0(n-1)`, with `a_0=sqrt(3)/2`. A global minimizer obeys the
+strict reverse inequality. The attempted short route was
+
+```text
+small angular surplus E + near-disk hull + strict n-1 diameter comparison
+    -> sublinear original pocket boundary Q_U
+    -> dominant phase-cut grain via the pending relative-isoperimetric result
+    -> global phase stability / shell payment.
+```
+
+The first arrow is false, even for a triangle-free source with a large
+strict-rhombic core, an arbitrarily small positive angular surplus, and both
+strict scalar inequalities of the canonical shell window. This report proves
+that obstruction exactly. It does not audit or import the pending PR #564
+relative-isoperimetric candidate.
+
+## 2. Disk-clipped regression theorem
+
+**Classification: regression.**
+
+Let `c=2sqrt(3)/pi`, and let `U` be the union of all complete unit rhombi in
+the indicated finite contact graph. Define
+
+```math
+Q_U=\mathcal H^1(\partial U\cap\operatorname{int}K),\quad
+G=\operatorname{area}(K)-\operatorname{area}(U),\quad
+E=\operatorname{area}(U)-a_0R.
+```
+
+### Theorem B-DC
+
+There is an unbounded sequence of cardinalities `n` and triangle-free,
+unit-separated planar sets `A` of size `n`, with diameter `D` and convex hull
+`K`, for which, as `D` tends to infinity,
+
+1. `D^2<c(n-1)` and `area(K)<a_0(n-1)` **strictly**;
+2. `K` lies between concentric disks of radii `D/2-O(1)` and `D/2+O(1)`;
+   consequently `pi D-per(K)=O(1)` and
+   `pi D^2/4-area(K)=O(D)`;
+3. `U` contains a concentric disk of radius `D/2-O(1)`, has
+   `G=O(D)` and `E=o(1)`, and all but `O(D)` source points belong to `U`;
+4. `Q_U >= (pi-o(1))D`, although the phase-circle cut can delete **zero**
+   rhombi;
+5. if `V_miss` is the noncrossing determinant mass of the two-direction
+   train system of `U`, then
+   
+   ```math
+   V_{\rm miss}\ge
+   \left({2\over\sqrt3}-{\pi\over4}-o(1)\right)D^2,
+   \qquad {2\over\sqrt3}-{\pi\over4}>0.
+   \tag{2.1}
+   ```
+
+6. every sufficiently small shear chosen as in (2.4), including rational
+   angle cosines, has at most two active diameter pairs, while its hull has
+   `Omega(sqrt(D))` vertices, all with unit contacts. Its pinned
+   expansive cone is nonzero, and the construction cannot be a
+   contact-minimal triangle-free global minimizer. It lies outside the
+   first-order-jammed Target B branch.
+
+In particular, no universal implication from the listed scalar and near-disk
+properties to `Q_U=o(D)` is valid. Nor can one universally pay all virtual
+noncrossing determinant mass by `O(G+E)` in this geometric class. These sets
+are **not** asserted to be global minimizers. The last item proves that
+these tiny-shear examples are not first-order jammed. Every source
+point remains in `A`, including any point outside `U`.
+
+### Proof
+
+Let `Lambda_0=Z u+Z v_0`, with
+`u=(1,0)` and `v_0=(1/2,sqrt(3)/2)`. Its covolume is `a_0`.
+For an integer `m` tending to infinity, choose `r` by
+
+```math
+\pi r^2/a_0=m.
+\tag{2.2}
+```
+
+The translated open-disk lattice count has mean `m` and is not constant:
+crossing a generic translate for which exactly one lattice point lies on the
+circular boundary changes the count by one. Hence some translate `t+B_r`
+contains `N>=m+1` lattice points. This is exactly the translated-lattice
+argument in canonical Target B Section 36. Set
+`A_0=Lambda_0 cap (t+B_r)` and `K_0=conv(A_0)`.
+
+Because the open disk is convex, `K_0` is contained in it and
+`A_0=K_0 cap Lambda_0`. Thus `A_0` is lattice-saturated in its own polygon.
+Let `b>=3` be the number of lattice points on `partial K_0`. Pick's theorem,
+in the normalization with fundamental area `a_0`, gives exactly
+
+```math
+\operatorname{area}(K_0)=a_0(N-b/2-1).
+\tag{2.3}
+```
+
+In particular `area(K_0)<a_0(N-1)`. Also `D_0=diam(A_0)<2r`, whereas
+`c(N-1)>=cm=4r^2`. The strict diameter comparison therefore holds at
+angle `pi/3`.
+
+Now let `theta=pi/3+delta`, `0<delta<pi/6`, and map `u` to itself and
+`v_0` to `v_theta=(cos(theta),sin(theta))` by the unique linear map
+`L_theta`. Put `A_theta=L_theta A_0`, `K_theta=L_theta K_0`, and
+`s_theta=sin(theta)`. Choose `delta=delta_m>0` so small that
+
+```math
+delta_m<r^{-3},\qquad D(A_\theta)<2r,
+\tag{2.4}
+```
+
+and, if necessary, smaller still. Such a positive choice exists by the strict
+inequality `D_0<2r` and continuity of the diameter of a fixed finite set.
+The sheared polygon is saturated in `Lambda_theta=Z u+Z v_theta`, so the
+same Pick count gives
+
+```math
+\operatorname{area}(K_\theta)
+=s_\theta(N-b/2-1),\qquad
+a_0(N-1)-\operatorname{area}(K_\theta)
+={s_\theta b\over2}-(s_\theta-a_0)(N-1).
+\tag{2.5}
+```
+
+Here `N=O(r^2)` and `s_theta-a_0=O(delta_m)=O(r^{-3})`.
+The second term in (2.5) is `O(r^{-1})`, while the first is at least
+`3a_0/2`; hence (2.5) is positive for large `m`. By (2.2)--(2.4),
+`D(A_theta)^2<4r^2<=c(N-1)` as well.
+
+The complete infinite oblique lattice `Lambda_theta` is unit-separated.
+For integers `i,j` not both zero,
+
+```math
+|iu+jv_\theta|^2=i^2+j^2+2ij\cos\theta.
+```
+
+If `ij>=0`, this is at least one. If `ij<0`, put `p=|i|`, `q=|j|`;
+since `0<cos(theta)<1/2`, the square is strictly larger than
+`p^2+q^2-pq>=1`. Equality at distance one therefore occurs only for
+the steps `+-u` and `+-v_theta`. Three such steps cannot close a triangle,
+because `|u-v_theta|>1` and `|u+v_theta|>1`. Thus `A_theta` is
+triangle-free, and every complete fundamental cell is a strict unit rhombus
+of area `s_theta>a_0`.
+
+Let `U_0` be the union of all fundamental rhombi whose four vertices lie in
+`A_0`, and put `U_theta=L_theta U_0`. The cells of `U_0` have a unit
+diagonal at angle `pi/3`; after the shear that diagonal is longer than
+one, so the cells of `U_theta` are actual bounded four-faces of the
+unit-contact graph. Each point in `t+B_{r-2}` belongs
+to some fundamental rhombus of the full triangular-lattice tiling. Every
+vertex of that rhombus lies at distance at most `sqrt(3)<2` from the point,
+so the full rhombus belongs to `U_0`. Consequently
+`t+B_{r-2} subset U_0 subset K_0 subset t+B_r`. The lattice covering
+radius is `1/sqrt(3)`, the circumradius of its unit equilateral
+Delaunay triangles; using a nearest lattice point to each point on a
+circle of radius `r-2/sqrt(3)` also shows that `K_0` contains a disk
+of radius `r-3/sqrt(3)`. Since `L_theta=I+O(delta_m)` and
+`delta_m r=o(1)`, both `U_theta` and `K_theta`, after recentering, lie
+between disks of radii `r-O(1)` and `r+o(1)`. Thus
+`D=2r+O(1)`, `G=O(r)`, and the asserted near-disk estimates follow
+from area and Cauchy's perimeter formula. The number `R` of complete
+rhombi is `O(r^2)` because their interiors are disjoint and lie in a
+disk of radius `r+o(1)`. Therefore
+
+```math
+0<E=R(s_\theta-a_0)=O(r^2\delta_m)=O(r^{-1})=o(1).
+\tag{2.6}
+```
+
+If a lattice point of `A_0` lies at radius at most `r-2`, the
+fundamental rhombus based at that point has all four vertices in the
+open disk, so that point belongs to `U_0`. Every point of
+`A_0 setminus V(U_0)` therefore lies in an annulus of fixed width.
+The unit-separation disk-packing bound gives only `O(r)` such points;
+the shear preserves their count. This proves the source-population
+assertion without discarding those points.
+
+Every boundary edge of `U_theta` is parallel to `u` or `v_theta`.
+For either direction, at most two supporting lines of the convex set
+`K_theta` can contain a segment of `partial U_theta cap partial K_theta`.
+There are therefore at most four such lines. Each line has distance at
+least `r-O(1)` from the common center, while `K_theta` lies in a disk
+of radius `r+O(1)`. Its intersection with that disk has length
+`O(sqrt(r))`. Hence
+
+```math
+\mathcal H^1(\partial U_\theta\cap\partial K_\theta)=O(\sqrt r).
+\tag{2.7}
+```
+
+The isoperimetric inequality and the contained disk give
+`per(U_theta)>=2pi(r-O(1))`. Since `U_theta subset K_theta`, subtracting
+(2.7) proves
+
+```math
+Q_{U_\theta}\ge2\pi r-O(\sqrt r)
+=(\pi-o(1))D.
+\tag{2.8}
+```
+
+The two train directions of `U_theta` have one common phase difference
+`delta_m`; orient every physical crossing from the `u` phase to the
+`v_theta` phase and assign real potentials `0` and `delta_m`.
+All crossing relations already have an exact acyclic potential. Thus the
+phase-circle cut has a valid choice `F=emptyset` (also forced by its
+integer bound `|F|<1` for large `m`, using (2.6)).
+
+Finally, the inverse coordinate of a Euclidean disk of radius `r` along
+either oblique-lattice axis has width `2r/s_theta`. A fundamental cell has
+inverse coordinates in `[i,i+1] x [j,j+1]`. For each integer `i` more than
+one unit from either extreme of the inner disk's first-coordinate
+projection, choose a point of that disk whose first coordinate lies in
+`(i,i+1)`; its containing full cell has first index `i`. All full cells
+with that first index belong to one or more trains of the corresponding
+unit-edge direction, and different indices give different trains.
+The same argument applies to the second coordinate. Because `U_theta`
+contains a disk of radius `r-O(1)`, it therefore has at least
+`2r/s_theta-O(1)` distinct trains of each of the two directions.
+Each direction-pair contributes determinant `s_theta`; exactly `R`
+such pairs cross physically, once each. The virtual-pair identity therefore
+gives
+
+```math
+V_{\rm miss}
+\ge s_\theta\left[
+\left({2r\over s_\theta}-O(1)\right)^2-R\right].
+```
+
+As `R s_theta=area(U_theta)<=pi(r+o(1))^2`, this is at least
+`(4/s_theta-pi)r^2-O(r)`. Since `s_theta -> a_0` and
+`D=2r+O(1)`, (2.1) follows. This completes the proof. `square`
+The coefficient is strictly positive without numerical approximation:
+`8/sqrt(3)>4>pi`.
+
+### Diameter sparsity and the flexible-branch audit
+
+There are two exact ways to prevent multiple diameter directions from
+having equal length. The first is an arithmetic nonresonance condition
+that holds automatically for the tiny shear in Theorem B-DC.
+
+> **Lemma B-NEAR.** Let `B` be a finite subset of the triangular lattice,
+> and suppose every difference has lattice coordinates `(i,j)` with
+> `|i|,|j|<=M`. If `theta>pi/3` and
+> `0<1-2cos(theta)<1/(2M^2)`, then `L_theta B` has at most two diameter
+> pairs.
+
+Indeed, put `Q_0(i,j)=i^2+j^2+ij`, an integer, and
+`p(i,j)=ij`. Its squared length after shear is
+`Q_0(i,j)+(2cos(theta)-1)p(i,j)`. If two such squared lengths agree,
+their integer `Q_0` difference has absolute value at most
+`(1-2cos(theta))2M^2<1`, so that difference vanishes. The shear
+coefficient is nonzero, so their products `p(i,j)` agree as well.
+The pair `Q_0,p` determines `i^2+j^2=Q_0-p` and `ij=p`, hence at most
+two unoriented difference vectors. The unique-pair argument below
+then gives at most two diameter pairs.
+
+For `A_0`, all coordinate differences are `O(r)` because the inverse
+triangular-lattice basis map has bounded norm and the Euclidean
+diameter is below `2r`. Since `1-2cos(pi/3+delta)=O(delta)` and
+`delta<r^{-3}`, Lemma B-NEAR applies for all sufficiently large `r`,
+with no irrationality choice.
+
+The second lemma works at any shear size but needs an irrational
+cosine. It applies to **every** finite subset of that unit oblique
+lattice, without a disk or rhombic-core hypothesis.
+
+> **Lemma B-IRR.** If `cos(theta)` is irrational, a finite subset of
+> `Z u+Z v_theta` has at most two diameter pairs. Consequently it has at
+> most four diameter endpoints.
+
+To prove it, write every difference vector as `z=iu+jv_theta` with
+integers `i,j`. If two vectors have the same squared length, then
+
+```math
+(i^2+j^2)-(i'^2+j'^2)
++2\cos\theta(ij-i'j')=0.
+```
+
+Irrationality forces both integer coefficients to vanish. The values of
+`i^2+j^2` and `ij` determine `(i,j)` up to swapping and simultaneous
+sign reversal, so at most two unoriented difference vectors can attain
+the diameter. For any fixed diameter vector `z`, at most one unordered
+source pair realizes it: if `p,p+z` and `q,q+z` were distinct, choose the
+order with `z dot(q-p)>=0`; then
+`|q+z-p|^2=|z|^2+|q-p|^2+2z dot(q-p)>|z|^2`, contradicting the diameter.
+This proves the lemma.
+
+For the constructed `K_theta`, the contained and containing disk radii
+are `r-O(1)` and `r+O(1)`. If consecutive hull-vertex radial directions
+had angular gap `alpha`, support in the mid-gap direction would be at
+most `(r+O(1))cos(alpha/2)`, but it must be at least `r-O(1)`.
+Thus `alpha=O(r^{-1/2})`, so the number of hull vertices is
+`Omega(sqrt(r))=Omega(sqrt(D))`. Lemma B-NEAR leaves at most four of them
+as diameter endpoints. Shared Theory Theorem 8.2 says a zero pinned
+expansive cone would make *every* hull vertex a diameter endpoint.
+Its contrapositive proves the cone is nonzero. By shared Theory
+Theorem 7.1, if this source happened to be globally minimizing, it
+would belong to the flexible branch, not Target B.
+
+There is a stronger contact-minimality consequence. Every hull vertex
+`p` of `K_0` has `|p-t|>=r-O(1)` because the hull contains a disk of
+radius `r-O(1)`. The two unit lattice directions span the plane, so
+one of `+-u, +-v_0` has dot product with `p-t` at most `-c|p-t|`
+for an absolute `c>0`. For large `r`, adding that unit step strictly
+decreases distance to `t`, placing the neighbor inside the original
+open disk. Thus every hull vertex has a unit contact; the shear
+preserves that contact. For large `r`, many such vertices are not in
+the at-most-four-point diameter endpoint set. Canonical shared Theory
+Theorem 6.1 says every nonisolated hull vertex of a contact-minimal
+triangle-free global minimizer must be a diameter endpoint. Hence
+the constructed source cannot be that canonical representative,
+even if it happened to have the globally minimum diameter.
+
+More generally, either Lemma B-NEAR or Lemma B-IRR combined with
+Theorem 6.1 gives an exact restricted source theorem: **a
+contact-minimal triangle-free global minimizer in the indicated unit
+oblique lattice has at most four hull vertices incident to unit
+contacts.** This statement has no disk, roundness, or asymptotic
+hypothesis. It does not exclude contact-isolated hull vertices, and
+it does not transfer to arbitrary multi-grain sources.
+
+### Exact shell-window translation
+
+For the finite rhombic cell complex `U_theta`, let `B` count its unit
+boundary edges, `chi` be its Euler characteristic, and
+`t=|A_theta setminus V(U_theta)|`. No source point is discarded.
+Cell-edge incidence and Euler give
+`N=R+B/2+chi+t`, while
+`area(K_theta)=a_0R+E+G`. Hence the strict Pick inequality in (2.5)
+is exactly
+
+```math
+G+E<c_0B+a_0(t+\chi-1),\qquad c_0=a_0/2.
+\tag{2.9}
+```
+
+The source thus satisfies the same strict scalar side as a global minimizer.
+This does **not** make it a minimizer; first-order jammed stress and
+diameter optimality are absent from the construction.
+
+## 3. Uniform diameter sparsity on one exact unit oblique lattice
+
+**Classification: proved candidate awaiting independent audit.** This section
+closes the rational-angle gap left by Lemmas B-NEAR and B-IRR. It is a theorem
+about a single exact lattice, not a globalization to several grains.
+
+> **Theorem B-ALL.** Fix epsilon>0. Let u,v be distinct unit vectors with
+> angle 0<theta<pi, and let B be a finite subset of Z u+Z v. Suppose
+> every difference of two elements of B has coordinates (i,j) with
+> |i|,|j|<=M, where M>=2. The number of active diameter pairs, and hence
+> the number of diameter endpoints, is at most C_epsilon M^epsilon, with
+> C_epsilon independent of theta and B.
+
+The proof bounds the number of oriented integer vectors (i,j) of any one
+specified positive length in the coordinate box. If cos(theta) is irrational,
+equality of two squared lengths gives equality of both i^2+j^2 and ij, as in
+Lemma B-IRR. There are at most four oriented solutions.
+
+Now put cos(theta)=p/q in lowest terms, with q>0 and |p|<q. If q>4M^2,
+equality of two lengths yields
+
+```math
+q\,\Delta(i^2+j^2)+2p\,\Delta(ij)=0.
+\tag{3.1}
+```
+
+Since gcd(p,q)=1, q divides 2 Delta(ij); the latter has absolute value at
+most 4M^2<q. Thus Delta(ij)=0, and then Delta(i^2+j^2)=0. Again at most
+four oriented solutions exist.
+
+It remains to handle q<=4M^2. For a fixed squared length L>0, put
+m=q^2 L, a positive integer: qL=q(i^2+j^2)+2pij is integral. In the
+imaginary quadratic field F=Q(sqrt(p^2-q^2)), define
+
+```math
+\alpha(i,j)=qi+j\bigl(p+\sqrt{p^2-q^2}\bigr).
+\tag{3.2}
+```
+
+It is an algebraic integer, the map (i,j) -> alpha(i,j) is injective,
+and its field norm is exactly q^2 L=m. Let O_F be the **maximal**
+integer ring of F; use of this ring avoids any nonmaximal-order
+factorization assumption. Each such alpha gives a principal integral ideal
+of norm m. If two elements give the same principal ideal, their ratio is a
+unit of O_F; an imaginary quadratic field has at most six units. Unique
+prime-ideal factorization and the inert/split/ramified alternatives show that
+the number of integral ideals of norm m is at most tau(m): at a rational
+prime power ell^e, the split case permits e+1 exponent allocations, and
+the other two cases permit at most one. Consequently the number of oriented
+vectors of length L is at most 6 tau(m). Finally,
+
+```math
+0<m=q^2L\le (4M^2)^2(2M)^2=64M^6,
+\tag{3.3}
+```
+
+because each basis vector has norm one. The elementary divisor estimate
+tau(n)<=C_delta n^delta for any delta>0 now gives the claimed uniform
+O_epsilon(M^epsilon) bound. For completeness, this estimate follows by
+writing n=prod ell^e: for all sufficiently large primes ell,
+e+1<=ell^(delta e/2) for every e>=1; for each of the finitely many
+remaining primes, sup_(e>=0)(e+1)/ell^(delta e/2) is finite. Multiplying
+these inequalities proves the estimate.
+
+For a fixed nonzero difference vector z, at most one source pair can be a
+diameter pair with difference z, by the cross-pair argument in the proof of
+Lemma B-IRR. Thus the vector count bounds diameter pairs. Twice that bound
+bounds diameter endpoints. This proves Theorem B-ALL. ∎
+
+The imported ideal facts are stated for the full integer ring of a quadratic
+number field in [MIT 18.785 Lecture 3, Section 3.2](https://ocw.mit.edu/courses/18-785-number-theory-i-fall-2021/mit18_785f21_lec3.pdf)
+and [Lecture 6](https://ocw.mit.edu/courses/18-785-number-theory-i-fall-2021/mit18_785f21_lec6.pdf).
+Only unique ideal factorization, norm multiplicativity, and the three
+quadratic prime-splitting alternatives are used. The six-unit bound also
+follows directly: every unit has complex absolute value one and lies in a
+rank-two lattice, so there are finitely many; a finite subgroup of the
+complex unit circle is cyclic, and a primitive root of unity in a quadratic
+field has Euler totient at most two, giving orders 1,2,3,4,6.
+
+> **Corollary B-ALL-CM.** Suppose B is a triangle-free, contact-minimal
+> global diameter minimizer contained in a single unit oblique lattice with
+> theta in [pi/3,2pi/3] and diameter D. For every epsilon>0, at most
+> C_epsilon D^epsilon hull vertices of B are incident to a unit contact.
+
+Indeed the inverse of the basis matrix is uniformly bounded on that angle
+interval, so each coordinate difference is O(D). For a hull vertex, all
+contact vectors lie in a supporting closed half-plane and cannot positively
+span the plane. Canonical shared Theory Theorem 6.1 therefore makes every
+contacted hull vertex a diameter endpoint; Theorem
+B-ALL bounds the latter. This does **not** bound contact-isolated hull
+vertices. In particular, for any theta in (pi/3,2pi/3), a full
+disk-clipped source (Z u+Z v) intersect B(t,r) with r -> infinity cannot be a
+contact-minimal global minimizer. Uniform lattice covering puts its hull
+between concentric disks of radii r-O(1) and r, giving
+Omega(sqrt(r)) hull vertices by the support-gap argument above. Each hull
+vertex has an inward unit lattice neighbor inside the disk: among +-u,+-v
+one has a uniformly negative radial projection, so that unit step reduces
+its distance to t for large r. All these hull vertices are contacted,
+contradicting O_epsilon(r^epsilon) with, say, epsilon=1/4.
+
+This is a complete exclusion for the exact **one-lattice, fully disk-clipped**
+model, including rational angles of every denominator. It does not assert
+that any arbitrary canonical Target B source lies on one lattice or contains
+all its lattice points in a disk.
+
+The same disk-clipped source also has a **nonzero pinned expansive cone**
+without assuming global optimality. Canonical shared Theory Theorem 8.2 says
+that a zero cone would make every hull vertex a diameter endpoint. The
+Omega(sqrt(r)) hull count and Theorem B-ALL contradict that conclusion.
+Thus the entire exact one-lattice disk-clipped class lies outside the
+first-order-jammed Target B hypothesis.
+
+There is also a short implication into the canonical pure-rhombic-disk
+ledger: Theorem B-ALL gives q=o(D) for any exact one-lattice source with
+angle in [pi/3,2pi/3], while canonical Section 39 has T=Theta(D) and,
+under pinned rigidity, q>=T/2+1. These statements are incompatible for
+large D. Section 39 already excludes the exact affine-chart subcase by a
+different phase-atom argument, so this is an alternate proof of a closed
+subcase, not a new Target B closure.
+
+## 4. A local model that does pay virtual determinant mass
+
+The failed route was suggested by a valid exact two-grid calculation. Let
+`u=(1,0)`, let `v_y>0>w_y`, and take `m,a,b>0`. Define
+
+```math
+U=([0,mu]+[0,av])\ \cup\ ([0,mu]+[0,bw]),\quad K=\operatorname{conv}U.
+```
+
+The two parallelograms meet along their common length-`m` seam. Because
+convex hull commutes with adding the common segment,
+`K=[0,mu]+conv{0,av,bw}`. Adding a horizontal segment of length `m` to a
+convex body increases its area by `m` times its vertical width. The
+two parallelograms have total area `m(a v_y-b w_y)`, while the triangle
+`conv{0,av,bw}` has area `ab|det(v,w)|/2` and the same vertical width
+`a v_y-b w_y`. Therefore exactly
+
+```math
+\operatorname{area}(K)-\operatorname{area}(U)
+={ab\over2}|\det(v,w)|.
+\tag{4.1}
+```
+
+This converts a macroscopic angular mismatch across an *exposed, straight,
+two-grid seam* into a quadratic hull pocket. In the disk-clipped family,
+however, the virtual noncrossing pairs represent corners of the containing
+zonotope that lie far outside the near-disk source hull. Equations (2.1)
+and `G=O(D)` prove that (4.1) cannot be promoted to a universal
+`V_miss<=C G` statement.
+
+## 5. Scope, dependencies, and frontier effect
+
+The theorem is an exact construction of feasible **sources**, not of global
+minimizers. It uses canonical Target B Section 36 only for the
+translated-lattice count, and the finite train identity of shared Theory
+Theorem 10.6 for the virtual-pair interpretation. The flexible-branch
+and contact-minimal conclusions use canonical shared Theory Theorems
+6.1, 7.1, and 8.2. The canonical Target B
+Section 24 is the source for the planar isoperimetric and Cauchy perimeter
+inequalities in the normalization used here. Pick's theorem is imported in
+its exact simple-lattice-polygon form: the [UC Davis transcription,
+Theorem 1](https://www.math.ucdavis.edu/~latte/background/countingLecture/pick/pick/)
+states `area=I+B/2-1` for a simple polygon with vertices in `Z^2`, where
+`I` and `B` count interior and boundary lattice points. The convex polygons
+`K_0` and `K_theta` are simple; applying the invertible basis map from
+`Z^2` multiplies area by `a_0` or `s_theta` and preserves both counts.
+No equality or uniqueness assertion is imported.
+
+Theorem B-ALL additionally imports the standard ideal factorization and norm
+facts recorded in Section 3. The canonical frontier is unchanged. The
+regression rules out deriving
+`Q_U=o(D)` or shell payment from angular surplus, roundness, the strict
+`n-1` comparison, and the physical/virtual determinant ledger alone.
+An input distinguishing a canonical contact-minimal or jammed source
+from an arbitrary feasible source is necessary for any such implication.
+
+The precise remaining short lemma exposed by this attempt is:
+
+> In the canonical first-order-jammed, triangle-free, near-disk Target B
+> source, prove that every phase-cut decomposition either pays the full
+> topology-corrected shell threshold (1.1), or yields an actual
+> source-preserving strict sub-`D` motion, with the original pocket boundary
+> and the zonotope-corner virtual mass accounted for separately.
+
+Without the jammed hypothesis this statement is false by Theorem B-DC.
+
+## 6. Claim and regression audit
+
+| Claim | Status | Exact scope |
+| --- | --- | --- |
+| Theorem B-DC | regression; unreviewed artifact | Arbitrary feasible sources, unbounded cardinalities |
+| Lemma B-NEAR | proved candidate awaiting audit | Finite oblique-lattice subsets with shear below the exact `1/(2M^2)` threshold |
+| Lemma B-IRR | proved candidate awaiting audit | Every finite subset of an irrational-angle unit oblique lattice |
+| Nonresonant contact-minimal exclusion | proved candidate awaiting audit | At most four contacted hull vertices under B-NEAR or B-IRR; uses canonical Theorem 6.1 |
+| Theorem B-ALL | proved candidate awaiting audit | O_epsilon(M^epsilon) diameter multiplicity in one exact unit oblique lattice, uniformly in its angle |
+| Corollary B-ALL-CM | proved candidate awaiting audit | O_epsilon(D^epsilon) contacted hull vertices for a contact-minimal source in one such lattice with angle in [pi/3,2pi/3] |
+| One-lattice disk-clipped exclusion | proved candidate awaiting audit | Every unit-angle disk clip has nonzero pinned expansive cone; no contact-minimal triangle-free global minimizer of this form for large radius |
+| Equation (4.1) | proved candidate awaiting audit | Two exposed straight grids only |
+| `E=o(D)` implies `Q_U=o(D)` | rejected | B-DC has `E=o(1)` and `Q_U>= (pi-o(1))D` |
+| `V_miss=O(G+E)` | rejected | B-DC has quadratic `V_miss` and linear `G` |
+| Source is a global minimizer | not claimed | Scalar comparisons do not certify optimality |
+
+The square and eleven-point sun regressions are not used; B-DC is a
+large, near-disk feasible source and targets a different shortcut.
+The canonical disk-clipped oblique-lattice warning is respected: no local
+or asymptotic density property is promoted to global optimality.
+No hole, exceptional-face, outside-source, or contact-isolated population
+is silently removed; equation (2.9) keeps `t` and `chi` exactly.
+
+## 7. Promotion recommendation and handoff
+
+**Recommendation:** keep this as a noncanonical regression report for
+independent audit. Do not change the theorem-state version or Target B
+route map. A promotion of the regression alone would record the exact
+failure, not advance Level I.
+
+The next attack should use a hypothesis absent from B-DC: actual
+contact-minimality, first-order jammed stress, or the full active
+diameter network. Theorem B-ALL removes the rational-angle residual for
+the **single exact unit-lattice** model. The remaining exact bridge is to
+force a canonical contact-minimal Target B source to have many contacted
+hull vertices in one common lattice frame, or to find an analogous
+diameter-multiplicity obstruction across multiple grains. Contact-isolated
+hull vertices and non-lattice interface points prevent this from following
+from near-roundness alone. The global multi-grain shell endpoint (1.1)
+remains open.
+Read the current Target B route map and Section 120 boundary-backtracking
+audit before pursuing that step.

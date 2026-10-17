@@ -1,0 +1,177 @@
+> Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_disjoint_witness_closure_2026-09-23.md) · source SHA-256 `9b74d9547b897d08f560b58cff6a6f1aa9ae385f60f53254e22b57a814f952e7`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "9eecc8f561893e88991656ee30a90722ede13de7", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_disjoint_witness_closure_2026-09-23.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "18a4f9e1f96f7970abae60641c1842260b76f0596eeee2a628a976169b58ca65"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: eliminate the disjoint two-witness branch of Profile B
+
+Date: 2026-09-23
+
+Status: rigorous finite strengthening of the sole remaining eight-no-root `k=6,D=-1,p=9` Profile B. The preceding exact-profile theorem leaves exactly two dependency-active aligned touch-three witnesses `b,c`, six inactive aligned chosen blocks of touch count at most two, and one dependency-active rank-two singleton block `r`. This note eliminates the case in which the two witness touch triples are disjoint.
+
+Consequently the two witness touch triples must meet in exactly one selected source cycle. Equivalently,
+
+```text
+|T intersect U| = 1,
+|T union U| = 5.
+```
+
+Profile B and Target C-II are not yet closed.
+
+Companion exact certificate:
+
+`research/verify_target_c_support7_global_segment_relative_eight_noroot_k6_dminus1_profile_b_disjoint_witness_closure_2026_09_23.py`
+
+## 1. Inputs already proved
+
+Use the exact remaining source profile from the preceding repository result:
+
+```text
+8 selected no-root cycles,
+rank(P)=2,
+d_1(P)>=4,
+d_8=3,
+exactly two aligned touch-three witness blocks b,c,
+exactly one rank-two singleton block r,
+```
+
+with witness touch triples `T,U` and the nonzero coefficient line `L_r <= P` supplied by the chosen singleton direction at `r`.
+
+The line-star theorem already proves
+
+```text
+|supp(L_r) intersect T| <= 1,
+|supp(L_r) intersect U| <= 1.
+```
+
+Distinct aligned stars meet in at most one no-root cycle, so `|T intersect U|<=1`.
+
+## 2. The disjoint case forces an exact weight-four pattern
+
+Assume
+
+```text
+T intersect U = emptyset.
+```
+
+Then `|T union U|=6`, leaving exactly two source coordinates outside `T union U`.
+
+The line-star bounds give at most two support coordinates of `L_r` inside `T union U`, one in `T` and one in `U`. Hence
+
+```text
+wt(L_r) <= 2 + 2 = 4.
+```
+
+But `L_r` is a nonzero codeword of the rank-two coefficient plane and `d_1(P)>=4`. Therefore equality holds everywhere:
+
+```text
+wt(L_r)=4;
+|supp(L_r) intersect T|=1;
+|supp(L_r) intersect U|=1;
+both source coordinates outside T union U lie in supp(L_r).
+```
+
+This converts the disjoint branch into a small exact source census.
+
+## 3. Exhaust the root-block geometry
+
+The rank-two singleton `r` is distinguished, while the witness pair `{b,c}` is unordered. There are
+
+```text
+35 * C(34,2) = 19635
+```
+
+labeled role configurations. Under `S_7` they form exactly 17 role-preserving orbits. Their orbit sizes sum to `19635`, so the list is exhaustive.
+
+For each orbit representative, the certificate enumerates all `3^3` local direction choices `(s_r,s_b,s_c)`, all omitted members of the two four-cycle witness stars, and the two outside source coordinates. It requires:
+
+```text
+T and U are disjoint;
+each witness has exactly the prescribed three source touches;
+the two outside coordinates avoid both full witness stars;
+dim E_r = 2;
+L_r has the exact weight-four support pattern from Section 2.
+```
+
+No dependency-activity condition, source-basis kernel condition, six-block inactive pattern, or union-puncture condition is imposed. Thus this is a strict superset of the actual disjoint-witness branch.
+
+Only three of the 17 root-role orbits produce any cases at all. Writing the distinguished rank-two singleton first, they are
+
+```text
+r=123 ; b,c=124,125 : 1102 cases
+r=123 ; b,c=124,134 :  810 cases
+r=123 ; b,c=124,135 : 1566 cases
+```
+
+The other fourteen role orbits produce zero cases. The total is `3478` labeled cases for the fixed orbit representatives. We deliberately do not quotient these cases by the stabilizer of the role representative; retaining duplicates makes the exclusion redundancy-safe.
+
+## 4. Exhaust every rank-two coefficient plane containing the forced line
+
+Fix one of the `3478` source/line cases. Let `E_x <= Q^8` be the local empty space at a touched root block `x`. Any admissible coefficient plane `P` has dimension two and contains the forced line `L_r`.
+
+Its incidence pattern with the finitely many local spaces is exhaustive by the following alternatives:
+
+- if a two-dimensional `E_x` is contained in `P`, then `P=E_x`;
+- if a rank-one local line is distinct from `L_r` and lies in `P`, then it determines `P` together with `L_r`;
+- otherwise a generic rational plane through `L_r` contains no additional local line; it contains exactly the rank-one local spaces equal to `L_r`.
+
+For each resulting incomplete-block pattern, the certificate forms the virtual-complete root-block set and computes its dependency rank exactly over `Q` from the committed `COMPLETE_T` rows.
+
+Across all `3478` source/line cases there are `32420` coefficient-plane incidence patterns. Their virtual canonical deficiency histogram is
+
+```text
+d=4 :   104
+d=5 :  3458
+d=6 : 20302
+d=7 :  8024
+d=8 :   532
+```
+
+There are no `d_8=3` patterns.
+
+Orbit-by-orbit, the three nonempty role classes give:
+
+```text
+r=123 ; b,c=124,125:
+  1102 source/line cases, 9068 plane-incidence patterns,
+  {d=4:104, d=5:2024, d=6:4768, d=7:2018, d=8:154}
+
+r=123 ; b,c=124,134:
+   810 source/line cases, 7092 plane-incidence patterns,
+  {d=5:882, d=6:5562, d=7:648}
+
+r=123 ; b,c=124,135:
+  1566 source/line cases, 16260 plane-incidence patterns,
+  {d=5:552, d=6:9972, d=7:5358, d=8:378}
+```
+
+Therefore the disjoint-witness branch is impossible.
+
+## 5. Consequence
+
+The previous star-intersection theorem gave
+
+```text
+|T intersect U| <= 1.
+```
+
+Section 4 excludes intersection zero. Hence every genuine remaining Profile B source satisfies
+
+```text
+|T intersect U| = 1,
+|T union U| = 5.
+```
+
+The double-witness kernel theorem still gives
+
+```text
+d_{T union U} <= 1.
+```
+
+The remaining branch is therefore the one-overlap case only. The unique rank-two singleton line has weight four or five, meets each witness triple in at most one coordinate, and the five-coordinate witness union has descendant deficiency at most one.
+
+## 6. Remaining bottleneck
+
+Eliminate the one-overlap branch. It now has a fixed five-coordinate witness union and only three outside source coordinates. The next finite attack should split by `wt(L_r)=4` and `wt(L_r)=5`, impose the exact shared witness coordinate, and use the existing `d_{T union U}<=1` union-puncture constraint in addition to the source deficiency `d_8=3`.

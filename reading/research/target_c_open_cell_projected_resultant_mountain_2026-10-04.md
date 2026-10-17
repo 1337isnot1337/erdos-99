@@ -1,0 +1,246 @@
+> Generated reading edition · [exact source](../../research/target_c_open_cell_projected_resultant_mountain_2026-10-04.md) · source SHA-256 `60e7e341116860e4415b0966daad2ea0b4ac7996d72f363ca87581a9d8cda769`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "e018316133138525149afbb7620b4944b6f5b8d8", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_open_cell_projected_resultant_mountain_2026-10-04.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "4d8a21a853c5453a995b4f9eca654ee88e6f4801ed23e3d3c2ecbb7c26b926b5"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: projected-resultant mountain in the strong open-cell staircase
+
+Date: 2026-10-04
+Base main: d432d18a14cfeccbb7e47c51960847ecc33351f2
+Status: proof-only Target C-II candidate; theorem-state authority unchanged.
+LEVEL I STATUS: STILL OPEN. C-II REMAINS OPEN.
+
+This note continues only the nonconstant open-witness-cell strong-SCC route.
+Current main proves that its nonempty actual-diameter supports form one common
+maximal staircase. The result here adds exact KKT information without assuming
+the exact-phase bundle-balance identity.
+
+## 1. Staircase and cut resultants
+
+Let the selected cuts be tau_1,...,tau_m, with layers 0,...,m. For cut i write
+
+```math
+S_i:=A_i u_i
+=\sum_{h:\,i\in I_h}\beta_h r_h,
+\qquad A_i>0,\quad\beta_h>0,
+\tag{1}
+```
+
+where each nonempty-support actual diameter h is oriented from its lower layer
+to its higher layer and I_h is its exact interval support.
+
+By the strong-SCC theorem on main, the distinct support types are
+
+```math
+I_1\supsetneq I_2\supsetneq\cdots\supsetneq I_m,
+\qquad |I_j|=m-j+1,\qquad I_m=\{c\},
+\tag{2}
+```
+
+and each step removes one endpoint of the current integer interval.
+
+For each type define the full weighted vector resultant
+
+```math
+R_j:=\sum_{h:\,I_h=I_j}\beta_h r_h.
+\tag{3}
+```
+
+Let delta_j be the unique cut removed from I_j to I_{j+1}, and put
+delta_m=c. Then delta_1,...,delta_m is a permutation of 1,...,m and
+
+```math
+\delta_k\in I_j\iff j\le k.
+\tag{4}
+```
+
+Grouping (1) by support type gives the exact triangular inversion
+
+```math
+\boxed{S_{\delta_k}=R_1+\cdots+R_k}
+\qquad(1\le k\le m),
+\tag{5}
+```
+
+hence, with $`S_{\delta_0}=0`$,
+
+```math
+\boxed{R_k=S_{\delta_k}-S_{\delta_{k-1}}.}
+\tag{6}
+```
+
+Thus the bundle resultants are successive differences along the path
+
+```math
+0,S_{\delta_1},S_{\delta_2},\ldots,S_{\delta_m}=S_c.
+\tag{7}
+```
+
+## 2. A common separator makes every increment positive
+
+Every support I_j contains c, so every actual diameter contributing to every
+R_j crosses the final train cut tau_c.
+
+The proper O--O cut tau_c separates its crossing diameter endpoints into two
+complementary convex-hull boundary intervals. Orient crossing diameters from
+the lower-layer shore to the higher-layer shore. The same convex separation
+used in the witness-cell theorem supplies a vector phi_c such that
+
+```math
+\phi_c\cdot r_h>0
+\tag{8}
+```
+
+for every actual diameter crossing tau_c.
+
+Since beta_h>0,
+
+```math
+b_j:=\phi_c\cdot R_j>0
+\qquad(1\le j\le m).
+\tag{9}
+```
+
+Define
+
+```math
+\lambda_i:=\phi_c\cdot S_i
+=A_i\,\phi_c\cdot u_i.
+\tag{10}
+```
+
+Projecting (5) gives
+
+```math
+\lambda_{\delta_k}=b_1+\cdots+b_k,
+\tag{11}
+```
+
+and therefore
+
+```math
+\boxed{
+0<\lambda_{\delta_1}<\lambda_{\delta_2}<\cdots<
+\lambda_{\delta_m}=\lambda_c.
+}
+\tag{12}
+```
+
+In particular phi_c dot u_i is positive for every selected cut.
+
+## 3. Exact mountain law
+
+Because the staircase erodes only from its two ends, cuts left of c can only
+be deleted in the order
+
+```math
+1,2,\ldots,c-1,
+```
+
+while cuts right of c can only be deleted in the order
+
+```math
+m,m-1,\ldots,c+1.
+```
+
+The deletion permutation is a merge of those two lists, followed by c.
+Combining this with (12) yields
+
+```math
+\boxed{0<\lambda_1<\lambda_2<\cdots<\lambda_c}
+\tag{13}
+```
+
+and
+
+```math
+\boxed{0<\lambda_m<\lambda_{m-1}<\cdots<\lambda_c.}
+\tag{14}
+```
+
+Thus c is the unique maximizer of the projected cut resultant. The profile has
+no secondary peak or interior valley.
+
+There is a stronger exact reconstruction. At stage j the undeleted cuts are
+delta_j,...,delta_m, and (12) says they are exactly the cuts at or above the
+next projected-resultant level. Hence
+
+```math
+\boxed{
+I_j=\{\,i:\lambda_i\ge\lambda_{\delta_j}\,\}.
+}
+\tag{15}
+```
+
+So the entire maximal support staircase is the superlevel filtration of the
+single scalar KKT profile i -> A_i(phi_c dot u_i). Once the cut resultants are
+fixed, there is no independent choice of the staircase order.
+
+## 4. Boundary-heavy consequence
+
+Use the current-main notation s for the number of noninternal staircase support
+types. They form one initial one-sided boundary run.
+
+If that run keeps the left support endpoint fixed, its first s-1 deletions are
+
+```math
+m,m-1,\ldots,m-s+2.
+```
+
+These are therefore the s-1 globally smallest lambda-values, so
+
+```math
+\boxed{
+\max_{m-s+2\le i\le m}\lambda_i
+<
+\min_{1\le i\le m-s+1}\lambda_i.
+}
+\tag{16}
+```
+
+If the run keeps the right endpoint fixed, symmetrically
+
+```math
+\boxed{
+\max_{1\le i\le s-1}\lambda_i
+<
+\min_{s\le i\le m}\lambda_i.
+}
+\tag{17}
+```
+
+Thus the boundary-heavy branch s>m/2 has an exact KKT signature: a boundary
+block containing the first s-1 projected-resultant levels lies strictly below
+every cut outside that block.
+
+## 5. Scope and counterexample check
+
+When the shore is exact phase, u_i=u, the factor phi_c dot u is common and
+positive. Equations (13)-(14) reduce to the existing exact-phase result that the
+cut masses A_i increase strictly toward the final singleton cut. The theorem
+above is its nonconstant-phase replacement.
+
+It does not imply that the raw A_i are monotone: the positive factors
+phi_c dot u_i can vary, and no uniform lower bound allowing them to be divided
+out is proved here. It also does not prove bundlewise transverse balance or
+that R_j is parallel to a train direction.
+
+The mountain law is not itself a contradiction. The exact-phase erosion-tree
+regressions already on main realize the corresponding scalar mass filtration
+at support/KKT scope, so support plus scalar ordering alone cannot close C-II.
+
+After excluding inverse-D inactive near-activity, the strong nonconstant
+open-cell branch must now satisfy simultaneously:
+
+1. the bidirected maximal staircase on main;
+2. the opposite-shore internal/full-span versus boundary-star fork on main;
+3. the exact projected-resultant mountain (13)-(14);
+4. the exact superlevel reconstruction (15).
+
+The next Target C step is to couple this KKT mountain to the opposite shore:
+use (16)-(17) against the one-sided boundary-star packet, or compare the
+internal-heavy full-support diameter packet with the superlevel order.
+
+Disposition: proof-only Target C candidate. C-II and Level I remain open.

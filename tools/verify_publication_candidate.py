@@ -177,6 +177,9 @@ def main():
 
     python = sys.executable
     run('environment', [python, '-m', 'pip', 'check'])
+    run('newcomer-task-selection', [python, 'scripts/choose_research_task.py',
+                                   '--count', '1', '--json'])
+    run('reading-edition', [python, 'tools/build_reading_edition.py', '--check'])
     run('public-integrity', [python, 'tools/check_public.py'])
     source_command = [python, 'tools/verify_publication_sources.py', '--output', str(output / 'source-provenance.json')]
     if args.source_repo:

@@ -1,0 +1,160 @@
+> Generated reading edition · [exact source](../../research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_2222_order4_shard_b1_closure_2026-09-23.md) · source SHA-256 `783c9977204ded4af5e79bd42da998ba71a0ac54e251669b74ba0d4be0fdb1eb`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "b35f160a4c50cfb147cabccae4bf27f605fa8e07", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_2222_order4_shard_b1_closure_2026-09-23.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "0888086356748c16a88fef5144278b84812901f1b70a5b3d759b54a501c31a5c"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: close one remaining order-4 `(2,2,2,2)` support orbit in the `p=3,m=4` branch
+
+Date: 2026-09-23
+
+Status: exact finite closure of one additional support-set `S_7` orbit in the eight-no-root `k=5,D=-1,d_root=1,p=3,m=4,(2,2,2,2)` branch. This is a shard closure only. It does not close the full `(2,2,2,2)` profile, the full `p=3` branch, the `k=5` layer, Target C-II, or Erdos Problem #99.
+
+Inputs:
+
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_three_singleton_basis_reduction_2026-09-23.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_tetrahedral_support_compression_2026-09-23.md`;
+- `research/target_c_support7_global_segment_relative_eight_noroot_k5_dminus1_d1p3_four_support_nullity_catalog_2026-09-23.md`;
+- the preceding exact `(2,2,2,2)` support-shard certificates;
+- the companion verifier committed with this note.
+
+## 1. Support orbit
+
+This run closes the support-set orbit represented by
+
+```text
+B1 = {1234,1235,1246,1257}.
+```
+
+Its setwise stabilizer in `S_7` has order four. In the `(2,2,2,2)` profile, every support contributes exactly two of its three no-root four-cycle orientations, so each labeled support set has `3^4=81` cycle choices. The full support orbit therefore contains
+
+```text
+(7!/4) * 3^4 = 102060
+```
+
+labeled eight-cycle sets.
+
+Quotienting those cycle choices by the support stabilizer leaves exactly
+
+```text
+25
+```
+
+`S_7` cycle-set orbit representatives.
+
+## 2. Structural filters
+
+The previously proved reductions force every surviving state in this branch to have:
+
+- exactly three singleton touched root blocks;
+- every other touched root block complete;
+- touched-complete root nullity exactly one in the `m=4` case;
+- singleton coefficient rank three;
+- generalized weights
+
+```text
+(d1,d2,d3) >= (2,4,5).
+```
+
+For `D=-1,d_root=1,p=3`, the five-dimensional coefficient nullspace must contribute five independent external relation directions modulo the complete-root relation span. Hence a state is impossible whenever the exact external relation-rank increment over the touched complete-root span is smaller than five. Adding untouched complete blocks cannot increase that quotient increment.
+
+## 3. Exact census
+
+Across the 25 cycle-set orbit representatives, the verifier enumerates every three-element singleton subset of the touched root blocks and retains only those for which the remaining touched complete-root rows have nullity exactly one.
+
+The exact counts are:
+
+```text
+admissible singleton triples:    4650
+singleton-direction states:    125550
+coefficient-rank-three states: 125550
+generalized-weight states:       8177
+```
+
+For every one of the 8177 generalized-weight-admissible states, the external relation-rank increment is
+
+```text
+0.
+```
+
+Thus the complete increment census is
+
+```text
+{0: 8177}.
+```
+
+A survivor requires increment five, so no state in the support orbit of `B1` survives.
+
+> **Theorem.** In the eight-no-root `k=5,D=-1,d_root=1,p=3,m=4,(2,2,2,2)` branch, no state exists whose four-support set is in the `S_7` orbit of `{1234,1235,1246,1257}`.
+
+## 4. Exactness
+
+The relation rows are integral and are ranked modulo
+
+```text
+P = 2^127 - 1.
+```
+
+The largest squared Euclidean norm of any relation row encountered in this census is
+
+```text
+70.
+```
+
+The exact check gives Lucas-Lehmer residue zero for `P`, and
+
+```text
+P^2 > 70^15.
+```
+
+Therefore the same Hadamard argument used in the preceding certificates rules out modular rank loss for the relevant minors. The reported relation ranks are exact over `Q`, not heuristic finite-field evidence. The coefficient-rank-three and generalized-weight tests use exact integer arithmetic.
+
+## 5. Validation performed in this run
+
+A standalone reconstruction of the repository K8 coordinate normal form and the full `B1` census was executed locally. It reproduced:
+
+```text
+support stabilizer order:          4
+labeled cycle sets:           102060
+S_7 cycle-set orbits:             25
+admissible singleton triples:   4650
+singleton-direction states:   125550
+coefficient-rank-three states:125550
+generalized-weight states:      8177
+external increment census:     {0:8177}
+maximum relation-row norm^2:       70
+```
+
+The local run also independently checked the Lucas-Lehmer residue and the Hadamard inequality above.
+
+The committed companion wrapper was syntax-checked before upload. It was not executed from a checked-out repository during this run; the executed computation was the standalone reconstruction using the same coordinate definitions and census logic.
+
+## 6. Remaining target
+
+Before this run, the still-open `(2,2,2,2)` support classes were
+
+```text
+2 stabilizer-order-1 classes,
+8 stabilizer-order-2 classes,
+7 stabilizer-order-4 classes.
+```
+
+This theorem removes one of the order-four classes. The remaining support-level bottleneck is therefore
+
+```text
+2 order-1 classes,
+8 order-2 classes,
+6 order-4 classes,
+```
+
+for 16 support-set orbits total.
+
+The `(3,2,2,1)` profile remains open on its nullity-four support classes. The other unresolved `k=5` arithmetic branches remain
+
+```text
+D=-2, (d_root,p)=(0,5),
+D=-1, (d_root,p)=(0,6).
+```
+
+The direct next target is another bounded external-rank shard among the six remaining order-four `(2,2,2,2)` classes.

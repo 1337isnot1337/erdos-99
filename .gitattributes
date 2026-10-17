@@ -1,2 +1,4 @@
 # Mathematical Markdown sources use the standard two-space hard line break.
 *.md whitespace=-blank-at-eol
+# Preserve the exact pre-polish file, including its historical terminal blank line.
+docs/archive/publication-polish-20261017/tools/audit_public_release.py.source whitespace=-blank-at-eof

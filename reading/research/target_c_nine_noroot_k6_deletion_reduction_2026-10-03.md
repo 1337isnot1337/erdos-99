@@ -1,0 +1,147 @@
+> Generated reading edition · [exact source](../../research/target_c_nine_noroot_k6_deletion_reduction_2026-10-03.md) · source SHA-256 `09ed8e477884f6da322a81e0201b0bb2a7037e30f4781919e86daf61542fc96f`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "567ae6db35a842f6236df2ce7ddec73695ab8490", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_nine_noroot_k6_deletion_reduction_2026-10-03.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "6dcce4d43c3997a78ea1ae2fa2d0691339d53fc05ce453dd3bd73e78f890da8c"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C: nine-no-root k=6 deletion reduction
+
+Date: 2026-10-03
+Base main: 7a327e1ad95cd2e9cb035b9b96fb34fd8f12114d
+Status: proof-only reduction. C-II and Level I remain open.
+
+## Inputs
+
+Let B=R union E have nine no-root rows and write D(X)=|X|-3 delta(X).
+Current main proves D>=0 for every family with at most eight no-root rows.
+Therefore the standard one-row deletion argument from
+research/target_c_support7_global_segment_relative_nine_noroot_k4_reduction_2026-09-27.md
+gives, for every e in E,
+
+    D(B) in {-2,-1},
+    D(B\{e}) = D(B)+2.
+
+For a nonempty deletion set S of size s, the same current-main reduction gives
+
+    D(B\S)=D(B)+2s-3q_S >= 0,
+
+where q_S is the coefficient-rank loss on puncturing S.
+
+We also use the committed eight-no-root rank-three low-p theorem
+
+research/target_c_support7_global_segment_relative_eight_noroot_k5_low_p_containment_lift_closure_2026-09-23.md
+
+which proves, for every eight-no-root k=5 state with incomplete-root cost p<=2,
+
+    D >= 11-2p.                                           (1)
+
+No new finite computation is used here.
+
+## 1. Exact k=6 arithmetic boundary
+
+For nine no-root rows,
+
+    D(B)=9+p+3 d_root-3k.
+
+At k=6 this is
+
+    D(B)=p+3 d_root-9.
+
+Hence the six arithmetic branches are exactly
+
+    D=-2: (d_root,p)=(0,7),(1,4),(2,1),
+    D=-1: (d_root,p)=(0,8),(1,5),(2,2).             (2)
+
+The coefficient-constraint space P <= Q^9 has rank 9-k=3. The all-depth
+deletion inequality gives generalized-weight floors
+
+    D=-2: (d1,d2,d3)(P) >= (3,4,6),
+    D=-1: (d1,d2,d3)(P) >= (2,4,5).                 (3)
+
+Thus d1(P)>=2 in every branch, so deleting any one external coordinate preserves
+rank(P)=3. Every one-row deletion shadow is therefore an eight-no-root k=5
+state.
+
+Write p_i and d_i for the incomplete-root cost and root deficiency after deleting
+coordinate i. The deletion shadow has D_i=0 on the D=-2 side and D_i=1 on the
+D=-1 side. Its root identity is
+
+    D_i=8+p_i+3d_i-15=p_i+3d_i-7.
+
+Comparison with the parent gives
+
+    p_i+3d_i = p+3d_root,
+    p-p_i = 3(d_i-d_root).                              (4)
+
+Since puncturing can only make selected incomplete blocks untouched, p_i<=p.
+Therefore every nonzero one-row loss p-p_i is a positive multiple of three.
+
+## 2. Two branches are impossible
+
+For D=-2,(d_root,p)=(2,1), every one-row shadow has p_i<=1. Equation (1)
+gives D_i>=9, contradicting D_i=0. Hence
+
+    D=-2, k=6, d_root=2, p=1 is impossible.             (5)
+
+For D=-1,(d_root,p)=(2,2), every one-row shadow has p_i<=2. Equation (1)
+gives D_i>=7, contradicting D_i=1. Hence
+
+    D=-1, k=6, d_root=2, p=2 is impossible.             (6)
+
+So the nine-no-root k=6 frontier drops from six arithmetic branches to four.
+
+## 3. The p=4 and p=5 branches are all-touch
+
+In the D=-2,p=4 branch, (4) permits p_i in {4,1}. The value p_i=1 is
+impossible by (1), because D_i=0. Thus p_i=4 for all nine deletions.
+
+A selected root row disappears from the incomplete-root cost under deletion of
+i only when its incomplete block is touched by exactly external coordinate i.
+Therefore every selected incomplete block in this branch is touched by at least
+two no-root rows.
+
+Likewise, in the D=-1,p=5 branch, (4) permits p_i in {5,2}. The value p_i=2
+is impossible by (1), because D_i=1. Hence p_i=5 for all nine deletions, and
+every selected incomplete block is touched by at least two no-root rows.
+
+## 4. The p=7 and p=8 branches have at least seven unchanged shadows
+
+Put ell_i=p-p_i. A selected root row contributes to ell_i only if its
+incomplete block is touched by exactly coordinate i. Hence each selected row
+contributes to at most one ell_i and
+
+    sum_i ell_i <= p.                                     (7)
+
+For D=-2,p=7, equation (4) gives p_i in {7,4,1}. The low-p theorem excludes
+p_i=1, so ell_i is 0 or 3. By (7), at most two coordinates have ell_i=3.
+Therefore at least seven of the nine shadows retain p_i=7.
+
+For D=-1,p=8, equation (4) gives p_i in {8,5,2}. The low-p theorem excludes
+p_i=2, so again ell_i is 0 or 3. By (7), at least seven of the nine shadows
+retain p_i=8.
+
+Equivalently, in either large-p branch all one-supported selected incomplete-root
+cost is concentrated on at most two external coordinates.
+
+## 5. Resulting frontier
+
+The surviving nine-no-root k=6 branches are
+
+    D=-2,(d_root,p)=(0,7):
+        at least seven of nine shadows retain p_i=7;
+
+    D=-2,(d_root,p)=(1,4):
+        all nine shadows retain p_i=4 and every selected incomplete block
+        is touched by at least two no-root rows;
+
+    D=-1,(d_root,p)=(0,8):
+        at least seven of nine shadows retain p_i=8;
+
+    D=-1,(d_root,p)=(1,5):
+        all nine shadows retain p_i=5 and every selected incomplete block
+        is touched by at least two no-root rows.
+
+The next finite target is an eight-row boundary-extension problem with either
+nine simultaneous all-touch shadows (p=4,5) or at least seven unchanged shadows
+(p=7,8), rather than an unrestricted nine-row state search.

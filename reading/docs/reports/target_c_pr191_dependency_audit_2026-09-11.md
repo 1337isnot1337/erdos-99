@@ -1,0 +1,374 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_pr191_dependency_audit_2026-09-11.md) · source SHA-256 `ce4a328d2a6b1f63904fb3554ab37c0c7353ce58f149f7c9e49442f67c62b747`.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- theorem-state: {"artifact_id":"ART-56C5DE7D7F98","canonical":true,"claim_ids":["C-CYCLIC-STRUCTURAL"],"claim_statuses":{"C-CYCLIC-STRUCTURAL":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"canonical","target":"target-c"} -->
+# Erdős Problem #99 — independent dependency audit of PR #191
+
+**Date:** 2026-09-11  
+**Audited object:** PR #191, `target_c_cyclic_all_surplus_extension_2026-09-11.md` and its scalar audit  
+**Target:** Target C, Woodall cyclic branch `d_H=0`, arbitrary `s_Z>=0`  
+**Disposition:** the reported ordinary-surplus floor `0.99554058458...` is **not proved**; the first broken dependency is the September 10 inward Reuleaux-cap detour; several structural subclaims survive independently  
+
+## LEVEL I STATUS
+
+`STILL OPEN`.
+
+PR #191 was classified `audited-working` because its own follow-up audit repaired one scalar elimination error. That audit did not inspect the geometric dependency which turns near-maximal Reuleaux perimeter into small **inward** outer-contact detour. The latter dependency is false as stated.
+
+The corrected status is:
+
+- **valid:** Woodall cyclic perimeter saturation `P_F=pi D-O(sqrt D)`;
+- **valid:** `area(F)/D^2 -> pi/4` from that perimeter saturation plus FS.4;
+- **valid:** exact arbitrary-`s_Z` full-source Oler cancellation;
+- **valid:** `E=O(D)`, independently through the full-source cell-slack theorem;
+- **invalid/unproved:** `b-P_F=O(sqrt D)` from Reuleaux caps;
+- **invalid/unproved:** `H_out=o(D^2)` from that detour;
+- **invalid/unproved:** the cyclic exceptional-face-only cavity inequality derived after deleting `H_out`;
+- **invalid/unproved:** the train/atomic chain that uses `b/D->pi` and the resulting ordinary-surplus floor `0.99554058458...`;
+- **invalid/unproved:** the qualitative endpoint gap above that floor.
+
+This audit does not produce a counterexample to the final asymptotic inequality. It proves that the supplied proof does not establish it and that the repo must not treat it as an audited theorem pending a replacement inward-detour theorem.
+
+---
+
+## 1. First broken dependency: CRC Section 3
+
+The load-bearing September 10 report is
+
+`docs/reports/target_c_cyclic_reuleaux_cap_detour_2026-09-10.md`.
+
+For a missing force-hull side `AB`, it considers the OP outer pocket `P` bounded by `AB` and an old unit-contact chain of length `ell`. It then asserts that `P` lies in the minor radius-`D` circular segment between `AB` and the corresponding Reuleaux boundary arc, and concludes by perimeter monotonicity that
+
+```math
+\ell\le D\phi.
+\tag{1.1}
+```
+
+That containment has the side of `AB` reversed.
+
+OP constructs the hull-augmented graph by adding missing sides of the force hull `F`. Its new bounded faces are precisely the portions of the old outer contact face **inside `F`**. Thus an OP pocket has
+
+```math
+P\subset F
+```
+
+and lies on the inward side of its closing force-hull chord `AB`.
+
+By contrast, because `F` is an inscribed polygon in the cyclic Reuleaux container, the minor Reuleaux circular segment cut off by the same chord lies on the **exterior** side of `AB`, in `R_Gamma\setminus F` except for the chord itself.
+
+Therefore the nondegenerate interiors of the two regions are on opposite sides of `AB`. The claimed inclusion
+
+```math
+P\subset C_{AB}
+```
+
+is false.
+
+The valid statement `K subset R_Gamma` bounds the external source cap. It does not bound the internal contact pocket by that external cap.
+
+---
+
+## 2. Exact finite regression
+
+The later full-source cell-slack report already contains a useful exact regression, which this audit rechecks.
+
+Take a regular pentagon on the unit circle,
+
+```math
+p_j=(\cos(2\pi j/5),\sin(2\pi j/5)),\qquad 0\le j<5,
+```
+
+and its center `o=0`. The six-point set
+
+```math
+A=\{o,p_0,\ldots,p_4\}
+```
+
+has spoke contacts `op_j` and diameter pairs `p_jp_{j+2}`. For consecutive outer vertices `A=p_0`, `B=p_1`, the OP pocket is the triangle `AoB`, so its old contact-chain length is
+
+```math
+\ell=2.
+```
+
+The corresponding Reuleaux boundary arc has angle `phi=pi/5`, while the source diameter is
+
+```math
+D=2\sin(2\pi/5).
+```
+
+Hence
+
+```math
+D\phi=\frac{2\pi}{5}\sin\frac{2\pi}{5}<2=\ell.
+```
+
+So (1.1) itself fails on an exact force-visible positive-equilibrium finite source. The example need not be an asymptotic counterexample to show that CRC's purported universal local lemma is false.
+
+The same geometry can be made with arbitrarily small circular arc angle in a local radius-`D` disk model: two endpoints can be joined by a two-unit inward chain while the minor exterior circular arc has length close to the chord. Thus `phi->0` does not repair the side-of-chord inference.
+
+---
+
+## 3. No independent general detour repair was found
+
+A repository-wide search for general cyclic conclusions of the form
+
+```math
+b-P_F=o(D),\qquad b-P_F=O(\sqrt D),\qquad H_{out}=o(D^2)
+```
+
+found three types of sources:
+
+1. CRC itself;
+2. descendants which cite or repeat CRC, including the cyclic atomic reports, the arbitrary-`s_Z` cyclic extension, cyclic pocket-complexity work, and the annular-rate attempt;
+3. endpoint-specific reports where `b-P_F=o(D)` follows from extra equality localization unrelated to the general Woodall cyclic branch.
+
+The September 11 annular-rate report has already been marked `SUPERSEDED / CONDITIONAL` for exactly this CRC error. The September 11 full-source cell-slack report also explicitly records the wrong-side containment and states that the later atomic conclusions retain the dependency issue.
+
+No report supplies an independent theorem forcing the inward contact-chain detour to be sublinear for **all** Woodall-cyclic survivors.
+
+Therefore PR #191 cannot be patched merely by replacing one citation. A new geometric/global-optimality theorem is required.
+
+---
+
+## 4. What survives: cyclic force-hull perimeter saturation
+
+The separate report
+
+`target_c_cyclic_reuleaux_perimeter_surplus_2026-09-10.md`
+
+contains a valid argument that does **not** use outer pockets.
+
+Let `Gamma` be the odd diameter cycle. Its Reuleaux side angles `theta_i` satisfy
+
+```math
+\sum_i\theta_i=\pi,
+\qquad
+0<\theta_i\le\Theta_D=O(D^{-1/4})
+```
+
+by C17 and the FS.3 shared-diameter angle bound.
+
+The convex hull of the cycle vertices has perimeter
+
+```math
+2D\sum_i\sin(\theta_i/2).
+```
+
+Since
+
+```math
+0\le\theta-2\sin(\theta/2)\le\theta^3/24,
+```
+
+```math
+0\le\pi D-\operatorname{per}(\operatorname{conv}V(\Gamma))
+\le\frac{\pi D}{24}\Theta_D^2
+=O(\sqrt D).
+```
+
+The cycle skeleton lies in `F`, and planar convex perimeter is monotone under inclusion, while Cauchy gives `P_F<=pi D`. Hence
+
+```math
+\boxed{0\le\pi D-P_F=O(\sqrt D).}
+\tag{4.1}
+```
+
+This argument is independent of `s_Z` and of CRC's bad cap containment. It therefore survives for arbitrary mixed surplus in the Woodall cyclic topology.
+
+---
+
+## 5. What survives: disk-limit force hull
+
+The FS maximal-perimeter theorem is also independent of CRC.
+
+For the central symmetral
+
+```math
+S=(F-F)/2,
+```
+
+one has exactly
+
+```math
+\operatorname{diam}S=D,
+\qquad
+\operatorname{per}S=P_F.
+```
+
+FS.4 gives
+
+```math
+0\le\operatorname{area}S-\operatorname{area}F=o(D^2).
+```
+
+Normalize by `D`. A centrally symmetric diameter-one convex body is contained in the radius-`1/2` disk. If its perimeter tends to `pi`, every Hausdorff limit has width at most one in every direction and perimeter `pi`; continuity of width forces width one in every direction. Central symmetry then forces support function `1/2`, hence the radius-`1/2` disk.
+
+Using (4.1),
+
+```math
+\boxed{\operatorname{area}F/D^2\to\pi/4.}
+\tag{5.1}
+```
+
+Thus the disk-limit portion of PR #191 survives.
+
+---
+
+## 6. What survives: arbitrary-`s_Z` Oler cancellation and `E=O(D)`
+
+PR #191 Section 3 observes the exact face identity
+
+```math
+m=R_4+f+q-s_Z+1
+```
+
+and combines it with
+
+```math
+b+Q=2(q-s_Z).
+```
+
+The `s_Z` terms cancel in the full-source Oler ledger. That algebra is correct.
+
+More importantly, the separate September 11 full-source cell-slack theorem proves the stronger fact
+
+```math
+\boxed{E=O(D)}
+\tag{6.1}
+```
+
+for **every** C-II branch, without ZF, cyclic topology, or the CRC detour.
+
+Its proof is exact. After adding the force-hull cycle, Oler is applied to every bounded augmented contact cell and every exterior source-hull cap. If `W` is the sum of those dimensional Oler slacks, the incidence/perimeter sums give
+
+```math
+W=\mathcal O_A+a_0(P_F-P_{com}-k).
+```
+
+Every original quadrilateral contact face contributes exactly its rhombic area excess to `W`, so `E<=W`. Combining with the strict translated-lattice comparison and `P_K,P_F<=pi D` yields `E=O(D)`.
+
+Therefore `E=O(D)` is not damaged by the CRC failure.
+
+---
+
+## 7. Exact descendant failure in PR #191
+
+PR #191 Section 2 repeats CRC and obtains
+
+```math
+b-P_F=O(\sqrt D)
+\tag{7.1}
+```
+
+from the invalid inward-cap containment. It then uses DD to claim
+
+```math
+H_{out}=o(D^2).
+\tag{7.2}
+```
+
+Without (7.2), Section 4 cannot delete the outer-pocket area from
+
+```math
+G\le H_{out}+A_{exc}+O(D).
+```
+
+Thus the claimed necessary inequality
+
+```math
+w\ge\pi\sqrt{1-\nu^2}
+\tag{7.3}
+```
+
+is not established.
+
+Section 5 additionally uses (7.1) to infer `b/D->pi`, to normalize the stopped-train count, and to obtain uniform outer-walk direction measure. Those steps therefore also lose their proof in the general cyclic branch.
+
+The scalar minimization in Section 6 starts from (7.3) and the train inequalities. Even though the follow-up self-audit correctly repairs one later `w>=1` case split, that correction cannot restore the missing geometric premise.
+
+Consequently the claims
+
+```math
+\liminf\frac{e_{BB}+2s_C}{D}\ge0.99554058458\ldots
+```
+
+and a uniform positive gap above that number are **not proved** by PR #191.
+
+The same dependency invalidates the corresponding `s_Z=0` atomic floor reports wherever they rely on CRC rather than an independent equality-localized detour theorem.
+
+---
+
+## 8. Safe corrected cyclic frontier
+
+After removing the bad detour dependency, every audited Woodall-cyclic survivor still has
+
+```math
+\boxed{P_F=\pi D-O(\sqrt D),}
+```
+
+```math
+\boxed{\operatorname{area}F=(\pi/4+o(1))D^2,}
+```
+
+and the full-source cell-slack theorem supplies
+
+```math
+\boxed{E=O(D).}
+```
+
+The exact post-ZF ledgers remain available under their own dependency status.
+
+What is **not** currently controlled in the general cyclic branch is the inward outer-contact region:
+
+```math
+\boxed{b-P_F\text{ may be linear under the proved inequalities, and }H_{out}\text{ may be quadratic.}}
+```
+
+No construction is asserted to realize those asymptotics as a global survivor; they are simply not excluded by the audited theorem stack.
+
+If the independently audited PR #188 renormalized-surplus theorem is promoted, it gives the safe stronger general lower bound
+
+```math
+\frac{e_{BB}+2s_C-3s_Z}{D}>0.9604+o(1)
+```
+
+in the cyclic branch `d_H=0`, and hence the same `>0.9604` lower bound on ordinary surplus. That theorem does not use CRC.
+
+---
+
+## 9. Required replacement theorem
+
+To recover the PR #191 route, one needs a theorem about the **inward contact path**, not the exterior Reuleaux cap. A sufficient statement would be
+
+```math
+\boxed{b-P_F=o(D)}
+```
+
+for every sufficiently large Woodall-cyclic C-II global survivor, proved from contact equilibrium/global optimality rather than exterior-cap containment.
+
+A weaker quantitative theorem could also suffice if it bounds `H_out/D^2` sharply enough to restore a cavity inequality whose resulting ordinary-surplus floor can be justified.
+
+The proof must handle the exact obstruction shown by the pentagon-center regression: a short exterior circular arc does not prevent a long inward unit-contact chain.
+
+---
+
+## 10. Final classification
+
+| Claim | Disposition |
+| --- | --- |
+| Woodall cyclic topology | valid/canonical independently |
+| Reuleaux source container | valid under C17 |
+| cycle-skeleton `P_F=pi D-O(sqrt D)` | valid |
+| `area(F)/D^2->pi/4` | valid |
+| arbitrary-`s_Z` Oler cancellation | valid |
+| `E=O(D)` | valid; independently strengthened by FSCS |
+| CRC `P subset exterior minor circular cap` | **false** |
+| CRC `ell<=D phi` | **false as a universal local lemma** |
+| general cyclic `b-P_F=O(sqrt D)` | not proved |
+| general cyclic `H_out=o(D^2)` | not proved |
+| PR #191 cyclic cavity/train inequalities depending on those | not proved |
+| ordinary-surplus floor `0.99554058458...` | **rejected as a proved theorem** |
+| endpoint gap above `0.99554058458...` | **rejected as a proved theorem** |
+| Level I | still open |
+
+This correction is theorem-status-changing and should be propagated to `docs/STATE.md`, `docs/state/theorem-state.yaml`, `docs/targets/target-c/CURRENT.md`, and the active Target C prompt in the same change.

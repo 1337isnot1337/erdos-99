@@ -1,0 +1,282 @@
+> Generated reading edition · [exact source](../../research/target_c_support7_global_segment_order_2026-09-19.md) · source SHA-256 `9f13c690a23415c9e82e724711793e67554a3c69ee50a80b0fca356bd1a43a3b`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "d2e6f07d5d1e712238f56434342beba61854171f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_support7_global_segment_order_2026-09-19.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "448fe1bf205211527e1df5bdb65b342c8868f35cf1d2b3d5bf1962516f7b7eae"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C support-seven: global reciprocal segment-order obstruction
+
+Date: 2026-09-19
+
+Status: exact structural necessary condition for every generic support-seven reciprocal realization. The theorem-state authority is unchanged. C-II remains open.
+
+## Result
+
+Let `y_0,...,y_7` be a generic reciprocal configuration. For every unordered reciprocal segment
+
+```math
+e=\{u,v\}\subset\{0,\ldots,7\}
+```
+
+write
+
+```math
+\lambda_e=|y_u-y_v|>0.
+```
+
+There are 28 such segment lengths.
+
+For a root `r` and distinct `i,j != r`, define
+
+```math
+A^{(r)}_{ij}=\angle r i j,
+\qquad
+D^{(r)}_{ij}=A^{(r)}_{ij}-A^{(r)}_{ji}.
+```
+
+Then
+
+```math
+\boxed{
+\operatorname{sgn}D^{(r)}_{ij}
+=
+\operatorname{sgn}\bigl(\lambda_{\{r,j\}}-\lambda_{\{r,i\}}\bigr).
+}
+\tag{1}
+```
+
+Thus the 168 rooted affine angle comparisons are not eight independent seven-distance order systems. They are the comparison signs of one common family of 28 positive segment lengths.
+
+Put a vertex in a graph for each reciprocal segment and join two vertices exactly when the corresponding segments share one reciprocal endpoint. This is the line graph
+
+```math
+L(K_8).
+```
+
+It has
+
+```math
+28\text{ vertices},\qquad 168\text{ edges},\qquad \deg=12,
+```
+
+and cycle rank
+
+```math
+168-28+1=141.
+```
+
+Equation (1) supplies one comparison sign on every edge of `L(K8)`. Every genuine reciprocal metric therefore gives a sign pattern on `L(K8)` that extends to a single total preorder of its 28 vertices by the scalar values `lambda_e`.
+
+In particular, if all 28 segment lengths are distinct, orient each comparison edge from the shorter segment to the longer segment. Then
+
+```math
+\boxed{
+\text{the resulting orientation of }L(K_8)\text{ is acyclic.}
+}
+\tag{2}
+```
+
+Any forced directed cycle, including one that passes through several different reciprocal roots, excludes the affine cell before any sine-law magnitude equation is used.
+
+## Proof of the rooted sign identity
+
+Fix distinct `r,i,j`. In triangle `rij`, the sine law gives
+
+```math
+\frac{\lambda_{\{r,j\}}}{\lambda_{\{r,i\}}}
+=
+\frac{\sin A^{(r)}_{ij}}{\sin A^{(r)}_{ji}}.
+\tag{3}
+```
+
+Let
+
+```math
+S=A^{(r)}_{ij}+A^{(r)}_{ji}
+=\pi-\angle i r j.
+```
+
+Genericity gives `0<S<pi`. Hence
+
+```math
+\sin A^{(r)}_{ij}-\sin A^{(r)}_{ji}
+=2\cos\!\left(\frac S2\right)
+ \sin\!\left(\frac{D^{(r)}_{ij}}2\right).
+```
+
+The cosine factor is positive and `D^(r)_ij` lies in `(-pi,pi)`, so the right side has the sign of `D^(r)_ij`. The denominator in (3) is positive. Therefore (1) follows exactly.
+
+This is the ground-radius sign theorem with the root no longer fixed at `0`.
+
+## Why one global order is stronger than eight local orders
+
+At a fixed root `r`, the seven incident segment lengths
+
+```math
+\lambda_{\{r,i\}},\qquad i\ne r,
+```
+
+have a total preorder. This recovers the local `7! = 5040` strict order cones and `47293` weak orders already available at the ground root.
+
+But the same segment length occurs in the order systems at both of its endpoints. The eight rooted systems are therefore coupled.
+
+For example, the four line-graph vertices
+
+```text
+01, 02, 23, 13
+```
+
+form the cycle
+
+```text
+01 -- 02 -- 23 -- 13 -- 01
+```
+
+whose four comparisons occur at roots `0,2,3,1`, respectively. A strict sign pattern asserting
+
+```math
+\lambda_{01}<\lambda_{02}<\lambda_{23}<\lambda_{13}<\lambda_{01}
+```
+
+is impossible, even though no single root sees the whole contradiction.
+
+This kind of cross-root cycle is not detected by running the eight rooted preorder tests independently.
+
+## Exact characterization with ties
+
+The generic reciprocal-point assumption does not imply that all 28 segment lengths are distinct. Equal lengths must therefore be handled without promoting a strict-order assumption to a theorem.
+
+Take the signed comparison graph on `L(K8)` supplied by (1). First join comparison edges whose sign is zero and take the equivalence relation generated by those zero edges. Every segment in one such component must have the same length.
+
+A sign pattern extends to positive scalar segment lengths if and only if both conditions hold:
+
+1. no nonzero comparison edge has both endpoints in the same zero-equivalence class;
+2. after contracting every zero class, the directed graph formed by the strict comparison edges is acyclic.
+
+Necessity is immediate from scalar equality and strict inequality.
+
+For sufficiency, topologically order the contracted directed acyclic graph and assign increasing positive integers to its classes. Give every original segment the integer assigned to its class. Zero comparisons become equalities and every directed comparison becomes a strict inequality. Unobserved comparisons between disjoint reciprocal segments may be ordered arbitrarily.
+
+Hence this criterion is an exact order-extension theorem. It does not assert that an arbitrary accepted assignment is a Euclidean eight-point metric; it only characterizes whether the 168 observed adjacent-segment comparisons can come from one common collection of scalar segment lengths.
+
+## Nonlinear exactness on the same line graph
+
+The same graph packages the full metric compatibility equations, not only their signs.
+For adjacent segment vertices
+
+```math
+e=\{r,i\},\qquad f=\{r,j\},
+```
+
+define the antisymmetric log-sine cochain
+
+```math
+H_{e f}
+=
+\log\sin A^{(r)}_{ij}
+-
+\log\sin A^{(r)}_{ji}.
+\tag{4}
+```
+
+In a genuine metric, the sine law gives
+
+```math
+H_{e f}=\log\lambda_f-\log\lambda_e.
+\tag{5}
+```
+
+Hence `H` is an exact one-cochain on `L(K8)`. Equivalently, its sum around every directed line-graph cycle is zero.
+
+Conversely, restrict `L(K8)` to the seven segment vertices
+
+```math
+01,02,\ldots,07.
+```
+
+This induced subgraph is `K7`, and the restriction of (4) is exactly the complete ground-radius log-sine cochain used in the existing 15-cycle metric theorem. Therefore exactness of `H` on `L(K8)` implies those fifteen root-fan identities. The committed complete-metric theorem then reconstructs one common reciprocal coordinate configuration up to similarity. That configuration makes (5) hold on every line-graph edge.
+
+Thus, on the complete generic angular system,
+
+```math
+\boxed{
+\text{common reciprocal metric}
+\iff H\text{ is exact on }L(K_8).
+}
+\tag{6}
+```
+
+Because `L(K8)` is connected with cycle rank 141, exactness can be written as 141 cycle equations. They are highly redundant after the complete reciprocal triangle equations are imposed: the existing fifteen ground-root equations are already sufficient. The redundancy is useful computationally. One may choose whichever short cycle has the strongest certified angle bounds instead of forcing every contradiction through one fixed ground-root basis.
+
+Two short-cycle families are especially explicit.
+
+- There are `8*C(7,3)=280` star triangles, formed by three segments incident to one root. Their cycle equation is a three-ratio trigonometric-Ceva identity. At any one root, the 35 such triangles span the 15-dimensional cycle space of that root's `K7` star.
+- There are `C(8,3)=56` triangle-side triangles, formed by the three sides of one reciprocal triangle. Their cycle equation is tautological: the three sine ratios are the three side ratios of the same triangle and telescope identically.
+
+The first genuinely cross-root chordless cycles have length four. They are exactly the simple four-cycles of `K8`, so there are
+
+```math
+3\binom84=\boxed{210}
+```
+
+of them. A quantitative sine bound on any one of these 210 cycle products can exclude a cell even when its sign orientation is acyclic. This is the direct `H6` analogue of the quantitative law-of-sines contradictions already used successfully in the generic `H7b` branch.
+
+Accordingly there are two nested filters on the same graph:
+
+1. the sign shadow of (6), which rejects directed comparison cycles using only rational affine sign certificates;
+2. the full log-sine cycle equation, which can reject sign-consistent survivors using certified angle intervals and exact trigonometric bounds.
+
+## Finite combinatorics
+
+Every segment of `K8` meets six other segments at each endpoint, so every vertex of `L(K8)` has degree 12. Therefore
+
+```math
+|E(L(K_8))|=\frac{28\cdot12}{2}=168.
+```
+
+Equivalently,
+
+```math
+168=8\binom72,
+```
+
+one comparison for each root and unordered pair of the other seven reciprocal points.
+
+The triangles of `L(K8)` have exactly two forms:
+
+- three reciprocal segments incident to one common root: `8*C(7,3)=280` star triangles;
+- the three sides of one reciprocal triangle: `C(8,3)=56` triangle-side triples.
+
+So `L(K8)` has exactly
+
+```math
+280+56=336
+```
+
+triangles.
+
+The 56 triangle-side triples are already heavily coupled by the complete-angle triangle equations. The useful new sign information begins most clearly with cross-root cycles such as the four-cycle above and with longer cycles in the 141-dimensional cycle space.
+
+The companion verifier constructs `L(K8)` exactly, checks its 28 vertices, 168 edges, degree 12, connectedness, cycle rank 141, the `280+56` triangle classification, the 210 induced cross-root four-cycles, and an explicit four-cycle.
+
+Certificate: `research/verify_target_c_support7_global_segment_order_2026_09_19.py`.
+
+## Use inside the generic H6 branch
+
+On a fixed complete-angle H6 cell, every ordinary reciprocal angle is an integer-affine function of the 85 angle variables. Therefore all 168 quantities `D^(r)_ij` are affine.
+
+This creates a rational-linear metric sign layer before the fifteen nonlinear complete-`K7` sine-law cycle equations:
+
+1. use exact LP/Farkas tests to determine any segment comparisons whose signs are forced by the current affine and physical branch;
+2. merge forced equalities;
+3. reject the cell immediately if a forced strict comparison lies inside one equality class or if the forced strict comparison graph contains a directed cycle;
+4. when ambiguous comparisons remain, branch on selected signs and run the same cycle test incrementally rather than enumerating global segment orders.
+
+The all-root H6 interior-domination theorem from `target_c_support7_h6_all_root_interior_domination_2026-09-19.md` adds fourteen particularly cheap disjunctions on top of this global order structure. Its endpoint choices should be used early in the branch-and-bound tree.
+
+A naive product of eight local `5040`-way order enumerations is the wrong search space. It repeats incompatible root orders. The common `L(K8)` comparison graph gives the correct coupled combinatorial object and permits cycle pruning after every branch decision.
+
+## Scope
+
+This result applies to generic reciprocal configurations with no collinear reciprocal triple, so every angle used above is a genuine triangle angle in `(0,pi)`. Equal segment lengths are allowed. The theorem supplies a necessary metric-order condition only. Passing it does not enforce the fifteen sine-law magnitude identities, the seven equilateral-pentagon closures, or the separate reciprocal-collinearity branches. C-II remains open.

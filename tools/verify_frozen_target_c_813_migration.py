@@ -73,11 +73,11 @@ def source_blob_exists(repo: Path, commit: str, path: str) -> bool:
 
 
 def verified_inclusion_lineage(destination: Path) -> dict | None:
-    """Retain the exact approved scope across the one recorded generator edit.
+    """Retain the exact approved source scope across recorded operational edits.
 
     The frozen baseline must still be the original owner-attested object.
     Worktree bytes cannot substitute for committed evidence. The shared release
-    auditor permits only the existing generator's public hash and description;
+    auditor checks the generator and exact archived selector repair's public hashes/descriptions;
     all source identities, rights fields and 810 records remain unchanged.
     """
     path = "docs/publication/inclusion.json"

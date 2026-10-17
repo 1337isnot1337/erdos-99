@@ -1,0 +1,500 @@
+> Generated reading edition · [exact source](../../research/target_c_free_terminal_outer_energy_surplus_gap_2026-09-18.md) · source SHA-256 `377af280c48be1931c529e98e18290f801c295aac6d2ebad8558da7cffcbcbf6`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "a47f87ea542426971416dfb584a8bc22ec1b8fe1", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_free_terminal_outer_energy_surplus_gap_2026-09-18.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "178a3d3dfe89df0ee1a5d33561f36b061bd34f4aa7474cc54f30d2117fa0511d"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — terminal FREE outer-energy gap above the surplus endpoint
+
+**Date:** 2026-09-18  
+**Status:** proof-only terminal strengthening; theorem-state authority unchanged  
+**Scope:** full-core Type-II terminal FREE survivor sequences with `pi D-q=o(D)`  
+**Depends on:** terminal FREE surplus-endpoint stability; audited §142 atomic train-phase decomposition and exposed-hull bound; hostile-audited dominant-orbit outer-energy transport; hostile-audited O--O bracing/noncrossing-sector energy; exact stopped-train endpoint multigraph  
+**Certificate:** `research/verify_target_c_free_terminal_outer_energy_surplus_gap_2026_09_18.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The current terminal FREE package has treated the all-phase surplus endpoint
+
+```math
+\mu_* = 1.953262849540479\ldots
+```
+
+as a possible limiting face and then derived increasingly rigid structure under
+`mu_D -> mu_*`. That face is not attainable. Combining the endpoint stability ledger
+with the already hostile-audited outer-train directional-energy theorem gives an
+explicit positive gap:
+
+```math
+\boxed{
+\liminf \mu_D
+\ge
+\mu_*+0.0012
+=
+1.954462849540479\ldots .
+}
+\tag{OG.1}
+```
+
+No new deformation theorem is used. The contradiction is an energy-capacity loop.
+Near the old endpoint the train crossing measure forces almost all atomic train mass
+into one `pi/3` orbit. The dominant orbit cannot place many terminals on the nearly
+geodesic outer walk without paying directional energy. Consequently most outer
+terminal occurrences must belong to O--O trains outside that dominant orbit. After
+retaining those O--O pairs under the physical side-length capacity, one projective
+`pi/3` sector still has more than `0.2098D` retained pair weight. Trains in that sector
+are pairwise noncrossing, and the hostile-audited near-antipodal packing lemma forces
+more than `0.003D` terminal directional energy. But endpoint stability leaves at most
+`0.003D` total outer directional energy.
+
+The safe gap `0.0012` is close to the scalar limit of this particular composition. A
+floating optimization of the same inequalities loses positivity near
+`0.00122124`; that numerical value is not used as a theorem claim.
+
+---
+
+## 1. Endpoint stability with a fixed gap window
+
+Put
+
+```math
+\Delta_2:=\frac{\pi}{2\sqrt3},
+\qquad
+s_2:=\sqrt{\Delta_2},
+\qquad
+g:=0.007707,
+```
+
+```math
+A_0:=2s_2+g,
+\qquad
+M_*:=4s_2+2g=2A_0,
+```
+
+and
+
+```math
+\mu_*:=\frac\pi2+\frac{2s_2}{5}+\frac g5
+=1.953262849540479\ldots .
+\tag{1.1}
+```
+
+Let
+
+```math
+\varepsilon_0:=0.0012=\frac{3}{2500}.
+\tag{1.2}
+```
+
+Assume for contradiction that a terminal FREE subsequence satisfies
+
+```math
+\limsup \mu_D\le\mu_*+\varepsilon_0.
+\tag{1.3}
+```
+
+Use the notation of the terminal surplus-stability theorem:
+
+```math
+\delta:=\lim\frac{b-P_F}{D},
+\qquad
+r:=\lim\frac{Q-f}{D},
+\qquad
+a:=\lim\left(\frac{\tau_D}{D}-\left(\frac\pi2+g\right)\right),
+```
+
+where `P_F=per(F)` and
+
+```math
+\tau_D=T-2\sqrt{R_4}.
+```
+
+After passing to a further subsequence, all these limits exist and are nonnegative.
+The exact nonnegative endpoint decomposition gives
+
+```math
+m+\frac25(r+\delta)+\frac15a\le\varepsilon_0.
+\tag{1.4}
+```
+
+Therefore
+
+```math
+\boxed{
+a\le0.006,
+\qquad
+\delta\le0.003.}
+\tag{1.5}
+```
+
+The same theorem gives the bounded endpoint-occurrence density
+
+```math
+\boxed{
+B:=\lim\frac{Q+4f}{D}
+=M_*+2a-\delta.}
+\tag{1.6}
+```
+
+Terminality also gives
+
+```math
+\frac{P_F}{D}\to\pi,
+\qquad
+\frac bD\to\pi+\delta.
+\tag{1.7}
+```
+
+---
+
+## 2. The atomic residual is below `0.02732D`
+
+Let
+
+```math
+C:=\lim\frac{T-q/2}{D}.
+```
+
+Since
+
+```math
+\frac{\sqrt{R_4}}D\to s_2,
+\qquad
+\frac qD\to\pi,
+\qquad
+\frac{\tau_D}{D}\to\frac\pi2+g+a,
+```
+
+we have
+
+```math
+\boxed{C=A_0+a\le A_0+0.006.}
+\tag{2.1}
+```
+
+Let `A` be the total absolute atomic train mass in the limiting projective train-phase
+measure. Audited §142 gives the exposed-hull bound
+
+```math
+A\le C.
+\tag{2.2}
+```
+
+Group the atoms into exact projective `pi/3` orbits. If `M_j` is the mass of one orbit
+and `E_j` its strict-rhombus crossing mass, then
+
+```math
+E_j\le\frac{M_j^2}{4},
+\qquad
+\sum_jE_j=\Delta_2.
+\tag{2.3}
+```
+
+Thus
+
+```math
+A\ge2s_2.
+\tag{2.4}
+```
+
+Let `M=max_j M_j` and let
+
+```math
+R:=A-M
+```
+
+be the total atomic mass outside a dominant orbit. From
+
+```math
+4\Delta_2
+\le\sum_jM_j^2
+\le MA
+```
+
+we get
+
+```math
+M\ge\frac{4\Delta_2}{A},
+\qquad
+R\le A-\frac{4\Delta_2}{A}.
+\tag{2.5}
+```
+
+The right side is increasing for `A>0`. Using `A<=C<=A_0+0.006`,
+
+```math
+R
+\le
+A_0+0.006-
+\frac{4\Delta_2}{A_0+0.006}
+<0.02732.
+\tag{2.6}
+```
+
+The exact rational certificate proves the final strict inequality.
+
+---
+
+## 3. The dominant atomic orbit has at most `delta+0.87` outer occurrences
+
+Freeze shrinking windows around the three phase points of a dominant orbit and let
+`K` be the limiting number, per `D`, of outer terminal occurrences carried by trains
+in those windows.
+
+The hostile-audited dominant-orbit outer-energy theorem applies to this terminal
+near-disk subsequence. After retaining outer occurrences under loaded-hull side-length
+capacity, at most `delta` occurrence mass is lost. Hence the retained dominant-orbit
+mass is at least
+
+```math
+(K-\delta)_+.
+```
+
+Its actual selected route directional energy is a sub-sum of the total outer detour,
+so
+
+```math
+\boxed{
+\delta\ge F((K-\delta)_+),
+\qquad
+F(z):=z-6\sin(z/6).}
+\tag{3.1}
+```
+
+The function `F` is increasing on `[0,pi]`. At
+
+```math
+z_0:=0.87
+```
+
+the alternating Taylor bound for sine gives the fully rational estimate
+
+```math
+\begin{aligned}
+F(z_0)
+&\ge
+\frac{z_0^3}{216}-\frac{z_0^5}{155520}\\
+&=0.00304542013296875\ldots\\
+&>0.003.
+\end{aligned}
+\tag{3.2}
+```
+
+Together with (1.5), equations (3.1)--(3.2) imply
+
+```math
+\boxed{K\le\delta+0.87.}
+\tag{3.3}
+```
+
+Every residual atomic train contributes at most two outer terminal occurrences.
+Therefore the total outer occurrence density carried by all atomic trains satisfies
+
+```math
+\boxed{
+K_{\rm at}\le\delta+0.87+2R.}
+\tag{3.4}
+```
+
+---
+
+## 4. Atomic concentration forces many O--O trains
+
+Let
+
+- `E_BB` be the number of stopped trains with both terminal occurrences on bounded
+  nonquadrilateral faces;
+- `E_BO` the number with exactly one bounded and one outer terminal occurrence; and
+- `L_O` the number with two outer terminal occurrences.
+
+The exact endpoint multigraph identities are
+
+```math
+2E_{BB}+E_{BO}=Q+4f,
+\qquad
+E_{BO}+2L_O=b.
+\tag{4.1}
+```
+
+An atomic train which is not B--B consumes at least one atomic outer occurrence.
+Consequently the atomic B--B train mass is at least
+
+```math
+A-K_{\rm at}.
+```
+
+Since this is a subpopulation of all B--B trains,
+
+```math
+\liminf\frac{E_{BB}}D\ge A-K_{\rm at}.
+\tag{4.2}
+```
+
+Write
+
+```math
+e:=\lim\frac{E_{BO}}D
+```
+
+after another harmless subsequence. From (1.6), (4.1), (4.2), `A>=2s_2`, and (3.4),
+
+```math
+\begin{aligned}
+e
+&=B-2\lim\frac{E_{BB}}D\\
+&\le B-2A+2K_{\rm at}\\
+&\le 2g+2a-\delta+2K_{\rm at}\\
+&\le 2g+2a+\delta+1.74+4R.
+\end{aligned}
+\tag{4.3}
+```
+
+Use the second identity in (4.1) and (1.7). The `delta` term cancels:
+
+```math
+\begin{aligned}
+\ell
+:=\lim\frac{L_O}{D}
+&=\frac{\pi+\delta-e}{2}\\
+&\ge
+\boxed{
+\frac\pi2-g-a-0.87-2R.}
+\end{aligned}
+\tag{4.4}
+```
+
+Thus the near-endpoint argument does not need exact atomlessness of the outer walk.
+The small detour budget itself forces a large O--O population.
+
+---
+
+## 5. Retained O--O pair mass exceeds `0.6294D`
+
+Apply the hostile-audited route-capacity retention argument to all O--O trains counted
+by `L_O`. On every loaded-hull route, retain outer endpoint weight at most the
+corresponding hull-side length. The total endpoint-weight loss is at most the total
+outer detour `delta D`. If the retained endpoint weights of one O--O train are `x,y`,
+retain that train with pair weight `min(x,y)`. Then
+
+```math
+1-\min(x,y)\le(1-x)+(1-y),
+```
+
+so total retained pair-weight loss is also at most `delta D`.
+
+Let `p` be the limiting retained O--O pair mass per `D`. Equations (4.4), (1.5), and
+(2.6) give
+
+```math
+\begin{aligned}
+p
+&\ge \ell-\delta\\
+&\ge\frac\pi2-g-a-0.87-2R-\delta\\
+&>0.629449326794896\ldots .
+\end{aligned}
+\tag{5.1}
+```
+
+Hence the safe rational floor
+
+```math
+\boxed{p>0.6294.}
+\tag{5.2}
+```
+
+The retained endpoint measures are dominated by the physical loaded-hull perimeter
+measure `(1/2)dtheta`, exactly as in the hostile-audited complement O--O energy theorem.
+
+---
+
+## 6. One noncrossing direction sector alone costs more than all available detour
+
+Partition the projective train-direction circle into three half-open sectors of width
+`pi/3`. A strict-rhombus train crossing requires projective direction separation
+strictly greater than `pi/3`, so the O--O trains in each sector are pairwise
+noncrossing.
+
+By (5.2), one sector has retained pair mass at least
+
+```math
+\boxed{
+m_0:=\frac{0.6294}{3}=0.2098.}
+\tag{6.1}
+```
+
+The hostile-audited near-antipodal capacity theorem says that a noncrossing O--O
+sector family of retained pair mass `m<=pi/6` pays terminal directional energy at
+least
+
+```math
+E(m):=2m-2\sin m.
+\tag{6.2}
+```
+
+If the actual sector mass exceeds `pi/6`, retain only `pi/6`; this only increases the
+available lower bound. Since `E` is increasing on `[0,pi/6]`, every sector with mass at
+least `m_0` pays at least `E(m_0)`.
+
+Again using the alternating Taylor bound,
+
+```math
+\begin{aligned}
+E(m_0)
+&\ge
+\frac{m_0^3}{3}-\frac{m_0^5}{60}\\
+&=0.00307141391415210\ldots\\
+&>0.003.
+\end{aligned}
+\tag{6.3}
+```
+
+This energy is carried by selected outer terminal edge occurrences, hence is a sub-sum
+of the actual outer route directional energy. All outer route directional energies sum
+exactly to
+
+```math
+\delta D.
+```
+
+Therefore (6.3) forces
+
+```math
+\delta>0.003,
+```
+
+contradicting (1.5).
+
+The assumed subsequence (1.3) cannot exist. This proves (OG.1).
+
+---
+
+## 7. What changed in the terminal FREE frontier
+
+The exact-surplus endpoint notes derived a useful formal normal form:
+
+- almost all B--B atomic mass in one `pi/3` orbit;
+- almost half-Lebesgue O--O directions;
+- a large laminar O--O shear family;
+- a large pentagonal dominant-orbit population;
+- phase-free half-saturation of laminar regions by actual diameter endpoints.
+
+Those statements remain valid conditional endpoint analyses, but the endpoint itself is
+now excluded by an explicit margin. A terminal FREE survivor must pay at least
+`0.0012D` more all-phase surplus than the old scalar floor.
+
+The proof also identifies why the old endpoint fails. It is not the local laminar
+multishear motion: the high-`t` work already shows those exact shear families can be
+locally diameter-isolated. The contradiction appears earlier. Near-saturation asks the
+outer walk to be too geodesic while simultaneously forcing too many diameter-braced
+O--O trains into a noncrossing direction sector. Their near-antipodal packing energy
+exceeds the entire detour budget.
+
+This theorem is still proof-only because its inputs are proof-only rather than
+canonical Target C state. No theorem-state file is changed.
+
+The next useful target is to propagate the `0.0012` surplus gap back through the
+terminal scalar/attachment-cell ledgers, then test whether the resulting positive
+currency can be forced into either the canonical Sections 122--123 aggregate detour or
+the actual diameter graph. Independently, the same calculation can be optimized with a
+less coarse dominant-orbit threshold than `z_0=0.87`, but the present composition has a
+numerical ceiling near `0.00122124`, so constant polishing alone will not close C-II.

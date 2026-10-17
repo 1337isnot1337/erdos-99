@@ -1,0 +1,298 @@
+> Generated reading edition · [exact source](../../research/target_c_tooth_reflection_common_lower_run_trunk_cycle_fork_2026-09-17.md) · source SHA-256 `7219c7944b37c59bab0561f8c5c60caeea43edfdc86421981bc78c0e9711b114`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+> Presentation repairs: 1 exact-source-bound TeX/escape correction(s); [reviewed repair ledger](../../docs/publication/reading-tex-repairs.json). Frozen source bytes are unchanged.
+
+> Source formatting note: 11 unbalanced display delimiter(s) repaired at paragraph boundaries; consult the exact source.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "fd55c330279b781ecab3c028fd0ff2bf4cfcf84f", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_common_lower_run_trunk_cycle_fork_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "a362b3c63f102f4c938baca0c65cf604f566380c5438693fe898622f444aaa9e"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — two common FREE lower runs force a long shared trunk or many planar cycles
+
+**Date:** 2026-09-17  
+**Status:** proved candidate awaiting promotion; finite graph-topological refinement of the common-lower-runs branch  
+**Scope:** the `COMMON-LOWER-RUNS` branch from the small-external multi-module theorem  
+**Dependencies:** small-external common lower runs; short inactive-edge planarity  
+**Certificate:** `research/verify_target_c_tooth_reflection_common_lower_run_trunk_cycle_fork_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The small-external theorem reduces a residual multi-module FREE survivor to two simple all-lower paths in the same plane short-edge graph which share an unbounded vertex-disjoint matching of inverse-`D` edges. There is an exact graph-theoretic dichotomy for two paths: many selected common edges must either concentrate in one common path component, or force large cycle rank in the union.
+
+Let
+
+```math
+P:=R_i,
+\qquad
+Q:=R_j
+```
+
+be the two all-lower runs supplied by `COMMON-LOWER-RUNS`, and let
+
+```math
+\mathcal M:=Q^*_{ij}
+```
+
+be their shared vertex-disjoint matching. Write
+
+```math
+q:=|\mathcal M|.
+```
+
+Then `q->infinity` in the `Z_D=o(sqrt(D))` residual branch.
+
+Let
+
+```math
+I:=P\cap Q
+```
+
+be the graph intersection: it contains every vertex and edge used by both paths. Since `P` and `Q` are simple paths, `I` is a forest whose components are paths or isolated vertices.
+
+For every real threshold `s>=1`, at least one of the following occurs.
+
+### COMMON-TRUNK
+
+One connected component of `I` contains at least
+
+```math
+\boxed{s}
+\tag{TC.1}
+```
+
+edges from the selected matching `mathcal M`. That intersection component is a contiguous path shared by both FREE lower runs. Every selected edge on it is the same old fully inactive inverse-`D` source pair in both module repairs.
+
+### CYCLE-RANK
+
+The union
+
+```math
+H:=P\cup Q
+```
+
+has cycle rank
+
+```math
+\boxed{
+\beta(H):=|E(H)|-|V(H)|+1
+\ge {q\over s}-1.
+}
+\tag{TC.2}
+```
+
+Because `H` is a connected plane graph, its number of bounded faces equals `beta(H)`. Thus CYCLE-RANK gives at least
+
+```math
+\boxed{{q\over s}-1}
+\tag{TC.3}
+```
+
+bounded planar regions cut out using only the two all-lower inactive runs.
+
+Taking
+
+```math
+s=\sqrt q
+```
+
+gives the balanced fork
+
+```math
+\boxed{
+\text{a common trunk containing at least }\sqrt q\text{ selected gates}
+\quad\text{or}\quad
+\beta(P\cup Q)\ge\sqrt q-1.
+}
+\tag{TC.4}
+```
+
+Both alternatives diverge because `q->infinity`.
+
+In the tuned small-external branch,
+
+```math
+q
+=\Omega\left({\kappa_DD^{1/4}\over Z_D+1}\right),
+```
+
+so (TC.4) gives
+
+```math
+\boxed{
+\Omega\left(
+\sqrt{\kappa_D}\,
+{D^{1/8}\over\sqrt{Z_D+1}}
+\right)
+}
+\tag{TC.5}
+```
+
+shared-trunk gates or independent planar cycles. With the canonical choice
+
+```math
+\kappa_D\ge\sqrt{Z_D+1},
+```
+
+this is at least
+
+```math
+\boxed{
+\Omega\left({D^{1/8}\over(Z_D+1)^{1/4}}\right)
+\longrightarrow\infty
+}
+\tag{TC.6}
+```
+
+under `Z_D=o(sqrt(D))`.
+
+The metric information is unchanged by this purely graph-theoretic extraction. Every selected common-trunk edge still satisfies
+
+```math
+1<|e|\le1+{K\over D}
+\tag{TC.7}
+```
+
+and is an exact lower gate in each of the two separated reflection repairs. Every edge of `H`, selected or not, is a lower-gate source pair of length below
+
+```math
+1+h_*+o(1)<\sqrt2,
+```
+
+so the union is embedded in the common plane short-edge graph and the face count in CYCLE-RANK is an actual geometric planar face count, not an abstract crossing drawing.
+
+This produces a sharper residual seam:
+
+- `COMMON-TRUNK` is a genuine shared inactive corridor used by both support directions, containing a growing inverse-`D` matching;
+- `CYCLE-RANK` forces a growing number of bounded regions in the union of only two outer-face all-lower paths.
+
+The next useful geometric step can treat these separately. On the trunk side, compare the common path's support progress in the two separated normals. On the cycle side, charge the resulting bounded inactive regions against outer-face area/detour or show that repeated divergence/rejoining creates an active-core gate.
+
+---
+
+## 1. The intersection of two simple paths is a forest
+
+Both `P` and `Q` are simple paths. Any subgraph of a path is a forest, so
+
+```math
+I=P\cap Q
+```
+
+is a disjoint union of path components and isolated vertices. Let
+
+```math
+c(I)
+```
+
+be its number of connected components.
+
+Every selected edge of `mathcal M` belongs to `I`.
+
+If one component contains at least `s` selected edges, COMMON-TRUNK holds.
+
+Otherwise each component of `I` contains fewer than `s` selected edges. Since there are `q` selected edges total,
+
+```math
+\boxed{c(I)\ge q/s.}
+\tag{TC.8}
+```
+
+Integer ceilings only strengthen this bound up to the harmless final `-1` in (TC.2).
+
+---
+
+## 2. Exact Euler-characteristic identity for a union of two paths
+
+For a finite graph `G`, write
+
+```math
+\chi(G)=|V(G)|-|E(G)|.
+```
+
+Graph Euler characteristic satisfies inclusion-exclusion:
+
+```math
+\chi(P\cup Q)
+=
+\chi(P)+\chi(Q)-\chi(P\cap Q).
+\tag{TC.9}
+```
+
+Each nonempty simple path has Euler characteristic one, while the forest `I` has
+
+```math
+\chi(I)=c(I).
+```
+
+The paths share the selected matching, so their union `H=P union Q` is connected. Therefore
+
+```math
+\begin{aligned}
+\beta(H)
+&=|E(H)|-|V(H)|+1\\
+&=1-\chi(H)\\
+&=1-(2-c(I))\\
+&=c(I)-1.
+\end{aligned}
+\tag{TC.10}
+```
+
+Combining (TC.8) and (TC.10) proves
+
+```math
+\beta(H)\ge q/s-1.
+```
+
+This identity is exact; no geometric estimate is used.
+
+---
+
+## 3. Plane embedding converts cycle rank into bounded faces
+
+Every edge of `P` and `Q` is a lower gate. The global short-edge theorem places all lower-gate edges in one plane straight-line graph. Hence `H` is connected and plane.
+
+Euler's plane formula gives
+
+```math
+|V(H)|-|E(H)|+|F(H)|=2.
+```
+
+Thus
+
+```math
+|F(H)|-1
+=|E(H)|-|V(H)|+1
+=\beta(H).
+\tag{TC.11}
+```
+
+The left side is exactly the number of bounded faces. This proves (TC.3).
+
+---
+
+## 4. Small-external scaling
+
+The preceding common-run theorem gives
+
+```math
+q
+=\Omega\left({\kappa_DD^{1/4}\over Z_D+1}\right).
+```
+
+Taking square roots yields (TC.5). Because
+
+```math
+\kappa_D\ge\sqrt{Z_D+1},
+```
+
+one obtains (TC.6). Finally,
+
+```math
+{D^{1/8}\over(Z_D+1)^{1/4}}\to\infty
+```
+
+is equivalent to `Z_D=o(sqrt(D))`.
+
+C-II remains open. No theorem-state authority is changed.
+
+**Disposition:** gave an exact two-path Euler-characteristic fork: the two common FREE lower runs either share a long contiguous trunk carrying many selected inverse-`D` gates, or their union has diverging cycle rank and hence diverging bounded-face count.

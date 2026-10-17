@@ -1,0 +1,132 @@
+> Generated reading edition · [exact source](../../research/target_c_tooth_reflection_tangent_upper_gate_vanishing_slack_2026-09-17.md) · source SHA-256 `fb49e3b623c2c9cb04e9e7aeb0a823bd9b731f9e6f903b3b6e64bb113c5545cf`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "db40f74e6a90d1bc6c13423687daf8960e7cd7d4", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_tangent_upper_gate_vanishing_slack_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "1cd3b37c5477ef1416533553309f793dd46fe3eb6868e44e3f1ca83b07305541"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — a pre-center reflection upper gate has vanishing diameter slack
+
+**Date:** 2026-09-17  
+**Status:** proved candidate awaiting promotion; proof-only sharpening of the central-plane / upper-gate reduction  
+**Scope:** the first upper-gate event occurring before a FREE ancestry crosses its module circumcenter support plane  
+**Dependencies:** central-plane / upper-gate dichotomy; fixed-slack midpoint theorem  
+**Certificate:** `research/verify_target_c_tooth_reflection_tangent_upper_gate_vanishing_slack_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The central-plane reduction initially records a first upper gate only as an original pair in `(D-0.34,D)`. The event equation and the pre-center midpoint geometry imply much more: its additive diameter slack tends to zero at the inverse-quarter scale.
+
+Let `p` be the original position of the moving old-inactive vertex, let `v` be the still-fixed source endpoint, let
+
+```math
+r=p-v,\qquad \ell=|r|,
+```
+
+and let `tau` be the amount by which `p` has moved when the first upper equality occurs:
+
+```math
+|r-\tau N|=D,
+\qquad
+0<\tau\le t_D=\delta+D^{-1/3}.
+\tag{VS.1}
+```
+
+The existing reflection geometry gives
+
+```math
+0<\delta<h_*={\sqrt{303}\over52},
+```
+
+and hence
+
+```math
+\tau\le h_*+D^{-1/3}.
+\tag{VS.2}
+```
+
+The central-plane theorem already proves
+
+```math
+D-C_g<\ell<D,
+\qquad C_g={17\over50},
+\tag{VS.3}
+```
+
+and, for the midpoint `m=(p+v)/2`,
+
+```math
+|m-o|
+\le L_{g,D}
+:=\sqrt{D\eta_D+\eta_D^2+{C_gD\over2}}
+=(3^{1/8}+o(1))D^{3/4},
+\tag{VS.4}
+```
+
+where `eta_D=3^(1/4)sqrt D`.
+
+Because the event occurs before the support plane through `o` is crossed,
+
+```math
+N\cdot(p-o)\ge0.
+```
+
+Writing `p-o=(m-o)+r/2` gives
+
+```math
+N\cdot r\ge-2L_{g,D}.
+\tag{VS.5}
+```
+
+Now square (VS.1):
+
+```math
+D^2=\ell^2-2\tau N\cdot r+\tau^2.
+```
+
+Therefore
+
+```math
+(D-\ell)(D+\ell)
+=\tau^2-2\tau N\cdot r
+\le \tau^2+4\tau L_{g,D}.
+\tag{VS.6}
+```
+
+Using (VS.2)--(VS.4) and `D+ell>2D-C_g`,
+
+```math
+\boxed{
+0<D-\ell
+\le
+\left(2h_*3^{1/8}+o(1)\right)D^{-1/4}.
+}
+\tag{VS.7}
+```
+
+The leading constant is
+
+```math
+\boxed{
+2h_*3^{1/8}
+=0.768047576501694\ldots .
+}
+\tag{VS.8}
+```
+
+Thus every `TANGENT-INACTIVE` edge in the current source-wide four-way reduction is actually a `D-o(1)` pair:
+
+```math
+\boxed{
+D-(0.7680475766\ldots+o(1))D^{-1/4}
+<|p-v|<D.
+}
+\tag{VS.9}
+```
+
+It retains all the other tangent-braid properties proved in the central-plane theorem: both endpoints are old fully inactive source points, different slow-scale modules give pairwise vertex-disjoint edges, the edges cross pairwise, and all crossings lie in an `O(D/kappa_D)` common central core.
+
+So the `TANGENT-INACTIVE` survivor is no longer merely a fixed-slack approximate diameter braid. It is a vertex-disjoint, pairwise-crossing braid of inactive source pairs whose additive slack from the true diameter is `O(D^-1/4)`.
+
+This does not promote the edges to actual diameters. The remaining missing step is still variational: show that a growing inactive `D-O(D^-1/4)` central braid can be moved so as to reduce the canonical source, or force exact diameter equalities from its interaction with the active force hull.
+
+**Disposition:** sharpened the pre-center upper-gate slack from a fixed `0.34` to `(0.7680475766...+o(1))D^-1/4`. C-II remains open.

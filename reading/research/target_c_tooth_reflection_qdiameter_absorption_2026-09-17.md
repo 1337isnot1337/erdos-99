@@ -1,0 +1,466 @@
+> Generated reading edition · [exact source](../../research/target_c_tooth_reflection_qdiameter_absorption_2026-09-17.md) · source SHA-256 `629c4b31dda6e9aac283df515a0b3c2bde180ab08c44ebe5fdb7071c6de4c3a7`.
+> [Current theorem state](../docs/STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- migration-provenance: {"destination_status": "historical_unreviewed_noncanonical", "source_blob": "28deb147c0c431a702c6ac77221256f3f22258d9", "source_canonical": null, "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73", "source_lifecycle": "not_indexed_first_party_source_material", "source_path": "research/target_c_tooth_reflection_qdiameter_absorption_2026-09-17.md", "source_repository": "https://github.com/1337isnot1337/e-99", "source_sha256": "48cafbf93c8f2af13b6a9139e0f20314cc2025649d20d2a542013f286f7ded3a"} -->
+
+> **Imported source research; no destination claim is promoted.** Source lifecycle is recorded in this ledger; destination status remains unreviewed/noncanonical.
+
+# Target C-II — reflected `q`-diameter witnesses are already source-diameter anchors
+
+**Date:** 2026-09-17  
+**Status:** proved candidate awaiting promotion; proof-only strengthening of the FREE-MODULE finite-repair branch  
+**Scope:** FREE reflection modules at `eta=3/26` after the `CORE-GATE / Q-DIAMETER / TRIPLE-GATE` reduction  
+**Dependencies:** module-anchor dichotomy; C26 unloaded-contact barycenter theorem; C65 full diameter visibility; free-module `q`-slack trichotomy; full-source diameter midpoint localization; slow-scale module separation; convex diameter-thrackle property  
+**Certificate:** `research/verify_target_c_tooth_reflection_qdiameter_absorption_2026_09_17.py`  
+**LEVEL I STATUS:** `STILL OPEN. C-II REMAINS OPEN.`
+
+The `Q-DIAMETER` endpoint of the current FREE-module repair is not a genuinely new obstruction. If an unmoved original source point `r` satisfies
+
+```math
+|q-r|=D,
+```
+
+then `r` must already be an endpoint of an **actual source diameter edge**. Otherwise the equality can be removed by moving the fully inactive witness slightly toward `q`, after which the existing base-opening perturbation again contradicts contact minimality.
+
+Consequently the source-wide reflection branch now has only three effective outcomes:
+
+```math
+\boxed{
+\text{EXACT-BRAID}
+\quad\text{or}\quad
+\text{CORE-GATE}
+\quad\text{or}\quad
+\text{TRIPLE-GATE}.
+}
+\tag{QD.1}
+```
+
+The apparent reflected-only `Q-DIAMETER` branch folds into `EXACT-BRAID`.
+
+---
+
+## 1. Setup
+
+Fix one FREE reflection module. Use the current notation
+
+```math
+U=\{z\in A:|z-q|>D\},
+```
+
+where every blocker is active-constraint-free in the original source:
+
+```math
+\boxed{
+\deg_C(z)=\deg_H(z)=0
+\qquad(z\in U).
+}
+\tag{QD.2}
+```
+
+Run the finite blocker repair from the `q`-slack theorem through at most two inactive lower gates. Suppose neither `CORE-GATE` nor `TRIPLE-GATE` has occurred and that the surviving obstruction is
+
+```math
+\boxed{|q-r|=D}
+\tag{QD.3}
+```
+
+for some **unmoved** original source point `r`.
+
+The existing `q`-slack theorem already localizes such an equality witness to the blocker shore. If `y` is the canonical farthest blocker, then
+
+```math
+\boxed{|r-y|=O(D^{3/4})}
+\tag{QD.4}
+```
+
+and the ray `qr` follows the module normal to angular error `O(D^{-1/4})`.
+
+The issue is whether `r` might be an old inactive rattler. It cannot.
+
+---
+
+## 2. A nonloaded contact vertex cannot lie on the reflected diameter circle
+
+Assume first that `r` is not an actual source-diameter endpoint, but has at least one unit contact.
+
+By C26, `r` is then a strict positive barycenter of its contact neighbors. Thus there are coefficients
+
+```math
+\lambda_{ru}>0
+\qquad(u\sim_C r)
+```
+
+such that
+
+```math
+\sum_{u\sim_C r}\lambda_{ru}(u-r)=0.
+\tag{QD.5}
+```
+
+Put
+
+```math
+e={r-q\over D}.
+```
+
+For every unit-contact neighbor `u` of `r`, the exact distance identity gives
+
+```math
+\begin{aligned}
+e\cdot(u-r)
+&={|u-q|^2-|r-q|^2-|u-r|^2\over2|r-q|}\\
+&={|u-q|^2-D^2-1\over2D}.
+\end{aligned}
+\tag{QD.6}
+```
+
+A contact neighbor cannot belong to `U`, because every point of `U` has contact degree zero by (QD.2). Hence
+
+```math
+|u-q|\le D.
+```
+
+Therefore every term in (QD.6) satisfies the **strict** sign bound
+
+```math
+\boxed{
+e\cdot(u-r)\le-{1\over2D}<0.
+}
+\tag{QD.7}
+```
+
+Dotting (QD.5) with `e` now gives a strictly negative sum, contradiction.
+
+Thus
+
+```math
+\boxed{
+r\notin V(H)
+\Longrightarrow
+\deg_C(r)=0.
+}
+\tag{QD.8}
+```
+
+By C65 full diameter visibility, every contact-isolated source point is fully inactive. Hence under the same assumption,
+
+```math
+\boxed{
+1<|r-v|<D
+\quad\text{for every original source point }v\ne r.
+}
+\tag{QD.9}
+```
+
+So a nonloaded `Q-DIAMETER` witness would be a canonical fully inactive rattler.
+
+---
+
+## 3. An inactive equality witness can be moved away
+
+Assume for contradiction that `r` is fully inactive.
+
+Let `M` be the blocker/guard cluster after the at-most-two-gate clearing motion and before replacing `x` by `q`.
+
+Every point of `M` remains in the same `O(\sqrt D)` support cap used by the absorbed-guard proof. Together with (QD.4) and the cap transverse bound, this gives
+
+```math
+|r-p|=O(D^{3/4})<D
+\qquad(p\in M)
+\tag{QD.10}
+```
+
+for all sufficiently large `D`.
+
+The lower inequality is also strict. If some moving point had met `r` at unit distance during the clearing motion, then `r`, being an old contact isolate, would itself have been an inactive lower gate and would have been absorbed. But `r` is the surviving **unmoved** equality witness. Hence
+
+```math
+|r-p|>1
+\qquad(p\in M).
+\tag{QD.11}
+```
+
+Every still-fixed original point keeps its original distance from `r`, so (QD.9) gives strict lower and upper slack there as well.
+
+After replacing `x` by `q`, therefore, the only non-strict distance incident to `r` is precisely
+
+```math
+|q-r|=D.
+\tag{QD.12}
+```
+
+Because the configuration is finite, all other distances incident to `r` have a positive minimum slack from both `1` and `D`.
+
+Move `r` a sufficiently small distance toward `q`:
+
+```math
+r_\varepsilon:=r-\varepsilon e,
+\qquad
+0<\varepsilon\ll1.
+\tag{QD.13}
+```
+
+Then
+
+```math
+|q-r_\varepsilon|=D-\varepsilon<D,
+\tag{QD.14}
+```
+
+while, by the positive finite slack just noted,
+
+```math
+1<|r_\varepsilon-v|<D
+\tag{QD.15}
+```
+
+for every other vertex `v` of the repaired configuration.
+
+Thus `r` can be moved without creating or preserving any active lower or upper constraint.
+
+---
+
+## 4. Once `qr` is strict, the existing base-opening contradiction applies
+
+After (QD.13), every nonbase distance from `q` is strict on both sides. The moved blocker/guard cluster was already strict at `q` by the `q`-slack clearing theorem, and (QD.14) removes the only remaining upper equality.
+
+Use the existing tooth coordinates
+
+```math
+a=p-ct,
+\qquad
+b=p+ct,
+\qquad
+q=p-hn,
+\qquad
+c^2+h^2=1,
+```
+
+and move the reflected apex slightly farther across the base:
+
+```math
+q_\eta=q-\eta n,
+\qquad
+\eta>0.
+\tag{QD.16}
+```
+
+Then
+
+```math
+|q_\eta-a|^2=|q_\eta-b|^2
+=1+2h\eta+\eta^2>1,
+\tag{QD.17}
+```
+
+so both base contacts open. Choosing `eta` sufficiently small preserves every other strict inequality, including the newly created slack (QD.14).
+
+Let
+
+```math
+d=\deg_C(x)\ge3
+```
+
+and let `k<=2` be the number of inactive gate edges accumulated before the `Q-DIAMETER` endpoint. The final contact count is
+
+```math
+|C'|=|C|-d+k<|C|.
+\tag{QD.18}
+```
+
+The final source is still triangle-free because at most two new gate edges were created, all among old contact isolates, and `q_eta` has no unit contacts.
+
+It is unit-separated and has diameter at most `D`; global optimality forces diameter exactly `D`. Equation (QD.18) contradicts primary contact minimality.
+
+Hence the assumption that `r` was inactive is impossible.
+
+Combining with Section 2 gives the exact conclusion
+
+```math
+\boxed{
+|q-r|=D
+\quad\Longrightarrow\quad
+r\in V(H).
+}
+\tag{QD.19}
+```
+
+Every surviving `Q-DIAMETER` witness is already an actual source-diameter endpoint.
+
+---
+
+## 5. The actual source diameter attached to `r` has the same module localization
+
+Choose any actual diameter partner `s` of `r`:
+
+```math
+|r-s|=D.
+\tag{QD.20}
+```
+
+Let
+
+```math
+m={r+s\over2}.
+```
+
+The full-source midpoint theorem gives
+
+```math
+|m-o|=O(D^{3/4}).
+\tag{QD.21}
+```
+
+The blocker-shore localization (QD.4), together with the simultaneous-reflection geometry, gives
+
+```math
+(r-o)+(q-o)=O(D^{3/4}).
+\tag{QD.22}
+```
+
+Therefore
+
+```math
+\begin{aligned}
+s-q
+&=2(m-o)-(r-o)-(q-o),
+\end{aligned}
+```
+
+and hence
+
+```math
+\boxed{|s-q|=O(D^{3/4}).}
+\tag{QD.23}
+```
+
+Likewise, orienting the module normal `n` toward the blocker shore,
+
+```math
+\boxed{
+\angle(r-s,n)=O(D^{-1/4}).
+}
+\tag{QD.24}
+```
+
+Thus a `Q-DIAMETER` module contributes an actual source diameter with exactly the same two-cap localization as an ANCHORED module:
+
+- one endpoint lies in the blocker-side `O(D^{3/4})` cap;
+- the opposite endpoint lies in the reflected-apex `O(D^{3/4})` cap;
+- the exact diameter direction follows the module normal to `O(D^{-1/4})`.
+
+---
+
+## 6. Mixed ANCHORED and Q-DIAMETER modules form one exact braid
+
+Take any slow-scale family with
+
+```math
+\kappa_D\to\infty,
+\qquad
+\kappa_D=o(D^{1/4}).
+```
+
+Distinct module caps are separated at scale
+
+```math
+\Omega(\kappa_DD^{3/4}),
+\tag{QD.25}
+```
+
+while every endpoint localization error in Section 5 and the existing ANCHORED theorem is only `O(D^{3/4})`.
+
+Consequently, choosing one actual source diameter from every ANCHORED or Q-DIAMETER module gives pairwise vertex-disjoint edges for sufficiently large `D`. Their directions differ according to the module-normal spacing
+
+```math
+\Omega(\kappa_DD^{-1/4}).
+\tag{QD.26}
+```
+
+The planar diameter graph is a convex geometric thrackle, so every two selected edges cross properly.
+
+The standard midpoint/line-angle estimate then places all crossings in
+
+```math
+\boxed{
+B\!\left(o,O(D/\kappa_D)\right)=B(o,o(D)).
+}
+\tag{QD.27}
+```
+
+Thus ANCHORED and Q-DIAMETER modules belong to one common `EXACT-BRAID` class; they do not require separate treatment.
+
+---
+
+## 7. Source-wide three-way reduction
+
+The slow-scale reflection theorem supplies
+
+```math
+M_D>
+(c_*-o(1)){D^{1/4}\over\kappa_D},
+\qquad
+c_*=0.129220199818177\ldots .
+\tag{QD.28}
+```
+
+Every selected module now belongs to one of only three effective classes:
+
+1. `EXACT-BRAID`: either originally ANCHORED or FREE/Q-DIAMETER, hence supplying one localized actual source diameter;
+2. `CORE-GATE`: the finite lower repair reaches the old nonisolated contact core;
+3. `TRIPLE-GATE`: three inactive lower gate edges are forced.
+
+Therefore one class contains at least
+
+```math
+\boxed{
+\left({c_*\over3}-o(1)\right){D^{1/4}\over\kappa_D}
+}
+\tag{QD.29}
+```
+
+modules, where
+
+```math
+\boxed{
+{c_*\over3}
+=0.0430733999393923\ldots .
+}
+\tag{QD.30}
+```
+
+If the first class wins, all selected actual diameters are vertex-disjoint and pairwise crossing in the common `O(D/kappa_D)` central core.
+
+For any subpolynomial divergent `kappa_D=D^{o(1)}`, each surviving branch has size
+
+```math
+D^{1/4-o(1)}.
+```
+
+The reflected-only equality branch is gone.
+
+---
+
+## 8. Frontier effect
+
+The current reflection branch is now
+
+```text
+slow-scale shallow-tooth module
+    |
+    +-- exact source-diameter anchor
+    |      -> actual diameter edge
+    |      -> mixed anchored/Q witness family is one exact central braid
+    |
+    +-- FREE finite repair
+           |
+           +-- CORE-GATE
+           |      -> repair reaches the old force-visible contact core
+           |
+           +-- TRIPLE-GATE
+                  -> three lower gate edges among old inactive rattlers
+```
+
+The next clean local seam is therefore the `TRIPLE-GATE` geometry. In particular, after the equality branch is removed, a FREE repair can avoid the old contact core only by creating at least three genuinely new lower constraints among old fully inactive vertices.
+
+**Disposition:** proved that every FREE-module `Q-DIAMETER` witness is an endpoint of an actual source diameter, localized its actual diameter partner to the reflected-apex cap, and merged those modules with the existing anchored exact-braid branch. C-II remains open.

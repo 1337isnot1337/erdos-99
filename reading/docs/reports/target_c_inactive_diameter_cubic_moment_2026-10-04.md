@@ -1,0 +1,434 @@
+> Generated reading edition · [exact source](../../../docs/reports/target_c_inactive_diameter_cubic_moment_2026-10-04.md) · source SHA-256 `013ea08980a06e05c77ea99cf98f15479d750dba429091e0bed7cfac3f00d172`.
+> [Current theorem state](../STATE.md) controls lifecycle and scope; historical claims retain their recorded status.
+
+<!-- theorem-state: {"artifact_id":"ART-EDE884D168AE","canonical":true,"claim_ids":["C-GLOBAL-NEAR-DIAMETER-PHASE-PURITY","C-INACTIVE-NEAR-DIAMETER-CUBIC-BUDGET","C-INACTIVE-NEAR-DIAMETER-DEGREE-REGRESSION","C-INVERSE-D-SCALE-PACKET-MATCHING"],"claim_statuses":{"C-GLOBAL-NEAR-DIAMETER-PHASE-PURITY":"canonical","C-INACTIVE-NEAR-DIAMETER-CUBIC-BUDGET":"canonical","C-INACTIVE-NEAR-DIAMETER-DEGREE-REGRESSION":"regression","C-INVERSE-D-SCALE-PACKET-MATCHING":"canonical"},"index":"docs/state/artifact-index.jsonl","status":"mixed","target":"target-c"} -->
+# Target C: a global cubic budget for inverse-D near-diameter pairs
+
+Date: 2026-10-04. Base: `419c9bec2ed8fa2cc105a80803a279339e7bea9e`.
+State: `2026-09-14.audit.51`.
+Branch: `swarm/sol/inactive-diameter-cubic-moment-20261004`.
+Source classification at the frozen author snapshot: proved candidate awaiting
+independent audit and promotion; repository lifecycle was unreviewed. Current
+claim-by-claim dispositions are recorded in the linked independent audit. The
+THIN application and other proof-only packet dependencies remain conditional.
+C-II and Level I remain open.
+**Independent audit:** [Audit.126](../audits/target_c_inactive_diameter_cubic_budget_independent_audit_2026-10-08.md).
+
+This concerns **all** source pairs of length at least `D-c/D`, including inactive
+pairs. It does not assign them diameter rows or KKT weights. Every source point,
+including contact isolates, is retained.
+
+The implication chain is
+
+`near-diameter support caps -> bounded normal-interval overlap -> additive
+cubic degree budget -> every linear packet has a square-root matching -> no
+sub-square-root partner concentration in the THIN rich-cut packet`.
+
+This eliminates a concentration escape, not the inverse-D branch itself. The
+nonconstant condensation alternative supplies only one near-active pair; a
+linear packet is an additional obligation there.
+
+## 1. Statements and dependencies
+
+Let A be a finite planar unit-separated set of diameter D, and put
+
+```math
+K=\operatorname{conv}A,\qquad
+\delta_K={\pi D^2\over4}-\operatorname{area}K.
+```
+
+Fix c>0 and define the simple undirected graph
+
+```math
+H_c=\{xy\subset A:|x-y|\ge D-c/D\},\qquad d_c(v)=\deg_{H_c}(v).
+\tag{1}
+```
+
+Assume D>=max{2,4 sqrt(c),2c}, and set
+
+```math
+B_c=1+\lceil20\sqrt c\rceil,\quad M_c=2(4\sqrt c+1)^2,
+\quad C_c=768\pi\sqrt3 M_c.
+\tag{2}
+```
+
+**Finite geometric theorem:**
+
+```math
+\boxed{\sum_{v:d_c(v)>B_c}(d_c(v)-1)^3\le3072M_cD\delta_K.}
+\tag{3}
+```
+
+For a noncollinear global minimum-diameter source, canonical Section 58, Section 1 gives
+delta_K < (pi sqrt(3)/4)D. Thus
+
+```math
+\boxed{\sum_v(d_c(v)-B_c)_+^3<C_cD^2.}
+\tag{4}
+```
+
+**Global packet theorem:** for any subgraphs F_D of H_c in global minimizing
+sources, if |E(F_D)| >= (kappa-o(1))D for fixed kappa>0, then
+
+```math
+\boxed{\liminf_{D\to\infty}{\nu(F_D)\over\sqrt D}
+\ge{\kappa^{3/2}\over2\sqrt{C_c}}>0.}
+\tag{5}
+```
+
+Here nu is maximum matching size. Constants are uniform over the subgraphs.
+
+The only canonical Target C input is the full-source area allowance in
+[Section 58](../targets/target-c/58-full-source-geometry-audit.md).
+It applies without triangle-freeness, ZR/ZF, contact minimality, or Type II.
+
+The planar constant-width completion is used, but it does not follow from
+KMW Theorem 0.1, whose stated hypothesis is a Hamiltonian diameter graph. We
+reconstruct completion directly: among compact convex supersets of K with
+diameter at most D, choose a maximal one by Zorn's lemma (all lie in a fixed
+D-ball, and the closure of the union of a chain is an upper bound). If a
+boundary point had no diametral partner, it would have positive distance
+margin from every point of the body; a sufficiently small outward displacement
+could then be added while preserving diameter at most D, contradicting
+maximality. Thus every boundary point is incident with a diameter. The planar
+characterization stated in the introduction and Proposition 1.3 of Kupitz,
+Martini, and Wegner, *A Linear-Time Construction of Reuleaux Polygons* (1996),
+then gives constant width D. Their p. 421 proof of Theorem 0.1 also invokes
+the completion statement for arbitrary planar diameter-D sets, explicitly
+citing Eggleston, Theorem 54, p. 126. We use no uniqueness. [KMW original
+article](https://emis.de/ft/11518).
+
+The October [actual-star cubic report](target_c_global_diameter_star_cubic_budget_2026-10-02.md)
+already proves an actual-diameter cubic budget using disjoint normal intervals.
+Its mechanism is reconstructed here. Inactive near-star intervals overlap;
+their disjointness cannot be imported. The new steps are approximate support,
+bounded overlap, and payment of the curvature error.
+
+## 2. Approximate support and angular separation
+
+Choose any constant-width-D completion W. Write its support function as h,
+put R=D/2, and define p=h-R, rho=h+h'', f=p+p''=rho-R.
+Constant width gives p(theta+pi)=-p(theta) and, in curvature measures,
+rho(theta)+rho(theta+pi)=D. Nonnegativity of both measures gives a density
+0<=rho<=D. Hence h belongs to W^{2,infinity}; it is continuously differentiable
+and has a unique support point in every normal direction.
+
+Fix v with at least two H_c neighbors, and put epsilon=c/D. For a neighbor q,
+r=|v-q|, n=(v-q)/r, constant width and q in W give
+
+```math
+0\le h(n)-v\cdot n\le D-r\le\epsilon.                 \tag{6}
+```
+
+All near-partner rays lie in one ordinary angular interval of length theta_v
+less than pi/2. Indeed, for two lengths in [D-epsilon,D], the diameter bound gives
+
+```math
+\cos\alpha\ge1-{D^2\over2(D-\epsilon)^2}>0.           \tag{7}
+```
+
+The cosine expression is increasing in each ray length in this range, so its
+minimum occurs at two lengths D-epsilon. We used epsilon/D<=1/16. Lift all
+rays relative to one ray into an interval of width less than pi. The extreme
+rays must themselves have separation less than pi/2. Let I_v be the interval
+between those extremes, rotated to (-a_v,a_v), with a_v=theta_v/2.
+
+Sublinearity of h, expressed using the two endpoint normals with coefficients
+sin(a_v-t)/sin(2a_v) and sin(a_v+t)/sin(2a_v), gives
+
+```math
+0\le y_v(t):=h(t)-v\cdot n(t)
+\le\epsilon{\cos t\over\cos a_v}\le2\epsilon.          \tag{8}
+```
+
+Distinct neighbors are unit-separated and their radii differ by at most epsilon:
+
+```math
+1\le|q-q'|^2\le\epsilon^2+4D^2\sin^2(\alpha/2).
+```
+
+Since epsilon<=1/2, every consecutive ray gap exceeds 1/(2D). Thus
+
+```math
+\boxed{\theta_v\ge(d_c(v)-1)/(2D).}                     \tag{9}
+```
+
+## 3. Bounded overlap
+
+Let z(n) be W's support point at n. Differentiating the width identity gives
+z(n)-z(-n)=Dn. For any x in the support cap h(n)-x dot n<=2epsilon, write
+x=z(n)-tn+sJn, with 0<=t<=2epsilon. Because diam(W)=D,
+
+```math
+(D-t)^2+s^2\le D^2,\qquad
+|x-z(n)|^2\le2Dt\le4c.                                  \tag{10}
+```
+
+This cap's source points lie in a radius-2sqrt(c) disk. Their disjoint open
+radius-1/2 disks fit in the concentric radius-(2sqrt(c)+1/2) disk, so their
+number is at most (4sqrt(c)+1)^2.
+
+For n in I_v, (8) puts v in this cap. For n in I_v+pi it puts v in the
+antipodal cap. Therefore all paired intervals I_v union (I_v+pi) have essential
+overlap multiplicity at most M_c. This counts every source vertex; near-pair
+endpoints need not be hull vertices or loaded.
+
+## 4. Curvature error and aggregate energy
+
+On I_v define g_v(t)=cos(t)/cos(a_v)-1, on I_v+pi use its negative, and elsewhere
+use zero. It is antiperiodic and in H^1. Put k_v=tan(a_v)-a_v. Direct integration gives
+
+```math
+E(g_v):=\int[(g_v')^2-g_v^2]=4k_v,\qquad
+\int(g_v')^2=2(a_v\sec^2a_v-\tan a_v)\le8k_v.             \tag{11}
+```
+
+For the last inequality, t=tan(a_v)<=1 reduces it to
+F(t)=5t-(t^2+5)atan(t)>=0. F(0)=0 and atan(t)<=t give
+
+```math
+F'(t)={4t^2\over1+t^2}-2t\arctan t
+\ge {2t^2(1-t^2)\over1+t^2}\ge0.                         \tag{12}
+```
+
+On I_v, y_v+y_v''=rho and g_v''+g_v=-1. Integration by parts gives
+
+```math
+\int_{I_v}\rho g_v
+=\tan a_v[y_v(-a_v)+y_v(a_v)]-\int_{I_v}y_v
+\le2\epsilon\tan a_v.                                    \tag{13}
+```
+
+Here the endpoint bound epsilon from (6) is retained. Since int_{I_v}g_v=2k_v,
+antiperiodicity gives
+
+```math
+-\langle f,g_v\rangle\ge2Dk_v-4\epsilon\tan a_v
+\ge2Dk_v-8\epsilon a_v.                                  \tag{14}
+```
+
+We used tan(a)<=2a on [0,pi/4], from sec^2(a)<=2. Also k_v>=a_v^3/3,
+by integrating tan^2(a)>=a^2.
+
+Call v heavy if d_c(v)>B_c. By (9), a_v>5sqrt(c)/D, so a_v^2>=24epsilon/D.
+Thus Dk_v>=8epsilon a_v and
+
+```math
+-\langle f,g_v\rangle\ge Dk_v\quad(v\text{ heavy}).       \tag{15}
+```
+
+Set g=sum_{heavy v}g_v and S=sum_{heavy v}k_v. Pointwise Cauchy--Schwarz,
+the M_c overlap bound, and (11) give
+
+```math
+E(g)\le\int(g')^2\le M_c\sum_v\int(g_v')^2\le8M_cS.      \tag{16}
+```
+
+On antiperiodic H^1 functions E is positive semidefinite: Fourier frequencies
+are odd integers and its eigenvalues are j^2-1>=0. Its kernel consists of
+translation first harmonics. The support-area identity gives
+
+```math
+E(p)=2\delta_W,\quad
+\delta_W={\pi D^2\over4}-\operatorname{area}W\le\delta_K.
+```
+
+Polarization gives E(p,g)=-<f,g>; semidefinite Cauchy--Schwarz then gives
+
+```math
+\langle f,g\rangle^2\le2\delta_WE(g).                    \tag{17}
+```
+
+If S>0, (15)--(17) imply D^2 S^2<=16M_c delta_K S, hence
+
+```math
+S\le16M_c\delta_K/D^2.                                   \tag{18}
+```
+
+Finally k_v>=theta_v^3/24>=(d_c(v)-1)^3/(192D^3). Sum over heavy v
+and use (18) to prove (3). If S=0, the assertion is immediate. Canonical
+delta_K<(pi sqrt(3)/4)D proves (4). The actual-star report was not a premise.
+
+## 5. Matching and distinct-partner bounds
+
+The truncated cubic bound is inherited by any subgraph F of H_c. For a vertex
+cover T of size r, every edge has an endpoint in T, so Holder gives
+
+```math
+|E(F)|\le\sum_{v\in T}\deg_F(v)
+\le B_cr+C_c^{1/3}r^{2/3}D^{2/3}.                         \tag{19}
+```
+
+Maximum-matching endpoints form a cover, so use r=2nu(F). On any subsequence
+with nu(F_D)/sqrt(D) tending to a finite l, division by D gives
+kappa<=C_c^{1/3}(2l)^{2/3}. If no such subsequence exists the liminf is infinite.
+This proves (5), with the stated uniform quantifiers.
+
+For an owned bipartite packet with distinct owners, one selected pair per
+owner, and partners on the opposite shore, the distinct partner set is a
+cover. Selecting one pair per partner is a matching. If its size is r and
+the packet has at least (kappa-o(1))D edges, (19) gives the stronger bound
+
+```math
+\boxed{\liminf r/\sqrt D\ge\kappa^{3/2}/\sqrt{C_c}.}      \tag{20}
+```
+
+This uses aggregate repetition. The maximum degree bound alone would only
+yield a cube-root matching.
+
+For completeness, the near-unit side has a stronger elementary bound. In a
+unit-separated source, the graph of pairs with length at most 1+c/D has maximum
+degree six once D>=10c. If seven neighbors existed, two consecutive rays would
+have angle at most 2pi/7; their radii differ by at most 1/10 and are at most
+11/10. Using pi<22/7, their squared separation would be at most
+
+```math
+{1\over100}+4(11/10)^2(22/49)^2<1,
+```
+
+a contradiction. A maximum matching's endpoint cover then gives nu>=m/12
+for any m-edge near-unit packet. This bounded-degree step is elementary,
+not a new near-unit matching theorem. It applies to all source vertices.
+
+Thus any linear family of distinct inactive inverse-D near-boundary pairs has
+either a linear near-unit matching or a square-root near-diameter matching,
+after pigeonholing between the two kinds. Neither conclusion supplies the
+missing linear multiplicity from a single condensation witness.
+
+## 6. Global phase purity
+
+For any one near-star, if theta_v^2>=96epsilon/D, (15) holds without a degree
+assumption. Apply (17) to g_v alone: D^2 k_v^2<=8delta_K k_v, so
+theta_v^3<=192delta_K/D^2. Otherwise its span is already small. Therefore
+
+```math
+\boxed{\theta_v\le\max\{\sqrt{96c}/D,
+(192\delta_K/D^2)^{1/3}\}.}                               \tag{21}
+```
+
+For a noncollinear global minimizer this is at most
+max{sqrt(96c)/D,(48 pi sqrt(3)/D)^{1/3}}=o(1), uniformly over all vertices.
+No near-star can straddle two direction families separated by any fixed
+positive projective angle for sufficiently large D.
+
+In particular inverse-phase shores separated by pi/3-4K/D cannot have a common
+near-diameter hub: for D>=24K/pi their separation is at least pi/6, and (21)
+excludes such a hub eventually. This holds in Type I and Type II without
+a rooted wrapping or direction-excess hypothesis.
+
+For actual stars, global phase purity was already implicit in the prior
+actual-star angular-span budget. The [two-phase composition](../../research/target_c_two_phase_star_cubic_exclusion_2026-10-02.md)
+instead used a degree/excess identity and retained a rooted Delta<pi/3
+restriction. That restriction is unnecessary for actual-star phase purity;
+the new result here extends it to inactive near-pairs.
+
+## 7. Conditional upgrade of the synchronized THIN row
+
+Section 5 of the [THIN partner-star report](../../research/target_c_high_t_tb1_thin_partner_star_bandwidth_t18687_2026-09-17.md)
+records a same-row packet T_* with |T_*|>(gamma_0/80-o(1))D,
+gamma_0=791/9600000000. Its owners are distinct, its pairs have length greater
+than D-1/(4D), and all cross the same physical row tau_*. Retaining one owner
+shore gives a bipartite packet of at least (gamma_0/160-o(1))D pairs.
+
+**Assuming that proof-only packet theorem**, apply (20) with c=1/4,
+B_c=11, M_c=18, C_c=13824 pi sqrt(3). The same row contains a matching with
+
+```math
+\boxed{\liminf {M_D^{sync}\over\sqrt D}
+\ge{(\gamma_0/160)^{3/2}\over\sqrt{13824\pi\sqrt3}}>0.}      \tag{22}
+```
+
+Its original train scaffold and tags are retained. The old report only obtained
+Omega(D^{1/4}) from a maximum partner-degree bound. Equation (22) eliminates
+the whole o(sqrt(D)) synchronized matching escape under that packet hypothesis.
+
+Conditional additionally on that report's superdiameter crossing and one-host/
+one-turn thinning inputs, this is a pairwise-crossing matching, and the ordered
+staircase/nested rail also has size Omega(sqrt(D)). Those geometric inputs are
+not premises of (3)--(22). No inactive edge is declared KKT-loaded.
+
+This is an exponent and concentration improvement, not a t-threshold change.
+It gives no contradiction with the permitted Theta(sqrt(D)) outer-walk currency.
+
+The implication does not establish that the older THIN packet hypotheses define
+a nonempty surviving regime. Parallel draft audits [#667](../publication/provenance.md#source-records)
+and [#672](../publication/provenance.md#source-records) challenge the October
+Type-II low-outer-walk collar scope. Their claims have not been imported or
+independently audited here. Resolve the exact scope before using (22) as a live
+high-t frontier; the source-wide statements (3)--(21) do not depend on it.
+
+## 8. Exact regression and hostile checks
+
+For integer D>=64, take v=(0,0), an actual partner (D,0), and for
+0<|i|<=floor(D/5), let r=D-1/(2D) and
+
+```math
+q_i=r\left({1-(i/D)^2\over1+(i/D)^2},
+{2i/D\over1+(i/D)^2}\right).                              \tag{23}
+```
+
+All coordinates are rational. Equal-radius partner chord lengths are at least
+2r/[D(1+1/25)]>1; their tangential distances from (D,0) exceed one. Their
+mutual ray span is less than pi/3, so all mutual partner distances are less than D.
+The source is unit-separated of diameter D. The origin has actual diameter
+degree one but H_1 degree 2floor(D/5)+1.
+
+All points lie in the triangle (0,0),(D,D/2),(D,-D/2), so
+delta_K >= (pi/4-1/2)D^2. The source has n=2floor(D/5)+2 points and n-1<D;
+a collinear n-point competitor proves it nonglobal. This is a regression against
+applying actual-star degree bounds to inactive pairs or discarding the area
+hypothesis, not against the finite deficit-dependent theorem (3).
+
+The [exact verifier](../../../research/verify_target_c_inactive_diameter_cubic_moment_2026_10_04.py)
+checks rational instances, radial separation algebra, the energy derivative
+inequality's polynomial remainder, and the cubic cover/matching reduction on
+finite graphs. Sampling does not certify the analytic theorem, global
+optimality, the THIN extraction, or a source deformation.
+
+Executed finite verification: three rational nonglobal sources; 7,007 exact
+source-pair checks; 176 inactive root pairs; 647 rational algebra checks;
+1,100 finite graphs; 39,675 cover bounds; 3,300 matching bounds. The analytic
+proof, rather than these finite samples, establishes the general theorem.
+
+Hostile checks:
+
+- Approximate intervals overlap; cap packing pays both original and antipodal
+  overlap explicitly. No actual-star disjointness is assumed.
+- The curvature error is integrated in (13) and paid in (14)--(15). Approximate
+  support does not imply zero curvature.
+- Light stars are removed by fixed B_c truncation, then paid in (19).
+- Semidefinite Cauchy--Schwarz uses antiperiodic functions only; translation
+  first harmonics contribute zero to the polarization.
+- Global optimality enters only through the hull deficit; all source points stay.
+- Matching endpoints form a cover by maximality, without any prescribed cover.
+- A linear packet is essential. One near-active condensation witness does not
+  satisfy the packet hypothesis.
+
+## 9. Remaining obligation
+
+The global theorem gives a square-root matching in every linear near-diameter
+packet and makes every near-diameter hub phase-pure. It conditionally eliminates
+the THIN rich-cut packet's sub-square-root matching branch.
+
+Neither gives a unit triangle or a same-cardinality strict sub-D source. The
+condensation route still needs a linear distinct-pair packet or a finite release
+from its single witness. The THIN route must use the **same-row square-root
+endpoint-disjoint packet** and its linear transverse train scaffold to exceed
+allowed face/attachment currency or construct a finite all-constraints competitor.
+
+Near-unit inverse-D pairs, Type-I replacement, the strong port/grid branch, and
+higher-surplus Type-II sources remain open. No canonical state or prompt is changed.
+Independent audit is required before promotion.
+
+## 10. Validation and concurrent state refresh
+
+The exact verifier passed with the counts above. The theorem-state checker
+passed with `/tmp/e99-gpt6-theorem-venv/bin/python` and base ref `419c9bec`;
+system Python lacked `jsonschema`. `git diff --check`, verifier syntax, and all
+five local report links passed. These are consistency checks, not a general
+theorem certificate.
+
+During the run `origin/main` advanced to `d3e6c2e1fdd3abcea10647a0e98d0d780fceae87`.
+The controlling state, manifest, Target C route/current files, and active prompt
+were compared against the recorded base and were unchanged. The two new main
+commits were provenance salvage; their mathematics is not used here.
