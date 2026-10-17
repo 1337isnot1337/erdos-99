@@ -1,0 +1,499 @@
+{
+  "captured_at": "2026-10-17T02:18:39.355Z",
+  "capture_source": "GitHub connector GET branches?per_page=100 and pulls?state=open&per_page=100",
+  "source_main": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+  "candidate_base": "f282d53169df4d507117893bfdcc99f663855923",
+  "branches": [
+    {
+      "name": "audit/target-c-section123-second-referee-20261010",
+      "live_sha": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+      "frozen_sha": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/1afb7e64d47c5619d872d32759b0e01f1526fd5a"
+    },
+    {
+      "name": "automation/e99-target-c-closure-worker",
+      "live_sha": "7c41287726f1c34a282f13c0da613bde15154ccb",
+      "frozen_sha": "7c41287726f1c34a282f13c0da613bde15154ccb",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/7c41287726f1c34a282f13c0da613bde15154ccb"
+    },
+    {
+      "name": "automation/target-c-edgewise-pentagon-opening-barrier-2026-10-05",
+      "live_sha": "17e7722c76a29fee095ceaa293d405ce1e55e736",
+      "frozen_sha": "17e7722c76a29fee095ceaa293d405ce1e55e736",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/17e7722c76a29fee095ceaa293d405ce1e55e736"
+    },
+    {
+      "name": "automation/target-c-one-edge-pentagon-activation-barrier-2026-10-05-v2",
+      "live_sha": "605f42c89b4cbe39789b69bbf2a4307b37b1d64f",
+      "frozen_sha": "605f42c89b4cbe39789b69bbf2a4307b37b1d64f",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/605f42c89b4cbe39789b69bbf2a4307b37b1d64f"
+    },
+    {
+      "name": "automation/target-c-one-edge-pentagon-activation-barrier-2026-10-05",
+      "live_sha": "5d65517cd9c5dd0b0b252b3046d610f87c988fba",
+      "frozen_sha": "5d65517cd9c5dd0b0b252b3046d610f87c988fba",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/5d65517cd9c5dd0b0b252b3046d610f87c988fba"
+    },
+    {
+      "name": "automation/target-c-pentagon-contact-debt-planarity-2026-10-05-v2",
+      "live_sha": "57f508d6427aca7b7fa35eb36d9c66f205d0ce00",
+      "frozen_sha": "57f508d6427aca7b7fa35eb36d9c66f205d0ce00",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/57f508d6427aca7b7fa35eb36d9c66f205d0ce00"
+    },
+    {
+      "name": "automation/target-c-pentagon-contact-debt-planarity-2026-10-05",
+      "live_sha": "c292562bb6c6117ca6acd12a53c9e61bc3bd1c02",
+      "frozen_sha": "c292562bb6c6117ca6acd12a53c9e61bc3bd1c02",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/c292562bb6c6117ca6acd12a53c9e61bc3bd1c02"
+    },
+    {
+      "name": "automation/target-c-short-unit-wall-zero-capacity-2026-10-05-v2",
+      "live_sha": "6756af64ff67d9dfd9cba059b6e27954aca1c8ee",
+      "frozen_sha": "6756af64ff67d9dfd9cba059b6e27954aca1c8ee",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/6756af64ff67d9dfd9cba059b6e27954aca1c8ee"
+    },
+    {
+      "name": "automation/target-c-single-train-collar-zero-surplus-2026-10-05-v2",
+      "live_sha": "5d129524cc9c7bbe65be27ec5d5fb7a18e86098e",
+      "frozen_sha": "5d129524cc9c7bbe65be27ec5d5fb7a18e86098e",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/5d129524cc9c7bbe65be27ec5d5fb7a18e86098e"
+    },
+    {
+      "name": "ci/localized-verification-20261015-a7f3",
+      "live_sha": "d54097cb96b1c5fcbb6eca57843b53e7b8a6dd2e",
+      "frozen_sha": "d54097cb96b1c5fcbb6eca57843b53e7b8a6dd2e",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/d54097cb96b1c5fcbb6eca57843b53e7b8a6dd2e"
+    },
+    {
+      "name": "fix/export-unplanned-files-20261014",
+      "live_sha": "596ef075cdae5683bcc3f7c860ca30f2df993e39",
+      "frozen_sha": "596ef075cdae5683bcc3f7c860ca30f2df993e39",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/596ef075cdae5683bcc3f7c860ca30f2df993e39"
+    },
+    {
+      "name": "main",
+      "live_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+      "frozen_sha": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/42f0296d1aca068c809f74cee5dcdb4ebdb27c73"
+    },
+    {
+      "name": "maintenance/source-reconciliation-15-20261015",
+      "live_sha": "2a6dcb2dffe803a967d3766068ded434f0560185",
+      "frozen_sha": "2a6dcb2dffe803a967d3766068ded434f0560185",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/2a6dcb2dffe803a967d3766068ded434f0560185"
+    },
+    {
+      "name": "policy/agent-only-proof-review-20261015",
+      "live_sha": "e0f46a9b165f3164fe0172fbda85a27e5936c42a",
+      "frozen_sha": "e0f46a9b165f3164fe0172fbda85a27e5936c42a",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/e0f46a9b165f3164fe0172fbda85a27e5936c42a"
+    },
+    {
+      "name": "research/global-capacity-20261012",
+      "live_sha": "e25041f236d268a7e815dacd346180989690ed71",
+      "frozen_sha": "e25041f236d268a7e815dacd346180989690ed71",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/e25041f236d268a7e815dacd346180989690ed71"
+    },
+    {
+      "name": "research/global-closure-20261012",
+      "live_sha": "5ea0e06e8c2d50e1bd4b38c18a9a390ac350b477",
+      "frozen_sha": "5ea0e06e8c2d50e1bd4b38c18a9a390ac350b477",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/5ea0e06e8c2d50e1bd4b38c18a9a390ac350b477"
+    },
+    {
+      "name": "research/global-collective-replacement-20261012",
+      "live_sha": "c218603a9afca2d75038ead4ae839fefce3efa97",
+      "frozen_sha": "c218603a9afca2d75038ead4ae839fefce3efa97",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/c218603a9afca2d75038ead4ae839fefce3efa97"
+    },
+    {
+      "name": "research/global-exchange-20261012",
+      "live_sha": "a11e16998094ab3d7afd9fd07eff8b55909ec406",
+      "frozen_sha": "a11e16998094ab3d7afd9fd07eff8b55909ec406",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/a11e16998094ab3d7afd9fd07eff8b55909ec406"
+    },
+    {
+      "name": "research/global-level-i-20261011",
+      "live_sha": "d5afc236a7b1de9567dcb6dda65d957ed91c726b",
+      "frozen_sha": "d5afc236a7b1de9567dcb6dda65d957ed91c726b",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/d5afc236a7b1de9567dcb6dda65d957ed91c726b"
+    },
+    {
+      "name": "research/global-minimizer-closure-20261011",
+      "live_sha": "2cd3bdc12ae5ccbec918c75fbdaf904115c623f4",
+      "frozen_sha": "2cd3bdc12ae5ccbec918c75fbdaf904115c623f4",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/2cd3bdc12ae5ccbec918c75fbdaf904115c623f4"
+    },
+    {
+      "name": "research/global-repacking-20261012",
+      "live_sha": "0a72556e786024c9313c7d6287e26c20c1e9b9b8",
+      "frozen_sha": "0a72556e786024c9313c7d6287e26c20c1e9b9b8",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/0a72556e786024c9313c7d6287e26c20c1e9b9b8"
+    },
+    {
+      "name": "research/global-source-closure-20261011",
+      "live_sha": "2bee3902972c3c6a79586b620d32106148c5e412",
+      "frozen_sha": "2bee3902972c3c6a79586b620d32106148c5e412",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/2bee3902972c3c6a79586b620d32106148c5e412"
+    },
+    {
+      "name": "research/global-variational-20261012-b",
+      "live_sha": "c75e519426e3a88839567411fe3381160f3aa3cb",
+      "frozen_sha": "c75e519426e3a88839567411fe3381160f3aa3cb",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/c75e519426e3a88839567411fe3381160f3aa3cb"
+    },
+    {
+      "name": "research/independent-population-reserve-20261015",
+      "live_sha": "ad1bda373a5cbd8c666040f64b4f6ecd83223e31",
+      "frozen_sha": "ad1bda373a5cbd8c666040f64b4f6ecd83223e31",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/ad1bda373a5cbd8c666040f64b4f6ecd83223e31"
+    },
+    {
+      "name": "research/level-i-closure-20261007",
+      "live_sha": "12f6833725f281ce39a6d04ebcb45630b3a6768f",
+      "frozen_sha": "12f6833725f281ce39a6d04ebcb45630b3a6768f",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/12f6833725f281ce39a6d04ebcb45630b3a6768f"
+    },
+    {
+      "name": "research/level-i-fused-review-20261009",
+      "live_sha": "6132201c1d3056ca68a222217094acb819f5b4d7",
+      "frozen_sha": "6132201c1d3056ca68a222217094acb819f5b4d7",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/6132201c1d3056ca68a222217094acb819f5b4d7"
+    },
+    {
+      "name": "research/seed-054-population-replacement",
+      "live_sha": "3a80b4bd2d75a439835ab26a863521816a0f39d1",
+      "frozen_sha": "3a80b4bd2d75a439835ab26a863521816a0f39d1",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/3a80b4bd2d75a439835ab26a863521816a0f39d1"
+    },
+    {
+      "name": "research/seed-063-sector-response",
+      "live_sha": "b3983cdc7f4ca32ad8083eade92952d451c60848",
+      "frozen_sha": "b3983cdc7f4ca32ad8083eade92952d451c60848",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/b3983cdc7f4ca32ad8083eade92952d451c60848"
+    },
+    {
+      "name": "research/seed-066-schur-response-capacity",
+      "live_sha": "88b473899edc5f63c50aa6f90bf9a4d63112a66d",
+      "frozen_sha": "88b473899edc5f63c50aa6f90bf9a4d63112a66d",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/88b473899edc5f63c50aa6f90bf9a4d63112a66d"
+    },
+    {
+      "name": "research/seed-084-shell-stability",
+      "live_sha": "3d94a44ed245ad636685d7a3919acdf9ebd53753",
+      "frozen_sha": "3d94a44ed245ad636685d7a3919acdf9ebd53753",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/3d94a44ed245ad636685d7a3919acdf9ebd53753"
+    },
+    {
+      "name": "research/sol/c2-high-t-capacity-audit-20261004",
+      "live_sha": "fdc40cc7844aaa8b5f949f59a8c1607edf43d65a",
+      "frozen_sha": "fdc40cc7844aaa8b5f949f59a8c1607edf43d65a",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/fdc40cc7844aaa8b5f949f59a8c1607edf43d65a"
+    },
+    {
+      "name": "research/sol/global-closure-20261011",
+      "live_sha": "a6d8fdbcd78d00231f082269da2c5ced0c1f8d9e",
+      "frozen_sha": "a6d8fdbcd78d00231f082269da2c5ced0c1f8d9e",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/a6d8fdbcd78d00231f082269da2c5ced0c1f8d9e"
+    },
+    {
+      "name": "research/sol/global-e99-20261011",
+      "live_sha": "c17f8d5eed95f1df57262587219a2c0673365aa7",
+      "frozen_sha": "c17f8d5eed95f1df57262587219a2c0673365aa7",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/c17f8d5eed95f1df57262587219a2c0673365aa7"
+    },
+    {
+      "name": "research/sol/global-independent-20261011",
+      "live_sha": "bbc549f36ac964fd7eee211782eb2c979d12af32",
+      "frozen_sha": "bbc549f36ac964fd7eee211782eb2c979d12af32",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/bbc549f36ac964fd7eee211782eb2c979d12af32"
+    },
+    {
+      "name": "research/sol/target-c-exterior-cap-closure-20261006",
+      "live_sha": "f4a362727779f6afc0f01738015112c04fdb73d5",
+      "frozen_sha": "f4a362727779f6afc0f01738015112c04fdb73d5",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/f4a362727779f6afc0f01738015112c04fdb73d5"
+    },
+    {
+      "name": "research/sol/target-c-level1-gpt61-2026-10-04",
+      "live_sha": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+      "frozen_sha": "9875cd6a77939bb6347353fc798ab8f9ab03ec3e",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/9875cd6a77939bb6347353fc798ab8f9ab03ec3e"
+    },
+    {
+      "name": "research/sol/target-c-overnight-closure-20261007",
+      "live_sha": "c6a75bd708e553c4feb3a540e0b17f3b65e22a82",
+      "frozen_sha": "c6a75bd708e553c4feb3a540e0b17f3b65e22a82",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/c6a75bd708e553c4feb3a540e0b17f3b65e22a82"
+    },
+    {
+      "name": "research/sol/target-c-owner-order-closure-20261006",
+      "live_sha": "73fa41814eb1cdac50ba1eab135461868437edf0",
+      "frozen_sha": "73fa41814eb1cdac50ba1eab135461868437edf0",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/73fa41814eb1cdac50ba1eab135461868437edf0"
+    },
+    {
+      "name": "research/sol61-slot01-outer-motion-20261010",
+      "live_sha": "3536c0b6f6c2a929d9c96fffbdcfc480735fea3b",
+      "frozen_sha": "3536c0b6f6c2a929d9c96fffbdcfc480735fea3b",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/3536c0b6f6c2a929d9c96fffbdcfc480735fea3b"
+    },
+    {
+      "name": "research/sol61-slot02-20261010-integrated-fold",
+      "live_sha": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+      "frozen_sha": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/b7376d13b81e542055c5c904bf81bdaf1beb7b9e"
+    },
+    {
+      "name": "research/sol61-slot03-train-hull-20261010",
+      "live_sha": "cbf066bb7489115559bcda34f9f810a1d78826ce",
+      "frozen_sha": "cbf066bb7489115559bcda34f9f810a1d78826ce",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/cbf066bb7489115559bcda34f9f810a1d78826ce"
+    },
+    {
+      "name": "research/sol61-slot05-20261010",
+      "live_sha": "7be6a6b746e9cf6ea18145248b652c7a0f206dc4",
+      "frozen_sha": "7be6a6b746e9cf6ea18145248b652c7a0f206dc4",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/7be6a6b746e9cf6ea18145248b652c7a0f206dc4"
+    },
+    {
+      "name": "research/sol61-slot06-global-shell-20261010",
+      "live_sha": "603ae507f40b4615c1b98a2183927d9f3be6d466",
+      "frozen_sha": "603ae507f40b4615c1b98a2183927d9f3be6d466",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/603ae507f40b4615c1b98a2183927d9f3be6d466"
+    },
+    {
+      "name": "research/sol61-slot07-20261010-stress-transversal",
+      "live_sha": "0023585a98d8f5f23df64174a091c143710ba78a",
+      "frozen_sha": "0023585a98d8f5f23df64174a091c143710ba78a",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/0023585a98d8f5f23df64174a091c143710ba78a"
+    },
+    {
+      "name": "research/target-c-residual-closure-20261005",
+      "live_sha": "ed535f5a3a45e3921d91a29c38a0cb37f1d27921",
+      "frozen_sha": "ed535f5a3a45e3921d91a29c38a0cb37f1d27921",
+      "status": "unchanged",
+      "source_url": "https://github.com/1337isnot1337/e-99/tree/ed535f5a3a45e3921d91a29c38a0cb37f1d27921"
+    }
+  ],
+  "open_prs": [
+    {
+      "number": 1008,
+      "head": "research/independent-population-reserve-20261015",
+      "head_sha": "ad1bda373a5cbd8c666040f64b4f6ecd83223e31",
+      "frozen_sha": "ad1bda373a5cbd8c666040f64b4f6ecd83223e31",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/1008"
+    },
+    {
+      "number": 1007,
+      "head": "maintenance/source-reconciliation-15-20261015",
+      "head_sha": "2a6dcb2dffe803a967d3766068ded434f0560185",
+      "frozen_sha": "2a6dcb2dffe803a967d3766068ded434f0560185",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/1007"
+    },
+    {
+      "number": 970,
+      "head": "research/seed-084-shell-stability",
+      "head_sha": "3d94a44ed245ad636685d7a3919acdf9ebd53753",
+      "frozen_sha": "3d94a44ed245ad636685d7a3919acdf9ebd53753",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/970"
+    },
+    {
+      "number": 969,
+      "head": "research/seed-063-sector-response",
+      "head_sha": "b3983cdc7f4ca32ad8083eade92952d451c60848",
+      "frozen_sha": "b3983cdc7f4ca32ad8083eade92952d451c60848",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/969"
+    },
+    {
+      "number": 967,
+      "head": "research/seed-054-population-replacement",
+      "head_sha": "3a80b4bd2d75a439835ab26a863521816a0f39d1",
+      "frozen_sha": "3a80b4bd2d75a439835ab26a863521816a0f39d1",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/967"
+    },
+    {
+      "number": 966,
+      "head": "research/seed-066-schur-response-capacity",
+      "head_sha": "88b473899edc5f63c50aa6f90bf9a4d63112a66d",
+      "frozen_sha": "88b473899edc5f63c50aa6f90bf9a4d63112a66d",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/966"
+    },
+    {
+      "number": 960,
+      "head": "research/global-variational-20261012-b",
+      "head_sha": "c75e519426e3a88839567411fe3381160f3aa3cb",
+      "frozen_sha": "c75e519426e3a88839567411fe3381160f3aa3cb",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/960"
+    },
+    {
+      "number": 959,
+      "head": "research/global-capacity-20261012",
+      "head_sha": "e25041f236d268a7e815dacd346180989690ed71",
+      "frozen_sha": "e25041f236d268a7e815dacd346180989690ed71",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/959"
+    },
+    {
+      "number": 958,
+      "head": "research/global-repacking-20261012",
+      "head_sha": "0a72556e786024c9313c7d6287e26c20c1e9b9b8",
+      "frozen_sha": "0a72556e786024c9313c7d6287e26c20c1e9b9b8",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/958"
+    },
+    {
+      "number": 957,
+      "head": "research/global-exchange-20261012",
+      "head_sha": "a11e16998094ab3d7afd9fd07eff8b55909ec406",
+      "frozen_sha": "a11e16998094ab3d7afd9fd07eff8b55909ec406",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/957"
+    },
+    {
+      "number": 956,
+      "head": "research/sol/global-independent-20261011",
+      "head_sha": "bbc549f36ac964fd7eee211782eb2c979d12af32",
+      "frozen_sha": "bbc549f36ac964fd7eee211782eb2c979d12af32",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/956"
+    },
+    {
+      "number": 955,
+      "head": "research/global-level-i-20261011",
+      "head_sha": "d5afc236a7b1de9567dcb6dda65d957ed91c726b",
+      "frozen_sha": "d5afc236a7b1de9567dcb6dda65d957ed91c726b",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/955"
+    },
+    {
+      "number": 954,
+      "head": "research/global-minimizer-closure-20261011",
+      "head_sha": "2cd3bdc12ae5ccbec918c75fbdaf904115c623f4",
+      "frozen_sha": "2cd3bdc12ae5ccbec918c75fbdaf904115c623f4",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/954"
+    },
+    {
+      "number": 953,
+      "head": "research/sol61-slot05-20261010",
+      "head_sha": "7be6a6b746e9cf6ea18145248b652c7a0f206dc4",
+      "frozen_sha": "7be6a6b746e9cf6ea18145248b652c7a0f206dc4",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/953"
+    },
+    {
+      "number": 952,
+      "head": "research/sol61-slot01-outer-motion-20261010",
+      "head_sha": "3536c0b6f6c2a929d9c96fffbdcfc480735fea3b",
+      "frozen_sha": "3536c0b6f6c2a929d9c96fffbdcfc480735fea3b",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/952"
+    },
+    {
+      "number": 951,
+      "head": "research/sol61-slot07-20261010-stress-transversal",
+      "head_sha": "0023585a98d8f5f23df64174a091c143710ba78a",
+      "frozen_sha": "0023585a98d8f5f23df64174a091c143710ba78a",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/951"
+    },
+    {
+      "number": 950,
+      "head": "research/sol61-slot03-train-hull-20261010",
+      "head_sha": "cbf066bb7489115559bcda34f9f810a1d78826ce",
+      "frozen_sha": "cbf066bb7489115559bcda34f9f810a1d78826ce",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/950"
+    },
+    {
+      "number": 949,
+      "head": "research/sol61-slot06-global-shell-20261010",
+      "head_sha": "603ae507f40b4615c1b98a2183927d9f3be6d466",
+      "frozen_sha": "603ae507f40b4615c1b98a2183927d9f3be6d466",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/949"
+    },
+    {
+      "number": 948,
+      "head": "research/sol61-slot02-20261010-integrated-fold",
+      "head_sha": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+      "frozen_sha": "b7376d13b81e542055c5c904bf81bdaf1beb7b9e",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/948"
+    },
+    {
+      "number": 947,
+      "head": "audit/target-c-section123-second-referee-20261010",
+      "head_sha": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+      "frozen_sha": "1afb7e64d47c5619d872d32759b0e01f1526fd5a",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/947"
+    },
+    {
+      "number": 737,
+      "head": "research/sol/target-c-owner-order-closure-20261006",
+      "head_sha": "73fa41814eb1cdac50ba1eab135461868437edf0",
+      "frozen_sha": "73fa41814eb1cdac50ba1eab135461868437edf0",
+      "status": "unchanged",
+      "url": "https://github.com/1337isnot1337/e-99/pull/737"
+    }
+  ],
+  "snapshot_counts": {
+    "frozen_remote_refs": 1050,
+    "live_branch_heads": 45,
+    "frozen_local_ahead_heads": 69,
+    "open_pr_heads": 21
+  }
+}

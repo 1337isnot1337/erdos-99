@@ -1,0 +1,118 @@
+# Authoritative theorem state
+
+<!-- BEGIN GENERATED: theorem-state-snapshot -->
+**Generated state snapshot (`2026-10-05.audit.59`):** Level I **OPEN**; Target A **OPEN** through Section 177; Target B **OPEN**; Target C **C-I CLOSED / C-II OPEN**.
+
+Machine-derived tables: [`state/STATUS.generated.md`](state/STATUS.generated.md) and [`state/THEOREM_GRAPH.generated.md`](state/THEOREM_GRAPH.generated.md).
+<!-- END GENERATED: theorem-state-snapshot -->
+
+**State date:** 2026-10-05
+**LEVEL I STATUS: STILL OPEN.**
+
+This file and [`state/theorem-state.yaml`](state/theorem-state.yaml) control theorem lifecycle and status. Presence on `main`, a merged pull request, a newer date, or a larger section number does not make a claim canonical.
+
+## Global state
+
+Erdős Problem #99 remains open. No proof covers every sufficiently large global minimizer, and no unbounded family of triangle-free global minimizers is known.
+
+## Target A
+
+**Status:** open. Canonical development is through Section 177.
+**Authority:** [`targets/target-a/README.md`](targets/target-a/README.md).
+
+The global sufficient endpoint remains
+
+\[
+\operatorname{rank}S\le d_{\rm int}+|C^\partial|-\Delta_\Lambda,
+\qquad d_{\rm sc}\ge\Delta_\Lambda.
+\]
+
+The preferred locked endpoint remains the Section-175 interior-tube right-deficiency inequality
+
+\[
+|O_{\rm iso}|+\sum_i\max\{0,|O_i|-|C_i|\}\ge j_*+|T_Z|.
+\]
+
+## Target B
+
+**Status:** open.
+**Authority:** [`targets/target-b/README.md`](targets/target-b/README.md).
+
+The sufficient closure remains
+
+\[
+G+E\ge {\sqrt3\over4}B+{\sqrt3\over2}(t+\chi-1).
+\]
+
+The audited dense-grid, penetration, cancellation, multicomponent, and dominant-component interpolation tools remain canonical only under their recorded scopes. The multi-grain/global shell-stability transfer remains open.
+
+## Target C
+
+**C-I: CLOSED.**
+**C-II: OPEN.**
+**Authority:** [`targets/target-c/README.md`](targets/target-c/README.md) and [`targets/target-c/CURRENT.md`](targets/target-c/CURRENT.md).
+
+Use the contact-minimal, then diameter-pair-minimal representative and retain every source point, including contact-isolated points.
+
+### ZR/ZF scope correction
+
+The independently audited ZR/ZF theorem is a theorem about the **nonisolated positive-contact core** `V`, not the full source. With `v=|V|`,
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\qquad
+\operatorname{rank}R_{C\cup H}[V]=2v-3,
+\]
+
+and therefore
+
+\[
+e+h\ge2v-2,
+\qquad
+h\ge\delta\ge\lceil D\rceil.
+\]
+
+Contact-isolated source points remain in the global configuration. Extending the core stress matrix by zero rows and columns creates additional kernel directions. `C-ZRF-FULL-SOURCE` remains rejected. No bound on the isolated source population follows from ZR/ZF.
+
+### Current C-II frontier
+
+Audit.59 controls theorem authority.
+
+All audit.52--58 results remain canonical. Audit.59 adds the adaptive strict-safe saturation theorem.
+
+For any finite deletion set \(R\) and any bounded measurable
+\[
+S\subset\operatorname{int}K
+\]
+strictly farther than one from every retained source point,
+\[
+E_C(R)=\varnothing
+\Longrightarrow
+\operatorname{area}S\le\frac{\sqrt3}{2}|R|,
+\]
+while
+\[
+E_C(R)\ne\varnothing
+\Longrightarrow
+\operatorname{area}S\le\frac{\sqrt3}{2}(|R|-1).
+\]
+
+In particular, after deleting one contact-active vertex, the entire old hull interior is still covered by unit disks centered at the remaining source points.
+
+This rules out strict-safe **area averaging** as a way to obtain net refill credit after contact breaking. Deleting wall guards and recovering collar area cannot, by itself, force enough points of a lattice with spacing \(>1\) to repay the deletions.
+
+### Exact remaining split
+
+1. **Full-core branch.** Audit.58 supplies finite fan/packet motions that localize all surviving failures to lower blockers or uncovered anchors. Audit.59 says their repair cannot come merely from recovered strict-safe mean area after deleting contact-active points. A closing theorem must use an explicit discrete packet, exact unit-contact packing, collective contact recreation, a non-repacking finite motion, or an exact unit triangle.
+
+2. **Macroscopic-container branch.** The same no-go applies: mean strict-safe area cannot fund the diameter cover. Audit.54 refill remains valid once actual discrete packing capacity is certified.
+
+The short-wall zero-capacity theorem and fixed-wall lock regressions remain binding.
+
+### Binding Target C corrections
+
+Do not use, without a new proof, the incident-diameter Euler-path inference, FB4 localization, the incompatible-cut C53 pentagon objection, RSR disk-equality uniqueness, Eppstein-near-equality-to-near-quadrangulation, five-host occupancy from measure saturation, the inward-pocket/exterior-Reuleaux-cap containment, deletion of contact-isolated source points, extension of the ZR/ZF affine-kernel theorem to isolated coordinates, `r/(6C_T)` as the sharp phase-bin limit, or the discarded Section-121 normalization `G_loc=o(D^2) => G_loc/d=o(1)`.
+
+## Promotion rule
+
+A frontier-changing result must update the machine manifest, this state lock, the affected route/current-frontier file, the active prompt when its next obligation changes, applicable dependency/certificate registrations, and every generated view whose generated bytes change.
