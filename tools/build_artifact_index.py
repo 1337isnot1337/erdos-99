@@ -15,6 +15,7 @@ import argparse
 import hashlib
 import json
 import sys
+import subprocess
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -190,6 +191,13 @@ def check_state(root: Path, state: dict[str, Any], records: list[dict[str, Any]]
     elif index_path.read_text(encoding="utf-8") != expected_index:
         errors.append("artifact-index.jsonl is stale; run tools/build_artifact_index.py --write --write-headers")
 
+    from publication_migration import load_policy
+    try:
+        _, metadata_alternatives = load_policy(root)
+    except (ValueError, OSError, KeyError, subprocess.SubprocessError) as exc:
+        errors.append("migration metadata policy: " + str(exc))
+        metadata_alternatives = set()
+
     seen_ids: dict[str, str] = {}
     for record in records:
         ident = record["artifact_id"]
@@ -199,7 +207,9 @@ def check_state(root: Path, state: dict[str, Any], records: list[dict[str, Any]]
         path = root / record["path"]
         with path.open("r", encoding="utf-8") as source:
             first = source.readline().rstrip("\r\n")
-        if first != header_for(record):
+        alternative = (record["path"] in metadata_alternatives and record["status"] == "unreviewed"
+                       and not record["canonical"] and not record["claim_ids"] and not record["claim_statuses"])
+        if first != header_for(record) and not alternative:
             errors.append(f"missing/stale theorem-state metadata header: {record['path']}")
     return errors
 

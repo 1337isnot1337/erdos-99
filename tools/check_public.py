@@ -42,15 +42,25 @@ def validate(root: Path, *, check_hashes=True):
             if j in ids:visit(j)
         active.remove(i);done.add(i)
     for i in ids:visit(i)
+    from publication_migration import load_policy,reference_exclusions
+    reference_links=0
+    try:
+        historical_payloads,imported_metadata=load_policy(root)
+        excluded_references=reference_exclusions(root) if historical_payloads else set()
+    except (ValueError,OSError,KeyError,subprocess.SubprocessError) as exc:
+        error('migration archive policy: '+str(exc));historical_payloads=set();imported_metadata=set();excluded_references=set()
     tracked=[p for p in root.rglob('*') if p.is_file() and '.git' not in p.parts and '.venv' not in p.parts and '__pycache__' not in p.parts]
     for p in tracked:
         rel=p.relative_to(root).as_posix()
         if p.is_symlink():error('symlink forbidden in published corpus: '+rel);continue
+        if rel in historical_payloads:continue
         if p.suffix=='.md':
             try:targets=markdown_targets(rel,p.read_text())
             except (ValueError,UnicodeError) as exc:error(f'{rel}: invalid navigation: {exc}');continue
             for q in targets:
-                if not (root/q).exists():error(f'{rel}: missing link {q}')
+                if not (root/q).exists():
+                    if rel in imported_metadata and q in excluded_references:reference_links+=1
+                    else:error(f'{rel}: missing link {q}')
         if p.suffix=='.py':
             try:nodes=ast.walk(ast.parse(p.read_text()))
             except SyntaxError as exc:error(f'{rel}: syntax {exc}');continue
@@ -87,7 +97,7 @@ def validate(root: Path, *, check_hashes=True):
     from build_artifact_index import build_records,check_state
     try:errors.extend(check_state(root,state,build_records(root,state)))
     except (ValueError,FileNotFoundError) as exc:error('artifact registry: '+str(exc))
-    return errors,{'claims':len(ids),'edges':sum(len(c.get('depends_on',[])) for c in ids.values()),'certificates':len(certs),'tasks':len(cat['tasks']),'retained_source_files':len(inc['entries'])}
+    return errors,{'claims':len(ids),'edges':sum(len(c.get('depends_on',[])) for c in ids.values()),'certificates':len(certs),'tasks':len(cat['tasks']),'retained_source_files':len(inc['entries']),'nonredistributed_reference_links':reference_links}
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--root',type=Path,default=Path(__file__).resolve().parents[1]);ap.add_argument('--skip-hashes',action='store_true');a=ap.parse_args()
