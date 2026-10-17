@@ -7,6 +7,7 @@ The project owner may operate the independent reviewer on others' submissions.
 No human mathematical referee or second reviewer is required.
 
 Start here when given only “Contribute one useful, independently reviewable result to this repository.” Default to a 30–60 minute session. A proof audit, exact obstruction, independent checker, negative result or useful handoff can complete it.
+The repository is [https://github.com/1337isnot1337/erdos-99](https://github.com/1337isnot1337/erdos-99). 
 
 ## Refresh at every checkpoint
 
