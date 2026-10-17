@@ -1,0 +1,133 @@
+# Authoritative theorem state
+
+<!-- BEGIN GENERATED: theorem-state-snapshot -->
+**Generated state snapshot (`2026-10-05.audit.62`):** Level I **OPEN**; Target A **OPEN** through Section 177; Target B **OPEN**; Target C **C-I CLOSED / C-II OPEN**.
+
+Machine-derived tables: [`state/STATUS.generated.md`](state/STATUS.generated.md) and [`state/THEOREM_GRAPH.generated.md`](state/THEOREM_GRAPH.generated.md).
+<!-- END GENERATED: theorem-state-snapshot -->
+
+**State date:** 2026-10-05
+**LEVEL I STATUS: STILL OPEN.**
+
+This file and [`state/theorem-state.yaml`](state/theorem-state.yaml) control theorem lifecycle and status. Presence on `main`, a merged pull request, a newer date, or a larger section number does not make a claim canonical.
+
+## Global state
+
+Erdős Problem #99 remains open. No proof covers every sufficiently large global minimizer, and no unbounded family of triangle-free global minimizers is known.
+
+## Target A
+
+**Status:** open. Canonical development is through Section 177.
+**Authority:** [`targets/target-a/README.md`](targets/target-a/README.md).
+
+The global sufficient endpoint remains
+
+\[
+\operatorname{rank}S\le d_{\rm int}+|C^\partial|-\Delta_\Lambda,
+\qquad d_{\rm sc}\ge\Delta_\Lambda.
+\]
+
+The preferred locked endpoint remains the Section-175 interior-tube right-deficiency inequality
+
+\[
+|O_{\rm iso}|+\sum_i\max\{0,|O_i|-|C_i|\}\ge j_*+|T_Z|.
+\]
+
+## Target B
+
+**Status:** open.
+**Authority:** [`targets/target-b/README.md`](targets/target-b/README.md).
+
+The sufficient closure remains
+
+\[
+G+E\ge {\sqrt3\over4}B+{\sqrt3\over2}(t+\chi-1).
+\]
+
+The audited dense-grid, penetration, cancellation, multicomponent, and dominant-component interpolation tools remain canonical only under their recorded scopes. The multi-grain/global shell-stability transfer remains open.
+
+## Target C
+
+**C-I: CLOSED.**
+**C-II: OPEN.**
+**Authority:** [`targets/target-c/README.md`](targets/target-c/README.md) and [`targets/target-c/CURRENT.md`](targets/target-c/CURRENT.md).
+
+Use the contact-minimal, then diameter-pair-minimal representative and retain every source point, including contact-isolated points.
+
+### ZR/ZF scope correction
+
+The independently audited ZR/ZF theorem is a theorem about the **nonisolated positive-contact core** `V`, not the full source. With `v=|V|`,
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\qquad
+\operatorname{rank}R_{C\cup H}[V]=2v-3,
+\]
+
+and therefore
+
+\[
+e+h\ge2v-2,
+\qquad
+h\ge\delta\ge\lceil D\rceil.
+\]
+
+Contact-isolated source points remain in the global configuration. Extending the core stress matrix by zero rows and columns creates additional kernel directions. `C-ZRF-FULL-SOURCE` remains rejected. No bound on the isolated source population follows from ZR/ZF.
+
+### Current C-II frontier
+
+Audit.62 controls theorem authority.
+
+All audit.52--61 results remain canonical. Audit.61 reduces a sufficiently small O--O finite-motion failure to
+\[
+\boxed{
+\text{outer-face near-unit owner/implication structure}
++\text{explicit unary rhombus blockers}
++\text{at most }d_H\text{ inactive upper exceptions}.
+}
+\]
+
+Audit.62 adds two finite geometry constraints.
+
+- \`C-LOADED-NEAR-UNIT-ADJACENCY\`: for the actual loaded diameter-endpoint set \(B\),
+  \[
+  \tau_D=\frac{3D}{\sqrt{3D^2+4}+1},
+  \]
+  and every nonconsecutive loaded pair \(a,b\) with \(|ab|<D\) satisfies
+  \[
+  |ab|\ge\tau_D.
+  \]
+  In particular, for \(D\ge6\), every loaded pair of length at most \(13/12\) is a loaded-hull side. The loaded near-unit graph is therefore a subgraph of the loaded hull cycle and has maximum degree at most two.
+- \`C-LOADED-HULL-CAP-BUDGET\`: with
+  \[
+  K=\operatorname{conv}A,\qquad
+  F=\operatorname{conv}B,\qquad
+  W=\operatorname{per}K-q,
+  \]
+  occupied loaded-hull caps are at most \(W\), their total cap arc/base length is at most \(2W\), short core-to-exterior attachments are supported on at most \(68W\) core vertices, the nonloaded \(1/2\)-boundary layer inside \(F\) has size at most \(12W\), every deeper point has exact upper margin \(D-1/2\), and
+  \[
+  \#(\operatorname{ext}K\setminus B)\le W.
+  \]
+  Since canonical full-source geometry gives \(\operatorname{per}K<\pi D\), every canonical subsequence with \(q/D\to\pi\) has \(W=o(D)\). Hence
+  \[
+  |P|=o(D),\qquad |X|=o(D),\qquad
+  \#(\operatorname{ext}K\setminus B)=o(D).
+  \]
+
+### Exact remaining split
+
+1. **Full-core branch.** The lower finite-motion obstruction is still an outer-face owner/implication problem, but audit.62 removes two major hiding places. Loaded-loaded near-unit clauses are cyclically ordered on the actual loaded hull, and terminal hull-cap/exterior blocker populations are sublinear. Any linear obstruction in a \(q/D\to\pi\) subsequence must therefore concentrate on actual outer-contact-face geometry inside the loaded hull, the cyclic loaded-hull near-unit graph, explicit unary rhombus blockers, or the at most \(d_H\) inactive upper exceptions.
+
+   The highest-value next theorem is an **outer-face owner-order theorem** using loaded-hull cyclic order, audit.53 loaded-return paths, audit.56 active-diameter coordinates, and audit.60 forcing-path structure to rule out owner contradiction cycles/paths or construct a satisfying shortening assignment.
+
+2. **Macroscopic-container branch.** Unchanged. Audit.62 is finite source geometry and does not alter the separate inactive-container route.
+
+The audit.61 regressions remain binding: source-level path forests may become cyclic after owner contraction, and unary rhombus blockers cannot be discarded merely because motion amplitude is small.
+
+### Binding Target C corrections
+
+Do not use, without a new proof, the incident-diameter Euler-path inference, FB4 localization, the incompatible-cut C53 pentagon objection, RSR disk-equality uniqueness, Eppstein-near-equality-to-near-quadrangulation, five-host occupancy from measure saturation, the inward-pocket/exterior-Reuleaux-cap containment, deletion of contact-isolated source points, extension of the ZR/ZF affine-kernel theorem to isolated coordinates, `r/(6C_T)` as the sharp phase-bin limit, or the discarded Section-121 normalization `G_loc=o(D^2) => G_loc/d=o(1)`.
+
+## Promotion rule
+
+A frontier-changing result must update the machine manifest, this state lock, the affected route/current-frontier file, the active prompt when its next obligation changes, applicable dependency/certificate registrations, and every generated view whose generated bytes change.

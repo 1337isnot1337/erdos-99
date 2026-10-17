@@ -1,0 +1,206 @@
+# Erdős Problem #99 — current Target C continuation
+
+**State:** `2026-10-05.audit.53`
+**LEVEL I STATUS: STILL OPEN.**  
+**C-I: CLOSED.**  
+**C-II: OPEN.**
+
+## Bootstrap
+
+Read, in order:
+
+1. `docs/STATE.md`;
+2. `docs/problem/statement.md`;
+3. `docs/targets/target-c/CURRENT.md`;
+4. `docs/targets/target-c/README.md`;
+5. `docs/targets/target-c/105-121-promotion-audit-2026-09-12.md`;
+6. `docs/targets/target-c/122-123-promotion-audit-2026-09-12.md`;
+7. the canonical modules/reports explicitly named by `docs/state/theorem-state.yaml`;
+8. this prompt last.
+
+Do not infer theorem authority from a merge, date, filename, or section number.
+
+## Mission
+
+Close C-II for every sufficiently large triangle-free global minimizer in the canonical normal form, or produce a valid Level I disproof. Do not spend the run re-proving audited extraction/density machinery or optimizing another carrier decimal unless it creates a new implication to global closure.
+
+## Binding normalization
+
+Use the contact-minimal, then diameter-pair-minimal representative and retain every source point, including contact-isolated points.
+
+The §57 ZR/ZF theorem is only on the nonisolated positive-contact core `V`:
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\qquad
+\operatorname{rank}R_{C\cup H}[V]=2v-3.
+\]
+
+Do not extend this affine-kernel theorem to contact-isolated coordinates. Full-source geometry comes from the separate canonical full-source modules.
+
+## Canonical input to treat as solved
+
+Audit.53 is controlling.
+
+Retain all audit.52 inputs:
+\[
+\mu_D\ge\mu_{\rm hull}+\varepsilon_*,
+\qquad
+R_F\ge(\kappa_{\rm fr}-o(1))D,
+\qquad
+\sigma_C=0,
+\]
+with
+\[
+\mu_{\rm hull}
+=
+\frac{\pi+\sqrt{\pi/(2\sqrt3)}}2
+=
+2.046952730226875\ldots.
+\]
+
+The global Sections 122--123 detour/payment currencies remain
+\[
+\liminf {1\over D}\sum_r(L_r+P_{{\rm exc},r}-2d_r)
+\ge {\pi\over2}(2-\sqrt3),
+\qquad
+\sum_rP_{{\rm exc},r}\le10(e_{BB}-k).
+\]
+
+Audit.53 adds six inputs that should no longer be reproved.
+
+1. **\`C-RECIPROCAL-TRAIN-GRAPH\`.** Positive contact equilibrium integrates actual reciprocal coordinates on bounded augmented faces. The bounded-endpoint internal train graph is simple and every nontrivial induced connected component satisfies
+   \[
+   \boxed{e(U_i)\le2|U_i|-3.}
+   \]
+   Reciprocal coordinates are force-space coordinates, not source coordinates.
+
+2. **\`C-OUTER-TRAIN-DETERMINATION\`.** Old-outer-ended train angular rates determine every contact flex modulo translations. Since \(\sigma_C=0\),
+   \[
+   \boxed{|\mathcal O|\ge q-k.}
+   \]
+
+3. **\`C-GLOBAL-FACE-RETURN-QUOTAS\`.** For selected exceptional faces,
+   \[
+   \boxed{Q_{\mathcal F}\le2|S|-4}
+   \]
+   for a minimum endpoint-inclusive physical-contact separator. All face demands
+   \[
+   r_f=
+   \max\left\{
+   0,\left\lfloor\frac{m_f-4}{2}\right\rfloor-\ell_f
+   \right\}
+   \]
+   are simultaneously realizable by globally vertex-disjoint actual contact paths to distinct loaded endpoints. These are independent endpoint/face-label returns, not path-length currency.
+
+4. **\`C-JOINT-BULK-FACE-SEPARATOR\`.** For selected unloaded rhombi and selected physical exceptional faces,
+   \[
+   \boxed{
+   2\sqrt{\pi a_0(R-5k_I)_+}+Q_{\mathcal F}\le4k-4,
+   \qquad a_0=\frac{\sqrt3}{2}.
+   }
+   \]
+   A Type-II unloaded-rhombus bulk gives
+   \[
+   \boxed{
+   p_D\ge\frac{\pi}{4}D+\frac14Q_{\mathcal F_D}-o(D).
+   }
+   \]
+   If selected face boundaries lie in radius \(r\),
+   \[
+   Q_{\mathcal F}\le(32+4\pi)r+18.
+   \]
+   Do not spend time trying to hide a linear face-defect tail in one submacroscopic cluster.
+
+5. **\`C-TERMINAL-PHYSICAL-FRUSTRATION\`.** In the branch
+   \[
+   q/D\to\pi,\qquad u_B/D\to0,
+   \]
+   all outer-ended trains carry \(o(D^2)\) rhombi, and
+   \[
+   \liminf R_{\rm phys}/D\ge\kappa_{\rm phys}>0
+   \]
+   for some universal nonexplicit constant. A linear boundary-vertex-disjoint physical unit-wall frustration bank is forced.
+
+6. **\`C-LOADED-FLAT-PENTAGON-DEPLETION\`.** In the branch
+   \[
+   x_B=b-q=o(D),
+   \]
+   there are
+   \[
+   g_D\ge q-e_{BI}-6(Q-f)-o(D)
+   \]
+   second-depletable physical near-flat pentagons and
+   \[
+   \boxed{
+   e_{BI}+6(Q-f)
+   \ge
+   sD+2k+\frac{S_U}{2}-o(D),
+   \qquad
+   s=\sqrt{\pi/(2\sqrt3)}.
+   }
+   \]
+
+The Section-118 carrier coefficient, older scalar floors, and the historical \(R_F=o(D)\) outer-pocket synthesis are not the live bottleneck. Audit.52 already eliminates \(R_F=o(D)\).
+
+Do not infer a source competitor merely from reciprocal \((2,3)\)-sparsity, many return paths, positive physical residual, or a weighted stress-energy decrease.
+
+## Exact next split
+
+### Full-core branch
+
+A sufficiently large survivor now carries all of the following simultaneously:
+
+- strict scalar surplus above \(\mu_{\rm hull}\);
+- linear fixed-boundary residual;
+- \(\sigma_C=0\) and a smooth exact contact manifold;
+- a positive reciprocal \((2,3)\)-sparse internal train graph;
+- at least \(q-k\) outer-ended trains;
+- globally vertex-disjoint actual loaded-return capacity indexed by exceptional-face defect;
+- a joint bulk/face endpoint bank of size at least \(\pi D/4+Q/4-o(D)\) whenever the quadratic unloaded-rhombus bulk is selected.
+
+The terminal geometry also has a forced alternative. Along a subsequence with \(q/D\to\pi\):
+
+- if \(u_B=o(D)\), every outer-ended train family is second-depletable and a linear physical unit-wall residual bank exists;
+- if also \(x_B=o(D)\), then
+  \[
+  e_{BI}+6(Q-f)
+  \ge
+  sD+2k+\frac{S_U}{2}-o(D).
+  \]
+
+Therefore do **not** spend the run on another small-residual theorem, another return-count Hall argument, another proof that internal train columns are sparse, or another outer-train depletion theorem in this scope.
+
+The live theorem is active-diameter feasibility. High-value routes are:
+
+1. use the exact contact manifold and positive reciprocal train graph to parameterize a finite family of contact-preserving directions whose active-diameter derivatives can be controlled simultaneously;
+2. use the globally disjoint loaded-return paths as dual certificates or independent boundary controls for those contact-manifold directions;
+3. in the terminal short-pocket branch, spend the pairwise wall-disjoint physical frustration bank collectively rather than seeking a single-wall refill;
+4. combine the joint bulk/face separator bank with the Sections 122--123 global detour/payment currency to force more active-diameter controls than the diameter cage can support;
+5. prove that failure of all such simultaneous directions forces an exact unit equilateral triangle.
+
+A successful source competitor must check the finite maximum over **every** active diameter pair and preserve every lower separation. A weighted average decrease is not enough.
+
+### Macroscopic inactive-container branch
+
+This remains separate and open. The missing theorem must force an exact unit triangle, alter/replace part of the old diameter-carrying core, or construct a same-cardinality feasible source with strictly smaller global diameter.
+
+## Binding dead routes
+
+Do not use without a new proof:
+
+- incident-diameter sequence `=>` Euler trail/path;
+- FB4 force-bulk localization;
+- incompatible-cut C53 pentagon objection;
+- RSR disk-equality uniqueness;
+- Eppstein near-equality `=>` near quadrangulation;
+- five-host measure saturation `=>` all hosts occupied;
+- inward OP pocket `subset` exterior Reuleaux minor cap;
+- deletion of contact-isolated source points;
+- full-source extension of the §57 affine-kernel theorem;
+- `r/(6C_T)` as the sharp limit of the Section-90 bin method;
+- `G_loc=o(D^2) => G_loc/d=o(1)` in Section 121.
+
+## Research standard
+
+Before promoting a new lemma, write its exact dependency chain to either an exact unit triangle, a source-preserving strict sub-`D` competitor, or the Level I conclusion. A computation may certify finite arithmetic or a regression; it does not supply global optimality.

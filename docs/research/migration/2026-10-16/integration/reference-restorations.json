@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "classification": "Historical exact source recovery; no theorem promotion.",
+  "reconstruction_note": "Recreated from pinned source Git objects after the local environment became unavailable. Original Git blob identities are retained; the original local SHA-256 receipt was unavailable.",
+  "entries": [
+    {
+      "source_path": "docs/maintenance/issue-986-dirty-worktree-dispositions.json",
+      "destination_path": "docs/maintenance/issue-986-dirty-worktree-dispositions.json",
+      "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+      "git_blob_sha1": "04fefa6502ead10b0a997af379c073c910b762a7",
+      "mode": "100644",
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+    },
+    {
+      "source_path": "docs/reports/global_discrete_replacement_preservation_2026-10-15.md",
+      "destination_path": "docs/reports/global_discrete_replacement_preservation_2026-10-15.md",
+      "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+      "git_blob_sha1": "ffecd6bc0e36e26653587a6fbdcc8911275d4c7e",
+      "mode": "100644",
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+    },
+    {
+      "source_path": "docs/prompts/erdos_problem_99_SOL_XHIGH_FULL_SOLUTION_PROMPT.md",
+      "destination_path": "docs/prompts/erdos_problem_99_SOL_XHIGH_FULL_SOLUTION_PROMPT.md",
+      "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+      "git_blob_sha1": "699b94c2ce9658faaf90e798b5ff00d0822fd8d8",
+      "mode": "100644",
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+    },
+    {
+      "source_path": "docs/prompts/erdos_problem_99_1.7.10_FINAL_CONTINUATION_PROMPT.md",
+      "destination_path": "docs/prompts/erdos_problem_99_1.7.10_FINAL_CONTINUATION_PROMPT.md",
+      "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+      "git_blob_sha1": "c51a9b13fc023262ee1fe93fa8279b2123b5c63b",
+      "mode": "100644",
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+    },
+    {
+      "source_path": "research/verify_global_three_isometries_2026_10_12.py",
+      "destination_path": "research/verify_global_three_isometries_2026_10_12.py",
+      "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+      "git_blob_sha1": "6e0b5afe492a14d5b4ef7c26b05c6a2b61f952d8",
+      "mode": "100644",
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+    },
+    {
+      "source_path": "research/verify_target_c_oblique_lattice_pick_comparison.py",
+      "destination_path": "research/verify_target_c_oblique_lattice_pick_comparison.py",
+      "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+      "git_blob_sha1": "67ed66c6c49462ccf26f71a2e83cfae2149dbed6",
+      "mode": "100644",
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+    },
+    {
+      "source_path": "docs/prompts/historical/erdos_problem_99_1.7.10_FINAL_CONTINUATION_PROMPT.md",
+      "destination_path": "docs/prompts/historical/erdos_problem_99_1.7.10_FINAL_CONTINUATION_PROMPT.md",
+      "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+      "git_blob_sha1": "cbf6cebff8419b0517d13904d7a63079947db57b",
+      "mode": "100644",
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+    },
+    {
+      "source_path": "docs/reports/global_mixed_exchange_and_diameter_cut_2026-10-12.md",
+      "destination_path": "docs/reports/global_mixed_exchange_and_diameter_cut_2026-10-12.md",
+      "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+      "git_blob_sha1": "5264badb4c23186975ca2a6b648134c440b2ebfa",
+      "mode": "100644",
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+    },
+    {
+      "source_path": "docs/reports/global_three_isometry_competitors_2026-10-12.md",
+      "destination_path": "docs/reports/global_three_isometry_competitors_2026-10-12.md",
+      "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+      "git_blob_sha1": "e9ec219719394c98a75c536d4919cdeb7c8a7e02",
+      "mode": "100644",
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+    },
+    {
+      "source_path": "research/verify_global_mixed_exchange_2026_10_12.py",
+      "destination_path": "research/verify_global_mixed_exchange_2026_10_12.py",
+      "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+      "git_blob_sha1": "e45d2fc1a67ca6ed67caae840c62f1bab94a8b28",
+      "mode": "100644",
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+    },
+    {
+      "source_path": "research/verify_global_discrete_isometry_2026_10_12.py",
+      "destination_path": "research/verify_global_discrete_isometry_2026_10_12.py",
+      "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+      "git_blob_sha1": "2ad661ae68e320f48e6b1983f7f09952631672e8",
+      "mode": "100644",
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+    },
+    {
+      "source_path": "research/explore_global_three_isometries_2026_10_12.py",
+      "destination_path": "research/explore_global_three_isometries_2026_10_12.py",
+      "source_commit": "42f0296d1aca068c809f74cee5dcdb4ebdb27c73",
+      "git_blob_sha1": "18827292149a96552dbe76b8d78c294af88aebef",
+      "mode": "100644",
+      "reason": "Restore an active historical source reference or its original-path reproduction dependency."
+    }
+  ]
+}

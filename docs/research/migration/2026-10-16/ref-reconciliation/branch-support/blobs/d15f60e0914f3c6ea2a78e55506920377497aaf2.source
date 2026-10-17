@@ -1,0 +1,279 @@
+<!-- theorem-state: {"artifact_id":"ART-74D84CB9C25D","canonical":false,"claim_ids":[],"claim_statuses":{},"index":"docs/state/artifact-index.jsonl","status":"unreviewed","target":"target-c"} -->
+# Target C: an exceptional diameter-star face is empty or one straight-chain stress
+
+Date: 2026-10-08.
+Run base: `5f8ece96`.
+Canonical base: `d32a55f224e484609b1557bf5b8d531869b20558`.
+State: `2026-10-08.audit.148`.
+Classification: proved candidate awaiting independent audit/promotion.
+Registry: unreviewed; canonical=false. C-II and Level I remain open.
+
+## 1. Exact source-level bridge and its limit
+
+For a supplied actual loaded set `W`, the
+[preceding stress-face candidate](target_c_accessible_stress_transversal_or_degenerate_face_2026-10-08.md)
+defines `P_0` as the normalized source stresses with zero diameter
+reaction on `W`. Its available diameter edges are
+`E_0=H[B\W]`.
+
+The new chain is:
+
+    E_0 is contained in one actual diameter star
+      -> P_0 is empty or one explicitly determined straight-chain stress
+      -> a stress-killing deletion has at most s_Z+1 labels,
+         all in W except possibly one unloaded internal chain vertex
+      -> canonical strict full-source motion after deletion
+      -> Level I only after every deleted label is restored.
+
+The star hypothesis is not proved for a general exceptional edge set.
+The cardinality-restoration arrow is also not proved. No grid, path
+or KKT mass count is substituted for either missing premise.
+
+The geometry below is a finite theorem for any triangle-free
+unit-separated planar source of diameter `D>1`. It uses every source
+point for the separation and diameter bounds; source isolates are
+never dropped.
+
+## 2. Positive contact support lies in its loaded hull
+
+Let `s=(alpha,beta)` be any normalized nonnegative equilibrium stress
+on actual unit contacts and actual diameter pairs. Write `B_s` for
+the endpoints of positive diameter coefficients, and `C_s` for
+the positive contact support.
+
+Every `b in B_s` has a nonzero diameter reaction. An actual diameter
+partner gives a strict supporting functional at `b`: for `q!=b`,
+
+\[
+(b-b')\cdot(q-b)\le-|q-b|^2/2<0.
+\tag{DS1}
+\]
+
+Thus a positive combination of the incident diameter vectors cannot
+vanish, and equilibrium gives at least one positive contact at `b`.
+
+A nontrivial component of `C_s` with no positive diameter endpoint
+would have only nonnegative contact forces. Pairing its equilibrium
+with positions gives `sum alpha_e=0`, a contradiction. At every
+vertex without a positive diameter reaction, equilibrium makes the
+position a weighted average of its positive contact neighbors.
+The finite maximum principle therefore gives
+
+\[
+\boxed{V(C_s)\subseteq\operatorname{conv}B_s.}
+\tag{DS2}
+\]
+
+This is also the selected harmonic-trapping conclusion in canonical
+[Section 64.3](../targets/target-c/64-extreme-circuit-transfer-audit.md).
+No full-source rigidity or PSD hypothesis is needed here.
+
+## 3. A star cannot carry two positive diameter edges
+
+Suppose the positive diameter edges of `s` form a star with hub `a`
+and leaves `b_1,...,b_k`. Write
+`b_i=a+D u_i`, where `u_i` are unit vectors.
+The full source diameter bound gives
+
+\[
+|u_i-u_j|\le1,
+\qquad \angle(u_i,u_j)\le\pi/3.
+\tag{DS3}
+\]
+
+All leaf directions lie in one arc of width at most `pi/3`. Indeed,
+relative to one leaf they lie in `[-pi/3,pi/3]`; the two angular
+extremes differ by at most `2pi/3<pi`, so their ordinary difference
+is their smaller circular angle and is at most `pi/3`.
+
+Assume `k>=2`. Let `b_-` and `b_+` be the distinct angular extreme
+leaves. The segments `ab_-` and `ab_+` are exposed sides of
+`conv B_s`, and no other member of `B_s` lies on either side.
+
+At `b_-` the sole diameter reaction is parallel to `a-b_-`.
+By DS2, all positive contact neighbors lie in one closed half-plane
+bounded by the line `ab_-`. Dotting equilibrium with an inward
+normal to that line forces every positive contact neighbor onto
+the line, hence onto the segment `ab_-`.
+
+There is therefore a unit contact from `b_-` directly toward `a`.
+At an intermediate point of that segment there is no positive
+diameter reaction. The same supporting-normal argument puts every
+positive contact neighbor on the segment; one-dimensional equilibrium
+then forces the next unit contact toward `a`. A path cannot stop at
+an unloaded point. Finiteness and source separation force it to
+reach `a`. Consequently
+
+\[
+D\in\mathbb Z,\qquad
+a+j u_-\in A\quad(0\le j\le D).
+\tag{DS4}
+\]
+
+Apply the same argument to `b_+`. In particular both `a+u_-` and
+`a+u_+` are source points. Their distance is
+
+\[
+2\sin\!\left({\angle(u_-,u_+)\over2}\right)\le1.
+\tag{DS5}
+\]
+
+A strict inequality violates source separation. Equality makes an
+actual unit equilateral triangle with `a`. Both are excluded.
+Thus:
+
+\[
+\boxed{\text{A triangle-free source stress supported in a diameter
+star has exactly one positive diameter edge.}}
+\tag{DS6}
+\]
+
+This excludes a two-edge shared-endpoint stress even when it is
+not extreme. It makes no assertion against two disjoint diameter
+edges or a three-edge diameter cycle.
+
+## 4. The single-edge stress is unique and completely determined
+
+If `beta` is supported on `ab` alone, normalization gives
+`beta_ab=1`. DS2 puts the whole positive contact support on `ab`.
+The preceding line argument forces `D=m in Z` and the unique
+unit chain
+
+\[
+p_j=a+j(b-a)/m,\qquad 0\le j\le m.
+\tag{DS7}
+\]
+
+At each internal point the two positive contact coefficients are
+equal. Endpoint equilibrium determines their common value:
+
+\[
+\alpha_{p_jp_{j+1}}=m\quad(0\le j<m).
+\tag{DS8}
+\]
+
+All other contact and diameter coefficients are zero. Conversely,
+if the full source contains DS7 for an actual diameter edge,
+DS8 with `beta_ab=1` is a normalized source stress.
+The source can have additional actual rows; their coefficients in
+this stress are zero.
+
+The positive mixed support has `m+1` rows of rank `m`, so it is a
+rigidity-matroid circuit. On its `m+1` vertices,
+
+\[
+\sigma_*=m-1=D-1.
+\tag{DS9}
+\]
+
+Its scalar energy is
+`m sum_j(z_{j+1}-z_j)^2-(z_m-z_0)^2>=0` by Cauchy.
+This is the sharp one-edge case of the previous candidate's
+circuit-defect inequality, not a full-source feasible flex.
+
+## 5. Exact classification of the exceptional star face
+
+Suppose `E_0` is empty or is contained in one actual diameter star.
+By DS6, every stress in `P_0` must be a single-edge chain stress.
+There can be at most one such chain among the edges of `E_0`:
+two chains from the same hub again violate DS5.
+
+Therefore:
+
+\[
+\boxed{
+P_0=\varnothing\quad\text{or}\quad P_0=\{s_{\rm chain}\}.
+}
+\tag{DS10}
+\]
+
+The second case occurs exactly when an edge of `E_0` has the full
+straight unit chain DS7 in the actual source. In particular `P_0`
+is empty whenever `D` is not an integer. The nonempty face is one
+vertex of the full normalized stress polytope.
+
+No conclusion about a general forest, an odd cycle, several stars,
+or an exceptional edge set with many components follows.
+
+## 6. A located transversal with at most one unloaded exception
+
+Now use the canonical C-II source, `D>=9`, with
+`dim_aff P=s_Z` from Section 64. If `P_0` is empty, the preceding
+candidate selects a deletion `U subset W` with `|U|<=s_Z+1`.
+
+If `P_0={s_chain}`, choose any internal chain point `r`.
+This is an actual unloaded contact-core vertex: it lies strictly
+between two source points of an actual diameter pair, whereas every
+actual diameter endpoint is an exposed source-hull vertex.
+Define the nonnegative affine functional
+
+\[
+f_r(s)=\sum_{c\ni r}\alpha_c,\qquad F_r=P\cap\{f_r=0\}.
+\tag{DS11}
+\]
+
+Since `f_r(s_chain)=2D>0`, `F_r` is a proper face and
+`F_r intersect P_0` is empty. If `F_r` is empty, deleting `r`
+alone kills every normalized stress. Otherwise
+`dim_aff F_r<=s_Z-1`. Apply finite Helly on `F_r` to the
+zero-diameter-reaction faces indexed by `W`. There is
+`U subset W` with `|U|<=s_Z` and
+
+\[
+F_r\cap\bigcap_{b\in U}F_b=\varnothing.
+\tag{DS12}
+\]
+
+Deleting `R=U union {r}` therefore kills every normalized source
+stress. A reduced-source stress would extend by zero to the displayed
+intersection; at deleted loaded vertices zero diameter reaction also
+forces zero contact reaction by DS1.
+
+Thus in both alternatives:
+
+\[
+\boxed{|R|\le s_Z+1,\qquad |R\setminus W|\le1.}
+\tag{DS13}
+\]
+
+The optional exception is the supplied actual unloaded chain vertex.
+Canonical [Audit.87](../audits/target_c_contact_opening_transversal_independent_audit_2026-10-07.md)
+gives a strict contact-opening and diameter-shortening finite motion
+of the retained full source. In the chain case the two diameter
+endpoints lie outside `W` and remain retained, so nonemptiness is
+automatic. In the empty-face case retained nonemptiness remains the
+explicit finite hypothesis, automatic in the Type-II application.
+
+The deletion has no extra label cost beyond `s_Z+1`. It still loses
+cardinality. The unloaded exception is not asserted grid-accessible,
+and no simultaneous refill is supplied.
+
+The [general two-stage codimension candidate](target_c_almost_accessible_transversal_face_codimension_2026-10-08.md)
+allows at most `b_0` unloaded exceptions for an arbitrary exceptional
+edge set, using canonical contact-row independence and the loaded-only
+stress-cycle theorem. The star geometry sharpens that bound to one
+regardless of `b_0`.
+
+## 7. Exact certificates and scope
+
+The checker certifies:
+
+- straight integer chains with an additional retained contact isolate;
+- the sharp triangle obstruction for two extreme 60-degree arms,
+  and separation failure below 60 degrees;
+- triangle-free three-arm Y sources whose positive diameter support
+  is a cycle, showing that DS6 cannot be extended to all connected
+  diameter supports;
+- two-stage Helly/codimension counts on abstract simplexes and joins
+  of cubes with simplexes, including the one-preselected-face case.
+
+The valid planar fixtures have exact equilibrium, PSD and rigidity
+checks, complete actual contact/diameter/triangle censuses, and
+explicit smaller-diameter same-cardinality square-grid competitors.
+They are nonglobal and do not satisfy canonical mixed rigidity.
+Abstract simplexes are not planar sources.
+
+Sections 2–6 supply the analytic candidate proof. Computation proves
+the listed finite certificates only. It neither extracts a universal
+exceptional star nor restores deleted labels. Both canonical C-II
+branches and Level I remain open.

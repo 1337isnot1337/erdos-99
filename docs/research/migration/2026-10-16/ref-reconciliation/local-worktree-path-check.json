@@ -1,0 +1,107 @@
+[
+  {
+    "recorded_worktree_path": "/home/cinna/math/e99-cycle-moment-20261002",
+    "exists_in_current_runtime": false,
+    "is_git_repository": false,
+    "observation_scope": "last_available_runtime_before_environment_outage",
+    "current_execution_environment_available": false
+  },
+  {
+    "recorded_worktree_path": "/home/cinna/math/e99-diameter-rotation-cells-20261002",
+    "exists_in_current_runtime": false,
+    "is_git_repository": false,
+    "observation_scope": "last_available_runtime_before_environment_outage",
+    "current_execution_environment_available": false
+  },
+  {
+    "recorded_worktree_path": "/home/cinna/math/e99-gap-cycle-20261002",
+    "exists_in_current_runtime": false,
+    "is_git_repository": false,
+    "observation_scope": "last_available_runtime_before_environment_outage",
+    "current_execution_environment_available": false
+  },
+  {
+    "recorded_worktree_path": "/home/cinna/math/e99-global-exchange-20261012",
+    "exists_in_current_runtime": false,
+    "is_git_repository": false,
+    "observation_scope": "last_available_runtime_before_environment_outage",
+    "current_execution_environment_available": false
+  },
+  {
+    "recorded_worktree_path": "/home/cinna/math/e99-global-high-temperature-20261012",
+    "exists_in_current_runtime": false,
+    "is_git_repository": false,
+    "observation_scope": "last_available_runtime_before_environment_outage",
+    "current_execution_environment_available": false
+  },
+  {
+    "recorded_worktree_path": "/home/cinna/math/e99-global-level1-20261011",
+    "exists_in_current_runtime": false,
+    "is_git_repository": false,
+    "observation_scope": "last_available_runtime_before_environment_outage",
+    "current_execution_environment_available": false
+  },
+  {
+    "recorded_worktree_path": "/home/cinna/math/e99-global-repacking-20261012",
+    "exists_in_current_runtime": false,
+    "is_git_repository": false,
+    "observation_scope": "last_available_runtime_before_environment_outage",
+    "current_execution_environment_available": false
+  },
+  {
+    "recorded_worktree_path": "/home/cinna/math/e99-rail-hull-20261002",
+    "exists_in_current_runtime": false,
+    "is_git_repository": false,
+    "observation_scope": "last_available_runtime_before_environment_outage",
+    "current_execution_environment_available": false
+  },
+  {
+    "recorded_worktree_path": "/home/cinna/math/e99-source-cap-stress-20261002",
+    "exists_in_current_runtime": false,
+    "is_git_repository": false,
+    "observation_scope": "last_available_runtime_before_environment_outage",
+    "current_execution_environment_available": false
+  },
+  {
+    "recorded_worktree_path": "/home/cinna/math/e99-threshold-rail-curvature-20261002",
+    "exists_in_current_runtime": false,
+    "is_git_repository": false,
+    "observation_scope": "last_available_runtime_before_environment_outage",
+    "current_execution_environment_available": false
+  },
+  {
+    "recorded_worktree_path": "/tmp/e99-audit-m5-20261007",
+    "exists_in_current_runtime": false,
+    "is_git_repository": false,
+    "observation_scope": "last_available_runtime_before_environment_outage",
+    "current_execution_environment_available": false
+  },
+  {
+    "recorded_worktree_path": "/tmp/e99-audit-sector-peeling-20261007",
+    "exists_in_current_runtime": false,
+    "is_git_repository": false,
+    "observation_scope": "last_available_runtime_before_environment_outage",
+    "current_execution_environment_available": false
+  },
+  {
+    "recorded_worktree_path": "/tmp/e99-diameter-stress-gap-20261002",
+    "exists_in_current_runtime": false,
+    "is_git_repository": false,
+    "observation_scope": "last_available_runtime_before_environment_outage",
+    "current_execution_environment_available": false
+  },
+  {
+    "recorded_worktree_path": "/tmp/e99-exclusive-fan-ports-20261002",
+    "exists_in_current_runtime": false,
+    "is_git_repository": false,
+    "observation_scope": "last_available_runtime_before_environment_outage",
+    "current_execution_environment_available": false
+  },
+  {
+    "recorded_worktree_path": "/tmp/e99-source-cycle-20261001",
+    "exists_in_current_runtime": false,
+    "is_git_repository": false,
+    "observation_scope": "last_available_runtime_before_environment_outage",
+    "current_execution_environment_available": false
+  }
+]

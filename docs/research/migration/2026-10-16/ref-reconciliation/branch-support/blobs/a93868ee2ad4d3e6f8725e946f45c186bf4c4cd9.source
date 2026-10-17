@@ -1,0 +1,40 @@
+# Target C — edgewise pentagon opening barrier
+
+Date: 2026-10-05. Base: 3c94a1a93641a5f8fa24d43068d487594d3e38cd. State: 2026-10-05.audit.57. Proof-only, unreviewed. C-II and Level I remain open.
+
+Let C=(v_1,...,v_n) be a simple polygon and let x be interior with |x-v_i|>1 for every i. Put a_i=|v_(i+1)-v_i| and b_i=min(a_i,2). Then
+
+sum_i asin(b_i/2) > pi.                                            (1)
+
+Proof: write r_i=|v_i-x|>1 and theta_i for the principal oriented angle across edge i. For a_i<=2,
+
+a_i^2=(r_i-r_(i+1))^2+4 r_i r_(i+1) sin^2(|theta_i|/2)
+     >4 sin^2(|theta_i|/2),
+
+hence |theta_i|<2 asin(a_i/2). For a_i>2, |theta_i|<pi=2 asin(1), since equality would put x on the boundary edge. Winding gives sum theta_i=+/-2pi, so 2pi<=sum|theta_i|<2 sum asin(b_i/2), proving (1).
+
+If all sides are <=L<=2, (1) gives L>2 sin(pi/n), recovering the uniform threshold.
+
+For a pentagon with exactly s opened original boundary contacts, opened lengths a_1,...,a_s>1, and the other 5-s sides still exactly unit, (1) gives
+
+sum_(j=1)^s asin(min(a_j,2)/2) > (s+1)pi/6.                         (2)
+
+Therefore some opened side satisfies
+
+a_j > L_s := 2 sin((s+1)pi/(6s)).                                  (3)
+
+Thus L_1=sqrt(3), L_2=sqrt(2), L_3=2 sin(2pi/9), L_4=2 sin(5pi/24), and L_5=2 sin(pi/5).
+
+For exactly two opened contacts, with lengths a,b, (2) implies the sharper exact inequality
+
+a^2+b^2>4.                                                         (4)
+
+If both a,b<2, set A=asin(a/2), B=asin(b/2). Then A+B>pi/2, hence a/2=sin A>cos B=sqrt(1-b^2/4). If either side is at least 2, (4) is immediate. In particular one opened side must exceed sqrt(2).
+
+Sharpness: fix s and r>1 close to 1. Let alpha=2 asin(1/(2r)) and beta=[2pi-(5-s)alpha]/s. A cyclic pentagon of radius r with 5-s central gaps alpha and s gaps beta is convex for r close to one. The first 5-s sides are exactly unit. The other s sides equal A_s(r)=2r sin(beta/2). The center is wall-safe, and A_s(r) tends to L_s as r decreases to 1. Hence every threshold in (3) is sharp; for s=2, (4) is sharp in the limit a=b down to sqrt(2).
+
+Finite motion: if an original unit side with endpoint displacement difference delta becomes length a, then a<=1+|delta|. Therefore any activated s-open-contact pentagon has some opened edge with |delta|>L_s-1. If every wall label moves by at most epsilon in a common Euclidean registration, epsilon>(L_s-1)/2.
+
+For a pairwise vertex-disjoint bank activated using exactly two opened contacts per pentagon, every activated wall contains a distinct original boundary edge whose endpoints acquire relative displacement >sqrt(2)-1.
+
+This subsumes the earlier unmerged one-edge sqrt(3) barrier and sharpens the concurrent uniform 2 sin(pi/5) threshold. It does not construct a feasible finite activation motion or a spare packet. The remaining Target C step is to spend the forced finite distortion bank against the actual KKT/mixed-rigidity/diameter structure, or construct a different nonlocal strict competitor. No computation or CI output is a proof premise.

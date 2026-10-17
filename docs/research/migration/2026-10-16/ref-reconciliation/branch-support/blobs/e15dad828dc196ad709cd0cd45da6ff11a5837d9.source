@@ -1,0 +1,138 @@
+# Authoritative theorem state
+
+<!-- BEGIN GENERATED: theorem-state-snapshot -->
+**Generated state snapshot (`2026-10-05.audit.54`):** Level I **OPEN**; Target A **OPEN** through Section 177; Target B **OPEN**; Target C **C-I CLOSED / C-II OPEN**.
+
+Machine-derived tables: [`state/STATUS.generated.md`](state/STATUS.generated.md) and [`state/THEOREM_GRAPH.generated.md`](state/THEOREM_GRAPH.generated.md).
+<!-- END GENERATED: theorem-state-snapshot -->
+
+**State date:** 2026-10-05
+**LEVEL I STATUS: STILL OPEN.**
+
+This file and [`state/theorem-state.yaml`](state/theorem-state.yaml) control theorem lifecycle and status. Presence on `main`, a merged pull request, a newer date, or a larger section number does not make a claim canonical.
+
+## Global state
+
+Erdős Problem #99 remains open. No proof covers every sufficiently large global minimizer, and no unbounded family of triangle-free global minimizers is known.
+
+## Target A
+
+**Status:** open. Canonical development is through Section 177.
+**Authority:** [`targets/target-a/README.md`](targets/target-a/README.md).
+
+The global sufficient endpoint remains
+
+\[
+\operatorname{rank}S\le d_{\rm int}+|C^\partial|-\Delta_\Lambda,
+\qquad d_{\rm sc}\ge\Delta_\Lambda.
+\]
+
+The preferred locked endpoint remains the Section-175 interior-tube right-deficiency inequality
+
+\[
+|O_{\rm iso}|+\sum_i\max\{0,|O_i|-|C_i|\}\ge j_*+|T_Z|.
+\]
+
+## Target B
+
+**Status:** open.
+**Authority:** [`targets/target-b/README.md`](targets/target-b/README.md).
+
+The sufficient closure remains
+
+\[
+G+E\ge {\sqrt3\over4}B+{\sqrt3\over2}(t+\chi-1).
+\]
+
+The audited dense-grid, penetration, cancellation, multicomponent, and dominant-component interpolation tools remain canonical only under their recorded scopes. The multi-grain/global shell-stability transfer remains open.
+
+## Target C
+
+**C-I: CLOSED.**
+**C-II: OPEN.**
+**Authority:** [`targets/target-c/README.md`](targets/target-c/README.md) and [`targets/target-c/CURRENT.md`](targets/target-c/CURRENT.md).
+
+Use the contact-minimal, then diameter-pair-minimal representative and retain every source point, including contact-isolated points.
+
+### ZR/ZF scope correction
+
+The independently audited ZR/ZF theorem is a theorem about the **nonisolated positive-contact core** `V`, not the full source. With `v=|V|`,
+
+\[
+\ker\Omega_V=\operatorname{span}\{\mathbf1,P_x|_V,P_y|_V\},
+\qquad
+\operatorname{rank}R_{C\cup H}[V]=2v-3,
+\]
+
+and therefore
+
+\[
+e+h\ge2v-2,
+\qquad
+h\ge\delta\ge\lceil D\rceil.
+\]
+
+Contact-isolated source points remain in the global configuration. Extending the core stress matrix by zero rows and columns creates additional kernel directions. `C-ZRF-FULL-SOURCE` remains rejected. No bound on the isolated source population follows from ZR/ZF.
+
+### Current C-II frontier
+
+Audit.54 controls theorem authority.
+
+The audit.52--53 full-core stack remains canonical:
+\[
+\mu_D\ge\mu_{\rm hull}+\varepsilon_*,
+\qquad
+R_F\ge(\kappa_{\rm fr}-o(1))D,
+\qquad
+\sigma_C=0,
+\]
+with the positive reciprocal \((2,3)\)-sparse internal train graph, \(|\mathcal O|\ge q-k\), global face-return quotas, and joint bulk/face separator capacity.
+
+Audit.54 adds two canonical frontier results.
+
+- \`C-EMBEDDED-WALL-REFILL\` gives an actual strict source-competitor criterion. For pairwise interior-disjoint actual unit-contact walls \(C_j\), old interior populations \(S_j\), certified wall-safe refill capacities \(M_j\), and a vertex cover \(T\) of all actual diameter pairs,
+  \[
+  \sum_jM_j\ge\sum_j|S_j|+|T|
+  \]
+  implies a same-cardinality unit-separated source \(A'\) with
+  \[
+  \boxed{\operatorname{diam}A'<D.}
+  \]
+  The same wall shield yields contact-minimality exclusion when one wall has enough certified safe sites to replace its old interior population. Canonical concrete consequences include exclusion of the exact \(7\times7\) square unit-contact patch, its \(1/50\)-stable near-square perturbations, and every consecutive oblique patch satisfying the promoted area inequality.
+- \`C-PENTAGON-WALL-DISJOINT-BULK\` proves that pentagon-to-pentagon train bulk can be thinned while retaining a fixed positive fraction of quadratic crossing mass and making all terminal physical pentagon walls pairwise source-vertex-disjoint. In the full-core branch
+  \[
+  m_B=o(D),\qquad u_B=o(D),\qquad Q-f=o(D),
+  \]
+  the canonical post-hull-depletion bulk is asymptotically pentagon-to-pentagon, so one obtains
+  \[
+  |\mathcal L|=\Omega(D),\qquad
+  R(\mathcal L)=\Omega(D^2),
+  \qquad
+  |x_\tau-y_\tau|=\Omega(D)
+  \]
+  for a family of trains with pairwise source-vertex-disjoint terminal pentagon walls.
+
+Audit.54 also registers two binding regressions.
+
+- \`C-FIXED-WALL-ACTIVATION-REGRESSION\`: positive residual, phase mismatch, positive KKT stress, and mixed rigidity do not imply even one fixed-wall spare site.
+- \`C-LARGE-WALL-LOCK-REGRESSION\`: even arbitrarily large near-triangular unit walls with quadratic interior population and positive pinned equilibrium can have no alternative same-cardinality fixed-wall packing.
+
+Thus universal fixed-wall capacity from residual, phase mismatch, or wall size is a dead route.
+
+### Exact remaining split
+
+1. **Macroscopic-container branch.** The canonical inactive-container geometry remains open, but the required endpoint is now explicit: certify one or more actual unit-contact wall packets whose packing surplus pays a diameter cover. Positive residual alone is insufficient.
+
+2. **Full-core branch.** In the low-endpoint-defect regime \(m_B,u_B,Q-f=o(D)\), the source now canonically contains a macroscopic family of macroscopically long trains with pairwise disjoint terminal pentagon walls and quadratic crossing mass. The exact missing theorem is a **collective movable-wall activation** result: use these disjoint walls together with loaded-return paths, reciprocal/contact-manifold coordinates, and long-train geometry to create enough certified wall-safe packing surplus to pay an actual diameter vertex cover, or force an exact unit equilateral triangle.
+
+The global Sections 122--123 detour/payment package remains available, as do the audit.53 return and separator banks.
+
+Return counts are not refill capacity. Positive residual is not an integer slot count. The wall-disjoint theorem does not by itself produce compatible wall motions.
+
+### Binding Target C corrections
+
+Do not use, without a new proof, the incident-diameter Euler-path inference, FB4 localization, the incompatible-cut C53 pentagon objection, RSR disk-equality uniqueness, Eppstein-near-equality-to-near-quadrangulation, five-host occupancy from measure saturation, the inward-pocket/exterior-Reuleaux-cap containment, deletion of contact-isolated source points, extension of the ZR/ZF affine-kernel theorem to isolated coordinates, `r/(6C_T)` as the sharp phase-bin limit, or the discarded Section-121 normalization `G_loc=o(D^2) => G_loc/d=o(1)`.
+
+## Promotion rule
+
+A frontier-changing result must update the machine manifest, this state lock, the affected route/current-frontier file, the active prompt when its next obligation changes, applicable dependency/certificate registrations, and every generated view whose generated bytes change.

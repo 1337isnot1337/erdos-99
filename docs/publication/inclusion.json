@@ -34737,7 +34737,7 @@
       "source_blob": "0f27741a50edef6fce3957d5c1495ea9de45d65b",
       "source_mode": "100644",
       "source_sha256": "66f5bcd98a481c16dd9c01ba2a4b5d6f5b19ebe80c346a19373e25136358d3e3",
-      "public_sha256": "66f5bcd98a481c16dd9c01ba2a4b5d6f5b19ebe80c346a19373e25136358d3e3",
+      "public_sha256": "48b736ff264eb7a56d762135a7beaf0b233113da2a37579e7d32e4ebb3449496",
       "role": "infrastructure",
       "theorem_ids": [],
       "dependencies": [],
@@ -34759,7 +34759,7 @@
       "publication_clearance": "pending provenance/content review",
       "attribution": "source attribution retained; see NOTICE",
       "reproduction_requirements": "textual proof or operational prerequisite",
-      "editorial_change": "byte-identical",
+      "editorial_change": "Validate exact captured noncanonical migration banners as alternative metadata; original source bytes retained in migration baseline-originals.",
       "downstream_frontier_obligations": [],
       "navigation_dependencies": [
         "docs/state/artifact-index.jsonl",

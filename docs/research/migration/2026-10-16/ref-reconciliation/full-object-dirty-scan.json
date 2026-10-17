@@ -1,0 +1,22 @@
+{
+  "scope": "all loose Git objects in shared store at last successful runtime scan, including reconstructed destination history, source-main, and fetched branch versions",
+  "objects_scanned": 10419,
+  "types": {
+    "blob": 7772,
+    "tree": 2399,
+    "commit": 248
+  },
+  "blob_bytes_hashed": 284499836,
+  "target_sha256s": [
+    "03ea999dbb7e47fb0d07e30015d3d0ac2902630b13e4e245e0f636a21d8e01a1",
+    "2955a0800602e81caab257d5351b764071ad79e95b9577e4a1decfd24f325375",
+    "4d585e3b28e6cdd1bc35c009cc5839a320708f812f38efe6d136bac60ffb66b6",
+    "d6947b1ec49343c811dffa8a499cd37aa79a9b6bcecf358af2a98dfa6d099f20",
+    "e4dc737368a17138700740fc087ed72bf762560e0b185eba6b21be79825b879a"
+  ],
+  "matches": [],
+  "errors": [],
+  "observation_scope": "before_execution_environment_outage",
+  "ref_reconciliation_head_at_scan": "d2b6100c24f971fbdf6ee164aecb02a8195a01f3",
+  "scan_rerun_after_outage": false
+}

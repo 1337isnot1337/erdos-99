@@ -1,0 +1,70 @@
+[
+  {
+    "source_path": "docs/state/artifact-index.jsonl",
+    "source_sha256": "870a817cb70c3f5921591e483240197f93ed4b9b4f07bdd96702d009ebe38469",
+    "source_bytes": 275649,
+    "destination_path": "docs/research/migration/2026-10-16/ref-reconciliation/dirty-support/870a817cb70c3f5921591e483240197f93ed4b9b4f07bdd96702d009ebe38469.source",
+    "destination_blob": "4e3735020c3924f719df7b39a00fe2d78cb46bd1",
+    "base_path": "docs/research/migration/2026-10-16/ref-reconciliation/branch-support/blobs/d64ecbc583123a205c45c0918ca086da792db8a8.source",
+    "base_blob": "d64ecbc583123a205c45c0918ca086da792db8a8",
+    "base_sha256": "a2947119474d315965181c691d9102d441b90d79ad1c43fb4ba87ca85789b2bf",
+    "remove_row_path": "docs/reports/target_c_finite_rotation_cell_barriers_2026-10-02.md",
+    "add_row": {
+      "artifact_id": "ART-586BDE057124",
+      "canonical": false,
+      "claim_ids": [],
+      "claim_statuses": {},
+      "depends_on": [],
+      "invalidates": [],
+      "path": "docs/reports/target_c_threshold_cut_torque_transport_2026-10-02.md",
+      "status": "unreviewed",
+      "supersedes": [],
+      "target": "target-c"
+    },
+    "sort_rows_by": "path",
+    "json_sort_keys": true,
+    "json_separators": [
+      ",",
+      ":"
+    ],
+    "line_ending": "LF",
+    "final_newline": true,
+    "independent_reconstruction": true,
+    "method": "Reconstruct exact common1047rows plus recorded dirty report row; verify entire captured SHA256 and byte length.",
+    "mathematical_claim_audit": false
+  },
+  {
+    "source_path": "docs/state/artifact-index.jsonl",
+    "source_sha256": "72e278c005e979340549de8dfd65682176c7f6ae1f064ed6bfd5eeb3f97ee6d2",
+    "source_bytes": 275652,
+    "destination_path": "docs/research/migration/2026-10-16/ref-reconciliation/dirty-support/72e278c005e979340549de8dfd65682176c7f6ae1f064ed6bfd5eeb3f97ee6d2.source",
+    "destination_blob": "70b139c23125aaea78388f7e21e17bcb56d8b43d",
+    "base_path": "docs/research/migration/2026-10-16/ref-reconciliation/branch-support/blobs/d64ecbc583123a205c45c0918ca086da792db8a8.source",
+    "base_blob": "d64ecbc583123a205c45c0918ca086da792db8a8",
+    "base_sha256": "a2947119474d315965181c691d9102d441b90d79ad1c43fb4ba87ca85789b2bf",
+    "remove_row_path": "docs/reports/target_c_finite_rotation_cell_barriers_2026-10-02.md",
+    "add_row": {
+      "artifact_id": "ART-62A2D6B46BE6",
+      "canonical": false,
+      "claim_ids": [],
+      "claim_statuses": {},
+      "depends_on": [],
+      "invalidates": [],
+      "path": "docs/reports/target_c_single_chart_loaded_collar_charge_2026-10-02.md",
+      "status": "unreviewed",
+      "supersedes": [],
+      "target": "target-c"
+    },
+    "sort_rows_by": "path",
+    "json_sort_keys": true,
+    "json_separators": [
+      ",",
+      ":"
+    ],
+    "line_ending": "LF",
+    "final_newline": true,
+    "independent_reconstruction": true,
+    "method": "Reconstruct exact common1047rows plus recorded dirty report row; verify entire captured SHA256 and byte length.",
+    "mathematical_claim_audit": false
+  }
+]
