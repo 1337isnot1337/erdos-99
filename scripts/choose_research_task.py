@@ -14,9 +14,9 @@ import sys
 from typing import Any
 
 try:
-    from scripts.research_coordination import DEFAULT_CACHE, REPOSITORY, query_open_work, overlap_for_task, claim_text, handoff_leads, validate_snapshot
+    from scripts.research_coordination import DEFAULT_CACHE, REPOSITORY, query_open_work, overlap_for_task, claim_text, handoff_leads
 except ModuleNotFoundError:
-    from research_coordination import DEFAULT_CACHE, REPOSITORY, query_open_work, overlap_for_task, claim_text, handoff_leads, validate_snapshot
+    from research_coordination import DEFAULT_CACHE, REPOSITORY, query_open_work, overlap_for_task, claim_text, handoff_leads
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -397,6 +397,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--coordination-cache", type=Path, help="reuse a saved overlap/handoff cache; --live-overlap refreshes it")
     parser.add_argument("--claim-template", action="store_true", help="print claim and handoff text for one suggestion; does not create an issue")
     args = parser.parse_args(argv)
+    if args.overlap_snapshot:
+        args.overlap_snapshot = args.overlap_snapshot.expanduser()
     if args.overlap_snapshot and (args.live_overlap or args.coordination_cache):
         parser.error("choose live query or offline snapshot")
     seed = args.seed if args.seed is not None else secrets.token_hex(16)

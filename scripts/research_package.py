@@ -49,7 +49,8 @@ def check(root, package):
     return dict(status="metadata-valid", package=package,
                 classification=result["task"]["classification"], unresolved=result["unresolved"],
                 declared_seconds=result["seconds"],
-                replay_eligible=not result["unresolved"], executed_commands=False,
+                declared_package_dependencies=sorted(result["dependencies"]),
+                full_verified=False, replay_authorized=False, executed_commands=False,
                 limits="Metadata and source-pin check only; no replay or mathematical approval. The Git-blob planner and isolated backend remain authoritative for replay.")
 
 

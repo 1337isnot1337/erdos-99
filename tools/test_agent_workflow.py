@@ -2,8 +2,6 @@
 from __future__ import annotations
 
 import argparse
-import copy
-import datetime as dt
 import hashlib
 import json
 from pathlib import Path
@@ -45,6 +43,10 @@ class OverlapTests(unittest.TestCase):
     def test_blank_marker_cannot_consume_the_following_line(self):
         self.assertNotEqual(coordination.markers("E99-STATUS:\nE99-NEXT-ACTION: inspect")
                             .get("STATUS"), "E99-NEXT-ACTION: inspect")
+
+    def test_claim_cannot_reserve_an_arbitrarily_distant_expiry(self):
+        self.assertIn("seven-day-limit", coordination.claim_status(
+            row(body="E99-CLAIM-EXPIRES: 2099-01-01T00:00:00Z")))
 
     def test_latest_done_releases_a_discussion_handoff(self):
         data = snapshot()
@@ -116,6 +118,11 @@ class OverlapTests(unittest.TestCase):
         matched = coordination.overlap_for_task(dict(id="bridge", overlap_terms=[]), data)
         self.assertEqual(matched["discussions_availability"], "disabled")
         self.assertTrue(matched["coverage"]["pulls"]["complete_pagination"])
+
+    def test_unknown_discussion_availability_is_not_labelled_disabled(self):
+        with patch.object(coordination, "pages", return_value=[]), patch.object(coordination, "gh", return_value={}):
+            with self.assertRaisesRegex(ValueError, "availability is unknown"):
+                coordination.query_open_work()
 
     def test_graphql_discussion_comment_and_reply_pagination(self):
         calls = []
@@ -276,6 +283,28 @@ class IntakeTests(RepositoryFixture):
         self.assertEqual(json.loads(process.stdout)["source"], "offline-fixture")
         self.assertEqual(before, (self.root / intake.STATE).read_bytes())
 
+    def test_plan_output_cannot_overwrite_scheduling_state(self):
+        fixture = self.root / "live.json"; atomic_json(fixture, dict(repository=REPOSITORY,pulls=self.live))
+        before = (self.root / intake.STATE).read_bytes()
+        process = subprocess.run([sys.executable,str(ROOT / "scripts/pr_intake.py"),"--root",str(self.root),"plan","--live-json",str(fixture),"--base-ref","HEAD","--output",str(self.root / intake.STATE)],capture_output=True,text=True)
+        self.assertNotEqual(process.returncode, 0)
+        self.assertIn("cannot overwrite", process.stderr)
+        self.assertEqual(before, (self.root / intake.STATE).read_bytes())
+
+
+class LocalNoteTests(RepositoryFixture):
+    def test_local_search_does_not_follow_symlinked_parent_directories(self):
+        self.write("docs/reports/note.md", "original"); self.commit()
+        directory = self.root / "docs/reports"
+        (directory / "note.md").unlink(); directory.rmdir()
+        with tempfile.TemporaryDirectory() as temp:
+            (Path(temp) / "note.md").write_text("outside source")
+            try:
+                directory.symlink_to(temp, target_is_directory=True)
+            except OSError as exc:
+                self.skipTest(str(exc))
+            self.assertFalse(any(row["body"] == "outside source" for row in coordination.local_records(self.root)))
+
 
 class PackageTests(RepositoryFixture):
     def package(self):
@@ -285,7 +314,7 @@ class PackageTests(RepositoryFixture):
         directory = self.package()
         result = check(self.root,"research-packages/example-package")
         self.assertFalse(result["executed_commands"])
-        self.assertFalse(result["replay_eligible"])
+        self.assertFalse(result["replay_authorized"])
         process = subprocess.run([sys.executable,"-O",str(directory / "verify.py")],capture_output=True,text=True)
         self.assertNotEqual(process.returncode, 0)
         self.assertIn("Draft package", process.stderr)
@@ -294,6 +323,19 @@ class PackageTests(RepositoryFixture):
         self.package(); self.write("source.md","different")
         with self.assertRaisesRegex(ValueError,"hash mismatch"):
             check(self.root,"research-packages/example-package")
+
+    def test_resolved_metadata_still_cannot_authorize_replay_or_verify_a_theorem(self):
+        directory = self.package()
+        code = "assert 2 + 2 == 4\n"
+        self.write("research-packages/example-package/verify.py", code)
+        source = json.loads((directory / "SOURCES.json").read_text())
+        source["inputs"][-1]["sha256"] = hashlib.sha256(code.encode()).hexdigest()
+        source["unresolved"] = []
+        atomic_json(directory / "SOURCES.json", source)
+        result = check(self.root,"research-packages/example-package")
+        self.assertEqual(result["unresolved"], [])
+        self.assertFalse(result["full_verified"])
+        self.assertFalse(result["replay_authorized"])
 
     def test_generator_rejects_dirty_sources_and_existing_packages(self):
         directory = self.package(); before = (directory / "README.md").read_bytes()

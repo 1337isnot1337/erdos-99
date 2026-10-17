@@ -11,9 +11,9 @@ from pathlib import Path
 import re
 
 try:
-    from scripts.workflow_common import REPOSITORY, ROOT, atomic_json, git, gh, graphql, now, pages, timestamp
+    from scripts.workflow_common import REPOSITORY, ROOT, atomic_json, git, gh, graphql, now, pages, regular_file, timestamp
 except ModuleNotFoundError:
-    from workflow_common import REPOSITORY, ROOT, atomic_json, git, gh, graphql, now, pages, timestamp
+    from workflow_common import REPOSITORY, ROOT, atomic_json, git, gh, graphql, now, pages, regular_file, timestamp
 
 DEFAULT_CACHE = Path.home() / ".cache/erdos99/overlap.json"
 GROUPS = ("pulls", "issues", "discussions", "closed_pulls")
@@ -32,6 +32,8 @@ def claim_status(row):
         expiry = dt.datetime.fromisoformat(marked["CLAIM-EXPIRES"].replace("Z", "+00:00"))
         if expiry.tzinfo is None:
             raise ValueError("timezone missing")
+        if expiry > now() + dt.timedelta(days=7):
+            return "expiry-outside-seven-day-limit; check manually"
         return "active" if expiry > now() else "expired"
     except (KeyError, ValueError):
         return "expiry-unknown; check manually"
@@ -51,7 +53,10 @@ def _connection(node_id, node_type, field):
         query = """query($id:ID!,$cursor:String){node(id:$id){... on TYPE{
           FIELD(first:100,after:$cursor){nodes{id body url updatedAt}
           pageInfo{hasNextPage endCursor}}}}}""".replace("TYPE", node_type).replace("FIELD", field)
-        connection = graphql(query, id=node_id, cursor=cursor)["node"][field]
+        node = graphql(query, id=node_id, cursor=cursor).get("node")
+        if not isinstance(node, dict) or not isinstance(node.get(field), dict):
+            raise ValueError("Discussion comment/reply access is unavailable; refresh was not completed")
+        connection = node[field]
         yield from connection["nodes"]
         if not connection["pageInfo"]["hasNextPage"]:
             break
@@ -65,7 +70,10 @@ def _discussions(repository):
         query = """query($owner:String!,$name:String!,$cursor:String){repository(owner:$owner,name:$name){
           discussions(first:100,after:$cursor){nodes{id number title body url updatedAt}
           pageInfo{hasNextPage endCursor}}}}"""
-        connection = graphql(query, owner=owner, name=name, cursor=cursor)["repository"]["discussions"]
+        repository_data = graphql(query, owner=owner, name=name, cursor=cursor).get("repository")
+        if not isinstance(repository_data, dict) or not isinstance(repository_data.get("discussions"), dict):
+            raise ValueError("Discussion access is unavailable; refresh was not completed")
+        connection = repository_data["discussions"]
         for discussion in connection["nodes"]:
             records.append(_row(discussion, "discussion"))
             for comment in _connection(discussion["id"], "Discussion", "comments"):
@@ -101,6 +109,7 @@ def query_open_work(repository=REPOSITORY, *, cache=None, refresh=False,
                     offline=False, include_closed=False, max_age=300):
     if not re.fullmatch(r"[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+", repository):
         raise ValueError("invalid repository")
+    cache = Path(cache).expanduser() if cache is not None else None
     saved = None
     if cache is not None and Path(cache).exists():
         saved = validate_snapshot(json.loads(Path(cache).read_text(encoding="utf-8")), repository)
@@ -136,7 +145,9 @@ def query_open_work(repository=REPOSITORY, *, cache=None, refresh=False,
             if group != "issues" or "pull_request" not in item]
         coverage[group] = dict(fetched_at=timestamp(), complete_pagination=True,
                                records=len(records[group]), fields="titles and bodies")
-    enabled = gh(f"repos/{repository}").get("has_discussions", False)
+    enabled = gh(f"repos/{repository}").get("has_discussions")
+    if type(enabled) is not bool:
+        raise ValueError("Discussion availability is unknown; refresh was not completed")
     records["discussions"] = _discussions(repository) if enabled else []
     coverage["discussions"] = dict(fetched_at=timestamp(), complete_pagination=True,
                                    available=enabled, records=len(records["discussions"]),
@@ -159,8 +170,9 @@ def local_records(root=ROOT):
                 or not path.startswith(("docs/research/", "docs/reports/", "docs/audits/", "research/", "research-packages/", "tasks/"))
                 or not (path.endswith(".md") or Path(path).name in ("TASK.json", "SOURCES.json"))):
             continue
-        source = Path(root) / path
-        if source.is_symlink() or not source.is_file():
+        try:
+            source = regular_file(root, path)
+        except ValueError:
             continue
         body = source.read_text(encoding="utf-8")
         records.append(dict(kind="local-note", title=path, path=path, body=body,

@@ -17,7 +17,10 @@ class ReadingEditionTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             guides = ("AGENTS.md", "autoresearch.md", "CONTRIBUTING.md",
-                      "docs/launch/READINESS.md", "tasks/example.md")
+                      "docs/launch/READINESS.md", "tasks/example.md",
+                      "docs/research/agent-procedure.md", "docs/research/current-priorities.md",
+                      "docs/research/pr-intake.md", "docs/research/research-archive-intake.md",
+                      "docs/research/research-package-guide.md")
             for source in (*guides, "docs/theory/example.md"):
                 path = root / source
                 path.parent.mkdir(parents=True, exist_ok=True)

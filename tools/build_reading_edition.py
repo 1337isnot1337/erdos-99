@@ -30,6 +30,9 @@ CURRENT_DOCUMENTS = ROOT_DOCUMENTS | {
     "docs/RESEARCH_WORKFLOW.md", "docs/REVIEW_POLICY.md", "docs/START_HERE.md",
     "docs/STATE.md", "docs/research/README.md",
     "docs/research/research-priority-log.md", "docs/reports/REPORT_TEMPLATE.md",
+    "docs/research/agent-procedure.md", "docs/research/current-priorities.md",
+    "docs/research/pr-intake.md", "docs/research/research-archive-intake.md",
+    "docs/research/research-package-guide.md",
     "research/README.md",
 }
 CURRENT_PREFIXES = ("docs/ci/", "docs/launch/", "docs/publication/", "tasks/")

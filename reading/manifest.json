@@ -1,7 +1,7 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2172,
+  "source_documents": 2167,
   "math_pairs_normalized": 71613,
   "documents": [
     {
@@ -10281,25 +10281,11 @@
       "math_pairs_normalized": 45
     },
     {
-      "source": "docs/research/agent-procedure.md",
-      "source_sha256": "44be2c2aba7468de266444a91d85a33ed42687e66c36af44eee2f20d4194a64a",
-      "reading_path": "reading/docs/research/agent-procedure.md",
-      "reading_sha256": "06b99130701b06be3d77ba0ecab0182b6d1b2537b6dc9244d84401cf81453b95",
-      "math_pairs_normalized": 0
-    },
-    {
       "source": "docs/research/bottleneck-brief.md",
       "source_sha256": "536d00397aafd8a73ce3a98d065340125db4eb3a9e2d98723f13a086276f2b51",
       "reading_path": "reading/docs/research/bottleneck-brief.md",
       "reading_sha256": "5f67d5c1193d5ac90b6f44aa915cfef043b306171e628c924c992abd6b9d02df",
       "math_pairs_normalized": 10
-    },
-    {
-      "source": "docs/research/current-priorities.md",
-      "source_sha256": "205f8eb8c94c180ed12d38c3025378ddde9f7a79b1add6118b4ed6ad3fb12e45",
-      "reading_path": "reading/docs/research/current-priorities.md",
-      "reading_sha256": "560c98cd22ef3e6c89c3c728d81513c896463627711a5586312b5da4a011a96e",
-      "math_pairs_normalized": 0
     },
     {
       "source": "docs/research/obstructions.md",
@@ -10316,13 +10302,6 @@
       "math_pairs_normalized": 0
     },
     {
-      "source": "docs/research/pr-intake.md",
-      "source_sha256": "2a60f9cdc61baa6bd8d4310672332677c2ce4ee88784066ead408e167b1a6753",
-      "reading_path": "reading/docs/research/pr-intake.md",
-      "reading_sha256": "29ebaea9de49d5bd3f89170daaee30de512905d0e7f60e641041d713e19d3896",
-      "math_pairs_normalized": 0
-    },
-    {
       "source": "docs/research/proposals.md",
       "source_sha256": "3fd6af991bc7e220c4cdd1955b09e31988c20d34777554cd7cf1f710befe7c39",
       "reading_path": "reading/docs/research/proposals.md",
@@ -10330,24 +10309,10 @@
       "math_pairs_normalized": 3
     },
     {
-      "source": "docs/research/research-archive-intake.md",
-      "source_sha256": "ea08bea1d9f33596418903422e91fda41ae39203087ca6d6a8b0354753e6ca1b",
-      "reading_path": "reading/docs/research/research-archive-intake.md",
-      "reading_sha256": "a620877c9f30c753c69a80acda529e187d1210994647e8246ec546585d7dbe46",
-      "math_pairs_normalized": 0
-    },
-    {
       "source": "docs/research/research-family-status.md",
       "source_sha256": "669edba719155f55a435032fc6e9f30b76fde98e26553b2e9a5efc7755e02f28",
       "reading_path": "reading/docs/research/research-family-status.md",
       "reading_sha256": "85c13991e9060ad78d1d62f85e438b4ca42ee4b1808177652e7058ff5283a24f",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/research/research-package-guide.md",
-      "source_sha256": "bcfaa24541d4597d6b3e48e963915103317a0971716ae149bcea481f9befe44a",
-      "reading_path": "reading/docs/research/research-package-guide.md",
-      "reading_sha256": "f82e818319bfccc8bac8c56d8638de3de42e10002f829d83f6b2c66743346713",
       "math_pairs_normalized": 0
     },
     {
@@ -15309,6 +15274,26 @@
     {
       "source": "docs/research/README.md",
       "reading_path": "reading/docs/research/README.md"
+    },
+    {
+      "source": "docs/research/agent-procedure.md",
+      "reading_path": "reading/docs/research/agent-procedure.md"
+    },
+    {
+      "source": "docs/research/current-priorities.md",
+      "reading_path": "reading/docs/research/current-priorities.md"
+    },
+    {
+      "source": "docs/research/pr-intake.md",
+      "reading_path": "reading/docs/research/pr-intake.md"
+    },
+    {
+      "source": "docs/research/research-archive-intake.md",
+      "reading_path": "reading/docs/research/research-archive-intake.md"
+    },
+    {
+      "source": "docs/research/research-package-guide.md",
+      "reading_path": "reading/docs/research/research-package-guide.md"
     },
     {
       "source": "docs/research/research-priority-log.md",

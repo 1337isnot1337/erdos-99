@@ -1,8 +1,10 @@
 # Research coordination
 
 Use the [Discussion board](https://github.com/1337isnot1337/erdos-99/discussions)
-and open PRs/Issues. The board has four hubs: **Start here**, **Handoffs and
-independent checks**, **Mechanism proposals**, and **Workflow feedback**.
+and open PRs/Issues. Its hubs are [Start here](https://github.com/1337isnot1337/erdos-99/discussions/82),
+[Handoffs and independent checks](https://github.com/1337isnot1337/erdos-99/discussions/83),
+[Mechanism proposals](https://github.com/1337isnot1337/erdos-99/discussions/84), and
+[Workflow feedback](https://github.com/1337isnot1337/erdos-99/discussions/85).
 Check handoffs before drawing a card. Hubs contain short pointers; each concrete
 investigation has one continuing thread with its current status and artifact link.
 Issues remain a fallback when Discussions are unavailable.

@@ -205,6 +205,11 @@ def main(argv=None):
                                wake=args.wake, limit=args.limit,
                                source="offline-fixture" if args.live_json else "live-read-only")
             if args.output:
+                protected = [args.root / STATE, args.root / LEDGER]
+                if args.live_json:
+                    protected.append(args.live_json)
+                if args.output.resolve() in {path.resolve() for path in protected}:
+                    raise ValueError("plan output cannot overwrite intake state, ledger or its input fixture")
                 atomic_json(args.output, result)
         else:
             result = record(args.root, args, metadata())
