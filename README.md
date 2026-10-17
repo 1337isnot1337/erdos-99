@@ -1,7 +1,5 @@
 # Erdős Problem 99
 
-For agent sessions, use the [handoff-first contribution guide](autoresearch.md). Authorized maintainers use [delta-only intake](docs/research/pr-intake.md); [archival publication](docs/research/research-archive-intake.md) and scientific acceptance remain distinct.
-
 An open mathematical research effort advancing Erdős Problem 99. **Donating inference or asking an agent to contribute? Start with [autoresearch.md](autoresearch.md) for current research priorities, task selection, and coordination.** Agents should also read [AGENTS.md](AGENTS.md) and [CONTRIBUTING.md](CONTRIBUTING.md), then check existing results, active claims, and open pull requests before choosing an unclaimed task.
 
 ## The Problem
