@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Generate GitHub-readable Markdown without rewriting frozen source documents.
+"""Generate GitHub-readable mathematical pages and links to current guides.
 
 Only presentation delimiters, navigation, and listed wording corrections change.
-Every output records its exact source hash. No claim or lifecycle is promoted.
+Mathematical pages record their source hashes for rendering consistency. Current
+guides use stable links, so ordinary edits need no duplicate page or hash update.
+No claim or lifecycle is promoted.
 """
 from __future__ import annotations
 
@@ -21,12 +23,18 @@ ROOT = Path(__file__).resolve().parents[1]
 EDITION = "reading"
 EXCLUDED = ("docs/archive/", "docs/research/migration/")
 ROOT_DOCUMENTS = {"AGENTS.md", "CONTRIBUTING.md", "autoresearch.md"}
+# These pages are current guidance, not mathematical proof artifacts. Keep the
+# existing reading URLs as links, without duplicating or hashing their content.
+CURRENT_DOCUMENTS = ROOT_DOCUMENTS | {
+    "docs/COORDINATION.md", "docs/KNOWLEDGE_MAP.md", "docs/README.md",
+    "docs/RESEARCH_WORKFLOW.md", "docs/REVIEW_POLICY.md", "docs/START_HERE.md",
+    "docs/STATE.md", "docs/research/README.md",
+    "docs/research/research-priority-log.md", "docs/reports/REPORT_TEMPLATE.md",
+    "research/README.md",
+}
+CURRENT_PREFIXES = ("docs/ci/", "docs/launch/", "docs/publication/", "tasks/")
 REPAIR_REGISTRY = "docs/publication/reading-tex-repairs.json"
 WORDING = {
-    "autoresearch.md": [
-        ("Contribute one useful, independently reviewable result to this repository.",
-         "Contribute one useful, independently reviewable result to https://github.com/1337isnot1337/erdos-99."),
-    ],
     "docs/problem/statement.md": [
         ("minimum pairwise distance (1)", "minimum pairwise distance exactly $1$"),
     ],
@@ -262,7 +270,12 @@ def sources(root: Path) -> list[str]:
                 raise ValueError("symlinked source document: " + rel)
             if not rel.startswith(EXCLUDED):
                 result.append(rel)
-    result.extend(path for path in ROOT_DOCUMENTS if (root / path).is_file())
+    for rel in ROOT_DOCUMENTS:
+        path = root / rel
+        if path.is_symlink():
+            raise ValueError("symlinked source document: " + rel)
+        if path.is_file():
+            result.append(rel)
     return sorted(set(result))
 
 
@@ -274,8 +287,21 @@ def relative_link(source: str, destination: str) -> str:
     return posixpath.relpath(destination, posixpath.dirname(source))
 
 
+def current_document(source: str) -> bool:
+    return source in CURRENT_DOCUMENTS or source.startswith(CURRENT_PREFIXES)
+
+
+def current_document_page(source: str) -> str:
+    target = quote(relative_link(reading_path(source), source), safe="/-._~")
+    return ("# Current document\n\n"
+            f"Read [{source}]({target}) for the current version.\n\n"
+            "This page preserves links from the reading edition.\n")
+
+
 def render(source: str, raw: str, available: set[str], root: Path,
            source_sha256: str | None = None, repair_registry: dict | None = None) -> tuple[str, int]:
+    if current_document(source):
+        return current_document_page(source), 0
     digest = source_sha256 or hashlib.sha256(raw.encode()).hexdigest()
     text, repair_count, literal_displays = repair_source(source, raw, digest, repair_registry or {})
     text = text.replace("\r\n", "\n").replace("\r", "\n")
@@ -335,30 +361,44 @@ def render(source: str, raw: str, available: set[str], root: Path,
 def expected_files(root: Path) -> dict[str, str]:
     available = set(sources(root))
     registry_path = root / REPAIR_REGISTRY
-    registry = json.loads(registry_path.read_text())["documents"] if registry_path.exists() else {}
+    registry = json.loads(registry_path.read_text(encoding="utf-8"))["documents"] if registry_path.exists() else {}
     if set(registry) - available:
         raise ValueError("reading repair refers to a missing/excluded source")
+    if any(current_document(source) for source in registry):
+        raise ValueError("reading repair refers to a current guidance document")
     outputs = {}
     records = []
-    total = 0
+    current_links = []
     for source in sorted(available):
+        destination = reading_path(source)
+        if current_document(source):
+            outputs[destination] = current_document_page(source)
+            current_links.append({"source": source, "reading_path": destination})
+            continue
         original = (root / source).read_bytes()
         digest = hashlib.sha256(original).hexdigest()
         raw = original.decode("utf-8")
         text, pairs = render(source, raw, available, root, source_sha256=digest, repair_registry=registry)
-        destination = reading_path(source)
         outputs[destination] = text
-        total += pairs
         records.append({"source": source, "source_sha256": digest,
                         "reading_path": destination, "reading_sha256": hashlib.sha256(text.encode()).hexdigest(),
                         "math_pairs_normalized": pairs})
-    outputs[EDITION + "/README.md"] = """# GitHub reading edition
+    outputs[EDITION + "/README.md"] = READING_OVERVIEW
+    outputs[EDITION + "/manifest.json"] = manifest_text(records, current_links)
+    return outputs
 
-This edition provides GitHub-compatible mathematical formatting and usable public
-navigation. The exact source documents remain unchanged, including frozen proofs
-and historical archives. Every page links to its source and records its SHA-256.
-The [generation manifest](manifest.json) binds all reading pages to those sources.
-No statement, hypothesis, proof, or mathematical lifecycle is promoted here.
+
+READING_OVERVIEW = """# GitHub reading edition
+
+This edition displays mathematical sources with GitHub-compatible formatting.
+Mathematical pages link to their sources and record source hashes so the
+[generation manifest](manifest.json) can detect stale rendering. These hashes
+do not freeze the current source or promote a mathematical claim.
+
+Contribution instructions, workflow guides, task cards, and release documentation
+link to their current files. Edit those files normally through Git; their reading
+links contain no duplicated content or source hashes. Historical archives and
+their original source records remain separate from current documents.
 
 Unclosed source display delimiters are repaired only at paragraph boundaries and
 flagged on their pages. Paragraphs with ambiguous inline delimiters are shown as
@@ -380,11 +420,16 @@ and [exact source documentation](../docs/README.md) remain available.
 Regenerate with `python tools/build_reading_edition.py` from the repository root;
 `python tools/build_reading_edition.py --check` verifies the entire edition.
 """
-    outputs[EDITION + "/manifest.json"] = json.dumps({
-        "schema": "erdos-99-reading-edition/v1", "mathematical_proof": False,
-        "source_documents": len(records), "math_pairs_normalized": total, "documents": records,
+
+
+def manifest_text(records: list[dict], current_links: list[dict]) -> str:
+    return json.dumps({
+        "schema": "erdos-99-reading-edition/v2", "mathematical_proof": False,
+        "source_documents": len(records),
+        "math_pairs_normalized": sum(row["math_pairs_normalized"] for row in records),
+        "documents": records,
+        "current_document_links": current_links,
     }, indent=2, ensure_ascii=False) + "\n"
-    return outputs
 
 
 def check(root: Path) -> list[str]:
@@ -418,9 +463,13 @@ def main() -> int:
             raise ValueError("refusing symlinked output: " + path)
         target.write_bytes(text.encode("utf-8"))
     manifest = json.loads(outputs[EDITION + "/manifest.json"])
-    print(json.dumps({k: v for k, v in manifest.items() if k != "documents"}))
+    summary = {k: v for k, v in manifest.items()
+               if k not in ("documents", "current_document_links")}
+    summary["current_document_links"] = len(manifest["current_document_links"])
+    print(json.dumps(summary))
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

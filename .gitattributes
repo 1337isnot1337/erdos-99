@@ -1,3 +1,7 @@
+# Keep stored line endings on every platform, including Windows checkouts.
+# This avoids core.autocrlf changing source bytes; files remain normally editable.
+* -text
+
 # Mathematical Markdown sources use the standard two-space hard line break.
 *.md whitespace=-blank-at-eol
 # Preserve the exact pre-polish file, including its historical terminal blank line.

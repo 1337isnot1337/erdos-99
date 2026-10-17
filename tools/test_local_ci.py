@@ -1,6 +1,11 @@
 from __future__ import annotations
 
 import hashlib
+import builtins
+import contextlib
+from functools import lru_cache
+import importlib.util
+import io
 import json
 import os
 import subprocess
@@ -12,10 +17,16 @@ from unittest.mock import patch
 
 from tools.localized_ci.packages import Invalid, path, strict_json
 from tools.localized_ci.plan import Snapshot, git, make_plan, revision
-from tools.localized_ci.replay import integrity, replay, execute, sandbox_prefix
-from tools.local_ci import security
+from tools.localized_ci.replay import integrity, replay, execute, sandbox_prefix, sandbox_unavailable_reason
+from tools.local_ci import main as local_ci_main, security
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+@lru_cache(maxsize=2)
+def integration_unavailable_reason(require_replay_python=False):
+    # Probe lazily, only for tests that actually execute the optional backend.
+    return sandbox_unavailable_reason(require_replay_python=require_replay_python)
 
 
 class Repository(unittest.TestCase):
@@ -28,6 +39,7 @@ class Repository(unittest.TestCase):
         self.run_git('init', '-q')
         self.run_git('config', 'user.name', 'CI Test')
         self.run_git('config', 'user.email', 'ci-test@example.invalid')
+        self.run_git('config', 'core.autocrlf', 'false')
         self.write('README.md', 'fixture\n')
         self.write('helpers/deep.py', 'def value():\n    return 42\n')
         self.write('helpers/mid.py', 'from helpers.deep import value\n')
@@ -43,10 +55,10 @@ class Repository(unittest.TestCase):
     def write(self, p, content):
         target = self.root / p
         target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(content)
+        target.write_text(content, encoding='utf-8', newline='\n')
 
     def read_json(self, p):
-        return json.loads((self.root / p).read_text())
+        return json.loads((self.root / p).read_text(encoding='utf-8'))
 
     def json(self, p, data):
         self.write(p, json.dumps(data, indent=2) + '\n')
@@ -84,11 +96,31 @@ class Repository(unittest.TestCase):
         self.assertFalse(plan['replay_allowed'])
         return plan
 
+    def require_sandbox(self, *, replay_python=False):
+        unavailable = integration_unavailable_reason(replay_python)
+        if unavailable:
+            self.skipTest(unavailable)
+
     def test_documentation_fast_only(self):
         self.write('README.md','documentation\n'); self.commit()
         p = self.plan()
         self.assertEqual(p['level'], 'fast-only')
         self.assertFalse(p['full_verified']); self.assertFalse(p['replay_allowed'])
+
+    def test_non_linux_planning_uses_the_platform_temporary_directory(self):
+        self.write('README.md', 'portable documentation\n'); self.commit()
+        temporary = Path(self.temp.name) / 'platform-temporary'
+        with patch('tools.local_ci.sys.platform', 'win32'), \
+             patch('tools.local_ci.tempfile.gettempdir', return_value=str(temporary)), \
+             patch('tools.local_ci.integrity') as isolated_integrity, \
+             patch('tools.local_ci.replay') as isolated_replay, \
+             contextlib.redirect_stdout(io.StringIO()):
+            status = local_ci_main(['--root', str(self.root), '--base-ref', self.base])
+        self.assertEqual(status, 0)
+        plan = json.loads((temporary / 'e99-local-ci/plan.json').read_text(encoding='utf-8'))
+        self.assertEqual(plan['level'], 'fast-only')
+        isolated_integrity.assert_not_called()
+        isolated_replay.assert_not_called()
 
     def test_direct_package_change_replays_only_it(self):
         self.package('beta'); self.base = self.commit()
@@ -102,14 +134,22 @@ class Repository(unittest.TestCase):
         self.package('beta'); self.commit()
         self.assertEqual(self.plan()['packages'], ['research-packages/beta'])
 
-    def test_declared_outside_input_and_transitive_helper(self):
+    def transitive_helper_plan(self):
         self.package('alpha', ('helpers/deep.py','helpers/mid.py','helpers/__init__.py'), code='from helpers.mid import value\nassert value() == 42\n')
         self.base = self.commit()
         self.write('helpers/deep.py','def value():\n    return 6 * 7\n')
         self.repin(); self.commit()
-        p = self.plan()
+        return self.plan()
+
+    def test_declared_outside_input_and_transitive_helper(self):
+        p = self.transitive_helper_plan()
         self.assertEqual(p['level'], 'targeted-replay', p)
         self.assertEqual(p['packages'], ['research-packages/alpha'])
+        self.assertFalse(p['full_verified'])
+
+    def test_actual_replay_of_declared_outside_input_and_transitive_helper(self):
+        self.require_sandbox(replay_python=True)
+        p = self.transitive_helper_plan()
         result = replay(self.root, p, self.output)
         self.assertEqual(result['status'], 'passed', result)
         self.assertFalse(result['full_verified'])
@@ -158,9 +198,16 @@ class Repository(unittest.TestCase):
         self.write('research-packages/alpha/TASK.json','{'); self.commit(); self.full()
 
     def test_symlink(self):
-        (self.root/'research-packages/alpha/verify.py').unlink()
-        (self.root/'research-packages/alpha/verify.py').symlink_to('/etc/passwd')
-        self.commit(); self.full()
+        # Exercise Git's symlink mode on every platform, without requiring native
+        # Windows symlink privileges or a Unix-specific target path.
+        self.run_git('config', 'core.symlinks', 'false')
+        name = 'research-packages/alpha/verify.py'
+        self.write(name, '../../helpers/deep.py')
+        blob = self.run_git('hash-object', '-w', name)
+        self.run_git('update-index', '--cacheinfo', '120000', blob, name)
+        self.run_git('commit', '-qm', 'symlink fixture')
+        p = self.full()
+        self.assertTrue(any('symlink' in error for error in p['errors']), p)
 
     def test_duplicate_source(self):
         p='research-packages/alpha/SOURCES.json'; s=self.read_json(p)
@@ -217,15 +264,23 @@ class Repository(unittest.TestCase):
         with self.assertRaises(Invalid):
             replay(self.root, p, self.output)
 
-    def test_declared_package_shadowing_standard_library_is_replayed(self):
+    def declared_shadow_package_plan(self):
         self.write('fractions/__init__.py', 'value = 99\n')
         self.package('alpha', ('fractions/__init__.py',),
                      code='import fractions\nassert fractions.value == 99\n')
         self.base = self.commit()
         self.write('research-packages/alpha/README.md', 'Local package claim\n')
         self.commit()
-        p = self.plan()
+        return self.plan()
+
+    def test_declared_package_shadowing_standard_library_selects_replay(self):
+        p = self.declared_shadow_package_plan()
         self.assertEqual(p['level'], 'targeted-replay', p)
+        self.assertEqual(p['packages'], ['research-packages/alpha'])
+
+    def test_declared_package_shadowing_standard_library_is_replayed(self):
+        self.require_sandbox(replay_python=True)
+        p = self.declared_shadow_package_plan()
         result = replay(self.root, p, self.output)
         self.assertEqual(result['status'], 'passed', result)
 
@@ -249,11 +304,12 @@ class Repository(unittest.TestCase):
         with self.assertRaises(Invalid): replay(self.root,p,self.output)
 
     def test_actual_namespace_hides_credentials_network_and_undeclared_files(self):
+        self.require_sandbox()
         # This exercises the runtime boundary directly, using trusted test code that
         # is deliberately outside the restricted package language.
         visible=Path(self.temp.name)/'visible'; visible.mkdir()
-        (visible/'allowed.txt').write_text('declared')
-        hidden=Path(self.temp.name)/'host-secret'; hidden.write_text('fixture-secret')
+        (visible/'allowed.txt').write_text('declared', encoding='utf-8', newline='\n')
+        hidden=Path(self.temp.name)/'host-secret'; hidden.write_text('fixture-secret', encoding='utf-8', newline='\n')
         code = '''import os,socket,pathlib
 assert 'GITHUB_TOKEN' not in os.environ
 assert 'PYTHONOPTIMIZE' not in os.environ
@@ -274,10 +330,10 @@ else:
     raise AssertionError('network is reachable')
 print('isolated')
 ''' % str(hidden)
-        argv=sandbox_prefix([(visible,'/work')])+['--chdir','/work','--','/usr/bin/python3','-I','-S','-c',code]
+        argv=sandbox_prefix([(visible,'/work')])+['--chdir','/work','--',sys.executable,'-I','-S','-c',code]
         with patch.dict(os.environ,{'GITHUB_TOKEN':'fixture-secret','PYTHONOPTIMIZE':'2'}):
             r=execute(argv,5,Path(self.temp.name)/'isolation.log')
-        self.assertEqual(r['status'],'passed',(Path(self.temp.name)/'isolation.log').read_text())
+        self.assertEqual(r['status'],'passed',(Path(self.temp.name)/'isolation.log').read_text(encoding='utf-8'))
 
     def test_undeclared_filesystem_input(self):
         self.package('alpha',code='with open("data/all.txt") as f:\n    assert f.read()\n')
@@ -349,7 +405,7 @@ print('isolated')
         self.write('README.md','uncommitted\n'); self.full()
 
     def test_shallow_history(self):
-        (self.root/'.git/shallow').write_text(self.base+'\n'); self.full()
+        self.write('.git/shallow', self.base+'\n'); self.full()
 
     def test_new_domain_must_match_verify(self):
         p='research-packages/alpha/TASK.json'; t=self.read_json(p); t['scope']['domain']='only zero'; self.json(p,t)
@@ -377,33 +433,63 @@ print('isolated')
         for argv in (['sh','-c','true'],['{python}','-O','research-packages/alpha/verify.py']):
             p='research-packages/alpha/VERIFY.json'; s=self.read_json(p); s['commands'][0]['argv']=argv; self.json(p,s); self.commit(); self.full()
 
-    def test_timeout_fails_and_is_not_fully_verified(self):
+    def timeout_plan(self):
         self.package('beta',code='while True:\n    pass\n')
         p='research-packages/beta/VERIFY.json'; s=self.read_json(p); s['commands'][0]['timeout_seconds']=1; self.json(p,s)
-        self.commit(); p=self.plan(); self.assertEqual(p['level'],'targeted-replay',p)
+        self.commit()
+        return self.plan()
+
+    def test_timeout_package_selects_replay(self):
+        p = self.timeout_plan()
+        self.assertEqual(p['level'], 'targeted-replay', p)
+        self.assertEqual(p['packages'], ['research-packages/beta'])
+
+    def test_timeout_fails_and_is_not_fully_verified(self):
+        self.require_sandbox(replay_python=True)
+        p = self.timeout_plan()
         result=replay(self.root,p,self.output)
         self.assertEqual(result['status'],'failed'); self.assertFalse(result['full_verified'])
         self.assertEqual(result['packages'][0]['commands'][0]['status'],'timeout')
 
     def test_no_sandbox_means_no_replay(self):
         self.write('research-packages/alpha/README.md','changed\n'); self.commit()
-        with patch('tools.localized_ci.replay.shutil.which',return_value=None):
-            with self.assertRaises(Invalid): replay(self.root,self.plan(),self.output)
+        with patch('tools.localized_ci.replay.sandbox_unavailable_reason',
+                   return_value='optional isolation backend unavailable') as capability, \
+             patch('tools.localized_ci.replay.execute') as execute_package:
+            with self.assertRaisesRegex(Invalid, 'optional isolation backend unavailable'):
+                replay(self.root, self.plan(), self.output)
+        capability.assert_called_once_with(require_replay_python=True)
+        execute_package.assert_not_called()
+
+    def test_no_sandbox_means_no_isolated_integrity(self):
+        self.write('README.md', 'documentation\n'); self.commit()
+        with patch('tools.localized_ci.replay.sandbox_unavailable_reason',
+                   return_value='optional isolation backend unavailable'), \
+             patch('tools.localized_ci.replay.execute') as execute_integrity:
+            with self.assertRaisesRegex(Invalid, 'optional isolation backend unavailable'):
+                integrity(self.root, ROOT, self.plan(), self.output)
+        execute_integrity.assert_not_called()
 
     def test_malicious_privileged_import_is_rejected(self):
         self.package('alpha',code='import os\nprint(os.environ)\n'); self.commit(); self.full()
 
     def test_replay_does_not_inherit_optimization_or_secrets(self):
+        self.require_sandbox(replay_python=True)
         self.package('beta',code='assert False, "negative control must fail"\n'); self.commit()
         with patch.dict(os.environ,{'PYTHONOPTIMIZE':'2','GITHUB_TOKEN':'fixture-secret'}):
             result=replay(self.root,self.plan(),self.output)
         self.assertEqual(result['status'],'failed'); self.assertFalse(result['full_verified'])
 
     def test_selected_tool_cache_runtime_is_bound_explicitly(self):
-        with patch('tools.localized_ci.replay.sys.base_prefix','/opt/e99-trusted-python'), patch('tools.localized_ci.replay.sys.prefix','/opt/e99-trusted-python'):
+        runtime = Path(self.temp.name) / 'trusted-python'
+        with patch('tools.localized_ci.replay.sys.platform', 'linux'), \
+             patch('tools.localized_ci.replay.resource', object()), \
+             patch('tools.localized_ci.replay.shutil.which', return_value='/usr/bin/bwrap'), \
+             patch('tools.localized_ci.replay.sys.base_prefix', str(runtime)), \
+             patch('tools.localized_ci.replay.sys.prefix', str(runtime)):
             argv=sandbox_prefix([])
-        self.assertIn('/opt/e99-trusted-python',argv)
-        self.assertIn('/opt/e99-trusted-python/lib',argv)
+        self.assertIn(str(runtime), argv)
+        self.assertIn(str(runtime / 'lib'), argv)
 
     def test_security_and_whitespace(self):
         self.write('README.md','has trailing space \n'+'-----BEGIN '+'PRIVATE KEY-----\n'); self.commit()
@@ -427,6 +513,63 @@ print('isolated')
         self.base=self.commit(); self.write('data/all.txt','changed\n'); self.repin(); self.commit(); self.full()
 
 
+class OptionalSandboxBackendTests(unittest.TestCase):
+    def test_module_import_does_not_require_unix_resource(self):
+        spec = importlib.util.spec_from_file_location(
+            'tools.localized_ci.portable_replay_fixture', ROOT / 'tools/localized_ci/replay.py')
+        module = importlib.util.module_from_spec(spec)
+        original_import = builtins.__import__
+
+        def portable_import(name, *args, **kwargs):
+            if name == 'resource':
+                raise ImportError('resource is unavailable on this platform')
+            return original_import(name, *args, **kwargs)
+
+        with patch('builtins.__import__', side_effect=portable_import), \
+             patch('sys.platform', 'win32'):
+            spec.loader.exec_module(module)
+            self.assertIsNone(module.resource)
+            self.assertIn('win32', module.sandbox_unavailable_reason())
+
+    def test_non_linux_backend_is_unavailable_without_a_probe(self):
+        with patch('tools.localized_ci.replay.sys.platform', 'darwin'), \
+             patch('tools.localized_ci.replay.subprocess.run') as probe:
+            reason = sandbox_unavailable_reason()
+        self.assertIn('darwin', reason)
+        probe.assert_not_called()
+
+    def test_missing_bubblewrap_is_unavailable_without_a_probe(self):
+        with patch('tools.localized_ci.replay.sys.platform', 'linux'), \
+             patch('tools.localized_ci.replay.resource', object()), \
+             patch('tools.localized_ci.replay.shutil.which', return_value=None), \
+             patch('tools.localized_ci.replay.subprocess.run') as probe:
+            reason = sandbox_unavailable_reason()
+        self.assertIn('bubblewrap', reason)
+        probe.assert_not_called()
+
+    def test_namespace_denial_is_reported_as_unavailable(self):
+        denied = subprocess.CompletedProcess([], 1, stdout=b'', stderr=b'bwrap: Operation not permitted')
+        with patch('tools.localized_ci.replay.sys.platform', 'linux'), \
+             patch('tools.localized_ci.replay.resource', object()), \
+             patch('tools.localized_ci.replay.shutil.which', return_value='/usr/bin/bwrap'), \
+             patch('tools.localized_ci.replay.subprocess.run', return_value=denied) as probe:
+            reason = sandbox_unavailable_reason()
+        self.assertIn('namespaces/runtime', reason)
+        self.assertIn('Operation not permitted', reason)
+        self.assertEqual(probe.call_args.args[0][-1], 'pass')
+
+    def test_package_runtime_mismatch_does_not_execute_a_probe(self):
+        with patch('tools.localized_ci.replay.sys.platform', 'linux'), \
+             patch('tools.localized_ci.replay.sys.version_info', (3, 12, 0)), \
+             patch('tools.localized_ci.replay.resource', object()), \
+             patch('tools.localized_ci.replay.shutil.which', return_value='/usr/bin/bwrap'), \
+             patch('tools.localized_ci.replay.subprocess.run') as probe:
+            reason = sandbox_unavailable_reason(require_replay_python=True)
+        self.assertIn('Python 3.14', reason)
+        self.assertIn('3.12', reason)
+        probe.assert_not_called()
+
+
 class ProtocolSyntax(unittest.TestCase):
     def test_traversal_aliases_and_special_paths(self):
         for value in ('../secret','a/../b','/etc/passwd','a//b','./a','a/./b','a\\b','-x','a\nb','a b'):
@@ -437,7 +580,7 @@ class ProtocolSyntax(unittest.TestCase):
 
     def test_workflow_permissions_and_gates(self):
         import yaml
-        workflow=yaml.safe_load((ROOT/'.github/workflows/theorem-state.yml').read_text())
+        workflow=yaml.safe_load((ROOT/'.github/workflows/theorem-state.yml').read_text(encoding='utf-8'))
         self.assertEqual(set(workflow.get('on',workflow.get(True))),{'pull_request'})
         self.assertEqual(workflow['permissions'],{'contents':'read'})
         self.assertIn('draft == false',workflow['jobs']['plan']['if'])
@@ -450,7 +593,7 @@ class ProtocolSyntax(unittest.TestCase):
                     self.assertRegex(step['uses'],r'@[0-9a-f]{40}$')
                 if step.get('uses','').startswith('actions/checkout@'):
                     self.assertFalse(step['with']['persist-credentials'])
-        text=(ROOT/'.github/workflows/theorem-state.yml').read_text()
+        text=(ROOT/'.github/workflows/theorem-state.yml').read_text(encoding='utf-8')
         self.assertNotIn('pull_request_target',text)
         self.assertNotIn('secrets.',text)
         self.assertNotIn('run_theorem_certificates.py',text)

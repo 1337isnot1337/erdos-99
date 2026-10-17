@@ -1,10 +1,14 @@
 # GitHub reading edition
 
-This edition provides GitHub-compatible mathematical formatting and usable public
-navigation. The exact source documents remain unchanged, including frozen proofs
-and historical archives. Every page links to its source and records its SHA-256.
-The [generation manifest](manifest.json) binds all reading pages to those sources.
-No statement, hypothesis, proof, or mathematical lifecycle is promoted here.
+This edition displays mathematical sources with GitHub-compatible formatting.
+Mathematical pages link to their sources and record source hashes so the
+[generation manifest](manifest.json) can detect stale rendering. These hashes
+do not freeze the current source or promote a mathematical claim.
+
+Contribution instructions, workflow guides, task cards, and release documentation
+link to their current files. Edit those files normally through Git; their reading
+links contain no duplicated content or source hashes. Historical archives and
+their original source records remain separate from current documents.
 
 Unclosed source display delimiters are repaired only at paragraph boundaries and
 flagged on their pages. Paragraphs with ambiguous inline delimiters are shown as

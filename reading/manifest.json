@@ -1,30 +1,9 @@
 {
-  "schema": "erdos-99-reading-edition/v1",
+  "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2219,
-  "math_pairs_normalized": 71636,
+  "source_documents": 2167,
+  "math_pairs_normalized": 71613,
   "documents": [
-    {
-      "source": "AGENTS.md",
-      "source_sha256": "8ee5bd8bd78258d15b1322c2daedf7599e98c4cac0f0c47850e5d4b970dc35d1",
-      "reading_path": "reading/AGENTS.md",
-      "reading_sha256": "5d266a604e7712a87d5e26a788198c00139357eb542dc63cacae47caa15f1e0b",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "CONTRIBUTING.md",
-      "source_sha256": "42fad0b59d21f29ecd6311beb7f519b0a345a746d5ada0afe666a85935950240",
-      "reading_path": "reading/CONTRIBUTING.md",
-      "reading_sha256": "cd1360c2273fbfc998b8c24417dd77c3d3a831e1991d8ab49fb281a828a956a2",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "autoresearch.md",
-      "source_sha256": "cbd7b4a41cd444daad3240c541832ac24dbdd6e7df5150678b472d05a01a833b",
-      "reading_path": "reading/autoresearch.md",
-      "reading_sha256": "22429594e7563a938ea74657a307048c40e9cf657885809f641e5339a1e4790c",
-      "math_pairs_normalized": 0
-    },
     {
       "source": "docs/BIBLIOGRAPHY.md",
       "source_sha256": "79d381cf83b436630142fbce9fb9bf4192f958eb4ed96c0005c84ff74cd80a09",
@@ -33,60 +12,11 @@
       "math_pairs_normalized": 0
     },
     {
-      "source": "docs/COORDINATION.md",
-      "source_sha256": "8eccef5e1c16feb6fa52ddc132fcca8f5cdb17b026e7f4e3c752b8eef04ae7e9",
-      "reading_path": "reading/docs/COORDINATION.md",
-      "reading_sha256": "bd9a7f7f61f42a1db1a83cbcccf83c57b284861a5380f07d8c383b6f6321754b",
-      "math_pairs_normalized": 0
-    },
-    {
       "source": "docs/GLOSSARY.md",
       "source_sha256": "34c82a498756ec183af62e1e0c682bc0b5c62529dde3d4ea4e6b9d093d39bb6f",
       "reading_path": "reading/docs/GLOSSARY.md",
       "reading_sha256": "9511ecf79c1670e7e8756d06bd165b366ccad706ce2e9056b5ab533543bcb318",
       "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/KNOWLEDGE_MAP.md",
-      "source_sha256": "f11f1966f60aaf1c324feb556fe597c31232e8400cf163a99fdf734a4ce17f90",
-      "reading_path": "reading/docs/KNOWLEDGE_MAP.md",
-      "reading_sha256": "ecaf748a6018110cffc657d90f74b42d331db3a98b4098dae9407f0113a5c597",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/README.md",
-      "source_sha256": "11f335bc141497871b842f7c339b69cb67a2f3225bb8755562aa5c177be3ebfe",
-      "reading_path": "reading/docs/README.md",
-      "reading_sha256": "031a00cbe16dd1ad90397f94832eef343b63b230ce0f4faf523c05ce93afc37d",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/RESEARCH_WORKFLOW.md",
-      "source_sha256": "31a79565abd5efca335030695de24d77dd326cf3a525fbd347af6cb3a0c2913c",
-      "reading_path": "reading/docs/RESEARCH_WORKFLOW.md",
-      "reading_sha256": "43bf6c9f9fd69067cc127e9e47440400adb7b00675c288a6c7939dea1e87ec0c",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/REVIEW_POLICY.md",
-      "source_sha256": "e1ecede9fe4e811f02fd543298d75a92ffadfb43a8ebe12b5d1dcf6ed01363d1",
-      "reading_path": "reading/docs/REVIEW_POLICY.md",
-      "reading_sha256": "4d1be34a9f23db77ca2752083fc99b38224ee2009569e833a8f4b53a0744ff24",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/START_HERE.md",
-      "source_sha256": "5731e96498e87c488d96367669edb4329b97c8b547f473dec10afd9012d5255c",
-      "reading_path": "reading/docs/START_HERE.md",
-      "reading_sha256": "1bf3c1da2a8f336a4aba6ef9021a67fb5985a0efde97506125d77336584a8c01",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/STATE.md",
-      "source_sha256": "c2f1c5dcbdabecb024c3dd784b2e33df9ac38952dad94208a39492cdcacbe5b6",
-      "reading_path": "reading/docs/STATE.md",
-      "reading_sha256": "49a6b89501e5a91a734f0f254e67b4f4abd4f4247c9ccc38b342b18ac743c4ba",
-      "math_pairs_normalized": 13
     },
     {
       "source": "docs/audits/README.md",
@@ -2336,76 +2266,6 @@
       "math_pairs_normalized": 0
     },
     {
-      "source": "docs/ci/PUBLIC_LOCALIZED_CI.md",
-      "source_sha256": "04854ab36e886a08fa0e9c9a07e3818fec019f1165e873c845c9ab38e5dd8027",
-      "reading_path": "reading/docs/ci/PUBLIC_LOCALIZED_CI.md",
-      "reading_sha256": "7ee7b314fc8bb938dc9d7d99d7c6c568079ede598ac365072c6de8c671d852ef",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/ci/README.md",
-      "source_sha256": "cd5510b57eb3b3d20c85481f26cb9625d28c46c055c9b68ff35a2dfc4ef422f1",
-      "reading_path": "reading/docs/ci/README.md",
-      "reading_sha256": "07ed46a377d97d914ffdb07dd0e4cae209ee31c27effea4f8376b9089ec03c8e",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/ci/RELEASE_REVIEW.md",
-      "source_sha256": "59bb7b45502f7b89484746fca22c345004a516a58ca0c0181c6c44523bb6c6ba",
-      "reading_path": "reading/docs/ci/RELEASE_REVIEW.md",
-      "reading_sha256": "4141814dc8752caa9287e0151ba3ea320166e9c4e8c7f57a1a2ab690d9790bed",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/launch/GATE_2_VERIFICATION.md",
-      "source_sha256": "71349ea1b743ea4833bf7e7b974ea19a1e71781f23e83211a2a59b734227856e",
-      "reading_path": "reading/docs/launch/GATE_2_VERIFICATION.md",
-      "reading_sha256": "609f76d0240aec40326cf1a1b0060c9e0ede74ff0ac5111e5a9b1bee441a2956",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/launch/MIGRATION_SCANNER_REVIEW.md",
-      "source_sha256": "7cc4d29927decfb99bdc15975fe73aa4b5ed6044e70ff7b2693835e8fdbb7b06",
-      "reading_path": "reading/docs/launch/MIGRATION_SCANNER_REVIEW.md",
-      "reading_sha256": "b240e11bccbb73ca2f8e7e8b1715180dcbab8256e1022f24ba8d1caaebc5898c",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/launch/MIGRATION_VERIFICATION.md",
-      "source_sha256": "bfeb988cd1cec4c5f1a19c2ddcb9316fa6e7c34c6491a6bb69c70b3106dc0f29",
-      "reading_path": "reading/docs/launch/MIGRATION_VERIFICATION.md",
-      "reading_sha256": "60486df6a515f561404b83f868a369ab149aa782bb1f47e8468f008ff632885b",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/launch/PUBLICATION_AUDIT.md",
-      "source_sha256": "9c2ede6b2a48b89e1ceec7351cea27c4b50805413d154524366fb70674d85ce5",
-      "reading_path": "reading/docs/launch/PUBLICATION_AUDIT.md",
-      "reading_sha256": "7e5a45cc93dbeaeeb7be3c9ffb4156734861b19b8c87368b5c6af6744cb0f858",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/launch/READINESS.md",
-      "source_sha256": "4e6f03f7614202e04042659da9cebd8b8fd4b4cae2a52c1261f253c12c0bfd3d",
-      "reading_path": "reading/docs/launch/READINESS.md",
-      "reading_sha256": "9a3d7f279530c186097ec3d2e72d3038cb9a251bae01b4a360bbc2301f767629",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/launch/README.md",
-      "source_sha256": "c7ccf48c154d85c9abd7d9289b7d420be2aad3bd019b5428d0236497087f431d",
-      "reading_path": "reading/docs/launch/README.md",
-      "reading_sha256": "ebf46cf2da6c48ec5029b2009801404546ee83885d493498118d067bfa7feedc",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/launch/RELEASE_CANDIDATE.md",
-      "source_sha256": "6b424c07040a8918feaa10aeeaf71cc9956df667e112ba32f67dfae343f5a084",
-      "reading_path": "reading/docs/launch/RELEASE_CANDIDATE.md",
-      "reading_sha256": "60bcb493fe683b6cddc81759cb624033b6c48c17f847cfd5944b8bfe1af943df",
-      "math_pairs_normalized": 0
-    },
-    {
       "source": "docs/literature_review.md",
       "source_sha256": "9c4492912a5b2cc73da752fb580e9008c3a7f79733db6440fe5fd60ec97e1973",
       "reading_path": "reading/docs/literature_review.md",
@@ -2518,38 +2378,10 @@
       "math_pairs_normalized": 0
     },
     {
-      "source": "docs/publication/provenance.md",
-      "source_sha256": "17d69911d5a3bd33ec815c6ad1f7e59fc626be85a3b9be6f7324c234a20e5af4",
-      "reading_path": "reading/docs/publication/provenance.md",
-      "reading_sha256": "8f972a3ee2d9bde66345205f34b533370bec7b58686162873e4134970791b88a",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/publication/rights-review.md",
-      "source_sha256": "8b8bdb2284181a97205c21c4fed0b190cf97792d828f927882ac0aa2ca98d053",
-      "reading_path": "reading/docs/publication/rights-review.md",
-      "reading_sha256": "e4ad0a3fc48d4ae075144179d30cd1c765394bc61fd1bb0d3e2e0e28970ada64",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/publication/scientific-reconciliation.md",
-      "source_sha256": "60f825805c922b8093bbaca4a0dac13bc0973e3988c249117d553079be76911d",
-      "reading_path": "reading/docs/publication/scientific-reconciliation.md",
-      "reading_sha256": "8680ef6508337e0d412f97cb160b5c6347743bdf6c7ed9a598860109906d65f1",
-      "math_pairs_normalized": 0
-    },
-    {
       "source": "docs/reports/README.md",
       "source_sha256": "cf904988c113d39487273c6a4d802ba814f0cb63a3401e18528cd1a1d4eddb5b",
       "reading_path": "reading/docs/reports/README.md",
       "reading_sha256": "a6109af356900987a3baeeef125d8efa5f0dafc33927b16e5a75ecb5df5cb525",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/reports/REPORT_TEMPLATE.md",
-      "source_sha256": "4603ac9518bf7ae7f03bc01df1d97a7e25f846773a0aa75644a7e5e4e4ccb967",
-      "reading_path": "reading/docs/reports/REPORT_TEMPLATE.md",
-      "reading_sha256": "cfacab2c622d51bef8c62c8ba31aa975e8703654840b7e335e5526f3da390093",
       "math_pairs_normalized": 0
     },
     {
@@ -10449,13 +10281,6 @@
       "math_pairs_normalized": 45
     },
     {
-      "source": "docs/research/README.md",
-      "source_sha256": "337a412698a275382cafb917615e30c6e1528f2e99189aeb4c296860958bbd6e",
-      "reading_path": "reading/docs/research/README.md",
-      "reading_sha256": "b9e5948909cd16db2c1c12c37e049861c606e2537ceb7763a60734ec0c57f451",
-      "math_pairs_normalized": 0
-    },
-    {
       "source": "docs/research/bottleneck-brief.md",
       "source_sha256": "536d00397aafd8a73ce3a98d065340125db4eb3a9e2d98723f13a086276f2b51",
       "reading_path": "reading/docs/research/bottleneck-brief.md",
@@ -10488,13 +10313,6 @@
       "source_sha256": "669edba719155f55a435032fc6e9f30b76fde98e26553b2e9a5efc7755e02f28",
       "reading_path": "reading/docs/research/research-family-status.md",
       "reading_sha256": "85c13991e9060ad78d1d62f85e438b4ca42ee4b1808177652e7058ff5283a24f",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "docs/research/research-priority-log.md",
-      "source_sha256": "b546d528697e6569b2918d5de8f879f45f10b309dfd2cc68d12f45ba90a08a1a",
-      "reading_path": "reading/docs/research/research-priority-log.md",
-      "reading_sha256": "6da4b0fb704c7394840eeea90a2a12e28d17a68228936de7d465c7944a645790",
       "math_pairs_normalized": 0
     },
     {
@@ -10576,9 +10394,9 @@
     },
     {
       "source": "docs/research/tracks/target-c-frozen-813-source-main-corpus-2026-10-16.md",
-      "source_sha256": "d2ca3bb88ab3e53cecb5dc1dbaec90012a801b451f82aeab03d58de7c35f6374",
+      "source_sha256": "16d343c442df8fdbb14f719fd7bff22de0a346ff3928a016f744e67942ae1b9f",
       "reading_path": "reading/docs/research/tracks/target-c-frozen-813-source-main-corpus-2026-10-16.md",
-      "reading_sha256": "127379a57c34d0984d58b497c4cef3ee26d6e1966240da6c19f2b3972a705332",
+      "reading_sha256": "594afdd2cd72824cedf9383fdfc4f3694cc869e31f7c6c65701e3c43e4f32869",
       "math_pairs_normalized": 1
     },
     {
@@ -11398,13 +11216,6 @@
       "source_sha256": "2f46b7c48602ba0175e3c642082b3a59b92a06b53a335f59917c7a11e328dc41",
       "reading_path": "reading/docs/theory/README.md",
       "reading_sha256": "4412ac5e3c18d9513a5d200cb473e4130f6f8ab07e6480554be321debb2f0f62",
-      "math_pairs_normalized": 0
-    },
-    {
-      "source": "research/README.md",
-      "source_sha256": "ccdc30d431ec25ccc75fd0c9403e48f79611eb7c152d390171b9feb538b22be8",
-      "reading_path": "reading/research/README.md",
-      "reading_sha256": "fac96d951b7bc3f427591ed0f73b2a079d5661b39838d76d2f64bac52c23ba41",
       "math_pairs_normalized": 0
     },
     {
@@ -15361,181 +15172,216 @@
       "reading_path": "reading/research/target_c_zero_detour_three_axis_pentagon_regression_2026-09-12.md",
       "reading_sha256": "934ac82747846798b1d153a5740b58f21356047181a3e60b7968aa9f2889eed1",
       "math_pairs_normalized": 19
+    }
+  ],
+  "current_document_links": [
+    {
+      "source": "AGENTS.md",
+      "reading_path": "reading/AGENTS.md"
+    },
+    {
+      "source": "CONTRIBUTING.md",
+      "reading_path": "reading/CONTRIBUTING.md"
+    },
+    {
+      "source": "autoresearch.md",
+      "reading_path": "reading/autoresearch.md"
+    },
+    {
+      "source": "docs/COORDINATION.md",
+      "reading_path": "reading/docs/COORDINATION.md"
+    },
+    {
+      "source": "docs/KNOWLEDGE_MAP.md",
+      "reading_path": "reading/docs/KNOWLEDGE_MAP.md"
+    },
+    {
+      "source": "docs/README.md",
+      "reading_path": "reading/docs/README.md"
+    },
+    {
+      "source": "docs/RESEARCH_WORKFLOW.md",
+      "reading_path": "reading/docs/RESEARCH_WORKFLOW.md"
+    },
+    {
+      "source": "docs/REVIEW_POLICY.md",
+      "reading_path": "reading/docs/REVIEW_POLICY.md"
+    },
+    {
+      "source": "docs/START_HERE.md",
+      "reading_path": "reading/docs/START_HERE.md"
+    },
+    {
+      "source": "docs/STATE.md",
+      "reading_path": "reading/docs/STATE.md"
+    },
+    {
+      "source": "docs/ci/PUBLIC_LOCALIZED_CI.md",
+      "reading_path": "reading/docs/ci/PUBLIC_LOCALIZED_CI.md"
+    },
+    {
+      "source": "docs/ci/README.md",
+      "reading_path": "reading/docs/ci/README.md"
+    },
+    {
+      "source": "docs/ci/RELEASE_REVIEW.md",
+      "reading_path": "reading/docs/ci/RELEASE_REVIEW.md"
+    },
+    {
+      "source": "docs/launch/GATE_2_VERIFICATION.md",
+      "reading_path": "reading/docs/launch/GATE_2_VERIFICATION.md"
+    },
+    {
+      "source": "docs/launch/MIGRATION_SCANNER_REVIEW.md",
+      "reading_path": "reading/docs/launch/MIGRATION_SCANNER_REVIEW.md"
+    },
+    {
+      "source": "docs/launch/MIGRATION_VERIFICATION.md",
+      "reading_path": "reading/docs/launch/MIGRATION_VERIFICATION.md"
+    },
+    {
+      "source": "docs/launch/PUBLICATION_AUDIT.md",
+      "reading_path": "reading/docs/launch/PUBLICATION_AUDIT.md"
+    },
+    {
+      "source": "docs/launch/READINESS.md",
+      "reading_path": "reading/docs/launch/READINESS.md"
+    },
+    {
+      "source": "docs/launch/README.md",
+      "reading_path": "reading/docs/launch/README.md"
+    },
+    {
+      "source": "docs/launch/RELEASE_CANDIDATE.md",
+      "reading_path": "reading/docs/launch/RELEASE_CANDIDATE.md"
+    },
+    {
+      "source": "docs/publication/provenance.md",
+      "reading_path": "reading/docs/publication/provenance.md"
+    },
+    {
+      "source": "docs/publication/rights-review.md",
+      "reading_path": "reading/docs/publication/rights-review.md"
+    },
+    {
+      "source": "docs/publication/scientific-reconciliation.md",
+      "reading_path": "reading/docs/publication/scientific-reconciliation.md"
+    },
+    {
+      "source": "docs/reports/REPORT_TEMPLATE.md",
+      "reading_path": "reading/docs/reports/REPORT_TEMPLATE.md"
+    },
+    {
+      "source": "docs/research/README.md",
+      "reading_path": "reading/docs/research/README.md"
+    },
+    {
+      "source": "docs/research/research-priority-log.md",
+      "reading_path": "reading/docs/research/research-priority-log.md"
+    },
+    {
+      "source": "research/README.md",
+      "reading_path": "reading/research/README.md"
     },
     {
       "source": "tasks/README.md",
-      "source_sha256": "d4377a06729aa82cc6d91665a362215085b7acfeb0329050ce650822e4df9a17",
-      "reading_path": "reading/tasks/README.md",
-      "reading_sha256": "fe13b2196e205882f94b190f777aa2b405031ead55e8b4ece46f76ee437f6092",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/README.md"
     },
     {
       "source": "tasks/alternative-contact-graph-boundary-entropy.md",
-      "source_sha256": "063016493cd82343b36ff6600adfc94699167f8d32089d780869e8fe6c660a15",
-      "reading_path": "reading/tasks/alternative-contact-graph-boundary-entropy.md",
-      "reading_sha256": "56db69b13ada84a3bf2c2f8f69b8d381f517810e9401e30e131dde7c93c0048d",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/alternative-contact-graph-boundary-entropy.md"
     },
     {
       "source": "tasks/alternative-support-measure-certificate.md",
-      "source_sha256": "d0a9055d78730850aaab6b98494760f87b6f0cb7b7de0bb45508162f3352d73b",
-      "reading_path": "reading/tasks/alternative-support-measure-certificate.md",
-      "reading_sha256": "52d406e78622cead2f15fa488107b6b87c96a8f1a6d5c3de8909e534ebeb0a5a",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/alternative-support-measure-certificate.md"
     },
     {
       "source": "tasks/audit-target-a-section175-177.md",
-      "source_sha256": "0edd4ba9556273cb3221f826e96c26837851f2f1cbd099d8511966f32ec7e334",
-      "reading_path": "reading/tasks/audit-target-a-section175-177.md",
-      "reading_sha256": "e6f8ded2bde8186b75e0995f050f8ff4479a6600a87fa54d4c5f8d4ae98a21d6",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/audit-target-a-section175-177.md"
     },
     {
       "source": "tasks/audit-target-b-gpi-scope.md",
-      "source_sha256": "96e468963182e2bcc04c2ec15285a71f7e6796bde4a18f6c0ed21efe5d8fb813",
-      "reading_path": "reading/tasks/audit-target-b-gpi-scope.md",
-      "reading_sha256": "4b0aa71a756af2810b300cb2cede4c05d428034167dad0870ad2fdc11ba0431e",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/audit-target-b-gpi-scope.md"
     },
     {
       "source": "tasks/audit-target-c-typeii-face-floor.md",
-      "source_sha256": "0cb9babc43eb25421fd28ab572c1861a7b2ef5de3d8648ceacb11b87b48439c0",
-      "reading_path": "reading/tasks/audit-target-c-typeii-face-floor.md",
-      "reading_sha256": "8624454a4e2f819ee289d757da3adda7db71cc332c86456493fb874b5432b9a9",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/audit-target-c-typeii-face-floor.md"
     },
     {
       "source": "tasks/compute-b-two-grain-interface-regressions.md",
-      "source_sha256": "61f772062f161491ff99bf599a7a57c60d6bc3725f453974dd08bf08cb1d1f7f",
-      "reading_path": "reading/tasks/compute-b-two-grain-interface-regressions.md",
-      "reading_sha256": "fc2741957ea966a928bd0f55e2340be698bebfaa2e977be54c1f0c7af11b3bcc",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/compute-b-two-grain-interface-regressions.md"
     },
     {
       "source": "tasks/compute-c-stress-deletion-restoration-regression.md",
-      "source_sha256": "afd7c528d7c86b416c00538dcbf8896c90493411c19638e23fcd2cfb0e34840e",
-      "reading_path": "reading/tasks/compute-c-stress-deletion-restoration-regression.md",
-      "reading_sha256": "2d408e97e5fd347c15abfa54b4df5d29d1c6d1b1e4a1615fc4bbbf220f0fcdef",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/compute-c-stress-deletion-restoration-regression.md"
     },
     {
       "source": "tasks/global-joint-phase-source-extraction.md",
-      "source_sha256": "d893a9c4a303a403e4dbe74d9cd6e5abacb0457abbf25b33141fb5ca416f13c1",
-      "reading_path": "reading/tasks/global-joint-phase-source-extraction.md",
-      "reading_sha256": "b31befe9d657f684e223a8ebfa16b037aef46dbb9eee62c7a5c70c93fe4c9c94",
-      "math_pairs_normalized": 10
+      "reading_path": "reading/tasks/global-joint-phase-source-extraction.md"
     },
     {
       "source": "tasks/literature-shell-stability-near-miss-audit.md",
-      "source_sha256": "267aa590cc457595fa0618b763c253cd1fe0825cfab13f741dee347655601ca4",
-      "reading_path": "reading/tasks/literature-shell-stability-near-miss-audit.md",
-      "reading_sha256": "a74432d86bab4e67c9e6f7ae33895e6cc4f8947b1e0e218b0ed4b73aa1c9dab1",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/literature-shell-stability-near-miss-audit.md"
     },
     {
       "source": "tasks/target-a-locked-sector-surplus.md",
-      "source_sha256": "97d7b76dd386743e1f6d9db0675afe51019b46498d3b86464eb71372ff460508",
-      "reading_path": "reading/tasks/target-a-locked-sector-surplus.md",
-      "reading_sha256": "f1d5cfe3c88a04b70b54077daccb23121df26d9ad5cc1091e1611531cea6d2d1",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/target-a-locked-sector-surplus.md"
     },
     {
       "source": "tasks/target-a-source-aware-strain-architecture.md",
-      "source_sha256": "540481dab96dbabfc27a54096a9fc9898fe438fce5e2dbcec8ce8db7504fcb77",
-      "reading_path": "reading/tasks/target-a-source-aware-strain-architecture.md",
-      "reading_sha256": "620796691299f6972f9bca0b493aac01d8dd3bfc96b00a87119d56507fe2d33c",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/target-a-source-aware-strain-architecture.md"
     },
     {
       "source": "tasks/target-a-zero-slack-source-transfer.md",
-      "source_sha256": "f6f7432ed0cc2a259ed521b62be3934b1a6e1360fe70a73a08bed0d9b6fd14a9",
-      "reading_path": "reading/tasks/target-a-zero-slack-source-transfer.md",
-      "reading_sha256": "2c58163fdc64003160d7da08b83c9af33d94cd5f199da4b69437045ac8f68677",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/target-a-zero-slack-source-transfer.md"
     },
     {
       "source": "tasks/target-b-multigrain-transfer.md",
-      "source_sha256": "ef8f8317eb9554212c3d67622ec59ccfe7c64adddc847589fbe8ce0c9102f8b4",
-      "reading_path": "reading/tasks/target-b-multigrain-transfer.md",
-      "reading_sha256": "44ec1e7692b8c922a505622d8d26f55686c657dd888ec76cc72921231043f121",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/target-b-multigrain-transfer.md"
     },
     {
       "source": "tasks/target-b-phase-deficit-competitor.md",
-      "source_sha256": "d0c1489d7020b5b56b758e7403068dc8ef79cdfe7bd5f5707e24a0101c2102f4",
-      "reading_path": "reading/tasks/target-b-phase-deficit-competitor.md",
-      "reading_sha256": "dbdd969998324b1e27de9eb802abbeb8ef3be0b171a75c73494cbcdaa4737404",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/target-b-phase-deficit-competitor.md"
     },
     {
       "source": "tasks/target-b-topology-correction-ledger.md",
-      "source_sha256": "b68a32b8751befbcada1a887411d2d0f7252ab323d802763c7367a9bd8d0b91a",
-      "reading_path": "reading/tasks/target-b-topology-correction-ledger.md",
-      "reading_sha256": "4d2d55f668530671cd731db1171d17b8993d8b7d792c5f4366d3b23022c01552",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/target-b-topology-correction-ledger.md"
     },
     {
       "source": "tasks/target-c-branch-aware-atomic-gap.md",
-      "source_sha256": "7126327fb944fa531ccd7272ad617975acf15dd28e01819810e4a93cfbfc6c08",
-      "reading_path": "reading/tasks/target-c-branch-aware-atomic-gap.md",
-      "reading_sha256": "991101859ea54e21e03d061d0e2ff434f11f72c4f10b5067454c49cb1dfbfdcd",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/target-c-branch-aware-atomic-gap.md"
     },
     {
       "source": "tasks/target-c-capacity-collective-refill.md",
-      "source_sha256": "6e27c749dc6b783217024623edef496a029b3693b4a1e59f378e1c2df93b9844",
-      "reading_path": "reading/tasks/target-c-capacity-collective-refill.md",
-      "reading_sha256": "c11e38689e80baf944aad455d9500c21cac85863b320a985afb4f808ba94af1b",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/target-c-capacity-collective-refill.md"
     },
     {
       "source": "tasks/target-c-extract-stress-relevant-diameter-set.md",
-      "source_sha256": "f3f0768519cad76d6a1e7c920cf67650a5a6bf1cb0642d4a560530109a169fbb",
-      "reading_path": "reading/tasks/target-c-extract-stress-relevant-diameter-set.md",
-      "reading_sha256": "b6076224ebb7130ce9a7879a8eb7ce17c5e487d9c19ed44b58f10103020c35fb",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/target-c-extract-stress-relevant-diameter-set.md"
     },
     {
       "source": "tasks/target-c-face-coupled-move.md",
-      "source_sha256": "8fa6a96cafd9c57ddacaa5a6629dbdfcc528f794eb823c742f1926470ece7d28",
-      "reading_path": "reading/tasks/target-c-face-coupled-move.md",
-      "reading_sha256": "619821e622c5780081fcf53f1ebe38eb75bddc5e6f2cec88b8df5682f997adf9",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/target-c-face-coupled-move.md"
     },
     {
       "source": "tasks/target-c-factorized-planar-escape.md",
-      "source_sha256": "51d14caff59a98d1d8add798ca8852900f7d19447c7a73ae791230433449065d",
-      "reading_path": "reading/tasks/target-c-factorized-planar-escape.md",
-      "reading_sha256": "f32f05f838bbf37ee764c4abc39690cd2d8c8e41db69694822e7ead8634cb4a1",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/target-c-factorized-planar-escape.md"
     },
     {
       "source": "tasks/target-c-macroscopic-container-capacity.md",
-      "source_sha256": "775f50bd6147fbd62d5183ee01554f4a2bdcfca0118ff4627441626fe9c27ce2",
-      "reading_path": "reading/tasks/target-c-macroscopic-container-capacity.md",
-      "reading_sha256": "972bd13f1c2aa91b1dde116599b19fe6392b601a6b12807d176473a6f2bcedc2",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/target-c-macroscopic-container-capacity.md"
     },
     {
       "source": "tasks/target-c-threshold-packet-cross-shore.md",
-      "source_sha256": "64f204e04e744fefd4517594261f15fd3f29ae658f4ca339a261138a0c3f7d6d",
-      "reading_path": "reading/tasks/target-c-threshold-packet-cross-shore.md",
-      "reading_sha256": "9cd53a255e332c91747868d6c8b3c85164d0a933edc29d2724c2f7de627551b8",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/target-c-threshold-packet-cross-shore.md"
     },
     {
       "source": "tasks/target-c-typeii-stress-mass-access.md",
-      "source_sha256": "b49176ff5254705b2aefc25b4f48214f46323c0cb844dd957a7abb6b83046d21",
-      "reading_path": "reading/tasks/target-c-typeii-stress-mass-access.md",
-      "reading_sha256": "0a5a8527fd2c742a581cd9856d3fc68559b20dd65ef7c7ecbd701d6c1d6f33a5",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/target-c-typeii-stress-mass-access.md"
     },
     {
       "source": "tasks/verify-a-schur-linkage-bound.md",
-      "source_sha256": "7bc51974976ae8bfb33c6c43b3dac7d55084357ad7b96b880da2d074722dbd21",
-      "reading_path": "reading/tasks/verify-a-schur-linkage-bound.md",
-      "reading_sha256": "56dbf12d80d088f8b7a1789a8467d7404a26ce073be2780ef7c196c6d1306fa9",
-      "math_pairs_normalized": 0
+      "reading_path": "reading/tasks/verify-a-schur-linkage-bound.md"
     }
   ]
 }

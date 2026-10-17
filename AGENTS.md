@@ -2,6 +2,17 @@
 
 Read `docs/STATE.md`, `docs/problem/statement.md`, `docs/research/bottleneck-brief.md`, `docs/research/priority-state.json`, and the chosen route. Then read its full proof prerequisites and `autoresearch.md`. The manifest controls claim lifecycle. A merge, recent date, large section number or certificate pass does not promote a theorem.
 
+Current documentation and tooling are edited normally through Git. Migration
+records are historical data; they impose no gate on current changes. No migration
+check or migration-ledger refresh is required. Run checks that cover the changed
+behavior or scientific claims. An editorial or workflow edit alone does not
+require the full theorem-certificate suite or canonical promotion.
+
+Normal setup and checks do not require Linux. Use the platform-neutral
+dependency lock and the operating-system commands in `README.md`. Linux and
+Bubblewrap are required only by the optional isolated package replay backend.
+Report unavailable backend tests as skipped, with their capability reason.
+
 **LEVEL I STATUS: STILL OPEN. C-I CLOSED; C-II OPEN.** A and B remain open. Keep the universal quantifiers over every sufficiently large cardinality and every global minimizer. Keep all source labels, including contact-isolated points. Do not identify a source with a scaffold, smaller optimum, response network or moved endpoint without a theorem.
 
 Work for one bounded 30–60 minute session by default. Fetch current upstream main at each new session; compare priority revision and theorem state with the prior checkpoint. Check open Issues, Discussions and PRs before selecting work and before submitting. Anyone may begin an unclaimed question; claims are advisory. An independent audit may overlap an existing proof effort.
@@ -22,3 +33,4 @@ contacts with fewer actual diameter pairs is a valid secondary contradiction.
 Check all previously inactive upper pairs to exclude replacement diameter pairs.
 
 Preserve mathematical credit and disclose AI assistance. Contribute only material you can license under Apache-2.0; cite external papers rather than copying PDFs or substantial text. Never use an unstated private repository dependency. The published corpus and task prerequisites must stand alone.
+

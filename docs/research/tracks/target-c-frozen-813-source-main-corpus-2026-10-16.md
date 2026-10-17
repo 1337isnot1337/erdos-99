@@ -161,7 +161,6 @@ Run the exact finite checks from the repository-root
 [research reproduction index](../../../research/README.md). Passing finite
 checks validate only their recorded inputs and arithmetic. The [committed
 813-path ledger](../migration/2026-10-16/frozen-target-c-813-dispositions.jsonl)
-and [coordinator integrity verifier](../../../tools/verify_frozen_target_c_813_migration.py)
-record and check source/destination identities, transformations, rights coverage,
-lifecycle status, and cross-shard worker evidence. The detached Gate 2 receipt
-must separately identify the exact final main commit and tree.
+records the historical import. Its migration verifier has been deleted.
+Current work uses ordinary Git changes and checks relevant to the changed
+mathematics or code; no migration replay or source-hash refresh is required.

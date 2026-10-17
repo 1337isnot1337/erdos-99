@@ -1,9 +1,8 @@
-"""Linux namespace isolation and bounded shell-free replay; no unsafe fallback."""
+"""Optional Linux namespace isolation; portable imports and no unsafe fallback."""
 from __future__ import annotations
 
 import json
 import os
-import resource
 import shutil
 import signal
 import subprocess
@@ -12,14 +11,26 @@ import tempfile
 import time
 from pathlib import Path
 
+try:
+    import resource
+except ImportError:  # Windows can still plan changes and run ordinary checks.
+    resource = None
+
 from .packages import Invalid, load_package
 from .plan import Snapshot, git, make_plan, revision
 
 
 def sandbox_prefix(bindings, *, writable=None):
+    if sys.platform != 'linux':
+        raise Invalid('optional Linux isolation backend is unavailable on ' + sys.platform +
+                      '; refusing unisolated execution')
+    if resource is None:
+        raise Invalid('optional Linux isolation backend requires POSIX resource limits; '
+                      'refusing unisolated execution')
     bwrap = shutil.which('bwrap')
     if not bwrap:
-        raise Invalid('bubblewrap is required; refusing unisolated execution')
+        raise Invalid('optional Linux isolation backend requires bubblewrap (bwrap); '
+                      'refusing unisolated execution')
     args = [bwrap, '--unshare-all', '--die-with-parent', '--new-session', '--cap-drop', 'ALL',
             '--clearenv', '--setenv', 'PATH', '/usr/bin:/bin', '--setenv', 'HOME', '/tmp',
             '--setenv', 'LANG', 'C.UTF-8', '--setenv', 'PYTHONDONTWRITEBYTECODE', '1',
@@ -44,7 +55,37 @@ def sandbox_prefix(bindings, *, writable=None):
     return args
 
 
+def sandbox_unavailable_reason(require_replay_python=False):
+    """Probe only trusted runtime startup; return why optional isolation cannot run.
+
+    An installed bubblewrap binary is not enough: container or kernel policy may
+    disable the required namespaces. This never runs contributed package code.
+    """
+    try:
+        argv = sandbox_prefix([])
+    except Invalid as exc:
+        return str(exc)
+    if require_replay_python and sys.version_info[:2] != (3, 14):
+        return ('optional isolated package replay requires its declared Python 3.14 runtime; '
+                f'current runtime is {sys.version_info[0]}.{sys.version_info[1]}')
+    try:
+        probe = subprocess.run(
+            argv + ['--chdir', '/tmp', '--', sys.executable, '-I', '-S', '-c', 'pass'],
+            stdin=subprocess.DEVNULL, capture_output=True,
+            env={'PATH': '/usr/bin:/bin'}, timeout=5,
+        )
+    except (OSError, subprocess.SubprocessError) as exc:
+        return 'optional Linux isolation backend cannot start the trusted runtime: ' + str(exc)
+    if probe.returncode:
+        detail = ' '.join(probe.stderr.decode('utf-8', errors='replace').split())[:300]
+        return ('optional Linux isolation backend cannot create the required namespaces/runtime '
+                f'(exit {probe.returncode})' + (': ' + detail if detail else ''))
+    return None
+
+
 def bounds(cpu):
+    if resource is None:
+        raise Invalid('POSIX resource limits are unavailable; refusing unbounded execution')
     os.umask(0o077)
     resource.setrlimit(resource.RLIMIT_CORE, (0, 0))
     resource.setrlimit(resource.RLIMIT_FSIZE, (8 * 1024 * 1024,) * 2)
@@ -54,6 +95,8 @@ def bounds(cpu):
 
 
 def execute(argv, seconds, logfile):
+    if sys.platform != 'linux' or resource is None:
+        raise Invalid('optional Linux isolation backend is unavailable; refusing unisolated execution')
     started = time.perf_counter()
     with open(logfile, 'wb') as output:
         process = subprocess.Popen(argv, stdin=subprocess.DEVNULL, stdout=output,
@@ -82,8 +125,9 @@ def replay(root, plan, output):
     fresh = make_plan(root, plan['base'], plan['head'])
     if fresh != plan:
         raise Invalid('stale or altered plan')
-    if sys.version_info[:2] != (3, 14):
-        raise Invalid('replay requires Python 3.14')
+    unavailable = sandbox_unavailable_reason(require_replay_python=True)
+    if unavailable:
+        raise Invalid(unavailable)
     output.mkdir(parents=True, exist_ok=True)
     snapshot = Snapshot(root, plan['head'])
     results = {'version': 1, 'head': plan['head'], 'level': 'targeted-replay',
@@ -123,7 +167,7 @@ def replay(root, plan, output):
             break
     if len(results['packages']) == len(plan['packages']) and all(p['status'] == 'passed' for p in results['packages']):
         results['status'] = 'passed'
-    (output / 'replay.json').write_text(json.dumps(results, indent=2) + '\n')
+    (output / 'replay.json').write_text(json.dumps(results, indent=2) + '\n', encoding='utf-8', newline='\n')
     return results
 
 
@@ -131,6 +175,9 @@ def integrity(root, control, plan, output):
     """Run only trusted checkers against read-only contributed data, without secrets."""
     if not plan.get('merge_base'):
         raise Invalid('cannot validate integrity without ancestry')
+    unavailable = sandbox_unavailable_reason()
+    if unavailable:
+        raise Invalid(unavailable)
     common = Path(git(root, 'rev-parse', '--git-common-dir').decode().strip())
     if not common.is_absolute():
         common = (root / common).resolve()

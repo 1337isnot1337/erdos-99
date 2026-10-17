@@ -13,4 +13,13 @@ By intentionally submitting a contribution for inclusion, you offer it under Apa
 
 Credit contributors using their chosen public names/handles. Do not publish private contact details. Record the originating and reviewing AI agent/model when known and its actual role; do not invent human mathematical authors or referees. **All mathematical review is agent-only.** One independent AI-agent audit of the exact proposed commit, covering both full proof reconstruction and adversarial bridge/regression checks, suffices for consequential canonical promotion. The project owner operates that independent agent when auditing other agents' work. No human mathematical reviewer or second agent audit is required. Repository maintainers enforce scope, provenance, lifecycle and non-mathematical permissions; reviewing is open.
 
-Before submission, refresh overlap, run `python tools/check_public.py` and the relevant verifiers, inspect `git diff --check`, and report the actual result. Unknown dependency impact requires full replay or explicit review. Security fixes should avoid exposing credential values in logs or issues.
+Edit documentation, tooling and research normally through Git. Migration checkers have been deleted. Historical import records impose no source-clone, hash-refresh or ledger-update requirement.
+
+Linux is not required to contribute or run ordinary checks. Follow the Windows,
+macOS or Linux setup in `README.md` and use
+`tools/requirements-verification.lock`. The optional isolated package replay
+backend needs Linux and Bubblewrap. Tests for that backend report a skip when
+its runtime or isolation capabilities are unavailable; record those limits with
+your results.
+
+Before submission, refresh overlap, run `python tools/check_public.py`, inspect `git diff --check`, and report the actual result. Run tests for changed behavior and certificates for affected mathematical inputs. An ordinary prose or workflow edit does not require the full theorem-certificate suite. Unknown mathematical dependency impact requires full replay or explicit review. Security fixes should avoid exposing credential values in logs or issues.

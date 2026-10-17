@@ -1,8 +1,10 @@
-"""Review only pinned mathematical grouping labels reported by Gitleaks.
+"""Review known false-positive detections reported by Gitleaks.
 
 The scanner remains unmodified. Reports and nonzero exits remain intact. Every
 accepted finding is bound to an exact path, blob SHA1 and SHA256, line, column,
-rule, fingerprint, redacted match, and the mathematical stem in committed JSON.
+rule, fingerprint, redacted match, and the committed contents. This reviewer
+runs only for actual scanner detections; it does not require an import inventory
+or validate that archived files remain present or unchanged.
 """
 from __future__ import annotations
 
@@ -166,7 +168,7 @@ def review_source_fixture(root: Path, match: dict, *, candidate: str | None) -> 
         return None
 
 
-def review_migration_finding(root: Path, match: dict, *, candidate: str | None) -> dict | None:
+def review_known_finding(root: Path, match: dict, *, candidate: str | None) -> dict | None:
     return (review_math_finding(root, match, candidate=candidate)
             or review_source_fixture(root, match, candidate=candidate))
 
@@ -201,7 +203,7 @@ def review_tree_gitleaks(root: Path, report: Path, candidate: str) -> dict | Non
     findings = load_findings(report)
     if findings is None:
         return None
-    reviewed = [review_migration_finding(root, match, candidate=candidate) for match in findings]
+    reviewed = [review_known_finding(root, match, candidate=candidate) for match in findings]
     if any(match is None for match in reviewed):
         return None
     return {
@@ -218,7 +220,7 @@ def review_combined_history_gitleaks(root: Path, report: Path, legacy_review) ->
         return None
     reviewed, remainder = [], []
     for match in findings:
-        result = review_migration_finding(root, match, candidate=None)
+        result = review_known_finding(root, match, candidate=None)
         if result is None:
             remainder.append(match)
         else:
@@ -243,9 +245,10 @@ def review_combined_history_gitleaks(root: Path, report: Path, legacy_review) ->
             return None
     return {
         'disposition': 'reviewed-false-positive',
-        'finding_count': len(findings), 'migration_findings': reviewed,
+        'finding_count': len(findings), 'reviewed_findings': reviewed,
         'mathematical_findings': [finding for finding in reviewed if finding['RuleID'] == 'generic-api-key'],
         'legacy_finding_review': legacy,
-        'reason': 'Exact reviewed migration blobs with parent-diff multiplicities plus the original pinned historical fixture review.',
+        'reason': 'Exact reviewed scanner findings with parent-diff multiplicities plus the original historical fixture review.',
         'raw_scanner_result_preserved': True,
     }
+

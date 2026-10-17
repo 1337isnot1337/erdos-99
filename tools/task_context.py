@@ -14,8 +14,10 @@ from pathlib import Path
 import yaml
 
 try:
+    from .generate_theorem_state_views import current_file_dependencies
     from .run_theorem_certificates import entry_records
 except ImportError:
+    from generate_theorem_state_views import current_file_dependencies
     from run_theorem_certificates import entry_records
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -53,12 +55,8 @@ def context(task_id: str, root: Path = ROOT) -> dict:
     task = next((t for t in catalogue["tasks"] if t["id"] == task_id), None)
     if task is None:
         raise ValueError(f"unknown task: {task_id}")
-    inclusion = read_json("docs/publication/inclusion.json")
-    graph = {r["public_path"]: set(r.get("dependencies", [])) for r in inclusion["entries"]}
     supplement_path = root / "docs/research/onboarding-prerequisites.json"
     supplement = read_json(supplement_path.relative_to(root)) if supplement_path.is_file() else {}
-    for path, dependencies in supplement.get("file_dependencies", {}).items():
-        graph.setdefault(path, set()).update(dependencies)
     extra = supplement.get("tasks", {}).get(task_id, {})
     premise_fields = ("canonical_dependencies", "previous_obstructions", "audited_working_premises")
     seeds = [r["path"] for k in premise_fields
@@ -68,6 +66,8 @@ def context(task_id: str, root: Path = ROOT) -> dict:
     seeds += extra.get("supporting_obstructions", [])
 
     state = yaml.safe_load((root / "docs/state/theorem-state.yaml").read_text(encoding="utf-8"))
+    registry = read_json("research/certificates.json")["certificates"]
+    graph = current_file_dependencies(root, state, certificates=registry, supplement=supplement)
     claims = {e["id"]: (target, bucket, e) for target, bucket, e in entry_records(state)}
     selected_claims = {r["claim_id"] for k in premise_fields
                        for r in task.get(k, []) if r.get("claim_id")}
@@ -92,7 +92,6 @@ def context(task_id: str, root: Path = ROOT) -> dict:
             pending.update(p for p in (entry.get("report"), entry.get("audit")) if p and p not in seen)
             pending.update(p for p in entry.get("certificates", []) if p not in seen)
 
-    registry = read_json("research/certificates.json")["certificates"]
     registered = {r["path"]: r for r in registry}
     evidence = []
     for path, record in sorted(registered.items()):

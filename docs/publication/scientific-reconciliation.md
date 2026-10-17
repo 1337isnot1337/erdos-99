@@ -1,5 +1,12 @@
 # Frozen scientific reconciliation and editorial audit
 
+> **Historical import record.** The migration checks and their source/hash,
+> manifest-reconciliation and editorial-ledger requirements have been deleted.
+> Gate and HOLD language below describes the superseded import workflow, not
+> current requirements. The recorded owner authorization remains in force.
+> Edit current files normally through Git and use the
+> [current verification guidance](../launch/GATE_2_VERIFICATION.md).
+
 ## 2026-10-16 expanded research-corpus reconciliation
 
 The historical publication freeze below still applies to its named 810-record

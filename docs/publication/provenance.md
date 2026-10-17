@@ -1,5 +1,12 @@
 # Source provenance and publication edits
 
+> **Historical import record.** The migration checks and their source/hash,
+> manifest-reconciliation and editorial-ledger requirements have been deleted.
+> Gate and HOLD language below describes the superseded import workflow, not
+> current requirements. The recorded owner authorization remains in force.
+> Edit current files normally through Git and use the
+> [current verification guidance](../launch/GATE_2_VERIFICATION.md).
+
 ## Source records
 
 The scientific snapshot was selected at `5dcbdc3dfa1f9be370602cc54d50e68eabb88f56`. During construction, source main advanced to `aa9b45669ce7200a99f6ec4c58e1e3c23a57387f`, integrating the inspected localized CI proposal. That integration changed CI/tooling only; the mathematical manifest, proof sources and registered certificates were unchanged. Original path, source commit/blob/hash, public hash, role, dependencies, lifecycle and inclusion rationale are in [inclusion.json](inclusion.json). Proposed sources have their own exact head commits. No source Git history or private review objects are imported.

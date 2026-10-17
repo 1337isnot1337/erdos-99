@@ -8,10 +8,11 @@ from pathlib import Path
 
 from .packages import Invalid, MAX_BLOB, MAX_PACKAGES, MAX_SECONDS, discover, load_package
 
-SAFE_DOCS = {'README.md', 'AGENTS.md', 'CONTRIBUTING.md', 'autoresearch.md',
-             'docs/README.md', 'docs/START_HERE.md', 'docs/GLOSSARY.md',
-             'docs/COORDINATION.md', 'docs/REVIEW_POLICY.md', 'docs/RESEARCH_WORKFLOW.md',
-             '.github/PULL_REQUEST_TEMPLATE.md', '.github/copilot-instructions.md'}
+try:
+    from ..ci_document_scope import is_workflow_document, mathematical_inputs
+except ImportError:
+    from ci_document_scope import is_workflow_document, mathematical_inputs
+
 SHARED = ('tools/', '.github/workflows/', 'tests/', 'requirements')
 
 
@@ -130,28 +131,15 @@ def endpoints(root, base, head='HEAD', event=None):
 
 def mathematical_paths(snapshot):
     import yaml
-    if 'docs/state/theorem-state.yaml' not in snapshot.tree:
-        return set()
     try:
-        state = yaml.safe_load(snapshot.read('docs/state/theorem-state.yaml'))
+        state = (yaml.safe_load(snapshot.read('docs/state/theorem-state.yaml'))
+                 if 'docs/state/theorem-state.yaml' in snapshot.tree else {})
     except yaml.YAMLError as exc:
         raise Invalid(f'malformed theorem-state YAML: {exc}') from exc
     if not isinstance(state, dict):
         raise Invalid('theorem-state must be a mapping')
-    paths = set()
-    def visit(value):
-        if isinstance(value, dict):
-            for k, v in value.items():
-                if k in ('certificates', 'canonical_modules') and isinstance(v, list):
-                    paths.update(p for p in v if isinstance(p, str))
-                visit(v)
-            if value.get('status') == 'canonical':
-                paths.update(value[k] for k in ('report', 'audit') if isinstance(value.get(k), str))
-        elif isinstance(value, list):
-            for v in value:
-                visit(v)
-    visit(state)
-    return paths
+    return mathematical_inputs(
+        state, lambda p: snapshot.read(p) if p in snapshot.tree else None)
 
 
 def domain_signature(snapshot, inputs):
@@ -213,9 +201,10 @@ def make_plan(root: Path, base=None, head='HEAD', event=None):
         shared = False
         for change in changes:
             p = change['path']
-            if p in protected or p.startswith(('docs/state/', 'docs/targets/', 'docs/theory/', 'docs/problem/')) or p == 'docs/STATE.md':
+            safe = is_workflow_document(p, protected)
+            if not safe and (p in protected or p.startswith(('docs/state/', 'docs/targets/', 'docs/theory/', 'docs/problem/')) or p == 'docs/STATE.md'):
                 result['reasons'].append(f'canonical/foundation/generated state changed: {p}')
-            if p.startswith(('research/', 'src/', 'scripts/', 'docs/reports/', 'docs/audits/', 'docs/archive/')):
+            if not safe and p.startswith(('research/', 'src/', 'scripts/', 'docs/reports/', 'docs/audits/', 'docs/archive/')):
                 result['reasons'].append(f'legacy mathematical input has no complete dependency closure: {p}')
             if p.startswith(SHARED):
                 shared = True
@@ -224,7 +213,6 @@ def make_plan(root: Path, base=None, head='HEAD', event=None):
             for graph in graphs:
                 owners |= {d for d, pkg in graph.items() if p in pkg['files'] or p in pkg['inputs']}
             affected |= owners
-            safe = p in SAFE_DOCS or (p.startswith(('docs/ci/', 'docs/launch/')) and p.endswith('.md'))
             if protected and owners and not safe and not p.startswith(('research-packages/', 'research-package-inputs/')):
                 result['reasons'].append(f'declared external input may affect unmodeled legacy certificates: {p}')
             if not owners and not safe and not p.startswith(SHARED):

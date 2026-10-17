@@ -1,3 +1,8 @@
-# Release evidence
+# Publication and verification
 
-[Readiness](READINESS.md) records actual local verification and release state. [Publication audit](PUBLICATION_AUDIT.md) records rights/provenance/privacy/history checks and any blocker. The [exact inclusion/exclusion boundary](../publication/inclusion.json) is separate from theorem authority.
+[Publication status](RELEASE_CANDIDATE.md) describes the research and release
+state. [Readiness](READINESS.md), [release verification](GATE_2_VERIFICATION.md)
+and the [publication audit](PUBLICATION_AUDIT.md) describe the current checks.
+
+The repository develops normally through Git. Migration checks have been
+deleted; retained import manifests and source records are historical data.
