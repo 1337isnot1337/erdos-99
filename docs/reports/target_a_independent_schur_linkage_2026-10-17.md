@@ -28,6 +28,16 @@ task cards and mathematical prerequisites are unchanged. The contribution
 was rebased onto this refreshed main. Repeated live PR/issue queries were
 empty; Discussions are enabled and the task-specific query had no matches.
 
+A further refresh before publication found
+`96e16e52526e978f90dbdae36f7e4394aaeb98ac` (verification-tooling PR #77).
+The mathematical source files, task cards, theorem manifest and all three
+state/priority/catalogue revisions are unchanged. Its updated `AGENTS.md`
+and CI instructions were read, the contribution was rebased again, and
+generated-page conflicts were resolved by retaining upstream views and
+regenerating the contribution's views with the current renderer. Final
+integrity and certificate checks use the refreshed tools; no migration
+check or migration-ledger update is required by the current instructions.
+
 The objective is a separately implemented finite check of Sections 102, 113,
 174 and 175: compare generic Schur rank with vertex-disjoint alternating
 linkages and exhaustive matchings; then test the tube interception and
@@ -67,6 +77,16 @@ optional edges. The two off-diagonal `B--Z` edges give four choices, `B--O`
 and `C--Z` each give sixteen choices, and the two nonempty `C--O`
 neighborhoods give nine choices: `4*16*16*9=9216`. The fixed diagonal matching
 is always present. No graph is selected by a numerical rank threshold.
+
+Define `A` with row order `Z` followed by `O` and column order `B` followed
+by `C`, placing a distinct indeterminate on each supported edge and zero
+elsewhere. Over their rational-function field, set
+
+$$S=A[O,C]-A[O,B]A[Z,B]^{-1}A[Z,C].$$
+
+Orient matched edges from `Z` to `B`, and every other support edge from
+the left shore to the right shore. All vertices, including terminals and
+sinks, have capacity one.
 
 For every support and all four subsets `J` of `C`, the following agree:
 
@@ -271,10 +291,10 @@ The full replay completed with **94 of 94 registered certificates passing**.
 The localized planner returned exit 3, `full-verification-required`, with no
 planner errors: the new unpackaged evidence and generated artifact index do
 not have a declared localized dependency closure. The independent checker
-was run normally and with `-O`, with identical saved evidence. The initial
-corpus check found stale generated reading pages; regeneration includes
-the pre-existing stale `autoresearch.md` mirror and changes no
-mathematical source statement. The exact final integrity outcome is in the PR.
+was run normally and with `-O`, with identical saved evidence. Generated
+reading pages are rebuilt with the current renderer; the refreshed upstream
+already fixes the initially stale `autoresearch.md` mirror. No mathematical
+source statement changes. The exact final integrity outcome is in the PR.
 
 ## Frontier effect and exact handoff
 
