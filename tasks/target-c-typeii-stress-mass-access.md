@@ -30,6 +30,7 @@ Advances only the stated route obligation; global closure still requires all can
 - [docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md](../docs/prompts/erdos_problem_99_TARGET_C_CURRENT_CONTINUATION_PROMPT.md): the exceptional eta D edges may carry all positive KKT diameter mass
 - [docs/targets/target-c/CURRENT.md](../docs/targets/target-c/CURRENT.md): Audit 173 supplies grids/routes but no exceptional stress-mass control, compatible motion, or refill
 - [AGENTS.md](../AGENTS.md): do not infer Schur or source-specific nullity from planarity or generic rank alone
+- The exact unreviewed [sparse-exceptional stress model](../docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md) has `o(D)` exceptional diameter edges carrying all normalized diameter mass, even with triangle-freeness, near-circular hull, leading hexagonal density, and exact KKT balance. It is not certified globally minimizing and does not refute the canonical Type-II theorem.
 
 Source PR #950 adds an **unreviewed** route candidate: positive-length returns from long-train roots have an `O(D)` length quantile; a positive Type-II subfamily reaches one common coherent grid; and a separate rigidity/Menger linkage runs from loaded attachments to that grid. It does **not** control positive KKT mass on exceptional ports: the report's stress identity yields no uniform price on selected paths. The return and attachment-to-grid families may have disjoint endpoint labels. See the [full track](../docs/research/tracks/target-c-train-returns-rigidity-grid.md) before repeating either route; the next obligation is endpoint overlap or direct flow, then a feasible full-source competitor.
 
@@ -53,6 +54,7 @@ Stop if the proof assigns equal weight to diameter edges, drops the exceptional 
 ## Reproduction
 
 ```sh
+python research/verify_target_c_typeii_sparse_exceptional_stress_2026_10_17.py
 python tools/check_public.py
 python tools/task_context.py target-c-typeii-stress-mass-access
 ```

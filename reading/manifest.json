@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2168,
-  "math_pairs_normalized": 71621,
+  "source_documents": 2169,
+  "math_pairs_normalized": 71739,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -9670,6 +9670,13 @@
       "reading_path": "reading/docs/reports/target_c_typeii_section146_density_consequence_2026-09-12.md",
       "reading_sha256": "00294cce3c192b4df3cba0a06e8675100a7de15a33d30ce5fffbd57f75564ba1",
       "math_pairs_normalized": 31
+    },
+    {
+      "source": "docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md",
+      "source_sha256": "01e100022b6755594eab032725198d0a6546aef9f0e9343f016b2ad6edabd231",
+      "reading_path": "reading/docs/reports/target_c_typeii_sparse_exceptional_stress_model_2026-10-17.md",
+      "reading_sha256": "663166cf6b13a2926f59fc2fc7df2968dfafacf076849102dbda9c1774c59ead",
+      "math_pairs_normalized": 118
     },
     {
       "source": "docs/reports/target_c_typeii_terminal_cancellation_face_floor_2026-10-08.md",
