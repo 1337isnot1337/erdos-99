@@ -1,8 +1,8 @@
 {
   "schema": "erdos-99-reading-edition/v2",
   "mathematical_proof": false,
-  "source_documents": 2168,
-  "math_pairs_normalized": 71621,
+  "source_documents": 2169,
+  "math_pairs_normalized": 71741,
   "documents": [
     {
       "source": "docs/BIBLIOGRAPHY.md",
@@ -3013,6 +3013,13 @@
       "reading_path": "reading/docs/reports/target_b_seed084_near_disk_seamed_grain_regression_2026-10-13.md",
       "reading_sha256": "65a01899de117b786d9f0a63b1089bc25a92885b192af63940f8361cdc0cf029",
       "math_pairs_normalized": 27
+    },
+    {
+      "source": "docs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md",
+      "source_sha256": "30933b9534a4afc5b7086678b2b86863c717ae9c42a9e1e5f467ea178edccce5",
+      "reading_path": "reading/docs/reports/target_b_separable_oler_literature_transfer_audit_2026-10-17.md",
+      "reading_sha256": "ce11fb8fae401aec3ec2d4638938c2ab14d86a08d95b93ae40af817f429e7d8a",
+      "math_pairs_normalized": 120
     },
     {
       "source": "docs/reports/target_b_source_diameter_cover_refill_2026-09-25.md",
