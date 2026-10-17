@@ -56,7 +56,8 @@ from code reconstructed after the execution environment became unavailable.
 The reconstructed Python files require a fresh test run when execution returns.
 
 The historical five-file gap is resolved by the local recovery follow-up.
-Source deprecation remains deferred pending owner disposition of the two
-markers without captured identities.
+The two markers without captured identities retain their explicit bounded
+dispositions when the reversible source pointer follows final verification;
+no exhaustive historical preservation or source deletion is authorized.
 No original commit, PR, branch, or author metadata was rewritten or removed.
 Prepared with Codex AI assistance.

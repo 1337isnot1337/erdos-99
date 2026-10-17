@@ -8,9 +8,13 @@ preserved. The [five-version local recovery](../research/migration/2026-10-16/re
 retains exact historical bytes separately from active documents.
 
 Two historical working-copy states remain unknown at migration capture;
-earlier clean backup observations are bounded evidence. Source deprecation is
-deferred pending explicit owner disposition. Neither repository is made public
-or removed. Exact current Gate 2 results belong in detached receipts naming the
+earlier clean backup observations are bounded evidence. After the exact final
+main verification passes, `1337isnot1337/erdos-99` is the home for future work
+and the source receives a reversible deprecation pointer. The private source
+repository, history, PRs, branches, working copies and reference collection
+remain intact. The two unknown states remain explicit; no exhaustive historical
+preservation or source deletion is claimed. Neither repository is made public.
+Exact current Gate 2 results belong in detached receipts naming the
 tested SHA/tree, as required by [migration verification](MIGRATION_VERIFICATION.md)
 and the handoff on [PR #75](https://github.com/1337isnot1337/erdos-99/pull/75).
 Historical results below do not establish a current-commit pass. The complete

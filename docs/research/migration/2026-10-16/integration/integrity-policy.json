@@ -114,9 +114,9 @@
       },
       "after": {
         "mode": "100644",
-        "git_blob_sha1": "7c1ae8ff00c59505df42ddfb948a622d88664620",
-        "sha256": "fe8c258f64c6af2cde68aa231e62aa4ac286cb990b4ccb87f359673925ab7ec5",
-        "bytes": 8100
+        "git_blob_sha1": "71579e4116156abea52b6e0c3931efb707c71d83",
+        "sha256": "754382dfdf072f89d70a2bc42521c526c6994c4c717ac7fb6a3eacb3f97d44a5",
+        "bytes": 8400
       },
       "reason": "Prepend current migration completion and bounded historical-worktree status; preserve the complete baseline document, exact original archive, source rights, and all historical receipts."
     },
@@ -131,9 +131,9 @@
       },
       "after": {
         "mode": "100644",
-        "git_blob_sha1": "726a1ba711ecdc7f4aa235d84c1d02ab8e03dc2d",
-        "sha256": "fe2d468fbd22b2d3164fd42a7e7d6a21a99b7112bc2e6396b885509cc766bb7b",
-        "bytes": 14370
+        "git_blob_sha1": "b94fa28a143c9031e2abe347401be5ef2225fe27",
+        "sha256": "6da8206fbdc44f01c58c4febb09ee4cde9ba9ae7ce290b5c14bd43c2e5559af4",
+        "bytes": 14670
       },
       "reason": "Prepend current migration completion and bounded historical-worktree status; preserve the complete baseline document, exact original archive, source rights, and all historical receipts."
     },

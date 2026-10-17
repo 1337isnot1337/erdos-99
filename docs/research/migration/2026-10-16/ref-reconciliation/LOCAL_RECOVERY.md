@@ -46,8 +46,9 @@ Both therefore retain **unknown historical working-copy state at migration
 capture**. No claim of an exhaustive inventory or exactly two lost files follows.
 
 The source repository, source PRs, original worktrees and backups are retained.
-Source deprecation remains deferred pending an explicit owner disposition of
-these two bounded uncertainties. Engineering integration preserves and documents
-this limit without claiming exhaustive historical preservation.
+These two bounded uncertainties are retained explicitly when the authorized
+reversible source pointer follows final verification. Future work belongs in
+the destination; the source evidence remains available. This workflow change
+does not claim exhaustive historical preservation or permit source deletion.
 
 Prepared with Codex AI assistance.

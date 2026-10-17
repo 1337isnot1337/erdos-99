@@ -1,9 +1,12 @@
 # Migration completion status
 
-Captured-byte preservation is complete. Source deprecation remains deferred
-because two historical working-copy states were not inventoried at migration
-capture. Both repositories remain private. Level I/A/B/C-II remain open;
-C-I remains closed within its recorded scope.
+Captured-byte preservation is complete. After complete verification of the
+resulting destination main commit, `1337isnot1337/erdos-99` is the home for
+future work and the source receives a reversible deprecation pointer. The
+source remains intact as a private provenance archive, including its history,
+PR discussions, branches, working copies and reference collection. Two
+historical working-copy states remain unknown. Both repositories remain
+private. Level I/A/B/C-II remain open; C-I remains closed within its recorded scope.
 
 ## Preserved content
 
@@ -40,8 +43,10 @@ files for the first marker exactly match its recorded commit. The second path
 is absent. These observations do not establish an uncaptured later inventory,
 prove there were no later changes, or identify a number of lost files.
 The [follow-up evidence](../ref-reconciliation/historical-worktree-followup.json)
-records the exact scope. An explicit owner disposition is needed before source
-deprecation; the source repository and historical working copies remain intact.
+records this explicit bounded disposition. The owner-authorized reversible
+source pointer can follow the passing final-main receipt while retaining these
+unknown states. It does not assert exhaustive historical preservation or
+authorize deletion, visibility changes, or retirement of the source evidence.
 
 ## Verification and integration contract
 
