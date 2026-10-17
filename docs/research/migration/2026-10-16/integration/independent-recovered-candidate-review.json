@@ -1,0 +1,798 @@
+{
+  "schema": "migration-independent-recovered-candidate-review-v1",
+  "review_date_utc": "2026-10-17",
+  "scope": "API-backed object, semantic data, and static code review after loss of the local execution environment",
+  "candidate": {
+    "repository": "1337isnot1337/erdos-99",
+    "commit": "932d14bd57ec95824cd45714862d78ffec87c278",
+    "tree": "edd4db0d69a98b4969c95ea4332edea14c8c7f54"
+  },
+  "pins": {
+    "baseline_commit": "c6e0394b3152d21075328bf4f26e6c070229bf13",
+    "baseline_tree": "383999d67c789e79166e6e3c8f69aa5d56844c8e",
+    "captured_commit": "f282d53169df4d507117893bfdcc99f663855923",
+    "captured_tree": "9763deacbd5fe21b688f0cd38d11159765bcae7e",
+    "policy_blob": "0b4235302a697098f52daa7bf275cdf01d35ef29",
+    "module_blob": "c4c243380ff64e13071ce4e5e366299bf39f4f67"
+  },
+  "method": {
+    "tree_api_truncated": false,
+    "all_recursive_directory_objects_rehashed": true,
+    "directory_objects_rehashed": 844,
+    "blob_hashes": "Git SHA-1 of blob header/body; SHA-256 of UTF-8 bytes",
+    "fresh_blob_body_hashes": 67,
+    "body_hash_scope": "All twelve before/after engineering blobs and all fifty-five metadata reports. The policy, module, four source inventory blobs and both union-checker blobs were also Git-SHA-1 verified.",
+    "historical_sha256_bodies_recomputed": false,
+    "historical_binding": "All 1,505 rows have exact captured and candidate Git blob/mode/size identities. SHA-256 body digests for this set were not all recomputed after environment loss.",
+    "python_or_shell_commands_executed": [],
+    "post_loss_python_test_execution": false,
+    "gate2_pass_claimed": false
+  },
+  "checks": {
+    "bounded_baseline": {
+      "baseline_blobs": 2297,
+      "candidate_blobs": 7486,
+      "changed_paths": [
+        "docs/publication/inclusion.json",
+        "docs/state/artifact-index.jsonl",
+        "tools/audit_public_release.py",
+        "tools/build_artifact_index.py",
+        "tools/check_public.py",
+        "tools/verify_publication_candidate.py"
+      ],
+      "expected_six_paths": [
+        "docs/publication/inclusion.json",
+        "docs/state/artifact-index.jsonl",
+        "tools/audit_public_release.py",
+        "tools/build_artifact_index.py",
+        "tools/check_public.py",
+        "tools/verify_publication_candidate.py"
+      ],
+      "only_six_changed": true,
+      "original_copies": [
+        {
+          "path": "docs/publication/inclusion.json",
+          "preserved_original": "docs/research/migration/2026-10-16/integration/baseline-originals/docs/publication/inclusion.json.source",
+          "exact": true,
+          "after_exact": true
+        },
+        {
+          "path": "docs/state/artifact-index.jsonl",
+          "preserved_original": "docs/research/migration/2026-10-16/integration/baseline-originals/docs/state/artifact-index.jsonl.source",
+          "exact": true,
+          "after_exact": true
+        },
+        {
+          "path": "tools/audit_public_release.py",
+          "preserved_original": "docs/research/migration/2026-10-16/integration/baseline-originals/tools/audit_public_release.py.source",
+          "exact": true,
+          "after_exact": true
+        },
+        {
+          "path": "tools/build_artifact_index.py",
+          "preserved_original": "docs/research/migration/2026-10-16/integration/baseline-originals/tools/build_artifact_index.py.source",
+          "exact": true,
+          "after_exact": true
+        },
+        {
+          "path": "tools/check_public.py",
+          "preserved_original": "docs/research/migration/2026-10-16/integration/baseline-originals/tools/check_public.py.source",
+          "exact": true,
+          "after_exact": true
+        },
+        {
+          "path": "tools/verify_publication_candidate.py",
+          "preserved_original": "docs/research/migration/2026-10-16/integration/baseline-originals/tools/verify_publication_candidate.py.source",
+          "exact": true,
+          "after_exact": true
+        }
+      ]
+    },
+    "engineering_blob_hashes": [
+      {
+        "path": "docs/publication/inclusion.json",
+        "side": "before",
+        "sha1": "96df5a7db05e8b65e8bca605a770d0b09ab27596",
+        "sha256": "d89ad6a8a03acdd1eab7f6190aacd2e652e0842350bfac23a4c2bd9e7ced8685",
+        "bytes": 1533017,
+        "verified": true
+      },
+      {
+        "path": "docs/publication/inclusion.json",
+        "side": "after",
+        "sha1": "2dd1f35f72407d185861db0127429236c1248119",
+        "sha256": "44ed8f72563daf0464a9b34dc298bb80fa111bc1d4854a079c313699f44bca72",
+        "bytes": 1533146,
+        "verified": true
+      },
+      {
+        "path": "docs/state/artifact-index.jsonl",
+        "side": "before",
+        "sha1": "97ed5ce70e9f90c6448884c73efcfcfafd958404",
+        "sha256": "ae939f2eb468d7412326ed3c168917c7eb3917ee6c5ccf9506ca0e2c44619e90",
+        "bytes": 423242,
+        "verified": true
+      },
+      {
+        "path": "docs/state/artifact-index.jsonl",
+        "side": "after",
+        "sha1": "5bbd75c91ea2d2654405111fb502ae86978e0ec0",
+        "sha256": "b875772c0f95c6612ae6ff7e42eade0621524c809ab6922b678461fdf9a600c5",
+        "bytes": 438034,
+        "verified": true
+      },
+      {
+        "path": "tools/audit_public_release.py",
+        "side": "before",
+        "sha1": "604595be0c00a75f4850001b259df3c3f5b7b76e",
+        "sha256": "618da5875b3343896150610a92d581f972ba882effff20f2bea6cbe5829d36e9",
+        "bytes": 32901,
+        "verified": true
+      },
+      {
+        "path": "tools/audit_public_release.py",
+        "side": "after",
+        "sha1": "654df0bd54d5523370a78f664de3002fdc7c1023",
+        "sha256": "8739112ff005bfefedc9e8ab2e58258498c991df6d88f784f3dc6d02facef1e8",
+        "bytes": 36619,
+        "verified": true
+      },
+      {
+        "path": "tools/build_artifact_index.py",
+        "side": "before",
+        "sha1": "0f27741a50edef6fce3957d5c1495ea9de45d65b",
+        "sha256": "66f5bcd98a481c16dd9c01ba2a4b5d6f5b19ebe80c346a19373e25136358d3e3",
+        "bytes": 9165,
+        "verified": true
+      },
+      {
+        "path": "tools/build_artifact_index.py",
+        "side": "after",
+        "sha1": "cdf38c178afd6de63219c80e3dea299c1c0695fa",
+        "sha256": "48b736ff264eb7a56d762135a7beaf0b233113da2a37579e7d32e4ebb3449496",
+        "bytes": 9710,
+        "verified": true
+      },
+      {
+        "path": "tools/check_public.py",
+        "side": "before",
+        "sha1": "d9e03b3ca265f2599ff61d6243e1d1cb37554b2a",
+        "sha256": "eb8d29110a19a79d9b45e03dbca0cdc2ab0be9314b30f163deb5d52acb6bb95c",
+        "bytes": 6366,
+        "verified": true
+      },
+      {
+        "path": "tools/check_public.py",
+        "side": "after",
+        "sha1": "0801b0614b03f75bafcd80ec6a85f70a06b258c9",
+        "sha256": "68c27a523947854c86884125710c31715fd25afa7e0e74d18eecdb2411570cc9",
+        "bytes": 7046,
+        "verified": true
+      },
+      {
+        "path": "tools/verify_publication_candidate.py",
+        "side": "before",
+        "sha1": "25a90c206937744a25f6db65dceba825336db3c8",
+        "sha256": "88a37c32766fc64955b3ca2ba871ec0c2808d5ffeb00724492179a1a27727d8d",
+        "bytes": 12350,
+        "verified": true
+      },
+      {
+        "path": "tools/verify_publication_candidate.py",
+        "side": "after",
+        "sha1": "96a884c5facf38441a3f2adc79cc5c022b8196cb",
+        "sha256": "06fb998d6ae1b2ea93e9ece3d98cd114e0017c2cbb960eaf44b99b9963f714bd",
+        "bytes": 12818,
+        "verified": true
+      }
+    ],
+    "artifact_index": {
+      "before": 1391,
+      "after": 1449,
+      "added": 58,
+      "changed": [],
+      "errors": []
+    },
+    "inclusion_manifest": {
+      "before": 810,
+      "after": 810,
+      "top_level_unchanged": true,
+      "diffs": [
+        {
+          "index": 801,
+          "path": "tools/build_artifact_index.py",
+          "fields": [
+            "public_sha256",
+            "editorial_change"
+          ],
+          "source_unchanged": true
+        }
+      ],
+      "errors": []
+    },
+    "historical_payloads": {
+      "expected_capture_count": 1505,
+      "policy_count": 1505,
+      "distinct_paths": 1505,
+      "complete_scope_matches": true,
+      "captured_and_candidate_identity_mismatches": 0
+    },
+    "metadata_alternatives": {
+      "count": 55,
+      "distinct_paths": 55,
+      "source_identity_tuples": 5076,
+      "pinned_source_manifest_rows": {
+        "docs/research/migration/2026-10-16/agent-1/evidence/source-main-three-way-assignment.jsonl": 4717,
+        "docs/research/migration/2026-10-16/agent-1/evidence/source-branches/source-branch-artifacts.jsonl": 356,
+        "docs/research/migration/2026-10-16/agent-3/branch-dispositions.jsonl": 746,
+        "docs/research/migration/2026-10-16/agent-3/pr-dispositions.jsonl": 18
+      },
+      "errors": [],
+      "verified_reports": [
+        {
+          "path": "docs/audits/atomic_boundary_source_reconciliation_2026-10-15.md",
+          "git_blob_sha1": "fe1c376f43b990ea37ae0938c76b3d5f45853e93",
+          "sha256": "cdb28404f89dc815ea13417c596786de701dbb44a0c1133fc00b482b49933259",
+          "bytes": 8749,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/audits/original_dirty_worktree_reconciliation_2026-10-15.md",
+          "git_blob_sha1": "15ca9f4e4a654711dd1b1eb1d7b0f7cb4d87eeb2",
+          "sha256": "5bd86bcc76eb5d92551ba86687a719dd51587a414758b663b35acba079c5810c",
+          "bytes": 5380,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/audits/target_a_boundary_terminal_common_source_vpaths_audit_2026-09-05.md",
+          "git_blob_sha1": "8e516c53c6a8dd4e61d239b61bb8fa56b56242e2",
+          "sha256": "0f5b5c6d078206831c55993931b7267664f781883518cedf7c8d1fd92754c7ed",
+          "bytes": 4581,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/audits/target_b_explicit_balanced_phase_gap_audit_2026-09-05.md",
+          "git_blob_sha1": "c38e13a26f99a4dc1e48702327847f2b3e894c22",
+          "sha256": "2fc0e4db84626c7a22d0872e47bd444d06222c86fae97f228eab41e71f0aad1b",
+          "bytes": 4102,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/audits/target_b_explicit_unique_max_phase_gap_audit_2026-09-05.md",
+          "git_blob_sha1": "5482c02672817b86d6f0ae74257320eabdff973a",
+          "sha256": "4b426b4df495b2a03c675dce71622a0d36c84f0e8338b045333400965668a0f2",
+          "bytes": 4878,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/audits/target_b_local_virtual_area_interface_audit_2026-09-05.md",
+          "git_blob_sha1": "3bedf0c849b18d2b2bb6d2462b935c35266e1258",
+          "sha256": "ee9b02d4248c2ffa014e7502742133ebde26cd5495c0a1dad38a86f07820bbea",
+          "bytes": 2773,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/audits/target_b_trimmed_grid_phase_star_audit_2026-09-05.md",
+          "git_blob_sha1": "4057b8af9c19f01240e48735b2f1dea20bc3c988",
+          "sha256": "8383b6b8093fac9b6afb2d8044d23f419d524f582896961c2a7fc4d72e3e8c59",
+          "bytes": 4077,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/audits/target_b_virtual_zonotope_missing_crossing_audit_2026-09-05.md",
+          "git_blob_sha1": "1a831b2a505b76ceb0ba83f3c0a56567d5790efe",
+          "sha256": "4c628764fa370d809601c78f2314caa1bc08794de4588cfb7dd4b59d8adce16d",
+          "bytes": 3419,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/activation_fixed_hull_flat_2026-08-30.md",
+          "git_blob_sha1": "c990e2ae4c4bb3689c8a30eb2ebe041f82109a96",
+          "sha256": "8f542597f1da1c8f4620b93f9c25f1cc7a121c4ff71c5b158660268b4102109e",
+          "bytes": 16536,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/cage_or_cophased_lattice_shadow_2026-08-30.md",
+          "git_blob_sha1": "4d62773055ac081015f336d1c84e71523195f56d",
+          "sha256": "40bce10b477dac7727c31631de0350772b8a172d08c9f63110f4a4ed345ed2e6",
+          "bytes": 18991,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/campaign_boundary_defect_matching_2026-09-09.md",
+          "git_blob_sha1": "df64fe3394f9397e8ff8d215ed1f00141acafc9a",
+          "sha256": "44ffc63d2eb2e8d8dd39a6d283cf569ad21cad6be6ae07894e1885387f30f512",
+          "bytes": 26629,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/campaign_zf_boundary_surplus_collapse_2026-09-09.md",
+          "git_blob_sha1": "cea333a6b778f792e50672cd36d049771efa1d6b",
+          "sha256": "b58d7059cc77d7c66d1784e41d11579243281272397af83b716ddbffcf923aca",
+          "bytes": 19976,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/campaign_zm_zs_reconciliation_2026-09-09.md",
+          "git_blob_sha1": "dbaeb29c7151baf22b6e36f6339f2cc4c4f0505b",
+          "sha256": "b8f1376b91ae323f6e574f5f9e81270db78e5867309ec41a64f73e08e71e2980",
+          "bytes": 8421,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/erdos_problem_99_2026-08-30_active-boundary-audit.md",
+          "git_blob_sha1": "98c04ba28f71aa2987794a2b1e538c553e3839ac",
+          "sha256": "864734f5a73be5dc69c2f210e926235249625baafe547536e98a30650cb25a0f",
+          "bytes": 4028,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/erdos_problem_99_2026-08-30_phase-cover-stability.md",
+          "git_blob_sha1": "20337fcab4bd3f180c25a94983568ba5741ed314",
+          "sha256": "57404994b8feda11742038c86784860f56bb4f8ffb7b7af26fee733808813c93",
+          "bytes": 4437,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/erdos_problem_99_CHAT_HANDOFF_2026-08-26.md",
+          "git_blob_sha1": "d2f441a579eaa9dfd2cdddff022c705f36f0cfec",
+          "sha256": "8c3a26b3900110d71f33662b3c276f8c1ebc858b35d87da7ea202c16ce666e03",
+          "bytes": 55248,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/erdos_problem_99_complete_working_report_SYNTHESIZED.md",
+          "git_blob_sha1": "335fd8a1ee67d137580929b58c6baae281a89f13",
+          "sha256": "ca9fe28ff239dd485e8af885b1f1087694c30985668b7fe3c7c305cf38f5df17",
+          "bytes": 140604,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/five_block_local_optimality_2026-08-30.md",
+          "git_blob_sha1": "0fe2dfb97b29d6f8dcf03d46c46762bdd098afb5",
+          "sha256": "aca39d6ac7f9ac4ff76b4670447745f201955584644b4bb89e4436ce6af48e78",
+          "bytes": 10015,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/full_source_growing_lattice_population_reserve_2026-10-08.md",
+          "git_blob_sha1": "a9ecff677a4970715cafb044f5d77a15d057551f",
+          "sha256": "89ee0f2a1dba1dce57d055f15bd0c1b20a46935b2f347cca22cf24ccbaedd01c",
+          "bytes": 8061,
+          "destination_status": "unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/global_attainment_and_triangle_free_infimum_2026-10-11.md",
+          "git_blob_sha1": "9ac0a4f528a9af4704659851aefcb0607ea70716",
+          "sha256": "f94a9bb4fa071c58070e8b9019482e8a77fe09874b96a6fe8aa2ee4f34b50780",
+          "bytes": 10079,
+          "destination_status": "unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/global_discrete_isometry_blocker_closure_2026-10-12.md",
+          "git_blob_sha1": "b880905345469f82b7b7e3929f71a4d99fd44bd2",
+          "sha256": "ab286686679068ae782e79149ce4420e41e43c0f9fd371a214d62c2a87bbee99",
+          "bytes": 10689,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/global_isolate_forest_normalization_2026-10-11.md",
+          "git_blob_sha1": "1f8ddf054dbe52f1474fd9430fe9ac16d216b3f0",
+          "sha256": "5fd3913aee363f1e555b562b1255ecdb71550d09ec4d19158907a889662e1de0",
+          "bytes": 22029,
+          "destination_status": "unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/global_local_lex_normalization_and_crystalline_obstruction_2026-10-11.md",
+          "git_blob_sha1": "29d46a6d93907a24e7c6e9f19782507b5cef1e52",
+          "sha256": "ee604bf943883cbb30b69a52d68fbacfe7a906257b95c3f477b59254caf35858",
+          "bytes": 23018,
+          "destination_status": "unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/global_nonexpanding_rhombus_mesh_obstruction_2026-10-13.md",
+          "git_blob_sha1": "0fb3352043063fe4af4b3112a29b79eb537eb898",
+          "sha256": "c022585deda5378ee06b0137f85fd27e2c63c8ebd73f0350d7410df590cb6045",
+          "bytes": 20926,
+          "destination_status": "unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/global_periodic_release_and_diameter_transfer_2026-10-11.md",
+          "git_blob_sha1": "bf46f5126d6974bc27fab664fd6b21728ca88e07",
+          "sha256": "5aa3791319c1928e6a94e0813ea22059e86efa8932920eb41d6cc2e88aa05c4e",
+          "bytes": 12285,
+          "destination_status": "unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/local_hat_matching_regression_2026-08-30.md",
+          "git_blob_sha1": "7f03db1dbdf4fdca8ab86a3407d9ceb361f31df7",
+          "sha256": "4c41eaf56d90af6f5d6641d6ea865d8a0167d4134003d01f51782b4cc898d153",
+          "bytes": 2318,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/near_extremal_activation_monomer_regression_2026-08-30.md",
+          "git_blob_sha1": "739e3b36765bee0f97e7bd909a019e85c3c8b5b8",
+          "sha256": "a2be769d611d5cad27b98bde010371e26c448e8356624094baf187ffd9a4224c",
+          "bytes": 22193,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/open_cell_staircase_finite_preservation_2026-10-15.md",
+          "git_blob_sha1": "709f1affff107149cef9de0b886e4783cb3fe5bc",
+          "sha256": "55ab16cbac81ee328699262ce054b4f2d6448e2b19ccc96abcf4c63fcee5b3cb",
+          "bytes": 5274,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/repository_state_and_sol_prompt_review_2026-09-10.md",
+          "git_blob_sha1": "178b8aa6163fa58aba0d1a1f457cc0751f6176f1",
+          "sha256": "60a1a036717ab172a6648d93fb45de43a31536cf628e22450eb3e68d6cac7fd1",
+          "bytes": 19520,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/repository_theorem_state_cleanup_2026-09-11.md",
+          "git_blob_sha1": "a69fe331f2c98218b268580301946f1d1d704c88",
+          "sha256": "786a7e7e5522809fb0ad628f8ace3644f4a1549b3e736f17ba6d9367983d9838",
+          "bytes": 9675,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/source_scaffold_response_transport_2026-08-30.md",
+          "git_blob_sha1": "eb97e31763ac2bdb0917eb98c5b72dc0c50dd385",
+          "sha256": "ba6b44bbf12264eb2b3fa9d8a6e315cc4f37c486d344c9cdf38e46ff42d2c07b",
+          "bytes": 10332,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_a_boundary_terminal_common_source_vpaths_2026-09-05.md",
+          "git_blob_sha1": "cc2d888fffcacb53e99d6978b2949d582e115cf9",
+          "sha256": "ba0412e4ee8996e6a23138af4be827d655e3afd3dc78aa1d46fcd3339aface4a",
+          "bytes": 8355,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_a_contracted_contact_shield_hall_2026-09-04.md",
+          "git_blob_sha1": "6e3ed325120716db48d194768329231e1c9a735d",
+          "sha256": "9432d5c127259871743106117155c3875a554ce9c6cba070ca7b3990ae192e87",
+          "bytes": 4580,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_a_inner_source_capacity_defect_bound_2026-09-05.md",
+          "git_blob_sha1": "269ce704e2727cfa8640d691213151986adc2469",
+          "sha256": "8b116ad50697bcbdfd7d00ea87f0ede54e0c37366e9782178350c1a29f678e34",
+          "bytes": 3932,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_a_right_deficiency_geometric_tube_2026-09-05.md",
+          "git_blob_sha1": "e74ec36e52f74d59e781cc2d7e555f1047be3597",
+          "sha256": "139262981fff8d24a9b0a54b54ebc6e1ce96e5b5381b51e9c79ac769fd65dd33",
+          "bytes": 6991,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_a_sector_deficit_duality_2026-09-04.md",
+          "git_blob_sha1": "e2cce4a636eb90381595e57274683a05a0c6b347",
+          "sha256": "afc643ad56d2e77e315c530b1efc70cd6426663015e6e8856fad851b01e5cdcd",
+          "bytes": 4538,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_a_slot05_one_arm_source_sector_rank_cap_2026-10-10.md",
+          "git_blob_sha1": "4eafa4766c5c8dc01e4635639591e1f77f961897",
+          "sha256": "45b461442185dc86b8991175853e09d33d59c077865d83dab65eafe0e56a5813",
+          "bytes": 30249,
+          "destination_status": "unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_a_thin_shield_sector_population_2026-09-04.md",
+          "git_blob_sha1": "3dfd2c79195f924b645bd81d20a16206edfad262",
+          "sha256": "e8bc2c050b222be284e41bb1cbbd007b41b10f4bee33527cbc4d31373a9dc9e9",
+          "bytes": 8068,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_b_affine_boundary_shear_2026-09-25.md",
+          "git_blob_sha1": "de12c010d949e1c03acb57e1e6b2488df3ad16cb",
+          "sha256": "2036ec5cbce92e8b9929a2a808e5218a05e9645ea0df2ea58cfae33a2c8bebae",
+          "bytes": 14190,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_b_disk_clipped_oblique_scalar_regression_2026-09-25.md",
+          "git_blob_sha1": "8760794789a34ac2213fbb47c73019297d97ae48",
+          "sha256": "cfad5efc72080e319e13cd1c035cc3d2360699c2200e6f2b8a981765468337a9",
+          "bytes": 28511,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_b_explicit_balanced_phase_gap_2026-09-05.md",
+          "git_blob_sha1": "99ac94991fb03707f59aa05eca175515dd753455",
+          "sha256": "467bbeabbdfdb155f6277545b33979f16d01e93ae753eb2354225035fe62339d",
+          "bytes": 6763,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_b_fourbar_singleton_endpoint_exclusion_2026-10-03.md",
+          "git_blob_sha1": "d786d7fd1526bbace375e59d23a357772b68d418",
+          "sha256": "bdcc6b048cee3d35f0cf50a4e7bd117cfe820f60fe5e00535cc0c93ab2dce65c",
+          "bytes": 13859,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_b_fractional_balanced_grain_exclusion_2026-09-05.md",
+          "git_blob_sha1": "f7de0afa2de02e738148f712ccea6a82094e3210",
+          "sha256": "f8bbcd81a2c3cf3511e816b4ecda0a1e5f59165d57d159b18c3ad024a06bf40b",
+          "bytes": 8791,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_b_multigrain_interface_perimeter_2026-09-05.md",
+          "git_blob_sha1": "6b274907be5eb9ce9eb4f16b938e77a8d8653c04",
+          "sha256": "d67b5da56e26148eff484a5e95ce8f8bdab6df56b635b753ee99af14bdd16692",
+          "bytes": 9112,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_b_source_diameter_cover_refill_2026-09-25.md",
+          "git_blob_sha1": "7c5780a3dd8ee951082c5e4461ca153a07dff892",
+          "sha256": "36c470527f506afb31c22698ca42eb91211b9caa1b6d2eecaf8edcfd508903a9",
+          "bytes": 17731,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_b_two_max_phase_stability_exclusion_2026-09-05.md",
+          "git_blob_sha1": "ebbe9be74eab4cecde795819c36e75418105bf0a",
+          "sha256": "d937d2ce226a4779eadbab4c9c9429a0afabcb2130206460b339d059474a1bbd",
+          "bytes": 6158,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_c_collective_shallow_wall_packet_release_2026-10-08.md",
+          "git_blob_sha1": "44dc84346e9c0d9c042b95338b68bc481b22bfa5",
+          "sha256": "9070c35f645125614a0c6b3a70e84b47857c3e88afe660b736ddded7330247d0",
+          "bytes": 11605,
+          "destination_status": "unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_c_full_source_delaunay_strain_and_branching_2026-10-08.md",
+          "git_blob_sha1": "9a02816dbf94530c6852a7990934414459f16467",
+          "sha256": "22e830500cf097702c66ff9d9ed4b5b2d48ef288e899eb12de803dd5d546d177",
+          "bytes": 13830,
+          "destination_status": "unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_c_full_source_voronoi_defect_spacing_debit_2026-10-08.md",
+          "git_blob_sha1": "c8a52da981ed8af8c37209fe92e5362a28ca6495",
+          "sha256": "50fe68821570c358a240cd75ba8c149dca59f6c45f4a3ad3556cd993f7c9c51e",
+          "bytes": 11868,
+          "destination_status": "unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_c_half_depth_fan_forest_and_weight_budget_2026-10-08.md",
+          "git_blob_sha1": "105cf1552c6d8f498b65f6bc5a7f684b2990ba85",
+          "sha256": "f0abd788773515a1afc80e841aadd74637bf4d4b29da2400edec85c1bc218a93",
+          "bytes": 12984,
+          "destination_status": "unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_c_isolate_normalization_core_diameter_replacement_2026-10-07.md",
+          "git_blob_sha1": "78660f2c2957c03bbbb06547a98085fb19062812",
+          "sha256": "fc54cf764349260cc41f6b8507b99fcb6267c8d91bdafec5bef319613a0f3e44",
+          "bytes": 12319,
+          "destination_status": "unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_c_quadratic_core_cap_extraction_deep_returns_2026-10-08.md",
+          "git_blob_sha1": "11c280e7fcf0120cabe53cd2ca2b9577ce423486",
+          "sha256": "d950294d1cdbd8d2fd88d944c0921af51a77cbd56e53f63ddb8132ec8622285e",
+          "bytes": 14248,
+          "destination_status": "unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_c_shell_fold_collar_transport_2026-10-08.md",
+          "git_blob_sha1": "713ac3b59f76307ea0d59cce8bdf3ed4886a7e29",
+          "sha256": "2f2288bef21a59ead9ca8bf989df8a862a3a4c31b68ddbf08ee40696d15ab9a3",
+          "bytes": 6249,
+          "destination_status": "unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/target_c_two_wave_shell_fold_two_isolate_obstruction_2026-10-08.md",
+          "git_blob_sha1": "9f534f4b695940f556dd70fd259cf71713f2e986",
+          "sha256": "7e8657305bee0fff85efb5b09f9cc5e2faadbd2200d9ab6fb758973791c2aaa8",
+          "bytes": 9754,
+          "destination_status": "unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        },
+        {
+          "path": "docs/reports/toeout_kuperberg_improvement_2026-08-30.md",
+          "git_blob_sha1": "717d818865951716d3c5b8379e91f8845a2e9d32",
+          "sha256": "a09e57ab2f90809794049bd4bc237b1fe287ee37aeeaf0a623bf0e8d67dbdbcd",
+          "bytes": 15140,
+          "destination_status": "historical_unreviewed_noncanonical",
+          "source_lifecycle": "unreviewed"
+        }
+      ]
+    },
+    "authority_and_frozen_ledger": [
+      {
+        "path": "docs/state/theorem-state.yaml",
+        "baseline_blob": "1218b98ff735b7fe64a572accb5603bedc85ce6a",
+        "candidate_blob": "1218b98ff735b7fe64a572accb5603bedc85ce6a",
+        "mode": "100644",
+        "unchanged": true
+      },
+      {
+        "path": "docs/STATE.md",
+        "baseline_blob": "574a90a0f072f0a5d6e77aa8a7c5f5f6fe962ea0",
+        "candidate_blob": "574a90a0f072f0a5d6e77aa8a7c5f5f6fe962ea0",
+        "mode": "100644",
+        "unchanged": true
+      },
+      {
+        "path": "docs/targets/target-c/CURRENT.md",
+        "baseline_blob": "fc17046ab81d5e081b261b9827b5afdf854f76fb",
+        "candidate_blob": "fc17046ab81d5e081b261b9827b5afdf854f76fb",
+        "mode": "100644",
+        "unchanged": true
+      },
+      {
+        "path": "docs/state/STATUS.generated.md",
+        "baseline_blob": "5b172d364e06b973006c906ffa97c24192d178c7",
+        "candidate_blob": "5b172d364e06b973006c906ffa97c24192d178c7",
+        "mode": "100644",
+        "unchanged": true
+      },
+      {
+        "path": "docs/state/THEOREM_GRAPH.generated.md",
+        "baseline_blob": "a606569d7a4e27a50ae7b3f34a22c05750cf8c10",
+        "candidate_blob": "a606569d7a4e27a50ae7b3f34a22c05750cf8c10",
+        "mode": "100644",
+        "unchanged": true
+      },
+      {
+        "path": "docs/research/migration/2026-10-16/frozen-target-c-813-dispositions.jsonl",
+        "baseline_blob": "c0fdf380a6aff37157b5e64e39ed515d99a56d0f",
+        "candidate_blob": "c0fdf380a6aff37157b5e64e39ed515d99a56d0f",
+        "mode": "100644",
+        "unchanged": true
+      }
+    ],
+    "integrated_code_identities": [
+      {
+        "path": "tools/publication_migration.py",
+        "blob": "c4c243380ff64e13071ce4e5e366299bf39f4f67",
+        "actual": "c4c243380ff64e13071ce4e5e366299bf39f4f67",
+        "exact": true
+      },
+      {
+        "path": "tools/test_publication_migration.py",
+        "blob": "6615cac39b6f78562643a1f80e4332d14fa8543c",
+        "actual": "6615cac39b6f78562643a1f80e4332d14fa8543c",
+        "exact": true
+      },
+      {
+        "path": "tools/test_public_release_manifest_lineage.py",
+        "blob": "12cc0d81247862826e9ee6f9e25d63ae8e3fc3f0",
+        "actual": "12cc0d81247862826e9ee6f9e25d63ae8e3fc3f0",
+        "exact": true
+      },
+      {
+        "path": "tools/audit_public_release.py",
+        "blob": "654df0bd54d5523370a78f664de3002fdc7c1023",
+        "actual": "654df0bd54d5523370a78f664de3002fdc7c1023",
+        "exact": true
+      },
+      {
+        "path": "tools/check_migration_union.py",
+        "blob": "43070355fa10abebeb61c0adc4e0e3b079c134fa",
+        "actual": "43070355fa10abebeb61c0adc4e0e3b079c134fa",
+        "exact": true
+      },
+      {
+        "path": "docs/research/migration/2026-10-16/integration/integrity-policy.json",
+        "blob": "0b4235302a697098f52daa7bf275cdf01d35ef29",
+        "actual": "0b4235302a697098f52daa7bf275cdf01d35ef29",
+        "exact": true
+      },
+      {
+        "path": "docs/research/migration/2026-10-16/integration/independent-review-preloss-summary.json",
+        "blob": "e6aebd62ad13b5bb15c8033172d27e7fc0fea231",
+        "actual": "e6aebd62ad13b5bb15c8033172d27e7fc0fea231",
+        "exact": true
+      },
+      {
+        "path": "docs/research/migration/2026-10-16/integration/independent-static-policy-review.json",
+        "blob": "0af68a222941c6f335b9b17c36ca9cddbf56e0c0",
+        "actual": "0af68a222941c6f335b9b17c36ca9cddbf56e0c0",
+        "exact": true
+      }
+    ],
+    "union_hook": {
+      "before_blob": "34306b94795ee72ec9a5a30ec363aa4563e567c9",
+      "after_blob": "43070355fa10abebeb61c0adc4e0e3b079c134fa",
+      "only_change_is_bounded_baseline_validation_hook": true,
+      "validation_errors_remain_blocking": true
+    }
+  },
+  "static_review": {
+    "policy_inputs": "Regular files only; parent symlinks rejected; captured and baseline objects read with --no-replace-objects.",
+    "historical_scope": "Exactly four captured archive/payload roots; .md and .py only. Literal/import checks are waived only after exact byte/mode validation; current security scanning remains outside this waiver.",
+    "metadata_scope": "Only fifty-five exact captured imports with source tuples in immutable source inventories and unreviewed/noncanonical provenance. Canonical metadata still requires its normal header.",
+    "baseline_scope": "Only the six listed engineering files; every old blob remains as an exact .source copy. Original index, source, rights, proof and mathematical lifecycle data are preserved.",
+    "owner_grant_extended": false,
+    "original_810_record_rights_and_source_scope_unchanged": true,
+    "active_navigation_global_clean_claim": false
+  },
+  "result": {
+    "api_and_static_checks_passed": true,
+    "runtime_verification_established": false,
+    "gate2_status": "not established by this review",
+    "source_deprecation_assessed": false,
+    "mathematical_claims_promoted": false
+  },
+  "limits": [
+    "No post-outage Python test, certificate execution, full release gate or clean-worktree runtime receipt is produced here.",
+    "Source-union completeness, all 813 frozen report bodies, refs/worktrees, and navigation are covered by separate reviewers, not newly executed by this receipt.",
+    "Five captured dirty file versions remain missing and two unavailable worktree records have no captured file identities; this review does not authorize source deprecation.",
+    "The pre-loss full release gate was blocked by real namespace isolation failures. Passing prior tests remains evidence about the lost local candidate, not a runtime result on this recovered commit.",
+    "Any later evidence-only commit must preserve this reviewed code, policy, state and payload tree content to inherit these object comparisons."
+  ]
+}
