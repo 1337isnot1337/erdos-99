@@ -1,5 +1,11 @@
 # Independent AI-agent audit: corrected seed-63 full-tube ledger
 
+Publication update, 2026-10-17: the pending public-SHA binding in the historical
+record below is complete. See PUBLIC_BINDING.txt in this directory. It carries
+the independent PASS to bbc2052917a9ec588dbccf9374f28d5414970c11, whose tree is
+identical to integrated commit 1dd10cdb1ecdd79be6285860ba3a17d6d946d79e.
+The original audit follows without changes to its proof, scope or evidence.
+
 ## Verdict and exact scope
 
 **PASS for the corrected fixed-fixture mathematics at local commit

@@ -1,0 +1,31 @@
+{
+  "result": "PASS for mathematical-review carry-forward",
+  "public_commit": "bbc2052917a9ec588dbccf9374f28d5414970c11",
+  "public_tree": "fd8bdc3484464778783805b05d006527b11bfa51",
+  "parents": [
+    "2c38f9f0c5925bad5dd8f953ef912edf7aafe91a"
+  ],
+  "local_candidate": "221fa2bbcfa58567df17e9cebbb3f4d11bf038d0",
+  "local_tree": "fd8bdc3484464778783805b05d006527b11bfa51",
+  "base": "2c38f9f0c5925bad5dd8f953ef912edf7aafe91a",
+  "head": "bbc2052917a9ec588dbccf9374f28d5414970c11",
+  "ahead_by": 1,
+  "behind_by": 0,
+  "total_commits": 1,
+  "changed_files": [
+    {
+      "filename": ".github/workflows/theorem-state.yml",
+      "patch": "@@ -51,10 +51,20 @@ jobs:\n           --only-binary=:all: -r control/tools/requirements-integrity-linux-x86_64.lock\n       - name: Ensure hosted isolation backend is available\n         run: |\n-          if ! command -v bwrap >/dev/null 2>&1; then\n-            sudo apt-get update\n-            sudo apt-get install --yes --no-install-recommends bubblewrap\n+          sudo apt-get update\n+          sudo apt-get install --yes --no-install-recommends bubblewrap apparmor-profiles\n+          if test \"$(cat /proc/sys/kernel/apparmor_restrict_unprivileged_userns 2>/dev/null || true)\" = '1'; then\n+            sudo apparmor_parser -r /usr/share/apparmor/extra-profiles/bwrap-userns-restrict\n           fi\n+          python3 -I - <<'PY'\n+          import sys\n+          sys.path.insert(0, \"control\")\n+          from tools.localized_ci.replay import sandbox_unavailable_reason\n+          reason = sandbox_unavailable_reason(require_replay_python=True)\n+          if reason:\n+              raise SystemExit(reason)\n+          print(\"Trusted isolated Python startup passed\")\n+          PY\n       - name: Verify trusted CI control\n         working-directory: control\n         run: python3 -B -m unittest tools.test_local_ci -q\n@@ -125,10 +135,20 @@ jobs:\n           --only-binary=:all: -r control/tools/requirements-integrity-linux-x86_64.lock\n       - name: Ensure hosted isolation backend is available\n         run: |\n-          if ! command -v bwrap >/dev/null 2>&1; then\n-            sudo apt-get update\n-            sudo apt-get install --yes --no-install-recommends bubblewrap\n+          sudo apt-get update\n+          sudo apt-get install --yes --no-install-recommends bubblewrap apparmor-profiles\n+          if test \"$(cat /proc/sys/kernel/apparmor_restrict_unprivileged_userns 2>/dev/null || true)\" = '1'; then\n+            sudo apparmor_parser -r /usr/share/apparmor/extra-profiles/bwrap-userns-restrict\n           fi\n+          python3 -I - <<'PY'\n+          import sys\n+          sys.path.insert(0, \"control\")\n+          from tools.localized_ci.replay import sandbox_unavailable_reason\n+          reason = sandbox_unavailable_reason(require_replay_python=True)\n+          if reason:\n+              raise SystemExit(reason)\n+          print(\"Trusted isolated Python startup passed\")\n+          PY\n       - name: Recompute plan and replay selected packages without network\n         run: >-\n           python3 -B control/tools/local_ci.py --root candidate"
+    },
+    {
+      "filename": "docs/ci/RELEASE_REVIEW.md",
+      "patch": "@@ -47,7 +47,13 @@ workflow change does not turn those historical skips into verification evidence.\n   budget. Bubblewrap\n   requires separate namespaces, no network, cleared environment, read-only\n   source/runtime mounts, and no inherited credentials. Hosted jobs install\n-  Bubblewrap when missing. There is no unisolated\n+  distro Bubblewrap and AppArmor profiles. When Ubuntu's unprivileged-user-namespace\n+  restriction is enabled, they load only the packaged `bwrap-userns-restrict`\n+  profile. It permits Bubblewrap setup while its child profile denies capabilities.\n+  A trusted-control runtime probe must then pass before checks start. See the\n+  [Ubuntu restriction explanation](https://documentation.ubuntu.com/release-notes/24.04/#unprivileged-user-namespace-restrictions)\n+  and [Noble updates package contents](https://packages.ubuntu.com/noble-updates/all/apparmor-profiles/filelist).\n+  No global security setting is changed. There is no unisolated\n   fallback. Commands use argument vectors, with wall/CPU, address-space,\n   output-file, core-dump, and descriptor limits.\n - The replay limits are not an aggregate cgroup process/memory budget. Local"
+    },
+    {
+      "filename": "tools/test_local_ci.py",
+      "patch": "@@ -694,6 +694,17 @@ def test_workflow_permissions_and_gates(self):\n         self.assertNotIn('strategy',workflow['jobs']['replay'])\n         for job in workflow['jobs'].values():\n             self.assertLessEqual(job['timeout-minutes'],6)\n+            setup = next(step for step in job['steps']\n+                         if step.get('name') == 'Ensure hosted isolation backend is available')['run']\n+            self.assertIn('bubblewrap apparmor-profiles', setup)\n+            self.assertIn('if test \"$(cat /proc/sys/kernel/apparmor_restrict_unprivileged_userns 2>/dev/null || true)\" = \\'1\\'; then', setup)\n+            self.assertIn('sudo apparmor_parser -r /usr/share/apparmor/extra-profiles/bwrap-userns-restrict', setup)\n+            self.assertIn('sys.path.insert(0, \"control\")', setup)\n+            self.assertIn('sandbox_unavailable_reason(require_replay_python=True)', setup)\n+            self.assertNotIn('candidate', setup)\n+            self.assertNotIn('sysctl -w', setup)\n+            self.assertNotIn('--share-net', setup)\n+            self.assertNotIn('--cap-add', setup)\n             for step in job['steps']:\n                 if 'uses' in step:\n                     self.assertRegex(step['uses'],r'@[0-9a-f]{40}$')"
+    }
+  ],
+  "scope": "Unchanged seed-63 corrected mathematical claim and its proof/checker/source pins/reviewer artifacts. No broad replay; no claim of completed hosted isolation validation.",
+  "method": "Independent read-only GitHub comparison, full commit patch, Git-commit metadata, and local git rev-parse."
+}

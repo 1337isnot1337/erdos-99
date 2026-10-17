@@ -1,0 +1,24 @@
+{
+  "result": "PASS",
+  "public_commit": "2c38f9f0c5925bad5dd8f953ef912edf7aafe91a",
+  "public_tree": "aacdfc6d80435bd5e210a14b3f8f190bbdf7f8c4",
+  "parents": [
+    "c5911c89e0407e43d6ad637dc2620971b7d157b4"
+  ],
+  "base": "c5911c89e0407e43d6ad637dc2620971b7d157b4",
+  "head": "2c38f9f0c5925bad5dd8f953ef912edf7aafe91a",
+  "ahead_by": 1,
+  "behind_by": 0,
+  "total_commits": 1,
+  "changed_files": [
+    {
+      "filename": "docs/ci/RELEASE_REVIEW.md",
+      "patch": "@@ -42,7 +42,7 @@ workflow change does not turn those historical skips into verification evidence.\n   omitted to fit the automatic job. Complete required replay remains the merging agent's duty.\n - The optional Linux package replay is serial, with at most two selected packages and 240 declared seconds.\n   Each hosted job is limited to six minutes. The complete Tier 0 corpus check\n-  has a separate 120-second process limit, leaving job time for trusted control\n+  has a separate 180-second process limit, leaving job time for trusted control\n   tests, checkout and installation. These limits do not change the package replay\n   budget. Bubblewrap\n   requires separate namespaces, no network, cleared environment, read-only"
+    },
+    {
+      "filename": "tools/localized_ci/replay.py",
+      "patch": "@@ -213,5 +213,5 @@ def integrity(root, control, plan, output):\n         + repr(plan['merge_base']) + '];runpy.run_path(\"/control/tools/ci_integrity.py\",run_name=\"__main__\")']\n     # This checks the complete public corpus as well as changed metadata. Keep\n     # its budget separate from the optional package replay command limits.\n-    return execute(argv, 120, output / 'integrity.log')\n+    return execute(argv, 180, output / 'integrity.log')\n "
+    }
+  ],
+  "method": "Independent read-only GitHub connector comparison and Git-commit metadata; local public object unavailable through current Git proxy."
+}

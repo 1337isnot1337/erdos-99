@@ -1,0 +1,77 @@
+{
+  "result": "PASS",
+  "public_commit": "c5911c89e0407e43d6ad637dc2620971b7d157b4",
+  "public_tree": "67bb73ab2b0a257b5ed0e0c9cc7106d8af5bb837",
+  "pins": [
+    {
+      "path": "docs/targets/target-a/02-scaffold-and-hall.md",
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "sha256": "18b0297422f207a1b3afdea166b413ccd86d9a5d9c26d26da9794d3e6ac39548",
+      "result": "PASS"
+    },
+    {
+      "path": "docs/targets/target-a/27-tube-only-right-deficiency-frontier.md",
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "sha256": "0399e4947619293dfda7818c8961c18a48cf762c2f8c5e0d8e956099ca08db29",
+      "result": "PASS"
+    },
+    {
+      "path": "docs/targets/target-a/26-tube-shield-sector-balance.md",
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "sha256": "15e470ca494ddf19b5a7fe80a558b2cff01bab824539a0367a2b628436367798",
+      "result": "PASS"
+    },
+    {
+      "path": "docs/reports/target_a_seed063_tight_isolates_and_locked_fan_regression_2026-10-13.md",
+      "commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "sha256": "b2f5c112443c57181670aec31d46c38f0d6aacef8318e29473c9a6e72e358337",
+      "result": "PASS"
+    },
+    {
+      "path": "research-packages/target-a-fan-tube-ledger/verify.py",
+      "commit": "c5911c89e0407e43d6ad637dc2620971b7d157b4",
+      "sha256": "9bb3ff34ec011f2b3748c6857d631701e194d07a6d8d38af00fbc1f3a74d9bd8",
+      "result": "PASS"
+    },
+    {
+      "path": "research-packages/target-a-fan-tube-ledger/README.md",
+      "commit": "c5911c89e0407e43d6ad637dc2620971b7d157b4",
+      "sha256": "55309cc95d01366db9825e070c5097e122a75282aeab2d5a587b324cb9e14e7a",
+      "result": "PASS"
+    },
+    {
+      "path": "research-packages/target-a-fan-tube-ledger/evidence.json",
+      "commit": "c5911c89e0407e43d6ad637dc2620971b7d157b4",
+      "sha256": "a50f8ed5dd71243b7db653d058a93b964dd1a6462d8dc95e488f2cdabec1fba3",
+      "result": "PASS"
+    }
+  ],
+  "unchanged_package_files": {
+    "research-packages/target-a-fan-tube-ledger/verify.py": "9bb3ff34ec011f2b3748c6857d631701e194d07a6d8d38af00fbc1f3a74d9bd8",
+    "research-packages/target-a-fan-tube-ledger/TASK.json": "3460d921efcaede863995051076bce1ca39bed7ed06e6aeef1402145d0ce35e0",
+    "research-packages/target-a-fan-tube-ledger/VERIFY.json": "1104c7c4b400a8cabd2b1a8c2080ce7f4a54772cf830acd02f7f9ae868999ffa",
+    "research-packages/target-a-fan-tube-ledger/evidence.json": "a50f8ed5dd71243b7db653d058a93b964dd1a6462d8dc95e488f2cdabec1fba3"
+  },
+  "audit_artifacts": [
+    {
+      "path": "docs/research/review-artifacts/fan-ledger-correction/independent-audit.txt",
+      "sha256": "641c59c041e88a8c8c60df56904672da447553572a32cdde447efa46e224aa0e",
+      "identical_to_reviewers_file": true
+    },
+    {
+      "path": "docs/research/review-artifacts/fan-ledger-correction/preproof-reconstruction.txt",
+      "sha256": "1dcf0164fff0aa3a88478c79276d8fdd08fb890e2055158e543d7bfe7f30d343",
+      "identical_to_reviewers_file": true
+    },
+    {
+      "path": "docs/research/review-artifacts/fan-ledger-correction/independent-replay.py",
+      "sha256": "076c337513d9f7d2283e4ab07349b4e4f3e9849a68893ff00b3ffc7aef2c625a",
+      "identical_to_reviewers_file": true
+    },
+    {
+      "path": "docs/research/review-artifacts/fan-ledger-correction/independent-evidence.json",
+      "sha256": "320ed34bd67122efa7eeb63b252cab246638a34e24fa310858311a8bf5f305fb",
+      "identical_to_reviewers_file": true
+    }
+  ]
+}

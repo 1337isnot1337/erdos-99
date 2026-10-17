@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "repository": "1337isnot1337/erdos-99",
+  "base_commit": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+  "purpose": "Preserved local integration verification evidence for a follow-up receipt PR.",
+  "mapping_provenance": "Public commit/tree mappings supplied by the integrating agent. Local commit/tree identities independently resolved while assembling this bundle.",
+  "commit_tree_mappings": {
+    "full_suite": {
+      "local_commit": "3c45a937314c058884535c76871f120ef71baf59",
+      "tree": "67bb73ab2b0a257b5ed0e0c9cc7106d8af5bb837",
+      "public_commit": "c5911c89e0407e43d6ad637dc2620971b7d157b4"
+    },
+    "budget_followup": {
+      "local_commit": "d7e5871ca14e66bf6a98fa3c89b512c4282f6a02",
+      "tree": "aacdfc6d80435bd5e210a14b3f8f190bbdf7f8c4",
+      "public_commit": "2c38f9f0c5925bad5dd8f953ef912edf7aafe91a"
+    },
+    "profile_followup": {
+      "local_commit": "221fa2bbcfa58567df17e9cebbb3f4d11bf038d0",
+      "tree": "fd8bdc3484464778783805b05d006527b11bfa51",
+      "public_commit": "bbc2052917a9ec588dbccf9374f28d5414970c11"
+    }
+  },
+  "checks": [
+    {
+      "name": "full-certificates",
+      "exit_code": 0,
+      "elapsed_seconds": 642.541,
+      "budget_seconds": 1200,
+      "log_sha256": "2e4253031eee25f14b8db14e8e3ffefc0e60b3d03f43850df9a6c027f47fc281",
+      "log_bytes": 530174,
+      "receipt": "receipts/certificates.json",
+      "log": "logs/erdos99-final-full-certificates.log",
+      "candidate_commit": "3c45a937314c058884535c76871f120ef71baf59"
+    },
+    {
+      "name": "public-corpus",
+      "exit_code": 0,
+      "elapsed_seconds": 143.34,
+      "budget_seconds": 240,
+      "log_sha256": "ca8e04c30a1f2584fd399ad241dbc47f726d89a03466349c2c5eb4b1cccd2260",
+      "log_bytes": 198,
+      "receipt": "receipts/repository.json",
+      "log": "logs/erdos99-final-public-corpus.log",
+      "candidate_commit": "3c45a937314c058884535c76871f120ef71baf59"
+    },
+    {
+      "name": "trusted-integrity",
+      "exit_code": 0,
+      "elapsed_seconds": 128.275,
+      "budget_seconds": 240,
+      "log_sha256": "cd5f84b85f30217d23d4c404a4789b7205b990bd968114db9ed92a35f9cf043a",
+      "log_bytes": 72,
+      "receipt": "receipts/repository.json",
+      "log": "logs/erdos99-final-trusted-integrity.log",
+      "candidate_commit": "3c45a937314c058884535c76871f120ef71baf59"
+    },
+    {
+      "name": "focused-tests",
+      "exit_code": 0,
+      "elapsed_seconds": 39.183,
+      "budget_seconds": 240,
+      "log_sha256": "d177027f3d8af013e8907d9355255260938929f306c27100892023bc00541fe6",
+      "log_bytes": 112,
+      "receipt": "receipts/repository.json",
+      "log": "logs/erdos99-final-focused-tests.log",
+      "candidate_commit": "3c45a937314c058884535c76871f120ef71baf59",
+      "unittest": {
+        "total_run_reported": 155,
+        "skipped": 5,
+        "executed_passes": 150,
+        "failures": 0,
+        "errors": 0,
+        "reported_test_seconds": 38.715
+      }
+    },
+    {
+      "name": "package-metadata",
+      "exit_code": 0,
+      "elapsed_seconds": 0.269,
+      "budget_seconds": 60,
+      "log_sha256": "17854dc60a4e02bc26a4678205ac77d63c06f44a3cd7f42a31965e1e83fed85d",
+      "log_bytes": 459,
+      "receipt": "receipts/repository.json",
+      "log": "logs/erdos99-final-package-metadata.log",
+      "candidate_commit": "3c45a937314c058884535c76871f120ef71baf59"
+    },
+    {
+      "name": "verification-plan",
+      "exit_code": 0,
+      "elapsed_seconds": 4.031,
+      "budget_seconds": 120,
+      "log_sha256": "5cba07f1a32fb46bfddaa9cc1737c936dccc8cec82d0e86dbb1cb4128ff9e0f4",
+      "log_bytes": 11178,
+      "receipt": "receipts/repository.json",
+      "log": "logs/erdos99-final-verification-plan.log",
+      "candidate_commit": "3c45a937314c058884535c76871f120ef71baf59"
+    },
+    {
+      "name": "bounded-integrity-180",
+      "exit_code": 0,
+      "elapsed_seconds": 133.266,
+      "budget_seconds": 180,
+      "log_sha256": "cd5f84b85f30217d23d4c404a4789b7205b990bd968114db9ed92a35f9cf043a",
+      "log_bytes": 72,
+      "receipt": "receipts/budget.json",
+      "log": "logs/erdos99-final-bounded-integrity-180.log",
+      "candidate_commit": "d7e5871ca14e66bf6a98fa3c89b512c4282f6a02"
+    },
+    {
+      "name": "ci-tests-budget-followup",
+      "exit_code": 0,
+      "elapsed_seconds": 23.21,
+      "budget_seconds": 180,
+      "log_sha256": "35236181f26795854326475a5c7d49721a9650078382e5d4faaefce8951882d4",
+      "log_bytes": 111,
+      "receipt": "receipts/budget.json",
+      "log": "logs/erdos99-final-ci-tests-budget-followup.log",
+      "candidate_commit": "d7e5871ca14e66bf6a98fa3c89b512c4282f6a02",
+      "unittest": {
+        "total_run_reported": 78,
+        "skipped": 5,
+        "executed_passes": 73,
+        "failures": 0,
+        "errors": 0,
+        "reported_test_seconds": 22.901
+      }
+    }
+  ],
+  "certificate_summary": {
+    "selected": 94,
+    "registered_unique": 94,
+    "run_lines": 94,
+    "pass_lines": 94,
+    "runner_summary_lines": 190,
+    "final_status": "OK",
+    "summary_file": "certificate-runner-summary.txt",
+    "full_log": "logs/erdos99-final-full-certificates.log",
+    "full_log_sha256": "2e4253031eee25f14b8db14e8e3ffefc0e60b3d03f43850df9a6c027f47fc281"
+  },
+  "verification_plan": {
+    "level": "full-verification-required",
+    "replay_allowed": false,
+    "replay_schedule": "requires-review",
+    "workload_seconds": 60,
+    "log": "logs/erdos99-final-verification-plan.log"
+  },
+  "static_profile_review": "profile-boundary-review.txt",
+  "hosted_outcomes": [
+    {
+      "run_id": 39078255252,
+      "head": "2c38f9f0c5925bad5dd8f953ef912edf7aafe91a",
+      "trusted_control": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "conclusion": "failure",
+      "control_tests": {
+        "total": 72,
+        "executed_passes": 67,
+        "skipped": 5
+      },
+      "observed_failure": "Bubblewrap private loopback RTM_NEWADDR denied before candidate validation",
+      "package_replay": "skipped",
+      "log": "logs/hosted-before-profile.log",
+      "log_sha256": "8fc01f79298289f709b4552eb3d9e42b1c2f612ce957d7456560c2c7ed46d945",
+      "log_normalization": "Trailing spaces/tabs and final blank line removed; all log entries and timestamps retained."
+    },
+    {
+      "run_id": 39078673224,
+      "head": "bbc2052917a9ec588dbccf9374f28d5414970c11",
+      "trusted_control": "e396ea07887dd0528b817ce4e656ff0e6b01f8fb",
+      "conclusion": "failure",
+      "isolated_python_startup": "passed",
+      "control_tests": {
+        "total": 72,
+        "executed_passes": 72,
+        "skipped": 0
+      },
+      "observed_failure": "Trusted old validator rejects unchanged 243-character archive path; maximum component length72",
+      "unchanged_file_blob": "84241e528e29d916d2b8f7054a863d3f2884ea99",
+      "package_replay": "skipped",
+      "log": "logs/hosted-with-profile.log",
+      "log_sha256": "89bd43704f40559464d7055c722f2b697d78bbedc0bfbbd27bfc2e1b18edc0be",
+      "log_normalization": "Trailing spaces/tabs and final blank line removed; all log entries and timestamps retained."
+    }
+  ],
+  "final_integration_commit": "1dd10cdb1ecdd79be6285860ba3a17d6d946d79e",
+  "scope_notes": [
+    "The complete certificate run and repository checks apply to the full_suite tree. They were not rerun after the two bounded followups.",
+    "The budget followup has its own integrity and CI-test receipt.",
+    "The profile-only followup has an independent static review and successful hosted isolated startup/control tests. The old trusted validator then rejects an unchanged archive path; this is not a green integration run.",
+    "155 tests reported run with five skips means 150 executed passes. 78 reported run with five skips means 73 executed passes.",
+    "Certificate/checker success, structural integrity and metadata validity do not establish the full mathematical theorem.",
+    "This bundle is an evidence copy and index; no new broad verification or mathematical review was performed."
+  ],
+  "final_integration_tree": "fd8bdc3484464778783805b05d006527b11bfa51",
+  "integration_pull_request": "https://github.com/1337isnot1337/erdos-99/pull/99",
+  "superseded_submissions": [
+    {
+      "number": 87,
+      "state": "closed",
+      "head": "33a4aaa016d0a219e2f9e8e7a92c87ff4aa77afb"
+    },
+    {
+      "number": 92,
+      "state": "closed",
+      "head": "96e54788d1a42d246dba0a60ab5e8a81fc5aea4a"
+    }
+  ],
+  "receipt_pr_hosted_evidence": "The pull request publishing this bundle records its own run ID, exact tested head, trusted base and conclusion in its body; PR99 links that receipt PR. This avoids claiming a run that had not occurred when the receipt files were committed."
+}

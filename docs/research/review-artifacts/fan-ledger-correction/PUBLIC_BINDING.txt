@@ -1,0 +1,212 @@
+# Public-SHA binding: independent seed-63 correction audit
+
+Date: 2026-10-17.
+Reviewer: /root/correction_audit, GPT-6 Astra Pro.
+Review type: independent AI-agent mathematical audit and exact-source binding.
+
+Latest covered public commit: `bbc2052917a9ec588dbccf9374f28d5414970c11`;
+see the final workflow-only carry-forward section below.
+
+## Final disposition
+
+PASS for the corrected seed-63 full-tube fixed-fixture claim at public commit
+`c5911c89e0407e43d6ad637dc2620971b7d157b4` on branch
+`fix-research-investigation-flow-20261017`.
+
+Public tree: `67bb73ab2b0a257b5ed0e0c9cc7106d8af5bb837`.
+
+This addendum resolves the pending public-SHA binding in
+`docs/research/review-artifacts/fan-ledger-correction/independent-audit.txt`.
+The complete mathematical reconstruction and historical replay record there
+remain applicable. The original audited local source was
+`d585826bbe4e7ebc720706231820906f90832b30`.
+
+The exact admissible optimum is 1 for every integer M>=5. The relaxed
+Z-perfect-matching optimum is M-1 when the full nonbasis Schur complement
+is retained. The submitted relaxed witness omits M-2 required incidence-deep
+columns and does not satisfy the canonical Section-102 basis normalization.
+Both full Schur complements have generic rank M+1 and actual right
+deficiency 2M+2. The admissible raw cut loses 2M+1 against that deficiency.
+
+No load-bearing mathematical gap remains in this supplied fixture result.
+This PASS makes no canonical promotion and supplies no original flexible
+source, canonical demand j_star, global-minimizer theorem, or Target A/Level I
+closure. It covers the seed-63 correction, not unrelated changes in the branch.
+
+## Exact comparison performed
+
+I read the complete Git diff from d585826 to the public commit for
+`research-packages/target-a-fan-tube-ledger/` and
+`docs/audits/target_a_fan_tube_ledger_independent_audit_2026-10-17.md`.
+The changes are limited to:
+
+- README table labels rewritten to avoid Markdown pipe parsing problems;
+- README wording recording the completed independent audit, distinguishing
+  the original catalogue/card from the current task, and linking the audit;
+- the corresponding README SHA-256 update in SOURCES.json;
+- an audit link and explanatory review-status paragraph in the corrected
+  disposition;
+- correction of the missing closing backtick and stray parenthesis in the
+  displayed Section-102 incidence-depth definition.
+
+These changes do not alter any mathematical hypothesis, quantifier, matching,
+tube, sector, rank argument, optimum, or limitation. The corrected displayed
+definition remains exactly X^circ={x:N(x) subseteq Z}.
+
+The package's verify.py, TASK.json, VERIFY.json, and evidence.json are
+byte-identical between the original reviewed commit and the public commit.
+The canonical Sections 102, 113, 174, and 175 and the seed-63 predecessor
+report have no changes between these commits.
+
+The four newly published audit artifacts are byte-identical to the files
+produced by this reviewer: independent-audit.txt, preproof-reconstruction.txt,
+independent-replay.py, and independent-evidence.json. Thus the public evidence
+preserves the independent investigation, portable checker, and historical
+results without alteration.
+
+I also independently ran `git rev-parse` on the public commit and the tested
+local integration candidate `3c45a937314c058884535c76871f120ef71baf59`.
+Both resolve to tree `67bb73ab2b0a257b5ed0e0c9cc7106d8af5bb837`.
+
+## Source-pin verification at the public commit
+
+I loaded SOURCES.json directly from the public Git blob and recomputed every
+declared SHA-256 from the exact commit specified by that input, using the
+public commit for inputs without an earlier explicit commit. All seven pass:
+
+1. Section-102 source:
+   `18b0297422f207a1b3afdea166b413ccd86d9a5d9c26d26da9794d3e6ac39548`
+2. Section-175 source:
+   `0399e4947619293dfda7818c8961c18a48cf762c2f8c5e0d8e956099ca08db29`
+3. Section-174 source:
+   `15e470ca494ddf19b5a7fe80a558b2cff01bab824539a0367a2b628436367798`
+4. Seed-63 predecessor report:
+   `b2f5c112443c57181670aec31d46c38f0d6aacef8318e29473c9a6e72e358337`
+5. Submitted checker:
+   `9bb3ff34ec011f2b3748c6857d631701e194d07a6d8d38af00fbc1f3a74d9bd8`
+6. Public README:
+   `55309cc95d01366db9825e070c5097e122a75282aeab2d5a587b324cb9e14e7a`
+7. Saved submitted evidence:
+   `a50f8ed5dd71243b7db653d058a93b964dd1a6462d8dc95e488f2cdabec1fba3`
+
+The first four inputs are pinned to
+`e396ea07887dd0528b817ce4e656ff0e6b01f8fb`; the last three were hashed at
+the public commit. The structured binding checks are saved in
+`public-binding-evidence.json` beside this addendum in the reviewer's output
+directory.
+
+## Reproduction and verification ownership
+
+From a checkout containing the public commit and its pinned history, the
+portable independent replay command is:
+
+```sh
+python docs/research/review-artifacts/fan-ledger-correction/independent-replay.py --repo . --sha c5911c89e0407e43d6ad637dc2620971b7d157b4 > /tmp/fan-independent-public.json
+```
+
+The previous mathematical replays, exhaustive M=5 basis search, and exact
+Schur checks were performed on the original immutable local source as
+recorded in the main audit. This binding phase inspected the complete scoped
+diff and rechecked the seven public source pins. It did not repeat the broad
+mathematical replay because the mathematical text and checker are unchanged.
+
+The integrating agent separately reports that the identical tree passed the
+full 94 theorem certificates, public corpus and trusted-integrity checks,
+package metadata, and 155 focused tests with five isolation capability
+skips. Those are integration results reported by that agent, not tests run
+by this reviewer during the public-binding phase. They are not the basis of
+the independent mathematical PASS.
+
+## Independence and completion
+
+This reviewer remains independent of the submitted correction: the review
+began after the proof and checker existed, reconstructed the decisive step
+from the canonical definitions before reading the proposed argument, and
+did not edit either the repository proof or checker. All review and binding
+work was performed in the reviewer's separate notes/scripts. No GitHub
+mutation was performed by this reviewer.
+
+The public-SHA binding is complete. This addendum records the reviewed
+subject commit above; subsequent receipt/addendum-only commits do not
+retrospectively change that subject or the historical replay record.
+
+## Carry-forward to the final timeout-only public commit
+
+The independent mathematical PASS also applies to final public commit
+`2c38f9f0c5925bad5dd8f953ef912edf7aafe91a`, tree
+`aacdfc6d80435bd5e210a14b3f8f190bbdf7f8c4`.
+
+I independently inspected this public commit through the read-only GitHub
+connector. The comparison identifies c5911c89e0407e43d6ad637dc2620971b7d157b4
+as its parent and merge base, with exactly one additional commit and two
+changed files. The complete returned patch makes only these changes:
+
+- `tools/localized_ci/replay.py`: the integrity process limit changes from
+  `execute(argv, 120, output / 'integrity.log')` to the same call with 180.
+- `docs/ci/RELEASE_REVIEW.md`: the corresponding phrase changes from a
+  120-second to a 180-second process limit.
+
+The public Git-commit metadata independently confirms the tree above. Local
+`git rev-parse --verify d7e5871^{tree}` returns that same tree. The public
+object was unavailable through the local Git proxy during this check; the
+public comparison, full patch, parent, and tree were therefore read directly
+through the GitHub connector.
+
+No mathematical source, package file, source pin, checker, saved evidence,
+or reviewer artifact changes between the two public commits. Accordingly,
+the exact proof reconstruction, seven verified source pins, and scoped
+independent mathematical PASS carry forward unchanged. No mathematical
+replay was repeated for this process-timeout-only delta.
+
+The previously reported full 94-certificate and 155-test evidence remains
+recorded against c5911/3c45 and the unchanged mathematical inputs. It is not
+relabeled as a fresh run at this final commit. The integrating agent owns
+the additional bounded integrity and CI-specific checks for the timeout
+change; this mathematical carry-forward does not claim their completion.
+
+Structured read-only connector evidence for this carry-forward is saved as
+`timeout-carry-forward-evidence.json` in the reviewer's output directory.
+This final binding retains the same reviewer identity, independence, fixed-
+fixture scope, and no-canonical-promotion limitations as the main audit.
+
+## Final workflow-only carry-forward
+
+The independent mathematical PASS carries forward to public commit
+`bbc2052917a9ec588dbccf9374f28d5414970c11`, tree
+`fd8bdc3484464778783805b05d006527b11bfa51`.
+
+I independently read the public comparison and complete commit patch through
+the read-only GitHub connector. This is exactly one commit after 2c38f9f0,
+with that commit as its sole parent and merge base. Exactly three files change:
+
+- `.github/workflows/theorem-state.yml` installs distro Bubblewrap and
+  AppArmor profiles, conditionally loads the packaged bwrap profile when
+  the recorded Ubuntu user-namespace restriction is enabled, and requires
+  a startup probe imported from the trusted `control` checkout.
+- `docs/ci/RELEASE_REVIEW.md` documents that hosted setup and startup gate.
+- `tools/test_local_ci.py` adds structural assertions for the setup/probe
+  and the absence of the specified global-setting, network-sharing, and
+  capability-addition alternatives.
+
+Public Git-commit metadata confirms the tree above. Independently,
+`git rev-parse --verify 221fa2bbcfa58567df17e9cebbb3f4d11bf038d0^{tree}`
+returns the same tree.
+
+There are no changes to the corrected seed-63 mathematical statements,
+canonical/predecessor inputs, package, submitted checker, source pins,
+saved evidence, or independent reviewer artifacts. The prior mathematical
+reconstruction, pin verification, and fixed-fixture PASS therefore remain
+applicable at this exact public SHA. No broad or mathematical replay was
+performed for this workflow-only delta.
+
+This carry-forward establishes continuity of the mathematical review. It
+does not certify the security properties of the distro profile or claim
+that hosted isolation checks have run successfully. Workflow/runtime
+validation and its exact results belong in the integrating agent's receipt.
+The historical certificate and finite-test runs retain their original
+commit/environment scope.
+
+Structured connector and local-tree evidence is saved as
+`workflow-carry-forward-evidence.json` in the reviewer's output directory.
+The reviewer identity, independence, supplied-fixture scope, and prohibition
+on inferring canonical promotion or a global-source conclusion are unchanged.
